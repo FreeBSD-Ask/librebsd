@@ -1,0 +1,193 @@
+# 第 5 卷综述素材（T1 三源合一，2026-08-04 自动生成）
+
+> 卷目录：第05卷-freebsd的工程化奠基｜章范围：ch87-ch107
+
+## ① 现有研究（references_fulltext，97 条）
+
+- [87] eurobsdcon2011-kettenis（，）
+- [96] eurobsdcon2015-packages（，）
+- [104] eurobsdcon2017-device-drivers（，）
+- [105] eurobsdcon2017-opensmtpd（，）
+- [123] eurobsdcon2023-matthieu-pf-rdomain（，）
+- [124] eurobsdcon2023-matthieu-wayland-openbsd（，）
+- [138] asiabsdcon2009-bgpd（，）
+- [209] 006_Exploiting Cross-Layer Vulnerabilities_ Off-Path Attacks on the TCP_IP Protocol Suite（，）
+- [211] 014_MEBS_ Uncovering Memory Life-Cycle Bugs in Operating System Kernels（，）
+- [212] 015_EXTRACTOR_ Extracting Attack Behavior from Threat Reports（，）
+- [214] 024_POIROT_ Aligning Attack Behavior with Kernel Audit Records for Cyber Threat Hunting（，）
+- [218] 007_xNVMe_ Unleashing Storage Hardware-Software Co-design（，）
+- [245] OpenBSD下基于Nagios的网络服务监控报警系统的研究（宋磊，2009）
+- [246] NetBsd操作系统网络部分ICMP缺陷的修正（肖晨阳，2009）
+- [247] OpenBSD防火墙远程日志存储系统研究（尤良芳，2012）
+- [248] 基于OPENBSD操作系统的数据传输技术在DML综合录井仪中的应用（徐锋，2019）
+- [264] ZFS文件系统中双容错编码性能的研究（张斌，2010）
+- [271] 移动设备日志结构文件系统综述_期刊（杨梨花，2024）
+- [272] 张学臣_基于智能元数据服务的地理分布式文件系统设计（10-20，2025）
+- [274] 融合Raft共识算法与动态分片策略的分布式文件系统架构研究（黄鑫，2025）
+- [334] Linux系统中虚拟文件系统内核机制研究_期刊（史芳丽，2005）
+- [338] 基于Minifilter框架的文件系统安全模块的设计与实现_硕士（胡吉颖，2013）
+- [339] 基于固件文件系统的UEFI安全机制研究_硕士（房强，2016）
+- [341] 同轴全息光存储块设备驱动设计与实现_硕士（陈逸飞，2021）
+- [346] 现象学原典译丛, 中文修订第二版, 2018 -- 北京：商务印书馆 -- isbn13 9787100156424 -- 10aa5baa019d71a79bc0916afb13aac7 -- Anna’s Archive（，2018）
+- [530] percival-cperciva-cache_missing-paper（standalone，2005）
+- [564] baldwin-introduction_to_bhyve-slides（standalone，2014）
+- [601] shirk-the_state_of_network_security_tools_on_bsd-paper（vbsdcon，2017）
+- [649] dexter-parallel_multi-axis_regression_and_performance_testing_with_freebsd_openzfs_and_bhyve-paper（asiabsdcon，2019）
+- [711] baldwin-in-kernel_tls_framing_and_encryption_for_freebsd-slides（vbsdcon，2019）
+- [792] Baltimore-Johns-Hopkins-University-Press（White，1973）
+- [793] The-Cheese-and-the-Worms-The-Cosmos-of-a（Ginzburg，1976）
+- [802] cambridge-cambridge-university-press（Temin，1987）
+- [806] the-death-of-luigi-trastulli-and-other-stories-form-and（Portelli，1991）
+- [813] unix-internals-the-new-frontiers-unix（Vahalia，1995）
+- [821] jolitz-w-f-jolitz-l-g-operating-system-source-code-secrets（Jolitz，2000）
+- [834] Operating-Systems-Design-and（Tanenbaum，2006）
+- [844] the-book-of-pf-a-no-nonsense-guide-to-the-openbsd-firewall（Hansteen，2014）
+- [852] Appadurai_the-social-life-of-things-commodities-in-cultural（，）
+- [869] The-UNIX-Time-Sharing-System（Ritchie，1974）
+- [870] communications-of-the-acm（Kernighan，1975）
+- [895] management-science（Baldwin，2006）
+- [1224] dfly_dfly_bafug1（未知，2008）
+- [1225] dfly_dfly_basic（未知，2008）
+- [1226] dfly_dfly_baylisa2005（未知，2008）
+- [1227] dfly_dfly_usenix2005_bof（未知，2008）
+- [1228] dfly_dfly_usenix2005_bsd（未知，2008）
+- [1229] dfly_dragonflybsd.asiabsdcon04（-，2004）
+- [1230] dfly_HAMMER（Michael Neumann，2010）
+- [1296] openbsd_seccomp-pledge-oss2017（Giovanni Bechis  ` `%%%`#`&12_`__~~~alse，2017）
+- [1407] openbsd_pkgsrcCon-pledge-2017（Giovanni Bechis  ` `%%%`#`&12_`__~~~alse，2017）
+- [1423] _10821264_Post-Quantum Cryptography (PQC) Network Instrument - Measuring PQC Adoption Rates and Identifying Mi（未知，2024）
+- [1426] _11023457_Post-Quantum Cryptographic Analysis of SSH（未知，2025）
+- [1428] _11196771_Post-Quantum SSH - Achieving Production Performance Through Direct Algorithm Integration（未知，2025）
+- [1446] _1572323_Evolution and growth in large libre software projects（G. Robles;J.J. Amor;J.M. Gonzalez-Barahona;I. Herraiz，2005）
+- [1449] _4142302_Design and Implementation of a Mobile SSH Protocol（未知，2006）
+- [1503] _8748849_Design and Implementation of UDP Tunneling-based on OpenSSH VPN（未知，2018）
+- [1507] _896253_Libre software for computer science classes（J.M. Gonzalez-Barahona;P. de-las-Heras-Quiros;J. Centeno-Gonzalez;V. Matellan-Olivera;F.J. Ballesteros，2004）
+- [1639] 5738566 Performance Evaluation Comparative Analysis Network Firewall（，）
+- [1643] 6613894 Performance analysis TAYGA PF NAT64 implementations（，）
+- [1657] 7296383 Application compatibility NAT64 IPv6 transition technology（，）
+- [1667] 9302864 libvdsk VMDK（，）
+- [1679] 413103（413103，）
+- [1680] 413103（413103，）
+- [1685] 5655346（5655346，）
+- [1686] 5655346（5655346，）
+- [1688] 5726830（5726830，）
+- [1689] 5726830（5726830，）
+- [1690] 5728208（5728208，）
+- [1691] 5728208（5728208，）
+- [1693] 5897587（5897587，）
+- [1694] 5897587（5897587，）
+- [1696] 5927262（5927262，）
+- [1697] 5927262（5927262，）
+- [1709] 6358889（6358889，）
+- [1711] 6558206（6558206，）
+- [1712] 6558206（6558206，）
+- [1782] FreeBSD Journal 2014.03-04（FreeBSD Journal 2014.03-04，）
+- [1783] FreeBSD Journal 2014.05-06（FreeBSD Journal 2014.05-06，）
+- [1784] FreeBSD Journal 2014.05-06（FreeBSD Journal 2014.05-06，）
+- [1785] FreeBSD Journal 2014.07-08（FreeBSD Journal 2014.07-08，）
+- [1790] FreeBSD Journal 2015.05-06（FreeBSD Journal 2015.05-06，）
+- [1794] FreeBSD Journal 2017.01-02（FreeBSD Journal 2017.01-02，）
+- [1796] FreeBSD Journal 2017.07-08（FreeBSD Journal 2017.07-08，）
+- [1797] FreeBSD Journal 2017.09-10（FreeBSD Journal 2017.09-10，）
+- [1800] FreeBSD Journal 2018.03-04（FreeBSD Journal 2018.03-04，）
+- [1801] FreeBSD Journal 2018.03-04（FreeBSD Journal 2018.03-04，）
+- [1804] FreeBSD Journal 2019 01-02（FreeBSD Journal 2019 01-02，）
+- [1806] FreeBSD-Journal-JanFeb-2021（FreeBSD-Journal-JanFeb-2021，）
+- [1807] FreeBSD-Journal-JanFeb-2021（FreeBSD-Journal-JanFeb-2021，）
+- [1808] FreeBSD-Journal-MarApr-2021（FreeBSD-Journal-MarApr-2021，）
+- [1818] FreeBSD handbook en（FreeBSD，）
+- [1841] JulyAug23 FreeBSD-1（JulyAug23，）
+- [1842] JulyAug23 FreeBSD-1（JulyAug23，）
+- [1983] freebsd-journal-sep-oct-2023（freebsd-journal-sep-oct-2023，）
+- [1991] mounting-ntfs-partions-in-freebsd（mounting-ntfs-partions-in-freebsd，）
+- [1992] mounting-ntfs-partions-in-freebsd text（mounting-ntfs-partions-in-freebsd，）
+
+## ② 研究缺口（doubts_to_resolve，80 条）
+
+- id=397 [resolved] - 辨析：[考据完成：2026-07-28 该处辨析所涉存疑点经穷尽联网考据，属史料缺口，详见上下文分析] 迁移过程中实际丢失的 PR 数量在公开档案中无明确统
+- id=398 [resolved] - 辨析：[考据完成：2026-07-28 该处辨析所涉存疑点经穷尽联网考据，属史料缺口，详见上下文分析] git notes 中维护的 SVN-Git 映射在
+- id=399 [resolved] - 辨析：[考据完成：2026-07-28 该处辨析所涉存疑点经穷尽联网考据，属史料缺口，详见上下文分析] 三次迁移的具体史料损失量化需建立专门的 "FreeB
+- id=400 [resolved] - 辨析：经 bsd_commits.db `commits` 表验证（2026-07-22 查询），1994-1995 年间 freebsd-src 仓库存在
+- id=401 [resolved] - 辨析：考据过程留痕——【查证来源】freebsd-pkg 邮件列表 2012-2014 年归档经 <https://lists.freebsd.org/ar
+- id=402 [resolved] - 辨析：考据过程留痕——【查证来源】pkg_install(1) 系列手册页经 <https://man.freebsd.org/cgi/man.cgi?qu
+- id=403 [resolved] - 文献：pkg_add(1) 手册页 ［EB/OL］. <https://man.freebsd.org/cgi/man.cgi?query=pkg_add；
+- id=404 [resolved] - 辨析：考据过程留痕——【查证来源】freebsd-pkg 邮件列表 2014-2015 年归档经 <https://lists.freebsd.org/ar
+- id=405 [resolved] - 辨析：考据过程留痕——【查证来源】FreeBSD Handbook 第 4 章目录经 <https://docs.freebsd.org/en/books/
+- id=406 [resolved] - 文献：FreeBSD Handbook. Chapter 4. Installing Applications: Packages and Ports［Z］
+- id=407 [resolved] - 辨析：考据过程留痕——【查证来源】pkg(8) 手册页经 FreeBSD 官方文档一手核验，pkg(8) 命令行工具与子命令集（install/upgrad
+- id=408 [resolved] - 辨析：按 0 信任原则考据。【查证来源】总纲第 15 条系经 Read 核实的项目统摄史观原文（原材料/哲学/项目统摄史观/第 25 章.md 第 19 行
+- id=409 [resolved] - 辨析：按 0 信任原则考据。【查证来源】总纲第 19 条系经 Read 核实的项目统摄史观原文（原材料/哲学/项目统摄史观/第 25 章.md 第 23 行
+- id=410 [resolved] - 辨析：按 0 信任原则考据。【查证来源】总纲第 21 条系经 Read 核实的项目统摄史观原文（原材料/哲学/项目统摄史观/第 25 章.md 第 25 行
+- id=411 [resolved] - 辨析：按 0 信任原则考据。【查证来源】总纲第 13 条系经 Read 核实的项目统摄史观原文（原材料/哲学/项目统摄史观/第 25 章.md 第 13 行
+- id=412 [resolved] - 辨析：按 0 信任原则考据。【查证来源】总纲第 1、2、7、19、23、25 条系经 Read 核实的项目统摄史观原文（原材料/哲学/项目统摄史观/第 25
+- id=413 [resolved] - 辨析：3.0 SMP 是否 "真正" 支持多 CPU 存在争议，Giant Lock 下同时刻仅一 CPU 在内核态；bsd_commits.db 中 3.
+- id=414 [resolved] - 辨析：地域仅以邮箱 ccTLD 作弱推断，个人/免费邮箱志愿者（0 次）地域难定，相关占比一律标 ［ 存疑脚注：此处事实待多源交叉验证 ］；绝不按姓名推断族
+- id=415 [resolved] - 辨析：任何具体国别/族裔占比均不得外推为群体结论；非提交贡献者（文档、ports、翻译、漏洞上报者）的记录缺口标注 ［ 存疑脚注：此处事实待多源交叉验证 ］
+- id=416 [resolved] - 辨析：[已核证] 4.0 公告日期为 2000.3.14，经 WebFetch 查询 FreeBSD 官方公告页 <https://www.freebsd.
+- id=417 [resolved] - 辨析：考据过程留痕——【查证来源】Core Team 撤销 commit bit 的内部决策记录未完整公开，本节以 freebsd-current 邮件列表
+- id=418 [resolved] - 辨析：考据过程留痕——【查证来源】Dillon 2003-07-16 DragonFly BSD 公告原文经 WebFetch 一手核验（<https://
+- id=419 [resolved] - 辨析：考据过程留痕——【查证来源】DragonFly BSD 官方历史页面（<https://www.dragonflybsd.org/history/）经
+- id=420 [resolved] - 辨析：考据过程留痕——【查证来源】本节史料综合 37.9.1-37.9.3 节一手与二手史料：Dillon 2003-07-16 DragonFly BSD
+- id=421 [resolved] - 辨析：考据过程留痕——【查证来源】项目史观总纲原文经 Read 一手核验（`原材料/哲学/一刻哲学/第25章.md`），第 9 行总纲第 5 条原文“没有必
+- id=422 [resolved] - 辨析：经 bsd_commits.db commits 表验证，ipfw2 首次 commit 为 2002-07-09（4.6-RELEASE 2002.
+- id=423 [resolved] - 辨析：经 bsd_commits.db commits 表验证，kqueue 首次 commit 为 2000-04-16（4.0-RELEASE 2000
+- id=424 [resolved] - 辨析：经 bsd_commits.db commits 表与 commit_files 表交叉验证，jail 初始实现由 Poul-Henning Kamp
+- id=425 [resolved] - 辨析：经 bsd_commits.db commits 表验证，Soft Updates 在 1998-03-09 即已合入主干（早于 3.0-RELEAS
+- id=426 [resolved] - 辨析：经 bsd_commits.db commits 表验证，ULE 调度器首次 commit 为 2003-01-26（5.0-RELEASE 之后），
+- id=427 [resolved] - 辨析：考据过程留痕——【查证来源】FreeBSD 4.0-RELEASE 公告日期 2000.3.14 与 4.11-RELEASE 公告日期 2005.1
+- id=428 [resolved] - 辨析：考据过程留痕——【查证来源】4.11-RELEASE 公告中 "Errata Branch" 与 "last release from the REL
+- id=429 [resolved] - 辨析：考据过程留痕——【查证来源】Linux 2.6 发布时间（2003.12）与 RHEL 发布时间（2003）经公开文档核验；Yahoo! 2000 年
+- id=430 [resolved] - 辨析：考据过程留痕——【查证来源】本节史料综合 37.15.1 至 37.15.3 节一手与二手史料；项目史观总纲第 13、19、21 条原文经 Read 
+- id=431 [resolved] - 辨析：考据过程留痕——【查证来源】项目史观总纲原文经 Read 一手核验（`原材料/哲学/一刻哲学/第25章.md`），第 13 条原文 "法律与道德是利益
+- id=432 [resolved] - 辨析：经 bsd_commits.db commits 表与 commit_files 表交叉验证，Jails 的确切诞生日为 1999-04-28（com
+- id=433 [resolved] - 辨析：phk 的自述与社区记忆可能存在差异；bsd_commits.db 查询 L2.3.1.jail（jail 特性引入到稳定周期前 20 条 commi
+- id=434 [resolved] - 辨析：VMware 博客是否构成“VMware 阵营”的正式立场须审慎判断——博客作者 Rostislav M. Georgiev 以 VMware Ope
+- id=435 [resolved] - 辨析：Rutgers 课程笔记的具体作者与版本须考据——“Rutgers 课程笔记”在 FreeBSD 社区讨论中被广泛引用但原始 URL 难以定位 [考据
+- id=436 [resolved] - 辨析：Jails 在 2000 年的定位是否为“轻量隔离”需考据；phk 的 SANE 2000 论文标题指向安全隔离，2004 年 ACM Queue 文
+- id=437 [resolved] - 辨析：Docker 团队是否“公开承认”Jails 影响的考据存疑；Docker 官方文档“Underlying Technology”小节经查证仅明确提及
+- id=438 [resolved] - 辨析：Docker 是否“工程粗糙”存在争议，Docker 阵营会反驳镜像与编排是工程创新而非营销；“劣币驱逐良币”的判定标准须明确——若以“生态完整性”为
+- id=439 [resolved] - 辨析：再回应层的部分论点为基于各阵营设计文档、博客与课程笔记的合理推断，非直接引用，须标注存疑；本次考据新增的 phk jails saga 与 ACM Q
+- id=440 [resolved] - 辨析：Docker 是否“工程粗糙”存在争议，Docker 阵营会反驳镜像与编排是工程创新而非营销；“劣币驱逐良币”的判定标准须明确——若以“生态完整性”为
+- id=441 [resolved] - 辨析：Docker 文档“未提及”jails 是否构成“有意遮蔽”须审慎判断——“框架性排除”与“主动否认”有程度差异，形式主义文化运作的无意识效果不等于有
+- id=442 [resolved] - 辨析：“改革的困难远高于革命”是否适用于 jails 与 Docker 的比较须结合场景判断——Docker 的革命亦有其困难（如早期生态冷启动、容器运行时
+- id=443 [resolved] - 辨析：Lemon 论文致谢未提 Banga，但 **kqueue(2)** 手册页 "SEE ALSO" 列了 Banga 论文，二者关系需谨慎定性；bsd
+- id=444 [resolved] - 辨析：Lemon 论文未公开测试脚本，性能数据的可复现性存疑，后续 Provos 2002 论文部分验证
+- id=445 [resolved] - 辨析：**epoll(7)** 手册页将 kqueue 定性为“similar mechanism”而非“inspiration source”，这一措辞选
+- id=446 [resolved] - 史观：总纲第 4 条——0 信任原则，对未能直接核查的一手来源须明确标注存疑状态，不得因“来源是一手”即豁免
+- id=447 [resolved] - 辨析：本节考据过程留痕——查证来源为 lore.kernel.org（访问失败，Anubis 反爬）、xmailserver.org/linux-patch
+- id=448 [resolved] - 史观：总纲第 4 条——0 信任原则，LKML 邮件作为一手史料经 marc.info 镜像直接核查，推翻先前 "lore.kernel.org 受 Anu
+- id=449 [resolved] - 辨析：本节考据过程留痕——查证来源为 marc.info LKML 邮件镜像（2026-07-23 直接访问成功，28 封邮件线程经逐封阅读核查确认），交叉
+- id=450 [resolved] - 辨析：术语沿用是否构成影响承认，须区分“术语已被社区通用化”与“术语原创者被刻意遗忘”两种情况；level-triggered/edge-triggered
+- id=451 [resolved] - 辨析：FreeBSD 阵营的再回应是否存在过度解读——手册页引用不对称、论文 References 节缺失 kqueue 引用、术语沿用三者是否足以构成“L
+- id=452 [resolved] - 史观：总纲第 4 条——0 信任原则，LKML 邮件作为一手史料经 marc.info 镜像直接核查，推翻 39.3.6.4 节中 "Jonathan Le
+- id=453 [resolved] - 辨析：本节考据过程留痕——查证来源为 marc.info LKML 邮件镜像（2026-07-23 直接访问成功，Nechayev 1 封、Lemon 2 
+- id=454 [resolved] - 辨析：[考据完成：2026-07-28 该处辨析所涉存疑点经穷尽联网考据，属史料缺口，详见上下文分析] 注册日期存在 2000.3.15 与 2000.3.
+- id=455 [resolved] - 要点：Jan Koum（WhatsApp 创始人）于 2014 年 11 月向 Foundation 捐赠 $1,000,000（经 2026-07-22 
+- id=456 [unresolvable] - 辨析：Koum 是否获得治理影响力，需查董事会成员变化；2016 年第二次捐赠 $500,000 因未找到官方一手证据保留 [考据完成：2026-07-28
+- id=457 [resolved] - 辨析：考据过程留痕——【查证来源】Dillon 2003-07-16 fork 公告经 <https://lists.freebsd.org/piperma
+- id=458 [resolved] - 辨析：考据过程留痕——【查证来源】合图层基于现有公开史料综合判断，所引 Dillon fork 公告经一手核验（见 41.9.5 节辨析【查证来源】，<ht
+- id=459 [resolved] - 辨析：考据过程留痕——【查证来源】"incompetent idiots" 言论经 2026-07-23 多次搜索 lore.kernel.org（<htt
+- id=460 [resolved] - 【交叉验证方法】项目史观总纲原文与本节审视段落的双向映射——三段审视分别对应第 5 条偶然性、第 6 条和解张力、第 8 条本体论平等，形成“偶然性 → 和
+- id=461 [resolved] - 【存疑判定依据】Torvalds“incompetent idiots”言论一手 LKML 来源未检索到，哲学审视以“若属实”为前提，不得作为确凿事实呈现；
+- id=462 [resolved] - 辨析：考据过程留痕——【查证来源】FreeBSD 5.0-RELEASE Announcement 经 **<https://www.freebsd.org
+- id=463 [resolved] - 【存疑判定依据】Yahoo!/Hotmail 留在 4.x 的具体迁移时间点与比例未在公开档案完整记录，哲学审视中以“留在 4.x 直到 6.x 稳定”为概
+- id=464 [resolved] - 辨析：地域仅以邮箱 ccTLD 作弱推断，个人/免费邮箱志愿者（1,026 次）地域难定，相关占比一律标 ［ 存疑脚注：此处事实待多源交叉验证 ］；绝不按姓
+- id=465 [resolved] - 辨析：任何具体国别/族裔占比均不得外推为群体结论；非提交贡献者（文档、ports、翻译、漏洞上报者）的记录缺口标注 ［ 存疑脚注：此处事实待多源交叉验证 ］
+- id=466 [resolved] - 辨析：经 bsd_commits.db tags 表验证，6.0-RELEASE 的 tagger_date 为 2005-11-03T00:35:26Z（
+- id=467 [resolved] - 辨析：经 bsd_commits.db tags 表验证，5.0-RELEASE 的 tagger_date 为 2003-01-16T16:56:23Z、
+- id=468 [resolved] - 辨析：经 bsd_commits.db tags 表验证，5.0-RELEASE 的 tagger_date 为 2003-01-16T16:56:23Z、
+- id=469 [resolved] - 史料：Evans 个人博客 "jemalloc"、Mozilla Bugzilla 2005 讨论、Firefox 3 开发档案 ［C］；bsd_commi
+- id=470 [resolved] - 文献：Evans, J. A Scalable Concurrent malloc(3) Implementation for FreeBSD BSDCan
+- id=471 [resolved] - 辨析：【查证来源】Sony PS3 Firmware 3.21 Announcement 原文载于 PlayStation.Blog（blog.us.pla
+- id=472 [resolved] - 辨析：【查证来源】反批评的“安全”理由须对照 geohot 2010.1 hypervisor exploit 技术细节与实际威胁程度——geohot PS
+- id=473 [resolved] - 辨析：【查证来源】Kutaragi 2005 年 PS3“computer”定位声明须经 Sony E3 2005 发布会视频/文字记录核验——经 WebS
+- id=474 [resolved] - 辨析：【查证来源】合图的“根本脆弱性”判断须对照其他商业平台 BSD 移植案例——Apple macOS Darwin 的 BSD 代码使用是否同样面临“可
+- id=475 [resolved] - 辨析：【查证来源】项目史观总纲第 13、19、21 条原文经 `c:\Users\ykla\Documents\hibsd\原材料\哲学\一刻哲学\第25章
+- id=476 [resolved] - 辨析：经 freebsd.db commits 表验证，原大纲称“由 John Baldwin 主导移植”不准确——vendor import 由 John
+
+## ③ 一手史料（original_sources.kaoju_records，2 条）
+
+- kaoju#34 file#50 20260722_第七卷-第93章.md: ### 1. FreeBSD 基础系统加密库事实核查（93.2 辨析字段修正）
+
+**原声明**：FreeBSD 14.
+- kaoju#35 file#51 20260722_第七卷-第95章.md: 1. bsd_commits.db openbsd-src 仓库 commit 8b23add8c74b（2018-07

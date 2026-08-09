@@ -1,0 +1,140 @@
+# 第 12 卷综述素材（T1 三源合一，2026-08-04 自动生成）
+
+> 卷目录：第12卷-macos的bsd遗产｜章范围：ch236-ch252
+
+## ① 现有研究（references_fulltext，33 条）
+
+- [1633] [存疑脚注：主文献库 id=1633 仅含派生串 '405455 NeXT Step operating system workstation'，无 bibli（，）
+- [1751] [存疑脚注：主文献库 id=1751 仅含 'DTIC ADA1001296'，无 bibliography_entry；DTIC 入藏号段约对应 1981 年（，）
+- [1752] [存疑脚注：主文献库 id=1752 仅含 'DTIC ADA1004734'，无 bibliography_entry；DTIC 入藏号段早于本卷主题，联网核（，）
+- [2243] Darwin operating system history (open source release 2000)（Wikipedia，2024）
+- [2244] Apple Public Source License 2.0（Apple Inc.，2003）
+- [2245] Mac OS X 10.0 Cheetah release (2001-03-24)（Apple Inc.，2001）
+- [2246] Darwin 8.0.1 (last standalone binary release)（Apple Inc.，2005）
+- [2247] OpenDarwin project (2002-2006)（OpenDarwin Project，2006）
+- [2248] XNU kernel architecture (Mach + BSD + IOKit)（Wikipedia，2024）
+- [2249] Mac OS X Server 1.0 release (1999-03-16)（Apple Inc.，1999）
+- [2250] macOS UNIX 03 certification (Leopard onward)（Apple Inc.，2007）
+- [2251] Mac OS X Public Beta (Kodiak) 2000（Apple Inc.，2000）
+- [2252] NeXTSTEP/OPENSTEP history（Wikipedia，2024）
+- [2253] Rhapsody operating system (1997)（Wikipedia，2024）
+- [2254] Mac OS X 10.1 Puma release（Apple Inc.，2001）
+- [2255] Mac OS X 10.4 Tiger release（Apple Inc.，2005）
+- [2256] Mac OS X 10.6 Snow Leopard release（Apple Inc.，2009）
+- [2257] macOS Big Sur 11 release (Apple silicon M1)（Apple Inc.，2020）
+- [2258] Darwin: BSD lineage POSIX API documentation（Wikipedia，2024）
+- [2259] Apple Open Source website（Apple Inc.，2024）
+- [2309] Mac OS X 10.0 Cheetah (2001-03-24) - the first Mac OS X（Apple Inc.，2001）
+- [2310] Mac OS X 10.1 Puma release notes（Apple Inc.，2001）
+- [2311] Mac OS X 10.2 Jaguar release（Apple Inc.，2002）
+- [2312] Mac OS X 10.3 Panther release（Apple Inc.，2003）
+- [2313] Mac OS X 10.5 Leopard - UNIX 03 certification（Apple Inc.，2007）
+- [2314] Mac OS X 10.5 Leopard release notes（Apple Inc.，2007）
+- [2315] Mac OS X 10.6 Snow Leopard - libdispatch/GCD debut（Apple Inc.，2009）
+- [2316] Grand Central Dispatch (libdispatch) technical overview（Apple Inc.，2009）
+- [2317] macOS 11 Big Sur - Apple silicon M1 transition（Apple Inc.，2020）
+- [2318] Apple silicon M1 chip announcement（Apple Inc.，2020）
+- [2319] Darwin on embedded systems (iOS/watchOS/tvOS)（Wikipedia，2024）
+- [2320] FreeBSD and macOS code exchange (ZFS/DTrace/networking)（The FreeBSD Project，2024）
+- [2321] macOS BSD philosophy: historical perspective（Wikipedia，2024）
+
+## ② 研究缺口（doubts_to_resolve，94 条）
+
+- id=1233 [resolved] - 史料：Accetta M, Baron R, Golub D, et al. "Mach: A New Kernel Foundation for UNIX
+- id=1234 [resolved] - 辨析：APSL 1.1 与 1.2 的具体变更条款——以 FSF 的逐版评价为准，APSL 1.1 的 "暂停条款" 实质上仍为 "终止条款" 的变体，未消
+- id=1235 [resolved] - 辨析：XNU tag 偏差规律的阶段划分——bsd_commits.db 显示阶段二的异常长偏差（如 macOS 10.15 Catalina 偏差 121
+- id=1236 [resolved] - 辨析：APSL 2.0 的具体发布月份——FSF 声明未明确月份，仅称 2003 年发布；中文二手资料（如 m.baike.com）称 "2003 年 7 
+- id=1237 [resolved] - 辨析：外部贡献者具体名单与贡献量——以 opensource.apple.com 各版本 CREDITS 文件为准，但 CREDITS 文件格式不统一（部分
+- id=1238 [resolved] - 史料：Free Software Foundation. FSF's Opinion of the Apple Public Source License 
+- id=1239 [resolved] - 辨析：Apple 是否发布过直接针对 FSF 批评 APSL 的正式官方回应声明——经多轮联网考据（WebSearch 多次查询 + WebFetch 访问
+- id=1240 [resolved] - 史料：Free Software Foundation. FSF's Opinion of the Apple Public Source License 
+- id=1241 [resolved] - 辨析：FSF 对 APSL 2.0 的 "认可" 与 "建议不发布新软件" 是否矛盾——以 FSF 官方立场声明为准，二者不矛盾：FSF 认可 APSL 2
+- id=1242 [resolved] - 要点：**Mac OS X 10.0 Cheetah** 于 **2001 年 3 月 24 日**[考据完成：2026-07-28 经穷尽联网考据，该要点
+- id=1243 [resolved] - 辨析：Panther 的 POSIX 合规程度须以 The Open Group 测试套件结果（非认证）评价——Apple 未公开 Panther 的 Th
+- id=1244 [resolved] - 辨析：Tiger 是否 "接近认证" 须以 The Open Group 测试套件内部结果评价——Apple 未公开 Tiger 的 The Open Gr
+- id=1245 [resolved] - 辨析：Rosetta（2006）与 Rosetta 2（2020）的工程差异——Rosetta 为 PowerPC→Intel 翻译，Rosetta 2 为
+- id=1246 [resolved] - 存疑判定依据：freebsd.db freebsd-ports 仓库 2009-2014 年间 libdispatch 仅 2 条 commit 的稀疏性 
+- id=1247 [resolved] - 辨析：libdispatch 的 FreeBSD 移植是否 "回馈" 了 Apple——libdispatch 开源后 FreeBSD 移植是 Apple→
+- id=1248 [resolved] - 存疑判定依据：freebsd.db freebsd-ports 仓库 2009-2014 年间 libdispatch 仅 2 条 commit 的稀疏性 
+- id=1249 [resolved] - 辨析：libdispatch 随 Swift 开源是否改变了其许可证——libdispatch 始终保持 Apache 2.0 许可证（2009 年开源时即
+- id=1250 [resolved] - 存疑判定依据：Apple 从 FreeBSD 吸收代码与回馈代码的具体比例 [考据完成：2026-07-28 该处存疑标注属史料缺口，须待原始档案公开后方可
+- id=1251 [resolved] - 辨析：“消费式开源”批判须避免滑向“道德指控”——Apple 的行为在 BSD 许可证框架内是合法的，批判指向结构性不对称而非个人或组织的道德缺陷；“回馈规
+- id=1252 [resolved] - 存疑判定依据：Sedov 向 Apple libdispatch 仓库提交的具体 commit 数 [考据完成：2026-07-28 该处存疑标注属史料缺口
+- id=1253 [resolved] - 辨析：“双向回馈”的反驳须避免滑向“Apple 美化”——承认 Apache 2.0 的诚意不等于否认 Apple 在 Mac OS X 整体上的封闭性；S
+- id=1254 [resolved] - 存疑判定依据：Sedov 在 Apple libdispatch 仓库的具体 commit 数与占比 [考据完成：2026-07-28 该处存疑标注属史料缺
+- id=1255 [resolved] - 辨析：再批评层须避免滑向“Apple 道德指控”——承认反批评层的合理性（Apache 2.0 诚意与 Sedov bug 反馈确属事实），但指出结构性不对
+- id=1256 [resolved] - 存疑判定依据：Apple 从 FreeBSD 吸收代码与回馈代码的具体比例 [考据完成：2026-07-28 该处存疑标注属史料缺口，须待原始档案公开后方可
+- id=1257 [resolved] - 辨析：“不对称互惠”的合图须避免滑向“Apple 道德指控”——合图层承认 Apple 行为在 BSD 许可证框架内的合法性与 Apache 2.0 选择的
+- id=1258 [resolved] - 存疑判定依据：Apple 选择 Apache 2.0 开源 libdispatch 是否有 FSF 直接协商 [考据完成：2026-07-28 该处存疑标注
+- id=1259 [resolved] - 辨析：偶然性审视须避免滑向“虚无主义”——承认偶然性不等于否认 Apple 开源决策的工程合理性，GCD 在 2009 年的并发抽象领先性是客观事实，但这一
+- id=1260 [resolved] - 存疑判定依据：FreeBSD 选择移植 libdispatch 是否受 Apple 影响 [考据完成：2026-07-28 该处存疑标注属史料缺口，须待原始
+- id=1261 [resolved] - 辨析：本体论平等审视须避免滑向“相对主义”——承认四方本体论平等不等于否认工程差距（GCD 在 2009 年的任务队列抽象领先性是客观事实），但工程差距不构
+- id=1262 [resolved] - 存疑判定依据：Sedov 移植 commit 中“形式适配”（ports 构建机制）与“功能重写”（libdispatch 源代码改造）的比例 [考据完成：
+- id=1263 [resolved] - 辨析：形式主义审视须避免滑向“代码虚无主义”——承认 libdispatch 代码的“商品形式主义”不等于否认其技术实质（并发抽象功能是真实的），但须辨析“
+- id=1264 [resolved] - 查证来源：freebsd.db 数据库查询（freebsd-src 仓库 2009-2011 年间 `@apple.com` 域名 commit 数量统计 
+- id=1265 [resolved] - 存疑判定依据：freebsd.db freebsd-src 仓库 2009-2011 年间 `@apple.com` 域名 commit 数量须以 Free
+- id=1266 [resolved] - 辨析：“无薪员工”叙事须避免滑向“Apple 道德指控”——Apple 的行为在 BSD 许可证框架内是合法的，批判指向结构性不对称而非个人或组织的道德缺陷
+- id=1267 [resolved] - 存疑判定依据：Jordan Hubbard 在 Apple 期间对 FreeBSD 主线的具体 commit 数量 [考据完成：2026-07-28 该处存
+- id=1268 [resolved] - 辨析：“BSD 许可证允许此模式”的反驳须避免滑向“许可证契约即正义”——承认法律层面的合法性不等于否认结构性不对称的存在；Apple 的“实质性回馈”须辨
+- id=1269 [resolved] - 查证来源：FSF 对 APSL 2.0 的官方立场声明（gnu.org/philosophy/apsl.html，明言“only part of Mac O
+- id=1270 [resolved] - 存疑判定依据：freebsd.db freebsd-src 仓库 Hubbard 在 2001 年后的具体 commit 数量与性质 [考据完成：2026-
+- id=1271 [resolved] - 辨析：再回应层须避免滑向“Apple 道德指控”——承认反批评层的合理性（BSD 许可证契约合法性、APSL 2.0 自由软件资格、Darwin 源码公开均
+- id=1272 [resolved] - 查证来源：项目史观总纲第 24.2 节“劣币驱逐良币”原文（原材料/哲学/项目统摄史观/第 24 章.md）；项目史观总纲第 13 条原文（原材料/哲学/项
+- id=1273 [resolved] - 存疑判定依据：freebsd.db freebsd-src 仓库 2009-2011 年间 `@apple.com` 域名 commit 数量须以 Free
+- id=1274 [resolved] - 辨析：“不可调和性”的合图须避免滑向“Apple 道德指控”——合图层承认 Apple 行为在 BSD 许可证框架内的合法性与 APSL 2.0 选择性开源
+- id=1275 [resolved] - 查证来源：项目史观总纲第 13 条原文（原材料/哲学/项目统摄史观/第 25 章.md）；项目史观总纲第 24.2 节“劣币驱逐良币”原文（原材料/哲学/项
+- id=1276 [resolved] - 存疑判定依据：freebsd.db freebsd-src 仓库 2009-2011 年间 `@apple.com` 域名 commit 数量须以 Free
+- id=1277 [resolved] - 辨析：总纲第 13 条审视须避免滑向“道德虚无主义”——承认“道德问题是利益问题”不等于否认利益分配失衡的存在，而是将其从道德层面收回法律与利益分配层面；“
+- id=1278 [resolved] - 查证来源：项目史观总纲第 19 条原文与第 19.3 节原文（原材料/哲学/项目统摄史观/第 25 章.md 与 第 19 章.md）；Apple Darw
+- id=1279 [resolved] - 存疑判定依据：freebsd.db freebsd-src 仓库 2009-2011 年间 `@apple.com` 域名 commit 数量须以 Free
+- id=1280 [resolved] - 辨析：解释学循环审视须避免滑向“视角相对主义”——承认四方视角的前理解差异不等于否认事实客观性（freebsd.db 数据是客观记录），但须辨析“事实”与“
+- id=1281 [resolved] - 查证来源：项目史观总纲第 21 条原文与第 21.1、21.2 节原文（原材料/哲学/项目统摄史观/第 25 章.md 与 第 21 章.md）；项目史观总
+- id=1282 [resolved] - 存疑判定依据：freebsd.db freebsd-src 仓库 2009-2011 年间 `@apple.com` 域名 commit 数量须以 Free
+- id=1283 [resolved] - 辨析：革命与改革方法论审视须避免滑向“GPL 优于 BSD”的价值判断——总纲第 21 条明言“改革的困难远高于革命，但确实带来了稳定和好处”，BSD 改革
+- id=1284 [resolved] - 存疑判定依据：bsd_commits.db 不含 Darwin 仓库，Apple 实际从 FreeBSD 吸收的代码量无法从数据库直接统计；“子系统错位”判
+- id=1285 [resolved] - 存疑判定依据：Apple 阵营的“509 个开源仓库”虽为事实，但多数为 Apple 自有项目的源码发布（义务性开源），并非向 FreeBSD 的主动回馈；
+- id=1286 [resolved] - 存疑判定依据：再批评层的“合法不等于合宜”判断须区分法律与伦理两个层面——BSDL 允许桥梁稀疏是法律事实，但是否符合 FreeBSD 社区长期利益是伦理判
+- id=1287 [resolved] - 存疑判定依据：合图层须避免两种极端——既不应将 Apple 描绘为纯粹的“剥削者”（BSDL 的宽容是 FreeBSD 自愿授予），亦不应将“桥梁稀疏”粉饰
+- id=1288 [resolved] - 存疑判定依据：批评层所述“核心组件闭源化加剧”是相对趋势判断而非绝对量化——Apple 在 10.7-10.11 期间闭源二进制驱动的精确数量须逐版本比对 
+- id=1289 [resolved] - 存疑判定依据：反批评层的“技术栈调整权”论点虽逻辑自洽，但“商业需要”与“恶意收紧”的边界须谨慎区分——Apple 闭源 IOKit 驱动的首要动机可能是商
+- id=1290 [resolved] - 存疑判定依据：再回应层的“持续非完整”判断须区分“完整开源”的标准——若以“可独立构建可启动 Darwin 系统”为标准，则 Apple 发布的源码确实不完
+- id=1291 [resolved] - 存疑判定依据：合图层须避免两种极端——既不应将 Apple 描绘为“恶意收紧开源”（BSDL 与 APSL 双层架构是双方自觉选择），亦不应将“持续开源”粉
+- id=1292 [resolved] - 存疑判定依据：bsd_commits.db 不含 Darwin 仓库，Apple 实际从 FreeBSD 吸收的代码量无法从数据库直接统计；“零回馈”判断是
+- id=1293 [resolved] - 存疑判定依据：Apple 阵营的“509 个开源仓库”虽为事实，但多数为 Apple 自有项目的源码发布（义务性开源），并非向 FreeBSD 的主动回馈；
+- id=1294 [resolved] - 存疑判定依据：再批评层须区分“法律层面的合法性”与“伦理层面的合宜性”——前者可由 BSD 许可证文本确定，后者涉及社区利益的主观判断，不可被量化数据完全证
+- id=1295 [resolved] - 存疑判定依据：合图层须避免两种极端——既不应将 Apple 描绘为纯粹的“剥削者”（BSDL 的宽容是 FreeBSD 自愿授予），亦不应将“零回馈”粉饰为
+- id=1296 [resolved] - 存疑判定依据：本节的“不可调和性”判断是基于许可证哲学、权力知识共谋与革命改革方法论三个层面的形式主义分析，非价值裁决——“不可调和”意味着 Apple 与
+- id=1297 [resolved] - 辨析：iPhone OS 1.0 是否“基于 BSD”须明确——iPhone OS 内核为 XNU（Mach + BSD 子系统），BSD 子系统源自 Fr
+- id=1298 [resolved] - 辨析：iPadOS 与 iOS 的内核是否真正相同——经 Darwin 源码仓库比对，二者的 XNU 源码在 2019 年分支后开始出现微小差异（设备驱动配
+- id=1299 [resolved] - 辨析：visionOS 的 Mach 调度器优化是否触及 Mach 3.0 微内核的根本架构——经 Apple Developer 文档与公开技术演讲（WW
+- id=1300 [resolved] | 人才与生态回馈 | Jordan Hubbard 加入 Apple | "人才回流" 非 "代码回流"（加入时间存疑） |
+- id=1301 [resolved] - 辨析：考据过程留痕——【查证来源】BSD-3-Clause 文本经 opensource.org 一手核验，第一条明文 "with or without m
+- id=1302 [resolved] - 辨析：考据过程留痕——【查证来源】BSD-3-Clause 文本经 opensource.org 一手核验，第一条允许 "with or without m
+- id=1303 [resolved] - 辨析：合图层须避免两种极端——既不应将 Apple 描绘为纯粹的 "剥削者"（BSDL 的宽容是 FreeBSD 自愿授予，且 Apple 的开源贡献记录如
+- id=1304 [resolved] **总纲第 19 条——解释学循环是历史认识的根本条件**。macOS 与 FreeBSD 代码流动的叙事本身陷入解释学循环——Apple 阵营与 BSD 阵营
+- id=1305 [resolved] - 辨析：APSL 与 BSD 许可的“宽松度”比较存在两种说法——FSF 在 2003 年 8 月 APSL 2.0 发布后认定其为自由软件许可证（<http
+- id=1306 [resolved] - 辨析：具体贡献者人名的核实存在困难——Apple 内部工程团队的组织架构未完全公开，opensource.apple.com 的 CREDITS 文件仅记录
+- id=1307 [resolved] - **辨析**：批评的四支各自存在强度差异。第一支（Homebrew/Ports 同构）在概念层面成立但 Homebrew 的 Ruby 重写在工程实现上与 
+- id=1308 [resolved] - **辨析**：反批评的三论点各自存在强度差异。第一论点（许可证即契约）在法律层面成立——BSD 许可证允许 APSL 派生，Apple 行使的是 BSD 许
+- id=1309 [resolved] - **辨析**：再批评的四点各自存在强度差异。第一点（合法与合宜二分）在哲学层面成立——BSD 阵营的批评确实是“合宜性”批评而非“合法性”批评——但 App
+- id=1310 [resolved] - **辨析**：合图层的核心判断存在三种可能的反对意见。第一种反对意见为“macOS 是 BSD 哲学的哲学传承而非形式主义化重构”——此意见在工程层面成立（
+- id=1311 [resolved] - **辨析**：道与术的辩证在 macOS 语境中是否存在“Apple 之道高于 BSD 之道”的层级——此层级判断在 Apple 阵营中隐含存在（Apple
+- id=1312 [resolved] - **辨析**：自由的张力在 macOS 语境中是否存在“BSD 自由高于 Apple 自由”的层级——此层级判断在 BSD 阵营中隐含存在（BSD 阵营批评
+- id=1313 [resolved] - **辨析**：边缘者贡献在 macOS 语境中是否存在“Apple 应公开所有贡献者”的伦理要求——此要求在伦理层面成立（公开贡献者名单是对贡献者的尊重）但
+- id=1314 [resolved] - **辨析**：差异即真实存在在 macOS 语境中是否存在“差异即不可调和”的判断——此判断在哲学层面成立（三重差异各自存在且不可被任何一方的“统一”主张消
+- id=1315 [resolved] - **辨析**：许可证哲学在 macOS 语境中是否存在“BSD 许可证道德高于 APSL”的层级——此层级判断在 BSD 阵营的“合宜性”批评中隐含存在，但
+- id=1316 [resolved] - **辨析**：解释学循环与权力知识共谋在 macOS 语境中是否存在“Apple 的叙事是扭曲而 FreeBSD 的叙事是真实”的层级——此层级判断在 BS
+- id=1317 [resolved] - **辨析**：革命与改革在 macOS 语境中是否存在“改革优于革命”或“革命优于改革”的层级——此层级判断在 BSD 阵营与 Linux 阵营中各有隐含主
+- id=1318 [resolved] - 辨析：考据过程留痕——【查证来源】Apple 官方 XNU 仓库 README 经 github.com/apple-oss-distributions/x
+- id=1319 [resolved] - 辨析：考据过程留痕——【查证来源】FreeBSD Foundation 年度报告页面经 freebsdfoundation.org 一手访问返回 404，互
+- id=1722 [open] NEWREF:1633 指向主文献库 id=1633，title 为派生存根 '405455 NeXT Step operating system workst
+- id=1723 [open] NEWREF:1751 指向主文献库 id=1751，title 'DTIC ADA1001296'，无 bibliography_entry；DTIC 入藏号
+- id=1724 [open] NEWREF:1752 指向主文献库 id=1752，title 'DTIC ADA1004734'，无 bibliography_entry；DTIC 入藏号
+- id=1725 [resolved] 第 236.1 节称 '1985 年 9 月 17 日 Steve Jobs 辞去 Apple 董事长职务'，多源权威记载（Cult of Mac 'Today
+- id=1726 [open] WebObjects 1.0 发布日卷内矛盾：第 236.4.2 节记为 '1996 年 3 月'，第 237.2 节记为 '1995 年 12 月'；文档自注
+- id=1727 [open] 第 236.2 节将 'NeXTSTEP 0.9（预览版）' 系于 1988-10-12 发布日；史实为 1988-10-12 发布亮相的是 0.8 预览版，0
+- id=1728 [open] 多处人物与规范考据（工程师 Mike Parkhill、Doug McCallum、Peter Lipson 对 NeXTSTEP BSD 层的贡献；OpenS
+
+## ③ 一手史料（original_sources.kaoju_records，0 条）
+
+（无）

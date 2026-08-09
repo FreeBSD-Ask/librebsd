@@ -1,0 +1,316 @@
+# 第 6 卷综述素材（T1 三源合一，2026-08-04 自动生成）
+
+> 卷目录：第06卷-freebsd的核心技术革新｜章范围：ch108-ch134
+
+## ① 现有研究（references_fulltext，231 条）
+
+- [52] understanding risks and -- Meeker, Heather J_, 1959- -- John Wiley & Sons, Inc_ (trade), Hoboken, N_J_, 2008 -- Hoboken, -- isbn13 9780470194959（，1959）
+- [59] Arch_Handbook（，）
+- [60] Handbook（，）
+- [61] Porters_Handbook（，）
+- [114] eurobsdcon2019-plist（，）
+- [198] Incremental and Decentralized Integration in FreeBSD（，）
+- [200] 042_Quality Classifiers for Open Source Software Repositories（，）
+- [206] Capsicum_USENIX-Security（Watson，2010）
+- [226] 10（，）
+- [227] 12（，）
+- [228] 13（，）
+- [229] 基于FreeBSD的NAS系统的研究与实现（华唯，2013）
+- [230] 基于FreeBSD的工控协议防火墙技术的研究与实现（赵昀，2017）
+- [231] FREEBSD下基于SSH技术的数据安全实现方法（徐辉，2020）
+- [233] 46（，）
+- [234] 51（，）
+- [235] 52（，）
+- [237] 54（，）
+- [240] 未知作者_修改fstab造成FreeBSD故障（，）
+- [303] 未知作者_嵌入式IPv4与IPv6双协议栈网关系统的研究（，）
+- [322] 基于Jail的Web应用开发环境的设计与实现（王志新，2009）
+- [348] 未知作者_亚里士多德形而上学中的个体化原则（，）
+- [351] 未知作者_威廉·施特恩的形而上学人格主义（，）
+- [352] 未知作者_审视道德责任怀疑论（，）
+- [359] 未知作者_理念和生成的剧场——论德勒兹的戏剧哲学与操演理论（，）
+- [363] 未知作者_自然、道德和公开性——康德论永久和平的保障（，）
+- [495] kamp-phk-interrupts-paper（standalone，1998）
+- [498] evans-kse-paper（standalone，2000）
+- [506] kamp-phk-devfs-paper（bsdcon，2002）
+- [508] murray-markm-yarrow_prng-paper（bsdcon，2002）
+- [509] dowse-ufs_optimizations-paper（standalone，2002）
+- [510] kamp-phk-timecounters-paper-2（standalone，2002）
+- [512] nikander-auth_wlan_802.1x-paper（standalone，2002）
+- [513] watanabe-acpi-paper（standalone，2002）
+- [516] kamp-phk-gbde-paper-paper（bsdcon，2003）
+- [517] kamp-phk-gbde-slides-slides（bsdcon，2003）
+- [518] kamp-phk-geom-tutorial-slides（bsdcon，2003）
+- [521] watson-rwatson-mac_framework-paper（standalone，2003）
+- [522] zec-vimage-paper（standalone，2003）
+- [524] kamp-phk-gbde-slides（standalone，2004）
+- [525] kamp-phk-geom-slides（standalone，2004）
+- [529] kamp-phk-nanobsd-paper（standalone，2005）
+- [533] evans-jemalloc-paper（bsdcan，2006）
+- [534] evans-jemalloc-slides（bsdcan，2006）
+- [537] labb%C3%A9-cochard-freenas-slides（bsdcan，2007）
+- [538] kamp-phk-jail-paper（euug，2007）
+- [543] hubbard-macosx_from_the_server_room_to_your_pocket-slides（lisa08，2008）
+- [545] healy-cc_htcp-paper（standalone，2008）
+- [550] belousov-kib-vm-paper（standalone，2009）
+- [551] koshy-jkoshy-pmctools-paper（standalone，2009）
+- [552] baldwin-building_and_maintaining_a_foobsd-slides（bsdcan，2010）
+- [553] belousov-kib-amd64-paper（standalone，2010）
+- [557] belousov-kib-gpu-paper（standalone，2011）
+- [558] jude-dns_load_balancer-paper（eurobsdcon，2012）
+- [560] jude-advanced_puppet-paper（bsdcan，2013）
+- [561] jude-ddos_mitigation_dns-paper（eurobsdcon，2013）
+- [562] baldwin-nycbug_smpng-slides（standalone，2013）
+- [563] belousov-kib-vt-paper（standalone，2013）
+- [568] labb%C3%A9-cochard-eine-slides（bsdcan，2015）
+- [569] baldwin-freebsd_and_numa-slides（standalone，2015）
+- [576] jude-allanjude-geliboot-paper（asiabsdcon，2016）
+- [578] rizzo-luigi-tlem-paper（asiabsdcon，2016）
+- [579] baldwin-freebsd_and_gdb-slides（bsdcan，2016）
+- [582] belousov-kib-eedns_servers-paper（standalone，2016）
+- [588] jude-ssh_performance-paper（bsdcan，2017）
+- [593] belousov-kib-ia32_paging-paper（standalone，2017）
+- [610] hayakawa-ebpf_implementation_for_freebsd-paper（bsdcan，2018）
+- [630] osorio-rodrigo-pkg_provides-paper（fosdem，2018）
+- [631] pizzamiglio-pot-slides（fosdem，2018）
+- [635] pokala-rpokala-lwpmfs-paper（meetbsd，2018）
+- [637] araujo-freenas_and_bhyve-slides（standalone，2018）
+- [638] belousov-kib-meltdown-paper（standalone，2018）
+- [639] carabas-bhyve_suspend_resume-slides（standalone，2018）
+- [640] chittenden-freebsd_vpc-slides（standalone，2018）
+- [653] lettieri-honda-paste-paper（asiabsdcon，2019）
+- [654] lettieri-honda-paste-slides（asiabsdcon，2019）
+- [658] vadot-adventure_in_drmland-paper（asiabsdcon，2019）
+- [662] davis-cheriabi-paper（bsdcan，2019）
+- [666] gerraty-mac_grantbylabel-paper（bsdcan，2019）
+- [668] looney-netflix_and_freebsd-paper（bsdcan，2019）
+- [669] mihailescu-migrating_a_bhyve_guest-paper（bsdcan，2019）
+- [674] tuffli-frankensteins_disk_drive-paper（bsdcan，2019）
+- [678] hsu-lwhsu-getting-started-paper（coscup，2019）
+- [696] bennett-riscv_llvm-paper（fosdem，2019）
+- [700] looney-netflix_and_freebsd-paper（fosdem，2019）
+- [701] munro-walking_through_walls-paper（fosdem，2019）
+- [702] pizzamiglio-ci_cd-paper（fosdem，2019）
+- [704] zeising-freebsd_graphics-slides（fosdem，2019）
+- [705] paeps-philip-freebsd-12-paper（hkoscon，2019）
+- [706] johnston-numa-slides（octvendorsummit，2019）
+- [707] johnston-syzkaller-slides（octvendorsummit，2019）
+- [712] fullard-transitioning_from_freenas_to_freebsd-paper（vbsdcon，2019）
+- [713] balan-a_personal_freebsd_deployment-paper（bsdcan，2020）
+- [714] baldwin-kernel_tls_in_freebsd-paper（bsdcan，2020）
+- [715] dengg-migrating_to_freebsd-paper（bsdcan，2020）
+- [717] munro-postgresql_on_freebsd-paper（bsdcan，2020）
+- [718] siciliano-sysctlinfo-paper（bsdcan，2020）
+- [719] siciliano-sysctlinfo-slides（bsdcan，2020）
+- [720] carlier-freebsd_and_llvm_support-paper（fosdem，2020）
+- [721] goodkin-freebsd_around_the_world-slides（fosdem，2020）
+- [722] groot-adridg-kde_on_freebsd-slides（fosdem，2020）
+- [725] goodkin-freebsd_the_other_unix-like_os-paper（linux.conf.au，2020）
+- [726] grehan-freebsd_bhyve_intro-paper（linux.conf.au，2020）
+- [732] wojtczak-vermaden-freebsd-enterprise-storage-slides（pbug，2020）
+- [733] chernikov-routing_freebsd_13-paper（eurobsdcon，2021）
+- [736] donnerhacke-carrier_l2bsa_netgraph-slides（eurobsdcon，2021）
+- [737] gallatin-netflix-freebsd-400gbps-slides（eurobsdcon，2021）
+- [738] hausen-virtualised_hosting-paper（eurobsdcon，2021）
+- [742] mckusick-overview_scheduling_freebsd-slides（eurobsdcon，2021）
+- [743] wolf-porting_chromium-slides（eurobsdcon，2021）
+- [747] vartanian-freebsd_from_vendors_perspective-paper（bsdcan，2022）
+- [748] baldwin-writing_custom_commands_ddb-slides（eurobsdcon，2022）
+- [749] chiu-freebsd_containers_in_production-paper（eurobsdcon，2022）
+- [750] dexter-the_freebsd_build_option-paper（eurobsdcon，2022）
+- [751] gallatin-the_other_freebsd_optimizations-netflix-paper（eurobsdcon，2022）
+- [754] pizzamiglio-naive_freebsd_container-paper（eurobsdcon，2022）
+- [761] certner-scheduling_priorities_in_freebsd-paper（asiabsdcon，2024）
+- [762] certner-scheduling_priorities_in_freebsd-slides（asiabsdcon，2024）
+- [779] certner-scheduling_priorities_and_freebsd-paper（eurobsdcon，2024）
+- [786] Studies-in-Iconology-Humanistic-Themes（Panofsky，1939）
+- [823] Torvalds-L-Diamond-D-Just-for-Fun-The（Torvalds，2001）
+- [828] rosen-l-2004-open-source-licensing-software-freedom-and（Rosen，2004）
+- [833] mac-os-x（Singh，2006）
+- [845] the-design-and-implementation-of-the-freebsd-operating（McKusick-et-al，2014）
+- [850] freebsd（Lucas，2018）
+- [856] journal-of-philosophy（Hempel，1942）
+- [893] why-open-source-software-can-succeed-altruistic-programmers-（BonaccorsiA，2003）
+- [894] proceedings-of-the-darpa-information-survivability（Watson-et-al，2003）
+- [902] empirical-software-engineering（Spinellis，2017）
+- [906] update（，）
+- [926] 2010-Q1-Q3-Balance-Sheet（，2010）
+- [928] 2010-Q1-Q3-Profit-Loss（，2010）
+- [931] 2011-fosdem-toolchain-summit（，2011）
+- [933] 2011-Q1-Q3-Balance-Sheet（，2011）
+- [934] 2011-Q1-Q3-Profit-Loss（，2011）
+- [935] 2012-Q1-Q2-Balance-Sheet（，2012）
+- [936] 2012-Q1-Q2-Profit-Loss（，2012）
+- [937] 2012-Q1-Q3-Balance-Sheet（，2012）
+- [938] 2012-Q1-Q3-Profit-Loss（，2012）
+- [939] 2013-Q1-Q2-Balance-Sheet（，2013）
+- [940] 2013-Q1-Q2-Profit-Loss（，2013）
+- [941] 2013-Q1-Q3-Balance-Sheet（，2013）
+- [942] 2013-Q1-Q3-Profit-Loss（，2013）
+- [945] 2014-Budget-Public（，2014）
+- [948] 2014-Q1-Q3-Balance-Sheet（，2014）
+- [949] 2014-Q1-Q3-Profit-Loss（，2014）
+- [969] 2021-Budget-Summary-Approved（，2021）
+- [970] final（Foundation-Impact-Report，2021）
+- [974] 2023-Budget-Summary-Approved（，2023）
+- [975] 20230207-freebsd-use-cases（，）
+- [976] 2024-YE-Balance-Final（，2024）
+- [981] 2025-PL（，2025）
+- [982] 2026-Budget-Summary-Approved（，2026）
+- [985] auction（，）
+- [986] Antithesis-CASE-STUDY-1（，）
+- [987] ARMv8-Enabled-as-Tier-1-Architecture（，）
+- [991] refactoring（，）
+- [993] 12_2011art2（，）
+- [998] Budget2024-Approved-Public（，）
+- [999] CAIA-TR-101022A-1（，）
+- [1001] CAIA-TR-110228A（，）
+- [1003] Cloudnium-CASE-STUDY（，）
+- [1006] summit_report（，）
+- [1011] FacesofFreeBSD-Alberto（，）
+- [1015] 11xbrochure_110616_screen（，）
+- [1016] FreeBSD_day_poster_letter_2.1（，）
+- [1017] FreeBSD-2025-Community-Survey-Report-Final（，2025）
+- [1043] FINAL（，）
+- [1044] Journal_Ad_R2_041516（，）
+- [1045] reg-flyer16（，）
+- [1046] sticker_book（，）
+- [1048] Testimonial_Flyer_021916（，）
+- [1049] timeline（，）
+- [1050] journal_ad_r2v1（，）
+- [1058] GSOC-flyerv2（，）
+- [1060] Hardware-Donation-Form（，）
+- [1061] High-Performance-Computing-FreeBSD（，）
+- [1062] Switch（，）
+- [1063] pam（，）
+- [1068] Metify-CASE-STUDY-2（，）
+- [1069] NetApp-CASE-STUDY-1-1（，）
+- [1070] netflix-CASE-STUDY-1（，）
+- [1073] NYI-Case-Study-CASE-STUDY-2（，）
+- [1074] freebsd_deployment-1（，）
+- [1083] practical_programmer（，）
+- [1087] status_201110DevSummit（，）
+- [1088] Summer-of-Code（，）
+- [1089] half_final（，）
+- [1090] The-copyinout-Framework（，）
+- [1091] TLS-Offload-in-the-Kernel（，）
+- [1107] CARP（，）
+- [1134] licensing-example-code（，）
+- [1136] Mac OS X Internals: A Systems Approach（Amit Singh，2006）
+- [1139] Man-Computer-Symbiosis（Licklider，1960）
+- [1144] Human problem solving（Newell A, Simon H A，1972）
+- [1156] Sendmail（Allman，1983）
+- [1207] unwind_fosdem（Obser，2020）
+- [1208] J_Highly_accurate_protein_structure_prediction_with_AlphaFold（Jumper，2021）
+- [1299] ManComputerSymbiosis（Licklider，1960）
+- [1301] phk_FOSDEM_2014（未知，2014）
+- [1305] phk_Measured_ATC（Poul-Henning Kamp，2008）
+- [1306] phk_nanobsd_prt（未知，2005）
+- [1307] phk_varnish（Poul-Henning Kamp，2006）
+- [1412] _10107957_An Efficient Method for IoT Cross-Platform Backup Software（未知，2023）
+- [1431] _11500241_Empirical Derivations from an Evolving Test Suite（未知，2026）
+- [1436] _1194898_Demonstration of COSAK static analysis tools（未知，2001）
+- [1437] _1210153_Software compatibility and human interface for DV over IP（T. Hisamatsu;A. Ogawa;K. Sugiura;O. Nakamura;J. Murai，2001）
+- [1438] _1265654_Can source code auditing software identify common vulnerabilities and be used to evaluate software s（J. Heffley;P. Meunier，2001）
+- [1444] _1510122_The top ten list - dynamic fault prediction（A.E. Hassan;R.C. Holt，2005）
+- [1458] _5069483_Code siblings - Technical and legal implications of copying code between applications（未知，2009）
+- [1470] _6062098_Identifying crosscutting concerns using historical code changes（Bram Adams;Zhen Ming Jiang;Ahmed E. Hassan，2010）
+- [1471] _6115322_Practical machine learning based multimedia traffic classification for distributed QoS management（未知，2011）
+- [1491] _7436210_Implementing UTM based on PfSense platform（未知，2016）
+- [404] 基于Socket的进程间通信平台的设计与实现（陈剑，2009）
+- [1624] Dudina CHERI StaticAnalysis en（Dudina，2025）
+- [1625] 10053970 bhyve checkpoint zfs（，）
+- [1660] 8511996 Incorporate Proactive Data Protection ZFS Reliable（，）
+- [1663] 8805796 Characterizing Modeling Reliability Declustered RAID HPC（，）
+- [1664] 8891006 Building Reliable High-Performance Storage Systems Empirical（，）
+- [1666] 9049591 Exploring Declustered Software RAID Enhanced Reliability Rec（，）
+- [1668] 9324889 Suspend feature bhyve（，）
+- [1670] 9921081 bhyve arm64 SMP（，）
+- [1671] 9921107 bhyve live migration（，）
+- [1703] 6114391（6114391，）
+- [1710] 6358889（6358889，）
+- [1786] FreeBSD Journal 2014.07-08（FreeBSD Journal 2014.07-08，）
+- [1787] FreeBSD Journal 2014.09-10（FreeBSD Journal 2014.09-10，）
+- [1819] FreeBSD handbook en（FreeBSD，）
+- [1838] Investigating the detection of multi-homed devices independent of operating systems    history files investigatingdet109（Investigating the detection of multi-homed devices independent of operating systems，）
+- [1839] Investigating the detection of multi-homed devices independent of operating systems    history files investigatingdet109（Investigating the detection of multi-homed devices independent of operating systems，）
+- [1985] freebsd ref ver3 09 final（freebsd，）
+
+## ② 研究缺口（doubts_to_resolve，72 条）
+
+- id=616 [resolved] - 辨析：DTrace 内部研发启动时间存在多种说法——Solaris 10 Release Notes 记载“first became available f
+- id=617 [resolved] - 辨析：DTrace 首次随 Solaris 正式发布的版本确认是 Solaris 10（2005 年 1 月），而非某些中文资料所称的 Solaris 9 
+- id=618 [resolved] - 辨析：原文称 Cantrill 在博客“Oedipus and the Riddle of the Sphinx”中批评 Apple“这是一种欺骗行为”——
+- id=619 [resolved] - 辨析：Cantrill 是否使用了“欺骗行为（deception）”这一表述——经检索 dtrace.org 博客存档，“deception”一词确实在讨论
+- id=620 [resolved] - 史观：总纲第 10 条——边缘者贡献：John Birrell 作为澳大利亚独立开发者，以一人之力启动了 DTrace 到 FreeBSD 的移植工作，这是
+- id=621 [resolved] - 辨析：DTrace 进入 FreeBSD 的时间线需精确：FreeBSD 7.0-RELEASE（2008 年 2 月 27 日发布）的 Release N
+- id=622 [resolved] - 辨析：原文称“George Neville-Neil 等完成 DTrace 移植——基础系统默认可用”——将 Neville-Neil 作为首要移植者不完全
+- id=623 [resolved] - 辨析：原文 73.5 节标题称“George Neville-Neil 等完成 DTrace 移植”需修正——Neville-Neil 是重要维护者但非发起
+- id=624 [resolved] - 辨析：原文称“2018 年 OpenDTrace 项目——FreeBSD 基金会资助的 DTrace 现代化尝试”存在两处事实误差：(1) OpenDTra
+- id=625 [resolved] - 要点：FreeBSD 与 OpenDTrace 的关系是参与者和受益者——FreeBSD src/sys/cddl/contrib/opensolaris/
+- id=626 [resolved] - 要点：DTrace 历史上的核心贡献者：(1) Bryan Cantrill（1973- ）——首席架构师，Brown 大学 1996 年加入 Sun，与 
+- id=627 [resolved] - 辨析：原文将“George Neville-Neil”列为 DTrace 移植首要完成者需修正——初始移植由 John Birrell 发起，Neville
+- id=628 [resolved] - 辨析：John Birrell 的去世信息是 DTrace 历史中一个需要谨慎处理的点——他作为 FreeBSD DTrace 移植的发起者，其贡献值得记录
+- id=629 [resolved] - 辨析：Brendan Gregg 不是 Sun 员工，他最初在 Sun Microsystems 之外（澳大利亚的一家公司，后加入 Joyent、Netfl
+- id=630 [resolved] - 辨析：这一时间线基于各追踪工具官方文档、release notes 和 Gregg 博客交叉验证；部分日期（如 DTraceToolkit 首次发布、dtr
+- id=631 [resolved] - 辨析：**统计局限性标注**——(1) 统计显著 ≠ 实际显著：Mann-Kendall 趋势检验 p < 0.001 表明 freebsd-src com
+- id=632 [resolved] - 辨析：原大纲称 Capsicum 论文作者为 "Watson、Anderson、Laurie、Kenneally" 系名字讹误，第四作者经论文 PDF 核实
+- id=633 [resolved] - 辨析：原大纲标题 "FreeBSD 10.0（2012.1）将 Capsicum 作为可选特性引入" 存在两处事实错误：(1) 版本号错误——Capsicu
+- id=634 [resolved] - 辨析：原大纲标题称 "11.0（2014.1）默认编译启用"——FreeBSD 9.0 已默认编译 Capsicum 框架（CAPABILITIES/CAP
+- id=635 [resolved] - 史料：FreeBSD 各版本 Release Notes（9.0-14.x）Kernel Changes 与 Userland Changes 章节中 Ca
+- id=636 [resolved] - 史观：总纲第 3 条——形式主义膨胀：Capsicum 集成史料保存面临一个挑战：FreeBSD 从 Subversion 迁移至 Git（2020 年前后
+- id=637 [resolved] - 辨析：原大纲本节标题写 "10.0 可选特性" 和 "11.0 默认编译启用" 均有误（见 74.4.1-74.4.3 辨析）；［ 存疑脚注：此处事实待多源
+- id=638 [resolved] - 要点：casperd 的一手开发史料主要在 FreeBSD 源码仓库和 Pawel Dawidek 的会议演讲中：Dawidek 在 2013-2015 年
+- id=639 [resolved] - 辨析：原大纲本节及本节之前的内容存在大量模板化空话和无关文献引用（如 Lucas Storage Essentials、Skorstengaard CHER
+- id=640 [resolved] - 辨析：原大纲本节标题为“Google 放弃 Capsicum-Linux 与 ANU 质疑”——ANU（Australian National Univer
+- id=641 [resolved] - 辨析：CHERI 不同组件的许可证状态需区分：(1) CHERI ISA 规范本身——BSD 风格开放许可；(2) CHERI 开源硬件实现（Piccolo
+- id=642 [resolved] - 辨析：原大纲中 74.9 节仅有标题而无任何子节内容，属于模板未完成状态；本节按全书统一格式（x.x.1 技术设计、x.x.2 工程过程、x.x.3 比较分
+- id=643 [resolved] - 要点：Armv9 架构系列（ARM 2021 年发布的新一代架构）包含多个安全特性，其中 MTE（Memory Tagging Extension，Armv
+- id=644 [resolved] - 辨析：Codasip 2025 年被挂牌出售的传闻（来源于中文科技媒体）需标注 ［ 存疑脚注：此处事实待多源交叉验证 ］——Codasip 作为商业 CHE
+- id=645 [resolved] - 辨析：关于 "FreeBSD Foundation 2024 年 Capsicum 与 bhyve 安全审计"——经检索 FreeBSD Foundatio
+- id=646 [resolved] - 辨析：关于 "ANU 对 Capsicum/CHERI 的质疑"——原大纲提到 "ANU 质疑" 但未给出具体来源，经检索未找到澳大利亚国立大学（ANU）研
+- id=647 [resolved] - 辨析：地域仅以邮箱 ccTLD 作弱推断，个人/免费邮箱志愿者（1,661 次）地域难定，相关占比一律标 ［ 存疑脚注：此处事实待多源交叉验证 ］；绝不按姓
+- id=648 [resolved] - 辨析：任何具体国别/族裔占比均不得外推为群体结论；非提交贡献者（文档、ports、翻译、漏洞上报者）的记录缺口标注 ［ 存疑脚注：此处事实待多源交叉验证 ］
+- id=649 [resolved] - 文献：bsd_commits.db（freebsd-src）；0 信任原则方法论；FreeBSD 贡献者多样性研究（如有）［ 存疑脚注：此文献待 0 信任原
+- id=650 [resolved] - 辨析：按 0 信任原则考据。【查证来源】"BSD patch 缺失 `-I`/`-S` 选项" 系经 pfg 2013.1.29 freebsd-curre
+- id=651 [resolved] - 辨析：按 0 信任原则考据。【查证来源】r246074 与 r253689 commit 经 bsd_commits.db freebsd-src 仓库 c
+- id=652 [resolved] - 辨析：按 0 信任原则考据。【查证来源】57.15.1 BSD patch 跨项目谱系考据基于 pfg 2013.1.29 freebsd-current 
+- id=653 [resolved] - 辨析：地域仅以邮箱 ccTLD 作弱推断，个人/免费邮箱志愿者（1,048 次）地域难定，相关占比一律标 ［ 存疑脚注：此处事实待多源交叉验证 ］；绝不按姓
+- id=654 [resolved] - 辨析：任何具体国别/族裔占比均不得外推为群体结论；非提交贡献者（文档、ports、翻译、漏洞上报者）的记录缺口标注 ［ 存疑脚注：此处事实待多源交叉验证 ］
+- id=655 [resolved] - 文献：bsd_commits.db（freebsd-src）；0 信任原则方法论；FreeBSD 贡献者多样性研究（如有）［ 存疑脚注：此文献待 0 信任原
+- id=656 [resolved] - 辨析：**SA 归属辨析**：CVE-2012-4576 的 commit 中未直接标注对应 SA 编号（与 **named(8)** 系列 commit 
+- id=657 [resolved] - 辨析：按 0 信任原则考据。【查证来源】总纲第 13 条系经 Read 核实的项目统摄史观原文（原材料/哲学/项目统摄史观/第 25 章.md 第 17 行
+- id=658 [resolved] - 辨析：按 0 信任原则考据。【查证来源】总纲第 15 条系经 Read 核实的项目统摄史观原文（原材料/哲学/项目统摄史观/第 25 章.md 第 19 行
+- id=659 [resolved] - 辨析：按 0 信任原则考据。【查证来源】总纲第 21 条系经 Read 核实的项目统摄史观原文（原材料/哲学/项目统摄史观/第 25 章.md 第 25 行
+- id=660 [resolved] - 辨析：按 0 信任原则考据。【查证来源】FreeBSD 10.0-RELEASE Announcement 经 freebsd.org/releases/1
+- id=661 [resolved] - 辨析：按 0 信任原则考据。【查证来源】FreeBSD 10.0-RELEASE Release Notes 经 freebsd.org 一手核验（2026
+- id=662 [resolved] - 辨析：按 0 信任原则考据。【查证来源】Debian 软件包仓库规模经 packages.debian.org 一手核实（2026-07-23，stable
+- id=663 [resolved] - 辨析：按 0 信任原则考据。【查证来源】FreeBSD Foundation 2007 年 8 月公开信原文经 unix.stackexchange.com
+- id=664 [resolved] - 辨析：按 0 信任原则考据。【查证来源】FreeBSD Foundation 2007 公开信经核验确证（见 57.22.1 考据）；GPLv3 §5/§6
+- id=665 [resolved] - 辨析：按 0 信任原则考据。【查证来源】Apache License 2.0 §3 专利报复条款经 apache.org/licenses/LICENSE-
+- id=666 [resolved] - 辨析：按 0 信任原则考据。【查证来源】总纲第 13 条系经 Read 核实的项目统摄史观原文（原材料/哲学/项目统摄史观/第 25 章.md 第 17 行
+- id=667 [resolved] - 辨析：按 0 信任原则考据。【查证来源】总纲第 19 条系经 Read 核实的项目统摄史观原文（原材料/哲学/项目统摄史观/第 25 章.md 第 23 行
+- id=668 [resolved] - 辨析：按 0 信任原则考据。【查证来源】总纲第 21 条系经 Read 核实的项目统摄史观原文（原材料/哲学/项目统摄史观/第 25 章.md 第 25 行
+- id=669 [resolved] - 要点：Steve G. Kargl（<kargl@FreeBSD.org>）是 FreeBSD 长期贡献者，主要工作领域为数学函数库（libm）与 Fort
+- id=670 [resolved] - 史观：总纲第 23 条——社区治理：committer 权限管理须以可验证的一手记录为准，避免事后叙事的形式化建构；总纲第 10 条——边缘者贡献：Karg
+- id=671 [resolved] - 辨析：**需精确说明 FreeBSD 投机执行响应的时间线**：① 2018 年 1 月 3 日 Google Project Zero 与 Jann Ho
+- id=672 [resolved] - 辨析：**严格区分 KRACK 与以往 WPA 漏洞**：① KRACK 是协议层漏洞（WPA2 四次握手规范缺陷），所有实现均受影响；② 以往 WPA 漏
+- id=673 [resolved] - 辨析：**SA-17:08/09/10 三个 SA 同日发布的辨析**：2017-11-15 Gordon Tetlow 同日发布 ptrace/shm/k
+- id=674 [resolved] - 辨析：**OpenSSL 1.0.2 与 OpenSSL 1.1.1 的 ABI 差异辨析**：OpenSSL 1.1.1 重构了 BIO、SSL_CTX 
+- id=675 [resolved] - 辨析：**tcpdump CVE 数量的辨析**：commit `3340d7736811` 的 message_subject“Update tcpdum
+- id=676 [resolved] - 辨析：按 0 信任原则考据，“12.0 仅 amd64/i386 不默认安装 GCC 4.2.1”系经 FreeBSD 12.0-RELEASE Relea
+- id=677 [resolved] - 辨析：按 0 信任原则考据，“GCC 4.2.1 不支持 C11/C++11”系经 61.9.1 考据的确证事实（GCC 4.2.1 是 2007 年发布的
+- id=678 [resolved] - 辨析：考据过程留痕——【查证来源】GPLv3 §6“用户产品”定义与 §11 专利报复条款经 gnu.org 一手核验（Clang/LLVM 迁移专章已考据
+- id=679 [resolved] - 辨析：考据过程留痕——【查证来源】总纲第 13 条系经 Read 核实的项目统摄史观原文（第 25 章.md 第 17 行），引用确证；GPLv3 §11 
+- id=680 [resolved] - 辨析：地域仅以邮箱 ccTLD 作弱推断，个人/免费邮箱志愿者（647 次）地域难定，相关占比一律标 ［ 存疑脚注：此处事实待多源交叉验证 ］；绝不按姓名推
+- id=681 [resolved] - 辨析：任何具体国别/族裔占比均不得外推为群体结论；非提交贡献者（文档、ports、翻译、漏洞上报者）的记录缺口标注 ［ 存疑脚注：此处事实待多源交叉验证 ］
+- id=682 [resolved] - 文献：bsd_commits.db（freebsd-src）；0 信任原则方法论；FreeBSD 贡献者多样性研究（如有）［ 存疑脚注：此文献待 0 信任原
+- id=683 [resolved] - 辨析：按 0 信任原则考据，总纲第 13 条系经 Read 核实的项目统摄史观原文（第 25 章.md 第 17 行，“13. **法律与道德是利益分配**
+- id=684 [resolved] - 辨析：按 0 信任原则考据，总纲第 15 条系经 Read 核实的项目统摄史观原文（第 25 章.md 第 19 行，“15. **文化即形式主义**。传统
+- id=685 [resolved] - 要点：总纲第 19 条断言“解释学循环是历史认识的根本条件。前理解的差异使分歧不可避免。权力与知识在历史书写中共谋——什么被记录、什么被遗忘，本身就是权力行
+- id=686 [resolved] - 辨析：考据过程留痕——【查证来源】总纲第 19 条系经 Read 核实的项目统摄史观原文（第 25 章.md 第 23 行，“19. **解释学循环是历史认
+- id=687 [resolved] - 辨析：按 0 信任原则考据，总纲第 21 条系经 Read 核实的项目统摄史观原文（第 25 章.md 第 25 行，“21. **革命与改革是历史方法论的
+
+## ③ 一手史料（original_sources.kaoju_records，0 条）
+
+（无）

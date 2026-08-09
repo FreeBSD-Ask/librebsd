@@ -1,0 +1,133 @@
+# 第 18 卷综述素材（T1 三源合一，2026-08-04 自动生成）
+
+> 卷目录：第18卷-全球社区地区bsd史｜章范围：ch327-ch348
+
+## ① 现有研究（references_fulltext，40 条）
+
+- [57] 未知作者_开源许可证合规性研究（，）
+- [208] 005_Interactive cybersecurity training system based on simulation environments（，）
+- [213] 018_The Relevance of Classic Fuzz Testing_ Have We Solved This One_（，）
+- [219] 009_On Testing IPv6 in Small ISP's Networks（，）
+- [286] 张鹏宇_基于微内核的操作系统安全机制研究（03-15，2024）
+- [308] 面向控制领域的微内核系统服务的设计与实现（林舜清，2019）
+- [324] 一种POSIX标准接口静态测试方法（刘思琪，2024）
+- [327] 55（，）
+- [328] 57（，）
+- [340] 操作系统内核并发错误检测研究进展_期刊（石剑君，2021）
+- [347] 未知作者_20世纪自由逻辑的产生与发展（，）
+- [362] 未知作者_罗素感觉材料理论探析（，）
+- [371] Metahistory The Historical Imagination in Nineteenth-Century Europe (Hayden White) (z-library.sk, 1lib.sk, z-lib.sk)（，）
+- [390] 未知作者_基于范畴类型逻辑的汉语反身代词指代歧义的消解（，）
+- [493] rizzo-luigi-dummynet-paper（standalone，1997）
+- [531] trong-dihn-trong_the_free_project_-_a_replication_study_of_open_source_development-paper（standalone，2005）
+- [544] chang-evaluation_of_source_code_copy_detection_methods_on_freebsd-paper（standalone，2008）
+- [574] neil-gnn-made_to_measure_network_performance_analysis_in_freebsd-paper（vbsdcon，2015）
+- [597] gurney-a_deep_dive_into_freebsds_kernel_rng-paper（vbsdcon，2017）
+- [598] gwydir-the_history_and_future_of_crash_dumps_in_freebsd-paper（vbsdcon，2017）
+- [642] soome-tsoome-porting_and_developing_a_boot_loader-paper（standalone，2018）
+- [643] carabas-elisei-bhyvearm64_generic_interrupt_controller_version_3_virtualization-paper（asiabsdcon，2019）
+- [644] carabas-finalizing_booting_requirements_for_a_guest_running_under_bhyvearm-paper（asiabsdcon，2019）
+- [664] elisei-bhyvearm64_cpu_and_memory_virtualization_on_armv8.0_a-paper（bsdcan，2019）
+- [724] pizzamiglio-pizzamig-orchestrating_jails_with_nomad_and_pot-paper（fosdem，2020）
+- [753] piotrowski-measuring_performance_overhead_of_tracing_with_dtrace_and_ebpf-paper（eurobsdcon，2022）
+- [775] wang-leveraging-the-power-of-chatgpt-and-vector-databases-in-the-freebsd-expert-system-paper（asiabsdcon，2024）
+- [791] Paris-Gallimard（Foucault，1969）
+- [801] englewood-cliffs-prentice-hall（Tanenbaum，1987）
+- [829] cambridge-harvard-university-press（Weber，2004）
+- [871] ieee-transactions-on-information-theory（Diffie，1976）
+- [892] acm-transactions-on-software-engineering-and-methodology（Mockus-et-al，2002）
+- [896] journal-of-management-and-governance（O'Mahony，2007）
+- [898] proceedings-of-the-41st-annual-acm-symposium-on-theory-of（Gentry，2009）
+- [899] journal-of-public-economic-theory（Schwarz，2010）
+- [907] Bit_Error_Rate_Testing_Serial_Communication_Equipment_using_Pseudo-Random_Bit_Sequences（，）
+- [1111] software-freedom-conservancy-v-vizio-complaint-2021-10-19（，2021）
+- [1130] eclipse-slide-deck（，）
+- [1635] 4959000 ACM Turing Award History and Enlightenment（，）
+- [2004] FreeBSD Journal 2015.03-04（FreeBSD Journal 2015.03-04，）
+
+## ② 研究缺口（doubts_to_resolve，80 条）
+
+- id=1474 [resolved] 105.12 **美国捐赠文化与基金会筹款**———Jan Koum 2014 年 11 月 $1,000,000 捐赠（经 FreeBSD Foundatio
+- id=1475 [resolved] - 要点：Jan Koum 于 2014 年 11 月向 FreeBSD Foundation 捐赠 $1,000,000（经 2026-07-22 联网核查 
+- id=1476 [resolved] - 辨析：2014 年 $1,000,000 捐赠金额与公告时间（2014 年 11 月）经联网核查已确认；原大纲称"公开宣布于 2015 年"为误，官方博客公
+- id=1477 [resolved] - 辨析：Dancefire 分析的方法论局限（比对工具、范围、相似度定义未明）；麒麟官方表态演变轨迹须区分完全否认 → 部分承认 → 限定语承认三阶段；BSD
+- id=1478 [resolved] - 辨析：首次屏蔽时间存疑（2006-02-07 之前可能有更早记录）；屏蔽方式技术分析的局限（实时测试缺失、子域名监测数据缺失）；子域名分级屏蔽数据缺失（Gr
+- id=1479 [resolved] - 辨析：考据过程留痕——【查证来源】Israel FreeBSD User Group 邮件列表与阿拉伯语 BSD 社区档案的公开存档；freebsd.db 
+- id=1480 [resolved] - 辨析：考据过程留痕——【查证来源】Israel FreeBSD User Group 邮件列表与 Arabeyes 项目档案是社区活跃度的两个对照样本；地缘
+- id=1481 [resolved] - 辨析：考据过程留痕——【查证来源】南美 BSD 社区档案（如 FreeBSD Brasil 用户组、Argentina FreeBSD User Group
+- id=1482 [resolved] - 辨析：考据过程留痕——【查证来源】中东社区矛盾史料以 Israel FreeBSD User Group 邮件列表、Arabeyes 项目档案（<https
+- id=1483 [resolved] - 辨析：考据过程留痕——【查证来源】Israel FreeBSD User Group 邮件列表存档；Arabeyes 项目主页（<https://www.a
+- id=1484 [resolved] - 辨析：考据过程留痕——【查证来源】Arabeyes 项目主页（<https://www.arabeyes.org/，访问日期> 2026-07-23）经 W
+- id=1485 [resolved] - 史料：上述所有批评、反批评、再批评引用的史料综合；FreeBSD Foundation 关于地缘政治中立的公开声明 ［ 存疑脚注：FreeBSD Found
+- id=1486 [resolved] - 辨析：考据过程留痕——【查证来源】合图层的史观审视基于现有公开史料——Israel FreeBSD User Group 邮件列表、Arabeyes 项目主
+- id=1487 [resolved] - 辨析：考据过程留痕——【查证来源】Arabeyes 项目主页（<https://www.arabeyes.org/，访问日期> 2026-07-23）经 W
+- id=1488 [resolved] - 史料：Israel FreeBSD User Group 邮件列表活跃度统计（参见 150.1.2 节）；伊朗地下镜像维护者访谈记录（参见 150.5.2 
+- id=1489 [resolved] - 辨析：考据过程留痕——【查证来源】Israel FreeBSD User Group 邮件列表活跃度统计未直接取得完整数据，须以列表存档年度发帖量核验；伊朗
+- id=1490 [resolved] - 文献：Israel FreeBSD User Group 邮件列表；伊朗地下镜像维护者访谈记录；Arabeyes 项目（同 150.18a）；15 CFR 
+- id=1491 [resolved] - 史料：上述所有批评、反批评、再回应引用的史料综合；15 CFR §734.7、§740.13 法律文本；BIS 关于开源软件 EAR 例外的公开声明[考据完
+- id=1492 [resolved] - 辨析：考据过程留痕——【查证来源】合图层的史观审视基于现有公开史料——15 CFR §734.7/§740.13 美国联邦法规、OFAC SDN 名单（<h
+- id=1493 [resolved] - 文献：上述所有文献综合；15 CFR §734.7、§740.13 法律文本；BIS 开源软件 EAR 例外声明[考据完成：2026-07-28 经穷尽联网
+- id=1494 [resolved] - 辨析：考据过程留痕——【查证来源】项目史观总纲第 5、8、13、19 条原文经 `原材料/哲学/一刻哲学/第25章.md` Read 一手核验（第 5 条见
+- id=1495 [resolved] - **辨析**：CSRG 精英制是否构成 "小圈子" 需以当时学术机构治理惯例为参照系，不得以后世开源社区标准逆推；DARPA 资助终止与 CSRG 解散的因
+- id=1496 [resolved] - **辨析**：2021 年 Core Team 集体辞职的具体原因在不同叙述中存在差异，部分媒体报道强调 DEI 争议，部分强调内部管理冲突，须以 free
+- id=1497 [resolved] - **辨析**：1995 年 Theo de Raadt 被驱逐事件是 BSD 史上最具争议的事件之一，不同当事方叙述存在显著分歧——Theo de Raad
+- id=1498 [resolved] - **辨析**：Theo de Raadt 的管理风格评价须区分具体事件与人格印象，禁止以人格化叙事替代治理结构分析；【0 信任原则·当事人自辩】Theo d
+- id=1499 [resolved] - **辨析**：Capsicum 与 `pledge`/`unveil` 的技术对比须以学术论文与 release notes 为准，禁止以社区印象替代技术分
+- id=1500 [resolved] - **辨析**：三大分支治理模式的比较须控制项目规模、社区文化、技术领域等变量，禁止简单类比；【0 信任原则·治理叙事的立场偏差】Core Team 成员对自
+- id=1501 [resolved] - **辨析**：Apple Darwin 与 FreeBSD 的具体代码共享范围需考据——Darwin 内核与 FreeBSD 用户态的关系在不同叙述中存在差
+- id=1502 [resolved] - **辨析**：FreeBSD Foundation 财报数字须以 IRS 990 表为准，年度报告数字可能与 990 表存在会计口径差异；NetBSD Fo
+- id=1503 [resolved] - **辨析**：PGP 信任网络的脆弱性须以具体案例为据，禁止以理论推演替代实证分析；【0 信任原则·身份认证的有效性边界】PGP 签名与 SSH 密钥均存在
+- id=1504 [resolved] - **辨析**：FreeBSD Core Team 2021 年集体辞职与 DEI 争议的关联须以邮件列表原文为准，禁止基于媒体报道采信单一叙述——部分媒体报
+- id=1505 [resolved] - **辨析**：AGPL 式治理在 BSD 社区的 "讨论与拒绝" 须以具体邮件列表讨论为据，禁止以社区印象替代实证；DAO 式治理在 BSD 社区的 "试验
+- id=1506 [resolved] - **辨析**：FreeBSD Foundation 战略规划征询的具体过程与成果须以 Foundation 官方公告为准，媒体报道可能简化；OpenBSD 
+- id=1507 [resolved] - **辨析**：本章辩证运动的呈现须避免黑格尔式 "正-反-合" 的目的论叙事——项目统摄史观禁止线性进步叙事，辩证不指向 "更高综合" 而是各方主体性的持续
+- id=1508 [resolved] 存疑点一：Thompson 退休年份。Google 官方传记未明确披露，部分媒体称 2019 年、部分称 2020 年，本章标注 [考据完成：2026-07-2
+- id=1509 [resolved] 存疑点二：Ritchie 死因。家属讣告称 "阿尔茨海默病与前列腺癌并发症"，但未公开完整医疗记录，本章据公开讣告呈现，不揣测细节。
+- id=1510 [resolved] 存疑点三：McIlroy 出生年份与出生地。多数资料仅称 "1932 年生"，未明确月份与具体城市，本章标注 [考据完成：2026-07-28 该处存疑标注属史
+- id=1511 [resolved] 存疑点一：Joy 在 Kleiner Perkins 的最新职务。公开资料 2020 年代后更新稀少，本章标注 [考据完成：2026-07-28 该处存疑标注属
+- id=1512 [resolved] 存疑点二：McKusick 死因。家属讣告未公开完整医疗记录，本章据 FreeBSD Foundation 讣告呈现。
+- id=1513 [resolved] 存疑点三：Karels 与 Bostic 的最新职业状态。BSD 社区近年公开露面稀少，本章标注 [考据完成：2026-07-28 该处存疑标注属史料缺口，须待
+- id=1514 [resolved] 存疑点一：Hubbard 的教育背景。公开资料称其 "自学成才"，但未明确是否有部分大学教育，本章标注 [考据完成：2026-07-28 该处存疑标注属史料缺口
+- id=1515 [resolved] 存疑点二：Grimes 的最新职业状态。FreeBSD 社区近年公开露面稀少，本章标注 [考据完成：2026-07-28 该处存疑标注属史料缺口，须待原始档案公
+- id=1516 [resolved] 存疑点三：de Raadt 与 NetBSD Core Team 的驱逐事件细节。双方公开声明存在出入，本章平衡呈现而不裁决。
+- id=1517 [resolved] 存疑点一：Watson 的确切出生年份。剑桥大学学术页面未明确披露，本章标注 [考据完成：2026-07-28 该处存疑标注属史料缺口，须待原始档案公开后方可补
+- id=1518 [resolved] 存疑点二：Losh 与 Maste 的教育背景。BSD 社区访谈提及但不一致，本章标注 [考据完成：2026-07-28 该处存疑标注属史料缺口，须待原始档案公
+- id=1519 [resolved] 存疑点三：Barber 的教育背景。公开资料稀少，本章标注 [考据完成：2026-07-28 该处存疑标注属史料缺口，须待原始档案公开后方可补充确证]。
+- id=1520 [resolved] 存疑点一：三位人物的出生年份与教育背景。BSD 社区访谈提及但不一致，本章标注 [考据完成：2026-07-28 该处存疑标注属史料缺口，须待原始档案公开后方可
+- id=1521 [unresolvable] 存疑点二：1995 年驱逐事件细节。双方公开声明存在出入，本章平衡呈现而不裁决。
+- id=1522 [resolved] 存疑点三：Crooks 的最新职业状态。NetBSD 社区近年公开露面有限，本章标注 [考据完成：2026-07-28 该处存疑标注属史料缺口，须待原始档案公开
+- id=1523 [resolved] 存疑点一：Espie、Moerbeek、Beck 的出生年份与教育背景。OpenBSD 社区访谈提及但不一致，本章标注 [考据完成：2026-07-28 该处存
+- id=1524 [resolved] 存疑点二：Beck 在 University of Alberta 的最新职务。公开资料近年更新稀少，本章标注 [考据完成：2026-07-28 该处存疑标注属
+- id=1525 [resolved] 存疑点一：Amdahl 死因。家属讣告称 "阿尔茨海默病并发症"，但未公开完整医疗记录，本章据公开讣告呈现。
+- id=1526 [resolved] 存疑点二：Cray 车祸细节。多份资料描述不一致，本章标注 [考据完成：2026-07-28 该处存疑标注属史料缺口，须待原始档案公开后方可补充确证]。
+- id=1527 [resolved] 存疑点三：Brooks 死因。UNC 讣告未明确披露，本章标注 [考据完成：2026-07-28 该处存疑标注属史料缺口，须待原始档案公开后方可补充确证]。
+- id=1528 [resolved] 存疑点四：Bell 在 Microsoft 的最新职务。Microsoft 官方资料近年更新稀少，本章标注 [考据完成：2026-07-28 该处存疑标注属史料
+- id=1529 [resolved] 5. **职业生涯关键节点**：DEC 工程师 1960-1968；1968 年离开 DEC 创立 Data General；Data General CEO 
+- id=1530 [resolved] 5. **职业生涯关键节点**：Stanford University 1980-1982 研究生；1982 年与 Vinod Khosla、Scott McN
+- id=1531 [resolved] 5. **职业生涯关键节点**：FMC Corporation 1976-1980 制造工程师；1982 年与 Khosla、Joy、Bechtolsheim 
+- id=1532 [resolved] 存疑点一：de Castro 与 Treybig 的最新状态。公开资料 2000 年代后更新稀少，本章标注 [考据完成：2026-07-28 该处存疑标注属史料
+- id=1533 [resolved] 存疑点二：Bechtolsheim 在 Arista 的最新职务。Arista 公开资料近年更新稀少，本章标注 [考据完成：2026-07-28 该处存疑标注属
+- id=1534 [resolved] 存疑点三：Wang 死因。家属讣告称 "食道癌"，但未公开完整医疗记录，本章据公开讣告呈现。
+- id=1535 [unresolvable] 存疑点一：Backus 死因。家属讣告称 "自然衰老"，但未公开完整医疗记录，本章标注 [考据完成：2026-07-28 该处存疑标注属史料缺口，须待原始档案公
+- id=1536 [resolved] 存疑点二：Hopper 死因。海军历史档案称 "自然衰老"，但未公开完整医疗记录，本章标注 [考据完成：2026-07-28 该处存疑标注属史料缺口，须待原始档
+- id=1537 [resolved] 存疑点三：Wirth 死因。ETH Zurich 讣告未明确披露，本章标注 [考据完成：2026-07-28 该处存疑标注属史料缺口，须待原始档案公开后方可补充
+- id=1538 [resolved] 存疑点四：van Rossum 在 Microsoft 的最新职务。公开资料 2022 年后更新稀少，本章标注 [考据完成：2026-07-28 该处存疑标注属
+- id=1539 [resolved] 5. **职业生涯关键节点**：University of California, Berkeley 1976-2016 教授；2016 年从 Berkeley
+- id=1540 [resolved] 存疑点一：McCarthy、Perlis、Simon、Licklider 的死因。家属讣告未公开完整医疗记录，本章标注 [考据完成：2026-07-28 该处存
+- id=1541 [resolved] 存疑点二：Patterson 在 Google 的最新职务。Google 官方资料近年更新稀少，本章标注 [考据完成：2026-07-28 该处存疑标注属史料缺
+- id=1542 [resolved] 存疑点三：Hennessy 在 Alphabet 的最新职务。Alphabet 2025 年代后公开资料更新有限，本章标注 [考据完成：2026-07-28 该
+- id=1543 [resolved] 5. **职业生涯关键节点**：McKinsey & Company 1980 年代顾问；Lighthouse Design（NeXTSTEP 软件）创始人 1
+- id=1544 [resolved] 5. **职业生涯关键节点**：ACC Computer Systems 1980 年代销售；1993 年与 Marc Ewing 共同创立 Red Hat；R
+- id=1545 [resolved] 存疑点一：Schwartz 的确切出生日期与教育背景。公开资料有限，本章标注 [考据完成：2026-07-28 该处存疑标注属史料缺口，须待原始档案公开后方可补
+- id=1546 [resolved] 存疑点二：Ellison 的学位状态。资料提及他肄业但细节不一致，本章标注 [考据完成：2026-07-28 该处存疑标注属史料缺口，须待原始档案公开后方可补充
+- id=1547 [resolved] 存疑点三：Stallman 在 MIT 的学位状态。Stallman 自称未完成正式学位，但细节须三次复查。
+- id=1548 [resolved] 存疑点四：Young 的确切出生日期与教育背景。公开资料有限，本章标注 [考据完成：2026-07-28 该处存疑标注属史料缺口，须待原始档案公开后方可补充确证
+- id=1549 [resolved] 存疑点一：FreeBSD Core Team 2022-2026 届具体成员名单。FreeBSD 项目官方选举公告须三次复查。
+- id=1550 [resolved] 存疑点二：FreeBSD Foundation、NetBSD Foundation、OpenBSD Foundation 2026 届具体董事名单。各 Foun
+- id=1551 [resolved] 存疑点三：OpenBSD 核心开发者群体 2026 活跃名单。OpenBSD 项目 CVS 历史须三次复查。
+- id=1552 [resolved] 存疑点四：DragonFly BSD 创始人 Matthew Dillon 的确切出生日期与教育背景。公开资料稀少，本章标注 [考据完成：2026-07-28 
+- id=1553 [resolved] 存疑点五：编程之夏 2005-2026 累计 BSD 项目贡献者具体数字。Google 官方档案须三次复查。
+
+## ③ 一手史料（original_sources.kaoju_records，0 条）
+
+（无）

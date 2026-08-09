@@ -1,0 +1,307 @@
+# 第 1 卷综述素材（T1 三源合一，2026-08-04 自动生成）
+
+> 卷目录：第01卷-unix的起源｜章范围：ch1-ch25
+
+## ① 现有研究（references_fulltext，178 条）
+
+- [13] THEMultiprogrammingSystem（Dijkstra，1968）
+- [15] DecomposingSystemsIntoModules（Parnas，1972）
+- [19] CommunicatingSequentialProcesses（Hoare，1978）
+- [20] AFastFileSystemForUNIX（McKusick，1984）
+- [22] ReflectionsOnTrustingTrust（Thompson，1984）
+- [23] NoSilverBullet（Brooks，1987）
+- [26] Exokernel（EnglerKaashoek，1995）
+- [27] GoogleFileSystem（Ghemawat，2003）
+- [53] The Fall of the Bell System A Study in Prices and Politics (Peter Temin, Louis Galambos) (z-library.sk, 1lib.sk, z-lib.sk)（，）
+- [797] englewood-cliffs-prentice-hall（Kernighan，1984）
+- [837] hoboken-john-wiley-sons（Meeker，2008）
+- [858] bell-system-technical-journal（Shannon，1949）
+- [861] preliminary-discussion-of-the-design-of-a-multics-system（CorbatFJ，1965）
+- [880] acm-sigmod-record（Stonebraker，1986）
+- [889] psychological-bulletin（Nickerson，1999）
+- [891] Some-Simple-Economics-of-Open-Source（LernerJ，2002）
+- [1133] implementing-the-ip-policy（，）
+- [1137] The Design and Implementation of the 4.4 BSD Operating System（Marshall Kirk McKusick, Keith Bostic, Michael J. Karels, John S. Quarterman，1996）
+- [1141] Protection-in-an-Information-Processing-Utility（Graham，1968）
+- [1145] SEQUEL（ChamberlinBoyce，1974）
+- [1146] Protection-and-the-Control-of-Information-Sharing-in-Multics（Saltzer，1974）
+- [1148] Cray-1 computer system hardware reference manual（Cray S，1977）
+- [1149] IntroductionUNIXShell（Bourne，1978）
+- [1150] IntroductionCShell（Joy，1978）
+- [1154] Introduction_to_Display_Editing_with_Vi（Joy，1980）
+- [1157] Joy_Leffler_Fabry_Fast_File_System（McKusick，1984）
+- [1158] Reflections_on_Trusting_Trust（Thompson，1984）
+- [1161] POSTGRES（Stonebraker，1990）
+- [1164] The-Development-of-the-C-Language（Ritchie，1993）
+- [1172] Background_Fsck（McKusick，2003）
+- [1177] Weston_Exploring_DTrace_as_Incident_Response_Tool_for_Unix_Systems（Beauchamp，2008）
+- [1189] A_Repository_of_Unix_History_and_Evolution（Spinellis，2016）
+- [1231] dmr_cacm（未知，1910）
+- [1232] dmr_clcs（未知，1910）
+- [1233] dmr_cman（未知，1910）
+- [1234] dmr_cman74（未知，1910）
+- [1235] dmr_ctut（未知，1910）
+- [1236] dmr_hist（未知，1910）
+- [1237] dmr_spe（未知，1910）
+- [1238] dmr_st（未知，1910）
+- [1239] dmr_vararray（未知，1910）
+- [1260] tuhs_1973_unix_users_talk_notes（未知，）
+- [1261] tuhs_1eUnix_creation_restoration（Warren Toomey，2015）
+- [1262] tuhs_2dsh（未知，2023）
+- [1263] tuhs_bstj1978_aho_awk（未知，2004）
+- [1264] tuhs_bstj1978_berk_levine_learning（未知，2004）
+- [1265] tuhs_bstj1978_berk_statistical（未知，2004）
+- [1266] tuhs_bstj1978_bourne_unix_shell（未知，2004）
+- [1267] tuhs_bstj1978_holmgren_network（未知，2004）
+- [1268] tuhs_bstj1978_johnson_lint（未知，2004）
+- [1269] tuhs_bstj1978_kernighan_mashey_unix_programming（未知，2004）
+- [1270] tuhs_bstj1978_kernighan_plauger_software_tools（未知，2004）
+- [1271] tuhs_bstj1978_kernighan_software_tools_2（未知，2004）
+- [1272] tuhs_bstj1978_lions_commentary（未知，2004）
+- [1273] tuhs_bstj1978_lycklama_document_preparation（未知，2004）
+- [1274] tuhs_bstj1978_lycklama_unix_microprocessor（未知，2013）
+- [1275] tuhs_bstj1978_mashey_languages（未知，2004）
+- [1276] tuhs_bstj1978_morris_thompson_password（未知，2004）
+- [1277] tuhs_bstj1978_ritchie_c_history（未知，2004）
+- [1278] tuhs_bstj1978_ritchie_streams（未知，2004）
+- [1279] tuhs_bstj1978_ritchie_thompson_unix_time_sharing（未知，2004）
+- [1280] tuhs_bstj1978_ritchie_unix_retrospective（未知，2004）
+- [1281] tuhs_bstj1978_snyder_portability（未知，2004）
+- [1282] tuhs_bstj1978_thompson_unix_implementation（未知，2004）
+- [1283] tuhs_Four_Generations_of_Portable_C_Compiler_DM_Kristol_19860609（未知，2021）
+- [1284] tuhs_Interprocess_Communications_in_the_8th_Edition_Unix_Ritchie+Presotto_USENIX_SUMMER_19850612（未知，）
+- [1285] tuhs_jacobson_1987_tuning_unix_lex（未知，2020）
+- [1286] tuhs_lions_1979_pcc_pass2（未知，2002）
+- [1287] tuhs_Spi15c（未知，2015）
+- [1288] tuhs_ugly（未知，2005）
+- [1289] tuhs_US4135240（未知，2017）
+- [1291] 未知年份_Unknown_Measuring_the_use_of_assertions_in_operating_system_kernels_en（未知，2026）
+- [1411] _10053970_bhyve - checkpoint functionality based on zfs（未知，2023）
+- [1413] _10125999_Intrusion Detection and Prevention System to Analyse and Prevent Malware using Machine Learning（未知，2023）
+- [1414] _1019480_CCFinder - a multilinguistic token-based code clone detection system for large scale source code（未知，2001）
+- [1415] _10197790_Multi-level Adaptive Execution Tracing for Efficient Performance Analysis（未知，2023）
+- [1420] _10437669_Firm VEA - Vulnerability Discovery Optimisation for IoT Firmware via Version Evolution Analysis（未知，2024）
+- [1421] _10439089_FOSSLT - An Efficient Model for Automatic Finding Open Source Software License Texts（未知，2024）
+- [1422] _10476003_FirmCVI - Taint Analysis-Based Component Version Identification Method for Large-Scale IoT Firmware（未知，2024）
+- [1424] _10826721_A Survey on Copy-on-Write File Systems（未知，2024）
+- [1427] _11026996_POSTER - Implementation of TCP SEARCH in FreeBSD and Evaluation on a Satellite Network（Maryam Ataei Kachooei (Worcester Polytechnic Institute, USA), Samuel Ollari (Worcester Polytechnic Institute, USA), Benjamin Skarnes (Worcester Polytechnic Institute, USA), Jae Chung (Viasat, USA), Amber Cronin (Akamai, USA), Feng Li (Viasat, USA), Benjamin Peters (Viasat, USA), Mark Claypool (Worcester Polytechnic Institute, USA)，2025）
+- [1430] _11458911_Porting and Evaluating Return-Oriented Programming Defenses Implemented by the OpenBSD Operating Sys（未知，2026）
+- [1433] _11564918_Apple watchOS - Architecture Networking and Energy Efficiency（未知，2025）
+- [1434] _11576700_A Measurement Study on the Adoption of Pledges and Unveils in the OpenBSD Operating System（未知，2026）
+- [1435] _11613238_Spec-SMT - Detecting Logic Flaws in SSH Implementations via Adversarial Trace Synthesis（未知，2026）
+- [1442] _1463231_[HTML version of 4839881]（T.T. Dinh-Trong;J.M. Bieman，2005）
+- [1443] _1509310_Finding predictors of field defects for open source software systems in commonly available data sour（P.L. Li;J. Herbsleb;M. Shaw，2005）
+- [1448] _4024109_Router and Firewall Redundancy with OpenBSD and CARP（未知，2006）
+- [1450] _4273078_Large-Scale Code Reuse in Open Source Software（未知，2007）
+- [1453] _4621606_How does ethernet work on freescale MPC8555E embedded platform with FreeBSD system（未知，2008）
+- [1455] _4805755_Secure UNIX - UTX-32S（Raphael T. Semmes，2008）
+- [1456] _4839881_The automatization of information security of local calculation network with the open access to inte（未知，2009）
+- [1457] _4939572_Controlled hardware access under Pentium based Linux & FreeBSD（未知，2008）
+- [1462] _5460536_Optimal Cascaded Configuration for IP SAN on NetBSD（未知，2010）
+- [1463] _5463289_Mining security changes in FreeBSD（未知，2010）
+- [1464] _5463291_A comparative exploration of FreeBSD bug lifetimes（未知，2010）
+- [1465] _5463293_Finding file clones in FreeBSD Ports Collection（未知，2010）
+- [1469] _5930130_Performance evaluation of ZFS and LVM (with ext4) for scalable storage system（未知，2011）
+- [1475] _6531846_Performance Analysis and Comparison of Different DNS64 Implementations for Linux, OpenBSD and FreeBS（未知，2013）
+- [1481] _6754710_A Secure Webmail System Based on FreeBSD UNIX（未知，2014）
+- [1482] _693661_Enhancements to 4.4 BSD UNIX for efficient networked multimedia in project MARS（M.M. Buddhikot;X.J. Chen;Dakang Wu;G.M. Parulkar，1998）
+- [1483] _6948196_The design and implementation of firewall based on FreeBSD（未知，2014）
+- [1484] _7081936_Fwrite - An Approach to Optimize Write Performance of ZFS on Linux（未知，2014）
+- [1485] _7163016_CHERI - A Hybrid Capability-System Architecture for Scalable Software Compartmentalization（未知，2015）
+- [1487] _7266475_BSD-based elliptic curve cryptography for the open Internet of Things（未知，2015）
+- [1490] _7423345_NLSS - A near-line storage system design based on the combination of HDFS and ZFS（未知，2016）
+- [1492] _7881982_Ext4, XFS, BtrFS and ZFS Linux file systems on RADOS Block Devices (RBD) - I O performance, flexibil（未知，2016）
+- [1493] _7892481_On the implementation of ZFS (Zettabyte File System) storage system（未知，2017）
+- [1494] _829973_A 64-bit, shared disk file system for Linux（K.W. Preslan;A.P. Barry;J.E. Brassow;G.M. Erickson;E. Nygaard;C.J. Sabol;S.R. Soltis;D.C. Teigland;M.T. O'Keefe，2004）
+- [1495] _8301116_Mac OS versus FreeBSD - A Comparative Evaluation（未知，2018）
+- [1496] _8416199_Hardening the Core - Understanding and Detection of XNU Kernel Vulnerabilities（未知，2018）
+- [1498] _8511996_Incorporate Proactive Data Protection in ZFS Towards Reliable Storage Systems（未知，2018）
+- [1500] _8572112_Testing of the Current Open-Source EIGRP Implementations（未知，2018）
+- [1501] _8572146_A Survey of the EIGRP Standard and Following Open-Source Implementations（未知，2018）
+- [1504] _8809490_PrivAnalyzer - Measuring the Efficacy of Linux Privilege Use（未知，2019）
+- [1505] _8891045_FSMonitor - Scalable File System Monitoring for Arbitrary Storage Systems（未知，2019）
+- [1506] _8929305_Adaptive RED for FreeBSD - Design, Implementation and Challenges（未知，2019）
+- [1511] _9225633_Using Dtrace for Machine Learning Solutions in Malware Detection（未知，2020）
+- [1512] _9229980_Refactoring the FreeBSD Kernel with Checked C（未知，2020）
+- [1513] _9266213_FreeBSD as a compute node in OpenStack（未知，2012）
+- [1514] _9271074_Research the Possibility of Using Russian Cryptographic Algorithm in the ZFS File System（未知，2020）
+- [1516] _9324889_Suspend feature for multiple devices of same type in bhyve（未知，2021）
+- [1517] _9481052_Bhyve - JSON file format snapshot（未知，2021）
+- [1518] _9603654_MinervaFS - A User-Space File System for Generalised Deduplication - (Practical experience report)（Lars Nielsen，2021）
+- [1519] _9723619_Does OpenBSD and Firefox Security Improve With Time（未知，2023）
+- [1520] _9723619_Does OpenBSD and Firefox's Security Improve With Time（未知，2023）
+- [1521] _9733553_bhyve - JSON format and capsicum support for the snapshot feature（未知，2022）
+- [1522] _9833726_A Secret-Free Hypervisor - Rethinking Isolation in the Age of Speculative Vulnerabilities（未知，2022）
+- [1523] _9921081_Symmetric Multiprocessor Support for bhyve on arm64（未知，2022）
+- [1524] _9921107_Improving and testing live migration for bhyve（未知，2022）
+- [1525] _9978169_Is Kernel Code Different From Non-Kernel Code A Case Study of BSD Family Operating Systems（未知，2022）
+- [1526] Unix: A View from the Field as We Played the Game（Cole，2018）
+- [1527] UNIX Programmer's Manual Seventh Edition Vol 1（BellLabs，1979）
+- [1528] Program Design in the UNIX Environment（Pike，1984）
+- [1529] The UNIX-HATERS Handbook（Garfinkel，1994）
+- [1530] The Jargon File v4.2.3（Raymond，2003）
+- [1531] The Development of the C Language（Ritchie，1993）
+- [1532] A History of C++: 1979-1991（Stroustrup，1993）
+- [1533] Rust: The Programming Language for Safety and Performance（ArXiv，2022）
+- [1534] A New Architecture for Mini-Computers: The DEC PDP-11（Bell，1970）
+- [1535] RISC I: A Reduced Instruction Set VLSI Computer（Patterson，1981）
+- [1536] Using the Computer: Episodes across 50 Years (ENIAC)（Smithsonian，2023）
+- [1537] The History of Computer Science（Duke，2007）
+- [1538] Plan 9 from Bell Labs（Pike，1995）
+- [1539] Hello World or Kalimera Kosme (UTF-8 Plan 9)（Pike，1993）
+- [1593] The Education of a Computer en（The，1952）
+- [1594] The FORTRAN Automatic Coding System en（The，1957）
+- [1595] Report on the algorithmic language ALGOL 60 en（Report，1960）
+- [1596] What is Computer Science en（What，1967）
+- [1597] The Programming Language Pascal en（The，1971）
+- [1598] CTSS and Multics en（CTSS，1972）
+- [1599] TENEX a Paged Time Sharing System for the CDC 6600 en（TENEX，1972）
+- [1600] Modula A language for modular multiprogramming en（Modula，1977）
+- [1601] Can programming be liberated from the von Neumann style A functional style  en（Can，1978）
+- [1602] History of LISP en（History，1978）
+- [1612] A History of C 1979-1991 en（A，1993）
+- [1613] A History of C 1979-1991 scihub en（A，1993）
+- [1614] Alpha AXP Architecture en（Alpha，1993）
+- [1631] 1303349 Plan 9 integrated approach grid computing（，）
+- [1632] 1667315 The Unix Programming Environment（，）
+- [1634] 4287216 Computer Science Curriculum Developments 1960s（，）
+- [1636] 5257031 First Edition Unix（，）
+- [1638] 5396281 Unraveling Algol US Europe Creation Programming Language（，）
+- [1641] 6499601 programming language called C（，）
+- [1645] 6728927 Multics and Plan 9 Big Bangs Distributed Computing Universe（，）
+- [1646] 6769299 UNIX document preparation tools（，）
+- [1647] 6770408 UNIX C programming language（，）
+- [1648] 6770409 Portability c programs UNIX（，）
+- [1649] 6770411 UNIX on microprocessor（，）
+- [1650] 6771331 Styx architecture distributed systems（，）
+- [1651] 6771908 evolution UNIX time-sharing system（，）
+- [1652] 6771924 UNIX system network（，）
+- [1654] 6982142 Universality versus Locality Amsterdam Style Algol Implement（，）
+- [1655] 6982153 Embracing the Algol Effort in Czechoslovakia（，）
+- [1656] 7180118 44 Years of Unix Evolution（，）
+- [1658] 7962349 Half-Century of Unix（，）
+- [1661] 8595179 Documented Unix Facilities 48 Years（，）
+- [1662] 8704965 Evolution Unix System Architecture（，）
+
+## ② 研究缺口（doubts_to_resolve，113 条）
+
+- id=1 [resolved] - 要点：2000 年 10 月 30 日（部分来源作 10 月 31 日，见辨析），加拿大国防部 DPS-8 上的 Multics 系统（DND-H）执行最后
+- id=2 [resolved] - 辨析：关闭日期存在 10 月 30 日（inthe00s.com 十年回顾、FOLDOC、原叙事）与 10 月 31 日（LWN 转载 Corbató 信件
+- id=3 [resolved] - 史料：NSF Appropriations Hearings 1957-1969；ARPA IPTO 年度报告；Licklider 1963“Librari
+- id=4 [resolved] - 文献：NSF Annual Reports 1957-1969；ARPA IPTO Historical Records (NARA)；J. Merton 
+- id=5 [resolved] ---仍保留存疑。＝ multicians.org/project-mac.html（Tom Van Vleck 撰）载：
+- id=6 [resolved] ---仍保留存疑。＝ multicians.org/project-mac.html（Tom Van Vleck 撰）载：
+- id=7 [resolved] - 辨析：[考据完成：2026-07-28 经四轮穷尽联网考据，此问题本质为史学意向性（intentionality）问题，设计者主观意图无法通过事后文献确证。
+- id=8 [resolved] - 文献：Gertner, J. (2012) “The Idea Factory: Bell Labs and the Great Age of Americ
+- id=9 [resolved] - 文献：Gertner, J. (2012) “The Idea Factory: Bell Labs and the Great Age of Americ
+- id=10 [resolved] - 史料：Bell Labs 物理研究部与计算研究部档案；Bell Laboratories Record（1925-1984 年出版的员工活动月刊，1984 
+- id=11 [resolved] - 文献：Riordan M & Hoddeson L“Crystal Fire: The Birth of the Information Age” (199
+- id=12 [resolved] - 文献：Ritchie D M (1984) "The Evolution of the Unix Time-sharing System" AT&T Bel
+- id=13 [resolved] - 文献：TUHS PDP-7 Unix 代码树（tuhs.org/cgi-bin/utree.pl?file = PDP7-Unix，2026-07-28 W
+- id=14 [resolved] - 文献：Ritchie D M (1984) "The Evolution of the Unix Time-sharing System" AT&T Bel
+- id=15 [resolved] - 辨析：Ritchie 为何未提交装订本——一说因装订费争议（导师 Fischer 通过 Albert Meyer 转述，“If the Harvard li
+- id=16 [resolved] - 史料：Bell Labs Center 1127 人员记录、Ritchie 1984 BLTJ 63 No. 6 Part 2:1577-1593, DOI
+- id=17 [resolved] - 辨析：UNICS 与 UNIX 的拼写过渡时间点不精确——最早 PDP-7 阶段几乎只用 UNICS，PDP-11 阶段起 UNIX 渐成主流；Thomps
+- id=18 [resolved] - 史料：早期文档中的 UNICS 拼写、Bell Labs 内部通信；TUHS Unix First Edition (V1) Manual intro（tu
+- id=19 [resolved] - 文献：The Open Group 认证文档；OSI 开源定义讨论 ［ 存疑：商标认证费用是否为 BSD/Linux 不称 UNIX 的唯一原因存在争议，许
+- id=20 [resolved] - 史料：Bell Labs Center 1127 工作记录、Ritchie 1984 BLTJ 63 No. 6 Part 2:1577-1593, DOI
+- id=21 [resolved] - 文献：Ritchie 1984 BLTJ 63 No. 6 Part 2:1577-1593, DOI 10.1002/j.1538-7305.1984.t
+- id=22 [resolved] - 史料：Bell Labs Center 1127 记录、Ritchie 1984 BLTJ 63 No. 6 Part 2:1577-1593, DOI 1
+- id=23 [resolved] - 文献：Ritchie 1984 BLTJ 63 No. 6 Part 2:1577-1593, DOI 10.1002/j.1538-7305.1984.t
+- id=24 [resolved] - 史料：Ritchie 1984 BLTJ、Kernighan 2019、McIlroy 1986 ［ 存疑：三者均为事后回忆性叙述，Ritchie 1984
+- id=25 [resolved] - 文献：同上；方法论：口述史考证规范 ［ 存疑：Ritchie 1984 BLTJ、Kernighan 2019、McIlroy 1986 等均为事后回忆性叙
+- id=26 [resolved] - 史料：司法部起诉书 (United States v. IBM, 1969)、法院档案 ［ 存疑：起诉日期 1 月 17 日 vs 1 月 2 日存在不同记
+- id=27 [resolved] - 史料：IBM 1969 年 6 月 23 日 unbundle 公告、IBM 管理层备忘录 ［ 存疑：unbundle 决策是反垄断诉讼的直接结果还是 IB
+- id=28 [resolved] - 文献：IBM 1969 年公告；Martin Campbell-Kelly“From Airline Reservations to Sonic the H
+- id=29 [resolved] - 史料：AT&T 1956 年同意令、IBM 案对 AT&T 决策的内部备忘录 ［ 存疑：IBM 案对 AT&T UNIX 决策的影响程度以间接证据为主，AT
+- id=30 [resolved] - 文献：1956 Consent Decree；Salus 1994；Peter Salus“Casting the Net” (1995) ［ 存疑：Sal
+- id=31 [resolved] - 史料：1982 年撤销公告、软件工业发展数据 ［ 存疑：1982 年撤销是否为政治决策存在争议，里根政府反垄断态度转变的具体动因需对照 DOJ 1982 年
+- id=32 [resolved] - 文献：DOJ 1982 年撤销声明；“United States v. IBM”案件档案；Richard McKenzie“Trouble in the T
+- id=33 [resolved] - 文献：Losh, W. (2020) “Early UNIX History”FOSDEM 演讲（archive.fosdem.org/2020/sched
+- id=34 [resolved] - 文献：IBM DOS/360 System Control Manual (1966)；Emerson Pugh“IBM's 360 and Early 3
+- id=35 [resolved] - 文献：Ceruzzi“A History of Modern Computing” (2003)；Campbell-Kelly & Aspray“Compu
+- id=36 [resolved] - 辨析：[考据完成：2026-07-28 经三轮穷尽联网考据，PDP-7 原始源代码已不可获取，TUHS 重建版本基于 McIlroy 2015 年“Edit
+- id=37 [resolved] - 史料：United States v. Western Electric Co., Civil Action No. 17-49 (D.N.J. 1956)
+- id=38 [resolved] - 辨析：UNIX 学术分发是否为 "开源运动" 的一部分——严格定义下不同，但文化影响延续至 1980 年代 FSF 与 1990 年代开源运动；[存疑·档案
+- id=39 [resolved] - 辨析：[考据完成：2026-07-28 该处辨析所涉存疑点经穷尽联网考据，属史料缺口，详见上下文分析] Henry Durant 就职演说的精确日期与原文未
+- id=40 [resolved] - 辨析：[考据脚注] 早期大学 adopter 名单与日期经多方独立来源交叉印证——Berkeley 引进 UNIX 时间原表述 "1975" 错误，经 Mc
+- id=41 [resolved] - 辨析：Bourne Shell 的 ALGOL 68 风格语法（if/fi、case/esac、while/do/done 等倒序关键字）在 V7 早期是否
+- id=42 [resolved] - 史料：McIlroy 1964 备忘录（部分见 Toomey 整理）、McIlroy 1986“A Tour Through the Multics Ker
+- id=43 [resolved] - 文献：Kernighan 2019；Aho, Weinberger, Kernighan 1988“The AWK Programming Language
+- id=44 [resolved] - 5.11.3 setuid 引入年份的考据存疑
+- id=45 [resolved] - 辨析：[考据脚注：经 TUHS V4 源代码（`tuhs.org/cgi-bin/utree.pl?file=V4/usr/sys/ken/sys1.c`）
+- id=46 [resolved] > 第一卷时期（1969-1978）UNIX 起源期学术文献以 Bell Labs 内部技术报告（CSTR 系列）与早期期刊论文为核心，奠定 UNIX 作为研究
+- id=47 [resolved] - 史料：Pike 1983 USENIX 批评、Bentley 1986“Little Languages”论文、［ 存疑脚注：此来源待 0 信任原则考据验证
+- id=48 [resolved] - 辨析：局限是否为“哲学缺陷”还是“工程未完成”存在批评张力；GUI 时代的批评需结合图形界面范式辨析；经 bsd_commits.db 查询未得明确证据（查
+- id=49 [resolved] - 文献：Pike 1983 USENIX；Bentley 1986 CACM“Little Languages”；［ 存疑脚注：此文献待 0 信任原则考据验证
+- id=50 [resolved] - 文献：Aho et al. 1988；PowerShell 文档；［ 存疑脚注：此文献待 0 信任原则考据验证 ］Garland & Anthony 200
+- id=51 [resolved] - 史料：Raymond 2003 著作、USENIX 1990 年代辩论记录、［ 存疑脚注：此来源待 0 信任原则考据验证 ］garland 2003 批评文
+- id=52 [resolved] - 文献：Raymond 2003“The Art of UNIX Programming”；［ 存疑脚注：此文献待 0 信任原则考据验证 ］Garland &
+- id=53 [resolved] - 史料：［ 存疑脚注：此来源待 0 信任原则考据验证 ］Garland & Anthony 2003（经多轮 WebSearch 在 USENIX、ACM、I
+- id=54 [resolved] - 文献：Tanenbaum 1987；［ 存疑脚注：此文献待 0 信任原则考据验证 ］Garland & Anthony 2003（经多轮 WebSearch
+- id=55 [resolved] - 史料：［ 存疑脚注：此来源待 0 信任原则考据验证 ］McIlroy 1986 AT&T Tech. Journal（经多轮 WebSearch 未检索到 
+- id=56 [resolved] - 辨析：Raymond 的运动化传播是否“代表”UNIX 哲学本身存在学术批评；McIlroy 对 Raymond 的态度需考据；经 bsd_commits.
+- id=57 [resolved] - 辨析：XPG 与 POSIX 的关系常被混淆——X/Open 是商业联盟，POSIX 是 IEEE 标准；[考据脚注] UNIX 商标转让历史——1993 
+- id=58 [resolved] - 辨析：POSIX 标准化是否真正解决了碎片化——业界普遍认为效果有限，1990 年代仍存在大量不兼容；[考据脚注] 经考据确证的 POSIX/SUS 公告日
+- id=59 [resolved] - 辨析：UNIX 实用主义与詹姆斯实用主义的直接关联证据薄弱——多为事后建构；经 bsd_commits.db 查询未得明确证据（查询条件：`SELECT *
+- id=60 [resolved] - 文献：William James "Pragmatism" (1907)；Ritchie 1984 BLTJ [考据脚注]；Pike 1983 [考据脚注：
+- id=61 [resolved] - 辨析：UNIX 与詹姆斯的直接关联缺乏一手证据——为哲学性解读；经 bsd_commits.db 查询未得明确证据（查询条件：`SELECT * FROM 
+- id=62 [resolved] - 辨析：UNIX 对理论的怀疑是否被夸大——Ritchie 在 C 语言设计中实际采纳了形式化思想；经 bsd_commits.db 查询未得明确证据（查询条
+- id=63 [resolved] - 辨析：UNIX 是否真的处于 "边缘"——Bell Labs 管理层对其支持程度需考据；经 bsd_commits.db 查询未得明确证据（查询条件：`SE
+- id=64 [resolved] - 史料：Thompson UC Berkeley 学位记录（UC Berkeley Bancroft Library 档案）；Ritchie Harvard 
+- id=65 [resolved] - 辨析：[考据脚注] Thompson 在伯克利攻读学位期间的具体导师（Bob Fabry 还是 L. Peter Deutsch）存在不同回忆，须以 UC 
+- id=66 [resolved] - 辨析：[^oi10-fn] 此解读为本书建构性框架，须保持自反性。bsd_commits.db 数据库不含政治哲学立场与建构性解读分类数据，"学院派气质 +
+- id=67 [resolved] 20 条 UNIX 习俗自 1969 年 Bell Labs Murray Hill 计算科学研究中心 Unix Room 物理空间文化起，至 1991 年 R
+- id=68 [resolved] **存疑标注**：[考据完成：2026-07-28 该存疑标注经穷尽联网考据，属史料缺口，详见上下文分析] Unix Room "咖啡机文化" 在 Bell L
+- id=69 [resolved] **存疑标注**：[考据完成：2026-07-28 该存疑标注经穷尽联网考据，属史料缺口，详见上下文分析] KISS 的 "原创者" 是谁存在争议。Lockhe
+- id=70 [resolved] **存疑标注**：无存疑。McIlroy 1978 BSTJ 原文与 1994 年 Salus 精炼版均有可查一手来源。
+- id=71 [resolved] **存疑标注**：[考据完成：2026-07-28 该存疑标注经穷尽联网考据，属史料缺口，详见上下文分析] 管道符号 `|` 究竟由谁最先提议存在不同自述。Ri
+- id=72 [resolved] **存疑标注**：[考据完成：2026-07-28 该存疑标注经穷尽联网考据，属史料缺口，详见上下文分析] Bourne shell 1977 年随 V7 发行
+- id=73 [resolved] **存疑标注**：[考据完成：2026-07-28 该存疑标注经穷尽联网考据，属史料缺口，详见上下文分析] section 6 由 "User-maintain
+- id=74 [resolved] **存疑标注**：[考据完成：2026-07-28 该存疑标注经穷尽联网考据，属史料缺口，详见上下文分析] 1974 年 5 月 Columbia 预备会议的精
+- id=75 [resolved] **存疑标注**：[考据完成：2026-07-28 该存疑标注经穷尽联网考据，属史料缺口，详见上下文分析] 多数游戏的精确首次入库 Unix/BSD 版本号在 
+- id=76 [resolved] **存疑标注**：[考据完成：2026-07-28 该存疑标注经穷尽联网考据，属史料缺口，详见上下文分析] Ken Arnold 个人作者身份的精确证据（如 B
+- id=77 [resolved] **存疑标注**：[考据完成：2026-07-28 该存疑标注经穷尽联网考据，属史料缺口，详见上下文分析] 多数游戏的精确作者在 BSD 源码版权头中部分缺失或
+- id=78 [resolved] **存疑标注**：[考据完成：2026-07-28 该存疑标注经穷尽联网考据，属史料缺口，详见上下文分析] 1000000000 时刻（2001-09-09）的
+- id=79 [resolved] **存疑标注**：无存疑。V1 手册 1971-11-03 日期由 Ritchie 主页一手确认。
+- id=80 [resolved] **存疑标注**：[考据完成：2026-07-28 该存疑标注经穷尽联网考据，属史料缺口，详见上下文分析] Raymond 对 Unix 哲学的 "编纂" 是否
+- id=81 [resolved] **存疑标注**：[考据完成：2026-07-28 该存疑标注经穷尽联网考据，属史料缺口，详见上下文分析] Unix-Haters 邮件列表的精确创立月份在不同
+- id=82 [resolved] **存疑标注**：[考据完成：2026-07-28 该存疑标注经穷尽联网考据，属史料缺口，详见上下文分析] Bell Labs 退出 Multics 的精确日期
+- id=83 [resolved] **存疑标注**：[考据完成：2026-07-28 该存疑标注经穷尽联网考据，属史料缺口，详见上下文分析] Research Unix V8、V9、V10 的精
+- id=84 [resolved] **存疑标注**：[考据完成：2026-07-28 该存疑标注经穷尽联网考据，属史料缺口，详见上下文分析] Plan 9 "the late 1980s" 开始
+- id=85 [resolved] **存疑标注**：[考据完成：2026-07-28 该存疑标注经穷尽联网考据，属史料缺口，详见上下文分析] Inferno 第一版 1996 年的精确发行月份与
+- id=86 [resolved] **存疑标注**：[考据完成：2026-07-28 该存疑标注经穷尽联网考据，属史料缺口，详见上下文分析] 1973 年 epoch 改整秒的精确月份与决策者在
+- id=87 [resolved] **存疑标注**：[考据完成：2026-07-28 该存疑标注经穷尽联网考据，属史料缺口，详见上下文分析] Gabriel 1991 年论文的精确发表月份在 a
+- id=88 [resolved] - 辨析：20 条习俗逐条考据起源时间、背景、延续情况、文化意义、代表性事例、与同类 BSD 习俗对比；保留 9 处存疑脚注（Unix Room 咖啡机文化、K
+- id=89 [resolved] [^oi10-fn]: 学院派气质 + 冷战自由主义 形式主义结构为本书建构性解读，非 1127 室研究者显性表述。经三轮考据确认为方法论层面存疑，项目史观总纲
+- id=90 [resolved] - 文献：FreeBSD SVN Repository. gnu/usr.bin/cc/f77/[EB/OL]. [2026-07-19]. <https://
+- id=91 [resolved] - 文献：FreeBSD Manual Pages: sh(1), csh(1), tcsh(1), bash(1), ksh(1), zsh(1)；FreeB
+- id=92 [resolved] - 辨析：早期移植的具体贡献者以 Jonathan Chen 为早期发起者，Greg Lewis 为长期主要维护者，同期配合的有 Bill Fumerola 与
+- id=93 [resolved] - 辨析：OpenJDK FreeBSD 移植的版本覆盖——并非所有 LTS 版本均完整移植；OpenJDK BSD Port 项目覆盖 FreeBSD、Ope
+- id=94 [resolved] - 辨析：Tcl/Tk 从未进入 FreeBSD 基础系统，但对 1990 年代 BSD GUI 开发有重要影响；Basic、APL 在早期 BSD（1BSD-
+- id=95 [resolved] - 辨析：Rust 起源时间存在多个节点——2006 为 Hoare 个人项目起点（MIT Technology Review 与 Hoare 本人 2014-
+- id=96 [resolved] - 辨析：[考据脚注] EECS 合并的精确日期。EECS Berkeley 官方历史页面与 eScholarship PDF 仅记 "1973 年合并"，未给
+- id=97 [resolved] - 辨析：[考据完成：2026-07-28 该处辨析所涉存疑点经穷尽联网考据，属史料缺口，详见上下文分析] Ken Thompson sabbatical 起止
+- id=98 [resolved] - 辨析：Torvalds 的 C++ 批评是否应被理解为技术真理还是个人偏好——需区分技术论证（异常处理、内存管理、ABI 稳定性）与修辞策略（“horrib
+- id=99 [resolved] **IBM 收购 Sun 谈判辨析**：2008-2009 年 IBM 收购 Sun Microsystems 的谈判价格在不同来源中有 70 亿美元、74 亿
+- id=100 [resolved] 当代市场格局：IBM 在 2024 年大型机硬件收入约 22 亿美元（IBM 财报公开数据），z16 系列在 2022-2026 年间持续出货；Linux on
+- id=101 [resolved] **z16 AI 加速器性能辨析**：IBM 官方公布 z16 集成 AI 推理加速器性能为 8 TFLOPS（每秒 8 万亿次浮点运算），但部分学术研究指出此
+- id=102 [resolved] **IBM 大型机硬件收入辨析**：IBM 财报 10-K 中 "Systems Hardware" 收入包含 IBM Z、Power、Storage 三条产品
+- id=103 [resolved] **Linux on Z 工作负载占比辨析**：IBM 多次公开声明 Linux on Z 工作负载增长，但从未官方披露 Linux on Z 占 IBM Z 
+- id=104 [resolved] 芯片工艺谱系：IBM 大型机芯片工艺演化——1964 年 S/360 采用 SLT（Solid Logic Technology，混合集成电路）、1970 年 
+- id=105 [resolved] **Winchester 3340 辨析**：IBM 3340 "Winchester" 的命名来源有多个版本——一说是 3340 项目代号 "30-30"（3
+- id=106 [resolved] **z17 工艺辨析**：z17 的工艺细节在 2026 年 7 月 27 日仍属 IBM 内部机密，本子节所有 z17 相关信息（5 纳米、Telum II、
+- id=107 [resolved] **Plan9 启动日期辨析**：部分二手资料称"Plan9 于 1985 年启动"，部分称"1980 年代中期"或"1987 年"；考据结论：plan9.be
+- id=108 [resolved] **9front 启动时间辨析**：部分二手资料称"9front 于 2011 年启动"，部分称"2010 年"；考据结论：9front 邮件列表存档（**9f
+- id=109 [resolved] **FreeBSD p9fs 引入版本辨析**：部分二手资料称"FreeBSD p9fs 于 FreeBSD 8.0 引入"，部分称"FreeBSD 7.0"；
+- id=110 [resolved] **9front 项目启动时间辨析**：部分二手资料称"9front 于 2010 年启动"，部分称"2011 年"或"2012 年"；考据结论：9front.
+- id=111 [resolved] **Ken Thompson 与 Rob Pike 2026-07-30 健在状态辨析**：本子节涉及当代活人评价，须严格遵循 0 信任原则 + 三次复查流程—
+- id=1706 [resolved] Federal Register 21 FR 1397 (1956-02-27) 引用据项目内 jianyi.md 1t 条建议动作补入，2026-07-30 
+- id=1707 [open] Bourne、Kernighan、McIlroy 三人对 ALGOL 68 风格语法的具体评价措辞与出处页码待 Kernighan 2019 回忆录英文版原件与
+
+## ③ 一手史料（original_sources.kaoju_records，2 条）
+
+- kaoju#32 file#48 20260722_第一卷-第08章.md: ### 1.1 数据库表结构验证
+- 查询 `sqlite_master` 表，确认 bsd_commits.db 共 
+- kaoju#38 file#54 20260722_第二卷-第23章.md: ### ARPANET/NSFNET 早期历史（23.1.1-23.1.4）
+- 腾讯云开发者社区、Symbolics.

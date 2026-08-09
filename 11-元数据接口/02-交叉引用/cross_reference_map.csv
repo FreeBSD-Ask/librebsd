@@ -1,0 +1,262 @@
+source_id,target_id,reference_type,context,page,status
+V01-CH6-unix的传播,FC-2026-001,fact_check,UNIX 传播至伯克利的時間核查,p.123,active
+V02-CH26-billjoy与1bsd,LR-BSD早期学术史,literature_review,1BSD 发布背景综述,p.45,active
+V11-CH228-dragonfly6x的现代化与持续维护,V11-CH212-dragonfly-bsd的诞生hsu评价与早期反馈,next_chapter,后一章：DragonFlyBSD 的诞生,,partial
+V11-CH212-dragonfly-bsd的诞生hsu评价与早期反馈,V11-CH213-dragonfly-bsd早期演进现状与维护,next_chapter,后一章：DragonFlyBSD 早期演进,,partial
+V11-CH212-dragonfly-bsd的诞生hsu评价与早期反馈,V11-CH228-dragonfly6x的现代化与持续维护,prev_chapter,前一章：DragonFly 6.x 时代的持续维护与可持续性问题,,partial
+V11-CH213-dragonfly-bsd早期演进现状与维护,V11-CH212-dragonfly-bsd的诞生hsu评价与早期反馈,prev_chapter,前一章：DragonFlyBSD 的诞生,,partial
+V11-CH231-dragonfly-bsd的激进创新哲学,V12-CH234-nextstep的起源bsd走进next,cross_volume,后一章：NeXTSTEP 的起源：BSD 走进 NeXT，1985-1996,,partial
+V12-CH234-nextstep的起源bsd走进next,V12-CH235-openstep与跨平台bsd,next_chapter,后一章：OPENSTEP 与跨平台 BSD，1994-1997,,active
+V12-CH234-nextstep的起源bsd走进next,V11-CH231-dragonfly-bsd的激进创新哲学,cross_volume,前一章：DragonFly BSD 的哲学、文化与社区,,partial
+V12-CH235-openstep与跨平台bsd,V12-CH236-apple收购next与rhapsody,next_chapter,后一章：Apple 收购 NeXT：Rhapsody 与 Mac OS X Server 1.0，1996-1999,,active
+V12-CH235-openstep与跨平台bsd,V12-CH234-nextstep的起源bsd走进next,prev_chapter,前一章：NeXTSTEP 的起源：BSD 走进 NeXT，1985-1996,,active
+V12-CH236-apple收购next与rhapsody,V12-CH237-darwin的开放核心apsl许可证与开源,next_chapter,后一章：Darwin：BSD 的开放核心，1999-2003,,partial
+V12-CH236-apple收购next与rhapsody,V12-CH235-openstep与跨平台bsd,prev_chapter,前一章：OPENSTEP 与跨平台 BSD，1994-1997,,active
+V12-CH237-darwin的开放核心apsl许可证与开源,FC-2026-006,fact_check,Darwin 开源时间核查,p.78,active
+V12-CH237-darwin的开放核心apsl许可证与开源,V12-CH239-macosx-100-103从cheetah到panther,next_chapter,后一章：Mac OS X 10.0-10.3：从 Cheetah 到 Panther，2001-2003,,partial
+V12-CH237-darwin的开放核心apsl许可证与开源,V12-CH236-apple收购next与rhapsody,prev_chapter,前一章：Apple 收购 NeXT：Rhapsody 与 Mac OS X Server 1.0，1996-1999,,partial
+V02-CH27-vi与cshell的诞生,V02-CH29-darpa的选择,next_chapter,后一章：DARPA 的选择,,partial
+V12-CH239-macosx-100-103从cheetah到panther,V12-CH240-macosx-104-tiger的unix03认证奠基,next_chapter,后一章：Mac OS X 10.4 Tiger：UNIX 03 认证的奠基，2005,,active
+V12-CH239-macosx-100-103从cheetah到panther,V12-CH237-darwin的开放核心apsl许可证与开源,prev_chapter,前一章：Darwin：BSD 的开放核心，1999-2003,,partial
+V12-CH240-macosx-104-tiger的unix03认证奠基,V12-CH241-macosx-105-leopard正式获得unix03认证,next_chapter,后一章：Mac OS X 10.5 Leopard：正式获得 UNIX 03 认证，2007,,active
+V12-CH240-macosx-104-tiger的unix03认证奠基,V12-CH239-macosx-100-103从cheetah到panther,prev_chapter,前一章：Mac OS X 10.0-10.3：从 Cheetah 到 Panther，2001-2003,,active
+V12-CH241-macosx-105-leopard正式获得unix03认证,V12-CH242-snowleopard的gcd与libdispatch集成,next_chapter,后一章：Mac OS X 10.6 Snow Leopard：GCD 与 libdispatch，2009,,partial
+V12-CH241-macosx-105-leopard正式获得unix03认证,V12-CH240-macosx-104-tiger的unix03认证奠基,prev_chapter,前一章：Mac OS X 10.4 Tiger：UNIX 03 认证的奠基，2005,,active
+V12-CH242-snowleopard的gcd与libdispatch集成,V12-CH245-osx-107-1011从lion到elcapitan,next_chapter,后一章：OS X 10.7-10.11：从 Lion 到 El Capitan，2011-2015,,partial
+V12-CH242-snowleopard的gcd与libdispatch集成,V12-CH241-macosx-105-leopard正式获得unix03认证,prev_chapter,前一章：Mac OS X 10.5 Leopard：正式获得 UNIX 03 认证，2007,,partial
+V12-CH245-osx-107-1011从lion到elcapitan,V12-CH246-macos-1012-1015从sierra到catalina,next_chapter,后一章：macOS 10.12-10.15：Sierra 到 Catalina，2016-2019,,active
+V12-CH245-osx-107-1011从lion到elcapitan,V12-CH242-snowleopard的gcd与libdispatch集成,prev_chapter,前一章：Mac OS X 10.6 Snow Leopard：GCD 与 libdispatch，2009,,partial
+V12-CH246-macos-1012-1015从sierra到catalina,V12-CH247-macos-11-15-applesilicon与bsd层演进,next_chapter,后一章：macOS 11-15：Apple Silicon 与 BSD 层的演进，2020-2026,,active
+V12-CH246-macos-1012-1015从sierra到catalina,V12-CH245-osx-107-1011从lion到elcapitan,prev_chapter,前一章：OS X 10.7-10.11：从 Lion 到 El Capitan，2011-2015,,active
+V12-CH247-macos-11-15-applesilicon与bsd层演进,V12-CH248-嵌入式darwin扩散,next_chapter,后一章：iOS/iPadOS/watchOS/tvOS/visionOS：嵌入式 Darwin 的扩散,,active
+V12-CH247-macos-11-15-applesilicon与bsd层演进,V12-CH246-macos-1012-1015从sierra到catalina,prev_chapter,前一章：macOS 10.12-10.15：Sierra 到 Catalina，2016-2019,,active
+V12-CH248-嵌入式darwin扩散,V12-CH249-macos与freebsd代码双向流动,next_chapter,后一章：macOS 与 FreeBSD 的代码双向流动,,active
+V12-CH248-嵌入式darwin扩散,V12-CH247-macos-11-15-applesilicon与bsd层演进,prev_chapter,前一章：macOS 11-15：Apple Silicon 与 BSD 层的演进，2020-2026,,active
+V12-CH249-macos与freebsd代码双向流动,V12-CH250-macos的bsd层技术哲学与同时期比较,next_chapter,后一章：macOS 的 BSD 哲学、文化效应与同时期比较,,partial
+V12-CH249-macos与freebsd代码双向流动,V12-CH248-嵌入式darwin扩散,prev_chapter,前一章：iOS/iPadOS/watchOS/tvOS/visionOS：嵌入式 Darwin 的扩散,,active
+V12-CH250-macos的bsd层技术哲学与同时期比较,V12-CH249-macos与freebsd代码双向流动,chapter_cross_ref,显式引用：经 bsd_commits.db 查询与公开记录交叉验证，详见第 118 章代码双向流动章节），形成“FreeBSD 社区培养人才 →A,,partial
+V12-CH250-macos的bsd层技术哲学与同时期比较,V12-CH249-macos与freebsd代码双向流动,explicit_cross_ref,显式引用：经 bsd_commits.db 查询与公开记录交叉验证，详见第 118 章代码双向流动章节），形成“FreeBSD 社区培养人才 →A,,partial
+V12-CH250-macos的bsd层技术哲学与同时期比较,V12-CH249-macos与freebsd代码双向流动,prev_chapter,前一章：macOS 与 FreeBSD 的代码双向流动,,partial
+V02-CH29-darpa的选择,V02-CH30-3bsd与vax,next_chapter,后一章：3BSD 与 VAX,,active
+V02-CH29-darpa的选择,V02-CH27-vi与cshell的诞生,prev_chapter,前一章：vi 与 C Shell,,partial
+V13-CH252-失败衍生版本与开源治理批评,V13-CH257-衍生操作系统谱系,next_chapter,后一章：衍生操作系统的谱系：BSD 许可证的扩散力,,partial
+V13-CH257-衍生操作系统谱系,V13-CH258-truenas,next_chapter,后一章：TrueNAS：从 FreeNAS 到企业存储，2005-2026,,active
+V13-CH257-衍生操作系统谱系,V13-CH252-失败衍生版本与开源治理批评,prev_chapter,前一章：失败的bsd衍生版本与开源治理批评,,partial
+V13-CH258-truenas,V13-CH259-pfsense-opnsense,next_chapter,后一章：pfSense 与 OPNsense：BSD 防火墙的统治，2004-2026,,active
+V13-CH258-truenas,V13-CH257-衍生操作系统谱系,prev_chapter,前一章：衍生操作系统的谱系：BSD 许可证的扩散力,,active
+V13-CH259-pfsense-opnsense,V13-CH260-桌面bsd,next_chapter,后一章：桌面 BSD：GhostBSD、MidnightBSD、NomadBSD、helloSystem,,active
+V13-CH259-pfsense-opnsense,V13-CH258-truenas,prev_chapter,前一章：TrueNAS：从 FreeNAS 到企业存储，2005-2026,,active
+V13-CH260-桌面bsd,V13-CH261-juniper-junos,next_chapter,后一章：Juniper JunOS：BSD 在运营商网络核心，1998-2026,,active
+V13-CH260-桌面bsd,V13-CH259-pfsense-opnsense,prev_chapter,前一章：pfSense 与 OPNsense：BSD 防火墙的统治，2004-2026,,active
+V13-CH261-juniper-junos,V13-CH262-playstationosbsd诞生与采用基础,next_chapter,后一章：PlayStation OS：BSD 在游戏主机，2006-2026,,partial
+V13-CH261-juniper-junos,V13-CH260-桌面bsd,prev_chapter,前一章：桌面 BSD：GhostBSD、MidnightBSD、NomadBSD、helloSystem,,active
+V13-CH262-playstationosbsd诞生与采用基础,V13-CH265-netflix-open-connect,next_chapter,后一章：Netflix Open Connect：BSD 在内容分发网络，2011-2026,,partial
+V13-CH262-playstationosbsd诞生与采用基础,V13-CH261-juniper-junos,prev_chapter,前一章：Juniper JunOS：BSD 在运营商网络核心，1998-2026,,partial
+V13-CH265-netflix-open-connect,V13-CH266-沉默bsd企业的freebsd基底,next_chapter,后一章：企业中的沉默 BSD：WhatsApp、Isilon、NetApp、EMC、Citrix NetScaler,,partial
+V13-CH265-netflix-open-connect,V13-CH262-playstationosbsd诞生与采用基础,prev_chapter,前一章：PlayStation OS：BSD 在游戏主机，2006-2026,,partial
+V13-CH266-沉默bsd企业的freebsd基底,V13-CH268-pc-bsd-trueos,next_chapter,后一章：PC-BSD→TrueOS：桌面 BSD 的兴衰与教训，2005-2020,,partial
+V13-CH266-沉默bsd企业的freebsd基底,V13-CH265-netflix-open-connect,prev_chapter,前一章：Netflix Open Connect：BSD 在内容分发网络，2011-2026,,partial
+V13-CH268-pc-bsd-trueos,V14-CH271-人类瘟疫流行病对技术社区的影响,cross_volume,后一章：人类瘟疫：流行病对技术社区的效应,,cross_volume
+V13-CH268-pc-bsd-trueos,V13-CH266-沉默bsd企业的freebsd基底,prev_chapter,前一章：企业中的沉默 BSD：WhatsApp、Isilon、NetApp、EMC、Citrix NetScaler,,partial
+V02-CH30-3bsd与vax,V02-CH31-4.1bsd,next_chapter,后一章：4.1BSD,,active
+V02-CH30-3bsd与vax,V02-CH29-darpa的选择,prev_chapter,前一章：DARPA 的选择,,active
+V14-CH271-人类瘟疫流行病对技术社区的影响,V14-CH272-回顾与展望,next_chapter,后一章：回顾与展望：从 Multics 到 FreeBSD 15.x 的六十年 BSD 谱系,,active
+V14-CH271-人类瘟疫流行病对技术社区的影响,V13-CH268-pc-bsd-trueos,cross_volume,前一章：PC-BSD→TrueOS：桌面 BSD 的兴衰与教训，2005-2020,,cross_volume
+V14-CH272-回顾与展望,V14-CH273-商业生态时期的旅游与地理,next_chapter,后一章：商业生态时期的旅游与地理,,active
+V14-CH272-回顾与展望,V14-CH271-人类瘟疫流行病对技术社区的影响,prev_chapter,前一章：人类瘟疫：流行病对技术社区的效应,,active
+V14-CH273-商业生态时期的旅游与地理,V14-CH274-freebsd商业使用案例与bsdl缺陷,next_chapter,后一章：freebsd的商业生态,,partial
+V14-CH273-商业生态时期的旅游与地理,V14-CH272-回顾与展望,prev_chapter,前一章：回顾与展望：从 Multics 到 FreeBSD 15.x 的六十年 BSD 谱系,,active
+V14-CH274-freebsd商业使用案例与bsdl缺陷,V15-CH281-bsd许可证历史演化与foundation治理,cross_volume,后一章：BSD 许可证的文本与历史,,partial
+V14-CH274-freebsd商业使用案例与bsdl缺陷,V14-CH273-商业生态时期的旅游与地理,prev_chapter,前一章：商业生态时期的旅游与地理,,partial
+V15-CH281-bsd许可证历史演化与foundation治理,V15-CH282-foundation注册与bsdvgpl哲学辩论,next_chapter,后一章：BSD vs GPL 哲学辩论,,partial
+V15-CH281-bsd许可证历史演化与foundation治理,V14-CH274-freebsd商业使用案例与bsdl缺陷,cross_volume,前一章：freebsd的商业生态,,partial
+V15-CH282-foundation注册与bsdvgpl哲学辩论,V15-CH281-bsd许可证历史演化与foundation治理,prev_chapter,前一章：BSD 许可证的文本与历史,,partial
+V15-CH285-bsd衍生项目群与许可证扩散,V15-CH290-freebsd图书视频与在线资源史,next_chapter,后一章：FreeBSD 图书、视频与在线资源史,,partial
+V15-CH290-freebsd图书视频与在线资源史,V15-CH291-法律限制加密出口管制,next_chapter,后一章：法律限制：技术演进的法律边界,,partial
+V15-CH290-freebsd图书视频与在线资源史,V15-CH285-bsd衍生项目群与许可证扩散,prev_chapter,前一章：BSD 跨项目的投入与主持——开源生态中的 BSD 效应力,,partial
+V15-CH291-法律限制加密出口管制,V16-CH302-合规认证与标准遵守-内部张力,cross_volume,后一章：FreeBSD 合规、认证与标准遵守史,,partial
+V15-CH291-法律限制加密出口管制,V15-CH290-freebsd图书视频与在线资源史,prev_chapter,前一章：FreeBSD 图书、视频与在线资源史,,partial
+V16-CH302-合规认证与标准遵守-内部张力,LR-合规认证标准史,literature_review,POSIX/C 标准/RFC 合规认证综述,p.901,active
+V16-CH302-合规认证与标准遵守-内部张力,V16-CH303-freebsd社区演进史-治理结构,next_chapter,后一章：FreeBSD 社区演进史,,partial
+V16-CH302-合规认证与标准遵守-内部张力,V15-CH291-法律限制加密出口管制,cross_volume,前一章：法律限制：技术演进的法律边界,,partial
+V02-CH31-4.1bsd,V02-CH32-4.2bsd革命与三件套,next_chapter,后一章：4.2BSD,,partial
+V02-CH31-4.1bsd,V02-CH30-3bsd与vax,prev_chapter,前一章：3BSD 与 VAX,,active
+V16-CH303-freebsd社区演进史-治理结构,V18-CH325-美国bsd的发源地,cross_volume,后一章：美国：BSD 的发源地,,partial
+V16-CH303-freebsd社区演进史-治理结构,V16-CH302-合规认证与标准遵守-内部张力,prev_chapter,前一章：FreeBSD 合规、认证与标准遵守史,,partial
+V18-CH325-美国bsd的发源地,V18-CH327-欧洲法律实体与基金会合作,next_chapter,后一章：欧洲：学术与工程的交汇,,active
+V18-CH325-美国bsd的发源地,V16-CH303-freebsd社区演进史-治理结构,cross_volume,前一章：FreeBSD 社区演进史,,partial
+V18-CH327-欧洲法律实体与基金会合作,V18-CH328-中国bsd社区与起源,next_chapter,后一章：中国,,partial
+V18-CH327-欧洲法律实体与基金会合作,V18-CH325-美国bsd的发源地,prev_chapter,前一章：美国：BSD 的发源地,,active
+V18-CH328-中国bsd社区与起源,V18-CH329-日本bsd社区,next_chapter,后一章：日本,,partial
+V18-CH328-中国bsd社区与起源,V18-CH327-欧洲法律实体与基金会合作,prev_chapter,前一章：欧洲：学术与工程的交汇,,partial
+V18-CH329-日本bsd社区,V18-CH330-韩国bsd社区,next_chapter,后一章：韩国,,active
+V18-CH329-日本bsd社区,V18-CH328-中国bsd社区与起源,prev_chapter,前一章：中国,,partial
+V18-CH330-韩国bsd社区,V18-CH331-俄罗斯bsd社区,next_chapter,后一章：俄罗斯,,active
+V18-CH330-韩国bsd社区,V18-CH329-日本bsd社区,prev_chapter,前一章：日本,,active
+V18-CH331-俄罗斯bsd社区,V18-CH332-加拿大bsd社区,next_chapter,后一章：加拿大,,active
+V18-CH331-俄罗斯bsd社区,V18-CH330-韩国bsd社区,prev_chapter,前一章：韩国,,active
+V18-CH332-加拿大bsd社区,V18-CH333-南美bsd新兴社区,next_chapter,后一章：南美：新兴社区的崛起,,partial
+V18-CH332-加拿大bsd社区,V18-CH331-俄罗斯bsd社区,prev_chapter,前一章：俄罗斯,,active
+V18-CH333-南美bsd新兴社区,V18-CH335-非洲bsd法律与政策环境,next_chapter,后一章：非洲：待开垦的土地,,partial
+V18-CH333-南美bsd新兴社区,V18-CH332-加拿大bsd社区,prev_chapter,前一章：加拿大,,partial
+V18-CH335-非洲bsd法律与政策环境,V18-CH338-中东政府企业与bsd张力,next_chapter,后一章：中东：沙漠中的技术绿洲,,active
+V18-CH335-非洲bsd法律与政策环境,V18-CH333-南美bsd新兴社区,prev_chapter,前一章：南美：新兴社区的崛起,,partial
+V02-CH32-4.2bsd革命与三件套,V02-CH31-4.1bsd,prev_chapter,前一章：4.1BSD,,partial
+V18-CH338-中东政府企业与bsd张力,V18-CH339-中亚bsd社区,next_chapter,后一章：中亚,,active
+V18-CH338-中东政府企业与bsd张力,V18-CH335-非洲bsd法律与政策环境,prev_chapter,前一章：非洲：待开垦的土地,,active
+V18-CH339-中亚bsd社区,V18-CH340-东南亚bsd社区,next_chapter,后一章：东南亚,,active
+V18-CH339-中亚bsd社区,V18-CH338-中东政府企业与bsd张力,prev_chapter,前一章：中东：沙漠中的技术绿洲,,active
+V18-CH340-东南亚bsd社区,V18-CH341-大洋洲bsd社区,next_chapter,后一章：大洋洲,,active
+V18-CH340-东南亚bsd社区,V18-CH339-中亚bsd社区,prev_chapter,前一章：中亚,,active
+V18-CH341-大洋洲bsd社区,V16-CH308-全球社区时期的其他科学-自反性,cross_volume,后一章：全球社区时期的其他科学,,cross_volume
+V18-CH341-大洋洲bsd社区,V18-CH340-东南亚bsd社区,prev_chapter,前一章：东南亚,,active
+V16-CH308-全球社区时期的其他科学-自反性,V16-CH310-管理学问题-辩证链与治理挑战,next_chapter,后一章：管理学问题：开源项目的治理与挑战,,active
+V16-CH308-全球社区时期的其他科学-自反性,V18-CH341-大洋洲bsd社区,cross_volume,前一章：大洋洲,,cross_volume
+V16-CH310-管理学问题-辩证链与治理挑战,V17-CH311-bsd-daemon词源与名称溯源,cross_volume,后一章：bsd的文化溯源与治理批评,,partial
+V16-CH310-管理学问题-辩证链与治理挑战,V16-CH308-全球社区时期的其他科学-自反性,prev_chapter,前一章：全球社区时期的其他科学,,active
+V17-CH311-bsd-daemon词源与名称溯源,V18-CH342-南亚bsd社区,cross_volume,后一章：南亚：次大陆的 BSD 足迹,,partial
+V17-CH311-bsd-daemon词源与名称溯源,V16-CH310-管理学问题-辩证链与治理挑战,cross_volume,前一章：管理学问题：开源项目的治理与挑战,,partial
+V18-CH342-南亚bsd社区,V01-CH17-小型机的诞生与dec-pdp谱系,cross_volume,后一章：小型机史——从 DEC PDP-1 到当代 ARM 服务器,,partial
+V18-CH342-南亚bsd社区,V17-CH311-bsd-daemon词源与名称溯源,cross_volume,前一章：bsd的文化溯源与治理批评,,partial
+V01-CH17-小型机的诞生与dec-pdp谱系,V18-CH342-南亚bsd社区,cross_volume,前一章：南亚：次大陆的 BSD 足迹,,partial
+V02-CH34-sun-microsystems,V02-CH35-4.3bsd,next_chapter,后一章：4.3BSD,,partial
+V15-CH293-当代unix史unix归属流转,V04-CH72-openbsd的加密与固件开放政策,chapter_cross_ref,"显式引用：大总纲统摄当代 UNIX 史，但一刻哲学本身存在元哲学自反（见第 29 章）——一刻哲学并非 ""客观真理"" 的呈现，而是一种自反性的哲",,partial
+V15-CH293-当代unix史unix归属流转,V04-CH72-openbsd的加密与固件开放政策,explicit_cross_ref,"显式引用：大总纲统摄当代 UNIX 史，但一刻哲学本身存在元哲学自反（见第 29 章）——一刻哲学并非 ""客观真理"" 的呈现，而是一种自反性的哲",,partial
+V15-CH293-当代unix史unix归属流转,V01-CH21-编程语言史,cross_volume,后一章：编程语言史——从汇编到 A、B、C 与多范式语言谱系,,partial
+V01-CH21-编程语言史,V01-CH22-计算机科学学科的形成,next_chapter,后一章：学术科研史——计算机科学学科的形成与发展,,partial
+V01-CH21-编程语言史,V15-CH293-当代unix史unix归属流转,cross_volume,前一章：当代 UNIX 史——USL 诉讼后的 UNIX 演化,,partial
+V01-CH22-计算机科学学科的形成,V01-CH21-编程语言史,prev_chapter,前一章：编程语言史——从汇编到 A、B、C 与多范式语言谱系,,partial
+V17-CH319-城市经济政治文化史-美国东岸,V18-CH343-bsd社区治理与管理批评史,cross_volume,后一章：社区治理与管理批评史——UNIX/BSD 社区的权力结构与争议,,partial
+V18-CH343-bsd社区治理与管理批评史,V18-CH344-unix创世一代人物传记,next_chapter,后一章：重要人物传记——从出生到 2026-07-27 的学术化履历,,partial
+V18-CH343-bsd社区治理与管理批评史,V17-CH319-城市经济政治文化史-美国东岸,cross_volume,前一章：城市经济政治文化史——UNIX/BSD 与地区发展,,partial
+V18-CH344-unix创世一代人物传记,V18-CH343-bsd社区治理与管理批评史,prev_chapter,前一章：社区治理与管理批评史——UNIX/BSD 社区的权力结构与争议,,partial
+V02-CH35-4.3bsd,V02-CH36-4.3bsd-tahoe,next_chapter,后一章：4.3BSD-Tahoe,,partial
+V02-CH35-4.3bsd,V02-CH34-sun-microsystems,prev_chapter,前一章：Sun Microsystems,,partial
+V02-CH36-4.3bsd-tahoe,V02-CH37-4.3bsd-reno,next_chapter,后一章：4.3BSD-Reno,,partial
+V02-CH36-4.3bsd-tahoe,V02-CH35-4.3bsd,prev_chapter,前一章：4.3BSD,,partial
+V02-CH37-4.3bsd-reno,V02-CH38-bostic发起重写att代码运动,next_chapter,后一章：Keith Bostic 与 Net/2,,partial
+V02-CH37-4.3bsd-reno,V02-CH36-4.3bsd-tahoe,prev_chapter,前一章：4.3BSD-Tahoe,,partial
+V02-CH38-bostic发起重写att代码运动,V02-CH41-att同意令与诉讼的深远影响,next_chapter,后一章：USL 诉讼,,partial
+V02-CH38-bostic发起重写att代码运动,V02-CH37-4.3bsd-reno,prev_chapter,前一章：4.3BSD-Reno,,partial
+V02-CH41-att同意令与诉讼的深远影响,V03-CH42-csrg教育模式与学术传播,cross_volume,后一章：csrg时期的教育与文化,,partial
+V02-CH41-att同意令与诉讼的深远影响,V02-CH38-bostic发起重写att代码运动,prev_chapter,前一章：Keith Bostic 与 Net/2,,partial
+V03-CH42-csrg教育模式与学术传播,V03-CH57-互联网基础设施的沉默守护者,next_chapter,后一章：互联网的诞生与 BSD,,partial
+V03-CH42-csrg教育模式与学术传播,V02-CH41-att同意令与诉讼的深远影响,cross_volume,前一章：USL 诉讼,,partial
+V03-CH57-互联网基础设施的沉默守护者,V03-CH59-bsd数据库服务器生态,next_chapter,后一章：数据库与 BSD,,active
+V03-CH57-互联网基础设施的沉默守护者,V03-CH42-csrg教育模式与学术传播,prev_chapter,前一章：csrg时期的教育与文化,,partial
+V03-CH59-bsd数据库服务器生态,V04-CH62-386bsd的衰落与patchkit分叉争议,cross_volume,后一章：386BSD：先驱的悲剧,,cross_volume
+V03-CH59-bsd数据库服务器生态,V03-CH57-互联网基础设施的沉默守护者,prev_chapter,前一章：互联网的诞生与 BSD,,active
+V04-CH62-386bsd的衰落与patchkit分叉争议,FC-2026-002,fact_check,386BSD 与 Bill Jolitz 离开时间核查,p.67,active
+V04-CH62-386bsd的衰落与patchkit分叉争议,V04-CH64-freebsd10的安全基线与20迁移,next_chapter,后一章：FreeBSD 的诞生,,active
+V04-CH62-386bsd的衰落与patchkit分叉争议,V03-CH59-bsd数据库服务器生态,cross_volume,前一章：数据库与 BSD,,cross_volume
+V04-CH64-freebsd10的安全基线与20迁移,V04-CH62-386bsd的衰落与patchkit分叉争议,chapter_cross_ref,显式引用：it 群体在分歧出现时未充分协商即 fork 亦是主动选择（见第 25 章 25.15.3 第三层辩证）；BSD 许可证合法性不等于叙,,active
+V04-CH64-freebsd10的安全基线与20迁移,V04-CH62-386bsd的衰落与patchkit分叉争议,explicit_cross_ref,显式引用：it 群体在分歧出现时未充分协商即 fork 亦是主动选择（见第 25 章 25.15.3 第三层辩证）；BSD 许可证合法性不等于叙,,active
+V04-CH64-freebsd10的安全基线与20迁移,FC-2026-003,fact_check,FreeBSD 1.0 发布日期核查,commit abc123,active
+V04-CH64-freebsd10的安全基线与20迁移,V04-CH66-netbsd的贡献者与de-raadt被驱逐事件,next_chapter,后一章：NetBSD：可移植的理想,,active
+V04-CH64-freebsd10的安全基线与20迁移,V04-CH62-386bsd的衰落与patchkit分叉争议,prev_chapter,前一章：386BSD：先驱的悲剧,,active
+V04-CH66-netbsd的贡献者与de-raadt被驱逐事件,LR-NetBSD可移植性,literature_review,NetBSD 可移植性哲学综述,p.89,active
+V04-CH66-netbsd的贡献者与de-raadt被驱逐事件,V04-CH69-openbsd起源的史观审视,next_chapter,后一章：OpenBSD：安全至上的起源,,active
+V04-CH66-netbsd的贡献者与de-raadt被驱逐事件,V04-CH64-freebsd10的安全基线与20迁移,prev_chapter,前一章：FreeBSD 的诞生,,active
+V04-CH69-openbsd起源的史观审视,FC-2026-004,fact_check,Theo de Raadt 离开 NetBSD 时间核查,p.112,active
+V04-CH69-openbsd起源的史观审视,V04-CH72-openbsd的加密与固件开放政策,next_chapter,后一章：OpenBSD：安全文化的奠基,,active
+V04-CH69-openbsd起源的史观审视,V04-CH66-netbsd的贡献者与de-raadt被驱逐事件,prev_chapter,前一章：NetBSD：可移植的理想,,active
+V04-CH72-openbsd的加密与固件开放政策,V04-CH74-bsd项目的战略方向缺失与治理困境,next_chapter,后一章：三足鼎立,,active
+V04-CH72-openbsd的加密与固件开放政策,V04-CH69-openbsd起源的史观审视,prev_chapter,前一章：OpenBSD：安全至上的起源,,active
+V04-CH74-bsd项目的战略方向缺失与治理困境,V04-CH75-linux崛起与bsd的竞争语境,next_chapter,后一章：Linux vs BSD,,partial
+V04-CH74-bsd项目的战略方向缺失与治理困境,V04-CH72-openbsd的加密与固件开放政策,prev_chapter,前一章：OpenBSD：安全文化的奠基,,active
+V04-CH75-linux崛起与bsd的竞争语境,V04-CH74-bsd项目的战略方向缺失与治理困境,prev_chapter,前一章：三足鼎立,,partial
+V04-CH79-44bsd-lite的发布与法律清白基础,V04-CH62-386bsd的衰落与patchkit分叉争议,chapter_cross_ref,显式引用：Jolitz DDJ 系列因主题聚焦 386BSD 先驱（详见第 25 章）未列入本节。完整文献清单与 9 字段著录详见 原材料/研究,,partial
+V04-CH79-44bsd-lite的发布与法律清白基础,V04-CH62-386bsd的衰落与patchkit分叉争议,explicit_cross_ref,显式引用：Jolitz DDJ 系列因主题聚焦 386BSD 先驱（详见第 25 章）未列入本节。完整文献清单与 9 字段著录详见 原材料/研究,,partial
+V04-CH79-44bsd-lite的发布与法律清白基础,V04-CH84-stallman左派黑客政治与bsd商业化分歧,next_chapter,后一章：分裂时期的文化与地理,,partial
+V04-CH84-stallman左派黑客政治与bsd商业化分歧,V05-CH85-freebsd2x站稳脚跟,cross_volume,后一章：FreeBSD 2.x：站稳脚跟,,partial
+V04-CH84-stallman左派黑客政治与bsd商业化分歧,V04-CH79-44bsd-lite的发布与法律清白基础,prev_chapter,前一章：4.4BSD-Lite,,partial
+V05-CH85-freebsd2x站稳脚跟,V04-CH84-stallman左派黑客政治与bsd商业化分歧,cross_volume,前一章：分裂时期的文化与地理,,partial
+V05-CH86-freebsd-ports系统的起源与jordan-hubbard谱系,V05-CH88-freebsd3x-smp时代,next_chapter,后一章：FreeBSD 3.x：SMP 时代,,partial
+V05-CH88-freebsd3x-smp时代,V05-CH89-freebsd4x的jails与黄金时代开端,next_chapter,后一章：FreeBSD 4.x：黄金时代,,partial
+V05-CH88-freebsd3x-smp时代,V05-CH86-freebsd-ports系统的起源与jordan-hubbard谱系,prev_chapter,前一章：FreeBSD Ports 系统,,partial
+V05-CH89-freebsd4x的jails与黄金时代开端,V05-CH88-freebsd3x-smp时代,prev_chapter,前一章：FreeBSD 3.x：SMP 时代,,partial
+V05-CH91-freebsd-jails容器的先驱,V05-CH93-kqueue在macos与其他系统的继承,next_chapter,后一章：kqueue：事件通知革命,,partial
+V05-CH93-kqueue在macos与其他系统的继承,V05-CH94-freebsd-foundation,next_chapter,后一章：FreeBSD Foundation,,partial
+V05-CH93-kqueue在macos与其他系统的继承,V05-CH91-freebsd-jails容器的先驱,prev_chapter,前一章：FreeBSD Jails：容器的先驱,,partial
+V05-CH94-freebsd-foundation,V05-CH93-kqueue在macos与其他系统的继承,prev_chapter,前一章：kqueue：事件通知革命,,partial
+V05-CH95-freebsd50的开发挑战与工程困境,V09-CH169-netbsd的诞生与早期版本,chapter_cross_ref,显式引用：限时通过 Adam Glass 邮件列表公开发布决议通知（参见第 70 章 70.3.5 节）形成对照——FreeBSD Core T,,stale
+V05-CH95-freebsd50的开发挑战与工程困境,V09-CH169-netbsd的诞生与早期版本,explicit_cross_ref,显式引用：限时通过 Adam Glass 邮件列表公开发布决议通知（参见第 70 章 70.3.5 节）形成对照——FreeBSD Core T,,stale
+V05-CH95-freebsd50的开发挑战与工程困境,V05-CH98-freebsd6x回归稳定,next_chapter,后一章：FreeBSD 6.x：回归稳定,,partial
+V05-CH98-freebsd6x回归稳定,V05-CH99-jemalloc,next_chapter,后一章：jemalloc,,active
+V05-CH98-freebsd6x回归稳定,V05-CH95-freebsd50的开发挑战与工程困境,prev_chapter,前一章：FreeBSD 5.x：艰难转型,,partial
+V05-CH99-jemalloc,V05-CH100-pf防火墙,next_chapter,后一章：PF 防火墙,,active
+V05-CH99-jemalloc,V05-CH98-freebsd6x回归稳定,prev_chapter,前一章：FreeBSD 6.x：回归稳定,,active
+V05-CH100-pf防火墙,V05-CH101-freebsd7x的ule调度器成熟与性能飞跃,next_chapter,后一章：FreeBSD 7.x：性能飞跃,,partial
+V05-CH100-pf防火墙,V05-CH99-jemalloc,prev_chapter,前一章：jemalloc,,active
+V05-CH101-freebsd7x的ule调度器成熟与性能飞跃,V05-CH100-pf防火墙,prev_chapter,前一章：PF 防火墙,,partial
+V05-CH103-freebsd8x的虚拟化与网络栈演进,V05-CH105-cvs到subversion,next_chapter,后一章：CVS 到 Subversion,,partial
+V05-CH105-cvs到subversion,V14-CH270-多元群体贡献与企业协同,cross_volume,后一章：成长时期的经济与教育,,cross_volume
+V05-CH105-cvs到subversion,V05-CH103-freebsd8x的虚拟化与网络栈演进,prev_chapter,前一章：FreeBSD 8.x：网络与虚拟化,,partial
+V14-CH270-多元群体贡献与企业协同,V16-CH299-开源运动与bsd-贡献者与osi,cross_volume,后一章：开源运动与 BSD,,cross_volume
+V14-CH270-多元群体贡献与企业协同,V05-CH105-cvs到subversion,cross_volume,前一章：CVS 到 Subversion,,cross_volume
+V16-CH299-开源运动与bsd-贡献者与osi,V06-CH106-zfs设计起源与寻址修辞,cross_volume,后一章：zfs最后的文件系统,,partial
+V16-CH299-开源运动与bsd-贡献者与osi,V14-CH270-多元群体贡献与企业协同,cross_volume,前一章：成长时期的经济与教育,,cross_volume
+V06-CH106-zfs设计起源与寻址修辞,LR-FreeBSD存储栈,literature_review,ZFS 移植至 FreeBSD 综述,p.234,active
+V06-CH106-zfs设计起源与寻址修辞,V06-CH112-dtrace对ebpf的影响与跨系统传承,next_chapter,后一章：DTrace：动态追踪,,partial
+V06-CH106-zfs设计起源与寻址修辞,V16-CH299-开源运动与bsd-贡献者与osi,cross_volume,前一章：开源运动与 BSD,,partial
+V06-CH112-dtrace对ebpf的影响与跨系统传承,V06-CH115-cheri的法律基础与硬件合作协议,next_chapter,后一章：capsicum与cheri,,active
+V06-CH112-dtrace对ebpf的影响与跨系统传承,V06-CH106-zfs设计起源与寻址修辞,prev_chapter,前一章：zfs最后的文件系统,,partial
+V06-CH115-cheri的法律基础与硬件合作协议,V06-CH116-bhyve的起源与架构设计,next_chapter,后一章：bhyve：FreeBSD 原生虚拟化,,partial
+V06-CH115-cheri的法律基础与硬件合作协议,V06-CH112-dtrace对ebpf的影响与跨系统传承,prev_chapter,前一章：DTrace：动态追踪,,active
+V06-CH116-bhyve的起源与架构设计,V07-CH135-freebsd安全团队与认证地位,cross_volume,后一章：freebsd安全模型,,partial
+V06-CH116-bhyve的起源与架构设计,V06-CH115-cheri的法律基础与硬件合作协议,prev_chapter,前一章：capsicum与cheri,,partial
+V07-CH135-freebsd安全团队与认证地位,V07-CH139-freebsd网络栈的netmap与iflib框架,next_chapter,后一章：freebsd网络栈,,active
+V07-CH135-freebsd安全团队与认证地位,V06-CH116-bhyve的起源与架构设计,cross_volume,前一章：bhyve：FreeBSD 原生虚拟化,,partial
+V07-CH139-freebsd网络栈的netmap与iflib框架,V06-CH118-freebsd存储栈的ffs与ufs演进,cross_volume,后一章：FreeBSD 存储栈,,partial
+V07-CH139-freebsd网络栈的netmap与iflib框架,V07-CH135-freebsd安全团队与认证地位,prev_chapter,前一章：freebsd安全模型,,active
+V06-CH118-freebsd存储栈的ffs与ufs演进,V07-CH139-freebsd网络栈的netmap与iflib框架,cross_volume,前一章：freebsd网络栈,,partial
+V06-CH120-freebsd9x版本基础与内核子系统,V07-CH143-clang-llvm迁移背景与法律基础,chapter_cross_ref,显式引用：——FreeBSD 项目因 GPLv3 法律条款不可接受（详见第 58 章 58.4.6 关于 GPLv3 §5/§6/§11 的法律,,stale
+V06-CH120-freebsd9x版本基础与内核子系统,V07-CH143-clang-llvm迁移背景与法律基础,explicit_cross_ref,显式引用：——FreeBSD 项目因 GPLv3 法律条款不可接受（详见第 58 章 58.4.6 关于 GPLv3 §5/§6/§11 的法律,,stale
+V07-CH143-clang-llvm迁移背景与法律基础,FC-2026-005,fact_check,Clang/LLVM 迁移决策时间核查,commit def456,active
+V08-CH163-freebsd16xcurrent开发概览与版本定位,V08-CH166-从subversion到git的迁移历程,next_chapter,后一章：从 Subversion 到 Git,,partial
+V08-CH166-从subversion到git的迁移历程,V08-CH153-freebsd的工程美学与设计哲学,next_chapter,后一章：FreeBSD 的艺术、科学与人文维度,,partial
+V08-CH166-从subversion到git的迁移历程,V08-CH163-freebsd16xcurrent开发概览与版本定位,prev_chapter,前一章：FreeBSD 16.x：CURRENT 开发分支与未来展望,,partial
+V08-CH153-freebsd的工程美学与设计哲学,V08-CH166-从subversion到git的迁移历程,prev_chapter,前一章：从 Subversion 到 Git,,partial
+V08-CH157-freebsd安全团队与安全公告制度,V08-CH158-技术瓶颈,next_chapter,后一章：技术瓶颈,,active
+V08-CH157-freebsd安全团队与安全公告制度,V08-CH167-systemd的诞生扩散与工程架构,prev_chapter,前一章：systemd 与 BSD init——初始化系统的哲学分野,,partial
+V08-CH167-systemd的诞生扩散与工程架构,V08-CH157-freebsd安全团队与安全公告制度,next_chapter,后一章：计算机安全史,,partial
+V08-CH158-技术瓶颈,V09-CH169-netbsd的诞生与早期版本,cross_volume,后一章：NetBSD 1.x 的成长,,partial
+V08-CH158-技术瓶颈,V08-CH157-freebsd安全团队与安全公告制度,prev_chapter,前一章：计算机安全史,,active
+V09-CH169-netbsd的诞生与早期版本,V09-CH173-netbsd-pkgsrc的早期演进,next_chapter,后一章：NetBSD pkgsrc 的早期演进,,partial
+V09-CH169-netbsd的诞生与早期版本,V08-CH158-技术瓶颈,cross_volume,前一章：技术瓶颈,,partial
+V09-CH173-netbsd-pkgsrc的早期演进,V09-CH174-netbsd嵌入式市场与外部批评,next_chapter,后一章：NetBSD 嵌入式市场与外部批评,,active
+V09-CH173-netbsd-pkgsrc的早期演进,V09-CH169-netbsd的诞生与早期版本,prev_chapter,前一章：NetBSD 1.x 的成长,,partial
+V09-CH174-netbsd嵌入式市场与外部批评,V09-CH175-netbsd-4.0的发布与嵌入式生态,next_chapter,后一章：NetBSD 4.0 的发布与嵌入式生态,,active
+V09-CH174-netbsd嵌入式市场与外部批评,V09-CH173-netbsd-pkgsrc的早期演进,prev_chapter,前一章：NetBSD pkgsrc 的早期演进,,active
+V09-CH175-netbsd-4.0的发布与嵌入式生态,V09-CH176-netbsd-5.0架构重构与社区演进,next_chapter,后一章：NetBSD 5.0 架构重构与社区演进,,active
+V09-CH175-netbsd-4.0的发布与嵌入式生态,V09-CH174-netbsd嵌入式市场与外部批评,prev_chapter,前一章：NetBSD 嵌入式市场与外部批评,,active
+V09-CH176-netbsd-5.0架构重构与社区演进,V09-CH177-netbsd-6.0的发布与多核改进,next_chapter,后一章：NetBSD 6.0 的发布与多核改进,,active
+V09-CH176-netbsd-5.0架构重构与社区演进,V09-CH175-netbsd-4.0的发布与嵌入式生态,prev_chapter,前一章：NetBSD 4.0 的发布与嵌入式生态,,active
+V09-CH177-netbsd-6.0的发布与多核改进,V09-CH185-netbsd-7-0与arm生态的深度支持,next_chapter,后一章：NetBSD 7.0 与 ARM 生态的深度支持,,active
+V09-CH177-netbsd-6.0的发布与多核改进,V09-CH176-netbsd-5.0架构重构与社区演进,prev_chapter,前一章：NetBSD 5.0 架构重构与社区演进,,active
+V09-CH185-netbsd-7-0与arm生态的深度支持,V09-CH178-netbsd-8.0与64位arm虚拟化,next_chapter,后一章：NetBSD 8.0 与 64 位 ARM 虚拟化,,active
+V09-CH185-netbsd-7-0与arm生态的深度支持,V09-CH177-netbsd-6.0的发布与多核改进,prev_chapter,前一章：NetBSD 6.0 的发布与多核改进,,active
+V09-CH178-netbsd-8.0与64位arm虚拟化,V09-CH179-netbsd-9.0的发布与zfs集成,next_chapter,后一章：NetBSD 9.0 的发布与 ZFS 集成,,active
+V09-CH178-netbsd-8.0与64位arm虚拟化,V09-CH185-netbsd-7-0与arm生态的深度支持,prev_chapter,前一章：NetBSD 7.0 与 ARM 生态的深度支持,,active
+V09-CH179-netbsd-9.0的发布与zfs集成,V09-CH186-netbsd-10-0的现代硬件支持,next_chapter,后一章：NetBSD 10.0 现代硬件支持与社区演进,,partial
+V09-CH179-netbsd-9.0的发布与zfs集成,V09-CH178-netbsd-8.0与64位arm虚拟化,prev_chapter,前一章：NetBSD 8.0 与 64 位 ARM 虚拟化,,active
+V09-CH186-netbsd-10-0的现代硬件支持,V09-CH179-netbsd-9.0的发布与zfs集成,prev_chapter,前一章：NetBSD 9.0 的发布与 ZFS 集成,,partial
+V09-CH181-netbsd-2x-3x的smp与多平台扩展,CH82-netbsd哲学文化与社区,next_chapter,后一章：NetBSD 的哲学、文化与社区,,stale
+CH82-netbsd哲学文化与社区,V09-CH184-netbsd与同时期操作系统的比较,next_chapter,后一章：NetBSD 与同时期操作系统的比较,,stale
+CH82-netbsd哲学文化与社区,V09-CH181-netbsd-2x-3x的smp与多平台扩展,prev_chapter,前一章：NetBSD 2.x-3.x：SMP 与多平台扩展,,stale
+V09-CH184-netbsd与同时期操作系统的比较,V10-CH190-openbsd-2x的fork与代码审计奠基,cross_volume,后一章：OpenBSD 2.x 时代与代码审计文化,,partial
+V09-CH184-netbsd与同时期操作系统的比较,CH82-netbsd哲学文化与社区,prev_chapter,前一章：NetBSD 的哲学、文化与社区,,stale
+V10-CH190-openbsd-2x的fork与代码审计奠基,LR-OpenBSD安全文化,literature_review,OpenBSD 安全文化起源综述,p.56,active
+V10-CH190-openbsd-2x的fork与代码审计奠基,V09-CH184-netbsd与同时期操作系统的比较,cross_volume,前一章：NetBSD 与同时期操作系统的比较,,partial
+V10-CH201-openbsd的起源从netbsd分叉,V10-CH202-openbsd安全文化的奠基,chapter_cross_ref,显式引用：1 millert commit 1dc0268a4106，见第 91 章考据）、arc4random 等 OpenBSD 专有 AP,,partial
+V10-CH201-openbsd的起源从netbsd分叉,V10-CH203-openssh的诞生与早期发展,chapter_cross_ref,显式引用：大移除 OpenSSH 中受美国密码出口管制约束的加密组件，见第 92 章）；Provos 与 Keromytis 的加入时间在 bs,,stale
+V10-CH201-openbsd的起源从netbsd分叉,V10-CH202-openbsd安全文化的奠基,explicit_cross_ref,显式引用：1 millert commit 1dc0268a4106，见第 91 章考据）、arc4random 等 OpenBSD 专有 AP,,partial
+V10-CH201-openbsd的起源从netbsd分叉,V10-CH203-openssh的诞生与早期发展,explicit_cross_ref,显式引用：大移除 OpenSSH 中受美国密码出口管制约束的加密组件，见第 92 章）；Provos 与 Keromytis 的加入时间在 bs,,stale
+V10-CH201-openbsd的起源从netbsd分叉,V10-CH202-openbsd安全文化的奠基,next_chapter,后一章：OpenBSD 安全文化的奠基：代码审计方法论,,partial
+V10-CH202-openbsd安全文化的奠基,V10-CH203-openssh的诞生与早期发展,next_chapter,后一章：OpenSSH：从 BSD 走向世界的安全工具,,partial
+V10-CH202-openbsd安全文化的奠基,V10-CH201-openbsd的起源从netbsd分叉,prev_chapter,前一章：OpenBSD 的起源：从 NetBSD 分叉,,partial
+V10-CH203-openssh的诞生与早期发展,V10-CH202-openbsd安全文化的奠基,prev_chapter,前一章：OpenBSD 安全文化的奠基：代码审计方法论,,partial
+V10-CH207-openbsd的安全至上哲学,V10-CH199-openbsd-7x的现代化进程,chapter_cross_ref,显式引用：SL 而非补丁修复、2024 年禁止 AI 生成代码合并（详见第 89 章）；de Raadt 在 misc@ 邮件列表的多份原始声明,,stale
+V10-CH207-openbsd的安全至上哲学,V10-CH199-openbsd-7x的现代化进程,explicit_cross_ref,显式引用：SL 而非补丁修复、2024 年禁止 AI 生成代码合并（详见第 89 章）；de Raadt 在 misc@ 邮件列表的多份原始声明,,stale
+V02-CH41-att同意令与诉讼的深远影响,V02-CH180-usl-v-bsdi和解协议原文翻译,next_chapter,后一章：USL v. BSDi 和解协议原文翻译,,active
+V02-CH180-usl-v-bsdi和解协议原文翻译,V02-卷末书目述评,next_chapter,后一章：卷末书目述评,,active

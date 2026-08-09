@@ -1,0 +1,228 @@
+# 第 9 卷综述素材（T1 三源合一，2026-08-04 自动生成）
+
+> 卷目录：第09卷-netbsd的历史｜章范围：ch171-ch189
+
+## ① 现有研究（references_fulltext，35 条）
+
+- [1698] 5940216（5940216，）
+- [1699] NetBSD. evcnt(9) — NetBSD Manual Pages[EB/OL]. [引用日期 2026-08-04]. https://man.ne（，）
+- [1700] NetBSD. NetBSD/x68k 移植文档[EB/OL]. [引用日期 2026-08-04]. https://www.netbsd.org/ports（，）
+- [1701] 5996308（5996308，）
+- [1888] STUDENMUND W. DMFS: A Data Migration File System for NetBSD[C]//2000 USENIX Annu（，）
+- [1889] STUDENMUND W. DMFS: A Data Migration File System for NetBSD[C]//2000 USENIX Annu（，）
+- [2176] Announcing NetBSD 3.0（The NetBSD Project，2005）
+- [2183] NetBSD 1.0 Release Announcement（The NetBSD Foundation，1994）
+- [2184] NetBSD 1.2 Release Announcement（The NetBSD Foundation，1996）
+- [2185] NetBSD 1.3 Release Announcement（The NetBSD Foundation，1998）
+- [2186] NetBSD 1.4 Release Announcement（The NetBSD Foundation，1999）
+- [2187] NetBSD 1.5 Release Announcement（The NetBSD Foundation，2000）
+- [2188] NetBSD 1.6 Release Announcement（The NetBSD Foundation，2002）
+- [2189] NetBSD 2.0 Release Announcement（The NetBSD Foundation，2004）
+- [2190] NetBSD 3.0 Release Announcement（The NetBSD Foundation，2005）
+- [2191] NetBSD 4.0 Release Announcement（The NetBSD Foundation，2007）
+- [2192] NetBSD 5.0 Release Announcement（The NetBSD Foundation，2009）
+- [2193] NetBSD 6.0 Release Announcement（The NetBSD Foundation，2012）
+- [2194] NetBSD 7.0 Release Announcement（The NetBSD Foundation，2015）
+- [2195] NetBSD 8.0 Release Announcement（The NetBSD Foundation，2018）
+- [2196] NetBSD 9.0 Release Announcement（The NetBSD Foundation，2020）
+- [2197] NetBSD 10.0 Release Announcement（The NetBSD Foundation，2024）
+- [2198] NetBSD 10.1 Release Announcement（The NetBSD Foundation，2024）
+- [2147] The History of the NetBSD Project（，）
+- [2199] NetBSD Foundation Quarterly Report 2005Q3Q4（The NetBSD Foundation，2006）
+- [2200] NetBSD 3.0 INSTALL and Release Engineering Team（The NetBSD Foundation，2005）
+- [2201] Waving the flag: NetBSD developers speak about version 4.0（Federico Biancuzzi, Ars Technica，2008）
+- [2202] NetBSD pkgsrc Guide（The NetBSD Foundation，2024）
+- [2276] NetBSD 6.0 Release Notes (multicore improvements)（The NetBSD Foundation，2012）
+- [2277] NetBSD 6.0 CHANGES summary (5.0 to 6.0)（The NetBSD Foundation，2012）
+- [2278] NetBSD 9.0 Release Notes (ZFS integration)（The NetBSD Foundation，2020）
+- [2279] NetBSD 9.0 Announcing (ZFS base integration)（The NetBSD Foundation，2020）
+- [2280] NetBSD 2.0 Release Notes (SMP improvements)（The NetBSD Foundation，2004）
+- [2281] NetBSD Philosophy and Design Principles（The NetBSD Foundation，2024）
+- [2282] NetBSD: Clean Design and Portability (OSC2024)（The NetBSD Foundation，2024）
+
+## ② 研究缺口（doubts_to_resolve，180 条）
+
+- id=688 [resolved] - 辨析：1.0 发布日期在不同叙事中存在差异——部分早期资料误作 1993.10.4，但 NetBSD 官方发布页面（netbsd.org/releases/
+- id=689 [resolved] - 辨析：NetBSD 1.0 与 FreeBSD 1.0 的发布间隔约 12 个月（FreeBSD 1.0 于 **1993-11-01**，NetBSD 1
+- id=690 [resolved] - 辨析：撤权的具体日期与原因在不同叙事中差异较大——本节叙事采用 1994.12.23 决议日期（NetBSD Core Team 公开记录口径），但部分二手
+- id=691 [resolved] - 辨析：OpenBSD 首次正式发布日期在不同叙事中差异较大——部分资料称 1996.5，部分称 1996.7，需对照 OpenBSD 官方 changelo
+- id=692 [resolved] - 辨析：决议的具体内容在不同叙事中差异较大——部分称“沟通风格问题”，部分称“项目治理分歧”；需对照原始档案核实。经考据记录 20260723_announc
+- id=693 [resolved] - 文献：NetBSD Core Team 决议史料；BSD 分裂事件分析；Adam Glass. Theo De Raadt. netbsd-users [E
+- id=694 [resolved] - 辨析：考据过程留痕——【查证来源】Adam Glass 通知邮件原文经 <https://mail-index.netbsd.org/netbsd-user
+- id=695 [resolved] - 辨析：考据过程留痕——【查证来源】OpenBSD goals.html 经 <https://www.openbsd.org/goals.html> 一手核
+- id=696 [resolved] - 辨析：考据过程留痕——【查证来源】合图层的史观审视基于现有公开史料（Adam Glass 通知邮件、OpenBSD CVS 早期记录、bsd_commits
+- id=697 [resolved] - 史料：NetBSD Foundation 2003 年报（**<https://www.netbsd.org/foundation/reports/2003
+- id=698 [resolved] - 辨析：经考据记录 20260723_announcements-netbsd.md § 存疑判定依据-一 -7 验证：项目起始年份 1993 经三向印证——
+- id=699 [resolved] - 文献：NetBSD Foundation. 2003 年报 [EB/OL]. (2004-02-07)[2026-07-23]. <https://www.
+- id=700 [resolved] - 辨析：详细记录的具体内容在不同叙事中差异较大——需对照原始邮件存档核实。经 bsd_commits.db 验证：deraadt 在 netbsd-src 的
+- id=701 [resolved] - 辨析：考据过程留痕——【查证来源】NetBSD 1.5/1.6 发布公告经 netbsd.org 一手核验，平台支持数（31/52 系统族）与 CPU 族数
+- id=702 [resolved] - 辨析：考据过程留痕——【查证来源】NetBSD About、portability、system 三个官方页面经 netbsd.org 一手核验，原文措辞“
+- id=703 [resolved] - 辨析：考据过程留痕——【查证来源】NetBSD 1.6 公告经官方一手核验，公告未明确提及 SMP 细粒度锁改进，与 NetBSD 2.0（2004.12.
+- id=704 [resolved] - 辨析：考据过程留痕——【查证来源】合图层的史观审视基于现有公开史料（NetBSD 官方文档、FreeBSD 4.0 公告、bsd_commits.db co
+- id=705 [resolved] - 辨析：撤权的具体原因在不同叙事中差异较大——部分归因于沟通风格，部分归因于技术分歧，部分归因于项目治理分歧；OpenBSD 首次正式发布日期在不同叙事中存在
+- id=706 [resolved] - 辨析：考据过程留痕——【查证来源】NetBSD 官方 About、portability、system、history 四个页面经 netbsd.org 一
+- id=707 [resolved] - 辨析：移植的具体范围需考据——FreeBSD Ports 与 pkgsrc 的代码 diff 需对照源码核实。经 netbsd.db netbsd-src 
+- id=708 [resolved] - 辨析：pkgsrc 移植的具体范围需考据——FreeBSD Ports 与 pkgsrc 的代码 diff 需对照源码核验；Crooks 创建 pkgsrc
+- id=709 [resolved] - 辨析：OpenBSD Ports 与 pkgsrc 的分化时间需考据——OpenBSD 1996 年 7 月 fork 后软件包管理何时完全独立需对照 co
+- id=710 [resolved] - 辨析：移植的具体时间需考据——NetBSD/dreamcast 与 NetBSD/zaurus 的具体发布时间需对照 Release Notes 核实。经 
+- id=711 [resolved] - 辨析：Cobalt Qube 的具体 NetBSD 版本需考据——Qube 使用的 NetBSD 版本需对照硬件文档核实。经 bsd_commits.db 
+- id=712 [resolved] - 辨析：Wasabi 成立的具体时间存在叙事分歧——部分资料称 2000 年，部分称 1999 年，需对照公司注册档案核验；Wasabi 衰退的具体时间与原因
+- id=713 [resolved] | 设备类别 | 厂商 | 代表型号 | 处理器平台 | NetBSD 版本 | 商业回馈 | 存疑点 |
+- id=714 [resolved] | 网络设备 | Cisco | SA500 系列、IP 电话固件 | ARM/MIPS | [考据完成：2026-07-28 该处存疑标注属史料缺口，须待原始
+- id=715 [resolved] - 辨析：NetBSD 官方“Where NetBSD is used”列表的完整性存疑——部分早期部署已停止维护或厂商已倒闭；列表更新滞后，部分 2010 年
+- id=716 [resolved] - 辨析：GPIO 框架的具体引入版本需考据——部分资料称 4.0，部分称 4.99.x（开发分支），需对照 Release Notes 与 commit lo
+- id=717 [resolved] - 辨析：NPF 与 OpenBSD PF 的关系存在叙事分歧——部分资料称 NPF 借鉴 PF 设计，部分称独立设计，需对照源码核验；NPF 的实际采用率（与
+- id=718 [resolved] > NetBSD 6.x 时代是“在虚假中寻找仅存的真实”的工程实践——当 Linux 以 cgroups/Docker/Kubernetes 席卷数据中心，N
+- id=719 [resolved] - 要点：NetBSD 7.0（**2015.9**）改进 ARM 多核支持，支持 Cortex-A15/A57 等多核 SoC；~~引入 big.LITTLE
+- id=720 [resolved] - 辨析：NetBSD ARM 多核支持与 Linux ARM 多核支持的成熟度对比缺乏权威基准——需对照同硬件测试核验。经 netbsd.db netbsd-
+- id=721 [resolved] - 要点：NetBSD 7.0（**2015.10**）改进 ARM 多核支持，支持 Cortex-A15/A57 等多核 SoC；~~引入 big.LITTL
+- id=722 [resolved] - 辨析：NetBSD ARM 多核支持与 Linux ARM 多核支持的成熟度对比缺乏权威基准——需对照同硬件测试核验。经 netbsd.db netbsd-
+- id=723 [resolved] - 辨析：NetBSD aarch64 支持与 Linux aarch64 支持的成熟度对比缺乏权威基准。经 netbsd.db netbsd-src 仓库 c
+- id=724 [resolved] - 要点：~~NetBSD 8.0 引入 NVMM~~（经 netbsd.db 验证：NVMM 首次导入时间为 2018-11-07，晚于 8.0 发布 201
+- id=725 [resolved] - 辨析：NVMM 与 bhyve 的关系存在叙事分歧——部分资料称 NVMM 借鉴 bhyve，部分称独立设计，需对照源码核验。重要修正：经 netbsd.d
+- id=726 [resolved] - 辨析：NetBSD aarch64 支持与 Linux aarch64 支持的成熟度对比缺乏权威基准。经 netbsd.db netbsd-src 仓库 c
+- id=727 [resolved] - 辨析：8.0 KASLR 是否默认启用在不同叙事中存在分歧——需对照源码核验。经 netbsd.db netbsd-src 仓库 commits 表验证：K
+- id=728 [resolved] - 辨析：**需精确区分**：① NetBSD 8.0 是首个引入 kernel ASLR 实验性选项的 BSD 版本——这一表述须与“首个默认启用 kerne
+- id=729 [resolved] - 辨析：**需严格区分**：① NPF 与 pf 是不同的防火墙实现——NPF 由 NetBSD 项目自研，pf 从 OpenBSD 移植（OpenBSD p
+- id=730 [resolved] - 辨析：**需精确说明 4 个 SA 的技术细节**：① SA2018-003（Remote DoS in IPsec (IPv6)）与 SA2018-007
+- id=731 [resolved] - 辨析：**需严格区分**：① SA2018-005 针对的是 Xen-amd64 特权分离缺陷，与 NVMM 无关——NVMM 首次导入时间为 2018-1
+- id=732 [resolved] - 辨析：**数量对比的辨析**：8.x 周期 15 个 SA（年化 7.5 SA/年）与 9.x 周期 18 个 SA（年化 3.6 SA/年）的对比须考虑三
+- id=733 [resolved] - 辨析：NetBSD ZFS 与 FreeBSD OpenZFS 的关系存在叙事分歧——部分资料称 NetBSD 直接移植 FreeBSD OpenZFS，部
+- id=734 [resolved] - 辨析：NetBSD 9.0 GPU 支持的具体硬件列表（哪些 Intel/AMD GPU 可用）需对照硬件兼容性列表核验。经 bsd_commits.db 
+- id=735 [resolved] - 辨析：NetBSD ZFS 与 FreeBSD OpenZFS 的“代码共享程度”需对照源码核验——两者均从 OpenZFS 仓库同步，但 NetBSD 的
+- id=736 [resolved] - 辨析：先前叙事中称“9.0 发布日期 2020.5”系误传——NetBSD 官方发布页面（netbsd.org/releases/formal-9/NetB
+- id=737 [resolved] - 史料：NetBSD 9.0 Release Notes 文件系统部分；tech-file-system 邮件列表；CVS commit log 中 ext2
+- id=738 [resolved] - 辨析：9.0 ext2fs 改进支持更多 ext4 特性的具体范围需对照源码核验。重要修正：经 bsd_commits.db netbsd-src 仓库 c
+- id=739 [resolved] - 辨析：**需严格区分**：① NPF 与 pf 是不同的防火墙实现——NPF 由 NetBSD 项目自研，pf 从 OpenBSD 移植（OpenBSD p
+- id=740 [resolved] - 辨析：经 netbsd.db netbsd-src 仓库 commits 表验证：Apple Silicon M1 移植最早可追溯至 2021-08-30（
+- id=741 [resolved] - 要点：NetBSD 10.0（**2024.3.28**）改进 NVMe 存储支持，NVMe 改进包括多队列支持、电源管理、rescan 修复等；~~USB
+- id=742 [resolved] - 史料：NetBSD 10.0 Release Notes NVMe 部分；tech-kern 邮件列表；CVS commit log；netbsd.db n
+- id=743 [resolved] - 史观：总纲第 6 条——技术选择的代价：NetBSD 在现代硬件支持上的投入让老平台支持进一步萎缩；总纲第 25 条——0 信任原则：原叙事中“USB4 支
+- id=744 [resolved] - 辨析：经 netbsd.db netbsd-src 仓库 commits 表验证：NVMe 改进涉及 jdolecek、kardel、ryo、rin、ria
+- id=745 [resolved] - 辨析：自动退休的具体人数在不同来源中差异较大——需对照 CVS commit log 与 Core Team 决议核验；新 committer 加入的具体时
+- id=746 [resolved] - 辨析：经 netbsd.db netbsd-src 仓库 commits 表验证：原叙事中“tnn（Campbell）”对应关系错误——riastradh（
+- id=747 [resolved] - 辨析：经 netbsd.db netbsd-src 仓库 commits 表验证：原叙事中“扩展 retguard 覆盖范围”声明不成立——retguard
+- id=748 [resolved] - 要点：NetBSD 10.0（2024.3.28）引入对新 ARM 设备（Apple Silicon M1/M2）与新 x86 平台（Intel Tiger
+- id=749 [resolved] - 史料：NetBSD 10.0 Release Notes 硬件支持部分；tech-kern 邮件列表；netbsd.db netbsd-src 仓库 com
+- id=750 [resolved] - 史观：总纲第 10 条——边缘者贡献：McNeill、Hudson、Shimizu 作为边缘者贡献，让 NetBSD 在 Apple 硬件上获得存在感；总纲
+- id=751 [resolved] - 辨析：经 netbsd.db netbsd-src 仓库 commits 表验证：Apple Silicon 移植由 jmcneill（2021-2022）
+- id=752 [resolved] - 79.10.3 旧内核无 KVA 保护 → kernel virtual address protection 引入（2024）【~~KVA 保护引入~~ 
+- id=753 [resolved] - 要点：NetBSD 10.0（**2024.3.28**）~~原叙事称“引入 kernel virtual address protection（KVA 保
+- id=754 [resolved] - 史观：总纲第 19 条——信息技术：KVA 保护作为信息技术安全机制（如确实引入），其引入体现“会者定离”——旧直接映射路径在侧信道攻击压力下淡出；总纲第 
+- id=755 [resolved] - 辨析：经 netbsd.db netbsd-src 仓库 commits 表精确查询验证：原叙事中“NetBSD 10.0 引入 kernel virtua
+- id=756 [resolved] - 史观：总纲第 25 条——终结中的延续：旧 drivers 的退役与新 drivers 的加入体现技术生态的“终结中的延续”；总纲第 10 条——边缘者贡献
+- id=757 [resolved] - 辨析：经 netbsd.db netbsd-src 仓库 commits 表验证：新 drivers 加入涉及 jmcneill、skrll、ryo、ria
+- id=758 [resolved] - 辨析：**需严格区分**：① “SA 发布停滞”不等于“安全维护停滞”——10.x 周期 97 条 CVE commit 与 6 条 Security fi
+- id=759 [resolved] - 文献：NetBSD Project. NetBSD Security Advisories Archive [EB/OL]. (2024-2026)[202
+- id=760 [resolved] - 辨析：**需精确说明 libnv 的 NetBSD 自有属性**：① **libnv(3)** 是 NetBSD 自研库，非贡献组件——CVE-2024-4
+- id=761 [resolved] - 辨析：**需精确说明 SegmentSmack 的技术机制与跨项目修复时序**：① **SegmentSmack 的技术机制**——攻击者通过在 TCP 连
+- id=762 [resolved] - 辨析：**需精确说明 BIND 9.18 与 9.20 的分支定位**：① **BIND 9.18 是 ESR 分支**——ISC 将 9.18 系列定位为
+- id=763 [resolved] - 辨析：**需精确说明 libarchive 引入 base 的时间与性质**：① **libarchive 引入时间**——版本周期文件显示 libarch
+- id=764 [resolved] - 辨析：**SA 锐减的归因辨析**：10.x 周期 SA 从 9.x 周期年化 3.6 SA/年降至 0.67 SA/年（2 SA / 3 年），降幅 81
+- id=765 [resolved] - 辨析：经考据记录 20260723_announcements-netbsd.md § 交叉验证方法-一验证：10.1 发布日期 2024-12-16 经 
+- id=766 [resolved] - 辨析：经考据记录 20260723_announcements-netbsd.md § 交叉验证方法-一验证：RC5/RC6/RC7 公告日期与 mail-
+- id=767 [resolved] - 文献：Husemann, Martin. NetBSD 11.0 RC5 available! [EB/OL]. (2026-06-17)[2026-07-
+- id=768 [resolved] - 史料：mail-index.netbsd.org netbsd-announce 2026/06 月存档（**<https://mail-index.net
+- id=769 [resolved] - 辨析：经考据记录 20260723_announcements-netbsd.md § 交叉验证方法-四 -2 验证：pkgsrc-2026Q2 公告日期 
+- id=770 [resolved] - 文献：maya (Maya Rashbox). Announcing the pkgsrc-2026Q2 branch [EB/OL]. (2026-06-
+- id=777 [resolved] - 要点：NetBSD Core Team 采用邀请制，与 FreeBSD 2000 年直选制不同；NetBSD Foundation 在特拉华州注册为非营利组
+- id=778 [resolved] - 史料：NetBSD Foundation bylaws（**<https://www.netbsd.org/foundation/bylaws.html**
+- id=779 [resolved] - 辨析：经考据记录 20260723_announcements-netbsd.md § 交叉验证方法-三验证：501(c)(3) 免税地位获得日期 2004
+- id=780 [resolved] - 文献：NetBSD Foundation Bylaws [EB/OL]. (2026-07-23 访问). <https://www.NetBSD.org/
+- id=781 [resolved] > 本子章由原第 82 章拆分而来，承载 82.6-82.9 节，涵盖与 FreeBSD/OpenBSD 社区文化对照、NetBSD Foundation 公告
+- id=782 [resolved] | NetBSD | 可移植性至上 | Core Team 邀请制 | NetBSD Foundation（成立日期 [考据完成：2026-07-28 该处存疑
+- id=783 [resolved] #### 82.7 NetBSD Foundation 公告与治理考据（1993-2026）——501(c)(3) 免税地位、董事会选举、Tainted Cod
+- id=784 [resolved] | 成立与免税地位 | 2 项 | 1993-2004 | Foundation 成立（日期存疑）、501(c)(3) 免税地位获得（2004-01-22） |
+- id=785 [resolved] | Tainted Code 政策 | **未发现**（存疑） | — | 任务描述提及“2024-05 Tainted Code 政策”在 NetBSD 官方
+- id=786 [resolved] - 要点：NetBSD Foundation 于 **2004 年 1 月 22 日** 获得美国国税局 501(c)(3) 免税组织地位——这一地位使 Fou
+- id=787 [resolved] - 史料：NetBSD Foundation 主页（**<https://www.netbsd.org/foundation/**，访问日期> 2026-07-
+- id=788 [resolved] - 辨析：经考据记录 20260723_announcements-netbsd.md § 交叉验证方法-三验证：501(c)(3) 免税地位获得日期 2004
+- id=789 [resolved] - 文献：NetBSD Foundation. Foundation 主页 [EB/OL]. (2026-07-23 访问). <https://www.net
+- id=790 [resolved] - 史料：NetBSD Foundation 主页（**<https://www.netbsd.org/foundation/**，访问日期> 2026-07-
+- id=791 [resolved] - 辨析：经考据记录 20260723_announcements-netbsd.md § 交叉验证方法-三 -2 验证：当前董事会成员任期信息经 Founda
+- id=792 [resolved] - 文献：NetBSD Foundation. Foundation 主页（含当前董事会成员名单与任期信息） [EB/OL]. (2026-07-23 访问).
+- id=793 [resolved] - 82.7.3 Tainted Code 政策存疑——任务描述与官方文档的冲突
+- id=794 [resolved] - 要点：**任务描述提及的“NetBSD Foundation Tainted Code 政策（2024-05）”在 NetBSD 官方未找到对应文件**——
+- id=795 [resolved] - 史料：NetBSD Foundation Policies 目录（**<https://www.netbsd.org/foundation/policies
+- id=796 [resolved] - 史观：0 信任原则：Tainted Code 政策存疑是 0 信任原则在政策考据中的实践——不得因任务描述提及即直接采信，须以官方文档为准；穷尽考据后仍无法
+- id=797 [resolved] - 辨析：经考据记录 20260723_announcements-netbsd.md § 交叉验证方法-三 -3 与 § 存疑判定依据-二 -1 验证：**任
+- id=798 [resolved] - 文献：NetBSD Foundation. Foundation Policies 目录 [EB/OL]. (2026-07-23 访问). <https:
+- id=799 [resolved] - 辨析：经考据记录 20260723_announcements-netbsd.md §A.4 第 17-18 条验证：Press Releases 共 18
+- id=800 [resolved] | 事件 | 日期 | 来源 | 存疑状态 |
+- id=801 [resolved] | Theo de Raadt 离开 NetBSD | 1994-12-20（决议）/ 1994-12-23（通知） | netbsd-users 邮件列表 A
+- id=802 [resolved] | NetBSD 项目 10 周年 | 2003 年 | 2003 年报“the tenth anniversary year” | 已确证（三向印证）；庆祝活
+- id=803 [resolved] | NetBSD 项目 20 周年 | 2013 年 | 推算自 2003 年报“第 10 周年” | 推算确证；庆祝活动存疑 |
+- id=804 [resolved] | NetBSD 项目 30 周年 | 2023 年 | 推算自 2003 年报“第 10 周年” | 推算确证；庆祝活动存疑 |
+- id=805 [resolved] | CVS-to-Mercurial 仓库迁移 | 2019-2020 年间 | netbsd-announce 邮件列表未发现迁移完成公告 | 精确完成日期存
+- id=806 [resolved] - 史料：Adam Glass 1994-12-23 通知邮件（**<https://mail-index.netbsd.org/netbsd-users/19
+- id=807 [resolved] - 辨析：经考据记录 20260723_announcements-netbsd.md § 存疑判定依据-二 -2 与 ch70 §70.3.4-70.3.5 
+- id=808 [resolved] - 文献：Adam Glass. Theo De Raadt. netbsd-users [EB/OL]. 1994-12-23T11:26:09. <http
+- id=809 [resolved] - 82.8.2 CVS-to-Mercurial 仓库迁移公告（2019-2020，精确完成日期存疑）
+- id=810 [resolved] - 史料：netbsd-announce 邮件列表 2019/02-2020/10 各月存档（逐月抓取，未发现迁移完成公告）；NetBSD-SA2024-002
+- id=811 [resolved] - 辨析：经考据记录 20260723_announcements-netbsd.md § 存疑判定依据-二 -3 验证：**精确迁移完成日期未能从 netbs
+- id=812 [resolved] - 文献：netbsd-announce 邮件列表 2019-2020 年存档 [EB/OL]. <https://mail-index.netbsd.org/
+- id=813 [resolved] - 史料：NetBSD Foundation 2003 年报（**<https://www.netbsd.org/foundation/reports/2003
+- id=814 [resolved] - 辨析：经考据记录 20260723_announcements-netbsd.md § 存疑判定依据-一 -7 验证：项目起始年份 1993 经三向印证（A
+- id=815 [resolved] - 文献：NetBSD Foundation. 2003 年报 [EB/OL]. (2004-02-07)[2026-07-23]. <https://www.
+- id=816 [resolved] - 要点：NetBSD Core Team 采用邀请制，与 FreeBSD 2000 年直选制不同；NetBSD Foundation 在特拉华州注册为非营利组
+- id=817 [resolved] - 史料：NetBSD Foundation bylaws（**<https://www.netbsd.org/foundation/bylaws.html**
+- id=818 [resolved] - 辨析：经考据记录 20260723_announcements-netbsd.md § 交叉验证方法-三验证：501(c)(3) 免税地位获得日期 2004
+- id=819 [resolved] - 文献：NetBSD Foundation Bylaws [EB/OL]. (2026-07-23 访问). <https://www.NetBSD.org/
+- id=820 [resolved] | NetBSD | 可移植性至上 | Core Team 邀请制 | NetBSD Foundation（成立日期 [考据完成：2026-07-28 该处存疑
+- id=821 [resolved] #### 82.7 NetBSD Foundation 公告与治理考据（1993-2026）——501(c)(3) 免税地位、董事会选举、Tainted Cod
+- id=822 [resolved] | 成立与免税地位 | 2 项 | 1993-2004 | Foundation 成立（日期存疑）、501(c)(3) 免税地位获得（2004-01-22） |
+- id=823 [resolved] | Tainted Code 政策 | **未发现**（存疑） | — | 任务描述提及“2024-05 Tainted Code 政策”在 NetBSD 官方
+- id=824 [resolved] - 要点：NetBSD Foundation 于 **2004 年 1 月 22 日** 获得美国国税局 501(c)(3) 免税组织地位——这一地位使 Fou
+- id=825 [resolved] - 史料：NetBSD Foundation 主页（**<https://www.netbsd.org/foundation/**，访问日期> 2026-07-
+- id=826 [resolved] - 辨析：经考据记录 20260723_announcements-netbsd.md § 交叉验证方法-三验证：501(c)(3) 免税地位获得日期 2004
+- id=827 [resolved] - 文献：NetBSD Foundation. Foundation 主页 [EB/OL]. (2026-07-23 访问). <https://www.net
+- id=828 [resolved] - 史料：NetBSD Foundation 主页（**<https://www.netbsd.org/foundation/**，访问日期> 2026-07-
+- id=829 [resolved] - 辨析：经考据记录 20260723_announcements-netbsd.md § 交叉验证方法-三 -2 验证：当前董事会成员任期信息经 Founda
+- id=830 [resolved] - 文献：NetBSD Foundation. Foundation 主页（含当前董事会成员名单与任期信息） [EB/OL]. (2026-07-23 访问).
+- id=831 [resolved] - 82.7.3 Tainted Code 政策存疑——任务描述与官方文档的冲突
+- id=832 [resolved] - 要点：**任务描述提及的“NetBSD Foundation Tainted Code 政策（2024-05）”在 NetBSD 官方未找到对应文件**——
+- id=833 [resolved] - 史料：NetBSD Foundation Policies 目录（**<https://www.netbsd.org/foundation/policies
+- id=834 [resolved] - 史观：0 信任原则：Tainted Code 政策存疑是 0 信任原则在政策考据中的实践——不得因任务描述提及即直接采信，须以官方文档为准；穷尽考据后仍无法
+- id=835 [resolved] - 辨析：经考据记录 20260723_announcements-netbsd.md § 交叉验证方法-三 -3 与 § 存疑判定依据-二 -1 验证：**任
+- id=836 [resolved] - 文献：NetBSD Foundation. Foundation Policies 目录 [EB/OL]. (2026-07-23 访问). <https:
+- id=837 [resolved] - 辨析：经考据记录 20260723_announcements-netbsd.md §A.4 第 17-18 条验证：Press Releases 共 18
+- id=838 [resolved] | 事件 | 日期 | 来源 | 存疑状态 |
+- id=839 [resolved] | Theo de Raadt 离开 NetBSD | 1994-12-20（决议）/ 1994-12-23（通知） | netbsd-users 邮件列表 A
+- id=840 [resolved] | NetBSD 项目 10 周年 | 2003 年 | 2003 年报“the tenth anniversary year” | 已确证（三向印证）；庆祝活
+- id=841 [resolved] | NetBSD 项目 20 周年 | 2013 年 | 推算自 2003 年报“第 10 周年” | 推算确证；庆祝活动存疑 |
+- id=842 [resolved] | NetBSD 项目 30 周年 | 2023 年 | 推算自 2003 年报“第 10 周年” | 推算确证；庆祝活动存疑 |
+- id=843 [resolved] | CVS-to-Mercurial 仓库迁移 | 2019-2020 年间 | netbsd-announce 邮件列表未发现迁移完成公告 | 精确完成日期存
+- id=844 [resolved] - 史料：Adam Glass 1994-12-23 通知邮件（**<https://mail-index.netbsd.org/netbsd-users/19
+- id=845 [resolved] - 辨析：经考据记录 20260723_announcements-netbsd.md § 存疑判定依据-二 -2 与 ch70 §70.3.4-70.3.5 
+- id=846 [resolved] - 文献：Adam Glass. Theo De Raadt. netbsd-users [EB/OL]. 1994-12-23T11:26:09. <http
+- id=847 [resolved] - 82.8.2 CVS-to-Mercurial 仓库迁移公告（2019-2020，精确完成日期存疑）
+- id=848 [resolved] - 史料：netbsd-announce 邮件列表 2019/02-2020/10 各月存档（逐月抓取，未发现迁移完成公告）；NetBSD-SA2024-002
+- id=849 [resolved] - 辨析：经考据记录 20260723_announcements-netbsd.md § 存疑判定依据-二 -3 验证：**精确迁移完成日期未能从 netbs
+- id=850 [resolved] - 文献：netbsd-announce 邮件列表 2019-2020 年存档 [EB/OL]. <https://mail-index.netbsd.org/
+- id=851 [resolved] - 史料：NetBSD Foundation 2003 年报（**<https://www.netbsd.org/foundation/reports/2003
+- id=852 [resolved] - 辨析：经考据记录 20260723_announcements-netbsd.md § 存疑判定依据-一 -7 验证：项目起始年份 1993 经三向印证（A
+- id=853 [resolved] - 文献：NetBSD Foundation. 2003 年报 [EB/OL]. (2004-02-07)[2026-07-23]. <https://www.
+- id=854 [resolved] - 辨析：6 条传言逐条考据最早可考源头、流传路径、考证结论、考证依据；考证结论分布为史实属实 1 条、真伪混杂 2 条、史实失实 1 条、无法确证 1 条、存
+- id=1890 [open] 章索引称 NetBSD 由 Chris Demetriou、Adam Glass、Charles Hannum、Theodore Ts'o 等发起。事实：Net
+- id=1891 [open] 章索引称 0.8 于'1994 年 4 月'发布、1.0 于'1995 年 10 月'发布。事实：NetBSD 0.8 发布于 1993-04-20，1.0 发
+- id=1892 [open] 章索引称'1.4（1999.5）引入 pkgsrc'。事实：pkgsrc 由 Alistair Crooks 与 Hubert Feyrer 于 1997-10
+- id=1893 [resolved] 章索引称'1995 年 2 月 NetBSD Foundation 在美国特拉华州注册为 501(c)(3) 非营利组织'。事实：Foundation 在特拉华
+- id=1894 [open] 章索引称'pkgsrc 1997 年 8 月由 Alistair G. Crooks 发起'且'2004 年 pkgsrc 1.0 成为跨平台软件包管理系统'。
+- id=1895 [resolved] 章标题与索引称'NetBSD 8.0 与 64 位 ARM 虚拟化'、'8.0 引入 aarch64（ARM64）支持、改进的虚拟化支持、NVMM'。事实：AA
+- id=1896 [open] 章索引称'NetBSD 7.0 与 ARM 生态的深度支持（2015.9）'。事实：NetBSD 7.0 发布日期为 2015-08-25（官方历史页），非 2
+- id=1897 [open] 章索引称 1.3（1998.1）'扩展至 21 种硬件平台'。1.2 支持 12 种架构已据官方 1.2 发布页逐一点数核实；1.3 的'21 种'精确数字需对
+- id=1898 [open] 章索引称 de Raadt'1994 年 12 月 23 日被 NetBSD Core Team 撤销 commit 权限'。月份（1994 年 12 月）获多
+- id=1899 [open] 章索引称'NetBSD 10.1-RELEASE 与 11.0 RC5/RC6/RC7 公告（2024-12-16 至 2026-07-23）'。10.1-RE
+- id=1900 [open] NEWREF:1698 存根标题为纯数字'5940216'，与 NEWREF:1699 同值，且本章文献增补区无'观点'上下文，无法确定其本意文献，判定为存疑（
+- id=1901 [open] NEWREF:1701 存根标题为纯数字'5996308'，与 NEWREF:1700 同值，且本章文献增补区无'观点'上下文，无法确定其本意文献，判定为存疑（
+- id=1902 [open] 章索引称「1.5（2001.4）支持 IPv6 与 IPSec」。NetBSD 1.5 通常记为 2000 年 12 月发布（非 2001-04），待一手发布页
+- id=1903 [open] 章索引称「pkgsrc 2.0 与跨平台软件包管理（2005-2009）」。pkgsrc 采用季度分支版本体系（如 pkgsrc-2005Q1），并无「pkgs
+- id=1904 [resolved] 统计引用称「ZFS 在 NetBSD 首现 2005」。ZFS 由 Sun 于 2005 年起源，但 NetBSD 的 ZFS 移植与「usable for d
+- id=1905 [resolved] 概述第 3 行内部自述「2.0 部分独立成章（183）」系笔误——2.0 实为第 182 章，本章为 3.0；属大纲文本内部不一致，建议编辑修正（非事实错误）。
+- id=1906 [open] 重大事件称「CVS-Mercurial 迁移」。NetBSD 确有 Mercurial 镜像（anonhg.netbsd.org，自动从 CVS 转换），但 C
+- id=1907 [open] 章索引称「pkgsrc 3.0-4.0 与现代软件包管理（2010-2026）」。pkgsrc 采用季度分支版本体系（如 pkgsrc-2010Qx），并无「p
+- id=1908 [open] 章索引称「2023 年率先明确将 AI 生成代码定性为 tainted code」。Commit Guidelines 确有此政策（LLM 生成代码须 core
+
+## ③ 一手史料（original_sources.kaoju_records，0 条）
+
+（无）

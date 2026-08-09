@@ -1,0 +1,360 @@
+# 第 11 卷综述素材（T1 三源合一，2026-08-04 自动生成）
+
+> 卷目录：第11卷-dragonflybsd的历史｜章范围：ch213-ch235
+
+## ① 现有研究（references_fulltext，42 条）
+
+- [573] luke-tsai-improving_memguard_support_for_uma_on_freebsd-paper（vbsdcon，2015）
+- [2220] DragonFly BSD Announcement (2003-07-16)（Matthew Dillon，2003）
+- [2221] DragonFly BSD 1.0 Release（Matthew Dillon，2004）
+- [2222] DragonFly BSD 1.2 Release（The DragonFly BSD Project，2005）
+- [2223] DragonFly BSD 1.4 Release（The DragonFly BSD Project，2006）
+- [2224] DragonFly BSD 1.6 Release（The DragonFly BSD Project，2006）
+- [2225] DragonFly BSD 1.8 Release（The DragonFly BSD Project，2007）
+- [2226] DragonFly BSD 1.10 Release（The DragonFly BSD Project，2008）
+- [2227] DragonFly BSD 1.12 Release（The DragonFly BSD Project，2008）
+- [2228] DragonFly BSD 2.0 Release (HAMMER introduced)（The DragonFly BSD Project，2008）
+- [2229] DragonFly BSD 2.2 Release (HAMMER production-ready)（The DragonFly BSD Project，2009）
+- [2230] DragonFly BSD 2.4 Release（The DragonFly BSD Project，2009）
+- [2231] DragonFly BSD 2.6 Release（The DragonFly BSD Project，2010）
+- [2232] DragonFly BSD 2.8 Release（The DragonFly BSD Project，2010）
+- [2233] DragonFly BSD 3.0 Release（The DragonFly BSD Project，2012）
+- [2234] DragonFly BSD 3.2 Release（The DragonFly BSD Project，2012）
+- [2235] DragonFly BSD 3.4 Release（The DragonFly BSD Project，2013）
+- [2236] DragonFly BSD 4.0 Release（The DragonFly BSD Project，2014）
+- [2237] DragonFly BSD 5.0 Release（The DragonFly BSD Project，2016）
+- [2238] DragonFly BSD 5.2 Release (HAMMER2 stable)（The DragonFly BSD Project，2018）
+- [2239] DragonFly BSD 6.0 Release（The DragonFly BSD Project，2021）
+- [2240] DragonFly BSD 6.4 Release（The DragonFly BSD Project，2024）
+- [2241] Matthew Dillon biography（Wikipedia，2024）
+- [2242] DragonFly BSD: The Butthurt Fork (technical history)（butthurtfork.com，2024）
+- [2291] DragonFly BSD: The announcement of the fork (2003-07-16)（Matthew Dillon，2003）
+- [2292] DragonFly BSD: The Butthurt Fork - origins（butthurtfork.com，2024）
+- [2293] DragonFly BSD 3.0 Release (Matt Dillon leadership era)（The DragonFly BSD Project，2012）
+- [2294] DragonFly BSD 4.0 Release (security and bugs)（The DragonFly BSD Project，2014）
+- [2295] DragonFly BSD 4.2 Release (vulnerability fixes)（The DragonFly BSD Project，2015）
+- [2296] DragonFly BSD 4.6 Release（The DragonFly BSD Project，2016）
+- [2297] DragonFly BSD 5.0 Release (modernization)（The DragonFly BSD Project，2016）
+- [2298] DragonFly BSD 5.4 Release (HAMMER2 improvements)（The DragonFly BSD Project，2018）
+- [2299] DragonFly BSD 5.6 Release（The DragonFly BSD Project，2019）
+- [2300] DragonFly BSD 5.8 Release（The DragonFly BSD Project，2020）
+- [2301] DragonFly BSD 6.0 Release (modernization)（The DragonFly BSD Project，2021）
+- [2302] DragonFly BSD 6.2 Release（The DragonFly BSD Project，2022）
+- [2303] DragonFly BSD 6.4 Release (2025-05-09)（The DragonFly BSD Project，2025）
+- [2304] DragonFly BSD sustainability criticism (external)（The BSD ecosystem，2024）
+- [2305] DragonFly BSD technical legacy: LWKT/HAMMER/vkernels（Wikipedia，2024）
+- [2306] DragonFly BSD radical innovation philosophy（butthurtfork.com，2024）
+- [2307] DragonFly BSD community argument culture（The DragonFly BSD Project，2024）
+- [2308] DragonFly BSD customs and culture（The DragonFly BSD Project，2024）
+
+## ② 研究缺口（doubts_to_resolve，305 条）
+
+- id=970 [resolved] - 辨析：bsd_commits.db 关键词搜索可能低估 NVMe 改进的实际 commit 量——NVMe 相关 commit 可能以‘**nvd(4)**
+- id=971 [resolved] - 辨析：技术比较须结合项目目标——bsd_commits.db 显示 commit 量差距显著，但 FreeBSD 追求主流服务器市场（Tier-1 ARM6
+- id=972 [resolved] - 辨析：release notes 与 commit log 偶有不一致——bsd_commits.db 显示 v5.2.0 的 tagger_date（20
+- id=973 [resolved] - 辨析：bsd_commits.db 关键词搜索可能低估 HAMMER 2 改进的实际 commit 量——部分 HAMMER 2 commit 可能以‘ha
+- id=974 [resolved] - 辨析：bsd_commits.db 显示 v5.6.0 tagger_date = 2019-06-16 与 v5.6.1 tagger_date = 20
+- id=975 [resolved] - 辨析：技术比较须结合使用场景——bsd_commits.db 显示 HAMMER 2 commit 量远低于 OpenZFS，但 HAMMER 2 适合资源
+- id=976 [resolved] bsd_commits.db 显示 Dillon 在 2019 年 commit 392 条，其中 HAMMER 2 相关 commit 占比 [考据完成：20
+- id=977 [resolved] - 辨析：commit log 可能不完整反映改进全貌——bsd_commits.db 关键词搜索仅基于 message_subject，部分 HAMMER 2
+- id=978 [resolved] - 辨析：bsd_commits.db 关键词搜索可能低估网络栈改进的实际 commit 量——网络栈相关 commit 可能以‘tcp’/‘ip’/‘inp’
+- id=979 [resolved] - 辨析：bsd_commits.db 显示 v6.0.0 的 target_commit_date（2021-04-27）与 tagger_date（2021
+- id=980 [resolved] - 辨析：技术比较须结合项目目标——FreeBSD 追求主流服务器市场（arm64 Tier-1、bhyve 改进），DragonFly 追求轻量级内核哲学（L
+- id=981 [resolved] - 辨析：release notes 与 commit log 偶有不一致——dragonfly.db 显示 v6.0.0 的 target_commit_da
+- id=982 [resolved] bsd_commits.db dragonfly-src 仓库 commits 表 message_subject 字段中含‘AI’或‘LLM’关键词的 com
+- id=983 [resolved] - 辨析：Dillon 在 kernel@ 的具体发言日期与原文须以 lists.dragonflybsd.org 邮件列表归档核验 [考据完成：2026-07
+- id=984 [resolved] - 辨析：政策差异的考量需考据具体发言——NetBSD 禁止政策的法律风险论证须以 tech-kern@ 邮件列表原文核验 [考据完成：2026-07-28 该
+- id=985 [resolved] - 辨析：FreeBSD 未发布统一政策不等于无政策——部分 FreeBSD committer 可能在个人层面拒绝 AI 代码，须以 freebsd-hack
+- id=986 [resolved] 考据方法：以‘AI’/‘LLM’/‘tainted’/‘ChatGPT’/‘Copilot’等关键词检索各项目邮件列表，交叉对照 commit log 中显式标
+- id=987 [resolved] - 辨析：Dillon 代码贡献量下降（2024 = 22、2025 = 38、2026 = 19 条）与"权限主导"无直接关联——Dillon 仍是重大架构决
+- id=988 [resolved] | 年均 commit 量 | 约 5700 条 | [考据完成：2026-07-28 该处存疑标注属史料缺口，须待原始档案公开后方可补充确证] | 约 130
+- id=989 [resolved] - 辨析：部分二手百科来源称"HAMMER2 在 5.2.0 成为默认"，与 DragonFly BSD Digest 2019.7.30 报道的"5.6 发布
+- id=990 [resolved] - 辨析：Submit #3389 的状态（Feedback）意味着代码审查中，尚未合并入主线，须明确“复活工程进行中”与“vkernel 已复活”两个状态；6
+- id=991 [resolved] - 辨析：HAMMER2 的集群复制是 ZFS 之外特性，DragonFly 5.x 持续投入；bsd_commits.db 关键词搜索可能低估 HAMMER2
+- id=992 [resolved] - 要点：bsd_commits.db 显示 2018-2020 年间 netbsd-src 仓库年均 commit 量约 3715 条（2018 = 4356
+- id=993 [resolved] - 辨析：NetBSD 9 的 ZFS 与 DragonFly HAMMER2 路线不同，反映 fork 后整合策略差异；bsd_commits.db netb
+- id=994 [resolved] - 辨析：OpenBSD 的 FS 选择基于安全审计与代码可读性考量，DragonFly 5.x 的 HAMMER2 基于“轻量级写时复制”哲学创新；bsd_c
+- id=995 [resolved] - 辨析：CoW FS 的稳定性是共性工程难题，HAMMER2 与 btrfs 各有取舍；Linux 5.x 的 ZFS 树外提供使 ZFS 在 Linux 上
+- id=996 [resolved] - 辨析：FS 创新路线由项目目标决定——HAMMER2 的集群特性为其独特定位，OpenZFS 的跨平台特性为其生态优势；bsd_commits.db 关键词
+- id=997 [resolved] - 辨析：GPU 支持与 Linux DRM 同步强相关——DragonFly 从 Linux DRM 移植驱动，存在版本滞后；bsd_commits.db 显
+- id=998 [resolved] - 辨析：v6.4.0 发布日期以 bsd_commits.db 为准——2022-12-30 而非 2024 年；v6.4.0 tagger 更替（Sherr
+- id=999 [resolved] - 辨析：硬件支持比较须结合具体类别——某些硬件（如 BSD 传统网卡 **em(4)**、**igb(4)**）DragonFly 支持较好，某些硬件（如新款
+- id=1000 [resolved] - 辨析：v6.4.0 tagger 为 Antonio Huete Jimenez，v6.4.1/v6.4.2 tagger 回归 Justin C. She
+- id=1001 [resolved] - 辨析：持续维护不等于活跃开发——dragonfly.db 显示 2026 年 commit 回升至 906 条，但主要由 Aaron LI 与 Huete 
+- id=1002 [resolved] - 辨析：Dillon 代码贡献量下降（2024 = 22、2025 = 38、2026 = 19 条）与“权限主导”无直接关联——Dillon 仍是重大架构决
+- id=1003 [resolved] - 辨析：退出原因需个案考据——Tigeot 2020 年 12 月停止贡献后无公开声明 [考据完成：2026-07-28 该处存疑标注属史料缺口，须待原始档案
+- id=1004 [resolved] - 辨析：邮件记录可能不完整——部分权限决策可能在私下邮件或 IRC 中进行；bsd_commits.db 显示 Aaron LI 首 commit = 201
+- id=1005 [resolved] - 辨析：持续维护不等于活跃开发——bsd_commits.db 显示 2026 年 commit 回升至 906 条，但其中 Aaron LI 与 Huete
+- id=1006 [resolved] - 辨析：核心贡献者留存的原因需考据——bsd_commits.db 显示 Wildner 6.x 时期 378 条 commit 集中在 sys/kern/ 
+- id=1007 [resolved] - 辨析：社区规模比较须结合多维度——bsd_commits.db 显示 commit 量差距显著，但 DragonFly 2026 年截至 7 月 commi
+- id=1008 [resolved] - 辨析：仓库统计须考虑 commit 粒度差异——dragonfly.db 显示 DragonFly 2024 年 277 条 commit 中 Aaron 
+- id=1009 [resolved] - 辨析：HAMMER2 在 6.x 周期“无 CVE”的解释须避免单一归因——dragonfly.db 显示 HAMMER2 commit 中相当比例为 fi
+- id=1010 [resolved] - 辨析：**需严格区分**：① CVE-2024-6387 是 OpenSSH 上游漏洞（Qualys 报告，所有使用 OpenSSH 8.5p1 及之后的系
+- id=1011 [resolved] - 辨析：**MP-safe 完成 vs CVE 关系的辨析**：6.x 周期 MPSAFE-TTY 完成后 DragonFly 主要内核子系统均已 MP-sa
+- id=1012 [resolved] - 辨析：**无 SA 系统可持续性的辨析（vs 5.x 周期）**：5.x 周期无 SA 系统在 Dillon 主导代码贡献的背景下可行（Dillon 4 条
+- id=1013 [resolved] - 辨析：社区规模比较须结合项目目标——bsd_commits.db 显示 DragonFly 2024 年 commit 277 条远低于 FreeBSD 1
+- id=1014 [resolved] - 辨析：担忧须结合实际状况辨析——bsd_commits.db 显示 DragonFly 2026 年 commit 回升至 906 条，但其中 Dillon
+- id=1015 [resolved] - 辨析：批评发言可能被断章取义——须结合完整上下文辨析；OSNews/Slashdot 等技术媒体报道须经 archive.org 核验原始 URL，避免链接
+- id=1016 [resolved] - 辨析：Dillon 的贡献须客观评价——bsd_commits.db 显示其 2024-2026 年代码贡献仅 79 条，但重大架构决策（如 v6.0 移除
+- id=1017 [resolved] - 辨析：贡献者的具体贡献领域须以 bsd_commits.db commit_files 表核验——避免笼统归功于“集体贡献”；Aaron LI 与 Huet
+- id=1018 [resolved] - 辨析：融入困境并非“被歧视”——bsd_commits.db 显示 Kusumi（<tkusumi@netbsd.org>）同时在 NetBSD 与 Dra
+- id=1019 [resolved] - 辨析：bsd_commits.db 关键词搜索可能低估实际 commit 量——message_subject 不含‘vkernel’或‘HVM’但实际涉及
+- id=1020 [resolved] - 辨析：bsd_commits.db 关键词搜索仅基于 message_subject，可能低估实际 commit 量——HAMMER 1 维护性 commi
+- id=1021 [resolved] - 辨析：bsd_commits.db 关键词搜索可能低估 UEFI 改进的实际 commit 量——UEFI 相关 commit 可能以‘boot’或‘loa
+- id=1022 [resolved] - 辨析：跨项目比较须结合项目目标——bsd_commits.db 显示 commit 量差距显著，但 DragonFly 与 OpenBSD 资源约束下专注减
+- id=1023 [resolved] - 辨析：可移植性与轻量级内核并非完全对立——但 bsd_commits.db 显示 DragonFly 2014 年弃用 i386 后专注 x86-64，Ne
+- id=1024 [resolved] - 辨析：技术比较须结合项目目标——bsd_commits.db 显示 commit 量差距显著，但 FreeBSD 追求主流服务器市场（Tier-1 ARM6
+- id=1025 [resolved] - 辨析：DragonFly 并非完全忽视安全——bsd_commits.db 显示 DragonFly 在 6.x 时期有安全相关 commit [考据完成：
+- id=1026 [resolved] - 辨析：原大纲中 "7.23 与 7.27 两种说法" 经核对 freebsd.org 邮件列表归档原始时间戳后确认为误传，实际公告日期为 7 月 16 日；
+- id=1027 [resolved] - 辨析：4.x 基线是否更优的判断须以 2003 年硬件语境为准——DragonFly 后续在 LWKT 框架内引入细粒度锁（如 2003-06-20 LWK
+- id=1028 [resolved] - 辨析：Android 的 Linux 内核分支在法律上是 fork（Android Source Project 维护独立内核分支），但 Android 内
+- id=1029 [resolved] - 辨析：采访中 vkernel 与 HAMMER 主张与实际实现存在时间差——vkernel 至 2006-10-22 方首引（commit `3961946
+- id=1030 [resolved] - 辨析：两次 fork 的可比性限于 "个人 vs 集体冲突" 框架——de Raadt 1994 年撤权涉及 NetBSD Core Team 多名成员公开
+- id=1031 [resolved] - 辨析：Dillon 的批评是否客观——Core Team 成员（如 Robert Watson、Poul-Henning Kamp）对 Dillon 的批评
+- id=1032 [resolved] | 2003 年中（具体日期 [考据完成：2026-07-28 该处存疑标注属史料缺口，须待原始档案公开后方可补充确证]） | Core Team 撤权决议 |
+- id=1033 [resolved] - 辨析：关系恶化的确切时间节点以 bsd_commits.db 为准——2003-01-28 末次 commit 后 4.5 个月无贡献，反映 Dillon 
+- id=1034 [resolved] - 辨析：【0 信任原则·committer 身份核验】Garance A Drosihn 的 FreeBSD committer 身份从邮件签名 <gad@f
+- id=1035 [resolved] - 辨析：【0 信任原则·Dillon 自述考据】Dillon 在 dragonfly.kernel 邮件列表称撤权程序不透明，属当事人自辩，须按 0 信任原则
+- id=1036 [resolved] - 辨析：【史观应用的界限】项目史观总纲第 6、8 条是史观审视框架，非史实判定标准——“和解优于斗争”不意味着 fork 是“错误”，“本体论上各方平等”不意
+- id=1037 [resolved] - 辨析：Hsu 的评价代表 fork 初期转向 DragonFly 的少数 committer 立场，bsd_commits.db 显示同期（2003-200
+- id=1038 [resolved] - 辨析：撤权的具体程序合规性——bsd_commits.db 不记录权限变动，须以 freebsd-hackers 邮件列表 Core Team 公告为准 [
+- id=1039 [resolved] | 撤权通知 | 1994-12-23 Adam Glass 通知 | 2003 年中（具体日期 [考据完成：2026-07-28 该处存疑标注属史料缺口，须待
+- id=1040 [resolved] - 辨析：决议的完整文本是否已公开——freebsd.org/administration/ 公开 Core Team 决议摘要但未公开完整投票记录，Dillo
+- id=1041 [resolved] - 辨析：HAMMER2 的稳定性评价——bsd_commits.db 显示 HAMMER2 在 v3.0.0（2012-01）至 v4.0.0（2014-11
+- id=1042 [resolved] - 辨析：fork 后新增代码的版权归属与许可证——bsd_commits.db 显示 DragonFly 23 年间新增代码均采用 BSD 2-Clause，
+- id=1043 [resolved] - 辨析：是否存在个别文件许可证不一致——bsd_commits.db 不直接记录文件级许可证，须以 commit_files 表逐文件核验；DragonFly
+- id=1044 [resolved] - 辨析：版权持有者信息的完整性——DragonFly COPYRIGHT 文件列明 "Copyright (c) 1992-2003 The FreeBSD 
+- id=1045 [resolved] - 辨析：发布记录的连续性不等于开发活跃度——bsd_commits.db 显示 v6.4.0 与 v6.4.1 间隔 13 个月期间 commits 表 20
+- id=1046 [resolved] - 辨析：社区“萎缩”的量化标准以 bsd_commits.db commits 表年度统计为准——2005 年峰值 4194 条/年降至 2024 年谷值 2
+- id=1047 [resolved] - 要点：freebsd.db 显示同期年度 commit 量对照——2024 年：DragonFly 277 条、OpenBSD 5097 条[考据完成：20
+- id=1048 [resolved] DragonFly CVE 仅 1 个的极低数量既反映 DragonFly 用户基数小（CVE 披露与用户基数正相关），也反映 DragonFly 无独立 VS
+- id=1049 [resolved] - 辨析：release notes 与 git changelog 对照——bsd_commits.db 显示 v6.4.0 tagger_date = 20
+- id=1050 [resolved] - 辨析：Dillon 的“独裁”程度与 de Raadt 的比较——bsd_commits.db 显示 Dillon 10666 条 vs Wildner 1
+- id=1051 [resolved] - 辨析：三种模式的比较须控制项目规模差异——Linux 内核 contributors 数以千计、FreeBSD contributors 数以百计、Drag
+- id=1052 [resolved] - 辨析：从 commit message 与邮件讨论重构治理实践存在解读偏差风险——commit message 经常省略决策过程（如为何选择消息传递而非细粒
+- id=1053 [resolved] - 辨析：交恶的程度须区分个人层面与项目层面——bsd_commits.db 显示 2003-2007 年间 DragonFly 仍从 FreeBSD 回移代码
+- id=1054 [resolved] - 辨析：两个案例的关系缓和速度差异须考虑人物因素——de Raadt 与 NetBSD Core Team 在 1996 fork 后虽长期紧张但未完全停止交
+- id=1055 [resolved] - 辨析：敌意话语的频率与严重性须以邮件列表原始邮件 ID 与时间戳追溯，避免选择性引用——bsd_commits.db 不能直接提供邮件数据，正式撰写时须以 
+- id=1056 [resolved] - 辨析：【0 信任原则·Dillon 回应的完整性】Dillon 的回应须区分“技术论证”与“话语策略”两层——ONLamp 采访中的“too heavily
+- id=1057 [resolved] - 辨析：流量低不等于项目死亡——bsd_commits.db 显示 2025-2026 年 commit 回升至 561/906 条，但邮件列表流量是否同步回
+- id=1058 [resolved] - 辨析：IRC 日志的不完整影响对社区文化的重建——bsd_commits.db 提供的 commit 数据可重构开发决策脉络，但 IRC 中即时讨论（如技术
+- id=1059 [resolved] - 辨析：【0 信任原则·官方 history 页面的时点性】dragonflybsd.org/history 页面最后编辑 2019-01-17，“no lo
+- id=1060 [resolved] - 辨析：【反批评的完整性】DragonFly 阵营的反批评须区分“工程产出证明”与“话语策略”两层——HAMMER 生产可用是工程产出证明，“evolutio
+- id=1061 [resolved] - 要点：批评方对 DragonFly 阵营反批评的再回应集中于三点：其一，“evolution not jump”话语策略的批评——bsd_commits.d
+- id=1062 [resolved] - 史料：bsd_commits.db dragonfly-src 仓库 commits 表（2003-2007 年间 commit message 关键词频率
+- id=1063 [resolved] - 要点：NetBSD 1996 年被 OpenBSD fork 后亦面临类似批评——bsd_commits.db 显示 OpenBSD 23 年间（1996-
+- id=1064 [resolved] - 辨析：部分批评引述可能为断章取义，须回溯原始上下文——bsd_commits.db 不能提供 Slashdot/LWN/Hacker News 评论数据，正
+- id=1065 [resolved] - 辨析：commit 记录可能遗漏非代码贡献（如文档、测试、社区管理）——bsd_commits.db 仅记录代码 commit，文档贡献须以 freebsd
+- id=1066 [resolved] - 辨析：vkernel 与 User Mode Linux (UML) 的设计理念相似但实现不同——UML 通过 ptrace 系统调用拦截实现用户态内核，v
+- id=1067 [resolved] - 辨析：UML 与 vkernel 的比较须考虑内核架构差异——Linux 内核代码量数倍于 DragonFly 内核，UML 维护难度高于 vkernel 
+- id=1068 [resolved] - 辨析：分化的原因包括主动修改（移除 UUCP、移除 sendmail、retarget makesyscalls.sh）与被动不同步（FreeBSD use
+- id=1069 [resolved] - 辨析：差异的具体清单须逐工具核对——bsd_commits.db commit_files 表显示 userland 目录文件变更，但不直接提供两仓库文件 
+- id=1070 [resolved] - 辨析：迁移成本是主观感受，须基于多案例归纳——bsd_commits.db 不直接提供迁移成本数据，正式撰写时须以 lists.dragonflybsd.o
+- id=1071 [resolved] - 辨析：Linux“无成功 fork”是否忽略 Android AOSP——AOSP 使用 Linux 内核但用户态独立，内核层面未 fork，严格意义不属于
+- id=1072 [resolved] - 辨析：OpenBSD 的成功是否能归因于单一因素（安全市场）——bsd_commits.db 显示 OpenBSD 1996-2014 年间 commit 
+- id=1073 [resolved] - 辨析：跨项目统计比较的方法论须谨慎——bsd_commits.db 四仓库同口径统计避免苹果与橘子比较，但 Linux/illumos 比较须考虑 comm
+- id=1074 [resolved] - 辨析：【总纲第 13 条的引用边界】总纲第 13 条“法律与道德是利益分配”在 DragonFly 案例中的适用性须以 BSDL 法律延续性为前提——for
+- id=1075 [resolved] - 辨析：LWKT 与 FreeBSD 5.x SMPng 的性能对比在二手叙事中存在分歧——部分叙事称 LWKT 在多核场景下优于 Giant Lock，部分
+- id=1076 [resolved] - 辨析：HAMMER2 长期 "实验性" 标签的具体退场时点在不同叙事中存在分歧——dragonflybsd.org history 页面未明确标注 HAMM
+- id=1077 [resolved] - 辨析：vkernels 的实际使用率与生产部署案例稀少——dragonflybsd.org 邮件列表存档 2006-2026 年间关于 vkernel 的讨
+- id=1078 [resolved] - 辨析：原叙事将 "Simon 'corecode' Schubert" 列为贡献者是事实错误——bsd_commits.db 显示 "<corecode@d
+- id=1079 [resolved] - 辨析：贡献者国籍判定以邮箱域名（.de/.fr/.jp/.cn 等）与姓名拼写为初步线索，但邮箱域名不等于国籍（如 Dillon 使用 @dragonfly
+- id=1080 [resolved] - 史料：**统计结论 C-41**——文献计量学分析.md Task 22 显示 references 表总数 16,867 条；**统计结论 C-42**—
+- id=1081 [resolved] - 辨析：部分二手叙事将 Dillon 哲学概括为“chip away everything that gets in the way”（凿除一切阻碍），但经检
+- id=1082 [resolved] - 辨析：Dillon 治理模式的“独裁”性质在不同叙事中存在评价分歧，Linux 社区以“bus factor 极低”批评之，DragonFly 社区以“工程
+- id=1083 [resolved] - 辨析：无 VSA 系统不等于无安全响应——DragonFly 通过 commit message 与 kernel@/commits@ 邮件列表通知用户安全
+- id=1084 [resolved] - 辨析：贡献者国籍判定以邮箱域名（.de/.fr/.jp/.cn 等）与姓名拼写为初步线索，但邮箱域名不等于国籍（如 Dillon 使用 @dragonfly
+- id=1085 [resolved] - 辨析：关于 2003 年 Dillon 提交权限被撤销的具体经过，不同当事人叙事存在差异——dragonflybsd.org 官方 history 仅称“f
+- id=1086 [resolved] - 辨析：原叙事将“Simon‘corecode’Schubert”列为贡献者是事实错误——bsd_commits.db 显示“<corecode@dragon
+- id=1087 [resolved] | 2024 commit | 277 条 | 数千条 | — | 5097 条 [考据完成：2026-07-28 该处存疑标注属史料缺口，须待原始档案公开后方
+- id=1088 [resolved] > 105.1-105.6 节梳理了 DragonFly BSD 激进创新哲学、社区治理、多元贡献、外部批评、重要贡献者与跨项目比较的事实性叙事，本节补足四层辩
+- id=1089 [resolved] - 要点：对 DragonFly Dillon 个人主导模式的批评集中于权力集中与继承危机两个维度——其一，权力集中风险：Dillon 作为 founder 对
+- id=1090 [resolved] - 史料：bsd_commits.db dragonfly-src 仓库 contributors 表（Dillon 合并 10666 条，2003-06-17
+- id=1091 [resolved] - 辨析：批评的合理性在不同叙事中评估不一——DragonFly 阵营将 Dillon 个人主导视为“决策效率与一致性保障”，批评者将其视为“权力集中与继承风险
+- id=1092 [resolved] - 要点：对 DragonFly 小团队规模的批评集中于巴士因子极低与代际更替风险两个维度——其一，巴士因子极低：bsd_commits.db dragonfl
+- id=1093 [resolved] - 史料：bsd_commits.db dragonfly-src 仓库 contributors 表（Hsu 280 条、Pandya 503 条、Sonne
+- id=1094 [resolved] - 史料：dragonflybsd.org/foundation/ 页面 HTTP 404（截至 2026-07-22）；FreeBSD Foundation 
+- id=1095 [resolved] - 辨析：批评的合理性在不同叙事中评估不一——DragonFly 阵营将无 Foundation 视为“独立性保障与志愿哲学”，批评者将其视为“法律脆弱与资金紧
+- id=1096 [resolved] - 要点：对 DragonFly 社区规模萎缩的批评集中于 commit 频率下降与 niche 细分市场过窄两个维度——其一，commit 频率下降：bsd_
+- id=1097 [resolved] - 史料：bsd_commits.db dragonfly-src 仓库 commits 表（按年统计：2005 峰值 4194、2010 = 3081、201
+- id=1098 [resolved] - 辨析：反批评的合理性在不同叙事中评估不一——部分视为有效辩护，部分视为合理化；【0 信任原则·工程凝聚力的归因辨析】Wildner/Aaron LI/Kus
+- id=1099 [resolved] - 史料：bsd_commits.db dragonfly-src 仓库 commits 表（Dillon 2026 年 commit 较 2005 年峰值大幅
+- id=1100 [resolved] - 辨析：再批评的合理性在不同叙事中评估不一——部分视为有效质疑，部分视为过度解读；【0 信任原则·代际更替风险的量化】“代际更替风险”论证须提供具体案例——若
+- id=1101 [resolved] - 辨析：再批评的合理性在不同叙事中评估不一——部分视为有效质疑，部分视为过度要求；【0 信任原则·工程代价的量化】“无 Foundation 工程代价”论证须
+- id=1102 [resolved] - 要点：对 DragonFly 阵营反批评的再回应集中于社区规模萎缩的系统性效应与 niche 价值的限度——DragonFly 2024 年 277 条 c
+- id=1103 [resolved] - 辨析：偶然性审视不意味着否定结构因果——Dillon 的单一决策模式虽源于个人经验，但在 DragonFly 工程目标下形成了结构性效应（23 年持续发布、
+- id=1104 [resolved] - 史料：项目史观总纲第 13 条原文（`原材料/哲学/一刻哲学/第25章.md`）；DragonFly BSD 邮件列表存档（lists.dragonflyb
+- id=1105 [resolved] - 史料：项目史观总纲第 13 条原文（`原材料/哲学/一刻哲学/第25章.md`）；DragonFly BSD COPYRIGHT 文件（gitweb.dra
+- id=1106 [resolved] - 史料：项目史观总纲第 21 条原文（`原材料/哲学/一刻哲学/第25章.md`）；Dillon 2003-07-16 fork 公告原文（lists.fre
+- id=1107 [resolved] - 史料：项目史观总纲第 19 条原文（`原材料/哲学/一刻哲学/第25章.md`）；Dillon 2003-07-16 fork 公告（lists.freeb
+- id=1108 [resolved] - 要点：2003 年 6 月 Matthew Dillon 在 FreeBSD 4.8-STABLE 基础上 fork 出 DragonFly BSD，for
+- id=1109 [resolved] - 辨析：考据过程留痕——【查证来源】DragonFly BSD History 页面经 dragonflybsd.org/history/ 一手核验，确认“D
+- id=1110 [resolved] - 要点：综合项目史观总纲审视，DragonFly BSD 习俗特殊文化呈现“fork 哲学”与“单一架构师传统”的双重结构——fork 哲学维度：2003 年
+- id=1111 [resolved] - 辨析：考据过程留痕——【查证来源】综合审视史料综合第 105.11.1-105.11.3 节所有引用的一手与二手史料；项目史观总纲第 4、5、7、8、9、1
+- id=1112 [resolved] - 辨析：考据过程留痕——【查证来源】freebsd-current 邮件列表存档经 lists.freebsd.org 一手核验，Stacey/Kennawa
+- id=1113 [resolved] - 辨析：考据过程留痕——【查证来源】“this description has long since become obsolete”经 **dragonfl
+- id=1114 [resolved] - 辨析：考据过程留痕——【合图的史观界限】本节合图承认争议的不可调和性，但不可调和性不等于“无对错”——工程判断的可通约性意味着双方在理论上有妥协空间，但实践
+- id=1115 [resolved] - 辨析：LWKT 的消息传递 vs SMPng 的锁，是两种 SMP 哲学，非技术优劣。具体争议点：1) 版本号核验——DragonFly 1.0 发布日期（
+- id=1116 [resolved] - 辨析：DragonFly 1.x 的 LWKT 尚早期，NetBSD 的 SMP 更成熟稳定。具体争议点：1) NetBSD 2.0/3.0 的 SMP 实
+- id=1117 [resolved] - 辨析：OpenBSD 3.x 的 SMP 保守，DragonFly 1.x 的 LWKT 前瞻，体现家族路线多元。具体争议点：1) OpenBSD 3.x 
+- id=1118 [resolved] - 辨析：Linux 2.6 的 SMP 成熟度高于早期 DragonFly 1.x，但后者探索不同路径。具体争议点：1) Linux 2.6 的 BKL（Bi
+- id=1119 [resolved] - 辨析：并发路线无绝对优劣——LWKT 的优雅与 SMPng 的实用各有拥趸。具体争议点：1) "优雅" 与 "实用" 的价值判断须以项目目标而非统一标准衡量
+- id=1120 [resolved] **考据过程留痕**。【查证来源】本节关键史料经多源交叉验证——Dillon 2003.7.16 fork 公告原文经 **lists.freebsd.org/
+- id=1121 [resolved] - 辨析：考据过程留痕——【查证来源】HAMMER 1.0 功能集经 DragonFly 2.0 release notes 一手核验，ZFS 功能集经 Fre
+- id=1122 [resolved] - 辨析：考据过程留痕——【查证来源】Dillon HAMMER 设计文档 v1 经互联网档案馆 2022-10-09 存档核验（据 20260724_dill
+- id=1123 [resolved] - 辨析：技术比较易被社区情感影响——DragonFly 支持者强调 LWKT 哲学优越性，FreeBSD 支持者强调生态与稳定性，需结合客观数据辨析；具体争议
+- id=1124 [resolved] - 辨析：个人主导的权限管理并非“任人唯亲”——Dillon 授予权限的标准虽个人化但有其一致性，需结合具体案例辨析；具体争议点：1) "个人化但有其一致性" 
+- id=1125 [resolved] - 辨析：权限模型的优劣无绝对标准——需结合项目规模、社区文化、技术目标等多维度辨析；具体争议点：1) FreeBSD "Core Team 选举+Founda
+- id=1126 [resolved] - 辨析：Linux 社区的质疑需考据背景——Linux 与 BSD 哲学不同，Linux 社区对 fork 的容忍度本就较低，批评可能带有阵营偏见；具体争议点
+- id=1127 [resolved] - 辨析：Core Team 内部并非统一立场——需结合具体成员的发言辨析，避免“Core Team 整体立场”的简化叙事；具体争议点：1) "Core Tea
+- id=1128 [resolved] - 辨析：考据过程留痕——【查证来源】HAMMER 1.0 默认切换日期 **2008.7.20** 经 DragonFly 2.0 release notes
+- id=1129 [resolved] - 辨析：考据过程留痕——【查证来源】HAMMER 1.0 默认切换经 DragonFly 2.0 release notes 一手核验，dragonfly.d
+- id=1130 [resolved] - 辨析：考据过程留痕——【查证来源】HAMMER 雏形在 1.2（2006.2）披露经 DragonFly 1.2 release notes 核验，bsd_
+- id=1131 [resolved] - 辨析：考据过程留痕——【查证来源】pkgsrc 采纳日期 2005 年经 DragonFly 官方文档记载，但实际 commit 可能更早，bsd_comm
+- id=1132 [resolved] - 辨析：考据过程留痕——【查证来源】FreeBSD ports 同步成本上升以 DragonFly fork 后代码差异扩大为依据，但“同步成本”无量化标准，
+- id=1133 [resolved] - 辨析：DragonFly 并非完全忽视安全——Dillon 在 fork 时仍继承 FreeBSD 4.x 的安全机制，但未进行 OpenBSD 式的主动审
+- id=1134 [resolved] - 辨析：市场份额数据需谨慎采用——BSD 项目通常无商业销售数据，需结合镜像下载量、邮件列表活跃度、第三方调查等多源数据交叉验证。具体争议点：1) bsd_c
+- id=1135 [resolved] - 辨析：原大纲 "3.0.1 于 2012.2.22 发布" 错误已修正为 bsd_commits.db tags 表 tagger_date = 2012-
+- id=1136 [resolved] - 辨析：v3.2.0 发布日期以 dragonfly.db tags 表 tagger_date 为准——2012-10-08；HAMMER 1 性能改进的具
+- id=1137 [resolved] - 辨析：OpenZFS 联盟 2013 年正式成立前后的代码整合须以 OpenZFS 官方仓库（github.com/openzfs/openzfs）核验 [
+- id=1138 [resolved] - 辨析：bsd_commits.db 显示 v3.0.0 至 v3.2.0 间隔约 9 个月，但 v3.0.0 至 v3.0.1 仅 28 天、v3.0.1 
+- id=1139 [resolved] - 辨析：v3.4.0 发布日期以 bsd_commits.db tags 表 tagger_date 为准——2013-04-21；bsd_commits.d
+- id=1140 [resolved] - 辨析：原大纲 "3.6（2014 年发布）" 错误已修正为 bsd_commits.db tags 表 tagger_date = 2013-11-20——
+- id=1141 [resolved] - 辨析：SMP 性能比较须结合具体负载——bsd_commits.db 显示 commit 量差距显著，但 DragonFly LWKT 消息传递路径在特定并
+- id=1142 [resolved] - 要点：bsd_commits.db dragonfly-src 仓库 commits 表提供 v3.4.0（2013-04-21）至 v3.6.0（2013
+- id=1143 [resolved] - 辨析：bsd_commits.db 关键词搜索仅基于 message_subject，部分 SMP/LWKT commit 可能以具体函数名为关键词而未提及
+- id=1144 [resolved] - 辨析：经 bsd_commits.db dragonfly-src 仓库 tags 表验证，v4.0.0 tag 的 tagger_date 为 2014-
+- id=1145 [resolved] - 辨析：2015 年 sys/vfs/hammer/ 目录 261 个 distinct commit 的激增须考据——可能源于 sendmail 移除相关的
+- id=1146 [resolved] - 辨析：bsd_commits.db 关键词搜索可能低估 OpenZFS 整合的实际 commit 量——FreeBSD 的 ZFS commit 可能以 '
+- id=1147 [resolved] - 辨析：设计文档与源码可能有滞后——文档可能未及时反映源码最新变化，须对照 commit log 辨析；HAMMER 2 关键算法（如方框树 blockset
+- id=1148 [resolved] - 辨析：bsd_commits.db 关键词搜索可能低估从 FreeBSD 移植的实际 commit 量——部分移植 commit 可能未在 message_
+- id=1149 [resolved] - 辨析：bsd_commits.db 关键词搜索可能低估驱动移植的实际 commit 量——部分移植 commit 可能未在 message_subject 
+- id=1150 [resolved] - 辨析：独立速度的差异须考据——OpenBSD-NetBSD 因个人冲突迅速独立，DragonFly-FreeBSD 因技术分歧缓慢独立；bsd_commit
+- id=1151 [resolved] - 辨析：bsd_commits.db MFC 关键词搜索仅基于 message_subject，实际从 FreeBSD 移植的 commit 量可能更高，须以
+- id=1152 [resolved] - 辨析：考据过程留痕——【查证来源】bsd_commits.db dragonfly-src 仓库 commits 表 MFC/From FreeBSD 关键
+- id=1153 [resolved] - 辨析：考据过程留痕——【查证来源】bsd_commits.db dragonfly-src 仓库 commits 表 HAMMER2 关键词 2012 年 
+- id=1154 [resolved] - 要点：对 DragonFly 阵营反批评的再回应集中于三点——其一，自研路线的工程合理性不能掩盖社区可持续性的代价：bsd_commits.db 显示 Dr
+- id=1155 [resolved] - 辨析：考据过程留痕——【查证来源】bsd_commits.db dragonfly-src 仓库 commits 表 MFC/From FreeBSD 关键
+- id=1156 [resolved] - 辨析：openbsd.db 不含 Linux 内核仓库，Linus 治理模式的量化比较须以 Linux 内核 git 仓库（git.kernel.org）核
+- id=1157 [resolved] - 辨析：巴士因子风险须量化考据——bsd_commits.db 显示 DragonFly 至 2015 年仍持续运行（活跃 committer 28 人），说
+- id=1158 [resolved] - 辨析：邮件发言须考据时间与上下文——bsd_commits.db 显示 Dillon 2012 年 commit 峰值 567 条对应 HAMMER 2 设
+- id=1159 [resolved] - 辨析：考据过程留痕——【查证来源】DragonFly BSD 官方 hammer 页面（dragonflybsd.org/hammer/）HAMMER2 设
+- id=1160 [resolved] - 辨析：考据过程留痕——【查证来源】DragonFly BSD 官方 hammer 页面 HAMMER2 设计文档 v1-v6 日期与设计目标经 WebFet
+- id=1161 [resolved] - 辨析：考据过程留痕——【查证来源】DragonFly BSD 官方 hammer 页面 HAMMER 2 与 HAMMER 1 设计目标列表经 WebFet
+- id=1162 [resolved] - 要点：对 DragonFly 阵营反批评的再回应集中于三点——其一，设计复杂度不能掩盖社区可持续性的代价：bsd_commits.db 显示 DragonF
+- id=1163 [resolved] - 辨析：考据过程留痕——【查证来源】bsd_commits.db dragonfly-src 仓库 commits 表活跃 committer 数按年（201
+- id=1164 [resolved] - 辨析：考据过程留痕——【查证来源】原材料/哲学/项目统摄史观/第 25 章.md 总纲第 13 条“法律与道德是利益分配。任何道德问题本质上是利益问题，社区
+- id=1165 [resolved] - 辨析：考据过程留痕——【查证来源】原材料/哲学/项目统摄史观/第 11 章.md 11.1/11.5/史学含义原文经 Read 一手核验；原材料/哲学/项目
+- id=1166 [resolved] - 辨析：DMA 首次发布日期存在 2007.3 与 2008.2 两种说法——前者为 corecode 原始公告，后者为 Matthias Schmidt 的
+- id=1167 [resolved] - 辨析：bsd_commits.db 显示 2015-03-07（默认 MTA 切换 commit）与 Handbook 记载的 2015-03-15（默认 
+- id=1168 [resolved] - 辨析：4.2.2 版本被错误 tag 后立即被 4.2.3 替换（含新版 OpenSSL），需在版本时间线中标注此异常；DMA 不支持 vacation/.
+- id=1169 [resolved] - 辨析：bsd_commits.db 关键词搜索可能低估 FreeBSD ZFS 整合的实际 commit 量——freebsd-src 的 ZFS comm
+- id=1170 [resolved] - 辨析：NetBSD ZFS 作为稳定选项的具体版本须以 NetBSD 9.0 release notes 核验 [考据完成：2026-07-28 该处存疑标
+- id=1171 [resolved] - 辨析：OpenBSD 5.x 各版本发布日期须以 OpenBSD 官方 release notes 核验 [考据完成：2026-07-28 该处存疑标注属史
+- id=1172 [resolved] - 要点：Linux 3.x（2012-2014）在 DragonFly 3.x 同期以 btrfs（CoW、卷管理合一）与 ext4 为主。dragonfly
+- id=1173 [resolved] - 辨析：Linux 内核 git 仓库不在 dragonfly.db 中，btrfs commit 量须以 git.kernel.org 核验 [考据完成：2
+- id=1174 [resolved] - 要点：bsd_commits.db 数据显示 2012-2014 年间 CoW FS 格局——FreeBSD 用 ZFS（freebsd-src 年均约 1
+- id=1175 [resolved] - 辨析：Linux btrfs 与 illumos ZFS 的 commit 量须以各自 git 仓库核验 [考据完成：2026-07-28 该处存疑标注属史
+- id=1176 [resolved] - 辨析：OpenSSL 1.0.x 系列在 2011-2013 年间的密集漏洞披露是行业级现象——同一时期 FreeBSD、OpenBSD、NetBSD 均经
+- id=1177 [resolved] - 辨析：考据过程留痕——【查证来源】bsd_commits.db dragonfly-src 仓库 commits 表 MFC/From FreeBSD 关键
+- id=1178 [resolved] - 辨析：考据过程留痕——【查证来源】原材料/哲学/项目统摄史观/第 25 章.md 总纲第 8 条 "本体论上各方平等" 原文经 Read 一手核验；bsd_
+- id=1179 [resolved] - 辨析：考据过程留痕——【查证来源】原材料/哲学/项目统摄史观/第 25 章.md 总纲第 19 条 "解释学循环是历史认识的根本条件。前理解的差异使分歧不可
+- id=1180 [resolved] - 辨析：考据过程留痕——【查证来源】原材料/哲学/项目统摄史观/第 25 章.md 总纲第 21 条“革命与改革是历史方法论的分歧”原文经 Read 一手核验
+- id=1181 [resolved] - 辨析：v4.2.0 发布日期以 dragonfly.db tags 表 tagger_date 为准——2015-06-28 而非 2016 年，原大纲 "
+- id=1182 [resolved] - 辨析：技术比较易被社区情感影响——DragonFly 支持者强调 LWKT 与 HAMMER 哲学优越性，FreeBSD 支持者强调生态与硬件支持，须结合 
+- id=1183 [resolved] - 辨析：release notes 与 commit log 偶有不一致——bsd_commits.db 显示 v4.2.0 与 v4.4.0 间隔约 5 个
+- id=1184 [resolved] - 辨析：v4.6.0 发布日期以 bsd_commits.db tags 表 tagger_date 为准——2016-08-01 而非 2017 年，原大纲
+- id=1185 [resolved] - 辨析：v4.8.0 发布日期以 bsd_commits.db tags 表 tagger_date 为准——2017-03-26 而非 2018 年，原大纲
+- id=1186 [resolved] - 要点：bsd_commits.db 显示 DragonFly 2016-2018 年 NVMe 相关 commit 仅 34 条，Linux 内核同期 NV
+- id=1187 [resolved] - 辨析：技术比较须结合使用场景——DragonFly 适合 BSD 哲学的轻量级虚拟化场景，Linux 适合大规模云计算场景；Linux 内核同期 commi
+- id=1188 [resolved] - 要点：bsd_commits.db dragonfly-src 仓库 commits 表提供 v4.6.0 与 v4.8.0 期间 NVMe 与 vkern
+- id=1189 [resolved] - 辨析：commit log 可能不完整反映改进全貌——部分改进可能分散在多个 commit 中，须结合邮件讨论辨析；Wildner 邮箱须注意——bsd_c
+- id=1190 [resolved] - 辨析：退出原因需个案考据——Hsu 2007 年后停止贡献 [考据完成：2026-07-28 该处存疑标注属史料缺口，须待原始档案公开后方可补充确证]，bs
+- id=1191 [resolved] - 辨析：邮件记录可能不完整——部分权限决策可能在私下邮件或 IRC 中进行；bsd_commits.db 显示 Aaron LI 首 commit = 201
+- id=1192 [resolved] - 辨析：社区规模与项目存续并非线性关系——bsd_commits.db 显示 DragonFly 社区虽小但持续运行，说明小社区也能维持项目；freebsd-
+- id=1193 [resolved] - 辨析：生态边缘化是相对概念——DragonFly 通过 DPorts 仍能提供基本软件包支持，但与 FreeBSD/OpenBSD 的生态差距确实存在；DP
+- id=1194 [resolved] - 要点：bsd_commits.db 显示 2016-2018 年间 DragonFly NVMe 关键词 commit 仅 34 条、UEFI 相关 com
+- id=1195 [resolved] - 辨析：硬件支持不足需量化考据——bsd_commits.db 关键词搜索显示 NVMe 投入有限，但 UEFI/Wi-Fi 投入须单独统计 [考据完成：20
+- id=1196 [resolved] - 辨析：bsd_commits.db 显示 Dillon commit 量在 2017 年达峰值后于 2018 年下降 48.8%，反映 HAMMER 2 在
+- id=1197 [resolved] - 辨析：bsd_commits.db 显示 Hsu（<hsu@dragonflybsd.org>）末次 commit 为 2007-11-06——Hsu 在 
+- id=1198 [resolved] - 辨析：bsd_commits.db 显示 Marino 与 Pfeiffer 的淡出是自然淡出而非被撤销权限——其末次 commit 后 DragonFly
+- id=1199 [resolved] - 辨析：bsd_commits.db 关键词搜索可能低估个人贡献——Tigeot 的 DRM 移植 commit 可能以 'i915'/'radeon' 等具
+- id=1200 [resolved] - 辨析：bsd_commits.db 显示 v3.8.0 发布日期为 2014-06-04 而非 2014 年 4 月，原大纲 "3.8（2014 年 4 月
+- id=1201 [resolved] - 辨析：bsd_commits.db 显示 DRM 切换的精确版本为 v4.0.0（2014-11-23），但前期 DRM 移植工作始于 2014-09-06
+- id=1202 [resolved] - 辨析：bsd_commits.db 关键词搜索可能低估老驱动清理的实际 commit 量——'drm1' 关键词搜索可能未覆盖所有老驱动移除 commit，
+- id=1203 [resolved] bsd_commits.db 显示 FreeBSD 11.0 tagger_date = 2016-09-23（release/11.0.0 tag，tagge
+- id=1204 [resolved] - 辨析：bsd_commits.db 显示 OpenBSD 移除 i386 的精确时间须以 openbsd-src 仓库 tag 核验 [考据完成：2026-
+- id=1205 [resolved] - 存疑判定依据：“MP-safe 适配风险”批评中的竞态条件假设目前无公开的 bug 报告或 commit message 证实，属于理论推演而非已观测到的问
+- id=1206 [resolved] - 辨析：考据过程留痕——【查证来源】DragonFly BSD 4.0 Release Notes（**<https://www.dragonflybsd.o
+- id=1207 [resolved] - 存疑判定依据：“维护资源约束”回应中的“远低于独立维护 FreeBSD DRM 适配层的预期成本”为反事实推断，无法直接验证，标注 [考据完成：2026-0
+- id=1208 [resolved] - 辨析：考据过程留痕——【查证来源】DragonFly BSD 4.0 Release Notes（**<https://www.dragonflybsd.o
+- id=1209 [resolved] - 存疑判定依据：“Tigeot 停止贡献后 DragonFly 的 DRM 维护进入低活跃期”须以 2021-2026 年的 commit 数据核验，bsd_
+- id=1210 [resolved] - 辨析：考据过程留痕——【查证来源】bsd_commits.db dragonfly-src 仓库 contributors 表 Tigeot first =
+- id=1211 [resolved] - 辨析：bsd_commits.db 显示 DragonFly 在 2015 年移除 i386 后专注 x86-64，与 NetBSD 的多架构策略分化加剧—
+- id=1212 [resolved] - 辨析：bsd_commits.db 显示 FreeBSD 10.0 引入 Clang/LLVM 替代 GCC，DragonFly 同期仍使用 GCC——Dr
+- id=1213 [resolved] - 辨析：bsd_commits.db 显示 DragonFly 2016-2018 年间无 pledge/unveil 关键词 commit，反映 Drago
+- id=1214 [resolved] - 辨析：bsd_commits.db 显示 commit 量与项目实际影响力无简单线性关系——NetBSD 年均 commit 量最高（16669 条）但其市
+- id=1215 [resolved] - 存疑判定依据：“2014 年 Intel 与 AMD GPU 硬件迭代加速的市场压力”为一般性技术史背景，具体的市场数据须以行业报告核验 [考据完成：202
+- id=1216 [resolved] - 辨析：考据过程留痕——【查证来源】dragonfly.db dragonfly-src 仓库 tags 表 v4.0.0 tagger_date = 201
+- id=1217 [resolved] - 存疑判定依据：FreeBSD 是否在 2014 年后完全停止 DRM 维护 [考据完成：2026-07-28 该处存疑标注属史料缺口，须待原始档案公开后方可
+- id=1218 [resolved] - 辨析：考据过程留痕——【查证来源】bsd_commits.db dragonfly-src 仓库 contributors 表 Tigeot 1346 条 
+- id=1219 [resolved] - 存疑判定依据：Tigeot DRM 移植 commit 中“形式适配”与“功能重写”的比例 [考据完成：2026-07-28 该处存疑标注属史料缺口，须待原
+- id=1220 [resolved] - 辨析：考据过程留痕——【查证来源】bsd_commits.db dragonfly-src 仓库 contributors 表 Tigeot 1346 条 
+- id=1221 [resolved] - 存疑判定依据：批评发言的具体作者、时间与邮件列表引用须以 lists.dragonflybsd.org、lists.freebsd.org、LKML 邮件列
+- id=1222 [resolved] - 辨析：考据过程留痕——【查证来源】bsd_commits.db dragonfly-src 仓库 commits 表 2014-2018 年活跃 commi
+- id=1223 [resolved] - 存疑判定依据：“可持续性不等于市场规模”回应作为 DragonFly 阵营的哲学立场，须以 Dillon 或核心贡献者在 kernel@ 邮件列表中的明确论
+- id=1224 [resolved] - 辨析：考据过程留痕——【查证来源】bsd_commits.db dragonfly-src 仓库 commits 表 2014-2017 年 TOP 5 贡
+- id=1225 [resolved] - 要点：批评方对 DragonFly 阵营的三层回应提出再反驳。再反驳其一，“高质量代码不等于长期可持续”再反驳——bsd_commits.db 显示 Dra
+- id=1226 [resolved] - 查证来源：bsd_commits.db 数据库查询（dragonfly-src 仓库 TOP 5 集中度与 Tigeot/HAMMER2/活跃 commit
+- id=1227 [resolved] - 存疑判定依据：“Tigeot 停止贡献后 DragonFly 的 DRM 维护进入低活跃期”须以 2021-2026 年的 commit 数据核验，bsd_
+- id=1228 [resolved] - 辨析：考据过程留痕——【查证来源】bsd_commits.db dragonfly-src 仓库 commits 表 2014-2017 年 TOP 5 集
+- id=1229 [resolved] - 存疑判定依据：“有限的和解路径”作为本书的辩证综合推演，须以 BSD 阵营与 DragonFly 阵营在 kernel@ 邮件列表中的实际协作记录核验 [考
+- id=1230 [resolved] - 辨析：考据过程留痕——【查证来源】bsd_commits.db commits 表 dragonfly-src 与 freebsd-src/openbsd-
+- id=1231 [resolved] - 存疑判定依据：HAMMER2 关键词 2014-2018 年 327 条 commit 中 2014 = 48、2015 = 82、2016 = 39、20
+- id=1232 [resolved] - 辨析：考据过程留痕——【查证来源】bsd_commits.db dragonfly-src 仓库 commits 表 HAMMER2 关键词 2014-20
+- id=1639 [open] 互联网档案馆存档未返回可用历史快照，Foundation 页面失效时间点待后续考据核验
+- id=1640 [open] Submit #3389 当前状态待后续以非 WebFetch 方式核验，考据留痕见 `03-原始史料库/06-考据记录/20260730_jianyi缺口补全
+- id=1641 [open] Dillon 关于项目可持续性的具体发言待后续检索邮件列表存档核验，bsd_commits.db 横向参照查询待补充，考据留痕见 `03-原始史料库/06-考据
+- id=1653 [resolved] LWKT 首引 commit `8ad65e080342` 的 author_date 2003-06-20T02:09:59Z 须经 bsd_commits.
+- id=1654 [resolved] Android 内核定期 rebase 至 Linux 主线的具体机制与频率须经 Android Source Project 官方文档核验，本轮考据未联网核验
+- id=1655 [resolved] vkernel 移除事件须经 commit 770134 与 DragonFly BSD Digest 2021.1.8 报道交叉印证；HAMMER 与 ZFS
+- id=1656 [open] de Raadt 1994 年撤权事件涉及 NetBSD Core Team 多名成员公开站队，具体站队成员名单与公开表态须经 NetBSD 邮件列表存档核验，
+- id=1657 [open] Core Team 成员对 Dillon 批评的公开回应须经 freebsd-hackers 邮件列表存档与 BSDCan 2004-2006 会议记录交叉核验
+- id=1658 [open] Hsu 评价的代表性须经 freebsd-hackers 邮件列表 2003-2004 年同期讨论核验，本轮考据未联网核验
+- id=1659 [resolved] AOSP 起始年份与 Linux-libre 首发布日期须经 Android Source Project 官方文档与 fsfla.org 邮件列表存档核验，本
+- id=1660 [open] LWKT 与 SMPng 性能对比缺乏权威第三方基准，本节不臆造具体性能数字
+- id=1661 [open] NetBSD 2.x/3.x SMP 实现细节待以 NetBSD 官方文档核验
+- id=1662 [open] OpenBSD 3.x SMP 保守路径的具体实现细节待以 OpenBSD 官方文档核验
+- id=1663 [resolved] Linux 2.6 BKL 移除的具体进度须以 LKML 与 Linux Kernel commit log 核验
+- id=1664 [open] LWKT "优雅" 与 SMPng "实用" 的价值判断属主观工程判断，须以具体部署场景核验
+- id=1665 [open] Phoronix 2008-2015 年间 HAMMER 与 ZFS 横向性能基准测试的具体测试环境与版本号须逐一核实，部分早期测试可能已不可重复
+- id=1666 [open] Dillon 权限授予的具体标准未见成文文档，须以 kernel@ 邮件列表中权限授予公告的逐条核验重建
+- id=1667 [open] FreeBSD Core Team 选举记录的完整档案须以 FreeBSD Foundation 官方文档核验，部分早期选举记录可能未数字化
+- id=1668 [open] LKML 中关于 DragonFly fork 的具体 thread URL 须以 lkml.org 站内检索核验，部分早期 LKML 存档可能元数据丢失
+- id=1669 [open] 2003 年 FreeBSD Core Team 成员完整名单与各成员对 Dillon fork 的具体立场须以 FreeBSD 官方档案核验，部分成员可能未公
+- id=1670 [open] DragonFly 2.x 时期安全机制与 FreeBSD 4.x 继承关系的完整范围待以 commit log 逐条核验
+- id=1671 [open] BSD 项目市场份额数据缺乏权威第三方统计，本节不臆造具体市场份额数字
+- id=1672 [open] HAMMER 与 ZFS 的设计哲学差异（B+Tree vs merkle tree）须经 sys/vfs/hammer2/ 与 OpenZFS 源码逐文件对比
+- id=1673 [resolved] DMA 首次发布日期的两种说法须经 GitHub corecode/dma 仓库早期 commit 历史与 kernel@/submit@ 邮件列表时间戳交叉验
+- id=1674 [open] 4.2.2 错误 tag 的具体原因须经 bsd_commits.db tags 表与 DragonFly 邮件列表核验，本轮考据未联网核验
+- id=1675 [open] OpenSSL 1.0.x 系列漏洞对 FreeBSD/OpenBSD/NetBSD 同期影响的具体 commit 量须以各项目仓库 commit log 核验
+- id=1676 [resolved] FreeBSD 11.0 arm64 Tier-2 与 13.0 Tier-1 的分级须以 FreeBSD 官方平台文档核验，本轮考据未联网核验
+- id=1677 [resolved] FreeBSD 12.x ARM64 Tier-1 分级须以 FreeBSD 官方平台文档核验，本轮考据未联网核验
+- id=1678 [open] HAMMER 与 ZFS 的设计哲学差异（B+Tree vs merkle tree）须经 sys/vfs/hammer2/ 与 OpenZFS 源码逐文件对比
+- id=1679 [resolved] vkernel 移除事件（2021 年 6.0 Release）须经 commit 770134 与 DragonFly BSD Digest 2021.1.8
+- id=1680 [open] HAMMER 与 ZFS 的设计哲学差异（B+Tree vs merkle tree）须经 sys/vfs/hammer2/ 与 OpenZFS 源码逐文件对比
+- id=1681 [open] DragonFly 从 Linux DRM 回移的具体版本对应关系须经 sys/dev/drm/ 目录 commit 与 Linux 内核 DRM 版本 tag
+- id=1682 [open] sys/dev/netif/ 与 sys/dev/drm/ 目录 commit 活跃度比较须经 commit_files 表路径查询核验，本轮考据未联网核验
+- id=1683 [open] vkernel 移除事件须经 commit 770134 与 DragonFly BSD Digest 2021.1.8 报道交叉印证；HAMMER 与 ZFS
+- id=1684 [open] Aaron LI 与 Huete Jimenez 合计 commit 量占比须经 commit_files 表细分核验，本轮考据未联网核验
+- id=1685 [open] vkernel 移除事件须经 commit 770134 与 DragonFly BSD Digest 2021.1.8 报道交叉印证；HAMMER 与 ZFS
+- id=1686 [resolved] regreSSHion CVE-2024-6387 在 DragonFly 中的具体响应 commit hash 与 author_date 须经 bsd_co
+- id=1717 [open] Dillon 在 FreeBSD 的首个提交（首 commit）记为 1998-08-26，仅由内部数据库与 GitHub 贡献者列表（'Matthew Dil
+- id=1718 [open] 原叙述含糊记 Dillon 提交权限被撤销为 '2003 年中（存疑）'。本考据以 Greg Lehey 日记（2003-02-03）+ 学术论文补正为 200
+- id=1719 [open] 多位贡献者（含 6.x 时期 Aaron LI、Antonio Huete Jimenez、Tomohiro Kusumi、zrj/Rimvydas Jasin
+- id=1720 [open] vkernel 在 5.x/6.x 因 VM 子系统改造 '移除/持续缺席' 的具体时点，无独立一手来源核验。
+- id=1721 [open] 第 218 章 1.x 版本日期系统性后移约 1 年（1.2/1.4/1.6/1.8），且将 HAMMER 误植于 1.2（实为 1.12 实验性、2.0 正式
+
+## ③ 一手史料（original_sources.kaoju_records，0 条）
+
+（无）

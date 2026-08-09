@@ -1,0 +1,570 @@
+# 第 2 卷综述素材（T1 三源合一，2026-08-04 自动生成）
+
+> 卷目录：第02卷-伯克利的岁月｜章范围：ch26-ch42
+
+## ① 现有研究（references_fulltext，444 条）
+
+- [66] bsdcan08-xorg（，）
+- [70] bsdcan2014-octeon_dsr500（，）
+- [80] bsdcan2019_netboot（，）
+- [92] eurobsdcon2014-octeon_dsr500（，）
+- [107] eurobsdcon2017-schedisnot（，）
+- [147] asiabsdcon2015-pie-paper（，）
+- [157] asiabsdcon2018-mininet-paper（，）
+- [164] asiabsdcon2019-vmm-slides（，）
+- [172] anoncvs-slides（，）
+- [199] 021_Interprocess Communication in FreeBSD 11_ Performance Analysis（，）
+- [201] 043_FreeBSD Mandatory Access Control Usage for Implementing Enterprise Security Policies（，）
+- [202] 047_PEMBANGUNAN JARINGAN KOMPUTER NIRKABEL DENGAN FREEBSD（，）
+- [216] Accetta_Mach-New-Kernel-Foundation（，）
+- [222] VLSI_Processor_Architecture（Hennessy，1984）
+- [253] 刘天华_Linux可加载内核模块机制的研究与应用（07-15，2007）
+- [254] 嵌入式Linux下文件系统的研究与实现（彭晓曦，2007）
+- [255] 史力力_Linux环境中基于Rootkit的网络攻防技术研究（01-01，2008）
+- [256] Linux内核进程调度算法的分析、研究与改进（刘磊，2011）
+- [257] Linux设备驱动模型框架的分类研究_期刊（宁玉玲，2013）
+- [258] 基于Linux的进程间通信性能问题研究_期刊（韩剑辉，2013）
+- [261] Linux系统资源分配与利用功能测试工具的设计与实现（李卓林，2022）
+- [262] 秦莹_基于关系图的Linux内核兼容性量化分析研究（10-15，2024）
+- [277] BSD包过滤器BPF的研究与改进（王汉江，2004）
+- [278] BSD包过滤器处理IP分片的研究（李兰清，2012）
+- [282] 基于Vmware平台的Sendmail邮件服务器的配置与实现（姜磊，2017）
+- [287] 基于静态分析的操作系统内核缺陷检测关键技术研究（刘丁豪，2024）
+- [312] 未知作者_麒麟操作系统层次式内核设计技术（，）
+- [318] 61（，）
+- [325] 49（，）
+- [326] 50（，）
+- [333] 基于LINUX的文件系统机制的研究及实现方法_期刊（顾喜梅，2002）
+- [335] 嵌入式Linux内核裁剪及移植的研究与实现_硕士（徐晨辉，2009）
+- [336] Linux虚拟文件系统分析_期刊（钟柏松，2010）
+- [337] 智能车载设备嵌入式操作系统裁剪研究_硕士（徐青松，2013）
+- [342] 基于多安全机制的轻量级Linux沙箱设计与实现_期刊（崔晓龙，2023）
+- [496] kamp-phk-malloc-paper（standalone，1998）
+- [499] kamp-phk-jails-paper（standalone，2000）
+- [500] mills-phk-nanokernel-paper（standalone，2000）
+- [501] lehey-grog-smpng-paper（standalone，2001）
+- [504] europe_scandariato-advanced_vpn_support_on_freebsd-paper-2（bsdcon，2002）
+- [514] baldwin-using_freebsd_to_render_realtime_audio_video-paper-2（bsdcon，2003）
+- [526] kamp-phk-geom-tutorial-slides（standalone，2004）
+- [527] mckusick-thread_scheduler-paper（standalone，2004）
+- [528] kamp-phk-ioctl-paper（standalone，2005）
+- [532] watson-rwatson-multithreading_and_multiprocessing_in_freebsd_network_stack-slides（standalone，2005）
+- [535] baldwin-pci_interrupts_for_x86_machines_under_freebsd-paper（bsdcan，2007）
+- [536] baldwin-pci_interrupts_for_x86_machines_under_freebsd-slides（bsdcan，2007）
+- [540] davis-variant_symbolic_links_for_freebsd-paper（bsdcam，2008）
+- [541] baldwin-introduction_to_debugging_the_freebsd_kernel-paper（bsdcan，2008）
+- [542] baldwin-introduction_to_debugging_the_freebsd_kernel-slides（bsdcan，2008）
+- [546] baldwin-multiple_passes_of_the_freebsd_device_tree-paper（bsdcan，2009）
+- [547] baldwin-multiple_passes_of_the_freebsd_device_tree-slides（bsdcan，2009）
+- [548] paeps-philip-crypto_acceleration_on_freebsd-paper（bsdcan，2009）
+- [555] kamp-phk-software-tools-paper（standalone，2010）
+- [570] neil-gnn-freebsd_not_a_linux_distro-slides（standalone，2015）
+- [580] hsu-lwhsu-continuous_integration_of_the_freebsd_project-slides（eurobsdcon，2016）
+- [583] hsu-lwhsu-continuous_integration_of_the_freebsd_project-paper（asiabsdcon，2017）
+- [584] hsu-lwhsu-continuous_integration_of_the_freebsd_project-slides（asiabsdcon，2017）
+- [585] tsagaankhuu-ganbold-writing_freebsd_ir_driver_for_arm_boards-paper（asiabsdcon，2017）
+- [586] tsagaankhuu-ganbold-writing_freebsd_ir_driver_for_arm_boards-slides（asiabsdcon，2017）
+- [587] hsu-lwhsu-continuous_integration_of_the_freebsd_project-slides（bsdcan，2017）
+- [590] johnston-memory_management_in_freebsd_12.0-paper（bsdtw，2017）
+- [591] neil-gnn-the_realities_of_dtrace_on_freebsd-paper（bsdtw，2017）
+- [592] labb%C3%A9-cochard-tuning_freebsd_for_routing_and_firewalling-slides（eurobsdcon，2017）
+- [603] labb%C3%A9-cochard-tuning_freebsd_for_routing_and_firewalling-paper（asiabsdcon，2018）
+- [604] labb%C3%A9-cochard-tuning_freebsd_for_routing_and_firewalling-slides（asiabsdcon，2018）
+- [605] daroussin-introducing_freebsd_in_new_environment-paper（bsdcan，2018）
+- [606] dexter-institutionalizing_freebsd_isolated_and_virtualized_hosts-paper（bsdcan，2018）
+- [607] dexter-institutionalizing_freebsd_isolated_and_virtualized_hosts-slides（bsdcan，2018）
+- [608] gerraty-adding_verification_to_freebsd_loader-paper（bsdcan，2018）
+- [615] m-automating_network_infrastructures_with_ansible_on_freebsd-paper（bsdcan，2018）
+- [617] mccorkle-a_public-key_trust_infrastructure_for_freebsd-paper（bsdcan，2018）
+- [618] mccorkle-a_public-key_trust_infrastructure_for_freebsd-slides（bsdcan，2018）
+- [619] mckusick-the_evolution_of_freebsd_governance-paper（bsdcan，2018）
+- [620] percival-profiling_the_freebsd_kernel_boot-paper（bsdcan，2018）
+- [625] vadot-freebsd_arm32_arm64_porting_to_a_new_board-paper（bsdcan，2018）
+- [627] fern-configuring_build_base_on_freebsd-paper（fosdem，2018）
+- [628] fern-configuring_build_base_on_freebsd-slides（fosdem，2018）
+- [632] reuschling-reflections_on_teaching_a_unix_class_with_freebsd-paper（fosdem，2018）
+- [646] carabas-mihalescu-freebsd_live_migration_feature_for_bhyve-paper（asiabsdcon，2019）
+- [647] carabas-weisz-freebsd_improving_block_io_compatibility_in_bhyve-paper（asiabsdcon，2019）
+- [650] fengler-monitoring_freebsd_systems_what_to_not_monitor-paper（asiabsdcon，2019）
+- [652] kubaj-powerpc64_architecture_support_in_freebsd_ports-paper（asiabsdcon，2019）
+- [655] matsubara-takagawa-yet_another_container_migration_on_freebsd-paper（asiabsdcon，2019）
+- [661] carabas-heart_ticking_for_a_guest_running_on_freebsd_arm_hypervisor-paper（bsdcan，2019）
+- [667] jude-the_future_of_openzfs_and_freebsd-paper（bsdcan，2019）
+- [672] stanek-improving_security_of_the_freebsd_boot_process-paper（bsdcan，2019）
+- [673] stanek-improving_security_of_the_freebsd_boot_process-slides（bsdcan，2019）
+- [676] zaborski-building_a_security_appliance_based_on_freebsd-paper（bsdcan，2019）
+- [680] reuschling-benedict-telegraf-influxdb-grafana-paper（coscup，2019）
+- [682] carboni-unbound_freebsd_a_true_love_story-slides（eurobsdcon，2019）
+- [684] davis-cheriabi_hardware_enforced_memory_safety_for_freebsd-slides（eurobsdcon，2019）
+- [685] dul%C4%99ba-duleba-improving_security_of_freebsd_with_tpm_20_and_intel_sgx-slides（eurobsdcon，2019）
+- [688] jude-the_future_of_openzfs_and_freebsd-slides（eurobsdcon，2019）
+- [692] schulz-porting_the_robot_operating_system_to_freebsd-slides（eurobsdcon，2019）
+- [697] goodkin-deb-25_years_of_freebsd-paper（fosdem，2019）
+- [716] mckusick-scheduling_in_the_freebsd_kernel-paper（bsdcan，2020）
+- [727] paeps-improving_freebsd_security_process-paper（linux.conf.au，2020）
+- [729] rice-lpi_bsd_wtf-paper（linux.conf.au，2020）
+- [730] schade-how_an_australian_iaas_uses_freebsd-paper（linux.conf.au，2020）
+- [731] woods-introduction_to_freebsd_ports_-_25_years_and_counting-paper（linux.conf.au，2020）
+- [744] baldwin-refining_freebsds_kernel_crypto_framework-slides（bsdcan，2022）
+- [745] czekaj-data_science_on_freebsd_arm64-paper（bsdcan，2022）
+- [746] stone-sysunit_unit_testing_for_freebsd_kernel-paper（bsdcan，2022）
+- [752] meki%C4%87-mekic-freebsd_audio_amateur_professional-paper（eurobsdcon，2022）
+- [756] baldwin-advanced_ptrace_usage_on_freebsd-slides（bsdcan，2023）
+- [757] piotrowski-performance_analysis_of_dtrace_on_freebsd_and_ebpf_on_linux-paper（bsdcan，2023）
+- [758] baldwin-implementing_nvme_over_fabrics_in_freebsd-slides（eurobsdcon，2023）
+- [763] chang-towards-a-robust-freebsd-based-cloud-porting-openstack-components-paper（asiabsdcon，2024）
+- [764] chang-towards-a-robust-freebsd-based-cloud-porting-openstack-components-slides（asiabsdcon，2024）
+- [765] hong-lldb-freebsd-kernel-module-improvement-paper（asiabsdcon，2024）
+- [766] hong-lldb-freebsd-kernel-module-improvement-slides（asiabsdcon，2024）
+- [773] piotrowski-benchmarking-performance-overhead-of-dtrace-on-freebsd-and-ebpf-on-linux-paper（asiabsdcon，2024）
+- [774] piotrowski-benchmarking-performance-overhead-of-dtrace-on-freebsd-and-ebpf-on-linux-slides（asiabsdcon，2024）
+- [780] margiolis-christos-state-of-the-freebsd-audio-subsystem-slides（eurobsdcon，2024）
+- [781] piotrowski-1-800-rc-8-help-dial-into-freebsd-service-scripts-mastery-slides（eurobsdcon，2024）
+- [783] margiolis-vox-freebsd-how-sound4-works-paper（bsdcan，2025）
+- [822] new-york-harpercollins（Torvalds，2001）
+- [831] understanding-the-linux-kernel-3rd-edition-linux-3（Bovet，2005）
+- [835] san-francisco-no-starch-press（Lucas，2007）
+- [859] ire-transactions-on-human-factors-in-electronics_en_v2（Licklider，1960）
+- [860] communications-of-the-acm（McCarthy，1960）
+- [867] ieee-transactions-on-communications（Cerf，1974）
+- [886] acm-computer-communication-review（Spafford，1989）
+- [944] 2013spw-compartmentalisation（，）
+- [978] Audit_Capsicum_Bhyve_FreeBSD_Foundation（Code，2024）
+- [992] Beckhoff-CASE-STUDY-5（，）
+- [994] bsdcan-ports-talk-20110511（，）
+- [1004] Contributing-to-FreeBSD-Ports-with-Git（，）
+- [1007] E-Card-CASE-STUDY-1（，）
+- [1018] FreeBSD-and-Git（，）
+- [1019] FreeBSD-Foundation-April-2016-Update（，2016）
+- [1020] FreeBSD-Foundation-April-2018-Update（，2018）
+- [1021] FreeBSD-Foundation-August-2016-Update（，2016）
+- [1022] FreeBSD-Foundation-December-2016-Update（，2016）
+- [1023] FreeBSD-Foundation-February-2018-Update（，2018）
+- [1024] FreeBSD-Foundation-January-2018-Update（，2018）
+- [1025] FreeBSD-Foundation-July-2016-Update（，2016）
+- [1026] FreeBSD-Foundation-July-August-2017-Update（，2017）
+- [1027] FreeBSD-Foundation-June-2016-Update（，2016）
+- [1028] FreeBSD-Foundation-March-2016-Update（，2016）
+- [1029] FreeBSD-Foundation-March-2018-Update-1（，2018）
+- [1030] FreeBSD-Foundation-May-2016-Update（，2016）
+- [1031] FreeBSD-Foundation-May-2018-Update（，2018）
+- [1032] FreeBSD-Foundation-November-2016-Update（，2016）
+- [1033] FreeBSD-Foundation-October-2016-Update（，2016）
+- [1034] FreeBSD-Foundation-Proposals-Feb-2009（，2009）
+- [1035] FreeBSD-Foundation-Proposals-Jan-2011-1（，2011）
+- [1037] FreeBSD-Foundation-Proposals-March-2012（，2012）
+- [1038] FreeBSD-Foundation-Proposals（，）
+- [1039] FreeBSD-Foundation-Q1-2017-Update（，2017）
+- [1040] FreeBSD-Foundation-Q2-2017-Update（，2017）
+- [1041] FreeBSD-Foundation-Q4-Update（，）
+- [1042] FreeBSD-Foundation-September-2016-Update（，2016）
+- [1076] Packaging-A-Vision-with-notes（，）
+- [1085] Seven-Ways-to-Increase-Security-in-a-New-FreeBSD-Installation（，）
+- [1102] Using-TLS-to-Improve-NFS-Security（，）
+- [1114] 2020（，2020）
+- [1115] 2021（，2021）
+- [1116] 2022（，2022）
+- [1117] 2023（，2023）
+- [1118] 2024（，2024）
+- [1119] 2025（，2025）
+- [1123] eclipse-foundation-be-bylaws-en（，）
+- [1124] eclipse-foundation-be-bylaws-fr（，）
+- [1125] eclipse-foundation-branding-guidelines（，）
+- [1126] eclipse-foundation-conduct-committee-charter（，）
+- [1127] eclipse-foundation-hosted-services-privacy-and-acceptable-usage-policy（，）
+- [1128] eclipse-foundation-membership-agreement（，）
+- [1135] recognizing-project-contributions-policy-2008（，2008）
+- [1153] How_to_Make_a_Multiprocessor_Computer（Lamport，1979）
+- [1168] SMPng（Baldwin，2002）
+- [1170] SELinux_LSM（Smalley，2002）
+- [1178] FreeBSD_Kernel_Architecture（McKusick，2008）
+- [1179] FreeBSD_Release_Engineering（Belousov，2009）
+- [1187] P05C_Peripheral-side_USB_support_for_NetBSD（bessho，2016）
+- [1190] P10B_Holding_onto_things_in_a_multiprocessor_world（campbell，2017）
+- [1193] cochard-tuning_freebsd_for_routing_and_firewalling_cochard-tuning_freebsd_for_routing_and_firewalling-slides（eurobsdcon，2017）
+- [1197] Japan_NetBSD_Users_Group_booth_reports（ebihara，2018）
+- [1199] Why_did_my_application_crash_Practical_Low_Overhead_RecordReplay_in_FreeBSD（Mashtizadeh，2018）
+- [1200] openbsd（Sadowski，2018）
+- [1202] P09B_Porting_Go_To_netbsdarm64（rashish，2019）
+- [1203] P04B_Intel_HAXM_-_a_hardware-assisted_acceleration_engine_in_the_NetBSD_kernel（rytarowski，2019）
+- [1206] FreeBSD_RISC-V_Status_Report（Conway，2020）
+- [1212] BSD_Comparison_Survey（Linux，2023）
+- [1216] NetManager_NetBSD（Borrill，2025）
+- [1217] performance_arch_NetBSD（Horn，2025）
+- [1218] performance_NetBSD（Horn，2025）
+- [1222] Lima_NetBSD（Taccari，2025）
+- [1292] openbsd_lteo-openbsd-carolinacon15-20190427（未知，）
+- [1293] openbsd_my_bsd_sucks_less_than_yours-full_paper（未知，）
+- [1294] openbsd_my_bsd_sucks_less_than_yours-slides（未知，）
+- [1295] openbsd_OpenBSD-jitsi（未知，2022）
+- [1297] openbsd_syspatch-fosdem-2018（未知，）
+- [1298] openbsd_The%20OpenBSD%20hypervisor%20in%20the%20wild,%20a%20short%20story%20-%20Mischa%20Peters（Mischa Peters，2019）
+- [1300] openbsd_eurobsdcon2013_sosplice（Alexander Bluhm，2013）
+- [1308] netbsd_104_rumpdevel（未知，2009）
+- [1309] netbsd_160311-NetBSD_on_Google_Compute_Engine-EN-asiabsdcon2016（未知，2016）
+- [1310] netbsd_20150313-how_to_package_github_software（未知，2015）
+- [1311] netbsd_2023-AsiaBSDCon-tprof-on-netbsd（masanobu，2023）
+- [1312] netbsd_2024_BSDCan_SmolBSD（未知，2024）
+- [1313] netbsd_328_2015-BSDCan_NetBSD-Lua-DWARF（未知，）
+- [1314] netbsd_404_smherwig-sandbox-bsdcan2017（未知，2017）
+- [1315] netbsd_431_smherwig-sandbox-bsdcan2017-slides（未知，2017）
+- [1316] netbsd_77_BuildingProductsWithNetBSDthin-clients-Stephen-Borrill（未知，2009）
+- [1317] netbsd_abc2009-P5A-paper（未知，2009）
+- [1318] netbsd_abc2010-P5A-paper（Hiroki Sato，2010）
+- [1319] netbsd_ABC2014-P6B-CPE-1（msaitoh，2014）
+- [1320] netbsd_ABC2014-P6B-paper（未知，2014）
+- [1321] netbsd_ABC2014-P7B-CPE-2（msaitoh，2014）
+- [1322] netbsd_ABC2014-P7B-paper（未知，2014）
+- [1323] netbsd_ABC2015-P4C-paper（未知，2015）
+- [1324] netbsd_ABC2015-P4C-slides（未知，）
+- [1325] netbsd_ABC2017-P8B-uvm_hotplug-paper（未知，2017）
+- [1326] netbsd_ABC2017-P8B-uvm_hotplug-slides（未知，2017）
+- [1327] netbsd_abc2017ext4_final_paper（未知，）
+- [1328] netbsd_abc2017ext4_slides（未知，）
+- [1329] netbsd_ABC2023WIP-nvmm-aarch64（未知，2023）
+- [1330] netbsd_applying_machine_learning_to_improve_apropos（未知，2017）
+- [1331] netbsd_apropos_replacement（未知，2012）
+- [1332] netbsd_arm_be8_asiabsdcon2015（Martin Husemann，2015）
+- [1333] netbsd_AsiaBSDCon2016-BoF-ozaki-nakahara（未知，）
+- [1334] netbsd_AsiaBSDCon2016-BOF-psref（k-nakahara，2016）
+- [1335] netbsd_AsiaBSDCon2016-BoF-W2（未知，2016）
+- [1336] netbsd_asiabsdcon2016（未知，2016）
+- [1337] netbsd_AsiaBSDCon2017-basepkg（Yuuki Enomoto，2017）
+- [1338] netbsd_AsiaBSDCon2017-WIP-ozaki（未知，）
+- [1339] netbsd_AsiaBSDCon2018-basepkg-paper（未知，2017）
+- [1340] netbsd_AsiaBSDCon2018-basepkg（Yuuki Enomoto，2018）
+- [1341] netbsd_AsiaBSDCon2018-BoF-ozaki（未知，）
+- [1342] netbsd_asiabsdcon_2017_modern_spell（未知，2017）
+- [1343] netbsd_a_modern_spell（未知，）
+- [1344] netbsd_basepkg（未知，2017）
+- [1345] netbsd_BSD%20Driver%20Harmony%20-%20FOSDEM（未知，2023）
+- [1346] netbsd_BSD%20Drivers（未知，2022）
+- [1347] netbsd_BSDCan2016-NetBSD（未知，）
+- [1348] netbsd_BSDCan2017-ozaki-nakahara（未知，）
+- [1349] netbsd_BSDNet（Dennis Ferguson，2015）
+- [1350] netbsd_bsdtw2017-msaitoh-1112-1（masanobu，2017）
+- [1351] netbsd_concurrency（Taylor `Riastradh' Campbell  campbell@mumble.net  riastradh@NetBSD.org，2015）
+- [1352] netbsd_D-cubed-slides（Mathew, Cherry G.  cherry@NetBSD.org，2025）
+- [1353] netbsd_DDD（未知，2025）
+- [1354] netbsd_development_of_vxlan_using_rumpkernel（未知，2015）
+- [1355] netbsd_devrandom（Taylor `Riastradh' Campbell  campbell@mumble.net  riastradh@NetBSD.org，2014）
+- [1356] netbsd_devsetup（未知，2022）
+- [1357] netbsd_dls14（未知，2014）
+- [1358] netbsd_drmkms-status（Taylor `Riastradh' Campbell  campbell@mumble.net  riastradh@NetBSD.org，2015）
+- [1359] netbsd_EBC-2019（未知，2019）
+- [1360] netbsd_EBSD04_36（未知，）
+- [1361] netbsd_entropy（Taylor `Riastradh' Campbell  campbell@mumble.net  riastradh@NetBSD.org，2015）
+- [1362] netbsd_EuroBSDcon2016-ozaki-nakahara（未知，）
+- [1363] netbsd_eurobsdcon2021_porting_gnome（未知，）
+- [1364] netbsd_fidobsd（Taylor R Campbell  riastradh@NetBSD.org，2023）
+- [1365] netbsd_fosdem2017（未知，2017）
+- [1366] netbsd_getstarted（Taylor R Campbell  riastradh@NetBSD.org，2024）
+- [1367] netbsd_Hardening%20pkgsrc（Pierre Pronchery，2017）
+- [1368] netbsd_hashing（未知，2013）
+- [1369] netbsd_ipgen（ryo，2016）
+- [1370] netbsd_justincormack-abc2015（未知，2015）
+- [1371] netbsd_kleak（未知，2018）
+- [1372] netbsd_Maciej_Grochowski-FS_Fuzzing_EuroBSDCon2019（Maciej Grochowski，2019）
+- [1373] netbsd_ManagingISP_slides（anonymous，2017）
+- [1374] netbsd_mclinker（未知，2013）
+- [1375] netbsd_memerr（Taylor R Campbell  riastradh@NetBSD.org，2024）
+- [1376] netbsd_mp-refs-slides（Taylor `Riastradh' Campbell  campbell@mumble.net  riastradh@NetBSD.org，2017）
+- [1377] netbsd_nbentropy（Taylor `Riastradh' Campbell  campbell@mumble.net  riastradh@NetBSD.org，2021）
+- [1378] netbsd_nblivecds（未知，2006）
+- [1379] netbsd_NetBSD-2018-AsiaBSDCon（未知，）
+- [1380] netbsd_NetBSD-2019-AsiaBSDCon-WIP（未知，）
+- [1381] netbsd_NetBSD-BoF_20180309__toward_apt_like_NetBSD_maintenance（未知，2018）
+- [1382] netbsd_netbsd-wip（Taylor `Riastradh' Campbell  riastradh@NetBSD.org，2015）
+- [1383] netbsd_opendetach（Taylor R Campbell  riastradh@NetBSD.org，2022）
+- [1384] netbsd_P04-paper（未知，2007）
+- [1385] netbsd_P3A-paper（Hiroki Sato，2008）
+- [1386] netbsd_P4B-paper（Hiroki Sato，2008）
+- [1387] netbsd_P5A-paper（Hiroki Sato，2008）
+- [1388] netbsd_P6A-paper（Hiroki Sato，2008）
+- [1389] netbsd_P9A-paper（Hiroki Sato，2008）
+- [1390] netbsd_paper（未知，2017）
+- [1395] netbsd_pkgsrccon2017（未知，2017）
+- [1396] netbsd_pkg_install（未知，2006）
+- [1397] netbsd_practical_rumpkernel（Diana，2017）
+- [1398] netbsd_refuse（未知，2007）
+- [1399] netbsd_slides-eurobsdcon-2024-v-1-6（未知，2024）
+- [1400] netbsd_split-debugpkg（Leonardo Taccari  leot@NetBSD.org，2016）
+- [1401] netbsd_trickyfiles（Taylor `Riastradh' Campbell  campbell@mumble.net  riastradh@NetBSD.org，2015）
+- [1402] netbsd_usbp_asiabsdcon1016_slide（未知，2016）
+- [1403] netbsd_uvm_hotplug（未知，2017）
+- [1404] netbsd_wrapper（未知，2009）
+- [1405] openbsd_openbsd-rcd-AsiaBSDCon2016-paper（未知，2016）
+- [1406] openbsd_openbsd-rcd-AsiaBSDCon2016（未知，）
+- [1452] _4482972_Performance Comparison of ISATAP Implementations on FreeBSD, RedHat, and Windows 2003（Vasaka Visoottiviseth, Niwat Bureenok，2008）
+- [1466] _5463350_Mining Challenge 2010 - FreeBSD, GNOME Desktop and Debian Ubuntu（未知，2010）
+- [1540] An Introduction to the C Shell（Joy，1980）
+- [1541] A Protocol for Packet Network Intercommunication（Cerf，1974）
+- [1542] A Fast File System for UNIX（McKusick，1984）
+- [1543] Documents about USL vs BSDI（USL，1993）
+- [1546] Retrospective: What Have We Learned from the PDP-11, VAX and Alpha（Bell，1998）
+- [1548] The Design and Implementation of the 4.3BSD UNIX Operating System（Leffler，1989）
+- [1549] From RIG to Accent to Mach: The Evolution of a Network Operating System（Rashid，1986）
+- [1550] SENDMAIL Installation and Operation Guide（Allman，1994）
+- [1603] Kridle McKusick DiskSubsystemChoices VAX 4.2BSD en（Kridle，1983）
+- [1604] McKusick UsingGprofTune4.2BSDKernel en（McKusick，1984）
+- [1605] Karels McKusick CompatibleFilesystemInterface en（Karels，1986）
+- [1606] McKusick Karels NewVirtualMemoryImplementation Berkeley en（McKusick，1986）
+- [1607] McKusick Karels KernelMemoryAllocator 4.3BSD en（McKusick，1988）
+- [1608] McKusick Karels Bostic ReleaseEngineering 4.3BSD en（McKusick，1989）
+- [1610] McKusick Karels Bostic MemoryBasedFilesystem en（McKusick，1990）
+- [1611] McKusick Leffler Karels MeasuringImprovingBerkeleyUNIXPerformance en（McKusick，1991）
+- [1678] 4.2 BSD Vol 2C（4.2，）
+- [1681] 490197C Unix 4.3BSD System Administrator Guide ISI Release 4.1 May88（490197C，）
+- [1715] A Microsoft Word Font for Anti-Matter（A Microsoft Word Font for Anti-Matter，）
+- [1716] A Small Universal Petri Net（A Small Universal Petri Net，）
+- [1717] A Split-Central-Buffered Load-Balancing Clos-Network Switch with In-Order Forwarding（A Split-Central-Buffered Load-Balancing Clos-Network Switch with In-Order Forwarding，）
+- [1718] AA-BG61A-TE 4.2BSD Line Printer Spooler Manual May84（AA-BG61A-TE，）
+- [1719] Active Learning for Animal Re-Identification with Ambiguity-Aware Sampling（Active Learning for Animal Re-Identification with Ambiguity-Aware Sampling，）
+- [1722] An Informal Critique of 4.2BSD    gurwitz 4.2bsd critique.pdf（An Informal Critique of 4.2BSD，）
+- [1723] An Informal Critique of 4.2BSD    gurwitz 4.2bsd critique text.pdf（An Informal Critique of 4.2BSD，）
+- [1724] An Internet-wide Penetration Study on NAT Boxes via TCP IP Side Channel（An Internet-wide Penetration Study on NAT Boxes via TCP，）
+- [1725] Analysis and Simulation of Delay and Buffer Requirements of satellite-ATM Networks for TCP IP Traffic（Analysis and Simulation of Delay and Buffer Requirements of satellite-ATM Networks for TCP，）
+- [1726] Attack Analysis Results for Adversarial Engagement 1 of the DARPA Transparent Computing Program（Attack Analysis Results for Adversarial Engagement 1 of the DARPA Transparent Computing Program，）
+- [1727] BSD Invariants and Murmurations of Elliptic Curves（BSD Invariants and Murmurations of Elliptic Curves，）
+- [1728] BSD  a Bayesian framework for parametric models of neural spectra（BSD，）
+- [1729] Buffer Sizing for 802.11 Based Networks（Buffer Sizing for 802.11 Based Networks，）
+- [1730] Bug Fixes and Changes in 4.1bsd    Image092317124402 text.pdf（Bug Fixes and Changes in 4.1bsd，）
+- [1731] Bug fixes and changes in 4.2BSD July 28, 1983    5973825.pdf（Bug fixes and changes in 4.2BSD July 28, 1983，）
+- [1732] Bug fixes and changes in 4.2BSD    Image092317124428.pdf（Bug fixes and changes in 4.2BSD，）
+- [1733] Bug fixes and changes in 4.2BSD    Image092317124428 text.pdf（Bug fixes and changes in 4.2BSD，）
+- [1734] C Shell (Capítulo 2)（C Shell (Capítulo 2)，）
+- [1737] Can Microsoft Academic help to assess the citation impact of academic books（Can Microsoft Academic help to assess the citation impact of academic books，）
+- [1738] Changes to the Kernel in 4.1bsd    Image092317124537.pdf（Changes to the Kernel in 4.1bsd，）
+- [1739] Changes to the Kernel in 4.1bsd    Image092317124537 text.pdf（Changes to the Kernel in 4.1bsd，）
+- [1740] Complete verification of strong BSD for many modular abelian surfaces over $ mathbf{Q}$（Complete verification of strong BSD for many modular abelian surfaces over $，）
+- [1741] Congestion Analysis for the DARPA OFFSET CCAST Swarm（Congestion Analysis for the DARPA OFFSET CCAST Swarm，）
+- [1743] DALE  Generative Data Augmentation for Low-Resource Legal NLP（DALE，）
+- [1744] DTIC ADA180023  Directory Reference Patterns in a UNIX Environment.    DTIC ADA180023.pdf（DTIC ADA180023，）
+- [1745] DTIC ADA188353  Experience with Berkeley UNIX Interprocess Communications,    DTIC ADA188353.pdf（DTIC ADA188353，）
+- [1746] DTIC ADA215183  Ada Compiler Validation Summary Report. Certificate Number 890712W1. 10115 Elxsi Elxsi VADS, Version 5.6（DTIC ADA215183，）
+- [1747] DTIC ADA611680  A User-Process Oriented Performance Study of Ethernet Networking Under Berkeley UNIX 4.2BSD    DTIC ADA6（DTIC ADA611680，）
+- [1748] DTIC ADA611681  Measuring and Improving the Performance of 4.2BSD    DTIC ADA611681.pdf（DTIC ADA611681，）
+- [1749] DTIC ADA611684  Adding Remote File Access to Berkeley UNIX 4.2BSD Through Remote Mount    DTIC ADA611684.pdf（DTIC ADA611684，）
+- [1750] DTIC ADA619395  The Accuracy of the Clock Synchronization Achieved by TEMPO in Berkeley UNIX 4.3BSD    DTIC ADA619395.pd（DTIC ADA619395，）
+- [1765] DTIC ADA611650（DTIC，）
+- [1767] DTIC ADA611680（DTIC，）
+- [1768] DTIC ADA611684（DTIC，）
+- [1769] DTIC ADA611686（DTIC，）
+- [1772] Dynamic Exploitation Gaussian Bare-Bones Bat Algorithm for Optimal Reactive Power Dispatch to Improve the Safety and Sta（Dynamic Exploitation Gaussian Bare-Bones Bat Algorithm for Optimal Reactive Power Dispatch to Improve the Safety and Sta，）
+- [1774] Elucidating Three-Dimensional Coherent Structures in a Multi-Stream Jet（Elucidating Three-Dimensional Coherent Structures in a Multi-Stream Jet，）
+- [1775] Exact verification of the strong BSD conjecture for some absolutely simple abelian surfaces（Exact verification of the strong BSD conjecture for some absolutely simple abelian surfaces，）
+- [1777] Exo 2  Growing a Scheduling Language（Exo 2，）
+- [1778] Explicit mock Heegner points and BSD formula on certain Mordell curves（Explicit mock Heegner points and BSD formula on certain Mordell curves，）
+- [1779] Fast Bundle-Level Type Methods for unconstrained and ball-constrained convex optimization（Fast Bundle-Level Type Methods for unconstrained and ball-constrained convex optimization，）
+- [1780] Finite-temperature mean-field approximations for shell model Hamiltonians  the code HF-SHELL（Finite-temperature mean-field approximations for shell model Hamiltonians，）
+- [1781] Forensic License Plate Recognition with Compression-Informed Transformers（Forensic License Plate Recognition with Compression-Informed Transformers，）
+- [1820] Fuzzy Supernova Templates II  Parameter Estimation（Fuzzy Supernova Templates II，）
+- [1821] Gamma-Ray Burst and Relativistic Shells  The Surface Filling Factor（Gamma-Ray Burst and Relativistic Shells，）
+- [1822] Generalized Seniority Schmidt Model and the g-factors in Semi-magic Nuclei（Generalized Seniority Schmidt Model and the g-factors in Semi-magic Nuclei，）
+- [1823] Generic Dijkstra for optical networks（Generic Dijkstra for optical networks，）
+- [1824] Getting in the Zone for Successful Scalability（Getting in the Zone for Successful Scalability，）
+- [1825] Hetherington v. Sun Microsystems Inc    gov.uscourts.nmd.135416.32.0.pdf（Hetherington v. Sun Microsystems Inc，）
+- [1826] IEEE standard portable operating system interface for computer environments   [POSIX]    POSIX-1988.pdf（IEEE standard portable operating system interface for computer environments，）
+- [1832] Impact crater morphology and the structure of Europa's ice shell（Impact crater morphology and the structure of Europa's ice shell，）
+- [1833] Improving TCP IP Performance over Wireless IEEE 802.11 Link（Improving TCP，）
+- [1834] Infinitely many pairs of non-isomorphic elliptic curves sharing the same BSD invariants（Infinitely many pairs of non-isomorphic elliptic curves sharing the same BSD invariants，）
+- [1844] L p- and S {p,q}^rB-discrepancy of (order 2) digital nets（L，）
+- [1845] Laboratory Setup for Testing Low-Frequency Disturbances of Power Quality（Laboratory Setup for Testing Low-Frequency Disturbances of Power Quality，）
+- [1876] Measurement of forward $W$ and $Z$ boson production in $pp$ collisions at $ sqrt{s} = 8 mathrm{ ,Te kern -0.1em V}$（Measurement of forward $W$ and $Z$ boson production in $pp$ collisions at $，）
+- [1877] Microsoft TerraServer（Microsoft TerraServer，）
+- [1878] Mixed-Integer Optimization for Bio-Inspired Robust Power Network Design（Mixed-Integer Optimization for Bio-Inspired Robust Power Network Design，）
+- [1879] Model based system engineering approach of a lightweight embedded TCP IP（Model based system engineering approach of a lightweight embedded TCP，）
+- [1880] Multi-Stage Hybrid Federated Learning over Large-Scale D2D-Enabled Fog Networks（Multi-Stage Hybrid Federated Learning over Large-Scale D2D-Enabled Fog Networks，）
+- [1881] Multivariate Data Explanation by Jumping Emerging Patterns Visualization（Multivariate Data Explanation by Jumping Emerging Patterns Visualization，）
+- [1882] NASA Technical Reports Server (NTRS) 19980007209  A Multiprocessor Operating System Simulator    NASA NTRS Archive 19980（NASA Technical Reports Server (NTRS) 19980007209，）
+- [1885] NASA NTRS Archive 19980007209（NASA，）
+- [1891] New Hashing Algorithm for Use in TCP Reassembly Module of IPS（New Hashing Algorithm for Use in TCP Reassembly Module of IPS，）
+- [1892] New Sufficient Conditions for Linear-Sized Epsilon-Nets and $(p,2)$-Theorems（New Sufficient Conditions for Linear-Sized Epsilon-Nets and $(p,2)$-Theorems，）
+- [1894] Observation of shell structure in sodium nanowires（Observation of shell structure in sodium nanowires，）
+- [1895] Observation of the open-charm tetraquark candidate $T {cs 0}^{ }(2870)^0$ in the $B^-  rightarrow D^- D^0 K  mathrm{S}^0（Observation of the open-charm tetraquark candidate $T，）
+- [1896] Off-Path TCP Exploits  PMTUD Breaks TCP Connection Isolation in IP Address Sharing Scenarios（Off-Path TCP Exploits，）
+- [1897] Off-shell extension of S-matrix elements and tachyonic effective actions（Off-shell extension of S-matrix elements and tachyonic effective actions，）
+- [1898] On the Mitigation of Read Disturbances in Neuromorphic Inference Hardware（On the Mitigation of Read Disturbances in Neuromorphic Inference Hardware，）
+- [1900] POSIX-1988（POSIX-1988，）
+- [1901] Particle shells from relativistic bubble walls（Particle shells from relativistic bubble walls，）
+- [1902] Performance of TCP IP Using ATM ABR and UBR Services over Satellite Networks（Performance of TCP，）
+- [1904] Precise measurement of the CKM angle $γ$ with a novel approach（Precise measurement of the CKM angle $γ$ with a novel approach，）
+- [1905] Prospects for GRB Afterglow Discovery with the Eric and Wendy Schmidt Observatory System（Prospects for GRB Afterglow Discovery with the Eric and Wendy Schmidt Observatory System，）
+- [1906] R$^{2}$Net  2D Deep Residual Learning with Height Embedding for 3D Radio Map Estimation（R$^{2}$Net，）
+- [1907] Random Sentences from a Generalized Phrase-Structure Grammar Interpreter（Random Sentences from a Generalized Phrase-Structure Grammar Interpreter，）
+- [1908] Recognizing License Plates in Real-Time（Recognizing License Plates in Real-Time，）
+- [1925] Robots-Assisted Redeployment in Wireless Sensor Networks（Robots-Assisted Redeployment in Wireless Sensor Networks，）
+- [1926] Robust Power Flow and Three-Phase Power Flow Analyses（Robust Power Flow and Three-Phase Power Flow Analyses，）
+- [1927] SMM Unix System Managers Manual 4.3BSD 198604（SMM，）
+- [1928] Satellite ATM Network Architectural Considerations and TCP IP Performance（Satellite ATM Network Architectural Considerations and TCP，）
+- [1929] Search for $C !P$ violation in $D^+  to φπ^+$ decays（Search for $C，）
+- [1930] Search for the doubly charmed baryon $ itΞ {cc}^{+}$ in the $ itΞ {c}^{+} π^{-} π^{+}$ final state（Search for the doubly charmed baryon $，）
+- [1931] SoK  DARPA's AI Cyber Challenge (AIxCC)  Competition Design, Architectures, and Lessons Learned（SoK，）
+- [1932] Spherically symmetric gravitating shell as a reparametrization invariant system（Spherically symmetric gravitating shell as a reparametrization invariant system，）
+- [1933] Stability Analysis in Large-scale Centralized Bidirectional Inverter-based Stations Connected to Bulk Power Systems thro（Stability Analysis in Large-scale Centralized Bidirectional Inverter-based Stations Connected to Bulk Power Systems thro，）
+- [1934] Static spherically symmetric Einstein-Vlasov shells made up of particles with a discrete set of values of their angular（Static spherically symmetric Einstein-Vlasov shells made up of particles with a discrete set of values of their angular，）
+- [1935] Strong BSD for abelian surfaces and the Bloch-Beilinson conjecture（Strong BSD for abelian surfaces and the Bloch-Beilinson conjecture，）
+- [1936] Sun Microsystems 8190994 Server User Manual    7262632.pdf（Sun Microsystems 8190994 Server User Manual，）
+- [1937] Sun Microsystems Network Card 9740 User Guide    fc61c224-5bb2-43ae-8784-9d8fc75b9b13.pdf（Sun Microsystems Network Card 9740 User Guide，）
+- [1938] Sun Microsystems Network Card Interface Adapter User Guide    4bac8594-eb62-4dd7-ace6-f3e9e9470290.pdf（Sun Microsystems Network Card Interface Adapter User Guide，）
+- [1939] Sun Microsystems Network Card none User Guide    ff22c2b6-a3e3-479b-92c7-f81dfd2402bc.pdf（Sun Microsystems Network Card none User Guide，）
+- [1940] Sun Microsystems SG-XPCIE2FC-QF8-Z user manual    78024.pdf（Sun Microsystems SG-XPCIE2FC-QF8-Z user manual，）
+- [1941] Sun Microsystems STOREDGE T3 User's Manual    6970043.pdf（Sun Microsystems STOREDGE T3 User's Manual，）
+- [1942] Sun Microsystems Server X2270 User Guide    b1c1dcc0-da74-4c1e-8d8d-745704731af8.pdf（Sun Microsystems Server X2270 User Guide，）
+- [1943] Sun Microsystems Sun Management Center 3.5 User's Manual    6970028.pdf（Sun Microsystems Sun Management Center 3.5 User's Manual，）
+- [1944] Sunburst   the ascent of Sun Microsystems    sunburstascentof0000hall encrypted.pdf（Sunburst，）
+- [1945] System for multi-robotic exploration of underground environments CTU-CRAS-NORLAB in the DARPA Subterranean Challenge（System for multi-robotic exploration of underground environments CTU-CRAS-NORLAB in the DARPA Subterranean Challenge，）
+- [1946] TCP IP communication between two USRP-E110（TCP，）
+- [1948] The DARPA Twitter Bot Challenge（The DARPA Twitter Bot Challenge，）
+- [1949] The Design and implementation of the 4.3BSD UNIX operating system    designimplementa0000unse encrypted.pdf（The Design and implementation of the 4.3BSD UNIX operating system，）
+- [1950] The EFT Likelihood for Large-Scale Structure（The EFT Likelihood for Large-Scale Structure，）
+- [1951] The dangers of being trigger--happy（The dangers of being trigger--happy，）
+- [1953] Towards an Updatable Strategy Logic（Towards an Updatable Strategy Logic，）
+- [1954] Towards characterizing the $ ω^2$-fickle recursively enumerable Turing degrees（Towards characterizing the $，）
+- [1955] UAVs Beneath the Surface  Cooperative Autonomy for Subterranean Search and Rescue in DARPA SubT（UAVs Beneath the Surface，）
+- [1956] UNIX User’s Supplementary Documents, 4.3 Berkeley Software Distribution, Virtual VAX− 11 Version    UNIX User’s Suppleme（UNIX User’s Supplementary Documents, 4.3 Berkeley Software Distribution, Virtual VAX− 11 Version，）
+- [1957] UNIX User’s Supplementary Documents, 4.3 Berkeley Software Distribution, Virtual VAX−11 Version（UNIX User’s Supplementary Documents, 4.3 Berkeley Software Distribution, Virtual VAX−11 Version，）
+- [1958] USD Unix Users Supplementary Documents 4.3BSD 198604（USD，）
+- [1959] USL-Net  Uncertainty Self-Learning Network for Unsupervised Skin Lesion Segmentation（USL-Net，）
+- [1960] UniX  Unifying Autoregression and Diffusion for Chest X-Ray Understanding and Generation（UniX，）
+- [1961] Unix Programmer's Manual 4.2 BSD Vol 2 C    4.2 BSD Vol 2C.pdf（Unix Programmer's Manual 4.2 BSD Vol 2 C，）
+- [1962] Unix Programmer's Manual 4.2 BSD Vol 2 C    C Shell (Capítulo 2).pdf（Unix Programmer's Manual 4.2 BSD Vol 2 C，）
+- [1963] Unix Programmer's Manual  Reference Guide    Image072917175732.merged text.pdf（Unix Programmer's Manual，）
+- [1964] Unix Programmer's Manual  Supplementary Documents    Image072917173628.merged text.pdf（Unix Programmer's Manual，）
+- [1965] Unix Programmer's Reference Manual 4.3 Berkeley Software Distribution（Unix Programmer's Reference Manual 4.3 Berkeley Software Distribution，）
+- [1966] Unix Programmer's Reference Manual, 4.3 Berkeley Software Distribution, Virtual VAX-11 Version    Unix Programmer's Refe（Unix Programmer's Reference Manual, 4.3 Berkeley Software Distribution, Virtual VAX-11 Version，）
+- [1967] Unix System Manager's Manual    Image080717201424.merged text.pdf（Unix System Manager's Manual，）
+- [1968] Unix User's Manual  Supplementary Documents    Image072917183250.merged.pdf（Unix User's Manual，）
+- [1969] Unix User's Manual  Supplementary Documents    Image072917183250.merged text.pdf（Unix User's Manual，）
+- [1970] Unix User's Reference Manual 4.3 Berkeley Software Distribution（Unix User's Reference Manual 4.3 Berkeley Software Distribution，）
+- [1971] User-centric Subjective Leaderboard by Customizable Reward Modeling（User-centric Subjective Leaderboard by Customizable Reward Modeling，）
+- [1973] Vax-a-Net  Training-time Defence Against Adversarial Patch Attacks（Vax-a-Net，）
+- [1974] Violation of Bell inequalities from Cosmic Microwave Background data（Violation of Bell inequalities from Cosmic Microwave Background data，）
+- [1975] Y$^2$-Net FCRN for Acoustic Echo and Noise Suppression（Y$^2$-Net FCRN for Acoustic Echo and Noise Suppression，）
+- [1976] `Mass without mass' from thin shells in Gauss-Bonnet gravity（`Mass without mass' from thin shells in Gauss-Bonnet gravity，）
+- [1980] dec    vax    ultrix-32    1.0 May84    AA-BG61A-TE 4.2BSD Line Printer Spooler Manual May84    AA-BG61A-TE 4.2BSD Line（dec，）
+- [1987] hynet  An Optimal Power Flow Framework for Hybrid AC DC Power Systems（hynet，）
+- [1989] isi    bsd    490197C Unix 4.3BSD System Administrator Guide ISI Release 4.1 May88    490197C Unix 4.3BSD System Adminis（isi，）
+- [1997] usenix    Usenix BSD Manuals    4.3 1st printing 198611    SMM Unix System Managers Manual 4.3BSD 198604    SMM Unix Sys（usenix，）
+- [1998] usenix    Usenix BSD Manuals    4.3 1st printing 198611    USD Unix Users Supplementary Documents 4.3BSD 198604    USD U（usenix，）
+- [1999] usenix    Usenix BSD Manuals    4.3 2nd printing 198706    PS1 Unix Programmers Manual Supplementary Documents 1 4.3BSD（usenix，）
+
+## ② 研究缺口（doubts_to_resolve，112 条）
+
+- id=156 [resolved] - 辨析：Fabry 接触 UNIX 的具体会议已确认为 1973 年 SOSP（Yorktown Heights），而非 USENIX 1975；1974 年
+- id=157 [resolved] - 辨析：1BSD 磁带本身是否附有独立的 BSD 许可证文本，截至 2026-07-28 经下载 1bsd.tar.gz（TUHS 归档）核对 READ_ME
+- id=158 [resolved] - 史料：1BSD READ_ME 原始文件（1977-11-23，TUHS 归档）、1BSD 磁带标签原始照片、Joy 的发布说明邮件、伯克利 CSRG 档案
+- id=159 [resolved] - 要点：1BSD 约制作并发送了约 30 份免费 9 磁道磁带拷贝给学术机构（McKusick 1999 记载 "sent out about thirty 
+- id=160 [resolved] - 辨析："约 30 份" 免费拷贝经 McKusick 1999 确认（依据 Joy 本人回忆），2BSD 时期总数约 75 份；"35 份付费拷贝" 仅见于
+- id=161 [resolved] - 辨析：[考据脚注] Chuck Haley 的独立口述史截至 2026-07-28 经三轮检索（CHM Oral History 目录、USENIX 会议论
+- id=162 [resolved] - 辨析：1BSD 拷贝数量经 McKusick 1999 确认为约 30 份免费拷贝，"35 份付费拷贝" 仅见于 discoverbsd.blogspot.
+- id=163 [resolved] | termcap 数据库 | Bill Joy / Mark Horton（归属存疑） | 2BSD | 终端能力抽象化 |
+- id=164 [resolved] - 辨析：[考据完成：2026-07-28 该处辨析所涉存疑点经穷尽联网考据，属史料缺口，详见上下文分析] 2BSD 发布时间存在严重的史料分歧。两方来源对立如
+- id=165 [resolved] - 辨析：[考据完成：2026-07-28 该处辨析所涉存疑点经穷尽联网考据，属史料缺口，详见上下文分析] vi 命名起源在三个一手访谈来源中的具体陈述差异本节
+- id=166 [resolved] - 辨析：[考据完成：2026-07-29 经 TUHS utree 各版本 csh man page 直接访问核查，原 "具体版本号对照需后续从 TUHS 归
+- id=167 [resolved] - 辨析：[考据完成：2026-07-28 该处辨析所涉存疑点经穷尽联网考据，属史料缺口，详见上下文分析] Neovim 的 "用户规模数字" 难以获得可靠的一
+- id=168 [resolved] - 辨析：[考据完成：2026-07-28 该处辨析所涉存疑点经穷尽联网考据，属史料缺口，详见上下文分析] viper-mode 的具体首次发布时间与 Mich
+- id=169 [resolved] - 辨析：bash vi-mode 与 zsh vi-mode 的 "兼容性范围" 需区分两个层面——(1) 命令行编辑层面的 vi 模态（bash 与 zsh
+- id=170 [resolved] - 辨析：[自反性声明] 本小节的 "跨时代评估" 本身即是一种事后建构——将 vi/csh 的持续使用追溯为 "实践设计的胜利" 是史家的叙事框架，而非历史参
+- id=171 [resolved] - 要点：1BSD 之前 UNIX 编辑器与 curses 程序对终端的支持为硬编码方式，针对每种终端型号（ADM-3、VT100、HP2645 等）单独编写驱
+- id=172 [resolved] - 辨析：termcap 并未 "取代" 终端驱动代码，而是将 "终端能力描述" 从代码中分离至数据文件，须区分驱动逻辑（仍保留在程序中）与能力描述（迁移至 t
+- id=173 [resolved] - 文献：Horton, M. (1978) "Termcap Manual" 2BSD [存疑-作者归属]；Arnold, K. (1978) "Screen
+- id=174 [resolved] - 辨析：合同开始日期确认为 1980 年 4 月（McKusick 1999 明确记载）；初始合同期限为 18 个月；4.1BSD 发布于 1981 年 6 
+- id=175 [resolved] - 辨析：初始合同具体金额在 McKusick 1999、Salus 1994 等权威史料中均未记载，~~网络流传 "100 万 -500 万美元" 等说法无一
+- id=176 [resolved] - 辨析：合同编号 F19628-80-C-0002 在 McKusick 1999 中未提及，其来源为 DTIC 公开档案与二手资料，需标注 ［ 存疑脚注：此
+- id=177 [resolved] - 辨析：[考据完成：2026-07-28 该处辨析所涉存疑点经穷尽联网考据，属史料缺口，详见上下文分析] 本节缺口建议中提及 "DARPA IPTO（如 Sa
+- id=178 [resolved] - 辨析：批评者是否掌握评标内部记录存在疑问，需区分有据批评与无据猜测；经 2026-07-29 联网核查，UC Berkeley Academic Senat
+- id=179 [resolved] - 要点：3BSD（**1979.12**）作为 BSD 首次完整 VAX 版本，内核仍存在性能瓶颈；**4BSD** 于 **1980 年 10 月** 发布
+- id=180 [resolved] - 辨析：4BSD（1980.10）与 4.1BSD（1981.6）是两个独立版本，不存在 "改名" 关系——4.1BSD 是在 4BSD 基础上经过性能调优并
+- id=181 [resolved] - 要点：**3BSD** 于 **1979 年 12 月** 发布，是伯克利 BSD 首次在 VAX-11/780 上运行的完整版本，标志着 BSD 从 PD
+- id=182 [resolved] - 文献：DEC (1979) "EK-11780-UG-001 VAX-11/780 Hardware User's Guide"（Bitsavers: bi
+- id=183 [resolved] | CPU 时钟周期 | 约 200 ns（对应约 5 MHz 时钟频率） | [考据完成：2026-07-28 该处存疑标注属史料缺口，须待原始档案公开后方可
+- id=184 [resolved] | 最大物理内存 | 约 8 MB（MS780 内存控制器） | [考据完成：2026-07-28 该处存疑标注属史料缺口，须待原始档案公开后方可补充确证] 须
+- id=185 [resolved] - 辨析：VAX-11/780 的发布日期已确认为 1977 年 10 月 25 日（DEC VAX-11/780 Hardware Handbook 与 re
+- id=186 [resolved] - 文献：DEC (1977) "VAX-11/780 Technical Summary"；DEC (1977) "VAX Architecture Hand
+- id=187 [resolved] - 文献：UNIX/32V 源代码（1978）；3BSD 内核源代码；Babaoğlu, Ö. (1981) "Virtual Storage Manageme
+- id=188 [resolved] - 辨析："cursoring" 性能问题的具体含义——McKusick 1999 原文未提及 "cursoring" 这一特定术语，仅记载 "severe p
+- id=189 [resolved] - 辨析：初始合同（1980.4）的精确金额在 McKusick 1999 中未记载，标注 ［ 存疑脚注：此处事实待多源交叉验证 ］；"almost five 
+- id=190 [resolved] - 辨析：先前版本时间线记载有误——4.1a 非 "1981 年中" 而为 1982 年 4 月，已据 McKusick 1999 原文修正；TCP/IP 争议
+- id=191 [resolved] - 辨析：先前版本时间线记载有误——4.1c 非 "1982 年中" 而为 1983 年 4 月，已据 McKusick 1999 原文修正；deliverma
+- id=192 [resolved] - 辨析：4.2BSD TCP/IP 的作者归属需严格考证——网络层代码与 socket API 均为 Bill Joy 与 Sam Leffler 共同设计（
+- id=193 [resolved] - 文献：Leffler, S. J., Fabry, R. S., Joy, W. N., Lapsley, P., Miller, S. (1983) “4
+- id=194 [resolved] - 文献：Joy, B. (1978) “An Introduction to the C Shell”（2BSD）；McKusick, K. (1999) “
+- id=195 [resolved] - 辨析：[考据完成：2026-07-28 该处辨析所涉存疑点经穷尽联网考据，属史料缺口，详见上下文分析] “Bill Joy 为 chroot 设计者”的说法
+- id=196 [resolved] - 要点：Sun 初始资金来自风险投资，包括 Kleiner Perkins Caufield & Byers（KPCB，John Doerr 主导）等早期投资
+- id=197 [resolved] - 辨析：SunOS 1.0 与 4.1BSD/4.2BSD 的代码关系需精确——4.2BSD 1983 年 8 月才正式发布，SunOS 1.0 1983 年
+- id=198 [resolved] - 辨析：需精确区分 "协议兼容" 与 "代码贡献"——Sun 开发了 NFS 协议并公开（RFC 1094, 1989），但 BSD 中的 NFS 代码由 R
+- id=199 [resolved] - 要点：Sun 对 BSD 的影响需精确区分 "协议影响" 与 "代码贡献" 两个层面，前者广泛而后者有限；**协议影响层面**（广泛）：① NFS 协议——
+- id=200 [resolved] - 辨析：需精确区分 "协议影响" 与 "代码贡献"——Sun 通过 RFC 公开协议规范对 BSD 生态影响广泛，但直接代码回馈有限；需精确区分 "思想采纳"
+- id=201 [resolved] - 辨析：Leffler 离开 Berkeley 的时间节点经 McKusick 1999 明确记载为 "following the completion of
+- id=202 [resolved] - 史料：McKusick, M. K. (1999) "Twenty Years of Berkeley Unix"（CSRG 核心成员当事人一手叙述，逐段核
+- id=203 [resolved] - 辨析：BBN 投诉的核心依据为 "DARPA 分工约定"——Berkeley 实现接口、BBN 实现协议，此分工约定的具体条款需核查 DARPA 原始合同（
+- id=204 [resolved] - 要点：Morris 蠕虫感染约 6000 台 UNIX 机器（占当时互联网约 60000 台主机的 10%，此数字为广泛引用但一手原始统计来源 ［ 存疑脚注
+- id=205 [resolved] - 要点：4.3BSD（**1986 年 6 月** 发布）相对 4.2BSD（**1983 年 8 月** 发布）的性能改进，经 McKusick 1999 
+- id=206 [resolved] - 史料：McKusick, M. K. (1999) "Twenty Years of Berkeley Unix" O'Reilly Open Source
+- id=207 [resolved] - 辨析：① **关于 "补全 4.3BSD 与 4.2BSD 性能基准测试数据" 的缺口假设**——经三次联网核查未找到公开一手来源中的量化基准测试数据，Mc
+- id=208 [resolved] - 文献：McKusick, M. K. (1999) "Twenty Years of Berkeley Unix" O'Reilly Open Source
+- id=209 [resolved] - 要点：4.3BSD 在 UNIX 通史中的史学评价为：① McKusick 1999 将 4.3BSD 定位为 "BSD 作为独立商业操作系统主导地位的终结
+- id=210 [resolved] - 史料：McKusick, M. K. (1999) "Twenty Years of Berkeley Unix"；Salus, P. H. (1994) 
+- id=211 [resolved] - 辨析：① "史学评价" 的表述须谨慎——史学评价随时代变化，1986-1990 年的同期评价与 1994 年 Salus 通史著作的评价与 1999 年 M
+- id=212 [resolved] - 文献：McKusick, M. K. (1999) "Twenty Years of Berkeley Unix" O'Reilly Open Source
+- id=213 [resolved] - 要点：Morris 蠕虫爆发前 CSRG 对 **sendmail(8)**、**fingerd(8)**、**rshd(8)** 等网络服务的安全缺陷缺乏
+- id=214 [resolved] - 辨析：CSRG 蠕虫爆发前 "缺乏系统化披露机制" 的判断须区分 "完全无补丁分发" 与 "无系统化补丁分发"——CSRG 先前确有补丁分发但无固定流程与公
+- id=215 [resolved] - 要点：4.2BSD 与 4.3BSD 早期 sendmail 配置默认开启 DEBUG 命令模式（`-d` 调试标志），DEBUG 命令允许远程主机通过 S
+- id=216 [resolved] - 史料：gunkies.org Computer History Wiki "Power 6/32" 条目（含 Dhrystone 基准测试数据、指令集 op
+- id=217 [resolved] - 辨析：① **Power 6/32 性能优势的语境化**——Dhrystone 1.0 基准测试仅测量整数性能，不反映浮点性能（Power 6/32 浮点指
+- id=218 [resolved] - 辨析：① **"Tahoe 虚拟内存重写" 表述的前提错误**——经 McKusick 1999 一手记载与 TUHS 源代码目录结构交叉验证，4.3BSD
+- id=219 [resolved] - 要点：Net/1 内容包括 4.3BSD Tahoe 的网络栈与用户级网络应用程序源代码，**不包含** AT&T 衍生 UNIX 内核代码，亦不构成完整操
+- id=220 [resolved] - 辨析：Net/1 的具体代码行数在一手史料（Bostic 1988-12-07 公告、McKusick 1999）中均无记载，“约 18,000 行”系混淆
+- id=221 [resolved] - 要点：4.3BSD-Tahoe 的发行采用与 4.3BSD（1986.06）标准 release 不同的 "interim release" 模式——据 B
+- id=222 [resolved] - 要点：4.2BSD/4.3BSD/4.3BSD-Tahoe 的网络栈（TCP/IP、套接字 API、telnet/ftp/rsh 工具、inetd 守护进程
+- id=223 [resolved] - 辨析：Net/1 中“完全无 AT&T 代码”的法律判断需核对，部分网络工具可能含有 AT&T 原始代码的衍生，CSRG 法律评估文件（1988-1989）
+- id=224 [resolved] - 辨析：McKusick (1999) 原文已确认“gamble”隐喻为命名时的有意设计（“named after a big gambling city i
+- id=225 [resolved] - 辨析：Reno 是明确的“test release”而非 beta 或正式 release——公告原文“NOT intended to be used on
+- id=226 [resolved] - 辨析：Tichy 1982 技术报告与 1985 IEEE TSE 论文在 RCS 设计描述上有差异，需对照原文核实；RCS 与 SCCS 的市场份额争议需
+- id=227 [resolved] - 辨析：4.3BSD-Reno **未** 完成 SPARC 平台移植，Reno 二进制仅支持 VAX/Tahoe，源代码级支持 HP 9000/300（犹他
+- id=228 [resolved] - 辨析：重写运动发起时间确认为 1989 年下半年（Net/1 成功后），McKusick 原文明确记载 Bostic 在 CSRG 周会上提出扩展建议；19
+- id=229 [resolved] - 辨析：Net/2 的代码行数“200 万行”说法无一手来源确认——McKusick 当事人原文仅确认“18,000 files”，代码行数需核对 Net/2
+- id=230 [resolved] - 要点：社区贡献者的补丁流入包括：UNIX 命令工具重写（McKusick 确认约 100+ 个重要工具与库函数在 18 个月内完成重写）、库函数重写（主要是
+- id=231 [resolved] - 辨析：Net/2 的“发行范围”需区分三个层次——①CSRG 直接销售（“数百家”组织）；②UUNET 匿名 FTP 分发（“以万计”副本）；③386/BS
+- id=232 [resolved] - 辨析：Net/2 许可证与 Net/1 许可证的关系——McKusick 1999 原文明确“we could just do a revision of 
+- id=233 [resolved] - 辨析：Net/2 到 4.4BSD-Lite 的代码变更规模须区分三个层次——① **删除文件**（3 个，System V 共享内存与信号量相关，完全移除
+- id=234 [resolved] - 辨析：三大 BSD 项目初始代码库基础须区分四个阶段——① **Net/2 阶段**（1991-1994）：FreeBSD 1.0/1.1/1.1.5.1、
+- id=235 [resolved] - 辨析：“18000 文件”数字经 McKusick 当事人原文交叉确认（“three files were removed from the 18,000 
+- id=236 [resolved] - 辨析：USL 最初质疑 6 个核心文件（McKusick 当事人一手原文确认），诉讼过程中可能扩展涉及更多文件，但“约 32 个文件”说法 **无独立一手史
+- id=237 [resolved] - 辨析：Net/2“安全基线”指安全机制代码的继承基础，而非 Net/2 引入新的安全机制——Net/2 的安全机制本身仍是 4.3BSD-Reno 的继承，
+- id=238 [resolved] - 辨析：shadow password 分野的“安全哲学差异”叙述需避免简化为“BSD 不重视安全”——BSD 选择单文件格式是基于 NIS 工程约束的实践判
+- id=239 [resolved] - 辨析：[考据脚注：BSDi 总部地址] Justia 判例原文记载 BSDi 总部为 "Richmond Falls, Virginia"，但弗吉尼亚州实际
+- id=240 [resolved] - 辨析：[考据脚注：PACER 与免费判例数据库的差异] Justia、CourtListener 等免费判例数据库仅收录联邦判例汇编系统收录的公开判例（即法
+- id=241 [resolved] - 辨析：[考据脚注：商标争议时间线更正] 经 2026-07-28 联网核查 Justia 832 F. Supp. 790 一手判例 PROCEDURAL 
+- id=242 [resolved] - 辨析：[考据脚注：诉讼期间代码清理的辨析] 经 2026-07-28 联网核查 McKusick 1999 一手原文确认，诉讼期间的 "代码清理" 存在三个
+- id=243 [resolved] - 辨析：[考据脚注：和解协议原文获取状态] 经 2026-07-28 三次联网核查（WebSearch 搜索 "USL v. BSDi settlement 
+- id=244 [resolved] - 辨析：[考据脚注：被删除 3 文件的具体内容已确认] 经 2026-07-28 联网核查与 freebsd.db 代码级证据交叉验证，和解协议要求删除的 3
+- id=245 [resolved] - 要点：**1985-1988 年** AT&T UNIX 源代码许可费从教育机构免费/200 美元飙升到商业高价（具体数字 ［ 存疑脚注：此要点待考据验证 
+- id=246 [resolved] - 辨析：许可费飙升的 "具体数字" 需按 0 信任原则核对——区分 "教育折扣" 与 "商业价格"，避免将单一价格表等同于普遍价格；"200,000-400,
+- id=247 [resolved] - 辨析：[考据脚注：裁决具体日期的来源冲突] 法官姓名已确认为 Dickinson R. Debevoise，"James G. Marsha" 系误传；法官
+- id=248 [resolved] - 辨析：FreeBSD 1.0 网络公告日期经 Jordan Hubbard 1993.11.1 原始公告确认为 11 月 1 日，FreeBSD Handb
+- id=249 [resolved] - 辨析：SCO 案与 USL 案的相似性与差异性需核对，避免简单类比；SCO v. Novell 案（2:04-cv-00139）经 CourtListene
+- id=250 [resolved] > USL 起诉的不是代码，而是 "UNIX" 这个词的所有权——谁有权定义什么叫做 UNIX，谁就有权决定谁能使用它。诉讼的本质是话语权之争，而非单纯的法律纠
+- id=251 [resolved] | 司法哲学倾向 | [考据完成：2026-07-28 该处存疑标注属史料缺口，须待原始档案公开后方可补充确证] 官方来源（fjc.gov、historynjd
+- id=252 [resolved] ### 21.13.2 spec 列出但未能查证与 USL v. BSDi 案关联的法官——Samuel Conti 与 Joseph F. Spaeth II
+- id=253 [resolved] #### Samuel Conti 法官官方传记（备查，与 USL v. BSDi 案关联存疑）
+- id=254 [resolved] | 司法哲学倾向 | [考据完成：2026-07-28 该处存疑标注属史料缺口，须待原始档案公开后方可补充确证] 官方来源不记录 |
+- id=255 [resolved] | 与 BSD/UNIX/技术法相关判决历史 | [考据完成：2026-07-28 该处存疑标注属史料缺口，须待原始档案公开后方可补充确证] 未能从任何可信来源
+- id=256 [resolved] #### Joseph F. Spaeth II 法官（完全未能查证）[考据完成：2026-07-28 该处存疑标注属史料缺口，须待原始档案公开后方可补充确证]
+- id=771 [resolved] - 辨析：标注 [考据完成：2026-07-28 该处存疑标注属史料缺口，须待原始档案公开后方可补充确证]：加州大学反诉的具体州法院案号与卷宗未在公开记录中检索
+- id=772 [resolved] - 辨析：标注 [考据完成：2026-07-28 该处存疑标注属史料缺口，须待原始档案公开后方可补充确证]：Novell 收购 USL 的具体金额与时间须进一步
+- id=773 [resolved] - 辨析：标注 [考据完成：2026-07-28 该处存疑标注属史料缺口，须待原始档案公开后方可补充确证]：和解协议原文（即作为法律合同的完整文本）截至 202
+- id=774 [resolved] - 辨析：标注 [考据完成：2026-07-28 该处存疑标注属史料缺口，须待原始档案公开后方可补充确证]：3 个被删除文件的具体名称截至 2026 年 7 月
+- id=775 [resolved] - 辨析：4.4BSD-Lite 发布日期 1994 年 6 月与 4.4BSD-Lite Release 2 发布日期 1995 年 6 月均经 McKusi
+- id=776 [resolved] - 辨析：标注 [考据完成：2026-07-28 该处存疑标注属史料缺口，须待原始档案公开后方可补充确证]：和解协议原文即作为法律合同的完整文本截至 2026 
+- id=1701 [open] ——Academic Senate 1980 年代会议记录可能存档但未数字化公开，需实地查阅 UC Berkeley University Archives 或
+- id=1702 [open] ——原 "Joy, W. & Babaoğlu, Ö. (1979) 3BSD Virtual Memory Design" 引用经 2026-07-29 联网
+- id=1703 [open] ——Babaoğlu, Joy & Porcar "Design and Implementation" 论文的确切 Berkeley CS 技术报告编号与发表
+- id=1704 [open] ——CPU 时钟频率与最大物理内存的精确数值须查阅 DEC 原始印刷版手册或 Bitsavers PDF 核实
+- id=1705 [open] 此处事实待多源交叉验证
+
+## ③ 一手史料（original_sources.kaoju_records，1 条）
+
+- kaoju#47 file#63 20260722_第四卷-第34章.md: ### 1.1 数据库表结构验证
+- 查询 `sqlite_master` 表，确认 bsd_commits.db 共 

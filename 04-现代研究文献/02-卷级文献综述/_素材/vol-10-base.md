@@ -1,0 +1,183 @@
+# 第 10 卷综述素材（T1 三源合一，2026-08-04 自动生成）
+
+> 卷目录：第10卷-openbsd的历史｜章范围：ch190-ch212
+
+## ① 现有研究（references_fulltext，42 条）
+
+- [1763] [存疑] DTIC ADA436194（文件名派生，主库 bibliography_entry 为空；自动抽取证据句涉及 Windows 2000/Linux（，）
+- [1788] FreeBSD Journal 2014.09-10（FreeBSD Journal 2014.09-10，）
+- [1910] [存疑] Recommendations for secure initialization routines in operating systems（文件名（，）
+- [1911] Recommendations for secure initialization routines in operating systems    history files recommendationsf109451206（Recommendations for secure initialization routines in operating systems，）
+- [1912] Recommendations for secure initialization routines in operating systems    history files recommendationsf109451206（Recommendations for secure initialization routines in operating systems，）
+- [1913] Recommendations for secure initialization routines in operating systems    history files recommendationsf109451206（Recommendations for secure initialization routines in operating systems，）
+- [1914] Recommendations for secure initialization routines in operating systems    history files recommendationsf109451206（Recommendations for secure initialization routines in operating systems，）
+- [1915] Recommendations for secure initialization routines in operating systems    history files recommendationsf109451206（Recommendations for secure initialization routines in operating systems，）
+- [1916] Recommendations for secure initialization routines in operating systems    history files recommendationsf109451206（Recommendations for secure initialization routines in operating systems，）
+- [1917] Recommendations for secure initialization routines in operating systems    history files recommendationsf109451206（Recommendations for secure initialization routines in operating systems，）
+- [1918] Recommendations for secure initialization routines in operating systems    history files recommendationsf109451206（Recommendations for secure initialization routines in operating systems，）
+- [1919] Recommendations for secure initialization routines in operating systems    history files recommendationsf109451206（Recommendations for secure initialization routines in operating systems，）
+- [1920] Recommendations for secure initialization routines in operating systems    history files recommendationsf109451206（Recommendations for secure initialization routines in operating systems，）
+- [1921] Recommendations for secure initialization routines in operating systems    history files recommendationsf109451206（Recommendations for secure initialization routines in operating systems，）
+- [1922] Recommendations for secure initialization routines in operating systems    history files recommendationsf109451206（Recommendations for secure initialization routines in operating systems，）
+- [1923] Recommendations for secure initialization routines in operating systems    history files recommendationsf109451206（Recommendations for secure initialization routines in operating systems，）
+- [2203] OpenBSD 2.0 Release Announcement（Theo de Raadt，1996）
+- [2204] OpenBSD 3.0 Release Announcement（The OpenBSD Project，2001）
+- [2205] OpenBSD 4.0 Release Announcement（The OpenBSD Project，2006）
+- [2206] OpenBSD 5.0 Release Announcement（The OpenBSD Project，2011）
+- [2207] OpenBSD 6.0 Release Announcement（The OpenBSD Project，2016）
+- [2208] OpenBSD 7.0 Release Announcement（The OpenBSD Project，2021）
+- [2209] OpenBSD 7.5 Release Announcement（The OpenBSD Project，2024）
+- [2210] OpenBSD 7.6 Release Announcement（The OpenBSD Project，2024）
+- [2211] OpenBSD 7.5 Errata（The OpenBSD Project，2024）
+- [2212] OpenBSD 7.6 Errata（The OpenBSD Project，2024）
+- [2213] OpenBSD 6.5 Errata（The OpenBSD Project，2019）
+- [2066] OpenBSD Innovations（，）
+- [2214] OpenBSD User Groups（The OpenBSD Project，2024）
+- [2215] OpenBSD FAQ（The OpenBSD Project，2024）
+- [2216] Theo de Raadt: That whole "Linux stealing our code" thing（Theo de Raadt，2007）
+- [2217] OpenBSD bcw: Possible GPL license violation issues（Theo de Raadt，2007）
+- [2218] OpenBSD 2.0 release announcement (1996-10-18)（Theo de Raadt，1996）
+- [2219] The OpenBSD Project security page（The OpenBSD Project，2024）
+- [2283] OpenBSD 2.0 release notes (first release 1996-10-18)（Theo de Raadt，1996）
+- [2284] OpenBSD 2.1 release (code audit foundation)（Theo de Raadt，1997）
+- [2285] OpenBSD 2.3 release (security focus)（Theo de Raadt，1998）
+- [2286] OpenBSD 2.6 release (OpenSSH debut)（Theo de Raadt，1999）
+- [2287] OpenBSD 3.0 release（The OpenBSD Project，2001）
+- [2288] OpenBSD 5.0 release notes（The OpenBSD Project，2011）
+- [2289] OpenBSD 5.5 release notes (release cycle culture)（The OpenBSD Project，2014）
+- [2290] OpenBSD 5.8 release notes（The OpenBSD Project，2015）
+
+## ② 研究缺口（doubts_to_resolve，128 条）
+
+- id=855 [resolved] | **1.0/1.1** | 1996 年（具体日期 ［ 存疑脚注 ］） | NetBSD 1.0 + 加密代码（SSH、SSL）基础 | fork 后首批 
+- id=856 [resolved] - 要点：Theo de Raadt 1994 年 12 月 23 日因与 NetBSD Core Team（特别是 Chris Demetriou）的冲突被逐
+- id=857 [resolved] - 辨析：冲突的具体细节存在叙事分歧——de Raadt 自述与技术争议相关，NetBSD Core Team 则强调个人作风问题；de Raadt 被逐时间经
+- id=858 [resolved] - 要点：OpenBSD 1.0/1.1（1996 年发布，具体日期 ［ 存疑脚注：此要点待考据验证 ］）以 NetBSD 1.0 + 加密代码（如 SSH、S
+- id=859 [resolved] - 辨析：OpenBSD 1.0/1.1 的具体发布日期存在多种说法——OpenBSD Jumpstart 称“The first OpenBSD releas
+- id=860 [resolved] - 辨析：“数亿台服务器”的部署规模估计缺乏权威统计——【0 信任原则·三源交叉估算的方法论限制】2026-07-30 经三次复查考据，原拟以 Netcraft
+- id=861 [resolved] > 84.3 节梳理了 OpenSSH 的诞生叙事（fork 动机、开发历程、全球部署），本节补足 fork 的四层辩证链——批评（Ylönen 阵营立场）、反
+- id=862 [resolved] - 史料：OpenSSH 项目历史页面（<https://www.openssh.com/history.html，记载“the> last one free 
+- id=863 [resolved] - 辨析：Ylönen 阵营立场的考据须遵循 0 信任原则——【查证来源】OpenSSH 官方历史页面（<https://www.openssh.com/his
+- id=864 [resolved] - 文献：OpenSSH 项目历史 ［EB/OL］. <https://www.openssh.com/history.html；SSH> Communicat
+- id=865 [resolved] - 辨析：OpenBSD 阵营论证的考据须遵循 0 信任原则——【查证来源】（1）OpenSSH 官方历史页面（<https://www.openssh.com
+- id=866 [resolved] - 辨析：许可证纯洁化争议的辨析须区分三个维度并以三段式呈现——【查证来源】（1）OpenSSH 官方历史页面（<https://www.openssh.com
+- id=867 [resolved] - 辨析：合图的解释力须经具体场景评估并以三段式呈现——【查证来源】（1）OpenSSH 官方历史页面（<https://www.openssh.com/his
+- id=868 [resolved] - 辨析：本子节的哲学审视须以三段式呈现——【查证来源】（1）原材料/哲学/项目统摄史观/第 25 章.md 总纲第 13、19、21 条原文经 2026-07
+- id=869 [resolved] - 辨析：以邮箱域判定多样性的方法对 OpenBSD 失效，须改用邮件列表属地、开发者访谈与第三方调查间接推断；任何具体国别占比均须标注 ［ 存疑脚注：此处事实
+- id=870 [resolved] - 辨析：本库 contributors 表仅覆盖提交者，未覆盖文档/ports/翻译等非提交贡献者，故“多元群体”的全貌需补充非提交贡献记录；相关缺口标注 ［
+- id=871 [resolved] - 要点：Theo de Raadt 1994 年 12 月 23 日因与 NetBSD Core Team（特别是 Chris Demetriou）的冲突被逐
+- id=872 [resolved] - 辨析：fork 的具体动机在 de Raadt 自述与 NetBSD Core Team 公告中存在叙事分歧——前者强调技术争议（i386 移植方向），后者
+- id=873 [resolved] - 辨析：利益分配审视的辨析须以三段式呈现——【查证来源】（1）原材料/哲学/项目统摄史观/第 25 章.md 总纲第 13 条原文经 2026-07-23 一
+- id=874 [resolved] | OpenBSD 2.0 | 1996-10-18［ 存疑脚注：精确发布日期待核验，社区共识日期，部分来源仅显示年月“1996-10”］ | （无，自 3.0
+- id=875 [resolved] - 辨析：RELEASE 公告日期的考据须遵循 0 信任原则并以三段式呈现——【查证来源】（1）OpenBSD 官网各版本 release 页面（如 `http
+- id=876 [resolved] - 辨析：Foundation 讨论的具体参与者与立场需考据——部分 committer 支持，de Raadt 态度复杂；2007 年注册的具体时间需对照加拿
+- id=877 [resolved] - 要点：对 de Raadt 单方面撤权与 PF 移植到 FreeBSD 的批评集中于四点——其一，de Raadt 个人主导的权限模型缺乏程序正义，新 co
+- id=878 [resolved] - 要点：对 OpenBSD 阵营反批评的再回应集中于三点——其一，“6 个月发布周期”的工程效率优势不否定权限模型的程序正义缺失——OpenBSD 6 个月发
+- id=879 [resolved] - 辨析：批评发言的代表性需考据——单一用户的抱怨不等于社区共识；【0 信任原则·comp.unix.bsd 与 LKML 考据】2026-07-30 经 Go
+- id=880 [resolved] - 辨析：IPFilter 许可证变更的具体条款在不同叙事中存在差异——部分资料称“不得用于商业用途”，部分称“不得修改”，需对照 IPFilter 3.4.3
+- id=881 [resolved] - 辨析：RELEASE 公告日期与 release song 标题的考据须遵循 0 信任原则并以三段式呈现——【查证来源】（1）OpenBSD 官网各版本 r
+- id=882 [resolved] - 辨析：Foundation 成立的精确日期以加拿大政府注册记录与 OpenBSD Foundation 官方公告为准——Foundation 官网首页（**
+- id=883 [resolved] - 辨析：考据过程留痕——【查证来源】FSF 对 GPLv3 专利条款的官方立场以 FSF 官方文档与 GPLv3 起草过程档案为准，经 <https://ww
+- id=884 [resolved] - 辨析：考据过程留痕——【查证来源】de Raadt 对 gcc GPLv3 的具体批评内容以 marc.info 存档原始帖子为准——OSNews、Slas
+- id=885 [resolved] - 辨析：考据过程留痕——【查证来源】FSF 对 GPLv3 专利条款的官方立场以 FSF 官方文档为准，经 <https://www.fsf.org/lice
+- id=886 [resolved] - 辨析：考据过程留痕——【查证来源】FreeBSD、NetBSD、OpenBSD、DragonFly BSD 切换至 clang/LLVM 的具体时间以各自 
+- id=887 [resolved] - 辨析：RELEASE 公告日期与 release song 标题的考据须遵循 0 信任原则并以三段式呈现——【查证来源】（1）OpenBSD 官网各版本 r
+- id=888 [resolved] - 辨析：OpenBSD 5.0 SMP 与 FreeBSD SMPng 的差距以同架构同负载的基准测试为准——FreeBSD SMPng 自 5.0（2003
+- id=889 [resolved] - 辨析：OpenBSD 5.1 网络栈改进的具体性能提升数字以 Release Notes 中记录的改进项为准——Release Notes 记录了多队列网卡
+- id=890 [resolved] - 辨析：committer 的具体加入与退出时间以 bsd_commits.db openbsd-src 仓库贡献者首末 commit 时间与邮件列表公告为准
+- id=891 [resolved] - 辨析：考据过程留痕——【查证来源】Heartbleed 漏洞的技术细节经 heartbleed.com 官网一手核验（CVE-2014-0160 确认为官方
+- id=892 [resolved] - 辨析：考据过程留痕——【查证来源】OpenSSL 项目对 LibreSSL fork 的官方回应以 OpenSSL 项目博客（<https://www.op
+- id=893 [resolved] - 辨析：考据过程留痕——【查证来源】Beck 对“fork 分裂社区”批评的具体回应以 marc.info 存档的 openbsd-tech 与 openbs
+- id=894 [resolved] - 辨析：考据过程留痕——【查证来源】OpenSSL 1.1.0 Release Notes（<https://www.openssl.org/news/ope
+- id=895 [resolved] - 辨析：考据过程留痕——【查证来源】LibreSSL 与 OpenSSL 的并存状态以两项目当前 Release Notes（<https://www.ope
+- id=896 [resolved] - 辨析：RELEASE 公告日期与 release song 标题的考据须遵循 0 信任原则并以三段式呈现——【查证来源】（1）OpenBSD 官网各版本 r
+- id=897 [resolved] - 要点：对 LibreSSL fork 的批评集中于四点——其一，fork 加剧了 TLS 库的碎片化，OpenSSL 作为全球 HTTPS 基础设施的核心组
+- id=898 [resolved] - 辨析：考据过程留痕——【查证来源】总纲第 5 条与第 13 条原文经 `原材料/哲学/一刻哲学/第25章.md` 一手核验，第 5 条明确“每一次 fork
+- id=899 [resolved] - 辨析：RELEASE 公告日期与 release song 标题的考据须遵循 0 信任原则并以三段式呈现——【查证来源】（1）OpenBSD 官网各版本 r
+- id=900 [resolved] - 辨析：unveil(2) 引入的考据须遵循 0 信任原则——【查证来源】（1）OpenBSD 6.2 release 页面（<https://www.ope
+- id=901 [resolved] - 辨析：OpenBSD 关于 AI 代码的具体政策在 <misc@openbsd.org> 邮件列表讨论中以 de Raadt 的发言为基准——de Raad
+- id=902 [resolved] - 辨析：NetBSD tainted code 政策的执行情况以 NetBSD Commit Guidelines 页面文本为准——该条款于 2024-05-
+- id=903 [resolved] - 辨析：邮件列表档案的完整性以 marc.info 存档为准——misc@ 与 tech@ 的公开讨论有完整存档，但 Core Team 私有讨论不在公开档案
+- id=904 [resolved] - 史料：项目史观总纲第 13 条原文（`原材料/哲学/一刻哲学/第25章.md`）；OpenBSD committer 政策文档与 <misc@openbsd
+- id=905 [resolved] | OpenBSD 7.7 | 2025-04-28 | ［ 存疑脚注：release song 标题待核实 ］ | <https://www.openbsd.
+- id=906 [resolved] | OpenBSD 7.8 | 2025-10-22 | ［ 存疑脚注：release song 标题待核实 ］ | <https://www.openbsd.
+- id=907 [resolved] | OpenBSD 7.9 | 2026-05-19 | ［ 存疑脚注：release song 标题待核实 ］ | <https://www.openbsd.
+- id=908 [resolved] - 辨析：RELEASE 公告日期与 release song 标题的考据须遵循 0 信任原则并以三段式呈现——【查证来源】（1）OpenBSD 官网各版本 r
+- id=909 [resolved] - 辨析：Errata 公告考据须遵循 0 信任原则并以三段式呈现——【查证来源】（1）OpenBSD 官网 errata 汇总页面 <https://www.
+- id=910 [resolved] - 辨析：OpenBSD 1.0/1.1 的具体发布日期在数据库中无直接证据——bsd_commits.db openbsd-src 仓库 tags 表为空（t
+- id=911 [resolved] - 辨析：考据过程留痕——【查证来源】Adam Glass 通知邮件原文经 <https://mail-index.netbsd.org/netbsd-user
+- id=912 [resolved] - 辨析：考据过程留痕——【查证来源】OpenBSD fork 启动时间经 bsd_commits.db openbsd-src 仓库 commits 表最早 
+- id=913 [resolved] - 辨析：考据过程留痕——【查证来源】事件不可调和性的三重前理解分析基于 Adam Glass 1994-12-23 通知邮件原文（一手）与 bsd_commi
+- id=914 [resolved] - 辨析：考据过程留痕——【查证来源】项目史观总纲第 5、8、19 条原文经原材料/哲学/项目统摄史观/第 25 章.md 一手核验，三条总纲的原文表述与本节引
+- id=915 [resolved] - 辨析：考据过程留痕——【查证来源】Adam Glass 通知邮件原文经 <https://mail-index.netbsd.org/netbsd-user
+- id=916 [resolved] - 辨析：考据过程留痕——【查证来源】Adam Glass 通知邮件原文经 <https://mail-index.netbsd.org/netbsd-user
+- id=917 [resolved] - 辨析：考据过程留痕——【查证来源】项目史观总纲第 13、19、21 条原文经原材料/哲学/项目统摄史观/第 25 章.md 一手核验，三条总纲的原文表述与本
+- id=918 [resolved] - 辨析：考据过程留痕——【查证来源】三类批评的具体诉求经以下一手史料核验：SSH 1.3 协议遗留用户批评的技术性兼容性诉求，经 OpenSSH 官方历史页面
+- id=919 [resolved] - 辨析：考据过程留痕——【查证来源】OpenBSD 阵营反批评的三点论据经以下一手史料核验：第一点（de Raadt 移除非可移植代码的目的），经 OpenS
+- id=920 [resolved] - 辨析：考据过程留痕——【查证来源】再批评两点的评估经以下一手史料核验：第一点（循环论证批评），论据源自 92.8 节已核验的 OpenSSH 官方历史页面（
+- id=921 [resolved] - 辨析：考据过程留痕——【查证来源】合图“成功”判定的各项事实经以下一手史料核验：SSH1 移除时间线，经 OpenSSH 7.4 Release Notes
+- id=922 [resolved] - 辨析：考据过程留痕——【查证来源】项目统摄史观审视的史料基础经以下核验：项目史观总纲第 15 条（“文化即形式主义”）、第 19 条（“解释学循环是历史认识
+- id=923 [resolved] - 辨析：考据过程留痕——【查证来源】三类批评的具体诉求经以下一手史料核验：Provos 赴加拿大移除加密与 GPL 组件，经 OpenSSH 官方历史页面（<
+- id=924 [resolved] - 辨析：考据过程留痕——【查证来源】OpenBSD 阵营反批评的三点论据经以下一手史料核验：第一点（Provos 移除 libgmp 是修复既有 GPL 违规
+- id=925 [resolved] - 辨析：考据过程留痕——【查证来源】再回应三点的评估经以下一手史料核验：第一点（libgmp 移除时机由发布截止日期驱动），经 OpenSSH 官方历史页面（
+- id=926 [resolved] - 辨析：考据过程留痕——【查证来源】合图“成功”判定的各项事实经以下一手史料核验：Provos 移除 libgmp 的长期正确性，经 OpenSSH 官方历史
+- id=927 [resolved] - 辨析：考据过程留痕——【查证来源】项目统摄史观审视的史料基础经以下核验：项目史观总纲第 13 条（“法律与道德是利益分配。任何道德问题本质上是利益问题，社区
+- id=928 [resolved] - 辨析：考据过程留痕——【查证来源】Ted Unangst EuroBSDCon 2014 演讲“LibreSSL: More Than 30 Days La
+- id=929 [resolved] - 辨析：考据过程留痕——【查证来源】OpenSMTPD 项目主页 <https://www.opensmtpd.org/> 一手核验，主页明确记载“Start
+- id=930 [resolved] - 辨析：考据过程留痕——【查证来源】OpenNTPD 项目目标页面 <http://www.openntpd.org/goals.html> 经 WebFet
+- id=931 [resolved] - 辨析：考据过程留痕——【查证来源】项目史观总纲第 15、19、21 条原文经 `c:\Users\ykla\Documents\hibsd\原材料\哲学\一
+- id=932 [resolved] - 辨析：考据过程留痕——【查证来源】Ted Unangst EuroBSDCon 2014 演讲经 <https://www.openbsd.org/pape
+- id=933 [resolved] - 辨析：考据过程留痕——【查证来源】OpenSMTPD 项目目标页面经 <https://www.opensmtpd.org/goals.html> 一手核验
+- id=934 [resolved] - 辨析：考据过程留痕——【查证来源】OpenNTPD 项目目标页面经 <http://www.openntpd.org/goals.html> 一手核验，原文
+- id=935 [resolved] - 辨析：考据过程留痕——【查证来源】项目史观总纲第 13、19、21 条原文经 `c:\Users\ykla\Documents\hibsd\原材料\哲学\一
+- id=936 [resolved] - 辨析：LibreSSL fork 时间线考据须遵循 0 信任原则并以三段式呈现——【查证来源】（1）LibreSSL 官网 <https://www.lib
+- id=937 [resolved] > 94.1-94.6 节梳理了 OpenBSD 哲学、治理、资金、发行文化、多元贡献与跨项目比较的事实性叙事，本节补足四层辩证链的批评层——外部观察者、被疏远
+- id=938 [resolved] - 史料：bsd_commits.db openbsd-src 仓库 contributors 表（<deraadt@openbsd.org> 27181 co
+- id=939 [resolved] - 史料：OpenBSD Project Goals（<https://www.openbsd.org/goals.html，经> WebFetch 核验载明“
+- id=940 [resolved] - 史料：de Raadt 在 <misc@openbsd.org> 的发言存档（<https://marc.info/?l=openbsd-misc，含“RT
+- id=941 [resolved] - 史料：OpenBSD Foundation 财务报告（<https://www.openbsdfoundation.org/，经> WebFetch 核验为
+- id=942 [resolved] - 辨析：反批评的合理性在不同叙事中评估不一——部分视为有效辩护，部分视为合理化；【0 信任原则·一致性效率的归因辨析】OpenBSD 6 个月发布周期的可持续
+- id=943 [resolved] - 辨析：反批评的合理性在不同叙事中评估不一——部分视为有效辩护，部分视为合理化；【0 信任原则·工程产出的归因辨析】OpenSSH、LibreSSL、pf 等
+- id=944 [resolved] - 辨析：反批评的合理性在不同叙事中评估不一——部分视为有效辩护，部分视为合理化；【0 信任原则·工程严谨性的语境辨析】“RTFM”回应是否构成“排外”须对照具
+- id=945 [resolved] - 辨析：反批评的合理性在不同叙事中评估不一——部分视为有效辩护，部分视为合理化；【0 信任原则·志愿哲学的限度】“志愿哲学保障独立性”论证须对照志愿者的可持续
+- id=946 [resolved] - 史料：OpenBSD 7.0-7.9 Release Notes（发布节奏记录）；de Raadt 个人年龄与 OpenBSD BDFL 继任机制讨论 ［ 
+- id=947 [resolved] - 辨析：再批评的合理性在不同叙事中评估不一——部分视为有效质疑，部分视为过度推演；【0 信任原则·前瞻性风险的辨析】“前瞻性风险”论证须区分“理论推演”与“事
+- id=948 [resolved] - 辨析：再批评的合理性在不同叙事中评估不一——部分视为有效质疑，部分视为过度要求；【0 信任原则·生态影响的限度】“OpenBSD 工程决策影响全球生态”论证
+- id=949 [resolved] - 史料：de Raadt 在 <misc@openbsd.org> 的发言存档（<https://marc.info/?l=openbsd-misc，含具体冲
+- id=950 [resolved] - 辨析：再批评的合理性在不同叙事中评估不一——部分视为有效质疑，部分视为过度解读；【0 信任原则·系统性效应的量化】“系统性排斥”论证须提供具体案例统计——若
+- id=951 [resolved] - 辨析：再批评的合理性在不同叙事中评估不一——部分视为有效质疑，部分视为过度担忧；【0 信任原则·结构性脆弱的量化】“结构性脆弱”论证须提供具体案例——201
+- id=952 [resolved] - 辨析：合图不寻求消除张力而寻求呈现张力——BDFL 模式的“效率”与“脆弱”、“安全至上”的“产出”与“代价”、排外性文化的“严谨”与“排斥”、商业支持缺位
+- id=953 [resolved] - 辨析：偶然性审视不意味着否定结构因果——de Raadt 的 BDFL 模式虽源于个人经验，但在 OpenBSD 工程目标下形成了结构性效应（6 个月发布周
+- id=954 [resolved] - 辨析：本体论平等不等于价值中立——史家仍须呈现 BDFL 模式的具体效应（治理效率与继承风险、“安全至上”的产出与代价、排外性文化的严谨与排斥、商业支持缺位
+- id=955 [resolved] - 史料：项目史观总纲第 13 条原文（`原材料/哲学/一刻哲学/第25章.md`）；OpenBSD committer 政策文档与 <misc@openbsd
+- id=956 [resolved] - 辨析：利益分配审视不意味着否定工程合理性——de Raadt 主导的权限管理、“安全至上”哲学、志愿模式、直接风格在 OpenBSD 工程目标下具有合理性，
+- id=957 [resolved] - 辨析：解释学循环不意味着相对主义——史家仍须以多源交叉验证逼近史实，但须自觉呈现前理解；【0 信任原则·叙事权力的自觉】本节作为项目统摄史观审视，自身亦嵌入
+- id=958 [resolved] - 史料：OpenBSD **goals.html**（<https://www.openbsd.org/goals.html，经> WebFetch 一手核验
+- id=959 [resolved] - 辨析：综合审视不意味着否定单一总纲的审视——第 13、19、21 条的视角各有侧重，第 13 条审视利益分配，第 19 条审视解释学循环与权力知识共谋，第 
+- id=960 [resolved] - 要点：OpenBSD Foundation 为加拿大非营利法人，理事会治理，接收捐赠支持 OpenBSD 项目，官网 <https://www.openbs
+- id=961 [resolved] **OpenBSD Foundation 年度报告清单（9 条，含 1 条存疑）**：
+- id=962 [resolved] | 2026 年度报告 | 2026 或 2027 | ［ 存疑脚注：待核实 ］ | 截至 2026-07-23 考据时点可能尚未发布 |
+- id=963 [resolved] - 辨析：OpenBSD Foundation 年度报告考据须遵循 0 信任原则并以三段式呈现——【查证来源】（1）OpenBSD Foundation 官网 
+- id=964 [resolved] - 要点：OpenBSD 采用 "默认安全 + 代码审计" 模型，FreeBSD 采用 "Security Officer + MAC Framework" 模
+- id=965 [resolved] - 史料：OpenBSD Security Advisories（<https://www.openbsd.org/security.html）与> FreeB
+- id=966 [resolved] - 史观：总纲第 7 条——技术选择即政治选择：pledge/unveil 的 "白名单内建" 路线对应 "开发者须为每程序声明最小权限" 的预设，MAC Fr
+- id=967 [resolved] - 辨析：OpenBSD 与 FreeBSD 安全模型严格程度的对比缺乏权威评估；pledge/unveil 与 MAC Framework 的技术层级不同——
+- id=968 [resolved] - 辨析：考据过程留痕——【查证来源】OpenBSD goals.html 页面经 openbsd.org/goals.html 一手核验，确认 "Focus 
+- id=969 [resolved] - 辨析：10 条传言逐条考据最早可考源头、流传路径、考证结论、考证依据；考证结论分布为史实属实 1 条（"Only two remote holes" 口号）
+- id=1638 [resolved] Corporations Canada 注册号与精确成立日期须通过 Corporations Canada 在线查询系统（需交互式查询）或加拿大联邦政府档案查阅
+- id=1687 [resolved] OpenBSD Foundation 成立的精确日期与 Corporations Canada 注册号未在现有公开来源中定位，2007 年说为社区共识与 Way
+- id=1688 [open] OpenSSH 部署规模的精确数字无单一权威来源，"数亿台服务器"为社区共识性估计，Netcraft/W3Techs/Debian Popcon 三源均无直接的
+- id=1689 [resolved] OpenBSD 2.0 精确发布日期因 OpenBSD 官网 release 页面失效、marc.info 1996 年存档未返回 2.0 公告、互联网档案馆无
+- id=1690 [open] 2003 年 OpenBSD Foundation 讨论的具体发起邮件 URL 与日期未在 marc.info 检索中定位，须以 OpenBSD 邮件列表完整存
+- id=1691 [open] comp.unix.bsd 与 LKML 中 OpenBSD "security theater" "limited hardware" 批评的具体邮件 URL
+- id=1710 [open] 称 OpenBSD 1.0/1.1 于 1996 年发布、2.0 于 1997 年 6 月发布。权威：OpenBSD 从未发布 1.0/1.1/1.3；首个发行
+- id=1711 [open] 标题预设 'OpenBSD 1.0/1.1/1.2 早期发布历程'，但 1.0/1.1 从未作为 OpenBSD 发行版存在；应改为 'OpenBSD 1.2 
+- id=1712 [resolved] 标题/正文称 pf 于 2001-12-30 引入。权威：OpenBSD 3.0 于 2001-12-01 发布，pf 于 2001-06-24 导入 CVS；
+- id=1713 [open] 称 3.1 引入 W^X。权威：W^X 首次发布于 OpenBSD 3.3（2003-05-01）；3.1（2002-05-19）未含 W^X。
+- id=1714 [open] 'two remote holes' CVE 配对与时间跨度错误：称 31 年间仅两个默认远程漏洞 = CVE-2002-0639(OpenSSH)+CVE-2
+- id=1715 [open] 节标题使用旧全局章号 '## 189.3.1'，与重编号后的本卷章号（190-212）不一致；同类残留还有 196.6 的 '## 194.6.3'、197.2
+- id=1716 [open] 称 OpenSSH 于 1999 年 10 月 fork。权威：OpenSSH 于 1999-09-26 导入 OpenBSD CVS，随 2.6（1999-1
+
+## ③ 一手史料（original_sources.kaoju_records，0 条）
+
+（无）

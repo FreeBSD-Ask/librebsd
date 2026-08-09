@@ -1,0 +1,229 @@
+# 第 3 卷综述素材（T1 三源合一，2026-08-04 自动生成）
+
+> 卷目录：第03卷-伯克利学术文化外溢影响｜章范围：ch43-ch60
+
+## ① 现有研究（references_fulltext，164 条）
+
+- [14] RelationalModel（Codd，1970）
+- [55] UNIX 传奇：历史与回忆 ([美]布莱恩·W.克尼汉（BrianW.Kernighan）) (z-library.sk, 1lib.sk, z-lib.sk)（，）
+- [97] eurobsdcon2015-portroach（，）
+- [127] eurobsdcon2024-hshoexer-confidential-computing（，）
+- [132] eurobsdcon2025-hshoexer-confidential-computing（，）
+- [151] asiabsdcon2016-vmm-slides（，）
+- [175] auug2002-ssh（，）
+- [181] bridgeslides（，）
+- [190] eurobsd-firewalls-2002（，2002）
+- [205] DTrace_Dynamic_Instrumentation（Cantrill，2004）
+- [266] 浅谈ZFS文件系统（樊卫国，2012）
+- [269] ZFS在基于HDFS的近线存储系统中性能分析与实现（刘言青，2014）
+- [290] 31（，）
+- [307] Android下Binder进程间通信机制的分析与研究（王汝言，2012）
+- [313] 嵌入式实时操作系统内核混合代码的自动化验证框架（郭建，2020）
+- [321] 72（，）
+- [332] 65（，）
+- [373] 未知作者_13-14世纪巴黎大学思辨式基础科学教育模式探析（，）
+- [375] 未知作者_中世纪大学执教资格授予权博弈——托钵修会VS教师行会（，）
+- [380] 未知作者_基督教文化与巴黎大学的历史发展（，）
+- [539] dawidek-porting_the_solaris_zfs_file_system_to_the_freebsd_operating_system-paper（standalone，2007）
+- [567] jude-allanjude-ucl-slides（bsdcan，2015）
+- [572] jude-interesting_zfs-paper（vbsdcon，2015）
+- [577] jude-allanjude-geliboot-slides（asiabsdcon，2016）
+- [589] jude-ssh_performance-slides（bsdcan，2017）
+- [594] jude-allanjude_openzfs_zstd_in_zfs-paper（standalone，2017）
+- [609] grimes-zfs_send_and_receive_performance_issues_and_improvements-paper（bsdcan，2018）
+- [613] jude-zfs_zstd-paper（bsdcan，2018）
+- [629] jude-zfs_advanced_integration-paper（fosdem，2018）
+- [636] wojtczak-vermaden-zfs-boot-environments-reloaded-slides（nluug，2018）
+- [641] jude-zfs_vdev_properties-paper（standalone，2018）
+- [645] carabas-mihai-bhyve_improvements_to_virtual_machine_state_save_and_restore-paper（asiabsdcon，2019）
+- [651] jude-managing_system_images_with_zfs-paper（asiabsdcon，2019）
+- [660] ahrens-how_zfs_snapshots_really_work-paper（bsdcan，2019）
+- [671] provost-automated_firewall_testing-paper（bsdcan，2019）
+- [679] paeps-philip-zfs-filesystem-paper（coscup，2019）
+- [683] chiu-bhyve_guests_with_hardware_accelerated_graphics-slides（eurobsdcon，2019）
+- [690] langille-dvl-zfs_for_newbies-slides（eurobsdcon，2019）
+- [698] jude-eli5_zfs_caching-paper（fosdem，2019）
+- [699] jude-zfs_upgrades-paper（fosdem，2019）
+- [703] provost-automated_firewall_testing-paper（fosdem，2019）
+- [710] jude-openzfs-everyos-paper（standalone，2019）
+- [728] paeps-the_zfs_filesystem-paper（linux.conf.au，2020）
+- [760] piotrowski-zfs-directory-scaling-paper（eurobsdcon，2023）
+- [769] norris-openzfs-dirty-dnodes-paper（asiabsdcon，2024）
+- [771] norris-openzfs-fsync-failure-paper（asiabsdcon，2024）
+- [784] piotrowski-zfs-direct-io-benchmarking-pitfalls-paper（bsdcan，2025）
+- [788] oxford-clarendon-press（Berlin，1958）
+- [800] reading（Cox，1986）
+- [809] Picture-Theory-Essays-on-Verbal-and（Mitchell，1994）
+- [812] anniversary-ed（Brooks，1995）
+- [815] san-francisco-morgan-kaufmann（Stonebraker，1996）
+- [824] historical-ontology（Hacking，2002）
+- [826] boston-addison-wesley-professional（Raymond，2003）
+- [827] Doing-Oral-History-做口述史（Ritchie，2003）
+- [847] new-york-w（Foner，2016）
+- [849] 5th-ed（Nemeth-et-al，2017）
+- [854] Moretti_distant-reading（，）
+- [857] communications-of-the-acm（Alt，1945）
+- [865] miller-r-e（Karp，1972）
+- [866] communications-of-the-acm（Knuth，1972）
+- [883] journal-of-political-economy（Camerer-et-al，1989）
+- [900] ieee-annals-of-the-history-of-computing（Murphy，2012）
+- [901] people-s-park-report（，2017）
+- [932] 2011-FOSDEM-ZFS-in-Open-Source-Operating-Systems（，2011）
+- [943] 201305-temporal-practical-capabilities（，）
+- [977] 2024-YE-PL-Final（，2024）
+- [1064] Managed-Services-Using-FreeBSD-at-NYI-1（，）
+- [1142] Hierarchical_Ordering_of_Sequential_Processes（Dijkstra，1971）
+- [1166] The-Anatomy-of-a-Large-Scale-Hypertextual-Web-Search-Engine（Page，1998）
+- [1174] DTrace（CantrillShapiro，2004）
+- [1176] KVM（Kivity，2007）
+- [1180] Bhyve（Grehan，2011）
+- [1181] BhyveInDepth（Dexter，2012）
+- [1182] Notes_on_WAPBL（campbell，2015）
+- [1184] sendfile_glebius-New_sendfile（glebius-new，2015）
+- [1185] hackfest_wxorx（Larkin，2015）
+- [1186] CHERI（Watson，2015）
+- [1191] WireGuard（Donenfeld，2017）
+- [1192] lse_clang（Espie，2017）
+- [1209] tuto_pf（Herzb，2022）
+- [1210] tuto_pf_companion（Herzb，2022）
+- [1215] ipv6（Obser，2024）
+- [1240] ols2002_full_proceedings_en（未知，2002）
+- [1241] ols2003_full_proceedings_en（未知，2003）
+- [1242] ols2004v1_full_proceedings_en（未知，2004）
+- [1243] ols2004v2_full_proceedings_en（未知，2004）
+- [1244] ols2005v1_full_proceedings_en（未知，2005）
+- [1245] ols2005v2_full_proceedings_en（未知，2005）
+- [1246] ols2006v1_full_proceedings_en（未知，2006）
+- [1247] ols2006v2_full_proceedings_en（未知，2006）
+- [1248] ols2007v1_full_proceedings_en（未知，2007）
+- [1249] ols2007v2_full_proceedings_en（未知，2007）
+- [1250] ols2008v1_full_proceedings_en（未知，2008）
+- [1251] ols2008v2_full_proceedings_en（未知，2008）
+- [1252] ols2009_full_proceedings_en（未知，2009）
+- [1253] ols2010_full_proceedings_en（未知，2010）
+- [1254] ols2011_full_proceedings_en（未知，2011）
+- [1255] ols2012_full_proceedings_en（未知，2012）
+- [1256] ols2014_full_proceedings_en（未知，2014）
+- [1290] zfs_cheatsheet_en（未知，2025）
+- [1303] phk_malloc（未知，）
+- [1408] 嵌入式操作系统的形式化验证方法研究_博士（孙海泳，2020）
+- [1409] 2024-07-11_刘丁豪_基于静态分析的操作系统内核缺陷检测关键技术研究_zh.kdh_decrypted（CNKI，2026）
+- [1416] _10202119_A Backup Mechanism of Virtual Machine Checkpoint Image using ZFS Snapshots（未知，2023）
+- [1417] _10211928_Could the Topology of Virtual Processors Affect the Performance of a BSD-family OS Running in a VM（未知，2023）
+- [1419] _10396086_Comparing Ext4 and ZFS for Onboard Data Processing - A Systematic Mapping and Experimental Evaluatio（未知，2023）
+- [1425] _10864401_Designing a Secure Scalable and Cost-Effective Cloud Storage Solution（未知，2024）
+- [1429] _11261576_QoE-Driven Optimization of ZFS for Performance-Aware File Sharing Platforms（未知，2025）
+- [1432] _11546556_Performance and Efficiency Analysis of Modern Filesystems on Consumer-Grade NVMe SSDs Under Real-Wor（未知，2026）
+- [1440] _1285372_A network mobility protocol based on LIN6（T. Oiwa;M. Kunishi;M. Ishiyama;M. Kohno;F. Teraoka，2001）
+- [1441] _1311060_Using development history sticky notes to understand software architecture（A.E. Hassan;R.C. Holt，2001）
+- [1447] _1574539_Simulation with real world network stacks（未知，2000）
+- [1451] _4419852_Validation of simulated real world TCP stacks（未知，2007）
+- [1454] _4721225_Complexity Attack Resistant Flow Lookup Schemes for IPv6 - A Measurement Based Comparison（David Malone, R. Joshua Tobin，2008）
+- [1459] _516200_RMDP-a real-time CPU scheduling algorithm to provide QoS guarantees for protocol processing（R. Gopalakrishnan;G.M. Parulkar，2004）
+- [1460] _5226462_Utilizing zfs for the storage of acquired data（未知，2009）
+- [1467] _5680218_Comparison of CORE network emulation platforms（未知，2010）
+- [1468] _5738566_Performance Evaluation and Comparative Analysis of Network Firewalls（未知，2011）
+- [1472] _6222582_Analysis and Implementation of Anti-Forensics Techniques on ZFS（未知，2012）
+- [1473] _644617_Implementing IPsec（IEEE，2004）
+- [1474] _6498375_Exploring Compartmentalisation Hypotheses with SOAAP（未知，2013）
+- [1477] _6558423_Zettabyte reliability with flexible end-to-end data integrity（未知，2013）
+- [1478] _6613894_Performance analysis and comparison of the TAYGA and of the PF NAT64 implementations（未知，2013）
+- [1479] _669932_Pin-down cache - a virtual memory management technique for zero-copy communication（H. Tezuka;F. O'Carroll;A. Hori;Y. Ishikawa，2004）
+- [1480] _6735626_Secure Network Attribution and Prioritization - A Coordinated Architecture for Critical Infrastructu（未知，2013）
+- [1486] _720871_Efficient user-space protocol implementations with QoS guarantees using real-time upcalls（R. Gopalakrishnan;G.M. Parulkar，1998）
+- [1488] _7296228_Stability analysis and performance comparison of three 6to4 relay implementations（未知，2015）
+- [1489] _7296383_Application compatibility of the NAT64 IPv6 transition technology（未知，2015）
+- [1497] _842141_A hierarchical fair service curve algorithm for link-sharing, real-time, and priority services（I. Stoica;H. Zhang;T.S.E. Ng，2000）
+- [1502] _8698103_A Review on Performance Analysis of ZFS & BTRFS（未知，2019）
+- [1508] _9002386_File I O Performance Analysis of ZFS & BTRFS over iSCSI on a Storage Pool of Flash Drives（Unregistered Retail Customer，2019）
+- [1509] _9012736_CapExec - Towards Transparently-Sandboxed Services（未知，2020）
+- [1515] _9302864_libvdsk - Adding support for the VMDK images（未知，2020）
+- [1545] The Making of a Counter Culture（Roszak，1969）
+- [1547] The Design and Implementation of INGRES（Stonebraker，1976）
+- [1551] Mario Savio - Berkeley Free Speech Movement Speech（Savio，1964）
+- [1552] Free Speech Movement (History)（Miller，2013）
+- [1553] The Evolution of FreeBSD Governance（FreeBSDFoundation，2017）
+- [1554] The ARPANET after Twenty Years（Denning，1989）
+- [1609] McKusick Karels Sklower Fall Teitelbaum Bostic CSRG CurrentResearch en（McKusick，1989）
+- [1616] Leffler Joy Fabry Karels NetworkingImplementationNotes 4.4BSD en（Leffler，1993）
+- [1617] Macklem NotQuiteNFS SoftCacheConsistency en（Macklem，1994）
+- [1637] 5370775 Guest Editors Introduction History Database Management Syste（，）
+- [1640] 6297963 History and Growth IBM DB2（，）
+- [1642] 6563077 SQL-DS IBM First RDBMS（，）
+- [1653] 6802778 TCP IP Acceleration Stack Multi-core Platform（，）
+- [1665] 8891991 Limago FPGA-Based Open-Source 100 GbE TCP IP Stack（，）
+- [1682] 4BSD Sections 2-8（4BSD，）
+- [1735] CSRG TR 4（CSRG，）
+- [1736] CSRG TR 4 text（CSRG，）
+- [1753] DTIC ADA1049317（DTIC，）
+- [1756] DTIC ADA290431（DTIC，）
+- [1757] DTIC ADA290431 text（DTIC，）
+- [1758] DTIC ADA397015（DTIC，）
+- [1764] DTIC ADA611646（DTIC，）
+- [1766] DTIC ADA611679（DTIC，）
+- [1827] Image092317124337（Image092317124337，）
+- [1828] Image092317124337 text（Image092317124337，）
+- [1830] Image092317125536.merged（Image092317125536.merged，）
+- [1831] Image092317125536.merged text（Image092317125536.merged，）
+- [1836] Integrating a trusted computing base extension server and secure session server into the Linux operating system    histo（Integrating a trusted computing base extension server and secure session server into the Linux operating system，）
+- [1994] second distribution of berkeley software for unix 1979（second，）
+- [1995] second distribution of berkeley software for unix 1979 text（second，）
+
+## ② 研究缺口（doubts_to_resolve，52 条）
+
+- id=112 [resolved] - 辨析：1969.10.29 首个消息时间经多源确认（Kleinrock 官方页面 lk.cs.ucla.edu/internet_first_words.h
+- id=113 [resolved] - 文献：Kleinrock, L. (2009/2011). The Day the Infant Internet Uttered its First Wo
+- id=114 [resolved] - 文献：Cerf, V. G. & Kahn, R. E. (1974). A Protocol for Packet Network Intercommun
+- id=115 [resolved] - 辨析：NSFNET 1985 年建立时间经多源确认（NSF 1985 年资助建立连接五个超级计算中心的 56kbps 骨干网络）；五个超算中心为 JVNC（
+- id=116 [resolved] - 文献：Living Internet. ARPANET – The First Internet. <https://www.livinginternet.
+- id=117 [resolved] - 辨析：第一届 IETF 会议地点与人数的多源考据（2026-07-29 联网核查）——（1）IETF 官方 past meetings 页面（ietf.or
+- id=118 [resolved] - 辨析：BIND 开发时间（1984）经多源确认；四位研究生的姓名经多源确认（Douglas B. Terry、Mark Painter、David W. R
+- id=119 [resolved] - 辨析：BIND 4.x 在 4.3BSD 中的集成经多源确认（4.3BSD 1986 年 6 月发布含 BIND 4.x）；Paul Vixie 接管 BI
+- id=120 [resolved] - 辨析：BIND 1990 年代市场份额（约 90%）——多源引用但缺乏权威统计来源（Netcraft 等统计机构 1990 年代后期的 DNS 服务器市场份
+- id=121 [resolved] - 辨析：delivermail 开发于 1979 年 INGRES 项目期间，随 4.0BSD/4.1BSD 分发，具体首次出现精确版本 [存疑——经 bsd
+- id=122 [resolved] - 辨析：M4 配置引入时间——Sendmail M4 宏配置系统在 1980 年代后期引入（具体版本保留 [考据完成：2026-07-28 该处存疑标注属史料
+- id=123 [resolved] - 辨析：Joy 与 Leffler 的具体优化内容——Joy 优化 TCP/IP 协议栈的 VAX 汇编部分（含 mbuf 内存缓冲管理），Leffler 优
+- id=124 [resolved] - 辨析：NFS 设计始于 1984 年，RFC 1094（1989.3）是 NFSv2 的正式标准发布，先前已有 SunOS 实现；NFS 首次集成入 BSD
+- id=125 [resolved] - 辨析：NCSA httpd 1993 年发布时间经多源确认（Rob McCool 在伊利诺伊大学 NCSA 开发，NCSA httpd 0.1 1993 年
+- id=126 [unresolvable] | 其余 5 人 | 完整名单保留 [考据完成：2026-07-28 该处存疑标注属史料缺口，须待原始档案公开后方可补充确证] |
+- id=127 [resolved] - 辨析：Apache 1995 年诞生时间经多源确认（从 NCSA httpd 补丁集演化，“a patchy server”双关命名经腾讯云开发者社区等多源
+- id=128 [resolved] - 辨析：Sendmail 配置复杂性——sendmail.cf 的 M4 宏生成规则集复杂，管理员须理解地址重写规则（rewriting rules）方能维护
+- id=129 [resolved] | 贡献内容 | BSD 网络代码优化（具体贡献保留 [考据完成：2026-07-28 该处存疑标注属史料缺口，须待原始档案公开后方可补充确证]） |
+- id=130 [resolved] - 辨析：Jack Haverty 在 BBN 的角色——Haverty 为 BBN 的 ARPANET 网络工程师，参与 BBN TCP/IP 原始实现（与 
+- id=131 [resolved] - 辨析：NCSA httpd 被 "淘汰" 为 Apache 指 Apache 主线代码基于 NCSA httpd 补丁集演化，但 Apache 1.0（19
+- id=132 [resolved] - 辨析：BSD/Linux 市场份额演变——Netcraft 统计显示 1990 年代后期起 Linux Web 服务器部署份额逐步超越 BSD 系统的部署份
+- id=133 [resolved] - 辨析：Relational Technology Inc.（RTI）1980 年由 Stonebraker 等创立以商业化 Ingres（多源一致，Comp
+- id=134 [resolved] - 文献：Computer History Museum. Michael Stonebraker Profile [EB/OL]. (https://www.
+- id=135 [resolved] - 辨析：POSTGRES 1986 启动时间已确认（PostgreSQL 官方历史）；Ingres 1985 商业化时间 [存疑——[史料缺失声明：Ingre
+- id=136 [resolved] - 史料：PostgreSQL 官方历史页面（https://www.postgresql.org/docs/current/history.html，明确 A
+- id=137 [resolved] - 辨析：Andrew Yu/Jolly Chen 的贡献时间已确认——PostgreSQL 官方历史（https://www.postgresql.org/d
+- id=138 [resolved] - 文献：PostgreSQL Documentation. A Brief History of PostgreSQL [EB/OL]. (https://w
+- id=139 [resolved] - 辨析：MySQL 1.0 于 1995 年由 Michael “Monty” Widenius 与 David Axmark 发布，但 1.0 版本仅供内部
+- id=140 [resolved] - 史料：Yahoo! MySQL on FreeBSD 部署档案、FreeBSD 网络栈性能基准、MySQL/LinuxThreads 兼容层档案、FreeB
+- id=141 [resolved] - 文献：Hipp D R. SQLite Design and Implementation [R]. 2000 [存疑——具体论文标题与发表 venue 需
+- id=142 [resolved] - 要点：FreeBSD 作为数据库服务器的部署优势：（1）ZFS 文件系统于 2007-04-06 由 Pawel Jakub Dawidek 首次引入 fr
+- id=143 [resolved] - 辨析：FreeBSD 7.0-RELEASE 发布日期确认为 2008-02-27（非 2007 年，亦非笼统的 2008 年 2 月）；ZFS 引入 fr
+- id=144 [resolved] | Lewis/Dillon PostgreSQL 基准 | “Greg Lewis 与 Matthew Dillon 的测试” | 经 bsd_commits
+- id=145 [resolved] - 辨析：ULE 调度器首次引入时间经 bsd_commits.db 查询确认为 2003-01-26T05:23:15Z by Jeff Roberson（c
+- id=146 [resolved] | Lewis/Dillon PostgreSQL 基准 | “Greg Lewis 与 Matthew Dillon 等的 PostgreSQL on Fre
+- id=147 [resolved] - 辨析：原大纲提及“Greg Lewis 与 Matthew Dillon 等的 PostgreSQL on FreeBSD 性能基准测试”——经 bsd_c
+- id=148 [resolved] - 要点：Linux 的数据库生态主导地位：（1）Linux 运行所有主流数据库服务器——Oracle Database（1998 年首次支持 Linux，Or
+- id=149 [resolved] - 辨析：CSRG 1986-1988 年在 4.4BSD 中实现 db(3) 库（多源一致：CSDN 内嵌数据库对比文章确认“db 的第一个发行版在 1991
+- id=150 [resolved] - 文献：4.4BSD-Lite db(3) 源代码与手册页（CSRG Archive CD-ROM / TUHS 归档）；Seltzer M, Ozmat N
+- id=151 [resolved] - 辨析：Margo Seltzer 与 Keith Bostic 1991 年在伯克利开发 Berkeley DB（多源一致：CSDN 文库确认“由美国加州大
+- id=152 [resolved] - 文献：CCF 简报：2021 年 6 月——11 位学者获 ACM 四大技术奖项（https://www.ccf.org.cn/ACM_News/2021-
+- id=153 [resolved] - 辨析：Salvatore Sanfilippo 2009 年开发 Redis（多源一致：C 语言中文网确认“Redis 是由意大利的一家创业公司 Merzi
+- id=154 [resolved] - 辨析：Redis 最初采用 BSD 3-Clause 许可证（多来源提及，[存疑——需查阅 Redis GitHub 早期 LICENSE 文件核实]）；2
+- id=155 [resolved] - 文献：Redis 2024-03 许可证变更公告（redis.io/blog）[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇
+- id=1643 [open] ，须用地图工具精确考据
+- id=1692 [open] ，需查阅印刷版核实"lo"故事具体章节陈述
+- id=1693 [open] ，需查阅印刷版核实
+- id=1694 [open] ，需实地查阅
+- id=1697 [open] ，需查阅印刷版核实
+- id=1698 [open] ——MySQL on FreeBSD 部署比例数据：无法从免费公开来源验证。Gartner/IDC 报告为付费内容。DB-Engines 不按 OS 维度统计。
+- id=1699 [open] ——具体收购日期与金额需查阅 Oracle 官方公告
+- id=1700 [open] ——CHM 口述史可能未收录 Stonebraker 或未公开编目，需进一步联系 CHM curator 核实；本则采访录的“原始来源”标注可能不准确，须以替代
+
+## ③ 一手史料（original_sources.kaoju_records，0 条）
+
+（无）

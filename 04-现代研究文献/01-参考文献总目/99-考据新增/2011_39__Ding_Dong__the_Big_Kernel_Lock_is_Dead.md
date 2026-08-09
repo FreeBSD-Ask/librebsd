@@ -1,0 +1,6 @@
+# 39: Ding Dong, the Big Kernel Lock is Dead
+
+- **著录（GB/T 7714-2015）**：Linux.com. What's New in Linux 2.6.39: Ding Dong, the Big Kernel Lock is Dead[EB/OL]. 2011. https://www.linux.com/training-tutorials/whats-new-linux-2639-ding-dong-big-kernel-lock-dead/
+- **来源 URL**：https://www.linux.com/training-tutorials/whats-new-linux-2639-ding-dong-big-kernel-lock-dead/
+- **访问日期**：2026-08-04
+- **说明**：联网考据新增参考文献（存疑 id 1663），原件未在本库下载，仅保留权威来源链接与著录。零信任核验，拒绝 Wikipedia/Baidu 作证据源。

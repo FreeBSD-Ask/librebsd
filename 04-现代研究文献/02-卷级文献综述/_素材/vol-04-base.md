@@ -1,0 +1,423 @@
+# 第 4 卷综述素材（T1 三源合一，2026-08-04 自动生成）
+
+> 卷目录：第04卷-大分裂与四大bsd的诞生｜章范围：ch61-ch86
+
+## ① 现有研究（references_fulltext，270 条）
+
+- [62] 2024-Why-Rewrite-fw_update-bsdcan（，2024）
+- [63] BeckPledgeUnveilBSDCan2018（，）
+- [64] bsdcan06-biosensors（，）
+- [65] bsdcan08-sensors（，）
+- [67] bsdcan14-mandoc（，）
+- [68] bsdcan15-mandoc（，）
+- [69] bsdcan18-mandoc（，）
+- [71] bsdcan2015-rdomains（，）
+- [72] bsdcan2016-bfd（，）
+- [73] bsdcan2016-switchd（，）
+- [74] bsdcan2016-xen（，）
+- [75] bsdcan2018-mininet（，）
+- [77] bsdcan2019-perform-slides（，）
+- [78] bsdcan2019-syspatch（，）
+- [79] bsdcan2019-tls13（，）
+- [81] bsdcan2019_unwind（，）
+- [82] bsdcan2025-hshoexer-confidential-computing（，）
+- [83] florian_slaacd_bsdcan2018（，）
+- [84] 2024-Why-Rewrite-fw_update-EuroBSDcon（，2024）
+- [85] eurobsdcon2008-sensors（，）
+- [86] eurobsdcon2010-iked（，）
+- [88] eurobsdcon2011-openbsdscsievolution（，）
+- [89] eurobsdcon2013-mpath（，）
+- [90] eurobsdcon2014-mandoc-paper（，）
+- [91] eurobsdcon2014-mandoc-slides（，）
+- [93] eurobsdcon2014-parallel-make（，）
+- [94] eurobsdcon2014-rdomains（，）
+- [95] eurobsdcon2015-mandoc（，）
+- [98] eurobsdcon2015-softraid-boot（，）
+- [99] eurobsdcon2016-bfd（，）
+- [100] eurobsdcon2016-embracingbsdrt（，）
+- [101] eurobsdcon2016-openbsd-11n（，）
+- [102] eurobsdcon2016-privsep（，）
+- [103] eurobsdcon2016-utf8（，）
+- [106] eurobsdcon2017-pledge（，）
+- [108] eurobsdcon2017-syslog-slides（，）
+- [109] eurobsdcon2018-mandoc（，）
+- [110] eurobsdcon2018-rop（，）
+- [111] eurobsdcon2019-bwfm（，）
+- [112] eurobsdcon2019-gameoftrees（，）
+- [113] eurobsdcon2019-perform-slides（，）
+- [115] eurobsdcon2021-espie-debug（，）
+- [116] eurobsdcon2022-bluhm-networkmp（，）
+- [117] eurobsdcon2022-espie-arches（，）
+- [118] eurobsdcon2022-krw-blockstobooting（，）
+- [119] eurobsdcon2022-tb-libressl（，）
+- [120] eurobsdcon2023-bluhm-mitigations（，）
+- [121] eurobsdcon2023-espie-cache（，）
+- [122] eurobsdcon2023-kn-installer（，）
+- [125] eurobsdcon2023-otto-malloc（，）
+- [126] eurobsdcon2024-bluhm-packetflow（，）
+- [128] eurobsdcon2024-vmd_multiprocessing（，）
+- [129] eurobsdcon2025-bluhm-protomp（，）
+- [130] eurobsdcon2025-espie-dpb（，）
+- [131] eurobsdcon2025-florian-easy（，）
+- [135] eurobsdcon_2018_https（，2018）
+- [136] OpenSSH-whats-new-2011-eurobsdcon（，2011）
+- [137] asiabsdcon08-network（，）
+- [139] asiabsdcon2009-sensors-paper（，）
+- [140] asiabsdcon2009-sensors-slides（，）
+- [141] asiabsdcon2010_smp_for_sgi（，）
+- [142] asiabsdcon2010_smp_for_sgi_paper（，）
+- [143] asiabsdcon2010_sndio（，）
+- [144] asiabsdcon2010_sndio_slides（，）
+- [145] asiabsdcon2011_openssh_whats_new（，）
+- [146] asiabsdcon2015-bgp-spamd（，）
+- [148] asiabsdcon2015-pie-slides（，）
+- [149] asiabsdcon2016-openbsd（，）
+- [150] asiabsdcon2016-vmd-slides（，）
+- [152] asiabsdcon2016-xen-paper（，）
+- [153] asiabsdcon2016-xen-slides（，）
+- [154] asiabsdcon2017-bfd-paper（，）
+- [155] asiabsdcon2017-bfd（，）
+- [156] asiabsdcon2017-vmm-slides（，）
+- [158] asiabsdcon2018-mininet-slides（，）
+- [159] asiabsdcon2018-vmm-slides（，）
+- [160] asiabsdcon2018-xray-paper（，）
+- [161] asiabsdcon2018-xray（，）
+- [162] asiabsdcon2019-rop-paper（，）
+- [163] asiabsdcon2019-rop-slides（，）
+- [165] asiabsdcon2023-dynamic_host_configuration_please-slides（，）
+- [166] asiabsdcon2023-hardening_vmd_devices-slides（，）
+- [167] asiabsdcon2023-hardening_vmd_devices（，）
+- [168] 2015_euroix_openbsd（，2015）
+- [169] 2015_ripe71_openbsd（，2015）
+- [170] 2024-Why-Rewrite-fw_update-Fossy（，2024）
+- [171] anoncvs-paper（，）
+- [173] authgw-paper（，）
+- [174] authgw-slides（，）
+- [176] bcrypt-paper（，）
+- [177] bcrypt-slides（，）
+- [178] bhyvecon-ottawa-2019（，2019）
+- [179] bio（，）
+- [180] bridgepaper（，）
+- [182] bsdnl2026-predictable-ipv6（，）
+- [183] bsdtw（，）
+- [184] crypt-paper（，）
+- [185] crypt-service（，）
+- [186] crypt-slides（，）
+- [187] csw2023（，）
+- [188] cuug2019-predictable（，）
+- [189] dot2016（，）
+- [191] eurobsd2017-pkgtools（，）
+- [192] fosdem07-xenocara（，）
+- [193] OpenBGPD-EuroIX34（，）
+- [194] OpenBGPD_gotta_go_fast-DENOG10（，）
+- [195] OpenBGPD_gotta_go_fast-netnod2018（，）
+- [196] OpenBGPD_gotta_go_fast-SwiNOG34（，）
+- [197] Porting_OpenBSD_to_RISCV_FinalReport（，）
+- [224] Case_for_NOW（Anderson，1995）
+- [232] 45（，）
+- [260] 沈佳斌_面向容器环境的Linux系统调用虚拟化（05-01，2021）
+- [309] 基于微内核的IO虚拟化技术的研究与实现（刘诚，2023）
+- [494] stark-dsm-paper（standalone，1997）
+- [502] watson-rwatson-trustedbsd-paper（standalone，2001）
+- [503] baldwin-jhb-locking_in_multithreaded_kernel-paper（bsdcon，2002）
+- [507] losh-imp-isa_to_pci-paper（bsdcon，2002）
+- [519] percival-cperciva-binary_updates-paper（bsdcon，2003）
+- [520] roberson-jeff-ule_scheduler-paper（bsdcon，2003）
+- [523] davis-challenges_of_dynamic_network_interfaces-paper（eurobsdcon，2004）
+- [565] tsagaankhuu-ganbold-go_based_content_filter-paper（asiabsdcon，2015）
+- [566] tsagaankhuu-ganbold-go_based_content_filter-slides（asiabsdcon，2015）
+- [575] toorop-getdns_a_new_stub_resolver-paper（vbsdcon，2015）
+- [581] neil-gnn-the_coming_decades_of_bsd-slides（eurobsdcon，2016）
+- [595] anderson-towards_oblivious_sandboxing-paper（vbsdcon，2017）
+- [596] dexter-isolated_bsd_build_environments_using_virtual_and_hardware_machines-paper（vbsdcon，2017）
+- [599] mccorkle-geli_support_for_uefi-paper（vbsdcon，2017）
+- [600] reuschling-bsd_systems_management_with_ansible-paper（vbsdcon，2017）
+- [602] vixie-making_gets_and_its_friends_more_like_sigpipe_and_sigill-paper（vbsdcon，2017）
+- [612] hsu-lwhsu-how_to_bootstrap_a_bsd_conference-slides（bsdcan，2018）
+- [614] losh-devmatch_matching_devices_to_modules-paper（bsdcan，2018）
+- [621] rice-the_tragedy_of_systemd-paper（bsdcan，2018）
+- [623] stucchi-preparing_your_home_routers_for_the_future-paper（bsdcan，2018）
+- [624] tarti%C3%A8re-romain-it-automation-with-puppet-paper（bsdcan，2018）
+- [626] jude-allanjude-bootenv_at_scale-paper（eurobsdcon，2018）
+- [634] johnston-numa_and_vm_scalability-slides（meetbsd，2018）
+- [648] carlier-llvm_and_the_state_of_sanitizers_on_bsd-paper（asiabsdcon，2019）
+- [656] mori-zrouter_remote_update_of_firmware-paper（asiabsdcon，2019）
+- [657] tubnor-bsd_unix_solutions_in_the_australian_nfp_ngo_health_sector-paper（asiabsdcon，2019）
+- [663] dengg-managing_jails_with_ansible-paper（bsdcan，2019）
+- [665] garnier-virtualization_of_bsd_using_the_qnx_hypervisor-paper（bsdcan，2019）
+- [675] turner-fuzzing_the_kernel-paper（bsdcan，2019）
+- [677] zeeb-do_you_remember_legacy_ip-paper（bsdcan，2019）
+- [686] gallatin-numa_optimizations_network_stack-slides（eurobsdcon，2019）
+- [687] gallatin-shwartsman_gallatin-kernel_tls_harware_offload-slides（eurobsdcon，2019）
+- [689] langille-dvl-why_i_prefer_thick_jails_over_thin_jails-slides（eurobsdcon，2019）
+- [691] percival-23_years_of_software_side_channel_attacks-slides（eurobsdcon，2019）
+- [693] seaman-matthew-poudriere_for_port_maintenance-slides（eurobsdcon，2019）
+- [694] vadot-pkgbase_are_we_there_yet-paper（eurobsdcon，2019）
+- [695] barabosch-kleak-paper（fosdem，2019）
+- [708] davis-asplos-cheriabi-paper-2（standalone，2019）
+- [734] chung-logstor-paper（eurobsdcon，2021）
+- [735] dexter-tuffli-update_on_smart-paper（eurobsdcon，2021）
+- [739] jones-dummynet_space_quic-slides（eurobsdcon，2021）
+- [740] jr-milum-aarch64_vm_boring-paper（eurobsdcon，2021）
+- [741] ladan-portmgr_behind_the_scenes-paper（eurobsdcon，2021）
+- [759] margiolis-arbitrary-instruction-tracing-with-dtrace-paper（eurobsdcon，2023）
+- [767] margiolis-arbitrary-instruction-tracing-with-dtrace-paper（asiabsdcon，2024）
+- [768] margiolis-arbitrary-instruction-tracing-with-dtrace-slides（asiabsdcon，2024）
+- [794] palgrave-macmillan（Foucault，1977）
+- [805] new-york-doubleday（Stoll，1989）
+- [808] mitcham-c-1994-thinking-through-technology-the-path-between（Mitcham，1994）
+- [819] new-york-john-wiley-sons（Southwick，1999）
+- [820] new-york-william-morrow-paperbacks-harpercollins（Stephenson，1999）
+- [836] Duke-University-Press（Kelty，2008）
+- [843] new-york-publicaffairs（Morozov，2013）
+- [864] acta-informatica（Wirth，1971）
+- [879] communications-of-the-acm（Bentley，1986）
+- [885] proceedings-of-the-second-ieee-workshop-on-workstation（Rashid-et-al，1989）
+- [888] journal-of-experimental-psychology-applied（Hinds，1999）
+- [890] journal-of-industrial-economics（Lerner，2002）
+- [983] 37（，）
+- [1086] writing_oh_fnadge（，）
+- [1110] by-laws（，）
+- [1121] eclipse-antitrust-policy（，）
+- [1122] eclipse-fact-sheet（，）
+- [1129] eclipse-ip-policy（，）
+- [1131] ef-be-internal-rules（，）
+- [1175] de_Raadt_strlcpy_strlcat（Miller，2006）
+- [1195] Raadt_ROP（de，2018）
+- [1196] Raadt_speculation（de，2018）
+- [1211] mitigation_lre（Espie，2023）
+- [1213] gotd（Sperling，2023）
+- [1214] Hot_cross_builds_Cross-compilation_in_pkgsrc（campbell，2024）
+- [1219] pkgsrc_git_NetBSD（Siegert，2025）
+- [1220] gothub（Sperling，2025）
+- [1221] Introduction_to_TerraformOpenTofu_and_their_packaging_in_pkgsrc（taccari，2025）
+- [1223] OpenTofu_pkgsrc_NetBSD（Taccari，2026）
+- [1391] netbsd_pkgsrc-cross-paper（未知，2015）
+- [1392] netbsd_pkgsrc-cross（Taylor `Riastradh' Campbell  campbell@mumble.net  riastradh@NetBSD.org，2015）
+- [1393] netbsd_pkgsrc-security-workflow（Leonardo Taccari  <leot@NetBSD.org>，2018）
+- [1394] netbsd_pkgsrc-security（Leonardo Taccari  <leot@NetBSD.org>，2020）
+- [1410] _1004368_Using programmer-written compiler extensions to catch security holes（未知，2001）
+- [1499] _8543386_Transforming Code to Drop Dead Privileges（未知，2018）
+- [1510] _9152663_Pseudorandom Black Swans - Cache Attacks on CTR_DRBG（未知，2020）
+- [1544] Porting UNIX to the 386: A Practical Approach（Jolitz，1991）
+- [1615] CSRG InstallingOperating 4.4BSD en（CSRG，1993）
+- [1626] 10877938 HPQKE Hybrid Post-Quantum Key Exchange SSH CSIDH（，）
+- [1644] 6643310 SSH Protocol Audit System Proxy Technology（，）
+- [1659] 8391840 Enhancement SNMP services SSH TLS DTLS protocols（，）
+- [1674] 1006.1918（1006.1918，）
+- [1675] McKusick-et-al the-design-and-implementation-of-the-4-4bsd-operating-system en（McKusick-et-al，1996）
+- [1683] 5636366（5636366，）
+- [1684] 5643130（5643130，）
+- [1687] 5687989（5687989，）
+- [1692] 5862815（5862815，）
+- [1695] 5922134（5922134，）
+- [1702] 6086951（6086951，）
+- [1704] 6219050（6219050，）
+- [1705] 6219051（6219051，）
+- [1706] 6224026（6224026，）
+- [1707] 6226705（6226705，）
+- [1708] 6318105（6318105，）
+- [1713] 6862576（6862576，）
+- [1714] 7139879（7139879，）
+- [1759] DTIC ADA403525（DTIC，）
+- [1760] DTIC ADA419594（DTIC，）
+- [1761] DTIC ADA419594 text（DTIC，）
+- [1762] DTIC ADA435220（DTIC，）
+- [1773] EBSD04 21（EBSD04，）
+- [1792] FreeBSD Journal 2016.03-04（FreeBSD Journal 2016.03-04，）
+- [1793] FreeBSD Journal 2016.05-06（FreeBSD Journal 2016.05-06，）
+- [1795] FreeBSD Journal 2017.05-06（FreeBSD Journal 2017.05-06，）
+- [1802] FreeBSD Journal 2018.05-06（FreeBSD Journal 2018.05-06，）
+- [1803] FreeBSD Journal 2018.09-10（FreeBSD Journal 2018.09-10，）
+- [1805] FreeBSD Journal 2022.01-02（FreeBSD Journal 2022.01-02，）
+- [1817] FreeBSD MarApr 2024（FreeBSD，）
+- [1837] Integrating a trusted computing base extension server and secure session server into the Linux operating system    histo（Integrating a trusted computing base extension server and secure session server into the Linux operating system，）
+- [1840] Journal-MarchApril-2022（Journal-MarchApril-2022，）
+- [1846] Linux, OpenBSD, and Talisker   a comparative complexity analysis    history files linuxopenbsdndta109456016.pdf.~10~（Linux, OpenBSD, and Talisker，）
+- [1847] Linux, OpenBSD, and Talisker   a comparative complexity analysis    history files linuxopenbsdndta109456016.pdf.~11~（Linux, OpenBSD, and Talisker，）
+- [1848] Linux, OpenBSD, and Talisker   a comparative complexity analysis    history files linuxopenbsdndta109456016.pdf.~12~（Linux, OpenBSD, and Talisker，）
+- [1849] Linux, OpenBSD, and Talisker   a comparative complexity analysis    history files linuxopenbsdndta109456016.pdf.~13~（Linux, OpenBSD, and Talisker，）
+- [1850] Linux, OpenBSD, and Talisker   a comparative complexity analysis    history files linuxopenbsdndta109456016.pdf.~14~（Linux, OpenBSD, and Talisker，）
+- [1851] Linux, OpenBSD, and Talisker   a comparative complexity analysis    history files linuxopenbsdndta109456016.pdf.~15~（Linux, OpenBSD, and Talisker，）
+- [1852] Linux, OpenBSD, and Talisker   a comparative complexity analysis    history files linuxopenbsdndta109456016.pdf.~16~（Linux, OpenBSD, and Talisker，）
+- [1853] Linux, OpenBSD, and Talisker   a comparative complexity analysis    history files linuxopenbsdndta109456016.pdf.~17~（Linux, OpenBSD, and Talisker，）
+- [1854] Linux, OpenBSD, and Talisker   a comparative complexity analysis    history files linuxopenbsdndta109456016.pdf.~18~（Linux, OpenBSD, and Talisker，）
+- [1855] Linux, OpenBSD, and Talisker   a comparative complexity analysis    history files linuxopenbsdndta109456016.pdf.~19~（Linux, OpenBSD, and Talisker，）
+- [1856] Linux, OpenBSD, and Talisker   a comparative complexity analysis    history files linuxopenbsdndta109456016.pdf.~1~（Linux, OpenBSD, and Talisker，）
+- [1857] Linux, OpenBSD, and Talisker   a comparative complexity analysis    history files linuxopenbsdndta109456016.pdf.~20~（Linux, OpenBSD, and Talisker，）
+- [1858] Linux, OpenBSD, and Talisker   a comparative complexity analysis    history files linuxopenbsdndta109456016.pdf.~21~（Linux, OpenBSD, and Talisker，）
+- [1859] Linux, OpenBSD, and Talisker   a comparative complexity analysis    history files linuxopenbsdndta109456016.pdf.~22~（Linux, OpenBSD, and Talisker，）
+- [1860] Linux, OpenBSD, and Talisker   a comparative complexity analysis    history files linuxopenbsdndta109456016.pdf.~23~（Linux, OpenBSD, and Talisker，）
+- [1861] Linux, OpenBSD, and Talisker   a comparative complexity analysis    history files linuxopenbsdndta109456016.pdf.~24~（Linux, OpenBSD, and Talisker，）
+- [1862] Linux, OpenBSD, and Talisker   a comparative complexity analysis    history files linuxopenbsdndta109456016.pdf.~25~（Linux, OpenBSD, and Talisker，）
+- [1863] Linux, OpenBSD, and Talisker   a comparative complexity analysis    history files linuxopenbsdndta109456016.pdf.~26~（Linux, OpenBSD, and Talisker，）
+- [1864] Linux, OpenBSD, and Talisker   a comparative complexity analysis    history files linuxopenbsdndta109456016.pdf.~27~（Linux, OpenBSD, and Talisker，）
+- [1865] Linux, OpenBSD, and Talisker   a comparative complexity analysis    history files linuxopenbsdndta109456016.pdf.~28~（Linux, OpenBSD, and Talisker，）
+- [1866] Linux, OpenBSD, and Talisker   a comparative complexity analysis    history files linuxopenbsdndta109456016.pdf.~29~（Linux, OpenBSD, and Talisker，）
+- [1867] Linux, OpenBSD, and Talisker   a comparative complexity analysis    history files linuxopenbsdndta109456016.pdf.~2~（Linux, OpenBSD, and Talisker，）
+- [1868] Linux, OpenBSD, and Talisker   a comparative complexity analysis    history files linuxopenbsdndta109456016.pdf.~3~（Linux, OpenBSD, and Talisker，）
+- [1869] Linux, OpenBSD, and Talisker   a comparative complexity analysis    history files linuxopenbsdndta109456016.pdf.~4~（Linux, OpenBSD, and Talisker，）
+- [1870] Linux, OpenBSD, and Talisker   a comparative complexity analysis    history files linuxopenbsdndta109456016.pdf.~5~（Linux, OpenBSD, and Talisker，）
+- [1871] Linux, OpenBSD, and Talisker   a comparative complexity analysis    history files linuxopenbsdndta109456016.pdf.~6~（Linux, OpenBSD, and Talisker，）
+- [1872] Linux, OpenBSD, and Talisker   a comparative complexity analysis    history files linuxopenbsdndta109456016.pdf.~7~（Linux, OpenBSD, and Talisker，）
+- [1873] Linux, OpenBSD, and Talisker   a comparative complexity analysis    history files linuxopenbsdndta109456016.pdf.~8~（Linux, OpenBSD, and Talisker，）
+- [1874] Linux, OpenBSD, and Talisker   a comparative complexity analysis    history files linuxopenbsdndta109456016.pdf.~9~（Linux, OpenBSD, and Talisker，）
+- [1886] NASA NTRS Archive 20000109953（NASA，）
+- [1887] NASA NTRS Archive 20000112961（NASA，）
+- [1890] NetBSD Formal Releases（NetBSD，）
+- [1903] Polnyij.spravochnik po FreeBSD（Polnyij.spravochnik，）
+- [1909] Recommendations for secure initialization routines in operating systems    history files recommendationsf109451206（Recommendations for secure initialization routines in operating systems，）
+- [1977] cs0303033（cs0303033，）
+- [1978] cs0411028（cs0411028，）
+- [1979] cs0511094（cs0511094，）
+- [1984] freebsd install（freebsd，）
+- [1988] i386pkg-cover（i386pkg-cover，）
+- [1990] linuxopenbsdndta109456016（linuxopenbsdndta109456016，）
+- [1993] netbsd-en（netbsd-en，）
+
+## ② 研究缺口（doubts_to_resolve，140 条）
+
+- id=257 [resolved] - 文献：Chalmers, R. "The unknown hackers" Salon, 17 May 2000. URL: <https://www.sa
+- id=258 [resolved] - 辨析：~~原版本错误标注 0.1 发布日期为 "1992.2"~~，**实际应为 1992-07-14**；250,000 这个数字在不同来源中差异巨大——
+- id=259 [resolved] - 文献：［ 存疑脚注：此文献待 0 信任原则考据验证 ］ 250,000 下载量数据——需进一步核实原始来源；386BSD 0.1 Release Notes
+- id=260 [resolved] - 辨析：[考据完成：2026-07-28 该处辨析所涉存疑点经穷尽联网考据，属史料缺口，详见上下文分析] "All other terms of the se
+- id=261 [resolved] - 辨析：[考据完成：2026-07-28 该处辨析所涉存疑点经穷尽联网考据，属史料缺口，详见上下文分析] 法官 "若裁定则 USL 很可能丧失 V32 版权"
+- id=262 [resolved] - 辨析：[考据完成：2026-07-28 该处辨析所涉存疑点经穷尽联网考据，属史料缺口，详见上下文分析] Pamela Jones 提交公共记录请求的具体日期
+- id=263 [resolved] - 辨析：[考据完成：2026-07-28 该处辨析所涉存疑点经穷尽联网考据，属史料缺口，详见上下文分析] "BSD 一方叙事" 与 "USL 后继方叙事" 的
+- id=264 [resolved] - 辨析：386BSD 0.1 含 Net/2 争议代码需核对——0.1 基于 Net/2，诉讼和解后仅 3 个文件被移除、70 个文件添加版权声明，大部分代码
+- id=265 [resolved] - 文献：386BSD 0.1 Release Notes (14 July 1992)；FreeBSD Project "A Brief History of
+- id=266 [resolved] - 辨析：考据过程留痕——【查证来源】FreeBSD Project 早期官方网站与 FAQ 经 archive.org 快照核验（Internet Archi
+- id=267 [resolved] - 辨析：考据过程留痕——【查证来源】Chalmers "The unknown hackers" Salon 2000.5.17 原文经 salon.com 
+- id=268 [resolved] - 辨析：考据过程留痕——【查证来源】386BSD 1.0 Release Notes（late 1994）经 386BSD.org 历史页面（Internet
+- id=269 [resolved] - 辨析：考据过程留痕——【查证来源】合图层不引入新的事实考据，仅综合既有辩证，新事实考据分散于 25.1-25.14 各节；本节所引史料均为前三层辩证已核验的
+- id=270 [resolved] - 辨析：考据过程留痕——【查证来源】Eric Raymond "A Brief History of Hackerdom" 第 7 节经 catb.org 一
+- id=271 [resolved] - 辨析：考据过程留痕——【查证来源】Rachel Chalmers Salon 2000.5.17 专访原文经 salon.com 一手核验，Lynne Jo
+- id=272 [resolved] - 辨析：考据过程留痕——【查证来源】386BSD 1.0 仍基于 0.1 而非 4.4BSD-Lite 的事实须对照 386BSD 1.0 源码树核验——若 
+- id=273 [resolved] - 辨析：考据过程留痕——【查证来源】合图层不引入新的事实考据，仅综合前述七层辩证，新事实考据分散于 25.1-25.14 各节；本节所引史料均为前述辩证已核验
+- id=274 [resolved] - 辨析：考据过程留痕——【查证来源】项目史观总纲第 5 条原文 "没有必然性，只有偶然性。每一个关键人物、每一次 fork、每一个技术决定，都是不可替代的偶然
+- id=275 [resolved] - 辨析：考据过程留痕——【查证来源】项目史观总纲第 8 条原文 "本体论上各方平等。FreeBSD、OpenBSD、NetBSD、DragonFly BSD 
+- id=276 [resolved] - 辨析：考据过程留痕——【查证来源】项目史观总纲第 19 条原文 "解释学循环是历史认识的根本条件。前理解的差异使分歧不可避免。权力与知识在历史书写中共谋——
+- id=277 [resolved] - 辨析：考据过程留痕——【查证来源】项目史观总纲第 13 条原文“法律与道德是利益分配。任何道德问题本质上是利益问题，社区治理亦是形式主义的政治产物”经 `原
+- id=278 [resolved] - 辨析：考据过程留痕——【查证来源】项目史观总纲第 21 条原文“革命与改革是历史方法论的分歧。Linux 靠革命，BSD 靠改革。改革的困难远高于革命。破山
+- id=279 [resolved] - 要点：FreeBSD 1.0 基于 4.3BSD Net/2 + 386BSD 组件 + FSF 组件，支持 386/486 处理器、ISA 总线、SCSI
+- id=280 [resolved] - 辨析：FreeBSD Handbook 明确记载创始人为三位 patchkit 协调人（Williams/Grimes/Hubbard），Greenman 
+- id=281 [resolved] - 辨析：Walnut Creek CDROM 成立年份经贝叶斯综合多方来源，采信 **1992 年**（后验概率 P(1992)=0.40），详见 26.5.
+- id=282 [resolved] - 辨析：CVS 在 FreeBSD 项目中引入的确切时间（是 1.0 发布前还是之后）需对照早期邮件列表核验 ［ 存疑脚注：此处事实待多源交叉验证 ］；CVS
+- id=283 [resolved] - 辨析：sendmail DEBUG 命令在 FreeBSD 1.0 中的具体状态须对照源代码核验——Morris 蠕虫 1988 年利用的 sendmail
+- id=284 [resolved] CVE 编号体系（MITRE CVE，**1999 年** 建立）在 1994 年尚未存在，故两条 commit 均无 CVE 编号追溯；CVSS 评分与 CW
+- id=285 [resolved] - 辨析：两条 commit 的时序关系须精确区分——Kamp 的初版 commit 在先（commit_hash 末段 `c25d92`），Chernov 的
+- id=286 [resolved] - 辨析：FreeBSD-SA-96:20 的受影响版本下限为 FreeBSD 1.0，但公告发布于 1996-12-16（FreeBSD 2.1.x 时期），
+- id=287 [resolved] - 辨析：Jolitz 夫妇指控须区分 "代码继承事实"（FreeBSD 1.0 确实基于 386BSD 0.1 补丁集，commit 历史可量化考据，与 Jo
+- id=288 [resolved] - 辨析："被迫 fork" 叙事的 "被迫" 程度需谨慎评估——补丁积压确为事实，但 patchkit 群体在分歧出现时未充分协商即 fork 亦是主动选择（
+- id=289 [resolved] - 辨析："被迫 fork" 叙事的 "被迫" 程度需对照 1993 年初 patchkit 群体与 Jolitz 夫妇的协商邮件核验——若协商确已破裂且无 c
+- id=290 [resolved] - 辨析：合图阶段不等于 "各打五十大板" 的折衷主义——须区分事实层面（代码继承、commit 记录、BSD 许可证条款可量化考据）与叙事层面（"被迫 for
+- id=291 [resolved] - 辨析："偶然性" 审视不等于 "无因性"——每一偶然事件都有其具体语境（386BSD 停滞、patchkit 群体协商破裂、BSD 许可证设计、Walnut
+- id=292 [resolved] - 辨析：本体论平等不等于事实层面无差异——commit 量、版本发布时间、代码继承比例、商业资源注入等事实层面仍须以一手史料为准考据；本体论平等审视的是各方主
+- id=293 [resolved] - 辨析：解释学循环审视不等于 "各方叙事等价"——须区分 "叙事权力不对等"（FreeBSD 叙事传播力远超 Jolitz 夫妇叙事，且商业资源加剧此不对等）
+- id=294 [resolved] - 辨析：法律合法性（BSD 许可证允许代码继承）与叙事合法性（“被迫 fork”叙事的简化程度）须精确区分——法律层面 FreeBSD fork 完全合法，叙
+- id=295 [resolved] - 辨析：“革命与改革”的二分是史观层面的形式主义化重构，事实层面 fork 决策同时具有革命与改革双重属性——脱离 386BSD 单人维护是革命，继承 BSD
+- id=296 [resolved] - 史料：Chris Demetriou 1993 年 4 月 19 日 NetBSD 0.8 发布公告（comp.os.386bsd.announce）、Ne
+- id=297 [resolved] - 辨析：源码仓库建立日期 1993 年 3 月 21 日经 netbsd.db 数据库确认（cgd 1993-03-21T09:45:37Z“initial 
+- id=298 [unresolvable] - 辨析：平台数量的具体数字在不同叙事中差异较大——部分称 40+，部分称 50+；需对照发布声明核实确切平台数 ［ 存疑脚注：此处事实待多源交叉验证 ］；官方
+- id=299 [resolved] - 要点：NetBSD 早期 ports 系统（NetBSD 1.0 起的“packages collection”）在 1997-1998 年由 Alista
+- id=300 [resolved] - 辨析：1994-03-07 cgd 的 3 条 rdist commit 须明确标注为“非安全修复”——commit subject 原文“No secur
+- id=301 [resolved] - 辨析：securelevel 在 NetBSD 1.x 安全响应中的实际作用须精确界定——securelevel 限制 root 修改不可变文件（**chf
+- id=302 [resolved] - 史料：OpenBSD CVS 历史早期记录（1995.10.18 初始导入，commit_hash `df930be708d50e9715f173caa26
+- id=303 [resolved] - 史料：Adam Glass 1994.12.23 通知邮件原文（<https://mail-index.netbsd.org/netbsd-users/19
+- id=304 [resolved] - 辨析：合图层的撰写须警惕两种叙事陷阱——其一为“Core Team 正当、de Raadt 应受惩戒”的组织中心叙事，其二为“de Raadt 受害、Cor
+- id=305 [resolved] - 辨析：r-commands 默认禁用的精确版本需考据——OpenBSD 1.2 已默认禁用但二进制仍保留 ［ 存疑脚注：此处事实待多源交叉验证 ］；Open
+- id=306 [resolved] - 辨析：考据过程留痕——【查证来源】项目史观总纲第 5 条原文经原材料/哲学/项目统摄史观/第 25 章.md 一手核验，原文为 "没有必然性，只有偶然性。每
+- id=307 [resolved] - 辨析：考据过程留痕——【查证来源】项目史观总纲第 8 条原文经原材料/哲学/项目统摄史观/第 25 章.md 一手核验，原文为 "本体论上各方平等。Free
+- id=308 [resolved] - 辨析：考据过程留痕——【查证来源】项目史观总纲第 19 条原文经原材料/哲学/项目统摄史观/第 25 章.md 一手核验，原文为 "解释学循环是历史认识的根
+- id=309 [resolved] - 辨析：考据过程留痕——【查证来源】项目史观总纲第 5、6、8、19 条原文经原材料/哲学/项目统摄史观/第 25 章.md 一手核验；Adam Glass 
+- id=310 [resolved] - 辨析：考据过程留痕——【查证来源】OpenBSD 官方 security.html 经 <https://www.openbsd.org/security.
+- id=311 [resolved] - 辨析：考据过程留痕——【查证来源】独裁模式与社区治理模式的对照证据基于 OpenBSD 官方 goals.html（<https://www.openbsd
+- id=312 [resolved] - 辨析：考据过程留痕——【查证来源】NetBSD 官方 core.html 经 <https://www.netbsd.org/people/core.htm
+- id=313 [resolved] - 辨析：考据过程留痕——【查证来源】OpenBSD 官方 security.html 经 <https://www.openbsd.org/security.
+- id=314 [resolved] - 辨析：考据过程留痕——【查证来源】OpenBSD 官方 goals.html 经 <https://www.openbsd.org/goals.html> 
+- id=315 [resolved] - 辨析：考据过程留痕——【查证来源】合图层所涉一手史料经 NetBSD core.html（<https://www.netbsd.org/people/co
+- id=316 [resolved] - 辨析：考据过程留痕——【查证来源】项目史观总纲第 13、19、21 条原文经 原材料/哲学/项目统摄史观/第 25 章.md 一手核验——第 13 条原文为
+- id=317 [resolved] - 辨析：考据过程留痕——【查证来源】被疏远贡献者结构性排斥论证的关键证据基于 OpenBSD misc@、tech@ 邮件列表原始存档（marc.info 与
+- id=318 [resolved] - 辨析：考据过程留痕——【查证来源】合图层的关键证据基于 OpenBSD security.html（<https://www.openbsd.org/sec
+- id=319 [resolved] - 辨析：考据过程留痕——【查证来源】项目史观总纲第 5 条原文经 `原材料/哲学/一刻哲学/第25章.md` 第 11 行 Read 一手核验，第 6 条原文
+- id=320 [resolved] - 史料：Jordan Hubbard 2001 年辞职信、trasz@ 2025 年 12 月 freebsd-hackers 邮件批评与 devnull@ 
+- id=321 [resolved] - 辨析：考据过程留痕——【查证来源】trasz@ 2025.12.30 邮件经 <https://lists.freebsd.org/archives/fre
+- id=322 [resolved] - 史料：项目史观总纲第 8、19 条（**c:\Users\ykla\Documents\hibsd\原材料\哲学\项目统摄史观\第 25 章.md**，20
+- id=323 [resolved] - 辨析：考据过程留痕——【查证来源】合图层的史观审视基于项目史观总纲第 8、19 条原文（sacred 哲学源材料，2026-07-23 复核）与本章 30.
+- id=324 [resolved] - 史料：FreeBSD 官方关于页面（<https://www.freebsd.org/about/，2026-07-24> 复核）明示“FreeBSD is
+- id=325 [resolved] - 辨析：考据过程留痕——【查证来源】FreeBSD 官方关于页面、NetBSD 官方关于页面与历史页面、OpenBSD 官方 FAQ 与 goals 页面经 
+- id=326 [resolved] - 史料：Linux 内核开发模式文档（subsystem maintainer 体系、driver 子系统架构）；Linux 内核 eBPF、cgroups 
+- id=327 [resolved] - 辨析：考据过程留痕——【查证来源】Linux 内核 subsystem maintainer 体系与 driver 子系统架构的官方文档经 WebSearc
+- id=328 [resolved] - 文献：Linux 内核开发模式文档[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属
+- id=329 [resolved] - 辨析：考据过程留痕——【查证来源】合图层的史观审视基于项目史观总纲第 2、5、8、13、19 条原文（sacred 哲学源材料，2026-07-24 复核）
+- id=330 [resolved] - 辨析：考据过程留痕——【查证来源】项目史观总纲第 13、19、21 条原文经 `原材料/哲学/一刻哲学/第25章.md` Read 一手核验（2026-07
+- id=331 [resolved] - 辨析：考据过程留痕——【查证来源】项目史观总纲第 5 条原文经 `原材料/哲学/一刻哲学/第25章.md` Read 一手核验（2026-07-23 复核）
+- id=332 [resolved] - 辨析：须避免将“本体论平等”误读为“价值相对主义”——项目统摄史观的本体论平等不否认三项目治理结构在工程效率、社区健康、可持续发展等具体维度的差异，仅否认在
+- id=333 [resolved] - 文献：本项目内部哲学文献《项目统摄史观》第 8 章“经济历史哲学”、第 25 章总纲第 8 条（sacred 哲学源材料）；本章 30.3 三项目治理结构对
+- id=334 [resolved] - 辨析：须避免将“前理解不可调和”误读为“争议无关紧要”——项目统摄史观的解释学循环不否认争议的实质内容，仅揭示争议的认识论条件；前理解差异使争议不可终结，但
+- id=335 [resolved] - 文献：本项目内部哲学文献《项目统摄史观》第 19 章“历史解释学与权力”、第 25 章总纲第 19 条（sacred 哲学源材料）；本章 30.5.1 至 
+- id=336 [resolved] - 文献：［ 存疑脚注：此文献待 0 信任原则考据验证 ］OSChina 2022.2.24 前后《Linux 败局已定》；Linux 内核贡献结构分析
+- id=337 [resolved] - 辨析：4 种模式的归纳遵循“非穷尽性、非排他性、非客观性”原则——非穷尽性指每条模式仅列举典型案例，79 项案例中至少 30 项以上可作淡化源头模式的候选；
+- id=338 [resolved] - 辨析：重建的工作量在不同叙事中差异较大——"50 万行" 说法无一手来源直接验证，代码改动量经 bsd_commits.db `commits` 表 199
+- id=339 [resolved] - 辨析：告别邮件的内容在不同叙事中差异较小，但需区分 "BSD 开发历史（1974/1976 起）" 与 "CSRG 组织历史（1980.4 正式成立起）"—
+- id=340 [resolved] - 辨析：Amendment No. 2 的具体内容在不同叙事中差异较小，但其存在的发现时间在不同叙事中差异较大——2003-2007 年诉讼期间才被发现；SC
+- id=341 [resolved] - 要点：据 McKusick 当事人一手记载，4.4BSD-Encumbered（含 AT&T 许可代码版本）与 4.4BSD-Lite 于 **1994 年
+- id=342 [resolved] - 辨析：4.4BSD-Encumbered 与 4.4BSD-Lite 的关系需严格区分——前者需 AT&T 源代码许可证，后者完全自由；争议文件数量需准确：
+- id=343 [resolved] - 辨析：CSRG 解散的直接原因需准确表述——McKusick 当事人记载明确说明是 4.4BSD-Lite/Encumbered 销售收入支持了最后两年的 
+- id=344 [resolved] - 辨析：securelevel 在 4.4BSD-Lite 中为概念雏形，其完整机制在后世 BSD 中持续演化——FreeBSD 演化为 `kern.secu
+- id=345 [resolved] - 辨析：文化基因的归因在不同叙事中差异较大——McKusick《Twenty Years of Berkeley Unix》(1999) 强调项目目标的决定性
+- id=346 [resolved] - 辨析：文化史料的价值在 "描述" 维度有据可循（项目 slogan 如 FreeBSD 的 "freebsd.cdrom.com" FTP 站点记录、Net
+- id=347 [resolved] - 辨析：Levy《Hackers》(1984) 所载黑客伦理六条与 BSD 实践的对应在 "信息自由" 与 "怀疑权威" 维度有据可循——386BSD 0.0
+- id=348 [resolved] - 辨析：指控的具体内容经 freebsd.db 验证——FreeBSD 1.0 代码库确实包含 386BSD 0.1 源码导入 commit（Rodney W
+- id=349 [resolved] - 史料：bsd_commits.db 数据库证据（2026-07-22 复核）：commit `f9b4e354333706f10123fa5b81e9266
+- id=350 [resolved] - 辨析：Jolitz 再回应史料缺失的考据处理须按考据规则“穷尽考据后仍无法确证的，允许保留 [考据完成：2026-07-28 该处存疑标注属史料缺口，须待原
+- id=351 [resolved] - 辨析：Daemon 的文化意义在不同叙事中差异较小，FreeBSD 2005 年发布 6.0 后逐步减少 Beastie 在官方宣传中的使用——因避免宗教敏
+- id=352 [resolved] - 辨析：符号演变的史料价值在 "符号变化" 维度有据可循（Daemon 1988 McKusick 创作、Beastie FreeBSD 1993.11 使用
+- id=353 [resolved] - 辨析：媒体呈现存在戏剧化倾向——Dr. Dobb's Journal 1992-1996 年 BSD 报道以技术评测为主基调较为客观，Salon 与 Wir
+- id=354 [resolved] - 辨析：差异化形象在媒体叙事中存在夸张化——"BSD 古老保守" 标签源于 4.4BSD 1994 年发布时 CSRG 已有 15 年历史（确实较 Linux
+- id=355 [resolved] - 辨析：OpenBSD 的 "加拿大基地" 在不同叙事中差异较小，但须区分 "代码 fork 时间"（1995-10-18）与 "首个公开发布版本时间"（1.
+- id=356 [resolved] - 辨析：386BSD 的地理在不同叙事中差异较小——Jolitz 夫妇在 1992-1993 年 386BSD 开发期间居住于加州伯克利地区，与 CSRG 地
+- id=357 [resolved] - 辨析：地理史料的价值在 "实际分布" 维度有据可循（FreeBSD 加州 Walnut Creek CDROM、NetBSD 全球分散、OpenBSD 卡尔
+- id=358 [resolved] - 辨析：冷战结束对 BSD 的影响兼有全球化与互联网扩散两个归因——1991 年苏联解体后前苏联与东欧开发者通过 Internet 接入 BSD 社区（如俄罗
+- id=359 [resolved] - 辨析：互联网商业化的影响兼有技术优势与时机两个归因——FreeBSD 在 Web 服务器市场（Apache 早期版本 1995 年起在 FreeBSD 上广
+- id=360 [resolved] - 辨析：法律不确定性对美国市场的影响在 1992-1994 年诉讼期间确实存在——部分美国商业用户与开发者转向 Linux 规避风险（如某些 ISP 在 19
+- id=361 [resolved] - 辨析：4.4BSD-Lite 的解放性影响在 **1994.6** 发布后立即显现——FreeBSD 2.0（**1994.11.22**）与 NetBSD
+- id=362 [resolved] - 辨析：文化地理建构的具体内容——FreeBSD 的 "加州商业务实" 以 Walnut Creek CDROM（加州康科德）为商业发行中心，Jordan H
+- id=363 [resolved] - 辨析：CSRG 解散性质仅 McKusick 一方陈述，其他来源未提出相反叙事但有保留采信；DARPA 资助终止年份存疑 [考据完成：2026-07-28 
+- id=364 [resolved] - 要点：CSRG 作为 EECS 旗下研究组办公地点在 Cory Hall（EECS 系大楼）内而非网络流传的 Evans Hall；UC Berkeley 
+- id=365 [resolved] - 辨析：CSRG 办公地点考据须区分 "校方部门归属记录"（Cory Hall 为 EECS 系大楼，CSRG 作为 EECS 旗下研究组有部门归属依据）与 
+- id=366 [resolved] - 辨析：BSDI 创始人与 CSRG 解散的时间关系存在关键矛盾——McKusick 文章明确三人留在 CSRG 直至 1995 年 6 月解散，但 FOLD
+- id=367 [resolved] - 辨析：Inktomi 创立日期存疑——两个日期来自中文二手转引，原始公告未能直接抓取 [考据完成：2026-07-28 该处存疑标注属史料缺口，须待原始档案
+- id=368 [resolved] - 辨析：CSRG 解散对伯克利市 BSD 商业生态影响的程度存疑——BSDI 从 1991 年起即在 Colorado Springs 并非 CSRG 解散后
+- id=369 [resolved] - 辨析：批评的解释力存在边界——部分批评过于强调偶然性（如将 de Raadt 被逐归因于个人风格）而忽视结构因素（如 NetBSD Core Team 19
+- id=370 [resolved] - 辨析：边缘贡献者的史料价值在不同维度表现不同——技术贡献（补丁、本地化）易量化（可经 bsd_commits.db commit 数统计），文化贡献（翻译、
+- id=371 [resolved] - 辨析：科技政策的具体影响——HPC Act 1991.12.9 授权 NREN 升级 NSFNET 直接扩大了 BSD 代码传输带宽，NII 1993 "信
+- id=372 [resolved] - 辨析：Tien 田长霖作为伯克利校长（1990-1997）在 CSRG 解散（1995.6）期间起到缓冲作用——Tien 任内伯克利 EECS 系面临 19
+- id=373 [resolved] - 辨析：硬件平台的具体演进——386BSD 0.0/0.1（1992）仅支持 x86（80386/80486），FreeBSD 1.0（1993.11）亦仅支
+- id=374 [resolved] - 辨析：厂商格局的重组——PowerPC 联盟（Apple/IBM/Motorola 1991 结盟，1993 推出 601 芯片）挑战 x86 主导地位但未
+- id=375 [resolved] - 辨析：物理与工艺的具体影响——64 位 RISC（DEC Alpha 21064, 1992）对 BSD 内核的影响主要在指针宽度与内存寻址（64 位 lo
+- id=376 [resolved] - 辨析：硬件抽象层演进——386BSD 采用 x86 专用 pmap 模块（与 i386 硬件紧耦合），FreeBSD 2.0 基于 4.4BSD-Lite 
+- id=377 [resolved] - 辨析：哲学影响的具体机制——建构经验主义（van Fraassen 1980《科学形象》）强调理论的经验充分性而非真理符合，BSD 社区的 "代码可运行即正
+- id=378 [resolved] - 辨析：地缘政治的具体影响——**1991 年** 苏联解体后东欧国家互联网接入逐步开放，前苏联与东欧开发者通过 Internet 接入 BSD 社区（BSD
+- id=379 [resolved] - 辨析：经济危机对 BSD 的影响——**1994 年** 墨西哥比索危机对 BSD 在拉美扩散的影响有限（拉美本就不是 BSD 主要市场），**1997 年
+- id=380 [resolved] - 辨析：编程语言标准对 BSD 的影响——C95（ISO/IEC 9899:1990 Amendment 1）主要新增宽字符与多字节字符支持，对 BSD 代码
+- id=381 [resolved] - 辨析：基础科学对 BSD 的影响——zlib（Lossless data compression library，Jean-loup Gailly 与 Ma
+- id=382 [resolved] - 辨析：基础科学的具体应用——zlib 1.0 于 **1995.5** 发布，gzip 1.2.4 于 **1993.8** 发布，两者在 BSD 中的集成
+- id=383 [resolved] - 辨析：CS 进步对 BSD 的影响——FFS 软更新（Soft Updates）由 McKusick 1990 年代研究，FreeBSD 4.0（**200
+- id=384 [resolved] - 辨析：互构的具体机制——USL 诉讼和解（**1994.1**）使 BSD 许可证法理基础确立（4.4BSD-Lite 完全自由），FFS 软更新理论从 M
+- id=385 [resolved] - 辨析：密码学进步对 BSD 的影响——OpenBSD 2.0（1996.10）集成 SSH-1（Ylönen 1995 发布）与 SSL（SSLeay 0.
+- id=386 [resolved] - 辨析：RC4 源码泄露的具体时间——RC4 由 Rivest **1987** 设计但作为商业秘密未公开，**1994 年** 源码通过 Cypherpun
+- id=387 [resolved] - 辨析：ECC 标准化的具体时间——NIST 于 **1999.7** 在 FIPS 186-1 修订中首次推荐 ECC 用于数字签名（ECDSA），后于 *
+- id=388 [resolved] - 辨析：SATAN 的具体影响——SATAN（Security Administrator Tool for Analyzing Networks）由 Dan
+- id=389 [resolved] - 辨析：SSL/PKI 在 BSD 中的集成时间——SSLeay（Eric Young **1995** 开发，OpenSSL 前身）在 FreeBSD Po
+- id=390 [resolved] - 辨析：Stallman 政治立场的 "左派" 标签在二手叙事中流传甚广，但 stallman.org 一手档案显示其立场更接近 "自由软件原教旨主义"——既
+- id=391 [resolved] - 辨析：GPL copyleft 的 "左派政治哲学" 归因在二手叙事中较普遍，但 FSF 官方文档强调其策略性而非党派性——Stallman 自述 copy
+- id=392 [resolved] - 辨析：BSD 许可证 vs GPL copyleft 的 "右派 vs 左派" 二元化投射易 oversimplify——BSD 许可证支持者并非都持右派立
+- id=393 [resolved] - 辨析：分裂时期黑客社区政治立场的 "左派 vs 右派" 二元叙事在二手文献中流传甚广，但须按 0 信任原则对照 BSD 邮件列表政治讨论存档与 OSI 创立
+- id=394 [resolved] - 辨析：偶然性审视的限度——偶然性不等于不可解释，四个节点（patchkit 瓶颈、Jolitz 撤回授权、de Raadt 被逐、4.4BSD-Lite 和
+- id=395 [resolved] - 辨析：解释学循环审视的限度——承认叙事的建构性不等于否定史实的可考据性，bsd_commits.db 中的 commit 记录、tag 信息、文件引入时间是
+- id=396 [resolved] - 辨析：Linux 文化的具体特征在不同叙事中差异较大——Linus Torvalds 1997 年移居硅谷后的 BDFL（Benevolent Dictat
+
+## ③ 一手史料（original_sources.kaoju_records，0 条）
+
+（无）
