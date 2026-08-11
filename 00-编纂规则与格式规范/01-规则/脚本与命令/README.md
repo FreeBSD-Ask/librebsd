@@ -55,6 +55,45 @@
 | `renumber_subsections_120.py` | 第 120 章子节编号从 116.X 重排为 120.X | 流程规则.md “序号调整例外”小节示例 | 规则引用但未实现 |
 | `renumber_subsections_vol5.py` | 第五卷子节编号重排 | 流程规则.md “序号调整例外”小节示例 | 规则引用但未实现 |
 
+## 缺失脚本登记（2026-08-11 学术规范合规审计发现）
+
+规则文件引用但 `script/` 目录与 `脚本与命令/` 目录均不存在、且 git 历史（2026-08-09 起仅 12 提交，`/script` 在 .gitignore 中未纳入版本控制）中无记录、全部备份目录（`script/_backup_*`、`script/_staging/*`）中亦无副本的脚本。**本登记仅作如实记录，不臆造脚本内容。**
+
+### A. 已从规则删除的核心验证脚本（8 个，2026-08-11 用户决策）
+
+以下 8 个脚本完全缺失且无法恢复，经用户决策**已从规则文件删除引用**，相关验证改为人工执行（详见流程规则.md“大纲节号连续性规则”“Frontmatter 元数据一致性规则”“GitBook 目录同步规则”“结构性变更后验证清单”各节）。
+
+| 脚本名 | 原用途说明 | 原规则引用位置 | 现处理 |
+| --- | --- | --- | --- |
+| `analyze_section_gaps.py` | 全书节号缺口扫描 | 流程规则.md “大纲节号连续性规则”→“检测命令”、“结构性变更后验证清单”第 3 项 | 已删除引用，改人工核查 |
+| `verify_summary_frontmatter.py` | frontmatter chapter/id/volume 一致性检测 | 流程规则.md “Frontmatter 元数据一致性规则”→“检测命令”、“结构性变更后验证清单”第 4 项 | 已删除引用，改人工核查 |
+| `verify_summary_renumber.py` | 章号连续性+链接存在性+磁盘↔SUMMARY 双向吻合检测 | 流程规则.md “结构性变更后验证清单”第 1、2、6、7 项 | 已删除引用，改人工核查 |
+| `batch_update_overviews.py` | 批量更新概述.md 节索引 | 流程规则.md “大纲节号连续性规则”→“修复方式”、“结构性变更后验证清单”第 8 项 | 已删除引用，改人工更新 |
+| `_regen_summary_after_renumber.py` | 从磁盘重建大纲 SUMMARY（348 章） | 流程规则.md “结构性变更后验证清单”→“触发场景”、“相关脚本索引” | 已删除引用，改人工重建 |
+| `_sync_gitbook_summary.py` | 重新生成 `05-卷册大纲/SUMMARY.md` | 流程规则.md “GitBook 目录同步规则”→“同步执行命令” | 已删除引用，改人工同步 |
+| `_delete_source_files.py` | 源文件清理脚本（数据库唯一内容载体） | 流程规则.md “其他文件夹转数据库规则”→“源文件清理规则”→“清理脚本用法” | 已删除引用，改人工清理 |
+| `sync_script_copies.py` | 确保 `script/` 与 `脚本与命令/` 两处副本一致（SHA-256 校验） | 流程规则.md “其他文件夹转数据库规则”→“精简与重构记录”（2026-07-31） | 已删除引用 |
+
+### B. 历史一次性脚本（约 20 个，2026-07 至 08 期间执行完毕，未留存副本）
+
+| 脚本名 | 用途说明 | 规则引用位置 |
+| --- | --- | --- |
+| `audit_research_gaps.py` | 审计全部 M.N 节文献/史料字段缺口 | 研究缺口.md 头部声明 |
+| `gen_research_gap_doc.py` | 生成/更新研究缺口清单 | 研究缺口.md 头部声明、5.3 复用脚本 |
+| `insert_literature.py` / `insert_literature2.py` | 文献入库（materials + references） | 研究缺口.md 5.3 复用脚本 |
+| `fill_macos_gaps.py` | 批量补 macOS 相关章史料 | 研究缺口.md 5.3 复用脚本 |
+| `resolve_daikao.py` | 批量消解待考注释 | 研究缺口.md 5.3 复用脚本 |
+| `refactor_folder_db_schema.py` | 文件夹级数据库 Schema v1.0→v1.1 精简 | 流程规则.md “精简与重构记录” |
+| `refactor_research_notes_retry2.py` | research_notes.db 锁定后第二次清理 | 流程规则.md “精简与重构记录” |
+| `embed_b_to_outlines.py` / `embed_reports_to_outlines.py` / `embed_tech_to_chapters.py` | B 系列结论/分析报告/技术结论嵌入大纲 | 功能对比与数据库回写规则.md “分析结果写入大纲规范” |
+| `_gen_catalog_30_categories.py` | 参考文献总目 30 类别导出 | 流程规则.md “参考文献总目与数据库同步回填” |
+| `_fix_from_catalog.py` | 总目→数据库字段回填 | 流程规则.md “参考文献总目与数据库同步回填” |
+| `_scan_banned_outline_20260805.py` / `_tier_banned_refs_20260805.py` / `_mark_ref1592_banned_20260805.py` / `_reg_official_refs_2511_2515_20260805.py` / `_reg_official_refs_2516_2519_20260805.py` | 2026-08-05 禁引来源清理首轮执行脚本 | 考据规则.md “文献分级 source_tier 与禁引来源清理规则”→“四、2026-08-05 首轮执行结果” |
+
+### C. 副本源文件缺失（11 个）
+
+`脚本与命令/` 目录下现存 13 个 .py 副本，其中 11 个在 `script/` 的源文件已缺失（仅 `auto_ingest_new_pdfs.py`、`build_folder_databases.py` 两副本源文件现存）。缺失清单：`cleanup_duplicates_and_errors.py`、`scan_all_gaps_v4.py`、`rename_volume_dirs_20260726.py`、`fix_remaining_volume_refs_20260726.py`、`dedup_folder_databases.py`、`resolve_cross_references.py`、`audit_folder_db_integrity.py`、`cleanup_duplicate_sources.py`、`dedup_databases_global.py`、`sync_cross_references_after_cleanup.py`、`optimize_folder_databases.py`。副本内容完整（SHA-256 校验通过），可继续使用；规则“副本关系”描述中“原文件保持不变”的约束已无法满足，待决策是否从副本反向补回 `script/`。
+
 ## 与 `script/` 目录的关系
 
 - **`script/` 目录**：项目根目录下的临时脚本与中间文件归档（2026-08-11 修订：仅放置可临时、随时删除的中间过程产物，不放置长期频繁使用的固定脚本；历史遗留脚本保留原样，不主动清理）

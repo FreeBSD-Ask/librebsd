@@ -1459,7 +1459,7 @@
 
 - [第 172 章 NetBSD 1.x 的成熟期与 pkgsrc 引入](./第09卷-netbsd的历史/第172章-netbsd-1x的成熟期与pkgsrc引入/概述.md)
   - [172.1 NetBSD 1.4-1.6 的成熟期（1999-2002）——1.4（1999.5）集成成熟的 pkgsrc 软件包管理系统（pkgsrc 本体系 1997-10-03 创建）[存疑脚注：经 NetBSD 官方历史页核验，pkgsrc 由 Alistair G. Crooks 与 Hubert Feyrer 于 1997-10-03 创建（源自 FreeBSD Ports），随 NetBSD 1.3（1998-01）正式引入，并非 1.4 引入。]，1.5（2001.4）支持 IPv6 与 IPSec，1.6（2002.9）改进 SMP 与线程支持](./第09卷-netbsd的历史/第172章-netbsd-1x的成熟期与pkgsrc引入/172.1-netbsd1416的成熟期199920021419995引入pkgsrc.md)
-  - [172.2 NetBSD Foundation 的成立与治理（1995-2004）——NetBSD Foundation 于 1995 年在特拉华州注册成立（incorporated），现行确为 501(c)(3) 非营利组织；但'1995 年 2 月‘与’注册即获 501(c)(3)'在官方一手资料中未能坐实，501(c)(3) 获准具体年份待核 [存疑脚注]，By-Laws 规定 Core Team 选举与 committer 治理结构](./第09卷-netbsd的历史/第172章-netbsd-1x的成熟期与pkgsrc引入/172.2-netbsdfoundation的成立与治理199520041995年2月.md)
+  - [172.2 NetBSD Foundation 的成立与治理（1995-2004）——NetBSD Foundation 于 1995 年在特拉华州注册成立（incorporated），现行确为 501(c)(3) 非营利组织；但‘1995 年 2 月’与‘注册即获 501(c)(3)’在官方一手资料中未能坐实，501(c)(3) 获准具体年份待核 [存疑脚注]，By-Laws 规定 Core Team 选举与 committer 治理结构](./第09卷-netbsd的历史/第172章-netbsd-1x的成熟期与pkgsrc引入/172.2-netbsdfoundation的成立与治理199520041995年2月.md)
   - [172.3 committer 权限记录（1994-2004）——本时期 NetBSD Core Team 公开撤销 de Raadt（1994.12.23 决议）等少数 committer 权限的记录，以及 18 个月不活跃自动退休的执行情况](./第09卷-netbsd的历史/第172章-netbsd-1x的成熟期与pkgsrc引入/172.3-committer权限记录19942004本时期netbsdcoreteam.md)
   - [172.4 重要贡献者与边缘者：NetBSD 早期核心团队——Chris Demetriou、Adam Glass、Charles Hannum、Theodore Ts'o、Jason R. Thorpe、Alistair G. Crooks、Luke Mewburn 等早期核心贡献者，以及被忽视的平台移植维护者](./第09卷-netbsd的历史/第172章-netbsd-1x的成熟期与pkgsrc引入/172.4-重要贡献者与边缘者netbsd早期核心团队chrisdemetriouadamg.md)
 
