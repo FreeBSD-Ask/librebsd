@@ -270,3 +270,7 @@ _consistency_check.py
 *.clean_tmp-journal
 *.clean_tmp-journal
 /.qoder
+
+# 重构批次数据库备份文件，禁入 git
+*.backup_*
+*.backup_20260812_pre_refactor
