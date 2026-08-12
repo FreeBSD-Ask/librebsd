@@ -19,7 +19,7 @@ OpenBSD 的治理与此形成鲜明对比——Theo de Raadt 的 "独裁制" 不
 
 #### 史观
 
-**总纲 24（世界哲学中的美国哲学史）**——见 shigang.md §24：美国宪政哲学（Madison 的联邦论、Jefferson 的权利法案、制宪会议中的大妥协/小妥协）的深层结构在 BSD 治理中有三层对应：分权（Core Team vs committer general body）、制衡（Core Team 的 recall 机制可被 committer 投票召回，防止核心独大）、代表制（committer 选举 Core Team，但 committer 本身也不是所有用户而是少数精英——"代表悖论"）。
+**世界哲学中的美国哲学史（概念化表述，25 总纲无直接对应；原误记“总纲 24”系 25 总纲参照系（原 shigang） 域编号，依 R6 更正）**——见 世界哲学域（概念化表述，25 总纲无直接对应）：美国宪政哲学（Madison 的联邦论、Jefferson 的权利法案、制宪会议中的大妥协/小妥协）的深层结构在 BSD 治理中有三层对应：分权（Core Team vs committer general body）、制衡（Core Team 的 recall 机制可被 committer 投票召回，防止核心独大）、代表制（committer 选举 Core Team，但 committer 本身也不是所有用户而是少数精英——"代表悖论"）。
 
 **总纲 10（政治哲学）**——11.2 节："消极自由是有不想做什么的自由，积极自由是有能做什么的自由。"BSD 的治理结构被设计为保障代码贡献者的消极自由（有 commit 权限），而非用户的积极自由。committer 构成的是 "技术贵族政体"——政治哲学的 11.3 指出 "任何人都不可能拥有超越时代和人民的道德情操"。BSD Core Team 成员的道德素质被技术资格所假定——但这种假定本身就是形式主义的。
 
