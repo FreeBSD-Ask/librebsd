@@ -42,7 +42,7 @@ Pike 在这篇广为流传的演讲中萧瑟地指出，系统软件研究已经
 
 ---
 
-#### 采访 2：布莱恩·克尼汉（Brian W. Kernighan）
+#### 采访 2：布莱恩·克尼汉（Brian Wilson Kernighan）
 
 > 关于克尼汉 2019 年回忆录《UNIX 传奇：历史与回忆》的完整采访条目，详见第 1 章 [采访录.md](../第01章-multics的遗产/采访录.md) 采访 4。该采访对本章的关联补充如下：
 >
@@ -54,4 +54,4 @@ Pike 在这篇广为流传的演讲中萧瑟地指出，系统软件研究已经
 
 ---
 
-> **本时期采访来源说明**：UNIX 哲学与审美时期的核心人员 Pike 与克尼汉的演讲自述与回忆录已系统化归位。经三次复查查询（搜索 `Henry Spencer usenet Unix interview`、`Rob Pike Unix philosophy interview CHM`、`Doug McIlroy Unix aesthetics interview`），Henry Spencer 等人员的公开采访来源暂未发现，留待后续补充。关于麦基尔罗伊对 Unix 哲学的口述史，另见第 1 章采访 6。
+> **本时期采访来源说明**：UNIX 哲学与审美时期的核心人员 Pike 与克尼汉的演讲自述与回忆录已系统化归位。经三次复查查询（搜索 `Henry Spencer usenet Unix interview`、`Rob Pike Unix philosophy interview CHM`、`Doug McIlroy Unix aesthetics interview`），Henry Spencer 等人员的公开采访来源暂未发现，留待后续补充。关于麦基尔罗伊（Malcolm Douglas McIlroy）对 Unix 哲学的口述史，另见第 1 章采访 6。

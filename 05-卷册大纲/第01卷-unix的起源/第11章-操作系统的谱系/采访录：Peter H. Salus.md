@@ -44,7 +44,7 @@ Salus 在《A Quarter Century of UNIX》前言中回顾了自己作为 Unix 历�
 
 ---
 
-#### 采访 2：丹尼斯·里奇（Dennis M. Ritchie）
+#### 采访 2：丹尼斯·里奇（Dennis MacAlistair Ritchie）
 
 > 关于里奇 1984 年 BLTJ 自述的完整采访条目，详见第 1 章 [采访录.md](../第01章-multics的遗产/采访录.md) 采访 3。该采访对本章的关联补充如下：
 >
