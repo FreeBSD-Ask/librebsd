@@ -273,3 +273,4 @@ _consistency_check.py
 
 # 重构批次数据库备份文件，禁入 git
 *.backup_*
+*.bak_20260813_115400
