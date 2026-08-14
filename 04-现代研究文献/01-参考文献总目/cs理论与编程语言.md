@@ -16,3 +16,4 @@
 - [1283] 未知. tuhs_Four_Generations_of_Portable_C_Compiler_DM_Kristol_19860609[M]. 2021.
 - [1428] 未知. _11196771_Post-Quantum SSH - Achieving Production Performance Through Direct Algorithm Integration[M]. 2025.
 - [1514] 未知. _9271074_Research the Possibility of Using Russian Cryptographic Algorithm in the ZFS File System[M]. 2020.
+- [4463] Brooks F P. The Design of Design: Essays from a Computer Scientist[M]. Boston: Addison-Wesley Professional, 2010. ISBN: 978-0-201-36298-5.
