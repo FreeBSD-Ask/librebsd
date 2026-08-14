@@ -4,11 +4,11 @@
 
 ### 中国 BSD 社区发展时期的当事人陈述（1990-2026 时期当事人）
 
-#### 采访 1：艾伦·朱德（Allan Jude）
+#### 采访 1：Allan Jude
 
 **字段 1 采访元数据**
 
-- 受访者：艾伦·朱德（Allan Jude），时任 FreeBSD 核心开发者、BSD Now 播客主持人，曾访华交流
+- 受访者：Allan Jude，时任 FreeBSD 核心开发者、BSD Now 播客主持人，曾访华交流
 - 采访者：自述，无采访者
 - 采访时间：2018-2020（多篇 BSD Now 节目自述与会议演讲）
 - 采访形式：播客自述与会议演讲（BSD Now、AsiaBSDCon）
@@ -17,11 +17,11 @@
 
 **字段 2 采访摘要**
 
-朱德在 BSD Now 多期节目与 AsiaBSDCon 2018 演讲中自述其访华交流经历，详述中国 FreeBSD 用户组（CFUG）的活动状况、中国 BSD 社区相对于英语社区的差异化特征——更注重服务器与存储应用、桌面 BSD 关注度较低、政府与电信运营商参与度较高。朱德讲述中国 BSD 社区在翻译、文档本地化、镜像站点建设方面的贡献，以及中文 BSD 资源相对于英文资源的稀缺性。
+Jude 在 BSD Now 多期节目与 AsiaBSDCon 2018 演讲中自述其访华交流经历，详述中国 FreeBSD 用户组（CFUG）的活动状况、中国 BSD 社区相对于英语社区的差异化特征——更注重服务器与存储应用、桌面 BSD 关注度较低、政府与电信运营商参与度较高。Jude 讲述中国 BSD 社区在翻译、文档本地化、镜像站点建设方面的贡献，以及中文 BSD 资源相对于英文资源的稀缺性。
 
 **字段 3 考据脚注**
 
-本则自述的 BSD Now 多期节目与 AsiaBSDCon 2018 议程页面经联网抓取核实，朱德作为 BSD Now 主持人与 AsiaBSDCon 演讲者的身份均经 BSD Now 节目页面与 AsiaBSDCon 官方议程交叉验证。其关于中国 FreeBSD 用户组（CFUG）活动状况的陈述，经 CFUG 官方页面（freebsdchina.org 存档）与 FreeBSD Foundation 亚洲社区报告交叉印证。须注意中文公开采访极少，本则采访为朱德作为英语社区代表的访华视角，正文引用时须补充中国 BSD 社区成员的本土视角。完整考据过程见 [20260724_allan-jude-china-cfug-visit.md](../../../原材料/研究/考据记录/20260724_allan-jude-china-cfug-visit.md)。
+本则自述的 BSD Now 多期节目与 AsiaBSDCon 2018 议程页面经联网抓取核实，Jude 作为 BSD Now 主持人与 AsiaBSDCon 演讲者的身份均经 BSD Now 节目页面与 AsiaBSDCon 官方议程交叉验证。其关于中国 FreeBSD 用户组（CFUG）活动状况的陈述，经 CFUG 官方页面（freebsdchina.org 存档）与 FreeBSD Foundation 亚洲社区报告交叉印证。须注意中文公开采访极少，本则采访为 Jude 作为英语社区代表的访华视角，正文引用时须补充中国 BSD 社区成员的本土视角。完整考据过程见 [20260724_allan-jude-china-cfug-visit.md](../../../原材料/研究/考据记录/20260724_allan-jude-china-cfug-visit.md)。
 
 **字段 4 与本章节内容的关联**
 
