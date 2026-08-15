@@ -1,0 +1,32 @@
+---
+chapter: 第 236 章
+id: CH236
+volume: 第11卷-dragonflybsd的历史
+---
+
+# 第 236 章 dragonflybsd的习俗特殊文化考据
+
+## 要点
+
+（待从概述提取）
+
+## 史料
+
+- [DB:references_fulltext:chapter_matches:chmatch_3631] 卷「第12卷-macos的bsd遗产」第 236 章，匹配置信度 curated，原因：curated token rule
+- [DB:references_fulltext:chapter_matches:chmatch_4053] 卷「第12卷-macos的bsd遗产」第 236 章，匹配置信度 1.0，原因：任务4 衍生组官方文档采集
+- [DB:references_fulltext:chapter_matches:chmatch_4059] 卷「第12卷-macos的bsd遗产」第 236 章，匹配置信度 1.0，原因：任务4 衍生组官方文档采集
+- [DB:references_fulltext:chapter_matches:chmatch_4061] 卷「第12卷-macos的bsd遗产」第 236 章，匹配置信度 1.0，原因：任务4 衍生组官方文档采集
+- [DB:references_fulltext:chapter_matches:chmatch_4062] 卷「第12卷-macos的bsd遗产」第 236 章，匹配置信度 1.0，原因：任务4 衍生组官方文档采集
+- [DB:references_fulltext:chapter_matches:chmatch_4063] 卷「第12卷-macos的bsd遗产」第 236 章，匹配置信度 1.0，原因：任务4 衍生组官方文档采集
+
+## 史观
+
+（待补）
+
+## 辨析
+
+（待补）
+
+## 文献
+
+（待补）

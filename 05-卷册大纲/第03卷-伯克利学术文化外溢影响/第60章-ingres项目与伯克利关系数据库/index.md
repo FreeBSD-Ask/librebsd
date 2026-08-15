@@ -1,0 +1,29 @@
+---
+chapter: 第 60 章
+id: CH60
+volume: 第03卷-伯克利学术文化外溢影响
+---
+
+# 第 60 章 ingres项目与伯克利关系数据库
+
+## 要点
+
+（待从概述提取）
+
+## 史料
+
+- [DB:references_fulltext:chapter_matches:chmatch_3635] 卷「第03卷-伯克利学术文化外溢影响」第 60 章，匹配置信度 curated，原因：curated token rule
+- [DB:references_fulltext:chapter_matches:chmatch_3638] 卷「第03卷-伯克利学术文化外溢影响」第 60 章，匹配置信度 curated，原因：curated token rule
+- [DB:references_fulltext:chapter_matches:chmatch_3640] 卷「第03卷-伯克利学术文化外溢影响」第 60 章，匹配置信度 curated，原因：curated token rule
+
+## 史观
+
+（待补）
+
+## 辨析
+
+（待补）
+
+## 文献
+
+（待补）

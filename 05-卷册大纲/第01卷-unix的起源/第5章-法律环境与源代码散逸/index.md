@@ -1,0 +1,36 @@
+---
+chapter: 第 5 章
+id: CH5
+volume: 第01卷-unix的起源
+---
+
+# 第 5 章 法律环境与源代码散逸
+
+## 要点
+
+（待从概述提取）
+
+## 史料
+
+- [DB:references_fulltext:chapter_matches:chmatch_3617] 卷「第01卷-unix的起源」第 5 章，匹配置信度 curated，原因：curated token rule
+- [DB:references_fulltext:chapter_matches:chmatch_3618] 卷「第01卷-unix的起源」第 5 章，匹配置信度 curated，原因：curated token rule
+- [DB:references_fulltext:chapter_matches:chmatch_3639] 卷「第01卷-unix的起源」第 5 章，匹配置信度 curated，原因：curated token rule
+- [DB:references_fulltext:chapter_matches:chmatch_3645] 卷「第01卷-unix的起源」第 5 章，匹配置信度 curated，原因：curated token rule
+- [DB:references_fulltext:chapter_matches:chmatch_3646] 卷「第01卷-unix的起源」第 5 章，匹配置信度 curated，原因：curated token rule
+- [DB:references_fulltext:chapter_matches:chmatch_20] 卷「第01卷-unix的起源」第 5 章，匹配置信度 0.6，原因：路径启发：McKusick FFS 1984
+- [DB:references_fulltext:chapter_matches:chmatch_27] 卷「第01卷-unix的起源」第 5 章，匹配置信度 0.6，原因：路径启发：GFS
+- [DB:references_fulltext:chapter_matches:chmatch_53] 卷「第01卷-unix的起源」第 5 章，匹配置信度 0.6，原因：关键词重合 1 项
+- [DB:references_fulltext:chapter_matches:chmatch_858] 卷「第01卷-unix的起源」第 5 章，匹配置信度 0.6，原因：关键词重合 1 项
+- [DB:references_fulltext:chapter_matches:chmatch_1137] 卷「第01卷-unix的起源」第 05 章，匹配置信度 0.98，原因：McKusick、Bostic、Karels、Quarterman 合著的 4.4 BSD 操作系统设计与实现是 BSD 史上最重要的技术文献之一，由 CSRG 核心成员亲笔撰写，全面记录 4.4 BSD 的内核设计、文件系统（FFS/UFS）、虚拟内存、网络栈等核心子系统。与第5章 Bell Labs 黄金时代、第26B章 FreeBSD 诞生、第35B章 FreeBSD Ports 系统直接相关，是 FreeBSD 直接祖先的权威技术记录。
+
+## 史观
+
+（待补）
+
+## 辨析
+
+（待补）
+
+## 文献
+
+（待补）

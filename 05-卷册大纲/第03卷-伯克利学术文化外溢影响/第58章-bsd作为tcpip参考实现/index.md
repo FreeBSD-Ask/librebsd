@@ -1,0 +1,39 @@
+---
+chapter: 第 58 章
+id: CH58
+volume: 第03卷-伯克利学术文化外溢影响
+---
+
+# 第 58 章 bsd作为tcpip参考实现
+
+## 要点
+
+（待从概述提取）
+
+## 史料
+
+- [DB:references_fulltext:chapter_matches:chmatch_4206] 卷「第03卷-伯克利学术文化外溢影响」第 58 章，匹配置信度 1.0，原因：SMM:9 sendmail 邮件路由
+- [DB:references_fulltext:chapter_matches:chmatch_4207] 卷「第03卷-伯克利学术文化外溢影响」第 58 章，匹配置信度 1.0，原因：SMM:10 BIND 域名服务器
+- [DB:references_fulltext:chapter_matches:chmatch_4208] 卷「第03卷-伯克利学术文化外溢影响」第 58 章，匹配置信度 1.0，原因：SMM:10 BIND 补充
+- [DB:bsdnow_podcast:outline_mappings:om_10896] BSD Now 第 601 期，匹配 CH58 章，关联度 1.0
+- [DB:bsdnow_podcast:outline_mappings:om_11278] BSD Now 第 556 期，匹配 CH58 章，关联度 1.0
+- [DB:bsdnow_podcast:outline_mappings:om_11509] BSD Now 第 528 期，匹配 CH58 章，关联度 1.0
+- [DB:bsdnow_podcast:outline_mappings:om_11658] BSD Now 第 507 期，匹配 CH58 章，关联度 1.0
+- [DB:bsdnow_podcast:outline_mappings:om_11701] BSD Now 第 504 期，匹配 CH58 章，关联度 1.0
+- [DB:bsdnow_podcast:outline_mappings:om_11769] BSD Now 第 491 期，匹配 CH58 章，关联度 1.0
+- [DB:bsdnow_podcast:outline_mappings:om_11902] BSD Now 第 479 期，匹配 CH58 章，关联度 1.0
+- [DB:bsdnow_podcast:outline_mappings:om_11979] BSD Now 第 467 期，匹配 CH58 章，关联度 1.0
+- [DB:bsdnow_podcast:outline_mappings:om_12182] BSD Now 第 447 期，匹配 CH58 章，关联度 1.0
+- [DB:bsdnow_podcast:outline_mappings:om_12361] BSD Now 第 435 期，匹配 CH58 章，关联度 1.0
+
+## 史观
+
+（待补）
+
+## 辨析
+
+（待补）
+
+## 文献
+
+（待补）
