@@ -1,0 +1,27 @@
+---
+chapter: 第 112 章
+id: CH112
+volume: 第06卷-freebsd的核心技术革新
+---
+
+# 第 112 章 zfs在freebsd的演进与dragonfly对比
+
+## 要点
+
+（待从概述提取）
+
+## 史料
+
+- [DB:references_fulltext:chapter_matches:chmatch_1526] 卷「第06卷-freebsd的核心技术革新」第 112 章，匹配置信度 0.6，原因：无法匹配到具体章节（关键词重叠得分低于阈值）
+
+## 史观
+
+（待补）
+
+## 辨析
+
+（待补）
+
+## 文献
+
+（待补）

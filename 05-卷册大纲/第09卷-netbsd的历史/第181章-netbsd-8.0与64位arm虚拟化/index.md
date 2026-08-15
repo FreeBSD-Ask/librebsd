@@ -1,0 +1,38 @@
+---
+chapter: 第 181 章
+id: CH181
+volume: 第09卷-netbsd的历史
+---
+
+# 第 181 章 netbsd-8.0与64位arm虚拟化
+
+## 要点
+
+（待从概述提取）
+
+## 史料
+
+- [DB:references_fulltext:chapter_matches:chmatch_4088] 卷「第09卷-netbsd的历史」第 181 章，匹配置信度 1.0，原因：任务4第二批 缺口章补充
+- [DB:references_fulltext:chapter_matches:chmatch_4089] 卷「第09卷-netbsd的历史」第 181 章，匹配置信度 1.0，原因：任务4第二批 缺口章补充
+- [DB:bsdnow_podcast:outline_mappings:om_10426] BSD Now 第 676 期，匹配 CH181 章，关联度 1.0
+- [DB:bsdnow_podcast:outline_mappings:om_10512] BSD Now 第 661 期，匹配 CH181 章，关联度 1.0
+- [DB:bsdnow_podcast:outline_mappings:om_10527] BSD Now 第 656 期，匹配 CH181 章，关联度 1.0
+- [DB:bsdnow_podcast:outline_mappings:om_10534] BSD Now 第 655 期，匹配 CH181 章，关联度 1.0
+- [DB:bsdnow_podcast:outline_mappings:om_10542] BSD Now 第 654 期，匹配 CH181 章，关联度 1.0
+- [DB:bsdnow_podcast:outline_mappings:om_10557] BSD Now 第 652 期，匹配 CH181 章，关联度 1.0
+- [DB:bsdnow_podcast:outline_mappings:om_10567] BSD Now 第 651 期，匹配 CH181 章，关联度 1.0
+- [DB:bsdnow_podcast:outline_mappings:om_10591] BSD Now 第 645 期，匹配 CH181 章，关联度 1.0
+- [DB:bsdnow_podcast:outline_mappings:om_10609] BSD Now 第 642 期，匹配 CH181 章，关联度 1.0
+- [DB:bsdnow_podcast:outline_mappings:om_10633] BSD Now 第 638 期，匹配 CH181 章，关联度 1.0
+
+## 史观
+
+（待补）
+
+## 辨析
+
+（待补）
+
+## 文献
+
+（待补）

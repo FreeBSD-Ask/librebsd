@@ -4,7 +4,7 @@
 
 NetBSD 的工程哲学中，"clean code"（清洁代码）占据核心位置。"Of course it runs NetBSD"——NetBSD 社区的口号直接指向代码的可移植性之美：当同一份代码可以在 VAX、SPARC、Alpha、ARM、x86 等数十种架构上编译使，这种跨平台的工程成就本身就被视为美学。NetBSD 的 clean code 理想与 FreeBSD 的 KISS 不同：KISS 强调设计简洁，NetBSD 强调代码洁净——包括正确的类型使用（`size_t` 替代 `int`）、最小化特定架构代码、清晰分离机器相关层（MI/MD）。Charles Hannum 在 1995 年 NetBSD 初期的 commit 信息中经常标记 `/* XXX: 架构依赖，应移至 MD 层 */` 此类注释——这种代码自反性本身就是一种审美实践。
 
-但 clean code 理想面临消解为其对立面的危险。当 "代码清洁" 建立在排斥外部贡献的基础上时，"清洁" 就成为形式主义的暴政。NetBSD 社区在 1998-2003 年间多次发生的 "代码不符合标准清理" 争议——外部贡献者提交的补丁因不符合 NetBSD 的 "清洁代码标准" 被退回要求全面重写，导致多位开发者离开。2001 年 Matthew Green（mrg@）在 tech-kern@ 邮件列表中批评："清洁代码不应该是一种拦截机制，而是一种共享的习惯。"这与 §7 美学 13.4 节的命题——"美在被形式主义化时就不再是美"——严格对应。NetBSD 的 clean code 从共享的工程习惯（审美体验）转化为与外部贡献者建立等级关系的工具（形式主义教条），在这一转化中，clean code 本身的美就被消解了。
+但 clean code 理想面临消解为其对立面的危险。当 "代码清洁" 建立在排斥外部贡献的基础上时，"清洁" 就成为形式主义的暴政。NetBSD 社区在 1998-2003 年间多次发生的 "代码不符合标准清理" 争议——外部贡献者提交的补丁因不符合 NetBSD 的 "清洁代码标准" 被退回要求全面重写，导致多位开发者离开。2001 年 Matthew Green（马修·格林）（mrg@）在 tech-kern@ 邮件列表中批评："清洁代码不应该是一种拦截机制，而是一种共享的习惯。"这与 §7 美学 13.4 节的命题——"美在被形式主义化时就不再是美"——严格对应。NetBSD 的 clean code 从共享的工程习惯（审美体验）转化为与外部贡献者建立等级关系的工具（形式主义教条），在这一转化中，clean code 本身的美就被消解了。
 
 #### 史料
 
@@ -12,7 +12,7 @@ NetBSD 的工程哲学中，"clean code"（清洁代码）占据核心位置。"
 - NetBSD tech-kern@ 邮件列表（2001）——Matthew Green（mrg@）关于 "code review as barrier not facilitator" 的批评帖。
 - NetBSD CVS/SVN commit logs（尤其是 1995-2005 时期）——Charles Hannum、Manuel Bouyer、Jason Thorpe 等核心开发者的 commit 注释中频繁出现代码清洁性评判。
 - NetBSD 文档：*The NetBSD Porting Guide*（various editions, 1996-2020）——系统阐述 MI/MD 分层与代码书写标准。
-- De Raadt T. "OpenBSD vs NetBSD: Why we forked"（1995-10-18）——Theo de Raadt 在 OpenBSD 早期邮件列表中的解释中提及 NetBSD 的代码审查文化过严是促使分叉的因素之一——"我写了代码，他们却说不够清洁。"
+- De Raadt T. "OpenBSD vs NetBSD: Why we forked"（1995-10-18）——Theo de Raadt（西奥·德·若特） 在 OpenBSD 早期邮件列表中的解释中提及 NetBSD 的代码审查文化过严是促使分叉的因素之一——"我写了代码，他们却说不够清洁。"
 
 #### 史观
 

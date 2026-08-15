@@ -50,15 +50,15 @@
 
 68.21 **GNU make → BSD make**——**GNU** `make` 为 **GPLv3** 许可证；**FreeBSD** 使用 **BSD** `make`（又称 `pmake`）作为默认构建工具；**BSD** `make` 源自 **4.4BSD**，语法与 **GNU** `make` 不兼容（如 `.if`/`.else`/`.endif` vs `ifeq`/`else`/`endif`）；**FreeBSD** **Ports** 系统使用 `bsd.port.mk` 基于 **BSD** `make`；部分第三方软件仍依赖 **GNU** `make`，但作为 ports 依赖安装而非基本系统组件；｜ **子-子节**：68.21.1 **BSD** `make` 的语法与设计；68.21.2 **Ports** 系统对 **BSD** `make` 的依赖；68.21.3 与 **GNU** `make` 兼容性辨析；68.21.4 史料辨析
 
-68.22 **GNU groff → mandoc**——**GNU** `groff` 为 **GPLv3** 许可证，是传统的 `man` page 格式化工具；`mandoc` 由 **Kristaps Dzonsons**（**OpenBSD**）和 **Ingo Schwarze**（**OpenBSD**）开发，**ISC** 许可证（**BSD** 兼容）；**OpenBSD** 率先在 2010 年采用 `mandoc` 替换 `groff`；**FreeBSD 14.0**（2023.11）将 `mandoc` 作为默认 `man` page 工具；`mandoc` 的优势：更小、更快、更安全，且支持 `man` page 的完整渲染；｜ **子-子节**：68.22.1 `mandoc` 的设计与优势；68.22.2 **OpenBSD** 率先采用与 **FreeBSD** 跟随；68.22.3 与 `groff` 功能比较；68.22.4 史料辨析
+68.22 **GNU groff → mandoc**——**GNU** `groff` 为 **GPLv3** 许可证，是传统的 `man` page 格式化工具；`mandoc` 由 **Kristaps Dzonsons**（**OpenBSD**）和 **Ingo Schwarze（英戈·施瓦茨）**（**OpenBSD**）开发，**ISC** 许可证（**BSD** 兼容）；**OpenBSD** 率先在 2010 年采用 `mandoc` 替换 `groff`；**FreeBSD 14.0**（2023.11）将 `mandoc` 作为默认 `man` page 工具；`mandoc` 的优势：更小、更快、更安全，且支持 `man` page 的完整渲染；｜ **子-子节**：68.22.1 `mandoc` 的设计与优势；68.22.2 **OpenBSD** 率先采用与 **FreeBSD** 跟随；68.22.3 与 `groff` 功能比较；68.22.4 史料辨析
 
-68.23 **GNU readline → libedit**——**GNU** `readline` 为 **GPLv3** 许可证，是交互式命令行编辑库；`libedit`（又称 `libeditline`）由 **Christos Zoulas**（**NetBSD**）开发，**BSD** 许可证，提供与 `readline` 兼容的 **API**；**FreeBSD** 基本系统使用 `libedit` 而非 `readline`；**NetBSD** 也使用 `libedit`；许多 **FreeBSD** 基本系统工具（如 `sh`、`bc`、`ftp`）使用 `libedit` 提供命令行编辑功能；｜ **子-子节**：68.23.1 `libedit` 的设计与 **API** 兼容性；68.23.2 基本系统工具的 `libedit` 集成；68.23.3 与 `readline` 功能比较；68.23.4 史料辨析
+68.23 **GNU readline → libedit**——**GNU** `readline` 为 **GPLv3** 许可证，是交互式命令行编辑库；`libedit`（又称 `libeditline`）由 **Christos Zoulas（克里斯托斯·祖拉斯）**（**NetBSD**）开发，**BSD** 许可证，提供与 `readline` 兼容的 **API**；**FreeBSD** 基本系统使用 `libedit` 而非 `readline`；**NetBSD** 也使用 `libedit`；许多 **FreeBSD** 基本系统工具（如 `sh`、`bc`、`ftp`）使用 `libedit` 提供命令行编辑功能；｜ **子-子节**：68.23.1 `libedit` 的设计与 **API** 兼容性；68.23.2 基本系统工具的 `libedit` 集成；68.23.3 与 `readline` 功能比较；68.23.4 史料辨析
 
-68.24 **版本控制系统迁移：CVS、SVN、Git**——**FreeBSD** 源代码管理系统的迁移路径：① **CVS**（Concurrent Versions System）——**GPLv2** 许可证，**FreeBSD** 1993-2008 年使用；② **SVN**（**Subversion**）——**Apache 2.0** 许可证（**BSD** 兼容），**FreeBSD** 2008-2021 年使用，**Benno Rice** 描述：
+68.24 **版本控制系统迁移：CVS、SVN、Git**——**FreeBSD** 源代码管理系统的迁移路径：① **CVS**（Concurrent Versions System）——**GPLv2** 许可证，**FreeBSD** 1993-2008 年使用；② **SVN**（**Subversion**）——**Apache 2.0** 许可证（**BSD** 兼容），**FreeBSD** 2008-2021 年使用，**Benno Rice（本诺·赖斯）** 描述：
 
 > “**FreeBSD** 直到 2008 年还在使用 **CVS**。为什么呢？因为大家对于应该用什么来代替它没有达成共识。考虑过 **BitKeeper**、**Git** 和 **Mercurial**，最后都无疾而终了”
 
-> “2008 年，经过八年的争论，**Peter Wemm** 强行推进了向 **Subversion** 的转换”
+> “2008 年，经过八年的争论，**Peter Wemm（彼得·韦姆）** 强行推进了向 **Subversion** 的转换”
 
 ③ **Git**——**GPLv2** 许可证，**FreeBSD** 2021 年迁移至 **Git**（参见相关章节版本控制系统迁移部分）；**Git** 虽然是 **GPLv2**，但因 **Linus Torvalds** 拒绝 **GPLv3**，且 **Git** 的使用方式（克隆仓库后本地操作）不触发 **GPL** 分发条款，**BSD** 社区接受 **Git** 作为版本控制工具；
 
@@ -78,7 +78,7 @@
 
 68.28 **BSD 化的局限与未完成的部分**——**BSD** 化并非完全完成：① 部分架构仍依赖 **GNU** `as` 汇编器（如部分嵌入式 **ARM**/**MIPS** 配置）；② **Ports** 系统中大量软件仍依赖 **GPL** 组件（如 **GCC** 作为某些语言的编译器、**GNU** `gettext` 作为国际化工具）；③ **Linux** 兼容层（`linuxulator`）可能涉及 **GPL** 影响的代码；④ **Git** 虽为 **GPLv2**，但被 **BSD** 社区接受为版本控制工具；⑤ 部分固件（如无线网卡固件）可能为专有或 **GPL** 许可证；⑥ **LLDB**（**LLVM Debugger**）虽为 **BSD** 许可证，但在功能上仍不及 **GDB**（**GPLv3**）完整；**BSD** 化是一个持续的过程，而非一次性完成的工程；｜ **子-子节**：68.28.1 未完成替换的具体组件；68.28.2 局限对 **FreeBSD** 的影响；68.28.3 **BSD** 化完成度的辨析；68.28.4 史料辨析
 
-68.29 **BSD 化与 NetBSD/OpenBSD/DragonFly BSD 的对比**——① **OpenBSD** 是最激进的 **BSD** 化推行者——**OpenBSD** 不仅替换 **GCC** → **Clang**，还发起了 **LibreSSL**（替换 **OpenSSL** 的 **Apache 2.0** 许可证）、`mandoc`（替换 **GNU** `groff`）、**OpenNTPD**（替换 **ISC NTP** 的 **ISC** 许可证但 **OpenBSD** 重新实现）、**OpenBGPD**、**OpenSMTPD** 等一系列“去 **GPL**/去 **Apache**/去 **ISC**”的重新实现；**OpenBSD** 的 **BSD** 化驱动力来自 **Theo de Raadt** 对许可证纯洁性的严格要求；② **NetBSD** 也进行了 **BSD** 化，如 `libedit`（**NetBSD** 原创）、**BNF** 替代 **GNU** `bison` 等，但程度不及 **OpenBSD**；③ **DragonFly BSD** 继承了 **FreeBSD** 的 **BSD** 化成果，并在此基础上发展了自研工具；④ **FreeBSD** 的 **BSD** 化程度介于 **OpenBSD**（最激进）与 **NetBSD**（温和）之间；
+68.29 **BSD 化与 NetBSD/OpenBSD/DragonFly BSD 的对比**——① **OpenBSD** 是最激进的 **BSD** 化推行者——**OpenBSD** 不仅替换 **GCC** → **Clang**，还发起了 **LibreSSL**（替换 **OpenSSL** 的 **Apache 2.0** 许可证）、`mandoc`（替换 **GNU** `groff`）、**OpenNTPD**（替换 **ISC NTP** 的 **ISC** 许可证但 **OpenBSD** 重新实现）、**OpenBGPD**、**OpenSMTPD** 等一系列“去 **GPL**/去 **Apache**/去 **ISC**”的重新实现；**OpenBSD** 的 **BSD** 化驱动力来自 **Theo de Raadt（西奥·德·若特）** 对许可证纯洁性的严格要求；② **NetBSD** 也进行了 **BSD** 化，如 `libedit`（**NetBSD** 原创）、**BNF** 替代 **GNU** `bison` 等，但程度不及 **OpenBSD**；③ **DragonFly BSD** 继承了 **FreeBSD** 的 **BSD** 化成果，并在此基础上发展了自研工具；④ **FreeBSD** 的 **BSD** 化程度介于 **OpenBSD**（最激进）与 **NetBSD**（温和）之间；
 
 | BSD 系统 | BSD 化程度 | 关键项目 | 驱动力 |
 |---|---|---|---|

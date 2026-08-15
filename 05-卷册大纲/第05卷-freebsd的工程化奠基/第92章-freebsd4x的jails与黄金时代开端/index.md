@@ -1,0 +1,36 @@
+---
+chapter: 第 92 章
+id: CH92
+volume: 第05卷-freebsd的工程化奠基
+---
+
+# 第 92 章 freebsd4x的jails与黄金时代开端
+
+## 要点
+
+（待从概述提取）
+
+## 史料
+
+- [DB:references_fulltext:chapter_matches:chmatch_87] 卷「第05卷-freebsd的工程化奠基」第 92 章，匹配置信度 0.8，原因：关键词重合 2 项 + 加分 1
+- [DB:references_fulltext:chapter_matches:chmatch_96] 卷「第05卷-freebsd的工程化奠基」第 92 章，匹配置信度 0.8，原因：关键词重合 2 项 + 加分 1
+- [DB:references_fulltext:chapter_matches:chmatch_104] 卷「第05卷-freebsd的工程化奠基」第 92 章，匹配置信度 0.8，原因：关键词重合 2 项 + 加分 1
+- [DB:references_fulltext:chapter_matches:chmatch_105] 卷「第05卷-freebsd的工程化奠基」第 92 章，匹配置信度 0.8，原因：关键词重合 2 项 + 加分 1
+- [DB:references_fulltext:chapter_matches:chmatch_124] 卷「第05卷-freebsd的工程化奠基」第 92 章，匹配置信度 0.8，原因：关键词重合 2 项 + 加分 1
+- [DB:references_fulltext:chapter_matches:chmatch_138] 卷「第05卷-freebsd的工程化奠基」第 92 章，匹配置信度 0.8，原因：关键词重合 2 项 + 加分 1
+- [DB:references_fulltext:chapter_matches:chmatch_245] 卷「第05卷-freebsd的工程化奠基」第 92 章，匹配置信度 0.8，原因：关键词重合 2 项 + 加分 2
+- [DB:references_fulltext:chapter_matches:chmatch_246] 卷「第05卷-freebsd的工程化奠基」第 92 章，匹配置信度 0.8，原因：关键词重合 1 项 + 加分 2
+- [DB:references_fulltext:chapter_matches:chmatch_247] 卷「第05卷-freebsd的工程化奠基」第 92 章，匹配置信度 0.8，原因：关键词重合 1 项 + 加分 2
+- [DB:references_fulltext:chapter_matches:chmatch_248] 卷「第05卷-freebsd的工程化奠基」第 92 章，匹配置信度 0.8，原因：关键词重合 1 项 + 加分 2
+
+## 史观
+
+（待补）
+
+## 辨析
+
+（待补）
+
+## 文献
+
+（待补）

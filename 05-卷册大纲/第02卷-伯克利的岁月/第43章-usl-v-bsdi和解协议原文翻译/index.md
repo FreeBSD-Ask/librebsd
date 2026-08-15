@@ -1,0 +1,29 @@
+---
+chapter: 第 43 章
+id: CH43
+volume: 第02卷-伯克利的岁月
+---
+
+# 第 43 章 usl-v-bsdi和解协议原文翻译
+
+## 要点
+
+（待从概述提取）
+
+## 史料
+
+- [DB:references_fulltext:chapter_matches:chmatch_3729] 卷「第03卷-伯克利学术文化外溢影响」第 43 章，匹配置信度 folder，原因：folder 第42章
+- [DB:references_fulltext:chapter_matches:chmatch_3730] 卷「第03卷-伯克利学术文化外溢影响」第 43 章，匹配置信度 folder，原因：folder 第42章
+- [DB:references_fulltext:chapter_matches:chmatch_1554] 卷「第03卷-伯克利学术文化外溢影响」第 43 章，匹配置信度 0.9，原因：关键词搜索下载文献，标题含章节主题
+
+## 史观
+
+（待补）
+
+## 辨析
+
+（待补）
+
+## 文献
+
+（待补）

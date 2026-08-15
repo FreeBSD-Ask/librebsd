@@ -1,0 +1,36 @@
+---
+chapter: 第 145 章
+id: CH145
+volume: 第07卷-freebsd的工程体系重构
+---
+
+# 第 145 章 gplv3争议辩证链
+
+## 要点
+
+（待从概述提取）
+
+## 史料
+
+- [DB:bsdnow_podcast:outline_mappings:om_11438] BSD Now 第 536 期，匹配 CH145 章，关联度 2.0
+- [DB:bsdnow_podcast:outline_mappings:om_12221] BSD Now 第 445 期，匹配 CH145 章，关联度 2.0
+- [DB:bsdnow_podcast:outline_mappings:om_10478] BSD Now 第 665 期，匹配 CH145 章，关联度 1.0
+- [DB:bsdnow_podcast:outline_mappings:om_10541] BSD Now 第 654 期，匹配 CH145 章，关联度 1.0
+- [DB:bsdnow_podcast:outline_mappings:om_10579] BSD Now 第 646 期，匹配 CH145 章，关联度 1.0
+- [DB:bsdnow_podcast:outline_mappings:om_10639] BSD Now 第 637 期，匹配 CH145 章，关联度 1.0
+- [DB:bsdnow_podcast:outline_mappings:om_10770] BSD Now 第 617 期，匹配 CH145 章，关联度 1.0
+- [DB:bsdnow_podcast:outline_mappings:om_11142] BSD Now 第 571 期，匹配 CH145 章，关联度 1.0
+- [DB:bsdnow_podcast:outline_mappings:om_11205] BSD Now 第 563 期，匹配 CH145 章，关联度 1.0
+- [DB:bsdnow_podcast:outline_mappings:om_11359] BSD Now 第 546 期，匹配 CH145 章，关联度 1.0
+
+## 史观
+
+（待补）
+
+## 辨析
+
+（待补）
+
+## 文献
+
+（待补）

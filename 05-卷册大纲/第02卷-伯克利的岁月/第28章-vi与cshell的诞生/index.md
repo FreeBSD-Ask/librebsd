@@ -1,0 +1,35 @@
+---
+chapter: 第 28 章
+id: CH28
+volume: 第02卷-伯克利的岁月
+---
+
+# 第 28 章 vi与cshell的诞生
+
+## 要点
+
+（待从概述提取）
+
+## 史料
+
+- [DB:references_fulltext:chapter_matches:chmatch_3811] 卷「第02卷-伯克利的岁月」第 28 章，匹配置信度 folder，原因：folder 第28章
+- [DB:references_fulltext:chapter_matches:chmatch_3812] 卷「第02卷-伯克利的岁月」第 28 章，匹配置信度 folder，原因：folder 第28章
+- [DB:references_fulltext:chapter_matches:chmatch_3890] 卷「第02卷-伯克利的岁月」第 28 章，匹配置信度 folder，原因：folder 第28章
+- [DB:references_fulltext:chapter_matches:chmatch_3891] 卷「第02卷-伯克利的岁月」第 28 章，匹配置信度 folder，原因：folder 第28章
+- [DB:references_fulltext:chapter_matches:chmatch_3914] 卷「第02卷-伯克利的岁月」第 28 章，匹配置信度 folder，原因：folder 第28章
+- [DB:references_fulltext:chapter_matches:chmatch_3919] 卷「第02卷-伯克利的岁月」第 28 章，匹配置信度 folder，原因：folder 第28章
+- [DB:references_fulltext:chapter_matches:chmatch_3934] 卷「第02卷-伯克利的岁月」第 28 章，匹配置信度 folder，原因：folder 第28章
+- [DB:references_fulltext:chapter_matches:chmatch_3958] 卷「第02卷-伯克利的岁月」第 28 章，匹配置信度 folder，原因：folder 第28章
+- [DB:references_fulltext:chapter_matches:chmatch_1551] 卷「第02卷-伯克利的岁月」第 28 章，匹配置信度 0.9，原因：关键词搜索下载文献，标题含章节主题
+
+## 史观
+
+（待补）
+
+## 辨析
+
+（待补）
+
+## 文献
+
+（待补）
