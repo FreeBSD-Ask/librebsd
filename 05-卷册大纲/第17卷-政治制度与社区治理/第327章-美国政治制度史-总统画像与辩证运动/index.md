@@ -12,8 +12,8 @@ volume: 第17卷-政治制度与社区治理
 
 ## 史料
 
-- [DB:references_fulltext:chapter_matches:chmatch_4166] 卷「第18卷-全球社区地区bsd史」第 327 章，匹配置信度 1.0，原因：UNIX 社区第一手通讯；1975 首刊至 1978 v3n8
-- [DB:references_fulltext:chapter_matches:chmatch_4228] 卷「第18卷-全球社区地区bsd史」第 327 章，匹配置信度 1.0，原因：计算机史老兵讨论列表；2018.07-2026.01
+- [DB:references_fulltext:chapter_matches:chmatch_4166] 卷“第18卷-全球社区地区bsd史”第 327 章，匹配置信度 1.0，原因：UNIX 社区第一手通讯；1975 首刊至 1978 v3n8
+- [DB:references_fulltext:chapter_matches:chmatch_4228] 卷“第18卷-全球社区地区bsd史”第 327 章，匹配置信度 1.0，原因：计算机史老兵讨论列表；2018.07-2026.01
 
 ## 史观
 

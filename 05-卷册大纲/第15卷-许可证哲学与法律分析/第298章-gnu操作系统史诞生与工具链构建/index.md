@@ -12,7 +12,7 @@ volume: 第15卷-许可证哲学与法律分析
 
 ## 史料
 
-- [DB:references_fulltext:chapter_matches:chmatch_3984] 卷「第15卷-许可证哲学与法律分析」第 298 章，匹配置信度 folder，原因：folder 第296章
+- [DB:references_fulltext:chapter_matches:chmatch_3984] 卷“第15卷-许可证哲学与法律分析”第 298 章，匹配置信度 folder，原因：folder 第296章
 - [DB:bsdnow_podcast:outline_mappings:om_10484] BSD Now 第 665 期，匹配 CH298 章，关联度 1.0
 - [DB:bsdnow_podcast:outline_mappings:om_10548] BSD Now 第 654 期，匹配 CH298 章，关联度 1.0
 - [DB:bsdnow_podcast:outline_mappings:om_10585] BSD Now 第 646 期，匹配 CH298 章，关联度 1.0

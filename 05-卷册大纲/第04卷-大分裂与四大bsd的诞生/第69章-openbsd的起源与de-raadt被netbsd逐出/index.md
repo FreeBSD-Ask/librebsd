@@ -12,7 +12,7 @@ volume: 第04卷-大分裂与四大bsd的诞生
 
 ## 史料
 
-- [DB:references_fulltext:chapter_matches:chmatch_3990] 卷「」第 69 章，匹配置信度 0.9，原因：
+- [DB:references_fulltext:chapter_matches:chmatch_3990] 卷""第 69 章，匹配置信度 0.9，原因：
 - [DB:bsdnow_podcast:outline_mappings:om_10418] BSD Now 第 676 期，匹配 CH69 章，关联度 1.0
 - [DB:bsdnow_podcast:outline_mappings:om_10451] BSD Now 第 671 期，匹配 CH69 章，关联度 1.0
 - [DB:bsdnow_podcast:outline_mappings:om_10471] BSD Now 第 666 期，匹配 CH69 章，关联度 1.0

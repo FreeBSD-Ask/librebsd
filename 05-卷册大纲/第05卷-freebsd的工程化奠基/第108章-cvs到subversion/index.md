@@ -12,9 +12,9 @@ volume: 第05卷-freebsd的工程化奠基
 
 ## 史料
 
-- [DB:references_fulltext:chapter_matches:chmatch_3658] 卷「第06卷-freebsd的核心技术革新」第 108 章，匹配置信度 curated，原因：curated token rule
-- [DB:references_fulltext:chapter_matches:chmatch_1139] 卷「第06卷-freebsd的核心技术革新」第 108 章，匹配置信度 0.5，原因：无匹配
-- [DB:references_fulltext:chapter_matches:chmatch_1299] 卷「第06卷-freebsd的核心技术革新」第 108 章，匹配置信度 0.5，原因：无匹配
+- [DB:references_fulltext:chapter_matches:chmatch_3658] 卷“第06卷-freebsd的核心技术革新”第 108 章，匹配置信度 curated，原因：curated token rule
+- [DB:references_fulltext:chapter_matches:chmatch_1139] 卷“第06卷-freebsd的核心技术革新”第 108 章，匹配置信度 0.5，原因：无匹配
+- [DB:references_fulltext:chapter_matches:chmatch_1299] 卷“第06卷-freebsd的核心技术革新”第 108 章，匹配置信度 0.5，原因：无匹配
 - [DB:bsdnow_podcast:outline_mappings:om_12821] BSD Now 第 307 期，匹配 CH108 章，关联度 2.0
 - [DB:bsdnow_podcast:outline_mappings:om_10532] BSD Now 第 655 期，匹配 CH108 章，关联度 1.0
 - [DB:bsdnow_podcast:outline_mappings:om_10603] BSD Now 第 642 期，匹配 CH108 章，关联度 1.0

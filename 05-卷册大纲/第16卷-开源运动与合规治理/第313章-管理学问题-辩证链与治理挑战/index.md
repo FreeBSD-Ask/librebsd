@@ -12,7 +12,7 @@ volume: 第16卷-开源运动与合规治理
 
 ## 史料
 
-- [DB:references_fulltext:chapter_matches:chmatch_3985] 卷「第17卷-政治制度与社区治理」第 313 章，匹配置信度 folder，原因：folder 第311章
+- [DB:references_fulltext:chapter_matches:chmatch_3985] 卷“第17卷-政治制度与社区治理”第 313 章，匹配置信度 folder，原因：folder 第311章
 
 ## 史观
 

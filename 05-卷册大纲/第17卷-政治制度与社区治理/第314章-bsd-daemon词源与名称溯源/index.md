@@ -12,7 +12,7 @@ volume: 第17卷-政治制度与社区治理
 
 ## 史料
 
-- [DB:references_fulltext:chapter_matches:chmatch_3987] 卷「第17卷-政治制度与社区治理」第 314 章，匹配置信度 folder，原因：folder 第312章
+- [DB:references_fulltext:chapter_matches:chmatch_3987] 卷“第17卷-政治制度与社区治理”第 314 章，匹配置信度 folder，原因：folder 第312章
 - [DB:bsdnow_podcast:outline_mappings:om_11561] BSD Now 第 522 期，匹配 CH314 章，关联度 2.0
 - [DB:bsdnow_podcast:outline_mappings:om_12101] BSD Now 第 458 期，匹配 CH314 章，关联度 2.0
 - [DB:bsdnow_podcast:outline_mappings:om_10445] BSD Now 第 674 期，匹配 CH314 章，关联度 1.0

@@ -12,8 +12,8 @@ volume: 第12卷-macos的bsd遗产
 
 ## 史料
 
-- [DB:references_fulltext:chapter_matches:chmatch_3744] 卷「第12卷-macos的bsd遗产」第 242 章，匹配置信度 folder，原因：folder 第240章
-- [DB:references_fulltext:chapter_matches:chmatch_3745] 卷「第12卷-macos的bsd遗产」第 242 章，匹配置信度 folder，原因：folder 第240章
+- [DB:references_fulltext:chapter_matches:chmatch_3744] 卷“第12卷-macos的bsd遗产”第 242 章，匹配置信度 folder，原因：folder 第240章
+- [DB:references_fulltext:chapter_matches:chmatch_3745] 卷“第12卷-macos的bsd遗产”第 242 章，匹配置信度 folder，原因：folder 第240章
 
 ## 史观
 

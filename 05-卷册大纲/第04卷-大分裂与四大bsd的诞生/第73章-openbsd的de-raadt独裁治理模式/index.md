@@ -12,16 +12,16 @@ volume: 第04卷-大分裂与四大bsd的诞生
 
 ## 史料
 
-- [DB:references_fulltext:chapter_matches:chmatch_3858] 卷「第04卷-大分裂与四大bsd的诞生」第 73 章，匹配置信度 folder，原因：folder 第71章
-- [DB:references_fulltext:chapter_matches:chmatch_3859] 卷「第04卷-大分裂与四大bsd的诞生」第 73 章，匹配置信度 folder，原因：folder 第71章
-- [DB:references_fulltext:chapter_matches:chmatch_3860] 卷「第04卷-大分裂与四大bsd的诞生」第 73 章，匹配置信度 folder，原因：folder 第71章
-- [DB:references_fulltext:chapter_matches:chmatch_3861] 卷「第04卷-大分裂与四大bsd的诞生」第 73 章，匹配置信度 folder，原因：folder 第71章
-- [DB:references_fulltext:chapter_matches:chmatch_3862] 卷「第04卷-大分裂与四大bsd的诞生」第 73 章，匹配置信度 folder，原因：folder 第71章
-- [DB:references_fulltext:chapter_matches:chmatch_3895] 卷「第04卷-大分裂与四大bsd的诞生」第 73 章，匹配置信度 folder，原因：folder 第71章
-- [DB:references_fulltext:chapter_matches:chmatch_3972] 卷「第04卷-大分裂与四大bsd的诞生」第 73 章，匹配置信度 folder，原因：folder 第71章
-- [DB:references_fulltext:chapter_matches:chmatch_1219] 卷「第04卷-大分裂与四大bsd的诞生」第 73 章，匹配置信度 0.8，原因：关键词重合 2 项（pkgsrc, netbsd）
-- [DB:references_fulltext:chapter_matches:chmatch_1223] 卷「第04卷-大分裂与四大bsd的诞生」第 73 章，匹配置信度 0.8，原因：关键词重合 2 项（opentofu, pkgsrc, netbsd）
-- [DB:references_fulltext:chapter_matches:chmatch_1391] 卷「第04卷-大分裂与四大bsd的诞生」第 73 章，匹配置信度 0.8，原因：关键词重合 2 项（paper, pkgsrc, netbsd, cross）
+- [DB:references_fulltext:chapter_matches:chmatch_3858] 卷“第04卷-大分裂与四大bsd的诞生”第 73 章，匹配置信度 folder，原因：folder 第71章
+- [DB:references_fulltext:chapter_matches:chmatch_3859] 卷“第04卷-大分裂与四大bsd的诞生”第 73 章，匹配置信度 folder，原因：folder 第71章
+- [DB:references_fulltext:chapter_matches:chmatch_3860] 卷“第04卷-大分裂与四大bsd的诞生”第 73 章，匹配置信度 folder，原因：folder 第71章
+- [DB:references_fulltext:chapter_matches:chmatch_3861] 卷“第04卷-大分裂与四大bsd的诞生”第 73 章，匹配置信度 folder，原因：folder 第71章
+- [DB:references_fulltext:chapter_matches:chmatch_3862] 卷“第04卷-大分裂与四大bsd的诞生”第 73 章，匹配置信度 folder，原因：folder 第71章
+- [DB:references_fulltext:chapter_matches:chmatch_3895] 卷“第04卷-大分裂与四大bsd的诞生”第 73 章，匹配置信度 folder，原因：folder 第71章
+- [DB:references_fulltext:chapter_matches:chmatch_3972] 卷“第04卷-大分裂与四大bsd的诞生”第 73 章，匹配置信度 folder，原因：folder 第71章
+- [DB:references_fulltext:chapter_matches:chmatch_1219] 卷“第04卷-大分裂与四大bsd的诞生”第 73 章，匹配置信度 0.8，原因：关键词重合 2 项（pkgsrc, netbsd）
+- [DB:references_fulltext:chapter_matches:chmatch_1223] 卷“第04卷-大分裂与四大bsd的诞生”第 73 章，匹配置信度 0.8，原因：关键词重合 2 项（opentofu, pkgsrc, netbsd）
+- [DB:references_fulltext:chapter_matches:chmatch_1391] 卷“第04卷-大分裂与四大bsd的诞生”第 73 章，匹配置信度 0.8，原因：关键词重合 2 项（paper, pkgsrc, netbsd, cross）
 - [DB:bsdnow_podcast:outline_mappings:om_10419] BSD Now 第 676 期，匹配 CH73 章，关联度 1.0
 - [DB:bsdnow_podcast:outline_mappings:om_10452] BSD Now 第 671 期，匹配 CH73 章，关联度 1.0
 - [DB:bsdnow_podcast:outline_mappings:om_10472] BSD Now 第 666 期，匹配 CH73 章，关联度 1.0

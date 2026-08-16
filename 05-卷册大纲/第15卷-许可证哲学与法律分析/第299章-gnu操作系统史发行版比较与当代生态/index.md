@@ -12,7 +12,7 @@ volume: 第15卷-许可证哲学与法律分析
 
 ## 史料
 
-- [DB:references_fulltext:chapter_matches:chmatch_3628] 卷「第16卷-开源运动与合规治理」第 299 章，匹配置信度 curated，原因：curated token rule
+- [DB:references_fulltext:chapter_matches:chmatch_3628] 卷“第16卷-开源运动与合规治理”第 299 章，匹配置信度 curated，原因：curated token rule
 
 ## 史观
 
