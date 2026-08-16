@@ -24,12 +24,12 @@ original_sources,03-原始史料库/original_sources.db,03-原始史料库,604,4
 references_fulltext,04-现代研究文献/05-参考文献全文数据库/references_fulltext.db,04-现代研究文献/05-参考文献全文数据库,0,0,1082073088,c85a331d454d65eb,1.4,2026-08-04T00:06:00,0,0,0,
 doubts_standalone,04-现代研究文献/06-存疑数据库/doubts_standalone.db,04-现代研究文献/06-存疑数据库,0,0,89743360,71f6c972ecdaf966,1.0.0,2026-08-01T13:38:53,0,3289,0,
 causal_graph,04-现代研究文献/causal_graph.db,04-现代研究文献,0,0,151552,0c2815d4be4e136f,0.1,2026-08-12T00:00:00,0,0,0,
-historical_claims,04-现代研究文献/historical_claims.db,04-现代研究文献,0,0,42373120,d964deefd33cb321,0.2,2026-08-12T00:00:00,0,0,0,
+historical_claims,04-现代研究文献/historical_claims.db,04-现代研究文献,0,0,42373120,9a8565677f0dabf2,0.2,2026-08-12T00:00:00,0,0,0,
 research_notes,04-现代研究文献/research_notes.db,04-现代研究文献,1800,486906,271708160,3b1b6128de3c8b97,1.4,2026-08-11T14:10:00,0,1791,6,deleted_6_active_1791
 fact_checks,07-事实核查记录/fact_checks.db,07-事实核查记录,41,0,122880,f2a7986881f53098,1.4,2026-08-11T14:10:00,0,0,41,retired_deleted_41_active_0
 review_reports,08-核查报告与多轮复核/review_reports.db,08-核查报告与多轮复核,57,192,700416,841987c8dc01e1c8,1.4,2026-08-11T14:10:00,0,4,53,deleted_53_active_4
 cross_indexes,10-交叉索引/cross_indexes.db,10-交叉索引,54,21,2936832,3a9fbd7d9a8d6a4c,1.4,2026-08-11T14:10:00,0,3,51,deleted_51_active_3
-metadata_interfaces,11-元数据接口/metadata_interfaces.db,11-元数据接口,12,9822,3510272,c1769db6681f6509,1.4,2026-08-11T14:10:00,0,2,10,deleted_10_active_2
+metadata_interfaces,11-元数据接口/metadata_interfaces.db,11-元数据接口,12,9822,3510272,84036de629665b75,1.4,2026-08-11T14:10:00,0,2,10,deleted_10_active_2
 aic7xxx,03-原始史料库/11-邮件列表史料/01-freebsd/db/aic7xxx.db,03-原始史料库/11-邮件列表史料/01-freebsd,0,0,19636224,2bd0c8382266f52b,1.0.0,,0,0,0,raw
 archbsd-hackers,03-原始史料库/11-邮件列表史料/01-freebsd/db/archbsd-hackers.db,03-原始史料库/11-邮件列表史料/01-freebsd,0,0,110592,4f182816aae58cd4,1.0.0,,0,0,0,raw
 ctm-announce,03-原始史料库/11-邮件列表史料/01-freebsd/db/ctm-announce.db,03-原始史料库/11-邮件列表史料/01-freebsd,0,0,1126400,0967217d6f04b2a7,1.0.0,,0,0,0,raw
