@@ -12,8 +12,8 @@ volume: 第09卷-netbsd的历史
 
 ## 史料
 
-- [DB:references_fulltext:chapter_matches:chmatch_4088] 卷「第09卷-netbsd的历史」第 181 章，匹配置信度 1.0，原因：任务4第二批 缺口章补充
-- [DB:references_fulltext:chapter_matches:chmatch_4089] 卷「第09卷-netbsd的历史」第 181 章，匹配置信度 1.0，原因：任务4第二批 缺口章补充
+- [DB:references_fulltext:chapter_matches:chmatch_4088] 卷“第09卷-netbsd的历史”第 181 章，匹配置信度 1.0，原因：任务4第二批 缺口章补充
+- [DB:references_fulltext:chapter_matches:chmatch_4089] 卷“第09卷-netbsd的历史”第 181 章，匹配置信度 1.0，原因：任务4第二批 缺口章补充
 - [DB:bsdnow_podcast:outline_mappings:om_10426] BSD Now 第 676 期，匹配 CH181 章，关联度 1.0
 - [DB:bsdnow_podcast:outline_mappings:om_10512] BSD Now 第 661 期，匹配 CH181 章，关联度 1.0
 - [DB:bsdnow_podcast:outline_mappings:om_10527] BSD Now 第 656 期，匹配 CH181 章，关联度 1.0

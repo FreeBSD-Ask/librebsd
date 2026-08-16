@@ -12,7 +12,7 @@ volume: 第18卷-全球社区地区bsd史
 
 ## 史料
 
-- [DB:references_fulltext:chapter_matches:chmatch_3633] 卷「第18卷-全球社区地区bsd史」第 348 章，匹配置信度 curated，原因：curated token rule
+- [DB:references_fulltext:chapter_matches:chmatch_3633] 卷“第18卷-全球社区地区bsd史”第 348 章，匹配置信度 curated，原因：curated token rule
 - [DB:bsdnow_podcast:outline_mappings:om_10433] BSD Now 第 676 期，匹配 CH348 章，关联度 1.0
 - [DB:bsdnow_podcast:outline_mappings:om_10457] BSD Now 第 671 期，匹配 CH348 章，关联度 1.0
 - [DB:bsdnow_podcast:outline_mappings:om_10475] BSD Now 第 666 期，匹配 CH348 章，关联度 1.0

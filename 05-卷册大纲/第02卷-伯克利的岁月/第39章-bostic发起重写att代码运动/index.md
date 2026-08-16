@@ -12,11 +12,11 @@ volume: 第02卷-伯克利的岁月
 
 ## 史料
 
-- [DB:references_fulltext:chapter_matches:chmatch_3712] 卷「第02卷-伯克利的岁月」第 39 章，匹配置信度 folder，原因：folder 第39章
-- [DB:references_fulltext:chapter_matches:chmatch_3832] 卷「第02卷-伯克利的岁月」第 39 章，匹配置信度 folder，原因：folder 第39章
-- [DB:references_fulltext:chapter_matches:chmatch_3880] 卷「第02卷-伯克利的岁月」第 39 章，匹配置信度 folder，原因：folder 第39章
-- [DB:references_fulltext:chapter_matches:chmatch_3892] 卷「第02卷-伯克利的岁月」第 39 章，匹配置信度 folder，原因：folder 第39章
-- [DB:references_fulltext:chapter_matches:chmatch_3957] 卷「第02卷-伯克利的岁月」第 39 章，匹配置信度 folder，原因：folder 第39章
+- [DB:references_fulltext:chapter_matches:chmatch_3712] 卷“第02卷-伯克利的岁月”第 39 章，匹配置信度 folder，原因：folder 第39章
+- [DB:references_fulltext:chapter_matches:chmatch_3832] 卷“第02卷-伯克利的岁月”第 39 章，匹配置信度 folder，原因：folder 第39章
+- [DB:references_fulltext:chapter_matches:chmatch_3880] 卷“第02卷-伯克利的岁月”第 39 章，匹配置信度 folder，原因：folder 第39章
+- [DB:references_fulltext:chapter_matches:chmatch_3892] 卷“第02卷-伯克利的岁月”第 39 章，匹配置信度 folder，原因：folder 第39章
+- [DB:references_fulltext:chapter_matches:chmatch_3957] 卷“第02卷-伯克利的岁月”第 39 章，匹配置信度 folder，原因：folder 第39章
 
 ## 史观
 

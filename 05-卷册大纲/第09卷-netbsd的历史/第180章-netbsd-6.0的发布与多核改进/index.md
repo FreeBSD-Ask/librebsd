@@ -12,7 +12,7 @@ volume: 第09卷-netbsd的历史
 
 ## 史料
 
-- [DB:references_fulltext:chapter_matches:chmatch_3697] 卷「第09卷-netbsd的历史」第 180 章，匹配置信度 folder，原因：folder 第178章
+- [DB:references_fulltext:chapter_matches:chmatch_3697] 卷“第09卷-netbsd的历史”第 180 章，匹配置信度 folder，原因：folder 第178章
 
 ## 史观
 

@@ -12,7 +12,7 @@ volume: 第18卷-全球社区地区bsd史
 
 ## 史料
 
-- [DB:references_fulltext:chapter_matches:chmatch_3986] 卷「第18卷-全球社区地区bsd史」第 340 章，匹配置信度 folder，原因：folder 第338章
+- [DB:references_fulltext:chapter_matches:chmatch_3986] 卷“第18卷-全球社区地区bsd史”第 340 章，匹配置信度 folder，原因：folder 第338章
 
 ## 史观
 

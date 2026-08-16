@@ -12,7 +12,7 @@ volume: 第06卷-freebsd的核心技术革新
 
 ## 史料
 
-- [DB:references_fulltext:chapter_matches:chmatch_3623] 卷「第06卷-freebsd的核心技术革新」第 117 章，匹配置信度 curated，原因：curated token rule
+- [DB:references_fulltext:chapter_matches:chmatch_3623] 卷“第06卷-freebsd的核心技术革新”第 117 章，匹配置信度 curated，原因：curated token rule
 - [DB:bsdnow_podcast:outline_mappings:om_10422] BSD Now 第 676 期，匹配 CH117 章，关联度 1.0
 - [DB:bsdnow_podcast:outline_mappings:om_10462] BSD Now 第 669 期，匹配 CH117 章，关联度 1.0
 - [DB:bsdnow_podcast:outline_mappings:om_10466] BSD Now 第 667 期，匹配 CH117 章，关联度 1.0

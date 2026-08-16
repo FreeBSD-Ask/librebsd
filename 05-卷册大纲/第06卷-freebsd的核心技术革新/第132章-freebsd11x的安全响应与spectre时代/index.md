@@ -12,7 +12,7 @@ volume: 第06卷-freebsd的核心技术革新
 
 ## 史料
 
-- [DB:references_fulltext:chapter_matches:chmatch_3828] 卷「第06卷-freebsd的核心技术革新」第 132 章，匹配置信度 folder，原因：folder 第130章
+- [DB:references_fulltext:chapter_matches:chmatch_3828] 卷“第06卷-freebsd的核心技术革新”第 132 章，匹配置信度 folder，原因：folder 第130章
 
 ## 史观
 

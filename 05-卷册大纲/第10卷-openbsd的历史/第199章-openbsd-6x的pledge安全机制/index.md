@@ -12,8 +12,8 @@ volume: 第10卷-openbsd的历史
 
 ## 史料
 
-- [DB:references_fulltext:chapter_matches:chmatch_3898] 卷「第10卷-openbsd的历史」第 199 章，匹配置信度 folder，原因：folder 第197章
-- [DB:references_fulltext:chapter_matches:chmatch_4014] 卷「第10卷-openbsd的历史」第 199 章，匹配置信度 1.0，原因：任务4 衍生组官方文档采集
+- [DB:references_fulltext:chapter_matches:chmatch_3898] 卷“第10卷-openbsd的历史”第 199 章，匹配置信度 folder，原因：folder 第197章
+- [DB:references_fulltext:chapter_matches:chmatch_4014] 卷“第10卷-openbsd的历史”第 199 章，匹配置信度 1.0，原因：任务4 衍生组官方文档采集
 - [DB:bsdnow_podcast:outline_mappings:om_11196] BSD Now 第 565 期，匹配 CH199 章，关联度 1.0
 - [DB:bsdnow_podcast:outline_mappings:om_11238] BSD Now 第 561 期，匹配 CH199 章，关联度 1.0
 - [DB:bsdnow_podcast:outline_mappings:om_11308] BSD Now 第 553 期，匹配 CH199 章，关联度 1.0

@@ -12,7 +12,7 @@ volume: 第09卷-netbsd的历史
 
 ## 史料
 
-- [DB:references_fulltext:chapter_matches:chmatch_4002] 卷「第09卷-netbsd的历史」第 188 章，匹配置信度 1.0，原因：任务4 衍生组官方文档采集
+- [DB:references_fulltext:chapter_matches:chmatch_4002] 卷“第09卷-netbsd的历史”第 188 章，匹配置信度 1.0，原因：任务4 衍生组官方文档采集
 - [DB:bsdnow_podcast:outline_mappings:om_10427] BSD Now 第 676 期，匹配 CH188 章，关联度 1.0
 - [DB:bsdnow_podcast:outline_mappings:om_10513] BSD Now 第 661 期，匹配 CH188 章，关联度 1.0
 - [DB:bsdnow_podcast:outline_mappings:om_10528] BSD Now 第 656 期，匹配 CH188 章，关联度 1.0
