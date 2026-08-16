@@ -87,7 +87,7 @@
   - [7.9 重要贡献者与边缘者：被忽视的 Bell Labs 工程师——被 Thompson/Ritchie 光环遮蔽的同事](./第01卷-unix的起源/第8章-贝尔实验室的黄金时代/8.9-重要贡献者与边缘者被忽视的belllabs工程师被thompsonritchie.md)
   - [7.10 **与同时期操作系统的比较**：1975-1978 年同期 IBM VM/370（1972，CP-67 演化，虚拟机监控器架构，每个用户拥有虚拟机，内存管理采用段页式）、TENEX（1969，BBN 开发，分时系统，基于 BBN Pager 硬件实现请求调页）、DEC TOPS-10（1972，PDP-10 分时系统，内存交换而非虚拟内存）、Multics（1969，GE-645，段式虚拟内存，环形保护，层级文件系统）——UNIX V6/V7 的技术路线分化：① 内核架构——UNIX 宏内核简洁性 vs VM/370 虚拟机监控器层次化 vs Multics 环形保护复杂化](./第01卷-unix的起源/第8章-贝尔实验室的黄金时代/8.10-与同时期操作系统的比较19751978年同期ibmvm3701972cp67.md)
   - [7.11 安全机制起源：setuid/setgid 机制引入与文件权限模型定型（1973-1975）](./第01卷-unix的起源/第8章-贝尔实验室的黄金时代/8.11-安全机制起源setuidsetgid机制引入与文件权限模型定型19731975.md)
-  - [采访录：本贾尼·斯特劳斯特卢普](./第01卷-unix的起源/第8章-贝尔实验室的黄金时代/采访录：本贾尼·斯特劳斯特卢普.md)
+  - [采访录：本贾尼·斯特劳斯特鲁普](./第01卷-unix的起源/第8章-贝尔实验室的黄金时代/采访录：本贾尼·斯特劳斯特鲁普.md)
 
 - [第 9 章 UNIX 哲学的工程原则形成](./第01卷-unix的起源/第9章-unix哲学的工程原则形成/概述.md)
   - [8.1 Do one thing well 的文本谱系——从 McIlroy 到 Pike 到 Raymond](./第01卷-unix的起源/第9章-unix哲学的工程原则形成/9.1-doonethingwell的文本谱系从mcilroy到pike到raymond.md)
@@ -144,7 +144,7 @@
   - [14.4 C 语言与 C 编译器：BSD 的核心语言——Dennis Ritchie 1972-1973 年发明 C 语言，PCC 作为早期 BSD 的 C 编译器，GCC 在 1990 年代取代 PCC，Clang/LLVM 在 2010 年代取代 GCC，三代编译器的许可证与工程权衡](./第01卷-unix的起源/第15章-早期编程语言与c语言诞生/15.4-c语言与c编译器bsd的核心语言dennisritchie19721973年发明.md)
 
 - [第 16 章 C++ Shell 家族与脚本语言生态](./第01卷-unix的起源/第16章-cpp-shell家族与脚本语言生态/概述.md)
-  - [15.5 C++ 与面向对象浪潮：BSD 的接纳与抵制——Bjarne Stroustrup（本贾尼·斯特劳斯特卢普） 1979 年发明 C with Classes，C++ 的面向对象编程在 BSD 社区中的接纳与抵制，FreeBSD 内核长期拒绝 C++ 的工程论证](./第01卷-unix的起源/第16章-cpp-shell家族与脚本语言生态/16.5-c与面向对象浪潮bsd的接纳与抵制bjarnestroustrup1979年发明.md)
+  - [15.5 C++ 与面向对象浪潮：BSD 的接纳与抵制——Bjarne Stroustrup（本贾尼·斯特劳斯特鲁普） 1979 年发明 C with Classes，C++ 的面向对象编程在 BSD 社区中的接纳与抵制，FreeBSD 内核长期拒绝 C++ 的工程论证](./第01卷-unix的起源/第16章-cpp-shell家族与脚本语言生态/16.5-c与面向对象浪潮bsd的接纳与抵制bjarnestroustrup1979年发明.md)
   - [15.6 Shell 家族：BSD 的命令语言——Thompson shell、Bourne shell 与 C shell 的演进，csh/tcsh/bash/ksh/zsh 在 BSD 中的引入与共存](./第01卷-unix的起源/第16章-cpp-shell家族与脚本语言生态/16.6-shell家族bsd的命令语言thompsonshellbourneshell与.md)
   - [15.7 Java 与虚拟机革命：FreeBSD Java 移植史——Java 1995 年 Sun 发布与虚拟机革命，FreeBSD Java 移植的艰辛历程，FreeBSD Foundation 2005 年获得 Sun Java 二进制许可证，OpenJDK 的 FreeBSD 移植](./第01卷-unix的起源/第16章-cpp-shell家族与脚本语言生态/16.7-java与虚拟机革命freebsdjava移植史java1995年sun.md)
   - [15.8 脚本语言生态：Perl、Python、Ruby 与 Ports 的共生——Perl 1987 年 Larry Wall 发布，Python 1991 年 Guido van Rossum（吉多·范罗苏姆） 发布，Ruby 1995 年 Matz 发布，三种脚本语言与 FreeBSD Ports 的共生关系](./第01卷-unix的起源/第16章-cpp-shell家族与脚本语言生态/16.8-脚本语言生态perlpythonruby与ports的共生perl1987年.md)
