@@ -12,7 +12,7 @@ volume: 第01卷-unix的起源
 
 ## 史料
 
-- [DB:references_fulltext:chapter_matches:chmatch_3630] 卷「第01卷-unix的起源」第 11 章，匹配置信度 curated，原因：curated token rule
+- [DB:references_fulltext:chapter_matches:chmatch_3630] 卷“第01卷-unix的起源”第 11 章，匹配置信度 curated，原因：curated token rule
 
 ## 史观
 
