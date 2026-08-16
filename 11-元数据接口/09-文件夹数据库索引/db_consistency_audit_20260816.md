@@ -30,8 +30,8 @@
 | 4 | 资料数据库 | 21.3 MB | 1.4 | ok | delete | ⚠ schema_meta 引用数陈旧 |
 | 5 | freebsd | 3.23 GB | v2 | SKIP(raw) | delete | — |
 | 6 | netbsd | 9.74 GB | v2 | SKIP(raw) | delete | — |
-| 7 | openbsd | 915 MB | v2 | SKIP(raw) | delete | ⚠ commit_files 疑似异常 |
-| 8 | dragonfly | 897 MB | v2 | SKIP(raw) | delete | ⚠ commit_files 疑似异常 |
+| 7 | openbsd | 915 MB | v2 | SKIP(raw) | delete | —（id 保留全局 rowid，非异常） |
+| 8 | dragonfly | 897 MB | v2 | SKIP(raw) | delete | —（id 保留全局 rowid，非异常） |
 | 9 | openzfs | 57.9 MB | 2 | ok | delete | ⚠ 版本写法 "2" |
 | 10 | bsd-derivatives | 6.02 GB | v2 | SKIP(raw) | delete | — |
 | 11 | illumos-gate | 104 MB | 2 | ok | delete | ⚠ 版本写法 "2" |
@@ -181,7 +181,7 @@
 | bsd_podcasts_external.db | 补 outline_mappings（内容缺口）或修正库声明 | — |
 | bsdnow_podcast.db | 明确剩余 623 期转录计划（转录完成度 7.8%） | — |
 | 播客两库 | 同 schema 1.0.0、语义相近，评估是否合并为单一播客库 | — |
-| commit_files 异常 | 核查 freebsd/openbsd/dragonfly 三库 commit_files MAX(rowid) 高度雷同（62,831,674 / 62,832,869 / 62,830,053）是否数据导入 bug | 需深入核查 |
+| commit_files id 空洞 | 三库 commit_files.id 保留拆分前全局 rowid（MAX 均约 6283万），实际行数 825万/230万/176万，非数据污染非 bug，无需修复（仅澄清 id 语义） | 已核查 |
 | script/ 31.14GB 备份 | 按项目规则保留，仅登记；如需瘦身需用户另行授权 | — |
 
 ---
@@ -203,3 +203,10 @@
 - 探测脚本：`script/_nonmail_db_audit_20260816.py`（只读，`file:...?mode=ro` 打开，仅 SELECT/PRAGMA）
 - 实测数据：`script/_nonmail_db_audit_20260816.json`（27 库完整表/行数/schema_meta/files_status/journal_mode/integrity）
 - sha256 与 integrity_check 对 6 个 >500MB raw 大库标注 SKIP，属审计边界，非数据问题。
+
+---
+
+## 后续处理记录（2026-08-16）
+
+- **historical_claims.db 瘦身已执行**（方案 A）：删除 `raw_source` 表中 2,607,435 条未被引用的 `namespace='mail'` 邮件列表注册行（保留被引用的 6 条），VACUUM 后体积 1.17 GB → 40.1 MB，回收约 1.05 GB。核验：integrity=ok，source_chapter / evidence 悬空引用 = 0；备份于 `script/_backup_20260816_史学库瘦身前/historical_claims.db`。
+- **commit_files 误判已纠正**：三库（freebsd/openbsd/dragonfly）`commit_files` 的 `MAX(rowid)` 雷同系拆分脚本保留原 `bsd_commits.db` 全局 rowid 作为 `id` 列所致，非数据污染非 bug；实际行数 8,257,274 / 2,301,866 / 1,768,155，`repo_name` 拆分正确。

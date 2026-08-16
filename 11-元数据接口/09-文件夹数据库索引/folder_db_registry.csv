@@ -1,4 +1,4 @@
-﻿db_name,db_path,top_folder,file_count,block_count,size_bytes,sha256,schema_version,built_at,build_duration_ms,active_files,deleted_files,source_files_status
+db_name,db_path,top_folder,file_count,block_count,size_bytes,sha256,schema_version,built_at,build_duration_ms,active_files,deleted_files,source_files_status
 changelog,01-项目管理/00-变更记录/changelog.db,01-项目管理/00-变更记录,0,0,2342912,f362e909c210bacc,0,,0,0,0,
 sacred_sources,02-sacred源材料/sacred_sources.db,02-sacred源材料,53,3181,4653056,3e835efa10a6f15a,1.4,2026-08-11T14:30:00,0,8,0,deleted_0_active_8
 phoronix_news,03-原始史料库/01-代码仓库史料/01-数据库本体/phoronix_news.db,03-原始史料库/01-代码仓库史料/01-数据库本体,0,0,544768,7c77ee02656405d9,1.0,2026-08-04T00:06:00,0,0,0,
@@ -24,7 +24,7 @@ original_sources,03-原始史料库/original_sources.db,03-原始史料库,604,4
 references_fulltext,04-现代研究文献/05-参考文献全文数据库/references_fulltext.db,04-现代研究文献/05-参考文献全文数据库,0,0,1082073088,c85a331d454d65eb,1.4,2026-08-04T00:06:00,0,0,0,
 doubts_standalone,04-现代研究文献/06-存疑数据库/doubts_standalone.db,04-现代研究文献/06-存疑数据库,0,0,89743360,71f6c972ecdaf966,1.0.0,2026-08-01T13:38:53,0,2999,0,
 causal_graph,04-现代研究文献/causal_graph.db,04-现代研究文献,0,0,151552,8fa364dcb7b48e46,0.1,2026-08-12T00:00:00,0,0,0,
-historical_claims,04-现代研究文献/historical_claims.db,04-现代研究文献,0,0,1166876672,f314f1421a5f8464,0.2,2026-08-12T00:00:00,0,0,0,
+historical_claims,04-现代研究文献/historical_claims.db,04-现代研究文献,0,0,42070016,ecd3103da796f3eb,0.2,2026-08-12T00:00:00,0,0,0,
 research_notes,04-现代研究文献/research_notes.db,04-现代研究文献,1800,486906,271708160,3b1b6128de3c8b97,1.4,2026-08-11T14:10:00,0,1791,6,deleted_6_active_1791
 fact_checks,07-事实核查记录/fact_checks.db,07-事实核查记录,41,0,122880,15d256ea17f9fbf1,1.4,2026-08-11T14:10:00,0,0,41,deleted_41_active_0
 review_reports,08-核查报告与多轮复核/review_reports.db,08-核查报告与多轮复核,57,192,700416,841987c8dc01e1c8,1.4,2026-08-11T14:10:00,0,4,53,deleted_53_active_4
