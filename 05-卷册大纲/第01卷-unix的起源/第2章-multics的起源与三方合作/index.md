@@ -12,9 +12,9 @@ volume: 第01卷-unix的起源
 
 ## 史料
 
-- [DB:references_fulltext:chapter_matches:chmatch_3604] 卷「第01卷-unix的起源」第 2 章，匹配置信度 curated，原因：curated token rule
-- [DB:references_fulltext:chapter_matches:chmatch_1465] 卷「第01卷-unix的起源」第 2 章，匹配置信度 0.8，原因：关键词重合 2 项（file, finding, ports, clones, freebsd）
-- [DB:references_fulltext:chapter_matches:chmatch_22] 卷「第01卷-unix的起源」第 2 章，匹配置信度 0.6，原因：路径启发：Thompson Trusting Trust 1984
+- [DB:references_fulltext:chapter_matches:chmatch_3604] 卷“第01卷-unix的起源”第 2 章，匹配置信度 curated，原因：curated token rule
+- [DB:references_fulltext:chapter_matches:chmatch_1465] 卷“第01卷-unix的起源”第 2 章，匹配置信度 0.8，原因：关键词重合 2 项（file, finding, ports, clones, freebsd）
+- [DB:references_fulltext:chapter_matches:chmatch_22] 卷“第01卷-unix的起源”第 2 章，匹配置信度 0.6，原因：路径启发：Thompson Trusting Trust 1984
 - [DB:bsdnow_podcast:outline_mappings:om_11676] BSD Now 第 506 期，匹配 CH2 章，关联度 1.0
 - [DB:bsdnow_podcast:outline_mappings:om_12052] BSD Now 第 463 期，匹配 CH2 章，关联度 1.0
 - [DB:bsdnow_podcast:outline_mappings:om_12196] BSD Now 第 446 期，匹配 CH2 章，关联度 1.0
