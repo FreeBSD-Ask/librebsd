@@ -51,7 +51,7 @@
 | cross_indexes | wal | 2 | 0 | 0 | 1000 |
 | metadata_interfaces | wal | 2 | 0 | 0 | 1000 |
 
-> **PRAGMA 持久性说明**：`journal_mode=wal` 与 `wal_autocheckpoint=1000` 已持久化到数据库文件头。`synchronous`、`mmap_size`、`temp_store` 为会话级 PRAGMA，需在应用程序每次连接时设置。
+> **PRAGMA 持久性说明**：`wal_autocheckpoint=1000` 已持久化到数据库文件头；`journal_mode=wal` 为会话级 PRAGMA，多数文件夹级库实测关闭后回退为 `delete`（2026-08-16 实测仅 review_reports/cross_indexes/doubts_standalone/播客两库/phoronix_news/openssh-apple/darwin 实为 wal）。`synchronous`、`mmap_size`、`temp_store` 为会话级 PRAGMA，需在应用程序每次连接时设置。
 
 ## 跨库引用解析进度
 
@@ -73,6 +73,14 @@
 - **不拆分 research_notes**：保持按文件夹分库架构，已通过 WAL + blocks_fts 索引加速
 - **合并低使用率扩展表**：5 组扩展表已合并（详见上方 Schema 1.4 记录）
 - **新增引用查询索引**：cross_references 表新增 2 个索引（reference_type、source_block_id）
+
+## 模块化分层违规登记（2026-08-16）
+
+> 审计发现 3 处「一库一文件夹」违规，仅登记待评估，不移动文件。
+
+- `04-现代研究文献/` 根目录并存 3 库：`research_notes.db`、`historical_claims.db`、`causal_graph.db`
+- `03-原始史料库/01-代码仓库史料/01-数据库本体/` 并存 2 库：`phoronix_news.db`、`资料数据库.db`
+- `03-原始史料库/01-代码仓库史料/08-跨项目对比/db/` 并存 3 库：`illumos-gate.db`、`openssh-apple.db`、`openssh.db`
 
 ## 去重进度
 
