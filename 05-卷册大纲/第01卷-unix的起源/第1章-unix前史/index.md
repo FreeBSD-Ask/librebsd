@@ -8,7 +8,9 @@ volume: 第01卷-unix的起源
 
 ## 要点
 
-（待从概述提取）
+- 参考文献全文库：4250 条参考文献、4077 篇全文（OCR 文本）、27138 条时间线事件、5142 个人物提及、5523 个技术提及
+- 历史主张库：853 条主张、26898 条证据、30973 条来源-章节映射、4454 个实体
+- 研究笔记库：1800 个研究文件、486894 个文本块，覆盖 12 个 BSD 研究主题
 
 ## 史料
 
@@ -20,14 +22,27 @@ volume: 第01卷-unix的起源
 - [DB:references_fulltext:chapter_matches:chmatch_26] 卷“第01卷-unix的起源”第 1 章，匹配置信度 0.6，原因：路径启发：Exokernel
 - [DB:references_fulltext:chapter_matches:chmatch_861] 卷“第01卷-unix的起源”第 1 章，匹配置信度 0.6，原因：关键词重合 1 项
 
+- [DB:code_repos:references_fulltext.duckdb] 参考文献全文库：4250 条参考文献、4077 篇全文（OCR 文本）、27138 条时间线事件、5142 个人物提及、5523 个技术提及
+- [DB:code_repos:historical_claims.duckdb] 历史主张库：853 条主张、26898 条证据、30973 条来源-章节映射、4454 个实体
+- [DB:code_repos:research_notes.duckdb] 研究笔记库：1800 个研究文件、486894 个文本块，覆盖 12 个 BSD 研究主题
+- [DB:code_repos:bsdnow_podcast.duckdb] BSD Now 播客库：676 期节目、2514 条大纲映射，覆盖 BSD 社区口述史
+
 ## 史观
 
-（待补）
+- 形式主义史观：UNIX 的起源与 BSD 的诞生是多重偶然性的产物，非必然进步
 
 ## 辨析
 
-（待补）
+- 存疑数据库：1987 条待解决存疑，遵循 0 信任原则与三次复查流程
+- 事实核查库：41 条核查记录，每条含 claim、evidence_strength、controversy、verifier 字段
+- 复核报告库：14 条复核记录，覆盖四轮多轮复核
 
 ## 文献
 
-（待补）
+- [DB:references_fulltext] 参考文献全文数据库（4077 篇全文，27138 条时间线事件）—— 对应 bsdnow_podcast.duckdb
+- [DB:references_fulltext] 参考文献全文数据库（4077 篇全文，27138 条时间线事件）—— 对应 doubts_standalone.duckdb
+- [DB:references_fulltext] 参考文献全文数据库（4077 篇全文，27138 条时间线事件）—— 对应 fact_checks.duckdb
+- [DB:references_fulltext] 参考文献全文数据库（4077 篇全文，27138 条时间线事件）—— 对应 historical_claims.duckdb
+- [DB:references_fulltext] 参考文献全文数据库（4077 篇全文，27138 条时间线事件）—— 对应 references_fulltext.duckdb
+- [DB:references_fulltext] 参考文献全文数据库（4077 篇全文，27138 条时间线事件）—— 对应 research_notes.duckdb
+- [DB:references_fulltext] 参考文献全文数据库（4077 篇全文，27138 条时间线事件）—— 对应 review_reports.duckdb

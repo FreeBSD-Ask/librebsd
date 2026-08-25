@@ -8,7 +8,7 @@ volume: 第10卷-openbsd的历史
 
 ## 要点
 
-（待从概述提取）
+- OpenBSD 仓库构成：openbsd-src(246535)、openbsd-ports(212040)、openbsd-www(32620)。src 提交量占主导，ports 和 www 为辅助，反映其'完整系统'哲学
 
 ## 史料
 
@@ -16,9 +16,11 @@ volume: 第10卷-openbsd的历史
 - [DB:references_fulltext:chapter_matches:chmatch_4096] 卷“第10卷-openbsd的历史”第 193 章，匹配置信度 1.0，原因：任务4第二批 缺口章补充
 - [DB:references_fulltext:chapter_matches:chmatch_4097] 卷“第10卷-openbsd的历史”第 193 章，匹配置信度 1.0，原因：任务4第二批 缺口章补充
 
+- [DB:code_repos:openbsd.duckdb] OpenBSD 仓库构成：openbsd-src(246535)、openbsd-ports(212040)、openbsd-www(32620)。src 提交量占主导，ports 和 www 为辅助，反映其'完整系统'哲学
+
 ## 史观
 
-（待补）
+- 经验优先：OpenBSD 的代码审计文化是安全至上的经验性实践，非理论推演
 
 ## 辨析
 
@@ -26,4 +28,4 @@ volume: 第10卷-openbsd的历史
 
 ## 文献
 
-（待补）
+- [DB:references_fulltext] 参考文献全文数据库（4077 篇全文，27138 条时间线事件）—— 对应 openbsd.duckdb
