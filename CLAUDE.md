@@ -17,14 +17,14 @@
   - **03-叙事参照/** —— 叙事参照
   - **04-史学方法论/** —— G1 史学方法论（项目统摄史观衍生根基，含 index.md + 7 个子文件，禁止把项目统摄史观与西方流派并列）
 - **01-项目管理/** —— 变更记录
-  - **00-变更记录/** —— 变更记录数据库（`changelog.db` SQLite 数据库 1.77 MB + `index.md` 使用说明）
+  - **00-变更记录/** —— 变更记录数据库（`changelog.duckdb` DuckDB 数据库 + `index.md` 使用说明）
 - **02-sacred源材料/** —— sacred 源材料独立成一级 —— 含 `sacred_sources.db` 文件夹级数据库（详见 [00-编纂规则与格式规范/01-规则/流程规则.md](00-编纂规则与格式规范/01-规则/流程规则.md) 其他文件夹转数据库规则小节；2026-08-01 源文件已清理，数据库为唯一内容载体，详见同上源文件清理规则小节）
   - **01-一刻哲学/** —— 项目编纂指导思想源材料（原含 index.md + 29 章子文件，191 子节 25 条总纲；内容已入库 `sacred_sources.db`；系统分析见 `02-sacred源材料/shigang.md`）
   - **02-原始哲学/** —— 原始哲学思想（原含 index.md + 11 章子文件；原 `q.md` 拆分；内容已入库 `sacred_sources.db`）
   - **03-q-md逐行释读** —— q.md 逐行释读（原 `03-q-md逐行释读.md`，内容已入库 `sacred_sources.db`）
   - **04-教材-FreeBSD从入门到跑路/** —— FreeBSD 教材原文整理（sacred 教材源材料；内容已入库 `sacred_sources.db`）
 - **03-原始史料库/** —— 史料源（不含 sacred，按 BSD 项目/时期/类型细分） —— 含 `original_sources.db` 文件夹级数据库（详见同上；2026-08-01 源文件已清理，数据库为唯一内容载体，详见 [00-编纂规则与格式规范/01-规则/流程规则.md](00-编纂规则与格式规范/01-规则/流程规则.md) 源文件清理规则小节）
-  - **01-代码仓库史料/** —— 含 `01-数据库本体/`（`资料数据库.db` 16 MB，2026-08-04 已按 Schema v1.4 对齐：新增 5 张通用表 + schema_meta，旧 cross_references 改名 material_cross_references，业务表 materials/references/freebsd_sa/nvd_cve_metadata/fact_check_records 保留为专属扩展表 + `split_progress.json` 拆分元数据）+ 02-FreeBSD/03-NetBSD/04-OpenBSD/05-DragonFlyBSD/06-OpenZFS/07-BSD衍生项目/08-跨项目对比/09-Darwin/10-LinuxKernel（各子目录 `db/` 下存放按项目拆分后的独立 SQLite 数据库，原 `bsd_commits.db` 25.92 GB 已于 2026-07-28 拆分为 10 个独立数据库并删除）
+  - **01-代码仓库史料/** —— 含 `01-数据库本体/`（`资料数据库.duckdb`，2026-08-04 已按 Schema v1.4 对齐：新增 5 张通用表 + schema_meta，旧 cross_references 改名 material_cross_references，业务表 materials/references/freebsd_sa/nvd_cve_metadata/fact_check_records 保留为专属扩展表 + `split_progress.json` 拆分元数据）+ 02-FreeBSD/03-NetBSD/04-OpenBSD/05-DragonFlyBSD/06-OpenZFS/07-BSD衍生项目/08-跨项目对比/09-Darwin/10-LinuxKernel（各子目录 `duckdb/` 下存放按项目拆分后的独立 DuckDB 数据库，原 `bsd_commits.db` 25.92 GB 已于 2026-07-28 拆分为 10 个独立数据库并删除，2026-08-25 全部升格为 DuckDB 主存储层）
   - **02-man源与posix仓库/** —— man 源与 POSIX 仓库（含 8 个稀疏检出仓库，不可拆散）
   - **03-bsd前安全史/**、**04-nvd漏洞元数据/**、**05-bsd官方安全公告/**（子目录已清理，内容入库 `original_sources.db`，2026-08-01 源文件清理）
   - **06-考据记录/** —— 考据记录集中存放（命名约定 `YYYYMMDD_<主题>.md`，含三字段：查证来源/交叉验证方法/存疑判定依据）
