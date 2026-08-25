@@ -8,7 +8,7 @@ volume: 第04卷-大分裂与四大bsd的诞生
 
 ## 要点
 
-（待从概述提取）
+- OpenBSD 仓库共 491195 次提交（1995-10-18 至 2026-08-25），427 位贡献者，提交量虽少于 FreeBSD 和 NetBSD，但代码审计文化使其每行代码经过更严格审查
 
 ## 史料
 
@@ -24,9 +24,11 @@ volume: 第04卷-大分裂与四大bsd的诞生
 - [DB:bsdnow_podcast:outline_mappings:om_11169] BSD Now 第 567 期，匹配 CH69 章，关联度 1.0
 - [DB:bsdnow_podcast:outline_mappings:om_11193] BSD Now 第 565 期，匹配 CH69 章，关联度 1.0
 
+- [DB:code_repos:openbsd.duckdb] OpenBSD 仓库共 491195 次提交（1995-10-18 至 2026-08-25），427 位贡献者，提交量虽少于 FreeBSD 和 NetBSD，但代码审计文化使其每行代码经过更严格审查
+
 ## 史观
 
-（待补）
+- 和解优于斗争：OpenBSD 的起源虽源于冲突（de Raadt 被逐），但最终走向安全至上，将分裂转化为建设性力量
 
 ## 辨析
 
@@ -34,4 +36,4 @@ volume: 第04卷-大分裂与四大bsd的诞生
 
 ## 文献
 
-（待补）
+- [DB:references_fulltext] 参考文献全文数据库（4077 篇全文，27138 条时间线事件）—— 对应 openbsd.duckdb
