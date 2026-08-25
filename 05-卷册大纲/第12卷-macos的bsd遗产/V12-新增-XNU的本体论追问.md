@@ -9,3 +9,9 @@
 - 史料：XNU 源码（opensource.apple.com）；Darwin 9.0 源码中的 FreeBSD 贡献标注；Singh, A. (2006). *Mac OS X Internals*; Levin, J. (2012-). *Mac OS X and iOS Internals*; shigang.md §2（本体论——“不能两次踏进同一条河流” 1.4 节教材试样实证）
 - 史观：shigang §2——“人们通过感性接触并经理性分析所得之物，并非真正真实的存在物。”(1.1 节) “XNU 是 BSD”是一个经过感性接触（阅读源码）和理性分析（比较代码结构）后的判断——但这个判断不是对 XNU“真实身份”的揭示，而是对 XNU 的形式主义化分类。“是 BSD”和“不是 BSD”在分类学上都是合法的——取决于你选择的分类标准（代码比例？函数签名兼容性？版权声明？社区认同？）。本体论平等的立场（shigang §1.9）要求我们不声称其中一个分类标准“更正确”。
 - 文献：Singh (2006); Levin (2012-); XNU 源码 (opensource.apple.com); shigang.md §2
+
+<!-- DB_REF:darwin.duckdb -->
+> **数据库引用（darwin.duckdb）**：本子节对应 darwin 代码仓库。
+> 1985-2026 年间：2,012 次提交。
+> 仓库总览：2,016 次提交，27 位贡献者，2001-04-10 至 2106-02-07。
+
