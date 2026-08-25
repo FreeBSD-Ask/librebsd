@@ -1,0 +1,41 @@
+# 跨库全局去重报告
+
+> 生成时间：2026-08-25 11:41:25 BJT
+> 模式：dry-run 预览
+> 目标数据库：sacred_sources, original_sources, research_notes, fact_checks, review_reports, cross_indexes, metadata_interfaces
+
+## 汇总表
+
+| db_name | global_exact 副记录数 | global_content 副记录数 | fuzzy_global 副记录数 | preserved 主记录数 |
+|---|---|---|---|---|
+| sacred_sources | 0 | 0 | 0 | - |
+| original_sources | 0 | 0 | 0 | - |
+| research_notes | 0 | 0 | 0 | - |
+| fact_checks | 0 | 0 | 0 | - |
+| review_reports | 0 | 0 | 0 | - |
+| cross_indexes | 0 | 0 | 0 | - |
+| metadata_interfaces | 0 | 0 | 0 | - |
+
+## 详情：精确重复（global_exact）
+
+无
+
+## 详情：内容级重复（global_content）
+
+无
+
+## 详情：模糊重复（fuzzy_global，前 50 对）
+
+无
+
+## sacred 例外
+
+无
+
+## next_actions
+
+- 模糊重复建议人工复核后决定是否合并
+- sacred 例外记录需人工确认是否保留
+- 跨库精确重复 0 条已标记
+- 跨库内容级重复 0 条已标记
+- 跨库模糊重复 0 条已标记
