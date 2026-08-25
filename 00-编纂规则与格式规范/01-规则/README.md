@@ -42,7 +42,7 @@
 
 规则文件中引用的所有脚本、程序、命令（含数据库规则操作）独立存储于 [脚本与命令/](脚本与命令/README.md) 子目录下，与规则 .md 文件形成“规则 + 可执行资源”的完整自洽单元。该子目录含 4 类资源：
 
-- **脚本文件**（13 个 .py 副本）：`auto_ingest_new_pdfs.py`、`cleanup_duplicates_and_errors.py`、`scan_all_gaps_v4.py`、`rename_volume_dirs_20260726.py`、`fix_remaining_volume_refs_20260726.py`、`build_folder_databases.py`、`dedup_folder_databases.py`、`resolve_cross_references.py`、`audit_folder_db_integrity.py`、`cleanup_duplicate_sources.py`、`dedup_databases_global.py`、`sync_cross_references_after_cleanup.py`、`optimize_folder_databases.py`。注（2026-08-11 合规审计）：其中 11 个副本的 `script/` 源文件已缺失（仅 `auto_ingest_new_pdfs.py`、`build_folder_databases.py` 源文件现存），缺失登记详见 [脚本与命令/README.md](脚本与命令/README.md) “缺失脚本登记”小节
+- **脚本文件**（14 个 .py 副本）：`auto_ingest_new_pdfs.py`、`cleanup_duplicates_and_errors.py`、`scan_all_gaps_v4.py`、`rename_volume_dirs_20260726.py`、`fix_remaining_volume_refs_20260726.py`、`build_folder_databases.py`、`dedup_folder_databases.py`、`resolve_cross_references.py`、`audit_folder_db_integrity.py`、`cleanup_duplicate_sources.py`、`dedup_databases_global.py`、`sync_cross_references_after_cleanup.py`、`optimize_folder_databases.py`、`backup_databases.py`（2026-08-18 新增，数据库常设备份与轮换）。注（2026-08-11 合规审计）：其中 11 个副本的 `script/` 源文件已缺失（仅 `auto_ingest_new_pdfs.py`、`build_folder_databases.py` 源文件现存），缺失登记详见 [脚本与命令/README.md](脚本与命令/README.md) “缺失脚本登记”小节
 - **程序命令**（3 个 .md）：AutoCorrect / `md-padding@latest` / `markdownlint2` 清理工具、Tesseract OCR、pandoc EPUB 转换的调用规范
 - **数据库操作 SQL**（7 个 .sql）：`changelog` 去重查询、`references` 表操作、`reference_duplicates` 表操作、`chapter_matches` 表操作、`chapter_reviews` 表操作、`folder_db_common_schema`（文件夹级数据库通用 Schema）、`folder_db_cross_references`（文件夹级数据库交叉引用查询）
 - **未实现脚本登记**：`renumber_subsections_120.py`、`renumber_subsections_vol5.py` 两个规则引用但未实现的脚本

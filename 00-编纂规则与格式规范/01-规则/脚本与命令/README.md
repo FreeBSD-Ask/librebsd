@@ -4,7 +4,7 @@
 
 ## 脚本文件
 
-规则文件中引用的现存 Python 脚本副本（共 13 个 .py 副本，从 `script/` 目录复制，原文件保持不变）。
+规则文件中引用的现存 Python 脚本副本（共 14 个 .py 副本，从 `script/` 目录复制，原文件保持不变；`backup_databases.py` 与 `sqlite2duckdb.py` 为 2026-08-18 新增固定脚本，直接存放于本目录）。
 
 | 文件名 | 用途说明 | 规则引用位置 |
 | --- | --- | --- |
@@ -21,6 +21,8 @@
 | [dedup_databases_global.py](dedup_databases_global.py) | 跨库全局去重脚本：对 7 个文件夹级数据库执行跨库三级去重（SHA-256 精确 `global_exact` / content_hash 内容级 `global_content` / 标题+首段模糊 `fuzzy_global`），副记录标记 `status='merged'` 并新增 `duplicate_of_db`/`duplicate_of_global_file_id` 字段；支持 `--dry-run`/`--exact`/`--content`/`--fuzzy`/`--all`/`--upgrade-schema` 六种模式 | 流程规则.md “其他文件夹转数据库规则” → “跨库全局去重”小节 |
 | [sync_cross_references_after_cleanup.py](sync_cross_references_after_cleanup.py) | 交叉引用同步脚本：在重复源文件清理与跨库全局去重完成后，扫描 `05-卷册大纲/`、`10-交叉索引/`、`11-元数据接口/` 下所有 `.md/.csv/.json` 文件（`06-正式书稿/` 已随 2026-08-04 禁止编纂正文决策移除，不再扫描），将指向已删除/已合并副记录的引用更新为指向主记录；支持 `--dry-run`/`--all` 两种模式 | 流程规则.md “其他文件夹转数据库规则” → “交叉引用同步”小节 |
 | [optimize_folder_databases.py](optimize_folder_databases.py) | 文件夹级数据库优化脚本：对 7 个数据库执行 Schema 优化（创建 schema_meta 表 + 9 个预定义索引 + 删除空扩展表 + 回填 update_log）、幽灵块清理（删除 deleted 文件的 blocks/blocks_fts 行，sacred 例外）、VACUUM 空间回收三种操作；支持 `--schema`/`--ghost-blocks`/`--vacuum`/`--all`/`--dry-run` 五种模式 | 流程规则.md “数据库 Schema 优化规则” → “Schema 优化与空间回收”小节 |
+| [backup_databases.py](backup_databases.py) | 数据库常设备份与轮换脚本（2026-08-18 新增，同日范围 20→16 库）：对 16 个非邮件正式库执行 SQLite 在线备份（`Connection.backup()`，安全处理 WAL），备份即轮替压缩为 `.db.gz`（gzip level 6 + CRC 回读校验），每库按「当次/1日/2日/3日/7日」5 槽独立轮换保留，备份后自动 integrity_check + SHA-256（指解压内容）清单落盘；支持 `--all`/`--db <db_name>`/`--prune-only`/`--list` 四种模式（prune/list 兼容 `.db` 与 `.db.gz`）；备份目录为根目录一级文件夹 `12-数据库备份/`（2026-08-18 自 `script/_db_backups/` 迁入）；4 个邮件合并库同日随 DuckDB 升格移出范围（SQLite 原库以 ARCHIVE_FINAL_*.db.gz 永久归档于各自子目录，prune 不触碰） | 流程规则.md “数据库备份保留规则（2026-08-18 新增）” |
+| [sqlite2duckdb.py](sqlite2duckdb.py) | SQLite → DuckDB 转换、优化与主存储层管理脚本（2026-08-18 新增，同日随 15 库升格扩展）：15 库（11 代码仓库库 + 4 邮件合并库）的 DuckDB 主库管理——转换（`--all`/`--db`，自动跳过 FTS5 虚拟表及影子表，行数三向校验）、优化（`--optimize`：CHECKPOINT 压实 + ART 索引（commits/commit_files 的 commit_hash、messages 的 message_id）+ ANALYZE 统计 + manifest 刷新）、校验（`--verify`：在档库比 SQLite 源、已归档库比 manifest）、状态（`--list`：在档最新/过期/已归档）；归档库转换须先自 `12-数据库备份/<name>/ARCHIVE_FINAL_*.db.gz` 恢复；同步日志 `script/_duckdb_sync_log.jsonl`；DuckDB 依赖：`pip install duckdb`（PoC 实测 dragonfly.db 856MB→131MB，聚合查询加速 6~180 倍） | 流程规则.md “DuckDB 分析层与主存储层规则（2026-08-18）” |
 
 ## 程序命令
 
