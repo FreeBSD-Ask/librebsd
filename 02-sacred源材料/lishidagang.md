@@ -6,8 +6,8 @@
 
 **Published Date**: 2026-08-09
 **Document Type**: 编纂基准声明（Subject Benchmark Statement for BSD History Compilation）
-**Philosophical Foundation**: `02-sacred源材料/dagang.md`（一刻哲学体系框架——形式主义本体论、25 条总纲、四层概念结构）
-**Source Materials**: `02-sacred源材料/sacred_sources.db`（29 章 191 子节 25 条总纲 + FreeBSD 从入门到跑路教材全文）
+**Philosophical Foundation**: `02-sacred源材料/dagang.md`（一刻哲学体系框架——形式主义本体论、27 条总纲、四层概念结构，含 2026-08-25 新增补充哲学域与经济哲学五定律）
+**Source Materials**: `02-sacred源材料/sacred_sources.db`（构造哲学 29 章 191 子节 25 条总纲 + FreeBSD 从入门到跑路教材全文） + `02-sacred源材料/05-经济哲学与补充哲学.md`（2026-08-25 新增）
 **Reference Format**: 英国高等教育质量保证署（QAA）《Subject Benchmark Statement: History》（2022 年第五版）
 **Relationship to Other Documents**: 本文是 dagang.md 的方法论落地文件。dagang.md 提供"为什么这样思考历史"的哲学根据（本体论与认识论），本文提供"怎样按此思考方式书写历史"的操作方法（史学方法论与编纂基准）。两者须同时参考，不可偏废。
 
@@ -679,12 +679,13 @@ f) **自反性思维能力**：能够在书写的同时反思自己的书写立�
 ## 6.1 项目内部规范文件
 
 - `CLAUDE.md` —— 项目文件结构与协作指南
-- `dagang.md` —— 编纂指导思想的哲学框架文本（**本文的哲学基础文件，必须同时参考**）
+- `dagang.md` —— 编纂指导思想的哲学框架文本（**本文的哲学基础文件，必须同时参考**；2026-08-25 增补至 27 条总纲）
 - `00-编纂规则与格式规范/01-规则/考据规则.md` —— 史料考据规范
 - `00-编纂规则与格式规范/01-规则/写作规则.md` —— 写作与格式规范
 - `00-编纂规则与格式规范/01-规则/流程规则.md` —— 工作流程与复核规范
 - `00-编纂规则与格式规范/01-规则/释读规则.md` —— 编纂指导思想释读规范
 - `00-编纂规则与格式规范/01-规则/主题规则.md` —— 主题规则（合规认证、Linux 文化挪用等）
+- `02-sacred源材料/05-经济哲学与补充哲学.md` —— 补充哲学域与经济哲学五定律（2026-08-25 新增）
 
 ## 6.2 外部参照标准
 
