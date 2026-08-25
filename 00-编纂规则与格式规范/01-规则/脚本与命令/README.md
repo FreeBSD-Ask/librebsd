@@ -40,7 +40,7 @@
 
 | 文件名 | 用途说明 | 规则引用位置 |
 | --- | --- | --- |
-| [changelog-去重查询.sql](changelog-去重查询.sql) | `changelog.db` `entries` 表去重查询：疑似重复条目查找、时间顺序分组统计、条目数一致性复核、合并/删除冗余条目 | 流程规则.md “changelog 去重规则” → “去重操作规范（SQL 查询辅助）”、“去重后验证要求”小节 |
+| [changelog-去重查询.sql](changelog-去重查询.sql) | `changelog.duckdb` `entries` 表去重查询：疑似重复条目查找、时间顺序分组统计、条目数一致性复核、合并/删除冗余条目 | 流程规则.md “changelog 去重规则” → “去重操作规范（SQL 查询辅助）”、“去重后验证要求”小节 |
 | [references表操作.sql](references表操作.sql) | `references_fulltext.db` `references` 表操作：SHA-256 精确去重查询、标题+作者+年份模糊去重查询、新增文献入库 INSERT、标记错误文件（`status='rejected'`）、标记已删除文件（`status='deleted'`，追加 `[DELETED YYYY-MM-DD]` 前缀） | 流程规则.md “新增文献自动检测规则” → “去重执行要求”、“元数据验证标准”小节；“重复与错误文档清理规则” → “错误文档判定标准”、“删除后验证”小节 |
 | [reference_duplicates表操作.sql](reference_duplicates表操作.sql) | `reference_duplicates` 表操作：写入 SHA-256 精确重复（`exact`）、模糊重复（`fuzzy`）、文件损坏（`corrupted`）、文件无效（`invalid`）四类重复关系；查询主副本优先级 | 流程规则.md “新增文献自动检测规则” → “去重执行要求”小节；“重复与错误文档清理规则” → “重复文档判定标准”、“清理流程”小节 |
 | [chapter_matches表操作.sql](chapter_matches表操作.sql) | `chapter_matches` 表操作：高/中/低三档置信度匹配写入（阈值 0.7/0.5）、人工确认后 UPDATE（更新 `primary_chapter`、`match_confidence`、`match_reason`）、按章号查询匹配文献 | 流程规则.md “新增文献自动检测规则” → “章节匹配置信度阈值”、“自动入库与人工复核关系”小节 |
