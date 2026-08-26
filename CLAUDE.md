@@ -33,7 +33,7 @@
   - **11-邮件列表史料/** —— 4 大 BSD + Linux kernel 邮件列表全量历史存档（FreeBSD/NetBSD/OpenBSD/DragonFly BSD + Linux kernel，2026-08-04 建立）
   - **12-multics史料/** —— Multics 相关史料（01-multicians-org/、02-mit-saltzer/）
   - **13-44doc文档史料/** —— 4.4BSD Documents 官方文档快照全量镜像（papers/psd/smm/usd/IPv6，2026-08-06 抓取，240 文件）
-  - **14-播客史料/** —— BSD Now 播客史料（含 `bsdnow_podcast.db` 与 `bsd_podcasts_external.db`，期数元数据/语音转写文本/大纲映射/GB/T 7714 著录，2026-08-14 建立；2026-08-25 起 DuckDB 双轨过渡：`.duckdb` 快照已建，`.db` 因转录进程写入暂缓归档，收尾流程见流程规则.md「播客库收尾流程」）
+  - **14-播客史料/** —— 播客史料（原 `bsdnow_podcast.db` / `bsd_podcasts_external.db` 已于 2026-08-26 升格 DuckDB 并按播客实际名拆分为 10 个独立库：`bsd-now.duckdb`、`bsdtalk.duckdb`、`youtube.duckdb`、`software-engineering-daily.duckdb`、`the-changelog.duckdb`、`floss-weekly.duckdb`、`nerding-out-with-victor.duckdb` 及 3 个空源 `freebsd-fridays.duckdb`、`bsd-conferences-youtube.duckdb`、`freebsd-office-hours.duckdb`；含期数元数据/语音转写文本/大纲映射/GB/T 7714 著录，2026-08-14 建立。SQLite 原库已归档 `12-数据库备份/`（ARCHIVE_FINAL）。待转写清单见本目录 `待转录清单.md`）
 - **04-现代研究文献/** —— 研究产出（按主题细分 12 个子目录，其中 04-12 研究主题子目录已清理，内容入库 `research_notes.duckdb`，2026-08-01 源文件清理） —— 含 `research_notes.duckdb` 文件夹级数据库（详见同上；2026-08-01 源文件已清理，数据库为唯一内容载体，README.md/index.md 保留）
   - **01-参考文献总目/** —— 完整文献总目（按类别拆分 60+ 子文件）
   - **02-卷级文献综述/** —— 大纲级文献综述（各卷子文件，卷数随冻结基准/磁盘实况）
