@@ -24,7 +24,7 @@ volume: 第11卷-dragonflybsd的历史
 
 ## 辨析
 
-- 部分二手叙事将 Dillon 哲学概括为"chip away everything that gets in the way"（凿除一切阻碍），但经检索 dragonflybsd.org 官方页面与 fork 公告均无此精确措辞，官网最接近的表述为"no reservation about cutting ties with legacy when it makes sense"——该"chip 
+- 部分二手叙事将 Dillon 哲学概括为"chip away everything that gets in the way"（凿除一切阻碍），但经检索 dragonflybsd.org 官方页面与 fork 公告均无此精确措辞，官网最接近的表述为"no reservation about cutting ties with legacy when it makes sense"——该"chip
 - 无 VSA 系统不等于无安全响应——DragonFly 通过 commit message 与 kernel@/commits@ 邮件列表通知用户安全修复，regreSSHion（CVE-2024-6387）3 天内响应即为案例；但无 VSA 系统意味着用户难以系统跟踪安全修复状态，须自行监控 dragonfly-src 仓库 commit log 或订阅 commits@ 邮件列表；errata
 - 贡献者国籍判定以邮箱域名（.de/.fr/.jp/.cn 等）与姓名拼写为初步线索，但邮箱域名不等于国籍（如 Dillon 使用 @dragonflybsd.org 而非美国域名）——上述归属以 commits 表 author_email 与 author_name 为依据，正式撰写时须以邮件列表自我介绍或公开简历交叉验证；Sepherosa Ziehau 的地理归属 [考据完成：2026-07
 - 关于 2003 年 Dillon 提交权限被撤销的具体经过，不同当事人叙事存在差异——dragonflybsd.org 官方 history 仅称“forked from FreeBSD 4.8 in June of 2003 by Matthew Dillon（马修·狄龙）”而未提及权限撤销，FreeBSD 官方文档对 fork 事件着墨亦少 [考据完成：2026-07-28 该处存疑标注属史料

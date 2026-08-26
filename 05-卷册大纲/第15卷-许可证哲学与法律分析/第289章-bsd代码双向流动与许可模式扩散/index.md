@@ -4,6 +4,8 @@ id: CH289
 volume: 15
 ---
 
+# 第289章 bsd代码双向流动与许可模式扩散
+
 ## 要点
 
 - BSD 代码向其他开源项目的正向流出主要通过三种工程机制实现——（1）**基础系统采纳**：libarchive 自 Mac OS X 10.6 Snow Leopard 起作为 bsdtar 的底层库进入 macOS 基础系统，自 Debian/Ubuntu 起作为 bsdtar 软件包进入 Linux 发行版，自 Homebrew 起作为 bottles 打包工具进入 macOS 包管理器；jemalloc 自 2005 年 9 月起作为 FreeBSD libc 默认分配器，后被 Facebook（Meta）、Mozilla Firefox 采用，Rust 早期版本曾以 jemalloc 为默认分配器（后随 Rust 1.28 全局分配器机制稳定化切换为系统分配器，但 jemalloc 仍通过 tikv-jemallocator crate 被大量 Rust 项目主动选用）；（2）**独立项目 fork 与移植**：OpenSSH 由 OpenBSD 项目于 1999 年 9 月从 Björn Grönvall 的 OSSH fork 而来，后以 portable 分支独立维护，进入几乎所有现代操作系统；LibreSSL 由 OpenBSD 项目于 2014 年 4 月 Heartbleed 漏洞后从 OpenSSL fork，后以 portable 版本进入 FreeBSD ports、Gentoo 等；（3）**跨项目代码同步**：OpenZFS 自 2013 年 9 月由 ZFS on Linux 与 illumos ZFS 团队合并成立 “OpenZFS 项目” 后，FreeBSD 的 ZFS 实现与 Linux 的 ZFS on Linux 实现通过共享代码库实现双向同步，FreeBSD ZFS 代码向 Linux 流出，Linux ZFS on Linux 代码向 FreeBSD 回流；bhyve 自 2013 年由 Pluribus Networks 移植到 illumos，2017 年末 Pluribus 将代码贡献给 illumos 社区，2021 年 7 月 Joyent 基于 FreeBSD-11.1 整合至其 illumos 分支并持续改进。BSD 代码正向流出的工程机制体现 BSD 许可证 “允许无回馈采用” 的设计意图——采用者无需贡献代码即可使用，但 BSD 阵营通过基础系统采纳、独立项目 fork、跨项目代码同步三种机制使代码扩散至全球软件基础设施
@@ -26,7 +28,7 @@ volume: 15
 
 ## 文献
 
-- libarchive. Official Website [EB/OL]. <https://libarchive.github.io/>; jemalloc.net [EB/OL]. <https://jemalloc.net/>; Rust RFC 1974. Global Allocator API [S/OL]. 2017; OpenSSH. Official History [EB/OL]. <https://openssh.org/history.html>; OpenZFS Project Announcement [EB/OL]. 2013-09, <https://openz
+- libarchive. Official Website [EB/OL]. <https://libarchive.github.io/>; jemalloc.net [EB/OL]. <https://jemalloc.net/>; Rust RFC 1974. Global Allocator API [S/OL]. 2017; OpenSSH. Official History [EB/OL]. <https://openssh.org/history.html>; OpenZFS Project Announcement [EB/OL]. 2013-09, <<https://openz>
 - bsd_commits.db L3.2.1 查询报告（深层信息挖掘.md §L3.2.1）; bsd_commits.db L7.2.1 查询报告（衍生项目与跨项目对比分析.md §L7.2.1）; OpenZFS Project. Announcement [EB/OL]. 2013-09, <https://openzfs.org/>; libarchive. Official Website [EB/OL]. <https://libarchive.github.io/>; jemalloc.net [EB/OL]. <https://jemalloc.net/>; Joyent. Re
 - 项目史观总纲第 4、6、7、13 条 [Z]. 原材料/哲学/项目统摄史观/第 25 章.md; 项目史观总纲第四章 “循环与否定” [Z]. 原材料/哲学/项目统摄史观/第 04 章.md; 项目史观总纲第六章 “主体性与和解” [Z]. 原材料/哲学/项目统摄史观/第 06 章.md; 项目史观总纲第十一章 “法哲学与政治历史哲学” [Z]. 原材料/哲学/项目统摄史观/第 11 章.md; 项目史观总纲第二十七章 “自反：对理论困境的回应” [Z]. 原材料/哲学/项目统摄史观/第 27 章.md; bsd_commits.db L3.2.1 查询报告; bsd_commits.db L
 

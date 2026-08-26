@@ -37,23 +37,33 @@ volume: 06
 ## 文献
 
 - FreeBSD 9.1-RELEASE Release Notes（Graphics Drivers 章节）；**drm(4)**、**i915kms(4)** man pages（9.1 版本） ［B］
+
 ## 123.10.2 网络驱动更新
-  - 要点：9.x 系列新增大量网卡驱动：9.0 新增 **bxe(4)**（Broadcom NetXtreme II 10GbE）、**cxgbe(4)**（Chelsio T4 10Gb/1Gb）、**vte(4)**（RDC R6040）、**vxge(4)**（Neterion X3100 10GbE）；**em(4)** 更新至 7.3.2
+
+- 要点：9.x 系列新增大量网卡驱动：9.0 新增 **bxe(4)**（Broadcom NetXtreme II 10GbE）、**cxgbe(4)**（Chelsio T4 10Gb/1Gb）、**vte(4)**（RDC R6040）、**vxge(4)**（Neterion X3100 10GbE）；**em(4)** 更新至 7.3.2
 - FreeBSD 9.0-RELEASE Release Notes（Architectures 章节）；svn commit r217044；Sony Computer Entertainment. PS3 System Software Update 3.21 [Z]. 2010-03-28 ［A］
+
 ## 123.11.2 9.x 支持架构与状态
-  - 要点：9.0-RELEASE 支持架构：amd64、i386、ia64（Itanium）、powerpc、powerpc64、sparc64；9.1-RELEASE 初始仅发布 amd64、i386、powerpc64、sparc64（ia
+
+- 要点：9.0-RELEASE 支持架构：amd64、i386、ia64（Itanium）、powerpc、powerpc64、sparc64；9.1-RELEASE 初始仅发布 amd64、i386、powerpc64、sparc64（ia
 - Sony Computer Entertainment. PlayStation 4 Developer Documentation（Orbis OS 章节）；CTurt. PS4 Kernel Exploitation Analysis [Z]. 2015-2017；多家技术媒体 2013.6 E3 报道（确认 Orbis OS 基于 FreeBSD 9.0）；Rosen L. Open Source Licensing: Software Freedom and Intellectual Property Law [M]. Upper Saddle River: Prentice Hall
 - FreeBSD 9.0/9.1/9.2/9.3-RELEASE Announcement Acknowledgments 章节 [Z]. 2012-2014；FreeBSD Security Team 页面（security.freebsd.org）[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]
+
 ## 123.13.2 Release Engineering 团队构成
-  - 要点：9.0 Release Engineering Team 由 Ken Smith（kensmit
+
+- 要点：9.0 Release Engineering Team 由 Ken Smith（kensmit
 - 安全团队报告 ［A］
 - Pedro Giffuni 2013.1.29 [CFT] WITH_BSD_PATCH（freebsd-current 邮件列表 archives/2013-January/039367.html）；FreeBSD Bugzilla PR 99173（bugs.freebsd.org/bugzilla/show_bug.cgi?id = 99173）；Kohn A. 2006.6.19 lwpatch 提案附件 ［A］
+
 ## 123.15.2 r246074 首次导入与 WITH_BSD_PATCH 构建选项
-  - 要点：2013 年 1 月 29 日 17:03 由 Gabor Kove
+
+- 要点：2013 年 1 月 29 日 17:03 由 Gabor Kove
 - Pedro Giffuni. [CFT] WITH_BSD_PATCH [EB/OL]. freebsd-current mailing list, 2013-01-29; Free Software Foundation. Various Licenses and Comments about Them [EB/OL]. gnu.org/licenses/license-list.html（#ModifiedBSD、#FreeBSD 条目，2026-07-22 核实）.[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史
 - Phoronix FreeBSD 9.0 vs Linux benchmarks（2012 年系列）；freebsd-advocacy 邮件列表档案 ［A］
+
 ## 123.16.2 被忽视的边缘贡献者
-  - 要点：9.x 时期核心技术的知名贡献者（McKusick、Watson、Motin、Selasky、Grehan、Percival、Whitehorn、Dawidek 等）常被历史记录，但大量 ports 维护者、文档翻译者、bug 报告者、测试者的贡献被主流叙事忽视；FreeBSD 9.x 时期 ports 数量从约 22,000 增长至超过 24,000，背后是数百名 ports c
+
+- 要点：9.x 时期核心技术的知名贡献者（McKusick、Watson、Motin、Selasky、Grehan、Percival、Whitehorn、Dawidek 等）常被历史记录，但大量 ports 维护者、文档翻译者、bug 报告者、测试者的贡献被主流叙事忽视；FreeBSD 9.x 时期 ports 数量从约 22,000 增长至超过 24,000，背后是数百名 ports c
 
 ## 自反性声明
 

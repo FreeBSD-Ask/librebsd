@@ -27,7 +27,7 @@ volume: 07
 ## 辨析
 
 - David Chisnall 的姓名错误——原文件和多个中文资料中出现的 "Theresa Chisnall" 是对其用户名 **theraven@** 的误读（theraven → "The Raven" → 误联想为女性名字 Theresa），其 AsiaBSDCon 2014 论文作者署名明确为 David Chisnall，此错误已修正。
-  - 文献：FreeBSD Quarterly 
+  - 文献：FreeBSD Quarterly
 - BSD sort 的主要开发者在 Q1 2012 status report 中未明确署名（仅列为项目条目），需对照 SVN 历史确认具体贡献者；BSD dialog 的替换提交者和精确 commit hash 需查阅 FreeBSD Git 仓库（2024 年移除）。
   - 文献：FreeBSD 10.0-RELEASE Announcement [Z]. 2014-01-20；Giffuni
 - dialog 移除的精确 commit hash 和日期需查阅 FreeBSD Git 仓库确认（中文媒体报道为 2024 年 7 月，FreeBSD 16-CURRENT 分支），替换为的 BSD dialog 具体来源（是新写的还是从 OpenBSD/NetBSD 移植）也需对照 commit 确认；CDDL 许可的 DTrace/ZFS/CTF 工具仍在 base 中，但 CDDL 是文件级
@@ -40,19 +40,27 @@ volume: 07
 
 - FreeBSD Quarterly Status Report 2012 Q1 [R]；Chisnall D. LLVM in the FreeBSD Toolchain [C]//AsiaBSDCon 2014（作者署名 David Chisnall）；Divacky R. 2009 kernel announcement [EB/OL]；Davis B. 2012 default announcement [EB/OL].
 - FreeBSD 10.0-RELEASE Announcement [Z]. 2014-01-20；Giffuni P. [CFT] WITH_BSD_PATCH [EB/OL]. freebsd-current, 2013-01-29；FreeBSD Quarterly Status Report 2012 Q1 [R]. ［A］
+
 ## 143.12.3 被忽视的测试者和 ports 贡献者
-  - 要点：Clang/LLVM 迁移的成功不仅依赖 base 系统 committer，大量 ports 维护者和测试者的工作同样不可或缺。迁移期间需要修复数千个 ports 软件的 Clang 兼
+
+- 要点：Clang/LLVM 迁移的成功不仅依赖 base 系统 committer，大量 ports 维护者和测试者的工作同样不可或缺。迁移期间需要修复数千个 ports 软件的 Clang 兼
 - Linuxiac. FreeBSD Base System Is Now GPL-Free [EB/OL]. linuxiac.com, 2024-07-17；FreeBSD Git repository. dialog removal commit [Z]. cgit.freebsd.org/src, 2024. ［A］
+
 ## 143.13.2 许可证纯洁化的法律里程碑意义
-  - 要点：FreeBSD base 系统 GPL 代码清零具有重要的法律和生态里程碑意义：① 法律确定性——商业用户可确信 FreeBSD base 不包含 GPLv2/v3 代码，不存在 GPL 许可证合规风险（除
+
+- 要点：FreeBSD base 系统 GPL 代码清零具有重要的法律和生态里程碑意义：① 法律确定性——商业用户可确信 FreeBSD base 不包含 GPLv2/v3 代码，不存在 GPL 许可证合规风险（除
 - Clang Team. Clang Features and Goals: Fast compiles and Low Memory Use [EB/OL]. clang.llvm.org/features.html, 2007；Larabel M. GCC 4.9 VS. LLVM Clang 3.5 Benchmarks [EB/OL]. OpenBenchmarking.org, 2014-04-14；Larabel M. LLVM Clang 16 vs. GCC 13 Performance [EB/OL]. Phoronix, 2023-05-11.[考据完成：2026-07-28
 - FreeBSD Wiki. Building FreeBSD with Clang [EB/OL]. wiki.freebsd.org；LLVM Project. Clang Control Flow Integrity [EB/OL]. clang.llvm.org/docs/ControlFlowIntegrity.html. ［B］
+
 ## 143.14.3 静态分析与工具链质量工具
-  - 要点：Clang/LLVM 带来的不仅是编译器替换，更包括一系列基于 Clang AST 的代码质量工具：Clang Static Analyzer（静态分析器，可在编译时检测空指针解引用、内存泄漏、
+
+- 要点：Clang/LLVM 带来的不仅是编译器替换，更包括一系列基于 Clang AST 的代码质量工具：Clang Static Analyzer（静态分析器，可在编译时检测空指针解引用、内存泄漏、
 - 原材料/哲学/项目统摄史观/第 25 章.md（总纲第 13 条）；Free Software Foundation. GNU General Public License Version 3 [Z]. 2007-06-29（§11）；Apache Software Foundation. Apache License, Version 2.0 [Z]. 2004-01（§3）.[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]
 - 原材料/哲学/项目统摄史观/第 25 章.md（总纲第 19 条）；原材料/哲学/项目统摄史观/第 19 章.md（19.2、19.3 节）. ［A］
+
 ## 143.15.3 总纲第 21 条审视——革命与改革的方法论分歧
-  - 要点：总纲第 21 条断言“革命与改革是历史方法论的分歧。Linux 靠革命，BSD 靠改革。改革的困难远高于革命”。以此审视 FreeBSD 许可证纯洁化工程，可见其方法论本质是典型的“改革”而非“革命”——FreeBSD 采取“导入 → 可选 → 默认 → 移除”四阶段渐进策略（以 GCC 为例：2009 可编译 →2012 base 可选 →2014 默认 →
+
+- 要点：总纲第 21 条断言“革命与改革是历史方法论的分歧。Linux 靠革命，BSD 靠改革。改革的困难远高于革命”。以此审视 FreeBSD 许可证纯洁化工程，可见其方法论本质是典型的“改革”而非“革命”——FreeBSD 采取“导入 → 可选 → 默认 → 移除”四阶段渐进策略（以 GCC 为例：2009 可编译 →2012 base 可选 →2014 默认 →
 - Free Software Foundation. 各类许可证及其评论 [EB/OL]. **<https://www.gnu.org/licenses/license-list.html**>（2026-07-23 核验）；Free Software Foundation. GNU General Public License Version 3 [Z]. 2007-06-29；Apache Software Foundation. Apache License, Version 2.0 [Z]. 2004-01. ［A］
 
 ## 自反性声明

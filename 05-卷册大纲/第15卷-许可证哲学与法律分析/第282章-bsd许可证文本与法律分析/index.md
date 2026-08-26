@@ -4,6 +4,8 @@ id: CH282
 volume: 15
 ---
 
+# 第282章 bsd许可证文本与法律分析
+
 ## 要点
 
 - **BSD 4-Clause** 原始版含广告条款，1999 年 7 月 22 日 **William Hoskins** 在 **Berkeley** 官方公告中宣布弃用广告条款，演进为 **3-Clause "New BSD"**，2006 年进一步简化为 **2-Clause "Simplified BSD"**。
@@ -19,7 +21,9 @@ volume: 15
 - 总纲第 14 条——许可证约束：宽松许可证谱系
   - 辨析：**BSD** 与 **MIT** 在法律效力上是否完全等价
   - 文献：**MIT License** 文本；**Apache License 2.0** 文本[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]
+
 ## 2
+
 - 总纲第 14 条——许可证约束：CC 以"some rights reserved"（部分权利保留）反对版权绝对主义，是“作者自决”原则的文化作品实现。
 - 辨析：CC 1.0 精确发布日（2002-12-16）须 creativecommons.org 存档进一步确证（存疑项）；CC 4.0 国际版与 3.0 移植版的差异（4.0 引入全球适用条款、明确数据库权利处理）须逐版对照。
 - 文献：C
@@ -35,28 +39,32 @@ volume: 15
 - 广告条款弃用是 1999 年还是更早，Hoskins 公告与 OSI 批准时点可交叉核查；[考据完成：2026-07-30 三次联网核查确认——**William Hoskins** 职务为 **Director, Office of Technology Licensing, University of California, Berkeley**（加州大学伯克利分校技术许可办公室主任，非 OT
 - **BSD** 与 **MIT** 在法律效力上是否完全等价
   - 文献：**MIT License** 文本；**Apache License 2.0** 文本[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]
+
 ## 281.1.4 史料辨析
-  - 要点：**BSD** 许可证原
+
+- 要点：**BSD** 许可证原
 - CC 1.0 精确发布日（2002-12-16）须 creativecommons.org 存档进一步确证（存疑项）；CC 4.0 国际版与 3.0 移植版的差异（4.0 引入全球适用条款、明确数据库权利处理）须逐版对照。
-- 文献：Creative Commons. License Versions [EB/OL]. https://creativecommons.org/share-your-
+- 文献：Creative Commons. License Versions [EB/OL]. <https://creativecommons.org/share-your->
 - **编号防错**——FSD 四自由官方编号为 0–3，NC 违反自由0（不是“第1条”），ND 违反自由1+自由3（不是“第3条”）；OSD 引用须用 §1/§3/§6 条款号，不得混用。
-- 文献：OSI. The Open Source Definition [EB/OL]. https://opensource.org/osd；FSF. What is Free Software? [EB/
+- 文献：OSI. The Open Source Definition [EB/OL]. <https://opensource.org/osd；FSF>. What is Free Software? [EB/
 - CC-BY-SA 与 GPL 同为 share-alike 家族，但适用对象（文化作品 vs 软件）与传染边界不同，不得将二者混同；CC0 与 Unlicense 的公共领域奉献机制差异（CC0 含“不得反悔”条款）须辨析。
-- 文献：Creative Commons. CC0 1.0 Universal [Z/OL]. https://creativecommons.org/publicdoma
+- 文献：Creative Commons. CC0 1.0 Universal [Z/OL]. <https://creativecommons.org/publicdoma>
 
 ## 文献
 
 - Berkeley 1999.7.22 公告（**University of California, Berkeley** **Office of Technology Licensing** 版权修正通知，签署人 **William Hoskins**，Director, Office of Technology Licensing，原始文件 `ftp://ftp.cs.berkeley.edu/pub/4bsd/README.Impt.License.Change`）；OSI License List[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档
 - **MIT License** 文本；**Apache License 2.0** 文本[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]
+
 ## 281.1.4 史料辨析
-  - 要点：**BSD** 许可证原始文本的最早版本需追溯至 1980 年代 **BSD 4.3 Tahoe** 分发，1990 年代通过 **CSRG** 文件标准化为 **4-Clause** 形式。
-  - 史料：**4.3BSD Tahoe** 源码文件头部、**CSRG** 1994 **4.4BSD
-- Creative Commons. License Versions [EB/OL]. https://creativecommons.org/share-your-work/licensing-types-examples/；SPDX. SPDX License List [EB/OL]. https://spdx.org/licenses/ ［A］
-- OSI. The Open Source Definition [EB/OL]. https://opensource.org/osd；FSF. What is Free Software? [EB/OL]. https://www.gnu.org/philosophy/free-sw.html ［A］
-- Creative Commons. CC0 1.0 Universal [Z/OL]. https://creativecommons.org/publicdomain/zero/1.0/；FSF. Various Licenses and Comments about Them [EB/OL]. https://www.gnu.org/licenses/license-list.html ［A］
-- LESSIG L. Free Culture [M]. New York: Penguin Press, 2004；FSF. Various Licenses and Comments about Them [EB/OL]. https://www.gnu.org/licenses/license-list.html ［A］
-- OSI. MIT License [EB/OL]. https://opensource.org/license/mit/；OSI. ISC License [EB/OL]. https://opensource.org/license/isc/；SPDX. SPDX License List [EB/OL]. https://spdx.org/licenses/ ［A］
-- Apache Software Foundation. Licenses [EB/OL]. https://www.apache.org/licenses/；OSI. Apache License 2.0 [EB/OL]. https://opensource.org/license/apache-2-0/ ［A］
+
+- 要点：**BSD** 许可证原始文本的最早版本需追溯至 1980 年代 **BSD 4.3 Tahoe** 分发，1990 年代通过 **CSRG** 文件标准化为 **4-Clause** 形式。
+- 史料：**4.3BSD Tahoe** 源码文件头部、**CSRG** 1994 **4.4BSD
+- Creative Commons. License Versions [EB/OL]. <https://creativecommons.org/share-your-work/licensing-types-examples/；SPDX>. SPDX License List [EB/OL]. <https://spdx.org/licenses/> ［A］
+- OSI. The Open Source Definition [EB/OL]. <https://opensource.org/osd；FSF>. What is Free Software? [EB/OL]. <https://www.gnu.org/philosophy/free-sw.html> ［A］
+- Creative Commons. CC0 1.0 Universal [Z/OL]. <https://creativecommons.org/publicdomain/zero/1.0/；FSF>. Various Licenses and Comments about Them [EB/OL]. <https://www.gnu.org/licenses/license-list.html> ［A］
+- LESSIG L. Free Culture [M]. New York: Penguin Press, 2004；FSF. Various Licenses and Comments about Them [EB/OL]. <https://www.gnu.org/licenses/license-list.html> ［A］
+- OSI. MIT License [EB/OL]. <https://opensource.org/license/mit/；OSI>. ISC License [EB/OL]. <https://opensource.org/license/isc/；SPDX>. SPDX License List [EB/OL]. <https://spdx.org/licenses/> ［A］
+- Apache Software Foundation. Licenses [EB/OL]. <https://www.apache.org/licenses/；OSI>. Apache License 2.0 [EB/OL]. <https://opensource.org/license/apache-2-0/> ［A］
 
 ## 自反性声明
 

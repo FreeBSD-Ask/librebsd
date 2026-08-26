@@ -4,6 +4,8 @@ id: CH138
 volume: 07
 ---
 
+# 第138章 freebsd安全团队与认证地位
+
 ## 要点
 
 - 2000-2005 年是 FreeBSD 安全模型形成的关键时期，同时也是互联网安全威胁格局发生根本变化的时期；互联网泡沫破裂（2000-2002）导致许多网络安全公司倒闭，但互联网攻击数量和复杂度持续上升——Code Red（2001）、Nimda（2001）、SQL Slammer（2003）等蠕虫大规模爆发；9/11 事件后美国政府对信息安全和加密技术的态度发生变化，DARPA 加大对高可信系统（CHATS 项目）的资助，直接支持了 TrustedBSD MAC 框架和 OpenBSM 的开发；这一时期 FreeBSD 发布了 4.x（生产级稳定系列）和 5.x（New Technology 预览系列），jail（4.0，2000）、GBDE（5.x）、MAC 框架（5.0，2003）、OpenPAM 等安全机制在这一时期引入或成熟
@@ -41,19 +43,27 @@ volume: 07
 ## 文献
 
 - US-CERT. Annual Security Reports (2000-2005). us-cert.gov; DARPA. Composable High Assurance Trusted Systems (CHATS) Program Documentation; FreeBSD Project. FreeBSD 4.x-5.x Release Notes.[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]
+
 ## 137.10.2 2006-2012：云时代萌芽与安全更
+
 - McKusick M K et al. The Design and Implementation of the FreeBSD Operating System (2nd ed.)[M]. Addison-Wesley, 2014. ISBN 978-0-321-96897-5; Kamp P H, Watson R N M. FreeBSD Security Architecture Presentations (BSDCan/EuroBSDCon). ［B］
+
 ## 137.11.2 25 条总纲在本章的映射分布
-  - 要点：项目统摄史观 25 条总纲在本章的主要映射点：总纲第 1 条（
+
+- 要点：项目统摄史观 25 条总纲在本章的主要映射点：总纲第 1 条（
 - FreeBSD Project. FreeBSD Documentation and Source Archives. freebsd.org; TrustedBSD Project. trustedbsd.org; USENIX Association. USENIX Security Symposium Proceedings (2000-2025). ［B］
+
 ## 137.12.2 二手文献与学术研究
-  - 要点：FreeBSD 安全相关的二手文献和学术研究包括：McKusick、Neville-Neil、Watson 合著的《The Design and Implementation
+
+- 要点：FreeBSD 安全相关的二手文献和学术研究包括：McKusick、Neville-Neil、Watson 合著的《The Design and Implementation
 - Smalley S et al. SELinux as LSM [EB/OL]；FreeBSD. mac(4) Manual [Z]. ［A］
     FreeBSD 社区论文与演讲 [331]，[331] Olivier Certner. Supporting hibernate on FreeBSD [C]//BSDCan 2026. [S.l.]: [s.n.], 2026. 获取路径：<https://papers.freebsd.org/2026/bsdcan/certner-supporting_hibernate_on_freebsd/> [访问日期 2026-07-26].
- 
+
 - FreeBSD Project. FreeBSD Security Team. freebsd.org/security/; FreeBSD Project. FreeBSD Developers. freebsd.org/developers/; Percival C. daemonology.net; Watson R N M. trustedbsd.org; Kamp P H. phk.freebsd.dk. ［A］
+
 ## 137.9.2 外部漏洞披露者的角色
-  - 要点：向 FreeBSD 报告安全漏洞的外部研究者（漏洞披露者）在 FreeBSD 安全生态中扮演重要角色——与许多商业
+
+- 要点：向 FreeBSD 报告安全漏洞的外部研究者（漏洞披露者）在 FreeBSD 安全生态中扮演重要角色——与许多商业
 
 ## 自反性声明
 

@@ -21,7 +21,7 @@ volume: 第05卷-freebsd的工程化奠基
 
 ## 辨析
 
-- 8.x 的 commit 月均（3.19）接近 5.x（3.64），但二者性质不同——5.x 高位源于架构转型期的新代码密集审计，8.x 高位源于 OpenSSL 与 BIND 的多 CVE 密集响应；扣除 OpenSSL 7 条 CVE 与 BIND 7 条 CVE 后 8.x 月均约 2.11 条/月，与 7.x 的 1.90 接近；8.x 时期 XEN domU 在 base system 
+- 8.x 的 commit 月均（3.19）接近 5.x（3.64），但二者性质不同——5.x 高位源于架构转型期的新代码密集审计，8.x 高位源于 OpenSSL 与 BIND 的多 CVE 密集响应；扣除 OpenSSL 7 条 CVE 与 BIND 7 条 CVE 后 8.x 月均约 2.11 条/月，与 7.x 的 1.90 接近；8.x 时期 XEN domU 在 base system
 
 ## 文献
 

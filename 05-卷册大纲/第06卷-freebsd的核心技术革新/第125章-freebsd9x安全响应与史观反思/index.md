@@ -26,8 +26,10 @@ volume: 06
 
 - FreeBSD Security Team. FreeBSD Security Advisories Archive [EB/OL]. (2012-2017)[2026-07-22]. <https://www.freebsd.org/security/advisories/>; FreeBSD Project. bsd_commits.db — freebsd-src commits table [DB/OL]. 2026-07-22. SQL: SELECT count(*) FROM commits WHERE repo_name ='freebsd-src' AND author_da
 - 原材料/哲学/项目统摄史观/第 25 章.md（总纲第 13 条）；原材料/哲学/项目统摄史观/第 11 章.md（11.1、11.5 节）；Free Software Foundation. GNU General Public License Version 3 [Z]. 2007-06-29（§11）；Apache Software Foundation. Apache License, Version 2.0 [Z]. 2004-01（§3）. ［A］
+
 ## 124.20.2 总纲第 15 条审视——文化即形式主义
-  - 要点：总纲第 15 条断言 “文化即形式主义。传统在形式主义化
+
+- 要点：总纲第 15 条断言 “文化即形式主义。传统在形式主义化
 
 ## 自反性声明
 

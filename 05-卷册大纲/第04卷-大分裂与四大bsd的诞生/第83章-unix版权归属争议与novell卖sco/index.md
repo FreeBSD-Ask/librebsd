@@ -4,6 +4,8 @@ id: CH83
 volume: 04
 ---
 
+# 第83章 unix版权归属争议与novell卖sco
+
 ## 要点
 
 - **1994 年** Windows NT 3.5 发布，定位企业市场，支持 x86、MIPS、Alpha、PowerPC 多架构，提供 Win32 API；与 4.4BSD-Lite 相比，NT 3.5 商业支持完善但开源程度为零，技术架构（微内核 vs 宏内核）与许可模式（专有 vs 开源）形成鲜明对比
@@ -21,7 +23,7 @@ volume: 04
 - 分离与聚合：4.4BSD-Lite 取代 386BSD 是 BSD 安全基线从 386BSD 聚合至 4.4BSD-Lite 的关键转型；终结中的延续：386BSD 作为 FreeBSD 与 NetBSD 直接安全基线的历史地位终结，但其通过 386BSD 0.1 → FreeBSD 1.0/NetBSD 0.8 路径传递的安全基因在两大 fork 主线延续
 - 辨析：4.4BSD-Lite 取代
 - 法律结构：APA 作为法律结构直接塑造 BSD 后续法律环境，模糊条款埋下诉讼伏笔
-- 辨析：APA 的具体条款在不同叙事中差异较大——部分称 Novell 保留版权，部分称版权转移给 SCO；经 APA Schedule 1.1(a) 原文与 Amendment No. 2（1996.10.16）核实，APA Schedule 1.1(a) 列出 “版权” 作为转移资产，但 Amendment 
+- 辨析：APA 的具体条款在不同叙事中差异较大——部分称 Novell 保留版权，部分称版权转移给 SCO；经 APA Schedule 1.1(a) 原文与 Amendment No. 2（1996.10.16）核实，APA Schedule 1.1(a) 列出 “版权” 作为转移资产，但 Amendment
 - 第 24 条许可证——BSD 许可证在 4.4BSD → 4.4BSD-Lite 演化中起决定性作用，4.4BSD-Lite 完全自由许可证使 BSD 消除法律风险；第 6 条技术选择的代价——4.4BSD-Encumbered 的混合版权模式在诉讼后被放弃，4.4BSD-Lite 以法律洁净为目标
   - 辨析：4.4BSD-Encumbered 与 4.4BSD-Lite 的关系需严格区分——
 
@@ -31,31 +33,41 @@ volume: 04
 - 比较的解释力存在边界——部分学者过于强调单一维度（如许可模式），架构（微内核 vs 宏内核）、市场（企业 vs 桌面 vs 服务器）、生态（商业支持 vs 开源社区）多维因素须综合评估——Windows NT 3.5 在商业市场胜出但开源生态影响为零，4.4BSD-Lite 在商业市场份额有限但开源生态影响深远，二者经不同维度评估结论不同
 - 文献：操作系统比较史研究[考据完成：2026-07-2
 - 4.4BSD-Lite 取代 386BSD 作为直接安全基线的时间点须严格区分——NetBSD 1.0（1994.10.26）与 FreeBSD 2.0（1994.11.22）几乎同期 rebase 至 4.4BSD-Lite，二者间隔不足一个月，386BSD 作为直接安全基线的地位在 1994 年下半年被 4.4BSD-Lite 几乎同时取代；【0 信任原则·release tag 验证局限】b
-- APA 的具体条款在不同叙事中差异较大——部分称 Novell 保留版权，部分称版权转移给 SCO；经 APA Schedule 1.1(a) 原文与 Amendment No. 2（1996.10.16）核实，APA Schedule 1.1(a) 列出 “版权” 作为转移资产，但 Amendment No. 2 明确 Novell 保留 UNIX 版权、SCO 仅获得授权销售权，2007 年 
+- APA 的具体条款在不同叙事中差异较大——部分称 Novell 保留版权，部分称版权转移给 SCO；经 APA Schedule 1.1(a) 原文与 Amendment No. 2（1996.10.16）核实，APA Schedule 1.1(a) 列出 “版权” 作为转移资产，但 Amendment No. 2 明确 Novell 保留 UNIX 版权、SCO 仅获得授权销售权，2007 年
 - 4.4BSD-Encumbered 与 4.4BSD-Lite 的关系需严格区分——前者需 AT&T 源代码许可证，后者完全自由；争议文件数量需准确：“32 个争议文件” 说法无一手来源支持，McKusick 明确记载仅 3 个文件被完全删除、约 70 个文件添加 USL 版权声明（仍可自由再分发）；"4.4BSD（1993.11）" 正式发布日期 [考据完成：2026-08-17 4.4BSD-
 
 ## 文献
 
 - Windows NT 3.5 与 4.4BSD-Lite 比较研究[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]
+
 ## 82.10.2 Solaris 2.4 的比较
-  - 要点：1994 年 SunOS 5.4 (Solaris 2.4) 发布，基于 SVR4，支持 SPARC 与 x86，提供与企业 Unix 兼容的 ABI；与 4.4BSD-Lite 相比，Solaris 2.4 是商业 UNIX 的延续，BSD 与 SVR4 的分野在 1994 年已基本定型
-  - 
+
+- 要点：1994 年 SunOS 5.4 (Solaris 2.4) 发布，基于 SVR4，支持 SPARC 与 x86，提供与企业 Unix 兼容的 ABI；与 4.4BSD-Lite 相比，Solaris 2.4 是商业 UNIX 的延续，BSD 与 SVR4 的分野在 1994 年已基本定型
+-
 - 操作系统比较史研究[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]
 FreeBSD 社区论文：[FP-2021-002] An Overview of Scheduling in the FreeBSD Kernel（Marshall Kirk McKusick（马歇尔·柯克·麦库西克），2021）<https://papers.freebsd.org/2021/eurobsdcon/mckusick-overview_scheduling_freebsd/>
 FreeBSD 社
 - FreeBSD 2.0 Release Announcement 1994.11.22；NetBSD 1.0 Release Announcement 1994.10.26；4.4BSD-Lite Release Notes 1994.6；USL v. BSDi 和解协议 1994.1；bsd_commits.db `tags` 表（release/2.0_cvs）与 `commits` 表（4.4BSD-Lite 导入 commit `59deaec541ae8baaa58daf6c5a2196ea7de180c3`、`26f9a76710a312a951848542b9ca1f441004
 - Novell-SCO APA 原文；UNIX 版权归属史研究[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]
+
 ## 82.8.2 APA 中 UNIX 版权转移的模糊条款与 Amendment No. 2
-  - 要点：APA 中 UNIX 版权转移的条款存在模糊——APA Schedule 1.1(a) 列出 “版权” 作为转移资产，但 Amendment No. 2（**1996.10.16**）明确 Novell 保留 UNIX 版权，SCO 仅获得授权销售权；Amendm
+
+- 要点：APA 中 UNIX 版权转移的条款存在模糊——APA Schedule 1.1(a) 列出 “版权” 作为转移资产，但 Amendment No. 2（**1996.10.16**）明确 Novell 保留 UNIX 版权，SCO 仅获得授权销售权；Amendm
 - McKusick M K. Twenty Years of Berkeley Unix [M]//Open Sources, 1999；4.4BSD-Lite/Lite2 Release Notes；USL v. BSDi 和解协议 1994.1；FreeBSD 2.0/NetBSD 1.0 Release Announcements ［B］；本项目。bsd_commits.db 数据分析报告：深层信息挖掘 [R/OL]. 2026.
+
 ## 82.9.2 CSRG 机构化开发 → CSRG 解散后三大 fork 继承（1995-1996）
-  - 要点：CSRG 自 **1980 年 4 月*
+
+- 要点：CSRG 自 **1980 年 4 月*
 - McKusick M K. Twenty Years of Berkeley Unix [M]//Open Sources, 1999；Mike Karels 告别邮件；Bancroft CU-551 全宗；McKusick CD-ROM 套装 ［B］
+
 ## 82.9.3 SCCS 元数据 → FreeBSD/NetBSD CVS 与开源版本控制演化（1994-2000）
-  - 要点：CSRG **1980-1995 年** 期间使用 SCCS（Source Code Control System，**1972 年** Marc Rochkind 在 Bell Labs 开发）作为版本控制系
+
+- 要点：CSRG **1980-1995 年** 期间使用 SCCS（Source Code Control System，**1972 年** Marc Rochkind 在 Bell Labs 开发）作为版本控制系
 - SCCS/CVS/SVN/Git 文档；CSRG Archive CD-ROM #4；FreeBSD/NetBSD/OpenBSD CVS 仓库档案；**cvsup** 发布记录；FreeBSD SVN/Git 迁移公告 ［A］
+
 ## 82.9.4 4.4BSD-Lite → FreeBSD 2.0/NetBSD 1.0/OpenBSD 重建路径（1994-1996）
-  - 要点：4.4BSD-Lite（1994.6）发布后 FreeBSD、NetBSD、OpenBSD 三大 fork 项目均以 4.4BSD-Lite 为代码基础重建——FreeBSD 2.0（1994.11.22 网络发布
+
+- 要点：4.4BSD-Lite（1994.6）发布后 FreeBSD、NetBSD、OpenBSD 三大 fork 项目均以 4.4BSD-Lite 为代码基础重建——FreeBSD 2.0（1994.11.22 网络发布
 
 ## 自反性声明
 

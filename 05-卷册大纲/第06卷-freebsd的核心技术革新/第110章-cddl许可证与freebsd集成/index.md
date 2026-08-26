@@ -4,6 +4,8 @@ id: CH110
 volume: 第06卷-freebsd的核心技术革新
 ---
 
+# 第110章 cddl许可证与freebsd集成
+
 # 第 110 章 cddl许可证与freebsd集成
 
 ## 要点
@@ -34,5 +36,5 @@ volume: 第06卷-freebsd的核心技术革新
 ## 文献
 
 - FreeBSD Project. *FreeBSD 7.0 Release Notes* (2008-02-27). freebsd.org; OpenZFS Project. *OpenZFS 2.0.0 Release Notes* (2020-11-30). github.com/openzfs/zfs/releases; Ubuntu Technical Board (2016-02). *Meeting Minutes*. lists.ubuntu.com; LWN.net. *ZFS Coverage Timeline*. lwn.net.[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]<!-- DB_REF:freebsd.duckdb -->> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 2010-2020 年间：488,947 次提交。> 仓库总览：1,294,851 次提交，13,875 位贡献者，1993-06-12 至 2026-08-25。
-- Internet Archive. *opensolaris.org Archive*. web.archive.org/web/*/<https://opensolaris.org>; illumos Project. * illumos-gate Repository *. github.com/illumos/illumos-gate; FreeBSD Project. * Vendor Import of OpenSolaris Code *. svn.freebsd.org/base/vendor/opensolaris/; genunix.org. * OpenSolaris Community Archive*. genunix.org; Dawidek P J. Please welcome ZFS - The last word in file systems. freebsd-src [DB/OL]. 2007-04-06T01:09:06Z. f0a75d274af375d15b97b830966b99a02b7db911. ［A］<!-- DB_REF:freebsd.duckdb -->> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 2005-2005 年间：42,570 次提交。> 仓库总览：1,294,851 次提交，13,875 位贡献者，1993-06-12 至 2026-08-25。
+- Internet Archive. *opensolaris.org Archive*. web.archive.org/web/*/<https://opensolaris.org>; illumos Project.* illumos-gate Repository *. github.com/illumos/illumos-gate; FreeBSD Project.* Vendor Import of OpenSolaris Code *. svn.freebsd.org/base/vendor/opensolaris/; genunix.org. * OpenSolaris Community Archive*. genunix.org; Dawidek P J. Please welcome ZFS - The last word in file systems. freebsd-src [DB/OL]. 2007-04-06T01:09:06Z. f0a75d274af375d15b97b830966b99a02b7db911. ［A］<!-- DB_REF:freebsd.duckdb -->> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 2005-2005 年间：42,570 次提交。> 仓库总览：1,294,851 次提交，13,875 位贡献者，1993-06-12 至 2026-08-25。
 - FreeBSD Project. *Mailing List Archives*. lists.freebsd.org/pipermail/; FreeBSD Project. *Git Repository*. git.freebsd.org/src.git; Dawidek, P. J. (2007). *Porting ZFS to FreeBSD*. BSDCan 2007; FreeBSD Project. *Subversion to Git Migration Notes* (2020); Dawidek P J. Please welcome ZFS - The last word in file systems. freebsd-src [DB/OL]. 2007-04-06T01:09:06Z. f0a75d274af375d15b97b830966b99a02b7db911. ［A］<!-- DB_REF:freebsd.duckdb -->> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 2010-2020 年间：488,947 次提交。> 仓库总览：1,294,851 次提交，13,875 位贡献者，1993-06-12 至 2026-08-25。

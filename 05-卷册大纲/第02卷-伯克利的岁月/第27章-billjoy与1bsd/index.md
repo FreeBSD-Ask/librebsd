@@ -47,7 +47,7 @@ volume: 第02卷-伯克利的岁月
 - [DB:bsdnow_podcast:segments:seg_1476] BSD Now 第 672 期转写片段：And Bill Joy, like myself, was working with Professor Susan Graham, getting a work reports at PhD in program languages.
 - [DB:bsdnow_podcast:segments:seg_1561] BSD Now 第 672 期转写片段：Someone once asked me to compare myself to Bill Joy and I said,
 - [DB:bsdnow_podcast:segments:seg_12602] BSD Now 第 613 期转写片段：bill joy wrote csh and decided he liked it um you know and you know when you write something you
-- [DB:bsdnow_podcast:segments:seg_33048] BSD Now 第 535 期转写片段：But a great article it starts off by kind of detailing the humble origins of BSD you know starting with Bill Joy in the 
+- [DB:bsdnow_podcast:segments:seg_33048] BSD Now 第 535 期转写片段：But a great article it starts off by kind of detailing the humble origins of BSD you know starting with Bill Joy in the
 - [DB:sacred_sources:blocks:blk_1583] sacred 文件 43（paragraph）：撰写 Bill Joy、Marshall McKusick、Mike Karels、Kirk McKusick、Rodney W. Grimes、Poul-Henning Kamp、Robert Watson、Theo de Raadt、M
 - [DB:sacred_sources:blocks:blk_1604] sacred 文件 43（paragraph）：撰写 BSD 历史时，须回到原始史料（CSRG 邮件列表存档、FreeBSD commit log、Core Team 会议记录、Foundation 年报、原始公告），不得依赖二手转述。一手史料包括但不限于：Berkeley CSRG 技
 - [DB:sacred_sources:blocks:blk_1606] sacred 文件 43（paragraph）：须特别注意：当事人自述也存在自利偏差、记忆偏差、事后修订等风险。Bill Joy 关于 vi 编辑器诞生的回忆、McKusick 关于 CSRG 解散的叙述、de Raadt 关于被逐出 NetBSD core 的解释——这些当事人自述都须
@@ -62,6 +62,7 @@ FreeBSD 发展关键里程碑
 1978 │ 1BSD 发布
 1983 │ 4.2BSD 发布
 1991 │ Net
+
 - [DB:sacred_sources:blocks:blk_2412] sacred 文件 47（list_item）：- 1978 年 3 月 9 日：1BSD 发布
 - [DB:sacred_sources:blocks:blk_2413] sacred 文件 47（paragraph）：基于 UNIX 创建的伯克利软件发行版（1BSD）是 UNIX 第六版的一种附加组件，而非独立完整的操作系统。此版本发行了大约 30 份。
 - [DB:sacred_sources:blocks:blk_2415] sacred 文件 47（paragraph）：第二款伯克利软件发行版（2BSD）初版发布于 1978 年，经过增补后完整发布于 1979 年 5 月。涉及 1BSD 的软件更新，以及由 Bill Joy 新开发的两个至今仍在 UNIX 系统上使用的程序：vi 文本编辑器（ex 的可视化
@@ -91,7 +92,7 @@ FreeBSD 发展关键里程碑
 - [DB:ziliao:materials:mat_2720] 类型“未分类”：后世对 1BSD 的批评文献
 - [DB:ziliao:materials:mat_2722] 类型“未分类”：1BSD 源代码的贡献者注释 ［A］
 - [DB:ziliao:materials:mat_2727] 类型“未分类”：1BSD/2BSD/3BSD 贡献者清单
-- [DB:ziliao:materials:mat_2737] 类型“未分类”：1BSD READ_ME 原始文件（1977-11-23，TUHS 归档，记载 ex-1.1）；Joy 与 Haley 在伯克利的开发笔记；Coulouris 在 Queen Mary College 的 em 源码（1975）；Bill 
+- [DB:ziliao:materials:mat_2737] 类型“未分类”：1BSD READ_ME 原始文件（1977-11-23，TUHS 归档，记载 ex-1.1）；Joy 与 Haley 在伯克利的开发笔记；Coulouris 在 Queen Mary College 的 em 源码（1975）；Bill
 - [DB:ziliao:materials:mat_2738] 类型“一手”：Thompson 在伯克利 1975-1976 访问学者档案；Joy 的 Berkeley Pascal User's Manual（1977）；1BSD 磁带源码（Pascal 子目录）；CSRG 早期邮件存档；McKusick 1999
 - [DB:ziliao:materials:mat_2741] 类型“未分类”：1BSD READ_ME 原始文件（1977-11-23，TUHS 归档）；1BSD 磁带目录结构（TUHS 归档）；McKusick, K. (1999) "Twenty Years of Berkeley Unix"；Salus, P.
 - [DB:ziliao:materials:mat_2764] 类型“未分类”：1BSD 磁带清单（1978.3.9）
@@ -110,7 +111,7 @@ FreeBSD 发展关键里程碑
 - [DB:ziliao:materials:mat_3343] 类型“未分类”：MSST 2025 "NFS: Genesis" 主题演讲 PDF（Tom Lyon 2025 演讲稿，msstconference.org 一手档案，列示 NFS 团队 8 人名单："Bill Joy, Dave Goldberg, Bo
 - [DB:ziliao:materials:mat_3381] 类型“未分类”：4.1BSD/4.2BSD 发布说明（学术开源分发）；SunOS 1.0/2.0/3.0/4.0 Release Notes（商业化专有产品）；BSD 许可证原文（1980
 - [DB:ziliao:materials:mat_3824] 类型“未分类”：4.0BSD/4.1BSD delivermail 源代码
-- [DB:ziliao:materials:mat_3898] 类型“一手”：4.0BSD/4.1BSD delivermail 源代码；4.1cBSD/4.2BSD Sendmail 源代码（1983.8）；RFC 780（MTP 邮件传输协议，1981 年 5 月）；RFC 821（SMTP 协议，1982 年 
+- [DB:ziliao:materials:mat_3898] 类型“一手”：4.0BSD/4.1BSD delivermail 源代码；4.1cBSD/4.2BSD Sendmail 源代码（1983.8）；RFC 780（MTP 邮件传输协议，1981 年 5 月）；RFC 821（SMTP 协议，1982 年
 - [DB:ziliao:materials:mat_4337] 类型“未分类”：Bill Joy 1978-1982 年 BSD 开发记录（McKusick, K. (1999) "Twenty Years of Berkeley Unix"）；CSRG 1980 年 DARPA 合同档案；Joy 1982 年离开伯克
 - [DB:ziliao:materials:mat_5639] 类型“未分类”：4.2BSD 源码中 chroot 实现（Bill Joy 提交记录）
 - [DB:ziliao:materials:mat_5640] 类型“工具书”：jail(8) 手册页脚注（明确记载 1982 年 3 月 18 日 Bill Joy 加入 chroot）
@@ -140,15 +141,15 @@ FreeBSD 发展关键里程碑
 - [DB:ziliao:references:ref_4231] 4.0BSD/4.1BSD delivermail 源代码
 - [DB:ziliao:references:ref_4241] 4.1BSD BBN TCP/IP
 - [DB:ziliao:references:ref_13962] McKusick M K. The Berkeley Software Distribution: From 1BSD to 4.4BSD-Lite2[C]//Proceedings of the 1995 USENIX Technical
-- [DB:ziliao:references:ref_13966] Joy W N. 1BSD READ_ME[EB/OL]. (1977-11-23)[2026-07-19]. The Unix Heritage Society (TUHS) Archive. https://www.tuhs.org/A
-- [DB:ziliao:references:ref_14632] Computer History Museum. Bill Joy Fellow Biography[EB/OL]. (2011)[2026-07-19]. https://computerhistory.org/fellow/bill-j
+- [DB:ziliao:references:ref_13966] Joy W N. 1BSD READ_ME[EB/OL]. (1977-11-23)[2026-07-19]. The Unix Heritage Society (TUHS) Archive. <https://www.tuhs.org/A>
+- [DB:ziliao:references:ref_14632] Computer History Museum. Bill Joy Fellow Biography[EB/OL]. (2011)[2026-07-19]. <https://computerhistory.org/fellow/bill-j>
 - [DB:ziliao:references:ref_14759] CSRG. 4.1BSD Release Notes[R]. 伯克利: 加州大学伯克利分校计算机系统研究小组, 1981-06.
 - [DB:ziliao:references:ref_14760] Joy W N. Changes in the Kernel in 4.1bsd[R]. 伯克利: 加州大学伯克利分校, 1981-05-10 (1981-09-01修订).
-- [DB:ziliao:references:ref_14831] TUHS Official Archive. 1BSD READ_ME[EB/OL]. (1977-11-23)[2026-07-19]. https://www.tuhs.org/Archive/Distributions/UCB/1bs
+- [DB:ziliao:references:ref_14831] TUHS Official Archive. 1BSD READ_ME[EB/OL]. (1977-11-23)[2026-07-19]. <https://www.tuhs.org/Archive/Distributions/UCB/1bs>
 - [DB:ziliao:references:ref_14866] CSRG. CSRG 源代码归档（4.1BSD-4.4BSD-Lite）[Z]. 伯克利: 加州大学伯克利分校档案馆, 1980-1995.
 - [DB:ziliao:references:ref_14913] Computer History Museum. CHM Oral History Collection: Bill Joy 口述史访谈[Z]. 山景城: 计算机历史博物馆.
 - [DB:ziliao:references:ref_14992] Joy W N. An Introduction to the C Shell[J]. Berkeley: CSRG, University of California, Berkeley, 1979. 亦收录于 4.0BSD/4.1BSD
-- [DB:ziliao:references:ref_16984] University of California, Berkeley. Computer Science Division. Hints on Configuring VAX Systems for UNIX [Z]. Berkeley: 
+- [DB:ziliao:references:ref_16984] University of California, Berkeley. Computer Science Division. Hints on Configuring VAX Systems for UNIX [Z]. Berkeley:
 - [DB:ziliao:references:ref_17007] University of California, Berkeley, Computer Systems Research Group. Bug Fixes and Changes in 4.1bsd[M]. Berkeley: CSRG.
 - [DB:ziliao:references:ref_17012] University of California, Berkeley. Changes to the Kernel in 4.1bsd[M]. [存疑]
 
@@ -172,6 +173,7 @@ FreeBSD 发展关键里程碑
 - [DB:bsdnow_podcast:outline_mappings:om_10658] BSD Now 第 635 期，匹配 CH27 章，关联度 1.0
 - [DB:bsdnow_podcast:outline_mappings:om_10698] BSD Now 第 629 期，匹配 CH27 章，关联度 1.0
 - [DB:bsdnow_podcast:outline_mappings:om_10737] BSD Now 第 623 期，匹配 CH27 章，关联度 1.0
+
 ## 史观
 
 - 多方视角并置：Joy 自述、Fabry 视角、Leffler 视角、McKusick 视角——同一事件呈现为四个不同的“历史小说”

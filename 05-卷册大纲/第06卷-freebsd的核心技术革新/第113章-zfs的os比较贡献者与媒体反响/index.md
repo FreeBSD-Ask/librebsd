@@ -4,6 +4,8 @@ id: CH113
 volume: 06
 ---
 
+# 第113章 zfs的os比较贡献者与媒体反响
+
 ## 要点
 
 - Btrfs（B-tree file system，常读作"Butter FS"或"B-tree FS"）由 Chris Mason 于 2007 年在 Oracle 工作期间启动开发，设计目标是打造 Linux 原生的下一代 CoW 文件系统，提供与 ZFS 类似的功能（快照、校验、池化、RAID）；Btrfs 于 Linux 2.6.29（2009 年）合入主线内核，标记为 experimental；Btrfs 与 ZFS 的核心技术差异：（1）许可：Btrfs 采用 GPLv2（与 Linux 内核一致），可以直接进入 upstream；（2）设计：Btrfs 基于 B-tree 结构，ZFS 基于 Merkle 树 + 块指针；（3）成熟度：Btrfs 的 RAID 5/6 实现长期被标记为不稳定（存在 write hole 问题），直到 2020 年代仍有许多生产环境警告；（4）功能覆盖：Btrfs 缺少 ZFS 的一些企业级功能（如 send/recv 增量流虽然支持但不完整、无 ZIL/SLOG 分离等）；Red Hat 在 RHEL 中从 RHEL 6/7 开始将 Btrfs 列为 technology preview，但在 RHEL 8（2019 年）中移除了 Btrfs 支持，转而支持 Stratis（基于 XFS+LVM）
@@ -25,7 +27,7 @@ volume: 06
 
 - Btrfs 稳定性的争议：Btrfs 在单盘场景下已经相当稳定（被 openSUSE/SUSE 作为默认文件系统多年），但其多盘 RAID 功能的稳定性长期被质疑；这与 ZFS 在所有模式下（包括 RAID-Z）都以生产稳定著称形成对比；Btrfs 的 write hole 问题（RAID 5/6 模式下的原子性问题）直到 2023 年前后才通过新的日志机制部分解决
   - 文献：Mason, C
-- 需注意各文件系统“稳定”的定义差异——ext4 在 2008 年即被标记为 stable 并被发行版大量采用；Btrfs 虽合入主线但 RAID 5/6 长期不稳定；ZFS 在 Solaris 中 2006 年即被视为 production ready，在 FreeBSD 中 7.0 标记为 experimental、8.0 production ready；HAMMER 在 DragonFly 
+- 需注意各文件系统“稳定”的定义差异——ext4 在 2008 年即被标记为 stable 并被发行版大量采用；Btrfs 虽合入主线但 RAID 5/6 长期不稳定；ZFS 在 Solaris 中 2006 年即被视为 production ready，在 FreeBSD 中 7.0 标记为 experimental、8.0 production ready；HAMMER 在 DragonFly
 - ZFS 移植的历史常被简化为 “Pawel Dawidek 移植到 FreeBSD”，但实际上早期 ZFS 移植是多人协作：Dawidek 是核心人物，但罗伯特·N. M. 沃森（Robert Watson）、Kip Macy 等人也参与了早期工作；ZoL 早期并非 “官方” 移植，而是 Behlendorf 的个人/LLNL 项目，直到 2010 年代中期才获得广泛认可
   - 文献：FreeB
 

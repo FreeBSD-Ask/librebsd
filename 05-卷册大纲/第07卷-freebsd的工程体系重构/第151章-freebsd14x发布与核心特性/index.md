@@ -4,6 +4,8 @@ id: CH151
 volume: 07
 ---
 
+# 第151章 freebsd14x发布与核心特性
+
 ## 要点
 
 - FreeBSD 14.0-RELEASE 于 **2023 年 11 月 20 日** 由 Release Engineering Team 正式发布（Release Engineer 为 Colin Percival），是 stable/14 分支的首个版本，也是 2023 年 6 月 19 日 FreeBSD 1.0 发布三十周年之后的首个大版本；14.0 献词给 **Hans Petter Selasky**（hselasky@）——FreeBSD USB 子系统长期维护者与核心开发者，于 2023 年去世；14.0 开发周期跨越两年半（自 13.0 于 2021 年 4 月发布后），集成了超过 25,000 个 commit，代表 FreeBSD 进入现代化成熟期；14.0 支持架构包括 amd64、aarch64、i386、powerpc、powerpc64、powerpc64le、powerpcspe、armv7、riscv64（**注：powerpc64le 与 powerpcspe 在 14.2 起停止提供 RELEASE 镜像**）；amd64 与 arm64 平台支持高达 1024 个 CPU 核心
@@ -22,7 +24,7 @@ volume: 07
 
 ## 辨析
 
-- [双库核查：2026-08-15] 14.0-RELEASE 发布日期（2023-11-20）经邮件列表库验证通过——Message-ID 20231120210317.5DB0E473C@freefall.freebsd.org（2023-11-20T21:03:17+00:00），发件人 Colin Percival，主题 FreeBSD 14.0-RELEASE Now Available，
+- [双库核查：2026-08-15] 14.0-RELEASE 发布日期（2023-11-20）经邮件列表库验证通过——Message-ID <20231120210317.5DB0E473C@freefall.freebsd.org>（2023-11-20T21:03:17+00:00），发件人 Colin Percival，主题 FreeBSD 14.0-RELEASE Now Available，
 - 需澄清 “sendmail 被移除” 的误解——sendmail 在 14.0 中仍完整保留在 base system 中（包括 sendmail.cf 配置、makemap 等工具），只是默认 mailer.conf 指向 dma；这与 telnetd 在 14.0 中被完全移除（见 85.13）性质不同；**dma(8)** 不适合作为公开互联网邮件服务器的 MTA（缺乏完整 SMTP 中继、
 - OpenSSL 3.0 的 FIPS provider 并非默认启用——FIPS 模式需要显式配置与安全策略激活，FreeBSD base 系统本身不持有 FIPS 140-2/140-3 认证，认证由各商业发行版（如 TrueNAS、pfSense 等基于 FreeBSD 的产品）自行申请；“FreeBSD 不持有 FIPS 认证” 是一个必须明确区分的事实——FreeBSD 作为社区项目不进行
 - block cloning 有严格使用限制：源文件与目标文件必须在同一存储池（不能跨池克隆）、不能跨不同 ashift vdev、部分 RAID-Z 配置下有性能或功能限制；与快照/克隆的区别：zfs clone 是数据集级（文件系统/卷）的克隆，block cloning 是文件级的轻量级克隆；**cp(1)** 命令默认不使用块克隆，需要加 --reflink 选项（类似 Linux cp -
@@ -32,7 +34,7 @@ volume: 07
 - FreeBSD Project. FreeBSD 14.0-RELEASE Announcement [EB/OL]. (2023-11-20)[2026-07-19]. <https://www.freebsd.org/releases/14.0R/announce/>; FreeBSD Project. FreeBSD 14.0-RELEASE Release Notes [EB/OL]. (2023-11-20)[2026-07-19]. <https://www.freebsd.org/releases/14.0R/relnotes/>; FreeBSD Foundation. 202
 - DragonFly BSD Project. dma(8) — DragonFly Mail Agent [EB/OL]. [2026-07-19]. <https://www.dragonflybsd.org/>; FreeBSD Project. mailer.conf(5) Manual Page [EB/OL]. [2026-07-19]. <https://man.freebsd.org/mailer.conf/5>; Costales B, Allman E. sendmail (4th Edition)[M]. O'Reilly Media, 2007. ISBN 978-0-5
 - OpenSSL Project. OpenSSL 3.0 Release Notes [EB/OL]. (2021-09-07)[2026-07-19]. <https://www.openssl.org/blog/blog/2021/09/07/OpenSSL300/>; OpenSSL Project. OpenSSL License Change [EB/OL]. [2026-07-19]. <https://www.openssl.org/blog/blog/2017/11/04/apache/>; NIST. Cryptographic Module Validation Progr
-- OpenZFS Project. OpenZFS 2.2.0 Release Notes [EB/OL]. (2023-10-12)[2026-07-19]. <https://github.com/openzfs/zfs/releases/tag/zfs-2.2.0>; Ahrens M. OpenZFS Block Cloning Design [C]. OpenZFS Developer Summit 2022/2023; FreeBSD Project. cp(1) Manual Page [EB/OL]. [2026-07-19]. <https://man.freebsd.org/
+- OpenZFS Project. OpenZFS 2.2.0 Release Notes [EB/OL]. (2023-10-12)[2026-07-19]. <https://github.com/openzfs/zfs/releases/tag/zfs-2.2.0>; Ahrens M. OpenZFS Block Cloning Design [C]. OpenZFS Developer Summit 2022/2023; FreeBSD Project. cp(1) Manual Page [EB/OL]. [2026-07-19]. <<https://man.freebsd.org/>
 
 ## 自反性声明
 

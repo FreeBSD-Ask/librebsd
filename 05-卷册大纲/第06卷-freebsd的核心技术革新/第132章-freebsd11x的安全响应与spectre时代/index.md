@@ -20,7 +20,7 @@ volume: 第06卷-freebsd的核心技术革新
 
 ## 辨析
 
-- *统计局限性标注**——(1) 统计显著 ≠ 实际显著：Mann-Kendall 趋势检验 p < 0.001 表明 freebsd-src commit 量存在统计学显著上升趋势，但 11.x 时期架构扩展的实际工程意义须结合 arm64 具体代码量与 commit 分布综合判断；(2) ARIMA 模型局限：ARIMA(5,0,5) AIC = 107.39 为 freebsd-src 整体 
+- *统计局限性标注**——(1) 统计显著 ≠ 实际显著：Mann-Kendall 趋势检验 p < 0.001 表明 freebsd-src commit 量存在统计学显著上升趋势，但 11.x 时期架构扩展的实际工程意义须结合 arm64 具体代码量与 commit 分布综合判断；(2) ARIMA 模型局限：ARIMA(5,0,5) AIC = 107.39 为 freebsd-src 整体
 
 ## 文献
 

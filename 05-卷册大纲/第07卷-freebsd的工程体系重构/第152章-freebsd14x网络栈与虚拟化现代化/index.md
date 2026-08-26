@@ -24,7 +24,7 @@ volume: 07
 
 ## 辨析
 
-- 2021 年争议中的原始 WireGuard 代码（由 Netgate 员工编写）与 14.0 中的 **wg(4)** 是完全独立的实现——14.0 中没有一行来自争议代码；WireGuard 创始人 Jason Donenfeld 对 FreeBSD **wg(4)** 重写持肯定态度，曾在邮件列表中提供技术建议；**wg(4)** 与 WireGuard-Go（用户态实现，ports 中的 
+- 2021 年争议中的原始 WireGuard 代码（由 Netgate 员工编写）与 14.0 中的 **wg(4)** 是完全独立的实现——14.0 中没有一行来自争议代码；WireGuard 创始人 Jason Donenfeld 对 FreeBSD **wg(4)** 重写持肯定态度，曾在邮件列表中提供技术建议；**wg(4)** 与 WireGuard-Go（用户态实现，ports 中的
 - bhyve GPU passthrough 在 14.0 中标记为实验性功能，不同 GPU 厂商（NVIDIA、AMD、Intel）的支持程度与设置复杂度差异很大；bhyve 相比 QEMU/KVM（Linux）和 Hyper-V（Windows）在功能成熟度、guest OS 支持范围、管理工具链生态上仍有差距，但因其轻量、与 FreeBSD 内核深度集成、ZFS 原生协作而有特定用户群体——特
 - 需区分 “完全重写 BSD 原生驱动” 与 “通过 LinuxKPI 移植 Linux 驱动” 两种策略——FreeBSD 历史上的 WiFi 驱动（如 ath、iwn）为 BSD 原生驱动，但现代 WiFi 芯片（特别是 Intel AX/BE 系列、Realtek 6GHz 系列）复杂度极高（固件加载、MAC 层处理、MIMO、OFDMA、加密等），完全重写成本极高；LinuxKPI 策略是在
 - 需区分 “架构降级” 与 “应用兼容性”——即使 15.0 不再发布 i386 RELEASE 镜像，amd64 版本的 FreeBSD 仍支持运行 32 位 i386 二进制（通过兼容层，类似 Linux multilib）；这意味着为 FreeBSD i386 编译的 32 位程序仍可在 amd64 FreeBSD 上运行，但无法在纯 i386 内核上启动新系统——这是 “内核纯 64 位化”
@@ -35,10 +35,12 @@ volume: 07
 
 - Baldwin J. wg(4) — FreeBSD Kernel WireGuard Driver Rewrite [Z]. FreeBSD Foundation Sponsored Project, 2022-2023; Donenfeld J A. WireGuard: Next Generation Kernel Network Tunnel [C]. NDSS Symposium 2017; FreeBSD Core Team. Statement on WireGuard Driver Controversy [EB/OL]. (2021-03)[2026-07-19]. free
 - FreeBSD Project. bhyve(8) Manual Page [EB/OL]. [2026-07-19]. <https://man.freebsd.org/bhyve/8>; FreeBSD Project. vmm(4) Manual Page [EB/OL]. [2026-07-19]. <https://man.freebsd.org/vmm/4>; Grehan P, Dexter M. bhyve — The FreeBSD Hypervisor [C]. BSDCan 2014/2023; Microsoft. Windows 11 Minimum System R
-- FreeBSD Project. iwlwifi(4) Manual Page [EB/OL]. [2026-07-19]. <https://man.freebsd.org/iwlwifi/4>; FreeBSD Project. LinuxKPI Compatibility Layer Source [Z]. cgit.freebsd.org/src/sys/compat/linuxkpi/; FreeBSD Laptop Project. WiFi Driver Status Reports [EB/OL]. (2024-2025)[2026-07-19]. <https://wiki.
+- FreeBSD Project. iwlwifi(4) Manual Page [EB/OL]. [2026-07-19]. <https://man.freebsd.org/iwlwifi/4>; FreeBSD Project. LinuxKPI Compatibility Layer Source [Z]. cgit.freebsd.org/src/sys/compat/linuxkpi/; FreeBSD Laptop Project. WiFi Driver Status Reports [EB/OL]. (2024-2025)[2026-07-19]. <<https://wiki>.
 - FreeBSD Project. Supported Architectures and Tier List [EB/OL]. [2026-07-19]. <https://www.freebsd.org/platforms/>; FreeBSD Project. freebsd-update(8) Architecture Support Notes [EB/OL]. [2026-07-19]. <https://man.freebsd.org/freebsd-update/8>. ［A］
+
 ## 151.8.2 64-bit time_t：i386 平台 Y2038 问题修复
-  - 要点：
+
+- 要点：
 - FreeBSD Project. fwget(8) Manual Page [EB/OL]. [2026-07-19]. <https://man.freebsd.org/fwget/8>; FreeBSD Project. fwctl(8) Manual Page [EB/OL]. [2026-07-19]. <https://man.freebsd.org/fwctl/8>; Linux Vendor Firmware Service (LVFS)[EB/OL]. [2026-07-19]. <https://fwupd.org/>.[考据完成：2026-07-28 经穷尽联网考据，上述文
 
 ## 自反性声明

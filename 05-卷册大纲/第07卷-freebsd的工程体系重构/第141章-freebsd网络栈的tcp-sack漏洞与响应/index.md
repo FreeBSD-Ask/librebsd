@@ -4,6 +4,8 @@ id: CH141
 volume: 07
 ---
 
+# 第141章 freebsd网络栈的tcp-sack漏洞与响应
+
 ## 要点
 
 - DragonFly BSD 是 Matt Dillon 于 2003 年从 FreeBSD 4.x 分叉的 BSD 操作系统，采用截然不同的 SMP 架构——不是细粒度锁，而是“每 CPU 线程模型”（per-CPU thread model）和消息传递；DragonFly 网络栈 MPSAFE 化路径与 FreeBSD 差异显著：FreeBSD 采用渐进式锁拆分（持续到 2010 年代中后期才完全移除 Giant 锁），DragonFly 则在 Matthew Dillon（马修·狄龙） 的带领下采用激进的架构重构：每个协议线程绑定到特定 CPU，使用异步消息（IPI，Inter-Processor Interrupt）在 CPU 核之间传递网络事件，而非传统的共享内存加锁；到 DragonFly 2.6（2009 年）左右网络栈核心协议实现了无锁或极少锁的并发处理，到 DragonFly 3.8（2014 年）左右包括 **pf(4)** 和 **ipfw(8)** 在内的所有网络子系统完成 MPSAFE 化
@@ -32,20 +34,24 @@ volume: 07
 - 文献：Dillon, M., & Watson, R. N. M. (2013
 - ipfw 作者——Ugen Antsilevich 是 ipfw 最初作者（1993），Luigi Rizzo 设计了 dummynet（1997-1998），后来 Gleb Smirnoff 等人做了大量现代化改进（支持 SMP、IPv6、VNET）；ipfw 是“第一代防火墙”吗？从技术上 ipfw 是 stateless 防火墙起家，后来添加了 keep-state 状态跟踪，现在是有状态防
 - “pf 是 FreeBSD 默认防火墙”——严格来说 FreeBSD 基础系统没有默认启用任何防火墙，用户需要自行配置和启用；但 pfSense/OPNsense 等防火墙发行版默认使用 pf，pf 也是目前最活跃开发的防火墙；ipfw 是否被弃用——没有，ipfw 和 dummynet 仍在活跃维护和使用，dummynet 在学术研究中地位不可替代；三大防火墙可以同时使用吗？技术上可以通过 pf
-- 漏洞影响的 FreeBSD 版本——SA-19:08 显示受影响版本为 FreeBSD 11.2、11.3、12.0、12.1，使用 RACK TCP 栈的 FreeBSD 13-CURRENT 不受 CVE-2019-5599 影响；SACK Panic 不是 OpenBSD 2026 年发现的——SACK Panic 是 2019 年的漏洞，章节标题提到的 “OpenBSD TCP SACK 
+- 漏洞影响的 FreeBSD 版本——SA-19:08 显示受影响版本为 FreeBSD 11.2、11.3、12.0、12.1，使用 RACK TCP 栈的 FreeBSD 13-CURRENT 不受 CVE-2019-5599 影响；SACK Panic 不是 OpenBSD 2026 年发现的——SACK Panic 是 2019 年的漏洞，章节标题提到的 “OpenBSD TCP SACK
 
 ## 文献
 
 - Dillon, M. (2003-2014). *DragonFly Kernel Design Posts*. dragonflybsd.org; DragonFly Project. (2009-2014). *Release Notes* (MPSAFE sections). dragonflybsd.org; Sherrill, J. (2014). *DragonFly Networking Performance*. BSDCan '14.[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案
 - Dillon, M., & Watson, R. N. M. (2013). *SMP Networking: DragonFly vs FreeBSD Approaches*. BSDCan Panel; FreeBSD Project. (2003-2020). *Giant Lock Removal Commits*. cgit.freebsd.org; Gagniere, T. (2020). *FreeBSD Network Stack Scaling*. EuroBSDCon '20. ［A］
+
 ## 140.10.4 网络栈并行化史料辨析
-  - 要点：DragonFly MPSA
+
+- 要点：DragonFly MPSA
 - FreeBSD Project. *ipfw(8), dummynet(4) Manual Pages*; Rizzo, L. (1997). *Dummynet: A Simple Approach to the Evaluation of Network Protocols*. ACM Computer Communication Review; FreeBSD Foundation. *FreeBSD Handbook: Firewalls*. freebsd.org; Rizzo, L. (2010s). *ipfw/dummynet Modernization*. freebsd-n
 - FreeBSD Foundation. *FreeBSD Handbook: Firewall Choices*. freebsd.org; Lucas, M. W. (2014). *FreeBSD Mastery: PF*. Tilted Windmill Press; PfSense Project. *Why PF? Documentation*. pfsense.org; Biancuzzi, F. (2005). *Interview with Daniel Hartmeier*. onlamp.com. ［B］
-- FreeBSD Security Team. (2019-06-17). *FreeBSD-SA-19:08.tcp_sack: TCP SACK Denial of Service Vulnerabilities*. freebsd.org; Looney, J. (2019-06-17). *SACK Panic: Remote Denial of Service Vulnerabilities in Linux and FreeBSD*. Netflix Security Advisory; CVE Program. CVE-2019-5599, CVE-2019-11477/8/9. 
+- FreeBSD Security Team. (2019-06-17). *FreeBSD-SA-19:08.tcp_sack: TCP SACK Denial of Service Vulnerabilities*. freebsd.org; Looney, J. (2019-06-17). *SACK Panic: Remote Denial of Service Vulnerabilities in Linux and FreeBSD*. Netflix Security Advisory; CVE Program. CVE-2019-5599, CVE-2019-11477/8/9.
 - FreeBSD Project. *Active Committers List*. freebsd.org; FreeBSD Core Team. *Public Announcements Archive*. freebsd.org/news; FreeBSD Project. *Commit History*. cgit.freebsd.org. ［A］
+
 ## 140.9.2 2010-2026 年间网络栈贡献者动态记录
-  - 要点：2010-2026 年间 FreeBSD 网络栈贡献者呈现 “核心稳定、持续有新贡献者加入” 的态势：①2010-2015——Gleb Smirnoff 
+
+- 要点：2010-2026 年间 FreeBSD 网络栈贡献者呈现 “核心稳定、持续有新贡献者加入” 的态势：①2010-2015——Gleb Smirnoff
 
 ## 自反性声明
 

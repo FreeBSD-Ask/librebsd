@@ -34,7 +34,7 @@ volume: 第03卷-伯克利学术文化外溢影响
 
 - NCP（Network Control Program）使用时间确认为 1971-1983 年（ARPANET 主机间通信协议，由 BBN 的 Steve Crocker 团队设计，1983.1.1 ARPANET 切换至 TCP/IP 后弃用）；X.25 为 CCITT 1976 年标准的分组交换协议（用于 Tymnet、Telenet 等公共数据网络，多源一致）；SNA（Systems Net
 - Mockapetris DNS RFC 882/883 发布时间确认为 1983 年 11 月（RFC 882"Domain Names: Concepts and Facilities"与 RFC 883"Domain Names: Implementation and Specification"，作者 Paul Mockapetris，USC ISI）；SMTP RFC 821 发布时间确认
-- BIND 1990 年代市场份额（约 90%）——多源引用但缺乏权威统计来源（Netcraft 等统计机构 1990 年代后期的 DNS 服务器市场份额数据保留 [考据完成：2026-07-28 该处存疑标注属史料缺口，须待原始档案公开后方可补充确证]）；BIND 4.9.x 具体漏洞时间与版本——CERT/CC 安全公告档案为权威来源，具体漏洞编号与版本须以 CERT/CC 公告为准；BIND 
+- BIND 1990 年代市场份额（约 90%）——多源引用但缺乏权威统计来源（Netcraft 等统计机构 1990 年代后期的 DNS 服务器市场份额数据保留 [考据完成：2026-07-28 该处存疑标注属史料缺口，须待原始档案公开后方可补充确证]）；BIND 4.9.x 具体漏洞时间与版本——CERT/CC 安全公告档案为权威来源，具体漏洞编号与版本须以 CERT/CC 公告为准；BIND
 - Qmail 发布时间确认为 1995 年（Daniel J. Bernstein 发布，强调安全性，许可证为公有领域——Bernstein 本人于 cr.yp.to/qmail/dist.html 声明将 qmail 置于公有领域）；Postfix 发布时间确认为 1998 年（原名 VMailer，IBM T.J. Watson 研究中心 Wietse Venema 开发，使用 IBM Publ
 
 ## 文献

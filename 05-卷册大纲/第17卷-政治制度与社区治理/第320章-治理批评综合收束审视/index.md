@@ -4,6 +4,8 @@ id: CH320
 volume: 17
 ---
 
+# 第320章 治理批评综合收束审视
+
 ## 要点
 
 - 从项目史观总纲第 13 条“法律与道德是利益分配，社区治理亦是形式主义的政治产物”审视，BSD 治理模式的历史演变呈现连续性与断裂的双重结构——其一，连续性维度：BSD 治理模式自 CSRG 时期（1976-1995）即以“精英主导、技术优先、消极自由”为核心特征，CSRG 由 Robert Fabry、Sam Leffler、Mike Karels、Marshall Kirk McKusick（马歇尔·柯克·麦库西克） 等核心成员主导决策，决策过程的“闭门会议”传统延续至 FreeBSD Core Team（1993 年至今）、NetBSD Foundation（1994 年至今）、OpenBSD（1995 年至今）三大分支——FreeBSD Core Team 选举权仅限 active committer（2000 年章程第 1 条"Active committers have made a commit to the tree in the last 12 months"，经 <https://www.freebsd.org/internal/bylaws/> 一手核验），OpenBSD 由 Theo de Raadt（西奥·德·若特） 个人主导（自 1995 年至今 31 年治理结构基本未变，经 <https://www.openbsd.org/goals.html> 一手核验），NetBSD Foundation 自 2003 年成立 <core@NetBSD.org> 等执行委员会后治理结构基本稳定，三者皆是 CSRG 精英主导传统的延续；消极自由传统亦延续——BSD license 允许商业公司免费使用代码而不强制回馈（如苹果 macOS XNU 内核、索尼 PlayStation 系统软件以专有形式发布且未回馈上游），与 GPL 强制衍生作品开源的积极自由形成对照（FSF 官方将 Modified BSD license、FreeBSD license、ISC license 列为"GPL-Compatible Free Software Licenses"，经 <https://www.gnu.org/licenses/license-list.en.html> 一手核验）；其二，断裂性维度：BSD 治理模式在历史演变中亦呈现若干断裂——CSRG 于 1995 年解散后，FreeBSD Core Team 从 CSRG 内部任命转为社区选举（虽然选举权仅限 active committer，但仍是治理结构的根本性变革），FreeBSD Foundation 于 2000-12-07 获得 IRS 501(c)(3) 公益慈善地位认定（Determination Letter，作为独立法律实体的诞生），FreeBSD Core Bylaws 于 2026.5.27 通过新章程（由 Dag-Erling Smørgrav 于 2026-05-28 提交，cgit.freebsd.org/doc/commit/?id = 7aabb3eea3，新章程原文"an Incumbent Core Team Member currently in their third or fourth consecutive year may not run for reelection"，经一手核验），引入任期限制（拟 2028 年生效），是 FreeBSD 治理结构自 2000 年章程沿用 26 年来的首次根本性调整；NetBSD Foundation 于 2003 年成立执行委员会，是 NetBSD 治理结构从核心团队制向执行委员会制的断裂；OpenBSD 自 1995 年至今治理结构基本未变，但 OpenSSH、LibreSSL、OpenSMTPD 等子项目的治理逐渐呈现“核心团队 + 维护者”模式，是隐性断裂；其三，BSD 治理模式演变与 Linux 治理模式演变的对照：BSD 治理模式的演变是“改革性”的——FreeBSD Core Team 2000 章程沿用 26 年至 2026 新章程，新章程拟 2028 年生效，过渡期长达 2 年，改革幅度仅限于任期限制与年度选举，未触及核心团队制本身；OpenBSD 自 1995 年至今 31 年治理结构基本未变；NetBSD Foundation 自 2003 年后治理结构基本稳定；Linux 治理模式则是“革命性”的——1991 年 Linus Torvalds 个人发起 Linux 内核，2000 年 OSDL 由 IBM、HP、Intel 等企业创立，2007 年 1 月 22 日 OSDL 与 Free Standards Group 合并成立 Linux Foundation，2014 年后 CNCF、Kubernetes、Hyperledger 等多项目托管扩展，每次重构都是治理结构的根本性变革；BSD 的“改革性”与 Linux 的“革命性”在本体论上地位相等（总纲第 8 条），无道德高下之分——BSD 改革性的代价是治理调整缓慢（如 FreeBSD Core Team 任期限制从提出到通过到生效需要数年），Linux 革命性的代价是治理结构频繁重构带来的适应性成本（如 OSDL 与 Free Standards Group 合并后的整合挑战）；其四，本审视作为历史小说的自觉（总纲第 23 条）：本节作为 BSD 治理模式历史演变的审视，本身是基于项目统摄史观设定的历史小说——“连续性”与“断裂性”的区分是史家的形式主义建构，实际历史过程是连续与断裂交织的复杂形态，史家须自觉呈现这一建构而非伪装客观中立的旁观者
@@ -22,15 +24,15 @@ volume: 17
 
 - 考据过程留痕——【查证来源】FreeBSD Core Bylaws 2000.8.28 版与 2026.5.27 新版经 <https://www.freebsd.org/internal/bylaws/> 一手核验，确认 2000 年章程第 1 条"Active committers have made a commit to the tree in the last 12 months"与 2
 - 考据过程留痕——【查证来源】FreeBSD Core Bylaws 2026.5.27 新版经 <https://www.freebsd.org/internal/bylaws/> 一手核验，确认任期限制条款原文"an Incumbent Core Team Member currently in their third or fourth consecutive year may not run
-- 考据过程留痕——【查证来源】合图层史料综合第 15.1-20.20 节所有引用的一手与二手史料，包括 FreeBSD Core Bylaws 2000.8.28 版与 2026.5.27 新版（经 <https://www.freebsd.org/internal/bylaws/> 一手核验）、FreeBSD BSD Daemon 版权页面（经 <https://www.freebsd.org/c
-- 考据过程留痕——【查证来源】收束性合图史料综合第 15.1-20.20 节所有引用的一手与二手史料，包括 FreeBSD Core Bylaws 2000.8.28 版与 2026.5.27 新版（经 <https://www.freebsd.org/internal/bylaws/> 一手核验）、FreeBSD BSD Daemon 版权页面（经 <https://www.freebsd.org
+- 考据过程留痕——【查证来源】合图层史料综合第 15.1-20.20 节所有引用的一手与二手史料，包括 FreeBSD Core Bylaws 2000.8.28 版与 2026.5.27 新版（经 <https://www.freebsd.org/internal/bylaws/> 一手核验）、FreeBSD BSD Daemon 版权页面（经 <<https://www.freebsd.org/c>
+- 考据过程留痕——【查证来源】收束性合图史料综合第 15.1-20.20 节所有引用的一手与二手史料，包括 FreeBSD Core Bylaws 2000.8.28 版与 2026.5.27 新版（经 <https://www.freebsd.org/internal/bylaws/> 一手核验）、FreeBSD BSD Daemon 版权页面（经 <<https://www.freebsd.org>
 
 ## 文献
 
-- 项目史观总纲第 13、8、23 条；FreeBSD Core Bylaws [EB/OL]. <https://www.freebsd.org/internal/bylaws/>（2000.8.28 版与 2026.5.27 新版）；FreeBSD Foundation IRS Determination Letter（2000-12-07）；OpenBSD Project Goals [EB/OL]. <https://www.openbsd.org/goals.html>；FSF 官方许可证列表 [EB/OL]. <https://www.gnu.org/licenses/license-
-- 项目史观总纲第 19、8、23 条；FreeBSD Core Bylaws [EB/OL]. <https://www.freebsd.org/internal/bylaws/>（2026.5.27 新版）；FreeBSD Core Team Activity Reports（Core.10 回顾 2020-07-27）；OpenBSD Project Goals [EB/OL]. <https://www.openbsd.org/goals.html>；OpenSSH 维护者档案；pkgsrc 项目档案；mfsBSD 项目档案；Linux Foundation 多项目托管档案；参见相关章节 
-- 上述第 15.1-20.20 节所有文献综合；项目史观总纲第 13、19、21、8、23 条；FreeBSD Core Bylaws [EB/OL]. <https://www.freebsd.org/internal/bylaws/>；FreeBSD BSD Daemon 版权页面 [EB/OL]. <https://www.freebsd.org/copyright/daemon/>；OpenBSD Project Goals [EB/OL]. <https://www.openbsd.org/goals.html>；FSF 官方许可证列表 [EB/OL]. <https://www.gn
-- 上述第 15.1-20.20 节所有文献综合；项目史观总纲第 6、7、8、13、19、21、23 条；FreeBSD Core Bylaws [EB/OL]. <https://www.freebsd.org/internal/bylaws/>；FreeBSD BSD Daemon 版权页面 [EB/OL]. <https://www.freebsd.org/copyright/daemon/>；OpenBSD Project Goals [EB/OL]. <https://www.openbsd.org/goals.html>；FSF 官方许可证列表 [EB/OL]. <https://ww
+- 项目史观总纲第 13、8、23 条；FreeBSD Core Bylaws [EB/OL]. <https://www.freebsd.org/internal/bylaws/>（2000.8.28 版与 2026.5.27 新版）；FreeBSD Foundation IRS Determination Letter（2000-12-07）；OpenBSD Project Goals [EB/OL]. <https://www.openbsd.org/goals.html>；FSF 官方许可证列表 [EB/OL]. <<https://www.gnu.org/licenses/license->
+- 项目史观总纲第 19、8、23 条；FreeBSD Core Bylaws [EB/OL]. <https://www.freebsd.org/internal/bylaws/>（2026.5.27 新版）；FreeBSD Core Team Activity Reports（Core.10 回顾 2020-07-27）；OpenBSD Project Goals [EB/OL]. <https://www.openbsd.org/goals.html>；OpenSSH 维护者档案；pkgsrc 项目档案；mfsBSD 项目档案；Linux Foundation 多项目托管档案；参见相关章节
+- 上述第 15.1-20.20 节所有文献综合；项目史观总纲第 13、19、21、8、23 条；FreeBSD Core Bylaws [EB/OL]. <https://www.freebsd.org/internal/bylaws/>；FreeBSD BSD Daemon 版权页面 [EB/OL]. <https://www.freebsd.org/copyright/daemon/>；OpenBSD Project Goals [EB/OL]. <https://www.openbsd.org/goals.html>；FSF 官方许可证列表 [EB/OL]. <<https://www.gn>
+- 上述第 15.1-20.20 节所有文献综合；项目史观总纲第 6、7、8、13、19、21、23 条；FreeBSD Core Bylaws [EB/OL]. <https://www.freebsd.org/internal/bylaws/>；FreeBSD BSD Daemon 版权页面 [EB/OL]. <https://www.freebsd.org/copyright/daemon/>；OpenBSD Project Goals [EB/OL]. <https://www.openbsd.org/goals.html>；FSF 官方许可证列表 [EB/OL]. <<https://ww>
 
 ## 自反性声明
 

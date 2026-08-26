@@ -19,7 +19,7 @@ volume: 06
 - 辨析：FreeBSD 官方从未使用 "LTS"
 - 总纲第 17 条——软件工程：sysinstall 到 bsdinstall 的更替体现了 “单体 → 模块化”、“C 硬编码 → 脚本化组合” 的工程范式迁移；sysinstall 是 1990 年代 BSD 安装器的典型（类 sysconfig 界面、静态菜单），bsdinstall 则面向 ZFS、虚拟化、云部署等 2010 年代新需求设计
   - 辨析：bsdinstall 的 “shel
-- 总纲第 17 条——软件工程：SUJ 是 McKusick 作为 UFS/FFS 原始设计者对其作品的 “晚年修订”——soft updates 本身是 Ganger & Patt 于 1990 年代提出的元数据一致性方案，McKusick 在 FreeBSD 中实现并维护 15 年后，通过 SUJ 解决了其最后的痛点（崩溃后 fsck 时间）；这体现了核心系统软件 “作者终身维护” 的 BSD 
+- 总纲第 17 条——软件工程：SUJ 是 McKusick 作为 UFS/FFS 原始设计者对其作品的 “晚年修订”——soft updates 本身是 Ganger & Patt 于 1990 年代提出的元数据一致性方案，McKusick 在 FreeBSD 中实现并维护 15 年后，通过 SUJ 解决了其最后的痛点（崩溃后 fsck 时间）；这体现了核心系统软件 “作者终身维护” 的 BSD
 - 总纲第 24 条——许可证：ZFS v28 成为 FreeBSD（以及后来整个开源社区）ZFS 演进的基础版本具有历史决定性——Oracle 闭源后，illumos 成为 ZFS 开源开发的主力，FreeBSD 从 illumos 持续移植改进；v28 作为 CDDL 许可的最后共同祖先版本，奠定了 BSD/Linux/macOS ZFS 生态的技术基础
   - 辨析：ZFS v28 在 Free
 
@@ -28,8 +28,10 @@ volume: 06
 - 9.x 常被叙事为 “新一代”（标题中 “新一代” 标签），但技术上多数核心特性在 8-CURRENT 已开始开发（如 USB 栈重写始于 8.0），9.0 是集成与稳定化而非全新革命；9.3 的超长支持周期（至 2017）与 10.x 系列较短的支持周期（10.0 至 2015.1.31）形成对比，表明生产用户对 9.x 稳定性的认可；**数据库验证结论**：9.x 四个 RELEASE 的 t
 - FreeBSD 官方从未使用 "LTS" 术语，但 9.3 的实际支持周期（2014.7-2017.1，约 2.5 年）远超常规 RELEASE 支持周期（通常约 1 年）；这表明支持周期由用户需求与安全团队资源共同决定，而非硬性政策
 - 文献：FreeBSD Security Team. FreeBSD Security Support [Z]. security.freebsd.org；各版本
+
 - bsdinstall 的 “shell 脚本驱动” 常被误解为 “用 Lua 驱动”——bsdinstall 实际主要使用 POSIX shell 脚本配合 **dialog(1)** 提供文本界面，Lua 是在更晚版本（10.x 之后）才逐步引入部分组件；9.0 的 bsdinstall 尚不支持 ZFS root 自动安装（需手动配置），ZFS 引导的官方安装支持在 10.x 才完善
-  - 
+  -
+
 - SUJ 不是 “日志文件系统”（journaling filesystem）的完整实现——它仅对 soft updates 元数据更新增加意向日志以加速恢复，而非像 ext3/ext4、XFS 那样对元数据甚至数据进行完整日志记录；这一设计选择保持了 soft updates 的性能优势，同时消除了其最显著的运维缺陷（服务器异常断电后 fsck 时间与文件系统大小成正比）
   - 文献：McKus
 - ZFS v28 在 FreeBSD 9.0 中状态为 “Production 但非默认根文件系统”——作为数据存储卷使用已相当稳定，但作为 root 文件系统仍需大量手动调整，不适合普通用户；10.0 时期 bsdinstall 才逐步加入自动 ZFS root 配置
@@ -40,20 +42,30 @@ volume: 06
 - FreeBSD Release Engineering Team. FreeBSD 9.0-RELEASE Announcement [Z]. 2012-01-12；FreeBSD Release Engineering Team. FreeBSD 9.3-RELEASE Announcement [Z]. 2014-07-16；Lucas M W. FreeBSD Mastery: Specialty Filesystems [M]. Tilton: Tilted Windmill Press, 2016；FreeBSD Project. release/9.0.0. freebsd-src
 - FreeBSD Security Team. FreeBSD Security Support [Z]. security.freebsd.org；各版本 Release Announcement Support 章节[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]
 - FreeBSD 9.0-RELEASE Release Notes [Z]. docs.freebsd.org；Whitehorn N. bsdinstall: A New Installation System for FreeBSD [C]//BSDCan 2011. Ottawa, 2011；**bsdinstall(8)** man page
+
 ## 122.2.2 从 sysinstall 到 bsdinstall 的过渡与向后兼容
-  - 要点：9.0-RELEASE 安装介质默认启动 bsdinstall，但 **sysinstall(8)** 仍保留在 base 系统中供高级用户
+
+- 要点：9.0-RELEASE 安装介质默认启动 bsdinstall，但 **sysinstall(8)** 仍保留在 base 系统中供高级用户
 - McKusick M K, Neville-Neil G V, Watson R N M. The Design and Implementation of the FreeBSD Operating System [M]. 2nd ed. Boston: Addison-Wesley, 2014. ISBN 978-0-321-96897-5（第 8 章 UFS 章节）；svn commit r207141, r218726；FreeBSD 9.0-RELEASE Release Notes（File Systems 章节） ［A］
-## 122.3.2 UFS2 TRIM 支持与 SSD 
+
+## 122.3.2 UFS2 TRIM 支持与 SSD
+
 - svn commit r219089；FreeBSD 9.0-RELEASE Release Notes（ZFS 章节）；Lucas M W. FreeBSD Mastery: ZFS [M]. Tilton: Tilted Windmill Press, 2015 ［A］
+
 ## 122.4.2 9.2 中 ZFS TRIM 与 lz4 压缩
-  - 要点：9.2-RELEASE 官方公告明确列出两项 ZFS 新特性："The ZFS filesystem now supports TRIM when used on solid state drives" 和 "The ZFS filesys
+
+- 要点：9.2-RELEASE 官方公告明确列出两项 ZFS 新特性："The ZFS filesystem now supports TRIM when used on solid state drives" 和 "The ZFS filesys
 - FreeBSD 9.3-RELEASE Announcement [Z]. 2014-07-16；**zfs(8)**、**zpool(8)** man pages ［B］
 - FreeBSD 9.0-RELEASE Release Notes（Storage Drivers 章节）；Motin A. CAM ATA: Integration of ATA into CAM Layer [C]//EuroBSDCon 2011. London, 2011；**ahci(4)**、**cam(4)**、**ata(4)** man pages
+
 ## 122.5.2 Hans Petter Selasky 与 USB 栈重写完成（usbus2）
-  - 要点：Hans Petter Selasky（hps@）主导的新 USB 栈（项目名 usbus2）在 8.0 时期引入
+
+- 要点：Hans Petter Selasky（hps@）主导的新 USB 栈（项目名 usbus2）在 8.0 时期引入
 - FreeBSD 9.0-RELEASE Announcement [Z]. 2012-01-12；Stewart L, et al. A Pluggable Congestion Control Framework for FreeBSD [C]//AsiaBSDCon 2010. Tokyo, 2010；**mod_cc(4)**、**mod_cc(9)**、**cc_cubic(4)**、**cc_vegas(4)** man pages；FreeBSD 9.0-RELEASE Release Notes（Networking 章节）
+
 ## 122.6.2 NFSv4 新实现
-  - 要点
+
+- 要点
 
 ## 自反性声明
 

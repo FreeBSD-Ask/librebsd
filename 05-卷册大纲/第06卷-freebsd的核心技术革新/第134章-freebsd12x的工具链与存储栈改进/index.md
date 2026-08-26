@@ -33,25 +33,37 @@ volume: 06
 ## 文献
 
 - FreeBSD pkgbase Wiki page [EB/OL]. wiki.freebsd.org/PkgBase；Barber G. pkgbase status updates [EB/OL]. freebsd-announce mailing list, 2018-2022；Vadot E. pkgbase: Are We There Yet? [C]//EuroBSDCon 2019. Lillehammer, 2019. ［A］
+
 ## 133.10.2 WireGuard 争议与社区治理（13.x 语境事件）
-  - 要点：WireGuard（现代 VPN 协议）导入 FreeB
+
+- 要点：WireGuard（现代 VPN 协议）导入 FreeB
 - FreeBSD 12.0-RELEASE Release Notes [Z]. 2018-12-11；FreeBSD 13.0-RELEASE Release Notes [Z]. 2021-04-13；commit r338562 [Z]. svn.freebsd.org ［A］
+
 ## 133.11.2 LLD 成为 amd64 默认链接器
-  - 要点：FreeBSD 12.0-RELEASE 将 LLD（LLVM Linker）设为 amd64 架构的默认系统链接器，替代 GNU ld（来自 GNU binutils）。LLD 是 LLVM 项目的子项目，由 Rui Ueyama 等开发
+
+- 要点：FreeBSD 12.0-RELEASE 将 LLD（LLVM Linker）设为 amd64 架构的默认系统链接器，替代 GNU ld（来自 GNU binutils）。LLD 是 LLVM 项目的子项目，由 Rui Ueyama 等开发
 - FreeBSD 12.0-RELEASE Release Notes [Z]. 2018-12-11；FreeBSD 13.0-RELEASE Release Notes [Z]. 2021-04-13；Free Software Foundation. Various Licenses and Comments about Them [EB/OL]. gnu.org/licenses/license-list.html（#ModifiedBSD、#FreeBSD 条目，2026-07-22 核实）.[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案
-- 原材料/哲学/项目统摄史观/第 25 章.md（总纲第 13 条，第 17 行）；Free Software Foundation. GNU General Public License Version 3 [Z]. 2007-06-29（§5c、§6、§11）；Apache Software Foundation. Apache License, Version 2.0 [Z]. 2004-01（§3）；Free Software Foundation. 各类许可证及其评论 [EB/OL]. **<https://www.gnu.org/licenses/license-list.html*
+- 原材料/哲学/项目统摄史观/第 25 章.md（总纲第 13 条，第 17 行）；Free Software Foundation. GNU General Public License Version 3 [Z]. 2007-06-29（§5c、§6、§11）；Apache Software Foundation. Apache License, Version 2.0 [Z]. 2004-01（§3）；Free Software Foundation. 各类许可证及其评论 [EB/OL]. **<<https://www.gnu.org/licenses/license-list.html>*
 - FreeBSD **bectl(8)** Manual Page [Z]；FreeBSD 12.0-RELEASE Release Notes Userland section [Z]. 2018；commit r337663 [Z]. svn.freebsd.org. ［A］
+
 ## 133.6.2 **iflib(4)** 网络驱动框架与驱动迁移
-  - 要点：iflib（Interface Framework，网络驱动框架）在 FreeBSD 11.x 引入原型，12.x 时期大量网卡驱动迁移到 iflib 框架上。iflib 由 Matt Macy（mmacy@）、John Baldwi
+
+- 要点：iflib（Interface Framework，网络驱动框架）在 FreeBSD 11.x 引入原型，12.x 时期大量网卡驱动迁移到 iflib 框架上。iflib 由 Matt Macy（mmacy@）、John Baldwi
 - FreeBSD 12.0-RELEASE Announcement/Release Notes Storage sections [Z]. 2018；McKusick M K, et al. The Design and Implementation of the FreeBSD Operating System (2nd ed.)[M]. Addison-Wesley, 2014. ［B］
+
 ## 133.7.2 NFSv4.1 服务端与 pNFS 支持
-  - 要点：FreeBSD 12.0 的 NFSv4.1 服务器实现更新，包含 pNFS（Parallel NFS）服务器支持（"The 
+
+- 要点：FreeBSD 12.0 的 NFSv4.1 服务器实现更新，包含 pNFS（Parallel NFS）服务器支持（"The
 - Watson R N M, et al. Capsicum: Practical Capabilities for UNIX [C]//USENIX Security 2010；FreeBSD **capsicum(4)**/**casper(3)** Manual Pages [Z]；FreeBSD 12.0-RELEASE Announcement [Z]. 2018.
+
 ## 133.8.2 Linux 兼容层——CentOS 7 与 Ubuntu 用户态
-  - 要点：FreeBSD 12.x 时期 Linux 二进制兼容层（Linuxulator）持续改进：①CentOS 7 用户态兼
+
+- 要点：FreeBSD 12.x 时期 Linux 二进制兼容层（Linuxulator）持续改进：①CentOS 7 用户态兼
 - Pédron J-S. FreeBSD Graphics Status Reports [EB/OL]. freebsd-x11 mailing list, 2018-2022；FreeBSD Quarterly Status Reports Graphics chapters [R]；graphics/drm-kmod ports entry [Z]. ［A］
+
 ## 133.9.2 LinuxKPI 兼容层的工程效应
-  - 要点：LinuxKPI（Linux Kernel Programming Interface）兼容层是使 Linux DRM 驱动能在 FreeBSD 内核上运行的关键
+
+- 要点：LinuxKPI（Linux Kernel Programming Interface）兼容层是使 Linux DRM 驱动能在 FreeBSD 内核上运行的关键
 
 ## 自反性声明
 

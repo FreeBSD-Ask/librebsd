@@ -14,7 +14,7 @@ OpenBSD 的治理与此形成鲜明对比——Theo de Raadt（西奥·德·若�
 - OpenBSD 项目结构文档（1996-2024）——记载 Theo de Raadt 作为唯一项目 leader 与最终决策者的权力结构。
 - NetBSD Foundation Bylaws（1998-2024）——NetBSD 采用基金会制作法定治理机构。
 - Hubbard J. “FreeBSD Core Team 经验总结”（1995）——Jordan Hubbard 在 FreeBSD 早期邮件列表中的邮件阐述 Core Team 九人制的设立理由——“这不是权力集中，这是权力分散——9 个人比任意一个人更难独裁。”
-- De Raadt T. “OpenBSD 不需要 Core Team”（2006-06-12）——Theo 在 misc@openbsd.org 邮件列表中的帖子：“我写了最多的代码——我当然要对项目的安全负责，没有民主可以分担这个责任。”
+- De Raadt T. “OpenBSD 不需要 Core Team”（2006-06-12）——Theo 在 <misc@openbsd.org> 邮件列表中的帖子：“我写了最多的代码——我当然要对项目的安全负责，没有民主可以分担这个责任。”
 - 教材《FreeBSD 从入门到跑路》2.1 节——红帽公司对 Linux 生态影响的批判——与 BSD 治理模式的对比。
 
 #### 史观
@@ -45,8 +45,8 @@ OpenBSD 的治理与此形成鲜明对比——Theo de Raadt（西奥·德·若�
 
 ---
 
-  - 要点：（待从数据库提取）
-  - 史料：（待从数据库提取）
-  - 史观：形式主义史观：本子节所书皆是形式主义化的重构
-  - 辨析：（待从数据库考据记录提取）
-  - 文献：[DB:historical_claims] 历史主张数据库（853 条主张，26,898 条证据）
+- 要点：（待从数据库提取）
+- 史料：（待从数据库提取）
+- 史观：形式主义史观：本子节所书皆是形式主义化的重构
+- 辨析：（待从数据库考据记录提取）
+- 文献：[DB:historical_claims] 历史主张数据库（853 条主张，26,898 条证据）

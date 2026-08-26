@@ -28,7 +28,7 @@ volume: 第18卷-全球社区地区bsd史
 - 商标局档案的完整性须评估——可能存在数字化不足；社区记录的代表性须量化
 - 年度报告的分类标准须明确——可能存在地区分类变化；企业档案的可获得性须评估
 - commit 归属的准确性须评估——可能存在错误归属；个人页面的自利偏差须警惕
-- 考据过程留痕——【查证来源】中东社区矛盾史料以 Israel FreeBSD User Group 邮件列表、Arabeyes 项目档案（<https://www.arabeyes.org/> 与 <https://gitlab.com/arabeyes/arabeyes>）、社区论坛历史讨论、口述史为主，缺乏系统性的学术研究（学术数据库检索未定位到专门的“以色列 BSD 社区与阿拉伯语 BSD 
+- 考据过程留痕——【查证来源】中东社区矛盾史料以 Israel FreeBSD User Group 邮件列表、Arabeyes 项目档案（<https://www.arabeyes.org/> 与 <https://gitlab.com/arabeyes/arabeyes>）、社区论坛历史讨论、口述史为主，缺乏系统性的学术研究（学术数据库检索未定位到专门的“以色列 BSD 社区与阿拉伯语 BSD
 
 ## 文献
 

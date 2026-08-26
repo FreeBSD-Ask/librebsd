@@ -15,7 +15,7 @@ volume: 07
 ## 史观
 
 - 总纲第 5 条——技术债务：sendmail 是 BSD 系统中资历最老的技术债务——其 sendmail.cf 配置语法以晦涩难懂著称，安全性历史上多次出现严重漏洞（如 1988 年 Morris 蠕虫利用 sendmail 漏洞），从社区讨论替换（2000 年代中期）到实际替换（2023 年）历时近 20 年；总纲第 25 条——终结与延续：sendmail 默认地位的终结是 BSD 传统 M
-- 总纲第 6 条——技术路线分化：FreeBSD 与 Linux 在 2020 年代代表了两种不同的操作系统演进路径：Linux 走 “市场驱动、快速迭代、生态优先” 路线——内核每 2-3 个月一个大版本、支持尽可能多的硬件、围绕商业公司需求快速开发；FreeBSD 走 “工程质量优先、保守稳定、技术完整性” 路线——大版本约每 2-3 年、支持周期 5 年、重视架构一致性与长期稳定性；两者不是 
+- 总纲第 6 条——技术路线分化：FreeBSD 与 Linux 在 2020 年代代表了两种不同的操作系统演进路径：Linux 走 “市场驱动、快速迭代、生态优先” 路线——内核每 2-3 个月一个大版本、支持尽可能多的硬件、围绕商业公司需求快速开发；FreeBSD 走 “工程质量优先、保守稳定、技术完整性” 路线——大版本约每 2-3 年、支持周期 5 年、重视架构一致性与长期稳定性；两者不是
 - 总纲第 17 条——软件工程：80 个 SA 的分布不均（2026 年上半年 49 个，远超 2024 年全年 19 个）反映 FreeBSD Security Team 工作节奏的演进——Security Officer Team 在 Mark Johnston（马克·约翰斯顿）、Philip Paeps（菲利普·佩普斯） 主导下于 2026 年进入“主动审计 + 批量披露”阶段，这与 Open
 - 总纲第 17 条——软件工程：regreSSHion 的“18 年回归”是复杂软件系统漏洞生命周期的典型样本——一个已被修复的漏洞在 19 年后因代码重构或补丁管理疏漏重新出现，这种现象在大型代码库中并不罕见（Linux 内核也曾多次出现类似回归）；OpenSSH 作为 base 系统中最敏感的网络服务（**sshd(8)** 默认监听 0.0.0.0:22，运行 root 权限，接受未认证连接）
 - 总纲第 23 条——社区治理：OpenSSL 3.0 升级是 14.x 周期 FreeBSD 加密栈的“代际迁移”——OpenSSL 1.1.1 于 2023 年 9 月 EOL，FreeBSD 14.0（2023-11）恰在 EOL 后发布，选择 OpenSSL 3.0 作为新基础；这一迁移在 14.x 周期内引入了持续的安全债务——OpenSSL 3.0 系列在 2022-2024 年间持续发
@@ -31,13 +31,15 @@ volume: 07
 ## 文献
 
 - FreeBSD 14.0-RELEASE Announcement [Z]. 2023-11-20；FreeBSD 14.0 Release Notes [Z]. 2023；DragonFly BSD. dma - DragonFly Mail Agent [EB/OL]. dragonflybsd.org[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]
+
 ## 154.18.2 OpenSSL 3.0 引入与许可证变更
-  - 要点：FreeBSD 14.0-RELEASE 搭载
-- Linux Kernel Archives. Linux Kernel Releases [EB/OL]. [2026-07-19]. <https://www.kernel.org/>; Corbet J, Kroah-Hartman G, McPherson A. Linux Kernel Development Report [R]. The Linux Foundation, 2024; Larabel M. FreeBSD vs. Linux Benchmarks [EB/OL]. (2023-2026)[2026-07-19]. <https://www.phoronix.com/
+
+- 要点：FreeBSD 14.0-RELEASE 搭载
+- Linux Kernel Archives. Linux Kernel Releases [EB/OL]. [2026-07-19]. <https://www.kernel.org/>; Corbet J, Kroah-Hartman G, McPherson A. Linux Kernel Development Report [R]. The Linux Foundation, 2024; Larabel M. FreeBSD vs. Linux Benchmarks [EB/OL]. (2023-2026)[2026-07-19]. <<https://www.phoronix.com/>
 - FreeBSD Security Team. FreeBSD Security Advisories Archive [EB/OL]. (2024-2026)[2026-07-22]. <https://www.freebsd.org/security/advisories/>; MITRE. CVE Project cvelistV5 Repository [Z]. (2026-07). <https://github.com/CVEProject/cvelistV5>; FreeBSD Project. freebsd.db — freebsd-src commits table [DB/
 - FreeBSD Security Team. FreeBSD-SA-24:04.openssh: OpenSSH pre-authentication remote code execution [EB/OL]. (2024-07-01)[2026-07-22]. <https://security.freebsd.org/advisories/FreeBSD-SA-24:04.openssh.asc>; FreeBSD Security Team. FreeBSD-SA-24:08.openssh: OpenSSH pre-authentication async signal safety
 - FreeBSD Security Team. FreeBSD-SA-24:13.openssl [EB/OL]. (2024-09-04)[2026-07-22]. <https://security.freebsd.org/advisories/FreeBSD-SA-24:13.openssl.asc>; OpenSSL Project. OpenSSL 3.0 Release Notes [EB/OL]. [2026-07-22]. <https://www.openssl.org/source/>; FreeBSD Project. freebsd.db — freebsd-src Op
-- MITRE. CVE-2024-3094: Malicious Code in xz-utils 5.6.0/5.6.1 [EB/OL]. (2024-03-29)[2026-07-22]. <https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-3094>; Freund A. oss-security: backdoor in upstream xz/liblzma leading to ssh server compromise [EB/OL]. (2024-03-29)[2026-07-22]. <https://www.ope
+- MITRE. CVE-2024-3094: Malicious Code in xz-utils 5.6.0/5.6.1 [EB/OL]. (2024-03-29)[2026-07-22]. <https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-3094>; Freund A. oss-security: backdoor in upstream xz/liblzma leading to ssh server compromise [EB/OL]. (2024-03-29)[2026-07-22]. <<https://www.ope>
 - FreeBSD Security Team. FreeBSD Security Information — Disclosure Policy [EB/OL]. [2026-07-22]. <https://www.freebsd.org/security/>; FreeBSD Security Team. FreeBSD-SA-26:28.capsicum [EB/OL]. (2026-06-09)[2026-07-22]. <https://security.freebsd.org/advisories/FreeBSD-SA-26:28.capsicum.asc>; FreeBSD Sec
 - FreeBSD Project. freebsd.db freebsd-src 仓库 commit 数据库 [DB/OL]. 2026-07-27. `c:\Users\ykla\Documents\hibsd\03-原始史料库\01-代码仓库史料\01-数据库本体\freebsd.db`; FreeBSD Security Team. FreeBSD Security Advisories [EB/OL]. (2024-2026)[2026-07-27]. <https://www.freebsd.org/security/advisories/>; FreeBSD Security Tea
 

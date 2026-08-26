@@ -4,6 +4,8 @@ id: CH156
 volume: 第08卷-freebsd的范式转换
 ---
 
+# 第156章 freebsd的工程美学与设计哲学
+
 # 第 156 章 freebsd的工程美学与设计哲学
 
 ## 要点

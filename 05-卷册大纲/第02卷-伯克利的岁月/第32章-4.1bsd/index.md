@@ -33,10 +33,10 @@ volume: 第02卷-伯克利的岁月
 
 ## 辨析
 
-- 先前版本时间线记载有误——4.1a 非 “1981 年中” 而为 1982 年 4 月，4.1b 非 “1981 年末 -1982 年初” 而为 1982 年 6 月，4.1c 非 “1982 年中 -1983 年初” 而为 1983 年 4 月，时间线已据 McKusick 1999 原文修正；4.1a/b/c 是 4.2BSD 的前置开发版本而非 4.1BSD 的 “碎片化补丁”，须严格区分 
+- 先前版本时间线记载有误——4.1a 非 “1981 年中” 而为 1982 年 4 月，4.1b 非 “1981 年末 -1982 年初” 而为 1982 年 6 月，4.1c 非 “1982 年中 -1983 年初” 而为 1983 年 4 月，时间线已据 McKusick 1999 原文修正；4.1a/b/c 是 4.2BSD 的前置开发版本而非 4.1BSD 的 “碎片化补丁”，须严格区分
 - Coherent 与 BSD 无代码渊源，不应混为一谈；其市场影响有限（主要面向教育/爱好者），但作为 “无 AT&T 代码的 UNIX 兼容系统” 具有象征意义，预示了后来 Minix、Linux 的 “干净实现” 路线。
 - [考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证] “Bill Joy 为 chroot 设计者” 的说法来自后世二手叙述（如 Salus 1994 编年史与互联网博客），缺乏 Bill Joy 本人自述与同时期 `unix-wizards` 邮件列表存档的直接佐证；“1982 年引入
-- *关键辨析**——Diehr 案并非“软件可专利”的绝对判决而是“软件+工业过程”组合可专利；State Street 的商业方法扩张被 Bilski/Alice 逐步限缩（Alice 两步测试：先定是否针对抽象概念，再看是否有 inventive concept）；Benson/Flook 确立的“算法不可专利”原则经 Mayo/Alice 复活为现代判准。引用时须按案号区分各案立场，不得混用 
+- *关键辨析**——Diehr 案并非“软件可专利”的绝对判决而是“软件+工业过程”组合可专利；State Street 的商业方法扩张被 Bilski/Alice 逐步限缩（Alice 两步测试：先定是否针对抽象概念，再看是否有 inventive concept）；Benson/Flook 确立的“算法不可专利”原则经 Mayo/Alice 复活为现代判准。引用时须按案号区分各案立场，不得混用
 - 4.1BSD 约 400 份、4.2BSD 18 个月内超过 1000 份许可证，增长趋势明确
 
 ## 文献
@@ -49,5 +49,5 @@ volume: 第02卷-伯克利的岁月
 - 8 份判决全文（ref 2593-2600）；Chisum. Patents in Mathematics（1985）［A］
 - McKusick, K. (1999) "Twenty Years of Berkeley Unix"（当事人一手发行数据） ［B］
 - McKusick, K. (1999) "Twenty Years of Berkeley Unix"（当事人一手完整列举 4BSD 特性清单）；4BSD Release Notes (1980.10) ［B］
-- 4BSD Release Notes (1980.10)；4.1BSD Release Notes (1981.6)；TUHS Unix Tree 4BSD 条目（https://www.tuhs.org/cgi-bin/utree.pl?file=4BSD，CSRG Archives Kirk McKusick 捐赠）
+- 4BSD Release Notes (1980.10)；4.1BSD Release Notes (1981.6)；TUHS Unix Tree 4BSD 条目（<https://www.tuhs.org/cgi-bin/utree.pl?file=4BSD，CSRG> Archives Kirk McKusick 捐赠）
 - McKusick, K. (1999) "Twenty Years of Berkeley Unix"（当事人一手完整列举 12 人委员会名单） ［B］

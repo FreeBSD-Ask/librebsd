@@ -4,6 +4,8 @@ id: CH322
 volume: 17
 ---
 
+# 第322章 城市经济政治文化史-美国东岸
+
 ## 要点
 
 - （待从数据库提取）
@@ -19,7 +21,7 @@ volume: 17
 
 ## 辨析
 
-- 部分二手资料称 “Bell Labs 1925 年设立于 Murray Hill”，部分称 “1966 年”；考据结论：Bell Labs 1925 年由 AT&T 与 Western Electric 合资建立，初期位于 New York City 与新泽西多处实验室，1966 年 Murray Hill 园区建成并集中主要研究部门。本子节采用 “Bell Labs 1925 年建立，1966 
+- 部分二手资料称 “Bell Labs 1925 年设立于 Murray Hill”，部分称 “1966 年”；考据结论：Bell Labs 1925 年由 AT&T 与 Western Electric 合资建立，初期位于 New York City 与新泽西多处实验室，1966 年 Murray Hill 园区建成并集中主要研究部门。本子节采用 “Bell Labs 1925 年建立，1966
 - 部分二手资料称 "Berkeley FSM 1964-1965"，部分称 “1964 年” 或 "1964-1966"；考据结论：Berkeley Free Speech Movement 主要事件发生于 1964-1965 学年（1964 年 9 月 -1965 年 1 月），但其影响延续至 1960 年代末。本子节采用 "Berkeley FSM 1964-1965" 的限定性表述。
 - 部分二手资料称 “128 公路 1980 年代被硅谷赶超”，部分称 “1970 年代”；考据结论：128 公路 1970 年代仍与硅谷并驾齐驱，1980 年代中期 DEC/Prime/Wang 等小型机厂商增长放缓后硅谷逐步赶超，1990 年代 128 公路彻底被硅谷超越。本子节采用 “128 公路 1980 年代中期被硅谷逐步赶超，1990 年代彻底被超越” 的限定性表述。
 - 部分二手资料称 “Red Hat 1993 年设立于 Durham”，部分称 "Raleigh" 或 "Cary"；考据结论：Red Hat 1993 年由 Marc Ewing 在 Durham 创建，1990 年代末总部迁至 Raleigh（仍属 RTP 区域）。本子节采用 “Red Hat 1993 年 Durham 创建，1990 年代末迁至 Raleigh” 的限定性表述。

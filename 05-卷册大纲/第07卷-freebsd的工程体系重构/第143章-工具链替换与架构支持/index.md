@@ -4,6 +4,8 @@ id: CH143
 volume: 07
 ---
 
+# 第143章 工具链替换与架构支持
+
 ## 要点
 
 - i386 和 amd64（x86）是 Clang/LLVM 最早支持且最成熟的架构，也是 FreeBSD 首批完成 Clang 迁移的架构。Roman Divacky 于 2009 年 2 月宣布 Clang 可编译可启动的 i386/amd64 内核；FreeBSD 9.0（2012）中 i386/amd64 world 和 GENERIC 内核已可完整使用 Clang 构建；2012 年 11 月 Brooks Davis 在 -CURRENT 中切换 Clang 为 x86 默认编译器；FreeBSD 10.0（2014.1.20）正式在 RELEASE 版本中将 Clang 设为 i386/amd64 默认且不再默认安装 GCC。x86 架构的 Clang 支持成熟得益于 Apple 的长期投入——macOS/iOS 均运行在 x86（及后续 Apple Silicon）上，Clang x86 后端是优化最好、测试最充分的后端之一。
@@ -31,7 +33,7 @@ volume: 07
   - 文献：Divacky R. 2009 kernel announcement [EB/OL]；Davis B. 2012 default announcement [EB/OL]；FreeBSD 9.0/10.0 Rel
 - 架构的 Tier 级别是动态调整的——sparc64 从 FreeBSD 13 起不再是 Tier 1，mips 支持也大幅缩水，但这不完全归因于 Clang 迁移；SPARC 和 MIPS 硬件市场在 2010 年代的整体衰退（Oracle 终止 SPARC 服务器开发、MIPS 公司转向 RISC-V）是更深层原因。
 - 文献：FreeBSD Project. Supported Archit
-- 原文件误称 “OpenBSD 5.5 默认 Clang” 或 “2014 年”——经 OpenBSD CVS commit log 交叉验证，amd64/i386 实际切换时间为 2017 年 7 月 26 日（commit 时间戳精确到日），5.5 是 2014 年 5 月发布，此错误已修正。Theo de Raadt 在许可证问题上的立场比 FreeBSD 更为激进（他对 GPL 和 NDA 
+- 原文件误称 “OpenBSD 5.5 默认 Clang” 或 “2014 年”——经 OpenBSD CVS commit log 交叉验证，amd64/i386 实际切换时间为 2017 年 7 月 26 日（commit 时间戳精确到日），5.5 是 2014 年 5 月发布，此错误已修正。Theo de Raadt 在许可证问题上的立场比 FreeBSD 更为激进（他对 GPL 和 NDA
 - “GCC GPL 传染编译产物” 是常见误解——FSF 明确表示 GCC 的 GPL 许可证不适用于 GCC 编译输出的程序（只要不是基于 GCC 运行时库的 GPL 代码片段衍生），GCC Runtime Library Exception 进一步明确了这一点。因此 Linux 使用 GCC 4.3+（GPLv3）不涉及许可证问题，但 FreeBSD base 系统中包含 GCC 二进制和库文件
 - 阮一峰 2008-2011 年博客文章将 BSD 许可证描述为“更宽松但允许闭源”〔阮一峰为禁引来源，本辨析仅作其观点元引用考据，其全部史实主张须独立核验〕是其时代局限性产物——当时 Clang 尚未成为 FreeBSD 默认（2014.1.20 才默认化），LLVM/Clang 技术成熟度也远不及 2020 年代；阮一峰博客作为中文世界早期开源启蒙材料有其历史贡献，但其对 BSD 许可证的批评基
 
@@ -40,21 +42,24 @@ volume: 07
 - Divacky R. 2009 kernel announcement [EB/OL]；Davis B. 2012 default announcement [EB/OL]；FreeBSD 9.0/10.0 Release Notes [Z].[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]
     FreeBSD 社区论文与演讲 [258]，[258] Ryan Stone. Oblivious Sandboxing with Capsicum and EBPF [C]//BS
 - FreeBSD Project. Supported Architectures [EB/OL]. freebsd.org/platforms/；FreeBSD 12.0/13.0 Release Notes [Z]；Losh W. GCC 4.2.1 retirement email [EB/OL]. freebsd-arch, 2018. ［A］
+
 ## 142.10.4 架构支持对迁移时间线的效应
-  - 要点：非 x86 架构的 Clang 支持进度是 GCC 从 FreeBSD base 完全移除的主要阻塞因素。迁移的关键时间节点如下：①2009.2——i386/amd64 内核可启动
+
+- 要点：非 x86 架构的 Clang 支持进度是 GCC 从 FreeBSD base 完全移除的主要阻塞因素。迁移的关键时间节点如下：①2009.2——i386/amd64 内核可启动
 - OpenBSD Project. OpenBSD 6.2 Release Notes [Z]. 2017-10-09；Nagy R. switch the default compiler on amd64 and i386 to clang [EB/OL]. openbsd-cvs, 2017-07-26；Schwarze I. mandoc history [EB/OL]. mandoc.bsd.lv；OpenBSD Project. LibreSSL [EB/OL]. libressl.org, 2014. ［A］
     FreeBSD 社区论文与演讲 [179]，[179] Davi
 - Linux Kernel Project. COPYING: Linux Kernel Licensing (GPLv2 only)[Z]. kernel.org；Linux Kernel Documentation. Building Linux with Clang/LLVM [EB/OL]. kernel.org/doc；Free Software Foundation. GCC Runtime Library Exception [Z]. gcc.gnu.org.[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史
 - 中文技术博客。开源许可证的比较 [EB/OL]. 2008-2011 年间系列文章。〔禁引来源·仅作线索·须与一手史料交叉验证·不得直接采信〕［C］
-    FreeBSD 社区论文与演讲 [179]，[179] David Carlier. LLVM and the state of sanitizers on BSD [C]//AsiaBSDCon 2019. [S.l.]: [s.n.], 2019. 获取路径：<https://papers.freebsd.org/2019/asiabsdcon/carlier-llvm_and_the_state_of_sanitizers_on_b
+    FreeBSD 社区论文与演讲 [179]，[179] David Carlier. LLVM and the state of sanitizers on BSD [C]//AsiaBSDCon 2019. [S.l.]: [s.n.], 2019. 获取路径：<<https://papers.freebsd.org/2019/asiabsdcon/carlier-llvm_and_the_state_of_sanitizers_on_b>
 - Torvalds L. LKML postings on BSD license [Z]. lkml.org, various dates；Williams S. Free as in Freedom: Richard Stallman's Crusade for Free Software [M]. Sebastopol: O'Reilly, 2002. ISBN: 0-596-00287-4.[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]
+
 ## 142.7.4 史料辨析
- 
+
 - Torvalds L. LKML postings on BSD license and GPLv3 [Z]. lkml.org, 1999-2007；Williams S, DiBona C, et al. Open Sources 2.0: The Continuing Evolution [M]. Sebastopol: O'Reilly, 2005. ISBN: 0-596-00802-3.[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]
     FreeBSD 社区论文
 - FreeBSD 9.1/10.0 Release Notes [Z]；Chisnall D. GNU-Free C++11 Stack entry in FreeBSD Quarterly Status Report [R]. 2012 Q1；LLVM Project. libc++ C++ Standard Library [EB/OL]. libcxx.llvm.org.[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]
-## 142.9.2 lld 链接器替换 GNU ld
 
+## 142.9.2 lld 链接器替换 GNU ld
 
 ## 自反性声明
 
