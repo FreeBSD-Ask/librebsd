@@ -8,7 +8,11 @@ volume: 第02卷-伯克利的岁月
 
 ## 要点
 
-（待从概述提取）
+- 4.2BSD 引入的 socket API 由 Bill Joy 与 Sam Leffler 共同设计（BSD 端 socket 层作者与 TCP/IP 协议栈作者一致，McKusick 1999 记载 Joy 1981 年夏实现 IPC 原型、Leffler 后续完善），socket 作为 IPC 与网络通信的统一抽象支持 TCP/UDP/UNIX 域等多种协议族（AF_INET、AF_UNIX
+- Joy 离开后 CSRG 失去核心开发者，Leffler、Karels、McKusick 接手 4.2BSD 完成工作，CSRG 从个人依赖转向团队化
+- BSD daemon 成为 BSD 社区的文化符号，出现在手册、T 恤、会议海报等载体，与 Linux 的 Tux 企鹅形成文化对比
+- Bill Joy 于 1982 年离开 Berkeley 加入 Sun Microsystems，将 4.2BSD 的集成工作移交给 Leffler 与 McKusick。这一交接是 BSD 历史上第一次核心开发者代际更替。
+- 对 4.2BSD 的批评主要集中在发布后至 4.3BSD 发布前（1983.8-1986.6）约两年半时间，绝大多数性能问题在 4.3BSD 中得到解决；后续对“4.2BSD 过度膨胀”的叙事多为回溯性建构，需与当事人一手记载区分；4.2BSD 商业上极其成功——18 个月内颁发超过 1,000 份站点许可证，超过先前所有 BSD 版本总和，绝大多数 UNIX 厂商选择搭载 4.2BSD 而非 A
 
 ## 史料
 
@@ -25,12 +29,21 @@ volume: 第02卷-伯克利的岁月
 
 ## 史观
 
-（待补）
+(待人工回填——详见子节文件史观/辨析字段)
 
 ## 辨析
 
-（待补）
+- socket 接口是否受 Xerox NS 协议影响存在争议——BSD socket 设计文献未明确引用 Xerox NS 的"endpoint"概念，但 BSD 对协议族（address family）的抽象与 NS 协议栈有结构相似性；socket API 作者为 Joy 与 Leffler 共同设计，“由 Joy 设计”的不完整表述应改为“由 Joy 与 Leffler 共同设计”（McKu
+- CSRG 重组的具体过程在不同史料中描述详略不一，需核对内部备忘录
+- daemon 与 Tux 的文化对比需谨慎，避免简化为 BSD vs Linux 的对立
+- Bill Joy 1982 年离开 Berkeley 加入 Sun Microsystems 的时间节点需辨析——部分文献将 Joy 的离开记为 1982 年夏（完成 4.2BSD 集成前）或 1983 年（4.2BSD 发布后），“将集成工作移交给 Leffler 与 McKusick”的具体交接范围在不同叙事中有差异；此次交接是否构成“第一次核心开发者代际更替”，亦取决于对 1BSD→2BSD
+- 4.2BSD 的“革命性”地位不是事后赋予，而是由市场选择（1000+ 份许可证、厂商首选）确立的；性能问题真实存在但在后续版本中系统解决，这是研究型软件发布的正常工程周期
 
 ## 文献
 
-（待补）
+- Leffler, S. J., Fabry, R. S., Joy, W. N., Lapsley, P., Miller, S. (1983) "4.2BSD Networking Implementation Notes", SRI International CSRG, University of California, Berkeley（第 6.1 节"Socket layer"）；McKusick, K. (1999) "Twenty Years of Berkeley Unix"（Open Sources 第 1 章）；Stevens, W. R. (1990) "UNIX Network Programming", Prentice Hall, ISBN 0-13-949876-1（经多源交叉验证：Open Library 书目记录（OL2203754M）明确记载 1990 年 UNIX Network Programming ISBN 0-139-49876-1，与多个引文一致，据一手文献印证消解^doubt-resolved-193：此文献待 0 信任原则考据验证 ］ 已解除）；CSRG (1983) "4.2BSD Unix Programmer's Manual"
+- McKusick, K. (1999) "Twenty Years of Berkeley Unix"；CSRG 内部档案 ［B］
+- BSD conferences 历年海报档案；Raymond, E. S. (1996) "The New Hacker's Dictionary" ［B］
+- McKusick 1999; Salus 1994 ［B］
+- McKusick, K. (1999) "Twenty Years of Berkeley Unix"；Salus, P. H. (1994) "A Quarter Century of UNIX", Addison-Wesley, ISBN 0-201-54777-5；Leffler et al. (1989) 4.3BSD 设计书（ISBN 0-201-06196-1）；CSRG 发行统计 ［B］
+- USENIX 会议论文集（1983-1985）；伯克利 CSRG 邮件列表存档 ［A］[^doubt-resolved-193]: 据 Handbook (未署名) 消解

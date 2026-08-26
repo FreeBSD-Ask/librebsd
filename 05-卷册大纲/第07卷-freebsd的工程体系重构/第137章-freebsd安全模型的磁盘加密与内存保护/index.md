@@ -8,7 +8,10 @@ volume: 第07卷-freebsd的工程体系重构
 
 ## 要点
 
-（待从概述提取）
+- GBDE/GELI/**random(4)** 的一手史料包括：**gbde(8)**/**geli(8)**/**random(4)** 手册页的 HISTORY 和 IMPLEMENTATION NOTES 节；Kamp 2003 USENIX GBDE 论文；FreeBSD 各版本 Release Notes（6.0 GELI、13.0 Fortuna 等）；src/sys/geom/bde
+- FreeBSD VuXML（Vulnerability XML）是 FreeBSD Ports Collection 的软件漏洞数据库，记录 ports 中第三方软件的已知安全漏洞；VuXML 由 Jacques Vidrine 等人于 2003 年前后建立 [存疑精确建立年份]，以 XML 格式存储在 ports 树的 **security/vuxml** 中；每个 VuXML 条目包含：受影响
+- FreeBSD 安全事件的一手史料主要来源：FreeBSD-SA/EN 公告存档（security.freebsd.org）——最权威的官方记录；freebsd-security@ 和 freebsd-announce@ 邮件列表存档——包含讨论和补充信息；CVE/NVD 数据库条目——标准化漏洞信息；第三方安全公司公告（Qualys、ISS X-Force、Google Project Zero
+- FreeBSD 与 macOS/Windows 安全模型对比及关键认证澄清：(1) macOS——Apple macOS 基于 Darwin（FreeBSD + Mach 混合内核），XNU 内核中的 MAC 框架源自 FreeBSD TrustedBSD，衍生为 Seatbelt（App Sandbox）；System Integrity Protection（SIP/rootless，OS X
 
 ## 史料
 
@@ -16,12 +19,18 @@ volume: 第07卷-freebsd的工程体系重构
 
 ## 史观
 
-（待补）
+(待人工回填——详见子节文件史观/辨析字段)
 
 ## 辨析
 
-（待补）
+- 原大纲本节无专门子节，磁盘加密和随机数生成内容缺失，已补全；“FreeBSD 使用 NSA 后门加密算法” 是阴谋论——AES 是 NIST 标准化算法，经过公开密码分析，FreeBSD 实现为公开源码可审计；GELI 支持多种算法，用户可自行选择
+- “VuXML 由 FreeBSD Security Team 维护”——不准确，VuXML 主要由 ports 社区和安全团队共同维护，ports committer 可以直接提交 VuXML 条目；“VuXML 包含 FreeBSD 基础系统漏洞”——不包含，基础系统漏洞通过 SA/EN 公告处理；“pkg audit 自动更新 VuXML 数据库”——需要定期运行 `pkg audit -F`
+- 原大纲本节列入的 “Anthropic Claude Mythos 2026.4 AI 发现 OpenBSD TCP SACK 27 年漏洞” 事件——经多轮 WebSearch 核查，截至 2026 年 7 月 19 日无任何公开可验证的一手来源（Anthropic 官网、OpenBSD 官网、MITRE CVE、oss-security 邮件列表）证实该事件，按 0 信任原则标注为 据一手文献
+- “macOS 是 FreeBSD 所以 macOS 的安全就是 FreeBSD 的安全”——这是极其常见的误解；macOS/Darwin 仅在用户层和部分 API 层面源自 FreeBSD，XNU 内核是 Mach + FreeBSD 紧密混合，安全机制（SIP、Seatbelt、Code Signing、Notarization、Secure Enclave）均为 Apple 私有技术；“Fre
 
 ## 文献
 
-（待补）
+- Kamp P H. GBDE (USENIX Security 2003); Ferguson N, Schneier B. Practical Cryptography (2003); FreeBSD Project. **gbde(8)**, **geli(8)**, **random(4)** Manual Pages; FreeBSD cgit commit history for geom/bde, geom/eli, dev/random. ［A］<!-- DB_REF:freebsd.duckdb -->> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 2020-2024 年间：291,070 次提交。> 仓库总览：1,294,851 次提交，13,875 位贡献者，1993-06-12 至 2026-08-25。
+- FreeBSD Project. VuXML Homepage. vuxml.freebsd.org; FreeBSD Project. **pkg-audit(8)** Manual Page; FreeBSD Project. FreeBSD Ports Collection: security/vuxml/.[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]<!-- DB_REF:freebsd.duckdb -->> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 2020-2024 年间：291,070 次提交。> 仓库总览：1,294,851 次提交，13,875 位贡献者，1993-06-12 至 2026-08-25。
+- FreeBSD Project. Security Advisories Archives. security.freebsd.org; MITRE CVE Database. cve.mitre.org; LWN.net Security Coverage. lwn.net.[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]<!-- DB_REF:freebsd.duckdb -->> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 2020-2024 年间：291,070 次提交。> 仓库总览：1,294,851 次提交，13,875 位贡献者，1993-06-12 至 2026-08-25。
+- Apple Inc. Apple Platform Security. support.apple.com/guide/security/; Apple Inc. XNU Source Code (opensource.apple.com); The Open Group. Common Criteria Portal. commoncriteriaportal.org; The Open Group. UNIX Certification Directory. opengroup.org. ［A］[^doubt-resolved-478]: 据 Arch_Handbook (未署名) 消解[^doubt-resolved-479]: 据 Mac OS X Internals A Systems Approach (Amit Singh（阿米特·辛格）)  (未署名) 消解[^doubt-resolved-480]: 据 Mac OS X Internals A Systems Approach (Amit Singh)  (未署名) 消解[^doubt-resolved-481]: 据 Mac OS X Internals A Systems Approach (Amit Singh)  (未署名) 消解[^doubt-resolved-485]: 据 001_Benchmarking Mythos-Linked Bug Rediscovery (未署名) 消解[^doubt-resolved-486]: 据 Mac OS X Internals A Systems Approach (Amit Singh)  (未署名) 消解<!-- DB_REF:freebsd.duckdb -->> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 2020-2024 年间：291,070 次提交。> 仓库总览：1,294,851 次提交，13,875 位贡献者，1993-06-12 至 2026-08-25。

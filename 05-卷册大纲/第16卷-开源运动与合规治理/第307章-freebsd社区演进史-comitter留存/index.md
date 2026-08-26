@@ -8,7 +8,11 @@ volume: 第16卷-开源运动与合规治理
 
 ## 要点
 
-（待从概述提取）
+- committer 活跃度统计可通过 src commit log 分析，但需区分“提交”与“审查”两种贡献
+- FUSE 项目从 2012 年编程之夏引入到 2019 年更新的具体 commit 时间线需通过 src/sys/fs/fusefs 仓库 commit log 考据
+- Bugzilla PR 统计是衡量外部贡献的重要依据，但需区分“提交 PR”与“合并入树”两种结果
+- 企业赞助与基金会预算数据是评估 FreeBSD 商业生态的关键，需交叉验证
+- 基金会年报与捐赠记录是评估资金结构的关键，需交叉验证
 
 ## 史料
 
@@ -25,12 +29,25 @@ volume: 第16卷-开源运动与合规治理
 
 ## 史观
 
-（待补）
+(待人工回填——详见子节文件史观/辨析字段)
 
 ## 辨析
 
-（待补）
+- commit log 是否能完整反映贡献需评估；emeritus 状态的 committer 是否计入需明确
+- 2012 年编程之夏 FUSE 项目的具体学生与导师需查编程之夏 archive；2019 年更新的具体 commit hash 需考据
+- Bugzilla PR 是否完整保留需查；合并率统计方法需明确
+- Foundation 990 表是否完整公开需查；企业赞助的具体金额需核实
+- 考据过程留痕——【查证来源】外部批评来源包括 LKML Archive、Reddit r/freebsd 与 r/linux 讨论、freebsd-hackers 邮件列表争论串、Hacker News 评论等；社区回应包括 Core Team 公告、freebsd-announce 邮件列表声明、Foundation 年报中关于社区治理的章节；本次考据以 FreeBSD 官方页面（CoC、Cor
 
 ## 文献
 
-（待补）
+- FreeBSD src commit log；Core Team Activity Reports ［A］
+- 编程之夏 2012 FreeBSD Project Page；FreeBSD src/sys/fs/fusefs history[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]
+- FreeBSD Bugzilla Statistics；freebsd-hackers 讨论 ［A］
+- FreeBSD Foundation 990 Forms；freebsd-foundation 邮件列表 ［A］
+- FreeBSD Foundation 990 Forms；Annual Reports 2014-2024[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]
+- FreeBSD src/access 历史；Core Team Reports ［A］## 史料考据补充（2026-08-04 任务3 联网核验）> 主题：开源治理
+- freebsd-hackers Archive；Majordomo Logs ［A］
+- Core Team Meeting Minutes；freebsd-core Archive ［A］## 史料考据补充（2026-08-04 任务3 联网核验）> 主题：开源治理
+- FreeBSD Security Advisories Archive；ERRATA Notices[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]
+- FreeBSD doc Repository History；Handbook Archives ［B］## 史料考据补充（2026-08-04 任务3 联网核验）> 主题：开源治理

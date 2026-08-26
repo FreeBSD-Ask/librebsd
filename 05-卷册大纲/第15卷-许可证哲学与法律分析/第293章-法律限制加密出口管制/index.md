@@ -1,0 +1,60 @@
+---
+chapter: 第 293 章
+id: CH293
+volume: 15
+---
+
+## 要点
+
+- 美国国务院依据《国际武器贸易条例》（ITAR）将含加密功能的软件列入“军需品清单”，1990 年代初 Kerberos、PGP、SSL 等含加密代码的 BSD 软件一度被视为受管制物项，源代码出口需逐案申请许可
+- 1996 年 11 月 15 日克林顿政府签署第 13026 号行政命令（Executive Order 13026），修正第 12981 号行政命令（EO 12981，原签署于 1995 年 12 月 5 日），将非军用加密软件出口管制由国务院（ITAR）移交至商务部（EAR），BSD 加密相关代码出口门槛降低，但强加密仍需一次性审查 [已核证：依据 Federal Register Vol. 61 No. 224（1996-11-19）载入的 EO 13026 原文，明确"Executive Order 12981, as amended by Executive Order 13020 of October 12, 1996, is further amended as follows"，且 EO 13026 签署日为 1996 年 11 月 15 日]
+- 1990 年代 FreeBSD 与 OpenBSD 在国际镜像站点发布加密代码（如 Kerberos、SSL、IPsec）时面临法律不确定性，部分镜像站点（如南非、俄罗斯镜像）需个案评估，影响了 BSD 加密栈在境外部署的时序
+- ITAR 与 EAR 史料散落于美国国务院、商务部档案与 BSD 邮件列表，部分内部审批文件未解密，需通过公开判例与镜像站点时序交叉验证
+- **Junger v. Daley**（后被告变更为商务部长，称 Junger v. Walker），原告 Peter D. Junger 为凯斯西储大学（Case Western Reserve University）法学院教授，教授“计算机与法律”课程并撰写相关教材，1996 年欲在个人网站上发布自己编写的加密程序源码以作教学示例；1996 年 11 月 15 日克林顿总统签发第 13026 号行政令，将非军用加密产品出口管制管辖权从国务院（ITAR）移交商务部（EAR 出口管理条例），商务部将加密软件（含源码）列为 5D002 管制物项，要求出口许可，网络发布视为出口；Junger 于 1996 年 8 月在北俄亥俄联邦地区法院（N.D. Ohio）起诉商务部长等，主张 EAR 对加密源码的管制违反第一修正案（言论自由）、构成事前限制且模糊过度宽泛，侵犯学术自由；1998 年 7 月地区法院（James S. Gwin 法官）判决政府胜诉——8 F. Supp. 2d 708 (N.D. Ohio 1998)，认定源码“本质上具功能性”、不构成受保护言论，管制属内容中立并适用中间审查（O'Brien 标准）
+
+## 史观
+
+- 总纲第 11 条——国家政策，加密出口管制是国家主权对密码学技术流动的直接干预
+  - 辨析：ITAR（22 CFR Part 121，国务院管辖）在 1996 年 11 月 15 日 EO 13026 签署前对加密软件有完整管辖权，11 月 19 日 Federal Register 公开后管辖权移交至 EAR（15 CFR Part 730-774，商务部管辖），边界以 EO 13026 签署
+- 总纲第 12 条法律结构——Junger 案与 Bernstein 案（本卷 292.8）同属“代码即言论”宪法议题：政府以“功能性”为由管制加密源码出口，实质是把“能运行的表达”排除出第一修正案保护范围——法律结构的界定（什么是言论）直接决定技术交流的边界
+- 辨析：一审判决与第九巡回 Bernstein 案（1999 年三人合议庭认定源码受第一修正案保护）直接冲突，形成巡回法院分裂；Gwin 
+- 总纲第 12 条法律结构——“源码是言论”的法律确认使加密源码的学术交流、开源分发获得宪法层面保障：BSD 社区在 1990 年代分发含加密代码的版本（如 OpenSSL、Kerberos、IPSEC 相关代码）长期受出口管制阴影，Junger 与 Bernstein 两案为此类分发提供了宪法抗辩基础——法律结构的确认直接降低了开源加密软件分发的法律风险
+- 辨析：第六巡回判决的局限须标注——法院
+- 总纲第 24 条许可证——加密源码从“管制物”到“受宪法保护的言论”的转变，是法律结构与技术实践互动的典型案例：BSD 系开源系统对加密组件的集成需求（技术实践）与法院对源码表达性的确认（法律结构）相互推动，最终以出口管制条例修订（2000）收束——法律、技术与政治三者的长时段互动在此具体呈现
+- 辨析：须避免时代错置——2000 年条例修订后，加密软件出口管制主要针对军用与大规模杀伤性相关物项，
+- 总纲第 12 条法律结构——Welte 案确认 GPL 作为“附条件许可”（conditional license）在版权法框架内的可执行性：违反条件（不提供源码）→ 许可自动终止 → 分发构成侵权 → 可申请禁令；此法律结构是 copyleft 机制在司法层面的首次实证，直接支撑 BSD 系软件“以许可证自治”的制度前提（BSD 许可证虽无 copyleft 义务，但同属“附条件许可”结构）
+-
+
+## 辨析
+
+- ITAR（22 CFR Part 121，国务院管辖）在 1996 年 11 月 15 日 EO 13026 签署前对加密软件有完整管辖权，11 月 19 日 Federal Register 公开后管辖权移交至 EAR（15 CFR Part 730-774，商务部管辖），边界以 EO 13026 签署日为分界；“逐案申请”的实际审批率缺乏公开统计
+  - 文献：ITAR 22 CFR Part
+- 一审判决与第九巡回 Bernstein 案（1999 年三人合议庭认定源码受第一修正案保护）直接冲突，形成巡回法院分裂；Gwin 法官认为源码“功能性”优先于“表达性”，采纳政府在出口管制语境下的功能性论证——此立场与 Bernstein 案的 Patel 法官“计算机语言与德语法语无实质区别”形成鲜明对照，两案并读可见“代码是否言论”在 1990 年代末的美国司法界尚无共识 ［A］
+- 文献：J
+- 第六巡回判决的局限须标注——法院虽确认源码受第一修正案保护，但明确指出政府出于国家安全可依中间审查（intermediate scrutiny）施加合理限制，并援引“政府须证明损害真实存在而非臆测”的严格要求；判决未宣告加密出口管制本身违宪，仅确认审查标准；CRS 报告指出该判决与 Bernstein 案方向一致但与 Karn v. Department of State（第五巡回 1991）对“
+- 须避免时代错置——2000 年条例修订后，加密软件出口管制主要针对军用与大规模杀伤性相关物项，民用加密软件（含开源）基本自由分发；但“代码即言论”的宪法地位仍限于美国境内分析，其他国家（含中国）对加密软件与源码的管制另有法律框架，不能以美国判例推定他国结论；另须注意 Bernstein 案的撤回使第六巡回 Junger 判决成为援引主源，引用时应注明此判例格局 ［A］
+- 文献：Junger v.
+- 须辨析德国法与美国的差异——德国法院未直接回答“GPL 是合同还是许可”的英美法难题，而是以“违反许可条件=版权侵权”路径处理，避免了合同相对性问题；该路径后来被 Jacobsen v. Katzer（本卷 282.9）在美国联邦巡回法院呼应；另须说明 Welte 案判决书为德语，英文版为社区翻译，引用时应注明 ［A］
+- 文献：WELTE v. Sitecom Deutschland GmbH,
+
+## 文献
+
+- ITAR 22 CFR Part 121；NSC 加密档案；Zimmermann 调查档案[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]
+## 292.1.2 1996 年管辖权移交与 EAR 时代
+  - 要点：1996 年 11 月 15 日克林顿政府签署第 13026 号行政命令（Executive Order 13026），修正第 12981 号行政命令（EO 12981，原签署于 1995 年 12 月 5 日），将非军用加密软件出口管制由国务院（ITAR）移交至商务
+- Junger v. Daley, 8 F. Supp. 2d 708 (N.D. Ohio 1998)[Z/OL]. 美国北俄亥俄联邦地区法院. <https://casetext.com/case/junger-v-daley>；Executive Order 13026, 61 Fed. Reg. 58767（1996-11-15）；15 C.F.R. Part 730-774（EAR） ［A］
+- Junger v. Daley, 225 F.3d 732 (6th Cir. 2000)[Z/OL]. 美国第六巡回上诉法院，2000-04-04. <https://casetext.com/case/junger-v-daley>；ACLU. In Legal First, Federal Appeals Court is Unanimous[EB/OL]. (2000-04-04). <https://www.aclu.org/press-releases/legal-first-federal-appeals-court-unanimous-first-amendment-appli
+- Junger v. Daley, 225 F.3d 732 (6th Cir. 2000)；Bernstein v. U.S. Dept. of Justice, 176 F.3d 1132 (9th Cir. 1999)；Revisions to Encryption Items, 65 Fed. Reg. 2492（2000-01-12）；FreeBSD/OpenBSD/NetBSD 加密组件集成记录 ［A］
+<!-- NEWREF:2374 -->
+<!-- NEWREF:2375 -->
+<!-- NEWREF:2376 -->
+<!-- NEWREF:2377 -->
+<!-- NE
+- WELTE v. Sitecom Deutschland GmbH, 21 O 6123/04 (LG München I, 2004-05-19)[Z/OL]. 德国慕尼黑第一地方法院. <https://www.jbb.de/fileadmin/download/judgment_dc_munich_gpl.pdf>；Höppner J. The GPL prevails: An analysis of the first-ever Court decision on the validity and effectivity of the GPL[J]. SCRIPT-ed, 2004, 
+- ANDERSEN v. Monsoon Multimedia, Inc., 07-CV-8205 (S.D.N.Y. 2007)[Z/OL]. 美国纽约南区联邦地区法院. <https://www.courtlistener.com/>；Software Freedom Conservancy v. Best Buy, Inc. et al.（2009-12-14, S.D.N.Y.）；Free Software Foundation, Inc. v. Cisco Systems, Inc.（S.D.N.Y. 2008-12-11）；SFLC/SFC 官方新闻稿 ［A］
+- WALLACE v. Free Software Foundation, 1:05-cv-00618 (S.D. Ind. 2006)[Z/OL]. 美国印第安纳南区联邦地区法院. <https://www.groklaw.net/pdf/WallaceFSFGrantingDismiss.pdf>；VERSATA Software, Inc. v. Ameriprise Financial, Inc., A-14-CA-12-SS (W.D. Tex. 2014-03-11) Filing 28 Order[Z/OL]. <https://www.govinfo.gov/app/detail
+- HELLWIG v. VMware, Inc.（LG Hamburg 2016-08-07；OLG Hamburg 2019-02-28）[Z/OL]. 德国汉堡法院. <https://www.sfconservancy.org/news/2019/apr/02/vmware-no-appeal/>；Software Freedom Conservancy v. Vizio, Inc.（Orange County Superior Court, 2021-10-19）[Z/OL]. <https://sfconservancy.org/vizio> ［A］
+
+## 自反性声明
+
+本章所书皆是形式主义化的重构，并非对“真实的 BSD 历史”的呈现。本章的章节划分、事件选择、叙事策略、因果归因——全部基于编纂者的哲学设定。本章承认这些局限，不声称客观或中立，欢迎被更诚实的叙事所超越。

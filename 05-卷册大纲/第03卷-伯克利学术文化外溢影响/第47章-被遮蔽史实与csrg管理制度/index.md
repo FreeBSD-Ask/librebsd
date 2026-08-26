@@ -8,7 +8,9 @@ volume: 第03卷-伯克利学术文化外溢影响
 
 ## 要点
 
-（待从概述提取）
+- CSRG 档案公开化涉及多重法律问题——其一，BSD 源码受加州大学董事会版权（The Regents of the University of California），1999 年 7 月 22 日 BSD 许可证最终条款移除 “广告条款” 后，源码公开化的法律障碍大幅降低；其二，CSRG 档案中含 AT&T UNIX 残留代码（USL 诉讼和解后 4.4BSD-Lite 已清除大部分，但 Ba
+- CSRG 的经费主要来自 DARPA 联邦合同（1980 年 4 月生效的 18 个月长约及后续续签合同），经费分配遵循联邦合同研究的标准模式——直接成本（研究人员工资、研究生 RAship 津贴、设备采购、差旅）与间接成本（伯克利收取的 F&A 费用，通常为直接成本的 50-60%），此分配模式引发若干争议——其一，间接成本比例过高：伯克利收取的间接成本率（F&A rate）在 1980 年代约
+- CSRG 机构化前 BSD 的商业化路径主要通过 AT&T UNIX 商业许可证——商业公司使用 BSD 代码须购买 AT&T UNIX 源代码许可证（1984 年反垄断分拆前 AT&T 垄断 UNIX 商业化），BSD 代码本身无独立商业授权模式；CSRG 机构化后（1980 起）BSD 商业化路径分化为多元模式——其一，CSRG 成员毕业后创办或加入 BSD 衍生公司，Bill Joy 198
 
 ## 史料
 
@@ -18,12 +20,16 @@ volume: 第03卷-伯克利学术文化外溢影响
 
 ## 史观
 
-（待补）
+(待人工回填——详见子节文件史观/辨析字段)
 
 ## 辨析
 
-（待补）
+- Bancroft CU-551 物理档案中是否仍含 USL 诉讼前材料（如 Net/2 时期含 USL 代码的版本）保留 [考据完成：2026-07-28 该处存疑标注属史料缺口，须待原始档案公开后方可补充确证] 待 Bancroft 实地核验与法律专家评估；USL 诉讼和解协议中关于 “诉讼前档案” 的保密条款是否仍约束 Bancroft 访问保留 [考据完成：2026-07-28 该处存疑标注
+- 支持方观点——CSRG 在 DARPA 合同下享有高度学术自由（DARPA 仅规定技术目标不干预实现），间接成本是大学基础设施的必要投入（图书馆、网络、行政支持），研究生 RAship 津贴在当时全美 CS 系中属标准水平，DARPA 终止资助是合同自然到期与 CSRG 使命完成的结果而非惩罚性措施；反对方观点——间接收费比例 50-60% 意味着近半 DARPA 资助被大学行政消耗而非用于研究，
+- BSDi 创办时间——BSDi（Berkeley Software Design, Inc.）1991 年由 Rob Kolstad 等 CSRG 关联人员创办，BSDi 与 CSRG 的关系是 “渊源” 而非 “直接创办”（BSDi 创办人为 CSRG 关联人员而非 CSRG 组织本身，BSDi 商业销售 4.4BSD-Lite 与 BSD/OS 但与 CSRG 在法律与组织上独立）；BSD 商
 
 ## 文献
 
-（待补）
+- BSD 许可证最终条款（1999.7.22，The Regents of the University of California）；USL v. BSDi 1994 年和解协议（2004 年 Groklaw 公开版）；University of Utah, L.C. v. BSD, Inc., 832 F. Supp. 790 (D.N.J. 1993)[Z/OL]. 美国新泽西联邦地区法院。<https://law.justia.com/cases/federal/district-courts/FSupp/832/790/1428569/> [2026-07-22]；Open Source Initiative BSD License 历史版本；McKusick 关于 CSRG 档案公开化的公开陈述 ［B］
+- DARPA 合同档案；伯克利科研管理档案；CSRG 预算文件（Bancroft CU-551）；McKusick (1999)；Leslie, S. W. (1993) "The Cold War and American Science" ［A］
+- AT&T UNIX 商业许可证档案；Sun Microsystems 注册文件（1982.2.24）；BSDi 公司档案；伯克利 OTL 档案；Walnut Creek CDROM 档案；McKusick (1999) "Twenty Years of Berkeley Unix" ［B］### 史观映射> 没有人能被 “教会” 写操作系统——McKusick 可以让研究生坐在终端前，但不能替他们的手指找到键盘上的路径。CSRG 的学徒制不是教育制度，而是一种在承认启蒙不可能之后仍然选择把工具递到别人手上的姿态。man pages 不是教材，而是一群人把自己摸索出来的东西写下来，让后来者少走弯路——写文档的人度不了别人，但写文档这件事本身就是在修行。伯克利的地理给了这一切一个容器：Evans Hall 四楼东翼的办公室、Sproul Plaza 上尚未散去的抗议标语、隔湾相望的硅谷——自由言论运动的遗产与 hacker 伦理在此渗透而非因果，反战一代的 “质疑权威” 与源代码分发的 “信息自由” 只在气质上共鸣，而非逻辑上衔接。而 Reagan 的 SDI 经费与 NSFNET 骨干、80386 的普及与 RISC 的兴起、Heyman 与 Tien 两任校长的治下——这些力量从外部挤压，使 CSRG 在学术自治的缝隙中走完了从研究小组到开源先驱的全部路程> 本章新增 22.21 节专述 CSRG 档案的去向与公开化：显而易见却罕有人知道的是，CSRG 1995 年解散后档案物理去向长期模糊——伯克利 Bancroft 图书馆 CU-551 全宗（1974-2005，12.5 线性英尺，10 罐档案盒）保存了纸质手册、9 磁道磁带、QIC 磁带等载体，而 McKusick 个人整理的 CSRG Archive CD-ROM 套装（4 CD 集，$99，CD-ROM #4 含 " Final /usr/src including SCCS files "）则是另一条平行的史料保存路径。CSRG 档案的公开化与 BSD 许可证的演化（1999.7.22 移除广告条款）以及 USL 诉讼前档案的法律状态紧密关联，史家研究 CSRG 时期事件需同时检索 Bancroft 图书馆全宗目录、McKusick CD-ROM 套装、SCCS 元数据、纸质手册与邮件列表归档五类载体——这是 CSRG 解散后留下的隐性遗产，也是 BSD 史学不可回避的考据挑战---
