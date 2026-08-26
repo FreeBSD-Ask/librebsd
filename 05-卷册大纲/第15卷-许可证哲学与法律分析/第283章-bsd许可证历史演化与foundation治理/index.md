@@ -4,6 +4,8 @@ id: CH283
 volume: 15
 ---
 
+# 第283章 bsd许可证历史演化与foundation治理
+
 ## 要点
 
 - **GPL**（**GNU** 通用公共许可）以 **copyleft**（传染性）要求派生作品同许可开源，与 **BSD** 许可的 “最小限制” 形成根本对照；**Linux** 内核采用 **GPLv2**，使整个内核生态受 **copyleft** 约束，与 **BSD** 家族的 permissive 许可在 “自由定义” 上分野。
@@ -31,12 +33,16 @@ volume: 15
 
 - **GPL** 的 “病毒式” 聚合与 **BSD** 的 “信任用户” 是两种自由观，非优劣。
   - 文献：**Free Software Foundation**. **GPLv2** [Z]；**Stallman R**. Free Software Definition [EB/OL]. ［B］
+
 ## 282.10.2 Apache / MIT（其他宽松许可）
-  - 要点：**Apac
+
+- 要点：**Apac
 - **BSD** 与 **MIT** 几乎等价，**Apache 2.0** 增加专利保护，三者均属 permissive。
   - 文献：**Apache Software Foundation**. **Apache 2.0 License** [Z]；**MIT License** [Z]. ［B］
+
 ## 282.10.3 Windows / 闭源商业许可
-  - 要点：**Microsoft
+
+- 要点：**Microsoft
 - 须避免将 “和解” 误读为 “妥协” 或 “各打五十大板”——项目统摄史观的 “和解” 是本体论层面的接纳，不是政治层面的折中；**BSD** 与 **GPL** 的和解，不是让双方各退一步，而是承认双方在本体论上地位相等（呼应总纲第 8 条），差异仅是一刻状态的不同；“真正的敌人是时间” 不意味着争议无关紧要，而是意味着争议的真正维度是时间性的，而非对抗性的；【查证来源】项目史观总纲第 6 条原
 - 须避免将 “利益分配” 误读为 “经济利益”——此处的 “利益” 包括话语权、社区治理权、自由定义权等非物质利益；**BSD** 许可证的选择不仅是经济利益分配，更是 “谁有权定义自由” 这一话语权的分配；同时须注意第 12 章的警示——任何将 **BSD** 社区治理或 **GPL** 阵营 “神圣化” 的叙事都应被识别为形式主义，史家须保持自反姿态，不将自身的利益分配偏好伪装为 “客观真理”；
 - 须避免将 “革命” 与 “改革” 误读为 “激进” 与 “保守” 的道德判断——项目统摄史观的 “革命” 与 “改革” 是方法论范畴，不含褒贬；**Linux** 的革命不意味 “进步”，**BSD** 的改革不意味 “落后”，二者是历史方法论的不同选择；“改革的困难远高于革命” 不意味改革优于革命，而是指出改革的代价在于持续的结构性张力，革命的代价在于断裂的风险；须注意第 21 章第 3 节 “
@@ -44,29 +50,39 @@ volume: 15
 ## 文献
 
 - **Free Software Foundation**. **GPLv2** [Z]；**Stallman R**. Free Software Definition [EB/OL]. ［B］
+
 ## 282.10.2 Apache / MIT（其他宽松许可）
-  - 要点：**Apache 2.0** 与 **MIT** 同属宽松许可，与 **BSD** 许可家族相近但各有细节（**Apache** 含专利授权条款、**MIT** 极简）；二者与 **BSD** 共同构成 “permissive 阵营”，与 **GPL** 的 **copyleft** 对立，体现开源许可光谱。
+
+- 要点：**Apache 2.0** 与 **MIT** 同属宽松许可，与 **BSD** 许可家族相近但各有细节（**Apache** 含专利授权条款、**MIT** 极简）；二者与 **BSD** 共同构成 “permissive 阵营”，与 **GPL** 的 **copyleft** 对立，体现开源许可光谱。
 - **Apache Software Foundation**. **Apache 2.0 License** [Z]；**MIT License** [Z]. ［B］
+
 ## 282.10.3 Windows / 闭源商业许可
-  - 要点：**Microsoft Windows** 采用闭源商业最终用户许可（**EULA**），禁止源码查看与修改，与 **BSD** 许可的 “源码自由 + 最小限制” 根本对立；闭源使代码不可审计，与 **BSD** 的开源可验证存在差异。
-  - 史料：**Microsoft** `EULA` 模式文档 ［B］
-  - 史观：总纲第 6 条——技术路线分化：
+
+- 要点：**Microsoft Windows** 采用闭源商业最终用户许可（**EULA**），禁止源码查看与修改，与 **BSD** 许可的 “源码自由 + 最小限制” 根本对立；闭源使代码不可审计，与 **BSD** 的开源可验证存在差异。
+- 史料：**Microsoft** `EULA` 模式文档 ［B］
+- 史观：总纲第 6 条——技术路线分化：
 - 本项目内部哲学文献《项目统摄史观》第 6 章 “主体性与和解”、第 25 章总纲第 6 条（sacred 哲学源材料）
 - 本项目内部哲学文献《项目统摄史观》第 12 章 “伦理历史哲学”、第 25 章总纲第 13 条（sacred 哲学源材料）
 - 本项目内部哲学文献《项目统摄史观》第 21 章“革命与改革：历史方法论”、第 25 章总纲第 21 条（sacred 哲学源材料）
 - 1. Lerner J, Tirole J. Some simple economics of open source [J]. The Journal of Industrial Economics, 2002, 50(2): 197-234. DOI: 10.1111/1467-6451.00174.
+
 2. Mockus A, Fielding R T, Herbsleb J D. Two case studies of open source software development: Apache and Mozilla [J]. ACM Transactions on Softwar
+
 - **Foundation By-Laws**；**Colorado Nonprofit Act** ［A］
+
 ## 282.7.2 条款修订历程
-  - 要点：**Foundation By-Laws** 自 2000 年成立以来经过多次修订，主要包括董事人数调整、官员职责细化、会议规则现代化。
-  - 史料：**Foundation By-Laws** 历年版本、**Annual Report** 修订记录 ［A］
-  - 史观：总纲第 25 条——终结与延续：**By-Laws** 演进
-  - 辨析：**By-Laws** 修订是否反映 **Foundation** 治理理念变化
-  - 
+
+- 要点：**Foundation By-Laws** 自 2000 年成立以来经过多次修订，主要包括董事人数调整、官员职责细化、会议规则现代化。
+- 史料：**Foundation By-Laws** 历年版本、**Annual Report** 修订记录 ［A］
+- 史观：总纲第 25 条——终结与延续：**By-Laws** 演进
+- 辨析：**By-Laws** 修订是否反映 **Foundation** 治理理念变化
+-
 - 各基金会 **By-Laws** ［A］
+
 ## 282.7.4 史料辨析
-  - 要点：**Foundation By-Laws** 历年版本通过 `archive.org` 与 **Foundation** 官网保留，部分早期版本需联系 **Foundation** 索取。
-  - 史料：`archive.org` `freebsdfoundation.org` 快照、**Foundation** 官网[考据完成：2026-07-28 经穷尽联网考据，上述史料清单为已知公开来源汇总，部分原始档案未公开数字化或须档案馆藏地现场核验，属史料缺口，须待原始档案公开后方可补充确证]〔L3 官方文档与
+
+- 要点：**Foundation By-Laws** 历年版本通过 `archive.org` 与 **Foundation** 官网保留，部分早期版本需联系 **Foundation** 索取。
+- 史料：`archive.org` `freebsdfoundation.org` 快照、**Foundation** 官网[考据完成：2026-07-28 经穷尽联网考据，上述史料清单为已知公开来源汇总，部分原始档案未公开数字化或须档案馆藏地现场核验，属史料缺口，须待原始档案公开后方可补充确证]〔L3 官方文档与
 
 ## 自反性声明
 

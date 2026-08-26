@@ -4,6 +4,8 @@ id: CH111
 volume: 06
 ---
 
+# 第111章 oracle收购与openzfs社区分叉
+
 ## 要点
 
 - Oracle 于 2009 年 4 月 20 日宣布以 74 亿美元收购 Sun Microsystems，交易于 2010 年 1 月 27 日完成；Oracle 收购 Sun 的核心商业动机包括：获得 Java 编程语言和平台的控制权、获得 Solaris 操作系统及 SPARC 处理器技术、获得 MySQL 数据库（后续引发 MySQL 开源社区 fork 为 MariaDB）、获得 Sun 的硬件产品线和专利组合；收购后 Oracle CEO Larry Ellison 明确表示将以 “专有软件” 模式运营 Solaris，逐步关闭 OpenSolaris 项目；OpenSolaris 治理委员会（OGB, OpenSolaris Governing Board）于 2010 年 8 月在 Oracle 任命的新领导层下解散；2010 年 8 月 13 日，一份内部 Oracle 备忘录泄露，显示 Oracle 将不再以开源方式发布 Solaris 后续版本，而是改为封闭开发、仅发布二进制更新
@@ -17,7 +19,7 @@ volume: 06
 - 总纲第 24 条——许可证：Oracle 收购 Sun 是开源史上最具争议的商业事件之一，它直接证明了单一商业实体控制开源项目的风险——尽管 OpenSolaris 以 CDDL 开源，Oracle 作为版权持有者可以选择不再发布新版本的开源代码，社区无法强迫 Oracle 继续开源贡献；这是 CDDL/MPL 类文件级 copyleft 许可证相对于 GPL 的一个弱点
   - 辨析：Oracl
 - 总纲第 25 条——终结与延续：OpenZFS 的成立标志着 ZFS 从 “Sun/Oracle 的项目” 彻底转变为 “社区拥有的项目”——这是一个历史终结与新生的节点：Sun 时代的 ZFS 终结了，社区自治的 ZFS 诞生了；Bylaws 这一形式化治理文件的制定，体现了开源项目从 “仁慈独裁者” 模式向制度化治理的转变
-  - 辨析：OpenZFS 成立的精确时间：第一届 OpenZFS 
+  - 辨析：OpenZFS 成立的精确时间：第一届 OpenZFS
 - 总纲第 6 条——技术路线分化：ZoL 的模块加载策略是法律约束下的工程妥协——ZFS 无法进入主线内核，因此通过 DKMS/LKM 方式在主线外分发；这种 “核外生存” 模式虽然有性能和维护成本，但在法律灰区中开辟了一条可行路径
   - 辨析：需澄清：Linux 内核的 GPL 许可范围问题——Linux 内核 COPYING 文件明确指出 "kernel modules are conside
 

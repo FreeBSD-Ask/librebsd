@@ -4,6 +4,8 @@ id: CH291
 volume: 15
 ---
 
+# 第291章 os比较史观审视与采访复核
+
 ## 要点
 
 - Linux 内核作为 GPL 项目，其跨项目影响主要通过“内核模块 + 用户态工具”模式扩散——Linux 内核模块（如 eBPF、cgroups、namespaces）被其他开源项目采用；Linux 基金会托管项目（如 Kubernetes、Node.js）以宽松许可证发布；Linux 阵营的跨项目影响以“生态规模”见长，BSD 阵营以“许可证宽松性”见长；两者影响模式差异源于 GPL 与 BSD 许可证的法律结构
@@ -37,14 +39,16 @@ volume: 15
 ## 文献
 
 - Linux 基金会项目列表；许可证对比研究[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]
+
 ## 290.11.2 GNU 项目对其他开源项目的效应对比
-  - 要点：GNU 项目通过 GPL 工具链（GCC、glibc、bash、coreutils、Emacs 等）影响其他开源项目；GNU 工具链长期是 Linux 发行版默认工具链，也是 BSD 项目早期默认工具链（后被 Clang/LLVM 替代）；GNU 项目跨项目影响以“工具链基础”见长，BSD 跨项目影响以“许可证与设
-- Linux Foundation. Projects [EB/OL]. <https://www.linuxfoundation.org/projects>; GNU Project. Official Website [EB/OL]. <https://www.gnu.org/>; FreeBSD 10.0 Release Notes [EB/OL]. (2014-01-31). <https://www.freebsd.org/releases/10.0R/relnotes/>; OpenSolaris. Archive [EB/OL]. <https://www.opensolaris.
+
+- 要点：GNU 项目通过 GPL 工具链（GCC、glibc、bash、coreutils、Emacs 等）影响其他开源项目；GNU 工具链长期是 Linux 发行版默认工具链，也是 BSD 项目早期默认工具链（后被 Clang/LLVM 替代）；GNU 项目跨项目影响以“工具链基础”见长，BSD 跨项目影响以“许可证与设
+- Linux Foundation. Projects [EB/OL]. <https://www.linuxfoundation.org/projects>; GNU Project. Official Website [EB/OL]. <https://www.gnu.org/>; FreeBSD 10.0 Release Notes [EB/OL]. (2014-01-31). <https://www.freebsd.org/releases/10.0R/relnotes/>; OpenSolaris. Archive [EB/OL]. <<https://www.opensolaris>.
 - Linux Foundation. Projects [EB/OL]. <https://www.linuxfoundation.org/projects>; FreeBSD 10.0 Release Notes [EB/OL]. (2014-01-31). <https://www.freebsd.org/releases/10.0R/relnotes/>; 项目史观总纲第六章“主体性与和解”[Z]. 原材料/哲学/项目统摄史观/第 6 章.md; 项目史观总纲第二十四章“许可证哲学”[Z]. 原材料/哲学/项目统摄史观/第 24 章.md.
 - 项目史观总纲第五章“道与术的辩证”[Z]. 原材料/哲学/项目统摄史观/第 5 章.md; q.md“道与术的辩证”[Z]. 原材料/哲学/原始哲学/; FreeBSD Project. FreeBSD License [EB/OL]. <https://www.freebsd.org/copyright/freebsd-license/>.
 - 项目史观总纲第六章“主体性与和解”[Z]. 原材料/哲学/项目统摄史观/第 6 章.md; q.md“和解的深度”[Z]. 原材料/哲学/原始哲学/; openbsd.db L3.2.1 查询报告； openbsd.db L7.2.1 查询报告。
 - 项目史观总纲第八章“自由的张力”[Z]. 原材料/哲学/项目统摄史观/第 8 章.md; q.md“自由的张力”[Z]. 原材料/哲学/原始哲学/; Torvalds L. LinuxFocus Interview [EB/OL]. (1998-03). <https://linuxdoc.org/linuxfocus/English/March1998/article27.html>.
-- 项目史观总纲第十章“边缘者贡献”[Z]. 原材料/哲学/项目统摄史观/第 10 章.md; q.md“局外人姿态”[Z]. 原材料/哲学/原始哲学/; OpenSSH. Official History [EB/OL]. <https://openssh.org/history.html>; Varnish Software. Official History [EB/OL]. <https://varnish-software.com/varnish-history/>; Mewburn L. The Design and Implementation of the NetBSD rc.d 
+- 项目史观总纲第十章“边缘者贡献”[Z]. 原材料/哲学/项目统摄史观/第 10 章.md; q.md“局外人姿态”[Z]. 原材料/哲学/原始哲学/; OpenSSH. Official History [EB/OL]. <https://openssh.org/history.html>; Varnish Software. Official History [EB/OL]. <https://varnish-software.com/varnish-history/>; Mewburn L. The Design and Implementation of the NetBSD rc.d
 - 项目史观总纲第二十四章“许可证哲学”[Z]. 原材料/哲学/项目统摄史观/第 24 章.md; FreeBSD Project. FreeBSD License [EB/OL]. <https://www.freebsd.org/copyright/freebsd-license/>; Free Software Foundation. GNU Licenses [EB/OL]. <https://www.gnu.org/licenses/>; OpenSolaris. CDDL [EB/OL]. <https://www.opensolaris.org/>; FreeBSD 8.0 Rele
 
 ## 自反性声明

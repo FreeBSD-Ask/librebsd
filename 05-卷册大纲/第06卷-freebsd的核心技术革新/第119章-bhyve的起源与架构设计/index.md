@@ -4,6 +4,8 @@ id: CH119
 volume: 06
 ---
 
+# 第119章 bhyve的起源与架构设计
+
 ## 要点
 
 - bhyve 最初由 Neel Natu（nneul@）在 NetApp 工作期间开发，内部项目名为 "BSD Hypervisor"（缩写 BHyVe，发音 "bee hive"，后简化为 bhyve）；Peter Grehan（grehan@）后来成为项目主要维护者与核心贡献者，持续推动 bhyve 进入 FreeBSD 基础系统；在 bhyve 之前，FreeBSD 平台虚拟化方案主要依赖 Xen dom0/domU 移植与 QEMU/KVM 兼容层，缺乏原生的、BSD 许可的 Type-2 hypervisor 实现；bhyve 代码最初于 2011 年在 FreeBSD Perforce 仓库的 //depot/projects/bhyve/ 分支开发，后通过 SVN 导入 FreeBSD-CURRENT
@@ -21,7 +23,7 @@ volume: 06
 - 总纲第 19 条——信息技术标准演进与硬件进步同步：bhyve 的发布时机与 Intel VT-x/EPT 在服务器 CPU 中的普及高度同步——Nehalem 架构于 2008 年发布，到 2014 年 EPT 已成为服务器 CPU 标配；FreeBSD 选择在硬件虚拟化成熟后而非提前发布 hypervisor，体现了 BSD 工程文化中 “不抢跑、等硬件就绪” 的务实传统
   - 辨析：原文标
 - 总纲第 3 条——形式主义膨胀的克制：bhyve 架构设计体现了典型的 BSD 极简主义哲学——KVM 架构中 QEMU 承担了复杂的设备模拟与跨平台兼容层，代码量庞大；bhyve 则刻意保持简洁，内核模块仅实现绝对必要的硬件辅助虚拟化核心逻辑，设备模拟保持最小集合，无遗留设备兼容包袱；bhyve 用户态代码量远小于 QEMU，体现了 “够用就好、最小实现” 的工程克制
-  - 辨析：bhyve 
+  - 辨析：bhyve
 - 总纲第 2 条——实践先于理论：引导链整合并非预先规划的架构组件，而是源于 “运行非 FreeBSD 客户机” 这一实际部署需求——bhyveload 解决 FreeBSD 引导、grub2-bhyve 解决多系统引导、UEFI 固件解决 Windows 引导，三者都是按需添加、逐步演进的，而非一开始就设计了统一的引导框架
   - 辨析：bhyve UEFI 固件与 Clover/OpenCore
 
@@ -35,11 +37,11 @@ volume: 06
 
 ## 文献
 
-- FreeBSD Project. **bhyve(8)** Manual Page [EB/OL]. [2026-07-19]. <https://www.freebsd.org/cgi/man.cgi?query=bhyve&sektion=8>; Grehan P. Bhyve: The BSD Hypervisor [C]//BSDCan 2012. Ottawa, 2012; FreeBSD Project. FreeBSD 10.0-RELEASE Release Notes [EB/OL]. (2014-01-20)[2026-07-19]. <https://www.freebs
+- FreeBSD Project. **bhyve(8)** Manual Page [EB/OL]. [2026-07-19]. <https://www.freebsd.org/cgi/man.cgi?query=bhyve&sektion=8>; Grehan P. Bhyve: The BSD Hypervisor [C]//BSDCan 2012. Ottawa, 2012; FreeBSD Project. FreeBSD 10.0-RELEASE Release Notes [EB/OL]. (2014-01-20)[2026-07-19]. <<https://www.freebs>
 - FreeBSD Project. FreeBSD License [EB/OL]. [2026-07-19]. <https://www.freebsd.org/copyright/freebsd-license/>; Kivity A, Kamay Y, Laor D, et al. kvm: the Linux Virtual Machine Monitor [C]//Proceedings of the Linux Symposium. 2007, 1: 225-230; bhyve source tree copyright headers. github.com/freebsd/fr
 - FreeBSD Project. FreeBSD 10.0-RELEASE Release Notes [EB/OL]. (2014-01-20)[2026-07-19]. <https://www.freebsd.org/releases/10.0R/relnotes/>; FreeBSD Project. **bhyve(8)**, **vmm(4)**, **vmx(4)**, **virtio(4)** Manual Pages; Kerner S M. Open Source FreeBSD 10 Takes on Virtualization [EB/OL]. ServerWatc
 - FreeBSD Project. **bhyve(8)**, **bhyveload(8)**, **bhyvectl(8)**, **vmm(4)**, **libvmmapi(3)** Manual Pages; Grehan P, Natu N. bhyve: The BSD Hypervisor Architecture [EB/OL]. BSDCan 2012 Slides; Dexter M. BHyVe: The BSD HyperVisor In Depth [C]//EuroBSDCon 2012. 2012; FreeBSD Handbook. Virtualization
-- FreeBSD Project. **bhyveload(8)** Manual Page; FreeBSD Wiki. bhyve/Windows [EB/OL]. [2026-07-19]. <https://wiki.freebsd.org/bhyve/Windows>; Petersson L. Porting UEFI to bhyve [C]//BSDCan 2015. Ottawa, 2015; Grehan P. grub2-bhyve GitHub repository [EB/OL]. [2026-07-19]. <https://github.com/grehan-fre
+- FreeBSD Project. **bhyveload(8)** Manual Page; FreeBSD Wiki. bhyve/Windows [EB/OL]. [2026-07-19]. <https://wiki.freebsd.org/bhyve/Windows>; Petersson L. Porting UEFI to bhyve [C]//BSDCan 2015. Ottawa, 2015; Grehan P. grub2-bhyve GitHub repository [EB/OL]. [2026-07-19]. <<https://github.com/grehan-fre>
 - iXsystems. TrueNAS CORE Documentation: Virtual Machines [EB/OL]. [2026-07-19]. <https://www.truenas.com/docs/core/>; iXsystems. FreeNAS 11.3-U5 User Guide: Virtual Machines [EB/OL]. [2026-07-19]. <https://www.ixsystems.com/documentation/freenas/11.3-U5/virtualmachines.html>; TrueNAS Project. TrueNAS
 
 ## 自反性声明

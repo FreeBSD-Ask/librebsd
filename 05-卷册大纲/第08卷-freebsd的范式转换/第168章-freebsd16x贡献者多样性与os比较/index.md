@@ -29,11 +29,12 @@ volume: 08
 
 - Linux 的 Rust 尝试与 FreeBSD 的保守 C 基调反映不同风险偏好；“跟随 Linux 特性”不等于技术劣势，而是生态位差异。
   - 文献：Linux Kernel. Release Notes [EB/OL]；FreeBSD. Project Reports [EB/OL]. ［B］
+
 ## 167.10.2 Windows 11 / Windows Server 2025
   
 - 考据过程留痕——【查证来源】(1) 项目史观总纲第 13 条原文经 据原文第 25 章 第 17 行一手核验，原文表述“法律与道德是利益分配。任何道德问题本质上是利益问题，社区治理亦是形式主义的政治产物”；(2) FreeBSD Licensing Policy 经 docs.freebsd.org/en/articles/license-guide/ 一手核验，第 2.1 节 Guiding P
 - 本审视不否定 BSD 许可替代品的技术价值，而是揭示“BSD 纯洁化”文化叙事的形式主义性质；形式主义不等于虚假，但形式主义化的叙事会遮蔽实际的多方协作谱系；`gnu/` 目录移除的符号意义大于实际工程意义——base system 功能未因移除而损失，但“GNU 时代终结”的文化叙事被形式化确立
-  - 文献：原材料/哲学/项目统摄史观/第 25 章.md；Lattner C. LLVM: A 
+  - 文献：原材料/哲学/项目统摄史观/第 25 章.md；Lattner C. LLVM: A
 - 本审视不否定革命式方法论的适用场景——Linux 的革命式替换在统一生态（如 systemd 统一 init 生态）上有优势；FreeBSD 的改革式路径在兼容性保障上有优势，但代价是工程周期长、技术债务积累；“革命与改革”不是非此即彼，而是历史方法论的分歧，FreeBSD 的选择基于其工程文化的连续性
   - 文献：原材料/哲学/项目统摄史观/第 25 章.md；FreeBSD Project.
 - 本综合审视避免将“和解”叙事浪漫化——base/ports 分层架构的和解伴随着代价（bsddialog 重复开发、部分功能差异），和解不是无成本的协调，而是各方在权衡代价后的有限共识；0 信任原则提示——“GPL 清零”叙事本身可能被事后重构，实际 base system 中可能仍存在未被识别的 GPL 组件或 LGPL 组件 [考据完成：2026-07-28 16.0-CURRENT base
@@ -41,10 +42,12 @@ volume: 08
 ## 文献
 
 - Linux Kernel. Release Notes [EB/OL]；FreeBSD. Project Reports [EB/OL]. ［B］
+
 ## 167.10.2 Windows 11 / Windows Server 2025
-  - 要点：Microsoft Windows 11（2021）与 Server 2025 强化安全启动、虚拟化（Hyper-V）、WSL2（原生 Linux 内核）与云端集成；与 FreeBSD 16.x 的服务器/嵌入式路线在云与虚拟化上重叠，WSL2 使 Linux/BSD 语义在 Windows 上可用，间接削弱独立 BSD 在桌面的影响力。
-  -
-- 原材料/哲学/项目统摄史观/第 25 章.md；FreeBSD Project. FreeBSD Licensing Policy [EB/OL]. [2026-07-23]. <https://docs.freebsd.org/en/articles/license-guide/>; Free Software Foundation. Various Licenses and Comments about Them [EB/OL]. [2026-07-23]. <https://www.gnu.org/licenses/license-list.html#FreeBSD>; FreeBSD 
+
+- 要点：Microsoft Windows 11（2021）与 Server 2025 强化安全启动、虚拟化（Hyper-V）、WSL2（原生 Linux 内核）与云端集成；与 FreeBSD 16.x 的服务器/嵌入式路线在云与虚拟化上重叠，WSL2 使 Linux/BSD 语义在 Windows 上可用，间接削弱独立 BSD 在桌面的影响力。
+-
+- 原材料/哲学/项目统摄史观/第 25 章.md；FreeBSD Project. FreeBSD Licensing Policy [EB/OL]. [2026-07-23]. <https://docs.freebsd.org/en/articles/license-guide/>; Free Software Foundation. Various Licenses and Comments about Them [EB/OL]. [2026-07-23]. <https://www.gnu.org/licenses/license-list.html#FreeBSD>; FreeBSD
 - 原材料/哲学/项目统摄史观/第 25 章.md；Lattner C. LLVM: A Compilation Framework for Lifelong Program Analysis & Transformation [D]. University of Illinois at Urbana-Champaign, 2002; OpenBSD Project. OpenBSD 5.0 Release Notes [EB/OL]. (2011)[2026-07-22]. <https://www.openbsd.org/50.html>; Siciliano A S. bsddialog P
 - 原材料/哲学/项目统摄史观/第 25 章.md；FreeBSD Project. FreeBSD 10.0-16.0 Release Notes [EB/OL]. (2014-2026)[2026-07-22]. <https://www.freebsd.org/releases/>; Siciliano A S. bsddialog Project [EB/OL]. (2021-03-27)[2026-07-22]. <https://gitlab.com/alfix/bsddialog>; FreeBSD FreshPorts. devel/libfigpar, devel/libdpv,
 - 原材料/哲学/项目统摄史观/第 25 章.md；FreeBSD src repository cgit [EB/OL]. [2026-07-22]. <https://cgit.freebsd.org/src/>; FreeBSD FreshPorts. misc/dialog, lang/gcc [EB/OL]. [2026-07-22]. <https://www.freshports.org/>; Linuxiac. FreeBSD Base System No Longer Contains Any GPL-Licensed Software [EB/OL]. (2026-07-17)

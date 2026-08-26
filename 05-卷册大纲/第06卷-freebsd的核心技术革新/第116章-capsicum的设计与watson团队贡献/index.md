@@ -31,9 +31,9 @@ volume: 第06卷-freebsd的核心技术革新
 
 ## 辨析
 
-- 原大纲称 Capsicum 论文作者为 "Watson、Anderson、Laurie、Kenneally" 系名字讹误，第四作者经论文 PDF 核实为 Kris Kennaway（FreeBSD 长期 committer，Google 安全工程师），已修正；Capsicum 论文发表于 USENIX Security 2010，会议精确日期为 2010 年 8 月 11-13 日（USENIX 
+- 原大纲称 Capsicum 论文作者为 "Watson、Anderson、Laurie、Kenneally" 系名字讹误，第四作者经论文 PDF 核实为 Kris Kennaway（FreeBSD 长期 committer，Google 安全工程师），已修正；Capsicum 论文发表于 USENIX Security 2010，会议精确日期为 2010 年 8 月 11-13 日（USENIX
 - 原大纲文献列表多次错误列入"Lucas 2018 'FreeBSD Mastery: Storage Essentials’"——Storage Essentials 是存储主题书籍，与 Capsicum/CHERI 无关，属于模板复制时未清理的无关文献，已全部删除并替换为 Capsicum/CHERI 相关权威文献；原大纲还列入"Skorstengaard, Devriese, Birkedal
-- 原大纲本节称“剑桥大学许可策略史料考证”但列入大量与 Capsicum 无关的文献（如 Lucas Storage Essentials、Skorstengaard CHERI 论文等），已修正为 Capsicum 许可策略专属史料；Capsicum 是否曾使用过其他许可证名称（如"BSD License""University of Cambridge License"）经剑桥项目页面核实均为 
+- 原大纲本节称“剑桥大学许可策略史料考证”但列入大量与 Capsicum 无关的文献（如 Lucas Storage Essentials、Skorstengaard CHERI 论文等），已修正为 Capsicum 许可策略专属史料；Capsicum 是否曾使用过其他许可证名称（如"BSD License""University of Cambridge License"）经剑桥项目页面核实均为
 
 ## 文献
 

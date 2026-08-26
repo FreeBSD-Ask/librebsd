@@ -4,6 +4,8 @@ id: CH286
 volume: 15
 ---
 
+# 第286章 自由软件与开源软件术语史考据
+
 ## 要点
 
 - 自由软件基金会（Free Software Foundation，FSF）成立于 1985 年 10 月，初期宗旨是为 GNU 工程筹集资金。理查德·斯托曼（Richard Stallman）撰写的《GNU 宣言》（GNU Manifesto）于 1985 年首次发布，正文中多次使用"free"一词描述软件，例如"complete Unix-compatible software system which I am writing so that I can give it away free to everyone who can use it"以及"to put together a sufficient body of free software so that I will be able to get along without any software that is not free"。但《GNU 宣言》中的"free"一词并未严格区分“自由”与“免费”两层含义，斯托曼本人在 1983 年 9 月 27 日 GNU 初始公告脚注中明确承认“当时的用词并不是特别小心……后来，我意识到要在‘free’的自由之意和‘free’的价格之意间做认真的区分”。因此从一手文献角度，"free software"作为术语在 1985 年《GNU 宣言》中已有正式使用，但其语义在该时期尚未严格化为后世 FSF 定义的标准定义。
@@ -16,7 +18,7 @@ volume: 15
 
 - 总纲第 5 条——自由主义观：自由软件运动的术语原初形态承载"free"双义，自由软件运动的道德命令传统尚未严格化
 - 辨析：
-  【查证来源】`原材料/研究/自由软件词源考察/03-自由软件运动术语史.md` 第 1.1 节考据结论经 GNU 工程官方页面（gnu.org/gnu/manifesto.en.html）WebFetch 一手核验，《GNU 宣言》正文确含"give it away 
+  【查证来源】`原材料/研究/自由软件词源考察/03-自由软件运动术语史.md` 第 1.1 节考据结论经 GNU 工程官方页面（gnu.org/gnu/manifesto.en.html）WebFetch 一手核验，《GNU 宣言》正文确含"give it away
 - 总纲第 5 条——自由主义观：四项自由的编号演化反映自由软件运动从“修改-分发”两维向“运行-研究-分发-改进”四维的本体论扩展
 - 辨析：
   【查证来源】`原材料/研究/自由软件词源考察/03-自由软件运动术语史.md` 第 2.3 节考据结论经 gnu.org/philosophy/free-sw.html WebFetch 一手核验，脚注 1 一手陈述“1990 年左右，列出来的自由是 1
@@ -28,7 +30,7 @@ volume: 15
   【查证来源】`原材料/研究/自由软件词源考察/03-自由软件运动术语史.md` 第 3.1、3.2 节考据结论经 GPL v1 全文（gnu.org/licenses/gpl-1.0.html
 - 总纲第 4 条——分离聚合是永恒规律：1998 年 2 月 Palo Alto 峰会标志"open source"从"free software"阵营的分离起点
 - 辨析：
-  【查证来源】`原材料/研究/自由软件词源考察/04-开源软件运动术语史.md` 第 1.1、1.2 节考据结论经 OSI 官方历史页面 WebFetch 一手核验"open source"标签于 1998 年 2 月 3 
+  【查证来源】`原材料/研究/自由软件词源考察/04-开源软件运动术语史.md` 第 1.1、1.2 节考据结论经 OSI 官方历史页面 WebFetch 一手核验"open source"标签于 1998 年 2 月 3
 
 ## 辨析
 

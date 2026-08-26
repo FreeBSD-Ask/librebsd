@@ -35,7 +35,7 @@ volume: 第09卷-netbsd的历史
 
 ## 辨析
 
-- NetBSD aarch64 支持与 Linux aarch64 支持的成熟度对比缺乏权威基准。经 netbsd.db netbsd-src 仓库 commits 表验证：aarch64 后端最早于 2013.2.4 由 joerg 引入（LLVM/Clang snapshot r174288），AARCH64 定义于 2013.10.29 由 matt 添加，远早于 8.0 发布 2018.7 
+- NetBSD aarch64 支持与 Linux aarch64 支持的成熟度对比缺乏权威基准。经 netbsd.db netbsd-src 仓库 commits 表验证：aarch64 后端最早于 2013.2.4 由 joerg 引入（LLVM/Clang snapshot r174288），AARCH64 定义于 2013.10.29 由 matt 添加，远早于 8.0 发布 2018.7
 - Villard 的 commit 在 CVS 与 Git 仓库中的署名可能略有差异——需对照多源核验；NVMM 在 9.0/10.0 的具体改进需考据
 - 8.0 KASLR 是否默认启用在不同叙事中存在分歧——需对照源码核验。经 netbsd.db netbsd-src 仓库 commits 表验证：KASLR 首次引入时间为 2017-10-07（maxv commit 650b1fa4d5f1e80900b37549c6a3e41dbf4e4f8b"Add GENERIC_KASLR, only toolchain parts for now"
 - 虚拟化市场由云生态主导，NetBSD 8.0 在嵌入式/教育利基具价值。

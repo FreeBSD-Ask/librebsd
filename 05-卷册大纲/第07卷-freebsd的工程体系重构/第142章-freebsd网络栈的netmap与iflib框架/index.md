@@ -15,7 +15,7 @@ volume: 07
 ## 史观
 
 - 总纲第 1 条——项目统摄史观：netmap 在 SIGCOMM 2011 的发表是高速包处理的 “一刻”——在 netmap 和 DPDK 之前，软件包处理无法达到线速，10Gbps 网卡需要专用硬件；netmap 证明了通过正确的架构设计，通用 CPU 可以处理 10Gbps 甚至更高速率的包，这直接催生了软件定义网络（SDN）和网络功能虚拟化（NFV）的很多创新
-  - 辨析：netmap 
+  - 辨析：netmap
 - 总纲第 10 条——边缘者贡献：网络子系统的许多关键技术来自学术界（Rizzo 在比萨大学、KAME 在日本大学和研究机构）和专业领域公司（Netflix 做 CDN 优化），不是来自 “核心团队” 的规划；这体现了开源的力量——最好的代码可能来自意想不到的地方
 - 辨析：netmap 是否被 FreeBSD 弃用——没有，netmap 仍在活跃维护，是 FreeBSD 高速包处理的主要方案；DP
 - 总纲第 7 条——技术选择即政治选择：企业赞助方向直接塑造 FreeBSD 在该时期的子系统优先级（如 Netflix 推动内核 TLS 卸载与网络栈高性能化）。
@@ -30,10 +30,10 @@ volume: 07
 
 ## 辨析
 
-- netmap 引入 FreeBSD 版本——netmap 代码在 FreeBSD 9.x 时代通过开发分支可获取，在 FreeBSD 10.0-RELEASE（2014）正式合入基础系统；数据库证据进一步精确化时间线：netmap 首次完整合入主线 commit 为 2011-11-17（`68b8534bdfeb...`），早于 FreeBSD 9.0-RELEASE（2012-01-12）约 
-- netmap 是否被 FreeBSD 弃用——没有，netmap 仍在活跃维护，是 FreeBSD 高速包处理的主要方案；DPDK 在 FreeBSD 上的支持——DPDK 有 FreeBSD 移植但不在基础系统中，需要从 ports 安装；KAME 项目的 IPv6 代码是否还存在于现代 FreeBSD 中——KAME 代码经过 20 年演进和重写，现代 FreeBSD IPv6 栈已不是原始 
+- netmap 引入 FreeBSD 版本——netmap 代码在 FreeBSD 9.x 时代通过开发分支可获取，在 FreeBSD 10.0-RELEASE（2014）正式合入基础系统；数据库证据进一步精确化时间线：netmap 首次完整合入主线 commit 为 2011-11-17（`68b8534bdfeb...`），早于 FreeBSD 9.0-RELEASE（2012-01-12）约
+- netmap 是否被 FreeBSD 弃用——没有，netmap 仍在活跃维护，是 FreeBSD 高速包处理的主要方案；DPDK 在 FreeBSD 上的支持——DPDK 有 FreeBSD 移植但不在基础系统中，需要从 ports 安装；KAME 项目的 IPv6 代码是否还存在于现代 FreeBSD 中——KAME 代码经过 20 年演进和重写，现代 FreeBSD IPv6 栈已不是原始
 - 企业提交多属受雇工作期间的 “有组织贡献”，不宜与志愿者个人贡献混同；corp 名单随年份变动，须以 contributors 表逐期核验。
-  - 文献：bsd_commits.db（freebsd-src contributors 表，窗口 2010–2020，检索 2026-07-21）［A］；FreeBSD 项目贡献者指南（<https://docs.freebsd.org/en/arti
+  - 文献：bsd_commits.db（freebsd-src contributors 表，窗口 2010–2020，检索 2026-07-21）［A］；FreeBSD 项目贡献者指南（<<https://docs.freebsd.org/en/arti>
 - eBPF 的“通用内核虚拟机”与 netmap 的“零拷贝用户态 IO”范式不同；将 XDP 等同于 netmap 会忽略架构差异。
   - 文献：Linux Kernel. eBPF/XDP Documentation [EB/OL]；Rizzo L. netmap [A]. USENIX ATC 2012. ［B］
     FreeBSD 社区论文与演讲 [326]，[326] Christo
@@ -42,10 +42,10 @@ volume: 07
 
 ## 文献
 
-- Rizzo, L. (2012). *netmap: A Novel Framework for Fast Packet I/O*. USENIX ATC '12 (SIGCOMM precursor); FreeBSD Project. (2014-01). *FreeBSD 10.0 Release Notes* (netmap). freebsd.org; Rizzo, L. (2012). *VALE: A Switched Ethernet for Virtual Machines*. ACM CoNEXT ’12; DPDK Project. (2010-2026). *DPDK 
+- Rizzo, L. (2012). *netmap: A Novel Framework for Fast Packet I/O*. USENIX ATC '12 (SIGCOMM precursor); FreeBSD Project. (2014-01). *FreeBSD 10.0 Release Notes* (netmap). freebsd.org; Rizzo, L. (2012). *VALE: A Switched Ethernet for Virtual Machines*. ACM CoNEXT ’12; DPDK Project. (2010-2026). *DPDK
 - FreeBSD Project. *Source Code History for netmap, SCTP, iflib, IPv6*. cgit.freebsd.org; Rizzo, L. (2011-2026). *netmap Project Page*. info.iet.unipi.it/~luigi/netmap/; Stewart, R., & Tuexen, M. (2007-2026). *SCTP for FreeBSD*. sctp.freebsd.org; KAME Project. (1998-2006). *KAME Project Archive*. web.
 - bsd_commits.db（freebsd-src contributors 表，窗口 2010–2020，检索 2026-07-21）［A］；FreeBSD 项目贡献者指南（<https://docs.freebsd.org/en/articles/contributing/>）［B］
-    FreeBSD 社区论文与演讲 [329]，[329] Christos Margiolis. Re-decentralizing the Internet with BSD [C]//EuroBSDcon 2025. [S.l.]: [s.n.], 2025. 获取路径：<https://pape
+    FreeBSD 社区论文与演讲 [329]，[329] Christos Margiolis. Re-decentralizing the Internet with BSD [C]//EuroBSDcon 2025. [S.l.]: [s.n.], 2025. 获取路径：<<https://pape>
 - Linux Kernel. eBPF/XDP Documentation [EB/OL]；Rizzo L. netmap [A]. USENIX ATC 2012. ［B］
     FreeBSD 社区论文与演讲 [326]，[326] Christos Margiolis. Vox FreeBSD: How sound(4) works [C]//BSDCan 2025. [S.l.]: [s.n.], 2025. 获取路径：<https://papers.freebsd.org/2025/bsdcan/margiolis-vox-freebsd-how-sound4-works/> [访问
 - OpenBSD. pf(4) Manual [Z]；DragonFly. Network Stack MPSAFE Notes [EB/OL]. ［B］

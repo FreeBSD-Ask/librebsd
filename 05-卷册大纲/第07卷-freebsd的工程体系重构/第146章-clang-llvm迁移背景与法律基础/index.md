@@ -27,7 +27,7 @@ volume: 07
 
 - L2.3.1.Clang 查询结果未能直接捕获 Clang 编译器导入 base 系统的核心 commit（如 Roman Divacky 2009.2.25 公告对应的 svn commit），原因可能是这些核心 commit 的 message_subject 与 message_body 均不含 ‘Clang’ 关键词，或使用了 ‘clang’（小写）而被大小写敏感的 LIKE 匹配遗漏；*
 - 对 GPLv3 的恐惧在 FreeBSD 社区内并非一致共识，部分开发者认为 GPLv3 条款的实际法律风险被夸大，但 GCC 版本冻结决策由 Core Team 做出后即执行；需注意 GCC 4.2.1 的保留不仅是许可证问题，也是因为 sparc64/mips/powerpc 等旧架构在 Clang 中支持不完善这一工程现实。
-  - 文献：Free Software Foundation. 
+  - 文献：Free Software Foundation.
 - 社区常将 “GPLv3 恐惧” 简化为 “反意识形态” 叙事，但实际决策是法律风险评估与工程现实的综合结果——C++11 标准（2011 年发布）完全无法用 GCC 4.2.1 编译，继续冻结 GCC 版本意味着 FreeBSD 的 C++ 生态将停滞在 2003 标准时代，这是 Clang 替代工程的实际工程紧迫性，超越了单纯的意识形态动机。
   - 文献：GCC Steering Commit
 - 部分资料称 LLVM/Clang 使用 “BSD 许可证”，准确说法是 UIUC/NCSA 许可证（BSD-like），后改为 Apache 2.0 with LLVM Exceptions；两种许可证均为宽容许可证但具体条款不同，Apache 2.0 包含明确的专利授权（同时含专利报复终止条款），这与 FreeBSD 对 GPLv3 专利条款的警惕形成有趣对照——Apache 2.0 的专利条款
@@ -39,8 +39,10 @@ volume: 07
 - FreeBSD Release Engineering Team. FreeBSD 10.0-RELEASE Announcement [Z]. 2014-01-20；FreeBSD Release Engineering Team. FreeBSD 9.0-RELEASE Announcement [Z]. 2012-01-12；Divacky R. [Announce] clang/llvm can compile booting FreeBSD kernel on i386/amd64 [EB/OL]. freebsd-current mailing list, 2009-02-25；D
 - Free Software Foundation. GNU General Public License Version 3 [Z]. 2007-06-29；Free Software Foundation. Why Upgrade to GPLv3?[EB/OL]. gnu.org/licenses/why-upgrade-gpl.html；Rosen L. Open Source Licensing: Software Freedom and Intellectual Property Law [M]. Upper Saddle River: Prentice Hall, 2005. IS
 - GCC Steering Committee. GCC 4.3 and GPLv3 [EB/OL]. gcc.gnu.org, 2007；FreeBSD-arch mailing list archives. GPLv3 discussion threads [Z]. 2006-2008；Stallman R M. Why Upgrade to GPLv3 [EB/OL]. gnu.org, 2007. ［A］
+
 ## 145.2.3 与 FSF 立场的比较辨析
-  - 要点：FSF 与 BSD 社区在 GPLv3 上的立场分歧反映了自由软件运动内部 “自由（freedom）” 概念的根本差异。
+
+- 要点：FSF 与 BSD 社区在 GPLv3 上的立场分歧反映了自由软件运动内部 “自由（freedom）” 概念的根本差异。
 - LLVM Developer Group. LICENSE.TXT (Apache 2.0 with LLVM Exceptions)[Z]. releases.llvm.org, 2019-09-19 (LLVM 9.0.0)；University of Illinois. UIUC/NCSA Open Source License [Z]. opensource.org/licenses/NCSA；Apache Software Foundation. Apache License, Version 2.0 [Z]. 2004-01.[考据完成：2026-07-28 经穷尽联网考据，上述文
 - LLVM Foundation. Relicensing Long Tail [EB/OL]. foundation.llvm.org/docs/relicensing-long-tail/, 2022-11-11；LLVM Developer Group. LICENSE.TXT changelog [Z]. github.com/llvm/llvm-project.[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]
 

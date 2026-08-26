@@ -4,6 +4,8 @@ id: CH163
 volume: 08
 ---
 
+# 第163章 freebsd15x的rust集成争论
+
 ## 要点
 
 - 2024 年 1 月 20 日，开发者 Alan Somers（asomers@，Google 工程师、FreeBSD 文件系统与存储子系统长期贡献者）在 freebsd-hackers@ 邮件列表发布 "The Case for Rust (in the base system)" 一文，正式提出将 Rust 编程语言引入 FreeBSD 基础系统的方案；Somers 指出：Rust 的内存安全特性可以消除 C/C++ 代码中大量的内存安全漏洞（据 Google/MSRC 统计约 70% 的安全漏洞源于内存安全问题）；FreeBSD 已在 Ports 中支持 Rust，但 base system 中引入 Rust 工具链允许用 Rust 重写/新写安全关键组件（如用户态工具、新驱动、文件系统工具等）；Somers 承认主要缺点是构建时间将加倍（Rust 编译器编译较慢），但认为安全收益超过成本
@@ -30,27 +32,37 @@ volume: 08
 - “Rust 进入 FreeBSD base” 与 “Linux 内核 Rust for Linux” 需区别看待——Linux Rust 支持主要限于内核驱动（特别是新驱动可选使用 Rust），FreeBSD 提案起步是用户态工具而非内核；截至 2026.7，OpenBSD 明确拒绝 Rust（Ted Unangst 等公开反对），NetBSD 未正式讨论 Rust 入 base，DragonFl
 - 需警惕两种极端叙事——一种是 “Rust 会立刻取代 C 成为 FreeBSD 主要语言”（不现实，30 多年 C 代码不可能重写），另一种是 “Rust 永远不会进入 FreeBSD base”（过于绝对，技术演进往往超出预期）；合理预期是：未来数年内 Rust 可能以有限方式进入 FreeBSD 生态（如某些可选工具、测试基础设施），但 C 语言仍将是 FreeBSD 内核与 base 系统的
 - 需要区分 “邮件列表讨论热度” 与 “实际工程进展”——Rust 争论在邮件列表中持续了两年多，但这期间没有任何 Rust 代码被提交到 base，也没有 Core Team 决议要求或禁止 Rust；这种 “多讨论、少行动” 的模式在 FreeBSD 历史上并不罕见（如 ZFS 从讨论到正式进入 base 也经历了多年）
-  - 文献：FreeBSD Project. Mailing List 
+  - 文献：FreeBSD Project. Mailing List
 - **必须严格区分 “committer 权限撤销” 与 “自愿退役/停止贡献”**——前者是 Core Team 正式决议剥夺某人的 commit 权限（历史上极为罕见），后者是 committer 自愿停止提交代码（较常见，原因包括工作变动、兴趣转移、对社区方向不满等）；trasz@ 事件属于后者——他的 commit bit 仍然存在，只是本人宣布不再活跃贡献；关于声明中提到的 “某事件” 具
 
 ## 文献
 
 - Somers A. The Case for Rust (in the base system)[EB/OL]. (2024-01-20)[2026-07-19]. <https://lists.freebsd.org/archives/freebsd-hackers/2024-January/002823.html>; LWN.net. FreeBSD considers Rust in the base system [EB/OL]. (2024-08-19)[2026-07-19]. <https://lwn.net/Articles/985210/>. ［A］
+
 ## 162.4.2 社
-- FreeBSD Project. freebsd-hackers@ Mailing List Archives [EB/OL]. [2026-07-19]. <https://lists.freebsd.org/archives/freebsd-hackers/>; Rust for Linux Project [EB/OL]. [2026-07-19]. <https://rust-for-linux.com/>（互联网档案馆存档，2026-07-04，http://web.archive.org/web/20260704221117/https://rust-for-linux.com/）
+
+- FreeBSD Project. freebsd-hackers@ Mailing List Archives [EB/OL]. [2026-07-19]. <https://lists.freebsd.org/archives/freebsd-hackers/>; Rust for Linux Project [EB/OL]. [2026-07-19]. <https://rust-for-linux.com/>（互联网档案馆存档，2026-07-04，<http://web.archive.org/web/20260704221117/https://rust-for-linux.com/）>
 - FreeBSD Ports Collection. lang/rust [EB/OL]. [2026-07-19]. <https://cgit.freebsd.org/ports/tree/lang/rust>; Evans S, et al. Is It Time to Rewrite the Operating System in Rust?[C]. USENIX HotOS 2021.
+
 ## 162.4.4 Rust 争论史料辨析
-  - 要点：Rust 入 base 争论时间线：2024.1.20 Alan Somers 发起初始提案；2024.1-3 第一轮邮件列表大讨论；2024
+
+- 要点：Rust 入 base 争论时间线：2024.1.20 Alan Somers 发起初始提案；2024.1-3 第一轮邮件列表大讨论；2024
 - FreeBSD Project. Mailing List Archives [EB/OL]. [2026-07-19]. <https://lists.freebsd.org/>.[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]
+
 ## 162.4.4 当代中文舆论标本——《FreeBSD 大败局》2026 版（今日头条·灵巧光束）的 Rust 论断句级考据
-  - 要点：自媒体《FreeBSD 大败局》2026-01-26 版（今日头条·灵巧光束，主库 id=2351）Rust
+
+- 要点：自媒体《FreeBSD 大败局》2026-01-26 版（今日头条·灵巧光束，主库 id=2351）Rust
 - Napierała E T. Why I am retiring from contributing to FreeBSD [EB/OL]. (2025-12-30)[2026-07-19]. <https://lists.freebsd.org/archives/freebsd-hackers/2025-December/005383.html>. ［A］
+
 ## 162.5.2 Mike Karels 逝世与纪念（2024.06）
-  - 要点：**Mike Karels**（Michael J. Karels，mkarels@）——BSD 历史上的传奇人物，4.2BSD/4.3BSD 核心
-- FreeBSD Project. FreeBSD 14.2-RELEASE Announcement (Dedication to Mike Karels)[EB/OL]. (2024-12-02)[2026-07-19]. <https://www.freebsd.org/releases/14.2R/announce/>; McKusick M K, Karels M J, Quarterman J S. The Design and Implementation of the 4.3BSD UNIX Operating System [M]. Addison-Wesley, 1989. 
+
+- 要点：**Mike Karels**（Michael J. Karels，mkarels@）——BSD 历史上的传奇人物，4.2BSD/4.3BSD 核心
+- FreeBSD Project. FreeBSD 14.2-RELEASE Announcement (Dedication to Mike Karels)[EB/OL]. (2024-12-02)[2026-07-19]. <https://www.freebsd.org/releases/14.2R/announce/>; McKusick M K, Karels M J, Quarterman J S. The Design and Implementation of the 4.3BSD UNIX Operating System [M]. Addison-Wesley, 1989.
 - FreeBSD Project. Core Team Information [EB/OL]. [2026-07-19]. <https://www.freebsd.org/internal/>; FreeBSD Foundation. Annual Reports [EB/OL]. [2026-07-19]. <https://freebsdfoundation.org/our-work/annual-report/>（原始链接失效，互联网档案馆无存档）. ［A］
+
 ## 162.5.4 FreeBSD Foundation 2025-2026 资助项目
-  - 要点：FreeBSD Foun
+
+- 要点：FreeBSD Foun
 - FreeBSD Foundation. 2025 Annual Report [R]. Boulder: FreeBSD Foundation, 2026; FreeBSD Foundation. Sponsored Projects Blog Series [EB/OL]. [2026-07-19]. <https://freebsdfoundation.org/blog/>. ［C］
 
 ## 自反性声明

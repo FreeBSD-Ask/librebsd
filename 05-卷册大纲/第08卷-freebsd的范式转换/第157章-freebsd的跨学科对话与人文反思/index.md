@@ -4,6 +4,8 @@ id: CH157
 volume: 08
 ---
 
+# 第157章 freebsd的跨学科对话与人文反思
+
 ## 要点
 
 - BSD 许可证的人文意义远超法律文本本身：(1) **BSD 许可证的历史演变**——最初的 4-clause BSD license（广告条款）源自 UC Berkeley 1980 年代，要求所有广告材料提及 “本产品包含由加州大学伯克利分校及其贡献者开发的软件”；1999 年 7 月 22 日，William Hoskins（UC Berkeley 技术许可办公室主任）正式宣布删除广告条款（第 3 条），形成 3-clause BSD license；2-clause BSD license（又称 FreeBSD license，简化版）进一步删除了 “不允许用贡献者名字背书” 条款；FreeBSD 自 2000 年代起采用 2-clause BSD license 作为新代码的默认许可证；(2) **"Trust the user" 哲学**——BSD 许可证的核心不是 copyleft 的 “强制保持开放”，而是 “信任用户会做正确的事”——你可以自由使用、修改、甚至闭源分发 BSD 代码，只要保留版权声明和免责声明；这种模式基于对人的信任，而非基于法律强制；(3) **与 GPL 的人文对比**——GPL 是 “自由的捍卫者”：通过 copyleft 确保代码永远保持自由；BSD 是 “自由的给予者”：我给你自由，你可以用它做任何事，包括闭源；这不是谁对谁错，而是两种不同的自由观——GPL 更接近积极自由（有权利做什么），BSD 更接近消极自由（不被干涉做什么）；(4) **BSD 许可的实际影响**——BSD 代码被融入了几乎所有现代操作系统：Linux（部分驱动和工具）、macOS/iOS（大量代码）、Windows（TCP/IP 栈历史上受 BSD 影响，现代 Windows 也包含 BSD 代码）、PlayStation、Juniper Junos、Netflix Open Connect 等等
@@ -36,10 +38,10 @@ volume: 08
 
 - Regents of the University of California. (1999, July 22). *BSD License Amendment: Deletion of Advertising Clause*. Official announcement from UC Berkeley OTL; FreeBSD Project. *The FreeBSD Copyright*. <https://www.freebsd.org/copyright/freebsd-license/>; OSI. *The 2-Clause BSD License (Simplified BS
 - McKusick, M. K. (1999). Twenty Years of Berkeley Unix. In *Open Sources: Voices from the Open Source Revolution*. O'Reilly; Salus, P. H. (1994). *A Quarter Century of UNIX*. Addison-Wesley. ISBN 0-201-54777-5; Bostic, K. (1991). *BSD Networking Release 2 (Net/2) Release Notes*. CSRG, UC Berkeley, Ju
-- FreeBSD Project. (2020, June 9). *FreeBSD Community Code of Conduct*. <https://www.freebsd.org/internal/code-of-conduct/>; Internet Archive. (2020, June 10). *Snapshot: FreeBSD Code of Conduct*. <https://web.archive.org/web/20200610*/https://www.freebsd.org/internal/code-of-conduct/>; LLVM Project. 
-- FreeBSD Project. (2010). *FreeBSD src repository commits by Randi Harper*. <https://cgit.freebsd.org/src/log/?qt=author&q=Randi+Harper>; FreeBSD Project. (2010, April 21). Commit: "Add myself to committers-src.dot." Revision r206988. <https://cgit.freebsd.org/src/commit/?id=3d65a7ed79b2668712ceeee6b
-- Lessig, L. (1999). *Code and Other Laws of Cyberspace*. Basic Books. ISBN 0-465-03912-8; Mitcham, C. (1994). *Thinking Through Technology: The Path Between Engineering and Philosophy*. University of Chicago Press. ISBN 0-226-53198-8; Stanford Encyclopedia of Philosophy. *Feminist Philosophy*. First 
-- 本章 67.8 节 bsd_commits.db 数据库统计（freebsd-src contributors 表，2026-07-21 检索）显示 FreeBSD 2010-2026 期间贡献者横跨多国与多所大学，企业域提交量前五（iXsystems 530/Intel 402/Broadcom 164/NVIDIA 143/Google 92）与地域域前五（德国 494/法国 440/俄罗斯 228/中国 106/瑞士 77）合计约 1,477+1,345 次提交，此数据本身即反驳 “BSD 社区精英主义堡垒” 标签化叙事，证明 FreeBSD 贡献者地理与机构分散性；本章 67.9 节 
+- FreeBSD Project. (2020, June 9). *FreeBSD Community Code of Conduct*. <https://www.freebsd.org/internal/code-of-conduct/>; Internet Archive. (2020, June 10). *Snapshot: FreeBSD Code of Conduct*. <https://web.archive.org/web/20200610*/https://www.freebsd.org/internal/code-of-conduct/>; LLVM Project.
+- FreeBSD Project. (2010). *FreeBSD src repository commits by Randi Harper*. <https://cgit.freebsd.org/src/log/?qt=author&q=Randi+Harper>; FreeBSD Project. (2010, April 21). Commit: "Add myself to committers-src.dot." Revision r206988. <<https://cgit.freebsd.org/src/commit/?id=3d65a7ed79b2668712ceeee6b>
+- Lessig, L. (1999). *Code and Other Laws of Cyberspace*. Basic Books. ISBN 0-465-03912-8; Mitcham, C. (1994). *Thinking Through Technology: The Path Between Engineering and Philosophy*. University of Chicago Press. ISBN 0-226-53198-8; Stanford Encyclopedia of Philosophy. *Feminist Philosophy*. First
+- 本章 67.8 节 bsd_commits.db 数据库统计（freebsd-src contributors 表，2026-07-21 检索）显示 FreeBSD 2010-2026 期间贡献者横跨多国与多所大学，企业域提交量前五（iXsystems 530/Intel 402/Broadcom 164/NVIDIA 143/Google 92）与地域域前五（德国 494/法国 440/俄罗斯 228/中国 106/瑞士 77）合计约 1,477+1,345 次提交，此数据本身即反驳 “BSD 社区精英主义堡垒” 标签化叙事，证明 FreeBSD 贡献者地理与机构分散性；本章 67.9 节
 - 项目史观总纲第 6、8、13 条（c:\Users\ykla\Documents\hibsd\原材料\哲学\项目统摄史观\第 25 章.md，sacred 哲学源材料）；项目史观总纲第 6 章 “主体性与和解” 第 2、5、7 节（c:\Users\ykla\Documents\hibsd\原材料\哲学\项目统摄史观\第 06 章.md，sacred 哲学源材料）；Stanford Encyclopedia of Philosophy. *Feminist Philosophy*. First published 2018-06-28, substantive revision 2023-07
 
 ## 自反性声明

@@ -4,6 +4,8 @@ id: CH55
 volume: 03
 ---
 
+# 第55章 伯克利计算机学科的合作网络与学术成就
+
 ## 要点
 
 - （一）EECS 与数学系：EECS 与数学系在理论 CS（如算法、计算复杂性）有合作关系，理论 CS 的部分教师可能在数学系与 EECS 系联合任命；（二）EECS 与统计系：EECS 与统计系在机器学习、数据科学有合作关系，CSRG 时期（1978-1992）机器学习尚未成为独立学科，统计系与 EECS 的合作主要在统计计算领域；（三）EECS 与 Haas 商学院：EECS 与 Haas 商学院在信息系统、量化金融有合作关系，CSRG 时期 Haas 商学院的 IS（Information Systems）研究与 EECS 的数据库研究（Stonebraker）存在交叉；（四）EECS 与法学院：EECS 与法学院在网络法、知识产权有合作关系，CSRG 时期网络法尚未成为独立学科，法学院与 EECS 的合作主要在知识产权（如 BSD 许可证相关法律问题）；（五）EECS 与信息学院：信息学院（School of Information，iSchool）于 **1994 年** 设立（前身为 1920 年代图书馆学系），与 EECS 在信息检索、人机交互有合作关系，iSchool 设立时间在 CSRG 末期（CSRG 于 1995 年解散）
@@ -30,7 +32,7 @@ volume: 03
 
 ## 文献
 
-- UC Berkeley, School of Information. Establishment Records, 1994[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]；UC Berkeley, Office of Academic Personnel. Joint Appointment Records, 1978-1992 [考据完成：2026-07-28 该处存疑标注属史料缺口，须待原始档案公开后方可补充确证]；UC Berkeley, Haas School of 
+- UC Berkeley, School of Information. Establishment Records, 1994[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]；UC Berkeley, Office of Academic Personnel. Joint Appointment Records, 1978-1992 [考据完成：2026-07-28 该处存疑标注属史料缺口，须待原始档案公开后方可补充确证]；UC Berkeley, Haas School of
 - Sun Microsystems. Corporate Records, 1982-1992[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]；DEC. Corporate Donation Records [考据完成：2026-07-28 该处存疑标注属史料缺口，须待原始档案公开后方可补充确证]；SGI. Corporate Records, 1982-1992 [考据完成：2026-07-28 该处存疑标注属史料缺口，须待原始档案公开后方可补充确证]；Intel. Corpor
 - UC Berkeley, International Office. Records, 1978-1992[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]；UC Berkeley Bancroft Library. International Students and Scholars Collection [考据完成：2026-07-28 该处存疑标注属史料缺口，须待原始档案公开后方可补充确证]；UC Berkeley, Office of Admissions. Intern
 - ACM. Official Records[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]；IEEE. Official Records [考据完成：2026-07-28 该处存疑标注属史料缺口，须待原始档案公开后方可补充确证]；Computing Research Association. Official Records [考据完成：2026-07-28 该处存疑标注属史料缺口，须待原始档案公开后方可补充确证]；ACM Turing Award. Official Recor

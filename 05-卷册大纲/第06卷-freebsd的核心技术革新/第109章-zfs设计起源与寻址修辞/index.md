@@ -4,6 +4,8 @@ id: CH109
 volume: 06
 ---
 
+# 第109章 zfs设计起源与寻址修辞
+
 ## 要点
 
 - ZFS 由 Jeff Bonwick 与 Matt Ahrens 于 2001 年在 Sun Microsystems 启动设计，最初内部代号 "ZFS"（后由 "Zettabyte File System" 演变为不代表任何含义的孤儿缩写）；核心创新在于打破传统文件系统与卷管理器分离的架构，以 **zpools** 存储池统一管理物理设备与逻辑存储，池内虚拟设备（vdev）支持条带、镜像、RAID-Z 等多种冗余模式；端到端校验采用 Fletcher-4 或 SHA-256 哈希构成 Merkle 树结构，校验值存储在父块指针而非数据块本身，从根块指针（uberblock）向下递归验证，彻底解决写穴（write hole）与静默数据损坏（silent data corruption/bit rot）问题；1999 年威斯康星大学研究显示当时主流文件系统（UFS/ext/XFS/JFS/NTFS）和硬件 RAID 均无法充分防护数据损坏
@@ -19,7 +21,7 @@ volume: 06
 - 总纲第 1 条——项目统摄史观：128 位寻址是 ZFS 设计中的 “未来时刻”——Bonwick 团队在 2004-2005 年就有意识地跨越当代存储需求边界做设计，这一选择在当时被批评为过度设计，但随着 10TB、20TB 硬盘和 PB 级存储池的普及，128 位的前瞻性逐渐显现；这是对 “够用就好” 工程哲学的超越
   - 辨析：128 位寻址的精确计算在不同版本博客中有差异——部分二手资料
 - 总纲第 12 条——法律结构：CDDL 是 Sun 在开源许可证设计上的关键法律工程——通过 “文件级 copyleft” 这一法律结构，Sun 有意设计了一种与 GPL（作品级 copyleft）和 BSD/ISC/ MIT（宽松 permissive）都不同的第三条道路，这一法律结构直接决定了 ZFS 此后在 BSD 生态与 Linux 生态中的不同命运
-  - 辨析：CDDL 提交 OSI 
+  - 辨析：CDDL 提交 OSI
 
 ## 辨析
 

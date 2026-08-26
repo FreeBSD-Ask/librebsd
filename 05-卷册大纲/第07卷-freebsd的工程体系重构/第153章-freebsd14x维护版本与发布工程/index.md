@@ -29,10 +29,12 @@ volume: 07
 
 - FreeBSD Project. FreeBSD 14.1-RELEASE Announcement [EB/OL]. (2024-06-04)[2026-07-19]. <https://www.freebsd.org/releases/14.1R/announce/>; FreeBSD Project. release/14.1.0. freebsd-src 仓库 tag [DB/OL]. 2024-05-30T17:34:21-07:00. tag: release/14.1.0; commit: 10e31f0946d820d53adc58b7d013b969e4a9a8ed ［A］
 
-- FreeBSD Security Team. FreeBSD-SA-25:12.rtsold — Remote Code Execution via ND6 Router Advertisements [EB/OL]. (2025-12-16)[2026-07-19]. <https://security.FreeBSD.org/advisories/FreeBSD-SA-25:12.rtsold.asc>; MITRE. CVE-2025-14558 [EB/OL]. (2025-12)[2026-07-19]. <https://cve.mitre.org/cgi-bin/cvename.
+- FreeBSD Security Team. FreeBSD-SA-25:12.rtsold — Remote Code Execution via ND6 Router Advertisements [EB/OL]. (2025-12-16)[2026-07-19]. <https://security.FreeBSD.org/advisories/FreeBSD-SA-25:12.rtsold.asc>; MITRE. CVE-2025-14558 [EB/OL]. (2025-12)[2026-07-19]. <<https://cve.mitre.org/cgi-bin/cvename>.
 - FreeBSD Project. FreeBSD Administration and Management [EB/OL]. [2026-07-19]. <https://www.freebsd.org/administration/>; FreeBSD Core Team. Core Team Charter [EB/OL]. [2026-07-19]. <https://www.freebsd.org/internal/core-charter/>（原始链接失效，互联网档案馆无存档）. ［A］
+
 ## 152.12.2 Security Officer 任期与安全团队演进
-  - 要点：截
+
+- 要点：截
 
 ## 自反性声明
 

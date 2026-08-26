@@ -32,7 +32,7 @@ volume: 第05卷-freebsd的工程化奠基
 - iOS 1.0 内核是否包含 kqueue 二进制证据来自越狱设备，需谨慎采信
 - kqueue 的 filter 是否真的需要改内核，需查 FreeBSD 内核扩展机制
 - FreeBSD 社区是否计划引入 io_uring，需查 commit log 与 roadmap
-- Munro 同时为 PostgreSQL 与 FreeBSD 开发者（tmunro@postgresql.org 与 tmunro@freebsd.org），该采用属个人驱动还是社区共识须对照 PostgreSQL 13 release notes 核验；其报告中“大幅降低系统时间”为特定负载（hw.ncpu=88）下的观测，不得泛化为普遍结论
+- Munro 同时为 PostgreSQL 与 FreeBSD 开发者（<tmunro@postgresql.org> 与 <tmunro@freebsd.org>），该采用属个人驱动还是社区共识须对照 PostgreSQL 13 release notes 核验；其报告中“大幅降低系统时间”为特定负载（hw.ncpu=88）下的观测，不得泛化为普遍结论
 
 ## 文献
 

@@ -4,6 +4,8 @@ id: CH160
 volume: 第08卷-freebsd的范式转换
 ---
 
+# 第160章 freebsd安全团队与安全公告制度
+
 # 第 160 章 freebsd安全团队与安全公告制度
 
 ## 要点

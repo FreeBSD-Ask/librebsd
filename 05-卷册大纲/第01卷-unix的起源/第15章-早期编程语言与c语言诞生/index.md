@@ -26,7 +26,7 @@ volume: 第01卷-unix的起源
 - ALGOL 对 C 的影响常被夸大——C 语言的直接前身是 BCPL（Richards 1969）与 B（Thompson 1970），ALGOL 60 的块结构与 `for`/`while` 语法经 BCPL 中介传入 C，Ritchie 1993 论文明确将 C 的谱系定位为 "BCPL→B→C" 而非 "ALGOL→C"
 - FreeBSD Lisp 生态的实际使用规模无精确统计——Ports 下载量数据由 FreeBSD Foundation 内部持有未公开发布，邮件列表 freebsd-lisp 与 freebsd-common-lisp 讨论频率长期低位稳定，未形成规模性用户群；维护者结构方面，FreeBSD Ports 的 SBCL 维护者为 <krion@FreeBSD.org>（Kirill Ponomar
 - Wirth 学派与 UNIX 哲学的张力为路线分歧的必然产物——Wirth 1984 Turing Award 演讲 "From Programming Language Design to Computer Construction" 明确批评 UNIX 的松散类型与 “实用主义妥协”，Ritchie 1993 "The Development of the C Language" 则以 “信任
-- FreeBSD 基础系统中 Fortran 支持的终止时间——FreeBSD 10.0 移除 GCC 后基础系统不再包含 Fortran 编译器，用户需通过 Ports 安装 lang/gcc（含 gfortran）；f2c 曾长期在 Ports 中提供（lang/f2c）；[考据脚注] FreeBSD 1.1（1994-05-01）起基础系统已含 f77/f2c/libF77 完整工具链一事经 
+- FreeBSD 基础系统中 Fortran 支持的终止时间——FreeBSD 10.0 移除 GCC 后基础系统不再包含 Fortran 编译器，用户需通过 Ports 安装 lang/gcc（含 gfortran）；f2c 曾长期在 Ports 中提供（lang/f2c）；[考据脚注] FreeBSD 1.1（1994-05-01）起基础系统已含 f77/f2c/libF77 完整工具链一事经
 
 ## 文献
 

@@ -4,6 +4,8 @@ id: CH164
 volume: 08
 ---
 
+# 第164章 freebsd15x贡献者与社区动态
+
 ## 要点
 
 - FreeBSD 15.0-RELEASE 将传统 **ftpd(8)** 守护进程从基础系统中移除，commit 259bb93b80c0 由 Lexi Winter（<ivy@FreeBSD.org>）于 2025.9.29 起草、2025.10.1 合入 stable/15 分支，Phabricator 评审编号 D52739，由 Colin Percival（cperciva@）批准；该删除在更早版本中已标为 deprecated 并预告 15.0 移除；接续路径为 ftp/freebsd-ftpd port，PAM 服务 ftp(d) 保留以供其他 FTP 守护进程使用；/etc/inetd.conf 中条目相应改为指向 /usr/local 路径；ObsoleteFiles.inc 列出 usr/libexec/ftpd、etc/rc.d/ftpd、share/man/man5/ftpchroot.5.gz、share/man/man8/ftpd.8.gz 等删除条目，但配置文件保留以便用户迁移至 port；共删除 6972 行、38 个文件
@@ -21,13 +23,13 @@ volume: 08
   - 辨析：须严格区分 “bsdlabel/f
 - 总纲第 7 条——硬件与软件辩证：这批驱动的批量标弃用是硬件代际更替在软件层面的直接体现——AGP、软驱、FireWire 分别代表 1990 年代末至 2000 年代中期的主流接口技术，它们的退役不是技术优劣判断，而是硬件生态迭代的必然结果；总纲第 17 条——软件工程：“标记弃用-推迟一个大版本-移除” 三阶段流程是 FreeBSD 对待老旧驱动的标准工程实践，给用户至少一个大版本周期（约 2
 - 总纲第 25 条——终结与延续：FreeBSD 的 Dedication 传统是项目历史意识的体现——每个大版本都可能献词给一位逝去或有重大贡献的社区成员；这一传统提醒每位 committer：他们写的每一行代码都将加入一个持续 30 多年的代码库，这个代码库的寿命将超过任何个人的职业生涯；代码是给后人的遗产
-  - 辨析：Dedication 献词选择由 Release Engineering 
+  - 辨析：Dedication 献词选择由 Release Engineering
 
 ## 辨析
 
 - ftpd 与 telnetd 在 14.x/15.x 期间相继移除体现 BSD 项目对 “上古网络服务” 的批量清理态度；但须严格区分 “ftpd 从 base 移除” 与 “ftpd 工具消失” 两类事实——前者为 15.0 实际事件，后者并未发生，ftp/freebsd-ftpd port 仍持续维护；FreeBSD FTP 客户端 **ftp(1)**（基于 tnftp）继续保留在 base
 - 须严格区分 “32 位硬件平台退役” 与 “32 位应用兼容性移除” 两类事实——前者为 15.0 实际事件，后者并未发生且按 Colin Percival 在 freebsd-arch 邮件中的回应 "Hopefully never" 明确不会发生；社区讨论中出现 Vadim Goncharov 等用户对 32 位虚拟机构建持续需求的关切，反映退役决策对低内存虚拟机场景的影响；15.1 公告提到
-- 须严格区分 “bsdlabel/fdisk 标为弃用” 与 “bsdlabel/fdisk 从源码树移除” 两类事实——前者为 15.0 实际事件，后者原计划 15.0 实施但实际推迟至 16.0；社区讨论中 Warner Losh（沃纳·洛什）（<imp@bsdimp.com>）指出 nanobsd 的 legacy.sh 仍使用 disklabel，需要先迁移才能完全移除；fdisk 早期在 
+- 须严格区分 “bsdlabel/fdisk 标为弃用” 与 “bsdlabel/fdisk 从源码树移除” 两类事实——前者为 15.0 实际事件，后者原计划 15.0 实施但实际推迟至 16.0；社区讨论中 Warner Losh（沃纳·洛什）（<imp@bsdimp.com>）指出 nanobsd 的 legacy.sh 仍使用 disklabel，需要先迁移才能完全移除；fdisk 早期在
 - 须严格区分 “标记为 deprecated” 与 “已从源码树移除” 两类事实——上述 5 项驱动（agp/fdc/firewire/syscons/upgt）在 15.0 中仅标记为弃用，计划 16.0 移除，15.x 周期内仍可使用且默认编译；**gvinum(8)** 则是 **已在 15.0 实际移除**，接续路径为 ports 中的 sysutils/gvinum 或迁移至 ZFS/GE
 - Dedication 献词选择由 Release Engineering Team 决定，通常纪念逝去的重要贡献者（如 Karels、Selasky）或表彰长期贡献者（如 Neumann）；不是每个版本都有 Dedication——15.0 公告中就没有 Dedication 部分
   - 文献：FreeBSD Project. Release Announcements Archive [EB/
@@ -35,22 +37,32 @@ volume: 08
 ## 文献
 
 - FreeBSD 15.0-RELEASE Release Notes；lists.freebsd.org dev-commits-src-all 2025-October/061132；Phabricator D52739；FreeBSD UPDATING 20251001 条目 ［A］
+
 ## 163.10.2 i386/armv6/32 位 powerpc 架构在 15.0 正式退役
-  - 要点：FreeBSD 15.0-RELEASE 正式退役 i386、armv6、32 位 powerpc 三大 32 位硬件平台，仅 armv7 作为 “最后支持的 32 位平台” 保留 Tier-2 
+
+- 要点：FreeBSD 15.0-RELEASE 正式退役 i386、armv6、32 位 powerpc 三大 32 位硬件平台，仅 armv7 作为 “最后支持的 32 位平台” 保留 Tier-2
 - FreeBSD 15.0-RELEASE Release Notes；lists.freebsd.org freebsd-arch 2025-June/000949 John Baldwin 头邮件；Core Team 2023.2 32 位平台弃用公告；FreeBSD Platforms 页面（freebsd.org/platforms） ［A］
+
 ## 163.10.3 bsdlabel 与 fdisk 弃用——fdisk 移除推迟至 16.0
-  - 要点：FreeBSD 15.0-RELEASE 标记 **bsdlabel(8)** 与 **fdisk(8)** 为 deprecated
+
+- 要点：FreeBSD 15.0-RELEASE 标记 **bsdlabel(8)** 与 **fdisk(8)** 为 deprecated
 - lists.freebsd.org freebsd-current 2024-January/005419 头邮件；lists.freebsd.org freebsd-current 2024-January/005420 Warner Losh 回复；Phabricator D43575；Phabricator D43563；lists.freebsd.org dev-commits-src-all 2025-October commit 2be4c64a0d27；lists.freebsd.org dev-commits-src-branches 2025-October commit 6
-- FreeBSD Project. FreeBSD 15.0-RELEASE Release Notes [EB/OL]. (2025-12-02)[2026-07-19]. <https://www.freebsd.org/releases/15.0R/relnotes/>; FreeBSD Project. agp(4) Manual Page [EB/OL]. [2026-07-19]. <https://man.freebsd.org/agp/4>; FreeBSD Project. vt(4) Manual Page [EB/OL]. [2026-07-19]. <https://ma
+- FreeBSD Project. FreeBSD 15.0-RELEASE Release Notes [EB/OL]. (2025-12-02)[2026-07-19]. <https://www.freebsd.org/releases/15.0R/relnotes/>; FreeBSD Project. agp(4) Manual Page [EB/OL]. [2026-07-19]. <https://man.freebsd.org/agp/4>; FreeBSD Project. vt(4) Manual Page [EB/OL]. [2026-07-19]. <<https://ma>
 - FreeBSD Project. Release Announcements Archive [EB/OL]. [2026-07-19]. <https://www.freebsd.org/releases/>.[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]
+
 ## 163.8.2 核心开发者与新兴贡献者
-  - 要点：15.x 周期 FreeBSD 核心开发持续活跃的开发者群体包括（不完全名单）：Colin Percival（cperciva@，Release Engineer
+
+- 要点：15.x 周期 FreeBSD 核心开发持续活跃的开发者群体包括（不完全名单）：Colin Percival（cperciva@，Release Engineer
 - FreeBSD Project. Contributors List [EB/OL]. [2026-07-19]. <https://www.freebsd.org/doc/en_US.ISO8859-1/articles/contributors/>.[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]
+
 ## 163.8.3 30 周年后社区生态（2023-2026）
-  - 要点：FreeBSD 于 2023 年 6 月 19 日迎来 30 周年纪念（自 1993.6.19 Fr
+
+- 要点：FreeBSD 于 2023 年 6 月 19 日迎来 30 周年纪念（自 1993.6.19 Fr
 - FreeBSD Foundation. 30th Anniversary [EB/OL]. (2023-06)[2026-07-19]. <https://freebsdfoundation.org/blog/>; BSDCan Conference [EB/OL]. [2026-07-19]. <https://www.bsdcan.org/>. ［B］
+
 ## 163.8.4 FreeBSD 在 AI 工作负载中的角色
-  - 要点：截至 2026.7，FreeBSD 本身 **不包含** 任何 AI/LLM 特定的内核功能，但 FreeBSD 可作为 AI 工作负载的运行平台：① 通过 L
+
+- 要点：截至 2026.7，FreeBSD 本身 **不包含** 任何 AI/LLM 特定的内核功能，但 FreeBSD 可作为 AI 工作负载的运行平台：① 通过 L
 - FreeBSD Project. Linux Binary Compatibility [EB/OL]. [2026-07-19]. <https://docs.freebsd.org/en/books/handbook/linuxemu/>; llama.cpp on FreeBSD [EB/OL]. [2026-07-19]. <https://www.freshports.org/misc/llama.cpp/>（原始链接失效，互联网档案馆无存档）. ［B］
 
 ## 自反性声明

@@ -4,6 +4,8 @@ id: CH4
 volume: 01
 ---
 
+# 第4章 贝尔实验室的文化土壤
+
 ## 要点
 
 - Bell Labs 总部原位于纽约市西街，1941 年主要研究业务迁至新泽西州 Murray Hill 设施，1967 年总部正式迁入；计算研究部在一号楼，建筑布局促进跨学科交流；UNIX 诞生时（1969 年）Murray Hill 已是 Bell Labs 的核心研究园区
@@ -15,9 +17,9 @@ volume: 01
 ## 史观
 
 - 总纲第 8 条——物理空间对创新文化的塑造
-- 辨析：[考据脚注] 关于 UNIX 诞生的具体物理位置，现有来源的描述如下——其一，Kernighan 2019"Unix: A History and a Memoir"在书名副标与正文开篇明确称 UNIX 创生于"a Bell Labs attic"（贝尔实验室阁楼），并未给出具体房间号，此表述经其普林斯顿大学官方页面（<https://www.
+- 辨析：[考据脚注] 关于 UNIX 诞生的具体物理位置，现有来源的描述如下——其一，Kernighan 2019"Unix: A History and a Memoir"在书名副标与正文开篇明确称 UNIX 创生于"a Bell Labs attic"（贝尔实验室阁楼），并未给出具体房间号，此表述经其普林斯顿大学官方页面（<<https://www>.
 - 总纲第 9 条——企业研究组织的双重性
-- 辨析：[考据脚注] 1969 年 Bell Labs 雇员总数经多来源交叉印证修正为“约 15000 人”：Jon Gertner《The Idea Factory》(2012) 明确记载"at its peak, in the 1960s, Bell Labs employed nearly 15,000 people, including some 
+- 辨析：[考据脚注] 1969 年 Bell Labs 雇员总数经多来源交叉印证修正为“约 15000 人”：Jon Gertner《The Idea Factory》(2012) 明确记载"at its peak, in the 1960s, Bell Labs employed nearly 15,000 people, including some
 - 总纲第 8 条——跨学科土壤对创新的催化
 - 辨析：物理部对 UNIX 的直接影响有限，更多为文化氛围层面；Riordan & Hoddeson 1997《Crystal Fire》侧重晶体管发明史，对物理部与计算研究部交叉影响 UNIX 的具体机制描述不足；Kernighan 2019 自述 UNIX 团队与物理部成员日常交流主要发生于同一号楼的午餐与走廊非正式场合，未提及具体合作项目，此为文化
 - 总纲第 9 条——自由探索文化对创新的关键作用
@@ -28,8 +30,8 @@ volume: 01
 
 ## 辨析
 
-- [考据脚注] 关于 UNIX 诞生的具体物理位置，现有来源的描述如下——其一，Kernighan 2019"Unix: A History and a Memoir"在书名副标与正文开篇明确称 UNIX 创生于"a Bell Labs attic"（贝尔实验室阁楼），并未给出具体房间号，此表述经其普林斯顿大学官方页面（<https://www.cs.princeton.edu/~bwk/memoi
-- [考据脚注] 1969 年 Bell Labs 雇员总数经多来源交叉印证修正为“约 15000 人”：Jon Gertner《The Idea Factory》(2012) 明确记载"at its peak, in the 1960s, Bell Labs employed nearly 15,000 people, including some 1,200 Ph.D.s"；A. Michael 
+- [考据脚注] 关于 UNIX 诞生的具体物理位置，现有来源的描述如下——其一，Kernighan 2019"Unix: A History and a Memoir"在书名副标与正文开篇明确称 UNIX 创生于"a Bell Labs attic"（贝尔实验室阁楼），并未给出具体房间号，此表述经其普林斯顿大学官方页面（<<https://www.cs.princeton.edu/~bwk/memoi>
+- [考据脚注] 1969 年 Bell Labs 雇员总数经多来源交叉印证修正为“约 15000 人”：Jon Gertner《The Idea Factory》(2012) 明确记载"at its peak, in the 1960s, Bell Labs employed nearly 15,000 people, including some 1,200 Ph.D.s"；A. Michael
 - 物理部对 UNIX 的直接影响有限，更多为文化氛围层面；Riordan & Hoddeson 1997《Crystal Fire》侧重晶体管发明史，对物理部与计算研究部交叉影响 UNIX 的具体机制描述不足；Kernighan 2019 自述 UNIX 团队与物理部成员日常交流主要发生于同一号楼的午餐与走廊非正式场合，未提及具体合作项目，此为文化氛围而非项目级合作；Gertner 2012 对 M
 - Bell Labs 的自由是否被浪漫化——管理层实际容忍度需考据
 - 文献：Ritchie 1984 BLTJ 63 No. 6 Part 2:1577-1593, DOI 10.1002/j.1538-7305.1984.tb00054.x；Gertner 2012；Kernighan 2019 回忆录 ［B］

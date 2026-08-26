@@ -26,7 +26,7 @@ volume: 第09卷-netbsd的历史
 - 将此期视为"BSD vs Linux"零和竞争是误读——代码互鉴（如 VM、网络栈）与社区流动持续发生。
 - CVE-2002-0655 在 NVD 中对应 OpenSSL 多漏洞，NetBSD-SA2002-009 将其与 SSL v2 弱密钥协商合并公告，但 NVD 记录的子漏洞编号须逐一核验；CVE-2003-0543/0544/0545 三个 CVE 编号对应 OpenSSL ASN.1 解析器的不同缺陷路径，NetBSD-SA2003-017 将三者合并于同一公告，反映“同组件多漏洞合并公告”的
 - 贡献者高度集中——Top 1 贡献者 wiz 占比 33.4%，需考量'个人主导'与'社区协作'的叙事张力
-- 考据过程留痕——【查证来源】NetBSD 官方 About、portability、system、history 四个页面经 netbsd.org 一手核验，措辞"Of course it runs NetBSD""Microoptimizations can play a part in any system, but design is even more important""NetBSD 
+- 考据过程留痕——【查证来源】NetBSD 官方 About、portability、system、history 四个页面经 netbsd.org 一手核验，措辞"Of course it runs NetBSD""Microoptimizations can play a part in any system, but design is even more important""NetBSD
 
 ## 文献
 

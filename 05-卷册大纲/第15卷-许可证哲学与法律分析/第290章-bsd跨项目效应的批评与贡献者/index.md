@@ -4,6 +4,8 @@ id: CH290
 volume: 15
 ---
 
+# 第290章 bsd跨项目效应的批评与贡献者
+
 ## 要点
 
 - BSD 跨项目贡献者包括——Poul-Henning Kamp（FreeBSD + Varnish + Jails 设计）、Kirk McKusick（FreeBSD + POSIX + FFS 设计）、Robert Watson（FreeBSD + Capsicum + CHERI + Cambridge 学术）、Jordan Hubbard（FreeBSD + Apple Darwin）、Tim Kientzle（FreeBSD + libarchive）、Bob Beck（OpenBSD + OpenSSH + LibreSSL）、Theo de Raadt（西奥·德·若特）（OpenBSD + OpenSSH + LibreSSL）、Damien Miller（OpenSSH portable 维护者，非 OpenBSD 核心成员）、Luke Mewburn（NetBSD + rc.d 设计）、Jason Evans（FreeBSD + jemalloc）、Peter Grehan（彼得·格雷汉）/Neel Natu（尼尔·纳图）/Ed Maste（埃德·马斯特）（FreeBSD + bhyve）、Roman Divacky/Brooks Davis（FreeBSD + LLVM/Clang）；这些跨项目贡献者构成 BSD 阵营跨项目影响的核心节点
@@ -18,7 +20,7 @@ volume: 15
 - 总纲第 10 条（边缘者贡献）与总纲第 25 条（0 信任原则）。BSD 阵营的再回应实质上是将“明星效应”与“边缘者被遗忘”的批评置于“贡献可见度差异”与“考据程序修复”的框架下重新审视——明星效应部分源于贡献性质差异而非纯粹叙事偏差，且考据程序本身是对边缘者的重新归位。项目史观总纲第十章“边缘者贡献”在此显现：边缘者非“被动的受害者”而是“主动的贡献者”，考据程序使其贡献被重新发现。
 - **
 - 总纲第 10 条（边缘者贡献）与总纲第 6 条（主体性与和解）。BSD 跨项目贡献者的核心即“明星可见与边缘者被遗忘的辩证统一”——明星因技术产出可见度高而被铭记，边缘者因协调角色可见度低而被遗忘，二者是同一项目的两面。项目史观总纲第十章“边缘者贡献”在此显现：边缘者非“被动的受害者”而是“主动的贡献者”，考据程序使其贡献被重新发现。
-- **辨析**：考据过程留痕——【查证来源】Varnish 
+- **辨析**：考据过程留痕——【查证来源】Varnish
 - 总纲第 24 条——许可证：BSD 许可证的设计决定了回馈不足的结构性；总纲第 14 条——商业与社区的张力：商业采用与社区回馈的不对称
   - 辨析：回馈“不足”的量化标准须明确——是 commit 数、代码行数还是资金量；OpenBSD 资金紧张的具体数据须查基金会年报；Torvalds 批评的语境须查原访谈；0 信任原则局限标注：L3.2.1 查询基于 12 类商业邮箱域名（@netflix
 - 总纲第 5 条（道与术的辩证）与总纲第 24 条（许可证哲学）。BSD 阵营的反批评实质上是将“回馈不足”“话语权丧失”“资源分散”的批评置于“许可证设计意图”“标准化必然结果”“广泛孵化文化代价”的框架下重新审视——此三者非“失败”而是“设计代价”。项目史观总纲第五章“道与术的辩证”在此显现：BSD 许可证作为“道”（哲学原则）允许“术”（具体采用）的无回馈，此“无回馈”非“道”的失败而是“道”
@@ -29,18 +31,22 @@ volume: 15
 - 考据过程留痕——【查证来源】Varnish Software 官方历史（varnish-software.com/varnish-history/）经一手核验明确记载 Anders Nordby 参与项目启动；Anders Berg 2016 年 Q&A（varnish-software.com/blog）经一手核验自述"thinker, not a doer"与 Nordby 推荐 PHK 的细
 - 考据过程留痕——【查证来源】Varnish Software 官方历史（Berg 发起、Nordby 连接、DES 构想、PHK 执行）经 varnish-software.com/varnish-history/ 一手核验；OpenSSH 官方历史（Grönvall 的 OSSH 为 fork 源头）经 openssh.org/history.html 一手核验；bsd_commits.db 查
 - 回馈“不足”的量化标准须明确——是 commit 数、代码行数还是资金量；OpenBSD 资金紧张的具体数据须查基金会年报；Torvalds 批评的语境须查原访谈；0 信任原则局限标注：L3.2.1 查询基于 12 类商业邮箱域名（@netflix.com/@juniper.net/@netapp.com/@ixsystems.com 等）匹配，企业员工若用个人邮箱（@gmail.com）或 @u
-- 考据过程留痕——【查证来源】Torvalds 1998 年 LinuxFocus 访谈（linuxdoc.org/linuxfocus/English/March1998/article27.html）经一手核验明确表示“GPL 保证回馈”但“GPL 与 BSD 无本质优越性”；**OpenBSD Copyright Policy 官方文档**（openbsd.org/policy.html，经 
+- 考据过程留痕——【查证来源】Torvalds 1998 年 LinuxFocus 访谈（linuxdoc.org/linuxfocus/English/March1998/article27.html）经一手核验明确表示“GPL 保证回馈”但“GPL 与 BSD 无本质优越性”；**OpenBSD Copyright Policy 官方文档**（openbsd.org/policy.html，经
 
 ## 文献
 
 - 各项目 commit 历史；BSDCan 议程 ［A］；bsd_commits.db L7.2.1 查询报告（衍生项目与跨项目对比分析.md §L7.2.1）；bsd_commits.db C-24/C-25/C-26/C-27 查询报告（推断性统计.md Task 10 + 描述性统计.md SubTask 2.3）；外部基准 E-09 查询报告（外部基准-GitHub-CHAOSS.md 第 3 节）
+
 ## 289.10.2 被忽视的跨项目贡献
-  - 要点：BSD 跨项目贡献中存在大量被忽视的贡献——jemalloc 曾被 Rust 作为默认分配器（后随 RFC 1974 全局分配器机制
+
+- 要点：BSD 跨项目贡献中存在大量被忽视的贡献——jemalloc 曾被 Rust 作为默认分配器（后随 RFC 1974 全局分配器机制
 - Varnish Software. Official History [EB/OL]. <https://varnish-software.com/varnish-history/>; Berg A. Q&A 2016 [EB/OL]. <https://varnish-software.com/blog>; OpenSSH. Official History [EB/OL]. <https://openssh.org/history.html>; Mewburn L. The Design and Implementation of the NetBSD rc.d System [R]. U
 - Varnish Software. Official History [EB/OL]. <https://varnish-software.com/varnish-history/>; OpenSSH. Official History [EB/OL]. <https://openssh.org/history.html>; openbsd.db L7.2.1 查询报告; 项目史观总纲第十章“边缘者贡献”[Z]. 原材料/哲学/项目统摄史观/第 10 章.md.
 - de Raadt 资金呼吁；Torvalds 评论；基金会年报 ［B］；bsd_commits.db L3.2.1 查询报告（深层信息挖掘.md §L3.2.1）；bsd_commits.db L7.2.1 查询报告（衍生项目与跨项目对比分析.md §L7.2.1）
+
 ## 289.9.2 BSD 效应力被 Linux 阵营抢占话语权的批评
-  - 要点：BSD 跨项目影响虽广但话语权长期被 Linux 阵营抢占——Jails 早于 Docker 13 年但 Docker 流行化后被广泛称为“容器革命”，Jails 的开创性贡献被忽视；socket API 进入 POSIX 后被普遍称为"POS
+
+- 要点：BSD 跨项目影响虽广但话语权长期被 Linux 阵营抢占——Jails 早于 Docker 13 年但 Docker 流行化后被广泛称为“容器革命”，Jails 的开创性贡献被忽视；socket API 进入 POSIX 后被普遍称为"POS
 - Torvalds L. LinuxFocus Interview [EB/OL]. (1998-03). <https://linuxdoc.org/linuxfocus/English/March1998/article27.html>; de Raadt T. Request for Funding our Electricity [EB/OL]. openbsd-misc mailing list, 2014-01; bsd_commits.db L3.2.1 查询报告; bsd_commits.db L7.2.1 查询报告; 项目史观总纲第五章“道与术的辩证”[Z]. 原材料/哲学/项
 - de Raadt T. Request for Funding our Electricity [EB/OL]. openbsd-misc mailing list, 2014-01; The Register. Bitcoin donation saves OpenBSD [EB/OL]. 2014-01-20; openbsd.db L3.2.1 查询报告; Postel J. RFC 793: Transmission Control Protocol [S]. 1981; FreeBSD 4.0 release notes [EB/OL]. 2000-03; Docker offici
 - openbsd.db L3.2.1 查询报告； openbsd.db L7.2.1 查询报告； 项目史观总纲第六章“主体性与和解”[Z]. 原材料/哲学/项目统摄史观/第 6 章.md; 项目史观总纲第二十四章“许可证哲学”[Z]. 原材料/哲学/项目统摄史观/第 24 章.md.

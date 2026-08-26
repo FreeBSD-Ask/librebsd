@@ -4,6 +4,8 @@ id: CH312
 volume: 16
 ---
 
+# 第312章 管理学问题-治理历史演变
+
 ## 要点
 
 - FreeBSD 项目管理从 1993 年首届 Core Team 纯志愿者治理起步，2000 年 FreeBSD Foundation 成立后逐步引入专职 staff（Executive Director Deb Goodkin（德布·古德金） 等）与合同制开发者，项目管理模式从纯志愿者演进为 “志愿者 + 基金会专职” 双轨制；Core Team 仍为技术决策最高机构，Foundation 负责资金筹募、法律保护与基础设施运营
@@ -14,7 +16,7 @@ volume: 16
 
 ## 史观
 
-- 总纲第 5 条——组织结构对技术路径的塑造，从志愿者到基金会的演进体现社区规模扩张对治理结构的压力；统计结论印证：统计结论 [C-24] FreeBSD freebsd-src Gini 系数 0.9188（Bootstrap 95% CI [0.9093, 0.9270]）、统计结论 [C-25] DragonFly BSD dragonfly-src Gini 0.8972（[0.8517, 
+- 总纲第 5 条——组织结构对技术路径的塑造，从志愿者到基金会的演进体现社区规模扩张对治理结构的压力；统计结论印证：统计结论 [C-24] FreeBSD freebsd-src Gini 系数 0.9188（Bootstrap 95% CI [0.9093, 0.9270]）、统计结论 [C-25] DragonFly BSD dragonfly-src Gini 0.8972（[0.8517,
 - 总纲第 10 条——边缘者贡献，外部贡献者是社区 “动手者” 的典型代表，其贡献长期被 committer 叙事遮蔽
   - 辨析：外部贡献者的具体数量与贡献量需量化（以 Bugzilla/GitHub 统计为准）；企业外部贡献者与个人外部贡献者的动机差异需分析；mentor 瓶颈对外部贡献者转 committer 的具体影响需以 mentor 邮件列表讨论为据
   - 文献：Dahlander,
@@ -29,7 +31,7 @@ volume: 16
 
 - Core Team 选举制度的具体演变时间节点需考据；Foundation 专职 staff 的引入是否改变 Core Team 技术决策权需分析；双轨制中 Core Team 与 Foundation 的权责边界需以 By-Laws 原文为准；【0 信任原则·author 字段可伪造】L1.2.2 与 L3.4.1.top10 基于 author_email 统计，git 的 author 字段
 - 外部贡献者的具体数量与贡献量需量化（以 Bugzilla/GitHub 统计为准）；企业外部贡献者与个人外部贡献者的动机差异需分析；mentor 瓶颈对外部贡献者转 committer 的具体影响需以 mentor 邮件列表讨论为据
-  - 文献：Dahlander, L. & Magnusson, M. G. (2005). *Relationships Between Open Source 
+  - 文献：Dahlander, L. & Magnusson, M. G. (2005). *Relationships Between Open Source
 - Core Team 成员的治理贡献需与代码贡献区分考据；离场成员的具体案例需逐一核查，避免事后叙事扭曲；Foundation 专职 staff 的具体贡献需以年度报告为据
   - 文献：FreeBSD Core Team Membership List (1993-2025). docs.freebsd.org; FreeBSD Contributors List. (1993-2025). fr
 - 治理模式比较须控制项目规模与社区文化变量；“效率” 与 “合法性” 的衡量标准须明确；Linux 的 “仁慈独裁者” 模式在 Linus Torvalds 2018 年暂休事件后是否发生实质变化需考据；Python 2018 年 BDFL（Guido van Rossum）卸任后转向指导委员会制度的转型过程需与 FreeBSD Core Team 模式比较

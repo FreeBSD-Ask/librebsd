@@ -23,7 +23,7 @@ volume: 07
 
 ## 辨析
 
-- GCC 4.2.1 的移除不等同于“GCC 在 FreeBSD 上不可用”——ports 中的 lang/gcc 系列持续提供现代 GCC 版本（GCC 10/11/12/13 等），用户可自由安装；构建 ports 中的某些软件（如需要 OpenMP 的 C++ 程序、使用 GCC 特定扩展的 Fortran 程序）仍需要 ports GCC；GCC 移除仅影响 base system，不影响 
+- GCC 4.2.1 的移除不等同于“GCC 在 FreeBSD 上不可用”——ports 中的 lang/gcc 系列持续提供现代 GCC 版本（GCC 10/11/12/13 等），用户可自由安装；构建 ports 中的某些软件（如需要 OpenMP 的 C++ 程序、使用 GCC 特定扩展的 Fortran 程序）仍需要 ports GCC；GCC 移除仅影响 base system，不影响
 - “Linux 比 FreeBSD 功能多/性能好/支持硬件多”是一个笼统的说法，需要看具体场景——在网络转发性能、ZFS 集成、内核 API 稳定性、许可证纯净度等方面 FreeBSD 有自身优势；反之 Linux 在新硬件支持、容器生态、eBPF 可编程性等方面优势明显
   - 文献：Kernel Newbies. *Linux Kernel Release Notes*. kernelnewb
 - 39 个 SA 的统计口径需精确说明：以 SA 公告发布日期在 **2021-04-01** 至 **2023-11-01** 之间为准；SA-23:15 至 SA-23:19（2023-11-08 至 2023-12-19）虽属 13.3-RELEASE 修复范围但发布日期超出周期边界，未计入 39 个；SA-21:07.openssl（2021-03-25）发布于 13.0-RELEASE 前
@@ -33,17 +33,21 @@ volume: 07
 ## 文献
 
 - FreeBSD 13.0-RELEASE Release Notes [Z]. 2021-04-13；FreeBSD 10.0/12.0 Release Notes [Z]. 2014/2018；Warner Losh GCC retirement announcement [EB/OL]. freebsd-arch mailing list, 2020-2021 ［A］
+
 ## 149.12.2 LLD 成为所有架构的默认链接器
-  - 要点：FreeBSD 13.0-RELEASE 将 LLD（LLVM Linker）设为所有架构的默认系统链接器，完成 LLD 从“部分架构默认”到“全架构默
+
+- 要点：FreeBSD 13.0-RELEASE 将 LLD（LLVM Linker）设为所有架构的默认系统链接器，完成 LLD 从“部分架构默认”到“全架构默
 - Kernel Newbies. *Linux Kernel Release Notes*. kernelnewbies.org; LWN.net. (2021-2024). Kernel Development Coverage.[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]
+
 ## 149.13.2 Windows 11/Server 2022、macOS 11-14 与 BSD 谱系
-  - 要点：同期闭源/混合源操作系统：(1) **Windows 11（2021-10）*
+
+- 要点：同期闭源/混合源操作系统：(1) **Windows 11（2021-10）*
 - FreeBSD Security Team. FreeBSD Security Advisories Archive [EB/OL]. (2021-2023)[2026-07-22]. <https://www.freebsd.org/security/advisories/>; MITRE. CVE Project cvelistV5 Repository [Z]. (2026-07). <https://github.com/CVEProject/cvelistV5>; FreeBSD Project. freebsd.db — freebsd-src commits table [DB/
-- OpenSSL Project. OpenSSL 1.1.1 Release Notes [EB/OL]. (2018-2023)[2026-07-22]. <https://www.openssl.org/source/>; FreeBSD Security Team. FreeBSD-SA-21:16.openssl: Multiple OpenSSL vulnerabilities [EB/OL]. (2021-08-24)[2026-07-22]. <https://security.freebsd.org/advisories/FreeBSD-SA-21:16.openssl.asc
+- OpenSSL Project. OpenSSL 1.1.1 Release Notes [EB/OL]. (2018-2023)[2026-07-22]. <https://www.openssl.org/source/>; FreeBSD Security Team. FreeBSD-SA-21:16.openssl: Multiple OpenSSL vulnerabilities [EB/OL]. (2021-08-24)[2026-07-22]. <<https://security.freebsd.org/advisories/FreeBSD-SA-21:16.openssl.asc>
 - FreeBSD Security Team. FreeBSD-SA-21:13.bhyve: **bhyve(8)** device models vq_getchain error handling [EB/OL]. (2021-08-24)[2026-07-22]. <https://security.freebsd.org/advisories/FreeBSD-SA-21:13.bhyve.asc>; FreeBSD Security Team. FreeBSD-SA-22:05.bhyve: **bhyve(8)** e82545 checksum validation [EB/OL]
 - FreeBSD Security Team. FreeBSD-SA-22:14.heimdal: Heimdal multiple vulnerabilities [EB/OL]. (2022-11-15)[2026-07-22]. <https://security.freebsd.org/advisories/FreeBSD-SA-22:14.heimdal.asc>; Heimdal Project. Heimdal Kerberos 5 Implementation History [EB/OL]. [2026-07-22]. <https://www.h5l.org/>; MITRE
 - FreeBSD Project. **mitigations(7)** Manual Page [EB/OL]. [2026-07-22]. <https://man.freebsd.org/mitigations/7>; Maste E. Add **mitigations(7)** describing our vulnerability mitigations [git commit]. freebsd-src. 2023-09-08. hash: 8977587e89cbf221b1819d0a873fe53311de2fbd; HardenedBSD Project. Hardene
-- 原材料/哲学/项目统摄史观/第 25 章.md；Donenfeld J A. [ANNOUNCE] WireGuard for FreeBSD in development for 13.y [EB/OL]. (2021-03-15)[2026-07-22]. <https://lists.zx2c4.com/pipermail/wireguard/2021-March/006494.html>; FreeBSD Project. FreeBSD 13.0-RELEASE Release Notes [EB/OL]. (2021)[2026-07-22]. <https://www.freeb
+- 原材料/哲学/项目统摄史观/第 25 章.md；Donenfeld J A. [ANNOUNCE] WireGuard for FreeBSD in development for 13.y [EB/OL]. (2021-03-15)[2026-07-22]. <https://lists.zx2c4.com/pipermail/wireguard/2021-March/006494.html>; FreeBSD Project. FreeBSD 13.0-RELEASE Release Notes [EB/OL]. (2021)[2026-07-22]. <<https://www.freeb>
 
 ## 自反性声明
 

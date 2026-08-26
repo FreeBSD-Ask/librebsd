@@ -4,6 +4,8 @@ id: CH294
 volume: 15
 ---
 
+# 第294章 法律限制外部贡献者与开源法律援助
+
 ## 要点
 
 - 电子前线基金会（EFF）在 Bernstein v. United States 案中担任原告律师团，Cindy Cohn 作为首席律师全程参与 1995-2003 年诉讼；EFF 同时维护开源许可证法律案例数据库，为 BSD 社区提供免费法律咨询
@@ -17,20 +19,26 @@ volume: 15
 - 总纲第 10 条——边缘者贡献：EFF 作为外部组织对 BSD 法律生态的支撑
   - 辨析：EFF 的法律援助是否影响 BSD 社区的法律自主性存在争议，部分社区成员认为法律事务应由 Foundation 主持
   - 文献：EFF 档案；Cindy Cohn 演讲 ［A］
+
 ## 293.10.2 学术界的 amicus 参与
-  - 要点：Jacobsen v. Katzer 案中，开源倡议组
+
+- 要点：Jacobsen v. Katzer 案中，开源倡议组
 - 总纲第 10 条——边缘者贡献：Bernstein 作为 BSD 社区外部人士对 BSD 法律生态的辐射
   - 辨析：Bernstein 案的法律效力被全院联席重审撤销，但其论证的历史影响远超法律效力
   - 文献：Bernstein 案卷；EFF 档案；Bernstein 个人页面 ［A］
+
 ## 293.11.2 Eben Moglen——FSF 法律顾问与 copyleft 理论家
-  - 
+
+-
 - 总纲第 6 条——技术路线分化，Linux 与 BSD 在出口管制应对上分化为不同镜像策略
   - 辨析：Linux 与 BSD 镜像分拆策略的实际效果差异需通过部署统计
   - 文献：kernel.org 档案；Debian non-US 档案；Linux crypto 邮件列表 ［A］
+
 ## 293.12.2 与 Solaris CDDL 许可证的法律边界对照
-  - 要点：Solaris 2
+
+- 要点：Solaris 2
 - 总纲第 13 条——法律与道德是利益分配。任何道德问题本质上是利益问题，社区治理亦是形式主义的政治产物。（原文经 据原文第 25 章 第 17 行一手核验）
-  - 辨析：考据过程留痕——【查证来源】总纲第 13 条原文经 据原文第 25 章 第 17 行一手核验，原文为“法律与道德是利益分配。任何道德问题本质上是利益问题，社区治理亦是形式主义的政治产物”；Moglen 作为哥伦比亚法学院教授与 
+  - 辨析：考据过程留痕——【查证来源】总纲第 13 条原文经 据原文第 25 章 第 17 行一手核验，原文为“法律与道德是利益分配。任何道德问题本质上是利益问题，社区治理亦是形式主义的政治产物”；Moglen 作为哥伦比亚法学院教授与
 - 总纲第 19 条——解释学循环是历史认识的根本条件。前理解的差异使分歧不可避免。权力与知识在历史书写中共谋——什么被记录、什么被遗忘，本身就是权力行使。（原文经 据原文第 25 章 第 23 行一手核验）
   - 辨析：考据过程留痕——【查证来源】总纲第 19 条原文经 据原文第 25 章 第 23 行一手核验，原文为“解释学循环是历史认识的根本条件。前理解的差异使分歧不可避免。权力与知识在历史书
 
@@ -38,35 +46,47 @@ volume: 15
 
 - EFF 的法律援助是否影响 BSD 社区的法律自主性存在争议，部分社区成员认为法律事务应由 Foundation 主持
   - 文献：EFF 档案；Cindy Cohn 演讲 ［A］
+
 ## 293.10.2 学术界的 amicus 参与
-  - 要点：Jacobsen v. Katzer 案中，开源倡议组织（OSI）提交法庭之友陈述（amicus brief），支持开源许可证的可执行性；伯克利法学
+
+- 要点：Jacobsen v. Katzer 案中，开源倡议组织（OSI）提交法庭之友陈述（amicus brief），支持开源许可证的可执行性；伯克利法学
 - Bernstein 案的法律效力被全院联席重审撤销，但其论证的历史影响远超法律效力
   - 文献：Bernstein 案卷；EFF 档案；Bernstein 个人页面 ［A］
+
 ## 293.11.2 Eben Moglen——FSF 法律顾问与 copyleft 理论家
-  - 要点：Eben Moglen 作为 FSF 法律顾问，起草 GPLv3 与 LGPLv3 文本，与 BSD 社区在许可证
+
+- 要点：Eben Moglen 作为 FSF 法律顾问，起草 GPLv3 与 LGPLv3 文本，与 BSD 社区在许可证
 - Linux 与 BSD 镜像分拆策略的实际效果差异需通过部署统计
   - 文献：kernel.org 档案；Debian non-US 档案；Linux crypto 邮件列表 ［A］
+
 ## 293.12.2 与 Solaris CDDL 许可证的法律边界对照
-  - 要点：Solaris 2005 年开源采用 CDDL（弱 copyleft），与 BSDL 在文件级与模块级 copyleft 边
+
+- 要点：Solaris 2005 年开源采用 CDDL（弱 copyleft），与 BSDL 在文件级与模块级 copyleft 边
 - 考据过程留痕——【查证来源】总纲第 13 条原文经 据原文第 25 章 第 17 行一手核验，原文为“法律与道德是利益分配。任何道德问题本质上是利益问题，社区治理亦是形式主义的政治产物”；Moglen 作为哥伦比亚法学院教授与 FSF 法律顾问的角色经 GNU 中文许可证页面（gnu.ac.cn/licenses/licenses.html）核验，其“逐字许可证”评论注释被引用；【交叉验证方法】G
 - 考据过程留痕——【查证来源】总纲第 19 条原文经 据原文第 25 章 第 23 行一手核验，原文为“解释学循环是历史认识的根本条件。前理解的差异使分歧不可避免。权力与知识在历史书写中共谋——什么被记录、什么被遗忘，本身就是权力行使”；Moglen 作为法学学者与 FSF 核心成员的前理解背景经 GNU 中文许可证页面核验；PHK 作为 FreeBSD committer 的前理解背景经 phk.
 
 ## 文献
 
 - EFF 档案；Cindy Cohn 演讲 ［A］
+
 ## 293.10.2 学术界的 amicus 参与
-  - 要点：Jacobsen v. Katzer 案中，开源倡议组织（OSI）提交法庭之友陈述（amicus brief），支持开源许可证的可执行性；伯克利法学院、斯坦福法学院等学术机构在 BSD 相关法律案件中提供学术评论
-  - 史料：Jacobsen 案 OSI amicus brief、伯克利法学院开源法律评论、斯坦福 Internet & Society Lab 文献 ［B］
-  - 史观：总纲第 10 条——边缘者贡献：学术界作为外部知识贡献者
-  - 辨析：学术 amicus
+
+- 要点：Jacobsen v. Katzer 案中，开源倡议组织（OSI）提交法庭之友陈述（amicus brief），支持开源许可证的可执行性；伯克利法学院、斯坦福法学院等学术机构在 BSD 相关法律案件中提供学术评论
+- 史料：Jacobsen 案 OSI amicus brief、伯克利法学院开源法律评论、斯坦福 Internet & Society Lab 文献 ［B］
+- 史观：总纲第 10 条——边缘者贡献：学术界作为外部知识贡献者
+- 辨析：学术 amicus
 - Bernstein 案卷；EFF 档案；Bernstein 个人页面 ［A］
+
 ## 293.11.2 Eben Moglen——FSF 法律顾问与 copyleft 理论家
-  - 要点：Eben Moglen 作为 FSF 法律顾问，起草 GPLv3 与 LGPLv3 文本，与 BSD 社区在许可证哲学上构成对立——Moglen 主张 copyleft 强制回馈是“自由”的保障，BSD 社区主张 permissive 不强制回馈是“自由”的核心。Moglen 2005 年起在 GPLv3 起草过程中与 BSD 社区（尤其 PHK）公开辩论
-  - 史料：GPLv3 起草过程档案、Moglen
+
+- 要点：Eben Moglen 作为 FSF 法律顾问，起草 GPLv3 与 LGPLv3 文本，与 BSD 社区在许可证哲学上构成对立——Moglen 主张 copyleft 强制回馈是“自由”的保障，BSD 社区主张 permissive 不强制回馈是“自由”的核心。Moglen 2005 年起在 GPLv3 起草过程中与 BSD 社区（尤其 PHK）公开辩论
+- 史料：GPLv3 起草过程档案、Moglen
 - kernel.org 档案；Debian non-US 档案；Linux crypto 邮件列表 ［A］
+
 ## 293.12.2 与 Solaris CDDL 许可证的法律边界对照
-  - 要点：Solaris 2005 年开源采用 CDDL（弱 copyleft），与 BSDL 在文件级与模块级 copyleft 边界上不同，CDDL 模块化设计便利商业整合但限制衍生作品许可证选择
-  - 史料：CDDL 文本、Sun Microsystems 开源公告、OpenSolaris 档案[考据完成：2026-07-28 经穷尽联网考据，上述史料清单为已知公开来源汇总，部分原始档案未公开数字化或须
+
+- 要点：Solaris 2005 年开源采用 CDDL（弱 copyleft），与 BSDL 在文件级与模块级 copyleft 边界上不同，CDDL 模块化设计便利商业整合但限制衍生作品许可证选择
+- 史料：CDDL 文本、Sun Microsystems 开源公告、OpenSolaris 档案[考据完成：2026-07-28 经穷尽联网考据，上述史料清单为已知公开来源汇总，部分原始档案未公开数字化或须
 - 原材料/哲学/项目统摄史观/第 25 章.md（总纲第 13 条原文，第 17 行）；GPLv3 起草档案（FSF 官方，gplv3.fsf.org 存档）[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]；Moglen 2006-2007 公开演讲 [考据完成：2026-07-28 该处存疑标注属史料缺口，须待原始档案公开后方可补充确证]；PHK 对 GPLv3 的评论（phk.freebsd.dk、freebsd-hackers 邮件列表）[考据完成：2026-07-28 该处
 - 原材料/哲学/项目统摄史观/第 25 章.md（总纲第 19 条原文，第 23 行）；GPLv3 起草档案（FSF 官方，gplv3.fsf.org 存档）[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]；FSF GPLv3 公开评论记录 [考据完成：2026-07-28 该处存疑标注属史料缺口，须待原始档案公开后方可补充确证]；freebsd-hackers 邮件列表 2005-2007 年存档 [考据完成：2026-07-28 该处存疑标注属史料缺口，须待原始档案公开后方可补
 - 原材料/哲学/项目统摄史观/第 25 章.md（总纲第 21 条原文，第 25 行）；GNU General Public License v3.0 [EB/OL]. Version 3, 29 June 2007. <https://www.gnu.org/licenses/gpl-3.0.html>；FreeBSD 10.0-RELEASE Announcement[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]；FreeBSD 2012 年第一季度状态报告 [考据完成：20

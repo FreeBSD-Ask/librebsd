@@ -19,7 +19,7 @@ volume: 07
 - 总纲第 3 条——形式主义膨胀：SMPng 阵痛是 “形式化过程必须经历不完美” 的体现——从单锁到细粒度锁是架构形式化的必然步骤，但这个步骤本身会暂时降低系统性能；历史书写必须避免 “后见之明”，不能因为最终成功就否定阵痛时期的困难
 - 辨析：性能倒退百分比的准确数字——不同硬件配置、不同工作负载下倒退幅度差异巨大，单 CPU 几乎无倒退，4 路 SMP 高网络负载下可能倒退 50% 以上，网上
 - 总纲第 2 条——实践先于理论：KTLS 不是一个 “研究项目”，而是 Netflix 为解决其 CDN 实际吞吐量问题而开发的生产级解决方案——Open Connect CDN 服务器需要向数百万用户提供 TLS 加密视频流，纯用户态 TLS 终止（如 nginx+OpenSSL）在 100Gbps 网卡上成为 CPU 瓶颈；这又是一个 “生产需求驱动内核创新” 的典范
-  - 辨析：KTLS 
+  - 辨析：KTLS
 - 总纲第 6 条——技术路线分化：KTLS 在两个系统上并行发展，说明这是行业共同需求——随着 TLS 成为互联网默认（TLS 1.3、Let's Encrypt 普及），内核 TLS 卸载从 “小众优化” 变成 “必需品”；但两个系统的实现细节差异体现了各自网络栈架构的不同
 - 辨析：“Linux KTLS 比 FreeBSD 早 4 年”——技术上 Linux 4.13（2017）有初始框架，但
 - 总纲第 23 条——社区治理：WireGuard 事件暴露了 FreeBSD 项目治理中的一个张力——商业赞助商对项目开发有重大影响，代码审查流程是否对商业赞助代码有足够的约束力？这个问题没有简单答案，但事件后 FreeBSD 确实调整了安全敏感代码（如加密协议）的审查流程
@@ -42,9 +42,11 @@ volume: 07
 - Linux Kernel Documentation. *Kernel TLS (kTLS)*. kernel.org; Watson, D. (2017). *Linux kTLS Patches*. lkml.org; Baldwin, J. (2019). *Cross-Platform KTLS Comparison*. freebsd-net@; Chelsio Communications. (2020-2026). *TLS Offload Documentation*. chelsio.com. ［A］
     FreeBSD 社区论文与演讲 [313]，[313] Mateu
 - FreeBSD Project. *if_wg(4) Initial Commit*. cgit.freebsd.org (2020-11); Netgate Inc. (2020-2021). *WireGuard for FreeBSD Statements*. netgate.com; Donenfeld, J. A. (2020-12). *WireGuard for FreeBSD Review*. <freebsd-net@freebsd.org> mailing list. ［A］
+
 ## 139.7.2 Donenfeld 批评与从头重构过程
-  - 要点：2020 年 12 月
-- FreeBSD Net Mailing List Archives. (2020-11 to 2021-06). *WireGuard Implementation Thread*[Z/OL]. freebsd.org. 获取路径：<https://lists.freebsd.org/archives/freebsd-net/> [访问日期 2026-07-30]; FreeBSD Project. *wg(4) and if_wg(4) Commit History*[Z/OL]. cgit.freebsd.org. 获取路径：<https://cgit.freebsd.org/src/lo
+
+- 要点：2020 年 12 月
+- FreeBSD Net Mailing List Archives. (2020-11 to 2021-06). *WireGuard Implementation Thread*[Z/OL]. freebsd.org. 获取路径：<https://lists.freebsd.org/archives/freebsd-net/> [访问日期 2026-07-30]; FreeBSD Project. *wg(4) and if_wg(4) Commit History*[Z/OL]. cgit.freebsd.org. 获取路径：<<https://cgit.freebsd.org/src/lo>
 
 ## 自反性声明
 

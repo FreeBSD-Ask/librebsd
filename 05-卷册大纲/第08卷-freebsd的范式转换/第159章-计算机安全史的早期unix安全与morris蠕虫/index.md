@@ -4,6 +4,8 @@ id: CH159
 volume: 08
 ---
 
+# 第159章 计算机安全史的早期unix安全与morris蠕虫
+
 ## 要点
 
 - 还原 1988 年 11 月之前互联网的整体安全图景——1980 年代末互联网约有 6 万台主机连接，主要分布在大学、科研机构和军方；安全防御呈散兵游勇状态，各机构自行管理、缺乏协调；漏洞信息通过 Usenet 新闻组（如 comp.security.unix）口耳相传，没有统一的漏洞编号或公告体系；系统管理员的安全实践高度依赖个人经验，弱密码、开放服务、默认配置是普遍问题；Morris 蠕虫的爆发并非凭空出现，而是这一时期安全状况的集中暴露
@@ -20,7 +22,7 @@ volume: 08
   - 辨析：chroot 常被误认为是安全隔离机制，但它的设计初衷是构建环境，安全性只是 “副产品”；这一误解导致了大量基于 chroot 的不安全部署，直到 FreeBSD
 - 总纲第 22 条——开源运动：CERT/CC 的成立标志着互联网安全从个人自发应对转向制度化协作，这与开源运动从个人黑客到社区协作的演进路径同构
   - 辨析：CERT/CC 成立的精确日期存在多种说法（11 月中旬、11 月底、12 月初），经交叉验证应以 11 月 17 日 DARPA 正式批准日为准；“CERT 是缩写” 的说法是常见误解，官方明确说明 CERT 是注册商标而非首字母缩写
- 
+
 - 总纲第 21 条——密码学：RSA 算法的发明与专利化体现了密码学从军事机密向民用技术转变过程中的法律与经济张力，BSD 系统在这一张力中寻求技术可能性与法律合规的平衡
   - 辨析：RSA 专利的到期日（2000 年 9 月）是加密软件生态的重要转折点，先前 BSD 系统需通过 RSAREF 等受限实现绕开专利，此后 OpenSSL 等自由实现得以完整包含 RSA；但专利只是制约因素之一，出口管
 - 总纲第 25 条——终结与延续：SSL/TLS 从 Netscape 的商业产品演变为 IETF 开放标准，从早期脆弱的 SSL 2.0 发展到高度优化的 TLS 1.3，既是加密技术的延续，也是安全工程实践不断进化的结果
@@ -31,7 +33,7 @@ volume: 08
 - “1988 年之前没有安全研究” 是常见误解——实际上 Bell Labs、MIT、Purdue 等机构已有扎实的安全研究，但研究成果与工程实践之间存在巨大鸿沟；漏洞是已知的，但修补的激励和协调机制不存在；Morris 蠕虫的真正历史意义不在于发现了新漏洞，而在于证明了互联系统的系统性风险
   - 文献：Bishop, M. (2009). *Reflections on UNIX Vulnera
 - chroot 常被误认为是安全隔离机制，但它的设计初衷是构建环境，安全性只是 “副产品”；这一误解导致了大量基于 chroot 的不安全部署，直到 FreeBSD jail（2000 年）和 Linux namespaces 才真正从设计层面解决了隔离问题；setuid 机制则被反复证明是安全事故的重灾区，但至今仍无更优的普适替代方案
-  - 文献：Chen, H., Wagner, D., & 
+  - 文献：Chen, H., Wagner, D., &
 - CERT/CC 成立的精确日期存在多种说法（11 月中旬、11 月底、12 月初），经交叉验证应以 11 月 17 日 DARPA 正式批准日为准；“CERT 是缩写” 的说法是常见误解，官方明确说明 CERT 是注册商标而非首字母缩写
   - 文献：Carnegie Mellon University. (2016, Sep 1). *CERT Director Richard Pethia R
 - RSA 专利的到期日（2000 年 9 月）是加密软件生态的重要转折点，先前 BSD 系统需通过 RSAREF 等受限实现绕开专利，此后 OpenSSL 等自由实现得以完整包含 RSA；但专利只是制约因素之一，出口管制的影响更为深远
@@ -43,16 +45,22 @@ volume: 08
 
 - Bishop, M. (2009). *Reflections on UNIX Vulnerabilities*. ACSAC '09; Vagts, B. K. (2024). Telenet, the 1983 Hacking Incidents, and the Construction of Network Security. IEEE Annals of the History of Computing, 46(1); Spafford, E. H. (1989). *The Internet Worm: Crisis and Aftermath*. Communications o
 - Chen, H., Wagner, D., & Dean, D. (2002). *Setuid Demystified*. USENIX Security Symposium; McKusick, M. K. (2000). *Jails: Confining the Omnipotent Root*. BSDCon 2000; FreeBSD Project. **jail(8)** 手册页（4.4BSD 历史注释） ［A］
+
 ## 158.1.4 1980 年代黑客文化与安全漏洞
-  - 要点：还原 1980 年代黑客文化的社会语境与安全漏洞的传播生态——1983 年电影《WarGames
+
+- 要点：还原 1980 年代黑客文化的社会语境与安全漏洞的传播生态——1983 年电影《WarGames
 - Carnegie Mellon University. (2016, Sep 1). *CERT Director Richard Pethia Retires*. sei.cmu.edu; FIRST Organization. (2025). *Richard (Rich) D. Pethia - Hall of Fame*. first.org/hof/inductees; CERT/CC. *Frequently Asked Questions*. cert.org/faq[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费
 - Rivest, R. L., Shamir, A., & Adleman, L. (1978). *A Method for Obtaining Digital Signatures and Public-Key Cryptosystems*. Communications of the ACM, 21(2); Diffie, W., & Hellman, M. E. (1976). *New Directions in Cryptography*. IEEE Transactions on Information Theory ［B］
+
 ## 158.3.2 PGP 1991 年与出口管制冲突
+
 - IETF. (2018). *RFC 8446 - The Transport Layer Security (TLS) Protocol Version 1.3*; OpenBSD Project. (2014). *LibreSSL - Release of OpenBSD's fork of OpenSSL*. openbsd.org/56.html; Durumeric, Z. et al. (2014). *The Matter of Heartbleed*. IMC '14[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须
 - OpenSSH Project. (2025). *OpenSSH Project History*. openssh.org/history.html; Ylönen, T. (1996). *SSH — Secure Login Connections over the Internet*. Proceedings of the 6th USENIX Security Symposium; OpenBSD Project. (1999, Oct 25). *Press Release: OpenSSH integrated into OpenBSD operating system*. o
 - OpenBSD CVS Repository. *src/usr.bin/ssh/ initial import*. cvsweb.openbsd.org (Sep 26, 1999); OpenBSD Project. (1999). *OpenBSD 2.6 Release Notes*. openbsd.org/26.html; Provos, N. et al. (2000). *OpenSSH: Open Source Secure Shell*. USENIX Security Symposium ［B］
+
 ## 158.4.3 OpenSSH 的全球部署与安全审计传统
-  - 要点
+
+- 要点
 - Puppy, R. F. (2000). *RFPolicy for vulnerability disclosure*. Bugtraq Mailing List; Cencini, A., Yu, K., & Chan, T. (2005). *Software Vulnerabilities: Full-, Responsible-, and Non-Disclosure*. University of Washington; Schneier, B. (2000). *Why We Disclose: Full Disclosure and Why It's Good for Secu
 
 ## 自反性声明

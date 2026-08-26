@@ -40,22 +40,34 @@ volume: 07
 ## 文献
 
 - Supreme Court of the United States. (2021-04-05). *Google LLC v. Oracle America, Inc., 593 U.S. 1*; Electronic Frontier Foundation. (2021). *Supreme Court Rules API Copying Is Fair Use*. eff.org.[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]
+
 ## 148.10.2 判决对 BSD 与开
+
 - FreeBSD Project. (2021). *13.0 Release Notes* (Architectures section); Tymoshenko, O. (2020-2021). freebsd-mips mailing list posts on MIPS support status. ［A］
+
 ## 148.11.2 riscv64sf（软浮点 RISC-V）退役与 riscv64 演进
-  - 要点：FreeBSD 13.0 移除了 riscv64sf（64 位 RISC-V 软浮点变体）架构支持，仅保留 riscv64（hard-float）作为 Tier-2 支持；
+
+- 要点：FreeBSD 13.0 移除了 riscv64sf（64 位 RISC-V 软浮点变体）架构支持，仅保留 riscv64（hard-float）作为 Tier-2 支持；
 - FreeBSD Project. *Core Team Information*. freebsd.org/core/; FreeBSD Project. *Core Team Election Results* (2020, 2022, 2024). freebsd.org. ［A］
+
 ## 148.5.2 Security Officer 与安全团队
-  - 要点：FreeBSD 13.0-RELEASE 时 Security Officer 为 Gordon Tetlow（戈登·泰特洛），Ed Maste（埃德·马斯特） 担任 Security Officer Deputy；Securit
+
+- 要点：FreeBSD 13.0-RELEASE 时 Security Officer 为 Gordon Tetlow（戈登·泰特洛），Ed Maste（埃德·马斯特） 担任 Security Officer Deputy；Securit
 - OpenZFS Project. (2020-11-30). *OpenZFS 2.0.0 Release Notes*. github.com/openzfs/zfs/releases; FreeBSD Release Engineering Team. (2021-2024). 13.x Release Notes ZFS sections.[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]
+
 ## 148.6.2 OpenZFS 2.1 核心特性：zstd 压缩、Persist
+
 - FreeBSD Project. **linux(4)** Manual Page; FreeBSD Project. *Linux Emulation* wiki page; freebsd-emulation mailing list. ［A］
+
 ## 148.7.2 bhyve 虚拟化改进
-  - 要点：bhyve（BSD Hypervisor）是 FreeBSD 原生虚拟化管理器，13.x 期间持续改进：(1) **13.2 起支持超过 16 个 vCPU**：bhyve 客户机之前限制最多 16 个 vCPU，13.2 解除此限制，支持更多 vCPU 以适配高性能工作负载；(2) AM
+
+- 要点：bhyve（BSD Hypervisor）是 FreeBSD 原生虚拟化管理器，13.x 期间持续改进：(1) **13.2 起支持超过 16 个 vCPU**：bhyve 客户机之前限制最多 16 个 vCPU，13.2 解除此限制，支持更多 vCPU 以适配高性能工作负载；(2) AM
 - 13.x 文档； OpenBSD 安全文档 ［A］
 - FreeBSD Project. src/conf/COMMITTERS; FreeBSD Release Engineering Team. (2022-05-16). 13.1-RELEASE Dedication to Bill Jolitz; FreeBSD Foundation. Annual Reports contributor lists. ［A］
+
 ## 148.9.2 Git 迁移后新贡献者路径
-  - 要点：Git 迁移完成后，新贡献者参与 FreeBSD 的路径更加清晰：(1) 在 GitHub 镜像（github.com/freebsd/freebsd-src）提交 P
+
+- 要点：Git 迁移完成后，新贡献者参与 FreeBSD 的路径更加清晰：(1) 在 GitHub 镜像（github.com/freebsd/freebsd-src）提交 P
 
 ## 自反性声明
 

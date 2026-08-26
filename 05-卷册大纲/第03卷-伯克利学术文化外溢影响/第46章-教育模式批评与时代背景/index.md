@@ -27,7 +27,7 @@ volume: 第03卷-伯克利学术文化外溢影响
 
 - CSRG 与伯克利左派传统的 “交叠” 程度须严格考据——CSRG 核心成员 Joy（1975 年入伯克利）、McKusick（1976 年入伯克利研究生）、Karels、Bostic 等均晚于 FSM（1964）与人民公园（1969），其 “亲历” 程度须核对成员本人自述，避免事后建构；CSRG 选拔机制与左派师承式招募的 “同构” 是结构性类比而非直接因果，须区分 “结构相似” 与 “实际传承
 - 源码贡献者记录的完整性需核对；邮件列表存档的截取情况需核对；事后回忆的记忆偏差需核对；0 信任原则的适用性需核对
-- Cook 1971、Karp 1972、RSA 1978、Lamport 1978、Codd 1970 等理论的发表时间与刊物考据详见 22.20.13.1 辨析；各理论与 BSD 实现的具体关联为史家阐释而非当事人自述——RSA 理论（1978）在 BSD 中的应用（SSH、SSL/TLS、IPsec）多在 1990 年代中后期才出现，CSRG 解散前 BSD 对 RSA 的直接应用有限（保留 
+- Cook 1971、Karp 1972、RSA 1978、Lamport 1978、Codd 1970 等理论的发表时间与刊物考据详见 22.20.13.1 辨析；各理论与 BSD 实现的具体关联为史家阐释而非当事人自述——RSA 理论（1978）在 BSD 中的应用（SSH、SSL/TLS、IPsec）多在 1990 年代中后期才出现，CSRG 解散前 BSD 对 RSA 的直接应用有限（保留
 - Cook 1971、Karp 1972、DES 1977、RSA 1978、Lamport 1978、Codd 1970 等论文的发表时间、刊物与卷期页码详见 22.20.13 表格；Cook 论文发表于 STOC '71（1971.5.3-5，Shaker Heights, Ohio）；Karp 论文后收入 Miller & Thatcher (1972) 论文集，扩展 NP 完全问题类至 21
 - Cerf/Kahn 1974 论文发表于 IEEE Trans. Comm. 22(5)（1974.5），奠定 TCP/IP 协议基础；C++ 与 Objective-C 的发布时间考据详见 22.20.8 辨析；Tanenbaum-Torvalds 争论时间 1992.1.29-2 月经 comp.os.minix Usenet 存档确认——Tanenbaum 发表 "Linux is obso
 

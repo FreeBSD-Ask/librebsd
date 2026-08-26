@@ -4,6 +4,8 @@ id: CH161
 volume: 08
 ---
 
+# 第161章 技术瓶颈
+
 ## 要点
 
 - freebsd 代码仓库共 1,294,851 次提交（1993-06-12 至 2026-08-25），13,875 位贡献者
@@ -42,7 +44,7 @@ volume: 08
 - [DB:references_fulltext] 参考文献全文数据库（4,077 篇全文，27,138 条时间线事件）—— 对应 freebsd.duckdb 代码仓库数据
 - FreeBSD Foundation. *Annual Reports 2001-2005*. freebsdfoundation.org; DARPA. *CHATS Program Documentation*. darpa.mil; Yahoo! Inc. *FreeBSD Deployment Case Study* (historical archives). ［A］
 - FreeBSD Project. *src/conf/COMMITTERS file*; Baldwin J. *SMPng Design Documents*. freebsd-arch mailing list archives; Roberson J. *ULE Scheduler*. freebsd-hackers mailing list, 2003; McKusick M K. *Personal Publications Archive*. mckusick.com. ［A］
-- Kegel, D. (1999). *The C10K Problem*. kegel.com/c10k.html; McKusick, M. K. et al. (2014). *The Design and Implementation of the FreeBSD Operating System* (2nd ed.). Addison-Wesley; Love, R. (2005). *Linux Kernel Development* (2nd ed.). Novell Press; Custer, H. (1993). *Inside Windows NT*. Microsoft 
+- Kegel, D. (1999). *The C10K Problem*. kegel.com/c10k.html; McKusick, M. K. et al. (2014). *The Design and Implementation of the FreeBSD Operating System* (2nd ed.). Addison-Wesley; Love, R. (2005). *Linux Kernel Development* (2nd ed.). Novell Press; Custer, H. (1993). *Inside Windows NT*. Microsoft
 - 峰会纪要； Foundation 报告 ［A］
 - Kegel, D. (1999). *The C10K Problem*. kegel.com/c10k.html; McKusick, M. K., Neville-Neil, G. V., & Watson, R. N. M. (2014). *The Design and Implementation of the FreeBSD Operating System* (2nd ed.). Addison-Wesley; Love, R. (2005). *Linux Kernel Development* (2nd ed.). Novell Press; Molnar I. O(1) s
 - Custer, H. (1993). *Inside Windows NT*. Microsoft Press; Solomon, D. A. & Russinovich, M. E. (2000). *Inside Microsoft Windows 2000* (3rd ed.). Microsoft Press; McKusick, M. K., Neville-Neil, G. V., & Watson, R. N. M. (2014). *The Design and Implementation of the FreeBSD Operating System* (2nd ed.).

@@ -4,6 +4,8 @@ id: CH309
 volume: 16
 ---
 
+# 第309章 freebsd社区演进史-辩证链
+
 ## 要点
 
 - 批评者指出 FreeBSD 社区发展面临三个结构性挑战——其一，贡献者老龄化：FreeBSD committer 群体平均年龄偏大（多数 40+），CSRG 一代（McKusick、Karels、Bostic）已步入晚年，Mike Karels 于 2024-06-07 去世（John Baldwin（约翰·鲍德温） 在 freebsd-announce 邮件列表发布讣告），反映 CSRG 一代的自然衰退；freebsd.db 查询 L1.2.3 显示每年流失贡献者数（连续 2 年无 commit）从 1995 年 27 人激增至 2010 年 5,443 人、2015 年 14,079 人、2019 年 22,210 人，社区流动性大幅增加；其二，新生代吸引力不足：FreeBSD 在年轻开发者中认知度低，操作系统教材多数以 Linux 为主，FreeBSD 缺乏现代开发工具链（如 GitHub PR）的完整支持，2020 年才完成 Git 迁移，相比 Linux（2005 年即采用 Git）迟缓约 15 年；其三，与 Linux 社区规模差距扩大：Linux 6.5 内核（2023-08-27 发布）单版本有 1,921 位开发者贡献，其中 271 位为首次贡献者（LWN 2023-08-28 Jonathan Corbet 报道），而 FreeBSD 2021 年全年活跃贡献者（≥10 commit/年）为 2,094 人——Linux 单版本开发者数已接近 FreeBSD 全年活跃贡献者数；资金规模差距更为悬殊，Linux Foundation 2023 年总收入约 2.626 亿美元（Linux Foundation 2023 年度报告官方 PDF：Rising Tides of Open Source），FreeBSD Foundation 2024 年总收入约 152 万美元（FreeBSD Foundation 2024 年损益表），差距约 173 倍；批评者总结认为，三个维度均反映 FreeBSD 社区发展的结构性挑战——老龄化使核心知识传承困难，新生代吸引力不足使代际更替滞后，与 Linux 规模差距扩大使 FreeBSD 在开源生态中的边际地位面临压力
@@ -20,12 +22,12 @@ volume: 16
 
 ## 辨析
 
-- 考据过程留痕——【查证来源】Linux 6.5 内核开发者数据经 LWN 2023-08-28 Jonathan Corbet 文章一手核验（<https://lwn.net/Articles/941675/> ），1,921 位开发者与 271 位首次贡献者数字确认；Linux Foundation 2023 年收入 2.626 亿美元经 Linux Foundation 官方年度报告 PDF 
+- 考据过程留痕——【查证来源】Linux 6.5 内核开发者数据经 LWN 2023-08-28 Jonathan Corbet 文章一手核验（<https://lwn.net/Articles/941675/> ），1,921 位开发者与 271 位首次贡献者数字确认；Linux Foundation 2023 年收入 2.626 亿美元经 Linux Foundation 官方年度报告 PDF
 - 考据过程留痕——【查证来源】项目史观总纲第 13、19、21 条经 据原文第 25 章 一手核验；第 13 条原文“法律与道德是利益分配。任何道德问题本质上是利益问题，社区治理亦是形式主义的政治产物”；第 19 条原文“解释学循环是历史认识的根本条件。前理解的差异使分歧不可避免。权力与知识在历史书写中共谋——什么被记录、什么被遗忘，本身就是权力行使”；第 21 条原文“革命与改革是历史方法论的分歧
 
 ## 文献
 
-- freebsd.db 查询 L1.2.3、L1.2.2（见 `原材料/研究/bsd仓库分析/数据分析/宏观趋势统计.md` §L1.2.3、§L1.2.2）；Mike Karels 讣告 [EB/OL]. John Baldwin, 2024-06-07. <https://lists.freebsd.org/archives/freebsd-announce/2024-June/000135.html>（访问日期 2026-07-24）；Corbet J. Development statistics for the 6.5 kernel [EB/OL]. LWN, 2023-08-28. 
+- freebsd.db 查询 L1.2.3、L1.2.2（见 `原材料/研究/bsd仓库分析/数据分析/宏观趋势统计.md` §L1.2.3、§L1.2.2）；Mike Karels 讣告 [EB/OL]. John Baldwin, 2024-06-07. <https://lists.freebsd.org/archives/freebsd-announce/2024-June/000135.html>（访问日期 2026-07-24）；Corbet J. Development statistics for the 6.5 kernel [EB/OL]. LWN, 2023-08-28.
 - 项目史观总纲第 13、19、21 条（据原文第 25 章）；第 140.34.1-140.34.4 节辩证链补足；Linux Foundation 2023 Annual Report（同 140.34.1 节）；FreeBSD Foundation 2024 Profit and Loss Report（同 140.34.1 节）；Corbet J. Development statistics for the 6.5 kernel（同 140.34.1 节）；参见 140.17、140.18、140.27a、140.27b、140.27c、140.32 节史料 ［A］
 FreeBSD 社区
 

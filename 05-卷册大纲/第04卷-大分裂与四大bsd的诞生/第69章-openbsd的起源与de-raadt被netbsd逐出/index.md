@@ -32,7 +32,7 @@ volume: 第04卷-大分裂与四大bsd的诞生
 
 ## 辨析
 
-- 通知的具体措辞在不同叙事中略有差异——需对照邮件列表原始存档核实；经[邮件列表库]核查：netbsd-users 列表 1994 年存档缺失，逐出通知原文两库无法验证；netbsd 库 port-sparc/port-m68k 列表存 Theo de Raadt（deraadt@fsa.ca / deraadt@theos.com）1994-1995 年多封技术邮件（如 port-sparc 19
+- 通知的具体措辞在不同叙事中略有差异——需对照邮件列表原始存档核实；经[邮件列表库]核查：netbsd-users 列表 1994 年存档缺失，逐出通知原文两库无法验证；netbsd 库 port-sparc/port-m68k 列表存 Theo de Raadt（<deraadt@fsa.ca> / <deraadt@theos.com>）1994-1995 年多封技术邮件（如 port-sparc 19
 - 通知邮件与 de Raadt 自述在事实细节上存在冲突——需对照多方公开声明交叉验证
 - 后果的正负评估在不同叙事中差异较大——部分视为 BSD 阵营的损失，部分视为 OpenBSD 安全文化的契机；需对照多方公开声明核实
 - 评价与 de Raadt 自述在事实细节上可能存在冲突——需对照多方公开声明交叉验证

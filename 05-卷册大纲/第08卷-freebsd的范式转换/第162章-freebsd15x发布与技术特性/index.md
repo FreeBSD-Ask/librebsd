@@ -4,6 +4,8 @@ id: CH162
 volume: 08
 ---
 
+# 第162章 freebsd15x发布与技术特性
+
 ## 要点
 
 - FreeBSD 15.0-RELEASE 于 **2025 年 12 月 2 日** 由 Release Engineering Team 正式发布（Release Engineer 为 Colin Percival），是 stable/15 分支的首个版本；15.0 是 FreeBSD 历史上首个 **不为 i386、armv6、32 位 powerpc 提供 RELEASE 安装镜像** 的大版本，标志着 FreeBSD 正式进入 64 位纯净时代；15.0 开发周期自 14.0 于 2023 年 11 月发布后历时约两年，集成了大量基础设施改进；15.0 支持架构为 **amd64、aarch64、armv7、powerpc64、powerpc64le、riscv64**（armv7 为最后保留的 32 位 Tier 2 平台）；15.0 的一项里程碑式工程成就是：**所有发布制品（安装镜像、VM 镜像等）均无需 root 权限构建**，这为可重现构建与 CI/CD 现代化奠定了基础；15.0-RELEASE 将支持至 **2026 年 9 月 30 日**，整个 15.x 稳定分支将支持至 **2029 年 12 月 31 日**
@@ -14,7 +16,7 @@ volume: 08
 
 ## 史观
 
-- 总纲第 1 条——项目统摄史观：15.0 是 FreeBSD 历史上的关键一刻——它终结了自 1993 年 1.0 以来持续 32 年的 32 位 x86（i386）平台 RELEASE 构建传统；从 386BSD 补丁包中诞生的 FreeBSD，在 32 位 x86 上运行了整整一代人的时间后，正式将 i386 送入历史；这一刻不是 “抛弃传统”，而是承认硬件现实——AMD Opteron 于 
+- 总纲第 1 条——项目统摄史观：15.0 是 FreeBSD 历史上的关键一刻——它终结了自 1993 年 1.0 以来持续 32 年的 32 位 x86（i386）平台 RELEASE 构建传统；从 386BSD 补丁包中诞生的 FreeBSD，在 32 位 x86 上运行了整整一代人的时间后，正式将 i386 送入历史；这一刻不是 “抛弃传统”，而是承认硬件现实——AMD Opteron 于
 - 总纲第 17 条——软件工程：pkgbase 的引入是 FreeBSD 基础系统软件包管理范式的根本转变——自 1993 年以来，FreeBSD 基础系统一直通过 "distribution sets"（tar 分发软件包）与 **freebsd-update(8)** 管理，pkgbase 将基础系统与第三方软件包统一到同一个软件包管理框架下；这一转变的工程意义不亚于 2012 年 **pkg(
 - 总纲第 6 条——技术路线分化：LinuxKPI 战略不是 “屈服于 Linux” 或 “变成 Linux”，而是在承认 Linux 已成为硬件驱动事实标准生态的前提下，保持 FreeBSD 内核独立性与 BSD 哲学的工程智慧；这与 **netlink(4)** 在 14.0 引入（兼容 Linux 网络配置协议）属于同一思路——不重新发明轮子，在非核心差异化领域兼容生态事实标准，将有限的开发者
 - 总纲第 25 条——终结与延续：15.0 对 14.x 的延续体现在：稳定的 API/ABI 兼容性承诺（5 年支持周期至 2029.12）、lib32 对 32 位应用程序的运行时兼容、Jail/bhyve/ZFS/pf 等核心子系统的持续演进、BSD 许可证与 FreeBSD 开发模式的坚持；终结体现在：i386/armv6/powerpc RELEASE 镜像的终止、传统 distribut
@@ -37,6 +39,7 @@ volume: 08
 - FreeBSD Project. FreeBSD 15.1-RELEASE Announcement [EB/OL]. (2026-06-16)[2026-07-19]. <https://www.freebsd.org/releases/15.1R/announce/>; Neumann P G. Computer-Related Risks [M]. Addison-Wesley, 1995. ISBN 978-0-201-55805-9; FreeBSD Project. release/15.1.0. freebsd-src 仓库 tag [DB/OL]. 2026-06-12T00:
 - FreeBSD Project. FreeBSD 15.1-RELEASE Release Notes [EB/OL]. (2026-06-16)[2026-07-19]. <https://www.freebsd.org/releases/15.1R/relnotes/>; Unicode Consortium. Unicode 17.0 Release [EB/OL]. (2025-09)[2026-07-19]. <https://home.unicode.org/announcing-unicode-17/>.[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源
 - FreeBSD Project. Release Engineering Information [EB/OL]. [2026-07-19]. <https://www.freebsd.org/releng/>; Somers A. The Case for Rust (in the base system)[EB/OL]. (2024-01-20)[2026-07-19]. <https://lists.freebsd.org/archives/freebsd-hackers/2024-January/002823.html>. ［A］
+
 ## 161.2.4 15.x 发布周期史料辨析
   
 - FreeBSD Project. FreeBSD Release Schedule Archive [EB/OL]. [2026-07-19]. <https://www.freebsd.org/releases/>; Percival C. FreeBSD Release Engineering Posts [EB/OL]. [2026-07-19]. <https://www.daemonology.net/blog/>. ［C］

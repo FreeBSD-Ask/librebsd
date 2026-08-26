@@ -27,7 +27,7 @@ volume: 第11卷-dragonflybsd的历史
 - UML 与 vkernel 的比较须考虑内核架构差异——Linux 内核代码量数倍于 DragonFly 内核，UML 维护难度高于 vkernel 是客观事实；vkernel 在 DragonFly 中“更实用”的判断须以具体使用场景为准（开发调试 vs 生产部署），不得简单优劣判断；vkernel 性能与真硬件的具体差距 [考据完成：2026-07-28 该处存疑标注属史料缺口，须待原始档案公
 - 迁移成本是主观感受，须基于多案例归纳——bsd_commits.db 不直接提供迁移成本数据，正式撰写时须以 lists.dragonflybsd.org 与 lists.freebsd.org 邮件列表中用户迁移讨论案例统计核验；DragonFly 与 FreeBSD userland 差异“小于 FreeBSD 与 OpenBSD”的判断须以同口径 userland 目录文件 diff 量化核
 - 跨项目统计比较的方法论须谨慎——bsd_commits.db 四仓库同口径统计避免苹果与橘子比较，但 Linux/illumos 比较须考虑 commit 定义差异；Foundation 年报数据反映财务状况但非技术活跃度，二者不得混用；bsd_commits.db 不提供下载量、用户数等数据，正式撰写时须以各项目官方统计（如 FreeBSD Foundation 年报下载量、OpenBSD CD
-- 【总纲第 13 条的引用边界】总纲第 13 条“法律与道德是利益分配”在 DragonFly 案例中的适用性须以 BSDL 法律延续性为前提——fork 改变代码走向但不改变许可证形式，法律层面的延续性使利益分配冲突限定在技术路线层面；若 fork 涉及许可证变更（如 GPL fork 自 BSDL），法律层面的利益分配冲突将更为复杂；【0 信任原则·许可证延续性的核验】dragonfly.db 
+- 【总纲第 13 条的引用边界】总纲第 13 条“法律与道德是利益分配”在 DragonFly 案例中的适用性须以 BSDL 法律延续性为前提——fork 改变代码走向但不改变许可证形式，法律层面的延续性使利益分配冲突限定在技术路线层面；若 fork 涉及许可证变更（如 GPL fork 自 BSDL），法律层面的利益分配冲突将更为复杂；【0 信任原则·许可证延续性的核验】dragonfly.db
 
 ## 文献
 

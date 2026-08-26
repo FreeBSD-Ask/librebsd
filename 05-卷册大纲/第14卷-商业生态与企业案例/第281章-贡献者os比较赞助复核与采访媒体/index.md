@@ -4,6 +4,8 @@ id: CH281
 volume: 14
 ---
 
+# 第281章 贡献者os比较赞助复核与采访媒体
+
 ## 要点
 
 - **Netflix** 的 **Jonathan Looney**、**Drew Gallatin** 推动了 `sendfile`、**TLS** 与 **kTLS** 等核心特性，**Juniper** 的 **ARM64** 移植团队贡献了 **FreeBSD** **arm64** 端口基础。
@@ -44,29 +46,41 @@ volume: 14
 
 - Netflix 技术博客；FreeBSD 源码 Juniper ARM64 commit ［A］
     FreeBSD 社区论文与演讲 [124]，[124] Matt Ahrens. Flexible Disk Use in OpenZFS [C]//BSDCan 2018. [S.l.]: [s.n.], 2018. 获取路径：<https://papers.freebsd.org/2018/bsdcan/ahrens-flexible_disk_use_in_openzfs/> [访问日期 2026-07-26].
+
 ## 280.38.2 被 NDA 封锁的企业内部推广者
-  - 要点
+
+- 要点
 - Sun Microsystems 1993 SunOS 4.1.3 Reference Manual；Wind River 2001-2005 年度报告中关于 BSD/OS 产品线的章节；Caldera 2002 年 1 月 BSD 释放公告（Groklaw 存档） ［A］
+
 ## 280.39.2 OpenSolaris 2010 年 8 月关闭与 illumos fork：闭源回归与社区自救
-  - 要点：**Sun Microsystems** 于 2005 年 6 月 14 日在 **CDDL** 许可证下开源 **Solaris** 形成 **OpenSolaris** 项目，2005
+
+- 要点：**Sun Microsystems** 于 2005 年 6 月 14 日在 **CDDL** 许可证下开源 **Solaris** 形成 **OpenSolaris** 项目，2005
 - Steven Stallion 2010.8.13 博客；Garrett D'Amore 2010.8.3 illumos 公告；Bryan Cantrill LISA 2011 演讲；illumos.org/about/history/；InfoQ 2010.8.29“OpenSolaris 走到尽头了吗？” ［C］
+
 ## 280.39.3 Apple Darwin 2005 年 5 月 x86 关闭：APSL 下的选择性开放
-  - 要点：**Apple** 于 2000 年在 **Apple Public Source License**（**APSL**）1.0 下释出 **Darwi
+
+- 要点：**Apple** 于 2000 年在 **Apple Public Source License**（**APSL**）1.0 下释出 **Darwi
 - IBM AIX Documentation；HP-UX Documentation；Tru64 UNIX Documentation（HP.com 存档）；SGI 破产重组法院文件（2006）；Unix 史学综述文章（如 Peter Salus"The Daemon, the GNU & the Penguin"） ［A］
 - **Red Hat** 年报；**LWN** 内核统计 ［B］
     FreeBSD 社区论文与演讲 [124]，[124] Matt Ahrens. Flexible Disk Use in OpenZFS [C]//BSDCan 2018. [S.l.]: [s.n.], 2018. 获取路径：<https://papers.freebsd.org/2018/bsdcan/ahrens-flexible_disk_use_in_openzfs/> [访问日期 2026-07-26].
+
 ## 280.13.2 **Solaris** 与 **Windows** 商业模式的差异
-  - 要点
+
+- 要点
 - **BSDL** 原文；**Foundation** 年报 ［B］
+
 ## 280.13.4 各项目商业数据与市场份额考据
-  - 要点：各项目的商业数据与市场份额需从多个来源收集，包括年报、市场研究报告。
-  - 史料：各公司年报、**IDC**/**Gartner** 市场报告 ［B］
-  - 史观：总纲第 16 条——经济周期：商业数据反映经济周期
-  - 辨析：市场份额数据的方法论差异需评估
-  - 文献：**IDC** 市场报告；**Gartner** 报告[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口
+
+- 要点：各项目的商业数据与市场份额需从多个来源收集，包括年报、市场研究报告。
+- 史料：各公司年报、**IDC**/**Gartner** 市场报告 ［B］
+- 史观：总纲第 16 条——经济周期：商业数据反映经济周期
+- 辨析：市场份额数据的方法论差异需评估
+- 文献：**IDC** 市场报告；**Gartner** 报告[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口
 - `openbsd.db` L3.2.1/L3.2.2 查询报告；**Apple**/**Sony**/**NetApp**/**Juniper**/**Netflix** 商业产品技术文档；**TrueNAS** 2025 迁移公告；**Sony** 2010 **OtherOS** 移除公告；项目史观总纲第 11 条（见原材料/哲学/项目统摄史观/第 25 章.md） ［A］
+
 ## 280.41.2 利益分配法律化与 **BSDL**/`committer` 权限/企业赞助的形式主义（总纲第 13 条）
-  - 要点：从项目史观总纲第 13 条 “法律与道德是利益分配” 切入，**FreeB
+
+- 要点：从项目史观总纲第 13 条 “法律与道德是利益分配” 切入，**FreeB
 - 项目史观总纲第 21 条（见 据原文第 25 章）；**BSD 2-Clause** 原文；**Linux** 内核 **COPYING** 文件（torvalds/linux 仓库）；**Committer's Big List of Rules**；**FreeBSD Committer's Guide**；**FreeBSD Foundation** **IRS** **990** 表；openbsd.db L3.2.1/L3.2.2 查询报告；**Berlin** I. "Two Concepts of Liberty"（1958）；**TrueNAS** 2025 迁移公告；上述 1
 
 ## 自反性声明
