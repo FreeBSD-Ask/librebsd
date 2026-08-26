@@ -72,7 +72,7 @@
 - **涉及文件夹级数据库交叉引用同步时**：查阅 规则/流程规则.md 的其他文件夹转数据库规则小节的“交叉引用同步”子小节，重点核对同步脚本用法（sync_cross_references_after_cleanup.py）、映射表构建（数据库 merged 记录优先、cleanup_report.md 兜底）、6 种引用形式（markdown 链接/wikilink/脚注/章节引用/CSV 路径字段/JSON path 字段）、扫描范围、数据库 cross_references 表同步、同步后核验等。
 - **涉及文件夹级数据库源文件清理时**：查阅 规则/流程规则.md 的其他文件夹转数据库规则小节的“源文件清理规则”子小节，重点核对适用场景（6 个非核心文件夹）、不适用范围（sacred/规则/大纲/正文/变更记录）、关键索引文件排除清单（17 个被 CLAUDE.md 或 GitBook 依赖的文件）、清理方式（原 `_delete_source_files.py` 已缺失，2026-08-11 起按人工清理执行）、数据库 status='deleted' 更新、folder_db_registry.csv source_files_status 字段、日志要求等。
 - **涉及文件夹级数据库 Schema 优化与空间回收时**：查阅 规则/流程规则.md 的其他文件夹转数据库规则小节的“Schema 优化与空间回收”子小节，重点核对优化脚本用法（optimize_folder_databases.py 五种模式）、Schema 优化内容（v1.2→v1.3：schema_meta 表 + 9 个预定义索引 + 删除空扩展表 + 回填 update_log）、幽灵块清理规则（6 个非 sacred 数据库，sacred 例外）、VACUUM 空间回收规则（数据完整性约束）、schema_version 升级核验、日志要求等。
-- 涉及数据库操作加速与 PRAGMA 优化时查阅 [00-编纂规则与格式规范/01-规则/流程规则.md](00-编纂规则与格式规范/01-规则/流程规则.md)
+- 涉及数据库操作加速与 PRAGMA 优化时查阅 [00-编纂规则与格式规范/01-规则/流程规则.md](00-编纂规则与格式规范/01-规则/流程规则.md)（**已废止**：SQLite PRAGMA 优化随 2026-08-25 全库 DuckDB 化失效，DuckDB 优化走「DuckDB 分析层与主存储层规则」的 `sqlite2duckdb.py --optimize`）
 - **涉及历史镜像站/档案馆批量挖掘、扫描件 OCR、全文索引入库时**：查阅 规则/镜像站挖掘与OCR流水线规则.md，重点核对镜像站探查与批量下载（限流应对/AppleDouble 过滤/损坏 PDF 重下）、OCR 流水线（文本层优先、RapidOCR 替代 Tesseract、8 进程并行、质量分级）、索引入库（组/文件级双轨、幂等、大纲回写增量安全）、SFU PUPS 工程经验教训（Bash 内联 Python 转义坑、数据库锁、后台任务跨会话等）。
 - **涉及数据库格式统一（索引命名、schema_meta 键集合、table_count 统计、扩展表合并、引用查询加速索引、模块化分层设计、冗余文件清理、删除安全）时**：查阅 规则/流程规则.md 的“数据库格式统一规则”子小节，重点核对索引命名规范（`idx_cross_references_*` 前缀、`files` 表索引集合）、schema_meta 键集合规范（9 个标准键）、table_count 统计口径（不含 FTS5 影子表）、扩展表合并规范（5 组合并表含 record_type 字段）、引用查询加速索引规范（`idx_cross_references_reference_type`、`idx_cross_references_source_block_id`）、模块化分层设计规范（一库一文件夹）、冗余文件清理规范、删除安全规范（预览→备份→确认→执行→复核 5 步流程）等。
 
