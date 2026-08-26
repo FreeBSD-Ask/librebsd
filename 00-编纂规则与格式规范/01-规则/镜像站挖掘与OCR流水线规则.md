@@ -58,7 +58,7 @@
 - **入库阈值**：OCR md <200 字节视为无效（可能 0 页损坏或全噪声）；有效 md 才写入 fulltext。
 - **失败不阻塞**：单文件 OCR 失败（损坏 PDF、超大文件崩溃）记录后继续，不中断整个批次；后续统一补漏重跑。
 
-## 3 索引入库规范（references_fulltext.db）
+## 3 索引入库规范（references_fulltext.duckdb）
 
 ### 3.1 组记录与文件级记录双轨
 
