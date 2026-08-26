@@ -25,7 +25,11 @@ volume: 第09卷-netbsd的历史
 
 ## 辨析
 
-（待补）
+- 分叉动机在不同叙事中差异较大——部分归因于技术分歧，部分归因于个人冲突；需对照原始邮件存档核实。经 netbsd.db netbsd-src 仓库 commits 表验证，Chris Demetriou（cgd）与 Theo de Raadt（deraadt）的首批 commit 时间戳（1993-03-21 与 1993-04-02）与 NetBSD 1993.4 创建公告时间高度吻合，可作为 
+- history.html 载明四位创始人（Demetriou、de Raadt、Glass、Hannum），与 171.1 节既有考据一致；openbsd-faq1.html 为简介页（不含分裂详述），分裂事件详述以 netbsd-history.html 与 171.3 节考据为准；formal.html 为版本历史列表（0.8 1993-04-20 起），与 171.1 节版本时间线表一致
+- 文档与源码的一致性需考据——部分文档可能滞后于源码；需对照多源档案核实
+- 撤权的具体日期与原因在不同叙事中差异较大——本节叙事采用 1994.12.23 决议日期（NetBSD Core Team 公开记录口径），但部分二手叙事误作 1995 年 12 月；撤权原因部分归因于沟通风格，部分归因于技术分歧，部分归因于项目治理分歧，需对照原始邮件存档核验。经 bsd_commits.db netbsd-src 仓库 commits 表验证：deraadt 末条 commit
+- 考据过程留痕——【查证来源】合图层的史观审视基于现有公开史料（Adam Glass 通知邮件、OpenBSD CVS 早期记录、bsd_commits.db commit 时间线）；【交叉验证方法】OpenBSD fork 与 DragonFly fork 的比较以 bsd_commits.db commits 表为代码级证据基础，结合两人 fork 前后 commit 时间线、fork 动机（人
 
 ## 文献
 

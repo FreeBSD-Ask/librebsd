@@ -8,7 +8,11 @@ volume: 第09卷-netbsd的历史
 
 ## 要点
 
-（待从概述提取）
+- NetBSD 5.0（**2009.4.29**）引入由 Andrew Doran（安德鲁·多兰） 设计的新 SMP 调度器，采用每 CPU 运行队列与工作窃取算法，取代 4.x 的全局锁机制；新调度器支持多核负载均衡与优先级继承，使 NetBSD 在 4 核至 32 核机器上获得显著性能提升
+- NetBSD 5.0 的架构设计文档散布于 tech-kern 邮件列表、CVS commit 信息与 NetBSD Foundation 年度报告；Andrew Doran、YAMAMOTO Takashi、Joerg Sonnenberger 等开发者的设计帖是核心一手史料；源码考据需对照 CVS 历史与 commit log 的署名、时间戳
+- pkgsrc commit 记录是研究 2005-2009 年 pkgsrc 演进的核心一手史料；Joerg Sonnenberger 作为 pkgsrc 长期维护者提交数千次 commit；季度发布说明（pkgsrc-2008Q1 等）记录每季度的软件包数量增长与重要变更
+- NetBSD Foundation 2005-2009 年度报告记录了 Foundation 治理、资金收支、项目进展与 committer 变更；编程之夏导师分配、学生项目列表、最终评估是编程之夏史料核心；两类文档需对照原始 PDF 与邮件列表通知核验
+- NetBSD Core Team 决议记录是研究 2005-2009 年社区治理的核心史料；core 邮件列表存档（部分公开，部分私密）；Core Team 决议涉及新 committer 加入、自动退休、技术路线争议等；考据需对照 core 邮件列表与公开宣布
 
 ## 史料
 
@@ -17,12 +21,24 @@ volume: 第09卷-netbsd的历史
 
 ## 史观
 
-（待补）
+(待人工回填——详见子节文件史观/辨析字段)
 
 ## 辨析
 
-（待补）
+- Doran 新调度器与 FreeBSD Jeff Roberson 的 ULE 2.0（2007.5 引入 FreeBSD 7.0）的关系存在叙事分歧——Doran 在邮件列表中提及参考 ULE 但强调独立性，需对照源码 diff 核验；新调度器的性能基准数据在第三方测试中差异较大，需查 Phoronix/BSD Insights 等早期基准。经 netbsd.db netbsd-src 仓库 b
+- CVS 与后续 Git 迁移过程中的元数据保真度问题——部分早期 commit 在迁移后丢失 author 字段；邮件列表存档在 mail-index.netbsd.org 与 MaraRepos 等多镜像中存在版本差异
+- pkgsrc 软件包数量统计在不同来源中差异较大——2005Q1 与 2009Q4 的具体数字需对照原始 release tarball 核验；Sonnenberger 的 commit 量在统计工具中可能被低估（部分 commit 以 typos 或 docs 形式提交）
+- NetBSD Foundation 2005-2009 年度报告的连续性存在缺口——部分年份的报告未公开发布，需对照邮件列表年度总结补全；编程之夏 2005 年首届的学生项目记录在 Google 官方档案中部分缺失
+- Core Team 决议的私密性使考据困难——部分决议未公开宣布，需对照 CVS commit 的 author 变化推断；Core Team 成员名单在不同来源中可能略有出入
 
 ## 文献
 
-（待补）
+- NetBSD CVS 仓库归档；mail-index.netbsd.org；NetBSD Foundation 年度报告 2008/2009 ［B］<!-- DB_REF:netbsd.duckdb -->> **数据库引用（netbsd.duckdb）**：本子节对应 netbsd 代码仓库。> 2009-2009 年间：93,511 次提交。> 仓库总览：1,999,412 次提交，4,754 位贡献者，1992-07-13 至 2026-08-24。
+- pkgsrc CVS 仓库；pkgsrc 季度发布说明；tech-pkg 邮件列表年度总结 ［A］<!-- DB_REF:netbsd.duckdb -->> **数据库引用（netbsd.duckdb）**：本子节对应 netbsd 代码仓库。> 2005-2009 年间：468,780 次提交。> 仓库总览：1,999,412 次提交，4,754 位贡献者，1992-07-13 至 2026-08-24。
+- NetBSD Foundation 年度报告 2005-2009；Google 编程之夏 官方档案；NetBSD Foundation 邮件列表 ［A］<!-- DB_REF:netbsd.duckdb -->> **数据库引用（netbsd.duckdb）**：本子节对应 netbsd 代码仓库。> 2005-2009 年间：468,780 次提交。> 仓库总览：1,999,412 次提交，4,754 位贡献者，1992-07-13 至 2026-08-24。
+- NetBSD core 邮件列表；Core Team 决议记录；NetBSD Foundation 年度报告 ［A］## 史料考据补充（2026-08-04 任务3 联网核验）> 主题：NetBSD Core Team 与 committer
+- Linux Weekly News 档案；Slashdot BSD 相关帖；OSNews NetBSD 评论[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]<!-- DB_REF:netbsd.duckdb -->> **数据库引用（netbsd.duckdb）**：本子节对应 netbsd 代码仓库。> 1993-2026 年间：1,999,408 次提交。> 仓库总览：1,999,412 次提交，4,754 位贡献者，1992-07-13 至 2026-08-24。
+- NetBSD CVS 仓库统计；邮件列表存档；BSDCan 演讲视频档案 ［A］## 史料考据补充（2026-08-04 任务3 联网核验）> 主题：NetBSD 发布工程（Manuel Bouyer 等）
+- NetBSD 5.0 Release Notes；Kengo NAKAHARA MPLS 设计邮件；BSD MPLS 实现比较研究[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]<!-- DB_REF:netbsd.duckdb -->> **数据库引用（netbsd.duckdb）**：本子节对应 netbsd 代码仓库。> 1993-2026 年间：1,999,408 次提交。> 仓库总览：1,999,412 次提交，4,754 位贡献者，1992-07-13 至 2026-08-24。
+- Netcraft Web Server Survey 2005-2009；IDC 服务器操作系统市场报告；Distrowatch 统计页面[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]<!-- DB_REF:freebsd.duckdb -->> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 2005-2009 年间：183,657 次提交。> 仓库总览：1,294,851 次提交，13,875 位贡献者，1993-06-12 至 2026-08-25。
+- netbsd.db netbsd-src 仓库 commits 表；CVE-2011-0014、CVE-2011-0539 NVD 条目 ［A］<!-- DB_REF:netbsd.duckdb -->> **数据库引用（netbsd.duckdb）**：本子节对应 netbsd 代码仓库。> 1993-2026 年间：1,999,408 次提交。> 仓库总览：1,999,412 次提交，4,754 位贡献者，1992-07-13 至 2026-08-24。

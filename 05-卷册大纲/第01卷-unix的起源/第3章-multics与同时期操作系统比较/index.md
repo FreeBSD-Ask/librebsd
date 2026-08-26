@@ -8,7 +8,7 @@ volume: 第01卷-unix的起源
 
 ## 要点
 
-（待从概述提取）
+- Thompson 在 1984 年图灵奖演讲中称，UNIX 的流行是“时机与机缘”与技术价值共同作用的结果，与行业从中央大型机向自主小型机的转变相伴发生；这一自评将 UNIX 的兴起置于硬件转型而非设计优越性的框架下
 
 ## 史料
 
@@ -32,12 +32,12 @@ volume: 第01卷-unix的起源
 
 ## 史观
 
-（待补）
+(待人工回填——详见子节文件史观/辨析字段)
 
 ## 辨析
 
-（待补）
+- Thompson 的“时机与机缘”自评与“Multics 反叛 → UNIX 极简”的主流叙事形成张力——他本人更强调行业转型时机而非设计优越性；其特洛伊木马构想另可溯源至一份对 Multics 早期实现安全性的空军批判报告，Thompson 自述无法给出更具体出处，属存疑待考；经参考文献库验证通过（reference_id=22 / reference_id=1158，Thompson 1984
 
 ## 文献
 
-（待补）
+- Thompson, K. (1984) "Reflections on Trusting Trust", Communications of the ACM, 27(8), 761-763 ［B］

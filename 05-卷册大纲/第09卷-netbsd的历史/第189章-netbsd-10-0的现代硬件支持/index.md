@@ -8,7 +8,11 @@ volume: 第09卷-netbsd的历史
 
 ## 要点
 
-（待从概述提取）
+- NetBSD 10.0（**2024.3.31**）引入对 Apple Silicon M1/M2 的实验性支持，由 Jared McNeill（jmcneill）、Nick Hudson（skrll）、Ryo Shimizu（ryo）等共同推动；移植工作最早可追溯至 2021-08-30（jmcneill"Identify Apple M1 ‘Icestorm’ and ‘Firestorm’
+- NetBSD 10.0 硬件支持 commit 记录是研究现代硬件移植的核心史料；Jared McNeill、Taylor R Campbell 等是主要贡献者；考据需对照 CVS commit log 与硬件厂商文档
+- pkgsrc 2010-2026 年间的 commit 记录与季度发布说明是研究 pkgsrc 现代演进的核心史料；Joerg Sonnenberger、Thomas Klausner（托马斯·克劳斯纳） 等是主要维护者；考据需对照 CVS commit log 与 pkgsrc-doc 邮件列表
+- tainted code 政策公告与邮件列表讨论是研究政策出台过程的核心史料；公告由 Core Team 发布，邮件列表讨论涉及 committer、用户、外部观察者；考据需对照公告原文与邮件列表存档
+- NetBSD Foundation 年报与 IRS 990 表是研究 Foundation 治理与财务的核心史料；年报记录 Foundation 治理、资金收支、项目进展；IRS 990 表是法律要求的非营利组织税务披露；考据需对照原始 PDF 与 IRS 数据库
 
 ## 史料
 
@@ -19,12 +23,23 @@ volume: 第09卷-netbsd的历史
 
 ## 史观
 
-（待补）
+(待人工回填——详见子节文件史观/辨析字段)
 
 ## 辨析
 
-（待补）
+- 经 netbsd.db netbsd-src 仓库 commits 表验证：Apple Silicon M1 移植最早可追溯至 2021-08-30（jmcneill），早于 10.0 发布 2024.3.31 约 2 年 7 个月；移植由 jmcneill（2021-2022）、skrll（2022）、ryo（2022）三位开发者共同推动，原叙事中“由 Jared McNeill 等推动”中的“
+- 先前叙事中称“NetBSD 10.0 发布日期 2024.5”系误传——NetBSD 官方发布页面（netbsd.org/releases/formal-10/NetBSD-10.0.html）明确为 2024.3.31；10.0 的实际硬件支持广度需对照硬件兼容性列表核验
+- pkgsrc 软件包数量增长在不同来源中存在差异——2010Q1 与 2026Q4 的具体数字需对照原始 release tarball 核验；Sonnenberger 的 commit 量在统计工具中可能被低估
+- 政策公告的具体发布日期在不同来源中可能略有差异——需对照 NetBSD 官方页面核验；外部媒体报道可能存在简化或误解
+- NetBSD Foundation 年报的连续性在 2010-2026 年间可能存在缺口——部分年份的报告未公开发布；IRS 990 表的具体条目需对照 IRS 数据库核验
 
 ## 文献
 
-（待补）
+- NetBSD 10.0 Release Notes；CVS commit log；tech-kern 邮件列表；NetBSD 官方发布历史页面（<https://www.netbsd.org/releases/formal.html>） ［A］<!-- DB_REF:netbsd.duckdb -->> **数据库引用（netbsd.duckdb）**：本子节对应 netbsd 代码仓库。> 2024-2024 年间：29,047 次提交。> 仓库总览：1,999,412 次提交，4,754 位贡献者，1992-07-13 至 2026-08-24。
+- pkgsrc CVS 仓库；pkgsrc 季度发布说明；pkgsrc-doc 邮件列表 ［A］<!-- DB_REF:netbsd.duckdb -->> **数据库引用（netbsd.duckdb）**：本子节对应 netbsd 代码仓库。> 2010-2026 年间：892,617 次提交。> 仓库总览：1,999,412 次提交，4,754 位贡献者，1992-07-13 至 2026-08-24。
+- NetBSD Core Team 公告；tech-kern 邮件列表；外部媒体报道 ［A］## 史料考据补充（2026-08-04 任务3 联网核验）> 主题：NetBSD 特性
+- NetBSD Foundation 年报；IRS 990 表；members 邮件列表 ［A］<!-- DB_REF:netbsd.duckdb -->> **数据库引用（netbsd.duckdb）**：本子节对应 netbsd 代码仓库。> 2010-2026 年间：892,617 次提交。> 仓库总览：1,999,412 次提交，4,754 位贡献者，1992-07-13 至 2026-08-24。
+- NetBSD core 邮件列表；Core Team 决议记录；NetBSD Foundation 年度报告 ［A］<!-- DB_REF:netbsd.duckdb -->> **数据库引用（netbsd.duckdb）**：本子节对应 netbsd 代码仓库。> 2010-2026 年间：892,617 次提交。> 仓库总览：1,999,412 次提交，4,754 位贡献者，1992-07-13 至 2026-08-24。
+- LWN 文章档案；Phoronix BSD 文章；OSNews NetBSD 评论[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]<!-- DB_REF:netbsd.duckdb -->> **数据库引用（netbsd.duckdb）**：本子节对应 netbsd 代码仓库。> 1993-2026 年间：1,999,408 次提交。> 仓库总览：1,999,412 次提交，4,754 位贡献者，1992-07-13 至 2026-08-24。
+- NetBSD CVS 仓库统计；邮件列表存档；BSDCan/AsiaBSDCon 演讲视频档案 ［A］<!-- DB_REF:netbsd.duckdb -->> **数据库引用（netbsd.duckdb）**：本子节对应 netbsd 代码仓库。> 1993-2026 年间：1,999,408 次提交。> 仓库总览：1,999,412 次提交，4,754 位贡献者，1992-07-13 至 2026-08-24。
+- NetBSD 10.0 Release Notes；CVS commit log；NetBSD/doc/PLATFORMS；rin. Add nvme(4) and raid(4). netbsd-src 仓库 [DB/OL]. 2020-11-10T08:52:36Z. commit: 571f6efb48f0；riastradh. nvme(4): Add suspend/resume, derived from OpenBSD. netbsd-src 仓库 [DB/OL]. 2021-05-29T08:46:38Z. commit: a6e80066045f；msaitoh. Add VMware AHCI and NVMe. netbsd-src 仓库 [DB/OL]. 2022-02-15T12:01:28Z. commit: 90fc9574253f；skrll. Add support for Apple silicon NVME. Ported from OpenBSD. netbsd-src 仓库 [DB/OL]. 2022-05-07T08:20:03Z. commit: e24a9df7237c；jmcneill. Add initial support for Apple M1. netbsd-src 仓库 [DB/OL]. 2021-08-30T23:26:26Z. commit: db7e12da2c51；skrll. Add support for the power domain controller found in Apple silicon machines. netbsd-src 仓库 [DB/OL]. 2022-04-27T07:55:42Z. commit: 4f480f1af932；skrll. Add a driver for the Apple GPIO controller found in Apple silicon. netbsd-src 仓库 [DB/OL]. 2022-04-27T07:59:18Z. commit: 4989e6f446f2；skrll. Add support for the mailbox that provides a communications channel with additional cores. netbsd-src 仓库 [DB/OL]. 2022-04-27T08:06:20Z. commit: 09966de28c10；skrll. Add a driver for the Apple M1 I2C controller. From OpenBSD. netbsd-src 仓库 [DB/OL]. 2022-05-10T08:05:32Z. commit: 33e6c36315e1；skrll. Add a driver for the Apple RTKit based System Management Controller found on M1 SoCs. netbsd-src 仓库 [DB/OL]. 2022-05-10T08:09:57Z. commit: 11f1e5f671ec；riastradh. Define pci_is_thunderbolt_attached (answer: no). netbsd-src 仓库 [DB/OL]. 2021-12-19T01:48:12Z. commit: edb5cae246b4 ［A］<!-- DB_REF:netbsd.duckdb -->> **数据库引用（netbsd.duckdb）**：本子节对应 netbsd 代码仓库。> 1993-2026 年间：1,999,408 次提交。> 仓库总览：1,999,412 次提交，4,754 位贡献者，1992-07-13 至 2026-08-24。

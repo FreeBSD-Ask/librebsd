@@ -8,7 +8,7 @@ volume: 第01卷-unix的起源
 
 ## 要点
 
-（待从概述提取）
+- V6 UNIX 内核中著名的注释 `/* You are not expected to understand this */` 位于进程上下文切换相关代码段（约第 2240-2243 行处，注释本身在第 2238 行），涉及交换标志 SSWAP 与进程切换的晦涩代码；该注释因作者对代码晦涩度的自我调侃而成为 UNIX 史上最著名的代码注释之一，是 UNIX 早期代码文化与“内核代码晦涩难懂”集体
 
 ## 史料
 
@@ -25,12 +25,12 @@ volume: 第01卷-unix的起源
 
 ## 史观
 
-（待补）
+(待人工回填——详见子节文件史观/辨析字段)
 
 ## 辨析
 
-（待补）
+- 该注释的具体作者存在争议——通常被归为 Dennis Ritchie 或 Ken Thompson，但无一手史料确证作者，二者本人均未在公开场合明确认领；注释的确切语义（SSWAP 交换标志与 u.u_eeav 错误处理的上下文）需结合 V6 内核进程调度源码考据；按 0 信任原则，将注释作者归为“Bell Labs 内核开发者群体”而非单一人物更稳妥
 
 ## 文献
 
-（待补）
+- Salus P H. A Quarter Century of UNIX [M]. Reading: Addison-Wesley, 1994；UNIX V6 Source Code (TUHS Archive research/Dennis_v6)；McKusick M K, Bostic K, Karels M J, Quarterman J S. The Design and Implementation of the 4.4BSD Operating System [M]. Reading: Addison-Wesley, 1996 ［B］> （2026-08-05 清理：原文件末尾的 [^oi7-fn]~[^oi10-fn] 四个孤立脚注系 12.11 小节内容误留于此，正文无引用标记；已移回重建后的 12.11 小节，见 `12.11-贝尔实验室的学院派气质与冷战自由主义…md` 12.11.1-12.11.4 辨析字段。）
