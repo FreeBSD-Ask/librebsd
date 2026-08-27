@@ -31,7 +31,8 @@ Serlet 在 WWDC 2004 技术环节预览 Mac OS X 10.4 Tiger 的核心技术—�
 
 **字段 5 史观映射**
 
-- 总纲 10“动手者创造历史”：Serlet 作为 Apple 软件工程主管，其 WWDC 2004 演讲展现了“动手者”如何将 FreeBSD 5.x 的改进融入商业操作系统。据第 14 章 14.2 节原文“真正的问题不在于技术发展的程度，而在于是否动手……无论什么时候街道总是需要人去扫”，Serlet 详述 Tiger 的 64 位 BSD 子系统适配与 Spotlight 的 BSD 文件系统 metadata 索引是“动手去做”的实践。但需自反地看待：Serlet 作为 Apple 软件工程高级副总裁的立场（字段 3 已审查）使其对 Tiger 技术进步的陈述带有 Apple 官方立场，“动手者”不可等同于“商业公司高管”——Serlet 既是工程师也是 Apple 利益相关者，此辩证性需保留。
+- 总纲 10“动手者创造历史”：Serlet 作为 Apple 软件工程主管，其 WWDC 2004 演讲展现了“动手者”如何将 FreeBSD 相关记录（详情见存疑库）无论什么时候街道总是需要人去扫”，Serlet 详述 Tiger 的 64 位 BSD 子系统适配与 Spotlight 的 BSD 文件系统 metadata 索引是“动手去做”的实践。但需自反地看待：Serlet 作为 Apple 软件工程高级副总裁的立场（字段 3 已审查）使其对 Tiger 技术进步的陈述带有 Apple 官方立场，“动手者”不可等同于“商业公司高管”——Serlet 既是工程师也是 Apple 利益相关者，此辩证性需保留。
+
 - 总纲 4“分离聚合是永恒规律”：Tiger BSD 子系统同步 FreeBSD 5.x 是分离聚合的显现——FreeBSD 5.x 的 UFS2 文件系统支持与网络栈更新分离至 Darwin，构成 Apple-FreeBSD 代码分合循环的又一节点。据第 25 章总纲 4 原文“UNIX 与 BSD、BSD 各分支之间的分合循环，是历史的根本结构”，Tiger 的 BSD 子系统更新非 Serlet 个人设计，而是 BSD 分合循环在 Apple 商业语境中的具体显现。
 - 总纲 8“本体论上各方平等”：Apple 与 FreeBSD 社区在 64 位适配上本体平等——Apple 工程师将 FreeBSD 5.x 的改进合并入 Darwin，FreeBSD 社区提供上游代码，二者在本体论上无主次之分。据第 25 章总纲 8 原文“FreeBSD、OpenBSD、NetBSD、DragonFly BSD 在本体论上地位相等，差异仅是一刻状态的不同。文档与代码本体平等”，Apple 与 FreeBSD 社区在 Tiger 64 位适配中的关系亦应作此本体论平等的看待——不可因 Apple 的商业体量而将 Apple 视为“64 位主导”、FreeBSD 社区视为“上游附属”。
 - 总纲 3“不存在进步，只有权力再分配”：Tiger 的 64 位支持不是“进步”，而是权力再分配。据第 25 章总纲 3 原文“技术演进不是从低级到高级的进步，而是形式主义的诡异曲线。思想亦不随技术进步”，Tiger 的 64 位 BSD 适配并非“BSD 的进步”，而是 64 位计算在桌面 Unix 中的形式主义化呈现——但需注意项目统摄史观批评的是“进步史观”这一形式主义，而非否定 Tiger 的 64 位工程成就本身。

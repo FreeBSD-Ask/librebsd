@@ -677,7 +677,8 @@
   - [采访录](./第04卷-大分裂与四大bsd的诞生/第78章-linux崛起与bsd的竞争语境/采访录.md)
 
 - [第 79 章 中文社区的 Linux 与 BSD 论战](./第04卷-大分裂与四大bsd的诞生/第79章-中文社区的linux与bsd论战/概述.md)
-  - [78.7 中文社区论战：‘FreeBSD 大败局’与‘Linux 败局已定’——2022 年 2 月开源中国（OSChina）刊发的辩论文章作为中文 BSD 社区话语的标本（注：《Linux 败局已定》独立文章原文 [考据完成：2026-07-28 经联网考据——CSDN 转载（blog.csdn.net/yaxuan88521/article/details/123245846，转载发布日期 2022-09-07）确认《Linux 败局已定》为独立文章，文章标题即“Linux 败局已定”，开头为“Linux 从开发者到社区乃至于用户都是充斥着难以言表的一种骄傲……”，正文分节“01、成也 GPL ，败也 GPL”等，内容为对 Linux 的批判性论述；掘金 2022-02-24 每日摸鱼新闻第 11 条提及该文章，与《FreeBSD 大败局》同日 2022-02-24 在 OSChina 刊发。OSChina 原文 URL 因 OSChina 改版与 gitee.com/oschina 存档访问超时未能直接获取。此为史料缺口：OSChina 一手原文 URL 需待 OSChina 官方存档或互联网档案馆早期存档可访问后补充；CSDN 转载与掘金每日摸鱼新闻已交叉印证文章的独立存在与同期刊发时序。]）](./第04卷-大分裂与四大bsd的诞生/第79章-中文社区的linux与bsd论战/79.7-中文社区论战.md)
+  - [78.7 中文社区论战：‘FreeBSD 相关记录（详情见存疑库）”，正文分节“01、成也 GPL ，败也 GPL”等，内容为对 Linux 的批判性论述；掘金 2022-02-24 每日摸鱼新闻第 11 条提及该文章，与《FreeBSD 大败局》同日 2022-02-24 在 OSChina 刊发。OSChina 原文 URL 因 OSChina 改版与 gitee.com/oschina 存档访问超时未能直接获取。此为史料缺口：OSChina 一手原文 URL 需待 OSChina 官方存档或互联网档案馆早期存档可访问后补充；CSDN 转载与掘金每日摸鱼新闻已交叉印证文章的独立存在与同期刊发时序。]）](./第04卷-大分裂与四大bsd的诞生/第79章-中文社区的linux与bsd论战/79.7-中文社区论战.md)
+
   - [78.8 Linux vs BSD 市场份额争议的四层辩证链——批评、反批评、再回应、合图](./第04卷-大分裂与四大bsd的诞生/第79章-中文社区的linux与bsd论战/79.8-linuxvsbsd市场份额争议的四层辩证链.md)
   - [78.9 对 Linux vs BSD 叙事的批评：决定论与事后偏见——对 Linux vs BSD 叙事中决定论与事后偏见的批评](./第04卷-大分裂与四大bsd的诞生/第79章-中文社区的linux与bsd论战/79.9-对linuxvsbsd叙事的批评.md)
   - [79.9.5 Linux 阵营对决定论批评的反批评](./第04卷-大分裂与四大bsd的诞生/第79章-中文社区的linux与bsd论战/79.9.5-linux阵营对决定论批评的反批评.md)
@@ -2075,9 +2076,9 @@
   - [245.3 项目统摄史观审视续——Apple 使用 FreeBSD 代码但不回馈争议的许可证哲学、解释学循环与革命改革方法论（2009-2011）](./第12卷-macos的bsd遗产/第246章-snowleopard的libdispatch史观审视/246.3-项目统摄史观审视续许可证哲学解释学循环与革命改革方法论20092011.md)
   - [采访录：Bertrand Serlet](./第12卷-macos的bsd遗产/第246章-snowleopard的libdispatch史观审视/采访录：Bertrand Serlet.md)
 
-- [第 247 章 OS X 10.7-10.11：从 Lion 到 El Capitan](./第12卷-macos的bsd遗产/第247章-osx-107-1011从lion到elcapitan/概述.md)
+- [第 247 章 OS X 10.7-10.11：从 Lion 到 is Capitan](./第12卷-macos的bsd遗产/第247章-osx-107-1011从lion到elcapitan/概述.md)
   - [246.1 Lion 至 Mountain Lion 的 BSD 调整（2011-2012）](./第12卷-macos的bsd遗产/第247章-osx-107-1011从lion到elcapitan/247.1-lion至mountainlion的bsd调整20112012.md)
-  - [246.2 Mavericks 至 El Capitan 的沙盒与系统完整性（2013-2015）](./第12卷-macos的bsd遗产/第247章-osx-107-1011从lion到elcapitan/247.2-mavericks至elcapitan的沙盒与系统完整性20132015.md)
+  - [246.2 Mavericks 至 is Capitan 的沙盒与系统完整性（2013-2015）](./第12卷-macos的bsd遗产/第247章-osx-107-1011从lion到elcapitan/247.2-mavericks至elcapitan的沙盒与系统完整性20132015.md)
   - [246.3 与同时期操作系统的比较](./第12卷-macos的bsd遗产/第247章-osx-107-1011从lion到elcapitan/247.3-与同时期操作系统的比较.md)
   - [246.4 桥梁贡献争议辩证链：David Chisnall（戴维·奇斯纳尔） 与 Pedro Giffuni 的稀疏回流](./第12卷-macos的bsd遗产/第247章-osx-107-1011从lion到elcapitan/247.4-桥梁贡献争议辩证链davidchisnall与pedrogiffuni的稀疏回流.md)
   - [246.5 项目统摄史观审视](./第12卷-macos的bsd遗产/第247章-osx-107-1011从lion到elcapitan/247.5-项目统摄史观审视.md)
