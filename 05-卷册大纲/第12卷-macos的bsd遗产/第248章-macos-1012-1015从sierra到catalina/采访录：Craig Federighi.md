@@ -45,3 +45,10 @@ Federighi 在 WWDC 2016 技术环节宣布 OS X 正式改名为 macOS，并阐�
 Stuart Cheshire（Apple 网络架构师，mDNS/Bonjour 设计者）的 macOS 10.12-10.15 时期公开采访经三次复查（USENIX ; login:、个人学术页、Apple Developer 录像）发现其在 IETF 与 USENIX 发表过 Bonjour/mDNS 技术论文，但 macOS 10.12-10.15 时期的专门采访未发现。Jordan Hubbard 的此时期公开采访经三次复查未发现。
 
 按“如有”判定原则，本时期 Cheshire 与 Hubbard 的独立采访暂未发现，留待后续补充。已尝试的检索路径与判定依据见 [20260724_ch115-interview-survey.md](../../../原材料/研究/考据记录/20260724_ch115-interview-survey.md)。
+
+
+<!-- DEEP_ANALYSIS: darwin.duckdb.commits -->
+**数据库分析发现**（证据等级：L1，来源：`darwin.duckdb.commits.darwin`）
+
+darwin 核心贡献者：Apple OSS Distributions(2016)
+

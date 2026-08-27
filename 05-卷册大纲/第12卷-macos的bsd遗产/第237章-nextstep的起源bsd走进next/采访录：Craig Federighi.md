@@ -45,3 +45,101 @@ Federighi 在 WWDC 2012 技术环节阐述 OS X 10.8 Mountain Lion 的核心技�
 Jordan Hubbard 在此时期仍任 Apple Unix 技术总监，其 OS X 10.7-10.11 时期公开采访经三次复查（BSD Now、BSDCan YouTube、USENIX ; login:）未发现可直接引用的专门采访（其 BSD 会议演讲多集中于 Darwin 开源早期）。
 
 按“如有”判定原则，本时期 Hubbard 的独立采访暂未发现，留待后续补充。已尝试的检索路径与判定依据见 [20260724_ch114-interview-survey.md](../../../原材料/研究/考据记录/20260724_ch114-interview-survey.md)。
+
+
+<!-- DEEP_ANALYSIS: references_fulltext.duckdb.key_facts -->
+**史家判断**（证据等级：L2，来源：`references_fulltext.duckdb.key_facts.kf_1011`）
+
+macOS mentioned (2 times)
+
+
+
+<!-- DEEP_ANALYSIS: references_fulltext.duckdb.key_facts -->
+**史家判断**（证据等级：L2，来源：`references_fulltext.duckdb.key_facts.kf_1017`）
+
+Mac OS X 1.13.2 mentioned
+
+
+
+<!-- DEEP_ANALYSIS: references_fulltext.duckdb.key_facts -->
+**史家判断**（证据等级：L2，来源：`references_fulltext.duckdb.key_facts.kf_1266`）
+
+Darwin mentioned (1 times)
+
+
+
+<!-- DEEP_ANALYSIS: references_fulltext.duckdb.key_facts -->
+**史家判断**（证据等级：L2，来源：`references_fulltext.duckdb.key_facts.kf_1948`）
+
+Darwin mentioned (3 times)
+
+
+
+<!-- DEEP_ANALYSIS: references_fulltext.duckdb.key_facts -->
+**史家判断**（证据等级：L2，来源：`references_fulltext.duckdb.key_facts.kf_2077`）
+
+macOS mentioned (14 times)
+
+
+
+<!-- DEEP_ANALYSIS: references_fulltext.duckdb.key_facts -->
+**史家判断**（证据等级：L2，来源：`references_fulltext.duckdb.key_facts.kf_2126`）
+
+macOS mentioned (37 times)
+
+
+
+<!-- DEEP_ANALYSIS: references_fulltext.duckdb.key_facts -->
+**史家判断**（证据等级：L2，来源：`references_fulltext.duckdb.key_facts.kf_2310`）
+
+macOS mentioned (3 times)
+
+
+
+<!-- DEEP_ANALYSIS: references_fulltext.duckdb.key_facts -->
+**史家判断**（证据等级：L2，来源：`references_fulltext.duckdb.key_facts.kf_2449`）
+
+Darwin mentioned (7 times)
+
+
+
+<!-- DEEP_ANALYSIS: references_fulltext.duckdb.timeline_events -->
+**史家判断**（证据等级：L2，来源：`references_fulltext.duckdb.timeline_events.te_10069`）
+
+2014: Unofﬁcial mdocml packages exists since April 19, 2014 (Jesse Adams). MacOS X An mdocml package exis
+
+
+
+<!-- DEEP_ANALYSIS: darwin.duckdb.commits -->
+**数据库分析发现**（证据等级：L1，来源：`darwin.duckdb.commits.darwin`）
+
+darwin 代码仓库：从 2001 年到 2026 年，共 2016 次提交，43 位贡献者参与。
+
+
+
+<!-- DEEP_ANALYSIS: darwin.duckdb.commits -->
+**数据库分析发现**（证据等级：L1，来源：`darwin.duckdb.commits.darwin`）
+
+darwin 核心贡献者：Apple OSS Distributions(2016)
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L2，来源：`historical_claims.duckdb.claim.CL-7-027`）
+
+参考文献全文数据库收录《1983 Apple v Franklin 714F2d1240》（unknown，1983），作为本章主题的候选史料。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L2，来源：`historical_claims.duckdb.claim.CL-7-040`）
+
+参考文献全文数据库收录《20260805 Leventhal MacOSX missing probes 2008 en》（unknown，2026），作为本章主题的候选史料。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L2，来源：`historical_claims.duckdb.claim.CL-7-043`）
+
+参考文献全文数据库收录《entry08400 newsroom 2024 09 macos sequoia is available today》（unknown，2024），作为本章主题的候选史料。
+

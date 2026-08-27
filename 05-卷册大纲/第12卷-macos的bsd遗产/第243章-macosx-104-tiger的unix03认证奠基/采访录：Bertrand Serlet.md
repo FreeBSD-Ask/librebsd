@@ -45,3 +45,17 @@ Serlet 在 WWDC 2004 技术环节预览 Mac OS X 10.4 Tiger 的核心技术—�
 Avie Tevanian 于 2006 年从 Apple 离职，其在 Tiger 发布前后的公开采访经三次复查（CHM oral-histories、USENIX ; login:、Apple Developer 录像）未发现可直接引用的 Tiger 时期专门采访。Craig Federighi（时任 Apple 软件工程总监）的 2004-2005 时期公开采访经三次复查未发现（其公开演讲多集中于 2009 年后）。
 
 按“如有”判定原则，本时期 Tevanian 与 Federighi 的公开采访暂未发现，留待后续补充。已尝试的检索路径与判定依据见 [20260724_ch111-interview-survey.md](../../../原材料/研究/考据记录/20260724_ch111-interview-survey.md)。
+
+
+<!-- DEEP_ANALYSIS: darwin.duckdb.commits -->
+**数据库分析发现**（证据等级：L1，来源：`darwin.duckdb.commits.darwin`）
+
+darwin 代码仓库：从 2001 年到 2026 年，共 2016 次提交，43 位贡献者参与。
+
+
+
+<!-- DEEP_ANALYSIS: darwin.duckdb.commits -->
+**数据库分析发现**（证据等级：L1，来源：`darwin.duckdb.commits.darwin`）
+
+darwin 核心贡献者：Apple OSS Distributions(2016)
+

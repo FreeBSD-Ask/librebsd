@@ -41,3 +41,86 @@
 **自反性声明**：本释读本身也是一种形式主义化的重构，不声称是对项目统摄史观的客观正确解读。释读中“CSRG 学徒制传承是动手去做在教育语境中的显现”的判断本身也是一种形式主义化的工具理性归类，把师徒传承简化为“动手”维度的教育投射，可能遮蔽 Fabry-Joy 与 Joy-Karels-McKusick 关系中情感维度的师徒情谊与学术风格塑造无法被“动手”涵盖；释读中“伯克利地理土壤塑造 CSRG 教育模式”的判断本身也是一种形式主义化的地理决定论，把教育模式简化为地理条件的产物，可能遮蔽 CSRG 成员主动选择“学徒制”而非其他教育形式的战略决断无法被“地理塑造”涵盖；释读中“CSRG 教育文化叙事承认历史叙事的虚构性设定”的判断本身也参与虚构/真实二元的形式主义运作，可能遮蔽麦库西克回忆中可与其他独立来源交叉验证的事实性内核；释读中“hacker 伦理与学术自由交汇是形式主义的建构”的判断本身也是一种形式主义化的文化还原论，把文化交汇简化为“形式主义建构”的统一归类，可能遮蔽 hacker 伦理中确实存在的、不可还原为形式主义的伦理直觉；释读中“man pages 与代码本体平等”的判断本身也参与代码/文档二元对立的形式主义运作，可能遮蔽 man pages 在版本演化中实际依附于代码实现而非真正本体平等；释读中“CSRG 学徒制既是教育遗产也是技术债务”的判断本身也参与遗产/债务二元对立的形式主义运作，可能遮蔽学徒制在 BSD 后续社区传承中被批判性转化而获得的非债务性延续；释读中“hacker 伦理与学术自由在 CSRG 中实现短暂接纳”的判断本身也是一种形式主义化的和解浪漫化，可能遮蔽此接纳中 CSRG 成员为维持 hacker 伦理对学术规训的实际妥协；释读中“麦库西克 2006 年回忆仍是形式主义化的重构”的判断本身也是一种形式主义化的时间归因，可能遮蔽麦库西克作为 BSD 商业培训从业者对教育模式细节的职业性累积认知，欢迎被更自反的释读所超越（见 据原文第 27 章 27.2 节）。
 
 ---
+
+
+<!-- DEEP_ANALYSIS: sacred_sources.duckdb.blocks -->
+**史家判断**（证据等级：L2，来源：`sacred_sources.duckdb.blocks.164`）
+
+史学含义：BSD 的经济史不是技术市场的自然选择史，而是形式主义的权力运作史。BSD 许可证与 GPL 的博弈、商业公司对 BSD 代码的汲取与回馈失衡、SUN 的倒闭（技术全行业一流却仍然倒闭）、FreeBSD 在服务器市场的边缘化，皆非技术优劣的反映，而是利益分配与权力运作的结果。代码质量与收入完全不挂钩，SUN 技术全行业一流照样倒闭。
+
+
+
+<!-- DEEP_ANALYSIS: sacred_sources.duckdb.blocks -->
+**史家判断**（证据等级：L2，来源：`sacred_sources.duckdb.blocks.292`）
+
+史学含义：BSD 史中的苦难叙事——维护者的无偿劳动、文档翻译的艰辛、社区的萎缩——不应被美化为"苦难造就伟大"。史家应揭示苦难背后的结构性不公，而非将其包装为通向成功的必经之路。BSD 的长期主义不是苦难哲学，而是对人类有限性的诚实承认。SUN 的倒闭不是技术失败而是商业失败，不应被叙述为"技术不如人"的道德教训。
+
+
+
+<!-- DEEP_ANALYSIS: references_fulltext.duckdb.summaries -->
+**史家判断**（证据等级：L2，来源：`references_fulltext.duckdb.summaries.sum_105`）
+
+From: "Gilles Chehade" <gilles@openbsd.org>
+To: "Ah, Jacques Cousteau" <ajacoutot@openbsd.org>
+Date: Sun, 24 Sep 2017 CET
+Subject: OpenSMTPD, current state of affairs The plan
+-
+Made tons of slides, I'll just skip over some if needed... -
+Sick AF, may need to run out during the talk…
+-
+Should this h
+
+
+
+<!-- DEEP_ANALYSIS: references_fulltext.duckdb.summaries -->
+**史家判断**（证据等级：L2，来源：`references_fulltext.duckdb.summaries.sum_1174`）
+
+文献《DTrace》由 CantrillShapiro（2004） 撰写。全文提取成功，共约 56811 字符。内容摘要：Dynamic Instrumentation of Production Systems Bryan M. Cantrill, Michael W. Shapiro and Adam H. Leventhal Solaris Kernel Development Sun Microsystems {bmc, mws, ahl}@eng.sun.com Abstract This paper presents DTrace, a new facility for dynam
+
+
+
+<!-- DEEP_ANALYSIS: references_fulltext.duckdb.summaries -->
+**史家判断**（证据等级：L2，来源：`references_fulltext.duckdb.summaries.sum_124`）
+
+Towards running a Wayland Compositor on OpenBSD
+Matthieu Herrb
+EuroBSDCon - 16-17 september 2023
+https://homepages.laas.fr/matthieu/talks/wayland-openbsd.pdf Licence
+This document is covered by the
+Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0) licence. The full text of the
+
+
+
+<!-- DEEP_ANALYSIS: references_fulltext.duckdb.summaries -->
+**史家判断**（证据等级：L2，来源：`references_fulltext.duckdb.summaries.sum_1300`）
+
+文献《openbsd_eurobsdcon2013_sosplice》由 Alexander Bluhm（2013） 撰写。全文提取成功，共约 8487 字符。内容摘要：Motivation Kernel MBuf Packet Processing Socket Splicing Interface Implementation Applications Zero-Copy Socket Splicing Alexander Bluhm bluhm@openbsd.org Sunday, 29. September 2013 Motivation Kernel MBuf Packet Pro
+
+
+
+<!-- DEEP_ANALYSIS: cross_indexes.duckdb.concept_history -->
+**史家判断**（证据等级：L2，来源：`cross_indexes.duckdb.concept_history.10`）
+
+ZFS：ZFS 文件系统概念的演化: 2001 年夏 Jeff Bonwick 与 Matt Ahrens 在 Sun Microsystems 启动 ZFS 项目，历时约 4 年由十余人团队实现存储池、写时拷贝（CoW）、RAID-Z、快照、send/receive 等核心；2005 年并入 Solaris trunk，作为 OpenSolaris build 27 向开发者发布（2005-11-16），此后以 CDDL 许可证开源；2006 年在 Solaris 10 6/06 更新中正式纳入。2005–2010 年移植到 FreeBSD、Linux、Mac OS X。2010 年 Oracle 收购 Sun 后停止向社区贡献
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-6-001`）
+
+ZFS 于 2001 年在 Sun Microsystems 开始开发，2005 年发布源代码，2008 年随 FreeBSD 7.0 正式发布。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-6-004`）
+
+ZFS 2001 年在 Sun 开始开发，2005 年以 CDDL 许可证开源；2010 年 Oracle 收购 Sun 后闭源，illumos（Solaris 最后开源版本的分叉）成为 ZFS 的新上游，ZFS 于 2007 年移植到 FreeBSD、2008 年移植到 Linux，并成立 OpenZFS 项目跨平台协调。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-6-009`）
+
+DTrace 由 Bryan M. Cantrill、Michael W. Shapiro 与 Adam H. Leventhal 在 Sun Microsystems 的 Solaris 内核开发团队提出。
+

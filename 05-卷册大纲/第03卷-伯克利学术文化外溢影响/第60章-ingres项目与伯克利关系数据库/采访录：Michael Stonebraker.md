@@ -42,3 +42,31 @@
 **自反性声明**：本释读本身也是一种形式主义化的重构，不声称是对项目统摄史观的客观正确解读。释读中“斯通布雷克在 BSD 平台上实现 Ingres/Postgres 是动手去做的具象”的判断本身也是一种形式主义化的工具理性归类，把斯通布雷克主体性简化为“数据库实现者”维度，可能遮蔽其在 PDP-11/70 采购决策中对硬件资源分配的战略性取舍无法被“动手实现”涵盖；释读中“BSD 许可证法律结构使 Ingres/Postgres 学术分发”的判断本身也是一种形式主义化的法律决定论，把学术分发简化为许可证条款的被动产物，可能遮蔽斯通布雷克对 Ingres 源代码公开策略的主动选择而非被动接受条款；释读中“伯克利地理土壤塑造 Ingres 与 BSD 协同演化”的判断本身也是一种形式主义化的地理决定论，把协同演化简化为地理条件的产物，可能遮蔽斯通布雷克与 Fabry 等人主动建立跨项目协作关系的战略建构而非地理塑造；释读中“Ingres/Postgres 与 BSD 共生是聚合、Postgres 脱离是分离”的判断本身也是一种形式主义化的循环论归因，把数据库与操作系统关系简化为“聚合—分离”的抽象循环，可能遮蔽 Postgres 独立化中商业化压力的具体驱动而非抽象的“分离”；释读中“Ingres 经费支持 PDP-11/70 采购是偶然条件交汇”的判断本身也参与偶然/必然二元的形式主义运作，可能遮蔽斯通布雷克在 1970 年代选择 Ingres 研究方向的主动学术决断而非被动接受偶然；释读中“Ingres 到 Postgres 演化是形式主义演化而非数据库进步”的判断本身也是一种形式主义化的相对化运作，可能遮蔽 Postgres 在对象关系模型等可度量维度上相对 Ingres 的实际进步；释读中“Ingres/Postgres 商业化是形式主义权力运作而非技术优秀的自然选择”的判断本身也参与市场/技术二元对立的形式主义运作，可能遮蔽 Ingres 后裔在查询优化器等可度量维度上的实际技术差异影响了市场选择；释读中“Postgres 既继承 BSD 平台设计遗产也承担历史包袱”的判断本身也参与遗产/债务二元对立的形式主义运作，可能遮蔽 Postgres 在后续演化中对 BSD 时期设计的批判性重写而获得的非债务性延续；释读中“斯通布雷克 2015 年回忆仍是形式主义化的重构”的判断本身也是一种形式主义化的时间归因，可能遮蔽斯通布雷克作为 Turing Award 得主对数据库与操作系统协同演化细节的累积性认知，欢迎被更自反的释读所超越（见 据原文第 27 章 27.2 节）。
 
 ---
+
+
+<!-- DEEP_ANALYSIS: references_fulltext.duckdb.key_facts -->
+**史家判断**（证据等级：L2，来源：`references_fulltext.duckdb.key_facts.kf_1018`）
+
+Ermilov, Ruslan mentioned (1 times)
+
+
+
+<!-- DEEP_ANALYSIS: references_fulltext.duckdb.timeline_events -->
+**史家判断**（证据等级：L2，来源：`references_fulltext.duckdb.timeline_events.te_10064`）
+
+2011: Copa). It moved from testing to main on June 12, 2011 (Natanael Copa). It is continuously maintaine
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-2-056`）
+
+USL 诉 BSDi 案文书汇编（1993）说明其公开动机源于当时 SCO 诉 IBM 诉讼引发的关注，遂公开 USL 诉 BSDi 更早案件的文书。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-2-057`）
+
+USL 诉 BSDi 案中，加州大学在诉讼开始后不久被追加为被告。
+

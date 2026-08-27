@@ -39,3 +39,31 @@ Bostic 在 BSD Now 访谈中回顾了 4.3BSD-Reno（1990 年发布）作为 CSRG
 **自反性声明**：本释读本身也是一种形式主义化的重构，不声称是对项目统摄史观的客观正确解读。释读中“Bostic 集成 ISO/OSI 协议栈是动手去做的具象”的判断本身也是一种形式主义化的工具理性归类，把 Bostic 主体性简化为“协议集成”维度，可能遮蔽其在 Reno 虚拟内存改进中对既有 4.3BSD 内存子系统的架构性批判无法被“协议集成”涵盖；释读中“Reno 准发布地位是动手整合过程中生出的而非规划出来”的判断本身也参与动手/规划二元对立的形式主义运作，可能遮蔽 CSRG 在 1989-1990 年间对 Net/2 发布节奏的显式战略规划；释读中“Reno 引入 ISO/OSI 协议栈随 TCP/IP 胜利而过时”的判断本身也是一种形式主义化的胜负归因，可能遮蔽 ISO/OSI 在 OSI 模型概念层面通过 TCP/IP 后续演化而获得的非过时性延续；释读中“Reno 准发布地位是偶然条件交汇”的判断本身也参与偶然/必然二元的形式主义运作，可能遮蔽 CSRG 对 Net/2 预备工作的主动时序安排；释读中“TCP/IP 胜利是形式主义权力运作而非技术进步”的判断本身也是一种形式主义化的相对化运作，可能遮蔽 TCP/IP 在端到端可靠性等可度量维度上的实际技术优势；释读中“CSRG 代码清理是利益分配的法律形式而非道德赞美”的判断本身也参与道德/利益二元对立的形式主义运作，可能遮蔽 Bostic 在代码清理中对 UNIX 自由流通理想的真实坚持无法被还原为利益分配；释读中“Bostic 回忆仍是形式主义化的重构”的判断本身也是一种形式主义化的时间归因，可能遮蔽 Bostic 作为 Reno 主要贡献者对 ISODE 集成细节的原始记忆，欢迎被更自反的释读所超越（见 据原文第 27 章 27.2 节）。
 
 ---
+
+
+<!-- DEEP_ANALYSIS: sacred_sources.duckdb.blocks -->
+**史家判断**（证据等级：L2，来源：`sacred_sources.duckdb.blocks.91`）
+
+史学含义：BSD 家族的技术演进不应被叙述为一条从低级到高级、从原始到完善的进步直线。从 4.4BSD-Lite 到 FreeBSD、NetBSD、OpenBSD、DragonFly BSD 的分化，并非"进步"，而是形式主义的重复与循环，是权力与话语的再分配。技术范式的发展可能是倒退，是诡异的曲线。不写"BSD 越来越先进"，而写"BSD 在形式主义的曲线上流转"。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-3-059`）
+
+Macklem 1988 年记载 4.4BSD 的 NFS 实现可与 NFS Version 2 协议（RFC1094）实现互操作，并允许使用另一替代协议。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-4-003`）
+
+FreeBSD 于 1993 年 6 月 19 日命名，由 Bill Jolitz 面向 Intel 386 的 4.4BSD-Lite 移植版本派生而来。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-4-119`）
+
+和解协议规定 UNIX 衍生文件包含 4.4BSD-Lite 中的 23 个文件，USL 在协议签署前已审阅并批准其纳入 4.4BSD-Lite。
+

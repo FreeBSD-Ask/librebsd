@@ -55,3 +55,10 @@ Pike 在这篇广为流传的演讲中萧瑟地指出，系统软件研究已经
 ---
 
 > **本时期采访来源说明**：UNIX 哲学与审美时期的核心人员 Pike 与克尼汉的演讲自述与回忆录已系统化归位。经三次复查查询（搜索 `Henry Spencer usenet Unix interview`、`Rob Pike Unix philosophy interview CHM`、`Doug McIlroy Unix aesthetics interview`），Henry Spencer 等人员的公开采访来源暂未发现，留待后续补充。关于麦基尔罗伊（Malcolm Douglas McIlroy）对 Unix 哲学的口述史，另见第 1 章采访 6。
+
+
+<!-- DEEP_ANALYSIS: references_fulltext.duckdb.summaries -->
+**史家判断**（证据等级：L2，来源：`references_fulltext.duckdb.summaries.sum_1328`）
+
+文献《netbsd_abc2017ext4_slides》由 未知（未知） 撰写。全文提取成功，共约 2449 字符。内容摘要：Implementation of Ext4fs Features in NetBSD Kernel AsiaBSDCon 2017 Hrishikesh Goyal https://github.com/hrishikeshgoyal/ Personal Info Implemented Ext4 FS read support for NetBSD kernel, The NetBSD Foundation, Google SoC 2016 BTech Gradu
+
