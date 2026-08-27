@@ -61,7 +61,7 @@ Salus 在《A Quarter Century of UNIX》前言中回顾了自己作为 Unix 历�
 <!-- DEEP_ANALYSIS: references_fulltext.duckdb.summaries -->
 **史家判断**（证据等级：L2，来源：`references_fulltext.duckdb.summaries.sum_1163`）
 
-文献《Plan_9_from_Bell_Labs》由 Pike（1993） 撰写。全文提取成功，共约 82566 字符。内容摘要：Plan 9 from Bell Labs Rob Pike Dave Presotto Sean Dorward Bob Flandrena Ken Thompson Howard Trickey Phil Winterbottom *AllL=>oH=JoHEAI MKHH=O0Ell,NAMJAHIAO %'%" 75) Motivation *O JDA mE@ '& ߣI, JDA JHAn@ En ?omFKJEnC M=I =M=O BHom
+文献《Plan_9_from_Bell_Labs》由 Pike（1993） 撰写。全文提取成功，共约 82566 字符。内容摘要：Plan 9 from Bell Labs Rob Pike Dave Presotto Sean Dorward Bob Flandrena Ken Thompson Howard Trickey Phil Winterbottom Bell Laboratories Murray Hill,New Jersey 07974 USA Motivation By the mid 1980s, the trend in computing was away from
 
 
 

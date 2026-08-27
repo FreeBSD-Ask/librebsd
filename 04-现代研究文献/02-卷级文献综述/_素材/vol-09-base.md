@@ -215,13 +215,13 @@
 - id=1899 [open] 章索引称'NetBSD 10.1-RELEASE 与 11.0 RC5/RC6/RC7 公告（2024-12-16 至 2026-07-23）'。10.1-RE
 - id=1900 [open] NEWREF:1698 存根标题为纯数字'5940216'，与 NEWREF:1699 同值，且本章文献增补区无'观点'上下文，无法确定其本意文献，判定为存疑（
 - id=1901 [open] NEWREF:1701 存根标题为纯数字'5996308'，与 NEWREF:1700 同值，且本章文献增补区无'观点'上下文，无法确定其本意文献，判定为存疑（
-- id=1902 [open] 章索引称「1.5（2001.4）支持 IPv6 与 IPSec」。NetBSD 1.5 通常记为 2000 年 12 月发布（非 2001-04），待一手发布页
-- id=1903 [open] 章索引称「pkgsrc 2.0 与跨平台软件包管理（2005-2009）」。pkgsrc 采用季度分支版本体系（如 pkgsrc-2005Q1），并无「pkgs
-- id=1904 [resolved] 统计引用称「ZFS 在 NetBSD 首现 2005」。ZFS 由 Sun 于 2005 年起源，但 NetBSD 的 ZFS 移植与「usable for d
-- id=1905 [resolved] 概述第 3 行内部自述「2.0 部分独立成章（183）」系笔误——2.0 实为第 182 章，本章为 3.0；属大纲文本内部不一致，建议编辑修正（非事实错误）。
-- id=1906 [open] 重大事件称「CVS-Mercurial 迁移」。NetBSD 确有 Mercurial 镜像（anonhg.netbsd.org，自动从 CVS 转换），但 C
-- id=1907 [open] 章索引称「pkgsrc 3.0-4.0 与现代软件包管理（2010-2026）」。pkgsrc 采用季度分支版本体系（如 pkgsrc-2010Qx），并无「p
-- id=1908 [open] 章索引称「2023 年率先明确将 AI 生成代码定性为 tainted code」。Commit Guidelines 确有此政策（LLM 生成代码须 core
+- id=1902 [open] 章索引称“1.5（2001.4）支持 IPv6 与 IPSec”。NetBSD 1.5 通常记为 2000 年 12 月发布（非 2001-04），待一手发布页
+- id=1903 [open] 章索引称“pkgsrc 2.0 与跨平台软件包管理（2005-2009）”。pkgsrc 采用季度分支版本体系（如 pkgsrc-2005Q1），并无“pkgs
+- id=1904 [resolved] 统计引用称“ZFS 在 NetBSD 首现 2005”。ZFS 由 Sun 于 2005 年起源，但 NetBSD 的 ZFS 移植与“usable for d
+- id=1905 [resolved] 概述第 3 行内部自述“2.0 部分独立成章（183）”系笔误——2.0 实为第 182 章，本章为 3.0；属大纲文本内部不一致，建议编辑修正（非事实错误）。
+- id=1906 [open] 重大事件称“CVS-Mercurial 迁移”。NetBSD 确有 Mercurial 镜像（anonhg.netbsd.org，自动从 CVS 转换），但 C
+- id=1907 [open] 章索引称“pkgsrc 3.0-4.0 与现代软件包管理（2010-2026）”。pkgsrc 采用季度分支版本体系（如 pkgsrc-2010Qx），并无“p
+- id=1908 [open] 章索引称“2023 年率先明确将 AI 生成代码定性为 tainted code”。Commit Guidelines 确有此政策（LLM 生成代码须 core
 
 ## ③ 一手史料（original_sources.kaoju_records，0 条）
 
