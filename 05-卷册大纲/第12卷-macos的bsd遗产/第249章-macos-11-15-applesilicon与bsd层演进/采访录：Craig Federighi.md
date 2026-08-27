@@ -45,3 +45,17 @@ Federighi 在 WWDC 2020 技术环节阐述 macOS 11 Big Sur 与 Apple Silicon（
 Johny Srouji（Apple 硬件技术高级副总裁）与 Jeff Wilcox（Apple Silicon 移植团队负责人，后于 2022 年回归 Intel）的公开采访经三次复查（Apple Developer 录像、媒体采访、USENIX ; login:）发现 Srouji 在 Apple 产品发布会多次露面但无 BSD/Darwin 技术内容，Wilcox 的公开采访经三次复查未发现。
 
 按“如有”判定原则，本时期 Srouji 与 Wilcox 的 BSD/Darwin 技术采访暂未发现，留待后续补充。已尝试的检索路径与判定依据见 [20260724_ch116-interview-survey.md](../../../原材料/研究/考据记录/20260724_ch116-interview-survey.md)。
+
+
+<!-- DEEP_ANALYSIS: darwin.duckdb.commits -->
+**数据库分析发现**（证据等级：L1，来源：`darwin.duckdb.commits.darwin`）
+
+darwin 代码仓库：从 2001 年到 2026 年，共 2016 次提交，43 位贡献者参与。
+
+
+
+<!-- DEEP_ANALYSIS: darwin.duckdb.commits -->
+**数据库分析发现**（证据等级：L1，来源：`darwin.duckdb.commits.darwin`）
+
+darwin 核心贡献者：Apple OSS Distributions(2016)
+

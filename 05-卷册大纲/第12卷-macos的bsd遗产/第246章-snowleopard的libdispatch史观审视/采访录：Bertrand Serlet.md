@@ -45,3 +45,17 @@ Serlet 在 WWDC 2009 技术环节阐述 Snow Leopard 的“零新功能”理念
 Craig Federighi（时任 Apple 软件工程总监）的 2009 时期公开采访经三次复查发现其在 WWDC 2009 辅助 Serlet 演示，但无独立技术环节。Bertrand Serlet 于 2011 年从 Apple 离职，其 Snow Leopard 后期专门采访经三次复查未发现。
 
 按“如有”判定原则，本时期 Federighi 的独立采访暂未发现，留待后续补充。已尝试的检索路径与判定依据见 [20260724_ch113-interview-survey.md](../../../原材料/研究/考据记录/20260724_ch113-interview-survey.md)。
+
+
+<!-- DEEP_ANALYSIS: darwin.duckdb.commits -->
+**数据库分析发现**（证据等级：L1，来源：`darwin.duckdb.commits.darwin`）
+
+darwin 代码仓库：从 2001 年到 2026 年，共 2016 次提交，43 位贡献者参与。
+
+
+
+<!-- DEEP_ANALYSIS: darwin.duckdb.commits -->
+**数据库分析发现**（证据等级：L1，来源：`darwin.duckdb.commits.darwin`）
+
+darwin 核心贡献者：Apple OSS Distributions(2016)
+

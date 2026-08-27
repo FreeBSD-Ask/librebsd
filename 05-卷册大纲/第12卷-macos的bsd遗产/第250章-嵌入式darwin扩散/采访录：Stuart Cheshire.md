@@ -45,3 +45,17 @@ Cheshire 在 ; login: 2006 年 4 月号的自述文章中系统阐述基于 DNS 
 Apple 嵌入式 Darwin 内部团队（Maxime Bellengé、Jean-Daniel Dupuy 等）的公开口述史与采访来源稀缺。经三次复查（检索路径：CHM oral-histories 按"iOS""tvOS""watchOS"检索；Apple Developer 录像存档按"Darwin embedded"关键词检索；BSD Now/BSDCan 按"embedded Darwin"检索）未发现可直接引用的公开采访。Apple 嵌入式 Darwin 团队的工程实践主要以 WWDC 技术环节录像形式公开，但具体工程师的姓名与角色在 Apple 品牌叙事下被遮蔽。
 
 按“如有”判定原则，本时期嵌入式 Darwin 内部团队（Bellengé、Dupuy 等）的公开采访暂未发现，留待后续补充。已尝试的检索路径与判定依据见 [20260724_ch117-interview-survey.md](../../../原材料/研究/考据记录/20260724_ch117-interview-survey.md)。
+
+
+<!-- DEEP_ANALYSIS: darwin.duckdb.commits -->
+**数据库分析发现**（证据等级：L1，来源：`darwin.duckdb.commits.darwin`）
+
+darwin 代码仓库：从 2001 年到 2026 年，共 2016 次提交，43 位贡献者参与。
+
+
+
+<!-- DEEP_ANALYSIS: darwin.duckdb.commits -->
+**数据库分析发现**（证据等级：L1，来源：`darwin.duckdb.commits.darwin`）
+
+darwin 核心贡献者：Apple OSS Distributions(2016)
+
