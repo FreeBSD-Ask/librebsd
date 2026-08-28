@@ -80,3 +80,10 @@ Pike 等人 1995 年在《Plan 9 from Bell Labs》论文中称，1980 年代中�
 - Spinellis. A Repository of Unix History and Evolution[M]. 2016.
 - 未知. netbsd abc2017ext4 slides[M]. 2017.
 
+
+
+<!-- MAIL_INSIGHT: ucbvax.2601 -->
+**观点**：1981 年 clyde 在讨论 UNIX 是否适合大机器时写道，UNIX 是一种计算哲学，而不只是操作系统。
+**邮件来源**：clyde at UTEXAS-11，comp.unix.wizards，1981 年，Message-ID: `ucbvax.2601`
+**史学意义**：显示 McIlroy 组件化等工程经验在 1981 年已被社区升华为“哲学”表述，印证组件化作为哲学的工程转译。
+<!-- /MAIL_INSIGHT -->
