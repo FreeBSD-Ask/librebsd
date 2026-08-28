@@ -50,23 +50,34 @@ volume: 第06卷-freebsd的核心技术革新
 <!-- DB_REF:freebsd.duckdb -->> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 2010-2020 年间：488,947 次提交。> 仓库总览：1,294,851 次提交，13,875 位贡献者，1993-06-12 至 2026-08-25。
 
 <!-- PODCAST_MINE v20260827 -->
-<!-- Chapter: 第116章-capsicum的设计与watson团队贡献 -->
+<!-- 章节主题过滤：第116章-capsicum的设计与watson团队贡献 第 116 章 capsicum的设计与watson团队贡献（实体评分 ≥2 命中才入选） -->
+<!-- 匹配期数：15 期，扫描 segments：12747 条 -->
 
-## 要点（播客口述史提取）
-- （该章节匹配播客中暂未提取到相关核心史实陈述）
+### 要点（播客口述史提取）
+- and get your feet wet with Capsicum and your first foray into sandboxing.（BSD Now EP90 @ 137.2599）
+- article here about playing with sandboxing, getting somebody introduced to Capsicum.（BSD Now EP90 @ 74.77999）
+- weekly news roundup now though. But first up we have a capsicum in Dragonfly BSD. So I guess（BSD Now EP10 @ 3961.819）
 
-## 史料（播客提及）
-- [BSD Now EP99 @ 378.3800048828125] actually getting sandboxed, whether it's with TAME or Capsicum.
+### 史料（播客当事人陈述）
+- article here about playing with sandboxing, getting somebody introduced to Capsicum.（BSD Now EP90 @ 74.77999）
+- We've got PF presentations, Capsicum, Capserd, ASLR on FreeBSD, more stuff on migrating from Linux to BSD.（BSD Now EP26 @ 332.3999）
+- this week on BSD Now we're going to be talking with John Anderson about capsicum and Casper（BSD Now EP39 @ 0.0）
+- So the things you can do, a file descriptor is, it's a bit like this historic notion of a thing called an object capability, which was a way of talking about authority.（BSD Now EP39 @ 1081.880）
 
-## 史观（播客当事人观点与总纲映射）
-- [BSD Now EP99 @ 378.3800048828125] actually getting sandboxed, whether it's with TAME or Capsicum.
+### 史观（播客当事人观点与总纲映射）
+- （该章节匹配播客中未提取到当事人观点性陈述）
 
-## 辨析（播客争议与存疑点）
-- （该章节匹配播客中暂未提取到相关争议点）
+### 辨析（播客争议与存疑点）
+- （该章节匹配播客中未提取到争议性陈述）
 
-## 文献（播客参考条目）
-- [BSD Now EP99] Pennington J. BSD Now: 99: BSD Gnow[EB/OL]. (2015-07-22)[2026-08-15]. https://www.bsdnow.tv/99.
-- [BSD Now EP68] Pennington J. BSD Now: 68: Just the Essentials[EB/OL]. (2014-12-17)[2026-08-15]. https://www.bsdnow.tv/68.
+### 文献（播客参考条目）
+- [BSD Now EP1] Pennington J. BSD Now: 1: BGP & BSD[EB/OL]. (2013-09-04)[2026-08-15]. https://www.bsdnow.tv/1.
 - [BSD Now EP8] Pennington J. BSD Now: 8: A Brief Introduction[EB/OL]. (2013-10-23)[2026-08-15]. https://www.bsdnow.tv/8.
+- [BSD Now EP10] Pennington J. BSD Now: 10: Year of the BSD Desktop[EB/OL]. (2013-11-06)[2026-08-15]. https://www.bsdnow.tv/10.
+- [BSD Now EP26] Pennington J. BSD Now: 26: Port Authority[EB/OL]. (2014-02-26)[2026-08-15]. https://www.bsdnow.tv/26.
+- [BSD Now EP35] Pennington J. BSD Now: 35: Puffy Firewall[EB/OL]. (2014-04-30)[2026-08-15]. https://www.bsdnow.tv/35.
+- [BSD Now EP38] Pennington J. BSD Now: 38: A BUG's Life[EB/OL]. (2014-05-21)[2026-08-15]. https://www.bsdnow.tv/38.
+- [BSD Now EP39] Pennington J. BSD Now: 39: The Friendly Sandbox[EB/OL]. (2014-05-28)[2026-08-15]. https://www.bsdnow.tv/39.
+- [BSD Now EP48] Pennington J. BSD Now: 48: Liberating SSL[EB/OL]. (2014-07-30)[2026-08-15]. https://www.bsdnow.tv/48.
 
 <!-- /PODCAST_MINE -->

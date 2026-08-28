@@ -18,8 +18,6 @@ openbsd_mail,03-原始史料库/11-邮件列表史料/03-openbsd/duckdb/openbsd_
 dragonfly_mail,03-原始史料库/11-邮件列表史料/04-dragonfly/duckdb/dragonfly_mail.duckdb,03-原始史料库/11-邮件列表史料/04-dragonfly,0,187707392,2fcb841412548c9b,29ff3085654a614a,1.0.0,,0,0,0,raw
 other-bsd_mail,03-原始史料库/11-邮件列表史料/06-other-bsd/duckdb/other-bsd_mail.duckdb,03-原始史料库/11-邮件列表史料/06-other-bsd,0,35401728,156b737465ae5bd8,06ee355b4b11ba07,1.0.0,,0,0,0,raw
 usenet_mail,03-原始史料库/11-邮件列表史料/07-usenet/duckdb/usenet_mail.duckdb,03-原始史料库/11-邮件列表史料/07-usenet,0,690761728,163bc90685d0bf60,fade5920fe2d18de,1.0.0,,0,0,0,raw
-bsd_podcasts_external,03-原始史料库/14-播客史料/bsd_podcasts_external.duckdb,03-原始史料库/14-播客史料,0,11284480,11941fb14c8d8757,a5743c69da8be0b9,1.0.0,2026-08-15T13:59:45,0,0,0,
-bsdnow_podcast,03-原始史料库/14-播客史料/bsdnow_podcast.duckdb,03-原始史料库/14-播客史料,0,25440256,fafc2af5abc3508d,bb293542087c03d4,1.0.0,,0,0,0,
 original_sources,03-原始史料库/original_sources.duckdb,03-原始史料库,604,7352320,76a67c9235ce8f82,300488408f80037b,1.4,2026-08-11T14:10:00,0,3,601,deleted_601_active_3
 references_fulltext,04-现代研究文献/05-参考文献全文数据库/references_fulltext.duckdb,04-现代研究文献/05-参考文献全文数据库,0,794570752,f279c3b856fc247f,c85a331d454d65eb,1.4,2026-08-04T00:06:00,0,0,0,
 doubts_standalone,04-现代研究文献/06-存疑数据库/doubts_standalone.duckdb,04-现代研究文献/06-存疑数据库,0,90189824,dbead59f2bf5f833,71f6c972ecdaf966,1.0.0,2026-08-01T13:38:53,0,3289,0,
@@ -292,3 +290,13 @@ tech-toolchain,03-原始史料库/11-邮件列表史料/02-netbsd/db/tech-toolch
 tech-userlevel,03-原始史料库/11-邮件列表史料/02-netbsd/db/tech-userlevel.duckdb,03-原始史料库/11-邮件列表史料/02-netbsd,0,33042432,2a88673b74102830,fbf2db89820b3db4,1.0.0,,0,0,0,raw
 tech-x11,03-原始史料库/11-邮件列表史料/02-netbsd/db/tech-x11.duckdb,03-原始史料库/11-邮件列表史料/02-netbsd,0,10498048,bf19facf92bad105,86269d801f05f9ce,1.0.0,,0,0,0,raw
 linuxkernel_mail,03-原始史料库/11-邮件列表史料/05-linux-kernel/db/linuxkernel_mail.duckdb,03-原始史料库/11-邮件列表史料/05-linux-kernel,0,60322754560,3c6bff5c564399cf,eba9282d1f2ef2c1,1.0.0-duckdb,2026-08-20T23:08:58,0,0,0,
+bsd-now,03-原始史料库/14-播客史料/bsd-now.duckdb,03-原始史料库/14-播客史料,0,433572,80228352,42d7c6036dbdb9c4,1.0.0,2026-08-28T19:56:13,0,0,0,
+bsdtalk,03-原始史料库/14-播客史料/bsdtalk.duckdb,03-原始史料库/14-播客史料,0,75115,21770240,3d59df68a2048568,1.0.0,2026-08-28T19:56:13,0,0,0,
+youtube,03-原始史料库/14-播客史料/youtube.duckdb,03-原始史料库/14-播客史料,0,60560,11546624,2d92ee96c237de04,1.0.0,2026-08-28T19:56:13,0,0,0,
+software-engineering-daily,03-原始史料库/14-播客史料/software-engineering-daily.duckdb,03-原始史料库/14-播客史料,0,59,4468736,1da59ac2dddcbec2,1.0.0,2026-08-28T19:56:13,0,0,0,
+the-changelog,03-原始史料库/14-播客史料/the-changelog.duckdb,03-原始史料库/14-播客史料,0,501,4730880,130d7cc671aa9697,1.0.0,2026-08-28T19:56:13,0,0,0,
+floss-weekly,03-原始史料库/14-播客史料/floss-weekly.duckdb,03-原始史料库/14-播客史料,0,537,4206592,f4b1bf82be22a76d,1.0.0,2026-08-28T19:56:13,0,0,0,
+nerding-out-with-victor,03-原始史料库/14-播客史料/nerding-out-with-victor.duckdb,03-原始史料库/14-播客史料,0,566,4206592,fbd5e40823ab1ba0,1.0.0,2026-08-28T19:56:13,0,0,0,
+freebsd-fridays,03-原始史料库/14-播客史料/freebsd-fridays.duckdb,03-原始史料库/14-播客史料,0,0,1585152,5be1a742b2b56ff6,1.0.0,2026-08-28T19:56:13,0,0,0,
+bsd-conferences-youtube,03-原始史料库/14-播客史料/bsd-conferences-youtube.duckdb,03-原始史料库/14-播客史料,0,0,1323008,1e29d4a8879c0e61,1.0.0,2026-08-28T19:56:13,0,0,0,
+freebsd-office-hours,03-原始史料库/14-播客史料/freebsd-office-hours.duckdb,03-原始史料库/14-播客史料,0,0,1323008,726adae7c8fd28fe,1.0.0,2026-08-28T19:56:13,0,0,0,

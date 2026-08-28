@@ -36,53 +36,36 @@ OpenBSD 的贡献者谱系研究面临若干方法论挑战：其一，OpenBSD �
 - 参考文献数据库匹配记录（chmatch_3633）
 
 <!-- PODCAST_MINE v20260827 -->
-<!-- Chapter: 第348章-openbsd核心贡献者人物传记 -->
+<!-- 章节主题过滤：第348章-openbsd核心贡献者人物传记 第 348 章 openbsd核心贡献者人物传记（实体评分 ≥2 命中才入选） -->
+<!-- 匹配期数：15 期，扫描 segments：15966 条 -->
 
-## 要点（播客口述史提取）
-- the OpenSend 23.1.1 release, how to clone a system with Ansible, FOSDEM 2023 trip reports from NetBSD,
-- Crystal Colipay again created some patches for taking screenshots of the BSD console.
-- developed sys trace but it turned out it was difficult to use the only user in open bsd base
-- which was later renamed to pledge. Pledge was developed by studying all programs in OpenBSD
-- So, next up in the news here, OS News has started a BSD family segment.
-- So I guess it looks like an OS News reader decided to share some info about the BSDs,
-- The system kind of like ports for net BSD has branched their 2013 Q3 version.
-- first up, we got VBSDCon coming October 25th to the 27th. And the website's VBSDCon.com.
+### 要点（播客口述史提取）
+- previous contributions to OpenBSD? Sure. So I am originally from San Francisco, California.（BSD Now EP1 @ 2959.639）
+- that it became time to create a new repository, and this was the genesis of OpenBSD.（BSD Now EP6 @ 584.33）
+- Yeah, so I guess first up we have stuff from the OpenBSD guys.（BSD Now EP14 @ 327.2999）
+- So first up, looks like OpenBSD had a hackathon in Slovenia.（BSD Now EP47 @ 68.19999）
+- so they've ported the OpenBSD one over and now they're cleaning up and improving it（BSD Now EP99 @ 1121.880）
 
-## 史料（播客提及）
-- [BSD Now EP498 @ 784.739990234375] developed sys trace but it turned out it was difficult to use the only user in open bsd base
-- [BSD Now EP6 @ 2563.59] it into mainline FreeBSD. Yeah, I think it's a good incubator for some of the cool stuff.
-- [BSD Now EP6 @ 2894.54] I think free BSD could be at a tipping point. I'm glad you guys are leading the charge.
-- [BSD Now EP6 @ 637.69] through to the SAP people, and also actually communicated with people in the BSD community
-- [BSD Now EP6 @ 821.42] aspect, I think, is what sets OpenBSD apart. I think it's rare to have a group of 100
+### 史料（播客当事人陈述）
+- and an interview with Peter Hessler about his OpenBSD BGP SpamD project.（BSD Now EP1 @ 21.10000）
+- Brower and Ray Flotter from OpenBSD are also giving talks. Very cool. Okay. So next event,（BSD Now EP6 @ 1901.51）
+- So for this week's interview, we're joined by Theo DeRat, the founder of OpenBSD.（BSD Now EP6 @ 494.13）
+- that it became time to create a new repository, and this was the genesis of OpenBSD.（BSD Now EP6 @ 584.33）
 
-## 史观（播客当事人观点与总纲映射）
-- [BSD Now EP498 @ 784.739990234375] developed sys trace but it turned out it was difficult to use the only user in open bsd base
-  → 史观映射：总纲14——苦难不值得被提倡
-- [BSD Now EP6 @ 2563.59] it into mainline FreeBSD. Yeah, I think it's a good incubator for some of the cool stuff.
-- [BSD Now EP6 @ 2894.54] I think free BSD could be at a tipping point. I'm glad you guys are leading the charge.
-- [BSD Now EP6 @ 637.69] through to the SAP people, and also actually communicated with people in the BSD community
-- [BSD Now EP6 @ 821.42] aspect, I think, is what sets OpenBSD apart. I think it's rare to have a group of 100
-- [BSD Now EP1 @ 1427.760009765625] because it actually works on freebsd it's like a web hosting shared web hosting control panel
-- [BSD Now EP1 @ 1785.93994140625] and actually just have them be put into as articles in not the handbook, but in the FreeBSD documentation tree.
-- [BSD Now EP1 @ 2718.81982421875] thing they've always had bsd stuff there and this year the keynote is actually given by kirk mccusick
+### 史观（播客当事人观点与总纲映射）
+- aspect, I think, is what sets OpenBSD apart. I think it's rare to have a group of 100（BSD Now EP6 @ 821.42）
 
-## 辨析（播客争议与存疑点）
-- [存疑脚注] [BSD Now EP6 @ 2058.23] Sure. The big thing for free BSD 10 are much better Beehive and Zen. More GNU stuff removed.
-- [存疑脚注] [BSD Now EP6 @ 2498.63] Not TrueOS specifically. The stats come in, they look the same for both. So I just see it as FreeBSD
-- [存疑脚注] [BSD Now EP1 @ 2369.199951171875] quite some time i'm sure pcbsd in particular has got lots of complaints about this
-- [存疑脚注] [BSD Now EP1 @ 432.5] back uh yeah so uh back to veris oh yeah yeah uh they said you know bsd is quite literally at the
-- [存疑脚注] [BSD Now EP186 @ 30.0] This is BSD Now, episode 186, the Fast and the Firewall Tokyo Drift.
+### 辨析（播客争议与存疑点）
+- [存疑脚注] you get then you get like uh mere os which is a fork of of openbsd which has put their shell（BSD Now EP149 @ 5849.520）
 
-## 文献（播客参考条目）
-- [BSD Now EP498] Pennington J. BSD Now: 498: Dropping Privileges[EB/OL]. (2023-03-16)[2026-08-15]. https://www.bsdnow.tv/498.
-- [BSD Now EP6] Pennington J. BSD Now: 6: Doing It de Raadt Way[EB/OL]. (2013-10-09)[2026-08-15]. https://www.bsdnow.tv/6.
+### 文献（播客参考条目）
 - [BSD Now EP1] Pennington J. BSD Now: 1: BGP & BSD[EB/OL]. (2013-09-04)[2026-08-15]. https://www.bsdnow.tv/1.
-- [BSD Now EP523] Pennington J. BSD Now: 523: Literally Unix[EB/OL]. (2023-09-07)[2026-08-15]. https://www.bsdnow.tv/523.
-- [BSD Now EP203] Pennington J. BSD Now: 203: For the love of ZFS[EB/OL]. (2017-07-19)[2026-08-15]. https://www.bsdnow.tv/203.
-- [BSD Now EP198] Pennington J. BSD Now: 198: BSDNorth or You can’t handle the libtruth[EB/OL]. (2017-06-14)[2026-08-15]. https://www.bsdnow.tv/198.
-- [BSD Now EP258] Pennington J. BSD Now: Episode 258: OS Foundations | BSD Now 258[EB/OL]. (2018-08-08)[2026-08-15]. https://www.bsdnow.tv/258.
-- [BSD Now EP238] Pennington J. BSD Now: 238: VLAN-Zezes-ki in Hardware[EB/OL]. (2018-03-21)[2026-08-15]. https://www.bsdnow.tv/238.
-- [BSD Now EP186] Pennington J. BSD Now: 186: The Fast And the Firewall: Tokyo Drift[EB/OL]. (2017-03-22)[2026-08-15]. https://www.bsdnow.tv/186.
-- [BSD Now EP112] Pennington J. BSD Now: 112: Tracing the source[EB/OL]. (2015-10-21)[2026-08-15]. https://www.bsdnow.tv/112.
+- [BSD Now EP6] Pennington J. BSD Now: 6: Doing It de Raadt Way[EB/OL]. (2013-10-09)[2026-08-15]. https://www.bsdnow.tv/6.
+- [BSD Now EP11] Pennington J. BSD Now: 11: The Gateway Drug[EB/OL]. (2013-11-13)[2026-08-15]. https://www.bsdnow.tv/11.
+- [BSD Now EP14] Pennington J. BSD Now: 14: Zettabytes for Days[EB/OL]. (2013-12-04)[2026-08-15]. https://www.bsdnow.tv/14.
+- [BSD Now EP43] Pennington J. BSD Now: 43: Package Design[EB/OL]. (2014-06-25)[2026-08-15]. https://www.bsdnow.tv/43.
+- [BSD Now EP47] Pennington J. BSD Now: 47: DES Challenge IV[EB/OL]. (2014-07-23)[2026-08-15]. https://www.bsdnow.tv/47.
+- [BSD Now EP64] Pennington J. BSD Now: 64: Rump Kernels Revisited[EB/OL]. (2014-11-19)[2026-08-15]. https://www.bsdnow.tv/64.
+- [BSD Now EP99] Pennington J. BSD Now: 99: BSD Gnow[EB/OL]. (2015-07-22)[2026-08-15]. https://www.bsdnow.tv/99.
 
 <!-- /PODCAST_MINE -->

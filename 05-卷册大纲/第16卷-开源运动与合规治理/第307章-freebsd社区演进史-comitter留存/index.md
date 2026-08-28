@@ -53,49 +53,40 @@ volume: 第16卷-开源运动与合规治理
 - FreeBSD doc Repository History；Handbook Archives ［B］## 史料考据补充（2026-08-04 任务3 联网核验）> 主题：开源治理
 
 <!-- PODCAST_MINE v20260827 -->
-<!-- Chapter: 第307章-freebsd社区演进史-comitter留存 -->
+<!-- 章节主题过滤：第307章-freebsd社区演进史-comitter留存 第 307 章 freebsd社区演进史-comitter留存（实体评分 ≥2 命中才入选） -->
+<!-- 匹配期数：15 期，扫描 segments：13485 条 -->
 
-## 要点（播客口述史提取）
-- And then I started using OpenBSD because I needed an OpenBSD system around to properly
-- which is really how OpenBSD has developed right. It's, you know, a bunch of people solving
-- We have some new info from the free BSD foundation. They've released their semi-annual newsletter
-- But what are you gonna go ahead and show us your first first? Yeah, first thing I'm gonna do free BSD
-- Open BSD tutorial that we linked to in the first half of the show. Okay. Yeah
-- I'll just do a quick version of the free BSD one oops
-- So he says, first of all, he's new to Unix and FreeBSD.
-- Six months from now you upgrade to a newer version of FreeBSD so you have to reboot and
+### 要点（播客口述史提取）
+- upgrading the craft referencing and search tools that are built into FreeBSD.（BSD Now EP1 @ 1858.719）
+- The first problem with that is with the way FreeBSD Update works, you need a version（BSD Now EP2 @ 4003.22）
+- So he switched over from Linux to FreeBSD and he writes about the 10 things he likes most now that he switched（BSD Now EP2 @ 5008.08）
+- That's right, they can. So next we're looking at GCC is officially by-by on current, no longer being built by default on a freeBSD instrument.（BSD Now EP2 @ 543.86）
+- their stable version of XORG. Apparently FreeBSD is working on some driver support issues first（BSD Now EP2 @ 761.14）
 
-## 史料（播客提及）
-- [BSD Now EP16 @ 116.75999450683594] So the part one is installing OpenBSD and setting up full disk encryption, which is actually part of what our tutorial for today is about, except for we'll be doing OpenBSD and FreeBSD two different ways.
-- [BSD Now EP16 @ 1255.8399658203125] So right now, what places do you personally use BSD
-- [BSD Now EP16 @ 5232.580078125] So the slide I'm on here is I use Warden which is a utility I actually wrote for PCBSD that
-- [BSD Now EP16 @ 5484.099609375] I mean I'd be SD is similar. I think it's yeah, there's a few others go to be SD midnight BSD
-- [BSD Now EP16 @ 661.0599975585938] Plug device based on the I think the same processor that free BSD had support for
+### 史料（播客当事人陈述）
+- where they were talking about how FreeBSD was dying because they hadn't met their donation goal yet,（BSD Now EP1 @ 1178.880）
+- Yeah, just about every GUI we have, there's some kind of shell or back end behind it that's just running standard FreeBSD commands.（BSD Now EP1 @ 1574.040）
+- and actually just have them be put into as articles in not the handbook, but in the FreeBSD documentation tree.（BSD Now EP1 @ 1785.939）
+- the FreeBSD documentation is mostly written in DocBook（BSD Now EP1 @ 1809.139）
 
-## 史观（播客当事人观点与总纲映射）
-- [BSD Now EP16 @ 116.75999450683594] So the part one is installing OpenBSD and setting up full disk encryption, which is actually part of what our tutorial for today is about, except for we'll be doing OpenBSD and FreeBSD two different ways.
-- [BSD Now EP16 @ 1255.8399658203125] So right now, what places do you personally use BSD
-- [BSD Now EP16 @ 5232.580078125] So the slide I'm on here is I use Warden which is a utility I actually wrote for PCBSD that
-- [BSD Now EP16 @ 5484.099609375] I mean I'd be SD is similar. I think it's yeah, there's a few others go to be SD midnight BSD
-- [BSD Now EP16 @ 661.0599975585938] Plug device based on the I think the same processor that free BSD had support for
-- [BSD Now EP75 @ 1333.260009765625] We actually do have in the FreeBSD community a number of developers who are doing a lot
-- [BSD Now EP75 @ 1529.419921875] of free BSD derived projects and I think that's been a quite successful project.
-- [BSD Now EP75 @ 2217.400146484375] to be learned. Everyone has to learn it the hard way eventually. The FreeBSD project itself
+### 史观（播客当事人观点与总纲映射）
+- And I think it's actually, you know, it's very heartening that we started the FreeBSD project talking very much about the BSD license.（BSD Now EP14 @ 2209.619）
+  → 史观映射：总纲10——动手者创造历史; 总纲13——法律与道德是利益分配
+- I think I wrote one of the original, you know, about pages on the FreeBSD.org website that said, you know,（BSD Now EP14 @ 2220.339）
+  → 史观映射：总纲10——动手者创造历史
 
-## 辨析（播客争议与存疑点）
-- [存疑脚注] [BSD Now EP16 @ 5453.4599609375] Well, that's possible the last real serious fork to BSD was 10 years ago
-- [存疑脚注] [BSD Now EP240 @ 5305.0400390625] This is a long email, so feel free to split it up or omit certain parts.
-- [存疑脚注] [BSD Now EP2 @ 4972.68] This actually comes from EdgeBSD which is a new fork of NetBSD.
+### 辨析（播客争议与存疑点）
+- [存疑脚注] Not TrueOS specifically. The stats come in, they look the same for both. So I just see it as FreeBSD（BSD Now EP6 @ 2498.63）
+- [存疑脚注] otherwise there's performance problems. That's not true on FreeBSD. You can use a partition and（BSD Now EP15 @ 2889.639）
 
-## 文献（播客参考条目）
-- [BSD Now EP16] Pennington J. BSD Now: 16: Cryptocrystalline[EB/OL]. (2013-12-18)[2026-08-15]. https://www.bsdnow.tv/16.
-- [BSD Now EP75] Pennington J. BSD Now: 75: From the Foundation (Part 1)[EB/OL]. (2015-02-04)[2026-08-15]. https://www.bsdnow.tv/75.
-- [BSD Now EP139] Pennington J. BSD Now: 139: Cheri-picking BSD[EB/OL]. (2016-04-27)[2026-08-15]. https://www.bsdnow.tv/139.
-- [BSD Now EP240] Pennington J. BSD Now: Episode 240: TCP Blackbox Recording | BSD Now 240[EB/OL]. (2018-04-07)[2026-08-15]. https://www.bsdnow.tv/240.
-- [BSD Now EP30] Pennington J. BSD Now: 30: Documentation is King[EB/OL]. (2014-03-26)[2026-08-15]. https://www.bsdnow.tv/30.
-- [BSD Now EP374] Pennington J. BSD Now: 374: OpenBSD’s 25th anniversary[EB/OL]. (2020-10-29)[2026-08-15]. https://www.bsdnow.tv/374.
-- [BSD Now EP53] Pennington J. BSD Now: 53: It's HAMMER Time[EB/OL]. (2014-09-03)[2026-08-15]. https://www.bsdnow.tv/53.
+### 文献（播客参考条目）
+- [BSD Now EP1] Pennington J. BSD Now: 1: BGP & BSD[EB/OL]. (2013-09-04)[2026-08-15]. https://www.bsdnow.tv/1.
 - [BSD Now EP2] Pennington J. BSD Now: 2: Engineering and Powder Kegs[EB/OL]. (2013-09-11)[2026-08-15]. https://www.bsdnow.tv/2.
-- [BSD Now EP110] Pennington J. BSD Now: 110: - Firmware Fights[EB/OL]. (2015-10-07)[2026-08-15]. https://www.bsdnow.tv/110.
+- [BSD Now EP3] Pennington J. BSD Now: 3: MX with TTX[EB/OL]. (2013-09-18)[2026-08-15]. https://www.bsdnow.tv/3.
+- [BSD Now EP6] Pennington J. BSD Now: 6: Doing It de Raadt Way[EB/OL]. (2013-10-09)[2026-08-15]. https://www.bsdnow.tv/6.
+- [BSD Now EP7] Pennington J. BSD Now: 7: Go Directly to Jail(8)[EB/OL]. (2013-10-16)[2026-08-15]. https://www.bsdnow.tv/7.
+- [BSD Now EP9] Pennington J. BSD Now: 9: CURRENT Events[EB/OL]. (2013-10-30)[2026-08-15]. https://www.bsdnow.tv/9.
+- [BSD Now EP10] Pennington J. BSD Now: 10: Year of the BSD Desktop[EB/OL]. (2013-11-06)[2026-08-15]. https://www.bsdnow.tv/10.
+- [BSD Now EP11] Pennington J. BSD Now: 11: The Gateway Drug[EB/OL]. (2013-11-13)[2026-08-15]. https://www.bsdnow.tv/11.
 
 <!-- /PODCAST_MINE -->

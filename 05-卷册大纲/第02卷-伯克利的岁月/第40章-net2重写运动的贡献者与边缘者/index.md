@@ -50,3 +50,27 @@ volume: 第02卷-伯克利的岁月
 - Net/2 源代码注释；CSRG 邮件列表存档（伯克利 Bancroft 图书馆）；comp.unix.bsd 新闻组存档 ［A］---## 文献增补与辩证校准（2026-08-08 追加）> - **文献增补（ref 3778）**：McKusick《Twenty Years of Berkeley Unix》(1999) 确认“约一百个工具”18 个月内由社区志愿者完成——39.7 匿名贡献者考据的直接一手依据> - **文献增补（ref 3780）**：4.4BSD 设计书作者简介（Bostic GWU 背景/CSRG 400+ 工具管理）可补充 39.7 人物档案> - **辩证校准（总纲 24.1/20.5）**：39.7 “需主动恢复其历史可见性”的表述，应以“如实记录”替代“主动恢复”——边缘化是形式主义固有结构（20.5），匿名贡献者的价值按其实际贡献记录即可，不须以“被亏欠”姿态写作（24.1：少数≠错误；总纲5：无必然性）
 - CSRG Net/2 档案； McKusick 1999 ［A］
 - McKusick, M. K. (1999) "Twenty Years of Berkeley Unix"；FreeBSD Handbook 第 1 章（docs.freebsd.org/en/books/handbook/introduction/#history）；NetBSD 官方历史页面（netbsd.org/about/history.html）；*Unix System Laboratories v. Berkeley Software*, 832 F. Supp. 790 (D.N.J. 1993) ［B］
+
+<!-- PODCAST_MINE v20260827 -->
+<!-- 章节主题过滤：第40章-net2重写运动的贡献者与边缘者 第 40 章 net2重写运动的贡献者与边缘者（实体评分 ≥2 命中才入选） -->
+<!-- 匹配期数：4 期，扫描 segments：3266 条 -->
+
+### 要点（播客口述史提取）
+- And apparently the same thing with Net2 showed up in 1993 as well.（BSD Now EP150 @ 3219.260）
+
+### 史料（播客当事人陈述）
+- （待人工提取）
+
+### 史观（播客当事人观点与总纲映射）
+- （该章节匹配播客中未提取到当事人观点性陈述）
+
+### 辨析（播客争议与存疑点）
+- （该章节匹配播客中未提取到争议性陈述）
+
+### 文献（播客参考条目）
+- [BSD Now EP150] Pennington J. BSD Now: 150: Sprinkle a little BSD into your life.[EB/OL]. (2016-07-13)[2026-08-15]. https://www.bsdnow.tv/150.
+- [BSD Now EP203] Pennington J. BSD Now: 203: For the love of ZFS[EB/OL]. (2017-07-19)[2026-08-15]. https://www.bsdnow.tv/203.
+- [BSD Now EP273] Pennington J. BSD Now: Episode 273: A Thoughtful Episode | BSD Now 273[EB/OL]. (2018-11-23)[2026-08-15]. https://www.bsdnow.tv/273.
+- [BSD Now EP298] Pennington J. BSD Now: 298: BSD On The Road[EB/OL]. (2019-05-16)[2026-08-15]. https://www.bsdnow.tv/298.
+
+<!-- /PODCAST_MINE -->

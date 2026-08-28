@@ -24,4 +24,4 @@ GNU 项目（1983 年 Richard Stallman 发起）是自由软件运动的核心�
 
 ## 文献
 
-（待补：Stallman GNU 宣言（1985）；GPL v1/v2/v3 文本；[DB:references_fulltext] id=3628）
+- Stallman GNU 宣言（1985）；GPL v1/v2/v3 文本；[DB:references_fulltext] id=3628

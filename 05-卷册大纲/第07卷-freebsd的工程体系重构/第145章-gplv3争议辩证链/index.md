@@ -43,21 +43,30 @@ volume: 第07卷-freebsd的工程体系重构
 - 原材料/哲学/项目统摄史观/第 25 章.md（总纲第 21 条，第 25 行；总纲第 6 条，第 11 行；总纲第 7 条，第 13 行）；原材料/哲学/项目统摄史观/第 21 章.md（21.1、21.2 节）；Divacky R. [Announce] clang/llvm can compile booting FreeBSD kernel [EB/OL]. freebsd-current mailing list, 2009-02-25；Losh W. GCC 4.2.1 retirement announcement [EB/OL]. freebsd-arch mailing list, 2018. ［A］<!-- DB_REF:freebsd.duckdb -->> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 2020-2024 年间：291,070 次提交。> 仓库总览：1,294,851 次提交，13,875 位贡献者，1993-06-12 至 2026-08-25。
 
 <!-- PODCAST_MINE v20260827 -->
-<!-- Chapter: 第145章-gplv3争议辩证链 -->
+<!-- 章节主题过滤：第145章-gplv3争议辩证链 第145章 gplv3争议辩证链（实体评分 ≥2 命中才入选） -->
+<!-- 匹配期数：15 期，扫描 segments：13665 条 -->
 
-## 要点（播客口述史提取）
-- （该章节匹配播客中暂未提取到相关核心史实陈述）
+### 要点（播客口述史提取）
+- People wondering, why in the world is it released under a GPLv3 license?（BSD Now EP141 @ 3329.239）
 
-## 史料（播客提及）
-- （待提取）
+### 史料（播客当事人陈述）
+- （待人工提取）
 
-## 史观（播客当事人观点与总纲映射）
-- （该章节匹配播客中暂未提取到相关当事人观点）
+### 史观（播客当事人观点与总纲映射）
+- People wondering, why in the world is it released under a GPLv3 license?（BSD Now EP141 @ 3329.239）
+  → 史观映射：总纲13——法律与道德是利益分配
 
-## 辨析（播客争议与存疑点）
-- （该章节匹配播客中暂未提取到相关争议点）
+### 辨析（播客争议与存疑点）
+- （该章节匹配播客中未提取到争议性陈述）
 
-## 文献（播客参考条目）
+### 文献（播客参考条目）
+- [BSD Now EP141] Pennington J. BSD Now: 141: BSD Likes Ike![EB/OL]. (2016-05-11)[2026-08-15]. https://www.bsdnow.tv/141.
+- [BSD Now EP232] Pennington J. BSD Now: 232: FOSDEM 2018[EB/OL]. (2018-02-07)[2026-08-15]. https://www.bsdnow.tv/232.
 - [BSD Now EP12] Pennington J. BSD Now: 12: Collecting SSHells[EB/OL]. (2013-11-20)[2026-08-15]. https://www.bsdnow.tv/12.
+- [BSD Now EP23] Pennington J. BSD Now: 23: Time Signatures[EB/OL]. (2014-02-05)[2026-08-15]. https://www.bsdnow.tv/23.
+- [BSD Now EP31] Pennington J. BSD Now: 31: Edgy BSD Users[EB/OL]. (2014-04-01)[2026-08-15]. https://www.bsdnow.tv/31.
+- [BSD Now EP40] Pennington J. BSD Now: 40: AirPorts & Packages[EB/OL]. (2014-06-04)[2026-08-15]. https://www.bsdnow.tv/40.
+- [BSD Now EP60] Pennington J. BSD Now: 60: Don't Buy a Router[EB/OL]. (2014-10-22)[2026-08-15]. https://www.bsdnow.tv/60.
+- [BSD Now EP106] Pennington J. BSD Now: 106: Multipath TCP[EB/OL]. (2015-09-09)[2026-08-15]. https://www.bsdnow.tv/106.
 
 <!-- /PODCAST_MINE -->

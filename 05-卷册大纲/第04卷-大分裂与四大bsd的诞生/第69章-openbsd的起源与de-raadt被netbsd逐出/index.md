@@ -43,40 +43,39 @@ volume: 第04卷-大分裂与四大bsd的诞生
 - [DB:references_fulltext] 参考文献全文数据库（4077 篇全文，27138 条时间线事件）—— 对应 openbsd.duckdb
 
 <!-- PODCAST_MINE v20260827 -->
-<!-- Chapter: 第69章-openbsd的起源与de-raadt被netbsd逐出 -->
+<!-- 章节主题过滤：第69章-openbsd的起源与de-raadt被netbsd逐出 第 69 章 openbsd的起源与de-raadt被netbsd逐出（实体评分 ≥2 命中才入选） -->
+<!-- 匹配期数：15 期，扫描 segments：15966 条 -->
 
-## 要点（播客口述史提取）
-- yes it is uh so if you uh if you want to upgrade from in freebsd the base version is still five
-- which is the Dragonfly version of the port system on PreBSD.
-- i was first asked to do a show about bsd by some of the audience of my other show and i was like
-- with the open sorry the netbsd ones that we were looking at and it's like you know implemented
-- an awesome job yes it would uh hopefully actually the guy that implemented lua in the net bsd kernel
-- worked out that way for uh the bsd systems and everything gets built from source which is great
-- to the beastie menu that you get when you first boot up your FreeBSD box.
-- news item here alan it's pcbsd related of course but uh first up this last week we replaced our
+### 要点（播客口述史提取）
+- was you know it's partway scrolled down but it says uh blah blah ported to openbsd and netbsd（BSD Now EP112 @ 394.7799）
+- previous contributions to OpenBSD? Sure. So I am originally from San Francisco, California.（BSD Now EP1 @ 2959.639）
+- This is the first security bug fix update of the NetBSD 6.1 release branch.（BSD Now EP1 @ 6405.640）
+- NetBSD was formed, and I was one of the first four people involved in NetBSD.（BSD Now EP6 @ 522.29）
+- And NetBSD, in the NetBSD tree, we started incorporating all the other architectures（BSD Now EP6 @ 533.45）
 
-## 史料（播客提及）
-- [BSD Now EP11 @ 2598.280029296875] an awesome job yes it would uh hopefully actually the guy that implemented lua in the net bsd kernel
-- [BSD Now EP11 @ 2833.3798828125] I think the sort of the trick, and I'm biased, so of course I would think this, but building up that sort of ecosystem of BSD stuff would be a good thing.
-- [BSD Now EP11 @ 3105.639892578125] 3bsd at one point i think i think so and i used frisbee for a while it's a live cd yeah uh
-- [BSD Now EP11 @ 3115.89990234375] but it was interesting actually i was talking to uh pal doadek at um the prebsd party two weeks ago
-- [BSD Now EP11 @ 3476.43994140625] Finally, after years of saying I should go, I actually went to a BSD can.
+### 史料（播客当事人陈述）
+- and an interview with Peter Hessler about his OpenBSD BGP SpamD project.（BSD Now EP1 @ 21.10000）
+- Brower and Ray Flotter from OpenBSD are also giving talks. Very cool. Okay. So next event,（BSD Now EP6 @ 1901.51）
+- So for this week's interview, we're joined by Theo DeRat, the founder of OpenBSD.（BSD Now EP6 @ 494.13）
+- that it became time to create a new repository, and this was the genesis of OpenBSD.（BSD Now EP6 @ 584.33）
 
-## 史观（播客当事人观点与总纲映射）
-- [BSD Now EP11 @ 2598.280029296875] an awesome job yes it would uh hopefully actually the guy that implemented lua in the net bsd kernel
-- [BSD Now EP11 @ 2833.3798828125] I think the sort of the trick, and I'm biased, so of course I would think this, but building up that sort of ecosystem of BSD stuff would be a good thing.
-  → 史观映射：总纲7——理论必须自反
-- [BSD Now EP11 @ 3105.639892578125] 3bsd at one point i think i think so and i used frisbee for a while it's a live cd yeah uh
-- [BSD Now EP11 @ 3115.89990234375] but it was interesting actually i was talking to uh pal doadek at um the prebsd party two weeks ago
-- [BSD Now EP11 @ 3476.43994140625] Finally, after years of saying I should go, I actually went to a BSD can.
-- [BSD Now EP11 @ 3533.179931640625] recharges their bsd battery it gets them excited about a project again because they got to actually
-- [BSD Now EP11 @ 4511.3798828125] bsd system yeah and uh you know the pf config we use is kind of long but i think you can do just
-- [BSD Now EP11 @ 4960.7998046875] And it'll actually be running release candidate 1, but then you'll be able to free BSD update to release candidate 2, 3, 4, and 5 without having to do the full world rebuild.
+### 史观（播客当事人观点与总纲映射）
+- because I remember hearing the original story of NetBSD was,（BSD Now EP99 @ 4575.119）
+  → 史观映射：总纲23——一切历史写作都是基于哲学设定的历史小说
+- aspect, I think, is what sets OpenBSD apart. I think it's rare to have a group of 100（BSD Now EP6 @ 821.42）
 
-## 辨析（播客争议与存疑点）
-- （该章节匹配播客中暂未提取到相关争议点）
+### 辨析（播客争议与存疑点）
+- [存疑脚注] you get then you get like uh mere os which is a fork of of openbsd which has put their shell（BSD Now EP149 @ 5849.520）
+- [存疑脚注] a change that's disputed it'll be backed up by the core team until the（BSD Now EP186 @ 2538.58）
 
-## 文献（播客参考条目）
+### 文献（播客参考条目）
+- [BSD Now EP1] Pennington J. BSD Now: 1: BGP & BSD[EB/OL]. (2013-09-04)[2026-08-15]. https://www.bsdnow.tv/1.
+- [BSD Now EP6] Pennington J. BSD Now: 6: Doing It de Raadt Way[EB/OL]. (2013-10-09)[2026-08-15]. https://www.bsdnow.tv/6.
 - [BSD Now EP11] Pennington J. BSD Now: 11: The Gateway Drug[EB/OL]. (2013-11-13)[2026-08-15]. https://www.bsdnow.tv/11.
+- [BSD Now EP14] Pennington J. BSD Now: 14: Zettabytes for Days[EB/OL]. (2013-12-04)[2026-08-15]. https://www.bsdnow.tv/14.
+- [BSD Now EP43] Pennington J. BSD Now: 43: Package Design[EB/OL]. (2014-06-25)[2026-08-15]. https://www.bsdnow.tv/43.
+- [BSD Now EP47] Pennington J. BSD Now: 47: DES Challenge IV[EB/OL]. (2014-07-23)[2026-08-15]. https://www.bsdnow.tv/47.
+- [BSD Now EP64] Pennington J. BSD Now: 64: Rump Kernels Revisited[EB/OL]. (2014-11-19)[2026-08-15]. https://www.bsdnow.tv/64.
+- [BSD Now EP99] Pennington J. BSD Now: 99: BSD Gnow[EB/OL]. (2015-07-22)[2026-08-15]. https://www.bsdnow.tv/99.
 
 <!-- /PODCAST_MINE -->

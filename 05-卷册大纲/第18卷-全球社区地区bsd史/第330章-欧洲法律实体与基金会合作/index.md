@@ -50,33 +50,29 @@ volume: 第18卷-全球社区地区bsd史
 - 作者不详. 用户组档案[Z]. 年份不详；作者不详. 邮件列表[EB/OL]. 年份不详；作者不详. 个人回忆[Z]. 年份不详 ［A］
 
 <!-- PODCAST_MINE v20260827 -->
-<!-- Chapter: 第330章-欧洲法律实体与基金会合作 -->
+<!-- 章节主题过滤：第330章-欧洲法律实体与基金会合作 第 330 章 欧洲法律实体与基金会合作（实体评分 ≥2 命中才入选） -->
+<!-- 匹配期数：15 期，扫描 segments：13257 条 -->
 
-## 要点（播客口述史提取）
-- （该章节匹配播客中暂未提取到相关核心史实陈述）
+### 要点（播客口述史提取）
+- （该章节匹配播客中未提取到高置信度核心史实，需人工深挖）
 
-## 史料（播客提及）
-- （待提取）
+### 史料（播客当事人陈述）
+- （待人工提取）
 
-## 史观（播客当事人观点与总纲映射）
-- （该章节匹配播客中暂未提取到相关当事人观点）
+### 史观（播客当事人观点与总纲映射）
+- （该章节匹配播客中未提取到当事人观点性陈述）
 
-## 辨析（播客争议与存疑点）
-- （该章节匹配播客中暂未提取到相关争议点）
+### 辨析（播客争议与存疑点）
+- （该章节匹配播客中未提取到争议性陈述）
 
-## 文献（播客参考条目）
+### 文献（播客参考条目）
+- [BSD Now EP1] Pennington J. BSD Now: 1: BGP & BSD[EB/OL]. (2013-09-04)[2026-08-15]. https://www.bsdnow.tv/1.
 - [BSD Now EP3] Pennington J. BSD Now: 3: MX with TTX[EB/OL]. (2013-09-18)[2026-08-15]. https://www.bsdnow.tv/3.
+- [BSD Now EP12] Pennington J. BSD Now: 12: Collecting SSHells[EB/OL]. (2013-11-20)[2026-08-15]. https://www.bsdnow.tv/12.
+- [BSD Now EP13] Pennington J. BSD Now: 13: Bridging the Gap[EB/OL]. (2013-11-27)[2026-08-15]. https://www.bsdnow.tv/13.
+- [BSD Now EP16] Pennington J. BSD Now: 16: Cryptocrystalline[EB/OL]. (2013-12-18)[2026-08-15]. https://www.bsdnow.tv/16.
+- [BSD Now EP18] Pennington J. BSD Now: 18: Eclipsing Binaries[EB/OL]. (2014-01-01)[2026-08-15]. https://www.bsdnow.tv/18.
+- [BSD Now EP23] Pennington J. BSD Now: 23: Time Signatures[EB/OL]. (2014-02-05)[2026-08-15]. https://www.bsdnow.tv/23.
 - [BSD Now EP32] Pennington J. BSD Now: 32: PXE Dust[EB/OL]. (2014-04-09)[2026-08-15]. https://www.bsdnow.tv/32.
-- [BSD Now EP136] Pennington J. BSD Now: 136: This is GNN[EB/OL]. (2016-04-06)[2026-08-15]. https://www.bsdnow.tv/136.
-- [BSD Now EP134] Pennington J. BSD Now: 134: Marking up the Ports tree[EB/OL]. (2016-03-24)[2026-08-15]. https://www.bsdnow.tv/134.
-- [BSD Now EP558] Pennington J. BSD Now: 558: Worlds of telnet[EB/OL]. (2024-05-09)[2026-08-15]. https://www.bsdnow.tv/558.
-- [BSD Now EP126] Pennington J. BSD Now: 126: Illuminating the future on PC-BSD[EB/OL]. (2016-01-27)[2026-08-15]. https://www.bsdnow.tv/126.
-- [BSD Now EP194] Pennington J. BSD Now: 194: Daemonic plans[EB/OL]. (2017-05-17)[2026-08-15]. https://www.bsdnow.tv/194.
-- [BSD Now EP147] Pennington J. BSD Now: 147: Release all the things![EB/OL]. (2016-06-22)[2026-08-15]. https://www.bsdnow.tv/147.
-- [BSD Now EP52] Pennington J. BSD Now: 52: Reverse Takeover[EB/OL]. (2014-08-27)[2026-08-15]. https://www.bsdnow.tv/52.
-- [BSD Now EP392] Pennington J. BSD Now: 392: macOS inspired Desktop[EB/OL]. (2021-03-04)[2026-08-15]. https://www.bsdnow.tv/392.
-- [BSD Now EP265] Pennington J. BSD Now: Episode 265: Software Disenchantment | BSD Now 265[EB/OL]. (2018-09-27)[2026-08-15]. https://www.bsdnow.tv/265.
-- [BSD Now EP616] Pennington J. BSD Now: 616: FreeBSD Foundation Interview[EB/OL]. (2025-06-19)[2026-08-15]. https://www.bsdnow.tv/616.
-- [BSD Now EP123] Pennington J. BSD Now: 123: ZFS in the trenches[EB/OL]. (2016-01-06)[2026-08-15]. https://www.bsdnow.tv/123.
 
 <!-- /PODCAST_MINE -->

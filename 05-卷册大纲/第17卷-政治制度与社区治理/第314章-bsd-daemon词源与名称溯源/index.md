@@ -52,54 +52,31 @@ volume: 第17卷-政治制度与社区治理
 - Foundation 年报；口述历史档案；用户文章；Foundation 声明 ［B］<!-- DB_REF:freebsd.duckdb -->> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 1993-2026 年间：1,294,851 次提交。> 仓库总览：1,294,851 次提交，13,875 位贡献者，1993-06-12 至 2026-08-25。
 
 <!-- PODCAST_MINE v20260827 -->
-<!-- Chapter: 第314章-bsd-daemon词源与名称溯源 -->
+<!-- 章节主题过滤：第314章-bsd-daemon词源与名称溯源 第 314 章 bsd-daemon词源与名称溯源（实体评分 ≥2 命中才入选） -->
+<!-- 匹配期数：15 期，扫描 segments：13586 条 -->
 
-## 要点（播客口述史提取）
-- This week on the show, we have Dragonfly BSD release 5.2.1 available,
-- So first, they explain the problem. It's basically, a few months ago, I tried porting the FreeBSD
-- where at first it was just, hey, let's virtualize FreeBSD on FreeBSD.
-- playstation 4 the bug could also potentially be exploited on unpatched versions of freebsd
-- So like I think what exists in FreeBSD, we have a driver implemented to do VertIO net in the kernel.
-- any FreeBSD-based version older or equal to the host.
-- Wow. Here we go. That's how old mail is and where it all started, at least from the BSD side.
-- yeah don't try to mess with the share smb option in zfs that's not actually implemented in freebsd
+### 要点（播客口述史提取）
+- one of the other things that happened was we decided we needed a new init daemon. So we've（BSD Now EP83 @ 257.2200）
 
-## 史料（播客提及）
-- [BSD Now EP248 @ 2578.89990234375] I think from what I've read, its goals appear very similar to what OpenBSD is running,
-- [BSD Now EP248 @ 3117.659912109375] So like I think what exists in FreeBSD, we have a driver implemented to do VertIO net in the kernel.
-- [BSD Now EP248 @ 3144.659912109375] I think in FreeBSD, the define that sets the sizing for VMs in FreeBSD is, I think, 16 vCPUs.
-- [BSD Now EP248 @ 4323.7998046875] ocean with uh our coupon code freebsd now which gives you a ten dollar credit and i think we
-- [BSD Now EP248 @ 6090.8798828125] yeah don't try to mess with the share smb option in zfs that's not actually implemented in freebsd
+### 史料（播客当事人陈述）
+- OpenBSD project. He's here to talk to us a little bit about OpenBSD's HTTP daemon, of course.（BSD Now EP53 @ 540.1399）
+- talking about their AutoFS daemon and the new articles titled FreeBSD, or it's from（BSD Now EP81 @ 645.8799）
+- We got a cool post over at Blogspot talking about the option of setting up your own Dropbox-like service with OwnCloud and Postgres running on top of the new OpenBSD HTTP daemon.（BSD Now EP83 @ 501.4400）
 
-## 史观（播客当事人观点与总纲映射）
-- [BSD Now EP248 @ 2578.89990234375] I think from what I've read, its goals appear very similar to what OpenBSD is running,
-- [BSD Now EP248 @ 3117.659912109375] So like I think what exists in FreeBSD, we have a driver implemented to do VertIO net in the kernel.
-- [BSD Now EP248 @ 3144.659912109375] I think in FreeBSD, the define that sets the sizing for VMs in FreeBSD is, I think, 16 vCPUs.
-- [BSD Now EP248 @ 4323.7998046875] ocean with uh our coupon code freebsd now which gives you a ten dollar credit and i think we
-- [BSD Now EP248 @ 6090.8798828125] yeah don't try to mess with the share smb option in zfs that's not actually implemented in freebsd
-- [BSD Now EP94 @ 1255.760009765625] BSD for MIPS. And actually with that, because of the more strict checking and
-- [BSD Now EP94 @ 1380.199951171875] I remember a little while back when FreeBSD had got the, you know, it says it stays for
-  → 史观映射：总纲18——时间是一种形式主义
-- [BSD Now EP94 @ 4151.7001953125] Yeah. And I haven't personally checked out CBSD but there was a lot of talk at BSD Can
+### 史观（播客当事人观点与总纲映射）
+- （该章节匹配播客中未提取到当事人观点性陈述）
 
-## 辨析（播客争议与存疑点）
-- [存疑脚注] [BSD Now EP248 @ 133.22000122070312] There were also some improvements to IPFW3, their fork of the FreeBSD firewall.
-- [存疑脚注] [BSD Now EP94 @ 1144.9599609375] that we had forked the repo for a hard and BSD stable,
-- [存疑脚注] [BSD Now EP94 @ 537.3199462890625] Brooks Davis did one on CherryBSD, which is a research fork of FreeBSD.
-- [存疑脚注] [BSD Now EP57 @ 1505.699951171875] They removed buying from FreeBSD base, and so there they switched some of the DNS utilities,
-- [存疑脚注] [BSD Now EP113 @ 2385.6201171875] So first off, NextBSD kind of got split off of the FreeNAS 10 project
-- [存疑脚注] [BSD Now EP113 @ 7498.1796875] They said they didn't want to throw the hardenedBSD bits into current
+### 辨析（播客争议与存疑点）
+- （该章节匹配播客中未提取到争议性陈述）
 
-## 文献（播客参考条目）
-- [BSD Now EP248] Pennington J. BSD Now: Episode 248: Show Me The Mooney | BSD Now 248[EB/OL]. (2018-05-29)[2026-08-15]. https://www.bsdnow.tv/248.
-- [BSD Now EP94] Pennington J. BSD Now: 94: Builder's Insurance[EB/OL]. (2015-06-17)[2026-08-15]. https://www.bsdnow.tv/94.
-- [BSD Now EP95] Pennington J. BSD Now: 95: Bitrot Group Therapy[EB/OL]. (2015-06-24)[2026-08-15]. https://www.bsdnow.tv/95.
-- [BSD Now EP57] Pennington J. BSD Now: 57: The Daemon's Apprentice[EB/OL]. (2014-10-01)[2026-08-15]. https://www.bsdnow.tv/57.
-- [BSD Now EP113] Pennington J. BSD Now: 113: What’s Next for BSD?[EB/OL]. (2015-10-28)[2026-08-15]. https://www.bsdnow.tv/113.
-- [BSD Now EP267] Pennington J. BSD Now: Episode 267: Absolute FreeBSD | BSD Now 267[EB/OL]. (2018-10-10)[2026-08-15]. https://www.bsdnow.tv/267.
-- [BSD Now EP219] Pennington J. BSD Now: 219: We love the ARC[EB/OL]. (2017-11-08)[2026-08-15]. https://www.bsdnow.tv/219.
-- [BSD Now EP124] Pennington J. BSD Now: 124: Get your engine(x) started![EB/OL]. (2016-01-13)[2026-08-15]. https://www.bsdnow.tv/124.
+### 文献（播客参考条目）
 - [BSD Now EP155] Pennington J. BSD Now: 155: Cabling up FreeBSD[EB/OL]. (2016-08-17)[2026-08-15]. https://www.bsdnow.tv/155.
-- [BSD Now EP161] Pennington J. BSD Now: 161: The BSD Bromance[EB/OL]. (2016-09-28)[2026-08-15]. https://www.bsdnow.tv/161.
+- [BSD Now EP219] Pennington J. BSD Now: 219: We love the ARC[EB/OL]. (2017-11-08)[2026-08-15]. https://www.bsdnow.tv/219.
+- [BSD Now EP3] Pennington J. BSD Now: 3: MX with TTX[EB/OL]. (2013-09-18)[2026-08-15]. https://www.bsdnow.tv/3.
+- [BSD Now EP35] Pennington J. BSD Now: 35: Puffy Firewall[EB/OL]. (2014-04-30)[2026-08-15]. https://www.bsdnow.tv/35.
+- [BSD Now EP38] Pennington J. BSD Now: 38: A BUG's Life[EB/OL]. (2014-05-21)[2026-08-15]. https://www.bsdnow.tv/38.
+- [BSD Now EP48] Pennington J. BSD Now: 48: Liberating SSL[EB/OL]. (2014-07-30)[2026-08-15]. https://www.bsdnow.tv/48.
+- [BSD Now EP52] Pennington J. BSD Now: 52: Reverse Takeover[EB/OL]. (2014-08-27)[2026-08-15]. https://www.bsdnow.tv/52.
+- [BSD Now EP53] Pennington J. BSD Now: 53: It's HAMMER Time[EB/OL]. (2014-09-03)[2026-08-15]. https://www.bsdnow.tv/53.
 
 <!-- /PODCAST_MINE -->

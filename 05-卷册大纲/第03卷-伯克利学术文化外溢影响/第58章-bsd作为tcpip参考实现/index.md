@@ -47,34 +47,29 @@ volume: 第03卷-伯克利学术文化外溢影响
 - 互联网与 BSD 关系批评文本；市场史方法论研究；BSD 历史语境研究[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证][^doubt-resolved-124]: 据 new-york-basic-books (Lessig, 1999) 消解
 
 <!-- PODCAST_MINE v20260827 -->
-<!-- Chapter: 第58章-bsd作为tcpip参考实现 -->
+<!-- 章节主题过滤：第58章-bsd作为tcpip参考实现 第 58 章 bsd作为tcpip参考实现（实体评分 ≥2 命中才入选） -->
+<!-- 匹配期数：15 期，扫描 segments：15831 条 -->
 
-## 要点（播客口述史提取）
-- In preparation for the release of FreeBSD12, they've been working on investigating and fixing a backlog of kernel bug reports.
-- And if you'd like to talk in the main track about FreeBSD at FOSDEM, the first deadline is tomorrow.
-- so let's give it a try on an old lenovo t410 um you can download the latest version from ghostbsd.org
-- set up for the website versions we generate on FreeBSD, on the man.freebsd.org. Yeah, that way
-- and describing how he picked up Grof the BSD goat at the last minute
-- Including meeting with the NetBSD release engineer
-- which is basically how they switched from whatever they had before to IPv4.
-- So originally they decided to start the user group to promote all BSD operating systems in Poland.
+### 要点（播客口述史提取）
+- （该章节匹配播客中未提取到高置信度核心史实，需人工深挖）
 
-## 史料（播客提及）
-- [BSD Now EP269 @ 253.13999938964844] which I think is closing 65,000 file descriptors or something,
-- [BSD Now EP269 @ 3213.699951171875] Or actually, OpenBSD daily is actually like a code reading thing,
-- [BSD Now EP269 @ 3495.760009765625] In particular, it turned out that one of the two sides of the pipe they were reading,
-- [BSD Now EP269 @ 5138.4599609375] I believe one or two or maybe three of the wireless drivers in FreeBSD support 5 GHz.
+### 史料（播客当事人陈述）
+- （待人工提取）
 
-## 史观（播客当事人观点与总纲映射）
-- [BSD Now EP269 @ 253.13999938964844] which I think is closing 65,000 file descriptors or something,
-- [BSD Now EP269 @ 3213.699951171875] Or actually, OpenBSD daily is actually like a code reading thing,
-- [BSD Now EP269 @ 3495.760009765625] In particular, it turned out that one of the two sides of the pipe they were reading,
-- [BSD Now EP269 @ 5138.4599609375] I believe one or two or maybe three of the wireless drivers in FreeBSD support 5 GHz.
+### 史观（播客当事人观点与总纲映射）
+- （该章节匹配播客中未提取到当事人观点性陈述）
 
-## 辨析（播客争议与存疑点）
-- [存疑脚注] [BSD Now EP269 @ 2994.699951171875] All of this is fired from the Bay Area FreeBSD user group meetings that he had had the chance to attend when he was visiting California.
+### 辨析（播客争议与存疑点）
+- （该章节匹配播客中未提取到争议性陈述）
 
-## 文献（播客参考条目）
-- [BSD Now EP269] Pennington J. BSD Now: Episode 269: Tiny Daemon Lib | BSD Now 269[EB/OL]. (2018-10-24)[2026-08-15]. https://www.bsdnow.tv/269.
+### 文献（播客参考条目）
+- [BSD Now EP76] Pennington J. BSD Now: 76: Time for a Change[EB/OL]. (2015-02-11)[2026-08-15]. https://www.bsdnow.tv/76.
+- [BSD Now EP121] Pennington J. BSD Now: 121: All your hyves are belong to us[EB/OL]. (2015-12-23)[2026-08-15]. https://www.bsdnow.tv/121.
+- [BSD Now EP149] Pennington J. BSD Now: 149: The bhyve has been disturbed, and a wild Dexter appears![EB/OL]. (2016-07-06)[2026-08-15]. https://www.bsdnow.tv/149.
+- [BSD Now EP170] Pennington J. BSD Now: 170: Sandboxing Cohabitation[EB/OL]. (2016-11-30)[2026-08-15]. https://www.bsdnow.tv/170.
+- [BSD Now EP173] Pennington J. BSD Now: 173: Carry on my Wayland son[EB/OL]. (2016-12-21)[2026-08-15]. https://www.bsdnow.tv/173.
+- [BSD Now EP186] Pennington J. BSD Now: 186: The Fast And the Firewall: Tokyo Drift[EB/OL]. (2017-03-22)[2026-08-15]. https://www.bsdnow.tv/186.
+- [BSD Now EP198] Pennington J. BSD Now: 198: BSDNorth or You can’t handle the libtruth[EB/OL]. (2017-06-14)[2026-08-15]. https://www.bsdnow.tv/198.
+- [BSD Now EP210] Pennington J. BSD Now: 210: Your questions, part I[EB/OL]. (2017-09-06)[2026-08-15]. https://www.bsdnow.tv/210.
 
 <!-- /PODCAST_MINE -->

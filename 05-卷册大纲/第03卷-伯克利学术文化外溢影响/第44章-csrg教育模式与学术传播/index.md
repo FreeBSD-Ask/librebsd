@@ -47,3 +47,26 @@ volume: 第03卷-伯克利学术文化外溢影响
 - Soda Hall 建筑档案；CSRG 办公记录；伯克利校园档案[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]
 - CSRG 与校方通信；加州大学治理档案；Douglass, J. (2007) "The California Idea and American Higher Education"[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]
 - McKusick, M. K. (1999) "Twenty Years of Berkeley Unix"；UC Copyright Policy (1980s)；DARPA-UC Berkeley 合同条款档案；CSRG 成员就业记录；Bostic, K. (1991) Net/2 重写运动相关通信 ［A］
+
+<!-- PODCAST_MINE v20260827 -->
+<!-- 章节主题过滤：第44章-csrg教育模式与学术传播 第 44 章 csrg教育模式与学术传播（实体评分 ≥2 命中才入选） -->
+<!-- 匹配期数：3 期，扫描 segments：3351 条 -->
+
+### 要点（播客口述史提取）
+- started. So the original code import of the CSRG source into FreeBSD already（BSD Now EP212 @ 1264.6）
+
+### 史料（播客当事人陈述）
+- （待人工提取）
+
+### 史观（播客当事人观点与总纲映射）
+- （该章节匹配播客中未提取到当事人观点性陈述）
+
+### 辨析（播客争议与存疑点）
+- （该章节匹配播客中未提取到争议性陈述）
+
+### 文献（播客参考条目）
+- [BSD Now EP190] Pennington J. BSD Now: 190: The Moore You Know[EB/OL]. (2017-04-19)[2026-08-15]. https://www.bsdnow.tv/190.
+- [BSD Now EP212] Pennington J. BSD Now: 212: The Solaris Eclipse[EB/OL]. (2017-09-20)[2026-08-15]. https://www.bsdnow.tv/212.
+- [BSD Now EP273] Pennington J. BSD Now: Episode 273: A Thoughtful Episode | BSD Now 273[EB/OL]. (2018-11-23)[2026-08-15]. https://www.bsdnow.tv/273.
+
+<!-- /PODCAST_MINE -->

@@ -44,33 +44,29 @@ volume: 第15卷-许可证哲学与法律分析
 - OpenBSD 3.0 release；nftables 文档；netfilter.org[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]
 
 <!-- PODCAST_MINE v20260827 -->
-<!-- Chapter: 第288章-bsd基金会合作与技术设计效应 -->
+<!-- 章节主题过滤：第288章-bsd基金会合作与技术设计效应 第 288 章 bsd基金会合作与技术设计效应（实体评分 ≥2 命中才入选） -->
+<!-- 匹配期数：15 期，扫描 segments：16135 条 -->
 
-## 要点（播客口述史提取）
-- But before we get into the actual OpenBSD side of things, first give us a little bit about yourself, your history.
-- And I said, yeah, I put OpenBSD on there and started routing packets.
-- today. So first up, a big release announcement. It looks like NetBSD
-- Yeah, so that was back in the early 2000s. And I was really enjoyed working with OpenBSD,
-- But yeah, that's how I got my account and how I started working on OpenBSD.
-- So, of course, OpenBSD is not really known for like a long-term supported enterprise-y
-- We don't talk about them a lot on the show, but it looks like they've released some new beta drivers for free BSD along with a new kernel module.
-- So first up, NetBSD, it looks like, has had a package source freeze for their 2015 Quarter 3 branch.
+### 要点（播客口述史提取）
+- （该章节匹配播客中未提取到高置信度核心史实，需人工深挖）
 
-## 史料（播客提及）
-- [BSD Now EP111 @ 398.1999816894531] so i don't i don't know if on free bsd if ufs1 actually supports trim or if it's only ufs2
-- [BSD Now EP111 @ 431.3599853515625] I imagine the NetBSD install is so fast that you wouldn't actually be able to get through
-- [BSD Now EP111 @ 804.6199951171875] And then, separately, they have another story here on actually how to get started with OpenBSD's UEFI bootloader.
+### 史料（播客当事人陈述）
+- （待人工提取）
 
-## 史观（播客当事人观点与总纲映射）
-- [BSD Now EP111 @ 398.1999816894531] so i don't i don't know if on free bsd if ufs1 actually supports trim or if it's only ufs2
-- [BSD Now EP111 @ 431.3599853515625] I imagine the NetBSD install is so fast that you wouldn't actually be able to get through
-- [BSD Now EP111 @ 804.6199951171875] And then, separately, they have another story here on actually how to get started with OpenBSD's UEFI bootloader.
-  → 史观映射：总纲4——分离聚合是永恒规律; 总纲23——一切历史写作都是基于哲学设定的历史小说
+### 史观（播客当事人观点与总纲映射）
+- （该章节匹配播客中未提取到当事人观点性陈述）
 
-## 辨析（播客争议与存疑点）
-- [存疑脚注] [BSD Now EP111 @ 2570.179931640625] but they are a desktop-focused FreeBSD 6.1 fork.
+### 辨析（播客争议与存疑点）
+- （该章节匹配播客中未提取到争议性陈述）
 
-## 文献（播客参考条目）
+### 文献（播客参考条目）
+- [BSD Now EP77] Pennington J. BSD Now: 77: Noah's L2ARC[EB/OL]. (2015-02-18)[2026-08-15]. https://www.bsdnow.tv/77.
+- [BSD Now EP97] Pennington J. BSD Now: 97: Big Network, SmallWall[EB/OL]. (2015-07-08)[2026-08-15]. https://www.bsdnow.tv/97.
+- [BSD Now EP100] Pennington J. BSD Now: 100: Straight from the Src[EB/OL]. (2015-07-29)[2026-08-15]. https://www.bsdnow.tv/100.
+- [BSD Now EP101] Pennington J. BSD Now: 101: I'll Fix Everything[EB/OL]. (2015-08-05)[2026-08-15]. https://www.bsdnow.tv/101.
+- [BSD Now EP105] Pennington J. BSD Now: 105: Virginia BSD Assembly[EB/OL]. (2015-09-02)[2026-08-15]. https://www.bsdnow.tv/105.
 - [BSD Now EP111] Pennington J. BSD Now: 111: Xenocratic Oath[EB/OL]. (2015-10-14)[2026-08-15]. https://www.bsdnow.tv/111.
+- [BSD Now EP115] Pennington J. BSD Now: 115: Controlling the Transmissions[EB/OL]. (2015-11-11)[2026-08-15]. https://www.bsdnow.tv/115.
+- [BSD Now EP125] Pennington J. BSD Now: 125: DevSummits, Core and the Baldwin[EB/OL]. (2016-01-20)[2026-08-15]. https://www.bsdnow.tv/125.
 
 <!-- /PODCAST_MINE -->

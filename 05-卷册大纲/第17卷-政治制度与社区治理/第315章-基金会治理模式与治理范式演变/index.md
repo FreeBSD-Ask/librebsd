@@ -51,27 +51,29 @@ volume: 第17卷-政治制度与社区治理
 - 媒体报道档案；公众认知调查；用户文章 ［C］
 
 <!-- PODCAST_MINE v20260827 -->
-<!-- Chapter: 第315章-基金会治理模式与治理范式演变 -->
+<!-- 章节主题过滤：第315章-基金会治理模式与治理范式演变 第 315 章 基金会治理模式与治理范式演变（实体评分 ≥2 命中才入选） -->
+<!-- 匹配期数：15 期，扫描 segments：13257 条 -->
 
-## 要点（播客口述史提取）
-- （该章节匹配播客中暂未提取到相关核心史实陈述）
+### 要点（播客口述史提取）
+- （该章节匹配播客中未提取到高置信度核心史实，需人工深挖）
 
-## 史料（播客提及）
-- （待提取）
+### 史料（播客当事人陈述）
+- （待人工提取）
 
-## 史观（播客当事人观点与总纲映射）
-- （该章节匹配播客中暂未提取到相关当事人观点）
+### 史观（播客当事人观点与总纲映射）
+- （该章节匹配播客中未提取到当事人观点性陈述）
 
-## 辨析（播客争议与存疑点）
-- （该章节匹配播客中暂未提取到相关争议点）
+### 辨析（播客争议与存疑点）
+- （该章节匹配播客中未提取到争议性陈述）
 
-## 文献（播客参考条目）
-- [BSD Now EP185] Pennington J. BSD Now: 185: Exit Interview[EB/OL]. (2017-03-16)[2026-08-15]. https://www.bsdnow.tv/185.
-- [BSD Now EP46] Pennington J. BSD Now: 46: Network Iodometry[EB/OL]. (2014-07-16)[2026-08-15]. https://www.bsdnow.tv/46.
-- [BSD Now EP486] Pennington J. BSD Now: 486: EuroBSDcon interviews[EB/OL]. (2022-12-22)[2026-08-15]. https://www.bsdnow.tv/486.
-- [BSD Now EP58] Pennington J. BSD Now: 58: Behind the Masq[EB/OL]. (2014-10-08)[2026-08-15]. https://www.bsdnow.tv/58.
-- [BSD Now EP247] Pennington J. BSD Now: Episode 247: Interning for FreeBSD | BSD Now 247[EB/OL]. (2018-05-24)[2026-08-15]. https://www.bsdnow.tv/247.
-- [BSD Now EP213] Pennington J. BSD Now: 213: The French CONnection[EB/OL]. (2017-09-27)[2026-08-15]. https://www.bsdnow.tv/213.
-- [BSD Now EP64] Pennington J. BSD Now: 64: Rump Kernels Revisited[EB/OL]. (2014-11-19)[2026-08-15]. https://www.bsdnow.tv/64.
+### 文献（播客参考条目）
+- [BSD Now EP1] Pennington J. BSD Now: 1: BGP & BSD[EB/OL]. (2013-09-04)[2026-08-15]. https://www.bsdnow.tv/1.
+- [BSD Now EP3] Pennington J. BSD Now: 3: MX with TTX[EB/OL]. (2013-09-18)[2026-08-15]. https://www.bsdnow.tv/3.
+- [BSD Now EP12] Pennington J. BSD Now: 12: Collecting SSHells[EB/OL]. (2013-11-20)[2026-08-15]. https://www.bsdnow.tv/12.
+- [BSD Now EP13] Pennington J. BSD Now: 13: Bridging the Gap[EB/OL]. (2013-11-27)[2026-08-15]. https://www.bsdnow.tv/13.
+- [BSD Now EP16] Pennington J. BSD Now: 16: Cryptocrystalline[EB/OL]. (2013-12-18)[2026-08-15]. https://www.bsdnow.tv/16.
+- [BSD Now EP18] Pennington J. BSD Now: 18: Eclipsing Binaries[EB/OL]. (2014-01-01)[2026-08-15]. https://www.bsdnow.tv/18.
+- [BSD Now EP23] Pennington J. BSD Now: 23: Time Signatures[EB/OL]. (2014-02-05)[2026-08-15]. https://www.bsdnow.tv/23.
+- [BSD Now EP32] Pennington J. BSD Now: 32: PXE Dust[EB/OL]. (2014-04-09)[2026-08-15]. https://www.bsdnow.tv/32.
 
 <!-- /PODCAST_MINE -->

@@ -54,33 +54,37 @@ volume: 第05卷-freebsd的工程化奠基
 - 各项目官方文档 ［B］FreeBSD 社区论文：[FP-2019-049] Poudriere for Port Maintenance（Matthew Seaman，2019）<https://papers.freebsd.org/2019/eurobsdcon/matthew-poudriere_for_port_maintenance/>FreeBSD 社区论文：[FP-2017-004] Continuous Integration of the FreeBSD Project（Li-Wen Hsu（许立文），2017）<https://papers.freebsd.org/2017/bsdcan/lwhsu-continuous_integration_of_the_freebsd_project/>FreeBSD 社区论文：[FP-2017-002] Continuous Integration of the FreeBSD Project（Li-Wen Hsu，2017）<https://papers.freebsd.org/2017/asiabsdcon/lwhsu-continuous_integration_of_the_freebsd_project/>FreeBSD 社区论文：[FP-2016-013] Continuous Integration of the FreeBSD Project（Li-Wen Hsu，2016）<https://papers.freebsd.org/2016/eurobsdcon/lwhsu-continuous_integration_of_the_freebsd_project/>### 史观映射> 从 CVS 到 SVN 的迁移花了八年争论——不是因为技术难，而是因为选择版本控制工具就是在选择如何记忆开发史。CVS 的每一次提交、每一个分支、每一句日志都是开发记忆的载体，迁移意味着这些记忆要从一条无法重渡的河流搬到另一条——水还是那些水，但河床换了。而当 SVN 本身在 Git 面前也开始过时时，讽刺就完成了：用来对抗遗忘的工具，自己也会被遗忘### 史纲承载映射
 
 <!-- PODCAST_MINE v20260827 -->
-<!-- Chapter: 第108章-cvs到subversion -->
+<!-- 章节主题过滤：第108章-cvs到subversion 第 108 章 cvs到subversion（实体评分 ≥2 命中才入选） -->
+<!-- 匹配期数：15 期，扫描 segments：14155 条 -->
 
-## 要点（播客口述史提取）
-- It looks like a problem with two new Java versions or something.
-- This is mostly a security update with a new version of several popular software packages.
-- using Python 3. This requires the flavors work so that you can get Python 3 versions of ports.
-- but the different versions of clang that they used.
-- to 1983 and the RCP command, which was basically remote copy. It was a not encrypted version of
-- SCP came and replaced it by making a secure version where the
-- they're going to base it on a stable version of FreeBSD,
-- how they do the version numbering and so on for ZFS on Linux.
+### 要点（播客口述史提取）
+- use Subversion, but they've moved all of their repos to Git. While they're still technically（BSD Now EP370 @ 315.1799）
+- moved from Subversion to Git that leaves FreeBSD as the last large open source project still using（BSD Now EP370 @ 351.6799）
+- that, you know, originally in subversion and CVS, this was just dollar sign ID. But then if you had（BSD Now EP370 @ 828.9799）
+- subversion to Git as the first step in many steps of improving and refining FreeBSD's workflow.（BSD Now EP370 @ 978.7799）
+- going to happen. So first off, why move away from Subversion in the first place? Well,（BSD Now EP370 @ 294.1999）
 
-## 史料（播客提及）
-- [BSD Now EP370 @ 270.55999755859375] We'll explore the reasons from long-term viability of subversion to wider support for tools that will
-- [BSD Now EP370 @ 867.280029296875] doesn't really tell you the same thing as the version number. But part of the reason for that
+### 史料（播客当事人陈述）
+- random hacking blog he has the freebsd subversion to git migration part one why so as we've talked（BSD Now EP370 @ 239.7399）
+- Should developers use the realm notes tag in a subversion commit template more loosely at risk of an increase in false positives（BSD Now EP225 @ 3586.04）
+- It's if we look at the current crop of FreeBSD developers, we're getting to a plurality of them are using Git and then just carrying the patches back to SVN to commit them.（BSD Now EP370 @ 757.6400）
 
-## 史观（播客当事人观点与总纲映射）
-- [BSD Now EP370 @ 270.55999755859375] We'll explore the reasons from long-term viability of subversion to wider support for tools that will
-- [BSD Now EP370 @ 867.280029296875] doesn't really tell you the same thing as the version number. But part of the reason for that
+### 史观（播客当事人观点与总纲映射）
+- （该章节匹配播客中未提取到当事人观点性陈述）
 
-## 辨析（播客争议与存疑点）
-- [存疑脚注] [BSD Now EP370 @ 707.7599487304688] before we get to the skill set argument. Kids these days mostly know Git and not subversion,
-- [存疑脚注] [BSD Now EP370 @ 717.2000122070312] subversion that has had increasingly become a source of friction the argument is supported
+### 辨析（播客争议与存疑点）
+- [存疑脚注] before we get to the skill set argument. Kids these days mostly know Git and not subversion,（BSD Now EP370 @ 707.7599）
+- [存疑脚注] subversion that has had increasingly become a source of friction the argument is supported（BSD Now EP370 @ 717.2000）
+- [存疑脚注] Should developers use the realm notes tag in a subversion commit template more loosely at risk of an increase in false positives（BSD Now EP225 @ 3586.04）
 
-## 文献（播客参考条目）
-- [BSD Now EP290] Pennington J. BSD Now: 290: Timestamped Notes[EB/OL]. (2019-03-21)[2026-08-15]. https://www.bsdnow.tv/290.
-- [BSD Now EP281] Pennington J. BSD Now: 281: EPYC Server Battle[EB/OL]. (2019-01-17)[2026-08-15]. https://www.bsdnow.tv/281.
+### 文献（播客参考条目）
 - [BSD Now EP370] Pennington J. BSD Now: 370: Testing shutdown[EB/OL]. (2020-10-01)[2026-08-15]. https://www.bsdnow.tv/370.
+- [BSD Now EP22] Pennington J. BSD Now: 22: Journaled News-Updates[EB/OL]. (2014-01-29)[2026-08-15]. https://www.bsdnow.tv/22.
+- [BSD Now EP35] Pennington J. BSD Now: 35: Puffy Firewall[EB/OL]. (2014-04-30)[2026-08-15]. https://www.bsdnow.tv/35.
+- [BSD Now EP47] Pennington J. BSD Now: 47: DES Challenge IV[EB/OL]. (2014-07-23)[2026-08-15]. https://www.bsdnow.tv/47.
+- [BSD Now EP64] Pennington J. BSD Now: 64: Rump Kernels Revisited[EB/OL]. (2014-11-19)[2026-08-15]. https://www.bsdnow.tv/64.
+- [BSD Now EP72] Pennington J. BSD Now: 72: Common *Sense Approach[EB/OL]. (2015-01-14)[2026-08-15]. https://www.bsdnow.tv/72.
+- [BSD Now EP106] Pennington J. BSD Now: 106: Multipath TCP[EB/OL]. (2015-09-09)[2026-08-15]. https://www.bsdnow.tv/106.
+- [BSD Now EP119] Pennington J. BSD Now: 119: There be Dragons, BSD Dragons anyway[EB/OL]. (2015-12-09)[2026-08-15]. https://www.bsdnow.tv/119.
 
 <!-- /PODCAST_MINE -->

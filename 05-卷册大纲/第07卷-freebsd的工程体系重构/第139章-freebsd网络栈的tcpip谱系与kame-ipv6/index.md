@@ -47,50 +47,36 @@ volume: 第07卷-freebsd的工程体系重构
 <!-- DB_REF:freebsd.duckdb -->> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 2020-2024 年间：291,070 次提交。> 仓库总览：1,294,851 次提交，13,875 位贡献者，1993-06-12 至 2026-08-25。
 
 <!-- PODCAST_MINE v20260827 -->
-<!-- Chapter: 第139章-freebsd网络栈的tcpip谱系与kame-ipv6 -->
+<!-- 章节主题过滤：第139章-freebsd网络栈的tcpip谱系与kame-ipv6 第 139 章 freebsd网络栈的tcpip谱系与kame-ipv6（实体评分 ≥2 命中才入选） -->
+<!-- 匹配期数：15 期，扫描 segments：13632 条 -->
 
-## 要点（播客口述史提取）
-- because you can run NetBSD as far as the very first release on a Raspberry Pi. This is over at
-- your first net BSD computer, you might not have another BSD or
-- Yeah, so this is a desktop oriented version of net BSD targeted towards people that want to replace windows or macOS.
-- an ETC RCD EAP-parade script can be created and then enabled to
-- So, they last tried NetBSD 7.0 about three years ago and decided it was time to test drive the
-- and a NomadBSD 1.1 release review. In this week's episode of BSD, now!
-- two important ones. First, the semicolon character can be used to separate multiple statements
-- According to Wikipedia, Apple began using FreeBSD instead of NetBSD for macOS 10.3.
+### 要点（播客口述史提取）
+- And wow, they announced, let's see, FreeBSD5 with the jail commands, the management commands.（BSD Now EP149 @ 2064.819）
+- And then they've also got a new project started, Getting Started with FreeBSD, which is the foundation hired an intern for the summer.（BSD Now EP149 @ 6788.140）
+- At IX, we made the conscious decision to base FreeNAS and TrueOS on the FreeBSD operating（BSD Now EP242 @ 1258.4）
+- FreeBSD network stack ported to userland on FreeBSD and allows you to use it as a library.（BSD Now EP242 @ 821.36）
+- According to Wikipedia, Apple began using FreeBSD instead of NetBSD for macOS 10.3.（BSD Now EP273 @ 1951.94）
 
-## 史料（播客提及）
-- [BSD Now EP295 @ 3094.54] It was that BSD cam actually when I was sitting beside one of the graphics people so it was handy
-- [BSD Now EP295 @ 618.7] So this actually takes the file descriptor you want to delete, the path, so the file
-- [BSD Now EP295 @ 652.04] and only if that name and that descriptor match will it actually remove the file.
-- [BSD Now EP273 @ 2522.42] Interestingly, FreeBSD was still shipping Xorg 1.18.something,
-- [BSD Now EP273 @ 3684.12] It's a great way to, you know, actually get people in other projects to care about BSD.
+### 史料（播客当事人陈述）
+- Today, Alan sits as a FreeBSD project committer and core member.（BSD Now EP149 @ 1014.319）
+- If you do, you need to use that coupon code freeBSDnow, which is going to give you that $10 credit, which is good for running basically two months of their lower-end VM, which for a low-end VM still kicks a lot of butt because we're talking SSD-backed, terabyte of transfer a month, access to all the nice control panels and UI utilities they have in their HTML5 interface.（BSD Now EP149 @ 1574.079）
+- Ed and Konstantin Belisov wrote about the FreeBSD virtual memory system.（BSD Now EP149 @ 6537.519）
+- And they talk a bit about BSDCAN was also where the FreeBSD Foundation（BSD Now EP149 @ 6654.199）
 
-## 史观（播客当事人观点与总纲映射）
-- [BSD Now EP295 @ 3094.54] It was that BSD cam actually when I was sitting beside one of the graphics people so it was handy
-  → 史观映射：总纲18——时间是一种形式主义
-- [BSD Now EP295 @ 618.7] So this actually takes the file descriptor you want to delete, the path, so the file
-- [BSD Now EP295 @ 652.04] and only if that name and that descriptor match will it actually remove the file.
-- [BSD Now EP273 @ 2522.42] Interestingly, FreeBSD was still shipping Xorg 1.18.something,
-- [BSD Now EP273 @ 3684.12] It's a great way to, you know, actually get people in other projects to care about BSD.
-- [BSD Now EP259 @ 1376.280029296875] And this is the reason why Linux ended up being invented and why FreeBSD kind of missed out on being the de facto operating system for probably almost everything.
-  → 史观映射：总纲18——时间是一种形式主义
-- [BSD Now EP259 @ 2364.699951171875] Each jail contains a vanilla FreeBSD installation, so right from the install files that you have used to actually install the host.
-- [BSD Now EP259 @ 2542.760009765625] so the power 9 hardware has a native hypervisor so you can actually run the ibm thing or freebsd
+### 史观（播客当事人观点与总纲映射）
+- （该章节匹配播客中未提取到当事人观点性陈述）
 
-## 辨析（播客争议与存疑点）
-- [存疑脚注] [BSD Now EP273 @ 691.46] Their main complaint with NetBSD was that it
-- [存疑脚注] [BSD Now EP259 @ 1431.4599609375] Anyway, although AT&T quickly settled its legal dispute with BSDI and the University of California,
-- [存疑脚注] [BSD Now EP149 @ 5700.5] like Harden BSD or, say, like BitRig, Forks?
-- [存疑脚注] [BSD Now EP149 @ 5711.5400390625] Back in the 80s, 90s, all the big vendors forked BSD and laughed their way to the bank.
-- [存疑脚注] [BSD Now EP149 @ 5725.419921875] Those were a thing where they took BSD, forked it, did their own little distro, and created something that made money for somebody.
-- [存疑脚注] [BSD Now EP149 @ 5808.07958984375] forking of software but then we've seen things like open bsd forking from net bsd basic i guess
+### 辨析（播客争议与存疑点）
+- [存疑脚注] And if you're using FreeBSD secure levels, you can actually make it so the flag can't be removed（BSD Now EP39 @ 3676.899）
 
-## 文献（播客参考条目）
-- [BSD Now EP295] Pennington J. BSD Now: 295: Fun with funlinkat()[EB/OL]. (2019-04-25)[2026-08-15]. https://www.bsdnow.tv/295.
-- [BSD Now EP273] Pennington J. BSD Now: Episode 273: A Thoughtful Episode | BSD Now 273[EB/OL]. (2018-11-23)[2026-08-15]. https://www.bsdnow.tv/273.
-- [BSD Now EP259] Pennington J. BSD Now: Episode 259: Long Live Unix | BSD Now 259[EB/OL]. (2018-08-16)[2026-08-15]. https://www.bsdnow.tv/259.
+### 文献（播客参考条目）
 - [BSD Now EP149] Pennington J. BSD Now: 149: The bhyve has been disturbed, and a wild Dexter appears![EB/OL]. (2016-07-06)[2026-08-15]. https://www.bsdnow.tv/149.
 - [BSD Now EP242] Pennington J. BSD Now: Episode 242: Linux Takes The Fastpath | BSD Now 242[EB/OL]. (2018-04-18)[2026-08-15]. https://www.bsdnow.tv/242.
+- [BSD Now EP273] Pennington J. BSD Now: Episode 273: A Thoughtful Episode | BSD Now 273[EB/OL]. (2018-11-23)[2026-08-15]. https://www.bsdnow.tv/273.
+- [BSD Now EP276] Pennington J. BSD Now: Episode 276: Ho, Ho, Ho - 12.0 | BSD Now 276[EB/OL]. (2018-12-13)[2026-08-15]. https://www.bsdnow.tv/276.
+- [BSD Now EP1] Pennington J. BSD Now: 1: BGP & BSD[EB/OL]. (2013-09-04)[2026-08-15]. https://www.bsdnow.tv/1.
+- [BSD Now EP3] Pennington J. BSD Now: 3: MX with TTX[EB/OL]. (2013-09-18)[2026-08-15]. https://www.bsdnow.tv/3.
+- [BSD Now EP39] Pennington J. BSD Now: 39: The Friendly Sandbox[EB/OL]. (2014-05-28)[2026-08-15]. https://www.bsdnow.tv/39.
+- [BSD Now EP47] Pennington J. BSD Now: 47: DES Challenge IV[EB/OL]. (2014-07-23)[2026-08-15]. https://www.bsdnow.tv/47.
 
 <!-- /PODCAST_MINE -->

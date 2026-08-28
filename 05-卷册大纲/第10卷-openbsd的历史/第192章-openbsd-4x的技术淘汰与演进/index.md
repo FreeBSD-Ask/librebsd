@@ -50,42 +50,37 @@ volume: 第10卷-openbsd的历史
 - OpenBSD 官网 release 页面 ［EB/OL］. <https://www.openbsd.org/{40-49}.html>；<announce@openbsd.org> 邮件列表存档 ［EB/OL］. <https://marc.info/?laccopenbsd-announce>；原材料/研究/考据记录/20260723_announcements-openbsd.md § 二.2；bsd_commits.db openbsd-src 仓库 ［A］<!-- DB_REF:openbsd.duckdb -->> **数据库引用（openbsd.duckdb）**：本子节对应 openbsd 代码仓库。> 1995-2026 年间：491,195 次提交。> 仓库总览：491,195 次提交，3,352 位贡献者，1995-10-18 至 2026-08-25。
 
 <!-- PODCAST_MINE v20260827 -->
-<!-- Chapter: 第192章-openbsd-4x的技术淘汰与演进 -->
+<!-- 章节主题过滤：第192章-openbsd-4x的技术淘汰与演进 第 192 章 openbsd-4x的技术淘汰与演进（实体评分 ≥2 命中才入选） -->
+<!-- 匹配期数：15 期，扫描 segments：13665 条 -->
 
-## 要点（播客口述史提取）
-- So we have a BSD router project has released a new version.
-- So first of all, for those who don't remember, the BSD-RP is a router project aimed at replacing more of your big commercial type router stuff.
-- But for this particular new release, we just want to make you aware there's some awesomeness now that it's based on FreeBSD 10.3.
-- So, first of all, thanks for taking the time to go up and do this while we're at Asia BSD Con.
-- probably 4.5 was probably the first BSD and it didn't kernel panic. Which is a good start.
-- And then the, let me see, personally, I mean, I personally use OpenBSD for my first toolkit,
-- yeah so i guess what happened was um they got uh so libre open bsd got the patches for open ssl
-- And we got to a point where Sean Webb of the Harden BSD project actually built OpenSense on top of Harden BSD this summer.
+### 要点（播客口述史提取）
+- And then the, let me see, personally, I mean, I personally use OpenBSD for my first toolkit,（BSD Now EP141 @ 1650.839）
+- powered by OpenBSD. OpenBSD is not officially supported so you have to do a bit of a workaround.（BSD Now EP232 @ 2232.82）
+- Running full disk encrypted OpenBSD there is a piece of cake and as a bonus my first steps（BSD Now EP232 @ 2238.98）
+- Once they've written out all the files to the suff rate, it's now time to actually boot OpenBSD for the first time.（BSD Now EP232 @ 2342.38）
+- Okay, so talking about ancient bugs, of course, the first one's on OpenBSD tech.（BSD Now EP60 @ 3710.959）
 
-## 史料（播客提及）
-- [BSD Now EP141 @ 1650.8399658203125] And then the, let me see, personally, I mean, I personally use OpenBSD for my first toolkit,
-- [BSD Now EP141 @ 167.36000061035156] yeah so i guess what happened was um they got uh so libre open bsd got the patches for open ssl
-- [BSD Now EP141 @ 1672.0] In all this, I actually look forward to a future where things like a USB stick can be shared between a Mac and an OpenBSD machine and a FreeBSD machine without hassle.
-- [BSD Now EP141 @ 1964.1199951171875] And we got to a point where Sean Webb of the Harden BSD project actually built OpenSense on top of Harden BSD this summer.
-- [BSD Now EP141 @ 3219.199951171875] But in particular, the project's using FreeBSD as its base OS and then a lot of the jail functionality to actually do the containers.
+### 史料（播客当事人陈述）
+- And then Antoine Jacoteau from OpenBSD talked about SysPatch, their base system maintenance（BSD Now EP232 @ 522.32）
+- Vincent Delph talked about using OpenBSD to build a home alarm system, which is quite（BSD Now EP232 @ 528.52）
+- On this week's episode, we're going to be talking with Ted Uenckst of the OpenBSD team（BSD Now EP23 @ 0.0）
+- The CDDL license is not considered free by OpenBSD standards.（BSD Now EP23 @ 2361.839）
 
-## 史观（播客当事人观点与总纲映射）
-- [BSD Now EP141 @ 1650.8399658203125] And then the, let me see, personally, I mean, I personally use OpenBSD for my first toolkit,
-- [BSD Now EP141 @ 167.36000061035156] yeah so i guess what happened was um they got uh so libre open bsd got the patches for open ssl
-- [BSD Now EP141 @ 1672.0] In all this, I actually look forward to a future where things like a USB stick can be shared between a Mac and an OpenBSD machine and a FreeBSD machine without hassle.
-- [BSD Now EP141 @ 1964.1199951171875] And we got to a point where Sean Webb of the Harden BSD project actually built OpenSense on top of Harden BSD this summer.
-- [BSD Now EP141 @ 3219.199951171875] But in particular, the project's using FreeBSD as its base OS and then a lot of the jail functionality to actually do the containers.
-- [BSD Now EP141 @ 3607.47998046875] up using from open bsd uh where free bsd actually has uh their implementation was actually directly
-- [BSD Now EP141 @ 3623.35986328125] bsd yeah probably a much smaller diff to deal with well cool hey that's neat to see i mean i think we
-- [BSD Now EP141 @ 4877.15966796875] one alan i think we have a little yes so this is a little tease of uh free bsd with intel i915
+### 史观（播客当事人观点与总纲映射）
+- （该章节匹配播客中未提取到当事人观点性陈述）
 
-## 辨析（播客争议与存疑点）
-- [存疑脚注] [BSD Now EP141 @ 3618.43994140625] model and drivers and kernel are closer to net bsd because open bsd was originally a fork of net
-- [存疑脚注] [BSD Now EP232 @ 186.02] So we fired up my laptop running FreeBSD beside it and attempted to recreate the problem there
-- [存疑脚注] [BSD Now EP232 @ 883.32] in the NetBSD kernel based on incorrect coding style that has an integer overflow during
+### 辨析（播客争议与存疑点）
+- [存疑脚注] So here, this is a link on GitHub where they removed from OpenBSD the ports due to licensing issues.（BSD Now EP233 @ 2838.880）
+- [存疑脚注] This will become the second argument of pledge. This allows one to set the pledge for a new image（BSD Now EP235 @ 6542.019）
 
-## 文献（播客参考条目）
+### 文献（播客参考条目）
 - [BSD Now EP141] Pennington J. BSD Now: 141: BSD Likes Ike![EB/OL]. (2016-05-11)[2026-08-15]. https://www.bsdnow.tv/141.
 - [BSD Now EP232] Pennington J. BSD Now: 232: FOSDEM 2018[EB/OL]. (2018-02-07)[2026-08-15]. https://www.bsdnow.tv/232.
+- [BSD Now EP12] Pennington J. BSD Now: 12: Collecting SSHells[EB/OL]. (2013-11-20)[2026-08-15]. https://www.bsdnow.tv/12.
+- [BSD Now EP23] Pennington J. BSD Now: 23: Time Signatures[EB/OL]. (2014-02-05)[2026-08-15]. https://www.bsdnow.tv/23.
+- [BSD Now EP31] Pennington J. BSD Now: 31: Edgy BSD Users[EB/OL]. (2014-04-01)[2026-08-15]. https://www.bsdnow.tv/31.
+- [BSD Now EP40] Pennington J. BSD Now: 40: AirPorts & Packages[EB/OL]. (2014-06-04)[2026-08-15]. https://www.bsdnow.tv/40.
+- [BSD Now EP60] Pennington J. BSD Now: 60: Don't Buy a Router[EB/OL]. (2014-10-22)[2026-08-15]. https://www.bsdnow.tv/60.
+- [BSD Now EP106] Pennington J. BSD Now: 106: Multipath TCP[EB/OL]. (2015-09-09)[2026-08-15]. https://www.bsdnow.tv/106.
 
 <!-- /PODCAST_MINE -->

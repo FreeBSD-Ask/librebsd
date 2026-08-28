@@ -46,77 +46,36 @@ volume: 第08卷-freebsd的范式转换
 **新增时间线事件**：1991 年 IEEE Trans Communs 发表路由模型网络可靠性研究论文，王波《FreeBSD 使用大全》出版；2015 年 AsiaBSDCon 2015 展示 Go 语言内容过滤软件在 FreeBSD 上的实现。<!-- DB_REF:freebsd.duckdb -->> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 2024-2026 年间：168,386 次提交。> 仓库总览：1,294,851 次提交，13,875 位贡献者，1993-06-12 至 2026-08-25。
 
 <!-- PODCAST_MINE v20260827 -->
-<!-- Chapter: 第171章-systemd与bsd-init的哲学合图层 -->
+<!-- 章节主题过滤：第171章-systemd与bsd-init的哲学合图层 第 171 章 systemd与bsd-init的哲学合图层（实体评分 ≥2 命中才入选） -->
+<!-- 匹配期数：15 期，扫描 segments：14850 条 -->
 
-## 要点（播客口述史提取）
-- So there's a GitHub repo where you have a version of FreeBSD with the patches to work
-- Which wrote an article about why they use open BSD. So first of all who they are
-- And then I've seen the already started planning and holding polls on Twitter about VBSD con
-- So first up, Ed Mass, over at the FreeBSD project,
-- So in FreeBSD, they've had a BSD license version of DTC,
-- Alan introduced me to BSD and tech snap a few months ago and I started listening to BSD
-- Therefore, setting it to 1 is now ignored, and after the release of OpenBSD 6.0, we'll delete the CCTL entirely.
-- be a downside for, especially since OpenBSD is the only version of X that doesn't require
+### 要点（播客口述史提取）
+- and haven't introduced necessarily the feature creep that we have seen in SystemD.（BSD Now EP114 @ 397.1400）
+- changed almost everything over because of SystemD. And so mostly old knowledge I have is actually（BSD Now EP210 @ 3136.48）
+- got developed together to something more coupled by software mechanisms like systemd and what（BSD Now EP237 @ 2558.799）
+- takes you through the review your initial draft and make suggestions.（BSD Now EP35 @ 2194.959）
+- Definitely and really cheap to get started depending on the amount of data you use.（BSD Now EP55 @ 1243.699）
 
-## 史料（播客提及）
-- [BSD Now EP151 @ 115.0199966430664] this on other BSDs as well. But it looks like some of the list in order of severity, I think is how
-- [BSD Now EP151 @ 1763.3599853515625] gonzo at FreeBSD.org has a post up on the kernel Nomicon about actually
-- [BSD Now EP151 @ 1768.4400634765625] getting it running FreeBSD so you can see it's actually connected up and he's
-- [BSD Now EP151 @ 3147.9599609375] and I think Freeness turns it off as well, and PCBSD does.
-- [BSD Now EP35 @ 1381.780029296875] And coming from IP tables and discovering actually my first OpenBSD firewall was with IPF,
+### 史料（播客当事人陈述）
+- the init system that is familiar and well documented. There's also some TrueOS specific（BSD Now EP237 @ 2748.0）
+- With the growing adoption of SystemD, dissatisfaction with Linux has reached proportions not seen in recent years due to the extent that people are starting to talk of switching to FreeBSD.（BSD Now EP76 @ 785.5999）
+- process was more or more opaque i didn't want to talk about the merits and demerits of systemd（BSD Now EP237 @ 2564.319）
+- imagine there's many books in that category but this is definitely a...（BSD Now EP55 @ 3289.140）
 
-## 史观（播客当事人观点与总纲映射）
-- [BSD Now EP151 @ 115.0199966430664] this on other BSDs as well. But it looks like some of the list in order of severity, I think is how
-- [BSD Now EP151 @ 1763.3599853515625] gonzo at FreeBSD.org has a post up on the kernel Nomicon about actually
-- [BSD Now EP151 @ 1768.4400634765625] getting it running FreeBSD so you can see it's actually connected up and he's
-- [BSD Now EP151 @ 3147.9599609375] and I think Freeness turns it off as well, and PCBSD does.
-- [BSD Now EP35 @ 1381.780029296875] And coming from IP tables and discovering actually my first OpenBSD firewall was with IPF,
-- [BSD Now EP35 @ 1846.5599365234375] system. That's finally now in OpenBSD 5.5. The background for OpenBSD, I think all the
-- [BSD Now EP35 @ 1954.5599365234375] Now FreeBSD doesn't have that yet, and I think that's a great shame.
-- [BSD Now EP35 @ 2625.2998046875] And I think the other thing that contributed a lot to FreeBSD doing its own thing was that
+### 史观（播客当事人观点与总纲映射）
+- （该章节匹配播客中未提取到当事人观点性陈述）
 
-## 辨析（播客争议与存疑点）
-- [存疑脚注] [BSD Now EP253 @ 2262.7] So now we have a version of mere BSD's corn shell running on Jahane, which is a fork of plan 9.
-- [存疑脚注] [BSD Now EP253 @ 5048.8] with FreeBSD. I guess that just the name itself could suggest it is in fact a big fork.
-- [存疑脚注] [BSD Now EP92 @ 1562.5599365234375] Okay, imports started out as kind of a fork of the FreeBSD ports tree.
-- [存疑脚注] [BSD Now EP92 @ 1696.5999755859375] Okay, so being a fork from a bit older version of free BSD. What's the harbor support like?
-- [存疑脚注] [BSD Now EP92 @ 8.779999732971191] It's a slightly lesser known fork of free BSD with a focus on easy desktop use.
-- [存疑脚注] [BSD Now EP252 @ 3267.52] Saying that macOS 10 is just FreeBSD with an Apple GUI is certainly false on face value,
+### 辨析（播客争议与存疑点）
+- （该章节匹配播客中未提取到争议性陈述）
 
-## 文献（播客参考条目）
-- [BSD Now EP151] Pennington J. BSD Now: 151: Fuzzy Auditing[EB/OL]. (2016-07-20)[2026-08-15]. https://www.bsdnow.tv/151.
+### 文献（播客参考条目）
 - [BSD Now EP35] Pennington J. BSD Now: 35: Puffy Firewall[EB/OL]. (2014-04-30)[2026-08-15]. https://www.bsdnow.tv/35.
-- [BSD Now EP253] Pennington J. BSD Now: Episode 253: Silence of the Fans | BSD Now 253[EB/OL]. (2018-07-05)[2026-08-15]. https://www.bsdnow.tv/253.
-- [BSD Now EP92] Pennington J. BSD Now: 92: BSD After Midnight[EB/OL]. (2015-06-03)[2026-08-15]. https://www.bsdnow.tv/92.
-- [BSD Now EP252] Pennington J. BSD Now: Episode 252: Goes to 11.2 | BSD Now 252[EB/OL]. (2018-06-28)[2026-08-15]. https://www.bsdnow.tv/252.
-- [BSD Now EP150] Pennington J. BSD Now: 150: Sprinkle a little BSD into your life.[EB/OL]. (2016-07-13)[2026-08-15]. https://www.bsdnow.tv/150.
-- [BSD Now EP55] Pennington J. BSD Now: 55: The Promised WLAN[EB/OL]. (2014-09-17)[2026-08-15]. https://www.bsdnow.tv/55.
-- [BSD Now EP96] Pennington J. BSD Now: 96: Lost Technology[EB/OL]. (2015-07-01)[2026-08-15]. https://www.bsdnow.tv/96.
-- [BSD Now EP257] Pennington J. BSD Now: Episode 257: Great NetBSD 8 | BSD Now 257[EB/OL]. (2018-08-02)[2026-08-15]. https://www.bsdnow.tv/257.
-- [BSD Now EP128] Pennington J. BSD Now: 128: The State of BSD[EB/OL]. (2016-02-10)[2026-08-15]. https://www.bsdnow.tv/128.
-- [BSD Now EP158] Pennington J. BSD Now: 158: Ham, Radio and Pie (oh my)[EB/OL]. (2016-09-07)[2026-08-15]. https://www.bsdnow.tv/158.
-- [BSD Now EP335] Pennington J. BSD Now: 335: FreeBSD Down Under[EB/OL]. (2020-01-30)[2026-08-15]. https://www.bsdnow.tv/335.
-- [BSD Now EP276] Pennington J. BSD Now: Episode 276: Ho, Ho, Ho - 12.0 | BSD Now 276[EB/OL]. (2018-12-13)[2026-08-15]. https://www.bsdnow.tv/276.
-- [BSD Now EP105] Pennington J. BSD Now: 105: Virginia BSD Assembly[EB/OL]. (2015-09-02)[2026-08-15]. https://www.bsdnow.tv/105.
-- [BSD Now EP107] Pennington J. BSD Now: 107: In their midst[EB/OL]. (2015-09-16)[2026-08-15]. https://www.bsdnow.tv/107.
-- [BSD Now EP217] Pennington J. BSD Now: 217: Your questions, part II[EB/OL]. (2017-10-25)[2026-08-15]. https://www.bsdnow.tv/217.
-- [BSD Now EP15] Pennington J. BSD Now: 15: Kickin' NAS[EB/OL]. (2013-12-11)[2026-08-15]. https://www.bsdnow.tv/15.
-- [BSD Now EP135] Pennington J. BSD Now: 135: Speciality MWL[EB/OL]. (2016-03-30)[2026-08-15]. https://www.bsdnow.tv/135.
-- [BSD Now EP237] Pennington J. BSD Now: 237: AsiaBSDcon 2018[EB/OL]. (2018-03-14)[2026-08-15]. https://www.bsdnow.tv/237.
-- [BSD Now EP76] Pennington J. BSD Now: 76: Time for a Change[EB/OL]. (2015-02-11)[2026-08-15]. https://www.bsdnow.tv/76.
-- [BSD Now EP236] Pennington J. BSD Now: 236: How a cd works[EB/OL]. (2018-03-07)[2026-08-15]. https://www.bsdnow.tv/236.
-- [BSD Now EP114] Pennington J. BSD Now: 114: BSD-Schooling[EB/OL]. (2015-11-04)[2026-08-15]. https://www.bsdnow.tv/114.
-- [BSD Now EP73] Pennington J. BSD Now: 73: Pipe Dreams[EB/OL]. (2015-01-21)[2026-08-15]. https://www.bsdnow.tv/73.
 - [BSD Now EP54] Pennington J. BSD Now: 54: Luminary Environment[EB/OL]. (2014-09-10)[2026-08-15]. https://www.bsdnow.tv/54.
-- [BSD Now EP118] Pennington J. BSD Now: 118: BSD is go for Launch[EB/OL]. (2015-12-02)[2026-08-15]. https://www.bsdnow.tv/118.
-- [BSD Now EP345] Pennington J. BSD Now: 345: Switchers to BSD[EB/OL]. (2020-04-09)[2026-08-15]. https://www.bsdnow.tv/345.
-- [BSD Now EP337] Pennington J. BSD Now: 337: Kubernetes on bhyve[EB/OL]. (2020-02-13)[2026-08-15]. https://www.bsdnow.tv/337.
+- [BSD Now EP55] Pennington J. BSD Now: 55: The Promised WLAN[EB/OL]. (2014-09-17)[2026-08-15]. https://www.bsdnow.tv/55.
 - [BSD Now EP67] Pennington J. BSD Now: 67: Must Be Rigged[EB/OL]. (2014-12-10)[2026-08-15]. https://www.bsdnow.tv/67.
-- [BSD Now EP416] Pennington J. BSD Now: 416: netcat printing[EB/OL]. (2021-08-19)[2026-08-15]. https://www.bsdnow.tv/416.
-- [BSD Now EP31] Pennington J. BSD Now: 31: Edgy BSD Users[EB/OL]. (2014-04-01)[2026-08-15]. https://www.bsdnow.tv/31.
-- [BSD Now EP233] Pennington J. BSD Now: 233: High on ZFS[EB/OL]. (2018-02-14)[2026-08-15]. https://www.bsdnow.tv/233.
-- [BSD Now EP318] Pennington J. BSD Now: 318: The TrueNAS Library[EB/OL]. (2019-10-03)[2026-08-15]. https://www.bsdnow.tv/318.
-- [BSD Now EP62] Pennington J. BSD Now: 62: Gift from the Sun[EB/OL]. (2014-11-05)[2026-08-15]. https://www.bsdnow.tv/62.
-- [BSD Now EP210] Pennington J. BSD Now: 210: Your questions, part I[EB/OL]. (2017-09-06)[2026-08-15]. https://www.bsdnow.tv/210.
+- [BSD Now EP73] Pennington J. BSD Now: 73: Pipe Dreams[EB/OL]. (2015-01-21)[2026-08-15]. https://www.bsdnow.tv/73.
+- [BSD Now EP76] Pennington J. BSD Now: 76: Time for a Change[EB/OL]. (2015-02-11)[2026-08-15]. https://www.bsdnow.tv/76.
+- [BSD Now EP92] Pennington J. BSD Now: 92: BSD After Midnight[EB/OL]. (2015-06-03)[2026-08-15]. https://www.bsdnow.tv/92.
+- [BSD Now EP96] Pennington J. BSD Now: 96: Lost Technology[EB/OL]. (2015-07-01)[2026-08-15]. https://www.bsdnow.tv/96.
 
 <!-- /PODCAST_MINE -->
