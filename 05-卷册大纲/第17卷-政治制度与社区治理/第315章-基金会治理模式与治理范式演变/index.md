@@ -49,3 +49,29 @@ volume: 第17卷-政治制度与社区治理
 - 项目史观总纲第 13、19、21、23 条；IRC §501(c)(3) 与 §501(c)(6) 原文；FreeBSD Foundation IRS Determination Letter（2000-12-07）；FreeBSD Core Bylaws；Linux Foundation Bylaws ARTICLE III §3.1；OSDL 合并档案（2007-01-22）；FSF 官方许可证列表 [EB/OL]. <https://www.gnu.org/licenses/license-list.en.html>；freebsd-advocacy 邮件列表存档 [EB/OL]. <https://lists.freebsd.org/archives/freebsd-advocacy/>；第 16.7a-d 节辩证链补足；第 16.7.1-16.7.4、17.10、18.12 节史料；参见相关章节 BSD 治理改革与许可证哲学部分史料 ［A］---## 史料登记与辩证校准（2026-08-08 追加）> **本卷命题**：24.1 少数与多数（详见本卷 00-总览“编纂指导思想叙事参照”）### 史料文献
 - 上述各子节文献综合；FreeBSD Foundation 年报；参见相关章节关于 FreeBSD Foundation 与 Linux Foundation 治理模式比较及公众认知的史料；项目史观总纲第 1、4、5、8、9、10、13、14、19、21、23 条（见 据原文第 25 章、据原文第 14 章 14.2 节、据原文第 21 章 21.1-21.2 节、据原文第 23 章 23.1 节） ［A］
 - 媒体报道档案；公众认知调查；用户文章 ［C］
+
+<!-- PODCAST_MINE v20260827 -->
+<!-- Chapter: 第315章-基金会治理模式与治理范式演变 -->
+
+## 要点（播客口述史提取）
+- （该章节匹配播客中暂未提取到相关核心史实陈述）
+
+## 史料（播客提及）
+- （待提取）
+
+## 史观（播客当事人观点与总纲映射）
+- （该章节匹配播客中暂未提取到相关当事人观点）
+
+## 辨析（播客争议与存疑点）
+- （该章节匹配播客中暂未提取到相关争议点）
+
+## 文献（播客参考条目）
+- [BSD Now EP185] Pennington J. BSD Now: 185: Exit Interview[EB/OL]. (2017-03-16)[2026-08-15]. https://www.bsdnow.tv/185.
+- [BSD Now EP46] Pennington J. BSD Now: 46: Network Iodometry[EB/OL]. (2014-07-16)[2026-08-15]. https://www.bsdnow.tv/46.
+- [BSD Now EP486] Pennington J. BSD Now: 486: EuroBSDcon interviews[EB/OL]. (2022-12-22)[2026-08-15]. https://www.bsdnow.tv/486.
+- [BSD Now EP58] Pennington J. BSD Now: 58: Behind the Masq[EB/OL]. (2014-10-08)[2026-08-15]. https://www.bsdnow.tv/58.
+- [BSD Now EP247] Pennington J. BSD Now: Episode 247: Interning for FreeBSD | BSD Now 247[EB/OL]. (2018-05-24)[2026-08-15]. https://www.bsdnow.tv/247.
+- [BSD Now EP213] Pennington J. BSD Now: 213: The French CONnection[EB/OL]. (2017-09-27)[2026-08-15]. https://www.bsdnow.tv/213.
+- [BSD Now EP64] Pennington J. BSD Now: 64: Rump Kernels Revisited[EB/OL]. (2014-11-19)[2026-08-15]. https://www.bsdnow.tv/64.
+
+<!-- /PODCAST_MINE -->

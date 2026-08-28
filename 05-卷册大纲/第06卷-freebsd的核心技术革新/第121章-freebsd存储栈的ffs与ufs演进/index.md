@@ -53,3 +53,62 @@ volume: 第06卷-freebsd的核心技术革新
 - Kamp, P.-H. (2004). *GEOM Tutorial*. BSDCan 2004; FreeBSD Project. **geom(4)**, **geom(8)** Manual Pages; Linux Kernel Documentation. *Device Mapper*. kernel.org/doc; Lucas, M. W. (2018). *FreeBSD Mastery: Storage Essentials*. Chapter 3-5.[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]<!-- DB_REF:freebsd.duckdb -->> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 2010-2020 年间：488,947 次提交。> 仓库总览：1,294,851 次提交，13,875 位贡献者，1993-06-12 至 2026-08-25。
 - FreeBSD Project. **camcontrol(8)** Manual Page; McKusick, M. K. et al. (2014). *The Design and Implementation of the FreeBSD Operating System* (2nd ed.). Chapter 10; FreeBSD Project. *CAM Subsystem Source Tree*. src/sys/cam/. ［B］<!-- DB_REF:freebsd.duckdb -->> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 2010-2020 年间：488,947 次提交。> 仓库总览：1,294,851 次提交，13,875 位贡献者，1993-06-12 至 2026-08-25。
 - FreeBSD Project. **nfs(5)**, **aio(4)**, **nfsstat(1)** Manual Pages; Macklem, R. (2009-2012). *New NFSv4 Client/Server Implementation Commits*; FreeBSD Project. *FreeBSD 9.0 Release Notes* NFSv4 section; McKusick, M. K. et al. (2014). *The Design and Implementation of the FreeBSD Operating System* (2nd ed.). Chapter 9. ［A］<!-- DB_REF:freebsd.duckdb -->> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 2010-2020 年间：488,947 次提交。> 仓库总览：1,294,851 次提交，13,875 位贡献者，1993-06-12 至 2026-08-25。
+
+<!-- PODCAST_MINE v20260827 -->
+<!-- Chapter: 第121章-freebsd存储栈的ffs与ufs演进 -->
+
+## 要点（播客口述史提取）
+- we did release our PCBSD 10.1.2 quarterly update this last Monday.
+- Okay, first up we have Dominic writes in about a BSD install fest.
+- And he's looking forward to having lots of good BSD talk in 2015.
+- vm so he asks will i be able to mount the zfs created under free nas under free bsd 10.1 how
+- bsd 10.1 they've backported them all and those would be like the feature flags for your z yeah
+- They are pleased to announce the release of GhostBSD 11.1 on 64-bit architecture with made an XFCE desktop on direct and torrent downloads.
+- There are new versions of Lumina and Ghost BSD available for you to check out.
+- Making your own ports is an easy and fun way to make your first contribution to a BSD project.
+
+## 史料（播客提及）
+- [BSD Now EP90 @ 1466.0799560546875] a lot of the information that's in there is actually not necessarily accurate for free BSD.
+- [BSD Now EP90 @ 4054.33984375] nice okay well he does say here eventually i want to replace the free nas with free bsd without the
+- [BSD Now EP221 @ 1697.43994140625] is interesting um there's also talk a short one about bsd miser which is actually from the company
+- [BSD Now EP221 @ 2234.079833984375] laundry list of demands for his little pdf viewer program uh i think by the end of bsd can he had a
+- [BSD Now EP221 @ 4884.1201171875] And I think if we just had a couple more people doing that for FreeBSD,
+
+## 史观（播客当事人观点与总纲映射）
+- [BSD Now EP90 @ 1466.0799560546875] a lot of the information that's in there is actually not necessarily accurate for free BSD.
+- [BSD Now EP90 @ 4054.33984375] nice okay well he does say here eventually i want to replace the free nas with free bsd without the
+- [BSD Now EP221 @ 1697.43994140625] is interesting um there's also talk a short one about bsd miser which is actually from the company
+- [BSD Now EP221 @ 2234.079833984375] laundry list of demands for his little pdf viewer program uh i think by the end of bsd can he had a
+- [BSD Now EP221 @ 4884.1201171875] And I think if we just had a couple more people doing that for FreeBSD,
+- [BSD Now EP298 @ 1864.699951171875] architecture support in free bsd ports well this is i think from his rss aggregator thing
+- [BSD Now EP298 @ 1870.699951171875] but it's basically his comments on uh one of the papers from agbsdcon actually
+- [BSD Now EP298 @ 1903.97998046875] work on the power processors on FreeBSD and how most of the problems can actually be solved.
+
+## 辨析（播客争议与存疑点）
+- [存疑脚注] [BSD Now EP298 @ 1749.3599853515625] So they said, now that OpenBSD 6.5 is out,
+- [存疑脚注] [BSD Now EP298 @ 734.6199951171875] and they write, as a regular, it's false readers should know, I like diving into the world of BSDs.
+- [存疑脚注] [BSD Now EP125 @ 5860.33984375] but they said pcbsd's default zfs file system was faster with its embedded sqlibrary
+- [存疑脚注] [BSD Now EP125 @ 6034.72021484375] audio encoding they had uh dragonfly in about the middle and pcbsd last but they said that's uh
+- [存疑脚注] [BSD Now EP388 @ 1650.62] bsd argument and with that you can then reload your pfrule set to apply these
+- [存疑脚注] [BSD Now EP388 @ 2660.78] and also removed the UFSFoldDisk option from the installer.
+
+## 文献（播客参考条目）
+- [BSD Now EP90] Pennington J. BSD Now: 90: ZFS Armistice[EB/OL]. (2015-05-20)[2026-08-15]. https://www.bsdnow.tv/90.
+- [BSD Now EP221] Pennington J. BSD Now: 221: BSD in Taiwan[EB/OL]. (2017-11-22)[2026-08-15]. https://www.bsdnow.tv/221.
+- [BSD Now EP298] Pennington J. BSD Now: 298: BSD On The Road[EB/OL]. (2019-05-16)[2026-08-15]. https://www.bsdnow.tv/298.
+- [BSD Now EP125] Pennington J. BSD Now: 125: DevSummits, Core and the Baldwin[EB/OL]. (2016-01-20)[2026-08-15]. https://www.bsdnow.tv/125.
+- [BSD Now EP388] Pennington J. BSD Now: 388: Must-have security tool[EB/OL]. (2021-02-04)[2026-08-15]. https://www.bsdnow.tv/388.
+- [BSD Now EP216] Pennington J. BSD Now: 216: Software is storytelling[EB/OL]. (2017-10-18)[2026-08-15]. https://www.bsdnow.tv/216.
+- [BSD Now EP172] Pennington J. BSD Now: 172: A tale of BSD from yore[EB/OL]. (2016-12-14)[2026-08-15]. https://www.bsdnow.tv/172.
+- [BSD Now EP278] Pennington J. BSD Now: Episode 278: The Real McCoy | BSD Now 278[EB/OL]. (2018-12-27)[2026-08-15]. https://www.bsdnow.tv/278.
+- [BSD Now EP193] Pennington J. BSD Now: 193: Fire up the 802.11 AC[EB/OL]. (2017-05-10)[2026-08-15]. https://www.bsdnow.tv/193.
+- [BSD Now EP100] Pennington J. BSD Now: 100: Straight from the Src[EB/OL]. (2015-07-29)[2026-08-15]. https://www.bsdnow.tv/100.
+- [BSD Now EP195] Pennington J. BSD Now: 195: I don’t WannaCry[EB/OL]. (2017-05-24)[2026-08-15]. https://www.bsdnow.tv/195.
+- [BSD Now EP120] Pennington J. BSD Now: 120: I’m talking about the man in the middle[EB/OL]. (2015-12-16)[2026-08-15]. https://www.bsdnow.tv/120.
+- [BSD Now EP223] Pennington J. BSD Now: 223: Compile once, debug twice[EB/OL]. (2017-12-06)[2026-08-15]. https://www.bsdnow.tv/223.
+- [BSD Now EP241] Pennington J. BSD Now: Episode 241: Bowling in the LimeLight | BSD Now 241[EB/OL]. (2018-04-12)[2026-08-15]. https://www.bsdnow.tv/241.
+- [BSD Now EP566] Pennington J. BSD Now: 566: Open Source Excellence[EB/OL]. (2024-07-04)[2026-08-15]. https://www.bsdnow.tv/566.
+- [BSD Now EP157] Pennington J. BSD Now: 157: ZFS, The “Universal” File-system[EB/OL]. (2016-08-31)[2026-08-15]. https://www.bsdnow.tv/157.
+- [BSD Now EP260] Pennington J. BSD Now: Episode 260: Hacking Tour of Europe | BSD Now 260[EB/OL]. (2018-08-23)[2026-08-15]. https://www.bsdnow.tv/260.
+
+<!-- /PODCAST_MINE -->

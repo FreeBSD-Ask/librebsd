@@ -56,3 +56,52 @@ volume: 第05卷-freebsd的工程化奠基
 - IRS EO Select Check；Foundation 历年 990 表[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]<!-- DB_REF:freebsd.duckdb -->> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 1996-2010 年间：482,545 次提交。> 仓库总览：1,294,851 次提交，13,875 位贡献者，1993-06-12 至 2026-08-25。
 - 科罗拉多州务卿档案；Foundation By-Laws ［A］<!-- DB_REF:freebsd.duckdb -->> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 1996-2010 年间：482,545 次提交。> 仓库总览：1,294,851 次提交，13,875 位贡献者，1993-06-12 至 2026-08-25。
 - McKusick & Rice. The Evolution of FreeBSD Governance [J]. FreeBSD Journal, 2017, 4(5): 26-31 ［A］；McKusick. The Evolution of FreeBSD Governance [C]//BSDCan 2018. Ottawa, 2018 ［A］<!-- DB_REF:freebsd.duckdb -->> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 1996-2010 年间：482,545 次提交。> 仓库总览：1,294,851 次提交，13,875 位贡献者，1993-06-12 至 2026-08-25。
+
+<!-- PODCAST_MINE v20260827 -->
+<!-- Chapter: 第97章-freebsd-foundation -->
+
+## 要点（播客口述史提取）
+- And I can't remember when I first discovered FreeBSD,
+- Yeah, I mean Sonos is the BSD-derived version from Son.
+- So yes, I think it was probably then by early 2000s when I first experienced BSD, and it
+- been the first time that i've been to a an in-person bsd event as well oh even there yeah
+- yet another great BSD can this year. Dan already announced that BSD can 2020 will be from June
+- So the first event or the official event of BSD can was on Tuesday, beehive con, I guess
+- Uh, imported a port of WireGuard into the OpenBSD port
+- although recently both RMV7 and RM64 for NetBSD have been moved over to the EFI boot using the
+
+## 史料（播客提及）
+- [BSD Now EP622 @ 1063.199951171875] That's actually what a lot of sysadmins who were coming from Solaris were also coming to FreeBSD
+- [BSD Now EP622 @ 1086.4600830078125] driver for people to use FreeBSD. I think it's that's
+- [BSD Now EP622 @ 244.95999145507812] So yes, I think it was probably then by early 2000s when I first experienced BSD, and it
+- [BSD Now EP300 @ 3355.52] Interesting one was at BSD can somebody came who had just bought a new I think
+- [BSD Now EP300 @ 3663.92] And I know like Gavin was working on getting free BSD working well on the, I think it
+
+## 史观（播客当事人观点与总纲映射）
+- [BSD Now EP622 @ 1063.199951171875] That's actually what a lot of sysadmins who were coming from Solaris were also coming to FreeBSD
+- [BSD Now EP622 @ 1086.4600830078125] driver for people to use FreeBSD. I think it's that's
+- [BSD Now EP622 @ 244.95999145507812] So yes, I think it was probably then by early 2000s when I first experienced BSD, and it
+  → 史观映射：总纲9——经验优先; 总纲18——时间是一种形式主义
+- [BSD Now EP300 @ 3355.52] Interesting one was at BSD can somebody came who had just bought a new I think
+- [BSD Now EP300 @ 3663.92] And I know like Gavin was working on getting free BSD working well on the, I think it
+- [BSD Now EP300 @ 857.4] and FreeBSD is using that, that repo will actually be renamed.
+- [BSD Now EP156 @ 1140.419921875] the Raspberry Pi. So this is actually something over at the FreeBSD Foundation site. And of course,
+- [BSD Now EP156 @ 1293.9599609375] Well, in particular, the reason it does the FreeBSD, FreeBSD one
+
+## 辨析（播客争议与存疑点）
+- [存疑脚注] [BSD Now EP129 @ 1495.6199951171875] the NetBSD, they said, hey, you know, you're doing some good work. Would you like a
+- [存疑脚注] [BSD Now EP197 @ 2454.97998046875] there was an interesting argument between uh developers of two different bsds
+- [存疑脚注] [BSD Now EP70 @ 2876.860107421875] tools that are all started as a part of open bsd uh they have another started as open bsd fork of
+
+## 文献（播客参考条目）
+- [BSD Now EP622] Pennington J. BSD Now: 622: Interview with Mark Phillips - Technical Marketing Manager at the FreeBSD Foundation[EB/OL]. (2025-07-31)[2026-08-15]. https://www.bsdnow.tv/622.
+- [BSD Now EP300] Pennington J. BSD Now: 300: The Big Three[EB/OL]. (2019-05-30)[2026-08-15]. https://www.bsdnow.tv/300.
+- [BSD Now EP156] Pennington J. BSD Now: 156: The Fresh BSD experience[EB/OL]. (2016-08-24)[2026-08-15]. https://www.bsdnow.tv/156.
+- [BSD Now EP256] Pennington J. BSD Now: Episode 256: Because Computers | BSD Now 2^8[EB/OL]. (2018-07-25)[2026-08-15]. https://www.bsdnow.tv/256.
+- [BSD Now EP129] Pennington J. BSD Now: 129: Synthesize all the Things![EB/OL]. (2016-02-17)[2026-08-15]. https://www.bsdnow.tv/129.
+- [BSD Now EP42] Pennington J. BSD Now: 42: Devious Methods[EB/OL]. (2014-06-18)[2026-08-15]. https://www.bsdnow.tv/42.
+- [BSD Now EP80] Pennington J. BSD Now: 80: The PC-BSD Tour II[EB/OL]. (2015-03-11)[2026-08-15]. https://www.bsdnow.tv/80.
+- [BSD Now EP197] Pennington J. BSD Now: 197: Relaying the good news[EB/OL]. (2017-06-07)[2026-08-15]. https://www.bsdnow.tv/197.
+- [BSD Now EP70] Pennington J. BSD Now: 70: Daemons in the North[EB/OL]. (2014-12-31)[2026-08-15]. https://www.bsdnow.tv/70.
+
+<!-- /PODCAST_MINE -->

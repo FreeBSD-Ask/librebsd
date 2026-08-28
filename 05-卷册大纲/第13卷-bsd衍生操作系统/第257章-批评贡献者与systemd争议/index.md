@@ -54,3 +54,24 @@ volume: 第13卷-bsd衍生操作系统
 - FreeBSD Core Team 成员列表与雇主信息；FreeBSD Foundation IRS 990 表；Core Team 邮件列表；OpenBSD 邮件列表；Linux 内核 maintainer 统计 ［A］<!-- DB_REF:bsd_derivatives.duckdb -->> **数据库引用（bsd_derivatives.duckdb）**：本子节对应 bsd_derivatives 代码仓库。> 1985-2026 年间：963,557 次提交。> 仓库总览：963,557 次提交，14,109 位贡献者，1985-06-13 至 2026-08-24。
 - Ubuntu/Fedora/openSUSE 文档；Linux/BSD 桌面用户统计；硬件兼容性列表[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]## 256.15.2 BSD 与 Linux 在嵌入式与服务器市场的反向对比
 - Juniper/NetApp/Sony 文档；Netflix/WhatsApp 文档；Android/Linux 文档[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]## 256.15.3 BSD 与商业 Unix（Solaris/AIX/HP-UX）的失败对比
+
+<!-- PODCAST_MINE v20260827 -->
+<!-- Chapter: 第257章-批评贡献者与systemd争议 -->
+
+## 要点（播客口述史提取）
+- （该章节匹配播客中暂未提取到相关核心史实陈述）
+
+## 史料（播客提及）
+- [BSD Now EP106 @ 1180.739990234375] some of the systemd daemons actually implement a lot more things than they document.
+
+## 史观（播客当事人观点与总纲映射）
+- [BSD Now EP106 @ 1180.739990234375] some of the systemd daemons actually implement a lot more things than they document.
+
+## 辨析（播客争议与存疑点）
+- （该章节匹配播客中暂未提取到相关争议点）
+
+## 文献（播客参考条目）
+- [BSD Now EP146] Pennington J. BSD Now: 146: Music to Beastie’s ears[EB/OL]. (2016-06-16)[2026-08-15]. https://www.bsdnow.tv/146.
+- [BSD Now EP106] Pennington J. BSD Now: 106: Multipath TCP[EB/OL]. (2015-09-09)[2026-08-15]. https://www.bsdnow.tv/106.
+
+<!-- /PODCAST_MINE -->

@@ -42,3 +42,40 @@ volume: 第10卷-openbsd的历史
 - bsd_commits.db openbsd-src 仓库 pledge 相关 commit；OpenBSD **pledge(2)** 手册页 [EB/OL]. <https://man.openbsd.org/pledge.2>；OpenBSD Release Notes [EB/OL]. <https://www.openbsd.org/plus.html>；bsd_commits.db 查询 L1.1.1 与 L1.1.2（来源：原材料/研究/bsd 仓库分析/数据分析/宏观趋势统计.md §L1.1.1、§L1.1.2）；bsd_commits.db 查询 L2.3.1.pledge 与 L2.3.1.unveil（来源：原材料/研究/bsd 仓库分析/数据分析/中观模式挖掘.md §L2.3.1，数据缺口）；统计分析报告：时间序列分析.md Task 14 [R/OL]. 2026-07-27. 文件路径：`c:\Users\ykla\Documents\hibsd\03-原始史料库\01-代码仓库史料\01-数据库本体\统计分析\时间序列分析.md`；Python 统计脚本：`script/phase4_time_series.py`. Task 14 ARIMA 建模 + Task 15 MAPE/RMSE 预测精度。执行日期：2026-07-27 ［A］<!-- DB_REF:openbsd.duckdb -->> **数据库引用（openbsd.duckdb）**：本子节对应 openbsd 代码仓库。> 2015-2016 年间：41,347 次提交。> 仓库总览：491,195 次提交，3,352 位贡献者，1995-10-18 至 2026-08-25。
 - LibreSSL 与 OpenSSL 综合对比研究；TLS 库生态演进史；openbsd.db openbsd-src 仓库 LibreSSL/OpenSSL CVE commit 对比 ［A］<!-- DB_REF:openbsd.duckdb -->> **数据库引用（openbsd.duckdb）**：本子节对应 openbsd 代码仓库。> 2014-2014 年间：20,651 次提交。> 仓库总览：491,195 次提交，3,352 位贡献者，1995-10-18 至 2026-08-25。
 - 项目史观总纲第 13、19、21 条原文；de Raadt 邮件列表发言 [EB/OL]. <https://marc.info/?laccopenbsd-misc>；OpenBSD **pledge(2)** 手册页 [EB/OL]. <https://man.openbsd.org/pledge.2>；Linux seccomp-bpf 文档 [EB/OL]. <https://www.kernel.org/doc/html/latest/userspace-api/seccomp_filter.html>；Linux landlock 文档 [EB/OL]. <https://docs.kernel.org/userspace-api/landlock.html>；bsd_commits.db openbsd-src 仓库 pledge 覆盖扩展 commit ［A］<!-- DB_REF:openbsd.duckdb -->> **数据库引用（openbsd.duckdb）**：本子节对应 openbsd 代码仓库。> 2018-2018 年间：16,734 次提交。> 仓库总览：491,195 次提交，3,352 位贡献者，1995-10-18 至 2026-08-25。
+
+<!-- PODCAST_MINE v20260827 -->
+<!-- Chapter: 第199章-openbsd-6x的pledge安全机制 -->
+
+## 要点（播客口述史提取）
+- How did you first get introduced to and get involved with the BSD or Unix in general?
+- FreeBSD is a first class platform for us. It comes first. We have very rich support
+- These days it's primarily developed by myself and FreeBSD's own Olivier Cognet at FreeBSD.
+- get our hands on playing with it at BSDCAN, but can people get like a demo version of
+- I guess OpenBSD was the very first implementation,
+- So, of course Larry, the recently renamed BSD guy has decided to hang it up.
+- but it was really designed for the FreeBSD cluster
+- And they just had the new version come out. So, he says, in short, why is GhostBSD not
+
+## 史料（播客提及）
+- [BSD Now EP140 @ 2093.179931640625] I could actually pull some of the FreeBSD kernel panics
+- [BSD Now EP140 @ 2721.83984375] But I would say our largest integrations today are actually with FreeBSD based companies.
+- [BSD Now EP140 @ 2729.159912109375] So yeah, so you talked a little bit about your relationship with FreeBSD personally,
+- [BSD Now EP140 @ 694.0199584960938] to build free BSD with newer GCC without actually contaminating the free BSD
+- [BSD Now EP222 @ 7222.3] I think just the NTFS driver in FreeBSD is quite old.
+
+## 史观（播客当事人观点与总纲映射）
+- [BSD Now EP140 @ 2093.179931640625] I could actually pull some of the FreeBSD kernel panics
+- [BSD Now EP140 @ 2721.83984375] But I would say our largest integrations today are actually with FreeBSD based companies.
+- [BSD Now EP140 @ 2729.159912109375] So yeah, so you talked a little bit about your relationship with FreeBSD personally,
+- [BSD Now EP140 @ 694.0199584960938] to build free BSD with newer GCC without actually contaminating the free BSD
+- [BSD Now EP222 @ 7222.3] I think just the NTFS driver in FreeBSD is quite old.
+  → 史观映射：总纲22——知识注定过时
+
+## 辨析（播客争议与存疑点）
+- （该章节匹配播客中暂未提取到相关争议点）
+
+## 文献（播客参考条目）
+- [BSD Now EP140] Pennington J. BSD Now: 140: Tracing it back to BSD[EB/OL]. (2016-05-04)[2026-08-15]. https://www.bsdnow.tv/140.
+- [BSD Now EP222] Pennington J. BSD Now: 222: How Netflix works[EB/OL]. (2017-11-29)[2026-08-15]. https://www.bsdnow.tv/222.
+
+<!-- /PODCAST_MINE -->

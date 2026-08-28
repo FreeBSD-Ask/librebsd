@@ -48,3 +48,41 @@ volume: 第04卷-大分裂与四大bsd的诞生
 - Chalmers, R. "The unknown hackers" Salon, 17 May 2000；FreeBSD Project "A Brief History of FreeBSD"[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]
 - Usenet 历史档案；FreeBSD 邮件列表档案 ［A］[^doubt-resolved-257]: 据 new-york-anchor-press-doubleday (Levy, 1984) 消解[^doubt-resolved-258]: 据 Mac OS X Internals A Systems Approach (Amit Singh（阿米特·辛格）)  (未署名) 消解[^doubt-resolved-259]: 据 Mac OS X Internals A Systems Approach (Amit Singh)  (未署名) 消解
 - Gödel, K. (1931); Jolitz & Jolitz DDJ (1991-1992); FreeBSD 1.0 Release Notes (1993); NetBSD 0.8 Release Notes (1993)
+
+<!-- PODCAST_MINE v20260827 -->
+<!-- Chapter: 第62章-386bsd的诞生与bill-jolitz的移植工程 -->
+
+## 要点（播客口述史提取）
+- but underneath you're still getting real original FreeBSD Unix. Oh geez that's
+- That's the interesting thing is normally net BSD is the first thing that gets on anything
+- Since Postgres is first developed primarily on the BSDs,
+- And Postgres is mostly primarily developed on BSD, right?
+- our first article this week, some more BSD licensed goodness.
+- The two releases of 386 BSD, imports of FreeBSD 1.0
+- starting with the initial imports that led to FreeBSD 2.0.
+- net 2 distro and then, you know, there's a chunk that's still unchanged for free BSD
+
+## 史料（播客提及）
+- [BSD Now EP91 @ 1516.199951171875] So have you personally used any of the BSD's and if so which ones?
+- [BSD Now EP91 @ 1644.199951171875] It's trying to reverse that a little bit but still I think BSD has an advantage of consistency.
+- [BSD Now EP91 @ 2463.60009765625] So if you're looking at FreeBSD9, you can see that there's actually a fairly good chunk
+- [BSD Now EP91 @ 2596.35986328125] I know. They also have a link here to NetBSD actually maintains the BSD family tree
+- [BSD Now EP91 @ 295.9599914550781] Like oftentimes the game would actually run faster under FreeBSD.
+
+## 史观（播客当事人观点与总纲映射）
+- [BSD Now EP91 @ 1516.199951171875] So have you personally used any of the BSD's and if so which ones?
+- [BSD Now EP91 @ 1644.199951171875] It's trying to reverse that a little bit but still I think BSD has an advantage of consistency.
+- [BSD Now EP91 @ 2463.60009765625] So if you're looking at FreeBSD9, you can see that there's actually a fairly good chunk
+- [BSD Now EP91 @ 2596.35986328125] I know. They also have a link here to NetBSD actually maintains the BSD family tree
+- [BSD Now EP91 @ 295.9599914550781] Like oftentimes the game would actually run faster under FreeBSD.
+  → 史观映射：总纲18——时间是一种形式主义
+- [BSD Now EP91 @ 3451.580078125] development towards the 7262 on FreeBSD except I'm not sure but I think that
+- [BSD Now EP91 @ 4214.7998046875] in free BSD is tree just today or yesterday, I think the security officer
+
+## 辨析（播客争议与存疑点）
+- [存疑脚注] [BSD Now EP91 @ 2624.85986328125] where it is, it didn't really show where NetBSD forked off
+
+## 文献（播客参考条目）
+- [BSD Now EP91] Pennington J. BSD Now: 91: Vox Populi[EB/OL]. (2015-05-27)[2026-08-15]. https://www.bsdnow.tv/91.
+
+<!-- /PODCAST_MINE -->

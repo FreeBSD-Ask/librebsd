@@ -51,3 +51,25 @@ volume: 第01卷-unix的起源
 - Shannon C E. A Symbolic Analysis of Relay and Switching Circuits [J]. Transactions of the AIEE, 1938, 57(12): 713-723；同本节 1.2.1-1.2.4 所列 [考据脚注：香农 1938 年硕士论文内容为逻辑史与信息论史学界公认，经信息论史文献与本章 1.15.13 节既有考据交叉验证确证。]
 - 同本节 1.3.1-1.3.4 所列；另参见 Ceruzzi P. A History of Modern Computing [M]. 2003（模型—机器关系的二手研究）
 - 同本节 1.4.1-1.4.4 所列；另参见 Ceruzzi 2003 第 1-3 章；Campbell-Kelly & Aspray"Computer"(1996) 相关章节
+
+<!-- PODCAST_MINE v20260827 -->
+<!-- Chapter: 第2章-multics的起源与三方合作 -->
+
+## 要点（播客口述史提取）
+- that, you know, the stripped-down version of Multics
+
+## 史料（播客提及）
+- [BSD Now EP333 @ 1805.159912109375] Oh, yes. But I think you shouldn't mention it to the authors because they're kind of aware of that and people are now, you know, getting expectant. Yeah. We'll leave you with that. And oh, the next thing is also a bit more for the historic historians
+
+## 史观（播客当事人观点与总纲映射）
+- [BSD Now EP333 @ 1805.159912109375] Oh, yes. But I think you shouldn't mention it to the authors because they're kind of aware of that and people are now, you know, getting expectant. Yeah. We'll leave you with that. And oh, the next thing is also a bit more for the historic historians
+  → 史观映射：总纲23——一切历史写作都是基于哲学设定的历史小说
+
+## 辨析（播客争议与存疑点）
+- （该章节匹配播客中暂未提取到相关争议点）
+
+## 文献（播客参考条目）
+- [BSD Now EP333] Pennington J. BSD Now: 333: Unix Keyboard Joy[EB/OL]. (2020-01-16)[2026-08-15]. https://www.bsdnow.tv/333.
+- [BSD Now EP231] Pennington J. BSD Now: 231: Unix Architecture Evolution[EB/OL]. (2018-02-01)[2026-08-15]. https://www.bsdnow.tv/231.
+
+<!-- /PODCAST_MINE -->

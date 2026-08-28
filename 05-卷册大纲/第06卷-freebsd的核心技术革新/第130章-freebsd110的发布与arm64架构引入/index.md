@@ -40,3 +40,62 @@ volume: 第06卷-freebsd的核心技术革新
 - Shafer P. libxo: A Library for Generating Text, XML, JSON, and HTML Output [EB/OL]. juniper.github.io/libxo/；FreeBSD libxo(3)/blacklistd(8) Manual Pages [Z]；FreeBSD 11.0/11.1-RELEASE Release Notes [Z]. 2016/2017；Barber G. Document r279122, netstat(1) updated to use libxo(3). freebsd-src [DB/OL]. 2015-04-28T18:10:35Z. d1e2507b7f2a645e09676d1c005713f39968e718; Barber G. Document r275680, fstyp(8) addition. freebsd-src [DB/OL]. 2015-01-11T19:01:04Z. 7ddc205dac1e7b03d4a31b9496d9c263ac1c35b6; Barber G. Document r278320, devctl(3) and devctl(8) added. freebsd-src [DB/OL]. 2015-02-20T17:46:10Z. 742355ae61376053156d0875685c04f8cc7d59c3; Barber G. Document r279315, uefisign(8) addition. freebsd-src [DB/OL]. 2015-03-16T15:54:41Z. ac2456f1bd0ee0b03a7a7e7e2742f5fbed7b42ac; Barber G. Document r287473, sesutil(8) addition. Add Gandi.net to sponsor.ent. freebsd-src [DB/OL]. 2015-10-05T20:13:30Z. c4af256e4867cf90b7b1743a08cbb1cf8371f3ed ［A］<!-- DB_REF:freebsd.duckdb -->> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 2016-2016 年间：44,329 次提交。> 仓库总览：1,294,851 次提交，13,875 位贡献者，1993-06-12 至 2026-08-25。
 - FreeBSD Release Engineering Team. FreeBSD 11.4-RELEASE Announcement [Z]. 2020-06-23；FreeBSD Project. In Memoriam: Bruce Evans [Z]. 2020；FreeBSD 11.4-RELEASE Release Notes [Z]. 2020；FreeBSD Project. release/11.4.0. freebsd-src 仓库 tag [DB/OL]. 2020-06-16T13:59:51Z. tag: release/11.4.0; commit: 8c639945a44588f6cfdddfb057bb5aad88735da0 ［A］<!-- DB_REF:freebsd.duckdb -->> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 2010-2020 年间：488,947 次提交。> 仓库总览：1,294,851 次提交，13,875 位贡献者，1993-06-12 至 2026-08-25。
 - FreeBSD linux(4)/capsicum(4) Manual Pages [Z]；Watson R N M. Capsicum: Practical Capabilities for UNIX [C]//USENIX Security 2010；FreeBSD 11.x Release Notes Security chapters [Z].<!-- DB_REF:freebsd.duckdb -->> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 2010-2020 年间：488,947 次提交。> 仓库总览：1,294,851 次提交，13,875 位贡献者，1993-06-12 至 2026-08-25。
+
+<!-- PODCAST_MINE v20260827 -->
+<!-- Chapter: 第130章-freebsd110的发布与arm64架构引入 -->
+
+## 要点（播客口述史提取）
+- I won't tell you the years but it has gone back to PCBSD.
+- So PCBSD is where I started, actually I should say Unix.
+- So originally Unix and then PCBSD from there went to other flavors.
+- So, can you talk about why is the US picked FreeBSD as the base?
+- the version that's in OpenBSD specifically, which has gone through some major changes.
+- That was a, I wish I had been introduced to BSD when I was 11.
+- So Adrian was playing around with Slackware Linux, and then eventually FreeBSD2 came out
+- bsd instead of linux so I decided to run peer tube on free bsd which is kind of
+
+## 史料（播客提及）
+- [BSD Now EP98 @ 129.6999969482422] But now there's actually an article about it on the arm.com
+- [BSD Now EP98 @ 1815.0] So PCBSD is where I started, actually I should say Unix.
+- [BSD Now EP98 @ 2404.579833984375] I think the spirit of free BSD, keeping it pure, keeping it not tainted is important.
+- [BSD Now EP98 @ 3645.119873046875] But at the time, FreeBSD 1.1 didn't understand how to do that.
+- [BSD Now EP98 @ 3665.43994140625] So Adrian was playing around with Slackware Linux, and then eventually FreeBSD2 came out
+
+## 史观（播客当事人观点与总纲映射）
+- [BSD Now EP98 @ 129.6999969482422] But now there's actually an article about it on the arm.com
+- [BSD Now EP98 @ 1815.0] So PCBSD is where I started, actually I should say Unix.
+- [BSD Now EP98 @ 2404.579833984375] I think the spirit of free BSD, keeping it pure, keeping it not tainted is important.
+- [BSD Now EP98 @ 3645.119873046875] But at the time, FreeBSD 1.1 didn't understand how to do that.
+  → 史观映射：总纲18——时间是一种形式主义
+- [BSD Now EP98 @ 3665.43994140625] So Adrian was playing around with Slackware Linux, and then eventually FreeBSD2 came out
+- [BSD Now EP98 @ 3684.4599609375] argument about running the squid server at the ISP on Linux instead of FreeBSD, and eventually
+  → 史观映射：总纲25——逻辑是形式主义而非世界本身的结构
+- [BSD Now EP89 @ 1859.699951171875] They're actually advertising their FreeBSD-based product at LinuxFest.
+  → 史观映射：总纲11——商品是形式主义
+- [BSD Now EP89 @ 2048.35986328125] And this is actually cool because it's, again, another BSD article making it into a mainstream tech site.
+
+## 辨析（播客争议与存疑点）
+- [存疑脚注] [BSD Now EP98 @ 3121.320068359375] but they're a full-on fork of free BSD now.
+- [存疑脚注] [BSD Now EP98 @ 3684.4599609375] argument about running the squid server at the ISP on Linux instead of FreeBSD, and eventually
+- [存疑脚注] [BSD Now EP89 @ 477.79998779296875] which is an open BSD fork that we've, of course,
+- [存疑脚注] [BSD Now EP89 @ 540.239990234375] Hardened BSD is a fork of FreeBSD with a very security-focused drive there.
+- [存疑脚注] [BSD Now EP89 @ 804.5399780273438] existed. Once OpenBSD was forked, I then became an OpenBSD user for a number of years. And then
+- [存疑脚注] [BSD Now EP101 @ 2880.119873046875] BSDF fired it, removed a bunch of the Linuxisms,
+
+## 文献（播客参考条目）
+- [BSD Now EP98] Pennington J. BSD Now: 98: Our Code is Your Code[EB/OL]. (2015-07-15)[2026-08-15]. https://www.bsdnow.tv/98.
+- [BSD Now EP631] Pennington J. BSD Now: 631: Endorphin Rush[EB/OL]. (2025-09-25)[2026-08-15]. https://www.bsdnow.tv/631.
+- [BSD Now EP89] Pennington J. BSD Now: 89: Exclusive Disjunction[EB/OL]. (2015-05-13)[2026-08-15]. https://www.bsdnow.tv/89.
+- [BSD Now EP82] Pennington J. BSD Now: 82: SSL in the Wild[EB/OL]. (2015-03-25)[2026-08-15]. https://www.bsdnow.tv/82.
+- [BSD Now EP148] Pennington J. BSD Now: 148: The place to B...A Robot![EB/OL]. (2016-06-29)[2026-08-15]. https://www.bsdnow.tv/148.
+- [BSD Now EP102] Pennington J. BSD Now: 102: May Contain ZFS[EB/OL]. (2015-08-12)[2026-08-15]. https://www.bsdnow.tv/102.
+- [BSD Now EP40] Pennington J. BSD Now: 40: AirPorts & Packages[EB/OL]. (2014-06-04)[2026-08-15]. https://www.bsdnow.tv/40.
+- [BSD Now EP116] Pennington J. BSD Now: 116: Arcing ZFS[EB/OL]. (2015-11-18)[2026-08-15]. https://www.bsdnow.tv/116.
+- [BSD Now EP51] Pennington J. BSD Now: 51: Engineering Nginx[EB/OL]. (2014-08-20)[2026-08-15]. https://www.bsdnow.tv/51.
+- [BSD Now EP133] Pennington J. BSD Now: 133: The Tokyo Debrief[EB/OL]. (2016-03-16)[2026-08-15]. https://www.bsdnow.tv/133.
+- [BSD Now EP101] Pennington J. BSD Now: 101: I'll Fix Everything[EB/OL]. (2015-08-05)[2026-08-15]. https://www.bsdnow.tv/101.
+- [BSD Now EP179] Pennington J. BSD Now: 179: The Wayland Machine[EB/OL]. (2017-02-01)[2026-08-15]. https://www.bsdnow.tv/179.
+- [BSD Now EP63] Pennington J. BSD Now: 63: A Man's man(1)[EB/OL]. (2014-11-12)[2026-08-15]. https://www.bsdnow.tv/63.
+- [BSD Now EP59] Pennington J. BSD Now: 59: BSDって聞いたことある？[EB/OL]. (2014-10-15)[2026-08-15]. https://www.bsdnow.tv/59.
+
+<!-- /PODCAST_MINE -->

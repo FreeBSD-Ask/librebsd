@@ -199,3 +199,58 @@ FreeBSD 发展关键里程碑
 - Joy, W. & McKusick, M. K. (1979) "Berkeley Pascal PX Implementation Notes"，第二版
 - Computer History Museum (2011) "Bill Joy Fellow Biography"
 - BSDTalk #170 (2009) Marshall Kirk McKusick at DCBSDCon 访谈
+
+<!-- PODCAST_MINE v20260827 -->
+<!-- Chapter: 第27章-billjoy与1bsd -->
+
+## 要点（播客口述史提取）
+- So how did you first get started working on the graphics stack and all the exports and so on in FreeBSD?
+- Actually, for FreeBSD, I started working in documentation, which Benedict knows, since he was kind of mentoring me a bit.
+- And we have, of course, since you're the first time here on BSD Now,
+- FreeBSD versions or graphics adapters and it's very hard I mean it's basically
+- We ported KVM to SmartOS actually after I came to Joyant
+- But where's the way we developed, the way FreeBSD developed,
+- So I'm sure Alan, you'll have a lot of stuff to talk about that happened at BSD Cam.
+- That division did $1.2 billion of revenue in its first year at Sun.
+
+## 史料（播客提及）
+- [BSD Now EP283 @ 163.63999938964844] Actually, for FreeBSD, I started working in documentation, which Benedict knows, since he was kind of mentoring me a bit.
+- [BSD Now EP103 @ 1299.4200439453125] We ported KVM to SmartOS actually after I came to Joyant
+- [BSD Now EP103 @ 4031.5] like that should be, and I think both systems, it's been great to see the BSDs have done,
+- [BSD Now EP103 @ 6788.52001953125] That's how TJ got started actually, I think was the FreeBSD forums and then he
+- [BSD Now EP166 @ 1216.16] As it's the third part actually built a fresh VM and does a install of a home BSD in it to show how that works
+
+## 史观（播客当事人观点与总纲映射）
+- [BSD Now EP283 @ 163.63999938964844] Actually, for FreeBSD, I started working in documentation, which Benedict knows, since he was kind of mentoring me a bit.
+- [BSD Now EP103 @ 1299.4200439453125] We ported KVM to SmartOS actually after I came to Joyant
+- [BSD Now EP103 @ 4031.5] like that should be, and I think both systems, it's been great to see the BSDs have done,
+- [BSD Now EP103 @ 6788.52001953125] That's how TJ got started actually, I think was the FreeBSD forums and then he
+- [BSD Now EP166 @ 1216.16] As it's the third part actually built a fresh VM and does a install of a home BSD in it to show how that works
+  → 史观映射：总纲17——证明世界先于解释和改造世界
+- [BSD Now EP166 @ 1406.96] Yeah, I think there's a good chance you could make a bigger impact by presenting about free BSD at a non
+- [BSD Now EP166 @ 1432.36] So you can actually I know a lot of people have given kind of general introduction to free BSD talks or free NAS
+  → 史观映射：总纲18——时间是一种形式主义
+- [BSD Now EP166 @ 1860.88] But no Fred. It's actually really easy to do on open BSD. So it's not tough
+
+## 辨析（播客争议与存疑点）
+- [存疑脚注] [BSD Now EP103 @ 2187.699951171875] That division did $1.2 billion of revenue in its first year at Sun.
+- [存疑脚注] [BSD Now EP166 @ 1347.92] They said roughly 14,000 women in tech attended which is a huge turnout and free BSD was well represented there
+- [存疑脚注] [BSD Now EP270 @ 1741.26] So let's try Dragonfly, which is a fork created out of free BSD 4.8 many, many, many years ago.
+- [存疑脚注] [BSD Now EP270 @ 3385.32] that will be removed in FreeBSD 13 in a couple of years.
+- [存疑脚注] [BSD Now EP250 @ 128.46] So TrueOS will become a downstream fork that will build on FreeBSD by integrating new software
+- [存疑脚注] [BSD Now EP352 @ 794.8] On the other side, Robert Ells, a longtime BSD contributor, has kindly accepted an offer
+
+## 文献（播客参考条目）
+- [BSD Now EP283] Pennington J. BSD Now: 283: Graphical Interface-View[EB/OL]. (2019-01-31)[2026-08-15]. https://www.bsdnow.tv/283.
+- [BSD Now EP103] Pennington J. BSD Now: 103: Ubuntu Slaughters Kittens[EB/OL]. (2015-08-19)[2026-08-15]. https://www.bsdnow.tv/103.
+- [BSD Now EP499] Pennington J. BSD Now: 499: Dan Langille Interview[EB/OL]. (2023-03-23)[2026-08-15]. https://www.bsdnow.tv/499.
+- [BSD Now EP166] Pennington J. BSD Now: 166: Pass that UNIX Pipe[EB/OL]. (2016-11-02)[2026-08-15]. https://www.bsdnow.tv/166.
+- [BSD Now EP270] Pennington J. BSD Now: Episode 270: Ghostly Releases | BSD Now 270[EB/OL]. (2018-11-01)[2026-08-15]. https://www.bsdnow.tv/270.
+- [BSD Now EP48] Pennington J. BSD Now: 48: Liberating SSL[EB/OL]. (2014-07-30)[2026-08-15]. https://www.bsdnow.tv/48.
+- [BSD Now EP250] Pennington J. BSD Now: Episode 250: BSDCan 2018 Recap | BSD Now 250[EB/OL]. (2018-06-14)[2026-08-15]. https://www.bsdnow.tv/250.
+- [BSD Now EP145] Pennington J. BSD Now: 145: At the Core of it all[EB/OL]. (2016-06-08)[2026-08-15]. https://www.bsdnow.tv/145.
+- [BSD Now EP352] Pennington J. BSD Now: 352: Introducing Randomness[EB/OL]. (2020-05-28)[2026-08-15]. https://www.bsdnow.tv/352.
+- [BSD Now EP435] Pennington J. BSD Now: 435: Year End Interview[EB/OL]. (2021-12-30)[2026-08-15]. https://www.bsdnow.tv/435.
+- [BSD Now EP142] Pennington J. BSD Now: 142: Diving for BSD Perls[EB/OL]. (2016-05-18)[2026-08-15]. https://www.bsdnow.tv/142.
+
+<!-- /PODCAST_MINE -->

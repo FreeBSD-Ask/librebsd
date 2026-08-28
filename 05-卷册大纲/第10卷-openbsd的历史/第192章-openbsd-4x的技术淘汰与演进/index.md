@@ -48,3 +48,44 @@ volume: 第10卷-openbsd的历史
 - de Raadt、espie@ 邮件列表发言 [EB/OL]. <https://marc.info/?laccopenbsd-tech>；otto. Import ragge's version of PCC. openbsd-src [DB/OL]. 2007-09-15T18:12:23Z. 60b4da4bc6418e6654a995e733a66436798b5bc0；bsd_commits.db openbsd-src 仓库 clang/LLVM 相关 commit；FreeBSD 10.0 Release Notes [EB/OL]. <https://www.freebsd.org/releases/10.0R/relnotes/>；OpenBSD 5.7 Release Notes [EB/OL]. <https://www.openbsd.org/57.html>；Linux 发行版编译器文档；FSF 与 OpenBSD 许可证文档 ［A］<!-- DB_REF:openbsd.duckdb -->> **数据库引用（openbsd.duckdb）**：本子节对应 openbsd 代码仓库。> 1995-2026 年间：491,195 次提交。> 仓库总览：491,195 次提交，3,352 位贡献者，1995-10-18 至 2026-08-25。
 - openbsd.db openbsd-src 仓库；NVD CVE-2008-1483/CVE-2006-5752/CVE-2007-3304/CVE-2007-5000/CVE-2007-6388/CVE-2011-2748/CVE-2011-2749；OpenBSD 4.x errata patches [EB/OL]. **<https://www.openbsd.org/errata.html>** ［A］<!-- DB_REF:openbsd.duckdb -->> **数据库引用（openbsd.duckdb）**：本子节对应 openbsd 代码仓库。> 2006-2012 年间：112,057 次提交。> 仓库总览：491,195 次提交，3,352 位贡献者，1995-10-18 至 2026-08-25。
 - OpenBSD 官网 release 页面 ［EB/OL］. <https://www.openbsd.org/{40-49}.html>；<announce@openbsd.org> 邮件列表存档 ［EB/OL］. <https://marc.info/?laccopenbsd-announce>；原材料/研究/考据记录/20260723_announcements-openbsd.md § 二.2；bsd_commits.db openbsd-src 仓库 ［A］<!-- DB_REF:openbsd.duckdb -->> **数据库引用（openbsd.duckdb）**：本子节对应 openbsd 代码仓库。> 1995-2026 年间：491,195 次提交。> 仓库总览：491,195 次提交，3,352 位贡献者，1995-10-18 至 2026-08-25。
+
+<!-- PODCAST_MINE v20260827 -->
+<!-- Chapter: 第192章-openbsd-4x的技术淘汰与演进 -->
+
+## 要点（播客口述史提取）
+- So we have a BSD router project has released a new version.
+- So first of all, for those who don't remember, the BSD-RP is a router project aimed at replacing more of your big commercial type router stuff.
+- But for this particular new release, we just want to make you aware there's some awesomeness now that it's based on FreeBSD 10.3.
+- So, first of all, thanks for taking the time to go up and do this while we're at Asia BSD Con.
+- probably 4.5 was probably the first BSD and it didn't kernel panic. Which is a good start.
+- And then the, let me see, personally, I mean, I personally use OpenBSD for my first toolkit,
+- yeah so i guess what happened was um they got uh so libre open bsd got the patches for open ssl
+- And we got to a point where Sean Webb of the Harden BSD project actually built OpenSense on top of Harden BSD this summer.
+
+## 史料（播客提及）
+- [BSD Now EP141 @ 1650.8399658203125] And then the, let me see, personally, I mean, I personally use OpenBSD for my first toolkit,
+- [BSD Now EP141 @ 167.36000061035156] yeah so i guess what happened was um they got uh so libre open bsd got the patches for open ssl
+- [BSD Now EP141 @ 1672.0] In all this, I actually look forward to a future where things like a USB stick can be shared between a Mac and an OpenBSD machine and a FreeBSD machine without hassle.
+- [BSD Now EP141 @ 1964.1199951171875] And we got to a point where Sean Webb of the Harden BSD project actually built OpenSense on top of Harden BSD this summer.
+- [BSD Now EP141 @ 3219.199951171875] But in particular, the project's using FreeBSD as its base OS and then a lot of the jail functionality to actually do the containers.
+
+## 史观（播客当事人观点与总纲映射）
+- [BSD Now EP141 @ 1650.8399658203125] And then the, let me see, personally, I mean, I personally use OpenBSD for my first toolkit,
+- [BSD Now EP141 @ 167.36000061035156] yeah so i guess what happened was um they got uh so libre open bsd got the patches for open ssl
+- [BSD Now EP141 @ 1672.0] In all this, I actually look forward to a future where things like a USB stick can be shared between a Mac and an OpenBSD machine and a FreeBSD machine without hassle.
+- [BSD Now EP141 @ 1964.1199951171875] And we got to a point where Sean Webb of the Harden BSD project actually built OpenSense on top of Harden BSD this summer.
+- [BSD Now EP141 @ 3219.199951171875] But in particular, the project's using FreeBSD as its base OS and then a lot of the jail functionality to actually do the containers.
+- [BSD Now EP141 @ 3607.47998046875] up using from open bsd uh where free bsd actually has uh their implementation was actually directly
+- [BSD Now EP141 @ 3623.35986328125] bsd yeah probably a much smaller diff to deal with well cool hey that's neat to see i mean i think we
+- [BSD Now EP141 @ 4877.15966796875] one alan i think we have a little yes so this is a little tease of uh free bsd with intel i915
+
+## 辨析（播客争议与存疑点）
+- [存疑脚注] [BSD Now EP141 @ 3618.43994140625] model and drivers and kernel are closer to net bsd because open bsd was originally a fork of net
+- [存疑脚注] [BSD Now EP232 @ 186.02] So we fired up my laptop running FreeBSD beside it and attempted to recreate the problem there
+- [存疑脚注] [BSD Now EP232 @ 883.32] in the NetBSD kernel based on incorrect coding style that has an integer overflow during
+
+## 文献（播客参考条目）
+- [BSD Now EP141] Pennington J. BSD Now: 141: BSD Likes Ike![EB/OL]. (2016-05-11)[2026-08-15]. https://www.bsdnow.tv/141.
+- [BSD Now EP232] Pennington J. BSD Now: 232: FOSDEM 2018[EB/OL]. (2018-02-07)[2026-08-15]. https://www.bsdnow.tv/232.
+
+<!-- /PODCAST_MINE -->
