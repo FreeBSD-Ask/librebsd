@@ -58,20 +58,6 @@ Salus 在《A Quarter Century of UNIX》前言中回顾了自己作为 Unix 历�
 > **本时期采访来源说明**：操作系统谱系梳理时期的核心史料为 Salus 的《A Quarter Century of UNIX》与里奇的 1984 年自述。经三次复查查询（搜索 `Peter Salus Quarter Century UNIX interview`、`Eric Raymond Art of Unix Programming history`、`Mike Karels BSD history interview`），Eric S. Raymond（《Unix 编程艺术》作者）与 Mike Karels 等人员的公开采访来源暂未发现，留待后续补充。
 
 
-<!-- DEEP_ANALYSIS: references_fulltext.duckdb.summaries -->
-**史家判断**（证据等级：L2，来源：`references_fulltext.duckdb.summaries.sum_1163`）
-
-文献《Plan_9_from_Bell_Labs》由 Pike（1993） 撰写。全文提取成功，共约 82566 字符。内容摘要：Plan 9 from Bell Labs Rob Pike Dave Presotto Sean Dorward Bob Flandrena Ken Thompson Howard Trickey Phil Winterbottom Bell Laboratories Murray Hill,New Jersey 07974 USA Motivation By the mid 1980s, the trend in computing was away from
-
-
-
-<!-- DEEP_ANALYSIS: references_fulltext.duckdb.summaries -->
-**史家判断**（证据等级：L2，来源：`references_fulltext.duckdb.summaries.sum_1328`）
-
-文献《netbsd_abc2017ext4_slides》由 未知（未知） 撰写。全文提取成功，共约 2449 字符。内容摘要：Implementation of Ext4fs Features in NetBSD Kernel AsiaBSDCon 2017 Hrishikesh Goyal https://github.com/hrishikeshgoyal/ Personal Info Implemented Ext4 FS read support for NetBSD kernel, The NetBSD Foundation, Google SoC 2016 BTech Gradu
-
-
-
 <!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
 **史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-1-103`）
 
@@ -83,4 +69,9 @@ Pike 等人 1995 年在《Plan 9 from Bell Labs》论文中称，1980 年代中�
 **史家判断**（证据等级：L5，来源：`historical_claims.duckdb.claim.CL-1-107`）
 
 1956 年 1 月 24 日，美国新泽西联邦地区法院就美国诉 Western Electric 与 AT&T（民事案件第 17-49 号）作出最终判决，该案依据《谢尔曼法》起诉。
+
+## 文献
+
+- Pike. Plan 9 from Bell Labs[M]. 1993.
+- 未知. netbsd abc2017ext4 slides[M]. 2017.
 

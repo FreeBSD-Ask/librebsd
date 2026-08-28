@@ -41,12 +41,9 @@ volume: 15
 - SCO GROUP, Inc. v. Red Hat, Inc.（D. Del. 2003）[Z/OL]. 美国特拉华联邦地区法院；SCO GROUP, Inc. v. AutoZone, Inc.（D. Nev. CV-S-04-0237，2004）；SCO v. DaimlerChrysler（Mich. 2004）；TSG Group, Inc. bankruptcy, 07-bk-11337（Bankr. D. Del. 2007）；Groklaw 档案 ［A］
 - Xinuos, Inc. v. IBM, No. 25-1073 (2d Cir. 2026) Summary Order [2026-08-25]
 - 文献：Groklaw 档案；FreeBSD/NetBSD 邮件列表 2003-2005 记录；本卷 41.7（BSD 代码法律清白认证流程）、81 章（4.4BSD-Lite 发布）、82 章（UNIX 版权归属争议） ［A］
-<!-- NEWREF:2406 -->
-<!-- NEWREF:2407 -->
-<!-- NEWREF:2488 -->
-<!-- NEWREF:2539 -->
-<!-- NEWREF:2543 -->
-
 ## 自反性声明
 
 本章所书皆是形式主义化的重构，并非对“真实的 BSD 历史”的呈现。本章的章节划分、事件选择、叙事策略、因果归因——全部基于编纂者的哲学设定。本章承认这些局限，不声称客观或中立，欢迎被更诚实的叙事所超越。
+
+- 著录. SCO Group, Inc. v. Auto Zone, Inc., CV-S-04-0237 (D. Nev. 2004)——SCO 诉 Linux 用户端案件（法院 2026-08-05 更正为 D. Nevada，法官 Robert C. Jones）[Z]. 2004.
+
