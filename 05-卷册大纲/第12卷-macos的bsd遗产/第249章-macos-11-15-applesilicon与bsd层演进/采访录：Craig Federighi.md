@@ -53,9 +53,3 @@ Johny Srouji（Apple 硬件技术高级副总裁）与 Jeff Wilcox（Apple Silic
 darwin 代码仓库：从 2001 年到 2026 年，共 2016 次提交，43 位贡献者参与。
 
 
-
-<!-- DEEP_ANALYSIS: darwin.duckdb.commits -->
-**数据库分析发现**（证据等级：L1，来源：`darwin.duckdb.commits.darwin`）
-
-darwin 核心贡献者：Apple OSS Distributions(2016)
-

@@ -39,7 +39,7 @@ volume: 16
 - FSF 成立日期与 BSD 基金会对比（FSF 1985 vs FreeBSD Foundation 2000）
   - 文献：FSF 官方历史[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]
 
-## 299.1.3 GNU 项目与 BSD 的早期交集与分歧
+## 300.1.3 GNU 项目与 BSD 的早期交集与分歧
 
 - 要点：GNU 项目
 - 两种自由观无对错，需独立判断；是否实际影响技术演进；freebsd.db freebsd-src 仓库的 license 主题 commit 显示 BSD 社区不仅在哲学上反对 GPL，更在工程实践上持续清理 GPL 代码——"GPL infected" 措辞与 "reduce whining" 措辞反映 BSD 社区对 GPL 的明确态度；FreeBSD GENERIC 内核 “必须完全 BSD
@@ -50,12 +50,12 @@ volume: 16
 
 - Stallman "GNU Manifesto"；Williams《Free as in Freedom》[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]
 
-## 299.1.2 FSF 1985 年成立与组织架构
+## 300.1.2 FSF 1985 年成立与组织架构
 
 - 要点：自由软件基金会（FSF）于 1985 年 10 月 4 日成立，由 Stallman 创立，注册为 501(c)(3) 非营利组织；FSF 早期通过销售 GNU 软件磁带筹集资金；组织架构包括董事会、执行董事、雇员开发者；FSF 是 GPL 许可证的版权持
 - FSF 官方历史[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]
 
-## 299.1.3 GNU 项目与 BSD 的早期交集与分歧
+## 300.1.3 GNU 项目与 BSD 的早期交集与分歧
 
 - 要点：GNU 项目与 BSD 的早期交集：(1) GNU 工具链（gcc、gdb、make、bash）长期与 BSD 系统协同；(2) FreeBSD 用户空间大量使用 GNU 工具；(3) 1990 年代起 GNU 与 BSD 在许可证哲学上分歧加深；(4) GNU C Library 与 BSD libc 的长期竞争
 - 史料：GNU
@@ -63,12 +63,12 @@ volume: 16
 - Stallman, R. The GNU Manifesto [EB/OL]. (1985). <https://www.gnu.org/gnu/manifesto.en.html> [2026-07-24]；Free Software Foundation. What is Copyleft? [EB/OL]. <https://www.gnu.org/licenses/copyleft.en.html> [2026-07-24]；Stallman, R. Why Open Source misses the point of Free Software [EB/OL]. <https://
 - Peterson "Open Source: Where It Started"（2006）；Peterson 2018 年 20 周年回顾文[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]
 
-## 299.2.2 Netscape 开源 Navigator 的催化作用
+## 300.2.2 Netscape 开源 Navigator 的催化作用
 
 - 要点：Netscape 于 1998 年 1 月 22 日宣布将 Navigator 浏览器源代码开源（mozilla.org），是商业大型软件首次主动开源；Netscape 决策受 Raymond《大教堂
 - OSI 官方历史[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]
 
-## 299.3.2 开源定义的十项标准与 BSD 许可证
+## 300.3.2 开源定义的十项标准与 BSD 许可证
 
 - 要点：开源定义（OSD）十项标准由 Perens 基于 Debian 自由软件指南（DFSG）改写，1998 年由 OSI 采纳；OSD 包括自由再分发、源代码开放、派生作品、作者源代码完整性、无歧视、许可证传播、许可证不得特定于产品、不得限制其他软件、技术中立；BSD 许可证（两条款与三条款）作为 OSD 认证的原型许可证
 - 史料：OSD

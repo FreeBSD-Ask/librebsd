@@ -20,7 +20,7 @@ volume: 16
 - 辨析：两派的具体人物与时间线需逐一考证；“形式认证派”是否曾正式提案 Foundation 申请认证需查董事会记录
 - 文献：freebsd-advocacy 邮件列表存档；FreeBSD Foundation Board Minutes ［A］
 
-## 304.13.2 POSIX 兼容与 BSD 传统路线之争
+## 305.13.2 POSIX 兼容与 BSD 传统路线之争
 
 - 要点：BSD 历史上的“POSI
 - 总纲第 12 条——合规认证对小开源项目的排除效应。
@@ -29,7 +29,7 @@ volume: 16
   - 辨析：媒体报道中“FreeBSD 通过 FIPS 140”的具体错误案例需逐一取证；Foundation 是否曾发布纠正声明需查 archive
   - 文献：OSNews 2004-2024 报道；Phoronix FreeBSD 相关报道 ［C］
 
-## 304.15.2 教科书与科普中的合规叙事
+## 305.15.2 教科书与科普中的合规叙事
 
 - 要点：操作系统教科书（如 Ta
 - 总纲第 16 条——经济周期与商业竞争驱动批评话语
@@ -44,13 +44,13 @@ volume: 16
 - 两派的具体人物与时间线需逐一考证；“形式认证派”是否曾正式提案 Foundation 申请认证需查董事会记录
 - 文献：freebsd-advocacy 邮件列表存档；FreeBSD Foundation Board Minutes ［A］
 
-## 304.13.2 POSIX 兼容与 BSD 传统路线之争
+## 305.13.2 POSIX 兼容与 BSD 传统路线之争
 
 - 要点：BSD 历史上的“POSIX 兼容 vs BSD 传统”路线之争在 4.4BS
 - 媒体报道中“FreeBSD 通过 FIPS 140”的具体错误案例需逐一取证；Foundation 是否曾发布纠正声明需查 archive
   - 文献：OSNews 2004-2024 报道；Phoronix FreeBSD 相关报道 ［C］
 
-## 304.15.2 教科书与科普中的合规叙事
+## 305.15.2 教科书与科普中的合规叙事
 
 - 要点：操作系统教科书（如 Tanenbaum、Silberschatz）对 BSD 合规的讨论简
 - 批评的具体时间点与传播范围需追溯；vendor 营销材料中是否直接点名 FreeBSD 需查证
@@ -63,7 +63,7 @@ volume: 16
 
 - freebsd-advocacy 邮件列表存档；FreeBSD Foundation Board Minutes ［A］
 
-## 304.13.2 POSIX 兼容与 BSD 传统路线之争
+## 305.13.2 POSIX 兼容与 BSD 传统路线之争
 
 - 要点：BSD 历史上的“POSIX 兼容 vs BSD 传统”路线之争在 4.4BSD-Lite 后逐渐消解，FreeBSD 全面采用 POSIX 接口但保留 BSD 风格函数（如 strlcpy）
 - 史料：4.4BSD-Lite release notes、CSRG 内部备忘录、freebsd-standards 邮件列表 ［A］
@@ -71,31 +71,31 @@ volume: 16
 - 审计报告； Foundation 声明 ［A］
 - OSNews 2004-2024 报道；Phoronix FreeBSD 相关报道 ［C］
 
-## 304.15.2 教科书与科普中的合规叙事
+## 305.15.2 教科书与科普中的合规叙事
 
 - 要点：操作系统教科书（如 Tanenbaum、Silberschatz）对 BSD 合规的讨论简略，多数仅提及 UNIX 03 与 POSIX 概念
 - 史料：Tanenbaum"Modern Operating Systems"4th ed.、Silberschatz"Operating System Concepts"10th ed.[考据完成：2026-07-28 经穷尽联网考据，上述史料清单为已知公开来源汇总，部分原始档案未公开数字化
 - Red Hat Enterprise Linux Security White Paper；Oracle Solaris Security Features[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]
 
-## 304.16.2 POSIX 认证成本与 UNIX 03 争议
+## 305.16.2 POSIX 认证成本与 UNIX 03 争议
 
 - 要点：UNIX 03 认证成本与 The Open Group 商标政策长期受社区批评，Linux Foundation 主导 LSB 部分原因即规避 UNIX 03 费用
 - 史料：The Op
 - NIST NVLAP Laboratory Directory；Common Criteria Testing Laboratories[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]
 
-## 304.17.2 HIPAA/SOC2 审计中的 FreeBSD 管理员
+## 305.17.2 HIPAA/SOC2 审计中的 FreeBSD 管理员
 
 - 要点：HIPAA/SOC2 审计中作为被审计方系统管理员的 FreeBSD 工程师长期隐身于企业合规档案中
 - 史料：HHS HIPAA Enforcement 数据库、AICPA SOC 2 报告模板[考
 - The Open Group UNIX 03 Register [EB/OL]. <https://www.opengroup.org/certifications/unix> (2026-07-22 访问)；NIST CMVP Active Modules [EB/OL]. <https://csrc.nist.gov/projects/cryptographic-module-validation-program> (2026-07-22 访问)；Common Criteria Portal Certified Products [EB/OL]. <<https://www.commoncr>
 - MITRE CVE Official Website [EB/OL]. <https://cve.mitre.org/> (2026-07-22 访问)；NIST National Vulnerability Database [EB/OL]. <https://nvd.nist.gov/> (2026-07-22 访问)；bsd_commits.db 查询结果，见 `原材料/研究/bsd漏洞史/数据库提取/` 各仓库 CVE commit 清单
 
-## 304.19.2 FreeBSD 安全团队在漏洞响应流程中的角色
+## 305.19.2 FreeBSD 安全团队在漏洞响应流程中的角色
 
 - 要点：FreeBSD 安全团队（Security Team）由核心团
 - FreeBSD Security Advisories [EB/OL]. <https://www.freebsd.org/security/advisories/> (2026-07-22 访问)；FreeBSD Security Officer Handbook；openbsd.db 查询 L3.1.1，见 `原材料/研究/bsd仓库分析/数据分析/深层信息挖掘.md` §L3.1.1
 
-## 304.19.3 FIPS 140 认证密码模块的漏洞修复流程与 FreeBSD 运行环境
+## 305.19.3 FIPS 140 认证密码模块的漏洞修复流程与 FreeBSD 运行环境
 
 - 要点：FIPS 140 认证密码模块（如 OpenSSL FIPS Object Module 2.
 

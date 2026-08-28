@@ -20,21 +20,21 @@ volume: 15
   - 辨析：EFF 的法律援助是否影响 BSD 社区的法律自主性存在争议，部分社区成员认为法律事务应由 Foundation 主持
   - 文献：EFF 档案；Cindy Cohn 演讲 ［A］
 
-## 293.10.2 学术界的 amicus 参与
+## 294.10.2 学术界的 amicus 参与
 
 - 要点：Jacobsen v. Katzer 案中，开源倡议组
 - 总纲第 10 条——边缘者贡献：Bernstein 作为 BSD 社区外部人士对 BSD 法律生态的辐射
   - 辨析：Bernstein 案的法律效力被全院联席重审撤销，但其论证的历史影响远超法律效力
   - 文献：Bernstein 案卷；EFF 档案；Bernstein 个人页面 ［A］
 
-## 293.11.2 Eben Moglen——FSF 法律顾问与 copyleft 理论家
+## 294.11.2 Eben Moglen——FSF 法律顾问与 copyleft 理论家
 
 -
 - 总纲第 6 条——技术路线分化，Linux 与 BSD 在出口管制应对上分化为不同镜像策略
   - 辨析：Linux 与 BSD 镜像分拆策略的实际效果差异需通过部署统计
   - 文献：kernel.org 档案；Debian non-US 档案；Linux crypto 邮件列表 ［A］
 
-## 293.12.2 与 Solaris CDDL 许可证的法律边界对照
+## 294.12.2 与 Solaris CDDL 许可证的法律边界对照
 
 - 要点：Solaris 2
 - 总纲第 13 条——法律与道德是利益分配。任何道德问题本质上是利益问题，社区治理亦是形式主义的政治产物。（原文经 据原文第 25 章 第 17 行一手核验）
@@ -47,19 +47,19 @@ volume: 15
 - EFF 的法律援助是否影响 BSD 社区的法律自主性存在争议，部分社区成员认为法律事务应由 Foundation 主持
   - 文献：EFF 档案；Cindy Cohn 演讲 ［A］
 
-## 293.10.2 学术界的 amicus 参与
+## 294.10.2 学术界的 amicus 参与
 
 - 要点：Jacobsen v. Katzer 案中，开源倡议组织（OSI）提交法庭之友陈述（amicus brief），支持开源许可证的可执行性；伯克利法学
 - Bernstein 案的法律效力被全院联席重审撤销，但其论证的历史影响远超法律效力
   - 文献：Bernstein 案卷；EFF 档案；Bernstein 个人页面 ［A］
 
-## 293.11.2 Eben Moglen——FSF 法律顾问与 copyleft 理论家
+## 294.11.2 Eben Moglen——FSF 法律顾问与 copyleft 理论家
 
 - 要点：Eben Moglen 作为 FSF 法律顾问，起草 GPLv3 与 LGPLv3 文本，与 BSD 社区在许可证
 - Linux 与 BSD 镜像分拆策略的实际效果差异需通过部署统计
   - 文献：kernel.org 档案；Debian non-US 档案；Linux crypto 邮件列表 ［A］
 
-## 293.12.2 与 Solaris CDDL 许可证的法律边界对照
+## 294.12.2 与 Solaris CDDL 许可证的法律边界对照
 
 - 要点：Solaris 2005 年开源采用 CDDL（弱 copyleft），与 BSDL 在文件级与模块级 copyleft 边
 - 考据过程留痕——【查证来源】总纲第 13 条原文经 据原文第 25 章 第 17 行一手核验，原文为“法律与道德是利益分配。任何道德问题本质上是利益问题，社区治理亦是形式主义的政治产物”；Moglen 作为哥伦比亚法学院教授与 FSF 法律顾问的角色经 GNU 中文许可证页面（gnu.ac.cn/licenses/licenses.html）核验，其“逐字许可证”评论注释被引用；【交叉验证方法】G
@@ -69,7 +69,7 @@ volume: 15
 
 - EFF 档案；Cindy Cohn 演讲 ［A］
 
-## 293.10.2 学术界的 amicus 参与
+## 294.10.2 学术界的 amicus 参与
 
 - 要点：Jacobsen v. Katzer 案中，开源倡议组织（OSI）提交法庭之友陈述（amicus brief），支持开源许可证的可执行性；伯克利法学院、斯坦福法学院等学术机构在 BSD 相关法律案件中提供学术评论
 - 史料：Jacobsen 案 OSI amicus brief、伯克利法学院开源法律评论、斯坦福 Internet & Society Lab 文献 ［B］
@@ -77,13 +77,13 @@ volume: 15
 - 辨析：学术 amicus
 - Bernstein 案卷；EFF 档案；Bernstein 个人页面 ［A］
 
-## 293.11.2 Eben Moglen——FSF 法律顾问与 copyleft 理论家
+## 294.11.2 Eben Moglen——FSF 法律顾问与 copyleft 理论家
 
 - 要点：Eben Moglen 作为 FSF 法律顾问，起草 GPLv3 与 LGPLv3 文本，与 BSD 社区在许可证哲学上构成对立——Moglen 主张 copyleft 强制回馈是“自由”的保障，BSD 社区主张 permissive 不强制回馈是“自由”的核心。Moglen 2005 年起在 GPLv3 起草过程中与 BSD 社区（尤其 PHK）公开辩论
 - 史料：GPLv3 起草过程档案、Moglen
 - kernel.org 档案；Debian non-US 档案；Linux crypto 邮件列表 ［A］
 
-## 293.12.2 与 Solaris CDDL 许可证的法律边界对照
+## 294.12.2 与 Solaris CDDL 许可证的法律边界对照
 
 - 要点：Solaris 2005 年开源采用 CDDL（弱 copyleft），与 BSDL 在文件级与模块级 copyleft 边界上不同，CDDL 模块化设计便利商业整合但限制衍生作品许可证选择
 - 史料：CDDL 文本、Sun Microsystems 开源公告、OpenSolaris 档案[考据完成：2026-07-28 经穷尽联网考据，上述史料清单为已知公开来源汇总，部分原始档案未公开数字化或须

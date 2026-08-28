@@ -23,7 +23,7 @@ volume: 16
   - 辨析：Linux 主导是否因技术优势还是商业与话语权，需独立判断
   - 文献：Linux Foundation 年报；Torvalds《Just for Fun》 ［B］
 
-## 301.11.2 Windows 的闭源与逐步开源路径
+## 302.11.2 Windows 的闭源与逐步开源路径
 
 - 要点：Microsoft Windows 的开源路径：(1) Windows 长
 - 总纲第 14 条——话语权与边缘者
@@ -40,7 +40,7 @@ volume: 16
 - Linux 主导是否因技术优势还是商业与话语权，需独立判断
   - 文献：Linux Foundation 年报；Torvalds《Just for Fun》 ［B］
 
-## 301.11.2 Windows 的闭源与逐步开源路径
+## 302.11.2 Windows 的闭源与逐步开源路径
 
 - 要点：Microsoft Windows 的开源路径：(1) Windows 长期闭源；(2) Microsoft 2014 年起在 Satya Nadella
 - BSD 是否真 “被沉默”，需独立判断；BSD 社区是否应争夺话语权；freebsd.db 数据显示 FreeBSD 仓库首条 commit 1993-06-12 与 Linux 1991-08-25 之间约 22 个月的时间差，反映 FreeBSD 作为 386BSD 后继项目晚于 Linux 启动，但 BSD 代码谱系（CSRG 1BSD 1977）早于 Linux 14 年；原大纲 “BSD
@@ -51,13 +51,13 @@ volume: 16
 
 - OSI 早期邮件[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]
 
-## 301.10.2 BSD 许可证在开源定义中的参与者
+## 302.10.2 BSD 许可证在开源定义中的参与者
 
 - 要点：BSD 许可证在开源定义中的参与：(1) BSDL 作为 OSD 原型被引用；(2) Perens 在 OSD 制定中参考 BSDL；(3) BSD 社区未主动参与 OSD 起草；(4) OSD 部分条款（如无歧视、技术中立）与 BSDL 精神一致
 - 史料：OSD 文本、Perens 文章[考据完成：2026-07-28 经穷尽联网考据
 - Linux Foundation 年报；Torvalds《Just for Fun》 ［B］
 
-## 301.11.2 Windows 的闭源与逐步开源路径
+## 302.11.2 Windows 的闭源与逐步开源路径
 
 - 要点：Microsoft Windows 的开源路径：(1) Windows 长期闭源；(2) Microsoft 2014 年起在 Satya Nadella 主导下转向 “Microsoft 爱开源”；(3) 2016 年收购 Xamarin；(4) 2018 年收购 GitHub（75 亿美元）；(5) 2018 年加入 OSI；(6) 开源 .NET Core、VS Code 等；Windows 内核仍闭源
 - 史料：M
@@ -67,7 +67,7 @@ volume: 16
 - 项目史观总纲第 23 章；项目史观总纲第 25 章总纲；Raymond, E. S. The Cathedral and the Bazaar [EB/OL]. (1997-05-21). <http://catb.org/~esr/writings/cathedral-bazaar/cathedral-bazaar/> [2026-07-22]；Raymond《开拓智域》；DiBona, C., Ockman, S., Stone, M. (eds.) Open Sources: Voices from the Open Source Revolution [M]. Sebastopol:
 - 项目史观总纲第 25 章总纲；Stallman, R. The GNU Manifesto [EB/OL]. (1985). <https://www.gnu.org/gnu/manifesto.en.html> [2026-07-24]；bsd_commits.db commits 表 freebsd-src David E. O'Brien commit `23059e66356e`（参见 49.1.4）[DB/OL] ［A］
 
-## 301.13.2 总纲第 19 条审视：解释学循环与权力知识共谋
+## 302.13.2 总纲第 19 条审视：解释学循环与权力知识共谋
 
 - 要点：总纲第 19 条 “解释学循环是历史认识的根本条件。前理解的差异使分歧不可避免
 

@@ -40,7 +40,7 @@ volume: 15
 - **BSD** 与 **MIT** 在法律效力上是否完全等价
   - 文献：**MIT License** 文本；**Apache License 2.0** 文本[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]
 
-## 281.1.4 史料辨析
+## 282.1.4 史料辨析
 
 - 要点：**BSD** 许可证原
 - CC 1.0 精确发布日（2002-12-16）须 creativecommons.org 存档进一步确证（存疑项）；CC 4.0 国际版与 3.0 移植版的差异（4.0 引入全球适用条款、明确数据库权利处理）须逐版对照。
@@ -55,7 +55,7 @@ volume: 15
 - Berkeley 1999.7.22 公告（**University of California, Berkeley** **Office of Technology Licensing** 版权修正通知，签署人 **William Hoskins**，Director, Office of Technology Licensing，原始文件 `ftp://ftp.cs.berkeley.edu/pub/4bsd/README.Impt.License.Change`）；OSI License List[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档
 - **MIT License** 文本；**Apache License 2.0** 文本[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]
 
-## 281.1.4 史料辨析
+## 282.1.4 史料辨析
 
 - 要点：**BSD** 许可证原始文本的最早版本需追溯至 1980 年代 **BSD 4.3 Tahoe** 分发，1990 年代通过 **CSRG** 文件标准化为 **4-Clause** 形式。
 - 史料：**4.3BSD Tahoe** 源码文件头部、**CSRG** 1994 **4.4BSD

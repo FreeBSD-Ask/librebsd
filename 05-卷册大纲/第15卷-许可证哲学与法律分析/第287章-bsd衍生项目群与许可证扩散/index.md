@@ -33,7 +33,7 @@ volume: 15
 - PHK 在 Varnish 中的角色须区分“首席架构师”与“主要开发者”——后期 Varnish Software 团队承担主要开发；“13% 采用率”统计需通过 BuiltWith 数据采集方法核实；Varnish 与 Squid 的性能对比须查独立基准测试
   - 文献：Varnish Software 官方历史；PHK 设计笔记；BuiltWith 统计 ［A］
 
-## 286.2.2 Tim
+## 287.2.2 Tim
 
 - 考据过程留痕——【查证来源】BSD 许可证文本经 <https://www.freebsd.org/copyright/freebsd-license/> 一手核验，确认"AS IS"条款与“无强制回馈”条款为许可证核心；BuiltWith Varnish 采用统计（前一万网站 13% 以上采用率）经 trends.builtwith.com 一手核验；libarchive 采用列表（macOS
 - 考据过程留痕——【查证来源】bsd_commits.db 查询 L3.2.1（商业实体 commit 占比长期低于 1.3% 但绝对值增长）经 SQL 查询一手核验；BuiltWith Varnish 统计（前一万网站 13% 以上采用率）经 trends.builtwith.com 一手核验；libarchive 采用列表（macOS 10.6+、Debian/Ubuntu、Homebrew）经
@@ -44,29 +44,29 @@ volume: 15
 
 - OpenSSH 官方历史；OpenBSD 2.6 release notes；Ylönen SSH 1.2.12 release[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]
 
-## 286.1.2 LibreSSL 从 OpenSSL fork 的工程史
+## 287.1.2 LibreSSL 从 OpenSSL fork 的工程史
 
 - 要点：LibreSSL 由 OpenBSD 项目于 2014 年 4 月 Heartbleed 漏洞（CVE-2014-0160，2014 年 4 月 7 日公开）公开后启动 fork，由 Bob Beck 与 The
 - Varnish Software 官方历史；PHK 设计笔记；BuiltWith 统计 ［A］
 
-## 286.2.2 Tim Kientzle 与 libarchive
+## 287.2.2 Tim Kientzle 与 libarchive
 
 - 要点：libarchive 由 FreeBSD 提交者 Tim Kientzle 创建，是一个支持多种压缩与归档格式（tar、zip、cpio、7-Zip、xz、bzip2、gzip、lz4、zstd 等）的 C 库；libarchive 采用 BSD 许可证，后被 FreeBSD 基础系统、macOS（自 10.6 Snow Leopard 起 bsdtar 即基于 libarchive）、Debian/Ubuntu
 - FreeBSD Project. FreeBSD License [EB/OL]. <https://www.freebsd.org/copyright/freebsd-license/>; BuiltWith. Varnish Usage Statistics [EB/OL]. <https://trends.builtwith.com/cdn/Varnish>; libarchive. Official Website [EB/OL]. <https://libarchive.github.io/>; Joyent. Reintroducing Bhyve [EB/OL]. (2021-0
 - openbsd.db L3.2.1 查询报告; BuiltWith. Varnish Statistics [EB/OL]. <https://trends.builtwith.com/cdn/Varnish>; libarchive. Official Website [EB/OL]. <https://libarchive.github.io/>; 项目史观总纲第六章“主体性与和解”[Z]. 原材料/哲学/项目统摄史观/第 6 章.md.
 - pkgsrc.org；NetBSD 软件包文档；Joyent pkgsrc 文档[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]
 
-## 286.3.2 pkgsrc 被 DragonFly BSD 采用的历史
+## 287.3.2 pkgsrc 被 DragonFly BSD 采用的历史
 
 - 要点：DragonFly BSD（Matt Dillon 2003 年从 FreeBSD 4.x fork，2004 年 7 月 12 日发布 1.0 版本）最初使用 FreeBSD Ports 作为软件包管理系统，2005 年 9 月 Matt Dillon 宣布
 - PostgreSQL 许可证；Nginx 许可证；PostgreSQL 历史[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]
 
-## 286.4.2 BSD 许可证与 MIT/Apache 许可证的扩散对比
+## 287.4.2 BSD 许可证与 MIT/Apache 许可证的扩散对比
 
 - 要点：BSD、MIT、Apache 2.0 三者构成 “宽松许可证” 主流；BSD 许可证在 1980-1990 年代 UNIX 生态中占主导，MIT 许可证在 X Window System 与现代 JavaScript 生态中扩散，Apache 2.0 在 2000
 - McKusick 个人履历页（mckusick.com/consultancy.html）；IEEE 1003 标准；POSIX 1003.1 文本 ［B］
 
-## 286.5.2 BSD 开发者在 LLVM/Clang 项目中的贡献
+## 287.5.2 BSD 开发者在 LLVM/Clang 项目中的贡献
 
 - 要点：FreeBSD 项目是 LLVM/Clang 早期主要采用者与贡献者——2012 年 1 月 12 日 FreeBSD 9.0 起 Clang 3.0 作为 amd64 与 i386 的可选编译器随基础系统发布（先前叙事称“2011 年 FreeBSD 9.0 起 Clang 替代 GCC 作为默认编译器”有误，9.0 release notes 与
 - McKusick. Personal Homepage [EB/OL]. <https://mckusick.com/consultancy.html>; IEEE 1003 Standard [S]; FreeBSD Foundation. Clang in 10 [EB/OL]. (2014-01). <https://freebsdfoundation.org/wp-content/uploads/2014/01/Clang-in-10.pdf>; Divacky R. Clang/LLVM in FreeBSD [R]. BSD Day 2011, 2011; Chisnall D.
