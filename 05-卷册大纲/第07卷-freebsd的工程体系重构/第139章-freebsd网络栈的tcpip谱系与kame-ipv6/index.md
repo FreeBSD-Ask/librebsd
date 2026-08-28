@@ -46,3 +46,51 @@ volume: 第07卷-freebsd的工程体系重构
 - Watson, R. N. M., & Zeeb, B. (2006-2016). *VNET Commit History*. svn.freebsd.org/cgit.freebsd.org; TrustedBSD Project. (2009). *VNET Technical Report*. trustedbsd.org; FreeBSD 相关记录（详情见存疑库）。文献 (UNIX 传奇：历史与回忆 ([美]布莱恩·W.克尼汉（BrianW.Kernighan）) (z-library.sk, 年份不详) 提及 McKusick, Marshall Kirk，作为 BSD 的核心人物，其撰写的 BSD 历史与 Unix 传奇是该领域的重要参考文献。**新增技术**文献 (06771908, 年份不详) 讨论 swap，该论文讨论了 Unix 早期进程间通过显式交换（swap）传递数据的机制，为理解 BSD 内存管理演进提供了历史背景。文献 (06771908, 年份不详) 讨论 UFS，该论文追溯了 PDP-7 Unix 文件系统的结构，为理解 BSD UFS 文件系统的设计起源提供了历史视角。文献 (UNIX 传奇：历史与回忆 ([美]布莱恩·W.克尼汉（BrianW.Kernighan）) (z-library.sk, 年份不详) 讨论 TCP/IP，Bill Joy 为 Unix 添加了 vi 编辑器和 csh，并引入了改变世界的 TCP/IP 协议 socket 接口，这些贡献是 BSD 对互联网基础设施的奠基性工作。文献 (UNIX 传奇：历史与回忆 ([美]布莱恩·W.克尼汉（BrianW.Kernighan）) (z-library.sk, 年份不详) 讨论 macOS，Unix 核心命令在 Linux、macOS 和 Windows Subsystem for Linux 中仍然广泛使用，体现了 BSD/Unix 技术的跨平台生命力。文献 (eurobsdcon2015-portroach, 年份不详) 讨论 OpenBSD，Jasper Lievisse Adriaanse 开发的 Portroach 是 OpenBSD 的 distfile 扫描工具，用于监控上游软件版本更新。文献 (eurobsdcon2015-portroach, 年份不详) 讨论 Ports Collection，Portroach 工具的设计灵感来自 FreeBSD 的 portscout，用于追踪 Ports Collection 中软件包的上游版本变化。**新增时间线事件**文献 (06771908, 年份不详) 记录 1980：Springer-Verlag 于 1980 年出版了关于设计与编程方法论的著作，为 Unix 系统设计提供了理论基础。文献 (06771908, 年份不详) 记录 1980：该文献引用了 1980 年关于 Unix 系统演进的学术出版物。文献 (UNIX 传奇：历史与回忆 ([美]布莱恩·W.克尼汉（BrianW.Kernighan）) (z-library.sk, 年份不详) 记录 1980：Bjarne Stroustrup 于 1980 年将 Simula 的面向对象特性与 C 语言融合，诞生了"带类的 C 语言"，即 C++ 的前身。文献 (UNIX 传奇：历史与回忆 ([美]布莱恩·W.克尼汉（BrianW.Kernighan）) (z-library.sk, 年份不详) 记录 1980：贝尔实验室 1127 中心于 1980 年开设了为期 3 周的集成电路设计速成课程，由加州理工学院的 Carver Mead 授课。文献 (eurobsdcon2015-portroach, 年份不详) 记录 2006：Jasper Lievisse Adriaanse 自 2006 年起成为 OpenBSD 开发者，专注于 GNOME 移植和 Puppet 配置管理。文献 (eurobsdcon2015-portroach, 年份不详) 记录 2012：FreeBSD 的 portscout 工具于 2012 年引起 OpenBSD 开发者的关注，启发了 Portroach 的开发。
 <!-- DB_REF:freebsd.duckdb -->> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 2020-2024 年间：291,070 次提交。> 仓库总览：1,294,851 次提交，13,875 位贡献者，1993-06-12 至 2026-08-25。
 
+<!-- PODCAST_MINE v20260827 -->
+<!-- Chapter: 第139章-freebsd网络栈的tcpip谱系与kame-ipv6 -->
+
+## 要点（播客口述史提取）
+- because you can run NetBSD as far as the very first release on a Raspberry Pi. This is over at
+- your first net BSD computer, you might not have another BSD or
+- Yeah, so this is a desktop oriented version of net BSD targeted towards people that want to replace windows or macOS.
+- an ETC RCD EAP-parade script can be created and then enabled to
+- So, they last tried NetBSD 7.0 about three years ago and decided it was time to test drive the
+- and a NomadBSD 1.1 release review. In this week's episode of BSD, now!
+- two important ones. First, the semicolon character can be used to separate multiple statements
+- According to Wikipedia, Apple began using FreeBSD instead of NetBSD for macOS 10.3.
+
+## 史料（播客提及）
+- [BSD Now EP295 @ 3094.54] It was that BSD cam actually when I was sitting beside one of the graphics people so it was handy
+- [BSD Now EP295 @ 618.7] So this actually takes the file descriptor you want to delete, the path, so the file
+- [BSD Now EP295 @ 652.04] and only if that name and that descriptor match will it actually remove the file.
+- [BSD Now EP273 @ 2522.42] Interestingly, FreeBSD was still shipping Xorg 1.18.something,
+- [BSD Now EP273 @ 3684.12] It's a great way to, you know, actually get people in other projects to care about BSD.
+
+## 史观（播客当事人观点与总纲映射）
+- [BSD Now EP295 @ 3094.54] It was that BSD cam actually when I was sitting beside one of the graphics people so it was handy
+  → 史观映射：总纲18——时间是一种形式主义
+- [BSD Now EP295 @ 618.7] So this actually takes the file descriptor you want to delete, the path, so the file
+- [BSD Now EP295 @ 652.04] and only if that name and that descriptor match will it actually remove the file.
+- [BSD Now EP273 @ 2522.42] Interestingly, FreeBSD was still shipping Xorg 1.18.something,
+- [BSD Now EP273 @ 3684.12] It's a great way to, you know, actually get people in other projects to care about BSD.
+- [BSD Now EP259 @ 1376.280029296875] And this is the reason why Linux ended up being invented and why FreeBSD kind of missed out on being the de facto operating system for probably almost everything.
+  → 史观映射：总纲18——时间是一种形式主义
+- [BSD Now EP259 @ 2364.699951171875] Each jail contains a vanilla FreeBSD installation, so right from the install files that you have used to actually install the host.
+- [BSD Now EP259 @ 2542.760009765625] so the power 9 hardware has a native hypervisor so you can actually run the ibm thing or freebsd
+
+## 辨析（播客争议与存疑点）
+- [存疑脚注] [BSD Now EP273 @ 691.46] Their main complaint with NetBSD was that it
+- [存疑脚注] [BSD Now EP259 @ 1431.4599609375] Anyway, although AT&T quickly settled its legal dispute with BSDI and the University of California,
+- [存疑脚注] [BSD Now EP149 @ 5700.5] like Harden BSD or, say, like BitRig, Forks?
+- [存疑脚注] [BSD Now EP149 @ 5711.5400390625] Back in the 80s, 90s, all the big vendors forked BSD and laughed their way to the bank.
+- [存疑脚注] [BSD Now EP149 @ 5725.419921875] Those were a thing where they took BSD, forked it, did their own little distro, and created something that made money for somebody.
+- [存疑脚注] [BSD Now EP149 @ 5808.07958984375] forking of software but then we've seen things like open bsd forking from net bsd basic i guess
+
+## 文献（播客参考条目）
+- [BSD Now EP295] Pennington J. BSD Now: 295: Fun with funlinkat()[EB/OL]. (2019-04-25)[2026-08-15]. https://www.bsdnow.tv/295.
+- [BSD Now EP273] Pennington J. BSD Now: Episode 273: A Thoughtful Episode | BSD Now 273[EB/OL]. (2018-11-23)[2026-08-15]. https://www.bsdnow.tv/273.
+- [BSD Now EP259] Pennington J. BSD Now: Episode 259: Long Live Unix | BSD Now 259[EB/OL]. (2018-08-16)[2026-08-15]. https://www.bsdnow.tv/259.
+- [BSD Now EP149] Pennington J. BSD Now: 149: The bhyve has been disturbed, and a wild Dexter appears![EB/OL]. (2016-07-06)[2026-08-15]. https://www.bsdnow.tv/149.
+- [BSD Now EP242] Pennington J. BSD Now: Episode 242: Linux Takes The Fastpath | BSD Now 242[EB/OL]. (2018-04-18)[2026-08-15]. https://www.bsdnow.tv/242.
+
+<!-- /PODCAST_MINE -->

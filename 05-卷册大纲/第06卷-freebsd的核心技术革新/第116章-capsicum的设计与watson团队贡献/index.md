@@ -49,3 +49,24 @@ volume: 第06卷-freebsd的核心技术革新
 文献 (201305-temporal-practical-capabilities, 年份不详) 记录 1997：CAV 会议于 1997 年发表了关于使用 PVS 进行抽象状态图构造的论文，为形式化验证在安全领域的应用提供了参考。
 <!-- DB_REF:freebsd.duckdb -->> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 2010-2020 年间：488,947 次提交。> 仓库总览：1,294,851 次提交，13,875 位贡献者，1993-06-12 至 2026-08-25。
 
+<!-- PODCAST_MINE v20260827 -->
+<!-- Chapter: 第116章-capsicum的设计与watson团队贡献 -->
+
+## 要点（播客口述史提取）
+- （该章节匹配播客中暂未提取到相关核心史实陈述）
+
+## 史料（播客提及）
+- [BSD Now EP99 @ 378.3800048828125] actually getting sandboxed, whether it's with TAME or Capsicum.
+
+## 史观（播客当事人观点与总纲映射）
+- [BSD Now EP99 @ 378.3800048828125] actually getting sandboxed, whether it's with TAME or Capsicum.
+
+## 辨析（播客争议与存疑点）
+- （该章节匹配播客中暂未提取到相关争议点）
+
+## 文献（播客参考条目）
+- [BSD Now EP99] Pennington J. BSD Now: 99: BSD Gnow[EB/OL]. (2015-07-22)[2026-08-15]. https://www.bsdnow.tv/99.
+- [BSD Now EP68] Pennington J. BSD Now: 68: Just the Essentials[EB/OL]. (2014-12-17)[2026-08-15]. https://www.bsdnow.tv/68.
+- [BSD Now EP8] Pennington J. BSD Now: 8: A Brief Introduction[EB/OL]. (2013-10-23)[2026-08-15]. https://www.bsdnow.tv/8.
+
+<!-- /PODCAST_MINE -->

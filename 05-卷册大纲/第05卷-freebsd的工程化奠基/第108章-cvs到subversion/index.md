@@ -52,3 +52,35 @@ volume: 第05卷-freebsd的工程化奠基
 - freebsd-hackers mailing list archives；FreeBSD Quarterly Status Reports；The FreeBSD Foundation Annual Reports ［A］<!-- DB_REF:freebsd.duckdb -->> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 1996-2010 年间：482,545 次提交。> 仓库总览：1,294,851 次提交，13,875 位贡献者，1993-06-12 至 2026-08-25。
 - freebsd-hackers mailing list 2008-2010 SVN migration archives；Wemm, P. SVN migration report (2008)；freebsd-doc mailing list documentation migration (2008-2009) ［A］<!-- DB_REF:freebsd.duckdb -->> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 1996-2010 年间：482,545 次提交。> 仓库总览：1,294,851 次提交，13,875 位贡献者，1993-06-12 至 2026-08-25。
 - 各项目官方文档 ［B］FreeBSD 社区论文：[FP-2019-049] Poudriere for Port Maintenance（Matthew Seaman，2019）<https://papers.freebsd.org/2019/eurobsdcon/matthew-poudriere_for_port_maintenance/>FreeBSD 社区论文：[FP-2017-004] Continuous Integration of the FreeBSD Project（Li-Wen Hsu（许立文），2017）<https://papers.freebsd.org/2017/bsdcan/lwhsu-continuous_integration_of_the_freebsd_project/>FreeBSD 社区论文：[FP-2017-002] Continuous Integration of the FreeBSD Project（Li-Wen Hsu，2017）<https://papers.freebsd.org/2017/asiabsdcon/lwhsu-continuous_integration_of_the_freebsd_project/>FreeBSD 社区论文：[FP-2016-013] Continuous Integration of the FreeBSD Project（Li-Wen Hsu，2016）<https://papers.freebsd.org/2016/eurobsdcon/lwhsu-continuous_integration_of_the_freebsd_project/>### 史观映射> 从 CVS 到 SVN 的迁移花了八年争论——不是因为技术难，而是因为选择版本控制工具就是在选择如何记忆开发史。CVS 的每一次提交、每一个分支、每一句日志都是开发记忆的载体，迁移意味着这些记忆要从一条无法重渡的河流搬到另一条——水还是那些水，但河床换了。而当 SVN 本身在 Git 面前也开始过时时，讽刺就完成了：用来对抗遗忘的工具，自己也会被遗忘### 史纲承载映射
+
+<!-- PODCAST_MINE v20260827 -->
+<!-- Chapter: 第108章-cvs到subversion -->
+
+## 要点（播客口述史提取）
+- It looks like a problem with two new Java versions or something.
+- This is mostly a security update with a new version of several popular software packages.
+- using Python 3. This requires the flavors work so that you can get Python 3 versions of ports.
+- but the different versions of clang that they used.
+- to 1983 and the RCP command, which was basically remote copy. It was a not encrypted version of
+- SCP came and replaced it by making a secure version where the
+- they're going to base it on a stable version of FreeBSD,
+- how they do the version numbering and so on for ZFS on Linux.
+
+## 史料（播客提及）
+- [BSD Now EP370 @ 270.55999755859375] We'll explore the reasons from long-term viability of subversion to wider support for tools that will
+- [BSD Now EP370 @ 867.280029296875] doesn't really tell you the same thing as the version number. But part of the reason for that
+
+## 史观（播客当事人观点与总纲映射）
+- [BSD Now EP370 @ 270.55999755859375] We'll explore the reasons from long-term viability of subversion to wider support for tools that will
+- [BSD Now EP370 @ 867.280029296875] doesn't really tell you the same thing as the version number. But part of the reason for that
+
+## 辨析（播客争议与存疑点）
+- [存疑脚注] [BSD Now EP370 @ 707.7599487304688] before we get to the skill set argument. Kids these days mostly know Git and not subversion,
+- [存疑脚注] [BSD Now EP370 @ 717.2000122070312] subversion that has had increasingly become a source of friction the argument is supported
+
+## 文献（播客参考条目）
+- [BSD Now EP290] Pennington J. BSD Now: 290: Timestamped Notes[EB/OL]. (2019-03-21)[2026-08-15]. https://www.bsdnow.tv/290.
+- [BSD Now EP281] Pennington J. BSD Now: 281: EPYC Server Battle[EB/OL]. (2019-01-17)[2026-08-15]. https://www.bsdnow.tv/281.
+- [BSD Now EP370] Pennington J. BSD Now: 370: Testing shutdown[EB/OL]. (2020-10-01)[2026-08-15]. https://www.bsdnow.tv/370.
+
+<!-- /PODCAST_MINE -->

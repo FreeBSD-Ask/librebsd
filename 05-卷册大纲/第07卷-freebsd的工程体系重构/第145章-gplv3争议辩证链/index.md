@@ -41,3 +41,23 @@ volume: 第07卷-freebsd的工程体系重构
 
 - Free Software Foundation. GNU General Public License Version 3 [Z]. 2007-06-29（§5c、§6、§11）；FreeBSD Foundation. FreeBSD Foundation 2007 年 8 月致社区关于 GPLv3 的公开信 [EB/OL]. **<https://www.freebsdfoundation.org/press/2007Aug-newsletter.shtml**>；GCC Steering Committee. GCC 4.3 and GPLv3 [EB/OL]. gcc.gnu.org, 2007；International Organization for Standardization. ISO/IEC 14882:2011 [S]. 2011. ［A］<!-- DB_REF:freebsd.duckdb -->> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 2020-2024 年间：291,070 次提交。> 仓库总览：1,294,851 次提交，13,875 位贡献者，1993-06-12 至 2026-08-25。
 - 原材料/哲学/项目统摄史观/第 25 章.md（总纲第 21 条，第 25 行；总纲第 6 条，第 11 行；总纲第 7 条，第 13 行）；原材料/哲学/项目统摄史观/第 21 章.md（21.1、21.2 节）；Divacky R. [Announce] clang/llvm can compile booting FreeBSD kernel [EB/OL]. freebsd-current mailing list, 2009-02-25；Losh W. GCC 4.2.1 retirement announcement [EB/OL]. freebsd-arch mailing list, 2018. ［A］<!-- DB_REF:freebsd.duckdb -->> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 2020-2024 年间：291,070 次提交。> 仓库总览：1,294,851 次提交，13,875 位贡献者，1993-06-12 至 2026-08-25。
+
+<!-- PODCAST_MINE v20260827 -->
+<!-- Chapter: 第145章-gplv3争议辩证链 -->
+
+## 要点（播客口述史提取）
+- （该章节匹配播客中暂未提取到相关核心史实陈述）
+
+## 史料（播客提及）
+- （待提取）
+
+## 史观（播客当事人观点与总纲映射）
+- （该章节匹配播客中暂未提取到相关当事人观点）
+
+## 辨析（播客争议与存疑点）
+- （该章节匹配播客中暂未提取到相关争议点）
+
+## 文献（播客参考条目）
+- [BSD Now EP12] Pennington J. BSD Now: 12: Collecting SSHells[EB/OL]. (2013-11-20)[2026-08-15]. https://www.bsdnow.tv/12.
+
+<!-- /PODCAST_MINE -->

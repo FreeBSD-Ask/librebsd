@@ -49,3 +49,60 @@ volume: 第08卷-freebsd的范式转换
 - FreeBSD Project. *CI/CD Documentation*. ci.freebsd.org; FreeBSD Foundation. (2021-2024). *Annual Reports* (contributor growth statistics); Cirrus CI. *FreeBSD CI Configuration*. github.com/freebsd/freebsd-src/tree/main/.cirrus.yml. ［A］<!-- DB_REF:freebsd.duckdb -->> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 2024-2026 年间：168,386 次提交。> 仓库总览：1,294,851 次提交，13,875 位贡献者，1993-06-12 至 2026-08-25。
 - FreeBSD Project. *freebsd-git and freebsd-hackers mailing list archives*. lists.freebsd.org; Wayback Machine. *FreeBSD Wiki historical snapshots*. web.archive.org; FreeBSD Foundation. (2021). *Git Migration Retrospective*. ［A］<!-- DB_REF:freebsd.duckdb -->> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 2024-2026 年间：168,386 次提交。> 仓库总览：1,294,851 次提交，13,875 位贡献者，1993-06-12 至 2026-08-25。
 - FreeBSD Project. freebsd.db freebsd-src 仓库 commit 数据库 [DB/OL]. 2026-07-27. `c:\Users\ykla\Documents\hibsd\03-原始史料库\01-代码仓库史料\01-数据库本体\freebsd.db`; Hibsd Project. 推断性统计.md [R/OL]. 2026-07-27. `c:\Users\ykla\Documents\hibsd\03-原始史料库\01-代码仓库史料\01-数据库本体\统计分析\推断性统计.md` Task 5-6; Hibsd Project. 时间序列分析.md [R/OL]. 2026-07-27. `c:\Users\ykla\Documents\hibsd\03-原始史料库\01-代码仓库史料\01-数据库本体\统计分析\时间序列分析.md` Task 14-15; Hibsd Project. 卷章数据映射.md [R/OL]. 2026-07-27. `c:\Users\ykla\Documents\hibsd\03-原始史料库\01-代码仓库史料\01-数据库本体\统计分析\卷章数据映射.md` 第五卷第 66 章映射; Hibsd Project. 外部基准-GitHub-CHAOSS.md [R/OL]. 2026-07-27. `c:\Users\ykla\Documents\hibsd\03-原始史料库\01-代码仓库史料\01-数据库本体\统计分析\外部基准-GitHub-CHAOSS.md` 第 1.1 节（E-06、E-08 数据来源与三次复查留痕）; GitHub. Octoverse 2025: A new developer joins GitHub every second as AI leads TypeScript to #1 [R/OL]. 2025. URL: `https://github.blog/news-insights/octoverse/octoverse-a-new-developer-joins-github-every-second-as-ai-leads-typescript-to-1/`（三次复查：2026-07-27）; Internet Archive. GitHub Octoverse 2014-2017 历年存档 [DB/OL]. `https://web.archive.org/web/2014-2017/https://octoverse.github.com/`（三次复查：2026-07-27）. ［A］FreeBSD 社区论文：[FP-2019-049] Poudriere for Port Maintenance（Matthew Seaman，2019）<https://papers.freebsd.org/2019/eurobsdcon/matthew-poudriere_for_port_maintenance/>FreeBSD 社区论文：[FP-2017-004] Continuous Integration of the FreeBSD Project（Li-Wen Hsu，2017）<https://papers.freebsd.org/2017/bsdcan/lwhsu-continuous_integration_of_the_freebsd_project/>FreeBSD 社区论文：[FP-2017-002] Continuous Integration of the FreeBSD Project（Li-Wen Hsu，2017）<https://papers.freebsd.org/2017/asiabsdcon/lwhsu-continuous_integration_of_the_freebsd_project/>FreeBSD 社区论文：[FP-2016-013] Continuous Integration of the FreeBSD Project（Li-Wen Hsu，2016）<https://papers.freebsd.org/2016/eurobsdcon/lwhsu-continuous_integration_of_the_freebsd_project/>FreeBSD 社区论文：[FP-2015-008] Supporting a BSD Project（Ed Maste，2015）<https://papers.freebsd.org/2015/vbsdcon/maste-supporting_a_bsd_project/>### 史观映射> 版本控制工具的更替不是进步的阶梯，而是技术债务的循环——每一代工具都承诺永久保存，又在下一代到来时沦为需要迁移的遗产；Git 迁移既是数字档案的重建机遇，也是历史保存的潜在威胁，因为每一次格式转换都意味着某些沉默的上下文永远丢失；从 CVS 到 SVN 再到 Git，这条迁移链印证了分离聚合的宿命——工具不断分裂又不断聚合，而代码始终是那个被搬来搬去的客体；但 FreeBSD 28 年开发史在三次工具更替中完整保留，这本身就是对 BSD 社区珍视历史、尊重传承精神的最好证明---> ## 第 66.12 不同时期人员的采访录（详见 [采访录.md](采访录.md)）## 第 66.13 节 媒体反响与社区舆论（详见 [媒体反响与社区舆论.md](媒体反响与社区舆论.md)）<!-- DB_REF:freebsd.duckdb -->> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 2024-2026 年间：168,386 次提交。> 仓库总览：1,294,851 次提交，13,875 位贡献者，1993-06-12 至 2026-08-25。
+
+<!-- PODCAST_MINE v20260827 -->
+<!-- Chapter: 第169章-从subversion到git的迁移历程 -->
+
+## 要点（播客口述史提取）
+- Blocked Q, Swap Usage, and so forth. And they mention that the Linux version of VM stat and
+- is the disk encrypted or as Dan said has it the right pool version that it's
+- booting there. But if you have just basic ZFS and both systems have the same versions and the loaders know about how
+- What's the version of the application we're testing?
+- But with the new Python version of iocage that was just released for FreeBSD,
+- We need to kind of go through our APIs and make sure that they all stay up to date and update the UI for that as well so that it works with the newer version of IO cage.
+- osx maybe someday we'll roll an android and ios version of it as well but since that's cross
+- An Android version of it to control the video player
+
+## 史料（播客提及）
+- [BSD Now EP180 @ 1779.5599365234375] probably not something you're that likely to actually do on a digital ocean droplet but the
+- [BSD Now EP180 @ 270.67999267578125] But yeah, we actually released our 1.0 version of Lumina, and that was across all the various operating systems, OpenBSD, NetBSD, DragonBSD, all the Dragonfly BSD.
+- [BSD Now EP191 @ 7408.0] Eventually there was a newer version of puppet board
+- [BSD Now EP196 @ 4463.94] Actually, I had similar problems with NFS version 3
+- [BSD Now EP181 @ 11634.7001953125] It's like – so now if you actually have a Linux kernel programmer that has – I mean the poor right-thinking individual that is living in the ghetto of Linux just trying to do the right thing and has an actual legit bug on.
+
+## 史观（播客当事人观点与总纲映射）
+- [BSD Now EP180 @ 1779.5599365234375] probably not something you're that likely to actually do on a digital ocean droplet but the
+- [BSD Now EP180 @ 270.67999267578125] But yeah, we actually released our 1.0 version of Lumina, and that was across all the various operating systems, OpenBSD, NetBSD, DragonBSD, all the Dragonfly BSD.
+  → 史观映射：总纲18——时间是一种形式主义
+- [BSD Now EP191 @ 7408.0] Eventually there was a newer version of puppet board
+- [BSD Now EP196 @ 4463.94] Actually, I had similar problems with NFS version 3
+- [BSD Now EP181 @ 11634.7001953125] It's like – so now if you actually have a Linux kernel programmer that has – I mean the poor right-thinking individual that is living in the ghetto of Linux just trying to do the right thing and has an actual legit bug on.
+- [BSD Now EP181 @ 7587.919921875] And this is why you get to kind of the legitimate old flame fests between GNU, Linux and Linux because so much of what people think of as Linux is actually that GNU stack.
+  → 史观映射：总纲22——知识注定过时
+- [BSD Now EP181 @ 9320.3994140625] It actually comes from digital Unix and then True64.
+- [BSD Now EP225 @ 193.52] is smaller due to the removal of things like the old version of GCC and actually all compilers
+  → 史观映射：总纲22——知识注定过时
+
+## 辨析（播客争议与存疑点）
+- [存疑脚注] [BSD Now EP225 @ 3586.04] Should developers use the realm notes tag in a subversion commit template more loosely at risk of an increase in false positives
+
+## 文献（播客参考条目）
+- [BSD Now EP393] Pennington J. BSD Now: 393: ZFS dRAID[EB/OL]. (2021-03-11)[2026-08-15]. https://www.bsdnow.tv/393.
+- [BSD Now EP180] Pennington J. BSD Now: 180: Illuminating the desktop[EB/OL]. (2017-02-08)[2026-08-15]. https://www.bsdnow.tv/180.
+- [BSD Now EP191] Pennington J. BSD Now: 191: I Know 64 & A Bunch More[EB/OL]. (2017-04-26)[2026-08-15]. https://www.bsdnow.tv/191.
+- [BSD Now EP196] Pennington J. BSD Now: 196: PostgreZFS[EB/OL]. (2017-05-31)[2026-08-15]. https://www.bsdnow.tv/196.
+- [BSD Now EP461] Pennington J. BSD Now: 461: Persistent Memory Allocation[EB/OL]. (2022-06-30)[2026-08-15]. https://www.bsdnow.tv/461.
+- [BSD Now EP235] Pennington J. BSD Now: 235: I C you BSD[EB/OL]. (2018-02-28)[2026-08-15]. https://www.bsdnow.tv/235.
+- [BSD Now EP181] Pennington J. BSD Now: 181: The Cantrillogy (Not special edition)[EB/OL]. (2017-02-15)[2026-08-15]. https://www.bsdnow.tv/181.
+- [BSD Now EP225] Pennington J. BSD Now: 225: The one true OS[EB/OL]. (2017-12-20)[2026-08-15]. https://www.bsdnow.tv/225.
+- [BSD Now EP529] Pennington J. BSD Now: 529: Adapt, adopt, diffuse[EB/OL]. (2023-10-19)[2026-08-15]. https://www.bsdnow.tv/529.
+- [BSD Now EP234] Pennington J. BSD Now: 234: Code and Community[EB/OL]. (2018-02-21)[2026-08-15]. https://www.bsdnow.tv/234.
+- [BSD Now EP167] Pennington J. BSD Now: 167: Playing the Long Game[EB/OL]. (2016-11-09)[2026-08-15]. https://www.bsdnow.tv/167.
+- [BSD Now EP418] Pennington J. BSD Now: 418: The greatest time in history to be a creator[EB/OL]. (2021-09-02)[2026-08-15]. https://www.bsdnow.tv/418.
+- [BSD Now EP65] Pennington J. BSD Now: 65: 8,000,000 Mogofoo-ops[EB/OL]. (2014-11-26)[2026-08-15]. https://www.bsdnow.tv/65.
+- [BSD Now EP251] Pennington J. BSD Now: Episode 251: Crypto HAMMER | BSD Now 251[EB/OL]. (2018-06-21)[2026-08-15]. https://www.bsdnow.tv/251.
+- [BSD Now EP88] Pennington J. BSD Now: 88: Below the Clouds[EB/OL]. (2015-05-06)[2026-08-15]. https://www.bsdnow.tv/88.
+- [BSD Now EP33] Pennington J. BSD Now: 33: Certified Package Delivery[EB/OL]. (2014-04-16)[2026-08-15]. https://www.bsdnow.tv/33.
+- [BSD Now EP360] Pennington J. BSD Now: 360: Full circle[EB/OL]. (2020-07-23)[2026-08-15]. https://www.bsdnow.tv/360.
+
+<!-- /PODCAST_MINE -->

@@ -47,3 +47,46 @@ volume: 第04卷-大分裂与四大bsd的诞生
 
 - OpenBSD 治理结构综合文档；BSD 三项目治理对比研究；被疏远贡献者与核心开发者对照访谈录；OpenBSD goals.html [EB/OL]. <https://www.openbsd.org/goals.html>；OpenBSD security.html [EB/OL]. <https://www.openbsd.org/security.html>；OpenBSD hackathons.html [EB/OL]. <https://www.openbsd.org/hackathons.html>；Linux 内核 MAINTAINERS 文件；bsd_commits.db openbsd-src contributors 表 ［A］<!-- DB_REF:openbsd.duckdb -->> **数据库引用（openbsd.duckdb）**：本子节对应 openbsd 代码仓库。> 1992-1995 年间：770 次提交。> 仓库总览：491,195 次提交，3,352 位贡献者，1995-10-18 至 2026-08-25。
 - 原材料/哲学/项目统摄史观/第 25 章.md（总纲第 13、19、21 条原文）；NetBSD core.html [EB/OL]. <https://www.netbsd.org/people/core.html>；OpenBSD lyrics.html [EB/OL]. <https://www.openbsd.org/lyrics.html>；OpenBSD security.html [EB/OL]. <https://www.openbsd.org/security.html>；OpenBSD goals.html [EB/OL]. <https://www.openbsd.org/goals.html>；bsd_commits.db netbsd-src deraadt 末次 commit `699d2a37b0e3c0c6ff29ea0d407c3feeba5642b4`（1994-12-17T23:12:41Z）；bsd_commits.db openbsd-src 首条 commit `df930be708d50e9715f173caa26ffe1b7599b157`（deraadt, 1995-10-18T08:37:01Z, "initial import of NetBSD tree"） ［A］<!-- DB_REF:freebsd.duckdb -->> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 1992-1995 年间：15,540 次提交。> 仓库总览：1,294,851 次提交，13,875 位贡献者，1993-06-12 至 2026-08-25。
+
+<!-- PODCAST_MINE v20260827 -->
+<!-- Chapter: 第73章-openbsd的de-raadt独裁治理模式 -->
+
+## 要点（播客口述史提取）
+- Might just happen to have been timing when FreeBSD's 12.1 was released quite recently,
+- vanilla free bsd is already in the lead but the gcc version also provides the best two results
+- But in general, as you can see, FreeBSD is usually towards the front of the pack rather than the back in most all of these benchmarks.
+- Hopefully everybody can attend BSDCAN and that many people will submit talks so that we can have the best of those selected as our program.
+- I think one of the very first BSD-CAN talks that I saw that really resonated with me was about managing the internet infrastructure in the high Arctic in Canada.
+- writes in mind. HardBSD is in a very unique position, he writes. In 2020, he plans to
+- The first item that we found here is Fury BSD, which is a KDE plasma flavor now available or has this flavor now available.
+- who was one of the very first interviews we did on BSD Now back 320 weeks ago.
+
+## 史料（播客提及）
+- [BSD Now EP331 @ 1768.0599365234375] Yes, I think that was one of the highlight talks at EuroBSDCon, the videos on YouTube, but about using FreeBSD in payment processing.
+- [BSD Now EP331 @ 1795.199951171875] I think one of the very first BSD-CAN talks that I saw that really resonated with me was about managing the internet infrastructure in the high Arctic in Canada.
+- [BSD Now EP14 @ 1699.8199462890625] I first came to the company, I think FreeBSD 3.2 was the sort of the BSD reference platform.
+- [BSD Now EP14 @ 1875.0] And actually I think in FreeBSD is where I really became a manager, not by choice or design, but just by side effect.
+- [BSD Now EP14 @ 2128.419921875] So I think this is a wonderful opportunity now for FreeBSD.
+
+## 史观（播客当事人观点与总纲映射）
+- [BSD Now EP331 @ 1768.0599365234375] Yes, I think that was one of the highlight talks at EuroBSDCon, the videos on YouTube, but about using FreeBSD in payment processing.
+- [BSD Now EP331 @ 1795.199951171875] I think one of the very first BSD-CAN talks that I saw that really resonated with me was about managing the internet infrastructure in the high Arctic in Canada.
+- [BSD Now EP14 @ 1699.8199462890625] I first came to the company, I think FreeBSD 3.2 was the sort of the BSD reference platform.
+- [BSD Now EP14 @ 1875.0] And actually I think in FreeBSD is where I really became a manager, not by choice or design, but just by side effect.
+  → 史观映射：总纲24——美是消解性的体验
+- [BSD Now EP14 @ 2128.419921875] So I think this is a wonderful opportunity now for FreeBSD.
+- [BSD Now EP14 @ 2209.619873046875] And I think it's actually, you know, it's very heartening that we started the FreeBSD project talking very much about the BSD license.
+  → 史观映射：总纲13——法律与道德是利益分配
+- [BSD Now EP14 @ 2220.33984375] I think I wrote one of the original, you know, about pages on the FreeBSD.org website that said, you know,
+  → 史观映射：总纲10——动手者创造历史
+- [BSD Now EP14 @ 2256.579833984375] And so I think that's where the BSD license has always shined.
+  → 史观映射：总纲13——法律与道德是利益分配
+
+## 辨析（播客争议与存疑点）
+- [存疑脚注] [BSD Now EP331 @ 1807.8399658203125] It's like, so there's this heated shipping container in the middle of town, and it's got three free BSD computers in it and a satellite uplink, and it has to keep working.
+
+## 文献（播客参考条目）
+- [BSD Now EP331] Pennington J. BSD Now: 331: Why Computers Suck[EB/OL]. (2020-01-02)[2026-08-15]. https://www.bsdnow.tv/331.
+- [BSD Now EP14] Pennington J. BSD Now: 14: Zettabytes for Days[EB/OL]. (2013-12-04)[2026-08-15]. https://www.bsdnow.tv/14.
+
+<!-- /PODCAST_MINE -->

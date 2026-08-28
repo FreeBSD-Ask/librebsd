@@ -47,3 +47,48 @@ volume: 第06卷-freebsd的核心技术革新
 - FreeBSD Project. cgit.freebsd.org/src/ (casperd import history); FreeBSD Project. Commit `42a859525652decb08bba47ffaceb769d394175e` (Pawel Jakub Dawidek, 2013-12-02). casperd daemon 首次合入； Dawidek, P. J. Capsicum/Casper Presentations. BSDCan/EuroBSDCon 2013-2015; FreeBSD Foundation (2013). Capsicum Framework Grant Announcement. ［A］<!-- DB_REF:freebsd.duckdb -->> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 2010-2020 年间：488,947 次提交。> 仓库总览：1,294,851 次提交，13,875 位贡献者，1993-06-12 至 2026-08-25。
 - Nuxi. CloudABI Project (archived/deprecated). github.com/NuxiNL/cloudabi; Brown, N. (2016-02-10). CloudABI. LWN.net; WebAssembly Community Group. WASI Preview 2 and Capabilities. wasi.dev; Schouten, E. CloudABI to WASI transition announcement. github.com/NuxiNL/cloudabi.[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]<!-- DB_REF:freebsd.duckdb -->> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 2010-2020 年间：488,947 次提交。> 仓库总览：1,294,851 次提交，13,875 位贡献者，1993-06-12 至 2026-08-25。
 - Woodruff, J. et al. (2012). CHERI: a research platform deconflating hardware virtualization and protection. RESoLVE 2012; Woodruff, J. et al. (2014). The CHERI capability model. ISCA '14; Watson, R. N. M. et al. (2015). CHERI: A Hybrid Capability-System Architecture. IEEE S&P ’15; CTSRD-CHERI Organization. CheriBSD Repository. github.com/CTSRD-CHERI/cheribsd; SRI International. CHERI Program. sri.com/program/cheri. ［B］[^doubt-resolved-633]: 据 Mac OS X Internals A Systems Approach (Amit Singh（阿米特·辛格）)  (未署名) 消解[^doubt-resolved-634]: 据 Arch_Handbook (未署名) 消解[^doubt-resolved-635]: 据 Porters_Handbook (未署名) 消解[^doubt-resolved-636]: 据 Handbook (未署名) 消解[^doubt-resolved-637]: 据 Mac OS X Internals A Systems Approach (Amit Singh)  (未署名) 消解[^doubt-resolved-638]: 据 Mac OS X Internals A Systems Approach (Amit Singh)  (未署名) 消解[^doubt-resolved-639]: 据 jude-interesting_zfs-paper (vbsdcon, 2015) 消解[^doubt-resolved-640]: 据 davis-asplos-cheriabi-paper-2 (standalone, 2019) 消解<!-- DB_REF:freebsd.duckdb -->> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 2010-2010 年间：34,527 次提交。> 仓库总览：1,294,851 次提交，13,875 位贡献者，1993-06-12 至 2026-08-25。
+
+<!-- PODCAST_MINE v20260827 -->
+<!-- Chapter: 第117章-capsicum在freebsd的集成与演进 -->
+
+## 要点（播客口述史提取）
+- I guess we got a new BSD router project release that's come out.
+- So the BSD Router project has released version 1.70.
+- because they can't work with the drivers that are in the older version of FreeBSD.
+- FreeBSD 10.1, 10.2, and 10.3 were all built on 10.1
+- Shell Account I paid for is how I got introduced to FreeBSD.
+- My first experience with BSD was open BSD on a spark 64
+- If you really wanted to run an old version of FreeBSD,
+- giving up but if you use a version of BSD that's not sold it doesn't have G
+
+## 史料（播客提及）
+- [BSD Now EP178 @ 1049.48] I think we breed that geekified BSD Linux Unix error, where it's like, that's the stuff
+- [BSD Now EP178 @ 1275.6] and increase our understanding of how free BSD actually
+- [BSD Now EP38 @ 1270.97998046875] So like currently I think it's, FreeBSD 9.1 is supported longer than 9.2 because 9.1 was
+- [BSD Now EP38 @ 142.1999969482422] So at the conference Dan started, well actually I think they originally came from MeetBSD,
+- [BSD Now EP38 @ 1710.699951171875] That's one thing that's kind of missing in free BSD. So they talk about how you can actually build your NAS using
+
+## 史观（播客当事人观点与总纲映射）
+- [BSD Now EP178 @ 1049.48] I think we breed that geekified BSD Linux Unix error, where it's like, that's the stuff
+- [BSD Now EP178 @ 1275.6] and increase our understanding of how free BSD actually
+  → 史观映射：总纲19——解释学循环是历史认识的根本条件
+- [BSD Now EP38 @ 1270.97998046875] So like currently I think it's, FreeBSD 9.1 is supported longer than 9.2 because 9.1 was
+- [BSD Now EP38 @ 142.1999969482422] So at the conference Dan started, well actually I think they originally came from MeetBSD,
+- [BSD Now EP38 @ 1710.699951171875] That's one thing that's kind of missing in free BSD. So they talk about how you can actually build your NAS using
+- [BSD Now EP38 @ 1752.2999267578125] BSD system or whatever NAS you have is actually a really good idea. So I recommend it as a read to
+- [BSD Now EP38 @ 2109.4599609375] So I think I searched for something like free operating system, not Linux and free BSD came up.
+  → 史观映射：总纲18——时间是一种形式主义
+- [BSD Now EP38 @ 3294.699951171875] So way back in 1997, you guys remember those days? Well, back then NetBSD forked the FreeBSD
+  → 史观映射：总纲4——分离聚合是永恒规律
+
+## 辨析（播客争议与存疑点）
+- [存疑脚注] [BSD Now EP38 @ 3294.699951171875] So way back in 1997, you guys remember those days? Well, back then NetBSD forked the FreeBSD
+- [存疑脚注] [BSD Now EP38 @ 857.7799682617188] BSD on other stuff and actually having GCC completely removed from the base
+- [存疑脚注] [BSD Now EP93 @ 440.55999755859375] the research fork of FreeBSD that uses the
+
+## 文献（播客参考条目）
+- [BSD Now EP178] Pennington J. BSD Now: 178: Enjoy the Silence[EB/OL]. (2017-01-25)[2026-08-15]. https://www.bsdnow.tv/178.
+- [BSD Now EP38] Pennington J. BSD Now: 38: A BUG's Life[EB/OL]. (2014-05-21)[2026-08-15]. https://www.bsdnow.tv/38.
+- [BSD Now EP93] Pennington J. BSD Now: 93: Stacked in Our Favor[EB/OL]. (2015-06-10)[2026-08-15]. https://www.bsdnow.tv/93.
+
+<!-- /PODCAST_MINE -->

@@ -47,3 +47,23 @@ volume: 第16卷-开源运动与合规治理
 - DARPA 2001-2005 年度报告；Watson"TrustedBSD Final Report" ［B］
 - NIST SSP Repository；FreeBSD Foundation 2023-09 SSDF Statement[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]
 - NIST SP 800-218 Appendix C；FedRAMP SSP Template[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]
+
+<!-- PODCAST_MINE v20260827 -->
+<!-- Chapter: 第304章-合规认证与标准遵守-commoncriteria -->
+
+## 要点（播客口述史提取）
+- （该章节匹配播客中暂未提取到相关核心史实陈述）
+
+## 史料（播客提及）
+- （待提取）
+
+## 史观（播客当事人观点与总纲映射）
+- （该章节匹配播客中暂未提取到相关当事人观点）
+
+## 辨析（播客争议与存疑点）
+- （该章节匹配播客中暂未提取到相关争议点）
+
+## 文献（播客参考条目）
+- [BSD Now EP121] Pennington J. BSD Now: 121: All your hyves are belong to us[EB/OL]. (2015-12-23)[2026-08-15]. https://www.bsdnow.tv/121.
+
+<!-- /PODCAST_MINE -->

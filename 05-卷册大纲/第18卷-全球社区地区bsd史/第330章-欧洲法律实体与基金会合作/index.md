@@ -48,3 +48,35 @@ volume: 第18卷-全球社区地区bsd史
 - 媒体调研；学术研究；社区问卷[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]<!-- DB_REF:freebsd.duckdb -->> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 1993-2026 年间：1,294,851 次提交。> 仓库总览：1,294,851 次提交，13,875 位贡献者，1993-06-12 至 2026-08-25。
 - 立场文件；演讲视频；邮件列表；媒体报道 ［A］
 - 作者不详. 用户组档案[Z]. 年份不详；作者不详. 邮件列表[EB/OL]. 年份不详；作者不详. 个人回忆[Z]. 年份不详 ［A］
+
+<!-- PODCAST_MINE v20260827 -->
+<!-- Chapter: 第330章-欧洲法律实体与基金会合作 -->
+
+## 要点（播客口述史提取）
+- （该章节匹配播客中暂未提取到相关核心史实陈述）
+
+## 史料（播客提及）
+- （待提取）
+
+## 史观（播客当事人观点与总纲映射）
+- （该章节匹配播客中暂未提取到相关当事人观点）
+
+## 辨析（播客争议与存疑点）
+- （该章节匹配播客中暂未提取到相关争议点）
+
+## 文献（播客参考条目）
+- [BSD Now EP3] Pennington J. BSD Now: 3: MX with TTX[EB/OL]. (2013-09-18)[2026-08-15]. https://www.bsdnow.tv/3.
+- [BSD Now EP32] Pennington J. BSD Now: 32: PXE Dust[EB/OL]. (2014-04-09)[2026-08-15]. https://www.bsdnow.tv/32.
+- [BSD Now EP136] Pennington J. BSD Now: 136: This is GNN[EB/OL]. (2016-04-06)[2026-08-15]. https://www.bsdnow.tv/136.
+- [BSD Now EP134] Pennington J. BSD Now: 134: Marking up the Ports tree[EB/OL]. (2016-03-24)[2026-08-15]. https://www.bsdnow.tv/134.
+- [BSD Now EP558] Pennington J. BSD Now: 558: Worlds of telnet[EB/OL]. (2024-05-09)[2026-08-15]. https://www.bsdnow.tv/558.
+- [BSD Now EP126] Pennington J. BSD Now: 126: Illuminating the future on PC-BSD[EB/OL]. (2016-01-27)[2026-08-15]. https://www.bsdnow.tv/126.
+- [BSD Now EP194] Pennington J. BSD Now: 194: Daemonic plans[EB/OL]. (2017-05-17)[2026-08-15]. https://www.bsdnow.tv/194.
+- [BSD Now EP147] Pennington J. BSD Now: 147: Release all the things![EB/OL]. (2016-06-22)[2026-08-15]. https://www.bsdnow.tv/147.
+- [BSD Now EP52] Pennington J. BSD Now: 52: Reverse Takeover[EB/OL]. (2014-08-27)[2026-08-15]. https://www.bsdnow.tv/52.
+- [BSD Now EP392] Pennington J. BSD Now: 392: macOS inspired Desktop[EB/OL]. (2021-03-04)[2026-08-15]. https://www.bsdnow.tv/392.
+- [BSD Now EP265] Pennington J. BSD Now: Episode 265: Software Disenchantment | BSD Now 265[EB/OL]. (2018-09-27)[2026-08-15]. https://www.bsdnow.tv/265.
+- [BSD Now EP616] Pennington J. BSD Now: 616: FreeBSD Foundation Interview[EB/OL]. (2025-06-19)[2026-08-15]. https://www.bsdnow.tv/616.
+- [BSD Now EP123] Pennington J. BSD Now: 123: ZFS in the trenches[EB/OL]. (2016-01-06)[2026-08-15]. https://www.bsdnow.tv/123.
+
+<!-- /PODCAST_MINE -->

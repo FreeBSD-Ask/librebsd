@@ -51,3 +51,43 @@ volume: 第15卷-许可证哲学与法律分析
 - FreeBSD 官方中文 Handbook（`https://docs.freebsd.org/zh-cn/books/handbook/`）；FreeBSD 翻译平台 Weblate（`https://translate-dev.freebsd.org/`）；FreeBSD 7.0-RELEASE 文档存档（`https://docs-archive.freebsd.org/doc/7.0-RELEASE/usr/share/doc/zh_CN/`，delphij CVS 标签一手核验）；FreeBSD 中文社区博客园（`https://www.cnblogs.com/FreeBSD-CN`）[考据完成：2026-07-30 经 docs.freebsd.org、translate-dev.freebsd.org、docs-archive.freebsd.org 一手核验]<!-- DB_REF:freebsd.duckdb -->> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 2003-2026 年间：1,102,265 次提交。> 仓库总览：1,294,851 次提交，13,875 位贡献者，1993-06-12 至 2026-08-25。
 - freebsd-doc 邮件列表；社区论坛 ［A］；项目统摄史观第 14 章 “动手者创造历史”[Z]. 据原文第 14 章## 史料考据补充（2026-08-04 任务3 联网核验）> 主题：文档哲学——道与术、复制粘贴与启蒙
 - freebsd-doc 邮件列表；社区表彰记录 ［A］## 史料考据补充（2026-08-04 任务3 联网核验）> 主题：文档创作者——被忽视的动手者
+
+<!-- PODCAST_MINE v20260827 -->
+<!-- Chapter: 第292章-freebsd图书视频与在线资源史 -->
+
+## 要点（播客口述史提取）
+- time that was BSD. There was no version. Someone says, oh I have a one BSD distribution. Well,
+- did 3BSD. One of the very first things that I did was find all the sources and put them
+- Sun had taken the original BSD and had overhauled it by putting in a new virtual memory system
+- And they were like, as soon as they got home from your BSD con, they pumped out a release.
+- First of all, if you've ever built ports on any BSD system,
+- a talk a comprehensive look at bsd config which i thought was cool and then i started digging into
+- So Dragonfly users started porting the new AMD KMS drivers from FreeBSD,
+- Speaking of graphics support, NetBSD has started work on NVIDIA drivers.
+
+## 史料（播客提及）
+- [BSD Now EP5 @ 2591.760009765625] uh there was a talk i think this same talk might have been at bsd can as well uh sure yeah uh
+- [BSD Now EP5 @ 2868.119873046875] Well, even I think a lot of FreeBSD developers are kind of moving towards PCBSD
+- [BSD Now EP5 @ 3170.419921875] drew levine actually wrote a book called bsd tricks what is it called a hack bsd hacks yes
+- [BSD Now EP5 @ 3177.5400390625] bsd hacks i have a hard copy of it somewhere in my house it was actually what passed for the
+- [BSD Now EP5 @ 658.0] I think the website's already up at 2014.eurobsdcon.org or is it.com?
+
+## 史观（播客当事人观点与总纲映射）
+- [BSD Now EP5 @ 2591.760009765625] uh there was a talk i think this same talk might have been at bsd can as well uh sure yeah uh
+- [BSD Now EP5 @ 2868.119873046875] Well, even I think a lot of FreeBSD developers are kind of moving towards PCBSD
+- [BSD Now EP5 @ 3170.419921875] drew levine actually wrote a book called bsd tricks what is it called a hack bsd hacks yes
+- [BSD Now EP5 @ 3177.5400390625] bsd hacks i have a hard copy of it somewhere in my house it was actually what passed for the
+- [BSD Now EP5 @ 658.0] I think the website's already up at 2014.eurobsdcon.org or is it.com?
+- [BSD Now EP5 @ 917.4599609375] But next up, we've actually recorded a lot of interviews while we were out at EuroBSD.
+- [BSD Now EP261 @ 10.4] OpenBSD's measures against the TL bleed, we play Morrowind, or you can play Morrowind actually
+- [BSD Now EP261 @ 4382.2] In FreeBSD 12, a new commit just went in recently that I think will help address
+
+## 辨析（播客争议与存疑点）
+- [存疑脚注] [BSD Now EP261 @ 2989.64] They said that last week Foronix carried out some tests on BSD vs Linux on a new threadripper 2990WX
+- [存疑脚注] [BSD Now EP261 @ 460.98] Maintaining a fork of the FreeBSD ports tree is a non-trivial task. There are 30,000 packages in there.
+
+## 文献（播客参考条目）
+- [BSD Now EP5] Pennington J. BSD Now: 5: Stacks of Cache[EB/OL]. (2013-10-02)[2026-08-15]. https://www.bsdnow.tv/5.
+- [BSD Now EP261] Pennington J. BSD Now: Episode 261: FreeBSDcon Flashback | BSD Now 261[EB/OL]. (2018-08-30)[2026-08-15]. https://www.bsdnow.tv/261.
+
+<!-- /PODCAST_MINE -->

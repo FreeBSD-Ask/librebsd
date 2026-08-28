@@ -38,3 +38,43 @@ volume: 第05卷-freebsd的工程化奠基
 ## 文献
 
 - [DB:references_fulltext] 参考文献全文数据库（4077 篇全文，27138 条时间线事件）—— 对应 freebsd.duckdb
+
+<!-- PODCAST_MINE v20260827 -->
+<!-- Chapter: 第89章-freebsd-ports系统的起源与jordan-hubbard谱系 -->
+
+## 要点（播客口述史提取）
+- added to it since he presented it originally uh he said it was an exciting trip with an opportunity
+- but he says he got started in OpenBSD back about the time when he started college,
+- So he says, my first example is a bug in the original NetBSD FTP client,
+- So he took the original NetBSD FTP client and they added one feature.
+- So, Andrew Gapon re-implemented it in the FreeBSD native ZFS or VFS specific bits.
+- Yeah. So on a Lumos, in that ZFS directory under snapshots, you can create a new snapshot by doing mkdir, the name of the snapshot, and it will create a snapshot. That worked on FreeBSD until it was removed yesterday. What never worked on FreeBSD were the other bits of it, where on a Lumos, you can also delete a snapshot by removing the directory. 
+- in FreeBSD first, was there anything else that led you into working on encrypted crash dumps?
+- developers I went to EuroBSD call in 2013 where I met Pavel so I could
+
+## 史料（播客提及）
+- [BSD Now EP184 @ 3610.33984375] And I think it's very important to have such technical support
+- [BSD Now EP184 @ 3685.179931640625] you and actually even Thomas or Tras before you becoming developers in FreeBSD after going
+- [BSD Now EP184 @ 4439.07958984375] So I think you'd need to read the book and then once you understand the concepts, apply the FreeBSD style guide to your code.
+- [BSD Now EP184 @ 5301.60009765625] will be able to use free bsd update again i think that's the idea here he said should i post to a
+- [BSD Now EP184 @ 5305.72021484375] particular mailing list file a bug report do both or something else well i think you're already
+
+## 史观（播客当事人观点与总纲映射）
+- [BSD Now EP184 @ 3610.33984375] And I think it's very important to have such technical support
+- [BSD Now EP184 @ 3685.179931640625] you and actually even Thomas or Tras before you becoming developers in FreeBSD after going
+- [BSD Now EP184 @ 4439.07958984375] So I think you'd need to read the book and then once you understand the concepts, apply the FreeBSD style guide to your code.
+- [BSD Now EP184 @ 5301.60009765625] will be able to use free bsd update again i think that's the idea here he said should i post to a
+- [BSD Now EP184 @ 5305.72021484375] particular mailing list file a bug report do both or something else well i think you're already
+- [BSD Now EP184 @ 5376.9599609375] that i found that list free bsd included just with unix and linux and they don't actually run it well
+- [BSD Now EP184 @ 759.0399780273438] The point there is that you can actually build NetBSD on not NetBSD,
+- [BSD Now EP74 @ 111.37999725341797] But Jordan Hubbard, I think, did the keynote for that,
+
+## 辨析（播客争议与存疑点）
+- [存疑脚注] [BSD Now EP184 @ 1677.199951171875] which is what OpenBSD would have inherited when they forked from NetBSD.
+- [存疑脚注] [BSD Now EP184 @ 2136.919921875] Yeah. So on a Lumos, in that ZFS directory under snapshots, you can create a new snapshot by doing mkdir, the name of the snapshot, and it will create a snapshot. That worked on FreeBSD until it was removed yesterday. What never worked on FreeBSD wer
+
+## 文献（播客参考条目）
+- [BSD Now EP184] Pennington J. BSD Now: 184: Tokyo Dreaming[EB/OL]. (2017-03-08)[2026-08-15]. https://www.bsdnow.tv/184.
+- [BSD Now EP74] Pennington J. BSD Now: 74: That Sly MINIX[EB/OL]. (2015-01-28)[2026-08-15]. https://www.bsdnow.tv/74.
+
+<!-- /PODCAST_MINE -->

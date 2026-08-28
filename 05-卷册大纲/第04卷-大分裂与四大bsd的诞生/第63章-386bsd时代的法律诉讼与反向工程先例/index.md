@@ -45,3 +45,43 @@ volume: 第04卷-大分裂与四大bsd的诞生
 - OpenBSD 1.0 Release Notes (1996.7)；NetBSD 1.0 Release Notes (1994.10)；4.4BSD-Lite Release Notes (1994.6)；4.4BSD SMM: 16《On the Security of UNIX》；McKusick M K, Bostic K, Karels M J, Quarterman J S. The Design and Implementation of the 4.4BSD Operating System [M]. Reading, MA: Addison-Wesley, 1996. ISBN 0-201-54979-4 ［A］[^doubt-resolved-264]: 据 Mac OS X Internals A Systems Approach (Amit Singh（阿米特·辛格）)  (未署名) 消解[^doubt-resolved-265]: 据 Mac OS X Internals A Systems Approach (Amit Singh)  (未署名) 消解
 - Lotus Dev. Corp. v. Borland Int'l, Inc., 49 F.3d 807 (1st Cir. 1995) & 516 U.S. 233 (1996)；Oracle Am., Inc. v. Google Inc., 750 F.3d 1339 (Fed. Cir. 2014)；Google LLC v. Oracle America, Inc., 593 U.S. 1 (2021)；Sega Enterprises, Ltd. v. Accolade, Inc., 977 F.2d 1510 (9th Cir. 1992)；CSRG Net/2 重写工程记录 ［A］<!-- NEWREF:2362 --><!-- NEWREF:2363 --><!-- NEWREF:2364 --><!-- NEWREF:2365 --><!-- NEWREF:2366 --><!-- NEWREF:2367 --><!-- NEWREF:2368 --><!-- NEWREF:2369 -->
 - ORACLE USA, Inc. v. SAP AG, No. 4:07-cv-01658 (N.D. Cal.)[Z/OL]. 美国加州北区联邦地区法院，2007-2014. <https://www.courtlistener.com/docket/>；Oracle Corp. v. SAP AG, 2011 WL 3861945 (N.D. Cal. 2011)（Hamilton 法官减赔令）；Oracle America, Inc. v. SAP AG, 765 F.3d 1080 (9th Cir. 2014)（第九巡回 3.567 亿美元裁定） ［A］<!-- NEWREF:2389 --><!-- NEWREF:2390 --><!-- NEWREF:2391 --><!-- NEWREF:2437 -->
+
+<!-- PODCAST_MINE v20260827 -->
+<!-- Chapter: 第63章-386bsd时代的法律诉讼与反向工程先例 -->
+
+## 要点（播客口述史提取）
+- the wait is over 11.0 freebsd has officially launched we're going to have coverage of this
+- And that, yes, as of the release on Monday, you can now create ZFS or UFS images of FreeBSD 11 in DigitalOcean and be all ready to go.
+- And by default in FreeBSD 8 and 9, you would have to edit the image after you built it before you run it to actually let you have a serial console.
+- so I started working on implementing, selecting ZFS boot environments from the FreeBSD loaders menu.
+- And then some things to watch out for that changed in FreeBSD 11.
+- But it says that 386BSD was last released in 1994 with a series of articles in Dr. Dobbs Journal.
+- But then developers for this BSD operating system started migrating both the FreeBSD and NetBSD.
+- Until Wednesday when Lynn Jolitz, one of the co-authors of 386BSD, released the source code to version 1.0 as well as 2.0 up on GitHub.
+
+## 史料（播客提及）
+- [BSD Now EP163 @ 187.01998901367188] And by default in FreeBSD 8 and 9, you would have to edit the image after you built it before you run it to actually let you have a serial console.
+- [BSD Now EP163 @ 346.1000061035156] Now you can override those in the jail so that it will actually report that it's FreeBSD 9.3.
+- [BSD Now EP163 @ 3866.8798828125] I think that one of the things I saw in FreeBSD11 is the jails.
+- [BSD Now EP163 @ 5957.6396484375] Of course, the website for that, IXSystems.com slash BSD now, where you can go and get in touch with those sales folks, those sales engineers, actually, who you can actually have a real conversation.
+- [BSD Now EP163 @ 6193.06005859375] and that's actually what led to there being FreeBSD and NetBSD.
+
+## 史观（播客当事人观点与总纲映射）
+- [BSD Now EP163 @ 187.01998901367188] And by default in FreeBSD 8 and 9, you would have to edit the image after you built it before you run it to actually let you have a serial console.
+- [BSD Now EP163 @ 346.1000061035156] Now you can override those in the jail so that it will actually report that it's FreeBSD 9.3.
+- [BSD Now EP163 @ 3866.8798828125] I think that one of the things I saw in FreeBSD11 is the jails.
+- [BSD Now EP163 @ 5957.6396484375] Of course, the website for that, IXSystems.com slash BSD now, where you can go and get in touch with those sales folks, those sales engineers, actually, who you can actually have a real conversation.
+- [BSD Now EP163 @ 6193.06005859375] and that's actually what led to there being FreeBSD and NetBSD.
+- [BSD Now EP163 @ 6217.4599609375] But yeah, it's definitely interesting seeing some of the history of it and also, you know, some of the features they promised that eventually we got to see that are, you know, how different it is from what FreeBSD and NetBSD actually started with.
+  → 史观映射：总纲23——一切历史写作都是基于哲学设定的历史小说
+- [BSD Now EP163 @ 6333.6796875] I've seen a little bit of talk about this at BSDCAN last year, I think.
+- [BSD Now EP163 @ 6438.81982421875] I think we could have some really big wins having some kind of these tools on FreeBSD.
+
+## 辨析（播客争议与存疑点）
+- （该章节匹配播客中暂未提取到相关争议点）
+
+## 文献（播客参考条目）
+- [BSD Now EP163] Pennington J. BSD Now: 163: Return of the Cantrill[EB/OL]. (2016-10-12)[2026-08-15]. https://www.bsdnow.tv/163.
+- [BSD Now EP170] Pennington J. BSD Now: 170: Sandboxing Cohabitation[EB/OL]. (2016-11-30)[2026-08-15]. https://www.bsdnow.tv/170.
+
+<!-- /PODCAST_MINE -->

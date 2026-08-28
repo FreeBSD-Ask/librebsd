@@ -61,3 +61,45 @@ volume: 第04卷-大分裂与四大bsd的诞生
 - AMD x86-64 移植项目记录；Wasabi 公司公告 2001.6[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]
 - NetBSD Project. Formal Releases History [EB/OL]. [2026-07-19]. <https://www.netbsd.org/releases/formal.html>[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]
 - Intel Capital 投资公告 2002.9；Wasabi-Intel 合作协议摘要[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]
+
+<!-- PODCAST_MINE v20260827 -->
+<!-- Chapter: 第68章-netbsd的贡献者与de-raadt被驱逐事件 -->
+
+## 要点（播客口述史提取）
+- How did you first get involved and find your way to BSD?
+- head yet it's not an 11 uh but it should land in time for freebsd 11.0's release uh but right now
+- started with FreeBSD. So of course, we'll have the link to that in the show notes. You'll have to go
+- Well, I think it started around 1998 or something like that, as far as BSD is concerned.
+- Because my first year at BSDCon, I was the very last talk.
+- desktop which is being developed on pcbsd so that was pretty cool and then of course drew did a
+- So you can take a look at that and see what's changed in PCBSD land.
+- So if you're on 9, 10, or any supported version of FreeBSD,
+
+## 史料（播客提及）
+- [BSD Now EP144 @ 218.45999145507812] So that, and he also mentioned in the slides here, working with other OSs that may want pledge support as well, which, frankly, I think that would complement a lot of the other BSDs very well.
+- [BSD Now EP144 @ 2340.639892578125] But when you create your new account, don't forget to use the coupon code FREEBSDNOW, which is going to give you that $10 credit so you can run basically two months of their lower-end VM, which for a low-end VM, it's actually pretty not bad.
+- [BSD Now EP144 @ 2939.33984375] follow-up to last week, we had, of course, the breaking news that FreeBSD actually was growing
+- [BSD Now EP144 @ 3423.179931640625] that's actually a convention that's purposely used in the FreeBSD documentation
+- [BSD Now EP144 @ 593.260009765625] this one actually has landed already in FreeBSD Head,
+
+## 史观（播客当事人观点与总纲映射）
+- [BSD Now EP144 @ 218.45999145507812] So that, and he also mentioned in the slides here, working with other OSs that may want pledge support as well, which, frankly, I think that would complement a lot of the other BSDs very well.
+- [BSD Now EP144 @ 2340.639892578125] But when you create your new account, don't forget to use the coupon code FREEBSDNOW, which is going to give you that $10 credit so you can run basically two months of their lower-end VM, which for a low-end VM, it's actually pretty not bad.
+  → 史观映射：总纲23——一切历史写作都是基于哲学设定的历史小说; 总纲18——时间是一种形式主义
+- [BSD Now EP144 @ 2939.33984375] follow-up to last week, we had, of course, the breaking news that FreeBSD actually was growing
+- [BSD Now EP144 @ 3423.179931640625] that's actually a convention that's purposely used in the FreeBSD documentation
+- [BSD Now EP144 @ 593.260009765625] this one actually has landed already in FreeBSD Head,
+- [BSD Now EP43 @ 1011.2999267578125] Yeah, well, that's kind of the focus the FreeBSD Foundation has been doing on which jobs they're actually funding.
+  → 史观映射：总纲11——商品是形式主义
+- [BSD Now EP43 @ 1398.47998046875] Well, I think it started around 1998 or something like that, as far as BSD is concerned.
+- [BSD Now EP43 @ 1424.9599609375] And well, it turned out that OpenBSD was the only thing which had any kind of documentation
+
+## 辨析（播客争议与存疑点）
+- （该章节匹配播客中暂未提取到相关争议点）
+
+## 文献（播客参考条目）
+- [BSD Now EP144] Pennington J. BSD Now: 144: The PF life[EB/OL]. (2016-06-01)[2026-08-15]. https://www.bsdnow.tv/144.
+- [BSD Now EP43] Pennington J. BSD Now: 43: Package Design[EB/OL]. (2014-06-25)[2026-08-15]. https://www.bsdnow.tv/43.
+- [BSD Now EP376] Pennington J. BSD Now: 376: Build stable packages[EB/OL]. (2020-11-12)[2026-08-15]. https://www.bsdnow.tv/376.
+
+<!-- /PODCAST_MINE -->

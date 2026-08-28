@@ -41,3 +41,24 @@ volume: 第01卷-unix的起源
 ## 文献
 
 - Thompson, K. (1984) "Reflections on Trusting Trust", Communications of the ACM, 27(8), 761-763 ［B］
+
+<!-- PODCAST_MINE v20260827 -->
+<!-- Chapter: 第3章-multics与同时期操作系统比较 -->
+
+## 要点（播客口述史提取）
+- （该章节匹配播客中暂未提取到相关核心史实陈述）
+
+## 史料（播客提及）
+- （待提取）
+
+## 史观（播客当事人观点与总纲映射）
+- （该章节匹配播客中暂未提取到相关当事人观点）
+
+## 辨析（播客争议与存疑点）
+- （该章节匹配播客中暂未提取到相关争议点）
+
+## 文献（播客参考条目）
+- [BSD Now EP214] Pennington J. BSD Now: 214: The history of man, kind[EB/OL]. (2017-10-04)[2026-08-15]. https://www.bsdnow.tv/214.
+- [BSD Now EP171] Pennington J. BSD Now: 171: The APU - BSD Style![EB/OL]. (2016-12-07)[2026-08-15]. https://www.bsdnow.tv/171.
+
+<!-- /PODCAST_MINE -->
