@@ -52,3 +52,24 @@ volume: 第02卷-伯克利的岁月
 - FOIA 请求档案；BBN 历史档案（部分公开）[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]
 - BSD License (1988) 原文；McKusick, M. K. (1999) "Twenty Years of Berkeley Unix" ［B］
 - McKusick, M. K. (1999) "Twenty Years of Berkeley Unix"；Quarterman, J. S. et al. (1985) "4.2BSD and 4.3BSD as examples of the Unix system", ACM Computing Surveys 17(4): 379-418, DOI: 10.1145/6041.6043；统计分析报告：文献计量学分析.md Task 22 [R/OL]. 2026-07-27. 文件路径：**c:\Users\ykla\Documents\hibsd\03-原始史料库\01-代码仓库史料\01-数据库本体\统计分析\文献计量学分析.md**；统计分析报告：描述性统计.md SubTask 2.1 [R/OL]. 2026-07-27. 文件路径：**c:\Users\ykla\Documents\hibsd\03-原始史料库\01-代码仓库史料\01-数据库本体\统计分析\描述性统计.md**；SQL 查询：`SELECT id, gbt7714 FROM "references"` 与 `SELECT COUNT(*) FROM commits WHERE repo_name='freebsd-src'`. 资料数据库.db 与 bsd_commits.db [DB/OL]. 查询日期：2026-07-27；Python 统计脚本：`script/phase6_bibliometrics.py` Task 22 与 `script/phase1_descriptive.py` SubTask 2.1. 执行日期：2026-07-27 ［B］
+
+<!-- PODCAST_MINE v20260827 -->
+<!-- 章节主题过滤：第30章-darpa的选择 第 30 章 darpa的选择（实体评分 ≥2 命中才入选） -->
+<!-- 匹配期数：1 期，扫描 segments：1552 条 -->
+
+### 要点（播客口述史提取）
+- （该章节匹配播客中未提取到高置信度核心史实，需人工深挖）
+
+### 史料（播客当事人陈述）
+- （待人工提取）
+
+### 史观（播客当事人观点与总纲映射）
+- （该章节匹配播客中未提取到当事人观点性陈述）
+
+### 辨析（播客争议与存疑点）
+- （该章节匹配播客中未提取到争议性陈述）
+
+### 文献（播客参考条目）
+- [BSD Now EP190] Pennington J. BSD Now: 190: The Moore You Know[EB/OL]. (2017-04-19)[2026-08-15]. https://www.bsdnow.tv/190.
+
+<!-- /PODCAST_MINE -->

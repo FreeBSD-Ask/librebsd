@@ -47,41 +47,28 @@ volume: 第04卷-大分裂与四大bsd的诞生
 - ORACLE USA, Inc. v. SAP AG, No. 4:07-cv-01658 (N.D. Cal.)[Z/OL]. 美国加州北区联邦地区法院，2007-2014. <https://www.courtlistener.com/docket/>；Oracle Corp. v. SAP AG, 2011 WL 3861945 (N.D. Cal. 2011)（Hamilton 法官减赔令）；Oracle America, Inc. v. SAP AG, 765 F.3d 1080 (9th Cir. 2014)（第九巡回 3.567 亿美元裁定） ［A］<!-- NEWREF:2389 --><!-- NEWREF:2390 --><!-- NEWREF:2391 --><!-- NEWREF:2437 -->
 
 <!-- PODCAST_MINE v20260827 -->
-<!-- Chapter: 第63章-386bsd时代的法律诉讼与反向工程先例 -->
+<!-- 章节主题过滤：第63章-386bsd时代的法律诉讼与反向工程先例 第 63 章 386bsd时代的法律诉讼与反向工程先例（实体评分 ≥2 命中才入选） -->
+<!-- 匹配期数：7 期，扫描 segments：6948 条 -->
 
-## 要点（播客口述史提取）
-- the wait is over 11.0 freebsd has officially launched we're going to have coverage of this
-- And that, yes, as of the release on Monday, you can now create ZFS or UFS images of FreeBSD 11 in DigitalOcean and be all ready to go.
-- And by default in FreeBSD 8 and 9, you would have to edit the image after you built it before you run it to actually let you have a serial console.
-- so I started working on implementing, selecting ZFS boot environments from the FreeBSD loaders menu.
-- And then some things to watch out for that changed in FreeBSD 11.
-- But it says that 386BSD was last released in 1994 with a series of articles in Dr. Dobbs Journal.
-- But then developers for this BSD operating system started migrating both the FreeBSD and NetBSD.
-- Until Wednesday when Lynn Jolitz, one of the co-authors of 386BSD, released the source code to version 1.0 as well as 2.0 up on GitHub.
+### 要点（播客口述史提取）
+- （该章节匹配播客中未提取到高置信度核心史实，需人工深挖）
 
-## 史料（播客提及）
-- [BSD Now EP163 @ 187.01998901367188] And by default in FreeBSD 8 and 9, you would have to edit the image after you built it before you run it to actually let you have a serial console.
-- [BSD Now EP163 @ 346.1000061035156] Now you can override those in the jail so that it will actually report that it's FreeBSD 9.3.
-- [BSD Now EP163 @ 3866.8798828125] I think that one of the things I saw in FreeBSD11 is the jails.
-- [BSD Now EP163 @ 5957.6396484375] Of course, the website for that, IXSystems.com slash BSD now, where you can go and get in touch with those sales folks, those sales engineers, actually, who you can actually have a real conversation.
-- [BSD Now EP163 @ 6193.06005859375] and that's actually what led to there being FreeBSD and NetBSD.
+### 史料（播客当事人陈述）
+- （待人工提取）
 
-## 史观（播客当事人观点与总纲映射）
-- [BSD Now EP163 @ 187.01998901367188] And by default in FreeBSD 8 and 9, you would have to edit the image after you built it before you run it to actually let you have a serial console.
-- [BSD Now EP163 @ 346.1000061035156] Now you can override those in the jail so that it will actually report that it's FreeBSD 9.3.
-- [BSD Now EP163 @ 3866.8798828125] I think that one of the things I saw in FreeBSD11 is the jails.
-- [BSD Now EP163 @ 5957.6396484375] Of course, the website for that, IXSystems.com slash BSD now, where you can go and get in touch with those sales folks, those sales engineers, actually, who you can actually have a real conversation.
-- [BSD Now EP163 @ 6193.06005859375] and that's actually what led to there being FreeBSD and NetBSD.
-- [BSD Now EP163 @ 6217.4599609375] But yeah, it's definitely interesting seeing some of the history of it and also, you know, some of the features they promised that eventually we got to see that are, you know, how different it is from what FreeBSD and NetBSD actually started with.
-  → 史观映射：总纲23——一切历史写作都是基于哲学设定的历史小说
-- [BSD Now EP163 @ 6333.6796875] I've seen a little bit of talk about this at BSDCAN last year, I think.
-- [BSD Now EP163 @ 6438.81982421875] I think we could have some really big wins having some kind of these tools on FreeBSD.
+### 史观（播客当事人观点与总纲映射）
+- （该章节匹配播客中未提取到当事人观点性陈述）
 
-## 辨析（播客争议与存疑点）
-- （该章节匹配播客中暂未提取到相关争议点）
+### 辨析（播客争议与存疑点）
+- （该章节匹配播客中未提取到争议性陈述）
 
-## 文献（播客参考条目）
+### 文献（播客参考条目）
+- [BSD Now EP26] Pennington J. BSD Now: 26: Port Authority[EB/OL]. (2014-02-26)[2026-08-15]. https://www.bsdnow.tv/26.
+- [BSD Now EP91] Pennington J. BSD Now: 91: Vox Populi[EB/OL]. (2015-05-27)[2026-08-15]. https://www.bsdnow.tv/91.
+- [BSD Now EP136] Pennington J. BSD Now: 136: This is GNN[EB/OL]. (2016-04-06)[2026-08-15]. https://www.bsdnow.tv/136.
 - [BSD Now EP163] Pennington J. BSD Now: 163: Return of the Cantrill[EB/OL]. (2016-10-12)[2026-08-15]. https://www.bsdnow.tv/163.
 - [BSD Now EP170] Pennington J. BSD Now: 170: Sandboxing Cohabitation[EB/OL]. (2016-11-30)[2026-08-15]. https://www.bsdnow.tv/170.
+- [BSD Now EP231] Pennington J. BSD Now: 231: Unix Architecture Evolution[EB/OL]. (2018-02-01)[2026-08-15]. https://www.bsdnow.tv/231.
+- [BSD Now EP259] Pennington J. BSD Now: Episode 259: Long Live Unix | BSD Now 259[EB/OL]. (2018-08-16)[2026-08-15]. https://www.bsdnow.tv/259.
 
 <!-- /PODCAST_MINE -->

@@ -38,3 +38,39 @@ volume: 第06卷-freebsd的核心技术革新
 - FreeBSD Project. *FreeBSD 7.0 Release Notes* (2008-02-27). freebsd.org; OpenZFS Project. *OpenZFS 2.0.0 Release Notes* (2020-11-30). github.com/openzfs/zfs/releases; Ubuntu Technical Board (2016-02). *Meeting Minutes*. lists.ubuntu.com; LWN.net. *ZFS Coverage Timeline*. lwn.net.[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]<!-- DB_REF:freebsd.duckdb -->> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 2010-2020 年间：488,947 次提交。> 仓库总览：1,294,851 次提交，13,875 位贡献者，1993-06-12 至 2026-08-25。
 - Internet Archive. *opensolaris.org Archive*. web.archive.org/web/*/<https://opensolaris.org>; illumos Project.* illumos-gate Repository *. github.com/illumos/illumos-gate; FreeBSD Project.* Vendor Import of OpenSolaris Code *. svn.freebsd.org/base/vendor/opensolaris/; genunix.org. * OpenSolaris Community Archive*. genunix.org; Dawidek P J. Please welcome ZFS - The last word in file systems. freebsd-src [DB/OL]. 2007-04-06T01:09:06Z. f0a75d274af375d15b97b830966b99a02b7db911. ［A］<!-- DB_REF:freebsd.duckdb -->> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 2005-2005 年间：42,570 次提交。> 仓库总览：1,294,851 次提交，13,875 位贡献者，1993-06-12 至 2026-08-25。
 - FreeBSD Project. *Mailing List Archives*. lists.freebsd.org/pipermail/; FreeBSD Project. *Git Repository*. git.freebsd.org/src.git; Dawidek, P. J. (2007). *Porting ZFS to FreeBSD*. BSDCan 2007; FreeBSD Project. *Subversion to Git Migration Notes* (2020); Dawidek P J. Please welcome ZFS - The last word in file systems. freebsd-src [DB/OL]. 2007-04-06T01:09:06Z. f0a75d274af375d15b97b830966b99a02b7db911. ［A］<!-- DB_REF:freebsd.duckdb -->> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 2010-2020 年间：488,947 次提交。> 仓库总览：1,294,851 次提交，13,875 位贡献者，1993-06-12 至 2026-08-25。
+
+<!-- PODCAST_MINE v20260827 -->
+<!-- 章节主题过滤：第110章-cddl许可证与freebsd集成 第110章 cddl许可证与freebsd集成（实体评分 ≥2 命中才入选） -->
+<!-- 匹配期数：5 期，扫描 segments：5253 条 -->
+
+### 要点（播客口述史提取）
+- collation thing, he decided it was time that FreeBSD got its proper string（BSD Now EP115 @ 1492.659）
+- So he started working with John and importing the Dragonfly code into FreeBSD.（BSD Now EP115 @ 1503.619）
+- had started that John extended and brought it back into FreeBSD. So now as a result of（BSD Now EP115 @ 1553.739）
+- thing that got me started into actually working on FreeBSD related things. And then,（BSD Now EP115 @ 1955.079）
+- But basically, when the cam target layer was originally introduced by a company in the FreeBSD,（BSD Now EP115 @ 687.2600）
+
+### 史料（播客当事人陈述）
+- Okay, so lastly here we got an article about switching from OS X to FreeBSD.（BSD Now EP115 @ 4176.520）
+- Certainly the FreeBSD 2.0 source code, which he has handy access to via the GitHub repo,（BSD Now EP131 @ 1491.479）
+- You know, buy the FreeBSD Mastery ZFS book.（BSD Now EP131 @ 3742.899）
+- utini has a nice blog post slash tutorial on how to get started with it on freebsd so first of all（BSD Now EP131 @ 4193.199）
+
+### 史观（播客当事人观点与总纲映射）
+- in FreeBSD so that will be uh I think I will have to go to that one and learn a bit more about it（BSD Now EP131 @ 430.6600）
+- Well, I think this is just an exporter similar to how FreeBSD does GitHub.（BSD Now EP203 @ 5152.779）
+- I think the FreeBSD port enabled SSL by default, I think, is what happened.（BSD Now EP203 @ 6702.379）
+- FreeBSD and I think OpenBSD for quite a long time. This is moving it out of the OS into the firewall.（BSD Now EP233 @ 2531.339）
+
+### 辨析（播客争议与存疑点）
+- [存疑脚注] Well, it has been forked to run on FreeBSD Open and NetBSD now as well.（BSD Now EP115 @ 1269.559）
+- [存疑脚注] So we fired up my laptop running FreeBSD beside it and attempted to recreate the problem there（BSD Now EP232 @ 186.02）
+
+### 文献（播客参考条目）
+- [BSD Now EP115] Pennington J. BSD Now: 115: Controlling the Transmissions[EB/OL]. (2015-11-11)[2026-08-15]. https://www.bsdnow.tv/115.
+- [BSD Now EP131] Pennington J. BSD Now: 131: BSD behind the chalkboard[EB/OL]. (2016-03-02)[2026-08-15]. https://www.bsdnow.tv/131.
+- [BSD Now EP203] Pennington J. BSD Now: 203: For the love of ZFS[EB/OL]. (2017-07-19)[2026-08-15]. https://www.bsdnow.tv/203.
+- [BSD Now EP232] Pennington J. BSD Now: 232: FOSDEM 2018[EB/OL]. (2018-02-07)[2026-08-15]. https://www.bsdnow.tv/232.
+- [BSD Now EP233] Pennington J. BSD Now: 233: High on ZFS[EB/OL]. (2018-02-14)[2026-08-15]. https://www.bsdnow.tv/233.
+
+<!-- /PODCAST_MINE -->

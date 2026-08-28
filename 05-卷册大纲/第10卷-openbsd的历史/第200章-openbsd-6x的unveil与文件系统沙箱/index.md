@@ -43,3 +43,31 @@ volume: 第10卷-openbsd的历史
 - OpenBSD Foundation 年报 [EB/OL]. <https://www.openbsdfoundation.org/>；加拿大政府报告；Foundation 官方文档 ［B］<!-- DB_REF:openbsd.duckdb -->> **数据库引用（openbsd.duckdb）**：本子节对应 openbsd 代码仓库。> 2013-2026 年间：248,174 次提交。> 仓库总览：491,195 次提交，3,352 位贡献者，1995-10-18 至 2026-08-25。
 - bsd_commits.db openbsd-src 仓库；OpenBSD 提交/文档/ports 贡献记录；OpenBSD 邮件列表存档 [EB/OL]. <https://marc.info/?laccopenbsd-misc> ［A］<!-- DB_REF:openbsd.duckdb -->> **数据库引用（openbsd.duckdb）**：本子节对应 openbsd 代码仓库。> 1995-2026 年间：491,195 次提交。> 仓库总览：491,195 次提交，3,352 位贡献者，1995-10-18 至 2026-08-25。
 - bsd_commits.db openbsd-src 仓库 commit e688c2b0648a；OpenBSD 6.4 Release Notes [EB/OL]. <https://www.openbsd.org/64.html>；Mortimer 邮件列表发言 [EB/OL]. <https://marc.info/?laccopenbsd-tech>；LLVM CFI 文档 [EB/OL]. <https://clang.llvm.org/docs/ControlFlowIntegrity.html>；Microsoft CFG 文档 [EB/OL]. <https://learn.microsoft.com/en-us/windows/win32/secbgctrl/control-flow-guard> ［A］---<!-- DB_REF:openbsd.duckdb -->> **数据库引用（openbsd.duckdb）**：本子节对应 openbsd 代码仓库。> 2016-2019 年间：73,060 次提交。> 仓库总览：491,195 次提交，3,352 位贡献者，1995-10-18 至 2026-08-25。
+
+<!-- PODCAST_MINE v20260827 -->
+<!-- 章节主题过滤：第200章-openbsd-6x的unveil与文件系统沙箱 第 200 章 openbsd-6x的unveil与文件系统沙箱（实体评分 ≥2 命中才入选） -->
+<!-- 匹配期数：6 期，扫描 segments：5545 条 -->
+
+### 要点（播客口述史提取）
+- Currently, it's only designed to compile and run on OpenBSD.（BSD Now EP282 @ 1600.22）
+
+### 史料（播客当事人陈述）
+- So we have here a commit by a visa at OpenBSD,（BSD Now EP250 @ 4048.3）
+- enable the unveil call. If you remember previously, we talked about when it was committed and it just（BSD Now EP258 @ 4040.679）
+- The manual pages in OpenBSD are real manuals,（BSD Now EP273 @ 2667.9）
+
+### 史观（播客当事人观点与总纲映射）
+- （该章节匹配播客中未提取到当事人观点性陈述）
+
+### 辨析（播客争议与存疑点）
+- （该章节匹配播客中未提取到争议性陈述）
+
+### 文献（播客参考条目）
+- [BSD Now EP183] Pennington J. BSD Now: 183: Getting Steamy Here[EB/OL]. (2017-03-01)[2026-08-15]. https://www.bsdnow.tv/183.
+- [BSD Now EP189] Pennington J. BSD Now: 189: Codified Summer[EB/OL]. (2017-04-12)[2026-08-15]. https://www.bsdnow.tv/189.
+- [BSD Now EP250] Pennington J. BSD Now: Episode 250: BSDCan 2018 Recap | BSD Now 250[EB/OL]. (2018-06-14)[2026-08-15]. https://www.bsdnow.tv/250.
+- [BSD Now EP258] Pennington J. BSD Now: Episode 258: OS Foundations | BSD Now 258[EB/OL]. (2018-08-08)[2026-08-15]. https://www.bsdnow.tv/258.
+- [BSD Now EP273] Pennington J. BSD Now: Episode 273: A Thoughtful Episode | BSD Now 273[EB/OL]. (2018-11-23)[2026-08-15]. https://www.bsdnow.tv/273.
+- [BSD Now EP282] Pennington J. BSD Now: 282: Open the Rsync[EB/OL]. (2019-01-24)[2026-08-15]. https://www.bsdnow.tv/282.
+
+<!-- /PODCAST_MINE -->

@@ -44,38 +44,38 @@ volume: 第10卷-openbsd的历史
 - 项目史观总纲第 13、19、21 条原文；de Raadt 邮件列表发言 [EB/OL]. <https://marc.info/?laccopenbsd-misc>；OpenBSD **pledge(2)** 手册页 [EB/OL]. <https://man.openbsd.org/pledge.2>；Linux seccomp-bpf 文档 [EB/OL]. <https://www.kernel.org/doc/html/latest/userspace-api/seccomp_filter.html>；Linux landlock 文档 [EB/OL]. <https://docs.kernel.org/userspace-api/landlock.html>；bsd_commits.db openbsd-src 仓库 pledge 覆盖扩展 commit ［A］<!-- DB_REF:openbsd.duckdb -->> **数据库引用（openbsd.duckdb）**：本子节对应 openbsd 代码仓库。> 2018-2018 年间：16,734 次提交。> 仓库总览：491,195 次提交，3,352 位贡献者，1995-10-18 至 2026-08-25。
 
 <!-- PODCAST_MINE v20260827 -->
-<!-- Chapter: 第199章-openbsd-6x的pledge安全机制 -->
+<!-- 章节主题过滤：第199章-openbsd-6x的pledge安全机制 第 199 章 openbsd-6x的pledge安全机制（实体评分 ≥2 命中才入选） -->
+<!-- 匹配期数：15 期，扫描 segments：14746 条 -->
 
-## 要点（播客口述史提取）
-- How did you first get introduced to and get involved with the BSD or Unix in general?
-- FreeBSD is a first class platform for us. It comes first. We have very rich support
-- These days it's primarily developed by myself and FreeBSD's own Olivier Cognet at FreeBSD.
-- get our hands on playing with it at BSDCAN, but can people get like a demo version of
-- I guess OpenBSD was the very first implementation,
-- So, of course Larry, the recently renamed BSD guy has decided to hang it up.
-- but it was really designed for the FreeBSD cluster
-- And they just had the new version come out. So, he says, in short, why is GhostBSD not
+### 要点（播客口述史提取）
+- was you know it's partway scrolled down but it says uh blah blah ported to openbsd and netbsd（BSD Now EP112 @ 394.7799）
+- But this first one here, we have a cool story about creating binary packages in the port system on OpenBSD.（BSD Now EP116 @ 82.40000）
+- First with a bit of an intro and then talking about OpenSSH, mail servers, firewalls, ports（BSD Now EP134 @ 739.3199）
+- So if you want to start playing with some of that and seeing what the first SMP-aware network stack in OpenBSD looks like, this is your release.（BSD Now EP135 @ 264.6999）
+- The first one is OpenBSD Community Goes Gold. So what's this all about?（BSD Now EP194 @ 3704.6）
 
-## 史料（播客提及）
-- [BSD Now EP140 @ 2093.179931640625] I could actually pull some of the FreeBSD kernel panics
-- [BSD Now EP140 @ 2721.83984375] But I would say our largest integrations today are actually with FreeBSD based companies.
-- [BSD Now EP140 @ 2729.159912109375] So yeah, so you talked a little bit about your relationship with FreeBSD personally,
-- [BSD Now EP140 @ 694.0199584960938] to build free BSD with newer GCC without actually contaminating the free BSD
-- [BSD Now EP222 @ 7222.3] I think just the NTFS driver in FreeBSD is quite old.
+### 史料（播客当事人陈述）
+- So next up here, we've talked a lot about OpenBSD's pledge support.（BSD Now EP138 @ 4409.020）
+- Okay, so next up, we've talked a lot about OpenBSD's sandboxing mechanism pledge in the past,（BSD Now EP170 @ 1380.060）
+- Well, next up here we have an interesting comment, or I guess commit it looks like, over on Android Review talking about OpenBSD's malloc.（BSD Now EP124 @ 2751.219）
+- First with a bit of an intro and then talking about OpenSSH, mail servers, firewalls, ports（BSD Now EP134 @ 739.3199）
 
-## 史观（播客当事人观点与总纲映射）
-- [BSD Now EP140 @ 2093.179931640625] I could actually pull some of the FreeBSD kernel panics
-- [BSD Now EP140 @ 2721.83984375] But I would say our largest integrations today are actually with FreeBSD based companies.
-- [BSD Now EP140 @ 2729.159912109375] So yeah, so you talked a little bit about your relationship with FreeBSD personally,
-- [BSD Now EP140 @ 694.0199584960938] to build free BSD with newer GCC without actually contaminating the free BSD
-- [BSD Now EP222 @ 7222.3] I think just the NTFS driver in FreeBSD is quite old.
-  → 史观映射：总纲22——知识注定过时
+### 史观（播客当事人观点与总纲映射）
+- But next up is a OpenBSD, I think it's a port, but it's also a user story or an experience（BSD Now EP196 @ 707.56）
+  → 史观映射：总纲9——经验优先; 总纲23——一切历史写作都是基于哲学设定的历史小说
 
-## 辨析（播客争议与存疑点）
-- （该章节匹配播客中暂未提取到相关争议点）
+### 辨析（播客争议与存疑点）
+- [存疑脚注] that's a lot of mechanical work to go and change the arguments to the pledge call everywhere.（BSD Now EP124 @ 1251.419）
+- [存疑脚注] the fork from a Lumos, which of course has been further improved upon landing in OpenBSD.（BSD Now EP135 @ 221.6799）
 
-## 文献（播客参考条目）
+### 文献（播客参考条目）
+- [BSD Now EP112] Pennington J. BSD Now: 112: Tracing the source[EB/OL]. (2015-10-21)[2026-08-15]. https://www.bsdnow.tv/112.
+- [BSD Now EP116] Pennington J. BSD Now: 116: Arcing ZFS[EB/OL]. (2015-11-18)[2026-08-15]. https://www.bsdnow.tv/116.
+- [BSD Now EP124] Pennington J. BSD Now: 124: Get your engine(x) started![EB/OL]. (2016-01-13)[2026-08-15]. https://www.bsdnow.tv/124.
+- [BSD Now EP134] Pennington J. BSD Now: 134: Marking up the Ports tree[EB/OL]. (2016-03-24)[2026-08-15]. https://www.bsdnow.tv/134.
+- [BSD Now EP135] Pennington J. BSD Now: 135: Speciality MWL[EB/OL]. (2016-03-30)[2026-08-15]. https://www.bsdnow.tv/135.
+- [BSD Now EP138] Pennington J. BSD Now: 138: Rushing into BSD[EB/OL]. (2016-04-20)[2026-08-15]. https://www.bsdnow.tv/138.
 - [BSD Now EP140] Pennington J. BSD Now: 140: Tracing it back to BSD[EB/OL]. (2016-05-04)[2026-08-15]. https://www.bsdnow.tv/140.
-- [BSD Now EP222] Pennington J. BSD Now: 222: How Netflix works[EB/OL]. (2017-11-29)[2026-08-15]. https://www.bsdnow.tv/222.
+- [BSD Now EP143] Pennington J. BSD Now: 143: One small step for DRM, one giant leap for BSD[EB/OL]. (2016-05-25)[2026-08-15]. https://www.bsdnow.tv/143.
 
 <!-- /PODCAST_MINE -->

@@ -59,3 +59,35 @@ volume: 第02卷-伯克利的岁月
 - CSRG 邮件列表存档；USENIX 1979-1980 年会议论文集 ［A］
 - USENIX 会议论文集（1979-1980）；伯克利 CSRG 邮件列表存档 ［A］
 - DEC VMS 手册； CSRG 技术报告 ［A］
+
+<!-- PODCAST_MINE v20260827 -->
+<!-- 章节主题过滤：第31章-3bsd与vax 第 31 章 3bsd与vax（实体评分 ≥2 命中才入选） -->
+<!-- 匹配期数：9 期，扫描 segments：9048 条 -->
+
+### 要点（播客口述史提取）
+- Berkeley Unix had been ported to the VAX by the start of the 1980s and was thriving as（BSD Now EP225 @ 2920.64）
+- Just the talk about risk or reduced instruction set computers and how that was evolved out of the PDP, Unix, the Vax, BSD, Next,（BSD Now EP225 @ 2985.3）
+
+### 史料（播客当事人陈述）
+- but after a discussion on the Vax mailing list,（BSD Now EP41 @ 2923.039）
+- I don't know about that Vax we talked about earlier（BSD Now EP54 @ 1954.560）
+- So RFC893 enables zero copy networking on a Vax,（BSD Now EP119 @ 255.7799）
+- Just the talk about risk or reduced instruction set computers and how that was evolved out of the PDP, Unix, the Vax, BSD, Next,（BSD Now EP225 @ 2985.3）
+
+### 史观（播客当事人观点与总纲映射）
+- I think there's somebody out there running a Vax or maybe an Alpha and somebody is actually（BSD Now EP119 @ 2618.139）
+
+### 辨析（播客争议与存疑点）
+- （该章节匹配播客中未提取到争议性陈述）
+
+### 文献（播客参考条目）
+- [BSD Now EP41] Pennington J. BSD Now: 41: Commit This Bit[EB/OL]. (2014-06-11)[2026-08-15]. https://www.bsdnow.tv/41.
+- [BSD Now EP46] Pennington J. BSD Now: 46: Network Iodometry[EB/OL]. (2014-07-16)[2026-08-15]. https://www.bsdnow.tv/46.
+- [BSD Now EP54] Pennington J. BSD Now: 54: Luminary Environment[EB/OL]. (2014-09-10)[2026-08-15]. https://www.bsdnow.tv/54.
+- [BSD Now EP70] Pennington J. BSD Now: 70: Daemons in the North[EB/OL]. (2014-12-31)[2026-08-15]. https://www.bsdnow.tv/70.
+- [BSD Now EP119] Pennington J. BSD Now: 119: There be Dragons, BSD Dragons anyway[EB/OL]. (2015-12-09)[2026-08-15]. https://www.bsdnow.tv/119.
+- [BSD Now EP134] Pennington J. BSD Now: 134: Marking up the Ports tree[EB/OL]. (2016-03-24)[2026-08-15]. https://www.bsdnow.tv/134.
+- [BSD Now EP152] Pennington J. BSD Now: 152: The Laporte has landed![EB/OL]. (2016-07-27)[2026-08-15]. https://www.bsdnow.tv/152.
+- [BSD Now EP225] Pennington J. BSD Now: 225: The one true OS[EB/OL]. (2017-12-20)[2026-08-15]. https://www.bsdnow.tv/225.
+
+<!-- /PODCAST_MINE -->

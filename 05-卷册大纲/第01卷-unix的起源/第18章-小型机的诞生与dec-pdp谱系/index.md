@@ -38,50 +38,29 @@ PDP-11与UNIX的共生关系常被简化为"天作之合"，但UNIX最初是为P
 （待补：Bell C G, Mudge J C, McNamara J E. Computer Engineering: A DEC View of Hardware Systems Design[M]. Digital Press, 1978；Ceruzzi P E. A History of Modern Computing[M]. 2nd ed. MIT Press, 2003；[DB:references_fulltext:chapter_matches:chmatch_3619]；[DB:references_fulltext:chapter_matches:chmatch_1536]）
 
 <!-- PODCAST_MINE v20260827 -->
-<!-- Chapter: 第18章-小型机的诞生与dec-pdp谱系 -->
+<!-- 章节主题过滤：第18章-小型机的诞生与dec-pdp谱系 第 18 章 小型机的诞生与dec-pdp谱系（实体评分 ≥2 命中才入选） -->
+<!-- 匹配期数：15 期，扫描 segments：14813 条 -->
 
-## 要点（播客口述史提取）
-- This week on BSD Now, we have the Project Rite in 18.12 release.
-- And so this version is based off the 18.12 stable branch of TrueOS, so 3BSD13 current,
-- Then they have also the 18.12 release has been a long time in development and I wish
-- Oh, time for news roundup this week. We have OpenSense release 18.7.10 being out.
-- uh major new releases come every two years or so 12 was pushed out in december 2018 12.2 in october
-- submitting proposals for the open source summits in 2018. Yeah, so this is on our long term
-- Up next is our news roundup for this week, starting with Ghost for Unix released on the 18th birthday of that software.
+### 要点（播客口述史提取）
+- （该章节匹配播客中未提取到高置信度核心史实，需人工深挖）
 
-## 史料（播客提及）
-- [BSD Now EP119 @ 4127.4599609375] Linux kernel 3.18, which I think that includes. That's definitely Broadwell, but might even include
-- [BSD Now EP282 @ 2957.7] January 25th at 1815 to 2100 and it's back at the wheel systems offices. I think last
-- [BSD Now EP282 @ 399.84] driving amazing. And they actually have 18.12 update one available already.
+### 史料（播客当事人陈述）
+- （待人工提取）
 
-## 史观（播客当事人观点与总纲映射）
-- [BSD Now EP119 @ 4127.4599609375] Linux kernel 3.18, which I think that includes. That's definitely Broadwell, but might even include
-- [BSD Now EP282 @ 2957.7] January 25th at 1815 to 2100 and it's back at the wheel systems offices. I think last
-- [BSD Now EP282 @ 399.84] driving amazing. And they actually have 18.12 update one available already.
+### 史观（播客当事人观点与总纲映射）
+- （该章节匹配播客中未提取到当事人观点性陈述）
 
-## 辨析（播客争议与存疑点）
-- （该章节匹配播客中暂未提取到相关争议点）
+### 辨析（播客争议与存疑点）
+- （该章节匹配播客中未提取到争议性陈述）
 
-## 文献（播客参考条目）
-- [BSD Now EP192] Pennington J. BSD Now: 192: SSHv1 Be Gone[EB/OL]. (2017-05-03)[2026-08-15]. https://www.bsdnow.tv/192.
-- [BSD Now EP230] Pennington J. BSD Now: 230: Your questions, Part III[EB/OL]. (2018-01-24)[2026-08-15]. https://www.bsdnow.tv/230.
-- [BSD Now EP119] Pennington J. BSD Now: 119: There be Dragons, BSD Dragons anyway[EB/OL]. (2015-12-09)[2026-08-15]. https://www.bsdnow.tv/119.
-- [BSD Now EP229] Pennington J. BSD Now: 229: The Meltdown of Spectre[EB/OL]. (2018-01-17)[2026-08-15]. https://www.bsdnow.tv/229.
-- [BSD Now EP308] Pennington J. BSD Now: 308: Mumbling with OpenBSD[EB/OL]. (2019-07-25)[2026-08-15]. https://www.bsdnow.tv/308.
-- [BSD Now EP173] Pennington J. BSD Now: 173: Carry on my Wayland son[EB/OL]. (2016-12-21)[2026-08-15]. https://www.bsdnow.tv/173.
-- [BSD Now EP282] Pennington J. BSD Now: 282: Open the Rsync[EB/OL]. (2019-01-24)[2026-08-15]. https://www.bsdnow.tv/282.
-- [BSD Now EP312] Pennington J. BSD Now: 312: Why Package Managers[EB/OL]. (2019-08-22)[2026-08-15]. https://www.bsdnow.tv/312.
-- [BSD Now EP66] Pennington J. BSD Now: 66: Conference Connoisseur[EB/OL]. (2014-12-03)[2026-08-15]. https://www.bsdnow.tv/66.
-- [BSD Now EP396] Pennington J. BSD Now: 396: License to thrill[EB/OL]. (2021-04-01)[2026-08-15]. https://www.bsdnow.tv/396.
-- [BSD Now EP162] Pennington J. BSD Now: 162: The Foundation of NetBSD[EB/OL]. (2016-10-05)[2026-08-15]. https://www.bsdnow.tv/162.
-- [BSD Now EP61] Pennington J. BSD Now: 61: IPSECond Wind[EB/OL]. (2014-10-29)[2026-08-15]. https://www.bsdnow.tv/61.
-- [BSD Now EP159] Pennington J. BSD Now: 159: Net Scaling Privacy (Flix Style)[EB/OL]. (2016-09-14)[2026-08-15]. https://www.bsdnow.tv/159.
-- [BSD Now EP97] Pennington J. BSD Now: 97: Big Network, SmallWall[EB/OL]. (2015-07-08)[2026-08-15]. https://www.bsdnow.tv/97.
-- [BSD Now EP209] Pennington J. BSD Now: 209: Signals: gotta catch ‘em all[EB/OL]. (2017-08-30)[2026-08-15]. https://www.bsdnow.tv/209.
-- [BSD Now EP200] Pennington J. BSD Now: 200: Getting Scrubbed to Death[EB/OL]. (2017-06-28)[2026-08-15]. https://www.bsdnow.tv/200.
-- [BSD Now EP351] Pennington J. BSD Now: 351: Heaven: OpenBSD 6.7[EB/OL]. (2020-05-21)[2026-08-15]. https://www.bsdnow.tv/351.
-- [BSD Now EP348] Pennington J. BSD Now: 348: BSD Community Collections[EB/OL]. (2020-04-30)[2026-08-15]. https://www.bsdnow.tv/348.
-- [BSD Now EP71] Pennington J. BSD Now: 71: System Disaster[EB/OL]. (2015-01-07)[2026-08-15]. https://www.bsdnow.tv/71.
-- [BSD Now EP382] Pennington J. BSD Now: 382: BSDNow Q&A 2020[EB/OL]. (2020-12-24)[2026-08-15]. https://www.bsdnow.tv/382.
+### 文献（播客参考条目）
+- [BSD Now EP2] Pennington J. BSD Now: 2: Engineering and Powder Kegs[EB/OL]. (2013-09-11)[2026-08-15]. https://www.bsdnow.tv/2.
+- [BSD Now EP6] Pennington J. BSD Now: 6: Doing It de Raadt Way[EB/OL]. (2013-10-09)[2026-08-15]. https://www.bsdnow.tv/6.
+- [BSD Now EP12] Pennington J. BSD Now: 12: Collecting SSHells[EB/OL]. (2013-11-20)[2026-08-15]. https://www.bsdnow.tv/12.
+- [BSD Now EP14] Pennington J. BSD Now: 14: Zettabytes for Days[EB/OL]. (2013-12-04)[2026-08-15]. https://www.bsdnow.tv/14.
+- [BSD Now EP16] Pennington J. BSD Now: 16: Cryptocrystalline[EB/OL]. (2013-12-18)[2026-08-15]. https://www.bsdnow.tv/16.
+- [BSD Now EP18] Pennington J. BSD Now: 18: Eclipsing Binaries[EB/OL]. (2014-01-01)[2026-08-15]. https://www.bsdnow.tv/18.
+- [BSD Now EP22] Pennington J. BSD Now: 22: Journaled News-Updates[EB/OL]. (2014-01-29)[2026-08-15]. https://www.bsdnow.tv/22.
+- [BSD Now EP29] Pennington J. BSD Now: 29: P.E.F.S.[EB/OL]. (2014-03-19)[2026-08-15]. https://www.bsdnow.tv/29.
 
 <!-- /PODCAST_MINE -->

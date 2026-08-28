@@ -49,46 +49,38 @@ volume: 第06卷-freebsd的核心技术革新
 - Woodruff, J. et al. (2012). CHERI: a research platform deconflating hardware virtualization and protection. RESoLVE 2012; Woodruff, J. et al. (2014). The CHERI capability model. ISCA '14; Watson, R. N. M. et al. (2015). CHERI: A Hybrid Capability-System Architecture. IEEE S&P ’15; CTSRD-CHERI Organization. CheriBSD Repository. github.com/CTSRD-CHERI/cheribsd; SRI International. CHERI Program. sri.com/program/cheri. ［B］[^doubt-resolved-633]: 据 Mac OS X Internals A Systems Approach (Amit Singh（阿米特·辛格）)  (未署名) 消解[^doubt-resolved-634]: 据 Arch_Handbook (未署名) 消解[^doubt-resolved-635]: 据 Porters_Handbook (未署名) 消解[^doubt-resolved-636]: 据 Handbook (未署名) 消解[^doubt-resolved-637]: 据 Mac OS X Internals A Systems Approach (Amit Singh)  (未署名) 消解[^doubt-resolved-638]: 据 Mac OS X Internals A Systems Approach (Amit Singh)  (未署名) 消解[^doubt-resolved-639]: 据 jude-interesting_zfs-paper (vbsdcon, 2015) 消解[^doubt-resolved-640]: 据 davis-asplos-cheriabi-paper-2 (standalone, 2019) 消解<!-- DB_REF:freebsd.duckdb -->> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 2010-2010 年间：34,527 次提交。> 仓库总览：1,294,851 次提交，13,875 位贡献者，1993-06-12 至 2026-08-25。
 
 <!-- PODCAST_MINE v20260827 -->
-<!-- Chapter: 第117章-capsicum在freebsd的集成与演进 -->
+<!-- 章节主题过滤：第117章-capsicum在freebsd的集成与演进 第 117 章 capsicum在freebsd的集成与演进（实体评分 ≥2 命中才入选） -->
+<!-- 匹配期数：15 期，扫描 segments：12747 条 -->
 
-## 要点（播客口述史提取）
-- I guess we got a new BSD router project release that's come out.
-- So the BSD Router project has released version 1.70.
-- because they can't work with the drivers that are in the older version of FreeBSD.
-- FreeBSD 10.1, 10.2, and 10.3 were all built on 10.1
-- Shell Account I paid for is how I got introduced to FreeBSD.
-- My first experience with BSD was open BSD on a spark 64
-- If you really wanted to run an old version of FreeBSD,
-- giving up but if you use a version of BSD that's not sold it doesn't have G
+### 要点（播客口述史提取）
+- and get your feet wet with Capsicum and your first foray into sandboxing.（BSD Now EP90 @ 137.2599）
+- article here about playing with sandboxing, getting somebody introduced to Capsicum.（BSD Now EP90 @ 74.77999）
+- upgrading the craft referencing and search tools that are built into FreeBSD.（BSD Now EP1 @ 1858.719）
+- So he said he started watching and he started switching some of his machines over to FreeBSD（BSD Now EP8 @ 4383.299）
+- weekly news roundup now though. But first up we have a capsicum in Dragonfly BSD. So I guess（BSD Now EP10 @ 3961.819）
 
-## 史料（播客提及）
-- [BSD Now EP178 @ 1049.48] I think we breed that geekified BSD Linux Unix error, where it's like, that's the stuff
-- [BSD Now EP178 @ 1275.6] and increase our understanding of how free BSD actually
-- [BSD Now EP38 @ 1270.97998046875] So like currently I think it's, FreeBSD 9.1 is supported longer than 9.2 because 9.1 was
-- [BSD Now EP38 @ 142.1999969482422] So at the conference Dan started, well actually I think they originally came from MeetBSD,
-- [BSD Now EP38 @ 1710.699951171875] That's one thing that's kind of missing in free BSD. So they talk about how you can actually build your NAS using
+### 史料（播客当事人陈述）
+- We've got PF presentations, Capsicum, Capserd, ASLR on FreeBSD, more stuff on migrating from Linux to BSD.（BSD Now EP26 @ 332.3999）
+- So we got this blog post here that kind of explores Capsicum and FreeBSD.（BSD Now EP90 @ 111.6799）
+- article here about playing with sandboxing, getting somebody introduced to Capsicum.（BSD Now EP90 @ 74.77999）
+- where they were talking about how FreeBSD was dying because they hadn't met their donation goal yet,（BSD Now EP1 @ 1178.880）
 
-## 史观（播客当事人观点与总纲映射）
-- [BSD Now EP178 @ 1049.48] I think we breed that geekified BSD Linux Unix error, where it's like, that's the stuff
-- [BSD Now EP178 @ 1275.6] and increase our understanding of how free BSD actually
-  → 史观映射：总纲19——解释学循环是历史认识的根本条件
-- [BSD Now EP38 @ 1270.97998046875] So like currently I think it's, FreeBSD 9.1 is supported longer than 9.2 because 9.1 was
-- [BSD Now EP38 @ 142.1999969482422] So at the conference Dan started, well actually I think they originally came from MeetBSD,
-- [BSD Now EP38 @ 1710.699951171875] That's one thing that's kind of missing in free BSD. So they talk about how you can actually build your NAS using
-- [BSD Now EP38 @ 1752.2999267578125] BSD system or whatever NAS you have is actually a really good idea. So I recommend it as a read to
-- [BSD Now EP38 @ 2109.4599609375] So I think I searched for something like free operating system, not Linux and free BSD came up.
-  → 史观映射：总纲18——时间是一种形式主义
-- [BSD Now EP38 @ 3294.699951171875] So way back in 1997, you guys remember those days? Well, back then NetBSD forked the FreeBSD
-  → 史观映射：总纲4——分离聚合是永恒规律
+### 史观（播客当事人观点与总纲映射）
+- （该章节匹配播客中未提取到当事人观点性陈述）
 
-## 辨析（播客争议与存疑点）
-- [存疑脚注] [BSD Now EP38 @ 3294.699951171875] So way back in 1997, you guys remember those days? Well, back then NetBSD forked the FreeBSD
-- [存疑脚注] [BSD Now EP38 @ 857.7799682617188] BSD on other stuff and actually having GCC completely removed from the base
-- [存疑脚注] [BSD Now EP93 @ 440.55999755859375] the research fork of FreeBSD that uses the
+### 辨析（播客争议与存疑点）
+- [存疑脚注] So way back in 1997, you guys remember those days? Well, back then NetBSD forked the FreeBSD（BSD Now EP38 @ 3294.699）
+- [存疑脚注] And if you're using FreeBSD secure levels, you can actually make it so the flag can't be removed（BSD Now EP39 @ 3676.899）
+- [存疑脚注] maintainers to create their own fork of FreeBSD, or using the kernel to make a version of FreeBSD,（BSD Now EP86 @ 3964.559）
 
-## 文献（播客参考条目）
-- [BSD Now EP178] Pennington J. BSD Now: 178: Enjoy the Silence[EB/OL]. (2017-01-25)[2026-08-15]. https://www.bsdnow.tv/178.
+### 文献（播客参考条目）
+- [BSD Now EP1] Pennington J. BSD Now: 1: BGP & BSD[EB/OL]. (2013-09-04)[2026-08-15]. https://www.bsdnow.tv/1.
+- [BSD Now EP8] Pennington J. BSD Now: 8: A Brief Introduction[EB/OL]. (2013-10-23)[2026-08-15]. https://www.bsdnow.tv/8.
+- [BSD Now EP10] Pennington J. BSD Now: 10: Year of the BSD Desktop[EB/OL]. (2013-11-06)[2026-08-15]. https://www.bsdnow.tv/10.
+- [BSD Now EP26] Pennington J. BSD Now: 26: Port Authority[EB/OL]. (2014-02-26)[2026-08-15]. https://www.bsdnow.tv/26.
+- [BSD Now EP35] Pennington J. BSD Now: 35: Puffy Firewall[EB/OL]. (2014-04-30)[2026-08-15]. https://www.bsdnow.tv/35.
 - [BSD Now EP38] Pennington J. BSD Now: 38: A BUG's Life[EB/OL]. (2014-05-21)[2026-08-15]. https://www.bsdnow.tv/38.
-- [BSD Now EP93] Pennington J. BSD Now: 93: Stacked in Our Favor[EB/OL]. (2015-06-10)[2026-08-15]. https://www.bsdnow.tv/93.
+- [BSD Now EP39] Pennington J. BSD Now: 39: The Friendly Sandbox[EB/OL]. (2014-05-28)[2026-08-15]. https://www.bsdnow.tv/39.
+- [BSD Now EP48] Pennington J. BSD Now: 48: Liberating SSL[EB/OL]. (2014-07-30)[2026-08-15]. https://www.bsdnow.tv/48.
 
 <!-- /PODCAST_MINE -->

@@ -53,41 +53,36 @@ volume: 第15卷-许可证哲学与法律分析
 - freebsd-doc 邮件列表；社区表彰记录 ［A］## 史料考据补充（2026-08-04 任务3 联网核验）> 主题：文档创作者——被忽视的动手者
 
 <!-- PODCAST_MINE v20260827 -->
-<!-- Chapter: 第292章-freebsd图书视频与在线资源史 -->
+<!-- 章节主题过滤：第292章-freebsd图书视频与在线资源史 第 292 章 freebsd图书视频与在线资源史（实体评分 ≥2 命中才入选） -->
+<!-- 匹配期数：15 期，扫描 segments：14215 条 -->
 
-## 要点（播客口述史提取）
-- time that was BSD. There was no version. Someone says, oh I have a one BSD distribution. Well,
-- did 3BSD. One of the very first things that I did was find all the sources and put them
-- Sun had taken the original BSD and had overhauled it by putting in a new virtual memory system
-- And they were like, as soon as they got home from your BSD con, they pumped out a release.
-- First of all, if you've ever built ports on any BSD system,
-- a talk a comprehensive look at bsd config which i thought was cool and then i started digging into
-- So Dragonfly users started porting the new AMD KMS drivers from FreeBSD,
-- Speaking of graphics support, NetBSD has started work on NVIDIA drivers.
+### 要点（播客口述史提取）
+- upgrading the craft referencing and search tools that are built into FreeBSD.（BSD Now EP1 @ 1858.719）
+- So Dragonfly users started porting the new AMD KMS drivers from FreeBSD,（BSD Now EP5 @ 2722.840）
+- Nginx is basically developed for FreeBSD and then ported to Linux.（BSD Now EP5 @ 3436.780）
+- It was built by a FreeBSD developer to run on FreeBSD and take advantage of the power of FreeBSD.（BSD Now EP5 @ 3441.699）
+- Simultaneously, of course, FreeBSD was being started right next door down in California.（BSD Now EP6 @ 526.69）
 
-## 史料（播客提及）
-- [BSD Now EP5 @ 2591.760009765625] uh there was a talk i think this same talk might have been at bsd can as well uh sure yeah uh
-- [BSD Now EP5 @ 2868.119873046875] Well, even I think a lot of FreeBSD developers are kind of moving towards PCBSD
-- [BSD Now EP5 @ 3170.419921875] drew levine actually wrote a book called bsd tricks what is it called a hack bsd hacks yes
-- [BSD Now EP5 @ 3177.5400390625] bsd hacks i have a hard copy of it somewhere in my house it was actually what passed for the
-- [BSD Now EP5 @ 658.0] I think the website's already up at 2014.eurobsdcon.org or is it.com?
+### 史料（播客当事人陈述）
+- where they were talking about how FreeBSD was dying because they hadn't met their donation goal yet,（BSD Now EP1 @ 1178.880）
+- Yeah, just about every GUI we have, there's some kind of shell or back end behind it that's just running standard FreeBSD commands.（BSD Now EP1 @ 1574.040）
+- and actually just have them be put into as articles in not the handbook, but in the FreeBSD documentation tree.（BSD Now EP1 @ 1785.939）
+- the FreeBSD documentation is mostly written in DocBook（BSD Now EP1 @ 1809.139）
 
-## 史观（播客当事人观点与总纲映射）
-- [BSD Now EP5 @ 2591.760009765625] uh there was a talk i think this same talk might have been at bsd can as well uh sure yeah uh
-- [BSD Now EP5 @ 2868.119873046875] Well, even I think a lot of FreeBSD developers are kind of moving towards PCBSD
-- [BSD Now EP5 @ 3170.419921875] drew levine actually wrote a book called bsd tricks what is it called a hack bsd hacks yes
-- [BSD Now EP5 @ 3177.5400390625] bsd hacks i have a hard copy of it somewhere in my house it was actually what passed for the
-- [BSD Now EP5 @ 658.0] I think the website's already up at 2014.eurobsdcon.org or is it.com?
-- [BSD Now EP5 @ 917.4599609375] But next up, we've actually recorded a lot of interviews while we were out at EuroBSD.
-- [BSD Now EP261 @ 10.4] OpenBSD's measures against the TL bleed, we play Morrowind, or you can play Morrowind actually
-- [BSD Now EP261 @ 4382.2] In FreeBSD 12, a new commit just went in recently that I think will help address
+### 史观（播客当事人观点与总纲映射）
+- （该章节匹配播客中未提取到当事人观点性陈述）
 
-## 辨析（播客争议与存疑点）
-- [存疑脚注] [BSD Now EP261 @ 2989.64] They said that last week Foronix carried out some tests on BSD vs Linux on a new threadripper 2990WX
-- [存疑脚注] [BSD Now EP261 @ 460.98] Maintaining a fork of the FreeBSD ports tree is a non-trivial task. There are 30,000 packages in there.
+### 辨析（播客争议与存疑点）
+- [存疑脚注] Not TrueOS specifically. The stats come in, they look the same for both. So I just see it as FreeBSD（BSD Now EP6 @ 2498.63）
 
-## 文献（播客参考条目）
+### 文献（播客参考条目）
+- [BSD Now EP1] Pennington J. BSD Now: 1: BGP & BSD[EB/OL]. (2013-09-04)[2026-08-15]. https://www.bsdnow.tv/1.
 - [BSD Now EP5] Pennington J. BSD Now: 5: Stacks of Cache[EB/OL]. (2013-10-02)[2026-08-15]. https://www.bsdnow.tv/5.
-- [BSD Now EP261] Pennington J. BSD Now: Episode 261: FreeBSDcon Flashback | BSD Now 261[EB/OL]. (2018-08-30)[2026-08-15]. https://www.bsdnow.tv/261.
+- [BSD Now EP6] Pennington J. BSD Now: 6: Doing It de Raadt Way[EB/OL]. (2013-10-09)[2026-08-15]. https://www.bsdnow.tv/6.
+- [BSD Now EP40] Pennington J. BSD Now: 40: AirPorts & Packages[EB/OL]. (2014-06-04)[2026-08-15]. https://www.bsdnow.tv/40.
+- [BSD Now EP64] Pennington J. BSD Now: 64: Rump Kernels Revisited[EB/OL]. (2014-11-19)[2026-08-15]. https://www.bsdnow.tv/64.
+- [BSD Now EP68] Pennington J. BSD Now: 68: Just the Essentials[EB/OL]. (2014-12-17)[2026-08-15]. https://www.bsdnow.tv/68.
+- [BSD Now EP74] Pennington J. BSD Now: 74: That Sly MINIX[EB/OL]. (2015-01-28)[2026-08-15]. https://www.bsdnow.tv/74.
+- [BSD Now EP96] Pennington J. BSD Now: 96: Lost Technology[EB/OL]. (2015-07-01)[2026-08-15]. https://www.bsdnow.tv/96.
 
 <!-- /PODCAST_MINE -->

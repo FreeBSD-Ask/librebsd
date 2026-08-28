@@ -30,3 +30,28 @@ Plan 9 是 Bell Labs 在 UNIX 之后对分布式操作系统的激进实验—�
 ## 文献
 
 （待补：Plan 9 原始论文（1995）；9fans 邮件列表 archives；[DB:references_fulltext] id=1540；[DB:bsdnow_podcast] 多期）
+
+<!-- PODCAST_MINE v20260827 -->
+<!-- 章节主题过滤：第25章-plan9的起源与技术演化 第 25 章 plan9的起源与技术演化（实体评分 ≥2 命中才入选） -->
+<!-- 匹配期数：5 期，扫描 segments：4429 条 -->
+
+### 要点（播客口述史提取）
+- （该章节匹配播客中未提取到高置信度核心史实，需人工深挖）
+
+### 史料（播客当事人陈述）
+- （待人工提取）
+
+### 史观（播客当事人观点与总纲映射）
+- （该章节匹配播客中未提取到当事人观点性陈述）
+
+### 辨析（播客争议与存疑点）
+- （该章节匹配播客中未提取到争议性陈述）
+
+### 文献（播客参考条目）
+- [BSD Now EP253] Pennington J. BSD Now: Episode 253: Silence of the Fans | BSD Now 253[EB/OL]. (2018-07-05)[2026-08-15]. https://www.bsdnow.tv/253.
+- [BSD Now EP142] Pennington J. BSD Now: 142: Diving for BSD Perls[EB/OL]. (2016-05-18)[2026-08-15]. https://www.bsdnow.tv/142.
+- [BSD Now EP214] Pennington J. BSD Now: 214: The history of man, kind[EB/OL]. (2017-10-04)[2026-08-15]. https://www.bsdnow.tv/214.
+- [BSD Now EP229] Pennington J. BSD Now: 229: The Meltdown of Spectre[EB/OL]. (2018-01-17)[2026-08-15]. https://www.bsdnow.tv/229.
+- [BSD Now EP402] Pennington J. BSD Now: 402: Goodbye GPL[EB/OL]. (2021-05-13)[2026-08-15]. https://www.bsdnow.tv/402.
+
+<!-- /PODCAST_MINE -->

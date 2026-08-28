@@ -24,4 +24,4 @@ macOS 的 BSD 遗产是全书最复杂的身份认同问题——XNU 内核中 M
 
 ## 文献
 
-（待补：Apple Open Source（opensource.apple.com）；Darwin 源代码；[DB:references_fulltext] id=4132）
+- Apple Open Source（opensource.apple.com）；Darwin 源代码；[DB:references_fulltext] id=4132

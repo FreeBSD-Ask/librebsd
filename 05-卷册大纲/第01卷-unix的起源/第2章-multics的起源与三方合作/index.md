@@ -53,23 +53,29 @@ volume: 第01卷-unix的起源
 - 同本节 1.4.1-1.4.4 所列；另参见 Ceruzzi 2003 第 1-3 章；Campbell-Kelly & Aspray"Computer"(1996) 相关章节
 
 <!-- PODCAST_MINE v20260827 -->
-<!-- Chapter: 第2章-multics的起源与三方合作 -->
+<!-- 章节主题过滤：第2章-multics的起源与三方合作 第 2 章 multics的起源与三方合作（实体评分 ≥2 命中才入选） -->
+<!-- 匹配期数：7 期，扫描 segments：5545 条 -->
 
-## 要点（播客口述史提取）
-- that, you know, the stripped-down version of Multics
+### 要点（播客口述史提取）
+- So by the end of the 1970s, Unix, which had started a decade earlier as a reaction against the loss of the comfortable programming environment of Multics, was growing like a weed through academic and IT industry.（BSD Now EP259 @ 1218.420）
 
-## 史料（播客提及）
-- [BSD Now EP333 @ 1805.159912109375] Oh, yes. But I think you shouldn't mention it to the authors because they're kind of aware of that and people are now, you know, getting expectant. Yeah. We'll leave you with that. And oh, the next thing is also a bit more for the historic historians
+### 史料（播客当事人陈述）
+- （待人工提取）
 
-## 史观（播客当事人观点与总纲映射）
-- [BSD Now EP333 @ 1805.159912109375] Oh, yes. But I think you shouldn't mention it to the authors because they're kind of aware of that and people are now, you know, getting expectant. Yeah. We'll leave you with that. And oh, the next thing is also a bit more for the historic historians
+### 史观（播客当事人观点与总纲映射）
+- Oh, yes. But I think you shouldn't mention it to the authors because they're kind of aware of that and people are now, you know, getting expectant. Yeah. We'll leave you with that. And oh, the next thing is also a bit more for the historic historians, although people interested in the history of Unix, because we have the Multics history page over at multicians.org.（BSD Now EP333 @ 1805.159）
   → 史观映射：总纲23——一切历史写作都是基于哲学设定的历史小说
 
-## 辨析（播客争议与存疑点）
-- （该章节匹配播客中暂未提取到相关争议点）
+### 辨析（播客争议与存疑点）
+- （该章节匹配播客中未提取到争议性陈述）
 
-## 文献（播客参考条目）
-- [BSD Now EP333] Pennington J. BSD Now: 333: Unix Keyboard Joy[EB/OL]. (2020-01-16)[2026-08-15]. https://www.bsdnow.tv/333.
+### 文献（播客参考条目）
+- [BSD Now EP171] Pennington J. BSD Now: 171: The APU - BSD Style![EB/OL]. (2016-12-07)[2026-08-15]. https://www.bsdnow.tv/171.
+- [BSD Now EP214] Pennington J. BSD Now: 214: The history of man, kind[EB/OL]. (2017-10-04)[2026-08-15]. https://www.bsdnow.tv/214.
 - [BSD Now EP231] Pennington J. BSD Now: 231: Unix Architecture Evolution[EB/OL]. (2018-02-01)[2026-08-15]. https://www.bsdnow.tv/231.
+- [BSD Now EP259] Pennington J. BSD Now: Episode 259: Long Live Unix | BSD Now 259[EB/OL]. (2018-08-16)[2026-08-15]. https://www.bsdnow.tv/259.
+- [BSD Now EP315] Pennington J. BSD Now: 315: Recapping vBSDcon 2019[EB/OL]. (2019-09-12)[2026-08-15]. https://www.bsdnow.tv/315.
+- [BSD Now EP333] Pennington J. BSD Now: 333: Unix Keyboard Joy[EB/OL]. (2020-01-16)[2026-08-15]. https://www.bsdnow.tv/333.
+- [BSD Now EP416] Pennington J. BSD Now: 416: netcat printing[EB/OL]. (2021-08-19)[2026-08-15]. https://www.bsdnow.tv/416.
 
 <!-- /PODCAST_MINE -->

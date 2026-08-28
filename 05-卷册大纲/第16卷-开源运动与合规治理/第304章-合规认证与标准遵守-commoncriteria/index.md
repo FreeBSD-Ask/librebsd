@@ -49,21 +49,29 @@ volume: 第16卷-开源运动与合规治理
 - NIST SP 800-218 Appendix C；FedRAMP SSP Template[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]
 
 <!-- PODCAST_MINE v20260827 -->
-<!-- Chapter: 第304章-合规认证与标准遵守-commoncriteria -->
+<!-- 章节主题过滤：第304章-合规认证与标准遵守-commoncriteria 第 304 章 合规认证与标准遵守-commoncriteria（实体评分 ≥2 命中才入选） -->
+<!-- 匹配期数：15 期，扫描 segments：16463 条 -->
 
-## 要点（播客口述史提取）
-- （该章节匹配播客中暂未提取到相关核心史实陈述）
+### 要点（播客口述史提取）
+- （该章节匹配播客中未提取到高置信度核心史实，需人工深挖）
 
-## 史料（播客提及）
-- （待提取）
+### 史料（播客当事人陈述）
+- （待人工提取）
 
-## 史观（播客当事人观点与总纲映射）
-- （该章节匹配播客中暂未提取到相关当事人观点）
+### 史观（播客当事人观点与总纲映射）
+- （该章节匹配播客中未提取到当事人观点性陈述）
 
-## 辨析（播客争议与存疑点）
-- （该章节匹配播客中暂未提取到相关争议点）
+### 辨析（播客争议与存疑点）
+- （该章节匹配播客中未提取到争议性陈述）
 
-## 文献（播客参考条目）
+### 文献（播客参考条目）
+- [BSD Now EP116] Pennington J. BSD Now: 116: Arcing ZFS[EB/OL]. (2015-11-18)[2026-08-15]. https://www.bsdnow.tv/116.
+- [BSD Now EP119] Pennington J. BSD Now: 119: There be Dragons, BSD Dragons anyway[EB/OL]. (2015-12-09)[2026-08-15]. https://www.bsdnow.tv/119.
 - [BSD Now EP121] Pennington J. BSD Now: 121: All your hyves are belong to us[EB/OL]. (2015-12-23)[2026-08-15]. https://www.bsdnow.tv/121.
+- [BSD Now EP127] Pennington J. BSD Now: 127: DNS, Black Holes & Willem[EB/OL]. (2016-02-03)[2026-08-15]. https://www.bsdnow.tv/127.
+- [BSD Now EP138] Pennington J. BSD Now: 138: Rushing into BSD[EB/OL]. (2016-04-20)[2026-08-15]. https://www.bsdnow.tv/138.
+- [BSD Now EP155] Pennington J. BSD Now: 155: Cabling up FreeBSD[EB/OL]. (2016-08-17)[2026-08-15]. https://www.bsdnow.tv/155.
+- [BSD Now EP157] Pennington J. BSD Now: 157: ZFS, The “Universal” File-system[EB/OL]. (2016-08-31)[2026-08-15]. https://www.bsdnow.tv/157.
+- [BSD Now EP171] Pennington J. BSD Now: 171: The APU - BSD Style![EB/OL]. (2016-12-07)[2026-08-15]. https://www.bsdnow.tv/171.
 
 <!-- /PODCAST_MINE -->

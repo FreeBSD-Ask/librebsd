@@ -42,3 +42,26 @@ volume: 第18卷-全球社区地区bsd史
 - Federal Register；GAO Reports；DARPA Funding Records[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]
 - Colorado Secretary of State；IRS 990；USPTO Records ［A］
 - bsd.org; Meetup 数据 ［B］## 史料考据补充（2026-08-04 任务3 联网核验）> 主题：美国 BSD 用户组的当代生态——BUUG 伯克利、NYCBUG、CDBUG（2004 成立）、TFUG 等
+
+<!-- PODCAST_MINE v20260827 -->
+<!-- 章节主题过滤：第328章-美国bsd的发源地 第 328 章 美国bsd的发源地（实体评分 ≥2 命中才入选） -->
+<!-- 匹配期数：3 期，扫描 segments：3351 条 -->
+
+### 要点（播客口述史提取）
+- （该章节匹配播客中未提取到高置信度核心史实，需人工深挖）
+
+### 史料（播客当事人陈述）
+- （待人工提取）
+
+### 史观（播客当事人观点与总纲映射）
+- （该章节匹配播客中未提取到当事人观点性陈述）
+
+### 辨析（播客争议与存疑点）
+- （该章节匹配播客中未提取到争议性陈述）
+
+### 文献（播客参考条目）
+- [BSD Now EP190] Pennington J. BSD Now: 190: The Moore You Know[EB/OL]. (2017-04-19)[2026-08-15]. https://www.bsdnow.tv/190.
+- [BSD Now EP212] Pennington J. BSD Now: 212: The Solaris Eclipse[EB/OL]. (2017-09-20)[2026-08-15]. https://www.bsdnow.tv/212.
+- [BSD Now EP273] Pennington J. BSD Now: Episode 273: A Thoughtful Episode | BSD Now 273[EB/OL]. (2018-11-23)[2026-08-15]. https://www.bsdnow.tv/273.
+
+<!-- /PODCAST_MINE -->

@@ -49,54 +49,34 @@ volume: 第09卷-netbsd的历史
 - NetBSD Project. NetBSD Security Advisories Archive [EB/OL]. (2018-2019)[2026-07-22]. <https://www.netbsd.org/support/security/advisory.html>; NetBSD Project. NetBSD Security Officer Team — SA Release Process [EB/OL]. [2026-07-22]. <https://www.netbsd.org/support/security/>; FreeBSD Security Team. FreeBSD Security Advisories Archive [EB/OL]. (2023-2026)[2026-07-22]. <https://www.freebsd.org/security/advisories/>; OpenBSD Project. OpenBSD Errata Patches [EB/OL]. [2026-07-22]. <https://www.openbsd.org/errata.html>; NetBSD Project. netbsd.db — netbsd-src SA pull-up commits [DB/OL]. 2026-07-22. `SQL: SELECT commit_hash, author_date, author_name, message_subject FROM commits WHERE repo_name='netbsd-src' AND author_date>='2018-05-01' AND author_date<'2020-05-01' AND (message_subject LIKE '%SA%' OR message_subject LIKE '%pull-up%' OR message_subject LIKE '%ticket%') ORDER BY author_date ASC` ［A］<!-- DB_REF:netbsd.duckdb -->> **数据库引用（netbsd.duckdb）**：本子节对应 netbsd 代码仓库。> 1993-2026 年间：1,999,408 次提交。> 仓库总览：1,999,412 次提交，4,754 位贡献者，1992-07-13 至 2026-08-24。
 
 <!-- PODCAST_MINE v20260827 -->
-<!-- Chapter: 第181章-netbsd-8.0与64位arm虚拟化 -->
+<!-- 章节主题过滤：第181章-netbsd-8.0与64位arm虚拟化 第 181 章 netbsd-8.0与64位arm虚拟化（实体评分 ≥2 命中才入选） -->
+<!-- 匹配期数：15 期，扫描 segments：13911 条 -->
 
-## 要点（播客口述史提取）
-- The first thing is, of course, set up a FreeBSD-based droplet.
-- So the first thing is that they create a FreeBSD droplet.
-- We also have in the news a new release of Nomad BSD.
-- And nomadbsd, oh, the nomadbsd logo designed by Ian Grindley
-- So the first one is a welcome to the BSD Dev Room by Rodrigo,
-- The good news for OpenBSD is that they fix all those bugs in 40 hours after the initial contact.
-- They are all patched, I believe, for 6.5 because I believe OpenBSD is 6.4 because OpenBSD is supporting only two latest versions, if I remember correctly.
-- I'm always quite surprised how many architectures are supported by NetBSD.
+### 要点（播客口述史提取）
+- This is the first security bug fix update of the NetBSD 6.1 release branch.（BSD Now EP1 @ 6405.640）
+- Since then it's been ported to FreeBSD, NetBSD, DragonflyBSD, and Mac OS X.（BSD Now EP35 @ 3067.179）
 
-## 史料（播客提及）
-- [BSD Now EP330 @ 1231.9599609375] I believe before the work which was done by Colin, you also needed to do some tricks to run the FreeBSD on AWS, something like that, you know, like put from a different machine and try to install FreeBSD there.
-- [BSD Now EP330 @ 2858.739990234375] I believe he did a presentation turning the EuroBSDCon about IFL and KCOW,
-- [BSD Now EP330 @ 2978.099853515625] I think there are, I'm quite surprised because there are many presentations from NetBSD.
-- [BSD Now EP330 @ 3005.300048828125] And I think Rodrigo also tries to balance the BSDs in that room.
-- [BSD Now EP330 @ 4204.61962890625] I believe that Alan and Benedict will present it on BSD now, you know?
+### 史料（播客当事人陈述）
+- But it looks like they're going to be having presentations on ARM on NetBSD and FreeBSD.（BSD Now EP26 @ 328.0999）
+- So next up, we have an article about the use of NetBSD（BSD Now EP16 @ 548.5599）
+- And I guess next up, we also have an article about NetBSD today, and I guess they dumped（BSD Now EP22 @ 919.3599）
+- trend at other conferences. So if you're a NetBSD developer, user, fan, definitely come on out and（BSD Now EP39 @ 411.2199）
 
-## 史观（播客当事人观点与总纲映射）
-- [BSD Now EP330 @ 1231.9599609375] I believe before the work which was done by Colin, you also needed to do some tricks to run the FreeBSD on AWS, something like that, you know, like put from a different machine and try to install FreeBSD there.
-- [BSD Now EP330 @ 2858.739990234375] I believe he did a presentation turning the EuroBSDCon about IFL and KCOW,
-- [BSD Now EP330 @ 2978.099853515625] I think there are, I'm quite surprised because there are many presentations from NetBSD.
-- [BSD Now EP330 @ 3005.300048828125] And I think Rodrigo also tries to balance the BSDs in that room.
-- [BSD Now EP330 @ 4204.61962890625] I believe that Alan and Benedict will present it on BSD now, you know?
-- [BSD Now EP330 @ 599.7799682617188] They are all patched, I believe, for 6.5 because I believe OpenBSD is 6.4 because OpenBSD is supporting only two latest versions, if I remember correctly.
-- [BSD Now EP122 @ 1173.699951171875] But it turns out that every ARMv6 chip that's actually supported by FreeBSD,
-- [BSD Now EP122 @ 1182.0999755859375] but all the ones that are actually supported by FreeBSD do.
+### 史观（播客当事人观点与总纲映射）
+- And honestly, that lack of experience with NetBSD and OpenBSD hurt my score on the（BSD Now EP21 @ 4976.139）
+  → 史观映射：总纲9——经验优先
 
-## 辨析（播客争议与存疑点）
-- [存疑脚注] [BSD Now EP189 @ 2054.580078125] came from free bsd in 2003 uh matthew dylan forked the code of free bsd 4. i think it was 9
-- [存疑脚注] [BSD Now EP189 @ 2068.2197265625] I thought of Dragonfly BSD as just another fork,
-- [存疑脚注] [BSD Now EP189 @ 7709.1396484375] So yeah, they have the details of what's actually been done in NetBSD, including cleaning up the use of ptrace in the ATF tests, adding ptrace fork to all the non-x86 ports of NetBSD, adding the ptsyscall and ptsyscall emulated calls, and then they h
-- [存疑脚注] [BSD Now EP115 @ 1269.5599365234375] Well, it has been forked to run on FreeBSD Open and NetBSD now as well.
-- [存疑脚注] [BSD Now EP115 @ 3705.159912109375] is actually sourced from OpenBSD's fork of it.
-- [存疑脚注] [BSD Now EP211 @ 5970.759765625] And yeah, money well spent because the OpenBSD guys can use it to fund many developments, as they said.
+### 辨析（播客争议与存疑点）
+- （该章节匹配播客中未提取到争议性陈述）
 
-## 文献（播客参考条目）
-- [BSD Now EP330] Pennington J. BSD Now: 330: Happy Holidays, All(an)[EB/OL]. (2019-12-26)[2026-08-15]. https://www.bsdnow.tv/330.
-- [BSD Now EP122] Pennington J. BSD Now: 122: The BSD Black Box[EB/OL]. (2015-12-30)[2026-08-15]. https://www.bsdnow.tv/122.
-- [BSD Now EP190] Pennington J. BSD Now: 190: The Moore You Know[EB/OL]. (2017-04-19)[2026-08-15]. https://www.bsdnow.tv/190.
-- [BSD Now EP189] Pennington J. BSD Now: 189: Codified Summer[EB/OL]. (2017-04-12)[2026-08-15]. https://www.bsdnow.tv/189.
-- [BSD Now EP115] Pennington J. BSD Now: 115: Controlling the Transmissions[EB/OL]. (2015-11-11)[2026-08-15]. https://www.bsdnow.tv/115.
-- [BSD Now EP211] Pennington J. BSD Now: 211: It's HAMMER2 Time![EB/OL]. (2017-09-13)[2026-08-15]. https://www.bsdnow.tv/211.
-- [BSD Now EP86] Pennington J. BSD Now: 86: Business as Usual[EB/OL]. (2015-04-22)[2026-08-15]. https://www.bsdnow.tv/86.
-- [BSD Now EP78] Pennington J. BSD Now: 78: From the Foundation (Part 2)[EB/OL]. (2015-02-25)[2026-08-15]. https://www.bsdnow.tv/78.
-- [BSD Now EP41] Pennington J. BSD Now: 41: Commit This Bit[EB/OL]. (2014-06-11)[2026-08-15]. https://www.bsdnow.tv/41.
-- [BSD Now EP39] Pennington J. BSD Now: 39: The Friendly Sandbox[EB/OL]. (2014-05-28)[2026-08-15]. https://www.bsdnow.tv/39.
-- [BSD Now EP138] Pennington J. BSD Now: 138: Rushing into BSD[EB/OL]. (2016-04-20)[2026-08-15]. https://www.bsdnow.tv/138.
+### 文献（播客参考条目）
+- [BSD Now EP1] Pennington J. BSD Now: 1: BGP & BSD[EB/OL]. (2013-09-04)[2026-08-15]. https://www.bsdnow.tv/1.
+- [BSD Now EP16] Pennington J. BSD Now: 16: Cryptocrystalline[EB/OL]. (2013-12-18)[2026-08-15]. https://www.bsdnow.tv/16.
+- [BSD Now EP21] Pennington J. BSD Now: 21: Tendresse for Ten[EB/OL]. (2014-01-22)[2026-08-15]. https://www.bsdnow.tv/21.
+- [BSD Now EP22] Pennington J. BSD Now: 22: Journaled News-Updates[EB/OL]. (2014-01-29)[2026-08-15]. https://www.bsdnow.tv/22.
+- [BSD Now EP23] Pennington J. BSD Now: 23: Time Signatures[EB/OL]. (2014-02-05)[2026-08-15]. https://www.bsdnow.tv/23.
+- [BSD Now EP25] Pennington J. BSD Now: 25: A Sixth pfSense[EB/OL]. (2014-02-19)[2026-08-15]. https://www.bsdnow.tv/25.
+- [BSD Now EP26] Pennington J. BSD Now: 26: Port Authority[EB/OL]. (2014-02-26)[2026-08-15]. https://www.bsdnow.tv/26.
+- [BSD Now EP32] Pennington J. BSD Now: 32: PXE Dust[EB/OL]. (2014-04-09)[2026-08-15]. https://www.bsdnow.tv/32.
 
 <!-- /PODCAST_MINE -->

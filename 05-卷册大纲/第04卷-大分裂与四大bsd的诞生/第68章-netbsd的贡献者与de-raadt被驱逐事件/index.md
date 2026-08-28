@@ -63,43 +63,39 @@ volume: 第04卷-大分裂与四大bsd的诞生
 - Intel Capital 投资公告 2002.9；Wasabi-Intel 合作协议摘要[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]
 
 <!-- PODCAST_MINE v20260827 -->
-<!-- Chapter: 第68章-netbsd的贡献者与de-raadt被驱逐事件 -->
+<!-- 章节主题过滤：第68章-netbsd的贡献者与de-raadt被驱逐事件 第 68 章 netbsd的贡献者与de-raadt被驱逐事件（实体评分 ≥2 命中才入选） -->
+<!-- 匹配期数：15 期，扫描 segments：15966 条 -->
 
-## 要点（播客口述史提取）
-- How did you first get involved and find your way to BSD?
-- head yet it's not an 11 uh but it should land in time for freebsd 11.0's release uh but right now
-- started with FreeBSD. So of course, we'll have the link to that in the show notes. You'll have to go
-- Well, I think it started around 1998 or something like that, as far as BSD is concerned.
-- Because my first year at BSDCon, I was the very last talk.
-- desktop which is being developed on pcbsd so that was pretty cool and then of course drew did a
-- So you can take a look at that and see what's changed in PCBSD land.
-- So if you're on 9, 10, or any supported version of FreeBSD,
+### 要点（播客口述史提取）
+- This is the first security bug fix update of the NetBSD 6.1 release branch.（BSD Now EP1 @ 6405.640）
+- NetBSD was formed, and I was one of the first four people involved in NetBSD.（BSD Now EP6 @ 522.29）
+- And NetBSD, in the NetBSD tree, we started incorporating all the other architectures（BSD Now EP6 @ 533.45）
+- with the open sorry the netbsd ones that we were looking at and it's like you know implemented（BSD Now EP11 @ 2555.959）
+- so that's the npf is the new netbsd firewall and they have uh scripting built into it in lua（BSD Now EP64 @ 492.3199）
 
-## 史料（播客提及）
-- [BSD Now EP144 @ 218.45999145507812] So that, and he also mentioned in the slides here, working with other OSs that may want pledge support as well, which, frankly, I think that would complement a lot of the other BSDs very well.
-- [BSD Now EP144 @ 2340.639892578125] But when you create your new account, don't forget to use the coupon code FREEBSDNOW, which is going to give you that $10 credit so you can run basically two months of their lower-end VM, which for a low-end VM, it's actually pretty not bad.
-- [BSD Now EP144 @ 2939.33984375] follow-up to last week, we had, of course, the breaking news that FreeBSD actually was growing
-- [BSD Now EP144 @ 3423.179931640625] that's actually a convention that's purposely used in the FreeBSD documentation
-- [BSD Now EP144 @ 593.260009765625] this one actually has landed already in FreeBSD Head,
+### 史料（播客当事人陈述）
+- This week on the show, we're going to be talking with Justin Cormack about NetBSD rump kernels.（BSD Now EP64 @ 0.0）
+- You just do BuildRump.sh, wait a bit, download some NetBSD source code and build it.（BSD Now EP64 @ 3058.840）
+- talked about running applications on the NetBSD rump kernel.（BSD Now EP64 @ 366.7799）
+- Okay, next up we have an interview with a NetBSD developer,（BSD Now EP112 @ 2691.619）
 
-## 史观（播客当事人观点与总纲映射）
-- [BSD Now EP144 @ 218.45999145507812] So that, and he also mentioned in the slides here, working with other OSs that may want pledge support as well, which, frankly, I think that would complement a lot of the other BSDs very well.
-- [BSD Now EP144 @ 2340.639892578125] But when you create your new account, don't forget to use the coupon code FREEBSDNOW, which is going to give you that $10 credit so you can run basically two months of their lower-end VM, which for a low-end VM, it's actually pretty not bad.
-  → 史观映射：总纲23——一切历史写作都是基于哲学设定的历史小说; 总纲18——时间是一种形式主义
-- [BSD Now EP144 @ 2939.33984375] follow-up to last week, we had, of course, the breaking news that FreeBSD actually was growing
-- [BSD Now EP144 @ 3423.179931640625] that's actually a convention that's purposely used in the FreeBSD documentation
-- [BSD Now EP144 @ 593.260009765625] this one actually has landed already in FreeBSD Head,
-- [BSD Now EP43 @ 1011.2999267578125] Yeah, well, that's kind of the focus the FreeBSD Foundation has been doing on which jobs they're actually funding.
-  → 史观映射：总纲11——商品是形式主义
-- [BSD Now EP43 @ 1398.47998046875] Well, I think it started around 1998 or something like that, as far as BSD is concerned.
-- [BSD Now EP43 @ 1424.9599609375] And well, it turned out that OpenBSD was the only thing which had any kind of documentation
+### 史观（播客当事人观点与总纲映射）
+- because I remember hearing the original story of NetBSD was,（BSD Now EP99 @ 4575.119）
+  → 史观映射：总纲23——一切历史写作都是基于哲学设定的历史小说
+- We used NetBSD because it was simple and clean at the time and fast.（BSD Now EP149 @ 2258.179）
+  → 史观映射：总纲24——美是消解性的体验
 
-## 辨析（播客争议与存疑点）
-- （该章节匹配播客中暂未提取到相关争议点）
+### 辨析（播客争议与存疑点）
+- [存疑脚注] a change that's disputed it'll be backed up by the core team until the（BSD Now EP186 @ 2538.58）
 
-## 文献（播客参考条目）
-- [BSD Now EP144] Pennington J. BSD Now: 144: The PF life[EB/OL]. (2016-06-01)[2026-08-15]. https://www.bsdnow.tv/144.
+### 文献（播客参考条目）
+- [BSD Now EP1] Pennington J. BSD Now: 1: BGP & BSD[EB/OL]. (2013-09-04)[2026-08-15]. https://www.bsdnow.tv/1.
+- [BSD Now EP6] Pennington J. BSD Now: 6: Doing It de Raadt Way[EB/OL]. (2013-10-09)[2026-08-15]. https://www.bsdnow.tv/6.
+- [BSD Now EP11] Pennington J. BSD Now: 11: The Gateway Drug[EB/OL]. (2013-11-13)[2026-08-15]. https://www.bsdnow.tv/11.
+- [BSD Now EP14] Pennington J. BSD Now: 14: Zettabytes for Days[EB/OL]. (2013-12-04)[2026-08-15]. https://www.bsdnow.tv/14.
 - [BSD Now EP43] Pennington J. BSD Now: 43: Package Design[EB/OL]. (2014-06-25)[2026-08-15]. https://www.bsdnow.tv/43.
-- [BSD Now EP376] Pennington J. BSD Now: 376: Build stable packages[EB/OL]. (2020-11-12)[2026-08-15]. https://www.bsdnow.tv/376.
+- [BSD Now EP47] Pennington J. BSD Now: 47: DES Challenge IV[EB/OL]. (2014-07-23)[2026-08-15]. https://www.bsdnow.tv/47.
+- [BSD Now EP64] Pennington J. BSD Now: 64: Rump Kernels Revisited[EB/OL]. (2014-11-19)[2026-08-15]. https://www.bsdnow.tv/64.
+- [BSD Now EP99] Pennington J. BSD Now: 99: BSD Gnow[EB/OL]. (2015-07-22)[2026-08-15]. https://www.bsdnow.tv/99.
 
 <!-- /PODCAST_MINE -->

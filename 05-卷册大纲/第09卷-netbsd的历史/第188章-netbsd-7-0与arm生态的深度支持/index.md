@@ -47,51 +47,34 @@ volume: 第09卷-netbsd的历史
 - netbsd.db netbsd-src 仓库 commit `74e8c71cd1136230728133034816cf03b1f4af1f`、`097731dea099250bc460a975c393fc370c283a95`；NVD CVE-2017-12836、CVE-2018-5732、CVE-2018-5733 条目；ISC DHCP 安全公告 ［A］<!-- DB_REF:netbsd.duckdb -->> **数据库引用（netbsd.duckdb）**：本子节对应 netbsd 代码仓库。> 2017-2017 年间：52,858 次提交。> 仓库总览：1,999,412 次提交，4,754 位贡献者，1992-07-13 至 2026-08-24。
 
 <!-- PODCAST_MINE v20260827 -->
-<!-- Chapter: 第188章-netbsd-7-0与arm生态的深度支持 -->
+<!-- 章节主题过滤：第188章-netbsd-7-0与arm生态的深度支持 第 188 章 netbsd-7-0与arm生态的深度支持（实体评分 ≥2 命中才入选） -->
+<!-- 匹配期数：15 期，扫描 segments：13911 条 -->
 
-## 要点（播客口述史提取）
-- Oh, exactly. And I was also happy to do a couple of Google Summary of Code programs. So actually, the first one I applied as a student, I was still enrolled as a student, and I applied to do something with FreeBSD.
-- But when he switched to FreeBSD, he didn't have a single failure for like a year.
-- I think it built on the engineering culture and excellence that was also present in the FreeBSD project.
-- And I started giving talks at conferences in Russia about what FreeBSD is, but also what my workflow as a sysadmin is.
-- And talking about our solutions, our view towards how systems engineering in relation to FreeBSD should probably be evolved.
-- How did you first get introduced to and get involved with the BSDs?
-- and currently they only support open bsd as a guest well that's that's how we started on the
-- and so of course we're back a couple versions of freebsd he was trying to boot freebsd 11 stable
+### 要点（播客口述史提取）
+- This is the first security bug fix update of the NetBSD 6.1 release branch.（BSD Now EP1 @ 6405.640）
+- Since then it's been ported to FreeBSD, NetBSD, DragonflyBSD, and Mac OS X.（BSD Now EP35 @ 3067.179）
 
-## 史料（播客提及）
-- [BSD Now EP108 @ 1184.3199462890625] Oh, exactly. And I was also happy to do a couple of Google Summary of Code programs. So actually, the first one I applied as a student, I was still enrolled as a student, and I applied to do something with FreeBSD.
-- [BSD Now EP108 @ 1517.9400634765625] One was, I think, to Brooks Davis, who was running a big FreeBSD cluster at Aerospace Corporation in America.
-- [BSD Now EP108 @ 1590.0399169921875] He didn't need InfiniBand that much, which wasn't present in FreeBSD at the time.
-- [BSD Now EP108 @ 1680.8800048828125] I think it built on the engineering culture and excellence that was also present in the FreeBSD project.
-- [BSD Now EP108 @ 2726.239990234375] I think he's currently a NetBSD package source committer.
+### 史料（播客当事人陈述）
+- But it looks like they're going to be having presentations on ARM on NetBSD and FreeBSD.（BSD Now EP26 @ 328.0999）
+- So next up, we have an article about the use of NetBSD（BSD Now EP16 @ 548.5599）
+- And I guess next up, we also have an article about NetBSD today, and I guess they dumped（BSD Now EP22 @ 919.3599）
+- trend at other conferences. So if you're a NetBSD developer, user, fan, definitely come on out and（BSD Now EP39 @ 411.2199）
 
-## 史观（播客当事人观点与总纲映射）
-- [BSD Now EP108 @ 1184.3199462890625] Oh, exactly. And I was also happy to do a couple of Google Summary of Code programs. So actually, the first one I applied as a student, I was still enrolled as a student, and I applied to do something with FreeBSD.
-- [BSD Now EP108 @ 1517.9400634765625] One was, I think, to Brooks Davis, who was running a big FreeBSD cluster at Aerospace Corporation in America.
-  → 史观映射：总纲20——历史地理塑造思想土壤
-- [BSD Now EP108 @ 1590.0399169921875] He didn't need InfiniBand that much, which wasn't present in FreeBSD at the time.
-  → 史观映射：总纲18——时间是一种形式主义
-- [BSD Now EP108 @ 1680.8800048828125] I think it built on the engineering culture and excellence that was also present in the FreeBSD project.
-- [BSD Now EP108 @ 2726.239990234375] I think he's currently a NetBSD package source committer.
-- [BSD Now EP108 @ 2764.579833984375] That was one of the reasons for me really diving deep into going to BSD days and EuroBSDCon for a few years in succession and BSDCAN.
-- [BSD Now EP108 @ 2990.31982421875] and server providers to actually get support for FreeBSD
-- [BSD Now EP108 @ 3793.239990234375] And it turned out that every one of them was perfectly mountable and readable under FreeBSD.
+### 史观（播客当事人观点与总纲映射）
+- And honestly, that lack of experience with NetBSD and OpenBSD hurt my score on the（BSD Now EP21 @ 4976.139）
+  → 史观映射：总纲9——经验优先
 
-## 辨析（播客争议与存疑点）
-- [存疑脚注] [BSD Now EP164 @ 4212.77978515625] on the other free bsd machine on the other side coming through um and you know so it is possible
-- [存疑脚注] [BSD Now EP131 @ 1509.5999755859375] FreeBSD split apart from OpenBSD and NetBSD
-- [存疑脚注] [BSD Now EP131 @ 1589.8798828125] Mind you, they said them back in 2009, but on the other hand, I can't imagine OpenBSD would have dropped what they were doing,
-- [存疑脚注] [BSD Now EP428 @ 135.739990234375] starting back in October of 1995 as a fork of NetBSD.
+### 辨析（播客争议与存疑点）
+- （该章节匹配播客中未提取到争议性陈述）
 
-## 文献（播客参考条目）
-- [BSD Now EP108] Pennington J. BSD Now: 108: ServeUp BSD[EB/OL]. (2015-09-23)[2026-08-15]. https://www.bsdnow.tv/108.
-- [BSD Now EP164] Pennington J. BSD Now: 164: Virtualized COW / PI?[EB/OL]. (2016-10-19)[2026-08-15]. https://www.bsdnow.tv/164.
-- [BSD Now EP131] Pennington J. BSD Now: 131: BSD behind the chalkboard[EB/OL]. (2016-03-02)[2026-08-15]. https://www.bsdnow.tv/131.
-- [BSD Now EP47] Pennington J. BSD Now: 47: DES Challenge IV[EB/OL]. (2014-07-23)[2026-08-15]. https://www.bsdnow.tv/47.
-- [BSD Now EP201] Pennington J. BSD Now: 201: Skip grep, use awk[EB/OL]. (2017-07-05)[2026-08-15]. https://www.bsdnow.tv/201.
-- [BSD Now EP83] Pennington J. BSD Now: 83: woN DSB[EB/OL]. (2015-04-01)[2026-08-15]. https://www.bsdnow.tv/83.
-- [BSD Now EP127] Pennington J. BSD Now: 127: DNS, Black Holes & Willem[EB/OL]. (2016-02-03)[2026-08-15]. https://www.bsdnow.tv/127.
-- [BSD Now EP428] Pennington J. BSD Now: 428: Cult of BSD[EB/OL]. (2021-11-11)[2026-08-15]. https://www.bsdnow.tv/428.
+### 文献（播客参考条目）
+- [BSD Now EP1] Pennington J. BSD Now: 1: BGP & BSD[EB/OL]. (2013-09-04)[2026-08-15]. https://www.bsdnow.tv/1.
+- [BSD Now EP16] Pennington J. BSD Now: 16: Cryptocrystalline[EB/OL]. (2013-12-18)[2026-08-15]. https://www.bsdnow.tv/16.
+- [BSD Now EP21] Pennington J. BSD Now: 21: Tendresse for Ten[EB/OL]. (2014-01-22)[2026-08-15]. https://www.bsdnow.tv/21.
+- [BSD Now EP22] Pennington J. BSD Now: 22: Journaled News-Updates[EB/OL]. (2014-01-29)[2026-08-15]. https://www.bsdnow.tv/22.
+- [BSD Now EP23] Pennington J. BSD Now: 23: Time Signatures[EB/OL]. (2014-02-05)[2026-08-15]. https://www.bsdnow.tv/23.
+- [BSD Now EP25] Pennington J. BSD Now: 25: A Sixth pfSense[EB/OL]. (2014-02-19)[2026-08-15]. https://www.bsdnow.tv/25.
+- [BSD Now EP26] Pennington J. BSD Now: 26: Port Authority[EB/OL]. (2014-02-26)[2026-08-15]. https://www.bsdnow.tv/26.
+- [BSD Now EP32] Pennington J. BSD Now: 32: PXE Dust[EB/OL]. (2014-04-09)[2026-08-15]. https://www.bsdnow.tv/32.
 
 <!-- /PODCAST_MINE -->

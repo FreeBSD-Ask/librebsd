@@ -50,31 +50,34 @@ volume: 第15卷-许可证哲学与法律分析
 - 中国裁判文书网；最高法知识产权法庭；法律评论[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]FreeBSD 社区论文：[FP-2021-008] smart(8) Update: A Permissively-Licensed Alternative to smartctl(8)（Michael Dexter（迈克尔·德克斯特）; Chuck Tuffli，2021）<https://papers.freebsd.org/2021/eurobsdcon/dexter-tuffli-update_on_smart/>FreeBSD 社区论文：[FP-2019-057] Porting the Robot Operating System (ROS) to FreeBSD（Trenton Schulz，2019）<https://papers.freebsd.org/2019/eurobsdcon/schulz-porting_the_robot_operating_system_to_freebsd/>FreeBSD 社区论文：[FP-2016-006] diskctl(8): A permissively-licensed S.M.A.R.T. and raw disk command utility framework（Michael Dexter，2016）<https://papers.freebsd.org/2016/asiabsdcon/dexter-diskctl/>FreeBSD 社区论文：[FP-2016-009] TLEM, very high speed link emulation（Luigi Rizzo; Giuseppe Lettieri，2016）<https://papers.freebsd.org/2016/asiabsdcon/luigi-tlem/>### 史观映射> BSD 与 GPL 的辩论不是技术路线之争，而是自由本体论之争——BSD 的“消极自由”（不受限制地使用）与 GPL 的“积极自由”（保障他人自由）在以赛亚·柏林的意义上构成不可调和的二分。BSD 社区选择信任用户的善意，GPL 社区选择约束用户的恶意，二者对人性假设的根本分歧决定了许可证设计的根本差异。然而历史表明，两种自由观各有所失——BSD 的信任被 Apple 等巨头“选择性吸收”所利用，GPL 的约束催生了许可证传染的恐惧与合规成本。FreeBSD Foundation 作为 501(c)(3) 公共慈善实体，其税务身份限制了它在许可证政策游说中的发声，而 Linux Foundation 作为 501(c)(6) 商业联盟可直接参与开源政策游说——治理结构的差异进一步加剧了 BSD 与 GPL 阵营的政策影响力不对称。BSD 化工程是 BSD 社区对许可证纯化的最激进实践——系统性替换 GPL 组件为 BSD 替代品，但这究竟是哲学坚持还是形式主义化的教条，社区内部亦有分歧。AI 时代为这场古老辩论注入了新困境——LLM 训练使用 BSD 代码无需署名，BSD 许可证的宽松设计在 AI 场景中可能被解读为允许“无署名零回馈”，这与原初促进传播的哲学意图存在张力---[^doubt-resolved-1394]: 据 Mac OS X Internals A Systems Approach (Amit Singh（阿米特·辛格）)  (未署名) 消解[^doubt-resolved-1395]: 据 Mac OS X Internals A Systems Approach (Amit Singh)  (未署名) 消解<!-- NEWREF:2417 --><!-- NEWREF:2090 --><!-- NEWREF:2107 --><!-- NEWREF:2423 --><!-- NEWREF:2424 --><!-- NEWREF:2425 --><!-- NEWREF:2547 --><!-- NEWREF:2487 --><!-- NEWREF:2474 --><!-- NEWREF:2476 --><!-- NEWREF:2468 --><!-- NEWREF:2419 --><!-- NEWREF:2429 --><!-- NEWREF:2430 --><!-- NEWREF:2491 --><!-- NEWREF:2490 --><!-- NEWREF:2584 --><!-- NEWREF:2585 --><!-- NEWREF:2586 --><!-- NEWREF:2587 --><!-- NEWREF:2588 --><!-- NEWREF:2589 --><!-- NEWREF:2590 --><!-- NEWREF:2591 --><!-- NEWREF:2592 --><!-- 2026-08-05 补：283.9 国内外判例综述关联本次考据全部一手原件（美国/德国/法国/中国判例谱系） -->
 
 <!-- PODCAST_MINE v20260827 -->
-<!-- Chapter: 第284章-foundation注册与bsdvgpl哲学辩论 -->
+<!-- 章节主题过滤：第284章-foundation注册与bsdvgpl哲学辩论 第 284 章 foundation注册与bsdvgpl哲学辩论（实体评分 ≥2 命中才入选） -->
+<!-- 匹配期数：15 期，扫描 segments：13665 条 -->
 
-## 要点（播客口述史提取）
-- For the last couple releases now for instance the OpenBSD snapshots come out and the SHA256
-- The way it currently works for the OpenBSD releases is we are publishing a SHA256.sig
-- PGP keys for everybody should be in the printed version of the FreeBSD handbook as
-- So there's also a portable version, so you can install OpenNTPD from FreeBSD ports or
-- First up we got some information about getting started with FreeBSD.
-- We got a new video and blog series about getting started of course with FreeBSD.
-- I wrote the first version of the new free BSD installer that FS stuff
-- AMD graphics are now officially supported with all the changes in free BSD 10 and importing
+### 要点（播客口述史提取）
+- So, next item is that OpenBSD Foundation has their 2018 fundraising campaign started.（BSD Now EP233 @ 4807.479）
+- That's really neat to see. Yeah, so they have a quote here. It says they've already started the 2014 fundraising efforts as well（BSD Now EP23 @ 116.7999）
+- happened. We have a link to their foundation's blog spot site. Anything you（BSD Now EP114 @ 4497.579）
 
-## 史料（播客提及）
-- [BSD Now EP23 @ 1229.5400390625] installing or upgrading OpenBSD I think the way a lot of other projects do this
-- [BSD Now EP23 @ 3681.479736328125] He wrote us some weeks ago actually about migrating from Ubuntu to FreeBSD and ZFS.
+### 史料（播客当事人陈述）
+- This week on BSD Now, we'll be talking to Amital Schleyer of the NetBSD Foundation about package source,（BSD Now EP12 @ 3.66）
+- BSD now listeners that contributed the foundation was really glad that we were able to send some people their way and they mentioned us on Facebook（BSD Now EP23 @ 164.7599）
+- like the Mega Core machine they did for the FreeBSD Foundation. I've talked about it a（BSD Now EP23 @ 496.2199）
+- He was sponsored by the foundation to go to VST Can, so he has to submit a trip report and explain what he did there and what he saw and so on.（BSD Now EP40 @ 127.77）
 
-## 史观（播客当事人观点与总纲映射）
-- [BSD Now EP23 @ 1229.5400390625] installing or upgrading OpenBSD I think the way a lot of other projects do this
-- [BSD Now EP23 @ 3681.479736328125] He wrote us some weeks ago actually about migrating from Ubuntu to FreeBSD and ZFS.
-  → 史观映射：总纲10——动手者创造历史
+### 史观（播客当事人观点与总纲映射）
+- （该章节匹配播客中未提取到当事人观点性陈述）
 
-## 辨析（播客争议与存疑点）
-- （该章节匹配播客中暂未提取到相关争议点）
+### 辨析（播客争议与存疑点）
+- （该章节匹配播客中未提取到争议性陈述）
 
-## 文献（播客参考条目）
+### 文献（播客参考条目）
+- [BSD Now EP12] Pennington J. BSD Now: 12: Collecting SSHells[EB/OL]. (2013-11-20)[2026-08-15]. https://www.bsdnow.tv/12.
 - [BSD Now EP23] Pennington J. BSD Now: 23: Time Signatures[EB/OL]. (2014-02-05)[2026-08-15]. https://www.bsdnow.tv/23.
+- [BSD Now EP31] Pennington J. BSD Now: 31: Edgy BSD Users[EB/OL]. (2014-04-01)[2026-08-15]. https://www.bsdnow.tv/31.
+- [BSD Now EP40] Pennington J. BSD Now: 40: AirPorts & Packages[EB/OL]. (2014-06-04)[2026-08-15]. https://www.bsdnow.tv/40.
+- [BSD Now EP60] Pennington J. BSD Now: 60: Don't Buy a Router[EB/OL]. (2014-10-22)[2026-08-15]. https://www.bsdnow.tv/60.
+- [BSD Now EP106] Pennington J. BSD Now: 106: Multipath TCP[EB/OL]. (2015-09-09)[2026-08-15]. https://www.bsdnow.tv/106.
+- [BSD Now EP114] Pennington J. BSD Now: 114: BSD-Schooling[EB/OL]. (2015-11-04)[2026-08-15]. https://www.bsdnow.tv/114.
+- [BSD Now EP131] Pennington J. BSD Now: 131: BSD behind the chalkboard[EB/OL]. (2016-03-02)[2026-08-15]. https://www.bsdnow.tv/131.
 
 <!-- /PODCAST_MINE -->
