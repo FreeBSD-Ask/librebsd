@@ -49,16 +49,9 @@ volume: 15
 - Junger v. Daley, 8 F. Supp. 2d 708 (N.D. Ohio 1998)[Z/OL]. 美国北俄亥俄联邦地区法院. <https://casetext.com/case/junger-v-daley>；Executive Order 13026, 61 Fed. Reg. 58767（1996-11-15）；15 C.F.R. Part 730-774（EAR） ［A］
 - Junger v. Daley, 225 F.3d 732 (6th Cir. 2000)[Z/OL]. 美国第六巡回上诉法院，2000-04-04. <https://casetext.com/case/junger-v-daley>；ACLU. In Legal First, Federal Appeals Court is Unanimous[EB/OL]. (2000-04-04). <<https://www.aclu.org/press-releases/legal-first-federal-appeals-court-unanimous-first-amendment-appli>
 - Junger v. Daley, 225 F.3d 732 (6th Cir. 2000)；Bernstein v. U.S. Dept. of Justice, 176 F.3d 1132 (9th Cir. 1999)；Revisions to Encryption Items, 65 Fed. Reg. 2492（2000-01-12）；FreeBSD/OpenBSD/NetBSD 加密组件集成记录 ［A］
-<!-- NEWREF:2374 -->
-<!-- NEWREF:2375 -->
-<!-- NEWREF:2376 -->
-<!-- NEWREF:2377 -->
-<!-- NE
-- WELTE v. Sitecom Deutschland GmbH, 21 O 6123/04 (LG München I, 2004-05-19)[Z/OL]. 德国慕尼黑第一地方法院. <https://www.jbb.de/fileadmin/download/judgment_dc_munich_gpl.pdf>；Höppner J. The GPL prevails: An analysis of the first-ever Court decision on the validity and effectivity of the GPL[J]. SCRIPT-ed, 2004,
-- ANDERSEN v. Monsoon Multimedia, Inc., 07-CV-8205 (S.D.N.Y. 2007)[Z/OL]. 美国纽约南区联邦地区法院. <https://www.courtlistener.com/>；Software Freedom Conservancy v. Best Buy, Inc. et al.（2009-12-14, S.D.N.Y.）；Free Software Foundation, Inc. v. Cisco Systems, Inc.（S.D.N.Y. 2008-12-11）；SFLC/SFC 官方新闻稿 ［A］
-- WALLACE v. Free Software Foundation, 1:05-cv-00618 (S.D. Ind. 2006)[Z/OL]. 美国印第安纳南区联邦地区法院. <https://www.groklaw.net/pdf/WallaceFSFGrantingDismiss.pdf>；VERSATA Software, Inc. v. Ameriprise Financial, Inc., A-14-CA-12-SS (W.D. Tex. 2014-03-11) Filing 28 Order[Z/OL]. <https://www.govinfo.gov/app/detail
-- HELLWIG v. VMware, Inc.（LG Hamburg 2016-08-07；OLG Hamburg 2019-02-28）[Z/OL]. 德国汉堡法院. <https://www.sfconservancy.org/news/2019/apr/02/vmware-no-appeal/>；Software Freedom Conservancy v. Vizio, Inc.（Orange County Superior Court, 2021-10-19）[Z/OL]. <https://sfconservancy.org/vizio> ［A］
-
 ## 自反性声明
 
 本章所书皆是形式主义化的重构，并非对“真实的 BSD 历史”的呈现。本章的章节划分、事件选择、叙事策略、因果归因——全部基于编纂者的哲学设定。本章承认这些局限，不声称客观或中立，欢迎被更诚实的叙事所超越。
+
+- Junger v. Daley, 225 F.3d 732 (6th Cir. 2000)[Z]. 2000.
+

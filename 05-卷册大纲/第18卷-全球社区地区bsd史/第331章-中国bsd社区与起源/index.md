@@ -68,11 +68,6 @@ volume: 18
 - CISCO Systems, Inc. v. Huawei Technologies Co., Ltd., No. 2:03-cv-00214 (E.D. Tex. 2003)[Z/OL]. 美国德州东区联邦地区法院；中国知识产权局. 海外知识产权纠纷应对指导典型案例（2025 年第一期）[EB/OL]. <https://scjgj.luan.gov.cn/scjgzt/zscq/5408714.html> ［A］
 - Neutral Expert's Final Source Code Report（2004-06-15，部分披露于 Cisco Blog 2012）；CISCO. Huawei and Cisco's Source Code: Correcting the Record[EB/OL]. (2012). <https://news-blogs.cisco.com/news/huawei-and-ciscos-source-code-correcting-the-record>；中国电子报. 华为、思科诉讼案尘埃落定（2004-08-03） ［A］
 - 华为开源/知识产权资料；本卷 330.7、330.9 相关记录；CISCO. Correcting the Record（2012）；中国知识产权局典型案例（2025） ［A］
-<!-- NEWREF:2408 -->
-<!-- NEWREF:2409 -->
-<!-- NEWREF:2436 -->
-- 论坛演变记录；社区成员访谈；邮件列表讨论 ［A］
-
 ## 330.2.2 FreeBSD China（freebsdchina.org）的运营与终止
 
 - 要点：FreeBSD China 从早期活跃逐渐衰落，最终停止运营；演变过程涉及社区核心成员流失、Linux 浪潮冲击、社交媒体转移等多重因素
@@ -109,3 +104,6 @@ volume: 18
 ## 自反性声明
 
 本章所书皆是形式主义化的重构，并非对“真实的 BSD 历史”的呈现。本章的章节划分、事件选择、叙事策略、因果归因——全部基于编纂者的哲学设定。本章承认这些局限，不声称客观或中立，欢迎被更诚实的叙事所超越。
+
+- CISCO Systems, Inc. v. Huawei Technologies Co., Ltd., No. 2:03-cv-00214 (E.D. Tex. 2003)[Z/OL]. 美国德州东区联邦地区法院, 2003-01-23 起诉, 2004-07-28 终止. https://news-blogs.cisco.com/news/huawei-and-ciscos-source-code-correcting-the-record.
+
