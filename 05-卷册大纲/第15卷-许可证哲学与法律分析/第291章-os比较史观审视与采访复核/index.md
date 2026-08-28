@@ -40,7 +40,7 @@ volume: 15
 
 - Linux 基金会项目列表；许可证对比研究[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]
 
-## 290.11.2 GNU 项目对其他开源项目的效应对比
+## 291.11.2 GNU 项目对其他开源项目的效应对比
 
 - 要点：GNU 项目通过 GPL 工具链（GCC、glibc、bash、coreutils、Emacs 等）影响其他开源项目；GNU 工具链长期是 Linux 发行版默认工具链，也是 BSD 项目早期默认工具链（后被 Clang/LLVM 替代）；GNU 项目跨项目影响以“工具链基础”见长，BSD 跨项目影响以“许可证与设
 - Linux Foundation. Projects [EB/OL]. <https://www.linuxfoundation.org/projects>; GNU Project. Official Website [EB/OL]. <https://www.gnu.org/>; FreeBSD 10.0 Release Notes [EB/OL]. (2014-01-31). <https://www.freebsd.org/releases/10.0R/relnotes/>; OpenSolaris. Archive [EB/OL]. <<https://www.opensolaris>.
