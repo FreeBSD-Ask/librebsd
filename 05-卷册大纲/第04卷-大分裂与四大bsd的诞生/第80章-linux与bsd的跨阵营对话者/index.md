@@ -53,3 +53,43 @@ volume: 04
 ## 自反性声明
 
 本章所书皆是形式主义化的重构，并非对“真实的 BSD 历史”的呈现。本章的章节划分、事件选择、叙事策略、因果归因——全部基于编纂者的哲学设定。本章承认这些局限，不声称客观或中立，欢迎被更诚实的叙事所超越。
+
+<!-- PODCAST_REVIEW v20260829 -->
+<!-- 语义复核范围：BSD Now EP345、BSD Now EP335（共 2 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
+
+**要点**：
+
+- NetBSD 8.2 作为 8.x 树的第三个点版本发布，聚合此前安全修复与旧硬件引导、Hyper-V、EFI 等改进。（BSD Now EP345，[81.96-118.92]，L2）
+- 本期主体是 JT 征集的社区反馈：多位听众讲述从 Linux 转投 BSD 的经历，涉及 systemd 反感、PF 抗攻击、ZFS 回滚与 BSD 社区友好度。（BSD Now EP345，[1090.66-1183.78]，L2）
+- 许可证争论在反馈中被表述为‘BSD 许可证是温和路径、GPL 是强制路径’的对立，主持人回应两者在自由目标上同路。（BSD Now EP345，[1188.74-1223.54]，L2）
+- Deb Goodkin 与 FreeBSD Foundation 在 Linux Conf AU 内组织首个 FreeBSD mini-conf，Ben Woods、Peter Grehan 等演讲者出席。（BSD Now EP335，[1272.54-1399.32]，L2）
+- Hyperbola 联合创始人 Andre 解释弃 Linux 内核的原因：HDCP 等 DRM、GRSecurity 停止公开补丁、Rust 商标限制，并计划 fork OpenBSD 内核。（BSD Now EP335，[419.28-605.24]，L2）
+- JT 对‘从 Linux 迁移到 BSD’一文四个论点逐条反驳：Linux 碎片化被高估、商业介入非坏事、社区优劣是比例问题、许可证争论难有定论。（BSD Now EP335，[1941.52-2505.94]，L2）
+
+**史料**：
+
+- NetBSD 8.2 发布公告（Maya Rashish 撰写），列出安全修复与引导改进。（BSD Now EP345，[81.96-118.92]，L2）
+- 听众来信中的亲身经历：Debian 防火墙受攻击、改用 OpenBSD 与 PF 后稳定、再以 FreeBSD 与 ZFS 搭存储。（BSD Now EP345，[1722.54-1828.54]，L1）
+- FreeBSD 打包故事：陌生人在作者完成 Debian 打包前即已将其应用打包进 FreeBSD。（BSD Now EP345，[1257.9-1307.1]，L1）
+- Ruben 撰写的澳大利亚 FreeBSD mini-conf 回顾，含演讲者名单与议题。（BSD Now EP335，[1272.54-1438.44]，L2）
+- It's FOSS 的 John Paul 对 Hyperbola 联合创始人 Andre 的访谈。（BSD Now EP335，[419.28-426.72]，L2）
+- Kamil Rytarowski 的 NetBSD 博客：改进 ptrace API 并为 LLVM 10 做准备。（BSD Now EP335，[935.22-964.18]，L2）
+
+**史观**：
+
+- 总纲6 和解优于斗争：总纲6 和解优于斗争：听众与主持人共同主张 Linux 与 BSD 目标相同、应减少阵营内耗，以展示各自优势代替互相贬低。（BSD Now EP345，[1151.7-1183.78]，L2）
+- 总纲8 本体论上各方平等：总纲8 本体论上各方平等：对 Linux 与 BSD 的许可证、社区规模比较被归结为不同哲学路径，而非优劣高下。（BSD Now EP345，[1188.74-1223.54]，L2）
+- 总纲13 法律与道德是利益分配：总纲13 法律与道德是利益分配：Hyperbola 的 fork 决策围绕 GPL、四条款 BSD 与 CDDL 的兼容性展开，许可证成为利益与自由的分配工具。（BSD Now EP335，[672.14-806.78]，L2）
+- 总纲6 和解优于斗争：总纲6 和解优于斗争：JT 主张以正面理由论证 BSD 而非贬低 Linux，正面论证优于负面论证。（BSD Now EP335，[1971.68-1991.92]，L2）
+
+**辨析**：
+
+- 转写中多名写信人姓名与内容混杂（如‘Jason’ 与‘Jamie’ 指代可能互换），引用社区反馈时须以原邮件为准。　[存疑脚注] 转写写信人姓名存疑（BSD Now EP345，[1113.94-1225.54]，L4）
+- Hyperbola 拟 fork OpenBSD 内核的计划被主持人质疑为工作量巨大、可持续性存疑，属开放性争议而非定论。　[存疑脚注] Hyperbola BSD 计划可行性存疑（BSD Now EP335，[829.34-903.78]，L3）
+
+**文献**：
+
+- [BSD Now EP345] Pennington J. BSD Now: 345: Switchers to BSD[EB/OL]. (2020-04-09)[2026-08-15]. https://www.bsdnow.tv/345.
+- [BSD Now EP335] Pennington J. BSD Now: 335: FreeBSD Down Under[EB/OL]. (2020-01-30)[2026-08-15]. https://www.bsdnow.tv/335.
+
+<!-- /PODCAST_REVIEW -->

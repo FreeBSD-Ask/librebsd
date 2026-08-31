@@ -68,3 +68,52 @@ volume: 06
 ## 自反性声明
 
 本章所书皆是形式主义化的重构，并非对“真实的 BSD 历史”的呈现。本章的章节划分、事件选择、叙事策略、因果归因——全部基于编纂者的哲学设定。本章承认这些局限，不声称客观或中立，欢迎被更诚实的叙事所超越。
+
+<!-- PODCAST_REVIEW v20260829 -->
+<!-- 语义复核范围：BSD Now EP48、BSD Now EP43、BSD Now EP18（共 3 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
+
+**要点**：
+
+- Brent Cook 一手自述其入社路径：1998 年前后在得克萨斯大学以 FreeBSD 1/2 运行 web 服务器约三四年，其后在嵌入式公司用 FreeBSD 制作专用防火墙 appliance；在 Boundary 公司的跨平台 agent 中嵌入 OpenSSL 长期受构建缓慢与 API 混乱之苦，Heartbleed 事件后转向替代方案。他以业余时间搭建自动构建环境测试 LibreSSL portable 版约两个月，期间 Theo de Raadt 主动邮件联系他讨论 PRNG 改动，并邀其赴斯洛文尼亚参加 hackathon，最终成为正式 OpenBSD developer。（BSD Now EP48，[1166.52-1321.73]，L1）
+- portable 化工程路径：Cook 模仿 BSD makefiles 建立构建框架，选 autoconf/automake 以覆盖 HP-UX 等长尾平台；最大难点在 PRNG——libBSD 的 arc4random 实现不达 OpenBSD 安全标准，libottery 方案亦被 Theo 否定；最终推动 getentropy(2) 新系统调用进入多个平台，使其他操作系统无需模拟 OpenBSD 的 sysctl 接口，内存分配保护等亦重构为可移植层。初版全用 C 而非汇编，其基准测试显示在 Ubuntu 上 LibreSSL 的 C 版块密码反而比 OpenSSL 快近两倍，引入汇编时将按现代编译器能力批判性评估，不再为旧编译器绕弯。（BSD Now EP48，[1404.57-1675.71]，L1）
+- Bob Beck 致节目邮件指出：FreeBSD 内置 arc4random 为陈旧实现（仅依赖 RC4 流程、随机性强度不足），OpenBSD 版本在其移植后已重写且行为不同，故 FreeBSD 目前并非受支持的 LibreSSL 运行平台；Ted Unangst 已提交更新 FreeBSD arc4random 的补丁，当时正由 FreeBSD 安全团队评审，通过后方能正式支持 LibreSSL。　[存疑脚注] 转写存在语音识别误差（如 R4Random、Ted Unanks 等），函数与人名细节以邮件原文为准。（BSD Now EP48，[3346.28-3436.28]，L2）
+- pkg 1.3.0 发布：历时九个月、新增约 6.7 万行代码、29 位贡献者；引入真正的 SAT 求解器自动处理 Perl、PHP 等多版本升级冲突，不再需要手工 pkg set -o；引入 Capsicum 沙箱代码使多数操作在受控环境执行；重写安装流程以正确处理 SCHG 系统不可变标志；更细粒度的锁提升并行度；扩大 libUCL 使用并简化 API。7 月 23 日发布 1.3.0 后连发 1.3.1、1.3.2、1.3.3 修复，poudriere 仓库构建亦多核化。（BSD Now EP48，[710.35-834.96]，L2）
+- Marc Espie（转写作 Mark Espy）自述约 1998 年在 Amiga 上寻找类 Unix 系统，因 OpenBSD 文档最清晰可循而完成安装；其后因在邮件列表指出 ports 缺陷，被 Theo de Raadt 以“你觉得自己能做得更好？”反激，回称“当然”后即获提交账号——社区吸纳新人的偶然路径与低门槛授权在此留下当事人一手证词。（BSD Now EP43，[1396.12-1486.16]，L1）
+- 构建集群方面，Espie 说明自己并非实际运维者，多数构建机安置于成员家中地下室；关键决策是完全不做交叉编译，并举 NetBSD 曾因全交叉编译致 Vax 构建环境损坏一年无人察觉为反例。DPB 构建器刻意设计为启动即建、出错立现，失败包仅留日志，修复 ports 树后删除日志即自动续跑，以适应动辄一周全量构建、构建者白天另有正职的慢速集群节奏。（BSD Now EP43，[1601.88-1843.84]，L1）
+- 关于与 FreeBSD ports 的分岔，Espie 称如今几乎一切皆不同：最初改动源于速度，删除冗余抽象与未测代码；二进制包约 2000 至 2001 年即告可用，而 FreeBSD 迟至 pkgng 出现前两三年才具备同等能力；因原包工具系仓促写成、自评“好用的垃圾”、从安全视角完全不设防（语出原作者，归属见辨析条），遂以 Perl 整体重写，目标为包升级能力，历时两三年，至约 2006 年实现批量升级。（BSD Now EP43，[1855.82-2015.20]，L1）
+- 签名体系方面，Espie 指出包签名早于 Signify：其 X509 签名方案此前已在 OpenBSD 之外的生产环境使用，Theo de Raadt 写出 Signify 后仅需极少量胶水代码接入；真正耗时的是政策决定——由谁签名、证书置于何处；且签名机制不硬编码官方源，第三方 M:Tier 借此为 stable/release 提供安全包更新，用户加入其公钥即获透明识别。　[存疑脚注] 转写将 Signify 误作 Cinefy/Sinify、M:Tier 误作 MTIR/MTA，语义可辨但专名须以原音频或其他来源核对（BSD Now EP43，[2136.04-2333.72]，L1）
+- 主持人转述 Justin Sherrill 的观点：PF 已被 FreeBSD、NetBSD、macOS 等吸收，但各实现基于不同时期的 OpenBSD 版本且无版本号，导致规则语法与功能分化。（BSD Now EP18，[346.52-362.32]，L2）
+- 节目讨论以 OpenSSH portable 或 OpenZFS 共同核心为参照，为 PF 建立可移植层（被称为 PPL 或 OpenPF 构想）；Henning Brauer 表示愿意协助，但该项目当时尚未落地。（BSD Now EP18，[454.58-557.28]，L2）
+- Baptiste Daroussin 自述因厌倦反复源码编译而设计 PackageNG，后在 BSDCan 演讲并取得 ports commit bit，成为 portmgr 成员。（BSD Now EP18，[993.58-1029.66]，L1）
+- PackageNG 方向为将 poudriere 由面向最终用户的安装工具转为基础设施构建工具，并引入 staging、autoplist、子包、flavors/providers 及基于 fingerprint 的仓库签名，以解决冲突、改名与多版本包问题。（BSD Now EP18，[1049.62-1253.12]，L1）
+- OpenBSD 长期缺乏官方跨版本升级工具，第三方 ksh 脚本 OpenBSD Binary Upgrade 可完成 5.3 到 5.4 的二进制升级与旧文件清理，但仅校验 SHA256 而不提供签名。（BSD Now EP18，[2198.60-2266.36]，L2）
+
+**史料**：
+
+- 对 OpenSSL 代码库的一手观察：Cook 称其中大量不安全且无人维护的代码，密码学部分呈数学家与博士生风格（A、B、C、D、E、F 式变量命名），静态分析发现大量“遗传性旧代码”——不执行任何功能亦无害。他自述作为美国公民刻意不修改加密算法本体，以免触碰出口管制敏感区，这构成出口管制持续约束开源加密开发行为的一手证词。（BSD Now EP48，[2292.04-2361.23]，L1）
+- 该期提及并可回溯的一手材料包括：Poul-Henning Kamp 刊于 ACM Queue 的《Quality Software Costs Money — Heartbleed was Free》（由博客扩写而成）；FreeBSD-SA-14:16（file/libmagic 的 CDF 指针解引用与越界读、awk 正则资源耗尽、PE 越界读）及 iconv 相关公告、影响 Java 的 PCID errata；OpenBSD 5.5 errata 003（2014 年 4 月 9 日，ftp 客户端 HTTPS 主机名校验缺失）；tor-bsd 邮件列表关于 Tor 节点单一文化的帖子；boringssl.googlesource.com 源码库；以及 Southeast Linux Fest 上 Ken Moore 关于 PBI 的讲义。（BSD Now EP43，[645.84-995.74]，L2）
+- 本期史料包括 Justin Sherrill 博客观点、Henning Brauer 对 PF 可移植层的表态、Baptiste Daroussin 访谈（当事人自述）以及 OpenBSD Binary Upgrade 第三方脚本。（BSD Now EP18，[346.52-557.28]，L1）
+
+**史观**：
+
+- 总纲10 动手者创造历史：portable LibreSSL 的发布、测试与集成实际由 Cook（每周约 10 小时的业余投入）与 Bob Beck 两人支撑，改进建议来自 GitHub 议题与各类论坛的散点反馈，Windows 支持长期悬置等待认领者；安全关键基础设施的日常运转依赖少数默默投入的个体，而非有组织的团队。（BSD Now EP48，[1756.61-1830.54]，L1）
+- 总纲9 经验优先：可移植性策略的反转：面对 musl libc 提议用条件编译绕过 glibc 保护代码，Cook 拒绝基于运行时检测的变通——不存在安全可靠的方式检测特权环境（进程可能运行在错误内核上）——转而与 musl 开发者合作在上游实现 issetugid 系统调用，结果比任何变通更安全。portable 版不再堆叠兼容层，而是把正确修复推进操作系统与 libc 本体，与 OpenSSL“忍受操作系统所给的一切”的哲学形成对照；其论证是开源项目有能力让正确修复进入上游。（BSD Now EP48，[1892.33-1975.85]，L1）
+- 总纲4 分离聚合是永恒规律：主持人由 BoringSSL 与 LibreSSL 的相继分岔引出对 SSL 单一文化的批评：当所有人都用同一份代码，一处未修补漏洞即令全体节点同时陷落；他们同时预期各分岔将“随时间推移逐渐分异”，以摆脱同源缺陷的共振风险。分岔在此并非生态的病征，而是多样性自我保全的形式，恰合分离聚合的节律。（BSD Now EP43，[3299.76-3319.16]，L2）
+- 总纲14 苦难不值得被提倡：Poul-Henning Kamp（转写作 Paul Henningkamp）2004 年众筹时因收款无上限而陷入每周八十小时、自感亏欠出资人的过劳，2010 年改为发票限流的 Varnish Moral License 模式；主持人补充 FreeBSD 基金会资助的正是 UEFI 引导代码等无人愿做却必需的无名工作。两例共同显示：维护者的自我消耗不被浪漫化，可持续的维护史由把劳动制度化的安排而非苦行支撑。（BSD Now EP43，[773.82-824.68]，L2）
+- 总纲4 分离聚合是永恒规律：总纲4 分离聚合是永恒规律：PF 随各 BSD 分支而分离，又出现以共同核心重新聚合的讨论，呈现分离与聚合的循环。（BSD Now EP18，[359.44-413.44]，L2）
+- 总纲10 动手者创造历史：总纲10 动手者创造历史：Baptiste Daroussin 因个人反复编译的痛点动手重写包系统，改变 FreeBSD 软件分发方式。（BSD Now EP18，[993.58-1029.66]，L1）
+- 总纲18 时间是一种形式主义：总纲18 时间是一种形式主义：PF 缺乏版本号使各实现难以按时间锚定演进，说明版本命名是形式化的时间标记。（BSD Now EP18，[425.34-439.46]，L2）
+
+**辨析**：
+
+- Linux PRNG 争议事件：ARS Technica 报道 LibreSSL 未检测 PRNG PID 回绕；Cook 证实团队在文章发表前几天已内部讨论该角落案例，文章发表当日清晨补丁即由 Bob Beck 推送。他拒绝阅读网络评论，与 PaX 团队交换加固思路，并指出权衡困境——将 PRNG 页面标记为不可被子进程继承会使直接调用 fork/clone 的进程崩溃，彻底方案可能需要内核协助；在“更安全”与“不破坏既有软件”之间只有细线。这一表述与其安全观互为表里：今天的偏执角落案例就是明天的大规模漏洞。（BSD Now EP48，[2031.90-2160.53]，L1）
+- 三处专名与归属在转写中失真而须核验：其一，Espie 转述原包工具作者自评“周末写成的好用的垃圾”时自称记不清是否为 PHK，作者归属与措辞均待 pkg_install 历史与邮件列表原文印证；其二，构建机所在“Fios basement”疑为人名误听（OpenBSD 包构建长期由 Landry Breuil 维护）；其三，影响 Java 的“PCI DS”应为 PCID（Process Context Identifier），具体 errata 编号待查 FreeBSD 公告档。　[存疑脚注] PHK 归属、Fios basement 人名、PCID errata 编号三处均系转写失真或记忆性转述，须以邮件列表原文与 FreeBSD Errata Notices 核验后方可引用（BSD Now EP43，[1955.80-1988.06]，L4）
+- 主持人将 DragonFly 的 PF 对应 OpenBSD 4.4、FreeBSD 对应 4.5 等版本关系为口头转述，需与各项目代码核对；OpenPF 项目在 2014 年成立属对未来的期许而非既成事实。　[存疑脚注] 各 BSD 的 PF 版本对应与 OpenPF 立项状态需以源码与邮件列表原始记录复核。（BSD Now EP18，[386.32-439.46]，L4）
+
+**文献**：
+
+- [BSD Now EP48] Pennington J. BSD Now: 48: Liberating SSL[EB/OL]. (2014-07-30)[2026-08-15]. https://www.bsdnow.tv/48.
+- [BSD Now EP43] Pennington J. BSD Now: 43: Package Design[EB/OL]. (2014-06-25)[2026-08-15]. https://www.bsdnow.tv/43.
+- [BSD Now EP18] Pennington J. BSD Now: 18: Eclipsing Binaries[EB/OL]. (2014-01-01)[2026-08-15]. https://www.bsdnow.tv/18.
+
+<!-- /PODCAST_REVIEW -->

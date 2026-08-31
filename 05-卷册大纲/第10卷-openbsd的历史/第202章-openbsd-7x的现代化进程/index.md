@@ -41,3 +41,52 @@ volume: 第10卷-openbsd的历史
 - 各 BSD/Linux 邮件列表档案 [EB/OL]. <https://marc.info/>、<https://lists.freebsd.org/；技术媒体文章；de> Raadt 公开发言 ［A］<!-- DB_REF:openbsd.duckdb -->> **数据库引用（openbsd.duckdb）**：本子节对应 openbsd 代码仓库。> 1995-2026 年间：491,195 次提交。> 仓库总览：491,195 次提交，3,352 位贡献者，1995-10-18 至 2026-08-25。
 - OpenBSD CVS 仓库 [EB/OL]. <https://cvsweb.openbsd.org/>；OpenBSD 邮件列表档案 [EB/OL]. <https://marc.info/?laccopenbsd-misc>；OpenBSD hackathons 记录 ［A］<!-- DB_REF:openbsd.duckdb -->> **数据库引用（openbsd.duckdb）**：本子节对应 openbsd 代码仓库。> 1995-2026 年间：491,195 次提交。> 仓库总览：491,195 次提交，3,352 位贡献者，1995-10-18 至 2026-08-25。
 - OpenBSD 7.0-7.7 Release Notes [EB/OL]. <https://www.openbsd.org/plus.html>；**pledge(2)**手册页 [EB/OL]. <https://man.openbsd.org/pledge.2>；**unveil(2)** 手册页 [EB/OL]. <https://man.openbsd.org/unveil.2>；OpenBSD 安全机制文档；tech@ 邮件列表档案 [EB/OL]. <https://marc.info/?laccopenbsd-tech> ［A］---<!-- DB_REF:openbsd.duckdb -->> **数据库引用（openbsd.duckdb）**：本子节对应 openbsd 代码仓库。> 2020-2026 年间：115,626 次提交。> 仓库总览：491,195 次提交，3,352 位贡献者，1995-10-18 至 2026-08-25。
+
+<!-- PODCAST_REVIEW v20260829 -->
+<!-- 语义复核范围：BSD Now EP368、BSD Now EP626（共 2 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
+
+**要点**：
+
+- Frederick Cambus 的文章梳理 OpenBSD 控制台从 80×25 文本模式到帧缓冲的演进，提及 wscons 控制台框架继承自 NetBSD。（BSD Now EP368，[82.09-313.37]，L2）
+- John Carmack 于 2020 年 6 月为 OpenBSD 控制台贡献快速条件滚动与 32 位字符渲染优化，体现其对 OpenBSD 开发环境的偏好。（BSD Now EP368，[319.03-357.67]，L2）
+- Ruben 反思操作系统角色变化：Mac 转向商务软件、Linux 转向游戏与仿真、FreeBSD 承担其余，OS 逐渐成为向应用提供服务的后台平台。（BSD Now EP368，[373.44-634.26]，L2）
+- Zero Day Initiative 披露 FreeBSD Compat32 子系统 sendmsg 的 TOCTOU 竞态漏洞，可致堆溢出并进一步提权。（BSD Now EP368，[1612.45-2034.16]，L2）
+- FreeBSD Journal 2025 夏季刊以网络为主题，收录 Tom Jones 的 Wi-Fi 开发入门、Randall Stewart 与 Michael Tüxen 的 TCP 静态 pacing 以及 Christopher R. Bowman 的嵌入式 FreeBSD 等文章。（BSD Now EP626，[141.82-762.54]，L2）
+- FreeBSD Foundation 的《Java hiding in plain sight》指出 OpenJDK 仍是 Elasticsearch、Tomcat、LibreOffice 与 Minecraft 等系统的基础，维护者的工作使 FreeBSD 上的 OpenJDK 保持最新。（BSD Now EP626，[762.54-946.78]，L2）
+- Chuck Tuffley 的 BSDCan 2025 报告记录基金会社区调查与笔记本支持、Core 团队章程修订、AI 政策讨论以及 Verisign 与 NVIDIA 的产业报告。（BSD Now EP626，[948.80-1427.06]，L1）
+- OpenBSD 7.8 征集 USB 摄像头测试，开发者 Kirill 为 uvideo 增加 H.264 流支持并优化 CPU 占用以支持 4K 60fps 原始流。（BSD Now EP626，[1437.62-1538.58]，L2）
+- OpenSSH 新增 refuse connection 配置指令与 PKCS#11 ED25519 密钥支持，由 Damien Miller 提交。（BSD Now EP626，[1541.90-1621.92]，L2）
+- NetBSD 11 分支进入发布流程，包括 32 位兼容集拆分、CD 安装镜像、x86 PVH 启动支持、RISC-V 新端口与工具链更新。（BSD Now EP626，[1636.36-1806.82]，L2）
+- Nico Cartron 自述 2000 年在巴黎计算机学校初识 NetBSD 机房，后以 FreeBSD 为主，日常通过 WireGuard 与 SSH 使用家中的 FreeBSD 笔记本。（BSD Now EP626，[1950.18-2571.94]，L1）
+
+**史料**：
+
+- Frederick Cambus 的 OpenBSD 控制台现代化文章及 spleen 字体说明链接。（BSD Now EP368，[82.09-313.37]，L2）
+- Zero Day Initiative 关于 MoonBSD 漏洞的研究者撰写，含 FreeBSD Compat32 子系统的背景说明。（BSD Now EP368，[1612.45-2034.16]，L2）
+- FreeBSD Journal 2025 年夏季刊及其收录文章。（BSD Now EP626，[141.82-762.54]，L2）
+- Mark Phillips 撰写的 FreeBSD Foundation 博客 Java hiding in plain sight。（BSD Now EP626，[762.54-946.78]，L2）
+- Chuck Tuffley 的 BSDCan 2025 Trip Report。（BSD Now EP626，[948.80-1427.06]，L1）
+- Undeadly.org 的 USB webcam 测试征集与 OpenSSH 新特性报道。（BSD Now EP626，[1437.62-1621.92]，L2）
+- Martin Husemann 的 NetBSD 11 release process 博客。（BSD Now EP626，[1636.36-1806.82]，L2）
+- Nico Cartron 访谈。（BSD Now EP626，[1950.18-3345.10]，L1）
+
+**史观**：
+
+- 总纲9 经验优先：OpenBSD 控制台改进源自对文本模式与帧缓冲显示带宽差异的实际测量，而非抽象设计。（BSD Now EP368，[169.94-214.16]，L2）
+- 总纲3 不存在进步，只有权力再分配：操作系统角色变化的叙事揭示各系统在不同场景中的功能再分配，而非单向的线性进步。（BSD Now EP368，[373.44-634.26]，L2）
+- 总纲10 动手者创造历史：总纲10 动手者创造历史：Chuck Tuffley 报告中 Google Summer of Code 学生与 Kyle Evans 接力推进 squashfs 驱动，体现未完成工作由后来者接续。（BSD Now EP626，[1232.26-1271.62]，L1）
+- 总纲22 知识注定过时：总纲22 知识注定过时：NetBSD 11 将 32 位兼容、CD 安装集等旧有默认拆分为可选集，反映旧硬件假设随时代过时。（BSD Now EP626，[1647.40-1682.94]，L2）
+- 总纲20 历史地理塑造思想土壤：总纲20 历史地理塑造思想土壤：Nico Cartron 的法国计算机学校以 NetBSD 教学机房塑造其 BSD 使用路径，体现机构地理对技术选择的塑造。（BSD Now EP626，[1973.62-2103.06]，L1）
+
+**辨析**：
+
+- 转写中 OpenBSD 帧缓冲的 RasterOps 引入时间与平台（i386/AMD64）细节存在 ASR 转写噪声，需对照 Cambus 原文。　[存疑脚注] 平台与时间细节待原文核对（BSD Now EP368，[215.94-251.96]，L4）
+- 转录将 Martin Husemann 记作 Martin Hussman，且节目开场将 NetBSD 11 与 FreeBSD 11 混写，须以 NetBSD 官方博客核验。　[存疑脚注] 人名与版本号存在转写歧义，未与 NetBSD 官方公告核验（BSD Now EP626，[1636.36-1806.82]，L4）
+- OpenJDK 维护者姓名在转录中作 Harold 或 Harald，具体拼写须以 FreeBSD Foundation 原文核验。　[存疑脚注] 维护者姓名存在转写歧义（BSD Now EP626，[867.98-873.02]，L4）
+
+**文献**：
+
+- [BSD Now EP368] Pennington J. BSD Now: 368: Changing OS roles[EB/OL]. (2020-09-17)[2026-08-15]. https://www.bsdnow.tv/368.
+- [BSD Now EP626] Pennington J. BSD Now: 626: USB webcam testing[EB/OL]. (2025-08-28)[2026-08-15]. https://www.bsdnow.tv/626.
+
+<!-- /PODCAST_REVIEW -->

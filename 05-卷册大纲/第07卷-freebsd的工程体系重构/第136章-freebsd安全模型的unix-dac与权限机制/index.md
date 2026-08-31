@@ -37,3 +37,36 @@ volume: 07
 ## 自反性声明
 
 本章所书皆是形式主义化的重构，并非对“真实的 BSD 历史”的呈现。本章的章节划分、事件选择、叙事策略、因果归因——全部基于编纂者的哲学设定。本章承认这些局限，不声称客观或中立，欢迎被更诚实的叙事所超越。
+
+<!-- PODCAST_REVIEW v20260829 -->
+<!-- 语义复核范围：BSD Now EP194（共 1 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
+
+**要点**：
+
+- FreeBSD 2017 年第一季度状态报告记录 core team、基金会、ports（接近三万端口）、release engineering（11.1 排期）等团队动态，基金会赞助 168 个提交并资助多个项目。（BSD Now EP194，[98.3-164.34]，L2）
+- Colin Percival 提出一种介于 Patreon 与 Bugzilla 之间的开源维护资助模型，主张以持续收入支持软件维护而非一次性赏金，从而缓解开源软件维护不足的问题。（BSD Now EP194，[878.98-1386.52]，L2）
+- Chris Siebenmann 追溯 FreeBSD 目录组继承行为至 4.1cBSD 引入 mkdir 系统调用与多组进程的时期，指出新对象继承父目录组是传统 BSD 行为而非 FreeBSD 的新发明。（BSD Now EP194，[2332.28-2964.74]，L2）
+- OpenBSD 变更集移除 SSHv1 协议代码，从 FreeBSD 移植 witness 锁顺序校验工具，并引入 BearSSL 常数时间 AES 实现。（BSD Now EP194，[1925.44-2328.28]，L2）
+
+**史料**：
+
+- FreeBSD Quarterly Status Report（2017 年第一季度，官网发布）（BSD Now EP194，[67.52-222.56]，L1）
+- Colin Percival 于 daemonology.net 发表的开源软件维护方案博客原文（BSD Now EP194，[872.66-1467.2]，L1）
+- Chris Siebenmann（University of Toronto）关于 BSD 目录组继承语义的考据博客（BSD Now EP194，[2332.28-2964.74]，L1）
+- OpenBSD changes of note 621（tedu 发布的变更综述）（BSD Now EP194，[1925.44-2332.28]，L1）
+
+**史观**：
+
+- 总纲10 动手者创造历史：状态报告显示基金会资助与普通提交者的日常维护共同推进系统细节，历史由大量默默动手者累积而成。（BSD Now EP194，[98.3-164.34]，L2）
+- 总纲13 法律与道德是利益分配：开源维护资助之争的实质是贡献者劳动如何获得回报的利益分配问题，而非单纯的技术或道德问题。（BSD Now EP194，[907.04-1249.4]，L2）
+- 总纲5 没有必然性，只有偶然性：BSD 目录组继承语义是 4.1cBSD 多组进程引入时的偶然工程选择，随后沉淀为传统，并非预先设计的必然。（BSD Now EP194，[2486.68-2686.36]，L2）
+
+**辨析**：
+
+- [存疑脚注] Colin Percival 的开源资助方案当时仅为其个人提案，尚未落地实施，能否被社区采纳与商业化可行仍待验证。　[存疑脚注] 该方案属单一来源的个人设想，未形成实施记录。（BSD Now EP194，[1367.52-1440.28]，L4）
+
+**文献**：
+
+- [BSD Now EP194] Pennington J. BSD Now: 194: Daemonic plans[EB/OL]. (2017-05-17)[2026-08-15]. https://www.bsdnow.tv/194.
+
+<!-- /PODCAST_REVIEW -->

@@ -47,3 +47,72 @@ volume: 06
 ## 自反性声明
 
 本章所书皆是形式主义化的重构，并非对“真实的 BSD 历史”的呈现。本章的章节划分、事件选择、叙事策略、因果归因——全部基于编纂者的哲学设定。本章承认这些局限，不声称客观或中立，欢迎被更诚实的叙事所超越。
+
+<!-- PODCAST_REVIEW v20260829 -->
+<!-- 语义复核范围：BSD Now EP194、BSD Now EP193、BSD Now EP186、BSD Now EP20（共 4 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
+
+**要点**：
+
+- FreeBSD 2017 年第一季度状态报告记录 core team、基金会、ports（接近三万端口）、release engineering（11.1 排期）等团队动态，基金会赞助 168 个提交并资助多个项目。（BSD Now EP194，[98.3-164.34]，L2）
+- Colin Percival 提出一种介于 Patreon 与 Bugzilla 之间的开源维护资助模型，主张以持续收入支持软件维护而非一次性赏金，从而缓解开源软件维护不足的问题。（BSD Now EP194，[878.98-1386.52]，L2）
+- Chris Siebenmann 追溯 FreeBSD 目录组继承行为至 4.1cBSD 引入 mkdir 系统调用与多组进程的时期，指出新对象继承父目录组是传统 BSD 行为而非 FreeBSD 的新发明。（BSD Now EP194，[2332.28-2964.74]，L2）
+- OpenBSD 变更集移除 SSHv1 协议代码，从 FreeBSD 移植 witness 锁顺序校验工具，并引入 BearSSL 常数时间 AES 实现。（BSD Now EP194，[1925.44-2328.28]，L2）
+- Adrian Chadd 在 FreeBSD 802.11 栈中启动 802.11ac 支持，先针对 Atheros QCA 10K 芯片，加入 VHT 通道与 20/40/80/160MHz 模式，并说明现有栈在多虚拟接入点上的局限。（BSD Now EP193，[147.78-631.0]，L2）
+- Delphix 的 Matt Ahrens 等在 OpenZFS 开发者峰会原型基础上实现 zpool checkpoint，允许管理员在执行破坏性操作前为整个池建立可回滚检查点。（BSD Now EP193，[1810.2-2535.42]，L2）
+- TrueOS（原 PC-BSD）改为基于 FreeBSD current 的滚动发布，默认 Lumina 桌面；DistroWatch 评测肯定其 ZFS 集成与安装流程，但指出硬件兼容与稳定更新方面的不足。（BSD Now EP193，[2605.18-3020.76]，L2）
+- LibreSSL 2.5.4 修复证书验证回调一致性与 Linux getrandom 阻塞等问题；Michael Hendricks 因 Heartbleed 后 OpenBSD 分叉 LibreSSL 的经历由 macOS 转投 OpenBSD。（BSD Now EP193，[1277.66-1583.66]，L2）
+- AsiaBSDCon 2017 在东京举行，议题覆盖 FreeBSD 上的 Xen Dom0、bhyve 向 ARM 移植、OpenBSD VMM/VMD 更新与 pledge 对 capsicum 的沙箱比较。（BSD Now EP186，[432.94-560.68]，L2）
+- Philipp（OpenBSD 前提交者）回顾 2002 年 Karlsruhe hackathon 参与 PF 测试与文档工作，实现接口分组并拆分 pf.c 中的 IOCTL 代码。（BSD Now EP186，[3969.0-4226.0]，L1）
+- Philipp 描述 OpenBSD 路由域（rdomain）为单机上的多个虚拟路由器，可用于多租户防火墙与相同 IP 复用的隔离测试。（BSD Now EP186，[4381.84-4761.18]，L1）
+- 2004 年 PF hackathon 曾发现用户态 32 位与内核 8 位规则编号溢出导致的隐蔽错误，需超过约 256 条规则才触发。（BSD Now EP186，[4227.0-4285.88]，L1）
+- Neel Natu 与 Peter Grehan 在 NetApp 期间受 KVM 先例启发，思考为何 FreeBSD 没有 hypervisor；2010 年 11 月 MeetBSD 上提出构想，获 NetApp 支持后逐步开源。（BSD Now EP20，[1080.00-1205.18]，L1）
+- bhyve 名称意为 BSD Hypervisor，由 Joe Catterdon 命名；初期目标是资源分区型 hypervisor，vCPU 绑定整核、内存不做虚拟化，后演进为支持虚拟化 CPU、内存与 virtio 设备的通用实现。（BSD Now EP20，[1184.42-1301.34]，L1）
+- 截至访谈，bhyve 可运行 FreeBSD（回溯至 7.0）、Linux 与 OpenBSD，Illumos 因实时钟与时间戳计数器的紧校准问题尚未完成；AMD 支持在项目分支中并计划于 10.1 合并。（BSD Now EP20，[1332.70-1553.78]，L1）
+- 后续目标包括 UEFI 与 VGA 以运行 Windows（拟支持 Server 2008 及以后版本）、快照与活迁移、ARM（Cortex A15）支持及作为 OpenStack 计算节点。（BSD Now EP20，[1834.62-2035.86]，L1）
+- CPU 性能经 OpenSSL 基准测试几乎与宿主一致，网络因 virtio 后端缺少无状态卸载特性而仍耗用较多 CPU；控制台后端曾被改造为可指向任意字符设备。（BSD Now EP20，[1684.86-1825.34]，L1）
+
+**史料**：
+
+- FreeBSD Quarterly Status Report（2017 年第一季度，官网发布）（BSD Now EP194，[67.52-222.56]，L1）
+- Colin Percival 于 daemonology.net 发表的开源软件维护方案博客原文（BSD Now EP194，[872.66-1467.2]，L1）
+- Chris Siebenmann（University of Toronto）关于 BSD 目录组继承语义的考据博客（BSD Now EP194，[2332.28-2964.74]，L1）
+- OpenBSD changes of note 621（tedu 发布的变更综述）（BSD Now EP194，[1925.44-2332.28]，L1）
+- Adrian Chadd 关于 802.11ac bring-up 的博客（BSD Now EP193，[81.22-648.52]，L1）
+- Delphix 关于 zpool checkpoint 的设计说明博客（BSD Now EP193，[1810.2-2600.06]，L1）
+- DistroWatch 对 TrueOS 的评测文章（BSD Now EP193，[2605.18-3031.58]，L1）
+- LibreSSL 2.5.4 发布说明（BSD Now EP193，[5057.4-5151.86]，L1）
+- AsiaBSDCon 2017 演讲幻灯片与日程（BSD Now EP186，[432.94-560.68]，L1）
+- Philipp 访谈自述（BSD Now EP186，[3969.0-5733.62]，L1）
+- OpenBSD PF 邮件列表与 CVS 历史（BSD Now EP186，[3969.0-4285.88]，L1）
+- 本期史料为 Neel Natu 与 Peter Grehan 访谈（当事人自述），涉及 MeetBSD 2010 演示、bhyve 项目分支、grub2-bhyve 及 FreeBSD 状态报告中的 OpenStack 合作信息。（BSD Now EP20，[1102.50-1205.18]，L1）
+
+**史观**：
+
+- 总纲10 动手者创造历史：状态报告显示基金会资助与普通提交者的日常维护共同推进系统细节，历史由大量默默动手者累积而成。（BSD Now EP194，[98.3-164.34]，L2）
+- 总纲13 法律与道德是利益分配：开源维护资助之争的实质是贡献者劳动如何获得回报的利益分配问题，而非单纯的技术或道德问题。（BSD Now EP194，[907.04-1249.4]，L2）
+- 总纲5 没有必然性，只有偶然性：BSD 目录组继承语义是 4.1cBSD 多组进程引入时的偶然工程选择，随后沉淀为传统，并非预先设计的必然。（BSD Now EP194，[2486.68-2686.36]，L2）
+- 总纲10 动手者创造历史：个人开发者因自身需要推进无线与存储特性，特性落地依赖具体动手者的持续投入。（BSD Now EP193，[147.78-648.52]，L2）
+- 总纲5 没有必然性，只有偶然性：OpenBSD 停止发行 CD 与 LibreSSL 分叉均由 Heartbleed、GPLv3 等具体事件触发，而非抽象规划。（BSD Now EP193，[1277.66-1583.66]，L2）
+- 总纲4 分离聚合是永恒规律：OpenZFS 各发行版分叉后又聚合，zpool checkpoint 等特性先经 hackathon 快速原型，再逐步回上游。（BSD Now EP193，[1810.2-2535.42]，L2）
+- 总纲10 动手者创造历史：PF 由测试者、文档者与提交者共同打磨，历史由大量动手协作的人推动。（BSD Now EP186，[4016.52-4285.88]，L1）
+- 总纲4 分离聚合是永恒规律：路由域把一台物理路由器分离为多个逻辑路由器，体现分离聚合的循环。（BSD Now EP186，[4381.84-4761.18]，L1）
+- 总纲6 和解优于斗争：OpenBSD 社区“批评即受邀修复”的协作方式，强调和解与共建而非对抗。（BSD Now EP186，[4016.52-4050.66]，L1）
+- 总纲10 动手者创造历史：总纲10 动手者创造历史：两名开发者以业余项目推动 FreeBSD 获得原生 hypervisor，展现动手者以工程实践塑造系统能力。（BSD Now EP20，[1129.50-1205.18]，L1）
+- 总纲5 没有必然性，只有偶然性：总纲5 没有必然性，只有偶然性：bhyve 由 NetApp 内部对 hypervisor 的讨论与 KVM 先例偶然触发，而非既有路线图的必然结果。（BSD Now EP20，[1080.00-1205.18]，L1）
+- 总纲22 知识注定过时：总纲22 知识注定过时：初期分区型设计被后续完整虚拟化取代，说明技术路线随条件与认知演进而变更。（BSD Now EP20，[1206.02-1301.34]，L1）
+
+**辨析**：
+
+- [存疑脚注] Colin Percival 的开源资助方案当时仅为其个人提案，尚未落地实施，能否被社区采纳与商业化可行仍待验证。　[存疑脚注] 该方案属单一来源的个人设想，未形成实施记录。（BSD Now EP194，[1367.52-1440.28]，L4）
+- [存疑脚注] DistroWatch 评测中遇到的硬件问题可能由评测者特定的 AMD APU 环境所致，未必能推广为 TrueOS 的普遍缺陷。　[存疑脚注] 单一评测者的硬件结论，需多源交叉验证。（BSD Now EP193，[2963.24-3020.76]，L4）
+- [存疑脚注] 访谈中 2002 年 hackathon 地点、PF 实现细节系当事人十余年后回忆，需与 OpenBSD 邮件列表与 CVS 记录核验。　[存疑脚注] 当事人回忆性细节，缺乏独立档案印证。（BSD Now EP186，[3969.0-4285.88]，L4）
+- 访谈中 Illumos 支持、AMD 合并于 10.1 及 Windows 支持时间表均为当时计划，实际落地时间与 FreeBSD 版本需核对；bhyve 早期定位为 Type 2 hypervisor 的表述与后续发展存在语境差异。　[存疑脚注] 各客户机与特性落地时间以 FreeBSD 官方发布记录为准，需交叉验证。（BSD Now EP20，[1493.70-1553.78]，L4）
+
+**文献**：
+
+- [BSD Now EP194] Pennington J. BSD Now: 194: Daemonic plans[EB/OL]. (2017-05-17)[2026-08-15]. https://www.bsdnow.tv/194.
+- [BSD Now EP193] Pennington J. BSD Now: 193: Fire up the 802.11 AC[EB/OL]. (2017-05-10)[2026-08-15]. https://www.bsdnow.tv/193.
+- [BSD Now EP186] Pennington J. BSD Now: 186: The Fast And the Firewall: Tokyo Drift[EB/OL]. (2017-03-22)[2026-08-15]. https://www.bsdnow.tv/186.
+- [BSD Now EP20] Pennington J. BSD Now: 20: Bhyve Mind[EB/OL]. (2014-01-15)[2026-08-15]. https://www.bsdnow.tv/20.
+
+<!-- /PODCAST_REVIEW -->

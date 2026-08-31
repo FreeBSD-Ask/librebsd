@@ -45,34 +45,45 @@ volume: 第08卷-freebsd的范式转换
 
 （待补）
 
-<!-- PODCAST_MINE v20260827 -->
-<!-- 章节主题过滤：第170章-systemd的诞生扩散与工程架构 第170章 systemd的诞生扩散与工程架构（实体评分 ≥2 命中才入选） -->
-<!-- 匹配期数：15 期，扫描 segments：13139 条 -->
+<!-- PODCAST_REVIEW v20260829 -->
+<!-- 语义复核范围：BSD Now EP416、BSD Now EP580（共 2 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
 
-### 要点（播客口述史提取）
-- But then I started to have some issues, I guess, most poignantly with SystemD when they did the whole upgrade from System5.（BSD Now EP71 @ 824.4000）
-- and haven't introduced necessarily the feature creep that we have seen in SystemD.（BSD Now EP114 @ 397.1400）
+**要点**：
 
-### 史料（播客当事人陈述）
-- With the growing adoption of SystemD, dissatisfaction with Linux has reached proportions not seen in recent years due to the extent that people are starting to talk of switching to FreeBSD.（BSD Now EP76 @ 785.5999）
-- I know we've talked about SystemD's shim in OpenBSD or SystemBSD,（BSD Now EP106 @ 1034.299）
-- some of the systemd daemons actually implement a lot more things than they document.（BSD Now EP106 @ 1180.739）
+- William Blankenship 记录其迁移至 FreeBSD 后，依据 FreeBSD 手册发现网络打印机通常接受 9100 端口作业，用 netcat 加端口与重定向即可直接打印，不必依赖 CUPS 的复杂驱动栈。（BSD Now EP416，[1142.84-1261.9]，L2）
+- OpenZFS 快照讨论指出，快照数量超过每数据集约千个会显著拖慢列出、创建、复制与销毁操作，性能影响与单数据集快照数相关，而非系统快照总数，因此应滚动修剪旧快照。（BSD Now EP416，[196.1-237.24]，L2）
+- Multics 在 2021 年前后发布 12.7 版本，新增卷池支持层级备份、信息段历史注释与 mBuild 子系统，延续其作为 Unix 前身之一的后续维护。（BSD Now EP416，[2023.6-2167.9]，L2）
+- initware 是 systemd 的 fork，已可在 FreeBSD 13 与 NetBSD 9 上运行大部分功能，目标还包括 macOS 与 Illumos，因上游仅面向 systemd 的应用需求而出现。（BSD Now EP416，[1884.3-2022.7]，L2）
+- Colin Percival 自述 FreeBSD 发布工程长期处于由发布工程师即兴决定的临时状态，他接任后引入按季度排布、覆盖未来五年的发布日历，使 minor 版本节奏可预期。（BSD Now EP580，[476.24-547.40]，L1）
+- Colin 将 FreeBSD 主版本支持期由五年缩减为四年，以对齐每两年一次的主版本节奏，避免同时维护三个稳定分支带来的上游 OpenSSL、编译器与 ports 兼容负担。（BSD Now EP580，[630.52-756.16]，L1）
+- Colin 回顾 freebsd-update 工具源于 2003 年他为简化系统补丁更新而编写，并为此创造了 bsdiff 二进制差分工具，后者后来被广泛用于各处的增量更新。（BSD Now EP580，[210.06-229.42]，L1）
+- Andrew Hewus 自述约 2003 年在亚利桑那州一家小型 ISP 从 OpenBSD 3.5 或 3.6 开始，将 DNS、邮件与路由逐步替换为 OpenBSD，后经邮件列表接手 OpenBSD 基础系统中的 Perl 维护。（BSD Now EP580，[1455.12-1565.32]，L1）
+- Liam Proven 梳理商业 Unix 的当代存续：Xinuos 继承 SCO 的 Xenix 与 UnixWare 业务并提供基于 FreeBSD 的清理版本；AIX 开发团队迁往印度；Solaris 不再出新版本但仍获安全修复；illumos 与 Oxide Computer 延续 OpenSolaris 谱系。（BSD Now EP580，[2915.18-3022.62]，L2）
+- Liam Proven 以其亲历的 FreeBSD 13 升级 14 后桌面环境损坏为例，指出 BSD 桌面在升级平滑度与新手进入门槛上的短板，并批评 systemd 及其安全启动方向正在收窄用户对系统的控制。（BSD Now EP580，[3043.30-3344.86]，L1）
 
-### 史观（播客当事人观点与总纲映射）
-- But then I started to have some issues, I guess, most poignantly with SystemD when they did the whole upgrade from System5.（BSD Now EP71 @ 824.4000）
-  → 史观映射：总纲10——动手者创造历史
+**史料**：
 
-### 辨析（播客争议与存疑点）
-- （该章节匹配播客中未提取到争议性陈述）
+- JT Pennington 在 Twitter 发布的 PDP-11 工程图纸，展示早期整机级布线文档，属小型机物质文化的一手图像史料。（BSD Now EP416，[2207.6-2289.3]，L1）
+- Edward Napierala 提交的 FreeBSD 非特权 chroot 改动，以 no-new-privs 标志允许非 root 进程在 chroot 内禁用 setuid，属源码级一手史料。（BSD Now EP416，[1772.2-1884.3]，L2）
+- 本期为 EuroBSDcon 2024 现场采访；Colin Percival 与 Andrew Hewus 为一手自述，Liam Proven 为 The Register 记者的一手见闻与二手综述。（BSD Now EP580，[59.28-1293.58]，L1）
 
-### 文献（播客参考条目）
-- [BSD Now EP35] Pennington J. BSD Now: 35: Puffy Firewall[EB/OL]. (2014-04-30)[2026-08-15]. https://www.bsdnow.tv/35.
-- [BSD Now EP54] Pennington J. BSD Now: 54: Luminary Environment[EB/OL]. (2014-09-10)[2026-08-15]. https://www.bsdnow.tv/54.
-- [BSD Now EP55] Pennington J. BSD Now: 55: The Promised WLAN[EB/OL]. (2014-09-17)[2026-08-15]. https://www.bsdnow.tv/55.
-- [BSD Now EP60] Pennington J. BSD Now: 60: Don't Buy a Router[EB/OL]. (2014-10-22)[2026-08-15]. https://www.bsdnow.tv/60.
-- [BSD Now EP67] Pennington J. BSD Now: 67: Must Be Rigged[EB/OL]. (2014-12-10)[2026-08-15]. https://www.bsdnow.tv/67.
-- [BSD Now EP71] Pennington J. BSD Now: 71: System Disaster[EB/OL]. (2015-01-07)[2026-08-15]. https://www.bsdnow.tv/71.
-- [BSD Now EP73] Pennington J. BSD Now: 73: Pipe Dreams[EB/OL]. (2015-01-21)[2026-08-15]. https://www.bsdnow.tv/73.
-- [BSD Now EP76] Pennington J. BSD Now: 76: Time for a Change[EB/OL]. (2015-02-11)[2026-08-15]. https://www.bsdnow.tv/76.
+**史观**：
 
-<!-- /PODCAST_MINE -->
+- 总纲9 经验优先：netcat 打印以极简工具替代 CUPS 复杂栈，体现 Unix 经验优先与工具可组合的传统，用户直接与协议端口交互即可完成任务。（BSD Now EP416，[1244.04-1261.9]，L2）
+- 总纲20 历史地理塑造思想土壤：PDP-11 工程图纸显示早期计算机以整机接线图为物质载体，其尺寸与可读性受硬件形态制约，呼应历史地理与物质文化塑造技术认知。（BSD Now EP416，[2231.78-2256.2]，L2）
+- 总纲10 动手者创造历史：Colin 因自身补丁更新需求编写 freebsd-update 与 bsdiff，其工具后来成为 FreeBSD 更新基础设施的一部分，体现动手者为解决具体问题而塑造系统历史。（BSD Now EP580，[210.06-229.42]，L1）
+- 总纲3 不存在进步，只有权力再分配：FreeBSD 发布工程从即兴决策到日历化、支持期从五年缩为四年的过程，是工程与治理权力在项目内部的重新配置。（BSD Now EP580，[630.52-756.16]，L1）
+- 总纲21 革命与改革是历史方法论的分歧：Liam 对 systemd 与安全启动方向的批评，呈现开源生态中激进变革与保守续存两种方法论之间的持续张力。（BSD Now EP580，[3043.30-3164.96]，L2）
+
+**辨析**：
+
+- 转写称 Multics 12.7 为最新版本，其发布时间与维护状态需与 Multics wiki 及 DPS-8/M 模拟器资料核对。　[考据脚注] Multics 12.7 的发布时间与维护主体需查 multicians.org 与相关 wiki。（BSD Now EP416，[2030.2-2116.8]，L4）
+- Liam Proven 关于 Xinuos 产品形态、AIX 团队迁移地等描述属记者二手综述，具体时点与细节须以厂商公告核实。　[存疑脚注] 商业 Unix 厂商现状为记者综述，未逐一核对厂商一手公告。（BSD Now EP580，[2915.18-3022.62]，L4）
+- FreeBSD 桌面升级损坏为 Liam Proven 的个案经验，不能据以推断该升级路径具有普遍失败率。　[存疑脚注] 桌面升级问题为单一用户个案经验，未经系统复现或统计验证。（BSD Now EP580，[3252.54-3318.12]，L4）
+
+**文献**：
+
+- [BSD Now EP416] Pennington J. BSD Now: 416: netcat printing[EB/OL]. (2021-08-19)[2026-08-15]. https://www.bsdnow.tv/416.
+- [BSD Now EP580] Pennington J. BSD Now: 580: EuroBSDcon 2024 - Part 2[EB/OL]. (2024-10-10)[2026-08-15]. https://www.bsdnow.tv/580.
+
+<!-- /PODCAST_REVIEW -->

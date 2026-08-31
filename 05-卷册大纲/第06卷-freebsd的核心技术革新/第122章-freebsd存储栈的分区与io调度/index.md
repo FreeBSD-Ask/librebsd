@@ -38,3 +38,42 @@ volume: 第06卷-freebsd的核心技术革新
 - Aurora, V. (2009-07-01). *Soft updates, hard problems*. LWN.net, lwn.net/Articles/339337/; Seltzer, M. I. et al. (2000). *Journaling Versus Soft Updates: Asynchronous Meta-data Protection in File Systems*. USENIX ATC '00; McKusick, M. K., & Roberson, J. (2010). *Journaled Soft-updates*. mckusick.com/softdep/suj.pdf. ［B］<!-- DB_REF:freebsd.duckdb -->> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 2010-2020 年间：488,947 次提交。> 仓库总览：1,294,851 次提交，13,875 位贡献者，1993-06-12 至 2026-08-25。
 - FreeBSD Project. bsd_commits.db freebsd-src 仓库 commit 数据库 [DB/OL]. 2026-07-27. `c:\Users\ykla\Documents\hibsd\03-原始史料库\01-代码仓库史料\01-数据库本体\bsd_commits.db`; Hibsd Project. 推断性统计.md [R/OL]. 2026-07-27. `c:\Users\ykla\Documents\hibsd\03-原始史料库\01-代码仓库史料\01-数据库本体\统计分析\推断性统计.md` Task 5; Hibsd Project. 时间序列分析.md [R/OL]. 2026-07-27. `c:\Users\ykla\Documents\hibsd\03-原始史料库\01-代码仓库史料\01-数据库本体\统计分析\时间序列分析.md` Task 14; Hibsd Project. 卷章数据映射.md [R/OL]. 2026-07-27. `c:\Users\ykla\Documents\hibsd\03-原始史料库\01-代码仓库史料\01-数据库本体\统计分析\卷章数据映射.md` 第五卷第 56 章映射。［A］### 史观映射> GEOM 的模块化架构是 phk 一个人对着存储层发呆时想出来的东西——偶然而非必然，一个人的洞察决定了 FreeBSD 存储栈此后二十年的骨骼。CAM 同样是 Gibbs 一个人的手笔，GELI 是 Dawidek 的作品，SUJ 是 Roberson 的补丁。动手者创造历史，不是群体的决议而是具体的人在具体的夜晚写下的代码。但 soft updates 的命运提醒着：一个工程师的执念能支撑一个文件系统四十年——从 McKusick 1983 年的研究生时期到 2012 年 Roberson 的 SUJ 补丁——却无法逆转整个产业的选择。当 Aurora 说 soft updates “过于难以理解、实现和维护”，当 Solaris、ext3/ext4、XFS、NTFS 集体转向日志，当 NetBSD 和 OpenBSD 先后移除 Soft Updates 支持，McKusick 的执念从工程遗产变成了一个时代拒绝放手的美学姿态。FFS 从 1983 年 8KB 块加柱面组开始，一路演进到 UFS2 的 64 位块指针加 SUJ 日志，这不是 “向前兼容” 的保守，而是一个工程师对自己创造物的责任——他没有像 Sun 那样放弃 UFS 转投 ZFS，像 Linux 那样在 ext2/ext3/ext4/Btrfs/XFS 之间反复试错，而是在自己创造的基础上修修补补了四十年。这是 BSD 方式的优点也是缺点：你信任一个聪明人四十年前写的代码能修到今天，你也要承担这份信任带来的历史负担。<!-- DB_REF:freebsd.duckdb -->> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 2010-2020 年间：488,947 次提交。> 仓库总览：1,294,851 次提交，13,875 位贡献者，1993-06-12 至 2026-08-25。
 - bsd_commits.db（freebsd-src）；0 信任原则方法论；FreeBSD 贡献者多样性研究（如有）据一手文献印证消解^doubt-resolved-649：此文献待 0 信任原则考据验证 ］<!-- DB_REF:freebsd.duckdb -->> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 2008-2018 年间：455,206 次提交。> 仓库总览：1,294,851 次提交，13,875 位贡献者，1993-06-12 至 2026-08-25。
+
+<!-- PODCAST_REVIEW v20260829 -->
+<!-- 语义复核范围：BSD Now EP361、BSDTalk EP61（共 2 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
+
+**要点**：
+
+- Firecracker 由 AWS 于 2018 年开源，是依赖 KVM 的微虚拟机监控器；作者以 NetBSD 最小内核配置并绕过引导装载器构建“函数式微虚拟机”。（BSD Now EP361，[749.58-1016.66]，L2）
+- Warner Losh 的 2.11BSD 复原工程公开，目标是以可复现方式重建 2.11BSD 发行磁带，并生成含全部 patch 点的 Git 仓库。（BSD Now EP361，[442.48-732.66]，L2）
+- Warner Losh 的磁盘分区史文章梳理 Unix 第一至第七版从静态分区到多分区设备的演进，指出分区表曾编译进驱动而非写盘。（BSD Now EP361，[1266.82-1931.02]，L2）
+- OpenBSD 发布首个 PowerPC64 快照，在 Raptor Blackbird 与 Talos II 上开发，并计划支持 Power8 系统。（BSD Now EP361，[1075.56-1141.02]，L2）
+- lighttpd 定位为极快、极轻量的 Web 服务器，目标是在低资源占用下维持大量并行连接，面向大量短连接的 Web 2.0 应用；与 Apache（在不使用事件 MPM 时每连接占一进程或线程）不同，lighttpd 为完全事件驱动的单进程单线程架构，无线程也无 fork，基于非阻塞 I/O——等待中的连接只是进程内的一个文件描述符加少量内存；仅受单进程文件描述符数限制且可调，可同时维持一万至两万连接；Keep-Alive 场景下等待连接近乎零成本，这对 AJAX 类低延迟小请求尤为关键。（BSDTalk EP61，[179.02-344.98]，L1）
+- 项目起源：最初是 Boa、Mathopd、thttpd、Zeus 一类擅长静态内容的小型 Web 服务器（当年常被用作 Apache 的静态卸载前端），但自始即带 FastCGI 与 PHP 支持、sendfile 等系统级优化和 kqueue 等事件接口，迅速长成全功能服务器；作者自述直接动因是读到 Dan Kegel 论 C10K 问题（单机万级并行连接）的论文，想以此做概念验证，结果一做即快。（BSDTalk EP61，[88.68-146.44]，L1）
+- 事件接口分层决定扩展性：select 与 poll 在所有平台可用（macOS 的 poll 为 select 模拟）但先天受限——select 默认上限 1024 连接、poll 每次返回全部描述符须线性扫描，连接越多系统调用开销越大；kqueue（BSD）、epoll（Linux）、dev-poll（Solaris）只返回发生变更的描述符，使服务器可按事件量而非连接量扩展，接近线性；lighttpd 维护多个事件处理器以适配各平台。（BSDTalk EP61，[539.84-733.94]，L1）
+- 安全设计上，lighttpd 从不使用 C 字符串库函数，一切字符串操作先行长度检查、先确认内存再写入，以自有字符串函数集消除缓冲区溢出这一 C 语言服务器的主要攻击面；长度可知同时带来速度（便于追加与复用）；开发中以 Valgrind 与 KCacheGrind 检查性能与内存；重大漏洞约半年前与一年半前各一次，均与 Windows、macOS 默认大小写不敏感的文件系统有关——改变大小写即可绕过安全模式检查，Windows 从非其推荐的生产环境，macOS 则因 Web 服务器部署更多而受影响更实；对外提供 mod_secdownload 限时哈希 URL（10-30 秒有效，防深链盗链）与 X-Sendfile 式头部卸载：后端完成 LDAP、数据库、Kerberos 或 NTLM 等认证后交由服务器以 sendfile 零拷贝发送，兼顾认证安全与传输效率。（BSDTalk EP61，[1237.72-1657.12]，L1）
+- 1.5 版本重写核心组件：Rails 社区改用 Mongrel（Ruby 小型 HTTP 服务器）以 HTTP 与前置服务器对话，暴露了现役 lighttpd HTTP 代理模块的最大短板——不处理故障转移，后端宕机时连接直接报错、由客户端重试其他后端；新版 mod_proxy_core 整合 FastCGI、SCGI、HTTP 协议，向后端提供 keep-alive 与 HTTP/1.1，内置轮询与哈希两种负载均衡、故障转移，并向后端提供 sendfile 支持；哈希均衡按 URL 分区，使同一页面的请求恒达同一后端，从而大幅提升后端缓存利用率。（BSDTalk EP61，[733.94-941.52]，L1）
+
+**史料**：
+
+- “Fakecracker：NetBSD as function-based micro-VM”教程，含最小内核配置与 Sailor 工具说明。（BSD Now EP361，[749.58-1016.66]，L2）
+- Warner Losh 的 2.11BSD 复原项目页面与早期 Unix 磁盘分区史博客。（BSD Now EP361，[442.48-732.66]，L2）
+- 该期提供 2006 年 lighttpd 大规模采用的当事人证词：YouTube 的 Flash 影片文件经 lighttpd 服务器发送（作者与其有读取路径优化的接触，瓶颈完全在磁盘寻道），Wikipedia 的全部图片经 Wikimedia 的 lighttpd 缩放后发送；Netcraft 月度统计中 Apache 约占七成，lighttpd 最近统计约九万套安装、多为此前受性能困扰而寻求扩展的站点；许多部署者从不联系作者，仅靠陌生邮件告知其服务器身份。（BSDTalk EP61，[1028.1-1230.56]，L1）
+
+**史观**：
+
+- 总纲10 动手者创造历史：Firecracker 微虚拟机与 2.11BSD 复原均由个体以工程实践填补生态空白。（BSD Now EP361，[749.58-1016.66]，L2）
+- 总纲22 知识注定过时：早期 Unix 的分区表硬编码与设备号约定随存储工业演进而被淘汰。（BSD Now EP361，[1885.08-1931.02]，L2）
+- 总纲13 法律与道德是利益分配：许可证在该案例中表现为利益分配的形式装置：作者此前的 GPL 项目（Webalizer 类日志分析器）限制其商业化路径，改用 BSD 则同时向贡献者（免版权转让）与使用者（可自由部署建业）开放收益空间，他自称这是“懒人的决定”——许可证的选择即利益结构的选定。（BSDTalk EP61，[1689.12-1788.84]，L1）
+
+**辨析**：
+
+- NetBSD 微虚拟机引导需 multiboot 内核选项，目前仅 i386 支持、AMD64 尚缺，作者假设其为近期限制。　[存疑脚注] AMD64 multiboot 支持状态待核实（BSD Now EP361，[863.18-887.58]，L4）
+- 转写存在多处专名讹误：Mathopd 误作 Maffod、Mongrel 误作 MongoRail、Cygwin 误作 CycloN、mod_proxy_core 误作 ModFox core、Valgrind 误作 WellGriant、Kerberos 疑误作 KABROS，lighttpd 在转写中混作 Lighty、LIDI、Lys 等；作者将按 URL 哈希分配请求的首倡 RFC 归于微软，引用此说法时应核对缓存阵列路由协议一类原始文献。　[存疑脚注] 上述专名转写均存疑，以录音与 lighttpd 官方文档复核为准。（BSDTalk EP61，[1866.44-2113.54]，L5）
+
+**文献**：
+
+- [BSD Now EP361] Pennington J. BSD Now: 361: Function-based MicroVM[EB/OL]. (2020-07-30)[2026-08-15]. https://www.bsdnow.tv/361.
+- [BSDTalk EP61] Backman W. BSDTalk: 61: bsdtalk061 - Interview with lighttpd developer Jan Kneschke[EB/OL]. (2006-08-15)[2026-08-27]. https://archive.org/details/bsdtalk061.
+
+<!-- /PODCAST_REVIEW -->

@@ -45,41 +45,33 @@ volume: 第16卷-开源运动与合规治理
 - 各社区治理文档 Archive[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]
 - 项目史观总纲第 5、8、13、19 条；FreeBSD Core Team Election Results Core.13（同 140.27a）；FreeBSD Code of Conduct 官方页面（同 140.27a）；FreeBSD Core Team bylaws（同 140.27a）；FreeBSD Foundation 年报；bsd_commits.db freebsd-src 仓库 committer 地理分布；第 140.27.1-140.27.4、140.27a、140.27b、140.27c 节辩证链补足；参见相关章节 Core Team 选举制度、committers 机制、商业公司与社区关系、社区多样性批评部分史料 ［A］<!-- DB_REF:freebsd.duckdb -->> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 2003-2026 年间：1,102,265 次提交。> 仓库总览：1,294,851 次提交，13,875 位贡献者，1993-06-12 至 2026-08-25。
 
-<!-- PODCAST_MINE v20260827 -->
-<!-- 章节主题过滤：第308章-freebsd社区演进史-贡献者与边缘者 第 308 章 freebsd社区演进史-贡献者与边缘者（实体评分 ≥2 命中才入选） -->
-<!-- 匹配期数：15 期，扫描 segments：13485 条 -->
+<!-- PODCAST_REVIEW v20260829 -->
+<!-- 语义复核范围：BSD Now EP373（共 1 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
 
-### 要点（播客口述史提取）
-- upgrading the craft referencing and search tools that are built into FreeBSD.（BSD Now EP1 @ 1858.719）
-- The first problem with that is with the way FreeBSD Update works, you need a version（BSD Now EP2 @ 4003.22）
-- So he switched over from Linux to FreeBSD and he writes about the 10 things he likes most now that he switched（BSD Now EP2 @ 5008.08）
-- That's right, they can. So next we're looking at GCC is officially by-by on current, no longer being built by default on a freeBSD instrument.（BSD Now EP2 @ 543.86）
-- their stable version of XORG. Apparently FreeBSD is working on some driver support issues first（BSD Now EP2 @ 761.14）
+**要点**：
 
-### 史料（播客当事人陈述）
-- where they were talking about how FreeBSD was dying because they hadn't met their donation goal yet,（BSD Now EP1 @ 1178.880）
-- Yeah, just about every GUI we have, there's some kind of shell or back end behind it that's just running standard FreeBSD commands.（BSD Now EP1 @ 1574.040）
-- and actually just have them be put into as articles in not the handbook, but in the FreeBSD documentation tree.（BSD Now EP1 @ 1785.939）
-- the FreeBSD documentation is mostly written in DocBook（BSD Now EP1 @ 1809.139）
+- 访谈对象 Kyle Evans 因课程同学使用 FreeBSD 而入坑，从 bsdgrep 的 GSoC 项目开始参与 FreeBSD 开发，后当选 Core 团队成员。（BSD Now EP373，[163.48-233.53]，L1）
+- bsdgrep 源自 2011 年前后的 GSoC 项目，旨在替换 base 中的 GNU grep；其难点在于需保持与 GNU 扩展及既有脚本依赖的 bug 兼容。（BSD Now EP373，[216.33-426.70]，L1）
+- flua 是 base 中专用的 Lua 解释器，避免与 ports 中的 Lua 冲突；引导装载器由 Forth 转 Lua 后，boot 环境菜单等逻辑更易维护。（BSD Now EP373，[517.11-657.27]，L1）
+- bectl 源自 GSoC 项目，用于管理 ZFS 引导环境；ZFS Boot CFG 进入上游 OpenZFS 后成为一等特性，可在 UEFI 下工作。（BSD Now EP373，[828.43-1009.87]，L1）
+- certctl 将 Mozilla 根证书束纳入 base，使 FreeBSD 12.2 的新装系统默认具备 SSL 信任库，并可增删或拉黑证书。（BSD Now EP373，[1208.75-1317.09]，L1）
 
-### 史观（播客当事人观点与总纲映射）
-- And I think it's actually, you know, it's very heartening that we started the FreeBSD project talking very much about the BSD license.（BSD Now EP14 @ 2209.619）
-  → 史观映射：总纲10——动手者创造历史; 总纲13——法律与道德是利益分配
-- I think I wrote one of the original, you know, about pages on the FreeBSD.org website that said, you know,（BSD Now EP14 @ 2220.339）
-  → 史观映射：总纲10——动手者创造历史
+**史料**：
 
-### 辨析（播客争议与存疑点）
-- [存疑脚注] Not TrueOS specifically. The stats come in, they look the same for both. So I just see it as FreeBSD（BSD Now EP6 @ 2498.63）
-- [存疑脚注] otherwise there's performance problems. That's not true on FreeBSD. You can use a partition and（BSD Now EP15 @ 2889.639）
+- Kyle Evans 本人口述其参与 bsdgrep、flua、bectl、certctl 与 Core 团队的经过。（BSD Now EP373，[163.48-1933.73]，L1）
+- 访谈提及 Warner Losh 引入 Lua 脚本、Alan Jude 作为 GSoC 导师等当事人协作细节。（BSD Now EP373，[522.88-867.89]，L1）
 
-### 文献（播客参考条目）
-- [BSD Now EP1] Pennington J. BSD Now: 1: BGP & BSD[EB/OL]. (2013-09-04)[2026-08-15]. https://www.bsdnow.tv/1.
-- [BSD Now EP2] Pennington J. BSD Now: 2: Engineering and Powder Kegs[EB/OL]. (2013-09-11)[2026-08-15]. https://www.bsdnow.tv/2.
-- [BSD Now EP3] Pennington J. BSD Now: 3: MX with TTX[EB/OL]. (2013-09-18)[2026-08-15]. https://www.bsdnow.tv/3.
-- [BSD Now EP6] Pennington J. BSD Now: 6: Doing It de Raadt Way[EB/OL]. (2013-10-09)[2026-08-15]. https://www.bsdnow.tv/6.
-- [BSD Now EP7] Pennington J. BSD Now: 7: Go Directly to Jail(8)[EB/OL]. (2013-10-16)[2026-08-15]. https://www.bsdnow.tv/7.
-- [BSD Now EP9] Pennington J. BSD Now: 9: CURRENT Events[EB/OL]. (2013-10-30)[2026-08-15]. https://www.bsdnow.tv/9.
-- [BSD Now EP10] Pennington J. BSD Now: 10: Year of the BSD Desktop[EB/OL]. (2013-11-06)[2026-08-15]. https://www.bsdnow.tv/10.
-- [BSD Now EP11] Pennington J. BSD Now: 11: The Gateway Drug[EB/OL]. (2013-11-13)[2026-08-15]. https://www.bsdnow.tv/11.
+**史观**：
 
-<!-- /PODCAST_MINE -->
+- 总纲10 动手者创造历史：Kyle 以“找让自己不舒服的问题”为切入点，从具体缺陷入手参与系统开发，体现动手者以具体工程推动项目。（BSD Now EP373，[1604.00-1770.17]，L1）
+- 总纲9 经验优先：访谈强调通过实际项目学习并建立人际网络以获取经验，而非单纯阅读文档。（BSD Now EP373，[1639.55-1710.47]，L1）
+
+**辨析**：
+
+- bsdgrep 尚未完整支持 GNU 扩展，替换 base 中 GNU grep 的时机与兼容性范围仍待评估。　[存疑脚注] GNU 扩展兼容范围待核实（BSD Now EP373，[394.32-426.70]，L4）
+
+**文献**：
+
+- [BSD Now EP373] Pennington J. BSD Now: 373: Kyle Evans Interview[EB/OL]. (2020-10-22)[2026-08-15]. https://www.bsdnow.tv/373.
+
+<!-- /PODCAST_REVIEW -->

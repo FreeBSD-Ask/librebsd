@@ -43,39 +43,36 @@ volume: 第10卷-openbsd的历史
 - LibreSSL 与 OpenSSL 综合对比研究；TLS 库生态演进史；openbsd.db openbsd-src 仓库 LibreSSL/OpenSSL CVE commit 对比 ［A］<!-- DB_REF:openbsd.duckdb -->> **数据库引用（openbsd.duckdb）**：本子节对应 openbsd 代码仓库。> 2014-2014 年间：20,651 次提交。> 仓库总览：491,195 次提交，3,352 位贡献者，1995-10-18 至 2026-08-25。
 - 项目史观总纲第 13、19、21 条原文；de Raadt 邮件列表发言 [EB/OL]. <https://marc.info/?laccopenbsd-misc>；OpenBSD **pledge(2)** 手册页 [EB/OL]. <https://man.openbsd.org/pledge.2>；Linux seccomp-bpf 文档 [EB/OL]. <https://www.kernel.org/doc/html/latest/userspace-api/seccomp_filter.html>；Linux landlock 文档 [EB/OL]. <https://docs.kernel.org/userspace-api/landlock.html>；bsd_commits.db openbsd-src 仓库 pledge 覆盖扩展 commit ［A］<!-- DB_REF:openbsd.duckdb -->> **数据库引用（openbsd.duckdb）**：本子节对应 openbsd 代码仓库。> 2018-2018 年间：16,734 次提交。> 仓库总览：491,195 次提交，3,352 位贡献者，1995-10-18 至 2026-08-25。
 
-<!-- PODCAST_MINE v20260827 -->
-<!-- 章节主题过滤：第199章-openbsd-6x的pledge安全机制 第 199 章 openbsd-6x的pledge安全机制（实体评分 ≥2 命中才入选） -->
-<!-- 匹配期数：15 期，扫描 segments：14746 条 -->
+<!-- PODCAST_REVIEW v20260829 -->
+<!-- 语义复核范围：BSD Now EP498（共 1 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
 
-### 要点（播客口述史提取）
-- was you know it's partway scrolled down but it says uh blah blah ported to openbsd and netbsd（BSD Now EP112 @ 394.7799）
-- But this first one here, we have a cool story about creating binary packages in the port system on OpenBSD.（BSD Now EP116 @ 82.40000）
-- First with a bit of an intro and then talking about OpenSSH, mail servers, firewalls, ports（BSD Now EP134 @ 739.3199）
-- So if you want to start playing with some of that and seeing what the first SMP-aware network stack in OpenBSD looks like, this is your release.（BSD Now EP135 @ 264.6999）
-- The first one is OpenBSD Community Goes Gold. So what's this all about?（BSD Now EP194 @ 3704.6）
+**要点**：
 
-### 史料（播客当事人陈述）
-- So next up here, we've talked a lot about OpenBSD's pledge support.（BSD Now EP138 @ 4409.020）
-- Okay, so next up, we've talked a lot about OpenBSD's sandboxing mechanism pledge in the past,（BSD Now EP170 @ 1380.060）
-- Well, next up here we have an interesting comment, or I guess commit it looks like, over on Android Review talking about OpenBSD's malloc.（BSD Now EP124 @ 2751.219）
-- First with a bit of an intro and then talking about OpenSSH, mail servers, firewalls, ports（BSD Now EP134 @ 739.3199）
+- Florian Obser 阐述 OpenBSD 三类利用缓解：降权、权限分离与受限服务操作模式，作为攻击者达成任意代码执行后的最后防线；降权是最弱但最古老的缓解，权限分离将不可信数据解析移入低权限进程，受限模式则以 pledge 限制进程能力。（BSD Now EP498，[514.74-603.96]，L2）
+- Obser 回溯 ping 降权的历史：Theo de Raadt 逾 26 年前重构 ping，使其先打开原始套接字再丢弃 root 权限，以防本地用户借 ping 缺陷提权；二十年后又发现以 root 调用 ping 时只是从 root 降到 root，遂改为降级到专用用户。（BSD Now EP498，[598.70-632.26]，L2）
+- Obser 叙述 pledge 的由来：systrace 由 Niels Provos 开发但因基于系统调用参数而难用，OpenBSD 基础系统中长期仅 sshd 使用；2015 年 Theo 诱使 Nicholas Marriott 用 systrace 沙箱 file 却只坚持半年，成为压垮性体验，Theo 遂开发 tame（后改名 pledge）。（BSD Now EP498，[784.74-861.42]，L2）
+- pledge 通过对 OpenBSD 基础程序的需求归类而成，程序违规即被内核以不可捕获的 SIGABRT 终止；当约 50 个程序加入 pledge 后被认为成熟并合入主线，半年内几乎所有基础程序均使用 pledge。（BSD Now EP498，[861.42-931.54]，L2）
+- 其余新闻包括 OPNsense 23.1.1 发布、Ansible Clone 工具、NetBSD 在 FOSDEM 2023 的 BSD dev room 报告、FreeBSD Foundation 的 BSDCan 旅行资助，以及 Game of Trees 0.81 与 x-only PKU、pinsyscall 等 OpenBSD 新进展。（BSD Now EP498，[1156.64-2330.00]，L2）
 
-### 史观（播客当事人观点与总纲映射）
-- But next up is a OpenBSD, I think it's a port, but it's also a user story or an experience（BSD Now EP196 @ 707.56）
-  → 史观映射：总纲9——经验优先; 总纲23——一切历史写作都是基于哲学设定的历史小说
+**史料**：
 
-### 辨析（播客争议与存疑点）
-- [存疑脚注] that's a lot of mechanical work to go and change the arguments to the pledge call everywhere.（BSD Now EP124 @ 1251.419）
-- [存疑脚注] the fork from a Lumos, which of course has been further improved upon landing in OpenBSD.（BSD Now EP135 @ 221.6799）
+- Florian Obser《Privilege drop, privilege separation and restricted service operating mode in OpenBSD》（sha256.net 博客），为 OpenBSD 开发者本人的一手技术文章，经节目转述。（BSD Now EP498，[508.82-1144.64]，L1）
+- OpenBSD tech 邮件列表中 Theo de Raadt 关于 pinsyscall 的帖子，涉及 ExecVE 与 ROP pivot，为当事人一手陈述，经节目转述。（BSD Now EP498，[2272.22-2304.38]，L1）
+- Game of Trees 0.81 发布与 Stefan Sperling 在 FOSDEM 2023 的演讲及幻灯片，为官方发布线索，经节目转述。（BSD Now EP498，[1823.68-1923.94]，L2）
 
-### 文献（播客参考条目）
-- [BSD Now EP112] Pennington J. BSD Now: 112: Tracing the source[EB/OL]. (2015-10-21)[2026-08-15]. https://www.bsdnow.tv/112.
-- [BSD Now EP116] Pennington J. BSD Now: 116: Arcing ZFS[EB/OL]. (2015-11-18)[2026-08-15]. https://www.bsdnow.tv/116.
-- [BSD Now EP124] Pennington J. BSD Now: 124: Get your engine(x) started![EB/OL]. (2016-01-13)[2026-08-15]. https://www.bsdnow.tv/124.
-- [BSD Now EP134] Pennington J. BSD Now: 134: Marking up the Ports tree[EB/OL]. (2016-03-24)[2026-08-15]. https://www.bsdnow.tv/134.
-- [BSD Now EP135] Pennington J. BSD Now: 135: Speciality MWL[EB/OL]. (2016-03-30)[2026-08-15]. https://www.bsdnow.tv/135.
-- [BSD Now EP138] Pennington J. BSD Now: 138: Rushing into BSD[EB/OL]. (2016-04-20)[2026-08-15]. https://www.bsdnow.tv/138.
-- [BSD Now EP140] Pennington J. BSD Now: 140: Tracing it back to BSD[EB/OL]. (2016-05-04)[2026-08-15]. https://www.bsdnow.tv/140.
-- [BSD Now EP143] Pennington J. BSD Now: 143: One small step for DRM, one giant leap for BSD[EB/OL]. (2016-05-25)[2026-08-15]. https://www.bsdnow.tv/143.
+**史观**：
 
-<!-- /PODCAST_MINE -->
+- 总纲10 动手者创造历史：安全机制由开发者逐个程序地审计与归类累积而成，而非一次性顶层设计。：Theo 与 Obser 等通过逐个程序的重构与需求归类塑造 OpenBSD 安全机制。（BSD Now EP498，[861.42-931.54]，L2）
+- 总纲9 经验优先：以基础系统中真实程序的可用性经验为标准，淘汰难以使用的 systrace。：systrace 因难用而被 pledge 取代，设计取舍来自真实程序的实践经验。（BSD Now EP498，[784.74-861.42]，L2）
+- 总纲5 没有必然性，只有偶然性：pledge 的诞生由 systrace 实践中的偶然挫败触发，而非预先规划。：file 沙箱半年即弃的偶然失败促成 tame 与 pledge 的诞生。（BSD Now EP498，[784.74-861.42]，L2）
+
+**辨析**：
+
+- Obser 所述 Theo 逾 26 年前重构 ping 的具体年份需与 OpenBSD 提交史核验，节目转述未给出提交编号。　[存疑脚注] ping 重构年份为口述概数，须以 OpenBSD 提交记录与变更日志核验。（BSD Now EP498，[598.70-632.26]，L4）
+- pledge 从 tame 更名的具体时间与 5.8、5.9 版本对应关系为概略叙述，需以 OpenBSD 发布说明与 man 页核验。　[存疑脚注] tame 更名 pledge 及对应版本为概略叙述，需以 pledge(2) 手册与发布说明确认。（BSD Now EP498，[861.42-931.54]，L4）
+
+**文献**：
+
+- [BSD Now EP498] Pennington J. BSD Now: 498: Dropping Privileges[EB/OL]. (2023-03-16)[2026-08-15]. https://www.bsdnow.tv/498.
+
+<!-- /PODCAST_REVIEW -->

@@ -48,39 +48,50 @@ volume: 第06卷-freebsd的核心技术革新
 - Nuxi. CloudABI Project (archived/deprecated). github.com/NuxiNL/cloudabi; Brown, N. (2016-02-10). CloudABI. LWN.net; WebAssembly Community Group. WASI Preview 2 and Capabilities. wasi.dev; Schouten, E. CloudABI to WASI transition announcement. github.com/NuxiNL/cloudabi.[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]<!-- DB_REF:freebsd.duckdb -->> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 2010-2020 年间：488,947 次提交。> 仓库总览：1,294,851 次提交，13,875 位贡献者，1993-06-12 至 2026-08-25。
 - Woodruff, J. et al. (2012). CHERI: a research platform deconflating hardware virtualization and protection. RESoLVE 2012; Woodruff, J. et al. (2014). The CHERI capability model. ISCA '14; Watson, R. N. M. et al. (2015). CHERI: A Hybrid Capability-System Architecture. IEEE S&P ’15; CTSRD-CHERI Organization. CheriBSD Repository. github.com/CTSRD-CHERI/cheribsd; SRI International. CHERI Program. sri.com/program/cheri. ［B］[^doubt-resolved-633]: 据 Mac OS X Internals A Systems Approach (Amit Singh（阿米特·辛格）)  (未署名) 消解[^doubt-resolved-634]: 据 Arch_Handbook (未署名) 消解[^doubt-resolved-635]: 据 Porters_Handbook (未署名) 消解[^doubt-resolved-636]: 据 Handbook (未署名) 消解[^doubt-resolved-637]: 据 Mac OS X Internals A Systems Approach (Amit Singh)  (未署名) 消解[^doubt-resolved-638]: 据 Mac OS X Internals A Systems Approach (Amit Singh)  (未署名) 消解[^doubt-resolved-639]: 据 jude-interesting_zfs-paper (vbsdcon, 2015) 消解[^doubt-resolved-640]: 据 davis-asplos-cheriabi-paper-2 (standalone, 2019) 消解<!-- DB_REF:freebsd.duckdb -->> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 2010-2010 年间：34,527 次提交。> 仓库总览：1,294,851 次提交，13,875 位贡献者，1993-06-12 至 2026-08-25。
 
-<!-- PODCAST_MINE v20260827 -->
-<!-- 章节主题过滤：第117章-capsicum在freebsd的集成与演进 第 117 章 capsicum在freebsd的集成与演进（实体评分 ≥2 命中才入选） -->
-<!-- 匹配期数：15 期，扫描 segments：12747 条 -->
+<!-- PODCAST_REVIEW v20260829 -->
+<!-- 语义复核范围：BSD Now EP295、BSD Now EP197、BSD Now EP50（共 3 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
 
-### 要点（播客口述史提取）
-- and get your feet wet with Capsicum and your first foray into sandboxing.（BSD Now EP90 @ 137.2599）
-- article here about playing with sandboxing, getting somebody introduced to Capsicum.（BSD Now EP90 @ 74.77999）
-- upgrading the craft referencing and search tools that are built into FreeBSD.（BSD Now EP1 @ 1858.719）
-- So he said he started watching and he started switching some of his machines over to FreeBSD（BSD Now EP8 @ 4383.299）
-- weekly news roundup now though. But first up we have a capsicum in Dragonfly BSD. So I guess（BSD Now EP10 @ 3961.819）
+**要点**：
 
-### 史料（播客当事人陈述）
-- We've got PF presentations, Capsicum, Capserd, ASLR on FreeBSD, more stuff on migrating from Linux to BSD.（BSD Now EP26 @ 332.3999）
-- So we got this blog post here that kind of explores Capsicum and FreeBSD.（BSD Now EP90 @ 111.6799）
-- article here about playing with sandboxing, getting somebody introduced to Capsicum.（BSD Now EP90 @ 74.77999）
-- where they were talking about how FreeBSD was dying because they hadn't met their donation goal yet,（BSD Now EP1 @ 1178.880）
+- Mariusz Zaborski 的博客解释 unlink/unlinkat 的 TOCTOU 竞态：检查与删除之间文件可能被替换；funlinkat() 通过目录 fd、文件名与已打开 fd 的 vnode 匹配，在内核锁定下消除竞态。（BSD Now EP295，[331.9-743.78]，L2）
+- funlinkat() 允许以 FDNONE 回退为 unlinkat 行为，并为 Capsicum 沙箱（只持 fd、不知路径）与多线程删除提供安全保证。（BSD Now EP295，[583.62-743.78]，L2）
+- Chris Siebenmann 提示 ZFS 原生加密在 0.8 测试期仍频繁改动磁盘格式，不建议用于关键数据，宜继续用 geli/LUKS 或等待官方发布。（BSD Now EP295，[1517.86-1839.74]，L2）
+- 长篇采访 Michael W. Lucas：他谈《Absolute FreeBSD》第三版写作计划（2018 年 BSDCan 前付印）、科幻与犯罪小说的跨体裁写作，以及 BSDCan、EuroBSDCon 等会议文化。（BSD Now EP197，[4089.38-4994.88]，L1）
+- 该期讨论 OpenBSD relayd：可做应用层检查（如仅允许 HTTP GET、限制 HTTP 方法），其 socket splicing 把两端 socket 在内核直接拼接以提升转发性能，并与 LibreSSL/PF 配合。（BSD Now EP197，[450.90-675.00]，L2）
+- Peter Hansteen（《The Book of PF》作者）的文章介绍用 OpenBSD spamd 与辅助 MX 搭建反垃圾邮件方案：确保主备 MX 均可收信、统一内容过滤、部署 spamd、同步灰名单与陷阱地址。（BSD Now EP197，[5136.50-5630.00]，L2）
+- 报道 Google 为 Chrome 赞助的 Capsicum-on-Linux 进展：部分功能已合入，提供 autoconf 脚本使同一代码可在 Linux 与 FreeBSD 使用 Capsicum，并列出已被转换的工具清单。（BSD Now EP197，[5638.38-5715.14]，L2）
+- 一篇“1979 年的网关如何搭建”文章显示 TCP/IP 的基本原理至今未变，是早期网络路由器技术的历史回溯。（BSD Now EP197，[5727.24-5790.82]，L2）
+- Robert Watson 自述其进入 BSD 的起点是高中时期学校获赠的运行 BSD/OS 的 UNIX 服务器，并由此转向操作系统安全研究。（BSD Now EP50，[1309.66-1351.62]，L1）
+- Capsicum 能力沙箱设计约始于八年前，其内核接口已随 FreeBSD 发布，Google 亦将其移植至 Linux 并首次向内核邮件列表提交补丁。（BSD Now EP50，[1462.14-1489.42]，L1）
+- FreeBSD 10 已将 tcpdump、gzip 等基础工具纳入 Capsicum 沙箱，以降低以 root 运行、处理不可信输入程序被利用后的影响。（BSD Now EP50，[1565.14-1606.06]，L1）
+- OpenSSL 于 2014 年 8 月发布修复九个漏洞的新版本，LibreSSL 对其中五项完全受影响、一项部分受影响、三项因移除相关代码而不受影响。（BSD Now EP50，[897.62-988.06]，L2）
 
-### 史观（播客当事人观点与总纲映射）
-- （该章节匹配播客中未提取到当事人观点性陈述）
+**史料**：
 
-### 辨析（播客争议与存疑点）
-- [存疑脚注] So way back in 1997, you guys remember those days? Well, back then NetBSD forked the FreeBSD（BSD Now EP38 @ 3294.699）
-- [存疑脚注] And if you're using FreeBSD secure levels, you can actually make it so the flag can't be removed（BSD Now EP39 @ 3676.899）
-- [存疑脚注] maintainers to create their own fork of FreeBSD, or using the kernel to make a version of FreeBSD,（BSD Now EP86 @ 3964.559）
+- Mariusz Zaborski 的 funlinkat 博客，说明 unlink 为 syscall 10 的历史与 vnode 语义。（BSD Now EP295，[57.0-85.64]，L2）
+- Josh Rastin 的 AT&T U-Verse OpenBSD 路由器博客，用 eap_parrot 代理 802.1X EAP。（BSD Now EP295，[785.02-1092.9]，L2）
+- Peter Hansteen 的 spamd 配置文章；Google Capsicum-on-Linux 状态页；1979 年 TCP/IP 网关文章。（BSD Now EP197，[5136.50-5790.82]，L2）
+- Robert Watson 访谈（当事人自述，FreeBSD 核心团队成员与剑桥大学讲师）。（BSD Now EP50，[1294.82-2231.72]，L1）
+- OpenSSL 0.9.8zb、1.0.0n、1.0.1i 安全公告与 LibreSSL 2.0.5 发布信息（主持人口头转述）。（BSD Now EP50，[897.62-983.42]，L2）
 
-### 文献（播客参考条目）
-- [BSD Now EP1] Pennington J. BSD Now: 1: BGP & BSD[EB/OL]. (2013-09-04)[2026-08-15]. https://www.bsdnow.tv/1.
-- [BSD Now EP8] Pennington J. BSD Now: 8: A Brief Introduction[EB/OL]. (2013-10-23)[2026-08-15]. https://www.bsdnow.tv/8.
-- [BSD Now EP10] Pennington J. BSD Now: 10: Year of the BSD Desktop[EB/OL]. (2013-11-06)[2026-08-15]. https://www.bsdnow.tv/10.
-- [BSD Now EP26] Pennington J. BSD Now: 26: Port Authority[EB/OL]. (2014-02-26)[2026-08-15]. https://www.bsdnow.tv/26.
-- [BSD Now EP35] Pennington J. BSD Now: 35: Puffy Firewall[EB/OL]. (2014-04-30)[2026-08-15]. https://www.bsdnow.tv/35.
-- [BSD Now EP38] Pennington J. BSD Now: 38: A BUG's Life[EB/OL]. (2014-05-21)[2026-08-15]. https://www.bsdnow.tv/38.
-- [BSD Now EP39] Pennington J. BSD Now: 39: The Friendly Sandbox[EB/OL]. (2014-05-28)[2026-08-15]. https://www.bsdnow.tv/39.
-- [BSD Now EP48] Pennington J. BSD Now: 48: Liberating SSL[EB/OL]. (2014-07-30)[2026-08-15]. https://www.bsdnow.tv/48.
+**史观**：
 
-<!-- /PODCAST_MINE -->
+- 总纲9 经验优先：从实际删除文件的经验提炼出竞态，并以文件描述符保证同一 inode。（BSD Now EP295，[423.5-430.06]，L2）
+- 总纲10 动手者创造历史：funlinkat 由 FreeBSD 开发者动手设计实现并写成博客讲解。（BSD Now EP295，[612.78-697.7]，L2）
+- 总纲6 和解优于斗争：Capsicum 从 FreeBSD 向 Linux 的扩散显示技术传承跨阵营流动，而非单向竞争，呈现生态之间的和解与相互借鉴。（BSD Now EP197，[5638.38-5715.14]，L2）
+- 总纲10 动手者创造历史：总纲10 动手者创造历史：Robert Watson 团队以编写并落地 Capsicum、BERI/CHERI 的方式实际推动操作系统安全演进。（BSD Now EP50，[1380.46-1462.14]，L1）
+- 总纲9 经验优先：总纲9 经验优先：访谈以当事人对代码、硬件与漏洞的一手经验为叙述依据，而非抽象安全口号。（BSD Now EP50，[1451.54-1571.28]，L1）
+- 总纲22 知识注定过时：总纲22 知识注定过时：OpenSSL 与 LibreSSL 的持续修补显示安全知识处于不断失效与重写的循环之中。（BSD Now EP50，[957.56-988.06]，L2）
+
+**辨析**：
+
+- [存疑脚注] 转写将 unlink 描述为最早的系统调用之一、FreeBSD syscall 10，并与 Linux 架构相关编号并列，未逐一核对各平台编号表。　[存疑脚注] 系统调用编号未经各平台编号表核对（BSD Now EP295，[71.12-90.44]，L4）
+- Watson 自述尚不清楚 FreeBSD 10 发布以来沙箱化基础工具实际缓解了多少已公开漏洞，量化效果存疑。　[存疑脚注] 沙箱缓解漏洞的量化结论缺乏公开统计数据支撑（BSD Now EP50，[1578.68-1585.78]，L4）
+
+**文献**：
+
+- [BSD Now EP295] Pennington J. BSD Now: 295: Fun with funlinkat()[EB/OL]. (2019-04-25)[2026-08-15]. https://www.bsdnow.tv/295.
+- [BSD Now EP197] Pennington J. BSD Now: 197: Relaying the good news[EB/OL]. (2017-06-07)[2026-08-15]. https://www.bsdnow.tv/197.
+- [BSD Now EP50] Pennington J. BSD Now: 50: VPN, My Dear Watson[EB/OL]. (2014-08-13)[2026-08-15]. https://www.bsdnow.tv/50.
+
+<!-- /PODCAST_REVIEW -->

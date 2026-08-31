@@ -43,3 +43,33 @@ volume: 第09卷-netbsd的历史
 - LWN 文章档案；Phoronix BSD 文章；OSNews NetBSD 评论[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]<!-- DB_REF:netbsd.duckdb -->> **数据库引用（netbsd.duckdb）**：本子节对应 netbsd 代码仓库。> 1993-2026 年间：1,999,408 次提交。> 仓库总览：1,999,412 次提交，4,754 位贡献者，1992-07-13 至 2026-08-24。
 - NetBSD CVS 仓库统计；邮件列表存档；BSDCan/AsiaBSDCon 演讲视频档案 ［A］<!-- DB_REF:netbsd.duckdb -->> **数据库引用（netbsd.duckdb）**：本子节对应 netbsd 代码仓库。> 1993-2026 年间：1,999,408 次提交。> 仓库总览：1,999,412 次提交，4,754 位贡献者，1992-07-13 至 2026-08-24。
 - NetBSD 10.0 Release Notes；CVS commit log；NetBSD/doc/PLATFORMS；rin. Add nvme(4) and raid(4). netbsd-src 仓库 [DB/OL]. 2020-11-10T08:52:36Z. commit: 571f6efb48f0；riastradh. nvme(4): Add suspend/resume, derived from OpenBSD. netbsd-src 仓库 [DB/OL]. 2021-05-29T08:46:38Z. commit: a6e80066045f；msaitoh. Add VMware AHCI and NVMe. netbsd-src 仓库 [DB/OL]. 2022-02-15T12:01:28Z. commit: 90fc9574253f；skrll. Add support for Apple silicon NVME. Ported from OpenBSD. netbsd-src 仓库 [DB/OL]. 2022-05-07T08:20:03Z. commit: e24a9df7237c；jmcneill. Add initial support for Apple M1. netbsd-src 仓库 [DB/OL]. 2021-08-30T23:26:26Z. commit: db7e12da2c51；skrll. Add support for the power domain controller found in Apple silicon machines. netbsd-src 仓库 [DB/OL]. 2022-04-27T07:55:42Z. commit: 4f480f1af932；skrll. Add a driver for the Apple GPIO controller found in Apple silicon. netbsd-src 仓库 [DB/OL]. 2022-04-27T07:59:18Z. commit: 4989e6f446f2；skrll. Add support for the mailbox that provides a communications channel with additional cores. netbsd-src 仓库 [DB/OL]. 2022-04-27T08:06:20Z. commit: 09966de28c10；skrll. Add a driver for the Apple M1 I2C controller. From OpenBSD. netbsd-src 仓库 [DB/OL]. 2022-05-10T08:05:32Z. commit: 33e6c36315e1；skrll. Add a driver for the Apple RTKit based System Management Controller found on M1 SoCs. netbsd-src 仓库 [DB/OL]. 2022-05-10T08:09:57Z. commit: 11f1e5f671ec；riastradh. Define pci_is_thunderbolt_attached (answer: no). netbsd-src 仓库 [DB/OL]. 2021-12-19T01:48:12Z. commit: edb5cae246b4 ［A］<!-- DB_REF:netbsd.duckdb -->> **数据库引用（netbsd.duckdb）**：本子节对应 netbsd 代码仓库。> 1993-2026 年间：1,999,408 次提交。> 仓库总览：1,999,412 次提交，4,754 位贡献者，1992-07-13 至 2026-08-24。
+
+<!-- PODCAST_REVIEW v20260829 -->
+<!-- 语义复核范围：BSD Now EP360（共 1 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
+
+**要点**：
+
+- 追查坏提交的文章介绍用 git bisect 二分定位引入回归的提交，并指出破坏可能来自非直观的依赖变更。（BSD Now EP360，[65.19-460.69]，L2）
+- FreeBSD 完成 2020 年第十一届 Core 团队选举，Baptiste Daroussin、Ed Maste、George Neville-Neil、Hiroki Sato、Kyle Evans、Mark Johnston、Scott Long、Sean Chittenden、Warner Losh 当选。（BSD Now EP360，[460.69-614.65]，L2）
+- NetBSD 在 Pinebook Pro 上以 NetBSD 9 用户态搭配 Current 内核运行，以兼顾二进制包与更好的硬件支持。（BSD Now EP360，[624.57-842.58]，L2）
+- pf 状态表存在默认大小限制，FreeBSD 另有 `net.pf.request_maxcount` sysctl 控制单次 ioctl 载入表项数；DragonFly 侧限制为静态内核值。（BSD Now EP360，[1199.40-1404.41]，L2）
+
+**史料**：
+
+- 追查坏提交博文与 git bisect 说明。（BSD Now EP360，[65.19-460.69]，L2）
+- FreeBSD 2020 年 Core 团队选举公告，由主持人转述当选名单。（BSD Now EP360，[460.69-614.65]，L2）
+
+**史观**：
+
+- 总纲10 动手者创造历史：FreeBSD 决策由“到场者”作出，主持人与提问者强调社区参与决定项目走向。（BSD Now EP360，[2452.99-2456.55]，L2）
+- 总纲4 分离聚合是永恒规律：Core 团队成员更替体现治理层的分离与再聚合。（BSD Now EP360，[460.69-614.65]，L2）
+
+**辨析**：
+
+- DragonFly 的 pf 表限制是静态内核值且未暴露为可调 sysctl，是否需要仿照 FreeBSD 改造仍待确认。　[存疑脚注] DragonFly 侧改造计划待核实（BSD Now EP360，[1360.80-1390.40]，L4）
+
+**文献**：
+
+- [BSD Now EP360] Pennington J. BSD Now: 360: Full circle[EB/OL]. (2020-07-23)[2026-08-15]. https://www.bsdnow.tv/360.
+
+<!-- /PODCAST_REVIEW -->

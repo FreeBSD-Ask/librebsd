@@ -200,32 +200,65 @@ FreeBSD 发展关键里程碑
 - Computer History Museum (2011) "Bill Joy Fellow Biography"
 - BSDTalk #170 (2009) Marshall Kirk McKusick at DCBSDCon 访谈
 
-<!-- PODCAST_MINE v20260827 -->
-<!-- 章节主题过滤：第27章-billjoy与1bsd 第 27 章 Bill Joy 与 1BSD（实体评分 ≥2 命中才入选） -->
-<!-- 匹配期数：15 期，扫描 segments：13639 条 -->
+<!-- PODCAST_REVIEW v20260829 -->
+<!-- 语义复核范围：BSD Now EP362、BSD Now EP361、BSD Now EP278、BSDTalk EP18（共 4 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
 
-### 要点（播客口述史提取）
-- Yeah, it's basically written in 2003 when Bill Joy announced he was leaving Sun Microsystem.（BSD Now EP352 @ 1865.56）
-- Yeah, so this is some excerpts from a Linux magazine interview with Bill Joy back in 1999.（BSD Now EP352 @ 1891.92）
+**要点**：
 
-### 史料（播客当事人陈述）
-- 2003 article Bill Joyce greatest gift to man the vi editor（BSD Now EP352 @ 1840.16）
-- Yeah, so this is some excerpts from a Linux magazine interview with Bill Joy back in 1999.（BSD Now EP352 @ 1891.92）
+- Warner Losh 自述 2.11BSD 复原工程：因原始磁带由 Usenix 分发且早期母带重制，现仅存 patch level 195（约发布 18 个月后），他通过 2.10.1BSD、4.3BSD 等来源拼合出 patch level 0。（BSD Now EP362，[774.42-1103.02]，L1）
+- 2.11BSD 的 patch 以 shell 脚本、uuencode 压缩 tar 等格式发布，部分指令破坏信息，无法简单用 patch -R 逆向。（BSD Now EP362，[884.78-912.34]，L1）
+- Warner 自述曾因疫情失眠而以复原工程为消遣，最终重建出可启动的原始系统磁带，并计划把每个 patch 转为 git commit。（BSD Now EP362，[964.58-1472.50]，L1）
+- 关于 sync：早期 Unix 没有 reboot 命令，靠 sync 后断电；连续三次 sync 是人为延时的误传，各 BSD 内核的 sync 只调度写盘而不等待完成。（BSD Now EP362，[2597.68-2885.24]，L1）
+- Firecracker 由 AWS 于 2018 年开源，是依赖 KVM 的微虚拟机监控器；作者以 NetBSD 最小内核配置并绕过引导装载器构建“函数式微虚拟机”。（BSD Now EP361，[749.58-1016.66]，L2）
+- Warner Losh 的 2.11BSD 复原工程公开，目标是以可复现方式重建 2.11BSD 发行磁带，并生成含全部 patch 点的 Git 仓库。（BSD Now EP361，[442.48-732.66]，L2）
+- Warner Losh 的磁盘分区史文章梳理 Unix 第一至第七版从静态分区到多分区设备的演进，指出分区表曾编译进驱动而非写盘。（BSD Now EP361，[1266.82-1931.02]，L2）
+- OpenBSD 发布首个 PowerPC64 快照，在 Raptor Blackbird 与 Talos II 上开发，并计划支持 Power8 系统。（BSD Now EP361，[1075.56-1141.02]，L2）
+- McKusick 亲述伯克利早期四张桌四人同处一室、与 Bill Joy 为办公室同僚，办公室仅一部电话且十之八九是找 Bill Joy；他形容 Bill Joy 更像营销者，四处演讲、散发磁带、动员他人贡献。（BSD Now EP278，[176.66-198.66]，L1）
+- McKusick 认为 FreeBSD 二十五年来最大的成就是形成一套能持续吸纳新人并让其上升的治理机制：文档 committer 与源码 committer 同样有权选举 core，营销背景者也能当选。（BSD Now EP278，[533.12-611.68]，L1）
+- McKusick 援引 MIT 与法国南部高校的社会学研究，称多数开源项目约五年内沉寂，只有 Apache 与 FreeBSD 等项目完成三次以上成功的领导层更替，FreeBSD 已历约五代。（BSD Now EP278，[725.94-848.56]，L1）
+- McKusick 亲述 FreeBSD 基金会起源：早期发行由 Walnut Creek CD-ROM 支撑，后依赖 Yahoo 提供基础设施十余年，Justin Gibbs 因担忧单一公司退出而发起基金会。（BSD Now EP278，[1883.72-1965.34]，L1）
+- McKusick 亲述 UFS 三十年：其保存的 1982 年磁盘镜像在当代仍可读写，UFS 适合资源受限的嵌入式设备，ZFS 适合大资源环境，二者各解决不同问题。（BSD Now EP278，[1093.34-1174.26]，L1）
+- McKusick 判断容器概念发明于 FreeBSD 却在他处获得成功，FreeBSD 常把项目推进到九成而缺最后一成产品化，恰如“先驱挨箭、定居者得地”。（BSD Now EP278，[2596.78-2625.54]，L1）
+- McKusick 回忆早期 BSD 谱系：项目最初就是 Bill Joy 的一人工程，发布一些工具程序，首个发行物径称 BSD、后追认 1BSD，历经数个修订仍是工具集而非完整系统；约 1979 年的 3BSD 才是第一个带全部工具的完整系统；1979 年项目声望足以让 Bob Fabry 为系里争取到 DARPA 拨款，DARPA 想要一个所有承包商共用的操作系统基座，Joy 以 Unix 不绑定特定厂商说服对方，主要对手是只运行于 DEC 机器的 VMS——尽管当时 Unix 其实也只在 DEC 设备上运行，这一局面在 80 年代初随包括 Joy 赴创的 Sun 在内的工作站浪潮而迅速改变。（BSDTalk EP18，[77.45-211.79]，L1）
+- 关于 TCP/IP 进入 BSD：ARPANET 原用 NCP 协议，仅运行于专用处理器且上限 256 台主机，扩张注定使其失效；伯克利的 DARPA 项目是让新协议 TCP/IP 落地，工作分工为 BBN 编写协议、伯克利定义并构建 API，今天尽人皆知的 socket 接口即伯克利的设计；BBN 交付的代码能打满一台 1 MIPS 处理器的 56 kbps，作为 ARPANET 速度尚称够用，但接上 3 M 以太网仍只有 56 kbps 吞吐，Joy 为使其跑满 3 M 乃至 10 M 以太网做了大量调优，期间与 BBN 产生分歧但最终解决；伯克利版的 API 与 TCP/IP 代码成为至少到 90 年代初几乎所有实现的共同基础。（BSDTalk EP18，[231.97-349.19]，L1）
+- BSD 许可证诞生的完整链条：80 年代末以前获取 BSD 发行须先购 AT&T 源码许可证再另付一千美元，AT&T 许可费从两万至五万美元涨到 80 年代中期的二十五万至五十万，小公司无力承担，遂请伯克利单独发放明确属于伯克利的 TCP/IP 代码；伯克利律师想借此收取版税，团队以代码由政府资金开发、伯克利无权收费为由坚持开放；团队也评估过当时刚起步的 GNU 通用公共许可证，因其要求改动及关联代码全部开源——TCP/IP 运行于内核意味着交出整个内核——而否决；既不接受锁死权利的版权模式也不接受要求交出知识产权的 copyleft，他们自称 copy center，随取随拷、不要求回馈但予鼓励，许多厂商最终回赠大量代码，动因不是利他而是不堪每次新版发布后重新合并自有改动的负担；与大学律师反复争论后由律师定稿，即今日的 BSD 许可证，1988 年随 TCP/IP 代码及相关工具一并发布。（BSDTalk EP18，[371.17-547.37]，L1）
+- 随后的代码释放与三团体分化：Keith Bostic 决心测试能解放多少代码，除内核外释放了全部有趣部分，CSRG 逐文件甄别内核归属并清除外来部分，尘埃落定时仅余约六个关键内核文件，1989 年发布后不久网络上的黑客便补齐了这六个文件，到 1990 年已出现可独立运行的 BSD；由此分出三支——坚持大学研究风格、保持系统小巧、追求多平台的 NetBSD，全力在 PC 架构上做到用户友好的 FreeBSD，两者目标分化迅速但都保持伯克利式许可证因而代码往来频繁；第三支是走向专有的 Berkeley Software Design Incorporated，整个 90 年代销售该系统，最终被 Wind River Systems 收购并将技术并入其产品。（BSDTalk EP18，[561.23-675.43]，L1）
+- McKusick 当下的工作清单：近年持续增强文件系统——soft updates 以类似日志的机制让文件系统既快又稳且可恢复，snapshots 支持活动系统转储与后台文件系统检查；两年前出版 FreeBSD 操作系统设计与实现专著，其后围绕该书开发课件、授课并录像，即将开设一个读约八万行 FreeBSD 内核源码的代码阅读课；未来计划为 FFS 补上日志版本——对部分用户这只是采购清单上的勾选项——并完善 FreeBSD 中已有的 NFSv4 原型；他同时以教授身份厘清概念：UFS 是 Unix 文件系统的统称，FFS 是多数 BSD 系统采用的磁盘布局变体，此外还有日志式与内存式变体用于临时文件系统。（BSDTalk EP18，[683.77-834.79]，L1）
 
-### 史观（播客当事人观点与总纲映射）
-- （该章节匹配播客中未提取到当事人观点性陈述）
+**史料**：
 
-### 辨析（播客争议与存疑点）
-- （该章节匹配播客中未提取到争议性陈述）
+- Warner Losh 本人口述及博客、Twitter 记录，涉及 Usenix 磁带分发、TUHS 档案与 patch 链。（BSD Now EP362，[774.42-1826.06]，L1）
+- Unix Heritage Society（TUHS）由 William Toomey 创立，保存代码、二进制、论文扫描件与早期商业发行的私有档案。（BSD Now EP362，[2022.96-2260.64]，L1）
+- “Fakecracker：NetBSD as function-based micro-VM”教程，含最小内核配置与 Sailor 工具说明。（BSD Now EP361，[749.58-1016.66]，L2）
+- Warner Losh 的 2.11BSD 复原项目页面与早期 Unix 磁盘分区史博客。（BSD Now EP361，[442.48-732.66]，L2）
+- McKusick 提及 FAST 大会关于文件系统三十年演进的 keynote、BSDCan 2018 的采访背景，以及 CSRG 重写 AT&T 程序时 Keith Bostic 主张将署名归于他人以自保的细节。（BSD Now EP278，[339.18-390.46]，L1）
+- McKusick 提及 TeachBSD 项目，主张以真实操作系统而非玩具系统教授计算机科学，并认为 DTrace/DWatch 等工具是“玻璃制”可观测系统的重要组成部分。（BSD Now EP278，[2723.00-2781.38]，L1）
 
-### 文献（播客参考条目）
-- [BSD Now EP142] Pennington J. BSD Now: 142: Diving for BSD Perls[EB/OL]. (2016-05-18)[2026-08-15]. https://www.bsdnow.tv/142.
-- [BSD Now EP352] Pennington J. BSD Now: 352: Introducing Randomness[EB/OL]. (2020-05-28)[2026-08-15]. https://www.bsdnow.tv/352.
-- [BSD Now EP8] Pennington J. BSD Now: 8: A Brief Introduction[EB/OL]. (2013-10-23)[2026-08-15]. https://www.bsdnow.tv/8.
-- [BSD Now EP11] Pennington J. BSD Now: 11: The Gateway Drug[EB/OL]. (2013-11-13)[2026-08-15]. https://www.bsdnow.tv/11.
-- [BSD Now EP24] Pennington J. BSD Now: 24: The Cluster & The Cloud[EB/OL]. (2014-02-12)[2026-08-15]. https://www.bsdnow.tv/24.
-- [BSD Now EP30] Pennington J. BSD Now: 30: Documentation is King[EB/OL]. (2014-03-26)[2026-08-15]. https://www.bsdnow.tv/30.
-- [BSD Now EP36] Pennington J. BSD Now: 36: Let's Get RAID[EB/OL]. (2014-05-07)[2026-08-15]. https://www.bsdnow.tv/36.
-- [BSD Now EP42] Pennington J. BSD Now: 42: Devious Methods[EB/OL]. (2014-06-18)[2026-08-15]. https://www.bsdnow.tv/42.
+**史观**：
 
-<!-- /PODCAST_MINE -->
+- 总纲19 解释学循环是历史认识的根本条件：复原工程通过现存 patch 链与早期二进制格式博客互相印证，构成解释学循环的认识过程。（BSD Now EP362，[1076.58-1268.54]，L2）
+- 总纲22 知识注定过时：早期二进制格式与工具链需借助旧模拟器与二进制工件才能重建，说明工具知识会随代际过时。（BSD Now EP362，[678.42-758.62]，L1）
+- 总纲10 动手者创造历史：Firecracker 微虚拟机与 2.11BSD 复原均由个体以工程实践填补生态空白。（BSD Now EP361，[749.58-1016.66]，L2）
+- 总纲22 知识注定过时：早期 Unix 的分区表硬编码与设备号约定随存储工业演进而被淘汰。（BSD Now EP361，[1885.08-1931.02]，L2）
+- 总纲10 动手者创造历史：McKusick 强调软件与项目的持续“养护”远非社区驱动项目所长，人们倾向做新奇有趣之事；文档与基础设施的默默维护恰是系统得以存活的关键。（BSD Now EP278，[451.46-489.68]，L1）
+- 总纲3 不存在进步，只有权力再分配：McKusick 指出历史上 IBM、微软各自占据过绝对支配地位又相继让位，Linux 今日的支配地位同样不会永远持续，FreeBSD 甘居雷达之下反而得以延续。（BSD Now EP278，[2247.34-2342.26]，L1）
+- 总纲5 没有必然性，只有偶然性：McKusick 以“容器发明于 FreeBSD 却成功于他处”为例，指出技术领先与市场成功之间并无必然因果，成功更多依赖偶然的产品化时机。（BSD Now EP278，[2596.78-2625.54]，L1）
+- 总纲8 本体论上各方平等：McKusick 对竞争格局的判断建立在一个历史类比与一个生态学论证上：当年 PC 被讥为小、弱、难用，却因比大型机便宜十倍而被人找到用法，终至 PC 为王、大型机退居利基——开源相对专有软件正是同样的成本结构，IBM 弃自有操作系统拥抱 Linux、Oracle 访谈当周宣布收购 Sleepycat 并酝酿再购两家开源厂商皆是征兆，Linux 将取代 Windows 的主导地位而 Windows 不会消失；他又论证 Windows 的根本弱点在于它是横跨八成机器的单一一致目标，一个病毒即可通吃，计算生态需要遗传多样性，BSD 的价值恰在于既不是 Linux 也不是 Windows——小到病毒作者不感兴趣、久经岁月而足够防弹，装机数百万、缓慢增长，永不称王却是生态中不可替代的一极。（BSDTalk EP18，[847.61-1111.83]，L1）
+- 总纲13 法律与道德是利益分配：McKusick 特别纠正了开源回馈的道德化叙事：厂商向伯克利回赠大量代码并非出于利他，而是每次新版发布都须重新合并自有改动的成本压力使然，把改动交回上游后改动随发行物一起维护反而省力——所谓社区美德话语之下运行的是赤裸裸的利益核算。（BSDTalk EP18，[509.95-525.89]，L1）
+
+**辨析**：
+
+- 2BSD 系列早期版本号（2.8 至 2.11）与缺失版本（如 2.6/2.7）的编号逻辑，Warner 亦无法确证，仅推测与磁带编号相关。　[存疑脚注] 版本号缺口原因待原始档案确认（BSD Now EP362，[802.42-826.70]，L4）
+- NetBSD 微虚拟机引导需 multiboot 内核选项，目前仅 i386 支持、AMD64 尚缺，作者假设其为近期限制。　[存疑脚注] AMD64 multiboot 支持状态待核实（BSD Now EP361，[863.18-887.58]，L4）
+- McKusick 关于“文档 committer 与源码 committer 同等投票”的叙述属当事人视角，须与 FreeBSD 选举规则文件与历届 core 名单交叉核验；其对自己“不再关键”的自评也属谦辞。　[存疑脚注] 选举资格细节须以 FreeBSD Core Team 规则文件核实。（BSD Now EP278，[533.12-611.68]，L3）
+- McKusick 提及的研究（MIT 与法国高校基于 commit log 分析领导层）未给出具体出处，其“只有 Apache 与 FreeBSD 等少数项目完成多次更替”的结论需核对原始研究。　[存疑脚注] 所援引研究未具名，结论无法直接追溯。（BSD Now EP278，[725.94-799.70]，L4）
+- 转写专名失真须全面校核：BBN 被记作 Bermick and Nguyen，应为 Bolt Beranek and Newman；DSP FAST file system 应为 BSD Fast File System；TreeBSD 应为 FreeBSD；PreBSD 应为 FreeBSD；microstation 应为 workstations；Sleepy Cat 应为 Sleepycat。另有一处年代压缩风险：1989 年发布、黑客补齐六文件、1990 年出现独立 BSD 的叙述把 Net/1、Net/2 与 386BSD 的序列压成约数，精确版本学须对照发行物原件。　[存疑脚注] 年代压缩系当事人约数记忆，须以 Networking Release 1（1989）、Release 2（1991）与 386BSD（1992）的原始发行记录复核。（BSDTalk EP18，[267.67-349.19]，L1）
+
+**文献**：
+
+- [BSD Now EP362] Pennington J. BSD Now: 362: 2.11-BSD restoration[EB/OL]. (2020-08-06)[2026-08-15]. https://www.bsdnow.tv/362.
+- [BSD Now EP361] Pennington J. BSD Now: 361: Function-based MicroVM[EB/OL]. (2020-07-30)[2026-08-15]. https://www.bsdnow.tv/361.
+- [BSD Now EP278] Pennington J. BSD Now: Episode 278: The Real McCoy | BSD Now 278[EB/OL]. (2018-12-27)[2026-08-15]. https://www.bsdnow.tv/278.
+- [BSDTalk EP18] Backman W. BSDTalk: Interview with Kirk McKusick[EB/OL]. (2006-02-17)[2026-08-15]. https://archive.org/download/bsdtalk018/bsdtalk018.ogg.
+
+<!-- /PODCAST_REVIEW -->

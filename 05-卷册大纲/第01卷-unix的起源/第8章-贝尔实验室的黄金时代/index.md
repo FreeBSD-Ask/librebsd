@@ -43,3 +43,55 @@ volume: 第01卷-unix的起源
 - Kernighan & Plauger 1976"Software Tools"；Gamma et al. 1994"Design Patterns"；Pike & Kernighan 1984 BYTE [考据脚注：Kernighan & Plauger 1976 与 Gamma et al. 1994 为软件设计经典文献，核心事实经计算机科学史公认。]
 - Ritchie, 1978 BLTJ; TUHS 存档中的 V7 发布前邮件与备忘录； Salus, 1994 ［B］
 - Salus 1994；Kernighan 2019；Toomey 2009；Spinellis 2006 [考据脚注：Salus 1994、Kernighan 2019、Toomey 2009、Spinellis 2006 为 UNIX 历史经典文献，核心事实经计算机科学史公认。]
+
+<!-- PODCAST_REVIEW v20260829 -->
+<!-- 语义复核范围：BSD Now EP487、BSD Now EP325（共 2 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
+
+**要点**：
+
+- OpenBSD 6.1 于 2017 年发布，是该项目第 42 个版本；该版本引入 Clang 作为基础编译器，动因是既有 GCC 的 GPLv2 版本无法支持 ARM64 平台。（BSD Now EP487，[72.92-129.86]，L2）
+- 主持人逐段解读 Ritchie《The Evolution of the Unix Time-sharing System》，指出该论文回顾 UNIX 自 1969 年诞生、经 PDP-7 至 PDP-11 移植的早期史，依次讲述文件系统、进程控制、I/O 重定向与管道发明。（BSD Now EP487，[1048.88-1308.52]，L2）
+- Ping 程序由 Mike Muuss 于 1983 年在 4.2a BSD 上编写，直接动因是同年 7 月 Dave Mills 在 DARPA 会议上关于以定时 ICMP 回显请求测量路径延迟的评论；Muuss 为此补全了内核的 raw ICMP socket 支持。（BSD Now EP487，[4653.46-4790.7]，L2）
+- FreeBSD 将 ZFS 压缩发送接收功能导入 vendor branch，该功能依赖此前的 compressed ARC，使 ZFS send 可跨网络直接传输压缩数据，避免先解压再压缩的低效路径。（BSD Now EP487，[3892.42-4264.2]，L2）
+- FreeBSD MAC 强制访问控制框架源自 DARPA 资助的 TrustedBSD 项目，允许以细粒度策略替代传统 root 特权；以 portacl 为例，可让非 root 用户绑定 1024 以下的特权端口。（BSD Now EP487，[4264.2-4648.22]，L2）
+- FreeBSD 12.1 是首个以 open ZFS 端口支撑原生 ZFS 加密所需密码学原语的版本，同时导入 BearSSL 为 Juniper 的验证引导装载器提供轻量 TLS，并纳入 MLX5 固件更新工具与 FUSE 驱动重写。（BSD Now EP325，[63.84-68.92]，L2）
+- 12.1 预告 i386 默认 CPU 类型将由 486 升至 686（自 13 起），因 486 缺 64 位原子操作且用户态无法模拟；CTM 与 timed 等工具被标记废弃。（BSD Now EP325，[543.78-594.94]，L2）
+- 重刊的《Unix Evolution 1975–1984》一文梳理 research Unix v6/v7/v8 的文本格式化、编译器与开发工具流变，并记述 Ritchie 关于 man page BUGS 节以公开羞辱促修复的自述。（BSD Now EP325，[723.74-1018.28]，L2）
+- OpenBSD 在 base unbound 默认启用 DNSSEC 验证，并以 Quad9 的 9.9.9.9 做约束验证绕开 NTP 与 DNSSEC 的时钟引导死锁；2018 年曾因时钟问题回滚后于此次重开。（BSD Now EP325，[2062.14-2169.84]，L2）
+- Rainbow Crack 的 OpenBSD 编译补丁引出彩虹表原理：加盐与多轮散列（bcrypt 可至百万轮、SHA-512 crypt 默认万轮）使针对字典的预计算表失效，凸显密码存储需抗彩虹表算法。（BSD Now EP325，[2632.88-2909.48]，L2）
+
+**史料**：
+
+- Ritchie, D. M.《The Evolution of the Unix Time-sharing System》论文原文，主持人在节目中引述其结构与结论。（BSD Now EP487，[1048.88-1308.52]，L2）
+- Mike Muuss 个人主页自述：Ping 是他在一个晚上写出的约一千行 hack，命名取自声呐回波定位原理；该主页还记载 Dave Mills 1983 年 7 月 DARPA 会议评论的缘起。（BSD Now EP487，[4653.46-4790.7]，L2）
+- OpenBSD 6.1 发布新闻与 Release Notes，涉及第 42 个版本、Clang 基础编译器引入与 ARM64 平台支持。（BSD Now EP487，[72.92-129.86]，L2）
+- FreeBSD 12.1 发布公告与 releng 说明，列明 open ZFS、BearSSL、MLX5、FUSE 重写及废弃项。（BSD Now EP325，[128.32-148.56]，L2）
+- Microsystems Magazine 1984 年 11 月号《Unix Evolution》文章（Daemon News 1999 重刊），为节目重读的历史文本。（BSD Now EP325，[740.14-756.02]，L2）
+- Dennis Ritchie 关于 man page BUGS 节政策的引文，属当事人一手表述。（BSD Now EP325，[1012.82-1027.82]，L1）
+- OpenBSD unbound.conf 默认 DNSSEC 与 aggressive NSEC 的提交说明，及与 Quad9 的约束验证讨论。（BSD Now EP325，[2077.00-2124.28]，L2）
+
+**史观**：
+
+- 总纲23 一切历史写作都是基于哲学设定的历史小说：主持人引述 Ritchie 论文结论，指出早期 UNIX 编程环境虽以今日标准显得严酷原始，但当事人当时并不觉得如此，记忆只留住美好与持存之物。（BSD Now EP487，[1261.84-1298.56]，L2）
+- 总纲5 没有必然性，只有偶然性：主持人指出论文显示 UNIX 早期已萌生虚拟化、容器与能力等思想，只因当时机器不够强大而无法实现，表明技术形态受物质条件制约而非线性进步。（BSD Now EP487，[1139.58-1162.48]，L2）
+- 总纲10 动手者创造历史：Mike Muuss 自述 Ping 为一晚写成的千行 hack，并感慨若早知它会成为一生最著名的成就便会再多打磨，体现动手者在具体机缘中的创造。（BSD Now EP487，[4780.22-4790.7]，L2）
+- 总纲3 不存在进步，只有权力再分配：总纲3 不存在进步，只有权力再分配：i386 486→686、GCC 4.2 弃用、CTM 与 timed 废弃不是进步，而是支持资源在不同架构间的再分配。（BSD Now EP325，[567.10-625.50]，L2）
+- 总纲8 本体论上各方平等：总纲8 本体论上各方平等：FreeBSD、OpenBSD、HardenedBSD、OPNsense 同屏报道，各分支地位平等，不以体量定优劣。（BSD Now EP325，[1698.58-1805.42]，L2）
+- 总纲10 动手者创造历史：总纲10 动手者创造历史：Tom Jones 以 git worktree、tmux、cscope、bhyve 的动手流程呈现 FreeBSD 开发者的真实工作方式。（BSD Now EP325，[1317.46-1484.78]，L2）
+- 总纲22 知识注定过时：总纲22 知识注定过时：1984 年文章自承需源许可并签血誓方可读源码，而 V7 源码迟至 2002 年由 Caldera 释放，知识条件随时间失效。（BSD Now EP325，[923.02-977.30]，L2）
+- 总纲12 科学是形式主义：总纲12 科学是形式主义：密码学的“安全”依赖加盐与轮数的形式约定，彩虹表攻击揭示其相对性而非绝对真理。（BSD Now EP325，[2864.92-2909.48]，L2）
+- 总纲5 没有必然性，只有偶然性：总纲5 没有必然性，只有偶然性：OpenBSD 2018 年曾默认开 DNSSEC 后回滚、2019 年再启用，取决于时钟引导问题被偶然解决。（BSD Now EP325，[2124.78-2143.00]，L2）
+
+**辨析**：
+
+- 本册转写时间戳乱序，且存在多处专名识别错误，如 FreeNAS 被识别为 Freenaz、illumos 被识别为 Alumos 或 Olimo，引用时须回查原音频或官方文本。　[存疑脚注] 转写质量存疑，专名与时间戳需人工复核（BSD Now EP487，[3299.74-3425.06]，L4）
+- OpenBSD 6.1 以 Clang 取代 GCC 的动因被表述为 GCC 的 GPLv2 版本无法支持 ARM64，此说来自主持人转述，须以 OpenBSD 官方公告或开发者邮件交叉验证。　[存疑脚注] 单一播客来源，需 OpenBSD 官方公告交叉验证（BSD Now EP487，[104.7-129.86]，L4）
+- Rainbow Crack 网站自 2007 年后基本未更新，教程提及的某域名已被劫持为垃圾页，该工具的可用性与教程安全性存疑。　[考据脚注] 站点域名易主，链接与补丁来源需重新核实（BSD Now EP325，[2683.40-2706.96]，L4）
+- 12.1 的 open ZFS 与原生加密支持为发布说明转述，具体实现路径与加密原语宜以 FreeBSD 源码树核对。　[存疑脚注] 转写对“首个支持 open ZFS 端口的正式版”表述较口语化（BSD Now EP325，[68.92-90.80]，L4）
+
+**文献**：
+
+- [BSD Now EP487] Pennington J. BSD Now: 487: EuroBSDcon Interviews Pt. 2[EB/OL]. (2022-12-29)[2026-08-15]. https://www.bsdnow.tv/487.
+- [BSD Now EP325] Pennington J. BSD Now: 325: Cracking Rainbows[EB/OL]. (2019-11-21)[2026-08-15]. https://www.bsdnow.tv/325.
+
+<!-- /PODCAST_REVIEW -->

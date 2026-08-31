@@ -42,31 +42,31 @@ volume: 第07卷-freebsd的工程体系重构
 - Free Software Foundation. GNU General Public License Version 3 [Z]. 2007-06-29（§5c、§6、§11）；FreeBSD Foundation. FreeBSD Foundation 2007 年 8 月致社区关于 GPLv3 的公开信 [EB/OL]. **<https://www.freebsdfoundation.org/press/2007Aug-newsletter.shtml**>；GCC Steering Committee. GCC 4.3 and GPLv3 [EB/OL]. gcc.gnu.org, 2007；International Organization for Standardization. ISO/IEC 14882:2011 [S]. 2011. ［A］<!-- DB_REF:freebsd.duckdb -->> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 2020-2024 年间：291,070 次提交。> 仓库总览：1,294,851 次提交，13,875 位贡献者，1993-06-12 至 2026-08-25。
 - 原材料/哲学/项目统摄史观/第 25 章.md（总纲第 21 条，第 25 行；总纲第 6 条，第 11 行；总纲第 7 条，第 13 行）；原材料/哲学/项目统摄史观/第 21 章.md（21.1、21.2 节）；Divacky R. [Announce] clang/llvm can compile booting FreeBSD kernel [EB/OL]. freebsd-current mailing list, 2009-02-25；Losh W. GCC 4.2.1 retirement announcement [EB/OL]. freebsd-arch mailing list, 2018. ［A］<!-- DB_REF:freebsd.duckdb -->> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 2020-2024 年间：291,070 次提交。> 仓库总览：1,294,851 次提交，13,875 位贡献者，1993-06-12 至 2026-08-25。
 
-<!-- PODCAST_MINE v20260827 -->
-<!-- 章节主题过滤：第145章-gplv3争议辩证链 第145章 gplv3争议辩证链（实体评分 ≥2 命中才入选） -->
-<!-- 匹配期数：15 期，扫描 segments：13665 条 -->
+<!-- PODCAST_REVIEW v20260829 -->
+<!-- 语义复核范围：BSDTalk EP7（共 1 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
 
-### 要点（播客口述史提取）
-- People wondering, why in the world is it released under a GPLv3 license?（BSD Now EP141 @ 3329.239）
+**要点**：
 
-### 史料（播客当事人陈述）
-- （待人工提取）
+- DragonFly BSD 1.4 于 2006 年 1 月 7 日发布；主持人补记此前遗漏，并说明该项目由一群围绕 FreeBSD 5 系内核希望作出重大改动的人分叉而来，旨在验证其在多处理性能上的理论，若理论成立则成果可惠及全部 BSD。（BSDTalk EP7，[20.38-79.16]，L2）
+- GPL 正酝酿第三版：Richard Stallman 主导的修订拟纳入争议性反 DRM 条款，即 GPLv3 软件不得被改造用于对不自愿用户强制数字版权管理（如 TiVo 式设备限制用户复制与媒介转移的合理使用）。因 BSD 生态大量依赖 GNU 工具、尤其 GCC 编译器（Apple 亦曾长期为 PowerPC 改进 GCC），主持人推演其后果：并非所有软件都会升级到 v3，若 GCC 随 v3 发布可能出现以 v2 末版为基的分叉编译器，商业公司转向 Intel 平台后也可能改用 Intel 编译器；而 BSD 许可证仅有数行、几乎无限制（只要求署名与免于诉讼），GPLv3 的争议或促使商业公司重新审视 BSD 许可证与 BSD 系统，成为 BSD 的转折点。（BSDTalk EP7，[84.90-361.82]，L2）
+- 主持人选取五款 BSD live CD 实测：FreeSBIE（FreeBSD 基）、Anonymous（OpenBSD 基）、DragonFly 安装盘（自述兼作 live CD 但极简）、NetBSD 官方 live CD（定位救援盘兼 KDE 桌面）、Newbee（NetBSD 基，主打全功能图形桌面）；测试硬件为 233 MHz/128 MB 旧笔记本、自制 AMD 2600 台式机、仅 USB 外设的 Dell GX280 与新款 Centrino 笔记本 Dell Latitude D610。（BSDTalk EP7，[376.02-517.04]，L1）
+- 实测结果：除 Dell GX280 上 NetBSD live CD 不识别 USB 键盘致无法继续外，其余组合均可启动联网；DragonFly 盘仅文本模式、实用价值低但足以验证硬件支持；NetBSD 盘因缺 libqt 而无法启动 KDE，但 X 与轻量窗口管理器可用；Newbee 启动 Fluxbox 或 Blackbox 并预装浏览器邮件聊天工具；FreeSBIE 允许启动时选择轻量或重量级图形界面，基于 FreeBSD 5.3（2004 年 12 月发布），虽技术偏旧仍被主持人评为最佳 BSD live CD 桌面。横向对照：BSD live CD 资源占用普遍不高，但与 Linux 系 live CD 参照物（转写作 Canopix）相比浏览器启动明显偏慢，当事人将差距归因于后者更成熟、优化投入更多。（BSDTalk EP7，[549.84-843.56]，L1）
 
-### 史观（播客当事人观点与总纲映射）
-- People wondering, why in the world is it released under a GPLv3 license?（BSD Now EP141 @ 3329.239）
-  → 史观映射：总纲13——法律与道德是利益分配
+**史料**：
 
-### 辨析（播客争议与存疑点）
-- （该章节匹配播客中未提取到争议性陈述）
+- 当事人一手实测记录：五款 BSD live CD 在四类硬件上的启动、网卡与键盘图形检测、失败案例（GX280 USB 键盘不识别、NetBSD 盘 libqt 缺失）与逐盘评述，为 2006 年初 BSD 桌面化程度的一手横截面；另含经主持人转述的 DragonFly 1.4 发布公告及其分叉动机表述、GPLv3 起草阶段 FSF 与 Stallman 反 DRM 立场的公开信息。（BSDTalk EP7，[20.38-843.56]，L1）
 
-### 文献（播客参考条目）
-- [BSD Now EP141] Pennington J. BSD Now: 141: BSD Likes Ike![EB/OL]. (2016-05-11)[2026-08-15]. https://www.bsdnow.tv/141.
-- [BSD Now EP232] Pennington J. BSD Now: 232: FOSDEM 2018[EB/OL]. (2018-02-07)[2026-08-15]. https://www.bsdnow.tv/232.
-- [BSD Now EP12] Pennington J. BSD Now: 12: Collecting SSHells[EB/OL]. (2013-11-20)[2026-08-15]. https://www.bsdnow.tv/12.
-- [BSD Now EP23] Pennington J. BSD Now: 23: Time Signatures[EB/OL]. (2014-02-05)[2026-08-15]. https://www.bsdnow.tv/23.
-- [BSD Now EP31] Pennington J. BSD Now: 31: Edgy BSD Users[EB/OL]. (2014-04-01)[2026-08-15]. https://www.bsdnow.tv/31.
-- [BSD Now EP40] Pennington J. BSD Now: 40: AirPorts & Packages[EB/OL]. (2014-06-04)[2026-08-15]. https://www.bsdnow.tv/40.
-- [BSD Now EP60] Pennington J. BSD Now: 60: Don't Buy a Router[EB/OL]. (2014-10-22)[2026-08-15]. https://www.bsdnow.tv/60.
-- [BSD Now EP106] Pennington J. BSD Now: 106: Multipath TCP[EB/OL]. (2015-09-09)[2026-08-15]. https://www.bsdnow.tv/106.
+**史观**：
 
-<!-- /PODCAST_MINE -->
+- 总纲13 法律与道德是利益分配：主持人对 GPLv3 反 DRM 条款的解读呈现了许可证作为利益分配机制的本质：Stallman 试图以许可证条款强制商业公司放弃对用户设备的 DRM 控制，将权利再分配给终端用户，而商业公司是否愿意接受尚属疑问；与之相对，BSD 许可证以近乎零限制的条款把选择权交还使用者和商业方，两种许可证哲学在 DRM 议题上正面相遇。（BSDTalk EP7，[132.54-355.32]，L2）
+- 总纲4 分离聚合是永恒规律：主持人预测若 GCC 随 GPLv3 发布，可能出现以 v2 末版为基的分叉编译器：许可证条款变更触发项目分叉，正是开源谱系以分离应对分歧、以聚合延续成果的常态机制。（BSDTalk EP7，[314.34-334.28]，L2）
+
+**辨析**：
+
+- 当事人自我限定：其四台测试机不代表全部硬件生态，个别失败可能只是特定硬件组合的偶然不兼容，不能据此否定某张 live CD 的整体质量，引用本期的硬件兼容性结论时须保留这一适用范围限定。另转写将 Linux 参照 live CD 记作 Canopix 或 Nopix，所指发行版名称待考，引用其性能对比前须核实项目实名。[存疑脚注] 转写中的项目名 Canopix/Nopix 无法确证，待与 2006 年 live CD 发行版名录核对。　[存疑脚注] 转写中的 Linux live CD 项目名 Canopix/Nopix 无法确证，待与 2006 年 live CD 发行版名录核对。（BSDTalk EP7，[392.64-843.56]，L5）
+
+**文献**：
+
+- [BSDTalk EP7] Backman W. BSDTalk: Live BSD CDs[EB/OL]. (2006-01-18)[2026-08-15]. https://archive.org/download/bsdtalk007/bsdtalk007.ogg.
+
+<!-- /PODCAST_REVIEW -->

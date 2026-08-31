@@ -42,3 +42,43 @@ volume: 第01卷-unix的起源
 - Spinellis 2006；Levenez UNIX History；学术批判性研究 [考据脚注：经相关权威来源交叉验证。]
 - USENIX 邮件列表（minnie.tuhs.org）；口述史方法论文献 ［A］
 - USL v. BSDi 1992；BSD 许可证文本；McKusick et al. 1996 第 1 章 ［B］
+
+<!-- PODCAST_REVIEW v20260829 -->
+<!-- 语义复核范围：BSD Now EP362、BSD Now EP351（共 2 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
+
+**要点**：
+
+- Warner Losh 自述 2.11BSD 复原工程：因原始磁带由 Usenix 分发且早期母带重制，现仅存 patch level 195（约发布 18 个月后），他通过 2.10.1BSD、4.3BSD 等来源拼合出 patch level 0。（BSD Now EP362，[774.42-1103.02]，L1）
+- 2.11BSD 的 patch 以 shell 脚本、uuencode 压缩 tar 等格式发布，部分指令破坏信息，无法简单用 patch -R 逆向。（BSD Now EP362，[884.78-912.34]，L1）
+- Warner 自述曾因疫情失眠而以复原工程为消遣，最终重建出可启动的原始系统磁带，并计划把每个 patch 转为 git commit。（BSD Now EP362，[964.58-1472.50]，L1）
+- 关于 sync：早期 Unix 没有 reboot 命令，靠 sync 后断电；连续三次 sync 是人为延时的误传，各 BSD 内核的 sync 只调度写盘而不等待完成。（BSD Now EP362，[2597.68-2885.24]，L1）
+- OpenBSD 6.7 于 2020 年 5 月 19 日如期发布，延续其固定发布周期；本期逐项梳理 FFS2 默认、软 RAID 加密、PowerPC 默认编译器切换等改动。（BSD Now EP351，[426.2-433.64]，L2）
+- 安全方面，OpenBSD 6.7 将 unveil 用于 82 个用户态程序，把 dig、host、nslookup 从 BIND 源码中剥离并以 pledge 收紧，体现 6.x 安全机制的持续扩散。（BSD Now EP351，[729.32-749.88]，L2）
+- Chris Siebenmann 的文章考据 chown 语义的 Unix 分野：V7 与 4.2BSD 限制普通用户转让文件所有权，System III/System V 放开，POSIX 允许两种行为并存，现代系统多采 BSD 一侧。（BSD Now EP351，[1344.98-1550.98]，L2）
+
+**史料**：
+
+- Warner Losh 本人口述及博客、Twitter 记录，涉及 Usenix 磁带分发、TUHS 档案与 patch 链。（BSD Now EP362，[774.42-1826.06]，L1）
+- Unix Heritage Society（TUHS）由 William Toomey 创立，保存代码、二进制、论文扫描件与早期商业发行的私有档案。（BSD Now EP362，[2022.96-2260.64]，L1）
+- OpenBSD 6.7 变更日志与发布公告，含 FFS2、softraid 加密、PowerPC Clang、SMP 与硬件驱动改进。（BSD Now EP351，[476.52-480.64]，L2）
+- V7 与 4.2BSD 的 chown 手册页及源码，以及 POSIX chown 规范的 rationale 章节（节目引述）。（BSD Now EP351，[1373.9-1542.98]，L2）
+- LibreSSL 3.1.1 与 OpenSSH 8.3 随 6.7 更新，OpenSSH 移除 SHA-1 证书签名算法支持。（BSD Now EP351，[816.68-855.76]，L2）
+
+**史观**：
+
+- 总纲19 解释学循环是历史认识的根本条件：复原工程通过现存 patch 链与早期二进制格式博客互相印证，构成解释学循环的认识过程。（BSD Now EP362，[1076.58-1268.54]，L2）
+- 总纲22 知识注定过时：早期二进制格式与工具链需借助旧模拟器与二进制工件才能重建，说明工具知识会随代际过时。（BSD Now EP362，[678.42-758.62]，L1）
+- 总纲13 法律与道德是利益分配：总纲13 法律与道德是利益分配：chown 与配额语义的分野最终服务于磁盘空间这一稀缺资源的分配与控制，POSIX 以允许差异化的方式调和各方。（BSD Now EP351，[1505.46-1542.98]，L2）
+- 总纲4 分离聚合是永恒规律：总纲4 分离聚合是永恒规律：BSD 与 System V 从共同 V7 祖先分离出相反的 chown 语义，再由 POSIX 规范聚合为可共存的行为。（BSD Now EP351，[1344.98-1550.98]，L2）
+
+**辨析**：
+
+- 2BSD 系列早期版本号（2.8 至 2.11）与缺失版本（如 2.6/2.7）的编号逻辑，Warner 亦无法确证，仅推测与磁带编号相关。　[存疑脚注] 版本号缺口原因待原始档案确认（BSD Now EP362，[802.42-826.70]，L4）
+- 转写对‘软件 RAID 加密卷’等术语有拼写漂移（如‘software aid crypto volumes’），引用时须回查 OpenBSD 6.7 官方变更日志。　[存疑脚注] 转写术语拼写漂移（BSD Now EP351，[514.16-524.0]，L4）
+
+**文献**：
+
+- [BSD Now EP362] Pennington J. BSD Now: 362: 2.11-BSD restoration[EB/OL]. (2020-08-06)[2026-08-15]. https://www.bsdnow.tv/362.
+- [BSD Now EP351] Pennington J. BSD Now: 351: Heaven: OpenBSD 6.7[EB/OL]. (2020-05-21)[2026-08-15]. https://www.bsdnow.tv/351.
+
+<!-- /PODCAST_REVIEW -->

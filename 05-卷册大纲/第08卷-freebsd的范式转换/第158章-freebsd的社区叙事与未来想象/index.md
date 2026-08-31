@@ -43,3 +43,33 @@ volume: 第08卷-freebsd的范式转换
 - FreeBSD Foundation Netflix Case Study、OpenZFS Main Page、FreeBSD 7.0/8.0/5.0 Release Notes、Juniper Junos OS Documentation、Sony PS4 SDK、FreeBSD Commit Bit Expiration Policy、本项目既有考据记录 `03-原始史料库/06-考据记录/20260727_rumors-freebsd.md`#### 概率学量化分析
 - bsd_commits.db（freebsd-src）；0 信任原则方法论；FreeBSD 贡献者多样性研究（如有）据一手文献印证消解^doubt-resolved-590：此文献待 0 信任原则考据验证 ］<!-- DB_REF:freebsd.duckdb -->> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 2010-2026 年间：831,293 次提交。> 仓库总览：1,294,851 次提交，13,875 位贡献者，1993-06-12 至 2026-08-25。
 - McKusick M K, Neville-Neil G. The Design and Implementation of the FreeBSD Operating System [M]. 2nd ed. Addison-Wesley, 2015. ［B］<!-- DB_REF:freebsd.duckdb -->> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 2024-2026 年间：168,386 次提交。> 仓库总览：1,294,851 次提交，13,875 位贡献者，1993-06-12 至 2026-08-25。
+
+<!-- PODCAST_REVIEW v20260829 -->
+<!-- 语义复核范围：BSD Now EP368（共 1 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
+
+**要点**：
+
+- Frederick Cambus 的文章梳理 OpenBSD 控制台从 80×25 文本模式到帧缓冲的演进，提及 wscons 控制台框架继承自 NetBSD。（BSD Now EP368，[82.09-313.37]，L2）
+- John Carmack 于 2020 年 6 月为 OpenBSD 控制台贡献快速条件滚动与 32 位字符渲染优化，体现其对 OpenBSD 开发环境的偏好。（BSD Now EP368，[319.03-357.67]，L2）
+- Ruben 反思操作系统角色变化：Mac 转向商务软件、Linux 转向游戏与仿真、FreeBSD 承担其余，OS 逐渐成为向应用提供服务的后台平台。（BSD Now EP368，[373.44-634.26]，L2）
+- Zero Day Initiative 披露 FreeBSD Compat32 子系统 sendmsg 的 TOCTOU 竞态漏洞，可致堆溢出并进一步提权。（BSD Now EP368，[1612.45-2034.16]，L2）
+
+**史料**：
+
+- Frederick Cambus 的 OpenBSD 控制台现代化文章及 spleen 字体说明链接。（BSD Now EP368，[82.09-313.37]，L2）
+- Zero Day Initiative 关于 MoonBSD 漏洞的研究者撰写，含 FreeBSD Compat32 子系统的背景说明。（BSD Now EP368，[1612.45-2034.16]，L2）
+
+**史观**：
+
+- 总纲9 经验优先：OpenBSD 控制台改进源自对文本模式与帧缓冲显示带宽差异的实际测量，而非抽象设计。（BSD Now EP368，[169.94-214.16]，L2）
+- 总纲3 不存在进步，只有权力再分配：操作系统角色变化的叙事揭示各系统在不同场景中的功能再分配，而非单向的线性进步。（BSD Now EP368，[373.44-634.26]，L2）
+
+**辨析**：
+
+- 转写中 OpenBSD 帧缓冲的 RasterOps 引入时间与平台（i386/AMD64）细节存在 ASR 转写噪声，需对照 Cambus 原文。　[存疑脚注] 平台与时间细节待原文核对（BSD Now EP368，[215.94-251.96]，L4）
+
+**文献**：
+
+- [BSD Now EP368] Pennington J. BSD Now: 368: Changing OS roles[EB/OL]. (2020-09-17)[2026-08-15]. https://www.bsdnow.tv/368.
+
+<!-- /PODCAST_REVIEW -->

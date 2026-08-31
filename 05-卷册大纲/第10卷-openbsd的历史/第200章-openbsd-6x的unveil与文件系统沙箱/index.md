@@ -44,30 +44,32 @@ volume: 第10卷-openbsd的历史
 - bsd_commits.db openbsd-src 仓库；OpenBSD 提交/文档/ports 贡献记录；OpenBSD 邮件列表存档 [EB/OL]. <https://marc.info/?laccopenbsd-misc> ［A］<!-- DB_REF:openbsd.duckdb -->> **数据库引用（openbsd.duckdb）**：本子节对应 openbsd 代码仓库。> 1995-2026 年间：491,195 次提交。> 仓库总览：491,195 次提交，3,352 位贡献者，1995-10-18 至 2026-08-25。
 - bsd_commits.db openbsd-src 仓库 commit e688c2b0648a；OpenBSD 6.4 Release Notes [EB/OL]. <https://www.openbsd.org/64.html>；Mortimer 邮件列表发言 [EB/OL]. <https://marc.info/?laccopenbsd-tech>；LLVM CFI 文档 [EB/OL]. <https://clang.llvm.org/docs/ControlFlowIntegrity.html>；Microsoft CFG 文档 [EB/OL]. <https://learn.microsoft.com/en-us/windows/win32/secbgctrl/control-flow-guard> ［A］---<!-- DB_REF:openbsd.duckdb -->> **数据库引用（openbsd.duckdb）**：本子节对应 openbsd 代码仓库。> 2016-2019 年间：73,060 次提交。> 仓库总览：491,195 次提交，3,352 位贡献者，1995-10-18 至 2026-08-25。
 
-<!-- PODCAST_MINE v20260827 -->
-<!-- 章节主题过滤：第200章-openbsd-6x的unveil与文件系统沙箱 第 200 章 openbsd-6x的unveil与文件系统沙箱（实体评分 ≥2 命中才入选） -->
-<!-- 匹配期数：6 期，扫描 segments：5545 条 -->
+<!-- PODCAST_REVIEW v20260829 -->
+<!-- 语义复核范围：BSD Now EP270（共 1 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
 
-### 要点（播客口述史提取）
-- Currently, it's only designed to compile and run on OpenBSD.（BSD Now EP282 @ 1600.22）
+**要点**：
 
-### 史料（播客当事人陈述）
-- So we have here a commit by a visa at OpenBSD,（BSD Now EP250 @ 4048.3）
-- enable the unveil call. If you remember previously, we talked about when it was committed and it just（BSD Now EP258 @ 4040.679）
-- The manual pages in OpenBSD are real manuals,（BSD Now EP273 @ 2667.9）
+- OpenBSD 6.4 发布，引入 unveil 系统调用以限制文件系统访问，VMM 增加 QCOW2 磁盘与快照支持，并新增 RETGUARD 返回地址保护与多项 Spectre 缓解。（BSD Now EP270，[66.06-184.52]，L2）
+- MeetBSD 2018 在 Intel 圣克拉拉总部举行，首次设立独立程序委员会并公开征稿，穿插闪电演讲与分组讨论，最终以 FreeBSD 25 周年庆典收尾。（BSD Now EP270，[775.34-883.66]，L1）
+- Michael Dexter 的回顾称 MeetBSD 结合正式演讲与非会议活动，大型礼堂的弹性空间促成多次即兴黑客聚会，把“走廊轨道”推向新高度。（BSD Now EP270，[1475.34-1519.30]，L2）
+- Bjorn Zeeb 提交 IETF draft 6man IPv6-only 标志的初始实现，使 FreeBSD 路由器可宣告链路仅支持 IPv6，并在接口层过滤 IPv4 与 ARP 帧。（BSD Now EP270，[2217.54-2447.32]，L2）
 
-### 史观（播客当事人观点与总纲映射）
-- （该章节匹配播客中未提取到当事人观点性陈述）
+**史料**：
 
-### 辨析（播客争议与存疑点）
-- （该章节匹配播客中未提取到争议性陈述）
+- MeetBSD 2018 演讲清单：Chris Moore 的 TrueOS 引导、Kirk McKusick 的“BSD 早年”互动演讲、Michael W. Lucas 的“YBSD”主题演讲、OpenZFS 专家座谈与虚拟化专题讨论。（BSD Now EP270，[993.86-1367.26]，L1）
+- OpenSSH 7.9 随 OpenBSD 6.4 发布：CA 签名算法选项禁止以 DSA 作为证书机构、认证日志格式加入证书指纹，并新增按 SHA-256 哈希撤销密钥的能力。（BSD Now EP270，[577.30-750.34]，L2）
 
-### 文献（播客参考条目）
-- [BSD Now EP183] Pennington J. BSD Now: 183: Getting Steamy Here[EB/OL]. (2017-03-01)[2026-08-15]. https://www.bsdnow.tv/183.
-- [BSD Now EP189] Pennington J. BSD Now: 189: Codified Summer[EB/OL]. (2017-04-12)[2026-08-15]. https://www.bsdnow.tv/189.
-- [BSD Now EP250] Pennington J. BSD Now: Episode 250: BSDCan 2018 Recap | BSD Now 250[EB/OL]. (2018-06-14)[2026-08-15]. https://www.bsdnow.tv/250.
-- [BSD Now EP258] Pennington J. BSD Now: Episode 258: OS Foundations | BSD Now 258[EB/OL]. (2018-08-08)[2026-08-15]. https://www.bsdnow.tv/258.
-- [BSD Now EP273] Pennington J. BSD Now: Episode 273: A Thoughtful Episode | BSD Now 273[EB/OL]. (2018-11-23)[2026-08-15]. https://www.bsdnow.tv/273.
-- [BSD Now EP282] Pennington J. BSD Now: 282: Open the Rsync[EB/OL]. (2019-01-24)[2026-08-15]. https://www.bsdnow.tv/282.
+**史观**：
 
-<!-- /PODCAST_MINE -->
+- 总纲18 时间是一种形式主义：FreeBSD 二十五周年被庆典化呈现，但与会者强调“二十五年才能成为二十五年项目”无法抄近路，项目年龄本身就是时间累积的形式。（BSD Now EP270，[1443.38-1475.34]，L1）
+- 总纲10 动手者创造历史：unveil 与 RETGUARD 延续 OpenBSD 以安全机制逐步收紧运行边界的方向，主持人将其视为对既有代码进行持续加固而非另起炉灶。（BSD Now EP270，[175.16-247.24]，L2）
+
+**辨析**：
+
+- 本期对 OpenBSD 6.4 特性的转述与章节考据的发布时间（2018-10-25）一致，但 unveil 与 RETGUARD 的提交细节须以 OpenBSD commit log 与 Release Notes 交叉核实。（BSD Now EP270，[175.16-212.76]，L3）
+
+**文献**：
+
+- [BSD Now EP270] Pennington J. BSD Now: Episode 270: Ghostly Releases | BSD Now 270[EB/OL]. (2018-11-01)[2026-08-15]. https://www.bsdnow.tv/270.
+
+<!-- /PODCAST_REVIEW -->

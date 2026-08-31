@@ -49,3 +49,37 @@ volume: 07
 ## 自反性声明
 
 本章所书皆是形式主义化的重构，并非对“真实的 BSD 历史”的呈现。本章的章节划分、事件选择、叙事策略、因果归因——全部基于编纂者的哲学设定。本章承认这些局限，不声称客观或中立，欢迎被更诚实的叙事所超越。
+
+<!-- PODCAST_REVIEW v20260829 -->
+<!-- 语义复核范围：BSD Now EP191（共 1 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
+
+**要点**：
+
+- FreeBSD 长期使用 32 位 inode，单文件系统与 NFS 导出受约四十亿对象上限制约；ino64 分支源自 Gleb Kurtsou 的 GSoC 项目，后由 Kirk McKusick 接手，征集新旧内核与用户态混搭测试。（BSD Now EP191，[2826.6-3145.38]，L2）
+- OpenBSD 在 amd64 与 i386 将 Clang 加入 base 作为非默认编译器，动因是 GCC 转向 GPLv3 以及支持 arm64 新硬件的需求。（BSD Now EP191，[5192.9-5287.82]，L2）
+- Tatu Ylönen 于 1995 年向 IANA 申请端口 22，因 SSH 拟取代 FTP（20/21）与 Telnet（23），次日获 Joyce Reynolds 分配该端口。（BSD Now EP191，[5570.38-5905.62]，L2）
+- 德国高校与 AV-TEST 合作研究扫描 64,415 个 GitHub PHP 代码库，发现 117 处与教程漏洞同源的安全缺陷，其中约八成是 SQL 注入。（BSD Now EP191，[4149.76-4709.4]，L2）
+
+**史料**：
+
+- Constantine Belousov 的 ino64 测试征集邮件（BSD Now EP191，[2826.6-3145.38]，L1）
+- OpenBSD Clang 使用 FAQ（BSD Now EP191，[5192.9-5287.82]，L1）
+- SSH.com 发表的“How SSH got port 22”历史文章（BSD Now EP191，[5570.38-5905.62]，L1）
+- TU Berlin、Saarland University、TU Braunschweig 与 AV-TEST 合作的教程安全缺陷论文（BSD Now EP191，[4149.76-4709.4]，L1）
+
+**史观**：
+
+- 总纲22 知识注定过时：32 位 inode 等既有设计随时间成为瓶颈，知识注定在演进中过时。（BSD Now EP191，[2826.6-3145.38]，L2）
+- 总纲13 法律与道德是利益分配：OpenBSD 弃 GCC 选 Clang 是许可证约束与架构支持之间的利益权衡。（BSD Now EP191，[5234.94-5283.66]，L2）
+- 总纲10 动手者创造历史：ino64 从 GSoC 学生项目经多人接力维护到主线，体现动手者持续积累的历史过程。（BSD Now EP191，[2993.42-3046.66]，L2）
+
+**辨析**：
+
+- [存疑脚注] ino64 的 2007 年起始点与十年开发时长系播客转述，需对照 FreeBSD 提交历史核验。　[存疑脚注] 单一来源转述的时间线，缺提交记录印证。（BSD Now EP191，[2889.64-2908.0]，L4）
+- [存疑脚注] 教程安全缺陷研究数据为 2017 年快照，117 处漏洞发现不能代表当时 PHP 生态全貌。　[存疑脚注] 研究样本受 GitHub API 限制，覆盖范围有限。（BSD Now EP191，[4334.74-4354.04]，L4）
+
+**文献**：
+
+- [BSD Now EP191] Pennington J. BSD Now: 191: I Know 64 & A Bunch More[EB/OL]. (2017-04-26)[2026-08-15]. https://www.bsdnow.tv/191.
+
+<!-- /PODCAST_REVIEW -->
