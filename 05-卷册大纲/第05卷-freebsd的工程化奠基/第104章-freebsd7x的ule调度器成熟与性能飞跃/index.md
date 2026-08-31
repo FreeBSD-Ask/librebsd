@@ -70,3 +70,35 @@ volume: 05
 ## 自反性声明
 
 本章所书皆是形式主义化的重构，并非对“真实的 BSD 历史”的呈现。本章的章节划分、事件选择、叙事策略、因果归因——全部基于编纂者的哲学设定。本章承认这些局限，不声称客观或中立，欢迎被更诚实的叙事所超越。
+
+<!-- PODCAST_REVIEW v20260829 -->
+<!-- 语义复核范围：BSD Now EP231（共 1 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
+
+**要点**：
+
+- 访谈嘉宾以 PDP-7 汇编起步的 UNIX 到 2017 年 FreeBSD 的半世纪架构演化为题，将两个关键里程碑定为 1970 年代末研究重心从 AT&T 贝尔实验室转向伯克利 CSRG，以及 1980 年代末至 1990 年代初开放源码化催生 386BSD 与三大 BSD。（BSD Now EP231，[311.72-365.52]，L1）
+- 访谈强调从 1970 年代架构图到当代系统，进程、文件、管道等初始架构块仍存续，部分系统调用与 C 库函数近四十年几乎未变。（BSD Now EP231，[413.28-450.68]，L1）
+- VBSDCon 2017 报告转述关于社区动力的演讲：许多 FreeBSD 开发者来自拨号 ISP 或 IRC 时代，这些进入路径如今已消失，项目需要寻找新的吸纳路径。（BSD Now EP231，[837.46-1004.6]，L2）
+- FreeBSD current 邮件列表宣布由 Jeff Roberson 合入基于 cpuset 策略的 NUMA 支持，受 Dell EMC Isilon 与 Netflix 支持。（BSD Now EP231，[1885.86-1917.16]，L2）
+
+**史料**：
+
+- FOSDEM 前的访谈对象为软件工程教授、IEEE Software 主编、《Effective Debugging》作者。（BSD Now EP231，[100.48-120.24]，L1）
+- 转述 VBSDCon 2017 参会报告，含对社区动力演讲的感想与 George Neville-Neil、Paul Vixie 等人演讲的提及。（BSD Now EP231，[666.34-991.88]，L2）
+- FreeBSD current 邮件列表的 NUMA 合入公告（Jeff Roberson，提及 ULE 调度器作者身份）。（BSD Now EP231，[1885.86-2027.74]，L2）
+- OpenBSD tech 邮件列表的栈指针检查 diff（Stefan），在每次陷阱与系统调用时校验栈指针所在页的 map_stack 标记。（BSD Now EP231，[2325.78-2402.74]，L2）
+
+**史观**：
+
+- 总纲9 经验优先：访谈以“形式解放”与经验优先解释 UNIX 架构的延续性，强调成熟形式使后来者得以在关键处创新而非重复造轮子。（BSD Now EP231，[468.68-483.88]，L1）
+- 总纲5 没有必然性，只有偶然性：VBSDCon 报告呈现社区进入路径（拨号 ISP、IRC）随时代消失，开发者群体的再生产依赖偶然的历史条件而非必然机制。（BSD Now EP231，[896.12-947.68]，L2）
+
+**辨析**：
+
+- 访谈嘉宾姓名在转写中为“Diomedes Spinalis”的语音转写，具体拼写须核对 FOSDEM 演讲者名单；转写亦出现“Thomas Zoom”等疑似误转的人名。　[存疑脚注] 嘉宾姓名及若干人名拼写须以会议议程核实（BSD Now EP231，[90.64-97.48]，L4）
+
+**文献**：
+
+- [BSD Now EP231] Pennington J. BSD Now: 231: Unix Architecture Evolution[EB/OL]. (2018-02-01)[2026-08-15]. https://www.bsdnow.tv/231.
+
+<!-- /PODCAST_REVIEW -->

@@ -43,3 +43,100 @@ volume: 第08卷-freebsd的范式转换
 - MITRE CNA 数据库； Foundation 年报 ［A］<!-- DB_REF:freebsd.duckdb -->> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 2024-2026 年间：168,386 次提交。> 仓库总览：1,294,851 次提交，13,875 位贡献者，1993-06-12 至 2026-08-25。
 - Linux Foundation. *Linux Kernel Development Report*. linuxfoundation.org; BSDCan. *Conference Program Archive*. bsdcan.org; FreeBSD Foundation. *Annual Report*. freebsdfoundation.org/annual-report ［B］<!-- DB_REF:freebsd.duckdb -->> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 2024-2026 年间：168,386 次提交。> 仓库总览：1,294,851 次提交，13,875 位贡献者，1993-06-12 至 2026-08-25。
 - Searle, J. R. (1995). *The Construction of Social Reality*. Free Press; Latour, B. (1987). *Science in Action: How to Follow Scientists and Engineers Through Society*. Harvard University Press; Spinellis, D. (2017). *A Repository of Unix History and Evolution*. Empirical Software Engineering[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]<!-- DB_REF:freebsd.duckdb -->> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 2024-2026 年间：168,386 次提交。> 仓库总览：1,294,851 次提交，13,875 位贡献者，1993-06-12 至 2026-08-25。
+
+<!-- PODCAST_REVIEW v20260829 -->
+<!-- 语义复核范围：BSD Now EP368、BSD Now EP230、BSD Now EP201、BSD Now EP171、BSD Now EP56、BSD Now EP21（共 6 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
+
+**要点**：
+
+- Frederick Cambus 的文章梳理 OpenBSD 控制台从 80×25 文本模式到帧缓冲的演进，提及 wscons 控制台框架继承自 NetBSD。（BSD Now EP368，[82.09-313.37]，L2）
+- John Carmack 于 2020 年 6 月为 OpenBSD 控制台贡献快速条件滚动与 32 位字符渲染优化，体现其对 OpenBSD 开发环境的偏好。（BSD Now EP368，[319.03-357.67]，L2）
+- Ruben 反思操作系统角色变化：Mac 转向商务软件、Linux 转向游戏与仿真、FreeBSD 承担其余，OS 逐渐成为向应用提供服务的后台平台。（BSD Now EP368，[373.44-634.26]，L2）
+- Zero Day Initiative 披露 FreeBSD Compat32 子系统 sendmsg 的 TOCTOU 竞态漏洞，可致堆溢出并进一步提权。（BSD Now EP368，[1612.45-2034.16]，L2）
+- 该期综述 FreeBSD current 合入 KPTI（Konstantin Belousov，FreeBSD 基金会赞助），并已提交 ARM64 Spectre 变体 2 修复与 bhyve 部分缓解。（BSD Now EP230，[55.3-58.48]，L2）
+- 听众问答第三部分由主持人 Alan 自述 BSD Now 与 Jupiter Broadcasting 的渊源：从 IRC 服务器管理员、Star Trek Online 内测邀请到 TechSnap，再到与 Chris Moore 共同创办 BSD Now。（BSD Now EP230，[3552.7-3832.9]，L1）
+- 该期转述 1999 年 CNN 报道：Walnut Creek CD-ROM 的 ftp.cdrom.com 提供 500GB 档案，FreeBSD 以 FFS 与 Ports Collection（当时约 2300 个软件包）支撑下载服务。（BSD Now EP230，[5237.3-5556.5]，L2）
+- 听众反馈与节目回应讨论 OpenBSD misc 邮件列表的粗暴措辞，并指出线下会议中同样的人往往友善，文本媒介容易失去情感。（BSD Now EP230，[6737.0-6916.9]，L2）
+- 转述 Colin Percival 的 Spectre/Meltdown 文章：其 2005 年 BSDCan 论文已描述微架构侧信道与超线程下的 RSA 密钥窃取，并批评此次漏洞披露的失序。（BSD Now EP230，[643.76-1356.9]，L2）
+- 采访嘉宾（音频工程师）自述开源动机：开源提供无需公司背书的分布式协作模型，写出的代码上传后众人可用、众人受益，Linux 与 FreeBSD 已占据服务器与超算，桌面是最后待替代的领域。（BSD Now EP201，[4482.58-4697.82]，L1）
+- 嘉宾以亲身体验说明 FreeBSD 的 OSS/JACK 音频栈延迟低、开箱即用，Linux 需要实时内核补丁与大量配置才能达到类似效果，这是他倾向在 FreeBSD 上做音频工作的原因之一。（BSD Now EP201，[3776.38-3866.54]，L1）
+- FreeNAS 11.0 正式发布，基于 FreeBSD 11-STABLE 分支，是 iX Systems 的 NAS 产品线的重要版本节点。（BSD Now EP201，[84.06-92.04]，L2）
+- Colin Percival 以“换机油与安全召回”类比安全补丁：WannaCry 利用微软两月前已修补的 SMB 漏洞传播，暴露用户把安全更新当作可推迟事项；他结合担任 FreeBSD 安全官的经历，主张把安全更新与广告、可选更新分开，并让最终用户真正安装补丁。（BSD Now EP201，[5427.18-6061.34]，L2）
+- 该期介绍用 awk 的正则匹配替代 grep 管道以精简 shell 脚本的技术文章：可少一个进程、少一条管道，且 awk 默认支持扩展正则。（BSD Now EP201，[6114.28-6448.10]，L2）
+- bsdiff 与 bspatch 是 Colin Percival 2003 年在牛津攻读博士学位期间提出的二进制差分算法，当前实现已演进至 4.3 版。（BSD Now EP171，[1303.36-1644.9]，L2）
+- Android 官方开发者博客公布采用 bsdiff 做文件级增量更新，应用更新体积平均缩小 65%、部分缩小超过 90%，每日节省约 6 PB 的应用下载流量。（BSD Now EP171，[1243.48-1529.34]，L2）
+- bsdiff 的 BSD 许可代码被 Firefox、Chrome、Chrome OS 与 Android 广泛采用，Colin Percival 观察到如今仅 bsdiff 节省的带宽已相当于他 2003 年写下该算法时的全网流量。（BSD Now EP171，[1556.66-1747.34]，L2）
+- 主持人转述 Android 的 libc 部分源自 OpenBSD，并指出 Android 生态使用了相当数量的 BSD 组件。　[存疑脚注] Android Bionic 的 BSD 派生关系须核验一手来源。（BSD Now EP171，[1233.08-1243.48]，L2）
+- Ken Thompson 在 1984 年 8 月《Communications of the ACM》第 27 卷第 8 期发表《Reflections on Trusting Trust》，叙述其在 C 编译器中对 login 植入后门，并再植入第二重木马使编译 CC 时自我复制。（BSD Now EP171，[2926.58-3007.3]，L2）
+- 该编译器木马使 login 与 CC 的源代码均保持干净，后门仅在二进制层面存在，并随每次自举编译持续传播，源代码审计无法发现。（BSD Now EP171，[3137.62-3360.8]，L2）
+- Ken Thompson 表示这类木马的可能性最早见于美国空军对 Multics 早期实现安全性的批评，但他无法找到该具体引用并公开征集线索。　[考据脚注] Thompson 所引 Multics 批评文献待核验。（BSD Now EP171，[3470.46-3493.62]，L2）
+- 主持人由编译器信任问题引申出可复现构建的价值：从可信编译器出发重建相同二进制，才能对产物建立有限信任。（BSD Now EP171，[3539.9-3563.62]，L2）
+- FreeBSD libc 的 link_ntoa 函数存在约 26 年、可追溯至原始 BSD 的静态缓冲区溢出，特制参数可改写相邻静态缓冲区；HardenedBSD 复核发现补丁对剩余空间的计算方向有误。（BSD Now EP171，[3896.24-3998.72]，L2）
+- Ansible playbook 可自动创建 FreeBSD jail 服务器，以 jump jail 作为唯一 SSH 入口，用 iocage 创建各服务 jail，并可在 AWS 或 VirtualBox 上部署，配合 Travis 测试。（BSD Now EP171，[1048.16-1230.52]，L2）
+- 在 PC Engines APU2 单板机上运行 OpenBSD 需先以 Tiny Core Linux 刷 BIOS、设串口为 115200 8N1，再以文件系统镜像安装，整套硬件约 200 美元并提供三个网络接口。（BSD Now EP171，[202.0-563.94]，L2）
+- FreeBSD.org 集群由约一百三十台机器分布于全球六个地理位置，并运行一百一十多个 jail，广泛使用 ZFS、PF、VLAN 与 GeoDNS。（BSD Now EP56，[574.76-657.04]，L1）
+- 集群长期在开发分支 head 上运行以对最新代码进行真实负载压力测试，并已转向统一二进制构建以替代逐机 make world。（BSD Now EP56，[1126.38-1225.00]，L1）
+- 2012 年安全事件源于开发者经被攻破的大学网络跳板泄露 SSH 密钥，攻击者抓取连接关系并回连个人主机；David Wolfskill 因发现异常登录而触发追踪。（BSD Now EP56，[2102.38-2305.54]，L1）
+- 事件后集群改为机器间互不信任、拉取而非推送、审计记录入密封存储，并尽量以 JBOD 取代不可靠的硬件 RAID 控制器。（BSD Now EP56，[2022.30-2423.84]，L1）
+- FreeBSD 10.0 于 2014 年 1 月发布，此前经历 Alpha、Beta 与多个 RC；主持人强调 10.0 经过大量测试，以降低“.0 版本”的历史风险。（BSD Now EP21，[5624.00-5655.20]，L2）
+- 采访 FreeBSD 安全官 Colin Percival：SSH 私钥加密由基于 MD5 的 crypt 改为 bcrypt 作为密钥派生函数，显著提高抵御暴力破解的难度；iSCSI target 在 10.0 中被认为可用于生产。（BSD Now EP21，[531.18-545.14]，L1）
+- m0n0wall 1.81 发布，为面向嵌入式设备的 BSD 防火墙发行版；pfSense 于 2004 年自 m0n0wall 分叉，面向普通 PC 且开发更活跃。（BSD Now EP21，[4458.98-4516.38]，L2）
+- NTPD 被发现可利用欺骗 UDP 包返回放大响应而充当 DDoS 放大器，FreeBSD 与 pfSense 均通过安全公告与配置更新进行缓解。（BSD Now EP21，[4540.34-4636.46]，L2）
+- PC-BSD 10.0 随 FreeBSD 10 发布，RC4 支持 Wine 与 9.2 升级保留 PBI；因 FreeBSD 10 的 ABI 变化，升级需重建或重装全部包。（BSD Now EP21，[4751.26-4801.10]，L2）
+
+**史料**：
+
+- Frederick Cambus 的 OpenBSD 控制台现代化文章及 spleen 字体说明链接。（BSD Now EP368，[82.09-313.37]，L2）
+- Zero Day Initiative 关于 MoonBSD 漏洞的研究者撰写，含 FreeBSD Compat32 子系统的背景说明。（BSD Now EP368，[1612.45-2034.16]，L2）
+- FreeBSD 基金会赞助的 KPTI 合入（Konstantin Belousov 的贡献）。（BSD Now EP230，[66.2-74.04]，L2）
+- 1999 年 CNN 文章（Walnut Creek CD-ROM，ftp.cdrom.com）所记录的 FreeBSD 下载服务。（BSD Now EP230，[5237.3-5269.0]，L2）
+- Brian Kernighan 与 Michael Lesk 1979 年论文“UNIX 上的计算机辅助教学”，以文字冒险游戏教 cat、ls 等命令。（BSD Now EP230，[5885.6-5944.8]，L2）
+- Colin Percival 关于 Spectre/Meltdown 的博文，含 2005 年 BSDCan 论文与对披露时间线的梳理。（BSD Now EP230，[643.76-771.28]，L2）
+- Colin Percival 的安全补丁哲学博客；FreeNAS 11.0 发布公告；iX Systems 关于 TrueNAS X10 的介绍。（BSD Now EP201，[84.06-6061.34]，L2）
+- Ken Thompson《Reflections on Trusting Trust》，Communications of the ACM 27(8)，1984 年 8 月。（BSD Now EP171，[2926.58-3360.8]，L2）
+- Android Developers Blog 关于以 bsdiff 做文件级补丁、将应用更新缩小 65% 至 90% 的官方文章。（BSD Now EP171，[1243.48-1529.34]，L2）
+- Colin Percival 的 bsdiff 专题页面与其博士论文所述更优算法。（BSD Now EP171，[1597.06-1665.74]，L2）
+- FreeBSD libc link_ntoa 缓冲区溢出的安全公告与 HardenedBSD 的补丁复核。（BSD Now EP171，[3896.24-3998.72]，L2）
+- Peter Wemm 访谈（FreeBSD.org 集群管理员当事人自述）。（BSD Now EP56，[226.16-2846.68]，L1）
+- 本期史料包括 Colin Percival 访谈（当事人自述）、FreeBSD 10.0 发布与安全公告、m0n0wall 1.81 与 pfSense 谱系记录及 RUBSD 会议录像。（BSD Now EP21，[531.18-545.14]，L1）
+
+**史观**：
+
+- 总纲9 经验优先：OpenBSD 控制台改进源自对文本模式与帧缓冲显示带宽差异的实际测量，而非抽象设计。（BSD Now EP368，[169.94-214.16]，L2）
+- 总纲3 不存在进步，只有权力再分配：操作系统角色变化的叙事揭示各系统在不同场景中的功能再分配，而非单向的线性进步。（BSD Now EP368，[373.44-634.26]，L2）
+- 总纲10 动手者创造历史：节目以动手者创造历史解释 BSD Now 的诞生：主持人与幕后制作人各司其职，节目每周出现依赖未被看见的幕后劳动。（BSD Now EP230，[3938.7-3969.0]，L1）
+- 总纲19 解释学循环是历史认识的根本条件：OpenBSD 邮件列表的粗暴被归因于文本媒介失去情感，线下面对面的文化截然不同，提示语境对历史认识的影响。（BSD Now EP230，[6843.1-6852.8]，L2）
+- 总纲5 没有必然性，只有偶然性：漏洞披露的混乱被归结为多方偶然失序而非单一阴谋，呼应没有必然性、只有偶然性的判断。（BSD Now EP230，[1201.3-1356.9]，L2）
+- 总纲9 经验优先：嘉宾把开源理解为“众人动手、众人受益”的协作循环，并以音频延迟的亲身体验说明经验优先的实用主义选择。（BSD Now EP201，[4482.58-4697.82]，L1）
+- 总纲4 分离聚合是永恒规律：一小段 BSD 许可代码借由宽松许可证扩散至 Android、Chrome 等生态并产生每日 PB 级影响，代码分离后在全球各系统中重新聚合。（BSD Now EP171，[1556.66-1747.34]，L3）
+- 总纲7 理论必须自反：Thompson 的编译器木马揭示信任链无法由代码自身自证，安全体系必须自反地追问“用什么编译器编译编译器”。（BSD Now EP171，[3335.66-3563.62]，L3）
+- 总纲10 动手者创造历史：一个 2003 年写下的差分算法由具体动手者提出，并在此后十三年间被全球软件生态复用。（BSD Now EP171，[1303.36-1747.34]，L3）
+- 总纲22 知识注定过时：存续 26 年的 libc 缺陷表明既有代码并非永久可靠，历史沉淀的“知识”仍会在后来被发现错误。（BSD Now EP171，[3896.24-3998.72]，L3）
+- 总纲15 文化即形式主义：Android 生态大量复用 BSD 代码却少被强调来源，文化传播中借用与命名归属发生偏移。（BSD Now EP171，[1233.08-1747.34]，L3）
+- 总纲7 理论必须自反：总纲7 理论必须自反：Peter Wemm 反复以事故教训反观并修正基础设施设计，而非固守既有运维惯例。（BSD Now EP56，[1982.06-2022.30]，L1）
+- 总纲5 没有必然性，只有偶然性：总纲5 没有必然性，只有偶然性：2012 年事件由跳板主机、共享 NFS home 与可写 authorized_keys 等偶然叠加而成，并非必然发生。（BSD Now EP56，[2102.38-2192.90]，L1）
+- 总纲10 动手者创造历史：总纲10 动手者创造历史：集群由 Peter Wemm、Glen Barber、Sean Bruno 等动手维护者在长周期中持续改造。（BSD Now EP56，[666.00-748.68]，L1）
+- 总纲22 知识注定过时：总纲22 知识注定过时：SSH 旧密钥派生函数因安全进展被 bcrypt 取代，既有加密方法随攻防演进而过时。（BSD Now EP21，[531.18-545.14]，L1）
+- 总纲10 动手者创造历史：总纲10 动手者创造历史：Colin Percival 等安全工程师以具体维护与发布工作维持 FreeBSD 的安全响应体系。（BSD Now EP21，[5597.60-5655.20]，L1）
+- 总纲3 不存在进步，只有权力再分配：总纲3 不存在进步，只有权力再分配：安全机制的替换体现攻防双方能力的再分配，而非简单的线性安全进步。（BSD Now EP21，[4540.34-4636.46]，L2）
+
+**辨析**：
+
+- 转写中 OpenBSD 帧缓冲的 RasterOps 引入时间与平台（i386/AMD64）细节存在 ASR 转写噪声，需对照 Cambus 原文。　[存疑脚注] 平台与时间细节待原文核对（BSD Now EP368，[215.94-251.96]，L4）
+- 1999 年 CNN 报道的硬件配置与下载数据系二手转述，具体数字（500GB、3600 并发会话）未经原始报道复核。　[存疑脚注] CNN 原文数据须复核（BSD Now EP230，[5269.0-5350.0]，L4）
+- Colin Percival 对 Google、Intel 与 Linux 社区的批评系其个人立场，节目转述时未提供对立方的回应。　[存疑脚注] 系单一来源的个人立场表述（BSD Now EP230，[1201.3-1218.3]，L4）
+- [存疑脚注] 主持人称 Android libc 来自 OpenBSD，此为主持人转述；Android Bionic 的 BSD 派生来源与比例须核验官方源码与历史记录。　[存疑脚注] Bionic 的 BSD 来源须核验。（BSD Now EP171，[1237.6-1243.48]，L4）
+- [考据脚注] Thompson 本人表示未能找到其所述 Multics 安全批评的引用，节目也未给出该文献，属待考据项。　[考据脚注] Multics 批评文献待考据。（BSD Now EP171，[3470.46-3493.62]，L4）
+- 2012 年事件中患者零号的初始入侵路径仅存候选推断，Peter Wemm 自述只有短名单而无确定结论。　[存疑脚注] 初始入侵路径未获确证，属当事人事后推断（BSD Now EP56，[2224.94-2233.42]，L4）
+- bcrypt 较 MD5 安全五亿倍为主持人粗略换算，需以密码学文献为准；m0n0wall 与 pfSense 的分叉年份及 iSCSI target 的生产就绪判断均为访谈与主持人口径。　[存疑脚注] 分叉年份与安全倍数表述需以项目发布记录和密码学原始文献复核。（BSD Now EP21，[536.90-552.02]，L4）
+
+**文献**：
+
+- [BSD Now EP368] Pennington J. BSD Now: 368: Changing OS roles[EB/OL]. (2020-09-17)[2026-08-15]. https://www.bsdnow.tv/368.
+- [BSD Now EP230] Pennington J. BSD Now: 230: Your questions, Part III[EB/OL]. (2018-01-24)[2026-08-15]. https://www.bsdnow.tv/230.
+- [BSD Now EP201] Pennington J. BSD Now: 201: Skip grep, use awk[EB/OL]. (2017-07-05)[2026-08-15]. https://www.bsdnow.tv/201.
+- [BSD Now EP171] Pennington J. BSD Now: 171: The APU - BSD Style![EB/OL]. (2016-12-07)[2026-08-15]. https://www.bsdnow.tv/171.
+- [BSD Now EP56] Pennington J. BSD Now: 56: Beastly Infrastructure[EB/OL]. (2014-09-24)[2026-08-15]. https://www.bsdnow.tv/56.
+- [BSD Now EP21] Pennington J. BSD Now: 21: Tendresse for Ten[EB/OL]. (2014-01-22)[2026-08-15]. https://www.bsdnow.tv/21.
+
+<!-- /PODCAST_REVIEW -->

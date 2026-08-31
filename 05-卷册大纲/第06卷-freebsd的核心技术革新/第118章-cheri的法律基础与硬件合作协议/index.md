@@ -48,26 +48,39 @@ volume: 第06卷-freebsd的核心技术革新
 - CTSRD-CHERI Organization. GitHub Repositories and LICENSE Files. github.com/CTSRD-CHERI; CHERI Alliance. cheri-alliance.org; University of Cambridge/SRI International. CHERI Technical Report Series (UCAM-CL-TR).[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]<!-- DB_REF:freebsd.duckdb -->> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 2010-2020 年间：488,947 次提交。> 仓库总览：1,294,851 次提交，13,875 位贡献者，1993-06-12 至 2026-08-25。
 - CTSRD-CHERI. CheriBSD Repository (AUTHORS, commit history). github.com/CTSRD-CHERI/cheribsd; Davis, B. et al. (2019). CheriABI (full author list). ASPLOS '19; CheriBSD Project. Release Notes 22.05-25.03. cheribsd.org/release-notes/; CheriBSD Getting Started. ctsrd-cheri.github.io/cheribsd-getting-started/. ［A］<!-- DB_REF:freebsd.duckdb -->> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 2010-2020 年间：488,947 次提交。> 仓库总览：1,294,851 次提交，13,875 位贡献者，1993-06-12 至 2026-08-25。
 
-<!-- PODCAST_MINE v20260827 -->
-<!-- 章节主题过滤：第118章-cheri的法律基础与硬件合作协议 第118章 cheri的法律基础与硬件合作协议（实体评分 ≥2 命中才入选） -->
-<!-- 匹配期数：4 期，扫描 segments：3732 条 -->
+<!-- PODCAST_REVIEW v20260829 -->
+<!-- 语义复核范围：BSD Now EP529、BSD Now EP50（共 2 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
 
-### 要点（播客口述史提取）
-- （该章节匹配播客中未提取到高置信度核心史实，需人工深挖）
+**要点**：
 
-### 史料（播客当事人陈述）
-- （待人工提取）
+- 主持人介绍 Lawrence Tratt 关于将内存分配器适配到 CHERI 的文章：CHERI 的能力架构将 64 位指针扩展为 128 位能力，purecap 模式下分配器若不将返回能力的边界限制在所分配的内存范围，就无法获得超越传统系统的安全收益。（BSD Now EP529，[652.58-1375.82]，L2）
+- 主持人转述 Scott Fahlman 于 1982 年 9 月 19 日在卡内基梅隆大学公告板提出“:-)”与“:-(”作为笑话标记，其原始消息直到 2002 年才从备份磁带中找回，成为 emoticon 起源的文化史片段。（BSD Now EP529，[2636.36-2699.48]，L2）
+- Robert Watson 自述其进入 BSD 的起点是高中时期学校获赠的运行 BSD/OS 的 UNIX 服务器，并由此转向操作系统安全研究。（BSD Now EP50，[1309.66-1351.62]，L1）
+- Capsicum 能力沙箱设计约始于八年前，其内核接口已随 FreeBSD 发布，Google 亦将其移植至 Linux 并首次向内核邮件列表提交补丁。（BSD Now EP50，[1462.14-1489.42]，L1）
+- FreeBSD 10 已将 tcpdump、gzip 等基础工具纳入 Capsicum 沙箱，以降低以 root 运行、处理不可信输入程序被利用后的影响。（BSD Now EP50，[1565.14-1606.06]，L1）
+- OpenSSL 于 2014 年 8 月发布修复九个漏洞的新版本，LibreSSL 对其中五项完全受影响、一项部分受影响、三项因移除相关代码而不受影响。（BSD Now EP50，[897.62-988.06]，L2）
 
-### 史观（播客当事人观点与总纲映射）
-- （该章节匹配播客中未提取到当事人观点性陈述）
+**史料**：
 
-### 辨析（播客争议与存疑点）
-- （该章节匹配播客中未提取到争议性陈述）
+- 本期核心史料为 Lawrence Tratt 的 CHERI 内存分配器技术文章与 Scott Fahlman 的原始公告板消息截图，二者均经主持人口头转述。（BSD Now EP529，[652.58-2699.48]，L2）
+- Robert Watson 访谈（当事人自述，FreeBSD 核心团队成员与剑桥大学讲师）。（BSD Now EP50，[1294.82-2231.72]，L1）
+- OpenSSL 0.9.8zb、1.0.0n、1.0.1i 安全公告与 LibreSSL 2.0.5 发布信息（主持人口头转述）。（BSD Now EP50，[897.62-983.42]，L2）
 
-### 文献（播客参考条目）
-- [BSD Now EP94] Pennington J. BSD Now: 94: Builder's Insurance[EB/OL]. (2015-06-17)[2026-08-15]. https://www.bsdnow.tv/94.
-- [BSD Now EP139] Pennington J. BSD Now: 139: Cheri-picking BSD[EB/OL]. (2016-04-27)[2026-08-15]. https://www.bsdnow.tv/139.
-- [BSD Now EP221] Pennington J. BSD Now: 221: BSD in Taiwan[EB/OL]. (2017-11-22)[2026-08-15]. https://www.bsdnow.tv/221.
+**史观**：
+
+- 总纲12 科学是形式主义：CHERI 以形式化的能力边界约束内存访问，安全收益取决于软件对形式规则的适配，呈现安全机制作为形式主义系统的特征。（BSD Now EP529，[943.14-1150.42]，L2）
+- 总纲10 动手者创造历史：总纲10 动手者创造历史：Robert Watson 团队以编写并落地 Capsicum、BERI/CHERI 的方式实际推动操作系统安全演进。（BSD Now EP50，[1380.46-1462.14]，L1）
+- 总纲9 经验优先：总纲9 经验优先：访谈以当事人对代码、硬件与漏洞的一手经验为叙述依据，而非抽象安全口号。（BSD Now EP50，[1451.54-1571.28]，L1）
+- 总纲22 知识注定过时：总纲22 知识注定过时：OpenSSL 与 LibreSSL 的持续修补显示安全知识处于不断失效与重写的循环之中。（BSD Now EP50，[957.56-988.06]，L2）
+
+**辨析**：
+
+- Scott Fahlman 提出 emoticon 的具体日期来自节目转述的推文，须以卡内基梅隆大学保存的原始消息核实。　[存疑脚注] emoticon 起源日期为二手转述，未经 CMU 原始档案核实。（BSD Now EP529，[2636.36-2699.48]，L4）
+- Watson 自述尚不清楚 FreeBSD 10 发布以来沙箱化基础工具实际缓解了多少已公开漏洞，量化效果存疑。　[存疑脚注] 沙箱缓解漏洞的量化结论缺乏公开统计数据支撑（BSD Now EP50，[1578.68-1585.78]，L4）
+
+**文献**：
+
 - [BSD Now EP529] Pennington J. BSD Now: 529: Adapt, adopt, diffuse[EB/OL]. (2023-10-19)[2026-08-15]. https://www.bsdnow.tv/529.
+- [BSD Now EP50] Pennington J. BSD Now: 50: VPN, My Dear Watson[EB/OL]. (2014-08-13)[2026-08-15]. https://www.bsdnow.tv/50.
 
-<!-- /PODCAST_MINE -->
+<!-- /PODCAST_REVIEW -->

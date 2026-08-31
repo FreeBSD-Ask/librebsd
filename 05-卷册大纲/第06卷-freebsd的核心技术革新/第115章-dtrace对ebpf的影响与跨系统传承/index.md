@@ -40,24 +40,44 @@ volume: 第06卷-freebsd的核心技术革新
 - Gregg, B. brendangregg.com; Cantrill, B. dtrace.org/blogs/bmc/ (post-Oracle posts); eBPF Summit proceedings (2020-2025); USENIX LISA proceedings ［B］<!-- DB_REF:freebsd.duckdb -->> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 2010-2020 年间：488,947 次提交。> 仓库总览：1,294,851 次提交，13,875 位贡献者，1993-06-12 至 2026-08-25。
 - Corbet, J. LWN.net archive; Gregg, B. brendangregg.com; Linux Kernel Mailing List. lkml.org; SystemTap mailing lists. sourceware.org/systemtap/[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]<!-- DB_REF:freebsd.duckdb -->> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 2007-2007 年间：33,007 次提交。> 仓库总览：1,294,851 次提交，13,875 位贡献者，1993-06-12 至 2026-08-25。
 
-<!-- PODCAST_MINE v20260827 -->
-<!-- 章节主题过滤：第115章-dtrace对ebpf的影响与跨系统传承 第 115 章 dtrace对ebpf的影响与跨系统传承（实体评分 ≥2 命中才入选） -->
-<!-- 匹配期数：1 期，扫描 segments：999 条 -->
+<!-- PODCAST_REVIEW v20260829 -->
+<!-- 语义复核范围：BSD Now EP269、BSD Now EP622（共 2 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
 
-### 要点（播客口述史提取）
-- Yeah, that is right. dtrace dropped the cddl and switched to the GPL.（BSD Now EP233 @ 709.9400）
+**要点**：
 
-### 史料（播客当事人陈述）
-- （待人工提取）
+- FreeBSD 基金会 2018 年 9 月更新报告全年筹款目标为 125 万美元，Verisign 成为银级赞助商，基金会资助 CI 系统、发布工程与安全团队以支持 12.0 发布。（BSD Now EP269，[435.64-528.72]，L2）
+- 文章介绍 daemonize 微型 C 库：System V 式守护进程初始化步骤繁多，而 BSD 自 4.4BSD 起提供的 daemon() 函数不完整遵循这些步骤，作者遂编写仅两个文件的小型库。（BSD Now EP269，[1440.68-1771.96]，L2）
+- 微软将 DTrace 从 FreeBSD 移植到 Windows 10，D 脚本基本一致，仅系统调用名改为 NT 前缀的驼峰形式；DTrace 谱系为 illumos 发明、移植 FreeBSD、再传 macOS 与 Windows。（BSD Now EP269，[3414.48-3586.48]，L2）
+- 波兰 BSD 用户组由 Mariusz Zaborski 等人在访问湾区 FreeBSD 用户组后创立，定位为促进波兰全部 BSD 的社区，会议以网络交流为主、演讲不超过十五分钟。（BSD Now EP269，[2943.52-3137.00]，L2）
+- Mark Phillips 自述 2014 年入职仅约 18 个月的 Ansible，次年公司被 Red Hat 收购；此后在 Red Hat 与多家创业公司间辗转，2025 年初加入 FreeBSD Foundation 任技术营销经理。（BSD Now EP622，[407.42-944.24]，L1）
+- Mark Phillips 主张营销的本质是对好产品讲好故事，把营销替换为讲故事即可理解其工作，并强调技术与营销互为表里、工程师需要被反馈其工作价值。（BSD Now EP622，[944.24-1506.38]，L1）
+- Mark Phillips 认为 ZFS 是 FreeBSD 的杀手特性，Solaris 系统管理员因 ZFS 与 DTrace 的继承而转向 FreeBSD，FreeNAS 等产品也以此为基础。（BSD Now EP622，[1051.38-1238.66]，L1）
+- Mark Phillips 曾帮助测试 Colin Percival 的 EC2 ZFS 根镜像工作，并从 Lightsail 迁往 EC2 以获得 ZFS 根文件系统。（BSD Now EP622，[1205.98-1244.40]，L1）
+- Mark Phillips 建议开发者讲故事时不要试图改变他人想法，而是热情讲述自己相信并亲历的解决过程；他推荐 John York 的《Into the Woods》、Seth Godin、Kahneman 与 Nancy Duarte 等读物。（BSD Now EP622，[2825.06-3030.52]，L1）
 
-### 史观（播客当事人观点与总纲映射）
-- Yeah, that is right. dtrace dropped the cddl and switched to the GPL.（BSD Now EP233 @ 709.9400）
-  → 史观映射：总纲13——法律与道德是利益分配
+**史料**：
 
-### 辨析（播客争议与存疑点）
-- （该章节匹配播客中未提取到争议性陈述）
+- 基金会更新提及 OpenSSL 基础版本由 1.0.2 升级至 1.1.1 长期支持版，以及为 12.0 清理内核 bug 报告、修复 Unix 域套接字与 ZFS 回归的进展。（BSD Now EP269，[721.88-822.54]，L2）
+- 提及 Doug Engelbart 1968 年“所有演示之母”五十周年，以及 EuroBSDCon 2018 在布加勒斯特举行的游记与 Kamil Rytarowski 的 NetBSD sanitizers 演讲。（BSD Now EP269，[2603.40-2648.68]，L2）
+- Mark Phillips 访谈（2025 年 7 月柏林 Hackathon 现场）。（BSD Now EP622，[66.14-3216.34]，L1）
+- FreeBSD Foundation 关于页面与 YouTube 频道内容。（BSD Now EP622，[2688.00-2695.60]，L2）
 
-### 文献（播客参考条目）
-- [BSD Now EP233] Pennington J. BSD Now: 233: High on ZFS[EB/OL]. (2018-02-14)[2026-08-15]. https://www.bsdnow.tv/233.
+**史观**：
 
-<!-- /PODCAST_MINE -->
+- 总纲4 分离聚合是永恒规律：DTrace 从 Solaris 发明、经 FreeBSD 移植、再由微软带入 Windows，追踪工具的跨系统传承显示技术思想的流动并不以许可证或阵营为边界。（BSD Now EP269，[3441.20-3510.40]，L2）
+- 总纲10 动手者创造历史：波兰 BSD 用户组以“先做起来、控制在十五分钟演讲、保持低成本”的方式维系社区，说明地方社区依靠组织者的持续投入而非宏大规划得以存续。（BSD Now EP269，[3019.68-3177.30]，L2）
+- 总纲15 文化即形式主义：总纲15 文化即形式主义：Mark Phillips 把营销还原为讲故事的形式，提示技术传播中的品牌叙事同样是形式化构造。（BSD Now EP622，[2702.70-2727.46]，L1）
+- 总纲10 动手者创造历史：总纲10 动手者创造历史：他以工程师背景亲手测试 ZFS 根镜像并反馈给 Colin Percival，体现使用者参与塑造云镜像。（BSD Now EP622，[1215.20-1244.40]，L1）
+- 总纲9 经验优先：总纲9 经验优先：其讲故事方法论基于多年创业与营销一线经验，而非抽象理论推演。（BSD Now EP622，[2553.94-2822.94]，L1）
+
+**辨析**：
+
+- 主持人称微软的 DTrace 移植“未从 illumos 上游起步而是自 FreeBSD 版本开始”，此谱系判断须以微软官方实现与代码署名核实。　[存疑脚注] DTrace Windows 移植的具体代码来源未经一手仓库核对。（BSD Now EP269，[3451.40-3460.96]，L4）
+- 访谈为 Mark Phillips 单方自述，其职业时间线与 FreeBSD Foundation 任职细节为单一来源，关键节点须以基金会公告交叉验证。　[存疑脚注] 职业履历为当事人单一来源自述，未与其他公开资料交叉验证（BSD Now EP622，[407.42-944.24]，L4）
+
+**文献**：
+
+- [BSD Now EP269] Pennington J. BSD Now: Episode 269: Tiny Daemon Lib | BSD Now 269[EB/OL]. (2018-10-24)[2026-08-15]. https://www.bsdnow.tv/269.
+- [BSD Now EP622] Pennington J. BSD Now: 622: Interview with Mark Phillips - Technical Marketing Manager at the FreeBSD Foundation[EB/OL]. (2025-07-31)[2026-08-15]. https://www.bsdnow.tv/622.
+
+<!-- /PODCAST_REVIEW -->

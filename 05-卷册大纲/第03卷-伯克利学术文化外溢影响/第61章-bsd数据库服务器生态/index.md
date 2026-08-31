@@ -41,3 +41,27 @@ volume: 第03卷-伯克利学术文化外溢影响
 - Stanford Encyclopedia of Philosophy. Mathematical Style [EB/OL]. plato.stanford.edu；freebsd-questions 邮件列表存档；LWN.net BSD 数据库相关文章；BSD 数据库社区档案 ［B］；资料数据库.db 文献计量学分析报告（`03-原始史料库/01-代码仓库史料/01-数据库本体/统计分析/文献计量学分析.md` Task 22，2026-07-27）；卷章数据映射表（`03-原始史料库/01-代码仓库史料/01-数据库本体/统计分析/卷章数据映射.md` 第二卷第 24 章）
 - bsd_commits.db commits 表与 commit_files 表（含迁移异常记录分析）；freebsd-databases 与 freebsd-ports 邮件列表存档；0 信任原则方法论（参见 规则/考据规则.md） ［A］
 - bsd_commits.db commits 表（ZFS commit f0a75d27 by Pawel Jakub Dawidek，2007-04-06；SQLite commit by Stanislav Sedov，2011-10-05）；FreeBSD 10.0 Release Notes（2014-01，pkgng 默认）；BSD 数据库社区档案；BSD 哲学文档 ［B］
+
+<!-- PODCAST_REVIEW v20260829 -->
+<!-- 语义复核范围：BSD Now EP196（共 1 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
+
+**要点**：
+
+- 该期公布 EuroBSDCon 2017 日程：开幕主旨演讲为 BearSSL 项目的 Thomas Pornin，并列出 Capsicum 沙箱、OpenBSD 的 dtrace/DDB/CTF、LLDB、BGP、ZFS、OpenBSD Web 栈等演讲。（BSD Now EP196，[255.72-560.20]，L2）
+- Ted Unangst 的文章谈 OpenBSD 手册页/文档的删繁就简：隐藏非必要细节、删除过度指定的参数（如 apmd 的 CPU 空闲阈值），并从初学者的需求顺序组织信息。（BSD Now EP196，[3965.64-4360.00]，L2）
+- Sean Chittenden 的 SCaLE 15x 演讲“PostgreSQL + ZFS 最佳实践”：建议启用 LZ4 压缩、采用 16KB record size、权衡 shared_buffers 与 ARC，并以 SSD 位翻转概率推算论证 ZFS 校验与快照对数据库的保护。（BSD Now EP196，[1753.26-2454.36]，L2）
+- 该期还报道 Dr. Rolf Jansen 在 BeagleBone Black 上构建 LLDB（FreeBSD 12-CURRENT）的经历，以及 Manuel Bouyer 计划把 NetBSD 的 socketcan 分支合入 head（新增 AF_CAN/PF_CAN）。（BSD Now EP196，[4375.86-4791.14]，L2）
+
+**史料**：
+
+- EuroBSDCon 2017 日程；Sean Chittenden 的 SCaLE 15x 幻灯片；Ted Unangst 的文档博客；NetBSD CAN 支持公告。（BSD Now EP196，[255.72-4791.14]，L2）
+
+**史观**：
+
+- 总纲9 经验优先：文档从“作者的逻辑顺序”转向“读者所需顺序”，体现经验优先与动手者对知识的持续整理，而非一次成型的权威文本。（BSD Now EP196，[3965.64-4360.00]，L2）
+
+**文献**：
+
+- [BSD Now EP196] Pennington J. BSD Now: 196: PostgreZFS[EB/OL]. (2017-05-31)[2026-08-15]. https://www.bsdnow.tv/196.
+
+<!-- /PODCAST_REVIEW -->

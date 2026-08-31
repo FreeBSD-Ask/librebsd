@@ -48,37 +48,32 @@ volume: 第04卷-大分裂与四大bsd的诞生
 - OpenBSD 治理结构综合文档；BSD 三项目治理对比研究；被疏远贡献者与核心开发者对照访谈录；OpenBSD goals.html [EB/OL]. <https://www.openbsd.org/goals.html>；OpenBSD security.html [EB/OL]. <https://www.openbsd.org/security.html>；OpenBSD hackathons.html [EB/OL]. <https://www.openbsd.org/hackathons.html>；Linux 内核 MAINTAINERS 文件；bsd_commits.db openbsd-src contributors 表 ［A］<!-- DB_REF:openbsd.duckdb -->> **数据库引用（openbsd.duckdb）**：本子节对应 openbsd 代码仓库。> 1992-1995 年间：770 次提交。> 仓库总览：491,195 次提交，3,352 位贡献者，1995-10-18 至 2026-08-25。
 - 原材料/哲学/项目统摄史观/第 25 章.md（总纲第 13、19、21 条原文）；NetBSD core.html [EB/OL]. <https://www.netbsd.org/people/core.html>；OpenBSD lyrics.html [EB/OL]. <https://www.openbsd.org/lyrics.html>；OpenBSD security.html [EB/OL]. <https://www.openbsd.org/security.html>；OpenBSD goals.html [EB/OL]. <https://www.openbsd.org/goals.html>；bsd_commits.db netbsd-src deraadt 末次 commit `699d2a37b0e3c0c6ff29ea0d407c3feeba5642b4`（1994-12-17T23:12:41Z）；bsd_commits.db openbsd-src 首条 commit `df930be708d50e9715f173caa26ffe1b7599b157`（deraadt, 1995-10-18T08:37:01Z, "initial import of NetBSD tree"） ［A］<!-- DB_REF:freebsd.duckdb -->> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 1992-1995 年间：15,540 次提交。> 仓库总览：1,294,851 次提交，13,875 位贡献者，1993-06-12 至 2026-08-25。
 
-<!-- PODCAST_MINE v20260827 -->
-<!-- 章节主题过滤：第73章-openbsd的de-raadt独裁治理模式 第 73 章 openbsd的de-raadt独裁治理模式（实体评分 ≥2 命中才入选） -->
-<!-- 匹配期数：15 期，扫描 segments：15966 条 -->
+<!-- PODCAST_REVIEW v20260829 -->
+<!-- 语义复核范围：BSD Now EP333（共 1 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
 
-### 要点（播客口述史提取）
-- previous contributions to OpenBSD? Sure. So I am originally from San Francisco, California.（BSD Now EP1 @ 2959.639）
-- that it became time to create a new repository, and this was the genesis of OpenBSD.（BSD Now EP6 @ 584.33）
-- Yeah, so I guess first up we have stuff from the OpenBSD guys.（BSD Now EP14 @ 327.2999）
-- So first up, looks like OpenBSD had a hackathon in Slovenia.（BSD Now EP47 @ 68.19999）
-- so they've ported the OpenBSD one over and now they're cleaning up and improving it（BSD Now EP99 @ 1121.880）
+**要点**：
 
-### 史料（播客当事人陈述）
-- and an interview with Peter Hessler about his OpenBSD BGP SpamD project.（BSD Now EP1 @ 21.10000）
-- Brower and Ray Flotter from OpenBSD are also giving talks. Very cool. Okay. So next event,（BSD Now EP6 @ 1901.51）
-- So for this week's interview, we're joined by Theo DeRat, the founder of OpenBSD.（BSD Now EP6 @ 494.13）
-- that it became time to create a new repository, and this was the genesis of OpenBSD.（BSD Now EP6 @ 584.33）
+- FreeBSD Foundation 回顾 2019 年：参与 38 场会议、资助 Wi-Fi 支持与安全团队，并强调捐款直接支撑项目。（BSD Now EP333，[69.24-169.04]，L2）
+- OpenBSD 6.6 路由器上的 WireGuard 配置教程，通过 PF 与 MTU/MSS 调整实现 VPN 出口。（BSD Now EP333，[420.78-653.64]，L2）
+- Amazon 推出基于 Graviton2 的 ARM 实例并支持 FreeBSD 12.1，宣称较 x86 有 40% 更优性价比。（BSD Now EP333，[704.98-810.16]，L2）
 
-### 史观（播客当事人观点与总纲映射）
-- aspect, I think, is what sets OpenBSD apart. I think it's rare to have a group of 100（BSD Now EP6 @ 821.42）
+**史料**：
 
-### 辨析（播客争议与存疑点）
-- [存疑脚注] you get then you get like uh mere os which is a fork of of openbsd which has put their shell（BSD Now EP149 @ 5849.520）
+- FreeBSD Foundation 2019 年度影响报告。（BSD Now EP333，[69.24-90.64]，L2）
+- Theo de Raadt 访谈视频（Tom Smythe 录制，2019 年 Ottawa hackathon 与 BSDCan 之间）。（BSD Now EP333，[1554.58-1616.68]，L2）
+- multicians.org 的 Multics 历史站点与《The Design of the UNIX Operating System》读书笔记。（BSD Now EP333，[1801.42-1895.64]，L3）
 
-### 文献（播客参考条目）
-- [BSD Now EP1] Pennington J. BSD Now: 1: BGP & BSD[EB/OL]. (2013-09-04)[2026-08-15]. https://www.bsdnow.tv/1.
-- [BSD Now EP6] Pennington J. BSD Now: 6: Doing It de Raadt Way[EB/OL]. (2013-10-09)[2026-08-15]. https://www.bsdnow.tv/6.
-- [BSD Now EP11] Pennington J. BSD Now: 11: The Gateway Drug[EB/OL]. (2013-11-13)[2026-08-15]. https://www.bsdnow.tv/11.
-- [BSD Now EP14] Pennington J. BSD Now: 14: Zettabytes for Days[EB/OL]. (2013-12-04)[2026-08-15]. https://www.bsdnow.tv/14.
-- [BSD Now EP43] Pennington J. BSD Now: 43: Package Design[EB/OL]. (2014-06-25)[2026-08-15]. https://www.bsdnow.tv/43.
-- [BSD Now EP47] Pennington J. BSD Now: 47: DES Challenge IV[EB/OL]. (2014-07-23)[2026-08-15]. https://www.bsdnow.tv/47.
-- [BSD Now EP64] Pennington J. BSD Now: 64: Rump Kernels Revisited[EB/OL]. (2014-11-19)[2026-08-15]. https://www.bsdnow.tv/64.
-- [BSD Now EP99] Pennington J. BSD Now: 99: BSD Gnow[EB/OL]. (2015-07-22)[2026-08-15]. https://www.bsdnow.tv/99.
+**史观**：
 
-<!-- /PODCAST_MINE -->
+- 总纲10 动手者创造历史：总纲10 动手者创造历史：FreeBSD Foundation 报告将捐款落到 Wi-Fi 支持、安全响应等具体工程，而非口号。（BSD Now EP333，[136.72-161.1]，L2）
+- 总纲9 经验优先：总纲9 经验优先：multicians.org 以当事人回忆与一手技术文档保存 Multics 经验，体现经验优先。（BSD Now EP333，[1837.68-1883.14]，L2）
+
+**辨析**：
+
+- Theo de Raadt 访谈为第三方转述与视频链接，其具体言论需回看原视频核验。　[存疑脚注] 访谈内容未在转写中完整呈现（BSD Now EP333，[1577.94-1616.68]，L4）
+
+**文献**：
+
+- [BSD Now EP333] Pennington J. BSD Now: 333: Unix Keyboard Joy[EB/OL]. (2020-01-16)[2026-08-15]. https://www.bsdnow.tv/333.
+
+<!-- /PODCAST_REVIEW -->

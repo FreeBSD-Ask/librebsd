@@ -68,3 +68,52 @@ volume: 06
 ## 自反性声明
 
 本章所书皆是形式主义化的重构，并非对“真实的 BSD 历史”的呈现。本章的章节划分、事件选择、叙事策略、因果归因——全部基于编纂者的哲学设定。本章承认这些局限，不声称客观或中立，欢迎被更诚实的叙事所超越。
+
+<!-- PODCAST_REVIEW v20260829 -->
+<!-- 语义复核范围：BSD Now EP283、BSD Now EP631（共 2 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
+
+**要点**：
+
+- 受访者自述 FreeBSD 图形栈在其设备上基本可用、可作为日常驱动，但承认体验仍不如 Windows 与 macOS，且特定硬件组合仍会出现挂起与交换分区交互导致的偶发冻结。（BSD Now EP283，[427.99-503.62]，L1）
+- FreeBSD 图形栈在 2018 年底已大体跟进上游：输入栈与 Mesa 已更新，libinput 补丁位于开发仓库，X server 本体则是最滞后的待移植与待推送部分。（BSD Now EP283，[600.70-674.48]，L1）
+- FreeBSD 图形团队规模极小：Johannes Lundberg 负责从 Linux 移植 DRM 驱动并更新 Linux KPI，另一名 Johannes Dietrich 维护 ports 中的图形驱动，Warner Losh 担任与 core 团队的联络，Matt Macy 尝试让 Linux KPI 在 PowerPC64 上运行。（BSD Now EP283，[676.78-944.60]，L1）
+- 受访者自 2012 年起维护 FreeBSD ports，长期以 Poudriere 教程作为新人参与入口，认为从维护小型 port 开始逐步深入是降低参与门槛的有效方式。（BSD Now EP283，[998.48-1210.88]，L1）
+- 受访者创办面向所有 BSD 的斯德哥尔摩用户组，借助雇主 B3Init 提供的场地举办聚会，规模约二十余人，并总结出首次活动容易高估到场人数等组织经验。（BSD Now EP283，[1222.98-1600.00]，L1）
+- 受访者自 2019 年起获得雇主 B3Init 每周两小时带薪 FreeBSD 开发时间，并计划在上半年结束后与雇主共同评估延续方式。（BSD Now EP283，[2014.46-2064.04]，L1）
+- Raymond Chen 复述复杂系统的基本失效模式定理：任何复杂系统都处于某种失效模式，局部补偿使问题潜伏，改变只会带来更复杂的反制。（BSD Now EP631，[138.14-224.48]，L1）
+- Dr. Brian Robert Callahan 为 QBE 的 ARM64 后端编写窥孔优化，消除冗余寄存器拷贝与可即时数化的算术指令，说明 ARM64 定长指令下只能通过删除指令获利。（BSD Now EP631，[286.40-737.76]，L1）
+- FreeBSD 笔记本作者发现 Nvidia 驱动会覆盖 Xorg 与 DRM 模块的文件，导致 GL 支持判定错乱，移除 Nvidia 驱动并重装 Intel 与 DRM 驱动后恢复正常。（BSD Now EP631，[765.84-908.32]，L1）
+- 以 devd 规则按 USB 厂商与产品 ID 建立符号链接，并把链接置于 jail 根目录而非 /dev，可将设备以稳定名称传入 FreeBSD jail。（BSD Now EP631，[921.84-1316.76]，L1）
+- Chris Siebenmann 澄清 ZFS 快照并非完全不可变，快照元数据会随独有空间统计、快照删除与重命名而更新，只有文件系统状态被冻结。（BSD Now EP631，[1321.58-1407.46]，L1）
+- 将 PeerTube 从 Debian 迁移到 FreeBSD 的过程以 UFS 而非 ZFS 作为客户机文件系统，以避免在 OmniOS 的 ZFS 上嵌套 ZFS。（BSD Now EP631，[1417.28-1794.48]，L1）
+
+**史料**：
+
+- 受访者提及 EuroBSDCon 2015 在斯德哥尔摩举办、开发者峰会曾借其旧办公室进行，以及 FreeBSD 季度状态报告将恢复发布图形栈条目。（BSD Now EP283，[354.72-379.54]，L1）
+- 提及图形栈相关代码与仓库：libinput、Mesa 的上游同步、Linux KPI 移植以及待推送至 FreeBSD ports 的 X server 端口。（BSD Now EP283，[600.70-674.48]，L1）
+- Raymond Chen 于 devblogs.microsoft.com 的《The fundamental failure mode theorem》。（BSD Now EP631，[138.14-224.48]，L1）
+- Dr. Brian Robert Callahan 博客 QBE ARM64 窥孔优化系列。（BSD Now EP631，[286.40-737.76]，L1）
+- Chris Siebenmann 博客 ZFS snapshots aren't as immutable as I thought。（BSD Now EP631，[1321.58-1407.46]，L1）
+- 关于 FreeBSD jail 设备稳定名称与 PeerTube 迁移的两篇博客。（BSD Now EP631，[921.84-1794.48]，L1）
+
+**史观**：
+
+- 总纲10 动手者创造历史：图形栈这一基础设施长期由少数动手者维持，其工作依赖社区测试反馈与硬件样本的缓慢积累，属于被主流叙事边缘化的劳动。（BSD Now EP283，[690.18-747.68]，L1）
+- 总纲15 文化即形式主义：用户组、会议、教程与雇主赞助共同构成社区再生产的社会形式；受访者特别指出参加一次会议即可让人意识到自己的工作被他人实际使用。（BSD Now EP283，[386.88-424.68]，L1）
+- 总纲5 没有必然性，只有偶然性：总纲5 没有必然性，只有偶然性：基本失效模式定理强调复杂系统运行状态由具体故障与补偿关系决定，而非设计意图的必然实现。（BSD Now EP631，[138.14-224.48]，L1）
+- 总纲10 动手者创造历史：总纲10 动手者创造历史：笔记本作者通过动手排查定位 Nvidia 与 DRM 驱动文件覆盖问题，而非依赖文档结论。（BSD Now EP631，[874.40-908.32]，L1）
+- 总纲25 逻辑是形式主义而非世界本身的结构：总纲25 逻辑是形式主义而非世界本身的结构：ZFS 快照的不可变是概念化标签，其元数据实现仍随操作可变，说明概念与实现之间的形式主义距离。（BSD Now EP631，[1324.62-1407.46]，L1）
+
+**辨析**：
+
+- 转写将受访者姓名记为 Niklas Seising 与 Nicholas Seizing 两种拼法，且分段时间戳明显乱序；依据上下文应为 FreeBSD 图形团队成员 Niclas Zeising，但本卡片保留转写原拼写。　[存疑脚注] 受访者姓名拼写未经一手核对，且该期转写质量较差、时间戳乱序。（BSD Now EP283，[52.96-57.04]，L4）
+- 受访者关于图形栈“基本可用”的自我评估带有当事人立场，且其承认与 Windows、macOS 存在差距、挂起与交换分区交互存在偶发冻结，须与版本发布记录与社区测试报告交叉验证。　[存疑脚注] 具体故障复现与修复状态未能从本期转写确认。（BSD Now EP283，[451.52-557.74]，L3）
+- 转录将 Raymond Chen 所属微软博客名称与若干命令参数出现错词，具体规则与命令须以原文核验。　[存疑脚注] 命令与规则细节存在转写歧义，须以原文核验（BSD Now EP631，[132.46-143.76]，L4）
+- PeerTube 迁移文章作者在转录中记作 Tom Fatigue，疑为主持人 Tom Jones 或他人，署名须以原文核验。　[存疑脚注] 作者署名存在转写歧义（BSD Now EP631，[1417.28-1432.32]，L4）
+
+**文献**：
+
+- [BSD Now EP283] Pennington J. BSD Now: 283: Graphical Interface-View[EB/OL]. (2019-01-31)[2026-08-15]. https://www.bsdnow.tv/283.
+- [BSD Now EP631] Pennington J. BSD Now: 631: Endorphin Rush[EB/OL]. (2025-09-25)[2026-08-15]. https://www.bsdnow.tv/631.
+
+<!-- /PODCAST_REVIEW -->

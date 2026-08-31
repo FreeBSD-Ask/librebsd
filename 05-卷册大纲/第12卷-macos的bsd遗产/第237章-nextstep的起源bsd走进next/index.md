@@ -38,3 +38,32 @@ volume: 第12卷-macos的bsd遗产
 - Cox B J, Novobilski A J. Object-Oriented Programming: An Evolutionary Approach [M]. 2nd ed. Addison-Wesley, 1991; NeXT Computer Inc. NeXTSTEP Object-Oriented Programming and the Objective-C Language [Z]. 1993; bsd_commits.db 查询 L7.5.1 结果 [EB/OL]. 衍生项目与跨项目对比分析.md §L7.5, 2026-07-22.<!-- DB_REF:darwin.duckdb -->> **数据库引用（darwin.duckdb）**：本子节对应 darwin 代码仓库。> 1989-1996 年间：0 次提交。> 仓库总览：2,016 次提交，27 位贡献者，2001-04-10 至 2106-02-07。
 - Stanford University Library. NeXT Inc. Records, 1985-1996 [Z]. M1412; NeXT Inc. NeXTSTEP Source Code CREDITS Files [Z]. 1988-1996; bsd_commits.db 查询 L7.5.1 结果 [EB/OL]. 衍生项目与跨项目对比分析.md §L7.5, 2026-07-22.<!-- DOUBT_PENDING_BLOCK v20260804 -->> **待核验登记（doubt 批量 2026-08-04 批11）**：> 下列条目依 0 信任原则不改动正文，登记待核验：> - 存疑 id 1728：NeXT 工程师贡献/OpenStep 规范依赖 Stanford M1412 纸质档案(未数字化)，待档案核验<!-- DB_REF:darwin.duckdb -->> **数据库引用（darwin.duckdb）**：本子节对应 darwin 代码仓库。> 1994-1996 年间：0 次提交。> 仓库总览：2,016 次提交，27 位贡献者，2001-04-10 至 2106-02-07。
 - NeXT Computer Inc. Annual Reports, 1988-1993 [Z]; Levy S. Insanely Great [M]. Viking, 1994; USENIX Conference Proceedings, 1988-1996 [C]; bsd_commits.db 查询 L7.5.1 结果 [EB/OL]. 衍生项目与跨项目对比分析.md §L7.5, 2026-07-22.<!-- DB_REF:darwin.duckdb -->> **数据库引用（darwin.duckdb）**：本子节对应 darwin 代码仓库。> 1985-2026 年间：2,012 次提交。> 仓库总览：2,016 次提交，27 位贡献者，2001-04-10 至 2106-02-07。
+
+<!-- PODCAST_REVIEW v20260829 -->
+<!-- 语义复核范围：BSD Now EP591（共 1 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
+
+**要点**：
+
+- 主持人讨论 Apple 在 1990 年代中后期濒临破产的处境：旧版 Mac OS 的 Copland 项目曾缩减至约三名开发者，BeOS 虽被视作备选平台，但事后被评价为尚非稳定的 Unix 系统。（BSD Now EP591，[429.12-479.48]，L2）
+- 主持人认为 Apple 通过收购 NeXT 继承了 Mach 与 BSD 的既有成果，从而以较低成本获得 Unix 平台的稳定性；并由此讨论若 NeXT 独立成功或 Apple 破产，个人计算机与开源生态的历史可能完全改写。（BSD Now EP591，[479.48-518.82]，L4）
+- 主持人就专有 Unix 的衰落展开讨论：昂贵的专有 Unix 平台因创新迟缓与封闭生态而让位于廉价开放架构，PC 以低价与现成部件取胜，ARM 亦因低价而崛起。（BSD Now EP591，[562.28-665.06]，L2）
+- 三位主持人自述各自的 BSD 入门史：Benedikt 以 FreeBSD 5.2.1 入门，Jason 经 OpenBSD 2.8 与 OpenBSD 文档接触 BSD，Tom 在 PowerPC iBook G4 上尝试 OpenBSD 4.1 与 FreeBSD 7-current。（BSD Now EP591，[2115.96-2492.78]，L1）
+
+**史料**：
+
+- 本期为主持人自访的口述史料；其中 Copland 开发者数量、Jean-Louis Gassée 对 BeOS 的评价及 IBM 与 Sun 收购细节均为主持人转述的二手信息。（BSD Now EP591，[429.12-471.38]，L2）
+
+**史观**：
+
+- 总纲5 没有必然性，只有偶然性：主持人关于 Apple 破产、NeXT 成功、IBM 收购 Sun 的反事实讨论，强调技术史由具体事件与偶然条件塑造，而非某种必然规律。（BSD Now EP591，[373.70-518.82]，L4）
+- 总纲22 知识注定过时：主持人从 Amiga、286、Z80 到专有 Unix 的淘汰中，呈现旧技术平台与其知识的持续更替，而非单纯的代际进步。（BSD Now EP591，[562.28-665.06]，L2）
+
+**辨析**：
+
+- Copland 缩减至约三名开发者、Gassée 对 BeOS 的评价等说法均为主持人转述，缺乏当期一手档案佐证，应作存疑处理。　[存疑脚注] 相关数字与评价为主持人转述，未经 Apple 或计算机历史博物馆一手档案核实。（BSD Now EP591，[429.12-471.38]，L4）
+
+**文献**：
+
+- [BSD Now EP591] Pennington J. BSD Now: 591: The Three Wise Men (hosts)[EB/OL]. (2024-12-26)[2026-08-15]. https://www.bsdnow.tv/591.
+
+<!-- /PODCAST_REVIEW -->

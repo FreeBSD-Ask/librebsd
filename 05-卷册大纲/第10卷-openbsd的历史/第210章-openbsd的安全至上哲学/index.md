@@ -41,3 +41,55 @@ volume: 第10卷-openbsd的历史
 - OpenBSD Foundation 财务报告 [EB/OL]. <https://www.openbsdfoundation.org/>；FreeBSD Foundation Annual Report [EB/OL]. <https://www.freebsdfoundation.org/annual-report/>；2014 年电费危机 misc@ 邮件列表讨论 [EB/OL]. <https://marc.info/?laccopenbsd-misc>；OpenSSH 项目文档 [EB/OL]. <https://www.openssh.com/>；LibreSSL 项目文档 [EB/OL]. <https://www.libressl.org/>；商业支持案例[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证] ［A］<!-- DB_REF:openbsd.duckdb -->> **数据库引用（openbsd.duckdb）**：本子节对应 openbsd 代码仓库。> 1995-2026 年间：491,195 次提交。> 仓库总览：491,195 次提交，3,352 位贡献者，1995-10-18 至 2026-08-25。
 - OpenBSD Release Notes [EB/OL]. <https://www.openbsd.org/plus.html>；bsd_commits.db openbsd-src 仓库 commit df174574d401 与 b6553af36068；bsd_commits.db openbsd-src 仓库 contributors 表；de Raadt 邮件列表发言 [EB/OL]. <https://marc.info/?laccopenbsd-misc> ［A］
 - de Raadt 邮件列表发言；Van Gennep (1909); Turner, V. (1969). *The Ritual Process: Structure and Anti-Structure*. [仪式理论的后续发展]; shigang.md §19（人类学）、§13（社会哲学）、§25（解释学）<!-- DB_REF:openbsd.duckdb -->> **数据库引用（openbsd.duckdb）**：本子节对应 openbsd 代码仓库。> 1995-2026 年间：491,195 次提交。> 仓库总览：491,195 次提交，3,352 位贡献者，1995-10-18 至 2026-08-25。
+
+<!-- PODCAST_REVIEW v20260829 -->
+<!-- 语义复核范围：BSD Now EP331、BSD Now EP189、BSDTalk EP66（共 3 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
+
+**要点**：
+
+- 核心文章把 Windows 描述为企业导向开发模型，以 ABI 稳定为代价积累遗留代码；OpenBSD 以短周期 ABI 断裂、代码审计与行数上限换取干净内核。（BSD Now EP331，[443.1-537.58]，L2）
+- Phoronix 基准显示 FreeBSD 12.1 在 AMD Ryzen Threadripper 3970X 上与 Linux 大体持平，部分测试领先，GCC 9.2 编译在若干场景更强。（BSD Now EP331，[1130.8-1392.64]，L2）
+- Jim Salter 辨析 ZIL 与 SLOG：每个 ZFS 池都有 ZIL，SLOG 只是把 ZIL 放到独立快速设备上的做法。（BSD Now EP331，[2441.46-2491.48]，L2）
+- NetBSD 在其 wiki 列出 GSoC 内核级与用户态项目并标注难度；FreeBSD 的项目含 Lua bootloader、POSIX 合规测试框架、.NET Core CLR 移植等。（BSD Now EP189，[585.22-733.18]，L2）
+- 受访者 Wendell 回忆 ZFS 可从多盘硬件故障且池满的状态恢复数据，并支持池在 SPARC 与 amd64 架构间跨字节序移植。（BSD Now EP189，[4340.92-4558.02]，L1）
+- Wendell 用退役的 IBM NetApp 磁盘柜与 Google Search Appliance（Dell R710）搭建 10GbE 视频存储，ZFS 压缩使八百万文件遍历缩短到八分钟。（BSD Now EP189，[4702.86-5620.86]，L1）
+- Ted Unangst 撰文记录在网站登录、系统登录等场景使用 YubiKey 的体验，以帮助他人少走弯路。（BSD Now EP189，[6182.44-6225.48]，L2）
+- Michael Dexter 的技术路径：1991 年读计算机科学时以 SunOS 与 Ultrix 入门真实系统；在密歇根州卡拉马祖求学拉丁语期间偶遇捐赠设立的 NeXT 实验室而接触 NextStep；1998 年前后在俄勒冈州波特兰身处 Red Hat 环境中使用 BSD 相关系统，经历 Red Hat 5.2 的 RPM、Red Hat 6 与 GNOME 测试版时代；2001 年任职 MandrakeSoft 内部 IS 团队，公司失利后迁居拉脱维亚；2002 年前后确立 BSD 主攻方向，恰逢 FreeBSD 5 带来 jls、jexec 等 jail 特性。（BSDTalk EP66，[56.68-254.04]，L1）
+- 从 jails 的组织价值到 SysJail 的方案设计：受访者需要托管多个站点且拒绝与他人共享托管机，痛感软件安装散落文件系统、RPM 亦未能根治，因而看重 jail 将守护进程与宿主系统分离、开销几乎不变、得以整体删除重建的组织价值，并多年以磁盘镜像充当各 jail 的独立分区；SysJail 由此针对 FreeBSD jail 实现的短板而作——文件系统扁平化得以按守护进程或按用户切分虚拟系统，复用 Systrace 的内核级组件、自身全部实现于用户态而无需改内核，可在 Systrace 所到之处运行（NetBSD、OpenBSD、MirOS），提供虚拟终端以便 SSH 进入、以二进制安装构建完整系统；性能上其测试在一台 VIA 1GHz、512MB 内存的迷你主板上同时跑 64 个 jail、每个 sshd 约占 2MB，远低于 VMware 类方案每实例 64MB 的分配；另以用户态文件系统设想隔离各 jail 的 procfs 可见进程以补安全短板。（BSDTalk EP66，[271.24-740.94]，L1）
+- 转向 OpenBSD 的动机与挫折：受访者认为 FreeBSD 5 系列不如其前的 4 系稳定，故障无 core dump、无征兆、存活时长不定，令其放弃；其眼中 OpenBSD 是血统上最纯正、守旧而创新的 BSD，却始终没有 jail——邮件列表的答复是其实现复杂、资源应集中于 OpenSSH 与整体安全，且标准答案常是“用 Systrace”；而 ports 中 Systrace profile 屈指可数，社区并未把 Systrace 的行为约束能力制度化为基线配置，SysJail 即以此引入基线 profile 并追加 Systrace 不具备的系统调用拦截。（BSDTalk EP66，[429.72-540.54]，L1）
+- 拉脱维亚生态与延伸项目：受访者四年前抵拉脱维亚时当地并无开源产业、其技能被归入 Windows 管理员，遂活跃于本地社区，曾邀 MySQL 的 David Axmark 到里加；XFSscale 项目为 nnpfs（旧名 XFS）的文档工程，定位类似 FUSE 的用户态文件系统，设想跨平台 SSHFS 并充当 jail 专用 procfs；Kristaps 与大学合作波罗的海超算网格 Baltic Grid，并排定在米兰 EuroBSDCon 讲 XFSscale、在纽约市 BSD 大会讲 SysJail；BSD.LV 计划转向纯开源合同业务的商业面向，指欧洲 EU 资金只要懂申请便可得，而 DARPA 之类资金已对 OpenBSD 枯竭；又鼓动为拉脱维亚制造的 RouterBoard（现跑 Debian 的无线路由整机）移植 OpenBSD 这类真正的路由操作系统。（BSDTalk EP66，[1474.28-1743.16]，L1）
+- 个人使用与 2006 年社区观察：受访者桌面用 Mac OS X（iBook），服务器用 OpenBSD；曾期待苹果以 FreeBSD 用户态与 Jordan Hubbard 的加入带来服务器与桌面同构的统一环境，但该愿景未至，且 Emmanuel Dreyfus 的 compat Darwin 等项目亟需维护；收尾时其判断苹果的开放程度恰以满足自身需要为限、Linux 渐趋平台期、BSD 阵营正经历震荡——尤其点出近日引起广泛关注的 Future of NetBSD 消息，为该事件的同时期社区感知留下口述记录。（BSDTalk EP66，[1743.16-2052.2]，L1）
+
+**史料**：
+
+- telegraph.ph 上‘为何电脑糟糕’及 OpenBSD 学习文章，比较 Windows ABI 稳定与 OpenBSD 模型。（BSD Now EP331，[101.36-316.3]，L2）
+- Phoronix 的 FreeBSD 12.1 与 Ryzen Threadripper 3970X 基准测试。（BSD Now EP331，[1128.06-1139.3]，L2）
+- Jim Salter 的 ZFS ZIL/SLOG 辨析文章，经 Matt Ahrens 校对。（BSD Now EP331，[2441.46-2510.14]，L3）
+- NetBSD GSoC wiki 项目列表（BSD Now EP189，[670.66-741.64]，L1）
+- FreeBSD GSoC 项目列表（BSD Now EP189，[585.22-667.7]，L1）
+- Wendell 访谈自述（BSD Now EP189，[4340.92-6064.62]，L1）
+- Ted Unangst 的 YubiKey 使用博客（BSD Now EP189，[6182.44-6225.48]，L1）
+- 本期可作为 SysJail 早期史的一手物证：项目版本 SysJail 1.03、以 sysjail 隔离 Apache 的 BSD.LV 自用站点（2006 年 8 月约四万次点击）、提交 Freshmeat 的公告被拒、Daemon News 刊出的测试征集、德国媒体的报道、OpenBSD 3.9 磁盘镜像高负载内核 panic 的补丁记录，以及节目开头播报的 BSD 认证组织社区调查结果发布与 OpenBSD 4.0 预购开放。（BSDTalk EP66，[981.34-1404.24]，L1）
+
+**史观**：
+
+- 总纲22 知识注定过时：总纲22 知识注定过时：文章指出向后兼容把旧 ABI 与废弃代码永久固化，使系统知识随规模膨胀而贬值。（BSD Now EP331，[618.82-661.42]，L2）
+- 总纲21 革命与改革是历史方法论的分歧：总纲21 革命与改革是历史方法论的分歧：Windows 的渐进兼容与 OpenBSD 的周期断裂分别代表改革与革命两种工程方法论。（BSD Now EP331，[524.92-600.62]，L2）
+- 总纲10 动手者创造历史：受访者以退役硬件自建存储系统并迁移海量文件，历史由动手实践者推动。（BSD Now EP189，[4702.86-5620.86]，L1）
+- 总纲9 经验优先：对 ZFS 健壮性的判断来自亲身数据恢复与迁移经历，经验先于宣传。（BSD Now EP189，[4462.78-4558.02]，L1）
+- 总纲12 科学是形式主义：存储性能与可靠性认知源于可复现的实验、工具与度量，而非主观印象。（BSD Now EP189，[5085.26-5282.2]，L1）
+- 总纲10 动手者创造历史：该项目由 Kristaps 一人承担核心开发、Michael Dexter 承担项目管理与运维的两人体制驱动，处理进程限制之类功能仅花两天，而同类功能在 FreeBSD 端是一个 Google Summer of Code 项目；受访者拒绝推动其进入任何基础系统，主张工具按规格即插即用的模块化 UNIX 模式之美——默默做事的小团队以最小协作规模维持跨项目工具，正是动手者创造历史的微观形态。（BSDTalk EP66，[1246.12-1310.56]，L1）
+
+**辨析**：
+
+- 转写对 Windows 代码行数等数字（如‘half a billion lines’）为文章作者的估计值，未经独立核实。　[存疑脚注] Windows 代码行数为作者估计（BSD Now EP331，[503.24-515.92]，L4）
+- [存疑脚注] GSoC 项目名单为 2017 年计划，最终是否全部完成须以后续项目报告为准。　[存疑脚注] 计划性名单，验收结果待后续报告。（BSD Now EP189，[585.22-733.18]，L4）
+- 受访者对 1995 年前后盒装 UNIX 时代的回顾（UNIXware、盒装 OpenStep、更早的 Coherent）带有明显个人立场：称彼时桌面与服务器 UNIX 应用尽有却全为闭源、闭源模式终究失配而大多退场，UNIXware 这类相对廉价的“真 UNIX”被“当时远逊但免费”的 Linux 击败——此为亲历者的单方回望，且转写专名普遍失真（CISJail 应为 SysJail，CISTrace/Cistrays 应为 Systrace，MirrorOS 应为 MirOS，MeSQL 应为 MySQL，flash.post 应为 Freshmeat，MonoWall 应为 m0n0wall，Soakris 应为 Soekris，altrix 应为 Ultrix，deck 应为 DEC，Viya 应为 VIA，Mike Gunncar 应为 Mike Gancarz），引用前均须回核音频。　[存疑脚注] 对 1990 年代闭源 UNIX 兴衰与 Linux 取代的因果判断为当事人单方回顾，须与比较史文献互证；转写专名失真清单如上（BSDTalk EP66，[1947.26-2003.88]，L4）
+
+**文献**：
+
+- [BSD Now EP331] Pennington J. BSD Now: 331: Why Computers Suck[EB/OL]. (2020-01-02)[2026-08-15]. https://www.bsdnow.tv/331.
+- [BSD Now EP189] Pennington J. BSD Now: 189: Codified Summer[EB/OL]. (2017-04-12)[2026-08-15]. https://www.bsdnow.tv/189.
+- [BSDTalk EP66] Backman W. BSDTalk: 66: bsdtalk066 - Interview with Michael Dexter about sysjail[EB/OL]. (2006-09-20)[2026-08-27]. https://archive.org/details/bsdtalk066.
+
+<!-- /PODCAST_REVIEW -->

@@ -51,3 +51,34 @@ volume: 第02卷-伯克利的岁月
 - USL 诉讼档案； Sun 技术文档 ［A］
 - McKusick, M. K. (1999) "Twenty Years of Berkeley Unix" O'Reilly Open Sources；RFC 1094 (1989)；RFC 1057 (1988)；Sandberg, R. et al. (1985) "Design and Implementation of the Sun Network Filesystem"；Stanford University Libraries, Special Collections (Sun Microsystems Archives)；Internet Archive sun1.sunhelp.org 镜像 ［A］
 - Sun 专利申请记录（USPTO）；SunOS 源代码注释；USENIX 会议论文集（1983-1990） ［A］
+
+<!-- PODCAST_REVIEW v20260829 -->
+<!-- 语义复核范围：BSD Now EP552（共 1 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
+
+**要点**：
+
+- 主持人转述 Liam Proven 在 The Register 的报道：iXsystems 将重心转向基于 Debian 的 TrueNAS SCALE，FreeBSD 基底的 TrueNAS CORE 进入维持工程阶段，计划推出基于 FreeBSD 13.3 的版本后不再规划 FreeBSD 14 基底。（BSD Now EP552，[806.14-1046.26]，L2）
+- 文章追述 FreeNAS 与 iXsystems 的商业谱系：FreeNAS 始于 2005 年、基于 m0n0wall 与 PHP Web 界面；iXsystems 源自曾销售 BSD/386 的 Berkeley Software Design Inc.，经与 Walnut Creek CD-ROM 合并、向 Wind River 出售 OS 部门等转手后于 2007 年收购 FreeNAS。（BSD Now EP552，[919.74-1153.86]，L2）
+- 主持人介绍 Jason Eckert 的博客：1997 年 Tadpole Technologies 的 SPARCbook 3000ST 搭载 Fujitsu TurboSPARC 170MHz 处理器、128MB 内存与 Solaris 2.5.1，售价约 21000 美元，是 1990 年代高端 Unix 笔记本电脑的代表。（BSD Now EP552，[1590.02-1751.82]，L2）
+- 主持人转述 Hacker News 用户评论：Ford Aerospace 是早期商业 BSD Unix 站点之一，须先向 AT&T 购买 Unix 32V 许可，再从伯克利的 Bill Joy 处取得 BSD 磁带；BSD 当时无网络，站点购买 3Com 的 UNET（Greg Shaw 所写 TCP/IP）并处理 4.3BSD 与其他实现的互操作问题，最终与 Nagle 算法的出现相关。（BSD Now EP552，[2710.40-2874.60]，L2）
+
+**史料**：
+
+- 本期史料包括 Liam Proven 的记者综述、Jason Eckert 的设备拆解记录，以及 Hacker News 上 Ford Aerospace 亲历者的自述评论；后两者经节目主持人口头转述。（BSD Now EP552，[806.14-2874.60]，L2）
+
+**史观**：
+
+- 总纲10 动手者创造历史：Ford Aerospace 工程师为网络互操作重写 UDP、ICMP 与 TCP，Nagle 算法源于一线工程实践而非纯理论推演，体现动手者创造历史。（BSD Now EP552，[2814.88-2857.92]，L2）
+- 总纲3 不存在进步，只有权力再分配：iXsystems 从 BSDi 谱系转向 Linux 基底，是存储商业生态中资源与权力在平台间的重新分配。（BSD Now EP552，[806.14-1046.26]，L2）
+- 总纲11 商品是形式主义：SPARCbook 以 21000 美元的高价与军事级镁合金机身成为小众商品，与廉价 PC 开放架构的对照呈现技术商品化的不同形态。（BSD Now EP552，[1647.86-1751.82]，L2）
+
+**辨析**：
+
+- Hacker News 评论为匿名用户自述，Ford Aerospace、3Com UNET 与 Nagle 算法的具体关联须以更多独立来源交叉验证。　[存疑脚注] 早期 TCP/IP 口述为匿名评论经节目转述，未经多源交叉验证。（BSD Now EP552，[2710.40-2874.60]，L4）
+- iXsystems 转向 Linux 的时间线与版本计划来自记者报道与 Reddit 上 Chris Moore 的帖子，须以官方公告核实。　[存疑脚注] TrueNAS 路线信息来自记者报道与社区帖文，未经官方公告核实。（BSD Now EP552，[948.50-1000.66]，L4）
+
+**文献**：
+
+- [BSD Now EP552] Pennington J. BSD Now: 552: The Laptop Sparc[EB/OL]. (2024-03-28)[2026-08-15]. https://www.bsdnow.tv/552.
+
+<!-- /PODCAST_REVIEW -->

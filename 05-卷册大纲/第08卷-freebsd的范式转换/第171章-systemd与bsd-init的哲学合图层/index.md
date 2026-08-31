@@ -45,37 +45,42 @@ volume: 第08卷-freebsd的范式转换
 
 **新增时间线事件**：1991 年 IEEE Trans Communs 发表路由模型网络可靠性研究论文，王波《FreeBSD 使用大全》出版；2015 年 AsiaBSDCon 2015 展示 Go 语言内容过滤软件在 FreeBSD 上的实现。<!-- DB_REF:freebsd.duckdb -->> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 2024-2026 年间：168,386 次提交。> 仓库总览：1,294,851 次提交，13,875 位贡献者，1993-06-12 至 2026-08-25。
 
-<!-- PODCAST_MINE v20260827 -->
-<!-- 章节主题过滤：第171章-systemd与bsd-init的哲学合图层 第 171 章 systemd与bsd-init的哲学合图层（实体评分 ≥2 命中才入选） -->
-<!-- 匹配期数：15 期，扫描 segments：14850 条 -->
+<!-- PODCAST_REVIEW v20260829 -->
+<!-- 语义复核范围：BSD Now EP370、BSD Now EP55（共 2 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
 
-### 要点（播客口述史提取）
-- and haven't introduced necessarily the feature creep that we have seen in SystemD.（BSD Now EP114 @ 397.1400）
-- changed almost everything over because of SystemD. And so mostly old knowledge I have is actually（BSD Now EP210 @ 3136.48）
-- got developed together to something more coupled by software mechanisms like systemd and what（BSD Now EP237 @ 2558.799）
-- takes you through the review your initial draft and make suggestions.（BSD Now EP35 @ 2194.959）
-- Definitely and really cheap to get started depending on the amount of data you use.（BSD Now EP55 @ 1243.699）
+**要点**：
 
-### 史料（播客当事人陈述）
-- the init system that is familiar and well documented. There's also some TrueOS specific（BSD Now EP237 @ 2748.0）
-- With the growing adoption of SystemD, dissatisfaction with Linux has reached proportions not seen in recent years due to the extent that people are starting to talk of switching to FreeBSD.（BSD Now EP76 @ 785.5999）
-- process was more or more opaque i didn't want to talk about the merits and demerits of systemd（BSD Now EP237 @ 2564.319）
-- imagine there's many books in that category but this is definitely a...（BSD Now EP55 @ 3289.140）
+- Warner Losh 分析 FreeBSD 从 Subversion 迁移 Git 的动因：SVN 生态萎缩、CI 与协作工具以 Git 为中心、新开发者更熟悉 Git；代价包括失去关键词展开与单调递增版本号。（BSD Now EP370，[248.97-1025.79]，L2）
+- FreeBSD 已是最后一个大规模使用 Subversion 的开源项目，迁移中借鉴 Apache 与 LLVM 的迁移经验。（BSD Now EP370，[339.89-365.10]，L2）
+- rcorder 自 NetBSD 约 1998 年引入，用于根据 rc.d 脚本依赖排序启动服务；FreeBSD 已有并行化尝试，D25389 提交为 rcorder 增加并行输出标志，可节省约 15 至 20 秒启动时间。（BSD Now EP370，[2060.52-2224.76]，L2）
+- FuryBSD 2020 Q3 发布首个基于 OpenZFS 的 live 镜像，以只读或读写模式测试 FreeBSD 桌面，并保留系统完整性。（BSD Now EP370，[72.36-115.00]，L2）
+- Adrian Chadd 自述 FreeBSD 无线栈在 AP 与 station 模式下工作良好，但仅有两名左右开发者，边界情况缺乏人手。（BSD Now EP55，[1419.88-1458.76]，L1）
+- Atheros 与 Intel 因开放源码与文档而成为 FreeBSD 无线的主要方向；Broadcom 与 Marvell 在 Sam Leffler 离开后未再更新，成为明显短板。（BSD Now EP55，[1462.00-1544.32]，L1）
+- Adrian Chadd 恢复因监管顾虑而停用的 monitor mode 注入，使 Kismet 与 Aircrack-NG 重新可用，同时承受实现监管域强制的压力。（BSD Now EP55，[1777.56-1881.62]，L1）
+- OpenBSD 的 systemd 兼容层仅为 hostnamed、localed、timedated、logind 的 shim，以让 GNOME 运行，并非移植 systemd 本体或替换 init。（BSD Now EP55，[3493.32-3567.32]，L2）
 
-### 史观（播客当事人观点与总纲映射）
-- （该章节匹配播客中未提取到当事人观点性陈述）
+**史料**：
 
-### 辨析（播客争议与存疑点）
-- （该章节匹配播客中未提取到争议性陈述）
+- Warner Losh 博客“FreeBSD Subversion to Git Migration, Part 1”及配套 YouTube 视频，逐条论证迁移理由。（BSD Now EP370，[248.97-1025.79]，L2）
+- Dan Langille 关于 NUT 关机测试的博文，以及 `upsdrvctl -t` 测试模式与 `upsmon -c fsd` 命令的手册说明。（BSD Now EP370，[1174.02-1519.15]，L2）
+- Adrian Chadd 访谈（FreeBSD 无线网络栈维护者当事人自述）。（BSD Now EP55，[1267.26-2874.88]，L1）
 
-### 文献（播客参考条目）
-- [BSD Now EP35] Pennington J. BSD Now: 35: Puffy Firewall[EB/OL]. (2014-04-30)[2026-08-15]. https://www.bsdnow.tv/35.
-- [BSD Now EP54] Pennington J. BSD Now: 54: Luminary Environment[EB/OL]. (2014-09-10)[2026-08-15]. https://www.bsdnow.tv/54.
+**史观**：
+
+- 总纲10 动手者创造历史：迁移论证强调以 CI 与协作工具降低贡献者摩擦，推动力量来自开发者的实际工作流需求。（BSD Now EP370，[581.03-707.75]，L2）
+- 总纲21 革命与改革是历史方法论的分歧：FreeBSD 迁移 Git 采取渐进改革而非激进重构，迁移团队试图保留旧用户熟悉的工作流。（BSD Now EP370，[984.63-1017.59]，L2）
+- 总纲20 历史地理塑造思想土壤：总纲20 历史地理塑造思想土壤：无线厂商是否开放文档、是否以 Linux 为主场，直接塑造了 FreeBSD 无线栈的可行范围。（BSD Now EP55，[1462.00-1603.66]，L1）
+- 总纲9 经验优先：总纲9 经验优先：Adrian Chadd 以驱动开发与真机测试的一线经验陈述无线栈优劣，而非依赖纸面规格。（BSD Now EP55，[1419.88-1447.00]，L1）
+- 总纲4 分离聚合是永恒规律：总纲4 分离聚合是永恒规律：各 BSD 共享 net80211 后各自分化，DragonFly BSD 又聚合 FreeBSD 更新栈，构成反复的分合。（BSD Now EP55，[1657.66-1722.12]，L1）
+
+**辨析**：
+
+- rcorder 并行化历史上多次尝试均遇到未声明依赖问题，主持人指出并行带来的启动加速与破坏风险并存。　[存疑脚注] 并行化风险范围待核实（BSD Now EP370，[2193.19-2299.69]，L4）
+- 转录将 Ralink/Realtek 与 Atheros 的表述交错，主持人与嘉宾均存在口误修正，具体芯片归属需对照 FreeBSD 源码。　[存疑脚注] 无线芯片厂商归属存在口语转写歧义，未以代码仓库核验（BSD Now EP55，[1486.52-1493.84]，L4）
+
+**文献**：
+
+- [BSD Now EP370] Pennington J. BSD Now: 370: Testing shutdown[EB/OL]. (2020-10-01)[2026-08-15]. https://www.bsdnow.tv/370.
 - [BSD Now EP55] Pennington J. BSD Now: 55: The Promised WLAN[EB/OL]. (2014-09-17)[2026-08-15]. https://www.bsdnow.tv/55.
-- [BSD Now EP67] Pennington J. BSD Now: 67: Must Be Rigged[EB/OL]. (2014-12-10)[2026-08-15]. https://www.bsdnow.tv/67.
-- [BSD Now EP73] Pennington J. BSD Now: 73: Pipe Dreams[EB/OL]. (2015-01-21)[2026-08-15]. https://www.bsdnow.tv/73.
-- [BSD Now EP76] Pennington J. BSD Now: 76: Time for a Change[EB/OL]. (2015-02-11)[2026-08-15]. https://www.bsdnow.tv/76.
-- [BSD Now EP92] Pennington J. BSD Now: 92: BSD After Midnight[EB/OL]. (2015-06-03)[2026-08-15]. https://www.bsdnow.tv/92.
-- [BSD Now EP96] Pennington J. BSD Now: 96: Lost Technology[EB/OL]. (2015-07-01)[2026-08-15]. https://www.bsdnow.tv/96.
 
-<!-- /PODCAST_MINE -->
+<!-- /PODCAST_REVIEW -->

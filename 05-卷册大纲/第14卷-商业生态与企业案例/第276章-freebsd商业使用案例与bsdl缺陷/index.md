@@ -101,3 +101,85 @@ volume: 14
 ## 自反性声明
 
 本章所书皆是形式主义化的重构，并非对“真实的 BSD 历史”的呈现。本章的章节划分、事件选择、叙事策略、因果归因——全部基于编纂者的哲学设定。本章承认这些局限，不声称客观或中立，欢迎被更诚实的叙事所超越。
+
+<!-- PODCAST_REVIEW v20260829 -->
+<!-- 语义复核范围：BSD Now EP623、BSD Now EP58、BSD Now EP51、BSD Now EP40、BSDTalk EP41、BSDTalk EP42（共 6 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
+
+**要点**：
+
+- FreeBSD Foundation 于 2025 年 4 月启动 SBOM 项目，目标是为整个源码树与软件包生成软件物料清单，服务于零信任构建与供应链合规需求。（BSD Now EP623，[309.72-553.78]，L2）
+- Klara Systems 的夏季综述以自建 DNS、NTP、ZFS 存储与定制内核为主线，主张以开源标准摆脱厂商锁闭并降低长期成本。（BSD Now EP623，[557.22-1040.66]，L2）
+- David Gwynne 自述通过 OpenBSD 的简短文档解决家庭拨号共享上网问题而入坑，后因 USB 2.0 备份需求开始向 OpenBSD 移植 NetBSD 的 USB 代码。（BSD Now EP623，[1122.34-1528.48]，L1）
+- David Gwynne 主导的 sec(4) 把 IPsec 从流量窃取点改为可管理接口，使防火墙、队列、BPF 与 BGP 等常规工具可直接作用于隧道流量，服务于与 AWS 站点间 VPN 的对接。（BSD Now EP623，[2044.96-2309.56]，L1）
+- David Gwynne 还实现 ERSpan 接口与 BPF 日志守护进程，以 GRE 封装远程端口镜像并支持 VMware 分布式虚拟交换机的监控会话。（BSD Now EP623，[2316.56-2663.62]，L1）
+- OpenBSD hackathon 的社会维度被视为关键：面对面沟通能消除邮件与聊天中的误解，组织跨城市活动则面临资源协调的不确定性。（BSD Now EP623，[1544.20-1796.32]，L1）
+- Voxer 联合创始人 Matt Ranney 自述迁移动机：创业早期流量激增时在 Linux 上遇到无法解决的棘手性能问题，Joyent 朋友建议换到有 DTrace 的平台并成功定位解决，由此认识 DTrace 的价值；自建基础设施、自有硬件时必须保留 DTrace 并想要 ZFS 的 L2ARC 以利用新出现的平价 SSD。在 Joyent 维护的 SmartOS 与 FreeBSD 之间抉择：FreeBSD 10 已为 ZFS 提供 SSD trim 支持而 illumos 仍无，且 FreeBSD 文档好得多、社区响应更快、被认为更稳定；ZFS trim 支持成为压倒性因素。（BSD Now EP58，[903.63-1103.11]，L1）
+- 工程师 George Neville-Neil 补充入职时的境况：Voxer 原为全 SmartOS 部署，一次 arc cache bug 导致约 12 台服务器重启 panic；评估替代平台时 Linux 因缺 DTrace 而出局（仅 Oracle Enterprise Linux 有但不够好），最终在 FreeBSD 与 SmartOS 之间选择 FreeBSD。迁移后的部署形态：FreeBSD 10 release 承载全部后端——TLS 终止、全部 Node.js 进程、全部 Redis 缓存与 Riak 持久存储前端；全面 jails 化并从 SmartOS 的整机 zone 模型走向“每进程一 jail”，每个 jail 关联 ZFS 数据集以便进程跨基础设施迁移；用 Chef 自动化并自补 FreeBSD 支持缺口，计划开源相关项目；其 DTrace 内核补丁已被接受进入 10.1 并回移 9.x。（BSD Now EP58，[1015.23-1460.04]，L1）
+- Eric LeBlanc 自述 Xinuos 在约十八个月调研后选择 FreeBSD 作为新增支持的开源操作系统，理由包括与 OpenServer 相近的代码树、BSD 许可证及 FreeBSD Foundation 的存在。（BSD Now EP51，[1014.92-1082.10]，L1）
+- Xinuos 以 BSD 许可证允许转售商与客户开发专有环境为关键考量，并计划对 FreeBSD 稳定分支提供最长十五年的支持与回溯移植。（BSD Now EP51，[1163.86-1335.46]，L1）
+- Xinuos 计划将 OpenServer 与 UnixWare 等遗留应用运行于 bhyve 虚拟化之上，以迁移无源码的旧应用。（BSD Now EP51，[1465.72-1508.64]，L1）
+- FlightAware 联合创始人 Karl Lehenbauer（转写讹作 Carl Liambauer）自述其 FreeBSD 缘起与生产架构：386BSD 时代以 9600 波特率耗时 24 小时下载、装入 386SX 即入坑；公司创立九年来基础设施全量构筑于 FreeBSD——数据库服务器单机 500GB 内存与 32 处理器，网页服务器为刀片机箱，数据库用 Postgres，网站以 Apache 加 mod_rivet（Tcl 嵌入脚本模块，David Weldon 发明、其团队有贡献）生成，早年他曾在 ISP 为 T1 串行卡提交驱动改动并担任 386BSD 最初的补丁汇总人之一。（BSD Now EP40，[850.92-1126.42]，L1）
+- FlightAware 的数据工程策略：自创立起把收到的每一条空管消息按原生格式存于 ZFS——因为对消息的解释会随理解深入而改进，只保存解释将永久丢失保真度；在语义层则修正 FAA 的怪异惯例（航班以目视进近落地时才被标记“取消”），改为普通用户预期的“到达”。航班追踪本身是比预期难得多的领域问题：布尔逻辑不敷使用，须以模糊逻辑对起讫一致而时刻偏差的航班计划评分匹配；各国空管数据格式与提供哲学迥异，公司另自建约 400 台全球遥测盒接收 ADS-B 广播，并展望飞机自主协商避让与节能滑翔下降的前景。（BSD Now EP40，[934.52-1211.72]，L1）
+- Karl Lehenbauer 对 FreeBSD 的史评：认为 FreeBSD 是他见过最好的操作系统——没有 IBM 式巨额企业金援，却凭起点质量、开发者质量与工程流程的严谨性“永不断劲”；并提出度量开源项目成败的指标之一是能否挺过领导层更替，FreeBSD 凭选举制 core team 经历了开源项目中最多的领导层更替，人们生活变化后总有接替者，这一机制极为强大。（BSD Now EP40，[1413.86-1500.06]，L1）
+- PC-BSD 10.0.2（季度版，目标 2014 年 6 月中）发布前夕的工程动态：AppCafe 大量修复并展示推荐应用，Easy PBI 可从整个 ports 类别批量生成 PBI，新桌面环境 Lumina 赶工修复；pkgng 切换已进入 edge 包集，首次运行 AppCafe 自动完成转换；新 ISO 实现 GELI 全盘加密加 GRUB——旧法须保留不加密 boot 分区，内核与 loader 暴露于篡改与 rootkit 风险，新法连 boot 全盘加密，但口令仍须输入两次（向内核传递 passphrase 的机制尚未实现）。boot environment 机制同期完善：删除首个 BE 会破坏 GRUB（grub.cfg 依首个数据集 UUID 定位，删除后连 ZFS 模块都无法加载），团队修补 grub make config 在删除时重新 stamp；并新增更新前自动创建 BE，默认保留最近五个自动快照、手动创建的不清理，与 GELI 加密配合工作，主持人自认或为 OS 界首个“BE+全盘加密”组合。（BSD Now EP40，[2084.19-2611.39]，L2）
+- OpenBSD ports 与 packages 入门教程的体系要点：该体系源自 FreeBSD 但已大幅分化；分支模型为 current、stable（获得安全更新）与每六个月冻结的 release；获取 ports tree 可用 SVN 或 snapshot 下载并以 signify 验签、用 CVS 增量更新；以 flavors 与 subpackages 取代 FreeBSD 的 options 机制（如 vim 的 no_x11 flavor、pidgin 拆分 main、finch、libpurple 子包）；二进制包经 PKG_PATH 指向镜像后以 pkg_add 安装，配合 make search、pkg_info 与 infrastructure 类工具（out-of-date）管理。（BSD Now EP40，[3915.85-4362.54]，L2）
+- Summer of Code 起源于 Google 创始人让计算机专业学生暑期持续开发而不必打工谋生的设想，DiBona 将其开源化落地：2005 年首届约 400 名学生、约 40 个组织参与，采用导师遴选制，学生入选即得 500 美元、达成申请目标再得 4000 美元；FreeBSD 与 NetBSD 均在首届受资助组织之列。（BSDTalk EP41，[249.78-357.10]，L1）
+- DiBona 自评首届成效：约 84% 学生达成目标（他自嘲花别人的钱总是大方，实际或约 75%），其中近半赛后留在项目继续贡献，远超其预期；因多数学生返校，不宜苛求其成为长期贡献者。2006 年第二届扩大组织规模并改用 Web 应用全程管理，取代首届的电邮与电子表格流程。（BSDTalk EP41，[357.10-417.38]，L1）
+- Google 开源释出分两类：API 示例以 BSD、GPL、Apache 等多许可发布；独立工具则依兼容性选型，如 Google Talk 语音组件 libjingle 经 Java 规范提案开放信令规范并以 BSD 与 GPL 发布，malloc 性能工具与 sparse hash table 实现均取 BSD 许可；DiBona 称 BSD 许可为全球第二大流行许可，企业借此确保释出代码可被最广泛使用。（BSDTalk EP41，[437.28-533.18]，L1）
+- 企业平台优先级的坦诚陈述：BSD 桌面渗透率不及 Linux、更不及 Mac，Google 桌面应用多为收购所得（Google Earth 原为马里兰州公司 Keyhole），故 BSD 不构成移植优先级；跨平台移植之难在于单平台开发期固化的框架假设（如其举 MFC 为例），工程资源须按聚合用户规模分配，开源释出代码则可借社区开发者补足长尾平台。（BSDTalk EP41，[592.10-723.94]，L1）
+- DiBona 的开源商业化亲历路径：始自把玩 Linux 与运营本地用户组，经 Larry Augustin 邀请加入 VA Research（后 VA Software）短期组建营销团队并交接，参与其 IPO，再于 Andover.net 被 VA 收购链下任 Slashdot 作者约一年，创业游戏公司一年余倒闭后于 2005 年加入 Google；其将 2006 年视为继五六年前首次狂热之后的开源第二波。（BSDTalk EP41，[133.16-234.58]，L1）
+- FlightAware 于 2006 年的架构为全 AMD64 FreeBSD 6：两台 PostgreSQL 数据库服务器各配 16 块 300GB 磁盘构成 RAID 1 对（约 5TB 旋转容量、存储约 1TB 数据），以 Slony-I 复制容灾；地图服务器为双 AMD64 双核 1U 机型，单图生成约 160 毫秒 CPU 时间，配合自研负载均衡表实现日生成数百万张地图，足以承接 CNN 与 Fox News 报道空难事件时的流量尖峰。（BSDTalk EP42，[203.16-308.68]，L1）
+- 每日约 4000 万条飞机位置更新令 PostgreSQL 即便批量插入也不堪负荷，团队遂为航班轨迹数据定制内存驻留数据库（约占 1GB RAM），内建经纬度框、速度阈值与部分尾号或航司前缀（如 COA 对应 Continental Airlines）查询，并在全部地图服务器间复制；新机启动时从既有服务器对拷数据库约一分钟即上线。（BSDTalk EP42，[656.02-727.52]，L1）
+- Lehenbauer 的 BSD 渊源始于 1991 年：以无浮点协处理器的 386/16 经 9600 波特 SLIP 链路历时约 24 小时下载 Bill 与 Lynne Jolitz 的 386BSD；早期系统仅稳定数分钟，随补丁发布逐步延长至 20 分钟、1 小时，但基于 4.4BSD 代码的文件系统自始稳定、从未丢文件——他将这份可靠性视为自己不曾失去信心的关键。（BSDTalk EP42，[410.38-465.50]，L1）
+- 九十年代其团队以 BSD 建立并运营整家 ISP，1999 年以令人满意的价格售出；FlightAware 创业时天使资金极少，Oracle 与 Microsoft SQL 的许可费足以压垮预算，加上对 BSD 性能、稳固与自身既有经验的信任，选型几乎不言自明；扩展哲学是拒绝大型专有多处理器系统、以廉价 PC 服务器横向堆叠。（BSDTalk EP42，[390.86-510.58]，L1）
+- 桌面端迁移路径：多年维持 Windows 与 BSD 双分区双启动，为 Excel 与 Photoshop 重启进 Windows、其余时间活在 BSD 的终端与 SSH 中；2002 年 11 月购入 Titanium PowerBook 并装载 Mac OS X 10.1 后完成切换，理由是终端加 SSH 照常远程工作、Tcl 随系统附带、Darwin Ports 可编译与 FreeBSD ports 相同的软件，乃至 FlightAware 产品可在离线笔记本上运行——Mac OS X 因此成为其 BSD 桌面经验的自然延伸。（BSDTalk EP42，[817.14-939.40]，L1）
+
+**史料**：
+
+- FreeBSD Foundation SBOM 项目公告。（BSD Now EP623，[309.72-553.78]，L2）
+- Klara Systems 的 FreeBSD Summer 2025 Roundup。（BSD Now EP623，[557.22-1040.66]，L2）
+- David Gwynne 访谈（University of Queensland，2025 年 5 月 29 日）。（BSD Now EP623，[1064.42-3319.38]，L1）
+- 本期新闻段涉及的一手发布材料：OpenSSH 6.7 发布公告（大规模内部重构使其可用作库、SFTP 断点续传、默认禁用 arcfour 等不安全密码、移除 TCP wrappers 支持、Unix 域套接字转发、portable 版支持对 LibreSSL portable 构建、ED25519 类型的 SSHFP 记录生成）；NetBSD 6.1.5 与 6.0.6 发布公告（OpenSSL 1.0.1i、modctl 用户控内存分配、setsockopt 内存泄漏、tap 驱动竞态、IPfilter mbuf 泄漏、PTYFS 两处溢出与内存损坏修复）；GhostBSD 4.0 发布（首个基于 FreeBSD 10，clang 取代 GCC、pkgng 默认、make 换为 bmake、桌面 MATE）；Cavium 与 FreeBSD Foundation 合作公告（捐赠 ThunderX 服务器、目标 ARMv8 tier-1、至多 48 核与 100 Gbps、包仓库逾 24000 应用）；OpenBSD 上线 portroach.openbsd.org 供认领无人维护的 ports。（BSD Now EP58，[482.38-2830.89]，L2）
+- Eric LeBlanc 访谈（Xinuos 董事长兼 CEO 当事人自述）。（BSD Now EP51，[992.22-1870.22]，L1）
+- 本期提及或转述的一手材料包括：Karl Lehenbauer 当事人访谈；iX Systems 的 BSDCan 2014 wrap-up（Jenkins 持续测试工作组在 FreeBSD 集群的状态与向 source 与 port 构建扩展的头脑风暴、为 FreeNAS 在 FreeBSD 上部署 Redmine 缺陷跟踪）；Michael Dexter 与 Warren Block 受基金会资助参会后提交的 trip reports；Phabricator 在 FreeBSD wiki 上的使用说明（differential 与 audit 两种模式）；CARP failover 演示视频；Michael Lucas 的 FreeBSD 存储系列书计划（GELI、UFS、ZFS 分册）；IRC 上 Matt Ahrens 语录“ZFS 开始开发时只有 vi 和一个空文本文件”。（BSD Now EP40，[127.77-2001.69]，L2）
+- 该期留存的一手史料线索：2005 年首届 Summer of Code 的组织覆盖名单含 FreeBSD 与 NetBSD；Google 截至 2006 年 5 月已释出约 20 万行代码，含 Core Dumper、Python 库、malloc 性能工具与 sparse hash table 实现；片头曲采用 OpenBSD 3.0 发行版主题曲，为 BSD 发行版歌曲文化的旁证。（BSDTalk EP41，[323.86-426.58]，L1）
+- 该期留存的一手史料线索：Slony-I 复制服务器（见 postgresql.org 文档）；3-Ware 硬件 RAID 的选型测试记录——标准为双盘系统拔出任一盘保持运行且重启后可从任一盘引导，而三年前主板板载 RAID 无一能可靠从第二盘引导；FAA 数据馈送延迟五分钟加处理约一分钟的时延结构；其个人机器上保留着 Microport Unix、Bell Technologies、SCO 时代直至 BSD 的连续文件时间戳，最早可追溯至 1980 年代末。（BSDTalk EP42，[316.28-375.46]，L1）
+
+**史观**：
+
+- 总纲10 动手者创造历史：总纲10 动手者创造历史：David Gwynne 以大学系统管理员身份亲手修复基础设施问题并回馈 OpenBSD，体现一线操作者推动协议与工具演进。（BSD Now EP623，[1806.76-1946.58]，L1）
+- 总纲6 和解优于斗争：总纲6 和解优于斗争：OpenBSD hackathon 以面对面沟通消解邮件分歧，强调协作而非对抗的社区机制。（BSD Now EP623，[1580.48-1651.24]，L1）
+- 总纲4 分离聚合是永恒规律：总纲4 分离聚合是永恒规律：sec(4) 将 IPsec 从网络栈中窃取流量的分离点改造为可聚合进接口体系的组件。（BSD Now EP623，[2049.28-2316.56]，L1）
+- 总纲10 动手者创造历史：上游协作的动手者文化成为企业采纳的助推器：Voxer 工程师试用 Node 的 DTrace helper 失败后一周内自行解决并提交，下一周补丁即被接受，Ranney 感叹“无法想象这发生在其他操作系统上”；上游愿意接受补丁意味着企业不必维护自己的私有补丁集，向 10.1 升级因此变容易。生产者直接改写工具而非等待平台方，是动手者创造历史在 2014 年企业语境中的直接呈现。（BSD Now EP58，[1512.31-1576.90]，L1）
+- 总纲9 经验优先：选型方法论的自述：迁移促使 Voxer 认真审视真实技术需求，按实际需要选择技术，“不是因为大家都在用”；平台决策由 Node 进程在 DTrace 下的可见性这一具体经验事实主导，若无该因素结局难料。经验优先于从众与阵营归属，构成该企业案例的方法论内核。（BSD Now EP58，[1281.64-1305.40]，L1）
+- 总纲13 法律与道德是利益分配：总纲13 法律与道德是利益分配：Xinuos 选择 BSD 许可证的本质是转售商与专有业务利益的分配安排。（BSD Now EP51，[1163.86-1179.76]，L1）
+- 总纲3 不存在进步，只有权力再分配：总纲3 不存在进步，只有权力再分配：Xinuos 由专有 System V 转向参与 FreeBSD，是商业权力格局的再分配而非线性技术进步。（BSD Now EP51，[1014.92-1128.06]，L1）
+- 总纲11 商品是形式主义：总纲11 商品是形式主义：访谈将操作系统视为可支持、可转售的商品，并以支持周期与许可证作为商品属性展开叙述。（BSD Now EP51，[1322.60-1363.72]，L1）
+- 总纲3 不存在进步，只有权力再分配：Karl Lehenbauer 把项目生命力归于制度而非英雄：人的生活、目标会变，无人能永续投入，选举制使接替者自然产生；FreeBSD 挺过最多领导层更替这一观察，与其说见证进步，不如说见证治理权力的周期性再分配——执掌者更迭而项目延续，权力在人群间流转而非积累。（BSD Now EP40，[1452.26-1500.06]，L1）
+- 总纲5 没有必然性，只有偶然性：FlightAware 的创立路径是偶然条件叠加而非规划必然：本是为一门有线电视软件生意试水，几个朋友拿到 FAA 向业界开放的数据流，读文档、写解析、入库、做网站，“然后它就膨胀成了一门生意”；受访者的原话呈现了一个 hobby 转化为事业的具体偶然过程。（BSD Now EP40，[871.82-911.72]，L1）
+- 总纲3 不存在进步，只有权力再分配：DiBona 解释平台支持优先级时直言：个体开发者对平台重要性的自我认同无法改变企业按聚合用户量分配工程资源的逻辑，被支持与否是资源权力的再分配结果而非技术优劣的裁决；被冷落平台的出路在于代码开源后由社区自行移植。（BSDTalk EP41，[688.02-723.94]，L1）
+- 总纲17 证明世界先于解释和改造世界：Lehenbauer 的可靠性主张全部建立在自设测试之上：RAID 1 使磁盘可靠性较无冗余提升千倍、ECC 内存较非 ECC 提升百万倍的判断，均以其亲手拔盘、重启、引导验证为准，而非厂商参数；这种以可重复实测证明替代宣传解释的工程取向，正是其选型纪律的核心。（BSDTalk EP42，[743.12-807.10]，L1）
+
+**辨析**：
+
+- 转录将 David Gwynne 记作 David Gwynn 或 David Gwendt，标题 Two's interview 疑为 Gwynne's interview 的转写偏差，人名以 OpenBSD 官方为准。　[存疑脚注] 人名与标题存在语音转写偏差，须以 OpenBSD 官方资料核验（BSD Now EP623，[1068.26-1075.34]，L4）
+- sec(4) 相关表述中 IPsec 接口在转录混用 sec 与 sec4，具体版本与接口名须以 OpenBSD 手册页核验。　[考据脚注] 接口名称存在转写混用，须以 sec(4) 手册页为准（BSD Now EP623，[1971.80-2235.62]，L4）
+- 当事人对 Linux 与 BSD 用户态差异的批评：这些差异多数无人能说明为何存在或是否重要，却每一个都构成迁移路障——wc 输出带前导空格而 GNU 版没有、make 与 GNU make 不兼容常使 Node 原生模块编译爆掉、GNU 工具新增旗标抢占 BSD 同字母旗标（sort 例）、cp -R 尾部斜杠语义差异曾使其从 Linux 转到 Mac 时脚本大面积失效。建议提供 GNU 工具优先的安装路径或易装的 Linux 用户态层以降低新用户门槛；bash 默认 shell 因 ports 不得触碰 base 的规则而受阻，与 illumos 社区拒绝适应导致采用度落后相对照；一切为平滑过渡做的投入都将换来更大的社区。（BSD Now EP58，[1617.26-2031.17]，L1）
+- 社区文化比较的当事人评价：BSD 邮件列表上的讨论相较 Linux 界更像严肃技术专业人士之间的理性辩论；主持人引述某调查显示 BSD 开发者平均年龄比 Linux 开发者大十岁，并认为这与讨论形态相关。George 称其习惯的 illumos 世界信息更难寻，FreeBSD 的文档与 Google 可寻性远优于 illumos 文档，“能用 Google 解决问题在这个年代至关重要”。（BSD Now EP58，[2032.53-2160.41]，L1）
+- 上游重构与下游维护成本的当期实例：OpenSSH 6.7 的代码重构破坏了 FreeBSD port 携带的大量补丁，port 维护者 Brian Drewery 表示需要数日逐一整理方可更新，宁可延迟也不发布行为不明的安全组件；同时移除 TCP wrappers 支持将波及依赖它的 denyhosts 类工具。这一案例具体呈现了大型上游重构向下游 port 体系传导的时滞与风险。（BSD Now EP58，[2691.64-2823.43]，L2）
+- Xinuos 与 SCO 的历史关联及其 UNIX 版权诉讼前史在本期仅被一带而过，其与 FreeBSD 关系的长期后果未在本期展开。　[存疑脚注] SCO 前史仅凭主持人转述与当事人简短开场，未经多源交叉核验（BSD Now EP51，[1015.90-1019.40]，L4）
+- UFS 损坏案悬而未决：FreeBSD 10.0-RELEASE-p3 32 位、OpenStack 虚拟机上的轻载系统（nginx 与 postfix 均运行于 jail）遭未知事件致文件系统不可修复损坏，loader 报 can't load kernel，/var/log 大部分丢失且无异常记录；主持人无法定位成因，倾向判定为 bug 而非被掩盖的入侵，建议核对 fsck 输出、启用 UFS journaling（10 的安装方式默认已开）与 crash dump 取证、改远程日志；该案同期未有结论，32 位 UFS 生产系统的脆弱性于此可见。　[存疑脚注] 损坏成因在该期录制时仍未确定，主持人对 bug 抑或入侵的判断仅为推测（BSD Now EP40，[2628.02-2883.82]，L2）
+- 本期转写延续双声道交错重复的缺陷；FlightAware 受访者姓名转写为 Carl Liambauer 与 Carl Lee and Bauer 等，据访谈内容（FlightAware 联合创始人、Tcl 社区背景、386BSD 补丁汇总经历）当为 Karl Lehenbauer，引用人名须核对原始音频；iX 员工姓名 Craig Rod-Reeder、Dan Langille（转写作 Danling Guilf）等亦存在转写失真。　[存疑脚注] 受访者及若干人名的转写拼写不可靠，须经原始音频与当期 show notes 复核（BSD Now EP40，[841.92-848.82]，L4）
+- DiBona 自承不了解 BSD 运行 Linux 二进制兼容层的实际状态，显示即便开源企业负责人对 BSD 技术生态亦存认知盲区；其“BSD 许可为全球第二大流行许可”为个人估计而非统计结论。[存疑脚注] 该排序无出处，仅作 2006 年企业认知样本记录。　[存疑脚注] BSD 许可流行度排序系 DiBona 口头估计，无统计数据佐证。（BSDTalk EP41，[646.06-668.74]，L4）
+- 对 BSD 的批评与敬意并存：Lehenbauer 抱怨会撞上奇怪内核限制（共享内存相关转换表的尺寸难觅文档），须翻检一年前的邮件列表自行揣测；承认其他发行版的安装流程更精致；但赞其发布工程从未放行早期 Linux 曾出现的卸载即毁文件系统一类的缺陷，并在 Linux 占尽 mind share 与公司投入的 2006 年，仍称许 Berkeley 阵营的强健，特别致敬 Theo de Raadt 与 NetBSD、OpenBSD 的工作。[考据脚注] 其所称早期 Linux umount 缺陷细节未经核实，系当事人回忆。　[考据脚注] 早期 Linux umount 缺陷的具体所指未核实，仅作当事人 2006 年回忆记录。（BSDTalk EP42，[943.92-1068.48]，L1）
+
+**文献**：
+
+- [BSD Now EP623] Pennington J. BSD Now: 623: Two's interview[EB/OL]. (2025-08-07)[2026-08-15]. https://www.bsdnow.tv/623.
+- [BSD Now EP58] Pennington J. BSD Now: 58: Behind the Masq[EB/OL]. (2014-10-08)[2026-08-15]. https://www.bsdnow.tv/58.
+- [BSD Now EP51] Pennington J. BSD Now: 51: Engineering Nginx[EB/OL]. (2014-08-20)[2026-08-15]. https://www.bsdnow.tv/51.
+- [BSD Now EP40] Pennington J. BSD Now: 40: AirPorts & Packages[EB/OL]. (2014-06-04)[2026-08-15]. https://www.bsdnow.tv/40.
+- [BSDTalk EP41] Backman W. BSDTalk: 41: bsdtalk041 - Interview with Chris DiBona from Google[EB/OL]. (2006-05-07)[2026-08-27]. https://archive.org/details/bsdtalk041.
+- [BSDTalk EP42] Backman W. BSDTalk: 42: bsdtalk042 - Interview with Karl Lehenbauer from Flightaware[EB/OL]. (2006-05-11)[2026-08-27]. https://archive.org/details/bsdtalk042.
+
+<!-- /PODCAST_REVIEW -->

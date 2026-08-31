@@ -66,3 +66,38 @@ volume: 07
 ## 自反性声明
 
 本章所书皆是形式主义化的重构，并非对“真实的 BSD 历史”的呈现。本章的章节划分、事件选择、叙事策略、因果归因——全部基于编纂者的哲学设定。本章承认这些局限，不声称客观或中立，欢迎被更诚实的叙事所超越。
+
+<!-- PODCAST_REVIEW v20260829 -->
+<!-- 语义复核范围：BSD Now EP229（共 1 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
+
+**要点**：
+
+- 该期综述 OpenBSD、DragonFly BSD、NetBSD 对 Meltdown/Spectre 的响应：OpenBSD 引入微码更新工具，DragonFly 提交 MMU 隔离与 IBRS/IBPB，NetBSD 引入 Hot Patch 与 SVS 分离页表。（BSD Now EP229，[931.46-1482.64]，L2）
+- IT Wire 报道 Theo de Raadt 的批评：仅一级厂商获得预先披露属选择性披露，并援引其 2007 年对 Intel 芯片设计问题的邮件。（BSD Now EP229，[695.8-835.26]，L2）
+- 转述 Drew DeVault 的文章：追溯 1971 年 PDP-11 上 fork 的诞生、vfork 与 posix_spawn 的局限，以及 Plan 9 的 rfork 与 spawn 模型。（BSD Now EP229，[4297.5-4945.7]，L2）
+- Ed Maste 提交使 LLD 成为 AMD64 默认引导链接器，标志 FreeBSD 用户态向非 GNU 工具链迁移的推进。（BSD Now EP229，[4975.44-5145.06]，L2）
+- 采访 DragonFly BSD 用户：其因减少锁与高性能设计而选择 DragonFly，使用 HAMMER 的 undo 功能与快照、HAMMER2 的透明压缩。（BSD Now EP229，[2246.7-2489.82]，L1）
+
+**史料**：
+
+- DragonFly BSD 的 Matthew Dillon 1 月 5 日关于 Meltdown 为 Intel 专属缺陷、AMD 免疫的帖子。（BSD Now EP229，[1015.3-1056.54]，L2）
+- Theo de Raadt 2007 年 6 月 27 日的邮件线索（IT Wire 报道所引），涉及对 Intel x86 设计问题的早期批评。（BSD Now EP229，[807.38-835.26]，L2）
+- Drew DeVault 的 fork 批评文章，以 1971 年贝尔实验室的 PDP-11 语境叙述 fork 的诞生。（BSD Now EP229，[4299.5-4438.76]，L2）
+- FreeBSD 的 LLD bootstrap 链接器提交（Ed Maste 的提交信息，LLVM PR 23214 与 85 个依赖 issue）。（BSD Now EP229，[5056.46-5134.62]，L2）
+
+**史观**：
+
+- 总纲8 本体论上各方平等：各 BSD 在 Meltdown/Spectre 面前的独立响应路径显示本体论上的多方平等，没有单一正确解。（BSD Now EP229，[1460.82-1482.64]，L2）
+- 总纲13 法律与道德是利益分配：Theo 对 Intel 的批评强调选择性披露使大厂之外者受损，呈现披露秩序中的利益分配而非技术中立。（BSD Now EP229，[706.42-720.42]，L2）
+- 总纲22 知识注定过时：对 fork 的批评把近 50 年的设计选择与内存过量承诺、OOM killer 等后果联系起来，呈现旧有设计在当下的历史惯性。（BSD Now EP229，[4516.04-4624.68]，L2）
+
+**辨析**：
+
+- 对 fork 的批评系博客作者个人立场，节目主持人在结尾补充“无法改变应用使用习惯”的采纳难题，替代方案在 FreeBSD 仅停留在讨论阶段。　[存疑脚注] 系单一来源的个人技术立场（BSD Now EP229，[4888.6-4949.3]，L4）
+- Theo de Raadt 对 Intel 的指控（“被告知忽略风险”）系其个人推断，无直接证据，节目亦未提供 Intel 回应。　[存疑脚注] 系个人推断，无直接证据（BSD Now EP229，[763.4-807.38]，L4）
+
+**文献**：
+
+- [BSD Now EP229] Pennington J. BSD Now: 229: The Meltdown of Spectre[EB/OL]. (2018-01-17)[2026-08-15]. https://www.bsdnow.tv/229.
+
+<!-- /PODCAST_REVIEW -->

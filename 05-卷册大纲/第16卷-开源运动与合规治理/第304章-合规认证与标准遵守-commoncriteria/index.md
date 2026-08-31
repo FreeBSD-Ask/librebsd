@@ -48,30 +48,34 @@ volume: 第16卷-开源运动与合规治理
 - NIST SSP Repository；FreeBSD Foundation 2023-09 SSDF Statement[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]
 - NIST SP 800-218 Appendix C；FedRAMP SSP Template[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]
 
-<!-- PODCAST_MINE v20260827 -->
-<!-- 章节主题过滤：第304章-合规认证与标准遵守-commoncriteria 第 304 章 合规认证与标准遵守-commoncriteria（实体评分 ≥2 命中才入选） -->
-<!-- 匹配期数：15 期，扫描 segments：16463 条 -->
+<!-- PODCAST_REVIEW v20260829 -->
+<!-- 语义复核范围：BSD Now EP558（共 1 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
 
-### 要点（播客口述史提取）
-- （该章节匹配播客中未提取到高置信度核心史实，需人工深挖）
+**要点**：
 
-### 史料（播客当事人陈述）
-- （待人工提取）
+- 主持人转述 Telnet 协议史：1972 年 John Postel 撰写的 RFC 奠定 Telnet 协议，Postel 在文中自嘲该文档未能兑现及时、清晰与简洁的承诺；1990 年代早期 Telnet 曾用于访问国会图书馆、NASA 新闻与最高法院判决。（BSD Now EP558，[1253.14-1360.36]，L2）
+- 主持人介绍 towel.blinkenlights.nl 的 ASCII 版《星球大战》与 telehack.com 等项目，后者以 Telnet 重现 ARPANET 时代的 BBS、MUD 与文本冒险，构成对早期网络文化的保存。（BSD Now EP558，[956.74-1151.44]，L2）
+- FreeBSD 基金会发布 SSDF 自证报告第一版，面向美国政府软件供应链合规（NIST SP 800-218 与 Executive Order 14028）；NetApp 与 RG Nets 等伙伴引用该报告支持其向政府客户供货。（BSD Now EP558，[483.30-730.50]，L2）
+- BSDCan 组织委员会自述 Dan Langille 在主持二十年后交棒，委员会成立加拿大非营利组织 BSDCan Conferences Incorporated 以承接资金与赞助；当届白金赞助商为 Netflix，金级为 Apple 与 ARM。（BSD Now EP558，[2801.24-3400.76]，L1）
+- 委员会回顾 BSDCan 票价自 2005 年起十五年间维持 199 美元未变，现调整为 256 美元；其拍卖传统所得捐给 Ottawa Mission 慈善机构。（BSD Now EP558，[3545.42-3667.88]，L1）
 
-### 史观（播客当事人观点与总纲映射）
-- （该章节匹配播客中未提取到当事人观点性陈述）
+**史料**：
 
-### 辨析（播客争议与存疑点）
-- （该章节匹配播客中未提取到争议性陈述）
+- 本期史料包括 Telnet 历史的二手文章、FreeBSD 基金会 SSDF 公告，以及 BSDCan 组织委员会 Michael Lucas、Patrick 与 Peter Hansteen 的一手自述。（BSD Now EP558，[483.30-3400.76]，L1）
 
-### 文献（播客参考条目）
-- [BSD Now EP116] Pennington J. BSD Now: 116: Arcing ZFS[EB/OL]. (2015-11-18)[2026-08-15]. https://www.bsdnow.tv/116.
-- [BSD Now EP119] Pennington J. BSD Now: 119: There be Dragons, BSD Dragons anyway[EB/OL]. (2015-12-09)[2026-08-15]. https://www.bsdnow.tv/119.
-- [BSD Now EP121] Pennington J. BSD Now: 121: All your hyves are belong to us[EB/OL]. (2015-12-23)[2026-08-15]. https://www.bsdnow.tv/121.
-- [BSD Now EP127] Pennington J. BSD Now: 127: DNS, Black Holes & Willem[EB/OL]. (2016-02-03)[2026-08-15]. https://www.bsdnow.tv/127.
-- [BSD Now EP138] Pennington J. BSD Now: 138: Rushing into BSD[EB/OL]. (2016-04-20)[2026-08-15]. https://www.bsdnow.tv/138.
-- [BSD Now EP155] Pennington J. BSD Now: 155: Cabling up FreeBSD[EB/OL]. (2016-08-17)[2026-08-15]. https://www.bsdnow.tv/155.
-- [BSD Now EP157] Pennington J. BSD Now: 157: ZFS, The “Universal” File-system[EB/OL]. (2016-08-31)[2026-08-15]. https://www.bsdnow.tv/157.
-- [BSD Now EP171] Pennington J. BSD Now: 171: The APU - BSD Style![EB/OL]. (2016-12-07)[2026-08-15]. https://www.bsdnow.tv/171.
+**史观**：
 
-<!-- /PODCAST_MINE -->
+- 总纲18 时间是一种形式主义：Telnet 从主流远程访问工具变为小众怀旧文化，呈现技术生命周期随时代需求而更替的形式化进程。（BSD Now EP558，[1253.14-1412.28]，L2）
+- 总纲10 动手者创造历史：Dan Langille 与历届志愿者持续二十年操办 BSDCan，其交棒与新机构设立延续了社区会议，体现动手者对社区基础的长期投入。（BSD Now EP558，[2801.24-3108.48]，L1）
+- 总纲13 法律与道德是利益分配：SSDF 自证是软件供应商满足政府采购合规的制度安排，反映安全标准背后的法律与利益分配。（BSD Now EP558，[483.30-730.50]，L2）
+
+**辨析**：
+
+- Telnet 1972 年 RFC 的作者归属与 John Postel 的自嘲引文来自二手文章，须以 RFC 原文核实。　[存疑脚注] RFC 作者与引文为二手转述，未经 RFC 原文核实。（BSD Now EP558，[1253.14-1319.76]，L4）
+- BSDCan 票价自 2005 年起十五年未变的说法为委员口述，须以历年会议档案核实。　[存疑脚注] 票价历史为委员口述，未经历年会议档案核实。（BSD Now EP558，[3545.42-3563.30]，L4）
+
+**文献**：
+
+- [BSD Now EP558] Pennington J. BSD Now: 558: Worlds of telnet[EB/OL]. (2024-05-09)[2026-08-15]. https://www.bsdnow.tv/558.
+
+<!-- /PODCAST_REVIEW -->

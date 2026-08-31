@@ -106,3 +106,206 @@ volume: 05
 ## 自反性声明
 
 本章所书皆是形式主义化的重构，并非对“真实的 BSD 历史”的呈现。本章的章节划分、事件选择、叙事策略、因果归因——全部基于编纂者的哲学设定。本章承认这些局限，不声称客观或中立，欢迎被更诚实的叙事所超越。
+
+<!-- PODCAST_REVIEW v20260829 -->
+<!-- 语义复核范围：BSD Now EP513、BSD Now EP499、BSD Now EP406、BSD Now EP374、BSD Now EP329、BSD Now EP321、BSD Now EP640、BSD Now EP293、BSD Now EP276、BSD Now EP223、BSD Now EP631、BSD Now EP616、BSD Now EP24、BSD Now EP7（共 14 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
+
+**要点**：
+
+- 新主持人 Jason Tubner 自述从业经历：约 2000 年经同事 Steve Nunez 赠予的 OpenBSD 2.8 光盘接触 BSD，此前学习 Solaris 并从事系统管理与存储咨询，此后成为 BSD 长期使用者与布道者。（BSD Now EP513，[325.74-418.48]，L1）
+- 其所在的澳大利亚非营利社区健康服务机构以 FreeBSD 与 OpenBSD 混合部署，用 bhyve 在通用硬件上承载 VPN 网关与 Windows 补丁分发设备，并通过生产使用向 BSD 项目反馈缺陷，形成使用、报错、修复、再使用的循环。（BSD Now EP513，[480.56-712.56]，L1）
+- 节目转述 su 降权文章，指出 su 的功能是提升而非降低权限，其被用于降权的误用源自 1986 年 Fielder 与 Hunter 著作及流传教程；自 1997 年 daemontools 的 setuidgid 起已有专用降权工具，PAM 的引入进一步改变其行为。（BSD Now EP513，[1576.30-1933.64]，L2）
+- 新闻部分报道 OpenBSD dt 动态追踪设备于 6.7 首次出现并逐步获得工具支持，以及 LibreSSL 3.6.3、3.7.3 与 3.8.0 开发版的发布，并介绍 FreeBSD 12 起的手工 jail 部署流程。（BSD Now EP513，[1953.10-2632.10]，L2）
+- Dan Langille 自述 FreshPorts 迁移史：该服务原运行于 New Jersey 由 IAC Systems 捐赠的主机，主机突然失效后回退 Austin 旧主机，随后借重写机会迁移至 AWS，并将提交处理、Web 请求与数据库拆分为独立 jail；他称 FreshPorts 已运行约 20 年，希望未来由 FreeBSD 项目接手维护。（BSD Now EP499，[2093.20-2320.00]，L1）
+- 其家庭实验室以一台从电子废弃物中回收的 Dell R730 取代两台旧主机，运行约 40 个 FreeBSD jail，主要用于 FreshPorts 的 dev、test、stage 环境及多种服务；迁移通过 Syncoid 的 ZFS 发送接收完成，并带来约 25% 的功耗下降。（BSD Now EP499，[139.80-530.00]，L1）
+- Langille 以 BSDCan 组织者身份回顾会议史：其自 2004 年举办第一届 BC camp，至 2023 年已连续办会 20 年；疫情后会议以严格口罩政策线下重启，并招募志愿者分担会议包、场地与演讲者事务。（BSD Now EP499，[1442.02-2093.20]，L1）
+- 节目还讨论 jail 管理器因难以适配特定场景被弃用，转而使用自维护的 MakeJail 脚本，显示 jails 生态中用户为适应具体需求而回归手工脚本。（BSD Now EP499，[1666.86-1734.30]，L1）
+- 一篇教程记述在 FreeBSD jail 中以 easyjail 部署 Gemini 服务器 Molly Brown 的过程，包括克隆接口、SSL 证书、rc.d 服务脚本与 jail 内 SSH 访问，展示 jail 作为轻量隔离环境承载新协议的实践路径。（BSD Now EP406，[273.92-470.8]，L2）
+- FreeBSD 2021 年第一季度状态报告显示，doc、src、ports 三仓库已切换至 Git，CI 作业与文档工具链随之迁移至 Git 与 AsciiDoc/Hugo，并记录 13.0 发布与 Linux 兼容层支持 Firefox Widevine 的进展。（BSD Now EP406，[476.4-1461.2]，L2）
+- Michael W Lucas 在采访中自述，1995 年美国国家科学基金会全面商业化互联网后，其管理的客户端域名服务器频繁崩溃，直至安装 FreeBSD 名称服务器才获得整夜睡眠，由此转向 OpenBSD 与 FreeBSD 世界并最终成为全职技术作者。（BSD Now EP406，[1721.98-1828.6]，L1）
+- 主持人说明 BSD grep 的重写源于 Google Summer of Code，采用现代搜索算法后仍存在边缘情况慢于 GNU grep，最终修复并成为 FreeBSD 默认，GNU grep 保留为编译期选项。（BSD Now EP406，[2820.16-2956.14]，L2）
+- OpenBSD 于 2020 年 10 月 18 日发布 6.8 版，正值项目创立二十五周年；该版引入由引导装载器向内核传递的随机种子置信度标记、在支持的 arm64 处理器上启用 PAN，并改进 FFS、安装镜像与多架构安装引导。（BSD Now EP374，[0.0-10.72]，L2）
+- NetBSD 于 2020 年 10 月 18 日发布 9.1，新增并行磁盘加密、C.UTF-8 区域设置、ZFS 支持增强、NVMM 虚拟机监控器更新以及 PowerPC64 PowerNV 支持。（BSD Now EP374，[590.42-796.96]，L2）
+- OpenZFS 开发者峰会 2020 因疫情改以 Zoom 举办，采用 webinar 演讲与虚拟走廊并行的组织方式；峰会自 2013 年起规模持续扩大，本年取消人数上限后允许更多人参加。（BSD Now EP374，[847.32-970.56]，L1）
+- BastilleBSD 相关文章将容器技术谱系上溯至 1979 年 Unix 第七版 chroot，指出 jail 术语最早见于 1991 年 4.3BSD，FreeBSD 4.0 于 2000 年提供 jail 命令，Linux 迟至 2008 年才有 LXC、2013 年才有 Docker。（BSD Now EP374，[1848.72-2116.32]，L2）
+- FreeBSD jails 与 ZFS 数据集委托形成组合：可把数据集委托给 jail 内 root，再由 jail 内 root 委托给单个用户，配合强制访问控制模块实现面向公众服务的最小权限隔离。（BSD Now EP329，[709.42-766.12]，L1）
+- Lucas 认为 jails 是系统管理各项知识的集大成，需掌握文件系统、升级与编排；一旦单机运行数百 jail 就必须自动化，否则无法管理。（BSD Now EP329，[604.70-654.10]，L1）
+- BSDCan 拍卖是慈善筹款仪式：Lucas 拍卖标注“mostly complete”却缺最后 27 页的《Terrapin Sky Tango》初稿，Bob Beck 与 Christophe Provost 分别竞得主体与结尾，共筹得约 300 美元捐给 Ottawa Mission，并催生仅印四册的残缺特别版。（BSD Now EP329，[908.72-1153.38]，L1）
+- SNMP 协议本体仅七个部分，复杂来自厂商解释与实现差异；Lucas 的《SNMP Mastery》试图把学习协议与学习厂商配置分离，将其定位为网络与系统管理员工具箱中的必要工具。（BSD Now EP329，[1394.54-1497.48]，L1）
+- Lucas 主张写作先定目标再选手段：以建立认证与标准为目标的作者宜走传统出版，以持续量产短书为目标的作者宜自出版；小说尤应自出版，因大社合同会取走版权终身加身后 70 年。（BSD Now EP329，[2647.86-2764.40]，L1）
+- Trenton Schultz 在明尼苏达读本科时因实验室游戏夜初识 FreeBSD 2.2.5，后以 Qt 小程序与纯文本简历入职 Trolltech，参与 Qt Embedded 与 Cocoa 移植，其第一个 Qt 提交是把 Qt 虚拟帧缓冲从 Linux 专用信号量改为 FreeBSD 兼容实现。（BSD Now EP321，[120.62-445.88]，L1）
+- ROS 是发布/订阅式机器人中间件，节点以话题通信、可跨机分布，默认跟随 Ubuntu LTS；Schultz 2017 年移植因 OpenCV 版本与 Python Qt 绑定混乱受阻，2019 年借 jails 的干净环境重试成功基础通信与可视化。（BSD Now EP321，[882.08-1217.88]，L1）
+- FreeBSD jails 让 ROS 构建与桌面 Qt 版本隔离，避免依赖冲突；Schultz 强调读 Michael W. Lucas 的 jails 书后才理解 nullfs、devfs 等前置知识，并首次成功搭出 CUPS jail。（BSD Now EP321，[1193.60-1367.12]，L1）
+- Schultz 的博士研究关注家庭机器人隐私框架与人机交互动画，指出 ROS1 无安全设计（动态 UDP 端口、需 VPN 或封闭网络），摄像头数据是否外传决定隐私风险等级。（BSD Now EP321，[632.94-690.32]，L1）
+- 对 BSD 新手的建议：与朋友结伴、用虚拟机试错、尽早配置 ZFS 自动快照与引导环境以获得回滚能力，从而敢于动手。（BSD Now EP321，[2071.72-2250.44]，L1）
+- FreeBSD 在 OCI Runtime Specification 1.3 中被列为官方支持平台，路径包括 Samuel Karp 的 RunJ、Doug Rabson 的 Buildah 与 Podman 移植以及官方镜像。（BSD Now EP640，[106.30-305.54]，L2）
+- Jim Salter 的 ZFS 灾难恢复文章以 Sanoid 与 Syncoid 实现快照、销毁与复制的自动化，并强调 RAID 不是备份、备份机应主动拉取而非被动接收。（BSD Now EP640，[339.80-818.48]，L1）
+- Chris Siebenmann 通过阅读 DSL 源码说明 ZFS 的 written 与 written@ 属性即时计算，written 需回加已释放空间以避免负值。（BSD Now EP640，[849.96-1060.68]，L1）
+- Justin Sherrill 提醒间歇运行的 DragonFly BSD 虚拟机与笔记本因 cron 不触发而无法自动执行 HAMMER 清理，须手动运行 cleanup 以防空间耗尽。（BSD Now EP640，[1070.44-1192.64]，L1）
+- CHM 2024 年发布的 Ken Thompson 与 Doug McIlroy 口述史含转录与约四个半小时视频，回顾贝尔实验室与早期 Unix。（BSD Now EP640，[1218.68-1264.24]，L2）
+- 1966 年 Joseph Weizenbaum 发表 ELIZA 一文，ELIZA 被视为最早聊天机器人之一，其引发的拟人化反应即 Eliza 效应，并推动作者转向人工智能批评。（BSD Now EP640，[1272.40-1486.48]，L2）
+- David Gwynne 在 OpenBSD 引入 source 与 state limiters，以单一限流器跨多端口限制状态数与创建速率，缓解规则重载带来的状态计数重置问题。（BSD Now EP640，[1581.78-1846.92]，L1）
+- Michael W. Lucas 介绍 FreeBSD Mastery: Jails 一书：区分 base jail 的 origin/derived 组件，提出 incomplete jail 概念，即 jail 是命名空间变换集合，可只做进程分组而不必限制文件系统与网络。（BSD Now EP293，[826.5-1092.8]，L1）
+- Lucas 说明 jails 自 1998 年 PHK 首次提交代码以来，配置方式属部落知识，历经多代官方方式与易用方式更替；VNET 在 FreeBSD 12 成为默认，改变了 jail 网络能力。（BSD Now EP293，[448.38-761.02]，L1）
+- 访谈提及 iocage 因其 ZFS 感知与插件机制被选为书中管理框架，其官方插件经过审计，可对比 Docker 容器；并提及 RunC 容器框架移植到 FreeBSD jail、可跨 OS 暂停迁移。（BSD Now EP293，[1408.58-1571.16]，L1）
+- FreeBSD 12.0 正式发布，引入 UFS 柱面组映射校验和、trim 合并、NFS 4.1 pNFS 服务器支持，以及 ZFS 的 spacemap v2、large dnode 等特性。（BSD Now EP276，[510.90-709.22]，L2）
+- FreeBSD 12.0 将引导器默认脚本语言从 Forth 改为 Lua，GELI 启动支持经 Ian Lepore 扩展至全部架构与类磁盘设备，并可借加载器在启动前更新 CPU 微码。（BSD Now EP276，[757.90-869.54]，L2）
+- 节目重述 FreeBSD jails 于 2000 年首现、早于 Solaris Zones 与 Docker，其设计以安全隔离为先，源于隔离易被攻破的 PHP 脚本这一托管场景。（BSD Now EP276，[1155.72-1278.22]，L2）
+- GhostBSD 创始人 Eric Turgeon 自述 2009 年因想要 GNOME 2 桌面的 BSD 而创办 GhostBSD，后成为基于 TrueOS、以 MATE 为桌面的发行版。（BSD Now EP276，[2748.48-2926.06]，L1）
+- backtrace.io 文章比较 GCC 与 Clang 在优化下的 DWARF 调试信息质量，指出 Clang 对部分优化变量可能给出错误值而非“已优化”提示。（BSD Now EP223，[82.36-97.84]，L2）
+- 该期讲解 Rust 应用移植到 FreeBSD ports 的流程：ports 以 Makefile 描述构建安装，portlint 检查顺序，make makepatch 生成补丁，约 30,000 个 ports 依赖 POSIX 可移植性。（BSD Now EP223，[916.48-1100.46]，L2）
+- 该期辨析 Docker 在 FreeBSD/Solaris 的意义：Docker 是 Linux 与 Windows 隔离问题的解决方案，FreeBSD 以 jails 实现隔离，Docker 的移植依赖 Linux 模拟与 ZFS。（BSD Now EP223，[3109.0-3269.08]，L2）
+- FreeBSD 基金会 11 月更新：Matt Ahrens 推进 RAID-Z 扩容（由 FreeBSD 基金会、Delphix、iXsystems 合办），预计 2018 年合入并赶上 FreeBSD 12。（BSD Now EP223，[5082.36-5176.8]，L2）
+- Raymond Chen 复述复杂系统的基本失效模式定理：任何复杂系统都处于某种失效模式，局部补偿使问题潜伏，改变只会带来更复杂的反制。（BSD Now EP631，[138.14-224.48]，L1）
+- Dr. Brian Robert Callahan 为 QBE 的 ARM64 后端编写窥孔优化，消除冗余寄存器拷贝与可即时数化的算术指令，说明 ARM64 定长指令下只能通过删除指令获利。（BSD Now EP631，[286.40-737.76]，L1）
+- FreeBSD 笔记本作者发现 Nvidia 驱动会覆盖 Xorg 与 DRM 模块的文件，导致 GL 支持判定错乱，移除 Nvidia 驱动并重装 Intel 与 DRM 驱动后恢复正常。（BSD Now EP631，[765.84-908.32]，L1）
+- 以 devd 规则按 USB 厂商与产品 ID 建立符号链接，并把链接置于 jail 根目录而非 /dev，可将设备以稳定名称传入 FreeBSD jail。（BSD Now EP631，[921.84-1316.76]，L1）
+- Chris Siebenmann 澄清 ZFS 快照并非完全不可变，快照元数据会随独有空间统计、快照删除与重命名而更新，只有文件系统状态被冻结。（BSD Now EP631，[1321.58-1407.46]，L1）
+- 将 PeerTube 从 Debian 迁移到 FreeBSD 的过程以 UFS 而非 ZFS 作为客户机文件系统，以避免在 OmniOS 的 ZFS 上嵌套 ZFS。（BSD Now EP631，[1417.28-1794.48]，L1）
+- FreeBSD 基金会于 2000 年前后创立，直接动因是让项目拥有可持有注册商标并募集资金的法律实体；首任团队由 Justin Gibbs、John Polstra 与 John Bresler 等志愿者组成，早期由 Gibbs 个人垫资起步。（BSD Now EP616，[248.88-257.34]，L1）
+- 基金会选择 501(c)(3) 公共慈善结构，而非 Linux 基金会式的 501(c)(6) 会员制；前者的资金来源以公众捐赠为主，且须证明其服务于公共目的，这一法律结构差异决定了二者的治理取向。（BSD Now EP616，[289.12-311.36]，L1）
+- 基金会由最初亲力亲为的三名志愿者董事会，发展为拥有约七名员工与二十名承包商的职业化机构，预算规模约二百七十万至二百九十万美元。（BSD Now EP616，[549.7-586.06]，L1）
+- core team 每两年改选并越来越多地承担技术路线图职责，基金会作为持久实体提供连续性与支持，二者通过季度报告、会议记录与共同培训保持对齐。（BSD Now EP616，[1844.08-2006.00]，L1）
+- 受访者将 Jails 追认为容器化的先驱之一，但认为 FreeBSD 社区的“黑客伦理”与“用代码说话”传统使其长期缺乏面向市场的叙事能力。（BSD Now EP616，[1186.70-1252.80]，L2）
+- NYCBSDCon 2014 以“BSD in production”为主题，Dru Lavigne 开场，议题包括 FreeNAS/PC-BSD 的 ZFS 管理、BSD 路由器及以 FreeBSD 与 ZFS 运行 PostgreSQL。（BSD Now EP24，[73.68-95.60]，L2）
+- Luke Marsden 自述 15 岁起经营主机公司，在牛津学习理论计算机科学后创立 HybridCluster，以解决主机业务中反复出现的宕机与扩展问题。（BSD Now EP24，[1074.80-1171.02]，L1）
+- HybridCluster 以 jail 或容器为应用单元，基于 ZFS 快照与 send/receive 实现异步复制、故障转移与亚秒级活迁移，作为 SAN 与虚拟机方案的替代。（BSD Now EP24，[1282.16-1548.36]，L1）
+- HybridCluster 部署的操作系统为略经修改的 FreeBSD 9.2 stable，工程师 Andriy Gapon 为 FreeBSD 开发者并将修复回馈社区；产品以每服务器每月 160 美元许可销售。（BSD Now EP24，[1557.08-1612.28]，L1）
+- 新闻讨论 FreeBSD 10 作为防火墙：PF 经 SMP 优化后性能更强但规则语法较旧，简单规则场景下 IPFW 因解析路径更短而更快。（BSD Now EP24，[480.68-577.34]，L2）
+- Poul-Henning Kamp 自述其在 1990 年代初于丹麦公司使用 Unix 工作，386BSD 由 Bill Jolitz 将伯克利内核移植到标准 PC 硬件后开始接触；FreeBSD 项目从 386BSD 的生长中形成，他因时区原因未参与发起，但在项目启动约六小时内加入并自始参与。（BSD Now EP7，[765.12-827.62]，L1）
+- Jails 的起源据 Poul-Henning Kamp 口述：chroot 最初是伯克利为构建 release 而作，他将其打磨并添加特性后未用于发布；后因南卡罗来纳州一位托管商希望在同一服务器运行多个 Apache 与 MySQL 版本而提出资助开发，约定一年后提交入 FreeBSD，最终他与 Robert Watson 合写论文《Confining the Omnipotent Root》并在 Maastricht 的 2000 年会议上发表。（BSD Now EP7，[968.64-1077.26]，L1）
+- Poul-Henning Kamp 将 jail 描述为单向镜：主机管理员可以站在 jail 之外向内观察而不被 jail 内进程察觉，这一特性被安全研究者用于蜜罐，也被用于 CDN 计费系统等场景；jail 后续又获得虚拟网络栈，使单一内核可启动多个隔离环境。（BSD Now EP7，[1095.10-1257.20]，L1）
+- MD5 crypt 诞生于 FreeBSD 2.0 时期：因美国加密出口管制，FreeBSD 无法随发行版附带基于 DES 的标准密码扰码器，secure 发行版改从南非分发；Poul-Henning Kamp 用一个下午写出 MD5 crypt 并以 $1$ 前缀预留算法升级机制，该代码后来广泛扩散至 Cisco 设备、glibc、Flash、JavaScript 与 COBOL 实现，他估计一度保护约五成互联网的完整性。（BSD Now EP7，[1481.56-1750.10]，L1）
+- Poul-Henning Kamp 在 DARPA 合同背景下开发 GEOM 可插拔磁盘 I/O 框架，并实现面向全分区加密的 GBDE；GELI 则由 Pawel 编写，二者共同构成 FreeBSD 磁盘加密层。他亦以吃自己的狗粮形容其笔记本自 1992 年起运行 FreeBSD 且分区以 GBDE 加密。（BSD Now EP7，[1756.80-1900.42]，L1）
+
+**史料**：
+
+- OpenBSD 2.8 光盘为当事人 Jason Tubner 的个人入门一手经历，经当期采访自述。（BSD Now EP513，[389.32-404.68]，L1）
+- Fielder 与 Hunter 1986 年著作被节目指为 su 降权误用的历史文本来源之一，属于经主持人转述的二手史料线索。（BSD Now EP513，[1583.36-1600.52]，L2）
+- setuidgid（daemontools，1997 年发布，最初称 setuser）及其克隆工具的谱系，作为 su 专用降权替代工具的历史证据，经节目转述。（BSD Now EP513，[1858.80-1896.40]，L2）
+- FreshPorts 项目迁移经历为 Dan Langille 本人一手自述，涉及 New Jersey、Austin 与 AWS 三代主机及 jail 拆分。（BSD Now EP499，[2093.20-2320.00]，L1）
+- BSDCan 会议组织史为 Dan Langille 本人一手自述，涉及 2004 年首届 BC camp 与 2023 年第二十届办会。（BSD Now EP499，[1442.02-2093.20]，L1）
+- Syncoid 与 ZFS 快照在 jail 迁移中的应用，为 Dan Langille 本人一手实践叙述。（BSD Now EP499，[911.54-1104.46]，L1）
+- Michael W Lucas 关于 1995 年以 33.6k 拨号管理名称服务器、试用 Linux 与 Windows NT 未果、最终依赖 FreeBSD 获得稳定运行的叙述，属当事人一手口述史料。（BSD Now EP406，[1772.42-1822.78]，L1）
+- FreeBSD 2021 年第一季度状态报告记载 doc 迁移于 2021 年 1 月 23 日完成，由 Sergio Carlavilla 等维护文档基础设施，属可核对的一手工程记录。（BSD Now EP406，[1070.12-1096.9]，L2）
+- OpenBSD 6.8 官方变更日志与发行公告，涵盖 OpenSSH 8.4、LibreSSL 3.2.2、OpenSMTPD 与 VMM/VMD 更新，由主持人转述。（BSD Now EP374，[357.24-391.04]，L2）
+- NetBSD 9.1 官方发布公告，涵盖 cgd 并行磁盘加密、ZFS、NVMM、NPF、X11 默认窗口管理器切换等内容，由主持人转述。（BSD Now EP374，[590.42-823.44]，L2）
+- OpenZFS 开发者峰会 2020 议题，包括 Matt Ahrens 论 OpenZFS 状态与版本化、George Wilson 论 ARC 与操作系统内存协作、持久 L2ARC、ZIL 并行化、顺序重建与 send/recv 性能提升，由 Alan Jude 亲历转述。（BSD Now EP374，[974.72-1777.74]，L1）
+- Michael W. Lucas 当事人自述其《FreeBSD Mastery: Jails》《SNMP Mastery》《Sudo Mastery》写作、ZFS 与 jail 集成方案及 BSDCan 拍卖经历。（BSD Now EP329，[102.00-105.14]，L1）
+- 《Terrapin Sky Tango》初稿拍卖物及“缺最后 27 页”的特别版实物，Bob Beck 与 Christophe Provost 各持一份，Lucas 自留一份，余一份拟在 BSDCan 2020 拍卖。（BSD Now EP329，[1207.20-1296.00]，L1）
+- NetSNMP man page 与 Cisco 文档被 Lucas 指为参考而非教程，构成 SNMP 学习生态的二手史料。（BSD Now EP329，[1612.64-1626.18]，L2）
+- Trenton Schultz 本人访谈自述（Trolltech 七年与 Nokia 一年经历、ROS 移植、博士研究）。（BSD Now EP321，[105.18-119.16]，L1）
+- Michael W. Lucas《FreeBSD Mastery: Jails》及配套六书（Schultz 转述其阅读体验与前置知识结构）。（BSD Now EP321，[1259.36-1339.12]，L2）
+- EuroBSDCon 2019 Lillehammer 的 ROS on FreeBSD 演讲，为 Schultz 本人报告。（BSD Now EP321，[1459.40-1468.78]，L1）
+- FreeBSD Foundation 博客 FreeBSD Officially Supported in the OCI Runtime Specification 1.3。（BSD Now EP640，[106.30-305.54]，L2）
+- Jim Salter 于 Klara Systems 的 ZFS 灾难恢复文章。（BSD Now EP640，[339.80-818.48]，L1）
+- Chris Siebenmann 关于 OpenZFS written 与 written@ 属性的博客。（BSD Now EP640，[849.96-1060.68]，L1）
+- Justin Sherrill 的 DragonFly BSD Digest。（BSD Now EP640，[1070.44-1192.64]，L1）
+- David Gwynne 的 Undeadly 文章 source and state limiters in PF。（BSD Now EP640，[1581.78-1846.92]，L1）
+- Michael W. Lucas 的 FreeBSD Mastery: Jails 及 FreeBSD Mastery: ZFS、Absolute FreeBSD 等系列著作。（BSD Now EP293，[74.98-96.56]，L1）
+- AsiaBSDCon 上 RunC 容器框架移植到 FreeBSD jail 的演讲，可暂停迁移并保留 TCP socket 缓冲。（BSD Now EP293，[2524.38-2578.82]，L1）
+- 提及 NetBSD 团队论文 KLEAK：以污点追踪标记内核内存并扫描内核与用户态交换缓冲区，在 NetBSD 与 FreeBSD 11.2 上共检出 21 处此前未知的内核内存泄漏。（BSD Now EP276，[2050.46-2252.04]，L2）
+- 提及 FreeBSD 12.0 的 ddb 压缩崩溃转储、bectl 引导环境控制工具导入基础系统，以及 pf 经 RM 锁替换 RW 锁带来的性能提升。（BSD Now EP276，[277.06-292.20]，L2）
+- backtrace.io 的编译器可调试性文章，以 DWARF 状态机解释优化后变量的取值恢复。（BSD Now EP223，[72.32-97.84]，L2）
+- Andrew Cherkashin 的 Rust 移植 Medium 文章（以 fd 工具为例说明 port 的 Makefile 结构）。（BSD Now EP223，[923.72-1010.84]，L2）
+- FreeBSD 基金会 2017 年 11 月开发项目更新，含 RAID-Z 扩容、Broadcom Wi-Fi、ARM bhyve 与 LLD。（BSD Now EP223，[5033.72-5513.96]，L2）
+- Raymond Chen 于 devblogs.microsoft.com 的《The fundamental failure mode theorem》。（BSD Now EP631，[138.14-224.48]，L1）
+- Dr. Brian Robert Callahan 博客 QBE ARM64 窥孔优化系列。（BSD Now EP631，[286.40-737.76]，L1）
+- Chris Siebenmann 博客 ZFS snapshots aren't as immutable as I thought。（BSD Now EP631，[1321.58-1407.46]，L1）
+- 关于 FreeBSD jail 设备稳定名称与 PeerTube 迁移的两篇博客。（BSD Now EP631，[921.84-1794.48]，L1）
+- 本期为 FreeBSD 基金会执行董事 Deb Goodkin 与早期创始人 Justin Gibbs 的口述访谈，属当事人一手自述；访谈提及早期商标转让与基金会自筹资金的历史细节。　[存疑脚注] 转写将商标原持有人写作 Gwyn River，疑为 Walnut Creek 的语音识别讹误，须以基金会档案核实。（BSD Now EP616，[420.22-528.70]，L1）
+- 本期史料包括 NYCBSDCon 2014 议程与现场反馈、Luke Marsden 访谈（当事人自述）、HybridCluster 产品说明及 FreeBSD 10 PF/IPFW 讨论。（BSD Now EP24，[1059.58-1612.28]，L1）
+- 本期对 Poul-Henning Kamp 的当事人访谈自述，他是 FreeBSD 项目早期成员，也是 jail、GEOM、GBDE 与 MD5 crypt 的亲历者。（BSD Now EP7，[707.32-2296.90]，L1）
+- Kamp 与 Robert Watson 合著论文《Jails: Confining the Omnipotent Root》（BSDCon 2000），是对 jail 的系统化表述。（BSD Now EP7，[1052.26-1077.26]，L3）
+- jail(2)、gbde(8)、geli(8) 手册页及 FreeBSD 源码仓库中对应提交记录，可作为交叉验证来源。（BSD Now EP7，L3）
+
+**史观**：
+
+- 总纲10 动手者创造历史：生产使用者通过报错与反馈参与 BSD 演进，默默做事的使用者同样是历史主体。：Jason 及其机构以生产使用向 BSD 项目反馈缺陷，BSD 的完善来自使用者的动手反馈而非单向的官方规划。（BSD Now EP513，[629.78-712.56]，L1）
+- 总纲9 经验优先：以实机安装与生产使用的经验作为选择操作系统的依据。：Jason 的个人路径由 Solaris、Linux 到 OpenBSD 光盘的实机经验驱动，其判断以实际使用而非抽象宣传为依据。（BSD Now EP513，[325.74-418.48]，L1）
+- 总纲8 本体论上各方平等：各 BSD 分支按工具适配性平等参与生产部署，不预设等级次序。：机构同时使用 FreeBSD 与 OpenBSD 并按具体任务选型，而非只认同单一 BSD 分支。（BSD Now EP513，[193.80-222.84]，L1）
+- 总纲10 动手者创造历史：个人长期维护公共服务并组织社区会议，构成 BSD 生态的隐性基础设施。：Dan Langille 长期独自维护 FreshPorts 与组织 BSDCan，是默默做事的动手者。（BSD Now EP499，[2093.20-2320.00]，L1）
+- 总纲9 经验优先：以实际部署需要为准绳选择 jail 管理方式，而非盲从现成管理器。：其 jails 实践由具体场景推动，弃用管理器回归脚本，显示经验优先于既有工具的教条。（BSD Now EP499，[1666.86-1734.30]，L1）
+- 总纲4 分离聚合是永恒规律：服务组件在单主机聚合与多 jail 分离之间重组，架构随需求循环演进。：FreshPorts 由单主机聚合拆分为多 jail 分离，服务架构在分离聚合中演化。（BSD Now EP499，[2093.20-2320.00]，L1）
+- 总纲9 经验优先：Michael W Lucas 以一线系统管理员身份在崩溃与抢修中验证 FreeBSD 的稳定性，其写作生涯源于实际运维经验，属经验优先与动手者创造历史的例证。（BSD Now EP406，[1772.42-1825.98]，L1）
+- 总纲4 分离聚合是永恒规律：FreeBSD 从 Subversion 到 Git 的迁移及文档从 SGML/XML 到 AsciiDoc 的切换，是工具链层面的分离聚合重组，旧基础设施被分阶段替代而非一次性革命。（BSD Now EP406，[776.52-1096.9]，L2）
+- 总纲10 动手者创造历史：OpenZFS 峰会的进展来自各平台维护者在 ARC 内存协作、持久 L2ARC、顺序重建等具体工程上的改进，而非单一权威的主导。（BSD Now EP374，[1024.98-1169.92]，L2）
+- 总纲4 分离聚合是永恒规律：OpenZFS 代码在 FreeBSD、Linux、illumos、macOS、Windows 之间聚合，jail 则在 chroot 基础上分离出独立的隔离模型，两者皆呈现分离聚合的循环。（BSD Now EP374，[1848.72-2116.32]，L2）
+- 总纲10 动手者创造历史：总纲10 动手者创造历史：Lucas 为写 jails 书先写六本书、为搭上传服务亲手组合 ZFS 与 jail，呈现动手者的知识积累路径。（BSD Now EP329，[340.12-349.04]，L1）
+- 总纲9 经验优先：总纲9 经验优先：jails 与 ZFS 的组合来自客户需经网站上传文件的实际需求，从经验出发而非抽象设计。（BSD Now EP329，[716.52-726.06]，L1）
+- 总纲11 商品是形式主义：总纲11 商品是形式主义：技术书是 Lucas 赖以谋生的商品，赞助与销售决定其生产节奏，非虚构的收入供养小说写作。（BSD Now EP329，[2563.84-2589.74]，L1）
+- 总纲13 法律与道德是利益分配：总纲13 法律与道德是利益分配：出版商取走版权终身加身后 70 年，作者被视为创作并许可知识产权者，利益分配格局决定出版策略。（BSD Now EP329，[2752.48-2777.46]，L1）
+- 总纲4 分离聚合是永恒规律：总纲4 分离聚合是永恒规律：ZFS 与 zones 本属 Sun 谱系、jails 属 FreeBSD 谱系，二者在 FreeBSD 重新聚合为可委托数据集的组合。（BSD Now EP329，[812.10-830.46]，L1）
+- 总纲22 知识注定过时：总纲22 知识注定过时：Sudo 再版与 SNMP 教程因配置方式变化而需更新，Lucas 逐年修正既有知识。（BSD Now EP329，[140.74-155.26]，L1）
+- 总纲10 动手者创造历史：总纲10 动手者创造历史：Schultz 以一天搭通通信层、亲手改信号量调用等动手移植推动 ROS 进入 FreeBSD。（BSD Now EP321，[1052.42-1067.84]，L1）
+- 总纲9 经验优先：总纲9 经验优先：因不想网络跳转的实际需求驱动移植，经验场景优先于宏大目标。（BSD Now EP321，[1002.64-1021.60]，L1）
+- 总纲7 理论必须自反：总纲7 理论必须自反：机器人隐私研究要求自问“谁还能看到这段影像”，对技术后果保持反思。（BSD Now EP321，[2751.92-2778.28]，L1）
+- 总纲5 没有必然性，只有偶然性：总纲5 没有必然性，只有偶然性：能否移植取决于 OpenCV 恰好入 ports、Qt 恰好现代化等偶然条件。（BSD Now EP321，[1178.12-1193.60]，L1）
+- 总纲22 知识注定过时：总纲22 知识注定过时：2017 年失败到 2019 年成功，只因 ports 生态与工具链随时间变化。（BSD Now EP321，[1180.52-1186.20]，L1）
+- 总纲8 本体论上各方平等：总纲8 本体论上各方平等：FreeBSD 作为副业与 ROS/Ubuntu 研究主线的并存被平等叙述，不贬低任何工具。（BSD Now EP321，[786.20-794.40]，L1）
+- 总纲10 动手者创造历史：总纲10 动手者创造历史：OCI 支持由 Samuel Karp、Doug Rabson 等志愿者的多年内核与工具链工作累积而成。（BSD Now EP640，[227.38-305.54]，L2）
+- 总纲9 经验优先：总纲9 经验优先：Jim Salter 以亲身经历过的断电、火灾、失窃等故障说明为何 RAID 不等于备份。（BSD Now EP640，[630.76-692.68]，L1）
+- 总纲22 知识注定过时：总纲22 知识注定过时：HAMMER 清理依赖 cron 定时触发的假设在笔记本关机场景下失效，反映旧运维假设随硬件使用方式变化而过时。（BSD Now EP640，[1081.24-1215.64]，L1）
+- 总纲9 经验优先：Lucas 强调 jail 配置是部落知识，需以实操与亲手验证取代过时博客教程。（BSD Now EP293，[473.2-594.72]，L1）
+- 总纲10 动手者创造历史：PHK 于 1998 年动手加入 jail 代码，Lucas 以 26 个 jail 的亲身运维经验写书。（BSD Now EP293，[385.28-422.98]，L1）
+- 总纲8 本体论上各方平等：Verisign 同时运行一半 Linux、一半 FreeBSD 支撑 .com 与 .net，体现对多平台的本体论平等对待。（BSD Now EP293，[2598.64-2645.38]，L1）
+- 总纲18 时间是一种形式主义：jails 以“根权限不再全能”为出发点、为安全而生，却以容器先驱动身份被后世追认，说明技术意义往往由后来的市场叙事重新赋予。（BSD Now EP276，[1254.54-1287.64]，L2）
+- 总纲10 动手者创造历史：Eric Turgeon 以自建发行版作为自学计算机科学的手段，从 Linux 新手成长为 iXsystems 自动化工程师，体现动手搭建系统本身即学习与创造历史的过程。（BSD Now EP276，[2748.48-2755.34]，L1）
+- 总纲10 动手者创造历史：ports 生态以“志愿者为主、任何人均可提交 port”的机制让无数贡献者入门，节目强调 25 人以上因写 port 进入 FreeBSD。（BSD Now EP223，[1699.6-1719.64]，L2）
+- 总纲5 没有必然性，只有偶然性：对 Docker 的辨析指出便利性常战胜效率，技术采纳受偶然性与习惯支配而非纯理性。（BSD Now EP223，[3344.12-3346.44]，L2）
+- 总纲5 没有必然性，只有偶然性：总纲5 没有必然性，只有偶然性：基本失效模式定理强调复杂系统运行状态由具体故障与补偿关系决定，而非设计意图的必然实现。（BSD Now EP631，[138.14-224.48]，L1）
+- 总纲10 动手者创造历史：总纲10 动手者创造历史：笔记本作者通过动手排查定位 Nvidia 与 DRM 驱动文件覆盖问题，而非依赖文档结论。（BSD Now EP631，[874.40-908.32]，L1）
+- 总纲25 逻辑是形式主义而非世界本身的结构：总纲25 逻辑是形式主义而非世界本身的结构：ZFS 快照的不可变是概念化标签，其元数据实现仍随操作可变，说明概念与实现之间的形式主义距离。（BSD Now EP631，[1324.62-1407.46]，L1）
+- 总纲10 动手者创造历史：Justin Gibbs 自述大学二年级即因 FreeBSD 社区的信任而获得为大型 FTP 站点编写设备驱动的机会，体现技术史中默默动手者借社区空间成长的路径。（BSD Now EP616，[2482.00-2531.14]，L1）
+- 总纲3 不存在进步，只有权力再分配：基金会与 core team 在技术方向上的权责随选举制与职业化进程持续再分配，呈现治理权力的流动与重新配置，而非线性进步叙事。（BSD Now EP616，[1876.88-1997.64]，L1）
+- 总纲10 动手者创造历史：总纲10 动手者创造历史：Luke Marsden 自建主机公司并发展为 HybridCluster，是动手者以创业实践推动系统应用的代表。（BSD Now EP24，[1074.80-1171.02]，L1）
+- 总纲11 商品是形式主义：总纲11 商品是形式主义：HybridCluster 以许可模式售卖基于 jail 与 ZFS 的虚拟 SAN 与容器平台，体现软件商品化的形式。（BSD Now EP24，[1587.16-1612.28]，L1）
+- 总纲4 分离聚合是永恒规律：总纲4 分离聚合是永恒规律：通过 ZFS 复制与 jail 迁移，实现计算与存储在集群中的分离与再聚合。（BSD Now EP24，[1282.16-1548.36]，L1）
+- 总纲5 没有必然性，只有偶然性：没有必然性，只有偶然性：jail 并非源自宏大规划，而是由一个南卡罗来纳州托管商的具体商业需求偶然催生。（BSD Now EP7，[968.64-1052.26]，L1）
+- 总纲10 动手者创造历史：动手者创造历史：Poul-Henning Kamp 为具体托管需求动手实现 jail，而非在抽象层面提出容器概念。（BSD Now EP7，[968.64-1052.26]，L1）
+- 总纲13 法律与道德是利益分配：法律与道德是利益分配：美国加密出口管制直接塑造了 FreeBSD 密码扰码器的技术路径，使 MD5 crypt 与南非 secure 发行版成为法律约束下的工程选择。（BSD Now EP7，[1481.56-1534.78]，L1）
+- 总纲8 本体论上各方平等：本体论上各方平等：jail 与完整虚拟化各有价值，Poul-Henning Kamp 不将 jail 宣称为唯一正确的虚拟化方案，而是强调其单向镜等独特优势。（BSD Now EP7，[1095.10-1257.20]，L1）
+
+**辨析**：
+
+- 关于 su 降权误用的历史叙述将 Fielder 与 Hunter 1986 年著作视为源头之一，但该书是否确实传播该误用、以及 su 语义演化的精确时间线，需结合 4.4BSD 手册与 PAM 引入记录核验。　[存疑脚注] su 语义演化时间线为单一文章转述，未给出原始手册或提交编号，须交叉验证。（BSD Now EP513，[1583.36-1788.98]，L4）
+- OpenBSD dt 设备在 6.7 中悄然进入源码树的说法为节目转述，其首次引入版本与功能范围需以 OpenBSD 发布说明与提交记录确认。　[存疑脚注] dt 的引入版本与早期功能缺乏当期节目的一手出处，须以官方发布说明核验。（BSD Now EP513，[1963.84-1978.36]，L4）
+- FreshPorts 约二十年历史的起止年份与三代主机迁移时间线为当事人回忆，具体年份需以项目档案与邮件列表核验。　[存疑脚注] 项目起止与迁移年份为口述概数，需以 FreshPorts 档案或公告交叉验证。（BSD Now EP499，[2093.20-2320.00]，L4）
+- BSDCan 自 2004 年起连续办会二十年的说法为口述概数，需以会议档案确认是否存在中断或纯线上年份。　[存疑脚注] 办会连续年数为口述表述，需以会议历年记录核验是否含线上或中断年份。（BSD Now EP499，[1442.02-2093.20]，L4）
+- 转写对 BSD grep 重写的 GSoC 年份与算法细节语焉不详，其引入时间与性能争议需与 FreeBSD 提交记录对照。　[考据脚注] BSD grep 重写的 GSoC 项目年份与合入版本需查 FreeBSD 提交历史。（BSD Now EP406，[2820.16-2879.38]，L4）
+- 转写中 OpenBSD 6.8 随机种子置信度标记被表述为“RB_GOODRANDOM”，其具体宏名与语义应以 OpenBSD 6.8 发布说明及源码为准。　[存疑脚注] 具体宏名待官方变更日志核对（BSD Now EP374，[397.32-447.44]，L4）
+- “jails 书被低估”是 Lucas 的主观判断，销量与影响力需外部数据佐证，不能仅以作者自评作为传播史结论。　[存疑脚注] 当事人单方判断，缺独立销量或读者调查证据（BSD Now EP329，[438.66-454.30]，L4）
+- BSDCan 拍卖的精确金额与“四册特别版”为当事人单一口述，无独立第二来源时按单一来源推断处理。　[存疑脚注] 金额与册数系当事人记忆，宜以拍卖记录或受赠机构核对（BSD Now EP329，[1150.66-1162.46]，L4）
+- ROS1 安全缺陷为 Schultz 的口头概括，具体攻击面与 ROS2 改进需以官方文档核对。　[存疑脚注] 当事人经验性总结，未给出版本与漏洞编号（BSD Now EP321，[2607.66-2634.28]，L4）
+- 访谈转写存在大量口语断句，人名与版本号（如 FreeBSD 2.2.5）为当事人记忆，可能与档案有出入。　[考据脚注] 早期版本号系回忆，宜以发布记录核对（BSD Now EP321，[218.92-221.50]，L4）
+- 转录将 Doug Rabson 记作 Doug Rapson、将 Dave Cottlehuber 记作 Dave Cossel-Huber，人名拼写存在转写歧义。　[存疑脚注] 贡献者姓名存在语音转写偏差，须以 FreeBSD Foundation 公告核验（BSD Now EP640，[227.38-290.18]，L4）
+- ELIZA 作者名在转录中拼作 Weisenbaum 或 Weisenbalm，通行写法为 Joseph Weizenbaum，须以原始论文核验。　[考据脚注] 人名拼写存在转写偏差，以 Communications of the ACM 1966 年原文为准（BSD Now EP640，[1279.84-1342.08]，L4）
+- [存疑脚注] 转写中 iocage 拼写波动（IO cage、iokage、ILCage 等）与部分书名细节存在 ASR 噪音，未与出版物核对。　[存疑脚注] iocage 等专名拼写未经出版物核对（BSD Now EP293，[1408.58-1571.16]，L4）
+- 节目所述 jails“2000 年首现”与章节考据的 1999-04-28 首次提交存在口径差异，须以 FreeBSD commit 记录为准；FreeBSD 12.0 具体特性以官方 Release Notes 为准。　[存疑脚注] jails 首次提交日期以代码仓库 commit 为准，播客口径为发布年份。（BSD Now EP276，[1155.72-1164.06]，L3）
+- 编译器的可调试性结论基于特定版本（GCC 5.2、Clang 3.6 等）的示例，随版本演进可能改变，且文章作者所属公司售卖崩溃报告产品，存在利益关联。　[存疑脚注] 结论依赖具体编译器版本且作者存在商业利益关联（BSD Now EP223，[803.04-822.92]，L4）
+- 转录将 Raymond Chen 所属微软博客名称与若干命令参数出现错词，具体规则与命令须以原文核验。　[存疑脚注] 命令与规则细节存在转写歧义，须以原文核验（BSD Now EP631，[132.46-143.76]，L4）
+- PeerTube 迁移文章作者在转录中记作 Tom Fatigue，疑为主持人 Tom Jones 或他人，署名须以原文核验。　[存疑脚注] 作者署名存在转写歧义（BSD Now EP631，[1417.28-1432.32]，L4）
+- 访谈中的预算（约 270 万至 290 万美元）与募资（约 550 万美元）数字为当事人口述的单一来源，须与基金会年度报告交叉核对。　[存疑脚注] 预算与募资金额为当事人口述，未经年报交叉验证。（BSD Now EP616，[570.70-586.06]，L4）
+- HybridCluster 活迁移亚秒级为其商业宣传口径，需独立验证；NYCBSDCon 议题与演讲细节为主持人转述，需与会议议程核对。　[存疑脚注] 活迁移性能与会议细节以官方发布为准，需交叉验证。（BSD Now EP24，[1494.88-1500.64]，L4）
+- [存疑脚注] 转写文本对 Poul-Henning Kamp 的姓名拼写前后不一（Paul Henningkamp、Paul Heinkamp、Paul Henningham），经上下文与 FreeBSD 史实判断指 Poul-Henning Kamp，引用时须以原始音频复核。　[存疑脚注] 人名转写拼写不一致，须以原始音频复核（BSD Now EP7，[732.60-736.24]，L4）
+- [存疑脚注] Poul-Henning Kamp 口述 jail 论文发表会议时在 1998 与 2000 之间犹豫，最终自定为 2000；本卡片采信其最终自述，并与既有考据相互印证，但精确会议年份仍须以论文原文与会议议程核实。　[存疑脚注] 会议年份口述有反复，须以论文原文核实（BSD Now EP7，[1066.26-1077.26]，L4）
+- [存疑脚注] 转写将 GBDE 识别为 GBD，将 GELI 作者 Pawel 转写为 Pappel；本卡片据 FreeBSD 磁盘加密技术史判定为 GBDE 与 Pawel Jakub Dawidek，须以原始音频复核。　[存疑脚注] 磁盘加密术语与人名转写错误（BSD Now EP7，[1826.94-1836.94]，L4）
+
+**文献**：
+
+- [BSD Now EP513] Pennington J. BSD Now: 513: New Host Interview[EB/OL]. (2023-06-29)[2026-08-15]. https://www.bsdnow.tv/513.
+- [BSD Now EP499] Pennington J. BSD Now: 499: Dan Langille Interview[EB/OL]. (2023-03-23)[2026-08-15]. https://www.bsdnow.tv/499.
+- [BSD Now EP406] Pennington J. BSD Now: 406: Jailed Gemini Capsule[EB/OL]. (2021-06-10)[2026-08-15]. https://www.bsdnow.tv/406.
+- [BSD Now EP374] Pennington J. BSD Now: 374: OpenBSD’s 25th anniversary[EB/OL]. (2020-10-29)[2026-08-15]. https://www.bsdnow.tv/374.
+- [BSD Now EP329] Pennington J. BSD Now: 329: Lucas’ Arts[EB/OL]. (2019-12-19)[2026-08-15]. https://www.bsdnow.tv/329.
+- [BSD Now EP321] Pennington J. BSD Now: 321: The Robot OS[EB/OL]. (2019-10-24)[2026-08-15]. https://www.bsdnow.tv/321.
+- [BSD Now EP640] Pennington J. BSD Now: 640: Cleaning up Hammer[EB/OL]. (2025-12-04)[2026-08-15]. https://www.bsdnow.tv/640.
+- [BSD Now EP293] Pennington J. BSD Now: 293: Booking Jails[EB/OL]. (2019-04-11)[2026-08-15]. https://www.bsdnow.tv/293.
+- [BSD Now EP276] Pennington J. BSD Now: Episode 276: Ho, Ho, Ho - 12.0 | BSD Now 276[EB/OL]. (2018-12-13)[2026-08-15]. https://www.bsdnow.tv/276.
+- [BSD Now EP223] Pennington J. BSD Now: 223: Compile once, debug twice[EB/OL]. (2017-12-06)[2026-08-15]. https://www.bsdnow.tv/223.
+- [BSD Now EP631] Pennington J. BSD Now: 631: Endorphin Rush[EB/OL]. (2025-09-25)[2026-08-15]. https://www.bsdnow.tv/631.
+- [BSD Now EP616] Pennington J. BSD Now: 616: FreeBSD Foundation Interview[EB/OL]. (2025-06-19)[2026-08-15]. https://www.bsdnow.tv/616.
+- [BSD Now EP24] Pennington J. BSD Now: 24: The Cluster & The Cloud[EB/OL]. (2014-02-12)[2026-08-15]. https://www.bsdnow.tv/24.
+- [BSD Now EP7] Pennington J. BSD Now: 7: Go Directly to Jail(8)[EB/OL]. (2013-10-16)[2026-08-15]. https://www.bsdnow.tv/7.
+
+<!-- /PODCAST_REVIEW -->

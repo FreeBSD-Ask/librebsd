@@ -40,3 +40,53 @@ volume: 第13卷-bsd衍生操作系统
 - BSD 许可证文本；Berkeley CSRG 1999.7.22 William Hoskins 公告；FreeBSD Foundation 许可证立场文件；WhatsApp/NetApp/Isilon/Citrix 架构文档与工程演讲存档；FreeBSD Foundation 年报；openbsd.db 查询 L7.2.1；134 章 BSD 许可证文本与历史记录 ［A］## 267.4.3 再批评——沉默作为商品形式主义策略与许可证哲学张力的深化
 - 原材料/哲学/项目统摄史观/第 25 章.md；原材料/哲学/项目统摄史观/第 08 章.md；BSD/GPL 许可证文本；openbsd.db 查询 L7.2.1、L3.2.1、L3.2.2；NetApp/Isilon/Citrix 架构文档；FreeBSD Foundation 年报；128.4.1-128.4.2 节记录；134 章 BSD 许可证文本与历史记录；133 章 FreeBSD 商业生态记录 ［A］## 267.4.4 合图——企业沉默 BSD 现象的辩证综合
 - 原材料/哲学/项目统摄史观/第 25 章.md；BSD/GPL 许可证文本；openbsd.db 查询 L7.2.1、L3.2.1、L3.2.2；NetApp/Isilon/Citrix 架构文档；FreeBSD Foundation 年报；WhatsApp/NetApp/Isilon/Citrix 工程演讲存档；128.4.1-128.4.3 节记录；134 章 BSD 许可证文本与历史记录；133 章 FreeBSD 商业生态记录 ［A］<!-- DB_REF:bsd_derivatives.duckdb -->> **数据库引用（bsd_derivatives.duckdb）**：本子节对应 bsd_derivatives 代码仓库。> 1985-2026 年间：963,557 次提交。> 仓库总览：963,557 次提交，14,109 位贡献者，1985-06-13 至 2026-08-24。
+
+<!-- PODCAST_REVIEW v20260829 -->
+<!-- 语义复核范围：BSD Now EP354、BSD Now EP24、BSDTalk EP13（共 3 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
+
+**要点**：
+
+- FreeBSD 11.4 进入 RC2，camcontrol、freebsd-update、ZFS 书签重命名、certctl 等更新随 11.4 与 12.2 推出。（BSD Now EP354，[66.04-186.90]，L2）
+- Jim Salter 的 Ars Technica 文章以 1.9TB 虚拟机镜像为例比较 ZFS 复制与 rsync：ZFS 靠块出生时间与快照可在 8 秒内完成，而 rsync 需约 2.5 小时。（BSD Now EP354，[474.62-667.52]，L2）
+- Colin Percival 自 2008 年起主导 FreeBSD 移植至 Amazon EC2，并持续维护至今。（BSD Now EP354，[674.30-747.26]，L2）
+- FreeBSD 项目发起 2020 年社区调查，以量化数据引导项目优先事项与努力方向。（BSD Now EP354，[756.54-846.94]，L2）
+- NYCBSDCon 2014 以“BSD in production”为主题，Dru Lavigne 开场，议题包括 FreeNAS/PC-BSD 的 ZFS 管理、BSD 路由器及以 FreeBSD 与 ZFS 运行 PostgreSQL。（BSD Now EP24，[73.68-95.60]，L2）
+- Luke Marsden 自述 15 岁起经营主机公司，在牛津学习理论计算机科学后创立 HybridCluster，以解决主机业务中反复出现的宕机与扩展问题。（BSD Now EP24，[1074.80-1171.02]，L1）
+- HybridCluster 以 jail 或容器为应用单元，基于 ZFS 快照与 send/receive 实现异步复制、故障转移与亚秒级活迁移，作为 SAN 与虚拟机方案的替代。（BSD Now EP24，[1282.16-1548.36]，L1）
+- HybridCluster 部署的操作系统为略经修改的 FreeBSD 9.2 stable，工程师 Andriy Gapon 为 FreeBSD 开发者并将修复回馈社区；产品以每服务器每月 160 美元许可销售。（BSD Now EP24，[1557.08-1612.28]，L1）
+- 新闻讨论 FreeBSD 10 作为防火墙：PF 经 SMP 优化后性能更强但规则语法较旧，简单规则场景下 IPFW 因解析路径更短而更快。（BSD Now EP24，[480.68-577.34]，L2）
+- 受访者在 ShmooCon 2006 演讲中把网络安全监控数据划分为告警、统计、会话与全内容四类，主张以 Bamm Visscher 主导开发的开源接口 Sguil 整合四类数据；他批评当时流行的 Snort 告警界面 ACID 与 BASE 无法满足严肃入侵检测需求，同台者 David Bianco 又演示了不依赖任何签名、仅凭会话数据发现 Windows WMF 漏洞利用活动的检测路径。（BSDTalk EP13，[528.07-656.97]，L1）
+- 受访者回忆其 FreeBSD 使用史：1999 年获赠 FreeBSD 3.2 安装光盘，2000 年前后在得克萨斯州圣安东尼奥的空军计算机应急响应组任上尉期间，因同僚看重 FreeBSD 网络栈的稳固而促成部队以此构建传感器；2001 年初退役进入托管安全服务行业后，所在公司选定 FreeBSD 4.2 作为传感器平台，此后他创办 Tao Security，所有自建传感器仍全部基于 FreeBSD。（BSDTalk EP13，[1208.39-1310.62]，L1）
+- 截至 2006 年初，美国国防部已规定 2008 年起骨干网强制采用 IPv6；受访者以审读 O’Reilly《IPv6 Network Administration》与 Apress《Running IPv6》两本专著并在 FreeBSD 上动手实验为基础，判断 128 位源与目的地址使抓包分析的可读性显著恶化；同时指出 BSD 阵营的蓝牙安全扫描工具远少于 Linux，已有社区成员尝试将相关工具移植入 FreeBSD ports。（BSDTalk EP13，[840.37-938.92]，L1）
+
+**史料**：
+
+- Jim Salter 在 Ars Technica 的 OpenZFS 指南及 syncoid 工具说明。（BSD Now EP354，[474.62-597.86]，L2）
+- 关于 Colin Percival 的播客访谈，介绍其 Tarsnap 创立、AWS 使用经验与 FreeBSD 安全官经历。（BSD Now EP354，[674.30-747.26]，L2）
+- 本期史料包括 NYCBSDCon 2014 议程与现场反馈、Luke Marsden 访谈（当事人自述）、HybridCluster 产品说明及 FreeBSD 10 PF/IPFW 讨论。（BSD Now EP24，[1059.58-1612.28]，L1）
+- 本期限定的一手口述材料包括：ShmooCon 2006（第二届，华盛顿特区）上关于 Sguil 的演讲与 David Bianco 的 WMF 漏洞会话数据分析演示；受访者 2003 年 1 月创办并持续更新、以 FreeBSD 工具实测记录为主体的技术博客 taosecurity.blogspot.com；以及 Freshports（Dan Langille 建立的 ports 树 Web 界面）与 NYCBUG 维护的 dmesgd 硬件兼容性输出上传站。（BSDTalk EP13，[516.19-656.97]，L1）
+- 受访者给出的个人 FreeBSD 接触物证链可作年代锚点：1999 年获赠的 FreeBSD 3.2 安装光盘、2000 年安装的 FreeBSD 4.1、2001 年商用部署所用的 FreeBSD 4.2，与其军旅身份（空军计算机应急响应组）及 2005 年 Black Hat 上 Mike Lynn 与 Cisco、ISS 的争议事件的时间线相互印证。（BSDTalk EP13，[665.93-1132.38]，L1）
+
+**史观**：
+
+- 总纲9 经验优先：ZFS 复制对 rsync 的优势来自块级快照的实际经验，而非理论推断。（BSD Now EP354，[560.26-667.52]，L2）
+- 总纲3 不存在进步，只有权力再分配：社区调查旨在重新分配开发优先级，体现技术方向由使用数据而非线性进步主导。（BSD Now EP354，[756.54-846.94]，L2）
+- 总纲10 动手者创造历史：总纲10 动手者创造历史：Luke Marsden 自建主机公司并发展为 HybridCluster，是动手者以创业实践推动系统应用的代表。（BSD Now EP24，[1074.80-1171.02]，L1）
+- 总纲11 商品是形式主义：总纲11 商品是形式主义：HybridCluster 以许可模式售卖基于 jail 与 ZFS 的虚拟 SAN 与容器平台，体现软件商品化的形式。（BSD Now EP24，[1587.16-1612.28]，L1）
+- 总纲4 分离聚合是永恒规律：总纲4 分离聚合是永恒规律：通过 ZFS 复制与 jail 迁移，实现计算与存储在集群中的分离与再聚合。（BSD Now EP24，[1282.16-1548.36]，L1）
+- 总纲10 动手者创造历史：受访者自称并非 BSD 权威而只是长期用户，其技术评论的依据是先在 FreeBSD 上亲手编译与试用工具、再把经过记录进博客以备自查；这种以动手实验与经验记录为发言资格的做法，凸显了系统生态的实际演进由一线使用者的实践积累而非权威论断推动。（BSDTalk EP13，[717.47-781.39]，L1）
+- 总纲5 没有必然性，只有偶然性：Port Request 网站的诞生并非任何机构的规划产物：受访者把一系列个人化偶然条件——厌恶书签、依赖 Freshports 监视列表、发现某工具没有 port 时的不便——命名为至高懒惰，再将构想带到 NYCBUG 聚会，成员 Michael 当场动手实现并进入内测；基础设施工具由此从具体个人的省力需求中偶然生长出来。（BSDTalk EP13，[964.07-1155.61]，L1）
+
+**辨析**：
+
+- 转写中“8 秒对 2.5 小时、1150 倍”为作者特定场景的实测数据，主持人亦提示学术上此类极端比值需谨慎看待。　[存疑脚注] 极端比值需结合具体场景理解（BSD Now EP354，[615.14-641.14]，L4）
+- HybridCluster 活迁移亚秒级为其商业宣传口径，需独立验证；NYCBSDCon 议题与演讲细节为主持人转述，需与会议议程核对。　[存疑脚注] 活迁移性能与会议细节以官方发布为准，需交叉验证。（BSD Now EP24，[1494.88-1500.64]，L4）
+- 本段转写存在系统性拼写失真：公司名被记为 Dow Security 与 DAO Security，但受访者当场逐字拼读 T-A-O，应为 Tao Security；Sguil 被误拼作 Squeal，其作者 Bam Vischer 应为 Bamm Visscher，引用时须以当事人拼写说明为准。另外受访者对 ACID 与 BASE 的否定评价属从业者个人立场，缺乏第三方检验，仅可作争议性观点存档。　[存疑脚注] 对 ACID/BASE 的否定评价系受访者单方判断；人名与项目名拼写以当事人逐字拼读段为准。（BSDTalk EP13，[446.33-543.53]，L1）
+
+**文献**：
+
+- [BSD Now EP354] Pennington J. BSD Now: 354: ZFS safekeeps data[EB/OL]. (2020-06-11)[2026-08-15]. https://www.bsdnow.tv/354.
+- [BSD Now EP24] Pennington J. BSD Now: 24: The Cluster & The Cloud[EB/OL]. (2014-02-12)[2026-08-15]. https://www.bsdnow.tv/24.
+- [BSDTalk EP13] Backman W. BSDTalk: Interview with Richard Bejtlich[EB/OL]. (2006-02-03)[2026-08-15]. https://archive.org/download/bsdtalk013/bsdtalk013.ogg.
+
+<!-- /PODCAST_REVIEW -->

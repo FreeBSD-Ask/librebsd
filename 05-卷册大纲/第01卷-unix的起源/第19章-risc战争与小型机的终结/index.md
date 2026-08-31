@@ -25,3 +25,30 @@ volume: 第01卷-unix的起源
 ## 文献
 
 （待补：Patterson D A, Hennessy J L. Computer Architecture: A Quantitative Approach[M]. 6th ed. Morgan Kaufmann, 2017；Colwell R P. The Pentium Chronicles: The People, Passion, and Politics Behind Intel's Landmark Chips[M]. Wiley, 2005；[DB:references_fulltext:chapter_matches:chmatch_1537]）
+
+<!-- PODCAST_REVIEW v20260829 -->
+<!-- 语义复核范围：BSD Now EP425（共 1 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
+
+**要点**：
+
+- RISC-V 诞生于加州大学伯克利分校的并行计算实验室，规格于 2011 年公开发布，以开放指令集摆脱专利限制。（BSD Now EP425，[72.68-155.2]，L2）
+- FreeBSD 11 将 RISC-V 作为 tier 3 平台引入，至 FreeBSD 13 提升为 tier 2，反映其硬件与软件生态的逐步成熟。（BSD Now EP425，[261.34-289.84]，L2）
+- OpenBSD 的一种漏洞缓解措施是在每次启动时随机重链接内核库，使内存偏移在每次启动间不断变化。（BSD Now EP425，[347.28-368.9]，L2）
+
+**史料**：
+
+- Clara Systems 的 RISC-V 架构介绍文章、JT 对 RISC-V International 首席技术官 Mark Himelstein 的采访、Frederick Cambus 关于 NetBSD 运行于 Vortex86DX 的记录。（BSD Now EP425，[65.54-72.34]，L2）
+
+**史观**：
+
+- 总纲3 不存在进步，只有权力再分配：RISC-V 以开放指令集回应既有指令集的专利壁垒，展示技术路线的开放与封闭之争如何在权力与利益格局中展开。（BSD Now EP425，[125.88-143.06]，L2）
+
+**辨析**：
+
+- RISC-V 的伯克利起源与专利动机为文章转述，具体时间节点与参与者需与原始论文、基金会档案核对。　[存疑脚注] RISC-V 起源细节为二手转述，宜以伯克利原始论文与基金会材料校正。（BSD Now EP425，[72.68-155.2]，L4）
+
+**文献**：
+
+- [BSD Now EP425] Pennington J. BSD Now: 425: Releases galore[EB/OL]. (2021-10-21)[2026-08-15]. https://www.bsdnow.tv/425.
+
+<!-- /PODCAST_REVIEW -->

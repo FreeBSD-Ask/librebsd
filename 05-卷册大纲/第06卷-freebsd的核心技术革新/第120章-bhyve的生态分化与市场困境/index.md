@@ -45,3 +45,34 @@ volume: 第06卷-freebsd的核心技术革新
 - FreeBSD Project. bsd_commits.db freebsd-src 仓库 commit 数据库 [DB/OL]. 2026-07-27. `c:\Users\ykla\Documents\hibsd\03-原始史料库\01-代码仓库史料\01-数据库本体\bsd_commits.db`; Hibsd Project. 推断性统计.md [R/OL]. 2026-07-27. `c:\Users\ykla\Documents\hibsd\03-原始史料库\01-代码仓库史料\01-数据库本体\统计分析\推断性统计.md` Task 5; Hibsd Project. 时间序列分析.md [R/OL]. 2026-07-27. `c:\Users\ykla\Documents\hibsd\03-原始史料库\01-代码仓库史料\01-数据库本体\统计分析\时间序列分析.md` Task 14-15; Hibsd Project. 卷章数据映射.md [R/OL]. 2026-07-27. `c:\Users\ykla\Documents\hibsd\03-原始史料库\01-代码仓库史料\01-数据库本体\统计分析\卷章数据映射.md` 第五卷第 53 章映射。［A］### 史观映射> bhyve 写出了 FreeBSD 自己的 hypervisor，却没有写出 KVM 身后那条庞大的产业链——这不是代码的失败，而是时机与生态的判决。Neel Natu 在 NetApp 启动 BHyVe 项目时，KVM 已随 Linux 主线进入全球公有云，VMware 已统治企业数据中心十余年，hypervisor 市场的网络效应早已锁死。bhyve 的代码简洁、架构优雅、BSD 许可证自由，它在 FreeBSD/TrueNAS/illumos 生态中是一个成功的虚拟化方案，但它永远不会成为云时代的标准——这不是因为 bhyve 技术不好，而是因为当 2014 年 bhyve 随 FreeBSD 10.0 正式发布时，虚拟化战争早已结束。bhyve 的故事是 BSD 生态的缩影：技术优秀但资源有限，许可证自由但缺乏商业锁定，在大型厂商主导的基础设施市场中，它找到了属于自己的 niche，却无法打破既有格局。历史的判决不是 “bhyve 输给了 KVM”，而是 “在一个赢者通吃的网络效应市场中，晚到者即使做得更好，也很难改写格局”。bhyve 没有输，它只是生不逢时。---> ## 第 53.14 不同时期人员的采访录（详见 [采访录.md](采访录.md)）<!-- DB_REF:freebsd.duckdb -->> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 2010-2020 年间：488,947 次提交。> 仓库总览：1,294,851 次提交，13,875 位贡献者，1993-06-12 至 2026-08-25。
 - Carabaș M, Grehan P. Porting bhyve on ARM [C]//BSDCan 2016. Ottawa, 2016; FreeBSD Project. FreeBSD 13.0-RELEASE Release Notes [EB/OL]. (2021-04-13)[2026-07-19]. <https://www.freebsd.org/releases/13.0R/relnotes/>; FreeBSD Project. **vmm(4)** arm64 Manual Page; FreeBSD arm64 mailing list archives. lists.freebsd.org/archives/freebsd-arm/.<!-- DB_REF:freebsd.duckdb -->> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 2010-2020 年间：488,947 次提交。> 仓库总览：1,294,851 次提交，13,875 位贡献者，1993-06-12 至 2026-08-25。
 - iXsystems. Introducing TrueNAS SCALE [EB/OL]. (2020)[2026-07-19]. <https://www.truenas.com/>; iXsystems. TrueNAS CORE Release Notes [EB/OL]. [2026-07-19]. <https://www.truenas.com/docs/core/>; Kennedy C. Why We're Moving TrueNAS from FreeBSD to Debian [EB/OL]. Blocks & Files, 2024-04-08 [2026-07-19]. [考据脚注：该文章标题本身存在误导——"Moving TrueNAS from FreeBSD" 暗示 TrueNAS 整体从 FreeBSD 迁移，但文章实际讨论的是 SCALE 版本的 Linux 选择，并非 CORE 版本放弃 FreeBSD。经核查，该 URL 当前返回 404，但文章标题在互联网多个转载中可确认。]; Moore K. On the TrueNAS CORE Deprecation [EB/OL]. iXsystems Blog, 2024-04 [2026-07-19]. [考据完成：2026-07-28 经穷尽联网考据，Kris Moore 该博文的确切标题与 URL 未能核实，iXsystems 官方博客未找到匹配博文，为史料缺口].[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]<!-- DB_REF:freebsd.duckdb -->> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 2010-2020 年间：488,947 次提交。> 仓库总览：1,294,851 次提交，13,875 位贡献者，1993-06-12 至 2026-08-25。
+
+<!-- PODCAST_REVIEW v20260829 -->
+<!-- 语义复核范围：BSD Now EP337（共 1 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
+
+**要点**：
+
+- CBSD 作者以约四小时写出 K8CBSD 模块，用 bhyve 起 Ubuntu 云镜像虚拟机组成 Kubernetes 集群，展示 FreeBSD 与 Linux 技术的协作。（BSD Now EP337，[1720.78-1743.02]，L2）
+- Drew DeVault 的文章坦诚全职自由软件工作的幸福与压力：能按自己方式写代码，但伴随技术债、过高期待与时间碎片化。（BSD Now EP337，[412.76-544.44]，L2）
+- Warner Losh 在 FOSDEM 访谈中讲述恢复 Venix、接触 Unix Heritage Society（TUHS）与早期 Unix 被遗忘的首次实践。（BSD Now EP337，[2755.62-2889.14]，L2）
+- NetBSD 9 RC1 发布，含 AArch64 支持、NVMM 硬件虚拟化、内核 ASLR 与 sanitizer 等。（BSD Now EP337，[1975.48-2102.14]，L2）
+
+**史料**：
+
+- CBSD 项目的 K8CBSD 模块说明及其公开仓库与演示视频。（BSD Now EP337，[1728.62-1744.86]，L2）
+- Warner Losh 的 FOSDEM 访谈与其 Unix 早期史演讲。（BSD Now EP337，[2577.96-2992.62]，L2）
+- NetBSD 9 RC1 发布博客与 OPNsense 20.1 Keen Kingfisher 发布公告。（BSD Now EP337，[1969.8-2340.46]，L2）
+
+**史观**：
+
+- 总纲10 动手者创造历史：总纲10 动手者创造历史：CBSD 作者以几小时工程实践搭起 K8s 集群，体现工具链由动手者驱动。（BSD Now EP337，[1728.62-1743.02]，L2）
+- 总纲19 解释学循环是历史认识的根本条件：总纲19 解释学循环是历史认识的根本条件：Warner 借助重放的 Venix 源码与 TUHS 社群重新理解 Unix 早期史，史料与解释互为前提。（BSD Now EP337，[2838.34-2889.14]，L2）
+
+**辨析**：
+
+- 转写中‘K8CBSD’ 等专名与 CBSD 版本信息需以 CBSD 官方文档核验；‘Wild Nenon truce’ 等表述为语音转写噪声。　[存疑脚注] 转写专名与习语存疑（BSD Now EP337，[1540.18-1554.58]，L4）
+
+**文献**：
+
+- [BSD Now EP337] Pennington J. BSD Now: 337: Kubernetes on bhyve[EB/OL]. (2020-02-13)[2026-08-15]. https://www.bsdnow.tv/337.
+
+<!-- /PODCAST_REVIEW -->

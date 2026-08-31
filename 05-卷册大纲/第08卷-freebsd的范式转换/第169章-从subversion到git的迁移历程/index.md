@@ -50,39 +50,65 @@ volume: 第08卷-freebsd的范式转换
 - FreeBSD Project. *freebsd-git and freebsd-hackers mailing list archives*. lists.freebsd.org; Wayback Machine. *FreeBSD Wiki historical snapshots*. web.archive.org; FreeBSD Foundation. (2021). *Git Migration Retrospective*. ［A］<!-- DB_REF:freebsd.duckdb -->> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 2024-2026 年间：168,386 次提交。> 仓库总览：1,294,851 次提交，13,875 位贡献者，1993-06-12 至 2026-08-25。
 - FreeBSD Project. freebsd.db freebsd-src 仓库 commit 数据库 [DB/OL]. 2026-07-27. `c:\Users\ykla\Documents\hibsd\03-原始史料库\01-代码仓库史料\01-数据库本体\freebsd.db`; Hibsd Project. 推断性统计.md [R/OL]. 2026-07-27. `c:\Users\ykla\Documents\hibsd\03-原始史料库\01-代码仓库史料\01-数据库本体\统计分析\推断性统计.md` Task 5-6; Hibsd Project. 时间序列分析.md [R/OL]. 2026-07-27. `c:\Users\ykla\Documents\hibsd\03-原始史料库\01-代码仓库史料\01-数据库本体\统计分析\时间序列分析.md` Task 14-15; Hibsd Project. 卷章数据映射.md [R/OL]. 2026-07-27. `c:\Users\ykla\Documents\hibsd\03-原始史料库\01-代码仓库史料\01-数据库本体\统计分析\卷章数据映射.md` 第五卷第 66 章映射; Hibsd Project. 外部基准-GitHub-CHAOSS.md [R/OL]. 2026-07-27. `c:\Users\ykla\Documents\hibsd\03-原始史料库\01-代码仓库史料\01-数据库本体\统计分析\外部基准-GitHub-CHAOSS.md` 第 1.1 节（E-06、E-08 数据来源与三次复查留痕）; GitHub. Octoverse 2025: A new developer joins GitHub every second as AI leads TypeScript to #1 [R/OL]. 2025. URL: `https://github.blog/news-insights/octoverse/octoverse-a-new-developer-joins-github-every-second-as-ai-leads-typescript-to-1/`（三次复查：2026-07-27）; Internet Archive. GitHub Octoverse 2014-2017 历年存档 [DB/OL]. `https://web.archive.org/web/2014-2017/https://octoverse.github.com/`（三次复查：2026-07-27）. ［A］FreeBSD 社区论文：[FP-2019-049] Poudriere for Port Maintenance（Matthew Seaman，2019）<https://papers.freebsd.org/2019/eurobsdcon/matthew-poudriere_for_port_maintenance/>FreeBSD 社区论文：[FP-2017-004] Continuous Integration of the FreeBSD Project（Li-Wen Hsu，2017）<https://papers.freebsd.org/2017/bsdcan/lwhsu-continuous_integration_of_the_freebsd_project/>FreeBSD 社区论文：[FP-2017-002] Continuous Integration of the FreeBSD Project（Li-Wen Hsu，2017）<https://papers.freebsd.org/2017/asiabsdcon/lwhsu-continuous_integration_of_the_freebsd_project/>FreeBSD 社区论文：[FP-2016-013] Continuous Integration of the FreeBSD Project（Li-Wen Hsu，2016）<https://papers.freebsd.org/2016/eurobsdcon/lwhsu-continuous_integration_of_the_freebsd_project/>FreeBSD 社区论文：[FP-2015-008] Supporting a BSD Project（Ed Maste，2015）<https://papers.freebsd.org/2015/vbsdcon/maste-supporting_a_bsd_project/>### 史观映射> 版本控制工具的更替不是进步的阶梯，而是技术债务的循环——每一代工具都承诺永久保存，又在下一代到来时沦为需要迁移的遗产；Git 迁移既是数字档案的重建机遇，也是历史保存的潜在威胁，因为每一次格式转换都意味着某些沉默的上下文永远丢失；从 CVS 到 SVN 再到 Git，这条迁移链印证了分离聚合的宿命——工具不断分裂又不断聚合，而代码始终是那个被搬来搬去的客体；但 FreeBSD 28 年开发史在三次工具更替中完整保留，这本身就是对 BSD 社区珍视历史、尊重传承精神的最好证明---> ## 第 66.12 不同时期人员的采访录（详见 [采访录.md](采访录.md)）## 第 66.13 节 媒体反响与社区舆论（详见 [媒体反响与社区舆论.md](媒体反响与社区舆论.md)）<!-- DB_REF:freebsd.duckdb -->> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 2024-2026 年间：168,386 次提交。> 仓库总览：1,294,851 次提交，13,875 位贡献者，1993-06-12 至 2026-08-25。
 
-<!-- PODCAST_MINE v20260827 -->
-<!-- 章节主题过滤：第169章-从subversion到git的迁移历程 第 169 章 从subversion到git的迁移历程（实体评分 ≥2 命中才入选） -->
-<!-- 匹配期数：15 期，扫描 segments：13934 条 -->
+<!-- PODCAST_REVIEW v20260829 -->
+<!-- 语义复核范围：BSD Now EP370、BSD Now EP360、BSD Now EP164（共 3 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
 
-### 要点（播客口述史提取）
-- use Subversion, but they've moved all of their repos to Git. While they're still technically（BSD Now EP370 @ 315.1799）
-- moved from Subversion to Git that leaves FreeBSD as the last large open source project still using（BSD Now EP370 @ 351.6799）
-- that, you know, originally in subversion and CVS, this was just dollar sign ID. But then if you had（BSD Now EP370 @ 828.9799）
-- subversion to Git as the first step in many steps of improving and refining FreeBSD's workflow.（BSD Now EP370 @ 978.7799）
-- going to happen. So first off, why move away from Subversion in the first place? Well,（BSD Now EP370 @ 294.1999）
+**要点**：
 
-### 史料（播客当事人陈述）
-- random hacking blog he has the freebsd subversion to git migration part one why so as we've talked（BSD Now EP370 @ 239.7399）
-- And it's up in GitHub and in the FreeBSD package repository.（BSD Now EP71 @ 681.4399）
-- has been moved from the base system repository（BSD Now EP225 @ 3475.08）
-- Should developers use the realm notes tag in a subversion commit template more loosely at risk of an increase in false positives（BSD Now EP225 @ 3586.04）
+- Warner Losh 分析 FreeBSD 从 Subversion 迁移 Git 的动因：SVN 生态萎缩、CI 与协作工具以 Git 为中心、新开发者更熟悉 Git；代价包括失去关键词展开与单调递增版本号。（BSD Now EP370，[248.97-1025.79]，L2）
+- FreeBSD 已是最后一个大规模使用 Subversion 的开源项目，迁移中借鉴 Apache 与 LLVM 的迁移经验。（BSD Now EP370，[339.89-365.10]，L2）
+- rcorder 自 NetBSD 约 1998 年引入，用于根据 rc.d 脚本依赖排序启动服务；FreeBSD 已有并行化尝试，D25389 提交为 rcorder 增加并行输出标志，可节省约 15 至 20 秒启动时间。（BSD Now EP370，[2060.52-2224.76]，L2）
+- FuryBSD 2020 Q3 发布首个基于 OpenZFS 的 live 镜像，以只读或读写模式测试 FreeBSD 桌面，并保留系统完整性。（BSD Now EP370，[72.36-115.00]，L2）
+- 追查坏提交的文章介绍用 git bisect 二分定位引入回归的提交，并指出破坏可能来自非直观的依赖变更。（BSD Now EP360，[65.19-460.69]，L2）
+- FreeBSD 完成 2020 年第十一届 Core 团队选举，Baptiste Daroussin、Ed Maste、George Neville-Neil、Hiroki Sato、Kyle Evans、Mark Johnston、Scott Long、Sean Chittenden、Warner Losh 当选。（BSD Now EP360，[460.69-614.65]，L2）
+- NetBSD 在 Pinebook Pro 上以 NetBSD 9 用户态搭配 Current 内核运行，以兼顾二进制包与更好的硬件支持。（BSD Now EP360，[624.57-842.58]，L2）
+- pf 状态表存在默认大小限制，FreeBSD 另有 `net.pf.request_maxcount` sysctl 控制单次 ioctl 载入表项数；DragonFly 侧限制为静态内核值。（BSD Now EP360，[1199.40-1404.41]，L2）
+- DragonFly vkernel 类似 jail 但虚拟化整个内核，新支持 copy-on-write 镜像模式，使多个 vkernel 可从同一镜像启动，运行时变更保留在各自层而不写回原镜像文件，近似 UnionFS。（BSD Now EP164，[197.82-249.56]，L2）
+- 若将镜像设为只读，多个 vkernel 共享同一镜像且互不修改；对镜像的改动被保留在分离的变更层中。（BSD Now EP164，[226.9-239.82]，L2）
+- FreeBSD 在 Raspberry Pi 3 上的有限支持已提交 head，多数驱动可用上游，但 RNG 的 call-out 模式失效、SMP 尚未完成、VCHIQ 驱动存在仅对 ARM 成立的假设，且尚无 HDMI 支持。（BSD Now EP164，[328.18-412.58]，L2）
+- OpenBSD 自成立起一直使用 CVS，与 NetBSD 及早期 FreeBSD 相同；本期公布位于 github.com/openbsd 的官方只读镜像，含源码与 ports 等仓库。（BSD Now EP164，[3816.62-3848.04]，L2）
+- OpenBSD GitHub 镜像的 exporter 稳定性尚无保证，若基于该分支做 fork，数据可能以不同哈希重新导出而使 rebase 困难。（BSD Now EP164，[3902.24-3915.58]，L2）
+- Libreboot.org 发布以开源 BIOS 引导 OpenBSD 或 LibertyBSD 的文档，含 USB 镜像制作、Grub 配置与排障，但 Libreboot 加 Grub 尚不支持全盘加密。（BSD Now EP164，[3926.18-4004.28]，L2）
+- 主持人评论认为随着 EFI 增长，开源系统越发依赖闭源固件甚至迷你操作系统来引导，Libreboot 针对的正是最后一块不受控制的区域。（BSD Now EP164，[4007.8-4038.48]，L1）
+- Josh Paetzel 亲述协助 FreeBSD Foundation 调试 Supermicro 服务器的 PXE 引导：串口看似故障，实为系统启动停止，改为静态 DHCP 预留后正常引导，根因仍未完全查明。（BSD Now EP164，[1641.44-1928.76]，L1）
+- Josh Paetzel 认为 ZFS 中延迟敏感负载宜用 RAID10，容量优先与非延迟敏感负载宜用 RAIDZ/RAIDZ2；其团队运行过 200 至 300 盘的 RAIDZ2 与 RAID10 池且未因硬件故障丢失池。（BSD Now EP164，[2049.82-2203.34]，L1）
+- Josh Paetzel 以客机比喻 ZFS：非常安全，多数故障被冗余吸收，但一旦突破临界即彻底崩溃，且没有理解 RAID-Z 布局的数据恢复工具。（BSD Now EP164，[2434.64-2497.76]，L1）
+- Josh Paetzel 指出 ZFS 自 2011 年开源后五年间约 45% 的代码为新写，并认为文件系统需要商业实体与专业工程资源支撑。（BSD Now EP164，[2522.4-2603.72]，L1）
 
-### 史观（播客当事人观点与总纲映射）
-- （该章节匹配播客中未提取到当事人观点性陈述）
+**史料**：
 
-### 辨析（播客争议与存疑点）
-- [存疑脚注] before we get to the skill set argument. Kids these days mostly know Git and not subversion,（BSD Now EP370 @ 707.7599）
-- [存疑脚注] Should developers use the realm notes tag in a subversion commit template more loosely at risk of an increase in false positives（BSD Now EP225 @ 3586.04）
-- [存疑脚注] subversion that has had increasingly become a source of friction the argument is supported（BSD Now EP370 @ 717.2000）
+- Warner Losh 博客“FreeBSD Subversion to Git Migration, Part 1”及配套 YouTube 视频，逐条论证迁移理由。（BSD Now EP370，[248.97-1025.79]，L2）
+- Dan Langille 关于 NUT 关机测试的博文，以及 `upsdrvctl -t` 测试模式与 `upsmon -c fsd` 命令的手册说明。（BSD Now EP370，[1174.02-1519.15]，L2）
+- 追查坏提交博文与 git bisect 说明。（BSD Now EP360，[65.19-460.69]，L2）
+- FreeBSD 2020 年 Core 团队选举公告，由主持人转述当选名单。（BSD Now EP360，[460.69-614.65]，L2）
+- DragonFly vkernel copy-on-write 镜像模式的功能说明。（BSD Now EP164，[197.82-249.56]，L2）
+- FreeBSD 提交者关于 Raspberry Pi 3 支持的博客。　[存疑脚注] 博客作者全名须核验。（BSD Now EP164，[328.18-412.58]，L2）
+- OpenBSD 官方只读 GitHub 镜像（github.com/openbsd）。（BSD Now EP164，[3816.62-3915.58]，L2）
+- Libreboot.org 关于以开源 BIOS 引导 OpenBSD/LibertyBSD 的文档。（BSD Now EP164，[3926.18-4004.28]，L2）
+- Josh Paetzel 访谈自述（iXsystems，FreeNAS/TrueNAS 相关运维经验）。（BSD Now EP164，[1600.0-2610.0]，L1）
 
-### 文献（播客参考条目）
-- [BSD Now EP196] Pennington J. BSD Now: 196: PostgreZFS[EB/OL]. (2017-05-31)[2026-08-15]. https://www.bsdnow.tv/196.
-- [BSD Now EP225] Pennington J. BSD Now: 225: The one true OS[EB/OL]. (2017-12-20)[2026-08-15]. https://www.bsdnow.tv/225.
-- [BSD Now EP234] Pennington J. BSD Now: 234: Code and Community[EB/OL]. (2018-02-21)[2026-08-15]. https://www.bsdnow.tv/234.
+**史观**：
+
+- 总纲10 动手者创造历史：迁移论证强调以 CI 与协作工具降低贡献者摩擦，推动力量来自开发者的实际工作流需求。（BSD Now EP370，[581.03-707.75]，L2）
+- 总纲21 革命与改革是历史方法论的分歧：FreeBSD 迁移 Git 采取渐进改革而非激进重构，迁移团队试图保留旧用户熟悉的工作流。（BSD Now EP370，[984.63-1017.59]，L2）
+- 总纲10 动手者创造历史：FreeBSD 决策由“到场者”作出，主持人与提问者强调社区参与决定项目走向。（BSD Now EP360，[2452.99-2456.55]，L2）
+- 总纲4 分离聚合是永恒规律：Core 团队成员更替体现治理层的分离与再聚合。（BSD Now EP360，[460.69-614.65]，L2）
+- 总纲4 分离聚合是永恒规律：vkernel 以只读镜像为基底、以 copy-on-write 层承载差异，多个实例分离运行又共享同一映像，呈现分离与聚合的结构。（BSD Now EP164，[197.82-249.56]，L3）
+- 总纲3 不存在进步，只有权力再分配：Libreboot 试图把引导固件的控制权从闭源厂商转移给用户，是围绕系统控制权的权力再分配。（BSD Now EP164，[4007.8-4038.48]，L3）
+- 总纲9 经验优先：ZFS 的可靠性来自 Sun 时期大量工程投入与后续商业资源，专业经验沉淀为可用的复杂系统。（BSD Now EP164，[2522.4-2603.72]，L3）
+- 总纲25 逻辑是形式主义而非世界本身的结构：ZFS 以冗余与校验把故障可能性压到极低，但剩余风险以极端方式集中爆发，安全是形式化边界内的构造。（BSD Now EP164，[2434.64-2497.76]，L3）
+- 总纲22 知识注定过时：OpenBSD 长期使用 CVS，在 Git 成为主流后以镜像方式补足浏览体验，旧工具随生态变化而需要新形式。（BSD Now EP164，[3816.62-3900.24]，L3）
+
+**辨析**：
+
+- rcorder 并行化历史上多次尝试均遇到未声明依赖问题，主持人指出并行带来的启动加速与破坏风险并存。　[存疑脚注] 并行化风险范围待核实（BSD Now EP370，[2193.19-2299.69]，L4）
+- DragonFly 的 pf 表限制是静态内核值且未暴露为可调 sysctl，是否需要仿照 FreeBSD 改造仍待确认。　[存疑脚注] DragonFly 侧改造计划待核实（BSD Now EP360，[1360.80-1390.40]，L4）
+- [存疑脚注] 转写未给出 DragonFly vkernel copy-on-write 功能的具体提交与作者，须核验 DragonFly 仓库与提交记录。　[存疑脚注] COW 功能提交与作者须核验。（BSD Now EP164，[197.82-249.56]，L4）
+
+**文献**：
+
 - [BSD Now EP370] Pennington J. BSD Now: 370: Testing shutdown[EB/OL]. (2020-10-01)[2026-08-15]. https://www.bsdnow.tv/370.
-- [BSD Now EP2] Pennington J. BSD Now: 2: Engineering and Powder Kegs[EB/OL]. (2013-09-11)[2026-08-15]. https://www.bsdnow.tv/2.
-- [BSD Now EP30] Pennington J. BSD Now: 30: Documentation is King[EB/OL]. (2014-03-26)[2026-08-15]. https://www.bsdnow.tv/30.
-- [BSD Now EP33] Pennington J. BSD Now: 33: Certified Package Delivery[EB/OL]. (2014-04-16)[2026-08-15]. https://www.bsdnow.tv/33.
-- [BSD Now EP39] Pennington J. BSD Now: 39: The Friendly Sandbox[EB/OL]. (2014-05-28)[2026-08-15]. https://www.bsdnow.tv/39.
+- [BSD Now EP360] Pennington J. BSD Now: 360: Full circle[EB/OL]. (2020-07-23)[2026-08-15]. https://www.bsdnow.tv/360.
+- [BSD Now EP164] Pennington J. BSD Now: 164: Virtualized COW / PI?[EB/OL]. (2016-10-19)[2026-08-15]. https://www.bsdnow.tv/164.
 
-<!-- /PODCAST_MINE -->
+<!-- /PODCAST_REVIEW -->

@@ -39,3 +39,36 @@ volume: 第01卷-unix的起源
 - Camus A. "Le Mythe de Sisyphe" [M]. Paris: Gallimard, 1942（英译 "The Myth of Sisyphus" trans. J. O'Brien, 1955）；McKusick et al. 1996；Salus 1994；Stanford Encyclopedia of Philosophy. "Albert Camus" [EB/OL]. (2017-08-28)[2026-07-28]. <https://plato.stanford.edu/entries/camus/> ［B］
 - Saussure 1916；Kernighan 2019；Ritchie 1984 BLTJ [考据脚注：经相关权威来源交叉验证。]
 - Collingwood 1946；Latour "Science in Action" (1987)；本书 1.md 史观 [考据脚注：经相关权威来源交叉验证。][^doubt-resolved-60]: 据 Design_Implementation_FreeBSD_OS (未署名) 消解
+
+<!-- PODCAST_REVIEW v20260829 -->
+<!-- 语义复核范围：BSD Now EP523（共 1 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
+
+**要点**：
+
+- 该期转述 Thomas Scoville 1998 年《The Elements of Style: Unix as Literature》一文，将 Unix 内核视为少数思维同步者的共同创作，主张 Unix 传统根植于以文本、命令行为核心的文字文化，并与 Windows NT 的点选式图像文化形成对照；作者以文学修养解释 Unix 从业者中人文背景者比例偏高的现象。（BSD Now EP523，[568.60-865.28]，L2）
+- 节目借 shell 隐式按空白分词导致文件名与参数被错误拆分的问题，回溯约 1979 年 Steve Bourne 引入 $* 后因其实用性不足而增补 $@ 特殊情形的实现史，并称这一未纠正的设计缺陷长期困扰 shell 编程，rc shell 因规避此问题而受到推荐。（BSD Now EP523，[882.48-1382.28]，L2）
+- 节目摘录 Theo de Raadt 在 OpenBSD tech 邮件列表对 Zenbleed 漏洞的评估：OpenBSD 基础系统很少使用 AVX 指令，影响远小于依赖 glibc AVX 优化的 Linux；OpenBSD 已通过 current 快照与后续 errata 修复，并提醒用户必须手工安装引导块以加载 CPU 固件更新。（BSD Now EP523，[1393.64-1582.44]，L1）
+- 其余新闻包括 OPNsense 23.7 以 FreeBSD 13.2 为基础内核发布、Brian Robert Callahan 将 PCC 可移植 C 编译器移植到 illumos，以及用户因 ThinkPad BIOS 白名单和 Linux 无线驱动 GPL 兼容性限制而通过更换网卡修复 FreeBSD 无线支持。（BSD Now EP523，[1586.96-2244.58]，L2）
+
+**史料**：
+
+- Thomas Scoville《The Elements of Style: Unix as Literature》（1998 年网络文章，作者自述 1983 年起使用 Unix，时任 Expert Support Inc 工程师），为当期主持人转述的二手文本。（BSD Now EP523，[568.60-868.00]，L2）
+- OpenBSD tech 邮件列表存档中 Theo de Raadt 关于 Zenbleed 的帖子，当期节目摘录了其原文段落，属于当事人一手陈述。（BSD Now EP523，[1393.64-1582.44]，L1）
+- Steve Bourne 约 1979 年对 shell 参数展开加入 $@ 补丁的实现史线索，经节目口头转述，需以原始 shell 源码与历史手册进一步核验。　[存疑脚注] 该时间与补丁细节为单一博客转述，未见节目提供原始提交或文档编号，须交叉验证。（BSD Now EP523，[1110.76-1299.52]，L4）
+
+**史观**：
+
+- 总纲15 文化即形式主义：Unix 文字文化与 NT 图像文化均为形式化构造，界面传统是习惯与权力的形式主义表达。：Unix 与 NT 的文字/图像文化对立，显示界面传统本身即形式主义构造，两种文化形态是各自权力与习惯的形式化表达。（BSD Now EP523，[568.60-865.28]，L2）
+- 总纲9 经验优先：以当事人长期使用经验作为判断系统的依据，而非先行的抽象标准。：Scoville 以十多年使用经验而非抽象标准评判系统，Unix 社区的知识权威来自长期动手经验。（BSD Now EP523，[568.60-865.28]，L2）
+- 总纲10 动手者创造历史：shell 惯例由具体实现者的补丁与妥协形塑，而非出自抽象设计蓝图。：shell 空白分词与 $@ 补丁由 Bourne 等具体实现者的工程决策沉淀为长期惯例，动手者的选择塑造了后续数十年的编程实践。（BSD Now EP523，[1110.76-1299.52]，L2）
+
+**辨析**：
+
+- Scoville 一文的文化判断以个人见闻为主，作者自述其证据粗略且轶事化，因此其文字文化与图像文化的概括应视为个人观察而非统计结论。　[存疑脚注] 该判断来自单一作者的事后文化观察，未见系统抽样或多源数据支撑。（BSD Now EP523，[568.60-865.28]，L4）
+- Zenbleed 影响评估来自 OpenBSD 一方，称基础系统少用 AVX，但浏览器等第三方程序仍可能触发泄漏，需结合 AMD 官方披露与独立复现实验交叉验证。　[存疑脚注] OpenBSD 视角的评估需与 AMD 官方技术通报及独立测试结果交叉验证后方可采信。（BSD Now EP523，[1393.64-1582.44]，L4）
+
+**文献**：
+
+- [BSD Now EP523] Pennington J. BSD Now: 523: Literally Unix[EB/OL]. (2023-09-07)[2026-08-15]. https://www.bsdnow.tv/523.
+
+<!-- /PODCAST_REVIEW -->

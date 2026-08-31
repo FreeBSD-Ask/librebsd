@@ -29,3 +29,34 @@ volume: 第09卷-netbsd的历史
 ## 文献
 
 - [DB:references_fulltext] 参考文献全文数据库（4077 篇全文，27138 条时间线事件）—— 对应 netbsd.duckdb
+
+<!-- PODCAST_REVIEW v20260829 -->
+<!-- 语义复核范围：BSD Now EP352（共 1 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
+
+**要点**：
+
+- 本期主话题是 NetBSD 内核对随机数生成机制的重写，目标是把熵池升级到满足 256 位不可预测性等新期望。（BSD Now EP352，[182.96-190.12]，L2）
+- 主持人的核心判断是：随机数在操作系统中多处不可或缺，现代系统通常把 RD-RAND、RD-SEED 等硬件输出与哈希混合，单一熵源失效不应击穿整个系统。（BSD Now EP352，[159.08-178.48]，L2）
+- 新闻部分记载 NetBSD core team 人事变动：Matt Thomas 在服务十余年后卸任，Robert Elz 受邀加入；同期 FreeBSD core team 进行两年一度的民主选举。（BSD Now EP352，[764.8-901.42]，L2）
+
+**史料**：
+
+- NetBSD rnd(4) 手册页及其引用的随机性论文，节目提示可阅读 rnd(4) 了解熵源设计。（BSD Now EP352，[448.56-454.56]，L2）
+- NetBSD 公告邮件列表中 Alistair Crooks 发布的 core team 变更公告，记载 Matt Thomas 的 ELF、VAX 维护与 GCC 贡献。（BSD Now EP352，[764.8-788.16]，L2）
+- Bill Joy 1999 年 Linux Magazine 采访与 2003 年离任 Sun 时的报道，提及 BSD Unix、NFS、UltraSPARC、Java 与 1976 年创作的 vi。（BSD Now EP352，[1860.4-1891.92]，L3）
+
+**史观**：
+
+- 总纲10 动手者创造历史：总纲10 动手者创造历史：Matt Thomas、Robert Elz 等长期维护 ELF、VAX、shell 与 POSIX 的动手者构成社区治理的实质基础。（BSD Now EP352，[764.8-810.32]，L2）
+- 总纲9 经验优先：总纲9 经验优先：开发者对 Allwinner ARM 真随机数设备实测统计测试，发现输出高度偏置，遂以经验判定不能仅依赖该硬件熵源。（BSD Now EP352，[366.88-377.24]，L2）
+
+**辨析**：
+
+- 转写中‘Robert Ells’ 疑为 Robert Elz，写作时须以 cross_indexes.duckdb 译名表校正，不宜直接照搬语音转写。　[存疑脚注] 转写人名拼写存疑（BSD Now EP352，[764.8-800.48]，L4）
+- 转写中‘Rastrad’ 等拼写疑指 NetBSD 开发者 Riastradh（Taylor R Campbell），其 Allwinner RNG 驱动与统计测试的准确姓名需另核。　[存疑脚注] 转写人名拼写存疑（BSD Now EP352，[366.88-377.24]，L4）
+
+**文献**：
+
+- [BSD Now EP352] Pennington J. BSD Now: 352: Introducing Randomness[EB/OL]. (2020-05-28)[2026-08-15]. https://www.bsdnow.tv/352.
+
+<!-- /PODCAST_REVIEW -->

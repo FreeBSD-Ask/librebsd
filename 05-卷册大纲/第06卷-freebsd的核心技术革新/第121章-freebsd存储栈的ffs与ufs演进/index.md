@@ -54,38 +54,45 @@ volume: 第06卷-freebsd的核心技术革新
 - FreeBSD Project. **camcontrol(8)** Manual Page; McKusick, M. K. et al. (2014). *The Design and Implementation of the FreeBSD Operating System* (2nd ed.). Chapter 10; FreeBSD Project. *CAM Subsystem Source Tree*. src/sys/cam/. ［B］<!-- DB_REF:freebsd.duckdb -->> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 2010-2020 年间：488,947 次提交。> 仓库总览：1,294,851 次提交，13,875 位贡献者，1993-06-12 至 2026-08-25。
 - FreeBSD Project. **nfs(5)**, **aio(4)**, **nfsstat(1)** Manual Pages; Macklem, R. (2009-2012). *New NFSv4 Client/Server Implementation Commits*; FreeBSD Project. *FreeBSD 9.0 Release Notes* NFSv4 section; McKusick, M. K. et al. (2014). *The Design and Implementation of the FreeBSD Operating System* (2nd ed.). Chapter 9. ［A］<!-- DB_REF:freebsd.duckdb -->> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 2010-2020 年间：488,947 次提交。> 仓库总览：1,294,851 次提交，13,875 位贡献者，1993-06-12 至 2026-08-25。
 
-<!-- PODCAST_MINE v20260827 -->
-<!-- 章节主题过滤：第121章-freebsd存储栈的ffs与ufs演进 第 121 章 freebsd存储栈的ffs与ufs演进（实体评分 ≥2 命中才入选） -->
-<!-- 匹配期数：15 期，扫描 segments：14326 条 -->
+<!-- PODCAST_REVIEW v20260829 -->
+<!-- 语义复核范围：BSD Now EP298、BSD Now EP278（共 2 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
 
-### 要点（播客口述史提取）
-- matching certificate instead of not that's nice they've also imported dtrace from freebsd and（BSD Now EP125 @ 1285.339）
-- And then my little router box was my first FreeBSD, my real FreeBSD box.（BSD Now EP125 @ 1554.680）
-- I was running beta versions of the JDK when it was first ported to FreeBSD because my college used Java instead of C++ for OOP.（BSD Now EP125 @ 1640.619）
-- It's a bit of a list, I guess. Mostly in x86 land, although I did, one of the things I did with S&P was try to tease, we got a drop of code from BSDOS, just how our S&P effort in FreeBSD started.（BSD Now EP125 @ 1751.979）
-- When I first started using FreeBSD, especially back in the late 90s,（BSD Now EP125 @ 2673.800）
+**要点**：
 
-### 史料（播客当事人陈述）
-- And KGDBs are usually, it's mostly just a couple set of extra targets or bits of targets inside of GDB itself that know how to talk to a FreeBSD kernel.（BSD Now EP125 @ 2384.479）
-- and have been committed into FreeBSD base.（BSD Now EP125 @ 5348.660）
-- FreeBSD um I did some very high volume bulk emailing that was that was done for it actually（BSD Now EP172 @ 1649.459）
-- freebsd this is hello uh my day job is moving to freebsd and we wrote a thing about it uh where（BSD Now EP172 @ 4789.959）
+- 本期报道 UFS/FFS 一个源自 4.1BSD（约 1982 年）的目录项填充未初始化字节泄露，可经构造文件名泄露最多 254 字节内核栈；FreeBSD 修补并新增 fsck -z 清零填充。（BSD Now EP298，[53.24-347.78]，L2）
+- NomadBSD 1.2 为基于 FreeBSD 12.0 的 live 桌面系统，采用 Openbox 与 DSB 桌面套件，新增 Qt 图形安装器，用于数据恢复与桌面体验。（BSD Now EP298，[723.52-1023.4]，L2）
+- 本期介绍用 rdsetroot 与 autoinstall 应答文件实现 OpenBSD 无人值守升级，并预告 6.6 将随 sysupgrade 工具。（BSD Now EP298，[1060.66-1234.28]，L2）
+- McKusick 亲述伯克利早期四张桌四人同处一室、与 Bill Joy 为办公室同僚，办公室仅一部电话且十之八九是找 Bill Joy；他形容 Bill Joy 更像营销者，四处演讲、散发磁带、动员他人贡献。（BSD Now EP278，[176.66-198.66]，L1）
+- McKusick 认为 FreeBSD 二十五年来最大的成就是形成一套能持续吸纳新人并让其上升的治理机制：文档 committer 与源码 committer 同样有权选举 core，营销背景者也能当选。（BSD Now EP278，[533.12-611.68]，L1）
+- McKusick 援引 MIT 与法国南部高校的社会学研究，称多数开源项目约五年内沉寂，只有 Apache 与 FreeBSD 等项目完成三次以上成功的领导层更替，FreeBSD 已历约五代。（BSD Now EP278，[725.94-848.56]，L1）
+- McKusick 亲述 FreeBSD 基金会起源：早期发行由 Walnut Creek CD-ROM 支撑，后依赖 Yahoo 提供基础设施十余年，Justin Gibbs 因担忧单一公司退出而发起基金会。（BSD Now EP278，[1883.72-1965.34]，L1）
+- McKusick 亲述 UFS 三十年：其保存的 1982 年磁盘镜像在当代仍可读写，UFS 适合资源受限的嵌入式设备，ZFS 适合大资源环境，二者各解决不同问题。（BSD Now EP278，[1093.34-1174.26]，L1）
+- McKusick 判断容器概念发明于 FreeBSD 却在他处获得成功，FreeBSD 常把项目推进到九成而缺最后一成产品化，恰如“先驱挨箭、定居者得地”。（BSD Now EP278，[2596.78-2625.54]，L1）
 
-### 史观（播客当事人观点与总纲映射）
-- I think it hurt the penetration into the Raspberry Pi 3 market for FreeBSD.（BSD Now EP172 @ 2438.979）
-  → 史观映射：总纲11——商品是形式主义
+**史料**：
 
-### 辨析（播客争议与存疑点）
-- （该章节匹配播客中未提取到争议性陈述）
+- David G. Lawrence 提交的 UFS 补丁与 Theo de Raadt 的 OpenBSD 提交说明（1997 年 read 目录返回 EOF、2016 年改报错误）。（BSD Now EP298，[315.46-472.04]，L2）
+- AsiaBSDCon 关于 PowerPC64 移植 ports 的论文及 Ted Unangst 的评论。（BSD Now EP298，[1864.7-1957.6]，L2）
+- McKusick 提及 FAST 大会关于文件系统三十年演进的 keynote、BSDCan 2018 的采访背景，以及 CSRG 重写 AT&T 程序时 Keith Bostic 主张将署名归于他人以自保的细节。（BSD Now EP278，[339.18-390.46]，L1）
+- McKusick 提及 TeachBSD 项目，主张以真实操作系统而非玩具系统教授计算机科学，并认为 DTrace/DWatch 等工具是“玻璃制”可观测系统的重要组成部分。（BSD Now EP278，[2723.00-2781.38]，L1）
 
-### 文献（播客参考条目）
-- [BSD Now EP125] Pennington J. BSD Now: 125: DevSummits, Core and the Baldwin[EB/OL]. (2016-01-20)[2026-08-15]. https://www.bsdnow.tv/125.
-- [BSD Now EP172] Pennington J. BSD Now: 172: A tale of BSD from yore[EB/OL]. (2016-12-14)[2026-08-15]. https://www.bsdnow.tv/172.
-- [BSD Now EP193] Pennington J. BSD Now: 193: Fire up the 802.11 AC[EB/OL]. (2017-05-10)[2026-08-15]. https://www.bsdnow.tv/193.
-- [BSD Now EP216] Pennington J. BSD Now: 216: Software is storytelling[EB/OL]. (2017-10-18)[2026-08-15]. https://www.bsdnow.tv/216.
-- [BSD Now EP221] Pennington J. BSD Now: 221: BSD in Taiwan[EB/OL]. (2017-11-22)[2026-08-15]. https://www.bsdnow.tv/221.
-- [BSD Now EP223] Pennington J. BSD Now: 223: Compile once, debug twice[EB/OL]. (2017-12-06)[2026-08-15]. https://www.bsdnow.tv/223.
-- [BSD Now EP260] Pennington J. BSD Now: Episode 260: Hacking Tour of Europe | BSD Now 260[EB/OL]. (2018-08-23)[2026-08-15]. https://www.bsdnow.tv/260.
-- [BSD Now EP276] Pennington J. BSD Now: Episode 276: Ho, Ho, Ho - 12.0 | BSD Now 276[EB/OL]. (2018-12-13)[2026-08-15]. https://www.bsdnow.tv/276.
+**史观**：
 
-<!-- /PODCAST_MINE -->
+- 总纲22 知识注定过时：源自 1982 年的文件系统实现多年后仍被发现新问题，旧知识需不断更新。（BSD Now EP298，[243.08-265.96]，L2）
+- 总纲10 动手者创造历史：漏洞由动手阅读代码者发现并修复，OpenBSD 侧早年的 read 目录改动无意中缓解了泄露。（BSD Now EP298，[392.38-477.28]，L2）
+- 总纲10 动手者创造历史：McKusick 强调软件与项目的持续“养护”远非社区驱动项目所长，人们倾向做新奇有趣之事；文档与基础设施的默默维护恰是系统得以存活的关键。（BSD Now EP278，[451.46-489.68]，L1）
+- 总纲3 不存在进步，只有权力再分配：McKusick 指出历史上 IBM、微软各自占据过绝对支配地位又相继让位，Linux 今日的支配地位同样不会永远持续，FreeBSD 甘居雷达之下反而得以延续。（BSD Now EP278，[2247.34-2342.26]，L1）
+- 总纲5 没有必然性，只有偶然性：McKusick 以“容器发明于 FreeBSD 却成功于他处”为例，指出技术领先与市场成功之间并无必然因果，成功更多依赖偶然的产品化时机。（BSD Now EP278，[2596.78-2625.54]，L1）
+
+**辨析**：
+
+- [考据脚注] 转写所述 36 年 bug 与 4.1BSD 约 1982 年起源一致，但各 BSD 受影响程度不同，OpenBSD 因既有缓解不发布 errata，属节目对原始提交的转述。　[考据脚注] 各 BSD 影响面与 OpenBSD 不发布 errata 属单源转述（BSD Now EP298，[339.1-415.76]，L4）
+- McKusick 关于“文档 committer 与源码 committer 同等投票”的叙述属当事人视角，须与 FreeBSD 选举规则文件与历届 core 名单交叉核验；其对自己“不再关键”的自评也属谦辞。　[存疑脚注] 选举资格细节须以 FreeBSD Core Team 规则文件核实。（BSD Now EP278，[533.12-611.68]，L3）
+- McKusick 提及的研究（MIT 与法国高校基于 commit log 分析领导层）未给出具体出处，其“只有 Apache 与 FreeBSD 等少数项目完成多次更替”的结论需核对原始研究。　[存疑脚注] 所援引研究未具名，结论无法直接追溯。（BSD Now EP278，[725.94-799.70]，L4）
+
+**文献**：
+
+- [BSD Now EP298] Pennington J. BSD Now: 298: BSD On The Road[EB/OL]. (2019-05-16)[2026-08-15]. https://www.bsdnow.tv/298.
+- [BSD Now EP278] Pennington J. BSD Now: Episode 278: The Real McCoy | BSD Now 278[EB/OL]. (2018-12-27)[2026-08-15]. https://www.bsdnow.tv/278.
+
+<!-- /PODCAST_REVIEW -->
