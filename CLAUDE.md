@@ -193,6 +193,7 @@
 - 所有 12 缺口增强文件须含自反性声明；史观映射字段须覆盖至少 5 条相关总纲；所有史学判断须遵循 0 信任原则 + 三次复查流程。
 
 12 缺口分布：
+
 - **G1 史学方法论** → `00-编纂规则与格式规范/04-史学方法论/`
 - **G2 概念史与思想谱系** → `10-交叉索引/07-概念史与思想谱系/`
 - **G3 群体传记学与学术谱系** → `10-交叉索引/08-人物传记与学术谱系/`
@@ -280,15 +281,15 @@
 
 - 不带选项和参数的裸命令，如 mv cp 等，一般不加反引号 “`”，即不进行包裹。
 
-- **markdownlint**（`.github/.markdownlint.json`）：本地已安装 `markdownlint-cli2 v0.22.1`（基于 `markdownlint v0.40.0`），可在本地直接运行检查与修复
+- **markdownlint**（`.markdownlint.json`，仓库根目录）：本地已安装 `markdownlint-cli2 v0.22.1`（基于 `markdownlint v0.40.0`），可在本地直接运行检查与修复
   - **本地运行命令**（在仓库根目录执行）：
 
     ```sh
     # 检查全部中文 .md（排除 en/、.github/、.gitbook/、node_modules/、script/）
-    markdownlint-cli2 "**/*.md" "!en/**" "!.github/**" "!.gitbook/**" "!node_modules/**" "!script/**" --config .github/.markdownlint.json
+    markdownlint-cli2 "**/*.md" "!en/**" "!.github/**" "!.gitbook/**" "!node_modules/**" "!script/**" --config .markdownlint.json
 
     # 自动修复可修复的问题（MD012 多余空行、MD047 末尾换行、MD034 裸 URL 等）
-    markdownlint-cli2 "**/*.md" "!en/**" "!.github/**" "!.gitbook/**" "!node_modules/**" "!script/**" --config .github/.markdownlint.json --fix
+    markdownlint-cli2 "**/*.md" "!en/**" "!.github/**" "!.gitbook/**" "!node_modules/**" "!script/**" --config .markdownlint.json --fix
     ```
 
   - **MD060 表格列风格规则（重要）**：配置为 `"style": "compact"` + `"aligned_delimiter": true`
