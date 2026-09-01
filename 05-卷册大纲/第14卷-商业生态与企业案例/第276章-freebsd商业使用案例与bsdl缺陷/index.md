@@ -103,7 +103,7 @@ volume: 14
 本章所书皆是形式主义化的重构，并非对“真实的 BSD 历史”的呈现。本章的章节划分、事件选择、叙事策略、因果归因——全部基于编纂者的哲学设定。本章承认这些局限，不声称客观或中立，欢迎被更诚实的叙事所超越。
 
 <!-- PODCAST_REVIEW v20260829 -->
-<!-- 语义复核范围：BSD Now EP623、BSD Now EP58、BSD Now EP51、BSD Now EP40、BSDTalk EP41、BSDTalk EP42（共 6 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
+<!-- 语义复核范围：BSD Now EP623、BSD Now EP58、BSD Now EP51、BSD Now EP40、BSDTalk EP148、BSDTalk EP151、BSDTalk EP41、BSDTalk EP42（共 8 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
 
 **要点**：
 
@@ -123,6 +123,16 @@ volume: 14
 - Karl Lehenbauer 对 FreeBSD 的史评：认为 FreeBSD 是他见过最好的操作系统——没有 IBM 式巨额企业金援，却凭起点质量、开发者质量与工程流程的严谨性“永不断劲”；并提出度量开源项目成败的指标之一是能否挺过领导层更替，FreeBSD 凭选举制 core team 经历了开源项目中最多的领导层更替，人们生活变化后总有接替者，这一机制极为强大。（BSD Now EP40，[1413.86-1500.06]，L1）
 - PC-BSD 10.0.2（季度版，目标 2014 年 6 月中）发布前夕的工程动态：AppCafe 大量修复并展示推荐应用，Easy PBI 可从整个 ports 类别批量生成 PBI，新桌面环境 Lumina 赶工修复；pkgng 切换已进入 edge 包集，首次运行 AppCafe 自动完成转换；新 ISO 实现 GELI 全盘加密加 GRUB——旧法须保留不加密 boot 分区，内核与 loader 暴露于篡改与 rootkit 风险，新法连 boot 全盘加密，但口令仍须输入两次（向内核传递 passphrase 的机制尚未实现）。boot environment 机制同期完善：删除首个 BE 会破坏 GRUB（grub.cfg 依首个数据集 UUID 定位，删除后连 ZFS 模块都无法加载），团队修补 grub make config 在删除时重新 stamp；并新增更新前自动创建 BE，默认保留最近五个自动快照、手动创建的不清理，与 GELI 加密配合工作，主持人自认或为 OS 界首个“BE+全盘加密”组合。（BSD Now EP40，[2084.19-2611.39]，L2）
 - OpenBSD ports 与 packages 入门教程的体系要点：该体系源自 FreeBSD 但已大幅分化；分支模型为 current、stable（获得安全更新）与每六个月冻结的 release；获取 ports tree 可用 SVN 或 snapshot 下载并以 signify 验签、用 CVS 增量更新；以 flavors 与 subpackages 取代 FreeBSD 的 options 机制（如 vim 的 no_x11 flavor、pidgin 拆分 main、finch、libpurple 子包）；二进制包经 PKG_PATH 指向镜像后以 pkg_add 安装，配合 make search、pkg_info 与 infrastructure 类工具（out-of-date）管理。（BSD Now EP40，[3915.85-4362.54]，L2）
+- CodeWeavers 的工程模式为上游优先：全部工作先做进 Wine，再围绕较受限的功能集打磨稳定为 Crossover 商业产品；White 以 Debian 的不稳定版与稳定版类比，称 Wine 对应不稳定分支，Crossover 则是打磨且受支持的一方。（BSDTalk EP148，[84.60-121.60]，L1）
+- White 强调 Wine 是从零重写的 Windows API 完整实现而非模拟器，与 VMware、Xen 先虚拟一台 PC 再安装 Windows 的路线相对；他主张免装 Windows、性能与桌面集成体验俱佳是兼容层路线的优势，同时自认立场有偏。（BSDTalk EP148，[125.68-167.32]，L1）
+- Crossover for BSD 的出现并非公司战略，而是偶然条件叠加：BSD 社区成员多年在 Wine 上游改进 BSD 专属支持，White 花一个下午编译即成功，加之社区以礼貌方式提出移植请求，公司遂以不受支持版本形式发布；该版本可在 FreeBSD 与 PC-BSD 运行，FreeBSD 6 需应用补丁，开发与基础测试在 PC-BSD 完成，与 Linux 版尚不齐平且无直接支持资源。（BSDTalk EP148，[536.36-712.18]，L1）
+- 商业模式上 BSD 版不单独发售：购买 Crossover for Linux 即可获取 BSD 构建（Crossover Games 先行，Crossover Linux 7.0 发布后扩展至办公版）；White 同时向 BSD 社区抛出挑战——用户可在兼容中心投票，当时仅十人购买并投票约合 400 美元，他直言该数额不足以构成商业吸引力，另一路径是参与 Wine 的 BSD 专属 Wiki 开发。（BSDTalk EP148，[756.36-915.44]，L1）
+- 应用兼容图景：Microsoft Office 是旗舰，Office 2003 支持成熟、Office 2007 即将支持，Outlook 仍是最薄弱环节；游戏因只依赖 DirectX 接口且结构简单反而比 Outlook 易支持，World of Warcraft、Team Fortress 2 等 Steam 游戏可运行，Steam 分发缓解了 CD 拷贝保护障碍，主流作品仍以 DirectX 9 为主。（BSDTalk EP148，[188.32-341.16]，L1）
+- Frantic Films VFX 维护北美三个办公室（温尼伯为主，另含温哥华与洛杉矶），数据总量约 100 TB；各办公室间以 OpenBSD IPsec 隧道互联，办公室间日均传输 10 至 30 GB，内部流量达太比特级，温尼伯主库变更率约 20%，由新渲染与素材覆写驱动。（BSDTalk EP151，[158.72-211.52]，L1）
+- 操作系统分工依据负载实测：OpenBSD 用于文件服务器以外的一切角色，因其文件服务性能达不到业务要求；文件服务器交给 FreeBSD，采用 3ware 控制器带多盘的方案，从 2 TB 卷扩展到约 20 TB，代价是暴露 SysInstall 在 1 TB 以上卷的严重缺陷与 em 网卡极限下的系统挂起 bug，后者由 FreeBSD committer Christian Peron 协助解决。（BSDTalk EP151，[124.12-286.50]，L1）
+- 向公司内部推销 BSD 的论证是白盒哲学：支持对任何产品都昂贵且难获取，开源 BSD 给予的是可拆解的白盒而非大厂黑盒——可以拆机排查、查看栈跟踪、调试，再把信息交给能理解的人，这种能力胜过大型厂商的支持合同；实际接触的开发者都极乐于协助，甚至主动建议调整 sysctl 避免 panic，而同类服务在 Windows 生态通常需要付费。（BSDTalk EP151，[371.74-449.54]，L1）
+- BSD 进入 Frantic Films 的路径始于约五年前的严重 uptime 危机：机器频繁死亡、停工损失数千小时劳动；随机器逐步替换，性能与可靠性大幅提升，管理层转而青睐可靠网络并向客户宣称使用开源技术——他们称之为 BSD，且不论 Free 还是 Open 一律冠以 BSD 之名；Cody 自认较真却难以让管理层选定具体分支，但认为企业向客户讲 BSD 本身已是好事。（BSDTalk EP151，[457.24-513.48]，L1）
+- 个人与边缘硬件实践：Cody 日常用 MacBook，家中以 Soekris 盒与一台 OpenBSD 专用笔记本折腾无线；其上司兼朋友收藏 PA-RISC、SGI、SPARC 等老式架构，他为几乎所有机器装 OpenBSD 且仅一台 Sun 机器失败；在 BSDCan 2008 他最期待以 OpenBSD 开发者 Damien Miller 维护的 softflowd（NetFlow）分析内部高流量 Samba 传输的瓶颈。（BSDTalk EP151，[517.30-595.04]，L1）
 - Summer of Code 起源于 Google 创始人让计算机专业学生暑期持续开发而不必打工谋生的设想，DiBona 将其开源化落地：2005 年首届约 400 名学生、约 40 个组织参与，采用导师遴选制，学生入选即得 500 美元、达成申请目标再得 4000 美元；FreeBSD 与 NetBSD 均在首届受资助组织之列。（BSDTalk EP41，[249.78-357.10]，L1）
 - DiBona 自评首届成效：约 84% 学生达成目标（他自嘲花别人的钱总是大方，实际或约 75%），其中近半赛后留在项目继续贡献，远超其预期；因多数学生返校，不宜苛求其成为长期贡献者。2006 年第二届扩大组织规模并改用 Web 应用全程管理，取代首届的电邮与电子表格流程。（BSDTalk EP41，[357.10-417.38]，L1）
 - Google 开源释出分两类：API 示例以 BSD、GPL、Apache 等多许可发布；独立工具则依兼容性选型，如 Google Talk 语音组件 libjingle 经 Java 规范提案开放信令规范并以 BSD 与 GPL 发布，malloc 性能工具与 sparse hash table 实现均取 BSD 许可；DiBona 称 BSD 许可为全球第二大流行许可，企业借此确保释出代码可被最广泛使用。（BSDTalk EP41，[437.28-533.18]，L1）
@@ -142,6 +152,8 @@ volume: 14
 - 本期新闻段涉及的一手发布材料：OpenSSH 6.7 发布公告（大规模内部重构使其可用作库、SFTP 断点续传、默认禁用 arcfour 等不安全密码、移除 TCP wrappers 支持、Unix 域套接字转发、portable 版支持对 LibreSSL portable 构建、ED25519 类型的 SSHFP 记录生成）；NetBSD 6.1.5 与 6.0.6 发布公告（OpenSSL 1.0.1i、modctl 用户控内存分配、setsockopt 内存泄漏、tap 驱动竞态、IPfilter mbuf 泄漏、PTYFS 两处溢出与内存损坏修复）；GhostBSD 4.0 发布（首个基于 FreeBSD 10，clang 取代 GCC、pkgng 默认、make 换为 bmake、桌面 MATE）；Cavium 与 FreeBSD Foundation 合作公告（捐赠 ThunderX 服务器、目标 ARMv8 tier-1、至多 48 核与 100 Gbps、包仓库逾 24000 应用）；OpenBSD 上线 portroach.openbsd.org 供认领无人维护的 ports。（BSD Now EP58，[482.38-2830.89]，L2）
 - Eric LeBlanc 访谈（Xinuos 董事长兼 CEO 当事人自述）。（BSD Now EP51，[992.22-1870.22]，L1）
 - 本期提及或转述的一手材料包括：Karl Lehenbauer 当事人访谈；iX Systems 的 BSDCan 2014 wrap-up（Jenkins 持续测试工作组在 FreeBSD 集群的状态与向 source 与 port 构建扩展的头脑风暴、为 FreeNAS 在 FreeBSD 上部署 Redmine 缺陷跟踪）；Michael Dexter 与 Warren Block 受基金会资助参会后提交的 trip reports；Phabricator 在 FreeBSD wiki 上的使用说明（differential 与 audit 两种模式）；CARP failover 演示视频；Michael Lucas 的 FreeBSD 存储系列书计划（GELI、UFS、ZFS 分册）；IRC 上 Matt Ahrens 语录“ZFS 开始开发时只有 vi 和一个空文本文件”。（BSD Now EP40，[127.77-2001.69]，L2）
+- 本期为 CodeWeavers 创始人 Jeremy White 的一手口述访谈，保留 2008 年 5 月 Crossover for BSD 移植决策过程、投票数据（十人约 400 美元）与 FreeBSD 6 补丁要求等当事人陈述；开场新闻提及 OpenBSD 4.3 发布与当月 BSDCan 渥太华会议。（BSDTalk EP148，[0.00-55.32]，L1）
+- 本期为 BSDCan 2008 现场对 Frantic Films VFX 资深系统管理员 Sean Cody 的一手口述访谈，保留三办公室 100 TB 数据规模、IPsec 互联、FreeBSD 3ware 文件服务器、em 驱动 bug 与 committer Christian Peron 协助、Undeadly 新闻站编辑经历（Daniel 接替停止维护的 deadly.org 后征集编辑）等当事人陈述，可对照 undeadly.org 存档与 FreeBSD em 驱动提交记录核查。（BSDTalk EP151，[34.36-115.16]，L1）
 - 该期留存的一手史料线索：2005 年首届 Summer of Code 的组织覆盖名单含 FreeBSD 与 NetBSD；Google 截至 2006 年 5 月已释出约 20 万行代码，含 Core Dumper、Python 库、malloc 性能工具与 sparse hash table 实现；片头曲采用 OpenBSD 3.0 发行版主题曲，为 BSD 发行版歌曲文化的旁证。（BSDTalk EP41，[323.86-426.58]，L1）
 - 该期留存的一手史料线索：Slony-I 复制服务器（见 postgresql.org 文档）；3-Ware 硬件 RAID 的选型测试记录——标准为双盘系统拔出任一盘保持运行且重启后可从任一盘引导，而三年前主板板载 RAID 无一能可靠从第二盘引导；FAA 数据馈送延迟五分钟加处理约一分钟的时延结构；其个人机器上保留着 Microport Unix、Bell Technologies、SCO 时代直至 BSD 的连续文件时间戳，最早可追溯至 1980 年代末。（BSDTalk EP42，[316.28-375.46]，L1）
 
@@ -157,6 +169,8 @@ volume: 14
 - 总纲11 商品是形式主义：总纲11 商品是形式主义：访谈将操作系统视为可支持、可转售的商品，并以支持周期与许可证作为商品属性展开叙述。（BSD Now EP51，[1322.60-1363.72]，L1）
 - 总纲3 不存在进步，只有权力再分配：Karl Lehenbauer 把项目生命力归于制度而非英雄：人的生活、目标会变，无人能永续投入，选举制使接替者自然产生；FreeBSD 挺过最多领导层更替这一观察，与其说见证进步，不如说见证治理权力的周期性再分配——执掌者更迭而项目延续，权力在人群间流转而非积累。（BSD Now EP40，[1452.26-1500.06]，L1）
 - 总纲5 没有必然性，只有偶然性：FlightAware 的创立路径是偶然条件叠加而非规划必然：本是为一门有线电视软件生意试水，几个朋友拿到 FAA 向业界开放的数据流，读文档、写解析、入库、做网站，“然后它就膨胀成了一门生意”；受访者的原话呈现了一个 hobby 转化为事业的具体偶然过程。（BSD Now EP40，[871.82-911.72]，L1）
+- 总纲10 动手者创造历史：White 的叙述显示，商业移植的达成关键不在公司市场判断而在动手者：BSD 社区成员在 Wine 上游默默改进 BSD 专属代码，把移植成本从数周工程压缩为一个下午的编译，动手者的劳动改变了商业决策的成本结构，偶然的礼貌请求随之成为触发条件。（BSDTalk EP148，[849.36-915.44]，L1）
+- 总纲10 动手者创造历史：Cody 的贡献观强调社区史由动手者的多种劳动共同构成：他因不提交代码而选择为 Undeadly 写故事，把五行文本的配置经验、VLAN 上 DHCP 或 pf binat 的用法写成稿件帮助他人；OpenBSD 社区被指敌意，但他认为索取而不贡献者遭遇冷淡是投入产出的自然结果，帮助用户、提供硬件访问与代码、捐赠同为贡献形态，动手与分享才是社区存续的实体。（BSDTalk EP151，[605.64-757.78]，L1）
 - 总纲3 不存在进步，只有权力再分配：DiBona 解释平台支持优先级时直言：个体开发者对平台重要性的自我认同无法改变企业按聚合用户量分配工程资源的逻辑，被支持与否是资源权力的再分配结果而非技术优劣的裁决；被冷落平台的出路在于代码开源后由社区自行移植。（BSDTalk EP41，[688.02-723.94]，L1）
 - 总纲17 证明世界先于解释和改造世界：Lehenbauer 的可靠性主张全部建立在自设测试之上：RAID 1 使磁盘可靠性较无冗余提升千倍、ECC 内存较非 ECC 提升百万倍的判断，均以其亲手拔盘、重启、引导验证为准，而非厂商参数；这种以可重复实测证明替代宣传解释的工程取向，正是其选型纪律的核心。（BSDTalk EP42，[743.12-807.10]，L1）
 
@@ -170,6 +184,8 @@ volume: 14
 - Xinuos 与 SCO 的历史关联及其 UNIX 版权诉讼前史在本期仅被一带而过，其与 FreeBSD 关系的长期后果未在本期展开。　[存疑脚注] SCO 前史仅凭主持人转述与当事人简短开场，未经多源交叉核验（BSD Now EP51，[1015.90-1019.40]，L4）
 - UFS 损坏案悬而未决：FreeBSD 10.0-RELEASE-p3 32 位、OpenStack 虚拟机上的轻载系统（nginx 与 postfix 均运行于 jail）遭未知事件致文件系统不可修复损坏，loader 报 can't load kernel，/var/log 大部分丢失且无异常记录；主持人无法定位成因，倾向判定为 bug 而非被掩盖的入侵，建议核对 fsck 输出、启用 UFS journaling（10 的安装方式默认已开）与 crash dump 取证、改远程日志；该案同期未有结论，32 位 UFS 生产系统的脆弱性于此可见。　[存疑脚注] 损坏成因在该期录制时仍未确定，主持人对 bug 抑或入侵的判断仅为推测（BSD Now EP40，[2628.02-2883.82]，L2）
 - 本期转写延续双声道交错重复的缺陷；FlightAware 受访者姓名转写为 Carl Liambauer 与 Carl Lee and Bauer 等，据访谈内容（FlightAware 联合创始人、Tcl 社区背景、386BSD 补丁汇总经历）当为 Karl Lehenbauer，引用人名须核对原始音频；iX 员工姓名 Craig Rod-Reeder、Dan Langille（转写作 Danling Guilf）等亦存在转写失真。　[存疑脚注] 受访者及若干人名的转写拼写不可靠，须经原始音频与当期 show notes 复核（BSD Now EP40，[841.92-848.82]，L4）
+- White 承认与 Windows 逐 bug 兼容仅是玩笑，实际问题几乎都在 Wine 自身代码，但 DirectX 映射 OpenGL 后约七成原生性能、ATI 显卡驱动难用、BSD 市场规模不足等陈述均出自公司立场，需以 Wine Bugzilla 与兼容中心投票记录交叉验证。　[存疑脚注] 性能与市场数据为受访者商业立场陈述，需对照 Wine Bugzilla 与 CodeWeavers 兼容中心记录复核。（BSDTalk EP148，[356.60-460.00]，L1）
+- 转写存在数字与术语缺陷：温尼伯数据量先后记为 70 与 80 TB、多处专名误转（3ware、Soekris、OS X、softflowd），引用须以原始音频核对；OpenBSD 文件服务性能不足的判断出自其以 Samba 为主的特定负载，属个案经验，不宜泛化为对 OpenBSD 存储栈的整体评价。　[存疑脚注] 数据规模转写不一致，性能判断为单一个案负载经验。（BSDTalk EP151，[124.12-146.84]，L4）
 - DiBona 自承不了解 BSD 运行 Linux 二进制兼容层的实际状态，显示即便开源企业负责人对 BSD 技术生态亦存认知盲区；其“BSD 许可为全球第二大流行许可”为个人估计而非统计结论。[存疑脚注] 该排序无出处，仅作 2006 年企业认知样本记录。　[存疑脚注] BSD 许可流行度排序系 DiBona 口头估计，无统计数据佐证。（BSDTalk EP41，[646.06-668.74]，L4）
 - 对 BSD 的批评与敬意并存：Lehenbauer 抱怨会撞上奇怪内核限制（共享内存相关转换表的尺寸难觅文档），须翻检一年前的邮件列表自行揣测；承认其他发行版的安装流程更精致；但赞其发布工程从未放行早期 Linux 曾出现的卸载即毁文件系统一类的缺陷，并在 Linux 占尽 mind share 与公司投入的 2006 年，仍称许 Berkeley 阵营的强健，特别致敬 Theo de Raadt 与 NetBSD、OpenBSD 的工作。[考据脚注] 其所称早期 Linux umount 缺陷细节未经核实，系当事人回忆。　[考据脚注] 早期 Linux umount 缺陷的具体所指未核实，仅作当事人 2006 年回忆记录。（BSDTalk EP42，[943.92-1068.48]，L1）
 
@@ -179,6 +195,8 @@ volume: 14
 - [BSD Now EP58] Pennington J. BSD Now: 58: Behind the Masq[EB/OL]. (2014-10-08)[2026-08-15]. https://www.bsdnow.tv/58.
 - [BSD Now EP51] Pennington J. BSD Now: 51: Engineering Nginx[EB/OL]. (2014-08-20)[2026-08-15]. https://www.bsdnow.tv/51.
 - [BSD Now EP40] Pennington J. BSD Now: 40: AirPorts & Packages[EB/OL]. (2014-06-04)[2026-08-15]. https://www.bsdnow.tv/40.
+- [BSDTalk EP148] Backman W. BSDTalk: 148: bsdtalk148 - Jeremy White, Founder of CodeWeavers[EB/OL]. (2008-05-02)[2026-08-27]. https://bsdtalk.blogspot.com/2008/05/bsdtalk148-jeremy-white-founder-of.html.
+- [BSDTalk EP151] Backman W. BSDTalk: 151: bsdtalk151 - Sean Cody from Frantic Films VFX[EB/OL]. (2008-05-29)[2026-08-27]. https://bsdtalk.blogspot.com/2008/05/bsdtalk151-sean-cody-from-frantic-films.html.
 - [BSDTalk EP41] Backman W. BSDTalk: 41: bsdtalk041 - Interview with Chris DiBona from Google[EB/OL]. (2006-05-07)[2026-08-27]. https://archive.org/details/bsdtalk041.
 - [BSDTalk EP42] Backman W. BSDTalk: 42: bsdtalk042 - Interview with Karl Lehenbauer from Flightaware[EB/OL]. (2006-05-11)[2026-08-27]. https://archive.org/details/bsdtalk042.
 

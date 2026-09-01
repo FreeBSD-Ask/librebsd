@@ -53,7 +53,7 @@ volume: 第15卷-许可证哲学与法律分析
 - freebsd-doc 邮件列表；社区表彰记录 ［A］## 史料考据补充（2026-08-04 任务3 联网核验）> 主题：文档创作者——被忽视的动手者
 
 <!-- PODCAST_REVIEW v20260829 -->
-<!-- 语义复核范围：BSD Now EP329、BSD Now EP230、BSD Now EP185、BSD Now EP626、BSD Now EP22（共 5 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
+<!-- 语义复核范围：BSD Now EP329、BSD Now EP230、BSD Now EP185、BSD Now EP626、BSD Now EP22、BSDTalk EP150、BSDTalk EP153、BSDTalk EP188、BSDTalk EP204（共 9 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
 
 **要点**：
 
@@ -83,6 +83,26 @@ volume: 第15卷-许可证哲学与法律分析
 - 创刊号以 FreeBSD 10 为主题，收录 David Chisnall 论 Clang、John Baldwin 论内核 sysctl 节点、Tim Kientzle 论 BeagleBone Black 及 Alan Jude 论 ZFS 等文章，并设 ports 报告与 SVN 更新等固定栏目。（BSD Now EP22，[1801.70-1917.06]，L1）
 - 教程演示 OpenBSD 5.4 的 errata 补丁应用，以及从 CVS 检出 current/stable、先升级内核再升级 userland 的自建流程，强调遵循官方补丁说明以避免系统损坏。（BSD Now EP22，[3009.78-3553.32]，L2）
 - FreeBSD 2013 年第四季度状态报告涵盖 EC2（Colin Percival）、Xen（Justin Gibbs、Roger Pau Monné）、CAM 锁与 iSCSI（Alexander Motin）及 iwn 无线驱动（Adrian Chadd）等进展。（BSD Now EP22，[383.96-451.54]，L2）
+- Sangoma 公司沿革：约二十年历史的硬件厂商，起家于 V.35、RS-232 等数据协议接口卡；约在访谈前五年随 VoIP 技术兴起转型生产 T1 数字卡与模拟卡，凭多年硬件经验在 Asterisk 社区获得口碑。（BSDTalk EP150，[203.38-249.94]，L1）
+- Feldman 在 Sangoma 任软件项目负责人约十年，FreeBSD 驱动支持是其入职后的第一个项目；随 VoIP 发展 Linux 成为公司商业主线并占据其工作时间，但作为 FreeBSD 长期支持者，他仍以工作时间之外的努力将公司全线硬件持续推向 FreeBSD，自称视这些驱动如自己的孩子。（BSDTalk EP150，[181.18-293.70]，L1）
+- 支持形态超出驱动层：公司对全部卡型支持 FreeBSD，用户致电支持可直达设计并开发该卡驱动的工程师；公司近期宣布全线硬件终身保修；面向爱好者提供廉价入门产品，如单 T1 口基础卡与可直连电话线路、允许外接普通电话的模拟卡，便于以 Asterisk 实验 VoIP。（BSDTalk EP150，[293.70-360.30]，L1）
+- 上游化目标：当时正与社区推动 wanpipe 驱动进入 FreeBSD 基本系统树，希望借此引发 FreeBSD 用户对 Asterisk、SS7 协议与 VoIP 应用的兴趣，比照 Linux 社区已有的同类生态，并期待 FreeBSD 有朝一日能在桌面操作系统市场与对手竞争。（BSDTalk EP150，[446.22-496.46]，L1）
+- Lucas 的最新著作 Absolute FreeBSD 是其处女作 Absolute BSD 的重写；书名与成书方式的分化源于 BSD 家族的趋异：2000 至 2001 年写 Absolute BSD 时各 BSD 相同点多于差异，熟悉其一即可操作其余，而此后各分支走出独特方向——NetBSD 直指可移植性并为嵌入式开发者提供便利，另一分支（转写作 3BSD，疑为 FreeBSD）深耕 SMP、内核锁与高性能——以致每个分支都值得单独成书，他希望最终为各 BSD 各著一本。（BSDTalk EP153，[114.84-214.22]，L1）
+- 其写作理念是在纯信息（如源代码打印稿）与纯装饰之间取细线平衡：技术正确且有用之外还须可读；不只讲 how 更讲 why——为什么网络配置必须正确、为什么文件系统分区布局重要；他以 Red Hat 默认单一分区覆盖全盘为例，指出这种默认灵活但带风险，使用者应当理解风险所在。（BSDTalk EP153，[443.88-513.48]，L1）
+- 出版生态的竞争压力：Absolute BSD 热卖后，其他出版社紧盯其出版商并抢先推出同题材书籍，Absolute OpenBSD 亦遭此遇；他批评赶工出版的书是废纸，坚持一年一书的节奏，且并非全职作者，搬家等变故即打乱写作日程。（BSDTalk EP153，[335.66-369.12]，L1）
+- 应对时效与协作方法：Absolute OpenBSD 交稿数小时后 PF 宣布大批新特性，他恳求出版商宽限两三周补写章节；写作前先读邮件列表存档与 man 帕吉做足功课，开发者乐于受访，会直言某节应暂缓撰写并纠正错误；他举例就 Absolute FreeBSD 中 freebsd-update 一节向作者 Colin Percival 求证其在邮件列表中自贬早期源码为羞于示人之作的说法，获复已重写。（BSDTalk EP153，[529.68-703.54]，L1）
+- The Definitive Guide to PC-BSD（Apress出版）为PC-BSD首部专著，恰与2010年2月的PC-BSD 8同期面世；PC-BSD 8大量新特性彼时缺乏文档，作者自述系“边写边创造文档”，对KDE部分以反复试错摸清功能；全书定位兼顾两端——Windows或Mac背景的开源新手与资深FreeBSD用户（后者可自三分之一处进入）。（BSDTalk EP188，[63.40-267.34]，L1）
+- 全书结构从开源与PC-BSD起源讲起（作者直言须回应“软件不付费即不合法”的误解），继而覆盖安装（live DVD、虚拟机、双启动与自定义启动管理器；PC-BSD 8亦可直接安装FreeBSD且安装后端开放）、日常任务与定制（仿Windows控制面板分用户设置与系统管理员设置）、软件安装三法（PBI一键安装、packages、ports；ports与packages在新版中于jail环境运行以免损坏系统）、社区沟通与高级内容（jails图形化管理、FreeBSD package近自动化转为PBI、翻译、以SVN自制定制版与自定义安装）。（BSDTalk EP188，[262.24-730.08]，L1）
+- 作者特设社区章并视之为技术书中的首例：向完全新手解释IRC、论坛、邮件列表与网络礼仪，教导如何有效提问而不扰众，并列举不写代码者的参与途径；她称写作中最意外的是PC-BSD社区的深度与响应速度——邮件列表服务老用户、论坛与社交媒体服务新用户，“总有办法到达你所在之处”。（BSDTalk EP188，[548.44-1066.62]，L1）
+- 硬件要求呈分层：默认KDE需要较新机器（至少512MB内存与像样处理器）；随附的Fluxbox出乎意料地干净轻快，且PC-BSD全部工具（更新管理器、软件安装、jails）在其下均可用，老硬件亦可胜任；资源极度受限者可自DVD安装barebones FreeBSD（速度极快，但不能如传统安装挑选安装集）。（BSDTalk EP188，[1094.32-1185.54]，L1）
+- BSD认证的BSDP（professional级）面向两年以上BSD管理经验者（现有BSDA面向约六个月经验的初级），其job task分析采集雇主、在职管理员与HR反馈以定考核重点，调查结果已于访谈前一周公布；分析识别两类受众——初级须具备跨BSD基础能力（会FreeBSD配置网卡亦应能在OpenBSD完成），高级管理员拒绝被指定BSD与软件（如sendmail与postfix任选），故BSDP将改为任务加产出的考核、不指定平台与工具、贴近真实工作场景，且无需先过BSDA；考试形式受访多数要求lab与笔试结合，笔试已运营两年而lab考试在全球会议的交付方式尚待解决，BSDCan上Jim Brown将讲BSDP流程，会后另设全天公开会议并网络直播，邀请心理测量学家与公众商议考核设计。（BSDTalk EP188，[1243.22-1438.12]，L1）
+- mandoc（mdocml）起源与分工：Kristaps Dzonsons 因不满 grohtml 丑陋输出与直接转储 ASCII 去转义字符的做法、希望以 CSS 自定义手册外观，自 2008 年 11 月前后着手编写 mandoc，2009 年应 Theo de Raadt 邀请提交进入 OpenBSD，并于 AsiaBSDCon 2010 春发表；此后 Kristaps 主理上游 bsd.lv 仓库，Ingo Schwarze 接掌 OpenBSD 下游、先整合 Kristaps 补丁、逐渐成为这一复杂代码库的权威，两人自此协作推进。（BSDTalk EP204，[134.60-259.34]，L1）
+- 语义立场：mdoc 是语义标记语言——如同 Web 设计中指定强调而非斜体——可用文本编辑器徒手书写，紧凑而信息丰富；groff 本质是强大的文本排版工具，只关心呈现；mandoc 则把 mdoc 视为语言本身，编译手册时保留全部语义信息并依语义行事；旧 man 格式与多数 Linux 手册不含语义内容、只是呈现块，而 mdoc 手册对函数、变量、头文件等要素均有结构标注。（BSDTalk EP204，[446.77-537.22]，L1）
+- 输出与检索能力：mandoc 的 XHTML/HTML 输出附丰富 CSS 注释、可经少量适配纳入 EPUB 供小屏阅读；其 PDF 与 PostScript 输出仍臃肿、有待专人改进；makewhatis 工具从手册抽取语义内容建库，支撑按函数名、头文件、标准与作者等维度检索与挖掘，并已有演示搜索引擎——手册的语义化利用由此从长期设想变为可操作现实。（BSDTalk EP204，[571.58-733.10]，L1）
+- OpenBSD 集成动机：树中 groff 1.15 已逾十年且多 bug，手册维护者 Jason McIntyre 被迫设计大量技巧绕过其缺陷；升级到新版 groff 不可行，因其已是 GPLv3 许可；手册格式化必须迅速，groff 方案依赖预格式化安装而丧失全部结构；OpenBSD 因此计划改为安装未格式化手册，以期在数月至一年内提供大幅改善的 apropos 与 man -k 结构化检索。（BSDTalk EP204，[275.42-414.46]，L1）
+- BSD 文档文化比较与批评：OpenBSD 尽量把文档集中于一处手册、仅 FAQ 为例外；FreeBSD 文档散布于书籍、网页等多种媒介，虽自称重视文档，但其 developer summit 的文档议程全然围绕书籍而不提手册；FreeBSD 手册的语法错误在各 BSD 中最多，经语法校验器即可发现；FreeBSD 官方已宣布把文档迁往 SGML/XML（DocBook），但手册仍以 man 与 mdoc 维护——一步未完成已规划下一步；且一旦真迁移，格式化工具为 GPLv3 而无法进入基本系统，工具链迟早断裂，出路之一正是坚持 mdoc 这样简单可靠的手册格式。（BSDTalk EP204，[736.58-968.18]，L1）
+- 语言哲学与治理：mdoc 的价值在于好不是因为老、而是尽管老仍然好——新格式标榜的语义注释、机器可解析性与跨文档链接它都能干净实现，改用更复杂的格式只会平添复杂；GNU info 在文档内层次链接上占优，但手册页通常不至太长、页间链接大体够用；语言演进宜先在 OpenBSD 完成整合并补齐初学者教程（现有 mdoc 参考手册已优于既有样本但仍需教程），且文档语言必须保持简单；Kristaps 立场更硬线，认为不认真学习文档语言的程序员应重新考虑自身资格，Ingo 则强调简单性是不可让渡的前提。（BSDTalk EP204，[969.70-1421.00]，L1）
+- 兼容性与可移植性：mandoc 的手册明确记录 mdoc 与 groff 之间不兼容的语言构造，解除了历史 groff 每行九参数的限制，与既有 groff 手册完全兼容是项目设计目标之一，并提供 mdoc 减 T lint 校验；工具可移植至各类 Unix——NetBSD、旧 Solaris 与 OpenSolaris、AIX 等均有反馈，可用 PCC、LLVM/clang 与 GCC 编译，稍加改动即可运行于 Windows，makewhatis 依赖 Berkeley DB；OpenBSD 已原生以 mandoc 格式化全部手册。（BSDTalk EP204，[1431.76-1747.22]，L1）
 
 **史料**：
 
@@ -103,6 +123,10 @@ volume: 第15卷-许可证哲学与法律分析
 - Martin Husemann 的 NetBSD 11 release process 博客。（BSD Now EP626，[1636.36-1806.82]，L2）
 - Nico Cartron 访谈。（BSD Now EP626，[1950.18-3345.10]，L1）
 - 本期史料包括 George Neville-Neal 访谈（当事人自述）、FreeBSD Journal 创刊号目录、OpenBSD 官方 errata 补丁与 FAQ、FreeBSD 季度状态报告及 pfSense 2.1.1 快照说明。（BSD Now EP22，[1375.20-1917.06]，L1）
+- 本期为 BSDCan 2008 现场对 Sangoma 软件项目负责人 Alex Feldman 的一手口述访谈，保留 wanpipe 入树动议、终身保修公告与公司硬件沿革等当事人陈述；开场为 No Starch Press《Building a Server with FreeBSD 7》书评，主持人评价其非顺序教程结构、服务间集成示例（DHCP 与 DNS 联动）与注重安全加固的默认配置，并指出对 Unix 新手可能过于陡峭。（BSDTalk EP150，[0.00-178.82]，L1）
+- 本期为 BSDCan 2008 现场对技术作家 Michael W. Lucas 的一手口述访谈，保留 Absolute 系列创作史、与 Colin Percival 关于 freebsd-update 的求证往来、PF 三至四版快速演化期的出版插曲及其以 NetFlow 与网络监控工具为主题的教程与讲座信息；其职业身份为汽车供应商的西半球网络管理员，工作中以两台 FreeBSD 机器承担监控与日志。（BSDTalk EP153，[0.00-105.72]，L1）
+- 本期一手史料包括：Apress出版合同细节（选该社本因其随书附DVD的惯例、临付印取消附盘、FreeBSD Mall改为随订单附送、镜像可自PC-BSD官网下载）；PC-BSD官网拟设书论坛以收集勘误与第二版建议；BSDP job task分析调查结果的公开发布；BSDCan的BSDP流程演讲与次日全天公开会议（含网络直播）安排。（BSDTalk EP188，[788.36-1438.12]，L1）
+- 一手史料包括 Kristaps 对 mandoc 最早提交与 2009 年受 Theo 邀请入 OpenBSD 时间线的口述、其在 BSDCan 2011 的 mandoc 演进报告指引、Jason McIntyre 绕过 groff 缺陷的技巧叙述，以及 Ingo 对 FreeBSD developer summit 文档议程的现场观察；本访谈录于 BSDCan 2011 会议期间，本身即该会议一手记录。（BSDTalk EP204，[134.60-259.34]，L1）
 
 **史观**：
 
@@ -124,6 +148,10 @@ volume: 第15卷-许可证哲学与法律分析
 - 总纲10 动手者创造历史：总纲10 动手者创造历史：George Neville-Neal 与编委会以出版实践填补 FreeBSD 无专属杂志的空白，将社区知识沉淀为周期性出版事件。（BSD Now EP22，[1492.06-1716.58]，L1）
 - 总纲9 经验优先：总纲9 经验优先：教程强调按官方补丁与更新文档操作，避免因跳过说明导致 SSH 无法启动等实际故障。（BSD Now EP22，[3492.76-3530.20]，L2）
 - 总纲15 文化即形式主义：总纲15 文化即形式主义：杂志作为社区文化的形式化载体，将分散于论坛与邮件列表的知识加以编排和定期发布。（BSD Now EP22，[1500.10-1553.54]，L1）
+- 总纲10 动手者创造历史：Feldman 的自述显示，商业公司对 FreeBSD 的支持并非市场决策而是动手者的个人劳动维系：在 Linux 主导商业需求的格局下，工程师以业余时间把全线硬件驱动推向 FreeBSD，默默投入的个体劳动构成企业与 BSD 社区之间的实际纽带。（BSDTalk EP150，[420.12-436.06]，L1）
+- 总纲22 知识注定过时：Lucas 的叙述承认技术写作处于快速流变的特性环境中：交稿即出新特性，成书注定落后于代码；他的应对是与开发者对话预判演化方向、延后易朽章节、并把重心放在不易过时的 why 上——写作是对流变的把握而非对知识的冻结。（BSDTalk EP153，[529.68-582.66]，L1）
+- 总纲22 知识注定过时：当事人自陈技术书出版的常态悖论：成书之时软件往往已行至“显著不同的地方”，最新特性无从收录，故她动笔时已在构思第二版容纳未及内容；一部署于静态纸张的知识体系自付印起即开始落后于其对象，技术写作本质上是对注定过时之物的暂时定格。（BSDTalk EP188，[741.80-906.80]，L1）
+- 总纲4 分离聚合是永恒规律：mandoc 自 groff 生态中分离而出，却以兼容 groff 既有手册语料为设计目标并与之互通校验，显示工具替代并非简单断裂，而是新实现与旧语料之间的再度聚合。（BSDTalk EP204，[1431.76-1507.66]，L1）
 
 **辨析**：
 
@@ -135,6 +163,10 @@ volume: 第15卷-许可证哲学与法律分析
 - 转录将 Martin Husemann 记作 Martin Hussman，且节目开场将 NetBSD 11 与 FreeBSD 11 混写，须以 NetBSD 官方博客核验。　[存疑脚注] 人名与版本号存在转写歧义，未与 NetBSD 官方公告核验（BSD Now EP626，[1636.36-1806.82]，L4）
 - OpenJDK 维护者姓名在转录中作 Harold 或 Harald，具体拼写须以 FreeBSD Foundation 原文核验。　[存疑脚注] 维护者姓名存在转写歧义（BSD Now EP626，[867.98-873.02]，L4）
 - FreeBSD Journal 创刊号当时尚待 Apple 应用商店审批；编委会名单与创刊内容为当事人及主持人转述，需与创刊号目录核对。　[存疑脚注] 创刊号上线时间与目录以出版方最终发布为准，需交叉验证。（BSD Now EP22，[1790.86-1816.90]，L4）
+- 本期转写存在多处术语与人名受损：Sangoma 误转为多个异形、VoIP 误转、T1 误转 T11、wanpipe 误转 WANPAP，书评作者姓名拼法亦不可靠，引用须以原始音频核对；wanpipe 驱动最终是否进入 FreeBSD 基本系统及入树时间，需以 FreeBSD 源码树提交记录验证。　[存疑脚注] 转写术语多处受损，wanpipe 入树结果未经源码树记录验证。（BSDTalk EP150，[449.46-496.46]，L4）
+- 转写存在分支归属错置疑点：称某分支转向 SMP 与内核锁高性能处写作 3BSD，按内容应为 FreeBSD；将负载均衡、PF 与传感器框架归于 NetBSD 名下，与 PF 及传感器框架系 OpenBSD 特色、NetBSD 后移植的通行理解相反，疑为口述或转写错乱，引用前须以原始音频与其著作核对。　[存疑脚注] 三分支专长归属在转写中存在错置，须以音频与 Absolute 系列原著核对。（BSDTalk EP153，[173.48-208.54]，L4）
+- 本期转写专名失真：“Drew Levine”应为Dru Lavigne，“NETICAT”应为netiquette，“FemAC”所指不明（语境为其BSDA首轮job task分析，疑为JTA或BSDA之转写失真）；[存疑脚注] 上述核正系依语境推断，引用前须对照原始音频。　[存疑脚注] FemAC一词无法确证，人名核正系依公开资料推断。（BSDTalk EP188，[1460.12-1466.12]，L4）
+- mandoc 起始时间的口述在对话中经两人反复修正（2008 年 11 月、2009 年、春季），精确时间线须以仓库提交历史为准；转写人名与术语音误密集——Kristaps Dzonsons 误作 Chris Stapps、groff 音化作 grof 或 grow、apropos 误作 up-hopal、base 误作 Bayes、ports tree 误作 POTS tree——引用前须回查原音频与项目存档。　[存疑脚注] 时间线系口述回忆且对话中自我修正，须以版本库提交记录复核；转写音误密集，术语引用须校正（BSDTalk EP204，[134.60-210.74]，L4）
 
 **文献**：
 
@@ -143,5 +175,9 @@ volume: 第15卷-许可证哲学与法律分析
 - [BSD Now EP185] Pennington J. BSD Now: 185: Exit Interview[EB/OL]. (2017-03-16)[2026-08-15]. https://www.bsdnow.tv/185.
 - [BSD Now EP626] Pennington J. BSD Now: 626: USB webcam testing[EB/OL]. (2025-08-28)[2026-08-15]. https://www.bsdnow.tv/626.
 - [BSD Now EP22] Pennington J. BSD Now: 22: Journaled News-Updates[EB/OL]. (2014-01-29)[2026-08-15]. https://www.bsdnow.tv/22.
+- [BSDTalk EP150] Backman W. BSDTalk: 150: bsdtalk150 - Alex Feldman from Sangoma[EB/OL]. (2008-05-20)[2026-08-27]. https://bsdtalk.blogspot.com/2008/05/bsdtalk150-alex-feldman-from-sangoma.html.
+- [BSDTalk EP153] Backman W. BSDTalk: 153: bsdtalk153 - Michael W. Lucas[EB/OL]. (2008-06-13)[2026-08-27]. https://bsdtalk.blogspot.com/2008/06/bsdtalk153-michael-w-lucas.html.
+- [BSDTalk EP188] Backman W. BSDTalk: 188: bsdtalk188 - Dru Lavigne[EB/OL]. (2010-04-18)[2026-08-27]. https://bsdtalk.blogspot.com/2010/04/bsdtalk188-dru-lavigne.html.
+- [BSDTalk EP204] Backman W. BSDTalk: 204: bsdtalk204 - mdocml mit Ingo Schwarze and Kristaps Dzonsons[EB/OL]. (2011-06-01)[2026-08-27]. https://bsdtalk.blogspot.com/2011/05/bsdtalk204-mdocml-mit-ingo-schwartze.html.
 
 <!-- /PODCAST_REVIEW -->

@@ -127,7 +127,7 @@ volume: 18
 本章所书皆是形式主义化的重构，并非对“真实的 BSD 历史”的呈现。本章的章节划分、事件选择、叙事策略、因果归因——全部基于编纂者的哲学设定。本章承认这些局限，不声称客观或中立，欢迎被更诚实的叙事所超越。
 
 <!-- PODCAST_REVIEW v20260829 -->
-<!-- 语义复核范围：BSD Now EP283、BSD Now EP269、BSD Now EP260、BSD Now EP196、BSD Now EP192、BSD Now EP626、BSD Now EP579（共 7 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
+<!-- 语义复核范围：BSD Now EP283、BSD Now EP269、BSD Now EP260、BSD Now EP196、BSD Now EP192、BSD Now EP626、BSD Now EP579、BSDTalk EP133、BSDTalk EP137、BSDTalk EP178、BSDTalk EP198（共 11 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
 
 **要点**：
 
@@ -165,6 +165,30 @@ volume: 18
 - Dave Cottlehuber 追述 FreeBSD core 团队史：早期 core 即所有持有源码提交权限者，后经诉讼尾声与治理需要而结构化，约二十年前基金会成立；近年 core 将源码提交权限的决策下放给新设的 source manager team。（BSD Now EP579，[1898.98-2186.62]，L1）
 - Dave 说明 FreeBSD Core 13 的目标包括完成 source manager team 的设立、改善软件包仓库的 CDN 分发、加强与 Dell、Sony、Apple 等下游伙伴的协作，并推进由基金会资助的 CI 工作流。（BSD Now EP579，[2207.24-2461.08]，L1）
 - Christos Margiolis 自述因 Linux 代码库过于庞大而选择 FreeBSD 作为贡献对象，从事声音子系统与音乐制作工具的维护与改进。（BSD Now EP579，[2721.16-2774.92]，L1）
+- OpenCon 是全球唯一专门面向 OpenBSD 的会议，2007 年在威尼斯机场附近酒店举行（与上年同址）；本届首次增设周五教程日，设 packet filter、OpenBSD ports 与 OpenBSD 可用 VPN 技术三场教程，讲者多为 OpenBSD 开发者；周六周日为多主题演讲马拉松。（BSDTalk EP133，[52.34-104.13]，L1）
+- 会议日程与发布节奏耦合：OpenBSD 4.2 定于 2007 年 11 月 1 日发布，OpenCon 于 12 月首个周末举行，届时与会者多已用上 4.2，现场可购 CD-ROM，讲者可将 4.2 新特性纳入演讲；发布切分在会前数月已完成，开发已转入 -current，因而演讲更多面向更新的事物。（BSDTalk EP133，[132.66-179.11]，L1）
+- 预告的技术演讲包括：瑞士 OpenBSD 开发者 Claudio Jeker 讲 OSPF6 守护进程（IPv6 的 OSPF 路由协议），以及关于 OpenBSD 4.2 缓冲区缓存改进的演讲等。（BSDTalk EP133，[179.58-217.60]，L1）
+- 社区庆典与经济安排：周六晚举办 OpenSSH 八周年生日派对（OpenSSH 生于 1999 年 10 月，2007 年满八岁），周五晚设酒吧非正式聚会以促进与会者与开发者交流构想；会议与教程全免费、无入场费，成本由组织者承担，午餐需自购、派对收少量费用；会议不做录像录音，理由是人们应当亲临现场。（BSDTalk EP133，[226.47-315.13]，L1）
+- Balmer 在 OpenCon 之外的工作是组织 OpenBSD 开发者会议（hackathon）：属非公开、仅受邀的内部活动，且趋势是越办越小规模，如上年葡萄牙的 hackathon；此类活动公开可见度低。（BSDTalk EP133，[315.13-344.45]，L1）
+- 规模与国际化：注册开放的首个周末已有来自 11 个国家的 28 人报名；上年参会者超过 130 人，甚至有来自黎巴嫩者；Balmer 感叹 BSD 社区已成长到足以支撑专门的国际会议。（BSDTalk EP133，[357.94-384.05]，L1）
+- Marten Vijn 的背景：约十年开源经历、近五年主攻 FreeBSD；原职业为理疗师与作业治疗师，两年前离开医疗行业；早年参与创办 Wireless Leiden——一个覆盖全城的无线社区网络，全部运行于 FreeBSD，以节点工厂方式生产核心节点与各类无线应用。（BSDTalk EP137，[222.57-280.33]，L1）
+- 活动谱系：从社区网络实践中体会相聚动手之乐，先有黑客小聚；两年前（2006）借童军营地首次举办 wireless community camp；次年发现兴趣已远超无线，更名为 Open Community Camp；2008 年 8 月 10 至 17 日在荷兰举行一周，内容覆盖 FreeBSD、OpenBSD 以及 Debian、Gentoo 等 Linux。（BSDTalk EP137，[272.33-389.16]，L1）
+- 营地形态为真正的户外露营：一栋小楼的两间教室供讲座、会议与协作，军用大帐篷供交流与硬件实验，集体伙食；收费在注册期 75 欧元、现场不超过 100 欧元，定位低成本与低风险，含讲座与营位；基础餐食以共同烹饪解决，做一顿饭约一两小时、人人可参与。（BSDTalk EP137，[383.44-644.88]，L1）
+- 内容与形式：BSD 部分以动手方式演练 CARP、openospfd 及 FreeBSD -current 中新增的 lagg 链路聚合等新特性，意在熟悉后带回生产环境——平时工作无暇摸索，这一周专门用来弄懂它们；无线部分包括动手制作天线、搭建路由、打造小而更好的盒子；节目除逐步累积的讲者安排外，还有动态部分——每天询问参与者想学什么，将人与需求聚拢并指派引导者；目标人群是懂升级、会编内核的专业者，纯新手并非焦点。（BSDTalk EP137，[431.95-593.87]，L1）
+- 规模与组织哲学：首届约 50 人、上届约 40 人，规模不大但自称高影响、知识密度高；不求人多，只求真正想知道来龙去脉的人；硬件易得（需网络设备与交换机，路由器自造），组织上奉行 DIY 与自我组织、需求极少；对每位参与者的开场三问是：你想学什么、想怎么学、你能教别人什么。（BSDTalk EP137，[658.83-708.27]，L1）
+- 主播的 Cobalt RaQ 2 装机记：学校柜中发现 MIPS 平台的 1U 机架式 Web 托管服务器（蓝色、250MHz、带 LCD 面板）；Sun 收购 Cobalt 后产品线停产，其 Linux 侧久无安全更新，而 NetBSD cobalt 移植可用；以 restore CD 将普通 PC 变为 netboot 服务器，交叉线连接、按住面板按键即可极快装入 NetBSD 4.0；默认开放无密码 Telnet 与 rlogin，加固时只留 SSH 而忘记 root 默认禁止登录会自锁，需接控制台解救；经 pkgsrc 编译 squid 时发现 Perl 依赖，耗时数小时先编 Perl，运行后效果良好。（BSDTalk EP137，[34.27-199.29]，L1）
+- 报名与支付：活动网站为 opencommunitycamp.org，由一家荷兰基金会组织（转写名称不可辨），相关域名互通；暂无在线支付，外国参与者邮件告知后可到场缴费。（BSDTalk EP137，[727.91-760.35]，L2）
+- 钓鱼的本质是凭证捕获：1996 年代的形式为冒充 AOL 系统操作员以免除账号费，2003 年之后整体转向营利产业，假银行、假税务机关、假赌场、假支付处理等无所不包；基础设施上约四分之三站点寄生于不安全的终端用户机器（经搜索引擎批量定位运行特定 PHP 版本的机器后攻陷），约五分之一位于免费网页托管；典型团伙 Rockphish 以僵尸网络中约十台机器充当 HTTP 中继、约二十分钟轮换解析（fast flux），并利用真实用户不懂 URL 的弱点在地址中嵌入银行名取信。（BSDTalk EP178，[119.9-176.7]，L1）
+- 与 Tyler Moore 的安全经济学测量给出下架时间的量化结论：免费托管的钓鱼站在品牌所有者知情时约四小时下线、不知情时近四天；不使用 fast flux 而以固定代理解析的站点因须联系注册商注销域名，下架时间升至约七十小时；Yahoo 对举报站二十分钟、全天候下线，因其曾有坏名声而重金重建响应能力。（BSDTalk EP178，[604.3-680.0]，L1）
+- 下架产业生态：银行普遍将移除钓鱼站外包给专业公司（集中于美国，以色列亦有一家），公司以移除数量竞争且互不共享数据；研究者凭学术身份获得多家公司数据，因而比任何单一银行知道得更多；研究者提出行业共享信息的建议，被业界以银行直接购买全部公司服务的方案回应，Clayton 自嘲学者不懂真实世界的商业逻辑。（BSDTalk EP178，[755.1-830.8]，L1）
+- 钱骡招募被论证为钓鱼产业链的瓶颈：假货运公司以精美招聘页招揽客户服务财务助理，许诺代收支票汇总后抽成百分之十，诱导受骗者经西联汇款回传——西联明示不得向陌生人汇款、不予退款且凭单据可异地取款难以追踪，受骗者最终因银行追回被骗资金而背负债务；此类站点攻击整个银行业而非特定银行，责任真空使其只能靠义务举报者发邮件请求托管商移除，平均在线约七百小时。（BSDTalk EP178，[1180.2-1568.0]，L1）
+- 假托管与假药房的运作与验证：假托管站以模板复制真实托管公司 escrow.com 的宣传短语，可用该短语在搜索引擎批量定位（四百余条记录），地址与邮编造假可经维基解密所载邮编表与街景影像当庭证伪，估计每周清空四五辆车价值的资金、至少六伙人作案；假药房卖真安眠药以留住医生不再开药的成瘾回头客，伪造认证印章与安全徽标皆从同一站点伺服，McAfee SiteAdvisor 对恶意软件内行而对购物欺诈评级失灵。（BSDTalk EP178，[1651.9-2248.7]，L1）
+- 假银行与后现代庞氏：假银行克隆真实银行（如东亚银行）的成立年份、分行与监管编号文本，与彩票骗局捆绑，以高息账户展示巨额余额再以先付建户费敛财；后现代庞氏以日息百分之二点五并预付百分之十奖励吸引明知是骗局的投资者，其运作依赖庞氏评级站的声誉分与投票体系，Clayton 推断真正盈利者只能是评级站运营者、庄家或卖书者，参与者多来自前苏联地区，其中真实与伪造交易的比例尚无研究。（BSDTalk EP178，[2746.6-3225.1]，L1）
+- 链接垃圾邮件：伪非政府组织抄袭真实人权组织 Human Rights First 的使命宣言以骗取高权重站点链接、提升搜索排名并经广告变现，剑桥出版的生物物理学期刊的“相关链接”亦被伪欧洲生物物理联合会利用；由于维基百科许可宽松，抄袭文本难以指控，此类为广告而生的站点只因搜索引擎的广告付费模式而存在。（BSDTalk EP178，[3431.1-3587.8]，L1）
+- 演讲收束给出跨类别下架时间总表：诽谤与版权类数天（样本不足）；假托管平均九天、中位一天；钱骡招募约两周；假药房数月而仅义务举报者关注；经 Internet Watch Foundation 匿名数据测量，儿童性虐待图像平均二十一天、中位十一天（计入未下线站则均值三十天且仍在增长）——本以为是黄金标准却远慢于银行知情的钓鱼站（约三个半小时）；症结在于 IWF 自认无权联系境外托管者，站点可数周无人知悉，其目标在抓捕罪犯与移除内容之间存在混乱。（BSDTalk EP178，[3925.3-4094.5]，L1）
+- 组织者 Matt Olander 回溯 MeetBSD 谱系：会议发端于波兰华沙，因欣赏其氛围而受邀将形式引入美国西海岸，2008 年首届 MeetBSD California 在 Google 园区举办并获成功，2010 年第二届移师 Mountain View 的 Hacker Dojo——一个供黑客与爱好者使用烙铁与网络设施开展创作的仓库式车库空间，湾区 FreeBSD 用户组已常驻其间。（BSDTalk EP198，[63.48-165.16]，L1）
+- 2010 年会议刻意混合两种形式：首日采用 unconference，议程由与会者现场自组织——自报议题分组、五分钟闪电演讲、开发者围坐编程、以白板取代固定日程，组织者自嘲其形态是“勉强驯服的混乱”；次日保留传统讲座，以免冲击习惯传统会议者并保证重要报告得以传达。（BSDTalk EP198，[106.28-378.78]，L1）
+- 会务组织面向社区可达性设计：注册费仅二十五美元并含餐饮，与一周后的纽约 BSDCon 谈成跨海岸联动折扣，招募志愿者分担会务；会议前两日并行安排 FreeBSD summit、PC-BSD 开发峰会，BSD release engineering 亦将举行正式会议，NetBSD 与 OpenBSD 参与者受邀利用场地自组会议。（BSDTalk EP198，[319.82-588.46]，L1）
 
 **史料**：
 
@@ -185,6 +209,11 @@ volume: 18
 - Martin Husemann 的 NetBSD 11 release process 博客。（BSD Now EP626，[1636.36-1806.82]，L2）
 - Nico Cartron 访谈。（BSD Now EP626，[1950.18-3345.10]，L1）
 - 本期为 EuroBSDcon 2024 现场采访，Stefano Marinelli、Dave Cottlehuber 与 Christos Margiolis 均为当事人自述；Özal Babaoğlu 的身份信息为 Stefano 转述的同学说法。（BSD Now EP579，[745.78-2774.92]，L1）
+- OpenCon 2007 组织材料：官网 www.opencon.org、威尼斯会场、周五教程日安排与演讲名单（含 Claudio Jeker 的 OSPF6d 演讲）；OpenBSD 4.2 的 2007 年 11 月 1 日发布日期与更早的发布切分时点。（BSDTalk EP133，[122.61-179.11]，L1）
+- OpenSSH 诞生时间线的社区纪念证据：2007 年 10 月前后社区庆祝其八周岁生日，与 1999 年 10 月首次发布相互印证。（BSDTalk EP133，[226.47-238.75]，L1）
+- Wireless Leiden 全城 FreeBSD 无线社区网络及其节点工厂实践；Open Community Camp 2008（2008-08-10 至 17，荷兰）与 opencommunitycamp.org；Cobalt RaQ 2 硬件、Sun 收购停产背景与 NetBSD cobalt 移植及 restore CD netboot 流程。（BSDTalk EP137，[34.27-760.35]，L1）
+- 该期提及的一手线索包括：Internet Watch Foundation 提供的匿名下架数据；多家下架公司向研究者共享的钓鱼站数据；AA419 与 CastleCops 骗局举报库；WikiLeaks 发布的英国邮编表；escrow.com 真实托管公司的宣传文本；Light Blue Touchpaper 博客与 Clayton 个人网页所载论文原始版本；本场 EuroBSDCon 2009 演讲幻灯片与现场演示站点（K1D1NX.eu、lof80.info、Alice.it、T35.com 等）。（BSDTalk EP178，[3974.7-3983.7]，L1）
+- 一手史料包括组织者对 MeetBSD 华沙起源与 2008 年 Google 园区首届加州会议的亲历陈述、对 Hacker Dojo 场地性质的描述；开场固定栏目由主持人转述 last 工具最早出现于 3.0BSD。（BSDTalk EP198，[33.20-171.60]，L1）
 
 **史观**：
 
@@ -204,6 +233,13 @@ volume: 18
 - 总纲10 动手者创造历史：Stefano 以运维者身份推动客户迁移 BSD 并创办社区服务，Dave 以志愿者身份参与治理，均体现动手者在社区运行中的基础作用。（BSD Now EP579，[942.26-1072.78]，L1）
 - 总纲3 不存在进步，只有权力再分配：core 团队将源码提交权限决策下放给 source manager team 的过程，是 FreeBSD 治理权力在团队间的重新配置。（BSD Now EP579，[2081.44-2186.62]，L1）
 - 总纲8 本体论上各方平等：Dave 强调 FreeBSD 与 OpenBSD、NetBSD、DragonFly BSD 乃至 Linux 社区之间存在持续的跨项目交流，各方在面对共同工程问题时彼此平等。（BSD Now EP579，[2560.00-2607.04]，L1）
+- 总纲20 历史地理塑造思想土壤：OpenCon 的地理组织——威尼斯会场、11 国乃至黎巴嫩的参会者流动——显示欧洲城市节点与会议空间如何承载并塑造 BSD 社区的交流形态，社区思想的生长与其地理聚点不可分。（BSDTalk EP133，[59.18-72.61]，L1）
+- 总纲10 动手者创造历史：工程生产的核心场域在非公开的 hackathon 而非公开舞台：仅受邀、趋小规模、低公开可见度的开发者会议承载实际工作，而公开会议拒绝录像、强调亲临现场——可见的庆典之下，动手者的协作空间另有其处。（BSDTalk EP133，[304.13-344.45]，L1）
+- 总纲10 动手者创造历史：OCC 的知识生产方式以动手者为中心：会编内核、造天线、自造路由器的人聚于帐篷与教室，节目表部分由每日的“想学什么”现场生成，引导者角色替代讲演者——社区知识在协作与动手而非单向传授中产生。（BSDTalk EP137，[431.95-708.27]，L1）
+- 总纲20 历史地理塑造思想土壤：活动谱系深植地方土壤：Wireless Leiden 的城市尺度社区网络生长于荷兰的地方环境，营地活动依托本地童军营地与共同烹饪的集体生活方式——地理与社会土壤塑造了这一 BSD 社区形态。（BSDTalk EP137，[248.73-361.19]，L1）
+- 总纲13 法律与道德是利益分配：Clayton 的核心论点是下架速度由经济激励结构而非技术能力决定：谁受损、谁付费、谁有激励移除，解释了银行知情站四小时、无主站七百小时、IWF 境外数据三周的巨大落差，恶意内容的治理本质是利益分配问题。（BSDTalk EP178，[735.6-755.1]，L1）
+- 总纲8 本体论上各方平等：组织者阐明 unconference 的核心理念是让平时只能通过邮件列表与开发者远距互动的用户坐到开发者对面，当面陈述使用痛点与好评，打破会议场景中演讲者与听众的层级结构。（BSDTalk EP198，[630.18-650.54]，L1）
+- 总纲20 历史地理塑造思想土壤：会场从 Google 园区迁往 Hacker Dojo 仓库的选址自述——代表硅谷车库式做事方式——显示湾区地理与创客空间文化直接塑造了这届 BSD 会议的组织形态。（BSDTalk EP198，[121.02-168.92]，L1）
 
 **辨析**：
 
@@ -217,6 +253,12 @@ volume: 18
 - OpenJDK 维护者姓名在转录中作 Harold 或 Harald，具体拼写须以 FreeBSD Foundation 原文核验。　[存疑脚注] 维护者姓名存在转写歧义（BSD Now EP626，[867.98-873.02]，L4）
 - Stefano 所称 Özal Babaoğlu 为“原始 BSD 的创建者之一”系同学转述，其具体贡献范围须以 CSRG 档案核实。　[存疑脚注] Babaoğlu 在伯克利 BSD 中的具体贡献与角色未经 CSRG 一手档案核实。（BSD Now EP579，[843.16-869.18]，L4）
 - Dave 所述“早期 core 即全体源码 commit 持有者”为其个人追述，具体历史节点须以 FreeBSD 项目档案核实。　[存疑脚注] core 早期构成说法为个人追述，未经项目治理档案核实。（BSD Now EP579，[1898.98-1948.24]，L4）
+- 转写人名讹误集中且部分不可辨识：Mark Ballmer 应为 Marc Balmer，Peter Hansen 应为 Peter Hansteen，Byrne Arlers 疑为 Bernd Ahlers，Felix Kronlager 应为 Felix Kronlage，Claudio Jäker 应为 Claudio Jeker，缓冲区缓存讲者讹作 Miky Schallaeffel 无法辨识，soft rate 疑为其他主题讹写；上述均须以 OpenCon 2007 官方日程核证。　[存疑脚注] 人名与讲题经上下文推断校正或无法辨识，须回溯会议官方日程（BSDTalk EP133，[79.69-217.60]，L4）
+- 转写中“首次在威尼斯举办”与“与上年同址”两种表述并存，OpenCon 2006 是否同在威尼斯无法由本期单独确证，须以历届 OpenCon 会址记录核证。　[存疑脚注] 会址沿革内部矛盾，待历届会议记录核证（BSDTalk EP133，[59.18-118.05]，L4）
+- 转写讹误较多：Martin Fain 应为 Marten Vijn，Wireless Lighting 应为 Wireless Leiden，Gen2 应为 Gentoo，OpenOSPS 应为 openospfd，lag 应为 lagg(4)，CFS 疑为 CARP 之讹，Kobalt Rack 2 应为 Cobalt RaQ 2，freebiskey、3BZ、free BC 等均为 FreeBSD 之讹；活动地点讹作 Ust-East（乌得勒支一带）与组织基金会名 Wifershoff.org 均无法辨识。　[存疑脚注] 人名、项目名与地点经上下文推断校正，部分无法辨识，须以 OCC 与 Wireless Leiden 官方存档核证（BSDTalk EP137，[211.22-736.35]，L4）
+- 历届出席人数（首届约 50 人、上届约 40 人）为组织者记忆性陈述，无独立佐证，须与 OCC 历届站点或报告核证。　[存疑脚注] 记忆性数字，待外部核证（BSDTalk EP137，[704.55-722.63]，L4）
+- 转写段序呈两路交错（同场演讲的 segment 被拆为交替流出），非内容缺失，通读可复原完整叙事；若干专名存疑：money email 应为 money mule，Dart and Fiddling Kent 疑为 Dartford, Kent，声誉站名 LuxCup 与假托管站名拼写均未经原始幻灯片核对；Rockphish 现行名演讲者自述谨慎使用；涉及第三方犯罪行为的指控（假货运克隆真公司、假银行抄袭东亚银行文本等）均为演讲者现场演示所见，引用时应以存档网页为准。　[存疑脚注] 上述专名复原与涉案网站事实均无法在本期转写内独立验证，须对照演讲幻灯片与研究者论文。（BSDTalk EP178，[0.0-40.0]，L4）
+- 本集为会前预告性质访谈，所列平行会议（FreeBSD summit、PC-BSD 开发峰会、release engineering 正式会议）均属计划性陈述，其实际召开情况与议程落实须以会后存档、会议纪要等独立材料交叉验证。　[存疑脚注] 预告性陈述而非既成事实，采信须待会后材料印证（BSDTalk EP198，[552.46-588.46]，L5）
 
 **文献**：
 
@@ -227,5 +269,9 @@ volume: 18
 - [BSD Now EP192] Pennington J. BSD Now: 192: SSHv1 Be Gone[EB/OL]. (2017-05-03)[2026-08-15]. https://www.bsdnow.tv/192.
 - [BSD Now EP626] Pennington J. BSD Now: 626: USB webcam testing[EB/OL]. (2025-08-28)[2026-08-15]. https://www.bsdnow.tv/626.
 - [BSD Now EP579] Pennington J. BSD Now: 579: EuroBSDcon 2024[EB/OL]. (2024-10-03)[2026-08-15]. https://www.bsdnow.tv/579.
+- [BSDTalk EP133] Backman W. BSDTalk: 133: bsdtalk133 - OpenCon 2007 update from Marc Balmer[EB/OL]. (2007-10-17)[2026-08-27]. https://bsdtalk.blogspot.com/2007/10/bsdtalk133-opencon-2007-update-from.html.
+- [BSDTalk EP137] Backman W. BSDTalk: 137: bsdtalk137 - Open Community Camp with Marten Vijn[EB/OL]. (2008-01-04)[2026-08-27]. https://bsdtalk.blogspot.com/2008/01/bsdtalk137-open-community-camp-with.html.
+- [BSDTalk EP178] Backman W. BSDTalk: 178: bsdtalk178 - Richard Clayton - Evil on the Internet - EuroBSDCon[EB/OL]. (2009-10-31)[2026-08-27]. https://bsdtalk.blogspot.com/2009/10/bsdtalk178-richard-clayton-evil-on.html.
+- [BSDTalk EP198] Backman W. BSDTalk: 198: bsdtalk198 - MeetBSD California 2010[EB/OL]. (2010-09-29)[2026-08-27]. https://bsdtalk.blogspot.com/2010/09/bsdtalk198-meetbsd-california-2010.html.
 
 <!-- /PODCAST_REVIEW -->

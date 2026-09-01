@@ -46,7 +46,7 @@ volume: 第08卷-freebsd的范式转换
 **新增时间线事件**：1991 年 IEEE Trans Communs 发表路由模型网络可靠性研究论文，王波《FreeBSD 使用大全》出版；2015 年 AsiaBSDCon 2015 展示 Go 语言内容过滤软件在 FreeBSD 上的实现。<!-- DB_REF:freebsd.duckdb -->> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 2024-2026 年间：168,386 次提交。> 仓库总览：1,294,851 次提交，13,875 位贡献者，1993-06-12 至 2026-08-25。
 
 <!-- PODCAST_REVIEW v20260829 -->
-<!-- 语义复核范围：BSD Now EP370、BSD Now EP55（共 2 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
+<!-- 语义复核范围：BSD Now EP370、BSD Now EP71、BSD Now EP55（共 3 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
 
 **要点**：
 
@@ -54,6 +54,9 @@ volume: 第08卷-freebsd的范式转换
 - FreeBSD 已是最后一个大规模使用 Subversion 的开源项目，迁移中借鉴 Apache 与 LLVM 的迁移经验。（BSD Now EP370，[339.89-365.10]，L2）
 - rcorder 自 NetBSD 约 1998 年引入，用于根据 rc.d 脚本依赖排序启动服务；FreeBSD 已有并行化尝试，D25389 提交为 rcorder 增加并行输出标志，可节省约 15 至 20 秒启动时间。（BSD Now EP370，[2060.52-2224.76]，L2）
 - FuryBSD 2020 Q3 发布首个基于 OpenZFS 的 live 镜像，以只读或读写模式测试 FreeBSD 桌面，并保留系统完整性。（BSD Now EP370，[72.36-115.00]，L2）
+- Ian Sutton 在 GSoC 期间为 OpenBSD 编写 systemd 四个非 init 组件的兼容包装器：GNOME 3 对 hostnamed、localed、timedated、logind 存在硬依赖，包装器经由 D-Bus 提供与 systemd 相同的接口使其透明可用；项目按操作系统无关设计，FreeBSD 提交者 Baptiste Daroussin 已着手移植，logind 因涉及 PAM 与 3D 加速设备权限传递而最为复杂，其余三个组件已基本成形。（BSD Now EP71，[879.16-934.98]，L1）
+- 在 ISC NTPD 连串安全补丁与 NTP 反射攻击的背景下，长期无人维护的 portable OpenNTPD 由曾参与 LibreSSL 相关工作的 Brent Cook 等志愿者接手复活，产出 16 个补丁并重新发布至 GitHub 与 FreeBSD 包仓库，修复过程中还反哺了 OpenBSD 原生版代码。（BSD Now EP71，[602.16-686.20]，L2）
+- pkg（pkgng）新增对 OS X 的支持并连发新版本，MacPorts 因 FreeBSD ports 树日益依赖 pkg 而考虑移植其完整功能，未来或为 Mac 引入二进制包；pkg 由此从 BSD 生态扩展为跨平台包管理方案，同期亦出现 Linux 移植迹象。（BSD Now EP71，[1842.70-1950.34]，L2）
 - Adrian Chadd 自述 FreeBSD 无线栈在 AP 与 station 模式下工作良好，但仅有两名左右开发者，边界情况缺乏人手。（BSD Now EP55，[1419.88-1458.76]，L1）
 - Atheros 与 Intel 因开放源码与文档而成为 FreeBSD 无线的主要方向；Broadcom 与 Marvell 在 Sam Leffler 离开后未再更新，成为明显短板。（BSD Now EP55，[1462.00-1544.32]，L1）
 - Adrian Chadd 恢复因监管顾虑而停用的 monitor mode 注入，使 Kismet 与 Aircrack-NG 重新可用，同时承受实现监管域强制的压力。（BSD Now EP55，[1777.56-1881.62]，L1）
@@ -63,12 +66,15 @@ volume: 第08卷-freebsd的范式转换
 
 - Warner Losh 博客“FreeBSD Subversion to Git Migration, Part 1”及配套 YouTube 视频，逐条论证迁移理由。（BSD Now EP370，[248.97-1025.79]，L2）
 - Dan Langille 关于 NUT 关机测试的博文，以及 `upsdrvctl -t` 测试模式与 `upsmon -c fsd` 命令的手册说明。（BSD Now EP370，[1174.02-1519.15]，L2）
+- 本期涉及的一手史料包括：Ian Sutton 口述的 GSoC 项目经历及其导师 Landry Breuil、Antoine Jacoutot；freebsd-questions 邮件列表上 PGP 签名的 Protocol X97 恶作剧邮件；Theo de Raadt 对 shaman.c 未定义行为报告的邮件答复；oss-security 邮件列表的 FFmpeg 写后释放漏洞报告与漏洞样本视频；Sean Webb 博文《CodeRot and why I chose OpenBSD》；Baptiste 的“four years of pkg”大会演讲录像；FreeBSD 季度状态报告。（BSD Now EP71，[3539.10-3760.76]，L2）
 - Adrian Chadd 访谈（FreeBSD 无线网络栈维护者当事人自述）。（BSD Now EP55，[1267.26-2874.88]，L1）
 
 **史观**：
 
 - 总纲10 动手者创造历史：迁移论证强调以 CI 与协作工具降低贡献者摩擦，推动力量来自开发者的实际工作流需求。（BSD Now EP370，[581.03-707.75]，L2）
 - 总纲21 革命与改革是历史方法论的分歧：FreeBSD 迁移 Git 采取渐进改革而非激进重构，迁移团队试图保留旧用户熟悉的工作流。（BSD Now EP370，[984.63-1017.59]，L2）
+- 总纲9 经验优先：全期叙事以当事人一手经验为骨架——Ian 自述因 Arch Linux 升级 systemd 时的目录冲突而转向 OpenBSD，CodeRot 作者自述删除死代码的体会，主持人强调开发者日常自用能在使用而非审查中发现问题；经验先于抽象论证的认识次序贯穿整期节目。（BSD Now EP71，[371.44-428.30]，L1）
+- 总纲4 分离聚合是永恒规律：本期呈现的工具史并非线性进步，而是分离聚合的流转：pkg 从 FreeBSD 生态分离出去向 OS X 与 Linux 扩散又反向吸纳外部需求，portable OpenNTPD 先脱离 OpenBSD 独立维护、失修后再由志愿者重新聚合；各分支在分合中重构边界，而非简单的优胜劣汰。（BSD Now EP71，[1867.32-1931.22]，L2）
 - 总纲20 历史地理塑造思想土壤：总纲20 历史地理塑造思想土壤：无线厂商是否开放文档、是否以 Linux 为主场，直接塑造了 FreeBSD 无线栈的可行范围。（BSD Now EP55，[1462.00-1603.66]，L1）
 - 总纲9 经验优先：总纲9 经验优先：Adrian Chadd 以驱动开发与真机测试的一线经验陈述无线栈优劣，而非依赖纸面规格。（BSD Now EP55，[1419.88-1447.00]，L1）
 - 总纲4 分离聚合是永恒规律：总纲4 分离聚合是永恒规律：各 BSD 共享 net80211 后各自分化，DragonFly BSD 又聚合 FreeBSD 更新栈，构成反复的分合。（BSD Now EP55，[1657.66-1722.12]，L1）
@@ -76,11 +82,14 @@ volume: 第08卷-freebsd的范式转换
 **辨析**：
 
 - rcorder 并行化历史上多次尝试均遇到未声明依赖问题，主持人指出并行带来的启动加速与破坏风险并存。　[存疑脚注] 并行化风险范围待核实（BSD Now EP370，[2193.19-2299.69]，L4）
+- 标题“System Disaster”与本期主体形成互文：2015 年初 systemd 争议已从 init 层蔓延至桌面依赖链（GNOME 3 硬依赖、Debian 用户请求反向移植、Arch 用户出走），但 Ian 澄清其项目并非把 systemd 移植到 OpenBSD，舆论“把 systemd 带上 BSD”的解读与工程事实有出入，引用时应区分依赖兼容与本体移植。（BSD Now EP71，[824.40-915.16]，L2）
+- 该转写为双音轨交错且时间戳乱序，专名失真密集（bhyve 被转写为 Beehive、LibreSSL 为 Libra SSL、GSoC 为 G-Sog、Baptiste Daroussin 为 Baptiste Darosun、Antoine Jacoutot 为 Antoine Jacuto 等），语义虽可由语境恢复，但引用具体专名、数字与版本前须回查邮件列表原文、演讲录像与代码仓库记录。　[存疑脚注] 专名与数字均出自失真转写且未经原始史料核验；Beehive 疑为 bhyve，Libra SSL 疑为 LibreSSL，G-Sog 疑为 GSoC（BSD Now EP71，[3123.46-3135.96]，L4）
 - 转录将 Ralink/Realtek 与 Atheros 的表述交错，主持人与嘉宾均存在口误修正，具体芯片归属需对照 FreeBSD 源码。　[存疑脚注] 无线芯片厂商归属存在口语转写歧义，未以代码仓库核验（BSD Now EP55，[1486.52-1493.84]，L4）
 
 **文献**：
 
 - [BSD Now EP370] Pennington J. BSD Now: 370: Testing shutdown[EB/OL]. (2020-10-01)[2026-08-15]. https://www.bsdnow.tv/370.
+- [BSD Now EP71] Pennington J. BSD Now: 71: System Disaster[EB/OL]. (2015-01-07)[2026-08-15]. https://www.bsdnow.tv/71.
 - [BSD Now EP55] Pennington J. BSD Now: 55: The Promised WLAN[EB/OL]. (2014-09-17)[2026-08-15]. https://www.bsdnow.tv/55.
 
 <!-- /PODCAST_REVIEW -->
