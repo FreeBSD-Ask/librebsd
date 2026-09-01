@@ -117,7 +117,7 @@ volume: 05
 本章所书皆是形式主义化的重构，并非对“真实的 BSD 历史”的呈现。本章的章节划分、事件选择、叙事策略、因果归因——全部基于编纂者的哲学设定。本章承认这些局限，不声称客观或中立，欢迎被更诚实的叙事所超越。
 
 <!-- PODCAST_REVIEW v20260829 -->
-<!-- 语义复核范围：BSD Now EP651、BSD Now EP648、BSD Now EP360、BSD Now EP640、BSD Now EP213、BSD Now EP143、BSD Now EP46、BSD Now EP24、BSD Now EP18、BSD Now EP11（共 10 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
+<!-- 语义复核范围：BSD Now EP651、BSD Now EP648、BSD Now EP360、BSD Now EP640、BSD Now EP213、BSD Now EP143、BSD Now EP47、BSD Now EP46、BSD Now EP24、BSD Now EP18、BSD Now EP11（共 11 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
 
 **要点**：
 
@@ -152,6 +152,8 @@ volume: 05
 - 新闻综述：Package Base 未赶上 FreeBSD 11.0 而推迟至 11.1，pkg 1.8 将 precious 标志更名 vital；11 起新支持模型规定后续 minor 版本发布后旧版本即过期，以解决 8.4、9.3 长期拖住 ports tree 的问题。（BSD Now EP143，[4934.00-5134.00]，L2）
 - Olivier 的 PF 基准实测四百万状态条目：states hash 每条目约占 80 字节、须取 2 的幂，128 条与四百万条之间吞吐差距约百分之十二，验证小型硬件在充分内存与 hash 配置下可承载大规模并发会话。（BSD Now EP143，[128.00-330.00]，L2）
 - PHK 在 VarnishCache 博客中以 FreeBSD 为其项目首要的“keep us honest”平台：三个 jail 分别承载 varnish、hitch 与工具链，从裸机到可运行约十五分钟；他自述 jail 系其 1998 年所写，配置全部入版本控制、备份即 git clone。（BSD Now EP143，[995.00-1250.00]，L2）
+- 2014 年 7 月 FreeBSD 社区就 PF 防火墙展开罕见规模的大讨论：邮件列表普遍认同与 OpenBSD PF 重新同步是好事，却无人愿意承担整体维护；曾尝试导入新版的 Baptiste Daroussin 因破坏 PF 而回退，表态只愿移植与自身用法相关的个别特性，共识与动手之间出现明显断层。（BSD Now EP47，[478.06-502.04]，L2）
+- 安全官访谈勾勒出 FreeBSD 安全治理的全貌：章程使安全官名义上对系统中每一个安全漏洞负责，日常是安全公告的撰写与发布，实质更涵盖流程改进、漏洞缓解技术与安全特性优先级决策，2013 年 /dev/random 重构之争即由其主持裁决，其任内还推动以标准 CPE 元数据嵌入包体系以弥补 VuXML 字符串匹配易漏报的结构缺陷。（BSD Now EP47，[1807.74-1938.24]，L1）
 - Bryan Drewery（转写误作 Brian Drury）自述入圈路径：2003 年前后经 IRC 结识经营 shell 服务的 FreeBSD 4.11 用户而入坑，2012 年因不满包安装状态找到 pkgng 项目并协同 Baptiste Daroussin，从提交补丁到获 ports 提交权，再到以包框架贡献者身份进入 Port Manager 团队并新获 source 提交权——包体系维护者由工具建设者自然生长而成。（BSD Now EP46，[1963.44-2018.28]，L1）
 - FreeBSD 官方包构建集群的一手运维细节：四台号称 beefy 的机器各配 32 核与 96—100GB 内存，每周二 UTC 凌晨一点对 ports 树拍快照并按各发布版与 head 构建 x86 包集，全量需三至五天；另有八套每日测试系统覆盖非 root 构建、打包测试与 QA，quarterly 季度分支自 head 切出并回灌安全修复，属仍在试验中的稳定化机制。（BSD Now EP46，[2439.92-2628.96]，L1）
 - iodine DNS 隧道演示的实操要点构成其技术史价值：服务端以特权分离用户与 chroot 运行但密码将以明文见于进程列表，且 iodined 须独占一个 IP 承担 DNS 应答而无法与既有域名服务共存；客户端探测可用查询类型并按 DNS 包尺寸协商 MTU，建隧道后经压缩 SSH 登录验证，并可与 stunnel、SSH 链式跳板教程组合成受限网络下的成套突围方案。（BSD Now EP46，[5978.10-6327.42]，L1）
@@ -188,6 +190,7 @@ volume: 05
 - Christophe 关于 PF 缺陷修复的博客；EuroBSDCon 2017 会议议程与 FreeBSD 基金会董事会记录。（BSD Now EP213，[1335.70-1904.14]，L2）
 - Macy 提供的图形栈测试材料：DRM next 4.6 分支、可直接写入 U 盘启动的测试镜像（XFCE 与 KDE、SNA/UXA 加速模式切换）与 PC-BSD 每月 current 镜像拉入补丁的安排。（BSD Now EP143，[3784.00-3965.00]，L1）
 - Peter 在 DragonFly 邮件列表的 xWayland 运行报告（GTK3 应用与 Firefox 可用、Chrome 失败）与 Olivier 的 PF 状态表基准博客，均为当期可追溯的一手技术记述。（BSD Now EP143，[5451.00-5503.00]，L2）
+- 本期可提炼的一手史料包括：斯洛文尼亚 OpenBSD hackathon（2014 年 7 月 8 日至 14 日）的 CVS 提交树（一周逾千次提交）与参与者分工记录、FreeBSD 邮件列表 PF 讨论串原文、BSD Router Project 公布的转发基准原始数据与运行脚本、LibreSSL tech 邮件列表的补丁流，以及安全官 Dag-Erling Smørgrav 对个人入坑与 commit bit 授予经历的亲述。（BSD Now EP47，[68.2-96.2]，L1）
 - 本期经主持人提及可资查证的一手史料：FreeBSD 9.3-RELEASE 公告与 release notes（iSCSI 可加载、ARC 元数据限额运行时可调、on-if-console 便于 bhyve 直用官方镜像）、pkgng 1.3 RC2 邮件列表通告、LibreSSL 便携版 2.0.x 于 OpenBSD FTP 发布并已入 ports、2014 年 FreeBSD 核心团队九人选举名单（Gavin Atkinson、David Chisnall、Baptiste Daroussin、Ed Maste、George Neville-Neil、Hiroki Sato、Gleb Smirnoff、Peter Wemm、Robert Watson）、EuroBSDCon 2014 索菲亚注册页与开发者峰会邀请制说明。（BSD Now EP46，[1052.16-1090.52]，L2）
 - 本期史料包括 NYCBSDCon 2014 议程与现场反馈、Luke Marsden 访谈（当事人自述）、HybridCluster 产品说明及 FreeBSD 10 PF/IPFW 讨论。（BSD Now EP24，[1059.58-1612.28]，L1）
 - 本期史料包括 Justin Sherrill 博客观点、Henning Brauer 对 PF 可移植层的表态、Baptiste Daroussin 访谈（当事人自述）以及 OpenBSD Binary Upgrade 第三方脚本。（BSD Now EP18，[346.52-557.28]，L1）
@@ -209,6 +212,7 @@ volume: 05
 - 总纲10 动手者创造历史：Christophe 通过测试脚本复现 vnet 中的 PF panic 并逐行修复，是动手者以调试实践改进防火墙代码的典型记录。（BSD Now EP213，[1413.72-1904.14]，L2）
 - 总纲10 动手者创造历史：Macy 的 dogfooding 议程主张 FreeBSD 应在任意笔记本上开箱可用，路径是让 Linux 开发者的驱动工作经由 KPI 直接为 FreeBSD 复用——以动手者的具体可用性而非抽象优越性为目标。（BSD Now EP143，[2489.00-2634.00]，L1）
 - 总纲5 没有必然性，只有偶然性：Package Base 错过 11.0 属冻结窗口内缺陷集中暴露的偶然事件，节目将其归因于“最后一刻努力仍不够”的具体条件，而非路线本身失败。（BSD Now EP143，[4943.00-4974.00]，L2）
+- 总纲10 动手者创造历史：PF 讨论与 LibreSSL 的对照揭示同一机制：社区共识不产生代码，唯有动手者启动历史——主持人引 LibreSSL 与 FreeBSD ZFS 安装器皆因一人先动手而带动集体参与，嘉宾更以亲历口吻总结“空白页是最难的起点”（638.58-645.34）；史书应当记录的是接住空白页的人，而非那纸无人执行的共识。（BSD Now EP47，[609.12-645.34]，L2）
 - 总纲10 动手者创造历史：包体系的演进由动手者驱动而非领袖钦定：Google Summer of Code 学生写出新的依赖求解器使 package set -o 大半退役，构建集群从小两台机器被不断塞机器式地扩张并由个人以自写脚本勉力管理，Port Manager lurker 计划以 IRC 频道吸纳 Matt、Steve Wills 等新血——基础设施史的正主是这些具体操持者，正合总纲之动手者创造历史。（BSD Now EP46，[2126.10-2148.62]，L2）
 - 总纲10 动手者创造历史：总纲10 动手者创造历史：Luke Marsden 自建主机公司并发展为 HybridCluster，是动手者以创业实践推动系统应用的代表。（BSD Now EP24，[1074.80-1171.02]，L1）
 - 总纲11 商品是形式主义：总纲11 商品是形式主义：HybridCluster 以许可模式售卖基于 jail 与 ZFS 的虚拟 SAN 与容器平台，体现软件商品化的形式。（BSD Now EP24，[1587.16-1612.28]，L1）
@@ -228,6 +232,9 @@ volume: 05
 - 转录将 Doug Rabson 记作 Doug Rapson、将 Dave Cottlehuber 记作 Dave Cossel-Huber，人名拼写存在转写歧义。　[存疑脚注] 贡献者姓名存在语音转写偏差，须以 FreeBSD Foundation 公告核验（BSD Now EP640，[227.38-290.18]，L4）
 - ELIZA 作者名在转录中拼作 Weisenbaum 或 Weisenbalm，通行写法为 Joseph Weizenbaum，须以原始论文核验。　[考据脚注] 人名拼写存在转写偏差，以 Communications of the ACM 1966 年原文为准（BSD Now EP640，[1279.84-1342.08]，L4）
 - Macy 澄清更新 Linux KPI 与 Linux ABI 兼容层基本无关：ABI 层自 2.6.32 以来新增系统调用甚少，inotify 等缺失仍是 Dropbox 类应用的障碍；填平 ABI 缺口是其桌面 dogfooding 计划的另一部分。　[考据脚注] 关于 i965 支持与 Intel Gen10 二进制 blob 是否会为 FreeBSD 重编，Macy 仅引述未经证实的内部消息（BSD Now EP143，[4418.00-4484.00]，L1）
+- PF 性能之争呈现典型的声明—质疑—实证结构：OpenBSD 的 Henning Brauer 称算法与锁的改进使其 PF 快约四倍，FreeBSD 开发者 Gleb Smirnoff 反驳该说法未经基准支撑且双方均未公布对比数据；BSD Router Project 随后在四核万兆平台公布附原始数据与脚本的可复现转发基准，显示 FreeBSD 10 明显快于受无 SMP 限制的 OpenBSD 5.4。（BSD Now EP47，[857.82-980.68]，L3）
+- OTP 双因子认证进入 FreeBSD base 的争论焦点不在算法而在政策：由 root 统一管辖的可写密钥库是 HOTP/TOTP 计数与时效失效的技术前提，但放宽用户自管将招致弱化与误操作；Dag-Erling Smørgrav 断言“若在 10.1 放入半吊子方案，将被迫向后兼容五年”（2938.2-2950.76），宁可推至 11 一次做对，体现发布即承诺的工程伦理。（BSD Now EP47，[2931.1-2957.62]，L1）
+- LibreSSL portable 版在 Linux 上暴露的伪随机数复用缺陷（特定 fork 情形可产出相同随机数）显示跨平台移植会击穿原设计假设，而 Linux 内核开发者相应推动与 OpenBSD getentropy 同构的系统调用以规避文件句柄耗尽攻击，构成 OpenSSL 分叉事件反向塑造 Linux 内核接口的互构链条。　[存疑脚注] 该段涉 Linux 侧动议，转写中人名（如 Theodore So、10Uincts）疑为语音转写失真，须回查 2014 年 7 月 OpenBSD tech 邮件列表与内核邮件列表原文方可定名。（BSD Now EP47，[1040.0-1145.72]，L2）
 - 关于 Netflix 存储架构的孤证说法须存疑：主持人称 Netflix 以 discrete wire 将 SATA 磁盘一对一接 LSI HBA 而回避 SAS 扩展器，并自认“我不是百分百确定”（4922.54）；此说既非当事人自述亦无文档佐证，且转写将 HBA 误作 HPA，引用前应以 Netflix 工程实践一手材料核证。　[存疑脚注] 说话人自陈不确定且非当事人，属单一来源推断，Netflix 磁盘直连实践待核（BSD Now EP46，[4918.94-4944.68]，L4）
 - PF 双雄之争在节目中仅为转述层材料：OpenBSD 邮件列表风暴中社区主张与其仅 SMP 化 PF 不如做通用 SMP 改造，DragonFly 已多线程化 PF，FreeBSD 侧则有 PF 前途之问与 IPFW 复兴的杂音；“快四倍”“随核数线性”等数字均出自主持人复述，且网卡多队列等底层论断含糊，映射入史前必须回查 2014 年邮件列表原帖。　[存疑脚注] 争论细节与性能数字仅经主持人转述，须以邮件列表一手原文复核（BSD Now EP46，[668.06-893.54]，L2）
 - HybridCluster 活迁移亚秒级为其商业宣传口径，需独立验证；NYCBSDCon 议题与演讲细节为主持人转述，需与会议议程核对。　[存疑脚注] 活迁移性能与会议细节以官方发布为准，需交叉验证。（BSD Now EP24，[1494.88-1500.64]，L4）
@@ -241,6 +248,7 @@ volume: 05
 - [BSD Now EP640] Pennington J. BSD Now: 640: Cleaning up Hammer[EB/OL]. (2025-12-04)[2026-08-15]. https://www.bsdnow.tv/640.
 - [BSD Now EP213] Pennington J. BSD Now: 213: The French CONnection[EB/OL]. (2017-09-27)[2026-08-15]. https://www.bsdnow.tv/213.
 - [BSD Now EP143] Pennington J. BSD Now: 143: One small step for DRM, one giant leap for BSD[EB/OL]. (2016-05-25)[2026-08-15]. https://www.bsdnow.tv/143.
+- [BSD Now EP47] Pennington J. BSD Now: 47: DES Challenge IV[EB/OL]. (2014-07-23)[2026-08-15]. https://www.bsdnow.tv/47.
 - [BSD Now EP46] Pennington J. BSD Now: 46: Network Iodometry[EB/OL]. (2014-07-16)[2026-08-15]. https://www.bsdnow.tv/46.
 - [BSD Now EP24] Pennington J. BSD Now: 24: The Cluster & The Cloud[EB/OL]. (2014-02-12)[2026-08-15]. https://www.bsdnow.tv/24.
 - [BSD Now EP18] Pennington J. BSD Now: 18: Eclipsing Binaries[EB/OL]. (2014-01-01)[2026-08-15]. https://www.bsdnow.tv/18.

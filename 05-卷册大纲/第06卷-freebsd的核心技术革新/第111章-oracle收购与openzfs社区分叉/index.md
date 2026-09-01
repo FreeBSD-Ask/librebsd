@@ -42,7 +42,7 @@ volume: 06
 本章所书皆是形式主义化的重构，并非对“真实的 BSD 历史”的呈现。本章的章节划分、事件选择、叙事策略、因果归因——全部基于编纂者的哲学设定。本章承认这些局限，不声称客观或中立，欢迎被更诚实的叙事所超越。
 
 <!-- PODCAST_REVIEW v20260829 -->
-<!-- 语义复核范围：BSD Now EP491、BSD Now EP374、BSD Now EP232、BSD Now EP222、BSD Now EP203（共 5 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
+<!-- 语义复核范围：BSD Now EP491、BSD Now EP374、BSD Now EP232、BSD Now EP222、BSD Now EP203、BSDTalk EP197（共 6 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
 
 **要点**：
 
@@ -68,6 +68,9 @@ volume: 06
 - 技术反驳包括：去重收益常被压缩抵消，Intel 的分配类（allocation classes）与元数据分层可实现混合存储；George Wilson 与 Matt Ahrens 的 2014/2016 空间分配改进缓解了大而碎池的性能悬崖。（BSD Now EP203，[522.88-800.00]，L2）
 - Theo de Raadt 在 OpenBSD 技术邮件列表报告内核随机重链接（KARL）进展：安装、升级与每次开机都会以随机顺序与偏移重链接生成唯一内核，使单个指针泄露无法推断其他地址，并要求用户测试 6.2 快照。（BSD Now EP203，[4432.62-4690.58]，L2）
 - Jörg Sonnenberg 公告 NetBSD 仓库 CVS→Fossil→Git 转换迁至新家，改用 SHA-512 校验；同期 LibreSSL 2.5.5 与 2.6.0 发布，后者将成为 OpenBSD 6.2 的一部分。（BSD Now EP203，[5080.48-5480.00]，L2）
+- FreeBSD 核心团队成员 M. Warner Losh 自述 2007 年以来推动嵌入式 FreeBSD 议程并从事 MIPS 移植，2010 年出任 iXsystems 自由软件开发总监后主持 FreeNAS 8 重构：目标是从单一 NAS 设备转向可跨 FreeBSD 版本移植、可扩展至打印与媒体服务等用途的平台，并以 Alpha 快照形式向社区公开测试。（BSDTalk EP197，[62.72-117.12]，L1）
+- FreeNAS 8 的工程基座由旧版沿用 m0n0wall 的 crunched binary 方案整体切换为 NanoBSD：该框架作为 FreeBSD 源树内的打包脚本随主线同步，天然继承全部架构与驱动支持，以约半 GB 镜像面向 CF 卡介质，并通过双分区交替写入实现更新失败即回滚；配置层则改为以 SQLite 数据库统一建模主机、接口、磁盘与卷，开机时由 Shell 与 Python 脚本生成配置文件，Django 提供 MVC 式 Web 界面，数据模式带版本化转换层以延续旧版免手工合并的升级体验。　[存疑脚注] 转写将 NanoBSD 作者记作 Paul Hennigkamp，按 FreeBSD 通行史料应为 Poul-Henning Kamp，属转写音误（BSDTalk EP197，[293.88-1041.86]，L1）
+- Losh 从工程角度论证 ZFS 的必要性：磁盘容量增长快于错误率下降使完整性校验与自动纠错成为刚需，ZFS 的去重、压缩、池动态扩容与数据冗余构成对低端商用 NAS 盒的差异化优势；其成熟度随各版本导入 FreeBSD 持续改善，且已有公司围绕 FreeBSD 加 ZFS 开展开发，即便 Oracle 不再发布新代码，ZFS 在 FreeBSD 生态中也足以独立维持演化。（BSDTalk EP197，[1544.10-1681.78]，L1）
 
 **史料**：
 
@@ -86,6 +89,7 @@ volume: 06
 - Netflix 架构科普文章，含 700 微服务、AWS 转码、DRM 与 Open Connect 的描述。（BSD Now EP222，[2014.12-2054.92]，L2）
 - 转述 EuroBSDCon 2017 参会者 Vincent 的游记，含 OpenBSD 包工具、Coreboot、DragonFly 图形栈等演讲。（BSD Now EP222，[4664.98-4934.78]，L2）
 - OpenZFS wiki 公司列表与 Dev Summit 材料；OpenBSD 技术邮件列表 KARL 状态帖；NetBSD announce 仓库转换公告；LibreSSL 发布说明。（BSD Now EP203，[148.62-5480.00]，L2）
+- 该期一手史料以 Losh 口述为主：2007 年起的 FreeBSD MIPS 移植与嵌入式推广经历、FreeBSD 9 计划引入 soft updates journaling 以获得接近 ZFS 的快速重启、Oracle 承诺每个 Solaris 大版本后发布 ZFS 源码转储；开场主持人并提及通知工具 biff 最早见于 4.0BSD，属其固定片头考据。（BSDTalk EP197，[34.00-144.00]，L1）
 
 **史观**：
 
@@ -101,6 +105,9 @@ volume: 06
 - 总纲9 经验优先：Netflix 的 Open Connect 以 FreeBSD 作为边缘分发设备，被呈现为企业选型中经验与工程实践优先于流行度。（BSD Now EP222，[2320.66-2377.7]，L2）
 - 总纲5 没有必然性，只有偶然性：ZFS 从 Sun 内部项目到 OpenZFS 社区的转折由诉讼、收购等偶然事件驱动，社区分叉后反而延续了技术生命，体现分离聚合与偶然性在文件系统史中的塑造。（BSD Now EP203，[148.62-241.44]，L2）
 - 总纲10 动手者创造历史：KARL 把安全机制落实为每次开机的具体重构，由 Theo 与协助者在 hackathon 上动手实现，显示安全演进来自动手者的直接推进而非抽象原则。（BSD Now EP203，[4432.62-4690.58]，L2）
+- 总纲10 动手者创造历史：Losh 强调 iXsystems 在对外发布前做了九个月幕后基础工作以先达到稳定点， FreeNAS 的展示价值依赖具体动手者的持续工程投入而非营销叙事。（BSDTalk EP197，[244.32-272.88]，L1）
+- 总纲3 不存在进步，只有权力再分配：iXsystems 接管 FreeNAS 引发社区对商业公司收编的普遍焦虑，Losh 以 FreeBSD 式治理回应——做实际工作的人拥有最大话语权、开发全部公开、基础产品永久免费而收入来自整机与服务——显示项目控制权在个人维护者与公司之间的再分配，而非单纯的技术进步叙事。（BSDTalk EP197，[1828.74-1925.56]，L1）
+- 总纲4 分离聚合是永恒规律：Losh 判断 ZFS 即使在 Oracle 停止发布代码的情况下也已有足够多的公司与 FreeBSD 社区承托而将长期自持演化，呈现核心技术器物脱离其原属商业母体后经由开源社区聚合再生的轨迹。（BSDTalk EP197，[1650.34-1681.78]，L1）
 
 **辨析**：
 
@@ -109,6 +116,7 @@ volume: 06
 - 转写中 OpenBSD 6.8 随机种子置信度标记被表述为“RB_GOODRANDOM”，其具体宏名与语义应以 OpenBSD 6.8 发布说明及源码为准。　[存疑脚注] 具体宏名待官方变更日志核对（BSD Now EP374，[397.32-447.44]，L4）
 - 宽容许可证的讨论源自一篇德语科技网站争论的二手转述，博客作者身份与原始争论语境未能从转写确认，各阵营主张未经独立核验。　[存疑脚注] 博客原文语境与争论双方身份无法从转写核实（BSD Now EP232，[1493.02-1547.18]，L4）
 - Netflix 架构细节（微服务数量、DRM 与缓存策略）系二手科普文章转述，且节目自身注明“地图不按比例”等不确定处，具体数字须以 Netflix 工程博客核实。　[存疑脚注] 架构数字系二手转述，须以 Netflix 官方资料核实（BSD Now EP222，[2631.92-2643.76]，L4）
+- Losh 关于基础产品永久免费、不搞快照独占、按 FreeBSD 模式开放治理的表述属 2010 年 9 月当事人的意图性承诺，其兑现程度（尤其 FreeNAS 之后向 TrueNAS 的转型路径）须与后续项目实际演化交叉验证后方可作为史实引用。　[存疑脚注] 当期承诺性陈述，非既成史实；与 260.2 TrueNAS 企业化演进的后续记载互证后方可采信（BSDTalk EP197，[1828.74-1969.14]，L5）
 
 **文献**：
 
@@ -117,5 +125,6 @@ volume: 06
 - [BSD Now EP232] Pennington J. BSD Now: 232: FOSDEM 2018[EB/OL]. (2018-02-07)[2026-08-15]. https://www.bsdnow.tv/232.
 - [BSD Now EP222] Pennington J. BSD Now: 222: How Netflix works[EB/OL]. (2017-11-29)[2026-08-15]. https://www.bsdnow.tv/222.
 - [BSD Now EP203] Pennington J. BSD Now: 203: For the love of ZFS[EB/OL]. (2017-07-19)[2026-08-15]. https://www.bsdnow.tv/203.
+- [BSDTalk EP197] Backman W. BSDTalk: 197: bsdtalk197 - FreeNAS 8 with M. Warner Losh[EB/OL]. (2010-09-19)[2026-08-27]. https://bsdtalk.blogspot.com/2010/09/bsdtalk197-freenas-8-with-m-warner-losh.html.
 
 <!-- /PODCAST_REVIEW -->

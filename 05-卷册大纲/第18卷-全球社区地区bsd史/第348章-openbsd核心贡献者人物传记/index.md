@@ -36,7 +36,7 @@ OpenBSD 的贡献者谱系研究面临若干方法论挑战：其一，OpenBSD �
 - 参考文献数据库匹配记录（chmatch_3633）
 
 <!-- PODCAST_REVIEW v20260829 -->
-<!-- 语义复核范围：BSD Now EP435、BSD Now EP422、BSD Now EP623（共 3 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
+<!-- 语义复核范围：BSD Now EP435、BSD Now EP422、BSD Now EP623、BSDTalk EP200（共 4 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
 
 **要点**：
 
@@ -52,6 +52,11 @@ OpenBSD 的贡献者谱系研究面临若干方法论挑战：其一，OpenBSD �
 - David Gwynne 主导的 sec(4) 把 IPsec 从流量窃取点改为可管理接口，使防火墙、队列、BPF 与 BGP 等常规工具可直接作用于隧道流量，服务于与 AWS 站点间 VPN 的对接。（BSD Now EP623，[2044.96-2309.56]，L1）
 - David Gwynne 还实现 ERSpan 接口与 BPF 日志守护进程，以 GRE 封装远程端口镜像并支持 VMware 分布式虚拟交换机的监控会话。（BSD Now EP623，[2316.56-2663.62]，L1）
 - OpenBSD hackathon 的社会维度被视为关键：面对面沟通能消除邮件与聊天中的误解，组织跨城市活动则面临资源协调的不确定性。（BSD Now EP623，[1544.20-1796.32]，L1）
+- 维护者 Kjell Wooding 阐明 mg 的定位：这是一个极小的 Emacs 风格编辑器，与 Emacs 本质不同——后者是恰好附带编辑器的 Lisp 解释器，而 mg 首先是编辑文件的工具，不内嵌编程语言、不提供游戏或浏览器式扩展，只为满足 Emacs 用户的键位肌肉记忆；他并非原作者，而是在维护过程中偶然接手，mg 于 2000 年进入 OpenBSD 基本系统。（BSDTalk EP200，[60.04-157.16]，L1）
+- mg 的历史与可移植性：Wooding 回忆该编辑器 1986 年即已问世、早于 OpenBSD 存在；多年来被社区自发移植至 Debian、Mac OS X 等环境，维护者至今仍收到 Debian 用户的 bug 报告；项目并无独立便携版仓库，获取最新源码的正规途径始终是 OpenBSD 源树。（BSDTalk EP200，[359.88-401.88]，L1）
+- 许可证工程：mg 初入项目时约九成代码即属 public domain，团队随后逐个联系在树作者，将全部补丁释放进 public domain，如今仅 theo mode 一个文件仍持 BSD 许可——该模式仿照 Emacs 中 ELIZA 式对话实验，输出 Theo de Raadt 多年来的言论语录，属社区自嘲文化产物；Wooding 同时指出 public domain 在瑞典等法域仍有法律适用问题。（BSDTalk EP200，[691.08-751.56]，L1）
+- Wooding 的参与路径与角色变迁：他曾经营安全公司 Code Talker Communications，与一巷之隔的 Secure Networks 公司一次喝啤酒闲谈中得知 OpenBSD 开发者住在自己的家乡 Calgary，遂联系并加入项目；最初职责是维护旧 IPF 防火墙代码并整合 Darren Reed 的改动，亲历该代码被整体移出源树、代之以 PF 的大分裂；此后其贡献呈游牧状，在 hackathon 间隙深入源码各处修 bug，如 pfsync 与冗余代码问题。（BSDTalk EP200，[412.48-526.32]，L1）
+- 维护哲学与状态：Wooding 的长期目标是让代码行数越来越少，通过迭代清理与简化逼近；mg 仍存在积年未修的设计缺陷，修复通常依赖某份 bug 报告将维护者唤醒；他曾在 hackathon 中专门重写文档，如今手册页可能比源码本身更长，呼应 OpenBSD 对完整 man page 的自豪传统；另曾于愚人节发布可用的 vi 模式补丁。（BSDTalk EP200，[654.32-801.48]，L1）
 
 **史料**：
 
@@ -60,6 +65,7 @@ OpenBSD 的贡献者谱系研究面临若干方法论挑战：其一，OpenBSD �
 - FreeBSD Foundation SBOM 项目公告。（BSD Now EP623，[309.72-553.78]，L2）
 - Klara Systems 的 FreeBSD Summer 2025 Roundup。（BSD Now EP623，[557.22-1040.66]，L2）
 - David Gwynne 访谈（University of Queensland，2025 年 5 月 29 日）。（BSD Now EP623，[1064.42-3319.38]，L1）
+- 一手史料以 Wooding 口述为主：mg 的 1986 年起源记忆、public domain 授权重构过程、theo mode 的由来、IPF 至 PF 更替的亲历叙述、OpenBSD Foundation 创始董事身份自述；开场栏目由主持人转述 netstat 命令最早出现于 4.2BSD。（BSDTalk EP200，[373.88-526.32]，L1）
 
 **史观**：
 
@@ -68,6 +74,8 @@ OpenBSD 的贡献者谱系研究面临若干方法论挑战：其一，OpenBSD �
 - 总纲10 动手者创造历史：总纲10 动手者创造历史：David Gwynne 以大学系统管理员身份亲手修复基础设施问题并回馈 OpenBSD，体现一线操作者推动协议与工具演进。（BSD Now EP623，[1806.76-1946.58]，L1）
 - 总纲6 和解优于斗争：总纲6 和解优于斗争：OpenBSD hackathon 以面对面沟通消解邮件分歧，强调协作而非对抗的社区机制。（BSD Now EP623，[1580.48-1651.24]，L1）
 - 总纲4 分离聚合是永恒规律：总纲4 分离聚合是永恒规律：sec(4) 将 IPsec 从网络栈中窃取流量的分离点改造为可聚合进接口体系的组件。（BSD Now EP623，[2049.28-2316.56]，L1）
+- 总纲13 法律与道德是利益分配：mg 的授权重构过程——逐个接洽在树作者、把分散的版权利益统一收束为 public domain——显示许可证选择在开源工程中本质上是围绕项目利益的法律形式安排，而非抽象的道德立场。（BSDTalk EP200，[116.68-137.44]，L1）
+- 总纲10 动手者创造历史：Wooding 自述数年间漫游源码树、依 bug 报告唤醒注意、以 hackathon 间隙零星修复的维护方式，表明 OpenBSD 的日常演化由大量此类默默动手的个体贡献累积而成。（BSDTalk EP200，[493.80-521.64]，L1）
 
 **辨析**：
 
@@ -75,11 +83,13 @@ OpenBSD 的贡献者谱系研究面临若干方法论挑战：其一，OpenBSD �
 - NYC*BUG 的成立年份与“最古老用户组之一”的说法为当事人估计，需与用户组档案及其他 BSD 用户组成立记录交叉核对。　[存疑脚注] 用户组成立年份为当事人记忆性表述，宜与其他地区 BSD 用户组史料比对。（BSD Now EP422，[2090.58-2102.08]，L4）
 - 转录将 David Gwynne 记作 David Gwynn 或 David Gwendt，标题 Two's interview 疑为 Gwynne's interview 的转写偏差，人名以 OpenBSD 官方为准。　[存疑脚注] 人名与标题存在语音转写偏差，须以 OpenBSD 官方资料核验（BSD Now EP623，[1068.26-1075.34]，L4）
 - sec(4) 相关表述中 IPsec 接口在转录混用 sec 与 sec4，具体版本与接口名须以 OpenBSD 手册页核验。　[考据脚注] 接口名称存在转写混用，须以 sec(4) 手册页为准（BSD Now EP623，[1971.80-2235.62]，L4）
+- mg 1986 年首发的说法为当事人回忆，其源自 MicroEMACS 谱系的精确传承（含原始作者与年份）须以源码历史与既存考据交叉验证；转写人名存在音误——受访者记作 Shell Wooding 应为 Kjell Wooding，Theo de Raadt 被记作 Theodore Atth——引用前须回查原音频。　[存疑脚注] 起源年份系当事人口述回忆，且转写人名音误，采信前须复核（BSDTalk EP200，[365.84-377.28]，L4）
 
 **文献**：
 
 - [BSD Now EP435] Pennington J. BSD Now: 435: Year End Interview[EB/OL]. (2021-12-30)[2026-08-15]. https://www.bsdnow.tv/435.
 - [BSD Now EP422] Pennington J. BSD Now: 422: The Brian Callahan Interview[EB/OL]. (2021-09-30)[2026-08-15]. https://www.bsdnow.tv/422.
 - [BSD Now EP623] Pennington J. BSD Now: 623: Two's interview[EB/OL]. (2025-08-07)[2026-08-15]. https://www.bsdnow.tv/623.
+- [BSDTalk EP200] Backman W. BSDTalk: 200: bsdtalk200 - The mg text editor with Kjell Wooding[EB/OL]. (2010-10-13)[2026-08-27]. https://bsdtalk.blogspot.com/2010/10/bsdtalk200-mg-text-editor-with-kjell.html.
 
 <!-- /PODCAST_REVIEW -->

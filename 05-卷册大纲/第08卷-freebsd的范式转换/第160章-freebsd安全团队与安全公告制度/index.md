@@ -45,7 +45,7 @@ volume: 第08卷-freebsd的范式转换
 - Searle, J. R. (1995). *The Construction of Social Reality*. Free Press; Latour, B. (1987). *Science in Action: How to Follow Scientists and Engineers Through Society*. Harvard University Press; Spinellis, D. (2017). *A Repository of Unix History and Evolution*. Empirical Software Engineering[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]<!-- DB_REF:freebsd.duckdb -->> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 2024-2026 年间：168,386 次提交。> 仓库总览：1,294,851 次提交，13,875 位贡献者，1993-06-12 至 2026-08-25。
 
 <!-- PODCAST_REVIEW v20260829 -->
-<!-- 语义复核范围：BSD Now EP368、BSD Now EP230、BSD Now EP201、BSD Now EP171、BSD Now EP56、BSD Now EP21（共 6 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
+<!-- 语义复核范围：BSD Now EP368、BSD Now EP230、BSD Now EP201、BSD Now EP171、BSD Now EP56、BSD Now EP21、BSDTalk EP193（共 7 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
 
 **要点**：
 
@@ -83,6 +83,10 @@ volume: 第08卷-freebsd的范式转换
 - m0n0wall 1.81 发布，为面向嵌入式设备的 BSD 防火墙发行版；pfSense 于 2004 年自 m0n0wall 分叉，面向普通 PC 且开发更活跃。（BSD Now EP21，[4458.98-4516.38]，L2）
 - NTPD 被发现可利用欺骗 UDP 包返回放大响应而充当 DDoS 放大器，FreeBSD 与 pfSense 均通过安全公告与配置更新进行缓解。（BSD Now EP21，[4540.34-4636.46]，L2）
 - PC-BSD 10.0 随 FreeBSD 10 发布，RC4 支持 Wine 与 9.2 升级保留 PBI；因 FreeBSD 10 的 ABI 变化，升级需重建或重装全部包。（BSD Now EP21，[4751.26-4801.10]，L2）
+- Percival 的密码学使用哲学：密码学领域浩大且极易做错，但存在一个“安全的小角落”——只要不越出惯例、使用久经研究且被充分理解的算法，无需数学天赋也能安全使用；他不为“加密一切”的立场背书，其多数邮件保持明文，理由是每次解密输口令徒增烦扰，而在会议场合使用密码学本身就会暴露密钥、招致肩窥风险。（BSDTalk EP193，[71.44-259.02]，L1）
+- FreeBSD Update 与 Portsnap 的机制：基础系统二进制由安全团队构建并经密码学签名后推送镜像，安全公告发布即可获取安装，从而保证用户拿到的是安全团队的真实产物而非镜像站上被调包的二进制；Portsnap 约每小时从 ports 仓库取增量、打包并生成索引再签名分发，fetch 与 update 两步分离，以免自动更新在构建进行中删除目录。（BSDTalk EP193，[381.34-513.02]，L1）
+- 配置文件处理与升级边界：freebsd-update 自 6.3 起支持版本间升级，对配置文件采取三方合并——取旧版发布原件、新版发布原件与用户现存文件运行 merge3，成功则展示合并差异，失败则打开编辑器交还用户裁决；只要不刻意构造混淆（如移动 /etc），工具很难出错。（BSDTalk EP193，[571.18-689.18]，L1）
+- Tarsnap 的缘起与形态：2006 年底身为安全官的他需要绝不泄露敏感信息的在线备份却遍寻不得，遂凭借 FreeBSD Update 二进制差分经验自建，博客征询后应者云集而成商业服务；它以 BSD tar 与 libarchive 为前端提供完整命令行语义，运转三年半已成其全职工作，数据增长缓慢但已到须认真处理扩展性的阶段——服务端早年“安全易行优先、性能留待日后”的选择如今到了偿还之时。（BSDTalk EP193，[791.94-930.42]，L1）
 
 **史料**：
 
@@ -99,6 +103,8 @@ volume: 第08卷-freebsd的范式转换
 - FreeBSD libc link_ntoa 缓冲区溢出的安全公告与 HardenedBSD 的补丁复核。（BSD Now EP171，[3896.24-3998.72]，L2）
 - Peter Wemm 访谈（FreeBSD.org 集群管理员当事人自述）。（BSD Now EP56，[226.16-2846.68]，L1）
 - 本期史料包括 Colin Percival 访谈（当事人自述）、FreeBSD 10.0 发布与安全公告、m0n0wall 1.81 与 pfSense 谱系记录及 RUBSD 会议录像。（BSD Now EP21，[531.18-545.14]，L1）
+- 安全官位置的协调披露描述：其手中存有尚未发布公告的 FreeBSD 漏洞与波及多个厂商的漏洞，并因跨操作系统协调机制而在公众之前获知 OpenSSL 漏洞；各厂商就修复方案与公告时点相互约定一致，这一位置决定了他对备份保密性的苛刻要求。（BSDTalk EP193，[803.14-828.42]，L1）
+- 个人史链条：1998 或 1999 年家中接入线缆调制解调器，旧机器装 OpenBSD 做 NAT 网关，数月后故障重装时因 OpenBSD 安装器困难而 FreeBSD 简单遂转投 FreeBSD；数学本科期间于 2000 年以约一千七百台机器的分布式计算宣布圆周率第一千万亿比特位为零；牛津计算研究生阶段原计划扩展分布式计算至需节点间通信的更难问题，因要请他人贡献算力而深究主机安全，为免反复 buildworld 与 buildkernel 之苦写下 FreeBSD Update，于 BSDCon 2003 演讲后获 commit bit 并随即加入安全团队，2006 年该工具进入 base 系统。（BSDTalk EP193，[934.08-1108.62]，L1）
 
 **史观**：
 
@@ -119,6 +125,8 @@ volume: 第08卷-freebsd的范式转换
 - 总纲22 知识注定过时：总纲22 知识注定过时：SSH 旧密钥派生函数因安全进展被 bcrypt 取代，既有加密方法随攻防演进而过时。（BSD Now EP21，[531.18-545.14]，L1）
 - 总纲10 动手者创造历史：总纲10 动手者创造历史：Colin Percival 等安全工程师以具体维护与发布工作维持 FreeBSD 的安全响应体系。（BSD Now EP21，[5597.60-5655.20]，L1）
 - 总纲3 不存在进步，只有权力再分配：总纲3 不存在进步，只有权力再分配：安全机制的替换体现攻防双方能力的再分配，而非简单的线性安全进步。（BSD Now EP21，[4540.34-4636.46]，L2）
+- 总纲10 动手者创造历史：其全部工具皆生于动手者自身的痛点：懒惰管理员的更新流程之苦、安全官的备份保密之需，既无立项亦无拨款，写罢博文坐等用户上门付费——FreeBSD 的基础设施层正是由这类自利而顺手的具体劳作垒成。（BSDTalk EP193，[853.02-894.10]，L1）
+- 总纲5 没有必然性，只有偶然性：一次安装器的难易之别决定了个人归宿：若非 OpenBSD 安装器在当时更为艰涩，这位后来的安全官也许终生停留在 OpenBSD 阵营；个人轨迹被这类微不足道的技术偶然所拨转，进而影响其二十年后的位置。（BSDTalk EP193，[967.08-982.28]，L1）
 
 **辨析**：
 
@@ -138,5 +146,6 @@ volume: 第08卷-freebsd的范式转换
 - [BSD Now EP171] Pennington J. BSD Now: 171: The APU - BSD Style![EB/OL]. (2016-12-07)[2026-08-15]. https://www.bsdnow.tv/171.
 - [BSD Now EP56] Pennington J. BSD Now: 56: Beastly Infrastructure[EB/OL]. (2014-09-24)[2026-08-15]. https://www.bsdnow.tv/56.
 - [BSD Now EP21] Pennington J. BSD Now: 21: Tendresse for Ten[EB/OL]. (2014-01-22)[2026-08-15]. https://www.bsdnow.tv/21.
+- [BSDTalk EP193] Backman W. BSDTalk: 193: bsdtalk193 - FreeBSD Security Officer Colin Percival[EB/OL]. (2010-07-03)[2026-08-27]. https://bsdtalk.blogspot.com/2010/07/bsdtalk193-freebsd-security-officer.html.
 
 <!-- /PODCAST_REVIEW -->

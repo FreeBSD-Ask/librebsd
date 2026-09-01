@@ -51,7 +51,7 @@ volume: 第15卷-许可证哲学与法律分析
 - 南京中院（2021）苏01民初3229号；FSF v. Cisco 记录；广州知识产权法院典型案例；济宁网络科技案（2021）；中文自媒体《开源许可证教程》（ref 2377，kaoju_unreliable 系列，被考据对象——其“GPL 病毒”与“法官只会判停止使用”断言已按判例逐条纠正，结论以 FSF 官方 + 判例原文为准）［A］## 284.13.6 中文圈 GPL 理解偏差总表（法律意义维度）| # | 中文圈常见表述 | 法律事实 | 偏差类型 ||---|---|---|---|| 1 | “GPL 是病毒，用了就传染” | 传染仅限演绎作品；聚合/独立程序豁免（GPLv2 §5/GPLv3 §5） | 隐喻误导 || 2 | “只要用了 GPL 代码就必须开源” | 义务触发条件是分发/传播，内部使用与 SaaS（GPLv2）不触发 | 触发条件误读 || 3 | “违反 GPL 只是违约，不构成侵权” | Jacobsen（2008）：许可条件是 copyright conditions，违反=侵权；中国广州案：合同性质+授权终止=侵权 | 法律性质误读 || 4 | “最坏情况就是被起诉、判停止使用” | 南京案 300 万惩罚性赔偿；济宁/广州案授权终止；FSF v. Cisco 合规导向 | 救济范围误读 || 5 | “GPL 是免费午餐/自由软件=免费” | GPL 允许商业收费（GPL FAQ：可销售拷贝赚钱）；"free" 指自由非价格 | 概念混淆（freedom vs gratis） || 6 | “GPL 软件不能商用” | GPL 明确允许商业使用/销售（FSF 商业例外策略） | 商用限制误读 || 7 | “GPLv3 与 GPLv2 区别不大” | v3 增加专利授权、反 Tivoization、与 Apache 2.0 兼容；Linux 内核固守 v2-only | 版本差异误读 || 8 | “违反 GPL 后权利人不享有著作权” | 最高法 51 号案：违反 GPL 与著作权独立——开发者基于独创贡献仍享有著作权（演绎作品保护） | 权利关联误读 |> 本表为法律意义维度的系统性梳理，供正文写作与编辑引用；每条均有判例/FSF 官方来源支撑（详见 284.13.1-284.13.5 各小节辨析字段）。---## 附录：判例一手原件清单（2026-08-04 依据“判例与法律文件一手原件入库规则”采集）> 全部一手原件已下载存档于 `04-现代研究文献/03-文献下载/01-判决书案例/`，并在 references_fulltext.db 入库（ref id），大纲概述以 `<!-- NEWREF:ID -->` 标记引用。案件总清单：`03-原始史料库/06-考据记录/20260804_gpl_cases_inventory.md`。| 案件 | 一手原件 | ref id | 本地存档 ||------|---------|--------|---------|| Jacobsen v. Katzer（CAFC 2008） | CAFC 判决书 PDF（535 F.3d 1373） | 2417 | `Jacobsen_v_Katzer/` || Jacobsen 上诉卷宗 | appellant/appellee brief、CC amicus brief（445KB）、oral argument order 等 10 份 | 2418 | `Jacobsen_v_Katzer/` || Artifex v. Hancom（N.D. Cal. 2017） | MSJ 裁定（govinfo 官方 PDF 491KB）、MTD 裁定（CMU 370KB）、Hancom 动议（archive.org 181KB） | 2423/2424/2425 | `Artifex_v_Hancom/` || FSF v. Cisco（S.D.N.Y. 2008） | 起诉状公告+背景说明（FSF 官方页，案号 08-CV-10764） | 2426/2427 | `FSF_v_Cisco/` || SCO v. Novell（10th Cir. 2011） | 上诉判决 PDF（62KB，确认 Novell 拥有 Unix 版权） | 2428 | `SCO_v_Novell/` || USL v. BSDi / USL v. UC（1993-1994） | 1993-03-03 判决、920420/920724 起诉状、**McKusick 法庭声明**（930119.mckusick.decl，证人证词一手）、1986 UC-AT&T 许可协议 | 2422 | `USL_v_BSDi_USL_v_UC/` || 最高法（2021）知民终51号（OpenWRT/GPLv2） | 判决书全文（官网 HTML 98KB + wikisource 149KB）；一审案号（2018）苏05民初845号 | 2419 | `最高法2021知民终51号_OpenWRT/` || 南京中院（2021）苏01民初3229号（GPL 抗辩） | **判决书全文（2022-09-19，华宇元典 2026-08-04 获取）**+“密切通信”传染规则+300 万惩罚性赔偿；汉坤律所技术+法律分析 | 2468/2420/2421 | `南京苏01民初3229号_GPL抗辩/` || 广州知产法院（2019）粤73知民初207号（GPLv3 合同性质） | 判决书全文（45K 字，2021-09-29） | 2429 | `广州粤73知民初207号_GPLv3罗盒/` || 深圳中院（2019）粤03民初3928号（罗盒 v. 风灵/腾讯） | 判决书全文（43K 字，2021-04-30） | 2430 | `深圳粤03民初3928号_GPLv3罗盒/` || 北京高院（2018）京民终471号（HBuilder 案二审） | **二审判决书全文（2019-11-06，知产宝 2026-08-04 获取）**——三插件独立文件夹无 GPL 协议不受约束；聚合体认定；改判 50 万 | 2476 | `北京HBuilder案_GPL第一案/` |**说明**：
 
 <!-- PODCAST_REVIEW v20260829 -->
-<!-- 语义复核范围：BSD Now EP335、BSD Now EP27、BSDTalk EP7、BSDTalk EP9（共 4 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
+<!-- 语义复核范围：BSD Now EP335、BSD Now EP27、BSDTalk EP7、BSDTalk EP9、BSDTalk EP161、BSDTalk EP166、BSDTalk EP183（共 7 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
 
 **要点**：
 
@@ -71,6 +71,23 @@ volume: 第15卷-许可证哲学与法律分析
 - 跨平台支持是 Webmin 的立项目标也是最重负担：各 UNIX 的基本概念（用户、组、文件）一致，但 NFS、cron 等服务的配置方式差异大，Apache 等常见软件在不同发行版中安装位置各异，Webmin 必须逐一掌握安装路径与版本。当事人的分化判断是：UNIX 家族之间未见进一步分化或收敛、大体稳定，而 Linux 发行版数量爆炸且各自发明打包方法与配置文件布局，未测试的发行版上不能贸然安装；支持最好的平台为 Red Hat/Fedora、Debian、Solaris、FreeBSD，即作者本人常用的系统，其中他偏好 Debian 的 apt 包管理之无痛安装，Red Hat/Fedora 的优势则在第三方商业软件商支持。（BSDTalk EP9，[392.60-560.38]，L1）
 - 当事人解释弃 GPL 取 BSD 许可证的理由：GPL 虽好，但其源码共享义务限制了将 Webmin 改造进商业产品或设备（appliance）的用途；BSD 许可证允许任何人以任意方式使用与改造，在其看来才是真正的更自由。（BSDTalk EP9，[560.38-620.12]，L1）
 - 衍生项目 Virtualmin 是 Webmin 的虚拟主机模块，对标 cPanel 与 Plesk，用于单机托管多虚拟网站、邮件域、DNS 域与 FTP；采用双版本策略：GPL 许可的免费版与功能增强的商业版并行，呈现了开源基础加商业增值的典型商业模式。（BSDTalk EP9，[775.82-811.34]，L1）
+- NYCBSDCon 2008 周日现场：因周六日程延误，组织方压缩午休以追赶进度；OpenBSD 摊位预售 11 月 1 日正式发布的 4.4 版 CD 与 T 恤，旧 T 恤以十美元折扣出售，摊位负责人 Austin Hook 自述 T 恤与 CD 销售构成 OpenBSD 项目的重要资金来源；现场有五六位以上 OpenBSD 开发者，Joshua Stein 与 Sun 的 David Lawler 等亦在场；PC-BSD 主题的 BoF 场由 Chris Morris 主持，约八人参加、面向所有感兴趣者，话题涉及在虚拟机中运行等。（BSDTalk EP161，[242.42-358.05]，L1）
+- DataPipe 的 Unix 部门受访者 Mark Satt 自述：该公司为托管主机与主机托管服务商，1998 年创立、约三百名员工，办公地点遍布硅谷、纽约、伦敦、香港与上海；自创立起即以 BSD 为公司操作系统，内部系统与大量客户系统均运行 BSD，纽约周边客户全部为 BSD 客户，服务涵盖 VPN、防火墙、入侵检测与应用管理；此次为其首次赞助 BSD 会议，动机即纽约地区客户群的实际使用。（BSDTalk EP161，[120.58-218.42]，L1）
+- Theo Schlossnagle 的 Reconnoiter 网络监控系统演讲综述：定位与 Zenoss、Nagios 类似但设计思路迥异，面向数千台机器规模的监控问题，彼时尚处 alpha 阶段；其 web 界面绘图表现出色，并提供类似 Cisco 命令行界面的管理接口，明确以系统管理员的可用性为设计目标；主持人判断其值得跟踪但尚不宜投入生产。（BSDTalk EP161，[581.85-667.38]，L2）
+- Pavel 的 ZFS 演讲及其维护者瓶颈自述：演讲分两场合一，前半以作者自绘卡通动画轻松介绍 ZFS 的文件系统特性与 UFS 等早期文件系统的局限，后半面向开发者展开实现组件的技术讨论、无现场建池演示；他自述自己是 FreeBSD 上极少数从事 ZFS 的开发者之一，人手瓶颈使其不愿宣称生产可用——用户规模一旦扩大，问题报告将超出其个人处理能力，故呼吁更多开发者参与分担；Matthew Dillon 在场，会后两人就 ZFS 与 HAMMER 两个文件系统的设计交谈，主持人评论这种平日仅靠邮件列表往来的跨项目开发者面对面交流正是此类会议的核心价值。（BSDTalk EP161，[660.38-783.58]，L1）
+- Kurt Miller 的 OpenBSD PIE 演讲综述：位置无关可执行文件技术旨在使应用对特定类型的缓冲区溢出攻击更具抵抗力，项目拟在性能与其他副作用可接受的前提下将其加入默认构建，作为纵深防御的又一层次。（BSDTalk EP161，[784.70-825.02]，L2）
+- 周六技术讲座的转述综述：Adrian Chadd 讲 FreeBSD 高吞吐并发磁盘 IO，议题源于 squid 的经验教训并含 squid 与 varnish 的对比及 POSIX 同步异步 IO 概述与规模扩展性讨论；Jason Wright 讲硬件出错时，揭示硬件缺陷之普遍、以幽默幻灯呈现；Matthew Dillon 讲 HAMMER 文件系统，技术性强、面向开发者；Anders 讲 PCC 复兴进展并公开寻求资助以投入更多时间，PCC 尚需证明可用性与速度；另一场报告指出只要目标 CPU 有文档，PCC 移植到新架构约一周即可完成。（BSDTalk EP161，[825.02-1018.66]，L2）
+- 周六另外两场讲座的转述综述：Julio 讲 ATF 自动化测试框架——虽列于 NetBSD 名下但强调其通用定位、无开发工具依赖，源自 Summer of Code 项目，NetBSD 拟借其统一基系统中现有测试，易用且自动化的框架比完善却需手动使用的框架更具实效，跨平台可移植性有望吸引更多开发者；Jeremy Reed 讲 DNSSec——在近月 DNS 欺骗事件频发、DNS 协议事务 ID 与源端口随机化薄弱的背景下，演示以 ISC BIND 实施 DNSSEC 签名的步骤，并寄望大型 ISP 在上游部署以防缓存投毒。（BSDTalk EP161，[1018.66-1152.98]，L2）
+- Jason Dixon 的 BSD versus GPL 演讲综述：延续其此前 BSD is dying 演讲的轻松幽默风格，以笑话包裹许可证议题——讨论人们对各许可证自由程度的假设与哪种更自由的持久争论，并强调正试探涉足开源的企业有必要了解各许可证在可为与不可为、担保与自由保障上的差异。（BSDTalk EP161，[1152.98-1223.62]，L2）
+- Asterisk 的架构由当事人澄清为两个分离的包：Asterisk 本体是呼叫控制与脚本系统，在 BSD 上运行良好——他在访谈中即经由两个 OpenBSD 系统通话；而 Zaptel（后更名为 DAHDI）电话卡内核驱动更为挑剔，旧版仅有 FreeBSD 与 OpenBSD 移植（由 handle 为 Gonzo 的贡献者等人完成），FreeBSD 的 package 版本偏旧。Digium 与开源开发者近月正推动把单体化的 Zaptel 组件拆分以降低耦合，目标使 Solaris 与 BSD 的移植更容易；BSD 社区对开发列表上报的兼容性问题通常能在 24 至 48 小时内修复。（BSDTalk EP166，[205.56-360.16]，L1）
+- Digium 的商业模式建立在 GPL with exception 授权之上：代码以 GPL 发布，但回馈补丁的编码者须声明权利并允许 Digium 在极有限情形下于 GPL 之外商业授权，这一例外授权收入是 Digium 生存并持续向开源项目投入的基础。此外 Zaptel 驱动的计时功能长期支撑会议桥、呼叫等待音乐与 IAX2 中继等特性，纯 IP 部署则完全无需内核模块。（BSDTalk EP166，[437.92-464.70]，L1）
+- Digium 不为 Linux 之外的系统提供官方支持，当事人坦承这并非技术问题而是专业人力与市场结构问题：BSD 社区虽然根基深厚，但其用户多为清楚自身需求的资深系统管理员，问题习惯在社区内部解决，商业支持需求远少于 Linux；辅以 BSD 系统管理员难觅且价格偏高的劳动力市场现实，企业自然倾向 Linux。Digium 设有专门的 asterisk-bsd 邮件列表（lists.digium.com）维持问答。（BSDTalk EP166，[681.96-946.40]，L1）
+- 当事人自述其平台选择史：远自查旧 SunOS 时代学习 Unix，经历 Sun 与 NeXT 的迁移，90 年代中期接触 OpenBSD 预发布版本；虽认为 FreeBSD 与 NetBSD 特性推进更快，仍选择 OpenBSD 作为全部生产系统的默认平台，理由是其默认安全使部署后无需熬夜担忧；其个人网络几乎全为 OpenBSD（4.2 与 4.4 并行渐进升级），Mac 仅作前端，Linux 只用于测试经由 AMI、AGI 接口触达 Asterisk 的无 BSD 移植的第三方组件。（BSDTalk EP166，[743.68-826.16]，L1）
+- Asterisk 的 BSD 支持改善被当事人归因于 Apple 的间接效应：大量开发者以 BSD 系的 Mac 为前端，在终端直接编译，一旦代码在 Mac 上失效便群起抱怨，迫使修复级联惠及其他 BSD 版本。规模方面，他个人在 BSD 上测过数百通道；他引述的最重负载案例——十天处理八百万呼叫、于 SIP、IAX 与 SS7 间桥接且无崩溃——运行于 Linux 衍生系统；他不知晓大型企业级 BSD 部署，但认为 BSD 与 Linux 在稳定性与性能上不存在值得评论的显著差异。（BSDTalk EP166，[841.56-1084.84]，L1）
+- 当事人在Tektronix Walker Road厂区亲历了企业环境向BSD的迁移：约1981年在VAX 11/780上以2.8BSD替换原主力系统RSTS/E，过渡数月间白天运行RSTS/E、夜间运行Unix并由其负责数据搬运；次年增购VAX后依次运行4.0BSD、4.1BSD直至4.3BSD，构成企业自RSTS/E转向BSD的一线口述。（BSDTalk EP183，[279.02-337.02]，L1）
+- 其公司Stonehenge.com的主机曾运行Linux约六年，因管理员疏于跟进安全更新而遭rootkit入侵，商业机密暴露的风险促使其经AltaVista检索转向OpenBSD早期版本（2.7或2.8前后）；此后他自述对OpenBSD服务器建立“可离场一周不必逐日盯防安全公告”的信任，而对任何Linux发行版均无同等信心，显示安全事件是用户平台迁移的直接动因。（BSDTalk EP183，[350.62-436.46]，L1）
+- 其Geek Cruises与InsightCruises网站于访谈前约三个月迁入Amazon EC2并以OpenSolaris运行：EC2发布初期仅支持Linux，当事人拒绝回归Linux，转以具BSD渊源且自认较Linux更安全的OpenSolaris替代；他转述EC2虚拟层为Xen衍生框架且做了本地改动，BSD若要获得支持须自最底层虚拟硬件向上打通——呈现2009年末BSD在公有云平台的缺席状态与技术门槛。（BSDTalk EP183，[447.14-518.98]，L1）
+- 当事人口头辨正SunOS与Solaris的谱系混淆：SunOS 4及更早版本为纯BSD系（SunOS 4实即Solaris 1），SunOS 5改宗System V并对应Solaris 2；SunOS始终是内核操作系统之名，Solaris始终是发行版之名，版本号交叠系厂商命名所致，为商业UNIX版本谱系的一手澄清。（BSDTalk EP183，[619.02-667.82]，L1）
 
 **史料**：
 
@@ -82,6 +99,8 @@ volume: 第15卷-许可证哲学与法律分析
 - 当事人一手实测记录：五款 BSD live CD 在四类硬件上的启动、网卡与键盘图形检测、失败案例（GX280 USB 键盘不识别、NetBSD 盘 libqt 缺失）与逐盘评述，为 2006 年初 BSD 桌面化程度的一手横截面；另含经主持人转述的 DragonFly 1.4 发布公告及其分叉动机表述、GPLv3 起草阶段 FSF 与 Stallman 反 DRM 立场的公开信息。（BSDTalk EP7，[20.38-843.56]，L1）
 - Webmin 作者 Jamie Cameron 的一手访谈自述：项目起源、模块化扩展过程、Caldera、MSC Software、OpenCountry 的赞助史、跨平台适配经验、对 Linux 发行版碎片化的判断、BSD 许可证选择理由与 Virtualmin 双许可模式；另涉及其 Prentice Hall 出版的著作《Managing Linux Systems with Webmin》——为 Webmin 1.0 而写，此后变化多为新增功能、书中内容仍有效，可免费下载亦可购买。（BSDTalk EP9，[277.26-811.34]，L1）
 - BSD daemon 吉祥物的口述史材料（经主持人转述）：daemon 拼写区别于 demon、义为后台无人值守进程，源自古希腊语中守护精灵之义而无撒旦关联；现有形象由 John Lasseter 绘制；版权由 Marshall Kirk McKusick 持有，以确保该形象仅用于代表 BSD 软件及相关服务。（BSDTalk EP9，[78.52-150.64]，L2）
+- 本期留存的会议一手与二手记录包括：DataPipe 自 1998 年创立即全面使用 BSD 并拥有纽约地区 BSD 客户群的运营自述；OpenBSD 4.4 于 2008 年 11 月 1 日发布的日程及会议现场预售实况；Pavel 关于 FreeBSD ZFS 维护者稀缺与生产可用宣称瓶颈的自述；Theo Schlossnagle 的 Reconnoiter 监控系统 alpha 状态；OpenBSD PIE 拟纳入默认构建的动向；PCC 复兴与资助呼吁；ATF 测试框架的 NetBSD 采用计划。（BSDTalk EP161，[120.58-1152.98]，L1）
+- 本期一手口述可稽的史料要点包括：Tektronix VAX 11/780双系统过渡与2.8BSD至4.3BSD升级序列、Stonehenge.com遭rootkit攻击与迁OpenBSD事件、InsightCruises网站在EC2上运行OpenSolaris的部署（约2009年9月上线）、Linux Fund亲和信用卡十年捐款逾70万美元及其与BSD Fund卡的资金池合并、Squeak许可清理征集约500名贡献者签名以期整体转入BSD许可证、其主持FLOSS Weekly至第100期的节目本身。（BSDTalk EP183，[270.62-981.99]，L1）
 
 **史观**：
 
@@ -93,6 +112,10 @@ volume: 第15卷-许可证哲学与法律分析
 - 总纲13 法律与道德是利益分配：主持人对 GPLv3 反 DRM 条款的解读呈现了许可证作为利益分配机制的本质：Stallman 试图以许可证条款强制商业公司放弃对用户设备的 DRM 控制，将权利再分配给终端用户，而商业公司是否愿意接受尚属疑问；与之相对，BSD 许可证以近乎零限制的条款把选择权交还使用者和商业方，两种许可证哲学在 DRM 议题上正面相遇。（BSDTalk EP7，[132.54-355.32]，L2）
 - 总纲4 分离聚合是永恒规律：主持人预测若 GCC 随 GPLv3 发布，可能出现以 v2 末版为基的分叉编译器：许可证条款变更触发项目分叉，正是开源谱系以分离应对分歧、以聚合延续成果的常态机制。（BSDTalk EP7，[314.34-334.28]，L2）
 - 总纲10 动手者创造历史：Webmin 由一线系统管理员解决自己日常痛点的脚本生长为跨平台管理框架，再借企业赞助与社区协作扩张——项目的形态由动手者面临的实际运维问题而非顶层设计决定，体现了动手者在日常实践中创造技术历史。（BSDTalk EP9，[277.26-346.42]，L1）
+- 总纲8 本体论上各方平等：当事人代表 Digium 表态要“比过去更平台无关”，BSD 是其中一部分；面对 BSD 与 Linux 的比较，他明确拒绝高下叙事——操作系统选择取决于使用者的场景与理由，稳定性与性能差异不值得评论。在生产者层面，各操作系统被当作并列的部署选项而非进步序列中的先后位置。（BSDTalk EP166，[1079.28-1084.84]，L1）
+- 总纲13 法律与道德是利益分配：GPL with exception 机制揭示许可证安排的利益分配本质：贡献者让渡部分权利换取项目存续与公司投入，公司以例外授权收入反哺开源开发。当事人对此不作道德表述而直陈其商业功能——授权设计即利益分配设计，BSD 与 GPL 之争在此呈现为两种可运行的分配机制而非善恶对错。（BSDTalk EP166，[437.92-464.70]，L1）
+- 总纲13 法律与道德是利益分配：当事人以Perl Artistic License的长期观察为据陈述许可证哲学：Artistic License不区分原作者与后继作者的权利、鼓励分享而不强制，Perl因之被采纳的场合多于假设采用严格GPL的情形，Apache与BSD亦然；他将BSD许可证理解为对下一个修改者的信任机制，并自认无法理解“GPL狂热者”除非对方认为唯有强制方能促成共享。许可证在此呈现为不同利益分配规则的设计抉择而非道德高下。（BSDTalk EP183，[831.54-928.24]，L1）
+- 总纲4 分离聚合是永恒规律：Linux Fund与BSD Fund两种亲和信用卡仅卡面吉祥物不同（Tux与Beastie），资金先入同一池再按比例大致分配，两会进而合并行政以消除双重开销；对立阵营的资助基础设施走向汇聚与共管，展示了 BSD 与 Linux 社区在资源层面的分离聚合，而非此消彼长的零和竞争。（BSDTalk EP183，[1188.06-1341.54]，L1）
 
 **辨析**：
 
@@ -100,6 +123,11 @@ volume: 第15卷-许可证哲学与法律分析
 - 转写文本将嘉宾姓名拼写为Will Vokman、Will Bachman等多种形式，据语境应指BSD播客BSDTalk主持人Will Backman，引用时需以BSDTalk主持人的正式姓名为准。　[存疑脚注] 语音转写对嘉宾姓名拼写不一致，需以BSDTalk主持人的正式姓名Will Backman交叉核对。（BSD Now EP27，[0.0-12.52]，L5）
 - 当事人自我限定：其四台测试机不代表全部硬件生态，个别失败可能只是特定硬件组合的偶然不兼容，不能据此否定某张 live CD 的整体质量，引用本期的硬件兼容性结论时须保留这一适用范围限定。另转写将 Linux 参照 live CD 记作 Canopix 或 Nopix，所指发行版名称待考，引用其性能对比前须核实项目实名。[存疑脚注] 转写中的项目名 Canopix/Nopix 无法确证，待与 2006 年 live CD 发行版名录核对。　[存疑脚注] 转写中的 Linux live CD 项目名 Canopix/Nopix 无法确证，待与 2006 年 live CD 发行版名录核对。（BSDTalk EP7，[392.64-843.56]，L5）
 - BSD daemon 图像出自 John Lasseter、版权由 Marshall Kirk McKusick 持有之说在本期为主持人转述，与公开记录相符，但节目本身未给出处；引用时应回溯 McKusick 的官方表述与相关版权页面核实。[考据脚注] 转述内容与已知公开记录一致，仍需一手来源复核。　[考据脚注] 图像作者与版权持有人信息需与 McKusick 官方版权声明核对。（BSDTalk EP9，[125.04-150.64]，L2）
+- 转写专名失真较多：Theo Schlossnagle 转写作 Theo 加 Schloss-Nagel、监控系统 Zenoss 转写作 Xenos、Adrian Chadd 转写作 Adrian Chad、PCC 全称转写作 portable sieve andpiler、受访者姓名 Mark Satt 拼写存疑、演讲者 Anders 与 Julio 的姓氏未在转写中出现。引用人名与项目名时须回溯原始音频或会议议程核对。　[存疑脚注] 多处专名转写失真，校正依据为上下文语义与同期外部史料，须以原始音频复核（BSDTalk EP161，[581.85-1159.98]，L4）
+- 讲座综述部分均系主持人的会后口头转述，其自承非开发者、部分技术内容超出其理解范围；转述的技术细节与论断须以各讲座的幻灯、录音或后续论文等一手材料复核，不可径直采信。　[存疑脚注] 转述者的理解深度有限，技术结论存在失真风险（BSDTalk EP161，[575.85-1223.62]，L4）
+- quality 元数据提示 repetition_detected，通读确认重复主要源于现场直播的信号重试与主持人的填场独白，实质访谈与综述内容完整可读；本卡片全部观点取自语义完整的片段。（BSDTalk EP161，[0.00-1510.88]，L4）
+- 转写误植须考订：Dottie 应为 DAHDI（Zaptel 的更名）、VSD 应为 BSD、Astrus 应为 Asterisk、bidgium 与 didgium 应为 Digium、GraphQL user interface 应为 graphical user interface；贡献者 Gonzo 仅为社区 handle 而非本名。当事人称“原初 ZAP 驱动可能开发于 BSD 但当时 BSD 用户甚少”，其自述即为不确定回忆，且未给出可核验细节。[存疑脚注] ZAP 驱动的 BSD 起源说系单一来源含混回忆，需以 Digium 早期版本库历史与邮件列表复核。　[存疑脚注] ZAP 驱动 BSD 起源说与 Gonzo 真实身份均为单一口述来源，待 Digium 仓库史与社区存档交叉验证。（BSDTalk EP166，[194.56-204.56]，L4）
+- 当事人称迁入OpenSolaris为“BSD又回来了”，其身份认同建立在对SunOS早期BSD血统的记忆上，而其运行的Solaris系谱系内核实为System V一脉，血统认同与实际技术谱系在此错位，提示用户迁移决策中的谱系想象与工程现实之别；另转写中“PURL.org”（1081.56秒处，疑为perl.org）与“Randy Harper/FreeBSDGirl”（1390.38秒处，疑为Randi Harper）两处人名站名依语音转写存疑，[存疑脚注] 须对照FLOSS Weekly节目原始信息核正。　[存疑脚注] PURL.org与Randy Harper两处专名系语音转写，未能与原始节目信息交叉验证。（BSDTalk EP183，[457.86-462.90]，L1）
 
 **文献**：
 
@@ -107,5 +135,8 @@ volume: 第15卷-许可证哲学与法律分析
 - [BSD Now EP27] Pennington J. BSD Now: 27: BSD Now vs. BSDTalk[EB/OL]. (2014-03-05)[2026-08-15]. https://www.bsdnow.tv/27.
 - [BSDTalk EP7] Backman W. BSDTalk: Live BSD CDs[EB/OL]. (2006-01-18)[2026-08-15]. https://archive.org/download/bsdtalk007/bsdtalk007.ogg.
 - [BSDTalk EP9] Backman W. BSDTalk: Interview with Webmin Author Jamie Cameron[EB/OL]. (2006-01-24)[2026-08-15]. https://archive.org/download/bsdtalk009/bsdtalk009.ogg.
+- [BSDTalk EP161] Backman W. BSDTalk: 161: bsdtalk161 - Live from NYCBSDCon Sunday[EB/OL]. (2008-10-12)[2026-08-27]. https://bsdtalk.blogspot.com/2008/10/bsdtalk161-live-from-nycbsdcon-sunday.html.
+- [BSDTalk EP166] Backman W. BSDTalk: 166: bsdtalk166 - Asterisk Open Source Community Director John Todd[EB/OL]. (2008-11-25)[2026-08-27]. https://bsdtalk.blogspot.com/2008/11/bsdtalk166-asterisk-open-source.html.
+- [BSDTalk EP183] Backman W. BSDTalk: 183: bsdtalk183 - Randal L. Schwartz[EB/OL]. (2009-12-23)[2026-08-27]. https://bsdtalk.blogspot.com/2009/12/bsdtalk183-randal-l-schwartz.html.
 
 <!-- /PODCAST_REVIEW -->

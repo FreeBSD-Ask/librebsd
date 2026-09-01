@@ -49,3 +49,33 @@ volume: 第10卷-openbsd的历史
 - openbsd.db openbsd-src 仓库；NVD CVE-2008-1483/CVE-2006-5752/CVE-2007-3304/CVE-2007-5000/CVE-2007-6388/CVE-2011-2748/CVE-2011-2749；OpenBSD 4.x errata patches [EB/OL]. **<https://www.openbsd.org/errata.html>** ［A］<!-- DB_REF:openbsd.duckdb -->> **数据库引用（openbsd.duckdb）**：本子节对应 openbsd 代码仓库。> 2006-2012 年间：112,057 次提交。> 仓库总览：491,195 次提交，3,352 位贡献者，1995-10-18 至 2026-08-25。
 - OpenBSD 官网 release 页面 ［EB/OL］. <https://www.openbsd.org/{40-49}.html>；<announce@openbsd.org> 邮件列表存档 ［EB/OL］. <https://marc.info/?laccopenbsd-announce>；原材料/研究/考据记录/20260723_announcements-openbsd.md § 二.2；bsd_commits.db openbsd-src 仓库 ［A］<!-- DB_REF:openbsd.duckdb -->> **数据库引用（openbsd.duckdb）**：本子节对应 openbsd 代码仓库。> 1995-2026 年间：491,195 次提交。> 仓库总览：491,195 次提交，3,352 位贡献者，1995-10-18 至 2026-08-25。
 
+<!-- PODCAST_REVIEW v20260829 -->
+<!-- 语义复核范围：BSDTalk EP204（共 1 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
+
+**要点**：
+
+- mandoc（mdocml）起源与分工：Kristaps Dzonsons 因不满 grohtml 丑陋输出与直接转储 ASCII 去转义字符的做法、希望以 CSS 自定义手册外观，自 2008 年 11 月前后着手编写 mandoc，2009 年应 Theo de Raadt 邀请提交进入 OpenBSD，并于 AsiaBSDCon 2010 春发表；此后 Kristaps 主理上游 bsd.lv 仓库，Ingo Schwarze 接掌 OpenBSD 下游、先整合 Kristaps 补丁、逐渐成为这一复杂代码库的权威，两人自此协作推进。（BSDTalk EP204，[134.60-259.34]，L1）
+- 语义立场：mdoc 是语义标记语言——如同 Web 设计中指定强调而非斜体——可用文本编辑器徒手书写，紧凑而信息丰富；groff 本质是强大的文本排版工具，只关心呈现；mandoc 则把 mdoc 视为语言本身，编译手册时保留全部语义信息并依语义行事；旧 man 格式与多数 Linux 手册不含语义内容、只是呈现块，而 mdoc 手册对函数、变量、头文件等要素均有结构标注。（BSDTalk EP204，[446.77-537.22]，L1）
+- 输出与检索能力：mandoc 的 XHTML/HTML 输出附丰富 CSS 注释、可经少量适配纳入 EPUB 供小屏阅读；其 PDF 与 PostScript 输出仍臃肿、有待专人改进；makewhatis 工具从手册抽取语义内容建库，支撑按函数名、头文件、标准与作者等维度检索与挖掘，并已有演示搜索引擎——手册的语义化利用由此从长期设想变为可操作现实。（BSDTalk EP204，[571.58-733.10]，L1）
+- OpenBSD 集成动机：树中 groff 1.15 已逾十年且多 bug，手册维护者 Jason McIntyre 被迫设计大量技巧绕过其缺陷；升级到新版 groff 不可行，因其已是 GPLv3 许可；手册格式化必须迅速，groff 方案依赖预格式化安装而丧失全部结构；OpenBSD 因此计划改为安装未格式化手册，以期在数月至一年内提供大幅改善的 apropos 与 man -k 结构化检索。（BSDTalk EP204，[275.42-414.46]，L1）
+- BSD 文档文化比较与批评：OpenBSD 尽量把文档集中于一处手册、仅 FAQ 为例外；FreeBSD 文档散布于书籍、网页等多种媒介，虽自称重视文档，但其 developer summit 的文档议程全然围绕书籍而不提手册；FreeBSD 手册的语法错误在各 BSD 中最多，经语法校验器即可发现；FreeBSD 官方已宣布把文档迁往 SGML/XML（DocBook），但手册仍以 man 与 mdoc 维护——一步未完成已规划下一步；且一旦真迁移，格式化工具为 GPLv3 而无法进入基本系统，工具链迟早断裂，出路之一正是坚持 mdoc 这样简单可靠的手册格式。（BSDTalk EP204，[736.58-968.18]，L1）
+- 语言哲学与治理：mdoc 的价值在于好不是因为老、而是尽管老仍然好——新格式标榜的语义注释、机器可解析性与跨文档链接它都能干净实现，改用更复杂的格式只会平添复杂；GNU info 在文档内层次链接上占优，但手册页通常不至太长、页间链接大体够用；语言演进宜先在 OpenBSD 完成整合并补齐初学者教程（现有 mdoc 参考手册已优于既有样本但仍需教程），且文档语言必须保持简单；Kristaps 立场更硬线，认为不认真学习文档语言的程序员应重新考虑自身资格，Ingo 则强调简单性是不可让渡的前提。（BSDTalk EP204，[969.70-1421.00]，L1）
+- 兼容性与可移植性：mandoc 的手册明确记录 mdoc 与 groff 之间不兼容的语言构造，解除了历史 groff 每行九参数的限制，与既有 groff 手册完全兼容是项目设计目标之一，并提供 mdoc 减 T lint 校验；工具可移植至各类 Unix——NetBSD、旧 Solaris 与 OpenSolaris、AIX 等均有反馈，可用 PCC、LLVM/clang 与 GCC 编译，稍加改动即可运行于 Windows，makewhatis 依赖 Berkeley DB；OpenBSD 已原生以 mandoc 格式化全部手册。（BSDTalk EP204，[1431.76-1747.22]，L1）
+
+**史料**：
+
+- 一手史料包括 Kristaps 对 mandoc 最早提交与 2009 年受 Theo 邀请入 OpenBSD 时间线的口述、其在 BSDCan 2011 的 mandoc 演进报告指引、Jason McIntyre 绕过 groff 缺陷的技巧叙述，以及 Ingo 对 FreeBSD developer summit 文档议程的现场观察；本访谈录于 BSDCan 2011 会议期间，本身即该会议一手记录。（BSDTalk EP204，[134.60-259.34]，L1）
+
+**史观**：
+
+- 总纲4 分离聚合是永恒规律：mandoc 自 groff 生态中分离而出，却以兼容 groff 既有手册语料为设计目标并与之互通校验，显示工具替代并非简单断裂，而是新实现与旧语料之间的再度聚合。（BSDTalk EP204，[1431.76-1507.66]，L1）
+
+**辨析**：
+
+- mandoc 起始时间的口述在对话中经两人反复修正（2008 年 11 月、2009 年、春季），精确时间线须以仓库提交历史为准；转写人名与术语音误密集——Kristaps Dzonsons 误作 Chris Stapps、groff 音化作 grof 或 grow、apropos 误作 up-hopal、base 误作 Bayes、ports tree 误作 POTS tree——引用前须回查原音频与项目存档。　[存疑脚注] 时间线系口述回忆且对话中自我修正，须以版本库提交记录复核；转写音误密集，术语引用须校正（BSDTalk EP204，[134.60-210.74]，L4）
+
+**文献**：
+
+- [BSDTalk EP204] Backman W. BSDTalk: 204: bsdtalk204 - mdocml mit Ingo Schwarze and Kristaps Dzonsons[EB/OL]. (2011-06-01)[2026-08-27]. https://bsdtalk.blogspot.com/2011/05/bsdtalk204-mdocml-mit-ingo-schwartze.html.
+
+<!-- /PODCAST_REVIEW -->

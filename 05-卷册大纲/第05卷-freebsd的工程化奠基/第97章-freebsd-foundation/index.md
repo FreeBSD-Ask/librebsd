@@ -57,7 +57,7 @@ volume: 第05卷-freebsd的工程化奠基
 - McKusick & Rice. The Evolution of FreeBSD Governance [J]. FreeBSD Journal, 2017, 4(5): 26-31 ［A］；McKusick. The Evolution of FreeBSD Governance [C]//BSDCan 2018. Ottawa, 2018 ［A］<!-- DB_REF:freebsd.duckdb -->> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 1996-2010 年间：482,545 次提交。> 仓库总览：1,294,851 次提交，13,875 位贡献者，1993-06-12 至 2026-08-25。
 
 <!-- PODCAST_REVIEW v20260829 -->
-<!-- 语义复核范围：BSD Now EP566、BSD Now EP648、BSD Now EP333、BSD Now EP278、BSD Now EP269、BSD Now EP258、BSD Now EP198、BSD Now EP194、BSD Now EP192、BSD Now EP189、BSD Now EP166、BSD Now EP147、BSD Now EP622、BSD Now EP616、BSD Now EP59、BSD Now EP56、BSD Now EP51、BSD Now EP23、BSD Now EP2、BSD Now EP1（共 20 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
+<!-- 语义复核范围：BSD Now EP566、BSD Now EP648、BSD Now EP333、BSD Now EP278、BSD Now EP269、BSD Now EP258、BSD Now EP198、BSD Now EP194、BSD Now EP192、BSD Now EP189、BSD Now EP166、BSD Now EP147、BSD Now EP622、BSD Now EP616、BSD Now EP59、BSD Now EP56、BSD Now EP51、BSD Now EP23、BSD Now EP2、BSD Now EP1、BSDTalk EP169（共 21 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
 
 **要点**：
 
@@ -151,6 +151,12 @@ volume: 第05卷-freebsd的工程化奠基
 - VeriSign 公开拥抱 FreeBSD，以之支撑 .com、.net 等顶级域名的 DNS 根服务器；主持人归纳其选择理由为平台稳定、高并发查询处理能力与社区可回馈性。（BSD Now EP1，[281.60-311.04]，L2）
 - Peter Hessler 的 BGP SpamD 以 BGP 协议实时分发垃圾邮件黑名单与白名单：黑名单社区属性为 666、白名单为 42，运营于私有自治系统 AS65066，并以 OpenBGPD 为基础。（BSD Now EP1，[4554.19-4919.96]，L1）
 - FreeBSD 基金会 2013 年春季筹款募集 219806 美元，来自 12 家企业与 365 名个人捐赠者；为维持 501(c)(3) 免税地位，个体小额捐赠被视为关键支撑。（BSD Now EP1，[1879.13-1939.54]，L2）
+- DragonFly BSD Digest 的起源由当事人自述：2003 年 Matt Dillon 自 FreeBSD 4 分叉出 DragonFly 时他注意到项目启动，想贡献却不愿以写 C 为业，而 BSD 项目几乎所有互动都在邮件列表上进行，遂决定做一份摘编网站替人筛选要闻；他先默默试运行约一周确认能坚持，再公开宣布，至访谈时已持续约五年。（BSDTalk EP169，[91.60-158.72]，L1）
+- Digest 之外的社区建设包括：将 FreeBSD Handbook 转换为 DragonFly 版并自 SGML 体系迁移至今日的 wiki、搭建 DragonFly 网站的邮件列表存档、推动 wiki 与主站整合；计划次年为 DragonFly 设立非营利法人，以摆脱互联网散兵游勇状态——法人实体便于美国捐赠者移交硬件、也能提供章程焦点。他盛赞 FreeBSD Foundation 的示范：送开发者赴会、推动项目完成，年度 30 万美元募款目标接近达成。关于社区健康度，他坦承 DragonFly 仍然很小，愿意做操作系统的人数增长远不及互联网，热点在 Twitter、WordPress 式应用开发；DragonFly 的吸引力恰在人少而无既有结构，可以说事情可以这样办、没有必须沿袭的包袱，代价是谁发声谁干活。（BSDTalk EP169，[158.72-402.22]，L1）
+- 他长期以 DragonFly 自用：Digest 网站本身运行于 DragonFly 机器多年；系统应用以 pkgsrc 安装，pkgsrc 对频繁升级不友好但可忍受；他在 packagebox.dragonflybsd.org 上对 pkgsrc 季度发布做约 8000 个包的 bulk build，实测这是给文件系统施压的极好方式，该机器当前即运行 HAMMER 文件系统，尽管他个人并未在其他场合使用 HAMMER。（BSDTalk EP169，[402.22-476.42]，L1）
+- 他对 BSD 哲学的被吸引点做了非宗教式表述：1998 至 1999 年在旧东家因同事偶语而装上 FreeBSD 4 尝试，相较 Linux，吸引他的不是许可证立场，而是一种以质量为本的做事方式——写代码因为它是该做的对事、是高质量的做法，而非软件必须自由的信仰宣示；他认为这种 quality-based 的取向让工作本身更有趣。（BSDTalk EP169，[493.30-573.38]，L1）
+- Digest 的编辑理念被他上升为氧气论：一个操作系统需要其周围的气氛，胜过其他一切。主流科技博客以轻快语调追逐硬件与游戏，不追问计算机史从何而来、BSD 为何重要；而每个计算机系三年级学生都能写一个操作系统，写完却会发现无事可做，因为操作系统真正需要的是周边生态与身份氛围。他引述某个他记不清归属者的说法，认为 FreeBSD Diary、BSD Talk 与 Digest 的工作正是定义“说自己是 BSD 用户意味着什么”，这也是 advocacy 的实质。（BSDTalk EP169，[573.38-789.40]，L1）
+- 关于志愿项目的维持机制，他将 BSD 项目与其他全志愿非营利事业（教育、食物、住所）视为同构：发不出工资，奖赏只能是公开庆祝成就——提交日志无人翻检，必须有人明说这块硬件能用了多亏某人，哪怕回报只是日后会议上一杯致谢的酒。会议被他视为提交活动的催化剂：会议数量增长是生态健康迹象，每次会议后都有活动爆发，第 25 届混沌通信大会收官当天 Simon Schubert 即因与会交流而向 DragonFly 集中提交；面对面接触带来的即时反馈远胜邮件。（BSDTalk EP169，[794.44-1008.94]，L1）
 
 **史料**：
 
@@ -255,6 +261,7 @@ volume: 第05卷-freebsd的工程化奠基
 - 总纲4 分离聚合是永恒规律：BGP SpamD 将阿尔伯塔大学与 Peter Hanstein 各自维护的黑名单聚合为统一的 BGP 分发列表，以本地复制取代中心网站下载与实时 DNS 查询，是分散源向聚合结构流转的具体实践。（BSD Now EP1，[4411.69-4474.51]，L1）
 - 总纲8 本体论上各方平等：该期将 FreeBSD 图形驱动、OpenBSD BGP SpamD、NetBSD 6.1.1 等并列报道，未以单一分支为中心，呈现多方平等的叙事格局。（BSD Now EP1，[0.00-125.02]，L2）
 - 总纲10 动手者创造历史：BGP SpamD 由 Peter Hessler 个人搭建并维护，访谈记录的是具体动手者对垃圾邮件防御工具的工程选择，而非抽象的项目叙事。（BSD Now EP1，[2946.18-3109.14]，L1）
+- 总纲10 动手者创造历史：Digest 的五年自身即是历史由默默动手者写就的例证：一个不愿以写 C 为业、白天在墨盒制造厂维护老旧 Debian 系统的普通人，以每日筛读邮件列表、转换手册、搭建存档的琐碎劳动，为一个分叉项目保住了公共记忆与氧气。操作系统的存续不只在提交日志里，也在这些无名整理者的持续劳作中。（BSDTalk EP169，[91.60-158.72]，L1）
 
 **辨析**：
 
@@ -280,6 +287,7 @@ volume: 第05卷-freebsd的工程化奠基
 - 当事人明确表示不知 Theo 启动签名项目的动机，且 5.5 正式签名密钥当时尚未生成；发行集签名覆盖范围（源集、ports tarball 是否签名）仍属待定。　[存疑脚注] 签名动机与最终覆盖范围以 OpenBSD 官方发布说明为准，需后续考据。（BSD Now EP23，[1615.30-1651.60]，L4）
 - FreeBSD 10.0 是否彻底移除 BIND、以及 resolv.conf 与 DHCP 切换的具体方案在本期仍属进行中的计划，须以 10.0 最终发布说明为准。　[存疑脚注] BIND 移除与解析配置迁移为当时未定稿规划，播客转述不等同于正式发布决策。（BSD Now EP2，[4181.74-4227.38]，L4）
 - VeriSign 同时使用 BSD、Linux、Solaris 等操作系统作多样性冗余的说法为主持人转述，其根服务器内部各系统的具体比例未获官方资料核验。　[存疑脚注] VeriSign 各操作系统在根服务器中的具体占比属单一播客转述，须以官方资料交叉验证。（BSD Now EP1，[460.01-478.53]，L4）
+- 转写误植须考订：Matt Bill 应为 Matt Dillon、grag-and-fly-vsd.org 应为 dragonflybsd.org、package source 应为 pkgsrc、a cabotette for humanity 应为 Habitat for Humanity、previous D-year 应为 FreeBSD；氧气说归属者转写为 Jordan Hubbard 或 John Louis Gasey，后者拼写无法确证，当事人自承记不清出处，Package Manager 这一 pkgsrc 图形工具的活动状态亦不明。[存疑脚注] 氧气名言的原始出处与精确措辞无从自转写确证，须以邮件列表与早期演讲存档复核。　[存疑脚注] 氧气说归属与措辞为单一来源模糊回忆，引用须先经外部文献核验。（BSDTalk EP169，[685.46-706.46]，L4）
 
 **文献**：
 
@@ -303,5 +311,6 @@ volume: 第05卷-freebsd的工程化奠基
 - [BSD Now EP23] Pennington J. BSD Now: 23: Time Signatures[EB/OL]. (2014-02-05)[2026-08-15]. https://www.bsdnow.tv/23.
 - [BSD Now EP2] Pennington J. BSD Now: 2: Engineering and Powder Kegs[EB/OL]. (2013-09-11)[2026-08-15]. https://www.bsdnow.tv/2.
 - [BSD Now EP1] Pennington J. BSD Now: 1: BGP & BSD[EB/OL]. (2013-09-04)[2026-08-15]. https://www.bsdnow.tv/1.
+- [BSDTalk EP169] Backman W. BSDTalk: 169: bsdtalk169 - Justin Sherrill of the DragonFlyBSD Digest[EB/OL]. (2009-01-04)[2026-08-27]. https://bsdtalk.blogspot.com/2009/01/bsdtalk169-justin-sherrill-of.html.
 
 <!-- /PODCAST_REVIEW -->

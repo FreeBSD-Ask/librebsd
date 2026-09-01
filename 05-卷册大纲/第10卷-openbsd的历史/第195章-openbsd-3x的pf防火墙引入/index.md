@@ -43,7 +43,7 @@ volume: 第10卷-openbsd的历史
 - 原材料/哲学/项目统摄史观/第 25 章.md（总纲第 8 条与第 13 条原文）；OpenBSD 邮件列表存档 [EB/OL]. **<https://marc.info/?laccopenbsd-misc**>；FreeBSD CVS/Git 仓库（`sys/netpfil/pf/`）；OpenBSD security.html [EB/OL].** <https://www.openbsd.org/security/**>；FreeBSD TrustedBSD 项目文档；NSA SELinux 项目文档 ［A］<!-- DB_REF:freebsd.duckdb -->> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 1995-2026 年间：1,289,123 次提交。> 仓库总览：1,294,851 次提交，13,875 位贡献者，1993-06-12 至 2026-08-25。
 
 <!-- PODCAST_REVIEW v20260829 -->
-<!-- 语义复核范围：BSD Now EP186（共 1 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
+<!-- 语义复核范围：BSD Now EP186、BSDTalk EP200（共 2 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
 
 **要点**：
 
@@ -51,25 +51,35 @@ volume: 第10卷-openbsd的历史
 - Philipp（OpenBSD 前提交者）回顾 2002 年 Karlsruhe hackathon 参与 PF 测试与文档工作，实现接口分组并拆分 pf.c 中的 IOCTL 代码。（BSD Now EP186，[3969.0-4226.0]，L1）
 - Philipp 描述 OpenBSD 路由域（rdomain）为单机上的多个虚拟路由器，可用于多租户防火墙与相同 IP 复用的隔离测试。（BSD Now EP186，[4381.84-4761.18]，L1）
 - 2004 年 PF hackathon 曾发现用户态 32 位与内核 8 位规则编号溢出导致的隐蔽错误，需超过约 256 条规则才触发。（BSD Now EP186，[4227.0-4285.88]，L1）
+- 维护者 Kjell Wooding 阐明 mg 的定位：这是一个极小的 Emacs 风格编辑器，与 Emacs 本质不同——后者是恰好附带编辑器的 Lisp 解释器，而 mg 首先是编辑文件的工具，不内嵌编程语言、不提供游戏或浏览器式扩展，只为满足 Emacs 用户的键位肌肉记忆；他并非原作者，而是在维护过程中偶然接手，mg 于 2000 年进入 OpenBSD 基本系统。（BSDTalk EP200，[60.04-157.16]，L1）
+- mg 的历史与可移植性：Wooding 回忆该编辑器 1986 年即已问世、早于 OpenBSD 存在；多年来被社区自发移植至 Debian、Mac OS X 等环境，维护者至今仍收到 Debian 用户的 bug 报告；项目并无独立便携版仓库，获取最新源码的正规途径始终是 OpenBSD 源树。（BSDTalk EP200，[359.88-401.88]，L1）
+- 许可证工程：mg 初入项目时约九成代码即属 public domain，团队随后逐个联系在树作者，将全部补丁释放进 public domain，如今仅 theo mode 一个文件仍持 BSD 许可——该模式仿照 Emacs 中 ELIZA 式对话实验，输出 Theo de Raadt 多年来的言论语录，属社区自嘲文化产物；Wooding 同时指出 public domain 在瑞典等法域仍有法律适用问题。（BSDTalk EP200，[691.08-751.56]，L1）
+- Wooding 的参与路径与角色变迁：他曾经营安全公司 Code Talker Communications，与一巷之隔的 Secure Networks 公司一次喝啤酒闲谈中得知 OpenBSD 开发者住在自己的家乡 Calgary，遂联系并加入项目；最初职责是维护旧 IPF 防火墙代码并整合 Darren Reed 的改动，亲历该代码被整体移出源树、代之以 PF 的大分裂；此后其贡献呈游牧状，在 hackathon 间隙深入源码各处修 bug，如 pfsync 与冗余代码问题。（BSDTalk EP200，[412.48-526.32]，L1）
+- 维护哲学与状态：Wooding 的长期目标是让代码行数越来越少，通过迭代清理与简化逼近；mg 仍存在积年未修的设计缺陷，修复通常依赖某份 bug 报告将维护者唤醒；他曾在 hackathon 中专门重写文档，如今手册页可能比源码本身更长，呼应 OpenBSD 对完整 man page 的自豪传统；另曾于愚人节发布可用的 vi 模式补丁。（BSDTalk EP200，[654.32-801.48]，L1）
 
 **史料**：
 
 - AsiaBSDCon 2017 演讲幻灯片与日程（BSD Now EP186，[432.94-560.68]，L1）
 - Philipp 访谈自述（BSD Now EP186，[3969.0-5733.62]，L1）
 - OpenBSD PF 邮件列表与 CVS 历史（BSD Now EP186，[3969.0-4285.88]，L1）
+- 一手史料以 Wooding 口述为主：mg 的 1986 年起源记忆、public domain 授权重构过程、theo mode 的由来、IPF 至 PF 更替的亲历叙述、OpenBSD Foundation 创始董事身份自述；开场栏目由主持人转述 netstat 命令最早出现于 4.2BSD。（BSDTalk EP200，[373.88-526.32]，L1）
 
 **史观**：
 
 - 总纲10 动手者创造历史：PF 由测试者、文档者与提交者共同打磨，历史由大量动手协作的人推动。（BSD Now EP186，[4016.52-4285.88]，L1）
 - 总纲4 分离聚合是永恒规律：路由域把一台物理路由器分离为多个逻辑路由器，体现分离聚合的循环。（BSD Now EP186，[4381.84-4761.18]，L1）
 - 总纲6 和解优于斗争：OpenBSD 社区“批评即受邀修复”的协作方式，强调和解与共建而非对抗。（BSD Now EP186，[4016.52-4050.66]，L1）
+- 总纲13 法律与道德是利益分配：mg 的授权重构过程——逐个接洽在树作者、把分散的版权利益统一收束为 public domain——显示许可证选择在开源工程中本质上是围绕项目利益的法律形式安排，而非抽象的道德立场。（BSDTalk EP200，[116.68-137.44]，L1）
+- 总纲10 动手者创造历史：Wooding 自述数年间漫游源码树、依 bug 报告唤醒注意、以 hackathon 间隙零星修复的维护方式，表明 OpenBSD 的日常演化由大量此类默默动手的个体贡献累积而成。（BSDTalk EP200，[493.80-521.64]，L1）
 
 **辨析**：
 
 - [存疑脚注] 访谈中 2002 年 hackathon 地点、PF 实现细节系当事人十余年后回忆，需与 OpenBSD 邮件列表与 CVS 记录核验。　[存疑脚注] 当事人回忆性细节，缺乏独立档案印证。（BSD Now EP186，[3969.0-4285.88]，L4）
+- mg 1986 年首发的说法为当事人回忆，其源自 MicroEMACS 谱系的精确传承（含原始作者与年份）须以源码历史与既存考据交叉验证；转写人名存在音误——受访者记作 Shell Wooding 应为 Kjell Wooding，Theo de Raadt 被记作 Theodore Atth——引用前须回查原音频。　[存疑脚注] 起源年份系当事人口述回忆，且转写人名音误，采信前须复核（BSDTalk EP200，[365.84-377.28]，L4）
 
 **文献**：
 
 - [BSD Now EP186] Pennington J. BSD Now: 186: The Fast And the Firewall: Tokyo Drift[EB/OL]. (2017-03-22)[2026-08-15]. https://www.bsdnow.tv/186.
+- [BSDTalk EP200] Backman W. BSDTalk: 200: bsdtalk200 - The mg text editor with Kjell Wooding[EB/OL]. (2010-10-13)[2026-08-27]. https://bsdtalk.blogspot.com/2010/10/bsdtalk200-mg-text-editor-with-kjell.html.
 
 <!-- /PODCAST_REVIEW -->
