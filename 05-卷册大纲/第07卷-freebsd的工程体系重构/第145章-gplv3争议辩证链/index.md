@@ -43,10 +43,12 @@ volume: 第07卷-freebsd的工程体系重构
 - 原材料/哲学/项目统摄史观/第 25 章.md（总纲第 21 条，第 25 行；总纲第 6 条，第 11 行；总纲第 7 条，第 13 行）；原材料/哲学/项目统摄史观/第 21 章.md（21.1、21.2 节）；Divacky R. [Announce] clang/llvm can compile booting FreeBSD kernel [EB/OL]. freebsd-current mailing list, 2009-02-25；Losh W. GCC 4.2.1 retirement announcement [EB/OL]. freebsd-arch mailing list, 2018. ［A］<!-- DB_REF:freebsd.duckdb -->> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 2020-2024 年间：291,070 次提交。> 仓库总览：1,294,851 次提交，13,875 位贡献者，1993-06-12 至 2026-08-25。
 
 <!-- PODCAST_REVIEW v20260829 -->
-<!-- 语义复核范围：BSDTalk EP7、BSDTalk EP204、BSDTalk EP233（共 3 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
+<!-- 语义复核范围：BSD Now EP106、BSDTalk EP7、BSDTalk EP204、BSDTalk EP233（共 4 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
 
 **要点**：
 
+- 多路径 TCP 是叠加在标准 TCP 之上的协议扩展，让多宿主主机把多个网络接口聚合进同一条 TCP 连接，由内核在应用无感知的情况下跨接口调度数据；一条多路径连接由若干在线路上仍表现为普通 TCP 的子流构成，握手期生成的令牌用于把新增地址关联回既有连接，调度可按最低 RTT 或可用拥塞窗口选择路径，而两端协商失败或选项在中途消失时自动回退为普通 TCP；有状态防火墙把新增子流当作独立连接处理可能丢弃流量，中间盒兼容仍是未决问题。（BSD Now EP106，[1594.62-1658.38]，L1）
+- 在 FreeBSD current 之上创建的 BSD router project 优化分支对路由转发代码做了改造，基准测试显示转发性能随网卡队列数增加近线性提升（1 到 2 队列提升约 88%，4 队列约 270%），尤其在该项目传统上因竞争而性能回落的临界点——队列数追平 CPU 数——新补丁使性能得以维持在峰值附近；配套仓库公开基准数据、测试工具与 ministat 统计显著性分析，可由第三方在不同硬件上复现。（BSD Now EP106，[480.86-695.16]，L2）
 - DragonFly BSD 1.4 于 2006 年 1 月 7 日发布；主持人补记此前遗漏，并说明该项目由一群围绕 FreeBSD 5 系内核希望作出重大改动的人分叉而来，旨在验证其在多处理性能上的理论，若理论成立则成果可惠及全部 BSD。（BSDTalk EP7，[20.38-79.16]，L2）
 - GPL 正酝酿第三版：Richard Stallman 主导的修订拟纳入争议性反 DRM 条款，即 GPLv3 软件不得被改造用于对不自愿用户强制数字版权管理（如 TiVo 式设备限制用户复制与媒介转移的合理使用）。因 BSD 生态大量依赖 GNU 工具、尤其 GCC 编译器（Apple 亦曾长期为 PowerPC 改进 GCC），主持人推演其后果：并非所有软件都会升级到 v3，若 GCC 随 v3 发布可能出现以 v2 末版为基的分叉编译器，商业公司转向 Intel 平台后也可能改用 Intel 编译器；而 BSD 许可证仅有数行、几乎无限制（只要求署名与免于诉讼），GPLv3 的争议或促使商业公司重新审视 BSD 许可证与 BSD 系统，成为 BSD 的转折点。（BSDTalk EP7，[84.90-361.82]，L2）
 - 主持人选取五款 BSD live CD 实测：FreeSBIE（FreeBSD 基）、Anonymous（OpenBSD 基）、DragonFly 安装盘（自述兼作 live CD 但极简）、NetBSD 官方 live CD（定位救援盘兼 KDE 桌面）、Newbee（NetBSD 基，主打全功能图形桌面）；测试硬件为 233 MHz/128 MB 旧笔记本、自制 AMD 2600 台式机、仅 USB 外设的 Dell GX280 与新款 Centrino 笔记本 Dell Latitude D610。（BSDTalk EP7，[376.02-517.04]，L1）
@@ -63,12 +65,16 @@ volume: 第07卷-freebsd的工程体系重构
 
 **史料**：
 
+- 当事人口述：Nigel Williams 自述 2006 年前后在 Swinburne 网络研究中心完成工程学位并留校工作，入职即被要求安装 FreeBSD（约 4 或 5 版本）用于 dummynet 等网络实验；2011 年前后返校做流量分类统计补丁的嵌入式设备移植，2012 年年中承接在 FreeBSD 上实现多路径 TCP 的项目，由此学习修改内核，并以 FreeBSD Foundation 资助其硕士研究的方式持续开发，访谈时初版代码经自我审查后已推翻重写并恢复可用。（BSD Now EP106，[1445.57-1587.78]，L1）
+- 本期经主持人口播转述的公开一手材料包括：stunnel 作者讨论 LibreSSL 链接资格的 Twitter 与邮件列表帖（959-1002 段）；Ian Sutton 关于 SystemBSD（以 dbus 模拟 hostnamed、timedated 等 systemd 守护进程的 GSoC 项目）的新版幻灯片（1032-1124 段）；BSD router project 优化分支的 GitHub 基准数据与测试工具（582-675 段）；Peter Wemm 记述 FreeBSD 构建集群故障排查过程的博客（178-217 段）；FreeBSD Journal 2015 年 7-8 月企业特刊，含 Groupon 迁移与再培训 Linux 系统管理员、Benno Rice 撰写的 Isilon 升级经验、FreeBSD.org 二进制包现状综述与基金会工作专栏（2952-3101 段）；以及计划中针对 head 发布的多路径 TCP 补丁与公开仓库（1827-1866 段）。（BSD Now EP106，[959.30-1001.70]，L2）
 - 当事人一手实测记录：五款 BSD live CD 在四类硬件上的启动、网卡与键盘图形检测、失败案例（GX280 USB 键盘不识别、NetBSD 盘 libqt 缺失）与逐盘评述，为 2006 年初 BSD 桌面化程度的一手横截面；另含经主持人转述的 DragonFly 1.4 发布公告及其分叉动机表述、GPLv3 起草阶段 FSF 与 Stallman 反 DRM 立场的公开信息。（BSDTalk EP7，[20.38-843.56]，L1）
 - 一手史料包括 Kristaps 对 mandoc 最早提交与 2009 年受 Theo 邀请入 OpenBSD 时间线的口述、其在 BSDCan 2011 的 mandoc 演进报告指引、Jason McIntyre 绕过 groff 缺陷的技巧叙述，以及 Ingo 对 FreeBSD developer summit 文档议程的现场观察；本访谈录于 BSDCan 2011 会议期间，本身即该会议一手记录。（BSDTalk EP204，[134.60-259.34]，L1）
 - 该期可提取的一手史料包括：vBSDCon 2013 演讲录音本身（bsdtalk 第 233 期，2013 年 11 月 1 日）；LLVM Bugzilla 元缺陷 PR2696 及其依赖缺陷清单，当事人称其依赖列表约占半屏；BSD camp 期间以 Clang 与 GCC 分别作为默认编译器对 ports 树反复执行的实验运行（exp runs）记录；PCC 项目网页曾宣称 C 支持基本完成、C++ 为下一步；GCC 中 Objective-C 支持集中所在的约一万行单文件；libc++ 测试用例在 FreeBSD、Linux 与 OS X 上的失败计数；以及 FreeBSD Foundation 付费委托 libc++ 移植的经 Roman 转述对话。（BSDTalk EP233，[743.75-765.63]，L1）
 
 **史观**：
 
+- 总纲10 动手者创造历史：多路径 TCP 的 FreeBSD 实现由一名硕士生以研究项目身份推进：无机构性宏大工程，只有具体的人在实验室里学习改内核、以局外人眼光审查并推翻重写自己的初版代码、承诺在数周内发布补丁；当事人在访谈结尾自述研究题目常被束之高阁，而这一次“it's a different experience to have people emailing me saying hey when's that thing going to be working”（音频 2664.50-2668.96），真实用户的催问成为持续开发的动力——技术史的实际主体正是这些被具体需求牵动的动手者，而非发布通告中的项目名。（BSD Now EP106，[2649.88-2689.30]，L1）
+- 总纲13 法律与道德是利益分配：stunnel 争议显示开源许可证并非中立的技术文本，而是利益与控制权的分配装置：例外条款决定谁可以链接谁的代码、分叉版本可以叫什么名字，GPL 保证 fork 自由的宣示在 OpenSSL 例外面前被主持人推演为“the GPL containing a clause technically saying no forking of OpenSSL allowed”（音频 932.68-935.04）的悖论；主持人以“this is why two sentences is the maximum”（音频 944.98-947.52）作结，把许可文本的复杂性本身识别为分配权力的技术形式——条款越长，各方利益的再分配空间越大。（BSD Now EP106，[903.88-947.52]，L2）
 - 总纲13 法律与道德是利益分配：主持人对 GPLv3 反 DRM 条款的解读呈现了许可证作为利益分配机制的本质：Stallman 试图以许可证条款强制商业公司放弃对用户设备的 DRM 控制，将权利再分配给终端用户，而商业公司是否愿意接受尚属疑问；与之相对，BSD 许可证以近乎零限制的条款把选择权交还使用者和商业方，两种许可证哲学在 DRM 议题上正面相遇。（BSDTalk EP7，[132.54-355.32]，L2）
 - 总纲4 分离聚合是永恒规律：主持人预测若 GCC 随 GPLv3 发布，可能出现以 v2 末版为基的分叉编译器：许可证条款变更触发项目分叉，正是开源谱系以分离应对分歧、以聚合延续成果的常态机制。（BSDTalk EP7，[314.34-334.28]，L2）
 - 总纲4 分离聚合是永恒规律：mandoc 自 groff 生态中分离而出，却以兼容 groff 既有手册语料为设计目标并与之互通校验，显示工具替代并非简单断裂，而是新实现与旧语料之间的再度聚合。（BSDTalk EP204，[1431.76-1507.66]，L1）
@@ -78,6 +84,8 @@ volume: 第07卷-freebsd的工程体系重构
 
 **辨析**：
 
+- stunnel 与 LibreSSL 之争的症结在于许可文本对命名的依赖：作者以具名例外把可链接的 SSL 库限定为“基础操作系统内的 OpenSSL”，并明确表示其许可“does not consider LibreSSL as OpenSSL”（音频 764.68-766.18），由此形成三重僵局——LibreSSL 仍持 OpenSSL 许可而无法重新授权，stunnel 的例外条款同样难以修改，OpenBSD 阵营则坚持视 LibreSSL 为削减后的 OpenSSL；再叠加 OpenSSL 许可禁止修改版沿用原名，OpenBSD 因随基础系统附带 LibreSSL 而合规、FreeBSD 等以 ports 安装则受限，争议表明具名例外条款在生态分叉情境下的脆弱性与解释空间之争。（BSD Now EP106，[758.90-833.28]，L2）
+- 副轨转述的构建集群排障案例包含对回退式调试的方法论批评：当事人强调回退只是“diagnostic tool, not a solution”，且“backing out could not have exposed this particular bug”（音频 391.46-396.76）——近期一次提交只是让“this one's been lurking there since 97”（音频 357.44-361.78）的内核缺陷在特定负载下显形，回滚只会使问题重新隐匿而非消失；同段以 Netflix 曾发现的长期潜伏 IPv6 缺陷为对照，指出偶发低频触发的缺陷须靠 bisect 定位后的根因修复，这一区分对考据“提交引入缺陷”与“提交暴露缺陷”两类因果表述具有直接的方法论意义。（BSD Now EP106，[352.62-400.68]，L2）
 - 当事人自我限定：其四台测试机不代表全部硬件生态，个别失败可能只是特定硬件组合的偶然不兼容，不能据此否定某张 live CD 的整体质量，引用本期的硬件兼容性结论时须保留这一适用范围限定。另转写将 Linux 参照 live CD 记作 Canopix 或 Nopix，所指发行版名称待考，引用其性能对比前须核实项目实名。[存疑脚注] 转写中的项目名 Canopix/Nopix 无法确证，待与 2006 年 live CD 发行版名录核对。　[存疑脚注] 转写中的 Linux live CD 项目名 Canopix/Nopix 无法确证，待与 2006 年 live CD 发行版名录核对。（BSDTalk EP7，[392.64-843.56]，L5）
 - mandoc 起始时间的口述在对话中经两人反复修正（2008 年 11 月、2009 年、春季），精确时间线须以仓库提交历史为准；转写人名与术语音误密集——Kristaps Dzonsons 误作 Chris Stapps、groff 音化作 grof 或 grow、apropos 误作 up-hopal、base 误作 Bayes、ports tree 误作 POTS tree——引用前须回查原音频与项目存档。　[存疑脚注] 时间线系口述回忆且对话中自我修正，须以版本库提交记录复核；转写音误密集，术语引用须校正（BSDTalk EP204，[134.60-210.74]，L4）
 - 演讲对 PCC 与 GCC 的评价带论战色彩，需与其他来源交叉验证：PCC 网页曾宣称 C++ 支持易于实现，而当事人指出 C++ 解析在一般情形下是不可计算问题、Clang 自举即耗时三年半并依赖 Apple 与 Google 的全职人力，故该宣称不足为凭；对 GCC 4.2.1 代码质量的贬抑亦系个人观感，其自陈因许可证原因从未阅读 GPLv3 代码，所评实为旧版。　[考据脚注] 对 PCC 与 GCC 的评价为当事人单方论战性叙述，PCC 网页宣称的具体时间与措辞、GCC 4.2.1 代码质量判断均需与两项目社区自身文献交叉核验。（BSDTalk EP233，[501.97-530.29]，L1）
@@ -85,6 +93,7 @@ volume: 第07卷-freebsd的工程体系重构
 
 **文献**：
 
+- [BSD Now EP106] Pennington J. BSD Now: 106: Multipath TCP[EB/OL]. (2015-09-09)[2026-08-15]. https://www.bsdnow.tv/106.
 - [BSDTalk EP7] Backman W. BSDTalk: Live BSD CDs[EB/OL]. (2006-01-18)[2026-08-15]. https://archive.org/download/bsdtalk007/bsdtalk007.ogg.
 - [BSDTalk EP204] Backman W. BSDTalk: 204: bsdtalk204 - mdocml mit Ingo Schwarze and Kristaps Dzonsons[EB/OL]. (2011-06-01)[2026-08-27]. https://bsdtalk.blogspot.com/2011/05/bsdtalk204-mdocml-mit-ingo-schwartze.html.
 - [BSDTalk EP233] Backman W. BSDTalk: 233: bsdtalk233 - From GCC to LLVM/CLANG with David Chisnall[EB/OL]. (2013-11-01)[2026-08-27]. https://bsdtalk.blogspot.com/2013/11/bsdtalk233-from-gcc-to-llvmclang-with.html.

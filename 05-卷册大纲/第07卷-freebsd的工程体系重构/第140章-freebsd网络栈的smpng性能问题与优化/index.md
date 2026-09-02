@@ -53,10 +53,12 @@ volume: 07
 本章所书皆是形式主义化的重构，并非对“真实的 BSD 历史”的呈现。本章的章节划分、事件选择、叙事策略、因果归因——全部基于编纂者的哲学设定。本章承认这些局限，不声称客观或中立，欢迎被更诚实的叙事所超越。
 
 <!-- PODCAST_REVIEW v20260829 -->
-<!-- 语义复核范围：BSD Now EP55、BSDTalk EP250（共 2 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
+<!-- 语义复核范围：BSD Now EP106、BSD Now EP55、BSDTalk EP250（共 3 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
 
 **要点**：
 
+- 多路径 TCP 是叠加在标准 TCP 之上的协议扩展，让多宿主主机把多个网络接口聚合进同一条 TCP 连接，由内核在应用无感知的情况下跨接口调度数据；一条多路径连接由若干在线路上仍表现为普通 TCP 的子流构成，握手期生成的令牌用于把新增地址关联回既有连接，调度可按最低 RTT 或可用拥塞窗口选择路径，而两端协商失败或选项在中途消失时自动回退为普通 TCP；有状态防火墙把新增子流当作独立连接处理可能丢弃流量，中间盒兼容仍是未决问题。（BSD Now EP106，[1594.62-1658.38]，L1）
+- 在 FreeBSD current 之上创建的 BSD router project 优化分支对路由转发代码做了改造，基准测试显示转发性能随网卡队列数增加近线性提升（1 到 2 队列提升约 88%，4 队列约 270%），尤其在该项目传统上因竞争而性能回落的临界点——队列数追平 CPU 数——新补丁使性能得以维持在峰值附近；配套仓库公开基准数据、测试工具与 ministat 统计显著性分析，可由第三方在不同硬件上复现。（BSD Now EP106，[480.86-695.16]，L2）
 - Adrian Chadd 自述 FreeBSD 无线栈在 AP 与 station 模式下工作良好，但仅有两名左右开发者，边界情况缺乏人手。（BSD Now EP55，[1419.88-1458.76]，L1）
 - Atheros 与 Intel 因开放源码与文档而成为 FreeBSD 无线的主要方向；Broadcom 与 Marvell 在 Sam Leffler 离开后未再更新，成为明显短板。（BSD Now EP55，[1462.00-1544.32]，L1）
 - Adrian Chadd 恢复因监管顾虑而停用的 monitor mode 注入，使 Kismet 与 Aircrack-NG 重新可用，同时承受实现监管域强制的压力。（BSD Now EP55，[1777.56-1881.62]，L1）
@@ -68,11 +70,15 @@ volume: 07
 
 **史料**：
 
+- 当事人口述：Nigel Williams 自述 2006 年前后在 Swinburne 网络研究中心完成工程学位并留校工作，入职即被要求安装 FreeBSD（约 4 或 5 版本）用于 dummynet 等网络实验；2011 年前后返校做流量分类统计补丁的嵌入式设备移植，2012 年年中承接在 FreeBSD 上实现多路径 TCP 的项目，由此学习修改内核，并以 FreeBSD Foundation 资助其硕士研究的方式持续开发，访谈时初版代码经自我审查后已推翻重写并恢复可用。（BSD Now EP106，[1445.57-1587.78]，L1）
+- 本期经主持人口播转述的公开一手材料包括：stunnel 作者讨论 LibreSSL 链接资格的 Twitter 与邮件列表帖（959-1002 段）；Ian Sutton 关于 SystemBSD（以 dbus 模拟 hostnamed、timedated 等 systemd 守护进程的 GSoC 项目）的新版幻灯片（1032-1124 段）；BSD router project 优化分支的 GitHub 基准数据与测试工具（582-675 段）；Peter Wemm 记述 FreeBSD 构建集群故障排查过程的博客（178-217 段）；FreeBSD Journal 2015 年 7-8 月企业特刊，含 Groupon 迁移与再培训 Linux 系统管理员、Benno Rice 撰写的 Isilon 升级经验、FreeBSD.org 二进制包现状综述与基金会工作专栏（2952-3101 段）；以及计划中针对 head 发布的多路径 TCP 补丁与公开仓库（1827-1866 段）。（BSD Now EP106，[959.30-1001.70]，L2）
 - Adrian Chadd 访谈（FreeBSD 无线网络栈维护者当事人自述）。（BSD Now EP55，[1267.26-2874.88]，L1）
 - 本期为 Rick Reed 在 MeetBSD California 2014 演讲《WhatsApp: Half a billion unsuspecting FreeBSD users》的现场录音，属 WhatsApp 生产运维的一手口述史料；其口述包含 CPU 与调度器利用率曲线、连接数与磁盘写入遥测、过热告警与 panic 事件、zero-copy socket 损坏与 TSC 时钟源补丁等一手故障记录，可与其他场合演讲及文本互证。（BSDTalk EP250，[31.96-40.90]，L1）
 
 **史观**：
 
+- 总纲10 动手者创造历史：多路径 TCP 的 FreeBSD 实现由一名硕士生以研究项目身份推进：无机构性宏大工程，只有具体的人在实验室里学习改内核、以局外人眼光审查并推翻重写自己的初版代码、承诺在数周内发布补丁；当事人在访谈结尾自述研究题目常被束之高阁，而这一次“it's a different experience to have people emailing me saying hey when's that thing going to be working”（音频 2664.50-2668.96），真实用户的催问成为持续开发的动力——技术史的实际主体正是这些被具体需求牵动的动手者，而非发布通告中的项目名。（BSD Now EP106，[2649.88-2689.30]，L1）
+- 总纲13 法律与道德是利益分配：stunnel 争议显示开源许可证并非中立的技术文本，而是利益与控制权的分配装置：例外条款决定谁可以链接谁的代码、分叉版本可以叫什么名字，GPL 保证 fork 自由的宣示在 OpenSSL 例外面前被主持人推演为“the GPL containing a clause technically saying no forking of OpenSSL allowed”（音频 932.68-935.04）的悖论；主持人以“this is why two sentences is the maximum”（音频 944.98-947.52）作结，把许可文本的复杂性本身识别为分配权力的技术形式——条款越长，各方利益的再分配空间越大。（BSD Now EP106，[903.88-947.52]，L2）
 - 总纲20 历史地理塑造思想土壤：总纲20 历史地理塑造思想土壤：无线厂商是否开放文档、是否以 Linux 为主场，直接塑造了 FreeBSD 无线栈的可行范围。（BSD Now EP55，[1462.00-1603.66]，L1）
 - 总纲9 经验优先：总纲9 经验优先：Adrian Chadd 以驱动开发与真机测试的一线经验陈述无线栈优劣，而非依赖纸面规格。（BSD Now EP55，[1419.88-1447.00]，L1）
 - 总纲4 分离聚合是永恒规律：总纲4 分离聚合是永恒规律：各 BSD 共享 net80211 后各自分化，DragonFly BSD 又聚合 FreeBSD 更新栈，构成反复的分合。（BSD Now EP55，[1657.66-1722.12]，L1）
@@ -81,11 +87,14 @@ volume: 07
 
 **辨析**：
 
+- stunnel 与 LibreSSL 之争的症结在于许可文本对命名的依赖：作者以具名例外把可链接的 SSL 库限定为“基础操作系统内的 OpenSSL”，并明确表示其许可“does not consider LibreSSL as OpenSSL”（音频 764.68-766.18），由此形成三重僵局——LibreSSL 仍持 OpenSSL 许可而无法重新授权，stunnel 的例外条款同样难以修改，OpenBSD 阵营则坚持视 LibreSSL 为削减后的 OpenSSL；再叠加 OpenSSL 许可禁止修改版沿用原名，OpenBSD 因随基础系统附带 LibreSSL 而合规、FreeBSD 等以 ports 安装则受限，争议表明具名例外条款在生态分叉情境下的脆弱性与解释空间之争。（BSD Now EP106，[758.90-833.28]，L2）
+- 副轨转述的构建集群排障案例包含对回退式调试的方法论批评：当事人强调回退只是“diagnostic tool, not a solution”，且“backing out could not have exposed this particular bug”（音频 391.46-396.76）——近期一次提交只是让“this one's been lurking there since 97”（音频 357.44-361.78）的内核缺陷在特定负载下显形，回滚只会使问题重新隐匿而非消失；同段以 Netflix 曾发现的长期潜伏 IPv6 缺陷为对照，指出偶发低频触发的缺陷须靠 bisect 定位后的根因修复，这一区分对考据“提交引入缺陷”与“提交暴露缺陷”两类因果表述具有直接的方法论意义。（BSD Now EP106，[352.62-400.68]，L2）
 - 转录将 Ralink/Realtek 与 Atheros 的表述交错，主持人与嘉宾均存在口误修正，具体芯片归属需对照 FreeBSD 源码。　[存疑脚注] 无线芯片厂商归属存在口语转写歧义，未以代码仓库核验（BSD Now EP55，[1486.52-1493.84]，L4）
 - 标题所称“5 亿毫不知情的 FreeBSD 用户”点出沉默使用现象：终端用户无从感知底层操作系统，自由软件的扩散依赖企业生产采用而非用户选择，当事人开场亦以现场举手调查印证知情者寥寥；此为“沉默 BSD 企业”现象的当事人自证，但亦须辨析——企业愿意公开自述者（如本场演讲）恰是沉默群体中的例外，样本代表性有限。（BSDTalk EP250，[178.32-191.12]，L1）
 
 **文献**：
 
+- [BSD Now EP106] Pennington J. BSD Now: 106: Multipath TCP[EB/OL]. (2015-09-09)[2026-08-15]. https://www.bsdnow.tv/106.
 - [BSD Now EP55] Pennington J. BSD Now: 55: The Promised WLAN[EB/OL]. (2014-09-17)[2026-08-15]. https://www.bsdnow.tv/55.
 - [BSDTalk EP250] Backman W. BSDTalk: 250: bsdtalk250 - WhatsApp: Half a billion unsuspecting FreeBSD users by Rick Reed[EB/OL]. (2015-01-31)[2026-08-27]. https://bsdtalk.blogspot.com/2015/01/bsdtalk250-whatsapp-half-billion.html.
 

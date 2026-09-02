@@ -33,7 +33,7 @@ volume: 第03卷-伯克利学术文化外溢影响
 - BSD 源码 CHANGELOG/SCCS 日志；IETF/CSRG 邮件列表存档；Allman/Vixie 回忆录；0 信任原则方法论 ［A］
 
 <!-- PODCAST_REVIEW v20260829 -->
-<!-- 语义复核范围：BSD Now EP378、BSD Now EP323、BSD Now EP165、BSD Now EP56、BSD Now EP1（共 5 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
+<!-- 语义复核范围：BSD Now EP378、BSD Now EP323、BSD Now EP165、BSD Now EP105、BSD Now EP56、BSD Now EP1（共 6 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
 
 **要点**：
 
@@ -59,6 +59,9 @@ volume: 第03卷-伯克利学术文化外溢影响
 - CTL HA 由 Alexander Motin 与 iXsystems 完成并于约一年前提交，实现 ALUA，使主机可同时经两个控制器访问同一 LUN；Mikhail Zakharov 正将 Beast 存储设备从自定义仲裁器切换到 CTL HA。（BSD Now EP165，[1929.08-2090.68]，L2）
 - CTL HA 提供 active/standby 与 active/active 模式，可按 LUN 指定主控节点，使多个 LUN 在两个控制器间分摊流量以获取更高带宽。（BSD Now EP165，[2121.16-2170.54]，L2）
 - GSoC 学生 Abdali Kaltai 撰写首个 FreeBSD 内核模块教程，讲解模块事件处理、DECLARE_MODULE 宏与 bsd.kmod.mk 构建流程。（BSD Now EP165，[623.7-912.64]，L2）
+- VBSDCon 2015 由 VeriSign 主办，于 9 月 11 日至 13 日在弗吉尼亚州 Reston 的 Sheraton 酒店举行，票价 100 美元、规模限制约 125 人；其定位有三：美国东海岸唯一的大型 BSD 会议、聚焦在敌对条件下支撑互联网运行的关键基础设施、面向系统管理员与运维团队而非开发者。VeriSign 采用邀请制遴选演讲者而非公开征稿，并刻意给 FreeBSD、OpenBSD、NetBSD 三个社区以大体均衡的议程曝光；2015 届改进包括专业级录像、以闪电演讲取代上一届的 speed geeking 环节、以及把会场移近餐馆密集的 Reston Town Center。（BSD Now EP105，[1225.42-1324.68]，L1）
+- 本期标题所指的 1980 年代线索来自嘉宾 Scott Courtney 的自述：他于 20 世纪 80 年代半途接手一台运行 SVR3 的 AT&T 3B2 服务器的系统管理员工作而入行 Unix，此后经 Solaris 等商业 Unix 接触到源自 BSD 的 TCP/IP 等特性；约在 2015 年前的六七年，他在 VeriSign 主管架构时，因 .com 域名平台与根 DNS 产品在攻击负载下的可扩展性瓶颈而转向 FreeBSD，并采取 FreeBSD 与某一 Linux 变体并行的异构部署策略以对冲零日漏洞风险。（BSD Now EP105，[1054.36-1119.66]，L1）
+- OpenBSD 在本期呈三线推进：其一，tame() 用户态集成由 Theo de Raadt 以百余个小 diff 的形式落地，多数程序仅两三行改动，路径白名单留待后续；其二，UEFI 与 GPT 初始支持开始合入，帧缓冲结构暴露给 wsdisplay 后端，GPT 重构将取代为绕过 MBR 单盘 2 TB 限制而设的 disklabel 变通，UEFI-only 的设备（如 VIO-Z Canvas）由此获得启动 OpenBSD 的可能；其三，LibreSSL 自上游开始禁用 SSLv3，先从 openssl 命令行工具关闭，ports 中的 Apache 等依赖仍待适配，IETF 亦有禁用 SSLv3 的 RFC 草案在途；同一周内 FreeBSD 的多路径 TCP 0.5 补丁集与 DragonFly 的 Intel 显卡更新共同构成 2015 年 9 月初的跨分支技术图景。（BSD Now EP105，[2680.64-2822.08]，L3）
 - FreeBSD.org 集群由约一百三十台机器分布于全球六个地理位置，并运行一百一十多个 jail，广泛使用 ZFS、PF、VLAN 与 GeoDNS。（BSD Now EP56，[574.76-657.04]，L1）
 - 集群长期在开发分支 head 上运行以对最新代码进行真实负载压力测试，并已转向统一二进制构建以替代逐机 make world。（BSD Now EP56，[1126.38-1225.00]，L1）
 - 2012 年安全事件源于开发者经被攻破的大学网络跳板泄露 SSH 密钥，攻击者抓取连接关系并回连个人主机；David Wolfskill 因发现异常登录而触发追踪。（BSD Now EP56，[2102.38-2305.54]，L1）
@@ -80,6 +83,7 @@ volume: 第03卷-伯克利学术文化外溢影响
 - ARIN 咨询委员会选举候选人页面与投票说明。（BSD Now EP165，[190.58-250.16]，L2）
 - OpenBGPD 对 Large Communities draft RFC 的支持公告。（BSD Now EP165，[1396.16-1615.68]，L2）
 - Alexander Motin 的 CTL HA 提交与 Mikhail Zakharov 的 Beast 存储设备设计文档。（BSD Now EP165，[1929.08-2090.68]，L2）
+- 本期涉及的一手史料包括：VeriSign 产品工程副总裁 Scott Courtney 的节目访谈口述（2015 年 9 月 2 日录制）；Theo de Raadt 推送的 tame() 用户态集成大型补丁集（百余个小 diff，多数仅两三行改动，且自述尚无路径白名单用例）；OpenBSD UEFI 与 GPT 初始支持的相关内核提交及 Undeadly 站点汇总；pfSense 官网发布的 Beyond the Fork 项目状态更新（约 40 个版本、逾 5000 次提交）；澳大利亚 Swinburne 大学高级互联网架构中心（CAIA）Nigel Williams 撰写的 FreeBSD 多路径 TCP 0.5 版补丁集说明（针对 FreeBSD 11 r285254）；NextBSD 官网关于安装器阻塞的说明；以及主张 FreeBSD 不应采用 LaunchD 的社区评论文章与 Reddit 讨论串。（BSD Now EP105，[767.22-792.98]，L3）
 - Peter Wemm 访谈（FreeBSD.org 集群管理员当事人自述）。（BSD Now EP56，[226.16-2846.68]，L1）
 - 当事人 Peter Hessler 自述其为 OpenBSD 用户与开发者：2000 年起使用、2008 年起成为开发者，早期从事 ports 移植，后加入 Vantronics 从事 OpenBSD 防火墙与路由器相关工作，并曾运行约 50 个路由域。（BSD Now EP1，[2946.18-3109.14]，L1）
 - 当事人自述其 BGP SpamD 聚合阿尔伯塔大学与《The Book of PF》作者 Peter Hanstein 的 SpamD 黑名单，并以 24 小时内命中蜜罐邮箱地址作为黑名单收录口径。（BSD Now EP1，[3984.50-4100.90]，L1）
@@ -101,6 +105,8 @@ volume: 第03卷-伯克利学术文化外溢影响
 - 总纲22 知识注定过时：16 位 AS 号与 communities 编码曾足够使用，随网络增长而失效，既有技术知识注定过时并需新形式替代。（BSD Now EP165，[1406.5-1504.98]，L3）
 - 总纲9 经验优先：Beast 存储设备从自定义仲裁器转向 CTL HA 内置能力，工程实践沉淀为通用组件。（BSD Now EP165，[1959.6-2090.68]，L3）
 - 总纲10 动手者创造历史：CTL HA 与 Beast 的高可用由 Alexander Motin、Mikhail Zakharov 等具体动手者推进。（BSD Now EP165，[1929.08-2090.68]，L3）
+- 总纲10 动手者创造历史：全期的叙事重心置于不显眼的劳作之上：主持人称赞 LibreSSL 移除 SSLv3 与 Tarsnap 安全赏金这类“吃力不讨好的工作”（2442.82-2445.26），指出删除特性并承受其连锁反应是不被看见的贡献，正因如此才要感谢源码树后的清理者；节目又在两周年之际向幕后编者 TJ 致敬，将其每周整理的 show notes 与选题组织确认为节目得以存在的隐形基底——书写对象由此从发布会与版本号转向维持系统运转的动手者。（BSD Now EP105，[2442.82-2464.44]，L2）
+- 总纲8 本体论上各方平等：各 BSD 分支在同一时段的多线并进构成本体论平等的经验呈现：DragonFly BSD 合入 Linux 3.17 的 Intel 显卡栈更新并辅以 3.19 的稳定性修复，其图形进度反令 FreeBSD 侧主持人自嘲羡慕；OpenBSD 独立推进 tame() 沙箱、UEFI 启动与 SSLv3 清除；FreeBSD 侧则以 bhyve、多路径 TCP 补丁集与 11 CURRENT 应对——没有任何单一分支被叙述为普遍进步的主线，呈现的只是不同努力在各自曲线上的流转。（BSD Now EP105，[740.84-749.74]，L2）
 - 总纲7 理论必须自反：总纲7 理论必须自反：Peter Wemm 反复以事故教训反观并修正基础设施设计，而非固守既有运维惯例。（BSD Now EP56，[1982.06-2022.30]，L1）
 - 总纲5 没有必然性，只有偶然性：总纲5 没有必然性，只有偶然性：2012 年事件由跳板主机、共享 NFS home 与可写 authorized_keys 等偶然叠加而成，并非必然发生。（BSD Now EP56，[2102.38-2192.90]，L1）
 - 总纲10 动手者创造历史：总纲10 动手者创造历史：集群由 Peter Wemm、Glen Barber、Sean Bruno 等动手维护者在长周期中持续改造。（BSD Now EP56，[666.00-748.68]，L1）
@@ -117,6 +123,8 @@ volume: 第03卷-伯克利学术文化外溢影响
 - PDP-7 源码断代“1970 至 1971 初”依赖两位早期贡献者与馆方编目，属多源交叉但仍非绝对定年。　[存疑脚注] 定年证据链为多源交叉，非单一权威结论（BSD Now EP323，[167.90-193.82]，L3）
 - [存疑脚注] 转写将选举机构记作“Aaron Advisory Council”，应为 ARIN Advisory Council 的误转；候选人“Ike”的全名须核验。　[存疑脚注] ARIN 与候选人姓名须核验。（BSD Now EP165，[99.14-250.16]，L4）
 - [存疑脚注] 转写将补丁作者记作“job schneider”，应为 Job Snijders 的误转，须核验。　[存疑脚注] Job Snijders 姓名须核验。（BSD Now EP165，[1595.0-1609.12]，L4）
+- 本期最具考据价值的片段是当事人自纠：听众 Mason 来信指认主持人在上期约 1 小时 56 分钟处声称 X 进入基本系统的最大障碍是许可证不利于 BSD，并指出 X 许可证与 BSD 许可证几乎无异、NetBSD 与 OpenBSD 携带 X 已近二十年；Allan Jude 随即更正，澄清真正的障碍并非许可证，而是 FreeBSD 项目不愿为跨 FreeBSD 10 的五年生命周期维持 ABI 稳定而在基本系统内维护 X 的分支，X 的定位始终是 port；他同时透露 FreeBSD 正延续将组件移出基本系统的路线——Perl 自 FreeBSD 4 起已移除，OpenSSL 拟改为仅内部私用、用户态依赖自 ports 获取以加快补丁节奏。（BSD Now EP105，[3272.78-3362.70]，L1）
+- 围绕 NextBSD 移植 LaunchD 的争议呈现流言与澄清的典型结构：一篇评论文章主张 FreeBSD 不应采用 LaunchD，Reddit 上正反意见交锋并引来大量社区邮件；Allan Jude 澄清所谓 XML 配置的恐惧源自过去某设备厂商对 launchd2 的 FreeBSD 移植，而 NextBSD 实际使用的版本改用 JSON 且更为精简，提醒听众核对正确版本再作评判；工程层面，Kip Macy 正在修复安装器以便发布可试用的 NextBSD ISO，Jordan Hubbard 与 Kip Macy 均已同意接受访谈但需待 EuroBSDCon 之后，PC-BSD 下一版将基于 FreeBSD 11 CURRENT 与 NextBSD 构建并集成 launchd，且计划按月发布镜像、或与 HardenedBSD 合流。（BSD Now EP105，[589.64-628.86]，L2）
 - 2012 年事件中患者零号的初始入侵路径仅存候选推断，Peter Wemm 自述只有短名单而无确定结论。　[存疑脚注] 初始入侵路径未获确证，属当事人事后推断（BSD Now EP56，[2224.94-2233.42]，L4）
 - VeriSign 同时使用 BSD、Linux、Solaris 等操作系统作多样性冗余的说法为主持人转述，其根服务器内部各系统的具体比例未获官方资料核验。　[存疑脚注] VeriSign 各操作系统在根服务器中的具体占比属单一播客转述，须以官方资料交叉验证。（BSD Now EP1，[460.01-478.53]，L4）
 
@@ -125,6 +133,7 @@ volume: 第03卷-伯克利学术文化外溢影响
 - [BSD Now EP378] Pennington J. BSD Now: 378: Networknomicon[EB/OL]. (2020-11-26)[2026-08-15]. https://www.bsdnow.tv/378.
 - [BSD Now EP323] Pennington J. BSD Now: 323: OSI Burrito Guy[EB/OL]. (2019-11-07)[2026-08-15]. https://www.bsdnow.tv/323.
 - [BSD Now EP165] Pennington J. BSD Now: 165: Vote4BSD[EB/OL]. (2016-10-26)[2026-08-15]. https://www.bsdnow.tv/165.
+- [BSD Now EP105] Pennington J. BSD Now: 105: Virginia BSD Assembly[EB/OL]. (2015-09-02)[2026-08-15]. https://www.bsdnow.tv/105.
 - [BSD Now EP56] Pennington J. BSD Now: 56: Beastly Infrastructure[EB/OL]. (2014-09-24)[2026-08-15]. https://www.bsdnow.tv/56.
 - [BSD Now EP1] Pennington J. BSD Now: 1: BGP & BSD[EB/OL]. (2013-09-04)[2026-08-15]. https://www.bsdnow.tv/1.
 
