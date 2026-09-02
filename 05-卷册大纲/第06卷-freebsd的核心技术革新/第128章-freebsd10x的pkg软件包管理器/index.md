@@ -70,10 +70,12 @@ volume: 06
 本章所书皆是形式主义化的重构，并非对“真实的 BSD 历史”的呈现。本章的章节划分、事件选择、叙事策略、因果归因——全部基于编纂者的哲学设定。本章承认这些局限，不声称客观或中立，欢迎被更诚实的叙事所超越。
 
 <!-- PODCAST_REVIEW v20260829 -->
-<!-- 语义复核范围：BSD Now EP48、BSD Now EP43、BSD Now EP18（共 3 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
+<!-- 语义复核范围：BSD Now EP79、BSD Now EP48、BSD Now EP43、BSD Now EP18（共 4 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
 
 **要点**：
 
+- 受访者 Sean Bruno 自述交叉构建方案源于 Stacey Son 的构想：在 amd64 宿主上以 jail 装载 ARM 或 MIPS 的 FreeBSD world，依据 ELF 头中的架构信息拦截 exec 并在其前拼入 qemu-user，shell 等少量工具改用宿主原生静态二进制以避开模拟开销，使 ARM/MIPS 环境中的构建任务近乎无感地混合执行。　[存疑脚注] 转写将 Poudriere 误录为 PoetryAid/Powder Keg 等多种形态，工具名与 qemu-user 组合关系依上下文校正（BSD Now EP79，[1447.40-1504.52]，L1）
+- 受访者给出量化图景：借助宿主原生静态工具链，amd64 宿主约一周即可构建约两万个 ARM 包而此前需近一月；Warner Losh 引入的 native-xtools 目标据称又削减约四成构建时间；MIPS 仍受困于 GCC 4.2，缺 Java、Erlang 与 FPC 支持成为主要缺口，官方 ARM/MIPS64/ARMv6 包仓库正筹备发布。（BSD Now EP79，[1595.90-1877.84]，L1）
 - Brent Cook 一手自述其入社路径：1998 年前后在得克萨斯大学以 FreeBSD 1/2 运行 web 服务器约三四年，其后在嵌入式公司用 FreeBSD 制作专用防火墙 appliance；在 Boundary 公司的跨平台 agent 中嵌入 OpenSSL 长期受构建缓慢与 API 混乱之苦，Heartbleed 事件后转向替代方案。他以业余时间搭建自动构建环境测试 LibreSSL portable 版约两个月，期间 Theo de Raadt 主动邮件联系他讨论 PRNG 改动，并邀其赴斯洛文尼亚参加 hackathon，最终成为正式 OpenBSD developer。（BSD Now EP48，[1166.52-1321.73]，L1）
 - portable 化工程路径：Cook 模仿 BSD makefiles 建立构建框架，选 autoconf/automake 以覆盖 HP-UX 等长尾平台；最大难点在 PRNG——libBSD 的 arc4random 实现不达 OpenBSD 安全标准，libottery 方案亦被 Theo 否定；最终推动 getentropy(2) 新系统调用进入多个平台，使其他操作系统无需模拟 OpenBSD 的 sysctl 接口，内存分配保护等亦重构为可移植层。初版全用 C 而非汇编，其基准测试显示在 Ubuntu 上 LibreSSL 的 C 版块密码反而比 OpenSSL 快近两倍，引入汇编时将按现代编译器能力批判性评估，不再为旧编译器绕弯。（BSD Now EP48，[1404.57-1675.71]，L1）
 - Bob Beck 致节目邮件指出：FreeBSD 内置 arc4random 为陈旧实现（仅依赖 RC4 流程、随机性强度不足），OpenBSD 版本在其移植后已重写且行为不同，故 FreeBSD 目前并非受支持的 LibreSSL 运行平台；Ted Unangst 已提交更新 FreeBSD arc4random 的补丁，当时正由 FreeBSD 安全团队评审，通过后方能正式支持 LibreSSL。　[存疑脚注] 转写存在语音识别误差（如 R4Random、Ted Unanks 等），函数与人名细节以邮件原文为准。（BSD Now EP48，[3346.28-3436.28]，L2）
@@ -90,12 +92,16 @@ volume: 06
 
 **史料**：
 
+- 该期可回溯的一手史料包括：AsiaBSDCon 2015 官方议程（Henning Brauer 的 “OpenBSD Sucks” 刻意不附摘要）、Ted Unangst 在 misc@ 发起的浏览器 W^X 强化讨论、Colin Percival 收紧 random(3) 手册页措辞的 SVN 提交、ports@ 与 current@ 上关于 Midori 崩溃及 sudo 嘲讽语的线索、FreeBSD Foundation 更新 PDF 与 Glenn Barber 的 ZFS 事故记，以及 pcbsd-build GitHub 仓库与受访者技术博客。　[存疑脚注] 以上条目均系主持人转述，原始邮件、提交与文档尚未逐条核验，个别讲者名与题名转写失真（BSD Now EP79，[918.56-935.48]，L2）
 - 对 OpenSSL 代码库的一手观察：Cook 称其中大量不安全且无人维护的代码，密码学部分呈数学家与博士生风格（A、B、C、D、E、F 式变量命名），静态分析发现大量“遗传性旧代码”——不执行任何功能亦无害。他自述作为美国公民刻意不修改加密算法本体，以免触碰出口管制敏感区，这构成出口管制持续约束开源加密开发行为的一手证词。（BSD Now EP48，[2292.04-2361.23]，L1）
 - 该期提及并可回溯的一手材料包括：Poul-Henning Kamp 刊于 ACM Queue 的《Quality Software Costs Money — Heartbleed was Free》（由博客扩写而成）；FreeBSD-SA-14:16（file/libmagic 的 CDF 指针解引用与越界读、awk 正则资源耗尽、PE 越界读）及 iconv 相关公告、影响 Java 的 PCID errata；OpenBSD 5.5 errata 003（2014 年 4 月 9 日，ftp 客户端 HTTPS 主机名校验缺失）；tor-bsd 邮件列表关于 Tor 节点单一文化的帖子；boringssl.googlesource.com 源码库；以及 Southeast Linux Fest 上 Ken Moore 关于 PBI 的讲义。（BSD Now EP43，[645.84-995.74]，L2）
 - 本期史料包括 Justin Sherrill 博客观点、Henning Brauer 对 PF 可移植层的表态、Baptiste Daroussin 访谈（当事人自述）以及 OpenBSD Binary Upgrade 第三方脚本。（BSD Now EP18，[346.52-557.28]，L1）
 
 **史观**：
 
+- 总纲10 动手者创造历史：受访者以 “It basically takes a village” 概括交叉编译工程：一项外表简单的任务实际依赖 Stacey Son、Peter Wemm、Ed Maste、Juergen Lock、Justin Hibbitts、Alexander Kabaev、Adrian Chadd 及 ports 团队等大量动手者的补丁与答疑，推动工程前进的是这些具体做事的人，而非抽象的路线图。　[存疑脚注] 部分人名在转写中失真（Peter Wemm、Ed Maste、Alexander Kabaev 等为依上下文校正）（BSD Now EP79，[2700.86-2772.70]，L1）
+- 总纲5 没有必然性，只有偶然性：受访者自述十年前被招募的缘由仅是简历上列有 net-snmp，随后为公司硬件平台维护 FreeBSD 4.8 而被“吸入”BSD 世界并离开 Linux——个体进入 BSD 史的路径由偶然机缘构成，并无从 Linux 转向 BSD 的必然逻辑。（BSD Now EP79，[1280.82-1302.10]，L1）
+- 总纲15 文化即形式主义：邮件列表线索显示，规范化 sudo 嘲讽语标点的补丁被以“错误已成经典、受遗产规则保护”为由拒绝，代码文化将自身的历史形式当作须守护的遗产加以固化，形式本身获得了超越实用价值的地位。（BSD Now EP79，[4769.08-4776.52]，L2）
 - 总纲10 动手者创造历史：portable LibreSSL 的发布、测试与集成实际由 Cook（每周约 10 小时的业余投入）与 Bob Beck 两人支撑，改进建议来自 GitHub 议题与各类论坛的散点反馈，Windows 支持长期悬置等待认领者；安全关键基础设施的日常运转依赖少数默默投入的个体，而非有组织的团队。（BSD Now EP48，[1756.61-1830.54]，L1）
 - 总纲9 经验优先：可移植性策略的反转：面对 musl libc 提议用条件编译绕过 glibc 保护代码，Cook 拒绝基于运行时检测的变通——不存在安全可靠的方式检测特权环境（进程可能运行在错误内核上）——转而与 musl 开发者合作在上游实现 issetugid 系统调用，结果比任何变通更安全。portable 版不再堆叠兼容层，而是把正确修复推进操作系统与 libc 本体，与 OpenSSL“忍受操作系统所给的一切”的哲学形成对照；其论证是开源项目有能力让正确修复进入上游。（BSD Now EP48，[1892.33-1975.85]，L1）
 - 总纲4 分离聚合是永恒规律：主持人由 BoringSSL 与 LibreSSL 的相继分岔引出对 SSL 单一文化的批评：当所有人都用同一份代码，一处未修补漏洞即令全体节点同时陷落；他们同时预期各分岔将“随时间推移逐渐分异”，以摆脱同源缺陷的共振风险。分岔在此并非生态的病征，而是多样性自我保全的形式，恰合分离聚合的节律。（BSD Now EP43，[3299.76-3319.16]，L2）
@@ -106,12 +112,15 @@ volume: 06
 
 **辨析**：
 
+- 受访者转述 tier-1 平台认定或须以“能在本机架构原生构建官方包”为前提，并预计 AArch64 将作为独立目标而非 arm 的别名出现；此说出自个人听闻而非核心团队正式决议，同期 FreeBSD 11 因 pkg base 就绪而推迟的传闻亦属未定信息。　[存疑脚注] 均为单一受访者或主持人转述的传闻，正式决策记录待核（BSD Now EP79，[2174.04-2189.14]，L4）
+- 该转写为双音轨交错且时间戳乱序，出现句级拼接（如 “a MIPS FreeBSD world” 之后被拼入无关语境）与大量专名失真（Poudriere、GELI、PersonaCrypt、BhyveCon 等），TrueOS 答疑段与 PC-BSD 新闻段的说话人归属因此难以确证；各段语义仍完整可辨，专名校正均属语境推断。　[存疑脚注] 说话人归属与专名校正均为推断，引用前须对照节目原始音轨或节目页核对（BSD Now EP79，[1468.96-1473.96]，L4）
 - Linux PRNG 争议事件：ARS Technica 报道 LibreSSL 未检测 PRNG PID 回绕；Cook 证实团队在文章发表前几天已内部讨论该角落案例，文章发表当日清晨补丁即由 Bob Beck 推送。他拒绝阅读网络评论，与 PaX 团队交换加固思路，并指出权衡困境——将 PRNG 页面标记为不可被子进程继承会使直接调用 fork/clone 的进程崩溃，彻底方案可能需要内核协助；在“更安全”与“不破坏既有软件”之间只有细线。这一表述与其安全观互为表里：今天的偏执角落案例就是明天的大规模漏洞。（BSD Now EP48，[2031.90-2160.53]，L1）
 - 三处专名与归属在转写中失真而须核验：其一，Espie 转述原包工具作者自评“周末写成的好用的垃圾”时自称记不清是否为 PHK，作者归属与措辞均待 pkg_install 历史与邮件列表原文印证；其二，构建机所在“Fios basement”疑为人名误听（OpenBSD 包构建长期由 Landry Breuil 维护）；其三，影响 Java 的“PCI DS”应为 PCID（Process Context Identifier），具体 errata 编号待查 FreeBSD 公告档。　[存疑脚注] PHK 归属、Fios basement 人名、PCID errata 编号三处均系转写失真或记忆性转述，须以邮件列表原文与 FreeBSD Errata Notices 核验后方可引用（BSD Now EP43，[1955.80-1988.06]，L4）
 - 主持人将 DragonFly 的 PF 对应 OpenBSD 4.4、FreeBSD 对应 4.5 等版本关系为口头转述，需与各项目代码核对；OpenPF 项目在 2014 年成立属对未来的期许而非既成事实。　[存疑脚注] 各 BSD 的 PF 版本对应与 OpenPF 立项状态需以源码与邮件列表原始记录复核。（BSD Now EP18，[386.32-439.46]，L4）
 
 **文献**：
 
+- [BSD Now EP79] Pennington J. BSD Now: 79: Just Add QEMU[EB/OL]. (2015-03-04)[2026-08-15]. https://www.bsdnow.tv/79.
 - [BSD Now EP48] Pennington J. BSD Now: 48: Liberating SSL[EB/OL]. (2014-07-30)[2026-08-15]. https://www.bsdnow.tv/48.
 - [BSD Now EP43] Pennington J. BSD Now: 43: Package Design[EB/OL]. (2014-06-25)[2026-08-15]. https://www.bsdnow.tv/43.
 - [BSD Now EP18] Pennington J. BSD Now: 18: Eclipsing Binaries[EB/OL]. (2014-01-01)[2026-08-15]. https://www.bsdnow.tv/18.

@@ -53,7 +53,7 @@ volume: 07
 本章所书皆是形式主义化的重构，并非对“真实的 BSD 历史”的呈现。本章的章节划分、事件选择、叙事策略、因果归因——全部基于编纂者的哲学设定。本章承认这些局限，不声称客观或中立，欢迎被更诚实的叙事所超越。
 
 <!-- PODCAST_REVIEW v20260829 -->
-<!-- 语义复核范围：BSD Now EP55（共 1 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
+<!-- 语义复核范围：BSD Now EP55、BSDTalk EP250（共 2 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
 
 **要点**：
 
@@ -61,23 +61,32 @@ volume: 07
 - Atheros 与 Intel 因开放源码与文档而成为 FreeBSD 无线的主要方向；Broadcom 与 Marvell 在 Sam Leffler 离开后未再更新，成为明显短板。（BSD Now EP55，[1462.00-1544.32]，L1）
 - Adrian Chadd 恢复因监管顾虑而停用的 monitor mode 注入，使 Kismet 与 Aircrack-NG 重新可用，同时承受实现监管域强制的压力。（BSD Now EP55，[1777.56-1881.62]，L1）
 - OpenBSD 的 systemd 兼容层仅为 hostnamed、localed、timedated、logind 的 shim，以让 GNOME 运行，并非移植 systemd 本体或替换 init。（BSD Now EP55，[3493.32-3567.32]，L2）
+- Rick Reed 于 MeetBSD California 2014 自述 WhatsApp 架构与规模：200 台 chat 前端与约 350 台多媒体服务器辅以后端账户数据与离线存储集群，后者仅在消息于收发双方之间传输时暂存数据；当时已逾 6 亿月活用户，峰值 1.4 亿并发连接、每秒 44 万新连接、每秒 110 万条用户消息（含在线状态等事件约每秒 300 万次）、每日图片逾 10 亿；其技术底座为 Erlang actor 模型与 FreeBSD SMP 扩展性——每个手机连接对应一个约 1600 字节的 BEAM 轻量进程，无共享状态、纯消息传递、调度线程逐一绑定 CPU 线程，单机可承载数百万连接；当事人将一台 chat 前端负载加倍实测，CPU 利用率自约 55% 平滑升至 98% 至 99% 并可全天满载，调度器利用率曲线与 CPU 曲线贴合、争用损耗极小，内核经少量调优后几乎不构成障碍，集群曾因节点持续 95% 满载 24 小时而触发过热告警，系统本身仍稳定运行。（BSDTalk EP250，[537.44-1153.74]，L1）
+- FreeBSD 选型先于现团队：创始人 Jan Koum 与 Brian Acton 均出身 Yahoo 平台工程，凭其大规模互联网服务经验认定 FreeBSD 的 TCP 栈质量与稳定性突出、发布可预期、文档与内核内部资料齐备，足以支撑预想中的大规模服务；当事人本人在 Yahoo 曾编写内核模块并负责平台库与操作系统之间的接口层，此前任职 Silicon Graphics 从事视频服务。（BSDTalk EP250，[305.48-392.50]，L1）
+- 当事人梳理生产版本迁移史：2009 至 2010 年运行 FreeBSD 7，升级 8 后性能改善但遇到 zero-copy socket 导致消息在写入 socket 与发出网卡之间损坏的问题（关闭该特性解决）、IGB 网卡锁死（回移稳定分支驱动修复）与内核拒绝采用稳定的 TSC 时钟源（补丁强制启用）；2011 年优化后单机曾达约 280 万连接；2013 年迁至 FreeBSD 9 后运行近两年，随机 panic 几乎绝迹，仅余机器检查异常与 UFS 因此前崩溃损坏引发的停机。（BSDTalk EP250，[2001.16-2151.66]，L1）
+- 存储实践：全线使用 UFS 并以 JBOD 直连磁盘、弃用 RAID 卡（仅视频服务器以 gmirror 提供镜像），文件系统按离线信箱、图片、视频等负载分别定制块大小与 fragment 大小；实测机械盘在持续满负荷下写入上限约每秒 45 至 50 MB（曾与 Kirk McKusick 协作分析），离线消息约半数在写入后 25 秒内即被取走，大量落盘仅服务持久化冗余；调宽 dirty buffer 与拉长 sync 延迟会使 syncer 行为突发化、总体吞吐反降，遂回退默认写穿并以应用层缓存补足读取；崩溃恢复采取三级策略——先以 soft updates 快速恢复上线，再崩溃则并行全量 fsck，必要时顺序 fsck，另以扩容 UFS dirhash 缓存超过 2 GB 的哈希目录树。（BSDTalk EP250，[1891.88-2477.94]，L1）
 
 **史料**：
 
 - Adrian Chadd 访谈（FreeBSD 无线网络栈维护者当事人自述）。（BSD Now EP55，[1267.26-2874.88]，L1）
+- 本期为 Rick Reed 在 MeetBSD California 2014 演讲《WhatsApp: Half a billion unsuspecting FreeBSD users》的现场录音，属 WhatsApp 生产运维的一手口述史料；其口述包含 CPU 与调度器利用率曲线、连接数与磁盘写入遥测、过热告警与 panic 事件、zero-copy socket 损坏与 TSC 时钟源补丁等一手故障记录，可与其他场合演讲及文本互证。（BSDTalk EP250，[31.96-40.90]，L1）
 
 **史观**：
 
 - 总纲20 历史地理塑造思想土壤：总纲20 历史地理塑造思想土壤：无线厂商是否开放文档、是否以 Linux 为主场，直接塑造了 FreeBSD 无线栈的可行范围。（BSD Now EP55，[1462.00-1603.66]，L1）
 - 总纲9 经验优先：总纲9 经验优先：Adrian Chadd 以驱动开发与真机测试的一线经验陈述无线栈优劣，而非依赖纸面规格。（BSD Now EP55，[1419.88-1447.00]，L1）
 - 总纲4 分离聚合是永恒规律：总纲4 分离聚合是永恒规律：各 BSD 共享 net80211 后各自分化，DragonFly BSD 又聚合 FreeBSD 更新栈，构成反复的分合。（BSD Now EP55，[1657.66-1722.12]，L1）
+- 总纲10 动手者创造历史：约 12 人的服务器团队维系 6 亿用户规模的服务：配置管理仅用 make 人工维护、负载分配依赖 DNS 轮询、重大变更先投放到承担约半个百分点流量的单台服务器观察；Erlang 热代码加载使系统可在数百万人在线且满速运行时完成升级，三年间全系统宕机仅一次（Facebook 收购公告之后）。大规模服务的实际承载者是少数动手运维者，而非站在台前的明星开发者。（BSDTalk EP250，[2757.34-3331.58]，L1）
+- 总纲5 没有必然性，只有偶然性：关键技术选型皆为具体偶然条件的汇合而非理性推演的必然：Erlang 自创办之初即入选，因其时存在可用的开源 XMPP 服务器、且项目以替代短信为志而电信渊源的 Erlang 显得契合；FreeBSD 则系创始人 Yahoo 经历的自然延续。当事人回忆当年在 Yahoo 视 Erlang 为多余的新语言，直到亲历 WhatsApp 才体会其威力，可见技术路径由具体人事与时机决定。（BSDTalk EP250，[3243.08-3278.70]，L1）
 
 **辨析**：
 
 - 转录将 Ralink/Realtek 与 Atheros 的表述交错，主持人与嘉宾均存在口误修正，具体芯片归属需对照 FreeBSD 源码。　[存疑脚注] 无线芯片厂商归属存在口语转写歧义，未以代码仓库核验（BSD Now EP55，[1486.52-1493.84]，L4）
+- 标题所称“5 亿毫不知情的 FreeBSD 用户”点出沉默使用现象：终端用户无从感知底层操作系统，自由软件的扩散依赖企业生产采用而非用户选择，当事人开场亦以现场举手调查印证知情者寥寥；此为“沉默 BSD 企业”现象的当事人自证，但亦须辨析——企业愿意公开自述者（如本场演讲）恰是沉默群体中的例外，样本代表性有限。（BSDTalk EP250，[178.32-191.12]，L1）
 
 **文献**：
 
 - [BSD Now EP55] Pennington J. BSD Now: 55: The Promised WLAN[EB/OL]. (2014-09-17)[2026-08-15]. https://www.bsdnow.tv/55.
+- [BSDTalk EP250] Backman W. BSDTalk: 250: bsdtalk250 - WhatsApp: Half a billion unsuspecting FreeBSD users by Rick Reed[EB/OL]. (2015-01-31)[2026-08-27]. https://bsdtalk.blogspot.com/2015/01/bsdtalk250-whatsapp-half-billion.html.
 
 <!-- /PODCAST_REVIEW -->

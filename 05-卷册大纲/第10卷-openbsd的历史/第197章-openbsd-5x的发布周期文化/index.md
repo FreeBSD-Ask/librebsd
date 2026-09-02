@@ -33,7 +33,7 @@ volume: 第10卷-openbsd的历史
 - [DB:references_fulltext] 参考文献全文数据库（4077 篇全文，27138 条时间线事件）—— 对应 openbsd.duckdb
 
 <!-- PODCAST_REVIEW v20260829 -->
-<!-- 语义复核范围：BSD Now EP166、BSD Now EP53、BSD Now EP52、BSD Now EP32、BSD Now EP18、BSD Now EP10（共 6 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
+<!-- 语义复核范围：BSD Now EP166、BSD Now EP53、BSD Now EP52、BSD Now EP32、BSD Now EP18、BSD Now EP10、BSDTalk EP228（共 7 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
 
 **要点**：
 
@@ -70,6 +70,12 @@ volume: 第10卷-openbsd的历史
 - 他介绍 sudo 是分割 root 权限的访问控制工具，写作 Sudo Mastery 源于用户普遍误用 sudo，且大量教程推荐了可被突破权限限制的不安全配置。（BSD Now EP10，[956.9-1167.1]，L1）
 - 他回顾 sudo 具备入侵检测能力，可按 SHA-256 等算法校验待执行文件的校验和，防止用户通过复制 shell 绕过限制，并主张采用白名单式授权而非黑名单式排除。（BSD Now EP10，[1491.9-1654.3]，L1）
 - 新闻部分报道 OpenBSD 5.4 于 2013 年 11 月 1 日发布，并提及 DragonFly BSD 3.6 分支加入 SMP 改进、GCC 4.7 默认与 dports 成为默认。（BSD Now EP10，[85.1-96.2]，L2）
+- 2013 年 BSDCan 期间 Lucas 发布 Absolute OpenBSD 第二版，由 No Starch Press 出版、以 OpenBSD 5.3 为版本基准；技术复核由 Henning Brauer 与 Peter Hansteen 在写作与编辑全程承担，作者自述即便如此仍有章节一年内将过时。（BSDTalk EP228，[157.19-209.59]，L1）
+- Lucas 提出技术书籍的双重历史功能：其一是书店可见性令操作系统获得合法化背书，其二是书籍固化为该系统特定时点的快照；两版 Absolute OpenBSD 对照显示部分机制（如用户类别配置）十年未动，而默认资源限额已随硬件演进发生量级变化。（BSDTalk EP228，[213.77-329.98]，L1）
+- SSH Mastery 与 DNSSEC Mastery 均从 OpenBSD 书稿中拆分独立成书，经 Tilted Windmill Press 自出版；Lucas 估计约九成八的 SSH 实现为 OpenSSH，单一实现主导生态意味着任一缺陷都会迅速波及大量用户，而许多人仅将其当作 Telnet 替代品使用。（BSDTalk EP228，[403.55-465.83]，L1）
+- Lucas 回溯 DNSSEC 前史：DNS 协议诞生于 1983 年由军方与大学构成的善意网络，轻信设计在当时并无大碍；进入有组织犯罪与网络银行时代后投毒与钓鱼泛滥，DNSSEC 自 1999 年多轮改版因复杂难用声誉不佳，2006 年方才定稿，Bind 9.9 实现签名自动续期后普通系统管理员得以低成本部署。（BSDTalk EP228，[538.85-758.20]，L1）
+- DNSSEC 的实践价值由当事人运维经验佐证：其所在运营商启用递归验证约一年内两次阻断对用户注入权威区域错误数据的攻击；SSHFP 记录托管 SSH 主机指纹、TLSA 记录承载自签证书使无证书机构亦可获得可信加密，Chrome 已在开发分支支持 TLSA；freebsd.org 于 BSDCan 2013 会后酒局中完成区域签名接入全球 DNSSEC 链而无人在场察觉。（BSDTalk EP228，[802.13-1022.29]，L1）
+- Lucas 时任密歇根州一家电信运营商的 IP 网络架构师，面向批发客户而非终端用户，该身份为其 DNSSEC 运维叙述提供了职业语境。（BSDTalk EP228，[1498.89-1526.19]，L1）
 
 **史料**：
 
@@ -83,6 +89,9 @@ volume: 第10卷-openbsd的历史
 - 当期问答提及Cisco IronPort设备以FreeBSD为基础，以及FreeNAS ZFS池迁移采用zfs send与receive的方法。（BSD Now EP32，[3897.90-4053.16]，L2）
 - 本期史料包括 Justin Sherrill 博客观点、Henning Brauer 对 PF 可移植层的表态、Baptiste Daroussin 访谈（当事人自述）以及 OpenBSD Binary Upgrade 第三方脚本。（BSD Now EP18，[346.52-557.28]，L1）
 - 当事人列出自著书籍：Absolute OpenBSD、Absolute FreeBSD、SSH、DNSSEC、Network Flow Analysis 与 Sudo Mastery；较大体量的书经 No Starch Press 出版，自出版书经 Tilted Windmill Press 发行。（BSD Now EP10，[1696.3-1835.4]，L1）
+- 当事人自述三本著作的出版链条：Absolute OpenBSD 第二版（No Starch Press）、SSH Mastery 与 DNSSEC Mastery（Tilted Windmill Press 自出版），及 Henning Brauer、Peter Hansteen 承担技术复核的过程。（BSDTalk EP228，[174.59-186.47]，L1）
+- 事件口述：BSDCan 2013 会场社交环节中 freebsd.org 区域被签名并挂接全球 DNSSEC 信任链的即时记录，当事人为在场者。（BSDTalk EP228，[802.13-814.13]，L1）
+- 当事人运维一手记录：运营商递归 DNSSEC 验证运行约一年，两次拦截针对用户凭证的权威区域投毒事件；作者以内外双视图区域实测 DNSSEC 兼容性。（BSDTalk EP228，[862.73-903.26]，L1）
 
 **史观**：
 
@@ -105,6 +114,9 @@ volume: 第10卷-openbsd的历史
 - 总纲18 时间是一种形式主义：总纲18 时间是一种形式主义：PF 缺乏版本号使各实现难以按时间锚定演进，说明版本命名是形式化的时间标记。（BSD Now EP18，[425.34-439.46]，L2）
 - 总纲9 经验优先：Lucas 认为技术图书的价值在于说明知识如何与读者的实际工作相关，而非仅做信息堆砌，体现以经验与实用为重的取向。（BSD Now EP10，[1848.3-1998.2]，L1）
 - 总纲10 动手者创造历史：他以自出版书籍收益赞助 BSDCan 等社区活动，把写作视为服务社区并推动社区建设的动手实践。（BSD Now EP10，[2143.1-2227.3]，L1）
+- 总纲22 知识注定过时：Lucas 自陈书中内容一年内部分注定过时，而 OpenBSD 社区绝不会为迁就一本书而冻结演进；技术写作追索的是一个持续流动的对象，成书即意味着开始失效，知识的历史形态本身就是速朽的。（BSDTalk EP228，[187.57-209.59]，L1）
+- 总纲5 没有必然性，只有偶然性：DNS 协议轻信设计并非缺陷而是 1983 年网络偶然构成的产物：彼时网上只有军方、大学与恶作剧式程序竞赛，无人预见网络银行与跨境犯罪；协议的信任模型由偶然的历史条件塑造，而非出自任何必然的技术逻辑。（BSDTalk EP228，[684.20-758.20]，L1）
+- 总纲9 经验优先：Lucas 的 DNSSEC 判断全部以自身运维经验为据——拦截投毒的实例、split horizon 的实测、而非规范文本或厂商宣传；其写作亦以有本职工作的动手型系统管理员为读者，反对脱离实操的教程传统。（BSDTalk EP228，[853.35-903.26]，L1）
 
 **辨析**：
 
@@ -114,6 +126,8 @@ volume: 第10卷-openbsd的历史
 - Sean Webb 坦言上游化过程中存在私下邮件列表讨论与政治博弈，其本人一度无法参与辩护，具体争议内容未在本期披露。　[存疑脚注] 上游化受阻的具体技术或治理争议仅凭当事人单方叙述（BSD Now EP52，[1880.06-1929.90]，L4）
 - 关于IronPort设备的FreeBSD版本已较旧的说法，主持人明确表示不十分确定，属于口头估计而非可核验的版本信息。　[存疑脚注] Cisco IronPort设备所采用的FreeBSD版本属主持人口头估计，需以设备文档或官方信息核实。（BSD Now EP32，[3903.66-3907.06]，L4）
 - 主持人将 DragonFly 的 PF 对应 OpenBSD 4.4、FreeBSD 对应 4.5 等版本关系为口头转述，需与各项目代码核对；OpenPF 项目在 2014 年成立属对未来的期许而非既成事实。　[存疑脚注] 各 BSD 的 PF 版本对应与 OpenPF 立项状态需以源码与邮件列表原始记录复核。（BSD Now EP18，[386.32-439.46]，L4）
+- 约九成八的 SSH 实现为 OpenSSH 且其余多为改名或混淆版本，系当事人无统计来源的口头估计，仅可作为生态集中度的印象性证据。[存疑脚注] 九成八占比为访谈口述估计，未经审计数据交叉验证。　[存疑脚注] OpenSSH 市场占比为当事人口头估计，无第三方统计佐证，引用时须标注为印象性判断（BSDTalk EP228，[432.11-448.88]，L4）
+- GoDaddy 已支持 DS 记录与 IPv6 但 Dxtr 等注册商十年未跟进互联网标准，注册商技术能力与 DNSSEC 普及之间的瓶颈关系为当事人单方观察，缺 注册商市场份额数据支撑。[存疑脚注] 单一来源推断。　[存疑脚注] 注册商支持度的判断仅来自当事人个人转商经历，未与行业统计交叉验证（BSDTalk EP228，[1066.29-1116.19]，L4）
 
 **文献**：
 
@@ -123,5 +137,6 @@ volume: 第10卷-openbsd的历史
 - [BSD Now EP32] Pennington J. BSD Now: 32: PXE Dust[EB/OL]. (2014-04-09)[2026-08-15]. https://www.bsdnow.tv/32.
 - [BSD Now EP18] Pennington J. BSD Now: 18: Eclipsing Binaries[EB/OL]. (2014-01-01)[2026-08-15]. https://www.bsdnow.tv/18.
 - [BSD Now EP10] Pennington J. BSD Now: 10: Year of the BSD Desktop[EB/OL]. (2013-11-06)[2026-08-15]. https://www.bsdnow.tv/10.
+- [BSDTalk EP228] Backman W. BSDTalk: 228: bsdtalk228 - Michael W. Lucas[EB/OL]. (2013-07-12)[2026-08-27]. https://bsdtalk.blogspot.com/2013/07/bsdtalk228-michael-w-lucas.html.
 
 <!-- /PODCAST_REVIEW -->

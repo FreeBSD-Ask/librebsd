@@ -57,7 +57,7 @@ volume: 第05卷-freebsd的工程化奠基
 - McKusick & Rice. The Evolution of FreeBSD Governance [J]. FreeBSD Journal, 2017, 4(5): 26-31 ［A］；McKusick. The Evolution of FreeBSD Governance [C]//BSDCan 2018. Ottawa, 2018 ［A］<!-- DB_REF:freebsd.duckdb -->> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 1996-2010 年间：482,545 次提交。> 仓库总览：1,294,851 次提交，13,875 位贡献者，1993-06-12 至 2026-08-25。
 
 <!-- PODCAST_REVIEW v20260829 -->
-<!-- 语义复核范围：BSD Now EP566、BSD Now EP648、BSD Now EP333、BSD Now EP278、BSD Now EP269、BSD Now EP258、BSD Now EP198、BSD Now EP194、BSD Now EP192、BSD Now EP189、BSD Now EP166、BSD Now EP147、BSD Now EP622、BSD Now EP616、BSD Now EP59、BSD Now EP56、BSD Now EP51、BSD Now EP23、BSD Now EP2、BSD Now EP1、BSDTalk EP169（共 21 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
+<!-- 语义复核范围：BSD Now EP566、BSD Now EP648、BSD Now EP333、BSD Now EP278、BSD Now EP269、BSD Now EP258、BSD Now EP198、BSD Now EP194、BSD Now EP192、BSD Now EP189、BSD Now EP166、BSD Now EP147、BSD Now EP622、BSD Now EP616、BSD Now EP59、BSD Now EP56、BSD Now EP51、BSD Now EP23、BSD Now EP2、BSD Now EP1、BSDTalk EP169、BSDTalk EP237（共 22 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
 
 **要点**：
 
@@ -157,6 +157,12 @@ volume: 第05卷-freebsd的工程化奠基
 - 他对 BSD 哲学的被吸引点做了非宗教式表述：1998 至 1999 年在旧东家因同事偶语而装上 FreeBSD 4 尝试，相较 Linux，吸引他的不是许可证立场，而是一种以质量为本的做事方式——写代码因为它是该做的对事、是高质量的做法，而非软件必须自由的信仰宣示；他认为这种 quality-based 的取向让工作本身更有趣。（BSDTalk EP169，[493.30-573.38]，L1）
 - Digest 的编辑理念被他上升为氧气论：一个操作系统需要其周围的气氛，胜过其他一切。主流科技博客以轻快语调追逐硬件与游戏，不追问计算机史从何而来、BSD 为何重要；而每个计算机系三年级学生都能写一个操作系统，写完却会发现无事可做，因为操作系统真正需要的是周边生态与身份氛围。他引述某个他记不清归属者的说法，认为 FreeBSD Diary、BSD Talk 与 Digest 的工作正是定义“说自己是 BSD 用户意味着什么”，这也是 advocacy 的实质。（BSDTalk EP169，[573.38-789.40]，L1）
 - 关于志愿项目的维持机制，他将 BSD 项目与其他全志愿非营利事业（教育、食物、住所）视为同构：发不出工资，奖赏只能是公开庆祝成就——提交日志无人翻检，必须有人明说这块硬件能用了多亏某人，哪怕回报只是日后会议上一杯致谢的酒。会议被他视为提交活动的催化剂：会议数量增长是生态健康迹象，每次会议后都有活动爆发，第 25 届混沌通信大会收官当天 Simon Schubert 即因与会交流而向 DragonFly 集中提交；面对面接触带来的即时反馈远胜邮件。（BSDTalk EP169，[794.44-1008.94]，L1）
+- Neville-Neil 自述创刊缘起：大约一年前他意识到其他开源操作系统都有 plenty 的期刊杂志，而当时全部 BSD 共用一份刊物、更没有专属 FreeBSD 的杂志，于是决定筹办；他此前十年参与 ACM Queue 杂志的经验使出版流程可行，经数月与 FreeBSD Foundation 的合作开发并组建编辑部，杂志定于 2014 年 1 月底面世。（BSDTalk EP237，[68.82-115.72]，L1）
+- 编辑委员会按字母序包括 John Baldwin、Daichi Goto、Joseph Kong、Drew Levine、Michael Lucas、Kirk McKusick、Hiroki Sato 与 Robert Watson，覆盖内核、网络安全、出版与基金会等面向；编辑会的职能是主动发掘内容——开发者提交代码后通常不会想到写文章，编辑会负责找到做出有趣工作的人、请他们动笔，再由职业编辑把“信封背面”式的草稿变成可读的正式文章。（BSDTalk EP237，[141.44-278.96]，L1）
+- 2014 年全年六期均设主题，继 FreeBSD 10 专号之后依次为网络、虚拟化、开发工具与新硬件特性；创刊号即 FreeBSD 10 专辑：David Chisnall 论成为 10 默认编译套件的 Clang 与 LLVM、Allan Jude 论源自 Solaris 与 illumos 而在 FreeBSD 被采纳扩展的 ZFS、一篇在 BeagleBone Black 上运行 FreeBSD 的入门文章呼应 ARM 热潮、John Baldwin 的内核向文章讲如何实现 sysctl 节点、另有 Joseph Kong 与重度 FreeBSD 用户 NYI 合写的托管服务部署白皮书；常设专栏包括发布工程师 Glenn Barber 的 SVN Update、Thomas Abthorpe 的 Ports Report 与 Drew Levine 的活动日历加“BSD 历史上的今天”。（BSDTalk EP237，[1125.94-1326.38]，L1）
+- 发行走纯电子路线：应用本身免费、内容订阅制，全年六期 19.99 美元、单期 6.99 美元，双月刊一次下载；应用内置链接可直接跳转 diff 或外部网页，且内容离线可用——地铁隧道与航班上仍可阅读；应用商店代管分发并抽成，但免去了传统杂志“印刷多少卖不掉就销毁多少”的重负，Neville-Neil 认为这正是大型杂志纷纷转向电子发行的原因。（BSDTalk EP237，[391.66-543.34]，L1）
+- 资金安排上 FreeBSD Journal 由 FreeBSD Foundation 出资承担首年出版成本，这是一笔不菲的投入，向基金会董事会立项时的前提就是必须以一年为期检验成败；预期靠订阅与广告收回成本，目标仅是收支平衡以维持为社区持续产出高质量刊物，首批已有若干广告主签约整年；他预计订阅基础要经数期积累，而非一期爆红。（BSDTalk EP237，[937.54-981.44]，L1）
+- 生产流程上投稿几乎不限格式、偏好纯文本加随意画的图，交由合作的专业出版商 S&W Publishing 编辑排版，成稿经编辑返回作者确认的数轮往返；平台方面短期内只覆盖 Apple、Google 与 Amazon Kindle 三家应用商店，头六个月不计划做 FreeBSD 本机的阅读应用；应用内不可打印，但将为亚洲 BSDCon、BSDCan、EuroBSDCon 等会议制作限量印刷版，甚至设想由编辑部签名拍卖。（BSDTalk EP237，[828.84-1098.90]，L1）
 
 **史料**：
 
@@ -262,6 +268,7 @@ volume: 第05卷-freebsd的工程化奠基
 - 总纲8 本体论上各方平等：该期将 FreeBSD 图形驱动、OpenBSD BGP SpamD、NetBSD 6.1.1 等并列报道，未以单一分支为中心，呈现多方平等的叙事格局。（BSD Now EP1，[0.00-125.02]，L2）
 - 总纲10 动手者创造历史：BGP SpamD 由 Peter Hessler 个人搭建并维护，访谈记录的是具体动手者对垃圾邮件防御工具的工程选择，而非抽象的项目叙事。（BSD Now EP1，[2946.18-3109.14]，L1）
 - 总纲10 动手者创造历史：Digest 的五年自身即是历史由默默动手者写就的例证：一个不愿以写 C 为业、白天在墨盒制造厂维护老旧 Debian 系统的普通人，以每日筛读邮件列表、转换手册、搭建存档的琐碎劳动，为一个分叉项目保住了公共记忆与氧气。操作系统的存续不只在提交日志里，也在这些无名整理者的持续劳作中。（BSDTalk EP169，[91.60-158.72]，L1）
+- 总纲10 动手者创造历史：Neville-Neil 说 FreeBSD 一贯吸引他的，是这里的人既能开发软件、也能在纸上解释自己做了什么——这是科学与工程常被忽略的另一半；但开发者提交代码后并不会自发地书写，于是需要编辑委员会去主动发现动手者、需要职业编辑把草稿转成可读文本。动手者创造了系统，而把这份工作写成历史性记录，需要专门的转译机制。（BSDTalk EP237，[597.56-613.70]，L1）
 
 **辨析**：
 
@@ -312,5 +319,6 @@ volume: 第05卷-freebsd的工程化奠基
 - [BSD Now EP2] Pennington J. BSD Now: 2: Engineering and Powder Kegs[EB/OL]. (2013-09-11)[2026-08-15]. https://www.bsdnow.tv/2.
 - [BSD Now EP1] Pennington J. BSD Now: 1: BGP & BSD[EB/OL]. (2013-09-04)[2026-08-15]. https://www.bsdnow.tv/1.
 - [BSDTalk EP169] Backman W. BSDTalk: 169: bsdtalk169 - Justin Sherrill of the DragonFlyBSD Digest[EB/OL]. (2009-01-04)[2026-08-27]. https://bsdtalk.blogspot.com/2009/01/bsdtalk169-justin-sherrill-of.html.
+- [BSDTalk EP237] Backman W. BSDTalk: 237: bsdtalk237 - The FreeBSD Journal with George Neville-Neil[EB/OL]. (2014-01-08)[2026-08-27]. https://bsdtalk.blogspot.com/2014/01/bsdtalk237-freebsd-journal-with-george.html.
 
 <!-- /PODCAST_REVIEW -->

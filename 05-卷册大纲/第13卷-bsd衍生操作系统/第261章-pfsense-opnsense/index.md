@@ -39,7 +39,7 @@ volume: 第13卷-bsd衍生操作系统
 - bsd_commits.db 查询 opnsense-core CVE commit（8 条，4 去重 CVE，2026-07-23）；NVD. CVE-2019-11816 [EB/OL]. <https://nvd.nist.gov/vuln/detail/CVE-2019-11816>（访问日期 2026-07-23）；`原材料/研究/bsd漏洞史/数据库提取/opnsense-core-cve-commits.md`。 ［B］FreeBSD 社区论文：[FP-2020-021] How an Australian IaaS uses FreeBSD（Ruben Schade，2020）<https://papers.freebsd.org/2020/linux.conf.au/schade_how_an_australian_iaas_uses_freebsd/>FreeBSD 社区论文：[FP-2019-045] FreeBSD and the absurdities of security compliance（Eirik Øverby，2019）<https://papers.freebsd.org/2019/eurobsdcon/oeverby-freebsd_and_the_absurdities_of_security_compliance/>FreeBSD 社区论文：[FP-2019-076] FreeBSD at Work: Building Network and Storage Infrastructure with pfSense and FreeNAS（Conor Beh，2019）<https://papers.freebsd.org/2019/vbsdcon/beh-freebsd_at_work/>FreeBSD 社区论文：[FP-2018-010] Preparing your home router(s) for the future: A journey through Homenet and interconnected objects（Massimiliano Stucchi，2018）<https://papers.freebsd.org/2018/bsdcan/stucchi-preparing_your_home_routers_for_the_future/><!-- DB_REF:freebsd.duckdb -->> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 1985-2026 年间：1,294,851 次提交。> 仓库总览：1,294,851 次提交，13,875 位贡献者，1993-06-12 至 2026-08-25。
 
 <!-- PODCAST_REVIEW v20260829 -->
-<!-- 语义复核范围：BSD Now EP21（共 1 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
+<!-- 语义复核范围：BSD Now EP21、BSDTalk EP255（共 2 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
 
 **要点**：
 
@@ -48,23 +48,30 @@ volume: 第13卷-bsd衍生操作系统
 - m0n0wall 1.81 发布，为面向嵌入式设备的 BSD 防火墙发行版；pfSense 于 2004 年自 m0n0wall 分叉，面向普通 PC 且开发更活跃。（BSD Now EP21，[4458.98-4516.38]，L2）
 - NTPD 被发现可利用欺骗 UDP 包返回放大响应而充当 DDoS 放大器，FreeBSD 与 pfSense 均通过安全公告与配置更新进行缓解。（BSD Now EP21，[4540.34-4636.46]，L2）
 - PC-BSD 10.0 随 FreeBSD 10 发布，RC4 支持 Wine 与 9.2 升级保留 PBI；因 FreeBSD 10 的 ABI 变化，升级需重建或重装全部包。（BSD Now EP21，[4751.26-4801.10]，L2）
+- 主持人自述其所在的三镇联合学区于 2015 年暑期将防火墙整体迁移至 PFsense：选择暑期低峰窗口执行，理由是“不能在飞机飞行途中修理引擎”；上线后每台防火墙承载逾千用户，运行平稳；安装直接，主要工作量在于将旧防火墙的手写配置笔记转译为 PFsense 的规则与 NAT 写法。（BSDTalk EP255，[80.68-148.68]，L1）
+- 其对 PFsense 技术层面的评价：底层 PF 的规则语法可读性好，但 PFsense 为完成自身工作会自动生成大量规则，命令行下经 PF 工具查看可达数页，多数并非管理员手写；质量图（丢包等监测）、一键式包管理与 Web 界面广受其团队好评，团队无需正式培训即可上手，整体运行被形容为“bulletproof”。（BSDTalk EP255，[149.5-250.56]，L1）
+- 2015 年 8 月 BSD 社区公布 Next BSD 项目；主持人在网络论战升温之前引导听众回看 2014 年 MeetBSD California 上 Jordan Hubbard 的演讲“The Next 10 Years of BSD”以理解项目动机，并指出 Next BSD 当时仅有承载基础信息的网站。（BSDTalk EP255，[253.56-296.80]，L2）
 
 **史料**：
 
 - 本期史料包括 Colin Percival 访谈（当事人自述）、FreeBSD 10.0 发布与安全公告、m0n0wall 1.81 与 pfSense 谱系记录及 RUBSD 会议录像。（BSD Now EP21，[531.18-545.14]，L1）
+- 该期指认的一手材料：2014 年 MeetBSD California 会议 Jordan Hubbard 演讲视频“The Next 10 Years of BSD”（载于 Meet BSD California 网站），被主持人视为理解 Next BSD 项目动机的原始出处；另有 Next BSD 官方网站的基础信息页。（BSDTalk EP255，[270.66-292.36]，L2）
 
 **史观**：
 
 - 总纲22 知识注定过时：总纲22 知识注定过时：SSH 旧密钥派生函数因安全进展被 bcrypt 取代，既有加密方法随攻防演进而过时。（BSD Now EP21，[531.18-545.14]，L1）
 - 总纲10 动手者创造历史：总纲10 动手者创造历史：Colin Percival 等安全工程师以具体维护与发布工作维持 FreeBSD 的安全响应体系。（BSD Now EP21，[5597.60-5655.20]，L1）
 - 总纲3 不存在进步，只有权力再分配：总纲3 不存在进步，只有权力再分配：安全机制的替换体现攻防双方能力的再分配，而非简单的线性安全进步。（BSD Now EP21，[4540.34-4636.46]，L2）
+- 总纲6 和解优于斗争：主持人明确呼吁 BSD 社区勿围绕 Next BSD 重演 Linux/systemd 式的论战机器，而应把它当作有意思的项目看待，检验哪些部分可用、哪些行不通，并声明珍视任何人引入新技术或做概念验证的意愿——以和解与实验检验取代立场斗争。（BSDTalk EP255，[303.40-334.52]，L1）
 
 **辨析**：
 
 - bcrypt 较 MD5 安全五亿倍为主持人粗略换算，需以密码学文献为准；m0n0wall 与 pfSense 的分叉年份及 iSCSI target 的生产就绪判断均为访谈与主持人口径。　[存疑脚注] 分叉年份与安全倍数表述需以项目发布记录和密码学原始文献复核。（BSD Now EP21，[536.90-552.02]，L4）
+- Next BSD 在本期播客发布时仅有网站基础信息，无公开技术细节；该项目的后续走向、技术路线及其与 FreeBSD 的关系在本期内无法确证，需另行考据。　[存疑脚注] Next BSD 项目信息在本期仅有主持人转述与网站指引，项目实质内容待外部史料验证。（BSDTalk EP255，[290.34-296.80]，L4）
 
 **文献**：
 
 - [BSD Now EP21] Pennington J. BSD Now: 21: Tendresse for Ten[EB/OL]. (2014-01-22)[2026-08-15]. https://www.bsdnow.tv/21.
+- [BSDTalk EP255] Backman W. BSDTalk: 255: bsdtalk255 - A quick update[EB/OL]. (2015-08-31)[2026-08-27]. https://bsdtalk.blogspot.com/2015/08/bsdtalk255-quick-update.html.
 
 <!-- /PODCAST_REVIEW -->

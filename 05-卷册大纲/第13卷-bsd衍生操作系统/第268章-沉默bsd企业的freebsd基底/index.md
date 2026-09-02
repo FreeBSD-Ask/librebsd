@@ -42,7 +42,7 @@ volume: 第13卷-bsd衍生操作系统
 - 原材料/哲学/项目统摄史观/第 25 章.md；BSD/GPL 许可证文本；openbsd.db 查询 L7.2.1、L3.2.1、L3.2.2；NetApp/Isilon/Citrix 架构文档；FreeBSD Foundation 年报；WhatsApp/NetApp/Isilon/Citrix 工程演讲存档；128.4.1-128.4.3 节记录；134 章 BSD 许可证文本与历史记录；133 章 FreeBSD 商业生态记录 ［A］<!-- DB_REF:bsd_derivatives.duckdb -->> **数据库引用（bsd_derivatives.duckdb）**：本子节对应 bsd_derivatives 代码仓库。> 1985-2026 年间：963,557 次提交。> 仓库总览：963,557 次提交，14,109 位贡献者，1985-06-13 至 2026-08-24。
 
 <!-- PODCAST_REVIEW v20260829 -->
-<!-- 语义复核范围：BSD Now EP354、BSD Now EP24、BSDTalk EP13（共 3 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
+<!-- 语义复核范围：BSD Now EP354、BSD Now EP24、BSDTalk EP13、BSDTalk EP238（共 4 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
 
 **要点**：
 
@@ -58,6 +58,11 @@ volume: 第13卷-bsd衍生操作系统
 - 受访者在 ShmooCon 2006 演讲中把网络安全监控数据划分为告警、统计、会话与全内容四类，主张以 Bamm Visscher 主导开发的开源接口 Sguil 整合四类数据；他批评当时流行的 Snort 告警界面 ACID 与 BASE 无法满足严肃入侵检测需求，同台者 David Bianco 又演示了不依赖任何签名、仅凭会话数据发现 Windows WMF 漏洞利用活动的检测路径。（BSDTalk EP13，[528.07-656.97]，L1）
 - 受访者回忆其 FreeBSD 使用史：1999 年获赠 FreeBSD 3.2 安装光盘，2000 年前后在得克萨斯州圣安东尼奥的空军计算机应急响应组任上尉期间，因同僚看重 FreeBSD 网络栈的稳固而促成部队以此构建传感器；2001 年初退役进入托管安全服务行业后，所在公司选定 FreeBSD 4.2 作为传感器平台，此后他创办 Tao Security，所有自建传感器仍全部基于 FreeBSD。（BSDTalk EP13，[1208.39-1310.62]，L1）
 - 截至 2006 年初，美国国防部已规定 2008 年起骨干网强制采用 IPv6；受访者以审读 O’Reilly《IPv6 Network Administration》与 Apress《Running IPv6》两本专著并在 FreeBSD 上动手实验为基础，判断 128 位源与目的地址使抓包分析的可读性显著恶化；同时指出 BSD 阵营的蓝牙安全扫描工具远少于 Linux，已有社区成员尝试将相关工具移植入 FreeBSD ports。（BSDTalk EP13，[840.37-938.92]，L1）
+- 系统管理员 NJ Thomas 的参会自述最具代表性：作为以 Linux 维生、在个人服务器上使用 BSD 的用户，他几乎每届 NYCBSDCon 必到（仅首届因婚礼缺席），认为这种日场会的收获远超票价——发布最佳实践、新技术，以及 session 之间的“走廊轨道”交流；他今年带来日职的存储工程师现场试用 ZFS on BSD、带来乐于接触新技术的应用开发者，会间大家讨论数据库选型与策略，并向新人推荐 NYCBUG 例会。（BSDTalk EP238，[85.00-161.90]，L1）
+- 与会者中可见内容与代码的生产者：DragonFly BSD Digest 的维护者 Justin Sherrill 来会是为了寻找源源不断的可发布素材；天文学家出身的软件开发者 John Vranaleo 自 Linux 背景转入，正在参与并贡献较新的 BSD 衍生项目 BitRig，作为纽约本地人来此与区域内的 BSD 同好相聚。（BSDTalk EP238，[163.32-197.58]，L1）
+- 会上自述的商业采用案例：Calyptic Security 的 CEO Ben Yarbrough 称公司以 BSD（主要是 OpenBSD）为核心为小企业提供简化的网络安全产品，来会寻求成长资源；OneCloud Labs 的 Nate Van Voorst 介绍其从 VMware 数据中心向 Amazon 云做灾备的创业项目、客户端以 FreeBSD 为基底，并借会招募新英格兰地区的工程师；软件咨询公司 BitBase 用 BSD 支撑移动应用后端，深耕 ZFS 与 PostgreSQL 以求系统更优。（BSDTalk EP238，[196.42-330.08]，L1）
+- 口述样本亦覆盖了光谱的另一端：OpenBSD Project 的 Mike Erdly 专程到会支持美国东海岸的会议；Amplify Education 的系统管理员自称 1998 年起的 FreeBSD 老用户、来此社交；初到纽约、任职 Warby Parker 自动化部门的 David Neudorfer 终生使用 Mac、深谙终端却几乎无 BSD 服务器经验，为 ZFS 与 BSD 网络设备而来；另有康涅狄格的技术顾问首次参加 BSD 活动、九十年代从 Sun 起步的老兵四年来首次回归，以及一位机械工程训练出身、六年前借 FreeBSD 学 Unix 管理的爱好者。（BSDTalk EP238，[365.42-419.44]，L1）
+- 一位 Debian 老用户的参会动机集中显示 2014 年初 BSD 对 Linux 用户的吸引点：两场 ZFS 演讲是其最大亮点，Netflix“三分之一互联网流量”的演讲标题对他冲击极大，而关于集成 BSD 设备的演讲让他第一次意识到 Juniper 等大型公司基于 BSD；他此前仅在 OpenIndiana 上为跑通 ZFS 数据共享而短暂使用，损坏过数次数据仍相当满意，并因想要最新版 ZFS 而 Linux 发行版不能原生附带、当时几乎没有别的途径。（BSDTalk EP238，[419.44-500.74]，L1）
 
 **史料**：
 
@@ -66,6 +71,7 @@ volume: 第13卷-bsd衍生操作系统
 - 本期史料包括 NYCBSDCon 2014 议程与现场反馈、Luke Marsden 访谈（当事人自述）、HybridCluster 产品说明及 FreeBSD 10 PF/IPFW 讨论。（BSD Now EP24，[1059.58-1612.28]，L1）
 - 本期限定的一手口述材料包括：ShmooCon 2006（第二届，华盛顿特区）上关于 Sguil 的演讲与 David Bianco 的 WMF 漏洞会话数据分析演示；受访者 2003 年 1 月创办并持续更新、以 FreeBSD 工具实测记录为主体的技术博客 taosecurity.blogspot.com；以及 Freshports（Dan Langille 建立的 ports 树 Web 界面）与 NYCBUG 维护的 dmesgd 硬件兼容性输出上传站。（BSDTalk EP13，[516.19-656.97]，L1）
 - 受访者给出的个人 FreeBSD 接触物证链可作年代锚点：1999 年获赠的 FreeBSD 3.2 安装光盘、2000 年安装的 FreeBSD 4.1、2001 年商用部署所用的 FreeBSD 4.2，与其军旅身份（空军计算机应急响应组）及 2005 年 Black Hat 上 Mike Lynn 与 Cisco、ISS 的争议事件的时间线相互印证。（BSDTalk EP13，[665.93-1132.38]，L1）
+- 一手材料：主持人在现场记录了这批与会者快照，构成 2014 年 2 月 NYCBSDCon 参与者构成的口述抽样；会议现场正式宣布 FreeBSD Journal 公开发售、可在 Apple、Google Play 与 Kindle 应用商店订阅以支持项目；会议以低票价提供早餐、午餐、酒券、T 恤与折扣购书，主持人并将节目存档上传 archive.org。（BSDTalk EP238，[41.26-73.50]，L1）
 
 **史观**：
 
@@ -88,5 +94,6 @@ volume: 第13卷-bsd衍生操作系统
 - [BSD Now EP354] Pennington J. BSD Now: 354: ZFS safekeeps data[EB/OL]. (2020-06-11)[2026-08-15]. https://www.bsdnow.tv/354.
 - [BSD Now EP24] Pennington J. BSD Now: 24: The Cluster & The Cloud[EB/OL]. (2014-02-12)[2026-08-15]. https://www.bsdnow.tv/24.
 - [BSDTalk EP13] Backman W. BSDTalk: Interview with Richard Bejtlich[EB/OL]. (2006-02-03)[2026-08-15]. https://archive.org/download/bsdtalk013/bsdtalk013.ogg.
+- [BSDTalk EP238] Backman W. BSDTalk: 238: bsdtalk238 - Voices from NYCBSDCon 2014[EB/OL]. (2014-02-12)[2026-08-27]. https://bsdtalk.blogspot.com/2014/02/bsdtalk238-voices-from-nycbsdcon-2014.html.
 
 <!-- /PODCAST_REVIEW -->

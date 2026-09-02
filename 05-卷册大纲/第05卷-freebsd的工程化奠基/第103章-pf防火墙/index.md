@@ -117,7 +117,7 @@ volume: 05
 本章所书皆是形式主义化的重构，并非对“真实的 BSD 历史”的呈现。本章的章节划分、事件选择、叙事策略、因果归因——全部基于编纂者的哲学设定。本章承认这些局限，不声称客观或中立，欢迎被更诚实的叙事所超越。
 
 <!-- PODCAST_REVIEW v20260829 -->
-<!-- 语义复核范围：BSD Now EP651、BSD Now EP648、BSD Now EP360、BSD Now EP640、BSD Now EP213、BSD Now EP143、BSD Now EP47、BSD Now EP46、BSD Now EP24、BSD Now EP18、BSD Now EP11（共 11 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
+<!-- 语义复核范围：BSD Now EP651、BSD Now EP648、BSD Now EP360、BSD Now EP640、BSD Now EP213、BSD Now EP143、BSD Now EP47、BSD Now EP46、BSD Now EP24、BSD Now EP18、BSD Now EP11、BSDTalk EP234（共 12 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
 
 **要点**：
 
@@ -171,6 +171,10 @@ volume: 05
 - 他说明 DragonFly 分叉源于 Matt Dillon 与 FreeBSD 在对称多处理路线上的分歧，Dillon 倾向轻量、简单的并发方式，最终使 DragonFly 网络栈几乎去除 BSD 世界常见的大型锁。（BSD Now EP11，[903.6-1005.7]，L1）
 - DragonFly BSD 3.6 将 dports（基于 Poudriere 构建的 DragonFly 版 ports）设为默认，并加入 SMP 扩展性改进与 Intel、AMD 图形支持的移植。（BSD Now EP11，[4692.8-496.0]，L3）
 - 新闻提及 OpenSSH 6.5 将 Curve25519 设为默认密钥交换算法，FreeBSD 引导菜单加入内核选择功能，Colin Percival 推出内核 panic 报告工具。（BSD Now EP11，[4762.8-4812.0]，L2）
+- Brauer 自述其在柏林 hackathon 收尾的校验和处理重写：新模型假定每条输出路径都具备校验和硬件卸载能力，栈上层不再预计算与就地修补校验和，仅需在数据包上置标记声明需要何种协议校验和，全部计算集中到输出路径末端的单一位置，仅在确知该路径无卸载能力时才回退软件实现。（BSDTalk EP234，[305.23-320.29]，L1）
+- 旧实现的缺陷根源在于部分网卡（以 Intel 与 Broadcom 千兆芯片为代表，约占服务器市场九成）要求保留伪头校验和，而另一些网卡做全量卸载，PF 无法判别数据包携带的是部分校验和还是完整校验和，就地更新便可能出错；重写后栈上层彻底不管校验和，桥接路径也被修正；ICMP 错误报文中被引用原始包的校验和因多数被截断而无法验证，选择忽略，并以手工构造异常报文的专用工具对 PF 行为做验证。（BSDTalk EP234，[822.90-1029.94]，L1）
+- 新排队子系统分两层：优先级排队极为简单，把 ifnet 结构的单一输出队列头改为八个队列的数组并按序处理，默认优先 CARP 公告与生成树报文以防主备双主故障，且常开不可关闭；带宽整形部分则取代约一万二千行的 AltQ——后者原是 Kenjiro Cho 十余年前的论文研究项目，2003 年 Cho 与 Brauer 将其并入 PF 使 PF 充当分类器，次年加入的 HFSC 因语法难懂而少有人用，用户多用较简单的 CBQ——新版保留可完全表达 CBQ 的 HFSC、重写胶水层并删除可插拔调度器框架，全系统缩至约三千五百行，随 OpenBSD 5.5 提交。（BSDTalk EP234，[374.70-624.38]，L1）
+- 关于 PF 的可移植性，Brauer 区分了两类情形：OpenSSH 是用户态、大体以 POSIX 为边界的守护进程集合，故能维持 portable 版本；PF 是内核的内嵌成分，依赖各操作系统的内存管理，可移植难度更高，但 Apple 与 QNX 均已集成 PF，FreeBSD 的移植虽面对不同的内存管理也无需重写一半，各系统挂接网络栈的方式差异有限。（BSDTalk EP234，[1449.18-1525.40]，L1）
 
 **史料**：
 
@@ -195,6 +199,8 @@ volume: 05
 - 本期史料包括 NYCBSDCon 2014 议程与现场反馈、Luke Marsden 访谈（当事人自述）、HybridCluster 产品说明及 FreeBSD 10 PF/IPFW 讨论。（BSD Now EP24，[1059.58-1612.28]，L1）
 - 本期史料包括 Justin Sherrill 博客观点、Henning Brauer 对 PF 可移植层的表态、Baptiste Daroussin 访谈（当事人自述）以及 OpenBSD Binary Upgrade 第三方脚本。（BSD Now EP18，[346.52-557.28]，L1）
 - 当事人提及 DragonFly 分叉公告约在访谈时点的十年前发布，并称其并发模型以 token 传递为主，进程在获得内存或系统资源时持有 token、阻塞时即释放。（BSD Now EP11，[985.4-1010.8]，L1）
+- 一手史料包括：柏林 hackathon 上的校验和收尾提交；一处仅触及一两行的校验和相关提交，Brauer 与 Alexander Bluhm 曾花一天半才完全理解其含义；OpenBSD 5.5 排队子系统提交；Brauer 在自家公司的稳定树上先行对数百台 Intel 千兆机器启用校验和卸载、以大规模实际部署替代发布前测试的经验。（BSDTalk EP234，[1080.72-1241.82]，L1）
+- relayd 的名称史由当事人追溯：Reyk 的最初原型即名为 RelayD，Pierre-Yves Ritschard 另提交了名为 SLBD（服务器负载均衡守护进程）的不同实现，入树时一度定名 hostated（本意 host state d），因拼写歧义与功能扩张——七层处理、取出内核的流量处理、SSL 卸载——不再相称，最终改回语义足够通用的 relayd。（BSDTalk EP234，[1673.28-1769.94]，L1）
 
 **史观**：
 
@@ -222,6 +228,7 @@ volume: 05
 - 总纲18 时间是一种形式主义：总纲18 时间是一种形式主义：PF 缺乏版本号使各实现难以按时间锚定演进，说明版本命名是形式化的时间标记。（BSD Now EP18，[425.34-439.46]，L2）
 - 总纲4 分离聚合是永恒规律：DragonFly 的分叉呈现为多处理路线分歧推动的一次分离，而非单一技术演进的必然结果。（BSD Now EP11，[903.6-965.6]，L1）
 - 总纲10 动手者创造历史：Justin Sherrill 长期承担文档、发布与组织工作而非核心代码，说明项目维护依赖多元角色的动手者共同支撑。（BSD Now EP11，[774.9-861.7]，L1）
+- 总纲10 动手者创造历史：Brauer 反复强调 FreeBSD 升级 PF 的障碍不在技术：语法变更对九成以上配置不过是两分钟的活，真正的问题是“得有人去做”，而项目内部虽有升级意向却无人执行；他公开表态愿为具体动手者义务答疑。技术变迁的推进被归于具体个体的行动意愿，而非项目层面的抽象决议。（BSDTalk EP234，[1324.98-1350.02]，L1）
 
 **辨析**：
 
@@ -239,6 +246,7 @@ volume: 05
 - PF 双雄之争在节目中仅为转述层材料：OpenBSD 邮件列表风暴中社区主张与其仅 SMP 化 PF 不如做通用 SMP 改造，DragonFly 已多线程化 PF，FreeBSD 侧则有 PF 前途之问与 IPFW 复兴的杂音；“快四倍”“随核数线性”等数字均出自主持人复述，且网卡多队列等底层论断含糊，映射入史前必须回查 2014 年邮件列表原帖。　[存疑脚注] 争论细节与性能数字仅经主持人转述，须以邮件列表一手原文复核（BSD Now EP46，[668.06-893.54]，L2）
 - HybridCluster 活迁移亚秒级为其商业宣传口径，需独立验证；NYCBSDCon 议题与演讲细节为主持人转述，需与会议议程核对。　[存疑脚注] 活迁移性能与会议细节以官方发布为准，需交叉验证。（BSD Now EP24，[1494.88-1500.64]，L4）
 - 主持人将 DragonFly 的 PF 对应 OpenBSD 4.4、FreeBSD 对应 4.5 等版本关系为口头转述，需与各项目代码核对；OpenPF 项目在 2014 年成立属对未来的期许而非既成事实。　[存疑脚注] 各 BSD 的 PF 版本对应与 OpenPF 立项状态需以源码与邮件列表原始记录复核。（BSD Now EP18，[386.32-439.46]，L4）
+- Brauer 对其他 BSD 的 PF 状况评价带鲜明立场：称 NetBSD 在“自己的 PF 克隆里重复我们所有的错误”、FreeBSD 停留在 2008/2009 年版本且无人执行升级。此为单一当事人对兄弟项目的负面判断，NetBSD 侧的工程动机与 FreeBSD 邮件列表中的实际计划细节，须以各项目邮件列表与提交记录交叉验证方可采信。　[存疑脚注] 对 NetBSD 与 FreeBSD 的评价为单一当事人立场性陈述，未提供可复核依据（BSDTalk EP234，[1277.48-1324.98]，L4）
 
 **文献**：
 
@@ -253,5 +261,6 @@ volume: 05
 - [BSD Now EP24] Pennington J. BSD Now: 24: The Cluster & The Cloud[EB/OL]. (2014-02-12)[2026-08-15]. https://www.bsdnow.tv/24.
 - [BSD Now EP18] Pennington J. BSD Now: 18: Eclipsing Binaries[EB/OL]. (2014-01-01)[2026-08-15]. https://www.bsdnow.tv/18.
 - [BSD Now EP11] Pennington J. BSD Now: 11: The Gateway Drug[EB/OL]. (2013-11-13)[2026-08-15]. https://www.bsdnow.tv/11.
+- [BSDTalk EP234] Backman W. BSDTalk: 234: bsdtalk234 - Henning Brauer at vBSDCon[EB/OL]. (2013-11-11)[2026-08-27]. https://bsdtalk.blogspot.com/2013/11/bsdtalk234-henning-brauer-at-vbsdcon.html.
 
 <!-- /PODCAST_REVIEW -->

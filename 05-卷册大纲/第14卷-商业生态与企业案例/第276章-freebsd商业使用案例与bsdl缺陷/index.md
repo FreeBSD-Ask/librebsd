@@ -103,7 +103,7 @@ volume: 14
 本章所书皆是形式主义化的重构，并非对“真实的 BSD 历史”的呈现。本章的章节划分、事件选择、叙事策略、因果归因——全部基于编纂者的哲学设定。本章承认这些局限，不声称客观或中立，欢迎被更诚实的叙事所超越。
 
 <!-- PODCAST_REVIEW v20260829 -->
-<!-- 语义复核范围：BSD Now EP623、BSD Now EP58、BSD Now EP51、BSD Now EP40、BSDTalk EP148、BSDTalk EP151、BSDTalk EP41、BSDTalk EP42（共 8 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
+<!-- 语义复核范围：BSD Now EP623、BSD Now EP58、BSD Now EP51、BSD Now EP40、BSDTalk EP148、BSDTalk EP151、BSDTalk EP230、BSDTalk EP41、BSDTalk EP42（共 9 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
 
 **要点**：
 
@@ -133,6 +133,11 @@ volume: 14
 - 向公司内部推销 BSD 的论证是白盒哲学：支持对任何产品都昂贵且难获取，开源 BSD 给予的是可拆解的白盒而非大厂黑盒——可以拆机排查、查看栈跟踪、调试，再把信息交给能理解的人，这种能力胜过大型厂商的支持合同；实际接触的开发者都极乐于协助，甚至主动建议调整 sysctl 避免 panic，而同类服务在 Windows 生态通常需要付费。（BSDTalk EP151，[371.74-449.54]，L1）
 - BSD 进入 Frantic Films 的路径始于约五年前的严重 uptime 危机：机器频繁死亡、停工损失数千小时劳动；随机器逐步替换，性能与可靠性大幅提升，管理层转而青睐可靠网络并向客户宣称使用开源技术——他们称之为 BSD，且不论 Free 还是 Open 一律冠以 BSD 之名；Cody 自认较真却难以让管理层选定具体分支，但认为企业向客户讲 BSD 本身已是好事。（BSDTalk EP151，[457.24-513.48]，L1）
 - 个人与边缘硬件实践：Cody 日常用 MacBook，家中以 Soekris 盒与一台 OpenBSD 专用笔记本折腾无线；其上司兼朋友收藏 PA-RISC、SGI、SPARC 等老式架构，他为几乎所有机器装 OpenBSD 且仅一台 Sun 机器失败；在 BSDCan 2008 他最期待以 OpenBSD 开发者 Damien Miller 维护的 softflowd（NetFlow）分析内部高流量 Samba 传输的瓶颈。（BSDTalk EP151，[517.30-595.04]，L1）
+- Kaliski 早年任职于初创期的 RSA Data Security，VeriSign 即自 RSA 分拆而来；EMC 收购 RSA 后他随迁 EMC，约两年前回任 VeriSign 出任 CTO，负责公司长期技术愿景，并称与运营全球分布式基础设施多年的团队共事是其职务的兴奋点。（BSDTalk EP230，[122.27-147.24]，L1）
+- VeriSign 以 SSL 证书业务为起点，收购 Network Solutions 后开始运营域名注册局，尤其承担 .com 与 .net 等注册局；历经多年公司变动后业务重新聚焦注册局，并在该全球分布式平台上叠加新的连接类产品与服务。（BSDTalk EP230，[148.08-184.58]，L1）
+- 企业采用 BSD 的架构动因：注册局系统须维持十五年以上不间断运行，要求高可用与高安全；设计上强调组件相互独立、无单点故障、全球多点部署且各站点刻意不采用完全相同的构建，由此公司同时承诺支持 Linux 与 BSD，以吸收两者各自的进展并对冲任一生态的风险，回馈 FreeBSD 社区是该承诺的自然延伸。（BSDTalk EP230，[213.81-290.51]，L1）
+- 首届 vBSDcon 定于 2013 年 10 月 25 至 27 日在弗吉尼亚州 Herndon 的 Hyatt Dulles 举行，周五欢迎晚宴加周六周日两日单轨议程；Kaliski 阐明 VeriSign 采用业界轮值承办模式，自视为众多受益于 FreeBSD 的公司之一并期望他企业接力承办，同时已向 FreeBSD 基金会捐款，并持续征集志愿者参与组织。（BSDTalk EP230，[307.37-423.47]，L1）
+- 据组织者陈述，首届议程汇集 FreeBSD 及相关领域的多位领军人物，议题覆盖开发者当前关注的系统改进与基于 BSD 的应用方向，构成吸引从业者的核心内容。（BSDTalk EP230，[615.57-649.71]，L1）
 - Summer of Code 起源于 Google 创始人让计算机专业学生暑期持续开发而不必打工谋生的设想，DiBona 将其开源化落地：2005 年首届约 400 名学生、约 40 个组织参与，采用导师遴选制，学生入选即得 500 美元、达成申请目标再得 4000 美元；FreeBSD 与 NetBSD 均在首届受资助组织之列。（BSDTalk EP41，[249.78-357.10]，L1）
 - DiBona 自评首届成效：约 84% 学生达成目标（他自嘲花别人的钱总是大方，实际或约 75%），其中近半赛后留在项目继续贡献，远超其预期；因多数学生返校，不宜苛求其成为长期贡献者。2006 年第二届扩大组织规模并改用 Web 应用全程管理，取代首届的电邮与电子表格流程。（BSDTalk EP41，[357.10-417.38]，L1）
 - Google 开源释出分两类：API 示例以 BSD、GPL、Apache 等多许可发布；独立工具则依兼容性选型，如 Google Talk 语音组件 libjingle 经 Java 规范提案开放信令规范并以 BSD 与 GPL 发布，malloc 性能工具与 sparse hash table 实现均取 BSD 许可；DiBona 称 BSD 许可为全球第二大流行许可，企业借此确保释出代码可被最广泛使用。（BSDTalk EP41，[437.28-533.18]，L1）
@@ -154,6 +159,8 @@ volume: 14
 - 本期提及或转述的一手材料包括：Karl Lehenbauer 当事人访谈；iX Systems 的 BSDCan 2014 wrap-up（Jenkins 持续测试工作组在 FreeBSD 集群的状态与向 source 与 port 构建扩展的头脑风暴、为 FreeNAS 在 FreeBSD 上部署 Redmine 缺陷跟踪）；Michael Dexter 与 Warren Block 受基金会资助参会后提交的 trip reports；Phabricator 在 FreeBSD wiki 上的使用说明（differential 与 audit 两种模式）；CARP failover 演示视频；Michael Lucas 的 FreeBSD 存储系列书计划（GELI、UFS、ZFS 分册）；IRC 上 Matt Ahrens 语录“ZFS 开始开发时只有 vi 和一个空文本文件”。（BSD Now EP40，[127.77-2001.69]，L2）
 - 本期为 CodeWeavers 创始人 Jeremy White 的一手口述访谈，保留 2008 年 5 月 Crossover for BSD 移植决策过程、投票数据（十人约 400 美元）与 FreeBSD 6 补丁要求等当事人陈述；开场新闻提及 OpenBSD 4.3 发布与当月 BSDCan 渥太华会议。（BSDTalk EP148，[0.00-55.32]，L1）
 - 本期为 BSDCan 2008 现场对 Frantic Films VFX 资深系统管理员 Sean Cody 的一手口述访谈，保留三办公室 100 TB 数据规模、IPsec 互联、FreeBSD 3ware 文件服务器、em 驱动 bug 与 committer Christian Peron 协助、Undeadly 新闻站编辑经历（Daniel 接替停止维护的 deadly.org 后征集编辑）等当事人陈述，可对照 undeadly.org 存档与 FreeBSD em 驱动提交记录核查。（BSDTalk EP151，[34.36-115.16]，L1）
+- 当事人口述的一手公司史链条：RSA Data Security 初创期任职、VeriSign 自 RSA 分拆、EMC 收购 RSA、VeriSign 收购 Network Solutions 并运营 .com 与 .net 注册局、其后业务再聚焦。（BSDTalk EP230，[122.27-184.58]，L1）
+- 首届 vBSDcon 的组织事实记录：时间地点、单轨议程结构、轮值承办声明、对 FreeBSD 基金会的捐款承诺与组织联系渠道 vbsdcon at verisign.com，均为组织者本人自述。（BSDTalk EP230，[307.37-474.41]，L1）
 - 该期留存的一手史料线索：2005 年首届 Summer of Code 的组织覆盖名单含 FreeBSD 与 NetBSD；Google 截至 2006 年 5 月已释出约 20 万行代码，含 Core Dumper、Python 库、malloc 性能工具与 sparse hash table 实现；片头曲采用 OpenBSD 3.0 发行版主题曲，为 BSD 发行版歌曲文化的旁证。（BSDTalk EP41，[323.86-426.58]，L1）
 - 该期留存的一手史料线索：Slony-I 复制服务器（见 postgresql.org 文档）；3-Ware 硬件 RAID 的选型测试记录——标准为双盘系统拔出任一盘保持运行且重启后可从任一盘引导，而三年前主板板载 RAID 无一能可靠从第二盘引导；FAA 数据馈送延迟五分钟加处理约一分钟的时延结构；其个人机器上保留着 Microport Unix、Bell Technologies、SCO 时代直至 BSD 的连续文件时间戳，最早可追溯至 1980 年代末。（BSDTalk EP42，[316.28-375.46]，L1）
 
@@ -171,6 +178,8 @@ volume: 14
 - 总纲5 没有必然性，只有偶然性：FlightAware 的创立路径是偶然条件叠加而非规划必然：本是为一门有线电视软件生意试水，几个朋友拿到 FAA 向业界开放的数据流，读文档、写解析、入库、做网站，“然后它就膨胀成了一门生意”；受访者的原话呈现了一个 hobby 转化为事业的具体偶然过程。（BSD Now EP40，[871.82-911.72]，L1）
 - 总纲10 动手者创造历史：White 的叙述显示，商业移植的达成关键不在公司市场判断而在动手者：BSD 社区成员在 Wine 上游默默改进 BSD 专属代码，把移植成本从数周工程压缩为一个下午的编译，动手者的劳动改变了商业决策的成本结构，偶然的礼貌请求随之成为触发条件。（BSDTalk EP148，[849.36-915.44]，L1）
 - 总纲10 动手者创造历史：Cody 的贡献观强调社区史由动手者的多种劳动共同构成：他因不提交代码而选择为 Undeadly 写故事，把五行文本的配置经验、VLAN 上 DHCP 或 pf binat 的用法写成稿件帮助他人；OpenBSD 社区被指敌意，但他认为索取而不贡献者遭遇冷淡是投入产出的自然结果，帮助用户、提供硬件访问与代码、捐赠同为贡献形态，动手与分享才是社区存续的实体。（BSDTalk EP151，[605.64-757.78]，L1）
+- 总纲8 本体论上各方平等：Kaliski 表达的企业架构观将 Linux 与 BSD 置于对等地位：不为任一生态单独绑定，而是以组件独立与构建多样性消解对单一系统的依赖，任一生态的进展皆可为己所用；企业技术选型中各方平等、无单一正统的姿态由此成为风控原则。（BSDTalk EP230，[251.37-278.26]，L1）
+- 总纲4 分离聚合是永恒规律：VeriSign 的公司史呈现为一系列分离与聚合：自 RSA 分拆而生，吸收 Network Solutions 而扩张，随 EMC 收购 RSA 而易主，最终剥离证书业务重聚于注册局；企业形态在分合往复中重定边界，而非沿单一方向演进。（BSDTalk EP230，[122.27-184.58]，L1）
 - 总纲3 不存在进步，只有权力再分配：DiBona 解释平台支持优先级时直言：个体开发者对平台重要性的自我认同无法改变企业按聚合用户量分配工程资源的逻辑，被支持与否是资源权力的再分配结果而非技术优劣的裁决；被冷落平台的出路在于代码开源后由社区自行移植。（BSDTalk EP41，[688.02-723.94]，L1）
 - 总纲17 证明世界先于解释和改造世界：Lehenbauer 的可靠性主张全部建立在自设测试之上：RAID 1 使磁盘可靠性较无冗余提升千倍、ECC 内存较非 ECC 提升百万倍的判断，均以其亲手拔盘、重启、引导验证为准，而非厂商参数；这种以可重复实测证明替代宣传解释的工程取向，正是其选型纪律的核心。（BSDTalk EP42，[743.12-807.10]，L1）
 
@@ -186,6 +195,8 @@ volume: 14
 - 本期转写延续双声道交错重复的缺陷；FlightAware 受访者姓名转写为 Carl Liambauer 与 Carl Lee and Bauer 等，据访谈内容（FlightAware 联合创始人、Tcl 社区背景、386BSD 补丁汇总经历）当为 Karl Lehenbauer，引用人名须核对原始音频；iX 员工姓名 Craig Rod-Reeder、Dan Langille（转写作 Danling Guilf）等亦存在转写失真。　[存疑脚注] 受访者及若干人名的转写拼写不可靠，须经原始音频与当期 show notes 复核（BSD Now EP40，[841.92-848.82]，L4）
 - White 承认与 Windows 逐 bug 兼容仅是玩笑，实际问题几乎都在 Wine 自身代码，但 DirectX 映射 OpenGL 后约七成原生性能、ATI 显卡驱动难用、BSD 市场规模不足等陈述均出自公司立场，需以 Wine Bugzilla 与兼容中心投票记录交叉验证。　[存疑脚注] 性能与市场数据为受访者商业立场陈述，需对照 Wine Bugzilla 与 CodeWeavers 兼容中心记录复核。（BSDTalk EP148，[356.60-460.00]，L1）
 - 转写存在数字与术语缺陷：温尼伯数据量先后记为 70 与 80 TB、多处专名误转（3ware、Soekris、OS X、softflowd），引用须以原始音频核对；OpenBSD 文件服务性能不足的判断出自其以 Samba 为主的特定负载，属个案经验，不宜泛化为对 OpenBSD 存储栈的整体评价。　[存疑脚注] 数据规模转写不一致，性能判断为单一个案负载经验。（BSDTalk EP151，[124.12-146.84]，L4）
+- 转写将企业操作系统多样化动机记为 have electricity in our operating systems，按上下文应为 diversity 的误识别；此句承载双栈设计动因的关键表述，引用前须以原始录音核对。[存疑脚注] 转写音误，原文待核。　[存疑脚注] electricity 系 diversity 的转写音误推断，引用该句须回溯原始音频确认（BSDTalk EP230，[251.37-262.03]，L5）
+- VeriSign 生产环境中 FreeBSD 的使用深度未经量化：访谈未给出部署规模、负载特征与 FreeBSD 版本，企业对 BSD 的实际依赖仅有双栈承诺的间接表述，任何定量引用均须另行考据。[存疑脚注] 单一来源且无系统细节。　[存疑脚注] 企业内 FreeBSD 部署规模与版本无当事方数据佐证，仅可作定性使用（BSDTalk EP230，[262.04-290.51]，L4）
 - DiBona 自承不了解 BSD 运行 Linux 二进制兼容层的实际状态，显示即便开源企业负责人对 BSD 技术生态亦存认知盲区；其“BSD 许可为全球第二大流行许可”为个人估计而非统计结论。[存疑脚注] 该排序无出处，仅作 2006 年企业认知样本记录。　[存疑脚注] BSD 许可流行度排序系 DiBona 口头估计，无统计数据佐证。（BSDTalk EP41，[646.06-668.74]，L4）
 - 对 BSD 的批评与敬意并存：Lehenbauer 抱怨会撞上奇怪内核限制（共享内存相关转换表的尺寸难觅文档），须翻检一年前的邮件列表自行揣测；承认其他发行版的安装流程更精致；但赞其发布工程从未放行早期 Linux 曾出现的卸载即毁文件系统一类的缺陷，并在 Linux 占尽 mind share 与公司投入的 2006 年，仍称许 Berkeley 阵营的强健，特别致敬 Theo de Raadt 与 NetBSD、OpenBSD 的工作。[考据脚注] 其所称早期 Linux umount 缺陷细节未经核实，系当事人回忆。　[考据脚注] 早期 Linux umount 缺陷的具体所指未核实，仅作当事人 2006 年回忆记录。（BSDTalk EP42，[943.92-1068.48]，L1）
 
@@ -197,6 +208,7 @@ volume: 14
 - [BSD Now EP40] Pennington J. BSD Now: 40: AirPorts & Packages[EB/OL]. (2014-06-04)[2026-08-15]. https://www.bsdnow.tv/40.
 - [BSDTalk EP148] Backman W. BSDTalk: 148: bsdtalk148 - Jeremy White, Founder of CodeWeavers[EB/OL]. (2008-05-02)[2026-08-27]. https://bsdtalk.blogspot.com/2008/05/bsdtalk148-jeremy-white-founder-of.html.
 - [BSDTalk EP151] Backman W. BSDTalk: 151: bsdtalk151 - Sean Cody from Frantic Films VFX[EB/OL]. (2008-05-29)[2026-08-27]. https://bsdtalk.blogspot.com/2008/05/bsdtalk151-sean-cody-from-frantic-films.html.
+- [BSDTalk EP230] Backman W. BSDTalk: 230: bsdtalk230 - vBSDcon with Verisign CTO Burt Kaliski[EB/OL]. (2013-08-14)[2026-08-27]. https://bsdtalk.blogspot.com/2013/08/bsdtalk230-vbsdcon-with-verisign-cto.html.
 - [BSDTalk EP41] Backman W. BSDTalk: 41: bsdtalk041 - Interview with Chris DiBona from Google[EB/OL]. (2006-05-07)[2026-08-27]. https://archive.org/details/bsdtalk041.
 - [BSDTalk EP42] Backman W. BSDTalk: 42: bsdtalk042 - Interview with Karl Lehenbauer from Flightaware[EB/OL]. (2006-05-11)[2026-08-27]. https://archive.org/details/bsdtalk042.
 
