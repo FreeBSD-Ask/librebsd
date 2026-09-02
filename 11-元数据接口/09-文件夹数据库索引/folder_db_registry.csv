@@ -69,7 +69,6 @@ freebsd-emulation,03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd
 freebsd-enlightenment,03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd-enlightenment.duckdb,03-原始史料库/11-邮件列表史料/01-freebsd,0,24129536,d9631b840bfd44c2,aa61f0f042042ad4,1.0.0,,0,0,0,raw
 freebsd-enterprisewg,03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd-enterprisewg.duckdb,03-原始史料库/11-邮件列表史料/01-freebsd,0,1585152,53a193a08c8423b0,cab0830649d0d74e,1.0.0,,0,0,0,raw
 freebsd-eol,03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd-eol.duckdb,03-原始史料库/11-邮件列表史料/01-freebsd,0,1585152,90356cfbe6435c1f,dfd81169e02c7121,1.0.0,,0,0,0,raw
-freebsd-erlang,03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd-erlang.duckdb,03-原始史料库/11-邮件列表史料/01-freebsd,0,90714112,302488d9f6bc77e7,35109473e4d34bf4,1.0.0,,0,0,0,raw
 freebsd-errata-notifications,03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd-errata-notifications.duckdb,03-原始史料库/11-邮件列表史料/01-freebsd,0,1323008,457ca70309d3ff60,c55ee96b6c1f2594,1.0.0,,0,0,0,raw
 freebsd-fcp-editors,03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd-fcp-editors.duckdb,03-原始史料库/11-邮件列表史料/01-freebsd,0,1585152,64f982e68bd7b042,efe7bfcfc98cdd94,1.0.0,,0,0,0,raw
 freebsd-fcp,03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd-fcp.duckdb,03-原始史料库/11-邮件列表史料/01-freebsd,0,2633728,f87a6b6a6aa87f48,9a8a8cb1f3197d3e,1.0.0,,0,0,0,raw
@@ -84,7 +83,6 @@ freebsd-gnome,03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd-gno
 freebsd-go,03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd-go.duckdb,03-原始史料库/11-邮件列表史料/01-freebsd,0,7090176,10f56ea912d1954e,40c4d41eaf563e37,1.0.0,,0,0,0,raw
 freebsd-hackers,03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd-hackers.duckdb,03-原始史料库/11-邮件列表史料/01-freebsd,0,893661184,4739edeb6178b51a,aed41398324c71b0,1.0.0,,0,0,0,raw
 freebsd-hardware,03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd-hardware.duckdb,03-原始史料库/11-邮件列表史料/01-freebsd,0,109588480,a5278552e74d434c,84bd760e4549c2b9,1.0.0,,0,0,0,raw
-freebsd-haskell,03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd-haskell.duckdb,03-原始史料库/11-邮件列表史料/01-freebsd,0,76820480,e822c2bd9294380f,b91f9c96d8867c27,1.0.0,,0,0,0,raw
 freebsd-hpc,03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd-hpc.duckdb,03-原始史料库/11-邮件列表史料/01-freebsd,0,1847296,3ab32cc88bf36626,c0ae567cb9cb8d15,1.0.0,,0,0,0,raw
 freebsd-hubs,03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd-hubs.duckdb,03-原始史料库/11-邮件列表史料/01-freebsd,0,27537408,b7b98bddad898d0c,fad0cd943a5bce5a,1.0.0,,0,0,0,raw
 freebsd-i18n,03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd-i18n.duckdb,03-原始史料库/11-邮件列表史料/01-freebsd,0,6041600,17d120c477622262,58d7b2b8ec234e85,1.0.0,,0,0,0,raw
@@ -118,13 +116,11 @@ freebsd-ops-announce,03-原始史料库/11-邮件列表史料/01-freebsd/db/free
 freebsd-performance,03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd-performance.duckdb,03-原始史料库/11-邮件列表史料/01-freebsd,0,18624512,ebf911c1613b5ad3,ec31d7c8f8d1278d,1.0.0,,0,0,0,raw
 freebsd-perl,03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd-perl.duckdb,03-原始史料库/11-邮件列表史料/01-freebsd,0,69480448,e741fd146f8c348d,c54f4d11eb5db793,1.0.0,,0,0,0,raw
 freebsd-pf,03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd-pf.duckdb,03-原始史料库/11-邮件列表史料/01-freebsd,0,34615296,4e262707ec99c12a,37e47d256059d341,1.0.0,,0,0,0,raw
-freebsd-pkg-fallout,03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd-pkg-fallout.duckdb,03-原始史料库/11-邮件列表史料/01-freebsd,0,133967872,5a5d809f2d832d10,a14b5dafde9101e3,1.0.0,,0,0,0,raw
 freebsd-pkg,03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd-pkg.duckdb,03-原始史料库/11-邮件列表史料/01-freebsd,0,23605248,e895e76daf823010,0483e8ce521da218,1.0.0,,0,0,0,raw
 freebsd-pkgbase,03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd-pkgbase.duckdb,03-原始史料库/11-邮件列表史料/01-freebsd,0,3682304,33bfea92592edf44,c210768b573cfd4e,1.0.0,,0,0,0,raw
 freebsd-platforms,03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd-platforms.duckdb,03-原始史料库/11-邮件列表史料/01-freebsd,0,4206592,38b7f13ce0be9599,45b843dafc8c7145,1.0.0,,0,0,0,raw
 freebsd-policy,03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd-policy.duckdb,03-原始史料库/11-邮件列表史料/01-freebsd,0,1585152,2bc265193c901aec,21162914c5faf26e,1.0.0,,0,0,0,raw
 freebsd-ports-announce,03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd-ports-announce.duckdb,03-原始史料库/11-邮件列表史料/01-freebsd,0,2109440,2db35ef222481507,f4ea984e62365805,1.0.0,,0,0,0,raw
-freebsd-ports-bugs,03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd-ports-bugs.duckdb,03-原始史料库/11-邮件列表史料/01-freebsd,0,1213476864,6c66dee6846f0278,c9391c61fe53fe3b,1.0.0,,0,0,0,raw
 freebsd-ports,03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd-ports.duckdb,03-原始史料库/11-邮件列表史料/01-freebsd,0,712257536,19272b7f886cae67,d1bf439a24c7ecc2,1.0.0,,0,0,0,raw
 freebsd-ppc,03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd-ppc.duckdb,03-原始史料库/11-邮件列表史料/01-freebsd,0,61091840,dfe93c69f7601ade,fbbd0eb6449b46be,1.0.0,,0,0,0,raw
 freebsd-proliant,03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd-proliant.duckdb,03-原始史料库/11-邮件列表史料/01-freebsd,0,3682304,a9754a667a16916d,2f2dd9648986ca5c,1.0.0,,0,0,0,raw
@@ -135,7 +131,6 @@ freebsd-rc,03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd-rc.duc
 freebsd-realtime,03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd-realtime.duckdb,03-原始史料库/11-邮件列表史料/01-freebsd,0,1847296,94f88acfb23e85be,06ed8d8410a3531f,1.0.0,,0,0,0,raw
 freebsd-reproducibility,03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd-reproducibility.duckdb,03-原始史料库/11-邮件列表史料/01-freebsd,0,1060864,fbd0e2ef8df7279b,597ec06097164b56,1.0.0,,0,0,0,raw
 freebsd-riscv,03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd-riscv.duckdb,03-原始史料库/11-邮件列表史料/01-freebsd,0,1847296,61c84895634474c3,283533b9a8edf24f,1.0.0,,0,0,0,raw
-freebsd-ruby,03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd-ruby.duckdb,03-原始史料库/11-邮件列表史料/01-freebsd,0,68694016,cc19e9928cff1dd1,8c764907ef618871,1.0.0,,0,0,0,raw
 freebsd-scsi,03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd-scsi.duckdb,03-原始史料库/11-邮件列表史料/01-freebsd,0,83111936,999445cfa3ded753,63c8fd10eaffa324,1.0.0,,0,0,0,raw
 freebsd-security-notifications,03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd-security-notifications.duckdb,03-原始史料库/11-邮件列表史料/01-freebsd,0,7352320,8aec0d3ae00accd9,c9ce220da454965d,1.0.0,,0,0,0,raw
 freebsd-security,03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd-security.duckdb,03-原始史料库/11-邮件列表史料/01-freebsd,0,137637888,2a816ed40902329b,b1634bcfac140ab0,1.0.0,,0,0,0,raw
