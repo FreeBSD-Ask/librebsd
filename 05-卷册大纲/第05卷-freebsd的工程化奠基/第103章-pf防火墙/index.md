@@ -117,7 +117,7 @@ volume: 05
 本章所书皆是形式主义化的重构，并非对“真实的 BSD 历史”的呈现。本章的章节划分、事件选择、叙事策略、因果归因——全部基于编纂者的哲学设定。本章承认这些局限，不声称客观或中立，欢迎被更诚实的叙事所超越。
 
 <!-- PODCAST_REVIEW v20260829 -->
-<!-- 语义复核范围：BSD Now EP651、BSD Now EP648、BSD Now EP360、BSD Now EP640、BSD Now EP213、BSD Now EP143、BSD Now EP47、BSD Now EP46、BSD Now EP24、BSD Now EP18、BSD Now EP11、BSDTalk EP234（共 12 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
+<!-- 语义复核范围：BSD Now EP651、BSD Now EP648、BSD Now EP360、BSD Now EP640、BSD Now EP213、BSD Now EP144、BSD Now EP47、BSD Now EP46、BSD Now EP24、BSD Now EP18、BSD Now EP11、BSDTalk EP234（共 12 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
 
 **要点**：
 
@@ -144,14 +144,11 @@ volume: 05
 - EuroBSDCon 2017 在巴黎举行，主持人参会期间组织开发者以七分钟短讲介绍各自正在推进或寻求反馈的工作，这一 work in progress 形式与 AsiaBSDCon 类似。（BSD Now EP213，[376.86-393.88]，L1）
 - FreeBSD 基金会董事会在巴黎举行，与会成员讨论 FreeBSD 10.4 测试与发布稳定、注册截止等问题；主持人还介绍 EuroBSDCon 次年将移师罗马尼亚布加勒斯特。（BSD Now EP213，[757.00-1311.38]，L1）
 - PF 缺陷故事：Christophe 提交的博客还原了一个 vnet jail 中 PF 与宿主机 PF 实例相互干扰导致 panic 的问题，修复要点是把 purge 状态的索引变量改为 per-vnet 变量，避免多 PF 实例共享状态。（BSD Now EP213，[1335.70-1904.14]，L2）
-- Matthew Macy 自述其 BSD 历程：在伯克利操作系统课上接触 FreeBSD 2.1.x，此后完成 i386 版 Xen 的 FreeBSD 移植并由此获得 commit bit，随后参与 Chelsio 万兆网卡驱动，并在 DragonFly 时期完成进程检查点设施与虚拟内存页粒度锁下推等工作。（BSD Now EP143，[1505.00-1702.00]，L1）
-- Macy 说明更新图形栈的动机链条：因机器学习需要 GPGPU 且 CUDA 仅限 Linux，AMD Radeon Open Compute 提供跨厂商替代，但其依赖链 AMDKFD、AMDGPU 迫使先更新 DRM；他选择从 i915 入手，理由是 Intel 约占七成 GPU 市场且驱动质量最好。（BSD Now EP143，[2233.00-2459.00]，L1）
-- 图形栈更新的核心策略是 Linux KPI 路线：保持驱动尽量接近上游、本地 diff 仅约四百五十行（对照 12.8 万行的 i915 4.6 驱动），长期维护负担取决于驱动对内核接口使用面的扩张而非驱动自身改动；在 KPI 稳定于 11.1 或 11.2 前以 ports 形式独立发布。（BSD Now EP143，[3168.00-3326.00]，L1）
-- Macy 解释 iflib 的设计：网络驱动间大量复制粘贴导致厂商自行维护时抹去性能优化，iflib 抽象队列分配、调度、TX 清理等设备无关代码，驱动只负责寄存器、固件与描述符转换；Netflix 在 Intel 40GbE 上用 iflib 获得优于 legacy 驱动的性能与最坏情况 CPU 占用。（BSD Now EP143，[1943.00-2117.00]，L1）
-- Macy 回顾其 ZFS 工作：低端 OCZ SSD 因写放大特性用 UFS 几不可用而 ZFS 反而可用，由此在 ARC 做锁下推并修复 Solaris 开发者一度不愿承认的 prefetch 争用；又因 ZFS 的 ARC 大量 wire 内存使 minidump 巨大，他增加 no-dump 页排除特性使 ZFS 上的 core dump 重归可用。（BSD Now EP143，[1755.00-1939.00]，L1）
-- 新闻综述：Package Base 未赶上 FreeBSD 11.0 而推迟至 11.1，pkg 1.8 将 precious 标志更名 vital；11 起新支持模型规定后续 minor 版本发布后旧版本即过期，以解决 8.4、9.3 长期拖住 ports tree 的问题。（BSD Now EP143，[4934.00-5134.00]，L2）
-- Olivier 的 PF 基准实测四百万状态条目：states hash 每条目约占 80 字节、须取 2 的幂，128 条与四百万条之间吞吐差距约百分之十二，验证小型硬件在充分内存与 hash 配置下可承载大规模并发会话。（BSD Now EP143，[128.00-330.00]，L2）
-- PHK 在 VarnishCache 博客中以 FreeBSD 为其项目首要的“keep us honest”平台：三个 jail 分别承载 varnish、hitch 与工具链，从裸机到可运行约十五分钟；他自述 jail 系其 1998 年所写，配置全部入版本控制、备份即 git clone。（BSD Now EP143，[995.00-1250.00]，L2）
+- Provost 论证 FreeBSD PF 的 IPv6 分片处理缺陷：PF 重组分片并做出过滤决策后，IPv4 下可交回协议栈重新分片，而 IPv6 为保住路径 MTU 发现必须把分片集合原样送出，netpfil 接口却只支持一包进一包出；PF 目前自行调用 ip6_output 或 ip6_forward，既构成层级违例又存在输出/转发判断错误，特定情形下导致 panic 或丢包；OpenBSD 由协议栈告知 PF 数据包方向的做法可资借鉴，计划中的改造是让 netpfil 支持一包进一堆出，并预期 IPFW 处理 IPv6 分片时同样受益。（BSD Now EP144，[1579.66-1794.88]，L1）
+- Theo de Raadt 提交使 OpenBSD 的 W^X 违例默认不再允许：违例时内核生成日志，mprotect 与 mmap 返回 ENOTSUP，可经 sysctl 改为 SIGABRT 以便调试与取核转储；同时引入 wxallowed 挂载选项按文件系统豁免，commit 原文断言上游开发者终将理解 W^X 违例是极高风险的编程风格并终被彻底禁绝，此前建议在 /usr/local 文件系统使用该选项；主持人评价这使用户得以审计 ports 与自装程序并向上游施压推动修复。（BSD Now EP144，[975.68-1114.66]，L2）
+- Theo de Raadt 的 Pledge 演讲经主持人转述：pledge 在系统调用层约束进程能力，OpenBSD 的 NTP 守护进程已在内部使用；演讲披露迄今约 10% 被 pledge 的程序被发现试图执行安全范围之外的动作；未来方向包括回头检视 2003 年前后引入的 OpenSSH 特权分离，以及向其他操作系统输出 pledge 类机制的意愿。（BSD Now EP144，[130.44-250.50]，L2）
+- FreeBSD 11.0 发布前夜的两项工程经主持人详述：bhyve 在项目分支 projects/bhyve-graphics 获得 UEFI GOP 支持，用户态虚拟显卡把画面送进内建 VNC 服务器，辅以 XHCI（USB 3 仿真）与平板定位实现精准鼠标、PS2 键鼠兜底、可选等待连接后再启动，并已在 Windows 7/8/8.1/10、Server 2012/2016、Ubuntu 15.10、FreeBSD 10.3/11 上验证，grub-bhyve 被定性为权宜之计、单命令 EFI 启动才是长期目标；zfsd 则补齐内核之外的 ZFS 故障管理，监听 devctl 事件自动激活热备，按 zfs 标签与物理路径处置盘位插拔，60 秒内 50 次 IO 或校验和错误即标记故障并换盘，管理员仅经池属性 autoreplace 间接控制，默认未启用。（BSD Now EP144，[243.24-975.32]，L2）
+- FreeBSD 图形栈跟进：Linux 4.6 DRM 更新需要用户测试，bsddesktop.com/images 提供 USB 启动测试镜像，非安装器、不改动既有系统；开发者 Matt Macy 经 IRC 转达 AMD/ATI 支持将至，且此项工作主要目标本是 AMD 而非 Intel，Intel 只是副产品；同期 head 的 C++ 变更致 VLC 等断裂，使 11 中 KDE、GNOME 3、XFCE、MATE 的桌面包暂缺——约 300 个包失败、600 个被阻断，占 26000 个包不足 2%，却几乎覆盖桌面所需，Warren Block 的 notebook-stats 脚本用于收集硬件细节以定位问题配置；主持人计划携镜像赴 BSDCan 分发。（BSD Now EP144，[2932.90-3198.18]，L2）
 - 2014 年 7 月 FreeBSD 社区就 PF 防火墙展开罕见规模的大讨论：邮件列表普遍认同与 OpenBSD PF 重新同步是好事，却无人愿意承担整体维护；曾尝试导入新版的 Baptiste Daroussin 因破坏 PF 而回退，表态只愿移植与自身用法相关的个别特性，共识与动手之间出现明显断层。（BSD Now EP47，[478.06-502.04]，L2）
 - 安全官访谈勾勒出 FreeBSD 安全治理的全貌：章程使安全官名义上对系统中每一个安全漏洞负责，日常是安全公告的撰写与发布，实质更涵盖流程改进、漏洞缓解技术与安全特性优先级决策，2013 年 /dev/random 重构之争即由其主持裁决，其任内还推动以标准 CPE 元数据嵌入包体系以弥补 VuXML 字符串匹配易漏报的结构缺陷。（BSD Now EP47，[1807.74-1938.24]，L1）
 - Bryan Drewery（转写误作 Brian Drury）自述入圈路径：2003 年前后经 IRC 结识经营 shell 服务的 FreeBSD 4.11 用户而入坑，2012 年因不满包安装状态找到 pkgng 项目并协同 Baptiste Daroussin，从提交补丁到获 ports 提交权，再到以包框架贡献者身份进入 Port Manager 团队并新获 source 提交权——包体系维护者由工具建设者自然生长而成。（BSD Now EP46，[1963.44-2018.28]，L1）
@@ -192,8 +189,7 @@ volume: 05
 - Justin Sherrill 的 DragonFly BSD Digest。（BSD Now EP640，[1070.44-1192.64]，L1）
 - David Gwynne 的 Undeadly 文章 source and state limiters in PF。（BSD Now EP640，[1581.78-1846.92]，L1）
 - Christophe 关于 PF 缺陷修复的博客；EuroBSDCon 2017 会议议程与 FreeBSD 基金会董事会记录。（BSD Now EP213，[1335.70-1904.14]，L2）
-- Macy 提供的图形栈测试材料：DRM next 4.6 分支、可直接写入 U 盘启动的测试镜像（XFCE 与 KDE、SNA/UXA 加速模式切换）与 PC-BSD 每月 current 镜像拉入补丁的安排。（BSD Now EP143，[3784.00-3965.00]，L1）
-- Peter 在 DragonFly 邮件列表的 xWayland 运行报告（GTK3 应用与 Firefox 可用、Chrome 失败）与 Olivier 的 PF 状态表基准博客，均为当期可追溯的一手技术记述。（BSD Now EP143，[5451.00-5503.00]，L2）
+- 一手材料密集：Kristof Provost 在 AsiaBSDCon 的现场访谈自述（入坑经历、补丁被批评被测试再合并的流程、搞崩共同主持人 Alan 路由器的复盘）；Theo de Raadt 的 Pledge 主题演讲视频与幻灯片；Eric McCorkle 谈 EFI 启动重构与 GELI 支持的博客（附 GitHub 代码链接与成段引文）；Sean Chittenden 的 Postgres 多数据中心高可用演讲；Michael W. Lucas 的 Faces of FreeBSD 入行自述；Netgate UFO 板卡的 dmesg 启动日志与 openssl speed 实测数据。　[存疑脚注] 转写专名多处音转失真（Kristof Provost 转作 Christophe、bhyve 转作 beehive、GELI 转作 Jelly、Consul 转作 console、W^X 转作 WXRX、Netgate UFO 转作 NetGate UFW），语义均可由上下文复原；唯 Theo de Raadt 演讲场合转写作“Dot Security 2016”无法与 2016 年已知公开演讲日程对确。（BSD Now EP144，[1277.04-2311.52]，L1）
 - 本期可提炼的一手史料包括：斯洛文尼亚 OpenBSD hackathon（2014 年 7 月 8 日至 14 日）的 CVS 提交树（一周逾千次提交）与参与者分工记录、FreeBSD 邮件列表 PF 讨论串原文、BSD Router Project 公布的转发基准原始数据与运行脚本、LibreSSL tech 邮件列表的补丁流，以及安全官 Dag-Erling Smørgrav 对个人入坑与 commit bit 授予经历的亲述。（BSD Now EP47，[68.2-96.2]，L1）
 - 本期经主持人提及可资查证的一手史料：FreeBSD 9.3-RELEASE 公告与 release notes（iSCSI 可加载、ARC 元数据限额运行时可调、on-if-console 便于 bhyve 直用官方镜像）、pkgng 1.3 RC2 邮件列表通告、LibreSSL 便携版 2.0.x 于 OpenBSD FTP 发布并已入 ports、2014 年 FreeBSD 核心团队九人选举名单（Gavin Atkinson、David Chisnall、Baptiste Daroussin、Ed Maste、George Neville-Neil、Hiroki Sato、Gleb Smirnoff、Peter Wemm、Robert Watson）、EuroBSDCon 2014 索菲亚注册页与开发者峰会邀请制说明。（BSD Now EP46，[1052.16-1090.52]，L2）
 - 本期史料包括 NYCBSDCon 2014 议程与现场反馈、Luke Marsden 访谈（当事人自述）、HybridCluster 产品说明及 FreeBSD 10 PF/IPFW 讨论。（BSD Now EP24，[1059.58-1612.28]，L1）
@@ -216,8 +212,8 @@ volume: 05
 - 总纲9 经验优先：总纲9 经验优先：Jim Salter 以亲身经历过的断电、火灾、失窃等故障说明为何 RAID 不等于备份。（BSD Now EP640，[630.76-692.68]，L1）
 - 总纲22 知识注定过时：总纲22 知识注定过时：HAMMER 清理依赖 cron 定时触发的假设在笔记本关机场景下失效，反映旧运维假设随硬件使用方式变化而过时。（BSD Now EP640，[1081.24-1215.64]，L1）
 - 总纲10 动手者创造历史：Christophe 通过测试脚本复现 vnet 中的 PF panic 并逐行修复，是动手者以调试实践改进防火墙代码的典型记录。（BSD Now EP213，[1413.72-1904.14]，L2）
-- 总纲10 动手者创造历史：Macy 的 dogfooding 议程主张 FreeBSD 应在任意笔记本上开箱可用，路径是让 Linux 开发者的驱动工作经由 KPI 直接为 FreeBSD 复用——以动手者的具体可用性而非抽象优越性为目标。（BSD Now EP143，[2489.00-2634.00]，L1）
-- 总纲5 没有必然性，只有偶然性：Package Base 错过 11.0 属冻结窗口内缺陷集中暴露的偶然事件，节目将其归因于“最后一刻努力仍不够”的具体条件，而非路线本身失败。（BSD Now EP143，[4943.00-4974.00]，L2）
+- 总纲10 动手者创造历史：本期是动手者创造历史的微观样本：Kristof Provost 的入坑起因只是“因为它跑不起来”，为修一块 Marvell 板卡上的问题从此一直在找 bug，补丁经批评、测试、合并的循环把他卷成 committer；Michael W. Lucas 因深夜 DNS 管理员离职被顶上岗位、为睡安稳觉换掉 Unixware 与 Solaris 转向 BSD；系统的演进正由这类具体修补与无名测试者的反馈累积而成。（BSD Now EP144，[1306.72-1354.34]，L1）
+- 总纲22 知识注定过时：工程知识的过时性在本期反复显形：grub-bhyve 被当事人定性为“一直只是权宜之计”，单命令 EFI 启动才是长期目标；McCorkle 判定自建的 boot1 非 EFI 提供者框架与 EFI 框架既有功能重复、接口别扭且无法向内核传递密钥，重构后 boot1 缩为一个很小的源文件并与 loader 共享全部后端驱动，bcache 成为通向 EFI 驱动模型与热插拔支持的唯一阻碍——每一代被视为完成的方案，都会成为下一代重构的对象。（BSD Now EP144，[2619.86-2734.50]，L2）
 - 总纲10 动手者创造历史：PF 讨论与 LibreSSL 的对照揭示同一机制：社区共识不产生代码，唯有动手者启动历史——主持人引 LibreSSL 与 FreeBSD ZFS 安装器皆因一人先动手而带动集体参与，嘉宾更以亲历口吻总结“空白页是最难的起点”（638.58-645.34）；史书应当记录的是接住空白页的人，而非那纸无人执行的共识。（BSD Now EP47，[609.12-645.34]，L2）
 - 总纲10 动手者创造历史：包体系的演进由动手者驱动而非领袖钦定：Google Summer of Code 学生写出新的依赖求解器使 package set -o 大半退役，构建集群从小两台机器被不断塞机器式地扩张并由个人以自写脚本勉力管理，Port Manager lurker 计划以 IRC 频道吸纳 Matt、Steve Wills 等新血——基础设施史的正主是这些具体操持者，正合总纲之动手者创造历史。（BSD Now EP46，[2126.10-2148.62]，L2）
 - 总纲10 动手者创造历史：总纲10 动手者创造历史：Luke Marsden 自建主机公司并发展为 HybridCluster，是动手者以创业实践推动系统应用的代表。（BSD Now EP24，[1074.80-1171.02]，L1）
@@ -238,7 +234,6 @@ volume: 05
 - DragonFly 的 pf 表限制是静态内核值且未暴露为可调 sysctl，是否需要仿照 FreeBSD 改造仍待确认。　[存疑脚注] DragonFly 侧改造计划待核实（BSD Now EP360，[1360.80-1390.40]，L4）
 - 转录将 Doug Rabson 记作 Doug Rapson、将 Dave Cottlehuber 记作 Dave Cossel-Huber，人名拼写存在转写歧义。　[存疑脚注] 贡献者姓名存在语音转写偏差，须以 FreeBSD Foundation 公告核验（BSD Now EP640，[227.38-290.18]，L4）
 - ELIZA 作者名在转录中拼作 Weisenbaum 或 Weisenbalm，通行写法为 Joseph Weizenbaum，须以原始论文核验。　[考据脚注] 人名拼写存在转写偏差，以 Communications of the ACM 1966 年原文为准（BSD Now EP640，[1279.84-1342.08]，L4）
-- Macy 澄清更新 Linux KPI 与 Linux ABI 兼容层基本无关：ABI 层自 2.6.32 以来新增系统调用甚少，inotify 等缺失仍是 Dropbox 类应用的障碍；填平 ABI 缺口是其桌面 dogfooding 计划的另一部分。　[考据脚注] 关于 i965 支持与 Intel Gen10 二进制 blob 是否会为 FreeBSD 重编，Macy 仅引述未经证实的内部消息（BSD Now EP143，[4418.00-4484.00]，L1）
 - PF 性能之争呈现典型的声明—质疑—实证结构：OpenBSD 的 Henning Brauer 称算法与锁的改进使其 PF 快约四倍，FreeBSD 开发者 Gleb Smirnoff 反驳该说法未经基准支撑且双方均未公布对比数据；BSD Router Project 随后在四核万兆平台公布附原始数据与脚本的可复现转发基准，显示 FreeBSD 10 明显快于受无 SMP 限制的 OpenBSD 5.4。（BSD Now EP47，[857.82-980.68]，L3）
 - OTP 双因子认证进入 FreeBSD base 的争论焦点不在算法而在政策：由 root 统一管辖的可写密钥库是 HOTP/TOTP 计数与时效失效的技术前提，但放宽用户自管将招致弱化与误操作；Dag-Erling Smørgrav 断言“若在 10.1 放入半吊子方案，将被迫向后兼容五年”（2938.2-2950.76），宁可推至 11 一次做对，体现发布即承诺的工程伦理。（BSD Now EP47，[2931.1-2957.62]，L1）
 - LibreSSL portable 版在 Linux 上暴露的伪随机数复用缺陷（特定 fork 情形可产出相同随机数）显示跨平台移植会击穿原设计假设，而 Linux 内核开发者相应推动与 OpenBSD getentropy 同构的系统调用以规避文件句柄耗尽攻击，构成 OpenSSL 分叉事件反向塑造 Linux 内核接口的互构链条。　[存疑脚注] 该段涉 Linux 侧动议，转写中人名（如 Theodore So、10Uincts）疑为语音转写失真，须回查 2014 年 7 月 OpenBSD tech 邮件列表与内核邮件列表原文方可定名。（BSD Now EP47，[1040.0-1145.72]，L2）
@@ -255,7 +250,7 @@ volume: 05
 - [BSD Now EP360] Pennington J. BSD Now: 360: Full circle[EB/OL]. (2020-07-23)[2026-08-15]. https://www.bsdnow.tv/360.
 - [BSD Now EP640] Pennington J. BSD Now: 640: Cleaning up Hammer[EB/OL]. (2025-12-04)[2026-08-15]. https://www.bsdnow.tv/640.
 - [BSD Now EP213] Pennington J. BSD Now: 213: The French CONnection[EB/OL]. (2017-09-27)[2026-08-15]. https://www.bsdnow.tv/213.
-- [BSD Now EP143] Pennington J. BSD Now: 143: One small step for DRM, one giant leap for BSD[EB/OL]. (2016-05-25)[2026-08-15]. https://www.bsdnow.tv/143.
+- [BSD Now EP144] Pennington J. BSD Now: 144: The PF life[EB/OL]. (2016-06-01)[2026-08-15]. https://www.bsdnow.tv/144.
 - [BSD Now EP47] Pennington J. BSD Now: 47: DES Challenge IV[EB/OL]. (2014-07-23)[2026-08-15]. https://www.bsdnow.tv/47.
 - [BSD Now EP46] Pennington J. BSD Now: 46: Network Iodometry[EB/OL]. (2014-07-16)[2026-08-15]. https://www.bsdnow.tv/46.
 - [BSD Now EP24] Pennington J. BSD Now: 24: The Cluster & The Cloud[EB/OL]. (2014-02-12)[2026-08-15]. https://www.bsdnow.tv/24.

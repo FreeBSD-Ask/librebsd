@@ -37,10 +37,12 @@ volume: 第06卷-freebsd的核心技术革新
 - [DB:references_fulltext] 参考文献全文数据库（4077 篇全文，27138 条时间线事件）—— 对应 freebsd.duckdb
 
 <!-- PODCAST_REVIEW v20260829 -->
-<!-- 语义复核范围：BSD Now EP57、BSD Now EP36（共 2 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
+<!-- 语义复核范围：BSD Now EP134、BSD Now EP57、BSD Now EP36（共 3 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
 
 **要点**：
 
+- FreeBSD ports committer 的导师制并无成文刚性规则，按个案综合提交数量、持续时间、提交类型多样性与质量进行评估，周期从一个多月到一年不等；补丁无需返工即可并入被视为胜任信号，只有做端口分类筛选不足以说明能力，需覆盖 Python、Perl、Ruby 与普通 C 程序等不同类别；导师为门生失误承担问责以换取其成长缓冲，嘉宾自述自己的文档贡献导师期约三个月。（BSD Now EP134，[3737.04-3861.68]，L1）
+- DragonFly 的一项 TCP 提交将 accepted socket 在监听套接字关闭前挂入每 CPU 本地端口缓存而非全局本地端口哈希表，以防止监听套接字关闭后连接被转世复用；繁忙 TCP 服务器的锁争用率由每秒约 5 万次降至 1.8 万次，网卡环数与 CPU 数匹配时由 3 万次降至 800 次，连接接受率提升约 7% 至每秒 45 万次；主持人指出该优化或可移植回 FreeBSD。　[存疑脚注] 转写将提交作者记为 Seve，疑为 DragonFly 网络开发者 Sepherosa Ziehau 的音转失真，暂按单一来源转述处理（BSD Now EP134，[6366.70-6488.98]，L2）
 - Steve Wills 已 mentoring 三四名新开发者，mentoring 被视为从提交补丁、提升补丁质量到获得提交权限的渐进过程。（BSD Now EP57，[2184.96-2263.48]，L1）
 - 成为 committer 的关键在于持续参与、关注特定领域并提交高质量 PR，同时获得社区对其工作质量的认可。（BSD Now EP57，[2304.08-2349.88]，L1）
 - 成为 mentor 主要取决于意愿、经验与时间；Steve Wills 鼓励 committer 参与 mentoring，以扩大个人效能并壮大社区。（BSD Now EP57，[2455.54-2561.92]，L1）
@@ -54,22 +56,28 @@ volume: 第06卷-freebsd的核心技术革新
 
 **史料**：
 
+- 本期一手史料密集：Mark Felder 回溯个人路径（叔叔赠予的 8086 计算机、拨号时代论坛网友寄赠的十张 Linux 光盘、Gentoo 折锅、公司报废的双 Pentium 3 服务器上以 FreeBSD 7.2 运行 ZFS 与 Java 应用、威斯康星州麦迪逊一家自约 1998 年起全面运行 FreeBSD 的本地 ISP）；《Porter's Handbook》与《Port Committers Handbook》被当事人称为详尽到近乎完备的资源；GNATS 与 Bugzilla 的 PR 流水线、VuXML 与 package audit 漏洞数据库、AsiaBSDCon 的 OpenBSD 演讲幻灯与论文（含 ISP 实践、VMM 与 VMD 虚拟化、PVHVM 驱动等主题）、Tarsnap 1.0.37 发布说明均为可援引的一手材料。（BSD Now EP134，[2857.28-3184.24]，L1）
 - Steve Wills 访谈（FreeBSD ports committer 与开发者 mentor 当事人自述）。（BSD Now EP57，[2175.52-2779.52]，L1）
 - 本期提及的一手史料与同期文献：OpenBSD 5.5 官方发布公告（time_t 全平台 64 位、signify 签名的发布集与二进制包、autoinstall 自动安装、RNG 换用 ChaCha20、softraid 支持大于 2 TB 分区并新增 RAID 5 实现、i386 默认 PIE）；OpenSSH 去 OpenSSL 化的 openbsd-cvs 提交记录（密钥交换限于椭圆曲线与 Curve25519、公钥仅 Ed25519、内建 AES-CTR 与 ChaCha20-Poly1305，且该计划先于 Heartbleed 事件公开）；m2k14 摩洛哥黑客松旅行报告（Jasper Adriaanse 修复 puppet 移植、Antoine Jacoutot 回推 GNOME 补丁并修复 ports 与 LibreSSL 兼容性）；FreeBSD Foundation 春季募捐与资助亮点文章（UEFI 启动支持与 newcons 控制台 UTF-8/宽字符改造）；PC-BSD 周报第 27 期（PBI/AppCafe 并入 pkgng 后端、新增评分与社区页）；Atlantic.Net 博文“使用 FreeBSD 的十个理由”；BSD Magazine 2014 年 4 月刊；BSDTalk 240（Will Backman 采访 George Neville-Neil 谈 NTP、时间保持与精密时间协议 PTP）；Chisnall 谈及 Netflix 修复网络栈时可查 SVN 日志为证。（BSD Now EP36，[163.04-838.66]，L2）
 
 **史观**：
 
+- 总纲10 动手者创造历史：portsec 团队清一色志愿者，“这不是有人拿薪水整天干的事”，工作内容是阅读 ossec 与 full disclosure 邮件列表、比对上游补丁、为 25000 个 ports 逐个补写 CPE 标签与 VuXML 条目；Felder 自陈缺乏重型编程背景，以分类、更新、移植与文档化等方式贡献。生态的安全运转依赖的恰是这类默默分诊的动手者，而非聚光灯下的架构师，贡献者谱系必须为动手者立传。（BSD Now EP134，[3993.98-4066.46]，L1）
+- 总纲8 本体论上各方平等：针对 TJ 的默认值修改清单，Allan 的回应是“无论选哪个，总有人不高兴”：嵌入式设备唯有 AES-CBC 具备硬件加速，桌面用户不在乎内核转储，生产环境要求 ABI 恒定，每项默认都是特定受众价值排序下的局部最优；sysctl 安全加固项（如 TCP blackhole）被指并不真正提升安全性。默认值之争不存在超然的客观解，只存在不同处境下的平等权衡，历史写作应呈现权衡的分布而非裁决胜负。（BSD Now EP134，[1525.92-1536.92]，L1）
 - 总纲10 动手者创造历史：总纲10 动手者创造历史：Steve Wills 以 mentoring 与 PR 处理为手段，把使用者转化为动手参与项目的开发者。（BSD Now EP57，[2537.84-2561.92]，L1）
 - 总纲6 和解优于斗争：总纲6 和解优于斗争：面对失当提交，社区以纠正与修复而非惩罚为主线。（BSD Now EP57，[2584.68-2620.58]，L1）
 - 总纲9 经验优先：总纲9 经验优先：committer 与 mentor 的资格认定建立在实际补丁质量与项目经验之上。（BSD Now EP57，[2455.54-2508.64]，L1）
 
 **辨析**：
 
+- bitcoinus.net 文章以 FreeBSD 的核心团队—committer—contributor 金字塔对照比特币社区治理失灵，称 BSD “对新鲜目光开放”且不因小分歧频繁硬分叉，并转引评论称“高智商不足以让团队成功，你需要合理权衡、协作、 welcoming 与易于合作”；Allan 补充 FreeBSD 模式真正的韧性在于领导层更迭的常态化，core team 每两年由持提交权者全体选举产生九人。该文属二手立场化概括，其“民主决策”“无硬分叉”等表述忽略 BSD 各分支本身即历史分叉的产物；且文章将复杂社区动力学化约为文化态度问题。　[存疑脚注] 转写中引文人名 Brian Marmstrom 与站点名 bitcoinus.net 均未经旁证，专名存疑；BSD“无硬分叉”论断与四分五裂的分支史相悖，仅为文章立场（BSD Now EP134，[5548.16-5810.02]，L2）
+- TJ《A Lesson in Port Faults》指控 FreeBSD 基本系统“故意背离 upstream 以保兼容或性能”，Allan 逐条辩护：ABI 承诺使 10 系列内 OpenSSH 行为不可变，upstream 移除 DSA 密钥与 AES-CBC 而部分嵌入式平台仅对 AES-CBC 有硬件加速，强行跟进等于在点版本升级中锁死用户；HPN 补丁对 ZFS over SSH 收益显著但因缺陷暂驻 ports，upstream 八年后才提高通道上限，不能以事后改进否定当年集成；None 密码方案从未能用于交互会话，认证始终加密，实测 ChaCha20-Poly1305 约 1.3 Gbps、AES-NI GCM 约 5 Gbps、None 约 6.3 Gbps（受限于 MAC）；OpenSSL 旧版支持困境源于上游提前终止维护而非 FreeBSD 惰性，Red Hat 亦同处此境。 defaults 是复杂工程约束下的权衡，不能简单以“背离上游”定性。（BSD Now EP134，[762.68-1160.66]，L1）
 - Steve Wills 表示无法给出当年新增 committer 的精确数字，仅称持续有人加入，具体统计需另查。　[存疑脚注] 新增 committer 数量为当事人模糊记忆，无当期精确数据（BSD Now EP57，[2632.10-2662.70]，L4）
 - Chisnall 对 GPL 与 BSD 许可影响厂商参与方式的结构性对比（开发者立场陈述，可与书内其他核心开发者立场互证）：GPL 如同围绕代码的“防火墙”，企业以巨型抽象层隔离专有部分与 GPL 部分确保互不接触，日后即便想上游化，其厚重的抽象层代码也非项目所欲；BSD 许可下企业先直接取用代码构建专有产品，一两年后因维护合并成本上升而主动请求将其代码收入上游树——“我们喜欢功能，我们收下了”。Netflix 为典型案例：愿意上游化几乎全部更改，但其中仅针对其特定负载的几百行优化项目方暂不接收，留待未来出现同类需求再行整合。此亦为 Chisnall 推动无 GPL 可用基本系统以争取各类企业参与的哲学依据。（BSD Now EP36，[1643.78-1758.94]，L1）
 
 **文献**：
 
+- [BSD Now EP134] Pennington J. BSD Now: 134: Marking up the Ports tree[EB/OL]. (2016-03-24)[2026-08-15]. https://www.bsdnow.tv/134.
 - [BSD Now EP57] Pennington J. BSD Now: 57: The Daemon's Apprentice[EB/OL]. (2014-10-01)[2026-08-15]. https://www.bsdnow.tv/57.
 - [BSD Now EP36] Pennington J. BSD Now: 36: Let's Get RAID[EB/OL]. (2014-05-07)[2026-08-15]. https://www.bsdnow.tv/36.
 

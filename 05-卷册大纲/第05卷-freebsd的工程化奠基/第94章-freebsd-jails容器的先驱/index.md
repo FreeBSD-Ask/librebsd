@@ -108,7 +108,7 @@ volume: 05
 本章所书皆是形式主义化的重构，并非对“真实的 BSD 历史”的呈现。本章的章节划分、事件选择、叙事策略、因果归因——全部基于编纂者的哲学设定。本章承认这些局限，不声称客观或中立，欢迎被更诚实的叙事所超越。
 
 <!-- PODCAST_REVIEW v20260829 -->
-<!-- 语义复核范围：BSD Now EP513、BSD Now EP499、BSD Now EP406、BSD Now EP374、BSD Now EP329、BSD Now EP321、BSD Now EP640、BSD Now EP293、BSD Now EP276、BSD Now EP223、BSD Now EP631、BSD Now EP107、BSD Now EP84、BSD Now EP616、BSD Now EP24、BSD Now EP7（共 16 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
+<!-- 语义复核范围：BSD Now EP513、BSD Now EP499、BSD Now EP406、BSD Now EP374、BSD Now EP329、BSD Now EP321、BSD Now EP640、BSD Now EP293、BSD Now EP276、BSD Now EP223、BSD Now EP631、BSD Now EP149、BSD Now EP139、BSD Now EP107、BSD Now EP84、BSD Now EP616、BSD Now EP24、BSD Now EP7（共 18 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
 
 **要点**：
 
@@ -162,6 +162,10 @@ volume: 05
 - 以 devd 规则按 USB 厂商与产品 ID 建立符号链接，并把链接置于 jail 根目录而非 /dev，可将设备以稳定名称传入 FreeBSD jail。（BSD Now EP631，[921.84-1316.76]，L1）
 - Chris Siebenmann 澄清 ZFS 快照并非完全不可变，快照元数据会随独有空间统计、快照删除与重命名而更新，只有文件系统状态被冻结。（BSD Now EP631，[1321.58-1407.46]，L1）
 - 将 PeerTube 从 Debian 迁移到 FreeBSD 的过程以 UFS 而非 ZFS 作为客户机文件系统，以避免在 OmniOS 的 ZFS 上嵌套 ZFS。（BSD Now EP631，[1417.28-1794.48]，L1）
+- 本期核心为长期推动 bhyve 的 Michael Dexter 之当事人口述：MeetBSD 2010 圆桌认定 Xen 许可证与内核级复杂度不适于 FreeBSD，与会者得出“我们需要一个 hypervisor”（2641.42）的结论；2011 年 BSDCan 开发者峰会上 Neel Natu 与 Peter Grehan 展示尚属厂商内部项目的 bhyve，Dexter 随即以“零号用户”身份编写自动化脚本、暴露串口与 virtio 缺陷，促成其按期进入 FreeBSD 10 而非推迟到 11 或 12。（BSD Now EP149，[2585.26-2751.50]，L1）
+- 新闻与动态部分构成 2016 年年中的 BSD 生态横截面：bhyve 的 UEFI/GOP 图形支持于录制前两日合入 FreeBSD CURRENT 并将随 11.0-BETA1 发布（7505.39-7554.56）；FreeBSD 基金会六月月报披露 Peter Holm 压力测试套件十年发现约 1400 个内核问题、Konstantin Belousov 复核其中 910 个；Solaris /proc 之父 Roger Faulkner 逝世，Bryan Cantrill 在 Hacker News 追忆其 pgrep 与师承轶事；RetroBSD 等项目将 BSD 2.11 与 4.4 移植至 PIC32 微控制器。（BSD Now EP149，[7505.39-7554.56]，L2）
+- Brooks Davis 在亚洲 BSDCon 受访时自述，CHERI 项目为支持自研研究处理器而维护 FreeBSD 的分支（转写误作 CherryBSD），在 MIPS64 指令集基础上增加 ISA 扩展以实现空间内存安全，并辅以时间内存安全框架；在改动最深的纯能力模式下缓冲区溢出被消解，越界将触发硬件异常而非任意行为，编译后的 SSH 理论上不应再有缓冲区溢出；项目由 DARPA 资助、至受访时已进行约五年，因既有 MIPS32 FPGA 设计而选择 MIPS64，并向 RISC-V 与标记内存方向延展。（BSD Now EP139，[1444.10-1541.46]，L1）
+- Davis 阐明 CHERI 的工程路线：目标是将成果合回 FreeBSD 主线，当前已先行合并纯正确性修复，如以 uintptr_t 替代以 long 操纵指针的历史习惯写法，待流片后将更激进地合并；移植 Linux 内核的难点恰在其内核大量以 long 操纵指针；改造成本高度依赖代码结构，将 TCP 分组缓冲区能力化因编码风格而成为最坏情形，涉及约五千行改动，而具有良好 typedef 抽象的代码仅需更改类型即可完成。（BSD Now EP139，[1642.10-1798.42]，L1）
 - 本期核心受访者 Aaron Poffenberger 为休斯顿软件开发者，自述其 BSD 之路：1995 年前后朋友创办的 ISP 与相邻 FreeBSD 站点共用一条 T1 线路，此后在任职公司受 FreeBSD 前核心团队成员 Rich Murphy 以 Walnut Creek CD 相引，2002-2003 年因 OpenBSD 3.3 十分钟安装即成与二进制包需求由 Gentoo 转投 OpenBSD 并沿用至今，又因听本节目而决意在 Texas Linux Fest 面向 Linux 用户开讲。（BSD Now EP107，[1338.88-1576.28]，L1）
 - 本集新闻以 Wired 报道收束于 FreeBSD 的产业纵深：WhatsApp 以约 50 名工程师支撑 9 亿用户，1980 年代 Ericsson 为电话系统设计的 Erlang 配合 FreeBSD 网络栈维持数百万并发 TCP 连接，被 Facebook 收购后底座未变；主持人并补充 Facebook Messenger 转用 Haskell，Google 与 Mozilla 以 Go 与 Rust 追逐同类部署灵活性。（BSD Now EP107，[1094.84-1224.04]，L2）
 - 技术动态层面，主持人转述 Alexander Motin 已将 CTL 高可用实现提交至 FreeBSD 11：双头存储控制器经自定义 TCP interlink 协调磁盘访问，设 active-unavailable、active-standby、active-active、active-proxy 四种模式，因协议不含认证而仅限内部链路使用；早年仅有纸面设计，落地由此次提交完成。（BSD Now EP107，[562.04-792.60]，L2）
@@ -219,6 +223,9 @@ volume: 05
 - Dr. Brian Robert Callahan 博客 QBE ARM64 窥孔优化系列。（BSD Now EP631，[286.40-737.76]，L1）
 - Chris Siebenmann 博客 ZFS snapshots aren't as immutable as I thought。（BSD Now EP631，[1321.58-1407.46]，L1）
 - 关于 FreeBSD jail 设备稳定名称与 PeerTube 迁移的两篇博客。（BSD Now EP631，[921.84-1794.48]，L1）
+- 访谈内嵌多条可回溯的一手史料：Dexter 保存的旧式 Unix 光盘与 CSRG 档案实物（1795.82-1806.61）、其维护于 multiplicity.bsd.lv 的 Xen/NetBSD 文档与 multiplicity 脚本、投向 AsiaBSDCon 与 BSDCan 的 SMART 工具设计论文，以及他转述的 Robert Watson 关于系统调用包装器并发缺陷的 WOOT 论文（2220.21-2227.67），可供 bhyve 与 jails 相关章节的口述史与文献双轨考据。（BSD Now EP149，[1795.82-1806.61]，L1）
+- 本期宣介的《FreeBSD Journal》2016 年 3-4 月号以操作系统教学为专题，含 George Neville-Neal 与 Robert Watson 论以追踪、分析与实验讲授 FreeBSD，Brooks Davis 论 CHERI 构建安全可信计算基座，Kirk McKusick 的快速文件系统简史，以及对核心团队成员、发布工程与副安全官、Netflix 高级开发者 Gleb Smirnoff 的访谈，另载 FOSDEM BSD 开发者房间与台北 PortsCamp 会议报告，是同期一手文献的集中索引。（BSD Now EP139，[918.10-1053.86]，L2）
+- 本期援引的代码仓库与社区一手材料包括：FreeBSD head 分支合入的磁盘 I/O 限额实验性提交，新增按读写字节与 IOPS 计的四种 RCTL 资源，主持人当场宣读提交说明并呼吁测试 VFS 与 VM 部分；NetBSD 在 amd64 默认启用 ASLR 的提交与 DragonFly BSD 对 Bay Trail 挂起的修复；Bryan Cantrill 关于 jails 与 zones 历史的演讲及其配套学术论文；Chris Siebenmann 关于 Unix 文件持久性的博客文章；以及 John、Thomas、Ben、Bryson、Adrien 等多位读者来信。（BSD Now EP139，[2756.71-2801.36]，L2）
 - 该期可直接追溯的一手材料包括：受访者置于 GitHub 并以知识共享许可开放的演讲幻灯片（末页附嵌入素材授权清单）、Rich Murphy 展示过的 Walnut Creek CD、OpenBSD misc 邮件列表中 Soekris 4501 启动问题串、FreeBSD 仓库中 CTL 高可用提交与配套文档更新、OpenBSD current 快照默认启用 GPT 的提交、Ted Unangst 关于可复现构建的博客及其与 Debian 社区的往来回应、Wired 的 WhatsApp 报道与 VBSDCon 主题演讲视频。（BSD Now EP107，[2283.72-2306.68]，L1）
 - 一手史料包括 pkg 作者 Baptiste Daroussin 本人口述访谈（提及 Developer Summit 报告与 AsiaBSDCon 上在 Intel NUC 演示 Xen 运行 Windows XP 虚拟机的现场经历）、OpenZFS 办公时间约一小时视频问答（Matt Ahrens、George Wilson、Justin Gibbs 等当事人到场）、OpenBSD ports 提交日志的 OK 署名惯例与 FreeBSD 提交日志的 Reviewed by、Approved by 署名实例、OpenBSD 开发者撰写的教学时刻博文两篇、NetBSD 7 的 AsiaBSDCon 闭幕进展报告与 EuroBSDCon 2014 工具链演讲链接。　[存疑脚注] 转写将访谈者姓名录为 d'Arson/Therasson，按 pkg 作者身份复原为 Baptiste Daroussin；博文作者转写为 Brian Kala，疑指 Brian Callahan，待核。（BSD Now EP84，[1504.72-2218.78]，L1）
 - 本期为 FreeBSD 基金会执行董事 Deb Goodkin 与早期创始人 Justin Gibbs 的口述访谈，属当事人一手自述；访谈提及早期商标转让与基金会自筹资金的历史细节。　[存疑脚注] 转写将商标原持有人写作 Gwyn River，疑为 Walnut Creek 的语音识别讹误，须以基金会档案核实。（BSD Now EP616，[420.22-528.70]，L1）
@@ -264,6 +271,10 @@ volume: 05
 - 总纲5 没有必然性，只有偶然性：总纲5 没有必然性，只有偶然性：基本失效模式定理强调复杂系统运行状态由具体故障与补偿关系决定，而非设计意图的必然实现。（BSD Now EP631，[138.14-224.48]，L1）
 - 总纲10 动手者创造历史：总纲10 动手者创造历史：笔记本作者通过动手排查定位 Nvidia 与 DRM 驱动文件覆盖问题，而非依赖文档结论。（BSD Now EP631，[874.40-908.32]，L1）
 - 总纲25 逻辑是形式主义而非世界本身的结构：总纲25 逻辑是形式主义而非世界本身的结构：ZFS 快照的不可变是概念化标签，其元数据实现仍随操作可变，说明概念与实现之间的形式主义距离。（BSD Now EP631，[1324.62-1407.46]，L1）
+- 总纲10 动手者创造历史：Dexter 反复把项目史还原为具体的动手者时间：bhyve 得以按期进入 FreeBSD 10 靠的是“有人够笨、肯反复弄坏它并连日执行 build world”（2897.41-2906.52），其本人的贡献是孩子入睡后深夜 11 点至凌晨 2 点的志愿者工时；ZFS 重建工具、SMART 工具与用户组运营同样寄身于无名个人的业余时间，而非机构化的台前叙事。（BSD Now EP149，[3102.92-3113.45]，L1）
+- 总纲5 没有必然性，只有偶然性：当事人把个人史与项目史的关键节点全部系于偶发事件：入坑源于 CS101 机房恰好是一台 BSD 4.3 系统的“绝对的偶然”（1704.83-1735.29），Rod Grimes 重返 Release Engineering 则起于大雪改期使其恰好顶替 Dexter 登上 BSDCan 讲台；此处没有必然规律，只有具体人物在具体条件下的相遇与后续的持续经营。（BSD Now EP149，[1704.83-1735.29]，L1）
+- 总纲6 和解优于斗争：CHERI 的混合过渡模型体现了新旧范式之间的和解路径：历史上的能力系统虽能杜绝缓冲区溢出与对象误用，却缺乏向后兼容故事，而 CHERI 的处理器可不加修改地运行常规混合二进制，内核改动保持很小，再以注解方式逐指针升级为受边界检查的能力，形成从未修改 MIPS 代码到纯能力代码的谱系，使新硬件范式不以致断裂的方式替代旧生态。（BSD Now EP139，[1568.26-1629.54]，L1）
+- 总纲22 知识注定过时：主持人转述的博客文章以 OpenBSD 为例主张软件知识必然老化：与 Unix 同龄的手册页处理被重写得更简单安全，doas 以覆盖 sudo 的绝大多数使用场景而更易用更安全，1993 年加入基础系统的工具同样可以成为重写候选；同时重写须有节制，不应效仿 JavaScript 生态的频繁重造，而应瞄准 Hadoop 或浏览器这类层层叠加的臃肿系统，简化重写由此成为技术史上持续发生的常态而非线性进步的注脚。（BSD Now EP139，[2594.16-2741.76]，L2）
 - 总纲3 不存在进步，只有权力再分配：受访者以 Jails 为例向 Linux 听众论证：这项 1997-1998 年为 ISP 隔离用户而生的 FreeBSD 技术成熟二十年，而 Linux 世界直到 Docker 兴起才重拾进程隔离话题；同一技术的能见度随生态话语权更迭而消长，提示技术史书写不应以先进与否立论，而应追踪解决方案与话语权之间的错位流转。（BSD Now EP107，[1876.42-1934.52]，L1）
 - 总纲8 本体论上各方平等：受访者同时立下面向 Linux 社区演讲的伦理底线：不可怀敌意赴会，须承认选择 Linux 有坚实的技术理由，以 drop-in 替代场景展示 BSD 价值而非宣布对方选择错误；生态比较史的书写同样不应滑向贬损叙事，各系统在本体论层面并无高下。（BSD Now EP107，[2309.86-2431.36]，L1）
 - 总纲21 革命与改革是历史方法论的分歧：pkg base 以改革姿态出现：不改写 base 与第三方的结构边界，仅替换升级工具链，用最小的本体论让步换取运维层面的变革；对照听众的 Linux 化疑虑可见，工程社区靠明确区分这是换工具而非换结构来消解变革阻力。（BSD Now EP84，[3919.82-3985.84]，L2）
@@ -297,6 +308,10 @@ volume: 05
 - 编译器的可调试性结论基于特定版本（GCC 5.2、Clang 3.6 等）的示例，随版本演进可能改变，且文章作者所属公司售卖崩溃报告产品，存在利益关联。　[存疑脚注] 结论依赖具体编译器版本且作者存在商业利益关联（BSD Now EP223，[803.04-822.92]，L4）
 - 转录将 Raymond Chen 所属微软博客名称与若干命令参数出现错词，具体规则与命令须以原文核验。　[存疑脚注] 命令与规则细节存在转写歧义，须以原文核验（BSD Now EP631，[132.46-143.76]，L4）
 - PeerTube 迁移文章作者在转录中记作 Tom Fatigue，疑为主持人 Tom Jones 或他人，署名须以原文核验。　[存疑脚注] 作者署名存在转写歧义（BSD Now EP631，[1417.28-1432.32]，L4）
+- fork 的利益结构辨析：八十至九十年代 NetApp、Juniper、Nokia、Isilon 等商业 fork 曾坐享 BSD 红利，十年后却陷入缺 SMP、缺 64 位与新驱动的维护赤字；社区侧则呈现单点悖论——做得差无人可用，做得好反使用户系于可能消失的维护者，Dexter 以 Brexit 喻 fork 的隐性代价，并主张以分支或 branch 而非整体分叉承载实验性工作。　[存疑脚注] 商业 fork 现状、Miros 与 HardenedBSD 定性等均系 Dexter 单一口述，无独立文件佐证；专名在转写中多处失真，引用前须核校。（BSD Now EP149，[5844.31-5948.60]，L4）
+- 转写质量辨析：全篇为双音轨交错、时间戳乱序，专名系统性失真——bhyve 一律转作 “Beehive”（2703.93-2712.87），Xen 作 “Zen”，NetBSD 作 “NetVSD”，Kristaps Dzonsons 作 “Christoph Johnson”，Matt Ahrens 作 “Matt Aaron”；各段语义仍完整可辨，但任何人名、项目名与命令名在引用前必须回校原音频与当期节目笔记。　[存疑脚注] 全部专名系转写音译误差，需对照原节目音频与节目 shownotes 逐项核校后方可进入考据链。（BSD Now EP149，[2703.93-2712.87]，L5）
+- 围绕 FreeBSD 缺少 ASLR 的争议，Allan Jude 以亲历者身份提出保留意见：ASLR 十年前价值显著，如今其真实防护效用有限，开发者峰会上甚至有“你需要它更多是出于营销目的”（3645.72-3649.88）的判断，并称其使用 FreeBSD 十五年未觉其缺；此辨析提示安全特性的工程价值、社区预期与生态形象之间存在张力，NetBSD 已在 amd64 默认启用而 FreeBSD 相关实现仍在 current 落地。（BSD Now EP139，[3641.28-3668.64]，L1）
+- 主持人转述 Chris Siebenmann 对文件持久性的考察：崩溃后博客评论丢失源于程序未保证目录项落盘，仅对文件调用 fsync 在 ext4 等传统文件系统上并不足够，新文件可能“文件仍在，却不在目录中，因而无处可寻”（186.92-192.84），正确做法因操作系统、内核与文件系统而异，作者甚至求助于 os.sync 这样的全局同步；这一案例暴露了 Unix 写路径持久性语义的系统性含糊，并以写时复制文件系统的崩溃一致性为对照（参见 417.54-477.18 段）。（BSD Now EP139，[162.20-244.78]，L2）
 - 主持人转述 Ted Unangst 对可复现构建的限定：它不防 Shellshock 类代码级漏洞，也无法对抗 trusting trust 式编译器后门——若编译器全域被攻陷，可复现性只会忠实复现后门；其结论是可复现构建是工具箱中的一件工具而非安全终点，这对 Debian 主导的可复现构建热构成边界辨析。（BSD Now EP107，[4014.74-4277.72]，L2）
 - 是否 Linux 化的分歧被摆上台面：听众来信以 base 与附加软件的清晰区隔正是 FreeBSD 区别于任意包集合式 Linux 发行版之处为由质疑打包化方向；主持人与访谈者反复申明 base 与第三方以 usr/local 为界的结构不变、world 与 kernel 仍一体化开发，pkg 只是升级与分发载体。争议实际落在工具链变更与本体论边界的混淆上。（BSD Now EP84，[3885.96-3985.84]，L2）
 - 企业存在与治理文化的双重辨析：主持人断言 Juniper 设备几乎皆基于 FreeBSD、多数 Cisco 防火墙亦然，PF 已内置于 OS X 与 iOS，以此论证 BSD 技能的职场价值；另以 OpenBSD 提交日志末尾的 OK 署名对照 FreeBSD 的 Reviewed by 与 Approved by 机制，展示两项目代码评审治理的同构与差异。　[存疑脚注] 多数 Cisco 防火墙基于 FreeBSD 的说法为主持人单方断言，本期未给出处，未经交叉验证；Juniper 基于 FreeBSD 属可查事实但同样未当期举证。（BSD Now EP84，[4197.66-4389.78]，L2）
@@ -319,6 +334,8 @@ volume: 05
 - [BSD Now EP276] Pennington J. BSD Now: Episode 276: Ho, Ho, Ho - 12.0 | BSD Now 276[EB/OL]. (2018-12-13)[2026-08-15]. https://www.bsdnow.tv/276.
 - [BSD Now EP223] Pennington J. BSD Now: 223: Compile once, debug twice[EB/OL]. (2017-12-06)[2026-08-15]. https://www.bsdnow.tv/223.
 - [BSD Now EP631] Pennington J. BSD Now: 631: Endorphin Rush[EB/OL]. (2025-09-25)[2026-08-15]. https://www.bsdnow.tv/631.
+- [BSD Now EP149] Pennington J. BSD Now: 149: The bhyve has been disturbed, and a wild Dexter appears![EB/OL]. (2016-07-06)[2026-08-15]. https://www.bsdnow.tv/149.
+- [BSD Now EP139] Pennington J. BSD Now: 139: Cheri-picking BSD[EB/OL]. (2016-04-27)[2026-08-15]. https://www.bsdnow.tv/139.
 - [BSD Now EP107] Pennington J. BSD Now: 107: In their midst[EB/OL]. (2015-09-16)[2026-08-15]. https://www.bsdnow.tv/107.
 - [BSD Now EP84] Pennington J. BSD Now: 84: pkg remove freebsd-update[EB/OL]. (2015-04-08)[2026-08-15]. https://www.bsdnow.tv/84.
 - [BSD Now EP616] Pennington J. BSD Now: 616: FreeBSD Foundation Interview[EB/OL]. (2025-06-19)[2026-08-15]. https://www.bsdnow.tv/616.
