@@ -58,3 +58,32 @@ Jude 在 BSD Now 多期节目与 AsiaBSDCon 2018 演讲中自述其访华交流�
 本时期暂未发现公开采访来源，留待后续补充。完整检索过程见 [20260724_ch143-interview-survey.md](../../../原材料/研究/考据记录/20260724_ch143-interview-survey.md)。
 
 ---
+
+<!-- PODCAST_REVIEW v20260829 -->
+<!-- 语义复核范围：BSD Now EP132（共 1 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
+
+**要点**：
+
+- Scale Engine 的技术与商业模式史：为解决 Identi.ca（Laconica 软件）扩展故障，以 FreeBSD 加 nginx 反向代理 Apache 自建栈（2005 年即从课堂学到 nginx 反代），随后以 BSD accounting 按 CPU 时间计费，将每个客户的 PHP 进程置于独立 jail 与专属用户下统计用量，并安装 Google 的 MySQL 按用户统计查询补丁（后演入 MariaDB），对 SELECT 与 INSERT 差别定价，形成按实际资源消耗计费的托管模式。（BSD Now EP132，[1381.98-1579.50]，L1）
+- 生产环境 BSD 技术栈操作细节：以 jails 整体迁移业务，在数据中心搬迁中借 ZFS 增量复制与快照差量回传把停机压缩到秒级；以 accept filters 让内核代收 80 端口连接、待 HTTP 请求完整才交付 Web 服务器以提升扩展性；由 ports/portmaster 转向 Poudriere 自编译 pkg 包统一推送，并以 sysrc 修改配置；以 IPFW 与 dummynet 做每流限速保护 PC-BSD 镜像带宽；设想以 ZFS boot environments 推送 FreeBSD 11 快照实现受控更新且不覆盖各机 /etc。（BSD Now EP132，[1971.12-2306.68]，L1）
+
+**史料**：
+
+- Allan Jude 亲述 BSD 入门与创业史：1998 年以 14.4kbps 拨号接入互联网，为自架 IRC 服务器下载 ircd 压缩包，因其中无可执行文件而辗转购得 shell 账户，首个 shell 恰为 FreeBSD；2000 年代初参选安大略省面向高中生的 Summer Company 创业计划未获资助，由父母借资一千美元，以 AMD 1700+ 组装服务器托管于本地有线公司创办 Shell Fusion，首月即盈利；其自述当年弃 Linux 选 FreeBSD 的理由是“如果我用 Linux，就会被 root 掉——当时就是那样的环境”（766.70-772.26），自此自 2002 年起以职业 FreeBSD 系统管理员为业。（BSD Now EP132，[393.96-833.28]，L1）
+- Allan Jude 回忆其 FreeBSD 文档贡献起点：Scale Engine 首台 ZFS 服务器因硬件与配置选择失当而受挫，他认为 ZFS 文档过于稀疏，遂于 2013 年赴 BSDCan 的火车途中开始为 FreeBSD Handbook 撰写 ZFS 章节，并经 Dru Lavigne（转写讹作 Drew Levene）在 BSDCan 晚间 doc sprint 中习得正式文体与提交格式，数月内基本完成 Handbook 的 ZFS 章，最终在 BSDCan 2014 获得 doc commit bit。（BSD Now EP132，[1087.02-1164.76]，L1）
+
+**史观**：
+
+- 总纲5 没有必然性，只有偶然性：Scale Engine 从网站托管转向 CDN 与直播视频并非战略设计，而是 95 位计费压力、德国用户抱怨下载缓慢、瑞典电台临时提出直播 DJ 等一连串偶然客户事件倒逼的产物，受访者自言“不久之后，我们便发明了一个 CDN”（1648.70-1653.00）；基础设施形态由偶然事件串联而成，而非目的论规划的实现。（BSD Now EP132，[1597.56-1818.80]，L1）
+- 总纲10 动手者创造历史：Allan Jude 强调 bootloader 与 boot environment 相关工作“并非为工作所做……甚至不是我自己会用上的东西”（2901.50-2916.62），而是为了让所有用户可用，他自己并不加密笔记本磁盘；结合其以写 Handbook、修 gpart、改造 syslog 配置等小步贡献进入开发者行列的轨迹，可见社区演进由动手者的持续具体劳作推动，而非仅由台前领袖与重大版本定义。（BSD Now EP132，[2901.50-2925.58]，L1）
+
+**辨析**：
+
+- 该期约百台服务器中九成三为 FreeBSD，残余 Linux 机器的成因是专有 Java 转码软件依赖原生 Linux 共享库，且其许可检测在 Linux 模拟层下经网络接口取 MAC 地址失败并伴随 IPv6 行为异常；此为当事人单方口述的运维内部数据与故障细节，服务器规模与比例缺乏独立佐证，引用时应注明出处为播客访谈。（BSD Now EP132，[1892.28-1944.64]，L1）
+- 受访者推测 FreeBSD ports 中已包含 Intel 媒体加速相关库，若有时间试验或可让 FFmpeg 在 FreeBSD 上把转码卸载至 Intel GPU，从而摆脱专有转码软件对特定 CentOS 版本（7.1 可用而 7.2 不可用）的绑定；此说仅为访谈现场的口头推断，未附实现步骤、版本号或第三方验证。　[存疑脚注] 单源现场推测，无实现证据与多源交叉验证，仅作线索记录（BSD Now EP132，[2370.24-2404.16]，L4）
+
+**文献**：
+
+- [BSD Now EP132] Pennington J. BSD Now: 132: Scaling up with BSD[EB/OL]. (2016-03-08)[2026-08-15]. https://www.bsdnow.tv/132.
+
+<!-- /PODCAST_REVIEW -->

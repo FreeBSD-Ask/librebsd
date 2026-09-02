@@ -49,7 +49,7 @@ volume: 06
 本章所书皆是形式主义化的重构，并非对“真实的 BSD 历史”的呈现。本章的章节划分、事件选择、叙事策略、因果归因——全部基于编纂者的哲学设定。本章承认这些局限，不声称客观或中立，欢迎被更诚实的叙事所超越。
 
 <!-- PODCAST_REVIEW v20260829 -->
-<!-- 语义复核范围：BSD Now EP194、BSD Now EP193、BSD Now EP186、BSD Now EP20（共 4 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
+<!-- 语义复核范围：BSD Now EP194、BSD Now EP193、BSD Now EP186、BSD Now EP110、BSD Now EP20（共 5 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
 
 **要点**：
 
@@ -65,6 +65,10 @@ volume: 06
 - Philipp（OpenBSD 前提交者）回顾 2002 年 Karlsruhe hackathon 参与 PF 测试与文档工作，实现接口分组并拆分 pf.c 中的 IOCTL 代码。（BSD Now EP186，[3969.0-4226.0]，L1）
 - Philipp 描述 OpenBSD 路由域（rdomain）为单机上的多个虚拟路由器，可用于多租户防火墙与相同 IP 复用的隔离测试。（BSD Now EP186，[4381.84-4761.18]，L1）
 - 2004 年 PF hackathon 曾发现用户态 32 位与内核 8 位规则编号溢出导致的隐蔽错误，需超过约 256 条规则才触发。（BSD Now EP186，[4227.0-4285.88]，L1）
+- Benno Rice 自述其 FreeBSD 履历：1995 年在阿德莱德的 ISP 以路由器与新闻服务器场景接触 FreeBSD，师友圈中有 Mark Newton 与 Mike Smith；2000 年互联网泡沫失业间隙自购初代 iMac 发起 PowerPC 移植并由此获得提交权，此后做过 ARM 尝试与需自写 AAL5 层的 PCI ADSL 卡驱动；2013 年经 IRC 频道中 Jeff Roberson 的招聘信息加入 EMC Isilon，成为带薪从事 FreeBSD 开发的工程师。其东家的集群存储平台以最少三节点、InfiniBand 后端 fabric 与前端 NFS/SMB/HDFS 对外提供单一可扩展文件系统，操作系统 1FS 为深度修改的 FreeBSD，出货版本长期基于 FreeBSD 7 世代并正完成向约 10.0 时期 head 的五年跨度升级。（BSD Now EP110，[1750.14-2093.00]，L1）
+- Benno 总结构建 FreeBSD 衍生产品的核心教训：长期停留在 stable 分支的企业在每个版本迁移时须重移植全部私有补丁，Isilon 曾因内部 InfiniBand 栈建在 FreeBSD 7 的 L2 路由代码上而被 7 至 8 的代码变更摧毁，逐 stable 升级的路径趋于不可行；其结论是只要自备充足的发布工程与测试，直接跟随 head 反而更优，既能在单一发布周期内回馈上游修复与特性、摊薄维护成本，也便于下游开发保持同步；团队下一步计划将自身 diff 逐项归入四类——因知识产权不能上游、应立即上游、不上游自留、可上游重写后取回。另披露与 Netflix 的 Scott Long、Lawrence Stewart、Warner Losh 在网卡与 HBA 驱动、TCP 栈性能改进及防回归测试上的协作，EMC 与 Netflix 无竞争关系使此类跨公司协作获得管理层支持。（BSD Now EP110，[2124.22-2798.50]，L1）
+- 虚拟化与图形栈进展：Peter Grehan 于 10 月 4 日向 bhyve 提交 Windows 客户机支持并引入含 CSM 的 UEFI 栈，经重打包注入无人值守安装配置的 Windows ISO、以 VNC 或 RDP 弥补缺失的图形能力完成安装；同一 UEFI 栈使 SmartOS、OpenIndiana、OmniOS 可作为 Illumos 客户机运行，为 FreeBSD 侧 ZFS 开发提供上游提交前的编译测试环境。同期 FreeBSD 合入 Xen 4.6 相关头文件（新增 ARM 支持并与 aarch64 虚拟化卸载工作并行）、LLVM/Clang 3.7.0、支持 Radeon 与 Ivy Bridge 起代 Intel GPU 的 OpenCL ports（需 KMS 驱动）；OpenBSD 开发分支落地 Broadwell GPU 初步支持，DRM 对齐 Linux 3.14.52（Mark Kettenis），Dev Summit 图形工作组预期年底前交付 Haswell 图形支持。（BSD Now EP110，[727.76-1099.88]，L2）
+- ZFS 运维实践反馈：听众在 4K 盘上以 512B 伪容量（GNOP 手法时代）建立 RAIDZ2 池且未启用压缩，压缩属性可按数据集增量开启而无需重建，但 512B 块尺寸无法就地修正、必须重建池并临时转移全部数据；主持人建议以 zfs send/receive 取代 rsync 完成迁移，因其保留快照且可在接收端重设压缩属性。Alan 自述 30 余块盘混用 512B 与 4K 的同类教训，并总结“写出一个糟糕的实现，往往是让别人写出更好实现的最好办法”（4799.32-4804.14），其安装器的 ZFS 支持正是由粗陋原型起步引来协作重写。（BSD Now EP110，[5070.18-5478.22]，L1）
 - Neel Natu 与 Peter Grehan 在 NetApp 期间受 KVM 先例启发，思考为何 FreeBSD 没有 hypervisor；2010 年 11 月 MeetBSD 上提出构想，获 NetApp 支持后逐步开源。（BSD Now EP20，[1080.00-1205.18]，L1）
 - bhyve 名称意为 BSD Hypervisor，由 Joe Catterdon 命名；初期目标是资源分区型 hypervisor，vCPU 绑定整核、内存不做虚拟化，后演进为支持虚拟化 CPU、内存与 virtio 设备的通用实现。（BSD Now EP20，[1184.42-1301.34]，L1）
 - 截至访谈，bhyve 可运行 FreeBSD（回溯至 7.0）、Linux 与 OpenBSD，Illumos 因实时钟与时间戳计数器的紧校准问题尚未完成；AMD 支持在项目分支中并计划于 10.1 合并。（BSD Now EP20，[1332.70-1553.78]，L1）
@@ -84,6 +88,7 @@ volume: 06
 - AsiaBSDCon 2017 演讲幻灯片与日程（BSD Now EP186，[432.94-560.68]，L1）
 - Philipp 访谈自述（BSD Now EP186，[3969.0-5733.62]，L1）
 - OpenBSD PF 邮件列表与 CVS 历史（BSD Now EP186，[3969.0-4285.88]，L1）
+- 本期可索引的一手史料：Alan 的 EuroBSDCon 2015 亲历口述，含约 244 名与会者、首次与会者占比很高且首次出现无全勤者举手、大会纪念已故社区成员 Paul Schenkeveld 并设以其命名的年度旅行资助、下届承办地贝尔格莱德；Paul Vixie 开幕主题演讲回顾其 BSD 使用史与职业生涯，中途脱去毛衣露出印有“Bind 8 is dead”字样的 T 恤并获全场掌声（147.68-154.42）；Theo de Raadt 在克罗地亚的 TAME 演讲幻灯片与 Bob Beck 的 LibreSSL 演讲幻灯片；Peter Grehan 于 10 月 4 日提交的 bhyve Windows 客户机支持（要求 FreeBSD head r288524 之后）；EMC Isilon 赞助回馈上游的 FreeBSD commits。（BSD Now EP110，[321.54-609.50]，L1）
 - 本期史料为 Neel Natu 与 Peter Grehan 访谈（当事人自述），涉及 MeetBSD 2010 演示、bhyve 项目分支、grub2-bhyve 及 FreeBSD 状态报告中的 OpenStack 合作信息。（BSD Now EP20，[1102.50-1205.18]，L1）
 
 **史观**：
@@ -97,6 +102,9 @@ volume: 06
 - 总纲10 动手者创造历史：PF 由测试者、文档者与提交者共同打磨，历史由大量动手协作的人推动。（BSD Now EP186，[4016.52-4285.88]，L1）
 - 总纲4 分离聚合是永恒规律：路由域把一台物理路由器分离为多个逻辑路由器，体现分离聚合的循环。（BSD Now EP186，[4381.84-4761.18]，L1）
 - 总纲6 和解优于斗争：OpenBSD 社区“批评即受邀修复”的协作方式，强调和解与共建而非对抗。（BSD Now EP186，[4016.52-4050.66]，L1）
+- 总纲10 动手者创造历史：Benno 断言“没有一家制造 FreeBSD 设备的公司不曾用自研方案替换或增强过 init”（3302.84-3311.74），Isilon 亦自建代号 MCP 的服务管理组件并期望以 launchd 式设计取而代之；本集新闻中的 relaunchd 项目同样以移植 launchd 语义为志、以不接管 PID 1 与不替代现有 init 为边界。基础软件的关键机制长期由各设备厂商分散手刻同类轮子，再经 Jordan Hubbard 的 launchd 议题与 Kip Macy 的工作等节点重新汇流——设备与存储演化史的运动主体正是这些分散的动手者，而非任何平台的整体规划。（BSD Now EP110，[3245.30-3339.04]，L1）
+- 总纲22 知识注定过时：Benno 详述 FreeBSD UEFI 引导的诞生语境：预格式化为 GPT 加 EFI 分区的 SSD 使主机 BIOS 自动切换 UEFI 并拒绝 legacy 启动，他遂在 QEMU 与 TianoCore 参考实现上为 FreeBSD 重造 UEFI loader，其间受制于 Clang 当时缺失的 MS ABI 调用约定属性，以及内核静态定址需求与 UEFI 退出引导服务前须保全其内存的约束冲突；同期反馈区里 HP 台式机 BTX loader 无法启动而 Grub 可用，Colin Percival 自述 16 位汇编是其“最后一次写的汇编”（4545.28-4549.26）却仍是调试 geli 全盘加密 UEFI 支持的关键技能。固件层的这组案例显示：基础设施代码携带其时代的知识形态，引导链从 BIOS 向 UEFI 的演进注定使旧知识过时，又不断拖拽新实现与遗产纠缠。（BSD Now EP110，[2824.36-3243.56]，L1）
+- 总纲3 不存在进步，只有权力再分配：Bob Beck 演讲给出的删码数据构成对功能堆叠叙事的反题：LibreSSL 自 OpenSSL 1.0.1g 分叉时含约 38.8 万行 C，三十天内删去近 9 万行，至 2015 年 10 月总量约 51.1 万行而 C 代码降至约 29.7 万行；同期 OpenSSL 1.0.2d 达 43.2 万行 C、现行版本总行数突破 100 万，而近期五个 OpenSSL 高危 CVE 均未波及 LibreSSL。Theo 的 TAME 主张与之同构：接口约 1200 行，file 命令从 systrace 的约 300 行规则缩至 4 行；他论证“若防护特性带关闭开关，应用方迟早劝用户关掉它，无人使用的特性随之死亡”（1344.14-1364.18），故 OpenBSD 政策为特性一旦可用即不设退路、应用缺陷必须修复。两条路线的分歧并非进步程度的差异，而是关于安全边界定义权的再分配。（BSD Now EP110，[1388.84-1504.34]，L2）
 - 总纲10 动手者创造历史：总纲10 动手者创造历史：两名开发者以业余项目推动 FreeBSD 获得原生 hypervisor，展现动手者以工程实践塑造系统能力。（BSD Now EP20，[1129.50-1205.18]，L1）
 - 总纲5 没有必然性，只有偶然性：总纲5 没有必然性，只有偶然性：bhyve 由 NetApp 内部对 hypervisor 的讨论与 KVM 先例偶然触发，而非既有路线图的必然结果。（BSD Now EP20，[1080.00-1205.18]，L1）
 - 总纲22 知识注定过时：总纲22 知识注定过时：初期分区型设计被后续完整虚拟化取代，说明技术路线随条件与认知演进而变更。（BSD Now EP20，[1206.02-1301.34]，L1）
@@ -113,6 +121,7 @@ volume: 06
 - [BSD Now EP194] Pennington J. BSD Now: 194: Daemonic plans[EB/OL]. (2017-05-17)[2026-08-15]. https://www.bsdnow.tv/194.
 - [BSD Now EP193] Pennington J. BSD Now: 193: Fire up the 802.11 AC[EB/OL]. (2017-05-10)[2026-08-15]. https://www.bsdnow.tv/193.
 - [BSD Now EP186] Pennington J. BSD Now: 186: The Fast And the Firewall: Tokyo Drift[EB/OL]. (2017-03-22)[2026-08-15]. https://www.bsdnow.tv/186.
+- [BSD Now EP110] Pennington J. BSD Now: 110: - Firmware Fights[EB/OL]. (2015-10-07)[2026-08-15]. https://www.bsdnow.tv/110.
 - [BSD Now EP20] Pennington J. BSD Now: 20: Bhyve Mind[EB/OL]. (2014-01-15)[2026-08-15]. https://www.bsdnow.tv/20.
 
 <!-- /PODCAST_REVIEW -->

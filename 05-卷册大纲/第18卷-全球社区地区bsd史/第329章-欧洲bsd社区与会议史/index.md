@@ -127,7 +127,7 @@ volume: 18
 本章所书皆是形式主义化的重构，并非对“真实的 BSD 历史”的呈现。本章的章节划分、事件选择、叙事策略、因果归因——全部基于编纂者的哲学设定。本章承认这些局限，不声称客观或中立，欢迎被更诚实的叙事所超越。
 
 <!-- PODCAST_REVIEW v20260829 -->
-<!-- 语义复核范围：BSD Now EP283、BSD Now EP269、BSD Now EP260、BSD Now EP196、BSD Now EP192、BSD Now EP626、BSD Now EP579、BSDTalk EP100、BSDTalk EP133、BSDTalk EP137、BSDTalk EP178、BSDTalk EP198、BSDTalk EP73、BSDTalk EP76（共 14 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
+<!-- 语义复核范围：BSD Now EP283、BSD Now EP269、BSD Now EP260、BSD Now EP196、BSD Now EP192、BSD Now EP626、BSD Now EP110、BSD Now EP579、BSDTalk EP100、BSDTalk EP133、BSDTalk EP137、BSDTalk EP178、BSDTalk EP198、BSDTalk EP73、BSDTalk EP76（共 15 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
 
 **要点**：
 
@@ -160,6 +160,10 @@ volume: 18
 - OpenSSH 新增 refuse connection 配置指令与 PKCS#11 ED25519 密钥支持，由 Damien Miller 提交。（BSD Now EP626，[1541.90-1621.92]，L2）
 - NetBSD 11 分支进入发布流程，包括 32 位兼容集拆分、CD 安装镜像、x86 PVH 启动支持、RISC-V 新端口与工具链更新。（BSD Now EP626，[1636.36-1806.82]，L2）
 - Nico Cartron 自述 2000 年在巴黎计算机学校初识 NetBSD 机房，后以 FreeBSD 为主，日常通过 WireGuard 与 SSH 使用家中的 FreeBSD 笔记本。（BSD Now EP626，[1950.18-2571.94]，L1）
+- Benno Rice 自述其 FreeBSD 履历：1995 年在阿德莱德的 ISP 以路由器与新闻服务器场景接触 FreeBSD，师友圈中有 Mark Newton 与 Mike Smith；2000 年互联网泡沫失业间隙自购初代 iMac 发起 PowerPC 移植并由此获得提交权，此后做过 ARM 尝试与需自写 AAL5 层的 PCI ADSL 卡驱动；2013 年经 IRC 频道中 Jeff Roberson 的招聘信息加入 EMC Isilon，成为带薪从事 FreeBSD 开发的工程师。其东家的集群存储平台以最少三节点、InfiniBand 后端 fabric 与前端 NFS/SMB/HDFS 对外提供单一可扩展文件系统，操作系统 1FS 为深度修改的 FreeBSD，出货版本长期基于 FreeBSD 7 世代并正完成向约 10.0 时期 head 的五年跨度升级。（BSD Now EP110，[1750.14-2093.00]，L1）
+- Benno 总结构建 FreeBSD 衍生产品的核心教训：长期停留在 stable 分支的企业在每个版本迁移时须重移植全部私有补丁，Isilon 曾因内部 InfiniBand 栈建在 FreeBSD 7 的 L2 路由代码上而被 7 至 8 的代码变更摧毁，逐 stable 升级的路径趋于不可行；其结论是只要自备充足的发布工程与测试，直接跟随 head 反而更优，既能在单一发布周期内回馈上游修复与特性、摊薄维护成本，也便于下游开发保持同步；团队下一步计划将自身 diff 逐项归入四类——因知识产权不能上游、应立即上游、不上游自留、可上游重写后取回。另披露与 Netflix 的 Scott Long、Lawrence Stewart、Warner Losh 在网卡与 HBA 驱动、TCP 栈性能改进及防回归测试上的协作，EMC 与 Netflix 无竞争关系使此类跨公司协作获得管理层支持。（BSD Now EP110，[2124.22-2798.50]，L1）
+- 虚拟化与图形栈进展：Peter Grehan 于 10 月 4 日向 bhyve 提交 Windows 客户机支持并引入含 CSM 的 UEFI 栈，经重打包注入无人值守安装配置的 Windows ISO、以 VNC 或 RDP 弥补缺失的图形能力完成安装；同一 UEFI 栈使 SmartOS、OpenIndiana、OmniOS 可作为 Illumos 客户机运行，为 FreeBSD 侧 ZFS 开发提供上游提交前的编译测试环境。同期 FreeBSD 合入 Xen 4.6 相关头文件（新增 ARM 支持并与 aarch64 虚拟化卸载工作并行）、LLVM/Clang 3.7.0、支持 Radeon 与 Ivy Bridge 起代 Intel GPU 的 OpenCL ports（需 KMS 驱动）；OpenBSD 开发分支落地 Broadwell GPU 初步支持，DRM 对齐 Linux 3.14.52（Mark Kettenis），Dev Summit 图形工作组预期年底前交付 Haswell 图形支持。（BSD Now EP110，[727.76-1099.88]，L2）
+- ZFS 运维实践反馈：听众在 4K 盘上以 512B 伪容量（GNOP 手法时代）建立 RAIDZ2 池且未启用压缩，压缩属性可按数据集增量开启而无需重建，但 512B 块尺寸无法就地修正、必须重建池并临时转移全部数据；主持人建议以 zfs send/receive 取代 rsync 完成迁移，因其保留快照且可在接收端重设压缩属性。Alan 自述 30 余块盘混用 512B 与 4K 的同类教训，并总结“写出一个糟糕的实现，往往是让别人写出更好实现的最好办法”（4799.32-4804.14），其安装器的 ZFS 支持正是由粗陋原型起步引来协作重写。（BSD Now EP110，[5070.18-5478.22]，L1）
 - Stefano Marinelli 自述 2002 年因大学同学提及教授 Özal Babaoğlu 是伯克利原始 BSD 的创建者之一而开始研究 BSD，随后在笔记本电脑上安装 FreeBSD 并长期使用。（BSD Now EP579，[843.16-910.40]，L1）
 - Stefano 创办 BSD Cafe：因 Fediverse 上缺少 BSD 爱好者的开放交流空间，创建实例后 24 小时内即吸引逾百名用户，后扩展出 Matrix 频道与 RSS 等服务，并推动意大利中小企业与医疗行业采用 BSD。（BSD Now EP579，[942.26-1072.78]，L1）
 - Dave Cottlehuber 追述 FreeBSD core 团队史：早期 core 即所有持有源码提交权限者，后经诉讼尾声与治理需要而结构化，约二十年前基金会成立；近年 core 将源码提交权限的决策下放给新设的 source manager team。（BSD Now EP579，[1898.98-2186.62]，L1）
@@ -226,6 +230,7 @@ volume: 18
 - Undeadly.org 的 USB webcam 测试征集与 OpenSSH 新特性报道。（BSD Now EP626，[1437.62-1621.92]，L2）
 - Martin Husemann 的 NetBSD 11 release process 博客。（BSD Now EP626，[1636.36-1806.82]，L2）
 - Nico Cartron 访谈。（BSD Now EP626，[1950.18-3345.10]，L1）
+- 本期可索引的一手史料：Alan 的 EuroBSDCon 2015 亲历口述，含约 244 名与会者、首次与会者占比很高且首次出现无全勤者举手、大会纪念已故社区成员 Paul Schenkeveld 并设以其命名的年度旅行资助、下届承办地贝尔格莱德；Paul Vixie 开幕主题演讲回顾其 BSD 使用史与职业生涯，中途脱去毛衣露出印有“Bind 8 is dead”字样的 T 恤并获全场掌声（147.68-154.42）；Theo de Raadt 在克罗地亚的 TAME 演讲幻灯片与 Bob Beck 的 LibreSSL 演讲幻灯片；Peter Grehan 于 10 月 4 日提交的 bhyve Windows 客户机支持（要求 FreeBSD head r288524 之后）；EMC Isilon 赞助回馈上游的 FreeBSD commits。（BSD Now EP110，[321.54-609.50]，L1）
 - 本期为 EuroBSDcon 2024 现场采访，Stefano Marinelli、Dave Cottlehuber 与 Christos Margiolis 均为当事人自述；Özal Babaoğlu 的身份信息为 Stefano 转述的同学说法。（BSD Now EP579，[745.78-2774.92]，L1）
 - 本期指向的一手材料包括 pkgsrccon.org 网站与历届演讲幻灯片存档、pkgsrcCon 2007 的注册与日程记录，以及 SILC 客户端与服务器在 pkgsrc 中的首批打包成果，后者可作 pkgsrc 跨平台打包实践的实物证据。（BSDTalk EP100，[504.36-710.16]，L1）
 - OpenCon 2007 组织材料：官网 www.opencon.org、威尼斯会场、周五教程日安排与演讲名单（含 Claudio Jeker 的 OSPF6d 演讲）；OpenBSD 4.2 的 2007 年 11 月 1 日发布日期与更早的发布切分时点。（BSDTalk EP133，[122.61-179.11]，L1）
@@ -251,6 +256,9 @@ volume: 18
 - 总纲10 动手者创造历史：总纲10 动手者创造历史：Chuck Tuffley 报告中 Google Summer of Code 学生与 Kyle Evans 接力推进 squashfs 驱动，体现未完成工作由后来者接续。（BSD Now EP626，[1232.26-1271.62]，L1）
 - 总纲22 知识注定过时：总纲22 知识注定过时：NetBSD 11 将 32 位兼容、CD 安装集等旧有默认拆分为可选集，反映旧硬件假设随时代过时。（BSD Now EP626，[1647.40-1682.94]，L2）
 - 总纲20 历史地理塑造思想土壤：总纲20 历史地理塑造思想土壤：Nico Cartron 的法国计算机学校以 NetBSD 教学机房塑造其 BSD 使用路径，体现机构地理对技术选择的塑造。（BSD Now EP626，[1973.62-2103.06]，L1）
+- 总纲10 动手者创造历史：Benno 断言“没有一家制造 FreeBSD 设备的公司不曾用自研方案替换或增强过 init”（3302.84-3311.74），Isilon 亦自建代号 MCP 的服务管理组件并期望以 launchd 式设计取而代之；本集新闻中的 relaunchd 项目同样以移植 launchd 语义为志、以不接管 PID 1 与不替代现有 init 为边界。基础软件的关键机制长期由各设备厂商分散手刻同类轮子，再经 Jordan Hubbard 的 launchd 议题与 Kip Macy 的工作等节点重新汇流——设备与存储演化史的运动主体正是这些分散的动手者，而非任何平台的整体规划。（BSD Now EP110，[3245.30-3339.04]，L1）
+- 总纲22 知识注定过时：Benno 详述 FreeBSD UEFI 引导的诞生语境：预格式化为 GPT 加 EFI 分区的 SSD 使主机 BIOS 自动切换 UEFI 并拒绝 legacy 启动，他遂在 QEMU 与 TianoCore 参考实现上为 FreeBSD 重造 UEFI loader，其间受制于 Clang 当时缺失的 MS ABI 调用约定属性，以及内核静态定址需求与 UEFI 退出引导服务前须保全其内存的约束冲突；同期反馈区里 HP 台式机 BTX loader 无法启动而 Grub 可用，Colin Percival 自述 16 位汇编是其“最后一次写的汇编”（4545.28-4549.26）却仍是调试 geli 全盘加密 UEFI 支持的关键技能。固件层的这组案例显示：基础设施代码携带其时代的知识形态，引导链从 BIOS 向 UEFI 的演进注定使旧知识过时，又不断拖拽新实现与遗产纠缠。（BSD Now EP110，[2824.36-3243.56]，L1）
+- 总纲3 不存在进步，只有权力再分配：Bob Beck 演讲给出的删码数据构成对功能堆叠叙事的反题：LibreSSL 自 OpenSSL 1.0.1g 分叉时含约 38.8 万行 C，三十天内删去近 9 万行，至 2015 年 10 月总量约 51.1 万行而 C 代码降至约 29.7 万行；同期 OpenSSL 1.0.2d 达 43.2 万行 C、现行版本总行数突破 100 万，而近期五个 OpenSSL 高危 CVE 均未波及 LibreSSL。Theo 的 TAME 主张与之同构：接口约 1200 行，file 命令从 systrace 的约 300 行规则缩至 4 行；他论证“若防护特性带关闭开关，应用方迟早劝用户关掉它，无人使用的特性随之死亡”（1344.14-1364.18），故 OpenBSD 政策为特性一旦可用即不设退路、应用缺陷必须修复。两条路线的分歧并非进步程度的差异，而是关于安全边界定义权的再分配。（BSD Now EP110，[1388.84-1504.34]，L2）
 - 总纲10 动手者创造历史：Stefano 以运维者身份推动客户迁移 BSD 并创办社区服务，Dave 以志愿者身份参与治理，均体现动手者在社区运行中的基础作用。（BSD Now EP579，[942.26-1072.78]，L1）
 - 总纲3 不存在进步，只有权力再分配：core 团队将源码提交权限决策下放给 source manager team 的过程，是 FreeBSD 治理权力在团队间的重新配置。（BSD Now EP579，[2081.44-2186.62]，L1）
 - 总纲8 本体论上各方平等：Dave 强调 FreeBSD 与 OpenBSD、NetBSD、DragonFly BSD 乃至 Linux 社区之间存在持续的跨项目交流，各方在面对共同工程问题时彼此平等。（BSD Now EP579，[2560.00-2607.04]，L1）
@@ -297,6 +305,7 @@ volume: 18
 - [BSD Now EP196] Pennington J. BSD Now: 196: PostgreZFS[EB/OL]. (2017-05-31)[2026-08-15]. https://www.bsdnow.tv/196.
 - [BSD Now EP192] Pennington J. BSD Now: 192: SSHv1 Be Gone[EB/OL]. (2017-05-03)[2026-08-15]. https://www.bsdnow.tv/192.
 - [BSD Now EP626] Pennington J. BSD Now: 626: USB webcam testing[EB/OL]. (2025-08-28)[2026-08-15]. https://www.bsdnow.tv/626.
+- [BSD Now EP110] Pennington J. BSD Now: 110: - Firmware Fights[EB/OL]. (2015-10-07)[2026-08-15]. https://www.bsdnow.tv/110.
 - [BSD Now EP579] Pennington J. BSD Now: 579: EuroBSDcon 2024[EB/OL]. (2024-10-03)[2026-08-15]. https://www.bsdnow.tv/579.
 - [BSDTalk EP100] Backman W. BSDTalk: 100: bsdtalk100 - NetBSD Developer Lubomir Sedlacik[EB/OL]. (2007-02-15)[2026-08-27]. https://archive.org/details/bsdtalk100.
 - [BSDTalk EP133] Backman W. BSDTalk: 133: bsdtalk133 - OpenCon 2007 update from Marc Balmer[EB/OL]. (2007-10-17)[2026-08-27]. https://bsdtalk.blogspot.com/2007/10/bsdtalk133-opencon-2007-update-from.html.
