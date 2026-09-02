@@ -36,7 +36,7 @@ volume: 第04卷-大分裂与四大bsd的诞生
 - 项目史观总纲第 5 条、第 6 条、第 21 条（据原文第 25 章）；OpenBSD security.html [EB/OL]. <https://www.openbsd.org/security.html>；OpenBSD hackathons.html [EB/OL]. <https://www.openbsd.org/hackathons.html>；OpenBSD goals.html [EB/OL]. <https://www.openbsd.org/goals.html>；bsd_commits.db openbsd-src 仓库 deraadt 首 commit 与累计 commit 量 ［A］### 史观映射> de Raadt 被逐出 NetBSD——一封邮件通知，没有上诉，没有告别。分离从来不是和平的，但分离之后必有新的聚合：OpenBSD 从 NetBSD 的废墟中诞生，以代码审计为旗帜。de Raadt 的天才加速了 OpenBSD 的崛起——PF、OpenSSH、全代码审计方法论，每一项都是他驱动下的产物。但同一种不妥协的气质，既是他创造的动力，也是他冲突的根源：与 NetBSD 的决裂只是开始，此后与 FreeBSD 的隔阂、与 DARPA 的冲突、与社区新人的摩擦，都是同一种结构的反复。天才不总是灾厄，但天才的边界往往就是灾厄的起点---## 第 29.15 不同时期人员的采访录（详见 [采访录.md](采访录.md)）> 第 29 章采访录子节，覆盖 1996-2001 年 OpenBSD 安全文化奠基的当事人陈述，含 Theo de Raadt（西奥·德·若特） OpenBSD 安全文化奠基演讲、Bob Beck OpenBSD 安全响应工程两则，每则采访按 5 字段深化，考据过程另见 原材料/研究/考据记录/ 下对应文件。## 第 29.16 节 媒体反响与社区舆论（详见 [媒体反响与社区舆论.md](媒体反响与社区舆论.md)）
 
 <!-- PODCAST_REVIEW v20260829 -->
-<!-- 语义复核范围：BSD Now EP428、BSD Now EP164、BSD Now EP16（共 3 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
+<!-- 语义复核范围：BSD Now EP428、BSD Now EP164、BSD Now EP16、BSDTalk EP82（共 4 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
 
 **要点**：
 
@@ -58,6 +58,16 @@ volume: 第04卷-大分裂与四大bsd的诞生
 - 教程演示在 FreeBSD 与 OpenBSD 上执行全盘加密安装；FreeBSD 侧以脚本化方式处理 GELI 与 ZFS 根文件系统，OpenBSD 侧则结合加密根分区与引导加载器。（BSD Now EP16，[4289.6-4418.6]，L2）
 - 新闻讨论 FreeBSD Ports 将引入季度稳定分支（2014Q1），快照维护三个月，期间仅接受安全修复、构建与运行时修复及基础设施变更。（BSD Now EP16，[4690.7-4766.9]，L2）
 - PackageNG 社区讨论类似 pkgsrc acceptable licenses 的许可证过滤，使用户可按许可证决定是否允许安装软件包，并考虑提供查看已装包许可证的命令。（BSD Now EP16，[4496.2-4585.9]，L2）
+- 入门史与驱动者画像：OpenBSD 开发者约八年，自 1997 或 1998 年底起；入伙缘于 OpenBSD 2.3 在其老 Sun 4/300——25 MHz、32 MB 内存、9U VME 机箱——上无法启动而 2.2 正常，他定位出致病补丁并提交，随后收到素未谋面的 Theo de Raadt 主动给账号的邮件；此后写遍各类设备驱动，刻意回避磁盘设备以求存储稳定，多涉串口、网卡、网络层、显示与 USB。（BSDTalk EP82，[63.64-117.92]，L1）
+- Theo de Raadt 的通才角色：其早期专注 SPARC port——尤以尚为 NetBSD 核心开发者时期为甚——但真正价值在于对树中各处皆有深入了解的通才能力，随兴趣转向树的其余部分；如今仍非常活跃，正不断催促 Jason 支持众多 SPARC64 机器与部分企业系统内置的 Cassini 以太网芯片——凡不带 Broadcom、HME 或 Gem 的机器皆有之，目前尚不支持。（BSDTalk EP82，[157.92-228.78]，L1）
+- SPARC64 port 维护实况：过去五年 Jason 任该 port 维护者——覆盖自 Ultra 1 起步到当代 Enterprise 机器的 64 位产品线，甚至有人尝试在 Enterprise 15000 上运行、接近启动而未竟，是其须回归的项目；Sun 每台新机都藏着 quirk 或需要新驱动，必须在新机问世时尽早取得实机；他的名字出现在大量版权声明中，只因某种怪异设备仅存于约两台机器——沮丧与乐趣并存的 port 经历。（BSDTalk EP82，[139.92-476.98]，L1）
+- 当前硬件缺口与调试现实：手头一台 Ultra 3 至为关键——该机指令缓存已支持而数据缓存未支持；缓存调试几乎必须物理接触机器，因为电源键使用频繁，上次 hackathon 的受害机五天内经历约六十次上电循环，机器会进入拒绝关机的状态。（BSDTalk EP82，[519.42-558.18]，L1）
+- 厂商文档的混合图景：Intel 存储部门的 RAID 卡态度优秀、曾多次向 OpenBSD 开发者寄送实卡；Intel 网络组三年前连 FXP 十兆百兆网卡都不给文档——那并非新技术，人们要文档主要是为研究其 bug——如今才终于开始放文档；Broadcom 从未向任何人放过文档，除非签下卖身式 NDA；台湾以太网芯片厂商乐于发布他们所谓的文档——洋泾浜英语、质量欠佳但足以起步；再辅以 Linux、FreeBSD 甚至 OpenSolaris 的源码找线索；Sun 内部亦不一致——UltraSPARC III 处理器文档易得，而 PCI 主桥（Schizo、Tomatillo）文档近乎不可能获取，形成处理器可跑代码却碰不到设备的断裂。（BSDTalk EP82，[242.52-356.66]，L1）
+- Cassini 文档与 NDA 立场：Cassini 以太网的文档同样不可得，Linux 阵营能支持它只因 David Miller 等人签下 NDA 让渡了权利——这既不是 Jason 个人也不是 OpenBSD 项目整体愿意接受的选项。（BSDTalk EP82，[359.18-376.70]，L1）
+- Sun 硬件收藏与平台迁移：工作站曾为装有三块帧缓冲的 UltraSPARC 2——不算最快但够用——约八个月前转向 Macintosh；家中实验室散落大量 Sun 机器（因搬家仍处拆箱状态）：Ultra 1、2、5、30、60、80，Enterprise 220 与极为沉重的 Enterprise 4500，Blade 1000 与 2000——Ultra 10 不过是竖立机箱里的 Ultra 5。（BSDTalk EP82，[388.86-447.94]，L1）
+- 业余无线电与 APRS 实践：新近参与分组无线电以支持自动位置报告系统 APRS——业余无线电社区周期性广播设备或电台位置，兼作带确认机制的慢速消息系统（半可靠、丢包可知），常用 1200 波特且收发切换须等待电台循环；UNIX 下主要应用 Xastir 接收他台位置、配合 GPS 显示相对位置与地图，华盛顿海军陆战队马拉松曾用于医疗站间传递选手信息；另涉数字模式无线电——RTTY 以 45.45 波特运行 Baudot 五位编码、以移位序列切换字母与数字符号档，PSK31 与 GMFSK 则面向键盘对键盘对话，类比是没有可靠性的 AIM 加上信号衰落；相关应用已移植 OpenBSD、待修整入 ports，Xastir 因几何、地图与 GPS 依赖成为可怕工程。（BSDTalk EP82，[576.54-807.30]，L1）
+- 编辑器与桌面哲学：编辑器无宗派——长坐同一处迭代用 Emacs、在树中飞检索用 vi，而用得最多的是 OpenBSD 树中的 Emacs 克隆 MG；曾在 NFR 工作时为求各平台统一编辑器而把 MG 移植到 Linux on PowerPC、FreeBSD 4.8、macOS 等，其中 FreeBSD 反而是较难的移植目标而 Linux 尚好；图形环境不用桌面管理器——那只会浪费屏幕空间——用 TWM 且懒于安装他物；shell 用系统自带的 ksh，bash 中他喜欢的特性已并入其中；尽量使用每个发行版自带的工具。（BSDTalk EP82，[809.18-923.28]，L1）
+- AMD64 IOMMU 未竟项目：IOMMU 概念源自 SPARCstation 1 与 2 时代——让地址空间受限的设备经由窗口访问全部主存，Sun 系统因所用以太网芯片只能寻址二十或二十四位而发明页映射表；AMD64 平台亦内置同类表；他一年前开始的工作已躺在 OpenBSD 树中未完成——不缺硬件只缺时间——该机制可让 32 位 PCI 设备经小窗口窥见 64 位地址空间，并公开征集协助。（BSDTalk EP82，[927.78-1010.32]，L1）
 
 **史料**：
 
@@ -68,6 +78,7 @@ volume: 第04卷-大分裂与四大bsd的诞生
 - Libreboot.org 关于以开源 BIOS 引导 OpenBSD/LibertyBSD 的文档。（BSD Now EP164，[3926.18-4004.28]，L2）
 - Josh Paetzel 访谈自述（iXsystems，FreeNAS/TrueNAS 相关运维经验）。（BSD Now EP164，[1600.0-2610.0]，L1）
 - 本期提及 NetBSD 在 Marvell Kirkwood 平台（插头式迷你服务器）上的使用文章，以及 FreeBSD Foundation 年终募款与开发者差旅资助。（BSD Now EP16，[548.6-570.2]，L2）
+- 该期留存的一手史料线索：OpenBSD 2.3 的 Sun 4/300 启动 bug 及其定位补丁；SPARC64 port 对 Ultra 系至 Enterprise 系的覆盖与 E15K 尝试记录；Ultra 3 数据缓存与 Cassini 支持的树内缺口；MG 编辑器的多平台移植（Linux on PowerPC、FreeBSD 4.8、macOS）；Xastir、GMFSK、gPSK31 等业余无线电应用的 OpenBSD 移植；厂商向开发者寄送的 Intel RAID 实卡。（BSDTalk EP82，[811.46-878.34]，L1）
 
 **史观**：
 
@@ -79,17 +90,21 @@ volume: 第04卷-大分裂与四大bsd的诞生
 - 总纲25 逻辑是形式主义而非世界本身的结构：ZFS 以冗余与校验把故障可能性压到极低，但剩余风险以极端方式集中爆发，安全是形式化边界内的构造。（BSD Now EP164，[2434.64-2497.76]，L3）
 - 总纲22 知识注定过时：OpenBSD 长期使用 CVS，在 Git 成为主流后以镜像方式补足浏览体验，旧工具随生态变化而需要新形式。（BSD Now EP164，[3816.62-3900.24]，L3）
 - 总纲10 动手者创造历史：全盘加密教程把复杂的 GELI/ZFS 流程固化为可重复脚本，使普通用户得以动手部署并复现。（BSD Now EP16，[4331.5-4418.6]，L2）
+- 总纲13 法律与道德是利益分配：NDA 是个人利益与项目原则之间的分配选择：David Miller 等人以让渡权利换取 Cassini 文档，从而 Linux 获得支持；Jason 与 OpenBSD 项目整体拒绝同一交易，宁缺驱动不签卖身契约——文档的开放与否由此不是技术可得性问题，而是不同主体间利益分配格局的产物。（BSDTalk EP82，[359.18-376.70]，L1）
+- 总纲9 经验优先：SPARC64 port 的推进方法是把每台新机器尽快拿到手——quirk 与驱动缺口只能来自实机经验，文档缺失之下经验成为唯一路径；从 Sun 4/300 的启动 bug 定位到 Ultra 3 缓存调试的六十次上电循环，技术史在这一 port 上由反复上电的双手写成。（BSDTalk EP82，[450.54-466.46]，L1）
 
 **辨析**：
 
 - “默认安装仅两个远程漏洞”为 OpenBSD 项目长期自述口径，其统计口径与时间范围需与官方安全公告逐条核对。　[存疑脚注] 远程漏洞计数为项目自述，统计边界需对照 OpenBSD 官方安全公告确认。（BSD Now EP428，[138.94-145.1]，L4）
 - [存疑脚注] 转写未给出 DragonFly vkernel copy-on-write 功能的具体提交与作者，须核验 DragonFly 仓库与提交记录。　[存疑脚注] COW 功能提交与作者须核验。（BSD Now EP164，[197.82-249.56]，L4）
 - 教程中的加密安装步骤由主持人演示并录制，涉及 FreeBSD 9.2/10 与 OpenBSD 特定版本的实现细节，属于演示与转述而非当事人一手史料。（BSD Now EP16，[0.0-10.2]，L2）
+- E15K 接近启动、受害机五天六十次上电循环、Intel 网络组前后行为等细节均为当事人口述、无独立佐证；Cassini 所在的具体机型他本人亦不能确指，仅以 Solaris 下的 CE 网卡机型圈定范围；转写术语与人名多处失真（UltraSPARC、Schizo、Tomatillo、IOMMU、Xastir、Baudot 等按通行拼写校正）。[存疑脚注] 硬件细节与厂商行为均为单一来源陈述。　[存疑脚注] 机型与厂商行为细节无第三方佐证（BSDTalk EP82，[481.06-514.18]，L4）
 
 **文献**：
 
 - [BSD Now EP428] Pennington J. BSD Now: 428: Cult of BSD[EB/OL]. (2021-11-11)[2026-08-15]. https://www.bsdnow.tv/428.
 - [BSD Now EP164] Pennington J. BSD Now: 164: Virtualized COW / PI?[EB/OL]. (2016-10-19)[2026-08-15]. https://www.bsdnow.tv/164.
 - [BSD Now EP16] Pennington J. BSD Now: 16: Cryptocrystalline[EB/OL]. (2013-12-18)[2026-08-15]. https://www.bsdnow.tv/16.
+- [BSDTalk EP82] Backman W. BSDTalk: 82: bsdtalk082 - OpenBSD Developer Jason Wright[EB/OL]. (2006-11-08)[2026-08-27]. https://archive.org/details/bsdtalk082.
 
 <!-- /PODCAST_REVIEW -->

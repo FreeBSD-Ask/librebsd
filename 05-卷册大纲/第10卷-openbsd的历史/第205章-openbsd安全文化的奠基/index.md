@@ -39,7 +39,7 @@ volume: 第10卷-openbsd的历史
 - OpenBSD CVS 仓库 [EB/OL]. <https://cvsweb.openbsd.org/>；OpenBSD Security Advisories [EB/OL]. <https://www.openbsd.org/security.html>；BUGTRAQ 邮件列表存档 [EB/OL]. <https://seclists.org/bugtraq/>；外部基准报告：外部基准-StackOverflow-PackageEcosystem.md 第 3.2 节 [R/OL]. 2026-07-27. 文件路径：`c:\Users\ykla\Documents\hibsd\03-原始史料库\01-代码仓库史料\01-数据库本体\统计分析\外部基准-StackOverflow-PackageEcosystem.md` ［A］FreeBSD 社区论文：[FP-2022-001] Refining FreeBSD's Kernel Crypto Framework（John Baldwin（约翰·鲍德温），2022）<https://papers.freebsd.org/2022/bsdcan/baldwin-refining_freebsds_kernel_crypto_framework/>FreeBSD 社区论文：[FP-2021-008] smart(8) Update: A Permissively-Licensed Alternative to smartctl(8)（Michael Dexter（迈克尔·德克斯特）; Chuck Tuffli，2021）<https://papers.freebsd.org/2021/eurobsdcon/dexter-tuffli-update_on_smart/>FreeBSD 社区论文：[FP-2019-076] FreeBSD at Work: Building Network and Storage Infrastructure with pfSense and FreeNAS（Conor Beh，2019）<https://papers.freebsd.org/2019/vbsdcon/beh-freebsd_at_work/>FreeBSD 社区论文：[FP-2019-002] BSD Unix Solutions in the Australian NFP/NGO Health Sector（Jason Tubnor，2019）<https://papers.freebsd.org/2019/asiabsdcon/tubnor-bsd_unix_solutions_in_the_australian_nfp_ngo_health_sector/>FreeBSD 社区论文：[FP-2019-014] LLVM and the state of sanitizers on BSD（David Carlier，2019）<https://papers.freebsd.org/2019/asiabsdcon/carlier-llvm_and_the_state_of_sanitizers_on_bsd/>FreeBSD 社区论文：[FP-2018-010] Preparing your home router(s) for the future: A journey through Homenet and interconnected objects（Massimiliano Stucchi，2018）<https://papers.freebsd.org/2018/bsdcan/stucchi-preparing_your_home_routers_for_the_future/>FreeBSD 社区论文：[FP-2017-014] Isolated BSD build environments using virtual and hardware machines（Michael Dexter，2017）<https://papers.freebsd.org/2017/vbsdcon/dexter-isolated_bsd_build_environments_using_virtual_and_hardware_machines/>FreeBSD 社区论文：[FP-2017-009] My BSD sucks less than yours（Baptiste Daroussin（巴蒂斯特·达鲁桑） Antoine Jacoutot（安托万·雅库托），2017）<https://papers.freebsd.org/2017/fosdem/bapt-my_bsd_suck_less_than_yours/><!-- DB_REF:openbsd.duckdb -->> **数据库引用（openbsd.duckdb）**：本子节对应 openbsd 代码仓库。> 1995-2026 年间：491,195 次提交。> 仓库总览：491,195 次提交，3,352 位贡献者，1995-10-18 至 2026-08-25。
 
 <!-- PODCAST_REVIEW v20260829 -->
-<!-- 语义复核范围：BSD Now EP498、BSD Now EP428、BSD Now EP348、BSD Now EP330（共 4 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
+<!-- 语义复核范围：BSD Now EP498、BSD Now EP428、BSD Now EP348、BSD Now EP330、BSDTalk EP29（共 5 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
 
 **要点**：
 
@@ -62,6 +62,10 @@ volume: 第10卷-openbsd的历史
 - FreeNAS 在 DigitalOcean 的部署教程通过第二块设备安装后再以 dd 重灌引导区完成，主持人补充 ZFS 的校验与校验和使消费级磁盘配合 RAID-Z1 冗余在家庭 NAS 场景可用，并强调以独立备份兜底。（BSD Now EP330，[1084.88-1299.54]，L2）
 - NomadBSD 1.3 是基于 FreeBSD 12.1 的 USB 持久化 Live 系统，通过 SMBIOS 检测自动适配 VirtualBox，新增 ZFS 安装支持，并因 Lenovo 兼容问题从 GPT 改回 MBR。（BSD Now EP330，[1790.46-1892.38]，L2）
 - e2k19 黑客松重写 RPKI 客户端的 X.509 验证，将证书与 CRL 表改为红黑树查找、以 rename 原子替换输出文件，使 VRP 验证从 20 余分钟降至约 1 分钟。（BSD Now EP330，[2281.90-2516.12]，L2）
+- 当事人自述 386BSD 的历史定位：他们是诸多 BSD 分支的早期源头，打破了局面，但发起大型项目后人人议程各异、无法兼顾所有方向，由此产生的摩擦只是任何庞大事物成长中的阵痛；夫妇二人选择不对议程争执，允许 FreeBSD 等继续生长；386BSD 至 2006 年的定位是遗产（heritage）与操作系统另类用法的试验场，仍可运行但支持机器有限。（BSDTalk EP29，[532.88-803.64]，L1）
+- 在 386BSD 文章系列发表 15 周年之际，当事人恢复了当年因版面被剪除的内容：杂志页数随广告量浮动，大量图表、侧栏乃至整节模块讨论被删，腾出版面给 Intel 等广告商；同时其数据中心监测显示，近两年对操作系统早期根源文献的引用兴趣显著上升，尤其来自中国、印度等亚洲地区与法国、德国，遂将恢复工程扩展为更接近原始设想的完整版本，建于 **porting-unix-2-the-386.jolix.com**（Jolix 为 386BSD 的通行别称）。（BSDTalk EP29，[222.56-383.16]，L1）
+- 当事人提出 BSD 家族的受众分化论：386BSD 文章系列的本意是在 Windows 之前把 PC 受众转化为 BSD 用户，第二代 CD-ROM 曾试图将其做成面向大众的类 Windows 95 系统但目标中道失落；此后各 BSD 各自服务不同受众，如 FreeBSD 服务浸透 version 6、version 7 血统的严格 UNIX 类型用户；各项目共同的困难在于清晰聆听受众并真正交付。（BSDTalk EP29，[695.64-763.48]，L1）
+- Lynne Jolitz 对 BSD 提出软件优先级批评：各开源内核尤其是 BSD 在系统低层骨架上耗时过多，应尽快将底层做定、转向用户实际感知与价值所在的高层抽象；她以 CNET 文章“Misplaced Software Priorities”阐述此论，并以 Ubuntu 凭高层亲和力使 Linux 获益为反例；让中断更快、集群接口更快并非要害（她在 Tandem 见过 256 处理器集群，认为集群永远是特殊用途），BSD 若将创造力投向高层将有更大未来；她还特别强调不应忘记 NetBSD，并称对其创建记忆犹新。（BSDTalk EP29，[1408.7-1558.5]，L1）
 
 **史料**：
 
@@ -75,6 +79,7 @@ volume: 第10卷-openbsd的历史
 - OpenBSD 官方安全公告与 CVE 记录（认证绕过，涉及 smtpd/ldapd/radiusd，sshd 因纵深防御免责），经主持人转述并引其代码分析。（BSD Now EP330，[256.84-267.32]，L2）
 - NetBSD releng 团队发布的 9.0 RC1 公告，列明 pull-up 数量、硬件支持与安全特性清单。（BSD Now EP330，[734.06-745.10]，L2）
 - Claudio Jeker 的 e2k19 黑客松报告《Nobody Can Hear You Scream》，当事人自述 RPKI 客户端 X.509 重写过程。（BSD Now EP330，[2288.98-2299.82]，L1）
+- 当事人罕见的早期 BSD 在场证词：William Jolitz 在 NASA Ames 研究中心因购置约两万美元的语音程序附带 UNIX 环境而偶然入行；其后在伯克利目击 Bill Joy 与 Chuck Haley 在身旁的 ADM-3 终端上编写后来称为 vi 的软件并为一款内核的命名反复争执，当时它只是 vi、电子邮件与同侪邮件程序工作的集合，尚无 BSD 内核之名；加州大学在可分发代码枯竭后请 William 做 PDP-11 移植，他遂参与 2.8/2.9BSD 的发行工作，并向 Mike Karels 引入 UNIX。（BSDTalk EP29，[89.44-213.88]，L1）
 
 **史观**：
 
@@ -91,6 +96,8 @@ volume: 第10卷-openbsd的历史
 - 总纲5 没有必然性，只有偶然性：总纲5 没有必然性，只有偶然性：OpenBSD 罕见的远程认证漏洞出现与 40 小时修复并非必然，而是具体代码缺陷与具体响应条件的偶然叠加。　[存疑脚注] 漏洞为偶发事件这一判断系史学概括，非节目明言（BSD Now EP330，[245.98-255.10]，L4）
 - 总纲3 不存在进步，只有权力再分配：总纲3 不存在进步，只有权力再分配：NomadBSD 从 GPT 改回 MBR、UnionFS 换为 FUSE 等变化并非线性进步，而是兼容性与约束在不同硬件间的重新分配。（BSD Now EP330，[1872.70-1888.38]，L2）
 - 总纲22 知识注定过时：总纲22 知识注定过时：本期多则教程与工具（如云主机装 FreeNAS 的旧法）提醒知识会随平台与版本过期，需持续核验。（BSD Now EP330，[1482.36-1494.88]，L2）
+- 总纲8 本体论上各方平等：当事人主张技术方案多元平等的市场观：不存在单一赢家或垄断者，应就具体问题审视特定系统对人的益处；企业常因流行度先采用 Linux，随后撞上流行度解决不了、须以架构处置的障碍，此时 BSD 恰好承接且两者往来迁移常见；开源对他们而言是降低工具成本的恩惠——90 年代中期半导体 CAD 工具成本已从百万美元级降至十万级，节省的资金可回流至真正设计与创造的人。（BSDTalk EP29，[1066.6-1268.46]，L1）
+- 总纲3 不存在进步，只有权力再分配：当事人对泡沫破裂后 BSD 投资环境的判断：投资正在大规模回归，但只流向无人做过的方向，任何聚焦他人已完成领域的项目都无法说服商人；BSD 不能以取代 Linux 为目标，正如 Linux 取代 Windows 的空间有限；正确路径是把开源理解为一种市场颠覆，如同互联网对整个经济体的颠覆，网络开发模式正在颠覆传统软件模型，商人深知如何利用市场颠覆，但组织不当的想法无法借此占领闲置市场；钱就在那里，问题在于以更高层抽象构思并让人确信值得投资。（BSDTalk EP29，[1664.26-1865.58]，L1）
 
 **辨析**：
 
@@ -100,6 +107,7 @@ volume: 第10卷-openbsd的历史
 - 转写中 FuryBSD 与 FurryBSD 混淆，GhostBSD 的 Chrome 兼容问题被节目归因于临时打包故障，未经核实。　[存疑脚注] GhostBSD Chrome 故障原因未核实（BSD Now EP348，[687.6-695.68]，L4）
 - OpenBSD 认证绕过漏洞的“远程可利用”与 sshd 免责边界需逐应用分析，实际影响应按个案评估，不能笼统宣称整个系统不安全。　[存疑脚注] 转写对漏洞细节的表述为口语转述，建议以官方 errata 与 CVE 原文核对（BSD Now EP330，[193.66-204.80]，L4）
 - NetBSD 9.0 当时尚未正式发布，RC1 特性清单可能随正式版调整，所引安全与虚拟化特性宜以正式公告为准。　[考据脚注] RC1 为发布前状态，存在后续变更可能（BSD Now EP330，[971.00-979.36]，L4）
+- 当事人回忆 80 年代参加规划 BSD 未来的架构组会议时，为尽快推出 sockets，关于 socket 安全性的讨论被推到议程末尾并最终砍掉；他认为其中许多问题正是 OpenBSD 日后聚焦的领域。该回忆将 OpenBSD 安全工程追认至早期 BSD 的结构性遗留，但口述无同期会议文献佐证，会议时间与名录未详。　[存疑脚注] 单一当事人回忆，架构组会议的具体届次、日期与出席者均未言明，须与 CSRG 会议记录及邮件档案交叉验证（BSDTalk EP29，[630.68-664.96]，L1）
 
 **文献**：
 
@@ -107,5 +115,6 @@ volume: 第10卷-openbsd的历史
 - [BSD Now EP428] Pennington J. BSD Now: 428: Cult of BSD[EB/OL]. (2021-11-11)[2026-08-15]. https://www.bsdnow.tv/428.
 - [BSD Now EP348] Pennington J. BSD Now: 348: BSD Community Collections[EB/OL]. (2020-04-30)[2026-08-15]. https://www.bsdnow.tv/348.
 - [BSD Now EP330] Pennington J. BSD Now: 330: Happy Holidays, All(an)[EB/OL]. (2019-12-26)[2026-08-15]. https://www.bsdnow.tv/330.
+- [BSDTalk EP29] Backman W. BSDTalk: 29: bsdtalk029 - Interview with Lynne and William Jolitz[EB/OL]. (2006-03-30)[2026-08-27]. https://archive.org/details/bsdtalk029.
 
 <!-- /PODCAST_REVIEW -->
