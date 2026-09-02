@@ -74,3 +74,32 @@ volume: 15
 ## 自反性声明
 
 本章所书皆是形式主义化的重构，并非对“真实的 BSD 历史”的呈现。本章的章节划分、事件选择、叙事策略、因果归因——全部基于编纂者的哲学设定。本章承认这些局限，不声称客观或中立，欢迎被更诚实的叙事所超越。
+
+<!-- PODCAST_REVIEW v20260829 -->
+<!-- 语义复核范围：BSD Now EP88（共 1 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
+
+**要点**：
+
+- Ed Schouten 在分布式存储服务实验中尝试用 Capsicum 加固代码时发现：过早调用 cap_enter 后，加密库首次使用时会因沙箱限制打开 /dev/urandom 失败，从而“回退到弱熵”（2098.10-2114.58），暴露出 Capsicum 把纯能力计算叠加在 Unix 之上时，依赖全局命名空间的第三方库会产生隐蔽缺陷。他由此判断需要一个纯能力运行时环境，并于 2014 年 9 月前后开始全职开发 CloudABI。（BSD Now EP88，[2042.37-2159.94]，L1）
+- CloudABI 被设计为一个“虚构操作系统”：Ed 向 SCO 的继任组织 The UXSG 注册了专属 ELF OSABI 编号 17，使同一二进制无需重编译即可在 FreeBSD、NetBSD 及开发中的 Linux 上运行；接口仅保留约 60 个系统调用，CloudLibc 刻意不提供 open() 等依赖全局命名空间的函数，迫使代码在编译期暴露能力不兼容问题；NetBSD 移植启动两周内 650 项单元测试约 95% 通过。（BSD Now EP88，[2810.72-2846.80]，L1）
+
+**史料**：
+
+- 本期涉及的一手史料包括：Ed Schouten 口述访谈本身（2015 年 5 月 6 日录制，其自述此为首次公开谈论 CloudABI）；2007 年末 FreeBSD 邮件列表流传的 SMP 安全待办清单（含 Robert Watson 等人推动、始终无人认领的 TTY 层条目）；Colin Percival 发至 Tarsnap 邮件列表的 2015 年 3-4 月性能问题事后分析；FreeBSD 基金会博客 from the trenches 系列中 Glenn Barber 的笔记本 ZFS 与 GELI 加密布局自述；FreeBSD 2015 年第二季度状态报告征稿公告；OpenBSD 5.7 发布公告与变更日志。（BSD Now EP88，[4249.66-4305.46]，L3）
+
+**史观**：
+
+- 总纲10 动手者创造历史：Ed Schouten 的入坑路径由一连串偶然咬合：13 岁安装 SUSE Linux 因 ISDN 调制解调器与 Voodoo 显卡驱动失败而厌恶 Linux，大学为蹭免费 Wi-Fi 加入 Unix 用户组，2007 年末在 FreeBSD 邮件列表的 SMP 待办清单上认领了表中唯一从未被更新的条目——TTY 层，借学士论文在 Snow 公司资助下完成并上游化，随后获资助赴 BSDCan（1759.64-1987.02）。核心开发者不是被制度培养出来的，而是动手者与无人认领的代码相遇的产物。（BSD Now EP88，[1759.64-1987.02]，L1）
+- 总纲3 不存在进步，只有权力再分配：OpenBSD 5.7 发布段呈现的删除并非中性的工程进步：可加载内核模块、PROCFS、Sendmail、SSLv3 与 bind、nginx 相继移出基础系统，主持人的解释是代码被挪出内核做成模块本就因为用的人不多，“那干脆整个扔掉”（729.72-738.12）。代码的存废由维护者对使用与审美的决断而定，系统形态是权力行使的结果，而非技术必然性的展开。（BSD Now EP88，[664.30-738.12]，L2）
+- 总纲8 本体论上各方平等：Tor 中继操作系统多样性倡议把 FreeBSD、NetBSD、OpenBSD、DragonFly BSD 并列为对等承载平台，其引文称“自然界中的单一栽培是危险的，因为脆弱性为整个谱系共有；多样性意味着单一漏洞不太可能伤害整个生态系统”（1016.74-1026.42），并以 Verisign 在 Linux、Solaris、BSD 三系间分摊 .com 与 .net 基础设施为旁证。四大分支在本体论层面被平等对待，安全被重构为生态多样性问题而非单一系统的优越性问题。（BSD Now EP88，[943.66-1045.46]，L2）
+
+**辨析**：
+
+- 听众来信引发的 jail 管理讨论揭示生态碎片化：官方手册仍只记录 10.x 已弃用、计划 11.x 移除的 rc.d 风格，jail.conf 采用难以解析的自创格式，easyjail 与 iocage 等框架各自为政，主持人以乐高积木作比——“我们各自拼出略不相同的飞船”（5291.44-5296.68）。这是理解容器化前夜 FreeBSD 治理困境的典型切口；但 rc.d 方式将于 11.x 移除仅系来信者与主持人的当时预期，属待核断言。　[存疑脚注] jail.conf 格式批评与 easyjail、iocage 评价仅出自本期听众来信与主持人对谈（单一对话来源）；rc.d 方式是否于 11.x 移除为当时预期，后续未如期发生，须以 FreeBSD src 与 release notes 核实。（BSD Now EP88，[5139.64-5306.40]，L2）
+- DragonFly BSD 抢先完成 Intel Broadwell 图形驱动移植（据称基于 Linux 3.14 drm 更新），一度领先 FreeBSD（当时目标 3.8）与 OpenBSD（止步 Haswell）；主持人转述贡献者名为 Francois Toujour，并半开玩笑地呼吁 FreeBSD 接受来自 DragonFly 的补丁。该案例显示各 BSD 图形栈围绕上游 Linux drm 形成的非零和追赶关系：分支排名随时翻转，移植源共享削弱了分支间的技术鸿沟。　[存疑脚注] 转写将贡献者名失真记作 Francois Toujour，据上下文推断为 DragonFly 图形驱动开发者 François Tigeot；所涉 drm 版本数字亦经转写噪声，须以 DragonFly 提交记录核实。（BSD Now EP88，[4099.58-4166.40]，L2）
+
+**文献**：
+
+- [BSD Now EP88] Pennington J. BSD Now: 88: Below the Clouds[EB/OL]. (2015-05-06)[2026-08-15]. https://www.bsdnow.tv/88.
+
+<!-- /PODCAST_REVIEW -->

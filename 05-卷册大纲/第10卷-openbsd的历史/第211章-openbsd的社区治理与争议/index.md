@@ -33,7 +33,7 @@ volume: 第10卷-openbsd的历史
 - [DB:references_fulltext] 参考文献全文数据库（4077 篇全文，27138 条时间线事件）—— 对应 openbsd.duckdb
 
 <!-- PODCAST_REVIEW v20260829 -->
-<!-- 语义复核范围：BSD Now EP323、BSD Now EP273、BSD Now EP229、BSD Now EP623（共 4 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
+<!-- 语义复核范围：BSD Now EP323、BSD Now EP273、BSD Now EP229、BSD Now EP623、BSDTalk EP123（共 5 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
 
 **要点**：
 
@@ -57,6 +57,9 @@ volume: 第10卷-openbsd的历史
 - David Gwynne 主导的 sec(4) 把 IPsec 从流量窃取点改为可管理接口，使防火墙、队列、BPF 与 BGP 等常规工具可直接作用于隧道流量，服务于与 AWS 站点间 VPN 的对接。（BSD Now EP623，[2044.96-2309.56]，L1）
 - David Gwynne 还实现 ERSpan 接口与 BPF 日志守护进程，以 GRE 封装远程端口镜像并支持 VMware 分布式虚拟交换机的监控会话。（BSD Now EP623，[2316.56-2663.62]，L1）
 - OpenBSD hackathon 的社会维度被视为关键：面对面沟通能消除邮件与聊天中的误解，组织跨城市活动则面临资源协调的不确定性。（BSD Now EP623，[1544.20-1796.32]，L1）
+- whurley 自述其受聘背景：此前在一家集群系统公司主导开源系统管理项目 OpenQRM，自称该项目为当时最成功的开源系统管理项目；又与他人共同创建 Open Management Consortium，推动各开源系统管理项目按用户需求协作而非以小团队对抗大厂商，统一代理模型等议题对 HP、IBM、CA 与 Nagios、Hyperic 等公司同等开放。BMC 管理层以此前工作为据，于 2007 年中聘其为开源战略首席架构师，要求他把开源做进商业模式而非营销点缀。（BSDTalk EP123，[220.66-308.98]，L1）
+- BMC Developer Network 于 2007 年 7 月底上线，首批四个集成项目以压缩包形式发布，站内设 Atrium、Foundation、变更与配置管理、服务影响与事件管理、服务管理五个资源中心，集成博客、播客、白皮书与 API 文档，形成连接用户、合作伙伴与工程团队的沟通层。上线时未设公共源码仓库（无 Subversion 服务），代码完全自由下载，用户可提交修改；whurley 称是否自建仓库将由社区需求决定。（BSDTalk EP123，[471.80-797.04]，L1）
+- 关于 BMC 内部开源文化，whurley 评估称开发者的心态转变并非障碍：开发者如撰写 Adventures in Linux 博客的 Steve Carl 长期参与开源项目，公司历史上亦曾发布 CMSFS、logMV、midwatch 等开源软件而不事声张；真正的挑战在于把这些既有贡献向外部社区公示并积累可信度。他援引 Karl Fogel 所著《Producing Open Source Software》中开放会引来公开批评的论述，并以自己在前雇主开放旧有专有代码时资深开发者被年轻学生公开指摘的经历，说明企业开源须正视此类社会性摩擦。（BSDTalk EP123，[884.04-1122.86]，L1）
 
 **史料**：
 
@@ -73,6 +76,7 @@ volume: 第10卷-openbsd的历史
 - FreeBSD Foundation SBOM 项目公告。（BSD Now EP623，[309.72-553.78]，L2）
 - Klara Systems 的 FreeBSD Summer 2025 Roundup。（BSD Now EP623，[557.22-1040.66]，L2）
 - David Gwynne 访谈（University of Queensland，2025 年 5 月 29 日）。（BSD Now EP623，[1064.42-3319.38]，L1）
+- 主持人片头新闻播报 OpenBSD Foundation 创建，宗旨为支持 OpenBSD 及相关项目；报道称大额捐赠经由新设渠道进行，小额个人捐赠仍沿用既有方式。此为该基金会 2007 年成立之初的当代播客记载。（BSDTalk EP123，[31.56-44.12]，L2）
 
 **史观**：
 
@@ -90,6 +94,9 @@ volume: 第10卷-openbsd的历史
 - 总纲10 动手者创造历史：总纲10 动手者创造历史：David Gwynne 以大学系统管理员身份亲手修复基础设施问题并回馈 OpenBSD，体现一线操作者推动协议与工具演进。（BSD Now EP623，[1806.76-1946.58]，L1）
 - 总纲6 和解优于斗争：总纲6 和解优于斗争：OpenBSD hackathon 以面对面沟通消解邮件分歧，强调协作而非对抗的社区机制。（BSD Now EP623，[1580.48-1651.24]，L1）
 - 总纲4 分离聚合是永恒规律：总纲4 分离聚合是永恒规律：sec(4) 将 IPsec 从网络栈中窃取流量的分离点改造为可聚合进接口体系的组件。（BSD Now EP623，[2049.28-2316.56]，L1）
+- 总纲13 法律与道德是利益分配：whurley 将许可证选择表述为利益分配安排：BMC 实行单一宽松许可证政策，一律采用 BSD 许可证，理由是多项目多许可证并存会令集成者陷入法律泥潭；他认为 GPL 附加的限制越多，与日益追求自由的开发者社区越处于对立，而 MPL 的署名条款为 BSD 版权声明所天然涵盖，并无必要。其论证把许可证从技术授权文件还原为权利在作者、用户与商业再利用者之间的分配方案。（BSDTalk EP123，[1122.86-1320.06]，L1）
+- 总纲3 不存在进步，只有权力再分配：whurley 提出“开放是开关状态，不能半开”：真正的开放须允许合作伙伴以 BSD 代码构建商业产品出售且不必回馈变更，回馈义务只存在于其与更大社区之间。他以此区分“控制”与“影响”——BMC 求影响而不求控制社区，并指其他限制性许可证难以围绕项目形成可持续生态。这是企业主动放弃代码控制权、换取社区影响力的权力关系再安排。（BSDTalk EP123，[1293.84-1407.58]，L1）
+- 总纲15 文化即形式主义：whurley 断言专有软件与开源软件在代码本体上并无差别——都需许可证、代码与编译——差别全在社区与互动方式，即如何从用户收集信息、如何支持用户、如何促成联结；他引 Henry Louis Gates 语“收集数据只是走向智慧的第一步，分享数据才是走向社区的第一步”，指出企业以为开源代码即可坐等社区前来，是误置了共同体的位置。（BSDTalk EP123，[1514.58-1546.38]，L1）
 
 **辨析**：
 
@@ -101,6 +108,7 @@ volume: 第10卷-openbsd的历史
 - Theo de Raadt 对 Intel 的指控（“被告知忽略风险”）系其个人推断，无直接证据，节目亦未提供 Intel 回应。　[存疑脚注] 系个人推断，无直接证据（BSD Now EP229，[763.4-807.38]，L4）
 - 转录将 David Gwynne 记作 David Gwynn 或 David Gwendt，标题 Two's interview 疑为 Gwynne's interview 的转写偏差，人名以 OpenBSD 官方为准。　[存疑脚注] 人名与标题存在语音转写偏差，须以 OpenBSD 官方资料核验（BSD Now EP623，[1068.26-1075.34]，L4）
 - sec(4) 相关表述中 IPsec 接口在转录混用 sec 与 sec4，具体版本与接口名须以 OpenBSD 手册页核验。　[考据脚注] 接口名称存在转写混用，须以 sec(4) 手册页为准（BSD Now EP623，[1971.80-2235.62]，L4）
+- 转写中的若干专名存疑：whurley 所自述的原雇主转写作 Clusters 与 Symbia，其 Nagios 顾问相关的合伙人名转写作 Ethan Volstead，与通行记载（OpenQRM 源自 Qlusters 公司、Nagios 创始人作 Ethan Galstad）存在疑似转写误差，采用前须以邮件列表档案与企业传记材料交叉核对；另其关于 GPL 与开发者社区相悖的判断系单方立场陈述，历史评价应与 GPL 阵营当事人论述对读。　[存疑脚注] 转写专名 Clusters、Symbia、Ethan Volstead 疑为语音识别误差，未经外部来源确证；whurley 的反 GPL 论断属单一来源立场推断。（BSDTalk EP123，[1429.02-1460.30]，L4）
 
 **文献**：
 
@@ -108,5 +116,6 @@ volume: 第10卷-openbsd的历史
 - [BSD Now EP273] Pennington J. BSD Now: Episode 273: A Thoughtful Episode | BSD Now 273[EB/OL]. (2018-11-23)[2026-08-15]. https://www.bsdnow.tv/273.
 - [BSD Now EP229] Pennington J. BSD Now: 229: The Meltdown of Spectre[EB/OL]. (2018-01-17)[2026-08-15]. https://www.bsdnow.tv/229.
 - [BSD Now EP623] Pennington J. BSD Now: 623: Two's interview[EB/OL]. (2025-08-07)[2026-08-15]. https://www.bsdnow.tv/623.
+- [BSDTalk EP123] Backman W. BSDTalk: 123: bsdtalk123 - William "whurley" Hurley, Chief Architect of Open Source Strategy at BMC Software, Inc.[EB/OL]. (2007-07-30)[2026-08-27]. https://bsdtalk.blogspot.com/2007/07/bsdtalk123-william-whurley-hurley-chief.html.
 
 <!-- /PODCAST_REVIEW -->

@@ -33,7 +33,7 @@ volume: 第10卷-openbsd的历史
 - [DB:references_fulltext] 参考文献全文数据库（4077 篇全文，27138 条时间线事件）—— 对应 openbsd.duckdb
 
 <!-- PODCAST_REVIEW v20260829 -->
-<!-- 语义复核范围：BSD Now EP166、BSD Now EP53、BSD Now EP52、BSD Now EP32、BSD Now EP18、BSD Now EP10、BSDTalk EP228（共 7 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
+<!-- 语义复核范围：BSD Now EP166、BSD Now EP86、BSD Now EP53、BSD Now EP52、BSD Now EP32、BSD Now EP18、BSD Now EP10、BSDTalk EP228（共 8 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
 
 **要点**：
 
@@ -47,6 +47,10 @@ volume: 第10卷-openbsd的历史
 - FreeBSD Foundation 2016 年 10 月更新预告 developer summit 与 MeetBSD，并强调年末小额捐赠的数量关系到基金会维持公共慈善地位，而非仅依赖少数大额捐赠。（BSD Now EP166，[1259.92-1293.08]，L2）
 - NetBSD 7.0.2 为小型安全更新，修复 mail.local 竞态、更新 OpenSSL 与 NTP/BIND，并修复 UFS1 外来文件系统、MIPS pmap 与 SPARC64 问题。（BSD Now EP166，[2064.56-2101.88]，L2）
 - Matthew Dillon 修复 DragonFly 内核 MMC/SD 读写的 AB_RID 未清零导致的短读写，并将首次超时后的等待从 10 秒降为 1 秒，减少死端口引导延迟。（BSD Now EP166，[2108.32-2152.92]，L2）
+- FreeBSD 大版本约每两到三年一次、次版本约每年一次并并行维护两个支持分支，发版节奏的最大瓶颈不在技术而在安全团队负担：维护中的旧版本越多，补丁构建与支援矩阵越大，历史上甚至出现 9.1 因长支持周期而晚于 9.2 终止支持的倒挂乱象。以 11 起启用的新支持模型依托 ABI 兼容承诺，令 11.1 发布数周后即终止 11.0 支持，以此压缩旧版本数量、换取更快的安全更新与更密的发版；9.3 之后不再有 9.4，改以分支末期汇总发布延长迁移窗口。讲述者还援引 9.1 时期 NFS 内存泄漏的亲历痛感：修复早已入库却不存在含修复的可下载版本，自行编译即意味着脱离 freebsd-update 支援体系。“我们目前不做更多 FreeBSD 发布的最大原因，基本就是安全团队不得不一直支援的版本更多了”（5312.08-5319.42）。（BSD Now EP86，[4447.40-4701.78]，L1）
+- OpenBSD 严守每年五月与十一月各一次的发布节律，不区分大小版本，安全与重大缺陷修复回移至最近版本后即止，仅支援上一版，形成约三个月开发加三个月冻结的双窗口节奏。其收益是新代码最迟约两个月内即可抵达用户、安全团队得以保持精简，代价是对需要长期支持的企业不友好，且冻结期对 SMP 等大型改造构成节律性拖累；评论者认为 CVS 缺乏开发者侧分支的合并能力放大了这一结构性紧张，开发者遂以补丁集流转工作，形成与其余分支不同的协作形态。（BSD Now EP86，[4736.32-4886.76]，L2）
+- M:Tier 的核心业务是为一家业务遍及一百五十余国、IT 部门规模超越其所在国任何本土集成商的蓝筹客户，在从边缘防火墙与路由器、FTP、Kerberos、LDAP、DNS、NTP、VPN 等服务到普通员工工作站的全栈上部署自管理 OpenBSD，公司内部约九成系统为 OpenBSD；选型动机受保密协议所限只能概括为法律与安全两条。为应对当地普遍缺乏 Unix 与 BSD 经验、多来自 Windows 背景的用户，方案以 PXE 安装服务器加一键引导实现全基础设施的自动分区、装包与配置，并围绕 GNOME 桌面补齐 Windows 用户预期（U 盘自动挂载、无线漫游图形工具），GNOME 3 所需 KMS 支持由公司出资赞助。　[存疑脚注] 嘉宾姓名转写作 Anton Jakuto（通行拼法为 Antoine Jacoutot），公司名转写存在 m-tier、m-chair、mtr 等变体，均按上下文校准为 M:Tier。（BSD Now EP86，[1200.02-1495.06]，L1）
+- 针对 OpenBSD stable 分支不提供二进制安全更新、需自行重制版本或手工打补丁的现状，BinPatchNG 以一组 makefile 将 base 系统安全修复构建为可用包管理器安装的补丁包并支持回滚，OpenUp 则负责扫描仓库、自动安装缺失补丁并更新全部软件包；该工具链由 Gerardo Santana 首创，后经前 OpenBSD 开发者接手更名并搁置，M:Tier 维护至今。其外围效应是社区对 stable 的关注度上升，开发者开始更多向 stable 回移包级修复——“如今我们可以看到大量提交进入 stable，这在以前是不存在的”（2231.90-2236.62）。　[存疑脚注] BinPatchNG 的接手者姓名转写作 Felix Rolager，拼写待核。（BSD Now EP86，[1953.22-2244.60]，L1）
 - HAMMER 是 Matthew Dillon 为 DragonFly BSD 设计的 64 位文件系统，以事务组实现逐文件历史、快照、镜像流与删除后恢复。（BSD Now EP53，[3556.02-3609.18]，L2）
 - HAMMER 的镜像流模式类似持续运行的 ZFS send，可不断向备份目标复制数据；其快照被视为可访问的实时数据而非只读副本。（BSD Now EP53，[3978.66-4095.18]，L2）
 - Reyk Floeter 在卢布尔雅那 OpenBSD hackathon 当天以 relayd 源码为基础拆出基本可用的 httpd，随后在 Bob Beck 与 Theo de Raadt 推动下提交进树，十四天后达到可接受状态。（BSD Now EP53，[945.18-1035.58]，L1）
@@ -83,6 +87,7 @@ volume: 第10卷-openbsd的历史
 - NCC Group 开源的 TriforceAFL 与 flashrd 工具链（GitHub 仓库），用于 OpenBSD 系统调用模糊测试。（BSD Now EP166，[122.62-224.46]，L2）
 - Mark Schilder 关于在 FreeBSD 上加速 MySQL 导入的博客文章，列出 InnoDB 与 ZFS 调优清单。（BSD Now EP166，[566.72-1010.56]，L2）
 - Keith Burnett 的 OpenBSD 6.0 笔记本安装教程（ThinkPad X60 上配置 XFCE、doas 与 USB 挂载）。（BSD Now EP166，[1802.96-1947.44]，L2）
+- 本期直接援引的一手材料包括：Netflix OpenConnect 团队在 Asia BSDCon 发表的内核态 sendfile 加密路线论文，说明 40Gb 级全 TLS 加密流量的工程实现（约 245.92-281.70）；OpenBSD 邮件列表帖与 David Gwynne 的提交，为 ping 时间戳载荷加入默认以 ChaCha 流填充的报文认证码，用于侦测链路篡改与故障设备（约 378.32-381.08、4907.02-4939.88）；Matthew Dillon 关于 DragonFly 开发者私有 Git 仓库工作流的书面陈述，由主持人逐字宣读（4993.02-5033.58）；DragonFly wiki 上由 Matt Dillon 维护的 Broadwell 硬件支持状态页（约 499.14-529.04）；哈佛团队基于 Capsicum 的最小特权脚本语言论文与 USENIX 演示视频（约 3415.52-3435.40）；以及 tubsta.com 发布的将 DigitalOcean FreeBSD 实例改写为 OpenBSD 的操作指南，讲述者将其与 Colin Percival 早年的 depenguinator 相类比（约 3020.82-3100.96）。　[存疑脚注] 转写将上述脚本语言记作 chill（通行拼法为 shill）、提交者记作 david gwen（通行拼法为 David Gwynne），专名以通行拼写为准。（BSD Now EP86，[4993.02-5033.58]，L2）
 - Reyk Floeter 访谈（OpenBSD httpd 作者当事人自述）。（BSD Now EP53，[540.14-1854.84]，L1）
 - Sean Webb（Laddera）访谈（ASLR/PIE 实现者当事人自述）。（BSD Now EP52，[933.90-2162.30]，L1）
 - 当期教程演示了OpenBSD 5.5的autoinstall配置过程，包括DHCP、TFTP、pxeboot、bsd.rd、nginx与install.conf的完整步骤。（BSD Now EP32，[1978.08-2602.24]，L2）
@@ -100,6 +105,8 @@ volume: 第10卷-openbsd的历史
 - 总纲1 一切真历史都是古代史：主持人感叹管道今日被当作理所当然，而忽略其曾有“没有管道的时代”，历史书写把建构产物自然化为恒常存在。（BSD Now EP166，[239.06-247.66]，L3）
 - 总纲4 分离聚合是永恒规律：Adhoku 以 jail 做应用级分离、以反向代理做流量聚合，呈现分离与聚合的交替结构，而非单一集中或单一分散。（BSD Now EP166，[1636.04-1775.64]，L3）
 - 总纲10 动手者创造历史：MySQL 与 ZFS 的优化均来自动手部署者的具体记录，性能改进由实际操作者而非抽象方案推动。（BSD Now EP166，[566.72-1010.56]，L3）
+- 总纲3 不存在进步，只有权力再分配：嘉宾口述的最佳保密秘密现象揭示了 BSD 企业采用史的深层结构：大量公司以 FreeBSD 做 ZFS 存储、以 OpenBSD 做防火墙与路由却从不宣传，如同不宣传所用 Brocade 交换机一般；其决定机制并非技术优劣，而是责任规避的劳动政治——出问题的若是人人皆用的主流方案则无人担责，引入非主流系统者则独揽故障罪名，故 BSD 进入企业依赖懂行者的个人决断，与十年前 Linux 的处境同构。技术采纳史因此不能写成进步叙事，而是支持生态与责任分配的权力再分配史。“倘若你带来一台 OpenBSD 机器，随后整个防火墙基础设施因故崩溃，那就要算在你头上”（1926.14-1942.32）。（BSD Now EP86，[1899.18-1952.26]，L2）
+- 总纲8 本体论上各方平等：四大分支并存的发布工程学——FreeBSD 的版本矩阵与 ABI 冻结、OpenBSD 的节律与冻结、NetBSD 的大版本、小版本与安全版本三类划分及新装机可直接安装已打补丁镜像、DragonFly 依赖开发者私有 Git 侧分支使发版不扰动主线——没有一种可被追认为主流进化方向，各自是不同社区规模、版本控制工具与用户结构下偶然成形又自我强化的形式安排；讲述者明言所有方案各有优劣、其偏好 OpenBSD 模式属个人趣味而非历史必然。“所有这些方案都有优点和缺点”（5084.72-5088.06）。历史书写应在本体论层面平等对待各分支的工程文化，而非以某一家为进步标尺。（BSD Now EP86，[4886.76-5182.96]，L2）
 - 总纲10 动手者创造历史：总纲10 动手者创造历史：Reyk Floeter 以一天内动手拆出 httpd 并持续迭代的方式直接塑造 OpenBSD 基础系统工具。（BSD Now EP53，[945.18-1035.58]，L1）
 - 总纲22 知识注定过时：总纲22 知识注定过时：OpenBSD 以更简单、更贴合自身安全模型的新工具替换日益膨胀的 nginx，体现既有技术方案的持续失效与重写。（BSD Now EP53，[837.46-945.18]，L1）
 - 总纲4 分离聚合是永恒规律：总纲4 分离聚合是永恒规律：httpd 自 relayd 分离、其协议改进又回流 relayd，展示 BSD 工程中持续的分离与聚合循环。（BSD Now EP53，[1169.46-1196.62]，L1）
@@ -122,6 +129,7 @@ volume: 第10卷-openbsd的历史
 
 - [存疑脚注] 转写将管道历史中的参与者记作“Thompson and Kennedy”，疑为 Ritchie、Thompson 与 Rudd Canaday 的误转；管道提议与实现时间线须以 McIlroy 原文及 Unix 一手文献复核。　[存疑脚注] 人名与时间线须核验一手文献。（BSD Now EP166，[279.9-308.86]，L4）
 - [存疑脚注] 转写将 Hauben 文章托管地记作“farther dot edu”，实际域名无法据此确认，引用时须核验文章来源。　[存疑脚注] 文章来源域名存疑。（BSD Now EP166，[417.88-422.96]，L4）
+- 听众质疑 pkg-ng 以二进制包取代源码编译是否为针对 Unix 传统的一次 systemd 式反叛，主持人澄清 ports 树相对于 Linux 的历史价值在于提供可定制编译的框架而非拒绝二进制（如自打补丁限定运行时长的 rsync），pkg-ng 的每周构建化解了旧时代 ports 与冻结二进制包不可混用的痛点，同规模部署的安装时间从约四十五分钟的编译压缩至三分钟装包；进一步的可复现构建愿景是自编译结果与官方包逐位一致以供安全验证。嘉宾以 OpenBSD 的 Flavor 变体包机制（如带 LDAP 支持的 Dovecot 独立包名）反衬 FreeBSD options 变更导致的重编译痛点（Bacula 默认绑定 PostgreSQL 而其自用 MySQL，每次升级被要求重装），并期待 ports 树本身可作为包安装、与官方包的构建基线保持同步。　[存疑脚注] 转写将 Dovecot 记作 Bacode，Bacula 数据库选项对话以听写近似呈现，专名以通行拼写为准。（BSD Now EP86，[4173.42-4411.42]，L2）
 - HAMMER 在转录中被转写为多处以 ZFS 类比，其最大容量等参数属主持人转述，未能直接核对 DragonFly 官方文档。　[存疑脚注] HAMMER 技术参数为二手转述，未经官方手册交叉核验（BSD Now EP53，[3556.02-3609.18]，L4）
 - Sean Webb 坦言上游化过程中存在私下邮件列表讨论与政治博弈，其本人一度无法参与辩护，具体争议内容未在本期披露。　[存疑脚注] 上游化受阻的具体技术或治理争议仅凭当事人单方叙述（BSD Now EP52，[1880.06-1929.90]，L4）
 - 关于IronPort设备的FreeBSD版本已较旧的说法，主持人明确表示不十分确定，属于口头估计而非可核验的版本信息。　[存疑脚注] Cisco IronPort设备所采用的FreeBSD版本属主持人口头估计，需以设备文档或官方信息核实。（BSD Now EP32，[3903.66-3907.06]，L4）
@@ -132,6 +140,7 @@ volume: 第10卷-openbsd的历史
 **文献**：
 
 - [BSD Now EP166] Pennington J. BSD Now: 166: Pass that UNIX Pipe[EB/OL]. (2016-11-02)[2026-08-15]. https://www.bsdnow.tv/166.
+- [BSD Now EP86] Pennington J. BSD Now: 86: Business as Usual[EB/OL]. (2015-04-22)[2026-08-15]. https://www.bsdnow.tv/86.
 - [BSD Now EP53] Pennington J. BSD Now: 53: It's HAMMER Time[EB/OL]. (2014-09-03)[2026-08-15]. https://www.bsdnow.tv/53.
 - [BSD Now EP52] Pennington J. BSD Now: 52: Reverse Takeover[EB/OL]. (2014-08-27)[2026-08-15]. https://www.bsdnow.tv/52.
 - [BSD Now EP32] Pennington J. BSD Now: 32: PXE Dust[EB/OL]. (2014-04-09)[2026-08-15]. https://www.bsdnow.tv/32.

@@ -49,7 +49,7 @@ volume: 第06卷-freebsd的核心技术革新
 - Woodruff, J. et al. (2012). CHERI: a research platform deconflating hardware virtualization and protection. RESoLVE 2012; Woodruff, J. et al. (2014). The CHERI capability model. ISCA '14; Watson, R. N. M. et al. (2015). CHERI: A Hybrid Capability-System Architecture. IEEE S&P ’15; CTSRD-CHERI Organization. CheriBSD Repository. github.com/CTSRD-CHERI/cheribsd; SRI International. CHERI Program. sri.com/program/cheri. ［B］[^doubt-resolved-633]: 据 Mac OS X Internals A Systems Approach (Amit Singh（阿米特·辛格）)  (未署名) 消解[^doubt-resolved-634]: 据 Arch_Handbook (未署名) 消解[^doubt-resolved-635]: 据 Porters_Handbook (未署名) 消解[^doubt-resolved-636]: 据 Handbook (未署名) 消解[^doubt-resolved-637]: 据 Mac OS X Internals A Systems Approach (Amit Singh)  (未署名) 消解[^doubt-resolved-638]: 据 Mac OS X Internals A Systems Approach (Amit Singh)  (未署名) 消解[^doubt-resolved-639]: 据 jude-interesting_zfs-paper (vbsdcon, 2015) 消解[^doubt-resolved-640]: 据 davis-asplos-cheriabi-paper-2 (standalone, 2019) 消解<!-- DB_REF:freebsd.duckdb -->> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 2010-2010 年间：34,527 次提交。> 仓库总览：1,294,851 次提交，13,875 位贡献者，1993-06-12 至 2026-08-25。
 
 <!-- PODCAST_REVIEW v20260829 -->
-<!-- 语义复核范围：BSD Now EP295、BSD Now EP197、BSD Now EP50（共 3 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
+<!-- 语义复核范围：BSD Now EP295、BSD Now EP197、BSD Now EP93、BSD Now EP50（共 4 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
 
 **要点**：
 
@@ -61,6 +61,10 @@ volume: 第06卷-freebsd的核心技术革新
 - Peter Hansteen（《The Book of PF》作者）的文章介绍用 OpenBSD spamd 与辅助 MX 搭建反垃圾邮件方案：确保主备 MX 均可收信、统一内容过滤、部署 spamd、同步灰名单与陷阱地址。（BSD Now EP197，[5136.50-5630.00]，L2）
 - 报道 Google 为 Chrome 赞助的 Capsicum-on-Linux 进展：部分功能已合入，提供 autoconf 脚本使同一代码可在 Linux 与 FreeBSD 使用 Capsicum，并列出已被转换的工具清单。（BSD Now EP197，[5638.38-5715.14]，L2）
 - 一篇“1979 年的网关如何搭建”文章显示 TCP/IP 的基本原理至今未变，是早期网络路由器技术的历史回溯。（BSD Now EP197，[5727.24-5790.82]，L2）
+- 受访的 DragonFly BSD 开发者（转写作 Sefi）自述其网络栈不以锁而以消息与线程串行化网络操作：每个 CPU 各有一个网络线程，路由表等数据按 CPU 复制，TCP 与 UDP 控制块分区存放，协议统计每 CPU 独立；用户态发包先送消息给本 CPU 网络线程完成协议处理再进入网卡，收包则按哈希选定线程处理，全路径避免锁争用。　[存疑脚注] 受访者姓名转写失真（写作 Sefi），依语义当为 DragonFly 网络栈开发者 Sepherosa Ziehau，引用前须核对节目页与会议日程。（BSD Now EP93，[1420.88-1501.40]，L1）
+- 同一受访者将早期文献称线程串行化网络栈慢于锁方案的论断作了改判式溯源：DragonFly 曾观察到的高调度成本，其根因在同步消息的使用而与网络栈模型无关，改用异步消息后整个网络路径的流水线效应大增；同时承认该设计的代价是复制数据带来的内存占用，例如完整 BGP 路由表在 DragonFly 中更耗内存，但在内存廉价的时代此项代价已不关键。（BSD Now EP93，[1513.16-1650.48]，L1）
+- 受访者介绍其对 SO_REUSEPORT 的扩展：允许各进程或线程在同一端口各自创建监听套接字，消除 accept 队列争用，并以与网络数据分区相同的哈希函数分发连接、顺带解决分布不均；dports 内打补丁的 nginx 由此获得显著性能提升，该补丁随后被 nginx 上游 1.9.1 版本接受。（BSD Now EP93，[1879.16-1964.95]，L1）
+- 受访者报出一组实测基准：四千兆口下 IPv4 转发双向各约每秒五百万包、接近理论极限；双万兆口 TCP 吞吐双向 18 Gbps；启用 SO_REUSEPORT 后单万兆口 TCP 连接建立率由每秒约十万升至三十八万；UDP 请求响应每秒一百三十九万笔；nginx HTTP 测试受限于测试机数量，服务端 CPU 尚有大量空闲，留下扩展余量。（BSD Now EP93，[2080.92-2159.04]，L1）
 - Robert Watson 自述其进入 BSD 的起点是高中时期学校获赠的运行 BSD/OS 的 UNIX 服务器，并由此转向操作系统安全研究。（BSD Now EP50，[1309.66-1351.62]，L1）
 - Capsicum 能力沙箱设计约始于八年前，其内核接口已随 FreeBSD 发布，Google 亦将其移植至 Linux 并首次向内核邮件列表提交补丁。（BSD Now EP50，[1462.14-1489.42]，L1）
 - FreeBSD 10 已将 tcpdump、gzip 等基础工具纳入 Capsicum 沙箱，以降低以 root 运行、处理不可信输入程序被利用后的影响。（BSD Now EP50，[1565.14-1606.06]，L1）
@@ -71,6 +75,7 @@ volume: 第06卷-freebsd的核心技术革新
 - Mariusz Zaborski 的 funlinkat 博客，说明 unlink 为 syscall 10 的历史与 vnode 语义。（BSD Now EP295，[57.0-85.64]，L2）
 - Josh Rastin 的 AT&T U-Verse OpenBSD 路由器博客，用 eap_parrot 代理 802.1X EAP。（BSD Now EP295，[785.02-1092.9]，L2）
 - Peter Hansteen 的 spamd 配置文章；Google Capsicum-on-Linux 状态页；1979 年 TCP/IP 网关文章。（BSD Now EP197，[5136.50-5790.82]，L2）
+- 本期可作史料线索者包括：BSDCan 2015 主题演讲预告中 Steven Bourne（转写作 Steven born）将亲述原始 sh 的编写与移植（SBRK、无字符串库时代）、其 Algol 68 移植并劝说 Dennis Ritchie 在 C 中引入 void、环境变量的发明缘由、Bill Joy 为何另写 C shell，并点评 Shellshock 类缺陷自 1990 年代初即潜伏而长期无人发现；另有 Brooks Davis 的 CherryBSD 报告（将 Capsicum 思想下沉至处理器硬件强制）、Robert Watson 与 George Neville-Neil 宣布开源其 FreeBSD 高级操作系统课程材料、以及 MeetBSD 上文件系统开发者当众销毁硬盘的录像。　[存疑脚注] 人名与专名转写多处失真（Steven born、Alargh 68、Matthew Dylan 等），引用前须比对 BSDCan 2015 官方日程与会议实录。（BSD Now EP93，[145.94-252.12]，L2）
 - Robert Watson 访谈（当事人自述，FreeBSD 核心团队成员与剑桥大学讲师）。（BSD Now EP50，[1294.82-2231.72]，L1）
 - OpenSSL 0.9.8zb、1.0.0n、1.0.1i 安全公告与 LibreSSL 2.0.5 发布信息（主持人口头转述）。（BSD Now EP50，[897.62-983.42]，L2）
 
@@ -79,6 +84,8 @@ volume: 第06卷-freebsd的核心技术革新
 - 总纲9 经验优先：从实际删除文件的经验提炼出竞态，并以文件描述符保证同一 inode。（BSD Now EP295，[423.5-430.06]，L2）
 - 总纲10 动手者创造历史：funlinkat 由 FreeBSD 开发者动手设计实现并写成博客讲解。（BSD Now EP295，[612.78-697.7]，L2）
 - 总纲6 和解优于斗争：Capsicum 从 FreeBSD 向 Linux 的扩散显示技术传承跨阵营流动，而非单向竞争，呈现生态之间的和解与相互借鉴。（BSD Now EP197，[5638.38-5715.14]，L2）
+- 总纲4 分离聚合是永恒规律：讨论段把权限分离、chroot、jail 与 Capsicum 排成一条递进谱系：目录围栏式的 chroot 聚合出带独立命名空间的 jail，jail 的整机级隔离又分离出按二进制收权的能力沙箱；每一代手段既修补前代的漏洞，也被下一代重新拆解，呈现分离与聚合的循环往复，而非单向的安全进步。（BSD Now EP93，[2762.20-2816.42]，L2）
+- 总纲10 动手者创造历史：受访开发者的自述工作清单——从其他 BSD 移植网络设备驱动、亲手编写驱动、三年内向 DragonFly 移植多项 TCP 相关 RFC 并改进网络栈并发，兼及 ACPI、电源管理与中断路由——显示 BSD 的技术史主要由这类动手者的连续劳作累积而成，而非仅由标志性发布与名人决断构成。（BSD Now EP93，[1364.00-1410.64]，L1）
 - 总纲10 动手者创造历史：总纲10 动手者创造历史：Robert Watson 团队以编写并落地 Capsicum、BERI/CHERI 的方式实际推动操作系统安全演进。（BSD Now EP50，[1380.46-1462.14]，L1）
 - 总纲9 经验优先：总纲9 经验优先：访谈以当事人对代码、硬件与漏洞的一手经验为叙述依据，而非抽象安全口号。（BSD Now EP50，[1451.54-1571.28]，L1）
 - 总纲22 知识注定过时：总纲22 知识注定过时：OpenSSL 与 LibreSSL 的持续修补显示安全知识处于不断失效与重写的循环之中。（BSD Now EP50，[957.56-988.06]，L2）
@@ -86,12 +93,14 @@ volume: 第06卷-freebsd的核心技术革新
 **辨析**：
 
 - [存疑脚注] 转写将 unlink 描述为最早的系统调用之一、FreeBSD syscall 10，并与 Linux 架构相关编号并列，未逐一核对各平台编号表。　[存疑脚注] 系统调用编号未经各平台编号表核对（BSD Now EP295，[71.12-90.44]，L4）
+- 主持人口称 chroot 自 1970 年代末即已存在、最初为发行版构建流程而写，又称 jail 可自 FreeBSD 6 或 7 起嵌套、VIMAGE 提供独立网络栈，均属无出处的口头概括；且本转写为双音轨交错，受访者与多位演讲者姓名被打碎，凡涉年代、版本号与人名者，引用前须以手册页、提交记录与会议日程核验。　[存疑脚注] 上述 chroot 年代与 jail 嵌套版本表述为单一来源口头推断，且转写专名失真（Sefi、Matthew Dylan、rake floydr 等）须逐条核对。（BSD Now EP93，[2571.60-2602.40]，L4）
 - Watson 自述尚不清楚 FreeBSD 10 发布以来沙箱化基础工具实际缓解了多少已公开漏洞，量化效果存疑。　[存疑脚注] 沙箱缓解漏洞的量化结论缺乏公开统计数据支撑（BSD Now EP50，[1578.68-1585.78]，L4）
 
 **文献**：
 
 - [BSD Now EP295] Pennington J. BSD Now: 295: Fun with funlinkat()[EB/OL]. (2019-04-25)[2026-08-15]. https://www.bsdnow.tv/295.
 - [BSD Now EP197] Pennington J. BSD Now: 197: Relaying the good news[EB/OL]. (2017-06-07)[2026-08-15]. https://www.bsdnow.tv/197.
+- [BSD Now EP93] Pennington J. BSD Now: 93: Stacked in Our Favor[EB/OL]. (2015-06-10)[2026-08-15]. https://www.bsdnow.tv/93.
 - [BSD Now EP50] Pennington J. BSD Now: 50: VPN, My Dear Watson[EB/OL]. (2014-08-13)[2026-08-15]. https://www.bsdnow.tv/50.
 
 <!-- /PODCAST_REVIEW -->

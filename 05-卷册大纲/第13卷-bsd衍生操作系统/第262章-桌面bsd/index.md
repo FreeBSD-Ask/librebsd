@@ -33,7 +33,7 @@ volume: 第13卷-bsd衍生操作系统
 - [DB:references_fulltext] 参考文献全文数据库（4077 篇全文，27138 条时间线事件）—— 对应 bsd-derivatives.duckdb
 
 <!-- PODCAST_REVIEW v20260829 -->
-<!-- 语义复核范围：BSD Now EP505、BSD Now EP651、BSD Now EP370、BSD Now EP348、BSD Now EP276、BSD Now EP633、BSD Now EP75、BSD Now EP54、BSD Now EP580、BSDTalk EP14、BSDTalk EP244、BSDTalk EP252（共 12 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
+<!-- 语义复核范围：BSD Now EP505、BSD Now EP651、BSD Now EP370、BSD Now EP348、BSD Now EP276、BSD Now EP633、BSD Now EP75、BSD Now EP54、BSD Now EP580、BSDTalk EP14、BSDTalk EP244、BSDTalk EP252、BSDTalk EP75（共 13 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
 
 **要点**：
 
@@ -90,6 +90,12 @@ volume: 第13卷-bsd衍生操作系统
 - 硬件极简佐证 shell 负载之轻：devio.us 全部服务运行于单台机龄约十年的四核 Xeon、2 GB 内存服务器（创建服务时它已是旧机器）；当事人此前为学生架设的 shell 机是一台 486，128 MB 内存即支撑 25 个并发用户——纯 shell 接入对资源需求极低，一台旧机器安放数据中心即可自足运转。（BSDTalk EP252，[581.16-633.14]，L1）
 - devio.us 与 OpenBSD 开发的互动方向并非由运维问题反哺系统修复，而是把当事人新写、尚未提交评审的 port 先部署到 devio.us，让自己与用户先行试用、观察生产表现，之后再送 ports 邮件列表评审入库——shell 服务实际充当 ports 的准生产试验场；日常系统更新则依赖 M:Tier 的二进制补丁跟踪 -stable 并附带 ports 二进制包，避免在低速机器上自编译，这对 OpenBSD 支持的小型设备尤具价值，也是全员兼职团队的现实选择。（BSDTalk EP252，[634.32-755.02]，L1）
 - 桌面倡导：当事人名下所有机器均运行 OpenBSD，且自 2011 年前后以其为唯一操作系统，自认实践“自食其力”的项目文化，桌面场景如浏览器、视频与文档编辑皆可胜任；作为 porter，其维护的 ports 以面向最终用户的桌面应用为主，理由是良好的桌面体验能吸引人把 OpenBSD 带入工作场合展示，从而降低管理层决策采纳的门槛。（BSDTalk EP252，[775.34-843.02]，L1）
+- 产品定位与公司策略：Virtual Bridges 长期为 Unix 与 Linux 平台提供平台迁移与共存能力，观察到 BSD 虽市场体量小但网站活跃度与社区热情极高、且有一批以 BSD 为服务器农场与基础设施的企业用户，遂将既有 Win4Lin 技术引入这一自认未被充分服务的市场；Win4BSD 与 Win4Lin 同代码库、功能对等，实为下一代 Win4Lin，且因架构可移植而比 Linux 版本更早落地。（BSDTalk EP75，[271.24-307.96]，L1）
+- 技术架构与混合源策略：产品集成 QEMU 与 KQEMU 开源组件及自有增值层，对用户呈现为单一无缝套件；安装不修改内核——使用运行时加载驱动动态载入，无需重启；产品整体闭源，但与 QEMU 直接相关的部分以开源补丁形式回馈社区、部分已合入主线，且随产品包一并发售，用户无需另行索取。（BSDTalk EP75，[446.94-526.24]，L1）
+- 与传统虚拟化软件的差异化在于卖集成而非卖虚拟机：产品不面向需要并发多系统的技术专业者，而面向想留在偏好环境中无缝使用 Windows 应用的一般用户——Windows 被做成 BSD 环境中的无缝访客；默认安装模式下 My Documents 等文档目录直接存放在 BSD 文件系统的家目录中，Windows 系统镜像受宿主的原生权限与安全机制控制。（BSDTalk EP75，[713.02-806.00]，L1）
+- 兼容性边界：支持 Windows 2000（SP3 因在原生硬件上亦有故障而除外）与 XP Home、Pro 至 SP2；不含 Windows 许可证，卖点是运行用户已有 Windows 授权的能力；除重度 3D 第一人称游戏外，个人生产力、商业、财会乃至流媒体多媒体应用均可运行；依据 Win4Win 的数据支持几乎各语言版本的 Windows 与约 24 种键盘布局，覆盖欧洲、亚洲与拉丁美洲。（BSDTalk EP75，[526.24-635.42]，L1）
+- 平台矩阵与 PC-BSD 协作：产品覆盖 FreeBSD 5.4 至 6.1 与 6.2、重点测试 PC-BSD 1.2；PBI 原生安装包距访谈约一周内发布，自始即与 PC-BSD 领导层紧密协作，为求一次做对而未随首发捆绑；PC-BSD 团队成员国际化，早期私测合作顺畅；DesktopBSD 为下一个主要支持平台，NetBSD 与 OpenBSD 列于长期路线图，DragonFly BSD 暂未确定。（BSDTalk EP75，[338.96-419.14]，L1）
+- 市场反响与企业路线：受访 CEO 自报发布一周内 Win4BSD 的网络提及从约 30 次跃升至近 30 万次，视为 BSD 社区求知欲与博客式传播的佐证，并援引 PC-BSD 新版单月 8 万次下载说明桌面社区规模；策略上先满足桌面社区、消化积压需求，随后推出面向企业与中小企业的虚拟桌面服务器——在 BSD 服务器上整合桌面并分发给联网客户端；可用性方面有 PC-BSD 团队高层称可交给自己母亲安装，部分买家自述此前无法独立配置 QEMU/KQEMU 而此产品开箱即用。（BSDTalk EP75，[236.02-271.24]，L1）
 
 **史料**：
 
@@ -119,6 +125,7 @@ volume: 第13卷-bsd衍生操作系统
 - Langille 的个人入坑物证可作年代锚点：1998 年末其家用 ADSL 使 Windows 机器全天候在线，为求防火墙而由同事直接提供一台装有 FreeBSD 2.2.7 的整机，安装投入使用后由此进入 BSD 世界。（BSDTalk EP14，[641.44-669.64]，L1）
 - 本期访谈口述涉及的一手材料包括 PC-BSD GitHub 主仓库中的 Lumina 子目录（内含项目路线图、许可信息与自行构建的依赖清单）、访谈当日刚打出的 0.6.1 版本标签、PC-BSD Edge 仓库每日约两次的持续构建，以及项目与 iXsystems、PC-BSD 的赞助关系陈述。（BSDTalk EP244，[907.28-1051.12]，L1）
 - 当事人一手口述提及的社区资源：纽约市 BSD 用户组 NYC*BUG 的 dmesgd 项目——用户自发提交内核 dmesg 的硬件兼容信息库，收录约 2600 条，供选购笔记本等硬件时查证；当事人主力机为 ThinkPad E420，并称 ThinkPad 在 OpenBSD 开发者中流行、新硬件驱动追赶迅速，同时赞叹社区驱动逆向工程之功。本访谈录音本身亦为 devio.us 运营数据（拒信量、账户数、付费制度）与社区文化的一手记录。（BSDTalk EP252，[859.26-914.64]，L1）
+- 该期留存的 2006 年商业生态一手事实：Win4BSD 于 2006 年 10 月发布，试用版两周、促销价 49.99 美元、后将恢复至 69.99 美元；PC-BSD 1.2 为当时最新版本且新版发布当月获 8 万次下载；产品支持 FreeBSD 5.4 至 6.2 区间；PC-BSD PBI 打包体系成为商业软件入驻桌面 BSD 的准入接口。（BSDTalk EP75，[892.54-929.98]，L1）
 
 **史观**：
 
@@ -149,6 +156,7 @@ volume: 第13卷-bsd衍生操作系统
 - 总纲10 动手者创造历史：Lumina 的诞生呈现了动手者创造历史的另一形态：没有基金会立项或社区决议，而是一名非科班出身、被课程与导师安排逐步引入编程的工程师，在失眠的深夜里逐个编写类来试探桌面环境的体量，用数年碎片时间将个人挫败感锻造成完整系统，再由其供职的公司顺势收编为正式产品线；桌面 BSD 版图上的一支，源自个人书桌而非会议室。（BSDTalk EP244，[1127.58-1297.16]，L1）
 - 总纲24 美是消解性的体验：Moore 对桌面特效的拒绝透露出一种功能主义美学：摇晃窗口与桌面火焰效果被他明确排除，桌面应当最小、轻量、不显眼，因为用户的时间理应花在应用而非桌面上——装饰性炫技是消解而非成就体验，真正的设计价值在于让界面退隐到不被注意的位置。（BSDTalk EP244，[1513.64-1585.86]，L1）
 - 总纲10 动手者创造历史：当事人自述其路径：2011 年以学生身份注册 devio.us，初衷只是寻找存放 diff 文件之处，这些文件后来演为其最早的 ports 工作，并由此成为 OpenBSD 开发者；从共享 shell 上的动手者到 port 维护者再到开发者，社区服务的免费账户成为人才与贡献的实际入口，历史由这些在终端里默默动手的人层层累积而成。（BSDTalk EP252，[220.94-236.24]，L1）
+- 总纲3 不存在进步，只有权力再分配：受访者的产品叙事把 Windows 从平级操作系统重新定位为 BSD 桌面环境内的无缝访客——用户的首选环境保持为 Unix 或 Linux，Windows 能力被收编为其一个属性；桌面平台之间并非对等并存，而是宿主与客体的层级关系被产品话语重新安排。（BSDTalk EP75，[737.86-799.08]，L1）
 
 **辨析**：
 
@@ -166,6 +174,7 @@ volume: 第13卷-bsd衍生操作系统
 - FreeBSD 桌面升级损坏为 Liam Proven 的个案经验，不能据以推断该升级路径具有普遍失败率。　[存疑脚注] 桌面升级问题为单一用户个案经验，未经系统复现或统计验证。（BSD Now EP580，[3252.54-3318.12]，L4）
 - 转写将 Dan Langille 误记作 Langell 与 Langeo，引用须以正字为准；其口述首届参会人数先称 153 又更正为 173，精确数字应复核 BSDCan 官方存档；主持人关于 MP3 专利费率与分发禁令的断言系 2006 年时点常识，专利状态与费率随时间变动，引用时不得当作恒定事实。　[存疑脚注] 首届人数 153/173 两说并存；MP3 授权费率与分发限制为时点性口述，需以专利档案与授权条款原始文本复核。（BSDTalk EP14，[172.23-216.47]，L1）
 - Moore 将桌面环境在 BSD 上的损坏几乎全部归因于 Linux-ism 渗透，此为当事人单方归因，未排除 Qt 上游缺陷、配置差异或维护投入不足等替代解释，须以各桌面环境的移植补丁记录与缺陷追踪互证；其关于文件管理器缺乏 ZFS 集成先例的论断也基于 Linux ZFS 支持薄弱的时点判断，随着 ZFS on Linux 项目的成熟该论断的时效性有限。　[存疑脚注] Linux-ism 归因与 ZFS 先例论断均为单方陈述，缺乏系统性缺陷统计佐证（BSDTalk EP244，[391.68-464.76]，L1）
+- 性能与传播数字均为供应商自报：接近原生的性能结论由 Win4Win Pro 的既有评测类推而来，主持人亦指出 Win4BSD 当时尚缺第三方评测；网络提及量从 30 到近 30 万的口径与统计方法未说明。[存疑脚注] 两项数字均为单一来源陈述，未经独立复核。　[存疑脚注] 性能与传播数字为受访企业单方陈述，未见独立验证（BSDTalk EP75，[637.74-679.06]，L4）
 
 **文献**：
 
@@ -181,5 +190,6 @@ volume: 第13卷-bsd衍生操作系统
 - [BSDTalk EP14] Backman W. BSDTalk: Interview with Dan Langille from BSDCan[EB/OL]. (2006-02-05)[2026-08-15]. https://archive.org/download/bsdtalk014/bsdtalk014.ogg.
 - [BSDTalk EP244] Backman W. BSDTalk: 244: bsdtalk244 - The Lumina Desktop Environment with Ken Moore[EB/OL]. (2014-08-28)[2026-08-27]. https://bsdtalk.blogspot.com/2014/08/bsdtalk244-lumina-desktop-environment.html.
 - [BSDTalk EP252] Backman W. BSDTalk: 252: bsdtalk252 - devio.us with Brian Callahan[EB/OL]. (2015-03-23)[2026-08-27]. https://bsdtalk.blogspot.com/2015/03/bsdtalk252-devious-with-brian-callahan.html.
+- [BSDTalk EP75] Backman W. BSDTalk: 75: bsdtalk075 - Jim Curtin and Leo Reiter from Win4BSD[EB/OL]. (2006-10-10)[2026-08-27]. https://archive.org/details/bsdtalk075.
 
 <!-- /PODCAST_REVIEW -->

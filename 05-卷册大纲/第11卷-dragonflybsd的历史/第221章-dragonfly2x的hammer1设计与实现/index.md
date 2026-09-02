@@ -34,7 +34,7 @@ volume: 第11卷-dragonflybsd的历史
 - DragonFly 邮件列表档案；DragonFly commit log；committer 个人邮件 ［A］## 史料考据补充（2026-08-04 任务3 联网核验）> 主题：DragonFly committer
 
 <!-- PODCAST_REVIEW v20260829 -->
-<!-- 语义复核范围：BSD Now EP640、BSD Now EP229、BSD Now EP53（共 3 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
+<!-- 语义复核范围：BSD Now EP640、BSD Now EP229、BSD Now EP53、BSDTalk EP125（共 4 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
 
 **要点**：
 
@@ -54,6 +54,10 @@ volume: 第11卷-dragonflybsd的历史
 - HAMMER 的镜像流模式类似持续运行的 ZFS send，可不断向备份目标复制数据；其快照被视为可访问的实时数据而非只读副本。（BSD Now EP53，[3978.66-4095.18]，L2）
 - Reyk Floeter 在卢布尔雅那 OpenBSD hackathon 当天以 relayd 源码为基础拆出基本可用的 httpd，随后在 Bob Beck 与 Theo de Raadt 推动下提交进树，十四天后达到可接受状态。（BSD Now EP53，[945.18-1035.58]，L1）
 - OpenBSD httpd 默认运行于 chroot、采用特权分离与 pre-fork 模型，并吸收 LibreSSL 对私有内存分配器遮蔽安全机制的教训，保持代码基精简。（BSD Now EP53，[866.38-958.10]，L1）
+- DragonFly 1.10（2007 年发布）被 Dillon 概括为无大事件型版本：几乎系统各层面均为清理，包括新 AHCI SATA 驱动与磁盘抽象层、GPT 与 64 位磁盘标签的非引导支持、内核态轻量线程与两套线程库（默认沿用原 BSD 线程库，年末起转向基于轻量线程设施的一对一线程库）、大量新 USB/PCI 与无线驱动及应用、内核、编译器更新；发布同时使 VFS API 更为健壮，可热拔 USB 硬盘并事后卸载而不崩内核，此项工作直接构成用户态 VFS 的前提。（BSDTalk EP125，[63.54-246.44]，L1）
+- 对分叉五年（2002-2007）的回顾与自评：1.10 之前的重写皆为设计意图或聚群前提——轻量级线程、内核线程调度器、可插拔用户调度器与调度掩码多出自 Dillon 本人构想，名字缓存拓扑与 VFS 操作改造为实现聚群所必经；组织层面开发者团队过去一年的增长超过此前两年之和，出现更多真正提交代码者，年初以来约一千五百次提交，pkgsrc 兼容性一年间显著改善。他同时坦承进展远慢于当初预期，主因是未能预见工作量之巨、内核内部重构耗时尤甚，且大量时间耗于管理开发者、管理提交与追踪缺陷等辅助事务；DragonFly 不再是实验性分叉——稳定性记录足以支撑生产系统，加上 pkgsrc 提供所需应用，在生产范式下与其他 BSD 及 Linux 大致等价，后续将以新文件系统为先，因为没有聚群文件系统就没有聚群。（BSDTalk EP125，[436.08-633.30]，L1）
+- 新文件系统于访谈时刚过基本设计阶段（记录索引方案尚待定）并已开始编码，目标年底完成，定位为 BSD 与 Linux 竞争所急需的拼图。其设计原则：内部记录导向，使流式备份与活镜像的复制算法大为简化；文件系统原生维护全部变更历史，复制数据可直接取自文件系统本身而无需维护独立变更队列，从而可在慢速链路上复制、支持备份目标间歇离线（如周末上线续传）而不在主端积压数据；快照能力因记录结构而近乎免费，设计目标覆盖备份、活镜像、热切换与多主操作，且不因网络故障或慢链路拖慢生产系统。（BSDTalk EP125，[675.05-1058.56]，L1）
+- vkernel 被评为开发过程中无价的基础设施：单处理器版早已可用，社区成员提议将其 SMP 化且实现不难，现有版本可构建为 SMP 虚拟内核；虽用于生产运行效率不高，却是调试内核代码与在安全环境中开发内核的利器。关于多处理器现状，Dillon 坦承 1.10 基准预计与 1.8 相当：系统调用路径在触及文件描述符之前已 MP safe（1.10 发布后关闭了两个相关 sysctl），但数据子系统仍受大内核锁保护；内核虽支持 31 个 CPU，大内核锁的串行化使其在四 CPU 以上难以扩展，除非将其彻底移除。（BSDTalk EP125，[284.84-428.52]，L1）
 
 **史料**：
 
@@ -67,6 +71,7 @@ volume: 第11卷-dragonflybsd的历史
 - Drew DeVault 的 fork 批评文章，以 1971 年贝尔实验室的 PDP-11 语境叙述 fork 的诞生。（BSD Now EP229，[4299.5-4438.76]，L2）
 - FreeBSD 的 LLD bootstrap 链接器提交（Ed Maste 的提交信息，LLVM PR 23214 与 85 个依赖 issue）。（BSD Now EP229，[5056.46-5134.62]，L2）
 - Reyk Floeter 访谈（OpenBSD httpd 作者当事人自述）。（BSD Now EP53，[540.14-1854.84]，L1）
+- 主持人片头新闻记载 NetBSD 宣布 2007 年筹款活动，希望至年底至少募集五万美元，为 NetBSD Foundation 当年财务运作的独立旁证史料。（BSDTalk EP125，[31.40-41.64]，L2）
 
 **史观**：
 
@@ -79,6 +84,8 @@ volume: 第11卷-dragonflybsd的历史
 - 总纲10 动手者创造历史：总纲10 动手者创造历史：Reyk Floeter 以一天内动手拆出 httpd 并持续迭代的方式直接塑造 OpenBSD 基础系统工具。（BSD Now EP53，[945.18-1035.58]，L1）
 - 总纲22 知识注定过时：总纲22 知识注定过时：OpenBSD 以更简单、更贴合自身安全模型的新工具替换日益膨胀的 nginx，体现既有技术方案的持续失效与重写。（BSD Now EP53，[837.46-945.18]，L1）
 - 总纲4 分离聚合是永恒规律：总纲4 分离聚合是永恒规律：httpd 自 relayd 分离、其协议改进又回流 relayd，展示 BSD 工程中持续的分离与聚合循环。（BSD Now EP53，[1169.46-1196.62]，L1）
+- 总纲5 没有必然性，只有偶然性：Dillon 的五年回顾把项目形态的偏离归于不可预见的具体负担：内核重构的真实工作量、管理开发者与追踪缺陷等辅助事务对核心目标的挤占，均非五年前规划所能预料；聚群目标的实现路径（先基础设施、再文件系统、后网络聚群）也是逐年应对中重新排定的次序，而非初始蓝图，技术项目的历史进程由偶然负担与具体条件塑造。（BSDTalk EP125，[551.44-621.14]，L1）
+- 总纲10 动手者创造历史：vkernel 的 SMP 化起于社区成员一句“为何不做成 SMP”的即兴提议，实现后即成为多人使用的调试利器；开发者团队的增长亦以“真正动手提交的人”为准绳而非名义成员数——DragonFly 的演进由动手者的具体行动与即兴尝试驱动，而非自上而下的规划。（BSDTalk EP125，[296.84-316.58]，L1）
 
 **辨析**：
 
@@ -87,11 +94,13 @@ volume: 第11卷-dragonflybsd的历史
 - 对 fork 的批评系博客作者个人立场，节目主持人在结尾补充“无法改变应用使用习惯”的采纳难题，替代方案在 FreeBSD 仅停留在讨论阶段。　[存疑脚注] 系单一来源的个人技术立场（BSD Now EP229，[4888.6-4949.3]，L4）
 - Theo de Raadt 对 Intel 的指控（“被告知忽略风险”）系其个人推断，无直接证据，节目亦未提供 Intel 回应。　[存疑脚注] 系个人推断，无直接证据（BSD Now EP229，[763.4-807.38]，L4）
 - HAMMER 在转录中被转写为多处以 ZFS 类比，其最大容量等参数属主持人转述，未能直接核对 DragonFly 官方文档。　[存疑脚注] HAMMER 技术参数为二手转述，未经官方手册交叉核验（BSD Now EP53，[3556.02-3609.18]，L4）
+- 转写专名存在系统性误差：线程库名转写作 LibCR 与 LibThreadZoo（通行作 libc_r 与 libthread_xu），pkgsrc 转写作 package source，userland 转写作 user LAN 与 Usulam，sysctl 转写作 SysControls，ATA 驱动转写作 DATA driver；另新文件系统“与 Linux 竞争”的定位系 Dillon 单方目标陈述，其对复制文件系统优于队列复制的论证亦属设计意图而非实测结论，采用时须与 HAMMER 后续实现及性能文献对勘。　[存疑脚注] 转写专名 LibCR、LibThreadZoo、package source、user LAN、Usulam、SysControls、DATA driver 均疑为语音识别误差；文件系统性能主张为设计意图陈述，未经实测验证。（BSDTalk EP125，[111.08-126.68]，L4）
 
 **文献**：
 
 - [BSD Now EP640] Pennington J. BSD Now: 640: Cleaning up Hammer[EB/OL]. (2025-12-04)[2026-08-15]. https://www.bsdnow.tv/640.
 - [BSD Now EP229] Pennington J. BSD Now: 229: The Meltdown of Spectre[EB/OL]. (2018-01-17)[2026-08-15]. https://www.bsdnow.tv/229.
 - [BSD Now EP53] Pennington J. BSD Now: 53: It's HAMMER Time[EB/OL]. (2014-09-03)[2026-08-15]. https://www.bsdnow.tv/53.
+- [BSDTalk EP125] Backman W. BSDTalk: 125: bsdtalk125 - Matthew Dillon[EB/OL]. (2007-08-15)[2026-08-27]. https://bsdtalk.blogspot.com/2007/08/bsdtalk125-matthew-dillon.html.
 
 <!-- /PODCAST_REVIEW -->

@@ -127,7 +127,7 @@ volume: 18
 本章所书皆是形式主义化的重构，并非对“真实的 BSD 历史”的呈现。本章的章节划分、事件选择、叙事策略、因果归因——全部基于编纂者的哲学设定。本章承认这些局限，不声称客观或中立，欢迎被更诚实的叙事所超越。
 
 <!-- PODCAST_REVIEW v20260829 -->
-<!-- 语义复核范围：BSD Now EP283、BSD Now EP269、BSD Now EP260、BSD Now EP196、BSD Now EP192、BSD Now EP626、BSD Now EP579、BSDTalk EP133、BSDTalk EP137、BSDTalk EP178、BSDTalk EP198（共 11 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
+<!-- 语义复核范围：BSD Now EP283、BSD Now EP269、BSD Now EP260、BSD Now EP196、BSD Now EP192、BSD Now EP626、BSD Now EP579、BSDTalk EP100、BSDTalk EP133、BSDTalk EP137、BSDTalk EP178、BSDTalk EP198、BSDTalk EP73、BSDTalk EP76（共 14 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
 
 **要点**：
 
@@ -165,6 +165,11 @@ volume: 18
 - Dave Cottlehuber 追述 FreeBSD core 团队史：早期 core 即所有持有源码提交权限者，后经诉讼尾声与治理需要而结构化，约二十年前基金会成立；近年 core 将源码提交权限的决策下放给新设的 source manager team。（BSD Now EP579，[1898.98-2186.62]，L1）
 - Dave 说明 FreeBSD Core 13 的目标包括完成 source manager team 的设立、改善软件包仓库的 CDN 分发、加强与 Dell、Sony、Apple 等下游伙伴的协作，并推进由基金会资助的 CI 工作流。（BSD Now EP579，[2207.24-2461.08]，L1）
 - Christos Margiolis 自述因 Linux 代码库过于庞大而选择 FreeBSD 作为贡献对象，从事声音子系统与音乐制作工具的维护与改进。（BSD Now EP579，[2721.16-2774.92]，L1）
+- pkgsrcCon 2007 为第四届，于 4 月 27 日至 29 日在巴塞罗那的加泰罗尼亚理工大学举行；该会四年前始于维也纳，首届仓促筹办却意外成功，此后固定于四月末五月初在欧洲开发者所在城市巡游，会议本身免费（free as in beer）仅需提前注册，旅费自理。（BSDTalk EP100，[230.64-304.04]，L1）
+- 会议运作全凭志愿者，不提供住宿交通协助，选址刻意选旅行成本低的城市以保持参会门槛最低；组织者预期规模数十人，若增至约五十人连集体晚宴都会难以安排，显示其为小规模熟人式技术聚会的定位。（BSDTalk EP100，[409.24-488.08]，L1）
+- Sedlacik 阐明会议的社交功能：把名字对应到面孔以提升日后邮件与讨论的沟通效率，让开发者偶尔从用户视角审视系统；并明确欢迎 FreeBSD、OpenBSD 乃至 OpenSolaris 与 Linux 开发者分享经验，往届已有 FreeBSD ports 开发者与会，跨阵营互鉴被列为会议目标。（BSDTalk EP100，[126.92-284.2]，L1）
+- 其个人路径完全由动手实践铺就：约 2000 年为替代手头打包方案而在同事的旧工作站上接触 NetBSD 并喜欢 pkgsrc；为加密会议软件 SILC 创建其首批 pkgsrc 包；继而在 Solaris 平台使用 pkgsrc 并做通用缺陷修复，2002 年因持续提交缺陷报告与补丁被开发者接纳转正。（BSDTalk EP100，[504.36-591.88]，L1）
+- 其现职揭示 pkgsrc 制度化运作的两翼：release engineering 负责维护稳定分支，安全团队负责修复已知漏洞并逐一通知维护者更新包，加之个人维护数十个包；2008 年会址柏林仅为暂定，取决于本地开发者能否落实场地。（BSDTalk EP100，[591.88-646.2]，L1）
 - OpenCon 是全球唯一专门面向 OpenBSD 的会议，2007 年在威尼斯机场附近酒店举行（与上年同址）；本届首次增设周五教程日，设 packet filter、OpenBSD ports 与 OpenBSD 可用 VPN 技术三场教程，讲者多为 OpenBSD 开发者；周六周日为多主题演讲马拉松。（BSDTalk EP133，[52.34-104.13]，L1）
 - 会议日程与发布节奏耦合：OpenBSD 4.2 定于 2007 年 11 月 1 日发布，OpenCon 于 12 月首个周末举行，届时与会者多已用上 4.2，现场可购 CD-ROM，讲者可将 4.2 新特性纳入演讲；发布切分在会前数月已完成，开发已转入 -current，因而演讲更多面向更新的事物。（BSDTalk EP133，[132.66-179.11]，L1）
 - 预告的技术演讲包括：瑞士 OpenBSD 开发者 Claudio Jeker 讲 OSPF6 守护进程（IPv6 的 OSPF 路由协议），以及关于 OpenBSD 4.2 缓冲区缓存改进的演讲等。（BSDTalk EP133，[179.58-217.60]，L1）
@@ -189,6 +194,19 @@ volume: 18
 - 组织者 Matt Olander 回溯 MeetBSD 谱系：会议发端于波兰华沙，因欣赏其氛围而受邀将形式引入美国西海岸，2008 年首届 MeetBSD California 在 Google 园区举办并获成功，2010 年第二届移师 Mountain View 的 Hacker Dojo——一个供黑客与爱好者使用烙铁与网络设施开展创作的仓库式车库空间，湾区 FreeBSD 用户组已常驻其间。（BSDTalk EP198，[63.48-165.16]，L1）
 - 2010 年会议刻意混合两种形式：首日采用 unconference，议程由与会者现场自组织——自报议题分组、五分钟闪电演讲、开发者围坐编程、以白板取代固定日程，组织者自嘲其形态是“勉强驯服的混乱”；次日保留传统讲座，以免冲击习惯传统会议者并保证重要报告得以传达。（BSDTalk EP198，[106.28-378.78]，L1）
 - 会务组织面向社区可达性设计：注册费仅二十五美元并含餐饮，与一周后的纽约 BSDCon 谈成跨海岸联动折扣，招募志愿者分担会务；会议前两日并行安排 FreeBSD summit、PC-BSD 开发峰会，BSD release engineering 亦将举行正式会议，NetBSD 与 OpenBSD 参与者受邀利用场地自组会议。（BSDTalk EP198，[319.82-588.46]，L1）
+- Brighton Chilli 是当事人对 BSD 倡导的实践答案：一张基于 FreeBSD 的 live CD，开箱即含 radius 服务器、web 服务器与 PF 防火墙，承载完整的受管 ChilliSpot 热点；其定位不是替代性发行版，而是让人零风险评估后迈出安装完整 BSD 发行版的第一步；开发过程得益于 FreeSBIE 项目——对方不仅提供 IRC 帮助还主动种子其 ISO；后续计划包括类似 OpenBSD 安装器的全自动引导、面向 Soekris 与 WRAP 单板机及 CF 转 IDE 旧 PC 的固件镜像。（BSDTalk EP73，[90.92-230.14]，L1）
+- ChilliSpot 生态与本地部署实况：ChilliSpot 本是 Linux 阵营的 Wi-Fi 热点管理工具，以强制门户配合 radius 认证，可经 PHP My Prepaid 类工具实现付费热点，典型场景为酒店与咖啡店；布莱顿组织 Peer2Peer 以之支撑覆盖全市及夏季音乐节的免费无线网络；当地已知的主要部署 KZPR 已从 PC 方案转向在 WRT54G 路由器上运行 ChilliSpot 的嵌入式路线；当事人另与科威特用户合作排查三台大服务器高并发下 ChilliSpot 反复崩溃的问题，彼时社区尚缺大规模部署反馈。（BSDTalk EP73，[104.24-166.26]，L1）
+- 跨 BSD 移植的协作细节：ChilliSpot 由前人完成从 Linux 到 FreeBSD 的移植后，当事人完成 OpenBSD 初始补丁、约一个月后另一社区成员补齐缺失部分，NetBSD 亦理论上可用；补丁除 tun 接口一处外并不侵入；但上游主开发者一度失联约四个月，补丁合并进下个版本的时间悬而未决；NetBSD 4.0 将 freeradius 收入 ports 树，改善了 radius 配套的可得性。（BSDTalk EP73，[321.30-408.38]，L1）
+- 当事人的 BSD 结缘与使用图景：Slashdot 上一条 FreeBSD 5 发布消息促成其在 Alpha 机上从号称针对 Alpha 优化的 Red Hat 7.2 转投 FreeBSD 5，体验反差巨大，handbook 文档直白顺畅，与此前 Linux 发行版笨拙且文档匮乏的印象形成对照；此后按场景分派——办公环境中安全、邮件与 DNS 用 OpenBSD，web 服务器用 FreeBSD，主力桌面为 PowerBook G4 上的 OS X；键盘导向的 Ion 窗口管理器、研习 vi，又因入手 IBM Workpad 掌上设备转向 NetBSD。（BSDTalk EP73，[516.06-594.42]，L1）
+- 2006 年 BSD 无线硬件的实战经验：服务器端 Raylink 系列卡开箱即用但天线功率偏弱，客户端 Cisco Aironet 350 凭 100 mW 天线带来显著覆盖优势却价格高昂；Brighton Chilli 当时不支持 Atheros 芯片卡，仅覆盖部分支持 HostAP 模式的卡，全自动化安装被列于后续版本。（BSDTalk EP73，[478.30-516.06]，L1）
+- OpenBSD spamd 的跨阵营实战证词：当事人服务的客户以 Red Hat 承载高流量邮件，在以 spamd 前置该服务器后，垃圾邮件处理难题大体消解，邮件流程被彻底改观——OpenBSD 3.x 时期诞生的反垃圾工具在 Linux 生产环境中直接发挥效用，是其最愿向 BSD 开发者致谢的功能。（BSDTalk EP73，[737.40-776.90]，L1）
+- OpenCON 是首个专门面向 OpenBSD 的会议，2004 年由意大利威尼斯本地人首创；其成长轨迹清晰——2004 年九场报告中仅三场出自开发者、到场发言的开发者仅 Henning Brauer 一人，2005 年九场中六场出自七位开发者，2006 年十四场报告出自十位开发者，多数报告已由官方开发者承担；会议前一周在里斯本举行 mini hackathon，开发者顺势短途飞抵威尼斯；2006 年 12 月 2 日至 3 日举行、会议完全免费，首日晚宴兼作 OpenBSD 十周年派对仅收象征费用。（BSDTalk EP76，[109.96-235.20]，L1）
+- 会议后勤与收入结构：场地 2004 年设于威尼斯技术门户 VEGA，2005 年迁至潟湖小岛——水城交通全赖船只且船费高昂，把会议服务运上小岛近乎历险，2006 年移至机场附近才恢复便利；赞助方包括欧洲 OpenBSD 支持商 KD85.com、CD 与海报 T 恤销售商、本地互联网服务提供商及 O'Reilly，组委会全部志愿工作；会上销售 CD-ROM 与 T 恤、海报免费发放，CD-ROM 销售是 OpenBSD 项目除捐款外的主要收入来源。（BSDTalk EP76，[271.08-432.20]，L1）
+- 当事人从 Linux 转向 OpenBSD 的运维逻辑：其公司长期维护 Unix 系统，在 Linux 热潮期间采用 Linux 却屡遭黑客入侵，遂先把 DNS 服务器等关键平台迁至 OpenBSD，数年后全面铺开；公司承接巴塞尔公立学校、图书馆与动物园的 IT 服务，直接用户数千——仅公立学校系统即约一万名学生、三千五百名教师、每年约一千人进出；文件服务与邮件服务均由 OpenBSD 承载，其称许 ports 与 packages 体系真正可用，软件维护比 Linux 容易。（BSDTalk EP76，[444.00-633.04]，L1）
+- 大规模部署的运维纪律：全部生产机坚持 stable 分支，以保证各服务器软件状态一致、可管理——跑 current 技术上可行但会造成各机版本漂移，商业环境不可接受；公司自备构建机按需构建发行版与软件包，全部生产机跟随 OpenBSD 发布周期每半年统一升级一次；个人笔记本与家用机则运行 current，以致其对 4.0 新特性已无新鲜感。（BSDTalk EP76，[684.38-742.68]，L1）
+- 当事人的技术贡献清单：已在 OpenBSD 落地 NMEA 支持（GPS 设备）与时间信号站接收器支持，正扩展两者功能；维护 PostgreSQL、OpenLDAP、Samba 等多个 ports。（BSDTalk EP76，[83.10-103.50]，L1）
+- 进行中的合作项目瞄准 OpenBSD 的结构性短板——缺少现代中央用户数据库：YP 时代之后系统无此能力，公立学校系统万级用户的账号管理亟需集中化；当事人与 Claudio Jeker、Chris Kuethe 合作推进，目标是让 Samba 等服务可对接 LDAP 式中央认证，免除在每台服务器本地建户。（BSDTalk EP76，[603.72-684.38]，L1）
+- 固件再分发斗争的立场陈述：呼吁用户购买 CD-ROM 支持项目，并向拒不授予二进制固件再分发许可的硬件厂商施压；其诉求刻意设为最低限度——不要求无线设备固件的源代码，只要求把二进制固件放入 CD-ROM 随发行版再分发的权利；近期与厂商的相关谈判相当艰难，undeadly.org 是跟踪其动向的公开窗口。（BSDTalk EP76，[779.80-830.88]，L1）
 
 **史料**：
 
@@ -209,11 +227,14 @@ volume: 18
 - Martin Husemann 的 NetBSD 11 release process 博客。（BSD Now EP626，[1636.36-1806.82]，L2）
 - Nico Cartron 访谈。（BSD Now EP626，[1950.18-3345.10]，L1）
 - 本期为 EuroBSDcon 2024 现场采访，Stefano Marinelli、Dave Cottlehuber 与 Christos Margiolis 均为当事人自述；Özal Babaoğlu 的身份信息为 Stefano 转述的同学说法。（BSD Now EP579，[745.78-2774.92]，L1）
+- 本期指向的一手材料包括 pkgsrccon.org 网站与历届演讲幻灯片存档、pkgsrcCon 2007 的注册与日程记录，以及 SILC 客户端与服务器在 pkgsrc 中的首批打包成果，后者可作 pkgsrc 跨平台打包实践的实物证据。（BSDTalk EP100，[504.36-710.16]，L1）
 - OpenCon 2007 组织材料：官网 www.opencon.org、威尼斯会场、周五教程日安排与演讲名单（含 Claudio Jeker 的 OSPF6d 演讲）；OpenBSD 4.2 的 2007 年 11 月 1 日发布日期与更早的发布切分时点。（BSDTalk EP133，[122.61-179.11]，L1）
 - OpenSSH 诞生时间线的社区纪念证据：2007 年 10 月前后社区庆祝其八周岁生日，与 1999 年 10 月首次发布相互印证。（BSDTalk EP133，[226.47-238.75]，L1）
 - Wireless Leiden 全城 FreeBSD 无线社区网络及其节点工厂实践；Open Community Camp 2008（2008-08-10 至 17，荷兰）与 opencommunitycamp.org；Cobalt RaQ 2 硬件、Sun 收购停产背景与 NetBSD cobalt 移植及 restore CD netboot 流程。（BSDTalk EP137，[34.27-760.35]，L1）
 - 该期提及的一手线索包括：Internet Watch Foundation 提供的匿名下架数据；多家下架公司向研究者共享的钓鱼站数据；AA419 与 CastleCops 骗局举报库；WikiLeaks 发布的英国邮编表；escrow.com 真实托管公司的宣传文本；Light Blue Touchpaper 博客与 Clayton 个人网页所载论文原始版本；本场 EuroBSDCon 2009 演讲幻灯片与现场演示站点（K1D1NX.eu、lof80.info、Alice.it、T35.com 等）。（BSDTalk EP178，[3974.7-3983.7]，L1）
 - 一手史料包括组织者对 MeetBSD 华沙起源与 2008 年 Google 园区首届加州会议的亲历陈述、对 Hacker Dojo 场地性质的描述；开场固定栏目由主持人转述 last 工具最早出现于 3.0BSD。（BSDTalk EP198，[33.20-171.60]，L1）
+- 该期留存的一手史料线索：Brighton Chilli live CD 及发布于 geeklan.co.uk 博客的 OpenBSD 与 NetBSD 补丁副本；ChilliSpot 上游的合并沟通记录（主开发者失联四个月的插曲）；ChilliSpot 论坛上与科威特大型部署用户的联合排查；FreeSBIE 项目的 ISO 种子与 IRC 支援；BSDexus 论坛的入门者实践生态；当事人计划中的 FreeBSD 充当 fake .mac 服务器 live CD 项目，意在为 Leopard 发布后行将退役的旧 G3 机器续命。（BSDTalk EP73，[652.90-713.40]，L1）
+- 该期留存的一手史料线索：opencon.org 上的 2006 年会议程序、住宿与交通信息及历届资料存档；undeadly.org 作为 OpenBSD 社区新闻站；KD85.com 与瑞士 CD 经销渠道；当事人提交的 NMEA 与时间信号站驱动及其维护的 PostgreSQL、OpenLDAP、Samba ports；与 Claudio Jeker、Chris Kuethe 的中央用户数据库合作项目（当时处于早期保密阶段）。（BSDTalk EP76，[829.36-857.08]，L1）
 
 **史观**：
 
@@ -233,6 +254,8 @@ volume: 18
 - 总纲10 动手者创造历史：Stefano 以运维者身份推动客户迁移 BSD 并创办社区服务，Dave 以志愿者身份参与治理，均体现动手者在社区运行中的基础作用。（BSD Now EP579，[942.26-1072.78]，L1）
 - 总纲3 不存在进步，只有权力再分配：core 团队将源码提交权限决策下放给 source manager team 的过程，是 FreeBSD 治理权力在团队间的重新配置。（BSD Now EP579，[2081.44-2186.62]，L1）
 - 总纲8 本体论上各方平等：Dave 强调 FreeBSD 与 OpenBSD、NetBSD、DragonFly BSD 乃至 Linux 社区之间存在持续的跨项目交流，各方在面对共同工程问题时彼此平等。（BSD Now EP579，[2560.00-2607.04]，L1）
+- 总纲10 动手者创造历史：Sedlacik 自述“处理我缺陷报告的人终于受够了我而邀请我成为开发者”，其身份由持续的实际修补工作而非学历或任命换来，是动手者以贡献换取历史位置的一手例证。（BSDTalk EP100，[578.68-591.88]，L1）
+- 总纲8 本体论上各方平等：pkgsrcCon 把 NetBSD、FreeBSD、OpenBSD 乃至 OpenSolaris 与 Linux 阵营的开发者聚于同一屋檐下交流打包与工程经验，各分支在此平等互鉴而非论资排辈，构成分离阵营之间的聚合节点。（BSDTalk EP100，[268.88-284.2]，L1）
 - 总纲20 历史地理塑造思想土壤：OpenCon 的地理组织——威尼斯会场、11 国乃至黎巴嫩的参会者流动——显示欧洲城市节点与会议空间如何承载并塑造 BSD 社区的交流形态，社区思想的生长与其地理聚点不可分。（BSDTalk EP133，[59.18-72.61]，L1）
 - 总纲10 动手者创造历史：工程生产的核心场域在非公开的 hackathon 而非公开舞台：仅受邀、趋小规模、低公开可见度的开发者会议承载实际工作，而公开会议拒绝录像、强调亲临现场——可见的庆典之下，动手者的协作空间另有其处。（BSDTalk EP133，[304.13-344.45]，L1）
 - 总纲10 动手者创造历史：OCC 的知识生产方式以动手者为中心：会编内核、造天线、自造路由器的人聚于帐篷与教室，节目表部分由每日的“想学什么”现场生成，引导者角色替代讲演者——社区知识在协作与动手而非单向传授中产生。（BSDTalk EP137，[431.95-708.27]，L1）
@@ -240,6 +263,10 @@ volume: 18
 - 总纲13 法律与道德是利益分配：Clayton 的核心论点是下架速度由经济激励结构而非技术能力决定：谁受损、谁付费、谁有激励移除，解释了银行知情站四小时、无主站七百小时、IWF 境外数据三周的巨大落差，恶意内容的治理本质是利益分配问题。（BSDTalk EP178，[735.6-755.1]，L1）
 - 总纲8 本体论上各方平等：组织者阐明 unconference 的核心理念是让平时只能通过邮件列表与开发者远距互动的用户坐到开发者对面，当面陈述使用痛点与好评，打破会议场景中演讲者与听众的层级结构。（BSDTalk EP198，[630.18-650.54]，L1）
 - 总纲20 历史地理塑造思想土壤：会场从 Google 园区迁往 Hacker Dojo 仓库的选址自述——代表硅谷车库式做事方式——显示湾区地理与创客空间文化直接塑造了这届 BSD 会议的组织形态。（BSDTalk EP198，[121.02-168.92]，L1）
+- 总纲5 没有必然性，只有偶然性：其 BSD 之路由纯粹的偶然链构成：一条 Slashdot 发布消息、一台闲置 Alpha 机器与对号称优化版 Red Hat 的不满三者相遇，才有了转投 FreeBSD 的契机；此后按需求在三大 BSD 间自然迁徙——安全与邮件归 OpenBSD、web 归 FreeBSD、掌上设备归 NetBSD，无任何必然路径可言。（BSDTalk EP73，[516.06-594.42]，L1）
+- 总纲8 本体论上各方平等：当事人以实际用途而非阵营立场对待三大 BSD，各分支依其长处各安其位，用户态层面平等取用；其倡导方式也非论战而是提供可评估的 live CD，让人以经验自行裁决——选择权交给动手者的亲身体验。（BSDTalk EP73，[599.42-652.90]，L1）
+- 总纲9 经验优先：当事人全部技术判断源自运维经验而非理论宣言：被黑客入侵的切肤之痛促成关键平台迁移，万级用户的真实管理需求催生中央用户库项目，半年升级节奏决定 stable 策略——平台选择的标准被表述为朴素的一个基本可用且安全的系统。（BSDTalk EP76，[444.00-526.04]，L1）
+- 总纲3 不存在进步，只有权力再分配：固件再分发之争的实质是硬件厂商与开源社区之间对固件控制权的再分配：OpenBSD 明确不求固件源码、只求二进制再分发权，把诉求压缩到最低限度以换取厂商让步的可能——这一谈判姿态本身就是权力边界协商的操作化表达。（BSDTalk EP76，[805.88-820.12]，L1）
 
 **辨析**：
 
@@ -253,12 +280,14 @@ volume: 18
 - OpenJDK 维护者姓名在转录中作 Harold 或 Harald，具体拼写须以 FreeBSD Foundation 原文核验。　[存疑脚注] 维护者姓名存在转写歧义（BSD Now EP626，[867.98-873.02]，L4）
 - Stefano 所称 Özal Babaoğlu 为“原始 BSD 的创建者之一”系同学转述，其具体贡献范围须以 CSRG 档案核实。　[存疑脚注] Babaoğlu 在伯克利 BSD 中的具体贡献与角色未经 CSRG 一手档案核实。（BSD Now EP579，[843.16-869.18]，L4）
 - Dave 所述“早期 core 即全体源码 commit 持有者”为其个人追述，具体历史节点须以 FreeBSD 项目档案核实。　[存疑脚注] core 早期构成说法为个人追述，未经项目治理档案核实。（BSD Now EP579，[1898.98-1948.24]，L4）
+- 转写将讲者姓名识别为 Lubimir Sidlogic，应为 NetBSD/pkgsrc 开发者 Lubomir Sedlacik；“第四届”与“四年前始于维也纳”系约数表述，历届城市序列与首办年份须以 pkgsrccon.org 存档核对；另有若干设备与软件名因语音识别损坏无法复原。　[存疑脚注] 讲者姓名与历届会议序列均系 ASR 转写产物，存在识别损坏，采用前须以官方存档交叉核验（BSDTalk EP100，[286.8-304.04]，L4）
 - 转写人名讹误集中且部分不可辨识：Mark Ballmer 应为 Marc Balmer，Peter Hansen 应为 Peter Hansteen，Byrne Arlers 疑为 Bernd Ahlers，Felix Kronlager 应为 Felix Kronlage，Claudio Jäker 应为 Claudio Jeker，缓冲区缓存讲者讹作 Miky Schallaeffel 无法辨识，soft rate 疑为其他主题讹写；上述均须以 OpenCon 2007 官方日程核证。　[存疑脚注] 人名与讲题经上下文推断校正或无法辨识，须回溯会议官方日程（BSDTalk EP133，[79.69-217.60]，L4）
 - 转写中“首次在威尼斯举办”与“与上年同址”两种表述并存，OpenCon 2006 是否同在威尼斯无法由本期单独确证，须以历届 OpenCon 会址记录核证。　[存疑脚注] 会址沿革内部矛盾，待历届会议记录核证（BSDTalk EP133，[59.18-118.05]，L4）
 - 转写讹误较多：Martin Fain 应为 Marten Vijn，Wireless Lighting 应为 Wireless Leiden，Gen2 应为 Gentoo，OpenOSPS 应为 openospfd，lag 应为 lagg(4)，CFS 疑为 CARP 之讹，Kobalt Rack 2 应为 Cobalt RaQ 2，freebiskey、3BZ、free BC 等均为 FreeBSD 之讹；活动地点讹作 Ust-East（乌得勒支一带）与组织基金会名 Wifershoff.org 均无法辨识。　[存疑脚注] 人名、项目名与地点经上下文推断校正，部分无法辨识，须以 OCC 与 Wireless Leiden 官方存档核证（BSDTalk EP137，[211.22-736.35]，L4）
 - 历届出席人数（首届约 50 人、上届约 40 人）为组织者记忆性陈述，无独立佐证，须与 OCC 历届站点或报告核证。　[存疑脚注] 记忆性数字，待外部核证（BSDTalk EP137，[704.55-722.63]，L4）
 - 转写段序呈两路交错（同场演讲的 segment 被拆为交替流出），非内容缺失，通读可复原完整叙事；若干专名存疑：money email 应为 money mule，Dart and Fiddling Kent 疑为 Dartford, Kent，声誉站名 LuxCup 与假托管站名拼写均未经原始幻灯片核对；Rockphish 现行名演讲者自述谨慎使用；涉及第三方犯罪行为的指控（假货运克隆真公司、假银行抄袭东亚银行文本等）均为演讲者现场演示所见，引用时应以存档网页为准。　[存疑脚注] 上述专名复原与涉案网站事实均无法在本期转写内独立验证，须对照演讲幻灯片与研究者论文。（BSDTalk EP178，[0.0-40.0]，L4）
 - 本集为会前预告性质访谈，所列平行会议（FreeBSD summit、PC-BSD 开发峰会、release engineering 正式会议）均属计划性陈述，其实际召开情况与议程落实须以会后存档、会议纪要等独立材料交叉验证。　[存疑脚注] 预告性陈述而非既成事实，采信须待会后材料印证（BSDTalk EP198，[552.46-588.46]，L5）
+- 转写人名严重失真：受访者姓名在转写中呈现多种变体，Claudio Jeker、Henning Brauer 等开发者名均被误转；开场关于 PC-BSD 被收购的新闻仅一句且转写破损，本卡片未采信该事件。[存疑脚注] 本卡片人名均已按公开通行拼写修正，引用时需与原始音频核对。　[存疑脚注] 转写人名失真，开发者合作者拼写依据公开资料推定（BSDTalk EP76，[53.86-60.86]，L4）
 
 **文献**：
 
@@ -269,9 +298,12 @@ volume: 18
 - [BSD Now EP192] Pennington J. BSD Now: 192: SSHv1 Be Gone[EB/OL]. (2017-05-03)[2026-08-15]. https://www.bsdnow.tv/192.
 - [BSD Now EP626] Pennington J. BSD Now: 626: USB webcam testing[EB/OL]. (2025-08-28)[2026-08-15]. https://www.bsdnow.tv/626.
 - [BSD Now EP579] Pennington J. BSD Now: 579: EuroBSDcon 2024[EB/OL]. (2024-10-03)[2026-08-15]. https://www.bsdnow.tv/579.
+- [BSDTalk EP100] Backman W. BSDTalk: 100: bsdtalk100 - NetBSD Developer Lubomir Sedlacik[EB/OL]. (2007-02-15)[2026-08-27]. https://archive.org/details/bsdtalk100.
 - [BSDTalk EP133] Backman W. BSDTalk: 133: bsdtalk133 - OpenCon 2007 update from Marc Balmer[EB/OL]. (2007-10-17)[2026-08-27]. https://bsdtalk.blogspot.com/2007/10/bsdtalk133-opencon-2007-update-from.html.
 - [BSDTalk EP137] Backman W. BSDTalk: 137: bsdtalk137 - Open Community Camp with Marten Vijn[EB/OL]. (2008-01-04)[2026-08-27]. https://bsdtalk.blogspot.com/2008/01/bsdtalk137-open-community-camp-with.html.
 - [BSDTalk EP178] Backman W. BSDTalk: 178: bsdtalk178 - Richard Clayton - Evil on the Internet - EuroBSDCon[EB/OL]. (2009-10-31)[2026-08-27]. https://bsdtalk.blogspot.com/2009/10/bsdtalk178-richard-clayton-evil-on.html.
 - [BSDTalk EP198] Backman W. BSDTalk: 198: bsdtalk198 - MeetBSD California 2010[EB/OL]. (2010-09-29)[2026-08-27]. https://bsdtalk.blogspot.com/2010/09/bsdtalk198-meetbsd-california-2010.html.
+- [BSDTalk EP73] Backman W. BSDTalk: 73: bsdtalk073 - Interview with Sevan Janiyan[EB/OL]. (2006-10-04)[2026-08-27]. https://archive.org/details/bsdtalk073.
+- [BSDTalk EP76] Backman W. BSDTalk: 76: bsdtalk076 - OpenBSD Developer Marc Balmer[EB/OL]. (2006-10-12)[2026-08-27]. https://archive.org/details/bsdtalk076.
 
 <!-- /PODCAST_REVIEW -->

@@ -103,7 +103,7 @@ volume: 14
 本章所书皆是形式主义化的重构，并非对“真实的 BSD 历史”的呈现。本章的章节划分、事件选择、叙事策略、因果归因——全部基于编纂者的哲学设定。本章承认这些局限，不声称客观或中立，欢迎被更诚实的叙事所超越。
 
 <!-- PODCAST_REVIEW v20260829 -->
-<!-- 语义复核范围：BSD Now EP623、BSD Now EP58、BSD Now EP51、BSD Now EP40、BSDTalk EP148、BSDTalk EP151、BSDTalk EP230、BSDTalk EP41、BSDTalk EP42（共 9 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
+<!-- 语义复核范围：BSD Now EP623、BSD Now EP58、BSD Now EP51、BSD Now EP40、BSDTalk EP148、BSDTalk EP151、BSDTalk EP230、BSDTalk EP41、BSDTalk EP42、BSDTalk EP71（共 10 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
 
 **要点**：
 
@@ -148,6 +148,12 @@ volume: 14
 - Lehenbauer 的 BSD 渊源始于 1991 年：以无浮点协处理器的 386/16 经 9600 波特 SLIP 链路历时约 24 小时下载 Bill 与 Lynne Jolitz 的 386BSD；早期系统仅稳定数分钟，随补丁发布逐步延长至 20 分钟、1 小时，但基于 4.4BSD 代码的文件系统自始稳定、从未丢文件——他将这份可靠性视为自己不曾失去信心的关键。（BSDTalk EP42，[410.38-465.50]，L1）
 - 九十年代其团队以 BSD 建立并运营整家 ISP，1999 年以令人满意的价格售出；FlightAware 创业时天使资金极少，Oracle 与 Microsoft SQL 的许可费足以压垮预算，加上对 BSD 性能、稳固与自身既有经验的信任，选型几乎不言自明；扩展哲学是拒绝大型专有多处理器系统、以廉价 PC 服务器横向堆叠。（BSDTalk EP42，[390.86-510.58]，L1）
 - 桌面端迁移路径：多年维持 Windows 与 BSD 双分区双启动，为 Excel 与 Photoshop 重启进 Windows、其余时间活在 BSD 的终端与 SSH 中；2002 年 11 月购入 Titanium PowerBook 并装载 Mac OS X 10.1 后完成切换，理由是终端加 SSH 照常远程工作、Tcl 随系统附带、Darwin Ports 可编译与 FreeBSD ports 相同的软件，乃至 FlightAware 产品可在离线笔记本上运行——Mac OS X 因此成为其 BSD 桌面经验的自然延伸。（BSDTalk EP42，[817.14-939.40]，L1）
+- 当事人解释 UNIX 平台杀毒需求的实质：UNIX 与 BSD 系统多充当 Samba 文件服务器和邮件服务器，扫描对象是经由这些服务器中转、最终作用于 Windows 客户端的恶意软件；其自述入职三年间从未见到对 UNIX 系统本身有显著影响的恶意软件。（BSDTalk EP71，[161.66-198.94]，L1）
+- 该公司病毒数据库中 UNIX 病毒仅收录两条且均为 2002 年发现——针对 BSD 的 Scalper 与针对 Linux 的 Slapper，均利用 Apache 漏洞；病毒实验室约知晓 8 个 UNIX 特定病毒，无一在野外流行，这两条样本主要用于认证测试。此为 2006 年 UNIX 恶意软件长期稀缺的从业者一手证词。（BSDTalk EP71，[201.94-241.66]，L1）
+- 跨 UNIX 可移植性依赖引擎层的抽象工程：扫描引擎做到字节序无关，将 malloc、open、close 等常用 C 库调用封装为可替换函数，每个平台仅需两三个实现与独立头文件，使先在 Linux 或 Solaris 调通、再移植到其余 UNIX 变得近乎平凡；BSD 版本当时仅覆盖 x86。（BSDTalk EP71，[521.78-568.78]，L1）
+- 平台矩阵与链接策略：产品覆盖 Linux（x86、PowerPC，MIPS 为 OEM 在研）、Solaris（Intel 与 SPARC）、AIX 旧平台及各 BSD，合计逾 20 个需测试认证的平台组合；Linux 版因 GPL 须提供动态库，其余平台在合适处采用静态链接以便救援盘场景。（BSDTalk EP71，[245.82-284.26]，L1）
+- on-access 扫描在开源平台上的实现与分布：Linux x86 版通过可预加载包装器拦截 open 与 read 调用实现访问时扫描，命中即返回拒绝访问；BSD 平台尚无此能力，相关需求九成来自 Linux 用户、一成来自 Solaris，BSD 社区几无客户请求，服务器场景以指定路径扫描与守护进程扫描为主。（BSDTalk EP71，[337.34-380.90]，L1）
+- 邮件服务器集成呈三种路径：sendmail 经 milter 过滤器接入，Postfix 采用双实例——首实例将信件全部转发给专职扫描的第二实例再回灌队列，qmail 则直接替换其 queue 程序；产品除 C 库外依赖 Perl 承担更新与邮件网桥，更新经由 crontab 定时以 HTTP 拉取。（BSDTalk EP71，[288.26-430.36]，L1）
 
 **史料**：
 
@@ -163,6 +169,7 @@ volume: 14
 - 首届 vBSDcon 的组织事实记录：时间地点、单轨议程结构、轮值承办声明、对 FreeBSD 基金会的捐款承诺与组织联系渠道 vbsdcon at verisign.com，均为组织者本人自述。（BSDTalk EP230，[307.37-474.41]，L1）
 - 该期留存的一手史料线索：2005 年首届 Summer of Code 的组织覆盖名单含 FreeBSD 与 NetBSD；Google 截至 2006 年 5 月已释出约 20 万行代码，含 Core Dumper、Python 库、malloc 性能工具与 sparse hash table 实现；片头曲采用 OpenBSD 3.0 发行版主题曲，为 BSD 发行版歌曲文化的旁证。（BSDTalk EP41，[323.86-426.58]，L1）
 - 该期留存的一手史料线索：Slony-I 复制服务器（见 postgresql.org 文档）；3-Ware 硬件 RAID 的选型测试记录——标准为双盘系统拔出任一盘保持运行且重启后可从任一盘引导，而三年前主板板载 RAID 无一能可靠从第二盘引导；FAA 数据馈送延迟五分钟加处理约一分钟的时延结构；其个人机器上保留着 Microport Unix、Bell Technologies、SCO 时代直至 BSD 的连续文件时间戳，最早可追溯至 1980 年代末。（BSDTalk EP42，[316.28-375.46]，L1）
+- 该期留存的 2006 年一手商业生态事实：免费工作站版被多个开源项目以钩子或插件方式集成但依约不可再分发；样本提交邮箱 viruslab@f-prot.com 不经自动过滤人工受理，且与多家同行厂商共享样本，新样本通常在十至十五分钟内形成跨厂商定义；当事人自述 1999 年因 NT 音频劫持事件弃用 Windows，内部首席病毒研究员家用环境仅定期扫描而非常驻防护。（BSDTalk EP71，[675.46-1017.48]，L1）
 
 **史观**：
 
@@ -182,6 +189,7 @@ volume: 14
 - 总纲4 分离聚合是永恒规律：VeriSign 的公司史呈现为一系列分离与聚合：自 RSA 分拆而生，吸收 Network Solutions 而扩张，随 EMC 收购 RSA 而易主，最终剥离证书业务重聚于注册局；企业形态在分合往复中重定边界，而非沿单一方向演进。（BSDTalk EP230，[122.27-184.58]，L1）
 - 总纲3 不存在进步，只有权力再分配：DiBona 解释平台支持优先级时直言：个体开发者对平台重要性的自我认同无法改变企业按聚合用户量分配工程资源的逻辑，被支持与否是资源权力的再分配结果而非技术优劣的裁决；被冷落平台的出路在于代码开源后由社区自行移植。（BSDTalk EP41，[688.02-723.94]，L1）
 - 总纲17 证明世界先于解释和改造世界：Lehenbauer 的可靠性主张全部建立在自设测试之上：RAID 1 使磁盘可靠性较无冗余提升千倍、ECC 内存较非 ECC 提升百万倍的判断，均以其亲手拔盘、重启、引导验证为准，而非厂商参数；这种以可重复实测证明替代宣传解释的工程取向，正是其选型纪律的核心。（BSDTalk EP42，[743.12-807.10]，L1）
+- 总纲5 没有必然性，只有偶然性：当事人给出从业者的安全判断：95% 到 98% 的感染通过不做愚蠢操作即可避免，多数感染源于用户未在正确时机做正确的事；UNIX 平台病毒稀少并非系统的必然属性，而是其在生态中居于服务器端、用户行为与市场位置等偶然条件共同造成——平台的免疫形象建立在生态偶然性之上。（BSDTalk EP71，[914.88-990.30]，L1）
 
 **辨析**：
 
@@ -199,6 +207,7 @@ volume: 14
 - VeriSign 生产环境中 FreeBSD 的使用深度未经量化：访谈未给出部署规模、负载特征与 FreeBSD 版本，企业对 BSD 的实际依赖仅有双栈承诺的间接表述，任何定量引用均须另行考据。[存疑脚注] 单一来源且无系统细节。　[存疑脚注] 企业内 FreeBSD 部署规模与版本无当事方数据佐证，仅可作定性使用（BSDTalk EP230，[262.04-290.51]，L4）
 - DiBona 自承不了解 BSD 运行 Linux 二进制兼容层的实际状态，显示即便开源企业负责人对 BSD 技术生态亦存认知盲区；其“BSD 许可为全球第二大流行许可”为个人估计而非统计结论。[存疑脚注] 该排序无出处，仅作 2006 年企业认知样本记录。　[存疑脚注] BSD 许可流行度排序系 DiBona 口头估计，无统计数据佐证。（BSDTalk EP41，[646.06-668.74]，L4）
 - 对 BSD 的批评与敬意并存：Lehenbauer 抱怨会撞上奇怪内核限制（共享内存相关转换表的尺寸难觅文档），须翻检一年前的邮件列表自行揣测；承认其他发行版的安装流程更精致；但赞其发布工程从未放行早期 Linux 曾出现的卸载即毁文件系统一类的缺陷，并在 Linux 占尽 mind share 与公司投入的 2006 年，仍称许 Berkeley 阵营的强健，特别致敬 Theo de Raadt 与 NetBSD、OpenBSD 的工作。[考据脚注] 其所称早期 Linux umount 缺陷细节未经核实，系当事人回忆。　[考据脚注] 早期 Linux umount 缺陷的具体所指未核实，仅作当事人 2006 年回忆记录。（BSDTalk EP42，[943.92-1068.48]，L1）
+- 间谍软件与广告软件的检测默认关闭：当事人称 spyware 已成为法律术语，同一远程管理工具对不同主体可以是实用软件或间谍软件，故新引擎虽具备检测能力但须用户显式开启，公司规避法律风险。[存疑脚注] 此为当事企业 2006 年的商业与法律立场，属单一来源陈述，此后各国间谍软件立法与产业惯例已发生变化。　[存疑脚注] 间谍软件法律定性及默认关闭策略为当事人单方陈述，未见其他来源交叉验证（BSDTalk EP71，[771.82-820.20]，L4）
 
 **文献**：
 
@@ -211,5 +220,6 @@ volume: 14
 - [BSDTalk EP230] Backman W. BSDTalk: 230: bsdtalk230 - vBSDcon with Verisign CTO Burt Kaliski[EB/OL]. (2013-08-14)[2026-08-27]. https://bsdtalk.blogspot.com/2013/08/bsdtalk230-vbsdcon-with-verisign-cto.html.
 - [BSDTalk EP41] Backman W. BSDTalk: 41: bsdtalk041 - Interview with Chris DiBona from Google[EB/OL]. (2006-05-07)[2026-08-27]. https://archive.org/details/bsdtalk041.
 - [BSDTalk EP42] Backman W. BSDTalk: 42: bsdtalk042 - Interview with Karl Lehenbauer from Flightaware[EB/OL]. (2006-05-11)[2026-08-27]. https://archive.org/details/bsdtalk042.
+- [BSDTalk EP71] Backman W. BSDTalk: 71: bsdtalk071 - Interview with Einar Th. Einarsson from f-prot.com[EB/OL]. (2006-09-28)[2026-08-27]. https://archive.org/details/bsdtalk071.
 
 <!-- /PODCAST_REVIEW -->
