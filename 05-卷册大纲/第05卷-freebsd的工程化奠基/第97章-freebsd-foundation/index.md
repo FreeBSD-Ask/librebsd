@@ -57,7 +57,7 @@ volume: 第05卷-freebsd的工程化奠基
 - McKusick & Rice. The Evolution of FreeBSD Governance [J]. FreeBSD Journal, 2017, 4(5): 26-31 ［A］；McKusick. The Evolution of FreeBSD Governance [C]//BSDCan 2018. Ottawa, 2018 ［A］<!-- DB_REF:freebsd.duckdb -->> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 1996-2010 年间：482,545 次提交。> 仓库总览：1,294,851 次提交，13,875 位贡献者，1993-06-12 至 2026-08-25。
 
 <!-- PODCAST_REVIEW v20260829 -->
-<!-- 语义复核范围：BSD Now EP566、BSD Now EP648、BSD Now EP333、BSD Now EP278、BSD Now EP269、BSD Now EP258、BSD Now EP198、BSD Now EP194、BSD Now EP192、BSD Now EP189、BSD Now EP166、BSD Now EP147、BSD Now EP622、BSD Now EP616、BSD Now EP59、BSD Now EP56、BSD Now EP51、BSD Now EP23、BSD Now EP2、BSD Now EP1、BSDTalk EP169、BSDTalk EP237（共 22 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
+<!-- 语义复核范围：BSD Now EP566、BSD Now EP648、BSD Now EP333、BSD Now EP278、BSD Now EP269、BSD Now EP258、BSD Now EP198、BSD Now EP194、BSD Now EP192、BSD Now EP189、BSD Now EP166、BSD Now EP138、BSD Now EP622、BSD Now EP616、BSD Now EP59、BSD Now EP56、BSD Now EP51、BSD Now EP23、BSD Now EP2、BSD Now EP1、BSDTalk EP169、BSDTalk EP237（共 22 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
 
 **要点**：
 
@@ -110,11 +110,8 @@ volume: 第05卷-freebsd的工程化奠基
 - FreeBSD Foundation 2016 年 10 月更新预告 developer summit 与 MeetBSD，并强调年末小额捐赠的数量关系到基金会维持公共慈善地位，而非仅依赖少数大额捐赠。（BSD Now EP166，[1259.92-1293.08]，L2）
 - NetBSD 7.0.2 为小型安全更新，修复 mail.local 竞态、更新 OpenSSL 与 NTP/BIND，并修复 UFS1 外来文件系统、MIPS pmap 与 SPARC64 问题。（BSD Now EP166，[2064.56-2101.88]，L2）
 - Matthew Dillon 修复 DragonFly 内核 MMC/SD 读写的 AB_RID 未清零导致的短读写，并将首次超时后的等待从 10 秒降为 1 秒，减少死端口引导延迟。（BSD Now EP166，[2108.32-2152.92]，L2）
-- Glen Barber 与 Peter Wemm 介绍 FreeBSD 发布工程：在 alpha/beta 周期内反复测试安装器与自动化，让问题在发布前暴露，而非等到末期再集中排查。（BSD Now EP147，[2755.00-2886.00]，L1）
-- Peter Wemm 说明其角色包含 FreeBSD Foundation 系统管理员、项目资源协助与 cluster/release engineering，并讨论把 MFSBSD 集成到构建系统、按周生成快照的可能性。（BSD Now EP147，[2920.00-3162.00]，L1）
-- OpenBSD 的 ART（Allotment Routing Table）以多比特 trie 替换 BSD radix tree，以内存换查找速度；基准显示 64k 目的地址下 ART 性能高于旧实现最优场景，代价约 50MB 内存。（BSD Now EP147，[473.00-858.00]，L2）
-- pkgsrc 迎来第 50 次发布，访谈 Jonathan Perkin、Jörg 等人；pkgsrc 自举并可跨 Linux、macOS、NetBSD、Solaris 等平台提供一致包仓库。（BSD Now EP147，[3867.00-3975.00]，L2）
-- Unique 项目利用 NetBSD rump kernel 提供 unikernel 编译部署平台，支持 C/C++/Node.js/Go，并借 OSv 支持 Java，可跑在 VirtualBox、AWS、QEMU 等后端。（BSD Now EP147，[3749.00-3857.00]，L2）
+- Benedict Reushling 自述其入会路径：EuroBSDCon Sofia（2014）会后被 Erwin Lansing 略带神秘地接洽，受邀加入 FreeBSD Foundation 董事会，动因是董事会欲在德语区（德、奥、瑞士）扩展席位；2015 年 1 月前后经正式电话面试，面试中他自陈“我是文档人，不熟悉内核”，有董事随即打断并表态“源码提交者已经够多，董事会需要多样性”（1664-1688 秒）；同年 BSDCan 前的年度董事会完成履新，受访时（AsiaBSDCon 2016 东京现场）入会约一年，其定位始终是文档与欧洲拓展而非内核开发。　[存疑脚注] 受访人姓氏在转写中作 Russeling/Herschling，按 FreeBSD Foundation 董事名录判定为 Benedict Reushling；电话面试中另一表态董事姓名转写失真（音似 Qsync），仅 Kirk 一名可辨。（BSD Now EP138，[1596.68-1694.12]，L1）
+- 基金会职能被受访者概括为“支持位”而非治理位：不向项目推送任何政策、不指定开发何种驱动，而是以资金资助开发者与发布工程师等职员、以法人实体身份签署 NDA 等法律文书、维护 FreeBSD 注册商标——freebsd.foundation 新顶级域名遭抢注者索价 8000 美元，董事会曾在付款、无视与诉诸律师之间权衡——并走访 iXsystems、Netflix 等大赞助商，维系捐赠并对接其技术需求，同时开拓欧洲赞助方与 Linux 系会议之外的布道场合（1791-1990 秒）。（BSD Now EP138，[1789.80-1989.86]，L1）
 - Mark Phillips 自述 2014 年入职仅约 18 个月的 Ansible，次年公司被 Red Hat 收购；此后在 Red Hat 与多家创业公司间辗转，2025 年初加入 FreeBSD Foundation 任技术营销经理。（BSD Now EP622，[407.42-944.24]，L1）
 - Mark Phillips 主张营销的本质是对好产品讲好故事，把营销替换为讲故事即可理解其工作，并强调技术与营销互为表里、工程师需要被反馈其工作价值。（BSD Now EP622，[944.24-1506.38]，L1）
 - Mark Phillips 认为 ZFS 是 FreeBSD 的杀手特性，Solaris 系统管理员因 ZFS 与 DTrace 的继承而转向 FreeBSD，FreeNAS 等产品也以此为基础。（BSD Now EP622，[1051.38-1238.66]，L1）
@@ -196,9 +193,7 @@ volume: 第05卷-freebsd的工程化奠基
 - NCC Group 开源的 TriforceAFL 与 flashrd 工具链（GitHub 仓库），用于 OpenBSD 系统调用模糊测试。（BSD Now EP166，[122.62-224.46]，L2）
 - Mark Schilder 关于在 FreeBSD 上加速 MySQL 导入的博客文章，列出 InnoDB 与 ZFS 调优清单。（BSD Now EP166，[566.72-1010.56]，L2）
 - Keith Burnett 的 OpenBSD 6.0 笔记本安装教程（ThinkPad X60 上配置 XFCE、doas 与 USB 挂载）。（BSD Now EP166，[1802.96-1947.44]，L2）
-- ART 原始论文 PDF 与作者发布的 radix tree/ART 性能与内存对比图表。（BSD Now EP147，[548.00-836.00]，L2）
-- pkgsrc 第 50 次发布的系列访谈，含 Jonathan Perkin、Jörg 等人的自我介绍与维护经历。（BSD Now EP147，[3867.00-3975.00]，L2）
-- Glen Barber 与 Peter Wemm 关于发布工程与集群管理的自述。（BSD Now EP147，[2755.00-3162.00]，L1）
+- 本期新闻与访谈段落提及的一手史料：Colin Percival 论 opinionated workarounds 的博文（只在需要的系统上打补丁并大声报错）；Andrew Tanenbaum 复盘 Minix 三十年经验的视频报道（324-390 秒）；NetBSD 官方安全公告（calendar(1) 以 root 执行外部命令前未剥离特权，波及几乎所有历史版本）；OpenBSD pledge 多语言绑定仓库（node、Python、Rust、Go、Lua、Erlang、Nim 等）；Michael W. Lucas《FreeBSD Mastery: Advanced ZFS》出版信息；PGCon 2016（渥太华）、EuroBSDCon 2016（贝尔格莱德）、pkgsrcCon 2016（克拉科夫）征稿公告；FreeBSD wiki 的 ARM 交叉编译指南；AsiaBSDCon 2016 现场三小时文档与翻译教程，成果为将 LeapSeconds 一文译入日语（2663-2805 秒）。（BSD Now EP138，[3326.48-4582.82]，L2）
 - Mark Phillips 访谈（2025 年 7 月柏林 Hackathon 现场）。（BSD Now EP622，[66.14-3216.34]，L1）
 - FreeBSD Foundation 关于页面与 YouTube 频道内容。（BSD Now EP622，[2688.00-2695.60]，L2）
 - 本期为 FreeBSD 基金会执行董事 Deb Goodkin 与早期创始人 Justin Gibbs 的口述访谈，属当事人一手自述；访谈提及早期商标转让与基金会自筹资金的历史细节。　[存疑脚注] 转写将商标原持有人写作 Gwyn River，疑为 Walnut Creek 的语音识别讹误，须以基金会档案核实。（BSD Now EP616，[420.22-528.70]，L1）
@@ -243,9 +238,8 @@ volume: 第05卷-freebsd的工程化奠基
 - 总纲1 一切真历史都是古代史：主持人感叹管道今日被当作理所当然，而忽略其曾有“没有管道的时代”，历史书写把建构产物自然化为恒常存在。（BSD Now EP166，[239.06-247.66]，L3）
 - 总纲4 分离聚合是永恒规律：Adhoku 以 jail 做应用级分离、以反向代理做流量聚合，呈现分离与聚合的交替结构，而非单一集中或单一分散。（BSD Now EP166，[1636.04-1775.64]，L3）
 - 总纲10 动手者创造历史：MySQL 与 ZFS 的优化均来自动手部署者的具体记录，性能改进由实际操作者而非抽象方案推动。（BSD Now EP166，[566.72-1010.56]，L3）
-- 总纲9 经验优先：ART 的性能结论来自基准测试与内存权衡的经验数据，而非抽象的“新即好”。（BSD Now EP147，[760.00-858.00]，L2）
-- 总纲10 动手者创造历史：Barber 与 Wemm 长期维护发布与集群基础设施，是无名工程角色维持项目运转的动手者叙事。（BSD Now EP147，[2920.00-3007.00]，L1）
-- 总纲4 分离聚合是永恒规律：unikernel 把应用本身做成内核，容器与虚拟机形态在同一抽象下聚合，体现操作系统边界的分离与重新组合。（BSD Now EP147，[3852.00-3857.00]，L2）
+- 总纲10 动手者创造历史：“我是文档人”的自谦与“源码提交者已经够多”的回应，使这次董事补选成为对何种劳动被计入治理的再定义：文档、翻译、法务、布道与组织工作在基金会层面获得与内核开发同等的代表权——书写 BSD 史时，维持项目运转的动手者与提交代码的动手者同为历史的创造者（1664-1688 秒）。（BSD Now EP138，[1664.16-1687.68]，L1）
+- 总纲1 一切真历史都是古代史：calendar(1) 漏洞是“古代制度活在当代”的活标本：主持人的解释是，该工具为全校共用一台主机、每人维护日历文件的时代而设计，以 root 身份遍历所有用户日历并邮寄提醒在当时合理；2016 年它仍以 root 日任务存续，特权未剥离的旧设计在新语境中变成提权漏洞——理解这一漏洞必须回到其诞生的分时主机时代而非仅看当代代码（3666-3696 秒）。（BSD Now EP138，[3666.52-3695.82]，L2）
 - 总纲15 文化即形式主义：总纲15 文化即形式主义：Mark Phillips 把营销还原为讲故事的形式，提示技术传播中的品牌叙事同样是形式化构造。（BSD Now EP622，[2702.70-2727.46]，L1）
 - 总纲10 动手者创造历史：总纲10 动手者创造历史：他以工程师背景亲手测试 ZFS 根镜像并反馈给 Colin Percival，体现使用者参与塑造云镜像。（BSD Now EP622，[1215.20-1244.40]，L1）
 - 总纲9 经验优先：总纲9 经验优先：其讲故事方法论基于多年创业与营销一线经验，而非抽象理论推演。（BSD Now EP622，[2553.94-2822.94]，L1）
@@ -285,7 +279,8 @@ volume: 第05卷-freebsd的工程化奠基
 - [存疑脚注] GSoC 项目名单为 2017 年计划，最终是否全部完成须以后续项目报告为准。　[存疑脚注] 计划性名单，验收结果待后续报告。（BSD Now EP189，[585.22-733.18]，L4）
 - [存疑脚注] 转写将管道历史中的参与者记作“Thompson and Kennedy”，疑为 Ritchie、Thompson 与 Rudd Canaday 的误转；管道提议与实现时间线须以 McIlroy 原文及 Unix 一手文献复核。　[存疑脚注] 人名与时间线须核验一手文献。（BSD Now EP166，[279.9-308.86]，L4）
 - [存疑脚注] 转写将 Hauben 文章托管地记作“farther dot edu”，实际域名无法据此确认，引用时须核验文章来源。　[存疑脚注] 文章来源域名存疑。（BSD Now EP166，[417.88-422.96]，L4）
-- ZFS rollback 的 `-R` 语义与其他命令不同，表示删除途中快照与克隆，而非递归回滚；历史决策无法更改，易致用户误删，成为长期兼容负担。（BSD Now EP147，[5713.00-5831.00]，L2）
+- 主持人在评述 Percival 博文时即兴将 OpenSSL Heartbleed 归因于“为个别系统的慢 malloc 自建内存管理层却全局启用”，以此反证“补丁只打在需要的系统上”的局部性原则；但此归因系主持人现场发挥而非博文原文，Heartbleed 的直接根因是心跳报文边界检查缺失，与自定义内存管理器的关系须经代码与事后审计多源核对，不可直接采信。　[存疑脚注] Heartbleed 与 OpenSSL 自定义内存管理层的因果链为主持人单源现场推断，节目未给出出处，属待验证命题。（BSD Now EP138，[3534.72-3578.44]，L4）
+- 受访者供职的达姆施塔特应用技术大学把 26 节点 Dell C6220 集群从 Ubuntu 渐进迁往 FreeBSD：以 bhyve 为教学虚拟机宿主、以 ZFS 快照回滚兜底学生 root 误操作、自写 shell 脚本把重装时长从 FI 全自动安装的 25 分钟压缩到约 10 分钟，是 2016 年 bhyve 与 ZFS 进入真实教学负载的自述个案；但其自承性能验证尚未完成，属单一当事人陈述，可作 bhyve 成熟度的孤证线索而非生态级结论。　[存疑脚注] 单源自述；“学生不会察觉运行于虚拟机”的性能判断未附数据，待其承诺的后续文章或演讲验证。（BSD Now EP138，[2437.50-2649.70]，L4）
 - 访谈为 Mark Phillips 单方自述，其职业时间线与 FreeBSD Foundation 任职细节为单一来源，关键节点须以基金会公告交叉验证。　[存疑脚注] 职业履历为当事人单一来源自述，未与其他公开资料交叉验证（BSD Now EP622，[407.42-944.24]，L4）
 - 访谈中的预算（约 270 万至 290 万美元）与募资（约 550 万美元）数字为当事人口述的单一来源，须与基金会年度报告交叉核对。　[存疑脚注] 预算与募资金额为当事人口述，未经年报交叉验证。（BSD Now EP616，[570.70-586.06]，L4）
 - commit 日志作为史料样本与媒体误读现象：本期新设邮件列表集锦段所引三例——Julian Assange 于 1990 年代中期致信 FreeBSD 邮件列表建议放弃 CVS（表明其曾是 FreeBSD 用户）；Ted Unangst 修复 head(1) 的提交日志戏称“修复 head 中严重的分布式拒绝服务”，被技术媒体当真演绎为 OpenBSD 出现严重漏洞；另一提交日志自述“修复 Bill Joy 于 1977 年 8 月 24 日引入、已存在于 1978 年 3 月 9 日 1BSD 发布中的 37 年老 bug，方式是合并 Keith Bostic 来自 4.4BSD 的 22 年前修复”。前者展示技术幽默在跨语境传播中的失真，后者则将 1BSD—4.4BSD—当代的代码谱系凝缩于一条提交日志，可作版本演化叙事的直接引证。（BSD Now EP59，[4501.43-4646.07]，L2）
@@ -309,7 +304,7 @@ volume: 第05卷-freebsd的工程化奠基
 - [BSD Now EP192] Pennington J. BSD Now: 192: SSHv1 Be Gone[EB/OL]. (2017-05-03)[2026-08-15]. https://www.bsdnow.tv/192.
 - [BSD Now EP189] Pennington J. BSD Now: 189: Codified Summer[EB/OL]. (2017-04-12)[2026-08-15]. https://www.bsdnow.tv/189.
 - [BSD Now EP166] Pennington J. BSD Now: 166: Pass that UNIX Pipe[EB/OL]. (2016-11-02)[2026-08-15]. https://www.bsdnow.tv/166.
-- [BSD Now EP147] Pennington J. BSD Now: 147: Release all the things![EB/OL]. (2016-06-22)[2026-08-15]. https://www.bsdnow.tv/147.
+- [BSD Now EP138] Pennington J. BSD Now: 138: Rushing into BSD[EB/OL]. (2016-04-20)[2026-08-15]. https://www.bsdnow.tv/138.
 - [BSD Now EP622] Pennington J. BSD Now: 622: Interview with Mark Phillips - Technical Marketing Manager at the FreeBSD Foundation[EB/OL]. (2025-07-31)[2026-08-15]. https://www.bsdnow.tv/622.
 - [BSD Now EP616] Pennington J. BSD Now: 616: FreeBSD Foundation Interview[EB/OL]. (2025-06-19)[2026-08-15]. https://www.bsdnow.tv/616.
 - [BSD Now EP59] Pennington J. BSD Now: 59: BSDって聞いたことある？[EB/OL]. (2014-10-15)[2026-08-15]. https://www.bsdnow.tv/59.

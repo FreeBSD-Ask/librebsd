@@ -43,10 +43,13 @@ volume: 第07卷-freebsd的工程体系重构
 - 原材料/哲学/项目统摄史观/第 25 章.md（总纲第 21 条，第 25 行；总纲第 6 条，第 11 行；总纲第 7 条，第 13 行）；原材料/哲学/项目统摄史观/第 21 章.md（21.1、21.2 节）；Divacky R. [Announce] clang/llvm can compile booting FreeBSD kernel [EB/OL]. freebsd-current mailing list, 2009-02-25；Losh W. GCC 4.2.1 retirement announcement [EB/OL]. freebsd-arch mailing list, 2018. ［A］<!-- DB_REF:freebsd.duckdb -->> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 2020-2024 年间：291,070 次提交。> 仓库总览：1,294,851 次提交，13,875 位贡献者，1993-06-12 至 2026-08-25。
 
 <!-- PODCAST_REVIEW v20260829 -->
-<!-- 语义复核范围：BSD Now EP106、BSDTalk EP7、BSDTalk EP204、BSDTalk EP233（共 4 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
+<!-- 语义复核范围：BSD Now EP141、BSD Now EP106、BSDTalk EP7、BSDTalk EP204、BSDTalk EP233（共 5 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
 
 **要点**：
 
+- OPNsense 贡献者 Ike 回顾其国际化工作两度折戟：先为 pfSense 完成的日语翻译因 pfSense 许可证变更、翻译工具消失而无法发布；OPNsense fork 宣布时又因原翻译机制“许可证可疑”被整体移除，被迫以 PO 文件加构建系统集成的洁净方案从零重建。此叙述展示许可证决策如何摧毁社区无偿劳动，亦解释 OPNsense 早期工程取向的形成。　[存疑脚注]转写专名 OpenSense 疑为 OPNsense、Frank Pichner 疑为 Franco Fichtner、Chevelles/Yoss 疑为 Schellevis 兄弟（Deciso），均依上下文与项目史推断（BSD Now EP141，[1780.64-1863.20]，L1）
+- Trendly 以 FreeBSD jail 为基座提供预构建容器，以 manifest 清单描述所需服务与配置、构建时从官方仓库拉取组件，相较 Docker 式二进制镜像具有体积小、来源可验证、可审计的优势，预置 MariaDB、Postgres、WordPress 等方案；项目初版以 GPLv3 发布引发 BSD 社区强烈抵触，因外部贡献尚少而顺利改以 MIT 重新发布。许可证选择在 BSD 生态构成项目正当性的门槛而非仅是法律细节。　[存疑脚注]项目名 Trendly 依转写音记，未获旁证（BSD Now EP141，[3206.74-3360.22]，L2）
+- 2016 年 5 月 PC-BSD Current 月度镜像首次以包形式安装 FreeBSD 基础系统（拆分四百余包），替换 tarball 发行式安装；pkg 化使安全更新由全量校验变为按包增量升级，并为 jail 按需裁剪组件创造条件。同期暴露的已知问题包括 ZFS 上 setuid 位丢失、时区文件与 make distribution 内容未入包、beadm 遗留 canmount 致 boot environments 菜单内核不匹配，并推动 pkg 引入回滚机制的讨论，构成基础系统包化转折期的当事人实录。（BSD Now EP141，[3800.44-4149.34]，L1）
 - 多路径 TCP 是叠加在标准 TCP 之上的协议扩展，让多宿主主机把多个网络接口聚合进同一条 TCP 连接，由内核在应用无感知的情况下跨接口调度数据；一条多路径连接由若干在线路上仍表现为普通 TCP 的子流构成，握手期生成的令牌用于把新增地址关联回既有连接，调度可按最低 RTT 或可用拥塞窗口选择路径，而两端协商失败或选项在中途消失时自动回退为普通 TCP；有状态防火墙把新增子流当作独立连接处理可能丢弃流量，中间盒兼容仍是未决问题。（BSD Now EP106，[1594.62-1658.38]，L1）
 - 在 FreeBSD current 之上创建的 BSD router project 优化分支对路由转发代码做了改造，基准测试显示转发性能随网卡队列数增加近线性提升（1 到 2 队列提升约 88%，4 队列约 270%），尤其在该项目传统上因竞争而性能回落的临界点——队列数追平 CPU 数——新补丁使性能得以维持在峰值附近；配套仓库公开基准数据、测试工具与 ministat 统计显著性分析，可由第三方在不同硬件上复现。（BSD Now EP106，[480.86-695.16]，L2）
 - DragonFly BSD 1.4 于 2006 年 1 月 7 日发布；主持人补记此前遗漏，并说明该项目由一群围绕 FreeBSD 5 系内核希望作出重大改动的人分叉而来，旨在验证其在多处理性能上的理论，若理论成立则成果可惠及全部 BSD。（BSDTalk EP7，[20.38-79.16]，L2）
@@ -65,6 +68,7 @@ volume: 第07卷-freebsd的工程体系重构
 
 **史料**：
 
+- 本期可资征引的一手材料包括：Ike 于 AsiaBSDCon 2016 现场的口述访谈；Edward Napierala 为 FreeBSD CURRENT 提交的 camcontrol reprobe 命令（VMware 磁盘在线扩容免重启）；NetBSD 移植 OpenBSD NVMe 驱动的 commit log；Trendly 项目的许可证讨论（Reddit）；Ted 博客关于漏洞 embargo 与 Cloudflare 提前通知机制的批评文章；HardenedBSD 基本系统转用 LibreSSL 的公告；Michael Dexter 在 Linux Fest Northwest 关于从 Linux 迁移至 BSD 的演讲视频。　[存疑脚注]转写 Ted Ewing 结合前周 Ted 博客的 ld.so 线程信息块重构与 embargo 批评文，疑为 Ted Unangst；Nice Bug 疑为 NYC*BUG（纽约 BSD 用户组）（BSD Now EP141，[1346.26-1359.04]，L2）
 - 当事人口述：Nigel Williams 自述 2006 年前后在 Swinburne 网络研究中心完成工程学位并留校工作，入职即被要求安装 FreeBSD（约 4 或 5 版本）用于 dummynet 等网络实验；2011 年前后返校做流量分类统计补丁的嵌入式设备移植，2012 年年中承接在 FreeBSD 上实现多路径 TCP 的项目，由此学习修改内核，并以 FreeBSD Foundation 资助其硕士研究的方式持续开发，访谈时初版代码经自我审查后已推翻重写并恢复可用。（BSD Now EP106，[1445.57-1587.78]，L1）
 - 本期经主持人口播转述的公开一手材料包括：stunnel 作者讨论 LibreSSL 链接资格的 Twitter 与邮件列表帖（959-1002 段）；Ian Sutton 关于 SystemBSD（以 dbus 模拟 hostnamed、timedated 等 systemd 守护进程的 GSoC 项目）的新版幻灯片（1032-1124 段）；BSD router project 优化分支的 GitHub 基准数据与测试工具（582-675 段）；Peter Wemm 记述 FreeBSD 构建集群故障排查过程的博客（178-217 段）；FreeBSD Journal 2015 年 7-8 月企业特刊，含 Groupon 迁移与再培训 Linux 系统管理员、Benno Rice 撰写的 Isilon 升级经验、FreeBSD.org 二进制包现状综述与基金会工作专栏（2952-3101 段）；以及计划中针对 head 发布的多路径 TCP 补丁与公开仓库（1827-1866 段）。（BSD Now EP106，[959.30-1001.70]，L2）
 - 当事人一手实测记录：五款 BSD live CD 在四类硬件上的启动、网卡与键盘图形检测、失败案例（GX280 USB 键盘不识别、NetBSD 盘 libqt 缺失）与逐盘评述，为 2006 年初 BSD 桌面化程度的一手横截面；另含经主持人转述的 DragonFly 1.4 发布公告及其分叉动机表述、GPLv3 起草阶段 FSF 与 Stallman 反 DRM 立场的公开信息。（BSDTalk EP7，[20.38-843.56]，L1）
@@ -73,6 +77,8 @@ volume: 第07卷-freebsd的工程体系重构
 
 **史观**：
 
+- 总纲22 知识注定过时：Ike 提出“它们终将被攻破”的加密栈架构观：拒绝对 OpenSSL、LibreSSL、BoringSSL 作宗教式优劣之辩，而将“被攻破当日能否一键切换并重启生效”作为设计目标；其运行 ISP 时遭遇 SSH zero day、身在布鲁克林而服务器远在科罗拉多的失控感，直接催生 IPsec 备援基础设施的构建。安全架构的价值不在永不失效，而在失效时可恢复的生存能力。　[存疑脚注]转写 Libra SSL/illegal SSL 疑为 LibreSSL 失真，BoringSSL 可辨（BSD Now EP141，[2192.94-2260.22]，L1）
+- 总纲10 动手者创造历史：NYC BSD 用户组以无正式注册、无资产、无可争资源的松散形态运营月度聚会，自喻为“朋克后台”；刻意请实践者而非作者登台——如学区 Linux 管理员 Raul 以一线运维经验对比 systemd 与 init/rc——并鼓动系统管理员向 BSDCan 等会议投稿，理由是开发者数百而用户远多，开发者自认的好设计须受运维实况检验。历史的推动者在此被明确锚定于动手使用并报告失败经验的人群。（BSD Now EP141，[2571.18-2632.44]，L1）
 - 总纲10 动手者创造历史：多路径 TCP 的 FreeBSD 实现由一名硕士生以研究项目身份推进：无机构性宏大工程，只有具体的人在实验室里学习改内核、以局外人眼光审查并推翻重写自己的初版代码、承诺在数周内发布补丁；当事人在访谈结尾自述研究题目常被束之高阁，而这一次“it's a different experience to have people emailing me saying hey when's that thing going to be working”（音频 2664.50-2668.96），真实用户的催问成为持续开发的动力——技术史的实际主体正是这些被具体需求牵动的动手者，而非发布通告中的项目名。（BSD Now EP106，[2649.88-2689.30]，L1）
 - 总纲13 法律与道德是利益分配：stunnel 争议显示开源许可证并非中立的技术文本，而是利益与控制权的分配装置：例外条款决定谁可以链接谁的代码、分叉版本可以叫什么名字，GPL 保证 fork 自由的宣示在 OpenSSL 例外面前被主持人推演为“the GPL containing a clause technically saying no forking of OpenSSL allowed”（音频 932.68-935.04）的悖论；主持人以“this is why two sentences is the maximum”（音频 944.98-947.52）作结，把许可文本的复杂性本身识别为分配权力的技术形式——条款越长，各方利益的再分配空间越大。（BSD Now EP106，[903.88-947.52]，L2）
 - 总纲13 法律与道德是利益分配：主持人对 GPLv3 反 DRM 条款的解读呈现了许可证作为利益分配机制的本质：Stallman 试图以许可证条款强制商业公司放弃对用户设备的 DRM 控制，将权利再分配给终端用户，而商业公司是否愿意接受尚属疑问；与之相对，BSD 许可证以近乎零限制的条款把选择权交还使用者和商业方，两种许可证哲学在 DRM 议题上正面相遇。（BSDTalk EP7，[132.54-355.32]，L2）
@@ -84,6 +90,7 @@ volume: 第07卷-freebsd的工程体系重构
 
 **辨析**：
 
+- NetBSD 引入 NVMe 支持取 OpenBSD 代码而非 FreeBSD 实现，后者系 Intel 直接贡献；主持人归因于 OpenBSD 本为 NetBSD 的 fork、设备模型与内核更接近故移植 diff 更小，并以同一 NVMe 设备在传统盘模拟接口下五六百兆与 NVMe 模式读 3800 兆、写 1700 兆每秒的性能差，及协议允许 65536 并发而当前设备 63 并发的队列细节佐证技术跃迁。　[存疑脚注]移植路径归因为主持人单源推断（原话以 I imagine 引导），未见 NetBSD 移植者自述佐证；性能数字为主持人借测试集群设备的一手自述（BSD Now EP141，[3607.47-3631.34]，L4）
 - stunnel 与 LibreSSL 之争的症结在于许可文本对命名的依赖：作者以具名例外把可链接的 SSL 库限定为“基础操作系统内的 OpenSSL”，并明确表示其许可“does not consider LibreSSL as OpenSSL”（音频 764.68-766.18），由此形成三重僵局——LibreSSL 仍持 OpenSSL 许可而无法重新授权，stunnel 的例外条款同样难以修改，OpenBSD 阵营则坚持视 LibreSSL 为削减后的 OpenSSL；再叠加 OpenSSL 许可禁止修改版沿用原名，OpenBSD 因随基础系统附带 LibreSSL 而合规、FreeBSD 等以 ports 安装则受限，争议表明具名例外条款在生态分叉情境下的脆弱性与解释空间之争。（BSD Now EP106，[758.90-833.28]，L2）
 - 副轨转述的构建集群排障案例包含对回退式调试的方法论批评：当事人强调回退只是“diagnostic tool, not a solution”，且“backing out could not have exposed this particular bug”（音频 391.46-396.76）——近期一次提交只是让“this one's been lurking there since 97”（音频 357.44-361.78）的内核缺陷在特定负载下显形，回滚只会使问题重新隐匿而非消失；同段以 Netflix 曾发现的长期潜伏 IPv6 缺陷为对照，指出偶发低频触发的缺陷须靠 bisect 定位后的根因修复，这一区分对考据“提交引入缺陷”与“提交暴露缺陷”两类因果表述具有直接的方法论意义。（BSD Now EP106，[352.62-400.68]，L2）
 - 当事人自我限定：其四台测试机不代表全部硬件生态，个别失败可能只是特定硬件组合的偶然不兼容，不能据此否定某张 live CD 的整体质量，引用本期的硬件兼容性结论时须保留这一适用范围限定。另转写将 Linux 参照 live CD 记作 Canopix 或 Nopix，所指发行版名称待考，引用其性能对比前须核实项目实名。[存疑脚注] 转写中的项目名 Canopix/Nopix 无法确证，待与 2006 年 live CD 发行版名录核对。　[存疑脚注] 转写中的 Linux live CD 项目名 Canopix/Nopix 无法确证，待与 2006 年 live CD 发行版名录核对。（BSDTalk EP7，[392.64-843.56]，L5）
@@ -93,6 +100,7 @@ volume: 第07卷-freebsd的工程体系重构
 
 **文献**：
 
+- [BSD Now EP141] Pennington J. BSD Now: 141: BSD Likes Ike![EB/OL]. (2016-05-11)[2026-08-15]. https://www.bsdnow.tv/141.
 - [BSD Now EP106] Pennington J. BSD Now: 106: Multipath TCP[EB/OL]. (2015-09-09)[2026-08-15]. https://www.bsdnow.tv/106.
 - [BSDTalk EP7] Backman W. BSDTalk: Live BSD CDs[EB/OL]. (2006-01-18)[2026-08-15]. https://archive.org/download/bsdtalk007/bsdtalk007.ogg.
 - [BSDTalk EP204] Backman W. BSDTalk: 204: bsdtalk204 - mdocml mit Ingo Schwarze and Kristaps Dzonsons[EB/OL]. (2011-06-01)[2026-08-27]. https://bsdtalk.blogspot.com/2011/05/bsdtalk204-mdocml-mit-ingo-schwartze.html.

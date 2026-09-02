@@ -70,10 +70,12 @@ volume: 06
 本章所书皆是形式主义化的重构，并非对“真实的 BSD 历史”的呈现。本章的章节划分、事件选择、叙事策略、因果归因——全部基于编纂者的哲学设定。本章承认这些局限，不声称客观或中立，欢迎被更诚实的叙事所超越。
 
 <!-- PODCAST_REVIEW v20260829 -->
-<!-- 语义复核范围：BSD Now EP129、BSD Now EP120、BSD Now EP79、BSD Now EP48、BSD Now EP43、BSD Now EP18（共 6 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
+<!-- 语义复核范围：BSD Now EP134、BSD Now EP129、BSD Now EP120、BSD Now EP79、BSD Now EP48、BSD Now EP43、BSD Now EP18（共 7 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
 
 **要点**：
 
+- FreeBSD ports committer 的导师制并无成文刚性规则，按个案综合提交数量、持续时间、提交类型多样性与质量进行评估，周期从一个多月到一年不等；补丁无需返工即可并入被视为胜任信号，只有做端口分类筛选不足以说明能力，需覆盖 Python、Perl、Ruby 与普通 C 程序等不同类别；导师为门生失误承担问责以换取其成长缓冲，嘉宾自述自己的文档贡献导师期约三个月。（BSD Now EP134，[3737.04-3861.68]，L1）
+- DragonFly 的一项 TCP 提交将 accepted socket 在监听套接字关闭前挂入每 CPU 本地端口缓存而非全局本地端口哈希表，以防止监听套接字关闭后连接被转世复用；繁忙 TCP 服务器的锁争用率由每秒约 5 万次降至 1.8 万次，网卡环数与 CPU 数匹配时由 3 万次降至 800 次，连接接受率提升约 7% 至每秒 45 万次；主持人指出该优化或可移植回 FreeBSD。　[存疑脚注] 转写将提交作者记为 Seve，疑为 DragonFly 网络开发者 Sepherosa Ziehau 的音转失真，暂按单一来源转述处理（BSD Now EP134，[6366.70-6488.98]，L2）
 - John Marino 自述 Synth 的直接成因：Bugzilla 中 portmaster 与 portupgrade 用户反复出现同类构建事故，劝其改用 poudriere 又遭抵触，遂于 2015 年 12 月中旬动手、以圣诞假期写成 Synth——全程在沙盒内构建、产物为可复用软件仓库的并发构建器，并把上手门槛压到数分钟级以面向新手而非老兵。（BSD Now EP129，[1598.98-1666.06]，L1）
 - Marino 给出三代构建工具的机制分野：portmaster/portupgrade 在宿主系统就地构建并安装构建依赖、更新非原子且串行，中断即可能使系统进退两难；poudriere 以 FreeBSD Jail 构成近乎不可穿透的隔离层，面向不容失败的集群调度；Synth 则以 chroot 加 nullfs 与 tmpfs 挂载换取速度并深度接管 pkg 的本地升级，作者自陈这是速度与健壮性之间的取舍，并称二者能力相近、目标人群不同。（BSD Now EP129，[1824.10-2200.16]，L1）
 - Marino 回顾其约十三个年头的 BSD 历程：2002-2003 年在慕尼黑依雇主要求试用的多款 Linux 发行版接连崩溃，转投 FreeBSD 4.8 后一切顺畅；其后在八台 Sun 服务器上以 FreeBSD 6 承载网络业务多年不停机；由向 DragonFly 提交补丁获邀成为 committer，经 pkgsrc 贡献在图卢兹完成 PGP 签名取得 NetBSD commit bit，再将 FreeBSD ports 引入 DragonFly 的 DPorts 实验大获成功，pkg 亦先于 NetBSD 在 DragonFly 投入生产。（BSD Now EP129，[1301.78-1590.30]，L1）
@@ -98,6 +100,7 @@ volume: 06
 
 **史料**：
 
+- 本期一手史料密集：Mark Felder 回溯个人路径（叔叔赠予的 8086 计算机、拨号时代论坛网友寄赠的十张 Linux 光盘、Gentoo 折锅、公司报废的双 Pentium 3 服务器上以 FreeBSD 7.2 运行 ZFS 与 Java 应用、威斯康星州麦迪逊一家自约 1998 年起全面运行 FreeBSD 的本地 ISP）；《Porter's Handbook》与《Port Committers Handbook》被当事人称为详尽到近乎完备的资源；GNATS 与 Bugzilla 的 PR 流水线、VuXML 与 package audit 漏洞数据库、AsiaBSDCon 的 OpenBSD 演讲幻灯与论文（含 ISP 实践、VMM 与 VMD 虚拟化、PVHVM 驱动等主题）、Tarsnap 1.0.37 发布说明均为可援引的一手材料。（BSD Now EP134，[2857.28-3184.24]，L1）
 - 本期新闻段引用的一手材料链：CVE-2015-7547 由 Google 发现并研究，glibc 开发者早在 2015 年夏已知悉；FreeBSD 开发者私有邮件列表上的讨论帖经前 FreeBSD 安全官转贴至个人博客公开，明确 FreeBSD 本体及其应用不受影响；Red Hat 公告指明暴露条件限于 nss_dns 模块；FreeBSD 侧以 linux_base-c6 端口补丁与 pkg audit 所查 VUXML 数据库落地缓解。　[存疑脚注] 转写将前 FreeBSD 安全官姓名严重失真为不可辨识音串，引用前须按 FreeBSD 历任安全官名录核实身份。（BSD Now EP129，[187.14-437.98]，L2）
 - 本期一手史料以嘉宾第一人称口述为主：FUDO 与 Lynx 的架构决策、geli 开发史（XTS 模式缺席年代实现 CBC 不可预测初始化向量、4K 扇区时代放弃块级认证）与 open crypto 框架改造及厂商补丁处境；辅以主持人转述的公开材料——PS4 越狱开发者发布的 GitHub 信息与推文、OpenBSD 运行于 EC2 T2 Micro 的实测帖、AsiaBSDCon 与 BSDCan 2016 征稿公告、2002 与 2015 两版开发者桌面截图页、OpenSSH 历史提权漏洞（二进制仅差一比特）与 TrueCrypt 重现构建事例，以及两封读者来信（大学集群迁移事故、帐篷公司 FreeNAS 改造）。（BSD Now EP120，[1600.47-1742.97]，L2）
 - 该期可回溯的一手史料包括：AsiaBSDCon 2015 官方议程（Henning Brauer 的 “OpenBSD Sucks” 刻意不附摘要）、Ted Unangst 在 misc@ 发起的浏览器 W^X 强化讨论、Colin Percival 收紧 random(3) 手册页措辞的 SVN 提交、ports@ 与 current@ 上关于 Midori 崩溃及 sudo 嘲讽语的线索、FreeBSD Foundation 更新 PDF 与 Glenn Barber 的 ZFS 事故记，以及 pcbsd-build GitHub 仓库与受访者技术博客。　[存疑脚注] 以上条目均系主持人转述，原始邮件、提交与文档尚未逐条核验，个别讲者名与题名转写失真（BSD Now EP79，[918.56-935.48]，L2）
@@ -107,6 +110,8 @@ volume: 06
 
 **史观**：
 
+- 总纲10 动手者创造历史：portsec 团队清一色志愿者，“这不是有人拿薪水整天干的事”，工作内容是阅读 ossec 与 full disclosure 邮件列表、比对上游补丁、为 25000 个 ports 逐个补写 CPE 标签与 VuXML 条目；Felder 自陈缺乏重型编程背景，以分类、更新、移植与文档化等方式贡献。生态的安全运转依赖的恰是这类默默分诊的动手者，而非聚光灯下的架构师，贡献者谱系必须为动手者立传。（BSD Now EP134，[3993.98-4066.46]，L1）
+- 总纲8 本体论上各方平等：针对 TJ 的默认值修改清单，Allan 的回应是“无论选哪个，总有人不高兴”：嵌入式设备唯有 AES-CBC 具备硬件加速，桌面用户不在乎内核转储，生产环境要求 ABI 恒定，每项默认都是特定受众价值排序下的局部最优；sysctl 安全加固项（如 TCP blackhole）被指并不真正提升安全性。默认值之争不存在超然的客观解，只存在不同处境下的平等权衡，历史写作应呈现权衡的分布而非裁决胜负。（BSD Now EP134，[1525.92-1536.92]，L1）
 - 总纲4 分离聚合是永恒规律：Marino 以 locales/collation 修复为例呈现项目间循环：DragonFly 因用户少、仅维护一个旧版本而得以先行整改，FreeBSD 侧开发者不愿落后而引入同一实现，FreeBSD 的庞大用户随即暴露缺陷，反馈又流向代码原出处 Illumos——边缘先行试验、中心收编检验、再回流源流，构成三向的分离聚合运动，而非单向取代或线性进步。（BSD Now EP129，[3354.48-3413.32]，L1）
 - 总纲10 动手者创造历史：嘉宾从昔日高产 committer 转向培养新一代动手者——推动 Mariusz Zaborski 成为 committer 从事 Capsicum 与 Casper、Konrad Witaszczyk 打磨加密内核转储补丁历时两年；他以 vendor 视角点出生态症结：厂商补丁常有九成就绪而最后一步永无余力完成者（3919.84-3932.04），故寄望基金会雇用专人收尾入库。BSD 史的推进动力在此显形为具体人手的持续劳动与“加入 FreeBSD 项目是我技术生涯最大的加速器”（4290.64-4303.08）式的代际传承，而非路线图或宣言。（BSD Now EP120，[3892.59-4303.08]，L2）
 - 总纲5 没有必然性，只有偶然性：geli 开发史成为偶然性优先的注脚：当年可预测初始化向量的 CBC 模式被普遍视为安全，嘉宾凭超出共识的直觉实现不可预测初始化向量（3764.35-3772.27），日后该共识方案确被证明不安全，一次未按主流走的工程选择意外成为先见；与之呼应，OpenSSH 历史提权漏洞仅系一个比较运算符之差、修复前后二进制只差一比特，安全史的走向悬于这类无必然性的微小偶然。（BSD Now EP120，[3736.59-3778.55]，L1）
@@ -123,6 +128,8 @@ volume: 06
 
 **辨析**：
 
+- bitcoinus.net 文章以 FreeBSD 的核心团队—committer—contributor 金字塔对照比特币社区治理失灵，称 BSD “对新鲜目光开放”且不因小分歧频繁硬分叉，并转引评论称“高智商不足以让团队成功，你需要合理权衡、协作、 welcoming 与易于合作”；Allan 补充 FreeBSD 模式真正的韧性在于领导层更迭的常态化，core team 每两年由持提交权者全体选举产生九人。该文属二手立场化概括，其“民主决策”“无硬分叉”等表述忽略 BSD 各分支本身即历史分叉的产物；且文章将复杂社区动力学化约为文化态度问题。　[存疑脚注] 转写中引文人名 Brian Marmstrom 与站点名 bitcoinus.net 均未经旁证，专名存疑；BSD“无硬分叉”论断与四分五裂的分支史相悖，仅为文章立场（BSD Now EP134，[5548.16-5810.02]，L2）
+- TJ《A Lesson in Port Faults》指控 FreeBSD 基本系统“故意背离 upstream 以保兼容或性能”，Allan 逐条辩护：ABI 承诺使 10 系列内 OpenSSH 行为不可变，upstream 移除 DSA 密钥与 AES-CBC 而部分嵌入式平台仅对 AES-CBC 有硬件加速，强行跟进等于在点版本升级中锁死用户；HPN 补丁对 ZFS over SSH 收益显著但因缺陷暂驻 ports，upstream 八年后才提高通道上限，不能以事后改进否定当年集成；None 密码方案从未能用于交互会话，认证始终加密，实测 ChaCha20-Poly1305 约 1.3 Gbps、AES-NI GCM 约 5 Gbps、None 约 6.3 Gbps（受限于 MAC）；OpenSSL 旧版支持困境源于上游提前终止维护而非 FreeBSD 惰性，Red Hat 亦同处此境。 defaults 是复杂工程约束下的权衡，不能简单以“背离上游”定性。（BSD Now EP134，[762.68-1160.66]，L1）
 - 对 BSD 不受 CVE-2015-7547 影响的结论须分层限定：FreeBSD libc 与 glibc 解析器同源，但缺陷源于 glibc 重写后并行发出 A/AAAA 查询时的缓冲区管理失误，BSD 系仍串行查询故不涉险；可一旦经 Linux 仿真层安装 linux_base-c6 之类依赖，易感 glibc 即随之进入系统；再叠加 Red Hat 指明的 nss_dns 模块条件与 musl 等其他 libc 的差异，风险归属取决于 libc 具体实现与安装路径，而非操作系统阵营标签。（BSD Now EP129，[259.76-311.34]，L3）
 - 关于把 Ada 前端移植到 LLVM 的可行性：受访者认为 GNAT 前端技术上可嫁接，但中端须重写，且即便完成也无法摆脱源自 GPL 的许可约束，故工作量与收益严重不成比例；这一判断与 DragonFly 计划以 clang 3.8 取代旧 GCC 的路线互为表里，凸显许可证与维护成本共同塑造编译器版图。　[存疑脚注] 移植可行性与许可约束判断仅为受访者单一来源推断，未经实现验证或第三方评审。（BSD Now EP129，[2894.30-2947.78]，L4）
 - PS4 越狱条目需谨慎使用：越狱者经由 WebKit 进程取得内核执行权，与 FreeBSD jail 机制无关，越狱一词仅借自 iPhone 语境；Orbis OS 基于 FreeBSD 9.0，但 Sony 版本号不披露其回移了哪些 FreeBSD 补丁，主持人的“该漏洞可能早已在 FreeBSD 修复”属无法判定的推测；开发者公开 PID 列表与根文件系统转储并声明不为盗版服务，其身份、动机与操作细节均系单一来源。　[存疑脚注] 转写将越狱开发者记作“C-Chert”（疑为 CTurt），Orbis OS 补丁回移状态无公开可核记录，主持人推断未经多源验证（BSD Now EP120，[4538.64-4651.02]，L4）
@@ -135,6 +142,7 @@ volume: 06
 
 **文献**：
 
+- [BSD Now EP134] Pennington J. BSD Now: 134: Marking up the Ports tree[EB/OL]. (2016-03-24)[2026-08-15]. https://www.bsdnow.tv/134.
 - [BSD Now EP129] Pennington J. BSD Now: 129: Synthesize all the Things![EB/OL]. (2016-02-17)[2026-08-15]. https://www.bsdnow.tv/129.
 - [BSD Now EP120] Pennington J. BSD Now: 120: I’m talking about the man in the middle[EB/OL]. (2015-12-16)[2026-08-15]. https://www.bsdnow.tv/120.
 - [BSD Now EP79] Pennington J. BSD Now: 79: Just Add QEMU[EB/OL]. (2015-03-04)[2026-08-15]. https://www.bsdnow.tv/79.

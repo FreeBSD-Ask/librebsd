@@ -95,7 +95,7 @@ volume: 16
 本章所书皆是形式主义化的重构，并非对“真实的 BSD 历史”的呈现。本章的章节划分、事件选择、叙事策略、因果归因——全部基于编纂者的哲学设定。本章承认这些局限，不声称客观或中立，欢迎被更诚实的叙事所超越。
 
 <!-- PODCAST_REVIEW v20260829 -->
-<!-- 语义复核范围：BSD Now EP373、BSD Now EP360、BSD Now EP354、BSD Now EP278、BSD Now EP145、BSD Now EP579（共 6 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
+<!-- 语义复核范围：BSD Now EP373、BSD Now EP360、BSD Now EP354、BSD Now EP278、BSD Now EP138、BSD Now EP579（共 6 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
 
 **要点**：
 
@@ -118,11 +118,8 @@ volume: 16
 - McKusick 亲述 FreeBSD 基金会起源：早期发行由 Walnut Creek CD-ROM 支撑，后依赖 Yahoo 提供基础设施十余年，Justin Gibbs 因担忧单一公司退出而发起基金会。（BSD Now EP278，[1883.72-1965.34]，L1）
 - McKusick 亲述 UFS 三十年：其保存的 1982 年磁盘镜像在当代仍可读写，UFS 适合资源受限的嵌入式设备，ZFS 适合大资源环境，二者各解决不同问题。（BSD Now EP278，[1093.34-1174.26]，L1）
 - McKusick 判断容器概念发明于 FreeBSD 却在他处获得成功，FreeBSD 常把项目推进到九成而缺最后一成产品化，恰如“先驱挨箭、定居者得地”。（BSD Now EP278，[2596.78-2625.54]，L1）
-- Benno Rice（EMC Isilon 的 OS 与网络经理）竞选 FreeBSD Core Team，主张改进社区治理：引入并落实 Code of Conduct、修复非 committer 贡献路径、改善 Bugzilla 补丁响应。（BSD Now EP145，[448.00-676.00]，L1）
-- Rice 指出 FreeBSD 测试自动化不足、新贡献者入门困难、Bugzilla 中补丁积压多年，并认为每一个被冷落的补丁都意味着失去一位潜在贡献者。（BSD Now EP145，[643.00-971.00]，L1）
-- Rice 讨论 GitHub 与 Bugzilla/Fabricator 的取舍，认为 GitHub 是当下最低摩擦的贡献入口，但并非唯一解；项目目前“半上 GitHub”的状态造成补丁滞留。（BSD Now EP145，[1339.00-1524.00]，L1）
-- Colin Percival 优化 FreeBSD 的 SHA-256/512 实现，在 2013-2015 年处理器上提速 20-25%，该工作由 Tarsnap 赞助；同期 OpenBSD 增加 ARMv7 引导加载器，ifconfig 新增 `-f` 输出格式。（BSD Now EP145，[2346.00-2480.00]，L2）
-- pkgsrc 第 50 次发布访谈 Jörg Sonnenberger，强调跨平台一致包仓库的价值；另报道 Cavium ThunderX ARM 服务器发往 FreeBSD Foundation。（BSD Now EP145，[2481.00-2655.00]，L2）
+- Benedict Reushling 自述其入会路径：EuroBSDCon Sofia（2014）会后被 Erwin Lansing 略带神秘地接洽，受邀加入 FreeBSD Foundation 董事会，动因是董事会欲在德语区（德、奥、瑞士）扩展席位；2015 年 1 月前后经正式电话面试，面试中他自陈“我是文档人，不熟悉内核”，有董事随即打断并表态“源码提交者已经够多，董事会需要多样性”（1664-1688 秒）；同年 BSDCan 前的年度董事会完成履新，受访时（AsiaBSDCon 2016 东京现场）入会约一年，其定位始终是文档与欧洲拓展而非内核开发。　[存疑脚注] 受访人姓氏在转写中作 Russeling/Herschling，按 FreeBSD Foundation 董事名录判定为 Benedict Reushling；电话面试中另一表态董事姓名转写失真（音似 Qsync），仅 Kirk 一名可辨。（BSD Now EP138，[1596.68-1694.12]，L1）
+- 基金会职能被受访者概括为“支持位”而非治理位：不向项目推送任何政策、不指定开发何种驱动，而是以资金资助开发者与发布工程师等职员、以法人实体身份签署 NDA 等法律文书、维护 FreeBSD 注册商标——freebsd.foundation 新顶级域名遭抢注者索价 8000 美元，董事会曾在付款、无视与诉诸律师之间权衡——并走访 iXsystems、Netflix 等大赞助商，维系捐赠并对接其技术需求，同时开拓欧洲赞助方与 Linux 系会议之外的布道场合（1791-1990 秒）。（BSD Now EP138，[1789.80-1989.86]，L1）
 - Stefano Marinelli 自述 2002 年因大学同学提及教授 Özal Babaoğlu 是伯克利原始 BSD 的创建者之一而开始研究 BSD，随后在笔记本电脑上安装 FreeBSD 并长期使用。（BSD Now EP579，[843.16-910.40]，L1）
 - Stefano 创办 BSD Cafe：因 Fediverse 上缺少 BSD 爱好者的开放交流空间，创建实例后 24 小时内即吸引逾百名用户，后扩展出 Matrix 频道与 RSS 等服务，并推动意大利中小企业与医疗行业采用 BSD。（BSD Now EP579，[942.26-1072.78]，L1）
 - Dave Cottlehuber 追述 FreeBSD core 团队史：早期 core 即所有持有源码提交权限者，后经诉讼尾声与治理需要而结构化，约二十年前基金会成立；近年 core 将源码提交权限的决策下放给新设的 source manager team。（BSD Now EP579，[1898.98-2186.62]，L1）
@@ -139,8 +136,7 @@ volume: 16
 - 关于 Colin Percival 的播客访谈，介绍其 Tarsnap 创立、AWS 使用经验与 FreeBSD 安全官经历。（BSD Now EP354，[674.30-747.26]，L2）
 - McKusick 提及 FAST 大会关于文件系统三十年演进的 keynote、BSDCan 2018 的采访背景，以及 CSRG 重写 AT&T 程序时 Keith Bostic 主张将署名归于他人以自保的细节。（BSD Now EP278，[339.18-390.46]，L1）
 - McKusick 提及 TeachBSD 项目，主张以真实操作系统而非玩具系统教授计算机科学，并认为 DTrace/DWatch 等工具是“玻璃制”可观测系统的重要组成部分。（BSD Now EP278，[2723.00-2781.38]，L1）
-- Benno Rice 的 Core Team 竞选主张与其在 Linux.conf.au 听到的 Rust 社区 Emily Dunham 演讲。（BSD Now EP145，[534.00-570.00]，L1）
-- Colin Percival 的 SHA-256/512 优化 commit 与跨硬件基准数据，作为加密哈希性能演进的一手材料。（BSD Now EP145，[2350.00-2478.00]，L2）
+- 本期新闻与访谈段落提及的一手史料：Colin Percival 论 opinionated workarounds 的博文（只在需要的系统上打补丁并大声报错）；Andrew Tanenbaum 复盘 Minix 三十年经验的视频报道（324-390 秒）；NetBSD 官方安全公告（calendar(1) 以 root 执行外部命令前未剥离特权，波及几乎所有历史版本）；OpenBSD pledge 多语言绑定仓库（node、Python、Rust、Go、Lua、Erlang、Nim 等）；Michael W. Lucas《FreeBSD Mastery: Advanced ZFS》出版信息；PGCon 2016（渥太华）、EuroBSDCon 2016（贝尔格莱德）、pkgsrcCon 2016（克拉科夫）征稿公告；FreeBSD wiki 的 ARM 交叉编译指南；AsiaBSDCon 2016 现场三小时文档与翻译教程，成果为将 LeapSeconds 一文译入日语（2663-2805 秒）。（BSD Now EP138，[3326.48-4582.82]，L2）
 - 本期为 EuroBSDcon 2024 现场采访，Stefano Marinelli、Dave Cottlehuber 与 Christos Margiolis 均为当事人自述；Özal Babaoğlu 的身份信息为 Stefano 转述的同学说法。（BSD Now EP579，[745.78-2774.92]，L1）
 
 **史观**：
@@ -154,9 +150,8 @@ volume: 16
 - 总纲10 动手者创造历史：McKusick 强调软件与项目的持续“养护”远非社区驱动项目所长，人们倾向做新奇有趣之事；文档与基础设施的默默维护恰是系统得以存活的关键。（BSD Now EP278，[451.46-489.68]，L1）
 - 总纲3 不存在进步，只有权力再分配：McKusick 指出历史上 IBM、微软各自占据过绝对支配地位又相继让位，Linux 今日的支配地位同样不会永远持续，FreeBSD 甘居雷达之下反而得以延续。（BSD Now EP278，[2247.34-2342.26]，L1）
 - 总纲5 没有必然性，只有偶然性：McKusick 以“容器发明于 FreeBSD 却成功于他处”为例，指出技术领先与市场成功之间并无必然因果，成功更多依赖偶然的产品化时机。（BSD Now EP278，[2596.78-2625.54]，L1）
-- 总纲7 理论必须自反：Rice 反思 FreeBSD“开源早于开源”带来的陈旧社区模型，主张挑战既有的贡献与治理假设。（BSD Now EP145，[575.00-595.00]，L1）
-- 总纲8 本体论上各方平等：Rice 主张把非 committer 贡献者与文档、测试、运维者平等纳入社区，落实尊重与 Code of Conduct。（BSD Now EP145，[612.00-689.00]，L1）
-- 总纲9 经验优先：Rice 从 Randy Harper 事件与 Python 社区经验中提炼治理改进，以既往经验反推未来制度。（BSD Now EP145，[482.00-569.00]，L1）
+- 总纲10 动手者创造历史：“我是文档人”的自谦与“源码提交者已经够多”的回应，使这次董事补选成为对何种劳动被计入治理的再定义：文档、翻译、法务、布道与组织工作在基金会层面获得与内核开发同等的代表权——书写 BSD 史时，维持项目运转的动手者与提交代码的动手者同为历史的创造者（1664-1688 秒）。（BSD Now EP138，[1664.16-1687.68]，L1）
+- 总纲1 一切真历史都是古代史：calendar(1) 漏洞是“古代制度活在当代”的活标本：主持人的解释是，该工具为全校共用一台主机、每人维护日历文件的时代而设计，以 root 身份遍历所有用户日历并邮寄提醒在当时合理；2016 年它仍以 root 日任务存续，特权未剥离的旧设计在新语境中变成提权漏洞——理解这一漏洞必须回到其诞生的分时主机时代而非仅看当代代码（3666-3696 秒）。（BSD Now EP138，[3666.52-3695.82]，L2）
 - 总纲10 动手者创造历史：Stefano 以运维者身份推动客户迁移 BSD 并创办社区服务，Dave 以志愿者身份参与治理，均体现动手者在社区运行中的基础作用。（BSD Now EP579，[942.26-1072.78]，L1）
 - 总纲3 不存在进步，只有权力再分配：core 团队将源码提交权限决策下放给 source manager team 的过程，是 FreeBSD 治理权力在团队间的重新配置。（BSD Now EP579，[2081.44-2186.62]，L1）
 - 总纲8 本体论上各方平等：Dave 强调 FreeBSD 与 OpenBSD、NetBSD、DragonFly BSD 乃至 Linux 社区之间存在持续的跨项目交流，各方在面对共同工程问题时彼此平等。（BSD Now EP579，[2560.00-2607.04]，L1）
@@ -168,7 +163,8 @@ volume: 16
 - 转写中“8 秒对 2.5 小时、1150 倍”为作者特定场景的实测数据，主持人亦提示学术上此类极端比值需谨慎看待。　[存疑脚注] 极端比值需结合具体场景理解（BSD Now EP354，[615.14-641.14]，L4）
 - McKusick 关于“文档 committer 与源码 committer 同等投票”的叙述属当事人视角，须与 FreeBSD 选举规则文件与历届 core 名单交叉核验；其对自己“不再关键”的自评也属谦辞。　[存疑脚注] 选举资格细节须以 FreeBSD Core Team 规则文件核实。（BSD Now EP278，[533.12-611.68]，L3）
 - McKusick 提及的研究（MIT 与法国高校基于 commit log 分析领导层）未给出具体出处，其“只有 Apache 与 FreeBSD 等少数项目完成多次更替”的结论需核对原始研究。　[存疑脚注] 所援引研究未具名，结论无法直接追溯。（BSD Now EP278，[725.94-799.70]，L4）
-- GitHub 是否应取代 Bugzilla/Fabricator 存在分歧：Rice 认为 GitHub 是最低摩擦路径但非唯一答案，需要社区就是否“全上 GitHub 或完全不用”作出决断。（BSD Now EP145，[1390.00-1524.00]，L1）
+- 主持人在评述 Percival 博文时即兴将 OpenSSL Heartbleed 归因于“为个别系统的慢 malloc 自建内存管理层却全局启用”，以此反证“补丁只打在需要的系统上”的局部性原则；但此归因系主持人现场发挥而非博文原文，Heartbleed 的直接根因是心跳报文边界检查缺失，与自定义内存管理器的关系须经代码与事后审计多源核对，不可直接采信。　[存疑脚注] Heartbleed 与 OpenSSL 自定义内存管理层的因果链为主持人单源现场推断，节目未给出出处，属待验证命题。（BSD Now EP138，[3534.72-3578.44]，L4）
+- 受访者供职的达姆施塔特应用技术大学把 26 节点 Dell C6220 集群从 Ubuntu 渐进迁往 FreeBSD：以 bhyve 为教学虚拟机宿主、以 ZFS 快照回滚兜底学生 root 误操作、自写 shell 脚本把重装时长从 FI 全自动安装的 25 分钟压缩到约 10 分钟，是 2016 年 bhyve 与 ZFS 进入真实教学负载的自述个案；但其自承性能验证尚未完成，属单一当事人陈述，可作 bhyve 成熟度的孤证线索而非生态级结论。　[存疑脚注] 单源自述；“学生不会察觉运行于虚拟机”的性能判断未附数据，待其承诺的后续文章或演讲验证。（BSD Now EP138，[2437.50-2649.70]，L4）
 - Stefano 所称 Özal Babaoğlu 为“原始 BSD 的创建者之一”系同学转述，其具体贡献范围须以 CSRG 档案核实。　[存疑脚注] Babaoğlu 在伯克利 BSD 中的具体贡献与角色未经 CSRG 一手档案核实。（BSD Now EP579，[843.16-869.18]，L4）
 - Dave 所述“早期 core 即全体源码 commit 持有者”为其个人追述，具体历史节点须以 FreeBSD 项目档案核实。　[存疑脚注] core 早期构成说法为个人追述，未经项目治理档案核实。（BSD Now EP579，[1898.98-1948.24]，L4）
 
@@ -178,7 +174,7 @@ volume: 16
 - [BSD Now EP360] Pennington J. BSD Now: 360: Full circle[EB/OL]. (2020-07-23)[2026-08-15]. https://www.bsdnow.tv/360.
 - [BSD Now EP354] Pennington J. BSD Now: 354: ZFS safekeeps data[EB/OL]. (2020-06-11)[2026-08-15]. https://www.bsdnow.tv/354.
 - [BSD Now EP278] Pennington J. BSD Now: Episode 278: The Real McCoy | BSD Now 278[EB/OL]. (2018-12-27)[2026-08-15]. https://www.bsdnow.tv/278.
-- [BSD Now EP145] Pennington J. BSD Now: 145: At the Core of it all[EB/OL]. (2016-06-08)[2026-08-15]. https://www.bsdnow.tv/145.
+- [BSD Now EP138] Pennington J. BSD Now: 138: Rushing into BSD[EB/OL]. (2016-04-20)[2026-08-15]. https://www.bsdnow.tv/138.
 - [BSD Now EP579] Pennington J. BSD Now: 579: EuroBSDcon 2024[EB/OL]. (2024-10-03)[2026-08-15]. https://www.bsdnow.tv/579.
 
 <!-- /PODCAST_REVIEW -->
