@@ -33,7 +33,7 @@ volume: 第13卷-bsd衍生操作系统
 - [DB:references_fulltext] 参考文献全文数据库（4077 篇全文，27138 条时间线事件）—— 对应 bsd-derivatives.duckdb
 
 <!-- PODCAST_REVIEW v20260829 -->
-<!-- 语义复核范围：BSD Now EP505、BSD Now EP651、BSD Now EP370、BSD Now EP348、BSD Now EP276、BSD Now EP633、BSD Now EP75、BSD Now EP54、BSD Now EP580、BSDTalk EP14、BSDTalk EP244、BSDTalk EP252、BSDTalk EP75（共 13 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
+<!-- 语义复核范围：BSD Now EP505、BSD Now EP651、BSD Now EP370、BSD Now EP348、BSD Now EP276、BSD Now EP633、BSD Now EP99、BSD Now EP75、BSD Now EP54、BSD Now EP580、BSDTalk EP14、BSDTalk EP244、BSDTalk EP252、BSDTalk EP75（共 14 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
 
 **要点**：
 
@@ -63,6 +63,10 @@ volume: 第13卷-bsd衍生操作系统
 - OpenSSH 10.1 于 2025 年 10 月 6 日发布，修复用户名控制字符注入问题，并新增 SIGINFO 通道日志、PKCS#11 ED25519 支持与 refuse connection 配置项。（BSD Now EP633，[2126.22-2590.12]，L2）
 - Brian Kernighan 在 VCF East 2025 表示只写过一次 Rust 且体验不佳，认为其 crate 与编译链庞大缓慢，同时坦言对 NixOS 与多数发行版并不熟悉。（BSD Now EP633，[2757.82-3220.12]，L1）
 - GhostBSD 25.02 基于 FreeBSD 14.3，新增以 GNUstep 组件与 XFCE 面板组合的 Gershwin 桌面，提供类 macOS 体验。（BSD Now EP633，[3371.86-3563.32]，L2）
+- OpenBSD 在 2015 年开发周期推出实验性沙箱机制 tame：以单个系统调用把进程锁定在有限的操作类别（计算、内存管理、网络、文件描述符写操作、打开文件等）之内，限制可层层叠加且一经放弃不可恢复；相比要求围绕能力模型重写程序的 Capsicum，tame 以更小改造成本换取快速普及，内核部分已合入源码树，userland 改动陆续跟进，cat、ping、httpd、ntpd、syslogd、tcpdump、traceroute 等 29 个基础程序已开始接入。（BSD Now EP99，[87.36-139.34]，L2）
+- GLib 维护者 Ryan Lortie 以当事人身份拆解 KDBus 的动因与设计：现行 D-Bus 依赖系统级与会话级两个用户态守护进程中转消息，一次调用需四次上下文切换并伴随大量数据拷贝，且规范强制守护进程逐项校验；KDBus 将内核本身变为消息传递机制，改传不透明数据块并把校验责任移至接收方，其关键依赖 MemFD 配合 sealing，让发送方承诺缓冲区不可变并由内核背书，而这一机制在 BSD 上完全不存在，构成移植的硬缺口；他坦言此前多次把 D-Bus 塞进内核的尝试“皆以失败告终”（2662.99-2677.20），本次团队更强但进展依然艰难。（BSD Now EP99，[2488.84-2649.36]，L1）
+- 访谈从 BSD 侧揭示跨平台移植的结构性障碍：Baptiste 列举 kqueue64 缺失（Apple 已有实现而 FreeBSD 无人认领）、文件系统监控机制（inotify 或 FSEvents 类）空白、systemd 所提供 API 需要等价替代三座大山；Ryan Lortie 则从上游视角呼吁 BSD 开发者尽早介入 API 设计而非发布后移植，指出在 FreeBSD 上实现“类似 KDBus”的东西意味着重复承担序列化、消息传递与凭据检查的全部表面面积，而早期参与讨论甚至可能反过来改进 Linux 侧的设计。（BSD Now EP99，[2718.62-2790.24]，L1）
+- 听众 Bill（明尼苏达州无线电技师）的自述提供了非 x86 平台 BSD 生态的微观样本：他运营 SPARC64 服务器、PowerPC G5、跑 OpenBSD 的 Alpha DS20L 与跑 NetBSD 的 68K Mac，并把替 Solaris 老服务器客户迁移到 FreeBSD 作为职业专长——客户因此免购新机、代码重编译即可运行，绕开向 Oracle 持续付费；他呼吁不要因 tier 2 地位放弃 QMake 在 PowerPC 上的可构建性，“如果能多留住一两个 BSD 用户也是值得的”（4561.82-4566.12）；主持人由是回溯 NetBSD“能跑在一切东西上”的创世记忆（4578.94-4585.26）。（BSD Now EP99，[4383.18-4566.12]，L1）
 - Ed Maste 首次接触 BSD 并非经由三大发行版本体，而是在滑铁卢一家视频流硬件初创公司实习时接触采用 BSD 网络栈的 VxWorks；2000 年代初其新公司需同时维持大量并发 TCP 连接，因 FreeBSD 的 kqueue 已可用而 Linux 的 epoll 尚未成熟而选定 FreeBSD，此后在公司 FreeBSD 衍生系统中负责推动修改回流上游，2012 年前后因其社区工作受基金会董事会注意而入会任项目开发总监。（BSD Now EP75，[973.16-1139.82]，L1）
 - 基金会资助的自我定位是填补社区无人承担的空白：每年董事会会议基于用户、大型企业与个人支持者的反馈确定高优先主题，当年度定为安全、性能与开发者工具三项，典型如人人需要却无人愿独自投入的工具链；资助形式分面向个人的定点项目资助与全职员工承担的长期项目两类，最终取舍由董事会裁量。（BSD Now EP75，[1144.06-1294.33]，L1）
 - 主持人 Kris Moore 以 PC-BSD 开发者身份宣布 10.1.1 季度版：底层仍为 FreeBSD 10.1，新增基于 boot environments 与 chroot 技巧的后台自动更新（使用中系统不被改动，重启即进入新环境）、全套工具迁移至 Qt5、提供 OVA 虚拟机镜像，并以 GELI v7 配合 GRUB 实现单加密 zpool 的全盘加密启动，不再留未加密的引导分区。（BSD Now EP75，[3292.72-3389.12]，L1）
@@ -117,6 +121,7 @@ volume: 第13卷-bsd衍生操作系统
 - fastcode.io 关于 VMware 收购与 Bitnami 收费的报道。（BSD Now EP633，[1612.96-2123.00]，L2）
 - OpenSSH 10.1 官方发布说明。（BSD Now EP633，[2126.22-2590.12]，L2）
 - The New Stack 对 Brian Kernighan 在 VCF East 2025 问答的报道。（BSD Now EP633，[2749.04-3342.34]，L2）
+- 本期可资引用的一手史料包括：BSDCan 2015 现场访谈录音（Ryan Lortie 与 Baptiste，以录制中途火警疏散为时间锚点）；Dio Durat 详解 tame 能力边界的邮件列表长文；Adrian 在 Reddit 发起的“What would you like to see in FreeBSD?”征集帖（逾 200 条评论）；Ted Unangst 博文《branchless development》，内有“For an open source project, branching is counterintuitive and counterintuitively antisocial”（3507.58-3512.96）与“比死亡更糟的命运是成功的合并”（3638.38-3644.18）之讥；FreeBSD Docker wiki 页面（Michael Dexter 为主要推动者）与 resflash 源码仓库（GitHub bconway/resflash）；DragonFly 的 Valley View GPU 修复自述（Matthew Dillon）；以及 EuroBSDCon、vBSDCon 2015 注册开放公告。（BSD Now EP99，[4618.42-4643.78]，L2）
 - 访谈提及的基金会一手文件包括新近上线的项目资助提案指南（约十至十一页并附样例提案），其要点为提案须绑定明确范围、具名开发者与预算金额，并须清晰论证对 FreeBSD 社区的收益；年度直接项目资助预算数字由基金会工作人员提供并经 Ed Maste 在访谈中复述。（BSD Now EP75，[1600.02-1703.84]，L1）
 - 本期新闻段援引的一手材料包括 Damien Miller 介绍 OpenSSH 6.8 密钥轮换机制的博客文章、Adam Wolk 记述 OpenBSD 二进制快照滚动跟进体验的博文、详述新旧支持模型利弊的 FreeBSD 邮件列表帖子，以及 Josh Paetzel 执笔的 FreeNAS 硬件选型指南；各件均以链接形式收入节目注释。（BSD Now EP75，[2776.48-3071.16]，L2）
 - Ken Moore 访谈兼 Lumina 界面走查（Lumina 作者当事人演示）。（BSD Now EP54，[3404.70-4697.20]，L1）
@@ -143,6 +148,8 @@ volume: 第13卷-bsd衍生操作系统
 - 总纲5 没有必然性，只有偶然性：总纲5 没有必然性，只有偶然性：Ed Brayden 论证世界模型与预测的失败，强调复杂系统走向并非规划者所能必然掌控。（BSD Now EP633，[1084.22-1603.88]，L2）
 - 总纲11 商品是形式主义：总纲11 商品是形式主义：Broadcom 将 Bitnami 免费镜像改造为定价商品，展示开源资产在资本收购后的形式主义化。（BSD Now EP633，[1645.84-2123.00]，L2）
 - 总纲22 知识注定过时：总纲22 知识注定过时：Brian Kernighan 以 C 语言长期推广者身份面对 Rust 崛起，反映技术知识随生态更替而过时的处境。（BSD Now EP633，[2863.88-2966.64]，L1）
+- 总纲4 分离聚合是永恒规律：GNOME 与 FreeBSD 的协作史在本期呈现分离聚合的完整弧线：上游发布、下游追补十个 bug、六个月后重演的分离循环，被 jhbuild 每日构建打破——破坏发生一两天内即可定位到具体提交并联系到记忆尚新的作者；Baptiste 主动驻留 #freebsd-gnome 频道充当跨社区界面，并明言让上游了解 BSD 的能力与短板是“对双方都赢”（1972.90-1975.60）。两个原本各自演化的社区由偶发的个人接触走向制度化聚合，正是分离聚合规律的当代表现。（BSD Now EP99，[1938.52-1998.42]，L1）
+- 总纲22 知识注定过时：OpenBSD 以约 350 行的 doas 取代基础系统中滞留多年的 sudo（旧版约一万行），把 LDAP 等扩展特性连同 sudo 一并降级至 ports；主持人指出基础系统中冻结的软件版本注定落后于上游演进，与其反复审计膨胀的新代码不如重写最小必需实现，man 手册仅一页半与三个命令行旗标即构成“足够好”的边界。承认 base 内知识必然过时、把演化自由让渡给包管理体系，是“知识注定过时”命题的一次工程化演练。（BSD Now EP99，[610.64-681.16]，L2）
 - 总纲4 分离聚合是永恒规律：Ed Maste 断言 FreeBSD 在部分第三方组件上只维护树内副本而不与上游沟通，是通往长期分叉灾难的路径，主张从做完再回推上游转向与上游同体工作，并举其作为 LLVM 上游 committer、FreeBSD 移植工作先在上游仓库进行为例；主持人补充 OpenZFS 亦在重构类似协作通道——分叉与回流在开源工程组织中反复重演，构成又一轮聚合循环。（BSD Now EP75，[2117.84-2313.04]，L1）
 - 总纲5 没有必然性，只有偶然性：面对 2014 年使筹款近乎翻倍的一笔事先不知情的巨额捐赠，基金会将其中百分之十直接注入项目资助池，其余设立捐赠基金分年支用，以备歉收之年，并将直接项目资助预算自 2014 年的十二万二千美元提至 2015 年的三十万美元——一次性偶然馈赠不可充作长期依赖，须经制度安排转化为可持续的资金秩序，恰见组织存续对偶然性的驯化。（BSD Now EP75，[1877.28-1971.32]，L1）
 - 总纲10 动手者创造历史：总纲10 动手者创造历史：Ken Moore 以个人开发并维护 Lumina 的方式为 FreeBSD 桌面生态提供原生工具。（BSD Now EP54，[3448.90-3526.78]，L1）
@@ -168,6 +175,7 @@ volume: 第13卷-bsd衍生操作系统
 - 节目所述 jails“2000 年首现”与章节考据的 1999-04-28 首次提交存在口径差异，须以 FreeBSD commit 记录为准；FreeBSD 12.0 具体特性以官方 Release Notes 为准。　[存疑脚注] jails 首次提交日期以代码仓库 commit 为准，播客口径为发布年份。（BSD Now EP276，[1155.72-1164.06]，L3）
 - 转录将 Klara Systems 记作 Clara、将 Brian Kernighan 记作 Koenigan 或 Kernigan，人名与机构名存在语音转写偏差。　[存疑脚注] 机构与人物名称存在转写偏差，须以原文核验（BSD Now EP633，[2753.12-2784.64]，L4）
 - Bitnami 定价在转录中出现 600 亿、60 万与 7.2 万等不一致数字，具体金额须以 AWS Marketplace 与官方公告核验。　[存疑脚注] 价格数字存在转写歧义，未与官方定价页核验（BSD Now EP633，[1666.68-2041.44]，L4）
+- 转写专名失真集中且需核证：新闻段称 tame 由 Nicholas Marriott 编写（66.50-77.32），与 tame 主要由 Theo de Raadt 等主导开发的公开记录相悖，应以 OpenBSD 源码树提交记录核证；“Matt Aaron”应为 ZFS 共同设计者 Matthew Ahrens（4104.28-4113.14），“Ted Ewanks”应为 Ted Unangst，“Antoine Jacuto”应为 Antoine Jacoutot，“CopMast”应为 FreeBSD GNOME 团队长期维护者 Koop Mast，“IOKage”应为 iocage，“do-ass”应为 doas；访谈嘉宾 Baptiste 全名未在转写中出现。上述失真均可由上下文辨认，不影响语义判读，故整体仍判可用，但涉及人名的引用须先经邮件列表存档与源码提交记录复核。　[存疑脚注] tame 作者归属与上述专名还原均系依据上下文与公开史料的推断，尚未逐一以 OpenBSD 源码树、邮件列表存档及人物自述复核。（BSD Now EP99，[66.50-77.32]，L4）
 - Ed Maste 对基金会已结项目的内部评估并不齐一：autofs 自动挂载守护进程与内核态 iSCSI 栈被引为部署反馈良好的成功案例，而 vt 控制台更新虽早已是 current 默认、其本人亦使用年余，却自认远未达预期，项目体量超出当初预估而仍在收尾——同为基金会出资，工程完成度因项目而异，资金投入与成果兑现并无必然对应。（BSD Now EP75，[1484.46-1590.74]，L1）
 - Lumina 0.6.2 仍为 beta，转录中对其稳定性与未来形态的判断属开发者预期，最终演进需以 PC-BSD/TrueOS 历史为准。　[存疑脚注] 开发者对未来稳定性的判断为单方预期，未形成多源佐证（BSD Now EP54，[3513.38-3526.78]，L4）
 - Liam Proven 关于 Xinuos 产品形态、AIX 团队迁移地等描述属记者二手综述，具体时点与细节须以厂商公告核实。　[存疑脚注] 商业 Unix 厂商现状为记者综述，未逐一核对厂商一手公告。（BSD Now EP580，[2915.18-3022.62]，L4）
@@ -184,6 +192,7 @@ volume: 第13卷-bsd衍生操作系统
 - [BSD Now EP348] Pennington J. BSD Now: 348: BSD Community Collections[EB/OL]. (2020-04-30)[2026-08-15]. https://www.bsdnow.tv/348.
 - [BSD Now EP276] Pennington J. BSD Now: Episode 276: Ho, Ho, Ho - 12.0 | BSD Now 276[EB/OL]. (2018-12-13)[2026-08-15]. https://www.bsdnow.tv/276.
 - [BSD Now EP633] Pennington J. BSD Now: 633: Magical Systems Thinking[EB/OL]. (2025-10-16)[2026-08-15]. https://www.bsdnow.tv/633.
+- [BSD Now EP99] Pennington J. BSD Now: 99: BSD Gnow[EB/OL]. (2015-07-22)[2026-08-15]. https://www.bsdnow.tv/99.
 - [BSD Now EP75] Pennington J. BSD Now: 75: From the Foundation (Part 1)[EB/OL]. (2015-02-04)[2026-08-15]. https://www.bsdnow.tv/75.
 - [BSD Now EP54] Pennington J. BSD Now: 54: Luminary Environment[EB/OL]. (2014-09-10)[2026-08-15]. https://www.bsdnow.tv/54.
 - [BSD Now EP580] Pennington J. BSD Now: 580: EuroBSDcon 2024 - Part 2[EB/OL]. (2024-10-10)[2026-08-15]. https://www.bsdnow.tv/580.
