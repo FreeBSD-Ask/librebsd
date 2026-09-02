@@ -35,7 +35,7 @@ volume: 第13卷-bsd衍生操作系统
 - 各公司官方资料；Netflix TechBlog；Google Research Blog；AWS 文档。[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]FreeBSD 社区论文：[FP-2022-014] The "other" FreeBSD optimizations used by Netflix to serve video at 800Gb/s from a single server（Drew Gallatin，2022）<https://papers.freebsd.org/2022/eurobsdcon/gallatin-the_other_freebsd_optimizations-netflix/>FreeBSD 社区论文：[FP-2021-007] Serving Netflix Video at 400Gb/s on FreeBSD（Drew Gallatin，2021）<https://papers.freebsd.org/2021/eurobsdcon/gallatin-netflix-freebsd-400gbps/>FreeBSD 社区论文：[FP-2019-046] Kernel TLS and TLS hardware offload（Slava Shwartsman, Drew Gallatin，2019）<https://papers.freebsd.org/2019/eurobsdcon/shwartsman_gallatin-kernel_tls_harware_offload/>FreeBSD 社区论文：[FP-2019-078] In-Kernel TLS Framing and Encryption for FreeBSD（John Baldwin（约翰·鲍德温），2019）<https://papers.freebsd.org/2019/vbsdcon/baldwin_in-kernel_tls_framing_and_encryption_for_freebsd/>FreeBSD 社区论文：[FP-2019-036] Netflix and FreeBSD: Reflections on Running FreeBSD Head in Production（Jonathan Looney，2019）<https://papers.freebsd.org/2019/bsdcan/looney-netflix_and_freebsd/>FreeBSD 社区论文：[FP-2019-068] Netflix and FreeBSD: Using Open Source to Deliver Streaming Video（Jonathan Looney，2019）<https://papers.freebsd.org/2019/fosdem/looney-netflix_and_freebsd/><!-- DB_REF:bsd_derivatives.duckdb -->> **数据库引用（bsd_derivatives.duckdb）**：本子节对应 bsd_derivatives 代码仓库。> 1985-2026 年间：963,557 次提交。> 仓库总览：963,557 次提交，14,109 位贡献者，1985-06-13 至 2026-08-24。
 
 <!-- PODCAST_REVIEW v20260829 -->
-<!-- 语义复核范围：BSD Now EP222、BSD Now EP191、BSD Now EP167、BSD Now EP17（共 4 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
+<!-- 语义复核范围：BSD Now EP222、BSD Now EP191、BSD Now EP167、BSD Now EP17、BSDTalk EP235（共 5 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
 
 **要点**：
 
@@ -61,6 +61,12 @@ volume: 第13卷-bsd衍生操作系统
 - Netflix 以 FreeBSD 构建自有内容分发设备 Open Connect，早期借助三大 CDN，后逐步以自建 FreeBSD 设备替换，设备数量以千计但不可公开精确数字，并以全部流量跑在 FreeBSD 上为目标。（BSD Now EP17，[888.58-912.58]，L1）
 - Netflix 采取上游优先策略：因团队规模小，将改动全部推回 FreeBSD 上游以避免长期维护大补丁集；FreeBSD 9 到 10 迁移期间约有四百个差异，其中多集中在旧包工具，故未回移 9 分支。（BSD Now EP17，[532.82-543.14]，L1）
 - Open Connect 设备单盘使用 UFS 而非 RAID，高可用与数据冗余由更高层实现：盘故障即返回 404 并转向其他持有相同内容的盒子，从而在盒内获得更大灵活性并避免深夜维护。（BSD Now EP17，[995.94-1035.62]，L1）
+- Allan Jude 自述两档节目的生产机制：TechSnap 开播 134 周以来每周四一期从未间断，定位为面向系统管理员的安全新闻拆解加听众问答；BSD Now 则专攻 FreeBSD、NetBSD、OpenBSD，每周三东部时间下午两点直播，由 TJ 撰写几乎全部节目笔记与教程、PC-BSD 的 Kris Moore 主持；他起初认为 BSD 内容不足以支撑每周一档，深入参与会议与文档写作后才改观。（BSDTalk EP235，[272.10-378.10]，L1）
+- Scale Engine 的 CDN 分布于 10 国 30 个数据中心（仅荷兰即 4 个），以 GDNSD 做全局服务器负载均衡——该软件原是 Logitech 开发者为地理分布驱动下载而写，用 GeoIP 数据库按解析请求来源改写结果，并辅以外部健康监控插件：经 SNMP 轮询网卡利用率、超过七成即视为不可用而改指次近节点；由于 DNS TTL 加上部分 ISP 无视 TTL 长时间缓存，无法确保新用户立即离开故障节点，故只向每台服务器推送六至七成链路容量——直播流一旦发生争用是全体观看者体验崩坏，而 HTTP 下载争用只是各自变慢。（BSDTalk EP235，[451.72-619.30]，L1）
+- 运维与部署体系：全球机房一律租用服务器而非托管，以换取 30 天合约与厂商换件；经 VPN 加 IPMI 带外管理，可在汉密尔顿的桌面上给阿姆斯特丹的服务器挂载 ISO 重装系统；部署链为 FreeBSD 9.2 原版安装、自有 pkg 仓库（以定制编译选项预编译 Nginx 与 Varnish）、bootstrap pkg 后交 Puppet 签名引导，从 Puppet 启动到投产约七八分钟；PC-BSD 的 ISO 与 pkgng 仓库以 ZFS 复制预置到边缘，而 pkgng 仓库要求 repo 清单与密码学签名的 SHA-256 摘要文件同全部包文件保持整体一致、绝不许新旧混合状态，故用 rsync 延迟更新选项先写入临时目录再原子改名就位，每 15 分钟复制一次。（BSDTalk EP235，[691.80-978.18]，L1）
+- Puppet 链路的性能改造：视频流所依赖的大型 Java 应用打包成 jail 由 Puppet 分发、EzJail 部署；经 Puppet 的 Ruby 代码直接分发 500MB 文件效率极低，其解法是教会 Nginx 信任 Puppet 的证书颁发机构，仅允许持 Puppet CA 所签客户端证书的已激活节点从安全文件库直接经 Nginx 拉取，安全模型不变而性能大幅提升；这些 Puppet 与 Nginx 优化曾于 2013 年春在 BSDCan 演讲披露。（BSDTalk EP235，[980.90-1046.78]，L1）
+- 包管理迁移的量化对比：当年各边缘节点启动时自行从 ports 编译全部所需软件约需 45 分钟，切换 pkgng 后缩短至七分钟且一半耗在 EzJail；Poudriere 取代旧 Tinderbox，实测每 CPU 开一个 jail、单作业串行反而快于跨机并发分派，一台 24 核 96GB 内存的机器在 tmpfs 中编译全量约 24000 个 port（含 24 种语言的 LibreOffice 与四个 Firefox 版本）约 14 小时；他以 Poudriere 生成新包集再以 pkg2ng 转换旧机，通过手工改写包 origin 化解 Perl 5.10 到 5.14 与 PHP 5.3、5.4 并存的依赖冲突，迁移之顺利出乎意料。（BSDTalk EP235，[1069.80-1268.36]，L1）
+- 升级 FreeBSD 9.2 的主要动机是 ZFS v5000：LZ4 压缩与存储池接近满载时的性能改进，对存有四组共 50 至 60TB 视频数据的阵列尤为关键；新版命令行全面支持干跑预演——删除快照前可预估将释放的空间，增量 zfs send 前可预估传输量，他据此脚本化出进度条，得以预知一次发送的体量与完成时间。（BSDTalk EP235，[1443.66-1538.90]，L1）
 
 **史料**：
 
@@ -91,6 +97,7 @@ volume: 第13卷-bsd衍生操作系统
 - 总纲10 动手者创造历史：总纲10 动手者创造历史：Netflix 小团队与 EMC/Isilon 等以实际工程改动推回 FreeBSD 上游，由动手者而非仅靠名义领袖塑造代码演进。（BSD Now EP17，[532.82-559.78]，L1）
 - 总纲9 经验优先：总纲9 经验优先：sendfile 零拷贝、异步化与存储调优均源于 CDN 真实负载与具体故障经验，而非抽象设计先行。（BSD Now EP17，[752.74-787.62]，L1）
 - 总纲6 和解优于斗争：总纲6 和解优于斗争：与 EMC/Isilon 等厂商在 CAM 与存储栈上协作测试与反馈，体现以协作而非对抗推进技术。（BSD Now EP17，[656.9-679.62]，L1）
+- 总纲5 没有必然性，只有偶然性：他的 FreeBSD 之路始于纯粹偶然：十余年前为学习架设 IRC 服务器而租用 shell 账户，对方恰好运行 FreeBSD；自办 shell 托管公司时依据的不过是 IRC 上“用 Linux 会被 root”的流言，起点约为 FreeBSD 4.0/4.1；建 CDN 时其 FreeBSD 经验压过合伙人的 NetBSD 背景，遂成今日 80 台 FreeBSD 机器且从未考虑更换的格局。技术选型的延续并非必然规律，而是一连串具体处境下偶然选择的路径固化。（BSDTalk EP235，[1293.46-1431.94]，L1）
 
 **辨析**：
 
@@ -99,6 +106,7 @@ volume: 第13卷-bsd衍生操作系统
 - [存疑脚注] 教程安全缺陷研究数据为 2017 年快照，117 处漏洞发现不能代表当时 PHP 生态全貌。　[存疑脚注] 研究样本受 GitHub API 限制，覆盖范围有限。（BSD Now EP191，[4334.74-4354.04]，L4）
 - [存疑脚注] 转写将合作对象记作“iSalon”，应为 Isilon 的误转；TCP 拥塞控制项目记作“RAC”，应为 RACK 的误转，须核验。　[存疑脚注] Isilon 与 RACK 专名须核验。（BSD Now EP167，[376.84-1324.84]，L4）
 - 关于 Netflix 占北美互联网流量超过 30% 及设备数量以千计，均为访谈中的口头估计，缺乏同期可精确核验的数据。　[存疑脚注] 流量占比与设备规模为当事人概数，需以 Netflix 官方披露或第三方测量交叉验证。（BSD Now EP17，[920.66-932.9]，L4）
+- pkgng 在 2013 年呈现两面性：对当事人而言是部署速度的数量级改善与比 portupgrade 更顺畅的大版本迁移，但同一访谈里主持人自述“一碰 pkgng 受挫就放弃”，PHP 与 Perl 的 origin 手工修补、仓库元数据的整体一致性约束也显示工具链尚未成熟；这一工程必要性与生态滞后的张力，须与此后 FreeBSD 10.0 将 pkg 设为默认的过程交叉验证，方能判断争议如何收束。（BSDTalk EP235，[1069.80-1168.04]，L1）
 
 **文献**：
 
@@ -106,5 +114,6 @@ volume: 第13卷-bsd衍生操作系统
 - [BSD Now EP191] Pennington J. BSD Now: 191: I Know 64 & A Bunch More[EB/OL]. (2017-04-26)[2026-08-15]. https://www.bsdnow.tv/191.
 - [BSD Now EP167] Pennington J. BSD Now: 167: Playing the Long Game[EB/OL]. (2016-11-09)[2026-08-15]. https://www.bsdnow.tv/167.
 - [BSD Now EP17] Pennington J. BSD Now: 17: The Gift of Giving[EB/OL]. (2013-12-25)[2026-08-15]. https://www.bsdnow.tv/17.
+- [BSDTalk EP235] Backman W. BSDTalk: 235: bsdtalk235 - Allan Jude[EB/OL]. (2013-11-19)[2026-08-27]. https://bsdtalk.blogspot.com/2013/11/bsdtalk235-allan-jude.html.
 
 <!-- /PODCAST_REVIEW -->

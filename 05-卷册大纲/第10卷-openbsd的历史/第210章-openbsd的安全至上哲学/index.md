@@ -43,7 +43,7 @@ volume: 第10卷-openbsd的历史
 - de Raadt 邮件列表发言；Van Gennep (1909); Turner, V. (1969). *The Ritual Process: Structure and Anti-Structure*. [仪式理论的后续发展]; shigang.md §19（人类学）、§13（社会哲学）、§25（解释学）<!-- DB_REF:openbsd.duckdb -->> **数据库引用（openbsd.duckdb）**：本子节对应 openbsd 代码仓库。> 1995-2026 年间：491,195 次提交。> 仓库总览：491,195 次提交，3,352 位贡献者，1995-10-18 至 2026-08-25。
 
 <!-- PODCAST_REVIEW v20260829 -->
-<!-- 语义复核范围：BSD Now EP331、BSD Now EP189、BSDTalk EP66（共 3 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
+<!-- 语义复核范围：BSD Now EP331、BSD Now EP189、BSDTalk EP229、BSDTalk EP66（共 4 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
 
 **要点**：
 
@@ -54,6 +54,12 @@ volume: 第10卷-openbsd的历史
 - 受访者 Wendell 回忆 ZFS 可从多盘硬件故障且池满的状态恢复数据，并支持池在 SPARC 与 amd64 架构间跨字节序移植。（BSD Now EP189，[4340.92-4558.02]，L1）
 - Wendell 用退役的 IBM NetApp 磁盘柜与 Google Search Appliance（Dell R710）搭建 10GbE 视频存储，ZFS 压缩使八百万文件遍历缩短到八分钟。（BSD Now EP189，[4702.86-5620.86]，L1）
 - Ted Unangst 撰文记录在网站登录、系统登录等场景使用 YubiKey 的体验，以帮助他人少走弯路。（BSD Now EP189，[6182.44-6225.48]，L2）
+- Cappuccio 幼年从叔叔处得到一台可运行 CP/M 或 Microsoft Xenix 的 TRS-80 Model 16B，九十年代初转入 386BSD 与 Linux，1995 年因 Theo 在 FTP 站点放出首个 SPARC 内核而开始使用 OpenBSD 并沿用至访谈时近二十年；早期记忆包括修复后的 SCSI 驱动将传输速率从每秒一百千字节提升到一兆字节。（BSDTalk EP229，[66.47-135.72]，L1）
+- FlashRD 是把 OpenBSD 封装为只读系统的脚本：以 RAM disk 引导、经 CrunchGen 压缩工具集、装入完整通用内核而非功能受限的精简系统，把运行中系统封装为 VND 文件并支持换文件升级；其动机是闪存介质固有不可靠，当事人引 USENIX 会议实验称十五块受测闪存盘有十三块在写入断电时发生中度以上数据丢失乃至整体故障。（BSDTalk EP229，[190.13-246.25]，L1）
+- 项目谱系：flashdist 需手工指定命令清单与闪存几何参数，在引导器仅支持 CHS 的年代以伪造几何参数立足；当 OpenBSD 引导器转向 LBA 且内核不再接受外部几何后其存在理由消失，flashboot 引入 RAM disk 使系统可整体升级，2009 年 flashrd 成型；作者同时观察到小型项目呈博客或邮件列表提及后热度与贡献短暂聚集、随后冷却的周期。（BSDTalk EP229，[574.35-754.16]，L1）
+- NSH 源起于 2001 年作者用 WI 网卡搭建无线网络、面对熟悉 Cisco 命令行的同事需要降低 OpenBSD 路由器门槛的实操场景；它取材 telnet、ftp、ifconfig、route、arp 等常用工具思路，以单一简洁语法封装 PF、BGPD、SNMPD、OSPFD、DHCPd、smtpd 等守护进程配置，并用 SQLite 数据库区分内核自动状态与用户显式意图，写出单一 rc 风格配置文件。（BSDTalk EP229，[313.98-419.14]，L1）
+- 设计哲学上作者曾计划把 pfctl 重写为共享库，因 PF 持续快速变动而放弃；NSH 改为只封装不重写既有配置语法，懂 PF 的用户无需学习第二套方言；后续方向是 Web 界面与 relayd URL 过滤文档，总目标是让不熟悉 vi 与文件系统细节的人也能使用 OpenBSD。（BSDTalk EP229，[1169.21-1263.43]，L1）
+- 生产环境层面，作者长期在约二十余台异构机器（PC Engines ALIX、Super Micro Core 2 等）上运行 FlashRD，坚持最少可动部件原则，称 FlashRD 加 NSH 的组合可长期无人值守运行。（BSDTalk EP229，[769.16-815.33]，L1）
 - Michael Dexter 的技术路径：1991 年读计算机科学时以 SunOS 与 Ultrix 入门真实系统；在密歇根州卡拉马祖求学拉丁语期间偶遇捐赠设立的 NeXT 实验室而接触 NextStep；1998 年前后在俄勒冈州波特兰身处 Red Hat 环境中使用 BSD 相关系统，经历 Red Hat 5.2 的 RPM、Red Hat 6 与 GNOME 测试版时代；2001 年任职 MandrakeSoft 内部 IS 团队，公司失利后迁居拉脱维亚；2002 年前后确立 BSD 主攻方向，恰逢 FreeBSD 5 带来 jls、jexec 等 jail 特性。（BSDTalk EP66，[56.68-254.04]，L1）
 - 从 jails 的组织价值到 SysJail 的方案设计：受访者需要托管多个站点且拒绝与他人共享托管机，痛感软件安装散落文件系统、RPM 亦未能根治，因而看重 jail 将守护进程与宿主系统分离、开销几乎不变、得以整体删除重建的组织价值，并多年以磁盘镜像充当各 jail 的独立分区；SysJail 由此针对 FreeBSD jail 实现的短板而作——文件系统扁平化得以按守护进程或按用户切分虚拟系统，复用 Systrace 的内核级组件、自身全部实现于用户态而无需改内核，可在 Systrace 所到之处运行（NetBSD、OpenBSD、MirOS），提供虚拟终端以便 SSH 进入、以二进制安装构建完整系统；性能上其测试在一台 VIA 1GHz、512MB 内存的迷你主板上同时跑 64 个 jail、每个 sshd 约占 2MB，远低于 VMware 类方案每实例 64MB 的分配；另以用户态文件系统设想隔离各 jail 的 procfs 可见进程以补安全短板。（BSDTalk EP66，[271.24-740.94]，L1）
 - 转向 OpenBSD 的动机与挫折：受访者认为 FreeBSD 5 系列不如其前的 4 系稳定，故障无 core dump、无征兆、存活时长不定，令其放弃；其眼中 OpenBSD 是血统上最纯正、守旧而创新的 BSD，却始终没有 jail——邮件列表的答复是其实现复杂、资源应集中于 OpenSSH 与整体安全，且标准答案常是“用 Systrace”；而 ports 中 Systrace profile 屈指可数，社区并未把 Systrace 的行为约束能力制度化为基线配置，SysJail 即以此引入基线 profile 并追加 Systrace 不具备的系统调用拦截。（BSDTalk EP66，[429.72-540.54]，L1）
@@ -69,6 +75,9 @@ volume: 第10卷-openbsd的历史
 - FreeBSD GSoC 项目列表（BSD Now EP189，[585.22-667.7]，L1）
 - Wendell 访谈自述（BSD Now EP189，[4340.92-6064.62]，L1）
 - Ted Unangst 的 YubiKey 使用博客（BSD Now EP189，[6182.44-6225.48]，L1）
+- 当事人一手口述的 OpenBSD 入坑节点：1995 年 Theo 在 FTP 站点发布首个 SPARC 内核；同期并行接触 386BSD 与 Linux 的个人编年，可作项目早期传播路径的私人证词。（BSDTalk EP229，[101.89-135.72]，L1）
+- 当事人转述的学术证据：某届 USENIX 会议论文以自制断电电路测试闪存盘写入可靠性，得出十五盘中十三盘受损或失效的结论；论文未给出题名与作者，需回溯检索原文献。　[存疑脚注] 当事人转述未提供论文题名作者与年份，引用前须检索 USENIX 原文核验（BSDTalk EP229，[219.77-241.69]，L2）
+- flashdist、flashboot、flashrd 三代工具的演进序列与 flashrd 2009 年发布时点，及 NSH 的 SQLite 状态库设计细节，均为开发者本人自述的一手项目史。（BSDTalk EP229，[580.65-728.39]，L1）
 - 本期可作为 SysJail 早期史的一手物证：项目版本 SysJail 1.03、以 sysjail 隔离 Apache 的 BSD.LV 自用站点（2006 年 8 月约四万次点击）、提交 Freshmeat 的公告被拒、Daemon News 刊出的测试征集、德国媒体的报道、OpenBSD 3.9 磁盘镜像高负载内核 panic 的补丁记录，以及节目开头播报的 BSD 认证组织社区调查结果发布与 OpenBSD 4.0 预购开放。（BSDTalk EP66，[981.34-1404.24]，L1）
 
 **史观**：
@@ -78,18 +87,22 @@ volume: 第10卷-openbsd的历史
 - 总纲10 动手者创造历史：受访者以退役硬件自建存储系统并迁移海量文件，历史由动手实践者推动。（BSD Now EP189，[4702.86-5620.86]，L1）
 - 总纲9 经验优先：对 ZFS 健壮性的判断来自亲身数据恢复与迁移经历，经验先于宣传。（BSD Now EP189，[4462.78-4558.02]，L1）
 - 总纲12 科学是形式主义：存储性能与可靠性认知源于可复现的实验、工具与度量，而非主观印象。（BSD Now EP189，[5085.26-5282.2]，L1）
+- 总纲10 动手者创造历史：作者的全部工具均从自身运维需求中长出——无线网络、无盘防火墙、面向同事的可用性——而非自上而下的项目规划；FlashRD 与 NSH 二十余年由其在职维护、服务真实机器，恰是动手者而非舞台人物书写技术史的一手素材。（BSDTalk EP229，[769.16-815.33]，L1）
+- 总纲22 知识注定过时：flashdist 的衰落不是失败而是环境变迁：引导器 CHS 到 LBA 的转换、内核几何探测的强制化、八吉字节闪存跌至数美元，共同使手工几何管理的存在前提消失，作者自认继续维护是愚蠢的；技术方案的合理性随其所依附的物质条件一同过时。（BSDTalk EP229，[598.14-727.85]，L1）
 - 总纲10 动手者创造历史：该项目由 Kristaps 一人承担核心开发、Michael Dexter 承担项目管理与运维的两人体制驱动，处理进程限制之类功能仅花两天，而同类功能在 FreeBSD 端是一个 Google Summer of Code 项目；受访者拒绝推动其进入任何基础系统，主张工具按规格即插即用的模块化 UNIX 模式之美——默默做事的小团队以最小协作规模维持跨项目工具，正是动手者创造历史的微观形态。（BSDTalk EP66，[1246.12-1310.56]，L1）
 
 **辨析**：
 
 - 转写对 Windows 代码行数等数字（如‘half a billion lines’）为文章作者的估计值，未经独立核实。　[存疑脚注] Windows 代码行数为作者估计（BSD Now EP331，[503.24-515.92]，L4）
 - [存疑脚注] GSoC 项目名单为 2017 年计划，最终是否全部完成须以后续项目报告为准。　[存疑脚注] 计划性名单，验收结果待后续报告。（BSD Now EP189，[585.22-733.18]，L4）
+- 转写将叔叔的机器记为 Triss 80 model 16B 并称可运行 CP/M 或 Xenix，机型拼写系转写噪音，TRS-80 Model 16B 的操作系统组合与购入年代需按机型史料核对，不得径直引用。[存疑脚注] 转写模糊，机型与操作系统组合待核。　[存疑脚注] 机型名与操作系统组合由受损转写推断，须与 Tandy 产品文献交叉核验后方可引用（BSDTalk EP229，[88.43-100.97]，L5）
 - 受访者对 1995 年前后盒装 UNIX 时代的回顾（UNIXware、盒装 OpenStep、更早的 Coherent）带有明显个人立场：称彼时桌面与服务器 UNIX 应用尽有却全为闭源、闭源模式终究失配而大多退场，UNIXware 这类相对廉价的“真 UNIX”被“当时远逊但免费”的 Linux 击败——此为亲历者的单方回望，且转写专名普遍失真（CISJail 应为 SysJail，CISTrace/Cistrays 应为 Systrace，MirrorOS 应为 MirOS，MeSQL 应为 MySQL，flash.post 应为 Freshmeat，MonoWall 应为 m0n0wall，Soakris 应为 Soekris，altrix 应为 Ultrix，deck 应为 DEC，Viya 应为 VIA，Mike Gunncar 应为 Mike Gancarz），引用前均须回核音频。　[存疑脚注] 对 1990 年代闭源 UNIX 兴衰与 Linux 取代的因果判断为当事人单方回顾，须与比较史文献互证；转写专名失真清单如上（BSDTalk EP66，[1947.26-2003.88]，L4）
 
 **文献**：
 
 - [BSD Now EP331] Pennington J. BSD Now: 331: Why Computers Suck[EB/OL]. (2020-01-02)[2026-08-15]. https://www.bsdnow.tv/331.
 - [BSD Now EP189] Pennington J. BSD Now: 189: Codified Summer[EB/OL]. (2017-04-12)[2026-08-15]. https://www.bsdnow.tv/189.
+- [BSDTalk EP229] Backman W. BSDTalk: 229: bsdtalk229 - Chris Cappuccio[EB/OL]. (2013-08-07)[2026-08-27]. https://bsdtalk.blogspot.com/2013/08/bsdtalk229-chris-cappuccio.html.
 - [BSDTalk EP66] Backman W. BSDTalk: 66: bsdtalk066 - Interview with Michael Dexter about sysjail[EB/OL]. (2006-09-20)[2026-08-27]. https://archive.org/details/bsdtalk066.
 
 <!-- /PODCAST_REVIEW -->

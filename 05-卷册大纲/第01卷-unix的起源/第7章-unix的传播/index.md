@@ -53,7 +53,7 @@ volume: 第01卷-unix的起源
 - City of Berkeley. Charter of the City of Berkeley [Z]. 1909-07-01. Internet Archive: <https://ia800603.us.archive.org/6/items/charterineffectj00berk/charterineffectj00berk.pdf>; City of Berkeley. Charter of the city of Berkeley [M]. Berkeley, Calif.: Lederer, Street & Zeus Co., 1909. Internet Archive: <https://archive.org/details/charterofcityofb00berk>; HathiTrust. Charter of the city of Berkeley [Catalog Record]. <https://catalog.hathitrust.org/Record/102439738>; City of Berkeley. The Charter [EB/OL]. [2026-07-25]. <https://berkeley.municipal.codes/Charter/TheCharter>; UC Berkeley Law Library. Charter of the city of Berkeley [Catalog Record]. <https://lawcat.berkeley.edu/record/323845>; City of Berkeley Records 1878-1954 [Archive]. UC Berkeley Bancroft Library. OAC Finding Aid: ark:/13030/kt4h4nc4mb ［A］
 
 <!-- PODCAST_REVIEW v20260829 -->
-<!-- 语义复核范围：BSD Now EP231、BSD Now EP225、BSD Now EP172（共 3 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
+<!-- 语义复核范围：BSD Now EP231、BSD Now EP225、BSD Now EP172、BSD Now EP74（共 4 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
 
 **要点**：
 
@@ -78,6 +78,9 @@ volume: 第01卷-unix的起源
 - Ingo Schwarze 在 Toulouse 的 LibreSSL hackathon 中完成 libcrypto 剩余 130 页手册的 pod2mdoc 转换，使全部文档可用 mdoc 检索，并回顾了 2014 年以来 Anthony Bentley 等人的转换史。（BSD Now EP172，[3495.94-3681.4]，L2）
 - Matthew Garrett 批评 Canonical 的 IP 政策：若按政策理解，分发基于 Ubuntu 的作品即使不称 Ubuntu 也可能需向 Canonical 付费，这超出商标保护范围，故 Ubuntu 不是自由软件。（BSD Now EP172，[3872.04-4203.14]，L2）
 - DEMOS 是 1982 年诞生于莫斯科原子能研究所的 Unix 类操作系统，源自 MNOS 对 Unix v6 的克隆，1986 至 1990 年各版本合并为 DEMOS 2，运行于 SM4、SM1600 及 VAX 克隆与 Motorola 6820 微机，后转向 Relcom。（BSD Now EP172，[4550.66-4645.46]，L2）
+- Tanenbaum 回溯 MINIX 起源：阿姆斯特丹自由大学是荷兰第二个使用 Version 6 Unix 的站点，AT&T 律师因 Lions 讲义流传而认定学生广泛研习其产品不可容忍，遂在 Version 7 许可证写入“不得在课堂讲授 Unix、不得出书”（1332.74-1338.48）类条款，大学教学被迫中断；他由此决意以自有代码重写一个不受 AT&T 许可证约束的 Unix 克隆，MINIX 因教学之需而生，初始目标即保持代码简单直白以适配操作系统课堂，而非追逐功能齐备。（BSD Now EP74，[1288.40-1367.16]，L1）
+- 因社区长期苦于应用软件匮乏、无包可用而致用户流失，MINIX 数年前决意整体引入 NetBSD 的库、头文件与包管理基础设施，访谈时已有约 4000 个包可运行，X11 适配修复后预计再增约 3000 个；在诸 BSD 中选中 NetBSD，一因其许可证与 MINIX 兼容，二因其可移植性纪律杜绝硬件专属技巧，与 MINIX 面向 BeagleBoard 系列等嵌入式高可用场景的方向契合。（BSD Now EP74，[1592.86-1669.48]，L1）
+- Tanenbaum 阐明 MINIX 3 的安全设计：文件系统、VFS、内存管理等以独立进程存在并由 MMU 硬件隔离，各进程仅能按微内核中的授权表发起内核调用，故攻陷音频驱动者尝试创建进程只会得到无权限错误（1886.76-1896.74），缺陷被天然限制在单个服务内；计划于 3.3.1 落地的 live update 可在系统运行中以约 200 毫秒热替换组件，持续变更内存布局与代码数据结构，使依赖精确布局知识的 return-to-libc 类攻击难以命中，将高可用机制转化为安全机制。（BSD Now EP74，[1854.20-2022.84]，L1）
 
 **史料**：
 
@@ -92,6 +95,7 @@ volume: 第01卷-unix的起源
 - Damien Miller 发布的 OpenSSH 7.4 公开测试说明与变更清单。（BSD Now EP172，[94.39-393.72]，L2）
 - Ingo Schwarze 的 LibreSSL 手册转换 hackathon 报告（含 pod2mdoc 转换时间线）。（BSD Now EP172，[3495.94-3681.4]，L2）
 - Matthew Garrett 对 Canonical IP 政策的博客批评与 Mark Shuttleworth 的官方立场博客。（BSD Now EP172，[3872.04-4203.14]，L2）
+- 本期可据的一手材料包括：Andrew Tanenbaum 的当事人自述（EuroBSDCon 2014 演讲翌周接受访谈）、其转述的 John Lions 对 Version 6 Unix 逐行讲解讲义在各国大学间成为“地下经典”（1308.04-1310.62）的史实、AT&T 于 Version 7 许可证中加入教学与出书禁令的条款文本、MINIX 官方下载统计页 server.minix3.org/stats 的 2014 年 9 月 CD 镜像 15605 次下载记录与用户问卷调查、NetBSD 回归测试套件 81% 符合度的实测数据，以及 FreeBSD 邮件列表上 Michael Lucas 为撰 jails 专著征求工具意见的讨论串与凭邮件头 IP 识破 QJail 作者化名攻击的原帖。（BSD Now EP74，[1274.98-1316.58]，L2）
 
 **史观**：
 
@@ -105,6 +109,8 @@ volume: 第01卷-unix的起源
 - 总纲9 经验优先：ports collection 让“别人已完成的移植”成为可复用经验，使个体不必重复劳动，工程效率建立在经验累积之上。（BSD Now EP172，[2210.38-2247.96]，L3）
 - 总纲10 动手者创造历史：Rod Grimes 以修复旧物、做数据恢复与移植为乐，历史由具体动手者而非抽象方案推进。（BSD Now EP172，[1600.96-1667.48]，L3）
 - 总纲4 分离聚合是永恒规律：早期聚焦单一 x86 架构导致机独立代码不够架构中立，后期向 ARM/MIPS 迁移困难，单点聚焦与多架构分散之间存在结构张力。（BSD Now EP172，[2321.18-2399.88]，L3）
+- 总纲13 法律与道德是利益分配：AT&T 以许可条款而非技术优劣决定了谁能讲授 Unix、谁必须另起炉灶：法律文本成为大学与公司之间利益分配的界面，MINIX、BSD 系与 GNU 在此约束下各自占据生态位的分化并非技术“进步”的自然结果，而是许可权力再分配的产物；Tanenbaum 的动机自述为操作系统史上的许可证权力结构提供了一手注脚。（BSD Now EP74，[1321.38-1367.16]，L2）
+- 总纲10 动手者创造历史：Tanenbaum 对比 EuroBSDCon 与 ACM 学术会议的受众：前者聚集因热情而非职称压力而来的实践者，后者系统方向的评价氛围被他概括为“把 Linux 性能提高 2%”（2444.50-2455.74），真正新颖而未经基准检验的构想反遭冷落；他以自身两代系统的工程取舍佐证系统演化由动手者的实践经验推动，而非仅由学术发表体制塑造。（BSD Now EP74，[2418.70-2478.98]，L1）
 
 **辨析**：
 
@@ -113,11 +119,14 @@ volume: 第01卷-unix的起源
 - [存疑脚注] 转写将 OMSI 白天运行的分时系统记作“RISC-C”，疑为 DEC RSTS/E 的误转；Rod Grimes 首次接触 Unix 的具体年份与机型须以一手采访或档案复核。　[存疑脚注] 分时系统名与年份须核验一手资料。（BSD Now EP172，[1452.7-1463.98]，L4）
 - [存疑脚注] OpenBSD Foundation 首笔铱金捐赠方转写为“smartizan/smartian”，疑指 Smartisan（锤子科技），280,000 加元金额与币种须核验官方公告。　[存疑脚注] 捐赠方名称与金额须核验。（BSD Now EP172，[4417.12-4457.48]，L4）
 - [考据脚注] DEMOS 全称在转写中变形严重，应为俄语“Диалоговая Единая Мобильная Операционная Система”的英译，引用时须以俄文一手资料核验。　[考据脚注] 俄文全称须核验一手资料。（BSD Now EP172，[4557.02-4586.12]，L4）
+- 回应 Colin Percival 提问时，Tanenbaum 划清虚拟化与微内核的界限：MINIX 式多服务器系统由仅做消息传递的极小内核与相互独立的子系统进程构成，而 Xen 或 VMware 客户机内一个音频驱动缺陷仍会拖垮整个虚拟机，与裸机运行同样糟糕，仅因微内核仍存活而重启更快（1553.28-1556.08），故虚拟机隔离并不产生微内核所许诺的可靠性；此辨析有助于澄清 2010 年代将虚拟机隔离与微内核故障隔离混为一谈的流行认知。（BSD Now EP74，[1506.32-1563.92]，L1）
+- Tanenbaum 称选 BSD 系的重要理由是许可证兼容，并转述某未具名大型公司投入数百万美元开发 Linux、却因 GPL 须把修改交给竞争对手而深陷困扰（1624.94-1641.72）；该说法无具名主体与文件佐证，属单一来源的当事人转述，仅可视为其对 BSD 宽松许可与 GPL 拷左义务企业接受度的个人判断，不宜径引为实证结论。　[存疑脚注] “某大型公司”未具名，其 GPL 困扰无从核证，须与企业 GPL 相关公开记录交叉验证后方可引用（BSD Now EP74，[1620.90-1644.72]，L4）
 
 **文献**：
 
 - [BSD Now EP231] Pennington J. BSD Now: 231: Unix Architecture Evolution[EB/OL]. (2018-02-01)[2026-08-15]. https://www.bsdnow.tv/231.
 - [BSD Now EP225] Pennington J. BSD Now: 225: The one true OS[EB/OL]. (2017-12-20)[2026-08-15]. https://www.bsdnow.tv/225.
 - [BSD Now EP172] Pennington J. BSD Now: 172: A tale of BSD from yore[EB/OL]. (2016-12-14)[2026-08-15]. https://www.bsdnow.tv/172.
+- [BSD Now EP74] Pennington J. BSD Now: 74: That Sly MINIX[EB/OL]. (2015-01-28)[2026-08-15]. https://www.bsdnow.tv/74.
 
 <!-- /PODCAST_REVIEW -->
