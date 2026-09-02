@@ -36,10 +36,12 @@ volume: 第07卷-freebsd的工程体系重构
 - Apple Inc. Apple Platform Security. support.apple.com/guide/security/; Apple Inc. XNU Source Code (opensource.apple.com); The Open Group. Common Criteria Portal. commoncriteriaportal.org; The Open Group. UNIX Certification Directory. opengroup.org. ［A］[^doubt-resolved-478]: 据 Arch_Handbook (未署名) 消解[^doubt-resolved-479]: 据 Mac OS X Internals A Systems Approach (Amit Singh（阿米特·辛格）)  (未署名) 消解[^doubt-resolved-480]: 据 Mac OS X Internals A Systems Approach (Amit Singh)  (未署名) 消解[^doubt-resolved-481]: 据 Mac OS X Internals A Systems Approach (Amit Singh)  (未署名) 消解[^doubt-resolved-485]: 据 001_Benchmarking Mythos-Linked Bug Rediscovery (未署名) 消解[^doubt-resolved-486]: 据 Mac OS X Internals A Systems Approach (Amit Singh)  (未署名) 消解<!-- DB_REF:freebsd.duckdb -->> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 2020-2024 年间：291,070 次提交。> 仓库总览：1,294,851 次提交，13,875 位贡献者，1993-06-12 至 2026-08-25。
 
 <!-- PODCAST_REVIEW v20260829 -->
-<!-- 语义复核范围：BSD Now EP52（共 1 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
+<!-- 语义复核范围：BSD Now EP120、BSD Now EP52（共 2 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
 
 **要点**：
 
+- 本期核心为对 FreeBSD committer Pawel Jakub Dawidek（转写作 Pavel Davidek）的专访：其公司以 FreeBSD 为基座打造两款安全设备——FUDO 面向特权用户会话的录制与审计，Lynx 面向企业 TLS/SSL 流量的解密卸载；他自述设计哲学“信任开始之处即安全终结之处”（1827.17-1833.98），并指出近年重大安全事件多出自雇员与承包商，内部威胁的监控由此成为产品定位的核心。（BSD Now EP120，[1600.47-1742.97]，L1）
+- FUDO 的技术栈揭示 FreeBSD 内核安全特性进入商业生产的深度：geli 承担全盘加密，Capsicum 承担会话沙箱，嘉宾称其设备“是比 FreeBSD 本体更大的 Capsicum 消费者”（1927.59-1934.81），认证前进程仅获一秒 CPU 配额与三个文件描述符；加密代价因客户端、服务端、落盘三方向而三倍叠加，图形会话另需 OCR 以支持文本检索，多主集群则依赖 ZFS 增量快照复制完成节点间同步。（BSD Now EP120，[1917.11-2234.32]，L1）
 - Sean Webb 与 Oliver Pinter 在 HardenedBSD 项目内推进 ASLR/PIE，并将其作为补丁提交上游 FreeBSD，目标是进入 11 版本。（BSD Now EP52，[1110.02-1421.06]，L1）
 - ASLR 使程序可加载到任意内存地址，PIE 进一步支持应用级随机化，用于提高缓冲区溢出与信息泄露攻击的门槛；该实现默认关闭，需编译内核选项并可通过 sysctl 控制。（BSD Now EP52，[1110.02-1183.22]，L1）
 - 该 ASLR 实现借鉴 PaX 与 NetBSD 的实现谱系，并在除 ARM 外的 FreeBSD 支持架构上工作，包括 32 位 Linux 兼容层。（BSD Now EP52，[1351.34-1501.26]，L1）
@@ -47,20 +49,26 @@ volume: 第07卷-freebsd的工程体系重构
 
 **史料**：
 
+- 本期一手史料以嘉宾第一人称口述为主：FUDO 与 Lynx 的架构决策、geli 开发史（XTS 模式缺席年代实现 CBC 不可预测初始化向量、4K 扇区时代放弃块级认证）与 open crypto 框架改造及厂商补丁处境；辅以主持人转述的公开材料——PS4 越狱开发者发布的 GitHub 信息与推文、OpenBSD 运行于 EC2 T2 Micro 的实测帖、AsiaBSDCon 与 BSDCan 2016 征稿公告、2002 与 2015 两版开发者桌面截图页、OpenSSH 历史提权漏洞（二进制仅差一比特）与 TrueCrypt 重现构建事例，以及两封读者来信（大学集群迁移事故、帐篷公司 FreeNAS 改造）。（BSD Now EP120，[1600.47-1742.97]，L2）
 - Sean Webb（Laddera）访谈（ASLR/PIE 实现者当事人自述）。（BSD Now EP52，[933.90-2162.30]，L1）
 
 **史观**：
 
+- 总纲10 动手者创造历史：嘉宾从昔日高产 committer 转向培养新一代动手者——推动 Mariusz Zaborski 成为 committer 从事 Capsicum 与 Casper、Konrad Witaszczyk 打磨加密内核转储补丁历时两年；他以 vendor 视角点出生态症结：厂商补丁常有九成就绪而最后一步永无余力完成者（3919.84-3932.04），故寄望基金会雇用专人收尾入库。BSD 史的推进动力在此显形为具体人手的持续劳动与“加入 FreeBSD 项目是我技术生涯最大的加速器”（4290.64-4303.08）式的代际传承，而非路线图或宣言。（BSD Now EP120，[3892.59-4303.08]，L2）
+- 总纲5 没有必然性，只有偶然性：geli 开发史成为偶然性优先的注脚：当年可预测初始化向量的 CBC 模式被普遍视为安全，嘉宾凭超出共识的直觉实现不可预测初始化向量（3764.35-3772.27），日后该共识方案确被证明不安全，一次未按主流走的工程选择意外成为先见；与之呼应，OpenSSH 历史提权漏洞仅系一个比较运算符之差、修复前后二进制只差一比特，安全史的走向悬于这类无必然性的微小偶然。（BSD Now EP120，[3736.59-3778.55]，L1）
 - 总纲10 动手者创造历史：总纲10 动手者创造历史：Sean Webb 以动手实现并上游 ASLR/PIE 的方式直接改变 FreeBSD 安全能力。（BSD Now EP52，[1110.02-1421.06]，L1）
 - 总纲5 没有必然性，只有偶然性：总纲5 没有必然性，只有偶然性：ASLR 采用 PaX 模型而非 OpenBSD 模型，源于实现者个人偏好与 HardenedBSD 协作的偶然路径。（BSD Now EP52，[1381.32-1435.42]，L1）
 - 总纲8 本体论上各方平等：总纲8 本体论上各方平等：FreeBSD、OpenBSD 与 HardenedBSD 在 ASLR 实现上各有路径，被置于对等比较而非优劣判定。（BSD Now EP52，[1381.32-1449.58]，L1）
 
 **辨析**：
 
+- PS4 越狱条目需谨慎使用：越狱者经由 WebKit 进程取得内核执行权，与 FreeBSD jail 机制无关，越狱一词仅借自 iPhone 语境；Orbis OS 基于 FreeBSD 9.0，但 Sony 版本号不披露其回移了哪些 FreeBSD 补丁，主持人的“该漏洞可能早已在 FreeBSD 修复”属无法判定的推测；开发者公开 PID 列表与根文件系统转储并声明不为盗版服务，其身份、动机与操作细节均系单一来源。　[存疑脚注] 转写将越狱开发者记作“C-Chert”（疑为 CTurt），Orbis OS 补丁回移状态无公开可核记录，主持人推断未经多源验证（BSD Now EP120，[4538.64-4651.02]，L4）
+- Zero Trust 倡议暴露开源承诺与二进制分发之间的结构性落差：发布源码无法证明用户安装的二进制由其构建——Signal 的 App Store 二进制不可验证，TrueCrypt 的重现构建需穷举编译环境且工作量浩大；嘉宾强调该倡议“不想让人们信任 zero trust initiative 本身”（3522.06-3530.33），拒绝自任受信第三方，转而设想以基于 geli 的可移植磁盘加密项目先行示范；同期听众事故（OpenSSL 升级致 openldap 二进制失配、无人可登录）与 FreeBSD 侧 Ed Maste（转写作 Ed Mass）参加可重现构建会议，说明可重现构建在 2015 年仍属前沿工程而非成熟机制。（BSD Now EP120，[2893.17-3045.95]，L2）
 - Sean Webb 坦言上游化过程中存在私下邮件列表讨论与政治博弈，其本人一度无法参与辩护，具体争议内容未在本期披露。　[存疑脚注] 上游化受阻的具体技术或治理争议仅凭当事人单方叙述（BSD Now EP52，[1880.06-1929.90]，L4）
 
 **文献**：
 
+- [BSD Now EP120] Pennington J. BSD Now: 120: I’m talking about the man in the middle[EB/OL]. (2015-12-16)[2026-08-15]. https://www.bsdnow.tv/120.
 - [BSD Now EP52] Pennington J. BSD Now: 52: Reverse Takeover[EB/OL]. (2014-08-27)[2026-08-15]. https://www.bsdnow.tv/52.
 
 <!-- /PODCAST_REVIEW -->

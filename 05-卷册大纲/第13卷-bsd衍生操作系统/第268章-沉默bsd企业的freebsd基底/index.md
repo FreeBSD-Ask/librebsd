@@ -42,7 +42,7 @@ volume: 第13卷-bsd衍生操作系统
 - 原材料/哲学/项目统摄史观/第 25 章.md；BSD/GPL 许可证文本；openbsd.db 查询 L7.2.1、L3.2.1、L3.2.2；NetApp/Isilon/Citrix 架构文档；FreeBSD Foundation 年报；WhatsApp/NetApp/Isilon/Citrix 工程演讲存档；128.4.1-128.4.3 节记录；134 章 BSD 许可证文本与历史记录；133 章 FreeBSD 商业生态记录 ［A］<!-- DB_REF:bsd_derivatives.duckdb -->> **数据库引用（bsd_derivatives.duckdb）**：本子节对应 bsd_derivatives 代码仓库。> 1985-2026 年间：963,557 次提交。> 仓库总览：963,557 次提交，14,109 位贡献者，1985-06-13 至 2026-08-24。
 
 <!-- PODCAST_REVIEW v20260829 -->
-<!-- 语义复核范围：BSD Now EP354、BSD Now EP24、BSDTalk EP13、BSDTalk EP238（共 4 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
+<!-- 语义复核范围：BSD Now EP354、BSD Now EP110、BSD Now EP24、BSDTalk EP13、BSDTalk EP238（共 5 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
 
 **要点**：
 
@@ -50,6 +50,10 @@ volume: 第13卷-bsd衍生操作系统
 - Jim Salter 的 Ars Technica 文章以 1.9TB 虚拟机镜像为例比较 ZFS 复制与 rsync：ZFS 靠块出生时间与快照可在 8 秒内完成，而 rsync 需约 2.5 小时。（BSD Now EP354，[474.62-667.52]，L2）
 - Colin Percival 自 2008 年起主导 FreeBSD 移植至 Amazon EC2，并持续维护至今。（BSD Now EP354，[674.30-747.26]，L2）
 - FreeBSD 项目发起 2020 年社区调查，以量化数据引导项目优先事项与努力方向。（BSD Now EP354，[756.54-846.94]，L2）
+- Benno Rice 自述其 FreeBSD 履历：1995 年在阿德莱德的 ISP 以路由器与新闻服务器场景接触 FreeBSD，师友圈中有 Mark Newton 与 Mike Smith；2000 年互联网泡沫失业间隙自购初代 iMac 发起 PowerPC 移植并由此获得提交权，此后做过 ARM 尝试与需自写 AAL5 层的 PCI ADSL 卡驱动；2013 年经 IRC 频道中 Jeff Roberson 的招聘信息加入 EMC Isilon，成为带薪从事 FreeBSD 开发的工程师。其东家的集群存储平台以最少三节点、InfiniBand 后端 fabric 与前端 NFS/SMB/HDFS 对外提供单一可扩展文件系统，操作系统 1FS 为深度修改的 FreeBSD，出货版本长期基于 FreeBSD 7 世代并正完成向约 10.0 时期 head 的五年跨度升级。（BSD Now EP110，[1750.14-2093.00]，L1）
+- Benno 总结构建 FreeBSD 衍生产品的核心教训：长期停留在 stable 分支的企业在每个版本迁移时须重移植全部私有补丁，Isilon 曾因内部 InfiniBand 栈建在 FreeBSD 7 的 L2 路由代码上而被 7 至 8 的代码变更摧毁，逐 stable 升级的路径趋于不可行；其结论是只要自备充足的发布工程与测试，直接跟随 head 反而更优，既能在单一发布周期内回馈上游修复与特性、摊薄维护成本，也便于下游开发保持同步；团队下一步计划将自身 diff 逐项归入四类——因知识产权不能上游、应立即上游、不上游自留、可上游重写后取回。另披露与 Netflix 的 Scott Long、Lawrence Stewart、Warner Losh 在网卡与 HBA 驱动、TCP 栈性能改进及防回归测试上的协作，EMC 与 Netflix 无竞争关系使此类跨公司协作获得管理层支持。（BSD Now EP110，[2124.22-2798.50]，L1）
+- 虚拟化与图形栈进展：Peter Grehan 于 10 月 4 日向 bhyve 提交 Windows 客户机支持并引入含 CSM 的 UEFI 栈，经重打包注入无人值守安装配置的 Windows ISO、以 VNC 或 RDP 弥补缺失的图形能力完成安装；同一 UEFI 栈使 SmartOS、OpenIndiana、OmniOS 可作为 Illumos 客户机运行，为 FreeBSD 侧 ZFS 开发提供上游提交前的编译测试环境。同期 FreeBSD 合入 Xen 4.6 相关头文件（新增 ARM 支持并与 aarch64 虚拟化卸载工作并行）、LLVM/Clang 3.7.0、支持 Radeon 与 Ivy Bridge 起代 Intel GPU 的 OpenCL ports（需 KMS 驱动）；OpenBSD 开发分支落地 Broadwell GPU 初步支持，DRM 对齐 Linux 3.14.52（Mark Kettenis），Dev Summit 图形工作组预期年底前交付 Haswell 图形支持。（BSD Now EP110，[727.76-1099.88]，L2）
+- ZFS 运维实践反馈：听众在 4K 盘上以 512B 伪容量（GNOP 手法时代）建立 RAIDZ2 池且未启用压缩，压缩属性可按数据集增量开启而无需重建，但 512B 块尺寸无法就地修正、必须重建池并临时转移全部数据；主持人建议以 zfs send/receive 取代 rsync 完成迁移，因其保留快照且可在接收端重设压缩属性。Alan 自述 30 余块盘混用 512B 与 4K 的同类教训，并总结“写出一个糟糕的实现，往往是让别人写出更好实现的最好办法”（4799.32-4804.14），其安装器的 ZFS 支持正是由粗陋原型起步引来协作重写。（BSD Now EP110，[5070.18-5478.22]，L1）
 - NYCBSDCon 2014 以“BSD in production”为主题，Dru Lavigne 开场，议题包括 FreeNAS/PC-BSD 的 ZFS 管理、BSD 路由器及以 FreeBSD 与 ZFS 运行 PostgreSQL。（BSD Now EP24，[73.68-95.60]，L2）
 - Luke Marsden 自述 15 岁起经营主机公司，在牛津学习理论计算机科学后创立 HybridCluster，以解决主机业务中反复出现的宕机与扩展问题。（BSD Now EP24，[1074.80-1171.02]，L1）
 - HybridCluster 以 jail 或容器为应用单元，基于 ZFS 快照与 send/receive 实现异步复制、故障转移与亚秒级活迁移，作为 SAN 与虚拟机方案的替代。（BSD Now EP24，[1282.16-1548.36]，L1）
@@ -68,6 +72,7 @@ volume: 第13卷-bsd衍生操作系统
 
 - Jim Salter 在 Ars Technica 的 OpenZFS 指南及 syncoid 工具说明。（BSD Now EP354，[474.62-597.86]，L2）
 - 关于 Colin Percival 的播客访谈，介绍其 Tarsnap 创立、AWS 使用经验与 FreeBSD 安全官经历。（BSD Now EP354，[674.30-747.26]，L2）
+- 本期可索引的一手史料：Alan 的 EuroBSDCon 2015 亲历口述，含约 244 名与会者、首次与会者占比很高且首次出现无全勤者举手、大会纪念已故社区成员 Paul Schenkeveld 并设以其命名的年度旅行资助、下届承办地贝尔格莱德；Paul Vixie 开幕主题演讲回顾其 BSD 使用史与职业生涯，中途脱去毛衣露出印有“Bind 8 is dead”字样的 T 恤并获全场掌声（147.68-154.42）；Theo de Raadt 在克罗地亚的 TAME 演讲幻灯片与 Bob Beck 的 LibreSSL 演讲幻灯片；Peter Grehan 于 10 月 4 日提交的 bhyve Windows 客户机支持（要求 FreeBSD head r288524 之后）；EMC Isilon 赞助回馈上游的 FreeBSD commits。（BSD Now EP110，[321.54-609.50]，L1）
 - 本期史料包括 NYCBSDCon 2014 议程与现场反馈、Luke Marsden 访谈（当事人自述）、HybridCluster 产品说明及 FreeBSD 10 PF/IPFW 讨论。（BSD Now EP24，[1059.58-1612.28]，L1）
 - 本期限定的一手口述材料包括：ShmooCon 2006（第二届，华盛顿特区）上关于 Sguil 的演讲与 David Bianco 的 WMF 漏洞会话数据分析演示；受访者 2003 年 1 月创办并持续更新、以 FreeBSD 工具实测记录为主体的技术博客 taosecurity.blogspot.com；以及 Freshports（Dan Langille 建立的 ports 树 Web 界面）与 NYCBUG 维护的 dmesgd 硬件兼容性输出上传站。（BSDTalk EP13，[516.19-656.97]，L1）
 - 受访者给出的个人 FreeBSD 接触物证链可作年代锚点：1999 年获赠的 FreeBSD 3.2 安装光盘、2000 年安装的 FreeBSD 4.1、2001 年商用部署所用的 FreeBSD 4.2，与其军旅身份（空军计算机应急响应组）及 2005 年 Black Hat 上 Mike Lynn 与 Cisco、ISS 的争议事件的时间线相互印证。（BSDTalk EP13，[665.93-1132.38]，L1）
@@ -77,6 +82,9 @@ volume: 第13卷-bsd衍生操作系统
 
 - 总纲9 经验优先：ZFS 复制对 rsync 的优势来自块级快照的实际经验，而非理论推断。（BSD Now EP354，[560.26-667.52]，L2）
 - 总纲3 不存在进步，只有权力再分配：社区调查旨在重新分配开发优先级，体现技术方向由使用数据而非线性进步主导。（BSD Now EP354，[756.54-846.94]，L2）
+- 总纲10 动手者创造历史：Benno 断言“没有一家制造 FreeBSD 设备的公司不曾用自研方案替换或增强过 init”（3302.84-3311.74），Isilon 亦自建代号 MCP 的服务管理组件并期望以 launchd 式设计取而代之；本集新闻中的 relaunchd 项目同样以移植 launchd 语义为志、以不接管 PID 1 与不替代现有 init 为边界。基础软件的关键机制长期由各设备厂商分散手刻同类轮子，再经 Jordan Hubbard 的 launchd 议题与 Kip Macy 的工作等节点重新汇流——设备与存储演化史的运动主体正是这些分散的动手者，而非任何平台的整体规划。（BSD Now EP110，[3245.30-3339.04]，L1）
+- 总纲22 知识注定过时：Benno 详述 FreeBSD UEFI 引导的诞生语境：预格式化为 GPT 加 EFI 分区的 SSD 使主机 BIOS 自动切换 UEFI 并拒绝 legacy 启动，他遂在 QEMU 与 TianoCore 参考实现上为 FreeBSD 重造 UEFI loader，其间受制于 Clang 当时缺失的 MS ABI 调用约定属性，以及内核静态定址需求与 UEFI 退出引导服务前须保全其内存的约束冲突；同期反馈区里 HP 台式机 BTX loader 无法启动而 Grub 可用，Colin Percival 自述 16 位汇编是其“最后一次写的汇编”（4545.28-4549.26）却仍是调试 geli 全盘加密 UEFI 支持的关键技能。固件层的这组案例显示：基础设施代码携带其时代的知识形态，引导链从 BIOS 向 UEFI 的演进注定使旧知识过时，又不断拖拽新实现与遗产纠缠。（BSD Now EP110，[2824.36-3243.56]，L1）
+- 总纲3 不存在进步，只有权力再分配：Bob Beck 演讲给出的删码数据构成对功能堆叠叙事的反题：LibreSSL 自 OpenSSL 1.0.1g 分叉时含约 38.8 万行 C，三十天内删去近 9 万行，至 2015 年 10 月总量约 51.1 万行而 C 代码降至约 29.7 万行；同期 OpenSSL 1.0.2d 达 43.2 万行 C、现行版本总行数突破 100 万，而近期五个 OpenSSL 高危 CVE 均未波及 LibreSSL。Theo 的 TAME 主张与之同构：接口约 1200 行，file 命令从 systrace 的约 300 行规则缩至 4 行；他论证“若防护特性带关闭开关，应用方迟早劝用户关掉它，无人使用的特性随之死亡”（1344.14-1364.18），故 OpenBSD 政策为特性一旦可用即不设退路、应用缺陷必须修复。两条路线的分歧并非进步程度的差异，而是关于安全边界定义权的再分配。（BSD Now EP110，[1388.84-1504.34]，L2）
 - 总纲10 动手者创造历史：总纲10 动手者创造历史：Luke Marsden 自建主机公司并发展为 HybridCluster，是动手者以创业实践推动系统应用的代表。（BSD Now EP24，[1074.80-1171.02]，L1）
 - 总纲11 商品是形式主义：总纲11 商品是形式主义：HybridCluster 以许可模式售卖基于 jail 与 ZFS 的虚拟 SAN 与容器平台，体现软件商品化的形式。（BSD Now EP24，[1587.16-1612.28]，L1）
 - 总纲4 分离聚合是永恒规律：总纲4 分离聚合是永恒规律：通过 ZFS 复制与 jail 迁移，实现计算与存储在集群中的分离与再聚合。（BSD Now EP24，[1282.16-1548.36]，L1）
@@ -92,6 +100,7 @@ volume: 第13卷-bsd衍生操作系统
 **文献**：
 
 - [BSD Now EP354] Pennington J. BSD Now: 354: ZFS safekeeps data[EB/OL]. (2020-06-11)[2026-08-15]. https://www.bsdnow.tv/354.
+- [BSD Now EP110] Pennington J. BSD Now: 110: - Firmware Fights[EB/OL]. (2015-10-07)[2026-08-15]. https://www.bsdnow.tv/110.
 - [BSD Now EP24] Pennington J. BSD Now: 24: The Cluster & The Cloud[EB/OL]. (2014-02-12)[2026-08-15]. https://www.bsdnow.tv/24.
 - [BSDTalk EP13] Backman W. BSDTalk: Interview with Richard Bejtlich[EB/OL]. (2006-02-03)[2026-08-15]. https://archive.org/download/bsdtalk013/bsdtalk013.ogg.
 - [BSDTalk EP238] Backman W. BSDTalk: 238: bsdtalk238 - Voices from NYCBSDCon 2014[EB/OL]. (2014-02-12)[2026-08-27]. https://bsdtalk.blogspot.com/2014/02/bsdtalk238-voices-from-nycbsdcon-2014.html.
