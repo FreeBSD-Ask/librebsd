@@ -98,6 +98,6 @@ FreeBSD 社
 
 **文献**：
 
-- [BSD Now EP51] Pennington J. BSD Now: 51: Engineering Nginx[EB/OL]. (2014-08-20)[2026-08-15]. https://www.bsdnow.tv/51.
+- [BSD Now EP51] Pennington J. BSD Now: 51: Engineering Nginx[EB/OL]. (2014-08-20)[2026-08-15]. <https://www.bsdnow.tv/51>.
 
 <!-- /PODCAST_REVIEW -->

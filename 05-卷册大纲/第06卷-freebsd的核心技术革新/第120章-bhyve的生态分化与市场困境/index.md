@@ -81,7 +81,7 @@ volume: 第06卷-freebsd的核心技术革新
 
 **文献**：
 
-- [BSD Now EP337] Pennington J. BSD Now: 337: Kubernetes on bhyve[EB/OL]. (2020-02-13)[2026-08-15]. https://www.bsdnow.tv/337.
-- [BSD Now EP128] Pennington J. BSD Now: 128: The State of BSD[EB/OL]. (2016-02-10)[2026-08-15]. https://www.bsdnow.tv/128.
+- [BSD Now EP337] Pennington J. BSD Now: 337: Kubernetes on bhyve[EB/OL]. (2020-02-13)[2026-08-15]. <https://www.bsdnow.tv/337>.
+- [BSD Now EP128] Pennington J. BSD Now: 128: The State of BSD[EB/OL]. (2016-02-10)[2026-08-15]. <https://www.bsdnow.tv/128>.
 
 <!-- /PODCAST_REVIEW -->

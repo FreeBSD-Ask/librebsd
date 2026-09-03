@@ -178,12 +178,12 @@ volume: 16
 
 **文献**：
 
-- [BSD Now EP373] Pennington J. BSD Now: 373: Kyle Evans Interview[EB/OL]. (2020-10-22)[2026-08-15]. https://www.bsdnow.tv/373.
-- [BSD Now EP360] Pennington J. BSD Now: 360: Full circle[EB/OL]. (2020-07-23)[2026-08-15]. https://www.bsdnow.tv/360.
-- [BSD Now EP354] Pennington J. BSD Now: 354: ZFS safekeeps data[EB/OL]. (2020-06-11)[2026-08-15]. https://www.bsdnow.tv/354.
-- [BSD Now EP278] Pennington J. BSD Now: Episode 278: The Real McCoy | BSD Now 278[EB/OL]. (2018-12-27)[2026-08-15]. https://www.bsdnow.tv/278.
-- [BSD Now EP138] Pennington J. BSD Now: 138: Rushing into BSD[EB/OL]. (2016-04-20)[2026-08-15]. https://www.bsdnow.tv/138.
-- [BSD Now EP579] Pennington J. BSD Now: 579: EuroBSDcon 2024[EB/OL]. (2024-10-03)[2026-08-15]. https://www.bsdnow.tv/579.
-- [YouTube EPXUj2vCKtegU] YouTube. YouTube: FreeBSD at 30 Years: Its Secrets to Success By: Marshall Kirk McKusick[EB/OL]. ()[2026-08-15]. https://www.youtube.com/watch?v=XUj2vCKtegU.
+- [BSD Now EP373] Pennington J. BSD Now: 373: Kyle Evans Interview[EB/OL]. (2020-10-22)[2026-08-15]. <https://www.bsdnow.tv/373>.
+- [BSD Now EP360] Pennington J. BSD Now: 360: Full circle[EB/OL]. (2020-07-23)[2026-08-15]. <https://www.bsdnow.tv/360>.
+- [BSD Now EP354] Pennington J. BSD Now: 354: ZFS safekeeps data[EB/OL]. (2020-06-11)[2026-08-15]. <https://www.bsdnow.tv/354>.
+- [BSD Now EP278] Pennington J. BSD Now: Episode 278: The Real McCoy | BSD Now 278[EB/OL]. (2018-12-27)[2026-08-15]. <https://www.bsdnow.tv/278>.
+- [BSD Now EP138] Pennington J. BSD Now: 138: Rushing into BSD[EB/OL]. (2016-04-20)[2026-08-15]. <https://www.bsdnow.tv/138>.
+- [BSD Now EP579] Pennington J. BSD Now: 579: EuroBSDcon 2024[EB/OL]. (2024-10-03)[2026-08-15]. <https://www.bsdnow.tv/579>.
+- [YouTube EPXUj2vCKtegU] YouTube. YouTube: FreeBSD at 30 Years: Its Secrets to Success By: Marshall Kirk McKusick[EB/OL]. ()[2026-08-15]. <https://www.youtube.com/watch?v=XUj2vCKtegU>.
 
 <!-- /PODCAST_REVIEW -->

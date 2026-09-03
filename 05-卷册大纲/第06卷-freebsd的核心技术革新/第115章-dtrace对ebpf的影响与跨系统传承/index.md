@@ -77,7 +77,7 @@ volume: 第06卷-freebsd的核心技术革新
 
 **文献**：
 
-- [BSD Now EP269] Pennington J. BSD Now: Episode 269: Tiny Daemon Lib | BSD Now 269[EB/OL]. (2018-10-24)[2026-08-15]. https://www.bsdnow.tv/269.
-- [BSD Now EP622] Pennington J. BSD Now: 622: Interview with Mark Phillips - Technical Marketing Manager at the FreeBSD Foundation[EB/OL]. (2025-07-31)[2026-08-15]. https://www.bsdnow.tv/622.
+- [BSD Now EP269] Pennington J. BSD Now: Episode 269: Tiny Daemon Lib | BSD Now 269[EB/OL]. (2018-10-24)[2026-08-15]. <https://www.bsdnow.tv/269>.
+- [BSD Now EP622] Pennington J. BSD Now: 622: Interview with Mark Phillips - Technical Marketing Manager at the FreeBSD Foundation[EB/OL]. (2025-07-31)[2026-08-15]. <https://www.bsdnow.tv/622>.
 
 <!-- /PODCAST_REVIEW -->

@@ -78,7 +78,7 @@ volume: 第08卷-freebsd的范式转换
 
 **文献**：
 
-- [BSD Now EP368] Pennington J. BSD Now: 368: Changing OS roles[EB/OL]. (2020-09-17)[2026-08-15]. https://www.bsdnow.tv/368.
-- [BSDTalk EP247] Backman W. BSDTalk: 247: bsdtalk247 - FreeBSD: The Next 10 Years with Jordan Hubbard[EB/OL]. (2014-11-15)[2026-08-27]. https://bsdtalk.blogspot.com/2014/11/bsdtalk247-freebsd-next-10-years-with.html.
+- [BSD Now EP368] Pennington J. BSD Now: 368: Changing OS roles[EB/OL]. (2020-09-17)[2026-08-15]. <https://www.bsdnow.tv/368>.
+- [BSDTalk EP247] Backman W. BSDTalk: 247: bsdtalk247 - FreeBSD: The Next 10 Years with Jordan Hubbard[EB/OL]. (2014-11-15)[2026-08-27]. <https://bsdtalk.blogspot.com/2014/11/bsdtalk247-freebsd-next-10-years-with.html>.
 
 <!-- /PODCAST_REVIEW -->

@@ -80,8 +80,8 @@ volume: 第01卷-unix的起源
 
 **文献**：
 
-- [BSD Now EP509] Pennington J. BSD Now: 509: Dot File Naming[EB/OL]. (2023-06-01)[2026-08-15]. https://www.bsdnow.tv/509.
-- [BSD Now EP362] Pennington J. BSD Now: 362: 2.11-BSD restoration[EB/OL]. (2020-08-06)[2026-08-15]. https://www.bsdnow.tv/362.
-- [BSD Now EP209] Pennington J. BSD Now: 209: Signals: gotta catch ‘em all[EB/OL]. (2017-08-30)[2026-08-15]. https://www.bsdnow.tv/209.
+- [BSD Now EP509] Pennington J. BSD Now: 509: Dot File Naming[EB/OL]. (2023-06-01)[2026-08-15]. <https://www.bsdnow.tv/509>.
+- [BSD Now EP362] Pennington J. BSD Now: 362: 2.11-BSD restoration[EB/OL]. (2020-08-06)[2026-08-15]. <https://www.bsdnow.tv/362>.
+- [BSD Now EP209] Pennington J. BSD Now: 209: Signals: gotta catch ‘em all[EB/OL]. (2017-08-30)[2026-08-15]. <https://www.bsdnow.tv/209>.
 
 <!-- /PODCAST_REVIEW -->

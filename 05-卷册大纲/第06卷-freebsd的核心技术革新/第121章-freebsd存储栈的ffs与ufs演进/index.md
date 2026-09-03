@@ -100,8 +100,8 @@ volume: 第06卷-freebsd的核心技术革新
 
 **文献**：
 
-- [BSD Now EP298] Pennington J. BSD Now: 298: BSD On The Road[EB/OL]. (2019-05-16)[2026-08-15]. https://www.bsdnow.tv/298.
-- [BSD Now EP278] Pennington J. BSD Now: Episode 278: The Real McCoy | BSD Now 278[EB/OL]. (2018-12-27)[2026-08-15]. https://www.bsdnow.tv/278.
-- [BSDTalk EP250] Backman W. BSDTalk: 250: bsdtalk250 - WhatsApp: Half a billion unsuspecting FreeBSD users by Rick Reed[EB/OL]. (2015-01-31)[2026-08-27]. https://bsdtalk.blogspot.com/2015/01/bsdtalk250-whatsapp-half-billion.html.
+- [BSD Now EP298] Pennington J. BSD Now: 298: BSD On The Road[EB/OL]. (2019-05-16)[2026-08-15]. <https://www.bsdnow.tv/298>.
+- [BSD Now EP278] Pennington J. BSD Now: Episode 278: The Real McCoy | BSD Now 278[EB/OL]. (2018-12-27)[2026-08-15]. <https://www.bsdnow.tv/278>.
+- [BSDTalk EP250] Backman W. BSDTalk: 250: bsdtalk250 - WhatsApp: Half a billion unsuspecting FreeBSD users by Rick Reed[EB/OL]. (2015-01-31)[2026-08-27]. <https://bsdtalk.blogspot.com/2015/01/bsdtalk250-whatsapp-half-billion.html>.
 
 <!-- /PODCAST_REVIEW -->

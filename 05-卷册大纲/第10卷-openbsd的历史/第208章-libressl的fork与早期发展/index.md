@@ -111,9 +111,9 @@ volume: 第10卷-openbsd的历史
 
 **文献**：
 
-- [BSD Now EP193] Pennington J. BSD Now: 193: Fire up the 802.11 AC[EB/OL]. (2017-05-10)[2026-08-15]. https://www.bsdnow.tv/193.
-- [BSD Now EP163] Pennington J. BSD Now: 163: Return of the Cantrill[EB/OL]. (2016-10-12)[2026-08-15]. https://www.bsdnow.tv/163.
-- [BSD Now EP53] Pennington J. BSD Now: 53: It's HAMMER Time[EB/OL]. (2014-09-03)[2026-08-15]. https://www.bsdnow.tv/53.
-- [BSD Now EP50] Pennington J. BSD Now: 50: VPN, My Dear Watson[EB/OL]. (2014-08-13)[2026-08-15]. https://www.bsdnow.tv/50.
+- [BSD Now EP193] Pennington J. BSD Now: 193: Fire up the 802.11 AC[EB/OL]. (2017-05-10)[2026-08-15]. <https://www.bsdnow.tv/193>.
+- [BSD Now EP163] Pennington J. BSD Now: 163: Return of the Cantrill[EB/OL]. (2016-10-12)[2026-08-15]. <https://www.bsdnow.tv/163>.
+- [BSD Now EP53] Pennington J. BSD Now: 53: It's HAMMER Time[EB/OL]. (2014-09-03)[2026-08-15]. <https://www.bsdnow.tv/53>.
+- [BSD Now EP50] Pennington J. BSD Now: 50: VPN, My Dear Watson[EB/OL]. (2014-08-13)[2026-08-15]. <https://www.bsdnow.tv/50>.
 
 <!-- /PODCAST_REVIEW -->

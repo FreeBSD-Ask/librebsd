@@ -57,6 +57,6 @@ volume: 第09卷-netbsd的历史
 
 **文献**：
 
-- [BSD Now EP210] Pennington J. BSD Now: 210: Your questions, part I[EB/OL]. (2017-09-06)[2026-08-15]. https://www.bsdnow.tv/210.
+- [BSD Now EP210] Pennington J. BSD Now: 210: Your questions, part I[EB/OL]. (2017-09-06)[2026-08-15]. <https://www.bsdnow.tv/210>.
 
 <!-- /PODCAST_REVIEW -->

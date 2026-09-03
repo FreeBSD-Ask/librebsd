@@ -141,20 +141,20 @@ volume: 第15卷-许可证哲学与法律分析
 - BSD daemon 图像出自 John Lasseter、版权由 Marshall Kirk McKusick 持有之说在本期为主持人转述，与公开记录相符，但节目本身未给出处；引用时应回溯 McKusick 的官方表述与相关版权页面核实。[考据脚注] 转述内容与已知公开记录一致，仍需一手来源复核。　[考据脚注] 图像作者与版权持有人信息需与 McKusick 官方版权声明核对。（BSDTalk EP9，[125.04-150.64]，L2）
 - 转写专名失真较多：Theo Schlossnagle 转写作 Theo 加 Schloss-Nagel、监控系统 Zenoss 转写作 Xenos、Adrian Chadd 转写作 Adrian Chad、PCC 全称转写作 portable sieve andpiler、受访者姓名 Mark Satt 拼写存疑、演讲者 Anders 与 Julio 的姓氏未在转写中出现。引用人名与项目名时须回溯原始音频或会议议程核对。　[存疑脚注] 多处专名转写失真，校正依据为上下文语义与同期外部史料，须以原始音频复核（BSDTalk EP161，[581.85-1159.98]，L4）
 - 讲座综述部分均系主持人的会后口头转述，其自承非开发者、部分技术内容超出其理解范围；转述的技术细节与论断须以各讲座的幻灯、录音或后续论文等一手材料复核，不可径直采信。　[存疑脚注] 转述者的理解深度有限，技术结论存在失真风险（BSDTalk EP161，[575.85-1223.62]，L4）
-- quality 元数据提示 repetition_detected，通读确认重复主要源于现场直播的信号重试与主持人的填场独白，实质访谈与综述内容完整可读；本卡片全部观点取自语义完整的片段。（BSDTalk EP161，[0.00-1510.88]，L4）
+- quality 元数据提示 repetition_detected，通读确认重复主要源于现场直播的信号重试与主持人的填场独白，实质访谈与综述内容完整可读；本卡片全部观点取自语义完整的片段。　[存疑脚注] 直播信号中断与重复段落的成因判断基于转写文本特征推断，须回听原始录音核对现场实况。（BSDTalk EP161，[0.00-1510.88]，L4）
 - 转写误植须考订：Dottie 应为 DAHDI（Zaptel 的更名）、VSD 应为 BSD、Astrus 应为 Asterisk、bidgium 与 didgium 应为 Digium、GraphQL user interface 应为 graphical user interface；贡献者 Gonzo 仅为社区 handle 而非本名。当事人称“原初 ZAP 驱动可能开发于 BSD 但当时 BSD 用户甚少”，其自述即为不确定回忆，且未给出可核验细节。[存疑脚注] ZAP 驱动的 BSD 起源说系单一来源含混回忆，需以 Digium 早期版本库历史与邮件列表复核。　[存疑脚注] ZAP 驱动 BSD 起源说与 Gonzo 真实身份均为单一口述来源，待 Digium 仓库史与社区存档交叉验证。（BSDTalk EP166，[194.56-204.56]，L4）
 - 当事人称迁入OpenSolaris为“BSD又回来了”，其身份认同建立在对SunOS早期BSD血统的记忆上，而其运行的Solaris系谱系内核实为System V一脉，血统认同与实际技术谱系在此错位，提示用户迁移决策中的谱系想象与工程现实之别；另转写中“PURL.org”（1081.56秒处，疑为perl.org）与“Randy Harper/FreeBSDGirl”（1390.38秒处，疑为Randi Harper）两处人名站名依语音转写存疑，[存疑脚注] 须对照FLOSS Weekly节目原始信息核正。　[存疑脚注] PURL.org与Randy Harper两处专名系语音转写，未能与原始节目信息交叉验证。（BSDTalk EP183，[457.86-462.90]，L1）
 
 **文献**：
 
-- [BSD Now EP335] Pennington J. BSD Now: 335: FreeBSD Down Under[EB/OL]. (2020-01-30)[2026-08-15]. https://www.bsdnow.tv/335.
-- [BSD Now EP74] Pennington J. BSD Now: 74: That Sly MINIX[EB/OL]. (2015-01-28)[2026-08-15]. https://www.bsdnow.tv/74.
-- [BSD Now EP27] Pennington J. BSD Now: 27: BSD Now vs. BSDTalk[EB/OL]. (2014-03-05)[2026-08-15]. https://www.bsdnow.tv/27.
-- [BSDTalk EP7] Backman W. BSDTalk: Live BSD CDs[EB/OL]. (2006-01-18)[2026-08-15]. https://archive.org/download/bsdtalk007/bsdtalk007.ogg.
-- [BSDTalk EP123] Backman W. BSDTalk: 123: bsdtalk123 - William "whurley" Hurley, Chief Architect of Open Source Strategy at BMC Software, Inc.[EB/OL]. (2007-07-30)[2026-08-27]. https://bsdtalk.blogspot.com/2007/07/bsdtalk123-william-whurley-hurley-chief.html.
-- [BSDTalk EP9] Backman W. BSDTalk: Interview with Webmin Author Jamie Cameron[EB/OL]. (2006-01-24)[2026-08-15]. https://archive.org/download/bsdtalk009/bsdtalk009.ogg.
-- [BSDTalk EP161] Backman W. BSDTalk: 161: bsdtalk161 - Live from NYCBSDCon Sunday[EB/OL]. (2008-10-12)[2026-08-27]. https://bsdtalk.blogspot.com/2008/10/bsdtalk161-live-from-nycbsdcon-sunday.html.
-- [BSDTalk EP166] Backman W. BSDTalk: 166: bsdtalk166 - Asterisk Open Source Community Director John Todd[EB/OL]. (2008-11-25)[2026-08-27]. https://bsdtalk.blogspot.com/2008/11/bsdtalk166-asterisk-open-source.html.
-- [BSDTalk EP183] Backman W. BSDTalk: 183: bsdtalk183 - Randal L. Schwartz[EB/OL]. (2009-12-23)[2026-08-27]. https://bsdtalk.blogspot.com/2009/12/bsdtalk183-randal-l-schwartz.html.
+- [BSD Now EP335] Pennington J. BSD Now: 335: FreeBSD Down Under[EB/OL]. (2020-01-30)[2026-08-15]. <https://www.bsdnow.tv/335>.
+- [BSD Now EP74] Pennington J. BSD Now: 74: That Sly MINIX[EB/OL]. (2015-01-28)[2026-08-15]. <https://www.bsdnow.tv/74>.
+- [BSD Now EP27] Pennington J. BSD Now: 27: BSD Now vs. BSDTalk[EB/OL]. (2014-03-05)[2026-08-15]. <https://www.bsdnow.tv/27>.
+- [BSDTalk EP7] Backman W. BSDTalk: Live BSD CDs[EB/OL]. (2006-01-18)[2026-08-15]. <https://archive.org/download/bsdtalk007/bsdtalk007.ogg>.
+- [BSDTalk EP123] Backman W. BSDTalk: 123: bsdtalk123 - William "whurley" Hurley, Chief Architect of Open Source Strategy at BMC Software, Inc.[EB/OL]. (2007-07-30)[2026-08-27]. <https://bsdtalk.blogspot.com/2007/07/bsdtalk123-william-whurley-hurley-chief.html>.
+- [BSDTalk EP9] Backman W. BSDTalk: Interview with Webmin Author Jamie Cameron[EB/OL]. (2006-01-24)[2026-08-15]. <https://archive.org/download/bsdtalk009/bsdtalk009.ogg>.
+- [BSDTalk EP161] Backman W. BSDTalk: 161: bsdtalk161 - Live from NYCBSDCon Sunday[EB/OL]. (2008-10-12)[2026-08-27]. <https://bsdtalk.blogspot.com/2008/10/bsdtalk161-live-from-nycbsdcon-sunday.html>.
+- [BSDTalk EP166] Backman W. BSDTalk: 166: bsdtalk166 - Asterisk Open Source Community Director John Todd[EB/OL]. (2008-11-25)[2026-08-27]. <https://bsdtalk.blogspot.com/2008/11/bsdtalk166-asterisk-open-source.html>.
+- [BSDTalk EP183] Backman W. BSDTalk: 183: bsdtalk183 - Randal L. Schwartz[EB/OL]. (2009-12-23)[2026-08-27]. <https://bsdtalk.blogspot.com/2009/12/bsdtalk183-randal-l-schwartz.html>.
 
 <!-- /PODCAST_REVIEW -->

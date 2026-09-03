@@ -108,7 +108,7 @@ volume: 15
 
 **文献**：
 
-- [BSD Now EP110] Pennington J. BSD Now: 110: - Firmware Fights[EB/OL]. (2015-10-07)[2026-08-15]. https://www.bsdnow.tv/110.
-- [BSD Now EP88] Pennington J. BSD Now: 88: Below the Clouds[EB/OL]. (2015-05-06)[2026-08-15]. https://www.bsdnow.tv/88.
+- [BSD Now EP110] Pennington J. BSD Now: 110: - Firmware Fights[EB/OL]. (2015-10-07)[2026-08-15]. <https://www.bsdnow.tv/110>.
+- [BSD Now EP88] Pennington J. BSD Now: 88: Below the Clouds[EB/OL]. (2015-05-06)[2026-08-15]. <https://www.bsdnow.tv/88>.
 
 <!-- /PODCAST_REVIEW -->

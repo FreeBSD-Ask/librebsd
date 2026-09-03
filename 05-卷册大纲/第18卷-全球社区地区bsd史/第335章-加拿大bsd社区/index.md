@@ -173,10 +173,10 @@ volume: 18
 
 **文献**：
 
-- [BSD Now EP558] Pennington J. BSD Now: 558: Worlds of telnet[EB/OL]. (2024-05-09)[2026-08-15]. https://www.bsdnow.tv/558.
-- [BSD Now EP499] Pennington J. BSD Now: 499: Dan Langille Interview[EB/OL]. (2023-03-23)[2026-08-15]. https://www.bsdnow.tv/499.
-- [BSD Now EP648] Pennington J. BSD Now: 648: Greytrapping for years[EB/OL]. (2026-01-29)[2026-08-15]. https://www.bsdnow.tv/648.
-- [BSD Now EP198] Pennington J. BSD Now: 198: BSDNorth or You can’t handle the libtruth[EB/OL]. (2017-06-14)[2026-08-15]. https://www.bsdnow.tv/198.
-- [BSD Now EP626] Pennington J. BSD Now: 626: USB webcam testing[EB/OL]. (2025-08-28)[2026-08-15]. https://www.bsdnow.tv/626.
+- [BSD Now EP558] Pennington J. BSD Now: 558: Worlds of telnet[EB/OL]. (2024-05-09)[2026-08-15]. <https://www.bsdnow.tv/558>.
+- [BSD Now EP499] Pennington J. BSD Now: 499: Dan Langille Interview[EB/OL]. (2023-03-23)[2026-08-15]. <https://www.bsdnow.tv/499>.
+- [BSD Now EP648] Pennington J. BSD Now: 648: Greytrapping for years[EB/OL]. (2026-01-29)[2026-08-15]. <https://www.bsdnow.tv/648>.
+- [BSD Now EP198] Pennington J. BSD Now: 198: BSDNorth or You can’t handle the libtruth[EB/OL]. (2017-06-14)[2026-08-15]. <https://www.bsdnow.tv/198>.
+- [BSD Now EP626] Pennington J. BSD Now: 626: USB webcam testing[EB/OL]. (2025-08-28)[2026-08-15]. <https://www.bsdnow.tv/626>.
 
 <!-- /PODCAST_REVIEW -->

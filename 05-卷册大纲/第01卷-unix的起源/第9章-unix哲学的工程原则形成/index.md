@@ -114,10 +114,10 @@ volume: 第01卷-unix的起源
 
 **文献**：
 
-- [BSD Now EP416] Pennington J. BSD Now: 416: netcat printing[EB/OL]. (2021-08-19)[2026-08-15]. https://www.bsdnow.tv/416.
-- [BSD Now EP312] Pennington J. BSD Now: 312: Why Package Managers[EB/OL]. (2019-08-22)[2026-08-15]. https://www.bsdnow.tv/312.
-- [BSD Now EP231] Pennington J. BSD Now: 231: Unix Architecture Evolution[EB/OL]. (2018-02-01)[2026-08-15]. https://www.bsdnow.tv/231.
-- [BSD Now EP229] Pennington J. BSD Now: 229: The Meltdown of Spectre[EB/OL]. (2018-01-17)[2026-08-15]. https://www.bsdnow.tv/229.
-- [BSD Now EP190] Pennington J. BSD Now: 190: The Moore You Know[EB/OL]. (2017-04-19)[2026-08-15]. https://www.bsdnow.tv/190.
+- [BSD Now EP416] Pennington J. BSD Now: 416: netcat printing[EB/OL]. (2021-08-19)[2026-08-15]. <https://www.bsdnow.tv/416>.
+- [BSD Now EP312] Pennington J. BSD Now: 312: Why Package Managers[EB/OL]. (2019-08-22)[2026-08-15]. <https://www.bsdnow.tv/312>.
+- [BSD Now EP231] Pennington J. BSD Now: 231: Unix Architecture Evolution[EB/OL]. (2018-02-01)[2026-08-15]. <https://www.bsdnow.tv/231>.
+- [BSD Now EP229] Pennington J. BSD Now: 229: The Meltdown of Spectre[EB/OL]. (2018-01-17)[2026-08-15]. <https://www.bsdnow.tv/229>.
+- [BSD Now EP190] Pennington J. BSD Now: 190: The Moore You Know[EB/OL]. (2017-04-19)[2026-08-15]. <https://www.bsdnow.tv/190>.
 
 <!-- /PODCAST_REVIEW -->

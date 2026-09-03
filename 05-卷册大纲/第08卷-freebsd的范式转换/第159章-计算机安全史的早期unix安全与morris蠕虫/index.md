@@ -109,7 +109,7 @@ volume: 08
 
 **文献**：
 
-- [BSD Now EP325] Pennington J. BSD Now: 325: Cracking Rainbows[EB/OL]. (2019-11-21)[2026-08-15]. https://www.bsdnow.tv/325.
-- [BSD Now EP281] Pennington J. BSD Now: 281: EPYC Server Battle[EB/OL]. (2019-01-17)[2026-08-15]. https://www.bsdnow.tv/281.
+- [BSD Now EP325] Pennington J. BSD Now: 325: Cracking Rainbows[EB/OL]. (2019-11-21)[2026-08-15]. <https://www.bsdnow.tv/325>.
+- [BSD Now EP281] Pennington J. BSD Now: 281: EPYC Server Battle[EB/OL]. (2019-01-17)[2026-08-15]. <https://www.bsdnow.tv/281>.
 
 <!-- /PODCAST_REVIEW -->

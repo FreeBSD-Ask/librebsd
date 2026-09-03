@@ -70,6 +70,6 @@ volume: 第10卷-openbsd的历史
 
 **文献**：
 
-- [BSD Now EP270] Pennington J. BSD Now: Episode 270: Ghostly Releases | BSD Now 270[EB/OL]. (2018-11-01)[2026-08-15]. https://www.bsdnow.tv/270.
+- [BSD Now EP270] Pennington J. BSD Now: Episode 270: Ghostly Releases | BSD Now 270[EB/OL]. (2018-11-01)[2026-08-15]. <https://www.bsdnow.tv/270>.
 
 <!-- /PODCAST_REVIEW -->

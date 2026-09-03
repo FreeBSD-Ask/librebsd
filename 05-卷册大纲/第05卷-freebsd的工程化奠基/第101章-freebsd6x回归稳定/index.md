@@ -120,6 +120,6 @@ volume: 05
 
 **文献**：
 
-- [BSDTalk EP122] Backman W. BSDTalk: 122: bsdtalk122 - Embedding FreeBSD with M. Warner Losh[EB/OL]. (2007-07-27)[2026-08-27]. https://bsdtalk.blogspot.com/2007/07/bsdtalk122-embedding-freebsd-with-m.html.
+- [BSDTalk EP122] Backman W. BSDTalk: 122: bsdtalk122 - Embedding FreeBSD with M. Warner Losh[EB/OL]. (2007-07-27)[2026-08-27]. <https://bsdtalk.blogspot.com/2007/07/bsdtalk122-embedding-freebsd-with-m.html>.
 
 <!-- /PODCAST_REVIEW -->

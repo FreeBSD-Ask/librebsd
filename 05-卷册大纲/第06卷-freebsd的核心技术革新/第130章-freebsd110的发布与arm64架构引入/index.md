@@ -97,9 +97,9 @@ volume: 第06卷-freebsd的核心技术革新
 
 **文献**：
 
-- [BSD Now EP290] Pennington J. BSD Now: 290: Timestamped Notes[EB/OL]. (2019-03-21)[2026-08-15]. https://www.bsdnow.tv/290.
-- [BSD Now EP225] Pennington J. BSD Now: 225: The one true OS[EB/OL]. (2017-12-20)[2026-08-15]. https://www.bsdnow.tv/225.
-- [BSD Now EP162] Pennington J. BSD Now: 162: The Foundation of NetBSD[EB/OL]. (2016-10-05)[2026-08-15]. https://www.bsdnow.tv/162.
-- [BSD Now EP58] Pennington J. BSD Now: 58: Behind the Masq[EB/OL]. (2014-10-08)[2026-08-15]. https://www.bsdnow.tv/58.
+- [BSD Now EP290] Pennington J. BSD Now: 290: Timestamped Notes[EB/OL]. (2019-03-21)[2026-08-15]. <https://www.bsdnow.tv/290>.
+- [BSD Now EP225] Pennington J. BSD Now: 225: The one true OS[EB/OL]. (2017-12-20)[2026-08-15]. <https://www.bsdnow.tv/225>.
+- [BSD Now EP162] Pennington J. BSD Now: 162: The Foundation of NetBSD[EB/OL]. (2016-10-05)[2026-08-15]. <https://www.bsdnow.tv/162>.
+- [BSD Now EP58] Pennington J. BSD Now: 58: Behind the Masq[EB/OL]. (2014-10-08)[2026-08-15]. <https://www.bsdnow.tv/58>.
 
 <!-- /PODCAST_REVIEW -->

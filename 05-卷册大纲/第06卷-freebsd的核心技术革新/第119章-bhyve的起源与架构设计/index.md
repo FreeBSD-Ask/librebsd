@@ -126,11 +126,11 @@ volume: 06
 
 **文献**：
 
-- [BSD Now EP194] Pennington J. BSD Now: 194: Daemonic plans[EB/OL]. (2017-05-17)[2026-08-15]. https://www.bsdnow.tv/194.
-- [BSD Now EP193] Pennington J. BSD Now: 193: Fire up the 802.11 AC[EB/OL]. (2017-05-10)[2026-08-15]. https://www.bsdnow.tv/193.
-- [BSD Now EP186] Pennington J. BSD Now: 186: The Fast And the Firewall: Tokyo Drift[EB/OL]. (2017-03-22)[2026-08-15]. https://www.bsdnow.tv/186.
-- [BSD Now EP144] Pennington J. BSD Now: 144: The PF life[EB/OL]. (2016-06-01)[2026-08-15]. https://www.bsdnow.tv/144.
-- [BSD Now EP110] Pennington J. BSD Now: 110: - Firmware Fights[EB/OL]. (2015-10-07)[2026-08-15]. https://www.bsdnow.tv/110.
-- [BSD Now EP20] Pennington J. BSD Now: 20: Bhyve Mind[EB/OL]. (2014-01-15)[2026-08-15]. https://www.bsdnow.tv/20.
+- [BSD Now EP194] Pennington J. BSD Now: 194: Daemonic plans[EB/OL]. (2017-05-17)[2026-08-15]. <https://www.bsdnow.tv/194>.
+- [BSD Now EP193] Pennington J. BSD Now: 193: Fire up the 802.11 AC[EB/OL]. (2017-05-10)[2026-08-15]. <https://www.bsdnow.tv/193>.
+- [BSD Now EP186] Pennington J. BSD Now: 186: The Fast And the Firewall: Tokyo Drift[EB/OL]. (2017-03-22)[2026-08-15]. <https://www.bsdnow.tv/186>.
+- [BSD Now EP144] Pennington J. BSD Now: 144: The PF life[EB/OL]. (2016-06-01)[2026-08-15]. <https://www.bsdnow.tv/144>.
+- [BSD Now EP110] Pennington J. BSD Now: 110: - Firmware Fights[EB/OL]. (2015-10-07)[2026-08-15]. <https://www.bsdnow.tv/110>.
+- [BSD Now EP20] Pennington J. BSD Now: 20: Bhyve Mind[EB/OL]. (2014-01-15)[2026-08-15]. <https://www.bsdnow.tv/20>.
 
 <!-- /PODCAST_REVIEW -->

@@ -123,8 +123,8 @@ volume: 18
 - 总纲10 动手者创造历史：PF 由测试者、文档者与提交者共同打磨，历史由大量动手协作的人推动。（BSD Now EP186，[4016.52-4285.88]，L1）
 - 总纲4 分离聚合是永恒规律：路由域把一台物理路由器分离为多个逻辑路由器，体现分离聚合的循环。（BSD Now EP186，[4381.84-4761.18]，L1）
 - 总纲6 和解优于斗争：OpenBSD 社区“批评即受邀修复”的协作方式，强调和解与共建而非对抗。（BSD Now EP186，[4016.52-4050.66]，L1）
-- 总纲9 经验优先；总纲10 动手者创造历史；总纲8 本体论上各方平等：Ebihara 的叙事结构本身即是一份史学立场声明：历史由当事人经验构成——二十年邮件列表的 872 人、1999 年以来约 50 名用户组成员维护日本 FTP 镜像与网页、在千余人规模的开源会议上演示 2GB Raspberry Pi 镜像并借 pkgsrc 推广打包生态——这些默默做事的移植工程师、打包者与镜像维护者而非明星黑客构成叙事主体；同时 Zaurus、NetWalker 与工作站被本体论上平等对待，不存在“先进平台淘汰落后平台”的进步等级，只有同一系统在不同机器上的流转。（BSD Now EP96，[1925.08-2108.62]，L1）
-- 总纲4 分离聚合是永恒规律；总纲3 不存在进步，只有权力再分配：Oracle 为下一代 Solaris 采用 OpenBSD 的 PF 并将 SMP 补丁以概念验证形式交回上游，主持人顺势设想 FreeBSD 与 OpenBSD 两条 PF 路线未来或可重新统一；PF 自 2001 年诞生后经历 OpenBSD 与 FreeBSD 的分离、多年独立演进、再向商业系统流转，其代码在各方之间不断分离与聚合，权力与实现随之再分配——这呈现的不是防火墙技术的单向进步，而是同一形式在多个阵营间的循环流动。（BSD Now EP96，[604.76-713.94]，L2）
+- 总纲10 动手者创造历史：Ebihara 的叙事结构本身即是一份史学立场声明：历史由当事人经验构成——二十年邮件列表的 872 人、1999 年以来约 50 名用户组成员维护日本 FTP 镜像与网页、在千余人规模的开源会议上演示 2GB Raspberry Pi 镜像并借 pkgsrc 推广打包生态——这些默默做事的移植工程师、打包者与镜像维护者而非明星黑客构成叙事主体；同时 Zaurus、NetWalker 与工作站被本体论上平等对待，不存在“先进平台淘汰落后平台”的进步等级，只有同一系统在不同机器上的流转。（BSD Now EP96，[1925.08-2108.62]，L1）
+- 总纲4 分离聚合是永恒规律：Oracle 为下一代 Solaris 采用 OpenBSD 的 PF 并将 SMP 补丁以概念验证形式交回上游，主持人顺势设想 FreeBSD 与 OpenBSD 两条 PF 路线未来或可重新统一；PF 自 2001 年诞生后经历 OpenBSD 与 FreeBSD 的分离、多年独立演进、再向商业系统流转，其代码在各方之间不断分离与聚合，权力与实现随之再分配——这呈现的不是防火墙技术的单向进步，而是同一形式在多个阵营间的循环流动。（BSD Now EP96，[604.76-713.94]，L2）
 
 **辨析**：
 
@@ -133,7 +133,7 @@ volume: 18
 
 **文献**：
 
-- [BSD Now EP186] Pennington J. BSD Now: 186: The Fast And the Firewall: Tokyo Drift[EB/OL]. (2017-03-22)[2026-08-15]. https://www.bsdnow.tv/186.
-- [BSD Now EP96] Pennington J. BSD Now: 96: Lost Technology[EB/OL]. (2015-07-01)[2026-08-15]. https://www.bsdnow.tv/96.
+- [BSD Now EP186] Pennington J. BSD Now: 186: The Fast And the Firewall: Tokyo Drift[EB/OL]. (2017-03-22)[2026-08-15]. <https://www.bsdnow.tv/186>.
+- [BSD Now EP96] Pennington J. BSD Now: 96: Lost Technology[EB/OL]. (2015-07-01)[2026-08-15]. <https://www.bsdnow.tv/96>.
 
 <!-- /PODCAST_REVIEW -->

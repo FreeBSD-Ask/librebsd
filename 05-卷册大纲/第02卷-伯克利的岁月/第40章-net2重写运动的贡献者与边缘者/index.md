@@ -73,6 +73,6 @@ volume: 第02卷-伯克利的岁月
 
 **文献**：
 
-- [YouTube EP7d7fwAE-2Aw] YouTube. YouTube: Fall 2024 FreeBSD Summit - The History of the BSD Daemon[EB/OL]. ()[2026-08-15]. https://www.youtube.com/watch?v=7d7fwAE-2Aw.
+- [YouTube EP7d7fwAE-2Aw] YouTube. YouTube: Fall 2024 FreeBSD Summit - The History of the BSD Daemon[EB/OL]. ()[2026-08-15]. <https://www.youtube.com/watch?v=7d7fwAE-2Aw>.
 
 <!-- /PODCAST_REVIEW -->

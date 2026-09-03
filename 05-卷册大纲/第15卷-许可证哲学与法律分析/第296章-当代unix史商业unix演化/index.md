@@ -72,6 +72,6 @@ volume: 15
 
 **文献**：
 
-- [BSD Now EP580] Pennington J. BSD Now: 580: EuroBSDcon 2024 - Part 2[EB/OL]. (2024-10-10)[2026-08-15]. https://www.bsdnow.tv/580.
+- [BSD Now EP580] Pennington J. BSD Now: 580: EuroBSDcon 2024 - Part 2[EB/OL]. (2024-10-10)[2026-08-15]. <https://www.bsdnow.tv/580>.
 
 <!-- /PODCAST_REVIEW -->

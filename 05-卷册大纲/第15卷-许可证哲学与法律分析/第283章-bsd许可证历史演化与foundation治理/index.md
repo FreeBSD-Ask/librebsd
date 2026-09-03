@@ -112,6 +112,6 @@ volume: 15
 
 **文献**：
 
-- [BSD Now EP138] Pennington J. BSD Now: 138: Rushing into BSD[EB/OL]. (2016-04-20)[2026-08-15]. https://www.bsdnow.tv/138.
+- [BSD Now EP138] Pennington J. BSD Now: 138: Rushing into BSD[EB/OL]. (2016-04-20)[2026-08-15]. <https://www.bsdnow.tv/138>.
 
 <!-- /PODCAST_REVIEW -->

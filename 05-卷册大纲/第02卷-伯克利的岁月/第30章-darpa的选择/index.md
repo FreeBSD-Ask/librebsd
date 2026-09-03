@@ -78,6 +78,6 @@ volume: 第02卷-伯克利的岁月
 
 **文献**：
 
-- [YouTube EPbVSXXeiFLgk] YouTube. YouTube: A Narrative History of BSD[EB/OL]. ()[2026-08-15]. https://www.youtube.com/watch?v=bVSXXeiFLgk.
+- [YouTube EPbVSXXeiFLgk] YouTube. YouTube: A Narrative History of BSD[EB/OL]. ()[2026-08-15]. <https://www.youtube.com/watch?v=bVSXXeiFLgk>.
 
 <!-- /PODCAST_REVIEW -->

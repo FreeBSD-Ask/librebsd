@@ -245,17 +245,17 @@ volume: 05
 
 **文献**：
 
-- [BSD Now EP651] Pennington J. BSD Now: 651: Spatially aware ZFS[EB/OL]. (2026-02-19)[2026-08-15]. https://www.bsdnow.tv/651.
-- [BSD Now EP648] Pennington J. BSD Now: 648: Greytrapping for years[EB/OL]. (2026-01-29)[2026-08-15]. https://www.bsdnow.tv/648.
-- [BSD Now EP360] Pennington J. BSD Now: 360: Full circle[EB/OL]. (2020-07-23)[2026-08-15]. https://www.bsdnow.tv/360.
-- [BSD Now EP640] Pennington J. BSD Now: 640: Cleaning up Hammer[EB/OL]. (2025-12-04)[2026-08-15]. https://www.bsdnow.tv/640.
-- [BSD Now EP213] Pennington J. BSD Now: 213: The French CONnection[EB/OL]. (2017-09-27)[2026-08-15]. https://www.bsdnow.tv/213.
-- [BSD Now EP144] Pennington J. BSD Now: 144: The PF life[EB/OL]. (2016-06-01)[2026-08-15]. https://www.bsdnow.tv/144.
-- [BSD Now EP47] Pennington J. BSD Now: 47: DES Challenge IV[EB/OL]. (2014-07-23)[2026-08-15]. https://www.bsdnow.tv/47.
-- [BSD Now EP46] Pennington J. BSD Now: 46: Network Iodometry[EB/OL]. (2014-07-16)[2026-08-15]. https://www.bsdnow.tv/46.
-- [BSD Now EP24] Pennington J. BSD Now: 24: The Cluster & The Cloud[EB/OL]. (2014-02-12)[2026-08-15]. https://www.bsdnow.tv/24.
-- [BSD Now EP18] Pennington J. BSD Now: 18: Eclipsing Binaries[EB/OL]. (2014-01-01)[2026-08-15]. https://www.bsdnow.tv/18.
-- [BSD Now EP11] Pennington J. BSD Now: 11: The Gateway Drug[EB/OL]. (2013-11-13)[2026-08-15]. https://www.bsdnow.tv/11.
-- [BSDTalk EP234] Backman W. BSDTalk: 234: bsdtalk234 - Henning Brauer at vBSDCon[EB/OL]. (2013-11-11)[2026-08-27]. https://bsdtalk.blogspot.com/2013/11/bsdtalk234-henning-brauer-at-vbsdcon.html.
+- [BSD Now EP651] Pennington J. BSD Now: 651: Spatially aware ZFS[EB/OL]. (2026-02-19)[2026-08-15]. <https://www.bsdnow.tv/651>.
+- [BSD Now EP648] Pennington J. BSD Now: 648: Greytrapping for years[EB/OL]. (2026-01-29)[2026-08-15]. <https://www.bsdnow.tv/648>.
+- [BSD Now EP360] Pennington J. BSD Now: 360: Full circle[EB/OL]. (2020-07-23)[2026-08-15]. <https://www.bsdnow.tv/360>.
+- [BSD Now EP640] Pennington J. BSD Now: 640: Cleaning up Hammer[EB/OL]. (2025-12-04)[2026-08-15]. <https://www.bsdnow.tv/640>.
+- [BSD Now EP213] Pennington J. BSD Now: 213: The French CONnection[EB/OL]. (2017-09-27)[2026-08-15]. <https://www.bsdnow.tv/213>.
+- [BSD Now EP144] Pennington J. BSD Now: 144: The PF life[EB/OL]. (2016-06-01)[2026-08-15]. <https://www.bsdnow.tv/144>.
+- [BSD Now EP47] Pennington J. BSD Now: 47: DES Challenge IV[EB/OL]. (2014-07-23)[2026-08-15]. <https://www.bsdnow.tv/47>.
+- [BSD Now EP46] Pennington J. BSD Now: 46: Network Iodometry[EB/OL]. (2014-07-16)[2026-08-15]. <https://www.bsdnow.tv/46>.
+- [BSD Now EP24] Pennington J. BSD Now: 24: The Cluster & The Cloud[EB/OL]. (2014-02-12)[2026-08-15]. <https://www.bsdnow.tv/24>.
+- [BSD Now EP18] Pennington J. BSD Now: 18: Eclipsing Binaries[EB/OL]. (2014-01-01)[2026-08-15]. <https://www.bsdnow.tv/18>.
+- [BSD Now EP11] Pennington J. BSD Now: 11: The Gateway Drug[EB/OL]. (2013-11-13)[2026-08-15]. <https://www.bsdnow.tv/11>.
+- [BSDTalk EP234] Backman W. BSDTalk: 234: bsdtalk234 - Henning Brauer at vBSDCon[EB/OL]. (2013-11-11)[2026-08-27]. <https://bsdtalk.blogspot.com/2013/11/bsdtalk234-henning-brauer-at-vbsdcon.html>.
 
 <!-- /PODCAST_REVIEW -->

@@ -78,6 +78,6 @@ volume: 01
 
 **文献**：
 
-- [BSDTalk EP120] Backman W. BSDTalk: 120: bsdtalk120 - BSD Hacker Isaac "Ike" Levy[EB/OL]. (2007-07-11)[2026-08-27]. https://bsdtalk.blogspot.com/2007/07/bsdtalk120-bsd-hacker-isaac-ike-levy.html.
+- [BSDTalk EP120] Backman W. BSDTalk: 120: bsdtalk120 - BSD Hacker Isaac "Ike" Levy[EB/OL]. (2007-07-11)[2026-08-27]. <https://bsdtalk.blogspot.com/2007/07/bsdtalk120-bsd-hacker-isaac-ike-levy.html>.
 
 <!-- /PODCAST_REVIEW -->

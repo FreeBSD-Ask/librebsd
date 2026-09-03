@@ -101,10 +101,10 @@ volume: 第10卷-openbsd的历史
 
 **文献**：
 
-- [BSD Now EP72] Pennington J. BSD Now: 72: Common *Sense Approach[EB/OL]. (2015-01-14)[2026-08-15]. https://www.bsdnow.tv/72.
-- [BSD Now EP68] Pennington J. BSD Now: 68: Just the Essentials[EB/OL]. (2014-12-17)[2026-08-15]. https://www.bsdnow.tv/68.
-- [BSD Now EP23] Pennington J. BSD Now: 23: Time Signatures[EB/OL]. (2014-02-05)[2026-08-15]. https://www.bsdnow.tv/23.
-- [BSD Now EP22] Pennington J. BSD Now: 22: Journaled News-Updates[EB/OL]. (2014-01-29)[2026-08-15]. https://www.bsdnow.tv/22.
-- [BSD Now EP19] Pennington J. BSD Now: 19: The Installfest[EB/OL]. (2014-01-08)[2026-08-15]. https://www.bsdnow.tv/19.
+- [BSD Now EP72] Pennington J. BSD Now: 72: Common *Sense Approach[EB/OL]. (2015-01-14)[2026-08-15]. <https://www.bsdnow.tv/72>.
+- [BSD Now EP68] Pennington J. BSD Now: 68: Just the Essentials[EB/OL]. (2014-12-17)[2026-08-15]. <https://www.bsdnow.tv/68>.
+- [BSD Now EP23] Pennington J. BSD Now: 23: Time Signatures[EB/OL]. (2014-02-05)[2026-08-15]. <https://www.bsdnow.tv/23>.
+- [BSD Now EP22] Pennington J. BSD Now: 22: Journaled News-Updates[EB/OL]. (2014-01-29)[2026-08-15]. <https://www.bsdnow.tv/22>.
+- [BSD Now EP19] Pennington J. BSD Now: 19: The Installfest[EB/OL]. (2014-01-08)[2026-08-15]. <https://www.bsdnow.tv/19>.
 
 <!-- /PODCAST_REVIEW -->

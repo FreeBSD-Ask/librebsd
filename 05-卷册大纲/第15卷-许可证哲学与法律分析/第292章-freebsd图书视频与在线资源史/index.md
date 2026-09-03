@@ -186,16 +186,16 @@ volume: 第15卷-许可证哲学与法律分析
 
 **文献**：
 
-- [BSD Now EP329] Pennington J. BSD Now: 329: Lucas’ Arts[EB/OL]. (2019-12-19)[2026-08-15]. https://www.bsdnow.tv/329.
-- [BSD Now EP230] Pennington J. BSD Now: 230: Your questions, Part III[EB/OL]. (2018-01-24)[2026-08-15]. https://www.bsdnow.tv/230.
-- [BSD Now EP185] Pennington J. BSD Now: 185: Exit Interview[EB/OL]. (2017-03-16)[2026-08-15]. https://www.bsdnow.tv/185.
-- [BSD Now EP626] Pennington J. BSD Now: 626: USB webcam testing[EB/OL]. (2025-08-28)[2026-08-15]. https://www.bsdnow.tv/626.
-- [BSD Now EP22] Pennington J. BSD Now: 22: Journaled News-Updates[EB/OL]. (2014-01-29)[2026-08-15]. https://www.bsdnow.tv/22.
-- [BSDTalk EP150] Backman W. BSDTalk: 150: bsdtalk150 - Alex Feldman from Sangoma[EB/OL]. (2008-05-20)[2026-08-27]. https://bsdtalk.blogspot.com/2008/05/bsdtalk150-alex-feldman-from-sangoma.html.
-- [BSDTalk EP153] Backman W. BSDTalk: 153: bsdtalk153 - Michael W. Lucas[EB/OL]. (2008-06-13)[2026-08-27]. https://bsdtalk.blogspot.com/2008/06/bsdtalk153-michael-w-lucas.html.
-- [BSDTalk EP188] Backman W. BSDTalk: 188: bsdtalk188 - Dru Lavigne[EB/OL]. (2010-04-18)[2026-08-27]. https://bsdtalk.blogspot.com/2010/04/bsdtalk188-dru-lavigne.html.
-- [BSDTalk EP204] Backman W. BSDTalk: 204: bsdtalk204 - mdocml mit Ingo Schwarze and Kristaps Dzonsons[EB/OL]. (2011-06-01)[2026-08-27]. https://bsdtalk.blogspot.com/2011/05/bsdtalk204-mdocml-mit-ingo-schwartze.html.
-- [BSDTalk EP237] Backman W. BSDTalk: 237: bsdtalk237 - The FreeBSD Journal with George Neville-Neil[EB/OL]. (2014-01-08)[2026-08-27]. https://bsdtalk.blogspot.com/2014/01/bsdtalk237-freebsd-journal-with-george.html.
-- [YouTube EPSGC0191nDp0] YouTube. YouTube: A History of the BSD Daemon by Marshall Kirk McKusick[EB/OL]. ()[2026-08-15]. https://www.youtube.com/watch?v=SGC0191nDp0.
+- [BSD Now EP329] Pennington J. BSD Now: 329: Lucas’ Arts[EB/OL]. (2019-12-19)[2026-08-15]. <https://www.bsdnow.tv/329>.
+- [BSD Now EP230] Pennington J. BSD Now: 230: Your questions, Part III[EB/OL]. (2018-01-24)[2026-08-15]. <https://www.bsdnow.tv/230>.
+- [BSD Now EP185] Pennington J. BSD Now: 185: Exit Interview[EB/OL]. (2017-03-16)[2026-08-15]. <https://www.bsdnow.tv/185>.
+- [BSD Now EP626] Pennington J. BSD Now: 626: USB webcam testing[EB/OL]. (2025-08-28)[2026-08-15]. <https://www.bsdnow.tv/626>.
+- [BSD Now EP22] Pennington J. BSD Now: 22: Journaled News-Updates[EB/OL]. (2014-01-29)[2026-08-15]. <https://www.bsdnow.tv/22>.
+- [BSDTalk EP150] Backman W. BSDTalk: 150: bsdtalk150 - Alex Feldman from Sangoma[EB/OL]. (2008-05-20)[2026-08-27]. <https://bsdtalk.blogspot.com/2008/05/bsdtalk150-alex-feldman-from-sangoma.html>.
+- [BSDTalk EP153] Backman W. BSDTalk: 153: bsdtalk153 - Michael W. Lucas[EB/OL]. (2008-06-13)[2026-08-27]. <https://bsdtalk.blogspot.com/2008/06/bsdtalk153-michael-w-lucas.html>.
+- [BSDTalk EP188] Backman W. BSDTalk: 188: bsdtalk188 - Dru Lavigne[EB/OL]. (2010-04-18)[2026-08-27]. <https://bsdtalk.blogspot.com/2010/04/bsdtalk188-dru-lavigne.html>.
+- [BSDTalk EP204] Backman W. BSDTalk: 204: bsdtalk204 - mdocml mit Ingo Schwarze and Kristaps Dzonsons[EB/OL]. (2011-06-01)[2026-08-27]. <https://bsdtalk.blogspot.com/2011/05/bsdtalk204-mdocml-mit-ingo-schwartze.html>.
+- [BSDTalk EP237] Backman W. BSDTalk: 237: bsdtalk237 - The FreeBSD Journal with George Neville-Neil[EB/OL]. (2014-01-08)[2026-08-27]. <https://bsdtalk.blogspot.com/2014/01/bsdtalk237-freebsd-journal-with-george.html>.
+- [YouTube EPSGC0191nDp0] YouTube. YouTube: A History of the BSD Daemon by Marshall Kirk McKusick[EB/OL]. ()[2026-08-15]. <https://www.youtube.com/watch?v=SGC0191nDp0>.
 
 <!-- /PODCAST_REVIEW -->

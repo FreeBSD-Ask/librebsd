@@ -111,10 +111,10 @@ volume: 第10卷-openbsd的历史
 
 **文献**：
 
-- [BSD Now EP498] Pennington J. BSD Now: 498: Dropping Privileges[EB/OL]. (2023-03-16)[2026-08-15]. https://www.bsdnow.tv/498.
-- [BSD Now EP428] Pennington J. BSD Now: 428: Cult of BSD[EB/OL]. (2021-11-11)[2026-08-15]. https://www.bsdnow.tv/428.
-- [BSD Now EP348] Pennington J. BSD Now: 348: BSD Community Collections[EB/OL]. (2020-04-30)[2026-08-15]. https://www.bsdnow.tv/348.
-- [BSD Now EP330] Pennington J. BSD Now: 330: Happy Holidays, All(an)[EB/OL]. (2019-12-26)[2026-08-15]. https://www.bsdnow.tv/330.
-- [BSDTalk EP29] Backman W. BSDTalk: 29: bsdtalk029 - Interview with Lynne and William Jolitz[EB/OL]. (2006-03-30)[2026-08-27]. https://archive.org/details/bsdtalk029.
+- [BSD Now EP498] Pennington J. BSD Now: 498: Dropping Privileges[EB/OL]. (2023-03-16)[2026-08-15]. <https://www.bsdnow.tv/498>.
+- [BSD Now EP428] Pennington J. BSD Now: 428: Cult of BSD[EB/OL]. (2021-11-11)[2026-08-15]. <https://www.bsdnow.tv/428>.
+- [BSD Now EP348] Pennington J. BSD Now: 348: BSD Community Collections[EB/OL]. (2020-04-30)[2026-08-15]. <https://www.bsdnow.tv/348>.
+- [BSD Now EP330] Pennington J. BSD Now: 330: Happy Holidays, All(an)[EB/OL]. (2019-12-26)[2026-08-15]. <https://www.bsdnow.tv/330>.
+- [BSDTalk EP29] Backman W. BSDTalk: 29: bsdtalk029 - Interview with Lynne and William Jolitz[EB/OL]. (2006-03-30)[2026-08-27]. <https://archive.org/details/bsdtalk029>.
 
 <!-- /PODCAST_REVIEW -->

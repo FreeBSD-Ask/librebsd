@@ -62,6 +62,6 @@ volume: 第03卷-伯克利学术文化外溢影响
 
 **文献**：
 
-- [BSD Now EP196] Pennington J. BSD Now: 196: PostgreZFS[EB/OL]. (2017-05-31)[2026-08-15]. https://www.bsdnow.tv/196.
+- [BSD Now EP196] Pennington J. BSD Now: 196: PostgreZFS[EB/OL]. (2017-05-31)[2026-08-15]. <https://www.bsdnow.tv/196>.
 
 <!-- /PODCAST_REVIEW -->

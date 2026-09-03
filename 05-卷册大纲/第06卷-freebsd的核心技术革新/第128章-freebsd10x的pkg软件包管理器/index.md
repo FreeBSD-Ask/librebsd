@@ -150,13 +150,13 @@ volume: 06
 
 **文献**：
 
-- [BSD Now EP134] Pennington J. BSD Now: 134: Marking up the Ports tree[EB/OL]. (2016-03-24)[2026-08-15]. https://www.bsdnow.tv/134.
-- [BSD Now EP129] Pennington J. BSD Now: 129: Synthesize all the Things![EB/OL]. (2016-02-17)[2026-08-15]. https://www.bsdnow.tv/129.
-- [BSD Now EP120] Pennington J. BSD Now: 120: I’m talking about the man in the middle[EB/OL]. (2015-12-16)[2026-08-15]. https://www.bsdnow.tv/120.
-- [BSD Now EP79] Pennington J. BSD Now: 79: Just Add QEMU[EB/OL]. (2015-03-04)[2026-08-15]. https://www.bsdnow.tv/79.
-- [BSD Now EP48] Pennington J. BSD Now: 48: Liberating SSL[EB/OL]. (2014-07-30)[2026-08-15]. https://www.bsdnow.tv/48.
-- [BSD Now EP43] Pennington J. BSD Now: 43: Package Design[EB/OL]. (2014-06-25)[2026-08-15]. https://www.bsdnow.tv/43.
-- [BSD Now EP18] Pennington J. BSD Now: 18: Eclipsing Binaries[EB/OL]. (2014-01-01)[2026-08-15]. https://www.bsdnow.tv/18.
-- [YouTube EPrGdylV-Up_E] YouTube. YouTube: Doing stupid things with FreeBSD jails - Dan Langille - EuroBSDcon 2024[EB/OL]. ()[2026-08-15]. https://www.youtube.com/watch?v=rGdylV-Up_E.
+- [BSD Now EP134] Pennington J. BSD Now: 134: Marking up the Ports tree[EB/OL]. (2016-03-24)[2026-08-15]. <https://www.bsdnow.tv/134>.
+- [BSD Now EP129] Pennington J. BSD Now: 129: Synthesize all the Things![EB/OL]. (2016-02-17)[2026-08-15]. <https://www.bsdnow.tv/129>.
+- [BSD Now EP120] Pennington J. BSD Now: 120: I’m talking about the man in the middle[EB/OL]. (2015-12-16)[2026-08-15]. <https://www.bsdnow.tv/120>.
+- [BSD Now EP79] Pennington J. BSD Now: 79: Just Add QEMU[EB/OL]. (2015-03-04)[2026-08-15]. <https://www.bsdnow.tv/79>.
+- [BSD Now EP48] Pennington J. BSD Now: 48: Liberating SSL[EB/OL]. (2014-07-30)[2026-08-15]. <https://www.bsdnow.tv/48>.
+- [BSD Now EP43] Pennington J. BSD Now: 43: Package Design[EB/OL]. (2014-06-25)[2026-08-15]. <https://www.bsdnow.tv/43>.
+- [BSD Now EP18] Pennington J. BSD Now: 18: Eclipsing Binaries[EB/OL]. (2014-01-01)[2026-08-15]. <https://www.bsdnow.tv/18>.
+- [YouTube EPrGdylV-Up_E] YouTube. YouTube: Doing stupid things with FreeBSD jails - Dan Langille - EuroBSDcon 2024[EB/OL]. ()[2026-08-15]. <https://www.youtube.com/watch?v=rGdylV-Up_E>.
 
 <!-- /PODCAST_REVIEW -->

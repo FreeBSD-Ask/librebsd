@@ -68,7 +68,7 @@ volume: 第07卷-freebsd的工程体系重构
 
 **文献**：
 
-- [BSD Now EP120] Pennington J. BSD Now: 120: I’m talking about the man in the middle[EB/OL]. (2015-12-16)[2026-08-15]. https://www.bsdnow.tv/120.
-- [BSD Now EP52] Pennington J. BSD Now: 52: Reverse Takeover[EB/OL]. (2014-08-27)[2026-08-15]. https://www.bsdnow.tv/52.
+- [BSD Now EP120] Pennington J. BSD Now: 120: I’m talking about the man in the middle[EB/OL]. (2015-12-16)[2026-08-15]. <https://www.bsdnow.tv/120>.
+- [BSD Now EP52] Pennington J. BSD Now: 52: Reverse Takeover[EB/OL]. (2014-08-27)[2026-08-15]. <https://www.bsdnow.tv/52>.
 
 <!-- /PODCAST_REVIEW -->

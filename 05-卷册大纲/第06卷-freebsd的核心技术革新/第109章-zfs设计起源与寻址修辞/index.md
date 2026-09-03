@@ -93,8 +93,8 @@ volume: 06
 
 **文献**：
 
-- [BSD Now EP164] Pennington J. BSD Now: 164: Virtualized COW / PI?[EB/OL]. (2016-10-19)[2026-08-15]. https://www.bsdnow.tv/164.
-- [YouTube EPmZ-dhntnkCQ] YouTube. YouTube: BSDCan Saturday 2026-06-20: 1160[EB/OL]. ()[2026-08-15]. https://www.youtube.com/watch?v=mZ-dhntnkCQ.
-- [YouTube EPpN7OLChclH8] YouTube. YouTube: FreeBSD Fridays: Introduction to ZFS[EB/OL]. ()[2026-08-15]. https://www.youtube.com/watch?v=pN7OLChclH8.
+- [BSD Now EP164] Pennington J. BSD Now: 164: Virtualized COW / PI?[EB/OL]. (2016-10-19)[2026-08-15]. <https://www.bsdnow.tv/164>.
+- [YouTube EPmZ-dhntnkCQ] YouTube. YouTube: BSDCan Saturday 2026-06-20: 1160[EB/OL]. ()[2026-08-15]. <https://www.youtube.com/watch?v=mZ-dhntnkCQ>.
+- [YouTube EPpN7OLChclH8] YouTube. YouTube: FreeBSD Fridays: Introduction to ZFS[EB/OL]. ()[2026-08-15]. <https://www.youtube.com/watch?v=pN7OLChclH8>.
 
 <!-- /PODCAST_REVIEW -->

@@ -118,11 +118,11 @@ volume: 第13卷-bsd衍生操作系统
 
 **文献**：
 
-- [BSD Now EP222] Pennington J. BSD Now: 222: How Netflix works[EB/OL]. (2017-11-29)[2026-08-15]. https://www.bsdnow.tv/222.
-- [BSD Now EP191] Pennington J. BSD Now: 191: I Know 64 & A Bunch More[EB/OL]. (2017-04-26)[2026-08-15]. https://www.bsdnow.tv/191.
-- [BSD Now EP167] Pennington J. BSD Now: 167: Playing the Long Game[EB/OL]. (2016-11-09)[2026-08-15]. https://www.bsdnow.tv/167.
-- [BSD Now EP17] Pennington J. BSD Now: 17: The Gift of Giving[EB/OL]. (2013-12-25)[2026-08-15]. https://www.bsdnow.tv/17.
-- [BSDTalk EP235] Backman W. BSDTalk: 235: bsdtalk235 - Allan Jude[EB/OL]. (2013-11-19)[2026-08-27]. https://bsdtalk.blogspot.com/2013/11/bsdtalk235-allan-jude.html.
-- [Nerding Out with Victor EPS01E25] Petersson V. Nerding out with Victor: All things ZFS and FreeBSD with Allan Jude[EB/OL]. (2024-12-02)[2026-08-15]. https://vpetersson.com/podcast/s01e25/.
+- [BSD Now EP222] Pennington J. BSD Now: 222: How Netflix works[EB/OL]. (2017-11-29)[2026-08-15]. <https://www.bsdnow.tv/222>.
+- [BSD Now EP191] Pennington J. BSD Now: 191: I Know 64 & A Bunch More[EB/OL]. (2017-04-26)[2026-08-15]. <https://www.bsdnow.tv/191>.
+- [BSD Now EP167] Pennington J. BSD Now: 167: Playing the Long Game[EB/OL]. (2016-11-09)[2026-08-15]. <https://www.bsdnow.tv/167>.
+- [BSD Now EP17] Pennington J. BSD Now: 17: The Gift of Giving[EB/OL]. (2013-12-25)[2026-08-15]. <https://www.bsdnow.tv/17>.
+- [BSDTalk EP235] Backman W. BSDTalk: 235: bsdtalk235 - Allan Jude[EB/OL]. (2013-11-19)[2026-08-27]. <https://bsdtalk.blogspot.com/2013/11/bsdtalk235-allan-jude.html>.
+- [Nerding Out with Victor EPS01E25] Petersson V. Nerding out with Victor: All things ZFS and FreeBSD with Allan Jude[EB/OL]. (2024-12-02)[2026-08-15]. <https://vpetersson.com/podcast/s01e25/>.
 
 <!-- /PODCAST_REVIEW -->

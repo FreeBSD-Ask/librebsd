@@ -80,7 +80,7 @@ volume: 第09卷-netbsd的历史
 
 **文献**：
 
-- [BSD Now EP345] Pennington J. BSD Now: 345: Switchers to BSD[EB/OL]. (2020-04-09)[2026-08-15]. https://www.bsdnow.tv/345.
-- [BSD Now EP200] Pennington J. BSD Now: 200: Getting Scrubbed to Death[EB/OL]. (2017-06-28)[2026-08-15]. https://www.bsdnow.tv/200.
+- [BSD Now EP345] Pennington J. BSD Now: 345: Switchers to BSD[EB/OL]. (2020-04-09)[2026-08-15]. <https://www.bsdnow.tv/345>.
+- [BSD Now EP200] Pennington J. BSD Now: 200: Getting Scrubbed to Death[EB/OL]. (2017-06-28)[2026-08-15]. <https://www.bsdnow.tv/200>.
 
 <!-- /PODCAST_REVIEW -->

@@ -73,7 +73,7 @@ volume: 第02卷-伯克利的岁月
 
 **文献**：
 
-- [YouTube EPrXmWXIDsxig] YouTube. YouTube: 🔍 The Untold History of FreeBSD: From Berkeley to the Modern Internet’s Backbone 🔍[EB/OL]. ()[2026-08-15]. https://www.youtube.com/watch?v=rXmWXIDsxig.
-- [YouTube EP3u8zKO8VTD0] YouTube. YouTube: BSD Explained: How FreeBSD, OpenBSD & NetBSD Built the Internet[EB/OL]. ()[2026-08-15]. https://www.youtube.com/watch?v=3u8zKO8VTD0.
+- [YouTube EPrXmWXIDsxig] YouTube. YouTube: 🔍 The Untold History of FreeBSD: From Berkeley to the Modern Internet’s Backbone 🔍[EB/OL]. ()[2026-08-15]. <https://www.youtube.com/watch?v=rXmWXIDsxig>.
+- [YouTube EP3u8zKO8VTD0] YouTube. YouTube: BSD Explained: How FreeBSD, OpenBSD & NetBSD Built the Internet[EB/OL]. ()[2026-08-15]. <https://www.youtube.com/watch?v=3u8zKO8VTD0>.
 
 <!-- /PODCAST_REVIEW -->

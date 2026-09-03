@@ -120,8 +120,8 @@ volume: 06
 
 **文献**：
 
-- [BSD Now EP283] Pennington J. BSD Now: 283: Graphical Interface-View[EB/OL]. (2019-01-31)[2026-08-15]. https://www.bsdnow.tv/283.
-- [BSD Now EP631] Pennington J. BSD Now: 631: Endorphin Rush[EB/OL]. (2025-09-25)[2026-08-15]. https://www.bsdnow.tv/631.
-- [BSD Now EP120] Pennington J. BSD Now: 120: I’m talking about the man in the middle[EB/OL]. (2015-12-16)[2026-08-15]. https://www.bsdnow.tv/120.
+- [BSD Now EP283] Pennington J. BSD Now: 283: Graphical Interface-View[EB/OL]. (2019-01-31)[2026-08-15]. <https://www.bsdnow.tv/283>.
+- [BSD Now EP631] Pennington J. BSD Now: 631: Endorphin Rush[EB/OL]. (2025-09-25)[2026-08-15]. <https://www.bsdnow.tv/631>.
+- [BSD Now EP120] Pennington J. BSD Now: 120: I’m talking about the man in the middle[EB/OL]. (2015-12-16)[2026-08-15]. <https://www.bsdnow.tv/120>.
 
 <!-- /PODCAST_REVIEW -->

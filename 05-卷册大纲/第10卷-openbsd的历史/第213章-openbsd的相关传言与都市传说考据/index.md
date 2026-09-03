@@ -67,7 +67,7 @@ volume: 第10卷-openbsd的历史
 
 **文献**：
 
-- [BSD Now EP460] Pennington J. BSD Now: 460: OpenBSD airport folklore[EB/OL]. (2022-06-23)[2026-08-15]. https://www.bsdnow.tv/460.
-- [BSDTalk EP49] Backman W. BSDTalk: 49: bsdtalk049 - Interview with Honeynet.org President Lance Spitzner[EB/OL]. (2006-06-01)[2026-08-27]. https://archive.org/details/bsdtalk049.
+- [BSD Now EP460] Pennington J. BSD Now: 460: OpenBSD airport folklore[EB/OL]. (2022-06-23)[2026-08-15]. <https://www.bsdnow.tv/460>.
+- [BSDTalk EP49] Backman W. BSDTalk: 49: bsdtalk049 - Interview with Honeynet.org President Lance Spitzner[EB/OL]. (2006-06-01)[2026-08-27]. <https://archive.org/details/bsdtalk049>.
 
 <!-- /PODCAST_REVIEW -->

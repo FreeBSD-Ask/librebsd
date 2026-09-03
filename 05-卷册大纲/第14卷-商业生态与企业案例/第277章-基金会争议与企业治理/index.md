@@ -156,6 +156,6 @@ volume: 14
 
 **文献**：
 
-- [BSD Now EP75] Pennington J. BSD Now: 75: From the Foundation (Part 1)[EB/OL]. (2015-02-04)[2026-08-15]. https://www.bsdnow.tv/75.
+- [BSD Now EP75] Pennington J. BSD Now: 75: From the Foundation (Part 1)[EB/OL]. (2015-02-04)[2026-08-15]. <https://www.bsdnow.tv/75>.
 
 <!-- /PODCAST_REVIEW -->

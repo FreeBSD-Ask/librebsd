@@ -63,6 +63,6 @@ volume: 第12卷-macos的bsd遗产
 
 **文献**：
 
-- [BSD Now EP651] Pennington J. BSD Now: 651: Spatially aware ZFS[EB/OL]. (2026-02-19)[2026-08-15]. https://www.bsdnow.tv/651.
+- [BSD Now EP651] Pennington J. BSD Now: 651: Spatially aware ZFS[EB/OL]. (2026-02-19)[2026-08-15]. <https://www.bsdnow.tv/651>.
 
 <!-- /PODCAST_REVIEW -->

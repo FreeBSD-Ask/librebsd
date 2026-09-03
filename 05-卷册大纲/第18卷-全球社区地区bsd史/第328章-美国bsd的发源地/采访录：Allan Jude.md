@@ -84,6 +84,6 @@ Jude 在 BSD Now 多期节目与 AsiaBSDCon 2018 演讲中自述其访华交流�
 
 **文献**：
 
-- [BSD Now EP132] Pennington J. BSD Now: 132: Scaling up with BSD[EB/OL]. (2016-03-08)[2026-08-15]. https://www.bsdnow.tv/132.
+- [BSD Now EP132] Pennington J. BSD Now: 132: Scaling up with BSD[EB/OL]. (2016-03-08)[2026-08-15]. <https://www.bsdnow.tv/132>.
 
 <!-- /PODCAST_REVIEW -->

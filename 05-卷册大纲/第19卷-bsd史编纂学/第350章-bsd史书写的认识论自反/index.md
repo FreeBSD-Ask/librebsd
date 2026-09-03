@@ -60,6 +60,6 @@ volume: 19
 
 **文献**：
 
-- [YouTube EPgiceCouM3F8] YouTube. YouTube: The history of NetBSD.[EB/OL]. ()[2026-08-15]. https://www.youtube.com/watch?v=giceCouM3F8.
+- [YouTube EPgiceCouM3F8] YouTube. YouTube: The history of NetBSD.[EB/OL]. ()[2026-08-15]. <https://www.youtube.com/watch?v=giceCouM3F8>.
 
 <!-- /PODCAST_REVIEW -->

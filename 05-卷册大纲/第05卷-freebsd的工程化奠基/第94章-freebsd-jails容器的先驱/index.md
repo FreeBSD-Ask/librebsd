@@ -339,25 +339,25 @@ volume: 05
 
 **文献**：
 
-- [BSD Now EP513] Pennington J. BSD Now: 513: New Host Interview[EB/OL]. (2023-06-29)[2026-08-15]. https://www.bsdnow.tv/513.
-- [BSD Now EP499] Pennington J. BSD Now: 499: Dan Langille Interview[EB/OL]. (2023-03-23)[2026-08-15]. https://www.bsdnow.tv/499.
-- [BSD Now EP406] Pennington J. BSD Now: 406: Jailed Gemini Capsule[EB/OL]. (2021-06-10)[2026-08-15]. https://www.bsdnow.tv/406.
-- [BSD Now EP374] Pennington J. BSD Now: 374: OpenBSD’s 25th anniversary[EB/OL]. (2020-10-29)[2026-08-15]. https://www.bsdnow.tv/374.
-- [BSD Now EP329] Pennington J. BSD Now: 329: Lucas’ Arts[EB/OL]. (2019-12-19)[2026-08-15]. https://www.bsdnow.tv/329.
-- [BSD Now EP321] Pennington J. BSD Now: 321: The Robot OS[EB/OL]. (2019-10-24)[2026-08-15]. https://www.bsdnow.tv/321.
-- [BSD Now EP640] Pennington J. BSD Now: 640: Cleaning up Hammer[EB/OL]. (2025-12-04)[2026-08-15]. https://www.bsdnow.tv/640.
-- [BSD Now EP293] Pennington J. BSD Now: 293: Booking Jails[EB/OL]. (2019-04-11)[2026-08-15]. https://www.bsdnow.tv/293.
-- [BSD Now EP276] Pennington J. BSD Now: Episode 276: Ho, Ho, Ho - 12.0 | BSD Now 276[EB/OL]. (2018-12-13)[2026-08-15]. https://www.bsdnow.tv/276.
-- [BSD Now EP223] Pennington J. BSD Now: 223: Compile once, debug twice[EB/OL]. (2017-12-06)[2026-08-15]. https://www.bsdnow.tv/223.
-- [BSD Now EP631] Pennington J. BSD Now: 631: Endorphin Rush[EB/OL]. (2025-09-25)[2026-08-15]. https://www.bsdnow.tv/631.
-- [BSD Now EP149] Pennington J. BSD Now: 149: The bhyve has been disturbed, and a wild Dexter appears![EB/OL]. (2016-07-06)[2026-08-15]. https://www.bsdnow.tv/149.
-- [BSD Now EP139] Pennington J. BSD Now: 139: Cheri-picking BSD[EB/OL]. (2016-04-27)[2026-08-15]. https://www.bsdnow.tv/139.
-- [BSD Now EP107] Pennington J. BSD Now: 107: In their midst[EB/OL]. (2015-09-16)[2026-08-15]. https://www.bsdnow.tv/107.
-- [BSD Now EP84] Pennington J. BSD Now: 84: pkg remove freebsd-update[EB/OL]. (2015-04-08)[2026-08-15]. https://www.bsdnow.tv/84.
-- [BSD Now EP616] Pennington J. BSD Now: 616: FreeBSD Foundation Interview[EB/OL]. (2025-06-19)[2026-08-15]. https://www.bsdnow.tv/616.
-- [BSD Now EP24] Pennington J. BSD Now: 24: The Cluster & The Cloud[EB/OL]. (2014-02-12)[2026-08-15]. https://www.bsdnow.tv/24.
-- [BSD Now EP7] Pennington J. BSD Now: 7: Go Directly to Jail(8)[EB/OL]. (2013-10-16)[2026-08-15]. https://www.bsdnow.tv/7.
-- [YouTube EPhQmOc0egcl4] YouTube. YouTube: FreeBSD Fridays: Introduction to Jails[EB/OL]. ()[2026-08-15]. https://www.youtube.com/watch?v=hQmOc0egcl4.
-- [YouTube EPrGdylV-Up_E] YouTube. YouTube: Doing stupid things with FreeBSD jails - Dan Langille - EuroBSDcon 2024[EB/OL]. ()[2026-08-15]. https://www.youtube.com/watch?v=rGdylV-Up_E.
+- [BSD Now EP513] Pennington J. BSD Now: 513: New Host Interview[EB/OL]. (2023-06-29)[2026-08-15]. <https://www.bsdnow.tv/513>.
+- [BSD Now EP499] Pennington J. BSD Now: 499: Dan Langille Interview[EB/OL]. (2023-03-23)[2026-08-15]. <https://www.bsdnow.tv/499>.
+- [BSD Now EP406] Pennington J. BSD Now: 406: Jailed Gemini Capsule[EB/OL]. (2021-06-10)[2026-08-15]. <https://www.bsdnow.tv/406>.
+- [BSD Now EP374] Pennington J. BSD Now: 374: OpenBSD’s 25th anniversary[EB/OL]. (2020-10-29)[2026-08-15]. <https://www.bsdnow.tv/374>.
+- [BSD Now EP329] Pennington J. BSD Now: 329: Lucas’ Arts[EB/OL]. (2019-12-19)[2026-08-15]. <https://www.bsdnow.tv/329>.
+- [BSD Now EP321] Pennington J. BSD Now: 321: The Robot OS[EB/OL]. (2019-10-24)[2026-08-15]. <https://www.bsdnow.tv/321>.
+- [BSD Now EP640] Pennington J. BSD Now: 640: Cleaning up Hammer[EB/OL]. (2025-12-04)[2026-08-15]. <https://www.bsdnow.tv/640>.
+- [BSD Now EP293] Pennington J. BSD Now: 293: Booking Jails[EB/OL]. (2019-04-11)[2026-08-15]. <https://www.bsdnow.tv/293>.
+- [BSD Now EP276] Pennington J. BSD Now: Episode 276: Ho, Ho, Ho - 12.0 | BSD Now 276[EB/OL]. (2018-12-13)[2026-08-15]. <https://www.bsdnow.tv/276>.
+- [BSD Now EP223] Pennington J. BSD Now: 223: Compile once, debug twice[EB/OL]. (2017-12-06)[2026-08-15]. <https://www.bsdnow.tv/223>.
+- [BSD Now EP631] Pennington J. BSD Now: 631: Endorphin Rush[EB/OL]. (2025-09-25)[2026-08-15]. <https://www.bsdnow.tv/631>.
+- [BSD Now EP149] Pennington J. BSD Now: 149: The bhyve has been disturbed, and a wild Dexter appears![EB/OL]. (2016-07-06)[2026-08-15]. <https://www.bsdnow.tv/149>.
+- [BSD Now EP139] Pennington J. BSD Now: 139: Cheri-picking BSD[EB/OL]. (2016-04-27)[2026-08-15]. <https://www.bsdnow.tv/139>.
+- [BSD Now EP107] Pennington J. BSD Now: 107: In their midst[EB/OL]. (2015-09-16)[2026-08-15]. <https://www.bsdnow.tv/107>.
+- [BSD Now EP84] Pennington J. BSD Now: 84: pkg remove freebsd-update[EB/OL]. (2015-04-08)[2026-08-15]. <https://www.bsdnow.tv/84>.
+- [BSD Now EP616] Pennington J. BSD Now: 616: FreeBSD Foundation Interview[EB/OL]. (2025-06-19)[2026-08-15]. <https://www.bsdnow.tv/616>.
+- [BSD Now EP24] Pennington J. BSD Now: 24: The Cluster & The Cloud[EB/OL]. (2014-02-12)[2026-08-15]. <https://www.bsdnow.tv/24>.
+- [BSD Now EP7] Pennington J. BSD Now: 7: Go Directly to Jail(8)[EB/OL]. (2013-10-16)[2026-08-15]. <https://www.bsdnow.tv/7>.
+- [YouTube EPhQmOc0egcl4] YouTube. YouTube: FreeBSD Fridays: Introduction to Jails[EB/OL]. ()[2026-08-15]. <https://www.youtube.com/watch?v=hQmOc0egcl4>.
+- [YouTube EPrGdylV-Up_E] YouTube. YouTube: Doing stupid things with FreeBSD jails - Dan Langille - EuroBSDcon 2024[EB/OL]. ()[2026-08-15]. <https://www.youtube.com/watch?v=rGdylV-Up_E>.
 
 <!-- /PODCAST_REVIEW -->

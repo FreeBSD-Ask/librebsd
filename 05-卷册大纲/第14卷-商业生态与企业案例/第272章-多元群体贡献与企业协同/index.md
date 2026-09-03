@@ -73,7 +73,7 @@ volume: 第14卷-商业生态与企业案例
 
 **文献**：
 
-- [BSDTalk EP168] Backman W. BSDTalk: 168: bsdtalk168 - Michael Lauth from iXsystems[EB/OL]. (2008-12-22)[2026-08-27]. https://bsdtalk.blogspot.com/2008/12/bsdtalk168-michael-lauth-from-ixsystems.html.
-- [BSDTalk EP72] Backman W. BSDTalk: 72: bsdtalk072 - Interview with Poul-Henning Kamp about Varnish[EB/OL]. (2006-10-02)[2026-08-27]. https://archive.org/details/bsdtalk072.
+- [BSDTalk EP168] Backman W. BSDTalk: 168: bsdtalk168 - Michael Lauth from iXsystems[EB/OL]. (2008-12-22)[2026-08-27]. <https://bsdtalk.blogspot.com/2008/12/bsdtalk168-michael-lauth-from-ixsystems.html>.
+- [BSDTalk EP72] Backman W. BSDTalk: 72: bsdtalk072 - Interview with Poul-Henning Kamp about Varnish[EB/OL]. (2006-10-02)[2026-08-27]. <https://archive.org/details/bsdtalk072>.
 
 <!-- /PODCAST_REVIEW -->

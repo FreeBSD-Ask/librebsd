@@ -79,6 +79,6 @@ volume: 第02卷-伯克利的岁月
 
 **文献**：
 
-- [BSD Now EP552] Pennington J. BSD Now: 552: The Laptop Sparc[EB/OL]. (2024-03-28)[2026-08-15]. https://www.bsdnow.tv/552.
+- [BSD Now EP552] Pennington J. BSD Now: 552: The Laptop Sparc[EB/OL]. (2024-03-28)[2026-08-15]. <https://www.bsdnow.tv/552>.
 
 <!-- /PODCAST_REVIEW -->

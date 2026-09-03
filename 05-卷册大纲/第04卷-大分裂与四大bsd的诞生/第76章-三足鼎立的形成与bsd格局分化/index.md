@@ -133,8 +133,8 @@ volume: 04
 
 **文献**：
 
-- [BSDTalk EP153] Backman W. BSDTalk: 153: bsdtalk153 - Michael W. Lucas[EB/OL]. (2008-06-13)[2026-08-27]. https://bsdtalk.blogspot.com/2008/06/bsdtalk153-michael-w-lucas.html.
-- [YouTube EP4OvLlKazFV4] YouTube. YouTube: Rod Grimes - FreeBSD: A Brief History of the Early Days, MeetBSD 2016[EB/OL]. ()[2026-08-15]. https://www.youtube.com/watch?v=4OvLlKazFV4.
-- [YouTube EP3u8zKO8VTD0] YouTube. YouTube: BSD Explained: How FreeBSD, OpenBSD & NetBSD Built the Internet[EB/OL]. ()[2026-08-15]. https://www.youtube.com/watch?v=3u8zKO8VTD0.
+- [BSDTalk EP153] Backman W. BSDTalk: 153: bsdtalk153 - Michael W. Lucas[EB/OL]. (2008-06-13)[2026-08-27]. <https://bsdtalk.blogspot.com/2008/06/bsdtalk153-michael-w-lucas.html>.
+- [YouTube EP4OvLlKazFV4] YouTube. YouTube: Rod Grimes - FreeBSD: A Brief History of the Early Days, MeetBSD 2016[EB/OL]. ()[2026-08-15]. <https://www.youtube.com/watch?v=4OvLlKazFV4>.
+- [YouTube EP3u8zKO8VTD0] YouTube. YouTube: BSD Explained: How FreeBSD, OpenBSD & NetBSD Built the Internet[EB/OL]. ()[2026-08-15]. <https://www.youtube.com/watch?v=3u8zKO8VTD0>.
 
 <!-- /PODCAST_REVIEW -->

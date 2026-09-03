@@ -66,6 +66,6 @@ volume: 第14卷-商业生态与企业案例
 
 **文献**：
 
-- [BSDTalk EP146] Backman W. BSDTalk: 146: bsdtalk146 - James Cornell[EB/OL]. (2008-04-07)[2026-08-27]. https://bsdtalk.blogspot.com/2008/04/bsdtalkalk146-james-cornell.html.
+- [BSDTalk EP146] Backman W. BSDTalk: 146: bsdtalk146 - James Cornell[EB/OL]. (2008-04-07)[2026-08-27]. <https://bsdtalk.blogspot.com/2008/04/bsdtalkalk146-james-cornell.html>.
 
 <!-- /PODCAST_REVIEW -->

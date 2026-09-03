@@ -83,8 +83,8 @@ volume: 第14卷-商业生态与企业案例
 
 **文献**：
 
-- [BSD Now EP194] Pennington J. BSD Now: 194: Daemonic plans[EB/OL]. (2017-05-17)[2026-08-15]. https://www.bsdnow.tv/194.
-- [BSD Now EP622] Pennington J. BSD Now: 622: Interview with Mark Phillips - Technical Marketing Manager at the FreeBSD Foundation[EB/OL]. (2025-07-31)[2026-08-15]. https://www.bsdnow.tv/622.
-- [BSDTalk EP230] Backman W. BSDTalk: 230: bsdtalk230 - vBSDcon with Verisign CTO Burt Kaliski[EB/OL]. (2013-08-14)[2026-08-27]. https://bsdtalk.blogspot.com/2013/08/bsdtalk230-vbsdcon-with-verisign-cto.html.
+- [BSD Now EP194] Pennington J. BSD Now: 194: Daemonic plans[EB/OL]. (2017-05-17)[2026-08-15]. <https://www.bsdnow.tv/194>.
+- [BSD Now EP622] Pennington J. BSD Now: 622: Interview with Mark Phillips - Technical Marketing Manager at the FreeBSD Foundation[EB/OL]. (2025-07-31)[2026-08-15]. <https://www.bsdnow.tv/622>.
+- [BSDTalk EP230] Backman W. BSDTalk: 230: bsdtalk230 - vBSDcon with Verisign CTO Burt Kaliski[EB/OL]. (2013-08-14)[2026-08-27]. <https://bsdtalk.blogspot.com/2013/08/bsdtalk230-vbsdcon-with-verisign-cto.html>.
 
 <!-- /PODCAST_REVIEW -->

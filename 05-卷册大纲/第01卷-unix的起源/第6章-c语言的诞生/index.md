@@ -74,6 +74,6 @@ volume: 第01卷-unix的起源
 
 **文献**：
 
-- [BSD Now EP273] Pennington J. BSD Now: Episode 273: A Thoughtful Episode | BSD Now 273[EB/OL]. (2018-11-23)[2026-08-15]. https://www.bsdnow.tv/273.
+- [BSD Now EP273] Pennington J. BSD Now: Episode 273: A Thoughtful Episode | BSD Now 273[EB/OL]. (2018-11-23)[2026-08-15]. <https://www.bsdnow.tv/273>.
 
 <!-- /PODCAST_REVIEW -->

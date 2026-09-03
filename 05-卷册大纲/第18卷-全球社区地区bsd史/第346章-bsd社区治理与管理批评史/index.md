@@ -74,7 +74,7 @@ volume: 第18卷-全球社区地区bsd史
 
 **文献**：
 
-- [BSD Now EP138] Pennington J. BSD Now: 138: Rushing into BSD[EB/OL]. (2016-04-20)[2026-08-15]. https://www.bsdnow.tv/138.
-- [BSDTalk EP155] Backman W. BSDTalk: 155: bsdtalk 155 - Martin Tournoij from DaemonForums.org[EB/OL]. (2008-07-21)[2026-08-27]. https://bsdtalk.blogspot.com/2008/07/bsdtalk-155-martin-tournoij-from.html.
+- [BSD Now EP138] Pennington J. BSD Now: 138: Rushing into BSD[EB/OL]. (2016-04-20)[2026-08-15]. <https://www.bsdnow.tv/138>.
+- [BSDTalk EP155] Backman W. BSDTalk: 155: bsdtalk 155 - Martin Tournoij from DaemonForums.org[EB/OL]. (2008-07-21)[2026-08-27]. <https://bsdtalk.blogspot.com/2008/07/bsdtalk-155-martin-tournoij-from.html>.
 
 <!-- /PODCAST_REVIEW -->

@@ -70,6 +70,6 @@ volume: 第09卷-netbsd的历史
 
 **文献**：
 
-- [BSD Now EP360] Pennington J. BSD Now: 360: Full circle[EB/OL]. (2020-07-23)[2026-08-15]. https://www.bsdnow.tv/360.
+- [BSD Now EP360] Pennington J. BSD Now: 360: Full circle[EB/OL]. (2020-07-23)[2026-08-15]. <https://www.bsdnow.tv/360>.
 
 <!-- /PODCAST_REVIEW -->

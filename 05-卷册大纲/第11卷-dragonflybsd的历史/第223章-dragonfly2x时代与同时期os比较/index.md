@@ -65,6 +65,6 @@ volume: 第11卷-dragonflybsd的历史
 
 **文献**：
 
-- [BSD Now EP318] Pennington J. BSD Now: 318: The TrueNAS Library[EB/OL]. (2019-10-03)[2026-08-15]. https://www.bsdnow.tv/318.
+- [BSD Now EP318] Pennington J. BSD Now: 318: The TrueNAS Library[EB/OL]. (2019-10-03)[2026-08-15]. <https://www.bsdnow.tv/318>.
 
 <!-- /PODCAST_REVIEW -->

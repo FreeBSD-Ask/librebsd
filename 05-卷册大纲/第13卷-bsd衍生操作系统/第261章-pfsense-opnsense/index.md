@@ -71,7 +71,7 @@ volume: 第13卷-bsd衍生操作系统
 
 **文献**：
 
-- [BSD Now EP21] Pennington J. BSD Now: 21: Tendresse for Ten[EB/OL]. (2014-01-22)[2026-08-15]. https://www.bsdnow.tv/21.
-- [BSDTalk EP255] Backman W. BSDTalk: 255: bsdtalk255 - A quick update[EB/OL]. (2015-08-31)[2026-08-27]. https://bsdtalk.blogspot.com/2015/08/bsdtalk255-quick-update.html.
+- [BSD Now EP21] Pennington J. BSD Now: 21: Tendresse for Ten[EB/OL]. (2014-01-22)[2026-08-15]. <https://www.bsdnow.tv/21>.
+- [BSDTalk EP255] Backman W. BSDTalk: 255: bsdtalk255 - A quick update[EB/OL]. (2015-08-31)[2026-08-27]. <https://bsdtalk.blogspot.com/2015/08/bsdtalk255-quick-update.html>.
 
 <!-- /PODCAST_REVIEW -->

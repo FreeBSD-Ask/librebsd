@@ -128,6 +128,6 @@ volume: 18
 
 **文献**：
 
-- [BSD Now EP209] Pennington J. BSD Now: 209: Signals: gotta catch ‘em all[EB/OL]. (2017-08-30)[2026-08-15]. https://www.bsdnow.tv/209.
+- [BSD Now EP209] Pennington J. BSD Now: 209: Signals: gotta catch ‘em all[EB/OL]. (2017-08-30)[2026-08-15]. <https://www.bsdnow.tv/209>.
 
 <!-- /PODCAST_REVIEW -->

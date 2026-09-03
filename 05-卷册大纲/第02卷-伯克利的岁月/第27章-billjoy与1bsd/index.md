@@ -272,11 +272,11 @@ FreeBSD 发展关键里程碑
 
 **文献**：
 
-- [BSD Now EP362] Pennington J. BSD Now: 362: 2.11-BSD restoration[EB/OL]. (2020-08-06)[2026-08-15]. https://www.bsdnow.tv/362.
-- [BSD Now EP361] Pennington J. BSD Now: 361: Function-based MicroVM[EB/OL]. (2020-07-30)[2026-08-15]. https://www.bsdnow.tv/361.
-- [BSD Now EP278] Pennington J. BSD Now: Episode 278: The Real McCoy | BSD Now 278[EB/OL]. (2018-12-27)[2026-08-15]. https://www.bsdnow.tv/278.
-- [BSDTalk EP18] Backman W. BSDTalk: Interview with Kirk McKusick[EB/OL]. (2006-02-17)[2026-08-15]. https://archive.org/download/bsdtalk018/bsdtalk018.ogg.
-- [YouTube EPnwbqBdghh6E] YouTube. YouTube: FreeBSD Kernel Internals, Dr. Marshall Kirk McKusick[EB/OL]. ()[2026-08-15]. https://www.youtube.com/watch?v=nwbqBdghh6E.
-- [YouTube EPbVSXXeiFLgk] YouTube. YouTube: A Narrative History of BSD[EB/OL]. ()[2026-08-15]. https://www.youtube.com/watch?v=bVSXXeiFLgk.
+- [BSD Now EP362] Pennington J. BSD Now: 362: 2.11-BSD restoration[EB/OL]. (2020-08-06)[2026-08-15]. <https://www.bsdnow.tv/362>.
+- [BSD Now EP361] Pennington J. BSD Now: 361: Function-based MicroVM[EB/OL]. (2020-07-30)[2026-08-15]. <https://www.bsdnow.tv/361>.
+- [BSD Now EP278] Pennington J. BSD Now: Episode 278: The Real McCoy | BSD Now 278[EB/OL]. (2018-12-27)[2026-08-15]. <https://www.bsdnow.tv/278>.
+- [BSDTalk EP18] Backman W. BSDTalk: Interview with Kirk McKusick[EB/OL]. (2006-02-17)[2026-08-15]. <https://archive.org/download/bsdtalk018/bsdtalk018.ogg>.
+- [YouTube EPnwbqBdghh6E] YouTube. YouTube: FreeBSD Kernel Internals, Dr. Marshall Kirk McKusick[EB/OL]. ()[2026-08-15]. <https://www.youtube.com/watch?v=nwbqBdghh6E>.
+- [YouTube EPbVSXXeiFLgk] YouTube. YouTube: A Narrative History of BSD[EB/OL]. ()[2026-08-15]. <https://www.youtube.com/watch?v=bVSXXeiFLgk>.
 
 <!-- /PODCAST_REVIEW -->

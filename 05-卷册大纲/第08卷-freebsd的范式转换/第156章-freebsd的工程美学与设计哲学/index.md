@@ -79,7 +79,7 @@ volume: 第08卷-freebsd的范式转换
 
 **文献**：
 
-- [BSD Now EP108] Pennington J. BSD Now: 108: ServeUp BSD[EB/OL]. (2015-09-23)[2026-08-15]. https://www.bsdnow.tv/108.
-- [BSDTalk EP72] Backman W. BSDTalk: 72: bsdtalk072 - Interview with Poul-Henning Kamp about Varnish[EB/OL]. (2006-10-02)[2026-08-27]. https://archive.org/details/bsdtalk072.
+- [BSD Now EP108] Pennington J. BSD Now: 108: ServeUp BSD[EB/OL]. (2015-09-23)[2026-08-15]. <https://www.bsdnow.tv/108>.
+- [BSDTalk EP72] Backman W. BSDTalk: 72: bsdtalk072 - Interview with Poul-Henning Kamp about Varnish[EB/OL]. (2006-10-02)[2026-08-27]. <https://archive.org/details/bsdtalk072>.
 
 <!-- /PODCAST_REVIEW -->

@@ -95,9 +95,9 @@ volume: 第09卷-netbsd的历史
 
 **文献**：
 
-- [BSD Now EP368] Pennington J. BSD Now: 368: Changing OS roles[EB/OL]. (2020-09-17)[2026-08-15]. https://www.bsdnow.tv/368.
-- [BSD Now EP361] Pennington J. BSD Now: 361: Function-based MicroVM[EB/OL]. (2020-07-30)[2026-08-15]. https://www.bsdnow.tv/361.
-- [BSD Now EP8] Pennington J. BSD Now: 8: A Brief Introduction[EB/OL]. (2013-10-23)[2026-08-15]. https://www.bsdnow.tv/8.
-- [BSDTalk EP232] Backman W. BSDTalk: 232: bsdtalk232 - Thomas Cort[EB/OL]. (2013-10-08)[2026-08-27]. https://bsdtalk.blogspot.com/2013/10/bsdtalk232-thomas-cort.html.
+- [BSD Now EP368] Pennington J. BSD Now: 368: Changing OS roles[EB/OL]. (2020-09-17)[2026-08-15]. <https://www.bsdnow.tv/368>.
+- [BSD Now EP361] Pennington J. BSD Now: 361: Function-based MicroVM[EB/OL]. (2020-07-30)[2026-08-15]. <https://www.bsdnow.tv/361>.
+- [BSD Now EP8] Pennington J. BSD Now: 8: A Brief Introduction[EB/OL]. (2013-10-23)[2026-08-15]. <https://www.bsdnow.tv/8>.
+- [BSDTalk EP232] Backman W. BSDTalk: 232: bsdtalk232 - Thomas Cort[EB/OL]. (2013-10-08)[2026-08-27]. <https://bsdtalk.blogspot.com/2013/10/bsdtalk232-thomas-cort.html>.
 
 <!-- /PODCAST_REVIEW -->

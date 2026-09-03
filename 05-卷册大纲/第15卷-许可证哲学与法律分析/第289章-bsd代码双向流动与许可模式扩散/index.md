@@ -66,6 +66,6 @@ volume: 15
 
 **文献**：
 
-- [BSD Now EP507] Pennington J. BSD Now: 507: Michael W. Lucas Interview[EB/OL]. (2023-05-18)[2026-08-15]. https://www.bsdnow.tv/507.
+- [BSD Now EP507] Pennington J. BSD Now: 507: Michael W. Lucas Interview[EB/OL]. (2023-05-18)[2026-08-15]. <https://www.bsdnow.tv/507>.
 
 <!-- /PODCAST_REVIEW -->

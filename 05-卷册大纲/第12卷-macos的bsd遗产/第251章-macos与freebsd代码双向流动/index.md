@@ -54,6 +54,6 @@ volume: 第12卷-macos的bsd遗产
 
 **文献**：
 
-- [BSDTalk EP19] Backman W. BSDTalk: Interview with Brian Tiemann[EB/OL]. (2006-02-21)[2026-08-15]. https://archive.org/download/bsdtalk019/bsdtalk019.ogg.
+- [BSDTalk EP19] Backman W. BSDTalk: Interview with Brian Tiemann[EB/OL]. (2006-02-21)[2026-08-15]. <https://archive.org/download/bsdtalk019/bsdtalk019.ogg>.
 
 <!-- /PODCAST_REVIEW -->

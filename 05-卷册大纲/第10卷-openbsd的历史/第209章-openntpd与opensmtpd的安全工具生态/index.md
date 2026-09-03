@@ -77,7 +77,7 @@ volume: 第10卷-openbsd的历史
 
 **文献**：
 
-- [BSD Now EP648] Pennington J. BSD Now: 648: Greytrapping for years[EB/OL]. (2026-01-29)[2026-08-15]. https://www.bsdnow.tv/648.
-- [BSDTalk EP23] Backman W. BSDTalk: 23: bsdtalk023 - Interview with OpenBSD developer Henning Brauer[EB/OL]. (2006-03-10)[2026-08-27]. https://archive.org/details/bsdtalk023.
+- [BSD Now EP648] Pennington J. BSD Now: 648: Greytrapping for years[EB/OL]. (2026-01-29)[2026-08-15]. <https://www.bsdnow.tv/648>.
+- [BSDTalk EP23] Backman W. BSDTalk: 23: bsdtalk023 - Interview with OpenBSD developer Henning Brauer[EB/OL]. (2006-03-10)[2026-08-27]. <https://archive.org/details/bsdtalk023>.
 
 <!-- /PODCAST_REVIEW -->

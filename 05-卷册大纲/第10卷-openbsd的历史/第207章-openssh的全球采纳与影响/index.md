@@ -82,8 +82,8 @@ volume: 第10卷-openbsd的历史
 
 **文献**：
 
-- [BSD Now EP322] Pennington J. BSD Now: 322: Happy Birthday, Unix[EB/OL]. (2019-10-31)[2026-08-15]. https://www.bsdnow.tv/322.
-- [BSD Now EP97] Pennington J. BSD Now: 97: Big Network, SmallWall[EB/OL]. (2015-07-08)[2026-08-15]. https://www.bsdnow.tv/97.
-- [BSDTalk EP27] Backman W. BSDTalk: 27: bsdtalk027 - Interview with OpenBSD developer Marco Peereboom[EB/OL]. (2006-03-23)[2026-08-27]. https://archive.org/details/bsdtalk027.
+- [BSD Now EP322] Pennington J. BSD Now: 322: Happy Birthday, Unix[EB/OL]. (2019-10-31)[2026-08-15]. <https://www.bsdnow.tv/322>.
+- [BSD Now EP97] Pennington J. BSD Now: 97: Big Network, SmallWall[EB/OL]. (2015-07-08)[2026-08-15]. <https://www.bsdnow.tv/97>.
+- [BSDTalk EP27] Backman W. BSDTalk: 27: bsdtalk027 - Interview with OpenBSD developer Marco Peereboom[EB/OL]. (2006-03-23)[2026-08-27]. <https://archive.org/details/bsdtalk027>.
 
 <!-- /PODCAST_REVIEW -->

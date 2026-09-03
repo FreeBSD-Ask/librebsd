@@ -99,6 +99,6 @@ volume: 05
 
 **文献**：
 
-- [BSD Now EP231] Pennington J. BSD Now: 231: Unix Architecture Evolution[EB/OL]. (2018-02-01)[2026-08-15]. https://www.bsdnow.tv/231.
+- [BSD Now EP231] Pennington J. BSD Now: 231: Unix Architecture Evolution[EB/OL]. (2018-02-01)[2026-08-15]. <https://www.bsdnow.tv/231>.
 
 <!-- /PODCAST_REVIEW -->

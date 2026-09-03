@@ -63,6 +63,6 @@ volume: 第06卷-freebsd的核心技术革新
 
 **文献**：
 
-- [BSD Now EP112] Pennington J. BSD Now: 112: Tracing the source[EB/OL]. (2015-10-21)[2026-08-15]. https://www.bsdnow.tv/112.
+- [BSD Now EP112] Pennington J. BSD Now: 112: Tracing the source[EB/OL]. (2015-10-21)[2026-08-15]. <https://www.bsdnow.tv/112>.
 
 <!-- /PODCAST_REVIEW -->

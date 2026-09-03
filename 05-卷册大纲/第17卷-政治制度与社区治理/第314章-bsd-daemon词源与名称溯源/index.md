@@ -73,6 +73,6 @@ volume: 第17卷-政治制度与社区治理
 
 **文献**：
 
-- [FLOSS Weekly EP662] Searls D, Powers S. FLOSS Weekly: FreeBSD with Deb Goodkin[EB/OL]. (2022-01-05)[2026-08-15]. https://cdn.twit.tv/audio/floss/floss0662/floss0662.mp3.
+- [FLOSS Weekly EP662] Searls D, Powers S. FLOSS Weekly: FreeBSD with Deb Goodkin[EB/OL]. (2022-01-05)[2026-08-15]. <https://cdn.twit.tv/audio/floss/floss0662/floss0662.mp3>.
 
 <!-- /PODCAST_REVIEW -->

@@ -116,11 +116,11 @@ volume: 第05卷-freebsd的工程化奠基
 
 **文献**：
 
-- [BSD Now EP499] Pennington J. BSD Now: 499: Dan Langille Interview[EB/OL]. (2023-03-23)[2026-08-15]. https://www.bsdnow.tv/499.
-- [BSD Now EP312] Pennington J. BSD Now: 312: Why Package Managers[EB/OL]. (2019-08-22)[2026-08-15]. https://www.bsdnow.tv/312.
-- [BSD Now EP283] Pennington J. BSD Now: 283: Graphical Interface-View[EB/OL]. (2019-01-31)[2026-08-15]. https://www.bsdnow.tv/283.
-- [BSD Now EP223] Pennington J. BSD Now: 223: Compile once, debug twice[EB/OL]. (2017-12-06)[2026-08-15]. https://www.bsdnow.tv/223.
-- [BSD Now EP13] Pennington J. BSD Now: 13: Bridging the Gap[EB/OL]. (2013-11-27)[2026-08-15]. https://www.bsdnow.tv/13.
-- [BSDTalk EP55] Backman W. BSDTalk: 55: bsdtalk055 - Interview with Greg Lehey[EB/OL]. (2006-07-18)[2026-08-27]. https://archive.org/details/bsdtalk055.
+- [BSD Now EP499] Pennington J. BSD Now: 499: Dan Langille Interview[EB/OL]. (2023-03-23)[2026-08-15]. <https://www.bsdnow.tv/499>.
+- [BSD Now EP312] Pennington J. BSD Now: 312: Why Package Managers[EB/OL]. (2019-08-22)[2026-08-15]. <https://www.bsdnow.tv/312>.
+- [BSD Now EP283] Pennington J. BSD Now: 283: Graphical Interface-View[EB/OL]. (2019-01-31)[2026-08-15]. <https://www.bsdnow.tv/283>.
+- [BSD Now EP223] Pennington J. BSD Now: 223: Compile once, debug twice[EB/OL]. (2017-12-06)[2026-08-15]. <https://www.bsdnow.tv/223>.
+- [BSD Now EP13] Pennington J. BSD Now: 13: Bridging the Gap[EB/OL]. (2013-11-27)[2026-08-15]. <https://www.bsdnow.tv/13>.
+- [BSDTalk EP55] Backman W. BSDTalk: 55: bsdtalk055 - Interview with Greg Lehey[EB/OL]. (2006-07-18)[2026-08-27]. <https://archive.org/details/bsdtalk055>.
 
 <!-- /PODCAST_REVIEW -->
