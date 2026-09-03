@@ -42,7 +42,7 @@ volume: 06
 本章所书皆是形式主义化的重构，并非对“真实的 BSD 历史”的呈现。本章的章节划分、事件选择、叙事策略、因果归因——全部基于编纂者的哲学设定。本章承认这些局限，不声称客观或中立，欢迎被更诚实的叙事所超越。
 
 <!-- PODCAST_REVIEW v20260829 -->
-<!-- 语义复核范围：BSD Now EP491、BSD Now EP374、BSD Now EP232、BSD Now EP222、BSD Now EP203、BSDTalk EP197（共 6 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
+<!-- 语义复核范围：BSD Now EP491、BSD Now EP374、BSD Now EP232、BSD Now EP222、BSD Now EP203、BSD Now EP181、BSDTalk EP197（共 7 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
 
 **要点**：
 
@@ -68,6 +68,9 @@ volume: 06
 - 技术反驳包括：去重收益常被压缩抵消，Intel 的分配类（allocation classes）与元数据分层可实现混合存储；George Wilson 与 Matt Ahrens 的 2014/2016 空间分配改进缓解了大而碎池的性能悬崖。（BSD Now EP203，[522.88-800.00]，L2）
 - Theo de Raadt 在 OpenBSD 技术邮件列表报告内核随机重链接（KARL）进展：安装、升级与每次开机都会以随机顺序与偏移重链接生成唯一内核，使单个指针泄露无法推断其他地址，并要求用户测试 6.2 快照。（BSD Now EP203，[4432.62-4690.58]，L2）
 - Jörg Sonnenberg 公告 NetBSD 仓库 CVS→Fossil→Git 转换迁至新家，改用 SHA-512 校验；同期 LibreSSL 2.5.5 与 2.6.0 发布，后者将成为 OpenBSD 6.2 的一部分。（BSD Now EP203，[5080.48-5480.00]，L2）
+- 作为 kqueue 与 illumos event ports 时代的当事工程师，Bryan Cantrill 系统复盘 1990 年代末事件通知机制的三条设计路线：Solaris devpoll 保留轮询语义、BSD kqueue 引入事件注册、event ports 强制事件在分发后与源自动解关联直至消费线程重新关联；他论证唯有解关联模型能避免多线程环境下同一文件描述符事件被重复分发，并批评 epoll 沿用 devpoll 模型且以描述符数值绑定事件，在 dup、close 与 fork 场景产生无法自洽的语义，如“the Epol man page is remarkably frank about all the design defects involved”（3915.12-3921.54），并进而解释 DTrace 与 ZFS 长期缺席 Linux 的文化根源。（BSD Now EP181，[3889.76-3928.32]，L1）
+- 访谈三给出 D-Trace 起源的完整口述：1996 年入职 Sun 后从事端到端调度器研究，1997 年 12 月参与 E10K 大型机 SAP 基准排障时发现系统在系统态长时间空转而无任何工具可以定位，最终查明为机器被误配置为路由器、叠加一台固件有缺陷的路由器周期性重启所致，由此确立“任何普通配置错误都可能造成不可观测系统”的问题意识；2001 年 11 月他与 Mike Shapiro、Adam Leventhal 启动动态内核插桩项目，2003 年 9 月随 Solaris 10 发布，2005 年 1 月成为 Sun 开源系统的首个组件，随后经 John Birrell 移植 FreeBSD、Apple 在 WWDC 宣布移植 macOS、QNX 亦采纳。（BSD Now EP181，[2997.47-3180.90]，L1）
+- illumos 团队对 rm -rf / 实现了在符合 POSIX 前提下的防护：起因是 Solaris patchadd 对非补丁输入执行未初始化变量的删除而清空整机的真实事故，团队细读标准后发现多处删除中任一失败即进入未定义行为、且删除当前目录恒为非法，遂令 rm 实现先尝试删除当前目录从而整体失败；Cantrill 以 Steam 客户端与 Red Hat 测试包的同型事故说明此类删除几乎均由脚本未初始化变量引起，防护具有普遍系统意义，该治理思路被视为值得 FreeBSD 借鉴的 illumos 惯例。（BSD Now EP181，[5213.96-5478.64]，L1）
 - FreeBSD 核心团队成员 M. Warner Losh 自述 2007 年以来推动嵌入式 FreeBSD 议程并从事 MIPS 移植，2010 年出任 iXsystems 自由软件开发总监后主持 FreeNAS 8 重构：目标是从单一 NAS 设备转向可跨 FreeBSD 版本移植、可扩展至打印与媒体服务等用途的平台，并以 Alpha 快照形式向社区公开测试。（BSDTalk EP197，[62.72-117.12]，L1）
 - FreeNAS 8 的工程基座由旧版沿用 m0n0wall 的 crunched binary 方案整体切换为 NanoBSD：该框架作为 FreeBSD 源树内的打包脚本随主线同步，天然继承全部架构与驱动支持，以约半 GB 镜像面向 CF 卡介质，并通过双分区交替写入实现更新失败即回滚；配置层则改为以 SQLite 数据库统一建模主机、接口、磁盘与卷，开机时由 Shell 与 Python 脚本生成配置文件，Django 提供 MVC 式 Web 界面，数据模式带版本化转换层以延续旧版免手工合并的升级体验。　[存疑脚注] 转写将 NanoBSD 作者记作 Paul Hennigkamp，按 FreeBSD 通行史料应为 Poul-Henning Kamp，属转写音误（BSDTalk EP197，[293.88-1041.86]，L1）
 - Losh 从工程角度论证 ZFS 的必要性：磁盘容量增长快于错误率下降使完整性校验与自动纠错成为刚需，ZFS 的去重、压缩、池动态扩容与数据冗余构成对低端商用 NAS 盒的差异化优势；其成熟度随各版本导入 FreeBSD 持续改善，且已有公司围绕 FreeBSD 加 ZFS 开展开发，即便 Oracle 不再发布新代码，ZFS 在 FreeBSD 生态中也足以独立维持演化。（BSDTalk EP197，[1544.10-1681.78]，L1）
@@ -89,6 +92,7 @@ volume: 06
 - Netflix 架构科普文章，含 700 微服务、AWS 转码、DRM 与 Open Connect 的描述。（BSD Now EP222，[2014.12-2054.92]，L2）
 - 转述 EuroBSDCon 2017 参会者 Vincent 的游记，含 OpenBSD 包工具、Coreboot、DragonFly 图形栈等演讲。（BSD Now EP222，[4664.98-4934.78]，L2）
 - OpenZFS wiki 公司列表与 Dev Summit 材料；OpenBSD 技术邮件列表 KARL 状态帖；NetBSD announce 仓库转换公告；LibreSSL 发布说明。（BSD Now EP203，[148.62-5480.00]，L2）
+- 本期可依凭的一手材料包括：epoll 手册页对自身多线程与 fork 缺陷的自述、POSIX 标准中 rm 处理失败与删除当前目录的条款原文、illumos 对 rm 的防护实现、2015 年 8 月 FreeBSD patch 工具经 ed 注入命令的安全修复、Oracle 首席安全官 Mary Ann Davidson 2015 年 8 月反对逆向工程的博客及其被撤下的过程、Torvalds 2001 年前后反对让内核可调试的邮件言论、2016 年 11 月 Linux 将 BUG_ON 批量替换为 WARN_ON 的补丁讨论，以及受访者本人保存的 Sun 时代工程经历与访谈录音本身。（BSD Now EP181，[10743.66-10765.86]，L2）
 - 该期一手史料以 Losh 口述为主：2007 年起的 FreeBSD MIPS 移植与嵌入式推广经历、FreeBSD 9 计划引入 soft updates journaling 以获得接近 ZFS 的快速重启、Oracle 承诺每个 Solaris 大版本后发布 ZFS 源码转储；开场主持人并提及通知工具 biff 最早见于 4.0BSD，属其固定片头考据。（BSDTalk EP197，[34.00-144.00]，L1）
 
 **史观**：
@@ -105,6 +109,9 @@ volume: 06
 - 总纲9 经验优先：Netflix 的 Open Connect 以 FreeBSD 作为边缘分发设备，被呈现为企业选型中经验与工程实践优先于流行度。（BSD Now EP222，[2320.66-2377.7]，L2）
 - 总纲5 没有必然性，只有偶然性：ZFS 从 Sun 内部项目到 OpenZFS 社区的转折由诉讼、收购等偶然事件驱动，社区分叉后反而延续了技术生命，体现分离聚合与偶然性在文件系统史中的塑造。（BSD Now EP203，[148.62-241.44]，L2）
 - 总纲10 动手者创造历史：KARL 把安全机制落实为每次开机的具体重构，由 Theo 与协助者在 hackathon 上动手实现，显示安全演进来自动手者的直接推进而非抽象原则。（BSD Now EP203，[4432.62-4690.58]，L2）
+- 总纲9 经验优先：Cantrill 明确期待“someday historians are going to go back and watch these interviews and stuff and start writing the history of all this stuff that happened in the 90s”（4168.38-4176.08），把当事人访谈视为未来书写 1990 年代操作系统史的一手根据；这与以口述、邮件列表与当事人一手材料优先构筑历史叙述的取径一致，即先有可考的经验材料，方有可复核的历史。（BSD Now EP181，[4168.38-4176.08]，L1）
+- 总纲21 革命与改革是历史方法论的分歧：Cantrill 将 Linux 的路径概括为“Linux is not designed. This is the problem. It evolves.”（9555.08-9562.86），并断言 ZFS、DTrace、容器与安全这类问题无法靠渐进演化达成，必须允许有人重新思考并以一次整体设计整合大块工作；由此他把工程文化的差异上升为两种历史方法论的对立——革命式的整体设计与改革式的增量演化，且认为后者的社区会自发排斥前者的实践者。（BSD Now EP181，[9555.08-9666.18]，L1）
+- 总纲8 本体论上各方平等：Cantrill 拒绝单一赢家叙事：容器领域不存在所谓“VMware of containers”，技术世界的未来更像编程语言与数据库的多选格局，让人为任务挑选合适的系统，而 1990 年代式的一统天下思维已被证伪；他以 OpenSSL 单一文化酿成 Heartbleed 一类系统性风险为例，主张在开源世界维护异质生态，并在本体论层面把 FreeBSD、illumos 与 Linux 视为平等并存、各有设计中心的技术选项。（BSD Now EP181，[13198.74-13253.74]，L1）
 - 总纲10 动手者创造历史：Losh 强调 iXsystems 在对外发布前做了九个月幕后基础工作以先达到稳定点， FreeNAS 的展示价值依赖具体动手者的持续工程投入而非营销叙事。（BSDTalk EP197，[244.32-272.88]，L1）
 - 总纲3 不存在进步，只有权力再分配：iXsystems 接管 FreeNAS 引发社区对商业公司收编的普遍焦虑，Losh 以 FreeBSD 式治理回应——做实际工作的人拥有最大话语权、开发全部公开、基础产品永久免费而收入来自整机与服务——显示项目控制权在个人维护者与公司之间的再分配，而非单纯的技术进步叙事。（BSDTalk EP197，[1828.74-1925.56]，L1）
 - 总纲4 分离聚合是永恒规律：Losh 判断 ZFS 即使在 Oracle 停止发布代码的情况下也已有足够多的公司与 FreeBSD 社区承托而将长期自持演化，呈现核心技术器物脱离其原属商业母体后经由开源社区聚合再生的轨迹。（BSDTalk EP197，[1650.34-1681.78]，L1）
@@ -116,6 +123,7 @@ volume: 06
 - 转写中 OpenBSD 6.8 随机种子置信度标记被表述为“RB_GOODRANDOM”，其具体宏名与语义应以 OpenBSD 6.8 发布说明及源码为准。　[存疑脚注] 具体宏名待官方变更日志核对（BSD Now EP374，[397.32-447.44]，L4）
 - 宽容许可证的讨论源自一篇德语科技网站争论的二手转述，博客作者身份与原始争论语境未能从转写确认，各阵营主张未经独立核验。　[存疑脚注] 博客原文语境与争论双方身份无法从转写核实（BSD Now EP232，[1493.02-1547.18]，L4）
 - Netflix 架构细节（微服务数量、DRM 与缓存策略）系二手科普文章转述，且节目自身注明“地图不按比例”等不确定处，具体数字须以 Netflix 工程博客核实。　[存疑脚注] 架构数字系二手转述，须以 Netflix 官方资料核实（BSD Now EP222，[2631.92-2643.76]，L4）
+- Cantrill 称 Linux MADV_DONTNEED 的破坏性语义源自 Digital UNIX 并由 Tru64 延续（9320.40-9324.60），另以 JemAlloc 对该行为清零保证的隐性依赖说明其危害之隐蔽；此溯源与 Tru64 语义谱系的论断均为访谈口述的单一来源推断，属于可辨识但未独立核证的细节。　[存疑脚注] MADV_DONTNEED 消极语义源自 Digital UNIX/Tru64 的谱系仅见本期口述，未核对 Tru64 手册页与 Linux man-pages 变更史，采信前需查证（BSD Now EP181，[9320.40-9338.74]，L4）
 - Losh 关于基础产品永久免费、不搞快照独占、按 FreeBSD 模式开放治理的表述属 2010 年 9 月当事人的意图性承诺，其兑现程度（尤其 FreeNAS 之后向 TrueNAS 的转型路径）须与后续项目实际演化交叉验证后方可作为史实引用。　[存疑脚注] 当期承诺性陈述，非既成史实；与 260.2 TrueNAS 企业化演进的后续记载互证后方可采信（BSDTalk EP197，[1828.74-1969.14]，L5）
 
 **文献**：
@@ -125,6 +133,7 @@ volume: 06
 - [BSD Now EP232] Pennington J. BSD Now: 232: FOSDEM 2018[EB/OL]. (2018-02-07)[2026-08-15]. https://www.bsdnow.tv/232.
 - [BSD Now EP222] Pennington J. BSD Now: 222: How Netflix works[EB/OL]. (2017-11-29)[2026-08-15]. https://www.bsdnow.tv/222.
 - [BSD Now EP203] Pennington J. BSD Now: 203: For the love of ZFS[EB/OL]. (2017-07-19)[2026-08-15]. https://www.bsdnow.tv/203.
+- [BSD Now EP181] Pennington J. BSD Now: 181: The Cantrillogy (Not special edition)[EB/OL]. (2017-02-15)[2026-08-15]. https://www.bsdnow.tv/181.
 - [BSDTalk EP197] Backman W. BSDTalk: 197: bsdtalk197 - FreeNAS 8 with M. Warner Losh[EB/OL]. (2010-09-19)[2026-08-27]. https://bsdtalk.blogspot.com/2010/09/bsdtalk197-freenas-8-with-m-warner-losh.html.
 
 <!-- /PODCAST_REVIEW -->

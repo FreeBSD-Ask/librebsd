@@ -53,7 +53,7 @@ volume: 第01卷-unix的起源
 - City of Berkeley. Charter of the City of Berkeley [Z]. 1909-07-01. Internet Archive: <https://ia800603.us.archive.org/6/items/charterineffectj00berk/charterineffectj00berk.pdf>; City of Berkeley. Charter of the city of Berkeley [M]. Berkeley, Calif.: Lederer, Street & Zeus Co., 1909. Internet Archive: <https://archive.org/details/charterofcityofb00berk>; HathiTrust. Charter of the city of Berkeley [Catalog Record]. <https://catalog.hathitrust.org/Record/102439738>; City of Berkeley. The Charter [EB/OL]. [2026-07-25]. <https://berkeley.municipal.codes/Charter/TheCharter>; UC Berkeley Law Library. Charter of the city of Berkeley [Catalog Record]. <https://lawcat.berkeley.edu/record/323845>; City of Berkeley Records 1878-1954 [Archive]. UC Berkeley Bancroft Library. OAC Finding Aid: ark:/13030/kt4h4nc4mb ［A］
 
 <!-- PODCAST_REVIEW v20260829 -->
-<!-- 语义复核范围：BSD Now EP231、BSD Now EP225、BSD Now EP172、BSD Now EP74（共 4 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
+<!-- 语义复核范围：BSD Now EP231、BSD Now EP225、BSD Now EP173、BSD Now EP172、BSD Now EP74（共 5 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
 
 **要点**：
 
@@ -65,6 +65,10 @@ volume: 第01卷-unix的起源
 - PDP-11 回顾引述 C Gordon Bell 等人的论文，梳理 DEC 1957 年创立、以“Programmed Data Processor”避讳“计算机”一词，以及 PDP-11 在地址位、寄存器、栈、中断、字符处理上的设计取舍。（BSD Now EP225，[1844.12-1885.92]，L2）
 - 该回顾点明 UNIX 1974 年由 Ken Thompson 携磁带抵达伯克利，演化出 BSD 与 Sun Microsystems；C 的 16 位 int 亦源自 PDP-11。（BSD Now EP225，[2883.82-2958.5]，L2）
 - FreeBSD 2017 发布工程回顾：Glen Barber 全职工负责发布工程，11.1 于 7 月 21 日发布，10.4 由另一名发布工程师领衔并作为 stable 10 分支的最终版本。（BSD Now EP225，[3334.96-3475.08]，L2）
+- Johannes Lundberg 向 FreeBSD 邮件列表提交 Wayland 移植进度报告：Wayland 1.12.0 与 Weston 1.12.0 已可在 FreeBSD 上运行，Weston 自带客户端工作正常，xWayland 可承载未移植的 X11 应用（仅手动启动且最大化窗口时正常，疑为 Weston IPC 问题），GTK3 应用如 gedit、Gnumeric 与 XFCE4 终端、XFCE 桌面均可运行，SDL2 的 Wayland 后端经游戏简测通过，i3 兼容合成器 Sway 亦可用；现代 Intel 显卡需 Matt Macy 的新图形驱动工作，并以自维护 ports 树配合 Poudriere 重建图形栈乃至全树；gdm 因依赖 Linux 的 logind 而搁置，社区有意改以 Qt 系的 PCDM 承接。（BSD Now EP173，[279.52-327.5]，L2）
+- Antoine Jacoutot 向 OpenBSD 邮件列表公告 syspatch：面向 -stable 发行版的二进制补丁工具，与 bspatch 式二进制差分不同，它下载经签名的完整文件 tarball 并按安装器方式替换；测试补丁未经 OpenBSD 项目背书且不应信任，反馈须直达其个人邮箱而非污染邮件列表；此前升级 -stable 只能源码重建或重装新快照，syspatch 提供了中间道路，作者期望其随 OpenBSD 6.1 落地，并明确需要使用人数与统计反馈来评估可靠性。（BSD Now EP173，[105.04-203.7]，L2）
+- Dennis Ritchie 撰文追述 Unix 源码中的趣味史：V6 彩蛋“values of B may give rise to DOM”出自 1970 年代初专利打字员打断 ed 打印输出时纸带上的残句，原是物理专利申请中‘贝塔值变化引起畴壁移动’的片段，经 McIlroy 的文语转换实验念出 doom 与 dominance 的谐音而成为实验室的共享珍宝，后被写入 V6 源码——里奇推测大概率出自 Bob Morris，也可能是 Ken；他并澄清“你不会被期望理解这段注释”本意是‘这不会考’式的善意提示而非傲慢挑衅，将其引为贝尔实验室注释质量的 slur 属不公正引申，见过原文者多为 1975 年前后第六版用户或 John Lions 注释书的读者。（BSD Now EP173，[2332.96-2512.8]，L1）
+- Beastie bits 一束：iocell 2.0 发布——一位 FreeBSD 开发者因偏爱 shell 脚本版而分叉原 iocage 并继续演进，Python 重写版则临近发布，两者存储监牢配置的方式相近或可兼容；Ted Unangst 追问 link_ntoa() 究竟谁在调用——该函数缺陷自 1970 年代引入并波及所有 BSD，OpenBSD libc 中已标记弃用，全库检索仅 route 与 netstat 三处引用，或可直接移除；Trent 用其 bhyve 管理框架 iohyve 在 ThinkPad 上的 TrueOS 中启动 Android x86 并公开配置 gist。（BSD Now EP173，[2795.08-2949.74]，L2）
 - Rod Grimes 自述 1970 年代初在 Oregon Museum of Science and Industry 的 PDP-11/45 上，利用夜间时段重新引导系统运行早期 AT&T Research Unix，白天机器则运行博物馆业务用的分时系统，并使用 Tektronix 4000 系列图形终端。（BSD Now EP172，[1331.76-1442.94]，L1）
 - FreeBSD 创建时期，Rod Grimes 主要用 386BSD 做 SLIP 路由器以避开拨号 BBS 的 shell 上网方式，并借此获取 SPICE 等电子工程软件，时间约为 1992 年。（BSD Now EP172，[1487.16-1557.9]，L1）
 - Rod Grimes 用 dd 反复读取坏块做磁盘数据恢复，指出 FreeBSD 在 ATA 或 SCSI 设备被卡住时不像其他系统那样锁死，因此长期用于路由器、LAMP 服务器与批量邮件系统。（BSD Now EP172，[1600.96-1667.48]，L1）
@@ -91,6 +95,7 @@ volume: 第01卷-unix的起源
 - C Gordon Bell 等人论文（“What have we learned from the PDP-11?” 等四篇）的转述，含 1957 年 DEC 创立与 PDP-11 设计回顾。（BSD Now EP225，[1940.36-1968.48]，L2）
 - 转述的 OpenBSD 工作站指南，含用户动作即时完成、极简工具、硬件隐私等设计目标。（BSD Now EP225，[542.34-652.4]，L2）
 - FreeBSD 基金会 2017 发布工程回顾（Glen Barber 的 VBSDCon 演讲与问答）。（BSD Now EP225，[3334.96-3771.04]，L2）
+- 本期涉及的一手史料包括：Doug McIlroy 邮件列表文章（Unix 如何走出实验室直达 AT&T 高层的亲历记）、Dennis Ritchie 的 Unix 彩蛋史话与 John Lions 的 UNIX 第六版注释书、Johannes Lundberg 的 Wayland 进度报告、Antoine Jacoutot 的 syspatch 公告信、Ed Maste 的可复现构建报告及 Phabricator 评审、Mark Felder 的 FreeBSD 加 ZFS 仿 Time Capsule 教程（NetATalk 3 与 Avahi）、Olivier Cochard-Labbe 的 NetBenches 网络基准仓库（含 FreeBSD IPsec 性能分支的 AES-NI 实测数据）、Brian 的 OpenBSD/Arch 双系统博客、Ted Unangst 关于 link_ntoa() 的调用面分析、Trent 的 iohyve 配置 gist，以及 BSDCan 2017 征文启事。（BSD Now EP173，[2191.18-2200.26]，L2）
 - Rod Grimes 访谈自述（FreeBSD 创始成员、BSD janitor），覆盖 1970 年代初 Unix 接触与 FreeBSD 创建史。（BSD Now EP172，[1315.96-3158.28]，L1）
 - Damien Miller 发布的 OpenSSH 7.4 公开测试说明与变更清单。（BSD Now EP172，[94.39-393.72]，L2）
 - Ingo Schwarze 的 LibreSSL 手册转换 hackathon 报告（含 pod2mdoc 转换时间线）。（BSD Now EP172，[3495.94-3681.4]，L2）
@@ -104,6 +109,8 @@ volume: 第01卷-unix的起源
 - 总纲9 经验优先：贝尔的回顾强调计算机是“总体设计环境”的产物，成功在于为当下造出正确的机器，呼应经验优先的取向。（BSD Now EP225，[2066.0-2101.76]，L2）
 - 总纲4 分离聚合是永恒规律：PDP-11 的开放架构使任何按规范实现者皆可称 PDP-11，DEC 内部形成快慢两条实现路线，体现分离聚合的规律。（BSD Now EP225，[2184.72-2209.84]，L2）
 - 总纲10 动手者创造历史：发布工程回顾强调除 Glen Barber 外还有大量不在聚光灯下的人协作，凸显动手者叙事。（BSD Now EP225，[3746.94-3769.1]，L2）
+- 总纲5 没有必然性，只有偶然性：McIlroy 亲述的 Unix 采纳史拒绝任何必然性叙事：贝尔实验室法律部门成为第一个研究外用户，只因新购的独立文字处理系统应付不了美国专利局要求的行数，而 Joe Ossanna 承诺次日为 troff 加上行号；AT&T 总裁办公室购入 Unix，只因总裁不愿戴眼镜读讲稿、而实验室的照排中心能以大号字排版讲稿；他以‘正如人们因杯架买车’作结——Unix 的扩散系于行号与虚荣这类琐碎偶然条件，技术优劣的理性论证反倒是后来追加的解释。（BSD Now EP173，[2200.94-2310.2]，L1）
+- 总纲17 证明世界先于解释和改造世界：Ed Maste 宣布 FreeBSD 基本系统可复现构建达到 100%，经 Phabricator 评审但暂需显式设置构建变量，因不少开发者珍视 uname -a 中的构建日期与 SVN 版本号；主持人追溯 2013 年前后 AsiaBSDCon 上的可复现构建演讲，期待发布版 ISO 能被第三方以相同旗标重建出逐比特一致的二进制——以可证明的一致性取代对发行者的信任承诺，是工程文化从解释走向证明的一个节点。（BSD Now EP173，[2589.52-2698.72]，L2）
 - 总纲5 没有必然性，只有偶然性：Rod Grimes 强调 FreeBSD 的诞生出于必要与愿望而非与对手竞争，具体起点由当时的人和需求决定，而非历史必然。（BSD Now EP172，[1807.66-1906.68]，L3）
 - 总纲6 和解优于斗争：Rod Grimes 认为独裁会分裂团队，合作环境更能避免分裂，治理选择倾向于和解而非斗争。（BSD Now EP172，[1945.54-2003.26]，L3）
 - 总纲9 经验优先：ports collection 让“别人已完成的移植”成为可复用经验，使个体不必重复劳动，工程效率建立在经验累积之上。（BSD Now EP172，[2210.38-2247.96]，L3）
@@ -116,6 +123,7 @@ volume: 第01卷-unix的起源
 
 - 访谈嘉宾姓名在转写中为“Diomedes Spinalis”的语音转写，具体拼写须核对 FOSDEM 演讲者名单；转写亦出现“Thomas Zoom”等疑似误转的人名。　[存疑脚注] 嘉宾姓名及若干人名拼写须以会议议程核实（BSD Now EP231，[90.64-97.48]，L4）
 - PDP-11 回顾系博客作者对贝尔论文的二手转述，且转写将“Maria Strobel”等专名误转，人名与具体数字须核对原文。　[存疑脚注] 专名与数字须以贝尔论文原文核实（BSD Now EP225，[1927.8-1965.5]，L4）
+- OpenBSD 与 Arch Linux 双系统互毁 GPT 备份头的辨析：读者在 gdisk 中连报磁盘尺寸与主头不符、备份头无效、主备分区表不一致、CRC 失配四重警告，先按提示以主表重建备份表仍反复复现，最终以 MBR 加 LUKS 与 LVM 的非常规组合绕过；主持人推断两系统对该盘一个按 4K 扇区、一个按 512 字节扇区定位盘尾备份头，导致互相覆盖后无法互认，并可能只是特定硬盘的 quirk；主持人借此事强调详细记录、多次复现并投递邮件列表的边界用例报告文化。　[存疑脚注] 4K 与 512 字节扇区判定差异仅系主持人远程假设，最终根因取决于读者后续向 tech 邮件列表的报告，转写中未见定论。（BSD Now EP173，[811.82-901.68]，L4）
 - [存疑脚注] 转写将 OMSI 白天运行的分时系统记作“RISC-C”，疑为 DEC RSTS/E 的误转；Rod Grimes 首次接触 Unix 的具体年份与机型须以一手采访或档案复核。　[存疑脚注] 分时系统名与年份须核验一手资料。（BSD Now EP172，[1452.7-1463.98]，L4）
 - [存疑脚注] OpenBSD Foundation 首笔铱金捐赠方转写为“smartizan/smartian”，疑指 Smartisan（锤子科技），280,000 加元金额与币种须核验官方公告。　[存疑脚注] 捐赠方名称与金额须核验。（BSD Now EP172，[4417.12-4457.48]，L4）
 - [考据脚注] DEMOS 全称在转写中变形严重，应为俄语“Диалоговая Единая Мобильная Операционная Система”的英译，引用时须以俄文一手资料核验。　[考据脚注] 俄文全称须核验一手资料。（BSD Now EP172，[4557.02-4586.12]，L4）
@@ -126,6 +134,7 @@ volume: 第01卷-unix的起源
 
 - [BSD Now EP231] Pennington J. BSD Now: 231: Unix Architecture Evolution[EB/OL]. (2018-02-01)[2026-08-15]. https://www.bsdnow.tv/231.
 - [BSD Now EP225] Pennington J. BSD Now: 225: The one true OS[EB/OL]. (2017-12-20)[2026-08-15]. https://www.bsdnow.tv/225.
+- [BSD Now EP173] Pennington J. BSD Now: 173: Carry on my Wayland son[EB/OL]. (2016-12-21)[2026-08-15]. https://www.bsdnow.tv/173.
 - [BSD Now EP172] Pennington J. BSD Now: 172: A tale of BSD from yore[EB/OL]. (2016-12-14)[2026-08-15]. https://www.bsdnow.tv/172.
 - [BSD Now EP74] Pennington J. BSD Now: 74: That Sly MINIX[EB/OL]. (2015-01-28)[2026-08-15]. https://www.bsdnow.tv/74.
 

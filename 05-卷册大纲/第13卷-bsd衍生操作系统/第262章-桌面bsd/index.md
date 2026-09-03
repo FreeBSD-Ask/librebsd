@@ -33,7 +33,7 @@ volume: 第13卷-bsd衍生操作系统
 - [DB:references_fulltext] 参考文献全文数据库（4077 篇全文，27138 条时间线事件）—— 对应 bsd-derivatives.duckdb
 
 <!-- PODCAST_REVIEW v20260829 -->
-<!-- 语义复核范围：BSD Now EP505、BSD Now EP651、BSD Now EP370、BSD Now EP348、BSD Now EP276、BSD Now EP633、BSD Now EP99、BSD Now EP75、BSD Now EP54、BSD Now EP580、BSDTalk EP14、BSDTalk EP244、BSDTalk EP252、BSDTalk EP75（共 14 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
+<!-- 语义复核范围：BSD Now EP505、BSD Now EP651、BSD Now EP370、BSD Now EP348、BSD Now EP276、BSD Now EP633、BSD Now EP173、BSD Now EP99、BSD Now EP75、BSD Now EP54、BSD Now EP580、BSDTalk EP14、BSDTalk EP244、BSDTalk EP252、BSDTalk EP75（共 15 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
 
 **要点**：
 
@@ -63,6 +63,10 @@ volume: 第13卷-bsd衍生操作系统
 - OpenSSH 10.1 于 2025 年 10 月 6 日发布，修复用户名控制字符注入问题，并新增 SIGINFO 通道日志、PKCS#11 ED25519 支持与 refuse connection 配置项。（BSD Now EP633，[2126.22-2590.12]，L2）
 - Brian Kernighan 在 VCF East 2025 表示只写过一次 Rust 且体验不佳，认为其 crate 与编译链庞大缓慢，同时坦言对 NixOS 与多数发行版并不熟悉。（BSD Now EP633，[2757.82-3220.12]，L1）
 - GhostBSD 25.02 基于 FreeBSD 14.3，新增以 GNUstep 组件与 XFCE 面板组合的 Gershwin 桌面，提供类 macOS 体验。（BSD Now EP633，[3371.86-3563.32]，L2）
+- Johannes Lundberg 向 FreeBSD 邮件列表提交 Wayland 移植进度报告：Wayland 1.12.0 与 Weston 1.12.0 已可在 FreeBSD 上运行，Weston 自带客户端工作正常，xWayland 可承载未移植的 X11 应用（仅手动启动且最大化窗口时正常，疑为 Weston IPC 问题），GTK3 应用如 gedit、Gnumeric 与 XFCE4 终端、XFCE 桌面均可运行，SDL2 的 Wayland 后端经游戏简测通过，i3 兼容合成器 Sway 亦可用；现代 Intel 显卡需 Matt Macy 的新图形驱动工作，并以自维护 ports 树配合 Poudriere 重建图形栈乃至全树；gdm 因依赖 Linux 的 logind 而搁置，社区有意改以 Qt 系的 PCDM 承接。（BSD Now EP173，[279.52-327.5]，L2）
+- Antoine Jacoutot 向 OpenBSD 邮件列表公告 syspatch：面向 -stable 发行版的二进制补丁工具，与 bspatch 式二进制差分不同，它下载经签名的完整文件 tarball 并按安装器方式替换；测试补丁未经 OpenBSD 项目背书且不应信任，反馈须直达其个人邮箱而非污染邮件列表；此前升级 -stable 只能源码重建或重装新快照，syspatch 提供了中间道路，作者期望其随 OpenBSD 6.1 落地，并明确需要使用人数与统计反馈来评估可靠性。（BSD Now EP173，[105.04-203.7]，L2）
+- Dennis Ritchie 撰文追述 Unix 源码中的趣味史：V6 彩蛋“values of B may give rise to DOM”出自 1970 年代初专利打字员打断 ed 打印输出时纸带上的残句，原是物理专利申请中‘贝塔值变化引起畴壁移动’的片段，经 McIlroy 的文语转换实验念出 doom 与 dominance 的谐音而成为实验室的共享珍宝，后被写入 V6 源码——里奇推测大概率出自 Bob Morris，也可能是 Ken；他并澄清“你不会被期望理解这段注释”本意是‘这不会考’式的善意提示而非傲慢挑衅，将其引为贝尔实验室注释质量的 slur 属不公正引申，见过原文者多为 1975 年前后第六版用户或 John Lions 注释书的读者。（BSD Now EP173，[2332.96-2512.8]，L1）
+- Beastie bits 一束：iocell 2.0 发布——一位 FreeBSD 开发者因偏爱 shell 脚本版而分叉原 iocage 并继续演进，Python 重写版则临近发布，两者存储监牢配置的方式相近或可兼容；Ted Unangst 追问 link_ntoa() 究竟谁在调用——该函数缺陷自 1970 年代引入并波及所有 BSD，OpenBSD libc 中已标记弃用，全库检索仅 route 与 netstat 三处引用，或可直接移除；Trent 用其 bhyve 管理框架 iohyve 在 ThinkPad 上的 TrueOS 中启动 Android x86 并公开配置 gist。（BSD Now EP173，[2795.08-2949.74]，L2）
 - OpenBSD 在 2015 年开发周期推出实验性沙箱机制 tame：以单个系统调用把进程锁定在有限的操作类别（计算、内存管理、网络、文件描述符写操作、打开文件等）之内，限制可层层叠加且一经放弃不可恢复；相比要求围绕能力模型重写程序的 Capsicum，tame 以更小改造成本换取快速普及，内核部分已合入源码树，userland 改动陆续跟进，cat、ping、httpd、ntpd、syslogd、tcpdump、traceroute 等 29 个基础程序已开始接入。（BSD Now EP99，[87.36-139.34]，L2）
 - GLib 维护者 Ryan Lortie 以当事人身份拆解 KDBus 的动因与设计：现行 D-Bus 依赖系统级与会话级两个用户态守护进程中转消息，一次调用需四次上下文切换并伴随大量数据拷贝，且规范强制守护进程逐项校验；KDBus 将内核本身变为消息传递机制，改传不透明数据块并把校验责任移至接收方，其关键依赖 MemFD 配合 sealing，让发送方承诺缓冲区不可变并由内核背书，而这一机制在 BSD 上完全不存在，构成移植的硬缺口；他坦言此前多次把 D-Bus 塞进内核的尝试“皆以失败告终”（2662.99-2677.20），本次团队更强但进展依然艰难。（BSD Now EP99，[2488.84-2649.36]，L1）
 - 访谈从 BSD 侧揭示跨平台移植的结构性障碍：Baptiste 列举 kqueue64 缺失（Apple 已有实现而 FreeBSD 无人认领）、文件系统监控机制（inotify 或 FSEvents 类）空白、systemd 所提供 API 需要等价替代三座大山；Ryan Lortie 则从上游视角呼吁 BSD 开发者尽早介入 API 设计而非发布后移植，指出在 FreeBSD 上实现“类似 KDBus”的东西意味着重复承担序列化、消息传递与凭据检查的全部表面面积，而早期参与讨论甚至可能反过来改进 Linux 侧的设计。（BSD Now EP99，[2718.62-2790.24]，L1）
@@ -121,6 +125,7 @@ volume: 第13卷-bsd衍生操作系统
 - fastcode.io 关于 VMware 收购与 Bitnami 收费的报道。（BSD Now EP633，[1612.96-2123.00]，L2）
 - OpenSSH 10.1 官方发布说明。（BSD Now EP633，[2126.22-2590.12]，L2）
 - The New Stack 对 Brian Kernighan 在 VCF East 2025 问答的报道。（BSD Now EP633，[2749.04-3342.34]，L2）
+- 本期涉及的一手史料包括：Doug McIlroy 邮件列表文章（Unix 如何走出实验室直达 AT&T 高层的亲历记）、Dennis Ritchie 的 Unix 彩蛋史话与 John Lions 的 UNIX 第六版注释书、Johannes Lundberg 的 Wayland 进度报告、Antoine Jacoutot 的 syspatch 公告信、Ed Maste 的可复现构建报告及 Phabricator 评审、Mark Felder 的 FreeBSD 加 ZFS 仿 Time Capsule 教程（NetATalk 3 与 Avahi）、Olivier Cochard-Labbe 的 NetBenches 网络基准仓库（含 FreeBSD IPsec 性能分支的 AES-NI 实测数据）、Brian 的 OpenBSD/Arch 双系统博客、Ted Unangst 关于 link_ntoa() 的调用面分析、Trent 的 iohyve 配置 gist，以及 BSDCan 2017 征文启事。（BSD Now EP173，[2191.18-2200.26]，L2）
 - 本期可资引用的一手史料包括：BSDCan 2015 现场访谈录音（Ryan Lortie 与 Baptiste，以录制中途火警疏散为时间锚点）；Dio Durat 详解 tame 能力边界的邮件列表长文；Adrian 在 Reddit 发起的“What would you like to see in FreeBSD?”征集帖（逾 200 条评论）；Ted Unangst 博文《branchless development》，内有“For an open source project, branching is counterintuitive and counterintuitively antisocial”（3507.58-3512.96）与“比死亡更糟的命运是成功的合并”（3638.38-3644.18）之讥；FreeBSD Docker wiki 页面（Michael Dexter 为主要推动者）与 resflash 源码仓库（GitHub bconway/resflash）；DragonFly 的 Valley View GPU 修复自述（Matthew Dillon）；以及 EuroBSDCon、vBSDCon 2015 注册开放公告。（BSD Now EP99，[4618.42-4643.78]，L2）
 - 访谈提及的基金会一手文件包括新近上线的项目资助提案指南（约十至十一页并附样例提案），其要点为提案须绑定明确范围、具名开发者与预算金额，并须清晰论证对 FreeBSD 社区的收益；年度直接项目资助预算数字由基金会工作人员提供并经 Ed Maste 在访谈中复述。（BSD Now EP75，[1600.02-1703.84]，L1）
 - 本期新闻段援引的一手材料包括 Damien Miller 介绍 OpenSSH 6.8 密钥轮换机制的博客文章、Adam Wolk 记述 OpenBSD 二进制快照滚动跟进体验的博文、详述新旧支持模型利弊的 FreeBSD 邮件列表帖子，以及 Josh Paetzel 执笔的 FreeNAS 硬件选型指南；各件均以链接形式收入节目注释。（BSD Now EP75，[2776.48-3071.16]，L2）
@@ -148,6 +153,8 @@ volume: 第13卷-bsd衍生操作系统
 - 总纲5 没有必然性，只有偶然性：总纲5 没有必然性，只有偶然性：Ed Brayden 论证世界模型与预测的失败，强调复杂系统走向并非规划者所能必然掌控。（BSD Now EP633，[1084.22-1603.88]，L2）
 - 总纲11 商品是形式主义：总纲11 商品是形式主义：Broadcom 将 Bitnami 免费镜像改造为定价商品，展示开源资产在资本收购后的形式主义化。（BSD Now EP633，[1645.84-2123.00]，L2）
 - 总纲22 知识注定过时：总纲22 知识注定过时：Brian Kernighan 以 C 语言长期推广者身份面对 Rust 崛起，反映技术知识随生态更替而过时的处境。（BSD Now EP633，[2863.88-2966.64]，L1）
+- 总纲5 没有必然性，只有偶然性：McIlroy 亲述的 Unix 采纳史拒绝任何必然性叙事：贝尔实验室法律部门成为第一个研究外用户，只因新购的独立文字处理系统应付不了美国专利局要求的行数，而 Joe Ossanna 承诺次日为 troff 加上行号；AT&T 总裁办公室购入 Unix，只因总裁不愿戴眼镜读讲稿、而实验室的照排中心能以大号字排版讲稿；他以‘正如人们因杯架买车’作结——Unix 的扩散系于行号与虚荣这类琐碎偶然条件，技术优劣的理性论证反倒是后来追加的解释。（BSD Now EP173，[2200.94-2310.2]，L1）
+- 总纲17 证明世界先于解释和改造世界：Ed Maste 宣布 FreeBSD 基本系统可复现构建达到 100%，经 Phabricator 评审但暂需显式设置构建变量，因不少开发者珍视 uname -a 中的构建日期与 SVN 版本号；主持人追溯 2013 年前后 AsiaBSDCon 上的可复现构建演讲，期待发布版 ISO 能被第三方以相同旗标重建出逐比特一致的二进制——以可证明的一致性取代对发行者的信任承诺，是工程文化从解释走向证明的一个节点。（BSD Now EP173，[2589.52-2698.72]，L2）
 - 总纲4 分离聚合是永恒规律：GNOME 与 FreeBSD 的协作史在本期呈现分离聚合的完整弧线：上游发布、下游追补十个 bug、六个月后重演的分离循环，被 jhbuild 每日构建打破——破坏发生一两天内即可定位到具体提交并联系到记忆尚新的作者；Baptiste 主动驻留 #freebsd-gnome 频道充当跨社区界面，并明言让上游了解 BSD 的能力与短板是“对双方都赢”（1972.90-1975.60）。两个原本各自演化的社区由偶发的个人接触走向制度化聚合，正是分离聚合规律的当代表现。（BSD Now EP99，[1938.52-1998.42]，L1）
 - 总纲22 知识注定过时：OpenBSD 以约 350 行的 doas 取代基础系统中滞留多年的 sudo（旧版约一万行），把 LDAP 等扩展特性连同 sudo 一并降级至 ports；主持人指出基础系统中冻结的软件版本注定落后于上游演进，与其反复审计膨胀的新代码不如重写最小必需实现，man 手册仅一页半与三个命令行旗标即构成“足够好”的边界。承认 base 内知识必然过时、把演化自由让渡给包管理体系，是“知识注定过时”命题的一次工程化演练。（BSD Now EP99，[610.64-681.16]，L2）
 - 总纲4 分离聚合是永恒规律：Ed Maste 断言 FreeBSD 在部分第三方组件上只维护树内副本而不与上游沟通，是通往长期分叉灾难的路径，主张从做完再回推上游转向与上游同体工作，并举其作为 LLVM 上游 committer、FreeBSD 移植工作先在上游仓库进行为例；主持人补充 OpenZFS 亦在重构类似协作通道——分叉与回流在开源工程组织中反复重演，构成又一轮聚合循环。（BSD Now EP75，[2117.84-2313.04]，L1）
@@ -175,6 +182,7 @@ volume: 第13卷-bsd衍生操作系统
 - 节目所述 jails“2000 年首现”与章节考据的 1999-04-28 首次提交存在口径差异，须以 FreeBSD commit 记录为准；FreeBSD 12.0 具体特性以官方 Release Notes 为准。　[存疑脚注] jails 首次提交日期以代码仓库 commit 为准，播客口径为发布年份。（BSD Now EP276，[1155.72-1164.06]，L3）
 - 转录将 Klara Systems 记作 Clara、将 Brian Kernighan 记作 Koenigan 或 Kernigan，人名与机构名存在语音转写偏差。　[存疑脚注] 机构与人物名称存在转写偏差，须以原文核验（BSD Now EP633，[2753.12-2784.64]，L4）
 - Bitnami 定价在转录中出现 600 亿、60 万与 7.2 万等不一致数字，具体金额须以 AWS Marketplace 与官方公告核验。　[存疑脚注] 价格数字存在转写歧义，未与官方定价页核验（BSD Now EP633，[1666.68-2041.44]，L4）
+- OpenBSD 与 Arch Linux 双系统互毁 GPT 备份头的辨析：读者在 gdisk 中连报磁盘尺寸与主头不符、备份头无效、主备分区表不一致、CRC 失配四重警告，先按提示以主表重建备份表仍反复复现，最终以 MBR 加 LUKS 与 LVM 的非常规组合绕过；主持人推断两系统对该盘一个按 4K 扇区、一个按 512 字节扇区定位盘尾备份头，导致互相覆盖后无法互认，并可能只是特定硬盘的 quirk；主持人借此事强调详细记录、多次复现并投递邮件列表的边界用例报告文化。　[存疑脚注] 4K 与 512 字节扇区判定差异仅系主持人远程假设，最终根因取决于读者后续向 tech 邮件列表的报告，转写中未见定论。（BSD Now EP173，[811.82-901.68]，L4）
 - 转写专名失真集中且需核证：新闻段称 tame 由 Nicholas Marriott 编写（66.50-77.32），与 tame 主要由 Theo de Raadt 等主导开发的公开记录相悖，应以 OpenBSD 源码树提交记录核证；“Matt Aaron”应为 ZFS 共同设计者 Matthew Ahrens（4104.28-4113.14），“Ted Ewanks”应为 Ted Unangst，“Antoine Jacuto”应为 Antoine Jacoutot，“CopMast”应为 FreeBSD GNOME 团队长期维护者 Koop Mast，“IOKage”应为 iocage，“do-ass”应为 doas；访谈嘉宾 Baptiste 全名未在转写中出现。上述失真均可由上下文辨认，不影响语义判读，故整体仍判可用，但涉及人名的引用须先经邮件列表存档与源码提交记录复核。　[存疑脚注] tame 作者归属与上述专名还原均系依据上下文与公开史料的推断，尚未逐一以 OpenBSD 源码树、邮件列表存档及人物自述复核。（BSD Now EP99，[66.50-77.32]，L4）
 - Ed Maste 对基金会已结项目的内部评估并不齐一：autofs 自动挂载守护进程与内核态 iSCSI 栈被引为部署反馈良好的成功案例，而 vt 控制台更新虽早已是 current 默认、其本人亦使用年余，却自认远未达预期，项目体量超出当初预估而仍在收尾——同为基金会出资，工程完成度因项目而异，资金投入与成果兑现并无必然对应。（BSD Now EP75，[1484.46-1590.74]，L1）
 - Lumina 0.6.2 仍为 beta，转录中对其稳定性与未来形态的判断属开发者预期，最终演进需以 PC-BSD/TrueOS 历史为准。　[存疑脚注] 开发者对未来稳定性的判断为单方预期，未形成多源佐证（BSD Now EP54，[3513.38-3526.78]，L4）
@@ -192,6 +200,7 @@ volume: 第13卷-bsd衍生操作系统
 - [BSD Now EP348] Pennington J. BSD Now: 348: BSD Community Collections[EB/OL]. (2020-04-30)[2026-08-15]. https://www.bsdnow.tv/348.
 - [BSD Now EP276] Pennington J. BSD Now: Episode 276: Ho, Ho, Ho - 12.0 | BSD Now 276[EB/OL]. (2018-12-13)[2026-08-15]. https://www.bsdnow.tv/276.
 - [BSD Now EP633] Pennington J. BSD Now: 633: Magical Systems Thinking[EB/OL]. (2025-10-16)[2026-08-15]. https://www.bsdnow.tv/633.
+- [BSD Now EP173] Pennington J. BSD Now: 173: Carry on my Wayland son[EB/OL]. (2016-12-21)[2026-08-15]. https://www.bsdnow.tv/173.
 - [BSD Now EP99] Pennington J. BSD Now: 99: BSD Gnow[EB/OL]. (2015-07-22)[2026-08-15]. https://www.bsdnow.tv/99.
 - [BSD Now EP75] Pennington J. BSD Now: 75: From the Foundation (Part 1)[EB/OL]. (2015-02-04)[2026-08-15]. https://www.bsdnow.tv/75.
 - [BSD Now EP54] Pennington J. BSD Now: 54: Luminary Environment[EB/OL]. (2014-09-10)[2026-08-15]. https://www.bsdnow.tv/54.
