@@ -45,7 +45,7 @@ volume: 第01卷-unix的起源
 - Salus 1994；Kernighan 2019；Toomey 2009；Spinellis 2006 [考据脚注：Salus 1994、Kernighan 2019、Toomey 2009、Spinellis 2006 为 UNIX 历史经典文献，核心事实经计算机科学史公认。]
 
 <!-- PODCAST_REVIEW v20260829 -->
-<!-- 语义复核范围：BSD Now EP487、BSD Now EP325（共 2 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
+<!-- 语义复核范围：BSD Now EP487、BSD Now EP325、BSD Now EP173（共 3 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
 
 **要点**：
 
@@ -59,6 +59,10 @@ volume: 第01卷-unix的起源
 - 重刊的《Unix Evolution 1975–1984》一文梳理 research Unix v6/v7/v8 的文本格式化、编译器与开发工具流变，并记述 Ritchie 关于 man page BUGS 节以公开羞辱促修复的自述。（BSD Now EP325，[723.74-1018.28]，L2）
 - OpenBSD 在 base unbound 默认启用 DNSSEC 验证，并以 Quad9 的 9.9.9.9 做约束验证绕开 NTP 与 DNSSEC 的时钟引导死锁；2018 年曾因时钟问题回滚后于此次重开。（BSD Now EP325，[2062.14-2169.84]，L2）
 - Rainbow Crack 的 OpenBSD 编译补丁引出彩虹表原理：加盐与多轮散列（bcrypt 可至百万轮、SHA-512 crypt 默认万轮）使针对字典的预计算表失效，凸显密码存储需抗彩虹表算法。（BSD Now EP325，[2632.88-2909.48]，L2）
+- Johannes Lundberg 向 FreeBSD 邮件列表提交 Wayland 移植进度报告：Wayland 1.12.0 与 Weston 1.12.0 已可在 FreeBSD 上运行，Weston 自带客户端工作正常，xWayland 可承载未移植的 X11 应用（仅手动启动且最大化窗口时正常，疑为 Weston IPC 问题），GTK3 应用如 gedit、Gnumeric 与 XFCE4 终端、XFCE 桌面均可运行，SDL2 的 Wayland 后端经游戏简测通过，i3 兼容合成器 Sway 亦可用；现代 Intel 显卡需 Matt Macy 的新图形驱动工作，并以自维护 ports 树配合 Poudriere 重建图形栈乃至全树；gdm 因依赖 Linux 的 logind 而搁置，社区有意改以 Qt 系的 PCDM 承接。（BSD Now EP173，[279.52-327.5]，L2）
+- Antoine Jacoutot 向 OpenBSD 邮件列表公告 syspatch：面向 -stable 发行版的二进制补丁工具，与 bspatch 式二进制差分不同，它下载经签名的完整文件 tarball 并按安装器方式替换；测试补丁未经 OpenBSD 项目背书且不应信任，反馈须直达其个人邮箱而非污染邮件列表；此前升级 -stable 只能源码重建或重装新快照，syspatch 提供了中间道路，作者期望其随 OpenBSD 6.1 落地，并明确需要使用人数与统计反馈来评估可靠性。（BSD Now EP173，[105.04-203.7]，L2）
+- Dennis Ritchie 撰文追述 Unix 源码中的趣味史：V6 彩蛋“values of B may give rise to DOM”出自 1970 年代初专利打字员打断 ed 打印输出时纸带上的残句，原是物理专利申请中‘贝塔值变化引起畴壁移动’的片段，经 McIlroy 的文语转换实验念出 doom 与 dominance 的谐音而成为实验室的共享珍宝，后被写入 V6 源码——里奇推测大概率出自 Bob Morris，也可能是 Ken；他并澄清“你不会被期望理解这段注释”本意是‘这不会考’式的善意提示而非傲慢挑衅，将其引为贝尔实验室注释质量的 slur 属不公正引申，见过原文者多为 1975 年前后第六版用户或 John Lions 注释书的读者。（BSD Now EP173，[2332.96-2512.8]，L1）
+- Beastie bits 一束：iocell 2.0 发布——一位 FreeBSD 开发者因偏爱 shell 脚本版而分叉原 iocage 并继续演进，Python 重写版则临近发布，两者存储监牢配置的方式相近或可兼容；Ted Unangst 追问 link_ntoa() 究竟谁在调用——该函数缺陷自 1970 年代引入并波及所有 BSD，OpenBSD libc 中已标记弃用，全库检索仅 route 与 netstat 三处引用，或可直接移除；Trent 用其 bhyve 管理框架 iohyve 在 ThinkPad 上的 TrueOS 中启动 Android x86 并公开配置 gist。（BSD Now EP173，[2795.08-2949.74]，L2）
 
 **史料**：
 
@@ -69,6 +73,7 @@ volume: 第01卷-unix的起源
 - Microsystems Magazine 1984 年 11 月号《Unix Evolution》文章（Daemon News 1999 重刊），为节目重读的历史文本。（BSD Now EP325，[740.14-756.02]，L2）
 - Dennis Ritchie 关于 man page BUGS 节政策的引文，属当事人一手表述。（BSD Now EP325，[1012.82-1027.82]，L1）
 - OpenBSD unbound.conf 默认 DNSSEC 与 aggressive NSEC 的提交说明，及与 Quad9 的约束验证讨论。（BSD Now EP325，[2077.00-2124.28]，L2）
+- 本期涉及的一手史料包括：Doug McIlroy 邮件列表文章（Unix 如何走出实验室直达 AT&T 高层的亲历记）、Dennis Ritchie 的 Unix 彩蛋史话与 John Lions 的 UNIX 第六版注释书、Johannes Lundberg 的 Wayland 进度报告、Antoine Jacoutot 的 syspatch 公告信、Ed Maste 的可复现构建报告及 Phabricator 评审、Mark Felder 的 FreeBSD 加 ZFS 仿 Time Capsule 教程（NetATalk 3 与 Avahi）、Olivier Cochard-Labbe 的 NetBenches 网络基准仓库（含 FreeBSD IPsec 性能分支的 AES-NI 实测数据）、Brian 的 OpenBSD/Arch 双系统博客、Ted Unangst 关于 link_ntoa() 的调用面分析、Trent 的 iohyve 配置 gist，以及 BSDCan 2017 征文启事。（BSD Now EP173，[2191.18-2200.26]，L2）
 
 **史观**：
 
@@ -81,6 +86,8 @@ volume: 第01卷-unix的起源
 - 总纲22 知识注定过时：总纲22 知识注定过时：1984 年文章自承需源许可并签血誓方可读源码，而 V7 源码迟至 2002 年由 Caldera 释放，知识条件随时间失效。（BSD Now EP325，[923.02-977.30]，L2）
 - 总纲12 科学是形式主义：总纲12 科学是形式主义：密码学的“安全”依赖加盐与轮数的形式约定，彩虹表攻击揭示其相对性而非绝对真理。（BSD Now EP325，[2864.92-2909.48]，L2）
 - 总纲5 没有必然性，只有偶然性：总纲5 没有必然性，只有偶然性：OpenBSD 2018 年曾默认开 DNSSEC 后回滚、2019 年再启用，取决于时钟引导问题被偶然解决。（BSD Now EP325，[2124.78-2143.00]，L2）
+- 总纲5 没有必然性，只有偶然性：McIlroy 亲述的 Unix 采纳史拒绝任何必然性叙事：贝尔实验室法律部门成为第一个研究外用户，只因新购的独立文字处理系统应付不了美国专利局要求的行数，而 Joe Ossanna 承诺次日为 troff 加上行号；AT&T 总裁办公室购入 Unix，只因总裁不愿戴眼镜读讲稿、而实验室的照排中心能以大号字排版讲稿；他以‘正如人们因杯架买车’作结——Unix 的扩散系于行号与虚荣这类琐碎偶然条件，技术优劣的理性论证反倒是后来追加的解释。（BSD Now EP173，[2200.94-2310.2]，L1）
+- 总纲17 证明世界先于解释和改造世界：Ed Maste 宣布 FreeBSD 基本系统可复现构建达到 100%，经 Phabricator 评审但暂需显式设置构建变量，因不少开发者珍视 uname -a 中的构建日期与 SVN 版本号；主持人追溯 2013 年前后 AsiaBSDCon 上的可复现构建演讲，期待发布版 ISO 能被第三方以相同旗标重建出逐比特一致的二进制——以可证明的一致性取代对发行者的信任承诺，是工程文化从解释走向证明的一个节点。（BSD Now EP173，[2589.52-2698.72]，L2）
 
 **辨析**：
 
@@ -88,10 +95,12 @@ volume: 第01卷-unix的起源
 - OpenBSD 6.1 以 Clang 取代 GCC 的动因被表述为 GCC 的 GPLv2 版本无法支持 ARM64，此说来自主持人转述，须以 OpenBSD 官方公告或开发者邮件交叉验证。　[存疑脚注] 单一播客来源，需 OpenBSD 官方公告交叉验证（BSD Now EP487，[104.7-129.86]，L4）
 - Rainbow Crack 网站自 2007 年后基本未更新，教程提及的某域名已被劫持为垃圾页，该工具的可用性与教程安全性存疑。　[考据脚注] 站点域名易主，链接与补丁来源需重新核实（BSD Now EP325，[2683.40-2706.96]，L4）
 - 12.1 的 open ZFS 与原生加密支持为发布说明转述，具体实现路径与加密原语宜以 FreeBSD 源码树核对。　[存疑脚注] 转写对“首个支持 open ZFS 端口的正式版”表述较口语化（BSD Now EP325，[68.92-90.80]，L4）
+- OpenBSD 与 Arch Linux 双系统互毁 GPT 备份头的辨析：读者在 gdisk 中连报磁盘尺寸与主头不符、备份头无效、主备分区表不一致、CRC 失配四重警告，先按提示以主表重建备份表仍反复复现，最终以 MBR 加 LUKS 与 LVM 的非常规组合绕过；主持人推断两系统对该盘一个按 4K 扇区、一个按 512 字节扇区定位盘尾备份头，导致互相覆盖后无法互认，并可能只是特定硬盘的 quirk；主持人借此事强调详细记录、多次复现并投递邮件列表的边界用例报告文化。　[存疑脚注] 4K 与 512 字节扇区判定差异仅系主持人远程假设，最终根因取决于读者后续向 tech 邮件列表的报告，转写中未见定论。（BSD Now EP173，[811.82-901.68]，L4）
 
 **文献**：
 
 - [BSD Now EP487] Pennington J. BSD Now: 487: EuroBSDcon Interviews Pt. 2[EB/OL]. (2022-12-29)[2026-08-15]. https://www.bsdnow.tv/487.
 - [BSD Now EP325] Pennington J. BSD Now: 325: Cracking Rainbows[EB/OL]. (2019-11-21)[2026-08-15]. https://www.bsdnow.tv/325.
+- [BSD Now EP173] Pennington J. BSD Now: 173: Carry on my Wayland son[EB/OL]. (2016-12-21)[2026-08-15]. https://www.bsdnow.tv/173.
 
 <!-- /PODCAST_REVIEW -->

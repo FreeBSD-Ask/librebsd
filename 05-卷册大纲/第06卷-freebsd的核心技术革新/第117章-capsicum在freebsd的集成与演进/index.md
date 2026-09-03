@@ -49,7 +49,7 @@ volume: 第06卷-freebsd的核心技术革新
 - Woodruff, J. et al. (2012). CHERI: a research platform deconflating hardware virtualization and protection. RESoLVE 2012; Woodruff, J. et al. (2014). The CHERI capability model. ISCA '14; Watson, R. N. M. et al. (2015). CHERI: A Hybrid Capability-System Architecture. IEEE S&P ’15; CTSRD-CHERI Organization. CheriBSD Repository. github.com/CTSRD-CHERI/cheribsd; SRI International. CHERI Program. sri.com/program/cheri. ［B］[^doubt-resolved-633]: 据 Mac OS X Internals A Systems Approach (Amit Singh（阿米特·辛格）)  (未署名) 消解[^doubt-resolved-634]: 据 Arch_Handbook (未署名) 消解[^doubt-resolved-635]: 据 Porters_Handbook (未署名) 消解[^doubt-resolved-636]: 据 Handbook (未署名) 消解[^doubt-resolved-637]: 据 Mac OS X Internals A Systems Approach (Amit Singh)  (未署名) 消解[^doubt-resolved-638]: 据 Mac OS X Internals A Systems Approach (Amit Singh)  (未署名) 消解[^doubt-resolved-639]: 据 jude-interesting_zfs-paper (vbsdcon, 2015) 消解[^doubt-resolved-640]: 据 davis-asplos-cheriabi-paper-2 (standalone, 2019) 消解<!-- DB_REF:freebsd.duckdb -->> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 2010-2010 年间：34,527 次提交。> 仓库总览：1,294,851 次提交，13,875 位贡献者，1993-06-12 至 2026-08-25。
 
 <!-- PODCAST_REVIEW v20260829 -->
-<!-- 语义复核范围：BSD Now EP295、BSD Now EP197、BSD Now EP93、BSD Now EP50（共 4 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
+<!-- 语义复核范围：BSD Now EP295、BSD Now EP197、BSD Now EP178、BSD Now EP93、BSD Now EP50（共 5 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
 
 **要点**：
 
@@ -61,6 +61,11 @@ volume: 第06卷-freebsd的核心技术革新
 - Peter Hansteen（《The Book of PF》作者）的文章介绍用 OpenBSD spamd 与辅助 MX 搭建反垃圾邮件方案：确保主备 MX 均可收信、统一内容过滤、部署 spamd、同步灰名单与陷阱地址。（BSD Now EP197，[5136.50-5630.00]，L2）
 - 报道 Google 为 Chrome 赞助的 Capsicum-on-Linux 进展：部分功能已合入，提供 autoconf 脚本使同一代码可在 Linux 与 FreeBSD 使用 Capsicum，并列出已被转换的工具清单。（BSD Now EP197，[5638.38-5715.14]，L2）
 - 一篇“1979 年的网关如何搭建”文章显示 TCP/IP 的基本原理至今未变，是早期网络路由器技术的历史回溯。（BSD Now EP197，[5727.24-5790.82]，L2）
+- ports 树在录制约一周前移除了为 9.3、10.1、10.2 等已生命周期终结版本准备的向后兼容垫片，使此前被旧版本锁死的新 Xorg 与 Wayland 支持得以合入；配套 FreeBSD 11 新发布节奏：11.x 总支持期仍为五年，但 11.1 发布后 11.0 仅余三个月，敦促用户尽快升级；此前移植者的验证矩阵覆盖 9.3、10.1、10.2、10.3 与 11 共五个版本，如今仅需测试 10.3 与 11；包构建基线相应由最老支持版本 10.1 上移至 10.3，包得以使用 openat、linkat 等 *at 函数（open 已成 openat 的 POSIX 包装并为 Capsicum 所依赖），旧系统安装将因未定义符号立即报错，package.static 至多救回 pkg 命令本身，已装程序仍将损坏。（BSD Now EP178，[70.24-417.92]，L2）
+- TrueOS 迁移 OpenRC：OpenRC 为依赖式 init 系统，出自 NetBSD 开发者 Roy Marples，被 Gentoo 与 Alpine Linux 采用，其可移植性与双条款 BSD 许可使其整合进 TrueOS 成为容易的决策；TrueOS 以 init.d 取代 rc.d、每服务可配 conf.d、引入 runlevel 与 rc update 命令并集成图形化服务管理器；核心收益是桌面与笔记本场景的快速启动（15 秒内到登录，此前约一分钟）与服务监控、崩溃标记；基础系统服务约九成已迁移，ports 中约一千个 RC.d 脚本计划年内完成转换，多数只需将 shebang 改为 openrc-run 并微调变量，OpenVPN、VirtualBox、nginx、Apache、PostgreSQL、MySQL 等高频服务已先行完成。（BSD Now EP178，[525.96-863.72]，L2）
+- 沉默法则（Silence is Golden）：程序在没有令人惊讶、有趣或有用的信息时应当缄默，把用户的注意力当作珍贵资源；Unix 哲学被概括为小、简、透明、模块化、可移植与可扩展，沉默法则约束输出的经济性以保全管道组合——前一程序的输出即后一程序的输入；主持人的辩证补充是错误信息必须清晰且能从噪音中被挑出，ZFS 混合 vdev 的含混报错曾诱使用户盲目追加 -F 铸成大错，模态对话框则被比作索要注意力的小孩。（BSD Now EP178，[1464.44-1768.94]，L2）
+- FreeBSD 评审将 traceroute 迁入 Capsicum 沙箱：进入沙箱后无法外发连接做 DNS 解析，引入 Casper 轻量服务框架，在入沙箱前创建会话、由其 system.dns 服务以受限方式代为解析主机名；实际补丁约五十行，DNS 路径仅三行改动（cap_gethostbyname 取代 gethostbyname）；主持人展望 Casper 文件系统服务可预注册文件清单并按批发放描述符，以解决 gzip 等批量文件工具难以沙箱化的困境。（BSD Now EP178，[3528.92-3735.26]，L2）
+- SDF（Super Dimension Fortress，即 freeshell.org）于 2017 年迎来三十周年：1987 年 6 月 16 日创始人以 Apple IIe 与 300 波特调制解调器开设动漫主题 BBS（名取自超时空要塞 Macross），后演化为持续运营的非营利公共访问 Unix 系统，现机器常新、取消配额、机柜扩展至美国与德国；主持人 Alan Jude 以一手记忆接续：公共 shell 是其 Unix 入门，此后付费租用更大服务器并向他人转售 shell（IRC 服务器与机器人托管），约 15 年前以 5 至 15 美元售卖 shell 账号，直至 5 美元即可在 DigitalOcean 租得 root 虚拟机、昔日 512MB 内存服务器供百人共享的时代终结，该生意难以为继。（BSD Now EP178，[2697.7-3205.6]，L1）
 - 受访的 DragonFly BSD 开发者（转写作 Sefi）自述其网络栈不以锁而以消息与线程串行化网络操作：每个 CPU 各有一个网络线程，路由表等数据按 CPU 复制，TCP 与 UDP 控制块分区存放，协议统计每 CPU 独立；用户态发包先送消息给本 CPU 网络线程完成协议处理再进入网卡，收包则按哈希选定线程处理，全路径避免锁争用。　[存疑脚注] 受访者姓名转写失真（写作 Sefi），依语义当为 DragonFly 网络栈开发者 Sepherosa Ziehau，引用前须核对节目页与会议日程。（BSD Now EP93，[1420.88-1501.40]，L1）
 - 同一受访者将早期文献称线程串行化网络栈慢于锁方案的论断作了改判式溯源：DragonFly 曾观察到的高调度成本，其根因在同步消息的使用而与网络栈模型无关，改用异步消息后整个网络路径的流水线效应大增；同时承认该设计的代价是复制数据带来的内存占用，例如完整 BGP 路由表在 DragonFly 中更耗内存，但在内存廉价的时代此项代价已不关键。（BSD Now EP93，[1513.16-1650.48]，L1）
 - 受访者介绍其对 SO_REUSEPORT 的扩展：允许各进程或线程在同一端口各自创建监听套接字，消除 accept 队列争用，并以与网络数据分区相同的哈希函数分发连接、顺带解决分布不均；dports 内打补丁的 nginx 由此获得显著性能提升，该补丁随后被 nginx 上游 1.9.1 版本接受。（BSD Now EP93，[1879.16-1964.95]，L1）
@@ -75,6 +80,7 @@ volume: 第06卷-freebsd的核心技术革新
 - Mariusz Zaborski 的 funlinkat 博客，说明 unlink 为 syscall 10 的历史与 vnode 语义。（BSD Now EP295，[57.0-85.64]，L2）
 - Josh Rastin 的 AT&T U-Verse OpenBSD 路由器博客，用 eap_parrot 代理 802.1X EAP。（BSD Now EP295，[785.02-1092.9]，L2）
 - Peter Hansteen 的 spamd 配置文章；Google Capsicum-on-Linux 状态页；1979 年 TCP/IP 网关文章。（BSD Now EP197，[5136.50-5790.82]，L2）
+- 本期提及的一手史料：ports 树移除 EOL 兼容代码的提交与 FreeBSD 11 新发布节奏说明；Capsicum 化 traceroute 的 Phabricator 评审（含 Casper system.dns 用法）；The Tao of Tmux 一文及其引用的 McKusick《The Design and Implementation of the FreeBSD Operating System》第二版进程管理与终端处理章节、Linus Åkesson 的 TTY Demystified；BSD Router Project 1.70 发布公告（Fib4 转发改进、netmap 包生成器 IPv6 支持、OpenVPN 2.4 AES-GCM）；DragonFly UEFI 安装器提交与 HAMMER 构建脚本；Adrian Chadd 关于 AR9380 驱动 UDP 吞吐自 250 提至 355 Mbps 的推文；Computer Chronicles 1985 年 Unix 专题（archive.org 公有领域收藏）；Reddit 上在 NetBSD 运行 Minecraft 的指南（Linux 仿真加 Oracle JRE）；SDF 三十周年公告与 BBS Documentary 纪录片；听众 Jason 经 Windows Subsystem for Linux 在 Windows 10 原生运行 Tarsnap 的操作说明；Knoxbug 树莓派安装聚会公告。（BSD Now EP178，[3537.92-3623.44]，L2）
 - 本期可作史料线索者包括：BSDCan 2015 主题演讲预告中 Steven Bourne（转写作 Steven born）将亲述原始 sh 的编写与移植（SBRK、无字符串库时代）、其 Algol 68 移植并劝说 Dennis Ritchie 在 C 中引入 void、环境变量的发明缘由、Bill Joy 为何另写 C shell，并点评 Shellshock 类缺陷自 1990 年代初即潜伏而长期无人发现；另有 Brooks Davis 的 CherryBSD 报告（将 Capsicum 思想下沉至处理器硬件强制）、Robert Watson 与 George Neville-Neil 宣布开源其 FreeBSD 高级操作系统课程材料、以及 MeetBSD 上文件系统开发者当众销毁硬盘的录像。　[存疑脚注] 人名与专名转写多处失真（Steven born、Alargh 68、Matthew Dylan 等），引用前须比对 BSDCan 2015 官方日程与会议实录。（BSD Now EP93，[145.94-252.12]，L2）
 - Robert Watson 访谈（当事人自述，FreeBSD 核心团队成员与剑桥大学讲师）。（BSD Now EP50，[1294.82-2231.72]，L1）
 - OpenSSL 0.9.8zb、1.0.0n、1.0.1i 安全公告与 LibreSSL 2.0.5 发布信息（主持人口头转述）。（BSD Now EP50，[897.62-983.42]，L2）
@@ -84,6 +90,8 @@ volume: 第06卷-freebsd的核心技术革新
 - 总纲9 经验优先：从实际删除文件的经验提炼出竞态，并以文件描述符保证同一 inode。（BSD Now EP295，[423.5-430.06]，L2）
 - 总纲10 动手者创造历史：funlinkat 由 FreeBSD 开发者动手设计实现并写成博客讲解。（BSD Now EP295，[612.78-697.7]，L2）
 - 总纲6 和解优于斗争：Capsicum 从 FreeBSD 向 Linux 的扩散显示技术传承跨阵营流动，而非单向竞争，呈现生态之间的和解与相互借鉴。（BSD Now EP197，[5638.38-5715.14]，L2）
+- 总纲3 不存在进步，只有权力再分配：FreeBSD 11 发布节奏改革被主持人称为“非常必要的改变”（241.96-249.36），其本质并非单纯的技术进步而是维护负担的再分配：移植者从五版本验证矩阵中解放、ports 树得以跟进新驱动，代价是旧版本用户被限期升级，否则包系统直接拒绝安装；技术演进由支持边界的重划与维护成本的转嫁驱动，而非由先进性自身推动。（BSD Now EP178，[226.84-288.0]，L2）
+- 总纲10 动手者创造历史：本期社群史叙述以动手者的一手经验为基底：12 岁架设 Renegade BBS、生日获赠专用电话线、邀同学到家中轮流连线游玩，被当事人自述为系统管理热情的发现时刻（2983.5-3016.92）；公共 shell 作为多数人的 Unix 入门路径同样由使用者记忆而非机构文献支撑。普通实践者的个人经验，而非台面人物与里程碑清单，构成这段历史的实质内容。（BSD Now EP178，[2953.7-3016.92]，L2）
 - 总纲4 分离聚合是永恒规律：讨论段把权限分离、chroot、jail 与 Capsicum 排成一条递进谱系：目录围栏式的 chroot 聚合出带独立命名空间的 jail，jail 的整机级隔离又分离出按二进制收权的能力沙箱；每一代手段既修补前代的漏洞，也被下一代重新拆解，呈现分离与聚合的循环往复，而非单向的安全进步。（BSD Now EP93，[2762.20-2816.42]，L2）
 - 总纲10 动手者创造历史：受访开发者的自述工作清单——从其他 BSD 移植网络设备驱动、亲手编写驱动、三年内向 DragonFly 移植多项 TCP 相关 RFC 并改进网络栈并发，兼及 ACPI、电源管理与中断路由——显示 BSD 的技术史主要由这类动手者的连续劳作累积而成，而非仅由标志性发布与名人决断构成。（BSD Now EP93，[1364.00-1410.64]，L1）
 - 总纲10 动手者创造历史：总纲10 动手者创造历史：Robert Watson 团队以编写并落地 Capsicum、BERI/CHERI 的方式实际推动操作系统安全演进。（BSD Now EP50，[1380.46-1462.14]，L1）
@@ -100,6 +108,7 @@ volume: 第06卷-freebsd的核心技术革新
 
 - [BSD Now EP295] Pennington J. BSD Now: 295: Fun with funlinkat()[EB/OL]. (2019-04-25)[2026-08-15]. https://www.bsdnow.tv/295.
 - [BSD Now EP197] Pennington J. BSD Now: 197: Relaying the good news[EB/OL]. (2017-06-07)[2026-08-15]. https://www.bsdnow.tv/197.
+- [BSD Now EP178] Pennington J. BSD Now: 178: Enjoy the Silence[EB/OL]. (2017-01-25)[2026-08-15]. https://www.bsdnow.tv/178.
 - [BSD Now EP93] Pennington J. BSD Now: 93: Stacked in Our Favor[EB/OL]. (2015-06-10)[2026-08-15]. https://www.bsdnow.tv/93.
 - [BSD Now EP50] Pennington J. BSD Now: 50: VPN, My Dear Watson[EB/OL]. (2014-08-13)[2026-08-15]. https://www.bsdnow.tv/50.
 
