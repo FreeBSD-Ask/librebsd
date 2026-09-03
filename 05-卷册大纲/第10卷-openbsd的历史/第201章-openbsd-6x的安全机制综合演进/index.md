@@ -114,10 +114,10 @@ volume: 第10卷-openbsd的历史
 
 **文献**：
 
-- [BSD Now EP374] Pennington J. BSD Now: 374: OpenBSD’s 25th anniversary[EB/OL]. (2020-10-29)[2026-08-15]. https://www.bsdnow.tv/374.
-- [BSD Now EP351] Pennington J. BSD Now: 351: Heaven: OpenBSD 6.7[EB/OL]. (2020-05-21)[2026-08-15]. https://www.bsdnow.tv/351.
-- [BSD Now EP325] Pennington J. BSD Now: 325: Cracking Rainbows[EB/OL]. (2019-11-21)[2026-08-15]. https://www.bsdnow.tv/325.
-- [BSD Now EP322] Pennington J. BSD Now: 322: Happy Birthday, Unix[EB/OL]. (2019-10-31)[2026-08-15]. https://www.bsdnow.tv/322.
-- [BSD Now EP203] Pennington J. BSD Now: 203: For the love of ZFS[EB/OL]. (2017-07-19)[2026-08-15]. https://www.bsdnow.tv/203.
+- [BSD Now EP374] Pennington J. BSD Now: 374: OpenBSD’s 25th anniversary[EB/OL]. (2020-10-29)[2026-08-15]. <https://www.bsdnow.tv/374>.
+- [BSD Now EP351] Pennington J. BSD Now: 351: Heaven: OpenBSD 6.7[EB/OL]. (2020-05-21)[2026-08-15]. <https://www.bsdnow.tv/351>.
+- [BSD Now EP325] Pennington J. BSD Now: 325: Cracking Rainbows[EB/OL]. (2019-11-21)[2026-08-15]. <https://www.bsdnow.tv/325>.
+- [BSD Now EP322] Pennington J. BSD Now: 322: Happy Birthday, Unix[EB/OL]. (2019-10-31)[2026-08-15]. <https://www.bsdnow.tv/322>.
+- [BSD Now EP203] Pennington J. BSD Now: 203: For the love of ZFS[EB/OL]. (2017-07-19)[2026-08-15]. <https://www.bsdnow.tv/203>.
 
 <!-- /PODCAST_REVIEW -->

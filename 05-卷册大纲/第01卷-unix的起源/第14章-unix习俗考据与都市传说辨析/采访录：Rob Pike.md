@@ -86,6 +86,6 @@ Pike 在这篇广为流传的演讲中萧瑟地指出，系统软件研究已经
 
 **文献**：
 
-- [BSD Now EP478] Pennington J. BSD Now: 478: Debunking sudo myths[EB/OL]. (2022-10-27)[2026-08-15]. https://www.bsdnow.tv/478.
+- [BSD Now EP478] Pennington J. BSD Now: 478: Debunking sudo myths[EB/OL]. (2022-10-27)[2026-08-15]. <https://www.bsdnow.tv/478>.
 
 <!-- /PODCAST_REVIEW -->

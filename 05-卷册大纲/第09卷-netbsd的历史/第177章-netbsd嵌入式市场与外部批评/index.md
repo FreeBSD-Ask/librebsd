@@ -62,6 +62,6 @@ volume: 第09卷-netbsd的历史
 
 **文献**：
 
-- [YouTube EPmZ-dhntnkCQ] YouTube. YouTube: BSDCan Saturday 2026-06-20: 1160[EB/OL]. ()[2026-08-15]. https://www.youtube.com/watch?v=mZ-dhntnkCQ.
+- [YouTube EPmZ-dhntnkCQ] YouTube. YouTube: BSDCan Saturday 2026-06-20: 1160[EB/OL]. ()[2026-08-15]. <https://www.youtube.com/watch?v=mZ-dhntnkCQ>.
 
 <!-- /PODCAST_REVIEW -->

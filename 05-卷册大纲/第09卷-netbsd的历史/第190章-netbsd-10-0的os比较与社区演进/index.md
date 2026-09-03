@@ -71,6 +71,6 @@ volume: 第09卷-netbsd的历史
 
 **文献**：
 
-- [BSD Now EP626] Pennington J. BSD Now: 626: USB webcam testing[EB/OL]. (2025-08-28)[2026-08-15]. https://www.bsdnow.tv/626.
+- [BSD Now EP626] Pennington J. BSD Now: 626: USB webcam testing[EB/OL]. (2025-08-28)[2026-08-15]. <https://www.bsdnow.tv/626>.
 
 <!-- /PODCAST_REVIEW -->

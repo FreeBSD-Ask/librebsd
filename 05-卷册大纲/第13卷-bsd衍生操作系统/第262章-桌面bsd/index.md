@@ -201,21 +201,21 @@ volume: 第13卷-bsd衍生操作系统
 
 **文献**：
 
-- [BSD Now EP505] Pennington J. BSD Now: 505:  BSD Desktop Setup[EB/OL]. (2023-05-04)[2026-08-15]. https://www.bsdnow.tv/505.
-- [BSD Now EP651] Pennington J. BSD Now: 651: Spatially aware ZFS[EB/OL]. (2026-02-19)[2026-08-15]. https://www.bsdnow.tv/651.
-- [BSD Now EP370] Pennington J. BSD Now: 370: Testing shutdown[EB/OL]. (2020-10-01)[2026-08-15]. https://www.bsdnow.tv/370.
-- [BSD Now EP348] Pennington J. BSD Now: 348: BSD Community Collections[EB/OL]. (2020-04-30)[2026-08-15]. https://www.bsdnow.tv/348.
-- [BSD Now EP276] Pennington J. BSD Now: Episode 276: Ho, Ho, Ho - 12.0 | BSD Now 276[EB/OL]. (2018-12-13)[2026-08-15]. https://www.bsdnow.tv/276.
-- [BSD Now EP633] Pennington J. BSD Now: 633: Magical Systems Thinking[EB/OL]. (2025-10-16)[2026-08-15]. https://www.bsdnow.tv/633.
-- [BSD Now EP173] Pennington J. BSD Now: 173: Carry on my Wayland son[EB/OL]. (2016-12-21)[2026-08-15]. https://www.bsdnow.tv/173.
-- [BSD Now EP99] Pennington J. BSD Now: 99: BSD Gnow[EB/OL]. (2015-07-22)[2026-08-15]. https://www.bsdnow.tv/99.
-- [BSD Now EP75] Pennington J. BSD Now: 75: From the Foundation (Part 1)[EB/OL]. (2015-02-04)[2026-08-15]. https://www.bsdnow.tv/75.
-- [BSD Now EP54] Pennington J. BSD Now: 54: Luminary Environment[EB/OL]. (2014-09-10)[2026-08-15]. https://www.bsdnow.tv/54.
-- [BSD Now EP580] Pennington J. BSD Now: 580: EuroBSDcon 2024 - Part 2[EB/OL]. (2024-10-10)[2026-08-15]. https://www.bsdnow.tv/580.
-- [BSDTalk EP14] Backman W. BSDTalk: Interview with Dan Langille from BSDCan[EB/OL]. (2006-02-05)[2026-08-15]. https://archive.org/download/bsdtalk014/bsdtalk014.ogg.
-- [BSDTalk EP244] Backman W. BSDTalk: 244: bsdtalk244 - The Lumina Desktop Environment with Ken Moore[EB/OL]. (2014-08-28)[2026-08-27]. https://bsdtalk.blogspot.com/2014/08/bsdtalk244-lumina-desktop-environment.html.
-- [BSDTalk EP252] Backman W. BSDTalk: 252: bsdtalk252 - devio.us with Brian Callahan[EB/OL]. (2015-03-23)[2026-08-27]. https://bsdtalk.blogspot.com/2015/03/bsdtalk252-devious-with-brian-callahan.html.
-- [BSDTalk EP75] Backman W. BSDTalk: 75: bsdtalk075 - Jim Curtin and Leo Reiter from Win4BSD[EB/OL]. (2006-10-10)[2026-08-27]. https://archive.org/details/bsdtalk075.
-- [YouTube EPBPDTTqA__xM] YouTube. YouTube: Trying Dragonfly BSD With XFCE Was Surprising![EB/OL]. ()[2026-08-15]. https://www.youtube.com/watch?v=BPDTTqA__xM.
+- [BSD Now EP505] Pennington J. BSD Now: 505:  BSD Desktop Setup[EB/OL]. (2023-05-04)[2026-08-15]. <https://www.bsdnow.tv/505>.
+- [BSD Now EP651] Pennington J. BSD Now: 651: Spatially aware ZFS[EB/OL]. (2026-02-19)[2026-08-15]. <https://www.bsdnow.tv/651>.
+- [BSD Now EP370] Pennington J. BSD Now: 370: Testing shutdown[EB/OL]. (2020-10-01)[2026-08-15]. <https://www.bsdnow.tv/370>.
+- [BSD Now EP348] Pennington J. BSD Now: 348: BSD Community Collections[EB/OL]. (2020-04-30)[2026-08-15]. <https://www.bsdnow.tv/348>.
+- [BSD Now EP276] Pennington J. BSD Now: Episode 276: Ho, Ho, Ho - 12.0 | BSD Now 276[EB/OL]. (2018-12-13)[2026-08-15]. <https://www.bsdnow.tv/276>.
+- [BSD Now EP633] Pennington J. BSD Now: 633: Magical Systems Thinking[EB/OL]. (2025-10-16)[2026-08-15]. <https://www.bsdnow.tv/633>.
+- [BSD Now EP173] Pennington J. BSD Now: 173: Carry on my Wayland son[EB/OL]. (2016-12-21)[2026-08-15]. <https://www.bsdnow.tv/173>.
+- [BSD Now EP99] Pennington J. BSD Now: 99: BSD Gnow[EB/OL]. (2015-07-22)[2026-08-15]. <https://www.bsdnow.tv/99>.
+- [BSD Now EP75] Pennington J. BSD Now: 75: From the Foundation (Part 1)[EB/OL]. (2015-02-04)[2026-08-15]. <https://www.bsdnow.tv/75>.
+- [BSD Now EP54] Pennington J. BSD Now: 54: Luminary Environment[EB/OL]. (2014-09-10)[2026-08-15]. <https://www.bsdnow.tv/54>.
+- [BSD Now EP580] Pennington J. BSD Now: 580: EuroBSDcon 2024 - Part 2[EB/OL]. (2024-10-10)[2026-08-15]. <https://www.bsdnow.tv/580>.
+- [BSDTalk EP14] Backman W. BSDTalk: Interview with Dan Langille from BSDCan[EB/OL]. (2006-02-05)[2026-08-15]. <https://archive.org/download/bsdtalk014/bsdtalk014.ogg>.
+- [BSDTalk EP244] Backman W. BSDTalk: 244: bsdtalk244 - The Lumina Desktop Environment with Ken Moore[EB/OL]. (2014-08-28)[2026-08-27]. <https://bsdtalk.blogspot.com/2014/08/bsdtalk244-lumina-desktop-environment.html>.
+- [BSDTalk EP252] Backman W. BSDTalk: 252: bsdtalk252 - devio.us with Brian Callahan[EB/OL]. (2015-03-23)[2026-08-27]. <https://bsdtalk.blogspot.com/2015/03/bsdtalk252-devious-with-brian-callahan.html>.
+- [BSDTalk EP75] Backman W. BSDTalk: 75: bsdtalk075 - Jim Curtin and Leo Reiter from Win4BSD[EB/OL]. (2006-10-10)[2026-08-27]. <https://archive.org/details/bsdtalk075>.
+- [YouTube EPBPDTTqA__xM] YouTube. YouTube: Trying Dragonfly BSD With XFCE Was Surprising![EB/OL]. ()[2026-08-15]. <https://www.youtube.com/watch?v=BPDTTqA__xM>.
 
 <!-- /PODCAST_REVIEW -->

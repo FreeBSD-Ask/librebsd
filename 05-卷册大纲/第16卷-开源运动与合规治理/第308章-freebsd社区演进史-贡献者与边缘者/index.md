@@ -72,6 +72,6 @@ volume: 第16卷-开源运动与合规治理
 
 **文献**：
 
-- [BSD Now EP373] Pennington J. BSD Now: 373: Kyle Evans Interview[EB/OL]. (2020-10-22)[2026-08-15]. https://www.bsdnow.tv/373.
+- [BSD Now EP373] Pennington J. BSD Now: 373: Kyle Evans Interview[EB/OL]. (2020-10-22)[2026-08-15]. <https://www.bsdnow.tv/373>.
 
 <!-- /PODCAST_REVIEW -->

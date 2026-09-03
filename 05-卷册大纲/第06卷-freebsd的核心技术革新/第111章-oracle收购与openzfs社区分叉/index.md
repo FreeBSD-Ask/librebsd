@@ -151,15 +151,15 @@ volume: 06
 
 **文献**：
 
-- [BSD Now EP491] Pennington J. BSD Now: 491: Catch the Spammers[EB/OL]. (2023-01-26)[2026-08-15]. https://www.bsdnow.tv/491.
-- [BSD Now EP374] Pennington J. BSD Now: 374: OpenBSD’s 25th anniversary[EB/OL]. (2020-10-29)[2026-08-15]. https://www.bsdnow.tv/374.
-- [BSD Now EP232] Pennington J. BSD Now: 232: FOSDEM 2018[EB/OL]. (2018-02-07)[2026-08-15]. https://www.bsdnow.tv/232.
-- [BSD Now EP222] Pennington J. BSD Now: 222: How Netflix works[EB/OL]. (2017-11-29)[2026-08-15]. https://www.bsdnow.tv/222.
-- [BSD Now EP203] Pennington J. BSD Now: 203: For the love of ZFS[EB/OL]. (2017-07-19)[2026-08-15]. https://www.bsdnow.tv/203.
-- [BSD Now EP181] Pennington J. BSD Now: 181: The Cantrillogy (Not special edition)[EB/OL]. (2017-02-15)[2026-08-15]. https://www.bsdnow.tv/181.
-- [BSDTalk EP197] Backman W. BSDTalk: 197: bsdtalk197 - FreeNAS 8 with M. Warner Losh[EB/OL]. (2010-09-19)[2026-08-27]. https://bsdtalk.blogspot.com/2010/09/bsdtalk197-freenas-8-with-m-warner-losh.html.
-- [Nerding Out with Victor EPS01E25] Petersson V. Nerding out with Victor: All things ZFS and FreeBSD with Allan Jude[EB/OL]. (2024-12-02)[2026-08-15]. https://vpetersson.com/podcast/s01e25/.
-- [YouTube EPpN7OLChclH8] YouTube. YouTube: FreeBSD Fridays: Introduction to ZFS[EB/OL]. ()[2026-08-15]. https://www.youtube.com/watch?v=pN7OLChclH8.
-- [YouTube EPhTbqEf9LRGE] YouTube. YouTube: All Things ZFS and FreeBSD with Allan Jude: Snapshots, Replication & Real-World Use[EB/OL]. ()[2026-08-15]. https://www.youtube.com/watch?v=hTbqEf9LRGE.
+- [BSD Now EP491] Pennington J. BSD Now: 491: Catch the Spammers[EB/OL]. (2023-01-26)[2026-08-15]. <https://www.bsdnow.tv/491>.
+- [BSD Now EP374] Pennington J. BSD Now: 374: OpenBSD’s 25th anniversary[EB/OL]. (2020-10-29)[2026-08-15]. <https://www.bsdnow.tv/374>.
+- [BSD Now EP232] Pennington J. BSD Now: 232: FOSDEM 2018[EB/OL]. (2018-02-07)[2026-08-15]. <https://www.bsdnow.tv/232>.
+- [BSD Now EP222] Pennington J. BSD Now: 222: How Netflix works[EB/OL]. (2017-11-29)[2026-08-15]. <https://www.bsdnow.tv/222>.
+- [BSD Now EP203] Pennington J. BSD Now: 203: For the love of ZFS[EB/OL]. (2017-07-19)[2026-08-15]. <https://www.bsdnow.tv/203>.
+- [BSD Now EP181] Pennington J. BSD Now: 181: The Cantrillogy (Not special edition)[EB/OL]. (2017-02-15)[2026-08-15]. <https://www.bsdnow.tv/181>.
+- [BSDTalk EP197] Backman W. BSDTalk: 197: bsdtalk197 - FreeNAS 8 with M. Warner Losh[EB/OL]. (2010-09-19)[2026-08-27]. <https://bsdtalk.blogspot.com/2010/09/bsdtalk197-freenas-8-with-m-warner-losh.html>.
+- [Nerding Out with Victor EPS01E25] Petersson V. Nerding out with Victor: All things ZFS and FreeBSD with Allan Jude[EB/OL]. (2024-12-02)[2026-08-15]. <https://vpetersson.com/podcast/s01e25/>.
+- [YouTube EPpN7OLChclH8] YouTube. YouTube: FreeBSD Fridays: Introduction to ZFS[EB/OL]. ()[2026-08-15]. <https://www.youtube.com/watch?v=pN7OLChclH8>.
+- [YouTube EPhTbqEf9LRGE] YouTube. YouTube: All Things ZFS and FreeBSD with Allan Jude: Snapshots, Replication & Real-World Use[EB/OL]. ()[2026-08-15]. <https://www.youtube.com/watch?v=hTbqEf9LRGE>.
 
 <!-- /PODCAST_REVIEW -->

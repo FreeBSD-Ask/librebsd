@@ -89,8 +89,8 @@ volume: 第01卷-unix的起源
 
 **文献**：
 
-- [BSD Now EP523] Pennington J. BSD Now: 523: Literally Unix[EB/OL]. (2023-09-07)[2026-08-15]. https://www.bsdnow.tv/523.
-- [BSD Now EP406] Pennington J. BSD Now: 406: Jailed Gemini Capsule[EB/OL]. (2021-06-10)[2026-08-15]. https://www.bsdnow.tv/406.
-- [BSD Now EP321] Pennington J. BSD Now: 321: The Robot OS[EB/OL]. (2019-10-24)[2026-08-15]. https://www.bsdnow.tv/321.
+- [BSD Now EP523] Pennington J. BSD Now: 523: Literally Unix[EB/OL]. (2023-09-07)[2026-08-15]. <https://www.bsdnow.tv/523>.
+- [BSD Now EP406] Pennington J. BSD Now: 406: Jailed Gemini Capsule[EB/OL]. (2021-06-10)[2026-08-15]. <https://www.bsdnow.tv/406>.
+- [BSD Now EP321] Pennington J. BSD Now: 321: The Robot OS[EB/OL]. (2019-10-24)[2026-08-15]. <https://www.bsdnow.tv/321>.
 
 <!-- /PODCAST_REVIEW -->

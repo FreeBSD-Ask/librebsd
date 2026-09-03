@@ -123,6 +123,6 @@ volume: 15
 
 **文献**：
 
-- [BSDTalk EP222] Backman W. BSDTalk: 222: BSDTalk222 - Tinkering with Raspberry Pi[EB/OL]. (2013-02-01)[2026-08-27]. https://bsdtalk.blogspot.com/2013/01/bsdtalk222-tinkering-with-raspberry-pi.html.
+- [BSDTalk EP222] Backman W. BSDTalk: 222: BSDTalk222 - Tinkering with Raspberry Pi[EB/OL]. (2013-02-01)[2026-08-27]. <https://bsdtalk.blogspot.com/2013/01/bsdtalk222-tinkering-with-raspberry-pi.html>.
 
 <!-- /PODCAST_REVIEW -->

@@ -69,6 +69,6 @@ volume: 第01卷-unix的起源
 
 **文献**：
 
-- [BSD Now EP523] Pennington J. BSD Now: 523: Literally Unix[EB/OL]. (2023-09-07)[2026-08-15]. https://www.bsdnow.tv/523.
+- [BSD Now EP523] Pennington J. BSD Now: 523: Literally Unix[EB/OL]. (2023-09-07)[2026-08-15]. <https://www.bsdnow.tv/523>.
 
 <!-- /PODCAST_REVIEW -->

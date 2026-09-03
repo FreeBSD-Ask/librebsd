@@ -79,6 +79,6 @@ volume: 07
 
 **文献**：
 
-- [BSD Now EP111] Pennington J. BSD Now: 111: Xenocratic Oath[EB/OL]. (2015-10-14)[2026-08-15]. https://www.bsdnow.tv/111.
+- [BSD Now EP111] Pennington J. BSD Now: 111: Xenocratic Oath[EB/OL]. (2015-10-14)[2026-08-15]. <https://www.bsdnow.tv/111>.
 
 <!-- /PODCAST_REVIEW -->

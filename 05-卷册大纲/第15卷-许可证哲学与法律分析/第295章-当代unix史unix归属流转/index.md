@@ -74,6 +74,6 @@ volume: 15
 
 **文献**：
 
-- [BSD Now EP476] Pennington J. BSD Now: 476: Warren Toomey interview[EB/OL]. (2022-10-13)[2026-08-15]. https://www.bsdnow.tv/476.
+- [BSD Now EP476] Pennington J. BSD Now: 476: Warren Toomey interview[EB/OL]. (2022-10-13)[2026-08-15]. <https://www.bsdnow.tv/476>.
 
 <!-- /PODCAST_REVIEW -->

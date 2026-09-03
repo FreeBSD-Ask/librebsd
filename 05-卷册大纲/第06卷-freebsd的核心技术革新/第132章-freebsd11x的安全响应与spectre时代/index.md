@@ -83,8 +83,8 @@ volume: 第06卷-freebsd的核心技术革新
 
 **文献**：
 
-- [BSD Now EP232] Pennington J. BSD Now: 232: FOSDEM 2018[EB/OL]. (2018-02-07)[2026-08-15]. https://www.bsdnow.tv/232.
-- [BSD Now EP230] Pennington J. BSD Now: 230: Your questions, Part III[EB/OL]. (2018-01-24)[2026-08-15]. https://www.bsdnow.tv/230.
-- [BSD Now EP229] Pennington J. BSD Now: 229: The Meltdown of Spectre[EB/OL]. (2018-01-17)[2026-08-15]. https://www.bsdnow.tv/229.
+- [BSD Now EP232] Pennington J. BSD Now: 232: FOSDEM 2018[EB/OL]. (2018-02-07)[2026-08-15]. <https://www.bsdnow.tv/232>.
+- [BSD Now EP230] Pennington J. BSD Now: 230: Your questions, Part III[EB/OL]. (2018-01-24)[2026-08-15]. <https://www.bsdnow.tv/230>.
+- [BSD Now EP229] Pennington J. BSD Now: 229: The Meltdown of Spectre[EB/OL]. (2018-01-17)[2026-08-15]. <https://www.bsdnow.tv/229>.
 
 <!-- /PODCAST_REVIEW -->

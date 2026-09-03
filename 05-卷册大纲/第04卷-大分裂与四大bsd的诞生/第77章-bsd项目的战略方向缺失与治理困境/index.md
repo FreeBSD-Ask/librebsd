@@ -131,6 +131,6 @@ volume: 04
 
 **文献**：
 
-- [BSD Now EP172] Pennington J. BSD Now: 172: A tale of BSD from yore[EB/OL]. (2016-12-14)[2026-08-15]. https://www.bsdnow.tv/172.
+- [BSD Now EP172] Pennington J. BSD Now: 172: A tale of BSD from yore[EB/OL]. (2016-12-14)[2026-08-15]. <https://www.bsdnow.tv/172>.
 
 <!-- /PODCAST_REVIEW -->

@@ -57,6 +57,6 @@ volume: 第10卷-openbsd的历史
 
 **文献**：
 
-- [BSD Now EP428] Pennington J. BSD Now: 428: Cult of BSD[EB/OL]. (2021-11-11)[2026-08-15]. https://www.bsdnow.tv/428.
+- [BSD Now EP428] Pennington J. BSD Now: 428: Cult of BSD[EB/OL]. (2021-11-11)[2026-08-15]. <https://www.bsdnow.tv/428>.
 
 <!-- /PODCAST_REVIEW -->

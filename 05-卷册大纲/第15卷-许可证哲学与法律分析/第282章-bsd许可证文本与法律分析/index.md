@@ -108,7 +108,7 @@ volume: 15
 
 **文献**：
 
-- [BSD Now EP232] Pennington J. BSD Now: 232: FOSDEM 2018[EB/OL]. (2018-02-07)[2026-08-15]. https://www.bsdnow.tv/232.
-- [BSDTalk EP200] Backman W. BSDTalk: 200: bsdtalk200 - The mg text editor with Kjell Wooding[EB/OL]. (2010-10-13)[2026-08-27]. https://bsdtalk.blogspot.com/2010/10/bsdtalk200-mg-text-editor-with-kjell.html.
+- [BSD Now EP232] Pennington J. BSD Now: 232: FOSDEM 2018[EB/OL]. (2018-02-07)[2026-08-15]. <https://www.bsdnow.tv/232>.
+- [BSDTalk EP200] Backman W. BSDTalk: 200: bsdtalk200 - The mg text editor with Kjell Wooding[EB/OL]. (2010-10-13)[2026-08-27]. <https://bsdtalk.blogspot.com/2010/10/bsdtalk200-mg-text-editor-with-kjell.html>.
 
 <!-- /PODCAST_REVIEW -->

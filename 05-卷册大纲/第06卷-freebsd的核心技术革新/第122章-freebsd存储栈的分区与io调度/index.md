@@ -81,8 +81,8 @@ volume: 第06卷-freebsd的核心技术革新
 
 **文献**：
 
-- [BSD Now EP361] Pennington J. BSD Now: 361: Function-based MicroVM[EB/OL]. (2020-07-30)[2026-08-15]. https://www.bsdnow.tv/361.
-- [BSD Now EP109] Pennington J. BSD Now: 109: Impish BSD[EB/OL]. (2015-09-30)[2026-08-15]. https://www.bsdnow.tv/109.
-- [BSDTalk EP61] Backman W. BSDTalk: 61: bsdtalk061 - Interview with lighttpd developer Jan Kneschke[EB/OL]. (2006-08-15)[2026-08-27]. https://archive.org/details/bsdtalk061.
+- [BSD Now EP361] Pennington J. BSD Now: 361: Function-based MicroVM[EB/OL]. (2020-07-30)[2026-08-15]. <https://www.bsdnow.tv/361>.
+- [BSD Now EP109] Pennington J. BSD Now: 109: Impish BSD[EB/OL]. (2015-09-30)[2026-08-15]. <https://www.bsdnow.tv/109>.
+- [BSDTalk EP61] Backman W. BSDTalk: 61: bsdtalk061 - Interview with lighttpd developer Jan Kneschke[EB/OL]. (2006-08-15)[2026-08-27]. <https://archive.org/details/bsdtalk061>.
 
 <!-- /PODCAST_REVIEW -->

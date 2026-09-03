@@ -63,6 +63,6 @@ volume: 第05卷-freebsd的工程化奠基
 
 **文献**：
 
-- [BSD Now EP230] Pennington J. BSD Now: 230: Your questions, Part III[EB/OL]. (2018-01-24)[2026-08-15]. https://www.bsdnow.tv/230.
+- [BSD Now EP230] Pennington J. BSD Now: 230: Your questions, Part III[EB/OL]. (2018-01-24)[2026-08-15]. <https://www.bsdnow.tv/230>.
 
 <!-- /PODCAST_REVIEW -->

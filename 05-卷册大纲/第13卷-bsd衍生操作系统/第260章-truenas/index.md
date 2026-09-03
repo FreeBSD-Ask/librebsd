@@ -132,11 +132,11 @@ volume: 第13卷-bsd衍生操作系统
 
 **文献**：
 
-- [BSD Now EP552] Pennington J. BSD Now: 552: The Laptop Sparc[EB/OL]. (2024-03-28)[2026-08-15]. https://www.bsdnow.tv/552.
-- [BSD Now EP330] Pennington J. BSD Now: 330: Happy Holidays, All(an)[EB/OL]. (2019-12-26)[2026-08-15]. https://www.bsdnow.tv/330.
-- [BSD Now EP318] Pennington J. BSD Now: 318: The TrueNAS Library[EB/OL]. (2019-10-03)[2026-08-15]. https://www.bsdnow.tv/318.
-- [BSD Now EP201] Pennington J. BSD Now: 201: Skip grep, use awk[EB/OL]. (2017-07-05)[2026-08-15]. https://www.bsdnow.tv/201.
-- [BSD Now EP190] Pennington J. BSD Now: 190: The Moore You Know[EB/OL]. (2017-04-19)[2026-08-15]. https://www.bsdnow.tv/190.
-- [BSD Now EP185] Pennington J. BSD Now: 185: Exit Interview[EB/OL]. (2017-03-16)[2026-08-15]. https://www.bsdnow.tv/185.
+- [BSD Now EP552] Pennington J. BSD Now: 552: The Laptop Sparc[EB/OL]. (2024-03-28)[2026-08-15]. <https://www.bsdnow.tv/552>.
+- [BSD Now EP330] Pennington J. BSD Now: 330: Happy Holidays, All(an)[EB/OL]. (2019-12-26)[2026-08-15]. <https://www.bsdnow.tv/330>.
+- [BSD Now EP318] Pennington J. BSD Now: 318: The TrueNAS Library[EB/OL]. (2019-10-03)[2026-08-15]. <https://www.bsdnow.tv/318>.
+- [BSD Now EP201] Pennington J. BSD Now: 201: Skip grep, use awk[EB/OL]. (2017-07-05)[2026-08-15]. <https://www.bsdnow.tv/201>.
+- [BSD Now EP190] Pennington J. BSD Now: 190: The Moore You Know[EB/OL]. (2017-04-19)[2026-08-15]. <https://www.bsdnow.tv/190>.
+- [BSD Now EP185] Pennington J. BSD Now: 185: Exit Interview[EB/OL]. (2017-03-16)[2026-08-15]. <https://www.bsdnow.tv/185>.
 
 <!-- /PODCAST_REVIEW -->

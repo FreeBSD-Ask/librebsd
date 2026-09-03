@@ -73,6 +73,6 @@ volume: 第05卷-freebsd的工程化奠基
 
 **文献**：
 
-- [BSD Now EP186] Pennington J. BSD Now: 186: The Fast And the Firewall: Tokyo Drift[EB/OL]. (2017-03-22)[2026-08-15]. https://www.bsdnow.tv/186.
+- [BSD Now EP186] Pennington J. BSD Now: 186: The Fast And the Firewall: Tokyo Drift[EB/OL]. (2017-03-22)[2026-08-15]. <https://www.bsdnow.tv/186>.
 
 <!-- /PODCAST_REVIEW -->

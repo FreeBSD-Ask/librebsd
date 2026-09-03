@@ -87,8 +87,8 @@ volume: 第18卷-全球社区地区bsd史
 
 **文献**：
 
-- [BSD Now EP270] Pennington J. BSD Now: Episode 270: Ghostly Releases | BSD Now 270[EB/OL]. (2018-11-01)[2026-08-15]. https://www.bsdnow.tv/270.
-- [BSD Now EP261] Pennington J. BSD Now: Episode 261: FreeBSDcon Flashback | BSD Now 261[EB/OL]. (2018-08-30)[2026-08-15]. https://www.bsdnow.tv/261.
-- [BSDTalk EP21] Backman W. BSDTalk: Interview with Stephen Jones of SDF[EB/OL]. (2006-03-01)[2026-08-15]. https://archive.org/download/bsdtalk021/bsdtalk021.ogg.
+- [BSD Now EP270] Pennington J. BSD Now: Episode 270: Ghostly Releases | BSD Now 270[EB/OL]. (2018-11-01)[2026-08-15]. <https://www.bsdnow.tv/270>.
+- [BSD Now EP261] Pennington J. BSD Now: Episode 261: FreeBSDcon Flashback | BSD Now 261[EB/OL]. (2018-08-30)[2026-08-15]. <https://www.bsdnow.tv/261>.
+- [BSDTalk EP21] Backman W. BSDTalk: Interview with Stephen Jones of SDF[EB/OL]. (2006-03-01)[2026-08-15]. <https://archive.org/download/bsdtalk021/bsdtalk021.ogg>.
 
 <!-- /PODCAST_REVIEW -->

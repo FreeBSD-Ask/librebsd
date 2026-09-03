@@ -89,8 +89,8 @@ volume: 第10卷-openbsd的历史
 
 **文献**：
 
-- [BSD Now EP498] Pennington J. BSD Now: 498: Dropping Privileges[EB/OL]. (2023-03-16)[2026-08-15]. https://www.bsdnow.tv/498.
-- [BSD Now EP144] Pennington J. BSD Now: 144: The PF life[EB/OL]. (2016-06-01)[2026-08-15]. https://www.bsdnow.tv/144.
-- [BSD Now EP140] Pennington J. BSD Now: 140: Tracing it back to BSD[EB/OL]. (2016-05-04)[2026-08-15]. https://www.bsdnow.tv/140.
+- [BSD Now EP498] Pennington J. BSD Now: 498: Dropping Privileges[EB/OL]. (2023-03-16)[2026-08-15]. <https://www.bsdnow.tv/498>.
+- [BSD Now EP144] Pennington J. BSD Now: 144: The PF life[EB/OL]. (2016-06-01)[2026-08-15]. <https://www.bsdnow.tv/144>.
+- [BSD Now EP140] Pennington J. BSD Now: 140: Tracing it back to BSD[EB/OL]. (2016-05-04)[2026-08-15]. <https://www.bsdnow.tv/140>.
 
 <!-- /PODCAST_REVIEW -->

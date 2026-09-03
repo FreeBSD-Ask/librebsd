@@ -99,8 +99,8 @@ volume: 第01卷-unix的起源
 
 **文献**：
 
-- [BSD Now EP487] Pennington J. BSD Now: 487: EuroBSDcon Interviews Pt. 2[EB/OL]. (2022-12-29)[2026-08-15]. https://www.bsdnow.tv/487.
-- [BSD Now EP325] Pennington J. BSD Now: 325: Cracking Rainbows[EB/OL]. (2019-11-21)[2026-08-15]. https://www.bsdnow.tv/325.
-- [BSD Now EP173] Pennington J. BSD Now: 173: Carry on my Wayland son[EB/OL]. (2016-12-21)[2026-08-15]. https://www.bsdnow.tv/173.
+- [BSD Now EP487] Pennington J. BSD Now: 487: EuroBSDcon Interviews Pt. 2[EB/OL]. (2022-12-29)[2026-08-15]. <https://www.bsdnow.tv/487>.
+- [BSD Now EP325] Pennington J. BSD Now: 325: Cracking Rainbows[EB/OL]. (2019-11-21)[2026-08-15]. <https://www.bsdnow.tv/325>.
+- [BSD Now EP173] Pennington J. BSD Now: 173: Carry on my Wayland son[EB/OL]. (2016-12-21)[2026-08-15]. <https://www.bsdnow.tv/173>.
 
 <!-- /PODCAST_REVIEW -->

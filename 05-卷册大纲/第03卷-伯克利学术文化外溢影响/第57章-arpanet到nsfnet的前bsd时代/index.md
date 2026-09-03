@@ -119,10 +119,10 @@ volume: 第03卷-伯克利学术文化外溢影响
 
 **文献**：
 
-- [BSD Now EP558] Pennington J. BSD Now: 558: Worlds of telnet[EB/OL]. (2024-05-09)[2026-08-15]. https://www.bsdnow.tv/558.
-- [BSD Now EP552] Pennington J. BSD Now: 552: The Laptop Sparc[EB/OL]. (2024-03-28)[2026-08-15]. https://www.bsdnow.tv/552.
-- [BSD Now EP507] Pennington J. BSD Now: 507: Michael W. Lucas Interview[EB/OL]. (2023-05-18)[2026-08-15]. https://www.bsdnow.tv/507.
-- [BSD Now EP323] Pennington J. BSD Now: 323: OSI Burrito Guy[EB/OL]. (2019-11-07)[2026-08-15]. https://www.bsdnow.tv/323.
-- [BSD Now EP197] Pennington J. BSD Now: 197: Relaying the good news[EB/OL]. (2017-06-07)[2026-08-15]. https://www.bsdnow.tv/197.
+- [BSD Now EP558] Pennington J. BSD Now: 558: Worlds of telnet[EB/OL]. (2024-05-09)[2026-08-15]. <https://www.bsdnow.tv/558>.
+- [BSD Now EP552] Pennington J. BSD Now: 552: The Laptop Sparc[EB/OL]. (2024-03-28)[2026-08-15]. <https://www.bsdnow.tv/552>.
+- [BSD Now EP507] Pennington J. BSD Now: 507: Michael W. Lucas Interview[EB/OL]. (2023-05-18)[2026-08-15]. <https://www.bsdnow.tv/507>.
+- [BSD Now EP323] Pennington J. BSD Now: 323: OSI Burrito Guy[EB/OL]. (2019-11-07)[2026-08-15]. <https://www.bsdnow.tv/323>.
+- [BSD Now EP197] Pennington J. BSD Now: 197: Relaying the good news[EB/OL]. (2017-06-07)[2026-08-15]. <https://www.bsdnow.tv/197>.
 
 <!-- /PODCAST_REVIEW -->

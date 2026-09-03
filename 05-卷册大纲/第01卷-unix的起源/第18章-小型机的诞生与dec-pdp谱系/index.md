@@ -91,8 +91,8 @@ PDP-11与UNIX的共生关系常被简化为"天作之合"，但UNIX最初是为P
 
 **文献**：
 
-- [BSD Now EP322] Pennington J. BSD Now: 322: Happy Birthday, Unix[EB/OL]. (2019-10-31)[2026-08-15]. https://www.bsdnow.tv/322.
-- [BSD Now EP308] Pennington J. BSD Now: 308: Mumbling with OpenBSD[EB/OL]. (2019-07-25)[2026-08-15]. https://www.bsdnow.tv/308.
-- [BSD Now EP225] Pennington J. BSD Now: 225: The one true OS[EB/OL]. (2017-12-20)[2026-08-15]. https://www.bsdnow.tv/225.
+- [BSD Now EP322] Pennington J. BSD Now: 322: Happy Birthday, Unix[EB/OL]. (2019-10-31)[2026-08-15]. <https://www.bsdnow.tv/322>.
+- [BSD Now EP308] Pennington J. BSD Now: 308: Mumbling with OpenBSD[EB/OL]. (2019-07-25)[2026-08-15]. <https://www.bsdnow.tv/308>.
+- [BSD Now EP225] Pennington J. BSD Now: 225: The one true OS[EB/OL]. (2017-12-20)[2026-08-15]. <https://www.bsdnow.tv/225>.
 
 <!-- /PODCAST_REVIEW -->

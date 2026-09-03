@@ -119,9 +119,9 @@ volume: 06
 
 **文献**：
 
-- [BSD Now EP195] Pennington J. BSD Now: 195: I don’t WannaCry[EB/OL]. (2017-05-24)[2026-08-15]. https://www.bsdnow.tv/195.
-- [BSD Now EP191] Pennington J. BSD Now: 191: I Know 64 & A Bunch More[EB/OL]. (2017-04-26)[2026-08-15]. https://www.bsdnow.tv/191.
-- [BSD Now EP120] Pennington J. BSD Now: 120: I’m talking about the man in the middle[EB/OL]. (2015-12-16)[2026-08-15]. https://www.bsdnow.tv/120.
-- [BSD Now EP88] Pennington J. BSD Now: 88: Below the Clouds[EB/OL]. (2015-05-06)[2026-08-15]. https://www.bsdnow.tv/88.
+- [BSD Now EP195] Pennington J. BSD Now: 195: I don’t WannaCry[EB/OL]. (2017-05-24)[2026-08-15]. <https://www.bsdnow.tv/195>.
+- [BSD Now EP191] Pennington J. BSD Now: 191: I Know 64 & A Bunch More[EB/OL]. (2017-04-26)[2026-08-15]. <https://www.bsdnow.tv/191>.
+- [BSD Now EP120] Pennington J. BSD Now: 120: I’m talking about the man in the middle[EB/OL]. (2015-12-16)[2026-08-15]. <https://www.bsdnow.tv/120>.
+- [BSD Now EP88] Pennington J. BSD Now: 88: Below the Clouds[EB/OL]. (2015-05-06)[2026-08-15]. <https://www.bsdnow.tv/88>.
 
 <!-- /PODCAST_REVIEW -->

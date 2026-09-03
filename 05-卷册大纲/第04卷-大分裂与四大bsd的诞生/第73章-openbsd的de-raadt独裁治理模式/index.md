@@ -74,6 +74,6 @@ volume: 第04卷-大分裂与四大bsd的诞生
 
 **文献**：
 
-- [BSD Now EP333] Pennington J. BSD Now: 333: Unix Keyboard Joy[EB/OL]. (2020-01-16)[2026-08-15]. https://www.bsdnow.tv/333.
+- [BSD Now EP333] Pennington J. BSD Now: 333: Unix Keyboard Joy[EB/OL]. (2020-01-16)[2026-08-15]. <https://www.bsdnow.tv/333>.
 
 <!-- /PODCAST_REVIEW -->

@@ -67,7 +67,7 @@ volume: 第13卷-bsd衍生操作系统
 
 **文献**：
 
-- [BSD Now EP290] Pennington J. BSD Now: 290: Timestamped Notes[EB/OL]. (2019-03-21)[2026-08-15]. https://www.bsdnow.tv/290.
-- [BSD Now EP52] Pennington J. BSD Now: 52: Reverse Takeover[EB/OL]. (2014-08-27)[2026-08-15]. https://www.bsdnow.tv/52.
+- [BSD Now EP290] Pennington J. BSD Now: 290: Timestamped Notes[EB/OL]. (2019-03-21)[2026-08-15]. <https://www.bsdnow.tv/290>.
+- [BSD Now EP52] Pennington J. BSD Now: 52: Reverse Takeover[EB/OL]. (2014-08-27)[2026-08-15]. <https://www.bsdnow.tv/52>.
 
 <!-- /PODCAST_REVIEW -->

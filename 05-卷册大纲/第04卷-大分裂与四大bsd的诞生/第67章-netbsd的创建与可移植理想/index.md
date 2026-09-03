@@ -75,7 +75,7 @@ volume: 第04卷-大分裂与四大bsd的诞生
 
 **文献**：
 
-- [BSD Now EP100] Pennington J. BSD Now: 100: Straight from the Src[EB/OL]. (2015-07-29)[2026-08-15]. https://www.bsdnow.tv/100.
-- [BSD Now EP8] Pennington J. BSD Now: 8: A Brief Introduction[EB/OL]. (2013-10-23)[2026-08-15]. https://www.bsdnow.tv/8.
+- [BSD Now EP100] Pennington J. BSD Now: 100: Straight from the Src[EB/OL]. (2015-07-29)[2026-08-15]. <https://www.bsdnow.tv/100>.
+- [BSD Now EP8] Pennington J. BSD Now: 8: A Brief Introduction[EB/OL]. (2013-10-23)[2026-08-15]. <https://www.bsdnow.tv/8>.
 
 <!-- /PODCAST_REVIEW -->

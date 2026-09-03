@@ -114,9 +114,9 @@ volume: 第09卷-netbsd的历史
 
 **文献**：
 
-- [BSD Now EP376] Pennington J. BSD Now: 376: Build stable packages[EB/OL]. (2020-11-12)[2026-08-15]. https://www.bsdnow.tv/376.
-- [BSD Now EP374] Pennington J. BSD Now: 374: OpenBSD’s 25th anniversary[EB/OL]. (2020-10-29)[2026-08-15]. https://www.bsdnow.tv/374.
-- [BSD Now EP352] Pennington J. BSD Now: 352: Introducing Randomness[EB/OL]. (2020-05-28)[2026-08-15]. https://www.bsdnow.tv/352.
-- [BSD Now EP330] Pennington J. BSD Now: 330: Happy Holidays, All(an)[EB/OL]. (2019-12-26)[2026-08-15]. https://www.bsdnow.tv/330.
+- [BSD Now EP376] Pennington J. BSD Now: 376: Build stable packages[EB/OL]. (2020-11-12)[2026-08-15]. <https://www.bsdnow.tv/376>.
+- [BSD Now EP374] Pennington J. BSD Now: 374: OpenBSD’s 25th anniversary[EB/OL]. (2020-10-29)[2026-08-15]. <https://www.bsdnow.tv/374>.
+- [BSD Now EP352] Pennington J. BSD Now: 352: Introducing Randomness[EB/OL]. (2020-05-28)[2026-08-15]. <https://www.bsdnow.tv/352>.
+- [BSD Now EP330] Pennington J. BSD Now: 330: Happy Holidays, All(an)[EB/OL]. (2019-12-26)[2026-08-15]. <https://www.bsdnow.tv/330>.
 
 <!-- /PODCAST_REVIEW -->

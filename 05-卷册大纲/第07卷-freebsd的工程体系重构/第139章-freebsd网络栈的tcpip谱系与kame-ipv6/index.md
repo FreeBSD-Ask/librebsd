@@ -75,7 +75,7 @@ volume: 第07卷-freebsd的工程体系重构
 
 **文献**：
 
-- [BSDTalk EP112] Backman W. BSDTalk: 112: bsdtalk112 - Qing Li and Tatuya Jinmei[EB/OL]. (2007-05-18)[2026-08-27]. https://archive.org/details/bsdtalk112.
-- [BSDTalk EP115] Backman W. BSDTalk: 115: bsdtalk115 - Jun-ichiro "itojun" Itoh Hagino[EB/OL]. (2007-06-01)[2026-08-27]. https://archive.org/details/bsdtalk115.
+- [BSDTalk EP112] Backman W. BSDTalk: 112: bsdtalk112 - Qing Li and Tatuya Jinmei[EB/OL]. (2007-05-18)[2026-08-27]. <https://archive.org/details/bsdtalk112>.
+- [BSDTalk EP115] Backman W. BSDTalk: 115: bsdtalk115 - Jun-ichiro "itojun" Itoh Hagino[EB/OL]. (2007-06-01)[2026-08-27]. <https://archive.org/details/bsdtalk115>.
 
 <!-- /PODCAST_REVIEW -->

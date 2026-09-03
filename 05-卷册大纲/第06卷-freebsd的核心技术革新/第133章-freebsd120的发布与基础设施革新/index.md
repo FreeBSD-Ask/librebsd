@@ -116,9 +116,9 @@ volume: 第06卷-freebsd的核心技术革新
 
 **文献**：
 
-- [BSD Now EP331] Pennington J. BSD Now: 331: Why Computers Suck[EB/OL]. (2020-01-02)[2026-08-15]. https://www.bsdnow.tv/331.
-- [BSD Now EP325] Pennington J. BSD Now: 325: Cracking Rainbows[EB/OL]. (2019-11-21)[2026-08-15]. https://www.bsdnow.tv/325.
-- [BSD Now EP318] Pennington J. BSD Now: 318: The TrueNAS Library[EB/OL]. (2019-10-03)[2026-08-15]. https://www.bsdnow.tv/318.
-- [BSD Now EP276] Pennington J. BSD Now: Episode 276: Ho, Ho, Ho - 12.0 | BSD Now 276[EB/OL]. (2018-12-13)[2026-08-15]. https://www.bsdnow.tv/276.
+- [BSD Now EP331] Pennington J. BSD Now: 331: Why Computers Suck[EB/OL]. (2020-01-02)[2026-08-15]. <https://www.bsdnow.tv/331>.
+- [BSD Now EP325] Pennington J. BSD Now: 325: Cracking Rainbows[EB/OL]. (2019-11-21)[2026-08-15]. <https://www.bsdnow.tv/325>.
+- [BSD Now EP318] Pennington J. BSD Now: 318: The TrueNAS Library[EB/OL]. (2019-10-03)[2026-08-15]. <https://www.bsdnow.tv/318>.
+- [BSD Now EP276] Pennington J. BSD Now: Episode 276: Ho, Ho, Ho - 12.0 | BSD Now 276[EB/OL]. (2018-12-13)[2026-08-15]. <https://www.bsdnow.tv/276>.
 
 <!-- /PODCAST_REVIEW -->

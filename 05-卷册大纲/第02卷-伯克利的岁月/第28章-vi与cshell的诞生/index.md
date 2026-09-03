@@ -73,6 +73,6 @@ volume: 第02卷-伯克利的岁月
 
 **文献**：
 
-- [BSD Now EP352] Pennington J. BSD Now: 352: Introducing Randomness[EB/OL]. (2020-05-28)[2026-08-15]. https://www.bsdnow.tv/352.
+- [BSD Now EP352] Pennington J. BSD Now: 352: Introducing Randomness[EB/OL]. (2020-05-28)[2026-08-15]. <https://www.bsdnow.tv/352>.
 
 <!-- /PODCAST_REVIEW -->

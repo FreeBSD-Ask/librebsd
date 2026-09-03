@@ -138,12 +138,12 @@ volume: 第03卷-伯克利学术文化外溢影响
 
 **文献**：
 
-- [BSD Now EP378] Pennington J. BSD Now: 378: Networknomicon[EB/OL]. (2020-11-26)[2026-08-15]. https://www.bsdnow.tv/378.
-- [BSD Now EP323] Pennington J. BSD Now: 323: OSI Burrito Guy[EB/OL]. (2019-11-07)[2026-08-15]. https://www.bsdnow.tv/323.
-- [BSD Now EP165] Pennington J. BSD Now: 165: Vote4BSD[EB/OL]. (2016-10-26)[2026-08-15]. https://www.bsdnow.tv/165.
-- [BSD Now EP105] Pennington J. BSD Now: 105: Virginia BSD Assembly[EB/OL]. (2015-09-02)[2026-08-15]. https://www.bsdnow.tv/105.
-- [BSD Now EP56] Pennington J. BSD Now: 56: Beastly Infrastructure[EB/OL]. (2014-09-24)[2026-08-15]. https://www.bsdnow.tv/56.
-- [BSD Now EP1] Pennington J. BSD Now: 1: BGP & BSD[EB/OL]. (2013-09-04)[2026-08-15]. https://www.bsdnow.tv/1.
-- [YouTube EPrGdylV-Up_E] YouTube. YouTube: Doing stupid things with FreeBSD jails - Dan Langille - EuroBSDcon 2024[EB/OL]. ()[2026-08-15]. https://www.youtube.com/watch?v=rGdylV-Up_E.
+- [BSD Now EP378] Pennington J. BSD Now: 378: Networknomicon[EB/OL]. (2020-11-26)[2026-08-15]. <https://www.bsdnow.tv/378>.
+- [BSD Now EP323] Pennington J. BSD Now: 323: OSI Burrito Guy[EB/OL]. (2019-11-07)[2026-08-15]. <https://www.bsdnow.tv/323>.
+- [BSD Now EP165] Pennington J. BSD Now: 165: Vote4BSD[EB/OL]. (2016-10-26)[2026-08-15]. <https://www.bsdnow.tv/165>.
+- [BSD Now EP105] Pennington J. BSD Now: 105: Virginia BSD Assembly[EB/OL]. (2015-09-02)[2026-08-15]. <https://www.bsdnow.tv/105>.
+- [BSD Now EP56] Pennington J. BSD Now: 56: Beastly Infrastructure[EB/OL]. (2014-09-24)[2026-08-15]. <https://www.bsdnow.tv/56>.
+- [BSD Now EP1] Pennington J. BSD Now: 1: BGP & BSD[EB/OL]. (2013-09-04)[2026-08-15]. <https://www.bsdnow.tv/1>.
+- [YouTube EPrGdylV-Up_E] YouTube. YouTube: Doing stupid things with FreeBSD jails - Dan Langille - EuroBSDcon 2024[EB/OL]. ()[2026-08-15]. <https://www.youtube.com/watch?v=rGdylV-Up_E>.
 
 <!-- /PODCAST_REVIEW -->

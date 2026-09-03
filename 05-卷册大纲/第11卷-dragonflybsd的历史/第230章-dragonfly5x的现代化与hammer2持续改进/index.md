@@ -77,6 +77,6 @@ volume: 第11卷-dragonflybsd的历史
 
 **文献**：
 
-- [BSD Now EP324] Pennington J. BSD Now: 324: Emergency Space Mode[EB/OL]. (2019-11-14)[2026-08-15]. https://www.bsdnow.tv/324.
+- [BSD Now EP324] Pennington J. BSD Now: 324: Emergency Space Mode[EB/OL]. (2019-11-14)[2026-08-15]. <https://www.bsdnow.tv/324>.
 
 <!-- /PODCAST_REVIEW -->

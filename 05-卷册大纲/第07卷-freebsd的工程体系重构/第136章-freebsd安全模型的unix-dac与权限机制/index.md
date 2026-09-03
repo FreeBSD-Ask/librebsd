@@ -83,8 +83,8 @@ volume: 07
 
 **文献**：
 
-- [BSD Now EP194] Pennington J. BSD Now: 194: Daemonic plans[EB/OL]. (2017-05-17)[2026-08-15]. https://www.bsdnow.tv/194.
-- [BSD Now EP88] Pennington J. BSD Now: 88: Below the Clouds[EB/OL]. (2015-05-06)[2026-08-15]. https://www.bsdnow.tv/88.
-- [YouTube EPE04LxKiu79I] YouTube. YouTube: Dr. Marshall Kirk McKusick, An Overview of Security in the FreeBSD Kernel[EB/OL]. ()[2026-08-15]. https://www.youtube.com/watch?v=E04LxKiu79I.
+- [BSD Now EP194] Pennington J. BSD Now: 194: Daemonic plans[EB/OL]. (2017-05-17)[2026-08-15]. <https://www.bsdnow.tv/194>.
+- [BSD Now EP88] Pennington J. BSD Now: 88: Below the Clouds[EB/OL]. (2015-05-06)[2026-08-15]. <https://www.bsdnow.tv/88>.
+- [YouTube EPE04LxKiu79I] YouTube. YouTube: Dr. Marshall Kirk McKusick, An Overview of Security in the FreeBSD Kernel[EB/OL]. ()[2026-08-15]. <https://www.youtube.com/watch?v=E04LxKiu79I>.
 
 <!-- /PODCAST_REVIEW -->

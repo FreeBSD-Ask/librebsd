@@ -139,13 +139,13 @@ volume: 第10卷-openbsd的历史
 
 **文献**：
 
-- [BSD Now EP166] Pennington J. BSD Now: 166: Pass that UNIX Pipe[EB/OL]. (2016-11-02)[2026-08-15]. https://www.bsdnow.tv/166.
-- [BSD Now EP86] Pennington J. BSD Now: 86: Business as Usual[EB/OL]. (2015-04-22)[2026-08-15]. https://www.bsdnow.tv/86.
-- [BSD Now EP53] Pennington J. BSD Now: 53: It's HAMMER Time[EB/OL]. (2014-09-03)[2026-08-15]. https://www.bsdnow.tv/53.
-- [BSD Now EP52] Pennington J. BSD Now: 52: Reverse Takeover[EB/OL]. (2014-08-27)[2026-08-15]. https://www.bsdnow.tv/52.
-- [BSD Now EP32] Pennington J. BSD Now: 32: PXE Dust[EB/OL]. (2014-04-09)[2026-08-15]. https://www.bsdnow.tv/32.
-- [BSD Now EP18] Pennington J. BSD Now: 18: Eclipsing Binaries[EB/OL]. (2014-01-01)[2026-08-15]. https://www.bsdnow.tv/18.
-- [BSD Now EP10] Pennington J. BSD Now: 10: Year of the BSD Desktop[EB/OL]. (2013-11-06)[2026-08-15]. https://www.bsdnow.tv/10.
-- [BSDTalk EP228] Backman W. BSDTalk: 228: bsdtalk228 - Michael W. Lucas[EB/OL]. (2013-07-12)[2026-08-27]. https://bsdtalk.blogspot.com/2013/07/bsdtalk228-michael-w-lucas.html.
+- [BSD Now EP166] Pennington J. BSD Now: 166: Pass that UNIX Pipe[EB/OL]. (2016-11-02)[2026-08-15]. <https://www.bsdnow.tv/166>.
+- [BSD Now EP86] Pennington J. BSD Now: 86: Business as Usual[EB/OL]. (2015-04-22)[2026-08-15]. <https://www.bsdnow.tv/86>.
+- [BSD Now EP53] Pennington J. BSD Now: 53: It's HAMMER Time[EB/OL]. (2014-09-03)[2026-08-15]. <https://www.bsdnow.tv/53>.
+- [BSD Now EP52] Pennington J. BSD Now: 52: Reverse Takeover[EB/OL]. (2014-08-27)[2026-08-15]. <https://www.bsdnow.tv/52>.
+- [BSD Now EP32] Pennington J. BSD Now: 32: PXE Dust[EB/OL]. (2014-04-09)[2026-08-15]. <https://www.bsdnow.tv/32>.
+- [BSD Now EP18] Pennington J. BSD Now: 18: Eclipsing Binaries[EB/OL]. (2014-01-01)[2026-08-15]. <https://www.bsdnow.tv/18>.
+- [BSD Now EP10] Pennington J. BSD Now: 10: Year of the BSD Desktop[EB/OL]. (2013-11-06)[2026-08-15]. <https://www.bsdnow.tv/10>.
+- [BSDTalk EP228] Backman W. BSDTalk: 228: bsdtalk228 - Michael W. Lucas[EB/OL]. (2013-07-12)[2026-08-27]. <https://bsdtalk.blogspot.com/2013/07/bsdtalk228-michael-w-lucas.html>.
 
 <!-- /PODCAST_REVIEW -->

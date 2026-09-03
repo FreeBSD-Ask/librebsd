@@ -69,6 +69,6 @@ volume: 第11卷-dragonflybsd的历史
 
 **文献**：
 
-- [BSD Now EP491] Pennington J. BSD Now: 491: Catch the Spammers[EB/OL]. (2023-01-26)[2026-08-15]. https://www.bsdnow.tv/491.
+- [BSD Now EP491] Pennington J. BSD Now: 491: Catch the Spammers[EB/OL]. (2023-01-26)[2026-08-15]. <https://www.bsdnow.tv/491>.
 
 <!-- /PODCAST_REVIEW -->

@@ -84,6 +84,6 @@ volume: 17
 
 **文献**：
 
-- [BSD Now EP623] Pennington J. BSD Now: 623: Two's interview[EB/OL]. (2025-08-07)[2026-08-15]. https://www.bsdnow.tv/623.
+- [BSD Now EP623] Pennington J. BSD Now: 623: Two's interview[EB/OL]. (2025-08-07)[2026-08-15]. <https://www.bsdnow.tv/623>.
 
 <!-- /PODCAST_REVIEW -->

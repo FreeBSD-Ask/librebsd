@@ -100,9 +100,9 @@ volume: 第10卷-openbsd的历史
 
 **文献**：
 
-- [BSD Now EP331] Pennington J. BSD Now: 331: Why Computers Suck[EB/OL]. (2020-01-02)[2026-08-15]. https://www.bsdnow.tv/331.
-- [BSD Now EP189] Pennington J. BSD Now: 189: Codified Summer[EB/OL]. (2017-04-12)[2026-08-15]. https://www.bsdnow.tv/189.
-- [BSDTalk EP229] Backman W. BSDTalk: 229: bsdtalk229 - Chris Cappuccio[EB/OL]. (2013-08-07)[2026-08-27]. https://bsdtalk.blogspot.com/2013/08/bsdtalk229-chris-cappuccio.html.
-- [BSDTalk EP66] Backman W. BSDTalk: 66: bsdtalk066 - Interview with Michael Dexter about sysjail[EB/OL]. (2006-09-20)[2026-08-27]. https://archive.org/details/bsdtalk066.
+- [BSD Now EP331] Pennington J. BSD Now: 331: Why Computers Suck[EB/OL]. (2020-01-02)[2026-08-15]. <https://www.bsdnow.tv/331>.
+- [BSD Now EP189] Pennington J. BSD Now: 189: Codified Summer[EB/OL]. (2017-04-12)[2026-08-15]. <https://www.bsdnow.tv/189>.
+- [BSDTalk EP229] Backman W. BSDTalk: 229: bsdtalk229 - Chris Cappuccio[EB/OL]. (2013-08-07)[2026-08-27]. <https://bsdtalk.blogspot.com/2013/08/bsdtalk229-chris-cappuccio.html>.
+- [BSDTalk EP66] Backman W. BSDTalk: 66: bsdtalk066 - Interview with Michael Dexter about sysjail[EB/OL]. (2006-09-20)[2026-08-27]. <https://archive.org/details/bsdtalk066>.
 
 <!-- /PODCAST_REVIEW -->

@@ -87,9 +87,9 @@ OpenBSD 的贡献者谱系研究面临若干方法论挑战：其一，OpenBSD �
 
 **文献**：
 
-- [BSD Now EP435] Pennington J. BSD Now: 435: Year End Interview[EB/OL]. (2021-12-30)[2026-08-15]. https://www.bsdnow.tv/435.
-- [BSD Now EP422] Pennington J. BSD Now: 422: The Brian Callahan Interview[EB/OL]. (2021-09-30)[2026-08-15]. https://www.bsdnow.tv/422.
-- [BSD Now EP623] Pennington J. BSD Now: 623: Two's interview[EB/OL]. (2025-08-07)[2026-08-15]. https://www.bsdnow.tv/623.
-- [BSDTalk EP200] Backman W. BSDTalk: 200: bsdtalk200 - The mg text editor with Kjell Wooding[EB/OL]. (2010-10-13)[2026-08-27]. https://bsdtalk.blogspot.com/2010/10/bsdtalk200-mg-text-editor-with-kjell.html.
+- [BSD Now EP435] Pennington J. BSD Now: 435: Year End Interview[EB/OL]. (2021-12-30)[2026-08-15]. <https://www.bsdnow.tv/435>.
+- [BSD Now EP422] Pennington J. BSD Now: 422: The Brian Callahan Interview[EB/OL]. (2021-09-30)[2026-08-15]. <https://www.bsdnow.tv/422>.
+- [BSD Now EP623] Pennington J. BSD Now: 623: Two's interview[EB/OL]. (2025-08-07)[2026-08-15]. <https://www.bsdnow.tv/623>.
+- [BSDTalk EP200] Backman W. BSDTalk: 200: bsdtalk200 - The mg text editor with Kjell Wooding[EB/OL]. (2010-10-13)[2026-08-27]. <https://bsdtalk.blogspot.com/2010/10/bsdtalk200-mg-text-editor-with-kjell.html>.
 
 <!-- /PODCAST_REVIEW -->

@@ -140,12 +140,12 @@ volume: 第08卷-freebsd的范式转换
 
 **文献**：
 
-- [BSD Now EP368] Pennington J. BSD Now: 368: Changing OS roles[EB/OL]. (2020-09-17)[2026-08-15]. https://www.bsdnow.tv/368.
-- [BSD Now EP230] Pennington J. BSD Now: 230: Your questions, Part III[EB/OL]. (2018-01-24)[2026-08-15]. https://www.bsdnow.tv/230.
-- [BSD Now EP201] Pennington J. BSD Now: 201: Skip grep, use awk[EB/OL]. (2017-07-05)[2026-08-15]. https://www.bsdnow.tv/201.
-- [BSD Now EP171] Pennington J. BSD Now: 171: The APU - BSD Style![EB/OL]. (2016-12-07)[2026-08-15]. https://www.bsdnow.tv/171.
-- [BSD Now EP56] Pennington J. BSD Now: 56: Beastly Infrastructure[EB/OL]. (2014-09-24)[2026-08-15]. https://www.bsdnow.tv/56.
-- [BSD Now EP21] Pennington J. BSD Now: 21: Tendresse for Ten[EB/OL]. (2014-01-22)[2026-08-15]. https://www.bsdnow.tv/21.
-- [BSDTalk EP193] Backman W. BSDTalk: 193: bsdtalk193 - FreeBSD Security Officer Colin Percival[EB/OL]. (2010-07-03)[2026-08-27]. https://bsdtalk.blogspot.com/2010/07/bsdtalk193-freebsd-security-officer.html.
+- [BSD Now EP368] Pennington J. BSD Now: 368: Changing OS roles[EB/OL]. (2020-09-17)[2026-08-15]. <https://www.bsdnow.tv/368>.
+- [BSD Now EP230] Pennington J. BSD Now: 230: Your questions, Part III[EB/OL]. (2018-01-24)[2026-08-15]. <https://www.bsdnow.tv/230>.
+- [BSD Now EP201] Pennington J. BSD Now: 201: Skip grep, use awk[EB/OL]. (2017-07-05)[2026-08-15]. <https://www.bsdnow.tv/201>.
+- [BSD Now EP171] Pennington J. BSD Now: 171: The APU - BSD Style![EB/OL]. (2016-12-07)[2026-08-15]. <https://www.bsdnow.tv/171>.
+- [BSD Now EP56] Pennington J. BSD Now: 56: Beastly Infrastructure[EB/OL]. (2014-09-24)[2026-08-15]. <https://www.bsdnow.tv/56>.
+- [BSD Now EP21] Pennington J. BSD Now: 21: Tendresse for Ten[EB/OL]. (2014-01-22)[2026-08-15]. <https://www.bsdnow.tv/21>.
+- [BSDTalk EP193] Backman W. BSDTalk: 193: bsdtalk193 - FreeBSD Security Officer Colin Percival[EB/OL]. (2010-07-03)[2026-08-27]. <https://bsdtalk.blogspot.com/2010/07/bsdtalk193-freebsd-security-officer.html>.
 
 <!-- /PODCAST_REVIEW -->

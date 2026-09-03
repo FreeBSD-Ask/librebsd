@@ -61,6 +61,6 @@ volume: 第11卷-dragonflybsd的历史
 
 **文献**：
 
-- [BSD Now EP93] Pennington J. BSD Now: 93: Stacked in Our Favor[EB/OL]. (2015-06-10)[2026-08-15]. https://www.bsdnow.tv/93.
+- [BSD Now EP93] Pennington J. BSD Now: 93: Stacked in Our Favor[EB/OL]. (2015-06-10)[2026-08-15]. <https://www.bsdnow.tv/93>.
 
 <!-- /PODCAST_REVIEW -->

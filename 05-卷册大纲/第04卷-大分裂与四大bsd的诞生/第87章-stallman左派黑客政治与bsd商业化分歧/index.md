@@ -65,6 +65,6 @@ volume: 第04卷-大分裂与四大bsd的诞生
 
 **文献**：
 
-- [BSD Now EP81] Pennington J. BSD Now: 81: Puffy in a Box[EB/OL]. (2015-03-18)[2026-08-15]. https://www.bsdnow.tv/81.
+- [BSD Now EP81] Pennington J. BSD Now: 81: Puffy in a Box[EB/OL]. (2015-03-18)[2026-08-15]. <https://www.bsdnow.tv/81>.
 
 <!-- /PODCAST_REVIEW -->

@@ -61,6 +61,6 @@ volume: 第10卷-openbsd的历史
 
 **文献**：
 
-- [BSDTalk EP97] Backman W. BSDTalk: 97: bsdtalk097 - OpenBSD Developer Pierre-Yves Ritschard[EB/OL]. (2007-02-01)[2026-08-27]. https://archive.org/details/bsdtalk097.
+- [BSDTalk EP97] Backman W. BSDTalk: 97: bsdtalk097 - OpenBSD Developer Pierre-Yves Ritschard[EB/OL]. (2007-02-01)[2026-08-27]. <https://archive.org/details/bsdtalk097>.
 
 <!-- /PODCAST_REVIEW -->

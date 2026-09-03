@@ -98,9 +98,9 @@ volume: 第11卷-dragonflybsd的历史
 
 **文献**：
 
-- [BSD Now EP640] Pennington J. BSD Now: 640: Cleaning up Hammer[EB/OL]. (2025-12-04)[2026-08-15]. https://www.bsdnow.tv/640.
-- [BSD Now EP229] Pennington J. BSD Now: 229: The Meltdown of Spectre[EB/OL]. (2018-01-17)[2026-08-15]. https://www.bsdnow.tv/229.
-- [BSD Now EP53] Pennington J. BSD Now: 53: It's HAMMER Time[EB/OL]. (2014-09-03)[2026-08-15]. https://www.bsdnow.tv/53.
-- [BSDTalk EP125] Backman W. BSDTalk: 125: bsdtalk125 - Matthew Dillon[EB/OL]. (2007-08-15)[2026-08-27]. https://bsdtalk.blogspot.com/2007/08/bsdtalk125-matthew-dillon.html.
+- [BSD Now EP640] Pennington J. BSD Now: 640: Cleaning up Hammer[EB/OL]. (2025-12-04)[2026-08-15]. <https://www.bsdnow.tv/640>.
+- [BSD Now EP229] Pennington J. BSD Now: 229: The Meltdown of Spectre[EB/OL]. (2018-01-17)[2026-08-15]. <https://www.bsdnow.tv/229>.
+- [BSD Now EP53] Pennington J. BSD Now: 53: It's HAMMER Time[EB/OL]. (2014-09-03)[2026-08-15]. <https://www.bsdnow.tv/53>.
+- [BSDTalk EP125] Backman W. BSDTalk: 125: bsdtalk125 - Matthew Dillon[EB/OL]. (2007-08-15)[2026-08-27]. <https://bsdtalk.blogspot.com/2007/08/bsdtalk125-matthew-dillon.html>.
 
 <!-- /PODCAST_REVIEW -->

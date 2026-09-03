@@ -102,9 +102,9 @@ volume: 第10卷-openbsd的历史
 
 **文献**：
 
-- [BSD Now EP186] Pennington J. BSD Now: 186: The Fast And the Firewall: Tokyo Drift[EB/OL]. (2017-03-22)[2026-08-15]. https://www.bsdnow.tv/186.
-- [BSDTalk EP200] Backman W. BSDTalk: 200: bsdtalk200 - The mg text editor with Kjell Wooding[EB/OL]. (2010-10-13)[2026-08-27]. https://bsdtalk.blogspot.com/2010/10/bsdtalk200-mg-text-editor-with-kjell.html.
-- [BSDTalk EP220] Backman W. BSDTalk: 220: bsdtalk220 - Eric Oyen[EB/OL]. (2012-11-30)[2026-08-27]. https://bsdtalk.blogspot.com/2012/11/bsdtalk220-eric-oyen.html.
-- [BSDTalk EP229] Backman W. BSDTalk: 229: bsdtalk229 - Chris Cappuccio[EB/OL]. (2013-08-07)[2026-08-27]. https://bsdtalk.blogspot.com/2013/08/bsdtalk229-chris-cappuccio.html.
+- [BSD Now EP186] Pennington J. BSD Now: 186: The Fast And the Firewall: Tokyo Drift[EB/OL]. (2017-03-22)[2026-08-15]. <https://www.bsdnow.tv/186>.
+- [BSDTalk EP200] Backman W. BSDTalk: 200: bsdtalk200 - The mg text editor with Kjell Wooding[EB/OL]. (2010-10-13)[2026-08-27]. <https://bsdtalk.blogspot.com/2010/10/bsdtalk200-mg-text-editor-with-kjell.html>.
+- [BSDTalk EP220] Backman W. BSDTalk: 220: bsdtalk220 - Eric Oyen[EB/OL]. (2012-11-30)[2026-08-27]. <https://bsdtalk.blogspot.com/2012/11/bsdtalk220-eric-oyen.html>.
+- [BSDTalk EP229] Backman W. BSDTalk: 229: bsdtalk229 - Chris Cappuccio[EB/OL]. (2013-08-07)[2026-08-27]. <https://bsdtalk.blogspot.com/2013/08/bsdtalk229-chris-cappuccio.html>.
 
 <!-- /PODCAST_REVIEW -->

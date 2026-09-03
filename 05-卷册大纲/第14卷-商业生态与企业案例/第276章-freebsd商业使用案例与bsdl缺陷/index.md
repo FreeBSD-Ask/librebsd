@@ -227,17 +227,17 @@ volume: 14
 
 **文献**：
 
-- [BSD Now EP623] Pennington J. BSD Now: 623: Two's interview[EB/OL]. (2025-08-07)[2026-08-15]. https://www.bsdnow.tv/623.
-- [BSD Now EP58] Pennington J. BSD Now: 58: Behind the Masq[EB/OL]. (2014-10-08)[2026-08-15]. https://www.bsdnow.tv/58.
-- [BSD Now EP51] Pennington J. BSD Now: 51: Engineering Nginx[EB/OL]. (2014-08-20)[2026-08-15]. https://www.bsdnow.tv/51.
-- [BSD Now EP40] Pennington J. BSD Now: 40: AirPorts & Packages[EB/OL]. (2014-06-04)[2026-08-15]. https://www.bsdnow.tv/40.
-- [BSDTalk EP148] Backman W. BSDTalk: 148: bsdtalk148 - Jeremy White, Founder of CodeWeavers[EB/OL]. (2008-05-02)[2026-08-27]. https://bsdtalk.blogspot.com/2008/05/bsdtalk148-jeremy-white-founder-of.html.
-- [BSDTalk EP151] Backman W. BSDTalk: 151: bsdtalk151 - Sean Cody from Frantic Films VFX[EB/OL]. (2008-05-29)[2026-08-27]. https://bsdtalk.blogspot.com/2008/05/bsdtalk151-sean-cody-from-frantic-films.html.
-- [BSDTalk EP230] Backman W. BSDTalk: 230: bsdtalk230 - vBSDcon with Verisign CTO Burt Kaliski[EB/OL]. (2013-08-14)[2026-08-27]. https://bsdtalk.blogspot.com/2013/08/bsdtalk230-vbsdcon-with-verisign-cto.html.
-- [BSDTalk EP41] Backman W. BSDTalk: 41: bsdtalk041 - Interview with Chris DiBona from Google[EB/OL]. (2006-05-07)[2026-08-27]. https://archive.org/details/bsdtalk041.
-- [BSDTalk EP42] Backman W. BSDTalk: 42: bsdtalk042 - Interview with Karl Lehenbauer from Flightaware[EB/OL]. (2006-05-11)[2026-08-27]. https://archive.org/details/bsdtalk042.
-- [BSDTalk EP71] Backman W. BSDTalk: 71: bsdtalk071 - Interview with Einar Th. Einarsson from f-prot.com[EB/OL]. (2006-09-28)[2026-08-27]. https://archive.org/details/bsdtalk071.
-- [YouTube EPDXX4HDd3vDQ] YouTube. YouTube: Building an Appliance - Allan Jude - EuroBSDCon 2024[EB/OL]. ()[2026-08-15]. https://www.youtube.com/watch?v=DXX4HDd3vDQ.
-- [YouTube EP66enuplpZxw] YouTube. YouTube: Warner Losh - Using FreeBSD in a Commercial Setting[EB/OL]. ()[2026-08-15]. https://www.youtube.com/watch?v=66enuplpZxw.
+- [BSD Now EP623] Pennington J. BSD Now: 623: Two's interview[EB/OL]. (2025-08-07)[2026-08-15]. <https://www.bsdnow.tv/623>.
+- [BSD Now EP58] Pennington J. BSD Now: 58: Behind the Masq[EB/OL]. (2014-10-08)[2026-08-15]. <https://www.bsdnow.tv/58>.
+- [BSD Now EP51] Pennington J. BSD Now: 51: Engineering Nginx[EB/OL]. (2014-08-20)[2026-08-15]. <https://www.bsdnow.tv/51>.
+- [BSD Now EP40] Pennington J. BSD Now: 40: AirPorts & Packages[EB/OL]. (2014-06-04)[2026-08-15]. <https://www.bsdnow.tv/40>.
+- [BSDTalk EP148] Backman W. BSDTalk: 148: bsdtalk148 - Jeremy White, Founder of CodeWeavers[EB/OL]. (2008-05-02)[2026-08-27]. <https://bsdtalk.blogspot.com/2008/05/bsdtalk148-jeremy-white-founder-of.html>.
+- [BSDTalk EP151] Backman W. BSDTalk: 151: bsdtalk151 - Sean Cody from Frantic Films VFX[EB/OL]. (2008-05-29)[2026-08-27]. <https://bsdtalk.blogspot.com/2008/05/bsdtalk151-sean-cody-from-frantic-films.html>.
+- [BSDTalk EP230] Backman W. BSDTalk: 230: bsdtalk230 - vBSDcon with Verisign CTO Burt Kaliski[EB/OL]. (2013-08-14)[2026-08-27]. <https://bsdtalk.blogspot.com/2013/08/bsdtalk230-vbsdcon-with-verisign-cto.html>.
+- [BSDTalk EP41] Backman W. BSDTalk: 41: bsdtalk041 - Interview with Chris DiBona from Google[EB/OL]. (2006-05-07)[2026-08-27]. <https://archive.org/details/bsdtalk041>.
+- [BSDTalk EP42] Backman W. BSDTalk: 42: bsdtalk042 - Interview with Karl Lehenbauer from Flightaware[EB/OL]. (2006-05-11)[2026-08-27]. <https://archive.org/details/bsdtalk042>.
+- [BSDTalk EP71] Backman W. BSDTalk: 71: bsdtalk071 - Interview with Einar Th. Einarsson from f-prot.com[EB/OL]. (2006-09-28)[2026-08-27]. <https://archive.org/details/bsdtalk071>.
+- [YouTube EPDXX4HDd3vDQ] YouTube. YouTube: Building an Appliance - Allan Jude - EuroBSDCon 2024[EB/OL]. ()[2026-08-15]. <https://www.youtube.com/watch?v=DXX4HDd3vDQ>.
+- [YouTube EP66enuplpZxw] YouTube. YouTube: Warner Losh - Using FreeBSD in a Commercial Setting[EB/OL]. ()[2026-08-15]. <https://www.youtube.com/watch?v=66enuplpZxw>.
 
 <!-- /PODCAST_REVIEW -->

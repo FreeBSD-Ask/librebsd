@@ -108,11 +108,11 @@ volume: 第07卷-freebsd的工程体系重构
 
 **文献**：
 
-- [BSD Now EP141] Pennington J. BSD Now: 141: BSD Likes Ike![EB/OL]. (2016-05-11)[2026-08-15]. https://www.bsdnow.tv/141.
-- [BSD Now EP106] Pennington J. BSD Now: 106: Multipath TCP[EB/OL]. (2015-09-09)[2026-08-15]. https://www.bsdnow.tv/106.
-- [BSDTalk EP7] Backman W. BSDTalk: Live BSD CDs[EB/OL]. (2006-01-18)[2026-08-15]. https://archive.org/download/bsdtalk007/bsdtalk007.ogg.
-- [BSDTalk EP204] Backman W. BSDTalk: 204: bsdtalk204 - mdocml mit Ingo Schwarze and Kristaps Dzonsons[EB/OL]. (2011-06-01)[2026-08-27]. https://bsdtalk.blogspot.com/2011/05/bsdtalk204-mdocml-mit-ingo-schwartze.html.
-- [BSDTalk EP233] Backman W. BSDTalk: 233: bsdtalk233 - From GCC to LLVM/CLANG with David Chisnall[EB/OL]. (2013-11-01)[2026-08-27]. https://bsdtalk.blogspot.com/2013/11/bsdtalk233-from-gcc-to-llvmclang-with.html.
-- [YouTube EPXUj2vCKtegU] YouTube. YouTube: FreeBSD at 30 Years: Its Secrets to Success By: Marshall Kirk McKusick[EB/OL]. ()[2026-08-15]. https://www.youtube.com/watch?v=XUj2vCKtegU.
+- [BSD Now EP141] Pennington J. BSD Now: 141: BSD Likes Ike![EB/OL]. (2016-05-11)[2026-08-15]. <https://www.bsdnow.tv/141>.
+- [BSD Now EP106] Pennington J. BSD Now: 106: Multipath TCP[EB/OL]. (2015-09-09)[2026-08-15]. <https://www.bsdnow.tv/106>.
+- [BSDTalk EP7] Backman W. BSDTalk: Live BSD CDs[EB/OL]. (2006-01-18)[2026-08-15]. <https://archive.org/download/bsdtalk007/bsdtalk007.ogg>.
+- [BSDTalk EP204] Backman W. BSDTalk: 204: bsdtalk204 - mdocml mit Ingo Schwarze and Kristaps Dzonsons[EB/OL]. (2011-06-01)[2026-08-27]. <https://bsdtalk.blogspot.com/2011/05/bsdtalk204-mdocml-mit-ingo-schwartze.html>.
+- [BSDTalk EP233] Backman W. BSDTalk: 233: bsdtalk233 - From GCC to LLVM/CLANG with David Chisnall[EB/OL]. (2013-11-01)[2026-08-27]. <https://bsdtalk.blogspot.com/2013/11/bsdtalk233-from-gcc-to-llvmclang-with.html>.
+- [YouTube EPXUj2vCKtegU] YouTube. YouTube: FreeBSD at 30 Years: Its Secrets to Success By: Marshall Kirk McKusick[EB/OL]. ()[2026-08-15]. <https://www.youtube.com/watch?v=XUj2vCKtegU>.
 
 <!-- /PODCAST_REVIEW -->

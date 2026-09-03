@@ -101,8 +101,8 @@ volume: 07
 
 **文献**：
 
-- [BSD Now EP373] Pennington J. BSD Now: 373: Kyle Evans Interview[EB/OL]. (2020-10-22)[2026-08-15]. https://www.bsdnow.tv/373.
-- [BSD Now EP282] Pennington J. BSD Now: 282: Open the Rsync[EB/OL]. (2019-01-24)[2026-08-15]. https://www.bsdnow.tv/282.
-- [BSD Now EP36] Pennington J. BSD Now: 36: Let's Get RAID[EB/OL]. (2014-05-07)[2026-08-15]. https://www.bsdnow.tv/36.
+- [BSD Now EP373] Pennington J. BSD Now: 373: Kyle Evans Interview[EB/OL]. (2020-10-22)[2026-08-15]. <https://www.bsdnow.tv/373>.
+- [BSD Now EP282] Pennington J. BSD Now: 282: Open the Rsync[EB/OL]. (2019-01-24)[2026-08-15]. <https://www.bsdnow.tv/282>.
+- [BSD Now EP36] Pennington J. BSD Now: 36: Let's Get RAID[EB/OL]. (2014-05-07)[2026-08-15]. <https://www.bsdnow.tv/36>.
 
 <!-- /PODCAST_REVIEW -->

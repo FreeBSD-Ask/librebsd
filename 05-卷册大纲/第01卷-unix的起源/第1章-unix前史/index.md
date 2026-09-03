@@ -165,12 +165,12 @@ volume: 第01卷-unix的起源
 
 **文献**：
 
-- [BSD Now EP476] Pennington J. BSD Now: 476: Warren Toomey interview[EB/OL]. (2022-10-13)[2026-08-15]. https://www.bsdnow.tv/476.
-- [BSD Now EP442] Pennington J. BSD Now: 442: Birthing Unix[EB/OL]. (2022-02-17)[2026-08-15]. https://www.bsdnow.tv/442.
-- [BSD Now EP388] Pennington J. BSD Now: 388: Must-have security tool[EB/OL]. (2021-02-04)[2026-08-15]. https://www.bsdnow.tv/388.
-- [BSD Now EP323] Pennington J. BSD Now: 323: OSI Burrito Guy[EB/OL]. (2019-11-07)[2026-08-15]. https://www.bsdnow.tv/323.
-- [BSD Now EP322] Pennington J. BSD Now: 322: Happy Birthday, Unix[EB/OL]. (2019-10-31)[2026-08-15]. https://www.bsdnow.tv/322.
-- [BSD Now EP318] Pennington J. BSD Now: 318: The TrueNAS Library[EB/OL]. (2019-10-03)[2026-08-15]. https://www.bsdnow.tv/318.
-- [BSD Now EP315] Pennington J. BSD Now: 315: Recapping vBSDcon 2019[EB/OL]. (2019-09-12)[2026-08-15]. https://www.bsdnow.tv/315.
+- [BSD Now EP476] Pennington J. BSD Now: 476: Warren Toomey interview[EB/OL]. (2022-10-13)[2026-08-15]. <https://www.bsdnow.tv/476>.
+- [BSD Now EP442] Pennington J. BSD Now: 442: Birthing Unix[EB/OL]. (2022-02-17)[2026-08-15]. <https://www.bsdnow.tv/442>.
+- [BSD Now EP388] Pennington J. BSD Now: 388: Must-have security tool[EB/OL]. (2021-02-04)[2026-08-15]. <https://www.bsdnow.tv/388>.
+- [BSD Now EP323] Pennington J. BSD Now: 323: OSI Burrito Guy[EB/OL]. (2019-11-07)[2026-08-15]. <https://www.bsdnow.tv/323>.
+- [BSD Now EP322] Pennington J. BSD Now: 322: Happy Birthday, Unix[EB/OL]. (2019-10-31)[2026-08-15]. <https://www.bsdnow.tv/322>.
+- [BSD Now EP318] Pennington J. BSD Now: 318: The TrueNAS Library[EB/OL]. (2019-10-03)[2026-08-15]. <https://www.bsdnow.tv/318>.
+- [BSD Now EP315] Pennington J. BSD Now: 315: Recapping vBSDcon 2019[EB/OL]. (2019-09-12)[2026-08-15]. <https://www.bsdnow.tv/315>.
 
 <!-- /PODCAST_REVIEW -->

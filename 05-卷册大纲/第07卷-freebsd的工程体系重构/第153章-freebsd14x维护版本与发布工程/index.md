@@ -76,7 +76,7 @@ volume: 07
 
 **文献**：
 
-- [BSD Now EP147] Pennington J. BSD Now: 147: Release all the things![EB/OL]. (2016-06-22)[2026-08-15]. https://www.bsdnow.tv/147.
-- [BSD Now EP580] Pennington J. BSD Now: 580: EuroBSDcon 2024 - Part 2[EB/OL]. (2024-10-10)[2026-08-15]. https://www.bsdnow.tv/580.
+- [BSD Now EP147] Pennington J. BSD Now: 147: Release all the things![EB/OL]. (2016-06-22)[2026-08-15]. <https://www.bsdnow.tv/147>.
+- [BSD Now EP580] Pennington J. BSD Now: 580: EuroBSDcon 2024 - Part 2[EB/OL]. (2024-10-10)[2026-08-15]. <https://www.bsdnow.tv/580>.
 
 <!-- /PODCAST_REVIEW -->

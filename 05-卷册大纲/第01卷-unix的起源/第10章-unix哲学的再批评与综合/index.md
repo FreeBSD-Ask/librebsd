@@ -90,7 +90,7 @@ volume: 01
 
 **文献**：
 
-- [BSD Now EP513] Pennington J. BSD Now: 513: New Host Interview[EB/OL]. (2023-06-29)[2026-08-15]. https://www.bsdnow.tv/513.
-- [BSD Now EP485] Pennington J. BSD Now: 485: FreeBSD Home Assistant[EB/OL]. (2022-12-15)[2026-08-15]. https://www.bsdnow.tv/485.
+- [BSD Now EP513] Pennington J. BSD Now: 513: New Host Interview[EB/OL]. (2023-06-29)[2026-08-15]. <https://www.bsdnow.tv/513>.
+- [BSD Now EP485] Pennington J. BSD Now: 485: FreeBSD Home Assistant[EB/OL]. (2022-12-15)[2026-08-15]. <https://www.bsdnow.tv/485>.
 
 <!-- /PODCAST_REVIEW -->

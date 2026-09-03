@@ -102,9 +102,9 @@ volume: 第04卷-大分裂与四大bsd的诞生
 
 **文献**：
 
-- [BSD Now EP428] Pennington J. BSD Now: 428: Cult of BSD[EB/OL]. (2021-11-11)[2026-08-15]. https://www.bsdnow.tv/428.
-- [BSD Now EP164] Pennington J. BSD Now: 164: Virtualized COW / PI?[EB/OL]. (2016-10-19)[2026-08-15]. https://www.bsdnow.tv/164.
-- [BSD Now EP16] Pennington J. BSD Now: 16: Cryptocrystalline[EB/OL]. (2013-12-18)[2026-08-15]. https://www.bsdnow.tv/16.
-- [BSDTalk EP82] Backman W. BSDTalk: 82: bsdtalk082 - OpenBSD Developer Jason Wright[EB/OL]. (2006-11-08)[2026-08-27]. https://archive.org/details/bsdtalk082.
+- [BSD Now EP428] Pennington J. BSD Now: 428: Cult of BSD[EB/OL]. (2021-11-11)[2026-08-15]. <https://www.bsdnow.tv/428>.
+- [BSD Now EP164] Pennington J. BSD Now: 164: Virtualized COW / PI?[EB/OL]. (2016-10-19)[2026-08-15]. <https://www.bsdnow.tv/164>.
+- [BSD Now EP16] Pennington J. BSD Now: 16: Cryptocrystalline[EB/OL]. (2013-12-18)[2026-08-15]. <https://www.bsdnow.tv/16>.
+- [BSDTalk EP82] Backman W. BSDTalk: 82: bsdtalk082 - OpenBSD Developer Jason Wright[EB/OL]. (2006-11-08)[2026-08-27]. <https://archive.org/details/bsdtalk082>.
 
 <!-- /PODCAST_REVIEW -->

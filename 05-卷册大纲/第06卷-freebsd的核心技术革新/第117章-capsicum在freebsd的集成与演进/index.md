@@ -106,10 +106,10 @@ volume: 第06卷-freebsd的核心技术革新
 
 **文献**：
 
-- [BSD Now EP295] Pennington J. BSD Now: 295: Fun with funlinkat()[EB/OL]. (2019-04-25)[2026-08-15]. https://www.bsdnow.tv/295.
-- [BSD Now EP197] Pennington J. BSD Now: 197: Relaying the good news[EB/OL]. (2017-06-07)[2026-08-15]. https://www.bsdnow.tv/197.
-- [BSD Now EP178] Pennington J. BSD Now: 178: Enjoy the Silence[EB/OL]. (2017-01-25)[2026-08-15]. https://www.bsdnow.tv/178.
-- [BSD Now EP93] Pennington J. BSD Now: 93: Stacked in Our Favor[EB/OL]. (2015-06-10)[2026-08-15]. https://www.bsdnow.tv/93.
-- [BSD Now EP50] Pennington J. BSD Now: 50: VPN, My Dear Watson[EB/OL]. (2014-08-13)[2026-08-15]. https://www.bsdnow.tv/50.
+- [BSD Now EP295] Pennington J. BSD Now: 295: Fun with funlinkat()[EB/OL]. (2019-04-25)[2026-08-15]. <https://www.bsdnow.tv/295>.
+- [BSD Now EP197] Pennington J. BSD Now: 197: Relaying the good news[EB/OL]. (2017-06-07)[2026-08-15]. <https://www.bsdnow.tv/197>.
+- [BSD Now EP178] Pennington J. BSD Now: 178: Enjoy the Silence[EB/OL]. (2017-01-25)[2026-08-15]. <https://www.bsdnow.tv/178>.
+- [BSD Now EP93] Pennington J. BSD Now: 93: Stacked in Our Favor[EB/OL]. (2015-06-10)[2026-08-15]. <https://www.bsdnow.tv/93>.
+- [BSD Now EP50] Pennington J. BSD Now: 50: VPN, My Dear Watson[EB/OL]. (2014-08-13)[2026-08-15]. <https://www.bsdnow.tv/50>.
 
 <!-- /PODCAST_REVIEW -->

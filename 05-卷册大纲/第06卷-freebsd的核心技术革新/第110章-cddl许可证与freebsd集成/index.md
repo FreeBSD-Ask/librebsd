@@ -72,7 +72,7 @@ volume: 第06卷-freebsd的核心技术革新
 
 **文献**：
 
-- [BSDTalk EP30] Backman W. BSDTalk: 30: bsdtalk030 - Interview with Devon O'Dell and Jason Dixon[EB/OL]. (2006-04-07)[2026-08-27]. https://archive.org/details/bsdtalk030.
-- [Nerding Out with Victor EPS01E25] Petersson V. Nerding out with Victor: All things ZFS and FreeBSD with Allan Jude[EB/OL]. (2024-12-02)[2026-08-15]. https://vpetersson.com/podcast/s01e25/.
+- [BSDTalk EP30] Backman W. BSDTalk: 30: bsdtalk030 - Interview with Devon O'Dell and Jason Dixon[EB/OL]. (2006-04-07)[2026-08-27]. <https://archive.org/details/bsdtalk030>.
+- [Nerding Out with Victor EPS01E25] Petersson V. Nerding out with Victor: All things ZFS and FreeBSD with Allan Jude[EB/OL]. (2024-12-02)[2026-08-15]. <https://vpetersson.com/podcast/s01e25/>.
 
 <!-- /PODCAST_REVIEW -->

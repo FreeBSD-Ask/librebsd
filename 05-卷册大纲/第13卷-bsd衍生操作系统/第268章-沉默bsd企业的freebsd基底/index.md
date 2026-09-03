@@ -99,10 +99,10 @@ volume: 第13卷-bsd衍生操作系统
 
 **文献**：
 
-- [BSD Now EP354] Pennington J. BSD Now: 354: ZFS safekeeps data[EB/OL]. (2020-06-11)[2026-08-15]. https://www.bsdnow.tv/354.
-- [BSD Now EP110] Pennington J. BSD Now: 110: - Firmware Fights[EB/OL]. (2015-10-07)[2026-08-15]. https://www.bsdnow.tv/110.
-- [BSD Now EP24] Pennington J. BSD Now: 24: The Cluster & The Cloud[EB/OL]. (2014-02-12)[2026-08-15]. https://www.bsdnow.tv/24.
-- [BSDTalk EP13] Backman W. BSDTalk: Interview with Richard Bejtlich[EB/OL]. (2006-02-03)[2026-08-15]. https://archive.org/download/bsdtalk013/bsdtalk013.ogg.
-- [BSDTalk EP238] Backman W. BSDTalk: 238: bsdtalk238 - Voices from NYCBSDCon 2014[EB/OL]. (2014-02-12)[2026-08-27]. https://bsdtalk.blogspot.com/2014/02/bsdtalk238-voices-from-nycbsdcon-2014.html.
+- [BSD Now EP354] Pennington J. BSD Now: 354: ZFS safekeeps data[EB/OL]. (2020-06-11)[2026-08-15]. <https://www.bsdnow.tv/354>.
+- [BSD Now EP110] Pennington J. BSD Now: 110: - Firmware Fights[EB/OL]. (2015-10-07)[2026-08-15]. <https://www.bsdnow.tv/110>.
+- [BSD Now EP24] Pennington J. BSD Now: 24: The Cluster & The Cloud[EB/OL]. (2014-02-12)[2026-08-15]. <https://www.bsdnow.tv/24>.
+- [BSDTalk EP13] Backman W. BSDTalk: Interview with Richard Bejtlich[EB/OL]. (2006-02-03)[2026-08-15]. <https://archive.org/download/bsdtalk013/bsdtalk013.ogg>.
+- [BSDTalk EP238] Backman W. BSDTalk: 238: bsdtalk238 - Voices from NYCBSDCon 2014[EB/OL]. (2014-02-12)[2026-08-27]. <https://bsdtalk.blogspot.com/2014/02/bsdtalk238-voices-from-nycbsdcon-2014.html>.
 
 <!-- /PODCAST_REVIEW -->

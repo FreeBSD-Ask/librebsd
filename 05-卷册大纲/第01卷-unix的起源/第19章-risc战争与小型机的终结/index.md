@@ -49,6 +49,6 @@ volume: 第01卷-unix的起源
 
 **文献**：
 
-- [BSD Now EP425] Pennington J. BSD Now: 425: Releases galore[EB/OL]. (2021-10-21)[2026-08-15]. https://www.bsdnow.tv/425.
+- [BSD Now EP425] Pennington J. BSD Now: 425: Releases galore[EB/OL]. (2021-10-21)[2026-08-15]. <https://www.bsdnow.tv/425>.
 
 <!-- /PODCAST_REVIEW -->

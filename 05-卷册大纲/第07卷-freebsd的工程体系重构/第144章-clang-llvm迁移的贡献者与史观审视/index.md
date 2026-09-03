@@ -106,7 +106,7 @@ volume: 07
 
 **文献**：
 
-- [BSD Now EP229] Pennington J. BSD Now: 229: The Meltdown of Spectre[EB/OL]. (2018-01-17)[2026-08-15]. https://www.bsdnow.tv/229.
-- [BSDTalk EP233] Backman W. BSDTalk: 233: bsdtalk233 - From GCC to LLVM/CLANG with David Chisnall[EB/OL]. (2013-11-01)[2026-08-27]. https://bsdtalk.blogspot.com/2013/11/bsdtalk233-from-gcc-to-llvmclang-with.html.
+- [BSD Now EP229] Pennington J. BSD Now: 229: The Meltdown of Spectre[EB/OL]. (2018-01-17)[2026-08-15]. <https://www.bsdnow.tv/229>.
+- [BSDTalk EP233] Backman W. BSDTalk: 233: bsdtalk233 - From GCC to LLVM/CLANG with David Chisnall[EB/OL]. (2013-11-01)[2026-08-27]. <https://bsdtalk.blogspot.com/2013/11/bsdtalk233-from-gcc-to-llvmclang-with.html>.
 
 <!-- /PODCAST_REVIEW -->

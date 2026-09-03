@@ -138,10 +138,10 @@ volume: 18
 
 **文献**：
 
-- [BSD Now EP455] Pennington J. BSD Now: 455: Ken Thompson Singularity[EB/OL]. (2022-05-19)[2026-08-15]. https://www.bsdnow.tv/455.
-- [BSD Now EP640] Pennington J. BSD Now: 640: Cleaning up Hammer[EB/OL]. (2025-12-04)[2026-08-15]. https://www.bsdnow.tv/640.
-- [BSD Now EP281] Pennington J. BSD Now: 281: EPYC Server Battle[EB/OL]. (2019-01-17)[2026-08-15]. https://www.bsdnow.tv/281.
-- [BSD Now EP633] Pennington J. BSD Now: 633: Magical Systems Thinking[EB/OL]. (2025-10-16)[2026-08-15]. https://www.bsdnow.tv/633.
-- [BSD Now EP579] Pennington J. BSD Now: 579: EuroBSDcon 2024[EB/OL]. (2024-10-03)[2026-08-15]. https://www.bsdnow.tv/579.
+- [BSD Now EP455] Pennington J. BSD Now: 455: Ken Thompson Singularity[EB/OL]. (2022-05-19)[2026-08-15]. <https://www.bsdnow.tv/455>.
+- [BSD Now EP640] Pennington J. BSD Now: 640: Cleaning up Hammer[EB/OL]. (2025-12-04)[2026-08-15]. <https://www.bsdnow.tv/640>.
+- [BSD Now EP281] Pennington J. BSD Now: 281: EPYC Server Battle[EB/OL]. (2019-01-17)[2026-08-15]. <https://www.bsdnow.tv/281>.
+- [BSD Now EP633] Pennington J. BSD Now: 633: Magical Systems Thinking[EB/OL]. (2025-10-16)[2026-08-15]. <https://www.bsdnow.tv/633>.
+- [BSD Now EP579] Pennington J. BSD Now: 579: EuroBSDcon 2024[EB/OL]. (2024-10-03)[2026-08-15]. <https://www.bsdnow.tv/579>.
 
 <!-- /PODCAST_REVIEW -->

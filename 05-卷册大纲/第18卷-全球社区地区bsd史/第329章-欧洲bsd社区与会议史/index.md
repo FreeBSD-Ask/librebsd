@@ -299,20 +299,20 @@ volume: 18
 
 **文献**：
 
-- [BSD Now EP283] Pennington J. BSD Now: 283: Graphical Interface-View[EB/OL]. (2019-01-31)[2026-08-15]. https://www.bsdnow.tv/283.
-- [BSD Now EP269] Pennington J. BSD Now: Episode 269: Tiny Daemon Lib | BSD Now 269[EB/OL]. (2018-10-24)[2026-08-15]. https://www.bsdnow.tv/269.
-- [BSD Now EP260] Pennington J. BSD Now: Episode 260: Hacking Tour of Europe | BSD Now 260[EB/OL]. (2018-08-23)[2026-08-15]. https://www.bsdnow.tv/260.
-- [BSD Now EP196] Pennington J. BSD Now: 196: PostgreZFS[EB/OL]. (2017-05-31)[2026-08-15]. https://www.bsdnow.tv/196.
-- [BSD Now EP192] Pennington J. BSD Now: 192: SSHv1 Be Gone[EB/OL]. (2017-05-03)[2026-08-15]. https://www.bsdnow.tv/192.
-- [BSD Now EP626] Pennington J. BSD Now: 626: USB webcam testing[EB/OL]. (2025-08-28)[2026-08-15]. https://www.bsdnow.tv/626.
-- [BSD Now EP110] Pennington J. BSD Now: 110: - Firmware Fights[EB/OL]. (2015-10-07)[2026-08-15]. https://www.bsdnow.tv/110.
-- [BSD Now EP579] Pennington J. BSD Now: 579: EuroBSDcon 2024[EB/OL]. (2024-10-03)[2026-08-15]. https://www.bsdnow.tv/579.
-- [BSDTalk EP100] Backman W. BSDTalk: 100: bsdtalk100 - NetBSD Developer Lubomir Sedlacik[EB/OL]. (2007-02-15)[2026-08-27]. https://archive.org/details/bsdtalk100.
-- [BSDTalk EP133] Backman W. BSDTalk: 133: bsdtalk133 - OpenCon 2007 update from Marc Balmer[EB/OL]. (2007-10-17)[2026-08-27]. https://bsdtalk.blogspot.com/2007/10/bsdtalk133-opencon-2007-update-from.html.
-- [BSDTalk EP137] Backman W. BSDTalk: 137: bsdtalk137 - Open Community Camp with Marten Vijn[EB/OL]. (2008-01-04)[2026-08-27]. https://bsdtalk.blogspot.com/2008/01/bsdtalk137-open-community-camp-with.html.
-- [BSDTalk EP178] Backman W. BSDTalk: 178: bsdtalk178 - Richard Clayton - Evil on the Internet - EuroBSDCon[EB/OL]. (2009-10-31)[2026-08-27]. https://bsdtalk.blogspot.com/2009/10/bsdtalk178-richard-clayton-evil-on.html.
-- [BSDTalk EP198] Backman W. BSDTalk: 198: bsdtalk198 - MeetBSD California 2010[EB/OL]. (2010-09-29)[2026-08-27]. https://bsdtalk.blogspot.com/2010/09/bsdtalk198-meetbsd-california-2010.html.
-- [BSDTalk EP73] Backman W. BSDTalk: 73: bsdtalk073 - Interview with Sevan Janiyan[EB/OL]. (2006-10-04)[2026-08-27]. https://archive.org/details/bsdtalk073.
-- [BSDTalk EP76] Backman W. BSDTalk: 76: bsdtalk076 - OpenBSD Developer Marc Balmer[EB/OL]. (2006-10-12)[2026-08-27]. https://archive.org/details/bsdtalk076.
+- [BSD Now EP283] Pennington J. BSD Now: 283: Graphical Interface-View[EB/OL]. (2019-01-31)[2026-08-15]. <https://www.bsdnow.tv/283>.
+- [BSD Now EP269] Pennington J. BSD Now: Episode 269: Tiny Daemon Lib | BSD Now 269[EB/OL]. (2018-10-24)[2026-08-15]. <https://www.bsdnow.tv/269>.
+- [BSD Now EP260] Pennington J. BSD Now: Episode 260: Hacking Tour of Europe | BSD Now 260[EB/OL]. (2018-08-23)[2026-08-15]. <https://www.bsdnow.tv/260>.
+- [BSD Now EP196] Pennington J. BSD Now: 196: PostgreZFS[EB/OL]. (2017-05-31)[2026-08-15]. <https://www.bsdnow.tv/196>.
+- [BSD Now EP192] Pennington J. BSD Now: 192: SSHv1 Be Gone[EB/OL]. (2017-05-03)[2026-08-15]. <https://www.bsdnow.tv/192>.
+- [BSD Now EP626] Pennington J. BSD Now: 626: USB webcam testing[EB/OL]. (2025-08-28)[2026-08-15]. <https://www.bsdnow.tv/626>.
+- [BSD Now EP110] Pennington J. BSD Now: 110: - Firmware Fights[EB/OL]. (2015-10-07)[2026-08-15]. <https://www.bsdnow.tv/110>.
+- [BSD Now EP579] Pennington J. BSD Now: 579: EuroBSDcon 2024[EB/OL]. (2024-10-03)[2026-08-15]. <https://www.bsdnow.tv/579>.
+- [BSDTalk EP100] Backman W. BSDTalk: 100: bsdtalk100 - NetBSD Developer Lubomir Sedlacik[EB/OL]. (2007-02-15)[2026-08-27]. <https://archive.org/details/bsdtalk100>.
+- [BSDTalk EP133] Backman W. BSDTalk: 133: bsdtalk133 - OpenCon 2007 update from Marc Balmer[EB/OL]. (2007-10-17)[2026-08-27]. <https://bsdtalk.blogspot.com/2007/10/bsdtalk133-opencon-2007-update-from.html>.
+- [BSDTalk EP137] Backman W. BSDTalk: 137: bsdtalk137 - Open Community Camp with Marten Vijn[EB/OL]. (2008-01-04)[2026-08-27]. <https://bsdtalk.blogspot.com/2008/01/bsdtalk137-open-community-camp-with.html>.
+- [BSDTalk EP178] Backman W. BSDTalk: 178: bsdtalk178 - Richard Clayton - Evil on the Internet - EuroBSDCon[EB/OL]. (2009-10-31)[2026-08-27]. <https://bsdtalk.blogspot.com/2009/10/bsdtalk178-richard-clayton-evil-on.html>.
+- [BSDTalk EP198] Backman W. BSDTalk: 198: bsdtalk198 - MeetBSD California 2010[EB/OL]. (2010-09-29)[2026-08-27]. <https://bsdtalk.blogspot.com/2010/09/bsdtalk198-meetbsd-california-2010.html>.
+- [BSDTalk EP73] Backman W. BSDTalk: 73: bsdtalk073 - Interview with Sevan Janiyan[EB/OL]. (2006-10-04)[2026-08-27]. <https://archive.org/details/bsdtalk073>.
+- [BSDTalk EP76] Backman W. BSDTalk: 76: bsdtalk076 - OpenBSD Developer Marc Balmer[EB/OL]. (2006-10-12)[2026-08-27]. <https://archive.org/details/bsdtalk076>.
 
 <!-- /PODCAST_REVIEW -->

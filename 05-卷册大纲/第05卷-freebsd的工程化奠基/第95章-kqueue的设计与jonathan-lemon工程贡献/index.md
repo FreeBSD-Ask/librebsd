@@ -111,6 +111,6 @@ volume: 05
 
 **文献**：
 
-- [BSD Now EP142] Pennington J. BSD Now: 142: Diving for BSD Perls[EB/OL]. (2016-05-18)[2026-08-15]. https://www.bsdnow.tv/142.
+- [BSD Now EP142] Pennington J. BSD Now: 142: Diving for BSD Perls[EB/OL]. (2016-05-18)[2026-08-15]. <https://www.bsdnow.tv/142>.
 
 <!-- /PODCAST_REVIEW -->
