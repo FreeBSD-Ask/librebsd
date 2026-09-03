@@ -45,3 +45,21 @@ volume: 19
 ## 自反性声明
 
 本章所书皆是形式主义化的重构，并非对“真实的 BSD 历史”的呈现。本章的章节划分、事件选择、叙事策略、因果归因——全部基于编纂者的哲学设定。本章承认这些局限，不声称客观或中立，欢迎被更诚实的叙事所超越。
+
+<!-- PODCAST_REVIEW v20260829 -->
+<!-- 语义复核范围：YouTube EPgiceCouM3F8（共 1 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
+
+**要点**：
+
+- 全片以合成语音朗读百科式文本复述 NetBSD 基本谱系：基于伯克利软件发行版的自由开源类 Unix 操作系统，1993 年 3 月由 Chris Demetriou、Theo de Raadt、Adam Glass 与 Charles Hannum 创立，1994 年首次发布，以可移植性、对广泛硬件平台的支持、高质量与稳定性为主要标识，用户覆盖个人、企业与政府，用于服务器、桌面与嵌入式设备。　[存疑脚注] 该期为合成语音朗读的无源文本，无任何当事人一手陈述；创立者名单在转写中记作 Chris demitry、theodat、Adam glass、Charles zanam，对应通行拼写为 Chris Demetriou、Theo de Raadt、Adam Glass、Charles Hannum，年份与名单均系转述，须以邮件列表与发行公告等一手史料核验。（YouTube EPgiceCouM3F8，[1.12-65.48]，L5）
+
+**辨析**：
+
+- 片中的里程碑列表全为“首个支持”式断言——1995 年成为首个支持 64 位 Alpha 处理器的操作系统，其后依次声称 PowerPC、ARM、64 位 Intel x86_64 与 64 位 ARM arm64 之“首个”，均无出处，转写时间轴亦交错混乱，与已知 NetBSD 多平台移植史存在出入，不能用作年代学证据。　[存疑脚注] 各年份与“首个”断言均未经核实，且与既有 NetBSD 移植年代记载存在张力，采信前须逐条比对 NetBSD 官方发布史与移植文档。（YouTube EPgiceCouM3F8，[65.47-104.31]，L5）
+- 该期内容形态本身即构成史料学问题：以营销化推荐口吻将项目史压缩为无源里程碑清单与可靠性广告语，呈现无源合成内容对技术史的扁平化再生产；引用时须整体降级为存疑材料，仅作当代二手流传样态的样本使用。　[存疑脚注] 本条为对材料性质的判定而非史实陈述；该视频无作者署名与原始出处信息，合成属性依语音与文本风格判断。（YouTube EPgiceCouM3F8，[104.31-129.72]，L5）
+
+**文献**：
+
+- [YouTube EPgiceCouM3F8] YouTube. YouTube: The history of NetBSD.[EB/OL]. ()[2026-08-15]. https://www.youtube.com/watch?v=giceCouM3F8.
+
+<!-- /PODCAST_REVIEW -->

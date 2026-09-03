@@ -108,7 +108,7 @@ volume: 05
 本章所书皆是形式主义化的重构，并非对“真实的 BSD 历史”的呈现。本章的章节划分、事件选择、叙事策略、因果归因——全部基于编纂者的哲学设定。本章承认这些局限，不声称客观或中立，欢迎被更诚实的叙事所超越。
 
 <!-- PODCAST_REVIEW v20260829 -->
-<!-- 语义复核范围：BSD Now EP513、BSD Now EP499、BSD Now EP406、BSD Now EP374、BSD Now EP329、BSD Now EP321、BSD Now EP640、BSD Now EP293、BSD Now EP276、BSD Now EP223、BSD Now EP631、BSD Now EP149、BSD Now EP139、BSD Now EP107、BSD Now EP84、BSD Now EP616、BSD Now EP24、BSD Now EP7（共 18 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
+<!-- 语义复核范围：BSD Now EP513、BSD Now EP499、BSD Now EP406、BSD Now EP374、BSD Now EP329、BSD Now EP321、BSD Now EP640、BSD Now EP293、BSD Now EP276、BSD Now EP223、BSD Now EP631、BSD Now EP149、BSD Now EP139、BSD Now EP107、BSD Now EP84、BSD Now EP616、BSD Now EP24、BSD Now EP7、YouTube EPhQmOc0egcl4、YouTube EPrGdylV-Up_E（共 20 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
 
 **要点**：
 
@@ -187,6 +187,13 @@ volume: 05
 - Poul-Henning Kamp 将 jail 描述为单向镜：主机管理员可以站在 jail 之外向内观察而不被 jail 内进程察觉，这一特性被安全研究者用于蜜罐，也被用于 CDN 计费系统等场景；jail 后续又获得虚拟网络栈，使单一内核可启动多个隔离环境。（BSD Now EP7，[1095.10-1257.20]，L1）
 - MD5 crypt 诞生于 FreeBSD 2.0 时期：因美国加密出口管制，FreeBSD 无法随发行版附带基于 DES 的标准密码扰码器，secure 发行版改从南非分发；Poul-Henning Kamp 用一个下午写出 MD5 crypt 并以 $1$ 前缀预留算法升级机制，该代码后来广泛扩散至 Cisco 设备、glibc、Flash、JavaScript 与 COBOL 实现，他估计一度保护约五成互联网的完整性。（BSD Now EP7，[1481.56-1750.10]，L1）
 - Poul-Henning Kamp 在 DARPA 合同背景下开发 GEOM 可插拔磁盘 I/O 框架，并实现面向全分区加密的 GBDE；GELI 则由 Pawel 编写，二者共同构成 FreeBSD 磁盘加密层。他亦以吃自己的狗粮形容其笔记本自 1992 年起运行 FreeBSD 且分区以 GBDE 加密。（BSD Now EP7，[1756.80-1900.42]，L1）
+- Michael Lucas 将 jail 界定为依赖宿主内核而自带完整用户态的轻量级虚拟机，本体上是一组全部从属于宿主的命名空间变换：文件系统根、进程可见性、网络地址与用户名各自隔离，jail 内的 root 账户并非宿主 root；他同时强调 jails 并非仅为安全而生，把软件约束到特定环境本身就是价值。（YouTube EPhQmOc0egcl4，[253.04-530.24]，L2）
+- Langille 说明多数人监禁之旅从网站开始：当 nginx 一类组件曝出已知漏洞时，攻击者只进入 jail 而触及不到宿主；技术上只需以 PF 做简单的端口重定向，转发 80 与 443 即告完成，直到防火墙之后不止一台 web 服务器时才需要新招；他自嘲自己的网站至今仍用 /usr/websites 的老路径而非 /usr/local/www，跨主机迁移四五次，本质上仍只是一个 jail。（YouTube EPrGdylV-Up_E，[267.919-349.4]，L1）
+- 他完整复述了自己的 jail 管理工具迁移史：最初手工 jail，以 make world 配 DESTDIR 一类办法搭建；随后投奔 ezjail，因喜欢一次升级全部 jail 的卖点；再迁 iocage，继而随其 Python 重写版；最终因痛恨一次升级全部 jail——多到三四十个只能每晚升四五台——且宿主升级常因二进制不兼容弄坏 jail，而把一切迁回朴素的 jail.conf，即他所称从厚到瘦再到朴素的大迁移；他受够了藏在配置文件或文件系统里的配置项，要求看得见、可修改的朴素配置，并推荐 Michael Lucas 的 FreeBSD Mastery: Jails 一书，其标准配置项多源于此；另自述是 make jail 项目的贡献者，强调该工具只管 jail 的创建、更新与升级，与 jail 配置无关。（YouTube EPrGdylV-Up_E，[220.64-242.48]，L1）
+- 自建包是他的核心实践：FreeBSD 官方包仓库虽好，但需要非标准配置、赶不上正常构建循环或要多版本 Python 时，就得用 Poudriere 自己构建——包通常过夜即成；Poudriere 本身被放入 jail，再在 jail 里启动 jail，形成常年运行的 jail 中 jail；对 port 维护者而言 poudriere testport 是天赐之物，他自 2014 年、FreeBSD 9.2 时代开始使用，五年后把它塞进 jail——理由是“我干的就是监禁这一行”，花了数月才成。（YouTube EPrGdylV-Up_E，[531.8-579.92]，L1）
+- 关于 FreshPorts 的运维史，他自述该服务已约二十年：从裸机迁往 AWS 时，重构出 nginx 入口 jail 与网站 jail，数据库 jail 因改用 AWS RDS 而消失——网站与后端自此可分别下线互不牵连；如今把 PostgreSQL 装进 jail 配置极短，与旧时代形成鲜明对比：当年因 System V 共享内存的约束，每个 jail 里必须建不同 uid 的用户，他戏称那时是“内存互踩”；磁盘上的缓存目录先于 memcached 而存在，因为服务比 memcached 更老。（YouTube EPrGdylV-Up_E，[720.24-806.639]，L1）
+- 证书管理上他取法 Peter Wemm 为 FreeBSD 集群设计的方案：二三十个网站不在各自机器上跑 Let's Encrypt 客户端，而是由一台与互联网无直接连接的中央主机统一签发，辅以一台同样不连网的 DNS hidden master 驱动公网 slave，使没有 80 或 443 端口的服务也能签发证书；私钥手工分发，其余全自动，证书经 rsync 与 curl 分发至各 jail，客户端以非特权用户加极小化 sudo 权限运行；他已如此运转七年，并打趣将工具命名为 anvil——取自 Run Runner 卡通里 Acme 公司快递铁砧的典故。（YouTube EPrGdylV-Up_E，[1443.799-1582.72]，L1）
+- 异地备份与一场自我事故构成本讲的压轴叙事：七至八台数据中心主机的数据库由 Unix 层与 PostgreSQL 层双只读用户全量 dump，先汇入远程 jail，再由地下室经 rsync 拉回——纯文本 dump 上 rsync 极快，名为 db clone 的地下室 jail 每日翻腾六七小时；他自称的巅峰蠢事是某次把主机改用 dma 后，宿主 25 端口无人监听，各 jail 依配置持续投递，最终单机上堆积 7852 个 sendmail 进程、从 jail 内看约一万五千个——用他的话说“电话是从屋里打来的”，堵端口的正是他自己。（YouTube EPrGdylV-Up_E，[1750.0-1900.679]，L1）
 
 **史料**：
 
@@ -233,6 +240,10 @@ volume: 05
 - 本期对 Poul-Henning Kamp 的当事人访谈自述，他是 FreeBSD 项目早期成员，也是 jail、GEOM、GBDE 与 MD5 crypt 的亲历者。（BSD Now EP7，[707.32-2296.90]，L1）
 - Kamp 与 Robert Watson 合著论文《Jails: Confining the Omnipotent Root》（BSDCon 2000），是对 jail 的系统化表述。（BSD Now EP7，[1052.26-1077.26]，L3）
 - jail(2)、gbde(8)、geli(8) 手册页及 FreeBSD 源码仓库中对应提交记录，可作为交叉验证来源。（BSD Now EP7，L3）
+- Lucas 给出 jail 考古时间窗：最早的类 jail 代码出现在 1975 年 7 月 18 日至 1979 年 5 月 7 日之间，现代 jails 始于 1998 年并迅速发展；此说出自其《FreeBSD Mastery: Jails》一书的考据，本讲仅口头陈述而未展示所据一手史料。　[存疑脚注] 时间区间疑指 PWB/UNIX 1.0（1975-07-18）至 3BSD（1979-05-07）的发布窗口，须核对《FreeBSD Mastery: Jails》原文与相应版本发行记录方可确证。（YouTube EPhQmOc0egcl4，[602.16-627.44]，L4）
+- 当事人一手经历：Lucas 回忆上一份全职工作中，雇主的关键业务应用是运行于 FreeBSD 4 的自研程序（约 PHP 2 与 MySQL 3），硬件为服役十五年的翻新桌面机，备份方案仅是另一台同型号废弃桌面机；他将重要数据打包迁至 FreeBSD 10/11 宿主并装入 jail，由此获得现代备份能力并将旧系统纳入宿主的现代防护之下。（YouTube EPhQmOc0egcl4，[2207.839-2304.48]，L1）
+- 功能演进口述：SysV IPC 最初为全部 jail 共享内存空间，多个数据库 jail 同宿主时互相污染，中期可经 sysctl 整体开关，后期演化为 per-jail 参数；UFS 因与虚拟内存栈深度耦合被判定永远无法在 jail 内管理，ZFS 与设备文件系统则设计为 jail-safe；vnet 网络栈约自 2006 年开始开发，早期确实 bug 丛生，至 FreeBSD 12 已成为默认且足够稳固。（YouTube EPhQmOc0egcl4，[1844.399-2157.68]，L2）
+- 本期为 EuroBSDcon 2024 的一手口述，讲者 Dan Langille 为 FreshPorts 创始人与 BSDCan、PGCon 创办者：自述 2000 年、FreeBSD 4.1 时代开始使用 jail（jail 机制始于 4.0），并给出其 jail 配置项来自 Michael Lucas 的 FreeBSD Mastery: Jails 一书、证书方案取法 Peter Wemm 的 FreeBSD 集群、周期脚本性能事故曾获 iXsystems 的 Josh Paetzel 协助定位等一手线索；谈中多次给出其博客与脚本的 URL，可用于追索 make jail 配置、Poudriere 迁移脚本与证书工具 anvil 的实现细节。[考据脚注] 本流转写为双声轨交错合并且被标记 repetition_detected，工具与人名多音变（ezjail、iocage、Gitea、Let's Encrypt、Josh Paetzel 等），数字与 URL 须与讲者博客及会议官方录像核对。（YouTube EPrGdylV-Up_E，[2202.8-2243.359]，L3）
 
 **史观**：
 
@@ -288,6 +299,9 @@ volume: 05
 - 总纲10 动手者创造历史：动手者创造历史：Poul-Henning Kamp 为具体托管需求动手实现 jail，而非在抽象层面提出容器概念。（BSD Now EP7，[968.64-1052.26]，L1）
 - 总纲13 法律与道德是利益分配：法律与道德是利益分配：美国加密出口管制直接塑造了 FreeBSD 密码扰码器的技术路径，使 MD5 crypt 与南非 secure 发行版成为法律约束下的工程选择。（BSD Now EP7，[1481.56-1534.78]，L1）
 - 总纲8 本体论上各方平等：本体论上各方平等：jail 与完整虚拟化各有价值，Poul-Henning Kamp 不将 jail 宣称为唯一正确的虚拟化方案，而是强调其单向镜等独特优势。（BSD Now EP7，[1095.10-1257.20]，L1）
+- 总纲22 知识注定过时：Lucas 断言 jails 最大的问题是文档过时：早期 jail 功能极简，先有人开发变通方案，再有官方做法，官方做法又被更好的官方做法取代，网上教程呈现的多是 jails 的旧日工作方式，2005 年前后的帖子如今多半是错的；他以自嘲收尾——其 2019 年底成书的著作到 2035 年使用同样过时，技术知识只忠实于其写作时刻的系统形态。（YouTube EPhQmOc0egcl4，[627.44-690.32]，L1）
+- 总纲3 不存在进步，只有权力再分配：面对 jail 是否安全的激烈争论，Lucas 给出绝对化否定：“absolutely nothing is truly secure”（411.52-415.84）——不运行虚拟化的计算机同样层层内含可攻击的操作系统，硬盘与 RAID 控制器皆然，CPU 缓存攻击早在 2005 年即已出现，主板可在运行中被攻破，即“turtles all the way down”（459.28-464.879）；安全评估因此必须回到究竟要解决什么问题的具体语境，工具与环境的适配与否才是决策依据。（YouTube EPhQmOc0egcl4，[402.319-516.719]，L1）
+- 总纲9 经验优先：Lucas 以动手经验为认知优先：在 jail 内跑通单个二进制（如 rsync）虽在生产中几乎不值当，却是任何系统管理员无可替代的教育性练习，它能让人真正理解 UNIX 并对嵌入式开发者心生敬意，这种体认无法以其他方式获得。（YouTube EPhQmOc0egcl4，[2878.079-2953.92]，L1）
 
 **辨析**：
 
@@ -320,6 +334,8 @@ volume: 05
 - [存疑脚注] 转写文本对 Poul-Henning Kamp 的姓名拼写前后不一（Paul Henningkamp、Paul Heinkamp、Paul Henningham），经上下文与 FreeBSD 史实判断指 Poul-Henning Kamp，引用时须以原始音频复核。　[存疑脚注] 人名转写拼写不一致，须以原始音频复核（BSD Now EP7，[732.60-736.24]，L4）
 - [存疑脚注] Poul-Henning Kamp 口述 jail 论文发表会议时在 1998 与 2000 之间犹豫，最终自定为 2000；本卡片采信其最终自述，并与既有考据相互印证，但精确会议年份仍须以论文原文与会议议程核实。　[存疑脚注] 会议年份口述有反复，须以论文原文核实（BSD Now EP7，[1066.26-1077.26]，L4）
 - [存疑脚注] 转写将 GBDE 识别为 GBD，将 GELI 作者 Pawel 转写为 Pappel；本卡片据 FreeBSD 磁盘加密技术史判定为 GBDE 与 Pawel Jakub Dawidek，须以原始音频复核。　[存疑脚注] 磁盘加密术语与人名转写错误（BSD Now EP7，[1826.94-1836.94]，L4）
+- jails 与 Docker 的比较是本讲最显著的争议点：Lucas 认为两者是相似思路的不同边缘，并以其检查时点判断 jails 的轻量虚拟化当时更为完整；他批评 Docker 镜像如 Linux 包般散落随机站点、缺乏集中审计，与官方 iocage 插件的集中分发形成对照；该判断个人立场鲜明且时效敏感，Lucas 自己也承认三个月内情况可能已经改变。　[存疑脚注] jails 比 Docker 完整为讲者在 2020 年前后的个人判断，引用前须与 Docker 及容器运行时的后续版本演进交叉核验。（YouTube EPhQmOc0egcl4，[2782.8-2880.0]，L4）
+- 两处论断属个人经验而非基准测试：其一，宿主侧以 fail2ban 监听各 jail 日志被他称作巧妙而隐蔽——狱中之人无从察觉自己正被从外部观察，此说依赖攻击者不知情的假设；其二，他断言 jail 开销极低，“没有内核，只是多一个 SSH 会话”，其两台 R730 空转、构建包时才上四成负载，但未给出测量数据；另其关于 Pushover 创办者为 OpenBSD 人士的记忆带有“如果我没记错”的限定，未指名道姓。[存疑脚注] Pushover 创始人身份、jail 开销论断均系单一讲者现场回忆与估算，未经独立核验。　[存疑脚注] fail2ban 隐蔽性、jail 开销与 Pushover 创始人身份三项均为讲者单方陈述，引用时须另行核验。（YouTube EPrGdylV-Up_E，[2346.319-2397.079]，L4）
 
 **文献**：
 
@@ -341,5 +357,7 @@ volume: 05
 - [BSD Now EP616] Pennington J. BSD Now: 616: FreeBSD Foundation Interview[EB/OL]. (2025-06-19)[2026-08-15]. https://www.bsdnow.tv/616.
 - [BSD Now EP24] Pennington J. BSD Now: 24: The Cluster & The Cloud[EB/OL]. (2014-02-12)[2026-08-15]. https://www.bsdnow.tv/24.
 - [BSD Now EP7] Pennington J. BSD Now: 7: Go Directly to Jail(8)[EB/OL]. (2013-10-16)[2026-08-15]. https://www.bsdnow.tv/7.
+- [YouTube EPhQmOc0egcl4] YouTube. YouTube: FreeBSD Fridays: Introduction to Jails[EB/OL]. ()[2026-08-15]. https://www.youtube.com/watch?v=hQmOc0egcl4.
+- [YouTube EPrGdylV-Up_E] YouTube. YouTube: Doing stupid things with FreeBSD jails - Dan Langille - EuroBSDcon 2024[EB/OL]. ()[2026-08-15]. https://www.youtube.com/watch?v=rGdylV-Up_E.
 
 <!-- /PODCAST_REVIEW -->

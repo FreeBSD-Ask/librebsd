@@ -35,7 +35,7 @@ volume: 第13卷-bsd衍生操作系统
 - 各公司官方资料；Netflix TechBlog；Google Research Blog；AWS 文档。[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]FreeBSD 社区论文：[FP-2022-014] The "other" FreeBSD optimizations used by Netflix to serve video at 800Gb/s from a single server（Drew Gallatin，2022）<https://papers.freebsd.org/2022/eurobsdcon/gallatin-the_other_freebsd_optimizations-netflix/>FreeBSD 社区论文：[FP-2021-007] Serving Netflix Video at 400Gb/s on FreeBSD（Drew Gallatin，2021）<https://papers.freebsd.org/2021/eurobsdcon/gallatin-netflix-freebsd-400gbps/>FreeBSD 社区论文：[FP-2019-046] Kernel TLS and TLS hardware offload（Slava Shwartsman, Drew Gallatin，2019）<https://papers.freebsd.org/2019/eurobsdcon/shwartsman_gallatin-kernel_tls_harware_offload/>FreeBSD 社区论文：[FP-2019-078] In-Kernel TLS Framing and Encryption for FreeBSD（John Baldwin（约翰·鲍德温），2019）<https://papers.freebsd.org/2019/vbsdcon/baldwin_in-kernel_tls_framing_and_encryption_for_freebsd/>FreeBSD 社区论文：[FP-2019-036] Netflix and FreeBSD: Reflections on Running FreeBSD Head in Production（Jonathan Looney，2019）<https://papers.freebsd.org/2019/bsdcan/looney-netflix_and_freebsd/>FreeBSD 社区论文：[FP-2019-068] Netflix and FreeBSD: Using Open Source to Deliver Streaming Video（Jonathan Looney，2019）<https://papers.freebsd.org/2019/fosdem/looney-netflix_and_freebsd/><!-- DB_REF:bsd_derivatives.duckdb -->> **数据库引用（bsd_derivatives.duckdb）**：本子节对应 bsd_derivatives 代码仓库。> 1985-2026 年间：963,557 次提交。> 仓库总览：963,557 次提交，14,109 位贡献者，1985-06-13 至 2026-08-24。
 
 <!-- PODCAST_REVIEW v20260829 -->
-<!-- 语义复核范围：BSD Now EP222、BSD Now EP191、BSD Now EP167、BSD Now EP17、BSDTalk EP235（共 5 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
+<!-- 语义复核范围：BSD Now EP222、BSD Now EP191、BSD Now EP167、BSD Now EP17、BSDTalk EP235、Nerding Out with Victor EPS01E25（共 6 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
 
 **要点**：
 
@@ -67,6 +67,9 @@ volume: 第13卷-bsd衍生操作系统
 - Puppet 链路的性能改造：视频流所依赖的大型 Java 应用打包成 jail 由 Puppet 分发、EzJail 部署；经 Puppet 的 Ruby 代码直接分发 500MB 文件效率极低，其解法是教会 Nginx 信任 Puppet 的证书颁发机构，仅允许持 Puppet CA 所签客户端证书的已激活节点从安全文件库直接经 Nginx 拉取，安全模型不变而性能大幅提升；这些 Puppet 与 Nginx 优化曾于 2013 年春在 BSDCan 演讲披露。（BSDTalk EP235，[980.90-1046.78]，L1）
 - 包管理迁移的量化对比：当年各边缘节点启动时自行从 ports 编译全部所需软件约需 45 分钟，切换 pkgng 后缩短至七分钟且一半耗在 EzJail；Poudriere 取代旧 Tinderbox，实测每 CPU 开一个 jail、单作业串行反而快于跨机并发分派，一台 24 核 96GB 内存的机器在 tmpfs 中编译全量约 24000 个 port（含 24 种语言的 LibreOffice 与四个 Firefox 版本）约 14 小时；他以 Poudriere 生成新包集再以 pkg2ng 转换旧机，通过手工改写包 origin 化解 Perl 5.10 到 5.14 与 PHP 5.3、5.4 并存的依赖冲突，迁移之顺利出乎意料。（BSDTalk EP235，[1069.80-1268.36]，L1）
 - 升级 FreeBSD 9.2 的主要动机是 ZFS v5000：LZ4 压缩与存储池接近满载时的性能改进，对存有四组共 50 至 60TB 视频数据的阵列尤为关键；新版命令行全面支持干跑预演——删除快照前可预估将释放的空间，增量 zfs send 前可预估传输量，他据此脚本化出进度条，得以预知一次发送的体量与完成时间。（BSDTalk EP235，[1443.66-1538.90]，L1）
+- Jude 将三大 BSD 与 Linux 发行版的根本差异概括为操作系统边界之争：BSD 把内核、基础工具与驱动同置单一源码树，系统本体与第三方包二分，Linux 则连内核在内一切皆包；FreeBSD 以 ports 树的 Makefile 描述取源、校验、打补丁、构建与卸载全流程，自 FreeBSD 8 起以集群工具每三四日全量重编二进制包，再叠加每三月才升大版本的季度分支兼顾新鲜与稳定，至 13.3 操作系统已可实现可复现构建。（Nerding Out with Victor EPS01E25，[837.0-1180.0]，L1）
+- Netflix 案例构成 FreeBSD 工程优势的完整链条：其选型的决定性因素是变更数周即入 mainline 的上游速度而非许可证本身；sendfile 系统调用消除内核与用户态间文件发送的反复拷贝，HTTPS 普及后内核 TLS 让 sendfile 在加密时代复活并在 Spectre 与 Meltdown 加剧越界成本后愈发关键，Netflix 再将批量加密密钥下放网卡专用芯片实现硬件卸载，单路服务器由 100 Gbps 推至 800 Gbps；Comcast 全量切换 IPv6 后的流量规模暴露出四字节计数器回绕溢出，数小时一崩的规律使缺陷迅速定位并经 errata 通知全网上游修复。（Nerding Out with Victor EPS01E25，[1204.0-1702.0]，L2）
+- Jude 以 OpenZFS 开发者身份拆解其数据模型：vdev 层承载镜像或 RAID-Z 变换并各自负责完整性，pool 汇聚全部可用容量，dataset 动态共享剩余空间并逐集设定压缩与加密；RAID-Z 借事务性写入从结构上消除 RAID-5 写洞，奇偶校验分布于全组盘而非专用盘，RAID-Z3 为硬件 RAID 所无；LZ4 每核压缩数 GB/s 使透明压缩自 OpenZFS 2.2 起默认开启，早停机制对不可压数据及时放弃，高层级 Zstandard 先以 LZ4 试探再决定是否重压；原生加密采用 AES-GCM 逐数据集加钥，校验和前半与消息认证码后半拆分存储，使加密数据可无密钥完成校验、修复与重建，密钥卸载后数据静态受保护。（Nerding Out with Victor EPS01E25，[2683.0-3597.0]，L1）
 
 **史料**：
 
@@ -81,6 +84,8 @@ volume: 第13卷-bsd衍生操作系统
 - Netflix Tech Blog 约一个月前发表的 SSL/TLS 工作博客，介绍 Randall、Scott Long 等人的成果。（BSD Now EP167，[276.42-293.12]，L1）
 - Intel 开源的 ISA-L 库（托管于 GitHub 与 01.org）。（BSD Now EP167，[509.3-521.32]，L2）
 - 本期史料为 Scott Long 在 EuroBSDcon 的现场访谈（当事人一手自述）；涉及 Netflix Open Connect 项目、FreeBSD 9/10 迁移、sendfile 零拷贝与异步化改动、与 EMC/Isilon 在 CAM 与 iSCSI 上的协作。（BSD Now EP17，[9.26-17.38]，L1）
+- 访谈提供的一手史料线索：Kirk McKusick 关于 BSD 文件系统与 TCP/IP 发明的系列历史讲座（DVD 与会议版本可获取）；BSDI 采用 1-800-ITS-UNIX 订购电话引燃 AT&T 商标与版权主张，USL 诉讼和解据称涉及约七个文件重写且细节从未完全披露；Berkeley 早期以磁带寄送修改并回收补丁的协作形态先于许可证概念出现。（Nerding Out with Victor EPS01E25，[131.0-372.0]，L2）
+- OpenZFS 侧一手工程记录：Jude 自述 2018 年创立 Klara 提供 FreeBSD 与 ZFS 开发支持服务，为客户在 Ubuntu 的 LXD 容器中委托 ZFS 数据集以运行非特权 Docker 的特性由其团队开发并上游 OpenZFS，随后随 Ubuntu 22.04 进入生产环境，体现商业委托开发经上游回馈转化为发行版默认能力的路径。（Nerding Out with Victor EPS01E25，[2530.0-2652.0]，L1）
 
 **史观**：
 
@@ -98,6 +103,8 @@ volume: 第13卷-bsd衍生操作系统
 - 总纲9 经验优先：总纲9 经验优先：sendfile 零拷贝、异步化与存储调优均源于 CDN 真实负载与具体故障经验，而非抽象设计先行。（BSD Now EP17，[752.74-787.62]，L1）
 - 总纲6 和解优于斗争：总纲6 和解优于斗争：与 EMC/Isilon 等厂商在 CAM 与存储栈上协作测试与反馈，体现以协作而非对抗推进技术。（BSD Now EP17，[656.9-679.62]，L1）
 - 总纲5 没有必然性，只有偶然性：他的 FreeBSD 之路始于纯粹偶然：十余年前为学习架设 IRC 服务器而租用 shell 账户，对方恰好运行 FreeBSD；自办 shell 托管公司时依据的不过是 IRC 上“用 Linux 会被 root”的流言，起点约为 FreeBSD 4.0/4.1；建 CDN 时其 FreeBSD 经验压过合伙人的 NetBSD 背景，遂成今日 80 台 FreeBSD 机器且从未考虑更换的格局。技术选型的延续并非必然规律，而是一连串具体处境下偶然选择的路径固化。（BSDTalk EP235，[1293.46-1431.94]，L1）
+- 总纲5 没有必然性，只有偶然性：Jude 复述并认同的历史反事实：USL 诉讼恰在 386 普及窗口冻结 BSD 采用，芬兰学生 Linus 因 BSD 不可用转而自写内核，Jude 以其口吻称“若非 AT&T 诉讼，我根本不会费劲去写 Linux”（397.0）——Linux 的诞生由法律时序的偶然而非技术优劣决定，许可证纠纷改写了其后数十年的操作系统格局。　[存疑脚注] 该归因系访谈内反事实因果推断，Linus Torvalds 本人对开发动机的一手自述（1991 年 comp.os.minix 发布帖及自传）未被引证，回写大纲时须与一手材料交叉验证。（Nerding Out with Victor EPS01E25，[373.0-413.0]，L2）
+- 总纲3 不存在进步，只有权力再分配：治理结构被 Jude 呈现为权力组织方案而非演进等级：Linux 集中于 Linus 与十余名副官的合并权，FreeBSD 则由约 250 名直接提交者每两年选举九人 core team，选举日前 365 天有提交记录者方可投票——两种共同体契约之间不存在谁更先进叙事，只呈现同一开源生产在权力分配上的不同解法。（Nerding Out with Victor EPS01E25，[1727.0-1783.0]，L1）
 
 **辨析**：
 
@@ -107,6 +114,7 @@ volume: 第13卷-bsd衍生操作系统
 - [存疑脚注] 转写将合作对象记作“iSalon”，应为 Isilon 的误转；TCP 拥塞控制项目记作“RAC”，应为 RACK 的误转，须核验。　[存疑脚注] Isilon 与 RACK 专名须核验。（BSD Now EP167，[376.84-1324.84]，L4）
 - 关于 Netflix 占北美互联网流量超过 30% 及设备数量以千计，均为访谈中的口头估计，缺乏同期可精确核验的数据。　[存疑脚注] 流量占比与设备规模为当事人概数，需以 Netflix 官方披露或第三方测量交叉验证。（BSD Now EP17，[920.66-932.9]，L4）
 - pkgng 在 2013 年呈现两面性：对当事人而言是部署速度的数量级改善与比 portupgrade 更顺畅的大版本迁移，但同一访谈里主持人自述“一碰 pkgng 受挫就放弃”，PHP 与 Perl 的 origin 手工修补、仓库元数据的整体一致性约束也显示工具链尚未成熟；这一工程必要性与生态滞后的张力，须与此后 FreeBSD 10.0 将 pkg 设为默认的过程交叉验证，方能判断争议如何收束。（BSDTalk EP235，[1069.80-1168.04]，L1）
+- ZFS 入 Linux 的法律争议在访谈中被简化为实践事实：CDDL 与 GPL 的链接不兼容使 ZFS 长期被 mainline 拒之门外，而 Ubuntu 转为自行编译随发行版提供，Jude 称“结果证明没人起诉他们”（2428.0）——但未被起诉不等于合法性确认，软件自由保护组织等机构 2016 年前后的公开质疑并无司法结论，回写大纲时应作为未决争议点而非定论。　[存疑脚注] 无人起诉即安全的说法为访谈中的实践性推断，CDDL 模块与 GPL 内核合体发行的效力无判例支撑，须对照软件自由保护组织 2016 年公开信等一手文献核实。（Nerding Out with Victor EPS01E25，[2331.0-2428.0]，L2）
 
 **文献**：
 
@@ -115,5 +123,6 @@ volume: 第13卷-bsd衍生操作系统
 - [BSD Now EP167] Pennington J. BSD Now: 167: Playing the Long Game[EB/OL]. (2016-11-09)[2026-08-15]. https://www.bsdnow.tv/167.
 - [BSD Now EP17] Pennington J. BSD Now: 17: The Gift of Giving[EB/OL]. (2013-12-25)[2026-08-15]. https://www.bsdnow.tv/17.
 - [BSDTalk EP235] Backman W. BSDTalk: 235: bsdtalk235 - Allan Jude[EB/OL]. (2013-11-19)[2026-08-27]. https://bsdtalk.blogspot.com/2013/11/bsdtalk235-allan-jude.html.
+- [Nerding Out with Victor EPS01E25] Petersson V. Nerding out with Victor: All things ZFS and FreeBSD with Allan Jude[EB/OL]. (2024-12-02)[2026-08-15]. https://vpetersson.com/podcast/s01e25/.
 
 <!-- /PODCAST_REVIEW -->

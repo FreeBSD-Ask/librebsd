@@ -43,3 +43,32 @@ volume: 第02卷-伯克利的岁月
 - BSDi 应诉文件；伯克利反诉状；McKusick, K. (1999) "Twenty Years of Berkeley Unix"（当事人一手叙述）；FreeBSD Project. "A Brief History of FreeBSD"（FreeBSD Handbook） ［B］<!-- NEWREF:2475 --><!-- NEWREF:2520 --><!-- NEWREF:2521 --><!-- NEWREF:2522 --><!-- NEWREF:2523 --><!-- NEWREF:2524 --><!-- NEWREF:2538 -->---## 文献增补与辩证校准（2026-08-08 追加）> 40.1-40.3 USL 诉讼进程：> - **文献增补（ref 3778）**：McKusick 亲述诉讼始末（Net/2 分发→BSDi 起诉→USL 反诉），40.1 起诉书要点的一手背景> - **文献增补（ref 3783）**：CSRG 时间线综述确认 1992 年诉讼与 1995 年 CSRG 解散的因果链> - **辩证校准（总纲 24.4）**：诉讼不是 BSD 史的断裂而是循环——4.4BSD-Lite 的发布是‘否定与再生’（24.4 原文），本章叙事应呈现循环结构
 - McKusick, M. K. (1999) "Twenty Years of Berkeley Unix" [Z/OL]. O'Reilly Open Sources, ISBN 1-56592-582-6. <https://www.oreilly.com/openbook/opensources/book/kirkmck.html> [2026-07-28]；USL v. BSDi, Civil Action No. 92-1667（D. N.J. 1992-1994）；1994 年和解协议；4.4BSD-Lite Release Notes（1994.6） ［A］
 - FreeBSD 2.0 Release Notes [EB/OL]. The FreeBSD Project. <https://www.freebsd.org/releases/2.0/notes/> [2026-07-28]；McKusick, M. K. (1999) "Twenty Years of Berkeley Unix" [Z/OL]. O'Reilly Open Sources, ISBN 1-56592-582-6. <https://www.oreilly.com/openbook/opensources/book/kirkmck.html> [2026-07-28]；4.4BSD-Lite Release Notes（CSRG, 1994.6）；freebsd.db freebsd-src 仓库 1994-1995 年 commit 历史；FreeBSD COPYRIGHT 文件 [EB/OL]. The FreeBSD Project. <https://raw.githubusercontent.com/freebsd/freebsd-src/main/COPYRIGHT> [2026-07-28]（含 4.4BSD-Lite 原始 4-clause BSD License 文本与 1999-07-22 William Hoskins 广告条款删除声明）；Rodney W. Grimes. This is the official 4.4 Lite copyright. freebsd-src [DB/OL]. 1994-09-11T07:53:28Z. 18bc25c1733fd8cd749502ec5ec9333e672c7397 ［A］[^doubt-resolved-241]: 据 Mac OS X Internals A Systems Approach (Amit Singh（阿米特·辛格）)  (未署名) 消解
+
+<!-- PODCAST_REVIEW v20260829 -->
+<!-- 语义复核范围：YouTube EPbVSXXeiFLgk（共 1 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
+
+**要点**：
+
+- Unix 传入伯克利的路径由 Bob Fabry 一人促成：Thompson 与 Ritchie 于 1973 年在 SOSP 报告第四版后，这位伯克利教授主动接触 Thompson，Unix 遂进入伯克利；系里无力独占 PDP-11/45，与数学及统计系各出资三分之一合购，后者坚持运行 DEC 系统并将机器时间切为每日三班轮转，Unix 仅获午夜至八时的时段；这一不可持续的共享安排促使计算机系很快自购 PDP-11/70，Version 6 时期 Thompson 以伯克利校友身份亲自到场安装，并因该机罕见地配有两台 28MB 磁盘而暴露并发访问竞态，由其亲手调试。（YouTube EPbVSXXeiFLgk，[461.03-557.03]，L1）
+- 1978 年伯克利购入第七台 VAX 供运行 Lisp 的 VAXIMA 方程求解项目，而贝尔实验室的 32V 仅是 PDP-11 版的最低限度移植，不使用 VAX 分页硬件且只支持固定数量的进程；Bill Joy 找到以虚拟内存为博士论文方向的 Ozalp Babaoglu，将其分页原型并入 32V，并利用圣诞假期这一全年仅有的独占机时反复迭代，1979 年形成 3BSD——首个包含完整操作系统与库的 BSD 发行；因内嵌大量 AT&T 代码，获取 3BSD 必须持有 AT&T 源码许可，而彼时学生身份的 Joy 兼任发行协调员，许可核验仅凭电话口头询问完成。（YouTube EPbVSXXeiFLgk，[775.03-986.15]，L1）
+- 1980 年前后 DARPA 面对承包商在机器、操作系统与编程语言上的碎片化，决定统一硬件与软件平台，选定 VAX 并在 VMS 与 Unix 的长期辩论后选择 Unix；伯克利受资助构建基础系统，取代仅能容纳 256 台主机的 NCP 的 TCP/IP 协议实现被 DARPA 交予 BBN，伯克利名义上只负责设计 socket API；DARPA 资金同时使 Joy 首次领取薪水并得以雇用专人核验 AT&T 许可——要求对方寄送许可副本并致电 AT&T 核实，结束了学生口头问询的时代。（YouTube EPbVSXXeiFLgk，[1079.23-1209.39]，L1）
+
+**史料**：
+
+- 本讲提供 Net-2 重写运动的第一手方法论：McKusick 与 Karels 先以 C beautifier（cb）将自有内核与 32V 源码统一为规范格式，再对 32V 建立逐行倒排数据库，将自有代码逐行比对，凡出现连续两三行匹配即判定为需要处理的 AT&T 代码残留；多数残留以更优算法（如以哈希替换进程表线性搜索）顺手重写而消除，尘埃落定时仅余约六个文件仍含实质性 AT&T 代码。（YouTube EPbVSXXeiFLgk，[2379.31-2433.63]，L1）
+- 诉讼转折的一手细节：AT&T 在自身系统源码中使用了伯克利的 TCP/IP 代码却移除了版权声明，经手者已离职以致公司自身并不知情；其与 BSDi 比对源码时发现的大量共同代码，实为其取自 BSD 而未留声明的部分，该事实曝光约两年后 AT&T 意识到案件不成立，诉讼走向和解。（YouTube EPbVSXXeiFLgk，[2651.07-2679.19]，L1）
+
+**史观**：
+
+- 总纲5 没有必然性，只有偶然性：McKusick 回忆在 Torvalds 首次公开演示 Linux（时为约一万行、刚超出终端模拟器阶段）的场合当面发问：伯克利已有 BSD，为何另起炉灶；Torvalds 答称 BSD 当时尽数卷入诉讼，“诉讼本可能走向另一边，那样就什么都不会留下，所以必须做点什么”——口述证据将 Linux 的诞生窗口归因于 USL 诉讼不确定性这一偶然条件，而非技术必然或路线优劣。（YouTube EPbVSXXeiFLgk，[2889.43-2902.12]，L1）
+- 总纲10 动手者创造历史：重写运动的动力机制不在 CSRG 内部而在外围无名参与者：Bostic 在 USENIX 会议张贴待重写的工具与库清单，以“贡献即可在 BSD 中留名”动员外部开发者，自 ls、cat 等简单工具做起，直至社区交付三分之二工具与近乎全部函数库，才迫使核心成员正面处理 AT&T 代码定位问题——系统摆脱专有代码依赖的进程，系由动员起来的动手者逐一重写累积而成。（YouTube EPbVSXXeiFLgk，[2303.76-2343.27]，L1）
+
+**辨析**：
+
+- 和解条款的当事人口述版本与公开文本可互勘：条件包括在 70 个文件上补加 USL 版权声明（多为已被认定近乎公有领域的公共头文件）、删除三个文件并禁用 Net/2；McKusick 自述被删的 System V IPC、共享内存与信号量仿真实为有用代码，选择删除它们纯属让对方保留颜面——律师明言只需挑出任何三个文件以成全文义；此叙述提示和解的法律实质弱于其象征姿态，而 4.4BSD-Lite 正是以此法律清白版本的形式发行。（YouTube EPbVSXXeiFLgk，[2684.95-2774.58]，L1）
+
+**文献**：
+
+- [YouTube EPbVSXXeiFLgk] YouTube. YouTube: A Narrative History of BSD[EB/OL]. ()[2026-08-15]. https://www.youtube.com/watch?v=bVSXXeiFLgk.
+
+<!-- /PODCAST_REVIEW -->
