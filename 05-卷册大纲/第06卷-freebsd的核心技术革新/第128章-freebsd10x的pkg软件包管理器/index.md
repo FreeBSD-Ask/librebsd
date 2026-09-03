@@ -70,7 +70,7 @@ volume: 06
 本章所书皆是形式主义化的重构，并非对“真实的 BSD 历史”的呈现。本章的章节划分、事件选择、叙事策略、因果归因——全部基于编纂者的哲学设定。本章承认这些局限，不声称客观或中立，欢迎被更诚实的叙事所超越。
 
 <!-- PODCAST_REVIEW v20260829 -->
-<!-- 语义复核范围：BSD Now EP134、BSD Now EP129、BSD Now EP120、BSD Now EP79、BSD Now EP48、BSD Now EP43、BSD Now EP18（共 7 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
+<!-- 语义复核范围：BSD Now EP134、BSD Now EP129、BSD Now EP120、BSD Now EP79、BSD Now EP48、BSD Now EP43、BSD Now EP18、YouTube EPrGdylV-Up_E（共 8 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
 
 **要点**：
 
@@ -97,6 +97,12 @@ volume: 06
 - Baptiste Daroussin 自述因厌倦反复源码编译而设计 PackageNG，后在 BSDCan 演讲并取得 ports commit bit，成为 portmgr 成员。（BSD Now EP18，[993.58-1029.66]，L1）
 - PackageNG 方向为将 poudriere 由面向最终用户的安装工具转为基础设施构建工具，并引入 staging、autoplist、子包、flavors/providers 及基于 fingerprint 的仓库签名，以解决冲突、改名与多版本包问题。（BSD Now EP18，[1049.62-1253.12]，L1）
 - OpenBSD 长期缺乏官方跨版本升级工具，第三方 ksh 脚本 OpenBSD Binary Upgrade 可完成 5.3 到 5.4 的二进制升级与旧文件清理，但仅校验 SHA256 而不提供签名。（BSD Now EP18，[2198.60-2266.36]，L2）
+- Langille 说明多数人监禁之旅从网站开始：当 nginx 一类组件曝出已知漏洞时，攻击者只进入 jail 而触及不到宿主；技术上只需以 PF 做简单的端口重定向，转发 80 与 443 即告完成，直到防火墙之后不止一台 web 服务器时才需要新招；他自嘲自己的网站至今仍用 /usr/websites 的老路径而非 /usr/local/www，跨主机迁移四五次，本质上仍只是一个 jail。（YouTube EPrGdylV-Up_E，[267.919-349.4]，L1）
+- 他完整复述了自己的 jail 管理工具迁移史：最初手工 jail，以 make world 配 DESTDIR 一类办法搭建；随后投奔 ezjail，因喜欢一次升级全部 jail 的卖点；再迁 iocage，继而随其 Python 重写版；最终因痛恨一次升级全部 jail——多到三四十个只能每晚升四五台——且宿主升级常因二进制不兼容弄坏 jail，而把一切迁回朴素的 jail.conf，即他所称从厚到瘦再到朴素的大迁移；他受够了藏在配置文件或文件系统里的配置项，要求看得见、可修改的朴素配置，并推荐 Michael Lucas 的 FreeBSD Mastery: Jails 一书，其标准配置项多源于此；另自述是 make jail 项目的贡献者，强调该工具只管 jail 的创建、更新与升级，与 jail 配置无关。（YouTube EPrGdylV-Up_E，[220.64-242.48]，L1）
+- 自建包是他的核心实践：FreeBSD 官方包仓库虽好，但需要非标准配置、赶不上正常构建循环或要多版本 Python 时，就得用 Poudriere 自己构建——包通常过夜即成；Poudriere 本身被放入 jail，再在 jail 里启动 jail，形成常年运行的 jail 中 jail；对 port 维护者而言 poudriere testport 是天赐之物，他自 2014 年、FreeBSD 9.2 时代开始使用，五年后把它塞进 jail——理由是“我干的就是监禁这一行”，花了数月才成。（YouTube EPrGdylV-Up_E，[531.8-579.92]，L1）
+- 关于 FreshPorts 的运维史，他自述该服务已约二十年：从裸机迁往 AWS 时，重构出 nginx 入口 jail 与网站 jail，数据库 jail 因改用 AWS RDS 而消失——网站与后端自此可分别下线互不牵连；如今把 PostgreSQL 装进 jail 配置极短，与旧时代形成鲜明对比：当年因 System V 共享内存的约束，每个 jail 里必须建不同 uid 的用户，他戏称那时是“内存互踩”；磁盘上的缓存目录先于 memcached 而存在，因为服务比 memcached 更老。（YouTube EPrGdylV-Up_E，[720.24-806.639]，L1）
+- 证书管理上他取法 Peter Wemm 为 FreeBSD 集群设计的方案：二三十个网站不在各自机器上跑 Let's Encrypt 客户端，而是由一台与互联网无直接连接的中央主机统一签发，辅以一台同样不连网的 DNS hidden master 驱动公网 slave，使没有 80 或 443 端口的服务也能签发证书；私钥手工分发，其余全自动，证书经 rsync 与 curl 分发至各 jail，客户端以非特权用户加极小化 sudo 权限运行；他已如此运转七年，并打趣将工具命名为 anvil——取自 Run Runner 卡通里 Acme 公司快递铁砧的典故。（YouTube EPrGdylV-Up_E，[1443.799-1582.72]，L1）
+- 异地备份与一场自我事故构成本讲的压轴叙事：七至八台数据中心主机的数据库由 Unix 层与 PostgreSQL 层双只读用户全量 dump，先汇入远程 jail，再由地下室经 rsync 拉回——纯文本 dump 上 rsync 极快，名为 db clone 的地下室 jail 每日翻腾六七小时；他自称的巅峰蠢事是某次把主机改用 dma 后，宿主 25 端口无人监听，各 jail 依配置持续投递，最终单机上堆积 7852 个 sendmail 进程、从 jail 内看约一万五千个——用他的话说“电话是从屋里打来的”，堵端口的正是他自己。（YouTube EPrGdylV-Up_E，[1750.0-1900.679]，L1）
 
 **史料**：
 
@@ -107,6 +113,7 @@ volume: 06
 - 对 OpenSSL 代码库的一手观察：Cook 称其中大量不安全且无人维护的代码，密码学部分呈数学家与博士生风格（A、B、C、D、E、F 式变量命名），静态分析发现大量“遗传性旧代码”——不执行任何功能亦无害。他自述作为美国公民刻意不修改加密算法本体，以免触碰出口管制敏感区，这构成出口管制持续约束开源加密开发行为的一手证词。（BSD Now EP48，[2292.04-2361.23]，L1）
 - 该期提及并可回溯的一手材料包括：Poul-Henning Kamp 刊于 ACM Queue 的《Quality Software Costs Money — Heartbleed was Free》（由博客扩写而成）；FreeBSD-SA-14:16（file/libmagic 的 CDF 指针解引用与越界读、awk 正则资源耗尽、PE 越界读）及 iconv 相关公告、影响 Java 的 PCID errata；OpenBSD 5.5 errata 003（2014 年 4 月 9 日，ftp 客户端 HTTPS 主机名校验缺失）；tor-bsd 邮件列表关于 Tor 节点单一文化的帖子；boringssl.googlesource.com 源码库；以及 Southeast Linux Fest 上 Ken Moore 关于 PBI 的讲义。（BSD Now EP43，[645.84-995.74]，L2）
 - 本期史料包括 Justin Sherrill 博客观点、Henning Brauer 对 PF 可移植层的表态、Baptiste Daroussin 访谈（当事人自述）以及 OpenBSD Binary Upgrade 第三方脚本。（BSD Now EP18，[346.52-557.28]，L1）
+- 本期为 EuroBSDcon 2024 的一手口述，讲者 Dan Langille 为 FreshPorts 创始人与 BSDCan、PGCon 创办者：自述 2000 年、FreeBSD 4.1 时代开始使用 jail（jail 机制始于 4.0），并给出其 jail 配置项来自 Michael Lucas 的 FreeBSD Mastery: Jails 一书、证书方案取法 Peter Wemm 的 FreeBSD 集群、周期脚本性能事故曾获 iXsystems 的 Josh Paetzel 协助定位等一手线索；谈中多次给出其博客与脚本的 URL，可用于追索 make jail 配置、Poudriere 迁移脚本与证书工具 anvil 的实现细节。[考据脚注] 本流转写为双声轨交错合并且被标记 repetition_detected，工具与人名多音变（ezjail、iocage、Gitea、Let's Encrypt、Josh Paetzel 等），数字与 URL 须与讲者博客及会议官方录像核对。（YouTube EPrGdylV-Up_E，[2202.8-2243.359]，L3）
 
 **史观**：
 
@@ -139,6 +146,7 @@ volume: 06
 - Linux PRNG 争议事件：ARS Technica 报道 LibreSSL 未检测 PRNG PID 回绕；Cook 证实团队在文章发表前几天已内部讨论该角落案例，文章发表当日清晨补丁即由 Bob Beck 推送。他拒绝阅读网络评论，与 PaX 团队交换加固思路，并指出权衡困境——将 PRNG 页面标记为不可被子进程继承会使直接调用 fork/clone 的进程崩溃，彻底方案可能需要内核协助；在“更安全”与“不破坏既有软件”之间只有细线。这一表述与其安全观互为表里：今天的偏执角落案例就是明天的大规模漏洞。（BSD Now EP48，[2031.90-2160.53]，L1）
 - 三处专名与归属在转写中失真而须核验：其一，Espie 转述原包工具作者自评“周末写成的好用的垃圾”时自称记不清是否为 PHK，作者归属与措辞均待 pkg_install 历史与邮件列表原文印证；其二，构建机所在“Fios basement”疑为人名误听（OpenBSD 包构建长期由 Landry Breuil 维护）；其三，影响 Java 的“PCI DS”应为 PCID（Process Context Identifier），具体 errata 编号待查 FreeBSD 公告档。　[存疑脚注] PHK 归属、Fios basement 人名、PCID errata 编号三处均系转写失真或记忆性转述，须以邮件列表原文与 FreeBSD Errata Notices 核验后方可引用（BSD Now EP43，[1955.80-1988.06]，L4）
 - 主持人将 DragonFly 的 PF 对应 OpenBSD 4.4、FreeBSD 对应 4.5 等版本关系为口头转述，需与各项目代码核对；OpenPF 项目在 2014 年成立属对未来的期许而非既成事实。　[存疑脚注] 各 BSD 的 PF 版本对应与 OpenPF 立项状态需以源码与邮件列表原始记录复核。（BSD Now EP18，[386.32-439.46]，L4）
+- 两处论断属个人经验而非基准测试：其一，宿主侧以 fail2ban 监听各 jail 日志被他称作巧妙而隐蔽——狱中之人无从察觉自己正被从外部观察，此说依赖攻击者不知情的假设；其二，他断言 jail 开销极低，“没有内核，只是多一个 SSH 会话”，其两台 R730 空转、构建包时才上四成负载，但未给出测量数据；另其关于 Pushover 创办者为 OpenBSD 人士的记忆带有“如果我没记错”的限定，未指名道姓。[存疑脚注] Pushover 创始人身份、jail 开销论断均系单一讲者现场回忆与估算，未经独立核验。　[存疑脚注] fail2ban 隐蔽性、jail 开销与 Pushover 创始人身份三项均为讲者单方陈述，引用时须另行核验。（YouTube EPrGdylV-Up_E，[2346.319-2397.079]，L4）
 
 **文献**：
 
@@ -149,5 +157,6 @@ volume: 06
 - [BSD Now EP48] Pennington J. BSD Now: 48: Liberating SSL[EB/OL]. (2014-07-30)[2026-08-15]. https://www.bsdnow.tv/48.
 - [BSD Now EP43] Pennington J. BSD Now: 43: Package Design[EB/OL]. (2014-06-25)[2026-08-15]. https://www.bsdnow.tv/43.
 - [BSD Now EP18] Pennington J. BSD Now: 18: Eclipsing Binaries[EB/OL]. (2014-01-01)[2026-08-15]. https://www.bsdnow.tv/18.
+- [YouTube EPrGdylV-Up_E] YouTube. YouTube: Doing stupid things with FreeBSD jails - Dan Langille - EuroBSDcon 2024[EB/OL]. ()[2026-08-15]. https://www.youtube.com/watch?v=rGdylV-Up_E.
 
 <!-- /PODCAST_REVIEW -->

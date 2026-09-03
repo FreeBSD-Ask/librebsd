@@ -95,7 +95,7 @@ volume: 16
 本章所书皆是形式主义化的重构，并非对“真实的 BSD 历史”的呈现。本章的章节划分、事件选择、叙事策略、因果归因——全部基于编纂者的哲学设定。本章承认这些局限，不声称客观或中立，欢迎被更诚实的叙事所超越。
 
 <!-- PODCAST_REVIEW v20260829 -->
-<!-- 语义复核范围：BSD Now EP373、BSD Now EP360、BSD Now EP354、BSD Now EP278、BSD Now EP138、BSD Now EP579（共 6 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
+<!-- 语义复核范围：BSD Now EP373、BSD Now EP360、BSD Now EP354、BSD Now EP278、BSD Now EP138、BSD Now EP579、YouTube EPXUj2vCKtegU（共 7 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
 
 **要点**：
 
@@ -125,6 +125,9 @@ volume: 16
 - Dave Cottlehuber 追述 FreeBSD core 团队史：早期 core 即所有持有源码提交权限者，后经诉讼尾声与治理需要而结构化，约二十年前基金会成立；近年 core 将源码提交权限的决策下放给新设的 source manager team。（BSD Now EP579，[1898.98-2186.62]，L1）
 - Dave 说明 FreeBSD Core 13 的目标包括完成 source manager team 的设立、改善软件包仓库的 CDN 分发、加强与 Dell、Sony、Apple 等下游伙伴的协作，并推进由基金会资助的 CI 工作流。（BSD Now EP579，[2207.24-2461.08]，L1）
 - Christos Margiolis 自述因 Linux 代码库过于庞大而选择 FreeBSD 作为贡献对象，从事声音子系统与音乐制作工具的维护与改进。（BSD Now EP579，[2721.16-2774.92]，L1）
+- Walnut Creek CDROM 在 FreeBSD 早期承担实体介质分发职能：在下载大文件尚不现实的网络条件下以订阅制销售发行 CD，演讲者忆及与 Eric Allman 购入首只 1200 波特调制解调器耗资 975 美元、相当于“今日的数千美元”（210.96-216.00），并保留历年全套光盘与 DVD；至 90 年代末网络提速使该销售模式“过时”（284.12-288.92），Walnut Creek 被并入其他业务，但其早期源码建置与归档的基础设施职能构成项目存续的物质前提。（YouTube EPXUj2vCKtegU，[202.32-293.36]，L1）
+- Yahoo 创始团队为 FreeBSD 爱好者，全公司运行 FreeBSD 并自 Walnut Creek 衰落后接管 freefall 等核心主机托管近十年，演讲者直言当时 FreeBSD “完全且彻底地依赖 Yahoo”（337.72-344.40）；Justin Gibbs 有见于单一企业依赖的存亡风险而创立 FreeBSD Foundation，初始目标为筹资购置并运维核心存储主机，交接历时约十年；NetApp 早期持续向基金会捐资，Juniper、Netflix 与 ARM 构成后续企业支持谱系，其中 Netflix 据其转述以少量生产机灰度方式跟随 head 运行。（YouTube EPXUj2vCKtegU，[296.56-521.04]，L1）
+- 演讲者以亲历者身份清点 Berkeley 时期技术遗产：套接字网络接口与沿用至今的 TCP-IP 最早广泛实现、文件系统操作类系统调用（mkdir、rmdir、opendir、readdir 系其本人所作）、为支持远程文件系统而在内核中增设的 VFS 中间层、将原 Unix 文件系统仅 4%-6% 磁盘带宽利用率提升至半带宽即得十倍提速的快速文件系统、作为 VFS 首个插件的 NFS、理念承自 Multics 但由 Berkeley 定界并率先提供的 mmap 接口，以及进程组与作业控制，共同奠定现代操作系统核心接口骨架。（YouTube EPXUj2vCKtegU，[714.08-865.08]，L1）
 
 **史料**：
 
@@ -138,6 +141,7 @@ volume: 16
 - McKusick 提及 TeachBSD 项目，主张以真实操作系统而非玩具系统教授计算机科学，并认为 DTrace/DWatch 等工具是“玻璃制”可观测系统的重要组成部分。（BSD Now EP278，[2723.00-2781.38]，L1）
 - 本期新闻与访谈段落提及的一手史料：Colin Percival 论 opinionated workarounds 的博文（只在需要的系统上打补丁并大声报错）；Andrew Tanenbaum 复盘 Minix 三十年经验的视频报道（324-390 秒）；NetBSD 官方安全公告（calendar(1) 以 root 执行外部命令前未剥离特权，波及几乎所有历史版本）；OpenBSD pledge 多语言绑定仓库（node、Python、Rust、Go、Lua、Erlang、Nim 等）；Michael W. Lucas《FreeBSD Mastery: Advanced ZFS》出版信息；PGCon 2016（渥太华）、EuroBSDCon 2016（贝尔格莱德）、pkgsrcCon 2016（克拉科夫）征稿公告；FreeBSD wiki 的 ARM 交叉编译指南；AsiaBSDCon 2016 现场三小时文档与翻译教程，成果为将 LeapSeconds 一文译入日语（2663-2805 秒）。（BSD Now EP138，[3326.48-4582.82]，L2）
 - 本期为 EuroBSDcon 2024 现场采访，Stefano Marinelli、Dave Cottlehuber 与 Christos Margiolis 均为当事人自述；Özal Babaoğlu 的身份信息为 Stefano 转述的同学说法。（BSD Now EP579，[745.78-2774.92]，L1）
+- 该期一手史料包括：演讲者基于其 FreeBSD Journal 三十周年特刊文章所作的会议报告本身；Rodrigo（转写作 Rodrigo Assor，拼写待核）自项目起点维护的逐月提交者与提交量数据文件，覆盖 source（1993 年 6 月起）、ports（1994 年 8 月起）与 doc（1995 年 4 月起）三个分支；`calendar.freebsd` 提交者生日档案及演讲者自建的数百条私人生日档案（终身提交者中仅 18 人生日未知），共同构成其提交者年龄统计的数据基础。　[存疑脚注] 提交数据维护者人名仅依语音转写还原为 Rodrigo Assor，准确拼写与身份待考；生日档案覆盖率一说仅系演讲者自述。（YouTube EPXUj2vCKtegU，[2417.32-2699.04]，L2）
 
 **史观**：
 
@@ -155,6 +159,9 @@ volume: 16
 - 总纲10 动手者创造历史：Stefano 以运维者身份推动客户迁移 BSD 并创办社区服务，Dave 以志愿者身份参与治理，均体现动手者在社区运行中的基础作用。（BSD Now EP579，[942.26-1072.78]，L1）
 - 总纲3 不存在进步，只有权力再分配：core 团队将源码提交权限决策下放给 source manager team 的过程，是 FreeBSD 治理权力在团队间的重新配置。（BSD Now EP579，[2081.44-2186.62]，L1）
 - 总纲8 本体论上各方平等：Dave 强调 FreeBSD 与 OpenBSD、NetBSD、DragonFly BSD 乃至 Linux 社区之间存在持续的跨项目交流，各方在面对共同工程问题时彼此平等。（BSD Now EP579，[2560.00-2607.04]，L1）
+- 总纲3 不存在进步，只有权力再分配：演讲者将项目长寿命归因于治理权力的结构转移而非技术线性积累：开源项目常随“终身沙皇”失去兴趣而死亡，FreeBSD 自 Bill Joy、Mike Karels 与其本人的终身主导者模式过渡为选举制核心团队，历经约三届实质性领导层更替并由此对领袖失能获得免疫力，其将平稳的领导层交接列为项目最重要的单一资产。（YouTube EPXUj2vCKtegU，[996.88-1296.56]，L1）
+- 总纲10 动手者创造历史：演讲者以月度提交数据重构项目人口史，把健康诊断落在动手者结构上：活跃提交者界定为近 12 个月内有提交者，项目首十年提交者年龄恒定于 30 岁上下，此后逐级抬升至当下 40 岁以上群体的堆积，其自嘲若“我们这些七旬老人退出项目，年龄结构便不会持续抬升”（3361.60-3368.32），并警示 ports 提交量持续攀升而提交者人数固定所造成的负载挤压，且在问答中承认 PR 贡献者年龄无法纳入统计。（YouTube EPXUj2vCKtegU，[2553.76-3504.40]，L1）
+- 总纲15 文化即形式主义：演讲者将三十年存续归结为由代码、文档与文化构成的“三足凳”（3537.68-3543.76），把邮件列表文明准则、骚扰政策的曲折演进与被刻意建构的行为规范置于与代码同等的基础地位，表明项目延续依托于被反复修订的规范体系，而非仅凭技术优越性自我延续。（YouTube EPXUj2vCKtegU，[3523.12-3570.24]，L1）
 
 **辨析**：
 
@@ -167,6 +174,7 @@ volume: 16
 - 受访者供职的达姆施塔特应用技术大学把 26 节点 Dell C6220 集群从 Ubuntu 渐进迁往 FreeBSD：以 bhyve 为教学虚拟机宿主、以 ZFS 快照回滚兜底学生 root 误操作、自写 shell 脚本把重装时长从 FI 全自动安装的 25 分钟压缩到约 10 分钟，是 2016 年 bhyve 与 ZFS 进入真实教学负载的自述个案；但其自承性能验证尚未完成，属单一当事人陈述，可作 bhyve 成熟度的孤证线索而非生态级结论。　[存疑脚注] 单源自述；“学生不会察觉运行于虚拟机”的性能判断未附数据，待其承诺的后续文章或演讲验证。（BSD Now EP138，[2437.50-2649.70]，L4）
 - Stefano 所称 Özal Babaoğlu 为“原始 BSD 的创建者之一”系同学转述，其具体贡献范围须以 CSRG 档案核实。　[存疑脚注] Babaoğlu 在伯克利 BSD 中的具体贡献与角色未经 CSRG 一手档案核实。（BSD Now EP579，[843.16-869.18]，L4）
 - Dave 所述“早期 core 即全体源码 commit 持有者”为其个人追述，具体历史节点须以 FreeBSD 项目档案核实。　[存疑脚注] core 早期构成说法为个人追述，未经项目治理档案核实。（BSD Now EP579，[1898.98-1948.24]，L4）
+- 许可证段落呈现鲜明的 FreeBSD 阵营立场：演讲者称企业因不愿开放内核中的知识产权（NetApp 的 WAFL 文件系统、Juniper 的路由软件）而选用 BSD 许可证，并复述 GPLv2 下企业以软件专利规避 copyleft、进而催生 GPLv3 专利授予条款的历史，以及内核维护者宣布 GPL-only 接口以迫使 Nvidia 等厂商开放代码的争议，明言该接口的法律效力“尚未经受法庭检验”（2376.76-2382.00）；上述企业选型动机均属单一来源推断，需与企业公开声明及许可证合规文献交叉验证。　[存疑脚注] NetApp 与 Juniper 因内核知识产权而选用 FreeBSD 的动机仅为演讲者推断，未见企业官方声明佐证；GPL-only 接口可执行性截至演讲时确无判例支持。（YouTube EPXUj2vCKtegU，[2190.72-2406.64]，L4）
 
 **文献**：
 
@@ -176,5 +184,6 @@ volume: 16
 - [BSD Now EP278] Pennington J. BSD Now: Episode 278: The Real McCoy | BSD Now 278[EB/OL]. (2018-12-27)[2026-08-15]. https://www.bsdnow.tv/278.
 - [BSD Now EP138] Pennington J. BSD Now: 138: Rushing into BSD[EB/OL]. (2016-04-20)[2026-08-15]. https://www.bsdnow.tv/138.
 - [BSD Now EP579] Pennington J. BSD Now: 579: EuroBSDcon 2024[EB/OL]. (2024-10-03)[2026-08-15]. https://www.bsdnow.tv/579.
+- [YouTube EPXUj2vCKtegU] YouTube. YouTube: FreeBSD at 30 Years: Its Secrets to Success By: Marshall Kirk McKusick[EB/OL]. ()[2026-08-15]. https://www.youtube.com/watch?v=XUj2vCKtegU.
 
 <!-- /PODCAST_REVIEW -->
