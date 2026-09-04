@@ -1,7 +1,7 @@
 ---
 chapter: 第 329 章
 id: CH329
-volume: 18
+volume: "第18卷-全球社区地区bsd史"
 ---
 
 # 第329章 欧洲bsd社区与会议史

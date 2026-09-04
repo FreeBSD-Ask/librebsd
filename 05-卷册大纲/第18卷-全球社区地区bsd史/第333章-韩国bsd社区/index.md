@@ -1,7 +1,7 @@
 ---
 chapter: 第 333 章
 id: CH333
-volume: 18
+volume: "第18卷-全球社区地区bsd史"
 ---
 
 # 第333章 韩国bsd社区

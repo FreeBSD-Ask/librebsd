@@ -1,7 +1,7 @@
 ---
 chapter: 第 302 章
 id: CH302
-volume: 16
+volume: "第16卷-开源运动与合规治理"
 ---
 
 # 第302章 开源运动与bsd-贡献者与osi

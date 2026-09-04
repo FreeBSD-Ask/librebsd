@@ -1,7 +1,7 @@
 ---
 chapter: 第 76 章
 id: CH76
-volume: 04
+volume: "第04卷-大分裂与四大bsd的诞生"
 ---
 
 # 第76章 三足鼎立的形成与bsd格局分化

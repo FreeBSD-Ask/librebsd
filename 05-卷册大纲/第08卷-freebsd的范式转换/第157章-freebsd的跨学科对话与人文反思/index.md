@@ -1,7 +1,7 @@
 ---
 chapter: 第 157 章
 id: CH157
-volume: 08
+volume: "第08卷-freebsd的范式转换"
 ---
 
 # 第157章 freebsd的跨学科对话与人文反思

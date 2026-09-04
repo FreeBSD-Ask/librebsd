@@ -1,7 +1,7 @@
 ---
 chapter: 第 119 章
 id: CH119
-volume: 06
+volume: "第06卷-freebsd的核心技术革新"
 ---
 
 # 第119章 bhyve的起源与架构设计

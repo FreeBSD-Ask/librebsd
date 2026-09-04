@@ -1,7 +1,7 @@
 ---
 chapter: 第 100 章
 id: CH100
-volume: 05
+volume: "第05卷-freebsd的工程化奠基"
 ---
 
 # 第100章 freebsd5x的时代语境与社会背景
@@ -55,7 +55,7 @@ volume: 05
 
 - 要点：1996-2010 伯克利校长：Chang-Lin Tien(1990-1997)、Robert M. Berdahl(1997-2004)、Robert J. Birgeneau(2004-2013)；三人对 CSRG 遗产与 BSD 项目的态度不同
 - 史料：U
-- FreeBSD 5.0-RELEASE Release Notes (2003.1)；Kamp, P.-H. 2002 BSDCon "GEOM—Modular Disk Framework"；geom(4) 手册页；FreeBSD Handbook "GEOM" Chapter；release/5.0.0. freebsd-src 仓库 tag [DB/OL]. 2003-01-16T16:56:23Z. tag: release/5.0.0; commit: 47227ef0ef663b7abb81ab5a60a450da9a93d24b ［A］
+- FreeBSD 5.0-RELEASE Release Notes (2003.1)；Kamp, P.-H. 2002 BSDCon “GEOM—Modular Disk Framework”；geom(4) 手册页；FreeBSD Handbook "GEOM" Chapter；release/5.0.0. freebsd-src 仓库 tag [DB/OL]. 2003-01-16T16:56:23Z. tag: release/5.0.0; commit: 47227ef0ef663b7abb81ab5a60a450da9a93d24b ［A］
 
 ## 99.16.2 UFS2 取代 UF
 

@@ -1,7 +1,7 @@
 ---
 chapter: 第 300 章
 id: CH300
-volume: 16
+volume: "第16卷-开源运动与合规治理"
 ---
 
 # 第300章 开源运动与bsd-gnu与fsf

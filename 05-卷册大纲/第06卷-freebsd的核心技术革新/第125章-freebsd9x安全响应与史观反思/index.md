@@ -1,7 +1,7 @@
 ---
 chapter: 第 125 章
 id: CH125
-volume: 06
+volume: "第06卷-freebsd的核心技术革新"
 ---
 
 ## 要点
