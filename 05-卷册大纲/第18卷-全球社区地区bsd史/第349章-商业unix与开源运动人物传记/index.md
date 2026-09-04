@@ -6,6 +6,12 @@ volume: "第18卷-全球社区地区bsd史"
 
 # 第349章 商业unix与开源运动人物传记
 
+## 史料
+
+- [WEB:mckusick.com/articles.html] McKusick 论文总目录（一手）：人物传记的学术文献基准
+- [WEB:dblp.uni-trier.de MKMcKusick] dblp 书目（一手）：Marshall Kirk McKusick 全部学术发表的结构化记录
+- [WEB:usenix.org BSDCon 2002 传记] McKusick 官方传记（一手）：Cornell 本科（EE）、Berkeley 博士（CS）、CSRG Research Computer Scientist、USENIX 前主席
+
 ## 要点
 
 - （待从数据库提取）

@@ -12,6 +12,8 @@ volume: "第08卷-freebsd的范式转换"
 - [DB:research_notes:blocks:5352] 关键词「技术特性」命中：史实考据：John Birrell 于 2008 年 12 月 3 日在 freebsd-current 邮件列表发布 …
 - [DB:research_notes:blocks:5354] 关键词「技术特性」命中：史实考据：Robert N. M. Watson 与 Jonathan Anderson 主导的 Capsicum 论文…
 
+- [WEB:freebsd.org/releases/15.0R/announce/] FreeBSD 15.0-RELEASE Announcement（官方一手，2025-12-02 发布）：pkgbase 打包 base 系统（技术预览，16 计划成为标准并移除 distribution sets/freebsd-update）；发行构件无需 root 生成；原生 inotify 实现；OpenZFS 2.4.0-rc4；OpenSSL 3.5.4 LTS（QUIC + ML-KEM/ML-DSA/SLH-DSA 后量子算法）；OpenSSH 10.0p2（默认后量子密钥交换）；MIT Kerberos 1.22.1 替代 Heimdal；amd64 LA57 支持 4TB+ 内存；32 位平台 i386/armv6/32-bit powerpc 退役（armv7 为最后 32 位平台）；OCI 容器镜像与 Oracle Cloud 镜像发布；EC2 启动较 14.0 快 76%；可复现构建（reproducible builds）里程碑
+
 ## 要点
 
 - FreeBSD 15.0-RELEASE 于 **2025 年 12 月 2 日** 由 Release Engineering Team 正式发布（Release Engineer 为 Colin Percival），是 stable/15 分支的首个版本；15.0 是 FreeBSD 历史上首个 **不为 i386、armv6、32 位 powerpc 提供 RELEASE 安装镜像** 的大版本，标志着 FreeBSD 正式进入 64 位纯净时代；15.0 开发周期自 14.0 于 2023 年 11 月发布后历时约两年，集成了大量基础设施改进；15.0 支持架构为 **amd64、aarch64、armv7、powerpc64、powerpc64le、riscv64**（armv7 为最后保留的 32 位 Tier 2 平台）；15.0 的一项里程碑式工程成就是：**所有发布制品（安装镜像、VM 镜像等）均无需 root 权限构建**，这为可重现构建与 CI/CD 现代化奠定了基础；15.0-RELEASE 将支持至 **2026 年 9 月 30 日**，整个 15.x 稳定分支将支持至 **2029 年 12 月 31 日**

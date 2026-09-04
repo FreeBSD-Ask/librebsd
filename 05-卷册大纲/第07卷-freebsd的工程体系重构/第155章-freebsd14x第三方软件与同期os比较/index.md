@@ -4,6 +4,11 @@ id: CH155
 volume: "第07卷-freebsd的工程体系重构"
 ---
 
+## 史料
+
+- [WEB:freebsd.org/releases/14.0R/relnotes.html] FreeBSD 14.0-RELEASE Release Notes（官方一手）：第三方软件变更（OpenSSH 9.5p1、OpenSSL 3.0.12、OpenZFS 2.2）与同期 OS（Linux/NetBSD/OpenBSD）对照的官方文本基准
+- [WEB:usenix.org BSDCon Proceedings] USENIX BSDCon 论文集（一手）：跨 BSD 项目技术对照的学术发表平台记录
+
 ## 要点
 
 - FreeBSD 14.0-RELEASE（2023 年 11 月 20 日）将 DMA（DragonFly Mail Agent）设为 base system 的默认 MTA，替换自 4.1cBSD（1982 年）起服役 41 年的 sendmail。DMA 由 Matthias Schmidt 为 DragonFly BSD 项目开发，是一款轻量级 MTA，专为无需完整邮件服务器的桌面/客户端系统设计——仅负责本地邮件投递（如 cron 输出、系统通知）与通过外部 smarthost 转发，不具备 sendmail 的完整 MTA 功能（如邮件队列管理、反垃圾邮件、虚拟域等）。14.0 的默认 MTA 切换体现了 “默认情况下大部分 FreeBSD 系统不需要完整 MTA” 的设计哲学——需要完整邮件服务器功能的用户可从 ports 安装 sendmail、Postfix、Exim 等。sendmail 仍可通过 ports（mail/sendmail）安装，14.0 的 /etc/mail/mailer.conf 默认指向 dma 而非 sendmail。这是 FreeBSD 历史上最显著的 “上古组件退役” 事件之一，与 BIND 移除（10.0）、GCC 移除（13.0）并列。

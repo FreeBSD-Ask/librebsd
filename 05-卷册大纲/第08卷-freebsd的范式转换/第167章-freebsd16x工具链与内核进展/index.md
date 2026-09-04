@@ -6,6 +6,12 @@ volume: "第08卷-freebsd的范式转换"
 
 # 第167章 freebsd16x工具链与内核进展
 
+## 史料
+
+- [WEB:docs-archive.freebsd.org porters-handbook versions] FreeBSD __FreeBSD_version 版本表（官方一手）：16.0-CURRENT 自 2025-09-04（1600000）起的 KPI 变迁序列——LinuxKPI PCI 改动、bus_alloc_resource API 按值传 rid、NFS _PC_CASE_INSENSITIVE、mac(9) jail 策略入口、eventfd LinuxKPI 暴露等
+- [WEB:freebsd.org/status/report-2026-01-2026-03] FreeBSD Q1-2026 状态报告（官方一手）：Intel FRED（Flexible Return and Event Delivery）支持（基金会赞助，Panther Lake/Diamond Rapids，AMD Zen 6 fRED）；System76 笔记本 ACPI 驱动（电池阈值/键盘背光）；SBOM（受欧盟 Cyber Resilience Act 推动）；GNU 工具子树移除（D55425）；x86_64 16K 内核大页（Netflix 生产验证）
+- [WEB:freebsd.org/releng] Release Engineering（官方一手）：16.0-CURRENT main 分支活跃开发；计划 2027-12 发布 FreeBSD 16.0；14.5/15.2/14.6/15.3 中间版本节奏
+
 ## 要点
 
 - FreeBSD 16.0-CURRENT 将采用[考据完成：2026-07-28 经穷尽联网考据，该要点所引数据已交叉验证，部分精确数字须待原始档案公开后方可补充确证] 新版本的 Clang/LLVM 工具链；FreeBSD 15.0 已使用 LLVM 18.x [考据完成：2026-07-28 该处存疑标注属史料缺口，须待原始档案公开后方可补充确证]，16.x 将跟进 LLVM 上游的最新稳定版本；FreeBSD 自 10.0（2014 年）将 Clang 作为默认编译器以来，持续紧密跟进 LLVM 上游发展，13.0 彻底移除 GCC 4.2.1 后 LLVM 成为 base system 唯一的编译器工具链；LLDB 作为 GDB 的替代持续改进（2026Q1 状态报告有专门条目记录 LLDB 改进项目）；Ports 中 GCC 仍作为可选编译器提供（ports/lang/gcc，2026Q1 状态报告有 GCC on FreeBSD 条目）

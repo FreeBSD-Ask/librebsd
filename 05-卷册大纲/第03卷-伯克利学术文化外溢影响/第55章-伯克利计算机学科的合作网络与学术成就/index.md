@@ -6,6 +6,12 @@ volume: "第03卷-伯克利学术文化外溢影响"
 
 # 第55章 伯克利计算机学科的合作网络与学术成就
 
+## 史料
+
+- [WEB:dl.acm.org ACM Curricula 1968-1981] ACM 课程建议书（一手）：Curriculum 68 奠定计算机科学学科化基础，伯克利 1968 年设立独立 CS 系属此浪潮
+- [WEB:Berkeley CS History] UC Berkeley CS 系史：1968 年建系（首任系主任 David Hart）；1970s-80s BSD Unix/FFS/TCP/IP、RISC-I/II（Patterson 1980 年代，1985 年 "The Case for the RISC Architecture"）——CSRG 学术成就主线；图灵奖得主 Michael Stonebraker（Ingres/Postgres 数据库研究）与伯克利 CS 的交集
+- [WEB:mckusick.com/articles.html] McKusick 论文总目录（一手）：CSRG 核心产出文献链——FFS（4.2BSD fast filesystem）、Soft Updates（TOCS 2000）、4.4BSD Design and Implementation（1996 Addison Wesley）等学术发表记录
+
 ## 要点
 
 - （一）EECS 与数学系：EECS 与数学系在理论 CS（如算法、计算复杂性）有合作关系，理论 CS 的部分教师可能在数学系与 EECS 系联合任命；（二）EECS 与统计系：EECS 与统计系在机器学习、数据科学有合作关系，CSRG 时期（1978-1992）机器学习尚未成为独立学科，统计系与 EECS 的合作主要在统计计算领域；（三）EECS 与 Haas 商学院：EECS 与 Haas 商学院在信息系统、量化金融有合作关系，CSRG 时期 Haas 商学院的 IS（Information Systems）研究与 EECS 的数据库研究（Stonebraker）存在交叉；（四）EECS 与法学院：EECS 与法学院在网络法、知识产权有合作关系，CSRG 时期网络法尚未成为独立学科，法学院与 EECS 的合作主要在知识产权（如 BSD 许可证相关法律问题）；（五）EECS 与信息学院：信息学院（School of Information，iSchool）于 **1994 年** 设立（前身为 1920 年代图书馆学系），与 EECS 在信息检索、人机交互有合作关系，iSchool 设立时间在 CSRG 末期（CSRG 于 1995 年解散）

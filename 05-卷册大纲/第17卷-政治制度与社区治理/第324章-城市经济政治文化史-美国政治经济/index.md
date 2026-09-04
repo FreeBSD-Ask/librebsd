@@ -6,6 +6,11 @@ volume: "第17卷-政治制度与社区治理"
 
 # 第324章 城市经济政治文化史-美国政治经济
 
+## 史料
+
+- [WEB:congress.gov H.Rept.106-117] 美国国会 SAFE Act 报告（一手）：美国政治经济与加密出口管制的立法交叉
+- [WEB:fortune.com Microsoft takes on the free world] Fortune 2007（一手）：美国政治经济语境下知识产权与开源产业的互动
+
 ## 要点
 
 - （待从数据库提取）

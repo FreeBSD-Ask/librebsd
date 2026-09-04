@@ -6,6 +6,11 @@ volume: "第08卷-freebsd的范式转换"
 
 # 第163章 freebsd15x的rust集成争论
 
+## 史料
+
+- [WEB:lists.freebsd.org/freebsd-hackers/2024-September/003601] Warner Losh 邮件（freebsd-hackers, 2024-09-03）：Rust 绑定使内核工作翻倍——C 与 Rust 双实现须同步演进，pkgbase 是 base 系统现代化正道；HardenedBSD 表态支持 userland Rust
+- [WEB:vuink.com/2024-freebsd-developer-summit] 2024 FreeBSD Developer Summit 纪要：Rust 快速发布周期与 base 系统节奏冲突（"they just release too often, at least for our base system cadence"）；结论为评估前景、未做决定
+
 ## 要点
 
 - 2024 年 1 月 20 日，开发者 Alan Somers（asomers@，Google 工程师、FreeBSD 文件系统与存储子系统长期贡献者）在 freebsd-hackers@ 邮件列表发布 "The Case for Rust (in the base system)" 一文，正式提出将 Rust 编程语言引入 FreeBSD 基础系统的方案；Somers 指出：Rust 的内存安全特性可以消除 C/C++ 代码中大量的内存安全漏洞（据 Google/MSRC 统计约 70% 的安全漏洞源于内存安全问题）；FreeBSD 已在 Ports 中支持 Rust，但 base system 中引入 Rust 工具链允许用 Rust 重写/新写安全关键组件（如用户态工具、新驱动、文件系统工具等）；Somers 承认主要缺点是构建时间将加倍（Rust 编译器编译较慢），但认为安全收益超过成本

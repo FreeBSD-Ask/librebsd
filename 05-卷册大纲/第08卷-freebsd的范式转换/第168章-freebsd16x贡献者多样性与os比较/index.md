@@ -4,6 +4,10 @@ id: CH168
 volume: "第08卷-freebsd的范式转换"
 ---
 
+## 史料
+
+- [WEB:freebsd.org/status/report-2026-01-2026-03] FreeBSD Q1-2026 状态报告：Bhyvemgr（FreePascal/Lazarus 开发的 bhyve 管理 GUI）、Sylve web 统一管理平台（集群/备份/Jails 快照/Ghostty web 终端）——贡献者生态与跨 OS 对比的一手进展记录
+
 ## 要点
 
 - Linux 6.x（2022 起）与开发中的 7.x 持续强化 eBPF、异构计算（GPU/DPU）、Rust 内核组件与实时性（PREEMPT_RT 合入）；FreeBSD 16.x/Current 在同类方向（hw offload、DTrace/ktrace 演进）跟进但生态规模与贡献者基数远小于 Linux，二者在“社区规模驱动创新”与“小而精的 BSD 路线”上对照。
