@@ -6,6 +6,16 @@ volume: "第07卷-freebsd的工程体系重构"
 
 # 第141章 freebsd网络栈的tcp-sack漏洞与响应
 
+## 史料
+
+- [DB:research_notes:blocks:86198] 关键词「freebsd网络栈」命中：05-卷册大纲/第05卷-freebsd技术现代化/第55章-freebsd网络栈/第55.14节.md…
+- [DB:research_notes:blocks:86216] 关键词「freebsd网络栈」命中：05-卷册大纲/第05卷-freebsd技术现代化/第55章-freebsd网络栈/第55.14节.md…
+- [DB:research_notes:blocks:110807] 关键词「freebsd网络栈」命中：编号：5qg
+定位：第5卷-55.7.4
+缺口类型：文献字段完整性
+建议动作：按扫描报告补全（文献字段完整性）
+来源 U…
+
 ## 要点
 
 - DragonFly BSD 是 Matt Dillon 于 2003 年从 FreeBSD 4.x 分叉的 BSD 操作系统，采用截然不同的 SMP 架构——不是细粒度锁，而是“每 CPU 线程模型”（per-CPU thread model）和消息传递；DragonFly 网络栈 MPSAFE 化路径与 FreeBSD 差异显著：FreeBSD 采用渐进式锁拆分（持续到 2010 年代中后期才完全移除 Giant 锁），DragonFly 则在 Matthew Dillon（马修·狄龙） 的带领下采用激进的架构重构：每个协议线程绑定到特定 CPU，使用异步消息（IPI，Inter-Processor Interrupt）在 CPU 核之间传递网络事件，而非传统的共享内存加锁；到 DragonFly 2.6（2009 年）左右网络栈核心协议实现了无锁或极少锁的并发处理，到 DragonFly 3.8（2014 年）左右包括 **pf(4)** 和 **ipfw(8)** 在内的所有网络子系统完成 MPSAFE 化

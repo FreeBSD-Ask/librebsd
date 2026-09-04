@@ -6,6 +6,16 @@ volume: "第17卷-政治制度与社区治理"
 
 # 第316章 freebsd团队与联系渠道批评
 
+## 史料
+
+- [DB:research_notes:blocks:451345] 关键词「联系渠道批评」命中：内史论/外史论：已应用（BSD daemon 词源考、BSD 名称溯源、BSD 认证教育宣传推广战略失败、FreeBSD…
+- [DB:research_notes:blocks:459932] 关键词「联系渠道批评」命中：章节号：第 156 章
+章节名：BSD 的文化溯源与治理批评
+章节文件路径：大纲/第12卷-全球社区与合规治理/第156…
+- [DB:research_notes:blocks:465942] 关键词「联系渠道批评」命中：章节号：第 121 章
+章节名：BSD 的文化溯源与治理批评
+章节主题：BSD 文化溯源与治理批评——BSD Daemo…
+
 ## 要点
 
 - Linux 社区（特别是 LKML 与 Linux Foundation 关联人物）对 BSD 文化封闭性的批评包括——BSD committer 制度的排他性、BSD 邮件列表的“老男孩俱乐部”氛围、BSD 对外部贡献者的轻视、BSD 对商业化推广的抗拒；参见相关章节 Linux 治理模式对 FreeBSD 批评部分；Linux 社区批评的背景是 Linux 与 BSD 在市场份额、社区规模、商业生态上的全面竞争；Linux 社区批评须辩证看待——部分批评成立，部分批评是竞争性话语

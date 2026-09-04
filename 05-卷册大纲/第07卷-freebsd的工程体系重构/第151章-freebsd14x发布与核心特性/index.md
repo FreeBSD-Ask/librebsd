@@ -6,6 +6,12 @@ volume: "第07卷-freebsd的工程体系重构"
 
 # 第151章 freebsd14x发布与核心特性
 
+## 史料
+
+- [DB:research_notes:blocks:6] 关键词「核心特性」命中：史实考据：Marshall Kirk McKusick、Keith Bostic、Michael J. Karels、J…
+- [DB:research_notes:blocks:8] 关键词「核心特性」命中：史实考据：CSRG 于 1994 年 6 月发布的 4.4BSD-Lite 官方 Release Notes，是 4.4…
+- [DB:research_notes:blocks:1202] 关键词「核心特性」命中：史实考据：Michael W. Lucas 撰写的《Absolute FreeBSD》第三版，基于 FreeBSD 11…
+
 ## 要点
 
 - FreeBSD 14.0-RELEASE 于 **2023 年 11 月 20 日** 由 Release Engineering Team 正式发布（Release Engineer 为 Colin Percival），是 stable/14 分支的首个版本，也是 2023 年 6 月 19 日 FreeBSD 1.0 发布三十周年之后的首个大版本；14.0 献词给 **Hans Petter Selasky**（hselasky@）——FreeBSD USB 子系统长期维护者与核心开发者，于 2023 年去世；14.0 开发周期跨越两年半（自 13.0 于 2021 年 4 月发布后），集成了超过 25,000 个 commit，代表 FreeBSD 进入现代化成熟期；14.0 支持架构包括 amd64、aarch64、i386、powerpc、powerpc64、powerpc64le、powerpcspe、armv7、riscv64（**注：powerpc64le 与 powerpcspe 在 14.2 起停止提供 RELEASE 镜像**）；amd64 与 arm64 平台支持高达 1024 个 CPU 核心

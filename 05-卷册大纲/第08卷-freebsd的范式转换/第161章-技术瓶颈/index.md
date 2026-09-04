@@ -6,6 +6,14 @@ volume: "第08卷-freebsd的范式转换"
 
 # 第161章 技术瓶颈
 
+## 史料
+
+- [DB:research_notes:blocks:2303] 关键词「技术瓶颈」命中：FreeBSD 技术瓶颈与现代挑战参考文献（ch91 考据）
+…
+- [DB:research_notes:blocks:2304] 关键词「技术瓶颈」命中：本文件为原 参考文献/参考/（原 cankao.md）中"FreeBSD 技术瓶颈与现代挑战参考文献（ch91 考据）"…
+- [DB:research_notes:blocks:2305] 关键词「技术瓶颈」命中：FreeBSD 技术瓶颈与现代挑战参考文献（ch91 考据）
+…
+
 ## 要点
 
 - freebsd 代码仓库共 1,294,851 次提交（1993-06-12 至 2026-08-25），13,875 位贡献者

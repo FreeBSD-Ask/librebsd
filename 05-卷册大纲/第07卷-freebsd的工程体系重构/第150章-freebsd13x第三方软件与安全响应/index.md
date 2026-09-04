@@ -4,6 +4,12 @@ id: CH150
 volume: "第07卷-freebsd的工程体系重构"
 ---
 
+## 史料
+
+- [DB:research_notes:blocks:4490] 关键词「安全响应」命中：史实考据：Qualys 于 2024 年 7 月 1 日公开披露 OpenSSH 的 regreSSHion 漏洞（CV…
+- [DB:research_notes:blocks:17647] 关键词「安全响应」命中：[p.4] 1 绪论 .................................................…
+- [DB:research_notes:blocks:69677] 关键词「安全响应」命中：www.dragonflybsd.org；Dillon M. HAMMER File System Design[Z].…
+
 ## 要点
 
 - FreeBSD 13.0-RELEASE（2021 年 4 月 13 日）将 GCC 4.2.1 从 base system 源码树中完全移除，结束 GCC 在 FreeBSD base 中长达 27 年的历史（自 FreeBSD 2.0 起）。GCC 移除由 Warner Losh（沃纳·洛什）（imp@）主导，是 FreeBSD 许可证纯洁化工程的最终里程碑。移除时间线：10.0（2014 年 1 月）Clang 成为 x86/arm 默认编译器，GCC 保留用于非 x86；12.0（2018 年 12 月）x86 不再默认安装 GCC 4.2.1 二进制；13.0（2021 年 4 月）完全移除 GCC 4.2.1 源码及相关的 libstdc++、libgomp、libssp 等库。所有架构（包括 powerpc、powerpc64、mips、riscv 等先前依赖 GCC 的架构）均完成 Clang 迁云，GCC 不再存在于 base 中。需使用 GCC 的用户可通过 ports 安装现代 GCC 版本（lang/gcc10-gcc13 等）。

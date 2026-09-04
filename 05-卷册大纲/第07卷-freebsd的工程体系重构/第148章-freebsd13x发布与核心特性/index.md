@@ -6,6 +6,12 @@ volume: "第07卷-freebsd的工程体系重构"
 
 # 第148章 freebsd13x发布与核心特性
 
+## 史料
+
+- [DB:research_notes:blocks:6] 关键词「核心特性」命中：史实考据：Marshall Kirk McKusick、Keith Bostic、Michael J. Karels、J…
+- [DB:research_notes:blocks:8] 关键词「核心特性」命中：史实考据：CSRG 于 1994 年 6 月发布的 4.4BSD-Lite 官方 Release Notes，是 4.4…
+- [DB:research_notes:blocks:1202] 关键词「核心特性」命中：史实考据：Michael W. Lucas 撰写的《Absolute FreeBSD》第三版，基于 FreeBSD 11…
+
 ## 要点
 
 - FreeBSD 13.0-RELEASE 于 2021 年 4 月 13 日由发布工程团队正式公告，Glen Barber（格伦·巴伯） 担任 13.0 发布工程师，这是 stable/13 分支的首个版本；13.0 发布前 8 天（2021 年 4 月 5 日）美国最高法院就 Google LLC v. Oracle America, Inc.（593 U.S. 1, Docket No. 18-956）作出 6-2 判决，认定 Google 对 Java API 的重新实现构成 fair use，这一判决对 BSD 社区重新实现 UNIX API 的长期实践具有重大法律意义；13.0 发布时全球仍处于 COVID-19 疫情期间，FreeBSD 开发者会议已全面转为线上，BSDCan 2020-2021 连续两年取消线下会议

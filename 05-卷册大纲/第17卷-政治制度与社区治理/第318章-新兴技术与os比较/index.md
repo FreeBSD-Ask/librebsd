@@ -6,6 +6,17 @@ volume: "第17卷-政治制度与社区治理"
 
 # 第318章 新兴技术与os比较
 
+## 史料
+
+- [DB:research_notes:blocks:16544] 关键词「新兴技术」命中：工程应用
+本栏目责任编辑：梁  书
+Computer Knowledge and Technology电脑知识与技术
+第…
+- [DB:research_notes:blocks:451345] 关键词「新兴技术」命中：内史论/外史论：已应用（BSD daemon 词源考、BSD 名称溯源、BSD 认证教育宣传推广战略失败、FreeBSD…
+- [DB:research_notes:blocks:459932] 关键词「新兴技术」命中：章节号：第 156 章
+章节名：BSD 的文化溯源与治理批评
+章节文件路径：大纲/第12卷-全球社区与合规治理/第156…
+
 ## 要点
 
 - NetBSD 项目各团队面临的批评——Core Team 封闭性比 FreeBSD 更甚，Core Team 成员长期稳定，新人进入极难，决策几乎完全在内部达成，社区参与度低；pkgsrc 管理僵化，pkgsrc 核心团队对新包提交与现有包更新的审查严格且缓慢，贡献者常因格式问题而非技术问题被拒，打击积极性；安全团队响应迟缓，NetBSD 安全公告（NetBSD Security Advisories）数量少于 FreeBSD 与 OpenBSD，部分漏洞长期未修复，被批评为“安全优先级低”；文档团队人手不足，NetBSD 指南（NetBSD Guide）更新滞后，多语言翻译几乎停滞；基础设施团队资源有限，邮件列表、CVS/SVN 仓库、Bugzilla 等服务常出现中断，镜像站覆盖不足
