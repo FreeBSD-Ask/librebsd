@@ -25,8 +25,7 @@ volume: "第14卷-商业生态与企业案例"
 
 ## 273.10.2 疫情中被边缘化的贡献者
 
-- 要
-- 总纲第 6 条——技术路线分化，Linux 与 BSD 在疫情应对资源上的分化
+- 要点：总纲第 6 条——技术路线分化，Linux 与 BSD 在疫情应对资源上的分化
   - 辨析：资源差异是否 “实质” 影响疫情应对效果存在争议
   - 文献：Linux Foundation 报告；FreeBSD Foundation 年报；LPC 公告 ［B］
 
@@ -84,8 +83,7 @@ volume: "第14卷-商业生态与企业案例"
 ## 273.10.2 疫情中被边缘化的贡献者
 
 - 要点：COVID-19 期间，部分依赖线下 hackathon 与会议进行贡献的边缘参与者（如学生贡献者、初次参与者、非英语母语贡献者）因会议取消而失去参与渠道，BSDCan/EuroBSDCon/AsiaBSDCon 2020-2021 均取消或转为线上，线下 hackathon 特有的 “面对面调试” 与 “新手引导” 功能难以在线复刻，学生贡献者与首次贡献者数量在 2020-2021 年可能下降
-- 史
-- Linux Foundation 报告；FreeBSD Foundation 年报；LPC 公告 ［B］
+- 史料：Linux Foundation 报告；FreeBSD Foundation 年报；LPC 公告 ［B］
 
 ## 273.11.2 与 OpenBSD 社区的疫情应对对照
 
