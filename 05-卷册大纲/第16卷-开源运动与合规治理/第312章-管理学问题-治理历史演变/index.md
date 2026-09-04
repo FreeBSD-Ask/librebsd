@@ -6,6 +6,11 @@ volume: "第16卷-开源运动与合规治理"
 
 # 第312章 管理学问题-治理历史演变
 
+## 史料
+
+- [WEB:freebsd.org/administration.html] FreeBSD Project Administration（官方一手）：Core Team/Doceng/portmgr/srcmgr/re/secteam 各团队 charter——治理演变的制度文本
+- [WEB:vuink.com 2024 Developer Summit] 2024 FreeBSD Developer Summit 纪要（一手）：Rust 集成、pkgbase、发布周期缩短等治理议题的社区讨论记录
+
 ## 要点
 
 - FreeBSD 项目管理从 1993 年首届 Core Team 纯志愿者治理起步，2000 年 FreeBSD Foundation 成立后逐步引入专职 staff（Executive Director Deb Goodkin（德布·古德金） 等）与合同制开发者，项目管理模式从纯志愿者演进为 “志愿者 + 基金会专职” 双轨制；Core Team 仍为技术决策最高机构，Foundation 负责资金筹募、法律保护与基础设施运营

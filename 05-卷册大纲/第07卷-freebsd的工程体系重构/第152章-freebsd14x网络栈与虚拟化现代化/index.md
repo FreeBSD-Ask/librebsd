@@ -4,6 +4,11 @@ id: CH152
 volume: "第07卷-freebsd的工程体系重构"
 ---
 
+## 史料
+
+- [WEB:freebsd.org/releases/14.0R/relnotes.html] FreeBSD 14.0-RELEASE Release Notes（官方一手）：TCP 默认拥塞控制改为 CUBIC（NetApp 赞助）；if_stf(4) 支持 IPv6 Rapid Deployment 6rd（RFC5969）；VNET jail 网络 if_epair 多核锁竞争优化；WiFi 6 wpa 支持
+- [WEB:freebsd.org/releases/14.0R/relnotes.html] FreeBSD 14.0-RELEASE Release Notes（官方一手）：bhyve 支持 TPM 与 GPU 直通；amd64/arm64 支持多达 1024 核；MIPS 架构移除、armv6 构件停止提供；OpenZFS 2.2（Block Cloning/RAIDZ Expansion）
+
 ## 要点
 
 - FreeBSD 14.0 重新集成了 **wg(4)** WireGuard VPN 驱动（commit 744bfb213144，由 Netgate/Rubicon Communications 与 FreeBSD Foundation 赞助）；这是 2021 年 WireGuard 争议事件的收尾——FreeBSD 13.0 开发周期中，WireGuard 驱动被仓促合入后因代码质量、安全漏洞与审查流程问题在 RC 阶段被临时移除，引发社区激烈争议；14.0 中的 **wg(4)** 完全由 John Baldwin（约翰·鲍德温）（jhb@）团队独立重新实现，而非基于当时争议的代码，经过多轮独立安全审计、Peer Review 与广泛测试后才合入；**wg(4)** 在 GENERIC 内核中默认编译为模块（if_wg.ko），但 **不自动加载**，需用户通过 `if_wg_load="YES"` rc.conf 设置或手动 kldload 加载；14.0 发布时 WireGuard 协议已成为现代 VPN 事实标准（Linux 5.6 2020 年内核集成、OpenBSD 6.8 2020.10 集成）

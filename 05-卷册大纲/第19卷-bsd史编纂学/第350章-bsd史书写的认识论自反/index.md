@@ -6,6 +6,12 @@ volume: "第19卷-bsd史编纂学"
 
 # 第350章 bsd史书写的认识论自反
 
+## 史料
+
+- [WEB:plato.stanford.edu Croce's Aesthetics] Stanford Encyclopedia of Philosophy（权威二手）：Croce 1902《Estetica》/ 1917《Teoria e storia della storiografia》一手书目——本书认识论自反章的核心哲学引用源
+- [WEB:wikisource Croce Works] Croce 著作英文译本目录（Wikisource）：History: Its Theory and Practice (1921)、History as the Story of Liberty (1941)、Theory & History of Historiography (1921)
+- [WEB:plato.stanford.edu Collingwood] R.G. Collingwood《The Idea of History》(1946)（一手书目）：历史哲学经典，与 Croce 一并构成形式主义史学书写的对话对象
+
 ## 要点
 
 - 书写 BSD 史的行为在三个层次上面对形式主义的中介。**第一重**：原始事件本身是被形式主义化的——Bill Joy 在 1977 年汇编 1BSD 磁带时，他的行动受 PDP-11 硬件约束（4K 字内存、无 MMU）、伯克利学术惯例（研究生自主探索、教授提供资源框架）、UNIX 社区规范（“做一件事并做好”的审美标准）的三重形式主义约束。不存在脱离这些约束的“真实的 Joy 的开发行为”。**第二重**：关于事件的记录是选择性的——1BSD READ_ME（1977-11-23）只记录了 Joy 选择记录的变更，邮件列表只记录了被写下来的讨论，commit log 只记录了代码变更。CSRG 会议室的走廊讨论、深夜的单人调试、未存档的私人邮件——这些对理解 1BSD 诞生至关重要的信息——永远无法被史家获取。**第三重**：史家对记录的重构是建构性的——本书选择用“多方视角”而非“权威叙事”来呈现 1BSD（第 26 章 26.5 节），选择用“分离聚合循环”而非“线性进步”来组织 V1-V4 的叙事。这些选择不是“客观的”——它们是基于编纂者哲学设定（shigang.md 32 条总纲）的建构。三重形式主义的叠加意味着：每一条 BSD 史的陈述，从“1978 年 3 月 9 日 1BSD 发布”到“Bill Joy 在 CSRG 中扮演关键角色”，都经过了原始事件→选择性记录→史家重构的三层中介——没有一层是透明的。

@@ -4,6 +4,11 @@ id: CH125
 volume: "第06卷-freebsd的核心技术革新"
 ---
 
+## 史料
+
+- [WEB:freebsd.org/administration.html] FreeBSD Security Team 架构（官方一手）：安全通告（FreeBSD-SA）发布流程与 Security Officer Charter
+- [WEB:dblp.uni-trier.de MKMcKusick] dblp 书目（一手）：FreeBSD 9.x 时期相关安全/文件系统研究的学术发表链（Soft Updates/FFS 系列论文）
+
 ## 要点
 
 - 9.x 版本周期文件覆盖窗口（**2012-01-01** 至 **2014-01-01**，对应 9.0-9.2-RELEASE 开发与维护期）freebsd-src 仓库共 **93 条 CVE 相关 commit**、去重后 **28 个 CVE**，另有 **33 条无 CVE 编号的 security fix commit**；将窗口扩展至 9.x 全支持周期（2012.1 至 2017.1，9.3-RELEASE 支持至 2017.1.1）则 CVE commit 增至 **312 条**；28 个 CVE 全部 “无 CVSS v3 评分”——这一元数据缺失反映 NVD 对 2012-2014 年 FreeBSD CVE 的覆盖长期滞后于 Linux 主流发行版；9.x 周期 BIND/**named(8)** 与 OpenSSL 是两个主要 CVE 来源，**sendmail(8)**、**sshd(8)**、Linuxulator 等子系统次之；9.x 时期 base 系统仍包含 BIND（10.0 才移除）与 sendmail（10.0 才换为 **dma(8)**），是 9.x 周期安全债务的两大结构性来源。9.x 周期关键安全事件时间线汇总见下表。

@@ -12,6 +12,10 @@ volume: "第16卷-开源运动与合规治理"
 - [DB:research_notes:blocks:1227] 关键词「开源运动」命中：参见 五、开源运动与许可证 下 Lucas Absolute FreeBSD 3rd Edition 同条目（ISBN …
 - [DB:research_notes:blocks:1595] 关键词「开源运动」命中：以下文献为第 64-71 章（FreeBSD 6.x 到 8.x 版本、jemalloc、PF 防火墙、CVS→SVN …
 
+- [WEB:cnet.com IBM offers 500 patents] IBM 2005 年向开源社区开放 500 项软件专利（免版税，限 OSI 定义项目）；此前 2004 年获 3248 项美国专利连续 12 年第一；SCO 诉 IBM（2003-03-07）背景下的专利战略转折
+- [WEB:NBER w19394] Patent Commons, Thickets, and Open Source Software Entry（NBER 工作论文）：IBM 专利共享（The Commons）与 1999-2005 开源初创进入的实证研究；SCO 诉讼抬高开源法律风险感知——专利丛（patent thickets）对 BSD/Apache 许可证谱系的学术一手分析
+- [WEB:fortune.com Microsoft takes on the free world] Fortune 2007 报道（一手）：Microsoft 宣称 FOSS 侵犯其 235 项专利；2005 年 IBM/Sony/Philips/Novell/Red Hat/NEC 组建 Open Invention Network（OIN）专利防御联盟——开源合规治理史关键一手记录
+
 ## 要点
 
 - Apache 软件基金会（ASF）于 1999 年 3 月成立，前身是 1995 年的 Apache Group（Brian Behlendorf（布莱恩·贝伦多夫）、Cliff Skolnick 等维护 NCSA HTTPd 衍生的 Apache 服务器）；ASF 组织模式借鉴 BSD 精英评审模式（committer、PMC、member 三层）；ASF 是除 FSF 与 OSI 外最具影响力的开源组织

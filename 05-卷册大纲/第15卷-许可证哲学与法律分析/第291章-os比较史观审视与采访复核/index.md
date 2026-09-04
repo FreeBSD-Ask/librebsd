@@ -6,6 +6,10 @@ volume: "第15卷-许可证哲学与法律分析"
 
 # 第291章 os比较史观审视与采访复核
 
+## 史料
+
+- [WEB:usenix.org/legacy/events/bsdcon/mckusick/mckusick.pdf] McKusick BSDCon 2002 论文（一手）：含作者传记——CSRG 经历、4.2BSD FFS 实现、4.3BSD/4.4BSD 发布监督；OS 比较研究的亲历者一手文献
+
 ## 要点
 
 - Linux 内核作为 GPL 项目，其跨项目影响主要通过“内核模块 + 用户态工具”模式扩散——Linux 内核模块（如 eBPF、cgroups、namespaces）被其他开源项目采用；Linux 基金会托管项目（如 Kubernetes、Node.js）以宽松许可证发布；Linux 阵营的跨项目影响以“生态规模”见长，BSD 阵营以“许可证宽松性”见长；两者影响模式差异源于 GPL 与 BSD 许可证的法律结构
