@@ -26,7 +26,7 @@ volume: 第02卷-伯克利的岁月
 
 - [考据脚注] 案件号 832 F. Supp. 790（D.N.J. 1993）经三次联网复核确认（US Courts PACER 系统 + academic.ru + rightwiki.org 多源交叉验证），法官 Dickinson R. Debevoise 的否定裁决于 1993 年做出。[考据脚注] CSRG 代码审计的具体方法论——McKusick (1999) 描述为“审计每一个文件
 - [考据脚注] 八项条款的精确措辞与编号——Groklaw PDF 迁移至 groklawstatic.ibiblio.org 后，各来源对条款的编号与措辞略有差异，本考据综合 Groklaw 存档 + Kolstad 公告 + softwarelicenses.org 多源表述，以实质法律效力为准，非逐字引用原始 PDF。[考据脚注] 和解协议的“保密十年”与“2004 年公开”时间线——经 Gr
-- Xinuos 裁决对 BSD 历史的间接意义在于：它结束了 SCO saga 对"UNIX 代码流入 Linux"这一命题的持续炒作，从而间接消除了围绕 BSD 代码合法性的残余"FUD"——尽管 4.4BSD-Lite 的法律清白自 1994 年从未被成功挑战，但 SCO saga 的存在使得"UNIX 代码侵权"作为一个法律概念持续具有威慑力。2026 年裁决后，这一威慑力实质上消散。需注意：
+- Xinuos 裁决对 BSD 历史的间接意义在于：它结束了 SCO saga 对“UNIX 代码流入 Linux”这一命题的持续炒作，从而间接消除了围绕 BSD 代码合法性的残余"FUD"——尽管 4.4BSD-Lite 的法律清白自 1994 年从未被成功挑战，但 SCO saga 的存在使得“UNIX 代码侵权”作为一个法律概念持续具有威慑力。2026 年裁决后，这一威慑力实质上消散。需注意：
 
 ## 文献
 

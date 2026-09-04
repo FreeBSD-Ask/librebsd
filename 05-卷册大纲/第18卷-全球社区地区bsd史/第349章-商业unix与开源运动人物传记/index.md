@@ -1,7 +1,7 @@
 ---
 chapter: 第 349 章
 id: CH349
-volume: 18
+volume: "第18卷-全球社区地区bsd史"
 ---
 
 # 第349章 商业unix与开源运动人物传记

@@ -1,7 +1,7 @@
 ---
 chapter: 第 334 章
 id: CH334
-volume: 18
+volume: "第18卷-全球社区地区bsd史"
 ---
 
 # 第334章 俄罗斯bsd社区

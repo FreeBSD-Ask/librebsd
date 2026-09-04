@@ -1,7 +1,7 @@
 ---
 chapter: 第 342 章
 id: CH342
-volume: 18
+volume: "第18卷-全球社区地区bsd史"
 ---
 
 # 第342章 中亚bsd社区

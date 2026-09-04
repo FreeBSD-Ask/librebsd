@@ -1,7 +1,7 @@
 ---
 chapter: 第 339 章
 id: CH339
-volume: 18
+volume: "第18卷-全球社区地区bsd史"
 ---
 
 # 第339章 中东bsd技术绿洲以色列

@@ -1,7 +1,7 @@
 ---
 chapter: 第 147 章
 id: CH147
-volume: 07
+volume: "第07卷-freebsd的工程体系重构"
 ---
 
 # 第147章 许可证纯洁化工程与开发者立场

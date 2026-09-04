@@ -1,7 +1,7 @@
 ---
 chapter: 第 306 章
 id: CH306
-volume: 16
+volume: "第16卷-开源运动与合规治理"
 ---
 
 # 第306章 freebsd社区演进史-治理结构
