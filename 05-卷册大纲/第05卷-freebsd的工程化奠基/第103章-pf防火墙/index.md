@@ -46,8 +46,7 @@ volume: "第05卷-freebsd的工程化奠基"
 
 ## 102.10.2 Windows Firewall 与 Solaris IP Filter
 
-- 要
-- 三者优劣，需查基准测试；设计哲学差异是否决定性能差异
+- 要点：三者优劣，需查基准测试；设计哲学差异是否决定性能差异
   - 文献：作者不详. ipfw(8)/ipf(5)/pf.conf(5) 手册页[Z]. 年份不详 ［A］
 
 ## 102.2.2 争论的社区过程
@@ -95,8 +94,7 @@ volume: "第05卷-freebsd的工程化奠基"
 
 - 要点：各 BSD 社区对 IPFilter 许可证变迁的应对：(1) OpenBSD 移除并自建 PF；(2) FreeBSD 保留 IPFilter 但推荐 PF/ipfw；(3) NetBSD 维持 IPFilter 支持；不同策略反映各社区的风险偏好与法律判断
 - 史料：各 BSD Release Notes、邮件列表 ［A］
-- 史
-- DragonFly BSD commit log ［A］
+- 史料：DragonFly BSD commit log ［A］
 
 ## 102.5.2 移除的工程效应
 

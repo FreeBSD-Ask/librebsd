@@ -83,8 +83,7 @@ volume: "第18卷-全球社区地区bsd史"
 
 - 要点：1990 年代至 2010 年代非洲开发者贡献稀缺性持续存在；2010 年代后随非洲科技创业生态发展略有改善，但 BSD 社区贡献仍极少；趋势须通过 committer 地理分布统计验证
 - 史料：BSD committer 地理分布统计、非洲科技创业生态报告、非洲开发者调查 ［A］
-- 史
-- MTN/Vodacom/Etisalat/Airtel Africa 企业档案；电信行业报告；工程师访谈记录 ［B］
+- 史料：MTN/Vodacom/Etisalat/Airtel Africa 企业档案；电信行业报告；工程师访谈记录 ［B］
 
 ## 336.6.2 非洲互联网演进中的 BSD 角色演变
 
