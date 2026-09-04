@@ -6,6 +6,13 @@ volume: "第15卷-许可证哲学与法律分析"
 
 # 第286章 自由软件与开源软件术语史考据
 
+## 史料
+
+- [DB:research_notes:blocks:2919] 关键词「自由软件」命中：史实考据：理查德·斯托曼撰写的哲学论文，原题为“Why Software Should Be Free”，后更名为“Wh…
+- [DB:research_notes:blocks:3327] 关键词「自由软件」命中：史实考据：Theo de Raadt 于 2001 年 5 月 30 日在 openbsd-cvs 邮件列表提交的移除 …
+- [DB:research_notes:blocks:3671] 关键词「自由软件」命中：史实考据：FSF 于 2005 年 12 月正式将 CDDL 列为与 GPL 不兼容的自由软件许可证，理由是 CDDL …
+- [DB:research_notes:blocks:480177] 关键词「开源软件术语史考据」命中：第十一卷第 135 章 BSD vs GPL 哲学辩论（在 135.10 节"许可哲学光谱"前增补 135.10.0 子…
+
 ## 要点
 
 - 自由软件基金会（Free Software Foundation，FSF）成立于 1985 年 10 月，初期宗旨是为 GNU 工程筹集资金。理查德·斯托曼（Richard Stallman）撰写的《GNU 宣言》（GNU Manifesto）于 1985 年首次发布，正文中多次使用"free"一词描述软件，例如"complete Unix-compatible software system which I am writing so that I can give it away free to everyone who can use it"以及"to put together a sufficient body of free software so that I will be able to get along without any software that is not free"。但《GNU 宣言》中的"free"一词并未严格区分“自由”与“免费”两层含义，斯托曼本人在 1983 年 9 月 27 日 GNU 初始公告脚注中明确承认“当时的用词并不是特别小心……后来，我意识到要在‘free’的自由之意和‘free’的价格之意间做认真的区分”。因此从一手文献角度，"free software"作为术语在 1985 年《GNU 宣言》中已有正式使用，但其语义在该时期尚未严格化为后世 FSF 定义的标准定义。

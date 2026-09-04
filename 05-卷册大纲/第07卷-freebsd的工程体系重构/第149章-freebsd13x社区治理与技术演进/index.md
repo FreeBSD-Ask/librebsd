@@ -4,6 +4,12 @@ id: CH149
 volume: "第07卷-freebsd的工程体系重构"
 ---
 
+## 史料
+
+- [DB:research_notes:blocks:1204] 关键词「技术演进」命中：史实考据：Marshall Kirk McKusick、George V. Neville-Neil、Robert N.…
+- [DB:research_notes:blocks:6115] 关键词「技术演进」命中：第十一卷覆盖第 130-138 章，共 9 章，叙事跨度 1978-2026：人类瘟疫：流行病对技术社区的效应（第 13…
+- [DB:research_notes:blocks:6141] 关键词「技术演进」命中：法律限制：技术演进的法律边界（第 138 章）…
+
 ## 要点
 
 - Google LLC v. Oracle America, Inc.（593 U.S. 1, Docket No. 18-956）是美国最高法院关于 API 版权的里程碑案件，判决于 **2021 年 4 月 5 日** 下达（距 FreeBSD 13.0 发布仅 8 天）：(1) 案件起因：Google 在 Android 中使用了 Java 的 37 个 API 包（约 11,500 行声明代码），Oracle（收购 Sun Microsystems 后）起诉 Google 侵犯版权；(2) 联邦巡回上诉法院先前判决 API 受版权保护且 Google 使用不构成 fair use；(3) 最高法院 6-2 判决（Justice Breyer 主笔，Roberts、Sotomayor、Kagan、Gorsuch、Kavanaugh 加入；Thomas、Alito 异议；Barrett 未参与）：Google 对 Java API 的重新实现构成 **fair use（合理使用）**；(4) 判决理由：API 是“调用系统”，其重新实现属于 transformative use（转换性使用），符合 fair use 四要素分析

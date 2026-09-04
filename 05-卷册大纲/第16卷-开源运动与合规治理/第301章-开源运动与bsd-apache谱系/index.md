@@ -6,6 +6,12 @@ volume: "第16卷-开源运动与合规治理"
 
 # 第301章 开源运动与bsd-apache谱系
 
+## 史料
+
+- [DB:research_notes:blocks:432] 关键词「开源运动」命中：参见 三、开源运动与许可证 下 ESR 相关条目。本次俚语考证（KISS、DRY、YAGNI 原则）与习俗考证（Unix…
+- [DB:research_notes:blocks:1227] 关键词「开源运动」命中：参见 五、开源运动与许可证 下 Lucas Absolute FreeBSD 3rd Edition 同条目（ISBN …
+- [DB:research_notes:blocks:1595] 关键词「开源运动」命中：以下文献为第 64-71 章（FreeBSD 6.x 到 8.x 版本、jemalloc、PF 防火墙、CVS→SVN …
+
 ## 要点
 
 - Apache 软件基金会（ASF）于 1999 年 3 月成立，前身是 1995 年的 Apache Group（Brian Behlendorf（布莱恩·贝伦多夫）、Cliff Skolnick 等维护 NCSA HTTPd 衍生的 Apache 服务器）；ASF 组织模式借鉴 BSD 精英评审模式（committer、PMC、member 三层）；ASF 是除 FSF 与 OSI 外最具影响力的开源组织

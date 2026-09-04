@@ -6,6 +6,16 @@ volume: "第15卷-许可证哲学与法律分析"
 
 # 第290章 bsd跨项目效应的批评与贡献者
 
+## 史料
+
+- [DB:research_notes:blocks:112095] 关键词「bsd跨项目效应」命中：编号：11aj
+定位：第11卷-136.9.5 反批评层
+缺口类型：辨析充分性
+建议动作：补入 McKusick 或 d…
+- [DB:research_notes:blocks:8] 关键词「贡献者」命中：史实考据：CSRG 于 1994 年 6 月发布的 4.4BSD-Lite 官方 Release Notes，是 4.4…
+- [DB:research_notes:blocks:20] 关键词「贡献者」命中：史实考据：Mike Karels 于 1995 年 6 月发出的告别邮件，标题或正文包含"Berkeley CSRG i…
+- [DB:research_notes:blocks:354] 关键词「贡献者」命中：史实考据：DragonFly BSD GitHub 仓库，显示 44,910 commits 来自多名贡献者（liwei…
+
 ## 要点
 
 - BSD 跨项目贡献者包括——Poul-Henning Kamp（FreeBSD + Varnish + Jails 设计）、Kirk McKusick（FreeBSD + POSIX + FFS 设计）、Robert Watson（FreeBSD + Capsicum + CHERI + Cambridge 学术）、Jordan Hubbard（FreeBSD + Apple Darwin）、Tim Kientzle（FreeBSD + libarchive）、Bob Beck（OpenBSD + OpenSSH + LibreSSL）、Theo de Raadt（西奥·德·若特）（OpenBSD + OpenSSH + LibreSSL）、Damien Miller（OpenSSH portable 维护者，非 OpenBSD 核心成员）、Luke Mewburn（NetBSD + rc.d 设计）、Jason Evans（FreeBSD + jemalloc）、Peter Grehan（彼得·格雷汉）/Neel Natu（尼尔·纳图）/Ed Maste（埃德·马斯特）（FreeBSD + bhyve）、Roman Divacky/Brooks Davis（FreeBSD + LLVM/Clang）；这些跨项目贡献者构成 BSD 阵营跨项目影响的核心节点

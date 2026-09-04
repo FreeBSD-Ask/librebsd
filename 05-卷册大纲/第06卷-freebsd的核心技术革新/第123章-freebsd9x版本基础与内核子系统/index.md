@@ -4,6 +4,12 @@ id: CH123
 volume: "第06卷-freebsd的核心技术革新"
 ---
 
+## 史料
+
+- [DB:research_notes:blocks:534] 关键词「内核子系统」命中：史实考据：Antti Kantee 的 Aalto 大学 2012 年博士学位论文，系统阐述 anykernel 与 r…
+- [DB:research_notes:blocks:1085] 关键词「内核子系统」命中：史实考据：DragonFly BSD 项目在 USENIX 2005 Annual Technical Conferen…
+- [DB:research_notes:blocks:5483] 关键词「内核子系统」命中：史实考据：NetBSD 1.3 官方发布说明，确认发布日期为 1998 年 1 月 9 日；二进制发布支持 14 个平台…
+
 ## 要点
 
 - FreeBSD 9.0 开发始于 stable/8 分支冻结后，历时近两年（2010 年中至 2012.1.12 正式发布），是 FreeBSD 历史上开发周期最长的大版本之一；9.x 系列包含四个 RELEASE：9.0（2012.1.12）、9.1（2012.12.30）、9.2（2013.9.30）、9.3（2014.7.16），无 9.4-RELEASE；9.3 作为 9.x 系列终章获得超长支持周期至 2017.1.1，是生产环境长期部署的 “企业级稳定版”

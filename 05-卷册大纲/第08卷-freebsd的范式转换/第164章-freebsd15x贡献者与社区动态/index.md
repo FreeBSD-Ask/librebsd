@@ -6,6 +6,11 @@ volume: "第08卷-freebsd的范式转换"
 
 # 第164章 freebsd15x贡献者与社区动态
 
+## 史料
+
+- [DB:research_notes:blocks:6541] 关键词「社区动态」命中：Dillon 项目治理自述：bsd_commits.db 显示 Dillon 个人主导项目走向，反映“创始人主导型”治理…
+- [DB:research_notes:blocks:482555] 关键词「社区动态」命中：LWN.net（Linux Weekly News）：LWN.net（lwn.net）由 Jonathan Corbet…
+
 ## 要点
 
 - FreeBSD 15.0-RELEASE 将传统 **ftpd(8)** 守护进程从基础系统中移除，commit 259bb93b80c0 由 Lexi Winter（<ivy@FreeBSD.org>）于 2025.9.29 起草、2025.10.1 合入 stable/15 分支，Phabricator 评审编号 D52739，由 Colin Percival（cperciva@）批准；该删除在更早版本中已标为 deprecated 并预告 15.0 移除；接续路径为 ftp/freebsd-ftpd port，PAM 服务 ftp(d) 保留以供其他 FTP 守护进程使用；/etc/inetd.conf 中条目相应改为指向 /usr/local 路径；ObsoleteFiles.inc 列出 usr/libexec/ftpd、etc/rc.d/ftpd、share/man/man5/ftpchroot.5.gz、share/man/man8/ftpd.8.gz 等删除条目，但配置文件保留以便用户迁移至 port；共删除 6972 行、38 个文件
