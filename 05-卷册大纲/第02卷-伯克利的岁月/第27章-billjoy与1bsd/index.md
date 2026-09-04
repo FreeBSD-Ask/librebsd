@@ -72,8 +72,8 @@ FreeBSD 发展关键里程碑
 - sudo 工具最初面向 4.1BSD；
 - Gentoo 采用的 Ports 包管理方法论，技术渊源可追溯至 BSD Por
 - [DB:sacred_sources:blocks:blk_4186] sacred 文件 69（paragraph）：如果没有 Linux，这个世界会怎样？
- 二十多年前，Linux 之父 Linus Torvalds 说："如果在我创造 Linux 之前 386BSD 已经可用，那么 Linux 可能不会出生。
-" 后来，当人们回想反思时，也不乏有人 认
+ 二十多年前，Linux 之父 Linus Torvalds 说：“如果在我创造 Linux 之前 386BSD 已经可用，那么 Linux 可能不会出生。
+” 后来，当人们回想反思时，也不乏有人 认
 - [DB:ziliao:materials:mat_559] 类型“未分类”：1BSD cat 源代码
 - [DB:ziliao:materials:mat_560] 类型“未分类”：Joy 1978 1BSD Release Notes
 - [DB:ziliao:materials:mat_561] 类型“未分类”：TUHS 1BSD 档案 READ_ME（1977-11-23）
