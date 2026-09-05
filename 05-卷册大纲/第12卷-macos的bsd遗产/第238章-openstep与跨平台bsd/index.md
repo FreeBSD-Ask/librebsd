@@ -16,6 +16,7 @@ volume: 第12卷-macos的bsd遗产
 ## 史料
 
 - [DB:references_fulltext:chapter_matches:chmatch_4065] 卷“第12卷-macos的bsd遗产”第 238 章，匹配置信度 1.0，原因：任务4 衍生组官方文档采集
+- [DB:historical_claims:claim] 关键词行级挖掘素材线索 238.5-关键词行级挖掘素材线索（1 条，CL-RM 段，见 238.5-关键词行级挖掘素材线索.md）
 
 ## 史观
 

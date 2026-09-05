@@ -22,6 +22,7 @@ volume: 第01卷-unix的起源
 - [DB:references_fulltext:chapter_matches:chmatch_3653] 卷“第01卷-unix的起源”第 14 章，匹配置信度 curated，原因：curated token rule
 - [DB:references_fulltext:chapter_matches:chmatch_1532] 卷“第01卷-unix的起源”第 14 章，匹配置信度 0.9，原因：关键词搜索下载文献，标题含章节主题
 - [DB:references_fulltext:chapter_matches:chmatch_1172] 卷“第01卷-unix的起源”第 14 章，匹配置信度 0.6，原因：无匹配
+- [DB:historical_claims:claim] 关键词行级挖掘素材线索 14.16-关键词行级挖掘素材线索（2 条，CL-RM 段，见 14.16-关键词行级挖掘素材线索.md）
 
 ## 史观
 

@@ -98,3 +98,7 @@ volume: "第06卷-freebsd的核心技术革新"
 - [YouTube EPpN7OLChclH8] YouTube. YouTube: FreeBSD Fridays: Introduction to ZFS[EB/OL]. ()[2026-08-15]. <https://www.youtube.com/watch?v=pN7OLChclH8>.
 
 <!-- /PODCAST_REVIEW -->
+
+## 史料
+
+- [DB:historical_claims:claim] 关键词行级挖掘素材线索 109.4-关键词行级挖掘素材线索（1 条，CL-RM 段，见 109.4-关键词行级挖掘素材线索.md）

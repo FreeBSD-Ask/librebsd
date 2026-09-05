@@ -26,6 +26,7 @@ volume: 第02卷-伯克利的岁月
 - [DB:references_fulltext:chapter_matches:chmatch_3933] 卷“第02卷-伯克利的岁月”第 35 章，匹配置信度 folder，原因：folder 第35章
 - [DB:references_fulltext:chapter_matches:chmatch_3939] 卷“第02卷-伯克利的岁月”第 35 章，匹配置信度 folder，原因：folder 第35章
 - [DB:references_fulltext:chapter_matches:chmatch_3940] 卷“第02卷-伯克利的岁月”第 35 章，匹配置信度 folder，原因：folder 第35章
+- [DB:historical_claims:claim] 关键词行级挖掘素材线索 35.12-关键词行级挖掘素材线索（8 条，CL-RM 段，见 35.12-关键词行级挖掘素材线索.md）
 
 ## 史观
 

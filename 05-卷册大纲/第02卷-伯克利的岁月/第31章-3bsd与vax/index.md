@@ -35,6 +35,7 @@ volume: 第02卷-伯克利的岁月
 - [DB:bsdnow_podcast:outline_mappings:om_11549] BSD Now 第 525 期，匹配 CH31 章，关联度 1.0
 - [DB:bsdnow_podcast:outline_mappings:om_12153] BSD Now 第 452 期，匹配 CH31 章，关联度 1.0
 - [DB:bsdnow_podcast:outline_mappings:om_12808] BSD Now 第 325 期，匹配 CH31 章，关联度 1.0
+- [DB:historical_claims:claim] 关键词行级挖掘素材线索 31.12-关键词行级挖掘素材线索（8 条，CL-RM 段，见 31.12-关键词行级挖掘素材线索.md）
 
 ## 史观
 
