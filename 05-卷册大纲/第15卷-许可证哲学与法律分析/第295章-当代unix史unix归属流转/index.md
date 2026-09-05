@@ -77,3 +77,7 @@ volume: "第15卷-许可证哲学与法律分析"
 - [BSD Now EP476] Pennington J. BSD Now: 476: Warren Toomey interview[EB/OL]. (2022-10-13)[2026-08-15]. <https://www.bsdnow.tv/476>.
 
 <!-- /PODCAST_REVIEW -->
+
+## 史料
+
+- [DB:historical_claims:claim] 关键词行级挖掘素材线索 295.7-关键词行级挖掘素材线索（1 条，CL-RM 段，见 295.7-关键词行级挖掘素材线索.md）

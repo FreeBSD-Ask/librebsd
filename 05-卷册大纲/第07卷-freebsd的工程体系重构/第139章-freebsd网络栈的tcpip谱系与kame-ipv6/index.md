@@ -26,6 +26,7 @@ volume: 第07卷-freebsd的工程体系重构
 - [DB:bsdnow_podcast:outline_mappings:om_10690] BSD Now 第 630 期，匹配 CH139 章，关联度 1.0
 - [DB:bsdnow_podcast:outline_mappings:om_10729] BSD Now 第 624 期，匹配 CH139 章，关联度 1.0
 - [DB:bsdnow_podcast:outline_mappings:om_10763] BSD Now 第 618 期，匹配 CH139 章，关联度 1.0
+- [DB:historical_claims:claim] 关键词行级挖掘素材线索 139.5-关键词行级挖掘素材线索（1 条，CL-RM 段，见 139.5-关键词行级挖掘素材线索.md）
 
 ## 史观
 

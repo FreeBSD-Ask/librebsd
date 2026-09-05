@@ -18,6 +18,7 @@ volume: 第04卷-大分裂与四大bsd的诞生
 
 - [DB:bsdnow_podcast:outline_mappings:om_11069] BSD Now 第 579 期，匹配 CH82 章，关联度 1.0
 - [DB:bsdnow_podcast:outline_mappings:om_11299] BSD Now 第 554 期，匹配 CH82 章，关联度 1.0
+- [DB:historical_claims:claim] 关键词行级挖掘素材线索 82.8-关键词行级挖掘素材线索（1 条，CL-RM 段，见 82.8-关键词行级挖掘素材线索.md）
 
 ## 史观
 

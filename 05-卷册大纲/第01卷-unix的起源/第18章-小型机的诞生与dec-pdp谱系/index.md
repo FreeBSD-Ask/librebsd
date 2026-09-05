@@ -24,6 +24,7 @@ DEC PDP系列小型机（PDP-1至PDP-11）的诞生标志着计算从大型机�
 - [DB:bsdnow_podcast:outline_mappings:om_10573] BSD Now 第 648 期，匹配 CH18 章，关联度 1.0
 - [DB:bsdnow_podcast:outline_mappings:om_10597] BSD Now 第 644 期，匹配 CH18 章，关联度 1.0
 - [DB:bsdnow_podcast:outline_mappings:om_10614] BSD Now 第 641 期，匹配 CH18 章，关联度 1.0
+- [DB:historical_claims:claim] 关键词行级挖掘素材线索 18.5-关键词行级挖掘素材线索（1 条，CL-RM 段，见 18.5-关键词行级挖掘素材线索.md）
 
 ## 史观
 

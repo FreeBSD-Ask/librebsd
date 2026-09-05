@@ -21,6 +21,7 @@ volume: 第02卷-伯克利的岁月
 - [DB:references_fulltext:chapter_matches:chmatch_3813] 卷“第02卷-伯克利的岁月”第 38 章，匹配置信度 folder，原因：folder 第38章
 - [DB:references_fulltext:chapter_matches:chmatch_3868] 卷“第02卷-伯克利的岁月”第 38 章，匹配置信度 folder，原因：folder 第38章
 - [DB:references_fulltext:chapter_matches:chmatch_3910] 卷“第02卷-伯克利的岁月”第 38 章，匹配置信度 folder，原因：folder 第38章
+- [DB:historical_claims:claim] 关键词行级挖掘素材线索 38.7-关键词行级挖掘素材线索（2 条，CL-RM 段，见 38.7-关键词行级挖掘素材线索.md）
 
 ## 史观
 

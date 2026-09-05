@@ -26,6 +26,7 @@ volume: 第02卷-伯克利的岁月
 - [DB:references_fulltext:chapter_matches:chmatch_3886] 卷“第02卷-伯克利的岁月”第 33 章，匹配置信度 folder，原因：folder 第33章
 - [DB:references_fulltext:chapter_matches:chmatch_3944] 卷“第02卷-伯克利的岁月”第 33 章，匹配置信度 folder，原因：folder 第33章
 - [DB:references_fulltext:chapter_matches:chmatch_3947] 卷“第02卷-伯克利的岁月”第 33 章，匹配置信度 folder，原因：folder 第33章
+- [DB:historical_claims:claim] 关键词行级挖掘素材线索 33.7-关键词行级挖掘素材线索（2 条，CL-RM 段，见 33.7-关键词行级挖掘素材线索.md）
 
 ## 史观
 
