@@ -11,12 +11,15 @@ volume: 第04卷-大分裂与四大bsd的诞生
 - 该判决确立了反向工程目标代码以获取互操作性接口规范构成 fair use 的先例，对 1990 年代 PC 游戏兼容、Unix 工具开发、BSD 与 Linux 二进制兼容性等场景具有深远影响；判决成为后续 Sony v. Connectix 等案的基础
 - USL 和解协议公开前，BSD 史学叙事中存在两种简化版本——BSD 一方叙事倾向于 “USL 完全败诉、BSD 完全胜诉”，USL 后继方叙事倾向于 “USL 通过和解保护了 UNIX 知识产权”；2004 年协议公开后，史学叙事得以重塑——和解实为 “复杂妥协”：Net/2 大部分代码保留（仅 3 文件移除）〔待核：原文截断，后文待回源〕
 - 386BSD 0.1（1992.7）发布后因 Jolitz 单人维护补丁积压，**1993 年 6 月 19 日** FreeBSD 项目 fork 386BSD 创建（Nate Williams、Rodney Grimes、Jordan Hubbard、David Greenman 4 人组），**FreeBSD 1.0**（1993.11）发布，主攻 Intel x86 PC 平台；**199
-- Linux 1-2 月/版本、Minix 2-3 年/版本、Coherent 1-2 年/版本、386BSD 1-2 年后停滞；发行节奏的差异直接决定了开发者社区规模与生态增长速度。同期操作系统发行节奏对照如下：| 项目 | 发行周期 | 维护模式 | 治理结构
+- Linux 1-2 月/版本、Minix 2-3 年/版本、Coherent 1-2 年/版本、386BSD 1-2 年后停滞；发行节奏的差异直接决定了开发者社区规模与生态增长速度。同期操作系统发行节奏对照如下：
 
+| 项目 | 发行周期 | 维护模式 | 治理结构 |
 | --- | --- | --- | --- |
-| --- | --- | --- | --- |
-| Linux 0.01-0.99 | 1-2 月/版本 | 社区驱动 | 林纳斯· |
-
+| Linux 0.01-0.99 | 1-2 月/版本 | 社区驱动 | 林纳斯·托瓦兹主导 |
+| Minix 1.5 | 2-3 年/版本 | 单一维护者 | Tanenbaum 教学定位 |
+| Coherent | 1-2 年/版本 | 商业公司 | Mark Williams Company |
+| ISC UNIX | 受商业周期约束 | 商业公司 | Interactive Systems Corporation |
+| 386BSD | 1-2 年后停滞 | 单一维护者 | Jolitz 夫妇 |
 - 386BSD 0.1 是 OpenBSD 1.0（1996-07，从 NetBSD 1.0 fork）的间接前身——OpenBSD 通过 NetBSD 1.0 间接继承 386BSD 安全基线，但 OpenBSD 1.0 的直接基线是 NetBSD 1.0（1994，基于 4.4BSD-Lite），而非 386BSD 0.1；1994 年 6 月 4.4BSD-Lite 发布后，FreeBSD 2
 
 ## 史料
@@ -50,4 +53,3 @@ volume: 第04卷-大分裂与四大bsd的诞生
 - OpenBSD 1.0 Release Notes (1996.7)；NetBSD 1.0 Release Notes (1994.10)；4.4BSD-Lite Release Notes (1994.6)；4.4BSD SMM: 16《On the Security of UNIX》；McKusick M K, Bostic K, Karels M J, Quarterman J S. The Design and Implementation of the 4.4BSD Operating System [M]. Reading, MA: Addison-Wesley, 1996. ISBN 0-201-54979-4 ［A］[^doubt-resolved-264]: 据 Mac OS X Internals A Systems Approach (Amit Singh（阿米特·辛格）)  (未署名) 消解[^doubt-resolved-265]: 据 Mac OS X Internals A Systems Approach (Amit Singh)  (未署名) 消解
 - Lotus Dev. Corp. v. Borland Int'l, Inc., 49 F.3d 807 (1st Cir. 1995) & 516 U.S. 233 (1996)；Oracle Am., Inc. v. Google Inc., 750 F.3d 1339 (Fed. Cir. 2014)；Google LLC v. Oracle America, Inc., 593 U.S. 1 (2021)；Sega Enterprises, Ltd. v. Accolade, Inc., 977 F.2d 1510 (9th Cir. 1992)；CSRG Net/2 重写工程记录 ［A］<!-- NEWREF:2362 --><!-- NEWREF:2363 --><!-- NEWREF:2364 --><!-- NEWREF:2365 --><!-- NEWREF:2366 --><!-- NEWREF:2367 --><!-- NEWREF:2368 --><!-- NEWREF:2369 -->
 - ORACLE USA, Inc. v. SAP AG, No. 4:07-cv-01658 (N.D. Cal.)[Z/OL]. 美国加州北区联邦地区法院，2007-2014. <https://www.courtlistener.com/docket/>；Oracle Corp. v. SAP AG, 2011 WL 3861945 (N.D. Cal. 2011)（Hamilton 法官减赔令）；Oracle America, Inc. v. SAP AG, 765 F.3d 1080 (9th Cir. 2014)（第九巡回 3.567 亿美元裁定） ［A］<!-- NEWREF:2389 --><!-- NEWREF:2390 --><!-- NEWREF:2391 --><!-- NEWREF:2437 -->
-

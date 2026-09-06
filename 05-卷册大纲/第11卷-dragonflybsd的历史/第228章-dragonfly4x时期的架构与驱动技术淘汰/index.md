@@ -11,7 +11,12 @@ volume: 第11卷-dragonflybsd的历史
 - DragonFly v4.0.0（2014-11-23）完成从 FreeBSD DRM 到 Linux DRM 的切换后，BSD 阵营（尤以 FreeBSD GPU 驱动维护者与 NetBSD 用户为代表）对 DragonFly 的 DRM 路线提出三类批评。其一，“血缘背离”批评——bsd_commits.db 显示 sys/dev/drm/ 目录在 2014 年有 197 个 distinct
 - DragonFly 阵营（以 Matt Dillon 与 François Tigeot 的工程实践为代表）对 BSD 阵营的三类批评提出三层回应。其一，“硬件支持现实”回应——bsd_commits.db 显示 2014-2015 年间 i915 关键词 commit 146 条、radeon 关键词 44 条，反映 DragonFly 在 FreeBSD DRM 框架下已无法跟上 Intel
 - BSD 阵营对 DragonFly 阵营的三层回应提出再反驳，并在合图阶段以项目史观总纲第 6 条与第 8 条为框架达成辩证综合。再反驳其一，“硬件支持不等于代码血缘”——BSD 阵营承认 Linux DRM 的硬件支持覆盖率确实高于 FreeBSD DRM，但指出 FreeBSD 通过 linuxkpi 兼容层同样支持现代 GPU，问题不在于“是否支持”而在于“以何种方式支持”，DragonFl
-- bsd_commits.db 显示 2011-2018 年间四仓库年均 commit 量对照如下：    | 仓库 | 年均 commit 量 | 与 dragonfly-src 比例 |    |---|---|---|    | netbsd-src | 16669 | 6.9 倍 |    | freebsd-src | 14650 | 6.1 倍 |    | openbsd-src |
+
+
+| - bsd_commits.db 显示 2011-2018 年间四仓库年均 commit 量对照如下： | 仓库 | 年均 commit 量 | 与 dragonfly-src 比例 |  | --- | --- | --- |  | netbsd-src | 16669 | 6.9 倍 |  | freebsd-src | 14650 | 6.1 倍 |  | openbsd-src |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+〔待补：本表数据行待回填（正文行内粘连拆出，数据行缺失）〕
+
 
 ## 史料
 

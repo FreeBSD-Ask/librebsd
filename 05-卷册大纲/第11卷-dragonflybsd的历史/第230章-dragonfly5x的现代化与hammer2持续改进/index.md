@@ -8,10 +8,17 @@ volume: 第11卷-dragonflybsd的历史
 
 ## 要点
 
-- dragonfly.db dragonfly-src 仓库 tags 表提供 v5.0.0（**2017-10-15**）与 v5.2.0（**2018-04-08**）的 tagger_date、tagger_name、target_commit_hash 字段，作为发布日期的最权威代码级证据。tagger_date 与 target_commit_date 对照如下：    | tag | t
+| - dragonfly.db dragonfly-src 仓库 tags 表提供 v5.0.0（**2017-10-15**）与 v5.2.0（**2018-04-08**）的 tagger_date、tagger_name、target_commit_hash 字段，作为发布日期的最权威代码级证据。tagger_date 与 target_commit_date 对照如下： | tag | t |
+| --- | --- | --- |
+〔待补：本表数据行待回填（正文行内粘连拆出，数据行缺失）〕
+
 - bsd_commits.db dragonfly-src 仓库 commits 表提供 v5.4-v5.6 时期 HAMMER 2 相关 commit 的具体记录。2018 年 HAMMER2 关键词 commit **75 条**、2019 年 **156 条**，其中 v5.6.0（**2019-06-16**）发布前的 HAMMER 2 commit 集中于性能优化与默认切换准备。HAMME
-- bsd_commits.db dragonfly-src 仓库 tags 表提供 v5.8.0 与 v6.0.0 的 tagger_date、tagger_name、target_commit_date 字段。v5.8.0 与 v6.0.0 对照如下：    | tag | tagger_date | target_commit_date | 时间差 | 发布模式 |    |---|---|--
-- DragonFly（lists.dragonflybsd.org）、NetBSD（mail-index.netbsd.org）、FreeBSD（lists.freebsd.org）、OpenBSD（marc.info/?l = openbsd-misc）四个项目的邮件列表归档完整保留 2023-2026 年间 AI 代码政策相关讨论。四项目邮件列表归档对照如下：    | 项目 | 归档域名 |
+
+| - bsd_commits.db dragonfly-src 仓库 tags 表提供 v5.8.0 与 v6.0.0 的 tagger_date、tagger_name、target_commit_date 字段。v5.8.0 与 v6.0.0 对照如下： | tag | tagger_date | target_commit_date | 时间差 | 发布模式 |  | --- | --- | -- |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+〔待补：本表数据行待回填（正文行内粘连拆出，数据行缺失）〕
+〔待补：本表数据行待回填（正文行内粘连拆出，数据行缺失）〕
+
 - bsd_commits.db dragonfly-src 仓库 contributors 表中 first_commit_date 字段是权限授予时间的间接证据，须与 lists.dragonflybsd.org 邮件列表公告交叉验证。bsd_commits.db 显示 Aaron LI 首 commit = 2017-09-27（<aly@aaronly.me> 邮箱），Huete Jimene
 
 ## 史料

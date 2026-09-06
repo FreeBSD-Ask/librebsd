@@ -9,7 +9,12 @@ volume: 第15卷-许可证哲学与法律分析
 ## 要点
 
 - linux-kernel 代码仓库共 1,474,341 次提交（1970-01-01 至 2026-08-24；起点系时区边界记录），39,865 位贡献者（contributors 表行数）
-- | 组合 | 兼容性 | 说明 |  |---|---|---|  | GPLv3 ↔ Apache-2.0 | ✅ 兼容 | Apache-2.0 项目可并入 GPLv3（单向） |  | GPLv3 ↔ GPLv2 | ⚠ 有条件 | "GPLv2 or later" 可升级；"GPLv2 only" 不兼容 v3 |  | GPLv2 ↔ Apache-2.0 | ❌ 不兼容 | Apac
+- | 组合 | 兼容性 | 说明 |  |---|---|---|  | GPLv3 ↔ Apache-2.0 | ✅ 兼容 | Apache-2.0 项目可并入 GPLv3（单向） |  | GPLv3 ↔ GPLv2 | ⚠ 有条件
+
+| "GPLv2 or later" 可升级；"GPLv2 only" 不兼容 v3 |  | GPLv2 ↔ Apache-2.0 | ❌ 不兼容 | Apac |
+| --- | --- | --- | --- | --- |
+〔待补：本表数据行待回填（正文行内粘连拆出，数据行缺失）〕
+
 
 ## 史料
 
