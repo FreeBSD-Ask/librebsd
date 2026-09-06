@@ -1,7 +1,7 @@
 ---
 chapter: 第 167 章
 id: CH167
-volume: "第08卷-freebsd的范式转换"
+volume: 第08卷-freebsd的范式转换
 ---
 
 # 第167章 freebsd16x工具链与内核进展

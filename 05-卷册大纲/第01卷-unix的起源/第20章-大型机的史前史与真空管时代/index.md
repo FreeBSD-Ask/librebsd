@@ -1,7 +1,7 @@
 ---
 chapter: 第 20 章
 id: CH20
-volume: "第01卷-unix的起源"
+volume: 第01卷-unix的起源
 ---
 
 # 第20章 大型机的史前史与真空管时代

@@ -1,7 +1,7 @@
 ---
 chapter: 第 151 章
 id: CH151
-volume: "第07卷-freebsd的工程体系重构"
+volume: 第07卷-freebsd的工程体系重构
 ---
 
 # 第151章 freebsd14x发布与核心特性

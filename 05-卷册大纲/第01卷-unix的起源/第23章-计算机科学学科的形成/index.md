@@ -1,7 +1,7 @@
 ---
 chapter: 第 23 章
 id: CH23
-volume: "第01卷-unix的起源"
+volume: 第01卷-unix的起源
 ---
 
 # 第23章 计算机科学学科的形成

@@ -1,7 +1,7 @@
 ---
 chapter: 第 350 章
 id: CH350
-volume: "第19卷-bsd史编纂学"
+volume: 第19卷-bsd史编纂学
 ---
 
 # 第350章 bsd史书写的认识论自反

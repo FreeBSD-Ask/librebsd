@@ -1,7 +1,7 @@
 ---
 chapter: 第 109 章
 id: CH109
-volume: "第06卷-freebsd的核心技术革新"
+volume: 第06卷-freebsd的核心技术革新
 ---
 
 # 第109章 zfs设计起源与寻址修辞

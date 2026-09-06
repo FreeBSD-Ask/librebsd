@@ -1,7 +1,7 @@
 ---
 chapter: 第 128 章
 id: CH128
-volume: "第06卷-freebsd的核心技术革新"
+volume: 第06卷-freebsd的核心技术革新
 ---
 
 ## 要点

@@ -1,7 +1,7 @@
 ---
 chapter: 第 341 章
 id: CH341
-volume: "第18卷-全球社区地区bsd史"
+volume: 第18卷-全球社区地区bsd史
 ---
 
 # 第341章 中东政府企业与bsd张力

@@ -1,7 +1,7 @@
 ---
 chapter: 第 335 章
 id: CH335
-volume: "第18卷-全球社区地区bsd史"
+volume: 第18卷-全球社区地区bsd史
 ---
 
 # 第335章 加拿大bsd社区

@@ -1,7 +1,7 @@
 ---
 chapter: 第 354 章
 id: CH354
-volume: "第19卷-bsd史编纂学"
+volume: 第19卷-bsd史编纂学
 ---
 
 # 第354章 bsd史编纂的双向检验

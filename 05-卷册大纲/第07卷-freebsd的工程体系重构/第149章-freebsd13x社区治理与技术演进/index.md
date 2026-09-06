@@ -1,7 +1,7 @@
 ---
 chapter: 第 149 章
 id: CH149
-volume: "第07卷-freebsd的工程体系重构"
+volume: 第07卷-freebsd的工程体系重构
 ---
 
 ## 史料

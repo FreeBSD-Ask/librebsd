@@ -1,7 +1,7 @@
 ---
 chapter: 第 163 章
 id: CH163
-volume: "第08卷-freebsd的范式转换"
+volume: 第08卷-freebsd的范式转换
 ---
 
 # 第163章 freebsd15x的rust集成争论

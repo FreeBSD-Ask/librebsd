@@ -1,7 +1,7 @@
 ---
 chapter: 第 331 章
 id: CH331
-volume: "第18卷-全球社区地区bsd史"
+volume: 第18卷-全球社区地区bsd史
 ---
 
 # 第331章 中国bsd社区与起源

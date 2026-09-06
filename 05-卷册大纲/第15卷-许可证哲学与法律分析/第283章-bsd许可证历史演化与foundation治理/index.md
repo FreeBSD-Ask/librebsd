@@ -1,7 +1,7 @@
 ---
 chapter: 第 283 章
 id: CH283
-volume: "第15卷-许可证哲学与法律分析"
+volume: 第15卷-许可证哲学与法律分析
 ---
 
 # 第283章 bsd许可证历史演化与foundation治理

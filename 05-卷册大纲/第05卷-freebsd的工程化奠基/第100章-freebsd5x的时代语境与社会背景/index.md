@@ -1,7 +1,7 @@
 ---
 chapter: 第 100 章
 id: CH100
-volume: "第05卷-freebsd的工程化奠基"
+volume: 第05卷-freebsd的工程化奠基
 ---
 
 # 第100章 freebsd5x的时代语境与社会背景

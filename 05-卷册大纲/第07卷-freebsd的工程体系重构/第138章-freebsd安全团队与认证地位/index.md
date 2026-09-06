@@ -1,7 +1,7 @@
 ---
 chapter: 第 138 章
 id: CH138
-volume: "第07卷-freebsd的工程体系重构"
+volume: 第07卷-freebsd的工程体系重构
 ---
 
 # 第138章 freebsd安全团队与认证地位

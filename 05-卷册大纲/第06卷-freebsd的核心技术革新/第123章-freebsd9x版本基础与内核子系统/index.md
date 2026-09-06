@@ -1,7 +1,7 @@
 ---
 chapter: 第 123 章
 id: CH123
-volume: "第06卷-freebsd的核心技术革新"
+volume: 第06卷-freebsd的核心技术革新
 ---
 
 ## 史料

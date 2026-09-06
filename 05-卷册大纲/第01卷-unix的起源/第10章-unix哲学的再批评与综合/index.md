@@ -1,7 +1,7 @@
 ---
 chapter: 第 10 章
 id: CH10
-volume: "第01卷-unix的起源"
+volume: 第01卷-unix的起源
 ---
 
 # 第10章 unix哲学的再批评与综合

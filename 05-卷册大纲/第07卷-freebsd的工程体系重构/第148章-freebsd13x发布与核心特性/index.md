@@ -1,7 +1,7 @@
 ---
 chapter: 第 148 章
 id: CH148
-volume: "第07卷-freebsd的工程体系重构"
+volume: 第07卷-freebsd的工程体系重构
 ---
 
 # 第148章 freebsd13x发布与核心特性

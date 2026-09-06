@@ -1,7 +1,7 @@
 ---
 chapter: 第 4 章
 id: CH4
-volume: "第01卷-unix的起源"
+volume: 第01卷-unix的起源
 ---
 
 # 第4章 贝尔实验室的文化土壤

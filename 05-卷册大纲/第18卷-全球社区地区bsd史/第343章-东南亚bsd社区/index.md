@@ -1,7 +1,7 @@
 ---
 chapter: 第 343 章
 id: CH343
-volume: "第18卷-全球社区地区bsd史"
+volume: 第18卷-全球社区地区bsd史
 ---
 
 # 第343章 东南亚bsd社区

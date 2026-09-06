@@ -1,7 +1,7 @@
 ---
 chapter: 第 338 章
 id: CH338
-volume: "第18卷-全球社区地区bsd史"
+volume: 第18卷-全球社区地区bsd史
 ---
 
 # 第338章 非洲bsd法律与政策环境
