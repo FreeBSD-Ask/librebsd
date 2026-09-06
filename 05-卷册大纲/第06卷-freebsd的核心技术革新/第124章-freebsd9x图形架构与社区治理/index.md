@@ -1,3 +1,5 @@
+# 第 124 章 freebsd9x图形架构与社区治理
+
 ---
 chapter: 第 124 章
 id: CH124

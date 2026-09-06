@@ -1,3 +1,5 @@
+# 第 128 章 freebsd10x的pkg软件包管理器
+
 ---
 chapter: 第 128 章
 id: CH128

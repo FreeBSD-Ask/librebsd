@@ -1,3 +1,5 @@
+# 第 136 章 freebsd安全模型的unix-dac与权限机制
+
 ---
 chapter: 第 136 章
 id: CH136

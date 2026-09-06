@@ -1,3 +1,5 @@
+# 第 168 章 freebsd16x贡献者多样性与os比较
+
 ---
 chapter: 第 168 章
 id: CH168
