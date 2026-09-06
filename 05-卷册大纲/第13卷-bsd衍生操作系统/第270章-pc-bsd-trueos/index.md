@@ -38,11 +38,11 @@ volume: 第13卷-bsd衍生操作系统
 
 ## 文献
 
-- PC-BSD 官方文档；freebsd.db 查询 L1.1.1（trueos-src 仓库 2005-2020 年每年 commit 量时间序列）；原材料/研究/bsd 仓库分析/数据分析/宏观趋势统计.md §L1.1.1。 ［B］<!-- DB_REF:freebsd.duckdb -->> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 2005-2018 年间：571,244 次提交。> 仓库总览：1,294,851 次提交，13,875 位贡献者，1993-06-12 至 2026-08-25。
-- 项目档案。[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]<!-- DB_REF:bsd_derivatives.duckdb -->> **数据库引用（bsd_derivatives.duckdb）**：本子节对应 bsd_derivatives 代码仓库。> 2018-2020 年间：126,447 次提交。> 仓库总览：963,557 次提交，14,109 位贡献者，1985-06-13 至 2026-08-24。
-- 各桌面 OS 官方资料。[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]<!-- DB_REF:bsd_derivatives.duckdb -->> **数据库引用（bsd_derivatives.duckdb）**：本子节对应 bsd_derivatives 代码仓库。> 1985-2026 年间：963,557 次提交。> 仓库总览：963,557 次提交，14,109 位贡献者，1985-06-13 至 2026-08-24。
+- PC-BSD 官方文档；freebsd.db 查询 L1.1.1（trueos-src 仓库 2005-2020 年每年 commit 量时间序列）；原材料/研究/bsd 仓库分析/数据分析/宏观趋势统计.md §L1.1.1。 ［B］<!-- DB_REF:freebsd.duckdb -->> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 2005-2018 年间：571,244 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
+- 项目档案。[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]<!-- DB_REF:bsd_derivatives.duckdb -->> **数据库引用（bsd_derivatives.duckdb）**：本子节对应 bsd_derivatives 代码仓库。> 2018-2020 年间：126,447 次提交。> 仓库总览：963,557 次提交，9,744 位贡献者（contributors 表行数，1985-06-13 至 2026-08-24）。
+- 各桌面 OS 官方资料。[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]<!-- DB_REF:bsd_derivatives.duckdb -->> **数据库引用（bsd_derivatives.duckdb）**：本子节对应 bsd_derivatives 代码仓库。> 1985-2026 年间：963,557 次提交。> 仓库总览：963,557 次提交，9,744 位贡献者（contributors 表行数，1985-06-13 至 2026-08-24）。
 - bsd_commits.db 查询 trueos-src CVE commit（273 条，377 去重 CVE，2026-07-23）；bsd_commits.db 查询 L7.1.1.trueos-src；`原材料/研究/bsd漏洞史/数据库提取/trueos-src-cve-commits.md`；`原材料/研究/bsd仓库分析/数据分析/衍生项目与跨项目对比分析.md` §L7.1。 ［B］## 269.4.2 PC-BSD 时期 CVE 处置与 iXsystems 商业安全维护投入
-- bsd_commits.db 查询 L1.1.1（trueos-src 每年 commit 量）；bsd_commits.db 查询 L7.1.1.trueos-src；PC-BSD 官方文档；iXsystems 年度报告。 ［B］FreeBSD 社区论文：[FP-2018-035] The TrueOS Difference: Changing Methodologies for Changing Times（Ken Moore，2018）<https://papers.freebsd.org/2018/bsdcan/moore-the_trueos_difference/><!-- DB_REF:freebsd.duckdb -->> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 1985-2026 年间：1,294,851 次提交。> 仓库总览：1,294,851 次提交，13,875 位贡献者，1993-06-12 至 2026-08-25。
+- bsd_commits.db 查询 L1.1.1（trueos-src 每年 commit 量）；bsd_commits.db 查询 L7.1.1.trueos-src；PC-BSD 官方文档；iXsystems 年度报告。 ［B］FreeBSD 社区论文：[FP-2018-035] The TrueOS Difference: Changing Methodologies for Changing Times（Ken Moore，2018）<https://papers.freebsd.org/2018/bsdcan/moore-the_trueos_difference/><!-- DB_REF:freebsd.duckdb -->> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 1985-2026 年间：1,294,851 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
 
 <!-- PODCAST_REVIEW v20260829 -->
 <!-- 语义复核范围：BSD Now EP282、BSD Now EP225、BSD Now EP221、BSD Now EP193、BSD Now EP192、BSD Now EP185、BSD Now EP54、BSD Now EP19（共 8 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->

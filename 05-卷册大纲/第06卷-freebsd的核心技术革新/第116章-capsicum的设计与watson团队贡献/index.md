@@ -38,7 +38,7 @@ volume: 第06卷-freebsd的核心技术革新
 ## 文献
 
 - University of Cambridge Computer Laboratory. Capsicum Project Documentation. cl.cam.ac.uk/research/security/capsicum/; USENIX Association. Proceedings of the 19th USENIX Security Symposium (2010). usenix.org; FreeBSD Project. FreeBSD 9.0-RELEASE Release Notes (2012-01-12). freebsd.org; Google. capsicum-linux Repository. github.com/google/capsicum-linux; FreeBSD Project. Commit `72c35fc69c9f26789b502ebaf9934c4a7a9a2b63` (Robert Watson, 2009-09-30). Capsicum 系统调用号首次预留； FreeBSD Project. Commit `96fcc75fdf74e8ecc798405021f9c9b3c8e01c0d` (Robert Watson, 2011-03-01). Capsicum Capability Mode 初始实现； FreeBSD Project. Commit `009d2032af44e1f71bd17cda89ace46a4df2d2cc` (Robert Watson, 2011-12-29). options CAPABILITY_MODE/CAPABILITIES 加入 GENERIC 内核配置（对应 SVN r219129） ［A］---## 史料登记与辩证校准（2026-08-08 追加）> **本卷命题**：24.3 长期主义（详见本卷 00-总览“编纂指导思想叙事参照”）### 史料文献
-- Levy, H. M. (1984). Capability-Based Computer Systems. Digital Press; Miller, M. S., Yee, K.-P., & Shapiro, J. S. (2003). Capability Myths Demolished. SRL2003-02, Johns Hopkins University; Watson, R. N. M. et al. (2010). Capsicum: Practical Capabilities for UNIX (Section 7). USENIX Security '10; E Language Project. erights.org; Tahoe-LAFS Project. tahoe-lafs.org. ［B］<!-- DB_REF:freebsd.duckdb -->> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 2010-2020 年间：488,947 次提交。> 仓库总览：1,294,851 次提交，13,875 位贡献者，1993-06-12 至 2026-08-25。
+- Levy, H. M. (1984). Capability-Based Computer Systems. Digital Press; Miller, M. S., Yee, K.-P., & Shapiro, J. S. (2003). Capability Myths Demolished. SRL2003-02, Johns Hopkins University; Watson, R. N. M. et al. (2010). Capsicum: Practical Capabilities for UNIX (Section 7). USENIX Security '10; E Language Project. erights.org; Tahoe-LAFS Project. tahoe-lafs.org. ［B］<!-- DB_REF:freebsd.duckdb -->> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 2010-2020 年间：488,947 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
 - University of Cambridge Computer Laboratory. Capsicum and CHERI Project Licensing Statements. cl.cam.ac.uk; cheribsd.org. CheriBSD License. github.com/CTSRD-CHERI/cheribsd.[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]**【本节文献综述】** 详见 [04-现代研究文献/05-参考文献全文数据库/references_fulltext.db](04-现代研究文献/05-参考文献全文数据库/references_fulltext.db) `chapter_reviews` 表（id=36）---**补充证据（基于全文数据库修订）**本次修订从全文数据库补充 1 篇新匹配文献的证据。**新增核心事实**
 文献 (201305-temporal-practical-capabilities, 年份不详, p.15) 指出：FreeBSD 作为 Capsicum 能力系统的实现平台，该论文以 FreeBSD 为基础讨论了时间性能力的安全应用。
 **新增技术**
@@ -47,7 +47,7 @@ volume: 第06卷-freebsd的核心技术革新
 **新增时间线事件**
 文献 (201305-temporal-practical-capabilities, 年份不详) 记录 1987：IEEE S&P 会议于 1987 年发表了关于自主型特洛伊木马的经典论文，为后续能力安全研究奠定了基础。
 文献 (201305-temporal-practical-capabilities, 年份不详) 记录 1997：CAV 会议于 1997 年发表了关于使用 PVS 进行抽象状态图构造的论文，为形式化验证在安全领域的应用提供了参考。
-<!-- DB_REF:freebsd.duckdb -->> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 2010-2020 年间：488,947 次提交。> 仓库总览：1,294,851 次提交，13,875 位贡献者，1993-06-12 至 2026-08-25。
+<!-- DB_REF:freebsd.duckdb -->> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 2010-2020 年间：488,947 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
 
 <!-- PODCAST_REVIEW v20260829 -->
 <!-- 语义复核范围：BSD Now EP50、BSD Now EP7（共 2 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->

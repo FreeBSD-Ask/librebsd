@@ -38,9 +38,9 @@ volume: 第05卷-freebsd的工程化奠基
 ## 文献
 
 - freebsd-ports 邮件列表；BSDCon 辩论 ［A］## 史料考据补充（2026-08-04 任务3 联网核验）> 主题：对 Ports 系统的批评（Gentoo Portage 与 dpkg/rpm 对比）
-- 肖滢、lola. FreeBSD 大败局 [EB/OL]. 2021. 知乎 ［B］<!-- DB_REF:freebsd.duckdb -->> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 1996-2010 年间：482,545 次提交。> 仓库总览：1,294,851 次提交，13,875 位贡献者，1993-06-12 至 2026-08-25。
-- PR 数据库；邮件列表归档；开源史料保存研究 ［A］<!-- DB_REF:freebsd.duckdb -->> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 1996-2010 年间：482,545 次提交。> 仓库总览：1,294,851 次提交，13,875 位贡献者，1993-06-12 至 2026-08-25。
-- 软件包管理系统比较论文；各系统官方文档；社区讨论归档 ［B］<!-- DB_REF:freebsd.duckdb -->> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 1998-1998 年间：18,134 次提交。> 仓库总览：1,294,851 次提交，13,875 位贡献者，1993-06-12 至 2026-08-25。
+- 肖滢、lola. FreeBSD 大败局 [EB/OL]. 2021. 知乎 ［B］<!-- DB_REF:freebsd.duckdb -->> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 1996-2010 年间：482,545 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
+- PR 数据库；邮件列表归档；开源史料保存研究 ［A］<!-- DB_REF:freebsd.duckdb -->> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 1996-2010 年间：482,545 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
+- 软件包管理系统比较论文；各系统官方文档；社区讨论归档 ［B］<!-- DB_REF:freebsd.duckdb -->> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 1998-1998 年间：18,134 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
 - 原材料/哲学/项目统摄史观/第 25 章.md 总纲第 1、2、7、19、23、25 条 ［A］FreeBSD 社区论文：[FP-2020-012] Unearthing the history of Unix（Warner Losh（沃纳·洛什），2020）<https://papers.freebsd.org/2020/bsdcan/losh-unearthing_the_history_of_unix/>FreeBSD 社区论文：[FP-2020-018] The hidden early history of Unix（Warner Losh，2020）<https://papers.freebsd.org/2020/fosdem/losh-hidden_early_history_of_unix/>FreeBSD 社区论文：[FP-2018-022] devmatch -- matching devices to modules: PNP plays matchmaker for kernel modules（Warner Losh，2018）<https://papers.freebsd.org/2018/bsdcan/losh-devmatch_matching_devices_to_modules/>FreeBSD 社区论文：[FP-2002-003] Problems updating FreeBSD's card system from ISA to PCI（M. Warner Losh，2002）<https://papers.freebsd.org/2002/bsdcon/imp-isa_to_pci/>### 史观映射> Ports 不需要宣言——三万多个 port 的维护者日复一日更新版本号、修复补丁、处理冲突，没有人在做英雄式的工作，但这座由琐碎劳动堆成的港口比任何架构蓝图都更持久。代码不撒谎，也不争辩：它只是在那里，每晚同步，每天编译，年复一年---## 第 35.10 不同时期人员的采访录（详见 [采访录.md](采访录.md)）## 第 35.11 节 媒体反响与社区舆论（详见 [媒体反响与社区舆论.md](媒体反响与社区舆论.md)）---**【本节文献综述】** 详见 [04-现代研究文献/05-参考文献全文数据库/references_fulltext.db](04-现代研究文献/05-参考文献全文数据库/references_fulltext.db) `chapter_reviews` 表（id=10）---**补充证据（基于全文数据库修订）**本次修订从全文数据库补充 7 篇新匹配文献的证据。**新增核心事实**
 文献 (2013spw-compartmentalisation, 年份不详, p.1) 指出：Watson, Robert N. M. 作为 TrustedBSD 和 Capsicum 的发起人，其应用隔离理论在该论文中被引用。
 文献 (2013spw-compartmentalisation, 年份不详, p.1) 指出：Davis, Brooks 作为 CheriBSD 项目的核心开发者，在该论文中被列为致谢对象。
@@ -69,4 +69,4 @@ volume: 第05卷-freebsd的工程化奠基
 文献 (2015septupdate, 年份不详) 记录 2015：EuroBSDcon 2015 定于 2015 年 10 月 1 日至 4 日举行。
 文献 (37R5uB, 年份不详) 记录 2010：2010 年 6 月相关技术文献发布。
 文献 (Beckhoff-CASE-STUDY-5, 年份不详) 记录 1980：Beckhoff 公司成立于 1980 年，致力于开放式自动化系统的开发。
-<!-- DB_REF:freebsd.duckdb -->> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 1996-2010 年间：482,545 次提交。> 仓库总览：1,294,851 次提交，13,875 位贡献者，1993-06-12 至 2026-08-25。
+<!-- DB_REF:freebsd.duckdb -->> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 1996-2010 年间：482,545 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。

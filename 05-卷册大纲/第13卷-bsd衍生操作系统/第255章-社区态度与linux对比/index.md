@@ -33,11 +33,11 @@ volume: 第13卷-bsd衍生操作系统
 ## 文献
 
 - BSD 与 Linux 邮件列表；外部贡献者声明；开源贡献者研究文献 ［A］## 254.6.3 社区对新人态度的代际差异：CSRG 一代与现代 BSD 社区
-- 开源治理研究文献；BSD/Linux 治理文档；用户文章[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]<!-- DB_REF:bsd_derivatives.duckdb -->> **数据库引用（bsd_derivatives.duckdb）**：本子节对应 bsd_derivatives 代码仓库。> 1985-2026 年间：963,557 次提交。> 仓库总览：963,557 次提交，14,109 位贡献者，1985-06-13 至 2026-08-24。
+- 开源治理研究文献；BSD/Linux 治理文档；用户文章[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]<!-- DB_REF:bsd_derivatives.duckdb -->> **数据库引用（bsd_derivatives.duckdb）**：本子节对应 bsd_derivatives 代码仓库。> 1985-2026 年间：963,557 次提交。> 仓库总览：963,557 次提交，9,744 位贡献者（contributors 表行数，1985-06-13 至 2026-08-24）。
 - LKML 存档；Torvalds 道歉声明；Linux CoC 文档；Sarah Sharp 声明 ［A］## 254.7.2 红帽（Red Hat）控制下的 Linux：从社区项目到企业主导
 - Red Hat 年报；Linux MAINTAINERS 文件；systemd/cgroups/eBPF 档案 ［B］## 254.7.3 Linux 内核 CoC 争议：2018 年的行为准则引入与社区分裂
 - Linux CoC 公告与争议存档；Torvalds 道歉声明；FreeBSD CoC 公告；OpenBSD 治理文档 ［A］## 254.7.4 BSD 与 Linux 的 Kernel 治理对比：独裁与共识的工程后果
-- Linux/FreeBSD/OpenBSD 对比文档；用户文章[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]<!-- DB_REF:linux_kernel.duckdb -->> **数据库引用（linux_kernel.duckdb）**：本子节对应 linux_kernel 代码仓库。> 1985-2026 年间：1,474,340 次提交。> 仓库总览：1,474,341 次提交，82,718 位贡献者，1970-01-01 至 2026-08-24。
+- Linux/FreeBSD/OpenBSD 对比文档；用户文章[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]<!-- DB_REF:linux_kernel.duckdb -->> **数据库引用（linux_kernel.duckdb）**：本子节对应 linux_kernel 代码仓库。> 1985-2026 年间：1,474,340 次提交。> 仓库总览：1,474,341 次提交，39,865 位贡献者（contributors 表行数，1970-01-01 至 2026-08-24）。
 - LKML 存档；Linux 内核 ABI 文档；stable_api_nonsense.txt ［A］## 254.8.2 FreeBSD 内核 ABI 政策：大版本内稳定，跨大版本不保证
 - FreeBSD Release Engineering 文档；FreeBSD 升级指南[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]## 254.8.3 OpenBSD ABI 政策：每版本可破坏 ABI
 - OpenBSD 升级指南；OpenBSD ABI 文档；Theo de Raadt 邮件[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]## 254.8.4 NetBSD ABI 政策与 DragonFly BSD ABI 政策

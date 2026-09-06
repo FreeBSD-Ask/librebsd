@@ -45,5 +45,5 @@ volume: 第13卷-bsd衍生操作系统
 - PC-BSD 1.0 公告；Kris Moore 访谈；iXsystems 声明；PBI 设计文档 ［B］## 253.2.2 PC-BSD 的全盛期：2008-2014 年的桌面 BSD 探索
 - PC-BSD 7.x-10.x 公告；Warden/AppCafe 设计文档；Distrowatch 历史快照；phoronix 报道 ［C］## 253.2.3 PC-BSD 更名 TrueOS：2017 年的转型决策
 - iXsystems 2017 公告；Kris Moore 声明；TrueOS 发布记录[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]## 253.2.4 TrueOS Core 的转向与 PC-BSD 遗产的终结：2018-2020 年
-- PC-BSD/TrueOS/Project Trident 档案；iXsystems 战略档案；用户文章[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]<!-- DB_REF:bsd_derivatives.duckdb -->> **数据库引用（bsd_derivatives.duckdb）**：本子节对应 bsd_derivatives 代码仓库。> 1985-2026 年间：963,557 次提交。> 仓库总览：963,557 次提交，14,109 位贡献者，1985-06-13 至 2026-08-24。
+- PC-BSD/TrueOS/Project Trident 档案；iXsystems 战略档案；用户文章[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]<!-- DB_REF:bsd_derivatives.duckdb -->> **数据库引用（bsd_derivatives.duckdb）**：本子节对应 bsd_derivatives 代码仓库。> 1985-2026 年间：963,557 次提交。> 仓库总览：963,557 次提交，9,744 位贡献者（contributors 表行数，1985-06-13 至 2026-08-24）。
 - CVE 数据库；Coverity Scan 报告；FreeBSD/Linux 测试覆盖率报告[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]## 253.3.2 BSD 的代码审查制度：commit-then-review 与 review-then-commit 的张力

@@ -41,8 +41,8 @@ volume: 第09卷-netbsd的历史
 
 ## 文献
 
-- NetBSD CVS 仓库 arm 部分；ARM Architecture Reference Manual；tech-port-arm 邮件列表 ［A］<!-- DB_REF:netbsd.duckdb -->> **数据库引用（netbsd.duckdb）**：本子节对应 netbsd 代码仓库。> 2015-2015 年间：82,041 次提交。> 仓库总览：1,999,412 次提交，4,754 位贡献者，1992-07-13 至 2026-08-24。
-- NetBSD 7.0 Release Notes；tech-kern 邮件列表；Y2038 问题文档 ［A］<!-- DB_REF:netbsd.duckdb -->> **数据库引用（netbsd.duckdb）**：本子节对应 netbsd 代码仓库。> 1993-2026 年间：1,999,408 次提交。> 仓库总览：1,999,412 次提交，4,754 位贡献者，1992-07-13 至 2026-08-24。
-- NetBSD. 7.0 Release Notes [EB/OL]；ARM 生态史料。［B］<!-- DB_REF:netbsd.duckdb -->> **数据库引用（netbsd.duckdb）**：本子节对应 netbsd 代码仓库。> 2015-2015 年间：82,041 次提交。> 仓库总览：1,999,412 次提交，4,754 位贡献者，1992-07-13 至 2026-08-24。
-- netbsd.db netbsd-src 仓库 commit `74e8c71cd1136230728133034816cf03b1f4af1f`、`097731dea099250bc460a975c393fc370c283a95`；NVD CVE-2017-12836、CVE-2018-5732、CVE-2018-5733 条目；ISC DHCP 安全公告 ［A］<!-- DB_REF:netbsd.duckdb -->> **数据库引用（netbsd.duckdb）**：本子节对应 netbsd 代码仓库。> 2017-2017 年间：52,858 次提交。> 仓库总览：1,999,412 次提交，4,754 位贡献者，1992-07-13 至 2026-08-24。
+- NetBSD CVS 仓库 arm 部分；ARM Architecture Reference Manual；tech-port-arm 邮件列表 ［A］<!-- DB_REF:netbsd.duckdb -->> **数据库引用（netbsd.duckdb）**：本子节对应 netbsd 代码仓库。> 2015-2015 年间：82,041 次提交。> 仓库总览：1,999,412 次提交，1,545 位贡献者（contributors 表行数，1992-07-13 至 2026-08-24）。
+- NetBSD 7.0 Release Notes；tech-kern 邮件列表；Y2038 问题文档 ［A］<!-- DB_REF:netbsd.duckdb -->> **数据库引用（netbsd.duckdb）**：本子节对应 netbsd 代码仓库。> 1993-2026 年间：1,999,408 次提交。> 仓库总览：1,999,412 次提交，1,545 位贡献者（contributors 表行数，1992-07-13 至 2026-08-24）。
+- NetBSD. 7.0 Release Notes [EB/OL]；ARM 生态史料。［B］<!-- DB_REF:netbsd.duckdb -->> **数据库引用（netbsd.duckdb）**：本子节对应 netbsd 代码仓库。> 2015-2015 年间：82,041 次提交。> 仓库总览：1,999,412 次提交，1,545 位贡献者（contributors 表行数，1992-07-13 至 2026-08-24）。
+- netbsd.db netbsd-src 仓库 commit `74e8c71cd1136230728133034816cf03b1f4af1f`、`097731dea099250bc460a975c393fc370c283a95`；NVD CVE-2017-12836、CVE-2018-5732、CVE-2018-5733 条目；ISC DHCP 安全公告 ［A］<!-- DB_REF:netbsd.duckdb -->> **数据库引用（netbsd.duckdb）**：本子节对应 netbsd 代码仓库。> 2017-2017 年间：52,858 次提交。> 仓库总览：1,999,412 次提交，1,545 位贡献者（contributors 表行数，1992-07-13 至 2026-08-24）。
 
