@@ -2,10 +2,10 @@
 
 > 《给我自由—一部 BSD 史》GitBook 目录。
 > 全书共十九卷 355 章，章号采用跨卷连续编号（1-355），卷号 1-19 无 B/C 后缀。
-> 本文件与 `05-卷册大纲/` 磁盘实况同步，按 `00-编纂规则与格式规范/01-规则/流程规则.md` “GitBook 目录同步规则”人工生成。
+> 本文件与 **05-卷册大纲/** 磁盘实况同步，按 **00-编纂规则与格式规范/01-规则/流程规则.md** “GitBook 目录同步规则”人工生成。
 > 允许直接编辑（2026-08-04 用户授权）：如需手动增改，请置于 `<!-- USER-EDIT:开始 -->` 与 `<!-- USER-EDIT:结束 -->` 之间，脚本重跑时将保留该区段。
 > 精确到节级（N.M-<slug>.md），每章下列出全部节文件。
-> 2026-08-04 起**禁止编纂正文**，`06-正式书稿/` 已整体移除；前辅文/后辅文/附录条目随书稿删除，本文件为唯一 GitBook 导航。
+> 2026-08-04 起**禁止编纂正文**，**06-正式书稿/** 已整体移除；前辅文/后辅文/附录条目随书稿删除，本文件为唯一 GitBook 导航。
 
 ## 正文
 
@@ -2567,7 +2567,7 @@
   - [采访录](./第16卷-开源运动与合规治理/第302章-开源运动与bsd-贡献者与osi/采访录.md)
 
 - [第 303 章 FreeBSD 合规、认证与标准遵守史——Liberty 词源考据与 BSD 哲学语义契合度](./第16卷-开源运动与合规治理/第303章-合规认证与标准遵守-liberty词源/概述.md)
-  - [303.0 liberty 词源考据与 BSD 哲学语义契合度——本子节为第十二卷卷头子节，承接全书主线 “FreeBSD 赓续 CSRG 未竟事业，坚守 BSD UNIX 哲学，追寻真正自由（Liberty）”，对主线术语 “Liberty” 一词作词源学、语义学、术语学、BSD 社区术语光谱定位、项目统摄史观释读五重考据；含 5 个子-子节（4.0.1-4.0.5），每个子-子节均深化为 5 字段（要点 / 史料 / 史观 / 辨析 / 文献）；完整内容见 `第139.0节.md`；考据依据 `原材料/研究/自由软件词源考察/` 下 7 个子文件，遵循 0 信任原则与 `规则/释读规则.md` 中的项目统摄史观释读规则](./第16卷-开源运动与合规治理/第303章-合规认证与标准遵守-liberty词源/303.0-liberty-词源考据与-BSD-哲学语义契合度-本子节为第十二卷卷头子节.md)
+  - [303.0 liberty 词源考据与 BSD 哲学语义契合度——本子节为第十二卷卷头子节，承接全书主线 “FreeBSD 赓续 CSRG 未竟事业，坚守 BSD UNIX 哲学，追寻真正自由（Liberty）”，对主线术语 “Liberty” 一词作词源学、语义学、术语学、BSD 社区术语光谱定位、项目统摄史观释读五重考据；含 5 个子-子节（4.0.1-4.0.5），每个子-子节均深化为 5 字段（要点 / 史料 / 史观 / 辨析 / 文献）；完整内容见 `第139.0节.md`；考据依据 **原材料/研究/自由软件词源考察/** 下 7 个子文件，遵循 0 信任原则与 **规则/释读规则.md** 中的项目统摄史观释读规则](./第16卷-开源运动与合规治理/第303章-合规认证与标准遵守-liberty词源/303.0-liberty-词源考据与-BSD-哲学语义契合度-本子节为第十二卷卷头子节.md)
   - [303.1 POSIX 标准遵守史——POSIX（Portable Operating System Interface，可移植操作系统接口）由 IEEE 与 The Open Group 联合制定，1988 年 IEEE 批准首个核心标准 IEEE Std 1003.1-1988，1990 年该版本被采纳为国际标准 ISO/IEC 9945-1:1990，POSIX 名称由 Richard Stallman 建议取“Portable Operating System Interface”之首字母缩写并加“X”以类 Unix 风格收尾；1993 年 POSIX.1b 实时扩展（IEEE 1003.1b，进程调度、内存锁、实时信号、信号量、共享内存、消息队列、时钟与定时器、异步 I/O）批准，1995 年 POSIX.1c 线程扩展（IEEE 1003.1c，即 pthreads）批准，1999 年 POSIX.1d 批准，2000 年 POSIX.1j 高级实时扩展发布；2001 年 IEEE 1003.1-2001 发布（即 Single UNIX Specification v3 的核心），整合 1996 版与 Open Group Base Specifications Issue 6；2008 年 IEEE 1003.1-2008 发布，2013 年与 2016 年两次技术勘误，2017 年 IEEE 1003.1-2017（POSIX.1-2017）发布，2024 年 6 月 IEEE 1003.1-2024（POSIX.1-2024，Base Specifications Issue 8）发布并与 C17 标准对齐；FreeBSD 2.0（1995 年）即引入仿照 HP-UX 的 **rtprio(1)** 实时调度用户命令（作者 Henrik Vestergaard Draboel），对应系统调用为 **rtprio(2)**；POSIX.1b 标准的实时调度接口（**sched_setscheduler(2)** 等）则在 FreeBSD 5.0-RELEASE（2003 年 1 月）首次内置，POSIX.1b 进程相关扩展于 1998 年合入，线程支持于 1999 年加入，FreeBSD 5.0（2003 年 1 月）正式合并 TrustedBSD 子项目并对 POSIX.1e ACL 与 POSIX.1c（pthreads 线程）扩展 等做完整支持；2004 年 6 月 IEEE 与 The Open Group 正式授权 FreeBSD 项目使用 POSIX 标准 1400 余个接口的文档材料（headers、system interfaces、utilities）以供手册页与文档引用，此举使 FreeBSD 开发者可合法从 POSIX 标准文本直接复制材料至手册页，避免以往必须自行重述的负担；FreeBSD 长期设有“C99 and POSIX Conformance Project”项目旨在合规于 Single UNIX Specification 的子集并记录差异点，但 FreeBSD 从未正式申请 POSIX™ Certified 认证（需向 The Open Group 缴纳费用并通过 VSX4/VSX5/VSTH/VSU5/VSRT 等测试套件），其合规性以“实际遵守但未缴费认证”的形式实现；FreeBSD 与 LSB（Linux Standard Base）的关系长期紧张——LSB 由 Linux Foundation 主导覆盖 POSIX 80% 内容但与 POSIX 存在差异，POSIX 阵营曾主张合并 LSB 而 LSB 阵营拒绝，FreeBSD 因不参与 LSB 而在跨平台脚本兼容性上需依赖 Ports Collection 的 Linuxulator（即 **linux(4)** 描述的 Linux ABI 兼容层，无 **linuxulator(4)** man 页，“Linuxulator”为社区俗称）兼容层运行 Linux 二进制；按 0 信任原则考据：2004 年 IEEE 与 Open Group 授权 FreeBSD 使用 POSIX 文档材料一事经 OSNews 2004 年 6 月 2 日首报与 IEEE 官方公告交叉验证，但“C99 and POSIX Conformance Project”的具体起止时间与产出文档在 FreeBSD 邮件列表存档中只有零散提及，该项目是否最终完成存疑，本节叙事仅依据已核实材料](./第16卷-开源运动与合规治理/第303章-合规认证与标准遵守-liberty词源/303.1-POSIX-标准遵守史-POSIX-Portable-Operating-Sys.md)
   - [303.2 C 语言标准遵守史](./第16卷-开源运动与合规治理/第303章-合规认证与标准遵守-liberty词源/303.2-C-语言标准遵守史.md)
   - [303.3 RFC 系列标准遵守史](./第16卷-开源运动与合规治理/第303章-合规认证与标准遵守-liberty词源/303.3-RFC-系列标准遵守史.md)
@@ -3084,5 +3084,5 @@
 ## 读者指引（大纲侧）
 
 - 大纲侧手动维护区，脚本重跑保留。
-- 2026-08-04 起禁止编纂正文：前辅文/术语表/后辅文等书稿条目已随 `06-正式书稿/` 移除（备份于 `script/_backup_20260804_06正文归档/`），不再收录于本导航。
+- 2026-08-04 起禁止编纂正文：前辅文/术语表/后辅文等书稿条目已随 **06-正式书稿/** 移除（备份于 **script/_backup_20260804_06正文归档/**），不再收录于本导航。
 <!-- USER-EDIT:结束 -->
