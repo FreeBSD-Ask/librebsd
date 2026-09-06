@@ -12,7 +12,12 @@ volume: 第11卷-dragonflybsd的历史
 
 - bsd_commits.db dragonfly-src 仓库 commits 表提供 v5.4-v5.6 时期 HAMMER 2 相关 commit 的具体记录。2018 年 HAMMER2 关键词 commit **75 条**、2019 年 **156 条**，其中 v5.6.0（**2019-06-16**）发布前的 HAMMER 2 commit 集中于性能优化与默认切换准备。HAMME
 
-- bsd_commits.db dragonfly-src 仓库 tags 表提供 v5.8.0 与 v6.0.0 的 tagger_date、tagger_name、target_commit_date 字段。v5.8.0 与 v6.0.0 对照如下： | tag | tagger_date | target_commit_date | 时间差 | 发布模式 |  | --- | --- | -- |
+- - bsd_commits.db dragonfly-src 仓库 tags 表提供 v5.8.0 与 v6.0.0 的 tagger_date、tagger_name、target_commit_date 字段。v5.8.0 与 v6.0.0 对照如下：
+
+| tag | tagger_date | target_commit_date | 时间差 | 发布模式 |
+| --- | --- | --- | --- | --- |
+〔待补：本表数据行待回填（表头从粘连句拆出）〕
+
 
 - bsd_commits.db dragonfly-src 仓库 contributors 表中 first_commit_date 字段是权限授予时间的间接证据，须与 lists.dragonflybsd.org 邮件列表公告交叉验证。bsd_commits.db 显示 Aaron LI 首 commit = 2017-09-27（<aly@aaronly.me> 邮箱），Huete Jimene
 
