@@ -8,7 +8,12 @@ volume: 第06卷-freebsd的核心技术革新
 
 ## 要点
 
-- Capsicum 在 FreeBSD 中的成熟过程可分为三个阶段，覆盖从 FreeBSD 9.0 内核框架引入到 FreeBSD 14.x 稳定基础组件的完整路径，各阶段关键特征与首批 Capsicum 化程序见下表。| 阶段 | FreeBSD 版本 | 时间 | 关键特征 | 首批 Capsicum 化程序 || --- | --- | --- | --- | --- || 1 | 9.0 |
+- Capsicum 在 FreeBSD 中的成熟过程可分为三个阶段，覆盖从 FreeBSD 9.0 内核框架引入到 FreeBSD 14.x 稳定基础组件的完整路径，各阶段关键特征与首批 Capsicum 化程序见下表。| 阶段 | FreeBSD 版本 | 时间 | 关键特征 | 首批 Capsicum 化程序
+
+| --- | --- | --- | --- | --- |
+| --- | --- | --- | --- | --- |
+| 1 | 9.0 |  |  |  |
+
 - Capsicum 集成入 FreeBSD 的一手工程史料包括：FreeBSD SVN/Git 提交历史（可从 cgit.freebsd.org 查询，r219129 为关键 CAPABILITIES GENERIC commit）；FreeBSD 各版本 Release Notes 的 Capsicum 章节；Pawel Jakub Dawidek 在 freebsd-current@ 和 fre
 - casperd 的一手开发史料主要在 FreeBSD 源码仓库和 Pawel Dawidek 的会议演讲中：Dawidek 在 2013-2015 年 BSDCan 和 EuroBSDCon 会议上多次报告 Capsicum/casperd 的进展；FreeBSD 基金会 2013 年资助公告标志着 casperd 从原型转向产品级开发；casperd 的命名来源：Casper（卡斯珀）是美国动画
 - Capsicum 对 Linux 生态的直接影响有限，但其思想通过 CloudABI 和 WASI 产生了间接影响：CloudABI 由荷兰开发者 Ed Schouten（Nuxi 公司）于 2015 年前后开发，是基于 Capsicum 能力模型的跨平台 POSIX 派生 ABI——CloudABI 提供“POSIX 减去全局命名空间”的精简接口，程序编译为 CloudABI 二进制后可在 Fr
