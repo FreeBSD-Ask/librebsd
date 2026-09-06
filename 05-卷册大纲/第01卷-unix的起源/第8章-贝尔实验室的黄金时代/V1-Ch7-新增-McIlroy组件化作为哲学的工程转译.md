@@ -1,4 +1,4 @@
-# V1-Ch7-新增：McIlroy 组件化——"Do One Thing Well" 作为哲学的工程转译
+# McIlroy 组件化——"Do One Thing Well" 作为哲学的工程转译
 
 ## 要点
 
