@@ -10,9 +10,7 @@ volume: 第03卷-伯克利学术文化外溢影响
 
 
 
-| - 伯克利作为美国西部激进主义地理符号，与旧金山 Haight-Ashbury 嬉皮士运动、奥克兰 Black Panther Party（**1966 年** 成立）、反战运动中心形成地理与文化的临近性，此地理符号使伯克利吸引反权威倾向的技术人员，为 CSRG 文化提供地理基础 | 地理符号 | 位置 | 文化临近性 |  | --- | --- | --- |  | 旧金山 Haight-Ash |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-〔待补：本表数据行待回填（正文行内粘连拆出，数据行缺失）〕
+- 伯克利作为美国西部激进主义地理符号，与旧金山 Haight-Ashbury 嬉皮士运动、奥克兰 Black Panther Party（**1966 年** 成立）、反战运动中心形成地理与文化的临近性，此地理符号使伯克利吸引反权威倾向的技术人员，为 CSRG 文化提供地理基础 | 地理符号 | 位置 | 文化临近性 |  | --- | --- | --- |  | 旧金山 Haight-Ash |
 
 - 伯克利校园计算机中心（Computer Center）位于 Evans Hall 地下室与 Cory Hall 一带，CSRG 的 VAX-11/780 主机位于 Evans Hall，校园网络通过 BSD TCP/IP 实现互联，伯克利校园网是早期 BSD TCP/IP 的实际运行场域，4.2BSD 的 TCP/IP 实现首先在伯克利校园网内测试，再向 DARPA 网络推广  | 网络地理节点
 - **1978-1992 年** 间美国知识产权法律环境经历重大演变：**1980 年** Bayh-Dole 法案（Patent and Trademark Law Amendments Act）允许大学保留联邦资助研究的专利权，**1980 年** 软件版权法（Computer Software Copyright Act of 1980）明确软件受版权保护，**1981 年** Diamond
