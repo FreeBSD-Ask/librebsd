@@ -96,6 +96,6 @@ darwin 核心贡献者：Apple OSS Distributions(2016)
 - Watson. Capsicum USENIX-Security[M]. 2010.
 - bart, mzhang464, elisa. 018 The Relevance of Classic Fuzz Testing Have We Solved This One[M]. 2021.
 - 付远志. 操作系统内核模糊测试方法研究[M]. 2021.
-- The Johns Hopkins University Press. Metahistory The Historical Imagination in Nineteenth-Century Europe (Hayden White) (z-library.sk, 1lib.sk, z-lib.sk)[M]. 1979.
+- White H. Metahistory: The Historical Imagination in Nineteenth-Century Europe [M]. Baltimore: Johns Hopkins University Press, 1973.
 - eurobsdcon2014-mandoc-paper[M].
 

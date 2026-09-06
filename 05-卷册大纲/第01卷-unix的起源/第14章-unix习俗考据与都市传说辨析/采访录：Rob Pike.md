@@ -58,7 +58,7 @@ Pike 在这篇广为流传的演讲中萧瑟地指出，系统软件研究已经
 
 ## 文献
 
-- 未知. netbsd abc2017ext4 slides[M]. 2017.
+- Goyal H. Addition of Ext4 Extent and Ext3 HTree DIR Read-Only Support in NetBSD（幻灯片）[EB/OL]. AsiaBSDCon 2017.
 
 <!-- PODCAST_REVIEW v20260829 -->
 <!-- 语义复核范围：BSD Now EP478（共 1 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
