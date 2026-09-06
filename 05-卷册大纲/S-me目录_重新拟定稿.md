@@ -608,11 +608,11 @@
 
 * 1.2　FreeBSD 1.x 的核心特性与工程实现
 
-* 1.3　重要贡献者与边缘者：FreeBSD 1.x 时期的贡献者谱系与 committer 变动　★必设
+* 1.3　重要贡献者与边缘者：FreeBSD 1.x 时期的贡献者谱系与 committer 变动
 
-* 1.4　外部批评与反对者：对 FreeBSD 1.x 技术路线与治理方式的批评　★必设
+* 1.4　外部批评与反对者：对 FreeBSD 1.x 技术路线与治理方式的批评
 
-* 1.5　与同时期操作系统的比较：FreeBSD 1.x 时期与 Linux、Windows、商业 UNIX 及其他 BSD 的对照　★必设
+* 1.5　与同时期操作系统的比较：FreeBSD 1.x 时期与 Linux、Windows、商业 UNIX 及其他 BSD 的对照
 
 * 1.6　FreeBSD 1.x 时期的技术淘汰与版本更替
 
@@ -628,11 +628,11 @@
 
 * 2.2　ipfw 防火墙的诞生；sendfile/dummynet 的工程意义；被遮蔽的史实：CVS→SVN→Git 迁移中的史料损失
 
-* 2.3　重要贡献者与边缘者：2.x 时期被遗忘的驱动维护者　★必设
+* 2.3　重要贡献者与边缘者：2.x 时期被遗忘的驱动维护者
 
-* 2.4　对 FreeBSD 2.x 的批评：技术债务与 SMP 滞后　★必设
+* 2.4　对 FreeBSD 2.x 的批评：技术债务与 SMP 滞后
 
-* 2.5　与同时期操作系统的比较：1994-1998 年同期 Linux 2.0-2.2 内核开发、Windows NT 4.0、Solaris 2.4-2.6 的网络栈成熟度　★必设
+* 2.5　与同时期操作系统的比较：1994-1998 年同期 Linux 2.0-2.2 内核开发、Windows NT 4.0、Solaris 2.4-2.6 的网络栈成熟度
 
 * 2.6　FreeBSD 2.x 时期的技术淘汰
 
@@ -648,11 +648,11 @@
 
 * 3.2　CAM SCSI 子系统；soft updates；PXE 引导
 
-* 3.3　SMP 移植的无名工程师；多元群体贡献：FreeBSD 1998–2000 时期的贡献者多样性　★必设
+* 3.3　SMP 移植的无名工程师；多元群体贡献：FreeBSD 1998–2000 时期的贡献者多样性
 
-* 3.4　外部批评与反对者 ：（1） Valerie Aurora（LWN 2009）对 soft updates 的批评；SMP 路线滞后的批评　★必设
+* 3.4　外部批评与反对者 ：（1） Valerie Aurora（LWN 2009）对 soft updates 的批评；SMP 路线滞后的批评
 
-* 3.5　与同时期操作系统的比较：1998-2000 年同期 Linux 2.2（1999.1，SMP 支持大幅改进，引入 spinlock 优化，但仍保留大内核锁 BKL，调度器仍为 O(n)）、Windows 2000（2000.2，NT 5.0，微内核混合架构，调度器优先级驱动 32 级，NTFS 日志文件系统，Active Directory 域目录服务）、Solaris 8（2000.2，SVR4，完全抢占式内核，细粒度锁，Solaris Threads/UltraSPARC 多线程优化，UFS Logging + VxFS 可选，ZFS 尚未出现）　★必设
+* 3.5　与同时期操作系统的比较：1998-2000 年同期 Linux 2.2（1999.1，SMP 支持大幅改进，引入 spinlock 优化，但仍保留大内核锁 BKL，调度器仍为 O(n)）、Windows 2000（2000.2，NT 5.0，微内核混合架构，调度器优先级驱动 32 级，NTFS 日志文件系统，Active Directory 域目录服务）、Solaris 8（2000.2，SVR4，完全抢占式内核，细粒度锁，Solaris Threads/UltraSPARC 多线程优化，UFS Logging + VxFS 可选，ZFS 尚未出现）
 
 * 3.6　FreeBSD 3.0 时期的技术淘汰
 
@@ -668,11 +668,11 @@
 
 * 4.2　kqueue 的引入与 select/poll 替代；IPv6 与 KAME；OpenSSH 默认集成；Yahoo! 与 Hotmail；4.11 的终结；FreeBSD 商标与 Daemon 版权
 
-* 4.3　Matt Dillon 在 4.x 时期的贡献与争议；重要贡献者与边缘者：被忽视的 committer 谱系　★必设
+* 4.3　Matt Dillon 在 4.x 时期的贡献与争议；重要贡献者与边缘者：被忽视的 committer 谱系
 
-* 4.4　Dillon 撤权与 DragonFly fork 的辩证链；外部批评与反对者：Linux 2.4 的蚕食　★必设
+* 4.4　Dillon 撤权与 DragonFly fork 的辩证链；外部批评与反对者：Linux 2.4 的蚕食
 
-* 4.5　与同时期操作系统的比较：4.x 时期的技术定位　★必设
+* 4.5　与同时期操作系统的比较：4.x 时期的技术定位
 
 * 4.6　FreeBSD 4.x 时期的技术淘汰
 
@@ -688,11 +688,11 @@
 
 * 5.2　MAC 框架；时代语境：1996-2010 总统科技政策、伯克利校园、IC、英美哲学、文化运动与社会运动、美苏争霸与冷战地缘、资本主义演进与经济危机、软件工程与编程语言标准、美国国防部投入、社会环境与舆论、气候与环境、密码学与信息安全；第三方软件变更
 
-* 5.3　多元群体贡献：FreeBSD 2002–2005 时期的贡献者多样性　★必设
+* 5.3　多元群体贡献：FreeBSD 2002–2005 时期的贡献者多样性
 
-* 5.4　外部批评与反对者 ：（1） EPFL 与 Sorbonne/Inria 团队（USENIX ATC '18）对 ULE 饥饿问题的学术批评　★必设
+* 5.4　外部批评与反对者 ：（1） EPFL 与 Sorbonne/Inria 团队（USENIX ATC '18）对 ULE 饥饿问题的学术批评
 
-* 5.5　与同时期操作系统的比较：2002-2003 年同期操作系统　★必设
+* 5.5　与同时期操作系统的比较：2002-2003 年同期操作系统
 
 * 5.6　FreeBSD 5.x 时期的技术淘汰
 
@@ -708,11 +708,11 @@
 
 * 6.2　线程模型；ARM 移植；无线驱动栈改进；社区信心的重建；DragonFly BSD 分立；法律语境
 
-* 6.3　committer 权限记录；重要贡献者与边缘者：6.x 时期的无名贡献者　★必设
+* 6.3　committer 权限记录；重要贡献者与边缘者：6.x 时期的无名贡献者
 
-* 6.4　外部批评与反对者：Linux 与 OpenSolaris 的压力　★必设
+* 6.4　外部批评与反对者：Linux 与 OpenSolaris 的压力
 
-* 6.5　与同时期操作系统的比较：Linux 2.6、Vista、Solaris 10　★必设
+* 6.5　与同时期操作系统的比较：Linux 2.6、Vista、Solaris 10
 
 * 6.6　FreeBSD 6.x 时期的技术淘汰
 
@@ -728,11 +728,11 @@
 
 * 7.2　SMP 性能提升的基准测试；SUPERPAGE 大页支持；PS3 OtherOS 支持；DragonFly 2.0 与 HAMMER 文件系统
 
-* 7.3　重要贡献者与边缘者：ULE 调度器争议中的无名贡献者　★必设
+* 7.3　重要贡献者与边缘者：ULE 调度器争议中的无名贡献者
 
-* 7.4　对 7.x 性能路线的批评：Linux CFS 与 Solaris 竞争者　★必设
+* 7.4　对 7.x 性能路线的批评：Linux CFS 与 Solaris 竞争者
 
-* 7.5　与同时期操作系统的比较：2008-2009 年同期 Linux 2.6.26-2.6.32、Windows 7、Solaris 10 Update 5-6 的性能基准　★必设
+* 7.5　与同时期操作系统的比较：2008-2009 年同期 Linux 2.6.26-2.6.32、Windows 7、Solaris 10 Update 5-6 的性能基准
 
 * 7.6　FreeBSD 7.x 时期的技术淘汰
 
@@ -748,11 +748,11 @@
 
 * 8.2　VNET；透明大页；改进 ZFS 集成；USB 3.0 栈重写；8.x 时期 NFSv4 支持
 
-* 8.3　重要贡献者与边缘者：8.x 时期 XEN/VNET 移植的无名工程师　★必设
+* 8.3　重要贡献者与边缘者：8.x 时期 XEN/VNET 移植的无名工程师
 
-* 8.4　对 8.x 虚拟化路线的批评：KVM/Xen 与 Linux 竞争者　★必设
+* 8.4　对 8.x 虚拟化路线的批评：KVM/Xen 与 Linux 竞争者
 
-* 8.5　与同时期操作系统的比较：2009-2011 年同期 Linux 2.6.30-3.0（2009-2011，引入 CFS 调度器 2.6.23 已完成，RCU 优化，ext4 默认，Btrfs 实验性，KSM 内存合并，cgroups 资源隔离成熟）、Windows Server 2008 R2（2009.10，NT 6.1，Hyper-V R2 虚拟化，Server Core 默认，PowerShell 2.0，BranchCache）、Solaris 11 Express（2010.11，ZFS 默认文件系统，Crossbow 网络虚拟化，Zones 容器成熟，IPS 软件包管理，DTrace 深度集成）　★必设
+* 8.5　与同时期操作系统的比较：2009-2011 年同期 Linux 2.6.30-3.0（2009-2011，引入 CFS 调度器 2.6.23 已完成，RCU 优化，ext4 默认，Btrfs 实验性，KSM 内存合并，cgroups 资源隔离成熟）、Windows Server 2008 R2（2009.10，NT 6.1，Hyper-V R2 虚拟化，Server Core 默认，PowerShell 2.0，BranchCache）、Solaris 11 Express（2010.11，ZFS 默认文件系统，Crossbow 网络虚拟化，Zones 容器成熟，IPS 软件包管理，DTrace 深度集成）
 
 * 8.6　FreeBSD 8.x 时期的技术淘汰
 
@@ -768,11 +768,11 @@
 
 * 9.2　9.x 系列总览与工程语境（2010-2014）；bsdinstall；SUJ（Soft Updates Journaling）；ZFS 在 9.x 系列的演进；CAM ATA 重写与 USB 栈完成；网络栈改进；Capsicum 能力模式；资源限制与追踪；工具链与软件包管理；图形与驱动；架构支持；Sony PS4 Orbis OS；同期操作系统生态比较
 
-* 9.3　外部批评与边缘贡献者；多元群体贡献：FreeBSD 2009–2012 时期的贡献者多样性　★必设
+* 9.3　外部批评与边缘贡献者；多元群体贡献：FreeBSD 2009–2012 时期的贡献者多样性
 
-* 9.4　外部批评与反对者：对 FreeBSD 9.x 技术路线与治理方式的批评　★必设
+* 9.4　外部批评与反对者：对 FreeBSD 9.x 技术路线与治理方式的批评
 
-* 9.5　与同时期操作系统的比较：FreeBSD 9.x 时期与 Linux、Windows、商业 UNIX 及其他 BSD 的对照　★必设
+* 9.5　与同时期操作系统的比较：FreeBSD 9.x 时期与 Linux、Windows、商业 UNIX 及其他 BSD 的对照
 
 * 9.6　FreeBSD 9.x 时期的技术淘汰
 
@@ -788,11 +788,11 @@
 
 * 10.2　pkg(8) 软件包管理器；基础系统组件移除；autofs(5)、RCTL、FUSE 与基础设施改进；ARM 平台进展与架构支持变化；10.x EOL 与支持生命周期；第三方软件变更总览；与同期操作系统比较
 
-* 10.3　Steve G. Kargl 与 committer 权限管理（2015 事件已核验）　★必设
+* 10.3　Steve G. Kargl 与 committer 权限管理（2015 事件已核验）
 
-* 10.4　外部批评与反对者：对 FreeBSD 10.x 技术路线与治理方式的批评　★必设
+* 10.4　外部批评与反对者：对 FreeBSD 10.x 技术路线与治理方式的批评
 
-* 10.5　与同时期操作系统的比较：FreeBSD 10.x 时期与 Linux、Windows、商业 UNIX 及其他 BSD 的对照　★必设
+* 10.5　与同时期操作系统的比较：FreeBSD 10.x 时期与 Linux、Windows、商业 UNIX 及其他 BSD 的对照
 
 * 10.6　FreeBSD 10.x 时期的技术淘汰与版本更替
 
@@ -808,11 +808,11 @@
 
 * 11.2　11.x 关键基础设施；无线网络、硬件驱动与嵌入式支持；架构支持变化；FreeBSD 11.x：第三方软件变更；同期操作系统比较与 11.x 历史地位
 
-* 11.3　社区治理、Core Team 与重要贡献者　★必设
+* 11.3　社区治理、Core Team 与重要贡献者
 
-* 11.4　外部批评与反对者：对 FreeBSD 11.x 技术路线与治理方式的批评　★必设
+* 11.4　外部批评与反对者：对 FreeBSD 11.x 技术路线与治理方式的批评
 
-* 11.5　与同时期操作系统的比较：FreeBSD 11.x 时期与 Linux、Windows、商业 UNIX 及其他 BSD 的对照　★必设
+* 11.5　与同时期操作系统的比较：FreeBSD 11.x 时期与 Linux、Windows、商业 UNIX 及其他 BSD 的对照
 
 * 11.6　FreeBSD 11.x 时期的技术淘汰与版本更替
 
@@ -828,11 +828,11 @@
 
 * 12.2　虚拟化、bhyve 改进与 jail 增强；FreeBSD 12.x：架构支持变化；用户空间革新；存储栈、ZFS 与文件系统改进；Capsicum/Casper、Linux 兼容层与 CloudABI；图形支持；pkgbase 实验、WireGuard 事件语境与社区治理；FreeBSD 12.x：第三方软件变更
 
-* 12.3　多元群体贡献：FreeBSD 2017–2019 时期的贡献者多样性　★必设
+* 12.3　多元群体贡献：FreeBSD 2017–2019 时期的贡献者多样性
 
-* 12.4　外部批评与反对者：对 FreeBSD 12.x 技术路线与治理方式的批评　★必设
+* 12.4　外部批评与反对者：对 FreeBSD 12.x 技术路线与治理方式的批评
 
-* 12.5　与同时期操作系统比较　★必设
+* 12.5　与同时期操作系统比较
 
 * 12.6　FreeBSD 12.x 时期的技术淘汰与版本更替
 
@@ -848,11 +848,11 @@
 
 * 13.2　Git 迁移完成（2021.4.6）；WireGuard if\_wg 争议（2020.12-2021.03）；OpenZFS 合并与 13.x ZFS 演进；Linux ABI 兼容层、bhyve 改进与 13.x 其他核心特性；FreeBSD 13.x：第三方软件变更；同时期操作系统横向比较（2021-2024）
 
-* 13.3　Kernel TLS offload（KTLS）；重要贡献者与社区生态　★必设
+* 13.3　Kernel TLS offload（KTLS）；重要贡献者与社区生态
 
-* 13.4　外部批评与反对者：对 FreeBSD 13.x 技术路线与治理方式的批评　★必设
+* 13.4　外部批评与反对者：对 FreeBSD 13.x 技术路线与治理方式的批评
 
-* 13.5　与同时期操作系统的比较：FreeBSD 13.x 时期与 Linux、Windows、商业 UNIX 及其他 BSD 的对照　★必设
+* 13.5　与同时期操作系统的比较：FreeBSD 13.x 时期与 Linux、Windows、商业 UNIX 及其他 BSD 的对照
 
 * 13.6　FreeBSD 13.x 时期的技术淘汰与架构支持变动
 
@@ -868,11 +868,11 @@
 
 * 14.2　dma(8) 替代 sendmail；OpenSSL 3.0 升级；OpenZFS 2.2；wg(4) WireGuard 回归、netlink(4) 与网络栈现代化；bhyve、Jail 与虚拟化生态完善；WiFi 支持滞后与驱动生态挑战；32 位平台降级与 64-bit time\_t Y2038 修复；fwget/pkgbase/boottrace；FreeBSD 30 周年纪念与重要人事变动；AI/ML 生态效应与技术趋势；FreeBSD 14.x：第三方软件变更
 
-* 14.3　多元群体贡献：FreeBSD 2021–2023 时期的贡献者多样性　★必设
+* 14.3　多元群体贡献：FreeBSD 2021–2023 时期的贡献者多样性
 
-* 14.4　外部批评与反对者：对 FreeBSD 14.x 技术路线与治理方式的批评　★必设
+* 14.4　外部批评与反对者：对 FreeBSD 14.x 技术路线与治理方式的批评
 
-* 14.5　与同时期操作系统的比较：FreeBSD 14.x 时期与 Linux、Windows、商业 UNIX 及其他 BSD 的对照　★必设
+* 14.5　与同时期操作系统的比较：FreeBSD 14.x 时期与 Linux、Windows、商业 UNIX 及其他 BSD 的对照
 
 * 14.6　14.x 时期的技术淘汰与 base system 精简
 
@@ -888,11 +888,11 @@
 
 * 15.2　AI 辅助开发与社区争论；Rust 进入 base system 的争论；后量子密码学时代；时代语境：2010-2026 政治、技术、文化与密码学宏观语境；FreeBSD 15.x：第三方软件变更
 
-* 15.3　committer 社区动态；重要贡献者与社区动态　★必设
+* 15.3　committer 社区动态；重要贡献者与社区动态
 
-* 15.4　外部批评与反对者：对 FreeBSD 15.x 技术路线与治理方式的批评　★必设
+* 15.4　外部批评与反对者：对 FreeBSD 15.x 技术路线与治理方式的批评
 
-* 15.5　与同时期操作系统的比较：Linux 6.x、OpenBSD 7.x、NetBSD 10/11、Windows 11 24H2/Server 2025、macOS 15/16　★必设
+* 15.5　与同时期操作系统的比较：Linux 6.x、OpenBSD 7.x、NetBSD 10/11、Windows 11 24H2/Server 2025、macOS 15/16
 
 * 15.6　FreeBSD 15.x 时期的技术淘汰
 
@@ -908,11 +908,11 @@
 
 * 16.2　FreeBSD 16.0-CURRENT 开发概览与发布周期；许可证纯洁化：GPL 组件移除工程（截至 2026 年 7 月在 16.0-CURRENT 分支）；工具链与核心系统组件更新（截至 2026 年 7 月 CURRENT 状态/计划中）；内核、虚拟化与硬件支持进展（CURRENT/计划中）；AI 与开源治理：代码政策、许可证困境与 Varankin 事件；未来展望：FreeBSD 的定位与长期挑战；FreeBSD 16.x：第三方软件变更
 
-* 16.3　多元群体贡献：FreeBSD 2024–2026 时期的贡献者多样性　★必设
+* 16.3　多元群体贡献：FreeBSD 2024–2026 时期的贡献者多样性
 
-* 16.4　外部批评与反对者：对 FreeBSD 16.x 技术路线与治理方式的批评　★必设
+* 16.4　外部批评与反对者：对 FreeBSD 16.x 技术路线与治理方式的批评
 
-* 16.5　与同时期操作系统的比较：FreeBSD 16.x/Current 发展分支　★必设
+* 16.5　与同时期操作系统的比较：FreeBSD 16.x/Current 发展分支
 
 * 16.6　FreeBSD 16.x 时期的技术淘汰与版本更替
 
@@ -930,11 +930,11 @@
 
 * 1.2　NetBSD 0.8-0.9 的胎动与 1.0 发布（1994-1995）；多平台移植的工程架构（1995-1998）；Theo de Raadt 与 Core Team 冲突（1994-1996）
 
-* 1.3　重要贡献者与边缘者：NetBSD 诞生 时期的贡献者谱系与 committer 变动　★必设
+* 1.3　重要贡献者与边缘者：NetBSD 诞生 时期的贡献者谱系与 committer 变动
 
-* 1.4　外部批评与反对者：对 NetBSD 诞生 技术路线与治理方式的批评　★必设
+* 1.4　外部批评与反对者：对 NetBSD 诞生 技术路线与治理方式的批评
 
-* 1.5　与同时期操作系统的比较：NetBSD 诞生 时期与 Linux、Windows、商业 UNIX 及其他 BSD 的对照　★必设
+* 1.5　与同时期操作系统的比较：NetBSD 诞生 时期与 Linux、Windows、商业 UNIX 及其他 BSD 的对照
 
 * 1.6　NetBSD 诞生 时期的技术淘汰与版本更替
 
@@ -950,11 +950,11 @@
 
 * 2.2　NetBSD 1.4-1.6 的成熟期（1999-2002）；NetBSD Foundation 的成立与治理（1995-2004）
 
-* 2.3　committer 权限记录（1994-2004）；重要贡献者与边缘者：NetBSD 早期核心团队　★必设
+* 2.3　committer 权限记录（1994-2004）；重要贡献者与边缘者：NetBSD 早期核心团队
 
-* 2.4　外部批评与反对者：对 NetBSD 1.x 技术路线与治理方式的批评　★必设
+* 2.4　外部批评与反对者：对 NetBSD 1.x 技术路线与治理方式的批评
 
-* 2.5　与同时期操作系统的比较：NetBSD 1.x 成长时期（1993-2004）　★必设
+* 2.5　与同时期操作系统的比较：NetBSD 1.x 成长时期（1993-2004）
 
 * 2.6　NetBSD 1.x 时期的技术淘汰
 
@@ -970,11 +970,11 @@
 
 * 3.2　NetBSD 2.0 SMP 架构实现（2003-2004）；SMP 性能基准与硬件支持广度；与 FreeBSD SMP 路线的比较；与 Linux/Solaris 同期 SMP 实现的对比
 
-* 3.3　重要贡献者与边缘者：NetBSD 2.0 时期的贡献者谱系与 committer 变动　★必设
+* 3.3　重要贡献者与边缘者：NetBSD 2.0 时期的贡献者谱系与 committer 变动
 
-* 3.4　外部批评与反对者：对 NetBSD 2.0 技术路线与治理方式的批评　★必设
+* 3.4　外部批评与反对者：对 NetBSD 2.0 技术路线与治理方式的批评
 
-* 3.5　与同时期操作系统的比较：NetBSD 2.0 时期与 Linux、Windows、商业 UNIX 及其他 BSD 的对照　★必设
+* 3.5　与同时期操作系统的比较：NetBSD 2.0 时期与 Linux、Windows、商业 UNIX 及其他 BSD 的对照
 
 * 3.6　NetBSD 2.0 时期的技术淘汰与版本更替
 
@@ -990,11 +990,11 @@
 
 * 4.2　NetBSD 2.1/4.0 多平台扩展与稳定化（2005-2007）；NetBSD 2.x/4.x 时期的社区与发布工程
 
-* 4.3　重要贡献者与边缘者：NetBSD 3.0 时期的贡献者谱系与 committer 变动　★必设
+* 4.3　重要贡献者与边缘者：NetBSD 3.0 时期的贡献者谱系与 committer 变动
 
-* 4.4　外部批评与反对者：对 NetBSD 3.0 技术路线与治理方式的批评　★必设
+* 4.4　外部批评与反对者：对 NetBSD 3.0 技术路线与治理方式的批评
 
-* 4.5　与同时期操作系统的比较：NetBSD 3.0 时期与 Linux、Windows、商业 UNIX 及其他 BSD 的对照　★必设
+* 4.5　与同时期操作系统的比较：NetBSD 3.0 时期与 Linux、Windows、商业 UNIX 及其他 BSD 的对照
 
 * 4.6　NetBSD 3.0 时期的技术淘汰与版本更替
 
@@ -1010,11 +1010,11 @@
 
 * 5.2　NetBSD 4.0 的发布与 SMP 改进（2007.12.19）；嵌入式市场的深度渗透（2005-2009）；NetBSD 安全团队与安全公告（2005-2009）；NetBSD 商标与法律事务（2005-2009）
 
-* 5.3　重要贡献者与边缘者：NetBSD 4.0 时期的贡献者谱系与 committer 变动　★必设
+* 5.3　重要贡献者与边缘者：NetBSD 4.0 时期的贡献者谱系与 committer 变动
 
-* 5.4　外部批评与反对者：对 NetBSD 4.0 技术路线与治理方式的批评　★必设
+* 5.4　外部批评与反对者：对 NetBSD 4.0 技术路线与治理方式的批评
 
-* 5.5　与同时期操作系统的比较：NetBSD 4.0 发布与嵌入式生态时期（2005-2009）　★必设
+* 5.5　与同时期操作系统的比较：NetBSD 4.0 发布与嵌入式生态时期（2005-2009）
 
 * 5.6　NetBSD 4.0 时期的技术淘汰
 
@@ -1030,11 +1030,11 @@
 
 * 6.2　NetBSD 5.0 的大规模架构重构（2009.4）；pkgsrc 2.0 与跨平台软件包管理（2005-2009）；NetBSD 与开源社区的关系（2005-2009）
 
-* 6.3　committer 权限记录（2005-2009）；重要贡献者与边缘者：NetBSD 4.x-5.x 时期的核心团队　★必设
+* 6.3　committer 权限记录（2005-2009）；重要贡献者与边缘者：NetBSD 4.x-5.x 时期的核心团队
 
-* 6.4　外部批评与反对者：NetBSD 节奏放缓与资源稀释批评　★必设
+* 6.4　外部批评与反对者：NetBSD 节奏放缓与资源稀释批评
 
-* 6.5　与同时期操作系统的比较：2005-2009 年同期 FreeBSD 6.x-7.x（ULE 调度器成熟、ZFS 移植）、OpenBSD 4.x-5.x（代码审计、pledge 雏形）、Linux 2.6.x（CFS 调度器、内核抢占成熟）、Solaris 10/11（ZFS/DTrace/Zones）　★必设
+* 6.5　与同时期操作系统的比较：2005-2009 年同期 FreeBSD 6.x-7.x（ULE 调度器成熟、ZFS 移植）、OpenBSD 4.x-5.x（代码审计、pledge 雏形）、Linux 2.6.x（CFS 调度器、内核抢占成熟）、Solaris 10/11（ZFS/DTrace/Zones）
 
 * 6.6　NetBSD 5.0 时期的技术淘汰
 
@@ -1050,11 +1050,11 @@
 
 * 7.2　NetBSD 6.0 的发布与多核改进（2012.10.17）
 
-* 7.3　重要贡献者与边缘者：NetBSD 6.0 时期的贡献者谱系与 committer 变动　★必设
+* 7.3　重要贡献者与边缘者：NetBSD 6.0 时期的贡献者谱系与 committer 变动
 
-* 7.4　外部批评与反对者：对 NetBSD 6.0 技术路线与治理方式的批评　★必设
+* 7.4　外部批评与反对者：对 NetBSD 6.0 技术路线与治理方式的批评
 
-* 7.5　与同时期操作系统的比较：NetBSD 6.0 发布与多核改进时期（2012）　★必设
+* 7.5　与同时期操作系统的比较：NetBSD 6.0 发布与多核改进时期（2012）
 
 * 7.6　NetBSD 6.0 时期的技术淘汰
 
@@ -1068,13 +1068,13 @@
 
 * 8.1　NetBSD 7.0 的发布与版本概况（2015–2018）
 
-* 8.2　NetBSD 7.0 与 ARM 生态的深度支持（2015-08-25）\[存疑脚注]
+* 8.2　NetBSD 7.0 与 ARM 生态的深度支持（2015-08-25）[存疑脚注]
 
-* 8.3　重要贡献者与边缘者：NetBSD 7.0 时期的贡献者谱系与 committer 变动　★必设
+* 8.3　重要贡献者与边缘者：NetBSD 7.0 时期的贡献者谱系与 committer 变动
 
-* 8.4　外部批评与反对者：对 NetBSD 7.0 技术路线与治理方式的批评　★必设
+* 8.4　外部批评与反对者：对 NetBSD 7.0 技术路线与治理方式的批评
 
-* 8.5　与同时期操作系统的比较：NetBSD 7.0 与 ARM 生态深度支持时期（2015）　★必设
+* 8.5　与同时期操作系统的比较：NetBSD 7.0 与 ARM 生态深度支持时期（2015）
 
 * 8.6　NetBSD 7.0 时期的技术淘汰
 
@@ -1090,11 +1090,11 @@
 
 * 9.2　NetBSD 8.0 与 64 位 ARM（2018.7）
 
-* 9.3　重要贡献者与边缘者：NetBSD 8.0 时期的贡献者谱系与 committer 变动　★必设
+* 9.3　重要贡献者与边缘者：NetBSD 8.0 时期的贡献者谱系与 committer 变动
 
-* 9.4　外部批评与反对者：对 NetBSD 8.0 技术路线与治理方式的批评　★必设
+* 9.4　外部批评与反对者：对 NetBSD 8.0 技术路线与治理方式的批评
 
-* 9.5　与同时期操作系统的比较：NetBSD 8.0 与 64 位 ARM 虚拟化时期（2018）　★必设
+* 9.5　与同时期操作系统的比较：NetBSD 8.0 与 64 位 ARM 虚拟化时期（2018）
 
 * 9.6　NetBSD 8.0 时期的技术淘汰
 
@@ -1110,11 +1110,11 @@
 
 * 10.2　NetBSD 9.0 的发布与 ZFS 集成（2020.2.14 US / 2020.2.15 UTC）
 
-* 10.3　重要贡献者与边缘者：NetBSD 9.0 时期的贡献者谱系与 committer 变动　★必设
+* 10.3　重要贡献者与边缘者：NetBSD 9.0 时期的贡献者谱系与 committer 变动
 
-* 10.4　外部批评与反对者：对 NetBSD 9.0 技术路线与治理方式的批评　★必设
+* 10.4　外部批评与反对者：对 NetBSD 9.0 技术路线与治理方式的批评
 
-* 10.5　与同时期操作系统的比较：NetBSD 9.0 发布与 ZFS 集成时期（2020）　★必设
+* 10.5　与同时期操作系统的比较：NetBSD 9.0 发布与 ZFS 集成时期（2020）
 
 * 10.6　NetBSD 9.0 时期的技术淘汰
 
@@ -1130,11 +1130,11 @@
 
 * 11.2　NetBSD 10.0 与现代硬件支持（2024.3.28）；pkgsrc 3.0-4.0 与现代软件包管理（2010-2026）；NetBSD 与 AI 时代的“被污染代码”政策（2023-2026）；NetBSD Foundation 的现代治理（2010-2026）；NetBSD 10.1-RELEASE 与 11.0 RC5/RC6/RC7 公告（2024-12-16 至 2026-07-23）
 
-* 11.3　committer 权限记录（2010-2026）；重要贡献者与边缘者：NetBSD 6.x-10.x 时期的核心团队　★必设
+* 11.3　committer 权限记录（2010-2026）；重要贡献者与边缘者：NetBSD 6.x-10.x 时期的核心团队
 
-* 11.4　外部批评与反对者：NetBSD 现代化滞后与生态萎缩批评　★必设
+* 11.4　外部批评与反对者：NetBSD 现代化滞后与生态萎缩批评
 
-* 11.5　与同时期操作系统的比较：2010-2026 年同期 FreeBSD 10.x-15.x（Clang/LLVM、bhyve、OpenZFS）、OpenBSD 6.x-7.x（pledge/unveil、relayd）、Linux 3.x-6.x（cgroups/Docker/Kubernetes 主导）、illumos（OmniOS/Tribblix）　★必设
+* 11.5　与同时期操作系统的比较：2010-2026 年同期 FreeBSD 10.x-15.x（Clang/LLVM、bhyve、OpenZFS）、OpenBSD 6.x-7.x（pledge/unveil、relayd）、Linux 3.x-6.x（cgroups/Docker/Kubernetes 主导）、illumos（OmniOS/Tribblix）
 
 * 11.6　NetBSD 10.0 时期的技术淘汰
 
@@ -1152,11 +1152,11 @@
 
 * 1.2　Theo de Raadt 与 NetBSD Core Team 的冲突考据（1994）；OpenBSD 1.0/2.1/2.2 的早期发布历程（1996）；早期开发团队与卡尔加里据点；与 NetBSD 1.x 的源码共享与逐步分化
 
-* 1.3　重要贡献者与边缘者：OpenBSD 起源 时期的贡献者谱系与 committer 变动　★必设
+* 1.3　重要贡献者与边缘者：OpenBSD 起源 时期的贡献者谱系与 committer 变动
 
-* 1.4　NetBSD Core Team 回应层（反批评层）；de Raadt 行动性再回应层（再批评层）；批评层——de Raadt 被逐过程的程序正义批评；再回应层　★必设
+* 1.4　NetBSD Core Team 回应层（反批评层）；de Raadt 行动性再回应层（再批评层）；批评层——de Raadt 被逐过程的程序正义批评；再回应层
 
-* 1.5　与同时期操作系统的比较　★必设
+* 1.5　与同时期操作系统的比较
 
 * 1.6　OpenBSD 起源 时期的技术淘汰与版本更替
 
@@ -1172,11 +1172,11 @@
 
 * 2.2　OpenBSD 1.0-1.3 的胎动与 2.0 发布（1995-1997）；OpenSSH 的诞生（1999.10）；OpenBSD 2.6-2.9 的加密与安全（1999-2001）；OpenBSD 2.x 时期 RELEASE 公告与 release song 起源（1996-2001）
 
-* 2.3　多元群体贡献：OpenBSD 2.x 时期的贡献者多样性　★必设
+* 2.3　多元群体贡献：OpenBSD 2.x 时期的贡献者多样性
 
-* 2.4　外部批评与反对者：对 OpenBSD 2.x 技术路线与治理方式的批评　★必设
+* 2.4　外部批评与反对者：对 OpenBSD 2.x 技术路线与治理方式的批评
 
-* 2.5　与同时期操作系统的比较：OpenBSD 2.x 时代与代码审计文化时期（2000-2004）　★必设
+* 2.5　与同时期操作系统的比较：OpenBSD 2.x 时代与代码审计文化时期（2000-2004）
 
 * 2.6　OpenBSD 2.x 时期的技术淘汰
 
@@ -1192,11 +1192,11 @@
 
 * 3.2　OpenBSD 3.0 与 pf 防火墙（2001.12）；OpenBSD 3.1-3.6 的持续安全改进（2002-2004）；OpenBSD Foundation 的早期治理（1996-2004）；OpenBSD 3.x 时期 RELEASE 公告与 release song 传统的确立（2001-2006）
 
-* 3.3　committer 权限记录（1996-2004）；重要贡献者与边缘者：OpenBSD 早期核心团队　★必设
+* 3.3　committer 权限记录（1996-2004）；重要贡献者与边缘者：OpenBSD 早期核心团队
 
-* 3.4　pf 防火墙移植“代码掠夺”批评与安全审计文化排他性批评的四层辩证链；外部批评与反对者：OpenBSD 安全至上策略的局限性质疑　★必设
+* 3.4　pf 防火墙移植“代码掠夺”批评与安全审计文化排他性批评的四层辩证链；外部批评与反对者：OpenBSD 安全至上策略的局限性质疑
 
-* 3.5　与同时期操作系统的比较：1996-2004 年同期 NetBSD 1.2-1.6（可移植性至上）、FreeBSD 2.x-4.x（x86 性能与稳定性）、Linux 2.0-2.6（内核成熟与商业爆发）、Solaris 2.x-9（企业 Unix）　★必设
+* 3.5　与同时期操作系统的比较：1996-2004 年同期 NetBSD 1.2-1.6（可移植性至上）、FreeBSD 2.x-4.x（x86 性能与稳定性）、Linux 2.0-2.6（内核成熟与商业爆发）、Solaris 2.x-9（企业 Unix）
 
 * 3.6　OpenBSD 3.x 时期的技术淘汰
 
@@ -1212,11 +1212,11 @@
 
 * 4.2　OpenBSD 4.0-4.4 的安全与工程改进（2006-2008）；pf 防火墙的持续演进（2005-2012）；OpenBSD 与加密学的深度结合（2005-2012）；OpenBSD 的 6 个月发布周期文化；OpenBSD Foundation 的正式成立（2007）；OpenBSD 4.x 时期 RELEASE 公告与 release song 演进（2006-2011）
 
-* 4.3　多元群体贡献：OpenBSD 4.x 时期的贡献者多样性　★必设
+* 4.3　多元群体贡献：OpenBSD 4.x 时期的贡献者多样性
 
-* 4.4　外部批评与反对者：对 OpenBSD 4.x 技术路线与治理方式的批评　★必设
+* 4.4　外部批评与反对者：对 OpenBSD 4.x 技术路线与治理方式的批评
 
-* 4.5　与同时期操作系统的比较：OpenBSD 4.x 时代与 pf 演进时期（2006-2009）　★必设
+* 4.5　与同时期操作系统的比较：OpenBSD 4.x 时代与 pf 演进时期（2006-2009）
 
 * 4.6　OpenBSD 4.x 时期的技术淘汰
 
@@ -1232,11 +1232,11 @@
 
 * 5.2　OpenBSD 5.0 与 5.1 的发布（2011-2012）；de Raadt 的个人主导模式（2005-2012）；OpenBSD 5.x 时期 RELEASE 公告与 release song 演进（2011-2016）
 
-* 5.3　committer 权限记录（2005-2012）；重要贡献者与边缘者：OpenBSD 5.x 时期的核心团队　★必设
+* 5.3　committer 权限记录（2005-2012）；重要贡献者与边缘者：OpenBSD 5.x 时期的核心团队
 
-* 5.4　外部批评与反对者：OpenBSD 硬件支持与社区规模批评　★必设
+* 5.4　外部批评与反对者：OpenBSD 硬件支持与社区规模批评
 
-* 5.5　与同时期操作系统的比较：2005-2012 年同期 NetBSD 3.x-5.x（可移植性与嵌入式）、FreeBSD 6.x-9.x（ULE/ZFS/bhyve）、Linux 2.6.x-3.x（CFS/内核抢占/cgroups）、Solaris 10/11（ZFS/DTrace/Zones）　★必设
+* 5.5　与同时期操作系统的比较：2005-2012 年同期 NetBSD 3.x-5.x（可移植性与嵌入式）、FreeBSD 6.x-9.x（ULE/ZFS/bhyve）、Linux 2.6.x-3.x（CFS/内核抢占/cgroups）、Solaris 10/11（ZFS/DTrace/Zones）
 
 * 5.6　OpenBSD 5.x 时期的技术淘汰
 
@@ -1252,11 +1252,11 @@
 
 * 6.2　OpenBSD 5.8-5.9 的 pledge 雏形（2015-2016）；OpenBSD 6.4 与 unveil（2018.10）；OpenBSD 6.0-6.9 的持续改进（2016-2019）；OpenBSD 安全审计的持续实践（2013-2026）；OpenBSD Foundation 的现代治理（2013-2026）；OpenBSD 6.x 时期 RELEASE 公告与 release song 演进（2016-2021）
 
-* 6.3　多元群体贡献：OpenBSD 6.x 时期的贡献者多样性　★必设
+* 6.3　多元群体贡献：OpenBSD 6.x 时期的贡献者多样性
 
-* 6.4　外部批评与反对者：对 OpenBSD 6.x 技术路线与治理方式的批评　★必设
+* 6.4　外部批评与反对者：对 OpenBSD 6.x 技术路线与治理方式的批评
 
-* 6.5　与同时期操作系统的比较：OpenBSD 6.x 时代与 pledge/unveil 安全机制时期（2017-2021）　★必设
+* 6.5　与同时期操作系统的比较：OpenBSD 6.x 时代与 pledge/unveil 安全机制时期（2017-2021）
 
 * 6.6　OpenBSD 6.x 时期的技术淘汰
 
@@ -1272,11 +1272,11 @@
 
 * 7.2　OpenBSD 7.0-7.7 的现代化（2020-2026）；OpenBSD 7.x 时期 RELEASE 公告与 release song 演进（2021-2026）
 
-* 7.3　committer 权限记录（2013-2026）；重要贡献者与边缘者：OpenBSD 7.x 时期的核心团队；项目统摄史观审视：committer 权限管理、AI 代码政策与被疏远贡献者的本体论平等　★必设
+* 7.3　committer 权限记录（2013-2026）；重要贡献者与边缘者：OpenBSD 7.x 时期的核心团队；项目统摄史观审视：committer 权限管理、AI 代码政策与被疏远贡献者的本体论平等
 
-* 7.4　外部批评与反对者：OpenBSD 现代化滞后与生态萎缩批评　★必设
+* 7.4　外部批评与反对者：OpenBSD 现代化滞后与生态萎缩批评
 
-* 7.5　OpenBSD 与 AI 时代的代码政策（2023-2026）；与同时期操作系统的比较：2013-2026 年同期 NetBSD 6.x-10.x（可移植性与嵌入式）、FreeBSD 11.x-15.x（Clang/LLVM/bhyve/OpenZFS）、Linux 3.x-6.x（cgroups/Docker/Kubernetes）、illumos（OmniOS/Tribblix）　★必设
+* 7.5　OpenBSD 与 AI 时代的代码政策（2023-2026）；与同时期操作系统的比较：2013-2026 年同期 NetBSD 6.x-10.x（可移植性与嵌入式）、FreeBSD 11.x-15.x（Clang/LLVM/bhyve/OpenZFS）、Linux 3.x-6.x（cgroups/Docker/Kubernetes）、illumos（OmniOS/Tribblix）
 
 * 7.6　OpenBSD 7.x 时期的技术淘汰
 
@@ -1300,11 +1300,11 @@
 
 * 1.2　Matt Dillon 发布 DragonFly BSD 公告；Dillon 谈与 FreeBSD 社区的关系；Jeffrey Hsu 评价 DragonFly；FreeBSD Core Team 撤销 Matt Dillon 提交权限；HAMMER 文件系统；DragonFly 的 BSD 许可证延续；BSD 分裂的讽刺
 
-* 1.3　Matt Dillon 的 FreeBSD 贡献前史与个人技术履历　★必设
+* 1.3　Matt Dillon 的 FreeBSD 贡献前史与个人技术履历
 
-* 1.4　外部批评与反对者：对 DragonFly 诞生 技术路线与治理方式的批评　★必设
+* 1.4　外部批评与反对者：对 DragonFly 诞生 技术路线与治理方式的批评
 
-* 1.5　与同时期操作系统的比较：DragonFly BSD 的诞生时期（2003-2004）　★必设
+* 1.5　与同时期操作系统的比较：DragonFly BSD 的诞生时期（2003-2004）
 
 * 1.6　DragonFly 诞生 时期的技术淘汰与版本更替
 
@@ -1320,11 +1320,11 @@
 
 * 2.2　DragonFly 的现状；DragonFly 项目内部的 Dillon 个人主导模式；DragonFly 与 FreeBSD 的分裂后紧张；DragonFly 邮件列表与 IRC 文化；vkernel 虚拟内核详述；DragonFly userland 与 FreeBSD 的差异
 
-* 2.3　重要贡献者与边缘者：Dillon 之外的 DragonFly 贡献者　★必设
+* 2.3　重要贡献者与边缘者：Dillon 之外的 DragonFly 贡献者
 
-* 2.4　DragonFly 早期发展方向争议的四层辩证链；外部批评与反对者：DragonFly 分裂的必要性与代价　★必设
+* 2.4　DragonFly 早期发展方向争议的四层辩证链；外部批评与反对者：DragonFly 分裂的必要性与代价
 
-* 2.5　与同时期操作系统的比较：2003-2026 年同期 Linux 内核（Linus Torvalds 维持独裁模式，无重大 fork 成功）、OpenBSD（Theo de Raadt 1996 年从 NetBSD fork，与 DragonFly 形成对照）、NetBSD（被 fork 后仍持续演进）、illumos（2010 年从 OpenSolaris fork）　★必设
+* 2.5　与同时期操作系统的比较：2003-2026 年同期 Linux 内核（Linus Torvalds 维持独裁模式，无重大 fork 成功）、OpenBSD（Theo de Raadt 1996 年从 NetBSD fork，与 DragonFly 形成对照）、NetBSD（被 fork 后仍持续演进）、illumos（2010 年从 OpenSolaris fork）
 
 * 2.6　DragonFly 早期演进 时期的技术淘汰与版本更替
 
@@ -1340,11 +1340,11 @@
 
 * 3.2　DragonFly 1.0 的发布（2004.7.12）；LWKT 子系统的设计与实现（2003-2006）；DragonFly 1.2-1.8 的持续改进（2005-2006）；DragonFly 1.10-1.12 的 SMP 改进（2007-2008）；DragonFly 与 FreeBSD 4.x 的关系演变（2003-2010）；DragonFly 的治理结构（2003-2010）
 
-* 3.3　重要贡献者与边缘者：DragonFly 1.x 时期的贡献者谱系与 committer 变动　★必设
+* 3.3　重要贡献者与边缘者：DragonFly 1.x 时期的贡献者谱系与 committer 变动
 
-* 3.4　外部批评与反对者：对 DragonFly 1.x 技术路线与治理方式的批评　★必设
+* 3.4　外部批评与反对者：对 DragonFly 1.x 技术路线与治理方式的批评
 
-* 3.5　与同时期操作系统的比较：DragonFly 1.x 时代与 LWKT 子系统时期（2004-2007）　★必设
+* 3.5　与同时期操作系统的比较：DragonFly 1.x 时代与 LWKT 子系统时期（2004-2007）
 
 * 3.6　DragonFly BSD 1.x 时期的技术淘汰
 
@@ -1360,11 +1360,11 @@
 
 * 4.2　DragonFly 2.0-2.2 的 HAMMER 1.0（2008-2009）；DragonFly 2.4-2.6 的持续演进（2009-2010）
 
-* 4.3　committer 权限记录（2003-2010）；重要贡献者与边缘者：DragonFly 早期核心团队　★必设
+* 4.3　committer 权限记录（2003-2010）；重要贡献者与边缘者：DragonFly 早期核心团队
 
-* 4.4　外部批评与反对者：DragonFly fork 必要性的质疑　★必设
+* 4.4　外部批评与反对者：DragonFly fork 必要性的质疑
 
-* 4.5　与同时期操作系统的比较：2003-2010 年同期 NetBSD 1.6-5.x（可移植性）、FreeBSD 5.x-8.x（SMPng/ULE/ZFS）、OpenBSD 3.4-4.8（安全审计/pf）、Linux 2.6.x（CFS/cgroups）　★必设
+* 4.5　与同时期操作系统的比较：2003-2010 年同期 NetBSD 1.6-5.x（可移植性）、FreeBSD 5.x-8.x（SMPng/ULE/ZFS）、OpenBSD 3.4-4.8（安全审计/pf）、Linux 2.6.x（CFS/cgroups）
 
 * 4.6　DragonFly BSD 2.x 时期的技术淘汰
 
@@ -1380,11 +1380,11 @@
 
 * 5.2　DragonFly 3.0-3.2 的 HAMMER 2 雏形（2011-2012）；DragonFly 3.4-3.6 的 SMP 可扩展性（2013-2014）；DragonFly 3.8-4.0 的 HAMMER 2 发布（2014-2015）；DragonFly 与 FreeBSD 的代码共享现状（2011-2018）；DragonFly 的治理与 Dillon 个人主导（2011-2018）
 
-* 5.3　重要贡献者与边缘者：DragonFly 3.x 时期的贡献者谱系与 committer 变动　★必设
+* 5.3　重要贡献者与边缘者：DragonFly 3.x 时期的贡献者谱系与 committer 变动
 
-* 5.4　外部批评与反对者：对 DragonFly 3.x 技术路线与治理方式的批评　★必设
+* 5.4　外部批评与反对者：对 DragonFly 3.x 技术路线与治理方式的批评
 
-* 5.5　与同时期操作系统的比较：DragonFly 3.x 时代与 HAMMER-2 文件系统时期（2012-2014）　★必设
+* 5.5　与同时期操作系统的比较：DragonFly 3.x 时代与 HAMMER-2 文件系统时期（2012-2014）
 
 * 5.6　DragonFly 3.x-4.x 时期的技术淘汰
 
@@ -1400,11 +1400,11 @@
 
 * 6.2　DragonFly 4.2-4.4 的持续改进（2015-2016）；DragonFly 4.6-4.8 的现代化（2016-2017）
 
-* 6.3　committer 权限记录（2014-2017）；重要贡献者与边缘者：DragonFly 3.x-4.x 时期的核心团队　★必设
+* 6.3　committer 权限记录（2014-2017）；重要贡献者与边缘者：DragonFly 3.x-4.x 时期的核心团队
 
-* 6.4　外部批评与反对者：DragonFly 社区萎缩与生态边缘化批评　★必设
+* 6.4　外部批评与反对者：DragonFly 社区萎缩与生态边缘化批评
 
-* 6.5　与同时期操作系统的比较：2011-2018 年同期 NetBSD 5.x-7.x（可移植性）、FreeBSD 9.x-11.x（Clang/LLVM/bhyve/ZFS）、OpenBSD 5.x-6.x（pledge/unveil）、Linux 3.x-4.x（cgroups/Docker）　★必设
+* 6.5　与同时期操作系统的比较：2011-2018 年同期 NetBSD 5.x-7.x（可移植性）、FreeBSD 9.x-11.x（Clang/LLVM/bhyve/ZFS）、OpenBSD 5.x-6.x（pledge/unveil）、Linux 3.x-4.x（cgroups/Docker）
 
 * 6.6　DragonFly BSD 4.x 时期的技术淘汰
 
@@ -1420,11 +1420,11 @@
 
 * 7.2　DragonFly 5.0-5.2 的现代化（2017-2020）；DragonFly 5.4-5.6 的 HAMMER 2 改进（2018-2019）；DragonFly 5.8-6.0 的持续演进（2020-2021）；DragonFly 的治理与 Dillon 个人主导（2017-2026）
 
-* 7.3　重要贡献者与边缘者：DragonFly 5.x 时期的贡献者谱系与 committer 变动　★必设
+* 7.3　重要贡献者与边缘者：DragonFly 5.x 时期的贡献者谱系与 committer 变动
 
-* 7.4　外部批评与反对者：对 DragonFly 5.x 技术路线与治理方式的批评　★必设
+* 7.4　外部批评与反对者：对 DragonFly 5.x 技术路线与治理方式的批评
 
-* 7.5　DragonFly 与 AI 时代的代码政策（2023-2026）；与同时期操作系统的比较：DragonFly 5.x 时代与 HAMMER-2 持续改进时期（2017-2021）　★必设
+* 7.5　DragonFly 与 AI 时代的代码政策（2023-2026）；与同时期操作系统的比较：DragonFly 5.x 时代与 HAMMER-2 持续改进时期（2017-2021）
 
 * 7.6　DragonFly 5.x-6.0 时期的技术淘汰
 
@@ -1440,11 +1440,11 @@
 
 * 8.2　DragonFly 6.2-6.4 的现代化（2022-2025）；DragonFly 6.4 系列的持续维护与 v6.4.1/v6.4.2 发布（2023-2025）；DragonFly 的现状与未来（2026）
 
-* 8.3　committer 权限记录（2019-2026）；重要贡献者与边缘者：DragonFly 5.x-6.x 时期的核心团队　★必设
+* 8.3　committer 权限记录（2019-2026）；重要贡献者与边缘者：DragonFly 5.x-6.x 时期的核心团队
 
-* 8.4　外部批评与反对者：DragonFly 可持续性批评　★必设
+* 8.4　外部批评与反对者：DragonFly 可持续性批评
 
-* 8.5　与同时期操作系统的比较：2019-2026 年同期 NetBSD 9.x-10.x（可移植性）、FreeBSD 13.x-15.x（Clang/LLVM/OpenZFS/bhyve）、OpenBSD 6.x-7.x（pledge/unveil/LibreSSL）、Linux 5.x-6.x（cgroups/Docker/Kubernetes）　★必设
+* 8.5　与同时期操作系统的比较：2019-2026 年同期 NetBSD 9.x-10.x（可移植性）、FreeBSD 13.x-15.x（Clang/LLVM/OpenZFS/bhyve）、OpenBSD 6.x-7.x（pledge/unveil/LibreSSL）、Linux 5.x-6.x（cgroups/Docker/Kubernetes）
 
 * 8.6　DragonFly BSD 6.x 时期的技术淘汰
 
