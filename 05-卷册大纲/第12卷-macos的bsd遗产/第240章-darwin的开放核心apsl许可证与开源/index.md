@@ -8,14 +8,14 @@ volume: 第12卷-macos的bsd遗产
 
 ## 要点
 
-- Darwin 仓库共 2016 次提交（2001-04-10 至 2106-02-07），1 位贡献者，单作者模式反映 Apple 内部封闭开发流程
+- Darwin 仓库共 2016 次提交（2001-04-10 至 2026-04-13），1 位贡献者，单作者模式反映 Apple 内部封闭开发流程
 
 ## 史料
 
 - [DB:references_fulltext:chapter_matches:chmatch_4056] 卷“第12卷-macos的bsd遗产”第 240 章，匹配置信度 1.0，原因：任务4 衍生组官方文档采集
 - [DB:references_fulltext:chapter_matches:chmatch_4057] 卷“第12卷-macos的bsd遗产”第 240 章，匹配置信度 1.0，原因：任务4 衍生组官方文档采集
 
-- [DB:code_repos:darwin.duckdb] Darwin 仓库共 2016 次提交（2001-04-10 至 2106-02-07），1 位贡献者，单作者模式反映 Apple 内部封闭开发流程
+- [DB:code_repos:darwin.duckdb] Darwin 仓库共 2016 次提交（2001-04-10 至 2026-04-13），1 位贡献者，单作者模式反映 Apple 内部封闭开发流程
 - [DB:historical_claims:claim] 关键词行级挖掘素材线索 240.4-关键词行级挖掘素材线索（2 条，CL-RM 段，见 240.4-关键词行级挖掘素材线索.md）
 
 ## 史观
