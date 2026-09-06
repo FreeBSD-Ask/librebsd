@@ -16,7 +16,7 @@ volume: "第08卷-freebsd的范式转换"
 
 ## 要点
 
-- freebsd 代码仓库共 1,294,851 次提交（1993-06-12 至 2026-08-25），13,875 位贡献者
+- freebsd 代码仓库共 1,294,851 次提交（1993-06-12 至 2026-08-25），5,671 位贡献者（contributors 表行数）
 - FreeBSD 技术瓶颈时期的解决离不开商业公司外部支撑——NetApp（Junos/ONTAP 基于 FreeBSD）持续赞助 Storage 栈改进，Juniper（Junos 基于 FreeBSD）赞助网络栈优化，DARPA CHATS 合同 N66001-01-C-8035（CBOSS 项目）2001-2004 资助 GEOM、UGLE、Spidel 等 SMPng 配套基础设施；Yahoo! 在 2000 年代初期是 FreeBSD 最大生产部署者，其生产反馈直接推动了 4.x→5.x 过渡期的稳定性改进
 - FreeBSD 技术瓶颈解决的核心贡献者包括：麦库西克（Marshall Kirk McKusick）（FFS/Soft Updates/SUJ/UFS2/SMPng 文件系统适配，贯穿 4.4BSD 至 9.x 时期）、Poul-Henning Kamp（GEOM 框架 2003、GBDE 加密 2003，解决存储栈瓶颈）、Jeff Roberson（ULE 调度器 2003、SUJ 2010，解决 SMP 调度瓶颈）、Alan Cox（SMPng 架构师，非 Linux 的 Alan Cox，FreeBSD SMPng 大内核锁移除的核心推动者）、John Baldwin（SMPng、调度器、内核锁细化，长期核心 committer）；边缘者贡献包括 Luigi Rizzo（dummynet 1998、netmap 2012，网络瓶颈解决者）、Jonathan Lemon（kqueue 2000，C10K 路径开创者）
 - FreeBSD 技术瓶颈与同期 Linux、Windows NT、Solaris 的瓶颈路径形成对照——Linux 2.6（2003.12.17）通过 O(1) 调度器与抢占式内核解决 SMP 瓶颈，FreeBSD 5.x（2003.1.19）通过 SMPng 重构解决但稳定性危机延后至 6.x（2005.11.4）才完全解决；Windows NT 4.0（1996.7.29）通过 Win32 移入内核解决图形性能瓶颈但牺牲了微内核纯粹性；Solaris 10（2005.1）通过 ZFS、DTrace、Zones、SMF 一次性解决存储、可观测性、虚拟化、服务管理多个瓶颈，是同期最激进的瓶颈突破方案

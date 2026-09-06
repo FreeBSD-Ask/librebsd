@@ -34,7 +34,7 @@ volume: 第18卷-全球社区地区bsd史
 
 - 中东各国法律文本档案；企业合规档案；法律评论文章 ［B］
 - 中东各国商标局档案；FreeBSD Foundation 商标政策档案；社区记录 ［A］## 史料考据补充（2026-08-04 任务3 库内检索引用）
-- FreeBSD Foundation 年度报告档案；企业档案；社区筹款记录 ［B］<!-- DB_REF:freebsd.duckdb -->> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 1993-2026 年间：1,294,851 次提交。> 仓库总览：1,294,851 次提交，13,875 位贡献者，1993-06-12 至 2026-08-25。
+- FreeBSD Foundation 年度报告档案；企业档案；社区筹款记录 ［B］<!-- DB_REF:freebsd.duckdb -->> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 1993-2026 年间：1,294,851 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
 - FreeBSD 源代码库 commit 历史档案；Core Team 公告档案；committer 个人页面 ［A］## 史料考据补充（2026-08-04 任务3 库内检索引用）
 - 社区邮件列表存档；社区论坛历史讨论档案；口述史记录 ［A］
 - Israel FreeBSD User Group 邮件列表 [EB/OL]；Arabeyes 项目 [EB/OL]. <https://www.arabeyes.org/> （访问日期 2026-07-23）；FreeBSD Foundation 合规声明；OFAC 制裁清单；参见 150.6、150.4 节部分史料 ［A］
