@@ -460,16 +460,16 @@
   - [48.26 **加州大学系统与伯克利分校的权责划分**：UC 系统的宪法公共信托地位、UCOP 与分校校长的双层架构、系统层面与分校层面的权责分工、伯克利作为旗舰分校的特殊地位与负担、与中国高校合作的系统-分校两层架构——CSRG 运作所在的制度层级](./第03卷-伯克利学术文化外溢影响/第48章-伯克利政治语境与os比较/48.26-加州大学系统与伯克利分校的权责划分.md)
 
 - [第 49 章 Regents 董事会架构与监察机制](./第03卷-伯克利学术文化外溢影响/第49章-regents董事会架构与监察机制/概述.md)
-  - [49.27 **Board of Regents 的委员会架构与监察机制**：26 名成员构成详解、8 个常设委员会架构、监察机制（Compliance and Audit Committee + UCOP ECAS + 举报人保护）、Bagley-Keene Open Meeting Act 适用规则、Regents 与州长/州议会/加州高等教育委员会的关系——CSRG 运作所在的董事会治理层**](./第03卷-伯克利学术文化外溢影响/第49章-regents董事会架构与监察机制/49.27-boardofregents的委员会架构与监察机制.md)
+  - [49.27 **Board of Regents 的委员会架构与监察机制**：26 名成员构成详解、8 个常设委员会架构、监察机制（Compliance and Audit Committee + UCOP ECAS + 举报人保护）、Bagley-Keene Open Meeting Act 适用规则、Regents 与州长/州议会/加州高等教育委员会的关系——CSRG 运作所在的董事会治理层](./第03卷-伯克利学术文化外溢影响/第49章-regents董事会架构与监察机制/49.27-boardofregents的委员会架构与监察机制.md)
 
 - [第 50 章 伯克利学生组织与社团生态](./第03卷-伯克利学术文化外溢影响/第50章-伯克利学生组织与社团生态/概述.md)
-  - [50.28 **伯克利的学生组织与社团生态**：ASUC 章程与历史、GA 章程与职能、学生社团分类与注册管理、兄弟会与姐妹会生态、学生媒体的独立性、CSRG 时期学生组织对 BSD 开发的间接支持——CSRG 运作所在的学生社团土壤**](./第03卷-伯克利学术文化外溢影响/第50章-伯克利学生组织与社团生态/50.28-伯克利的学生组织与社团生态.md)
+  - [50.28 **伯克利的学生组织与社团生态**：ASUC 章程与历史、GA 章程与职能、学生社团分类与注册管理、兄弟会与姐妹会生态、学生媒体的独立性、CSRG 时期学生组织对 BSD 开发的间接支持——CSRG 运作所在的学生社团土壤](./第03卷-伯克利学术文化外溢影响/第50章-伯克利学生组织与社团生态/50.28-伯克利的学生组织与社团生态.md)
 
 - [第 51 章 伯克利教授组织与学术治理](./第03卷-伯克利学术文化外溢影响/第51章-伯克利教授组织与学术治理/概述.md)
-  - [51.29 **伯克利的教授组织与学术治理**：Academic Senate 完整架构、伯克利教授工会演化、教授参议会决议权与咨询权、教授组织对 BSD 相关研究的支持或争议、CSRG 成员在 Academic Senate 中的角色——CSRG 运作所在的教授治理层**](./第03卷-伯克利学术文化外溢影响/第51章-伯克利教授组织与学术治理/51.29-伯克利的教授组织与学术治理.md)
+  - [51.29 **伯克利的教授组织与学术治理**：Academic Senate 完整架构、伯克利教授工会演化、教授参议会决议权与咨询权、教授组织对 BSD 相关研究的支持或争议、CSRG 成员在 Academic Senate 中的角色——CSRG 运作所在的教授治理层](./第03卷-伯克利学术文化外溢影响/第51章-伯克利教授组织与学术治理/51.29-伯克利的教授组织与学术治理.md)
 
 - [第 52 章 加州大学学校联盟与章程](./第03卷-伯克利学术文化外溢影响/第52章-加州大学学校联盟与章程/概述.md)
-  - [52.30 **加州大学的学校联盟与学校章程**：加州宪法章程（1879 年 Article IX 与 Standing Orders of The Regents）、UC 系统章程（University of California Code）与伯克利分校章程（Berkeley Campus Regulations）、UC 系统参与的学校联盟（AAU、APLU、AAAS、APRU）、伯克利分校参与的工程教育联盟（ABET 认证、CSAB）与计算机科学联盟（CRA、CRA-W）、与中国高校联盟的关系——CSRG 运作所在的章程与联盟框架**](./第03卷-伯克利学术文化外溢影响/第52章-加州大学学校联盟与章程/52.30-加州大学的学校联盟与学校章程.md)
+  - [52.30 **加州大学的学校联盟与学校章程**：加州宪法章程（1879 年 Article IX 与 Standing Orders of The Regents）、UC 系统章程（University of California Code）与伯克利分校章程（Berkeley Campus Regulations）、UC 系统参与的学校联盟（AAU、APLU、AAAS、APRU）、伯克利分校参与的工程教育联盟（ABET 认证、CSAB）与计算机科学联盟（CRA、CRA-W）、与中国高校联盟的关系——CSRG 运作所在的章程与联盟框架](./第03卷-伯克利学术文化外溢影响/第52章-加州大学学校联盟与章程/52.30-加州大学的学校联盟与学校章程.md)
 
 - [第 53 章 伯克利大学发展史 CSRG 时期 （CSRG 时期）](./第03卷-伯克利学术文化外溢影响/第53章-伯克利大学发展史csrg时期/概述.md)
   - [53.31 **伯克利大学在 CSRG 时期的发展（1978-1992）**：1965-1990 年代多元化扩张、CS 系崛起与 CSRG 成立、全国“三足鼎立”地位、Gardner-Heyman 校长时期、田长霖任校长前夕——CSRG 生长的分校制度土壤](./第03卷-伯克利学术文化外溢影响/第53章-伯克利大学发展史csrg时期/53.31-伯克利大学在csrg时期的发展1978.md)
@@ -819,7 +819,7 @@
 
 - [第 94 章 FreeBSD Jails：容器的先驱](./第05卷-freebsd的工程化奠基/第94章-freebsd-jails容器的先驱/概述.md)
   - [94.1 2000 年 phk](./第05卷-freebsd的工程化奠基/第94章-freebsd-jails容器的先驱/94.1-2000-年-phk.md)
-  - [94.2 Jails 与 chroot 的技术谱系——从 **chroot(2)** 到 **jail(2)**](./第05卷-freebsd的工程化奠基/第94章-freebsd-jails容器的先驱/94.2-Jails-与-chroot-的技术谱系-从-chroot-2-到-jail-2.md)
+  - [94.2 Jails 与 chroot 的技术谱系——从 **chroot(2)** 到 **jail(2)](./第05卷-freebsd的工程化奠基/第94章-freebsd-jails容器的先驱/94.2-Jails-与-chroot-的技术谱系-从-chroot-2-到-jail-2.md)
   - [94.3 Jails 的设计哲学——OS 级虚拟化的早期实践](./第05卷-freebsd的工程化奠基/第94章-freebsd-jails容器的先驱/94.3-Jails-的设计哲学-OS-级虚拟化的早期实践.md)
   - [94.4 Jails 的技术局限——网络栈共享与权限模型](./第05卷-freebsd的工程化奠基/第94章-freebsd-jails容器的先驱/94.4-Jails-的技术局限-网络栈共享与权限模型.md)
   - [94.5 外部批评与反对者 **：(1)** VMware 开源博客（2018.2.27）——"The Story of Containers"一文（blogs.vmware.com/opensource/2018/02/27/the-story-of-containers/）梳理容器演化史时直言 FreeBSD Jails 存在"severe restrictions"——"a jail could only have one IPv4 address for communication and could only use UDP or TCP for communication (no raw sockets, no IPv6, etc.)"，并指出 FreeBSD 后期放宽限制是"In response to the emergence of not so restricting container capabilities in other operating systems"即在外部容器生态压力下的被动跟进而非主动演进](./第05卷-freebsd的工程化奠基/第94章-freebsd-jails容器的先驱/94.5-外部批评与反对者-1-VMware-开源博客-2018-2-27.md)
@@ -894,7 +894,7 @@
   - [101.1 2005-2008 年 6.0 的发布——回归稳定的设计哲学](./第05卷-freebsd的工程化奠基/第101章-freebsd6x回归稳定/101.1-2005-2008-年-6-0-的发布-回归稳定的设计哲学.md)
   - [101.2 线程模型——libthr 1:1 取代 KSE M: N](./第05卷-freebsd的工程化奠基/第101章-freebsd6x回归稳定/101.2-线程模型-libthr-1-1-取代-KSE-M-N.md)
   - [101.3 ARM 移植——FreeBSD/arm 的启动](./第05卷-freebsd的工程化奠基/第101章-freebsd6x回归稳定/101.3-ARM-移植-FreeBSD-arm-的启动.md)
-  - [101.4 无线驱动栈改进——**net80211(4)** 与 **ath(4)**](./第05卷-freebsd的工程化奠基/第101章-freebsd6x回归稳定/101.4-无线驱动栈改进-net80211-4-与-ath-4.md)
+  - [101.4 无线驱动栈改进——**net80211(4)** 与 **ath(4)](./第05卷-freebsd的工程化奠基/第101章-freebsd6x回归稳定/101.4-无线驱动栈改进-net80211-4-与-ath-4.md)
   - [101.5 社区信心的重建——5.x 用户回流](./第05卷-freebsd的工程化奠基/第101章-freebsd6x回归稳定/101.5-社区信心的重建-5-x-用户回流.md)
   - [101.6 committer 权限记录——2005-2008 年变动](./第05卷-freebsd的工程化奠基/第101章-freebsd6x回归稳定/101.6-committer-权限记录-2005-2008-年变动.md)
   - [101.7 DragonFly BSD 分立——LWKT 与 token 路线](./第05卷-freebsd的工程化奠基/第101章-freebsd6x回归稳定/101.7-DragonFly-BSD-分立-LWKT-与-token-路线.md)
@@ -2598,7 +2598,7 @@
   - [306.1 1993 年邮件列表到现代治理结构演变](./第16卷-开源运动与合规治理/第306章-freebsd社区演进史-治理结构/306.1-1993-年邮件列表到现代治理结构演变.md)
   - [306.2 Core Team 选举制度](./第16卷-开源运动与合规治理/第306章-freebsd社区演进史-治理结构/306.2-Core-Team-选举制度.md)
   - [306.3 committer 制度与文档贡献者](./第16卷-开源运动与合规治理/第306章-freebsd社区演进史-治理结构/306.3-committer-制度与文档贡献者.md)
-  - [306.4 **FreeBSD Foundation 成立（2000）与角色演变**](./第16卷-开源运动与合规治理/第306章-freebsd社区演进史-治理结构/306.4-FreeBSD-Foundation-成立-2000-与角色演变.md)
+  - [306.4 **FreeBSD Foundation 成立（2000）与角色演变](./第16卷-开源运动与合规治理/第306章-freebsd社区演进史-治理结构/306.4-FreeBSD-Foundation-成立-2000-与角色演变.md)
   - [306.5 邮件列表文化](./第16卷-开源运动与合规治理/第306章-freebsd社区演进史-治理结构/306.5-邮件列表文化.md)
   - [FreeBSD Ports 系统社区治理与维护者倦怠](./第16卷-开源运动与合规治理/第306章-freebsd社区演进史-治理结构/306.6-freebsd-ports系统的社区治理与维护者倦怠.md)
   - [306.7 社区与 Linux 社区的治理对比](./第16卷-开源运动与合规治理/第306章-freebsd社区演进史-治理结构/306.7-社区与-Linux-社区的治理对比.md)
