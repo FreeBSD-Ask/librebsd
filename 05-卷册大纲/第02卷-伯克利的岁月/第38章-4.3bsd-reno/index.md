@@ -12,7 +12,12 @@ volume: 第02卷-伯克利的岁月
 - Reno 在网络层引入了 SLIP 压缩（CSLIP, Van Jacobson（范·雅各布森） 实现）、NFS 性能改进、以及对 OSI 协议栈的实验性支持（受 NIST 资助）。OSI 支持虽未成为主流，但为 BSD 网络栈的多协议扩展提供了架构基石。
 - 边缘贡献者的史料散见于源代码注释、邮件列表、USENIX 会议记录与公司内部档案，缺乏系统化传记，需通过多源交叉核对恢复身份，特别是 CCI 工程师与外部补丁提交者；[考据脚注] 4.3BSD-Reno 完整源代码树已由 Rick Copeland 与 Kirk McKusick 捐赠至 TUHS Unix Archive（www.tuhs.org/Archive/4BSD/Distributio
 - Reno 时期的技术淘汰具有“过渡测试与生产淘汰并行”的特征——CSRG 在 Reno 中引入了 POSIX 兼容、NFS、OSI 网络、Kerberos 等生产可用特性，而新 VM 系统（Mach-derived）、LFS 等研究性组件在 Reno 时期处于开发中但实际集成至 4.4BSD；〔待核：原文截断，后文待回源〕
-- 1986-1990 年网络栈成熟度比较：4.3BSD > DEC Ultrix（直接基于 BSD） > HP-UX（BSD/SysV 混合） > AIX（SysV 为主） > System V Release 3（无 TCP/IP），BSD 在 TCP/IP 实现成熟度上领先，TCP/IP 在 **1990 年** SVR4 才成为标准| 操作系统 | 网络栈来源 | TCP/IP 成熟度 | S
+- 1986-1990 年网络栈成熟度比较：4.3BSD > DEC Ultrix（直接基于 BSD） > HP-UX（BSD/SysV 混合） > AIX（SysV 为主） > System V Release 3（无 TCP/IP），BSD 在 TCP/IP 实现成熟度上领先，TCP/IP 在 **1990 年** SVR4 才成为标准
+
+| 操作系统 | 网络栈来源 | TCP/IP 成熟度 | S |
+| --- | --- | --- | --- |
+〔待补：本表数据行待回填（正文行内粘连拆出，数据行缺失）〕
+
 
 ## 史料
 

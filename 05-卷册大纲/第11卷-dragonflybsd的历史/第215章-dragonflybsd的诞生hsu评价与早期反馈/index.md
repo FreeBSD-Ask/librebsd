@@ -12,7 +12,12 @@ volume: 第11卷-dragonflybsd的历史
 - Core Team 撤权决议的原文存于 freebsd-hackers 邮件列表 2003 年归档，但完整投票记录未在 freebsd.org/administration/ 公开。Dillon 的回应邮件在 freebsd-current 与 freebsd-hackers 均有存档。bsd_commits.db 不记录邮件内容，但 commit message 中 Dillon 的表述可作治理
 - HAMMER 的设计文档主要存于 DragonFly 官方网站（dragonflybsd.org/docs/hammer/）与源码树 sys/vfs/hammer/ 目录下的 README 文件。bsd_commits.db 显示 sys/vfs/hammer/ 目录首引 commit 为 `8750964d1997`（2007-10-10T19:37:25Z，Dillon），sys/vfs/ha
 - DragonFly 的 LICENSE/COPYRIGHT 文件位于源码根目录，内容与 FreeBSD 的 COPYRIGHT 文件基本一致，仅版权持有者信息不同。bsd_commits.db 显示 DragonFly 首 commit `984263bcb83a`（2003-06-17）即包含 COPYRIGHT 文件的 Initial import
-- 比萨饼隐喻存在多个版本，涉及 “10 个” 或 “3 个” 开发者、不同食物（比萨饼/蛋糕）、不同结局（“开发者死了”/“开发者打起来”/“11 个新变种”/“12 个新变种”）。版本变体反映社区传说的口头传统特征。已知主要版本变体对照如下：    | 变体维度 | 版本 A | 版本 B | 版本 C |    |---|---|---|---|    | 开发者数量 | 10 个 | 3 个
+
+
+| - 比萨饼隐喻存在多个版本，涉及 “10 个” 或 “3 个” 开发者、不同食物（比萨饼/蛋糕）、不同结局（“开发者死了”/“开发者打起来”/“11 个新变种”/“12 个新变种”）。版本变体反映社区传说的口头传统特征。已知主要版本变体对照如下： | 变体维度 | 版本 A | 版本 B | 版本 C |  | --- | --- | --- | --- |  | 开发者数量 | 10 个 | 3 个 |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+〔待补：本表数据行待回填（正文行内粘连拆出，数据行缺失）〕
+
 
 ## 史料
 
