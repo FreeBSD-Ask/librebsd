@@ -25,8 +25,8 @@ volume: 第04卷-大分裂与四大bsd的诞生
 
 - 史料来源的代表性是核心辨析点——外部叙事（Salus 1994）与内部叙事（Raymond 1999、McKusick 1999）的权重须区别对待，外部叙事采信度高于内部叙事
 - 辨析的具体维度经 GPL 与 BSD 许可证原文、Linux 内核贡献统计与 BSD 衍生产品统计交叉验证——GPL 聚拢效应在 “贡献回流” 维度有据可循，BSD 散逸效应在 “商业产品使用” 维度有据可循，二者非对立而是不同许可证哲学的体现
-- 梗的真实性在 “市场份额” 维度有据可循（Netcraft 服务器统计显示 FreeBSD 在 Web 服务器市场占比 2000 年约 6%、2010 年约 3%，确有下滑），但在 “BSD 是否真的在消亡” 维度存在夸大——FreeBSD 在 CDN（Netflix Open Connect 2007 年起基于 FreeBSD）、路由器（Juniper JunOS）、嵌入式（PlayStatio
-- BSD 劣势的 “已发生” 维度有据可循（386BSD 维护停顿、FreeBSD 1994.11.22 重建后仍需追赶 Linux 1.0 1994.3 的 8 个月窗口），但在 “被夸大” 维度须谨慎——FreeBSD 在服务器市场（Yahoo、Hotmail 后端 1990 年代后期使用 FreeBSD）、CDN（Netflix Open Connect 2007 年起）、嵌入式（Junipe
+- 梗的真实性在 “市场份额” 维度有据可循（Netcraft 服务器统计显示 FreeBSD 在 Web 服务器市场占比 2000 年约 6%、2010 年约 3%，确有下滑），但在 “BSD 是否真的在消亡” 维度存在夸大——FreeBSD 在 CDN（Netflix Open Connect 2007 年起基于 FreeBSD）、路由器（Juniper JunOS）〔待核：原文截断，后文待回源〕
+- BSD 劣势的 “已发生” 维度有据可循（386BSD 维护停顿、FreeBSD 1994.11.22 重建后仍需追赶 Linux 1.0 1994.3 的 8 个月窗口），但在 “被夸大” 维度须谨慎——FreeBSD 在服务器市场（Yahoo、Hotmail 后端 1990 年代后期使用 FreeBSD）、CDN（Netflix Open Connect 2007 年起）〔待核：原文截断，后文待回源〕
 - 诉讼后果的归因在 “直接后果” 维度有共识（18 个月窗口期 1992.12-1994.1 由 USL v. BSDi 诉讼档案直接证实），但在 “长期影响” 维度存在分歧——部分归因于诉讼（BSDi 1994 年起法律费用与和解成本拖累商业发展），部分归因于许可证（BSD 散逸效应使商业公司无法构建 GPL 式贡献循环），部分归因于组织（BSD Core Team 精英治理模式在 1990 年代
 
 ## 文献

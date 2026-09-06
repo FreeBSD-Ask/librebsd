@@ -9,7 +9,7 @@ volume: 第06卷-freebsd的核心技术革新
 ## 要点
 
 - Capsicum 一手史料主要包括：剑桥大学 Capsicum 项目页面 cl.cam.ac.uk/research/security/capsicum/（持续维护，含论文、演讲、代码、文档链接）；USENIX Security 2010 会议论文集（usenix.org 永久存档）；FreeBSD 源码仓库中 Capsicum 相关提交——经 **bsd_commits.db** `commit
-- Capsicum 能力模型的理论溯源可至 1970 年代的能力系统研究：剑桥大学 CAP computer（1970s，世界首个能力计算机）、PSOS（Provably Secure Operating System，SRI International，Peter G. Neumann 参与）、Hydra（CMU）、KeyKOS（Key Logic，1980s）、EROS（Extremely Re
+- Capsicum 能力模型的理论溯源可至 1970 年代的能力系统研究：剑桥大学 CAP computer（1970s，世界首个能力计算机）、PSOS（Provably Secure Operating System，SRI International，Peter G. Neumann 参与）、Hydra（CMU）、KeyKOS（Key Logic，1980s）〔待核：原文截断，后文待回源〕
 - 剑桥大学在安全研究领域长期采用 BSD 风格的开放许可策略，这一策略贯穿 Capsicum（2010）至 CHERI（2014+）系列项目：Capsicum 以 BSD 2-Clause 发布、CHERI ISA 规范以 BSD 风格许可证发布、CheriBSD 以 BSD 许可发布；这一策略的代表性先例包括剑桥大学 X Window System（1984，MIT/BSD 风格许可）、剑桥大学在
 
 ## 史料
@@ -31,7 +31,7 @@ volume: 第06卷-freebsd的核心技术革新
 
 ## 辨析
 
-- 原大纲称 Capsicum 论文作者为 “Watson、Anderson、Laurie、Kenneally” 系名字讹误，第四作者经论文 PDF 核实为 Kris Kennaway（FreeBSD 长期 committer，Google 安全工程师），已修正；Capsicum 论文发表于 USENIX Security 2010，会议精确日期为 2010 年 8 月 11-13 日（USENIX
+- 原大纲称 Capsicum 论文作者为 “Watson、Anderson、Laurie、Kenneally” 系名字讹误，第四作者经论文 PDF 核实为 Kris Kennaway（FreeBSD 长期 committer，Google 安全工程师），已修正；〔待核：原文截断，后文待回源〕
 - 原大纲文献列表多次错误列入"Lucas 2018 'FreeBSD Mastery: Storage Essentials’"——Storage Essentials 是存储主题书籍，与 Capsicum/CHERI 无关，属于模板复制时未清理的无关文献，已全部删除并替换为 Capsicum/CHERI 相关权威文献；原大纲还列入"Skorstengaard, Devriese, Birkedal
 - 原大纲本节称“剑桥大学许可策略史料考证”但列入大量与 Capsicum 无关的文献（如 Lucas Storage Essentials、Skorstengaard CHERI 论文等），已修正为 Capsicum 许可策略专属史料；Capsicum 是否曾使用过其他许可证名称（如"BSD License""University of Cambridge License"）经剑桥项目页面核实均为
 

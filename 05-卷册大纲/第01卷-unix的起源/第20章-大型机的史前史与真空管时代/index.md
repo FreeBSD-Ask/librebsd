@@ -8,7 +8,7 @@ volume: 第01卷-unix的起源
 
 ## 史料
 
-- [DB:research_notes:blocks:3568] 关键词「大型机」命中：史实考据：Rochkind 本人 2025 年在 IEEE TSE 发表的 SCCS 五十年回顾论文，明确陈述 “In …
+- [DB:research_notes:blocks:3568] 关键词「大型机」〔待核：原文截断，后文待回源〕
 - [DB:research_notes:blocks:13633] 关键词「大型机」命中：[p.4] 内 容 提 要 自1969 年在贝尔实验室的阁楼上诞生以来，Unix 操作系统的发展远远超出其 创造者们的想…
 - [DB:research_notes:blocks:65639] 关键词「大型机」命中：[2026-07-27]. https://www.ibm.com/ibm/history/.
 
@@ -19,11 +19,13 @@ volume: 第01卷-unix的起源
 
 ## 要点
 
-- 〔待补：无数据库记录，本节五字段待撰写〕
-- 〔待补：无数据库记录，本节五字段待撰写〕
-- 〔待补：无数据库记录，本节五字段待撰写〕
-- 〔待补：无数据库记录，本节五字段待撰写〕
-- 〔待补：无数据库记录，本节五字段待撰写〕
+- ## 本章节索引
+
+1. [20.1 大型机的史前史-真空管与第一代计算机](20.1-大型机的史前史-真空管与第一代计算机.md)
+2. [20.2 IBM-System-360-大型机的奠基](20.2-IBM-System-360-大型机的奠基.md)
+3. [20.3 BUNCH-的兴衰-Burroughs-UNIVAC-NCR-CDC-Honeywell](20.3-BUNCH-的兴衰-Burroughs-UNIVAC-NCR-CDC-Honey.md)
+4. [20.4 IBM-的内部竞争-MVS-VM-TPF-AS-400](20.4-IBM-的内部竞争-MVS-VM-TPF-AS-400.md)
+5. [20.5 UNIX-化与开放化-IX-370-AIX-z-VM-UNIX](20.5-UNIX-化与开放化-IX-370-AIX-z-VM-UNIX.md)（据本章概述.md 整理）
 
 ## 史观
 

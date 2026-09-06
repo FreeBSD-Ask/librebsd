@@ -9,7 +9,7 @@ volume: 第10卷-openbsd的历史
 ## 要点
 
 - OpenBSD 6.0-6.9 的 Release Notes 与 bsd_commits.db commit log 是研究此时期工程进展的核心史料；特性引入时间以 Release Notes 与 commit log 交叉验证为准——Release Notes 记录用户可见变更，commit log 记录具体代码变更
-- RETGUARD 的辩证合图——RETGUARD 既是 OpenBSD 编译时安全机制的核心（反批评层）也具有性能开销与覆盖范围局限（批评层与再批评层），二者并非非此即彼；RETGUARD 在 OpenBSD 的安全优先哲学下具有工程合理性（per-function 随机 canary 防护 ROP、编译器自动插入可采用性高、与 KARL 配合形成编译时与运行时双重防护），但这一合理性以性能开销（
+- RETGUARD 的辩证合图——RETGUARD 既是 OpenBSD 编译时安全机制的核心（反批评层）也具有性能开销与覆盖范围局限（批评层与再批评层），二者并非非此即彼；RETGUARD 在 OpenBSD 的安全优先哲学下具有工程合理性（per-function 随机 canary 防护 ROP、编译器自动插入可采用性高、与 KARL 配合形成编译时与运行时双重防护）〔待核：原文截断，后文待回源〕
 - OpenBSD Foundation 的年报与财务记录是研究其治理结构的核心史料；资金流向以年报、邮件列表、加拿大政府非营利组织报告交叉验证为准；年报详细记录捐赠、支出、hackathons 资助
 - 6.x 时期多元群体贡献的史料局限——bsd_commits.db 提交元数据丢失机构/国别信号（邮箱域 100% 为 openbsd.org），且 contributors 表仅覆盖提交者；须以邮件列表、Foundation 年报与访谈多源交叉，遵循 0 信任原则
 - OpenBSD 6.4（2018-10-25 发布）引入 RETGUARD 返回地址保护机制——在每个函数 prologue/epilogue 中插入随机 canary，防止 ROP（Return-Oriented Programming）攻击；RETGUARD 由 Todd Mortimer（托德·莫蒂默） 设计实现（bsd_commits.db 显示 2018-06-06 mortimer c
@@ -31,7 +31,7 @@ volume: 第10卷-openbsd的历史
 ## 辨析
 
 - Release Notes 的完整性以 plus.html 页面为准——该页面仅记录“重要的和用户可见的变更”，部分内部代码重构可能未记录；commit log 中的 xenocara/SMP/vmm 相关 commit 须通过文件路径（如 xenocara/、sys/kern/、sys/dev/pv/）筛选方可定位
-- 合图不寻求消除张力而寻求呈现张力——RETGUARD 的“加固”与“局限”是同一机制的共生效应，不可分割；【0 信任原则·合图的非终结性】合图并非辩证链的终结而是阶段性综合，随 RETGUARD 演进（如新架构扩展、与 LLVM CFI 的可能整合）须重新展开；【0 信任原则·合图的非折中主义】合图不是“RETGUARD 在 OpenBSD 内合理、在高性能场景下不合理”的简单分类，而是揭示“安全
+- 合图不寻求消除张力而寻求呈现张力——RETGUARD 的“加固”与“局限”是同一机制的共生效应，不可分割；【0 信任原则·合图的非终结性】合图并非辩证链的终结而是阶段性综合，随 RETGUARD 演进（如新架构扩展、与 LLVM CFI 的可能整合）须重新展开；〔待核：原文截断，后文待回源〕
 - 年报的完整性以 OpenBSD Foundation 官方网站为准——年报逐年发布，部分细节可能未公开；财务记录的审计情况以加拿大政府非营利组织报告为准
 - 非提交贡献者（文档、ports、翻译）的记录缺口以 OpenBSD 邮件列表与 hackathons 报告为补充来源 [考据完成：2026-07-28 非提交贡献者的完整记录不存在，须以多个非权威来源交叉估计]
 - RETGUARD 与 LLVM CFI、Microsoft CFG 的对比以各自设计文档为准——三者设计目标与覆盖范围不同，RETGUARD 以 per-function 随机 canary 防护返回地址，LLVM CFI 以控制流完整性图防护间接调用，Microsoft CFG 以目标地址验证防护间接调用；RETGUARD 的性能开销以 OpenBSD tech@ 邮件列表讨论为准 [考据完成：

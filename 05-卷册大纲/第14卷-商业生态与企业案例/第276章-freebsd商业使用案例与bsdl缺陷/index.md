@@ -19,7 +19,7 @@ volume: 第14卷-商业生态与企业案例
 - 总纲第 24 条——许可证：BSD 许可证允许 **Apple** 取走代码而不回馈
   - 辨析：**Darwin** 中 **FreeBSD** 代码的确切比例难以量化，需逐子系统分析。双库核查（2026-08-15）：参考文献库 ref_id=1136（Amit Singh《Mac OS X Internals》，2006）确证 Darwin/XNU 架构整合 FreeBSD 代码；ref_
 - 总纲第 24 条——许可证：**BSDL** 的设计决定了回馈不足的结构性
-  - 辨析：回馈 “不足” 的量化标准需明确，是 commit 数还是代码行数；经 freebsd.db SQL 查询核验（数据库快照截至 2026-06-25），**Apple** 员工（`@apple.com` 邮箱）在 `freebsd-src` 的 commit 统计为——仅 **6 次** commit（占 f
+  - 辨析：回馈 “不足” 的量化标准需明确，是 commit 数还是代码行数；经 freebsd.db SQL 查询核验（数据库快照截至 2026-06-25），**Apple** 员工（`@apple.com` 邮箱）〔待核：原文截断，后文待回源〕
 - 总纲第 24 条——许可证：BSD 许可证允许 **Sony** 闭源使用
   - 辨析：**PS3** 的操作系统（**Cell OS**）是否基于 **FreeBSD** 存在争议，需区分 **PS3** 与 **PS4** 双库核查（2026-08-15）：参考文献库 ref_id=3989（The Register 2021-03-10）提及 FreeBSD 用于 PlayStation
 - 总纲第 24 条——许可证：零回馈是 **BSDL** 的合法结果
@@ -63,7 +63,7 @@ volume: 第14卷-商业生态与企业案例
 ## 276.1.3 与 Google Android 回馈 Linux 的比较
 
 - 要点：**Google Android** 基于 **Linux** 内核，因 **GPL** 要求 **Android** 内核修改须开源。**Android** 的 **Linux** kernel patch 多年来回馈上游不足也受批评，但 **GPL** 法律约束至少保证了代码可见。BSD 无此约束。
-- 史料：**Android** kernel source（`source.andro
+- 史料**：**Android** kernel source（`source.android.com`）
 - PS4 逆向工程分析；CCC 演讲记录[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]
 
 ## 276.2.2 Sony 对 FreeBSD 的零回馈与法务封锁

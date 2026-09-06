@@ -9,7 +9,7 @@ volume: 第06卷-freebsd的核心技术革新
 ## 要点
 
 - 2010-2020 年存储栈呈现 “卷管理分层（Linux LVM）vs 统一变换层（FreeBSD GEOM）vs 存储池（Windows Storage Spaces）vs CoW 合一（ZFS/btrfs/HAMMER）” 的多路线格局；FreeBSD 的 GEOM 以模块化、可组合著称，UFS 的 soft updates 提供元数据一致性保障，在非 ZFS 领域保持工程简洁性。同期主流操
-- FreeBSD 磁盘命名演进历史：早期 MFM/RLL 磁盘为 wd?（Winchester Disk），SCSI 磁盘为 sd?；FreeBSD 3.x CAM 引入后 SCSI 磁盘改为 da?（Direct Access）；FreeBSD 5.x 时期 ATA 磁盘为 ad?（ATA Direct Access）；FreeBSD 9.0 ATA 接入 CAM 后改为 ada?（ATA Dir
+- FreeBSD 磁盘命名演进历史：早期 MFM/RLL 磁盘为 wd?（Winchester Disk），SCSI 磁盘为 sd?；FreeBSD 3.x CAM 引入后 SCSI 磁盘改为 da?（Direct Access）；FreeBSD 5.x 时期 ATA 磁盘为 ad?（ATA Direct Access）；〔待核：原文截断，后文待回源〕
 - FreeBSD 网络存储生态除 iSCSI 和 HAST 外，还包括：NFS（Network File System）作为最古老的分布式文件系统协议在 FreeBSD 中有完整的客户端/服务器实现（NFSv2/v3/v4，详见 78.4.4 节）；**ggate(8)**（GEOM Gate）允许用户态程序通过网络导出块设备，是 HAST 和其他用户态 GEOM 模块的基础；**nfsv4(4)*
 - Valerie Aurora（当时名 Valerie Henson，ext4 文件系统开发者）于 2009 年 7 月 1 日在 LWN.net 发表文章 "Soft updates, hard problems"（lwn.net/Articles/339337/），从 Linux 文件系统开发者视角对 Soft Updates 提出系统性批评，核心论点包括：Soft Updates 实现极端复杂
 - **统计分析印证**——`bsd_commits.db` freebsd-src 仓库 1993-2026 年 commit 月度量 Mann-Kendall 趋势检验结果为显著上升趋势（Sen's slope =+1.40/月，p < 0.001，95% CI [1.11, 1.69]）（统计结论 C-03）；ARIMA(5,0,5) 模型拟合 AIC = 107.39（统计结论 C-29）；非

@@ -10,7 +10,11 @@ volume: 第02卷-伯克利的岁月
 
 - Sun 早期战略为 “开放系统 + 高性价比工作站”，以 32 位 Motorola 68000 处理器为基础，配 BSD 操作系统与网络功能，主攻工程与科研市场，与 DEC VAX 工作站、Apollo Computer 工作站竞争，1982-1985 年实现营收从 0 到 1 亿美元增长
 - AT&T 与 Sun 合作开发 SVR4 并非 “1988.6.13 联合公告” 的单日事件，而是 1985-1992 年的多阶段连续过程：1985 年 9 月 AT&T 与 Sun 首次达成合作意向，AT&T "enlisted Sun's efforts back in 1985"（techmonitor.ai 1988-01-18 一手报道）；1987 年 4 月 AT&T 与 Sun 签订
-- 1980 年代工作站技术路线分化为：通用 BSD 路线（Sun、SGI、DEC）、专用 OS 路线（Apollo Aegis、Symbolics Genera）、专有 UNIX 路线（IBM AIX、HP-UX），BSD 路线在通用性上胜出，但 1990 年代被 Linux 路线取代| 技术路线 | 代表厂商 | 硬件基础 | 操作系统 | 市场结局 || --- | --- | --- | --
+- 1980 年代工作站技术路线分化为：通用 BSD 路线（Sun、SGI、DEC）、专用 OS 路线（Apollo Aegis、Symbolics Genera）、专有 UNIX 路线（IBM AIX、HP-UX），BSD 路线在通用性上胜出，但 1990 年代被 Linux 路线取代| 技术路线 | 代表厂商 | 硬件基础 | 操作系统 | 市场结局
+
+| --- | --- | --- | -- |
+| --- | --- | --- | --- |
+
 - SunOS 1.0 于 **1983 年** 随 Sun-100/Sun-1 工作站系列发布，基于 4.1BSD（1981 年 6 月发布）移植到 Motorola 68000 平台，同时包含 Joy 从 CSRG 带回的部分 4.2BSD 开发版（4.1a/4.1b）特性，包含 BSD 虚拟内存、文件系统、TCP/IP 网络栈，是首个大规模商业化的 BSD 衍生操作系统| SunOS 版本 |
 - SunOS 4.0 于 1988 年 12 月发布，融合 System V Release 3、4.3BSD 与 SunOS 自有特性，引入新的虚拟内存系统、动态链接与 System V STREAMS I/O 架构，支持 Sun386i 平台，是 Sun 在 AT&T 合作前的过渡产品；1992 年 SunOS 5.0（Solaris 2）完全转向 SVR4，标志 Sun 与 BSD 主体血缘关
 
@@ -35,10 +39,10 @@ volume: 第02卷-伯克利的岁月
 ## 辨析
 
 - “开放系统” 在 Sun 语境中指 “UNIX 标准 + 开放接口”，但 SunOS 本身是专有商业产品，需区分 Sun 的 “开放” 修辞与实际授权策略
-- SunOS 4.x 与 Solaris 1.x 的命名关系需核对——Solaris 1 = SunOS 4.x（BSD 基础），Solaris 2 = SunOS 5.x（SVR4 基础），须严格区分命名与基础；SunOS 4.x 在 1992-1994 年作为兼容版本保留，须区分 “主线转换”（SunOS 5.0 1991 移植 / 1992 发布）与 “完全停止开发”（SunOS 4.x 19
+- SunOS 4.x 与 Solaris 1.x 的命名关系需核对——Solaris 1 = SunOS 4.x（BSD 基础），Solaris 2 = SunOS 5.x（SVR4 基础），须严格区分命名与基础；SunOS 4.x 在 1992-1994 年作为兼容版本保留，须区分 “主线转换”（SunOS 5.0 1991 移植 / 1992 发布）〔待核：原文截断，后文待回源〕
 - 技术路线 “胜出” 的判断需区分短期（1985-1990 BSD）与长期（1995- Linux），避免线性进步史观
 - SunOS 4.x 与 Solaris 1.x 的命名关系常被混淆，需核对 Sun 命名规则（Solaris 1 = SunOS 4.x；Solaris 2 = SunOS 5.x）；SunOS 4.0 基于 SVR3 而非 SVR4，SVR4 融合在 SunOS 5.0 中完成
-- 需精确区分 “协议兼容” 与 “代码贡献”——Sun 开发了 NFS 协议并公开（RFC 1094, 1989），但 BSD 中的 NFS 代码由 Rick Macklem 独立实现，并非 Sun 贡献；需精确区分 “协议开源” 与 “实现开源”——Sun 通过 RFC 公开 NFS 协议规范，但 Sun 的 NFS 参考实现并未开源贡献给 CSRG；需精确区分 “Joy 个人贡献” 与 “Sun
+- 需精确区分 “协议兼容” 与 “代码贡献”——Sun 开发了 NFS 协议并公开（RFC 1094, 1989），但 BSD 中的 NFS 代码由 Rick Macklem 独立实现，并非 Sun 贡献；需精确区分 “协议开源” 与 “实现开源”——Sun 通过 RFC 公开 NFS 协议规范，但 Sun 的 NFS 参考实现并未开源贡献给 CSRG；〔待核：原文截断，后文待回源〕
 
 ## 文献
 

@@ -8,7 +8,7 @@ volume: 第03卷-伯克利学术文化外溢影响
 
 ## 要点
 
-- （一）DARPA 资助：DARPA（Defense Advanced Research Projects Agency）是 CSRG 的主要资金来源，1970-1980 年代持续资助 BSD 项目，DARPA 合同的具体编号与金额演化需通过 FOIA 申请或联邦机构档案核实；（二）NSF 资助：NSF（National Science Foundation）通过 CSI（Computer Scie
+- （一）DARPA 资助：DARPA（Defense Advanced Research Projects Agency）是 CSRG 的主要资金来源，1970-1980 年代持续资助 BSD 项目，DARPA 合同的具体编号与金额演化需通过 FOIA 申请或联邦机构档案核实；（二）NSF 资助：NSF（National Science Foundation）〔待核：原文截断，后文待回源〕
 
 ## 史料
 

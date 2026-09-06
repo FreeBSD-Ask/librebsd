@@ -11,7 +11,7 @@ volume: 第02卷-伯克利的岁月
 - 1985 年 6 月 Usenix 会议预告后，BBN 向 DARPA 投诉称 Berkeley 从未将 4.2BSD 更新为 BBN 网络代码的最终版本，仍使用多年前 BBN 交付的 "much-hacked initial prototype"（被大幅修改的初始原型），要求 Berkeley 在 4.3BSD 中以 BBN 实现替换 TCP/IP 代码；BBN 的主张基于分工约定——Berke
 - Morris 蠕虫事件后，**1988 年 11 月 17 日** DARPA 决定成立计算机紧急响应小组协调中心（Computer Emergency Response Team Coordination Center, CERT/CC），由 DARPA 资助卡内基梅隆大学软件工程研究所（SEI）运营（apricot.net 1997 回顾性编年史料 "November 17, 1988 Def
 - 4.3BSD 早期安全模型为 “隐式信任”——开发者信任用户输入合法性、信任网络主机身份、信任本地用户协作，缺乏显式审计日志与安全事件响应机制；Morris 蠕虫（1988.11.2）暴露此模型的根本缺陷——网络规模扩大后信任链可被滥用传播恶意代码，且缺乏制度化安全事件响应机制；Berkeley 修复补丁（1988.11.8 NCSC Worm Postmortem Meeting 同步发布）引入
-- CSRG 在 Morris 蠕虫事件后建立的安全响应文化——补丁快速分发、漏洞报告接收、版本发布纪律——直接为 1990 年代 FreeBSD、NetBSD、OpenBSD 的安全响应机制奠基；FreeBSD 1.0（1993 年 12 月发布）的安全公告机制即继承自 CSRG 后期的补丁纪律，FreeBSD Security Officer 制度与 FreeBSD 安全公告编号体系（FreeBS
+- CSRG 在 Morris 蠕虫事件后建立的安全响应文化——补丁快速分发、漏洞报告接收、版本发布纪律——直接为 1990 年代 FreeBSD、NetBSD、OpenBSD 的安全响应机制奠基；FreeBSD 1.0（1993 年 12 月发布）〔待核：原文截断，后文待回源〕
 - 批评的史料辨析需注意：Spafford 的蠕虫分析是事后重建，需核对原始蠕虫源代码；Bellovin 的安全批评部分基于 Morris 蠕虫前的研究，需区分 “蠕虫前已知” 与 “蠕虫后显化”；CERT/CC 公告需区分 “事后修复” 与 “原始漏洞”
 
 ## 史料
@@ -34,7 +34,7 @@ volume: 第02卷-伯克利的岁月
 - BBN 投诉的核心依据为 “DARPA 分工约定”——Berkeley 实现接口、BBN 实现协议，此分工约定的具体条款需核查 DARPA 原始合同（可能藏于 DTIC 或 DARPA 档案）；Karels 评估后决定整合 BBN 优点而非整体替换，体现了工程实践优先于形式分工的判断；Muuss 评估报告的关键结论（Berkeley 更高效、BBN 拥塞处理更优、Berkeley 稳定性胜出）经
 - CERT/CC 的建立时间在不同史料中有 1988.11 与 1988.12 两种说法，需核对 DARPA 合同与 CERT/CC 首次公告
 - 隐式信任被 “淘汰” 指显式审计与制度化响应机制的引入，而非隐式信任完全消失——BSD 后续版本中部分隐式信任（如本地用户协作）仍保留，须区分 “显式审计引入” 与 “隐式信任完全消失”；CERT/CC 建立时间在不同史料中有 1988.11 与 1988.12 两种说法，需核对 DARPA 合同与 CERT/CC 首次公告；OpenBSD（1995）将显式安全审计作为项目核心原则是 4.3BSD
-- BSD 安全响应文化对后世 BSD 项目的 “奠基” 须区分 “直接继承” 与 “间接影响”——FreeBSD 安全公告机制直接继承自 CSRG 补丁纪律（FreeBSD 1.0 核心团队包括 CSRG 时期的贡献者），OpenBSD 全源码审计工程间接追溯至蠕虫事件后的集体反思（OpenBSD fork 动机还包括 NetBSD 代码质量问题等因素，须区分 “安全文化延续” 与 “fork 动机
+- BSD 安全响应文化对后世 BSD 项目的 “奠基” 须区分 “直接继承” 与 “间接影响”——FreeBSD 安全公告机制直接继承自 CSRG 补丁纪律（FreeBSD 1.0 核心团队包括 CSRG 时期的贡献者）〔待核：原文截断，后文待回源〕
 - 史料辨析需注意幸存者偏差，外部批评因传播广而被保留，内部警告因传播少而散逸，需主动寻找散逸史料
 
 ## 文献

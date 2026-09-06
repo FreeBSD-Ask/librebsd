@@ -9,7 +9,7 @@ volume: 第12卷-macos的bsd遗产
 ## 要点
 
 - **Mac OS X 10.5 Leopard** 于 **2007 年 10 月 26 日** 发布，是首个通过 **The Open Group UNIX 03** 认证的 Apple 操作系统。认证基于 **Single UNIX Specification v3（SUSv3）**，覆盖 Leopard 的 BSD/POSIX 用户空间——包括 `libc`、`pthread`、`socke
-- **macOS** 因 Apple 付费并通过 The Open Group 测试套件而 **持有 UNIX 03 证书**；**FreeBSD** 虽实际遵守 POSIX（FreeBSD 5.0 起持续通过 POSIX 合规测试），但 **从未申请 UNIX 03 认证**（成本与社区意愿——认证费用约 10 万美元以上，且 FreeBSD 项目无商业实体承担此费用）。二者形成 “持证 vs 实
+- **macOS** 因 Apple 付费并通过 The Open Group 测试套件而 **持有 UNIX 03 证书**；**FreeBSD** 虽实际遵守 POSIX（FreeBSD 5.0 起持续通过 POSIX 合规测试），但 **从未申请 UNIX 03 认证**（成本与社区意愿——认证费用约 10 万美元以上，且 FreeBSD 项目无商业实体承担此费用）。〔待核：原文截断，后文待回源〕
 - **Mac OS X 10.5 Leopard**（**2007 年 10 月 26 日**发布）引入 **BSM（Basic Security Module）审计框架**，源自 **TrustedBSD 项目**的 **OpenBSM** 子项目——OpenBSM 由 **Robert N. M. Watson（罗伯特·N·M·沃森）** 主导开发，TrustedBSD 官方主页 **trust
 - **2007 年** Leopard 对比 **FreeBSD 7.0**（**2008 年 2 月 27 日** 发布）、**Linux 2.6.23**（**2007 年 10 月 9 日** 发布）、**Solaris 10**（**2005 年 1 月 31 日** 发布，已获 **UNIX 03**）、**Windows Vista**（**2006 年 11 月 30 日** 发布），
 

@@ -27,8 +27,8 @@ volume: 第13卷-bsd衍生操作系统
 - WhatsApp 的 FreeBSD 使用细节（如具体版本、调优）部分未公开[考据完成：2026-07-28 经穷尽联网考据，WhatsApp 工程演讲与中文技术媒体（CSDN、biaodianfu.com、toutiao.com）多源印证——WhatsApp 后端使用 FreeBSD 9.2 与 Erlang/OTP，单服务器支撑 200 万并发连接，系统容量大于 8000 核心，每秒 Erla
 - 各产品 BSD 成分的具体范围须以官方架构文档确认，避免夸大；openbsd.db 查询 L3.2.1 与 L3.2.2 的 Isilon/NetApp/EMC/Citrix 占比须警惕邮箱域名识别不精确——Isilon 被 Dell/EMC 收购后员工邮箱可能迁移至 @dell.com 或 @emc.com，EMC 被 Dell 收购后邮箱可能迁移至 @dell.com，Citrix NetSc
 - 贡献者须以公开记录核实；freebsd.db 查询 L7.2.1 的 “未出现企业邮箱贡献者” 不等于企业零回馈——这些企业员工可能使用 @freebsd.org 邮箱（被查询排除条件过滤）、个人邮箱或被收购后迁移至新邮箱域名（如 Isilon→@dell.com、Citrix→@tibco.com），且 “沉默 BSD” 企业可能通过内部 fork 维护而非直接推送 freebsd-src 上游
-- 考据过程留痕——【查证来源】FreeBSD 官方手册（**<https://www.freebsd.org.cn/freebsdhandbook/nutshell.html>** §1.2.2“谁在使用 FreeBSD”）一手确认 WhatsApp、Isilon、NetApp、Citrix NetScaler 等“沉默 BSD”企业基于 FreeBSD（原文分别称 Citrix NetScaler
-- 考据过程留痕——【查证来源】BSD-3-Clause 许可证文本经 Open Source Initiative（**<https://opensource.org/licenses/BSD-3-Clause**>）一手核验，确实允许闭源使用而不要求回馈；Berkeley CSRG 1999.7.22 William Hoskins 公告（弃用广告条款）经多来源交叉确认，形成 BSD-3-Clau
+- 考据过程留痕——【查证来源】FreeBSD 官方手册（**<https://www.freebsd.org.cn/freebsdhandbook/nutshell.html>** §1.2.2“谁在使用 FreeBSD”）〔待核：原文截断，后文待回源〕
+- 考据过程留痕——【查证来源】BSD-3-Clause 许可证文本经 Open Source Initiative（**<https://opensource.org/licenses/BSD-3-Clause**>）一手核验，确实允许闭源使用而不要求回馈；Berkeley CSRG 1999.7.22 William Hoskins 公告（弃用广告条款）〔待核：原文截断，后文待回源〕
 
 ## 文献
 

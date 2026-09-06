@@ -33,7 +33,7 @@ volume: 第05卷-freebsd的工程化奠基
 
 ## 辨析
 
-- ULE 是否真比 4BSD 优越，需查基准测试；6 年成熟期是否过长；7.0 与 7.1 对 ULE 状态的表述差异；经 bsd_commits.db tags 表验证，7.0-RELEASE 的 tagger_date 为 2008-02-24T05:45:17Z（cvs2svn 创建 tag），7.1-RELEASE 的 tagger_date 为 2008-12-31T22:57:14Z（K
+- ULE 是否真比 4BSD 优越，需查基准测试；6 年成熟期是否过长；7.0 与 7.1 对 ULE 状态的表述差异；经 bsd_commits.db tags 表验证，7.0-RELEASE 的 tagger_date 为 2008-02-24T05:45:17Z（cvs2svn 创建 tag）〔待核：原文截断，后文待回源〕
 - 测试方法是否公平，需查测试环境（硬件、内核配置）
   - 文献：FreeBSD 7.0 SMP Performance Benchmarks (freebsd.org 2008)；Phoronix"FreeBSD 7.0 Performance" (2008.3)；Roberson (2003) BSDCon paper[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇
 - (1) 测试是否全面（仅测特定负载）；(2) 是否有选择性报告；(3) 与 Linux/Solaris 比较是否公平
@@ -47,7 +47,7 @@ volume: 第05卷-freebsd的工程化奠基
 
 ## 文献
 
-- Roberson, J. "ULE: A Modern Scheduler for FreeBSD"Proceedings of BSDCon 2003 (USENIX, 2003)；McKusick, M. K. & Neville-Neil, G. V. The Design and Implementation of the FreeBSD Operating System, 2nd ed. (Addison-Wesley, 2014), Chapter 4；FreeBSD 7.0/7.1 Release Notes；Jeff Roberson. Add the ule schedule
+- Roberson, J. "ULE: A Modern Scheduler for FreeBSD"Proceedings of BSDCon 2003 (USENIX, 2003)；McKusick, M. K. & Neville-Neil, G. V. The Design and Implementation of the FreeBSD Operating System, 2nd ed. (Addison-Wesley, 2014), Chapter 4；FreeBSD 7.0/7.1 Release Notes；〔待核：原文截断，后文待回源〕
 - FreeBSD 7.0 SMP Performance Benchmarks (freebsd.org 2008)；Phoronix"FreeBSD 7.0 Performance" (2008.3)；Roberson (2003) BSDCon paper[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]
 
 ## 103.2.2 性能提升的工程意义

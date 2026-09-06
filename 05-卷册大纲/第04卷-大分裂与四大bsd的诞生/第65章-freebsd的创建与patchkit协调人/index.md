@@ -30,7 +30,7 @@ volume: 第04卷-大分裂与四大bsd的诞生
 ## 辨析
 
 - FreeBSD Handbook 原文明确记载 1.0 "based on the 4.3BSD-Lite ('Net/2') tape from U.C. Berkeley, with many components also provided by 386BSD and the Free Software Foundation"；~~原 "4.3BSD-Reno" 说法错误~~，Net/2 与
-- Handbook 仅记载提供 "a machine to work on and a fast Internet connection"，具体服务器规格（486）、带宽速率（T1）、Core Team 成员是否在 Walnut Creek 兼职等细节需对照合同邮件核验，避免夸大或简化；FreeBSD 2.0 公告特别感谢 Walnut Creek "continuing support and e
+- Handbook 仅记载提供 "a machine to work on and a fast Internet connection"，具体服务器规格（486）、带宽速率（T1）、Core Team 成员是否在 Walnut Creek 兼职等细节需对照合同邮件核验，避免夸大或简化；〔待核：原文截断，后文待回源〕
 - Walnut Creek 提供的服务器具体规格与带宽速率需对照 1994 年邮件列表核验；FreeBSD 1.0 公告中 FTP 站点为 freebsd.cdrom.com，证实 Walnut Creek 从一开始就托管 FTP 分发
 - GEOM 存储框架由 Poul-Henning Kamp 开发，但 GEOM 首次随 FreeBSD 5.0（2003 年 1 月）引入，不属于 1.0-2.0（1993-1994）时期的贡献；PHK 在 1994 年已是 FreeBSD 2.0 的 release engineer，早期贡献包括发布工程、内存分配器（malloc）、NTP 等，非 SCSI/GEOM 子系统
 - 具体贡献者的具体技术工作需对照源码 commit message 核验；GEOM 为 2003 年 FreeBSD 5.0 引入的框架，不属于 1993-1994 年时期贡献

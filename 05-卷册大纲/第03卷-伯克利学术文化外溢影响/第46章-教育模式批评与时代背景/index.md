@@ -11,8 +11,8 @@ volume: 第03卷-伯克利学术文化外溢影响
 - CSRG 精英化与伯克利 1960-1980 年代左派教育语境的交叠呈现三重结构：（一）选拔机制的交叠——CSRG **1976 年** 正式成立时伯克利 EECS 系正处于后 FSM 时代的 “学术左派” 兴起阶段，CSRG 沿用 Fabry/McKusick 个人推荐加学术成绩的选拔机制，与伯克利左派学者圈子（如 Critical Legal Studies、Feminist Scholars
 - 边缘贡献者的史料辨析包括：（1）BSD 源码贡献者记录（如 `CHANGELOG`、SCCS 日志）是辨识边缘贡献者的主要史料，但须注意记录的不完整性；（2）邮件列表存档（如 CSRG 内部邮件）可补充源码记录，但须注意存档的截取；（3）事后回忆（如 McKusick **1999 年** 文章）须警惕记忆偏差与自利偏差；（4）史料辨析须遵循 0 信任原则，对所有来源进行考据验证  | 史料类型
 - 1978-1992 年基础科学与计算机科学发展——Cook/Karp 的 NP 完全性理论、RSA 公钥密码学、Lamport 分布式系统理论、Codd 关系数据库理论；这些理论发展直接影响 BSD 的 TCP/IP 实现、密码学应用与数据库系统  | 理论 | 作者 | 时间 | 发表场所 | 对 BSD 影响 |  | --- | --- | --- | --- | --- |  | NP 完
-- 1978-1992 基础科学发展包括：（1）计算复杂度理论，Cook 1971 年证明 NP 完全性（"The Complexity of Theorem-Proving Procedures"），Karp 1972 年扩展 NP 完全问题类（"Reducibility Among Combinatorial Problems"）；（2）密码学从 DES（1977 年 NBS 发布 FIPS PU
-- 1978-1992 计算机科学发展包括：（1）TCP/IP 协议理论，Cerf 与 Kahn 1974 年发表 "A Protocol for Packet Network Intercommunication"（IEEE Trans. Comm.），奠定 TCP/IP 基础；（2）程序语言 OO 转向，C++ 1985 年由 Stroustrup 发布、Objective-C 1984 年由 C
+- 1978-1992 基础科学发展包括：（1）计算复杂度理论，Cook 1971 年证明 NP 完全性（"The Complexity of Theorem-Proving Procedures"），Karp 1972 年扩展 NP 完全问题类（"Reducibility Among Combinatorial Problems"）；（2）〔待核：原文截断，后文待回源〕
+- 1978-1992 计算机科学发展包括：（1）TCP/IP 协议理论，Cerf 与 Kahn 1974 年发表 "A Protocol for Packet Network Intercommunication"（IEEE Trans. Comm.），奠定 TCP/IP 基础；（2）〔待核：原文截断，后文待回源〕
 
 ## 史料
 
@@ -25,11 +25,11 @@ volume: 第03卷-伯克利学术文化外溢影响
 
 ## 辨析
 
-- CSRG 与伯克利左派传统的 “交叠” 程度须严格考据——CSRG 核心成员 Joy（1975 年入伯克利）、McKusick（1976 年入伯克利研究生）、Karels、Bostic 等均晚于 FSM（1964）与人民公园（1969），其 “亲历” 程度须核对成员本人自述，避免事后建构；CSRG 选拔机制与左派师承式招募的 “同构” 是结构性类比而非直接因果，须区分 “结构相似” 与 “实际传承
+- CSRG 与伯克利左派传统的 “交叠” 程度须严格考据——CSRG 核心成员 Joy（1975 年入伯克利）、McKusick（1976 年入伯克利研究生）、Karels、Bostic 等均晚于 FSM（1964）与人民公园（1969），其 “亲历” 程度须核对成员本人自述，避免事后建构；〔待核：原文截断，后文待回源〕
 - 源码贡献者记录的完整性需核对；邮件列表存档的截取情况需核对；事后回忆的记忆偏差需核对；0 信任原则的适用性需核对
-- Cook 1971、Karp 1972、RSA 1978、Lamport 1978、Codd 1970 等理论的发表时间与刊物考据详见 22.20.13.1 辨析；各理论与 BSD 实现的具体关联为史家阐释而非当事人自述——RSA 理论（1978）在 BSD 中的应用（SSH、SSL/TLS、IPsec）多在 1990 年代中后期才出现，CSRG 解散前 BSD 对 RSA 的直接应用有限（保留
+- Cook 1971、Karp 1972、RSA 1978、Lamport 1978、Codd 1970 等理论的发表时间与刊物考据详见 22.20.13.1 辨析；各理论与 BSD 实现的具体关联为史家阐释而非当事人自述——RSA 理论（1978）在 BSD 中的应用（SSH、SSL/TLS、IPsec）〔待核：原文截断，后文待回源〕
 - Cook 1971、Karp 1972、DES 1977、RSA 1978、Lamport 1978、Codd 1970 等论文的发表时间、刊物与卷期页码详见 22.20.13 表格；Cook 论文发表于 STOC '71（1971.5.3-5，Shaker Heights, Ohio）；Karp 论文后收入 Miller & Thatcher (1972) 论文集，扩展 NP 完全问题类至 21
-- Cerf/Kahn 1974 论文发表于 IEEE Trans. Comm. 22(5)（1974.5），奠定 TCP/IP 协议基础；C++ 与 Objective-C 的发布时间考据详见 22.20.8 辨析；Tanenbaum-Torvalds 争论时间 1992.1.29-2 月经 comp.os.minix Usenet 存档确认——Tanenbaum 发表 "Linux is obso
+- Cerf/Kahn 1974 论文发表于 IEEE Trans. Comm. 22(5)（1974.5），奠定 TCP/IP 协议基础；C++ 与 Objective-C 的发布时间考据详见 22.20.8 辨析；〔待核：原文截断，后文待回源〕
 
 ## 文献
 

@@ -11,7 +11,7 @@ volume: 第10卷-openbsd的历史
 - 2014-04-07 OpenSSL 爆发 Heartbleed（CVE-2014-0160）严重漏洞，允许远程攻击者通过 TLS heartbeat extension 读取服务器内存（最多 64KB/请求），影响全球约 17% 的 HTTPS 站点；OpenBSD 项目于 2014-04-14 在 <misc@openbsd.org> 邮件列表发起 LibreSSL fork，由 de Raa
 - 本节从项目史观总纲第 15 条（文化即形式主义）、第 19 条（解释学循环是历史认识的根本条件）、第 21 条（革命与改革是历史方法论的分歧）切入，审视 93.7-93.9 节的三大 fork 辩证链；总纲第 15 条揭示 OpenBSD“默认安全 + 简洁优先”工程传统作为形式主义的显现——这一文化在三大 fork 过程中被物化为 LibreSSL 删除 70,000 行代码、OpenSMTPD
 - LibreSSL fork 后第一周即删除约 70,000 行 OpenSSL 代码（包括旧平台支持、FIPS 模块、OS/2、VMS 等代码）；LibreSSL 2.0（2014-07-11）首次随 OpenBSD 5.6（2014-11-01）发布——bsd_commits.db 显示 jsing 于 2014-07-12 commit b6553af36068 引入 lib/libressl
-- OpenNTPD 由 Henning Brauer（亨宁·布劳尔） 主导开发，于 OpenBSD 3.6（2004-11-01）首次集成——bsd_commits.db openbsd-src 仓库 henning 于 2004-06-18 commit a66b0f8292c9 添加 ntpd.conf.5，时间早于 3.6 发布约 5 个月；OpenNTPD 作为 ntpd（Network T
+- OpenNTPD 由 Henning Brauer（亨宁·布劳尔） 主导开发，于 OpenBSD 3.6（2004-11-01）首次集成——bsd_commits.db openbsd-src 仓库 henning 于 2004-06-18 commit a66b0f8292c9 添加 ntpd.conf.5，时间早于 3.6 发布约 5 个月；〔待核：原文截断，后文待回源〕
 - OpenSMTPD 由 Gilles Chehade、Eric Faurot、Charles Longeau 等主导开发，2008 年发起项目作为 sendmail/Postfix 的安全替代；OpenSMTPD 于 OpenBSD 4.6（2009-11）首次集成；2013 年 5.4 版本起默认使用，采用简洁配置语法与 privilege separation 安全默认；OpenSMTPD 历
 
 ## 史料
@@ -26,7 +26,7 @@ volume: 第10卷-openbsd的历史
 
 ## 辨析
 
-- Heartbleed 漏洞的技术细节经 CVE-2014-0160 公告确认——漏洞位于 OpenSSL 1.0.1 至 1.0.1f 的 tls1_process_heartbeat 函数，因缺少边界检查导致缓冲区过读；LibreSSL fork 的动机是“代码质量”与“治理结构”双重——de Raadt 在 2014-04 的 misc@ 邮件列表宣告中明确批评 OpenSSL 代码质量（"O
+- Heartbleed 漏洞的技术细节经 CVE-2014-0160 公告确认——漏洞位于 OpenSSL 1.0.1 至 1.0.1f 的 tls1_process_heartbeat 函数，因缺少边界检查导致缓冲区过读；〔待核：原文截断，后文待回源〕
 - 考据过程留痕——【查证来源】项目史观总纲第 15、19、21 条原文经 `c:\Users\ykla\Documents\hibsd\据原文第25章.md` 一手核验；93.7-93.9 节引用的全部史料经各自辨析字段三段式核验（详见 93.7 OpenSSL 阵营四条线索、93.8 Sendmail 阵营三条线索、93.9 ntpd 阵营三条线索）；bsd_commits.db openbsd-
 - LibreSSL 与 OpenSSL 的兼容性策略在 2014-2018 年间有所变化——2014-2015 年采取激进删除策略（移除 SSLeay 兼容层），2016 年后因 portable 版本在 Linux 发行版中遭遇兼容性问题而部分回退；LibreSSL 的采用率相对 OpenSSL 较低——OpenBSD 自 5.6（2014-11）起默认使用 LibreSSL；FreeBSD 基础
 - OpenNTPD 与 NTP Classic 的功能差异——OpenNTPD 早期不支持 broadcast/multicast 模式、reference clock 驱动较少，至 6.0（2016）后才逐步补齐；OpenNTPD 的时间同步精度争议——NTP Classic 在理想条件下可达微秒级精度，OpenNTPD 因简化算法早期精度为毫秒级，6.0 后通过 constraint 改进提升至

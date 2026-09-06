@@ -43,7 +43,7 @@ volume: 第06卷-freebsd的核心技术革新
 - SUJ 不是 “日志文件系统”（journaling filesystem）的完整实现——它仅对 soft updates 元数据更新增加意向日志以加速恢复，而非像 ext3/ext4、XFS 那样对元数据甚至数据进行完整日志记录；这一设计选择保持了 soft updates 的性能优势，同时消除了其最显著的运维缺陷（服务器异常断电后 fsck 时间与文件系统大小成正比）
   - 文献：McKus
 - ZFS v28 在 FreeBSD 9.0 中状态为 “Production 但非默认根文件系统”——作为数据存储卷使用已相当稳定，但作为 root 文件系统仍需大量手动调整，不适合普通用户；10.0 时期 bsdinstall 才逐步加入自动 ZFS root 配置
-  - 文献：svn commit r219089；FreeBSD 9.0-RELEASE Release Notes（ZFS 章
+  - 文献：svn commit r219089；FreeBSD 9.0-RELEASE Release Notes（ZFS 章〔待核：原文截断〕
 
 ## 文献
 

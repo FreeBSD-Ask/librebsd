@@ -10,7 +10,7 @@ volume: 第02卷-伯克利的岁月
 
 - **4.2BSD 发行公告**（即 4.2BSD Release Notes）的正式名称为 **"Bug fixes and changes in 4.2BSD"**，由 **Samuel J. Leffler** 编写，文档内部日期为 **1983 年 7 月 28 日**（标题页 `.TL` 行 "July 28, 1983"），文档归属 Computer Systems Research G
 - 1983 年同期操作系统展现技术路线分化——4.2BSD（学术多用户网络）、XENIX（商业 UNIX）、PC DOS（PC 单用户）、Lisa（GUI），各自面向不同市场
-- 4.2BSD（1983.8）作为 TCP/IP 协议的事实参考实现，其代码在 RFC 791（IP，1981.9）与 RFC 793（TCP，1981.9）发布后仅两年即发布，部分实现细节与 RFC 标准文本存在偏差；IETF 于 1989 年 10 月发布 **RFC 1122**《Requirements for Internet Hosts -- Communication Layers》（
+- 4.2BSD（1983.8）作为 TCP/IP 协议的事实参考实现，其代码在 RFC 791（IP，1981.9）与 RFC 793（TCP，1981.9）发布后仅两年即发布，部分实现细节与 RFC 标准文本存在偏差；〔待核：原文截断，后文待回源〕
 
 ## 史料
 

@@ -10,8 +10,12 @@ volume: 第06卷-freebsd的核心技术革新
 
 - Cantrill 与 Shapiro、Leventhal 三人团队在 2002-2004 年秘密开发 DTrace——背景是 Solaris 10 的‘系统可观测性危机’。
 - DTrace 贡献者记录的一手史料分布在多个地方：Sun/Oracle 时期的贡献记录主要在 Solaris 源码版权头和 USENIX 论文作者中；FreeBSD 移植者记录在 FreeBSD commit log（svn/freebsd.org 和 git）和邮件列表中；Brendan Gregg 的工具集贡献在 DTraceToolkit 和 GitHub 上；eBPF 贡献者记录在 Lin
-- SystemTap、eBPF 与 DTrace 的关键技术差异对比如下表，三种追踪系统代表了三种设计哲学：DTrace 追求追踪专用与安全一体化，eBPF 追求通用可扩展多用途，SystemTap 追求 GPL 兼容与功能灵活。| 系统 | 起始年份 | 主导者 | 编译/执行模型 | 安全模型 | 主要平台 | 主要局限 || --- | --- | --- | --- | --- | ---
-- **统计分析印证**——`freebsd.db` freebsd-src 仓库 1993-2026 年 commit 月度量 Mann-Kendall 趋势检验结果为显著上升趋势（Sen's slope =+1.40/月，p < 0.001，95% CI [1.11, 1.69]）（统计结论 C-03）；Pettitt 与 BUISHAND R 双变点检验一致判定变点为 1999-08（p < 0
+- SystemTap、eBPF 与 DTrace 的关键技术差异对比如下表，三种追踪系统代表了三种设计哲学：DTrace 追求追踪专用与安全一体化，eBPF 追求通用可扩展多用途，SystemTap 追求 GPL 兼容与功能灵活。| 系统 | 起始年份 | 主导者 | 编译/执行模型 | 安全模型 | 主要平台 | 主要局限
+
+| --- | --- | --- | --- | --- | --- |
+| --- | --- | --- | --- | --- | --- |
+
+- **统计分析印证**——`freebsd.db` freebsd-src 仓库 1993-2026 年 commit 月度量 Mann-Kendall 趋势检验结果为显著上升趋势（Sen's slope =+1.40/月，p < 0.001，95% CI [1.11, 1.69]）（统计结论 C-03）；〔待核：原文截断，后文待回源〕
 - DTrace 对 eBPF 影响的一手史料包括：Brendan Gregg 在 brendangregg.com 关于 DTrace 和 eBPF 的博客文章（2014-2024 年，数量众多）；Gregg 2014 LISA 演讲幻灯片和视频；USENIX ATC 等会议上关于 eBPF 和 DTrace 的学术论文；Alexei Starovoitov 和 Daniel Borkmann 在
 
 ## 史料

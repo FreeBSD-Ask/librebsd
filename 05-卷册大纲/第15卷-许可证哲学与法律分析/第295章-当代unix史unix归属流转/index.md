@@ -29,7 +29,7 @@ volume: 第15卷-许可证哲学与法律分析
 - 部分二手资料称 “Novell 以 8,000 万美元将 UnixWare 与 UNIX 商标售予 SCO”，部分称 “6,000 万美元加未来版税”。考据结论：原始 Asset Purchase Agreement（APA）条款在 2004 年 Novell v. SCO 案中部分披露，确认基础价格为 8,000 万美元加 UNIX 版税分成，本子节采用此表述。
 - 部分二手资料称 Project Monterey “因 Linux 兴起而失败”，但项目失败的直接原因是 Itanium（IA-64）芯片延迟发布（原定 1999 年，实际 2001 年）与 Linux 在 Intel x86 上的性能跨越；Linux 兴起是外部环境，Itanium 延迟与 IBM 内部资源重新分配是直接原因。本子节采用 “Itanium 延迟与 Linux 兴起多重因素” 的辩
 - 部分二手资料称 UnixWare 7 基于 “SVR5 内核”，但 SVR5 实际是 SCO 内部对 UnixWare 2.x 与 OpenServer 5.x 合并版本的命名，未由 X/Open 或 Open Group 正式标准化为 "SVR5" 标准。本子节采用 “UnixWare 7 引入 SVR5 内核（SCO 内部命名）” 的限定性表述。
-- 辨析：〔待补：无考据记录〕
+- 辨析：待撰写——本节辨析须结合一手史料与二手研究交叉验证后落笔（据本文件结构分析）
   - 文献：[DB:historical_claims] 历史主张数据库（853 条主张，26,898 条证据）
 
 ## 文献

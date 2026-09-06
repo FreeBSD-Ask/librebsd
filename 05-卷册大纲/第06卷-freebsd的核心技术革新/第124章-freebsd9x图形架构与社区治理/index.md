@@ -22,7 +22,9 @@ volume: 第06卷-freebsd的核心技术革新
   - 辨析：PS3 OtherOS 支持仅在 3.15 及更早固件有效，
 - 总纲第 24 条——许可证：PS4 是 BSD 许可证商业友好性的标志性案例——它与 Apple macOS/Darwin（基于 FreeBSD 5.x 时期）、Netflix Open Connect、Juniper Junos、pfSense/OPNsense、Blue Coat、NetApp 等共同构成 BSD 许可证商业模式的实证；GPL 许可证要求公开派生作品源代码，这使得商业公司在闭源
 - 总纲第 23 条——社区治理：Security Officer 是 FreeBSD 最关键的角色之一，掌握安全公告发布、漏洞协调、基础设施安全等核心权力；Colin Percival 长达 7 年（2005-2012）的任期塑造了 FreeBSD 安全响应的文化与流程，其继任者延续了严格、保守、透明的安全公告风格
-- 辨析：Security Officer 交接在 9.x 密集发生（9.0 cpe
+- 124.13.1 Security Officer 交接
+
+**要点**：FreeBSD Security Officer 在 9.x 时期经历有序交接：9.0-RELEASE 时期 Security Officer 为 Colin Percival（cperciva@）
 - 总纲第 1 条——知识管理的制度化。
 - 文献：安全团队报告 ［A］
 
@@ -47,13 +49,13 @@ volume: 第06卷-freebsd的核心技术革新
 
 ## 123.11.2 9.x 支持架构与状态
 
-- 要点：9.0-RELEASE 支持架构：amd64、i386、ia64（Itanium）、powerpc、powerpc64、sparc64；9.1-RELEASE 初始仅发布 amd64、i386、powerpc64、sparc64（ia
+- 要点：9.0-RELEASE 支持架构：amd64、i386、ia64（Itanium）、powerpc、powerpc64、sparc64；〔待核：原文截断，后文待回源〕
 - Sony Computer Entertainment. PlayStation 4 Developer Documentation（Orbis OS 章节）；CTurt. PS4 Kernel Exploitation Analysis [Z]. 2015-2017；多家技术媒体 2013.6 E3 报道（确认 Orbis OS 基于 FreeBSD 9.0）；Rosen L. Open Source Licensing: Software Freedom and Intellectual Property Law [M]. Upper Saddle River: Prentice Hall
 - FreeBSD 9.0/9.1/9.2/9.3-RELEASE Announcement Acknowledgments 章节 [Z]. 2012-2014；FreeBSD Security Team 页面（security.freebsd.org）[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]
 
 ## 123.13.2 Release Engineering 团队构成
 
-- 要点：9.0 Release Engineering Team 由 Ken Smith（kensmit
+- 要点：9.0 Release Engineering Team 由 Ken Smith（kensmit〔待核：原文截断〕
 - 安全团队报告 ［A］
 - Pedro Giffuni 2013.1.29 [CFT] WITH_BSD_PATCH（freebsd-current 邮件列表 archives/2013-January/039367.html）；FreeBSD Bugzilla PR 99173（bugs.freebsd.org/bugzilla/show_bug.cgi?id = 99173）；Kohn A. 2006.6.19 lwpatch 提案附件 ［A］
 

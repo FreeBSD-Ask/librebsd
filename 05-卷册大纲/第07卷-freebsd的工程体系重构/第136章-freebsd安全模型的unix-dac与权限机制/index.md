@@ -18,13 +18,13 @@ volume: 第07卷-freebsd的工程体系重构
 
 - 总纲第 1 条——项目统摄史观：传统 UNIX DAC 是 FreeBSD 安全模型的 “源头时刻”——1970 年代初在 PDP-7/PDP-11 上设计的简单权限模型在五十多年后仍是 FreeBSD（以及所有类 UNIX 系统）安全的基础；这一模型的简单性（9 个基本权限位 +3 个特殊位）是其持久生命力的来源，但其 “root 万能” 的设计假设在网络时代成为严重安全缺陷；FreeBSD 后
 - 总纲第 1 条——项目统摄史观：jail 的诞生是 FreeBSD 安全演进的第一个 “源头时刻”——Kamp 在 2000 年选择在单体内核中以 “强制隔离 + 资源限制” 方式实现进程监禁，而非采用当时新兴的虚拟化技术（如 VMware、Xen）或微内核方案，这一工程决策奠定了 FreeBSD 此后二十余年容器化技术的基础；jail 比 Solaris Zones（2004）、Linux VS
-- 总纲第 21 条——密码学：MAC 框架是 FreeBSD 对 TCSEC（Orange Book，橘皮书）B 级安全要求的回应——橘皮书 B1 级要求强制访问控制（MAC）支持，MAC 框架的设计直接参考了 TCSEC B1/B2 级和 Common Criteria 的要求；但 FreeBSD 从未以获得 TCSEC/CC 认证为目标——框架提供机制（mechanism）而非策略（policy
+- 总纲第 21 条——密码学：MAC 框架是 FreeBSD 对 TCSEC（Orange Book，橘皮书）B 级安全要求的回应——橘皮书 B1 级要求强制访问控制（MAC）支持，MAC 框架的设计直接参考了 TCSEC B1/B2 级和 Common Criteria 的要求；但 FreeBSD 从未以获得 TCSEC/CC 认证为目标——框架提供机制（mechanism）〔待核：原文截断，后文待回源〕
 - 总纲第 3 条——形式主义膨胀：安全审计是高安全等级操作系统（TCSEC C2 及以上、Common Criteria）的形式化要求——但与 MAC 框架类似，FreeBSD 提供审计机制但不追求认证；OpenBSM 的选择体现了 FreeBSD 对“复用成熟标准化技术”的偏好——BSM 审计格式自 1990 年代 Solaris C2 安全认证以来即为审计领域的事实标准，采用该格式便于与现有审计
 
 ## 辨析
 
 - “FreeBSD 抛弃了传统 UNIX 权限模型” 说法错误——传统 DAC 仍是 FreeBSD 默认且最基础的安全机制，MAC、Capsicum、jail 等是叠加在 DAC 之上的可选安全层，不是替代；“setuid 本身是安全漏洞” 说法不准确——setuid 是一种机制，其安全性取决于 setuid 程序的实现质量；历史上 BSD 对 setuid 程序的安全审计比其他 UNIX 变体更
-- 关于 “jail 是 chroot 的安全增强版” 说法需精确区分：**chroot(2)** 仅改变文件系统根目录，不限制进程系统调用访问，root 用户可轻易逃逸；**jail(8)** 从内核层面增加多层隔离，但 FreeBSD 4.x 时代的原始 jail 仍非完美——2000-2005 年间发现多个 jail 逃逸路径；“jail 与 Docker 技术等价” 说法不准确——Docker
+- 关于 “jail 是 chroot 的安全增强版” 说法需精确区分：**chroot(2)** 仅改变文件系统根目录，不限制进程系统调用访问，root 用户可轻易逃逸；**jail(8)** 从内核层面增加多层隔离，但 FreeBSD 4.x 时代的原始 jail 仍非完美——2000-2005 年间发现多个 jail 逃逸路径；〔待核：原文截断，后文待回源〕
 - “TrustedBSD MAC 框架是 FreeBSD 版的 SELinux” 说法过于简化——SELinux 最初是 NSA 为 Linux 设计的 FLASK/TE 安全架构，移植到 FreeBSD 时作为 MAC 框架的一个策略模块（mac_flask），而非 MAC 框架本身；MAC 框架比 LSM（Linux Security Modules）更早起步（2000 年 vs LSM 200
 - “FreeBSD audit 是 Sun 代码的直接移植”说法不完全准确——OpenBSM 是 BSM API 和审计格式的独立开源重新实现（clean-room reimplementation），并非从 Solaris 源码直接移植；这是为了避免 CDDL（Sun CDDL 许可证）与 BSD 许可证的兼容性问题；OpenBSM 与 Solaris BSM 在 API 和日志格式层面兼容，但实
 

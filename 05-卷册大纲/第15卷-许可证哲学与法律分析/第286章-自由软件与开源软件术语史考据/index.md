@@ -8,7 +8,7 @@ volume: 第15卷-许可证哲学与法律分析
 
 ## 史料
 
-- [DB:research_notes:blocks:2919] 关键词「自由软件」命中：史实考据：理查德·斯托曼撰写的哲学论文，原题为“Why Software Should Be Free”，后更名为“Wh…
+- [DB:research_notes:blocks:2919] 关键词「自由软件」〔待核：原文截断，后文待回源〕
 - [DB:research_notes:blocks:3327] 关键词「自由软件」命中：史实考据：Theo de Raadt 于 2001 年 5 月 30 日在 openbsd-cvs 邮件列表提交的移除 …
 - [DB:research_notes:blocks:3671] 关键词「自由软件」命中：史实考据：FSF 于 2005 年 12 月正式将 CDDL 列为与 GPL 不兼容的自由软件许可证，理由是 CDDL …
 - [DB:research_notes:blocks:480177] 关键词「开源软件术语史考据」命中：第十一卷第 135 章 BSD vs GPL 哲学辩论（在 135.10 节“许可哲学光谱”前增补 135.10.0 子…
@@ -44,7 +44,7 @@ volume: 第15卷-许可证哲学与法律分析
 - 【查证来源】`原材料/研究/自由软件词源考察/03-自由软件运动术语史.md` 第 1.1 节考据结论经 GNU 工程官方页面（gnu.org/gnu/manifesto.en.html）WebFetch 一手核验，《GNU 宣言》正文确含"give it away free"与"free software"表述；1983 年初始公告（gnu.org/gnu/initial-announcemen
 - 【查证来源】`原材料/研究/自由软件词源考察/03-自由软件运动术语史.md` 第 2.3 节考据结论经 gnu.org/philosophy/free-sw.html WebFetch 一手核验，脚注 1 一手陈述“1990 年左右，列出来的自由是 1、2 和 3”，“我们没有修改其他 3 个自由的序号，而是将运行软件的自由列为 0”；现行四项自由表述经同一页面一手核验
   【交叉验证方法】两层
-- 【查证来源】`原材料/研究/自由软件词源考察/03-自由软件运动术语史.md` 第 1.4 节考据结论经 GPL v1 全文（gnu.org/licenses/gpl-1.0.html）WebFetch 一手核验，前言确含"When we speak of free software, we are referring to freedom, not price"；GPL v2 全文（gnu.or
+- 【查证来源】`原材料/研究/自由软件词源考察/03-自由软件运动术语史.md` 第 1.4 节考据结论经 GPL v1 全文（gnu.org/licenses/gpl-1.0.html）WebFetch 一手核验，前言确含"When we speak of free software, we are referring to freedom, not price"；〔待核：原文截断，后文待回源〕
 - 【查证来源】`原材料/研究/自由软件词源考察/03-自由软件运动术语史.md` 第 3.1、3.2 节考据结论经 GPL v1 全文（gnu.org/licenses/gpl-1.0.html）与 GPL v2 全文（gnu.org/licenses/old-licenses/gpl-2.0.html）WebFetch 一手核验，两版全文均未出现"copyleft"一词；斯托曼自述《The GNU
 - 【查证来源】`原材料/研究/自由软件词源考察/04-开源软件运动术语史.md` 第 1.1、1.2 节考据结论经 OSI 官方历史页面 WebFetch 一手核验"open source"标签于 1998 年 2 月 3 日在 Palo Alto 创建；Foresight 官方叙述 WebFetch 一手核验 1998 年 2 月 2 日晚 Los Altos 会议与 2 月 5 日 VA Res
 

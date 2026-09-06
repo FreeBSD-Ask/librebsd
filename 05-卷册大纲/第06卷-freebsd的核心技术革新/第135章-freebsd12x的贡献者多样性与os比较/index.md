@@ -21,7 +21,7 @@ volume: 第06卷-freebsd的核心技术革新
   - 文献：bsd_commits.db（freebsd-src contrib
 - 总纲第 6 条——技术路线分化：2018-2022 年是操作系统格局深刻变化的五年：Linux 在云原生领域（Kubernetes、容器、eBPF）建立绝对主导地位；Windows 通过 WSL2 拥抱 Linux 生态；macOS 经历架构转换（x86→Apple Silicon）；OpenBSD 坚持安全优先路线；FreeBSD 在 Netflix、WhatsApp（部分基础设施）、Cloud
 - 总纲第 17 条——软件工程：12.x 周期 68 个 SA 与 14.x 周期 80 个 SA 的对比须放置在时间尺度上理解——14.x 周期 80 个 SA 集中在 32 个月内（2023.11-2026.7），12.x 周期 68 个 SA 分布在 28 个月内，月均速率相近（约 2.4-2.5 个/月），但 12.x 周期 SA 的“主题分布”显著不同：12.x 周期 SA 主要围绕 In
-- 总纲第 7 条——硬件与软件辩证：12.x 周期密集出现的 MDS、MCEPSC、TAA、SwapGS 四组侧信道漏洞，是 Meltdown/Spectre 之后 Intel CPU 微架构漏洞的“第二波浪潮”——它们共享同一根本原因：CPU 为追求性能而打破架构层定义的安全边界（推测执行、乱序执行、TSX 事务内存）；FreeBSD 在 12.x 周期响应这一浪潮的方式是“逐次合入缓解、每次都引
+- 总纲第 7 条——硬件与软件辩证：12.x 周期密集出现的 MDS、MCEPSC、TAA、SwapGS 四组侧信道漏洞，是 Meltdown/Spectre 之后 Intel CPU 微架构漏洞的“第二波浪潮”——它们共享同一根本原因：CPU 为追求性能而打破架构层定义的安全边界（推测执行、乱序执行、TSX 事务内存）；〔待核：原文截断，后文待回源〕
 - 总纲第 6 条——技术路线分化：12.x 周期是 bhyve 作为 FreeBSD 自研 BSD 许可 hypervisor 的“第一次大规模漏洞清算期”——先前 10.x-11.x 周期 bhyve 漏洞 SA 极少（仅零星一两个），12.x 周期 5 个 bhyve SA 集中爆发，反映 bhyve 在 12.0 引入 NVMe 仿真、jail 内运行、PCI 直通改进后攻击面扩大；**与 1
 
 ## 辨析
@@ -29,7 +29,7 @@ volume: 第06卷-freebsd的核心技术革新
 - 企业提交多属受雇工作期间的“有组织贡献”，不宜与志愿者个人贡献混同；corp 名单随年份变动，须以 contributors 表逐期核验。
   - 文献：bsd_commits.db（freebsd-src contributors 表，窗口 2017–2019，检索 2026-07-21）［A］；FreeBSD 项目贡献者指南（<<https://docs.freebsd.org/en/artic>
 - Linux 在 2018-2022 年引入了大量新功能（io_uring、BPF、WireGuard 等），FreeBSD 采取更谨慎的策略，功能引入慢但稳定性优先；OpenBSD 的 **unveil(2)** 与 FreeBSD Capsicum 理念相似但 API 设计不同；FreeBSD 的 jails 与 Linux cgroups/namespaces/Docker 功能范围不同——F
-- **需严格区分 commit 周期与 SA 发布周期**：本节采用 freebsd-12.x.md 版本周期文件的“commit 周期”定义（2018-12-01 至 2021-04-01），但 SA-21:08.vm、SA-21:09.accept_filter、SA-21:10.jail_mount 三个 SA 发布于 2021-04-06，恰在 13.0-RELEASE（2021-04-13
+- **需严格区分 commit 周期与 SA 发布周期**：本节采用 freebsd-12.x.md 版本周期文件的“commit 周期”定义（2018-12-01 至 2021-04-01）〔待核：原文截断，后文待回源〕
 - **需精确说明 MCEPSC 与 Meltdown/Spectre 的区别**：MCEPSC（CVE-2018-12207）不是数据泄露而是 DoS——恶意 guest 通过强制页面大小变更触发 host MCE panic，是“虚拟化安全边界”问题（host 被 guest 攻击导致宕机），与 Meltdown 的“用户态读取内核数据”性质不同；MCEPSC 的修复涉及 Intel SKL002
 - **需严格区分**：① SA-20:28.bhyve_vmcs（CVE-2020-24718，Intel VMCS 写入）与 SA-20:29.bhyve_svm（CVE-2020-7467，AMD SVM 写入）是两个独立 SA 但同日（2020-09-15）发布——这是 FreeBSD Security Team 处理“同源漏洞跨架构”的典型模式，Intel 与 AMD 虚拟化指令集独立但漏洞
 

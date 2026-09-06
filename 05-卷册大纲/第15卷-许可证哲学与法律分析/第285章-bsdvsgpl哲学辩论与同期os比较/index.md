@@ -12,7 +12,7 @@ volume: 第15卷-许可证哲学与法律分析
 - Committer’s Big List of Rules 的沉默反映分层设计——治理程序处理“谁有权提交”，许可证哲学通过社区讨论与工程实践处理“提交什么”。BSD 化工程未通过修订 committer 规则实现，而是通过构建 BSD 许可证替代品逐步完成，证明规则的程序中立未阻碍许可证纯化，反而为工程替代争取了时间——若规则在早期强制禁绝 GPL 代码，FreeBSD 将因缺乏可用编译器而无法
 - Committer’s Big List of Rules 争议映射出革命与改革的方法论分歧。革命路径主张直接修订规则——禁止 GPL 代码进入 base 系统、强制许可证审查、将 BSD 化写入治理章程；改革路径则在不修订规则的前提下，通过工程替代（Clang、LibreSSL、mandoc）逐步实现许可证纯化。FreeBSD 选择了改革路径，其困难远高于革命——须先构建功能对等的 BSD 替代
 - 中文技术圈普遍以“病毒/传染”描述 GPL copyleft 机制，此隐喻**在法律意义上具有系统性误导**。词源可考：1990 年即出现 "General Public Virus"（GPV）贬称；2001 年 Microsoft 高管 Craig Mundie 称 GPL "viral aspect"，Steve Ballmer 更称 GPL 代码是 "a cancer that attach
-- GPL 义务的触发条件是**分发（distribute，GPLv2）/传播（convey，GPLv3）**，而非“使用”或“修改”。中文圈“只要用了 GPL 代码就必须开源”的表述是核心误读之一。FSF GPL FAQ 明确：①**内部使用修改版不触发开源义务**——“GPL 不要求你发布修改版……你有自由修改并自用，而不必发布。这个规则也适用于机构（包括公司）”；②**运行修改版提供服务（Saa
+- GPL 义务的触发条件是**分发（distribute，GPLv2）/传播（convey，GPLv3）**，而非“使用”或“修改”。中文圈“只要用了 GPL 代码就必须开源”的表述是核心误读之一。FSF GPL FAQ 明确：①**内部使用修改版不触发开源义务**——“GPL 不要求你发布修改版……你有自由修改并自用，而不必发布。这个规则也适用于机构（包括公司）”；〔待核：原文截断，后文待回源〕
 
 ## 史料
 

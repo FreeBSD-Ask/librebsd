@@ -9,7 +9,7 @@ volume: 第07卷-freebsd的工程体系重构
 ## 史料
 
 - [DB:research_notes:blocks:1204] 关键词「技术演进」命中：史实考据：Marshall Kirk McKusick、George V. Neville-Neil、Robert N.…
-- [DB:research_notes:blocks:6115] 关键词「技术演进」命中：第十一卷覆盖第 130-138 章，共 9 章，叙事跨度 1978-2026：人类瘟疫：流行病对技术社区的效应（第 13…
+- [DB:research_notes:blocks:6115] 关键词「技术演进」〔待核：原文截断，后文待回源〕
 - [DB:research_notes:blocks:6141] 关键词「技术演进」命中：法律限制：技术演进的法律边界（第 138 章）…
 
 ## 要点
@@ -27,7 +27,7 @@ volume: 第07卷-freebsd的工程体系重构
 - 总纲第 7 条——BSD 与 UNIX 谱系的连续性：MIPS 是 RISC 处理器的先驱，SGI IRIX 是重要的商业 UNIX 平台；FreeBSD 对 MIPS 的支持延续了 BSD 在非 x86 架构上的传统，但市场和技术的变化使其退役成为必然
   - 辨析：13.0 是 MIPS 降级而非完全移除——MIPS 代码在 13.x 源码树中仍存在但不再作为正式支持架构；MIPS 完全移除发
 - 总纲第 23 条——社区治理：Core Team 两年一次的选举制度是 FreeBSD 治理形式化的体现——定期换届防止权力固化，选举过程向所有 committer 开放，这一制度自 FreeBSD 项目早期延续至今
-  - 辨析：Core Team 成员名单随选举变动，具体成员列表需查阅对应年份的官方公告，本书记载的是制度层面的延续性而非特定个人；Core Team 决策通常采用协商一致（con
+  - 辨析：Core Team 成员名单随选举变动，具体成员列表需查阅对应年份的官方公告，本书记载的是制度层面的延续性而非特定个人；〔待核：原文截断，后文待回源〕
 - 总纲第 4 条——分离与聚合：ZFS 从 illumos/FreeBSD/Linux 三端分叉（分离）到 OpenZFS 统一代码库（聚合），是开源项目“分久必合”的典型案例——分叉让各平台快速适配，统一后共享维护成本
   - 辨析：OpenZFS 2.0 统一发生在 13.0 发布前（2020-11），13.0 是首个包含统一 OpenZFS 的 FreeBSD 大版本；13.0 之前 Free
 - 总纲第 6 条——技术路线分化：Linux ABI 兼容层体现了 FreeBSD 的实用主义哲学——不做宗教式的"Not Invented Here"排斥，而是承认 Linux 软件生态的主导地位，提供兼容层让用户能够运行需要的软件，同时保留 FreeBSD 内核和用户态的优势
@@ -41,9 +41,9 @@ volume: 第07卷-freebsd的工程体系重构
   - 文献：FreeBSD Project. (2021). *13.0 Release Notes* (Architectures se
 - Core Team 成员名单随选举变动，具体成员列表需查阅对应年份的官方公告，本书记载的是制度层面的延续性而非特定个人；Core Team 决策通常采用协商一致（consensus）原则，而非投票表决，这是 BSD 社区的传统治理风格
   - 文献：FreeBSD Project. *Core Team Information*. freebsd.org/core/; FreeBSD Projec
-- OpenZFS 2.0 统一发生在 13.0 发布前（2020-11），13.0 是首个包含统一 OpenZFS 的 FreeBSD 大版本；13.0 之前 FreeBSD ZFS 维护独立分支，与 ZoL（ZFS on Linux）、illumos ZFS 存在代码分叉，这一分叉状态持续了约 13 年（2007-2020）；ZFS 文件系统本身的历史详见相关章节，本节仅讨论 13.x 时期（20
+- OpenZFS 2.0 统一发生在 13.0 发布前（2020-11），13.0 是首个包含统一 OpenZFS 的 FreeBSD 大版本；13.0 之前 FreeBSD ZFS 维护独立分支，与 ZoL（ZFS on Linux）、illumos ZFS 存在代码分叉，这一分叉状态持续了约 13 年（2007-2020）；〔待核：原文截断，后文待回源〕
 - Linux ABI 层不是“Linux 虚拟机”——它直接在 FreeBSD 内核上运行 Linux 二进制，没有硬件虚拟化开销，但也并非 100% 兼容；某些 Linux 特定内核功能、驱动、cgroups 深度依赖的程序可能无法正常运行；支持的 Linux 发行版版本有特定范围，不是所有 Debian/Ubuntu 版本都支持
-  - 文献：FreeBSD Project. **linux(4
+  - 文献**：FreeBSD Project. April 2021 announcements; Supreme Court decision date; Git migration announcement date. ［A］
 
 ## 文献
 

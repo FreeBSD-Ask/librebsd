@@ -9,10 +9,10 @@ volume: 第08卷-freebsd的范式转换
 ## 要点
 
 - FreeBSD 延续了 UNIX 悠久的 ASCII 艺术传统：(1) **启动屏幕的 daemon 图标**——系统启动时在控制台显示的 Beastie ASCII art 由 Poul-Henning Kamp 创作，最早出现在 FreeBSD 3.x 时期；(2) **syscons/vt 控制台的 logo 选项**——用户可通过 **loader_logo** 变量选择不同的启动 log
-- 三大开源吉祥物的文化对比经多源验证：(1) **BSD Daemon（Beastie, 1976/1988）**——职业艺术家受委托创作，版权归个人（McKusick），形象带有技术隐喻（三叉戟 = fork 进程，运动鞋 = 速度），历史最悠久但商业开发受限；(2) **Linux Tux（1996）**——Larry Ewing 用 GIMP 0.54 创作，林纳斯·托瓦兹（Linus Tor
+- 三大开源吉祥物的文化对比经多源验证：(1) **BSD Daemon（Beastie, 1976/1988）**——职业艺术家受委托创作，版权归个人（McKusick），形象带有技术隐喻（三叉戟 = fork 进程，运动鞋 = 速度），历史最悠久但商业开发受限；(2) **Linux Tux（1996）〔待核：原文截断，后文待回源〕
 - 全球多所大学是 FreeBSD 研究和开发的重要力量：(1) **剑桥大学（University of Cambridge）**——罗伯特·N. M. 沃森 领导的 Security Research Group 是 Capsicum 和 CHERI 的发源地，长期向 FreeBSD 贡献安全相关代码；(2) **滑铁卢大学（University of Waterloo）**——加拿大计算机强校，
 - FreeBSD 有独特的技术写作传统，其中最具代表性的作家是 **Michael W. Lucas**：(1) **Michael W. Lucas**——他的《Absolute FreeBSD》（第 1 版 2002、第 2 版 2007、第 3 版 2018）是 FreeBSD 社区最受推崇的指南书；Lucas 的写作风格兼具技术深度和文学幽默感，避免枯燥的手册式叙述，大量使用第一人称、轶事和
-- 埃里克·雷蒙德（Eric S. Raymond）（ESR）与 BSD 的关系复杂且具有争议：(1) **ESR 的 BSD 背景**——Raymond 早期是 UNIX/BSD 用户，他对 BSD 文化有深入了解，《The Cathedral and the Bazaar》（1997）中多次引用 BSD 案例；(2) **《The Art of UNIX Programming》（TAOUP, 2
+- 埃里克·雷蒙德（Eric S. Raymond）（ESR）与 BSD 的关系复杂且具有争议：(1) **ESR 的 BSD 背景**——Raymond 早期是 UNIX/BSD 用户，他对 BSD 文化有深入了解，《The Cathedral and the Bazaar》（1997）中多次引用 BSD 案例；〔待核：原文截断，后文待回源〕
 
 ## 史料
 

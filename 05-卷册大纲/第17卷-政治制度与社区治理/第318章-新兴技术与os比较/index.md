@@ -58,7 +58,7 @@ Computer Knowledge and Technology电脑知识与技术
 - DragonFly BSD 开发者页面；邮件列表存档；dports 统计；Wiki 与手册；用户反馈 ［A］
 - 三大 BSD 邮件列表存档；各项目官方文档；外部研究；比较文献 ［A］
 - 19.14a 对三大 BSD 团队批评的反批评：各项目治理模式的历史合理性与适应性
-  - 要点：反批评者认为，NetBSD Core Team 的“保守”保证了跨平台移植的稳定性——NetBSD 支持 50 余种硬件平台，保守的变更管理是跨平台兼容性的必要保障；OpenBSD 的 de Raadt“个人主导”模式虽强硬但保证了安全审计的一致性——OpenBSD 的安全声誉与 de Raadt 的强力领导密切相关，一次安全审计若由委员会主导可能无法达到同样的严格程度；DragonFly BSD 的 Dillon“单人主
+  - 要点：反批评者认为，NetBSD Core Team 的“保守”保证了跨平台移植的稳定性——NetBSD 支持 50 余种硬件平台，保守的变更管理是跨平台兼容性的必要保障；OpenBSD 的 de Raadt“个人主导”模式虽强硬但保证了安全审计的一致性——OpenBSD 的安全声誉与 de Raadt 的强力领导密切相关，一次安全审计若由委员会主导可能无法达到同样的严格程度；〔待核：原文截断，后文待回源〕
 - CRS 科技政策报告；NSF Budget Requests 历年档案；DARPA 预算档案；Pew Research Center 政治极化报告；美国国会预算办公室（CBO）报告[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]
 - US Census Bureau Income Statistics；FreeBSD Core Team 历届名单；FreeBSD Foundation 多元化政策；GitHub Octoverse 报告；CRA Taulbee Survey ［A］
 - BEA 经济统计；企业财报与代码贡献记录；BSDi 商业化档案；FreeBSD Foundation 赞助名单；科技业整合研究文献 ［A］

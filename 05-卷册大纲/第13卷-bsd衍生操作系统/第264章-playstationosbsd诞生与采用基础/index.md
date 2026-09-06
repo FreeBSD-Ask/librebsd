@@ -27,7 +27,7 @@ volume: 第13卷-bsd衍生操作系统
 - PS3 的 “FreeBSD 成分” 范围与 Linux 支持撤回的关系须厘清[考据完成：2026-07-28 经穷尽联网考据，PS3 的 FreeBSD 成分范围与 Linux 支持撤回的精确关系 Sony 未官方公开披露，多个二手来源（gamersky.com、3dmgame.com、CSDN）记载 PS4 Orbis OS 基于 FreeBSD 9.0 但 PS3 时期的 FreeBSD 成
 - 具体贡献者须以 commit 记录核实；freebsd.db 查询 L7.2.1 的 “未出现 @sony.com 邮箱贡献者” 不等于 Sony 零回馈——Sony 工程师可能使用 @freebsd.org 邮箱（被查询排除条件过滤）、个人邮箱或 @playstation.com 等子域名提交，且 PlayStation OS 作为专有产品其内部 fork 不公开，Sony 可能通过内部维护而非
 - 【查证来源】PlayStation.Blog 2010.3.28 PS3 Firmware v3.21 Update 公告原文经 WebFetch 核验（blog.us.playstation.com/2010/03/28/ps3-firmware-v3-21-update/），记载"disable the ‘Install Other OS’ feature"与"due to security 
-- 【查证来源】PS3 用户协议（PlayStation Network User Agreement）保留 Sony 修改系统软件权利的条款经 Sony 官方页面核验；Ars Technica 2016.6.22 报道经 WebFetch 一手核验，记载"Sony argued that its terms of service allowed it to remove the Other OS f
+- 【查证来源】PS3 用户协议（PlayStation Network User Agreement）保留 Sony 修改系统软件权利的条款经 Sony 官方页面核验；〔待核：原文截断，后文待回源〕
 - 【查证来源】原材料/哲学/项目统摄史观/第 25 章.md 总纲第 11、13、19 条原文经 Read 一手核验；Ventura v. SCEA 案全部法律历程档案（2010 提起、2011 撤销、2014 上诉法院部分推翻、2016 和解、2017 拒绝和解、2017 修订方案、2018 最终赔偿）经 Ars Technica 2016.6.22 报道、Ars Technica 2017.2.
 
 ## 文献

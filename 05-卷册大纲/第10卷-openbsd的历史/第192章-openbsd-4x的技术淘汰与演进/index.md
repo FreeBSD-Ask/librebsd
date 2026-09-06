@@ -10,7 +10,7 @@ volume: 第10卷-openbsd的历史
 
 - OpenBSD 3.0（2001.12）引入 vnd 块设备的加密模式 svnd，使用 Blowfish 算法；OpenBSD 4.x 时期持续改进加密栈——softraid 加密于 2007-11-27 tedu commit f18dcc9c26b1 首次引入（4.2 周期），2008-06-14 hshoexer commit 79cdc9424edb 完整启用（4.4 周期），支持 AES
 - 2006-2009 防火墙格局：OpenBSD 4.x 的 pf 为 BSD 事实标准（流向 FreeBSD/NetBSD/DragonFly BSD），Linux 以 iptables/netfilter 主导，Windows 基础防火墙闭源；pf 的简洁锚点规则影响后续 BSD 防火墙设计，成为 OpenBSD 4.x 的工程标志
-- gcc GPLv3 争议的合图层论点包含三个历史定位。第一是 GPLv3 与 ISC 的根本分歧是许可证哲学而非技术问题——FSF 的 copyleft 与 OpenBSD 的 ISC 是两种自由观的对立（FSF “用户自由” vs OpenBSD “采纳者自由”），二者各有适配而非优劣之分，对应总纲第 13 条 “法律与道德是利益分配”——FSF 的 “保护用户自由” 与 OpenBSD 的 “
+- gcc GPLv3 争议的合图层论点包含三个历史定位。第一是 GPLv3 与 ISC 的根本分歧是许可证哲学而非技术问题——FSF 的 copyleft 与 OpenBSD 的 ISC 是两种自由观的对立（FSF “用户自由” vs OpenBSD “采纳者自由”）〔待核：原文截断，后文待回源〕
 - openbsd 代码仓库共 491,195 次提交（1995-10-18 至 2026-08-25），3,352 位贡献者
 - OpenBSD 4.x 时期的本地漏洞与网络栈漏洞分散于 pf 规则拷贝、X11 转发、Apache 跨站脚本等组件——CVE-2008-1483 为 X11 转发连接劫持漏洞，markus 于 2008-04-02 通过回退 commit 1.183 修复（commit `39ff0b053b9574ba427fa40f29afcc8ceea31f3d`），技术机制类型为信息泄露，无 CVSS
 

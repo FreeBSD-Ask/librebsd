@@ -10,7 +10,7 @@ volume: 第09卷-netbsd的历史
 
 - NetBSD 自 1.0（**1994-10-26**）起从 4.4BSD-Lite2 继承 **audio(4)** 通用音频驱动框架——其核心机制是提供设备无关的音频接口，硬件驱动通过 audio(9) 接口注册，用户态通过 /dev/audio 与 /dev/sound 设备访问。man page 见 **man.netbsd.org/audio.4**。NetBSD audio(4) 与
 - NetBSD Foundation 于 1995 年在特拉华州注册成立（chartered），现行确为 501(c)(3)；但注册年份与免税资格获准年份应区分——官方发布仅称 ‘chartered in 1995’，501(c)(3) 具体获准年份一手页未列（第三方资料有 2004 年之说）。注册过程包括起草 By-Laws、申请 IRS 501(c)(3) 免税地位[考据完成：2026-08-0
-- 2003 年是 NetBSD 项目第 10 周年——NetBSD Foundation 2003 年报明确称"the tenth anniversary year of the NetBSD Project"，与 NetBSD About 页面"NetBSD was originally released in 1993"及 formal.html 列出 NetBSD 0.8（1993-04-20
+- 2003 年是 NetBSD 项目第 10 周年——NetBSD Foundation 2003 年报明确称"the tenth anniversary year of the NetBSD Project"，与 NetBSD About 页面"NetBSD was originally released in 1993"及 formal.html 列出 NetBSD 0.8（1993-04-20〔待核：原文截断〕
 - 2026-08-06 将 NetBSD developers.html（committer 权限管理官方页面，103KB）与 core.html（Core Group 现任 7 人 + 历任 22 人名单）下载归档至 `03-原始史料库/11-邮件列表史料/02-netbsd/governance/`——为本节“committer 权限记录”与“18 个月不活跃自动退休”考据提供官方一手档案；de
 - 贡献者 commit 记录与邮件考据——NetBSD CVS commit 日志与邮件列表讨论是研究贡献者结构的一手史料；考据需对照多源档案交叉验证
 

@@ -8,7 +8,7 @@ volume: 第06卷-freebsd的核心技术革新
 
 ## 要点
 
-- FreeBSD 12.0 将 OpenSSL 升级至 1.1.1a 版本（r340711），这是 OpenSSL 项目于 2018 年 9 月发布的 LTS（长期支持）版本，首次正式支持 TLS 1.3 协议（RFC 8446）。TLS 1.3 相比 TLS 1.2 具有显著改进：握手延迟从 2-RTT 减少至 1-RTT（0-RTT 可选）、移除了大量老旧不安全的密码套件（如 RSA 密钥交换、
+- FreeBSD 12.0 将 OpenSSL 升级至 1.1.1a 版本（r340711），这是 OpenSSL 项目于 2018 年 9 月发布的 LTS（长期支持）版本，首次正式支持 TLS 1.3 协议（RFC 8446）。TLS 1.3 相比 TLS 1.2 具有显著改进：握手延迟从 2-RTT 减少至 1-RTT（0-RTT 可选）〔待核：原文截断，后文待回源〕
 - Meltdown/Spectre 对 FreeBSD 工程实践产生了深远影响：① 安全响应流程成熟化——FreeBSD Security Team 在此事件中展现了与 Intel、AMD、Linux/Windows/macOS 安全团队协调响应的能力，Security Officer Gordon Tetlow（戈登·泰特洛） 主导了披露前的协调工作；② 性能退化与优化权衡——KPTI 对系统调用
 - 12.0 引入 **netdump(4)** 驱动与功能，允许内核崩溃（panic）时将 crash dump 通过网络传输到远程主机，而非仅写入本地交换分区。这对无本地存储的磁盘 less 系统、云环境虚拟机、嵌入式设备的内核调试具有重要意义。**netdump(4)** 由 John Baldwin（约翰·鲍德温）（jhb@）等人开发，FreeBSD Foundation 赞助。**netma
 - FreeBSD 12.4-RELEASE 于 2022 年 12 月 5 日发布，是 stable/12 第五个也是最后一个版本（"fifth release"，12.x 系列终版）。核心更新：LLVM 工具链套件升级至 13.0.0（跨度极大——从 12.3 使用的 10.x 直接跳到 13.0.0）；OpenSSL 1.1.1q；OpenSSH 9.1p1；**ena(4)** Amazon
@@ -34,7 +34,7 @@ volume: 第06卷-freebsd的核心技术革新
 ## 辨析
 
 - OpenSSL 1.1.1a 中的"a"后缀表示这是 1.1.1 系列的首个补丁版本（修复了 1.1.1 初始发布后的问题），不是预发布版本。TLS 1.3 在 12.0 发布时已获 IETF 批准（RFC 8446 于 2018 年 8 月发布），但浏览器与服务器生态系统的完全迁移花费了数年时间。FreeBSD 12.0 中 Kernel TLS（kTLS，TLS 加密/解密在内核中进行以降低
-- 部分评论认为“FreeBSD 的侧信道缓解不如 Linux 及时”——这一说法有一定道理，Linux 因商业发行版（Red Hat、Canonical 等）和大型云厂商（AWS、Google）的迫切需求而更快合入缓解补丁；FreeBSD 社区规模较小，合入时间相对晚数周但代码质量经过更充分审查。两者最终都实现了等效的缓解覆盖。微码更新加载在 FreeBSD 中需手动启用（通过 rc.conf 的
+- 部分评论认为“FreeBSD 的侧信道缓解不如 Linux 及时”——这一说法有一定道理，Linux 因商业发行版（Red Hat、Canonical 等）和大型云厂商（AWS、Google）的迫切需求而更快合入缓解补丁；FreeBSD 社区规模较小，合入时间相对晚数周但代码质量经过更充分审查。两者最终都实现了等效的缓解覆盖。〔待核：原文截断，后文待回源〕
 - *netdump(4)** 在 12.0 为初始支持，支持的网卡驱动有一定限制（主要支持 **msk(4)**、**bnxt(4)**、**cxgbe(4)** 等部分驱动），并非所有网卡都可用于 netdump；netdump 使用 UDP 协议传输 dump 数据，依赖特定的 netdumpd 守护进程接收。
 - 12.4 的 Clang 版本从 10.0.1（12.3）直接跳到 13.0.0，是 12.x 系列中跨度最大的编译器升级，因 stable/12 采用 MFC（Merge From Current）策略选择性合并重要更新；**dma(8)** 在 12.4 更新但 dma 并非默认 MTA——sendmail 仍是 12.x 默认邮件传输代理，dma 作为轻量级替代通过 mta = mailer
 - PC98 退役 commit r312910 时间为 2017.2.1，生效于 2018.12.11（12.0 发布），间隔近两年因 12.0 多次延期。armeb 移除的具体 commit 号未在 Release Notes 中显式标注，但源码树中相关代码与 PC98 同期清理。

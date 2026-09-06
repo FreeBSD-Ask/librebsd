@@ -8,9 +8,9 @@ volume: 第12卷-macos的bsd遗产
 
 ## 要点
 
-- 项目史观总纲第 5 条“没有必然性，只有偶然性”为审视 libdispatch 流动史提供了根本框架。libdispatch 在 2009 年 9 月 10 日以 Apache 2.0 开源是多重偶然因素的交汇：Snow Leopard 的“无新功能、重工程质量”定位（偶然因素一，为 GCD 工程投入创造了空间），2009 年 Apple 与 Microsoft 在桌面 OS 市场的竞争压力（偶然
+- 项目史观总纲第 5 条“没有必然性，只有偶然性”为审视 libdispatch 流动史提供了根本框架。libdispatch 在 2009 年 9 月 10 日以 Apache 2.0 开源是多重偶然因素的交汇：Snow Leopard 的“无新功能、重工程质量”定位（偶然因素一，为 GCD 工程投入创造了空间）〔待核：原文截断，后文待回源〕
 - 项目史观总纲第 8 条“本体论上各方平等”为审视 libdispatch 流动史提供了去中心化视角。freebsd.db 显示 2009-2015 年间 Apple、FreeBSD、Linux 三方在并发抽象上的关系不是“先进-落后”的等级关系，而是各自独立演化的本体论平等主体：Apple 的 GCD+libdispatch（任务队列抽象）是 Apple 主体性的显现，FreeBSD 的 pthr
-- 项目史观总纲第 11 条“商品是形式主义”与第 19 条“解释学循环是历史认识的根本条件”为审视 libdispatch 流动史提供了双重透镜。形式主义层面：libdispatch 作为并发抽象库，其代码在 Apple 与 FreeBSD 间流动时被“形式主义化”——同一份 libdispatch 代码在 FreeBSD ports 树中被重组为 FreeBSD 用户空间工具，其“商品形式”（可移
+- 项目史观总纲第 11 条“商品是形式主义”与第 19 条“解释学循环是历史认识的根本条件”为审视 libdispatch 流动史提供了双重透镜。〔待核：原文截断，后文待回源〕
 - Mac OS X 10.6 Snow Leopard 时代（2009-2011）正值 BSD 社区对 Apple 使用 FreeBSD 代码但不回馈的批评集中爆发期。批判方以 FreeBSD 内核开发者 **John Baldwin（约翰·鲍德温）** 与 **Marshall Kirk McKusick（马歇尔·柯克·麦库西克）**（4.3BSD 与 4.4BD 开发者，深度参与 FreeBSD
 - BSD 阵营与 Apple 工程师对“无薪员工”批判提出反驳，论证分三支。其一，许可证契约层面——BSD 许可证条款明确允许商业使用、修改、再发布而无强制回馈义务，FreeBSD 社区选择 BSD 许可证即是选择此契约模式，批判 Apple 不回馈等同于否认 BSD 许可证契约本身。**Marshall Kirk McKusick** 的公开表述“BSD 许可证就是一个复制中心，可以为所欲为，但我
 

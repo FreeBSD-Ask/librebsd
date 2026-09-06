@@ -21,7 +21,7 @@ volume: 第06卷-freebsd的核心技术革新
 - 总纲第 25 条——终结与延续：OpenZFS 的成立标志着 ZFS 从 “Sun/Oracle 的项目” 彻底转变为 “社区拥有的项目”——这是一个历史终结与新生的节点：Sun 时代的 ZFS 终结了，社区自治的 ZFS 诞生了；Bylaws 这一形式化治理文件的制定，体现了开源项目从 “仁慈独裁者” 模式向制度化治理的转变
   - 辨析：OpenZFS 成立的精确时间：第一届 OpenZFS
 - 总纲第 6 条——技术路线分化：ZoL 的模块加载策略是法律约束下的工程妥协——ZFS 无法进入主线内核，因此通过 DKMS/LKM 方式在主线外分发；这种 “核外生存” 模式虽然有性能和维护成本，但在法律灰区中开辟了一条可行路径
-  - 辨析：需澄清：Linux 内核的 GPL 许可范围问题——Linux 内核 COPYING 文件明确指出 "kernel modules are conside
+  - 辨析：需澄清：Linux 内核的 GPL 许可范围问题——Linux 内核 COPYING 文件明确指出 "kernel modules are conside〔待核：原文截断〕
 
 ## 辨析
 

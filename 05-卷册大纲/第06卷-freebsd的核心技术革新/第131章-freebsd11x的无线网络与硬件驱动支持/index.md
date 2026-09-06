@@ -9,8 +9,8 @@ volume: 第06卷-freebsd的核心技术革新
 ## 要点
 
 - 11.x 时期虚拟化平台驱动持续改进：VMware 方面——**vmx(4)** VMXNET3 网络驱动在 10.0 从 OpenBSD 移植后 11.x 持续改进性能与稳定性；**vmblock(4)**/**vmmouse(4)**/**vmhgfs(4)** 等 VMware guest 驱动持续更新；VMware SVGA 图形驱动配合 Xorg 可实现自适应分辨率。Xen 方面——Do
-- FreeBSD 11.x 五个版本的架构支持变化精确时间线见下表，stable/11 EOL 日期为 **2021-09-30**。对比：stable/10 支持 8 种架构（含 ia64，无 aarch64）；stable/12 将移除 sparc64、引入 RISCV 正式支持、arm64 持续向 Tier 1 迈进。11.x 标志着 FreeBSD 架构支持从“传统 RISC 架构（Powe
-- 11.x 时期 FreeBSD 活跃贡献者群体数百人，核心贡献者包括（不限于）：①Release Engineering：Glen Barber（gjb@，Release Engineering Lead 贯穿 11.x 全系列）、Marius Strobl（Deputy Lead）、Konstantin Belousov（kib@）、Bryan Drewery（布莱恩·德鲁里）（bdrewery
+- FreeBSD 11.x 五个版本的架构支持变化精确时间线见下表，stable/11 EOL 日期为 **2021-09-30**。对比：stable/10 支持 8 种架构（含 ia64，无 aarch64）；stable/12 将移除 sparc64、引入 RISCV 正式支持、arm64 持续向 Tier 1 迈进。〔待核：原文截断，后文待回源〕
+- 11.x 时期 FreeBSD 活跃贡献者群体数百人，核心贡献者包括（不限于）：①Release Engineering：Glen Barber（gjb@，Release Engineering Lead 贯穿 11.x 全系列）、Marius Strobl（Deputy Lead）、Konstantin Belousov（kib@）、Bryan Drewery（布莱恩·德鲁里）〔待核：原文截断，后文待回源〕
 - 外部安全研究者系统审计 FreeBSD 无线网络栈，发现多个 WPA2 缺陷（含 KRACK 相关）。促使 FreeBSD 安全团队建立无线专项审计流程。
 - 11.x 时期第三方软件变更的特点是“稳定升级、无激进取代”——Clang 持续升级但无新的编译器迁移，OpenSSL 保持 1.0.2 系列、sendmail 保持默认地位、GCC 继续保留用于非 x86 架构。与 10.0 的“集中换代”和 12.0/13.0 的“GCC 移除”相比，11.x 是三个版本周期中的“稳定期”——10.0 引入新工具链，11.x 稳定使用，12.0/13.0 完成
 

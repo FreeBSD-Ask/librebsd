@@ -61,7 +61,7 @@ volume: 第08卷-freebsd的范式转换
 ## 158.4.3 OpenSSH 的全球部署与安全审计传统
 
 - 要点
-- Puppy, R. F. (2000). *RFPolicy for vulnerability disclosure*. Bugtraq Mailing List; Cencini, A., Yu, K., & Chan, T. (2005). *Software Vulnerabilities: Full-, Responsible-, and Non-Disclosure*. University of Washington; Schneier, B. (2000). *Why We Disclose: Full Disclosure and Why It's Good for Secu
+- Puppy, R. F. (2000). *RFPolicy for vulnerability disclosure*. Bugtraq Mailing List; Cencini, A., Yu, K., & Chan, T. (2005). *Software Vulnerabilities: Full-, Responsible-, and Non-Disclosure*. University of Washington; Schneier, B. (2000). *Why We Disclose: Full Disclosure and Why It's Good for Secu〔待核：原文截断〕
 
 ## 自反性声明
 

@@ -10,7 +10,7 @@ volume: 第09卷-netbsd的历史
 
 - NetBSD 9.0（**2020.2.14**）引入实验性 ZFS 支持，源于 OpenZFS 移植；工程挑战包括 SPL（Solaris Porting Layer）适配、内存管理（NetBSD UVM vs Solaris VM）、并发原语转换；ZFS 在 NetBSD 上的稳定性与性能不及 FreeBSD OpenZFS
 - NetBSD 9.0 Release Notes 与 CVS commit log 是研究 9.0 开发的核心史料；9.0 发布周期约 1 年 7 个月（8.0 于 2018.7.17 发布，9.0 于 2020.2.14 发布，后续 9.1/9.2/9.3/9.4 持续维护）；commit 记录反映 ZFS、GPU、网络协议栈的开发节奏
-- NetBSD 9.0（**2020.2.14**）改进文件系统支持，ext2fs 的进一步改进支持更多 ext4 特性；旧 FFS 作为默认文件系统延续，新文件系统作为可选；此改进让 NetBSD 在现代 Linux 文件系统互操作上获得能力。~~原叙事中“NetBSD 9.0 引入对 F2FS（Flash-Friendly File System）的实验性支持”声明未得到代码级确认~~——bsd
+- NetBSD 9.0（**2020.2.14**）改进文件系统支持，ext2fs 的进一步改进支持更多 ext4 特性；旧 FFS 作为默认文件系统延续，新文件系统作为可选；此改进让 NetBSD 在现代 Linux 文件系统互操作上获得能力。~~原叙事中“NetBSD 9.0 引入对 F2FS（Flash-Friendly File System）〔待核：原文截断，后文待回源〕
 - 2020 年 CoW 文件系统格局：FreeBSD 12/13 与 NetBSD 9.0 深度整合 OpenZFS，Linux 经 ZoL 树外提供，illumos/Solaris 持 ZFS 原创，OpenBSD 坚持 FFS/softraid，Windows 用 ReFS；NetBSD 9.0 的 ZFS 补齐使其存储能力与 FreeBSD 对齐。
 - 9.x 周期 NetBSD Security Officer Team 的 18 个 SA 在数量、节奏、覆盖面三个维度均显著低于 FreeBSD 14.x 周期同时段——9.x 周期约 5 年（2020.2 至 2024+）18 个 SA，FreeBSD 14.x 周期不足 3 年（2023.11 至 2026.7）80 个 SA，年化速率 NetBSD 约 3.6 SA/年、FreeBSD 约
 
@@ -28,7 +28,7 @@ volume: 第09卷-netbsd的历史
 - 先前叙事中称“9.0 发布日期 2020.5”系误传——NetBSD 官方发布页面（netbsd.org/releases/formal-9/NetBSD-9.0.html）明确为 2020.2.14；9.0 发布周期实际约 1 年 7 个月而非 2.5 年；9.0 的实际功能完整性需对照 release tarball 核验 [考据完成：2026-07-28 该处存疑标注属史料缺口，须待原始档案
 - 9.0 ext2fs 改进支持更多 ext4 特性的具体范围需对照源码核验。重要修正：经 bsd_commits.db netbsd-src 仓库 commits 表验证：查询 `message_subject LIKE '%f2fs%' OR message_subject LIKE '%F2FS%'` 结果为空，原叙事中“NetBSD 9.0 引入对 F2FS 的实验性支持”声明暂未得到代码级
 - ZFS 的 BSD 整合度高，证明 BSD 许可对大型存储栈的友好。
-- *数量对比的辨析**：9.x 周期 18 个 SA 与 FreeBSD 14.x 周期 80 个 SA 的对比须考虑四个因素：其一，NetBSD base 中贡献组件显著少于 FreeBSD base（无 Heimdal、libarchive、xz、sendmail→dma 等），贡献组件漏洞面更小；其二，NetBSD 9.x 周期 OpenSSL 仍使用 1.1.1 系列（保守策略未跟随 Ope
+- *数量对比的辨析**：9.x 周期 18 个 SA 与 FreeBSD 14.x 周期 80 个 SA 的对比须考虑四个因素：其一，NetBSD base 中贡献组件显著少于 FreeBSD base（无 Heimdal、libarchive、xz、sendmail→dma 等），贡献组件漏洞面更小；〔待核：原文截断，后文待回源〕
 
 ## 文献
 

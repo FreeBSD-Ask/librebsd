@@ -10,7 +10,7 @@ volume: 第12卷-macos的bsd遗产
 
 - Tiger 引入 **Dashboard**——基于 **WebKit**（Apple 自 KHTML/KJS 开源项目 fork 而来的网页渲染引擎，2003 年随 Safari 1.0 发布）的小部件运行环境，允许开发者使用 HTML/CSS/JavaScript 构建桌面小部件。Dashboard 与 BSD 层的关联体现于：小部件通过 BSD 层的 `mach_init`/`launchd
 - **Rosetta** 是 Apple 为 PowerPC→Intel 转换开发的动态二进制翻译层，随 **Mac OS X 10.4.4 Tiger Universal Binary**（**2006 年 1 月 10 日** 首批 Intel Mac 上市同步推出）一同发布。Rosetta 在用户态运行，将 PowerPC 二进制翻译为 Intel x86 代码执行，依赖 BSD 层的 `mm
-- **2005 年** Tiger 对比 **FreeBSD 5.4**（**2005 年 5 月 9 日** 发布）、**Linux 2.6**（2003-2005 年）、**Solaris 10**（**2005 年 1 月 31 日** 发布，已获 **UNIX 03**）、**Windows XP x64**（**2005 年 3 月 28 日** 发布），其 ACL 与 Spotlight
+- **2005 年** Tiger 对比 **FreeBSD 5.4**（**2005 年 5 月 9 日** 发布）、**Linux 2.6**（2003-2005 年）、**Solaris 10**（**2005 年 1 月 31 日** 发布，已获 **UNIX 03**）、**Windows XP x64**（**2005 年 3 月 28 日** 发布）〔待核：原文截断，后文待回源〕
 
 ## 史料
 

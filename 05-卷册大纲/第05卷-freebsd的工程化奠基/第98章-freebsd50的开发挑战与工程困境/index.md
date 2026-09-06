@@ -34,7 +34,7 @@ volume: 第05卷-freebsd的工程化奠基
 
 ## 97.10.2 Torvalds 对 VM 的辱骂性批评——四层辩证（批评—反批评—再批评—合图）
 
-- 要点：【批评层】Linus Torvalds 据传曾在 Linux 内核邮件列表（LKM
+- 要点：【批评层】Linus Torvalds 据传曾在 Linux 内核邮件列表（LKM〔待核：原文截断〕
 - 总纲第 7 条——性能回撤为可扩展性的代价。
 - 文献：SMPng 文档 ［A］
 

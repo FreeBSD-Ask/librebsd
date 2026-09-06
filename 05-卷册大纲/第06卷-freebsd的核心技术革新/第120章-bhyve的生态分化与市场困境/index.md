@@ -10,7 +10,11 @@ volume: 第06卷-freebsd的核心技术革新
 
 - bhyve 被成功移植到 illumos 内核，形成了独立的 illumos bhyve 分支；Pluribus Networks 与 Joyent 是 illumos bhyve 移植的主要贡献者，Joyent 在 SmartOS 中使用 bhyve 作为其 Triton 云平台的核心 hypervisor 之一（与 Solaris Zones 并列）；illumos bhyve 添加了一些 F
 - bhyve 项目的核心维护者 committer 状态：Neel Natu（尼尔·纳图）（nneul@）是 bhyve 初始代码作者，NetApp 员工，其 FreeBSD src committer 权限持续活跃至 2010 年代中后期，后逐渐减少活动；Peter Grehan（彼得·格雷汉）（grehan@）是 bhyve 长期主要维护者，FreeBSD Foundation 董事，持续活跃至
-- 2011-2026 年间与 bhyve 同期发展的主要虚拟化技术见下表，覆盖 Linux KVM、Xen、VMware ESXi、Microsoft Hyper-V、QEMU、bhyve、Apple Hypervisor.framework 共 7 个主流 hypervisor 的发布年份、主导者、许可证与市场定位。| 虚拟化技术 | 发布年份 | 主导者 | 许可证 | 市场定位 || ---
+- 2011-2026 年间与 bhyve 同期发展的主要虚拟化技术见下表，覆盖 Linux KVM、Xen、VMware ESXi、Microsoft Hyper-V、QEMU、bhyve、Apple Hypervisor.framework 共 7 个主流 hypervisor 的发布年份、主导者、许可证与市场定位。| 虚拟化技术 | 发布年份 | 主导者 | 许可证 | 市场定位
+
+| --- |
+| --- |
+
 - **统计分析印证**——`freebsd.db` freebsd-src 仓库 1993-2026 年 commit 月度量 Mann-Kendall 趋势检验结果为显著上升趋势（Sen's slope =+1.40/月，p < 0.001，95% CI [1.11, 1.69]）（统计结论 C-03）；ARIMA(5,0,5) 模型拟合 AIC = 107.39（统计结论 C-29），预测精度
 - bhyve ARM64 支持的探索始于 2015-2016 年，Mihai Carabaș 与 Peter Grehan（彼得·格雷汉） 在 BSDCan 2016 发表了 "Porting bhyve on ARM" 演讲，概述了将 bhyve 移植到 AArch64（ARM64）架构的工程计划；ARM64 虚拟化依赖 ARM Virtualization Extensions（VE），包括 E
 
