@@ -28,7 +28,7 @@ volume: 第15卷-许可证哲学与法律分析
 - 部分二手资料称 “HP-UX 10.20 是首个 64 位 UNIX”，部分称 “Solaris 7 是首个 64 位 UNIX”，部分称 “AIX 4.3 是首个 64 位 UNIX”；考据结论：HP-UX 10.20（1997 年 6 月）最先发布 64 位支持（PA-RISC 2.0），先于 Solaris 7（1998 年 11 月）与 AIX 4.3（1997 年 10 月，但 AIX
 - Intel 于 2017 年发布 Itanium 9700（Kittson）作为最后一个 Itanium 芯片，2021 年 1 月 29 日正式停产 Itanium 9700；部分二手资料称 “Itanium 2020 年停产”，但 Intel 官方档案明确为 2021 年。本子节采用 “2021 年 Intel 正式停产 Itanium” 的表述。
 - 2010 年 Oracle 宣布停止 Itanium 开发，HP 起诉 Oracle 违反 2010 年 Hurd 加入 Oracle 时的口头承诺（Oracle 辩称无书面合同）；2012 年法院判决 Oracle 须继续支持 Itanium 至 2015 年合同期满；Oracle 上诉被驳回，2014 年 HP 索赔 30 亿美元，2016 年法院判决 Oracle 赔偿 HP 30 亿美元（
-- （待从数据库考据记录提取）
+- 辨析：〔待补：无考据记录〕
   - 文献：[DB:historical_claims] 历史主张数据库（853 条主张，26,898 条证据）
 
 ## 文献
