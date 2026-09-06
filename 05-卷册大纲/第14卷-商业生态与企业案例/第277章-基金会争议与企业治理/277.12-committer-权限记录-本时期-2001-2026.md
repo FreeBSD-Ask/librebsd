@@ -163,5 +163,4 @@
 
 ## 文献
 
-- eclipsefoundation. eclipse-foundation-branding-guidelines[M]. 2025.
 
