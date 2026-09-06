@@ -296,7 +296,7 @@
   - [32.9 4.1BSD 历史地位——性能调优版本与 4.2BSD 基石](./第02卷-伯克利的岁月/第32章-4.1bsd/32.9-41bsd历史地位性能调优版本与42bsd基石.md)
   - [32.10 4.1BSD 时期的技术淘汰——BBN TCP/IP 修改版引入 →UCB TCP/IP 取代、原始 UNIX 文件系统 →FFS、delivermail→sendmail 与 4.1a/b/c interim 版本演化（1982-1983）](./第02卷-伯克利的岁月/第32章-4.1bsd/32.10-41bsd时期的技术淘汰bbntcpip修改版引入ucbtcpip取代原始.md)
   - [32.11 **与同时期操作系统的比较**：1981-1983 年同期操作系统——AT&T UNIX System III/V、Xenix、MS-DOS、VAX/VMS、Coherent——BSD 在小型机 UNIX 阵营中的定位](./第02卷-伯克利的岁月/第32章-4.1bsd/32.11-与同时期操作系统的比较19811983年同期操作系统.md)
-  - [32.12 4.1BSD 安全机制继承——chroot(2) 系统调用的早期定型与原始动机辨析（1981）](./第02卷-伯克利的岁月/第32章-4.1bsd/32.12-41bsd安全机制继承chroot2系统调用的早期定型与原始动机辨析1981.md)
+  - [32.12 4.1BSD 安全机制继承——**chroot(2)** 系统调用的早期定型与原始动机辨析（1981）](./第02卷-伯克利的岁月/第32章-4.1bsd/32.12-41bsd安全机制继承chroot2系统调用的早期定型与原始动机辨析1981.md)
   - [媒体反响与社区舆论](./第02卷-伯克利的岁月/第32章-4.1bsd/媒体反响与社区舆论.md)
   - [采访录](./第02卷-伯克利的岁月/第32章-4.1bsd/采访录.md)
 
@@ -313,7 +313,7 @@
 - [第 34 章 4.2BSD 时期的技术淘汰](./第02卷-伯克利的岁月/第34章-4.2bsd时期的技术淘汰/概述.md)
   - [34.7 4.2BSD 时期的技术淘汰——UUCP 让位于 TCP/IP 与 csh 的兴起](./第02卷-伯克利的岁月/第34章-4.2bsd时期的技术淘汰/34.7-42bsd时期的技术淘汰uucp让位于tcpip与csh的兴起.md)
   - [34.8 **与同时期操作系统的比较**：1983 年同期 Microsoft XENIX、IBM PC DOS 2.0、Apple Lisa](./第02卷-伯克利的岁月/第34章-4.2bsd时期的技术淘汰/34.8-与同时期操作系统的比较1983年同期microsoftxenixibmpcdos.md)
-  - [34.9 chroot(2) 系统调用的早期演化与原始动机辨析——4.2BSD 时期 chroot 仍为测试环境隔离，网络栈引入扩大远程漏洞面（1980-1983）](./第02卷-伯克利的岁月/第34章-4.2bsd时期的技术淘汰/34.9-chroot2系统调用的早期演化与原始动机辨析42bsd时期chroot.md)
+  - [34.9 **chroot(2)** 系统调用的早期演化与原始动机辨析——4.2BSD 时期 chroot 仍为测试环境隔离，网络栈引入扩大远程漏洞面（1980-1983）](./第02卷-伯克利的岁月/第34章-4.2bsd时期的技术淘汰/34.9-chroot2系统调用的早期演化与原始动机辨析42bsd时期chroot.md)
   - [采访录](./第02卷-伯克利的岁月/第34章-4.2bsd时期的技术淘汰/采访录.md)
 
 - [第 35 章 Sun Microsystems](./第02卷-伯克利的岁月/第35章-sun-microsystems/概述.md)
@@ -437,7 +437,7 @@
   - [45.10 **伯克利与美国文化**：1960-1970 年代反文化运动（counterculture）对伯克利技术文化的土壤作用——伯克利作为反文化运动中心之一，与旧金山 Haight-Ashbury 嬉皮士运动、反战运动、民权运动（Black Panther Party 1966 年成立于奥克兰）形成地理与文化的临近性](./第03卷-伯克利学术文化外溢影响/第45章-伯克利文化地理与大学制度/45.10-伯克利与美国文化.md)
   - [45.11 **伯克利的校园环境与地理**：旧金山湾区的地理优势——伯克利地处旧金山湾东岸，与硅谷（1971 年 "Silicon Valley" 一词首见报端）隔湾相望，与旧金山形成 “学术 + 商业 + 文化” 三角](./第03卷-伯克利学术文化外溢影响/第45章-伯克利文化地理与大学制度/45.11-伯克利的校园环境与地理.md)
   - [45.12 **伯克利的法治环境**：加州法律框架对大学科研的规制——加州大学依 1879 年州宪法修正案设立为 “公共信任” 机构，Regents 拥有宪法层面的自治权，使大学在知识产权归属上具有特殊地位（BSD 代码版权属加州大学董事会而非个人开发者）](./第03卷-伯克利学术文化外溢影响/第45章-伯克利文化地理与大学制度/45.12-伯克利的法治环境.md)
-  - [44.13 **伯克利的科研体系**：联邦多元资助体系——DARPA（前身 ARPA，1958 年成立）资助 CSRG 的 BSD 开发（1980 年 4 月 DARPA 与 Bob Fabry 签订 18 个月合同资助 Berkeley Unix 适配 ARPANET，CSRG 据此成立；VLSI 系 DARPA 同期另一条独立资助线）[修正脚注：原稿“DARPA 招标支持 VLSI 设计、伯克利中标、CSRG 成立”将 VLSI 资助与 CSRG 成立混为一谈，经章节内 44.13.1 要点（Fabry 1979 秋回应 Unix 标准化、1980-04 合同生效）与外部史料核验订正]](./第03卷-伯克利学术文化外溢影响/第45章-伯克利文化地理与大学制度/45.13-伯克利的科研体系.md)
+  - [44.13 **伯克利的科研体系**：联邦多元资助体系——DARPA（前身 ARPA，1958 年成立）资助 CSRG 的 BSD 开发（1980 年 4 月 DARPA 与 Bob Fabry 签订 18 个月合同资助 Berkeley Unix 适配 ARPANET，CSRG 据此成立；VLSI 系 DARPA 同期另一条独立资助线）[修正脚注：原稿“DARPA 招标支持 VLSI 设计、伯克利中标、CSRG 成立”将 VLSI 资助与 CSRG 成立混为一谈，经章节内 44.13.1〔待核实节号〕 要点（Fabry 1979 秋回应 Unix 标准化、1980-04 合同生效）与外部史料核验订正]](./第03卷-伯克利学术文化外溢影响/第45章-伯克利文化地理与大学制度/45.13-伯克利的科研体系.md)
   - [45.14 **伯克利的学术体系**：终身教职制（tenure track）——伯克利作为公立研究型大学采用标准美国终身教职制，助理教授、副教授、教授的晋升须经 Academic Senate 审查，CSRG 核心成员（McKusick、Karels 等）多为研究序列而非教学序列，其职位性质介于教职与研究科学家之间](./第03卷-伯克利学术文化外溢影响/第45章-伯克利文化地理与大学制度/45.14-伯克利的学术体系.md)
   - [45.15 **学生运动**：伯克利学生运动的历史谱系——1930 年代学生罢课（反对学校开除抗议学生）、1964-1965 年自由言论运动（FSM，Mario Savio（马里奥·萨维奥） 领导，详见 22.9）、1968-1969 年第三世界解放阵线（Third World Liberation Front，TWLF）争取建立种族研究系、1969 年人民公园事件（详见 22.9）、1970 年反越战罢课（柬埔寨入侵后全国罢课）、1985 年反种族隔离撤资运动（Anti-Apartheid Divestment Movement）、1999 年 TWLF 第二波罢课](./第03卷-伯克利学术文化外溢影响/第45章-伯克利文化地理与大学制度/45.15-学生运动.md)
   - [45.16 **学术教学**：伯克利计算机科学的本科课程体系——CS61A（计算机程序设计与解释，基于 SICP《计算机程序的构造和解释》）、CS61B（数据结构）、CS61C（计算机组成原理）、CS70（离散数学与概率论）为基础四课，CS162（操作系统与系统编程）为操作系统核心课程](./第03卷-伯克利学术文化外溢影响/第45章-伯克利文化地理与大学制度/45.16-学术教学.md)
@@ -1650,8 +1650,8 @@
   - [194.5 项目统摄史观审视——OpenSSH fork 与许可证纯洁化的形式主义化](./第10卷-openbsd的历史/第194章-openbsd-2x的安全机制早期演进/194.5-项目统摄史观审视opensshfork与许可证纯洁化的形式主义化.md)
   - [194.6 OpenBSD 2.x 时期 RELEASE 公告与 release song 起源（1996-2001）——10 次 release 公告汇总，release song 传统尚未建立（自 3.0 起方有 release song）](./第10卷-openbsd的历史/第194章-openbsd-2x的安全机制早期演进/194.6-openbsd2x时期release公告与releasesong起源.md)
   - [194.7 OpenBSD 从 4.4BSD-Lite2 继承的 ktrace（跨 BSD/UNIX/macOS 扩展）](./第10卷-openbsd的历史/第194章-openbsd-2x的安全机制早期演进/194.7-openbsd从44bsdlite2继承的ktrace跨bsdunixmacos.md)
-  - [194.8 OpenBSD 从 4.4BSD-Lite2 继承的 fstat(1)（跨 BSD/UNIX/macOS 扩展）](./第10卷-openbsd的历史/第194章-openbsd-2x的安全机制早期演进/194.8-openbsd从44bsdlite2继承的fstat1跨bsdunixmacos.md)
-  - [194.9 OpenBSD 从 4.4BSD-Lite2 继承的 audio(4)（跨 BSD/UNIX/macOS 扩展）](./第10卷-openbsd的历史/第194章-openbsd-2x的安全机制早期演进/194.9-openbsd从44bsdlite2继承的audio4跨bsdunixmacos.md)
+  - [194.8 OpenBSD 从 4.4BSD-Lite2 继承的 **fstat(1)**（跨 BSD/UNIX/macOS 扩展）](./第10卷-openbsd的历史/第194章-openbsd-2x的安全机制早期演进/194.8-openbsd从44bsdlite2继承的fstat1跨bsdunixmacos.md)
+  - [194.9 OpenBSD 从 4.4BSD-Lite2 继承的 **audio(4)**（跨 BSD/UNIX/macOS 扩展）](./第10卷-openbsd的历史/第194章-openbsd-2x的安全机制早期演进/194.9-openbsd从44bsdlite2继承的audio4跨bsdunixmacos.md)
 
 - [第 195 章 OpenBSD 3.x 的 pf 防火墙引入](./第10卷-openbsd的历史/第195章-openbsd-3x的pf防火墙引入/概述.md)
   - [195.1 OpenBSD 3.0 与 pf 防火墙（2001.12）——3.0 引入 pf（Packet Filter）防火墙替代 IPFilter，因 IPFilter 许可证变更引发的 fork](./第10卷-openbsd的历史/第195章-openbsd-3x的pf防火墙引入/195.1-openbsd30与pf防火墙20011230引入pfpacketfilter.md)
@@ -1885,7 +1885,7 @@
   - [220.4 项目统摄史观审视——利益分配、解释学循环与革命改革（基于总纲第 13、19、21 条）](./第11卷-dragonflybsd的历史/第220章-dragonfly1x时代与同时期os比较/220.4-项目统摄史观审视.md)
   - [220.5 DragonFly BSD 保留的 nullfs 实现（跨 BSD/UNIX/macOS 扩展）](./第11卷-dragonflybsd的历史/第220章-dragonfly1x时代与同时期os比较/220.5-dragonflybsd保留的nullfs实现跨bsdunixmacos扩展.md)
   - [220.6 DragonFly BSD 继承自 FreeBSD 4.8 的 ktrace（跨 BSD/UNIX/macOS 扩展）](./第11卷-dragonflybsd的历史/第220章-dragonfly1x时代与同时期os比较/220.6-dragonflybsd继承自freebsd48的ktrace跨bsdunixm.md)
-  - [220.7 DragonFly BSD 继承自 FreeBSD 4.8 的 fstat(1)（跨 BSD/UNIX/macOS 扩展）](./第11卷-dragonflybsd的历史/第220章-dragonfly1x时代与同时期os比较/220.7-dragonflybsd继承自freebsd48的fstat1跨bsdunixm.md)
+  - [220.7 DragonFly BSD 继承自 FreeBSD 4.8 的 **fstat(1)**（跨 BSD/UNIX/macOS 扩展）](./第11卷-dragonflybsd的历史/第220章-dragonfly1x时代与同时期os比较/220.7-dragonflybsd继承自freebsd48的fstat1跨bsdunixm.md)
   - [220.8 DragonFly BSD 继承自 FreeBSD 4.8 的 pcm(4) 音频驱动（跨 BSD/UNIX/macOS 扩展）](./第11卷-dragonflybsd的历史/第220章-dragonfly1x时代与同时期os比较/220.8-dragonflybsd继承自freebsd48的pcm4音频驱动跨bsduni.md)
   - [采访录](./第11卷-dragonflybsd的历史/第220章-dragonfly1x时代与同时期os比较/采访录.md)
 
@@ -2297,7 +2297,7 @@
   - [采访录](./第14卷-商业生态与企业案例/第274章-回顾与展望/采访录.md)
 
 - [第 275 章 商业生态时期的旅游与地理](./第14卷-商业生态与企业案例/第275章-商业生态时期的旅游与地理/概述.md)
-  - [275.1 伯克利：BSD 的发源地巡礼——加州大学伯克利分校 Evans Hall（CSRG 所在地）、Soda Hall（计算机系新楼）、伯克利校园的 BSD 历史地标、伯克利市作为 Unix 文化的地理原乡、CSRG 1995 年解散后的地理遗产；](./第14卷-商业生态与企业案例/第275章-商业生态时期的旅游与地理/275.1-伯克利-BSD-的发源地巡礼-加州大学伯克利分校-Evans-Hall-CSRG.md)
+  - [275.1 伯克利：BSD 的发源地巡礼——加州大学伯克利分校 Evans Hall（CSRG 所在地）、Soda Hall（计算机系新楼）、伯克利校园的 BSD 历史地标、伯克利市作为 Unix 文化的地理原乡、CSRG 1995 年解散后的地理遗产](./第14卷-商业生态与企业案例/第275章-商业生态时期的旅游与地理/275.1-伯克利-BSD-的发源地巡礼-加州大学伯克利分校-Evans-Hall-CSRG.md)
   - [275.2 贝尔实验室：UNIX 的诞生地——新泽西州 Murray Hill 贝尔实验室旧址、Thompson 与 Ritchie 的工作空间、1969-1970 年代贝尔实验室的地理土壤](./第14卷-商业生态与企业案例/第275章-商业生态时期的旅游与地理/275.2-贝尔实验室-UNIX-的诞生地-新泽西州-Murray-Hill-贝尔实验室旧址.md)
   - [275.3 剑桥大学：Capsicum/CHERI 的研究地——剑桥大学计算机实验室、Robert Watson 的 Capsicum/CHERI 项目研究地、剑桥作为欧洲 BSD 研究枢纽的地理意义](./第14卷-商业生态与企业案例/第275章-商业生态时期的旅游与地理/275.3-剑桥大学-Capsicum-CHERI-的研究地-剑桥大学计算机实验室.md)
   - [275.4 BSD 会议城市巡礼——BSDCan 渥太华大学举办地的城市巡礼、EuroBSDCon 历届城市（阿姆斯特丹/维也纳/剑桥/布拉格等）的会议旅游路线、AsiaBSDCon 东京举办地的文化体验、BSD 会议作为 “技术朝圣” 的旅游意义](./第14卷-商业生态与企业案例/第275章-商业生态时期的旅游与地理/275.4-BSD-会议城市巡礼-BSDCan-渥太华大学举办地的城市巡礼.md)
@@ -2568,7 +2568,7 @@
 
 - [第 303 章 FreeBSD 合规、认证与标准遵守史——Liberty 词源考据与 BSD 哲学语义契合度](./第16卷-开源运动与合规治理/第303章-合规认证与标准遵守-liberty词源/概述.md)
   - [303.0 liberty 词源考据与 BSD 哲学语义契合度——本子节为第十二卷卷头子节，承接全书主线 “FreeBSD 赓续 CSRG 未竟事业，坚守 BSD UNIX 哲学，追寻真正自由（Liberty）”，对主线术语 “Liberty” 一词作词源学、语义学、术语学、BSD 社区术语光谱定位、项目统摄史观释读五重考据；含 5 个子-子节（4.0.1-4.0.5），每个子-子节均深化为 5 字段（要点 / 史料 / 史观 / 辨析 / 文献）；完整内容见 `第139.0节.md`；考据依据 `原材料/研究/自由软件词源考察/` 下 7 个子文件，遵循 0 信任原则与 `规则/释读规则.md` 中的项目统摄史观释读规则](./第16卷-开源运动与合规治理/第303章-合规认证与标准遵守-liberty词源/303.0-liberty-词源考据与-BSD-哲学语义契合度-本子节为第十二卷卷头子节.md)
-  - [303.1 POSIX 标准遵守史——POSIX（Portable Operating System Interface，可移植操作系统接口）由 IEEE 与 The Open Group 联合制定，1988 年 IEEE 批准首个核心标准 IEEE Std 1003.1-1988，1990 年该版本被采纳为国际标准 ISO/IEC 9945-1:1990，POSIX 名称由 Richard Stallman 建议取“Portable Operating System Interface”之首字母缩写并加“X”以类 Unix 风格收尾；1993 年 POSIX.1b 实时扩展（IEEE 1003.1b，进程调度、内存锁、实时信号、信号量、共享内存、消息队列、时钟与定时器、异步 I/O）批准，1995 年 POSIX.1c 线程扩展（IEEE 1003.1c，即 pthreads）批准，1999 年 POSIX.1d 批准，2000 年 POSIX.1j 高级实时扩展发布；2001 年 IEEE 1003.1-2001 发布（即 Single UNIX Specification v3 的核心），整合 1996 版与 Open Group Base Specifications Issue 6；2008 年 IEEE 1003.1-2008 发布，2013 年与 2016 年两次技术勘误，2017 年 IEEE 1003.1-2017（POSIX.1-2017）发布，2024 年 6 月 IEEE 1003.1-2024（POSIX.1-2024，Base Specifications Issue 8）发布并与 C17 标准对齐；FreeBSD 2.0（1995 年）即引入仿照 HP-UX 的 **rtprio(1)** 实时调度用户命令（作者 Henrik Vestergaard Draboel），对应系统调用为 **rtprio(2)**；POSIX.1b 标准的实时调度接口（**sched_setscheduler(2)** 等）则在 FreeBSD 5.0-RELEASE（2003 年 1 月）首次内置，POSIX.1b 进程相关扩展于 1998 年合入，线程支持于 1999 年加入，FreeBSD 5.0（2003 年 1 月）正式合并 TrustedBSD 子项目并对 POSIX.1e ACL 与 POSIX.1c（pthreads 线程）扩展 等做完整支持；2004 年 6 月 IEEE 与 The Open Group 正式授权 FreeBSD 项目使用 POSIX 标准 1400 余个接口的文档材料（headers、system interfaces、utilities）以供手册页与文档引用，此举使 FreeBSD 开发者可合法从 POSIX 标准文本直接复制材料至手册页，避免以往必须自行重述的负担；FreeBSD 长期设有“C99 and POSIX Conformance Project”项目旨在合规于 Single UNIX Specification 的子集并记录差异点，但 FreeBSD 从未正式申请 POSIX™ Certified 认证（需向 The Open Group 缴纳费用并通过 VSX4/VSX5/VSTH/VSU5/VSRT 等测试套件），其合规性以“实际遵守但未缴费认证”的形式实现；FreeBSD 与 LSB（Linux Standard Base）的关系长期紧张——LSB 由 Linux Foundation 主导覆盖 POSIX 80% 内容但与 POSIX 存在差异，POSIX 阵营曾主张合并 LSB 而 LSB 阵营拒绝，FreeBSD 因不参与 LSB 而在跨平台脚本兼容性上需依赖 Ports Collection 的 Linuxulator（即 **linux(4)** 描述的 Linux ABI 兼容层，无 **linuxulator(4)** man 页，“Linuxulator”为社区俗称）兼容层运行 Linux 二进制；按 0 信任原则考据：2004 年 IEEE 与 Open Group 授权 FreeBSD 使用 POSIX 文档材料一事经 OSNews 2004 年 6 月 2 日首报与 IEEE 官方公告交叉验证，但“C99 and POSIX Conformance Project”的具体起止时间与产出文档在 FreeBSD 邮件列表存档中只有零散提及，该项目是否最终完成存疑，本节叙事仅依据已核实材料；](./第16卷-开源运动与合规治理/第303章-合规认证与标准遵守-liberty词源/303.1-POSIX-标准遵守史-POSIX-Portable-Operating-Sys.md)
+  - [303.1 POSIX 标准遵守史——POSIX（Portable Operating System Interface，可移植操作系统接口）由 IEEE 与 The Open Group 联合制定，1988 年 IEEE 批准首个核心标准 IEEE Std 1003.1-1988，1990 年该版本被采纳为国际标准 ISO/IEC 9945-1:1990，POSIX 名称由 Richard Stallman 建议取“Portable Operating System Interface”之首字母缩写并加“X”以类 Unix 风格收尾；1993 年 POSIX.1b 实时扩展（IEEE 1003.1b，进程调度、内存锁、实时信号、信号量、共享内存、消息队列、时钟与定时器、异步 I/O）批准，1995 年 POSIX.1c 线程扩展（IEEE 1003.1c，即 pthreads）批准，1999 年 POSIX.1d 批准，2000 年 POSIX.1j 高级实时扩展发布；2001 年 IEEE 1003.1-2001 发布（即 Single UNIX Specification v3 的核心），整合 1996 版与 Open Group Base Specifications Issue 6；2008 年 IEEE 1003.1-2008 发布，2013 年与 2016 年两次技术勘误，2017 年 IEEE 1003.1-2017（POSIX.1-2017）发布，2024 年 6 月 IEEE 1003.1-2024（POSIX.1-2024，Base Specifications Issue 8）发布并与 C17 标准对齐；FreeBSD 2.0（1995 年）即引入仿照 HP-UX 的 **rtprio(1)** 实时调度用户命令（作者 Henrik Vestergaard Draboel），对应系统调用为 **rtprio(2)**；POSIX.1b 标准的实时调度接口（**sched_setscheduler(2)** 等）则在 FreeBSD 5.0-RELEASE（2003 年 1 月）首次内置，POSIX.1b 进程相关扩展于 1998 年合入，线程支持于 1999 年加入，FreeBSD 5.0（2003 年 1 月）正式合并 TrustedBSD 子项目并对 POSIX.1e ACL 与 POSIX.1c（pthreads 线程）扩展 等做完整支持；2004 年 6 月 IEEE 与 The Open Group 正式授权 FreeBSD 项目使用 POSIX 标准 1400 余个接口的文档材料（headers、system interfaces、utilities）以供手册页与文档引用，此举使 FreeBSD 开发者可合法从 POSIX 标准文本直接复制材料至手册页，避免以往必须自行重述的负担；FreeBSD 长期设有“C99 and POSIX Conformance Project”项目旨在合规于 Single UNIX Specification 的子集并记录差异点，但 FreeBSD 从未正式申请 POSIX™ Certified 认证（需向 The Open Group 缴纳费用并通过 VSX4/VSX5/VSTH/VSU5/VSRT 等测试套件），其合规性以“实际遵守但未缴费认证”的形式实现；FreeBSD 与 LSB（Linux Standard Base）的关系长期紧张——LSB 由 Linux Foundation 主导覆盖 POSIX 80% 内容但与 POSIX 存在差异，POSIX 阵营曾主张合并 LSB 而 LSB 阵营拒绝，FreeBSD 因不参与 LSB 而在跨平台脚本兼容性上需依赖 Ports Collection 的 Linuxulator（即 **linux(4)** 描述的 Linux ABI 兼容层，无 **linuxulator(4)** man 页，“Linuxulator”为社区俗称）兼容层运行 Linux 二进制；按 0 信任原则考据：2004 年 IEEE 与 Open Group 授权 FreeBSD 使用 POSIX 文档材料一事经 OSNews 2004 年 6 月 2 日首报与 IEEE 官方公告交叉验证，但“C99 and POSIX Conformance Project”的具体起止时间与产出文档在 FreeBSD 邮件列表存档中只有零散提及，该项目是否最终完成存疑，本节叙事仅依据已核实材料](./第16卷-开源运动与合规治理/第303章-合规认证与标准遵守-liberty词源/303.1-POSIX-标准遵守史-POSIX-Portable-Operating-Sys.md)
   - [303.2 C 语言标准遵守史](./第16卷-开源运动与合规治理/第303章-合规认证与标准遵守-liberty词源/303.2-C-语言标准遵守史.md)
   - [303.3 RFC 系列标准遵守史](./第16卷-开源运动与合规治理/第303章-合规认证与标准遵守-liberty词源/303.3-RFC-系列标准遵守史.md)
   - [303.4 LSB（Linux Standard Base）兼容性史](./第16卷-开源运动与合规治理/第303章-合规认证与标准遵守-liberty词源/303.4-LSB-Linux-Standard-Base-兼容性史.md)
@@ -2595,7 +2595,7 @@
   - [采访录](./第16卷-开源运动与合规治理/第305章-合规认证与标准遵守-内部张力/采访录.md)
 
 - [第 306 章 FreeBSD 社区演进史——1993 年邮件列表到现代治理结构演变](./第16卷-开源运动与合规治理/第306章-freebsd社区演进史-治理结构/概述.md)
-  - [306.1 1993 年邮件列表到现代治理结构演变；](./第16卷-开源运动与合规治理/第306章-freebsd社区演进史-治理结构/306.1-1993-年邮件列表到现代治理结构演变.md)
+  - [306.1 1993 年邮件列表到现代治理结构演变](./第16卷-开源运动与合规治理/第306章-freebsd社区演进史-治理结构/306.1-1993-年邮件列表到现代治理结构演变.md)
   - [306.2 Core Team 选举制度](./第16卷-开源运动与合规治理/第306章-freebsd社区演进史-治理结构/306.2-Core-Team-选举制度.md)
   - [306.3 committer 制度与文档贡献者](./第16卷-开源运动与合规治理/第306章-freebsd社区演进史-治理结构/306.3-committer-制度与文档贡献者.md)
   - [306.4 **FreeBSD Foundation 成立（2000）与角色演变**](./第16卷-开源运动与合规治理/第306章-freebsd社区演进史-治理结构/306.4-FreeBSD-Foundation-成立-2000-与角色演变.md)
@@ -2775,7 +2775,7 @@
 - [第十八卷：全球社区地区 BSD 史——Liberty 的地域呈现，1993-2026](./第18卷-全球社区地区bsd史/00-总览.md)
 
 - [第 328 章 美国：BSD 的发源地——伯克利 CSRG 的地缘遗产](./第18卷-全球社区地区bsd史/第328章-美国bsd的发源地/概述.md)
-  - [328.1 伯克利 CSRG 的地缘遗产——从 1976 年 Unix 到 PDP-11 移植到 1995 年 CSRG 解散的地缘延续；](./第18卷-全球社区地区bsd史/第328章-美国bsd的发源地/328.1-伯克利-CSRG-的地缘遗产-从-1976-年-Unix-到-PDP-11.md)
+  - [328.1 伯克利 CSRG 的地缘遗产——从 1976 年 Unix 到 PDP-11 移植到 1995 年 CSRG 解散的地缘延续](./第18卷-全球社区地区bsd史/第328章-美国bsd的发源地/328.1-伯克利-CSRG-的地缘遗产-从-1976-年-Unix-到-PDP-11.md)
   - [328.2 美国大学中的 BSD 教学](./第18卷-全球社区地区bsd史/第328章-美国bsd的发源地/328.2-美国大学中的-BSD-教学.md)
   - [328.3 美国企业与 BSD](./第18卷-全球社区地区bsd史/第328章-美国bsd的发源地/328.3-美国企业与-BSD.md)
   - [328.4 BSDCan 与 MeetBSD 会议文化](./第18卷-全球社区地区bsd史/第328章-美国bsd的发源地/328.4-BSDCan-与-MeetBSD-会议文化.md)
