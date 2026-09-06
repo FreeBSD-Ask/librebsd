@@ -67,7 +67,7 @@ volume: 第18卷-全球社区地区bsd史
 
 ## 331.2.2 IPv6 协议栈的 BSD 实现
 
-- 要点：KAME 项目在 FreeBSD、NetBSD、OpenBSD 上实现了完整的 IPv6 协议栈，包括邻居发现协议（NDP）、地址自动配置（SLAAC）、IPv6 over IPv4 隧道、多播侦听器发现（MLD
+- 要点：KAME 项目在 FreeBSD、NetBSD、OpenBSD 上实现了完整的 IPv6 协议栈，包括邻居发现协议（NDP）、地址自动配置（SLAAC）〔待核：原文截断，后文待回源〕
 - freebsd-users-jp Mailing List Archive；JBUG 活动记录 ［A］
 
 ## 331.3.2 AsiaBSDCon（首届 2004 年于台北，2007 年届在东京）[考据完成：2026-08-04 首届 AsiaBSDCon 为 2004-03-12~15 台北中央研究院，非 2007 东京；存疑 id 1764]

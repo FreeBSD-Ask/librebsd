@@ -25,7 +25,11 @@ volume: 第18卷-全球社区地区bsd史
 
 ## 344.2.2 印度 BSD 用户组的活动形式
 
-- 要点：印度 BSD 用户组的活动以技术讲座（Tech Talks）、BSD 安装会（Instal
+- 122.2 **印度 BSD 社区与用户组**———印度 BSD 社区与用户组包括 Bangalore BSD Users Group（印度硅谷班加罗尔）、Mumbai BSD Users Group、Delhi BSD Users Group 等，印度 BSD 用户组的活动以技术讲座与安装会为主
+
+## 345.2.1 印度 BSD 用户组的形成
+
+  **要点**：印度 BSD 用户组在 2000 年代形成，以班加罗尔（印度硅谷）
 - 总纲第 10 条——印度 BSD committer 是 “动手者创造历史” 的跨国体现
   - 辨析：印度 committer 的具体人数需统计；印度裔 committer 中居住于印度本土的比例需区分；【0 信任原则·地理识别局限·author_email 域名不等于实际地理位置】L3.3.2 基于 author_email 域名 TLD 统计，.in 仅统计邮箱后缀为 .in 的贡献者，大量
 - 总纲第 20 条——巴基斯坦 BSD 使用的稀缺反映了南亚 IT 发展的不平衡

@@ -27,7 +27,7 @@ volume: 第09卷-netbsd的历史
 - NetBSD 官方"Where NetBSD is used"列表的完整性存疑——部分早期部署已停止维护或厂商已倒闭；列表更新滞后，部分 2010 年代仍在运行的部署未及时记录
 - 公告数量在不同来源中存在差异——NetBSD 官方页面与 security mailing list archive 的统计可能略有出入；部分公告涉及第三方软件（如 Apache、OpenSSH）而非 NetBSD 本身，需区分
 - USPTO TESS 与 WIPO 记录在商标类别描述上可能略有差异——需对照原始申请文件核验；NetBSD 商标在多国注册的具体清单在 Foundation 文档中可能不完整
-- NetBSD 蓝牙栈与 FreeBSD Netgraph-based Bluetooth 在设计上类似（均采用节点图抽象）但代码独立；与 Linux BlueZ 的关键差异——BlueZ 采用传统协议栈实现，NetBSD 蓝牙栈采用 Netgraph 节点图；macOS IOBluetooth 是 Apple 私有框架，与 BSD/Linux 蓝牙栈无源码关系；OpenBSD 明确拒绝蓝牙支持（*
+- NetBSD 蓝牙栈与 FreeBSD Netgraph-based Bluetooth 在设计上类似（均采用节点图抽象）但代码独立；与 Linux BlueZ 的关键差异——BlueZ 采用传统协议栈实现，NetBSD 蓝牙栈采用 Netgraph 节点图；macOS IOBluetooth 是 Apple 私有框架，与 BSD/Linux 蓝牙栈无源码关系；〔待核：原文截断，后文待回源〕
 
 ## 文献
 

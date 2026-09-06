@@ -29,7 +29,7 @@ volume: 第07卷-freebsd的工程体系重构
 
 ## 辨析
 
-- 需严格区分 “sendmail 从 base 移除” 与 “sendmail 不再是默认 MTA”——14.0 中 sendmail 仍存在于 base 源码树中（作为构建依赖或被其他组件使用），但不再是默认 MTA，DMA 成为默认；DMA 的功能范围远小于 sendmail——DMA 不支持监听外部 SMTP 连接、不支持邮件队列管理、不支持反垃圾邮件，仅适用于 “本地投递 + 外部 smar
+- 需严格区分 “sendmail 从 base 移除” 与 “sendmail 不再是默认 MTA”——14.0 中 sendmail 仍存在于 base 源码树中（作为构建依赖或被其他组件使用），但不再是默认 MTA，DMA 成为默认；〔待核：原文截断，后文待回源〕
 - 关于 “FreeBSD 与 Linux 性能” 的比较需谨慎——不同工作负载下结果差异很大：网络转发（特别是小包处理）场景 FreeBSD 往往有优势、ZFS 文件服务器场景 FreeBSD/ZFS 是业界标杆、Web 服务器场景两者接近、AI/ML/GPU 计算场景 Linux 占据绝对优势（框架与驱动支持完善）；性能比较永远依赖具体工作负载、硬件配置与调优参数，不存在通用的 “X 比 Y 快”
 - 80 个 SA 的“数量”本身不是安全态势好坏的直接指标——SA 数量多既可解读为“代码质量差、漏洞频发”，也可解读为“安全审计积极、漏洞主动清理”；14.x 周期 SA 数量增长同时伴随 base 系统架构现代化（Capsicum、bhyve、Jail、ktls 等），表明这是审计覆盖面扩大而非代码质量下降；2026 年 SA 数量激增与 SA-26 系列中"audit"主题（SA-26:45.
 - Qualys 同时指出实际利用难度极高——需要绕过 ASLR 并在极窄的时间窗口内赢得竞争，但理论上可实施；一个月后 **FreeBSD-SA-24:08.openssh**（**2024 年 8 月 7 日**）修复 CVE-2024-7589——这是 regreSSHion 修复后发现的“同一问题的另一实例”，由 FreeBSD 特有的 blacklistd 集成引入，是 base 系统特定的

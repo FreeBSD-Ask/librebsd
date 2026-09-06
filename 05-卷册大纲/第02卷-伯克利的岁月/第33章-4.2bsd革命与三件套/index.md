@@ -34,7 +34,7 @@ volume: 第02卷-伯克利的岁月
 
 ## 辨析
 
-- socket 接口是否受 Xerox NS 协议影响存在争议——BSD socket 设计文献未明确引用 Xerox NS 的"endpoint"概念，但 BSD 对协议族（address family）的抽象与 NS 协议栈有结构相似性；socket API 作者为 Joy 与 Leffler 共同设计，“由 Joy 设计”的不完整表述应改为“由 Joy 与 Leffler 共同设计”（McKu
+- socket 接口是否受 Xerox NS 协议影响存在争议——BSD socket 设计文献未明确引用 Xerox NS 的"endpoint"概念，但 BSD 对协议族（address family）的抽象与 NS 协议栈有结构相似性；〔待核：原文截断，后文待回源〕
 - CSRG 重组的具体过程在不同史料中描述详略不一，需核对内部备忘录
 - daemon 与 Tux 的文化对比需谨慎，避免简化为 BSD vs Linux 的对立
 - Bill Joy 1982 年离开 Berkeley 加入 Sun Microsystems 的时间节点需辨析——部分文献将 Joy 的离开记为 1982 年夏（完成 4.2BSD 集成前）或 1983 年（4.2BSD 发布后），“将集成工作移交给 Leffler 与 McKusick”的具体交接范围在不同叙事中有差异；此次交接是否构成“第一次核心开发者代际更替”，亦取决于对 1BSD→2BSD

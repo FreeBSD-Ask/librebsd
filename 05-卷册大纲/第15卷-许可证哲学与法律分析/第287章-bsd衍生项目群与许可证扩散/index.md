@@ -35,7 +35,7 @@ volume: 第15卷-许可证哲学与法律分析
 
 ## 287.2.2 Tim
 
-- 考据过程留痕——【查证来源】BSD 许可证文本经 <https://www.freebsd.org/copyright/freebsd-license/> 一手核验，确认"AS IS"条款与“无强制回馈”条款为许可证核心；BuiltWith Varnish 采用统计（前一万网站 13% 以上采用率）经 trends.builtwith.com 一手核验；libarchive 采用列表（macOS
+- 考据过程留痕——【查证来源】BSD 许可证文本经 <https://www.freebsd.org/copyright/freebsd-license/> 一手核验，确认"AS IS"条款与“无强制回馈”条款为许可证核心；BuiltWith Varnish 采用统计（前一万网站 13% 以上采用率）经 trends.builtwith.com 一手核验；〔待核：原文截断，后文待回源〕
 - 考据过程留痕——【查证来源】bsd_commits.db 查询 L3.2.1（商业实体 commit 占比长期低于 1.3% 但绝对值增长）经 SQL 查询一手核验；BuiltWith Varnish 统计（前一万网站 13% 以上采用率）经 trends.builtwith.com 一手核验；libarchive 采用列表（macOS 10.6+、Debian/Ubuntu、Homebrew）经
 - pkgsrc 支持的平台数量在不同叙事中略有差异，须查 pkgsrc.org 当前平台列表；Joyent 赞助的具体金额与时限须查 Joyent 公开声明；pkgsrc 与 FreeBSD Ports 的语法差异须查两项目文档对比
   - 文献：pkgsrc.org；NetBSD 软件包文档；Joyent pkgsrc 文档[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来
@@ -52,7 +52,7 @@ volume: 第15卷-许可证哲学与法律分析
 ## 287.2.2 Tim Kientzle 与 libarchive
 
 - 要点：libarchive 由 FreeBSD 提交者 Tim Kientzle 创建，是一个支持多种压缩与归档格式（tar、zip、cpio、7-Zip、xz、bzip2、gzip、lz4、zstd 等）的 C 库；libarchive 采用 BSD 许可证，后被 FreeBSD 基础系统、macOS（自 10.6 Snow Leopard 起 bsdtar 即基于 libarchive）、Debian/Ubuntu
-- FreeBSD Project. FreeBSD License [EB/OL]. <https://www.freebsd.org/copyright/freebsd-license/>; BuiltWith. Varnish Usage Statistics [EB/OL]. <https://trends.builtwith.com/cdn/Varnish>; libarchive. Official Website [EB/OL]. <https://libarchive.github.io/>; Joyent. Reintroducing Bhyve [EB/OL]. (2021-0
+- 文献**：FreeBSD Project. FreeBSD License [EB/OL]. <https://www.freebsd.org/copyright/freebsd-license/>; BuiltWith. Varnish Usage Statistics [EB/OL]. <https://trends.builtwith.com/cdn/Varnish>; libarchive. Official Website [EB/OL]. <https://libarchive.github.io/>; Joyent. Reintroducing Bhyve [EB/OL]. (2021-07-08)
 - openbsd.db L3.2.1 查询报告; BuiltWith. Varnish Statistics [EB/OL]. <https://trends.builtwith.com/cdn/Varnish>; libarchive. Official Website [EB/OL]. <https://libarchive.github.io/>; 项目史观总纲第六章“主体性与和解”[Z]. 原材料/哲学/项目统摄史观/第 6 章.md.
 - pkgsrc.org；NetBSD 软件包文档；Joyent pkgsrc 文档[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]
 

@@ -17,7 +17,7 @@ volume: 第05卷-freebsd的工程化奠基
 ## 史观
 
 - 总纲第 2 条——实践先于理论，select/poll 的工程瓶颈催生 kqueue 设计而非理论驱动
-  - 辨析：经 bsd_commits.db commits 表验证，kqueue 首次 commit 为 2000-04-16（非旧叙事 2000.7.5），属 4.1-CURRENT 开发周期内合入主干，4.1-RELEASE 2000.7.26 正式发布；经邮件列表库验证通过（fact-
+  - 辨析：经 bsd_commits.db commits 表验证，kqueue 首次 commit 为 2000-04-16（非旧叙事 2000.7.5），属 4.1-CURRENT 开发周期内合入主干，4.1-RELEASE 2000.7.26 正式发布；〔待核：原文截断，后文待回源〕
 - 总纲第 6 条——形式主义膨胀与抽象克制，kqueue 用 filter 抽象取代多套 API 是抽象克制的典范
   - 辨析：filter 中心化设计与 epoll 的 composable 设计的优劣争议，Conill 2021 批评称 filter 中心化导致技术债务
   - 文献：Lemon BSDCon 2000 论文；Banga & Mogul "Scalable Kernel Per

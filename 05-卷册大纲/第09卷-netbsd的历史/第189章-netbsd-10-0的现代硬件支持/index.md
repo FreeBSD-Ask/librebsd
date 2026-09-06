@@ -27,7 +27,7 @@ volume: 第09卷-netbsd的历史
 
 ## 辨析
 
-- 经 netbsd.db netbsd-src 仓库 commits 表验证：Apple Silicon M1 移植最早可追溯至 2021-08-30（jmcneill），早于 10.0 发布 2024.3.31 约 2 年 7 个月；移植由 jmcneill（2021-2022）、skrll（2022）、ryo（2022）三位开发者共同推动，原叙事中“由 Jared McNeill 等推动”中的“
+- 经 netbsd.db netbsd-src 仓库 commits 表验证：Apple Silicon M1 移植最早可追溯至 2021-08-30（jmcneill），早于 10.0 发布 2024.3.31 约 2 年 7 个月；移植由 jmcneill（2021-2022）、skrll（2022）、ryo（2022）〔待核：原文截断，后文待回源〕
 - 先前叙事中称“NetBSD 10.0 发布日期 2024.5”系误传——NetBSD 官方发布页面（netbsd.org/releases/formal-10/NetBSD-10.0.html）明确为 2024.3.31；10.0 的实际硬件支持广度需对照硬件兼容性列表核验
 - pkgsrc 软件包数量增长在不同来源中存在差异——2010Q1 与 2026Q4 的具体数字需对照原始 release tarball 核验；Sonnenberger 的 commit 量在统计工具中可能被低估
 - 政策公告的具体发布日期在不同来源中可能略有差异——需对照 NetBSD 官方页面核验；外部媒体报道可能存在简化或误解

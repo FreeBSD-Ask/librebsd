@@ -8,7 +8,7 @@ volume: 第07卷-freebsd的工程体系重构
 
 ## 史料
 
-- [DB:research_notes:blocks:4490] 关键词「安全响应」命中：史实考据：Qualys 于 2024 年 7 月 1 日公开披露 OpenSSH 的 regreSSHion 漏洞（CV…
+- [DB:research_notes:blocks:4490] 关键词「安全响应」〔待核：原文截断，后文待回源〕
 - [DB:research_notes:blocks:17647] 关键词「安全响应」命中：[p.4] 1 绪论 .................................................…
 - [DB:research_notes:blocks:69677] 关键词「安全响应」命中：www.dragonflybsd.org；Dillon M. HAMMER File System Design[Z].…
 
@@ -44,7 +44,7 @@ volume: 第07卷-freebsd的工程体系重构
 
 ## 149.12.2 LLD 成为所有架构的默认链接器
 
-- 要点：FreeBSD 13.0-RELEASE 将 LLD（LLVM Linker）设为所有架构的默认系统链接器，完成 LLD 从“部分架构默认”到“全架构默
+- 要点：FreeBSD 13.0-RELEASE 将 LLD（LLVM Linker）〔待核：原文截断，后文待回源〕
 - Kernel Newbies. *Linux Kernel Release Notes*. kernelnewbies.org; LWN.net. (2021-2024). Kernel Development Coverage.[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]
 
 ## 149.13.2 Windows 11/Server 2022、macOS 11-14 与 BSD 谱系

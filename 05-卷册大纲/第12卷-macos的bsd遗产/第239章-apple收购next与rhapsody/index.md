@@ -9,7 +9,7 @@ volume: 第12卷-macos的bsd遗产
 ## 要点
 
 - **Apple** 于 **1996 年 12 月** 宣布收购 **NeXT**，**1997 年 2 月** 完成收购，交易金额约 **4.29 亿美元**（含 150 万股 Apple 股票）。**Jobs** 回归 Apple 任顾问，后任临时 CEO（iCEO，**1997 年 9 月 16 日** 任命）。**NeXTSTEP** 的 BSD 层与 Mach 内核成为 Apple 下一
-- Rhapsody 采用 **Yellow Box** 与 **Blue Box** 双层架构——**Yellow Box** 是 Rhapsody 的面向对象应用框架（基于 NeXTSTEP 的 Foundation/AppKit，跨平台可移植至 Windows NT），提供 OpenStep API 兼容；**Blue Box** 是 Mac OS 经典应用兼容环境（Classic Mac OS
+- Rhapsody 采用 **Yellow Box** 与 **Blue Box** 双层架构——**Yellow Box** 是 Rhapsody 的面向对象应用框架（基于 NeXTSTEP 的 Foundation/AppKit，跨平台可移植至 Windows NT），提供 OpenStep API 兼容；〔待核：原文截断，后文待回源〕
 - Rhapsody 早期工程团队由原 NeXT 团队与 Apple 收购后并入的 BSD/Mach 工程师构成。核心工程师包括 Avie Tevanian（原 NeXT 工程副总裁，Mach 内核核心开发者，随收购并入 Apple 任软件工程高级副总裁，主持 Rhapsody/Mac OS X 开发）；Wilfredo Sanchez（Apple 工程师，前 Apple/NeXT 工程师，负责 Da
 - **1999 年** Mac OS X Server 1.0（3 月 16 日发布）对比 **FreeBSD 3.1**（1999 年 2 月 15 日发布）、**Linux 2.2**（1999 年 1 月 26 日发布）、**Windows NT 4.0 Server**（1996 年发布，1999 年仍为主流服务器 OS）、**Solaris 7**（1998 年 11 月发布，32 位与
 

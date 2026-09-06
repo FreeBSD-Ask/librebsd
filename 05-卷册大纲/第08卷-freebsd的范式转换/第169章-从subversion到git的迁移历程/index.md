@@ -10,7 +10,7 @@ volume: 第08卷-freebsd的范式转换
 
 - FreeBSD 社区关于迁移到分布式版本控制系统的讨论始于 **2010 年代初期**，几乎与 Git 在 Linux 内核成功后开始流行同步；社区评估了多种分布式 VCS 选项，包括 Git、Mercurial（hg）、Bazaar（bzr）等；Git 之所以最终胜出而非 Mercurial 等其他 DVCS，原因包括：(1) Linux 内核采用 Git 产生的网络效应；(2) GitHub
 - Git 工作组决策过程的一手史料主要包括：(1) freebsd-git@ 邮件列表的公开讨论存档（最完整、最权威）；(2) Git Transition Wiki 页面的历史版本（记录了方案演变）；(3) Ed Maste、Warner Losh 等人的会议演讲和博客文章；(4) Core Team 的公开状态报告；Core Team 内部讨论和投票细节未完全公开，部分决策理由只能从公开信息推断
-- FreeBSD-doc Subversion to Git 迁移公告邮件经 freebsd-announce 邮件列表存档一手核验，发信人为 Warner Losh 与 Ed Maste（代表 git conversion working group），邮件正文明确"We will begin the migration sometime on December 5th and hope to b
+- FreeBSD-doc Subversion to Git 迁移公告邮件经 freebsd-announce 邮件列表存档一手核验，发信人为 Warner Losh 与 Ed Maste（代表 git conversion working group）〔待核：原文截断，后文待回源〕
 - Git 迁移为 FreeBSD 带来的最显著长期变化是 CI/CD（持续集成/持续交付）能力的提升和外部贡献门槛的降低：(1) **CI/CD**：基于 GitLab CI 和 Cirrus CI 的自动化构建和测试管道在 Git 迁移后逐步建立，每次提交都会触发多架构构建和测试，这在 SVN 时代难以实现；(2) **外部贡献**：虽然 GitHub 不接受直接 PR，但开发者可以更容易地在 G
 - Git 迁移争议相关一手史料的可靠性需分级评估：(1) **最高可信度**：官方 Wiki 时间表、freebsd-git 邮件列表原始帖子、版本控制系统中的 commit 记录——这些是当时形成的一手文档，可信度最高；(2) **高可信度**：Ed Maste（埃德·马斯特）、Warner Losh（沃纳·洛什） 等核心成员的会议演讲和博客文章——作者是亲历者，但事后回忆可能存在细节偏差；(3)
 

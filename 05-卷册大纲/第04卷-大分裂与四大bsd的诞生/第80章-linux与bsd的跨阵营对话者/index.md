@@ -26,8 +26,8 @@ volume: 第04卷-大分裂与四大bsd的诞生
 
 - 跨阵营对话者的具体贡献在不同叙事中差异较大——部分强调技术交流（Alan Cox 早期参与 NetBSD USB 子系统讨论、Theodore Ts'o 在 Linux 与 BSD 文件系统层面的技术交流），部分强调社区调解（McKusick 跨阵营讲授 BSD 文件系统）；经原始邮件存档（NetBSD USB 邮件列表、Linux 内核邮件列表、BSDCon 演讲存档）核实，两类贡献均有据可循
 
-- 本节遵循 0 信任原则与三次复查流程，所有事实以一手学术论文、CSRG 档案、设计者一手公告、**man7.org** / **freebsd.org** 一手手册页、互联网档案馆存档为交叉锚，禁用维基百科与百度百科；案例编号引用规则——BSD 直接案例以“BSD 案例 N”标注（编号 1-60），非 BSD 系统案例以“非 BSD 案例 N”标注（编号 1-18），许可证概念案例以“许可证案例
-- 三重机制的“同时运作”非“依次发生”——在 BSD 案例 7（jail → Docker → OCI）中，来源淡化（PHK 1999 设计被“Solomon Hykes 2013 Docker 创新”叙事取代）、记忆抹除（Docker 重写为 libcontainer 与 runc，原作者被替换为重写者）、话语重塑（OCI 2015-12-08 加入 Linux Foundation 托管，以“开
+- 本节遵循 0 信任原则与三次复查流程，所有事实以一手学术论文、CSRG 档案、设计者一手公告、**man7.org** / **freebsd.org** 一手手册页、互联网档案馆存档为交叉锚，禁用维基百科与百度百科；案例编号引用规则——BSD 直接案例以“BSD 案例 N”标注（编号 1-60），非 BSD 系统案例以“非 BSD 案例 N”标注（编号 1-18）〔待核：原文截断，后文待回源〕
+- 三重机制的“同时运作”非“依次发生”——在 BSD 案例 7（jail → Docker → OCI）中，来源淡化（PHK 1999 设计被“Solomon Hykes 2013 Docker 创新”叙事取代）、记忆抹除（Docker 重写为 libcontainer 与 runc，原作者被替换为重写者）〔待核：原文截断，后文待回源〕
 
 ## 文献
 

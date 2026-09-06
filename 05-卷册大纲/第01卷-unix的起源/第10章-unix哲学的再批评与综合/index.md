@@ -25,7 +25,7 @@ volume: 第01卷-unix的起源
 
 ## 辨析
 
-- 辨析：root 模型定型的精确版本（V3 vs V4）需考据——按 Ritchie 1984 BLTJ 与 Salus 1994 两方独立来源交叉印证为 V4（1973 年）多用户分时引入后；“1972
+- 辨析：root 模型定型的精确版本（V3 vs V4）需考据——按 Ritchie 1984 BLTJ 与 Salus 1994 两方独立来源交叉印证为 V4（1973 年）多用户分时引入后；〔待核：原文截断，后文待回源〕
 - 辨析：[考据脚注：经 Morris & Thompson 1979 CACM 论文一手表述确证，DES **crypt(3)** 引入于 1979 年 V7
 - 辨析：CACM 1979 论文与 4.4BSD SMM: 17 是否完全一致需对照—
 - 辨析：root 模型与 **crypt(3)** 对 BS
@@ -40,7 +40,7 @@ volume: 第01卷-unix的起源
 
 ## 文献
 
-- Ritchie D M 1984"The Evolution of the Unix Time-sharing System" (AT&T Bell Laboratories Technical Journal 63 No. 6 Part 2 pp. 1577-1593)；4.4BSD SMM: 16《On the Security of UNIX》；Salus 1994"A Quarter Century of UNIX"；bsd_commits.db：freebsd-src commit `5b81b6b301437eb9a6df491c829475bd29ae5d6c`（1993-06-
+- Ritchie D M 1984"The Evolution of the Unix Time-sharing System" (AT&T Bell Laboratories Technical Journal 63 No. 6 Part 2 pp. 1577-1593)；4.4BSD SMM: 16《On the Security of UNIX》；Salus 1994"A Quarter Century of UNIX"；〔待核：原文截断，后文待回源〕
 - Morris R, Thompson K 1979 CACM"Password Security: A Case History"Vol. 22 No. 11 pp. 594-597；4.4BSD SMM: 17《Password Security: A Case History》；UNIX V7 源代码 `usr/src/lib/crypt.c`；Salus 1994 ［A］
 - Morris R, Thompson K 1979 CACM"Password Security: A Case History"Vol. 22 No. 11 pp. 594-597；4.4BSD SMM: 17《Password Security: A Case History》；docs.freebsd.org/44doc/smm/17.password/ ［A］
 - Watson et al. 2010"Capsicum: Practical Capabilities for UNIX" (USENIX Security)；Poul-Henning Kamp 1998 MD5-crypt；Provos & Mazières 1999 bcrypt；bsd_commits.db：freebsd-src commit `5b81b6b301437eb9a6df491c829475bd29ae5d6c`（1993-06-12）与 `26f9a76710a312a951848542b9ca1f44100450e2`（1994-05-25）［A］

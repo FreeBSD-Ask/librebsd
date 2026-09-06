@@ -17,7 +17,7 @@ volume: 第16卷-开源运动与合规治理
 ## 史观
 
 - 总纲第 4 条——0 信任原则，对 Stallman 自述须独立考据
-  - 辨析：GNU 宣言具体发布日期与平台，须查 Usenet 存档；宣言是否真影响 BSD 社区；【双库核查 2026-08-15】邮件列表库 freebsd 查询 Stallman GNU 命中 5 条（1998 年 Phillip Salzman 等提及），参考文献库 Stallman 命中 5 条（Meeker 200
+  - 辨析：GNU 宣言具体发布日期与平台，须查 Usenet 存档；宣言是否真影响 BSD 社区；【双库核查 2026-08-15】邮件列表库 freebsd 查询 Stallman GNU 命中 5 条（1998 年 Phillip Salzman 等提及）〔待核：原文截断，后文待回源〕
 - 总纲第 6 条——形式主义膨胀与抽象克制，FSF 组织形式主义是否过度
   - 辨析：FSF 成立日期与 BSD 基金会对比（FSF 1985 vs FreeBSD Foundation 2000）
   - 文献：FSF 官方历史[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]
@@ -42,8 +42,8 @@ volume: 第16卷-开源运动与合规治理
 ## 300.1.3 GNU 项目与 BSD 的早期交集与分歧
 
 - 要点：GNU 项目
-- 两种自由观无对错，需独立判断；是否实际影响技术演进；freebsd.db freebsd-src 仓库的 license 主题 commit 显示 BSD 社区不仅在哲学上反对 GPL，更在工程实践上持续清理 GPL 代码——"GPL infected" 措辞与 "reduce whining" 措辞反映 BSD 社区对 GPL 的明确态度；FreeBSD GENERIC 内核 “必须完全 BSD
-- 考据过程留痕——【查证来源】GNU Manifesto、What is Copyleft?、Why Open Source misses the point 三份文献均经 **gnu.org** 官方页面一手核验（2026-07-24 联网核查），原文引述准确；FreeBSD 10.0-RELEASE Announcement 经 **freebsd.org** 官方页面一手核验。须严格区分 “批
+- 两种自由观无对错，需独立判断；是否实际影响技术演进；freebsd.db freebsd-src 仓库的 license 主题 commit 显示 BSD 社区不仅在哲学上反对 GPL，更在工程实践上持续清理 GPL 代码——"GPL infected" 措辞与 "reduce whining" 措辞反映 BSD 社区对 GPL 的明确态度；〔待核：原文截断，后文待回源〕
+- 考据过程留痕——【查证来源】GNU Manifesto、What is Copyleft?、Why Open Source misses the point 三份文献均经 **gnu.org** 官方页面一手核验（2026-07-24 联网核查），原文引述准确；FreeBSD 10.0-RELEASE Announcement 经 **freebsd.org** 官方页面一手核验。〔待核：原文截断，后文待回源〕
 - 【双库核查 2026-08-15】邮件列表库 freebsd 1997-1999 年查询 'open source' 命中 5 条，参考文献库 'open source' 命中 5 条（simsong 1994、Brooks 1987、Exokernel 1995）——双库间接验证 1998 年前后 'open source' 术语在 BSD 社区的讨论；Peterson 1998-02-03 精
 
 ## 文献

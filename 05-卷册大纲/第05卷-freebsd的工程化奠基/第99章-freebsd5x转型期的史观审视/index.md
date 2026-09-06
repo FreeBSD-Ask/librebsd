@@ -32,7 +32,7 @@ volume: 第05卷-freebsd的工程化奠基
 
 ## 辨析
 
-- 考据过程留痕——【查证来源】FreeBSD 5.0-RELEASE Announcement 经 **<https://www.freebsd.org/releases/5.0R/announce/>** 一手核验，邮件 Date 为 Sun, 19 Jan 2003 10:03:42 -0700，<scottl@FreeBSD.org>，原文"Although FreeBSD 5.0 conta
+- 考据过程留痕——【查证来源】FreeBSD 5.0-RELEASE Announcement 经 **<https://www.freebsd.org/releases/5.0R/announce/>** 一手核验，邮件 Date 为 Sun, 19 Jan 2003 10:03:42 -0700，<scottl@FreeBSD.org>，原文"Although FreeBSD 5.0 conta〔待核：原文截断〕
 - SCO 是否真持有 UNIX 版权，需查 Novell v. SCO
 
 ## 文献

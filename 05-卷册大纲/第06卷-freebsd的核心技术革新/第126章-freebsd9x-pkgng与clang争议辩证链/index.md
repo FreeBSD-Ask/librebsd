@@ -8,7 +8,7 @@ volume: 第06卷-freebsd的核心技术革新
 
 ## 要点
 
-- Linux/GNU 阵营对 FreeBSD 反批评的再回应集中于两点。其一，“生态规模不可逆论”：pkgng 即便工程完善，其软件包仓库规模、社区贡献者数量、第三方镜像网络均无法追赶 apt/yum 逾十年积累的生态——Debian 软件包仓库含逾 50,000 软件包且全球镜像数百个，FreeBSD pkg 仓库虽经 ports 同步但镜像网络与用户基数远小，工程等价性不等于生态等价性。其二，“
+- Linux/GNU 阵营对 FreeBSD 反批评的再回应集中于两点。其一，“生态规模不可逆论”：pkgng 即便工程完善，其软件包仓库规模、社区贡献者数量、第三方镜像网络均无法追赶 apt/yum 逾十年积累的生态——Debian 软件包仓库含逾 50,000 软件包且全球镜像数百个，FreeBSD pkg 仓库虽经 ports 同步但镜像网络与用户基数远小，工程等价性不等于生态等价性。〔待核：原文截断，后文待回源〕
 - GNU 阵营对 FreeBSD 反批评的再回应集中于两点。其一，“Apache 2.0 专利条款遮蔽论”：FreeBSD 反批评中 “GPLv3 §11 专利报复条款构成法律风险” 的论证，只证明 GPLv3 有专利条款，不证明 FreeBSD 拒绝所有含专利条款的许可证——LLVM 现用许可证为 Apache 2.0（2019 年从 LLVM Release License 迁移），Apache
 - **统计分析印证**——`bsd_commits.db` freebsd-src 仓库 1993-2026 年 commit 月度量 Mann-Kendall 趋势检验结果为显著上升趋势（Sen's slope =+1.40/月，p < 0.001，95% CI [1.11, 1.69]）（统计结论 C-03）；FreeBSD 9.x 时期（2012-01 至 2017-06）处于 freebsd
 

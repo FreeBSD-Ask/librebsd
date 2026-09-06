@@ -50,7 +50,7 @@ volume: 第07卷-freebsd的工程体系重构
 
 ## 143.13.2 许可证纯洁化的法律里程碑意义
 
-- 要点：FreeBSD base 系统 GPL 代码清零具有重要的法律和生态里程碑意义：① 法律确定性——商业用户可确信 FreeBSD base 不包含 GPLv2/v3 代码，不存在 GPL 许可证合规风险（除
+- 要点：FreeBSD base 系统 GPL 代码清零具有重要的法律和生态里程碑意义：① 法律确定性——商业用户可确信 FreeBSD base 不包含 GPLv2/v3 代码，不存在 GPL 许可证合规风险（除〔待核：原文截断〕
 - Clang Team. Clang Features and Goals: Fast compiles and Low Memory Use [EB/OL]. clang.llvm.org/features.html, 2007；Larabel M. GCC 4.9 VS. LLVM Clang 3.5 Benchmarks [EB/OL]. OpenBenchmarking.org, 2014-04-14；Larabel M. LLVM Clang 16 vs. GCC 13 Performance [EB/OL]. Phoronix, 2023-05-11.[考据完成：2026-07-28
 - FreeBSD Wiki. Building FreeBSD with Clang [EB/OL]. wiki.freebsd.org；LLVM Project. Clang Control Flow Integrity [EB/OL]. clang.llvm.org/docs/ControlFlowIntegrity.html. ［B］
 

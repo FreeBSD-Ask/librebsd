@@ -36,7 +36,11 @@ volume: 第15卷-许可证哲学与法律分析
 - 考据过程留痕——【查证来源】Linux 基金会项目列表（linuxfoundation.org/projects，Kubernetes、Node.js 等托管项目）经 linuxfoundation.org 一手核验；GPL 与 BSD 许可证对比研究经 freebsd.org/copyright/freebsd-license/ 与 gnu.org/licenses/ 双向核验；GNU 项目官网
 - 考据过程留痕——【查证来源】Linux 基金会项目列表与 Kubernetes/Node.js 历史经 linuxfoundation.org/projects 一手核验；GNU 工具链历史（GCC、glibc、bash、coreutils）经 gnu.org 一手核验；FreeBSD Clang/LLVM 替代 GCC 历史（9.0 可选、10.0 默认）经 freebsd.org/releas
 - 道与术的辩证在 BSD 跨项目投入中是否存在“道高于术”的层级——此层级判断在 BSD 阵营中隐含存在（BSD 许可证哲学被视为高于具体项目产出），但若“道”是相对的则不存在“道高于术”的层级，故采信“道与术的辩证在 BSD 跨项目投入中不存在层级高低，而存在路径差异”的判断。
-- **文献**：项目史观总纲第五章“道与术的辩证”[Z]. 原材料/哲学/项目统摄史观/第 5 章.md; q.md“
+- 文献**：项目史观总纲第五章“道与术的辩证”[Z]. **原材料/哲学/项目统摄史观/第 5 章.md**; q.md“道与术的辩证”[Z]. **原材料/哲学/原始哲学/**; FreeBSD Project. FreeBSD License [EB/OL]. <https://www.freebsd.org/copyright/freebsd-license/>.
+
+##### 289.12.2 从总纲第 6 条审视：主体性与和解
+
+- **要点**：BSD 跨项目投入在项目史观总纲第 6 条“主体性与和解”下显现为“分离聚合的循环”——BSD 阵营与采用者（Apple、Meta、Linux 发行版、Windows 等）
 - 主体性与和解在 BSD 跨项目投入中是否存在“BSD 阵营应强制采用者回馈”的主张——此主张在回馈层面成立（强制回馈确能缓解“回馈不足”）但在许可证层面不成立（BSD 许可证的设计意图即允许无回馈采用），故采信“回馈层面主张成立但与许可证哲学矛盾，故不可调和但可分离聚合”的判断。
 - **文献**：项目史观总纲第六章“主体性与和解”[Z]. 原材料/哲学/项目统摄史观/第 6 章.md; q.md
 
@@ -46,7 +50,7 @@ volume: 第15卷-许可证哲学与法律分析
 
 ## 291.11.2 GNU 项目对其他开源项目的效应对比
 
-- 要点：GNU 项目通过 GPL 工具链（GCC、glibc、bash、coreutils、Emacs 等）影响其他开源项目；GNU 工具链长期是 Linux 发行版默认工具链，也是 BSD 项目早期默认工具链（后被 Clang/LLVM 替代）；GNU 项目跨项目影响以“工具链基础”见长，BSD 跨项目影响以“许可证与设
+- 要点：GNU 项目通过 GPL 工具链（GCC、glibc、bash、coreutils、Emacs 等）影响其他开源项目；GNU 工具链长期是 Linux 发行版默认工具链，也是 BSD 项目早期默认工具链（后被 Clang/LLVM 替代）；〔待核：原文截断，后文待回源〕
 - Linux Foundation. Projects [EB/OL]. <https://www.linuxfoundation.org/projects>; GNU Project. Official Website [EB/OL]. <https://www.gnu.org/>; FreeBSD 10.0 Release Notes [EB/OL]. (2014-01-31). <https://www.freebsd.org/releases/10.0R/relnotes/>; OpenSolaris. Archive [EB/OL]. <<https://www.opensolaris>.
 - Linux Foundation. Projects [EB/OL]. <https://www.linuxfoundation.org/projects>; FreeBSD 10.0 Release Notes [EB/OL]. (2014-01-31). <https://www.freebsd.org/releases/10.0R/relnotes/>; 项目史观总纲第六章“主体性与和解”[Z]. 原材料/哲学/项目统摄史观/第 6 章.md; 项目史观总纲第二十四章“许可证哲学”[Z]. 原材料/哲学/项目统摄史观/第 24 章.md.
 - 项目史观总纲第五章“道与术的辩证”[Z]. 原材料/哲学/项目统摄史观/第 5 章.md; q.md“道与术的辩证”[Z]. 原材料/哲学/原始哲学/; FreeBSD Project. FreeBSD License [EB/OL]. <https://www.freebsd.org/copyright/freebsd-license/>.

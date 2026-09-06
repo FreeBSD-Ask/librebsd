@@ -8,7 +8,7 @@ volume: 第06卷-freebsd的核心技术革新
 
 ## 史料
 
-- [WEB:freebsd.org/administration.html] FreeBSD Security Team 架构（官方一手）：安全通告（FreeBSD-SA）发布流程与 Security Officer Charter
+- [WEB:freebsd.org/administration.html] FreeBSD Security Team 架构（官方一手）：安全通告（FreeBSD-SA）〔待核：原文截断，后文待回源〕
 - [WEB:dblp.uni-trier.de MKMcKusick] dblp 书目（一手）：FreeBSD 9.x 时期相关安全/文件系统研究的学术发表链（Soft Updates/FFS 系列论文）
 
 ## 要点

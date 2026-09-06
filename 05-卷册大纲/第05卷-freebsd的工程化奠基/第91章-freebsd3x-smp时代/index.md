@@ -12,7 +12,7 @@ volume: 第05卷-freebsd的工程化奠基
 - FreeBSD 3.x 时期的技术淘汰具有 “工程驱动而非研究驱动” 的特征——a.out → ELF 迁移、soft updates、Alpha 移植均由工程需求而非学术研究驱动；这一特征与 4.3BSD-Reno（1990 年 6 月）的 “研究引入” 形成对比，反映 FreeBSD 项目作为生产系统而非研究项目的定位；需警惕将 FreeBSD 3.x 叙事为 “现代 BSD 起点” 的回溯性
 - 本时期多元群体贡献的史料存在两块局限——（1）提交元数据以邮箱域分类，丢失性别/族裔/宗教等不可考维度；（2）contributors 表仅覆盖主仓库 freebsd-src，ports/doc/www 等子项目贡献者未计入，或低估社区广度。
 - 三方比较史料保存较好，但 FreeBSD 3.x 与 Solaris 8 的直接性能对比鲜有公开基准
-- FreeBSD 3.x 时期（1998-2000）的安全响应模型延续 FreeBSD 2.x 的 “Security Advisory + MFC 回溯” 双层结构，但版本周期内的架构变化为安全响应提供新维度——SMP 支持（3.0-RELEASE 引入初步 SMP，依赖 Giant Lock 粗粒度锁）带来内核并发访问的新漏洞面，kern_descrip.c/kern_exec.c 安全修复（M
+- FreeBSD 3.x 时期（1998-2000）的安全响应模型延续 FreeBSD 2.x 的 “Security Advisory + MFC 回溯” 双层结构，但版本周期内的架构变化为安全响应提供新维度——SMP 支持（3.0-RELEASE 引入初步 SMP，依赖 Giant Lock 粗粒度锁）〔待核：原文截断，后文待回源〕
 
 ## 史料
 

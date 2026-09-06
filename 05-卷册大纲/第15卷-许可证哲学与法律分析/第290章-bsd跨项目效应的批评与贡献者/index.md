@@ -14,7 +14,7 @@ volume: 第15卷-许可证哲学与法律分析
 建议动作：补入 McKusick 或 d…
 - [DB:research_notes:blocks:8] 关键词「贡献者」命中：史实考据：CSRG 于 1994 年 6 月发布的 4.4BSD-Lite 官方 Release Notes，是 4.4…
 - [DB:research_notes:blocks:20] 关键词「贡献者」命中：史实考据：Mike Karels 于 1995 年 6 月发出的告别邮件，标题或正文包含“Berkeley CSRG i…
-- [DB:research_notes:blocks:354] 关键词「贡献者」命中：史实考据：DragonFly BSD GitHub 仓库，显示 44,910 commits 来自多名贡献者（liwei…
+- [DB:research_notes:blocks:354] 关键词「贡献者」〔待核：原文截断，后文待回源〕
 
 ## 要点
 
@@ -32,12 +32,12 @@ volume: 第15卷-许可证哲学与法律分析
 - 总纲第 10 条（边缘者贡献）与总纲第 6 条（主体性与和解）。BSD 跨项目贡献者的核心即“明星可见与边缘者被遗忘的辩证统一”——明星因技术产出可见度高而被铭记，边缘者因协调角色可见度低而被遗忘，二者是同一项目的两面。项目史观总纲第十章“边缘者贡献”在此显现：边缘者非“被动的受害者”而是“主动的贡献者”，考据程序使其贡献被重新发现。
 - **辨析**：考据过程留痕——【查证来源】Varnish
 - 总纲第 24 条——许可证：BSD 许可证的设计决定了回馈不足的结构性；总纲第 14 条——商业与社区的张力：商业采用与社区回馈的不对称
-  - 辨析：回馈“不足”的量化标准须明确——是 commit 数、代码行数还是资金量；OpenBSD 资金紧张的具体数据须查基金会年报；Torvalds 批评的语境须查原访谈；0 信任原则局限标注：L3.2.1 查询基于 12 类商业邮箱域名（@netflix
+  - 辨析：回馈“不足”的量化标准须明确——是 commit 数、代码行数还是资金量；OpenBSD 资金紧张的具体数据须查基金会年报；Torvalds 批评的语境须查原访谈；〔待核：原文截断，后文待回源〕
 - 总纲第 5 条（道与术的辩证）与总纲第 24 条（许可证哲学）。BSD 阵营的反批评实质上是将“回馈不足”“话语权丧失”“资源分散”的批评置于“许可证设计意图”“标准化必然结果”“广泛孵化文化代价”的框架下重新审视——此三者非“失败”而是“设计代价”。项目史观总纲第五章“道与术的辩证”在此显现：BSD 许可证作为“道”（哲学原则）允许“术”（具体采用）的无回馈，此“无回馈”非“道”的失败而是“道”
 
 ## 辨析
 
-- 每位贡献者的具体跨项目角色须逐个核实——如 Watson 在 CHERI 中的角色 vs FreeBSD 中的角色须区分；Damien Miller 在 OpenSSH portable 中的角色须查 openssh.com 治理文档；0 信任原则局限标注：L7.2.1 查询基于 author_email 字段统计，但 author 字段可由提交者任意填写，同一人使用不同邮箱（如工作邮箱与个人邮箱
+- 每位贡献者的具体跨项目角色须逐个核实——如 Watson 在 CHERI 中的角色 vs FreeBSD 中的角色须区分；Damien Miller 在 OpenSSH portable 中的角色须查 openssh.com 治理文档；〔待核：原文截断，后文待回源〕
 - 考据过程留痕——【查证来源】Varnish Software 官方历史（varnish-software.com/varnish-history/）经一手核验明确记载 Anders Nordby 参与项目启动；Anders Berg 2016 年 Q&A（varnish-software.com/blog）经一手核验自述"thinker, not a doer"与 Nordby 推荐 PHK 的细
 - 考据过程留痕——【查证来源】Varnish Software 官方历史（Berg 发起、Nordby 连接、DES 构想、PHK 执行）经 varnish-software.com/varnish-history/ 一手核验；OpenSSH 官方历史（Grönvall 的 OSSH 为 fork 源头）经 openssh.org/history.html 一手核验；bsd_commits.db 查
 - 回馈“不足”的量化标准须明确——是 commit 数、代码行数还是资金量；OpenBSD 资金紧张的具体数据须查基金会年报；Torvalds 批评的语境须查原访谈；0 信任原则局限标注：L3.2.1 查询基于 12 类商业邮箱域名（@netflix.com/@juniper.net/@netapp.com/@ixsystems.com 等）匹配，企业员工若用个人邮箱（@gmail.com）或 @u

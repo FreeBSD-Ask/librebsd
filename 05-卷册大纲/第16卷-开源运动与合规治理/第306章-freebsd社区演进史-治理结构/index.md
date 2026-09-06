@@ -80,7 +80,8 @@ volume: 第16卷-开源运动与合规治理
 ## 306.2.2 历届选举争议与演变
 
 - 要点：Core Team 选举 2000-2024 年共举行 10+ 届，2020 年选举因 CoC 争议 voter turnout 下降，2022 年选举引入电子投票系统
-- 史料：freebsd-hackers 与 freebsd-core 邮件列表选举讨论、Core Team 选举结果公告；2022 年 Core.12 选举结果公告（FreeBSD Core Team Secretary 2022-06-18 发布，fr
+- 要点**：FreeBSD 项目 1994-1995 年起使用 majordomo 邮件列表软件，freebsd-hackers、freebsd-current、freebsd-questions 等列表在 1990 年代通过 hub.freebsd.org 分发，后迁移至 mailman
+  **史料**：freebsd.org 邮件列表存档、majordomo 配置文件存档、Wayback Machine 1996-2000 年 freebsd.org 快照 ［A］
 - FreeBSD Committer's Guide；FreeBSD src/ repository ACL ［A］
 
 ## 306.3.2 文档贡献者与 committer 关系演变

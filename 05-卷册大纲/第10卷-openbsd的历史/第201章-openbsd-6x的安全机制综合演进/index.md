@@ -11,7 +11,7 @@ volume: 第10卷-openbsd的历史
 - 2017-2021 应用沙箱：OpenBSD 6.x 的 pledge/unveil 以极简声明引领，FreeBSD Capsicum 以能力句柄深入，Linux seccomp 以 BPF 灵活，Windows AppContainer 与 macOS Sandbox 闭源/半开源；OpenBSD 6.x 的极简沙箱影响行业（如部分思路入 Linux）  **2017-2021 同期应用沙箱机制
 - 6.x 周期是 OpenBSD“主动审计—快速修复—加固重构”循环的形成期——**主动审计** 体现于 6.0 errata 中 8 月 3 日单日发布 029-039 共 11 个 patch（含 9 个 SECURITY FIX），反映一次系统性的内核安全审计；**快速修复** 体现于 Spectre v2 披露后 14 天内提交修复 commit（kettenis `d855ec95cfe6
 - 从项目史观总纲第 5 条“没有必然性，只有偶然性”与总纲第 13 条“法律与道德是利益分配”审视，LibreSSL fork 与 RETGUARD 皆非“安全必然性”的产物，亦非纯粹的工程道德选择，而是偶然事件与利益分配的交汇。总纲第 5 条指出，每一次 fork、每一个技术决定都是不可替代的偶然——Heartbleed 于 2014 年 4 月 7 日披露是偶然事件，OpenBSD 团队当日即由
-- OpenBSD 6.2（2017-10-09）引入 **unveil(2)** 系统调用用于文件系统路径访问限制——unveil(2) 允许进程在启动时声明所需访问的文件系统路径（如 `unveil("/var/www", "r")`），内核据此限制进程的文件系统访问范围，未声明的路径对进程不可见；unveil(2) 与 5.9 引入的 **pledge(2)** 共同构成“进程权限 + 文件路径
+- OpenBSD 6.2（2017-10-09）引入 **unveil(2)** 系统调用用于文件系统路径访问限制——unveil(2) 允许进程在启动时声明所需访问的文件系统路径（如 `unveil("/var/www", "r")`），内核据此限制进程的文件系统访问范围，未声明的路径对进程不可见；〔待核：原文截断，后文待回源〕
 
 ## 史料
 
@@ -25,7 +25,7 @@ volume: 第10卷-openbsd的历史
 ## 辨析
 
 - 沙箱“简洁 vs 灵活”是设计权衡——pledge 的采用门槛最低（一行 `pledge()` 调用），seccomp 的表达力最强（BPF 过滤器可定义任意系统调用过滤规则），Capsicum 的粒度最细（能力句柄可绑定至单个文件描述符）
-- *须精确说明 6.0 errata 8 月 3 日单日 11 个 patch 的性质**：029_sigio（RELIABILITY）、030_sendsyslog（RELIABILITY）、031_fuse（SECURITY）、032_recv（SECURITY）、033_tcp_usrreq（SECURITY）、034_sockaddr（SECURITY）、035_ptrace（SECURIT
+- *须精确说明 6.0 errata 8 月 3 日单日 11 个 patch 的性质**：029_sigio（RELIABILITY）、030_sendsyslog（RELIABILITY）、031_fuse（SECURITY）、032_recv（SECURITY）、033_tcp_usrreq（SECURITY）、034_sockaddr（SECURITY）〔待核：原文截断，后文待回源〕
 - 考据过程留痕——【查证来源】总纲第 5 条与第 13 条原文经 据原文第 25 章 一手核验，第 5 条明确“每一次 fork、每一个技术决定，都是不可替代的偶然”，第 13 条明确“任何道德问题本质上是利益问题”；LibreSSL fork 的 commit 时间线经 bsd_commits.db openbsd-src 仓库 commits 表一手核验（djm `af0b15b8442f` 2
 - unveil(2) 引入的考据须遵循 0 信任原则——【查证来源】（1）OpenBSD 6.2 release 页面（<https://www.openbsd.org/62.html>）经 2026-07-23 检索，记载发布日期 2017-10-09 与 unveil(2) 引入；（2）**unveil(2)** 手册页记载 unveil(2) 系统调用的设计与约束机制；（3）bsd_commi
 

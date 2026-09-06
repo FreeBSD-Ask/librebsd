@@ -8,7 +8,7 @@ volume: 第03卷-伯克利学术文化外溢影响
 
 ## 要点
 
-- （一）CSRG 成员的学术身份：CSRG 核心成员（McKusick、Karels、Leffler、Bostic 等）作为伯克利 EECS 系教师或研究生，理论上为 Academic Senate 成员或学生成员——其中 McKusick 后续获 EECS 系教职（具体任职年份需查阅 EECS 系档案核实），Karels、Leffler、Bostic 等作为研究科学家（research scien
+- （一）CSRG 成员的学术身份：CSRG 核心成员（McKusick、Karels、Leffler、Bostic 等）作为伯克利 EECS 系教师或研究生，理论上为 Academic Senate 成员或学生成员——其中 McKusick 后续获 EECS 系教职（具体任职年份需查阅 EECS 系档案核实）〔待核：原文截断，后文待回源〕
 
 ## 史料
 
@@ -29,7 +29,7 @@ volume: 第03卷-伯克利学术文化外溢影响
 
 ## 辨析
 
-- McKusick 获 EECS 系教职的具体年份——EECS 系档案未能在 2026-07-25 直接核查，McKusick 获教职的具体年份需查阅 EECS 系教师任命档案核实，保留 [考据完成：2026-07-28 该处存疑标注属史料缺口，须待原始档案公开后方可补充确证]；Karels、Leffler、Bostic 等作为研究科学家的 Academic Senate 成员身份——研究科学家（r
+- McKusick 获 EECS 系教职的具体年份——EECS 系档案未能在 2026-07-25 直接核查，McKusick 获教职的具体年份需查阅 EECS 系教师任命档案核实，保留 [考据完成：2026-07-28 该处存疑标注属史料缺口，须待原始档案公开后方可补充确证]；〔待核：原文截断，后文待回源〕
 
 ## 文献
 

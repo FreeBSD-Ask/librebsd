@@ -9,9 +9,9 @@ volume: 第10卷-openbsd的历史
 ## 要点
 
 - OpenBSD 采用 “默认安全 + 代码审计” 模型，FreeBSD 采用 "Security Officer + MAC Framework" 模型；FreeBSD 通过 TrustedBSD 项目（2000-2003 年由 Robert Watson、Poul-Henning Kamp（波尔-亨宁·坎普） 等推动）引入 MAC、Jails（1999 年由 Poul-Henning Kamp
-- SELinux 由 NSA 主导开发，2000 年 12 月首次发布（基于 Flask 架构与 Type Enforcement），2003 年合入 Linux 2.6 内核主线，依赖 Linux Security Modules（LSM）框架；AppArmor 由 Immunix 公司开发（1998 起），2006 年随 SUSE Linux Enterprise 10 集成；两者均采用 “策略
+- SELinux 由 NSA 主导开发，2000 年 12 月首次发布（基于 Flask 架构与 Type Enforcement），2003 年合入 Linux 2.6 内核主线，依赖 Linux Security Modules（LSM）框架；AppArmor 由 Immunix 公司开发（1998 起），2006 年随 SUSE Linux Enterprise 10 集成；〔待核：原文截断，后文待回源〕
 - Solaris 自 8（2000）起提供 RBAC（Role-Based Access Control），Solaris 10（2005-01）引入 Trusted Extensions 与 Zones；AIX 5L（2001）提供多级安全（MLS）与 Trusted Computing Base（TCB）评估；HP-UX 11i v2（2003）提供 Security Containment 与
-- macOS 基于 Darwin（含 BSD 用户空间，自 Mac OS X 10.0 起源自 FreeBSD 4.x 用户空间与 Mach 3.0 内核混合）；macOS 通过 Sandbox（10.5 Leopard 2007 引入 Seatbelt sandbox，基于 TrustedBSD MAC Framework）、System Integrity Protection（SIP，2015
+- macOS 基于 Darwin（含 BSD 用户空间，自 Mac OS X 10.0 起源自 FreeBSD 4.x 用户空间与 Mach 3.0 内核混合）；macOS 通过 Sandbox（10.5 Leopard 2007 引入 Seatbelt sandbox，基于 TrustedBSD MAC Framework）〔待核：原文截断，后文待回源〕
 - OpenBSD pf 由 Daniel Hartmeier（丹尼尔·哈特迈尔） 主导开发，2001 年随 OpenBSD 3.0（2001-12-01 发布）引入——openbsd.db openbsd-src 仓库 commit 148b55c022b1（2001-06-24 kjell 引入 sys/net/pf.c 与 sys/net/pfvar.h）证实代码引入时间早于 3.0 发布约 5
 
 ## 史料
@@ -25,8 +25,8 @@ volume: 第10卷-openbsd的历史
 ## 辨析
 
 - OpenBSD 与 FreeBSD 安全模型严格程度的对比缺乏权威评估；pledge/unveil 与 MAC Framework 的技术层级不同——pledge 是进程级 syscall 沙箱（用户态调用 pledge(2) 后内核拒绝非白名单 syscall），MAC Framework 是内核级策略框架（管理员加载模块如 mac_biba、mac_mls 后内核在 syscall 路径上调用
-- SELinux 与 pledge/unveil 的功能并非完全等价——SELinux 提供内核级 MAC 策略（约 4000+ 类型、用户/角色/类型三元组），pledge 提供进程级 syscall 沙箱（约 30 个 promise 关键字、不区分用户角色），技术层级与粒度均不同；SELinux 在 RHEL 默认 enforcing 模式，但 Red Hat 官方文档（<<https://ac>
-- 商业 UNIX 持有 Common Criteria 认证与 OpenBSD 无认证的实际安全水平对比缺乏权威评估——认证仅证明通过评估流程，不保证实际漏洞率更低；Common Criteria EAL4+ 评估证书在 commoncriteriaportal.org 数据库中可查 Solaris 10（认证 ID CEMC/VS-0003/2005）、AIX 7.2（认证 ID CCEVS-VR
+- SELinux 与 pledge/unveil 的功能并非完全等价——SELinux 提供内核级 MAC 策略（约 4000+ 类型、用户/角色/类型三元组），pledge 提供进程级 syscall 沙箱（约 30 个 promise 关键字、不区分用户角色），技术层级与粒度均不同；〔待核：原文截断，后文待回源〕
+- 商业 UNIX 持有 Common Criteria 认证与 OpenBSD 无认证的实际安全水平对比缺乏权威评估——认证仅证明通过评估流程，不保证实际漏洞率更低；Common Criteria EAL4+ 评估证书在 commoncriteriaportal.org 数据库中可查 Solaris 10（认证 ID CEMC/VS-0003/2005）〔待核：原文截断，后文待回源〕
 - macOS SIP 与 OpenBSD pledge/unveil 的技术层级不同——SIP 保护系统级完整性（限制 root 写入 /usr、/bin、/sbin 等系统目录），pledge 限制进程级 syscall（程序运行时声明所需 promise 类别），unveil 限制进程级文件路径访问；macOS 的 BSD 用户空间渊源与安全机制的关系是独立演进——Darwin 用户空间源自 F
 - 三者性能对比缺乏权威基准——多数公开基准（Phoronix、Calomel.org）存在配置不等价问题（如未对齐规则数量、状态表大小、conntrack 模块）；FreeBSD 默认仍提供 IPFW/IPF/pf 三选项（编译时选择），NetBSD 自 7.0（2015-10）起 NPF 取代 pf 作为默认防火墙（<https://man.netbsd.org/npf.7>）
 

@@ -26,7 +26,7 @@ volume: 第11卷-dragonflybsd的历史
 ## 辨析
 
 - bsd_commits.db 显示 OpenBSD 移除 i386 的精确时间须以 openbsd-src 仓库 tag 核验 [考据完成：2026-07-28 该处存疑标注属史料缺口，须待原始档案公开后方可补充确证]——bsd_commits.db openbsd-src 仓库 tag 列表为空（可能因仓库镜像未抓取 tag），OpenBSD 5.7 release date 2015-05-0
-- 考据过程留痕——【查证来源】DragonFly BSD 4.0 Release Notes（**<https://www.dragonflybsd.org/release40/**>）经 WebFetch 一手核验，原文明确记载"The drm/i915 driver is now mostly based on the Linux 3.8.13 implementation and is no
+- 考据过程留痕——【查证来源】DragonFly BSD 4.0 Release Notes（**<https://www.dragonflybsd.org/release40/**>）〔待核：原文截断，后文待回源〕
 - 考据过程留痕——【查证来源】DragonFly BSD 4.0 Release Notes（**<https://www.dragonflybsd.org/release40/**>）经 WebFetch 一手核验，原文记载"DragonFly 4.0 now supports GPUs from the Haswell family, and OpenGL acceleration is now
 - 考据过程留痕——【查证来源】bsd_commits.db dragonfly-src 仓库 contributors 表 Tigeot first = 2011-03-06 last = 2020-12-19 total = 1346 经数据库查询核验，末次 commit 2020-12-19 为“维护负担的双向性”再反驳提供代码级证据——Tigeot 停止贡献后 DragonFly 的 DRM
 - bsd_commits.db 显示 commit 量与项目实际影响力无简单线性关系——NetBSD 年均 commit 量最高（16669 条）但其市场份额未必高于 FreeBSD；bsd_commits.db 显示 DragonFly TOP 5 集中度 70.6% 反映巴士因子风险——若 TOP 5 贡献者中任何一人退出，DragonFly 维护能力将受严重影响；市场份额数据需谨慎采用——BS

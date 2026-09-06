@@ -20,7 +20,7 @@ volume: 第08卷-freebsd的范式转换
   - 辨析：常见误解称 “BSD 许可不保护自由”——这是用 GPL 的自由观来评判 BSD；BSD 认为真正的自由包括选择闭源的自由
 - 总纲第 25 条——终结与延续：CSRG 的科学精神没有随 CSRG 1995 年解散而消失——它通过 FreeBSD、NetBSD、OpenBSD、Darwin 等后代项目延续至今；FreeBSD 的 code review 流程、release engineering 纪律、文档传统都是 CSRG 精神的直接继承者
   - 辨析：需要区分 “CSRG 神话” 与历史真实——CSRG 不是完美的
-- 总纲第 22 条——开源运动；总纲第 19 条——历史解释学与权力。CoC 的采纳是开源运动从 “代码优先” 向 “社区治理优先” 演化的标志性节点。FreeBSD CoC 文本明确将 "varied community, people from a wide range of backgrounds" 列为 "strength of FreeBSD"，这标志着 BSD 社区从早期 “纯技术精英主
+- 总纲第 22 条——开源运动；总纲第 19 条——历史解释学与权力。CoC 的采纳是开源运动从 “代码优先” 向 “社区治理优先” 演化的标志性节点。〔待核：原文截断，后文待回源〕
 - 总纲第 10 条——边缘者贡献；总纲第 19 条——历史解释学与权力。Harper 案例揭示了 BSD 社区作为 “技术精英主义” 场域与 “性别平权运动” 交汇时的复杂张力——一个在 FreeBSD 代码仓库有实际贡献的女性开发者，在 Gamergate 期间成为公开的反骚扰活动家，这种双重身份挑战了 BSD 社区 “只看代码不看身份” 的传统叙事。考据视角须避免两种还原论：既不能因 Harpe
 - 总纲第 14 条——哲学思潮；总纲第 22 条——开源运动。科技左派的兴起不是凭空出现的政治现象，而是有其深厚的哲学基础——女性主义哲学对 “性别中立” 神话的解构、技术哲学对 “技术中立” 神话的解构、Lessig 对 “代码即法律” 的揭示，这三条哲学线索在 2010-2020s 汇聚为科技左派的核心论域。开源运动与科技左派的相遇是必然的——开源社区本身就是一个由代码架构规制的微型社会，CoC
 
@@ -29,14 +29,14 @@ volume: 第08卷-freebsd的范式转换
 - 常见误解称 “BSD 许可不保护自由”——这是用 GPL 的自由观来评判 BSD；BSD 认为真正的自由包括选择闭源的自由——如果我只能以特定方式使用代码，那不是真自由；当然，这也意味着 BSD 代码可能被 “夺走” 并变成专有软件，但 BSD 社区认为这是自由的代价，而且从长期看，开放协作的价值会胜出（这一点已被 40 年历史部分验证）
   - 文献：Regents of the Univers
 - 需要区分 “CSRG 神话” 与历史真实——CSRG 不是完美的理想国，他们也有代码 bug、内部政治、截止日期压力、人为错误；但他们确实建立了一套在当时非常先进的工程实践，为后来的开源运动提供了参考模型
-  - 文献：McKusick, M. K. (1999). Twenty Years of Berkeley Unix. In *Open Sources: Voices from the O
+  - 文献：McKusick, M. K. (1999). Twenty Years of Berkeley Unix. In *Open Sources: Voices from the O〔待核：原文截断〕
 - **关键日期精确考证**：① FreeBSD CoC 发布年份——FreeBSD 官方页面与互联网档案馆存档双重验证为 2020-06-09；自媒体中文文章广泛流传的 “2018 年” 说法 [考据完成：2026-07-28 经查 FreeBSD Foundation 2018 年度报告与 2018 年 freebsd-announce 邮件列表存档，未发现 2018 年 CoC 通过记录；该误传
 - **关键事实精确考证**：① **Harper FreeBSD 任期时间**——cgit 一手记录显示首次提交 2010-04-21，最后可见提交 2010-10-10（mfiutil/mptutil 错误处理改进），现有记载中关于 “2010-2012 FreeBSD 任期” 的上限 "2012" 待进一步考据 [考据完成：2026-07-28 cgit 默认视图未显示 2010-10-10 之
 - **关键概念精确考证**：① **Lessig "code is law" 命题**——出自《Code and Other Laws of Cyberspace》(1999) 第 6 章 "Cyberspaces"，Lessig 在 2006 年更新版《Code: Version 2.0》中对该命题作了修正与扩展；Stanford 哲学百科无 Lessig 专门条目，但 "Philosophy o
 
 ## 文献
 
-- Regents of the University of California. (1999, July 22). *BSD License Amendment: Deletion of Advertising Clause*. Official announcement from UC Berkeley OTL; FreeBSD Project. *The FreeBSD Copyright*. <https://www.freebsd.org/copyright/freebsd-license/>; OSI. *The 2-Clause BSD License (Simplified BS
+- Regents of the University of California. (1999, July 22). *BSD License Amendment: Deletion of Advertising Clause*. Official announcement from UC Berkeley OTL; FreeBSD Project. *The FreeBSD Copyright*. <https://www.freebsd.org/copyright/freebsd-license/>; OSI. *The 2-Clause BSD License (Simplified BS〔待核：原文截断〕
 - McKusick, M. K. (1999). Twenty Years of Berkeley Unix. In *Open Sources: Voices from the Open Source Revolution*. O'Reilly; Salus, P. H. (1994). *A Quarter Century of UNIX*. Addison-Wesley. ISBN 0-201-54777-5; Bostic, K. (1991). *BSD Networking Release 2 (Net/2) Release Notes*. CSRG, UC Berkeley, Ju
 - FreeBSD Project. (2020, June 9). *FreeBSD Community Code of Conduct*. <https://www.freebsd.org/internal/code-of-conduct/>; Internet Archive. (2020, June 10). *Snapshot: FreeBSD Code of Conduct*. <https://web.archive.org/web/20200610*/https://www.freebsd.org/internal/code-of-conduct/>; LLVM Project.
 - FreeBSD Project. (2010). *FreeBSD src repository commits by Randi Harper*. <https://cgit.freebsd.org/src/log/?qt=author&q=Randi+Harper>; FreeBSD Project. (2010, April 21). Commit: "Add myself to committers-src.dot." Revision r206988. <<https://cgit.freebsd.org/src/commit/?id=3d65a7ed79b2668712ceeee6b>

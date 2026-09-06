@@ -25,7 +25,7 @@ volume: 第12卷-macos的bsd遗产
 
 ## 辨析
 
-- NeXT 选用 BSD 究竟是工程务实还是 Jobs 对 BSD 的学术偏好——经查证 Jobs 本人无公开记录表明对 BSD 有特定偏好，BSD 选型决策的主要推动者是 Avie Tevanian（Mach 背景）与 NeXT 工程团队（需成熟 TCP/IP 与 VMS）。采信 “工程务实驱动 BSD 选型” 而非 “Jobs 个人偏好驱动” 的判断。Mach 来自 CMU（Richard Ra
+- NeXT 选用 BSD 究竟是工程务实还是 Jobs 对 BSD 的学术偏好——经查证 Jobs 本人无公开记录表明对 BSD 有特定偏好，BSD 选型决策的主要推动者是 Avie Tevanian（Mach 背景）与 NeXT 工程团队（需成熟 TCP/IP 与 VMS）。采信 “工程务实驱动 BSD 选型” 而非 “Jobs 个人偏好驱动” 的判断。〔待核：原文截断，后文待回源〕
 - NeXTSTEP 的 Mach 2.5（单内核式 Mach + BSD 在同一地址空间）与后续 Mach 3.0（微内核，BSD 作为用户态服务器）的架构差异直接影响 later Darwin/XNU 的设计——XNU 至 2024 年仍使用 Mach 3.0 的 "collocated" 模式（Mach 与 BSD 在同一地址空间而非真正的用户态服务器），此设计选择可追溯至 NeXTSTEP 2
 - Objective-C 是否 “基于” BSD 须澄清——Objective-C 是编程语言与运行时（Brad Cox 1983 年设计），BSD 是操作系统接口，二者是共生而非派生关系。Objective-C 可在任何提供 C 编译器的操作系统上运行（如 GNUstep 在 Linux 上实现），但 NeXTSTEP/macOS 的 Objective-C 运行时与 BSD 系统调用深度集成，此
 - 具体人名（Mike Parkhill、Doug McCallum、Peter Lipson）的核实经 Stanford University Library NeXT Inc. Records 档案与 NeXTSTEP 源码中的 CREDITS 文件交叉验证。部分贡献者因 NeXT 被 Apple 收购后的组织重组无法核实后续贡献范围。Stanford 档案中 1988-1996 年间的邮件列表存

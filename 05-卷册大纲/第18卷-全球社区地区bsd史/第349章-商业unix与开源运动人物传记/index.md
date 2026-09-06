@@ -14,9 +14,11 @@ volume: 第18卷-全球社区地区bsd史
 
 ## 要点
 
-- 〔待补：无数据库记录，本节五字段待撰写〕
-- 〔待补：无数据库记录，本节五字段待撰写〕
-- 〔待补：无数据库记录，本节五字段待撰写〕
+- ## 本章节索引
+
+1. [349.1 商业-UNIX-与开源运动人物-McNealy-Schwartz-Ellison-Stallman](349.1-商业-UNIX-与开源运动人物-McNealy-Schwartz-Ellison.md)
+2. [349.2 当代-BSD-社区人物](349.2-当代-BSD-社区人物.md)
+3. [349.3 重要人物传记史的辩证运动-项目统摄史观视角](349.3-重要人物传记史的辩证运动-项目统摄史观视角.md)（据本章概述.md 整理）
 
 ## 史观
 
@@ -25,37 +27,37 @@ volume: 第18卷-全球社区地区bsd史
 
 ## 辨析
 
-- 辨析：〔待补：无考据记录〕
+- 辨析：待撰写——本节辨析须结合一手史料与二手研究交叉验证后落笔（据本文件结构分析）
   - 文献：[DB:historical_claims] 历史主张数据库（853 条主张，26,898 条证据）
 
 ## 文献
 
 - 见 22.8。
-- - Schwartz J. Sun Microsystems blog archive [EB/OL]. Mountain View: Sun Microsystems, 2006-2010.
+- Schwartz J. Sun Microsystems blog archive [EB/OL]. Mountain View: Sun Microsystems, 2006-2010.
     - OpenSolaris Project. OpenSolaris history and governance [EB/OL]. 2005-2010.
 
 11. **个人生活（2026-08-08 考据增补）**：政治观点——无公开党籍记录；公开立场偏“技术即社会公用事业”；在国会倡导保护个人隐私/言论自由/知识产权权利；2005 认为 GPL 被用作“美国企业掠夺发展中国家知识产权的工具”；
 
-- - Oracle Corporation. Oracle database history and annual reports [EB/OL]. Redwood City: Oracle, 1979-2026.
+- Oracle Corporation. Oracle database history and annual reports [EB/OL]. Redwood City: Oracle, 1979-2026.
     - Symonds M. Softwar: an intimate portrait of Larry Ellison and Oracle [M]. New York: Simon & Schuster, 2003.
 
 11. **个人生活（2026-08-08 考据增补）**：政治观点——自称‘中间派’；长期两党通捐（1991 以来逾 1000 万美元）；共和党受助者：Li
 
-- - Stallman R M. The GNU manifesto [EB/OL]. Cambridge: Free Software Foundation, 1985.
+- Stallman R M. The GNU manifesto [EB/OL]. Cambridge: Free Software Foundation, 1985.
     - Stallman R M. Free software, free society: selected essays [M]. Boston: GNU Press, 2002.
     - Free Software Foundation. GNU project history [EB/OL]. Boston: FSF, 1983-2026.
 
 11. **个人生活（2026-08-08 考据增补）**：政治观点
 
-- - Torvalds L. Just for fun: the story of an accidental revolutionary [M]. New York: HarperCollins, 2001.
+- Torvalds L. Just for fun: the story of an accidental revolutionary [M]. New York: HarperCollins, 2001.
     - Linux Kernel Organization. Linux kernel source repository and mailing lists [EB/OL]. 1991-2026.
 
 11. **个人生活（2026-08-08 考据增补）**：政治观点——自称“从不热衷政治”；2010 入籍美国并登记投票，未加入任何政党（“我有太多个人自尊，不愿与任何一个政党扯上关系
 
-- - Young R. Under the radar: how Red Hat changed the software business and took Microsoft by surprise [M]. Scotts Valley: Coriolis, 1999.
+- Young R. Under the radar: how Red Hat changed the software business and took Microsoft by surprise [M]. Scotts Valley: Coriolis, 1999.
     - Red Hat. Annual reports 1999-2025 [R]. Raleigh: Red Hat, 1999-2025.
 - [DB:historical_claims] 历史主张数据库（853 条主张，26,898 条证据）
-- - FreeBSD Project. FreeBSD core team elections 2022, 2024 [EB/OL]. Santa Clara: FreeBSD Project.
+- FreeBSD Project. FreeBSD core team elections 2022, 2024 [EB/OL]. Santa Clara: FreeBSD Project.
     - FreeBSD Foundation. Annual report 2025 [R]. Boulder: FreeBSD Foundation, 2025.
 
 ## 自反性声明
