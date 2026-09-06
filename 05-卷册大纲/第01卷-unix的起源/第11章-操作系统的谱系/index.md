@@ -8,7 +8,7 @@ volume: 第01卷-unix的起源
 
 ## 要点
 
-- 1978 年 UNIX 生态呈双强并起雏形——Bell Labs（研究源头，V6/V7 演进）、伯克利 BSD（学术路线，1BSD 发布）；商业 UNIX 尚处萌芽阶段，Onyx Systems、Whitesmiths 等小厂商开始探索，Microsoft 的  尚未正式发布；地理分布横跨美国东岸（Murray Hill）、西岸（伯克利）与商业中心（硅谷）。1978 年 UNIX 生态三极：| 极
+- 1978 年 UNIX 生态呈双强并起雏形——Bell Labs（研究源头，V6/V7 演进）、伯克利 BSD（学术路线，1BSD 发布）；商业 UNIX 尚处萌芽阶段，Onyx Systems、Whitesmiths 等小厂商开始探索，Microsoft 的  尚未正式发布；地理分布横跨美国东岸（Murray Hill）、西岸（伯克利）与商业中心（硅谷）。1978 年 UNIX 生态三极：
 - Tandy/Radio Shack 1977 年为 TRS-80 Model I 发布 TRSDOS，由 Randy Cook 编写；TRSDOS 代表消费电子路径，针对家庭与小企业市场；1977-1979 年间 CP/M、Apple DOS、VMS、TRSDOS 与 UNIX V7 形成多线并进格局，UNIX 谱系仅为此时期操作系统生态的一支
 - 1973-1980s 年间 UNIX 安全机制呈现三极分野——Research UNIX（1969-1979）坚持极简安全模型（root + rwx + setuid + **crypt(3)**），以学术研究与小范围内部分时为应用场景，无审计、无 MAC、无 TCB；PWB/商用分支（1973-1980s）面向大规模运维与商业发行，引入 rsh、SCCS、RJE 账号管理、审计子系统、TCB 框
 - 谱系树成为后续 UNIX 史书的标准叙事框架——Salus 1994、Kernighan 2019、McKusick 1996 均采用树状结构；但树状叙事遮蔽了横向影响（如 BSD 工具反向流入 System V）
