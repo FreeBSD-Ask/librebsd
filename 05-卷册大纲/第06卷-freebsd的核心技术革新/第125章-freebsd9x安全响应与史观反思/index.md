@@ -1,3 +1,5 @@
+# 第 125 章 freebsd9x安全响应与史观反思
+
 ---
 chapter: 第 125 章
 id: CH125

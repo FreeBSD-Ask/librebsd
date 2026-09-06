@@ -4,8 +4,6 @@ id: CH110
 volume: 第06卷-freebsd的核心技术革新
 ---
 
-# 第110章 cddl许可证与freebsd集成
-
 # 第 110 章 cddl许可证与freebsd集成
 
 ## 要点

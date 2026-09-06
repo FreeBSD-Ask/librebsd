@@ -4,8 +4,6 @@ id: CH165
 volume: 第08卷-freebsd的范式转换
 ---
 
-# 第165章 freebsd15x第三方软件与工具链
-
 # 第 165 章 freebsd15x第三方软件与工具链
 
 ## 要点
