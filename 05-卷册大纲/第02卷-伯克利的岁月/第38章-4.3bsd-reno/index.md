@@ -14,9 +14,13 @@ volume: 第02卷-伯克利的岁月
 - Reno 时期的技术淘汰具有“过渡测试与生产淘汰并行”的特征——CSRG 在 Reno 中引入了 POSIX 兼容、NFS、OSI 网络、Kerberos 等生产可用特性，而新 VM 系统（Mach-derived）、LFS 等研究性组件在 Reno 时期处于开发中但实际集成至 4.4BSD；〔待核：原文截断，后文待回源〕
 - 1986-1990 年网络栈成熟度比较：4.3BSD > DEC Ultrix（直接基于 BSD） > HP-UX（BSD/SysV 混合） > AIX（SysV 为主） > System V Release 3（无 TCP/IP），BSD 在 TCP/IP 实现成熟度上领先，TCP/IP 在 **1990 年** SVR4 才成为标准
 
-| 操作系统 | 网络栈来源 | TCP/IP 成熟度 | S |
-| --- | --- | --- | --- |
-〔待补：本表数据行待回填（正文行内粘连拆出，数据行缺失）〕
+| 操作系统 | 网络栈来源 | TCP/IP 成熟度 | SVR4 化时间 | 备注 |
+| ------ | -------- | ----------- | --------- | -- |
+| 4.3BSD（含 Tahoe/Reno） | CSRG 原生 | ★★★★★ 最高 | — | TCP/IP 实现源头，1980 年代起持续领先 |
+| DEC Ultrix | 4.2BSD/4.3BSD 直接派生 | ★★★★ 高 | 1990 转 OSF/1 | 1995 年停止开发 |
+| HP-UX | BSD/System III 混合 | ★★★ 中 | 1992（HP-UX 9.0） | 早期 BSD 套接字，后期 SVR4 TLI/XTI |
+| IBM AIX | System V R2 + 4.3BSD 混合 | ★★ 中低 | 1994（AIX 4.0） | AIX 3.0（1990）转 SVR3，BSD 占比下降 |
+| System V Release 3 | 无 TCP/IP | ★ 无 | — | TCP/IP 在 1990 年 SVR4 才成为标准 |
 
 
 ## 史料
