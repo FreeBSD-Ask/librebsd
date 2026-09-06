@@ -11,7 +11,7 @@ volume: 第12卷-macos的bsd遗产
 - **Rosetta 2** 是 Apple 为 Apple Silicon 过渡开发的 x86_64 至 ARM64 动态二进制翻译层，于 **2020 年 11 月 12 日** 随 macOS 11 Big Sur 发布。Rosetta 2 在用户态运行，通过 BSD 层的 `mmap`（映射代码段）、`mprotect`（设置可执行权限）、`execve`（启动翻译进程）系统调用实现二进制翻
 - Apple 于 **2020 年 6 月** 承诺 2 年内完成 Apple Silicon 过渡，至 **2022 年 6 月** WWDC 2022 公布 Apple Silicon Mac 全产品线覆盖完成（包括 Mac Studio、Mac Pro **2023 年 6 月** 发布，此为最后过渡至 Apple Silicon 的产品线）。**2020-2023 年** 间 Apple 发
 - **2025-09-15 至 2026-06-29** 期间，Apple 发布 macOS Tahoe 26.x 系列共 **30 条 Security Advisories**，覆盖 12 个 macOS 版本（26、26.0.1、26.1、26.2、26.3、26.3.1、26.3.2、26.4、26.4.1、26.5、26.5.1、26.5.2）。所有公告均通过 Apple Security
-- darwin 代码仓库共 2,016 次提交（2001-04-10 至 2106-02-07），27 位贡献者
+- darwin 代码仓库共 2,016 次提交（2001-04-10 至 2026-04-13），42 个 Apple 开源镜像仓库（contributors 表 43 行）
 
 ## 史料
 
@@ -30,9 +30,9 @@ volume: 第12卷-macos的bsd遗产
 
 ## 文献
 
-- Apple Inc. Rosetta 2 Technical Overview [Z]. Apple Developer Documentation, 2020; AnandTech. Apple M1 Review [EB/OL]. (2020-11-18). <https://www.anandtech.com/show/16252/mac-mini-apple-m1-tested>.<!-- DB_REF:darwin.duckdb -->> **数据库引用（darwin.duckdb）**：本子节对应 darwin 代码仓库。> 2020-2021 年间：186 次提交。> 仓库总览：2,016 次提交，27 位贡献者，2001-04-10 至 2106-02-07。
-- Apple Inc. WWDC 2022 Keynote [EB/OL]. (2022-06-06). Apple Press Release; Apple Inc. Mac Studio and Mac Pro with M2 Ultra [EB/OL]. (2023-06-05). Apple Press Release; Asahi Linux Project. m1n1 Hypervisor Documentation [EB/OL]. <https://asahilinux.org/>.<!-- DB_REF:darwin.duckdb -->> **数据库引用（darwin.duckdb）**：本子节对应 darwin 代码仓库。> 2021-2024 年间：343 次提交。> 仓库总览：2,016 次提交，27 位贡献者，2001-04-10 至 2106-02-07。
-- Apple Security Releases [EB/OL]. <https://support.apple.com/en-us/100100>, 2026-07-23 访问; Apple Inc. macOS Tahoe 26 Security Content [EB/OL]. (2025-09-15). <https://support.apple.com/en-us/125110>; bsd_commits.db 查询结果 [EB/OL]. script/query_xnu_tags.py, 2026-07-23; 原材料/研究/考据记录/20260723_announcements-macos.md [EB/OL]. 2026-07-23.<!-- DB_REF:darwin.duckdb -->> **数据库引用（darwin.duckdb）**：本子节对应 darwin 代码仓库。> 2025-2026 年间：138 次提交。> 仓库总览：2,016 次提交，27 位贡献者，2001-04-10 至 2106-02-07。
+- Apple Inc. Rosetta 2 Technical Overview [Z]. Apple Developer Documentation, 2020; AnandTech. Apple M1 Review [EB/OL]. (2020-11-18). <https://www.anandtech.com/show/16252/mac-mini-apple-m1-tested>.<!-- DB_REF:darwin.duckdb -->> **数据库引用（darwin.duckdb）**：本子节对应 darwin 代码仓库。> 2020-2021 年间：186 次提交。> 仓库总览：2,016 次提交，42 个 Apple 开源镜像仓库（contributors 表 43 行），2001-04-10 至 2026-04-13。
+- Apple Inc. WWDC 2022 Keynote [EB/OL]. (2022-06-06). Apple Press Release; Apple Inc. Mac Studio and Mac Pro with M2 Ultra [EB/OL]. (2023-06-05). Apple Press Release; Asahi Linux Project. m1n1 Hypervisor Documentation [EB/OL]. <https://asahilinux.org/>.<!-- DB_REF:darwin.duckdb -->> **数据库引用（darwin.duckdb）**：本子节对应 darwin 代码仓库。> 2021-2024 年间：343 次提交。> 仓库总览：2,016 次提交，42 个 Apple 开源镜像仓库（contributors 表 43 行），2001-04-10 至 2026-04-13。
+- Apple Security Releases [EB/OL]. <https://support.apple.com/en-us/100100>, 2026-07-23 访问; Apple Inc. macOS Tahoe 26 Security Content [EB/OL]. (2025-09-15). <https://support.apple.com/en-us/125110>; bsd_commits.db 查询结果 [EB/OL]. script/query_xnu_tags.py, 2026-07-23; 原材料/研究/考据记录/20260723_announcements-macos.md [EB/OL]. 2026-07-23.<!-- DB_REF:darwin.duckdb -->> **数据库引用（darwin.duckdb）**：本子节对应 darwin 代码仓库。> 2025-2026 年间：138 次提交。> 仓库总览：2,016 次提交，42 个 Apple 开源镜像仓库（contributors 表 43 行），2001-04-10 至 2026-04-13。
 
 <!-- PODCAST_REVIEW v20260829 -->
 <!-- 语义复核范围：BSD Now EP651（共 1 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
