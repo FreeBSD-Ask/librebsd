@@ -1,7 +1,7 @@
 ---
 chapter: 第 124 章
 id: CH124
-volume: "第06卷-freebsd的核心技术革新"
+volume: 第06卷-freebsd的核心技术革新
 ---
 
 ## 要点

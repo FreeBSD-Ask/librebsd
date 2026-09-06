@@ -1,7 +1,7 @@
 ---
 chapter: 第 142 章
 id: CH142
-volume: "第07卷-freebsd的工程体系重构"
+volume: 第07卷-freebsd的工程体系重构
 ---
 
 ## 要点

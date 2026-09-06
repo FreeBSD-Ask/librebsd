@@ -1,7 +1,7 @@
 ---
 chapter: 第 111 章
 id: CH111
-volume: "第06卷-freebsd的核心技术革新"
+volume: 第06卷-freebsd的核心技术革新
 ---
 
 # 第111章 oracle收购与openzfs社区分叉

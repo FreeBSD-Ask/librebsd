@@ -1,7 +1,7 @@
 ---
 chapter: 第 161 章
 id: CH161
-volume: "第08卷-freebsd的范式转换"
+volume: 第08卷-freebsd的范式转换
 ---
 
 # 第161章 技术瓶颈

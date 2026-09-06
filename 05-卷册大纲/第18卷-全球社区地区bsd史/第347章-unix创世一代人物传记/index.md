@@ -1,7 +1,7 @@
 ---
 chapter: 第 347 章
 id: CH347
-volume: "第18卷-全球社区地区bsd史"
+volume: 第18卷-全球社区地区bsd史
 ---
 
 # 第347章 unix创世一代人物传记

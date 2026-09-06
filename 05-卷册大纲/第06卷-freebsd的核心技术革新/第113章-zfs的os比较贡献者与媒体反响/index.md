@@ -1,7 +1,7 @@
 ---
 chapter: 第 113 章
 id: CH113
-volume: "第06卷-freebsd的核心技术革新"
+volume: 第06卷-freebsd的核心技术革新
 ---
 
 # 第113章 zfs的os比较贡献者与媒体反响

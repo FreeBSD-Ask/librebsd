@@ -1,7 +1,7 @@
 ---
 chapter: 第 344 章
 id: CH344
-volume: "第18卷-全球社区地区bsd史"
+volume: 第18卷-全球社区地区bsd史
 ---
 
 # 第344章 大洋洲bsd社区

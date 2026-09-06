@@ -1,7 +1,7 @@
 ---
 chapter: 第 355 章
 id: CH355
-volume: "第19卷-bsd史编纂学"
+volume: 第19卷-bsd史编纂学
 ---
 
 # 第355章 未来bsd史的书写方向

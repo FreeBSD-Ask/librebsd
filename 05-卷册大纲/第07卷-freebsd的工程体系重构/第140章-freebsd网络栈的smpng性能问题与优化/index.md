@@ -1,7 +1,7 @@
 ---
 chapter: 第 140 章
 id: CH140
-volume: "第07卷-freebsd的工程体系重构"
+volume: 第07卷-freebsd的工程体系重构
 ---
 
 ## 要点

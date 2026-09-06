@@ -1,7 +1,7 @@
 ---
 chapter: 第 351 章
 id: CH351
-volume: "第19卷-bsd史编纂学"
+volume: 第19卷-bsd史编纂学
 ---
 
 # 第351章 bsd史的叙事结构批判

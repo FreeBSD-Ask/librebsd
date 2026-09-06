@@ -1,7 +1,7 @@
 ---
 chapter: 第 337 章
 id: CH337
-volume: "第18卷-全球社区地区bsd史"
+volume: 第18卷-全球社区地区bsd史
 ---
 
 # 第337章 非洲bsd社区起步

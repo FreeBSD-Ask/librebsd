@@ -1,7 +1,7 @@
 ---
 chapter: 第 83 章
 id: CH83
-volume: "第04卷-大分裂与四大bsd的诞生"
+volume: 第04卷-大分裂与四大bsd的诞生
 ---
 
 # 第83章 unix版权归属争议与novell卖sco

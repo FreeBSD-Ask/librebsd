@@ -1,7 +1,7 @@
 ---
 chapter: 第 353 章
 id: CH353
-volume: "第19卷-bsd史编纂学"
+volume: 第19卷-bsd史编纂学
 ---
 
 # 第353章 bsd史中的去中心化悖论

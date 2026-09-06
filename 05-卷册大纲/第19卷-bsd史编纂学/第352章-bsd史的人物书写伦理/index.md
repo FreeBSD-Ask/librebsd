@@ -1,7 +1,7 @@
 ---
 chapter: 第 352 章
 id: CH352
-volume: "第19卷-bsd史编纂学"
+volume: 第19卷-bsd史编纂学
 ---
 
 # 第352章 bsd史的人物书写伦理
