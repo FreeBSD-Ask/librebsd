@@ -16,7 +16,8 @@ volume: 第11卷-dragonflybsd的历史
 
 | tag | tagger_date | target_commit_date | 时间差 | 发布模式 |
 | --- | --- | --- | --- | --- |
-〔待补：本表数据行待回填（表头从粘连句拆出）〕
+| v5.8.0 | 2020-02-29 | 2020-02-28 | — | 大版本发布 |
+| v6.0.0 | 2021-05-07 | 2021-04-27 | 423 天 | 大版本发布（半年节奏延展） |
 
 
 - bsd_commits.db dragonfly-src 仓库 contributors 表中 first_commit_date 字段是权限授予时间的间接证据，须与 lists.dragonflybsd.org 邮件列表公告交叉验证。bsd_commits.db 显示 Aaron LI 首 commit = 2017-09-27（<aly@aaronly.me> 邮箱），Huete Jimene
