@@ -8,9 +8,8 @@ generated: 2026-09-07
 
 # 第 229 章 参考文献补充（2 条）
 
-> 章目录：`05-卷册大纲/05-卷册大纲\第11卷-dragonflybsd的历史\第229章-dragonfly4x周期漏洞与安全响应/`
-> 来源战线：14-deepseek-cankao（2026-09-07 缺失文献下载与审阅）
-> 写入大纲时：将各条「著录」追加至该章文献清单；一手/二手按 cat 判断（官方文档/安全公告/技术报告为一手倾向，书籍/媒体为二手）。
+> 章目录：`05-卷册大纲\第11卷-dragonflybsd的历史\第229章-dragonfly4x周期漏洞与安全响应/`
+> 来源战线：14-deepseek-cankao
 
 ### DKC-0076｜在线文档｜引用4次
 - **著录（GB/T 7714）**：Dillon. Update on status of master - NUMA and cache-line locality[EB/OL]. 2017.

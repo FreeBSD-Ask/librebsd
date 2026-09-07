@@ -8,9 +8,8 @@ generated: 2026-09-07
 
 # 第 114 章 参考文献补充（4 条）
 
-> 章目录：`05-卷册大纲/05-卷册大纲\第06卷-freebsd的核心技术革新\第114章-dtrace的设计与solaris起源/`
-> 来源战线：14-deepseek-cankao（2026-09-07 缺失文献下载与审阅）
-> 写入大纲时：将各条「著录」追加至该章文献清单；一手/二手按 cat 判断（官方文档/安全公告/技术报告为一手倾向，书籍/媒体为二手）。
+> 章目录：`05-卷册大纲\第06卷-freebsd的核心技术革新\第114章-dtrace的设计与solaris起源/`
+> 来源战线：14-deepseek-cankao
 
 ### DKC-1900｜在线文档｜引用3次
 - **著录（GB/T 7714）**：Birrell. J. Remove the KDTRACE option because I can't implement it the way I intended due to licensing restrictions. freebsd-src [DB/OL]. 2006-11-21T08:23:20Z. d5768a7a5b2a48b4092dacd73cfbdbd396a9f81e[EB/OL]. 2006.

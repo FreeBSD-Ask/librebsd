@@ -8,9 +8,8 @@ generated: 2026-09-07
 
 # 第 122 章 参考文献补充（3 条）
 
-> 章目录：`05-卷册大纲/05-卷册大纲\第06卷-freebsd的核心技术革新\第122章-freebsd存储栈的分区与io调度/`
-> 来源战线：14-deepseek-cankao（2026-09-07 缺失文献下载与审阅）
-> 写入大纲时：将各条「著录」追加至该章文献清单；一手/二手按 cat 判断（官方文档/安全公告/技术报告为一手倾向，书籍/媒体为二手）。
+> 章目录：`05-卷册大纲\第06卷-freebsd的核心技术革新\第122章-freebsd存储栈的分区与io调度/`
+> 来源战线：14-deepseek-cankao
 
 ### DKC-1621｜在线文档｜引用3次
 - **著录（GB/T 7714）**：FreeBSD. 社区论文：[FP-2005-001] Building a FreeBSD Appliance With NanoBSD（Poul-Henning Kamp，2005）<https://papers.freebsd.org/2005/phk-nanobsd/>[EB/OL]. 2005.
