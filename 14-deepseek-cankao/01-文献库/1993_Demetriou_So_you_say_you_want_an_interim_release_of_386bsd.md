@@ -1,746 +1,261 @@
 ---
 title: "So_you_say_you_want_an_interim_release_of_386bsd"
-source_url: https://coach.sa/
+source_url: https://forums.commentcamarche.net/forum/affich-29745082-smadav
 download_date: 2026-09-08
 note: bing_top_page
 ---
 
 # So_you_say_you_want_an_interim_release_of_386bsd
 
-﻿ 
 
-      Shop Coach Bags &amp; Accessories | Coach Saudi Arabia
 
- &ndash; COACH Saudi Arabia Official Site
+     Smadav - Forum Antivirus 
 
-     English     Arabic    
+                            Menu principal                         
 
-    English    Arabic    
+                                     Moteur de recherche 
+                                     Rechercher 
 
-      Skip to content
+                                Menu principal                             
 
-               Your bag is empty 
+                          Forum  
 
-                Continue shopping
-                Have an account? 
+                                 Bureautique 
 
-                   Log in  to check out faster.
+                                 Développement 
 
-         My bag (0)
+                                 Internet 
 
-              Loading...
+                                 Jeux vidéo 
 
-             Items in the bag are not held and may sell out 
+                                 Matériel 
 
-            Checkout
+                                 Réseau 
 
-            View Shopping Bag
+                                 Vidéo/TV 
 
-       Stores    
+                                 Virus/Sécurité 
 
-                    NEW
+                 CCM                  CCM - Comment Ça Marche - Communauté informatique                   
 
-                          Women&#39;s New Arrivals
+                     Moteur de recherche 
+                     Rechercher 
 
-                           Men&#39;s New Arrivals
+                 Connexion 
 
-                                        View All
+             Posez votre  question         
 
-                                        Bags
+                                        Informatique
 
-                                        Wallets
+                                        Mobile
 
-                                        Small Leather Goods
+                                        Applis &amp; Sites
 
-                                        Accessories
+                                        Image &amp; Son
 
-                                        Shoes
+                                        Maison
 
-                                        View All
+                                        Securité
 
-                                        Bags
+                                        Téléchargement
 
-                                        Wallets
+                                        Forum
 
-                                        Accessories
+                                                                                                                                                                                                                                                                                 Bureautique 
+                                                                                                 Développement 
+                                                                                                 Internet 
+                                                                                                 Jeux vidéo 
+                                                                                                 Matériel 
+                                                                                                 Réseau 
+                                                                                                 Vidéo/TV 
+                                                                                                 Virus/Sécurité 
 
-              TABBY
+                Emploi
 
-                    WOMEN
+                Forum
 
-                          Bags
+                Sécurité
 
-                          Small Leather Goods
+                Antivirus
 
-                          Shoes
+     ">
 
-                          Accessories
+             Sujet Précédent 
+                 Sujet Suivant 
 
-                          Collections
+         Smadav 
 
-                                        View All
+                     Seltra11
 
-                                        Shoulder Bags
+                     Messages postés 
 
-                                        Crossbody Bags
+             3 
 
-                                        Satchels &amp; Carryall
+                                     Statut 
+             Membre 
 
-                                        Mini Bags
+                                        -
+                     &nbsp; 
 
-                                        Totes
+                     Marou81
 
-                                        Clutches
+                     Messages postés 
 
-                                        Signature Bags
+             4472 
 
-                                        View All
+                                     Statut 
+             Membre 
 
-                                        Large Wallets
+                                                -
+                          21 févr. 2014 à 02:10  
 
-                                        Crossbody Wallets
+            Bonjour, 
+ j'ai un système Windows 8 sur ma machine;chaque fois que j''installe l'antivirus (smadav)je constate que j'ai des problèmes.Est ce que c'est smadav le problème ?
+ Pouvez vous me dire quelle version de smadav je peut installer sur ma machine.Merci
 
-                                        Wristlets
+                    Afficher la suite
 
-                                        Card Cases
+    Répondre (1)
 
-                                        View All
+                 Moi aussi   
 
-                                        Sneaker
+          Partager
 
-                                        Loafer &amp; Driver
+                    Copier
 
-                                        Pump
+                                 Signaler 
 
-                                        Sandal
+                                 Sauvegarder 
 
-                                        View All
+    Répondre (1)
 
-                                        Jewelry
+          Partager
 
-                                        Bag Charms and Key Fobs
+                    Copier
 
-                                        Hats Scarves and Gloves
+                         1 réponse 
 
-                                        Watches
+         Réponse 1 / 1 
 
-                                        Fragrance
+        Meilleure réponse
 
-                                        Sunglasses
+                La meilleure réponse est la réponse qui a été validée par nos équipes.
 
-                                        Product Care
+                     Marou81
 
-                                        Tabby
+                     Messages postés 
 
-                                        Brooklyn
+             4472 
 
-                                        Jet
+                                     Statut 
+             Membre 
 
-                                        Juliet
+                          199 
 
-                                        Hampton
+      &nbsp;  
 
-                                        Idol
+                                  Hello,
 
-                    MEN
+ Nice to meet you.
 
-                          Bags
+ Non je plaisante, je parle français :)
 
-                          Wallets
+ Smartav est un faux antivirus, aucun intêret à installer ce logiciel, désinstalle le on appelle cela un rogue. Je te laisse un lien pour l'explication :  https://fr.wikipedia.org/wiki/Rogue_%28logiciel_malveillant%29 
 
-                          Accessories
+ Oui c'est smartav le problème :D Je te conseille d'installer Avast ou avira ce sont des bons logiciels de securité gratuit.
 
-                                        View All
+ A bientôt sur CCM !
 
-                                        Backpacks
+    Commenter
 
-                                        Briefcases
+     2 
 
-                                        View All
+                                      Signaler  
 
-                                        Wallets
+    Répondre
 
-                                        Card &amp; Coin Cases
+    Posez votre question
 
-                                        View All
+     Discussions similaires 
 
-                                        Caps
+                     Antivirus smadav 
 
-                                        Sunglasses
+                                                                                     snzck  -  &nbsp;  
 
-                                        Watches
+                                                                                     zion  -  &nbsp; 
 
-                    BAGS
+                         3 réponses 
 
-                          Collection
+                     Quel antivirus AVAST OU SMADAV ? 
 
-                          Women&#39;s Bags
+                                                                                     REvekY  -  &nbsp;  
 
-                          Men&#39;s Bags
+                                                                                     bazfile  -  &nbsp; 
 
-                                        Tabby
+                         3 réponses 
 
-                                        Chelsea
+                     quel est l'anti-virus est le plus puissant ? 
 
-                                        Brooklyn
+                                                                                     gehaniss  -  &nbsp;  
 
-                                        Jet
+                                                                                     timano2  -  &nbsp; 
 
-                                        Juliet
+                         25 réponses 
 
-                                        Empire
+                     Comment désinstallé smadav 
 
-                                        Kisslock
+                                                                                     chk  -  &nbsp;  
 
-                                        Waverly
+                                                                                                                                                 Utilisateur anonyme  -  &nbsp; 
 
-                                        Lana
+                         1 réponse 
 
-                                        Rowan
+     Devenez membre en quelques clics 
 
-                                        Station Tote
+        Connectez-vous simplement avec ceux qui partagent vos intérêts
 
-                                        City
+        Suivez vos discussions facilement et obtenez plus de réponses 
 
-                                        View All
+        Mettez en avant votre expertise et aidez les autres membres 
 
-                                        Shoulder Bags
+            Profitez de nombreuses fonctionnalités supplémentaires en vous inscrivant
 
-                                        Crossbody Bags
+         S'inscrire 
 
-                                        Satchels &amp; Carryalls
+                            Forum Antivirus
 
-                                        Totes
+             Trouvez des recommandations pour protéger votre ordinateur, des astuces pour éliminer les menaces en ligne, et discutez des dernières avancées en matière de sécurité informatique. 
 
-                                        Clutches
+             Suivre le groupe 
 
-                                        Mini Bags
+             Posez votre question 
 
-                                        Belt Bags
+             Newsletters 
 
-                                        Signature Bags
+     Newsletters 
 
-                                        View All
+                            Actu du jour
 
-                                        Messenger Bags
+                         Voir un exemple 
 
-                                        Backpacks
+     Les informations recueillies sont destinées à CCM BENCHMARK GROUP pour vous assurer l'envoi de votre newsletter. 
+     De plus, lors de votre inscription sur ce formulaire, des données personnelles (dont votre adresse email sous forme hachée et pseudonymisée)  peuvent être partagées avec nos partenaires Data à des fins de personnalisation de la publicité et des contenus qui vous sont proposés. Vous trouverez le détail de ces informations et pouvez vous y opposer  à tout moment . 
+     Plus généralement, vous bénéficiez d'un droit d'accès et de rectification de vos données personnelles, ainsi que celui d'en demander l'effacement dans les limites prévues par la loi.  
+     Vous pouvez également à tout moment revoir vos options en matière de prospection commerciale et ciblage. En savoir plus sur notre  politique de confidentialité  ou notre  politique Cookies . 
 
-                                        Signature Bags
+	  Qui sommes-nous&nbsp;?  
+	  L&#39;&eacute;quipe  
+	  Notre soci&eacute;t&eacute;  
+	  Publicit&eacute;  
+	  Contact  
+	  Recrutement  
+	  Donn&eacute;es personnelles  
+	  Param&eacute;trer les cookies  
+	  G&eacute;rer Utiq  
+	  Charte  
+	  RSS  
+	  Mentions l&eacute;gales  
+	  Groupe Figaro  
+	  &copy;2025&nbsp;CCM Benchmark  
 
-                    SHOES
-
-                          Women&#39;s Shoes
-
-                                        View All
-
-                                        Loafers
-
-                                        Flats
-
-                                        Boots
-
-                                        Heels
-
-                                        Sandals
-
-                    SALE
-
-                          Shop Women	
-
-                          Shop Men
-
-                          Special Collection
-
-                                        View All
-
-                                        Bags
-
-                                        Small Leather Goods
-
-                                        Shoes
-
-                                        Accessories
-
-                                        View All 
-
-                                        Bags
-
-                                        Wallets
-
-                                        Accessories
-
-                                        View All
-
-         Search 
-
-     Recently Viewed 
-
-            Recent Searches
-
-         Wishlist 
-  Wishlist    
-
-      Login           Log in 
-
-         Cart 0 
-
-               Shopping Bag    
-
-         0 
-
-         Cart  
-
-       Close Menu  -->
-
-             Menu and Search               
-
- Search 
-
-     Recently Viewed 
-
-            Recent Searches
-
-              NEW
-
-                              Women&#39;s New Arrivals
-
-                                    View All
-
-                                    Bags
-
-                                    Wallets
-
-                                    Small Leather Goods
-
-                                    Accessories
-
-                                    Shoes
-
-                               Men&#39;s New Arrivals
-
-                                    View All
-
-                                    Bags
-
-                                    Wallets
-
-                                    Accessories
-
-            TABBY
-
-              WOMEN
-
-                              Bags
-
-                                    View All
-
-                                    Shoulder Bags
-
-                                    Crossbody Bags
-
-                                    Satchels &amp; Carryall
-
-                                    Mini Bags
-
-                                    Totes
-
-                                    Clutches
-
-                                    Signature Bags
-
-                              Small Leather Goods
-
-                                    View All
-
-                                    Large Wallets
-
-                                    Crossbody Wallets
-
-                                    Wristlets
-
-                                    Card Cases
-
-                              Shoes
-
-                                    View All
-
-                                    Sneaker
-
-                                    Loafer &amp; Driver
-
-                                    Pump
-
-                                    Sandal
-
-                              Accessories
-
-                                    View All
-
-                                    Jewelry
-
-                                    Bag Charms and Key Fobs
-
-                                    Hats Scarves and Gloves
-
-                                    Watches
-
-                                    Fragrance
-
-                                    Sunglasses
-
-                                    Product Care
-
-                              Collections
-
-                                    Tabby
-
-                                    Brooklyn
-
-                                    Jet
-
-                                    Juliet
-
-                                    Hampton
-
-                                    Idol
-
-              MEN
-
-                              Bags
-
-                                    View All
-
-                                    Backpacks
-
-                                    Briefcases
-
-                              Wallets
-
-                                    View All
-
-                                    Wallets
-
-                                    Card &amp; Coin Cases
-
-                              Accessories
-
-                                    View All
-
-                                   Caps
-
-                                    Sunglasses
-
-                                    Watches
-
-              BAGS
-
-                              Collection
-
-                                    Tabby
-
-                                   Chelsea
-
-                                    Brooklyn
-
-                                    Jet
-
-                                    Juliet
-
-                                   Empire
-
-                                   Kisslock
-
-                                   Waverly
-
-                                   Lana
-
-                                   Rowan
-
-                                   Station Tote
-
-                                   City
-
-                              Women&#39;s Bags
-
-                                    View All
-
-                                    Shoulder Bags
-
-                                    Crossbody Bags
-
-                                    Satchels &amp; Carryalls
-
-                                    Totes
-
-                                    Clutches
-
-                                    Mini Bags
-
-                                    Belt Bags
-
-                                    Signature Bags
-
-                              Men&#39;s Bags
-
-                                    View All
-
-                                    Messenger Bags
-
-                                    Backpacks
-
-                                    Signature Bags
-
-              SHOES
-
-                              Women&#39;s Shoes
-
-                                    View All
-
-                                    Loafers
-
-                                    Flats
-
-                                    Boots
-
-                                    Heels
-
-                                    Sandals
-
-              SALE
-
-                              Shop Women	
-
-                                    View All
-
-                                    Bags
-
-                                    Small Leather Goods
-
-                                    Shoes
-
-                                    Accessories
-
-                              Shop Men
-
-                                    View All 
-
-                                    Bags
-
-                                    Wallets
-
-                                    Accessories
-
-                              Special Collection
-
-                                    View All
-
-                Login          Log in  
-
-                    kingdom of saudi arabia
-
-                         Stores   
-
-  Wishlist    
-     Wishlist
-
-              CUSTOMER CARE
-
-                          My Account
-
-                          Order Status
-
-                          Self Return
-
-                          Shipping
-
-                          Exchanges and Returns
-
-                          FAQ
-
-                          Contact Us
-
-              SERVICES
-
-                          Whatsapp Us
-
-                          Student Discount
-
-                          Tabby FAQ
-
-                          Tamara FAQ
-
-                          Product care
-
-              STORES &amp; SITES
-
-                          Store Locator
-
-                          International Sites
-
-              ABOUT US
-
-                          Coach History
-
-                          Tapestry
-
-                          Privacy Policy
-
-          The Season Ahead
-
-          Styles for every moment.
-
-              Shop Tabby
-
-              Shop Bags
-
-                Shop Women's
-
-                Shop New Arrivals
-
-                Shop Shoulder Bags
-
-                Shop Charms
-
-   Coach at your service. 
-
-             Let's text 
-
-           Be the first to hear when you sign-up to SMS messaging. 
-
-             Contact Us 
-
-             Buy Now, Pay Later 
-
-           Pay in 4 interest-free installments with Tabby or Tamara.
-18+, T&Cs apply. Credit subject to approval. 
-
-             More About Tabby 
-
-             More About Tamara 
-
-             Expert Advice 
-
-           Questions? Ask away. We're happy to help. 
-
-             Contact Us 
-
-             Free Shipping 
-
-           On orders over  SAR 500. 
-
-             About Shipping 
-
-             About Returns 
-
-             Product Care 
-
-           Trust your bag to our care. It's free at Coach stores. 
-
-             Explore Coach Care 
-
-             Phone Orders 
-
-           Give us a call to place your Coach order. 
-
-             Contact Us 
-
-             WhatsApp 
-
-           Questions? Ask us via WhatsApp. 
-
-             Say Hello 
-
-             Coach Create Customization 
-
-           Our craftsmen can embellish, rivet, or digitally print your designs. 
-
-             Explore 
-
-                   Search 
-
-         CUSTOMER CARE   
-
-                    My Account
-
-                    Order Status
-
-                    Self Return
-
-                    Shipping
-
-                    Exchanges and Returns
-
-                    FAQ
-
-                    Contact Us
-
-     Services  
-
-                    Whatsapp Us
-
-                    Student Discount
-
-                    Tabby FAQ
-
-                    Tamara FAQ
-
-                    Product care
-
-     STORES & SITES  
-
-                    Store Locator
-
-                    International Sites
-
-      ABOUT US   
-
-                    Coach History
-
-                    Tapestry
-
-                    Privacy Policy
-
-      By signing up, you consent to receive emails about Coach's latest collections, offers, and news, as well as information on how to participate in Coach events, competitions or promotions. You have certain rights under applicable privacy laws, and can withdraw your consent at any time. See our  Privacy Policy  for more information.
-
-    Thank you for signing up!
-
-             ﻿
-
-         Facebook 
-
-         Instagram 
-
-         X (Twitter) 
-
-         Pinterest 
-
-         Snapchat 
-
-         Vimeo 
-
-          Exchanges and Returns  
-          Privacy policy  
-          Terms of service  
-          Shipping policy  
-          Contact Us  
-
-               ©2026 All Rights Reserved 
-
-             ©2026 COACH IP HOLDINGS LLC. COACH, COACH SIGNATURE C DESIGN, COACH & TAG DESIGN, COACH HORSE & CARRIAGE DESIGN ARE REGISTERED TRADEMARKS OF COACH IP HOLDINGS LLC. 
-          CR: 4030031627 , VAT# 301329371900003
-
-       Choosing a selection results in a full page refresh. 
-       Opens in a new window. 
-
-   &times; 
-
-             Items in the bag are not held and may sell out 
-
-            Checkout
-
-            View Shopping Bag
-
-         Chevron Up Icon       
-
-
+    
