@@ -1,4 +1,5 @@
 # FreeBSD 历史书完整文献总目
+>
 > **目录说明**：本目录是原 `参考文献/cankao.md`（838.4 KB）按类别拆分后的存储位置。
 >
 > - **拆分日期**：2026-07-20
@@ -13,8 +14,11 @@
 >   - **版本式**（如 `freebsd-12x.md`、`freebsd-13x.md`、`freebsd-14x.md`、`freebsd-16x-ai.md`、`openbsd版本.md`、`dragonfly版本.md`）：按 BSD 项目版本系列归类，对应“二、章节考据专项文献”分组中以版本为主题的子集。
 >   - **用途式**（如 `去重待处理.md`、`根元文件.md`、`附录-自反.md`）：按文件在编纂流程中的用途归类，对应“四、待整理”与“二十六、附录与自反性说明”等分组。
 >   - **保留原则**：现有命名已是见名知义，重命名反而增加维护成本；新增子文件应优先沿用主题式命名，若内容明确对应某一卷章或版本则采用卷章式或版本式命名。
+>
 ## 类别索引
+
 ### 一、按文献类型与主题分类（原始编号 1-28）
+
 - [一、一手史料](一手史料.md)
 - [二、技术史与操作系统](技术史与操作系统.md)
 - [三、开源运动与许可证](开源运动与许可证.md)
@@ -45,51 +49,80 @@
 - [二十八、国防部合同与政府解密文件参考文献](国防部合同.md)
 - [二十九、口述史与采访](口述史与采访.md)：1 条书籍 + 553 条播客口述史文献（2026-08-27 播客参考文献规范化处理专项追加，按播客源分组）
 - [三十、考据新增文献（2026-08-04：USL 和解协议/OpenBSD 都市传说/BCPL-B-C 语言谱系）](99-考据新增.md)
+
 ### 二、章节考据专项文献（按章节或版本分组）
+
 ### 三、卷册新增文献
+
 ### 三之一、BSD 漏洞史编纂专项文献（2026-07-22 四大 BSD 漏洞史编纂新增）
+>
 > **本节说明**：以下条目为四大 BSD 漏洞史编纂专题研究新增的参考文献，分布于 `密码学与安全史料.md`（专项史料）与 `标准与规范.md`（专项标准）两个子文件，按 GB/T 7714-2015 著录，按 0 信任原则须与一手代码档案、邮件列表存档、当事人叙述交叉印证。
+
 - [BSD 漏洞史编纂专项史料](密码学与安全史料.md#bsd-漏洞史编纂专项史料2026-07-22-四大-bsd-漏洞史编纂新增)：NVD、cvelistV5、NetBSD-SA、OpenBSD errata、DragonFly BSD VSA、freebsd-security-notifications、netbsd-announce/security、dragonfly.submit 邮件列表等 9 个新条目
 - [BSD 漏洞史编纂专项标准](标准与规范.md#bsd-漏洞史编纂专项标准2026-07-22-四大-bsd-漏洞史编纂新增)：CVSS、CWE、CVE、NVD 等 4 个标准条目
 - [BSD 漏洞史考据记录目录](../../原材料/研究/考据记录/)：第三、四、五、六、七、八、十、十二卷共 8 个考据记录文件，命名约定 `20260722_bsd-cve-vulnerability-fact-check-第N卷.md`
+
 ### 三之二、BSD 学术研究谱系 Phase 14 新增文献（2026-07-23）
+>
 > **本节说明**：以下条目为 BSD 学术研究谱系专题研究（spec `bsd-academic-papers-research-2026-07-23` Phase 14 Task 14.1）从时期04、时期05、时期10、时期12 子文件同步新增的学术论文，按 GB/T 7714-2015 著录，分布于 `freebsd-12x.md`、`freebsd艺术与人文.md`、`技术史与操作系统.md` 三个子文件。每条新增文献均经 Grep 工具对 `参考文献/参考/` 全目录去重确认，重复条目已跳过并留痕至考据记录。
+
 - [技术史与操作系统——BSD 学术研究谱系 Phase 14 新增](技术史与操作系统.md#bsd-学术研究谱系-phase-14-新增2026-07-23时期12-asiabsdcon-2014-与-eurobsdcon-2017-论文)：D 组 8 条（源数据 10 条，Chisnall AsiaBSDCon 2014 LLVM 已著录跳过、de Raadt EuroBSDCon 2017 pledge 疑与既有“Pledge and Privsep”条目重复跳过），含 Tang 2014 AsiaBSDCon Linker、Rasiukevicius 2014 AsiaBSDCon NPF、Ahrens 2014 AsiaBSDCon Keynote OpenZFS、Allman 2014 AsiaBSDCon Keynote Bambi Meets Godzilla、Pornin 2017 EuroBSDCon Keynote Heroic Software、Cochard-Labbé 2017 EuroBSDCon FreeBSD Routing、Zoulas 2017 EuroBSDCon NetBSD Reproducible Builds、Neville-Neil 2017 EuroBSDCon DTrace on FreeBSD
+
 ### 三之三、BSD 公告考据 Task 17 新增文献（2026-07-23 公告考据增补）
+>
 > **本节说明**：以下条目为 BSD 公告考据专题研究（Task 17，2026-07-23 公告考据增补）从各 BSD 项目官方公告、新闻稿、邮件列表存档、安全公告、版本页面、基金会文档、标准组织公告等一手来源同步新增的参考文献，按 GB/T 7714-2015 著录。每条新增文献均经 bsd_commits.db 数据库交叉验证（如适用），并按 0 信任原则标注史实考据结论，须与一手代码档案、邮件列表存档、当事人叙述交叉印证。本批次共追加 56 条文献，分布于 8 个子文件。
+
 - [UNIX/OpenGroup/POSIX 标准公告考据新增](标准与规范.md#unixopengroupposix-标准公告考据新增2026-07-23-task-17)：15 条，含 The Open Group UNIX 商标权属声明、SUSv2/SUSv3 新闻稿、Austin Group 主页与公告时间线、POSIX FAQ、UNIX 98/V7 品牌页、SUS 在线规范、UNIX 历史时间线、McKusick CSRG 发展史与 CD-ROM 存档、ISO/IEC/IEEE 9945:2026 最新 POSIX 国际标准等
 - [FreeBSD 公告考据新增](freebsd官方文档.md#freebsd-公告考据新增2026-07-23-task-17)：8 条，含 FreeBSD News Flash、Errata Notices 列表、FreeBSD 15.1/14.4/14.3/14.0-RELEASE 公告页、freebsd-announce 邮件列表 HyperKitty 与 Mailman 时期存档
 - [macOS/Apple 公告考据新增](操作系统官方文档.md#macosapple-公告考据新增2026-07-23-task-17)：6 条，含 Apple Security Releases 索引、macOS Tahoe 26 安全公告、Apple Silicon 转换公告、M4 芯片公告、macOS Sequoia 发布公告、Apple 开源项目官网
 - [数据库与存档服务考据新增](一手史料.md#数据库与存档服务考据新增2026-07-23-task-17)：2 条，含 bsd_commits.db BSD 上游仓库提交数据库（v3 23 仓库 840.4 万 commits）、Internet Archive Wayback Machine
 - [事件来源考据新增](事件与争议.md#事件来源考据新增2026-07-23-task-17)：1 条，IT 之家关于 FreeBSD 基础系统移除 GPL 许可软件的报道（中文二手媒体，仅作事件印证，不作为日期与 commit hash 的一手依据）
+
 ### 三之四、FreeBSD 基金会官方文档专项（2026-07-26 静态文档爬取）
+>
 > **本节说明**：以下条目为 FreeBSD 基金会网站静态文档爬取专题研究（spec `freebsdfoundation-static-assets-download-2026-07-26`）从 `https://freebsdfoundation.org` 爬取的年报、预算、章程、用户案例、技术报告、会议演讲、通讯与新闻稿等官方文档，按 GB/T 7714-2015 著录。每条文献的下载来源 URL、下载时间、本地存储路径、SHA-256 哈希均记录于 `04-现代研究文献/03-文献下载/07-FreeBSD基金会/manifest.json`，按 0 信任原则须与 IRS 990 表、州务卿注册档案、公司官网、新闻稿、邮件列表存档等独立来源交叉印证。
+>
 ### 四、待整理
+>
 > **说明**：原文件按主题、章节、版本、卷册等多个维度组织，本索引沿用原组织结构进行分组展示，不改动原条目顺序。各子文件内条目按原 `参考文献/cankao.md` 中的顺序排列。原文件中存在两个“十七”编号（“十七、操作系统官方文档”与“十七、第三卷新增文献”），系原稿历史遗留，本索引按子文件名区分，不强行合并。
 
 ### 四、BSD 源代码仓库 git 归档与 SQLite 数据库（2026-07-21 v2 数据库化抽取，2026-07-22 v3 23 仓库扩展）
+
 - [时间节点复核报告目录](../../原材料/研究/bsd仓库分析/时间节点复核/)：关键人物活动时间、FreeBSD release tag、OpenBSD/NetBSD/DragonFly fork 事件、特性引入时间节点复核
 - [历史代码复核报告目录](../../原材料/研究/bsd仓库分析/历史代码复核/)：FreeBSD 大版本目录结构验证、关键文件内容验证、OpenBSD/NetBSD/DragonFly 关键特性引入验证、跨项目代码迁移
 - [卷级映射报告目录](../../原材料/研究/bsd仓库分析/卷级映射/)：12 个卷级时间窗口的 commit 映射、Top 贡献者、release tag、许可证变更、地理分布
 - [贡献者分析报告目录](../../原材料/研究/bsd仓库分析/贡献者分析/)：跨项目贡献者重叠分析（1125 个贡献者在 ≥2 个 BSD 项目中活跃）
+
 ### 三之五、BSD 文化关系研究专项（2026-07-26 FreeBSD 基金会用户案例回写）
 
 ### 三之六、FreeBSD 社区论文与演讲专项（2026-07-26 papers.freebsd.org 爬取）
+>
 > **本节说明**：以下条目为 papers.freebsd.org 爬取的 FreeBSD 社区论文与演讲参考文献，按 GB/T 7714-2015 著录，按年份正序 → 会议字母序 → 论文标题字母序排列。每条文献的原文 URL、抓取时间、附件 SHA-256（如有）均记录于 `04-现代研究文献/03-文献下载/05-freebsd-papers/metadata.json`，按 0 信任原则须与会议官方议程、演讲者主页、邮件列表存档等独立来源交叉印证。
+>
 ### 三之七、BSD 数据库统计分析报告专项（2026-07-27 db-statistical-academic-analysis spec 专项）
+>
 > **本节说明**：以下条目为 db-statistical-academic-analysis-2026-07-27 spec 执行过程中生成的 14 份 BSD 数据库统计分析报告与 9 类外部基准来源著录条目，按 GB/T 7714-2015 著录。报告基于 bsd_commits.db（26.54 GB，23 仓库 8,404,839 条 commit）、资料数据库.db（5.97 MB，14,273 条史料、16,867 条参考文献）、changelog.db（1.81 MB，670 条变更记录）三座 SQLite 数据库，采用描述性统计、推断性统计、时间序列分析、回归与相关分析、文献计量学、跨数据库关联分析六层学术性统计学方法，遵循 0 信任原则（统计显著 ≠ 实际显著、Granger 因果 ≠ 真实因果、模型假设须检验、多重比较风险须标注）。每条文献的 SQL 查询、Python 脚本、统计指标值详见各报告正文，存放于 `03-原始史料库/01-代码仓库史料/01-数据库本体/统计分析/` 目录下。按 0 信任原则须与一手代码档案、邮件列表存档、当事人叙述交叉印证。
+
 - [BSD 数据库统计分析报告——十二.A 节](数据库与软件工程史料.md#十二a-bsd-数据库统计分析报告2026-07-27-db-statistical-academic-analysis-spec-专项)：14 份统计分析报告著录条目，含方法学说明、描述性统计、推断性统计、时间序列分析、回归与相关分析、文献计量学分析、跨数据库关联分析、外部基准总报告、外部基准报告（一）Linux kernel 与 Apache 软件基金会、外部基准报告（二）GitHub Octoverse 与 CHAOSS 项目指标、外部基准报告（三）Stack Overflow Developer Survey 与包生态、外部基准报告（四）学术论文与 CVE 数据库、卷章数据映射、SQL 与 Python 查询清单
 - [BSD 数据库统计分析报告——十二.B 节](数据库与软件工程史料.md#十二b-外部基准来源2026-07-27-联网查询三次复查留痕)：9 类外部基准来源著录条目，含 Linux kernel 基准（kernel.org、torvalds/linux 镜像、KernelNewbies、LWN.net、Linux Foundation）、Apache 软件基金会基准（apache.org、ASF News、IRS Form 990）、GitHub Octoverse 年度报告（2024/2025 + 2014-2017 互联网档案馆存档）、CHAOSS 项目指标（chaoss.community、wg-evolution、wg-risk）、Stack Overflow Developer Survey、包生态系统（PyPI、npm、crates.io、libraries.io）、学术论文数据库（arXiv、dblp、IEEE Xplore、ACM DL）、CVE 数据库（NVD、MITRE CVE、FreeBSD/NetBSD/OpenBSD 安全公告）、互联网档案馆 Wayback Machine
 - [BSD 数据库统计分析报告索引](../../03-原始史料库/01-代码仓库史料/01-数据库本体/统计分析/index.md)：10 份报告清单、方法学说明引用、软件环境、索引加速、输出规范、引用规则
 
 ### 三之八、BSD/UNIX 传言、都市传说、俚语与习俗特殊文化考证专项文献（2026-07-27）
+>
 > **本节说明**：以下条目为 BSD/UNIX 传言、都市传说、俚语与习俗特殊文化考证专题研究（spec `bsd-unix-rumors-slang-culture-research-2026-07-27` Task 27）从 5 份考据记录文件（`20260727_rumors-bsd-unix.md`、`20260727_rumors-macos.md`、`20260727_rumors-netbsd.md`、`20260727_slang-unix-hacker.md`、`20260727_customs-bsd.md`）中提取的参考文献，按 GB/T 7714-2015 著录。每条新增文献均经 Grep 工具对 `04-现代研究文献/01-参考文献总目/` 全目录去重确认，重复条目已跳过并标注“参见”交叉引用。按 0 信任原则须与一手代码档案、邮件列表存档、当事人叙述交叉印证。本专项遵循来源可信度硬性约束（严禁维基百科/百度百科/CSDN/HandWiki 等）。
+>
 ### 三之九、麒麟 FreeBSD 抄袭与域名污染专项考据参考文献（2026-07-27）
+>
 > **本节说明**：以下条目为麒麟操作系统涉嫌抄袭 FreeBSD 冒充自主以及 FreeBSD.org 域名污染屏蔽专项考据（spec `kylin-freebsd-plagiarism-domain-pollution-research-2026-07-27`）所引用的全部参考文献，按 GB/T 7714-2015 著录。文献按麒麟官方文档、中国政府政策文件、学术论文、新闻文章、邮件列表存档、互联网档案馆快照与监测数据、其他七大类组织。每条新增文献均经 Grep 工具对 `04-现代研究文献/01-参考文献总目/` 全目录去重确认。按 0 信任原则须与一手代码档案、邮件列表存档、当事人叙述、第三方技术分析交叉印证，涉及麒麟官方说明与政府政策文件时不以单一声明为定论。
+>
 ### 三之十、BSD/UNIX/macOS 新闻史料源专项文献（2026-07-27）
+>
 > **本节说明**：以下条目为 phoronix-bsd-news-retrieval-2026-07-27 spec 第四阶段 Task 16.1 从 UNIX/BSD/macOS 全谱系新闻源清单（A-K 十一大类）中提取的新闻站点存档条目，按 GB/T 7714-2015 电子文献著录格式整理。每条文献均含站点名、运营起止时间、URL、互联网档案馆存档覆盖度与视角偏差标注。所有新闻源均为二手史料，按 0 信任原则须与一手代码档案、邮件列表存档、当事人叙述、官方公告交叉印证。已关停源若仅存互联网档案馆存档，须叠加“互联网档案馆存档”标注。
+>
 ### 三之十一、BSD 仓库数据概率学分析报告专项（2026-07-28 Phase 8 概率学完全确定专项）
+>
 > **本节说明**：以下条目为数据库大纲缺口复核与概率学完全确定项目组于 Phase 8 生成的 7 份 BSD 仓库数据概率学分析报告索引，按 GB/T 7714-2015 著录。报告基于 10 个独立项目数据库（freebsd.db、netbsd.db、openbsd.db、dragonfly.db、bsd-derivatives.db、openzfs.db、illumos-gate.db、openssh.db、darwin.db、linux-kernel.db）、资料数据库.db 与 changelog.db，采用贝叶斯统计、信息论指标、概率密度估计、蒙特卡洛模拟、马尔可夫链、存疑消解六类概率论与随机过程方法，遵循 0 信任原则（先验假设须标注、MCMC 收敛须诊断、Bootstrap 重采样次数 B≥10000、随机种子可复现）。每条文献的 SQL 查询、Python 脚本、统计指标值详见各报告正文，存放于 `03-原始史料库/01-代码仓库史料/01-数据库本体/统计分析/` 目录下。按 0 信任原则须与一手代码档案、邮件列表存档、当事人叙述交叉印证。
+
 - [BSD 仓库数据概率学分析报告——十二.C 节](数据库与软件工程史料.md#十二c-bsd-仓库数据概率学分析报告2026-07-28-phase-8-概率学完全确定专项)：7 份概率学分析报告著录条目，含主报告与 6 份子报告
 - [BSD 仓库数据概率学分析报告](数据库与软件工程史料.md#十二c-bsd-仓库数据概率学分析报告2026-07-28-phase-8-概率学完全确定专项)：主报告（387 行），整合 6 份子报告结论，汇总 72 条概率学结论（P-01 至 P-72），覆盖 12 卷 165 章大纲回填路径
 - [BSD 仓库数据贝叶斯统计分析报告](数据库与软件工程史料.md#十二c-bsd-仓库数据概率学分析报告2026-07-28-phase-8-概率学完全确定专项)：贝叶斯统计子报告，含 commit 月度量贝叶斯线性回归、Weibull 生存分析、fork 事件断点回归
@@ -99,12 +132,17 @@
 - [BSD 仓库数据马尔可夫链分析报告](数据库与软件工程史料.md#十二c-bsd-仓库数据概率学分析报告2026-07-28-phase-8-概率学完全确定专项)：马尔可夫链子报告，含转移概率矩阵、平稳分布、吸收态、首次通过时间
 - [BSD 仓库数据存疑消解分析报告](数据库与软件工程史料.md#十二c-bsd-仓库数据概率学分析报告2026-07-28-phase-8-概率学完全确定专项)：存疑消解子报告，含存疑判定概率化、贝叶斯模型平均、不确定性量化
 - [概率学分析报告索引](../../03-原始史料库/01-代码仓库史料/01-数据库本体/统计分析/index.md)：7 份报告清单、概率学结论清单、各卷概率学结论整合统计、方法学说明引用、数据库大纲交叉对照表、缺口闭环追踪表
+
 ### 三之十二、临时放置批次文献增补（2026-08-06）
+>
 > **本节说明**：以下条目为 `03-文献下载/00-临时放置/` 全部 68 个唯一文件（2026-08-06 集中归档批次）的 GB/T 7714-2015 著录条目，59 篇入库 `references_fulltext.db`（ref id 2758-2816）。按 0 信任原则须与一手代码档案、邮件列表存档、当事人叙述交叉印证；本批次含 13 份扫描版 OCR 文献（Theo de Raadt 邮件、PDP-7 手册等），OCR 文本引用前须与原文核对。综述与条目化整理见 `13-临时放置文献处理20260806/`。
+
 - [临时放置批次文献增补（2026-08-06）](99-临时放置批次增补.md)：59 条著录条目，含口述史、BSD 技术文献、开源法律论文、跨文化思想文献四类
 
 ### 三之十三、新增卷提案缺口史料网页参考专项（2026-09-07）
+
 > **本节说明**：以下 5 条为新增卷提案（重构2026/29 号文）史料缺口联网抓取与入库专项（ref id 5432-5436），落盘于 `04-现代研究文献/03-文献下载/07-网页参考/`（其中 2 条经互联网档案馆 Wayback 快照抓取，原站反爬），全文已入 `references_fulltext.duckdb`（references＋fulltext＋fulltext_blocks，sha256 三重去重，入库脚本 `script/webref_ingest_20260907.py`）。按 0 信任原则须与当事人叙述、法院文书、标准组织公告交叉印证。
+
 - [AT&T 与 Sun 联合新闻稿（1987-10-19，TUHS 转录）](../03-文献下载/07-网页参考/20260907_tuhs_gingell_att-sun_pr_1987-10-19.html)：统一 UNIX System V＋SPARC＋ABI 联盟全文（ref 5432）
 - [Novell 与 USL 成立 Univel 新闻稿（Business Wire 1991-12-12）](../03-文献下载/07-网页参考/20260907_techinsider_univel_pr_1991-12-12_wayback.html)：Novell 55% 股份、3,000 万美元融资、SVR4.1 桌面产品计划（ref 5433）
 - [OSNews pt. VII: CDE](../03-文献下载/07-网页参考/20260907_osnews_cde_cose_pr.html)：COSE/CDE 源流述评，含 COSE 新闻稿技术组合原文引段（ref 5434）
