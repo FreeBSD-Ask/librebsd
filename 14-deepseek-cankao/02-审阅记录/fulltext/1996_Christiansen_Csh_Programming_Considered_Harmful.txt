@@ -1,0 +1,1212 @@
+---
+title: "Csh_Programming_Considered_Harmful"
+source_url: https://blog.csdn.net/sinat_32960911/article/details/130750429
+download_date: 2026-09-08
+note: bing_top_page
+---
+
+# Csh_Programming_Considered_Harmful
+
+     
+
+     CSH 入门基础 1 -- bash与 csh 差异 及csh常用语法介绍_linux csh和bash脚本-CSDN博客 
+
+         CSH 入门基础 1 -- bash与 csh 差异 及csh常用语法介绍 
+
+               原创 
+
+               已于&nbsp;2024-06-30 23:10:16&nbsp;修改 
+                 · 
+                 2.1w 阅读 
+
+                   · 
+
+                      14
+
+                 · 
+
+                      129
+
+       · 
+
+         收录于 
+
+     当前文章被以下社区和专栏收录： 
+
+            于&nbsp;2023-06-13 11:12:45&nbsp;首次发布  
+
+                                 【CSH &amp; Shell &amp; TCL 专栏】 
+                                     专栏收录该内容 
+
+                         21 篇文章 
+
+                             ¥29.90 
+                             ¥99.00 
+
+                                         订阅专栏 
+
+                                             超级会员免费看
+
+             本文介绍了CSH（C Shell）的基础知识，包括它与BASH的主要差异，如命令使用、环境变量设置、变量操作和IF、WHILE、SWITCH语句的语法。此外，还提供了一些示例来帮助理解这些概念。
+
+
+                         请阅读 【CSH及SHELL学习专栏】    
+
+  文章目录 
+      CSH 背景      1.1.1 CSH 与 BASH 差异    1.1.2 CSH IF 语句    1.1.3 CSH While 语句    1.1.3 CSH Switch 语句   
+
+  下篇文章&#xff1a;CSH 入门基础 2 – csh&#xff08;C Shell&#xff09;对文件/目录的判断及对参数的处理   
+   CSH 背景  
+ C Shell&#xff08;csh&#xff09;是一种Unix shell&#xff0c;由Bill Joy在1978年开发。它是BSD操作系统中的默认shell&#xff0c;也被许多其他Unix操作系统所采用。C Shell的语法和功能相对于Bourne shell&#xff08;sh&#xff09;有很大的不同&#xff0c;特别是在脚本编程方面。C Shell提供了许多高级功能&#xff0c;如命令行编辑、命令别名、历史记录、作业控制和脚本编程等。虽然C Shell在过去受到很多批评&#xff0c;但它仍然是许多Unix用户和管理员喜欢使用的一种shell。  
+   1.1.1 CSH 与 BASH 差异  
+  bash  的 shell 默认用户下面的配置文件是&#xff1a; .bashrc , 用户登陆之后&#xff0c;默认执行该配置文件内容&#xff0c;让环境变量生效;   csh  的 shell 默认用户下面的配置文件是&#xff1a; .cshrc &#xff0c; 用户登陆之后&#xff0c;默认执行该配置文件内容。  
+  两者主要有以下区别 &#xff1a;  
+   alias  命令使用差异&#xff1a; 
+    csh 中不使用  &#61;  号&#xff0c;如  alias g &#34;gvim&#34; &#xff1b;  bash 中使用  &#61; &#xff1b;     环境变量 PATH  设置差异&#xff1a; 
+    csh 对于环境变量  PATH  的配置 不能使用  ~  符号&#xff0c;需要使用绝对路径&#xff0c;如&#xff1a; setenv PATH &#34;${PATH}:/home/xxx/bin&#34; &#xff1b;  bash 可以使用  ~ &#xff1b;     变量设置差异&#xff1a; 
+    csh 设置变量时使用 set 命令&#xff0c;并且 &#61; 号两边不能有空格&#xff0c;如  set a&#61;pwd &#xff1b;  bash 设置变量时不需要 set 命令&#xff0c;并且 &#61; 号两边必须无空格&#xff0c;如  a&#61;pwd &#xff1b;     环境变量设置差异&#xff1a; 
+    csh 设置环境变量时使用  setenv  命令&#xff0c;如 setenv PATH $PATH:/usr/local/bin &#xff1b;  bash 设置环境变量时使用 export  命令&#xff0c;并且 &#61; 号两边不能有空格&#xff0c;如 export PATH&#61;$PATH:/usr/local/bin &#xff1b;      $  使用差异&#xff1a; 
+    csh 引用变量时使用 $ 符号&#xff0c;并且可以省略 {} 符号&#xff0c;如 echo $a &#xff1b;  bash 引用变量时也使用  $  符号&#xff0c;但是如果变量名后面紧跟其他字符&#xff0c;则必须加上 {} 符号以区分变量名和其他字符&#xff0c;如  echo ${a}b 。      
+   1.1.2 CSH IF 语句  
+ condition是一个条件表达式&#xff0c;当其为真时&#xff0c;if语句块中的命令会被执行。如果condition为假&#xff0c;则会继续执行下一个else if语句块&#xff0c;直到找到一个条件为真的语句块&#xff0c;或者执行到最后的else语句块。  
+ 以下是一个使用if语句在csh中判断一个数是否为偶数的示例&#xff1a;  
+  csh  #!/bin/csh 
+
+ set  num  &#61;   6 
+
+ if   (  $num  %  2   &#61;&#61;   0  )   then  
+	 echo   &#34; $num  is even&#34;  
+ else  
+	 echo   &#34; $num  is odd&#34;  
+endif
+
+ 在这个示例中&#xff0c;条件表达式是 $num % 2 &#61;&#61; 0 &#xff0c;如果 $num 除以2的余数为0&#xff0c;则条件为真&#xff0c;输出&#34; $num is even &#34;。否则&#xff0c;输出&#34; $num is odd &#34;。  
+  其它例子 &#xff1a;  执行 vusage 命令后&#xff0c;使用 awk 命令打印第二行&#xff0c;使用cut命令只取第40个字符&#xff0c;  判断该字符是否是“1”, 如果不是“1” 会进行 sleep 5s的操作。  
+   #!/bin/csh 
+
+ set   avail  &#61;   &#96; vusage  |   awk   &#39;NR&#61;&#61;2 {print}&#39;   |   cut   -c   40  &#96;   
+ # if ( 1 ) then; 
+ if   (   $avail   &gt;&#61;   1  )   then  ; 
+	 echo   &#34;there are enough board for test, doing test...&#34; 
+ else 
+	 sleep   5 
+endif
+
+   1.1.3 CSH While 语句  
+   #!/bin/csh 
+
+ while   (  1  ) 
+  body
+end
+
+   #!/bin/csh 
+
+ set  i  &#61;   1 
+ while   (  $i   &lt;   5  ) 
+    echo   &#34;i is  $i &#34; 
+   &#64; i&#43;&#43;
+end
+
+  or   在这个示例中&#xff0c;循环体中的命令是输出变量 i 的值&#xff0c;并将 i 的值加1。当i的值小于5时&#xff0c;循环体中的命令会被重复执行。最终输出的结果是1到5的数字序列。  
+   #!/bin/csh 
+
+ set  i  &#61;   1 
+ while   (  1  ) 
+     echo   &#34;i is  $i &#34; 
+    &#64; i&#43;&#43;
+     if   (  $i   &gt;&#61;   5  )   break 
+end
+
+  These output :  
+  i is  1 
+i is  2 
+i is  3 
+i is  4 
+
+   1.1.3 CSH Switch 语句  
+ 以使用csh中的switch语句来实现多分支条件判断。具体语法如下&#xff1a;  
+  switch  ( variable )  
+ case  value1: 
+	command1 
+	command2  .. . 
+	breaksw 
+ case  value2: 
+	command3 
+	command4  .. . 
+	breaksw  .. . 
+default: 
+	command5 
+	command6  .. . 
+endsw 
+
+ 其中&#xff0c;variable是一个变量&#xff0c;需要被匹配到某个值。如果 variable 的值等于某个 case 的 value&#xff0c;那么该 case 中的命令会被执行。如果没有匹配到任何一个case&#xff0c;那么会执行default中的命令。  
+  csh  #!/bin/csh 
+
+ set  num  &#61;   5 
+
+switch  (  $num  )  
+ case   1 : 
+	 echo   &#34;The number is 1&#34;  
+	breaksw 
+ case   2 : 
+	 echo   &#34;The number is 2&#34;  
+	breaksw 
+ case   3 : 
+	 echo   &#34;The number is 3&#34;  
+	breaksw 
+default: 
+	 echo   &#34;The number is greater than 3&#34;  
+endsw 
+
+ 在这个示例中&#xff0c;判断 $num 的值&#xff0c;  
+  如果 $num 等于1&#xff0c;输出&#34;The number is 1&#34;&#xff0c;  如果 $num 等于2&#xff0c;输出&#34;The number is 2&#34;&#xff0c;  如果 $num 等于3&#xff0c;输出&#34;The number is 3&#34;&#xff0c;  否则输出&#34;The number is greater than 3&#34;。   
+ 可以通过下面命令来执行CSHELL 脚本&#xff1a;  
+   chmod  &#43;x myfile.csh
+csh myfile.csh or myfile.csh or ./myfile.csh
+
+  下篇文章&#xff1a;CSH 入门基础 2 – csh&#xff08;C Shell&#xff09;对文件/目录的判断及对参数的处理   
+
+  推荐阅读 &#xff1a;   https://people.math.sc.edu/Burkardt/examples/c_shell/c_shell.html    https://unix.stackexchange.com/questions/392436/how-to-use-while-loop-in-csh-shell-command-prompt  
+
+       标签 
+
+           #bash 
+           #linux 
+           #csh 
+           #Cshell 
+           #bash与csh差异 
+
+               #CSH 语法 
+
+        确定要放弃本次机会？
+
+       福利倒计时 
+
+         : 
+
+         : 
+
+           立减 ¥ 
+
+         普通VIP年卡可用 
+
+       立即使用 
+
+                  主公讲 ARM
+
+                 关注 
+               关注 
+
+                    14
+
+                点赞  
+
+                踩  
+
+                    129
+
+                    收藏
+
+                  觉得还不错?
+
+                    一键收藏
+
+                      0
+
+                评论  
+
+                 分享 
+
+                     复制链接 
+
+                     分享到 QQ 
+
+                     分享到新浪微博 
+
+                       扫一扫
+
+                     打赏 
+
+                    打赏  
+
+                       打赏 
+
+                   举报 
+
+                   举报 
+
+                 专栏目录 
+
+                         订阅专栏 
+
+					  CSH   入门  基础  4 番外篇  -  -   bash   和  shell 的区别 及shell 种类 介绍  
+
+					  CodingCos的博客  
+
+					 07-21 
+
+					1419
+
+				 在 Linux 中，有几种常见的Shell，下面是一些简单的 介绍 ： Bash （Bourne Again SHell）： Bash 是许多 Linux 发行版的默认Shell，它是Bourne Shell（sh）的扩展版本，增加了许多有用的特性，比如命令行历史记录，命令行编辑 和 命令别名等。C Shell（ csh ）：C Shell的 语法 类似于C语言，提供了许多对程序员来说友好的特性，比如别名 和 作业控制。C Shell还有一个增强版叫做T csh 。 
+
+           参与评论 
+         您还未登录，请先 
+         登录 
+         后发表或查看评论 
+
+					  CSH   入门  基础  2  -  -   csh （C Shell）对文件/目录的判断及对参数的处理 
+
+					  CodingCos的博客  
+
+					 06-20 
+
+					1万+
+
+				 其中，filename  和  dirname 分别表示文件名 和 目录名，filename_or_dirname 表示文件名或目录名。如果判断条件为真，则执行if语句块中的命令，否则不执行。在这个示例中，首先判断命令行参数的个数是否为2，如果不是，则输出使用说明并退出程序。如果参数个数正确，则分别获取第一个参数 和 第二个参数的值，并输出它们的值。在这个示例中，判断文件 test.txt 是否存在，如果存在，则输出&quot;表示第一个参数，如果不为空，则参数存在。，其中n为参数的位置，arg为变量名。 
+
+					  Bash  与  Csh 比较 
+
+					 01-06 
+
+				  Bash  与  Csh 比较，在 linux 下的 bash  与  csh 的区别及用 法 ，很实用 
+
+					 【 CSH   入门  基础  5 番外篇  -  -  zsh 和  bash 区别及其使用 介绍 】 
+
+					  CodingCos的博客  
+
+					 08-12 
+
+					2262
+
+				 以下是一些Oh - My - Zsh的主要特性：插件系统：Oh - My - Zsh提供了一套插件系统，有超过200个可选的插件，包括git、npm、ruby等常用开发工具的快捷命令；主题系统：Oh - My - Zsh提供了一个主题系统，有很多美观的主题可供选择，可以个性化你的命令行界面；自动升级：Oh - My - Zsh会定期自动检查并下载升级，保持你的Shell环境始终是最新的；高度可定制：Oh - My - Zsh允许用户在~/.zshrc文件中添加自己的别名、函数 和  脚本 ，使得你的Zsh环境可以根据自己的需求进行定制； 
+
+					  linux 下shell的工作原理。 
+
+					  weixin_33973600的博客  
+
+					 11-13 
+
+					349
+
+				  Linux 中有多种shell，其中缺省使用的是 Bash 。本章讲述了shell的工作原理，shell的种类，shell的一般操作及 Bash 的特性。 　　shell是用户 和  Linux 操作系统之间的接口。 Linux 中有多种shell，其中缺省使用的是 Bash 。本章讲述了shell的工作原理，shell的种类，shell的一般操作及 Bash 的特性。 　　什么是shell 　　Linu... 
+
+					  csh  与  bash 区别及 csh  常用语  法  
+
+					  高性价比服务器就选：蓝易云  
+
+					 07-05 
+
+					1875
+
+				  csh （C Shell） 和  bash （Bourne Again Shell）是两种常见的Unix shell，用于交互式的命令行操作 和  脚本 编程。这些是 csh 的一些 常用语  法 ，希望对你有所帮助。请记住，了解特定操作系统 和 shell的官方文档将是深入学习 和 理解其功能的最佳途径。循环结构可以使用while或foreach命令。 
+
+					  csh  和  bash 的区别 
+
+					  sinat_28305511的博客  
+
+					 03-11 
+
+					4571
+
+				  csh   和  bash 的区别 
+
+					  csh  和  bash 的 语法 对比 
+
+					  u013082364的博客  
+
+					 05-30 
+
+					1万+
+
+				 一般来说，能用 bash  语言编程就不用 csh 编程，因为 bash 语言的使用体验更好，但是某些情况的terminal窗口就是 csh 语言，因而，用 csh 语言会更适合。下面将 bash  和  csh ，做一些对比，方便将 bash 转变成 csh .
+一，关于变量设置， 和 环境变量设置
+ bash :
+        a=`pwd`                     # =号两边必须无空格,命令转变量也可以用$(pwd)
+        export b= 1                   # 设置环境变量
+
+ csh 
+
+					  Linux 下快速判断当前终端使用的是 bash  or  csh  
+
+					  不经一翻彻骨寒，怎得梅花扑鼻香  
+
+					 09-01 
+
+					2046
+
+				  介绍 如何快速判断当前终端使用的shell类型以及 bash  和  csh 的 差异 。 
+
+					 还在用 Bash 写 脚本 ？试试C Shell（ csh ）吧，这几点 语法  差异 新手必看 
+					 最新发布 
+
+					  weixin_30751947的博客  
+
+					 05-16 
+
+					449
+
+				 本文详细对比了C Shell（ csh ） 与  Bash 在 脚本 编写中的关键 语法  差异 ，包括变量操作、数组处理、条件判断、循环结构等方面。特别适合习惯 Bash 但需要转向 csh 的开发者，帮助快速掌握 csh 的独特 语法 风格 和 编程范式，提升在Unix系统上的 脚本 编写效率。 
+
+					  bash   和   csh  的重定向操作符的相同 与  差异  
+
+					  dahetaoxiaobai的专栏  
+
+					 07-15 
+
+					3780
+
+				  1 、将标准输出（STDOUT）内容重定向到文件（如果该文件已存在，将被覆盖）：
+
+command &gt; file # -   bash  和  csh 相同
+
+
+2、将标准输出（STDOUT）内容追加到文件：
+
+command &gt;&gt; file # -   bash  和  csh 相同
+
+
+3、将文件重定向到标准输入（STDIN）作为命令的输入：
+
+command 
+
+
+4、读取命令行输入，直到END标志结束（结束输入时，结 
+
+					 shell从 入门 到精通（0）认识各种shell -  - sh、 bash 、dash、 csh  
+
+					  二进制君  
+
+					 08-28 
+
+					1401
+
+				 shell是一个命令行解释器，或者说shell给类unix系统提供了命令行用户界面。shell既是交互性命令语言，同时也是 脚本 语言。
+第一个unix shell是Thompson shell，是由贝尔实验室的Ken Thompson写的，伴随着unix版本 1  - 6发布。
+Thompson shell是基于Multics shell开发的（ 1 965），当然Multics shell也有前身，就不深究了。
+Bourne Shell由 Stephen Bourne 在贝尔实验室工作期间开发，它的开发是做为 Thom 
+
+					 c shell 学习记录（ csh ） 
+
+					  【更新于公众号 | 简谱学记】  
+
+					 07-10 
+
+					6563
+
+				 C shell（ csh ）是Unix shell的一种，由比尔&middot;乔伊在BSD系统上开发。C shell脱胎于Unix第六版的/bin/sh，也是Bourne shell的前身。这种shell的 语法 类似于C语言， 与 Bourne shell相比，C shell有不少特别的功能，比如aliases（别名）、command history（命令的历史）。目前C shell已不再被广泛使用，后继者包括Tenex C shell（t csh ）、Korn shell（ksh）、GNU Bourne - Again shell.. 
+
+					  csh  - 2：if 条件，变量定义 
+
+					  weixin_52822919的博客  
+
+					 10-08 
+
+					1170
+
+				 if 
+
+					  CSH  脚本 学习 
+
+					  qq_43398531的博客  
+
+					 09-26 
+
+					2668
+
+				 命令 与  bash 中的&gt;  和 &gt;| 命令相同，都是写入文件内容。但在 bash 中表示没有文件则不创建文件。last_arg=${@:   -  1 },语句中变量last_arg表示输入的最后一个参数。是 CSH  脚本 中的循环命令，将list的值逐一赋值给变量var进行循环。basename &ldquo;文件名&rdquo; 表示去除文件路径 和 后缀。dirname &rdquo;文件名&ldquo; 获取当前文件目录。${变量^^} 将小写字母转换为大写字母。 CSH  脚本 学习笔记(不常见的命令用 法 ){4}$ 表示4位字母或数字。 
+
+					  csh 简单 语法  
+					 热门推荐 
+
+					  zxianyong的专栏  
+
+					 11-18 
+
+					2万+
+
+				 &lt;br /&gt; csh 简单 语法 &lt;br /&gt;&lt;br /&gt;&lt;br /&gt; csh &lt;br /&gt;&lt;br /&gt;一、变数&lt;br /&gt;&lt;br /&gt; 1 . 字串变数&lt;br /&gt;这个部分 和 Bourne Shell的变数一样，只不过在设定变数值时不能使用Bourne&lt;br /&gt;Shell的方式，而必须打：&lt;br /&gt;&lt;br /&gt;set var=value&lt;br /&gt;&lt;br /&gt;2. 数字运算&lt;br /&gt;基本上C Shell 没有数字变数，但C Shell 却有简单的方 法 处理数字运算：&lt;br /&gt;&lt;br /&gt;@ var operator  
+
+					  linux 系统环境中 bash  和  csh (一) 
+
+					  a914336的博客  
+
+					 10-10 
+
+					1634
+
+				 C Shell（ csh ）是一种Unix shell，它具有 与  Bash 等其他shell不同的 语法  和 特性。C Shell的 语法  和 功能受到了C编程语言的影响，因此在某些方面 与  Bash 等其他shell不同。：C Shell的 语法  与  Bash 等shell有一些不同之处。例如，命令的结束通常使用分号而不是换行符。： 与 其他shell一样，C Shell也支持 脚本 编写。命令来创建命令别名，以简化常用命令的输入。命令查看 和 执行以前运行的命令。命令或直接运行 脚本 来执行它们。：C Shell允许使用。：C Shell使用。 
+
+					 shell  语法 总结 
+
+					  qq_48344136的博客  
+
+					 08-04 
+
+					789
+
+				 Shell  脚本  语法 收集 
+
+					  bash   与   csh  区别 
+
+					  lianliange85的专栏  
+
+					 01-20 
+
+					1万+
+
+				  BASH 中的算术运算表达式
+
+
+定义变量:
+
+
+Var=2
+
+
+Var 1 =3
+
+
+Var2=4
+
+
+可用的写 法 :
+
+
+ 1 、Var=$[$Var 1  + $Var2] 或 Var=$[$Var 1  +  1 ]
+
+
+2、Var=$[Var 1  + Var2] 或 Var=$[Var 1  +  1 ]
+
+
+3、Var=$(($Var 1  + $Var2)) 或 Var=$(($Var 1  +  1 ))
+
+
+                     主公讲 ARM 
+
+                  博客等级
+
+                 码龄11年 
+
+           优质创作者: 嵌入式与硬件开发技术领域 
+
+              967  
+             原创 
+
+         6861 
+         点赞 
+
+         8249 
+         收藏 
+
+          2万+  
+         粉丝 
+
+             关注   
+
+         私信 
+
+	 热门文章 
+
+				【ARM Cortex-M 系列 1 -- Cortex-M0, M3, M4, M7, M33, M35P 差异】
+
+					 32878 
+
+				【Windows 常用工具系列 12 -- win11怎么设置不睡眠熄屏 |win11设置永不睡眠的方法】
+
+					 30116 
+
+				CSH 入门基础 1 -- bash与 csh 差异 及csh常用语法介绍
+
+					 21621 
+
+				【ARM Cortex-M 系列 2 -- CPU 之 Cortex-M7 介绍】
+
+					 21475 
+
+				【芯片设计 - 常用工具 1 -- bsub 命令介绍】
+
+					 16900 
+
+     分类专栏 
+
+                         【PCIe Bus 专栏】
+
+                         付费 
+
+                 63篇 
+
+                        【PalladiumZ2 学习使用专栏】
+
+                         付费 
+
+                 2篇 
+
+                        ARM Coresight 系列
+
+                         付费 
+
+                 47篇 
+
+                        【RISC-V  Debug 专栏】
+
+                         付费 
+
+                 13篇 
+
+                        ARM CoreSight Trace 系列
+
+                         付费 
+
+                 6篇 
+
+                        【ARM ACE Bus 与 Cache】
+
+                         付费 
+
+                 14篇 
+
+                        ARMv9 DSU-120 专栏
+
+                         付费 
+
+                 17篇 
+
+                        【劳特巴赫 Trace32 系列】
+
+                         付费 
+
+                 45篇 
+
+                        【ARMv8/v9 GICv3 GICv4】
+
+                         付费 
+
+                 26篇 
+
+                        【ARMv8/ARMv9 硬件加速】
+
+                         付费 
+
+                 16篇 
+
+                        【ARM Cache与MMU/MPU 专栏】
+
+                         付费 
+
+                 35篇 
+
+                        ARM AMBA AXI 系列
+
+                         付费 
+
+                 27篇 
+
+                        【NPU 学习专栏】
+
+                         付费 
+
+                 16篇 
+
+                        芯片设计 RTL 数字逻辑设计扫盲
+
+                         付费 
+
+                 57篇 
+
+                        ARM64 System Exception
+
+                         付费 
+
+                 19篇 
+
+                        【ARM CoreLink 系列】
+
+                         付费 
+
+                 28篇 
+
+                        【CSH &amp; Shell &amp; TCL 专栏】
+
+                         付费 
+
+                 21篇 
+
+                        【ARM 芯片 安全与攻击专栏】
+
+                         付费 
+
+                 31篇 
+
+                        【Linux 维测及Crash 专栏】
+
+                         付费 
+
+                 28篇 
+
+                        Boot
+
+                        【AI 学习使用专栏】
+
+                 1篇 
+
+                        【GDB 使用专栏】
+
+                 1篇 
+
+                        [SoC 后仿学习专栏]
+
+                        【信号完整性 SI 及 SI-PI 学习专栏】
+
+                 6篇 
+
+                        【软件开发 DevOps 学习专栏】
+
+                        【Trace32 工具开发】
+
+                        【DDR 内存学习专栏】
+
+                 5篇 
+
+                        【RISCV 中断与异常专栏】
+
+                        【网络 Mac 学习专栏】
+
+                 4篇 
+
+                        【RISCV 常见汇编专栏】
+
+                 1篇 
+
+                        【低功耗 Power 学习专栏】
+
+                 3篇 
+
+                        【芯片封测学习专栏】
+
+                 5篇 
+
+                        【计算机体系架构杂谈】
+
+                 2篇 
+
+                        【暂存】
+
+                        【服务器学习专栏】
+
+                 1篇 
+
+                        【work note】
+
+                         【Hypervisor And SMMU】
+
+                 4篇 
+
+                        【存储设备专栏】
+
+                 8篇 
+
+                        【Cortex-M33 专栏】
+
+                 16篇 
+
+                        SOC DFT 学习专栏
+
+                 13篇 
+
+                        【ARMv8/v9 系统寄存器专栏】
+
+                 8篇 
+
+                        【ARM GCC 编译专栏】
+
+                 67篇 
+
+                        ARM Coresight 系列2
+
+                 3篇 
+
+                        【嵌入式 C 常用算法专栏】
+
+                 57篇 
+
+                        C++ 系列文章
+
+                 5篇 
+
+                        ARM BSP 系列
+
+                 13篇 
+
+                        ARM Cortex-M及RT-Thread 系列
+
+                 13篇 
+
+                        【ARM64 常见汇编指令专栏】
+
+                 36篇 
+
+                        【OpenOCD与FT4232H】
+
+                 10篇 
+
+                        【Makefile GCC 专栏】
+
+                 23篇 
+
+                        ARM Coresight Debug 工具系列
+
+                 5篇 
+
+                        ARM Linux 设备驱动系列介绍
+
+                 7篇 
+
+                        【ARM AMBA Bus 系列】
+
+                 5篇 
+
+                        【通信系列文章 CP】
+
+                 7篇 
+
+                        嵌入式开发常用工具及命令
+
+                 10篇 
+
+                         【git 常用命名与常见问题】
+
+                 12篇 
+
+                        Windows 常用工具系列
+
+                 24篇 
+
+                        【Linux 常用命令专栏】
+
+                 44篇 
+
+                         【Python Script 入门及渐进】
+
+                 25篇 
+
+                         【vim 学习专栏】
+
+                 28篇 
+
+                        【Validation 专栏】
+
+        展开全部    
+        收起    
+
+              上一篇：
+
+              【Python 常用脚本及命令系列 1 -- python 阿里源与清华源的安装使用介绍】
+
+            下一篇：
+
+              【ARM AMBA AXI 入门 6 - AXI3 协议中的锁定访问之AxLOCK信号】
+
+	 大家在看 
+
+				冰雪传奇三职业版官方下载与适配指南
+
+				冰雪点卡重制版正版下载指南
+
+				财政部为什么要买自己的债？40亿能争取多久
+
+					 612 
+
+				传奇3高爆版正版下载指南
+
+				HRTOS中断嵌套与内核打断测试
+
+     最新文章 
+
+             【AI 学习使用专栏 1 -- Claude code 安装及使用详细介绍】 
+
+             【GDB 使用专栏 1 -- GDB 常用命令概述】 
+
+             【PCIe 总线及设备入门学习专栏 2.3 -- TS1 与 TS2 问题实战】 
+
+                   2026年  5篇   
+                   2025年  119篇   
+                   2024年  458篇   
+                   2023年  324篇   
+                   2022年  62篇   
+
+       · AI 阅读助手 
+
+         目录 
+
+            展开全部    
+            收起    
+
+       · AI 阅读助手 
+
+               目录 
+
+                  展开全部    
+                  收起    
+
+              上一篇：
+
+              【Python 常用脚本及命令系列 1 -- python 阿里源与清华源的安装使用介绍】
+
+            下一篇：
+
+              【ARM AMBA AXI 入门 6 - AXI3 协议中的锁定访问之AxLOCK信号】
+
+                   分类专栏 
+
+                                           【PCIe Bus 专栏】
+
+                                           付费 
+
+                                   63篇 
+
+                                          【PalladiumZ2 学习使用专栏】
+
+                                           付费 
+
+                                   2篇 
+
+                                          ARM Coresight 系列
+
+                                           付费 
+
+                                   47篇 
+
+                                          【RISC-V  Debug 专栏】
+
+                                           付费 
+
+                                   13篇 
+
+                                          ARM CoreSight Trace 系列
+
+                                           付费 
+
+                                   6篇 
+
+                                          【ARM ACE Bus 与 Cache】
+
+                                           付费 
+
+                                   14篇 
+
+                                          ARMv9 DSU-120 专栏
+
+                                           付费 
+
+                                   17篇 
+
+                                          【劳特巴赫 Trace32 系列】
+
+                                           付费 
+
+                                   45篇 
+
+                                          【ARMv8/v9 GICv3 GICv4】
+
+                                           付费 
+
+                                   26篇 
+
+                                          【ARMv8/ARMv9 硬件加速】
+
+                                           付费 
+
+                                   16篇 
+
+                                          【ARM Cache与MMU/MPU 专栏】
+
+                                           付费 
+
+                                   35篇 
+
+                                          ARM AMBA AXI 系列
+
+                                           付费 
+
+                                   27篇 
+
+                                          【NPU 学习专栏】
+
+                                           付费 
+
+                                   16篇 
+
+                                          芯片设计 RTL 数字逻辑设计扫盲
+
+                                           付费 
+
+                                   57篇 
+
+                                          ARM64 System Exception
+
+                                           付费 
+
+                                   19篇 
+
+                                          【ARM CoreLink 系列】
+
+                                           付费 
+
+                                   28篇 
+
+                                          【CSH &amp; Shell &amp; TCL 专栏】
+
+                                           付费 
+
+                                   21篇 
+
+                                          【ARM 芯片 安全与攻击专栏】
+
+                                           付费 
+
+                                   31篇 
+
+                                          【Linux 维测及Crash 专栏】
+
+                                           付费 
+
+                                   28篇 
+
+                                          Boot
+
+                                          【AI 学习使用专栏】
+
+                                   1篇 
+
+                                          【GDB 使用专栏】
+
+                                   1篇 
+
+                                          [SoC 后仿学习专栏]
+
+                                          【信号完整性 SI 及 SI-PI 学习专栏】
+
+                                   6篇 
+
+                                          【软件开发 DevOps 学习专栏】
+
+                                          【Trace32 工具开发】
+
+                                          【DDR 内存学习专栏】
+
+                                   5篇 
+
+                                          【RISCV 中断与异常专栏】
+
+                                          【网络 Mac 学习专栏】
+
+                                   4篇 
+
+                                          【RISCV 常见汇编专栏】
+
+                                   1篇 
+
+                                          【低功耗 Power 学习专栏】
+
+                                   3篇 
+
+                                          【芯片封测学习专栏】
+
+                                   5篇 
+
+                                          【计算机体系架构杂谈】
+
+                                   2篇 
+
+                                          【暂存】
+
+                                          【服务器学习专栏】
+
+                                   1篇 
+
+                                          【work note】
+
+                                           【Hypervisor And SMMU】
+
+                                   4篇 
+
+                                          【存储设备专栏】
+
+                                   8篇 
+
+                                          【Cortex-M33 专栏】
+
+                                   16篇 
+
+                                          SOC DFT 学习专栏
+
+                                   13篇 
+
+                                          【ARMv8/v9 系统寄存器专栏】
+
+                                   8篇 
+
+                                          【ARM GCC 编译专栏】
+
+                                   67篇 
+
+                                          ARM Coresight 系列2
+
+                                   3篇 
+
+                                          【嵌入式 C 常用算法专栏】
+
+                                   57篇 
+
+                                          C++ 系列文章
+
+                                   5篇 
+
+                                          ARM BSP 系列
+
+                                   13篇 
+
+                                          ARM Cortex-M及RT-Thread 系列
+
+                                   13篇 
+
+                                          【ARM64 常见汇编指令专栏】
+
+                                   36篇 
+
+                                          【OpenOCD与FT4232H】
+
+                                   10篇 
+
+                                          【Makefile GCC 专栏】
+
+                                   23篇 
+
+                                          ARM Coresight Debug 工具系列
+
+                                   5篇 
+
+                                          ARM Linux 设备驱动系列介绍
+
+                                   7篇 
+
+                                          【ARM AMBA Bus 系列】
+
+                                   5篇 
+
+                                          【通信系列文章 CP】
+
+                                   7篇 
+
+                                          嵌入式开发常用工具及命令
+
+                                   10篇 
+
+                                           【git 常用命名与常见问题】
+
+                                   12篇 
+
+                                          Windows 常用工具系列
+
+                                   24篇 
+
+                                          【Linux 常用命令专栏】
+
+                                   44篇 
+
+                                           【Python Script 入门及渐进】
+
+                                   25篇 
+
+                                           【vim 学习专栏】
+
+                                   28篇 
+
+                                          【Validation 专栏】
+
+                            展开全部    
+                            收起    
+
+                 目录 
+
+		 评论 	
+
+		    被折叠的&nbsp;  &nbsp;条评论
+		  为什么被折叠? 
+
+		  到【灌水乐园】发言                                 
+
+			 查看更多评论  
+
+      添加红包
+
+         祝福语 
+
+         请填写红包祝福语或标题 
+
+         红包数量 
+
+           个 
+
+         红包个数最小为10个 
+
+         红包总金额 
+
+           元 
+
+         红包金额最低5元 
+
+         余额支付 
+
+          当前余额 3.43 元
+           前往充值 > 
+
+          需支付： 10.00 元
+
+         取消 
+         确定 
+
+             成就一亿技术人! 
+
+            领取后你会自动成为博主和红包主的粉丝
+             规则 
+
+               hope_wisdom  发出的红包
+
+	 打赏作者    
+
+			 主公讲 ARM 
+			 你的鼓励将是我创作的最大动力 
+
+     ¥1 
+     ¥2 
+     ¥4 
+     ¥6 
+     ¥10 
+     ¥20 
+
+					 扫码支付：  ¥1 
+
+					 获取中 
+
+					 扫码支付 
+
+			 您的余额不足，请更换扫码支付或 充值  
+			  打赏作者  
+
+       实付 元  
+        使用余额支付  
+
+             点击重新获取 
+
+                   扫码支付  
+
+         钱包余额 
+           0 
+
+                 抵扣说明： 
+                  1.余额是钱包充值的虚拟货币，按照1:1的比例进行支付金额的抵扣。  2.余额无法直接购买下载，可以购买VIP、付费专栏及课程。 
+
+         余额充值  
+
+
