@@ -141,7 +141,7 @@
 
 ### 三之十三、新增卷提案缺口史料网页参考专项（2026-09-07）
 
-> **本节说明**：以下 5 条为新增卷提案（重构2026/29 号文）史料缺口联网抓取与入库专项（ref id 5432-5453），落盘于 `04-现代研究文献/03-文献下载/07-网页参考/`（其中 2 条经互联网档案馆 Wayback 快照抓取，原站反爬），全文已入 `references_fulltext.duckdb`（references＋fulltext＋fulltext_blocks，sha256 三重去重，入库脚本 `script/webref_ingest_20260907.py`）。按 0 信任原则须与当事人叙述、法院文书、标准组织公告交叉印证。
+> **本节说明**：以下 5 条为新增卷提案（重构2026/29 号文）史料缺口联网抓取与入库专项（ref id 5432-5455），落盘于 `04-现代研究文献/03-文献下载/07-网页参考/`（其中 2 条经互联网档案馆 Wayback 快照抓取，原站反爬），全文已入 `references_fulltext.duckdb`（references＋fulltext＋fulltext_blocks，sha256 三重去重，入库脚本 `script/webref_ingest_20260907.py`）。按 0 信任原则须与当事人叙述、法院文书、标准组织公告交叉印证。
 
 - [AT&T 与 Sun 联合新闻稿（1987-10-19，TUHS 转录）](../03-文献下载/07-网页参考/20260907_tuhs_gingell_att-sun_pr_1987-10-19.html)：统一 UNIX System V＋SPARC＋ABI 联盟全文（ref 5432）
 - [Novell 与 USL 成立 Univel 新闻稿（Business Wire 1991-12-12）](../03-文献下载/07-网页参考/20260907_techinsider_univel_pr_1991-12-12_wayback.html)：Novell 55% 股份、3,000 万美元融资、SVR4.1 桌面产品计划（ref 5433）
@@ -157,6 +157,7 @@
 - [Computerworld 1988-10-24 全刊扫描（153 页）](../03-文献下载/01-pdf/sim_computerworld_1988-10-24_22_43.pdf)：p7「AT&T heads new Unix group」（Archer group 17 厂商背书 SVR4：Sun/Unisys/NCR/CDC/Prime/Motorola/Fujitsu/Toshiba/Amdahl/Gould/Informix/Lachman/Micro Focus＋OSF 谈判动态）＋「Sun blasts OSF」（McNealy：world does not need another Unix variant）；p118 Wilder 专栏「OSF, you're no Unix」（ref 5454，primary_archive，全刊逐页审阅：p2 目录/p7 双正身/p118 专栏，4 广告页 OCR 快扫确认无关，其余为产品广告/招聘/无关报道）
 - 同批另见：ref 5446 Salus《The Daemon, the GNU and the Penguin》Excursus（Groklaw 连载，Wayback 快照）；**ref 5447 Xinuos v. IBM 二巡 Summary Order 裁决书全文（No. 25-1073, 2026-08-10，PDF 已在库 2026-08-25 下载、2026-09-07 补入库）——SCO saga 终局一手，磁盘大纲 43.3.4 已引**
 - **comp.std.unix COSE／Spec 1170 专题六帖**（本地 usenet_mail 库转录，2026-09-07 导出入库）：ref 5448 Guthery 提问「COSE 为何采 XPG」、ref 5449 OSF Boyce 答「XPG4 为 POSIX.1 超集」、ref 5450 Zanoni「Spec 1170 是什么」、ref 5451 Allen 答「符合即称 UNIX，X/Open 持规范与商标」、ref 5452 Robinson「spec 1170 即 COSE API 文档（XPG4+SVID3 融合超集）」、ref 5453 Wicks「POSIX.7 与 COSE 关系」——COSE 缺口由「公告全文缺」降级为「公告原文缺、当代社区一手已齐」
+- **COSE 成立新闻稿全文（1993-03-17）**：ref 5455《UNIX Leaders Announce Common Open Software Environment》（UNIFORUM San Francisco 联合发布全文，8,223 字节——六公司名录、CDE 规范与 1994 上半年实现计划、VUE/CUA/Motif/OPEN LOOK/SVR4.2 desktop 技术组合、X11/Motif/ToolTalk、DCE+ONC++NetWare 客户端、X Consortium 图形三项、IMA 多媒体、OMG CORBA、系统管理工作组；主理人手动获取）——**公告原文缺口闭环**
 
 ### 三之十四、Windows NT 技术文献增补（2026-09-07）
 
