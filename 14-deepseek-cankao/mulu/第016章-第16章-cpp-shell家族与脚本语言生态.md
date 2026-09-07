@@ -2,13 +2,25 @@
 vol: 1
 ch: 16
 chapter_dir: 05-卷册大纲\第01卷-unix的起源\第16章-cpp-shell家族与脚本语言生态
-entries: 5
+entries: 7
 generated: 2026-09-08
 ---
 
-# 第 16 章 参考文献补充（5 条）
+# 第 16 章 参考文献补充（7 条）
 
 > 章目录：`05-卷册大纲\第01卷-unix的起源\第16章-cpp-shell家族与脚本语言生态/`
+
+### DKC-0744｜其他文献｜引用2次
+- **著录（GB/T 7714）**：OpenJDK. BSD Port Project (openjdk.java.net/projects/bsd-port/，2026-07-28 WebFetch 核实)[Z]. 2026.
+- **本地文件**：`14-deepseek-cankao/01-文献库/2026_OpenJDK_BSD_Port_Project.md`
+- **状态**：downloaded｜审阅：reviewed（manual_direct_v2）
+- **大纲原引**：OpenJDK BSD Port Project (openjdk.java.net/projects/bsd-port/，2026-07-28 WebFetch 核实)
+
+### DKC-0745｜其他文献｜引用2次
+- **著录（GB/T 7714）**：OpenJDK. BSD Port Wiki (wiki.openjdk.org/display/BSDPort/Main，2026-07-28 WebFetch 核实，Dalibor Topic 创建，Brian Beck 2013-02-19 最后更新)[Z]. 2026.
+- **本地文件**：`14-deepseek-cankao/01-文献库/2026_OpenJDK_BSD_Port_Wiki.md`
+- **状态**：downloaded｜审阅：reviewed（manual_direct_v2）
+- **大纲原引**：OpenJDK BSD Port Wiki (wiki.openjdk.org/display/BSDPort/Main，2026-07-28 WebFetch 核实，Dalibor Topic 创建，Brian Beck 2013-02-19 最后更新)
 
 ### DKC-0860｜在线文档｜引用1次
 - **著录（GB/T 7714）**：Greer. K. tcsh: The TENEX C Shell [EB/OL]. [2026-07-19]. <https://www.tcsh.org/>[EB/OL]. 2026.
