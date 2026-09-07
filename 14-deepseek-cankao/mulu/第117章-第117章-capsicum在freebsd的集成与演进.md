@@ -1,0 +1,39 @@
+---
+vol: 6
+ch: 117
+chapter_dir: 05-卷册大纲\第06卷-freebsd的核心技术革新\第117章-capsicum在freebsd的集成与演进
+entries: 5
+generated: 2026-09-07
+---
+
+# 第 117 章 参考文献补充（5 条）
+
+> 章目录：`05-卷册大纲/05-卷册大纲\第06卷-freebsd的核心技术革新\第117章-capsicum在freebsd的集成与演进/`
+> 来源战线：14-deepseek-cankao（2026-09-07 缺失文献下载与审阅）
+> 写入大纲时：将各条「著录」追加至该章文献清单；一手/二手按 cat 判断（官方文档/安全公告/技术报告为一手倾向，书籍/媒体为二手）。
+
+### DKC-1896｜其他文献｜引用5次
+- **著录（GB/T 7714）**：FreeBSD. Project. Commit `42a859525652decb08bba47ffaceb769d394175e` (Pawel Jakub Dawidek, 2013-12-02). casperd daemon 首次合入[Z]. 2013.
+- **状态**：in_repo_db｜审阅：pending
+- **大纲原引**：FreeBSD Project. Commit `42a859525652decb08bba47ffaceb769d394175e` (Pawel Jakub Dawidek, 2013-12-02). casperd daemon 首次合入
+
+### DKC-1897｜其他文献｜引用4次
+- **著录（GB/T 7714）**：FreeBSD. Project. Commit `f01f7446472b47340fbaddd4d582fa4006df3842` (Pawel Jakub Dawidek, 2013-12-19). casperd 默认启用[Z]. 2013.
+- **状态**：in_repo_db｜审阅：pending
+- **大纲原引**：FreeBSD Project. Commit `f01f7446472b47340fbaddd4d582fa4006df3842` (Pawel Jakub Dawidek, 2013-12-19). casperd 默认启用
+
+### DKC-1902｜其他文献｜引用3次
+- **著录（GB/T 7714）**：FreeBSD. Project. Commit `c501d73c7e2d5c843583084b84bd3e6f68a0047e` (Mariusz Zaborski, 2016-02-25). casperd 重构为 libcasper 库架构[Z]. 2016.
+- **状态**：in_repo_db｜审阅：pending
+- **大纲原引**：FreeBSD Project. Commit `c501d73c7e2d5c843583084b84bd3e6f68a0047e` (Mariusz Zaborski, 2016-02-25). casperd 重构为 libcasper 库架构
+
+### DKC-1907｜其他文献｜引用3次
+- **著录（GB/T 7714）**：FreeBSD. Project. Commit `009d2032af44e1f71bd17cda89ace46a4df2d2cc` (Robert Watson, 2011-12-29). options CAPABILITY_MODE/CAPABILITIES 加入 GENERIC 内核配置（对应 SVN r219129）[Z]. 2032.
+- **状态**：in_repo_db｜审阅：pending
+- **大纲原引**：FreeBSD Project. Commit `009d2032af44e1f71bd17cda89ace46a4df2d2cc` (Robert Watson, 2011-12-29). options CAPABILITY_MODE/CAPABILITIES 加入 GENERIC 内核配置（对应 SVN r219129）
+
+### DKC-1929｜其他文献｜引用2次
+- **著录（GB/T 7714）**：FreeBSD. Foundation (2013-04). Capsicum Framework Project Announcement. freebsdfoundation.org[Z]. 2013.
+- **状态**：in_ref_db｜审阅：pending
+- **大纲原引**：FreeBSD Foundation (2013-04). Capsicum Framework Project Announcement. freebsdfoundation.org
+
