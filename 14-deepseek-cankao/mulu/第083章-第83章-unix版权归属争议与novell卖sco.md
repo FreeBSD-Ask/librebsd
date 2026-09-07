@@ -8,9 +8,8 @@ generated: 2026-09-07
 
 # 第 83 章 参考文献补充（2 条）
 
-> 章目录：`05-卷册大纲/05-卷册大纲\第04卷-大分裂与四大bsd的诞生\第83章-unix版权归属争议与novell卖sco/`
-> 来源战线：14-deepseek-cankao（2026-09-07 缺失文献下载与审阅）
-> 写入大纲时：将各条「著录」追加至该章文献清单；一手/二手按 cat 判断（官方文档/安全公告/技术报告为一手倾向，书籍/媒体为二手）。
+> 章目录：`05-卷册大纲\第04卷-大分裂与四大bsd的诞生\第83章-unix版权归属争议与novell卖sco/`
+> 来源战线：14-deepseek-cankao
 
 ### DKC-1063｜在线文档｜引用2次
 - **著录（GB/T 7714）**：TSG. Group, Inc. bankruptcy, 07-bk-11337 (Bankr. D. Del. 2007)[Z/OL]. 美国特拉华破产法院。<https://www.courtlistener.com/docket/4215137/tsg-group-inc/>[EB/OL]. 2007.

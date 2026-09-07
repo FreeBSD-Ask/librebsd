@@ -8,9 +8,8 @@ generated: 2026-09-07
 
 # 第 171 章 参考文献补充（2 条）
 
-> 章目录：`05-卷册大纲/05-卷册大纲\第08卷-freebsd的范式转换\第171章-systemd与bsd-init的哲学合图层/`
-> 来源战线：14-deepseek-cankao（2026-09-07 缺失文献下载与审阅）
-> 写入大纲时：将各条「著录」追加至该章文献清单；一手/二手按 cat 判断（官方文档/安全公告/技术报告为一手倾向，书籍/媒体为二手）。
+> 章目录：`05-卷册大纲\第08卷-freebsd的范式转换\第171章-systemd与bsd-init的哲学合图层/`
+> 来源战线：14-deepseek-cankao
 
 ### DKC-2401｜在线文档｜引用1次
 - **著录（GB/T 7714）**：Defines. Open, Hybrid Cloud Future[EB/OL]. (2019-07-09)[2026-07-22]. <https://www.redhat.com/en/about/press-releases/ibm-closes-landmark-acquisition-red-hat-34-billion-defines-open-hybrid-cloud-future>[EB/OL]. 2019.

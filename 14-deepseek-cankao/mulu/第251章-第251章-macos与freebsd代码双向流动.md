@@ -8,9 +8,8 @@ generated: 2026-09-07
 
 # 第 251 章 参考文献补充（3 条）
 
-> 章目录：`05-卷册大纲/05-卷册大纲\第12卷-macos的bsd遗产\第251章-macos与freebsd代码双向流动/`
-> 来源战线：14-deepseek-cankao（2026-09-07 缺失文献下载与审阅）
-> 写入大纲时：将各条「著录」追加至该章文献清单；一手/二手按 cat 判断（官方文档/安全公告/技术报告为一手倾向，书籍/媒体为二手）。
+> 章目录：`05-卷册大纲\第12卷-macos的bsd遗产\第251章-macos与freebsd代码双向流动/`
+> 来源战线：14-deepseek-cankao
 
 ### DKC-0174｜在线文档｜引用1次
 - **著录（GB/T 7714）**：Postfix. Project. Postfix Home Page [EB/OL]. <https://www.postfix.org/>, 2026-07-23 核查（Viktor Dukhovni 公开技术贡献主要见于 DANE/TLSA 工作）[EB/OL]. 2026.
