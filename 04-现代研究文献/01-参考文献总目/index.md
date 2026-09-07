@@ -102,3 +102,11 @@
 ### 三之十二、临时放置批次文献增补（2026-08-06）
 > **本节说明**：以下条目为 `03-文献下载/00-临时放置/` 全部 68 个唯一文件（2026-08-06 集中归档批次）的 GB/T 7714-2015 著录条目，59 篇入库 `references_fulltext.db`（ref id 2758-2816）。按 0 信任原则须与一手代码档案、邮件列表存档、当事人叙述交叉印证；本批次含 13 份扫描版 OCR 文献（Theo de Raadt 邮件、PDP-7 手册等），OCR 文本引用前须与原文核对。综述与条目化整理见 `13-临时放置文献处理20260806/`。
 - [临时放置批次文献增补（2026-08-06）](99-临时放置批次增补.md)：59 条著录条目，含口述史、BSD 技术文献、开源法律论文、跨文化思想文献四类
+
+### 三之十三、新增卷提案缺口史料网页参考专项（2026-09-07）
+> **本节说明**：以下 5 条为新增卷提案（重构2026/29 号文）史料缺口联网抓取与入库专项（ref id 5432-5436），落盘于 `04-现代研究文献/03-文献下载/07-网页参考/`（其中 2 条经互联网档案馆 Wayback 快照抓取，原站反爬），全文已入 `references_fulltext.duckdb`（references＋fulltext＋fulltext_blocks，sha256 三重去重，入库脚本 `script/webref_ingest_20260907.py`）。按 0 信任原则须与当事人叙述、法院文书、标准组织公告交叉印证。
+- [AT&T 与 Sun 联合新闻稿（1987-10-19，TUHS 转录）](../03-文献下载/07-网页参考/20260907_tuhs_gingell_att-sun_pr_1987-10-19.html)：统一 UNIX System V＋SPARC＋ABI 联盟全文（ref 5432）
+- [Novell 与 USL 成立 Univel 新闻稿（Business Wire 1991-12-12）](../03-文献下载/07-网页参考/20260907_techinsider_univel_pr_1991-12-12_wayback.html)：Novell 55% 股份、3,000 万美元融资、SVR4.1 桌面产品计划（ref 5433）
+- [OSNews pt. VII: CDE](../03-文献下载/07-网页参考/20260907_osnews_cde_cose_pr.html)：COSE/CDE 源流述评，含 COSE 新闻稿技术组合原文引段（ref 5434）
+- [Computer History Museum 1986 年大事记](../03-文献下载/07-网页参考/20260907_chm_timeline_1986_deskpro386.html)：Compaq Deskpro 386（首台 80386 市售计算机）条目（ref 5435）
+- [The Register：SCO v. IBM 和解报道（2021-08-30）](../03-文献下载/07-网页参考/20260907_theregister_sco_ibm_settlement_14250k_wayback.html)：18 年诉讼以 1,425 万美元和解（ref 5436）
