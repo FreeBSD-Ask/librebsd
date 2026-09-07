@@ -150,3 +150,9 @@
 - [The Register：SCO v. IBM 和解报道（2021-08-30）](../03-文献下载/07-网页参考/20260907_theregister_sco_ibm_settlement_14250k_wayback.html)：18 年诉讼以 1,425 万美元和解（ref 5436）
 - [Dennis Ritchie 存档：早期许可与价目扫描件目录](../03-文献下载/07-网页参考/20260907_ritchie_licenses_price_lists_9p.html)：1974 教育许可 150 美元管理费、1983-09 学术价目 400 美元、1984-02 SVR2 教育 800/400 与商业 43,000/16,000 美元（ref 5437）
 - [AT&T 商标许可扩展新闻稿（1988-10-31）](../03-文献下载/07-网页参考/20260907_techinsider_att_trademark_licensing_1988-10-31_wayback.html)：SVR3.2 符合条件系统可用 UNIX 商标（ref 5438）
+
+### 三之十四、Windows NT 技术文献增补（2026-09-07）
+
+> **本节说明**：2026-09-07 单册下载入库（《Inside Windows NT》，Helen Custer 著，Microsoft Press 1992）。经安娜的档案获取 Internet Archive 数字化副本，420 页全文 OCR（文本层 391 页 + RapidOCR 29 页）并逐页复核校正，OCR 成品见 [1992_Custer_Inside_Windows_NT_en.md](../03-文献下载/03-ocr/1992_Custer_Inside_Windows_NT_en.md)，manifest 登记见 `annas-archive-manifest.json`（条目 187）。著录见 [技术史与操作系统.md](技术史与操作系统.md)「增补：Windows NT 技术文献」小节。按 0 信任原则，书中史实须与 NT 设计团队口述、David N. Cutler 访谈、Microsoft 官方文档交叉印证。
+
+- [Custer《Inside Windows NT》著录条目](技术史与操作系统.md#增补windows-nt-技术文献2026-09-07-文献下载入库)：CUSTER H. Inside Windows NT[M]. Redmond, Washington: Microsoft Press, 1992. ISBN: 1-55615-481-X
