@@ -141,7 +141,7 @@
 
 ### 三之十三、新增卷提案缺口史料网页参考专项（2026-09-07）
 
-> **本节说明**：以下 5 条为新增卷提案（重构2026/29 号文）史料缺口联网抓取与入库专项（ref id 5432-5438），落盘于 `04-现代研究文献/03-文献下载/07-网页参考/`（其中 2 条经互联网档案馆 Wayback 快照抓取，原站反爬），全文已入 `references_fulltext.duckdb`（references＋fulltext＋fulltext_blocks，sha256 三重去重，入库脚本 `script/webref_ingest_20260907.py`）。按 0 信任原则须与当事人叙述、法院文书、标准组织公告交叉印证。
+> **本节说明**：以下 5 条为新增卷提案（重构2026/29 号文）史料缺口联网抓取与入库专项（ref id 5432-5445），落盘于 `04-现代研究文献/03-文献下载/07-网页参考/`（其中 2 条经互联网档案馆 Wayback 快照抓取，原站反爬），全文已入 `references_fulltext.duckdb`（references＋fulltext＋fulltext_blocks，sha256 三重去重，入库脚本 `script/webref_ingest_20260907.py`）。按 0 信任原则须与当事人叙述、法院文书、标准组织公告交叉印证。
 
 - [AT&T 与 Sun 联合新闻稿（1987-10-19，TUHS 转录）](../03-文献下载/07-网页参考/20260907_tuhs_gingell_att-sun_pr_1987-10-19.html)：统一 UNIX System V＋SPARC＋ABI 联盟全文（ref 5432）
 - [Novell 与 USL 成立 Univel 新闻稿（Business Wire 1991-12-12）](../03-文献下载/07-网页参考/20260907_techinsider_univel_pr_1991-12-12_wayback.html)：Novell 55% 股份、3,000 万美元融资、SVR4.1 桌面产品计划（ref 5433）
@@ -150,6 +150,8 @@
 - [The Register：SCO v. IBM 和解报道（2021-08-30）](../03-文献下载/07-网页参考/20260907_theregister_sco_ibm_settlement_14250k_wayback.html)：18 年诉讼以 1,425 万美元和解（ref 5436）
 - [Dennis Ritchie 存档：早期许可与价目扫描件目录](../03-文献下载/07-网页参考/20260907_ritchie_licenses_price_lists_9p.html)：1974 教育许可 150 美元管理费、1983-09 学术价目 400 美元、1984-02 SVR2 教育 800/400 与商业 43,000/16,000 美元（ref 5437）
 - [AT&T 商标许可扩展新闻稿（1988-10-31）](../03-文献下载/07-网页参考/20260907_techinsider_att_trademark_licensing_1988-10-31_wayback.html)：SVR3.2 符合条件系统可用 UNIX 商标（ref 5438）
+- [X/Open 收到 Novell 转让 UNIX 商标新闻稿（1993-10-11）全文，经 comp.std.unix Karish 帖转录](../03-文献下载/07-网页参考/20260907_compstdunix_karish_xopen_trademark_1993-10-12_wayback.html)：含 Spec 1170、Novell 1993-06-14 交割 USL、Novell 入 X/Open 董事会（ref 5444 正文 HTML／5445 纯文本）
+- 同批另见既有入库：ref 5439 CHM Cutler 口述史（2016）转录、ref 5440-5441 Kleine 扫描价目 PDF（1974/1984 原件）、ref 5442-5443 Custer《Inside Windows NT》1993（md＋PDF）——三组共同覆盖 NT 内核性质与价目表两大缺口
 
 ### 三之十四、Windows NT 技术文献增补（2026-09-07）
 
