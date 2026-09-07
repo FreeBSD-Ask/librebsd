@@ -2,11 +2,11 @@
 vol: 5
 ch: 105
 chapter_dir: 05-卷册大纲\第05卷-freebsd的工程化奠基\第105章-freebsd7x同期的dragonfly-hammer与os比较
-entries: 5
+entries: 6
 generated: 2026-09-08
 ---
 
-# 第 105 章 参考文献补充（5 条）
+# 第 105 章 参考文献补充（6 条）
 
 > 章目录：`05-卷册大纲\第05卷-freebsd的工程化奠基\第105章-freebsd7x同期的dragonfly-hammer与os比较/`
 
@@ -14,6 +14,12 @@ generated: 2026-09-08
 - **著录（GB/T 7714）**：Jeff. Roberson. Add the ule scheduler. freebsd-src [DB/OL]. 2003-01-26T05:23:15Z. commit: 35e6168fcdc76ba3ff2927279f9a48aa5ac3157d[EB/OL]. 2003.
 - **状态**：in_repo_db｜审阅：pending
 - **大纲原引**：Jeff Roberson. Add the ule scheduler. freebsd-src [DB/OL]. 2003-01-26T05:23:15Z. commit: 35e6168fcdc76ba3ff2927279f9a48aa5ac3157d
+
+### DKC-1644｜其他文献｜引用2次
+- **著录（GB/T 7714）**：Phoronix. FreeBSD 7.0 Benchmarks (2008)[Z]. 2008.
+- **本地文件**：`14-deepseek-cankao/01-文献库/2008_Phoronix_FreeBSD_7_Benchmarks.md`
+- **状态**：downloaded｜审阅：reviewed（manual_direct_v3）
+- **大纲原引**：Phoronix FreeBSD 7.0 Benchmarks (2008)
 
 ### DKC-1744｜其他文献｜引用1次
 - **著录（GB/T 7714）**：Molnar. I. CFS: Completely Fair Scheduler LKML (2007.4.13)[Z]. 2007.

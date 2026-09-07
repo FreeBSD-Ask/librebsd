@@ -2,11 +2,11 @@
 vol: 6
 ch: 117
 chapter_dir: 05-卷册大纲\第06卷-freebsd的核心技术革新\第117章-capsicum在freebsd的集成与演进
-entries: 7
+entries: 8
 generated: 2026-09-08
 ---
 
-# 第 117 章 参考文献补充（7 条）
+# 第 117 章 参考文献补充（8 条）
 
 > 章目录：`05-卷册大纲\第06卷-freebsd的核心技术革新\第117章-capsicum在freebsd的集成与演进/`
 
@@ -40,6 +40,12 @@ generated: 2026-09-08
 - **著录（GB/T 7714）**：FreeBSD. Foundation (2013-04). Capsicum Framework Project Announcement. freebsdfoundation.org[Z]. 2013.
 - **状态**：in_ref_db｜审阅：pending
 - **大纲原引**：FreeBSD Foundation (2013-04). Capsicum Framework Project Announcement. freebsdfoundation.org
+
+### DKC-1931｜其他文献｜引用2次
+- **著录（GB/T 7714）**：Brown. N. (2016-02-10). CloudABI. LWN.net[Z]. 2016.
+- **本地文件**：`14-deepseek-cankao/01-文献库/2016_LWN_CloudABI.md`
+- **状态**：downloaded｜审阅：reviewed（manual_direct_v3）
+- **大纲原引**：Brown, N. (2016-02-10). CloudABI. LWN.net
 
 ### DKC-2025｜学术会议论文｜引用1次
 - **著录（GB/T 7714）**：Woodruff. J. et al. (2014). The CHERI capability model: Revisiting RISC in an age of risk. ISCA '14[C]. 2014.
