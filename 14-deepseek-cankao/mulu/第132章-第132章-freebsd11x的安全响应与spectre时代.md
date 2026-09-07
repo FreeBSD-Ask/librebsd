@@ -2,11 +2,11 @@
 vol: 6
 ch: 132
 chapter_dir: 05-卷册大纲\第06卷-freebsd的核心技术革新\第132章-freebsd11x的安全响应与spectre时代
-entries: 20
+entries: 21
 generated: 2026-09-08
 ---
 
-# 第 132 章 参考文献补充（20 条）
+# 第 132 章 参考文献补充（21 条）
 
 > 章目录：`05-卷册大纲\第06卷-freebsd的核心技术革新\第132章-freebsd11x的安全响应与spectre时代/`
 
@@ -30,6 +30,12 @@ generated: 2026-09-08
 - **本地文件**：`14-deepseek-cankao/01-文献库/2018_Vanhoef_Key_Reinstallation_Attacks_WPA2.pdf`
 - **状态**：downloaded｜审阅：reviewed（manual_direct）
 - **大纲原引**：Vanhoef M, Piessens F. Key Reinstallation Attacks: Forcing Nonce Reuse in WPA2 [C]//ACM CCS 2017. Dallas, 2017
+
+### DKC-2096｜在线文档｜引用1次
+- **著录（GB/T 7714）**：Vanhoef. M. KRACK Attacks [EB/OL]. (2017-10-16)[2026-07-22]. <https://krackattacks.com/>[EB/OL]. 2017.
+- **本地文件**：`14-deepseek-cankao/01-文献库/2017_Vanhoef_M_KRACK_Attacks_EBOL_2017-10-162026-07-22_httpskrackattacksc`
+- **状态**：downloaded｜审阅：reviewed（wayback_retry）
+- **大纲原引**：Vanhoef M. KRACK Attacks [EB/OL]. (2017-10-16)[2026-07-22]. <https://krackattacks.com/>
 
 ### DKC-2097｜在线文档｜引用1次
 - **著录（GB/T 7714）**：Tetlow. G. Update wpa_supplicant/hostapd for 2017-01 vulnerability release. freebsd-src [DB/OL]. 2017-10-17T19:36:42Z. a2063804a2b8[EB/OL]. 2017.
