@@ -153,6 +153,6 @@
 
 ### 三之十四、Windows NT 技术文献增补（2026-09-07）
 
-> **本节说明**：2026-09-07 单册下载入库（《Inside Windows NT》，Helen Custer 著，Microsoft Press 1992）。经安娜的档案获取 Internet Archive 数字化副本，420 页全文 OCR（文本层 391 页 + RapidOCR 29 页）并逐页复核校正，OCR 成品见 [1992_Custer_Inside_Windows_NT_en.md](../03-文献下载/03-ocr/1992_Custer_Inside_Windows_NT_en.md)，manifest 登记见 `annas-archive-manifest.json`（条目 187）。著录见 [技术史与操作系统.md](技术史与操作系统.md)「增补：Windows NT 技术文献」小节。按 0 信任原则，书中史实须与 NT 设计团队口述、David N. Cutler 访谈、Microsoft 官方文档交叉印证。
+> **本节说明**：2026-09-07 单册下载入库（《Inside Windows NT》，Helen Custer 著，Microsoft Press 1992）。经安娜的档案获取 Internet Archive 数字化副本，420 页全文 OCR（文本层 391 页 + RapidOCR 29 页）并逐页复核校正，OCR 成品见 [1992_Custer_Inside_Windows_NT_en.md](../03-文献下载/03-ocr/1992_Custer_Inside_Windows_NT_en.md)，manifest 登记见 `annas-archive-manifest.json`（条目 187）。著录见 [技术史与操作系统.md](技术史与操作系统.md)「增补：Windows NT 技术文献」小节。**2026-09-07 经用户批准全文入库 `references_fulltext.duckdb`（ref 5442 OCR 全文 + ref 5443 原 PDF 资产行，fulltext id 4439，780,359 字符，fulltext_blocks 421 块按页粒度 block_page=PDF 页号，入库脚本 `script/book_ingest_custer_20260907.py`，sha256 双记录）**。结构化大纲见 [../03-文献下载/03-ocr/1992_Custer_Inside_Windows_NT_大纲.md](../03-文献下载/03-ocr/1992_Custer_Inside_Windows_NT_大纲.md)。按 0 信任原则，书中史实须与 NT 设计团队口述、David N. Cutler 访谈、Microsoft 官方文档交叉印证。
 
 - [Custer《Inside Windows NT》著录条目](技术史与操作系统.md#增补windows-nt-技术文献2026-09-07-文献下载入库)：CUSTER H. Inside Windows NT[M]. Redmond, Washington: Microsoft Press, 1992. ISBN: 1-55615-481-X
