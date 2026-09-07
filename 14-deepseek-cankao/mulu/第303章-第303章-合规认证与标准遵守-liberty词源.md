@@ -3,13 +3,12 @@ vol: 16
 ch: 303
 chapter_dir: 05-卷册大纲\第16卷-开源运动与合规治理\第303章-合规认证与标准遵守-liberty词源
 entries: 6
-generated: 2026-09-07
+generated: 2026-09-08
 ---
 
 # 第 303 章 参考文献补充（6 条）
 
 > 章目录：`05-卷册大纲\第16卷-开源运动与合规治理\第303章-合规认证与标准遵守-liberty词源/`
-> 来源战线：14-deepseek-cankao
 
 ### DKC-0563｜在线文档｜引用1次
 - **著录（GB/T 7714）**：POSIX. FAQ Version 1.18 [EB/OL]. Andrew Josey 维护。(2025-05-25)[2026-07-23]. <https://www.opengroup.org/austin/papers/posix_faq.html>[EB/OL]. 2025.

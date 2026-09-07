@@ -3,13 +3,12 @@ vol: 16
 ch: 301
 chapter_dir: 05-卷册大纲\第16卷-开源运动与合规治理\第301章-开源运动与bsd-apache谱系
 entries: 13
-generated: 2026-09-07
+generated: 2026-09-08
 ---
 
 # 第 301 章 参考文献补充（13 条）
 
 > 章目录：`05-卷册大纲\第16卷-开源运动与合规治理\第301章-开源运动与bsd-apache谱系/`
-> 来源战线：14-deepseek-cankao
 
 ### DKC-0531｜在线文档｜引用2次
 - **著录（GB/T 7714）**：Kamp. P.-H. A bike shed (any colour will do) on greener grass... [EB/OL]. (1999-10-02). <https://phk.freebsd.dk/sagas/bikeshed/>[EB/OL]. 1999.

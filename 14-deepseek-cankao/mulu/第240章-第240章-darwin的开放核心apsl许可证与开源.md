@@ -3,13 +3,12 @@ vol: 12
 ch: 240
 chapter_dir: 05-卷册大纲\第12卷-macos的bsd遗产\第240章-darwin的开放核心apsl许可证与开源
 entries: 6
-generated: 2026-09-07
+generated: 2026-09-08
 ---
 
 # 第 240 章 参考文献补充（6 条）
 
 > 章目录：`05-卷册大纲\第12卷-macos的bsd遗产\第240章-darwin的开放核心apsl许可证与开源/`
-> 来源战线：14-deepseek-cankao
 
 ### DKC-0135｜在线文档｜引用4次
 - **著录（GB/T 7714）**：Apple. Inc. macOS Tahoe 26 Security Content [EB/OL]. (2025-09-15). <https://support.apple.com/en-us/125110>[EB/OL]. 2025.

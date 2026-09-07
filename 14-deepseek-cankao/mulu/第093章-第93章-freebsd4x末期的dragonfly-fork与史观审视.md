@@ -3,13 +3,12 @@ vol: 5
 ch: 93
 chapter_dir: 05-卷册大纲\第05卷-freebsd的工程化奠基\第93章-freebsd4x末期的dragonfly-fork与史观审视
 entries: 7
-generated: 2026-09-07
+generated: 2026-09-08
 ---
 
 # 第 93 章 参考文献补充（7 条）
 
 > 章目录：`05-卷册大纲\第05卷-freebsd的工程化奠基\第93章-freebsd4x末期的dragonfly-fork与史观审视/`
-> 来源战线：14-deepseek-cankao
 
 ### DKC-1621｜在线文档｜引用3次
 - **著录（GB/T 7714）**：FreeBSD. 社区论文：[FP-2005-001] Building a FreeBSD Appliance With NanoBSD（Poul-Henning Kamp，2005）<https://papers.freebsd.org/2005/phk-nanobsd/>[EB/OL]. 2005.

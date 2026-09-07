@@ -2,14 +2,19 @@
 vol: 3
 ch: 58
 chapter_dir: 05-卷册大纲\第03卷-伯克利学术文化外溢影响\第58章-bsd作为tcpip参考实现
-entries: 2
-generated: 2026-09-07
+entries: 3
+generated: 2026-09-08
 ---
 
-# 第 58 章 参考文献补充（2 条）
+# 第 58 章 参考文献补充（3 条）
 
 > 章目录：`05-卷册大纲\第03卷-伯克利学术文化外溢影响\第58章-bsd作为tcpip参考实现/`
-> 来源战线：14-deepseek-cankao
+
+### DKC-1059｜学术会议论文｜引用5次
+- **著录（GB/T 7714）**：Jacobson. Congestion Avoidance and Control[C]. 1988.
+- **本地文件**：`14-deepseek-cankao/01-文献库/1988_Jacobson_Congestion_Avoidance_and_Control.pdf`
+- **状态**：downloaded｜审阅：reviewed（manual_direct）
+- **大纲原引**：Jacobson, V. & Karels, M. J. (1988) "Congestion Avoidance and Control"SIGCOMM（Stanford 1988.8.26-30, DOI: 10.1145/52325.52356）
 
 ### DKC-1487｜学术会议论文｜引用1次
 - **著录（GB/T 7714）**：Jacobson. Modified TCP Congestion Avoidance Algorithms[C]. 1990.

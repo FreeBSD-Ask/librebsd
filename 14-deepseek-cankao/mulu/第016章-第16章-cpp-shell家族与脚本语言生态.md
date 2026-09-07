@@ -3,13 +3,12 @@ vol: 1
 ch: 16
 chapter_dir: 05-卷册大纲\第01卷-unix的起源\第16章-cpp-shell家族与脚本语言生态
 entries: 5
-generated: 2026-09-07
+generated: 2026-09-08
 ---
 
 # 第 16 章 参考文献补充（5 条）
 
 > 章目录：`05-卷册大纲\第01卷-unix的起源\第16章-cpp-shell家族与脚本语言生态/`
-> 来源战线：14-deepseek-cankao
 
 ### DKC-0860｜在线文档｜引用1次
 - **著录（GB/T 7714）**：Greer. K. tcsh: The TENEX C Shell [EB/OL]. [2026-07-19]. <https://www.tcsh.org/>[EB/OL]. 2026.

@@ -3,13 +3,12 @@ vol: 16
 ch: 300
 chapter_dir: 05-卷册大纲\第16卷-开源运动与合规治理\第300章-开源运动与bsd-gnu与fsf
 entries: 5
-generated: 2026-09-07
+generated: 2026-09-08
 ---
 
 # 第 300 章 参考文献补充（5 条）
 
 > 章目录：`05-卷册大纲\第16卷-开源运动与合规治理\第300章-开源运动与bsd-gnu与fsf/`
-> 来源战线：14-deepseek-cankao
 
 ### DKC-0542｜其他文献｜引用1次
 - **著录（GB/T 7714）**：Poul-Henning. Sanitize the copyright section... four-clause BSD license[Z]. 2003.

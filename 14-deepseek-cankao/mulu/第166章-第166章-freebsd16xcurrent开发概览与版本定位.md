@@ -3,13 +3,12 @@ vol: 8
 ch: 166
 chapter_dir: 05-卷册大纲\第08卷-freebsd的范式转换\第166章-freebsd16xcurrent开发概览与版本定位
 entries: 3
-generated: 2026-09-07
+generated: 2026-09-08
 ---
 
 # 第 166 章 参考文献补充（3 条）
 
 > 章目录：`05-卷册大纲\第08卷-freebsd的范式转换\第166章-freebsd16xcurrent开发概览与版本定位/`
-> 来源战线：14-deepseek-cankao
 
 ### DKC-2292｜在线文档｜引用8次
 - **著录（GB/T 7714）**：Siciliano. A S. bsddialog Project [EB/OL]. (2021-03-27)[2026-07-23]. <https://gitlab.com/alfix/bsddialog>[EB/OL]. 2021.

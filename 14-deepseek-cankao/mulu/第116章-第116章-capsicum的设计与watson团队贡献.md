@@ -3,13 +3,12 @@ vol: 6
 ch: 116
 chapter_dir: 05-卷册大纲\第06卷-freebsd的核心技术革新\第116章-capsicum的设计与watson团队贡献
 entries: 6
-generated: 2026-09-07
+generated: 2026-09-08
 ---
 
 # 第 116 章 参考文献补充（6 条）
 
 > 章目录：`05-卷册大纲\第06卷-freebsd的核心技术革新\第116章-capsicum的设计与watson团队贡献/`
-> 来源战线：14-deepseek-cankao
 
 ### DKC-1896｜其他文献｜引用5次
 - **著录（GB/T 7714）**：FreeBSD. Project. Commit `42a859525652decb08bba47ffaceb769d394175e` (Pawel Jakub Dawidek, 2013-12-02). casperd daemon 首次合入[Z]. 2013.

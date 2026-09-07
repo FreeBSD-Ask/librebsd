@@ -3,13 +3,12 @@ vol: 2
 ch: 39
 chapter_dir: 05-卷册大纲\第02卷-伯克利的岁月\第39章-bostic发起重写att代码运动
 entries: 6
-generated: 2026-09-07
+generated: 2026-09-08
 ---
 
 # 第 39 章 参考文献补充（6 条）
 
 > 章目录：`05-卷册大纲\第02卷-伯克利的岁月\第39章-bostic发起重写att代码运动/`
-> 来源战线：14-deepseek-cankao
 
 ### DKC-1129｜书籍｜引用2次
 - **著录（GB/T 7714）**：AT. &T LETTER to Regents of the University of California, Apr. 5, 1982[Z/OL]. Groklaw 存档[M]. 1982.

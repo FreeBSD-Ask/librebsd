@@ -3,13 +3,12 @@ vol: 10
 ch: 201
 chapter_dir: 05-卷册大纲\第10卷-openbsd的历史\第201章-openbsd-6x的安全机制综合演进
 entries: 9
-generated: 2026-09-07
+generated: 2026-09-08
 ---
 
 # 第 201 章 参考文献补充（9 条）
 
 > 章目录：`05-卷册大纲\第10卷-openbsd的历史\第201章-openbsd-6x的安全机制综合演进/`
-> 来源战线：14-deepseek-cankao
 
 ### DKC-0013｜学术会议论文｜引用12次
 - **著录（GB/T 7714）**：FreeBSD. 社区论文：[FP-2017-009] My BSD sucks less than yours（Baptiste Daroussin（巴蒂斯特·达鲁桑） Antoine Jacoutot（安托万·雅库托），2017）<https://papers.freebsd.org/2017/fosdem/bapt-my_bsd_suck_less_than_yours/>[C]. 2017.

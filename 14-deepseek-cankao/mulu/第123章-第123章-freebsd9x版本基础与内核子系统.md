@@ -3,13 +3,12 @@ vol: 6
 ch: 123
 chapter_dir: 05-卷册大纲\第06卷-freebsd的核心技术革新\第123章-freebsd9x版本基础与内核子系统
 entries: 3
-generated: 2026-09-07
+generated: 2026-09-08
 ---
 
 # 第 123 章 参考文献补充（3 条）
 
 > 章目录：`05-卷册大纲\第06卷-freebsd的核心技术革新\第123章-freebsd9x版本基础与内核子系统/`
-> 来源战线：14-deepseek-cankao
 
 ### DKC-2054｜在线文档｜引用1次
 - **著录（GB/T 7714）**：Selasky. H P. Commit initial version of new XHCI driver which was written from scratch. freebsd-src [DB/OL]. 2010-10-03T08:12:17Z. 1354026034bcac3abf55b01e0a427be249283d95[EB/OL]. 2010.

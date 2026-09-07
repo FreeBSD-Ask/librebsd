@@ -3,13 +3,12 @@ vol: 2
 ch: 41
 chapter_dir: 05-卷册大纲\第02卷-伯克利的岁月\第41章-usl起诉bsdi与伯克利
 entries: 2
-generated: 2026-09-07
+generated: 2026-09-08
 ---
 
 # 第 41 章 参考文献补充（2 条）
 
 > 章目录：`05-卷册大纲\第02卷-伯克利的岁月\第41章-usl起诉bsdi与伯克利/`
-> 来源战线：14-deepseek-cankao
 
 ### DKC-1287｜在线文档｜引用1次
 - **著录（GB/T 7714）**：PACER. Public Access to Court Electronic Records [EB/OL]. 美国联邦法院行政办公室。<https://pacer.uscourts.gov/>[EB/OL]. 2026.

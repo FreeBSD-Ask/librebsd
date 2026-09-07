@@ -3,13 +3,12 @@ vol: 2
 ch: 35
 chapter_dir: 05-卷册大纲\第02卷-伯克利的岁月\第35章-sun-microsystems
 entries: 6
-generated: 2026-09-07
+generated: 2026-09-08
 ---
 
 # 第 35 章 参考文献补充（6 条）
 
 > 章目录：`05-卷册大纲\第02卷-伯克利的岁月\第35章-sun-microsystems/`
-> 来源战线：14-deepseek-cankao
 
 ### DKC-1115｜其他文献｜引用2次
 - **著录（GB/T 7714）**：TUHS. the guy who brought up SVr4 on Sun machines[Z]. 2017.

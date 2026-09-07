@@ -3,13 +3,12 @@ vol: 16
 ch: 304
 chapter_dir: 05-卷册大纲\第16卷-开源运动与合规治理\第304章-合规认证与标准遵守-commoncriteria
 entries: 3
-generated: 2026-09-07
+generated: 2026-09-08
 ---
 
 # 第 304 章 参考文献补充（3 条）
 
 > 章目录：`05-卷册大纲\第16卷-开源运动与合规治理\第304章-合规认证与标准遵守-commoncriteria/`
-> 来源战线：14-deepseek-cankao
 
 ### DKC-0585｜在线文档｜引用1次
 - **著录（GB/T 7714）**：LEI. Nº 13.709, DE 14 DE AGOSTO DE 2018 Lei Geral de Proteção de Dados Pessoais (LGPD) [S/OL]. Presidência da República, 2018-08-14. <http://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm> (2026-07-22 访问)[EB/OL]. 2018.
