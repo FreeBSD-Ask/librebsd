@@ -3,13 +3,12 @@ vol: 15
 ch: 295
 chapter_dir: 05-卷册大纲\第15卷-许可证哲学与法律分析\第295章-当代unix史unix归属流转
 entries: 2
-generated: 2026-09-07
+generated: 2026-09-08
 ---
 
 # 第 295 章 参考文献补充（2 条）
 
 > 章目录：`05-卷册大纲\第15卷-许可证哲学与法律分析\第295章-当代unix史unix归属流转/`
-> 来源战线：14-deepseek-cankao
 
 ### DKC-0523｜在线文档｜引用1次
 - **著录（GB/T 7714）**：Theodore. Ts'o. Re: Does NFS support Linux Capabilities[EB/OL]. (2022-09-09). linux-fsdevel 邮件列表. <YxsGIoFlKkpQdSDY@mit.edu>[EB/OL]. 2022.

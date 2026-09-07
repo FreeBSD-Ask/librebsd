@@ -2,14 +2,13 @@
 vol: 6
 ch: 132
 chapter_dir: 05-卷册大纲\第06卷-freebsd的核心技术革新\第132章-freebsd11x的安全响应与spectre时代
-entries: 19
-generated: 2026-09-07
+entries: 20
+generated: 2026-09-08
 ---
 
-# 第 132 章 参考文献补充（19 条）
+# 第 132 章 参考文献补充（20 条）
 
 > 章目录：`05-卷册大纲\第06卷-freebsd的核心技术革新\第132章-freebsd11x的安全响应与spectre时代/`
-> 来源战线：14-deepseek-cankao
 
 ### DKC-2092｜在线文档｜引用1次
 - **著录（GB/T 7714）**：Belousov. K. Add mitigations for two classes of speculative execution vulnerabilities on amd64. freebsd-src [DB/OL]. 2018-03-14T18:26:04Z. d09c73e6c649[EB/OL]. 2018.
@@ -25,6 +24,12 @@ generated: 2026-09-07
 - **著录（GB/T 7714）**：Maste. E. Add kernel retpoline option for amd64. freebsd-src [DB/OL]. 2018-02-28T15:02:00Z. e9093b66d54d[EB/OL]. 2018.
 - **状态**：exists_local｜审阅：pending
 - **大纲原引**：Maste E. Add kernel retpoline option for amd64. freebsd-src [DB/OL]. 2018-02-28T15:02:00Z. e9093b66d54d
+
+### DKC-2095｜学术会议论文｜引用1次
+- **著录（GB/T 7714）**：Vanhoef. M, Piessens F. Key Reinstallation Attacks: Forcing Nonce Reuse in WPA2 [C]//ACM CCS 2017. Dallas, 2017[C]. 2017.
+- **本地文件**：`14-deepseek-cankao/01-文献库/2018_Vanhoef_Key_Reinstallation_Attacks_WPA2.pdf`
+- **状态**：downloaded｜审阅：reviewed（manual_direct）
+- **大纲原引**：Vanhoef M, Piessens F. Key Reinstallation Attacks: Forcing Nonce Reuse in WPA2 [C]//ACM CCS 2017. Dallas, 2017
 
 ### DKC-2097｜在线文档｜引用1次
 - **著录（GB/T 7714）**：Tetlow. G. Update wpa_supplicant/hostapd for 2017-01 vulnerability release. freebsd-src [DB/OL]. 2017-10-17T19:36:42Z. a2063804a2b8[EB/OL]. 2017.

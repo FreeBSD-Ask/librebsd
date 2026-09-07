@@ -3,13 +3,12 @@ vol: 13
 ch: 264
 chapter_dir: 05-卷册大纲\第13卷-bsd衍生操作系统\第264章-playstationosbsd诞生与采用基础
 entries: 5
-generated: 2026-09-07
+generated: 2026-09-08
 ---
 
 # 第 264 章 参考文献补充（5 条）
 
 > 章目录：`05-卷册大纲\第13卷-bsd衍生操作系统\第264章-playstationosbsd诞生与采用基础/`
-> 来源战线：14-deepseek-cankao
 
 ### DKC-0196｜在线文档｜引用1次
 - **著录（GB/T 7714）**：EU. PlayStation.Blog 2010.3.29 公告 ［EB/OL］. <https://blog.eu.playstation.com/2010/03/29/ps3-firmware-3-21-coming-april-1st/>[EB/OL]. 2010.

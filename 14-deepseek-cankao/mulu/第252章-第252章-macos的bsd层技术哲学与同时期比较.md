@@ -3,13 +3,12 @@ vol: 12
 ch: 252
 chapter_dir: 05-卷册大纲\第12卷-macos的bsd遗产\第252章-macos的bsd层技术哲学与同时期比较
 entries: 10
-generated: 2026-09-07
+generated: 2026-09-08
 ---
 
 # 第 252 章 参考文献补充（10 条）
 
 > 章目录：`05-卷册大纲\第12卷-macos的bsd遗产\第252章-macos的bsd层技术哲学与同时期比较/`
-> 来源战线：14-deepseek-cankao
 
 ### DKC-0137｜在线文档｜引用3次
 - **著录（GB/T 7714）**：Stack. Overflow. Developer Survey 2023 [EB/OL]. <https://survey.stackoverflow.co/2023/>[EB/OL]. 2023.

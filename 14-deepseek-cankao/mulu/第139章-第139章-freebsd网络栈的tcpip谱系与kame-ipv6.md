@@ -3,13 +3,12 @@ vol: 7
 ch: 139
 chapter_dir: 05-卷册大纲\第07卷-freebsd的工程体系重构\第139章-freebsd网络栈的tcpip谱系与kame-ipv6
 entries: 4
-generated: 2026-09-07
+generated: 2026-09-08
 ---
 
 # 第 139 章 参考文献补充（4 条）
 
 > 章目录：`05-卷册大纲\第07卷-freebsd的工程体系重构\第139章-freebsd网络栈的tcpip谱系与kame-ipv6/`
-> 来源战线：14-deepseek-cankao
 
 ### DKC-2172｜其他文献｜引用1次
 - **著录（GB/T 7714）**：Starovoitov. A. (2014-2015). *eBPF Kernel Patches*. lkml.org[Z]. 2014.

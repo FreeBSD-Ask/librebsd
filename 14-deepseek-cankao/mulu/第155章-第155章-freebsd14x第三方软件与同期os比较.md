@@ -3,13 +3,12 @@ vol: 7
 ch: 155
 chapter_dir: 05-卷册大纲\第07卷-freebsd的工程体系重构\第155章-freebsd14x第三方软件与同期os比较
 entries: 6
-generated: 2026-09-07
+generated: 2026-09-08
 ---
 
 # 第 155 章 参考文献补充（6 条）
 
 > 章目录：`05-卷册大纲\第07卷-freebsd的工程体系重构\第155章-freebsd14x第三方软件与同期os比较/`
-> 来源战线：14-deepseek-cankao
 
 ### DKC-2284｜在线文档｜引用1次
 - **著录（GB/T 7714）**：MITRE.. CVE-2024-3094: Malicious Code in xz-utils 5.6.0/5.6.1 [EB/OL]. (2024-03-29)[2026-07-22]. <https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-3094>[EB/OL]. 2024.

@@ -3,13 +3,12 @@ vol: 4
 ch: 78
 chapter_dir: 05-卷册大纲\第04卷-大分裂与四大bsd的诞生\第78章-linux崛起与bsd的竞争语境
 entries: 16
-generated: 2026-09-07
+generated: 2026-09-08
 ---
 
 # 第 78 章 参考文献补充（16 条）
 
 > 章目录：`05-卷册大纲\第04卷-大分裂与四大bsd的诞生\第78章-linux崛起与bsd的竞争语境/`
-> 来源战线：14-deepseek-cankao
 
 ### DKC-1573｜在线文档｜引用1次
 - **著录（GB/T 7714）**：Jamie. Lokier. Virtual alias cache coherency results (was: x86, ARM, PARISC, PPC, MIPS and Sparc folks please run this)[EB/OL]. (2003-09-10). lkml 邮件列表. <20030910210416.GA24258@mail.jlokier.co.uk>[EB/OL]. 2003.

@@ -3,13 +3,12 @@ vol: 3
 ch: 57
 chapter_dir: 05-卷册大纲\第03卷-伯克利学术文化外溢影响\第57章-arpanet到nsfnet的前bsd时代
 entries: 3
-generated: 2026-09-07
+generated: 2026-09-08
 ---
 
 # 第 57 章 参考文献补充（3 条）
 
 > 章目录：`05-卷册大纲\第03卷-伯克利学术文化外溢影响\第57章-arpanet到nsfnet的前bsd时代/`
-> 来源战线：14-deepseek-cankao
 
 ### DKC-1469｜在线文档｜引用1次
 - **著录（GB/T 7714）**：Kleinrock. L. (2009/2011). The Day the Infant Internet Uttered its First Words [个人官方网站档案，基于 UCLA IMP Log 原始记录]. <https://www.lk.cs.ucla.edu/internet_first_words.html>[EB/OL]. 2009.

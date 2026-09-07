@@ -3,13 +3,12 @@ vol: 3
 ch: 60
 chapter_dir: 05-卷册大纲\第03卷-伯克利学术文化外溢影响\第60章-ingres项目与伯克利关系数据库
 entries: 3
-generated: 2026-09-07
+generated: 2026-09-08
 ---
 
 # 第 60 章 参考文献补充（3 条）
 
 > 章目录：`05-卷册大纲\第03卷-伯克利学术文化外溢影响\第60章-ingres项目与伯克利关系数据库/`
-> 来源战线：14-deepseek-cankao
 
 ### DKC-1349｜其他文献｜引用2次
 - **著录（GB/T 7714）**：Jordan. Commit my new ports make macros[Z]. 1994.

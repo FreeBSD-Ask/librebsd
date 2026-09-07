@@ -3,13 +3,12 @@ vol: 10
 ch: 210
 chapter_dir: 05-卷册大纲\第10卷-openbsd的历史\第210章-openbsd的安全至上哲学
 entries: 1
-generated: 2026-09-07
+generated: 2026-09-08
 ---
 
 # 第 210 章 参考文献补充（1 条）
 
 > 章目录：`05-卷册大纲\第10卷-openbsd的历史\第210章-openbsd的安全至上哲学/`
-> 来源战线：14-deepseek-cankao
 
 ### DKC-0029｜在线文档｜引用2次
 - **著录（GB/T 7714）**：Raadt. I think our code quality is higher, and that is because of the way we develop and the focus we have，而 Linux 系统根本就无质量可言[EB/OL]. 2026.

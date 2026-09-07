@@ -3,13 +3,12 @@ vol: 4
 ch: 73
 chapter_dir: 05-卷册大纲\第04卷-大分裂与四大bsd的诞生\第73章-openbsd的de-raadt独裁治理模式
 entries: 1
-generated: 2026-09-07
+generated: 2026-09-08
 ---
 
 # 第 73 章 参考文献补充（1 条）
 
 > 章目录：`05-卷册大纲\第04卷-大分裂与四大bsd的诞生\第73章-openbsd的de-raadt独裁治理模式/`
-> 来源战线：14-deepseek-cankao
 
 ### DKC-1504｜其他文献｜引用6次
 - **著录（GB/T 7714）**：佚名. initial import of NetBSD tree[Z]. 1995.

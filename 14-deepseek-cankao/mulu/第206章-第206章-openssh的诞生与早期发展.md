@@ -3,13 +3,12 @@ vol: 10
 ch: 206
 chapter_dir: 05-卷册大纲\第10卷-openbsd的历史\第206章-openssh的诞生与早期发展
 entries: 2
-generated: 2026-09-07
+generated: 2026-09-08
 ---
 
 # 第 206 章 参考文献补充（2 条）
 
 > 章目录：`05-卷册大纲\第10卷-openbsd的历史\第206章-openssh的诞生与早期发展/`
-> 来源战线：14-deepseek-cankao
 
 ### DKC-0055｜在线文档｜引用1次
 - **著录（GB/T 7714）**：SSH. Communications Security 1999 商业许可证声明 [EB/OL]. <https://www.ssh.com/>[EB/OL]. 1999.

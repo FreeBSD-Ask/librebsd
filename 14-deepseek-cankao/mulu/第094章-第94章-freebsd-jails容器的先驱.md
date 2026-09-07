@@ -3,13 +3,12 @@ vol: 5
 ch: 94
 chapter_dir: 05-卷册大纲\第05卷-freebsd的工程化奠基\第94章-freebsd-jails容器的先驱
 entries: 2
-generated: 2026-09-07
+generated: 2026-09-08
 ---
 
 # 第 94 章 参考文献补充（2 条）
 
 > 章目录：`05-卷册大纲\第05卷-freebsd的工程化奠基\第94章-freebsd-jails容器的先驱/`
-> 来源战线：14-deepseek-cankao
 
 ### DKC-1638｜在线文档｜引用3次
 - **著录（GB/T 7714）**：Poul-Henning. Kamp. Add the jail system call. freebsd-src [DB/OL]. 1999-04-28T11:28:49Z. 02daf150a4434305b9181b0ac9150762afb4c8ce[EB/OL]. 1999.

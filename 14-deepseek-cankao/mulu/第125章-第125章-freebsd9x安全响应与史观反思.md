@@ -3,13 +3,12 @@ vol: 6
 ch: 125
 chapter_dir: 05-卷册大纲\第06卷-freebsd的核心技术革新\第125章-freebsd9x安全响应与史观反思
 entries: 6
-generated: 2026-09-07
+generated: 2026-09-08
 ---
 
 # 第 125 章 参考文献补充（6 条）
 
 > 章目录：`05-卷册大纲\第06卷-freebsd的核心技术革新\第125章-freebsd9x安全响应与史观反思/`
-> 来源战线：14-deepseek-cankao
 
 ### DKC-2064｜在线文档｜引用1次
 - **著录（GB/T 7714）**：Zeeb. B A. Fix multiple OpenSSL vulnerabilities. freebsd-src [DB/OL]. 2012-05-03T15:25:11Z. 63a04068615b[EB/OL]. 2012.

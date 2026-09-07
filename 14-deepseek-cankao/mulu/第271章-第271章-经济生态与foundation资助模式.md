@@ -3,13 +3,12 @@ vol: 14
 ch: 271
 chapter_dir: 05-卷册大纲\第14卷-商业生态与企业案例\第271章-经济生态与foundation资助模式
 entries: 5
-generated: 2026-09-07
+generated: 2026-09-08
 ---
 
 # 第 271 章 参考文献补充（5 条）
 
 > 章目录：`05-卷册大纲\第14卷-商业生态与企业案例\第271章-经济生态与foundation资助模式/`
-> 来源战线：14-deepseek-cankao
 
 ### DKC-0222｜其他文献｜引用1次
 - **著录（GB/T 7714）**：佚名. bsd_commits.db commits 表 freebsd-doc Robert Watson commit `0d7e356ddb0c`（2008-03-22T17:48:27Z，“Add ports license auditing framework idea to the ideas list[Z]. 2008.

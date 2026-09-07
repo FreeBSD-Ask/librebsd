@@ -3,13 +3,12 @@ vol: 7
 ch: 141
 chapter_dir: 05-卷册大纲\第07卷-freebsd的工程体系重构\第141章-freebsd网络栈的tcp-sack漏洞与响应
 entries: 2
-generated: 2026-09-07
+generated: 2026-09-08
 ---
 
 # 第 141 章 参考文献补充（2 条）
 
 > 章目录：`05-卷册大纲\第07卷-freebsd的工程体系重构\第141章-freebsd网络栈的tcp-sack漏洞与响应/`
-> 来源战线：14-deepseek-cankao
 
 ### DKC-2198｜安全公告｜引用1次
 - **著录（GB/T 7714）**：CVE. Program. CVE-2019-5599, CVE-2019-11477/8/9. cve.mitre.org[Z]. 2019.

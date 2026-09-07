@@ -3,13 +3,12 @@ vol: 1
 ch: 2
 chapter_dir: 05-卷册大纲\第01卷-unix的起源\第2章-multics的起源与三方合作
 entries: 3
-generated: 2026-09-07
+generated: 2026-09-08
 ---
 
 # 第 2 章 参考文献补充（3 条）
 
 > 章目录：`05-卷册大纲\第01卷-unix的起源\第2章-multics的起源与三方合作/`
-> 来源战线：14-deepseek-cankao
 
 ### DKC-0911｜在线文档｜引用1次
 - **著录（GB/T 7714）**：LWN. Remembering Multics[EB/OL]. 2003.

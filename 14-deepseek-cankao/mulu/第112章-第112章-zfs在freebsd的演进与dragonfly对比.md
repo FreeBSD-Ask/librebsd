@@ -3,13 +3,12 @@ vol: 6
 ch: 112
 chapter_dir: 05-卷册大纲\第06卷-freebsd的核心技术革新\第112章-zfs在freebsd的演进与dragonfly对比
 entries: 4
-generated: 2026-09-07
+generated: 2026-09-08
 ---
 
 # 第 112 章 参考文献补充（4 条）
 
 > 章目录：`05-卷册大纲\第06卷-freebsd的核心技术革新\第112章-zfs在freebsd的演进与dragonfly对比/`
-> 来源战线：14-deepseek-cankao
 
 ### DKC-1919｜在线文档｜引用2次
 - **著录（GB/T 7714）**：Torvalds. L. (2020-01-06). Real World Tech Forum Post [EB/OL] (archived via Wayback Machine). 获取路径：<https://www.realworldtech.com/forum/?threadid=189311>[EB/OL]. 2020.

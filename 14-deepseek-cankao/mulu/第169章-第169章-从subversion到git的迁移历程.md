@@ -3,13 +3,12 @@ vol: 8
 ch: 169
 chapter_dir: 05-卷册大纲\第08卷-freebsd的范式转换\第169章-从subversion到git的迁移历程
 entries: 2
-generated: 2026-09-07
+generated: 2026-09-08
 ---
 
 # 第 169 章 参考文献补充（2 条）
 
 > 章目录：`05-卷册大纲\第08卷-freebsd的范式转换\第169章-从subversion到git的迁移历程/`
-> 来源战线：14-deepseek-cankao
 
 ### DKC-2309｜技术报告｜引用2次
 - **著录（GB/T 7714）**：FreeBSD. Foundation. (2021-2024). *Annual Reports* (contributor growth statistics)[R]. 2021.

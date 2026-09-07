@@ -2,14 +2,13 @@
 vol: 5
 ch: 106
 chapter_dir: 05-卷册大纲\第05卷-freebsd的工程化奠基\第106章-freebsd8x的虚拟化与网络栈演进
-entries: 14
-generated: 2026-09-07
+entries: 15
+generated: 2026-09-08
 ---
 
-# 第 106 章 参考文献补充（14 条）
+# 第 106 章 参考文献补充（15 条）
 
 > 章目录：`05-卷册大纲\第05卷-freebsd的工程化奠基\第106章-freebsd8x的虚拟化与网络栈演进/`
-> 来源战线：14-deepseek-cankao
 
 ### DKC-1649｜在线文档｜引用2次
 - **著录（GB/T 7714）**：Scott. Long. Separate the parallel scsi knowledge out of the core of the XPT, and modularize it so that new transports can be created. freebsd-src [DB/OL]. 2009-07-10T08:18:08Z. commit: 52c9ce25d8339ad0228be8aaf0e44b45314b38dc[EB/OL]. 2009.
@@ -80,4 +79,10 @@ generated: 2026-09-07
 - **著录（GB/T 7714）**：John. Baldwin. Disable the KDTRACE options in GENERIC for now. freebsd-src [DB/OL]. 2008-08-29T18:54:35Z. commit: 2e39a10f0d47984da7ac7fae652f836752732af9[EB/OL]. 2008.
 - **状态**：in_repo_db｜审阅：pending
 - **大纲原引**：John Baldwin. Disable the KDTRACE options in GENERIC for now. freebsd-src [DB/OL]. 2008-08-29T18:54:35Z. commit: 2e39a10f0d47984da7ac7fae652f836752732af9
+
+### DKC-1783｜学术会议论文｜引用1次
+- **著录（GB/T 7714）**：Barham. et al. (2003) Xen SOSP[C]. 2003.
+- **本地文件**：`14-deepseek-cankao/01-文献库/2003_Barham_Xen_SOSP.pdf`
+- **状态**：downloaded｜审阅：reviewed（manual_direct）
+- **大纲原引**：Barham et al. (2003) Xen SOSP
 

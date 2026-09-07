@@ -3,13 +3,12 @@ vol: 8
 ch: 163
 chapter_dir: 05-卷册大纲\第08卷-freebsd的范式转换\第163章-freebsd15x的rust集成争论
 entries: 2
-generated: 2026-09-07
+generated: 2026-09-08
 ---
 
 # 第 163 章 参考文献补充（2 条）
 
 > 章目录：`05-卷册大纲\第08卷-freebsd的范式转换\第163章-freebsd15x的rust集成争论/`
-> 来源战线：14-deepseek-cankao
 
 ### DKC-2304｜在线文档｜引用2次
 - **著录（GB/T 7714）**：LWN.net.. FreeBSD considers Rust in the base system [EB/OL]. (2024-08-19)[2026-07-19]. <https://lwn.net/Articles/985210/>[EB/OL]. 2024.

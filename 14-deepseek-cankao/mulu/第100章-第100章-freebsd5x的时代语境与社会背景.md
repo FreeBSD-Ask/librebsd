@@ -3,13 +3,12 @@ vol: 5
 ch: 100
 chapter_dir: 05-卷册大纲\第05卷-freebsd的工程化奠基\第100章-freebsd5x的时代语境与社会背景
 entries: 13
-generated: 2026-09-07
+generated: 2026-09-08
 ---
 
 # 第 100 章 参考文献补充（13 条）
 
 > 章目录：`05-卷册大纲\第05卷-freebsd的工程化奠基\第100章-freebsd5x的时代语境与社会背景/`
-> 来源战线：14-deepseek-cankao
 
 ### DKC-1628｜在线文档｜引用4次
 - **著录（GB/T 7714）**：Jeff. Roberson. Add the ule scheduler. freebsd-src [DB/OL]. 2003-01-26T05:23:15Z. commit: 35e6168fcdc76ba3ff2927279f9a48aa5ac3157d[EB/OL]. 2003.

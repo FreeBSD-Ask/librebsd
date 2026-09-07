@@ -3,13 +3,12 @@ vol: 6
 ch: 121
 chapter_dir: 05-卷册大纲\第06卷-freebsd的核心技术革新\第121章-freebsd存储栈的ffs与ufs演进
 entries: 3
-generated: 2026-09-07
+generated: 2026-09-08
 ---
 
 # 第 121 章 参考文献补充（3 条）
 
 > 章目录：`05-卷册大纲\第06卷-freebsd的核心技术革新\第121章-freebsd存储栈的ffs与ufs演进/`
-> 来源战线：14-deepseek-cankao
 
 ### DKC-2044｜在线文档｜引用1次
 - **著录（GB/T 7714）**：Dawidek. P J. Makefile for building ggate utilities: ggatel(8), ggatec(8), ggated(8). freebsd-src [DB/OL]. 2004-04-30T16:12:20Z. af4f788a9465f520159688465b3595591c693267[EB/OL]. 2004.

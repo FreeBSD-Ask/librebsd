@@ -3,13 +3,12 @@ vol: 6
 ch: 126
 chapter_dir: 05-卷册大纲\第06卷-freebsd的核心技术革新\第126章-freebsd9x-pkgng与clang争议辩证链
 entries: 1
-generated: 2026-09-07
+generated: 2026-09-08
 ---
 
 # 第 126 章 参考文献补充（1 条）
 
 > 章目录：`05-卷册大纲\第06卷-freebsd的核心技术革新\第126章-freebsd9x-pkgng与clang争议辩证链/`
-> 来源战线：14-deepseek-cankao
 
 ### DKC-1947｜在线文档｜引用2次
 - **著录（GB/T 7714）**：Clang. Project. Clang vs GCC Comparison [EB/OL]. [2026-07-23]. <https://clang.llvm.org/comparison.html>[EB/OL]. 2026.
