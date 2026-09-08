@@ -34,7 +34,7 @@ volume: 第01卷-unix的起源
 
 ## 文献
 
-- Salus P H. A Quarter Century of UNIX [M]. Reading: Addison-Wesley, 1994；UNIX V6 Source Code (TUHS Archive research/Dennis_v6)；McKusick M K, Bostic K, Karels M J, Quarterman J S. The Design and Implementation of the 4.4BSD Operating System [M]. Reading: Addison-Wesley, 1996 ［B］> （2026-08-05 清理：原文件末尾的 [^oi7-fn]~[^oi10-fn] 四个孤立脚注系 12.11 小节内容误留于此，正文无引用标记；已移回重建后的 12.11 小节，见 `12.11-贝尔实验室的学院派气质与冷战自由主义…md` 12.11.1-12.11.4 辨析字段。）
+- Salus P H. A Quarter Century of UNIX [M]. Reading: Addison-Wesley, 1994；UNIX V6 Source Code (TUHS Archive research/Dennis_v6)；McKusick M K, Bostic K, Karels M J, Quarterman J S. The Design and Implementation of the 4.4BSD Operating System [M]. Reading: Addison-Wesley, 1996 ［B］
 
 <!-- PODCAST_REVIEW v20260829 -->
 <!-- 语义复核范围：BSD Now EP509、BSD Now EP362、BSD Now EP209（共 3 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
