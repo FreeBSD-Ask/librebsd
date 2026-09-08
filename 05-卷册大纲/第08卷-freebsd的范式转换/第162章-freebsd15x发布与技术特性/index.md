@@ -25,10 +25,10 @@ volume: 第08卷-freebsd的范式转换
 ## 史观
 
 - 总纲第 1 条——项目统摄史观：15.0 是 FreeBSD 历史上的关键一刻——它终结了自 1993 年 1.0 以来持续 32 年的 32 位 x86（i386）平台 RELEASE 构建传统；从 386BSD 补丁包中诞生的 FreeBSD，在 32 位 x86 上运行了整整一代人的时间后，正式将 i386 送入历史；这一刻不是 “抛弃传统”，而是承认硬件现实——AMD Opteron 于
-- 总纲第 17 条——软件工程：pkgbase 的引入是 FreeBSD 基础系统软件包管理范式的根本转变——自 1993 年以来，FreeBSD 基础系统一直通过 "distribution sets"（tar 分发软件包）与 **freebsd-update(8)** 管理，pkgbase 将基础系统与第三方软件包统一到同一个软件包管理框架下；这一转变的工程意义不亚于 2012 年 **pkg(
+- 总纲第 17 条——软件工程：pkgbase 的引入是 FreeBSD 基础系统软件包管理范式的根本转变——自 1993 年以来，FreeBSD 基础系统一直通过 "distribution sets"（tar 分发软件包）与 **freebsd-update(8)** 管理，pkgbase 将基础系统与第三方软件包统一到同一个软件包管理框架下；〔待核：原文截断，后文待回源〕
 - 总纲第 6 条——技术路线分化：LinuxKPI 战略不是 “屈服于 Linux” 或 “变成 Linux”，而是在承认 Linux 已成为硬件驱动事实标准生态的前提下，保持 FreeBSD 内核独立性与 BSD 哲学的工程智慧；这与 **netlink(4)** 在 14.0 引入（兼容 Linux 网络配置协议）属于同一思路——不重新发明轮子，在非核心差异化领域兼容生态事实标准，将有限的开发者
 - 总纲第 25 条——终结与延续：15.0 对 14.x 的延续体现在：稳定的 API/ABI 兼容性承诺（5 年支持周期至 2029.12）、lib32 对 32 位应用程序的运行时兼容、Jail/bhyve/ZFS/pf 等核心子系统的持续演进、BSD 许可证与 FreeBSD 开发模式的坚持；终结体现在：i386/armv6/powerpc RELEASE 镜像的终止、传统 distribut
-- 总纲第 10 条——边缘者贡献：Peter G. Neumann 从未是 FreeBSD 的核心 committer，但他在 capability-based security 领域数十年的理论工作（从 1960 年代 Multics 到 2000 年代 Capsicum）深刻影响了 FreeBSD 的安全架构设计（Capsicum 能力模式由 罗伯特·N. M. 沃森（Robert Watson
+- 总纲第 10 条——边缘者贡献：Peter G. Neumann 从未是 FreeBSD 的核心 committer，但他在 capability-based security 领域数十年的理论工作（从 1960 年代 Multics 到 2000 年代 Capsicum）〔待核：原文截断，后文待回源〕
 
 ## 辨析
 
@@ -48,6 +48,10 @@ volume: 第08卷-freebsd的范式转换
 - FreeBSD Project. FreeBSD 15.1-RELEASE Release Notes [EB/OL]. (2026-06-16)[2026-07-19]. <https://www.freebsd.org/releases/15.1R/relnotes/>; Unicode Consortium. Unicode 17.0 Release [EB/OL]. (2025-09)[2026-07-19]. <https://home.unicode.org/announcing-unicode-17/>.[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源
 - FreeBSD Project. Release Engineering Information [EB/OL]. [2026-07-19]. <https://www.freebsd.org/releng/>; Somers A. The Case for Rust (in the base system)[EB/OL]. (2024-01-20)[2026-07-19]. <https://lists.freebsd.org/archives/freebsd-hackers/2024-January/002823.html>. ［A］
 
+
+<!-- dangan-20260908 消解回写 -->
+- LWN.net.. NetBSD Bans AI-Generated Code?[EB/OL]. (2024-05)[2026-07-19]. <https://lwn.net/>[EB/OL]. 2024. ［待核·needs_fix］［DKC-2348→fulltext:6168］
+<!-- /dangan-20260908 -->
 ## 161.2.4 15.x 发布周期史料辨析
   
 - FreeBSD Project. FreeBSD Release Schedule Archive [EB/OL]. [2026-07-19]. <https://www.freebsd.org/releases/>; Percival C. FreeBSD Release Engineering Posts [EB/OL]. [2026-07-19]. <https://www.daemonology.net/blog/>. ［C］

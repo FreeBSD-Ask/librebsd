@@ -12,7 +12,7 @@ volume: 第11卷-dragonflybsd的历史
 
 - bsd_commits.db dragonfly-src 仓库 commits 表提供 v5.4-v5.6 时期 HAMMER 2 相关 commit 的具体记录。2018 年 HAMMER2 关键词 commit **75 条**、2019 年 **156 条**，其中 v5.6.0（**2019-06-16**）发布前的 HAMMER 2 commit 集中于性能优化与默认切换准备。HAMME
 
-- - bsd_commits.db dragonfly-src 仓库 tags 表提供 v5.8.0 与 v6.0.0 的 tagger_date、tagger_name、target_commit_date 字段。v5.8.0 与 v6.0.0 对照如下：
+- bsd_commits.db dragonfly-src 仓库 tags 表提供 v5.8.0 与 v6.0.0 的 tagger_date、tagger_name、target_commit_date 字段。v5.8.0 与 v6.0.0 对照如下：
 
 | tag | tagger_date | target_commit_date | 时间差 | 发布模式 |
 | --- | --- | --- | --- | --- |
@@ -88,3 +88,7 @@ volume: 第11卷-dragonflybsd的历史
 - [BSD Now EP324] Pennington J. BSD Now: 324: Emergency Space Mode[EB/OL]. (2019-11-14)[2026-08-15]. <https://www.bsdnow.tv/324>.
 
 <!-- /PODCAST_REVIEW -->
+
+<!-- dangan-20260908 消解回写 -->
+- NetBSD.. tainted code policy 公告 [EB/OL]. 2023. netbsd.org[EB/OL]. 2023. ［DKC-0119→fulltext:5471］
+<!-- /dangan-20260908 -->

@@ -47,6 +47,11 @@ volume: 第07卷-freebsd的工程体系重构
 - FreeBSD Release Engineering Team. (2021-04-13). *FreeBSD 13.0-RELEASE Announcement*. freebsd.org; Supreme Court of the United States. (2021-04-05). *Google LLC v. Oracle America, Inc., 593 U.S. 1*; FreeBSD Foundation. (2021). *2021 Annual Report*. freebsdfoundation.org; FreeBSD Project. release/13.0
 - FreeBSD Project. **ktls(4)** Manual Page; Baldwin, J. (2019). *Kernel TLS Offload*. BSDCan 2019; Gallatin, D., & Baldwin, J. (2017-2021). KTLS Commits to FreeBSD src. ［A］
 
+
+<!-- dangan-20260908 消解回写 -->
+- Salter. J. In-kernel WireGuard is on its way to FreeBSD and the pfSense router [EB/OL]. (2021-03-16)[2026-07-22]. <https://arstechnica.com/gadgets/2021/03/in-kernel-wireguard-is-on-its-way-to-freebsd-and-the-pfsense-router/>[EB/OL]. 2021. ［DKC-2234→fulltext:6118］
+- Solidot.. WireGuard 将进入 FreeBSD 内核 [EB/OL]. (2021-03-16)[2026-07-22]. <https://www.solidot.org/story?sid=67219>[EB/OL]. 2021. ［DKC-2235→fulltext:6119］
+<!-- /dangan-20260908 -->
 ## 147.2.2 KTLS 的工程效应与生态
 
 - 要点：KTLS 的引入对 FreeBSD 网络栈有深远工程影响：(1) 推动内核加密框架（OPCF，Open Crypto Framework）重构，支持异步加密操作；(2) 促进 **sendfil
@@ -55,8 +60,8 @@ volume: 第07卷-freebsd的工程体系重构
 ## 147.3.2 Git 迁移对开发模式的效应
 
 - 要点：Git 迁移对 FreeBSD 开发模式产生多方面深远影响：(1) 代码审查：引入 Gerrit 代码审查系统
-- Donenfeld, J. A. (2021-03-15). *WireGuard for FreeBSD*. wireguard mailing list (lists.zx2c4.com/pipermail/wireguard/2021-March/006494.html); Ars Technica. (2021-03). *Buffeted by bug reports, FreeBSD reverts WireGuard support before 13.0 release*. arstechnica.com; FreeBSD Release Engineering Team. (
-- Donenfeld J A. Re: [ANNOUNCE] WireGuard for FreeBSD in development for 13.y – and a note of how we got here (公开回复 Scott Long 私人邮件)[EB/OL]. (2021-03-16T01:18:19Z)[2026-07-23]. <https://lists.zx2c4.com/pipermail/wireguard/2021-March/006499.html>; Evans K. Re: [ANNOUNCE] WireGuard for FreeBSD in develo
+- Donenfeld, J. A. (2021-03-15). *WireGuard for FreeBSD*. wireguard mailing list (lists.zx2c4.com/pipermail/wireguard/2021-March/006494.html); Ars Technica. (2021-03). *Buffeted by bug reports, FreeBSD reverts WireGuard support before 13.0 release*. arstechnica.com; FreeBSD Release Engineering Team. (〔待核：原文截断〕
+- Donenfeld J A. Re: [ANNOUNCE] WireGuard for FreeBSD in development for 13.y – and a note of how we got here (公开回复 Scott Long 私人邮件)[EB/OL]. (2021-03-16T01:18:19Z)[2026-07-23]. <https://lists.zx2c4.com/pipermail/wireguard/2021-March/006499.html>; Evans K. Re: [ANNOUNCE] WireGuard for FreeBSD in develo〔待核：原文截断〕
 
 ## 自反性声明
 

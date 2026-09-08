@@ -1,3 +1,5 @@
+# 第 154 章 freebsd14x技术淘汰与base精简
+
 ---
 chapter: 第 154 章
 id: CH154
@@ -37,6 +39,10 @@ volume: 第07卷-freebsd的工程体系重构
 - FreeBSD Project. FreeBSD 14.0-RELEASE Release Notes — Removed Features [EB/OL]. (2023-11-20)[2026-07-19]. <https://www.freebsd.org/releases/14.0R/relnotes/>; Ylönen T. SSH — Secure Login Connections over the Internet [C]. USENIX Security Symposium, 1996; FreeBSD Project. telnet(1) Manual Page [EB/OL
 - bsd_commits.db（freebsd-src contributors 表，窗口 2021–2023，检索 2026-07-21）［A］；FreeBSD 项目贡献者指南（<https://docs.freebsd.org/en/articles/contributing/>）［B］
 
+
+<!-- dangan-20260908 消解回写 -->
+- NVIDIA.. Open GPU Kernel Modules [EB/OL]. [2026-07-19]. <https://github.com/NVIDIA/open-gpu-kernel-modules>[EB/OL]. 2026. ［DKC-2274→fulltext:6139］
+<!-- /dangan-20260908 -->
 ## 153.14.2 地域与学术的志愿者多样性
 
 - 要点：除企业核心外，FreeBSD 贡献者横跨多国——德国、法国、俄罗斯等地域 ccTLD 与多所大学（如 Stony Brook）的学术贡献显著；区域志愿者填补本地化与硬件移植空白，学术研究者将 BSD 作为操作系统研究的活体平台。

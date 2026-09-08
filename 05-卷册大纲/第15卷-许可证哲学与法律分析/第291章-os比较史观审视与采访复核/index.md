@@ -48,6 +48,14 @@ volume: 第15卷-许可证哲学与法律分析
 
 - Linux 基金会项目列表；许可证对比研究[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]
 
+
+<!-- dangan-20260908 消解回写 -->
+- Solaris. CDDL 与 BSD 兼容使 FreeBSD 成为 Solaris 代码的主要开源继承者，CDDL 与 GPLv2 不兼容阻碍其进入 Linux 主线[Z]. 无年份. ［待核·needs_fix］［DKC-0472］
+<!-- /dangan-20260908 -->
+
+<!-- dangan-20260908 消解回写 -->
+- FreeBSD. Experimental support for Sun's ZFS filesystem[Z]. 2008. ［DKC-0309→fulltext:5522］
+<!-- /dangan-20260908 -->
 ## 291.11.2 GNU 项目对其他开源项目的效应对比
 
 - 要点：GNU 项目通过 GPL 工具链（GCC、glibc、bash、coreutils、Emacs 等）影响其他开源项目；GNU 工具链长期是 Linux 发行版默认工具链，也是 BSD 项目早期默认工具链（后被 Clang/LLVM 替代）；〔待核：原文截断，后文待回源〕

@@ -1,3 +1,5 @@
+# 第 146 章 clang-llvm迁移背景与法律基础
+
 ---
 chapter: 第 146 章
 id: CH146
@@ -40,6 +42,10 @@ volume: 第07卷-freebsd的工程体系重构
 - Free Software Foundation. GNU General Public License Version 3 [Z]. 2007-06-29；Free Software Foundation. Why Upgrade to GPLv3?[EB/OL]. gnu.org/licenses/why-upgrade-gpl.html；Rosen L. Open Source Licensing: Software Freedom and Intellectual Property Law [M]. Upper Saddle River: Prentice Hall, 2005. IS
 - GCC Steering Committee. GCC 4.3 and GPLv3 [EB/OL]. gcc.gnu.org, 2007；FreeBSD-arch mailing list archives. GPLv3 discussion threads [Z]. 2006-2008；Stallman R M. Why Upgrade to GPLv3 [EB/OL]. gnu.org, 2007. ［A］
 
+
+<!-- dangan-20260908 消解回写 -->
+- Google.. Clang is now used to build Chrome for Windows [EB/OL]. LLVM Project Blog, 2018-03-05[EB/OL]. 2018. ［DKC-2149→fulltext:6085］
+<!-- /dangan-20260908 -->
 ## 145.2.3 与 FSF 立场的比较辨析
 
 - 要点：FSF 与 BSD 社区在 GPLv3 上的立场分歧反映了自由软件运动内部 “自由（freedom）” 概念的根本差异。

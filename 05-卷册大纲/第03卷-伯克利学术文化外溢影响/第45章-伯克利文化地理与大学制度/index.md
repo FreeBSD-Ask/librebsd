@@ -10,7 +10,12 @@ volume: 第03卷-伯克利学术文化外溢影响
 
 
 
-- 伯克利作为美国西部激进主义地理符号，与旧金山 Haight-Ashbury 嬉皮士运动、奥克兰 Black Panther Party（**1966 年** 成立）、反战运动中心形成地理与文化的临近性，此地理符号使伯克利吸引反权威倾向的技术人员，为 CSRG 文化提供地理基础 | 地理符号 | 位置 | 文化临近性 |  | --- | --- | --- |  | 旧金山 Haight-Ash |
+- 伯克利作为美国西部激进主义地理符号，与旧金山 Haight-Ashbury 嬉皮士运动、奥克兰 Black Panther Party（**1966 年** 成立）、反战运动中心形成地理与文化的临近性，此地理符号使伯克利吸引反权威倾向的技术人员，为 CSRG 文化提供地理基础
+
+| 地理符号 | 位置 | 文化临近性 |
+| --- | --- | --- |
+| 旧金山 Haight-Ash |  |  |
+
 
 - 伯克利校园计算机中心（Computer Center）位于 Evans Hall 地下室与 Cory Hall 一带，CSRG 的 VAX-11/780 主机位于 Evans Hall，校园网络通过 BSD TCP/IP 实现互联，伯克利校园网是早期 BSD TCP/IP 的实际运行场域，4.2BSD 的 TCP/IP 实现首先在伯克利校园网内测试，再向 DARPA 网络推广  | 网络地理节点
 - **1978-1992 年** 间美国知识产权法律环境经历重大演变：**1980 年** Bayh-Dole 法案（Patent and Trademark Law Amendments Act）允许大学保留联邦资助研究的专利权，**1980 年** 软件版权法（Computer Software Copyright Act of 1980）明确软件受版权保护，**1981 年** Diamond
@@ -53,3 +58,7 @@ volume: 第03卷-伯克利学术文化外溢影响
 - FSM 后校方学术自由政策；TWLF 后课程改革档案；CSRG 内部讨论档案[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]
 - UC Berkeley Bancroft Library. CU-551 CSRG Records, 1974-2005；CSRG 技术备忘录清单；BSD 源码注释档案；McKusick, M. K. (1999) Twenty Years of Berkeley Unix；Salus, P. (1994) A Quarter Century of UNIX. Reading, MA: Addison-Wesley ［B］> **释读自反性声明**：本节对项目统摄史观的释读（含总纲 4、8、9、10、19、22、25 的引用）本身也是一种形式主义化的重构，不声称是对项目统摄史观的客观正确解读。本节所述“学生自主研究—源码自学—同伴学习—反向贡献—传承链条”五段式框架是史家的事后叙事，非 CSRG 时期学生自觉遵循的方法论。本释读承认自身是项目史观总纲第 27 章 27.2 节所谓“反对得好就不是形式主义”的一种尝试，但不声称已经“反对得好”——本释读可能仍然是一种形式主义，欢迎被更自反的释读所超越。已回溯到原文第 4 章 4.1 节、第 9 章 9.1 节、第 14 章 14.2/14.5 节、第 22 章 22.1/22.2 节、第 25 章总纲第 8/19/25 条、第 27 章 27.2 节核验。
 - UC Berkeley 校园地图；Google Maps 距离测量；McKusick 1999 论文；伯克利校园地理变迁档案 ［B］
+
+<!-- dangan-20260908 消解回写 -->
+- Leslie. The Cold War and American Science[Z]. 1993. ［DKC-1304→fulltext:5860］
+<!-- /dangan-20260908 -->

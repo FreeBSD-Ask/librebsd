@@ -26,7 +26,8 @@ volume: 第16卷-开源运动与合规治理
 - 总纲第 12 条——合规认证对小开源项目的排除效应。
 - 文献：审计报告； Foundation 声明 ［A］
 - 总纲第 14 条——哲学思潮与媒体话语影响公众认知
-  - 辨析：媒体报道中“FreeBSD 通过 FIPS 140”的具体错误案例需逐一取证；〔待核：原文截断，后文待回源〕
+  -  140”的具体错误案例需逐一取证；Foundation 是否曾发布纠正声明需查 archive
+  **文献**：OSNews 2004-2024 报道；
   - 文献：OSNews 2004-2024 报道；Phoronix FreeBSD 相关报道 ［C］
 
 ## 305.15.2 教科书与科普中的合规叙事
@@ -46,7 +47,8 @@ volume: 第16卷-开源运动与合规治理
 
 ## 305.13.2 POSIX 兼容与 BSD 传统路线之争
 
-- 要点：BSD 历史上的“POSIX 兼容 vs BSD 传统”路线之争在 4.4BS
+-  140”的具体错误案例需逐一取证；Foundation 是否曾发布纠正声明需查 archive
+  **文献**：OSNews 2004-2024 报道；
 - 媒体报道中“FreeBSD 通过 FIPS 140”的具体错误案例需逐一取证；〔待核：原文截断，后文待回源〕
   - 文献：OSNews 2004-2024 报道；Phoronix FreeBSD 相关报道 ［C］
 
@@ -63,6 +65,10 @@ volume: 第16卷-开源运动与合规治理
 
 - freebsd-advocacy 邮件列表存档；FreeBSD Foundation Board Minutes ［A］
 
+
+<!-- dangan-20260908 消解回写 -->
+- NIST. SP 800-218 v1.1 Secure Software Development Framework [S/OL]. NIST, 2022-02. <https://csrc.nist.gov/pubs/sp/800/218/final> (2026-07-22 访问)[EB/OL]. 2022. ［DKC-0599→fulltext:5570］
+<!-- /dangan-20260908 -->
 ## 305.13.2 POSIX 兼容与 BSD 传统路线之争
 
 - 要点：BSD 历史上的“POSIX 兼容 vs BSD 传统”路线之争在 4.4BSD-Lite 后逐渐消解，FreeBSD 全面采用 POSIX 接口但保留 BSD 风格函数（如 strlcpy）

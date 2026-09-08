@@ -42,9 +42,13 @@ volume: 第07卷-freebsd的工程体系重构
 
 - FreeBSD 13.0-RELEASE Release Notes [Z]. 2021-04-13；FreeBSD 10.0/12.0 Release Notes [Z]. 2014/2018；Warner Losh GCC retirement announcement [EB/OL]. freebsd-arch mailing list, 2020-2021 ［A］
 
+
+<!-- dangan-20260908 消解回写 -->
+- HardenedBSD. Project. HardenedBSD Features Documentation [EB/OL]. [2026-07-22]. <https://hardenedbsd.org/>[EB/OL]. 2026. ［DKC-2251→fulltext:6123］
+<!-- /dangan-20260908 -->
 ## 149.12.2 LLD 成为所有架构的默认链接器
 
-- 要点：FreeBSD 13.0-RELEASE 将 LLD（LLVM Linker）〔待核：原文截断，后文待回源〕
+- 将 LLD（LLVM Linker）设为所有架构的默认系统链接器，完成 LLD 从“部分架构默认”到“全架构默认”的迁移。
 - Kernel Newbies. *Linux Kernel Release Notes*. kernelnewbies.org; LWN.net. (2021-2024). Kernel Development Coverage.[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]
 
 ## 149.13.2 Windows 11/Server 2022、macOS 11-14 与 BSD 谱系

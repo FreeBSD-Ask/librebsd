@@ -8,12 +8,13 @@ volume: 第06卷-freebsd的核心技术革新
 
 ## 要点
 
-- Capsicum 在 FreeBSD 中的成熟过程可分为三个阶段，覆盖从 FreeBSD 9.0 内核框架引入到 FreeBSD 14.x 稳定基础组件的完整路径，各阶段关键特征与首批 Capsicum 化程序见下表。| 阶段 | FreeBSD 版本 | 时间 | 关键特征 | 首批 Capsicum 化程序
+- Capsicum 在 FreeBSD 中的成熟过程可分为三个阶段，覆盖从 FreeBSD 9.0 内核框架引入到 FreeBSD 14.x 稳定基础组件的完整路径，各阶段关键特征与首批 Capsicum 化程序见下表。
 
+| 阶段 | FreeBSD 版本 | 时间 | 关键特征 | 首批 Capsicum 化程序 |
 | --- | --- | --- | --- | --- |
-| --- | --- | --- | --- | --- |
-| 1 | 9.0 |  |  |  |
-
+| 1 | 9.0 | 2012.1 | 内核框架加入 GENERIC，experimental 标记，无任何应用默认使用 | 无 |
+| 2 | 10.x | 2014-2016 | libcapsicum 和 casperd 开发完善，基础系统中逐步加入首批 Capsicum 化工具，从 experimental 逐步转为 supported | **tcpdump(1)**、**dhclient(8)**、**kdump(1)**、**killall(1)**、**hostctl(8)** |
+| 3 | 11.x-14.x | 2016-2024 | casperd 服务集扩展，更多基础系统程序 capsicum 化，FreeBSD 14（2023 年 11 月）中 Capsicum 成为基础系统安全加固的默认组件 | **bhyve(8)** 虚拟化组件、**wait(1)** 等 |
 - Capsicum 集成入 FreeBSD 的一手工程史料包括：FreeBSD SVN/Git 提交历史（可从 cgit.freebsd.org 查询，r219129 为关键 CAPABILITIES GENERIC commit）；FreeBSD 各版本 Release Notes 的 Capsicum 章节；Pawel Jakub Dawidek 在 freebsd-current@ 和 fre
 - casperd 的一手开发史料主要在 FreeBSD 源码仓库和 Pawel Dawidek 的会议演讲中：Dawidek 在 2013-2015 年 BSDCan 和 EuroBSDCon 会议上多次报告 Capsicum/casperd 的进展；FreeBSD 基金会 2013 年资助公告标志着 casperd 从原型转向产品级开发；casperd 的命名来源：Casper（卡斯珀）是美国动画
 - Capsicum 对 Linux 生态的直接影响有限，但其思想通过 CloudABI 和 WASI 产生了间接影响：CloudABI 由荷兰开发者 Ed Schouten（Nuxi 公司）于 2015 年前后开发，是基于 Capsicum 能力模型的跨平台 POSIX 派生 ABI——CloudABI 提供“POSIX 减去全局命名空间”的精简接口，程序编译为 CloudABI 二进制后可在 Fr
@@ -118,3 +119,7 @@ volume: 第06卷-freebsd的核心技术革新
 - [BSD Now EP50] Pennington J. BSD Now: 50: VPN, My Dear Watson[EB/OL]. (2014-08-13)[2026-08-15]. <https://www.bsdnow.tv/50>.
 
 <!-- /PODCAST_REVIEW -->
+
+<!-- dangan-20260908 消解回写 -->
+- Watson. R. N. M. et al. (2024). CHERI: Hardware-Enabled C/C++ Memory Protection at Scale. IEEE Security & Privacy, 22(4)[C]. 2024. ［DKC-1908→fulltext:6004］
+<!-- /dangan-20260908 -->

@@ -9,12 +9,14 @@ volume: 第02卷-伯克利的岁月
 ## 要点
 
 - 1BSD 时期（1978）伯克利校内计算机互联依赖早期点对点拨号与 ARPANET，缺乏本地批量邮件传输机制；Eric Schmidt 1978 年在伯克利硕士论文中开发 Berknet（Berkeley Network），通过串行电话线连接伯克利校内多台 PDP-11，实现邮件转发、文件传输与远程执行功能，是 BSD 谱系最早的本地网络协议实现之一；Berknet 随 2BSD（1978 年中）
-- **1979 年** 同期编辑器路径——vi（学术磁带分发，模态固定）、emacs（学术/MIT，Lisp 可扩展）、TECO EDT（MIT/商业，可编程）、VMS EDT（商业，keypad 全屏）展现编辑器设计的多元分化| 编辑器 | 发布年份 | 作者/机构 | 范式 | 扩展性 | 分发渠道
+- **1979 年** 同期编辑器路径——vi（学术磁带分发，模态固定）、emacs（学术/MIT，Lisp 可扩展）、TECO EDT（MIT/商业，可编程）、VMS EDT（商业，keypad 全屏）展现编辑器设计的多元分化
 
+| 编辑器 | 发布年份 | 作者/机构 | 范式 | 扩展性 | 分发渠道 |
 | --- | --- | --- | --- | --- | --- |
-| --- | --- | --- | --- | --- | --- |
-| vi | 197 |  |  |  |  |
-
+| vi | 1978（2BSD） | Bill Joy（伯克利） | 模态固定 | 不可扩展 | 学术磁带邮寄 |
+| emacs | 1976 | Stallman（MIT） | 无模态 | Emacs Lisp 无限可编程 | MIT AI Lab |
+| TECO EDT | 1962/1978 | Dan Murphy（MIT）/ DEC | 可编程 | TECO 宏 | MIT/商业 |
+| VMS EDT | 1977 | DEC | keypad 全屏 | 不可扩展 | DEC 商业销售 |
 - 对 vi 与 csh 的批评部分存在形式主义倾向——以 “优雅” 或 “一致性” 等先验标准评判实践驱动的工具，忽视了工具的实践合理性
 - vi 与 csh 的边缘贡献者史料散见于邮件列表、文档署名与会议记录，缺乏系统化档案，这是 BSD 史学研究的重要空白
 - vi 与 csh 自 1978 年 2BSD 发布以来已延续 **47 年**（截至 2026 年），其影响力体现于三个层面——(1) 直接谱系延续：vi 谱系经 vim（1991）、elvis（1990）、nvi（1994）、Neovim（2015）持续演化，csh 谱系经 tcsh（1981）延续；(2) 功能扩散：vi 模态被 emacs（viper-mode/evil-mode）、VS C
@@ -48,3 +50,8 @@ volume: 第02卷-伯克利的岁月
 - USENIX Association 会议论文集（1978-1985）；伯克利 CSRG 邮件列表存档 ［A］
 - 综合 11.8.1（Neovim/vim/elvis/nvi）、11.8.2（viper-mode/evil-mode/VS Code Vim/IdeaVim）、11.8.3（tcsh/bash vi-mode/zsh vi-mode）各小节文献 ［A］
 - Christiansen 1995; GNU bash 文档； tcsh/zsh 发行说明 ［A］
+
+<!-- dangan-20260908 消解回写 -->
+- Neovim. GitHub 仓库 v0.1.0 Release（<https://github.com/neovim/neovim/releases/tag/v0.1.0>，2015-11-01）[EB/OL]. 2015. ［DKC-1154→fulltext:5820］
+- GNU. Viper[EB/OL]. 无年份. ［DKC-1157→fulltext:5821］
+<!-- /dangan-20260908 -->

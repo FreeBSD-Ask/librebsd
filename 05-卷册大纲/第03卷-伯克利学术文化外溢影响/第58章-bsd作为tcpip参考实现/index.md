@@ -38,7 +38,7 @@ volume: 第03卷-伯克利学术文化外溢影响
 
 - NFS 设计始于 1984 年，RFC 1094（1989.3）是 NFSv2 的正式标准发布，先前已有 SunOS 实现；NFS 首次集成入 BSD 的确切版本存在模糊性 [据 Lessig (1999) 一手文献印证消解^doubt-resolved-124——经 bsd_commits.db 查询未得明确证据（查询条件：`SELECT * FROM commits WHERE message
 - Apache License 1.0（1995）与 2.0（2004）经多源确认（Apache License 1.0 借鉴 BSD 许可证，2.0 增加专利反诉条款与 Apache 品牌保护条款）；BSD 许可证版本——BSD 2-Clause（Simplified BSD License）与 BSD 3-Clause（New BSD License）为两种主要变体，均允许商业使用与闭源衍生，保
-- 批评的具体文本——freebsd-questions 邮件列表、LWN 文章与社区博客中的 BSD 互联网遗产批评（缺乏系统性学术分析）；形式主义分析方法的适用性——形式主义作为 19-20 世纪数学哲学流派（斯坦福哲学百科"Formalism in Mathematics"与"Mathematical Style"词条），本节引申为“以形式标签替代实质判断”的方法论批评，适用于分析“用市场份额标
+- 批评的具体文本——freebsd-questions 邮件列表、LWN 文章与社区博客中的 BSD 互联网遗产批评（缺乏系统性学术分析）；形式主义分析方法的适用性——形式主义作为 19-20 世纪数学哲学流派（斯坦福哲学百科"Formalism in Mathematics"与"Mathematical Style"词条）〔待核：原文截断，后文待回源〕
 
 ## 文献
 
@@ -91,3 +91,7 @@ volume: 第03卷-伯克利学术文化外溢影响
 - [BSD Now EP1] Pennington J. BSD Now: 1: BGP & BSD[EB/OL]. (2013-09-04)[2026-08-15]. <https://www.bsdnow.tv/1>.
 
 <!-- /PODCAST_REVIEW -->
+
+<!-- dangan-20260908 消解回写 -->
+- Jacobson. Congestion Avoidance and Control[C]. 1988. ［DKC-1059→fulltext:5783］
+<!-- /dangan-20260908 -->

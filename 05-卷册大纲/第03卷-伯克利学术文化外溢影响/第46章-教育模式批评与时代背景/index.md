@@ -12,7 +12,12 @@ volume: 第03卷-伯克利学术文化外溢影响
 - 边缘贡献者的史料辨析包括：（1）BSD 源码贡献者记录（如 `CHANGELOG`、SCCS 日志）是辨识边缘贡献者的主要史料，但须注意记录的不完整性；（2）邮件列表存档（如 CSRG 内部邮件）可补充源码记录，但须注意存档的截取；（3）事后回忆（如 McKusick **1999 年** 文章）须警惕记忆偏差与自利偏差；（4）史料辨析须遵循 0 信任原则，对所有来源进行考据验证  | 史料类型
 
 
-- 1978-1992 年基础科学与计算机科学发展——Cook/Karp 的 NP 完全性理论、RSA 公钥密码学、Lamport 分布式系统理论、Codd 关系数据库理论；这些理论发展直接影响 BSD 的 TCP/IP 实现、密码学应用与数据库系统 | 理论 | 作者 | 时间 | 发表场所 | 对 BSD 影响 |  | --- | --- | --- | --- | --- |  | NP 完 |
+- 1978-1992 年基础科学与计算机科学发展——Cook/Karp 的 NP 完全性理论、RSA 公钥密码学、Lamport 分布式系统理论、Codd 关系数据库理论；这些理论发展直接影响 BSD 的 TCP/IP 实现、密码学应用与数据库系统
+
+| 理论 | 作者 | 时间 | 发表场所 | 对 BSD 影响 |
+| --- | --- | --- | --- | --- |
+| NP 完 |  |  |  |  |
+
 
 - 1978-1992 基础科学发展包括：（1）计算复杂度理论，Cook 1971 年证明 NP 完全性（"The Complexity of Theorem-Proving Procedures"），Karp 1972 年扩展 NP 完全问题类（"Reducibility Among Combinatorial Problems"）；（2）〔待核：原文截断，后文待回源〕
 - 1978-1992 计算机科学发展包括：（1）TCP/IP 协议理论，Cerf 与 Kahn 1974 年发表 "A Protocol for Packet Network Intercommunication"（IEEE Trans. Comm.），奠定 TCP/IP 基础；（2）〔待核：原文截断，后文待回源〕
@@ -46,3 +51,7 @@ volume: 第03卷-伯克利学术文化外溢影响
 - Koblitz, N. (1985) "Elliptic Curve Cryptosystems", Math. Comp.；Miller, V. (1985) "Use of Elliptic Curves in Cryptography", CRYPTO；Shamir, A. (1979) Comm. ACM；Rabin, M. (1979) MIT LCS ［B］
 - Morris 蠕虫档案；CERT/CC 建立档案；Stoll, C. (1989) "The Cuckoo's Egg"；Computer Fraud and Abuse Act（1986）[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]
 - Morris 蠕虫漏洞分析；4.3BSD-Reno/4.4BSD 安全审计档案；Morris, R. & Thompson, K. (1979) "Password Security: A Case History"；BSD Kerberos 集成档案[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]
+
+<!-- dangan-20260908 消解回写 -->
+- Leslie. The Cold War and American Science[Z]. 1993. ［DKC-1304→fulltext:5860］
+<!-- /dangan-20260908 -->

@@ -52,8 +52,12 @@ volume: 第16卷-开源运动与合规治理
 - Linux Kernel Mailing List [EB/OL]. <https://lkml.org/>；Linux Code of Conduct [EB/OL]. <https://www.kernel.org/doc/html/latest/process/code-of-conduct.html>；Python PEP 13 [EB/OL]. <https://www.python.org/dev/peps/pep-0013/>；IBM. IBM to Acquire Red Hat [EB/OL]. 2018-10-28. <https://www.ibm.com/>；Eghba
 - FreeBSD Core Team. (2020-2025). *Core Team Reports*. lists.freebsd.org; Glass, R. L. (2002). *Facts and Fallacies of Software Engineering*. Addison-Wesley; O'Mahony, S. (2007). *The Governance of Open Source Projects: Does It Influence Innovation?* Journal of Management and Governance, 11(2), 123-14
 - FreeBSD Release Engineering Team. (2003-2025). *Release Engineering Documentation*. docs.freebsd.org; McKusick, M. K. (2004). *The -CURRENT/-STABLE Branch Model*. USENIX BSDCon 2003; Erenkrantz, J. R. (2003). *Release Management Within Open Source Projects*. ICSE 2003 Workshop. ［B］
-- Raymond, E. S. (1999). *The Cathedral and the Bazaar*. O'Reilly Media; von Krogh, G., Spaeth, S., & Lakhani, K. R. (2003). *Community, Joining, and Specialization in Open Source Software Innovation*. Research Policy, 32(7), 1217-1241; Shah, S. K. (2006). *Motivation, Governance, and the Viability of
+- Raymond, E. S. (1999). *The Cathedral and the Bazaar*. O'Reilly Media; von Krogh, G., Spaeth, S., & Lakhani, K. R. (2003). *Community, Joining, and Specialization in Open Source Software Innovation*. Research Policy, 32(7), 1217-1241; Shah, S. K. (2006). *Motivation, Governance, and the Viability of〔待核：原文截断〕
 
+
+<!-- dangan-20260908 消解回写 -->
+- Freund. A. (2024-03-29). *backdoor in upstream xz/liblzma leading to ssh server compromise* [EB/OL]. <https://www.openwall.com/lists/oss-security/2024/03/29/4>[EB/OL]. 2024.［DKC-0537→fulltext:5550］；Freund. A. (2024-03-29). *backdoor in upstream xz/liblzma* [EB/OL]. <https://www.openwall.com/lists/oss-security/2024/03/29/4>[EB/OL]. 2024.［DKC-0625→fulltext:5580］
+<!-- /dangan-20260908 -->
 ## 自反性声明
 
 本章所书皆是形式主义化的重构，并非对“真实的 BSD 历史”的呈现。本章的章节划分、事件选择、叙事策略、因果归因——全部基于编纂者的哲学设定。本章承认这些局限，不声称客观或中立，欢迎被更诚实的叙事所超越。

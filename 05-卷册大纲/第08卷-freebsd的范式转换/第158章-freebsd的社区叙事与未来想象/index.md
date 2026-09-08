@@ -4,8 +4,6 @@ id: CH158
 volume: 第08卷-freebsd的范式转换
 ---
 
-# 第158章 freebsd的社区叙事与未来想象
-
 # 第 158 章 freebsd的社区叙事与未来想象
 
 ## 要点
@@ -82,3 +80,7 @@ volume: 第08卷-freebsd的范式转换
 - [BSDTalk EP247] Backman W. BSDTalk: 247: bsdtalk247 - FreeBSD: The Next 10 Years with Jordan Hubbard[EB/OL]. (2014-11-15)[2026-08-27]. <https://bsdtalk.blogspot.com/2014/11/bsdtalk247-freebsd-next-10-years-with.html>.
 
 <!-- /PODCAST_REVIEW -->
+
+<!-- dangan-20260908 消解回写 -->
+- Juniper. Networks. Junos OS Documentation [EB/OL]. [2026-07-27]. **<https://www.juniper.net/documentation/product/us/en/junos-os/>**[EB/OL]. 2026.［DKC-2326→fulltext:6152］；Juniper. Networks. Junos OS Evolved Documentation [EB/OL]. [2026-07-27]. **<https://www.juniper.net/documentation/product/us/en/junos-os-evolved/>**[EB/OL]. 2026.［DKC-2327→fulltext:6153］
+<!-- /dangan-20260908 -->

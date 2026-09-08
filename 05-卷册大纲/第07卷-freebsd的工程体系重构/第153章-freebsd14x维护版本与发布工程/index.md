@@ -12,14 +12,14 @@ volume: 第07卷-freebsd的工程体系重构
 - FreeBSD 14.2-RELEASE 于 **2024 年 12 月 3 日** 发布，是 stable/14 分支第三个版本，Release Engineer 为 Colin Percival；**献词纪念 Mike Karels**——他是《The Design and Implementation of the 4.3BSD UNIX Operating System》等 BSD 经典著作的合著者、4.3BSD/4.4BSD 核心开发者、在 BSD 社区贡献超过 40 年，当时担任 Deputy Release Engineering Lead，于 2024 年 10 月去世；核心亮点：① OCI 容器镜像正式可用（从 14.2 开始发布官方 OCI 镜像）；② 安装程序支持在安装 base 后自动下载安装必要固件包；③ OpenZFS 升级至 2.2.6；④ OpenSSL 升级至 3.0.15；⑤ 新增 Oracle Cloud Infrastructure（OCI）官方支持（amd64 与 aarch64，UFS 与 ZFS 镜像）；14.2 支持架构从 14.0/14.1 的 9 个缩减为 7 个——**powerpc64le 与 powerpcspe 不再提供 RELEASE 镜像**；14.1 EOL 为 2025.3.31，14.2 支持至 2025.9.30；发布工程团队在 Mike Karels 去世后由 Ed Maste（埃德·马斯特） 接任 Deputy Lead，新增 Dave Cottlehuber、John Hixson、Mahdi Mokhtari、Muhammad Moinur Rahman 等成员，Glen Barber（格伦·巴伯）（gjb@，14.0 Deputy Lead）未出现在 14.2 re@ 名单中
 - FreeBSD 14.3-RELEASE 于 **2025 年 6 月 10 日** 发布，是 stable/14 分支第四个版本，Release Engineer 为 Colin Percival；核心亮点：① **iwlwifi 驱动支持 802.11ac（WiFi 5）**——这是 FreeBSD WiFi 支持的重要里程碑，现代 Intel WiFi 芯片首次在 FreeBSD 上可用 802.11ac；② OCI 容器镜像正式发布至 Docker Hub 与 GitHub Container Registry；③ Clang/LLVM 升级至 19.1.7；④ OpenSSH 升级至 9.9p2；⑤ xz 升级至 5.8.1（xz-utils 后门事件后版本，5.6.x 系列含后门，FreeBSD 13.x/14.x 中未使用受影响版本但仍跟进更新）；⑥ expat 升级至 2.7.1；14.3 支持至 2026.6.30，14.2 EOL 为 2025.9.30；xz 后门事件（CVE-2024-3094，2024.3 发现）影响的是 xz 5.6.0-5.6.1，FreeBSD 14.x 使用较旧的 xz 版本，未受该后门直接影响
 - FreeBSD 14.4-RELEASE 于 **2026 年 3 月 10 日** 发布，是 stable/14 分支第五个版本（截至 2026.7，14.5 在开发中），Release Engineer 为 Colin Percival；**献词纪念 Ken Smith**——他曾担任 FreeBSD Release Engineering Lead 长达 7 年（负责 FreeBSD 6 至 FreeBSD 10 的发布工程），于 2025 年底去世；核心亮点：① **OpenSSH 10.0p2 默认启用混合后量子密钥交换算法 mlkem768x25519-sha256**——这是 FreeBSD 首次默认启用抗量子计算密码学算法；② OpenZFS 升级至 2.2.9；③ nuageinit（FreeBSD 原生 cloud-init 实现）的 cloud-init 兼容性显著改进；④ bhyve 通过新的 **p9fs(4)** 支持 host-guest 文件系统共享（Plan 9 协议）；⑤ 手册页工具与内容的显著改进；14.4 是 re@ 团队变动最大的版本——新增 Sergio Carlavilla Delgado、Jake Freeland、Craig Leres、Vladlen Popolitov、Lexi Winter、Alexander Ziaee 等新成员，Konstantin Belousov（康斯坦丁·别洛乌索夫）、John Hixson、Doug Rabson（道格·拉布森）、Mahdi Mokhtari 等未再出现在名单中，Antoine Brodin 仍负责 Package Building、Ed Maste 任 Deputy Lead；14.4 支持至 2026.12.31，14.3 EOL 为 2026.6.30；Open Sats Initiative 新增进入赞助商名单
-- stable/14 分支支持至 **2028 年 11 月 30 日**（约 5 年支持周期，自 2023.11 起），截至 2026.7 已发布 14.0-14.4 共 5 个 RELEASE 版本，14.5 在开发中；整个 14.x 周期的更新节奏体现了 FreeBSD 发布工程的成熟：约每 6 个月一个 .RELEASE（14.0:2023.11、14.1:2024.6、14.2:2024.12、14.3:2025.6、14.4:2026.3——整体接近 6 个月周期）；Colin Percival 自 FreeBSD 13.x 起担任 Release Engineering Lead，是 FreeBSD 历史上担任 re@ Lead 时间较长的成员之一；14.x 周期内 re@ 团队经历了 Glen Barber 离开、Mike Karels 去世等人事变动，但发布节奏基本保持稳定；14.x 也是最后一个包含 32 位 i386 RELEASE 镜像的稳定分支，15.0（2025 年底/2026 初发布）将只发布 64 位架构 RELEASE
+- stable/14 分支支持至 **2028 年 11 月 30 日**（约 5 年支持周期，自 2023.11 起），截至 2026.7 已发布 14.0-14.4 共 5 个 RELEASE 版本，14.5 在开发中；整个 14.x 周期的更新节奏体现了 FreeBSD 发布工程的成熟：约每 6 个月一个 .RELEASE（14.0:2023.11、14.1:2024.6、14.2:2024.12、14.3:2025.6、14.4:2026.3——整体接近 6 个月周期）；Colin Percival 自 FreeBSD 13.x 起担任 Release Engineering Lead，是 FreeBSD 历史上担任 re@ Lead 时间较长的成员之一；14.x 周期内 re@ 团队经历了 Glen Barber 离开、Mike Karels 去世等人事变动，但发布节奏基本保持稳定；14.x 也是最后一个包含 32 位 i386 RELEASE 镜像的稳定分支，15.0（2025 年底/2026 初发布）〔待核：原文截断，后文待回源〕
 
 ## 史观
 
 - 总纲第 17 条——软件工程：.1 维护版本的定位是“稳定性、bug 修复、小功能增强”而非大的架构变更——SIMD string 函数、音效热插拔、cloud-init 支持都是不破坏 ABI 的渐进改进；这种“大版本创新 + 小版本稳定”的发布节奏是 FreeBSD 工程可靠性的基础
   - 辨析：libc SIMD 优化最初由 David C Lawrence（tale@）与其他贡献者开发，
 - 总纲第 22 条——开源运动：此漏洞是典型的 “UNIX 工具组合哲学” 安全缺陷——rtsold 作为网络配置守护进程调用 resolvconf shell 脚本更新 DNS 配置，而 shell 脚本的字符串拼接与引号处理是传统 UNIX 工具中常见的安全隐患；这一漏洞提醒我们：即使是设计简洁、代码量小的 BSD 系统，在不同组件的交互边界仍可能出现严重安全问题；与 C 语言内存漏洞不同，sh
-- 总纲第 23 条——社区治理：FreeBSD Core Team 选举制度是开源社区 “代议民主” 治理模式的典范——9 名核心成员由 committer 民主选举产生，任期两年，可连任；这一制度既避免了 BDFL（仁慈独裁者）模式的个人依赖风险，也避免了完全开放投票的民粹化倾向（只有具有代码提交记录的活跃开发者才有投票权）；Core Team 权力受项目章程约束，具体技术决策交由各领域团队（re
+- 总纲第 23 条——社区治理：FreeBSD Core Team 选举制度是开源社区 “代议民主” 治理模式的典范——9 名核心成员由 committer 民主选举产生，任期两年，可连任；这一制度既避免了 BDFL（仁慈独裁者）模式的个人依赖风险，也避免了完全开放投票的民粹化倾向（只有具有代码提交记录的活跃开发者才有投票权）；〔待核：原文截断，后文待回源〕
 
 ## 辨析
 
@@ -34,6 +34,10 @@ volume: 第07卷-freebsd的工程体系重构
 - FreeBSD Security Team. FreeBSD-SA-25:12.rtsold — Remote Code Execution via ND6 Router Advertisements [EB/OL]. (2025-12-16)[2026-07-19]. <https://security.FreeBSD.org/advisories/FreeBSD-SA-25:12.rtsold.asc>; MITRE. CVE-2025-14558 [EB/OL]. (2025-12)[2026-07-19]. <<https://cve.mitre.org/cgi-bin/cvename>.
 - FreeBSD Project. FreeBSD Administration and Management [EB/OL]. [2026-07-19]. <https://www.freebsd.org/administration/>; FreeBSD Core Team. Core Team Charter [EB/OL]. [2026-07-19]. <https://www.freebsd.org/internal/core-charter/>（原始链接失效，互联网档案馆无存档）. ［A］
 
+
+<!-- dangan-20260908 消解回写 -->
+- IETF.. RFC 4861: Neighbor Discovery for IP version 6 (IPv6)[S]. 2007[Z]. 2007.［DKC-2270→fulltext:6136］；IETF.. RFC 4862: IPv6 Stateless Address Autoconfiguration [S]. 2007[Z]. 2007.［DKC-2271→fulltext:6137］
+<!-- /dangan-20260908 -->
 ## 152.12.2 Security Officer 任期与安全团队演进
 
 - 要点：截
