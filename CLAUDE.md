@@ -18,31 +18,31 @@
   - **04-史学方法论/** —— G1 史学方法论（项目统摄史观衍生根基，含 index.md + 7 个子文件，禁止把项目统摄史观与西方流派并列）
 - **01-项目管理/** —— 变更记录
   - **00-变更记录/** —— 变更记录数据库（`changelog.duckdb` DuckDB 数据库 + `index.md` 使用说明）
-- **02-sacred源材料/** —— sacred 源材料独立成一级 —— 含 `sacred_sources.duckdb` 文件夹级数据库（详见 [00-编纂规则与格式规范/01-规则/流程规则.md](00-编纂规则与格式规范/01-规则/流程规则.md) 其他文件夹转数据库规则小节；2026-08-01 源文件已清理，数据库为唯一内容载体，详见同上源文件清理规则小节）
+- **02-sacred源材料/** —— sacred 源材料独立成一级 —— 含 `sacred_sources.duckdb` 文件夹级数据库（详见 [00-编纂规则与格式规范/01-规则/流程规则.md](00-编纂规则与格式规范/01-规则/流程规则.md) 其他文件夹转数据库规则小节；源文件已清理，数据库为唯一内容载体，详见同上源文件清理规则小节）
   - **01-一刻哲学/** —— 项目编纂指导思想源材料（原含 index.md + 29 章子文件，191 子节 25 条总纲；内容已入库 `sacred_sources.duckdb`；系统分析见 `02-sacred源材料/shigang.md`）
   - **02-原始哲学/** —— 原始哲学思想（原含 index.md + 11 章子文件；原 `q.md` 拆分；内容已入库 `sacred_sources.duckdb`）
   - **03-q-md逐行释读** —— q.md 逐行释读（原 `03-q-md逐行释读.md`，内容已入库 `sacred_sources.duckdb`）
   - **04-教材-FreeBSD从入门到跑路/** —— FreeBSD 教材原文整理（sacred 教材源材料；内容已入库 `sacred_sources.duckdb`）
-- **03-原始史料库/** —— 史料源（不含 sacred，按 BSD 项目/时期/类型细分） —— 含 `original_sources.duckdb` 文件夹级数据库（详见同上；2026-08-01 源文件已清理，数据库为唯一内容载体，详见 [00-编纂规则与格式规范/01-规则/流程规则.md](00-编纂规则与格式规范/01-规则/流程规则.md) 源文件清理规则小节）
-  - **01-代码仓库史料/** —— 含 `01-数据库本体/`（`资料数据库.duckdb`，2026-08-04 已按 Schema v1.4 对齐：新增 5 张通用表 + schema_meta，旧 cross_references 改名 material_cross_references，业务表 materials/references/freebsd_sa/nvd_cve_metadata/fact_check_records 保留为专属扩展表 + `split_progress.json` 拆分元数据）+ 02-FreeBSD/03-NetBSD/04-OpenBSD/05-DragonFlyBSD/06-OpenZFS/07-BSD衍生项目/08-跨项目对比/09-Darwin/10-LinuxKernel（各子目录 `duckdb/` 下存放按项目拆分后的独立 DuckDB 数据库，原 `bsd_commits.db` 25.92 GB 已于 2026-07-28 拆分为 10 个独立数据库并删除，2026-08-25 全部升格为 DuckDB 主存储层）
+- **03-原始史料库/** —— 史料源（不含 sacred，按 BSD 项目/时期/类型细分） —— 含 `original_sources.duckdb` 文件夹级数据库（详见同上；源文件已清理，数据库为唯一内容载体，详见 [00-编纂规则与格式规范/01-规则/流程规则.md](00-编纂规则与格式规范/01-规则/流程规则.md) 源文件清理规则小节）
+  - **01-代码仓库史料/** —— 含 `01-数据库本体/`（`资料数据库.duckdb`，已按 Schema v1.4 对齐：新增 5 张通用表 + schema_meta，旧 cross_references 改名 material_cross_references，业务表 materials/references/freebsd_sa/nvd_cve_metadata/fact_check_records 保留为专属扩展表 + `split_progress.json` 拆分元数据）+ 02-FreeBSD/03-NetBSD/04-OpenBSD/05-DragonFlyBSD/06-OpenZFS/07-BSD衍生项目/08-跨项目对比/09-Darwin/10-LinuxKernel（各子目录 `duckdb/` 下存放按项目拆分后的独立 DuckDB 数据库，原 `bsd_commits.db` 25.92 GB 已拆分为 10 个独立数据库并删除，全部升格为 DuckDB 主存储层）
   - **02-man源与posix仓库/** —— man 源与 POSIX 仓库（含 8 个稀疏检出仓库，不可拆散）
-  - **03-bsd前安全史/**、**04-nvd漏洞元数据/**、**05-bsd官方安全公告/**（子目录已清理，内容入库 `original_sources.duckdb`，2026-08-01 源文件清理）
+  - **03-bsd前安全史/**、**04-nvd漏洞元数据/**、**05-bsd官方安全公告/**（子目录已清理，内容入库 `original_sources.duckdb`）
   - **06-考据记录/** —— 考据记录集中存放（命名约定 `YYYYMMDD_<主题>.md`，含三字段：查证来源/交叉验证方法/存疑判定依据）
-  - **09-硬件与物质文化史料/** —— G4 硬件史料（含 5 个子目录：芯片架构/硬件厂商/机器/物理与基础科学/外设；子目录已清理，内容入库 `original_sources.duckdb`，2026-08-01 源文件清理）
+  - **09-硬件与物质文化史料/** —— G4 硬件史料（含 5 个子目录：芯片架构/硬件厂商/机器/物理与基础科学/外设；子目录已清理，内容入库 `original_sources.duckdb`）
   - **10-技术器物史料/** —— G4 技术器物（含 index.md + 内核/文件系统/网络栈/虚拟内存/进程调度/设备驱动/用户态工具 7 文件）
-  - **11-邮件列表史料/** —— 4 大 BSD + Linux kernel 邮件列表全量历史存档（FreeBSD/NetBSD/OpenBSD/DragonFly BSD + Linux kernel，2026-08-04 建立）
+  - **11-邮件列表史料/** —— 4 大 BSD + Linux kernel 邮件列表全量历史存档（FreeBSD/NetBSD/OpenBSD/DragonFly BSD + Linux kernel）
   - **12-multics史料/** —— Multics 相关史料（01-multicians-org/、02-mit-saltzer/）
-  - **13-44doc文档史料/** —— 4.4BSD Documents 官方文档快照全量镜像（papers/psd/smm/usd/IPv6，2026-08-06 抓取，240 文件）
-  - **14-播客史料/** —— 播客史料（原 `bsdnow_podcast.db` / `bsd_podcasts_external.db` 已于 2026-08-26 升格 DuckDB 并按播客实际名拆分为 10 个独立库：`bsd-now.duckdb`、`bsdtalk.duckdb`、`youtube.duckdb`、`software-engineering-daily.duckdb`、`the-changelog.duckdb`、`floss-weekly.duckdb`、`nerding-out-with-victor.duckdb` 及 3 个空源 `freebsd-fridays.duckdb`、`bsd-conferences-youtube.duckdb`、`freebsd-office-hours.duckdb`；含期数元数据/语音转写文本/大纲映射/GB/T 7714 著录，2026-08-14 建立。SQLite 原库已归档 `12-数据库备份/`（ARCHIVE_FINAL）。待转写清单见本目录 `待转录清单.md`）
-- **04-现代研究文献/** —— 研究产出（按主题细分 12 个子目录，其中 04-12 研究主题子目录已清理，内容入库 `research_notes.duckdb`，2026-08-01 源文件清理） —— 含 `research_notes.duckdb` 文件夹级数据库（详见同上；2026-08-01 源文件已清理，数据库为唯一内容载体，README.md/index.md 保留）
+  - **13-44doc文档史料/** —— 4.4BSD Documents 官方文档快照全量镜像（papers/psd/smm/usd/IPv6，240 文件）
+  - **14-播客史料/** —— 播客史料（原 `bsdnow_podcast.db` / `bsd_podcasts_external.db` 已升格 DuckDB 并按播客实际名拆分为 10 个独立库：`bsd-now.duckdb`、`bsdtalk.duckdb`、`youtube.duckdb`、`software-engineering-daily.duckdb`、`the-changelog.duckdb`、`floss-weekly.duckdb`、`nerding-out-with-victor.duckdb` 及 3 个空源 `freebsd-fridays.duckdb`、`bsd-conferences-youtube.duckdb`、`freebsd-office-hours.duckdb`；含期数元数据/语音转写文本/大纲映射/GB/T 7714 著录。SQLite 原库已归档 `12-数据库备份/`（ARCHIVE_FINAL）。待转写清单见本目录 `待转录清单.md`）
+- **04-现代研究文献/** —— 研究产出（按主题细分 12 个子目录，其中 04-12 研究主题子目录已清理，内容入库 `research_notes.duckdb`） —— 含 `research_notes.duckdb` 文件夹级数据库（详见同上；源文件已清理，数据库为唯一内容载体，README.md/index.md 保留）
   - **01-参考文献总目/** —— 完整文献总目（按类别拆分 60+ 子文件）
   - **02-卷级文献综述/** —— 大纲级文献综述（各卷子文件，卷数随冻结基准/磁盘实况）
   - **03-文献下载/** —— 含 01-pdf/、02-epub/、03-ocr/（用于安娜的档案下载 PDF/EPUB 后 OCR 存储）
-  - **05-参考文献全文数据库/** —— 参考文献全文数据库（含 `references_fulltext.duckdb` 功能数据库 + `index.md` 结构说明 + `assets/` 图片资产目录；2026-08-01 存疑两表已迁移至 06-存疑数据库，2026-08-25 转 DuckDB 主存储层）
-  - **06-存疑数据库/** —— 存疑数据库（含 `doubts_standalone.duckdb` 功能数据库 + `index.md` 结构说明；2026-08-01 从 `references_fulltext.db` 迁移而来，承载过去与未来所有存疑记录，详见 [00-编纂规则与格式规范/01-规则/考据规则.md](00-编纂规则与格式规范/01-规则/考据规则.md) “存疑数据库位置与使用规范”小节）
-  - **04-bsd学术论文研究/**、**05-bsd文化关系研究/**、**06-bsd-gpl自由哲学比较研究/**、**07-开源许可证法律研究/**、**08-linux文化挪用研究/**、**09-bsd仓库数据分析/**、**10-bsd漏洞研究/**（子目录已清理，内容入库 `research_notes.duckdb`，2026-08-01 源文件清理）
-  - **11-翻译与多语种史料/** —— G12 翻译与多语种史料（子目录已清理，内容入库 `research_notes.duckdb`，2026-08-01 源文件清理）
-  - **12-自由软件词源考察/** —— 自由软件、自由、free、liberty 词源考察（子目录已清理，内容入库 `research_notes.duckdb`，2026-08-01 源文件清理）
+  - **05-参考文献全文数据库/** —— 参考文献全文数据库（含 `references_fulltext.duckdb` 功能数据库 + `index.md` 结构说明 + `assets/` 图片资产目录；存疑两表已迁移至 06-存疑数据库，本库已转 DuckDB 主存储层）
+  - **06-存疑数据库/** —— 存疑数据库（含 `doubts_standalone.duckdb` 功能数据库 + `index.md` 结构说明；自 `references_fulltext` 库迁出独立成库，承载过去与未来所有存疑记录，详见 [00-编纂规则与格式规范/01-规则/考据规则.md](00-编纂规则与格式规范/01-规则/考据规则.md) “存疑数据库位置与使用规范”小节）
+  - **04-bsd学术论文研究/**、**05-bsd文化关系研究/**、**06-bsd-gpl自由哲学比较研究/**、**07-开源许可证法律研究/**、**08-linux文化挪用研究/**、**09-bsd仓库数据分析/**、**10-bsd漏洞研究/**（子目录已清理，内容入库 `research_notes.duckdb`）
+  - **11-翻译与多语种史料/** —— G12 翻译与多语种史料（子目录已清理，内容入库 `research_notes.duckdb`）
+  - **12-自由软件词源考察/** —— 自由软件、自由、free、liberty 词源考察（子目录已清理，内容入库 `research_notes.duckdb`）
 - **05-卷册大纲/** —— 全书卷大纲（冻结基准卷数 12，结构重组过渡期以磁盘实况为准） + GitBook 总导航（SUMMARY.md），保留既有卷名
   - **SUMMARY.md** —— GitBook 总导航（自动生成，覆盖全部卷（冻结基准或过渡期磁盘实况） + 前后辅文 + 索引）
   - **第01卷-unix的起源/** 至 **第18卷-全球社区地区bsd史/** —— 各卷大纲（含 `00-总览.md` 卷头 + 各章 `第XX章-slug/` 文件夹 + `卷末书目述评.md`）
