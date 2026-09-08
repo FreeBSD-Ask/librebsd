@@ -1,5 +1,5 @@
 -- changelog 去重查询 SQL
--- 数据库：01-项目管理/00-变更记录/changelog.db
+-- 数据库：01-项目管理/00-变更记录/changelog.duckdb
 -- 表：entries
 -- 规则引用位置：流程规则.md “changelog 去重规则” 小节
 
