@@ -2,11 +2,11 @@
 
 本文件索引 `00-编纂规则与格式规范/01-规则/脚本与命令/` 目录下所有可执行资源（脚本副本、程序命令说明、数据库操作 SQL），列出每条资源的文件名、用途说明与规则引用位置。本目录是规则文件（考据规则.md、写作规则.md、流程规则.md、主题规则.md、释读规则.md）引用的所有可执行资源的独立存储位置，与 `script/` 目录中的原脚本副本形成“规则自洽单元 + 历史脚本归档”的分工关系。
 
-> **SQLite 时代工具脚本状态声明（2026-08-26）**：2026-08-25 全部数据库升格 DuckDB 主存储层后，本目录中面向 SQLite 的工具脚本（`build_folder_databases.py`、`dedup_folder_databases.py`、`resolve_cross_references.py`、`audit_folder_db_integrity.py`、`cleanup_duplicate_sources.py`、`optimize_folder_databases.py`、`clean_wal.py` 等，以及各 `.sql` 操作模板）**不再适用于现行主存储层**——其操作对象（SQLite 库、FTS5 表、PRAGMA、WAL 文件）已随归档退出工作区。**代码仓库/邮件库检查类脚本同样适用本声明**：`check_date_anomalies.py`、`mail_dedup_verify.py`、`dedup_databases_global.py`、`sync_cross_references_after_cleanup.py` 等脚本内登记的 `.db` 路径（freebsd.db、netbsd.db、openbsd_mail.db 等）为 SQLite 时代路径，对应库已转为 `db/duckdb/<name>.duckdb` 或 `duckdb/<name>.duckdb`，这些脚本的 sqlite3 实现与路径登记随归档失效，不作路径改写。这些脚本与 SQL 保留作历史规则书登记（对应规则小节为 SQLite 时代规则），如需对 DuckDB 主库执行同类操作，走“DuckDB 分析层与主存储层规则”小节的 `sqlite2duckdb.py --optimize`/`--verify`；如需对归档 SQLite 执行操作，先解压 `ARCHIVE_FINAL_*.db.gz` 为临时库（用毕删除）。本声明不覆盖：`sqlite2duckdb.py`（现行 DuckDB 管理脚本）、`backup_databases.py`（备份轮换机制保留备用）、`sqlite12_to_duckdb_20260825.py`（2026-08-25 转换历史脚本，SCOPE 路径为功能性登记，不作 .duckdb 改写）、`podcast_db_final_sync.py`（2026-08-26 新增收尾脚本）。
+> **SQLite 时代工具脚本状态声明**：全部数据库升格 DuckDB 主存储层后，本目录中面向 SQLite 的工具脚本（`build_folder_databases.py`、`dedup_folder_databases.py`、`resolve_cross_references.py`、`audit_folder_db_integrity.py`、`cleanup_duplicate_sources.py`、`optimize_folder_databases.py`、`clean_wal.py` 等，以及各 `.sql` 操作模板）**不再适用于现行主存储层**——其操作对象（SQLite 库、FTS5 表、PRAGMA、WAL 文件）已随归档退出工作区。**代码仓库/邮件库检查类脚本同样适用本声明**：`check_date_anomalies.py`、`mail_dedup_verify.py`、`dedup_databases_global.py`、`sync_cross_references_after_cleanup.py` 等脚本内登记的 `.db` 路径（freebsd.db、netbsd.db、openbsd_mail.db 等）为 SQLite 时代路径，对应库已转为 `db/duckdb/<name>.duckdb` 或 `duckdb/<name>.duckdb`，这些脚本的 sqlite3 实现与路径登记随归档失效，不作路径改写。这些脚本与 SQL 保留作历史规则书登记（对应规则小节为 SQLite 时代规则），如需对 DuckDB 主库执行同类操作，走“DuckDB 分析层与主存储层规则”小节的 `sqlite2duckdb.py --optimize`/`--verify`；如需对归档 SQLite 执行操作，先解压 `ARCHIVE_FINAL_*.db.gz` 为临时库（用毕删除）。本声明不覆盖：`sqlite2duckdb.py`（现行 DuckDB 管理脚本）、`backup_databases.py`（备份轮换机制保留备用）、`sqlite12_to_duckdb_20260825.py`（DuckDB 转换历史脚本，SCOPE 路径为功能性登记，不作 .duckdb 改写）、`podcast_db_final_sync.py`（播客库收尾脚本）。
 
 ## 脚本文件
 
-规则文件中引用的现存 Python 脚本副本（共 14 个 .py 副本，从 `script/` 目录复制，原文件保持不变；`backup_databases.py` 与 `sqlite2duckdb.py` 为 2026-08-18 新增固定脚本、`podcast_db_final_sync.py` 为 2026-08-26 新增收尾脚本、`sync_refactor2026_baseline.py` 为 2026-09-08 新增口径同步脚本，均直接存放于本目录）。
+规则文件中引用的现存 Python 脚本副本（共 14 个 .py 副本，从 `script/` 目录复制，原文件保持不变；`backup_databases.py` 与 `sqlite2duckdb.py`、`podcast_db_final_sync.py`、`sync_refactor2026_baseline.py` 为直接存放于本目录的固定脚本）。
 
 | 文件名 | 用途说明 | 规则引用位置 |
 | --- | --- | --- |
