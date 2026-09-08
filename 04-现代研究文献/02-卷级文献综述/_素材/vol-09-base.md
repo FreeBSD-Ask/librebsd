@@ -209,7 +209,7 @@
 - id=1893 [resolved] 章索引称'1995 年 2 月 NetBSD Foundation 在美国特拉华州注册为 501(c)(3) 非营利组织'。事实：Foundation 在特拉华
 - id=1894 [open] 章索引称'pkgsrc 1997 年 8 月由 Alistair G. Crooks 发起'且'2004 年 pkgsrc 1.0 成为跨平台软件包管理系统'。
 - id=1895 [resolved] 章标题与索引称'NetBSD 8.0 与 64 位 ARM 虚拟化'、'8.0 引入 aarch64（ARM64）支持、改进的虚拟化支持、NVMM'。事实：AA
-- id=1896 [open] 章索引称'NetBSD 7.0 与 ARM 生态的深度支持（2015.9）'。事实：NetBSD 7.0 发布日期为 2015-08-25（官方历史页），非 2
+- id=1896 [resolved-corrected] 章索引称'NetBSD 7.0 与 ARM 生态的深度支持（2015.9）'。复核(2026-09-08)：2015.9 正确——NetBSD 7.0 官方发布日期为 2015-09-25（formal.html／formal-7／changes/2015 三处一致；RC3=08-18 反证）。原“2015-08-25”裁决系误读 RC3，已撤销。（原行残尾：非 2
 - id=1897 [open] 章索引称 1.3（1998.1）'扩展至 21 种硬件平台'。1.2 支持 12 种架构已据官方 1.2 发布页逐一点数核实；1.3 的'21 种'精确数字需对
 - id=1898 [open] 章索引称 de Raadt'1994 年 12 月 23 日被 NetBSD Core Team 撤销 commit 权限'。月份（1994 年 12 月）获多
 - id=1899 [open] 章索引称'NetBSD 10.1-RELEASE 与 11.0 RC5/RC6/RC7 公告（2024-12-16 至 2026-07-23）'。10.1-RE
