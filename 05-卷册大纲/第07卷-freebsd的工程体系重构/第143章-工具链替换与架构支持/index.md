@@ -33,7 +33,7 @@ volume: 第07卷-freebsd的工程体系重构
   - 文献：Divacky R. 2009 kernel announcement [EB/OL]；Davis B. 2012 default announcement [EB/OL]；FreeBSD 9.0/10.0 Rel
 - 架构的 Tier 级别是动态调整的——sparc64 从 FreeBSD 13 起不再是 Tier 1，mips 支持也大幅缩水，但这不完全归因于 Clang 迁移；SPARC 和 MIPS 硬件市场在 2010 年代的整体衰退（Oracle 终止 SPARC 服务器开发、MIPS 公司转向 RISC-V）是更深层原因。
 - 文献：FreeBSD Project. Supported Archit
-- 原文件误称 “OpenBSD 5.5 默认 Clang” 或 “2014 年”——经 OpenBSD CVS commit log 交叉验证，amd64/i386 实际切换时间为 2017 年 7 月 26 日（commit 时间戳精确到日），5.5 是 2014 年 5 月发布，此错误已修正。Theo de Raadt 在许可证问题上的立场比 FreeBSD 更为激进（他对 GPL 和 NDA
+- 原文件误称 “OpenBSD 5.5 默认 Clang” 或 “2014 年”——经 OpenBSD CVS commit log 交叉验证，amd64/i386 实际切换时间为 2017 年 7 月 26 日（commit 时间戳精确到日），5.5 是 2014 年 5 月发布，此错误已修正。〔待核：原文截断，后文待回源〕
 - “GCC GPL 传染编译产物” 是常见误解——FSF 明确表示 GCC 的 GPL 许可证不适用于 GCC 编译输出的程序（只要不是基于 GCC 运行时库的 GPL 代码片段衍生），GCC Runtime Library Exception 进一步明确了这一点。因此 Linux 使用 GCC 4.3+（GPLv3）不涉及许可证问题，但 FreeBSD base 系统中包含 GCC 二进制和库文件
 - 阮一峰 2008-2011 年博客文章将 BSD 许可证描述为“更宽松但允许闭源”〔阮一峰为禁引来源，本辨析仅作其观点元引用考据，其全部史实主张须独立核验〕是其时代局限性产物——当时 Clang 尚未成为 FreeBSD 默认（2014.1.20 才默认化），LLVM/Clang 技术成熟度也远不及 2020 年代；阮一峰博客作为中文世界早期开源启蒙材料有其历史贡献，但其对 BSD 许可证的批评基
 
@@ -43,6 +43,10 @@ volume: 第07卷-freebsd的工程体系重构
     FreeBSD 社区论文与演讲 [258]，[258] Ryan Stone. Oblivious Sandboxing with Capsicum and EBPF [C]//BS
 - FreeBSD Project. Supported Architectures [EB/OL]. freebsd.org/platforms/；FreeBSD 12.0/13.0 Release Notes [Z]；Losh W. GCC 4.2.1 retirement email [EB/OL]. freebsd-arch, 2018. ［A］
 
+
+<!-- dangan-20260908 消解回写 -->
+- Google.. Clang is now used to build Chrome for Windows [EB/OL]. LLVM Project Blog, 2018-03-05[EB/OL]. 2018. ［DKC-2149→fulltext:6085］
+<!-- /dangan-20260908 -->
 ## 142.10.4 架构支持对迁移时间线的效应
 
 - 要点：非 x86 架构的 Clang 支持进度是 GCC 从 FreeBSD base 完全移除的主要阻塞因素。迁移的关键时间节点如下：①2009.2——i386/amd64 内核可启动

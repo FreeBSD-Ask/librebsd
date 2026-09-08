@@ -30,7 +30,7 @@ volume: 第02卷-伯克利的岁月
 - 法律环境的 “决定性” 需核对，避免将法律因素等同于唯一因素，技术与市场因素亦重要
 - 三案对照的史料基础须说明——微软两案均为反垄断（不是版权案），与 USL 案的“版权+商业秘密”性质不同，比较时须限定在“软件业大型法律战”层面，避免类比过度；EU v. Microsoft 的互操作披露救济在 2010 年代后被互操作标准与开源替代所部分消解，其历史意义更多在反垄断法教义层面 ［A］
 - 对照须限定在“操作系统/UNIX 谱系软件法律战”层面——Caldera/Novell 案是反垄断（非版权），USL 案是版权（非反垄断），微软政府案是反垄断，法律性质各异；但五案共享的“软件业巨头+政府/竞争者+巨额和解”结构使其具备比较价值；另须说明 Caldera 案的 2.8 亿美元为估计值（WSJ 报道 2.75 亿、Groklaw 披露 2.8 亿），以 Groklaw 披露的和解协议
-- 许可费飙升的 “具体数字” 需按 0 信任原则核对——区分 “教育折扣” 与 “商业价格”，避免将单一价格表等同于普遍价格；“200,000-400,000 美元” 区间无独立一手史料确认，1983 年商业约 $43k/CPU、1989-1990 年 SVR4 商业 $ 100,000、McKusick 回忆 “约 $250,000”等数字各有来源但无法拼出“1985 年 200,000 美元起、
+- 许可费飙升的 “具体数字” 需按 0 信任原则核对——区分 “教育折扣” 与 “商业价格”，避免将单一价格表等同于普遍价格；“200,000-400,000 美元” 区间无独立一手史料确认，1983 年商业约 $43k/CPU、1989-1990 年 SVR4 商业 \$100,000、McKusick 回忆 “约 $250,000”等数字各有来源但无法拼出“1985 年 200,000 美元起、
 - 版权瑕疵影响的 “决定性” 需核对，诉讼结果是多重因素叠加，版权瑕疵是关键但非唯一因素
 
 ## 文献
@@ -38,7 +38,7 @@ volume: 第02卷-伯克利的岁月
 - 1990-2010 年操作系统市场份额报告；DiBona, C. (1999) "Open Sources"；Moody, G. (2001) "Rebel Code"[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]---## 文献增补与辩证校准（2026-08-08 追加）> 41.4-41.5 AT&T 同意令与版权瑕疵：> - **文献增补（ref 3778）**：McKusick 记载 1974 年 UNIX 以低价磁带进入伯克利——41.4 'AT&T 禁止销售软件使 UNIX 以极低成本分发’的直接依据> - **文献增补（ref 3780）**：4.4BSD 设计书历史章（History and Goals）覆盖 AT&T→BSD 版权演变> - **辩证校准（总纲 24.2）**：‘劣币驱逐良币’命题——AT&T 的法律约束（非技术优劣）塑造了 UNIX 分发史，本章分析应聚焦形式主义权力运作<!-- DB_REF:linux_kernel.duckdb -->> **数据库引用（linux_kernel.duckdb）**：本子节对应 linux_kernel 代码仓库。> 2003-2010 年间：230,969 次提交。> 仓库总览：1,474,341 次提交，39,865 位贡献者（contributors 表行数，1970-01-01 至 2026-08-24）。
 - 本卷 40-42 章相关案卷；United States v. Microsoft Corp., 253 F.3d 34 (D.C. Cir. 2001)；Microsoft Corp. v. Commission, T-201/04 (2007)；European Commission IP/04/382（2004-03-24） ［A］<!-- NEWREF:2370 --><!-- NEWREF:2371 --><!-- NEWREF:2372 --><!-- NEWREF:2373 --><!-- NEWREF:2482 -->
 - CALDERA v. Microsoft 案卷；NOVELL v. Microsoft 案卷；United States v. Microsoft Corp., 253 F.3d 34 (D.C. Cir. 2001)；European Commission IP/04/382；本卷 40-42 章案卷 ［A］<!-- NEWREF:2392 --><!-- NEWREF:2393 --><!-- NEWREF:2394 --><!-- NEWREF:2493 --><!-- NEWREF:2545 -->
-- AT&T UNIX Software Operation (1990.3.28) 公开邮件列表（确认 SVR4 商业 $100,000）；McKusick, K. (1999) "Twenty Years of Berkeley Unix" 及 klarasystems 转引的 McKusick 1999 视频（回忆“约 $ 250,000 ”）；Salus, P. (1994) " A Quarter Century of UNIX "；TUHS 邮件列表 1983 年 $43k/CPU 记录 ［A］
+- AT&T UNIX Software Operation (1990.3.28) 公开邮件列表（确认 SVR4 商业 $100,000）；McKusick, K. (1999) "Twenty Years of Berkeley Unix" 及 klarasystems 转引的 McKusick 1999 视频（回忆“约 \$250,000 ”）；Salus, P. (1994) " A Quarter Century of UNIX "；TUHS 邮件列表 1983 年 $43k/CPU 记录 ［A］
 - USL v. BSDi 案卷；Novell-UC Berkeley 和解协议（1994）；McKusick, K. (1999) "Twenty Years of Berkeley Unix" ［B］
 - Linux/BSD 市场份额报告（1992-2000）；Moody, G. (2001) "Rebel Code"；DiBona, C. (1999) "Open Sources"[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]<!-- DB_REF:linux_kernel.duckdb -->> **数据库引用（linux_kernel.duckdb）**：本子节对应 linux_kernel 代码仓库。> 1978-1992 年间：0 次提交。> 仓库总览：1,474,341 次提交，39,865 位贡献者（contributors 表行数，1970-01-01 至 2026-08-24）。
 - 和解协议全文（Groklaw 存档）; 4.4BSD-Lite 发行说明 ［A］
@@ -77,3 +77,7 @@ volume: 第02卷-伯克利的岁月
 - [YouTube EP3u8zKO8VTD0] YouTube. YouTube: BSD Explained: How FreeBSD, OpenBSD & NetBSD Built the Internet[EB/OL]. ()[2026-08-15]. <https://www.youtube.com/watch?v=3u8zKO8VTD0>.
 
 <!-- /PODCAST_REVIEW -->
+
+<!-- dangan-20260908 消解回写 -->
+- Dees. M. A stale Unix case haunts IBM: Xinuos demands a new hearing[N/OL]. Techzine, 2026-08-24. <https://www.techzine.eu/news/privacy-compliance/143772/a-stale-unix-case-haunts-ibm-xinuos-demands-a-new-hearing/> [2026-08-25[EB/OL]. 2026. ［DKC-1298→fulltext:5858］
+<!-- /dangan-20260908 -->

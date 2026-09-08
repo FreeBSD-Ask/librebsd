@@ -15,6 +15,7 @@ volume: 第12卷-macos的bsd遗产
 - [DB:references_fulltext:chapter_matches:chmatch_4068] 卷“第12卷-macos的bsd遗产”第 251 章，匹配置信度 1.0，原因：任务4 衍生组官方文档采集
 
 - [DB:code_repos:darwin.duckdb] Darwin 子项目构成：xnu(154), Security(122), mDNSResponder(101), Libc(80), cups(79)。xnu 内核提交量仅 154 次，反映 Apple 对开源 Darwin 的有限投入
+- [DB:historical_claims:claim] 关键词行级挖掘素材线索 251.7-关键词行级挖掘素材线索（2 条，CL-RM 段，见 251.7-关键词行级挖掘素材线索.md）
 
 ## 史观
 
@@ -57,3 +58,7 @@ volume: 第12卷-macos的bsd遗产
 - [BSDTalk EP19] Backman W. BSDTalk: Interview with Brian Tiemann[EB/OL]. (2006-02-21)[2026-08-15]. <https://archive.org/download/bsdtalk019/bsdtalk019.ogg>.
 
 <!-- /PODCAST_REVIEW -->
+
+<!-- dangan-20260908 消解回写 -->
+- Postfix. Project. Postfix Home Page [EB/OL]. <https://www.postfix.org/>, 2026-07-23 核查（Viktor Dukhovni 公开技术贡献主要见于 DANE/TLSA 工作）[EB/OL]. 2026. ［待核·needs_fix］［DKC-0174→fulltext:5490］
+<!-- /dangan-20260908 -->

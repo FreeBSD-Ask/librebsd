@@ -27,7 +27,7 @@ volume: 第10卷-openbsd的历史
 - 考据过程留痕——【查证来源】合图“成功”判定的各项事实经以下一手史料核验：SSH1 移除时间线，经 OpenSSH 7.4 Release Notes（<https://www.openssh.com/txt/release-7.4>，2026-07-23 WebFetch 一手核验）确认原文"This release removes server support for the SSH v.1
 - 纯洁化工作的具体范围经 OpenSSH 官方历史页面确认涵盖四项——de Raadt 的非可移植代码移除、Provos 的加密与 GPL 组件移除、Friedl 的 SSH 1.3→1.5 协议替换、Beck 的 RSA 专利规避 Makefile；纯洁化完成时间节点为 OpenSSH 1.2.2 随 OpenBSD 2.6 发布日 1999-12-01，因 1.2.2 是首个随 OpenBSD
 - FreeBSD 4.0（2000-03-14）包含 OpenSSH 但 sshd 未默认启用——vendor import 在 2000-02-24，MFC 至 4-STABLE 在 2000-03-13，但"sshd enabled by default"MFC 在 2000-09-07（commit 94e00feef2e1），故 FreeBSD 4.0 用户需手动启用 sshd，FreeBS
-- SSH1 移除时间线经 OpenSSH 官方 Release Notes 与 openbsd.db 双重核实——7.4（2016-12-19）移除服务端 SSH1，7.6（2017-10-03）完全删除客户端 SSH1（含配置选项与文档），部分二手资料将"OpenSSH 8.2（2020-02-14）"误记为 SSH1 移除版本，但 8.2 Release Notes 实际记载的是 FIDO/U2
+- SSH1 移除时间线经 OpenSSH 官方 Release Notes 与 openbsd.db 双重核实——7.4（2016-12-19）移除服务端 SSH1，7.6（2017-10-03）完全删除客户端 SSH1（含配置选项与文档），部分二手资料将“OpenSSH 8.2（2020-02-14）”误记为 SSH1 移除版本，但 8.2 Release Notes 实际记载的是 FIDO/U2
 
 ## 文献
 
@@ -106,3 +106,7 @@ volume: 第10卷-openbsd的历史
 - [BSD Now EP190] Pennington J. BSD Now: 190: The Moore You Know[EB/OL]. (2017-04-19)[2026-08-15]. <https://www.bsdnow.tv/190>.
 
 <!-- /PODCAST_REVIEW -->
+
+<!-- dangan-20260908 消解回写 -->
+- SSH. Communications Security 1999 商业许可证声明 [EB/OL]. <https://www.ssh.com/>[EB/OL]. 1999. ［待核·needs_fix］［DKC-0055→fulltext:5462］
+<!-- /dangan-20260908 -->

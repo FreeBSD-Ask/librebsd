@@ -28,18 +28,18 @@ volume: 第05卷-freebsd的工程化奠基
 
 ## 93.2.2 **jail(2)** 的系统调用设计
 
-- 要点：**jail(2)** 系统调用接受 jail 结构 (hos
+- 要点**：Poul-Henning Kamp（波尔-亨宁·坎普）(phk) 于 1999 年 4 月 28 日在 FreeBSD 4.0-CURRENT 开发周期内提交 Jails 初始实现（早于 4.0-RELEASE 2000.3.20 约 11 个月），起源是为一家托管客户提供安全隔离环境，发现 chroot 不够用，遂在一天下午写了 **jail(2)** 系统调用；
 - 总纲第 1 条——偶然性改写历史，Jails 概念早于市场认可
   - 辨析：OS 级虚拟化的 “首创” 归属存在争议，chroot 是早期形式
   - 文献：容器技术史论文；Jails/Zones/LXC/Docker 文档 ［B］
 
 ## 93.3.2 与 Docker 的时间差
 
-- 要点：Jails(2000) 比 Docker(2013) 早 13 年，比 Solaris Zones(2
+- 要点：Jails(2000) 比 Docker(2013) 早 13 年，比 Solaris Zones(2〔待核：原文截断〕
 
 ## 辨析
 
-- 经 bsd_commits.db commits 表与 commit_files 表交叉验证，Jails 的确切诞生日为 1999-04-28（commit 02daf150a4434305b9181b0ac9150762afb4c8ce），旧叙事 “2000.3.14 与 2000.3 两种说法” 均不准确，2000.3.20 为 4.0-RELEASE 发布日期而非 Jails commit
+- 经 bsd_commits.db commits 表与 commit_files 表交叉验证，Jails 的确切诞生日为 1999-04-28（commit 02daf150a4434305b9181b0ac9150762afb4c8ce）〔待核：原文截断，后文待回源〕
 - VMware 博客是否构成“VMware 阵营”的正式立场须审慎判断——博客作者 Rostislav M. Georgiev 以 VMware Open Source Technology Center 工程师身份署名、发布于 VMware 官方开源博客，属员工署名技术博客性质，非 VMware 公司正式立场声明；“被动跟进”的判定标准须明确——若以“主动预告”为标准，Jails 的 VNET 改
 - Docker 是否“工程粗糙”存在争议，Docker 阵营会反驳镜像与编排是工程创新而非营销；“劣币驱逐良币”的判定标准须明确——若以“生态完整性”为标准，Docker 非劣币 [考据完成：2026-07-28 该处存疑标注属史料缺口，须待原始档案公开后方可补充确证]；phk 自评"shitty Virtualization"是否构成“劣币”的自我承认须结合其行文风格判断——phk 行文惯用自嘲，
 - chroot 是否 “完全不安全” 存在争议，非 root 进程仍有一定隔离
@@ -59,6 +59,10 @@ volume: 第05卷-freebsd的工程化奠基
 
 - Kamp "Jails: Confining the Omnipotent Root"(BSDCon 2000)；jail(2) 手册页；phk 个人网站；Poul-Henning Kamp. Add the jail system call. freebsd-src [DB/OL]. 1999-04-28T11:28:49Z. 02daf150a4434305b9181b0ac9150762afb4c8ce ［A］
 
+
+<!-- dangan-20260908 消解回写 -->
+- FreeBSD. 社区论文：[FP-2016-015] Jail Networking（Devin Teske，2016）<https://papers.freebsd.org/2016/meetbsd/teske-jail_networking/>[EB/OL]. 2016. ［待核·needs_fix］［DKC-1873→fulltext:5997］
+<!-- /dangan-20260908 -->
 ## 93.1.2 2000 年的工程语境
 
 - 要点：2000 年互联网泡沫期 ISP 托管需求激增，共享主机需要安全隔离，chroot 仅隔离文件系统不隔离网络与进程，ph

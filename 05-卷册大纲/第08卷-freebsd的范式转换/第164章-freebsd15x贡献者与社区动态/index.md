@@ -26,7 +26,7 @@ volume: 第08卷-freebsd的范式转换
 - 总纲第 7 条——硬件与软件辩证：32 位平台退役是 FreeBSD 对硬件代际更替的工程回应——AMD 64 位 Opteron 2003.4.22 发布至今已逾 22 年，与 Intel 8086 1978 发布时 x86 整体年龄相当；总纲第 25 条——终结与延续：32 位 “硬件平台” 终结但 32 位 “应用兼容性” 通过 lib32 延续，体现 BSD 项目 “终结以延续为前提” 的
 - 总纲第 17 条——软件工程：弃用工具的 “标记-推迟-移除” 三阶段流程是软件工程治理成熟度的体现，bsdlabel 的 longstanding buffer overflow 漏洞成为推动弃用的直接动因——维护资源应聚焦当代工具而非历史包袱；总纲第 3 条——形式主义膨胀：弃用标记本身是形式化治理的延伸，每次标记都是对工具生命周期的形式化宣告
   - 辨析：须严格区分 “bsdlabel/f
-- 总纲第 7 条——硬件与软件辩证：这批驱动的批量标弃用是硬件代际更替在软件层面的直接体现——AGP、软驱、FireWire 分别代表 1990 年代末至 2000 年代中期的主流接口技术，它们的退役不是技术优劣判断，而是硬件生态迭代的必然结果；总纲第 17 条——软件工程：“标记弃用-推迟一个大版本-移除” 三阶段流程是 FreeBSD 对待老旧驱动的标准工程实践，给用户至少一个大版本周期（约 2
+- 总纲第 7 条——硬件与软件辩证：这批驱动的批量标弃用是硬件代际更替在软件层面的直接体现——AGP、软驱、FireWire 分别代表 1990 年代末至 2000 年代中期的主流接口技术，它们的退役不是技术优劣判断，而是硬件生态迭代的必然结果；〔待核：原文截断，后文待回源〕
 - 总纲第 25 条——终结与延续：FreeBSD 的 Dedication 传统是项目历史意识的体现——每个大版本都可能献词给一位逝去或有重大贡献的社区成员；这一传统提醒每位 committer：他们写的每一行代码都将加入一个持续 30 多年的代码库，这个代码库的寿命将超过任何个人的职业生涯；代码是给后人的遗产
   - 辨析：Dedication 献词选择由 Release Engineering
 
@@ -43,6 +43,10 @@ volume: 第08卷-freebsd的范式转换
 
 - FreeBSD 15.0-RELEASE Release Notes；lists.freebsd.org dev-commits-src-all 2025-October/061132；Phabricator D52739；FreeBSD UPDATING 20251001 条目 ［A］
 
+
+<!-- dangan-20260908 消解回写 -->
+- Let. 's Encrypt. Statistics [EB/OL]. [2026-07-19]. <https://letsencrypt.org/stats/>[EB/OL]. 2026. ［DKC-2361→fulltext:6175］
+<!-- /dangan-20260908 -->
 ## 163.10.2 i386/armv6/32 位 powerpc 架构在 15.0 正式退役
 
 - 要点：FreeBSD 15.0-RELEASE 正式退役 i386、armv6、32 位 powerpc 三大 32 位硬件平台，仅 armv7 作为 “最后支持的 32 位平台” 保留 Tier-2
@@ -62,7 +66,7 @@ volume: 第08卷-freebsd的范式转换
 
 ## 163.8.3 30 周年后社区生态（2023-2026）
 
-- 要点：FreeBSD 于 2023 年 6 月 19 日迎来 30 周年纪念（自 1993.6.19 Fr
+- 要点**：FreeBSD 于 2023 年 6 月 19 日迎来 30 周年纪念（自 1993.6.19 FreeBSD 1.0 发布）
 - FreeBSD Foundation. 30th Anniversary [EB/OL]. (2023-06)[2026-07-19]. <https://freebsdfoundation.org/blog/>; BSDCan Conference [EB/OL]. [2026-07-19]. <https://www.bsdcan.org/>. ［B］
 
 ## 163.8.4 FreeBSD 在 AI 工作负载中的角色

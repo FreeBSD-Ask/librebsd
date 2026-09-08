@@ -8,9 +8,9 @@ volume: 第03卷-伯克利学术文化外溢影响
 
 ## 要点
 
-- 互联网前 BSD 时代（1969-1983）的协议生态包括：（1）NCP（Network Control Program，ARPANET 1971-1983 使用）；（2）X.25（CCITT 1976 标准的分组交换协议，用于 Tymnet、Telenet 等公共网络）；（3）SNA（IBM 1974 发布的系统网络架构）；（4）DECnet（DEC 1975 发布的网络架构）；（5）UUCP（
+- 互联网前 BSD 时代（1969-1983）的协议生态包括：（1）NCP（Network Control Program，ARPANET 1971-1983 使用）；（2）X.25（CCITT 1976 标准的分组交换协议，用于 Tymnet、Telenet 等公共网络）；（3）SNA（IBM 1974 发布的系统网络架构）；（4）DECnet（DEC 1975 发布的网络架构）；（5）〔待核：原文截断，后文待回源〕
 - BSD 开发者参与 IETF 的关键事件包括：（1）Joy 与 Leffler 的 4.2BSD TCP/IP 实现影响 IETF TCP/IP 标准化；（2）Paul Mockapetris（ISI）的 DNS 设计（RFC 882/883 1983）由伯克利四研究生实现为 BIND；（3）Jonathan Postel（USC ISI，RFC 编辑）与 CSRG 的合作；（4）Allman 的
-- BIND 的全球统治：1990 年代 BIND 运行全球约 90% 的 DNS 服务器，BIND 的统治地位带来安全责任，BIND 安全漏洞史包括：（1）BIND 4.9.x 1990 年代后期多个远程漏洞；（2）BIND 8.2.x 1999 年 NXT 记录等多个漏洞（CERT Advisory CA-1999-14）；（3）BIND 9 的多次 CVE；BIND 的安全问题推动替代品（Pow
+- BIND 的全球统治：1990 年代 BIND 运行全球约 90% 的 DNS 服务器，BIND 的统治地位带来安全责任，BIND 安全漏洞史包括：（1）BIND 4.9.x 1990 年代后期多个远程漏洞；（2）BIND 8.2.x 1999 年 NXT 记录等多个漏洞（CERT Advisory CA-1999-14）；（3）BIND 9 的多次 CVE；〔待核：原文截断，后文待回源〕
 - Sendmail 的替代品：（1）Qmail 1995 年由 D. J. Bernstein 发布，强调安全性，Qmail 的安全设计（最小特权、沙箱）使 Sendmail 安全问题凸显，许可证：公有领域（Bernstein 本人于 cr.yp.to/qmail/dist.html 声明将 qmail 置于公有领域）[考据脚注：经 cr.yp.to/qmail/dist.html 一手来源确证。]
 
 ## 史料
@@ -32,7 +32,7 @@ volume: 第03卷-伯克利学术文化外溢影响
 
 ## 辨析
 
-- NCP（Network Control Program）使用时间确认为 1971-1983 年（ARPANET 主机间通信协议，由 BBN 的 Steve Crocker 团队设计，1983.1.1 ARPANET 切换至 TCP/IP 后弃用）；X.25 为 CCITT 1976 年标准的分组交换协议（用于 Tymnet、Telenet 等公共数据网络，多源一致）；SNA（Systems Net
+- 要点**：ARPANET 1969 年建立，由 ARPA（Advanced Research Projects Agency，1958 年成立）资助，Bolt Beranek and Newman（BBN）公司承建，1969 年 10 月 29 日首个节点（UCLA，Leonard Kleinrock 实验室）与第二节点（SRI，Douglas Engelbart 实验室）间发送首个消息 "lo"（本意 "login" 但系统崩溃），1969 年底四节点拓扑（UCLA、SRI、UC Santa Barbara、Utah），早期使用 NCP（Network Control Program）
 - Mockapetris DNS RFC 882/883 发布时间确认为 1983 年 11 月（RFC 882"Domain Names: Concepts and Facilities"与 RFC 883"Domain Names: Implementation and Specification"，作者 Paul Mockapetris，USC ISI）；SMTP RFC 821 发布时间确认
 - BIND 1990 年代市场份额（约 90%）——多源引用但缺乏权威统计来源（Netcraft 等统计机构 1990 年代后期的 DNS 服务器市场份额数据保留 [考据完成：2026-07-28 该处存疑标注属史料缺口，须待原始档案公开后方可补充确证]）；BIND 4.9.x 具体漏洞时间与版本——CERT/CC 安全公告档案为权威来源，具体漏洞编号与版本须以 CERT/CC 公告为准；BIND
 - Qmail 发布时间确认为 1995 年（Daniel J. Bernstein 发布，强调安全性，许可证为公有领域——Bernstein 本人于 cr.yp.to/qmail/dist.html 声明将 qmail 置于公有领域）；Postfix 发布时间确认为 1998 年（原名 VMailer，IBM T.J. Watson 研究中心 Wietse Venema 开发，使用 IBM Publ
@@ -126,3 +126,9 @@ volume: 第03卷-伯克利学术文化外溢影响
 - [BSD Now EP197] Pennington J. BSD Now: 197: Relaying the good news[EB/OL]. (2017-06-07)[2026-08-15]. <https://www.bsdnow.tv/197>.
 
 <!-- /PODCAST_REVIEW -->
+
+<!-- dangan-20260908 消解回写 -->
+- Kleinrock. L. (2009/2011). The Day the Infant Internet Uttered its First Words [个人官方网站档案，基于 UCLA IMP Log 原始记录]. <https://www.lk.cs.ucla.edu/internet_first_words.html>[EB/OL]. 2009. ［DKC-1469→fulltext:5908］
+- Living. The ARPANET was retired in 1990[EB/OL]. 1990. ［DKC-1478→fulltext:5910］
+- Mockapetris. P. (1983) RFC 882/883[Z]. 1983. ［DKC-1485→fulltext:5914］
+<!-- /dangan-20260908 -->

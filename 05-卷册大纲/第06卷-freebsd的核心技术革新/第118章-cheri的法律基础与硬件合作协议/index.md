@@ -4,8 +4,6 @@ id: CH118
 volume: 第06卷-freebsd的核心技术革新
 ---
 
-# 第118章 cheri的法律基础与硬件合作协议
-
 # 第 118 章 cheri的法律基础与硬件合作协议
 
 ## 要点
@@ -84,3 +82,7 @@ volume: 第06卷-freebsd的核心技术革新
 - [BSD Now EP50] Pennington J. BSD Now: 50: VPN, My Dear Watson[EB/OL]. (2014-08-13)[2026-08-15]. <https://www.bsdnow.tv/50>.
 
 <!-- /PODCAST_REVIEW -->
+
+<!-- dangan-20260908 消解回写 -->
+- Watson. R. N. M. et al. (2024). CHERI: Hardware-Enabled C/C++ Memory Protection at Scale. IEEE Security & Privacy, 22(4)[C]. 2024. ［DKC-1908→fulltext:6004］
+<!-- /dangan-20260908 -->

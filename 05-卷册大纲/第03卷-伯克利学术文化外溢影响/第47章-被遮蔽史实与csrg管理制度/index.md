@@ -34,25 +34,6 @@ volume: 第03卷-伯克利学术文化外溢影响
 - DARPA 合同档案；伯克利科研管理档案；CSRG 预算文件（Bancroft CU-551）；McKusick (1999)；Leslie, S. W. (1993) "The Cold War and American Science" ［A］
 - AT&T UNIX 商业许可证档案；Sun Microsystems 注册文件（1982.2.24）；BSDi 公司档案；伯克利 OTL 档案；Walnut Creek CDROM 档案；McKusick (1999) "Twenty Years of Berkeley Unix" ［B］### 史观映射> 没有人能被 “教会” 写操作系统——McKusick 可以让研究生坐在终端前，但不能替他们的手指找到键盘上的路径。CSRG 的学徒制不是教育制度，而是一种在承认启蒙不可能之后仍然选择把工具递到别人手上的姿态。man pages 不是教材，而是一群人把自己摸索出来的东西写下来，让后来者少走弯路——写文档的人度不了别人，但写文档这件事本身就是在修行。伯克利的地理给了这一切一个容器：Evans Hall 四楼东翼的办公室、Sproul Plaza 上尚未散去的抗议标语、隔湾相望的硅谷——自由言论运动的遗产与 hacker 伦理在此渗透而非因果，反战一代的 “质疑权威” 与源代码分发的 “信息自由” 只在气质上共鸣，而非逻辑上衔接。而 Reagan 的 SDI 经费与 NSFNET 骨干、80386 的普及与 RISC 的兴起、Heyman 与 Tien 两任校长的治下——这些力量从外部挤压，使 CSRG 在学术自治的缝隙中走完了从研究小组到开源先驱的全部路程> 本章新增 22.21 节专述 CSRG 档案的去向与公开化：显而易见却罕有人知道的是，CSRG 1995 年解散后档案物理去向长期模糊——伯克利 Bancroft 图书馆 CU-551 全宗（1974-2005，12.5 线性英尺，10 罐档案盒）保存了纸质手册、9 磁道磁带、QIC 磁带等载体，而 McKusick 个人整理的 CSRG Archive CD-ROM 套装（4 CD 集，$99，CD-ROM #4 含 " Final /usr/src including SCCS files "）则是另一条平行的史料保存路径。CSRG 档案的公开化与 BSD 许可证的演化（1999.7.22 移除广告条款）以及 USL 诉讼前档案的法律状态紧密关联，史家研究 CSRG 时期事件需同时检索 Bancroft 图书馆全宗目录、McKusick CD-ROM 套装、SCCS 元数据、纸质手册与邮件列表归档五类载体——这是 CSRG 解散后留下的隐性遗产，也是 BSD 史学不可回避的考据挑战---
 
-<!-- PODCAST_MINE v20260827 -->
-<!-- 章节主题过滤：第47章-被遮蔽史实与csrg管理制度 第 47 章 被遮蔽史实与csrg管理制度（实体评分 ≥2 命中才入选） -->
-<!-- 匹配期数：3 期，扫描 segments：3351 条 -->
-
-### 要点（播客口述史提取）
-- started. So the original code import of the CSRG source into FreeBSD already（BSD Now EP212 @ 1264.6）
-
-### 史料（播客当事人陈述）
-- （待人工提取）
-
-### 史观（播客当事人观点与总纲映射）
-- （该章节匹配播客中未提取到当事人观点性陈述）
-
-### 辨析（播客争议与存疑点）
-- （该章节匹配播客中未提取到争议性陈述）
-
-### 文献（播客参考条目）
-- [BSD Now EP190] Pennington J. BSD Now: 190: The Moore You Know[EB/OL]. (2017-04-19)[2026-08-15]. https://www.bsdnow.tv/190.
-- [BSD Now EP212] Pennington J. BSD Now: 212: The Solaris Eclipse[EB/OL]. (2017-09-20)[2026-08-15]. https://www.bsdnow.tv/212.
-- [BSD Now EP273] Pennington J. BSD Now: Episode 273: A Thoughtful Episode | BSD Now 273[EB/OL]. (2018-11-23)[2026-08-15]. https://www.bsdnow.tv/273.
-
-<!-- /PODCAST_MINE -->
+<!-- dangan-20260908 消解回写 -->
+- Leslie. The Cold War and American Science[Z]. 1993. ［DKC-1304→fulltext:5860］
+<!-- /dangan-20260908 -->

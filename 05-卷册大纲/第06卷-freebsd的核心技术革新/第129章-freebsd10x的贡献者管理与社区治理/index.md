@@ -77,8 +77,13 @@ volume: 第06卷-freebsd的核心技术革新
 
 **文献**：
 
-- [BSD Now EP134] Pennington J. BSD Now: 134: Marking up the Ports tree[EB/OL]. (2016-03-24)[2026-08-15]. https://www.bsdnow.tv/134.
-- [BSD Now EP57] Pennington J. BSD Now: 57: The Daemon's Apprentice[EB/OL]. (2014-10-01)[2026-08-15]. https://www.bsdnow.tv/57.
-- [BSD Now EP36] Pennington J. BSD Now: 36: Let's Get RAID[EB/OL]. (2014-05-07)[2026-08-15]. https://www.bsdnow.tv/36.
+- [BSD Now EP134] Pennington J. BSD Now: 134: Marking up the Ports tree[EB/OL]. (2016-03-24)[2026-08-15]. <https://www.bsdnow.tv/134>.
+- [BSD Now EP57] Pennington J. BSD Now: 57: The Daemon's Apprentice[EB/OL]. (2014-10-01)[2026-08-15]. <https://www.bsdnow.tv/57>.
+- [BSD Now EP36] Pennington J. BSD Now: 36: Let's Get RAID[EB/OL]. (2014-05-07)[2026-08-15]. <https://www.bsdnow.tv/36>.
 
 <!-- /PODCAST_REVIEW -->
+
+<!-- dangan-20260908 消解回写 -->
+- FIRST.org.. Common Vulnerability Scoring System v3.0: Specification Document [Z]. (2015-06)[2026-07-22]. <https://www.first.org/cvss/specification-document>[EB/OL]. 2015. ［待核·needs_fix］［DKC-2075→fulltext:6070］
+- NTP. Project. NTP 4.2.8p Series Security Notices [EB/OL]. (2014-2016)[2026-07-22]. <https://www.ntp.org/downloads/security-notices/>[EB/OL]. 2014. ［待核·needs_fix］［DKC-2078→fulltext:6071］
+<!-- /dangan-20260908 -->

@@ -8,11 +8,11 @@ volume: 第09卷-netbsd的历史
 
 ## 要点
 
-- NetBSD 8.0（**2018.7**）引入 aarch64（ARM64）支持，由 Ryo Shimizu 等推动；~~开发历时 3 年（2015-2018）~~（经 netbsd.db 验证：aarch64 后端最早由 joerg 于 2013-02-04 引入 LLVM/Clang AArch64 后端，实际开发周期约 5 年 2013-2018）；涉及内核 ABI、虚拟内存、中断控制器（
+- NetBSD 8.0（**2018.7**）引入 aarch64（ARM64）支持，由 Ryo Shimizu 等推动；~~开发历时 3 年（2015-2018）~~（经 netbsd.db 验证：aarch64 后端最早由 joerg 于 2013-02-04 引入 LLVM/Clang AArch64 后端，实际开发周期约 5 年 2013-2018）；〔待核：原文截断，后文待回源〕
 - NVMM 设计文档由 Maxime Villard 撰写，散见于 man **nvmm(4)**、tech-virt 邮件列表、Villard 个人博客；源码考据需对照 CVS commit log 与 Villard 的 commit 署名；考据需注意 NVMM 在 8.0 之后的持续演进
-- NetBSD 8.0（**2018.7**）引入 KASLR（Kernel Address Space Layout Randomization）内核安全特性；旧内核无 KASLR，存在固定地址空间布局的攻击面；KASLR 由 Maxime Villard 实现；此改进让 NetBSD 在内核安全上追赶 OpenBSD，体现 “在虚假中寻找仅存的真实”。~~原叙事中 “NetBSD 8.0 引入
+- NetBSD 8.0（**2018.7**）引入 KASLR（Kernel Address Space Layout Randomization）内核安全特性；旧内核无 KASLR，存在固定地址空间布局的攻击面；KASLR 由 Maxime Villard 实现；此改进让 NetBSD 在内核安全上追赶 OpenBSD，体现 “在虚假中寻找仅存的真实”。〔待核：原文截断，后文待回源〕
 - 2018 年 ARM64 虚拟化成竞争点：Linux KVM 在服务器领先，FreeBSD bhyve 偏 x86，NetBSD 8.0 推 ARM64 虚拟化 + SMP，OpenBSD 6.3 安全利基，Windows Hyper-V 守企业 x86；NetBSD 8.0 以“ARM64 虚拟化 + 多核”强化可移植哲学的现代延伸。
-- 8.x 周期 NetBSD Security Officer Team 的 15 个 SA 在数量、节奏、覆盖面三个维度呈现“过渡期”特征——年化速率约 7.5 SA/年（2018 年 9 个、2019 年 6 个），高于 9.x 周期的约 3.6 SA/年，反映 8.0 新代码引入的攻击面集中暴露；**8.x 周期 SA 发布节奏**：2018 年 9 个 SA 集中于 8.0 发布前后（SA2
+- 8.x 周期 NetBSD Security Officer Team 的 15 个 SA 在数量、节奏、覆盖面三个维度呈现“过渡期”特征——年化速率约 7.5 SA/年（2018 年 9 个、2019 年 6 个），高于 9.x 周期的约 3.6 SA/年，反映 8.0 新代码引入的攻击面集中暴露；〔待核：原文截断，后文待回源〕
 
 ## 史料
 
@@ -84,3 +84,7 @@ volume: 第09卷-netbsd的历史
 - [BSD Now EP200] Pennington J. BSD Now: 200: Getting Scrubbed to Death[EB/OL]. (2017-06-28)[2026-08-15]. <https://www.bsdnow.tv/200>.
 
 <!-- /PODCAST_REVIEW -->
+
+<!-- dangan-20260908 消解回写 -->
+- Bluetooth. SIG. Bluetooth BR/EDR Security Vulnerability [EB/OL]. (2019)[2026-07-22]. <https://www.bluetooth.com/security/>[EB/OL]. 2019. ［待核·needs_fix］［DKC-2443→fulltext:6190］
+<!-- /dangan-20260908 -->
