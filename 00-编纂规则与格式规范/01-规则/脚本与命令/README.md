@@ -6,7 +6,7 @@
 
 ## 脚本文件
 
-规则文件中引用的现存 Python 脚本副本（共 14 个 .py 副本，从 `script/` 目录复制，原文件保持不变；`backup_databases.py` 与 `sqlite2duckdb.py` 为 2026-08-18 新增固定脚本，直接存放于本目录）。
+规则文件中引用的现存 Python 脚本副本（共 14 个 .py 副本，从 `script/` 目录复制，原文件保持不变；`backup_databases.py` 与 `sqlite2duckdb.py` 为 2026-08-18 新增固定脚本、`podcast_db_final_sync.py` 为 2026-08-26 新增收尾脚本、`sync_refactor2026_baseline.py` 为 2026-09-08 新增口径同步脚本，均直接存放于本目录）。
 
 | 文件名 | 用途说明 | 规则引用位置 |
 | --- | --- | --- |
