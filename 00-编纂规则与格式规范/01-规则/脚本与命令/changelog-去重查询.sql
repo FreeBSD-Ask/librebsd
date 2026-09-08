@@ -14,7 +14,7 @@ SELECT date, COUNT(*) FROM entries GROUP BY date ORDER BY date;
 -- 3. 条目数一致性复核
 SELECT COUNT(*) FROM entries;
 
--- 4. 合并条目时删除冗余条目（须逐个核对后执行，禁批量禁脚本）
+-- 4. 合并条目时删除冗余条目（须逐个核对后执行）
 -- DELETE FROM entries WHERE id = <待删除条目id>;
 
 -- 5. 删除无效条目（须逐个核对后执行）
