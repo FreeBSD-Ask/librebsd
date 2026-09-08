@@ -42,7 +42,7 @@
 
 规则文件中引用的所有脚本、程序、命令（含数据库规则操作）独立存储于 [脚本与命令/](脚本与命令/README.md) 子目录下，与规则 .md 文件形成“规则 + 可执行资源”的完整自洽单元。该子目录含 4 类资源：
 
-- **脚本文件**（14 个 .py 副本）：`auto_ingest_new_pdfs.py`、`cleanup_duplicates_and_errors.py`、`scan_all_gaps_v4.py`、`rename_volume_dirs_20260726.py`、`fix_remaining_volume_refs_20260726.py`、`build_folder_databases.py`、`dedup_folder_databases.py`、`resolve_cross_references.py`、`audit_folder_db_integrity.py`、`cleanup_duplicate_sources.py`、`dedup_databases_global.py`、`sync_cross_references_after_cleanup.py`、`optimize_folder_databases.py`、`backup_databases.py`（2026-08-18 新增，数据库常设备份与轮换）。注（2026-08-11 合规审计）：其中 11 个副本的 `script/` 源文件已缺失（仅 `auto_ingest_new_pdfs.py`、`build_folder_databases.py` 源文件现存），缺失登记详见 [脚本与命令/README.md](脚本与命令/README.md) “缺失脚本登记”小节
+- **脚本文件**（14 个 .py 副本）：`auto_ingest_new_pdfs.py`、`cleanup_duplicates_and_errors.py`、`scan_all_gaps_v4.py`、`rename_volume_dirs_20260726.py`、`fix_remaining_volume_refs_20260726.py`、`build_folder_databases.py`、`dedup_folder_databases.py`、`resolve_cross_references.py`、`audit_folder_db_integrity.py`、`cleanup_duplicate_sources.py`、`dedup_databases_global.py`、`sync_cross_references_after_cleanup.py`、`optimize_folder_databases.py`、`backup_databases.py`（数据库常设备份与轮换）。注：其中 11 个副本的 `script/` 源文件已缺失（仅 `auto_ingest_new_pdfs.py`、`build_folder_databases.py` 源文件现存），缺失登记详见 [脚本与命令/README.md](脚本与命令/README.md) “缺失脚本登记”小节
 - **程序命令**（3 个 .md）：AutoCorrect / `md-padding@latest` / `markdownlint2` 清理工具、Tesseract OCR、pandoc EPUB 转换的调用规范
 - **数据库操作 SQL**（7 个 .sql）：`changelog` 去重查询、`references` 表操作、`reference_duplicates` 表操作、`chapter_matches` 表操作、`chapter_reviews` 表操作、`folder_db_common_schema`（文件夹级数据库通用 Schema）、`folder_db_cross_references`（文件夹级数据库交叉引用查询）
 - **未实现脚本登记**：`renumber_subsections_120.py`、`renumber_subsections_vol5.py` 两个规则引用但未实现的脚本
@@ -51,20 +51,19 @@
 
 ## 规则调用方式
 
-撰写正文前须先查阅本文件（规则/README.md），明确本轮工作涉及哪几类规则，再按需跳转至对应文件逐条对照执行。各类规则的查阅时机如下：
+开始任何撰写、修改、考据工作前须先查阅本文件（规则/README.md），明确本轮工作涉及哪几类规则，再按需跳转至对应文件逐条对照执行。各类规则的查阅时机如下：
 
 > **正文编纂已禁止**：`06-正式书稿/` 已整体移除，不再撰写正文；写作规则.md“正式书稿格式规范”小节与操作手册模板 A、08-ai逐章生成操作流程均已停用。大纲、考据、数据库等工作照常执行。
 
 - **涉及史料考据时**：查阅 规则/考据规则.md，重点核对 0 信任原则、多源交叉验证不可靠性规则、来源可信度硬性约束、防幻觉原则等。
 - **涉及文字、标点、格式时**：查阅 规则/写作规则.md，重点核对标点符号规则、路径与 IP 加粗规则、命令行间代码规则、手册页引用规则、中文引号强制规则、行间代码与代码块不可篡改规则、中英文混合判断原则、术语翻译统一规则、人名翻译规则等。
 - **涉及大纲文件结构化组织时**：查阅 规则/写作规则.md 结构化大纲规则小节，重点核对一段一要点原则、综合使用 Markdown 标记原则、不混杂原则、结构清晰原则、积极使用表格原则等。
-- **涉及工作流程、修改规范时**：查阅 规则/流程规则.md，重点核对修改前后复核规则、禁批量与禁脚本规则、AutoCorrect 调用规范、三轮完整执行规则、临时文件规则等。
+- **涉及工作流程、修改规范时**：查阅 规则/流程规则.md，重点核对修改前后复核规则、脚本执行安全规程、AutoCorrect 调用规范、三轮完整执行规则、临时文件规则等。
 - **涉及批量过滤、黑名单、删除型修复（内容提取/清理/去重等）时**：查阅 规则/流程规则.md 的“批量过滤与删除型修复的安全规则”小节，重点核对正向收紧优先、删除前影响面评估、双向复核（false positive 与 false negative）、对称验证、禁止追加式黑名单膨胀、发现误杀即回退等。
 - **涉及特定主题（合规认证、Linux 文化挪用、仅 FreeBSD 内容跨 BSD/UNIX/macOS 扩展）时**：查阅 规则/主题规则.md，重点核对合规认证标准叙事要求、FreeBSD 不持有证书须明确区分、Linux 文化挪用研究规范、仅 FreeBSD 内容识别规则、大纲是否真实缺少核查流程、BSD/UNIX/macOS 三档分别判定、五字段补全规范等。
 - **涉及一刻哲学引用、释读、映射时**：查阅 规则/释读规则.md，重点核对手资料原则、不信任转引原则、全面释读原则、辩证性原则、区分原则、自反性检验、覆盖所有总纲原则、禁止模板化原则、结合采访实际内容原则等。
 - **涉及操作系统功能实现对比或分析结果回写代码仓库数据库（02-10）时**：查阅 规则/功能对比与数据库回写规则.md，重点核对首现年数据源约束、0 信任原则适用、词典误报校验、首现年合理性审核、五维对比字段、去重回写原则、幂等可重跑、元数据留痕、禁止事项等。
 - **涉及 changelog 数据库更新时**：查阅 规则/流程规则.md 的 changelog 去重规则小节，重点核对去重检查触发时机、无效内容与重复内容判定标准、去重操作规范（SQL 查询辅助）、去重后验证要求等。
-- **涉及文件大小检查时**：原“大文件阈值规则”小节已自 2026-08-11 废止（100KB 拆分限制不再适用），历史拆分的文件保持现状即可，不再按阈值拆分。
 - **涉及新增 PDF/EPUB/CAJ 文献入库时**：查阅 规则/流程规则.md 的新增文献自动检测规则小节，重点核对自动检测触发条件、去重执行要求、元数据验证标准、章节匹配置信度阈值、综述追加程序、CSV 与参考文献总目更新、日志核验协议、自动入库与人工复核关系等；详细操作步骤见 操作手册/08-ai逐章生成操作流程.md 第 8.4 节。
 - **涉及重复或错误文档清理时**：查阅 规则/流程规则.md 的重复与错误文档清理规则小节，重点核对重复文档判定标准（SHA-256 精确重复与标题/作者/年份模糊重复）、错误文档判定标准（文件损坏、无法读取、文件过小、内容与标题不符、OCR 解密失败）、清理流程七步（识别→生成清单→人工抽样复核→执行删除→数据库更新→日志记录→看板更新）、删除前核验、删除后验证、清理与自动入库的关系等。
 - **涉及过时内容处理（工作日志式日期标注、废止规则小节、过时文件）时**：查阅 规则/流程规则.md 的过时内容处理规则小节，重点核对工作日志式标注判定标准与删除方式、现行时态改写、废止小节与过时文件“复核→备份→删除→修引用→记 changelog”流程、删除前备份与 MANIFEST 登记、豁免清单（史料原文、历史快照报告、GB/T 著录、机器可读元数据、文件名日期、历史事实日期、归档与临时区）等。
@@ -73,10 +72,10 @@
 - **涉及文件夹级数据库交叉引用同步时**：查阅 规则/流程规则.md 的其他文件夹转数据库规则小节的“交叉引用同步”子小节，重点核对同步脚本用法（sync_cross_references_after_cleanup.py）、映射表构建（数据库 merged 记录优先、cleanup_report.md 兜底）、6 种引用形式（markdown 链接/wikilink/脚注/章节引用/CSV 路径字段/JSON path 字段）、扫描范围、数据库 cross_references 表同步、同步后核验等。
 - **涉及文件夹级数据库源文件清理时**：查阅 规则/流程规则.md 的其他文件夹转数据库规则小节的“源文件清理规则”子小节，重点核对适用场景（6 个非核心文件夹）、不适用范围（sacred/规则/大纲/正文/变更记录）、关键索引文件排除清单（17 个被 CLAUDE.md 或 GitBook 依赖的文件）、清理方式（原 `_delete_source_files.py` 已缺失，2026-08-11 起按人工清理执行）、数据库 status='deleted' 更新、folder_db_registry.csv source_files_status 字段、日志要求等。
 - **涉及文件夹级数据库 Schema 优化与空间回收时**：查阅 规则/流程规则.md 的其他文件夹转数据库规则小节的“Schema 优化与空间回收”子小节，重点核对优化脚本用法（optimize_folder_databases.py 五种模式）、Schema 优化内容（v1.2→v1.3：schema_meta 表 + 9 个预定义索引 + 删除空扩展表 + 回填 update_log）、幽灵块清理规则（6 个非 sacred 数据库，sacred 例外）、VACUUM 空间回收规则（数据完整性约束）、schema_version 升级核验、日志要求等。
-- 涉及数据库操作加速与 PRAGMA 优化时查阅 [00-编纂规则与格式规范/01-规则/流程规则.md](00-编纂规则与格式规范/01-规则/流程规则.md)（**已废止**：SQLite PRAGMA 优化随 2026-08-25 全库 DuckDB 化失效，DuckDB 优化走“DuckDB 分析层与主存储层规则”的 `sqlite2duckdb.py --optimize`）
+- **涉及数据库性能优化时**：查阅 规则/流程规则.md 的“DuckDB 分析层与主存储层规则”小节，DuckDB 优化统一走 `脚本与命令/sqlite2duckdb.py --optimize`（ART 索引重建 + CHECKPOINT + ANALYZE + manifest）。
 - **涉及历史镜像站/档案馆批量挖掘、扫描件 OCR、全文索引入库时**：查阅 规则/镜像站挖掘与OCR流水线规则.md，重点核对镜像站探查与批量下载（限流应对/AppleDouble 过滤/损坏 PDF 重下）、OCR 流水线（文本层优先、RapidOCR 替代 Tesseract、8 进程并行、质量分级）、索引入库（组/文件级双轨、幂等、大纲回写增量安全）、SFU PUPS 工程经验教训（Bash 内联 Python 转义坑、数据库锁、后台任务跨会话等）。
 - **涉及重构2026 大纲目录书评挂靠、全文外迁与回写换算时**：查阅 规则/流程规则.md 的「重构大纲目录书评挂靠与全文外迁规则」小节，重点核对小节挂靠形态（编号节+src 标注、禁折叠体、目录页禁载全文）、卷末章升格条件与每卷至多一个、外迁目录与分卷文件体例、逐字保真与三轮复核要求、metrics/meta 计数同步等。
-- **涉及重构2026 大纲目录口径同步（index.html 结构/计数变动后各文件口径声明同步）时**：查阅 规则/流程规则.md 的「重构大纲目录口径同步规则（2026-09-08 新增）」小节，重点核对唯一权威来源（index.html doc-metrics 三元组）、触发条件、同步脚本 `脚本与命令/sync_refactor2026_baseline.py`（--check/--sync/--list）三维度检测（口径三元组 marker-drift/present-stale/exempt、ref-stale 已归档文件引用、pending-stale 未消解 ⬜ 待填）、BEGIN/END 标记块约定与表格行豁免、文件级历史声明豁免原则、禁止手写不一致现行口径与批量改写等。
+- **涉及重构2026 大纲目录口径同步（index.html 结构/计数变动后各文件口径声明同步）时**：查阅 规则/流程规则.md 的「重构大纲目录口径同步规则」小节，重点核对唯一权威来源（index.html doc-metrics 三元组）、触发条件、同步脚本 `脚本与命令/sync_refactor2026_baseline.py`（--check/--sync/--list）三维度检测（口径三元组 marker-drift/present-stale/exempt、ref-stale 已归档文件引用、pending-stale 未消解 ⬜ 待填）、BEGIN/END 标记块约定与表格行豁免、文件级历史声明豁免原则、禁止手写不一致现行口径与批量改写等。
 - **涉及数据库格式统一（索引命名、schema_meta 键集合、table_count 统计、扩展表合并、引用查询加速索引、模块化分层设计、冗余文件清理、删除安全）时**：查阅 规则/流程规则.md 的“数据库格式统一规则”子小节，重点核对索引命名规范（`idx_cross_references_*` 前缀、`files` 表索引集合）、schema_meta 键集合规范（9 个标准键）、table_count 统计口径（不含 FTS5 影子表）、扩展表合并规范（5 组合并表含 record_type 字段）、引用查询加速索引规范（`idx_cross_references_reference_type`、`idx_cross_references_source_block_id`）、模块化分层设计规范（一库一文件夹）、冗余文件清理规范、删除安全规范（预览→备份→确认→执行→复核 5 步流程）等。
 
 ## 与 CLAUDE.md 协作指南的关系
