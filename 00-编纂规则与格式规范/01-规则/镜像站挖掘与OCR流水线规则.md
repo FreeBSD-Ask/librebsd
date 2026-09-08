@@ -33,7 +33,7 @@
 ### 2.1 引擎选择
 
 - **首选 Tesseract**：按流程规则“OCR 后处理”小节执行（`tesseract <input> <output> -l eng+chi_sim+fra+deu --psm 1`，输出 md 至 `ocr/` 目录）。
-- **RapidOCR 替代（2026-08-07 确立）**：当 Tesseract 无法安装（winget/choco 权限受限、静默安装被拒）时，改用 **RapidOCR**（`rapidocr_onnxruntime`，纯 Python + onnxruntime，清华镜像 `-i https://pypi.tuna.tsinghua.edu.cn/simple` 安装，模型自动下载）。识别质量对英文印刷体良好。
+- **RapidOCR 替代**：当 Tesseract 无法安装（winget/choco 权限受限、静默安装被拒）时，改用 **RapidOCR**（`rapidocr_onnxruntime`，纯 Python + onnxruntime，清华镜像 `-i https://pypi.tuna.tsinghua.edu.cn/simple` 安装，模型自动下载）。识别质量对英文印刷体良好。
 - **流水线参数**：pymupdf 渲染 200-250dpi → RapidOCR 识别 → 输出 `ocr/<原文件名>.md`。实测：200dpi 速度快且质量可接受；每页 5-25 秒（取决于扫描质量），110 页大文件需 1 小时+，勿因 md 产出间隔长误判卡死。
 
 ### 2.2 文本层优先原则（关键）
@@ -75,7 +75,7 @@
 ### 3.3 大纲回写
 
 - **卷末书目述评追加**：各卷 `05-卷册大纲/<卷>/卷末书目述评.md` 追加“SFU PUPS 存档增补”小节（GB/T 7714 著录 + ref id）。
-- **增量安全（2026-08-07 修复）**：幂等判断**不得用“整个小节已存在则跳过”**（会漏掉增量记录）——改为“小节已存在则删除旧小节重建”（述评增补是脚本生成的，重建安全）。实测漏增量教训：537 条时小节已存在导致后续 13 条新增未写入。
+- **增量安全**：幂等判断**不得用“整个小节已存在则跳过”**（会漏掉增量记录）——改为“小节已存在则删除旧小节重建”（述评增补是脚本生成的，重建安全）。实测漏增量教训：537 条时小节已存在导致后续 13 条新增未写入。
 
 ## 4 经验教训汇总（SFU PUPS 工程）
 
