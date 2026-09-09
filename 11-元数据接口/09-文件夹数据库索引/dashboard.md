@@ -329,6 +329,6 @@
 ### 阶段 5：核验与优化
 
 - `optimize_folder_databases.py --all`：7 库 schema/ghost-blocks/reindex/pragma 正常，VACUUM 回收约 5MB（original_sources 省 4.7MB）
-- 规则同步：流程规则.md 346→348（5 处 + 卷数 16→18）、quekou.md 第 13 行加注重排基线
+- 规则同步：流程规则.md 346→348（5 处 + 卷数 16→18）
 - folder_db_registry.csv 追加 references_fulltext/资料数据库/phoronix_news 3 行独立库注册
-- changelog.db 新增迁移记录（见 01-项目管理）
+- changelog.duckdb 新增迁移记录（见 01-项目管理）
