@@ -7,8 +7,8 @@
 > - **与原 参考文献/cankao.md 的关系**：原文件已删除，全部内容迁移至各类别子文件
 > - **体例说明（沿用原文件）**：文献类型标识 [M] 专著、[J] 期刊、[C] 论文集、[D] 学位论文、[R] 报告、[EB/OL] 电子文献、[Z] 法律法规、[DB/OL] 数据库、[CP] 计算机程序。每条文献一行，图书加注 ISBN，电子文献加注访问日期。所有 ISBN 均经出版社官网或权威书目数据库交叉验证。
 > - **编排原则（沿用原文件）**：按文献类型与主题分类，类内按作者姓氏字母序排列；图书必注 ISBN，期刊必注卷期与页码；电子文献必注访问日期；法律文档单列。本目录随全书写作进展持续增补，不视为定稿。
-> - **格式豁免约定（2026-07-21 增补）**：① 早于 ISBN 体系（1966 年引入）的初版专著，条目内注明“[ISBN 不适用：初版 XXXX 年早于 ISBN 体系]”；② 手册页、CSRG/贝尔实验室内部技术手册等非商业出版物，同注明“[ISBN 不适用]”，不强制分配 ISBN；③ `去重待处理.md` 为“待整理”工作文件，整体豁免严格格式校验；④ “参见 … 同名条目”等交叉引用行非独立著录条目，豁免文献类型标识校验。上述约定已写入 `script/audit_ref_validator.py`（v3）校验逻辑。
-> - **命名风格分组说明（2026-07-26 增补）**：本目录下子文件命名沿用了原 `参考文献/cankao.md` 的多维组织方式，存在四种并存命名风格，**不强行统一**，仅在此说明分组以提高索引可读性：
+> - **格式豁免约定**：① 早于 ISBN 体系（1966 年引入）的初版专著，条目内注明“[ISBN 不适用：初版 XXXX 年早于 ISBN 体系]”；② 手册页、CSRG/贝尔实验室内部技术手册等非商业出版物，同注明“[ISBN 不适用]”，不强制分配 ISBN；③ `去重待处理.md` 为“待整理”工作文件，整体豁免严格格式校验；④ “参见 … 同名条目”等交叉引用行非独立著录条目，豁免文献类型标识校验。上述约定已写入 `script/audit_ref_validator.py`（v3）校验逻辑。
+> - **命名风格分组说明**：本目录下子文件命名沿用了原 `参考文献/cankao.md` 的多维组织方式，存在四种并存命名风格，**不强行统一**，仅在此说明分组以提高索引可读性：
 >   - **主题式**（如 `bsd相关经典著作.md`、`开源运动与许可证.md`、`法律判例与法律研究.md`）：按文献主题归类，对应“一、按文献类型与主题分类”分组。
 >   - **卷章式**（如 `第一卷第08章审美.md`、`第三卷第25-55章.md`、`第二卷第24章数据库.md`、`第三卷补充.md`、`第四卷补充.md`、`第六卷补充.md`）：按全书卷章结构归类，对应“二、章节考据专项文献”与“三、卷册新增文献”分组。
 >   - **版本式**（如 `freebsd-12x.md`、`freebsd-13x.md`、`freebsd-14x.md`、`freebsd-16x-ai.md`、`openbsd版本.md`、`dragonfly版本.md`）：按 BSD 项目版本系列归类，对应“二、章节考据专项文献”分组中以版本为主题的子集。
@@ -54,23 +54,22 @@
 
 ### 三、卷册新增文献
 
-### 三之一、BSD 漏洞史编纂专项文献（2026-07-22 四大 BSD 漏洞史编纂新增）
+### 三之一、BSD 漏洞史编纂专项文献
 >
 > **本节说明**：以下条目为四大 BSD 漏洞史编纂专题研究新增的参考文献，分布于 `密码学与安全史料.md`（专项史料）与 `标准与规范.md`（专项标准）两个子文件，按 GB/T 7714-2015 著录，按 0 信任原则须与一手代码档案、邮件列表存档、当事人叙述交叉印证。
 
 - [BSD 漏洞史编纂专项史料](密码学与安全史料.md#bsd-漏洞史编纂专项史料2026-07-22-四大-bsd-漏洞史编纂新增)：NVD、cvelistV5、NetBSD-SA、OpenBSD errata、DragonFly BSD VSA、freebsd-security-notifications、netbsd-announce/security、dragonfly.submit 邮件列表等 9 个新条目
 - [BSD 漏洞史编纂专项标准](标准与规范.md#bsd-漏洞史编纂专项标准2026-07-22-四大-bsd-漏洞史编纂新增)：CVSS、CWE、CVE、NVD 等 4 个标准条目
-- [BSD 漏洞史考据记录目录](../../原材料/研究/考据记录/)：第三、四、五、六、七、八、十、十二卷共 8 个考据记录文件，命名约定 `20260722_bsd-cve-vulnerability-fact-check-第N卷.md`
 
-### 三之二、BSD 学术研究谱系 Phase 14 新增文献（2026-07-23）
+### 三之二、BSD 学术研究谱系 Phase 14 新增文献
 >
 > **本节说明**：以下条目为 BSD 学术研究谱系专题研究（spec `bsd-academic-papers-research-2026-07-23` Phase 14 Task 14.1）从时期04、时期05、时期10、时期12 子文件同步新增的学术论文，按 GB/T 7714-2015 著录，分布于 `freebsd-12x.md`、`freebsd艺术与人文.md`、`技术史与操作系统.md` 三个子文件。每条新增文献均经 Grep 工具对 `参考文献/参考/` 全目录去重确认，重复条目已跳过并留痕至考据记录。
 
 - [技术史与操作系统——BSD 学术研究谱系 Phase 14 新增](技术史与操作系统.md#bsd-学术研究谱系-phase-14-新增2026-07-23时期12-asiabsdcon-2014-与-eurobsdcon-2017-论文)：D 组 8 条（源数据 10 条，Chisnall AsiaBSDCon 2014 LLVM 已著录跳过、de Raadt EuroBSDCon 2017 pledge 疑与既有“Pledge and Privsep”条目重复跳过），含 Tang 2014 AsiaBSDCon Linker、Rasiukevicius 2014 AsiaBSDCon NPF、Ahrens 2014 AsiaBSDCon Keynote OpenZFS、Allman 2014 AsiaBSDCon Keynote Bambi Meets Godzilla、Pornin 2017 EuroBSDCon Keynote Heroic Software、Cochard-Labbé 2017 EuroBSDCon FreeBSD Routing、Zoulas 2017 EuroBSDCon NetBSD Reproducible Builds、Neville-Neil 2017 EuroBSDCon DTrace on FreeBSD
 
-### 三之三、BSD 公告考据 Task 17 新增文献（2026-07-23 公告考据增补）
+### 三之三、BSD 公告考据 Task 17 新增文献
 >
-> **本节说明**：以下条目为 BSD 公告考据专题研究（Task 17，2026-07-23 公告考据增补）从各 BSD 项目官方公告、新闻稿、邮件列表存档、安全公告、版本页面、基金会文档、标准组织公告等一手来源同步新增的参考文献，按 GB/T 7714-2015 著录。每条新增文献均经 bsd_commits.db 数据库交叉验证（如适用），并按 0 信任原则标注史实考据结论，须与一手代码档案、邮件列表存档、当事人叙述交叉印证。本批次共追加 56 条文献，分布于 8 个子文件。
+> **本节说明**：以下条目为 BSD 公告考据专题研究（Task 17）从各 BSD 项目官方公告、新闻稿、邮件列表存档、安全公告、版本页面、基金会文档、标准组织公告等一手来源同步新增的参考文献，按 GB/T 7714-2015 著录。每条新增文献均经 bsd_commits.db 数据库交叉验证（如适用），并按 0 信任原则标注史实考据结论，须与一手代码档案、邮件列表存档、当事人叙述交叉印证。本批次共追加 56 条文献，分布于 8 个子文件。
 
 - [UNIX/OpenGroup/POSIX 标准公告考据新增](标准与规范.md#unixopengroupposix-标准公告考据新增2026-07-23-task-17)：15 条，含 The Open Group UNIX 商标权属声明、SUSv2/SUSv3 新闻稿、Austin Group 主页与公告时间线、POSIX FAQ、UNIX 98/V7 品牌页、SUS 在线规范、UNIX 历史时间线、McKusick CSRG 发展史与 CD-ROM 存档、ISO/IEC/IEEE 9945:2026 最新 POSIX 国际标准等
 - [FreeBSD 公告考据新增](freebsd官方文档.md#freebsd-公告考据新增2026-07-23-task-17)：8 条，含 FreeBSD News Flash、Errata Notices 列表、FreeBSD 15.1/14.4/14.3/14.0-RELEASE 公告页、freebsd-announce 邮件列表 HyperKitty 与 Mailman 时期存档
