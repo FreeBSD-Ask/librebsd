@@ -8,8 +8,8 @@ volume: 第11卷-dragonflybsd的历史
 
 ## 要点
 
-- DragonFly v4.0.0（2014-11-23）完成从 FreeBSD DRM 到 Linux DRM 的切换后，BSD 阵营（尤以 FreeBSD GPU 驱动维护者与 NetBSD 用户为代表）对 DragonFly 的 DRM 路线提出三类批评。其一，“血缘背离”批评——bsd_commits.db 显示 sys/dev/drm/ 目录在 2014 年有 197 个 distinct
-- DragonFly 阵营（以 Matt Dillon 与 François Tigeot 的工程实践为代表）对 BSD 阵营的三类批评提出三层回应。其一，“硬件支持现实”回应——bsd_commits.db 显示 2014-2015 年间 i915 关键词 commit 146 条、radeon 关键词 44 条，反映 DragonFly 在 FreeBSD DRM 框架下已无法跟上 Intel
+- DragonFly v4.0.0（2014-11-23）完成从 FreeBSD DRM 到 Linux DRM 的切换后，BSD 阵营（尤以 FreeBSD GPU 驱动维护者与 NetBSD 用户为代表）对 DragonFly 的 DRM 路线提出三类批评。其一，“血缘背离”批评——dragonfly.duckdb 显示 sys/dev/drm/ 目录在 2014 年有 197 个 distinct
+- DragonFly 阵营（以 Matt Dillon 与 François Tigeot 的工程实践为代表）对 BSD 阵营的三类批评提出三层回应。其一，“硬件支持现实”回应——dragonfly.duckdb 显示 2014-2015 年间 i915 关键词 commit 146 条、radeon 关键词 44 条，反映 DragonFly 在 FreeBSD DRM 框架下已无法跟上 Intel
 - BSD 阵营对 DragonFly 阵营的三层回应提出再反驳，并在合图阶段以项目史观总纲第 6 条与第 8 条为框架达成辩证综合。再反驳其一，“硬件支持不等于代码血缘”——BSD 阵营承认 Linux DRM 的硬件支持覆盖率确实高于 FreeBSD DRM，但指出 FreeBSD 通过 linuxkpi 兼容层同样支持现代 GPU，问题不在于“是否支持”而在于“以何种方式支持”，DragonFl
 
 
@@ -37,7 +37,7 @@ volume: 第11卷-dragonflybsd的历史
 - 考据过程留痕——【查证来源】DragonFly BSD 4.0 Release Notes（**<https://www.dragonflybsd.org/release40/**>）〔待核：原文截断，后文待回源〕
 - 考据过程留痕——【查证来源】DragonFly BSD 4.0 Release Notes（**<https://www.dragonflybsd.org/release40/**>）经 WebFetch 一手核验，原文记载"DragonFly 4.0 now supports GPUs from the Haswell family, and OpenGL acceleration is now
 - 考据过程留痕——【查证来源】dragonfly.duckdb dragonfly-src 仓库 contributors 表 Tigeot first = 2011-03-06 last = 2020-12-19 total = 1346 经数据库查询核验，末次 commit 2020-12-19 为“维护负担的双向性”再反驳提供代码级证据——Tigeot 停止贡献后 DragonFly 的 DRM
-- bsd_commits.db 显示 commit 量与项目实际影响力无简单线性关系——NetBSD 年均 commit 量最高（16669 条）但其市场份额未必高于 FreeBSD；bsd_commits.db 显示 DragonFly TOP 5 集中度 70.6% 反映巴士因子风险——若 TOP 5 贡献者中任何一人退出，DragonFly 维护能力将受严重影响；市场份额数据需谨慎采用——BS
+- dragonfly.duckdb 显示 commit 量与项目实际影响力无简单线性关系——NetBSD 年均 commit 量最高（16669 条）但其市场份额未必高于 FreeBSD；dragonfly.duckdb 显示 DragonFly TOP 5 集中度 70.6% 反映巴士因子风险——若 TOP 5 贡献者中任何一人退出，DragonFly 维护能力将受严重影响；市场份额数据需谨慎采用——BS
 
 ## 文献
 

@@ -10,7 +10,7 @@ volume: 第11卷-dragonflybsd的历史
 
 - dragonfly.duckdb dragonfly-src 仓库 commits 表提供 v6.2/v6.4 系列 GPU 与驱动支持改进的具体 commit。v6.2 系列（2022-01-09 至 2022-06-09）期间 sys/dev/drm/ 目录 commit 集中于 Linux DRM 回移；v6.4 系列（2022-12-30 起）期间 sys/dev/netif/ 与 sys/d
 - dragonfly.duckdb dragonfly-src 仓库 commits 表提供 v6.4.1/v6.4.2 发布说明的 commit 级核验——v6.4.1 target_commit_hash = 9408681d90f4953a150a1682b6413610234981fa（2025-04-29）、v6.4.2 target_commit_hash = 54d7118100cb99b74
-- bsd_commits.db 不直接记录 commit 权限变动，权限授予与撤销须以 DragonFly 邮件列表（lists.dragonflybsd.org）中 Dillon 或 kernel@ 的公告为准。lists.dragonflybsd.org 完整归档 2003-2026 年间 kernel@、commits@、users@、bugs@ 等邮件列表，未发生类似 FreeBSD 201
+- dragonfly.duckdb 不直接记录 commit 权限变动，权限授予与撤销须以 DragonFly 邮件列表（lists.dragonflybsd.org）中 Dillon 或 kernel@ 的公告为准。lists.dragonflybsd.org 完整归档 2003-2026 年间 kernel@、commits@、users@、bugs@ 等邮件列表，未发生类似 FreeBSD 201
 - dragonfly.duckdb dragonfly-src 仓库 tags 表共 131 个 tag，按 tagger_date 升序首 tag 为 v2.1.1（2008-12-03），末 tag 为 v6.4.2（2025-05-09）。2019-2026 年间发布记录：v6.0.0（2021-05-07）、v6.0.1（2021-10-11）、v6.2.1（2022-01-09）、v6.2.2
 - DragonFly BSD 无正式 Security Advisory（SA）系统，安全修复通过 commit message 与 kernel@ 邮件列表通知用户——这与 FreeBSD SA（14.x 周期 80 个 PGP 签名 SA）、OpenBSD errata（逐版本发布 errata patches）形成鲜明对比；6.x 周期 16 条 CVE commit 中，仅 CVE-2024
 
@@ -24,11 +24,11 @@ volume: 第11卷-dragonflybsd的历史
 
 ## 辨析
 
-- commit log 可能不完整反映改进全貌——部分改进可能分散在多个 commit 中，部分改进可能合并入单一 commit；bsd_commits.db 显示 v6.2 系列期间 sys/dev/drm/ 目录 commit 多为 Linux DRM 回移，DragonFly 自研 GPU 改进贡献有限
+- commit log 可能不完整反映改进全貌——部分改进可能分散在多个 commit 中，部分改进可能合并入单一 commit；dragonfly.duckdb 显示 v6.2 系列期间 sys/dev/drm/ 目录 commit 多为 Linux DRM 回移，DragonFly 自研 GPU 改进贡献有限
 - release notes 与 commit log 偶有不一致——bsd_commits.db 显示 v6.4.1 与 v6.4.2 间隔仅 10 天，反映 v6.4.1 可能存在已知 bug 由 v6.4.2 快速修复；正式撰写时须以 commit log 为事实依据，release notes 为辅助参考
-- 邮件记录可能不完整——部分权限决策可能在私下邮件或 IRC 中进行；bsd_commits.db 显示 Aaron LI 首 commit = 2017-09-27，但其在 kernel@ 邮件列表的首次发言 [考据完成：2026-07-28 该处存疑标注属史料缺口，须待原始档案公开后方可补充确证] 须单独核验；权限撤销记录在 DragonFly 中罕见——bsd_commits.db contr
+- 邮件记录可能不完整——部分权限决策可能在私下邮件或 IRC 中进行；dragonfly.duckdb 显示 Aaron LI 首 commit = 2017-09-27，但其在 kernel@ 邮件列表的首次发言 [考据完成：2026-07-28 该处存疑标注属史料缺口，须待原始档案公开后方可补充确证] 须单独核验；权限撤销记录在 DragonFly 中罕见——dragonfly.duckdb contr
 - 仓库统计须考虑 commit 粒度差异——dragonfly.duckdb 显示 DragonFly 2024 年 277 条 commit 中 Aaron LI 贡献 [考据完成：2026-07-28 该处存疑标注属史料缺口，须待原始档案公开后方可补充确证]，须按 author_email 按年分组核验；v6.5.0 tag 与 v6.4.0rc1 同日（2022-12-20）且相差仅 2 分钟（23:
-- *无 SA 系统可持续性的辨析（vs 5.x 周期）**：5.x 周期无 SA 系统在 Dillon 主导代码贡献的背景下可行（Dillon 4 条 CVE commit 中 2 条为 embargo 期内修复），6.x 周期无 SA 系统面临 Dillon 淡出的可持续性挑战——bsd_commits.db 显示 6.x 周期 Dillon 仅 1 条 CVE commit，其余 15 条由其他
+- *无 SA 系统可持续性的辨析（vs 5.x 周期）**：5.x 周期无 SA 系统在 Dillon 主导代码贡献的背景下可行（Dillon 4 条 CVE commit 中 2 条为 embargo 期内修复），6.x 周期无 SA 系统面临 Dillon 淡出的可持续性挑战——dragonfly.duckdb 显示 6.x 周期 Dillon 仅 1 条 CVE commit，其余 15 条由其他
 
 ## 文献
 

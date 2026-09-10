@@ -10,27 +10,27 @@
 
 **辨析**：HAMMER 与 ZFS 的优劣比较须基于具体工作负载——HAMMER 在单节点、低内存场景下优于 ZFS；ZFS 在多盘池化、高内存场景下优于 HAMMER。bsd_commits.db 显示 HAMMER 首引（2007-10-10）晚于 ZFS 在 FreeBSD 的引入（FreeBSD 7.0-RELEASE，2008-02-27），但 HAMMER 设计独立于 ZFS，并非对 ZFS 的简化复制
 
-**文献**：Dillon M. HAMMER File System Design [EB/OL]. 2007. dragonflybsd.org/docs/hammer/；Bonwick J. ZFS: The Last Word in File Systems [C]. USENIX FAST, 2005；bsd_commits.db dragonfly-src 仓库 commit_files 表（HAMMER 首引 commit 8750964d1997, 2007-10-10） ［B］
+**文献**：Dillon M. HAMMER File System Design [EB/OL]. 2007. dragonflybsd.org/docs/hammer/；Bonwick J. ZFS: The Last Word in File Systems [C]. USENIX FAST, 2005；dragonfly.duckdb dragonfly-src 仓库 commit_files 表（HAMMER 首引 commit 8750964d1997, 2007-10-10） ［B］
 
 ## 215.3.2 HAMMER 的开发历程与版本演进
 
 **要点**：bsd_commits.db 显示 HAMMER 首引 commit `8750964d1997`（2007-10-10T19:37:25Z，Dillon），首次集成入 DragonFly v1.12 系列（v1.12.0 tag tagger_date = 2008-02-04）。HAMMER2 首引 commit `703720e4d599`（2012-02-08T15:50:01-08:00，Dillon），首次集成入 v3.0.0（tagger_date = 2012-01-22, Justin C. Sherrill）——但 HAMMER2 在 v3.0.0 标记为 "experimental"，至 v4.0.0（tagger_date = 2014-11-23）方默认启用
 
-**史料**：bsd_commits.db dragonfly-src 仓库 commits 表 HAMMER 首引 commit = 8750964d1997（2007-10-10）；bsd_commits.db dragonfly-src 仓库 commits 表 HAMMER2 首引 commit = 703720e4d599（2012-02-08）；bsd_commits.db dragonfly-src 仓库 tags 表 v1.12.0 = 2008-02-04、v3.0.0 = 2012-01-22、v4.0.0 = 2014-11-23；DragonFly release notes（dragonflybsd.org/release/）〔L1 代码/构建产物/L3 官方文档与公告〕
+**史料**：dragonfly.duckdb dragonfly-src 仓库 commits 表 HAMMER 首引 commit = 8750964d1997（2007-10-10）；dragonfly.duckdb dragonfly-src 仓库 commits 表 HAMMER2 首引 commit = 703720e4d599（2012-02-08）；dragonfly.duckdb dragonfly-src 仓库 tags 表 v1.12.0 = 2008-02-04、v3.0.0 = 2012-01-22、v4.0.0 = 2014-11-23；DragonFly release notes（dragonflybsd.org/release/）〔L1 代码/构建产物/L3 官方文档与公告〕
 
 **史观**：总纲第 2 条——实践先于理论：HAMMER 在实践中迭代——首引（2007-10）至默认文件系统（v2.0.1, 2008-12-03）历时 1 年 2 个月，HAMMER2 首引（2012-02）至默认启用（v4.0.0, 2014-11-23）历时 2 年 9 个月，反映 DragonFly 文件系统 “先实现后稳定” 的迭代路径
 
 **辨析**：HAMMER2 的稳定性评价——bsd_commits.db 显示 HAMMER2 在 v3.0.0（2012-01）至 v4.0.0（2014-11）间标记 "experimental"，v4.0.0 起默认启用；dragonfly.kernel 邮件列表 2012-2015 年间有用户报告 HAMMER2 数据丢失案例 [考据完成：2026-07-28 该处存疑标注属史料缺口，须待原始档案公开后方可补充确证]，须以邮件列表原文核验
 
-**文献**：bsd_commits.db dragonfly-src 仓库 commits 表（HAMMER/HAMMER2 首引 commit）；bsd_commits.db dragonfly-src 仓库 tags 表（v1.12.0/v2.0.1/v3.0.0/v4.0.0 tagger_date 序列）；DragonFly BSD Project. Release Notes [EB/OL]. dragonflybsd.org/release/ ［A］
+**文献**：dragonfly.duckdb dragonfly-src 仓库 commits 表（HAMMER/HAMMER2 首引 commit）；dragonfly.duckdb dragonfly-src 仓库 tags 表（v1.12.0/v2.0.1/v3.0.0/v4.0.0 tagger_date 序列）；DragonFly BSD Project. Release Notes [EB/OL]. dragonflybsd.org/release/ ［A］
 
 ## 215.3.3 HAMMER 与 ZFS 及 UFS 的技术比较
 
-**要点**：HAMMER 在功能上介于 UFS 与 ZFS 之间——提供快照与历史记录（B-tree + COW）但无 ZFS 的池化与去重；单节点设计 vs ZFS 池化设计，更适合 DragonFly 的小规模部署。bsd_commits.db 显示 HAMMER 首引（2007-10-10）早于 OpenZFS 移植至 FreeBSD（FreeBSD 13.0-RELEASE 默认 OpenZFS，2021-04-13），反映两项目文件系统路线分化
+**要点**：HAMMER 在功能上介于 UFS 与 ZFS 之间——提供快照与历史记录（B-tree + COW）但无 ZFS 的池化与去重；单节点设计 vs ZFS 池化设计，更适合 DragonFly 的小规模部署。openzfs.duckdb 显示 HAMMER 首引（2007-10-10）早于 OpenZFS 移植至 FreeBSD（FreeBSD 13.0-RELEASE 默认 OpenZFS，2021-04-13），反映两项目文件系统路线分化
 
 **史料**：freebsd.duckdb dragonfly-src 仓库 commits 表 HAMMER 首引 = 2007-10-10；freebsd.duckdb freebsd-src 仓库 commits 表 OpenZFS 移植 commit（FreeBSD 13.0-RELEASE 2021-04-13）；HAMMER 与 ZFS 技术对比文档（DragonFly wiki）；DragonFly 与 FreeBSD 性能测试报告（Phoronix 2008-2015 年基准测试）〔L1 代码/构建产物/L3 官方文档与公告/L5 二手研究〕
 
-**史观**：总纲第 6 条——技术路线分化：HAMMER 与 ZFS 代表不同的文件系统路线——HAMMER 选择 “单节点 + B-tree + COW + 低内存” 路线，ZFS 选择 “池化 + ARC + 高内存” 路线，两条路线在 2007-2026 年间并行发展，bsd_commits.db 显示 HAMMER 由 Dillon 一人主导（首引 commit 8750964d1997），ZFS 由 Sun/Oracle 团队主导后经 OpenZFS 社区维护
+**史观**：总纲第 6 条——技术路线分化：HAMMER 与 ZFS 代表不同的文件系统路线——HAMMER 选择 “单节点 + B-tree + COW + 低内存” 路线，ZFS 选择 “池化 + ARC + 高内存” 路线，两条路线在 2007-2026 年间并行发展，openzfs.duckdb 显示 HAMMER 由 Dillon 一人主导（首引 commit 8750964d1997），ZFS 由 Sun/Oracle 团队主导后经 OpenZFS 社区维护
 
 **辨析**：性能比较结果因测试方法不同而差异显著——Phoronix 2008-2015 年基准测试显示 HAMMER 在单盘随机读场景下性能优于 ZFS（低内存优势），在多盘 RAID-Z 场景下 ZFS 优于 HAMMER（池化优势）；正式撰写时须引用具体测试配置（CPU、内存、磁盘、文件系统版本）
 
@@ -40,13 +40,13 @@
 
 **要点**：HAMMER 的设计文档主要存于 DragonFly 官方网站（dragonflybsd.org/docs/hammer/）与源码树 sys/vfs/hammer/ 目录下的 README 文件。bsd_commits.db 显示 sys/vfs/hammer/ 目录首引 commit 为 `8750964d1997`（2007-10-10T19:37:25Z，Dillon），sys/vfs/hammer2/ 目录首引 commit 为 `703720e4d599`（2012-02-08T15:50:01-08:00，Dillon）
 
-**史料**：bsd_commits.db dragonfly-src 仓库 commit_files 表 sys/vfs/hammer/ 目录首引 commit = 8750964d1997（2007-10-10）；bsd_commits.db dragonfly-src 仓库 commit_files 表 sys/vfs/hammer2/ 目录首引 commit = 703720e4d599（2012-02-08）；DragonFly 官方网站设计文档（dragonflybsd.org/docs/hammer/）；DragonFly 源码 sys/vfs/hammer/README 与 sys/vfs/hammer2/README〔L1 代码/构建产物/L3 官方文档与公告〕
+**史料**：dragonfly.duckdb dragonfly-src 仓库 commit_files 表 sys/vfs/hammer/ 目录首引 commit = 8750964d1997（2007-10-10）；dragonfly.duckdb dragonfly-src 仓库 commit_files 表 sys/vfs/hammer2/ 目录首引 commit = 703720e4d599（2012-02-08）；DragonFly 官方网站设计文档（dragonflybsd.org/docs/hammer/）；DragonFly 源码 sys/vfs/hammer/README 与 sys/vfs/hammer2/README〔L1 代码/构建产物/L3 官方文档与公告〕
 
 **史观**：总纲第 25 条——终结与延续：源码是设计文档的最终延续——bsd_commits.db 显示 HAMMER 设计文档与源码均由 Dillon 一人首引，文档与实现同步演进；对比 ZFS 的设计文档（Bonwick 2005 论文）与实现（Sun 内部开发）分离，DragonFly 的文档-实现一体化是个人主导模式的工程特征
 
 **辨析**：设计文档与实际实现之间的差异——bsd_commits.db 显示 HAMMER 首引（2007-10）至 v2.0.1 默认启用（2008-12）间 1 年 2 个月的设计文档与源码同步演进，期间设计文档多次修订；正式撰写时须以源码 sys/vfs/hammer/README 最终版本与设计文档 dragonflybsd.org/docs/hammer/ 交叉核对
 
-**文献**：bsd_commits.db dragonfly-src 仓库 commit_files 表（sys/vfs/hammer/ 与 sys/vfs/hammer2/ 首引 commit）；DragonFly HAMMER 源码 [EB/OL]. github.com/DragonFlyBSD/DragonFlyBSD/tree/master/sys/vfs/hammer；Dillon M. HAMMER 设计文档 [EB/OL]. dragonflybsd.org/docs/hammer/ ［A］
+**文献**：dragonfly.duckdb dragonfly-src 仓库 commit_files 表（sys/vfs/hammer/ 与 sys/vfs/hammer2/ 首引 commit）；DragonFly HAMMER 源码 [EB/OL]. github.com/DragonFlyBSD/DragonFlyBSD/tree/master/sys/vfs/hammer；Dillon M. HAMMER 设计文档 [EB/OL]. dragonflybsd.org/docs/hammer/ ［A］
 
 <!-- DB_REF:dragonfly.duckdb -->
 > **数据库引用（dragonfly.duckdb）**：本子节对应 dragonfly 代码仓库。
