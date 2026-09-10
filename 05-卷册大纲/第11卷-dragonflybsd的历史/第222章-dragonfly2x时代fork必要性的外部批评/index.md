@@ -23,7 +23,7 @@ volume: 第11卷-dragonflybsd的历史
 
 ## 辨析
 
-- 考据过程留痕——【查证来源】项目史观总纲第 6、8 条经 据原文第 25 章 一手核验；HAMMER 首引 commit `8750964d1997` 与 2007 年后回移停止的判定以 dragonfly.db dragonfly-src 仓库 commits 表 parent_hashes 字段为依据，现有数据报告中 L7.1.1 系列未覆盖 dragonfly-src 仓库，回移停止时间节点
+- 考据过程留痕——【查证来源】项目史观总纲第 6、8 条经 据原文第 25 章 一手核验；HAMMER 首引 commit `8750964d1997` 与 2007 年后回移停止的判定以 dragonfly.duckdb dragonfly-src 仓库 commits 表 parent_hashes 字段为依据，现有数据报告中 L7.1.1 系列未覆盖 dragonfly-src 仓库，回移停止时间节点
 - commit 数量并非贡献唯一指标——部分贡献者 commit 少但单次 commit 影响大，需结合代码行数、子系统重要性等多维度辨析
 - 考据过程留痕——【查证来源】项目史观总纲第 6、8 条经 据原文第 25 章 一手核验；2.x 时代 DragonFly 社区规模（2008 年 36 位贡献者）以 bsd_commits.db dragonfly-src 仓库 contributors 表为依据，与 FreeBSD 数百 committer 的对比以 bsd_commits.db freebsd-src 仓库 contribut
 

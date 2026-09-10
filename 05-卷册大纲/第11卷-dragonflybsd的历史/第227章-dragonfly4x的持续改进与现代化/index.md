@@ -8,7 +8,7 @@ volume: 第11卷-dragonflybsd的历史
 
 ## 要点
 
-- dragonfly.db dragonfly-src 仓库 tags 表提供 v4.2.0（tagger_date = 2015-06-28T19:15:14-04:00）与 v4.4.0（tagger_date = 2015-12-03T18:58:35-05:00）的 tagger_date、tagger_name、target_commit_hash 字段。v4.2.0 target_com
+- dragonfly.duckdb dragonfly-src 仓库 tags 表提供 v4.2.0（tagger_date = 2015-06-28T19:15:14-04:00）与 v4.4.0（tagger_date = 2015-12-03T18:58:35-05:00）的 tagger_date、tagger_name、target_commit_hash 字段。v4.2.0 target_com
 - bsd_commits.db dragonfly-src 仓库 commits 表提供 v4.6.0 与 v4.8.0 期间 NVMe 与 vkernel 改进的具体 commit。v4.6.0（2016-08-01）至 v4.8.0（2017-03-26）间隔约 8 个月，期间 NVMe 相关 commit[考据完成：2026-07-28 经穷尽联网考据，该要点所引数据已交叉验证，部分精确数字须
 - bsd_commits.db 不直接记录 commit 权限变动，权限授予与撤销须以 DragonFly 邮件列表（lists.dragonflybsd.org）中 Dillon 或 kernel@ 的公告为准。lists.dragonflybsd.org 完整归档 2003-2026 年间 kernel@、commits@、users@、bugs@ 等邮件列表，未发生类似 FreeBSD 201
 - bsd_commits.db 关键词搜索与 lists.dragonflybsd.org、lists.freebsd.org、LKML 邮件列表归档交叉对照是考据 DragonFly 批评原始发言的主要方法。bsd_commits.db 数据显示 DragonFly 2016-2018 年间 commit 量仅为 FreeBSD 同期 11-14%，为批评提供了量化证据；但批评发言的具体内容、时间

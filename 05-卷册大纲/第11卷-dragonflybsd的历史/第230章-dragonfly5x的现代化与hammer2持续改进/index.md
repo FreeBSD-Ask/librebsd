@@ -8,7 +8,7 @@ volume: 第11卷-dragonflybsd的历史
 
 ## 要点
 
-- dragonfly.db dragonfly-src 仓库 tags 表提供 v5.0.0（**2017-10-15**）与 v5.2.0（**2018-04-08**）的 tagger_date、tagger_name、target_commit_hash 字段，作为发布日期的最权威代码级证据。tagger_date 与 target_commit_date 对照如下： | tag | t |
+- dragonfly.duckdb dragonfly-src 仓库 tags 表提供 v5.0.0（**2017-10-15**）与 v5.2.0（**2018-04-08**）的 tagger_date、tagger_name、target_commit_hash 字段，作为发布日期的最权威代码级证据。tagger_date 与 target_commit_date 对照如下： | tag | t |
 
 - bsd_commits.db dragonfly-src 仓库 commits 表提供 v5.4-v5.6 时期 HAMMER 2 相关 commit 的具体记录。2018 年 HAMMER2 关键词 commit **75 条**、2019 年 **156 条**，其中 v5.6.0（**2019-06-16**）发布前的 HAMMER 2 commit 集中于性能优化与默认切换准备。HAMME
 
@@ -37,7 +37,7 @@ volume: 第11卷-dragonflybsd的历史
 
 - release notes 与 commit log 偶有不一致——bsd_commits.db 显示 v5.2.0 的 tagger_date（2018-04-08）与 target_commit_date（2018-04-03）相差 5 天，反映 tag 创建与最后 commit 提交的时间差；AMD64 与 NVMe 改进的具体 commit 须以 commit_files 表核验 [考据完
 - commit log 可能不完整反映改进全貌——bsd_commits.db 关键词搜索仅基于 message_subject，部分 HAMMER 2 commit 可能未在 message_subject 中提及‘HAMMER2’；Dillon 2019 年 HAMMER 2 commit 占比须以 commit_files 表核验 [考据完成：2026-07-28 该处存疑标注属史料缺口，须待
-- release notes 与 commit log 偶有不一致——dragonfly.db 显示 v6.0.0 的 target_commit_date（2021-04-27）与 tagger_date（2021-05-07）相差 10 天，反映 tag 创建与最后 commit 提交的时间差；v5.8.0 的 commit 与 tag 同日须以 commit_hash 与 target_com
+- release notes 与 commit log 偶有不一致——dragonfly.duckdb 显示 v6.0.0 的 target_commit_date（2021-04-27）与 tagger_date（2021-05-07）相差 10 天，反映 tag 创建与最后 commit 提交的时间差；v5.8.0 的 commit 与 tag 同日须以 commit_hash 与 target_com
 - 政策发言可能被断章取义——须结合完整上下文辨析，避免简化引用；bsd_commits.db 关键词搜索可能低估 AI 相关讨论——部分讨论可能以‘machine learning’/‘language model’等术语进行而未提及‘AI’；私人邮件与 IRC 讨论不可考，仅以公开邮件列表为准
 - 邮件发言需考据时间与上下文——Dillon 早期发言（2003-2005 年）与后期发言（2020-2026 年）风格有变化，需结合具体时期辨析；bsd_commits.db contributors 表 first_commit_date 是权限授予的间接证据，可能晚于实际权限授予时间——Dillon 可能在邮件列表公告权限授予后数日才让新 committer 提交首条 commit；权限撤销记
 
