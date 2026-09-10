@@ -34,16 +34,46 @@ volume: 第05卷-freebsd的工程化奠基
 
 ## 文献
 
-- FreeBSD 8.0 src/sys/xen/ commit log；freebsd-xen mailing list 2008-2009 archives；Rabson, D. FreeBSD Xen port status (2009) ［A］；统计分析报告：描述性统计.md SubTask 2.1 + SubTask 2.4 [R/OL]. 2026-07-27. 文件路径：`c:\Users\ykla\Documents\hibsd\03-原始史料库\01-代码仓库史料\01-数据库本体\统计分析\描述性统计.md`；SQL 查询：`SELECT COUNT(*) FROM commits WHERE repo_name='freebsd-src'`. freebsd.duckdb [DB/OL]. 查询日期：2026-07-27；Python 统计脚本：`script/phase2_descriptive.py`. SubTask 2.4 Kaplan-Meier 生存估计。执行日期：2026-07-27 [考据脚注：C-03、C-40 经 `script/phase2_descriptive.py` 执行结果与 `phase2_results.json` 结构化结果交叉验证；Kaplan-Meier 估计基于 lifelines 0.30.0 实现。]<!-- DB_REF:freebsd.duckdb -->> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 2009-2011 年间：102,147 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
-- LWN.net SCO v. Novell verdict coverage (2010)；Groklaw.net SCO saga coverage (2003-2010)；The FreeBSD Foundation statement on SCO verdict (2010)；FreeBSD Quarterly Status Report (2010-Q2)[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]<!-- DB_REF:freebsd.duckdb -->> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 2009-2010 年间：69,391 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
-- FreeBSD 8.0/9.0/10.0-RELEASE Release Notes；Alexander Motin CAM ATA EuroBSDCon/BSDCan 演讲（2009-2012）；freebsd-scsi 邮件列表 2008-2012 年 CAM ATA 讨论；**cam(4)** 与 **ata(4)** 手册页；`sys/cam/ata/` commit log；Scott Long. Separate the parallel scsi knowledge out of the core of the XPT, and modularize it so that new transports can be created. freebsd-src [DB/OL]. 2009-07-10T08:18:08Z. commit: 52c9ce25d8339ad0228be8aaf0e44b45314b38dc；Alexander Motin. MFp4: Move Port Multiplier support code out of ATA XPT into pmp periph driver. freebsd-src [DB/OL]. 2009-10-23T12:36:42Z. commit: 65d0fb03ad2580c999c3f590fa7e77f3ed8e1def；Alexander Motin. Tune CAM ATA kernel options a bit. Move PMP support from da to scbus and add ada device option, according to man page. freebsd-src [DB/OL]. 2009-11-19T16:26:07Z. commit: 9e30fbf662781a345d55679defabb13b123f9286；freebsd.duckdb contributors 表（freebsd-src / <mav@FreeBSD.org>，8587 条 commit，2007-04-12 至 2026-07-04）；release/8.0.0. freebsd-src 仓库 tag [DB/OL]. 2009-11-21T06:13:29Z. tag: release/8.0.0; commit: 59dd044d1cb744d3dba6b41c41e196b54e8fd9f8 ［A］<!-- DB_REF:freebsd.duckdb -->> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 1996-2010 年间：482,545 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
-- freebsd-virtualization mailing list 2009-2011 archives；Zec, M. VNET design notes (2009)；freebsd-arch mailing list VNET proposal (2008) ［A］<!-- DB_REF:freebsd.duckdb -->> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 1996-2010 年间：482,545 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
-- freebsd-hackers superpage threads (2008-2010)；Cox et al. (2007) superpage paper；freebsd-current mailing list THP discussion (2010) ［A］<!-- DB_REF:freebsd.duckdb -->> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 1996-2010 年间：482,545 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
-- FreeBSD 8.x src/sys/cddl/contrib/opensolaris/ commit log；freebsd-fs mailing list ZFS integration (2009-2011)；Dawidek, P. J. ZFS port status (2009) ［A］<!-- DB_REF:freebsd.duckdb -->> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 1996-2010 年间：482,545 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
-- freebsd-usb mailing list 2009-2011 archives；Selasky, H. P. USB stack rewrite notes (2009)；FreeBSD 8.0-RELEASE hardware notes ［A］<!-- DB_REF:freebsd.duckdb -->> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 1996-2010 年间：482,545 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
-- freebsd-fs mailing list 2009-2011 archives；Mackerras, R. NFSv4 implementation notes (2009)；Linux NFSv4 documentation (kernel.org) ［A］<!-- DB_REF:freebsd.duckdb -->> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 1996-2010 年间：482,545 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
-- Macy 报告； bhyve 文档 ［A］<!-- DB_REF:freebsd.duckdb -->> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 1996-2010 年间：482,545 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
-- freebsd-virtualization mailing list 2009-2011 archives；freebsd-hackers virtualization threads (2010)；LWN.net FreeBSD virtualization coverage (2010-2011) ［A］<!-- DB_REF:freebsd.duckdb -->> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 1996-2010 年间：482,545 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
+- FreeBSD 8.0 src/sys/xen/ commit log；freebsd-xen mailing list 2008-2009 archives；Rabson, D. FreeBSD Xen port status (2009) ［A］；统计分析报告：描述性统计.md SubTask 2.1 + SubTask 2.4 [R/OL]. 2026-07-27. 文件路径：`c:\Users\ykla\Documents\hibsd\03-原始史料库\01-代码仓库史料\01-数据库本体\统计分析\描述性统计.md`；SQL 查询：`SELECT COUNT(*) FROM commits WHERE repo_name='freebsd-src'`. freebsd.duckdb [DB/OL]. 查询日期：2026-07-27；Python 统计脚本：`script/phase2_descriptive.py`. SubTask 2.4 Kaplan-Meier 生存估计。执行日期：2026-07-27 [考据脚注：C-03、C-40 经 `script/phase2_descriptive.py` 执行结果与 `phase2_results.json` 结构化结果交叉验证；Kaplan-Meier 估计基于 lifelines 0.30.0 实现。]
+
+<!-- DB_REF:freebsd.duckdb -->
+> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 2009-2011 年间：102,147 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
+- LWN.net SCO v. Novell verdict coverage (2010)；Groklaw.net SCO saga coverage (2003-2010)；The FreeBSD Foundation statement on SCO verdict (2010)；FreeBSD Quarterly Status Report (2010-Q2)[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]
+
+<!-- DB_REF:freebsd.duckdb -->
+> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 2009-2010 年间：69,391 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
+- FreeBSD 8.0/9.0/10.0-RELEASE Release Notes；Alexander Motin CAM ATA EuroBSDCon/BSDCan 演讲（2009-2012）；freebsd-scsi 邮件列表 2008-2012 年 CAM ATA 讨论；**cam(4)** 与 **ata(4)** 手册页；`sys/cam/ata/` commit log；Scott Long. Separate the parallel scsi knowledge out of the core of the XPT, and modularize it so that new transports can be created. freebsd-src [DB/OL]. 2009-07-10T08:18:08Z. commit: 52c9ce25d8339ad0228be8aaf0e44b45314b38dc；Alexander Motin. MFp4: Move Port Multiplier support code out of ATA XPT into pmp periph driver. freebsd-src [DB/OL]. 2009-10-23T12:36:42Z. commit: 65d0fb03ad2580c999c3f590fa7e77f3ed8e1def；Alexander Motin. Tune CAM ATA kernel options a bit. Move PMP support from da to scbus and add ada device option, according to man page. freebsd-src [DB/OL]. 2009-11-19T16:26:07Z. commit: 9e30fbf662781a345d55679defabb13b123f9286；freebsd.duckdb contributors 表（freebsd-src / <mav@FreeBSD.org>，8587 条 commit，2007-04-12 至 2026-07-04）；release/8.0.0. freebsd-src 仓库 tag [DB/OL]. 2009-11-21T06:13:29Z. tag: release/8.0.0; commit: 59dd044d1cb744d3dba6b41c41e196b54e8fd9f8 ［A］
+
+<!-- DB_REF:freebsd.duckdb -->
+> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 1996-2010 年间：482,545 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
+- freebsd-virtualization mailing list 2009-2011 archives；Zec, M. VNET design notes (2009)；freebsd-arch mailing list VNET proposal (2008) ［A］
+
+<!-- DB_REF:freebsd.duckdb -->
+> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 1996-2010 年间：482,545 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
+- freebsd-hackers superpage threads (2008-2010)；Cox et al. (2007) superpage paper；freebsd-current mailing list THP discussion (2010) ［A］
+
+<!-- DB_REF:freebsd.duckdb -->
+> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 1996-2010 年间：482,545 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
+- FreeBSD 8.x src/sys/cddl/contrib/opensolaris/ commit log；freebsd-fs mailing list ZFS integration (2009-2011)；Dawidek, P. J. ZFS port status (2009) ［A］
+
+<!-- DB_REF:freebsd.duckdb -->
+> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 1996-2010 年间：482,545 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
+- freebsd-usb mailing list 2009-2011 archives；Selasky, H. P. USB stack rewrite notes (2009)；FreeBSD 8.0-RELEASE hardware notes ［A］
+
+<!-- DB_REF:freebsd.duckdb -->
+> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 1996-2010 年间：482,545 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
+- freebsd-fs mailing list 2009-2011 archives；Mackerras, R. NFSv4 implementation notes (2009)；Linux NFSv4 documentation (kernel.org) ［A］
+
+<!-- DB_REF:freebsd.duckdb -->
+> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 1996-2010 年间：482,545 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
+- Macy 报告； bhyve 文档 ［A］
+
+<!-- DB_REF:freebsd.duckdb -->
+> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 1996-2010 年间：482,545 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
+- freebsd-virtualization mailing list 2009-2011 archives；freebsd-hackers virtualization threads (2010)；LWN.net FreeBSD virtualization coverage (2010-2011) ［A］
+
+<!-- DB_REF:freebsd.duckdb -->
+> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 1996-2010 年间：482,545 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
 
 <!-- PODCAST_REVIEW v20260829 -->
 <!-- 语义复核范围：BSD Now EP186（共 1 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->

@@ -28,6 +28,15 @@ volume: 第11卷-dragonflybsd的历史
 
 ## 文献
 
-- dragonfly.duckdb dragonfly-src 仓库 commits 表与 commit_files 表与 tags 表与 contributors 表；DragonFly BSD Project. DragonFly BSD history [EB/OL]. <https://www.dragonflybsd.org/history/> ［A］<!-- DB_REF:dragonfly.duckdb -->> **数据库引用（dragonfly.duckdb）**：本子节对应 dragonfly 代码仓库。> 2003-2026 年间：656,206 次提交。> 仓库总览：656,206 次提交，535 位贡献者，2003-06-17 至 2026-08-18。
-- 综合 105.7-22.2 节文献；原材料/哲学/项目统摄史观/第 25 章.md（总纲第 6 条与第 8 条原文）；dragonfly.duckdb dragonfly-src 仓库 commits/contributors/tags/commit_files 表；DragonFly BSD Project. DragonFly BSD history [EB/OL]. <https://www.dragonflybsd.org/history/>；dragonflybsd.org/foundation/ 页面 404；FreeBSD Core Team bylaws [EB/OL]. <https://www.freebsd.org/internal/core-team/>；NetBSD Foundation bylaws [EB/OL]. <https://www.netbsd.org/foundation/>；OpenBSD Foundation [EB/OL]. <https://www.openbsdfoundation.org/> ［A］<!-- DB_REF:dragonfly.duckdb -->> **数据库引用（dragonfly.duckdb）**：本子节对应 dragonfly 代码仓库。> 2003-2026 年间：656,206 次提交。> 仓库总览：656,206 次提交，535 位贡献者，2003-06-17 至 2026-08-18。
-- 项目史观总纲第 19 条；Dillon M. DragonFly BSD fork announcement [EB/OL]. lists.freebsd.org/pipermail/freebsd-current/2003-July/006889.html；DragonFly BSD Project. DragonFly BSD history [EB/OL]. dragonflybsd.org/history/；DragonFly BSD Digest [EB/OL]. dragonflydigest.com/；dragonflybsd.org/foundation/ 页面 404；dragonfly.duckdb dragonfly-src 仓库 contributors 表；FreeBSD Core Team bylaws [EB/OL]. freebsd.org/internal/core-team/ ［A］FreeBSD 社区论文：[FP-2004-001] The Challenges of Dynamic Network Interfaces（Brooks Davis，2004）<https://papers.freebsd.org/2004/eurobsdcon/davis-challenges_of_dynamic_network_interfaces/><!-- DB_REF:dragonfly.duckdb -->> **数据库引用（dragonfly.duckdb）**：本子节对应 dragonfly 代码仓库。> 2003-2026 年间：656,206 次提交。> 仓库总览：656,206 次提交，535 位贡献者，2003-06-17 至 2026-08-18。
+- dragonfly.duckdb dragonfly-src 仓库 commits 表与 commit_files 表与 tags 表与 contributors 表；DragonFly BSD Project. DragonFly BSD history [EB/OL]. <https://www.dragonflybsd.org/history/> ［A］
+
+<!-- DB_REF:dragonfly.duckdb -->
+> **数据库引用（dragonfly.duckdb）**：本子节对应 dragonfly 代码仓库。> 2003-2026 年间：656,206 次提交。> 仓库总览：656,206 次提交，535 位贡献者，2003-06-17 至 2026-08-18。
+- 综合 105.7-22.2 节文献；原材料/哲学/项目统摄史观/第 25 章.md（总纲第 6 条与第 8 条原文）；dragonfly.duckdb dragonfly-src 仓库 commits/contributors/tags/commit_files 表；DragonFly BSD Project. DragonFly BSD history [EB/OL]. <https://www.dragonflybsd.org/history/>；dragonflybsd.org/foundation/ 页面 404；FreeBSD Core Team bylaws [EB/OL]. <https://www.freebsd.org/internal/core-team/>；NetBSD Foundation bylaws [EB/OL]. <https://www.netbsd.org/foundation/>；OpenBSD Foundation [EB/OL]. <https://www.openbsdfoundation.org/> ［A］
+
+<!-- DB_REF:dragonfly.duckdb -->
+> **数据库引用（dragonfly.duckdb）**：本子节对应 dragonfly 代码仓库。> 2003-2026 年间：656,206 次提交。> 仓库总览：656,206 次提交，535 位贡献者，2003-06-17 至 2026-08-18。
+- 项目史观总纲第 19 条；Dillon M. DragonFly BSD fork announcement [EB/OL]. lists.freebsd.org/pipermail/freebsd-current/2003-July/006889.html；DragonFly BSD Project. DragonFly BSD history [EB/OL]. dragonflybsd.org/history/；DragonFly BSD Digest [EB/OL]. dragonflydigest.com/；dragonflybsd.org/foundation/ 页面 404；dragonfly.duckdb dragonfly-src 仓库 contributors 表；FreeBSD Core Team bylaws [EB/OL]. freebsd.org/internal/core-team/ ［A］FreeBSD 社区论文：[FP-2004-001] The Challenges of Dynamic Network Interfaces（Brooks Davis，2004）<https://papers.freebsd.org/2004/eurobsdcon/davis-challenges_of_dynamic_network_interfaces/>
+
+<!-- DB_REF:dragonfly.duckdb -->
+> **数据库引用（dragonfly.duckdb）**：本子节对应 dragonfly 代码仓库。> 2003-2026 年间：656,206 次提交。> 仓库总览：656,206 次提交，535 位贡献者，2003-06-17 至 2026-08-18。

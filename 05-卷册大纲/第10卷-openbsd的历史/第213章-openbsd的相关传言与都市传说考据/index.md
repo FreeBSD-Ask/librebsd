@@ -29,9 +29,18 @@ volume: 第10卷-openbsd的历史
 
 ## 文献
 
-- OpenBSD Security. "Only two remote holes in the default install, in a heck of a long time!" openbsd.org/security.html. Dowd, M. "OpenSSH Challenge-Response Vulnerability." Internet Security Systems Advisory, June 2002. Ortega, A. "OpenBSD IPv6 mbuf kernel buffer overflow." Core Security Technologies, 13 March 2007. Van Sprundel, I. "Are all BSDs created equally?" DEF CON 25, 2017. Stein. "A systematic evaluation of OpenBSD's mitigations." 36C3, 2019.<!-- DB_REF:openbsd.duckdb -->> **数据库引用（openbsd.duckdb）**：本子节对应 openbsd 代码仓库。> 1995-2026 年间：491,195 次提交。> 仓库总览：491,195 次提交，3,352 位贡献者，1995-10-18 至 2026-08-25。
-- Perry, G. / de Raadt, T. "Alleged FBI backdoor in OpenBSD IPSEC stack." openbsd-tech mailing list, December 2010. MARC mailing list archive. NetBSD Core Team. "Revocation of Theo de Raadt's commit privileges." netbsd-core mailing list, 23 December 1994. OpenBSD Project. "OpenBSD IPSEC Audit Results." openbsd-tech mailing list, January 2011.<!-- DB_REF:openbsd.duckdb -->> **数据库引用（openbsd.duckdb）**：本子节对应 openbsd 代码仓库。> 1995-2026 年间：491,195 次提交。> 仓库总览：491,195 次提交，3,352 位贡献者，1995-10-18 至 2026-08-25。
-- OpenBSD Project. "Security." openbsd.org/security.html. McKusick, M. K. "OpenBSD." Open Sources: Voices from the Open Source Revolution. O'Reilly, 1999. Van Sprundel, I. "Are all BSDs created equally?" DEF CON 25, 2017. Stein. "A systematic evaluation of OpenBSD's mitigations." 36C3, 2019.<!-- DB_REF:openbsd.duckdb -->> **数据库引用（openbsd.duckdb）**：本子节对应 openbsd 代码仓库。> 1995-2026 年间：491,195 次提交。> 仓库总览：491,195 次提交，3,352 位贡献者，1995-10-18 至 2026-08-25。
+- OpenBSD Security. "Only two remote holes in the default install, in a heck of a long time!" openbsd.org/security.html. Dowd, M. "OpenSSH Challenge-Response Vulnerability." Internet Security Systems Advisory, June 2002. Ortega, A. "OpenBSD IPv6 mbuf kernel buffer overflow." Core Security Technologies, 13 March 2007. Van Sprundel, I. "Are all BSDs created equally?" DEF CON 25, 2017. Stein. "A systematic evaluation of OpenBSD's mitigations." 36C3, 2019.
+
+<!-- DB_REF:openbsd.duckdb -->
+> **数据库引用（openbsd.duckdb）**：本子节对应 openbsd 代码仓库。> 1995-2026 年间：491,195 次提交。> 仓库总览：491,195 次提交，3,352 位贡献者，1995-10-18 至 2026-08-25。
+- Perry, G. / de Raadt, T. "Alleged FBI backdoor in OpenBSD IPSEC stack." openbsd-tech mailing list, December 2010. MARC mailing list archive. NetBSD Core Team. "Revocation of Theo de Raadt's commit privileges." netbsd-core mailing list, 23 December 1994. OpenBSD Project. "OpenBSD IPSEC Audit Results." openbsd-tech mailing list, January 2011.
+
+<!-- DB_REF:openbsd.duckdb -->
+> **数据库引用（openbsd.duckdb）**：本子节对应 openbsd 代码仓库。> 1995-2026 年间：491,195 次提交。> 仓库总览：491,195 次提交，3,352 位贡献者，1995-10-18 至 2026-08-25。
+- OpenBSD Project. "Security." openbsd.org/security.html. McKusick, M. K. "OpenBSD." Open Sources: Voices from the Open Source Revolution. O'Reilly, 1999. Van Sprundel, I. "Are all BSDs created equally?" DEF CON 25, 2017. Stein. "A systematic evaluation of OpenBSD's mitigations." 36C3, 2019.
+
+<!-- DB_REF:openbsd.duckdb -->
+> **数据库引用（openbsd.duckdb）**：本子节对应 openbsd 代码仓库。> 1995-2026 年间：491,195 次提交。> 仓库总览：491,195 次提交，3,352 位贡献者，1995-10-18 至 2026-08-25。
 
 <!-- PODCAST_REVIEW v20260829 -->
 <!-- 语义复核范围：BSD Now EP460、BSDTalk EP49（共 2 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->

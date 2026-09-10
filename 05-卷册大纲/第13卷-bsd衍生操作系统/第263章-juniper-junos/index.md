@@ -35,11 +35,23 @@ volume: 第13卷-bsd衍生操作系统
 
 ## 文献
 
-- Juniper 官方架构文档；JunOS 白皮书；openbsd.duckdb 查询 L3.2.1（商业实体 commit 占比随时间变化，含 Juniper @juniper.net、@juniper.com）；openbsd.duckdb 查询 L3.2.2（商业实体 commit 量按仓库分布）；原材料/研究/bsd 仓库分析/数据分析/深层信息挖掘.md §L3.2.1、§L3.2.2。[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]<!-- DB_REF:freebsd.duckdb -->> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 1998-2005 年间：279,186 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
-- freebsd.duckdb 查询 L7.2.1（衍生项目贡献者在 freebsd-src 的回馈 commit，≥5 次，前 30 名）；原材料/研究/bsd 仓库分析/数据分析/衍生项目与跨项目对比分析.md §L7.2；Juniper 档案。 ［A］<!-- DB_REF:freebsd.duckdb -->> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 2005-2026 年间：1,014,950 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
-- 各厂商官方资料。[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]<!-- DB_REF:bsd_derivatives.duckdb -->> **数据库引用（bsd_derivatives.duckdb）**：本子节对应 bsd_derivatives 代码仓库。> 1985-2026 年间：963,557 次提交。> 仓库总览：963,557 次提交，9,744 位贡献者（contributors 表行数，1985-06-13 至 2026-08-24）。
+- Juniper 官方架构文档；JunOS 白皮书；openbsd.duckdb 查询 L3.2.1（商业实体 commit 占比随时间变化，含 Juniper @juniper.net、@juniper.com）；openbsd.duckdb 查询 L3.2.2（商业实体 commit 量按仓库分布）；原材料/研究/bsd 仓库分析/数据分析/深层信息挖掘.md §L3.2.1、§L3.2.2。[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]
+
+<!-- DB_REF:freebsd.duckdb -->
+> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 1998-2005 年间：279,186 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
+- freebsd.duckdb 查询 L7.2.1（衍生项目贡献者在 freebsd-src 的回馈 commit，≥5 次，前 30 名）；原材料/研究/bsd 仓库分析/数据分析/衍生项目与跨项目对比分析.md §L7.2；Juniper 档案。 ［A］
+
+<!-- DB_REF:freebsd.duckdb -->
+> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 2005-2026 年间：1,014,950 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
+- 各厂商官方资料。[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]
+
+<!-- DB_REF:bsd_derivatives.duckdb -->
+> **数据库引用（bsd_derivatives.duckdb）**：本子节对应 bsd_derivatives 代码仓库。> 1985-2026 年间：963,557 次提交。> 仓库总览：963,557 次提交，9,744 位贡献者（contributors 表行数，1985-06-13 至 2026-08-24）。
 - Juniper M40/JunOS 发布档案（1998）；JunOS 架构白皮书；openbsd.duckdb L7.2.1 查询结果（衍生项目贡献者回馈 commit，≥5 次，前 30 名）；openbsd.duckdb L3.2.1 查询结果（商业实体 commit 占比随时间变化）[DB/OL]；Juniper 官方 Junos OS 22.2R3 发行说明 [EB/OL]；FreeBSD Handbook 中文版 §1.2 [EB/OL]；Kerner S. FreeBSD turns 26. LWN [EB/OL]. 2019-06-21 ［A］## 262.4.2 反批评层：Juniper 的回馈记录与工程参与
 - JunOS 官方架构文档；BSDCan/EuroBSDcon 演讲档案；Juniper 工程博客；openbsd.duckdb L7.2.1 查询结果 ［A］## 262.4.3 再批评层：回馈路径的结构性偏移
 - JunOS 版本发布说明；Juniper 工程博客；FreeBSD 邮件列表存档；openbsd.duckdb L3.2.1 查询结果 [DB/OL] ［A］## 262.4.4 合图层：商业路由器厂商与 BSD 上游的共生张力
 - JunOS 官方架构文档；Arista EOS 架构文档；Juniper 财报；freebsd.duckdb L3.2.1 查询结果；freebsd.duckdb contributors 表（freebsd-src 核心维护者） ［A］## 262.4.5 项目统摄史观审视：利益分配、解释学循环与革命改革方法论
-- *c:\Users\ykla\Documents\hibsd\原材料\哲学\项目统摄史观\第 25 章.md**（总纲第 11、13、19 条）；JunOS 官方架构文档；openbsd.duckdb L3.2.1、L7.2.1 查询结果 [DB/OL] ［A］FreeBSD 社区论文：[FP-2019-025] mac_grantbylabel: Securely controlled privilege escalations via maclabel（Simon Gerraty，2019）<https://papers.freebsd.org/2019/bsdcan/gerraty-mac_grantbylabel/>FreeBSD 社区论文：[FP-2018-019] Adding verification to FreeBSD loader（Simon Gerraty，2018）<https://papers.freebsd.org/2018/bsdcan/gerraty-adding_verification_to_freebsd_loader/><!-- DB_REF:bsd_derivatives.duckdb -->> **数据库引用（bsd_derivatives.duckdb）**：本子节对应 bsd_derivatives 代码仓库。> 1985-2026 年间：963,557 次提交。> 仓库总览：963,557 次提交，9,744 位贡献者（contributors 表行数，1985-06-13 至 2026-08-24）。
+- *c:\Users\ykla\Documents\hibsd\原材料\哲学\项目统摄史观\第 25 章.md**（总纲第 11、13、19 条）；JunOS 官方架构文档；openbsd.duckdb L3.2.1、L7.2.1 查询结果 [DB/OL] ［A］FreeBSD 社区论文：[FP-2019-025] mac_grantbylabel: Securely controlled privilege escalations via maclabel（Simon Gerraty，2019）<https://papers.freebsd.org/2019/bsdcan/gerraty-mac_grantbylabel/>FreeBSD 社区论文：[FP-2018-019] Adding verification to FreeBSD loader（Simon Gerraty，2018）<https://papers.freebsd.org/2018/bsdcan/gerraty-adding_verification_to_freebsd_loader/>
+
+<!-- DB_REF:bsd_derivatives.duckdb -->
+> **数据库引用（bsd_derivatives.duckdb）**：本子节对应 bsd_derivatives 代码仓库。> 1985-2026 年间：963,557 次提交。> 仓库总览：963,557 次提交，9,744 位贡献者（contributors 表行数，1985-06-13 至 2026-08-24）。

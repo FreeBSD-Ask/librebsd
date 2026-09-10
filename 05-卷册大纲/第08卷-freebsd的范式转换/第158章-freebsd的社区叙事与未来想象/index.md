@@ -36,11 +36,20 @@ volume: 第08卷-freebsd的范式转换
 ## 文献
 
 - 本项目内部哲学文献《项目统摄史观》第 11 章 “法哲学与政治历史哲学”、第 25 章总纲第 13 条（sacred 哲学源材料）.## 第 67.11 FreeBSD 习俗特殊文化考据（详见 [第 67.11 节.md](第67.11节.md)）> ## 第 67.12 不同时期人员的采访录（详见 [采访录.md](采访录.md)）---## 第 67.13 FreeBSD 相关键传言与都市传说考据（详见 [第 67.13 节.md](第67.13节.md)）### 史纲映射本节在项目统摄史观 29 章 191 子节中的主要承载映射：1.md 第七章 “文化历史哲学”——本节为 FreeBSD 传言与都市传说作为文化形式主义建构的核心考据，“文化即形式主义” 总纲在 “Netflix 秘密武器” “ZFS 更稳定” “网络栈十倍性能” 等传言中的实例化；1.md 第二十五章 “总纲”——本节映射 5 条总纲（总纲 9 经验优先、总纲 15 文化即形式主义、总纲 19 解释学循环、总纲 7 理论必须自反、总纲 23 一切历史写作都是基于哲学设定的历史小说），含自反性声明；1.md 第二十九章 “元哲学”——本节以 16 条 FreeBSD 传言为经验材料检验项目统摄史观，同时以项目统摄史观为分析工具释读 FreeBSD 传言，构成双向检验的方法论实验。### 核心内容## 史料考据补充（2026-08-04 任务3 联网核验）> 主题：FreeBSD 组件/特性
-- 上述第 67.11.1-67.11.5 节所有文献综合；项目史观总纲第 4、5、7、8、13、23 条 ［A］<!-- DB_REF:freebsd.duckdb -->> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 2024-2026 年间：168,386 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
+- 上述第 67.11.1-67.11.5 节所有文献综合；项目史观总纲第 4、5、7、8、13、23 条 ［A］
+
+<!-- DB_REF:freebsd.duckdb -->
+> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 2024-2026 年间：168,386 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
 - 基金会页面； 社区文化研究 ［B］## 史料考据补充（2026-08-04 任务3 联网核验）> 主题：FreeBSD 组件/特性
 - FreeBSD Foundation Netflix Case Study、OpenZFS Main Page、FreeBSD 7.0/8.0/5.0 Release Notes、Juniper Junos OS Documentation、Sony PS4 SDK、FreeBSD Commit Bit Expiration Policy、本项目既有考据记录 `03-原始史料库/06-考据记录/20260727_rumors-freebsd.md`#### 概率学量化分析
-- freebsd.duckdb（freebsd-src）；0 信任原则方法论；FreeBSD 贡献者多样性研究（如有）据一手文献印证消解^doubt-resolved-590：此文献待 0 信任原则考据验证 ］<!-- DB_REF:freebsd.duckdb -->> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 2010-2026 年间：831,293 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
-- McKusick M K, Neville-Neil G. The Design and Implementation of the FreeBSD Operating System [M]. 2nd ed. Addison-Wesley, 2015. ［B］<!-- DB_REF:freebsd.duckdb -->> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 2024-2026 年间：168,386 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
+- freebsd.duckdb（freebsd-src）；0 信任原则方法论；FreeBSD 贡献者多样性研究（如有）据一手文献印证消解^doubt-resolved-590：此文献待 0 信任原则考据验证 ］
+
+<!-- DB_REF:freebsd.duckdb -->
+> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 2010-2026 年间：831,293 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
+- McKusick M K, Neville-Neil G. The Design and Implementation of the FreeBSD Operating System [M]. 2nd ed. Addison-Wesley, 2015. ［B］
+
+<!-- DB_REF:freebsd.duckdb -->
+> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 2024-2026 年间：168,386 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
 
 <!-- PODCAST_REVIEW v20260829 -->
 <!-- 语义复核范围：BSD Now EP368、BSDTalk EP247（共 2 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->

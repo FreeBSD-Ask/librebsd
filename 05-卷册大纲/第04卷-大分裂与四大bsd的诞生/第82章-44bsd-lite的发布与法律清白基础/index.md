@@ -35,7 +35,10 @@ volume: 第04卷-大分裂与四大bsd的诞生
 ## 文献
 
 - USL v. BSDi 和解协议；4.4BSD-Lite 源码档案 ［A］
-- FreeBSD 2.0 Release Announcement 1994.11.22；FreeBSD Handbook；NetBSD 1.0 Release Announcement 1994.10.26；bsd_commits.db `tags` 表（FreeBSD release/2.0_cvs）与 `contributors` 表（<christos@NetBSD.org> 首次 commit 1994-10-26T11:58:24Z） ［A］<!-- DB_REF:freebsd.duckdb -->> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 1992-1995 年间：15,540 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
+- FreeBSD 2.0 Release Announcement 1994.11.22；FreeBSD Handbook；NetBSD 1.0 Release Announcement 1994.10.26；bsd_commits.db `tags` 表（FreeBSD release/2.0_cvs）与 `contributors` 表（<christos@NetBSD.org> 首次 commit 1994-10-26T11:58:24Z） ［A］
+
+<!-- DB_REF:freebsd.duckdb -->
+> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 1992-1995 年间：15,540 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
 - CSRG 解散史料分析；BSD 技术传承研究[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]
 - 4.4BSD-Lite Release Notes 史料分析；BSD 文档史研究[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]
 - 和解协议； 4.4BSD-Lite 文档 ［A］## 史料考据补充（2026-08-04 任务3 联网核验）> 主题：4.4BSD Lite 的技术完整性 vs 法律清白性取舍

@@ -33,7 +33,23 @@ volume: 第12卷-macos的bsd遗产
 
 ## 文献
 
-- Apple Public Source License Version 2.0 [EB/OL]. (2003-08-06). <https://opensource.apple.com/apsl/>; Apple Inc. Darwin Open Source [EB/OL]. <https://opensource.apple.com/>; Free Software Foundation. Various Licenses and Comments about Them [EB/OL]. <https://www.gnu.org/licenses/license-list.html#APSL2>; FreeBSD Project. FreeBSD License [EB/OL]. <https://www.freebsd.org/copyright/freebsd-license/>; 统计结论 [C-28] 结果 [EB/OL]. 推断性统计.md Task 11, 2026-07-22.<!-- DB_REF:darwin.duckdb -->> **数据库引用（darwin.duckdb）**：本子节对应 darwin 代码仓库。> 1985-2026 年间：2,012 次提交。> 仓库总览：2,016 次提交，42 个 Apple 开源镜像仓库（contributors 表 43 行），2001-04-10 至 2026-04-13。
-- Stack Overflow. Developer Survey 2023 [EB/OL]. <https://survey.stackoverflow.co/2023/>; Apple Inc. Q1 FY2024 Financial Results [EB/OL]. <https://investor.apple.com/>; GitHub. Octoverse 2023 [EB/OL]. <https://octoverse.github.com/>.<!-- DB_REF:darwin.duckdb -->> **数据库引用（darwin.duckdb）**：本子节对应 darwin 代码仓库。> 1985-2026 年间：2,012 次提交。> 仓库总览：2,016 次提交，42 个 Apple 开源镜像仓库（contributors 表 43 行），2001-04-10 至 2026-04-13。
-- Apple Inc. Darwin Source Code Repository, CREDITS Files [EB/OL]. <https://opensource.apple.com/>; Apple Inc. 10-K Annual Reports [EB/OL]. <https://investor.apple.com/>.<!-- DB_REF:darwin.duckdb -->> **数据库引用（darwin.duckdb）**：本子节对应 darwin 代码仓库。> 1985-2026 年间：2,012 次提交。> 仓库总览：2,016 次提交，42 个 Apple 开源镜像仓库（contributors 表 43 行），2001-04-10 至 2026-04-13。
-- Microsoft. Announcing Windows Subsystem for Linux [EB/OL]. (2016-03-30). <https://blogs.microsoft.com/blog/2016/03/30/announcing-windows-subsystem-for-linux/>; Microsoft. WSL Documentation [EB/OL]. <https://learn.microsoft.com/en-us/windows/wsl/>.<!-- DB_REF:darwin.duckdb -->> **数据库引用（darwin.duckdb）**：本子节对应 darwin 代码仓库。> 1985-2026 年间：2,012 次提交。> 仓库总览：2,016 次提交，42 个 Apple 开源镜像仓库（contributors 表 43 行），2001-04-10 至 2026-04-13。
+- Apple Public Source License Version 2.0 [EB/OL]. (2003-08-06). <https://opensource.apple.com/apsl/>; Apple Inc. Darwin Open Source [EB/OL]. <https://opensource.apple.com/>; Free Software Foundation. Various Licenses and Comments about Them [EB/OL]. <https://www.gnu.org/licenses/license-list.html#APSL2>; FreeBSD Project. FreeBSD License [EB/OL]. <https://www.freebsd.org/copyright/freebsd-license/>; 统计结论 [C-28] 结果 [EB/OL]. 推断性统计.md Task 11, 2026-07-22.
+
+<!-- DB_REF:darwin.duckdb -->
+> **数据库引用（darwin.duckdb）**：本子节对应 darwin 代码仓库。> 1985-2026 年间：2,012 次提交。> 仓库总览：2,016 次提交，42 个 Apple 开源镜像仓库（contributors 表 43 行），2001-04-10 至 2026-04-13。
+- Stack Overflow. Developer Survey 2023 [EB/OL]. <https://survey.stackoverflow.co/2023/>; Apple Inc. Q1 FY2024 Financial Results [EB/OL]. <https://investor.apple.com/>; GitHub. Octoverse 2023 [EB/OL]. <https://octoverse.github.com/>.
+
+<!-- DB_REF:darwin.duckdb -->
+> **数据库引用（darwin.duckdb）**：本子节对应 darwin 代码仓库。> 1985-2026 年间：2,012 次提交。> 仓库总览：2,016 次提交，42 个 Apple 开源镜像仓库（contributors 表 43 行），2001-04-10 至 2026-04-13。
+- Apple Inc. Darwin Source Code Repository, CREDITS Files [EB/OL]. <https://opensource.apple.com/>; Apple Inc. 10-K Annual Reports [EB/OL]. <https://investor.apple.com/>.
+
+<!-- DB_REF:darwin.duckdb -->
+> **数据库引用（darwin.duckdb）**：本子节对应 darwin 代码仓库。> 1985-2026 年间：2,012 次提交。> 仓库总览：2,016 次提交，42 个 Apple 开源镜像仓库（contributors 表 43 行），2001-04-10 至 2026-04-13。
+- Microsoft. Announcing Windows Subsystem for Linux [EB/OL]. (2016-03-30). <https://blogs.microsoft.com/blog/2016/03/30/announcing-windows-subsystem-for-linux/>; Microsoft. WSL Documentation [EB/OL]. <https://learn.microsoft.com/en-us/windows/wsl/>.
+
+<!-- DB_REF:darwin.duckdb -->
+> **数据库引用（darwin.duckdb）**：本子节对应 darwin 代码仓库。> 1985-2026 年间：2,012 次提交。> 仓库总览：2,016 次提交，42 个 Apple 开源镜像仓库（contributors 表 43 行），2001-04-10 至 2026-04-13。
+
+<!-- dangan-20260908 消解回写 -->
+- Braun. R. darwinos.sourceforge.net [EB/OL]. (2001-2007). <https://web.archive.org/web/20071012000000*/darwinos.sourceforge.net>[EB/OL]. 2001. ［待核·needs_fix］［DKC-0178→fulltext:5492］
+<!-- /dangan-20260908 -->

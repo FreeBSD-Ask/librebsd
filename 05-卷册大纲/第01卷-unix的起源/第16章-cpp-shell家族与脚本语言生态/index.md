@@ -32,7 +32,10 @@ volume: 第01卷-unix的起源
 
 - FreeBSD 10.0 Release Notes（2014-01）；FreeBSD 2012 Q1 Status Report（Clang Replacing GCC 章节）；LLVM Documentation；GCC Documentation [考据脚注：经相关权威来源交叉验证。]
 - FreeBSD src/etc/rc.d/ 脚本源码；POSIX 1003.1-2008 Shell Command Language；FreeBSD Porter's Handbook ［A］
-- Sun 2006 Announcement；OpenJDK BSD Port Project (openjdk.java.net/projects/bsd-port/，2026-07-28 WebFetch 核实)；OpenJDK BSD Port Wiki (wiki.openjdk.org/display/BSDPort/Main，2026-07-28 WebFetch 核实，Dalibor Topic 创建，Brian Beck 2013-02-19 最后更新)；FreeBSD Ports (openjdk6: freshports.org/java/openjdk6/；openjdk7: freshports.org/java/openjdk7/)；OpenJDK Documentation；FreeBSD OpenJDK Porting Guide；wiki.freebsd.org/Java（2026-07-28 WebFetch 核实） ［A］<!-- DB_REF:freebsd.duckdb -->> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 1995-1995 年间：9,812 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
+- Sun 2006 Announcement；OpenJDK BSD Port Project (openjdk.java.net/projects/bsd-port/，2026-07-28 WebFetch 核实)；OpenJDK BSD Port Wiki (wiki.openjdk.org/display/BSDPort/Main，2026-07-28 WebFetch 核实，Dalibor Topic 创建，Brian Beck 2013-02-19 最后更新)；FreeBSD Ports (openjdk6: freshports.org/java/openjdk6/；openjdk7: freshports.org/java/openjdk7/)；OpenJDK Documentation；FreeBSD OpenJDK Porting Guide；wiki.freebsd.org/Java（2026-07-28 WebFetch 核实） ［A］
+
+<!-- DB_REF:freebsd.duckdb -->
+> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 1995-1995 年间：9,812 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
 - FreeBSD Porter's Handbook；FreeBSD Ports Tree；FreeBSD Documentation ［B］
 
 <!-- PODCAST_REVIEW v20260829 -->

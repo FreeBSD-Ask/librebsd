@@ -32,7 +32,16 @@ volume: 第09卷-netbsd的历史
 
 ## 文献
 
-- NetBSD Project. *NetBSD 1.0 Release Notes*[EB/OL]. (1994-10-26). <https://www.netbsd.org/releases/formal-1.0.html>; NetBSD Project. *audio(4) Manual Page*[EB/OL]. <https://man.netbsd.org/audio.4>; McKusick, M. K. et al. (1996). *The Design and Implementation of the 4.4BSD Operating System*. Addison-Wesley. Chapter 10.<!-- DB_REF:netbsd.duckdb -->> **数据库引用（netbsd.duckdb）**：本子节对应 netbsd 代码仓库。> 1999-2002 年间：295,239 次提交。> 仓库总览：1,999,412 次提交，1,545 位贡献者（contributors 表行数，1992-07-13 至 2026-08-24）。
+- NetBSD Project. *NetBSD 1.0 Release Notes*[EB/OL]. (1994-10-26). <https://www.netbsd.org/releases/formal-1.0.html>; NetBSD Project. *audio(4) Manual Page*[EB/OL]. <https://man.netbsd.org/audio.4>; McKusick, M. K. et al. (1996). *The Design and Implementation of the 4.4BSD Operating System*. Addison-Wesley. Chapter 10.
+
+<!-- DB_REF:netbsd.duckdb -->
+> **数据库引用（netbsd.duckdb）**：本子节对应 netbsd 代码仓库。> 1999-2002 年间：295,239 次提交。> 仓库总览：1,999,412 次提交，1,545 位贡献者（contributors 表行数，1992-07-13 至 2026-08-24）。
 - NetBSD Foundation. 2003 年报 [EB/OL]. (2004-02-07)[2026-07-23]. <https://www.netbsd.org/foundation/reports/2003.html>; NetBSD Project. About 页面 [EB/OL]. (2026-07-23 访问). <https://www.netbsd.org/about/>; NetBSD Project. formal.html 历史页面 [EB/OL]. (2026-07-23 访问). <https://www.netbsd.org/releases/formal.html>; 考据记录 20260723_announcements-netbsd.md §A.4、§ 存疑判定依据-一 -7 ［A］    FreeBSD 社区论文与演讲 [287]，[287] Michael Dexter, Chuck Tuffli. smart(8) Update: A Permissively-Licensed Alternative to smartctl(8)[C]//EuroBSDcon 2021. [S.l.]: [s.n.], 2021. 获取路径：<https://papers.freebsd.org/2021/eurobsdcon/dexter-tuffli-update_on_smart/> [访问日期 2026-07-26].    FreeBSD 社区论文与演讲 [245]，[245] Michael Dexter. By the numbers: ZFS Performance Results from Six Operating Systems and Their Derivatives [C]//vBSDcon 2019. [S.l.]: [s.n.], 2019. 获取路径：<https://papers.freebsd.org/2019/vbsdcon/dexter-zfs_performance_results/> [访问日期 2026-07-26].    FreeBSD 社区论文与演讲 [235]，[235] Thomas Barabosch. KLEAK - Practical Kernel Memory Disclosure Detection [C]//FOSDEM 2019. [S.l.]: [s.n.], 2019. 获取路径：<https://papers.freebsd.org/2019/fosdem/barabosch-kleak/> [访问日期 2026-07-26].    FreeBSD 社区论文与演讲 [251]，[251] Allan Jude. OpenZFS: Best Filesystem for every OS [C]//独立发布 2019. [S.l.]: [s.n.], 2019. 获取路径：<https://papers.freebsd.org/2019/jude-openzfs-everyos/> [访问日期 2026-07-26].<!-- foundation-writeback: NetBSD Foundation | NetBSD Foundation 决议文件（2003-2017） -->**NetBSD Foundation 史料**（NetBSD Foundation 决议文件（2003-2017），下载日期 2026-07-26）：
-- NetBSD Project. Developers' Guide [EB/OL]. (2026-08-06 归档). governance/developers.html; NetBSD Project. Core Team 名单 [EB/OL]. (2026-08-06 归档). governance/core.html; 考据记录 20260806_netbsd_core_史料采集.md ［A］<!-- DB_REF:netbsd.duckdb -->> **数据库引用（netbsd.duckdb）**：本子节对应 netbsd 代码仓库。> 1994-2004 年间：623,504 次提交。> 仓库总览：1,999,412 次提交，1,545 位贡献者（contributors 表行数，1992-07-13 至 2026-08-24）。
-- NetBSD 贡献者史料分析[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]<!-- DB_REF:netbsd.duckdb -->> **数据库引用（netbsd.duckdb）**：本子节对应 netbsd 代码仓库。> 1993-2026 年间：1,999,408 次提交。> 仓库总览：1,999,412 次提交，1,545 位贡献者（contributors 表行数，1992-07-13 至 2026-08-24）。
+- NetBSD Project. Developers' Guide [EB/OL]. (2026-08-06 归档). governance/developers.html; NetBSD Project. Core Team 名单 [EB/OL]. (2026-08-06 归档). governance/core.html; 考据记录 20260806_netbsd_core_史料采集.md ［A］
+
+<!-- DB_REF:netbsd.duckdb -->
+> **数据库引用（netbsd.duckdb）**：本子节对应 netbsd 代码仓库。> 1994-2004 年间：623,504 次提交。> 仓库总览：1,999,412 次提交，1,545 位贡献者（contributors 表行数，1992-07-13 至 2026-08-24）。
+- NetBSD 贡献者史料分析[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]
+
+<!-- DB_REF:netbsd.duckdb -->
+> **数据库引用（netbsd.duckdb）**：本子节对应 netbsd 代码仓库。> 1993-2026 年间：1,999,408 次提交。> 仓库总览：1,999,412 次提交，1,545 位贡献者（contributors 表行数，1992-07-13 至 2026-08-24）。

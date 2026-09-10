@@ -35,4 +35,7 @@ volume: 第13卷-bsd衍生操作系统
 - 原材料/哲学/项目统摄史观/第 25 章.md；原材料/哲学/项目统摄史观/第 08 章.md；openbsd.duckdb 查询 L7.2.1、L3.2.1、L3.2.2；NetApp/Isilon/Citrix 架构文档；IDC 2012 年存储操作系统市场报告；128.4.1-128.4.4 节记录 ［A］## 268.5.2 法律与道德是利益分配——BSD 许可证“允许不回馈”的利益分配操作（总纲第 13 条）
 - 原材料/哲学/项目统摄史观/第 25 章.md；BSD 许可证文本；GPL v3 §5 文本；Berkeley CSRG 1999.7.22 公告；FreeBSD Foundation 许可证立场文件；openbsd.duckdb 查询 L7.2.1；128.4.1-128.4.4 节记录；134 章 BSD 许可证文本与历史记录；133 章 FreeBSD 商业生态记录；134.2 节 BSD vs GPL 哲学差异记录 ［A］## 268.5.3 解释学循环——BSD 社区与企业阵营前理解差异的权力共谋（总纲第 19 条）
 - 原材料/哲学/项目统摄史观/第 25 章.md；原材料/哲学/项目统摄史观/第 19 章.md；BSD 许可证文本；openbsd.duckdb 查询 L7.2.1；NetApp/Isilon/Citrix 商品形式营销材料；FreeBSD Foundation 年报；行业媒体报道；128.4.1-128.4.4 节记录 ［A］## 268.5.4 革命与改革——BSD 阵营“改革”路径在“沉默 BSD”现象中的困难（总纲第 21 条）
-- 原材料/哲学/项目统摄史观/第 25 章.md 总纲第 1、2、7、11、13、19、23、25 条；BSD 许可证文本；openbsd.duckdb 查询 L7.2.1、L3.2.1、L3.2.2；NetApp/Isilon/Citrix 架构文档；FreeBSD Foundation 年报；WhatsApp/NetApp/Isilon/Citrix 工程演讲存档；行业媒体报道 ［A］<!-- DB_REF:bsd_derivatives.duckdb -->> **数据库引用（bsd_derivatives.duckdb）**：本子节对应 bsd_derivatives 代码仓库。> 1985-2026 年间：963,557 次提交。> 仓库总览：963,557 次提交，9,744 位贡献者（contributors 表行数，1985-06-13 至 2026-08-24）。
+- 原材料/哲学/项目统摄史观/第 25 章.md 总纲第 1、2、7、11、13、19、23、25 条；BSD 许可证文本；openbsd.duckdb 查询 L7.2.1、L3.2.1、L3.2.2；NetApp/Isilon/Citrix 架构文档；FreeBSD Foundation 年报；WhatsApp/NetApp/Isilon/Citrix 工程演讲存档；行业媒体报道 ［A］
+
+<!-- DB_REF:bsd_derivatives.duckdb -->
+> **数据库引用（bsd_derivatives.duckdb）**：本子节对应 bsd_derivatives 代码仓库。> 1985-2026 年间：963,557 次提交。> 仓库总览：963,557 次提交，9,744 位贡献者（contributors 表行数，1985-06-13 至 2026-08-24）。

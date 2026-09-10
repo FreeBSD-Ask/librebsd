@@ -34,11 +34,26 @@ volume: 第10卷-openbsd的历史
 ## 文献
 
 - openbsd.duckdb openbsd-src 仓库；OpenBSD 4.0-4.4 Release Notes [EB/OL]. <https://www.openbsd.org/40.html>；OpenBSD CVS 仓库 [EB/OL]. <https://cvsweb.openbsd.org/>；openbsd.duckdb 查询 L1.1.1 与 L1.1.2（来源：原材料/研究/bsd 仓库分析/数据分析/宏观趋势统计.md §L1.1.1、§L1.1.2）；统计分析报告：描述性统计.md SubTask 2.1 [R/OL]. 2026-07-27. 文件路径：`c:\Users\ykla\Documents\hibsd\03-原始史料库\01-代码仓库史料\01-数据库本体\统计分析\描述性统计.md`；统计分析报告：推断性统计.md Task 6 [R/OL]. 2026-07-27. 文件路径：`c:\Users\ykla\Documents\hibsd\03-原始史料库\01-代码仓库史料\01-数据库本体\统计分析\推断性统计.md`；SQL 查询：`SELECT COUNT(*) FROM commits WHERE repo_name='openbsd-src'`. openbsd.duckdb [DB/OL]. 查询日期：2026-07-27；Python 统计脚本：`script/phase2_inferential.py`. Task 6 Pettitt + BUISHAND 变点检测。执行日期：2026-07-27 ［A］---## 史料登记与辩证校准（2026-08-08 追加）> **本卷命题**：24.3 长期主义（详见本卷 00-总览“编纂指导思想叙事参照”）### 史料文献
-- openbsd.duckdb openbsd-src 仓库 pf 相关 commit；OpenBSD **pf.conf(5)** 手册页 [EB/OL]. <https://man.openbsd.org/pf.conf.5>；OpenBSD Release Notes [EB/OL]. <https://www.openbsd.org/plus.html>；openbsd.duckdb 查询 L2.2.1.sys_net_pf（来源：原材料/研究/bsd 仓库分析/数据分析/中观模式挖掘.md §L2.2.1，数据缺口） ［A］<!-- DB_REF:openbsd.duckdb -->> **数据库引用（openbsd.duckdb）**：本子节对应 openbsd 代码仓库。> 2005-2012 年间：129,773 次提交。> 仓库总览：491,195 次提交，3,352 位贡献者，1995-10-18 至 2026-08-25。
-- openbsd.duckdb openbsd-src 仓库加密相关 commit；OpenBSD Release Notes [EB/OL]. <https://www.openbsd.org/plus.html>；OpenBSD man pages ［A］<!-- DB_REF:openbsd.duckdb -->> **数据库引用（openbsd.duckdb）**：本子节对应 openbsd 代码仓库。> 2005-2012 年间：129,773 次提交。> 仓库总览：491,195 次提交，3,352 位贡献者，1995-10-18 至 2026-08-25。
-- openbsd.duckdb openbsd-src 仓库 commit e8d7e8373d3b；OpenBSD Release Notes [EB/OL]. <https://www.openbsd.org/plus.html>；OpenBSD CVS 仓库 [EB/OL]. <https://cvsweb.openbsd.org/> ［A］<!-- DB_REF:openbsd.duckdb -->> **数据库引用（openbsd.duckdb）**：本子节对应 openbsd 代码仓库。> 1995-2026 年间：491,195 次提交。> 仓库总览：491,195 次提交，3,352 位贡献者，1995-10-18 至 2026-08-25。
-- OpenBSD Foundation bylaws [EB/OL]. <https://www.openbsdfoundation.org/>；加拿大政府注册记录；OpenBSD Foundation 年报 ［B］<!-- DB_REF:openbsd.duckdb -->> **数据库引用（openbsd.duckdb）**：本子节对应 openbsd 代码仓库。> 2007-2007 年间：16,998 次提交。> 仓库总览：491,195 次提交，3,352 位贡献者，1995-10-18 至 2026-08-25。
-- OpenBSD 提交/文档/ports 贡献记录；OpenBSD Foundation 年报 ［A］<!-- DB_REF:openbsd.duckdb -->> **数据库引用（openbsd.duckdb）**：本子节对应 openbsd 代码仓库。> 1995-2026 年间：491,195 次提交。> 仓库总览：491,195 次提交，3,352 位贡献者，1995-10-18 至 2026-08-25。
+- openbsd.duckdb openbsd-src 仓库 pf 相关 commit；OpenBSD **pf.conf(5)** 手册页 [EB/OL]. <https://man.openbsd.org/pf.conf.5>；OpenBSD Release Notes [EB/OL]. <https://www.openbsd.org/plus.html>；openbsd.duckdb 查询 L2.2.1.sys_net_pf（来源：原材料/研究/bsd 仓库分析/数据分析/中观模式挖掘.md §L2.2.1，数据缺口） ［A］
+
+<!-- DB_REF:openbsd.duckdb -->
+> **数据库引用（openbsd.duckdb）**：本子节对应 openbsd 代码仓库。> 2005-2012 年间：129,773 次提交。> 仓库总览：491,195 次提交，3,352 位贡献者，1995-10-18 至 2026-08-25。
+- openbsd.duckdb openbsd-src 仓库加密相关 commit；OpenBSD Release Notes [EB/OL]. <https://www.openbsd.org/plus.html>；OpenBSD man pages ［A］
+
+<!-- DB_REF:openbsd.duckdb -->
+> **数据库引用（openbsd.duckdb）**：本子节对应 openbsd 代码仓库。> 2005-2012 年间：129,773 次提交。> 仓库总览：491,195 次提交，3,352 位贡献者，1995-10-18 至 2026-08-25。
+- openbsd.duckdb openbsd-src 仓库 commit e8d7e8373d3b；OpenBSD Release Notes [EB/OL]. <https://www.openbsd.org/plus.html>；OpenBSD CVS 仓库 [EB/OL]. <https://cvsweb.openbsd.org/> ［A］
+
+<!-- DB_REF:openbsd.duckdb -->
+> **数据库引用（openbsd.duckdb）**：本子节对应 openbsd 代码仓库。> 1995-2026 年间：491,195 次提交。> 仓库总览：491,195 次提交，3,352 位贡献者，1995-10-18 至 2026-08-25。
+- OpenBSD Foundation bylaws [EB/OL]. <https://www.openbsdfoundation.org/>；加拿大政府注册记录；OpenBSD Foundation 年报 ［B］
+
+<!-- DB_REF:openbsd.duckdb -->
+> **数据库引用（openbsd.duckdb）**：本子节对应 openbsd 代码仓库。> 2007-2007 年间：16,998 次提交。> 仓库总览：491,195 次提交，3,352 位贡献者，1995-10-18 至 2026-08-25。
+- OpenBSD 提交/文档/ports 贡献记录；OpenBSD Foundation 年报 ［A］
+
+<!-- DB_REF:openbsd.duckdb -->
+> **数据库引用（openbsd.duckdb）**：本子节对应 openbsd 代码仓库。> 1995-2026 年间：491,195 次提交。> 仓库总览：491,195 次提交，3,352 位贡献者，1995-10-18 至 2026-08-25。
 
 <!-- PODCAST_REVIEW v20260829 -->
 <!-- 语义复核范围：BSDTalk EP97（共 1 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
