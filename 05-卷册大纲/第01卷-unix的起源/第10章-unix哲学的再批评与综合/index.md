@@ -43,7 +43,7 @@ volume: 第01卷-unix的起源
 - Ritchie D M 1984"The Evolution of the Unix Time-sharing System" (AT&T Bell Laboratories Technical Journal 63 No. 6 Part 2 pp. 1577-1593)；4.4BSD SMM: 16《On the Security of UNIX》；Salus 1994"A Quarter Century of UNIX"；〔待核：原文截断，后文待回源〕
 - Morris R, Thompson K 1979 CACM"Password Security: A Case History"Vol. 22 No. 11 pp. 594-597；4.4BSD SMM: 17《Password Security: A Case History》；UNIX V7 源代码 `usr/src/lib/crypt.c`；Salus 1994 ［A］
 - Morris R, Thompson K 1979 CACM"Password Security: A Case History"Vol. 22 No. 11 pp. 594-597；4.4BSD SMM: 17《Password Security: A Case History》；docs.freebsd.org/44doc/smm/17.password/ ［A］
-- Watson et al. 2010"Capsicum: Practical Capabilities for UNIX" (USENIX Security)；Poul-Henning Kamp 1998 MD5-crypt；Provos & Mazières 1999 bcrypt；bsd_commits.db：freebsd-src commit `5b81b6b301437eb9a6df491c829475bd29ae5d6c`（1993-06-12）与 `26f9a76710a312a951848542b9ca1f44100450e2`（1994-05-25）［A］
+- Watson et al. 2010"Capsicum: Practical Capabilities for UNIX" (USENIX Security)；Poul-Henning Kamp 1998 MD5-crypt；Provos & Mazières 1999 bcrypt；freebsd.duckdb：freebsd-src commit `5b81b6b301437eb9a6df491c829475bd29ae5d6c`（1993-06-12）与 `26f9a76710a312a951848542b9ca1f44100450e2`（1994-05-25）［A］
 - TUHS 邮件列表早期帖；USENIX ; login: 期刊；Kernighan 2019 ［A］
 - 同 6.8.1；Campbell-Kelly 2007 综述 ［C］
 - Salus 1994；Campbell-Kelly 2007；Raymond 2003 附录 [考据脚注：经 Salus 1994"A Quarter Century of UNIX"与 Campbell-Kelly 2007 原著交叉验证确证。]

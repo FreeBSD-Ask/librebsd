@@ -27,7 +27,7 @@ volume: 第05卷-freebsd的工程化奠基
 - 总纲第 7 条——BSD 与 UNIX 谱系的连续性：PF 从 OpenBSD 到 FreeBSD 的移植是 BSD 家族内部代码共享的典型案例——OpenBSD 因许可证问题移除 IPFilter 后编写 PF，FreeBSD 因 PF 的技术优势将其移植，两个 BSD 项目在防火墙领域的代码流动体现了 BSD 社区 “择优而用” 的务实传统；总纲第 24 条——许可证：IPFilter 许可证
 - 总纲第 7 条——技术选择即政治选择：企业赞助方向直接塑造 FreeBSD 在该时期的子系统优先级（如 Netflix 推动内核 TLS 卸载与网络栈高性能化）。
   - 辨析：企业提交多属受雇工作期间的 “有组织贡献”，不宜与志愿者个人贡献混同；corp 名单随年份变动，须以 contributors 表逐期核验。
-  - 文献：bsd_commits.db（freebsd-src contri
+  - 文献：freebsd.duckdb（freebsd-src contri
 - 总纲第 25 条——终结与延续：FreeBSD 5.x 以长期阵痛换取 SMP 现代化，与 Linux 2.5→2.6 的平滑演进形成对照，二者都经历了可扩展性重构但路径不同。
   - 辨析：将 5.x 早期性能问题等同于 “FreeBSD 衰落” 是片面——5.x 的架构债务清理为 6.x/7.x 的性能回升奠定基础；Linux 2.5 同样经历开发期不稳定。
   - 文献：Torvalds L
@@ -43,7 +43,7 @@ volume: 第05卷-freebsd的工程化奠基
 - 经 bsd_commits.db tags 表验证，5.0-RELEASE 的 tagger_date 为 2003-01-16（非旧叙事 2003.1.19，误差 3 天，可能为公告日期与 tag 日期差异）；GEOM 是否真正 “取代” 旧 disk 子系统需考据——5.0 引入但 4.x 的 disk 子系统仍保留兼容直至 7.x；〔待核：原文截断，后文待回源〕
 - 经 bsd_commits.db tags 表验证，5.3-RELEASE 的 tagger_date 为 2004-11-04T19:12:42Z（非旧叙事 2004.11.6，误差 2 天，可能为公告日期与 tag 日期差异）；经 bsd_commits.db commits 表验证，PF 导入 commit 为 2004-06-16T23:03:14Z Max Laier "Import p
 - 企业提交多属受雇工作期间的 “有组织贡献”，不宜与志愿者个人贡献混同；corp 名单随年份变动，须以 contributors 表逐期核验。
-  - 文献：bsd_commits.db（freebsd-src contributors 表，窗口 2002–2005，检索 2026-07-21）［A］；FreeBSD 项目贡献者指南（<<https://docs.freebsd.org/en/arti>
+  - 文献：freebsd.duckdb（freebsd-src contributors 表，窗口 2002–2005，检索 2026-07-21）［A］；FreeBSD 项目贡献者指南（<<https://docs.freebsd.org/en/arti>
 - 将 5.x 早期性能问题等同于 “FreeBSD 衰落” 是片面——5.x 的架构债务清理为 6.x/7.x 的性能回升奠定基础；Linux 2.5 同样经历开发期不稳定。
   - 文献：Torvalds L. Linux 2.6 ChangeLog [EB/OL]. 2003；McKusick M K, Neville-Neil G. The Design and Implementation
 
@@ -60,7 +60,7 @@ volume: 第05卷-freebsd的工程化奠基
 ## 99.16.2 UFS2 取代 UF
 
 - FreeBSD 5.3-RELEASE Announcement [Z]. 2004-11-04；Hartmeier D. The Design and Implementation of the OpenBSD Packet Filter (PF)[C]//BSDCon 2002. San Francisco, 2002；OpenBSD 3.0 Release Notes [Z]. 2001-12-01；Max Laier. Import pf from OpenBSD 3.5 (OPENBSD_3_5_BASE). freebsd-src [DB/OL]. 2004-06-16T23:03
-- bsd_commits.db（freebsd-src contributors 表，窗口 2002–2005，检索 2026-07-21）［A］；FreeBSD 项目贡献者指南（<https://docs.freebsd.org/en/articles/contributing/>）［B］
+- freebsd.duckdb（freebsd-src contributors 表，窗口 2002–2005，检索 2026-07-21）［A］；FreeBSD 项目贡献者指南（<https://docs.freebsd.org/en/articles/contributing/>）［B］
 
 ## 99.18.2 地域与学术的志愿者多样性
 

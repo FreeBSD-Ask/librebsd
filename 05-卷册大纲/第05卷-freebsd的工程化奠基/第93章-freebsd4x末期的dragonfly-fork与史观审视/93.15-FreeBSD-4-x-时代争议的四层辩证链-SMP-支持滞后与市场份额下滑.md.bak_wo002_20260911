@@ -1,0 +1,683 @@
+# 93.15 FreeBSD 4.x 时代争议的四层辩证链——SMP 支持滞后与市场份额下滑
+
+## 93.15.1 批评层：SMP 支持滞后与市场份额下滑的批评
+
+  **要点**：对 FreeBSD 4.x 时代的批评集中于两点——SMP 支持滞后与市场份额下滑。SMP 支持层面，FreeBSD 4.x 全系列沿用 Giant lock（单一内核大锁）模型，任何时刻仅一个 CPU 可在内核态运行，多核扩展性受限；4BSD 调度器为 O(n) 算法，无 CPU 亲和性、无 SMT 支持。同期 Linux 2.4（2001.1）已引入改进的 SMP 支持，Linux 2.6（2003.12）进一步以 O(1) 调度器与细粒度内核抢占大幅提升多核性能。FreeBSD 的 SMPng（SMP Next Generation）项目虽 2001 年启动，但直至 5.0-RELEASE（2003.1.16）才引入初步架构，4.x 全系列未能受益。市场份额层面，Linux 2.4 成熟后蚕食 FreeBSD 在 ISP 与企业市场的份额，Red Hat Enterprise Linux（2003）进一步加速这一趋势；4.x 代码冻结期间部分用户因 5.x 不稳定、4.x 不再更新而转向 Linux。批评者将 4.x 时代定性为 “工程成功但商业失败”——Jails、kqueue 等技术领先未转化为市场优势，归因于 BSD 许可证的宽松、营销不足、Linux 商业生态的资本投入。
+  
+**史料**：FreeBSD 4.0-RELEASE 公告（2000.3.14，Jordan K. Hubbard（乔丹·哈伯德） 发布，经 WebFetch 一手核验 <https://www.freebsd.org/releases/4.0R/announce/>）；FreeBSD 4.11-RELEASE 公告（2005.1.25，Ken Smith 发布，明确称 "This is expected to be the last release from the RELENG_4 branch"，经 WebFetch 一手核验 <https://www.freebsd.org/releases/4.11R/announce/>）；bsd_commits.db freebsd-src 仓库 commits 表 ULE 调度器首次 commit 为 2003-01-26 Jeff Roberson（5.0-RELEASE 之后），印证 4.x 全程沿用 4BSD 调度器；Linux 2.4 ChangeLog；Red Hat Enterprise Linux 发布公告（2003）；本章 37.12.5 节 Giant 锁与 4BSD 调度器考据 ［A］
+  
+**史观**：总纲第 16 条——经济周期，Linux 2.4 成熟期与互联网泡沫后企业成本压力叠加；总纲第 11 条——商品是形式主义，“市场成功” 本身是形式主义的权力运作
+  
+**辨析**：考据过程留痕——【查证来源】FreeBSD 4.0-RELEASE 公告日期 2000.3.14 与 4.11-RELEASE 公告日期 2005.1.25 均经 WebFetch 一手核验；4.x 全系列沿用 Giant lock 与 4BSD 调度器经 bsd_commits.db freebsd-src 仓库 commits 表 ULE 首次 commit 时间（2003-01-26，5.0-RELEASE 之后）反证；Linux 2.4 SMP 改进的具体基准测试数据未在批评层史料中直接引用，需对照 Linux 2.4 ChangeLog 与同期基准测试报告核验；【交叉验证方法】FreeBSD 4.0/4.11 公告（一手发布文档）、bsd_commits.db freebsd-src commits 表（代码级证据）、Linux 2.4 ChangeLog（一手发布文档）三方互证——4.x 版本周期（2000.3 至 2005.1）与 Linux 2.4（2001.1）/2.6（2003.12）发布时序吻合，SMP 支持差距在 2001 至 2003 年窗口确凿存在；【0 信任原则·“市场份额下滑” 的量化困境】批评层所称 “市场份额下滑” 缺乏权威量化数据，Netcraft Web Server Survey 统计的是 Web 服务器软件（Apache/nginx/IIS）而非操作系统，FreeBSD 作为 Apache 后端操作系统的份额需从 Apache 部署统计间接推断，且 BSD 系统广泛部署于路由器、存储设备、嵌入式场景，此类场景不在 Netcraft 统计范围内，故 “市场份额下滑” 的量化判断须以具体市场细分（Web 服务器、ISP、企业桌面、嵌入式）为据，不得笼统断言；【存疑判定依据】“工程成功但商业失败” 的定性本身带有前理解——以 “市场成功” 作为评判标准，这一标准本身是争议焦点，批评层的归因（BSD 许可证、营销不足、Linux 商业生态）均需对照具体企业迁移案例核验
+  
+**文献**：FreeBSD 4.0-RELEASE Announcement [EB/OL]. 2000-03-14. <https://www.freebsd.org/releases/4.0R/announce/>；FreeBSD 4.11-RELEASE Announcement [EB/OL]. 2005-01-25. <https://www.freebsd.org/releases/4.11R/announce/>；bsd_commits.db freebsd-src 仓库 commits 表（ULE 首次 commit 2003-01-26）；Linux 2.4 ChangeLog；Red Hat Enterprise Linux 发布公告（2003）［A］
+
+## 93.15.2 反批评层：FreeBSD 阵营的反批评
+
+  **要点**：FreeBSD 阵营对上述批评的反驳集中于三点——稳定性优势、SMP 重构的工程难度、BSD 的服务器市场定位不同于 Linux 的桌面市场。稳定性层面，4.x 因 Giant lock 保护下内核路径简单而成为 ISP 与 Web 托管提供商的 “黄金时代”，Yahoo!（1998 至 2000 年大规模部署）与 Hotmail（Microsoft 收购后部分保留至 2000 年代初）的超大规模部署证明 4.x 能支撑生产级 Web 服务；4.11-RELEASE 公告明确称 4.x 为 "Errata Branch"，安全修复与功能性修复在 RELENG_4_11 分支持续至 2006 年，证明 4.x 的长期稳定价值。SMP 重构的工程难度层面，SMPng 不是简单的锁拆分，而是对整个内核子系统的细粒度锁重构，涉及网络栈、文件系统、调度器、驱动模型的全面改造，5.0 至 5.2 的性能倒退恰恰证明 SMPng 路线的工程代价——细粒度锁竞争导致 cacheline 抖动，部分场景下 SMP 性能反不如 4.x Giant lock 模型。服务器市场定位层面，FreeBSD 的核心用户群是 ISP 与 Web 托管提供商，而非桌面用户，以桌面市场份额指标衡量 FreeBSD 是范畴错误；BSD 系统广泛部署于路由器（如 JunOS）、存储设备、嵌入式场景，此类部署不计入传统市场份额统计。
+  
+**史料**：FreeBSD 4.11-RELEASE 公告（Ken Smith 明确称 "Errata Branch" 与 "last release from the RELENG_4 branch"，Yahoo! 列入致谢名单，经 WebFetch 一手核验）；Yahoo! BSDCon 2000 演讲与 Jeremy Zawodny 工程博客（本章 37.5.1 节考据）；Hotmail 架构文档（本章 37.5.2 节考据）；Dillon 2003-07-16 DragonFly BSD 公告中关于 5.x "too heavily mutexed" 的判断（本章 37.9.2 节考据）；freebsd-performance 邮件列表 2003 至 2004 年关于 5.x 性能倒退的讨论；JunOS BSD 内核渊源文档 ［A］
+  
+**史观**：总纲第 7 条——技术选择即政治选择，4.x 选择 “Giant 锁与 4BSD 调度器” 反映 “稳定性优先” 的技术政治选择；总纲第 2 条——实践先于理论，Yahoo! 与 Hotmail 的超大规模部署是 4.x 稳定性的实践证明
+  
+**辨析**：考据过程留痕——【查证来源】4.11-RELEASE 公告中 "Errata Branch" 与 "last release from the RELENG_4 branch" 表述经 WebFetch 一手核验（<https://www.freebsd.org/releases/4.11R/announce/>），Yahoo! 列入 4.11 致谢名单（"Many companies donated equipment, network access, or man-hours to finance the release engineering activities for 4.11 including The FreeBSD Mall, Hewlett Packard, Yahoo!, Sentex Communications, and NTT/Verio"）经一手核验，印证 Yahoo! 在 4.x 末期的持续参与；5.x 性能倒退的判断经 Dillon 2003-07-16 公告（本章 37.9.2 节一手核验）与 freebsd-performance 邮件列表讨论互证；【交叉验证方法】4.11 公告（一手发布文档）、Yahoo! 致谢记录（一手发布文档）、Dillon 公告（一手邮件列表存档）三方互证——4.x 在 2005 年仍有 Yahoo! 等大型企业支持，与 “市场份额下滑” 的批评叙事形成张力；【0 信任原则·“稳定性优势” 的非量化性】反批评层所称 “稳定性优势” 同样缺乏量化基准测试数据，“黄金时代” 的称谓部分来自社区记忆而非严格的平均故障间隔统计，史家须区分 “社区声誉” 与 “量化稳定性”；JunOS 等 BSD 衍生部署的具体规模需对照厂商公开文档核验，不得以 “广泛部署” 笼统断言；【存疑判定依据】“服务器市场定位不同于桌面市场” 的论证在 2003 年后因 Linux 以 RHEL 进入服务器市场而部分失效，反批评层的论证在 4.x 末期（2004 至 2005）的说服力较 4.x 早期（2000 至 2001）有所下降
+  
+**文献**：FreeBSD 4.11-RELEASE Announcement [EB/OL]. 2005-01-25. <https://www.freebsd.org/releases/4.11R/announce/>；Yahoo! BSDCon 2000 演讲；Matthew Dillon（马修·狄龙）. Annoucning DragonFly BSD! [EB/OL]. 2003-07-16. <https://lists.freebsd.org/pipermail/freebsd-current/2003-July/006889.html>；freebsd-performance 邮件列表存档 ［A］
+
+## 93.15.3 再回应层：批评方的再回应
+
+  **要点**：批评方对反批评的再回应指出，反批评的三点论证在长期视角下均被削弱。稳定性优势的侵蚀——Linux 2.6（2003.12）以 O(1) 调度器、内核抢占、细粒度 SMP 锁成熟后，FreeBSD 4.x 的稳定性优势在 Linux 2.6 的工程化成熟中被追平，而 4.x 的 SMP 劣势无法通过稳定性弥补；Yahoo! 在 2000 年代后期逐步引入 Linux 与自研系统，Hotmail 在 2000 年代初完成 Windows 迁移，4.x 的超大规模部署案例随时间衰减。SMP 重构工程难度论证的对称性——Linux 同样面临从 2.4 到 2.6 的 SMP 重构工程难度，但 Linux 以更短的时间完成，说明工程难度不是充分的辩护；FreeBSD 5.x 的性能倒退（2003 至 2005）恰恰暴露 SMPng 路线的执行问题，而非单纯的客观难度。服务器市场定位论证的失效——Red Hat Enterprise Linux（2003）与 SUSE Linux Enterprise Server 进入服务器市场后，“BSD 服务器与 Linux 桌面” 的二元区分不再成立，Linux 在 ISP 与企业服务器市场直接竞争 FreeBSD。批评方进一步指出，BSD 许可证的宽松允许 Apple（Darwin）、Sony（PS3）等商业使用而未强制回馈，“代码散逸” 使 FreeBSD 的技术贡献未能转化为社区资源积累，这是 BSD 相对 GPL 的结构性劣势。
+  
+**史料**：Linux 2.6 ChangeLog（2003.12）；Red Hat Enterprise Linux 发布公告（2003）；SUSE Linux Enterprise Server 文档；Yahoo! 2000 年代后期架构演化报告；Hotmail Windows 迁移完成报告（本章 37.5.2 节考据）；Apple Darwin 源码与许可证；Sony PS3 操作系统文档；BSD vs GPL 比较论文（本章 37.13.3 节考据） ［B］
+  
+**史观**：总纲第 22 条——知识注定过时，4.x 稳定性优势在 Linux 2.6 成熟后部分过时；总纲第 3 条——不存在进步，只有权力再分配，“Linux 完成更快” 的判断本身是权力话语
+  
+**辨析**：考据过程留痕——【查证来源】Linux 2.6 发布时间（2003.12）与 RHEL 发布时间（2003）经公开文档核验；Yahoo! 2000 年代后期架构演化的具体细节部分来自企业内部报告，部分未公开，需对照公开演讲与媒体报导；Apple Darwin 与 Sony PS3 的 BSD 代码使用经各自公开源码与文档核验；【交叉验证方法】Linux 2.6 ChangeLog（一手发布文档）、RHEL 发布公告（一手发布文档）、Apple Darwin 源码（一手代码）三方互证——Linux 在 2003 年同时完成 SMP 成熟与企业市场进入，与 FreeBSD 5.x 性能倒退形成对照；【0 信任原则·“Linux 完成更快” 的归因困境】批评方称 “Linux 以更短时间完成 SMP 重构” 的归因涉及多重因素——Linux 商业资本投入（IBM、Red Hat 雇佣开发者）、内核架构差异、社区规模差异，不得简化为 “BSD 工程能力不足”；“代码散逸” 的判断需区分 “未强制回馈”（BSD 许可证事实）与 “未回馈”（实际可能存在部分回馈），Apple Darwin 的部分代码确实回流至 FreeBSD 社区，Sony PS3 的 BSD 使用因封闭生态无法回馈；【存疑判定依据】Yahoo! 与 Hotmail 的具体迁移时间线部分依赖媒体报导与企业内部报告，量化数据难以获取；“结构性劣势” 的定性本身带有 GPL 阵营前理解，BSD 阵营不认同 “代码散逸” 为劣势
+  
+**文献**：Linux 2.6 ChangeLog；Red Hat Enterprise Linux 发布公告（2003）；Apple Darwin 源码与许可证；Sony PS3 操作系统文档；BSD vs GPL 比较论文 ［B］
+
+## 93.15.4 合图层：从项目统摄史观审视争议
+
+  **要点**：综合三方立场，FreeBSD 4.x 时代 SMP 支持滞后与市场份额下滑的争议并非可通过对一方判定 “正确” 而消解，而是 BSD 谱系在 “稳定性与扩展性” “服务器与桌面” “改革与革命” 多重张力下的结构性呈现。批评层与反批评层各自的前理解均内部自洽——批评层以 “市场成功” 为评判标准，故 4.x 是 “工程成功但商业失败”；反批评层以 “生产稳定性” 为评判标准，故 4.x 是 “黄金时代”。两种前理解的不可通约使争议不可调和。合图层不判定 “谁对谁错”，而承认争议的不可调和性——4.x 的稳定性优势与 SMP 劣势是同一枚硬币的两面，Giant lock 既保护了稳定性又限制了扩展性，二者无法在 4.x 架构内同时实现；SMPng 路线的长期成熟（7.x 后）与 5.x 短期性能倒退是同一工程选择的时序分裂，短期代价与长期收益无法在 2003 年时点同时呈现。BSD 许可证的宽松既是 “代码散逸” 的结构性劣势，也是 “商业采用” 的结构性优势，二者是同一许可证哲学的两面。项目统摄史观提醒史家：争议的不可调和性本身是历史真实的一部分，和解不等于消解分歧，而是承认分歧的结构性呈现。
+  
+**史料**：上述 37.15.1 至 37.15.3 节综合史料；项目史观总纲第 25 章（据原文第 25 章，第 13、19、21 条）；FreeBSD 5.x/6.x/7.x Release Notes ［A］
+  
+**史观**：总纲第 4 条——分离聚合是永恒规律，4.x 的稳定性与 5.x 的扩展性是分离后的各自聚合；总纲第 8 条——本体论上各方平等，批评层与反批评层的评判标准在本体论上无高下；总纲第 6 条——和解优于斗争，合图层呈现的是结构性和解而非逻辑裁决
+  
+**辨析**：考据过程留痕——【查证来源】本节史料综合 37.15.1 至 37.15.3 节一手与二手史料；项目史观总纲第 13、19、21 条原文经 Read 一手核验（据原文第 25 章，第 17 行第 13 条 “法律与道德是利益分配”，第 23 行第 19 条 “解释学循环是历史认识的根本条件”，第 25 行第 21 条 “革命与改革是历史方法论的分歧”）；【交叉验证方法】项目史观总纲原文（一手哲学源材料）、FreeBSD 4.x/5.x/7.x Release Notes（一手发布文档）、bsd_commits.db 代码级证据三方互证——总纲第 4 条与 4.x/5.x 架构分离互证，总纲第 8 条与双方评判标准对等互证；【0 信任原则·合图层的立场中立】合图层须严格保持双方对称呈现，不得因 Linux 后续市场主导即判定批评层 “正确”，亦不得因 FreeBSD 4.x 的 “黄金时代” 声誉即判定反批评层 “正确”——“成功” 与 “失败” 的判定标准本身是回溯性建构，史家须以 2000 至 2005 年时点的技术语境判断双方立场的合理性；“不可调和性” 的判断须以双方前理解的不可通约为据，而非以 “双方都有道理” 的折中主义敷衍；【存疑判定依据】“结构性呈现” 的判断须以 BSD 谱系长期演化的多案例（如 OpenBSD fork 自 NetBSD、DragonFly fork 自 FreeBSD）对照核验，若 BSD 谱系长期呈现 “稳定性与扩展性” 张力，则 “结构性” 判断成立
+  
+**文献**：据原文第 25 章（总纲第 4、6、8、13、19、21 条）；综合 37.15.1 至 37.15.3 节文献；FreeBSD 5.x/6.x/7.x Release Notes ［A］
+
+### 93.15.5 项目统摄史观审视：许可证哲学、解释学循环与革命改革
+
+FreeBSD 4.x 时代 SMP 支持滞后与市场份额下滑的争议，从项目史观总纲第 13、19、21 条切入审视，呈现三层哲学意涵。
+
+总纲第 13 条 “法律与道德是利益分配” 在此争议中得到深刻印证。批评层将 4.x 定性为 “工程成功但商业失败”，归因之一是 BSD 许可证的宽松允许 “代码散逸”——Apple Darwin、Sony PS3 等商业使用未强制回馈。但项目统摄史观提醒史家：BSD 与 GPL 的差异不是道德优劣，而是利益分配机制的政治选择。BSD 许可证将利益分配给商业采用者（Apple、Sony 获得代码使用权），GPL 许可证将利益分配给社区（强制回馈保证代码回流）。“代码散逸” 的批评本身是 GPL 阵营前理解下的利益分配偏好，BSD 阵营则将同一事实命名为 “商业采用的自由”。“市场份额下滑” 的批评同样涉及利益分配——市场份额是商业资本（IBM、Red Hat 对 Linux 的投入）与社区劳动（FreeBSD 志愿者贡献）之间的利益分配结果，而非纯粹的技术优劣裁决。4.x 时代的 “黄金时代” 声誉与 “商业失败” 定性，是同一事实在不同利益分配框架下的两种呈现，二者在本体论上平等。
+
+总纲第 19 条 “解释学循环是历史认识的根本条件” 在此争议中显现于双方前理解的不可通约。批评层的前理解是 “市场成功等于技术成功的衡量标准”，故 4.x 的 SMP 滞后与市场份额下滑是 “失败”；反批评层的前理解是 “生产稳定性等于技术成功的衡量标准”，故 4.x 的 Giant lock 与长期维护是 “黄金时代”。两种前理解各自内部自洽，且都无法被对方的论证说服——这正是解释学循环的体现，分歧不是逻辑错误而是前理解的不可通约。权力与知识的共谋在历史书写中显现：Linux 的市场胜利被 “记录” 为 “技术进步的必然”，FreeBSD 在路由器、存储设备、嵌入式场景的隐性部署被 “遗忘” 为 “不计入市场份额”；4.x 的 “黄金时代” 声誉被 “记录” 为 “稳定性传奇”，5.x 的性能倒退被 “遗忘” 为 “过渡期的阵痛”。何种事实被 “记录” 为争议的核心，何种事实被 “遗忘” 为边缘，本身就是史家权力的行使——这一权力无法消除，但须自反地显化。合图层承认争议不可调和，这一承认本身是解释学循环的诚实表达，而非逻辑裁决。
+
+总纲第 21 条 “革命与改革是历史方法论的分歧” 在此争议中映射于 SMP 路线的选择。Linux 选择 “革命” 路径——从 2.4 到 2.6 以 O(1) 调度器与细粒度 SMP 锁重写内核同步机制，短期内付出工程代价但快速获得多核扩展性；FreeBSD 选择 “改革” 路径——SMPng 在 4.x 基础上渐进重构，保留 Giant lock 作为兜底，逐步引入细粒度锁，长期内保持稳定性但短期内多核扩展性滞后。项目统摄史观明确指出 “改革的困难远高于革命”——SMPng 须在不破坏 4.x 稳定性的前提下逐步替换锁模型，每一步改造都须保证向后兼容，这一约束使改革路径的工程代价远高于革命的推倒重来。但改革路径的长期收益是 4.x 在 2000 至 2005 年的 “黄金时代” 稳定性，这一稳定性是革命路径无法在短期内获得的。“破山中贼易，破心中贼难”——Linux 的革命路径破除了 2.4 时代的 SMP 限制（山中贼），但 FreeBSD 的改革路径须破除 “稳定性与扩展性不可兼得” 的工程心智模型（心中贼），后者的困难远高于前者。项目统摄史观提醒史家：革命与改革是方法论分歧而非优劣判断，4.x 的 “改革” 在 2003 年时点显得滞后，但在 2000 至 2005 年的 “黄金时代” 中证明了其稳定性价值，两种路径各有其代价与收益。
+
+**要点**：本节从项目史观总纲第 13、19、21 条切入，审视 FreeBSD 4.x 时代 SMP 支持滞后与市场份额下滑争议，呈现三层哲学意涵——总纲第 13 条“法律与道德是利益分配”揭示 BSD 与 GPL 的差异是利益分配机制的政治选择而非道德优劣，“代码散逸”与“商业采用的自由”是同一事实在不同利益分配框架下的两种命名；总纲第 19 条“解释学循环是历史认识的根本条件”揭示批评层与反批评层前理解的不可通约，何种事实被“记录”为争议核心、何种事实被“遗忘”为边缘，本身就是史家权力的行使；总纲第 21 条“革命与改革是历史方法论的分歧”映射于 SMP 路线选择——Linux 的“革命”路径与 FreeBSD 的“改革”路径各有代价与收益，改革的困难远高于革命
+
+**史料**：项目史观总纲第 25 章（据原文第 25 章，第 17 行第 13 条 “法律与道德是利益分配。任何道德问题本质上是利益问题，社区治理亦是形式主义的政治产物”，第 23 行第 19 条 “解释学循环是历史认识的根本条件。前理解的差异使分歧不可避免。权力与知识在历史书写中共谋——什么被记录、什么被遗忘，本身就是权力行使”，第 25 行第 21 条 “革命与改革是历史方法论的分歧。Linux 靠革命，BSD 靠改革。改革的困难远高于革命。破山中贼易，破心中贼难”）；上述 37.15.1 至 37.15.4 节综合史料 ［A］
+
+**史观**：总纲第 13 条——法律与道德是利益分配；总纲第 19 条——解释学循环是历史认识的根本条件；总纲第 21 条——革命与改革是历史方法论的分歧
+
+**辨析**：考据过程留痕——【查证来源】项目史观总纲原文经 Read 一手核验（据原文第 25 章），第 13 条原文 “法律与道德是利益分配。任何道德问题本质上是利益问题，社区治理亦是形式主义的政治产物”，第 19 条原文 “解释学循环是历史认识的根本条件。前理解的差异使分歧不可避免。权力与知识在历史书写中共谋——什么被记录、什么被遗忘，本身就是权力行使”，第 21 条原文 “革命与改革是历史方法论的分歧。Linux 靠革命，BSD 靠改革。改革的困难远高于革命。破山中贼易，破心中贼难”，三条原文均经核验准确；【交叉验证方法】项目史观总纲原文（一手哲学源材料）、FreeBSD 4.x/5.x Release Notes（一手发布文档）、bsd_commits.db 代码级证据三方互证——总纲第 13 条与 BSD/GPL 许可证文本互证利益分配差异，总纲第 19 条与批评层与反批评层前理解差异互证解释学循环，总纲第 21 条与 Linux 2.4/2.6 革命路径及 FreeBSD SMPng 改革路径互证方法论分歧；【0 信任原则·哲学审视的立场】哲学审视须以事实考据为基础，不得以哲学框架替代史料核验——总纲原文须以 Read 一手核验，不得凭记忆引用，本节所引第 13、19、21 条原文均经 据原文第 25 章 Read 一手核验；史家须警惕 “以哲学框架剪裁史料” 的陷阱——如以总纲第 21 条 “改革困难远高于革命” 强行判定 FreeBSD 路线 “更艰难故更崇高” 即可能遮蔽 Linux 革命路径本身的工程代价，合图层 37.15.4 已辨析此点；“心中贼” 的隐喻须以工程心智模型的实际约束核验，不得浪漫化改革路径；【存疑判定依据】总纲第 21 条 “Linux 靠革命，BSD 靠改革” 的二元划分在具体技术决策中的适用边界需辨析——Linux 2.6 的 SMP 重构是否属 “革命”（保留了 2.4 的部分架构）与 FreeBSD SMPng 是否属 “改革”（涉及锁模型的根本替换）存在语义张力，存疑保留待 Linux 2.4 至 2.6 内核架构演化的详细考据
+
+**文献**：据原文第 25 章（总纲第 13、19、21 条）；综合 37.15.1 至 37.15.4 节文献 ［A］
+FreeBSD 社区论文：[FP-2021-002] An Overview of Scheduling in the FreeBSD Kernel（Marshall Kirk McKusick（马歇尔·柯克·麦库西克），2021）<https://papers.freebsd.org/2021/eurobsdcon/mckusick-overview_scheduling_freebsd/>
+FreeBSD 社区论文：[FP-2020-002] An Overview of Scheduling in the FreeBSD Kernel（Marshall Kirk McKusick，2020）<https://papers.freebsd.org/2020/bsdcan/mckusick-scheduling_in_the_freebsd_kernel/>
+FreeBSD 社区论文：[FP-2018-014] The Evolution of FreeBSD Governance（Marshall Kirk McKusick，2018）<https://papers.freebsd.org/2018/bsdcan/mckusick-the_evolution_of_freebsd_governance/>
+FreeBSD 社区论文：[FP-2018-022] devmatch -- matching devices to modules: PNP plays matchmaker for kernel modules（Warner Losh（沃纳·洛什），2018）<https://papers.freebsd.org/2018/bsdcan/losh-devmatch_matching_devices_to_modules/>
+FreeBSD 社区论文：[FP-2016-002] bhyve ATA emulation（Mihai Carabas; Alexandru Teaca Ionut; Peter Grehan（彼得·格雷汉），2016）<https://papers.freebsd.org/2016/asiabsdcon/mihai-bhyve-ata-emulation/>
+FreeBSD 社区论文：[FP-2010-002] Software Tools - Mission Accomplished or Mission Failure ?（Poul-Henning Kamp（波尔-亨宁·坎普），2010）<https://papers.freebsd.org/2010/phk-software-tools/>
+FreeBSD 社区论文：[FP-2007-003] Lousy virtualization, Happy users: FreeBSD's jail(2) facility（Poul-Henning Kamp，2007）<https://papers.freebsd.org/2007/euug/phk-jail/>
+FreeBSD 社区论文：[FP-2005-001] Building a FreeBSD Appliance With NanoBSD（Poul-Henning Kamp，2005）<https://papers.freebsd.org/2005/phk-nanobsd/>
+FreeBSD 社区论文：[FP-2005-004] Ioctl(2) is so 1980ies（Poul-Henning Kamp，2005）<https://papers.freebsd.org/2005/phk-ioctl/>
+FreeBSD 社区论文：[FP-2004-002] Thread Scheduling（Marshall Kirk McKusick，2004）<https://papers.freebsd.org/2004/mckusick-thread_scheduler/>
+FreeBSD 社区论文：[FP-2004-003] GEOM（Poul-Henning Kamp，2004）<https://papers.freebsd.org/2004/phk-geom/>
+FreeBSD 社区论文：[FP-2004-004] GEOM Tutorial（Poul-Henning Kamp，2004）<https://papers.freebsd.org/2004/phk-geom-tutorial/>
+FreeBSD 社区论文：[FP-2004-005] Making sure data is lost（Poul-Henning Kamp，2004）<https://papers.freebsd.org/2004/phk-gbde/>
+FreeBSD 社区论文：[FP-2003-001] GBDE - GEOM Based Disk Encryption（Poul-Henning Kamp，2003）<https://papers.freebsd.org/2003/bsdcon/phk-gbde-paper/>
+FreeBSD 社区论文：[FP-2003-002] GEOM tutorial（Poul-Henning Kamp，2003）<https://papers.freebsd.org/2003/bsdcon/phk-geom-tutorial/>
+FreeBSD 社区论文：[FP-2003-003] Making sure data is lost（Poul-Henning Kamp，2003）<https://papers.freebsd.org/2003/bsdcon/phk-gbde-slides/>
+FreeBSD 社区论文：[FP-2002-003] Problems updating FreeBSD's card system from ISA to PCI（M. Warner Losh，2002）<https://papers.freebsd.org/2002/bsdcon/imp-isa_to_pci/>
+FreeBSD 社区论文：[FP-2002-004] Rethinking /dev and devices in the UNIX kernel（Poul-Henning Kamp，2002）<https://papers.freebsd.org/2002/bsdcon/phk-devfs/>
+FreeBSD 社区论文：[FP-2002-009] Timecounters: Efficient and precise timekeeping in SMP kernels（Poul-Henning Kamp，2002）<https://papers.freebsd.org/2002/phk-timecounters/>
+FreeBSD 社区论文：[FP-2000-001] Jails: Confining the omnipotent root（Poul-Henning Kamp; Robert N. M. Watson（罗伯特·N·M·沃森），2000）<https://papers.freebsd.org/2000/phk-jails/>
+FreeBSD 社区论文：[FP-2000-003] The Nanokernel（Dave L. Mills; Poul-Henning Kamp，2000）<https://papers.freebsd.org/2000/phk-nanokernel/>
+FreeBSD 社区论文：[FP-1998-001] Raw data: Interrupt latency measurements（Poul-Henning Kamp，1998）<https://papers.freebsd.org/1998/phk-interrupts/>
+FreeBSD 社区论文：[FP-1998-002] Malloc(3) revisited（Poul-Henning Kamp，1998）<https://papers.freebsd.org/1998/phk-malloc/>
+FreeBSD 社区论文：[FP-1995-001] Union mounts in 4.4BSD-Lite（Marshall Kirk McKusick，1995）<https://papers.freebsd.org/1995/mckusick-union_mounts/>
+
+### 史观映射
+
+> 4.x 的技术清单令人目眩——Jails 领先业界三年、kqueue 领先 Linux 两年、BSD TCP/IP 栈支撑着 Yahoo! 与 Hotmail——但时间不奖励技术清单。当黄金时代过去，留下来的不是 “我们曾经最牛” 的回忆，而是一个冷酷的事实：最好的代码也不能让时钟停转，而黄金时代的真正敌人从来不是竞争对手，是下一个版本必须来的那个日子
+
+---
+
+## 93.15.5 一手史料补充：McKusick & Rice（2017）对 Dillon 撤权与 fork 的叙述
+
+  **要点**：McKusick 与 Benno Rice（本诺·赖斯） 在《The Evolution of FreeBSD Governance》（FreeBSD Journal, 2017）中记载：BSDi 于 2000 年收购 Walnut Creek CDROM，使受雇开发者可接触 BSD/OS 源码；内核多线程化中 John Baldwin（约翰·鲍德温） 的方案借鉴 BSD/OS 与 Solaris，Matthew Dillon 偏好类似 Amiga 内核的架构，两人冲突因核心团队不愿在技术争论中选边而加剧，最终 Dillon 的 commit 权限被移除并离开创立 DragonFly BSD（McKusick & Rice, 2017）——补充了本卷 91.9 节 Dillon 撤权事件中“技术方案谱系”与“核心团队不作为”两个此前未充分展开的维度
+  
+**史料**：McKusick & Rice. The Evolution of FreeBSD Governance [J]. FreeBSD Journal, 2017, 4(5): 26-31. references_fulltext ref 1553 ［A］
+  
+**史观**：总纲第 1 条——偶然性改写历史，Baldwin 与 Dillon 两种架构方案的并存与核心团队的“不选边”共同构成 fork 的偶然条件
+  
+**辨析**：该文由 FreeBSD 核心圈亲历者撰写，属一手回忆但带有 FreeBSD 立场，其中"due to other reasons"对 Dillon 撤权原因语焉不详，与 Dillon 本人 2003-07-16 DragonFly 公告（5.x"too heavily mutexed"）的表述存在视角差异，须对照双方陈述
+  
+**文献**：McKusick & Rice. The Evolution of FreeBSD Governance [J]. FreeBSD Journal, 2017, 4(5): 26-31 ［A］
+
+## 93.15.16 不同时期人员的采访录（详见 [采访录.md](采访录.md)）
+
+## 93.15.17 节 媒体反响与社区舆论（详见 [媒体反响与社区舆论.md](媒体反响与社区舆论.md)）
+
+## 附录链接
+
+- [采访录.md（约 4,698 字）](../附录/附录-第37章-采访录.md)
+
+<!-- DB_REF:freebsd.duckdb -->
+> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。
+> 1996-2010 年间：482,545 次提交。
+> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
+
+
+<!-- DEEP_ANALYSIS: freebsd.duckdb.commits -->
+**数据库分析发现**（证据等级：L1，来源：`freebsd.duckdb.commits.freebsd`）
+
+freebsd 核心贡献者：Po-Chuan Hsieh(68595), Sunpoet Po-Chuan Hsieh(51033), Yuri Victorovich(29759), Jan Beich(22360), Martin Wilke(20341)
+
+
+
+<!-- DEEP_ANALYSIS: sacred_sources.duckdb.blocks -->
+**史家判断**（证据等级：L2，来源：`sacred_sources.duckdb.blocks.348`）
+
+一刻哲学认为，本体论角度辩证双方地位相等，所谓不均等只是一刻的状态。历史跨度可以很长，但从结构本身看必然相同。因此本书在叙述 BSD 各分支时，不预设某一分支的优越地位，不将 FreeBSD 视为正统而将其他视为旁支，而是承认各方在本体论上的平等地位，其差异仅是一刻状态的不同。
+
+
+
+<!-- DEEP_ANALYSIS: sacred_sources.duckdb.blocks -->
+**史家判断**（证据等级：L2，来源：`sacred_sources.duckdb.blocks.367`）
+
+有没有这样一种可能，FreeBSD 根本不存在？我们总是不言自明地认为世界的物质性源于实践，却不考虑实践本身的物质性是否成立。看起来是我们通过实践改造了所谓的环境。但是有没有一种可能，这一切都是预先决定的？并且这也无法证明实践与人类本身的物质属性。即便你是科举状元，也难留下痕迹。哪怕你是统一大陆的征服者，也将深埋地下，甚至被后人怀疑你与你的帝国是否真实存在。古埃及人认为死亡并非终结，而是通往来世的门户——但古埃及本身是否存在，也是一个可以被质疑的命题。
+
+
+
+<!-- DEEP_ANALYSIS: sacred_sources.duckdb.blocks -->
+**史家判断**（证据等级：L2，来源：`sacred_sources.duckdb.blocks.380`）
+
+替代品是无穷无尽的，事实上否定了偶然性的存在。因为替代品是无穷尽，则其同质化的观点看上去暗含老庄之道，实则偏离颇远。认为“张三不上李四也会上”的观点，不仅在英雄人物问题上站不住脚，在技术史上同样谬误。FreeBSD 消亡后会有替代品吗？当然有。但替代品的存在不能否定 FreeBSD 的偶然性和不可替代性。承认替代品的无限性，实质上否定了历史中一切事物的独特价值。
+
+
+
+<!-- DEEP_ANALYSIS: cross_indexes.duckdb.concept_history -->
+**史家判断**（证据等级：L2，来源：`cross_indexes.duckdb.concept_history.2`）
+
+bhyve：bhyve 虚拟化概念的演化: 2000 年代末 FreeBSD 缺少原生 hypervisor，2010 年 MeetBSD 上“我们需要一个 BSD hypervisor”的呼声促成立项。2010 年末 bhyve 作为 NetApp 内部项目启动，恰逢 Intel EPT 硬件辅助内存虚拟化出现，降低实现难度（作者 Neel Natu 与 Peter Grehan）。2011 年 5 月在 BSDCan 2011 开发者峰会首次公布，NetApp 以 BSD 许可将源码捐赠给 FreeBSD。2013 年 1 月并入 HEAD（10-CURRENT），2014 年 1 月随 FreeBSD 10.0-RELEASE 正
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-1-126`）
+
+FreeBSD 的 bhyve 虚拟机监控器支持的客户机操作系统包括 *BSD、Linux、Windows 以及 Illumos、Plan 9 等。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-2-042`）
+
+FreeBSD 基金会（2017）记载：到 1983 年，socket 接口已完成设计，并在其下实现了 TCP/IP。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-3-074`）
+
+Munro 2020 年记载 PostgreSQL 13 在 FreeBSD 上以 kqueue(2) 替换 poll(2) 进行多路复用等待。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-4-003`）
+
+FreeBSD 于 1993 年 6 月 19 日命名，由 Bill Jolitz 面向 Intel 386 的 4.4BSD-Lite 移植版本派生而来。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-4-111`）
+
+麒麟 LmBench 测试显示 Kylin 2.0 在系统调用开销、文件系统与虚存延迟上与 FreeBSD 5.3 基本相当，但与 RedHat 9.0 仍有差距。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-5-003`）
+
+FreeBSD 官方文献（FreeBSD Journal, 2022）记载：FreeBSD ports 树创建于 1994 年，以 CVS 跟踪至 2012 年 7 月 15 日 Subversion 接管；2021 年 4 月 6 日真实来源又从 Subversion 迁移至 Git，构成 ports 仓库两次版本控制系统迁移的时间线。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-5-004`）
+
+FreeBSD Journal（2022 年初）记载，克隆 FreeBSD ports 仓库须下载包含超过 40,000 个 port 与 28 年历史的全部仓库——与大纲既有“2024 年突破 34,000 个”的统计口径不同，提示 port 计数随统计口径（含/不含过期与 broken port）差异显著。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L2，来源：`historical_claims.duckdb.claim.CL-5-005`）
+
+中文开源媒体（开源中国/知乎, 2021）的批评叙事将 FreeBSD 的市场处境概括为“大败局”，核心论点为 BSD 许可证“成也 BSDL，败也 BSDL”——大公司可无偿使用 FreeBSD 代码而不回馈上游，FreeBSD 贡献者因此被调侃为“Apple 公司的无薪员工”。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-5-006`）
+
+Greg Lehey 2001 年论文指出，FreeBSD 初始 SMP 支持只允许一个进程同时在内核态运行，并在多处理器间屏蔽中断，导致 I/O 密集系统性能严重次优；该论文描述移除这一瓶颈的工作，即 SMPng。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-5-007`）
+
+Niels Jørgensen 2005 年研究认为，FreeBSD 将 commit 权威委托给约 300 名 committer 的模式，区别于 Linux 由个人把关仓库的模式，且在他看来更符合开源精神；其 2000 年 11 月对约 200 名 committer 的问卷显示 81% 的受访者表示该委托程序显著激励了他们。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-5-008`）
+
+据 Jørgensen 2005 年对 FreeBSD SMP 项目负责人的访谈，SMPng 项目选择增量集成而非分支开发，其决策受 BSD/OS 在分支上开展 SMP 开发导致主干与分支分歧迅速失控的教训影响；SMP 项目由约 10 名开发者组成，5.0（2003 年 1 月）实现内核态线程 SMP，而 4.x 系列仅支持用户态线程 SMP。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-5-013`）
+
+Jason Evans 2000 年 KSE 论文提及，将异步 I/O 集成进 libc_r 需先稳定 AIO 实现，再把基于 poll() 的事件循环切换为基于 kqueue() 的事件循环，以在同一循环中集成 I/O 完成通知——反映 kqueue 在 FreeBSD 4.x 早期已被核心开发者视为替代 poll() 的事件通知接口。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-5-014`）
+
+Thomas Munro 在 BSDCan 2020 报告，PostgreSQL 13 以 kqueue(2) 替代 poll(2) 进行多路复用等待，大幅降低高核数、多活动连接系统的系统时间，类似于 Linux 上采用 epoll(2) 的改进——构成 kqueue 跨项目采用（FreeBSD 之外）的实证案例。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-5-100`）
+
+Jason Evans 于 2006 年提出 jemalloc：FreeBSD 自第 5 版起持续推进多处理器扩展，使 C 库 malloc(3) 成为多线程应用在多处理器系统上的瓶颈，从而催生了新的可扩展并发分配器。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-5-103`）
+
+2005 年 jemalloc 开始作为 FreeBSD 的 libc 分配器投入使用。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-5-104`）
+
+FreeBSD 的 PF 防火墙从 OpenBSD 导入，且引入了 OpenBSD 所没有的 vnet 与多核能力等特性。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-5-109`）
+
+FreeBSD 原调度器无法区分不同能力的 CPU，而这对 SMT（对称多线程）很重要，构成 ULE 重写的动机之一。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-5-110`）
+
+FreeBSD 版本控制历史为：CVS 使用期 1993-2012，Subversion 依次于 2008-05-31（src/）、2012-05-19（doc/www）、2012-07-14（ports）接管各仓库。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-6-003`）
+
+ZFS 历史时间线显示：2005 年 10 月 OpenSolaris 在 revision 789 引入 ZFS，2008 年 2 月 FreeBSD 7.0 引入 pool v6。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-6-008`）
+
+Allan Jude 是 FreeBSD 的 src/doc committer，专注 ZFS、bhyve、ucl、xo 等领域，并合著 FreeBSD Mastery: ZFS 一书。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-6-011`）
+
+DTrace 于 2005 年之前为 Solaris 开发，2008 年移植到 FreeBSD，后移植到 Mac OS 10.5。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-6-012`）
+
+Yutaro Hayakawa 提出面向 FreeBSD 的 eBPF 实现。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-6-014`）
+
+Mateusz Piotrowski 基准测试比较了 DTrace（FreeBSD）与 eBPF（Linux）的性能开销，指出二者服务同一可观测性生态位。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-6-016`）
+
+Capsicum 是计划纳入 FreeBSD 9 的轻量级操作系统 capability 与沙箱框架。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-6-018`）
+
+CheriABI 是纯 capability 进程环境，构建于 CheriBSD（FreeBSD 的 CHERI 修改版）之上，所有程序指针均为 capability。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-6-019`）
+
+CheriABI 在内核层作为 compat layer（类似 freebsd32）实现，内核本身是混合 CHERI-C 程序。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-6-100`）
+
+布加勒斯特理工大学（UPB）自 GSoC 2014 起以学位论文与硕士项目模式持续驱动 bhyve 功能开发，涵盖指令缓存、NE2000/ATA/HD-Audio 设备模拟、ARMv7/ARMv8 移植与 x86 状态保存-恢复（save-restore）等方向，但大量成果未提交 FreeBSD 上游。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-6-105`）
+
+OpenStack 计算服务 Nova 因广泛使用 libvirt 而难以在 FreeBSD 上通过 libvirt 有效管理 bhyve 虚拟机，成为 OpenStack 移植至 FreeBSD 的核心集成障碍。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-6-106`）
+
+FreeBSD FFS 在 2000 年代初完成四项优化——soft updates、dirpref、vmiodir 与 dirhash（dirhash 由 Ian Dowse 开发），组合优化在微基准测试下性能提升超过两个数量级，真实工作负载提升 2-10 倍。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-6-109`）
+
+FreeBSD 开发者 Chuck Tuffli 提出以 bhyve 模拟的虚拟 NVMe 设备（pci_nvme.c）与可定制的虚拟固件替代传统“错误模式注入”与 mock 方法，用于测试 NVMe 驱动在异常场景下的行为。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-6-110`）
+
+2019 年 bsdcan 上，Free Software Foundation Europe 的 Albert Dengg 展示了用 Ansible 在 FreeBSD 上构建 jail 容器基础设施的完整流程，调用 Ansible 的 pkgng、zfs、get_url、unarchive、template 等模块，并支持基于 FreeBSD 11.2-RELEASE 与 12.0-RELEASE 克隆 jail。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-6-111`）
+
+对用 Ansible 管理 FreeBSD jail 存在反对意见：将引入 Python 作为每个 jail 的依赖，且流程复杂；支持者则主张其已用 Ansible 配置其余基础设施，且亲自完成底层配置更能理解实际机制。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-6-200`）
+
+pkgbase 项目于 2015 年由 FreeBSD committer bapt@（Baptiste Daroussin）发起，目标是使用 pkg(8) 将 base 系统拆分为多个软件包进行打包与更新。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-6-202`）
+
+FreeBSD ports committer Rodrigo Osorio 于 2018 年 1 月 25 日创建 pkg-provides 插件（ports-mgmt/pkg-provides，SVN revision 459945），用 C 语言实现，用于查询哪个软件包提供指定文件。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-6-203`）
+
+FreeBSD 对 ARM 架构的支持历史上是草根式（grassroots）的，嵌入式平台支持长期依赖社区个人贡献。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-6-204`）
+
+2014 年 ARM 公司决定通过赞助 FreeBSD Foundation、并动员包括 Cavium 在内的公司参与的方式，推动 ARMv8 在 FreeBSD 上成为 Tier 1 架构。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-6-208`）
+
+FreeBSD 自 2002 年起支持 GBDE、自 2005 年起支持 GELI 全盘加密，但引导过程要求 loader 与内核存放在未加密分区。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-6-210`）
+
+FreeBSD 的内核 TLS（KTLS）由内核处理 TLS 记录分帧与加解密，会话密钥协商由 OpenSSL 等用户态库在握手后提供给内核。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-6-211`）
+
+FreeBSD 的 eBPF 实现由庆应义塾大学硕士生 Yutaro Hayakawa 在 Google Summer of Code 期间启动，并于 2018 年 BSDCan 报告。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-6-212`）
+
+FreeBSD 虚拟内存子系统源自卡内基梅隆大学（CMU）的 Mach VM，采用机器无关层（以惰性求值为主要原则）加 PMAP 硬件抽象层的架构。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-6-213`）
+
+FreeBSD loader 的 verified exec（veriexec）机制要求每个清单被签名：manifest.esig 为 EC 签名、manifest.ecerts 为 X.509 证书链，RSA+SHA1（.sig）自 2014 年起弃用。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-7-001`）
+
+Capsicum 是计划纳入 FreeBSD 9 的轻量级操作系统能力与沙箱框架。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-7-005`）
+
+Biba 完整性模型由 FreeBSD 的 mac_biba 模块直接支持。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-7-007`）
+
+FreeBSD 自 2002 年起支持 GBDE、2005 年起支持 GELI 全盘加密。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-7-008`）
+
+TrustedBSD MAC Framework 由 Robert Watson、Brian Feldman、Adam Migus 与 Chris Vance 在 Network Associates Laboratories 设计实现，为 FreeBSD 提供灵活的模块化访问控制扩展环境。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-7-009`）
+
+GELI 是 FreeBSD 的块级磁盘加密方案，X86 BIOS 模式引导支持由 Allan Jude 添加，UEFI 引导支持则由 Eric McCorkle 于 2017 年实现。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-7-010`）
+
+Yarrow PRNG 由 Mark R. V. Murray 为 FreeBSD 实现，用于解决内核与用户态随机数熵源问题。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-7-012`）
+
+TrustedBSD MAC Framework 由 Robert Watson、Wayne Morrison、Chris Vance 与 Brian Feldman 实现，集成于 FreeBSD 5.0，提供内核访问控制扩展的灵活框架。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-7-015`）
+
+FreeBSD Foundation 于 2024 年 11 月委托 Pierre Pronchery 等人完成 Capsicum 与 bhyve 子系统的安全审计报告。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-7-016`）
+
+FreeBSD Foundation 是 501(c)(3) 非营利组织，致力于支持并建设 FreeBSD 项目与全球社区，代表 FreeBSD 项目执行合同、许可证、版权、商标等法律事务。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-7-017`）
+
+与 Solaris zones 不同，FreeBSD Jails 的实现不提供 per-jail 资源限制，导致用户常被迫用其他虚拟化机制替代 jail。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-7-018`）
+
+Bjoern Zeeb 在 BSDCan 2019 以“What happened to FreeBSD's IPv6?”为题讨论 FreeBSD IPv6 的现状。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L2，来源：`historical_claims.duckdb.claim.CL-7-045`）
+
+参考文献全文数据库收录《dexter-institutionalizing_freebsd_isolated_and_virtualized_hosts-paper》（bsdcan，2018），作为本章主题的候选史料。
+
+
+
+<!-- DEEP_ANALYSIS: review_reports.duckdb.review_records -->
+**数据库分析发现**（证据等级：L3，来源：`review_reports.duckdb.review_records.2`）
+
+<FreeBSD-Core选举争议 争议的历史背景>
+
+
+
+<!-- DEEP_ANALYSIS: review_reports.duckdb.review_records -->
+**数据库分析发现**（证据等级：L3，来源：`review_reports.duckdb.review_records.5`）
+
+<Matt Dillon离开FreeBSD 争议的历史背景>
+
+
+
+<!-- DEEP_ANALYSIS: sacred_sources.duckdb.blocks -->
+**史家判断**（证据等级：L2，来源：`sacred_sources.duckdb.blocks.319`）
+
+FreeBSD 是少数人的选择，是“百分之一的生活”。选择是自由的，无可指摘。BSD 家族整体上处于操作系统的边缘地位，被 Linux 的市场占有率所淹没。国内企业大多视野有限，社会责任感有待加强，对开源项目的支持往往浅尝辄止。而反观国外企业的软件大多全平台支持，也不存在系统歧视问题。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-5-009`）
+
+Kamp 与 Watson 的 Jails 论文（SANE 2000）记载：jails 工作由 servetheweb.com 赞助并捐赠给 FreeBSD 项目，FreeBSD 4.0-RELEASE 是首个包含该代码的发布，后续工作由 Safeport Network Services 赞助——构成 4.0 引入 jails 的一手史料。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-5-105`）
+
+FreeBSD 常被用作路由器或防火墙，Olivier Cochard-Labbé 在 AsiaBSDCon 2018 给出针对 FreeBSD 11.1-RELEASE 的路由与防火墙调优研究。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-5-106`）
+
+ULE 是 Jeff Roberson 于 2003 年为 FreeBSD 设计的现代调度器，论文指出既有线程调度器已不适应项目变化后的优先级与硬件目标。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-7-006`）
+
+GBDE（GEOM Based Disk Encryption）是 Poul-Henning Kamp 为 FreeBSD 提出的基于 GEOM 的磁盘加密设施，在磁盘（分区）级别运行，可保护任意类型的文件系统或数据库。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-7-011`）
+
+FreeBSD 的 Jail 设施由 Poul-Henning Kamp 与 Robert N. M. Watson 于 2000 年提出，旨在约束具有最高权限的 root 用户，实现操作系统环境的分区。
+
+## 文献
+
+- Ingo Schwarze. bsdcan14-mandoc[M]. 2014.
+- Ingo Schwarze. bsdcan15-mandoc[M]. 2015.
+- Ingo Schwarze. bsdcan18-mandoc[M]. 2018.
+- Paul Irofti. bsdcan2014-octeon dsr500[M]. 2014.
+- bsdcan2016-xen[M].
+- eurobsdcon2014-mandoc-paper[M].
+- eurobsdcon2015-mandoc[M].
+- eurobsdcon2023-otto-malloc[M].
+- Claudio Jeker. asiabsdcon08-network[M]. 2008.
+- Murenin C A, Boutaba R. OpenBSD Hardware Sensors Framework[C]//AsiaBSDCon 2009 Proceedings. Tokyo, 2009.
+- Jørgensen N. Incremental and Decentralized Integration in FreeBSD[M]//Feller J, Fitzgerald B, Hissam S A, Lakhani K R, eds. Perspectives on Free and Open Source Software. Cambridge: MIT Press, 2005: 227-243. ISBN: 0-262-06246-1.
+- Alexander Bell-Thomas. 021 Interprocess Communication in Free BSD 11 Performance Analysis[M]. 2020.
+- kirill bolshakov, elena reshetova. 043 Free BSD Mandatory Access Control Usage for Implementing Enterprise Security Policies[M]. 2007.
+- Watson. Capsicum USENIX-Security[M]. 2010.
+- Isaac David, Arthur Gervais. 001 Benchmarking Mythos-Linked Bug Rediscovery[M], 2026.
+- bart, mzhang464, elisa. 018 The Relevance of Classic Fuzz Testing Have We Solved This One[M]. 2021.
+- 025 SLEUTH Real-time Attack Scenario Reconstruction from COTS Audit Data[M].
+- 汪黎, 杨学军, 章文嵩. 13[M]. 2011.
+- 汪黎, 杨学军, 章文嵩. 52[M]. 2011.
+- 陆侃, 傅颖丽, 张量, 田立炎. 54[M]. 2011.
+- 付远志. 操作系统内核模糊测试方法研究[M]. 2021.
+- [1]. 刘丁豪. 基于静态分析的操作系统内核缺陷检测关键技术研究[D]. 浙江大学, 2024（博士学位论文）.
+- 双协议栈. 未知作者 嵌入式IPv4与IPv6双协议栈网关系统的研究[M]. 1995.
+- zwdp. 49[M]. 2008.
+- standalone. evans-kse-paper[M]. 2000.
+- standalone. kamp-phk-jails-paper[M]. 2000.
+- bsdcon. baldwin-jhb-locking in multithreaded kernel-paper[M]. 2002.
+- bsdcon. europe scandariato-advanced vpn support on freebsd-paper-2[M]. 2002.
+- standalone. dowse-ufs optimizations-paper[M]. 2002.
+- bsdcon. baldwin-using freebsd to render realtime audio video-paper-2[M]. 2003.
+- bsdcon. percival-cperciva-binary updates-paper[M]. 2003.
+- bsdcon. roberson-jeff-ule scheduler-paper[M]. 2003.
+- standalone. zec-vimage-paper[M]. 2003.
+- eurobsdcon2014-mandoc-slides[M].
+- CAIA-TR-110228A[M].
+- Joseph Mingrone. Contributing-to-Free BSD-Ports-with-Git[M]. 2022.
+- Anne Dickison. summit report[R]. 2022.
+- Anne Dickison. E-Card-CASE-STUDY-1[M]. 2000.
+- grants[M].
+- Deb Goodkin. Facesof Free BSD-Alberto[M]. 2012.
+- The FreeBSD Foundation. 11xbrochure 110616 screen[M].
+- The FreeBSD Foundation. Free BSD day poster letter 2.1[M]. [无固定出版年]
+- FreeBSD-2025-Community-Survey-Report-Final[M]. 2025.
+- The FreeBSD Foundation. Free BSD-and-Git[M]. 2018.
+- FreeBSD-Foundation-April-2016-Update[M]. 2016.
+- FreeBSD-Foundation-April-2018-Update[M]. 2018.
+- FreeBSD-Foundation-March-2018-Update-1[M]. 2018.
+- FreeBSD-Foundation-November-2016-Update[M]. 2016.
+- FreeBSD-Foundation-Proposals-Feb-2009[M]. 2009.
+- FreeBSD-Foundation-Proposals-Jan-2011-1[M]. 2011.
+- FreeBSD-Foundation-Proposals-March-2012[M]. 2012.
+- Deb Goodkin. Free BSD-Foundation-Proposals[M]. 2013.
+- FreeBSD-Foundation-Q1-2017-Update[M]. 2017.
+- FreeBSD-Foundation-Q2-2017-Update[M]. 2017.
+- The FreeBSD Foundation. Journal Ad R2 041516[J].
+- The FreeBSD Foundation. reg-flyer16[M]. [无固定出版年]
+- The FreeBSD Foundation. sticker book[M]. [无固定出版年]
+- marketing. Testimonial Flyer 021916[M].
+- The FreeBSD Foundation. journal ad r2v1[J]. [无固定出版年]
+- submit-your-freebsd-project-proposal[M].
+- freebsd-foundation-newsletter-august-9-2[M].
+- GSOC-flyerv. GSOC-flyerv2[M]. 2017.
+- Hardware-Donation-Form. Hardware-Donation-Form[M]. [无固定出版年]
+- DEB GOODKIN via PRWeb.com. Switch[M]. 2011.
+- Michael W. Lucas. pam[M]. 2022.
+- Joseph Kong. Managed-Services-Using-Free BSD-at-NYI-1[M]. 2013.
+- Anne Dickison. netflix-CASE-STUDY-1[M]. [无固定出版年]
+- Anne Dickison. NYI-Case-Study-CASE-STUDY-2[M]. 1996.
+- User. freebsd deployment-1[M]. 2010.
+- William Andrews. Packaging-A-Vision-with-notes[M].
+- Marius Strobl ` `%%%`# ` ~~~false. status 201110 Dev Summit[M]. 2011.
+- Summer-of-Code. Summer-of-Code[M]. 2020.
+- The FreeBSD Foundation. half final[M]. [无固定出版年]
+- David Chisnall. Memory Copy Functions. The-copyinout-Framework[M]. 2021.
+- TravelRequestForm-. Travel Request Form-3[M]. [无固定出版年]
+- Rick Macklem. Using-TLS-to-Improve-NFS-Security[M]. 2021.
+- Mariusz Zaborski. CARP[M]. 2022.
+- Antoine Jacoutot, Baptiste Daroussin. openbsd my bsd sucks less than yours-full paper[M]. 2017.
+- Mischa Peters. openbsd The%20 Open BSD%20hypervisor%20in%20the%20wild,%20a%20short%20story%20-%20 Mischa%20 Peters[M]. 2019.
+- ONODERA R. How to Package GitHub Softwares（幻灯片）[EB/OL]. AsiaBSDCon 2015 NetBSD BoF.
+- Heitor E 'iM'. SMOLBSD: Making NetBSD a fast(er) booting microvm[C]//Proceedings of BSDCan 2024. Ottawa: BSDCan, 2024 ［C］. 2024.
+- FreeBSD-Foundation-August-2016-Update[M]. 2016.
+- FreeBSD-Foundation-December-2016-Update[M]. 2016.
+- FreeBSD-Foundation-February-2018-Update[M]. 2018.
+- FreeBSD-Foundation-January-2018-Update[M]. 2018.
+- FreeBSD-Foundation-July-2016-Update[M]. 2016.
+- FreeBSD-Foundation-July-August-2017-Update[M]. 2017.
+- FreeBSD-Foundation-June-2016-Update[M]. 2016.
+- FreeBSD-Foundation-March-2016-Update[M]. 2016.
+- FreeBSD-Foundation-May-2016-Update[M]. 2016.
+- FreeBSD-Foundation-May-2018-Update[M]. 2018.
+- The FreeBSD Foundation. Free BSD-Foundation-Q4-Update[M]. 2018.
+- Anne Dickison. Net App-CASE-STUDY-1-1[M]. 2004.
+- Mariusz Zaborski. Seven-Ways-to-Increase-Security-in-a-New-Free BSD-Installation[M]. 2021.
+

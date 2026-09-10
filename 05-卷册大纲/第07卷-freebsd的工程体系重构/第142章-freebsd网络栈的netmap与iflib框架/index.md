@@ -22,7 +22,7 @@ volume: 第07卷-freebsd的工程体系重构
 - 辨析：netmap 是否被 FreeBSD 弃用——没有，netmap 仍在活跃维护，是 FreeBSD 高速包处理的主要方案；DP
 - 总纲第 7 条——技术选择即政治选择：企业赞助方向直接塑造 FreeBSD 在该时期的子系统优先级（如 Netflix 推动内核 TLS 卸载与网络栈高性能化）。
   - 辨析：企业提交多属受雇工作期间的 “有组织贡献”，不宜与志愿者个人贡献混同；corp 名单随年份变动，须以 contributors 表逐期核验。
-  - 文献：bsd_commits.db（freebsd-src contri
+  - 文献：freebsd.duckdb（freebsd-src contri
 - 总纲第 6 条——技术路线分化：Linux 以 eBPF 通用可编程数据面、FreeBSD 以 netmap/专用框架追求高性能，是网络栈演进的两条路线。
   - 辨析：eBPF 的“通用内核虚拟机”与 netmap 的“零拷贝用户态 IO”范式不同；将 XDP 等同于 netmap 会忽略架构差异。
   - 文献：Linux Kernel. eBPF/XDP Documentation [EB/
@@ -35,7 +35,7 @@ volume: 第07卷-freebsd的工程体系重构
 - netmap 引入 FreeBSD 版本——netmap 代码在 FreeBSD 9.x 时代通过开发分支可获取，在 FreeBSD 10.0-RELEASE（2014）正式合入基础系统；数据库证据进一步精确化时间线：netmap 首次完整合入主线 commit 为 2011-11-17（`68b8534bdfeb...`），早于 FreeBSD 9.0-RELEASE（2012-01-12）约
 - netmap 是否被 FreeBSD 弃用——没有，netmap 仍在活跃维护，是 FreeBSD 高速包处理的主要方案；DPDK 在 FreeBSD 上的支持——DPDK 有 FreeBSD 移植但不在基础系统中，需要从 ports 安装；KAME 项目的 IPv6 代码是否还存在于现代 FreeBSD 中——KAME 代码经过 20 年演进和重写，现代 FreeBSD IPv6 栈已不是原始
 - 企业提交多属受雇工作期间的 “有组织贡献”，不宜与志愿者个人贡献混同；corp 名单随年份变动，须以 contributors 表逐期核验。
-  - 文献：bsd_commits.db（freebsd-src contributors 表，窗口 2010–2020，检索 2026-07-21）［A］；FreeBSD 项目贡献者指南（<<https://docs.freebsd.org/en/arti>
+  - 文献：freebsd.duckdb（freebsd-src contributors 表，窗口 2010–2020，检索 2026-07-21）［A］；FreeBSD 项目贡献者指南（<<https://docs.freebsd.org/en/arti>
 - eBPF 的“通用内核虚拟机”与 netmap 的“零拷贝用户态 IO”范式不同；将 XDP 等同于 netmap 会忽略架构差异。
   - 文献：Linux Kernel. eBPF/XDP Documentation [EB/OL]；Rizzo L. netmap [A]. USENIX ATC 2012. ［B］
     FreeBSD 社区论文与演讲 [326]，[326] Christo
@@ -46,7 +46,7 @@ volume: 第07卷-freebsd的工程体系重构
 
 - Rizzo, L. (2012). *netmap: A Novel Framework for Fast Packet I/O*. USENIX ATC '12 (SIGCOMM precursor); FreeBSD Project. (2014-01). *FreeBSD 10.0 Release Notes* (netmap). freebsd.org; Rizzo, L. (2012). *VALE: A Switched Ethernet for Virtual Machines*. ACM CoNEXT ’12; DPDK Project. (2010-2026). *DPDK
 - FreeBSD Project. *Source Code History for netmap, SCTP, iflib, IPv6*. cgit.freebsd.org; Rizzo, L. (2011-2026). *netmap Project Page*. info.iet.unipi.it/~luigi/netmap/; Stewart, R., & Tuexen, M. (2007-2026). *SCTP for FreeBSD*. sctp.freebsd.org; KAME Project. (1998-2006). *KAME Project Archive*. web.
-- bsd_commits.db（freebsd-src contributors 表，窗口 2010–2020，检索 2026-07-21）［A］；FreeBSD 项目贡献者指南（<https://docs.freebsd.org/en/articles/contributing/>）［B］
+- freebsd.duckdb（freebsd-src contributors 表，窗口 2010–2020，检索 2026-07-21）［A］；FreeBSD 项目贡献者指南（<https://docs.freebsd.org/en/articles/contributing/>）［B］
     FreeBSD 社区论文与演讲 [329]，[329] Christos Margiolis. Re-decentralizing the Internet with BSD [C]//EuroBSDcon 2025. [S.l.]: [s.n.], 2025. 获取路径：<<https://pape>
 - Linux Kernel. eBPF/XDP Documentation [EB/OL]；Rizzo L. netmap [A]. USENIX ATC 2012. ［B］
     FreeBSD 社区论文与演讲 [326]，[326] Christos Margiolis. Vox FreeBSD: How sound(4) works [C]//BSDCan 2025. [S.l.]: [s.n.], 2025. 获取路径：<https://papers.freebsd.org/2025/bsdcan/margiolis-vox-freebsd-how-sound4-works/> [访问

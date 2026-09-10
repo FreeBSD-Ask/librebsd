@@ -1,0 +1,232 @@
+# 87.13 项目统摄史观审视——分裂时期文化图景的总纲映射
+
+## 87.13.1 总纲第 5 条审视：偶然性作为分裂的根基
+
+  **要点**：项目史观总纲第 5 条 “没有必然性，只有偶然性” 审视 **1992-1996 年** BSD 分裂时期的文化图景——386BSD patchkit 的协作瓶颈、Jolitz **1993 年** 撤回授权、de Raadt **1994 年** 被逐、4.4BSD-Lite **1994 年** 和解后法律洁净，四个节点均为偶然事件而非必然规律；分裂不是 “文化差异的必然结果”，而是 “偶然事件叠加后文化差异找到各自容器” 的过程；386BSD 的单维护人模式并非注定失败，若 Jolitz 夫妇在 **1992-1993 年** 间接受 patchkit 协作模式，FreeBSD 可能不会在 **1993 年 6 月** fork；de Raadt 被逐并非 NetBSD Core Team 的必然决策，若 **1994 年 12 月** 的内部沟通方式不同，OpenBSD 可能不会在 **1995 年 10 月** fork；偶然性不是 “无规律”，而是 “规律本身是偶然的”——BSD 分裂的规律（文化差异导致项目分化）是在偶然事件序列中事后归纳的，而非先于事件存在的必然性
+  
+**史料**：项目史观总纲第 5 条（位于 据原文第 25 章）；bsd_commits.db 数据库证据：freebsd-src 首条 commit **1993-06-12**（Rodney W. Grimes（罗德尼·W·格赖姆斯） "Initial import, 0.1 + pk 0.2.4-B1"）、deraadt netbsd-src 最后 commit **1994-12-17**、openbsd-src 首条 commit **1995-10-18**；FreeBSD Handbook 1.3.1 节 "Bill Jolitz suddenly decided to withdraw his sanction" ［A］
+  
+**史观**：总纲第 5 条——偶然性作为分裂的根基：分裂时期的文化图景不是必然性的展开，而是偶然事件序列的沉淀；记忆将偶然转为必然——BSD 社区在事后将分裂叙事化为“文化差异的必然结果”，但本节审视还原偶然性的根基
+  
+**辨析**：偶然性审视的限度——偶然性不等于不可解释，四个节点（patchkit 瓶颈、Jolitz 撤回授权、de Raadt 被逐、4.4BSD-Lite 和解）均有具体因果链可循，但因果链本身是事后建构的；不得因偶然性而否定因果分析，亦不得因因果分析而掩盖偶然性 [考据完成：2026-07-28 偶然性与因果性的关系在历史哲学方法论中尚有争议——查证来源：斯坦福哲学百科"Scientific Explanation"与"Historical Explanation"条目、Routledge Encyclopedia of Philosophy"Causation in History"条目；交叉验证方法：对照历史哲学方法论文献与 BSD 分裂事件时间线；存疑判定依据：偶然性与因果性的边界为方法论争议而非事实争议]
+  
+**文献**：项目史观总纲第 5 条与第 25 章；bsd_commits.db `commits` 表；FreeBSD Handbook 1.3.1 节 ［A］
+
+## 87.13.2 总纲第 8 条审视：本体论平等与叙事不平等的张力
+
+  **要点**：项目史观总纲第 8 条 “本体论上各方平等。FreeBSD、OpenBSD、NetBSD、DragonFly BSD 在本体论上地位相等” 审视 **1992-1996 年** 分裂时期的文化图景——386BSD、FreeBSD、NetBSD、OpenBSD 四项目在本体论上地位相等，但叙事层面存在 “开创者—延续者—边缘者” 的等级建构；FreeBSD Handbook 1.3.1 节将 FreeBSD 定位为 “386BSD patchkit 协调员创建的项目”，NetBSD 与 OpenBSD 的 fork 叙事则分别定位为 “被逐者另起炉灶” 与 “可移植性至上”，四项目在叙事等级中的位置不平等；本体论平等不等于叙事平等——合图层（33.2.2.3）承认 386BSD 与 FreeBSD 在本体论上地位相等，但叙事层面 FreeBSD “创建者” 叙事对 386BSD 创建者的边缘化是事实；本体论平等的审视要求剥离叙事等级，将四项目还原为 BSD 谱系中功能分工平等的节点
+  
+**史料**：项目史观总纲第 8 条（位于 据原文第 25 章）；FreeBSD Handbook 1.3.1 节；NetBSD 1.0 Release Announcement（**1994.11.8**）；OpenBSD 1.2 Release Notes（**1996.7**）；bsd_commits.db 数据库证据：freebsd-src、netbsd-src、openbsd-src 首条 commit 时间线 ［A］
+  
+**史观**：总纲第 8 条——本体论平等：四项目在本体论上地位相等，叙事不平等是权力行使的产物而非本体论差异；总纲第 17 条——形式与内容：叙事等级作为形式要素与项目实际贡献作为内容要素形成张力
+  
+**辨析**：本体论平等审视的限度——本体论平等不等于“无差异”，四项目在技术路径、组织模式、文化基因上确有差异，但差异是功能分工而非等级高下；不得因本体论平等而否定差异，亦不得因差异而否定本体论平等；Jolitz 指控辩证链（33.2.2 至 33.2.2.3）是本体论平等审视的具体案例——法律层面 Jolitz 指控不成立（386BSD 许可证允许自由使用），但叙事层面“创建者”叙事对 386BSD 的边缘化是本体论平等与叙事不平等张力的体现
+  
+**文献**：项目史观总纲第 8 条与第 25 章；FreeBSD Handbook 1.3.1 节；NetBSD 1.0 与 OpenBSD 1.2 发布档案；bsd_commits.db `commits` 表 ［A］
+
+## 87.13.3 总纲第 19 条审视：解释学循环与权力的共谋
+
+  **要点**：项目史观总纲第 19 条 “解释学循环是历史认识的根本条件。权力与知识在历史书写中共谋——什么被记录、什么被遗忘，本身就是权力行使” 审视 **1992-1996 年** 分裂时期的文化图景——BSD 分裂的叙事由 FreeBSD 阵营（Handbook 官方叙事、Contributors 文章）、NetBSD 阵营（Core Team 决策记录）、OpenBSD 阵营（de Raadt 个人演讲）三方分别建构，三方的叙事权力不对等；FreeBSD 阵营通过 Handbook 与 Contributors 文章保留了最完整的 patchkit 起源叙事，NetBSD 阵营通过 Core Team 决策记录保留了 de Raadt 被逐的内部叙事，OpenBSD 阵营通过 de Raadt 个人演讲保留了被逐后 fork 的边缘者叙事；Jolitz 一方档案缺失（33.2.2.2）是解释学循环中权力不对称的极端案例——“什么被遗忘，本身就是权力行使”；解释学循环审视要求承认 BSD 分裂叙事的建构性，不得将任何一方叙事视为 “客观事实”
+  
+**史料**：项目史观总纲第 19 条（位于 据原文第 25 章）；FreeBSD Handbook 1.3.1 节；FreeBSD Contributors 文章；NetBSD Core Team 1994 决策记录；de Raadt 公开演讲档案；jolitz.com 个人网站档案（无法访问，见 33.2.2.2） ［A］
+  
+**史观**：总纲第 19 条——解释学循环与权力：BSD 分裂叙事是三方权力共谋的产物，叙事的完整性取决于权力持有者的档案保留能力；Jolitz 一方档案缺失是权力不对称的体现
+  
+**辨析**：解释学循环审视的限度——承认叙事的建构性不等于否定史实的可考据性，bsd_commits.db 中的 commit 记录、tag 信息、文件引入时间是不可篡改的史实层；解释学循环审视针对的是“叙事层”（如 Handbook“创建者”叙事、Contributors 专节位置）而非“史实层”（如 commit hash、tagger_date）；不得因解释学循环而陷入虚无主义，亦不得因史实可考据而忽视叙事的建构性 [考据完成：2026-07-28 解释学循环与史实考据的关系在历史哲学方法论中尚有争议——查证来源：斯坦福哲学百科"Hermeneutics"条目、Routledge Encyclopedia of Philosophy"Interpretation"条目；交叉验证方法：对照历史哲学方法论文献与 BSD 分裂事件叙事档案；存疑判定依据：解释学循环与史实考据的边界为方法论争议而非事实争议]
+  
+**文献**：项目史观总纲第 19 条与第 25 章；FreeBSD Handbook 与 Contributors 文章；NetBSD Core Team 决策记录；de Raadt 公开演讲档案 ［A］
+
+### 史观映射
+
+> 分裂不是文化差异的原因，而是文化差异的结果——FreeBSD 的务实、NetBSD 的精英、OpenBSD 的偏执，这些气质在分裂之前就已存在，分裂只是让它们各自找到了自己的容器。三项目的文化是形式主义的产物：谁先占据某个定位，谁就获得了那个定位的话语权，后来者只能选择剩余的位置。而地理在其中扮演了沉默的塑造者——FreeBSD 在加州的商业土壤中生长，OpenBSD 在卡尔加里的寒冷中被推向偏执的极致，NetBSD 在全球散点中维持着精英的幻觉。三者在本体论上平等，但平等不意味着相同——差异本身就是形式主义化的非存在，每一个标签都在遮蔽更复杂的真相
+
+---
+
+<!-- 嵌入点建议
+- 建议插入子节：33.X 分裂时期与 Linux 崛起的同期对照——BSD 文化基因被 Linux 阵营挪用的早期形态
+- 预计字数：3,000 字
+- 建议嵌入案例：BSD 案例 2 至 4（386BSD patchkit → Slackware/Debian/Red Hat 发行版群）、BSD 案例 5（ports → apt/yum/dnf/pacman 软件包管理概念）、BSD 案例 13（rc.d → systemd unit 早期形态）、BSD 案例 1（sudo 4.1BSD 1980 起源 → Linux 事实标准）
+- 冲突章节：33.1 文化图景的背景、33.4 分裂时期的文化与流行文化
+- 耦合度：中
+- 嵌入理由：第 33 章围绕 1992-1996 年 BSD 分裂时期的文化图景展开，33.1 子节讨论文化图景的背景（同时期 Linux 崛起、Internet 商业化、USL 诉讼），33.4 子节讨论分裂时期 BSD 与 Linux 在流行文化中的差异化形象，但两者均未涉及 “BSD 文化基因被 Linux 阵营挪用的早期形态”——386BSD patchkit 协作模式被 Debian Manifesto 1993-08-16 “社区化开源发行版” 叙事吸收、BSD ports 概念被 Debian dpkg 1994-01 与 Red Hat rpm 1995 更名为 "package manager"、BSD 案例 1 sudo 1980 起源在 1991 The Root Group 重写后进入 Linux 端。33.X 子节作为补充子节承载 4 项案例的考据叙事，与既有 33.1、33.4 子节形成 “BSD 文化分裂” 与 “BSD 文化被挪用” 的正反对照。详细建议见 原材料/研究/linux 文化挪用/嵌入建议.md。
+-->
+
+## 87.13.15 不同时期人员的采访录（详见 [采访录.md](采访录.md)）
+
+> 第 33 章采访录子节，覆盖 1992-1996 年分裂时期文化图景的当事人陈述，含麦库西克（Marshall Kirk McKusick）CSRG 文化传承的当事人陈述、Theo de Raadt（西奥·德·若特） OpenBSD 文化基因的当事人陈述、Jordan K. Hubbard（乔丹·哈伯德） FreeBSD 商业文化的当事人陈述三则，每则采访按 5 字段深化，考据过程另见 原材料/研究/考据记录/ 下对应文件。
+
+## 87.13.16 节 媒体反响与社区舆论（详见 [媒体反响与社区舆论.md](媒体反响与社区舆论.md)）
+
+
+<!-- DEEP_ANALYSIS: cross_indexes.duckdb.concept_history -->
+**史家判断**（证据等级：L2，来源：`cross_indexes.duckdb.concept_history.20`）
+
+思想土壤为 1960–1970 年代大学与黑客社区的“软件共享”传统（如 MIT AI 实验室的 ITS 系统）。1984 年 1 月斯托曼正式启动 GNU 项目，回应专有软件扩散下的分享禁令；1985 年成立 FSF、发布《GNU 宣言》；1986 年阐明自由软件四项自由；1989 年发布 GNU GPL v1，1991 年 v2。1980 年代末至 90 年代初因 Linux 内核（Linus Torvalds）与 GNU 工具合并成 GNU/Linux，达成完全自由操作系统目标。1998 年 Raymond 的《大教堂与集市》、Netscape 开源其浏览器、Raymond 与 Perens 创立开放源代码促进会（OSI）与《开源定义》，自由软件运动与开源运动正式分野。
+
+
+
+<!-- DEEP_ANALYSIS: cross_indexes.duckdb.concept_history -->
+**史家判断**（证据等级：L2，来源：`cross_indexes.duckdb.concept_history.5`）
+
+①概念与早期实践（1980s）：1984 年 GNU 计划启动；1985 年《GNU 宣言》定反专有化原则，FSF 成立；GNU 组件先以程序专属 copyleft 许可发布。②GPL v1（1989）：与律师 Jerry Cohen 把各许可整合为统一 GNU GPL，禁止只发二进制、禁止附加限制条款，实现强 copyleft。③GPL v2（1991-06）：新增第 7 节应对软件专利；同年发布 LGPL 弱 copyleft；1991 年 Linux 内核以 GPL 发布，促成 GNU/Linux。④GPL v3（2007-06-29）：经历两年公开讨论，回应 tivo 化、DRM、微软—Novell 专利协议。与 BSD 对比：BSD 系为 permissive 许可，仅要求保留版权声明与免责声明，不要求衍生作品同许可，可并入专有软件；copyleft 则要求衍生作品以相同条款再分发。
+
+
+
+<!-- DEEP_ANALYSIS: cross_indexes.duckdb.concept_history -->
+**史家判断**（证据等级：L2，来源：`cross_indexes.duckdb.concept_history.8`）
+
+netmap 由意大利比萨大学 Luigi Rizzo 设计开发，获欧盟 FP7 项目 CHANGE 与 OPENLAB 资助。2011 年 6 月首个原型与 FreeBSD 版本发布，随后整合进 FreeBSD 9/10 及 HEAD 基准树；2012 年 2 月发布 Linux 内核外部模块版本，同期实现 libpcap 兼容层。2012 年 6 月发表 USENIX ATC 2012 论文《netmap: a novel framework for fast packet I/O》，同年刊出《Revisiting Network I/O APIs: the netmap framework》（CACM 55(3)）。2012 年 6 月加入 VALE 虚拟软件交换机、2013 年 1 月 QEMU 扩展、2013 年 12 月 netmap pipes、2014 年 4 月 bhyve 支持。其通过预分配分组缓冲、批量系统调用摊薄开销、共享内存消除拷贝三项技术，在单核上实现约 14.88 Mpps（10 G 线速）移包，较传统 API 提速达 20–40 倍。
+
+
+
+<!-- DEEP_ANALYSIS: cross_indexes.duckdb.concept_history -->
+**史家判断**（证据等级：L2，来源：`cross_indexes.duckdb.concept_history.9`）
+
+ipfw 最早随 FreeBSD 2.0（1994）引入，其前身由 Daniel Boulet 为 BSDI 编写、Ugen J. S. Antsilevich 为 FreeBSD 重写；dummynet 流量整形于 FreeBSD 2.2.8（1998）加入（Luigi Rizzo 编写）；2002 年夏 Luigi Rizzo 全面重写为 ipfw2，FreeBSD 4.7 首次完整包含，2005 年加入内核态 NAT。pf 源于 2001 年 OpenBSD 因许可问题将 Darren Reed 的 IPFilter 移出 CVS（2001-05-30），Daniel Hartmeier 于 2001 年夏秋急速开发 pf，随 OpenBSD 3.0（2001-12-01）作为默认组件发布，随后由 Henning Brauer、Ryan McBride 大规模重设计，并集成 NAT、ALTQ 队列、pfsync、CARP 等特性，被移植到 FreeBSD（自 5.3）、NetBSD、DragonFly BSD。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-1-020`）
+
+新南威尔士大学 John Lions 教授编写的《Lions 的 UNIX 第六版注释》收录了内核源码，作为盗版影印件被广泛传阅。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-1-100`）
+
+Salus 1994《A Quarter Century of UNIX》引录了 UNIX V6 内核中著名的注释 “/* You are not expected to understand this */”，该注释位于进程上下文切换相关代码段（lines 2240-2243 处，注释本身在第 2238 行），出自第六版内核源码。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-1-113`）
+
+据估计，仅 Red Hat、IBM、Novell、Intel 与 Oracle 五家公司的员工就为 Linux 内核近期一个版本贡献了 32% 的改动。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-5-001`）
+
+FreeBSD 核心开发者 Poul-Henning Kamp（phk）1996 年撰文指出，大多数 UNIX 内核已从 swap/segment 转向虚拟内存/页式内存管理，但 malloc/free API 的实现并未充分反映这一转变，为其面向现代虚拟内存环境重写 malloc 提供了动机背景。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-5-006`）
+
+Greg Lehey 2001 年论文指出，FreeBSD 初始 SMP 支持只允许一个进程同时在内核态运行，并在多处理器间屏蔽中断，导致 I/O 密集系统性能严重次优；该论文描述移除这一瓶颈的工作，即 SMPng。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-5-008`）
+
+据 Jørgensen 2005 年对 FreeBSD SMP 项目负责人的访谈，SMPng 项目选择增量集成而非分支开发，其决策受 BSD/OS 在分支上开展 SMP 开发导致主干与分支分歧迅速失控的教训影响；SMP 项目由约 10 名开发者组成，5.0（2003 年 1 月）实现内核态线程 SMP，而 4.x 系列仅支持用户态线程 SMP。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-5-012`）
+
+Jails 论文列举 jailed root 的八项限制：禁止直接修改内核与加载内核模块、禁止修改网络配置（接口、地址、路由表）、禁止挂载/卸载文件系统、禁止创建设备节点、禁止访问 raw/divert/routing socket、禁止修改内核运行时参数（大部分 sysctl）、禁止修改 securelevel 相关文件标志、禁止访问与 jail 无关的网络资源。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-5-108`）
+
+ULE 交互式调度器具备处理器亲和性，并由内核依据交互性评分动态设置优先级，与 4BSD 共享调度器的多级反馈队列相区分。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-6-009`）
+
+DTrace 由 Bryan M. Cantrill、Michael W. Shapiro 与 Adam H. Leventhal 在 Sun Microsystems 的 Solaris 内核开发团队提出。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-6-019`）
+
+CheriABI 在内核层作为 compat layer（类似 freebsd32）实现，内核本身是混合 CHERI-C 程序。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-6-103`）
+
+2024 年 6 月，FreeBSD Foundation 委托 Alpha-Omega 项目赞助的代码审计覆盖 bhyve 与 Capsicum 两大子系统，由攻击性安全公司 Synacktiv 执行，发现可导致内核与 bhyve 用户态进程代码执行的漏洞。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-6-208`）
+
+FreeBSD 自 2002 年起支持 GBDE、自 2005 年起支持 GELI 全盘加密，但引导过程要求 loader 与内核存放在未加密分区。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-6-210`）
+
+FreeBSD 的内核 TLS（KTLS）由内核处理 TLS 记录分帧与加解密，会话密钥协商由 OpenSSL 等用户态库在握手后提供给内核。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-7-010`）
+
+Yarrow PRNG 由 Mark R. V. Murray 为 FreeBSD 实现，用于解决内核与用户态随机数熵源问题。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-7-012`）
+
+TrustedBSD MAC Framework 由 Robert Watson、Wayne Morrison、Chris Vance 与 Brian Feldman 实现，集成于 FreeBSD 5.0，提供内核访问控制扩展的灵活框架。
+
+## 文献
+
+- Paul Irofti. eurobsdcon2014-octeon dsr500[M]. 2014.
+- CAIA-TR-110228A[M].
+- eurobsdcon2016-utf8[M].
+- eurobsdcon2017-device-drivers[M].
+- Drew Gurkowski. Metify-CASE-STUDY-2[M]. [无固定出版年]
+- David Chisnall. Memory Copy Functions. The-copyinout-Framework[M]. 2021.
+- TLS-Offload-in-the-Kernel. TLS-Offload-in-the-Kernel[M]. 2020.
+- TravelRequestForm-. Travel Request Form-3[M]. [无固定出版年]
+- Amit Singh. Mac OS X Internals: A Systems Approach[M]. Addison-Wesley, 2006.
+- eurobsdcon2022-bluhm-networkmp[M].
+- CantrillShapiro. DTrace[M]. 2004.
+- Beauchamp. Weston Exploring DTrace as Incident Response Tool for Unix Systems[M]. 2008.
+- bessho. P05 C Peripheral-side USB support for Net BSD[M]. 2016.
+- rytarowski. P04 B Intel HAXM - a hardware-assisted acceleration engine in the Net BSD kernel[M]. 2019.
+- eurobsdcon2023-otto-malloc[M].
+- eurobsdcon2024-bluhm-packetflow[M].
+- eurobsdcon2025-bluhm-protomp[M].
+- 未知. phk malloc[M]. [存疑]
+- Kantee A. Rump Device Drivers: Shine On You Kernel Diamond[C]//AsiaBSDCon 2010. Tokyo, 2010.
+- Heitor E 'iM'. SMOLBSD: Making NetBSD a fast(er) booting microvm[C]//Proceedings of BSDCan 2024. Ottawa: BSDCan, 2024 ［C］. 2024.
+- Cagney A. What Happens When a Dwarf and a Daemon Start Dancing（幻灯片）[EB/OL]. BSDCan 2015.
+- Herwig S. secmodel_sandbox: An Application Sandbox for NetBSD[C]//BSDCan 2017. Ottawa, 2017.
+- Kantee A. Environmental Independence: BSD Kernel TCP/IP in Userspace[C]//Proceedings of AsiaBSDCon 2009. Tokyo: AsiaBSDCon, 2009 ［C］. 2009.
+- Hiroki Sato. netbsd abc2010-P5 A-paper[M]. 2010.
+- eurobsdcon2025-hshoexer-confidential-computing[M].
+- Raju S, Mathew C G. Portable Hotplugging: NetBSD's uvm_hotplug(9) API Development[C]//AsiaBSDCon 2017. Tokyo, 2017.
+- Goyal H. Addition of Ext4 Extent and Ext3 HTree DIR Read-Only Support in NetBSD[C]//AsiaBSDCon 2017. Tokyo, 2017.
+- Shimizu R. NVMM AArch64 support (work in progress)[C]//Proceedings of AsiaBSDCon 2023. Tokyo: AsiaBSDCon, 2023 ［C］. 2023.
+- Ozaki R, Nakahara K. Current Status of NetBSD MP-safe Network Stack Project（幻灯片）[EB/OL]. AsiaBSDCon 2016 NetBSD BoF.
+- k-nakahara. netbsd Asia BSDCon2016-BOF-psref[M]. 2016.
+- eurobsdcon2024-hshoexer-confidential-computing[M].
+
+
+
+<!-- MAIL_INSIGHT: 16919@plains.NoDak.edu -->
+**观点**：1992 年 4 月 19 日，北达科他州立大学的 Glen Overby 在 comp.unix.bsd 发布“386BSD Patch Collection Release A”：该补丁集以 CVS 维护，源码树自 Net/2 起叠加 386BSD 与新闻组上散落的补丁，他声明将每周发布一次补丁包“直到被烤焦（flamed to a crisp）”为止，并拒绝提供个别指导。
+**邮件来源**：Glen Overby（plains.nodak.edu），comp.unix.bsd，1992-04-19，Message-ID: `16919@plains.NoDak.edu`
+**史学意义**：该帖一手记录了 386BSD 官方维护渠道缺位时社区自发形成 patchkit 协作机制的实况，说明 FreeBSD 1993 年 6 月的 fork 是在单维护人瓶颈与民间补丁收集机制并行中偶然成形的，而非文化差异的必然产物。
+<!-- /MAIL_INSIGHT -->

@@ -64,7 +64,7 @@ volume: 第05卷-freebsd的工程化奠基
 
 ## 文献
 
-- FreeBSD 5.0 Release Notes；BSDCon 2003 5.0 演讲；release/5.0.0. freebsd-src 仓库 tag [DB/OL]. 2003-01-16T16:56:23Z. tag: release/5.0.0; commit: 47227ef0ef663b7abb81ab5a60a450da9a93d24b；bsd_commits.db L1.1.1 查询结果（freebsd-src 年度 commit 量 2002-2003）[DB/OL]；bsd_commits.db L1.4.1 查询结果（freebsd-src release tag 间
+- FreeBSD 5.0 Release Notes；BSDCon 2003 5.0 演讲；release/5.0.0. freebsd-src 仓库 tag [DB/OL]. 2003-01-16T16:56:23Z. tag: release/5.0.0; commit: 47227ef0ef663b7abb81ab5a60a450da9a93d24b；freebsd.duckdb L1.1.1 查询结果（freebsd-src 年度 commit 量 2002-2003）[DB/OL]；freebsd.duckdb L1.4.1 查询结果（freebsd-src release tag 间
 - Roberson BSDCon 2003 论文 ［B］
 
 ## 97.4.2 ULE 的双队列设计

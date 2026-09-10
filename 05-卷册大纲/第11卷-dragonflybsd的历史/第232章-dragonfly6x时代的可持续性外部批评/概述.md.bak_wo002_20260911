@@ -1,0 +1,163 @@
+---
+chapter: 第 232 章
+id: CH232
+volume: 第11卷-dragonflybsd的历史
+---
+
+# 第 232 章 DragonFly 6.x 时代的可持续性外部批评
+
+> 本子章由原第 101 章拆分而来，承载 232.1-232.4 节。
+
+## 本章节索引
+
+1. [232.1 外部批评与反对者dragonfly可持续性批评](232.1-外部批评与反对者dragonfly可持续性批评.md)
+2. [232.2 重要贡献者与边缘者dragonfly5x6x时期的核心团队](232.2-重要贡献者与边缘者dragonfly5x6x时期的核心团队.md)
+3. [232.3 dragonflybsd6x时期的技术淘汰](232.3-dragonflybsd6x时期的技术淘汰.md)
+4. [232.4 与同时期操作系统的比较20192026年同期netbsd9x10x可移植性fre](232.4-与同时期操作系统的比较20192026年同期netbsd9x10x可移植性fre.md)
+
+## 数据核验与统计（自动增补 · 0-信任）
+
+> **来源库**：资料数据库 · materials / material_cross_references；references_fulltext · chapter_matches / chapter_reviews；doubts_standalone · doubts_to_resolve
+> **方法**：基于全局章号 1–348 直接 SQL 聚合；未做外部事实验证；`ch=0`/未映射条目不计入本章。
+> **生成时间**：2026-08-04 ｜ **复现**：`script/_engine_integrity_analysis.py`
+
+| 指标 | 数值 |
+| --- | --- |
+| 锚定素材 | 0 篇（含存疑标记 0 篇） |
+| 存疑点 | 1 条 |
+| 参考文献匹配 | 0 条 |
+| 章节述评 | 未生成 |
+| 章内交叉引用 | 出 0 / 入 0 |
+
+**数据质量备注**：本章尚无锚定素材，属史料回填优先对象；暂无参考文献匹配
+
+<!-- DOUBT_PENDING_BLOCK v20260804 -->
+
+> **待核验登记（doubt 批量 2026-08-04 批11）**：
+> 下列条目依 0 信任原则不改动正文，登记待核验：
+>
+> - 存疑 id 1719：6.x 贡献者(Aaron LI/Huete Jimenez/Kusumi/zrj)commit 量占比待 commit 库统计
+
+<!-- DATA_VERIFY_BLOCK v20260804 -->
+> 2026-08-11 补：本卷全部 23 章原缺 DATA_VERIFY_BLOCK，此为批量修复补入。卷级综述见 [vol-11.md](../../../04-现代研究文献/02-卷级文献综述/vol-11.md)
+>
+## 数据核验与统计（自动增补 · 0-信任）
+
+> **来源库**：资料数据库 · materials / material_cross_references；references_fulltext · chapter_matches / chapter_reviews；doubts_standalone · doubts_to_resolve
+> **方法**：基于全局章号 1–348 直接 SQL 聚合；未做外部事实验证；`ch=0`/未映射条目不计入本章。
+> **生成时间**：2026-08-11（批量回填） ｜ **复现**：`script/_engine_integrity_analysis.py`
+
+| 指标 | 数值 |
+| --- | --- |
+| 锚定素材 | 待补（本卷全部 23 章原缺锚定素材，属史料回填优先对象） |
+| 存疑点 | 0 条 |
+| 参考文献匹配 | 1 条 |
+| 章节述评 | 未生成 |
+| 章内交叉引用 | 出 0 / 入 0 |
+
+**数据质量备注**：本章为 DragonFly BSD 卷，史料档案待从 03-原始史料库/11-邮件列表史料/ 和 bsd_commits.db dragonfly-src 仓库补充；2026-08-11 批量回填 DVB 框架
+
+<!-- DB_POINTS:doubts_resolved -->
+**数据库要点引用（doubts_standalone.db · 2026-08-13）**
+
+> 来源：`04-现代研究文献/06-存疑数据库/doubts_standalone.db` 表 `doubts_to_resolve`（1987 条，1966 已解决）。本章存疑 2 条已解决。类别分布：date(1)、事实(1)
+
+> 存疑管理体系：98.9% 已闭环，解决结论含 date/fact/source_conflict/name/version 等类型，具体结论见 doubts_standalone.db 表 `resolution_summary` 字段。
+<!-- /DB_POINTS:doubts_resolved -->
+
+<!-- DB_POINTS:chapter_reviews -->
+**数据库要点引用（references_fulltext.db · chapter_reviews · 2026-08-13）**
+
+> 来源：`04-现代研究文献/05-参考文献全文数据库/references_fulltext.db` 表 `chapter_reviews`（348 章全覆盖）。本章级文献综述 928 字、匹配 1 篇文献，状态 imported。映射：旧章号 +1 → 磁盘章号。
+
+> **综述要点**：本章围绕“DragonFly 6.x 时代的可持续性外部批评”展开，覆盖 231.1 外部批评与反对者dragonfly可持续性批评；231.2 重要贡献者与边缘者dragonfly5x6x时期的核心团队；231.3 dragonflybsd6x时期的技术淘汰；231.4 与同时期操作系统的比较20192026年同期netbsd9…。数据核验显示：锚定素材 0 篇（含存疑标记 0 篇）、参考文献匹配 0 条、存疑点 1 条（自动增补，0
+
+<!-- /DB_POINTS:chapter_reviews -->
+
+
+<!-- DEEP_ANALYSIS: openssh-apple.duckdb.commits -->
+**数据库分析发现**（证据等级：L1，来源：`openssh-apple.duckdb.commits.openssh-apple`）
+
+openssh-apple 代码仓库：从 2001 年到 2025 年，共 35 次提交，1 位贡献者参与。
+
+
+
+<!-- DEEP_ANALYSIS: darwin.duckdb.commits -->
+**数据库分析发现**（证据等级：L1，来源：`darwin.duckdb.commits.darwin`）
+
+darwin 代码仓库：从 2001 年到 2026 年，共 2016 次提交，43 位贡献者参与。
+
+
+
+<!-- DEEP_ANALYSIS: openssh-apple.duckdb.commits -->
+**数据库分析发现**（证据等级：L1，来源：`openssh-apple.duckdb.commits.openssh-apple`）
+
+openssh-apple 核心贡献者：Apple OSS Distributions(35)
+
+
+
+<!-- DEEP_ANALYSIS: darwin.duckdb.commits -->
+**数据库分析发现**（证据等级：L1，来源：`darwin.duckdb.commits.darwin`）
+
+darwin 核心贡献者：Apple OSS Distributions(2016)
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L2，来源：`historical_claims.duckdb.claim.CL-7-027`）
+
+参考文献全文数据库收录《1983 Apple v Franklin 714F2d1240》（unknown，1983），作为本章主题的候选史料。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L2，来源：`historical_claims.duckdb.claim.CL-7-040`）
+
+参考文献全文数据库收录《20260805 Leventhal MacOSX missing probes 2008 en》（unknown，2026），作为本章主题的候选史料。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L2，来源：`historical_claims.duckdb.claim.CL-7-043`）
+
+参考文献全文数据库收录《entry08400 newsroom 2024 09 macos sequoia is available today》（unknown，2024），作为本章主题的候选史料。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L2，来源：`historical_claims.duckdb.claim.CL-7-032`）
+
+参考文献全文数据库收录《entry08427 apple oss distributions xnu》（unknown，年份不详），作为本章主题的候选史料。
+
+## 文献
+
+- Ingo Schwarze. bsdcan14-mandoc[M]. 2014.
+- Ingo Schwarze. bsdcan15-mandoc[M]. 2015.
+- eurobsdcon2014-mandoc-slides[M].
+- eurobsd-firewalls-2002[M]. 2002.
+- Watson. Capsicum USENIX-Security[M]. 2010.
+- bart, mzhang464, elisa. 018 The Relevance of Classic Fuzz Testing Have We Solved This One[M]. 2021.
+- 付远志. 操作系统内核模糊测试方法研究[M]. 2021.
+- White H. Metahistory: The Historical Imagination in Nineteenth-Century Europe [M]. Baltimore: Johns Hopkins University Press, 1973.
+- eurobsdcon2014-mandoc-paper[M].
+
+<!-- MAIL_INSIGHT_SECTION v20260828-v2 -->
+## 邮件列表分析观点（2026-08-28 自动增补）
+
+> 数据源：`script/_mail_analysis/topic_analysis_dragonfly.md`（7 主题 × 50 封邮件）+ `person_analysis_dragonfly_dillon.md`（Dillon 500 封邮件分析）
+> 方法：按章主题从报告中提取邮件段落，蒸馏为史学观点（V2 格式）
+> 注意：报告覆盖范围主要为 2023-2026 年 bug 跟踪器与用户邮件列表，早期（2003-2020）历史邮件未纳入分析
+
+
+
+<!-- MAIL_INSIGHT: <CAOZ7CpB_Nssm7CPj3rB0AbHrySF5KAtYZa0D0=Mv8esXbYVSYw@mail.gmail.com> -->
+**观点**：Matthew Dillon 在 2023 年 11 月坦承“大多数较新的网络驱动尚未从 FreeBSD 移植过来”，因为 FreeBSD “大幅改变了 API”。这一表态是 DragonFly 可持续性问题的直接证据——项目在 2020 年代仍依赖单人主导的驱动移植，而 FreeBSD 的 API 演进使得这一工作变得愈发困难。
+**邮件来源**：Matthew Dillon，dragonfly-users 邮件列表，2023-11-19，Message-ID: `CAOZ7CpB_Nssm7CPj3rB0AbHrySF5KAtYZa0D0=Mv8esXbYVSYw@mail.gmail.com`
+**史学意义**：Dillon 对驱动移植困难的承认，是评估 DragonFly 长期可持续性的关键一手史料。驱动支持的滞后不仅影响硬件兼容性，也限制了潜在用户群的规模，形成“用户少→贡献者少→驱动少→用户更少”的负反馈循环。
+<!-- /MAIL_INSIGHT -->
+
+<!-- MAIL_INSIGHT: <CAOZ7CpDNEQdonw1bZ+kLDng99=bPy+=3N3dzqC-Ta7Kwe9Hjig@mail.gmail.com> -->
+**观点**：Matthew Dillon 在 2025 年 7 月审查 POSIX `O_CLOFORK` 补丁时坦言“我们并没有强大的测试套件”（"we don't really have a strong testing suite anyway"）。这一坦诚承认揭示了 DragonFly 在软件质量保证方面的结构性短板。
+**邮件来源**：Matthew Dillon，dragonfly-kernel 邮件列表，2025-07-03，Message-ID: `CAOZ7CpDNEQdonw1bZ+kLDng99=bPy+=3N3dzqC-Ta7Kwe9Hjig@mail.gmail.com`
+**史学意义**：测试基础设施的缺乏是 DragonFly 可持续性批评的核心论点之一——在单人主导、资源有限的项目中，测试套件的缺失意味着回归风险集中在 Dillon 一人的代码审查能力上，这是项目长期可持续性的结构性风险。
+<!-- /MAIL_INSIGHT -->

@@ -38,7 +38,7 @@ volume: 第01卷-unix的起源
 
 ## 文献
 
-- Ritchie 1993 "Development of C"；Kernighan & Ritchie 1978 K&R；Kernighan 2019 "Unix: A History and a Memoir"；bsd_commits.db：freebsd-src commit `5b81b6b301437eb9a6df491c829475bd29ae5d6c`（1993-06-12，Initial import 含 C 语言源码） ［A］
+- Ritchie 1993 "Development of C"；Kernighan & Ritchie 1978 K&R；Kernighan 2019 "Unix: A History and a Memoir"；freebsd.duckdb：freebsd-src commit `5b81b6b301437eb9a6df491c829475bd29ae5d6c`（1993-06-12，Initial import 含 C 语言源码） ［A］
 - Ritchie D M 1975 "C Reference Manual" (Bell Labs Computing Science Technical Report #31)；Ritchie 1993 HOPL II；Kernighan & Ritchie 1978 K&R；Kernighan 2019 [考据脚注：C 语言 “数组退化为指针” 设计决策经 Ritchie 1993 HOPL II 原文与 K&R 1978 交叉验证确证；CSTR #31 数组与指针关系表述的演化痕迹经卷末书目述评.md 争议二史家判断与 CSTR #31、K&R 1978、ANSI C 标准三方对照确证。]
 - Ritchie 1993 HOPL II；DEC PDP-11 Processor Handbook (1970) ［B］
 - Salus 1994；Kernighan 2019；Ritchie D M 1978 "UNIX Time-Sharing System: A Retrospective" (Bell System Technical Journal Vol. 57 No. 6) ［B］

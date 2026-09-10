@@ -19,7 +19,7 @@ volume: 第07卷-freebsd的工程体系重构
 - 总纲第 25 条——终结与延续：telnetd 的移除标志着一个互联网时代的终结——1980-1990 年代 Telnet 是远程登录 UNIX 主机的标准方式，SSH（Secure Shell）自 1995 年 Tatu Ylönen 发明后逐步取代 Telnet，到 2020 年代 Telnet 已完全退出实际生产使用（仅作为调试工具偶尔使用 telnet 客户端）；FreeBSD 保留 te
 - 总纲第 7 条——技术选择即政治选择：企业赞助方向直接塑造 FreeBSD 在该时期的子系统优先级（如 Netflix 推动内核 TLS 卸载与网络栈高性能化）。
   - 辨析：企业提交多属受雇工作期间的 “有组织贡献”，不宜与志愿者个人贡献混同；corp 名单随年份变动，须以 contributors 表逐期核验。
-  - 文献：bsd_commits.db（freebsd-src contri
+  - 文献：freebsd.duckdb（freebsd-src contri
 - 总纲第 25 条——终结与延续：30 年在 OS 历史中是一段不短的时间——GNU 项目始于 1983 年（40 年）、Linux 始于 1991 年（35 年）、386BSD 始于 1992 年、FreeBSD 始于 1993 年、OpenBSD 始于 1995 年、NetBSD 始于 1993 年；FreeBSD 30 年的历史见证了 UNIX 从实验室到互联网再到云时代的全过程，CSRG B
 - 总纲第 17 条——软件工程：LLM 辅助编程是软件工程自编译器、IDE、开源协作以来最新的范式转变之一，但 FreeBSD 保守的工程文化决定了其采用速度会慢于商业公司与新兴项目；这不是 “拒绝进步”，而是内核级代码的高风险属性要求——一个驱动 bug 最多导致硬件不工作，一个文件系统或 VM 子系统 bug 可能导致数据损坏；FreeBSD 社区 “代码必须被人理解” 的传统是安全的最后一道防
 - 总纲第 1 条——项目统摄史观：14.x 不是某一个 “革命性” 时刻，而是一系列渐进改进汇聚成的一刻——sendmail 默认地位的终结、32 位平台时代的落幕、纯 LLVM 工具链的完成、后量子密码的首次默认启用、WireGuard 争议的解决，每一个单独看都是渐进演化，但它们汇聚在 14.x 周期，标志着 FreeBSD 从 “20 世纪 UNIX 继承者” 完成向 “21 世纪现代 OS”
@@ -28,7 +28,7 @@ volume: 第07卷-freebsd的工程体系重构
 
 - 需要区分 “完全移除” 与 “默认禁用”——telnetd 是完全移除（源码树与安装镜像中都不再包含），而非仅仅默认禁用；用户若仍需要 telnetd 可从 ports 安装（telnetd 存在于 ports 中，或使用 net/telnetd 等替代实现）；OpenSSH 自 FreeBSD 4.0（2000 年）起即已在 base 中作为默认远程登录方式，telnetd 的移除在此后 23
 - 企业提交多属受雇工作期间的 “有组织贡献”，不宜与志愿者个人贡献混同；corp 名单随年份变动，须以 contributors 表逐期核验。
-  - 文献：bsd_commits.db（freebsd-src contributors 表，窗口 2021–2023，检索 2026-07-21）［A］；FreeBSD 项目贡献者指南（<<https://docs.freebsd.org/en/arti>
+  - 文献：freebsd.duckdb（freebsd-src contributors 表，窗口 2021–2023，检索 2026-07-21）［A］；FreeBSD 项目贡献者指南（<<https://docs.freebsd.org/en/arti>
 - FreeBSD 历史起点的界定存在多种说法：项目最初源于 1992 年的 386BSD 补丁集、FreeBSD 1.0 于 1993.6.19 发布、FreeBSD 2.0（1994.11）是首个相对成熟的版本；30 周年选择以 1.0 发布日期为起点是符合历史惯例的；Jordan Hubbard、Rodney Grimes、Nate Williams 三位创始人中，Jordan Hubbard
 - NetBSD 在 2024 年 5 月修订了 commit guidelines，明确将 LLM 生成代码标记为 "tainted code"（受污染代码），需要 Core Team 书面批准才能合入；相比之下，FreeBSD 截至 2026 年 7 月尚无正式政策，更多依赖 committer 个人判断与代码评审流程；两者的差异反映了不同项目的风险偏好——NetBSD 的正式政策更保守，Free
 - 关于 “哪个 FreeBSD 版本是最好的” 是社区长期争论的话题——老用户可能怀念 4.x/5.x 时代的简单、7.x/8.x 的稳定、9.x/10.x 的 ZFS 成熟；但客观地说，14.x 是 FreeBSD 历史上功能最完善、安全默认最好、硬件支持最广、工具链最现代的版本；“更好” 是主观判断，但 “更现代、更安全默认” 是客观事实
@@ -37,7 +37,7 @@ volume: 第07卷-freebsd的工程体系重构
 ## 文献
 
 - FreeBSD Project. FreeBSD 14.0-RELEASE Release Notes — Removed Features [EB/OL]. (2023-11-20)[2026-07-19]. <https://www.freebsd.org/releases/14.0R/relnotes/>; Ylönen T. SSH — Secure Login Connections over the Internet [C]. USENIX Security Symposium, 1996; FreeBSD Project. telnet(1) Manual Page [EB/OL
-- bsd_commits.db（freebsd-src contributors 表，窗口 2021–2023，检索 2026-07-21）［A］；FreeBSD 项目贡献者指南（<https://docs.freebsd.org/en/articles/contributing/>）［B］
+- freebsd.duckdb（freebsd-src contributors 表，窗口 2021–2023，检索 2026-07-21）［A］；FreeBSD 项目贡献者指南（<https://docs.freebsd.org/en/articles/contributing/>）［B］
 
 
 <!-- dangan-20260908 消解回写 -->

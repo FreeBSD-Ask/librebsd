@@ -76,7 +76,7 @@ volume: 第16卷-开源运动与合规治理
 ## 301.6.2 Mozilla MPL 许可证与 BSD 许可证的关系
 
 - 要点：Mozilla 公共许可证（MPL）由 Mitchell Baker 主导设计，1998 年初版，1.1（1999 年）成熟；MPL 是 “弱 copyleft”（文件级 copyleft），介于 BSDL 与 GPL 之间；MPL 允许与闭源代码链接但要求修改的 MPL 文件开源；BSDL 不要求修改文件开源而
-- freebsd-hackers mailing list archives；FreeBSD Quarterly Status Reports；The FreeBSD Foundation Annual Reports；bsd_commits.db commits 表 freebsd-src Jordan K. Hubbard commit `e14abeefac54`（1999-12-17T01:47:15Z，"MFC: fixes for dlopen() which allow mozilla to actually work in -stable"）；bsd_commits.db com
+- freebsd-hackers mailing list archives；FreeBSD Quarterly Status Reports；The FreeBSD Foundation Annual Reports；freebsd.duckdb commits 表 freebsd-src Jordan K. Hubbard commit `e14abeefac54`（1999-12-17T01:47:15Z，"MFC: fixes for dlopen() which allow mozilla to actually work in -stable"）；freebsd.duckdb com
 - GitHub 官方历史[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]
 
 ## 301.7.2 PR 模式对 BSD 补丁文化的冲击

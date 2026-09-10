@@ -1,0 +1,179 @@
+# 192.4 项目统摄史观审视：gcc GPLv3 争议与编译器替代
+
+OpenBSD 4.x 时期 gcc GPLv3 争议与 pcc/clang 探索，是项目史观总纲第 5、11、13、15、19、21 条在编译器层的具体显现。本节从六条总纲切入审视这一争议，重点从总纲第 13 条（许可证哲学，即法律与道德是利益分配）、第 19 条（解释学循环与权力知识共谋）、第 21 条（革命与改革是历史方法论的分歧）切入，揭示争议背后的偶然性、商品形式主义、利益分配、文化形式主义、解释学循环与方法论分歧。OpenBSD 官方 policy.html 与 goals.html 在 4.x 时期已明确表述对 GPL 的立场——policy.html 明确 “the GNU Public License... usually ends up hindering free sharing and reuse of code and ideas rather than encouraging it，As a consequence, no additional software bound by the GPL terms will be considered for inclusion into the OpenBSD base system”，goals.html 明确 "ISC or Berkeley style licences are preferred, the GPL is not acceptable when adding new code"，两份一手文档为审视争议提供了官方立场锚点。
+
+从总纲第 5 条 “没有必然性，只有偶然性” 切入，pcc 导入与 clang/LLVM 替代均是不可替代的偶然事件，不得以目的论叙事遮蔽。pcc 导入（2007-09-15 otto commit `60b4da4bc6418e6654a995e733a66436798b5bc0`）是偶然的工程尝试——若非 ragge 恰好在 2007 年维护并开源 pcc 的新版本，OpenBSD 不会尝试此路径；pcc 失败亦是偶然的技术结果（C99 支持不完整、优化器不足），而非 “gcc 不可替代” 的必然证明。clang/LLVM 的成功更是偶然的技术演进——LLVM 由 UIUC 的 Chris Lattner 团队于 2000 年启动，Apple 自 2005 年起大量资助，其模块化设计与诊断信息优势恰好适配 OpenBSD 的工程需求；若 LLVM 未获 Apple 资助而停留在学术项目，OpenBSD 可能被迫继续使用 gcc，所谓 “许可证纯洁化” 将无现实工具支撑。FSF 阵营将 “pcc 失败” 叙述为 “gcc 不可替代的证据”，是典型的目的论叙事——以结果倒推必然性，忽视 pcc 失败的偶然条件（ragge 个人维护精力有限、pcc 缺乏企业资助）与 clang/LLVM 成功的外部条件（Apple 资助、UIUC 学术积累）。总纲第 5 条 “替代品的无限性不能否定事物的独特价值” 在此显现——pcc 作为替代品虽失败，其独特价值（BSD 许可证、轻量代码库）不因失败而被否定；clang/LLVM 作为替代品虽成功，其成功不证明 BSD 许可证编译器的 “必然胜利”，仅证明在特定历史条件下的偶然适配。
+
+从总纲第 11 条 “商品是形式主义” 切入，编译器作为软件商品，其技术选择被市场逻辑形式主义化。gcc 由 FSF 控制开发，clang/LLVM 由 Apple 大量资助（LLVM 最初由 UIUC 开发，2005 年后 Apple 投入巨资），编译器选择不仅是许可证选择，也是产业链选择——OpenBSD 选择 clang/LLVM 既是许可证哲学（BSD 许可证规避 GPLv3 约束），也是市场逻辑的现实选择（Apple 资助的 clang/LLVM 提供了 gcc 之外唯一成熟的替代选项）。总纲第 11 条 “劣币驱逐良币是普遍规律” 在此须审慎审视——gcc 作为成熟编译器（跨架构支持、长期优化积累）可视为 “良币”，clang/LLVM 作为后起者（2007 年起步、2009 年 clang 2.6 首发）可视为 “劣币”，但 clang/LLVM 凭借 BSD 许可证与 Apple 生态的市场权力在 BSD 项目中 “驱逐” gcc，这是商品形式主义的权力运作而非纯技术优胜。然而此处的 “劣币/良币” 判断本身受文化前理解影响——FSF 文化视 gcc 为 “良币”（copyleft 保障自由），OpenBSD 文化视 clang/LLVM 为 “良币”（BSD 许可证保障采纳者自由），同一编译器在两种商品形式主义下被赋予截然不同的价值判断。编译器的 “自由” 在商品形式主义下被双重遮蔽：FSF 的 “自由” 是 copyleft 商品的形式主义（强制回馈作为市场逻辑），Apple 资助的 clang/LLVM 的 “自由” 是商业战略的形式主义（Apple 需 BSD 许可证编译器以规避 GPLv3 对 iOS 闭源生态的约束）——OpenBSD 的许可证选择无意中与 Apple 的商业战略形成共谋，这是总纲第 11 条在编译器层的深层显现。
+
+从总纲第 13 条 “法律与道德是利益分配” 切入，gcc GPLv3 争议的本质是利益分配而非道德对立：FSF 通过 copyleft（GPLv3 第 10.4 节与第 11 节）强制代码回馈，其 “保护用户自由” 的道德辩护背后是 FSF 生态的利益分配——copyleft 使所有 GPLv3 软件必须向 FSF 生态回馈代码，强化 GNU 项目在自由软件运动中的中心地位；OpenBSD 通过 ISC 允许自由采纳而不强制回馈，其 “尊重采纳者自由” 的道德辩护背后是 BSD 生态的利益分配——ISC 使 BSD 代码可被商业公司采纳而不要求回馈，强化 BSD 在产业部署中的渗透力。所谓 “道德” 立场（FSF 的 “保护用户自由” vs OpenBSD 的 “尊重采纳者自由”）是各社区利益的形式主义化政治产物，二者在利益分配的根本层面不存在 “对错”，仅有 “适配”。OpenBSD 官方 policy.html 将 GPL 的 “道德” 叙事解构为工程与许可证层面的问题——该文档原文称 the GNU Public License usually ends up hindering free sharing and reuse of code and ideas rather than encouraging it，As a consequence, no additional software bound by the GPL terms will be considered for inclusion into the OpenBSD base system，这一表述将 FSF 的 “道德辩护” 重新框定为 “对代码共享的实质性阻碍”，是总纲第 13 条 “法律与道德是利益分配” 在 OpenBSD 官方话语层的直接显现——OpenBSD 不接受 FSF 的 “道德” 叙事，而以工程效果（阻碍代码共享）作为许可证评估的依据。FSF 阵营的 “逃避自由” 批评话语同样是项目史观总纲第 13 条的具体显现——所谓 “逃避自由” 是 FSF 阵营对 OpenBSD 不接受 copyleft 的道德化叙事，本质是 FSF 生态对代码回馈的利益诉求以道德话语形式主义化。
+
+从总纲第 15 条 “文化即形式主义” 切入，gcc 作为 GNU 文化的核心符号被 FSF 视为自由软件运动的旗帜，其技术价值（成熟编译器、跨架构支持）与许可证符号价值（GPLv3 的 copyleft 象征）在 GNU 文化中难以分离；OpenBSD 将 gcc 视为 “受污染的工具”，其技术价值被 GPLv3 的文化形式主义遮蔽。同一编译器在 GNU 与 BSD 两种文化语境中被赋予截然不同的形式主义意义——FSF 文化中 gcc 是 “自由软件之旗”，OpenBSD 文化中 gcc 是 “必须替代的污染源”。pcc 探索的失败与 clang/LLVM 的成功是文化形式主义的解构过程：pcc 因功能不足未能解构 gcc 的文化符号地位，clang/LLVM 通过技术优势（模块化设计、诊断信息）解构了 gcc 的 “不可替代” 神话，使 gcc 的技术价值与许可证符号价值得以分离——这一分离使 OpenBSD 可在保留编译器技术能力的同时去除 GPLv3 的文化形式主义约束。
+
+从总纲第 19 条 “解释学循环是历史认识的根本条件” 切入，编译器切换叙事中的解释学循环与权力知识共谋在史料选择层面具体显现。FSF 将 “pcc 失败” 叙述为 “gcc 不可替代的证据”，OpenBSD 将其叙述为 “替代需更大投入的证明”，同一事件在两种前理解中被赋予截然不同的意义——这是前理解差异使分歧不可避免的解释学循环。权力知识共谋在史料选择中更为隐蔽：bsd_commits.db 提供的 pcc 导入 commit（`60b4da4bc6418e6654a995e733a66436798b5bc0`，2007-09-15 otto）是代码级客观证据，证明 pcc 已进入 OpenBSD 主干而非仅邮件列表讨论，但该 commit 在 FSF 叙事中被选择性忽视（FSF 叙事强调 “pcc 仅在邮件列表讨论未进入主干”），在 OpenBSD 叙事中被重点引用——同一 commit 在两种叙事中被赋予截然不同的史料权重，这是总纲第 19 条 “什么被记录、什么被遗忘，本身就是权力行使” 的具体显现。史家须警惕：编译器切换叙事的 “史料” 本身已被争议双方的权力结构塑造——FSF 控制的 gcc 邮件列表存档与 OpenBSD 控制的 tech@ 邮件列表存档均存在选择性保留与遗忘，bsd_commits.db 的 commit 记录是相对中立的代码级证据，但 commit message 的措辞亦受开发者文化影响（如 otto 的 commit message "so we can hack on it more easy" 反映 OpenBSD 的工程文化，而非 FSF 的 “自由软件” 话语）。文化形式主义（总纲第 15 条的洞见在此与解释学循环交织）使解释学循环进一步固化——gcc 作为 GNU 文化的核心符号被 FSF 视为自由软件运动的旗帜，其技术价值与许可证符号价值在 GNU 文化中难以分离；OpenBSD 将 gcc 视为 “受污染的工具”，同一编译器在两种文化语境中被赋予截然不同的形式主义意义，FSF 的前理解（gcc 是自由软件之旗）使其只能解读 pcc 失败为 “gcc 不可替代”，OpenBSD 的前理解（gcc 是污染源）使其只能解读 pcc 失败为 “替代需更大投入”，二者各以其文化形式主义为前理解进入解释学循环。
+
+从总纲第 21 条 “革命与改革是历史方法论的分歧” 切入，gcc 替代路径呈现革命与改革的交织。FSF 选择革命——通过 GPLv3 改变许可证游戏规则，将 copyleft 范围从代码扩展至专利领域，意图彻底重塑软件许可生态；OpenBSD 选择改革——fork 后逐步探索替代，pcc 探索失败（2007-2008 邮件列表讨论）后转向 clang/LLVM（2010-2015 渐进切换），路径漫长但最终成功。改革的困难远高于革命——pcc 探索失败是改革路径的代价，OpenBSD 团队需在保证 6 个月发布周期不中断的前提下完成编译器切换，对应总纲第 21 条 “破山中贼易，破心中贼难”——破除 gcc 的 “心中贼”（许可证依赖与文化形式主义遮蔽）比破除 pcc 的 “山中贼”（功能不足）更为艰难，因前者涉及文化认同的重构而后者仅为技术问题。最终 clang/LLVM 在 FreeBSD 10.0（2014.1）、OpenBSD 5.7（2015.5）、NetBSD、DragonFly BSD 等多个 BSD 项目取代 gcc 作为默认编译器，证明 OpenBSD 改革路径的可行性；但 Linux 仍坚持 gcc 作为默认编译器，证明革命与改革各有适配——Linux 的革命路径（GPLv3 重塑许可生态）在 Linux 内核本身未采纳 GPLv3 的现实中部分受挫，OpenBSD 的改革路径（fork 后逐步替代）在 BSD 生态中成功落地。这一历史结果是总纲第 4 条 “分离聚合是永恒规律” 的具体显现——gcc 与 clang/LLVM 在 Linux 与 BSD 间分化，二者并存而非一方完全替代，符合 BSD 史中 “分合循环” 的根本结构。
+
+合图之下，gcc GPLv3 争议的史观审视须承认争议的部分不可调和性，同时指出技术层面的和解路径。其一，不可调和性源于前理解的不可通约——FSF 以 “用户自由” 为前理解（copyleft 保障下游用户获得源代码的权利），OpenBSD 以 “采纳者自由” 为前理解（允许采纳者自由使用代码而不强制回馈），二者在前理解层面不可通约，争议的不可调和性是解释学循环（总纲第 19 条）的必然结果而非任何一方的过错。其二，和解路径在技术层面已部分实现——clang/LLVM 作为 BSD 许可证编译器的出现使 OpenBSD 可在保留编译器技术能力的同时去除 GPLv3 约束，技术层面的和解使许可证哲学层面的对立不再阻塞工程实践；但许可证哲学层面的对立本身并未消解，FSF 仍以 copyleft 为自由软件运动的核心，OpenBSD 仍以 ISC 为许可证偏好（OpenBSD policy.html 与 goals.html 在 4.x 时期至 5.x 时期均保持 GPL 不可接受的立场），二者的道德叙事（FSF “保护用户自由” vs OpenBSD “尊重采纳者自由”）在许可证哲学层面继续并存。其三，史家的任务不是裁定 FSF 或 OpenBSD 何者 “正确”——项目史观总纲第 8 条 “本体论上各方平等” 要求史家以同等本体论地位呈现两种许可证哲学，FSF 的 copyleft 与 OpenBSD 的 ISC 各自服务于其生态的利益分配（总纲第 13 条），二者在利益分配的根本层面不存在 “对错”，仅有 “适配” 的差异。合图承认争议的部分不可调和性——许可证哲学层面的对立在可预见未来将持续；合图同时指出技术层面的和解路径——clang/LLVM 的出现使工程实践不再受许可证哲学对立的阻塞，这是争议在技术层面的局部和解，而非许可证哲学层面的根本和解。
+
+**要点**：openbsd 代码仓库共 491,195 次提交（1995-10-18 至 2026-08-25），3,352 位贡献者
+
+**史料**：[DB:code_repos:openbsd.duckdb] openbsd 仓库总览：491,195 次提交，3,352 位贡献者，时间跨度 1995-10-18 至 2026-08-25
+
+**史观**：多方平等：在本体论层面平等对待所有立场，不预设优劣
+
+**辨析**：数据库统计受 CVS-to-Git 迁移、镜像滞后等因素影响，commit 数量与贡献者统计存在系统性偏差，须结合一手史料交叉验证
+
+**文献**：[DB:references_fulltext] 参考文献全文数据库（4,077 篇全文，27,138 条时间线事件）—— 对应 openbsd.duckdb 代码仓库数据
+
+## 史料考据补充
+
+> 主题：OpenBSD 与 GCC/GPLv3
+
+- Theo de Raadt（西奥·德·若特） 条目（en.wikipedia-on-ipfs.org：2007 年 8 月 ath5k 双重许可争议——"people would wrap the GPL around our code, and lock us out"）〔原禁引来源（仅作考据留痕）·已改引官方主源 ref2516（SFLC ath5k 审查）+ ref2517（LWN 报道）——de Raadt 原话'people would wrap the GPL around our code'见 LWN/SFLC 记录的 2007-08 争议〕
+- bsdcn.org GPL 之殇译文（translated-articles.bsdcn.org：de Raadt 2007-08-31 LKML 邮件全文）
+
+> （2026-08-04 综述联动：见 vol-10.md）
+
+<!-- DEEP_ANALYSIS: openbsd.duckdb.commits -->
+**数据库分析发现**（证据等级：L1，来源：`openbsd.duckdb.commits.openbsd`）
+
+openbsd 核心贡献者：ajacoutot(35528), deraadt(31454), sthen(30592), espie(18328), jasper(16649)
+
+<!-- DEEP_ANALYSIS: sacred_sources.duckdb.blocks -->
+**史家判断**（证据等级：L2，来源：`sacred_sources.duckdb.blocks.188`）
+
+以食品安全为例：人们永远无法得到真正的认识。你既不能说科学证明其在某量无毒害就真的无毒害，也不能证明它真的有毒害。用科学说服人本身就不科学——因为科学本身就是非充分决定性的，本身的正确性是得不到保证的。且你能得到的所有科学解释，正因为它是科学解释，所以它必定也是错误的。这并非反智，而是对科学边界的清醒认识。好坏是对于人来说的，所谓“剂量决定论”也是无意义的——零剂量不是更安全吗？
+
+<!-- DEEP_ANALYSIS: sacred_sources.duckdb.blocks -->
+**史家判断**（证据等级：L2，来源：`sacred_sources.duckdb.blocks.283`）
+
+王充因为个人境遇而提出了德福不一致论，其否定了个人努力的作用。可以看到人生的遭遇会对其理论有决定性的作用，有时是偏差，有时是谬误，但根本上说是一种悲伤。这揭示了理论建构的偶然性：任何理论都深深打上 theorist 个人经历的烙印。不存在客观的、超越个人境遇的理论。历史哲学的建构者同样如此——本书的理论亦不例外，它诞生于特定的境遇、特定的悲伤、特定的选择。
+
+<!-- DEEP_ANALYSIS: cross_indexes.duckdb.concept_history -->
+**史家判断**（证据等级：L2，来源：`cross_indexes.duckdb.concept_history.13`）
+
+出口管制：出口管制概念的演化: ①冷战成型期（1949–1951）：COCOM 建立，协调对苏联、东欧、中国的禁运货单；1951 年美国《相互防御援助管制法》（Battle Act）以停止援助迫使盟国参与（1980 年废止）；②缓和调整期（60–80 年代）：因缓和与贸易增长，管制多次放宽；③转型重组期（1993–1996）：1994 年 3 月 31 日 COCOM 解散；1995 年 12 月 19 日成立“瓦森纳协定”（Wassenaar Arrangement），1996 年 11 月 1 日起运作；④数字与加密期：加密早在冷战期被列为军品（由国务院依 AECA 管，即 ITAR），1996 年底部分非军用加密移至商
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-1-011`）
+
+Thompson 在 1984 年图灵奖演讲中称，特洛伊木马攻击的构想最早见于一份对 Multics 早期实现安全性的空军批判报告。
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-3-004`）
+
+Theodore Roszak 1969 年出版《The Making of a Counter Culture》，副标题为“对技术官僚社会及其青年反抗的反思”。
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-4-010`）
+
+Anonymous CVS 源码分发机制由 Charles D. Cranor 与 Theo de Raadt 创建，用于开放 OpenBSD 源码仓库。
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-4-011`）
+
+创建 Anonymous CVS 的目标之一是开放 OpenBSD 的 CVS 源码仓库访问，使项目更开放并鼓励开发者兴趣。
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-4-100`）
+
+1995 年秋启动 OpenBSD 项目时，Cranor 与 de Raadt 决定用 CVS 管理源代码树，并创建匿名 CVS 以开放源码仓库。
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-5-111`）
+
+Anonymous CVS 由 Charles D. Cranor 与 Theo de Raadt 在 1995 年秋创建 OpenBSD 时设计，使匿名互联网用户无需写权限账户即可访问源码库。
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-5-112`）
+
+Anonymous CVS 是一种让匿名互联网用户在不危及安全的前提下访问源码库的机制，将开放源码推进为开放源码库。
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-6-017`）
+
+Harris、Jha、Reps 等人提出声明式、时序化且实用的 capability 编程方法，用于在 Capsicum 上满足安全策略。
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-6-108`）
+
+OpenBSD 自 2005 年起对 SCSI 中间层（SCSI midlayer）实施重大重构，引入 mpath(4) 多路径虚拟总线与 iopools 资源池、将适配器命令处理器改为回调式 scsi_done API，以改善稳定性、性能与可扩展性。
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L2，来源：`historical_claims.duckdb.claim.CL-7-046`）
+
+参考文献全文数据库收录《20260805 Glass deRaadt expulsion email 19941223 en》（unknown，2026），作为本章主题的候选史料。
+
+## 文献
+
+- Ingo Schwarze. bsdcan15-mandoc[M]. 2015.
+- Ingo Schwarze. bsdcan18-mandoc[M]. 2018.
+- Paul Irofti. bsdcan2014-octeon dsr500[M]. 2014.
+- bsdcan2015-rdomains[M].
+- bsdcan2016-bfd[M].
+- bsdcan2016-xen[M].
+- bsdcan2019-syspatch[M].
+- bsdcan2019-tls13[M].
+- bsdcan2025-hshoexer-confidential-computing[M].
+- andrew, afresh1. 2024-Why-Rewrite-fw update-Euro BSDcon[M]. 2024.
+- eurobsdcon2008-sensors[M].
+- eurobsdcon2011-kettenis[M].
+- eurobsdcon2011-openbsdscsievolution[M].
+- eurobsdcon2014-mandoc-paper[M].
+- eurobsdcon2014-mandoc-slides[M].
+- eurobsdcon2014-parallel-make[M].
+- eurobsdcon2015-packages[M].
+- eurobsdcon2015-softraid-boot[M].
+- eurobsdcon2016-openbsd-11n[M].
+- eurobsdcon2016-privsep[M].
+- eurobsdcon2017-device-drivers[M].
+- eurobsdcon2017-opensmtpd[M].
+- eurobsdcon2018-mandoc[M].
+- eurobsdcon2018-rop[M].
+- eurobsdcon2019-plist[M].
+- eurobsdcon2022-krw-blockstobooting[M].
+- eurobsdcon2023-bluhm-mitigations[M].
+- eurobsdcon2023-espie-cache[M].
+- eurobsdcon2024-bluhm-packetflow[M].
+- eurobsdcon2025-bluhm-protomp[M].
+- eurobsdcon2025-florian-easy[M].
+- Marc Espie. eurobsdcon 2018 https[M]. 2018.
+- Claudio Jeker. asiabsdcon08-network[M]. 2008.
+- Murenin C A, Boutaba R. OpenBSD Hardware Sensors Framework[C]//AsiaBSDCon 2009 Proceedings. Tokyo, 2009.
+- Murenin C A. OpenBSD Hardware Sensors Framework（幻灯片）[EB/OL]. AsiaBSDCon 2009. <https://www.openbsd.org/papers/asiabsdcon2009-sensors-slides.pdf>.
+- syuu. asiabsdcon2010 smp for sgi paper[C]. 2010.
+- Alexandre Ratchov. asiabsdcon2010 sndio slides[C]. 2010.
+- asiabsdcon2016-vmm-slides[M].
+- asiabsdcon2019-rop-slides[M].
+- Dave Voutila. asiabsdcon2023-hardening vmd devices-slides[M]. 2023.
+- andrew, afresh1. 2024-Why-Rewrite-fw update-Fossy[M]. 2024.
+- chuck, deraadt. anoncvs-paper[M]. [存疑]
+- Niels Provos. crypt-slides[M]. 2002.
+- eurobsd-firewalls-2002[M]. 2002.
+- eurobsd2017-pkgtools[M].
+- Brian Bamsch. Porting Open BSD to RISCV Final Report[M]. 2020.
+- Paul Irofti. eurobsdcon2014-octeon dsr500[M]. 2014.
+- eurobsdcon2014-rdomains[M].
+- eurobsdcon2015-mandoc[M].
+- eurobsdcon2016-embracingbsdrt[M].
+- eurobsdcon2016-utf8[M].
+- eurobsdcon2017-schedisnot[M].
+- eurobsdcon2019-bwfm[M].
+- Software Freedom Conservancy. Form-990 fy-2022-23[M]. 2022.
+- eurobsdcon2019-gameoftrees[M].
+- eurobsdcon2019-perform-slides[M].
+- eurobsdcon2022-bluhm-networkmp[M].
+- eurobsdcon2022-espie-arches[M].
+- eurobsdcon2022-tb-libressl[M].
+- Marc Espie. lse clang[M]. 2017.
+- eurobsdcon2023-matthieu-pf-rdomain[M].
+- eurobsdcon2023-otto-malloc[M].
+- Dave Voutila. eurobsdcon2024-vmd multiprocessing[M]. 2024.
+- 未知. openbsd Open BSD-jitsi[M]. 2022.
+- Giovanni Bechis 12 ` ~~~ alse. openbsd seccomp-pledge-oss2017[M]. 2017.
+- eurobsdcon2025-hshoexer-confidential-computing[M].
+- eurobsdcon2021-espie-debug[M].
+- eurobsdcon2024-hshoexer-confidential-computing[M].
+- eurobsdcon2025-espie-dpb[M].
+

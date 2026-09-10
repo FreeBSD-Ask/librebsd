@@ -29,7 +29,7 @@ volume: 第11卷-dragonflybsd的历史
 ## 文献
 
 - 各项目 release notes 与官网；BSD 相关市场调研报告；邮件列表活跃度统计 ［A］<!-- DB_REF:netbsd.duckdb -->> **数据库引用（netbsd.duckdb）**：本子节对应 netbsd 代码仓库。> 2003-2010 年间：771,745 次提交。> 仓库总览：1,999,412 次提交，1,545 位贡献者（contributors 表行数，1992-07-13 至 2026-08-24）。
-- bsd_commits.db dragonfly-src 仓库；DragonFly 2.0 Release Notes；Matt Dillon HAMMER 设计文档 ［A］<!-- DB_REF:dragonfly.duckdb -->> **数据库引用（dragonfly.duckdb）**：本子节对应 dragonfly 代码仓库。> 2003-2026 年间：656,206 次提交。> 仓库总览：656,206 次提交，535 位贡献者，2003-06-17 至 2026-08-18。
+- dragonfly.duckdb dragonfly-src 仓库；DragonFly 2.0 Release Notes；Matt Dillon HAMMER 设计文档 ［A］<!-- DB_REF:dragonfly.duckdb -->> **数据库引用（dragonfly.duckdb）**：本子节对应 dragonfly 代码仓库。> 2003-2026 年间：656,206 次提交。> 仓库总览：656,206 次提交，535 位贡献者，2003-06-17 至 2026-08-18。
 
 <!-- PODCAST_REVIEW v20260829 -->
 <!-- 语义复核范围：BSD Now EP318（共 1 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->

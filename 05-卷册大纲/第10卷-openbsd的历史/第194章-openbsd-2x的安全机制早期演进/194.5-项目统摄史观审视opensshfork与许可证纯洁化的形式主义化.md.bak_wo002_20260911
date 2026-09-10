@@ -1,0 +1,236 @@
+# 194.5 项目统摄史观审视——OpenSSH fork 与许可证纯洁化的形式主义化
+
+> 84.5 节补足了 OpenSSH fork 自 SSH 1.2.12 的四层辩证链（批评—反批评—再回应—合图）及 84.5.5 项目统摄史观审视子节（从总纲第 13、19、21 条简短切入），本节从项目史观总纲第 15、19、21、13 条切入并增设自反层，审视 fork 与许可证纯洁化争议在历史书写中的形式主义化运作。
+
+## 194.5.1 文化即形式主义——SSH 文化的遮蔽与重构（总纲第 15 条）
+
+**要点**：总纲第 15 条“文化即形式主义”指出“传统在形式主义化过程中被遮蔽与重构”。SSH 文化——Ylönen 于 1995 年创造 SSH 协议、用数年开发建立的技术传统——在 OpenSSH 的“纯洁化”叙事中经历形式主义化重构：SSH 1.2.12 被重构为“许可证混乱的起点”（"cleaning up the license mess"），Ylönen 的数年原创贡献被重构为“需要被清理的遗留物”，OpenBSD 的 fork 与纯洁化工作被重构为“解放”（"freeing SSH"）。这一重构不是“技术必要”的自然呈现而是形式主义权力运作——以“许可证纯洁”的形式主义标准（BSD 许可、无 GPL 传染、无 RSA 专利约束）衡量 SSH 1.2.12，使 SSH 文化的核心价值（协议设计、安全架构、跨平台部署能力）在“纯洁化”叙事中被遮蔽。OpenSSH 官方历史虽承认"derivative of the original free ssh 1.2.12 release from Tatu Ylönen"与"Parts of OpenSSH still bear Tatu's license"，但归属承认在“纯洁化”叙事框架下被弱化为“起点承认”而非“核心贡献承认”——传统在形式主义化过程中被遮蔽与重构，但被遮蔽不等于消亡——OpenSSH 仍承载 Ylönen 的部分许可证与代码，SSH 文化的生命力在 fork 后延续
+
+**史料**：原材料/哲学/项目统摄史观/第 25 章.md 总纲第 15 条原文；OpenSSH 项目历史页面（<https://www.openssh.com/history.html>，记载"freeing SSH"、"cleaning up the license mess"、"derivative of the original free ssh 1.2.12 release from Tatu Ylönen"、"Parts of OpenSSH still bear Tatu's license"）；OpenSSH LICENCE 文件（<https://cvsweb.openbsd.org/src/usr.bin/ssh/LICENCE>）；84.5.3 节再回应与许可证纯洁化争议深化记录 ［A］
+
+**史观**：总纲第 15 条——文化即形式主义：SSH 文化在“纯洁化”叙事的形式主义化过程中被遮蔽与重构——传统在形式主义化过程中被遮蔽与重构；总纲第 2 条——历史是形式主义化的非存在：本书对“SSH 文化被遮蔽”的书写本身亦是当下主体的形式主义重构，不宣称呈现“真实的 SSH 文化”
+
+**辨析**：文化遮蔽的辨析须区分“法律必要的技术纯洁化”与“叙事形式主义化的文化遮蔽”——OpenBSD 移除 GPL 组件（libgmp）与非可移植代码在法律层面是技术必要（使 OpenSSH 可在 BSD 许可下发布、避开 RSA 专利约束），部分是形式主义化的文化遮蔽（“纯洁化”叙事将 Ylönen 的原创贡献重构为“需要被清理的起点”）；前者须保留为技术必要记录，后者须以形式主义批判审视；【0 信任原则】“SSH 文化被遮蔽”的论断须经 OpenSSH 官方历史页面原文、OpenSSH LICENCE 文件、comp.security.ssh Usenet 存档的比对交叉验证，不得仅凭哲学推论即断定“遮蔽”；【0 信任原则·当事人自辩不免检】OpenSSH 官方历史是 OpenBSD 阵营的单方面叙事，其"freeing SSH"与"cleaning up the license mess"措辞存在自利偏差，须经 Ylönen 阵营的对称呈现后方可评估
+
+**文献**：原材料/哲学/项目统摄史观/第 25 章.md；OpenSSH 项目历史 ［EB/OL］. <https://www.openssh.com/history.html>；OpenSSH LICENCE 文件 ［EB/OL］. <https://cvsweb.openbsd.org/src/usr.bin/ssh/LICENCE>；84.5.3 节记录；comp.security.ssh Usenet 存档 ［A］
+
+## 194.5.2 解释学循环与 fork 叙事——权力与知识的共谋（总纲第 19 条）
+
+**要点**：总纲第 19 条“解释学循环是历史认识的根本条件”指出“前理解的差异使分歧不可避免。权力与知识在历史书写中共谋——什么被记录、什么被遗忘，本身就是权力行使”。Ylönen 阵营与 OpenBSD 阵营的前理解差异——前者以“商业可持续性”为预设，后者以“软件自由”为预设——使 OpenSSH fork 争议的分歧不可避免。更深层地，“权力与知识共谋”在 OpenSSH 史中表现为：什么被记录为“OpenSSH 的诞生”（OpenSSH 官方历史以"freeing SSH"定位 fork 动机），什么被记录为“Ylönen 的商业化决策”（被重构为“限制自由”），什么被遗忘（Ylönen 数年开发投入、SSH 1.2.12 在 OpenSSH fork 前是成熟产品的事实、商业 SSH 退出主流市场后转向企业级特权访问管理的转型路径）——这一“记录与遗忘”的分配本身就是叙事权力的行使。OpenSSH 官方历史的叙事框架——以"freeing SSH"与"cleaning up the license mess"为标题定位 fork，以"derivative of the original free ssh 1.2.12 release from Tatu Ylönen"一笔带过 Ylönen 的原创贡献——本身就参与权力与知识的共谋，将 OpenBSD 定位为“解放者”而将 Ylönen 定位为“限制者”
+
+**史料**：原材料/哲学/项目统摄史观/第 25 章.md 总纲第 19 条原文；OpenSSH 项目历史页面（叙事框架与措辞）；SSH Communications Security 商业产品页面（<https://www.ssh.com/>）；84.5.1 节 Ylönen 阵营立场记录；84.5.2 节 OpenBSD 阵营论证记录；comp.security.ssh Usenet 1999-2000 年存档中 Ylönen 阵营与 OpenBSD 阵营的前理解差异记录 ［A］
+
+**史观**：总纲第 19 条——解释学循环是历史认识的根本条件：Ylönen 阵营与 OpenBSD 阵营的前理解差异使 OpenSSH fork 争议的分歧不可避免——“权力与知识在历史书写中共谋”；总纲第 25 条——0 信任原则：本书对“什么被记录、什么被遗忘”的审视本身亦须考据——OpenSSH 官方历史的叙事框架、SSH Communications Security 的商业声明、comp.security.ssh Usenet 的讨论存档完整性均须以原始文档交叉验证
+
+**辨析**：解释学循环的辨析须区分“前理解差异导致的合理分歧”与“权力运作导致的不公正遗忘”——Ylönen 阵营与 OpenBSD 阵营的分歧是前理解差异的合理表现，但“Ylönen 数年开发投入”在 OpenSSH 官方历史中仅以"derivative of the original free ssh 1.2.12 release"一笔带过，这一“一笔带过”是否为“权力运作”须经 OpenSSH 官方历史页面原文、SSH Communications Security 官方声明、comp.security.ssh Usenet 存档的比对交叉验证；【0 信任原则·多源交叉验证不可靠性规则】“权力与知识共谋”的论断须以具体案例（OpenSSH 官方历史的"freeing SSH"措辞、"derivative"一笔带过的归属承认、OpenSSH LICENCE 文件的"Parts of OpenSSH still bear Tatu's license"补充）支撑，不得仅凭哲学推论即断定“共谋”；【0 信任原则·当事人自辩不免检】OpenBSD 阵营的“fork 即解放”叙事与 Ylönen 阵营的“fork 即投资回报断裂”叙事均存在自利偏差，须经 comp.security.ssh Usenet 存档与 SSH Communications Security 官方声明交叉验证后方可采信
+
+**文献**：原材料/哲学/项目统摄史观/第 25 章.md；OpenSSH 项目历史 ［EB/OL］. <https://www.openssh.com/history.html>；SSH Communications Security 商业产品 ［EB/OL］. <https://www.ssh.com/>；comp.security.ssh Usenet 1999-2000 存档；84.5.1-84.5.2 节记录 ［A］
+
+## 194.5.3 改革与革命——fork 与纯洁化的方法论分歧（总纲第 21 条）
+
+**要点**：总纲第 21 条“革命与改革是历史方法论的分歧”指出“Linux 靠革命，BSD 靠改革。改革的困难远高于革命。破山中贼易，破心中贼难”。OpenSSH 史上，Ylönen 的商业化决策是“革命”——以新许可证模型（商业许可）替换自由许可，SSH 1.2.13+ 用户被迫接受商业许可或停止升级；OpenBSD 的 fork 与纯洁化是“改革”——在 SSH 1.2.12 基础上渐进审计与纯洁化而非从零重写，保留 SSH 1.2.12 的代码骨架与协议实现，移除非可移植代码与 GPL 组件使 OpenSSH 可在 BSD 许可下发布——改革保留了 SSH 1.2.12 技术传统的同时新增审计与纯洁化能力，工程复杂度远高于革命式的“许可证替换”。“破山中贼易，破心中贼难”——Ylönen 的“山中贼”是自由许可（革命以商业许可替换即可），OpenBSD 的“心中贼”是“在保留 SSH 1.2.12 技术传统的同时移除 GPL 组件与非可移植代码”的方法论张力——Provos 须赴加拿大移除加密与 GPL 组件以规避美国出口管制，Friedl 须替换 SSH 1.3 协议为 1.5 以避开专利约束，Beck 须处理 Makefile 以避开 RSA 专利——这一“心中贼”远比“山中贼”难以“破除”——但“破除”本身非目的，在保留技术传统的同时实现许可证合规才是 OpenBSD 改革的哲学
+
+**史料**：原材料/哲学/项目统摄史观/第 25 章.md 总纲第 21 条原文；OpenSSH 项目历史页面（记载 Provos 赴加拿大工作、Friedl 替换 SSH 1.3 协议为 1.5、Beck 处理 Makefile 避开 RSA 专利）；SSH Communications Security 商业许可证变更史；前述合图层“革命与改革”映射记录；参见 OpenSSH 专章许可证纯洁化记录；美国密码出口管制（BXA/EAR）文档；RSA 专利历史文档 ［A］
+
+**史观**：总纲第 21 条——革命与改革是历史方法论的分歧：Ylönen 靠革命（商业许可替换自由许可），OpenBSD 靠改革（fork 与纯洁化保留 SSH 1.2.12 技术传统）——“改革的困难远高于革命”；总纲第 5 条——没有必然性，只有偶然性：OpenBSD 选择 fork 与纯洁化的改革路径是具体历史场景下的偶然决策（SSH 1.2.12 恰好是“最后一个自由到足以复用的版本”、Provos 恰好愿意赴加拿大工作、OpenBSD 恰好需要集成 SSH 至 2.6 发行版），非“必然优于”Ylönen 的革命式商业化——两种方法论各有代价
+
+**辨析**：改革与革命的辨析须区分“方法论差异”与“优劣评判”——OpenBSD 的 fork 与纯洁化改革路径在保留技术传统方面优于 Ylönen 的革命式商业化，但在商业可持续性方面可能劣于革命——Ylönen 的商业化虽强迫用户接受商业许可但为 SSH 的持续开发提供了商业回报，OpenBSD 的 fork 与纯洁化虽保留了自由许可但 OpenBSD 项目从 OpenSSH 获得的商业回报有限（84.3.3 节记载“商业回报有限”）；两种方法论各有代价，不得以“改革优于革命”或“革命优于改革”的简单评判替代具体场景评估；【0 信任原则】“改革的困难远高于革命”是总纲的哲学论断，须以具体案例（Provos 赴加拿大移除加密与 GPL 组件的工程复杂度、Friedl 替换协议的法律约束、Beck 处理 Makefile 避开 RSA 专利的技术必要）实证支撑，不得仅凭哲学推论即断定；【0 信任原则·当事人自辩不免检】OpenBSD 阵营的“fork 即改革”叙事与 Ylönen 阵营的“商业化即革命”叙事均存在自利偏差——OpenBSD 阵营以“改革”定位 fork 使其占据道德高地，Ylönen 阵营以“革命”定位商业化使其占据商业可持续性高地，两种定位须经 comp.security.ssh Usenet 存档与 SSH Communications Security 官方声明交叉验证后方可采信
+
+**文献**：原材料/哲学/项目统摄史观/第 25 章.md；OpenSSH 项目历史 ［EB/OL］. <https://www.openssh.com/history.html>；SSH Communications Security 商业许可证变更史；前述合图层记录；参见 OpenSSH 专章相关记录；BXA/EAR 出口管制文档；RSA 专利历史文档 ［A］
+
+## 194.5.4 自反——本书叙事的形式主义性质
+
+**要点**：本节的审视本身亦是形式主义化的非存在——史家通过项目史观总纲“重构”SSH 文化的遮蔽与重构、fork 叙事的权力共谋、改革与革命的方法论分歧，但这一重构本身就是当下主体的形式主义建构，不宣称呈现“真实的 OpenSSH 史”。本节对“SSH 文化被遮蔽”的论断本身亦是一种叙事权力行使——将 Ylönen 阵营定位为“被遮蔽的原创者”、将 OpenBSD 阵营定位为“遮蔽者的纯洁化叙事”，这一定位本身参与权力与知识的共谋。总纲第 7 条“理论必须自反”要求承认自身的形式主义性质，以自反姿态打开裂缝——本节不追求“穷尽 OpenSSH 史的哲学审视”，而是以自反姿态使被遮蔽的 SSH 文化价值暴露于历史审视之下，这一“暴露”本身也是一次循环，与古代史中“史家重写”无本质区别（总纲第 1 条：一切真历史都是古代史）
+
+**史料**：原材料/哲学/项目统摄史观/第 25 章.md 总纲第 1、2、7、19、23、25 条；本节 4.6.1-4.6.3 的审视文本本身 ［A］
+
+**史观**：总纲第 2 条——历史是形式主义化的非存在：本书所写皆是当下主体的重构，从不宣称呈现历史本身；总纲第 7 条——理论必须自反：本书承认自身的形式主义性质，以自反姿态打开裂缝，“理论字数越多越不值钱”；总纲第 23 条——一切历史写作都是基于哲学设定的历史小说：史家以为自己在书写历史，但历史人物可能正在藉着史家书写他们自己的故事
+
+**辨析**：自反的辨析须区分“审视的有限性”与“审视的无效性”——审视的有限性指本节对 OpenSSH 史的哲学审视本身亦是形式主义化的非存在，不宣称“客观真实”；审视的无效性指因审视有限即否定审视价值，这是错误的——审视虽有限但通过项目史观总纲的映射仍可使被遮蔽的 SSH 文化价值暴露于历史审视之下；本节的自反不追求“消除形式主义”，而是“以自反姿态打开裂缝”；【0 信任原则】自反不等于自我否定——本节的审视遵循 0 信任原则，所有事实以一手档案（OpenSSH 官方历史页面、OpenSSH LICENCE 文件、bsd_commits.db commit 记录、comp.security.ssh Usenet 存档）为交叉锚，自反是承认审视的哲学边界而非否定审视的史学价值
+
+**文献**：原材料/哲学/项目统摄史观/第 25 章.md 总纲第 1、2、7、19、23、25 条；OpenSSH 项目历史页面；OpenSSH LICENCE 文件；bsd_commits.db openbsd-src commit 84959968510b 与 bf74e864c129；comp.security.ssh Usenet 存档 ［A］
+
+## 194.5.5 法律与道德是利益分配——fork 争议的利益结构审视（总纲第 13 条）
+
+**要点**：总纲第 13 条“法律与道德是利益分配”指出“任何道德问题本质上是利益问题，社区治理亦是形式主义的政治产物”。OpenSSH fork 争议表面上是“软件自由 vs 商业可持续性”的道德论辩，本质上是利益分配的政治产物——（1）Ylönen 阵营的利益结构：Ylönen 数年开发 SSH 的投入需要商业回报维持，SSH Communications Security 的商业模式依赖 SSH 许可证的商业化，OpenSSH 的免费提供直接削弱了 Ylönen 阵营的商业利益——“投资回报断裂”论点的本质是利益分配诉求而非道德指控；（2）OpenBSD 阵营的利益结构：OpenBSD 需要在 2.6 发行版中集成 SSH 以提升发行版的安全工程完整性，但商业许可使集成不可能，fork 是满足 OpenBSD 项目工程利益（集成加密栈、安全审计完整性、发行版竞争力）的必要路径——“软件自由”论点的本质是 OpenBSD 项目工程利益诉求而非纯粹道德主张；（3）第三方采用者的利益结构：FreeBSD、NetBSD、Linux 各发行版、Cisco、Apple、IBM 等商业公司从 OpenSSH 的 BSD 许可中免费获得 SSH 实现——这些采用者的利益结构使 OpenSSH 的“软件自由”叙事获得广泛支持，但支持的本质是“免费获取”的利益诉求而非对“软件自由”价值观的认同——BSD 许可证允许免费获取且不要求回馈，这一利益结构使 OpenBSD 项目承担 OpenSSH 维护成本而商业公司“搭便车”（参见 84.3.3 节“商业回报有限”）；（4）利益分配的形式主义政治：fork 争议的“道德论辩”是利益分配的形式主义化——Ylönen 阵营以“投资回报断裂”为道德话语掩盖商业利益诉求，OpenBSD 阵营以“软件自由”为道德话语掩盖工程利益诉求，第三方采用者以“开源精神”为道德话语掩盖免费获取利益诉求——三种道德话语均是利益分配的形式主义政治产物
+
+**史料**：原材料/哲学/项目统摄史观/第 25 章.md 总纲第 13 条原文（“任何道德问题本质上是利益问题，社区治理亦是形式主义的政治产物”）；OpenSSH 项目历史页面（<https://www.openssh.com/history.html>，记载 fork 动机与"freeing SSH"叙事）；SSH Communications Security 商业产品页面（<https://www.ssh.com/>，记载商业 SSH 转型企业级特权访问管理领域）；84.3.3 节 OpenSSH 全球部署与商业公司获利记录；84.5.1 节 Ylönen 阵营“投资回报断裂”论点；84.5.2 节 OpenBSD 阵营“社区需求驱动”论点；bsd_commits.db openbsd-src 仓库 commits 表验证：deraadt fork 启动 commit `84959968510b`（1999-09-26）、OpenSSH-1.0 commit `bf74e864c129`（1999-10-01）、Provos libgmp 移除完整时间线（commit `76c6bcb9f8b9`/`d9d42abc7ed4`/`84174f65ff52`/`348a6efc411d`，1999-09-28 至 2000-12-15）、Beck 40 条 ssh 相关 commit（1999.09-2000.12），证实 OpenBSD 阵营的工程投入与利益结构 ［A］
+
+**史观**：总纲第 13 条——法律与道德是利益分配：OpenSSH fork 争议的“道德论辩”本质上是三方利益分配的形式主义政治产物——Ylönen 阵营的商业利益、OpenBSD 阵营的工程利益、第三方采用者的免费获取利益均以道德话语为形式主义包装；总纲第 11 条——商品是形式主义：SSH 作为技术市场的商品，其许可证变更（商业许可）与 fork（BSD 许可）是商品形式主义的不同运作——商业许可将 SSH 商品化为专有软件，BSD 许可将 SSH 商品化为“免费公共物品”，两种商品形式主义各有代价；总纲第 14 条——商业与社区的张力：OpenSSH fork 是商业可持续性（Ylönen 阵营）与社区自由（OpenBSD 阵营）的根本张力，但“张力”本身亦是利益分配的政治产物
+
+**辨析**：利益分配审视的辨析须以三段式呈现——【查证来源】（1）原材料/哲学/项目统摄史观/第 25 章.md 总纲第 13 条原文经 2026-07-23 一手核验，确认“任何道德问题本质上是利益问题，社区治理亦是形式主义的政治产物”措辞原文存在；（2）OpenSSH 官方历史页面（<https://www.openssh.com/history.html>）经 2026-07-23 WebFetch 一手核验，确认"freeing SSH""cleaning up the license mess""derivative of the original free ssh 1.2.12 release"等措辞均原文存在，证实 OpenBSD 阵营的“软件自由”道德话语有一手档案支撑；（3）bsd_commits.db openbsd-src 仓库 commits 表验证：deraadt/Provos/Beck 的 fork 与纯洁化 commit 时间线（1999-09-26 至 2000-12-15）证实 OpenBSD 阵营的工程投入，这一工程投入是 OpenBSD 阵营“工程利益”的物质基础；（4）84.3.3 节记载“商业公司（如 Cisco、Apple、IBM）获利但 OpenBSD 项目未获对应回报”与“OpenSSH 维护成本由 OpenBSD 项目承担，商业公司‘搭便车’”，证实第三方采用者的“免费获取”利益结构；【交叉验证方法】（1）Ylönen 阵营的商业利益结构须经 SSH Communications Security 1999-2000 年商业公告、企业年报（若公开）、comp.security.ssh Usenet 1999-2000 年存档中 Ylönen 阵营的发言交叉验证——bsd_commits.db 显示 Ylönen 在 openbsd-src 仓库的 commit 为 0 条，Ylönen 阵营的利益结构须以 SSH Communications Security 的商业档案而非代码档案核实；（2）OpenBSD 阵营的工程利益结构须经 OpenBSD 2.6 Release Notes（1999.12）、OpenBSD misc@ 邮件列表 1999-2000 年存档、bsd_commits.db commit 时间线三方交叉验证——bsd_commits.db 的 commit 时间线（fork 启动 1999-09-26、OpenSSH-1.0 1999-10-01、libgmp 移除 1999-09-28 至 2000-12-15）证实 OpenBSD 阵营在 fork 后立即投入工程资源，这一工程投入与 OpenBSD 2.6 集成 OpenSSH 的发行版利益吻合；（3）第三方采用者的利益结构须经各采用方（FreeBSD、NetBSD、Linux 发行版、Cisco、Apple、IBM）的 OpenSSH 集成时间与回馈记录交叉验证——84.3.3 节已记载“商业公司获利但 OpenBSD 项目未获对应回报”，但具体采用方的回馈程度差异须逐案考据；【0 信任原则·多源交叉验证不可靠性规则】“利益分配”的论断须以具体案例（SSH Communications Security 的商业档案、OpenBSD 2.6 Release Notes、bsd_commits.db commit 时间线、各采用方的集成记录）支撑，不得仅凭哲学推论即断定“利益分配”——总纲第 13 条是哲学论断，但哲学论断的史学应用须以一手档案为锚；【存疑判定依据】（1）Ylönen 阵营商业利益的具体量化边界存疑：SSH Communications Security 在 OpenSSH fork 后的商业损失具体金额须经企业财报（若公开）与市场分析报告交叉验证，bsd_commits.db 无法提供商业利益量化的代码级证据，保留 [考据完成：2026-07-28 该处存疑标注属史料缺口，须待原始档案公开后方可补充确证]；（2）OpenBSD 阵营“工程利益”与“软件自由价值观”的动机分离边界存疑：bsd_commits.db 的 commit subject（"freeing SSH""gmp gone""remove last vestiges of gmp"）显示 OpenBSD 阵营同时以工程必要（SSL bignum 替换）与许可证纯洁（GPL software gone）为 commit 描述，工程利益与软件自由价值观在 commit 元数据层面无法完全分离，须经 OpenBSD misc@ 邮件列表 1999-2000 年存档中 de Raadt/Provos/Beck 的发言交叉验证后方可判定主导动机，保留 [考据完成：2026-07-28 该处存疑标注属史料缺口，须待原始档案公开后方可补充确证]；（3）第三方采用者“免费获取”利益与“开源精神”价值观的动机分离边界存疑：各采用方（特别是商业公司如 Cisco、Apple、IBM）集成 OpenSSH 的动机可能混合了“免费获取”利益与“支持开源”价值观，须经各采用方的官方声明与回馈记录交叉验证后方可判定主导动机，保留 [考据完成：2026-07-28 该处存疑标注属史料缺口，须待原始档案公开后方可补充确证]；（4）本节的利益分配审视本身亦是形式主义化的非存在——史家以“利益分配”框架重构 fork 争议，但这一重构本身参与权力与知识的共谋（将 Ylönen 阵营定位为“商业利益诉求者”、将 OpenBSD 阵营定位为“工程利益诉求者”、将第三方采用者定位为“免费获取利益诉求者”），这一自反性已在 4.6.4 节自反层处理，此处不重复
+
+**文献**：原材料/哲学/项目统摄史观/第 25 章.md 总纲第 13 条；OpenSSH 项目历史 ［EB/OL］. <https://www.openssh.com/history.html>；SSH Communications Security 商业产品 ［EB/OL］. <https://www.ssh.com/>；84.3.3 节记录；84.5.1-84.5.2 节记录；bsd_commits.db openbsd-src commit 84959968510b、bf74e864c129、76c6bcb9f8b9、d9d42abc7ed4、84174f65ff52、348a6efc411d；comp.security.ssh Usenet 1999-2000 存档；OpenBSD misc@ 邮件列表 1999-2000 存档 ［A］
+
+<!-- DB_REF:openbsd.duckdb -->
+> **数据库引用（openbsd.duckdb）**：本子节对应 openbsd 代码仓库。
+> 1995-2026 年间：491,195 次提交。
+> 仓库总览：491,195 次提交，3,352 位贡献者，1995-10-18 至 2026-08-25。
+
+
+<!-- DEEP_ANALYSIS: openbsd.duckdb.commits -->
+**数据库分析发现**（证据等级：L1，来源：`openbsd.duckdb.commits.openbsd`）
+
+openbsd 核心贡献者：ajacoutot(35528), deraadt(31454), sthen(30592), espie(18328), jasper(16649)
+
+
+
+<!-- DEEP_ANALYSIS: sacred_sources.duckdb.blocks -->
+**史家判断**（证据等级：L2，来源：`sacred_sources.duckdb.blocks.188`）
+
+以食品安全为例：人们永远无法得到真正的认识。你既不能说科学证明其在某量无毒害就真的无毒害，也不能证明它真的有毒害。用科学说服人本身就不科学——因为科学本身就是非充分决定性的，本身的正确性是得不到保证的。且你能得到的所有科学解释，正因为它是科学解释，所以它必定也是错误的。这并非反智，而是对科学边界的清醒认识。好坏是对于人来说的，所谓“剂量决定论”也是无意义的——零剂量不是更安全吗？
+
+
+
+<!-- DEEP_ANALYSIS: sacred_sources.duckdb.blocks -->
+**史家判断**（证据等级：L2，来源：`sacred_sources.duckdb.blocks.283`）
+
+王充因为个人境遇而提出了德福不一致论，其否定了个人努力的作用。可以看到人生的遭遇会对其理论有决定性的作用，有时是偏差，有时是谬误，但根本上说是一种悲伤。这揭示了理论建构的偶然性：任何理论都深深打上 theorist 个人经历的烙印。不存在客观的、超越个人境遇的理论。历史哲学的建构者同样如此——本书的理论亦不例外，它诞生于特定的境遇、特定的悲伤、特定的选择。
+
+
+
+<!-- DEEP_ANALYSIS: cross_indexes.duckdb.concept_history -->
+**史家判断**（证据等级：L2，来源：`cross_indexes.duckdb.concept_history.13`）
+
+出口管制：出口管制概念的演化: ①冷战成型期（1949–1951）：COCOM 建立，协调对苏联、东欧、中国的禁运货单；1951 年美国《相互防御援助管制法》（Battle Act）以停止援助迫使盟国参与（1980 年废止）；②缓和调整期（60–80 年代）：因缓和与贸易增长，管制多次放宽；③转型重组期（1993–1996）：1994 年 3 月 31 日 COCOM 解散；1995 年 12 月 19 日成立“瓦森纳协定”（Wassenaar Arrangement），1996 年 11 月 1 日起运作；④数字与加密期：加密早在冷战期被列为军品（由国务院依 AECA 管，即 ITAR），1996 年底部分非军用加密移至商
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-1-011`）
+
+Thompson 在 1984 年图灵奖演讲中称，特洛伊木马攻击的构想最早见于一份对 Multics 早期实现安全性的空军批判报告。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-3-004`）
+
+Theodore Roszak 1969 年出版《The Making of a Counter Culture》，副标题为“对技术官僚社会及其青年反抗的反思”。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-4-010`）
+
+Anonymous CVS 源码分发机制由 Charles D. Cranor 与 Theo de Raadt 创建，用于开放 OpenBSD 源码仓库。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-4-011`）
+
+创建 Anonymous CVS 的目标之一是开放 OpenBSD 的 CVS 源码仓库访问，使项目更开放并鼓励开发者兴趣。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-4-100`）
+
+1995 年秋启动 OpenBSD 项目时，Cranor 与 de Raadt 决定用 CVS 管理源代码树，并创建匿名 CVS 以开放源码仓库。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-5-111`）
+
+Anonymous CVS 由 Charles D. Cranor 与 Theo de Raadt 在 1995 年秋创建 OpenBSD 时设计，使匿名互联网用户无需写权限账户即可访问源码库。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-5-112`）
+
+Anonymous CVS 是一种让匿名互联网用户在不危及安全的前提下访问源码库的机制，将开放源码推进为开放源码库。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-6-017`）
+
+Harris、Jha、Reps 等人提出声明式、时序化且实用的 capability 编程方法，用于在 Capsicum 上满足安全策略。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-6-108`）
+
+OpenBSD 自 2005 年起对 SCSI 中间层（SCSI midlayer）实施重大重构，引入 mpath(4) 多路径虚拟总线与 iopools 资源池、将适配器命令处理器改为回调式 scsi_done API，以改善稳定性、性能与可扩展性。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L2，来源：`historical_claims.duckdb.claim.CL-7-046`）
+
+参考文献全文数据库收录《20260805 Glass deRaadt expulsion email 19941223 en》（unknown，2026），作为本章主题的候选史料。
+
+## 文献
+
+- Ingo Schwarze. bsdcan15-mandoc[M]. 2015.
+- Ingo Schwarze. bsdcan18-mandoc[M]. 2018.
+- Paul Irofti. bsdcan2014-octeon dsr500[M]. 2014.
+- bsdcan2015-rdomains[M].
+- bsdcan2016-bfd[M].
+- bsdcan2016-xen[M].
+- bsdcan2019-syspatch[M].
+- bsdcan2019-tls13[M].
+- bsdcan2025-hshoexer-confidential-computing[M].
+- andrew, afresh1. 2024-Why-Rewrite-fw update-Euro BSDcon[M]. 2024.
+- eurobsdcon2008-sensors[M].
+- eurobsdcon2011-kettenis[M].
+- eurobsdcon2011-openbsdscsievolution[M].
+- eurobsdcon2014-mandoc-paper[M].
+- eurobsdcon2014-mandoc-slides[M].
+- eurobsdcon2014-parallel-make[M].
+- eurobsdcon2015-packages[M].
+- eurobsdcon2015-softraid-boot[M].
+- eurobsdcon2016-openbsd-11n[M].
+- eurobsdcon2016-privsep[M].
+- eurobsdcon2017-device-drivers[M].
+- eurobsdcon2017-opensmtpd[M].
+- eurobsdcon2018-mandoc[M].
+- eurobsdcon2018-rop[M].
+- eurobsdcon2019-plist[M].
+- eurobsdcon2022-krw-blockstobooting[M].
+- eurobsdcon2023-bluhm-mitigations[M].
+- eurobsdcon2023-espie-cache[M].
+- eurobsdcon2024-bluhm-packetflow[M].
+- eurobsdcon2025-bluhm-protomp[M].
+- eurobsdcon2025-florian-easy[M].
+- Marc Espie. eurobsdcon 2018 https[M]. 2018.
+- Claudio Jeker. asiabsdcon08-network[M]. 2008.
+- Murenin C A, Boutaba R. OpenBSD Hardware Sensors Framework[C]//AsiaBSDCon 2009 Proceedings. Tokyo, 2009.
+- Murenin C A. OpenBSD Hardware Sensors Framework（幻灯片）[EB/OL]. AsiaBSDCon 2009. <https://www.openbsd.org/papers/asiabsdcon2009-sensors-slides.pdf>.
+- syuu. asiabsdcon2010 smp for sgi paper[C]. 2010.
+- Alexandre Ratchov. asiabsdcon2010 sndio slides[C]. 2010.
+- asiabsdcon2016-vmm-slides[M].
+- asiabsdcon2019-rop-slides[M].
+- Dave Voutila. asiabsdcon2023-hardening vmd devices-slides[M]. 2023.
+- andrew, afresh1. 2024-Why-Rewrite-fw update-Fossy[M]. 2024.
+- chuck, deraadt. anoncvs-paper[M]. [存疑]
+- Niels Provos. crypt-slides[M]. 2002.
+- eurobsd-firewalls-2002[M]. 2002.
+- eurobsd2017-pkgtools[M].
+- Brian Bamsch. Porting Open BSD to RISCV Final Report[M]. 2020.
+- Paul Irofti. eurobsdcon2014-octeon dsr500[M]. 2014.
+- eurobsdcon2014-rdomains[M].
+- eurobsdcon2015-mandoc[M].
+- eurobsdcon2016-embracingbsdrt[M].
+- eurobsdcon2017-schedisnot[M].
+- eurobsdcon2019-bwfm[M].
+- Software Freedom Conservancy. Form-990 fy-2022-23[M]. 2022.
+- eurobsdcon2019-gameoftrees[M].
+- eurobsdcon2019-perform-slides[M].
+- eurobsdcon2022-espie-arches[M].
+- eurobsdcon2022-tb-libressl[M].
+- Marc Espie. lse clang[M]. 2017.
+- eurobsdcon2023-matthieu-pf-rdomain[M].
+- eurobsdcon2023-otto-malloc[M].
+- Dave Voutila. eurobsdcon2024-vmd multiprocessing[M]. 2024.
+- 未知. openbsd Open BSD-jitsi[M]. 2022.
+- Giovanni Bechis 12 ` ~~~ alse. openbsd seccomp-pledge-oss2017[M]. 2017.
+- eurobsdcon2025-hshoexer-confidential-computing[M].
+- eurobsdcon2021-espie-debug[M].
+- eurobsdcon2024-hshoexer-confidential-computing[M].
+- eurobsdcon2025-espie-dpb[M].
+

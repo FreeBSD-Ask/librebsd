@@ -90,9 +90,9 @@ volume: 第05卷-freebsd的工程化奠基
 
 - 要点：Windows Vista(2006.11, NT 6.0) 与 Solaris 10(2005.1, Update 1-8 至 2008) 同期；Vista 失败使企业重新评估 Linux/BSD; Solaris 10 持续更新
 - 史料：Vista Release Notes、So
-- ISC BIND Security Advisories（isc.org/ops/advisories）；FreeBSD-SA-07:07.bind；bsd_commits.db freebsd-src 仓库 BIND 相关 commit（2006-11 至 2007-07） ［A］
-- OpenSSL Security Advisory（2007-10）；tcpdump ChangeLog（2007-08）；FreeBSD-SA-07:06.tcpdump；FreeBSD-SA-07:08.openssl；bsd_commits.db freebsd-src 仓库 OpenSSL/tcpdump 相关 commit（2007-07 至 2007-10） ［A］
-- bsd_commits.db freebsd-src 仓库 6.x 版本周期 security fix commit 清单（2006-01 至 2008-01）；TrustedBSD 项目页面；OpenBSM 1.0 alpha 10 Release Notes ［A］
+- ISC BIND Security Advisories（isc.org/ops/advisories）；FreeBSD-SA-07:07.bind；freebsd.duckdb freebsd-src 仓库 BIND 相关 commit（2006-11 至 2007-07） ［A］
+- OpenSSL Security Advisory（2007-10）；tcpdump ChangeLog（2007-08）；FreeBSD-SA-07:06.tcpdump；FreeBSD-SA-07:08.openssl；freebsd.duckdb freebsd-src 仓库 OpenSSL/tcpdump 相关 commit（2007-07 至 2007-10） ［A］
+- freebsd.duckdb freebsd-src 仓库 6.x 版本周期 security fix commit 清单（2006-01 至 2008-01）；TrustedBSD 项目页面；OpenBSM 1.0 alpha 10 Release Notes ［A］
 
 ## 自反性声明
 

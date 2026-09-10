@@ -1,0 +1,271 @@
+# 32.4 4.1BSD 相比 4BSD 的主要特性——性能调优与自动内核配置
+
+## 32.4.1 David Kashtan VMS vs UNIX 基准测试与 Joy 性能调优
+
+**要点**：4BSD（1980 年 10 月）发布后，SRI International 的 David Kashtan 撰写基准测试报告比较 VMS 与 Berkeley UNIX 在 VAX 上的性能，结果显示 UNIX 存在严重性能问题；Bill Joy 搁置未来开发计划数月，系统性地调优内核，数周内即完成反驳论文证明经调优后的 UNIX 性能可与 VMS 相当；4.1BSD 的核心改进即为此轮系统性性能调优的成果（McKusick 1999 原文："These benchmarks showed severe performance problems with the Unix system for the VAX. Setting his future plans aside for several months, Joy systematically began tuning up the kernel. Within weeks he had a rebuttal paper written showing that Kashtan's benchmarks could be made to run as well on Unix as they could on VMS."）
+
+**史料**：Kashtan, D. (1981?) "VMS vs UNIX Performance Benchmarks" SRI 报告；Joy, W. (1981) "Rebuttal to Kashtan Benchmarks"；4.1BSD Release Notes (1981.6)；McKusick, K. (1999) "Twenty Years of Berkeley Unix" ［B］
+
+**史观**：第 2 条实践先于理论——Joy 的性能调优基于实际基准测试压力而非理论预测，基准测试驱动的工程优化模式；第 7 条硬件与软件辩证——VAX 硬件特性与 UNIX 内核实现的适配问题
+
+**辨析**："cursoring" 性能问题的具体含义——McKusick 1999 原文未提及 "cursoring" 这一特定术语，仅记载 "severe performance problems" 与 Joy 系统性内核调优；该术语可能指终端光标移动相关性能问题或内核中的特定瓶颈，但未能在 McKusick 1999 等权威一手来源中找到对应记载，标注 据一手文献印证消解^doubt-resolved-188：此处事实待多源交叉验证 ］；Kashtan 报告的精确标题与日期未能在 McKusick 1999 中确认，标注 ［ 存疑脚注：此处事实待多源交叉验证 ］；Joy 反驳论文的精确标题与发表渠道亦未在 McKusick 1999 中明确记载；经 bsd_commits.db 查询未得明确证据（查询条件：`SELECT * FROM commits WHERE message_subject LIKE '%Kashtan%' OR message_subject LIKE '%cursoring%' OR message_subject LIKE '%VMS%' OR message_subject LIKE '%benchmark%' OR message_subject LIKE '%performance tuning%'`，freebsd-src 仓库最早 commit 为 1993-06-12T14:49:13Z by Rodney W. Grimes（罗德尼·W·格赖姆斯），hash 9002c02abc587664acb357c6879d8ca08664dd0b，早于 4.1BSD 1981 年 6 月发布约 12 年，commit 历史中无 Kashtan 报告、cursoring 术语、Joy 反驳论文的代码级证据），暂保留存疑；[2026-08-14 两库核查：Kashtan VMS 基准测试与 Joy 反驳论文早于邮件库覆盖范围，参考文献库无对应条目，两库无法验证]
+
+**文献**：McKusick, K. (1999) "Twenty Years of Berkeley Unix"（当事人一手叙述 Kashtan 基准测试与 Joy 调优）；4.1BSD Release Notes (1981.6) ［B］
+
+## 32.4.2 Robert Elz 自动内核配置（autoconfig）
+
+**要点**：4.1BSD 加入了 Robert Elz（来自澳大利亚墨尔本大学）开发的自动内核配置代码（auto configuration code），这是 4.1BSD 相比 4BSD 的关键新增功能之一（McKusick 1999 原文："Rather than continue shipping 4BSD, the tuned-up system, with the addition of Robert Elz's auto configuration code, was released as 4.1BSD in June, 1981."）；autoconfig 使内核能够在启动时自动检测硬件配置而非依赖手工编译时配置，简化了 BSD 在不同 VAX 配置上的安装与移植
+
+**史料**：4.1BSD 内核配置源代码；Elz, R. (1981) "Autoconfiguration for BSD"；4.1BSD Release Notes (1981.6)；McKusick, K. (1999) "Twenty Years of Berkeley Unix" ［A］
+
+**史观**：第 17 条软件工程——autoconfig 是操作系统硬件抽象层的早期实践，降低了系统安装与移植的工程成本
+
+**辨析**：Robert Elz（kre）是墨尔本大学计算机系的 UNIX 先驱，除 autoconfig 外还贡献了磁盘配额（disk quotas，随 4.2BSD/4.1c 引入）等多项功能；autoconfig 在 4.1BSD 中的具体实现范围（仅 VAX 还是通用框架）需核对 4.1BSD 源代码，McKusick 1999 仅记载 "auto configuration code" 未详述技术细节
+
+**文献**：McKusick, K. (1999) "Twenty Years of Berkeley Unix"（当事人一手记载 Robert Elz autoconfig 随 4.1BSD 引入）；4.1BSD Release Notes (1981.6) ［B］
+
+## 32.4.3 4.1BSD 发行规模与生命周期
+
+**要点**：4.1BSD 两年生命周期内发行约 400 份站点许可证（per-institution 授权模式），运行在远超此数的机器上；相比 4BSD 九个月生命周期内约 150 份许可证的成绩，4.1BSD 发行规模显著扩大（McKusick 1999 原文："Over its two-year lifetime about 400 distributions were shipped."）
+
+**史料**：CSRG 发行记录；McKusick, K. (1999) "Twenty Years of Berkeley Unix" ［B］
+
+**史观**：第 16 条扩散——4.1BSD 发行规模的增长反映了 BSD 在 DARPA 研究社区与大学中的扩散
+
+**辨析**：4.1BSD 约 400 份、4.2BSD 18 个月内超过 1000 份许可证，增长趋势明确
+
+**文献**：McKusick, K. (1999) "Twenty Years of Berkeley Unix"（当事人一手发行数据） ［B］
+
+
+<!-- DEEP_ANALYSIS: cross_indexes.duckdb.concept_history -->
+**史家判断**（证据等级：L2，来源：`cross_indexes.duckdb.concept_history.6`）
+
+GEOM 由 Poul-Henning Kamp 提出构想（早期思想文《Geometry —— an idea》），最原始前身是作者对 Minix 1.2 所做的一个从未发布的 hack。2002 年 Kamp 在 NAI Labs 支持下，于 DARPA/SPAWAR 合同与 DARPA CHATS 研究计划框架内开发成形。2003 年 Kamp 在 BSDCon 发表 GEOM 教程。GEOM 自 FreeBSD 5.0（2003）起提供，明确定义 class/geom/provider/consumer/rank 等拓扑概念，提供分区（FDISK/MBR、GPT、BSD slice）、镜像（geom_mirror）、RAID、UFS 卷标、GBDE/geli 磁盘加密等类，并支持 ggate 用户态网关。至 FreeBSD 13.0，GEOM_BSD、GEOM_MBR、GEOM_SUNLABEL 等过时组件被移除，由 GEOM_PART_* 与 GEOM_LABEL 等替代，框架持续演化。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-1-121`）
+
+TrustedBSD MAC 框架是用于 FreeBSD 平台的操作系统访问控制扩展的灵活模块化环境，由 Robert Watson 等人在 DARPA 信息生存能力项目会议论文中描述。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-2-012`）
+
+4.4BSD 架构手册的作者署名为 William Joy、Robert Fabry、Samuel Leffler、M. Kirk McKusick、Michael Karels，隶属伯克利计算机系统研究组（CSRG）。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-2-013`）
+
+4.2BSD 的 IPC 设施文档由计算机系统研究组（CSRG）成员 Samuel J. Leffler、Robert S. Fabry、William N. Joy、Phil Lapsley 署名。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-2-040`）
+
+Morris（1985）指出 4.2BSD 的 TCP/IP 软件存在信任缺陷：每个 4.2BSD 系统“信任”一组其他主机，允许来自受信主机的用户在不提供口令的情况下通过 TCP/IP 网络远程执行命令。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-2-046`）
+
+Ralph Campbell（CSRG，1986）撰写了 4.3BSD 行式打印机假脱机（lpd）手册。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-2-047`）
+
+BIND 4.9 的一位作者在开发与发布 BIND 4.9 期间任职于 DEC 网络系统实验室，并曾被借调至 CSRG 完成相关工作。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-2-048`）
+
+Graham、Kessler 与 McKusick（1982）描述了 gprof 调用图执行剖析器的设计：将被调例程的运行时间计入调用它们的例程。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-2-049`）
+
+Sun Microsystems 与 CSRG（1988）的 rpcgen 编程指南说明 rpcgen(1) 用于帮助程序员简单直接地编写 RPC 应用。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-2-052`）
+
+McKusick、Karels 与 Bostic（1989）描述了 CSRG 以小团队开发与集成 4.3BSD 的发布工程策略：每个发布周期分为开发阶段与发布工程阶段，发布工程分三步（alpha、beta、最终发布）。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-2-053`）
+
+McKusick、Karels 与 Bostic（1989）记载伯克利的发布在“引入重大新设施”与“提供缺陷修复与效率改进”之间交替。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-2-054`）
+
+McKusick、Karels 与 Bostic（1989）记载 CSRG 一直是一个小型软件开发团队，需协调 CSRG 成员与贡献代码的外部社区成员。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-2-055`）
+
+McKusick、Karels 与 Bostic（1989）认为 BSD 开发的优势在于少数核心开发者能理解整个系统并协调工作，这是大型开发组织难以复制的。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-3-001`）
+
+BSD 于 1977 年由 Bill Joy 在伯克利以单人项目起步，1980 年成长为四人协调的计算机系统研究组（CSRG）。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-3-002`）
+
+CSRG 使用 SCCS（首个源代码控制系统）管理 BSD 开发，1983 年设计 socket 接口并实现 TCP/IP，允许少数受信任外部贡献者经 ARPAnet 登录开发机直接更新源码。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-3-052`）
+
+McKusick 与 Karels 1988 年记载 4.3BSD 内核拥有至少十种不同的内存分配器，并提出通用目的动态内存分配器以统一接口。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-3-053`）
+
+McKusick、Karels 与 Bostic 1990 年提出在可换页内存而非专用内存中构建 RAM 磁盘文件系统原型，以避免专用内存带来的性能损失。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-3-054`）
+
+Leffler 等 1983 年记载进程间通信与网络是 4.2BSD 对 UNIX 最重要的新增之一，是两年以上讨论与研究的成果。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-3-061`）
+
+Marshall Kirk McKusick（住址 1689 San Pablo Avenue, Berkeley）出现在 2017 年 5 月 30 日伯克利市议会会议记录的通信列表中，由议员 Worthington 提交。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-3-069`）
+
+BIND 运维指南脚注记载作者 Kevin J. Dunlap 是 DEC ULTRIX 工程高级开发组成员，完成该工作时借调至 CSRG。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-4-105`）
+
+CSRG 用 SCCS 管理源码，1983 年设计 socket 接口并在其下实现 TCP/IP，允许少数受信任外部贡献者经 ARPAnet 直接更新源码。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-4-113`）
+
+McKusick 2018 年演讲称 FreeBSD 于 1993 年 6 月 19 日命名，源自 Bill Jolitz 面向 Intel 386 的 4.4BSD-Lite 移植版本。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-5-010`）
+
+McKusick 与 Benno Rice 在《The Evolution of FreeBSD Governance》（FreeBSD Journal, 2017）中记载：BSDi 于 2000 年收购 Walnut Creek CDROM，使受雇开发者可接触 BSD/OS 源码；内核多线程化中 John Baldwin 的方案借鉴 BSD/OS 与 Solaris，Matthew Dillon 偏好类似 Amiga 内核的架构，两人冲突因核心团队不愿在技术争论中选边而加剧，最终 Dillon 的 commit 权限被移除并离开创立 DragonFly BSD。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-5-015`）
+
+McKusick 在 BSDCan 2018 演讲中记载：Yahoo 完全基于 FreeBSD 运行并同意托管 CVS 仓库与发行版，Justin Gibbs 创立 FreeBSD Foundation 旨在提供 FreeBSD 项目基础设施——基金会成立的直接背景是项目基础设施对单一公司（Yahoo）的依赖。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-5-016`）
+
+McKusick 在 BSDCan 2018 演讲中记载：FreeBSD 核心团队最初为终身制（约 20 名成员），僵化与冷漠促使起草章程建立 9 名成员、由 committer 选举的核心团队，首届民选核心团队于 2000 年产生且几乎无旧成员留任。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-5-113`）
+
+关于 FreeBSD 迁移到 Subversion 的时间存在矛盾：McKusick 称经辩论后于 2000 年迁到 Subversion，而 Ed Maste 的版本控制历史显示 src/ 仓库直到 2008-05-31 才迁至 Subversion。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-6-107`）
+
+4.2BSD 与 4.3BSD 引入可靠信号（reliable signals）与快速文件系统（fast filesystem），这是 FFS/UFS 进入 Berkeley 系统发行版的开端。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L2，来源：`historical_claims.duckdb.claim.CL-8-008`）
+
+参考文献全文数据库收录《Berkeley city charter en》（Berkeley，1908），作为本章主题的候选史料。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-3-018`）
+
+计算机系统研究组（CSRG）一直是小型软件开发团队，资源限制要求精细的软件工程管理以及对 CSRG 成员与社区贡献者的协调。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-6-002`）
+
+Pawel Jakub Dawidek 与 Marshall Kirk McKusick 合作撰写将 Solaris ZFS 移植到 FreeBSD 的论文。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L2，来源：`historical_claims.duckdb.claim.CL-8-003`）
+
+参考文献全文数据库收录《McKusick design impl 44bsd en》（McKusick，1996），作为本章主题的候选史料。
+
+## 文献
+
+- bsdcon. kamp-phk-devfs-paper[M]. 2002.
+- standalone. dowse-ufs optimizations-paper[M]. 2002.
+- eurobsdcon2014-mandoc-slides[M].
+- eurobsdcon2015-mandoc[M].
+- FreeBSD-Foundation-October-2016-Update[M]. 2016.
+- FreeBSD-Foundation-September-2016-Update[M]. 2016.
+- ONODERA R. NetBSD on Google Compute Engine -- Step by Step Guide（幻灯片）[EB/OL]. AsiaBSDCon 2016 NetBSD BoF.
+- Martin Husemann. netbsd arm be8 asiabsdcon2015[M]. 2015.
+
+
+<!-- MAIL_INSIGHT: ucbvax.4130 -->
+**观点**：1981 年 9 月，普渡大学 EE 的 Art Feather 报告其双处理器 VAX-11/780 运行 4.1BSD（为双处理器代码做了修改），一度达到 105 个用户同时登录，日常 70-80 人，多为教学编译与编辑。
+**邮件来源**：Art Feather（普渡大学 EE），comp.unix.wizards，1981 年，Message-ID: `ucbvax.4130`
+**史学意义**：以真实负载数据说明 4.1BSD 已能支撑百人级教学环境，回应其在性能调优与规模化部署上的历史地位。
+<!-- /MAIL_INSIGHT -->

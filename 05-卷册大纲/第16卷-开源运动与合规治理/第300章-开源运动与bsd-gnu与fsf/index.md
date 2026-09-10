@@ -59,7 +59,7 @@ volume: 第16卷-开源运动与合规治理
 
 - 要点：GNU 项目与 BSD 的早期交集：(1) GNU 工具链（gcc、gdb、make、bash）长期与 BSD 系统协同；(2) FreeBSD 用户空间大量使用 GNU 工具；(3) 1990 年代起 GNU 与 BSD 在许可证哲学上分歧加深；(4) GNU C Library 与 BSD libc 的长期竞争
 - 史料：GNU
-- Stallman 论 BSD；McKusick 论许可证；bsd_commits.db commits 表 freebsd-src Robert Watson commit `bf139e9706ee`（2002-11-04T18:11:17Z，"License: update, remove clause three of BSD license per approval of NAI."）；bsd_commits.db commits 表 freebsd-src Poul-Henning Kamp commit `3b1746df8b34`（2003-01-18T10:08:27Z，"Sa
+- Stallman 论 BSD；McKusick 论许可证；freebsd.duckdb commits 表 freebsd-src Robert Watson commit `bf139e9706ee`（2002-11-04T18:11:17Z，"License: update, remove clause three of BSD license per approval of NAI."）；freebsd.duckdb commits 表 freebsd-src Poul-Henning Kamp commit `3b1746df8b34`（2003-01-18T10:08:27Z，"Sa
 - Stallman, R. The GNU Manifesto [EB/OL]. (1985). <https://www.gnu.org/gnu/manifesto.en.html> [2026-07-24]；Free Software Foundation. What is Copyleft? [EB/OL]. <https://www.gnu.org/licenses/copyleft.en.html> [2026-07-24]；Stallman, R. Why Open Source misses the point of Free Software [EB/OL]. <https://
 - Peterson "Open Source: Where It Started"（2006）；Peterson 2018 年 20 周年回顾文[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]
 

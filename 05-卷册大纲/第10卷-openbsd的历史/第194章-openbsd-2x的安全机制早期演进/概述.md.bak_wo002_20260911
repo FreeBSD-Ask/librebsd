@@ -1,0 +1,361 @@
+---
+chapter: 第 194 章
+id: CH194
+volume: 第10卷-openbsd的历史
+---
+
+# 第 194 章 OpenBSD 2.x 的安全机制早期演进
+
+> 本子章由原第 84 章拆分而来，承载 194.1-194.9 节。
+
+## 本章节索引
+
+1. [194.1 多元群体贡献openbsd2x时期的贡献者多样性从卡尔加里到全球志愿者的安全工程共同体](194.1-多元群体贡献openbsd2x时期的贡献者多样性从卡尔加里到全球志愿者的安全工程.md)
+2. [194.2 openbsd2x时期的技术淘汰多项旧技术新技术交替演进19962001](194.2-openbsd2x时期的技术淘汰多项旧技术新技术交替演进19962001.md)
+3. [194.3 与同时期操作系统的比较openbsd2x时代与代码审计文化时期20002004与netbsd1516freebsd4x50linux24windows2000xp的对照](194.3-与同时期操作系统的比较openbsd2x时代与代码审计文化时期20002004与.md)
+4. [194.4 openbsd2x时代的漏洞发现与errata安全响应19962001cve编号体系尚未普及openbsd以erratapatches存档为漏洞跟踪主轴代码审计驱动的发现漏洞快速修复加固重构循环在2x时期奠基](194.4-openbsd2x时代的漏洞发现与errata安全响应19962001cve.md)
+5. [194.5 项目统摄史观审视opensshfork与许可证纯洁化的形式主义化](194.5-项目统摄史观审视opensshfork与许可证纯洁化的形式主义化.md)
+6. [194.6 openbsd2x时期release公告与releasesong起源1996200110次release公告汇总releasesong传统尚未建立自30起方有releasesong](194.6-openbsd2x时期release公告与releasesong起源.md)
+7. [194.7 openbsd从44bsdlite2继承的ktrace跨bsdunixmacos扩展](194.7-openbsd从44bsdlite2继承的ktrace跨bsdunixmacos.md)
+8. [194.8 openbsd从44bsdlite2继承的fstat1跨bsdunixmacos扩展](194.8-openbsd从44bsdlite2继承的fstat1跨bsdunixmacos.md)
+9. [194.9 openbsd从44bsdlite2继承的audio4跨bsdunixmacos扩展](194.9-openbsd从44bsdlite2继承的audio4跨bsdunixmacos.md)
+
+## 文献缺口提示
+
+> 本章在参考文献数据库中匹配文献数为 0（< 3），存在文献缺口。依据整书级跨卷主题清单（**d:\librebsd\script\_lit_supplement_logs\book_level_themes.md**）中与第 10 卷相关的增补建议，建议补充以下文献：
+
+1. OpenBSD 2.x 时期安全机制演化的原始 commit 与 man page 修订记录，覆盖 securelevel、W^X、stack protection 早期形态（来源：整书级主题 2 安全哲学演化）。
+
+2. Theo de Raadt（西奥·德·若特） 关于 privsep 的 mailing list 原文，对应 2.x 时期 privsep 概念的最初工程化讨论（来源：整书级主题 2 安全哲学演化）。
+
+3. OpenBSD 2.x 安全公告（security advisory）原始存档与 CVE 对应表，作为安全机制演化的漏洞驱动佐证（来源：整书级主题 2 安全哲学演化）。
+
+> 注：上述建议基于整书级主题增补建议，具体文献须从 **d:\librebsd\04-现代研究文献\05-参考文献全文数据库\references_fulltext.db** 按 `reference_id` 提取并执行多源交叉验证；单一文献支撑的内容须标注“（单一文献支撑，需后续交叉验证）”。
+
+<!-- DATA_VERIFY_BLOCK v20260804 -->
+> 2026-08-04 卷级综述标记：详见 [vol-10.md](../../../04-现代研究文献/02-卷级文献综述/vol-10.md)
+>
+## 数据核验与统计（自动增补 · 0-信任）
+
+> **来源库**：资料数据库 · materials / material_cross_references；references_fulltext · chapter_matches / chapter_reviews；doubts_standalone · doubts_to_resolve
+> **方法**：基于全局章号 1–348 直接 SQL 聚合；未做外部事实验证；`ch=0`/未映射条目不计入本章。
+> **生成时间**：2026-08-04 ｜ **复现**：`script/_engine_integrity_analysis.py`
+
+| 指标 | 数值 |
+| --- | --- |
+| 锚定素材 | 0 篇（含存疑标记 0 篇） |
+| 存疑点 | 1 条 |
+| 参考文献匹配 | 0 条 |
+| 章节述评 | 未生成 |
+| 章内交叉引用 | 出 0 / 入 0 |
+
+**数据质量备注**：本章尚无锚定素材，属史料回填优先对象；暂无参考文献匹配
+
+<!-- DB_POINTS:cross_indexes_person -->
+**数据库要点引用（cross_indexes.db · person_bio_research · 2026-08-13）**
+
+> 来源：`10-交叉索引/cross_indexes.db` 表 `person_bio_research`（去重后 276 条，P0 26/P1 75/P2 175/未分级 0）。映射：数据库旧章号 +1 → 磁盘章号。本章涉及人物 1 位。
+
+- [P2] Todd C. Miller（托德·C·米勒）：sudo 作者/OpenBSD
+<!-- /DB_POINTS:cross_indexes_person -->
+
+<!-- DB_POINTS:doubts_resolved -->
+**数据库要点引用（doubts_standalone.db · 2026-08-13）**
+
+> 来源：`04-现代研究文献/06-存疑数据库/doubts_standalone.db` 表 `doubts_to_resolve`（1987 条，1966 已解决）。本章存疑 1 条已解决。类别分布：date(1)
+
+> 存疑管理体系：98.9% 已闭环，解决结论含 date/fact/source_conflict/name/version 等类型，具体结论见 doubts_standalone.db 表 `resolution_summary` 字段。
+<!-- /DB_POINTS:doubts_resolved -->
+
+<!-- DB_POINTS:chapter_reviews -->
+**数据库要点引用（references_fulltext.db · chapter_reviews · 2026-08-13）**
+
+> 来源：`04-现代研究文献/05-参考文献全文数据库/references_fulltext.db` 表 `chapter_reviews`（348 章全覆盖）。本章级文献综述 2085 字、匹配 3 篇文献，状态 imported。映射：旧章号 +1 → 磁盘章号。
+
+> **综述要点**：本章围绕“OpenBSD 2.x 的安全机制早期演进”展开，覆盖 193.1 多元群体贡献openbsd2x时期的贡献者多样性从卡尔加里…；193.2 openbsd2x时期的技术淘汰多项旧技术新技术交替演进1…；193.3 与同时期操作系统的比较openbsd2x时代与代码审计文化…；193.4 openbsd2x时代的漏洞发现与errata安全响应19…；193.5 项目统摄史观审视opensshfork与许可证纯洁化的形式… 等
+
+<!-- /DB_POINTS:chapter_reviews -->
+
+<!-- COL_SCAN v20260826 -->
+## 内容包复核增补（Phase 4 · 2026-08-26）
+
+> 基于 4 个核心数据库（doubts_standalone、historical_claims、original_sources、资料数据库）内容包自动匹配与审核。
+> 内容包总行数：406 | 去重主张数：383 | 复核方法：12 步流程（详见 vol2to5_phase4_summary.md）
+
+### 证据等级分布
+
+| 等级 | 说明 | 数量 | 占比 |
+| --- | --- | --- | --- |
+| L1 | 代码与构建产物 | 0 | 0.0% |
+| L2 | 即时通讯记录 | 0 | 0.0% |
+| L3 | 官方文档与公告 | 206 | 50.7% |
+| L4 | 事后叙述 | 200 | 49.3% |
+| L5 | 二手研究 | 0 | 0.0% |
+
+### 来源数据库分布
+
+| 来源 | 行数 |
+| --- | --- |
+| historical_claims | 200 |
+| original_sources | 199 |
+| 资料数据库 | 7 |
+
+### 新增证据点（L1-L3）
+
+1. [L3] `资料数据库.fact_check_records.doubt_basis#2` — - 对于一手来源直接且交叉验证一致的案例（如 `syslog`、`OpenSSH`、`nullfs`），判定为“已确证”。
+
+- 对于概念谱系相关但代码层面无直接移植关系的案例（如 `unionfs → overlayfs`、`PF → nftables`），判定为“概念挪用，代码独立”，须保留 `[存疑脚注]` 注明概念层与代码层的差异。
+- 对于穷尽考据后仍无法确证 BSD 起源的案例（如 `t...
+
+2. [L3] `资料数据库.fact_check_records.doubt_basis#25` — ### L7.1.1.openbsd-src 查询不存在（核心存疑）
+
+卷章数据映射文件 ch28 引用 L7.1.1.openbsd-src 查询，但衍生项目与跨项目对比分析.md 中 L7.1.1 系列仅含 4 个 FreeBSD 衍生项目查询（ghostbsd-src、hardenedbsd-src、trueos-src、pfsense-src），无 openbsd-src 专用查询。ope...
+3. [L3] `资料数据库.fact_check_records.doubt_basis#27` — ### 1. L2.1.FreeBSD_SVN_to_Git_migration 查询结果存疑
+
+- **存疑内容**：L2.1 查询返回的 2020 年 commit 量 14,203 与 L1.1.1 的 111,482 存在 7.85 倍差异，before 期间数据完全缺失
+- **判定依据**：
+  - 7.85 倍差异远超合理的统计口径差异范围
+  - L2.1 查询的 `datetim...
+
+4. [L3] `资料数据库.fact_check_records.doubt_basis#29` — ### 已确证事项
+
+1. bsd_commits.db 数据库规模与查询结果行数经 SQL 查询直接验证，数据本身可靠
+2. 各查询 ID 的 SQL 语句与参数见数据报告原文，可复现
+3. 数据补充范围与卷章数据映射文件第 193-312 行（vol-11 部分）一致，无遗漏章节
+4. 9 章 23 子节均已在史料、辨析、文献三字段追加数据点，保留原有内容，每个数据点标注来源 SQL 查询 I...
+5. [L3] `资料数据库.fact_check_records.doubt_basis#32` — ### 数据查询不匹配问题（核心存疑）
+
+卷章数据映射文件（[旧项目路径已移除] SQL 查询 ID 在实际数据报告文件中**不存在**，具体如下：
+
+1. **L2.3.1.jemalloc、L2.3.1.pf、L2.3.1.vimage**
+   - 映射文件引用这些查询对应 ch43（jemalloc）、ch44（pf）、ch46（vimage）
+   - 中观模式挖掘.md 报告中**不存...
+6. [L3] `资料数据库.fact_check_records.doubt_basis#37` — status: verified | [存疑脚注] OpenBSD 1.0 的具体发布日期(1996-07-01 与 1996-10 两种说法)在早期档案中存在不一致,采信 de Raadt 本人在 openbsd.org 所述 1996 年夏季
+7. [L3] `资料数据库.fact_check_records.doubt_basis#47` — 存疑判定依据：大纲 162.5 写“2024 年 10 月去世”与全部一手/权威来源矛盾；FreeBSD 14.2-RELEASE（2024-12-02）献词属实（时间晚于逝世，不矛盾）。结论：修正为 2024-06-02
+8. [L3] `original_sources.kaoju_records.source_verification#2` — 本次考据综合调用以下来源：
+
+- **WebSearch 检索**：约 30 次英文/中文关键词检索，关键词涵盖 `BSD origin`、`Linux history`、`OpenBSD`、`FreeBSD`、`4.2BSD`、`4.3BSD`、`4.4BSD`、`Daniel Hartmeier`、`Eric Allman`、`Poul-Henning Kamp`、`William LeFeb...
+
+9. [L3] `original_sources.kaoju_records.source_verification#4` — 本文件各案例的“证据来源”小节即对应“查证来源”字段，列出每个案例的一手论文（如 Bonwick 1994 USENIX 论文、Kleiman 1986 SunOS 论文）、Linux 内核源码注释、kernel.org 官方文档与互联网档案馆存档 URL。文件头部“考据方法”亦记载 WebSearch 多轮检索 → WebFetch 一手资料验证 → 交叉比对的流程。
+10. [L3] `original_sources.kaoju_records.source_verification#6` — 1. **一手数据库**：`原材料/研究/bsd仓库分析/bsd_commits.db`（freebsd-src / freebsd-doc / freebsd-ports / netbsd-src / openbsd-src / dragonfly-src 六仓库提交与标签快照，2026-07 入库）。
+
+- `tags` 表：`release/X.Y.Z` 标注标签的 `tagger_d...
+
+11. [L3] `original_sources.kaoju_records.source_verification#7` — ### 一手史料
+
+- **OpenBSD errata patches 官方存档**：`https://www.openbsd.org/errata.html` 与各版本 errataXX.html（访问日期 2026-07-22）。本地整理文件：`原材料/研究/bsd漏洞史/官方公告/openbsd-errata.md`（563 条 errata 条目，覆盖 OpenBSD 2.0-7.x 共...
+
+12. [L3] `original_sources.kaoju_records.source_verification#8` — ### 一手史料
+
+- **FreeBSD Security Advisories 官方存档**：`https://www.freebsd.org/security/advisories/`（访问日期 2026-07-22）。第三卷时期（1992-1995）FreeBSD-SA 编号体系尚未建立（FreeBSD-SA 编号始于 2000 年前后），此时期漏洞以 freebsd-security-n...
+
+13. [L3] `original_sources.kaoju_records.source_verification#11` — ### 一手史料
+
+- **NetBSD Security Advisories 官方存档**：`https://www.netbsd.org/support/security/advisory.html`（访问日期 2026-07-22）。本地整理文件：`原材料/研究/bsd漏洞史/官方公告/netbsd-sa.md`（289 条 NetBSD-SA 公告）。第六卷覆盖 NetBSD 1.x（1...
+
+14. [L3] `original_sources.kaoju_records.source_verification#15` — ### 一手史料
+
+- **CSRG 技术报告（EECS/TR）**：加州大学伯克利分校计算机系统研究小组（CSRG）发布的官方技术报告系列，含 3BSD/4BSD/4.1BSD/4.2BSD/4.3BSD/4.3BSD-Tahoe/4.3BSD-Reno/4.4BSD-Lite/4.4BSD-Lite2 各版本 Release Notes 与设计文档。伯克利分校 EECS/TR 系列存档须查 `...
+
+15. [L3] `original_sources.kaoju_records.source_verification#22` — ### 2.1 一手来源（数据库）
+
+- `bsd_commits.db` 的 commits 表（netbsd-src/openbsd-src/dragonfly-src 三仓库）
+- `bsd_commits.db` 的 tags 表（仅 dragonfly-src 可用，131 个 v* tag 含 tagger_date）
+- `bsd_commits.db` 的 contribu...
+
+> 另有 168 条 L1-L3 证据点未列出，详见内容包文件。
+
+### 备用证据点（L4）
+
+1. [L4] `historical_claims.evidence.quote#evidence_id=EV-KF-000364` — over to their terminal. Unix (through the hand of Bill Joy) took a third approach. The techniques fo
+2. [L4] `historical_claims.evidence.quote#evidence_id=EV-KF-000365` — your bacon. From: <bostic@OKEEFFE.CS.BERKELEY.EDU> (Keith Bostic) Subject: V1.95 (Lost bug reports) Da
+3. [L4] `historical_claims.evidence.quote#evidence_id=EV-KF-000366` — ..............................................262 UFS: The Root of All Evil.........................
+4. [L4] `historical_claims.evidence.quote#evidence_id=EV-KF-000368` — ng to write us off as envious malcontents, roman- tic keepers of memories of systems put to pasture
+5. [L4] `historical_claims.evidence.quote#evidence_id=EV-KF-000369` — 7, and Michael Travers, a graduate student at the MIT Media Laboratory, was taking his first steps i
+6. [L4] `historical_claims.evidence.quote#evidence_id=EV-KF-000370` — for a few pages of code. So I paid a megabyte of swap space for the privilege of using a mouse with
+7. [L4] `historical_claims.evidence.quote#evidence_id=EV-KF-000371` — nt book on networking called Internetworking with TCP/IP by Douglas Comer, describes how inferior ge
+8. [L4] `historical_claims.evidence.quote#evidence_id=EV-KF-000372` — out, and see a directory named “standard” at the top of my xterm, which the files have again scroll
+
+> 另有 192 条 L4 证据点未列出。
+
+### 0 信任评估
+
+- 独立来源数：3 个数据库
+- 一级史料通过率：50.7%（L1+L2+L3 / 总行数）
+- 本章 L1-L3 级史料 183 条，可纳入大纲但需标注来源
+- 所有主张均来自内容包自动匹配，未经人工逐一核实
+- 单一来源支撑的主张须标注 (单一文献支撑，待交叉验证)
+
+### 交叉验证提示
+
+- 本章有 183 条 L1-L3 级证据，建议优先与此前已入库的 MAIL_MINE、DB_POINTS、PODCAST_MINE 块交叉验证
+
+<!-- /COL_SCAN -->
+
+
+<!-- DEEP_ANALYSIS: openbsd.duckdb.commits -->
+**数据库分析发现**（证据等级：L1，来源：`openbsd.duckdb.commits.openbsd`）
+
+openbsd 核心贡献者：ajacoutot(35528), deraadt(31454), sthen(30592), espie(18328), jasper(16649)
+
+
+
+<!-- DEEP_ANALYSIS: sacred_sources.duckdb.blocks -->
+**史家判断**（证据等级：L2，来源：`sacred_sources.duckdb.blocks.188`）
+
+以食品安全为例：人们永远无法得到真正的认识。你既不能说科学证明其在某量无毒害就真的无毒害，也不能证明它真的有毒害。用科学说服人本身就不科学——因为科学本身就是非充分决定性的，本身的正确性是得不到保证的。且你能得到的所有科学解释，正因为它是科学解释，所以它必定也是错误的。这并非反智，而是对科学边界的清醒认识。好坏是对于人来说的，所谓“剂量决定论”也是无意义的——零剂量不是更安全吗？
+
+
+
+<!-- DEEP_ANALYSIS: sacred_sources.duckdb.blocks -->
+**史家判断**（证据等级：L2，来源：`sacred_sources.duckdb.blocks.283`）
+
+王充因为个人境遇而提出了德福不一致论，其否定了个人努力的作用。可以看到人生的遭遇会对其理论有决定性的作用，有时是偏差，有时是谬误，但根本上说是一种悲伤。这揭示了理论建构的偶然性：任何理论都深深打上 theorist 个人经历的烙印。不存在客观的、超越个人境遇的理论。历史哲学的建构者同样如此——本书的理论亦不例外，它诞生于特定的境遇、特定的悲伤、特定的选择。
+
+
+
+<!-- DEEP_ANALYSIS: cross_indexes.duckdb.concept_history -->
+**史家判断**（证据等级：L2，来源：`cross_indexes.duckdb.concept_history.13`）
+
+出口管制：出口管制概念的演化: ①冷战成型期（1949–1951）：COCOM 建立，协调对苏联、东欧、中国的禁运货单；1951 年美国《相互防御援助管制法》（Battle Act）以停止援助迫使盟国参与（1980 年废止）；②缓和调整期（60–80 年代）：因缓和与贸易增长，管制多次放宽；③转型重组期（1993–1996）：1994 年 3 月 31 日 COCOM 解散；1995 年 12 月 19 日成立“瓦森纳协定”（Wassenaar Arrangement），1996 年 11 月 1 日起运作；④数字与加密期：加密早在冷战期被列为军品（由国务院依 AECA 管，即 ITAR），1996 年底部分非军用加密移至商
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-1-011`）
+
+Thompson 在 1984 年图灵奖演讲中称，特洛伊木马攻击的构想最早见于一份对 Multics 早期实现安全性的空军批判报告。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-3-004`）
+
+Theodore Roszak 1969 年出版《The Making of a Counter Culture》，副标题为“对技术官僚社会及其青年反抗的反思”。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-4-010`）
+
+Anonymous CVS 源码分发机制由 Charles D. Cranor 与 Theo de Raadt 创建，用于开放 OpenBSD 源码仓库。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-4-011`）
+
+创建 Anonymous CVS 的目标之一是开放 OpenBSD 的 CVS 源码仓库访问，使项目更开放并鼓励开发者兴趣。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-4-100`）
+
+1995 年秋启动 OpenBSD 项目时，Cranor 与 de Raadt 决定用 CVS 管理源代码树，并创建匿名 CVS 以开放源码仓库。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-5-111`）
+
+Anonymous CVS 由 Charles D. Cranor 与 Theo de Raadt 在 1995 年秋创建 OpenBSD 时设计，使匿名互联网用户无需写权限账户即可访问源码库。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-5-112`）
+
+Anonymous CVS 是一种让匿名互联网用户在不危及安全的前提下访问源码库的机制，将开放源码推进为开放源码库。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-6-017`）
+
+Harris、Jha、Reps 等人提出声明式、时序化且实用的 capability 编程方法，用于在 Capsicum 上满足安全策略。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-6-108`）
+
+OpenBSD 自 2005 年起对 SCSI 中间层（SCSI midlayer）实施重大重构，引入 mpath(4) 多路径虚拟总线与 iopools 资源池、将适配器命令处理器改为回调式 scsi_done API，以改善稳定性、性能与可扩展性。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L2，来源：`historical_claims.duckdb.claim.CL-7-046`）
+
+参考文献全文数据库收录《20260805 Glass deRaadt expulsion email 19941223 en》（unknown，2026），作为本章主题的候选史料。
+
+## 文献
+
+- Ingo Schwarze. bsdcan15-mandoc[M]. 2015.
+- Ingo Schwarze. bsdcan18-mandoc[M]. 2018.
+- Paul Irofti. bsdcan2014-octeon dsr500[M]. 2014.
+- bsdcan2015-rdomains[M].
+- bsdcan2016-bfd[M].
+- bsdcan2016-xen[M].
+- bsdcan2019-syspatch[M].
+- bsdcan2019-tls13[M].
+- bsdcan2025-hshoexer-confidential-computing[M].
+- andrew, afresh1. 2024-Why-Rewrite-fw update-Euro BSDcon[M]. 2024.
+- eurobsdcon2008-sensors[M].
+- eurobsdcon2011-kettenis[M].
+- eurobsdcon2011-openbsdscsievolution[M].
+- eurobsdcon2014-mandoc-paper[M].
+- eurobsdcon2014-mandoc-slides[M].
+- eurobsdcon2014-parallel-make[M].
+- eurobsdcon2015-packages[M].
+- eurobsdcon2015-softraid-boot[M].
+- eurobsdcon2016-openbsd-11n[M].
+- eurobsdcon2016-privsep[M].
+- eurobsdcon2017-device-drivers[M].
+- eurobsdcon2017-opensmtpd[M].
+- eurobsdcon2018-mandoc[M].
+- eurobsdcon2018-rop[M].
+- eurobsdcon2019-plist[M].
+- eurobsdcon2022-krw-blockstobooting[M].
+- eurobsdcon2023-bluhm-mitigations[M].
+- eurobsdcon2023-espie-cache[M].
+- eurobsdcon2024-bluhm-packetflow[M].
+- eurobsdcon2025-bluhm-protomp[M].
+- eurobsdcon2025-florian-easy[M].
+- Marc Espie. eurobsdcon 2018 https[M]. 2018.
+- Claudio Jeker. asiabsdcon08-network[M]. 2008.
+- Murenin C A, Boutaba R. OpenBSD Hardware Sensors Framework[C]//AsiaBSDCon 2009 Proceedings. Tokyo, 2009.
+- Murenin C A. OpenBSD Hardware Sensors Framework（幻灯片）[EB/OL]. AsiaBSDCon 2009. <https://www.openbsd.org/papers/asiabsdcon2009-sensors-slides.pdf>.
+- syuu. asiabsdcon2010 smp for sgi paper[C]. 2010.
+- Alexandre Ratchov. asiabsdcon2010 sndio slides[C]. 2010.
+- asiabsdcon2016-vmm-slides[M].
+- asiabsdcon2019-rop-slides[M].
+- Dave Voutila. asiabsdcon2023-hardening vmd devices-slides[M]. 2023.
+- andrew, afresh1. 2024-Why-Rewrite-fw update-Fossy[M]. 2024.
+- chuck, deraadt. anoncvs-paper[M]. [存疑]
+- Niels Provos. crypt-slides[M]. 2002.
+- eurobsd-firewalls-2002[M]. 2002.
+- eurobsd2017-pkgtools[M].
+- Brian Bamsch. Porting Open BSD to RISCV Final Report[M]. 2020.
+- Paul Irofti. eurobsdcon2014-octeon dsr500[M]. 2014.
+- eurobsdcon2014-rdomains[M].
+- eurobsdcon2015-mandoc[M].
+- eurobsdcon2016-embracingbsdrt[M].
+- eurobsdcon2017-schedisnot[M].
+- eurobsdcon2019-bwfm[M].
+- Software Freedom Conservancy. Form-990 fy-2022-23[M]. 2022.
+- eurobsdcon2019-gameoftrees[M].
+- eurobsdcon2019-perform-slides[M].
+- eurobsdcon2022-espie-arches[M].
+- eurobsdcon2022-tb-libressl[M].
+- Marc Espie. lse clang[M]. 2017.
+- eurobsdcon2023-matthieu-pf-rdomain[M].
+- eurobsdcon2023-otto-malloc[M].
+- Dave Voutila. eurobsdcon2024-vmd multiprocessing[M]. 2024.
+- 未知. openbsd Open BSD-jitsi[M]. 2022.
+- Giovanni Bechis 12 ` ~~~ alse. openbsd seccomp-pledge-oss2017[M]. 2017.
+- eurobsdcon2025-hshoexer-confidential-computing[M].
+- eurobsdcon2021-espie-debug[M].
+- eurobsdcon2024-hshoexer-confidential-computing[M].
+- eurobsdcon2025-espie-dpb[M].
+

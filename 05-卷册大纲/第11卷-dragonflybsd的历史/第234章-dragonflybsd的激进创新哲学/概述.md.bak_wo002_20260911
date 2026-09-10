@@ -1,0 +1,228 @@
+---
+chapter: 第 234 章
+id: CH234
+volume: 第11卷-dragonflybsd的历史
+---
+
+# 第 234 章 DragonFly BSD 的激进创新哲学
+
+> 本子章由原第 105 章拆分而来，承载 234.1-234.7 节。
+
+## 本章节索引
+
+1. [234.1 激进创新哲学](234.1-激进创新哲学.md)
+2. [234.2 社区与治理](234.2-社区与治理.md)
+3. [234.3 多元群体贡献](234.3-多元群体贡献.md)
+4. [234.4 外部批评与反对者](234.4-外部批评与反对者.md)
+5. [234.5 重要贡献者与边缘者](234.5-重要贡献者与边缘者.md)
+6. [234.6 与同时期操作系统的比较](234.6-与同时期操作系统的比较.md)
+7. [234.7 批评层](234.7-批评层.md)
+
+## 数据核验与统计（自动增补 · 0-信任）
+
+> **来源库**：资料数据库 · materials / material_cross_references；references_fulltext · chapter_matches / chapter_reviews；doubts_standalone · doubts_to_resolve
+> **方法**：基于全局章号 1–348 直接 SQL 聚合；未做外部事实验证；`ch=0`/未映射条目不计入本章。
+> **生成时间**：2026-08-04 ｜ **复现**：`script/_engine_integrity_analysis.py`
+
+| 指标 | 数值 |
+| --- | --- |
+| 锚定素材 | 0 篇（含存疑标记 0 篇） |
+| 存疑点 | 51 条 |
+| 参考文献匹配 | 0 条 |
+| 章节述评 | 未生成 |
+| 章内交叉引用 | 出 0 / 入 0 |
+
+**数据质量备注**：本章尚无锚定素材，属史料回填优先对象；存疑点较多（51 条），建议优先考据核验；暂无参考文献匹配
+
+## 史观映射（shigang.md 哲学域→本章应用）
+
+| shigang 域 | 本章具体应用 |
+|:--|:--|
+| §4 逻辑学 | 233.1 节“Fork 作为逻辑选择”（新增节）——Dillon 选择自 4.x 而非 5.x 分叉是两个不可通约的形式系统的碰撞 |
+| §15 技术哲学 | 233.1 节“激进创新哲学是'做'而非'说'”——19 年 12 条 innovat/radical commit，哲学体现在工程行动中 |
+| §22 存在哲学 | DragonFly 作为“少数派的存在”——在没有大规模用户的情况下持续开发的存在主义意义 |
+| §9 历史哲学 | “分离聚合是永恒规律”——DragonFly 从 FreeBSD 的分离是 BSD 家族分离→独立发展→部分聚合循环的一环 |
+
+<!-- DATA_VERIFY_BLOCK v20260804 -->
+> 2026-08-11 补：本卷全部 23 章原缺 DATA_VERIFY_BLOCK，此为批量修复补入。卷级综述见 [vol-11.md](../../../04-现代研究文献/02-卷级文献综述/vol-11.md)
+>
+## 数据核验与统计（自动增补 · 0-信任）
+
+> **来源库**：资料数据库 · materials / material_cross_references；references_fulltext · chapter_matches / chapter_reviews；doubts_standalone · doubts_to_resolve
+> **方法**：基于全局章号 1–348 直接 SQL 聚合；未做外部事实验证；`ch=0`/未映射条目不计入本章。
+> **生成时间**：2026-08-11（批量回填） ｜ **复现**：`script/_engine_integrity_analysis.py`
+
+| 指标 | 数值 |
+| --- | --- |
+| 锚定素材 | 待补（本卷全部 23 章原缺锚定素材，属史料回填优先对象） |
+| 存疑点 | 0 条 |
+| 参考文献匹配 | 1 条 |
+| 章节述评 | 未生成 |
+| 章内交叉引用 | 出 0 / 入 0 |
+
+**数据质量备注**：本章为 DragonFly BSD 卷，史料档案待从 03-原始史料库/11-邮件列表史料/ 和 bsd_commits.db dragonfly-src 仓库补充；2026-08-11 批量回填 DVB 框架
+
+<!-- DB_POINTS:doubts_resolved -->
+**数据库要点引用（doubts_standalone.db · 2026-08-13）**
+
+> 来源：`04-现代研究文献/06-存疑数据库/doubts_standalone.db` 表 `doubts_to_resolve`（1987 条，1966 已解决）。本章存疑 51 条已解决。类别分布：other(30)、date(9)、source_conflict(8)、fact(3)、name(1)
+
+> 存疑管理体系：98.9% 已闭环，解决结论含 date/fact/source_conflict/name/version 等类型，具体结论见 doubts_standalone.db 表 `resolution_summary` 字段。
+<!-- /DB_POINTS:doubts_resolved -->
+
+<!-- DB_POINTS:chapter_reviews -->
+**数据库要点引用（references_fulltext.db · chapter_reviews · 2026-08-13）**
+
+> 来源：`04-现代研究文献/05-参考文献全文数据库/references_fulltext.db` 表 `chapter_reviews`（348 章全覆盖）。本章级文献综述 910 字、匹配 1 篇文献，状态 imported。映射：旧章号 +1 → 磁盘章号。
+
+> **综述要点**：本章围绕“DragonFly BSD 的激进创新哲学”展开，覆盖 233.1 激进创新哲学；233.2 社区与治理；233.3 多元群体贡献；233.4 外部批评与反对者；233.5 重要贡献者与边缘者 等 7 个子节。数据核验显示：锚定素材 0 篇（含存疑标记 0 篇）、参考文献匹配 0 条、存疑点 51 条（自动增补，0 信任原则下须人工复核）。子节要点：233.1 激进创新哲学：DragonFlyBSD于2003年6月17日自Fr
+
+<!-- /DB_POINTS:chapter_reviews -->
+
+<!-- COL_SCAN v20260826 -->
+## 内容包复核增补（Phase 4 · 2026-08-26）
+
+> 基于 4 个核心数据库（doubts_standalone、historical_claims、original_sources、资料数据库）内容包自动匹配与审核。
+> 内容包总行数：467 | 去重主张数：263 | 复核方法：12 步流程（详见 vol2to5_phase4_summary.md）
+
+### 证据等级分布
+
+| 等级 | 说明 | 数量 | 占比 |
+| --- | --- | --- | --- |
+| L1 | 代码与构建产物 | 200 | 42.8% |
+| L2 | 即时通讯记录 | 0 | 0.0% |
+| L3 | 官方文档与公告 | 200 | 42.8% |
+| L4 | 事后叙述 | 67 | 14.3% |
+| L5 | 二手研究 | 0 | 0.0% |
+
+### 来源数据库分布
+
+| 来源 | 行数 |
+| --- | --- |
+| 资料数据库 | 400 |
+| historical_claims | 67 |
+
+### 新增证据点（L1-L3）
+
+1. [L3] `资料数据库.freebsd_sa.full_text#1` — -----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA512
+
+=============================================================================
+FreeBSD-SA-26:49.iconv                                     Security Advis...
+2. [L1] `资料数据库.nvd_cve_metadata.description#cve_id=CVE-2005-0953` — Race condition in bzip2 1.0.2 and earlier allows local users to modify permissions of arbitrary files via a hard link attack on a file while it is being decompressed, whose permissions are changed by ...
+3. [L1] `资料数据库.nvd_cve_metadata.description#cve_id=CVE-2005-1797` — The design of Advanced Encryption Standard (AES), aka Rijndael, allows remote attackers to recover AES keys via timing attacks on S-box lookups, which are difficult to perform in constant time in AES ...
+4. [L1] `资料数据库.nvd_cve_metadata.description#cve_id=CVE-2005-3352` — Cross-site scripting (XSS) vulnerability in the mod_imap module of Apache httpd before 1.3.35-dev and Apache httpd 2.0.x before 2.0.56-dev allows remote attackers to inject arbitrary web script or HTM...
+5. [L1] `资料数据库.nvd_cve_metadata.description#cve_id=CVE-2006-0225` — scp in OpenSSH 4.2p1 allows attackers to execute arbitrary commands via filenames that contain shell metacharacters or spaces, which are expanded twice.
+6. [L1] `资料数据库.nvd_cve_metadata.description#cve_id=CVE-2006-1744` — Buffer overflow in pl_main.c in sail in BSDgames before 2.17-7 allows local users to execute arbitrary code via a long player name that is used in a scanf function call.
+7. [L1] `资料数据库.nvd_cve_metadata.description#cve_id=CVE-2006-2362` — Buffer overflow in getsym in tekhex.c in libbfd in Free Software Foundation GNU Binutils before 20060423, as used by GNU strings, allows context-dependent attackers to cause a denial of service (appli...
+8. [L1] `资料数据库.nvd_cve_metadata.description#cve_id=CVE-2006-3918` — http_protocol.c in (1) IBM HTTP Server 6.0 before 6.0.2.13 and 6.1 before 6.1.0.1, and (2) Apache HTTP Server 1.3 before 1.3.35, 2.0 before 2.0.58, and 2.2 before 2.2.2, does not sanitize the Expect h...
+9. [L1] `资料数据库.nvd_cve_metadata.description#cve_id=CVE-2006-4810` — Buffer overflow in the readline function in util/texindex.c, as used by the (1) texi2dvi and (2) texindex commands, in texinfo 4.8 and earlier allows local users to execute arbitrary code via a crafte...
+10. [L1] `资料数据库.nvd_cve_metadata.description#cve_id=CVE-2006-4924` — sshd in OpenSSH before 4.4, when using the version 1 SSH protocol, allows remote attackers to cause a denial of service (CPU consumption) via an SSH packet that contains duplicate blocks, which is not...
+11. [L1] `资料数据库.nvd_cve_metadata.description#cve_id=CVE-2006-5051` — Signal handler race condition in OpenSSH before 4.4 allows remote attackers to cause a denial of service (crash), and possibly execute arbitrary code if GSSAPI authentication is enabled, via unspecifi...
+12. [L1] `资料数据库.nvd_cve_metadata.description#cve_id=CVE-2006-5752` — Cross-site scripting (XSS) vulnerability in mod_status.c in the mod_status module in Apache HTTP Server (httpd), when ExtendedStatus is enabled and a public server-status page is used, allows remote a...
+13. [L1] `资料数据库.nvd_cve_metadata.description#cve_id=CVE-2006-5794` — Unspecified vulnerability in the sshd Privilege Separation Monitor in OpenSSH before 4.5 causes weaker verification that authentication has been successful, which might allow attackers to bypass authe...
+14. [L1] `资料数据库.nvd_cve_metadata.description#cve_id=CVE-2007-1218` — Off-by-one buffer overflow in the parse_elements function in the 802.11 printer code (print-802_11.c) for tcpdump 3.9.5 and earlier allows remote attackers to cause a denial of service (crash) via a c...
+15. [L1] `资料数据库.nvd_cve_metadata.description#cve_id=CVE-2007-1536` — Integer underflow in the file_printf function in the “file” program before 4.20 allows user-assisted attackers to execute arbitrary code via a file that triggers a heap-based buffer overflow.
+
+> 另有 181 条 L1-L3 证据点未列出，详见内容包文件。
+
+### 备用证据点（L4）
+
+1. [L4] `historical_claims.entity.canonical_name#entity_id=ENT-P-000037` — Alpine Lin
+2. [L4] `historical_claims.entity.canonical_name#entity_id=ENT-P-000038` — Alpine Linux
+3. [L4] `historical_claims.entity.canonical_name#entity_id=ENT-P-000089` — Based Models
+4. [L4] `historical_claims.entity.canonical_name#entity_id=ENT-P-000511` — Involuntary Altruism
+5. [L4] `historical_claims.entity.canonical_name#entity_id=ENT-P-000519` — Jan Stary Ehans
+6. [L4] `historical_claims.entity.canonical_name#entity_id=ENT-P-000595` — Level Startup
+7. [L4] `historical_claims.entity.canonical_name#entity_id=ENT-P-000601` — Linus Torvalds
+8. [L4] `historical_claims.entity.canonical_name#entity_id=ENT-P-000835` — Proposed Standard
+
+> 另有 59 条 L4 证据点未列出。
+
+### 0 信任评估
+
+- 独立来源数：2 个数据库
+- 一级史料通过率：85.7%（L1+L2+L3 / 总行数）
+- 本章 L1-L3 级史料 196 条，可纳入大纲但需标注来源
+- 所有主张均来自内容包自动匹配，未经人工逐一核实
+- 单一来源支撑的主张须标注 (单一文献支撑，待交叉验证)
+
+### 交叉验证提示
+
+- 本章有 196 条 L1-L3 级证据，建议优先与此前已入库的 MAIL_MINE、DB_POINTS、PODCAST_MINE 块交叉验证
+
+<!-- /COL_SCAN -->
+
+
+<!-- DEEP_ANALYSIS: darwin.duckdb.commits -->
+**数据库分析发现**（证据等级：L1，来源：`darwin.duckdb.commits.darwin`）
+
+darwin 代码仓库：从 2001 年到 2026 年，共 2016 次提交，43 位贡献者参与。
+
+
+
+<!-- DEEP_ANALYSIS: darwin.duckdb.commits -->
+**数据库分析发现**（证据等级：L1，来源：`darwin.duckdb.commits.darwin`）
+
+darwin 核心贡献者：Apple OSS Distributions(2016)
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L2，来源：`historical_claims.duckdb.claim.CL-7-027`）
+
+参考文献全文数据库收录《1983 Apple v Franklin 714F2d1240》（unknown，1983），作为本章主题的候选史料。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L2，来源：`historical_claims.duckdb.claim.CL-7-040`）
+
+参考文献全文数据库收录《20260805 Leventhal MacOSX missing probes 2008 en》（unknown，2026），作为本章主题的候选史料。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L2，来源：`historical_claims.duckdb.claim.CL-7-043`）
+
+参考文献全文数据库收录《entry08400 newsroom 2024 09 macos sequoia is available today》（unknown，2024），作为本章主题的候选史料。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L2，来源：`historical_claims.duckdb.claim.CL-7-032`）
+
+参考文献全文数据库收录《entry08427 apple oss distributions xnu》（unknown，年份不详），作为本章主题的候选史料。
+
+## 文献
+
+- Ingo Schwarze. bsdcan14-mandoc[M]. 2014.
+- Ingo Schwarze. bsdcan15-mandoc[M]. 2015.
+- eurobsdcon2014-mandoc-slides[M].
+- eurobsd-firewalls-2002[M]. 2002.
+- Watson. Capsicum USENIX-Security[M]. 2010.
+- bart, mzhang464, elisa. 018 The Relevance of Classic Fuzz Testing Have We Solved This One[M]. 2021.
+- 付远志. 操作系统内核模糊测试方法研究[M]. 2021.
+- White H. Metahistory: The Historical Imagination in Nineteenth-Century Europe [M]. Baltimore: Johns Hopkins University Press, 1973.
+- eurobsdcon2014-mandoc-paper[M].
+
+<!-- MAIL_INSIGHT_SECTION v20260828-v2 -->
+## 邮件列表分析观点（2026-08-28 自动增补）
+
+> 数据源：`script/_mail_analysis/topic_analysis_dragonfly.md`（7 主题 × 50 封邮件）+ `person_analysis_dragonfly_dillon.md`（Dillon 500 封邮件分析）
+> 方法：按章主题从报告中提取邮件段落，蒸馏为史学观点（V2 格式）
+> 注意：报告覆盖范围主要为 2023-2026 年 bug 跟踪器与用户邮件列表，早期（2003-2020）历史邮件未纳入分析
+
+
+
+<!-- MAIL_INSIGHT: <redmine.journal-14661.20260507052400.5@leaf.dragonflybsd.org> -->
+**观点**：Matthew Dillon 在 2026 年 5 月处理 vtscsi panic-dump 死锁（Bug #3409）时，明确拒绝了 AI 生成的补丁，给出了具体的工程理由：“我不太喜欢 AI 生成的补丁，因为它基于检查 `panicstr` 全局变量做了太多关于 dump 原因的假设。我们可能需要一个更通用的驱动调用，让内核 core dump 代码可以尝试使可能持有锁的设备可用。”
+**邮件来源**：dillon，DragonFly BSD Bug Tracker，2026-05-07，Message-ID: `redmine.journal-14661.20260507052400.5@leaf.dragonflybsd.org`
+**史学意义**：Dillon 对 AI 生成代码的拒绝是 DragonFly“激进创新哲学”在 2026 年的具体体现——他要求的不是针对症状的快速修复，而是架构层面的通用解决方案。这种“追求根本性解决而非临时修补”的工程哲学，是 DragonFly 从 LWKT 设计到 HAMMER 2 架构一以贯之的核心原则。
+<!-- /MAIL_INSIGHT -->
+
+<!-- MAIL_INSIGHT: <CAOZ7CpARBhRcKdjLuLkhh43XPM7vgiebaGXBequ-A8z6pwVv_w@mail.gmail.com> -->
+**观点**：Matthew Dillon 在 2023 年 12 月回复用户时，将 VLAN 配置的 RC 系统改进描述为“一个很酷的小项目”（“it would be a cool little project to bring it up to date”），但随即表示自己通常手动在 `/etc/rc.local` 中添加 `ifconfig` 命令。这种“先做再说”的实用主义态度是 DragonFly 工程文化的特征。
+**邮件来源**：Matthew Dillon，dragonfly-users 邮件列表，2023-12-06，Message-ID: `CAOZ7CpARBhRcKdjLuLkhh43XPM7vgiebaGXBequ-A8z6pwVv_w@mail.gmail.com`
+**史学意义**：Dillon 的实用主义——宁愿手动配置也不愿花时间改进基础设施——体现了 DragonFly 的“动手者哲学”：工程行动优先于系统化建设，个体能力优先于制度化流程。这一哲学既是 DragonFly 创新的源泉，也是其可持续性问题的根源。
+<!-- /MAIL_INSIGHT -->

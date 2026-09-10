@@ -1,0 +1,291 @@
+# 191.1 OpenBSD 4.0-4.4 的安全与工程改进（2006-2008）——4.0 引入 malloc 替代、4.1 改进 pf 语法、4.2 引入 softraid 加密雏形、4.4 完整启用 softraid 加密
+
+## 191.1.1 malloc 替代的安全设计
+
+**要点**：OpenBSD 4.0（2006.11）开发周期引入 malloc 替代实现，核心工作由 tedu@（Ted Unangst）推动——2006-10-24 tedu commit `66e23c51d017082140fbe2ea4dc683819862f8c9` "respond to ben hawkes's ruxcon presentation. create special allocators for pg..."，针对 Ben Hawkes 在 RUXCON 2006 演示的堆漏洞利用，引入分页级独立分配器、guard page 与 free 后填充等安全特性；otto@（Otto Moerbeek）在 4.x 周期持续维护 malloc 子系统（bsd_commits.db 显示 otto@ 2005-01-03 至 2010-12-22 共 1020 条 commit）；malloc 替代让堆溢出与 use-after-free 攻击更难利用
+
+  **malloc 替代关键 commit**：
+
+  | 日期 | commit hash | 作者 | 说明 |
+  | --- | --- | --- | --- |
+  | 2006-10-24 | `66e23c51d017082140fbe2ea4dc683819862f8c9` | tedu@ | respond to ben hawkes's ruxcon presentation, create special allocators |
+  | 2005-01-03 至 2010-12-22 | （多条） | otto@ | malloc 子系统持续维护，共 1020 条 commit |
+
+**史料**：bsd_commits.db openbsd-src 仓库 commit 66e23c51d017082140fbe2ea4dc683819862f8c9（2006-10-24 tedu "respond to ben hawkes's ruxcon presentation. create special allocators..."）；OpenBSD 4.0 Release Notes malloc 部分（<https://www.openbsd.org/40.html>）；Ben Hawkes RUXCON 2006 演讲档案；bsd_commits.db openbsd-src 仓库 otto@ 2005-2010 commit 统计 ［A］
+
+**史观**：总纲第 10 条——边缘者贡献：tedu@ 作为 OpenBSD 核心开发者对 malloc 安全替代的工程实现，是 “边缘者承担安全关键基础设施” 的具体显现——OpenBSD 的 malloc 替代不是由大厂商团队推动，而是由单一开发者响应安全研究社区的漏洞披露（Ben Hawkes 的 RUXCON 演讲）而实现
+
+**辨析**：OpenBSD malloc 与 FreeBSD phk malloc、Linux SLAB 的性能对比无单一权威基准——OpenBSD 以安全（guard page、随机化）为优先，FreeBSD phk malloc（Poul-Henning Kamp（波尔-亨宁·坎普） 设计）以性能为优先，Linux SLAB/SLUB 以多核扩展性为优先，三者的设计目标不同使性能对比须明确测试维度；malloc 替代对实际漏洞利用的防御效果以 OpenBSD CVE 历史记录中堆相关漏洞的可利用性变化为准——2010 年后 OpenBSD 堆相关 CVE 数量低于同期 Linux，但因果关系无学术研究证实 [考据完成：2026-07-28 OpenBSD malloc 替代与 CVE 数量下降的因果关系无同行评审研究]
+
+**文献**：bsd_commits.db openbsd-src 仓库 commit 66e23c51d017082140fbe2ea4dc683819862f8c9；OpenBSD 4.0 Release Notes [EB/OL]. <https://www.openbsd.org/40.html>；phk malloc 论文；Linux SLAB/SLUB 文档 ［A］
+
+## 191.1.2 pf 语法的改进与扩展
+
+**要点**：OpenBSD 4.1（2007.5）改进 pf 语法，2005-05-22 henning commit a60c9213a0df 引入 interface groups 匹配（"allow pf to match on interface groups pass on mygroup..."），让 pf 规则可按接口组而非单一接口匹配；4.2（2008.11）扩展 anchors 与 tables 语法；bsd_commits.db 显示 2005-2010 年间 pf 相关 commit 以 claudio@（198 条）与 henning@（169 条）为主，原大纲称 “Henning Brauer（亨宁·布劳尔）、Reyk Flöter、Daniel Hartmeier（丹尼尔·哈特迈尔） 等是主要贡献者”——Daniel Hartmeier 是 pf 的原始作者（2001 年首次引入），但 4.x 时期的主要维护者是 claudio@ 与 henning@
+
+**史料**：bsd_commits.db openbsd-src 仓库 commit a60c9213a0df（2005-05-22 henning "allow pf to match on interface groups"）；OpenBSD 4.1-4.3 Release Notes pf 部分（<https://www.openbsd.org/41.html>、<https://www.openbsd.org/42.html、https://www.openbsd.org/43.html）；bsd_commits.db> openbsd-src 仓库 2005-2010 pf 相关 commit 贡献者统计（claudio 198、henning 169、mcbride 52） ［A］
+
+**史观**：总纲第 17 条——软件工程：pf 语法作为接口契约的演进——interface groups 匹配让 pf 规则从 “按接口名硬编码” 升级为 “按接口组抽象”，这一变更将运维需求（多接口环境下的规则复用）转化为语法特性，是软件工程中 “抽象层次提升” 在防火墙配置语言层的实践
+
+**辨析**：pf 语法在不同 OpenBSD 版本中的具体变化以 **pf.conf(5)** 手册页历次版本与 Release Notes 交叉为准——Release Notes 记录用户可见的语法变更（如 interface groups），**pf.conf(5)** 手册页记录完整语法规范；anchors 与 tables 的语义差异以 **pf.conf(5)** 手册页为准——anchors 是命名规则块可动态替换，tables 是命名地址集合可动态更新，二者用途不同
+
+**文献**：bsd_commits.db openbsd-src 仓库 commit a60c9213a0df；OpenBSD 4.1-4.3 Release Notes [EB/OL]. <https://www.openbsd.org/41.html>；OpenBSD **pf.conf(5)** 手册页 [EB/OL]. <https://man.openbsd.org/pf.conf.5> ［A］
+
+## 191.1.3 与 FreeBSD malloc/Linux SLAB 的比较
+
+**要点**：FreeBSD 使用 phk malloc（Poul-Henning Kamp 1995 年设计），Linux 使用 SLAB/SLUB 分配器；OpenBSD malloc 强调安全（guard page、随机化、free 后填充），FreeBSD phk malloc 强调性能与 per-CPU 缓存，Linux SLAB/SLUB 强调多核扩展性与内存回收效率；三者设计哲学反映各自社区优先级——OpenBSD 安全优先、FreeBSD 性能优先、Linux 扩展性优先
+
+  **三大 malloc 实现对比**：
+
+  | 项目 | 设计者 | 设计优先级 | 关键特性 | 性能开销 |
+  | --- | --- | --- | --- | --- |
+  | OpenBSD malloc | tedu@（2006 替代） | 安全优先 | guard page、随机化、free 后填充 | 约 5-10% |
+  | FreeBSD phk malloc | Poul-Henning Kamp（1995） | 性能优先 | per-CPU 缓存 | 接近原生 |
+  | Linux SLAB/SLUB | Jeff Bonwick（杰夫·邦威克） 等 | 扩展性优先 | 多核扩展、内存回收 | 接近原生 |
+
+**史料**：phk malloc 论文（Poul-Henning Kamp, "You're Doing It Wrong", 2010, ACM Queue）；Linux SLAB/SLUB 文档（<https://www.kernel.org/doc/html/latest/mm/slab.html>）；OpenBSD malloc 文档（<https://man.openbsd.org/malloc.3>）；openbsd.duckdb openbsd-src 仓库 tedu@ malloc 相关 commit ［A］
+
+**史观**：总纲第 7 条——技术选择即政治选择：三个项目 malloc 设计反映各自政治选择——OpenBSD 以 “安全为不可妥协之预设” 选择 guard page 与随机化（性能开销为代价），FreeBSD 以 “性能为部署之基” 选择 per-CPU 缓存（安全特性为可选），Linux 以 “扩展性为规模化之钥” 选择 SLAB/SLUB（安全特性由 SELinux 等外部机制承担）
+
+**辨析**：三者性能对比以同硬件同负载的 SPECint 等基准测试为准——OpenBSD malloc 的 guard page 与随机化带来约 5-10% 性能开销（OpenBSD 邮件列表讨论估算，无同行评审基准），FreeBSD phk malloc 与 Linux SLUB 性能接近；安全特性的防御效果以 CVE 历史与漏洞利用研究为准——OpenBSD malloc 的 guard page 可检测部分堆溢出，但对堆内 off-by-one 溢出无防御效果
+
+**文献**：Poul-Henning Kamp. You're Doing It Wrong [J]. ACM Queue, 2010；Linux SLAB/SLUB 文档 [EB/OL]. <https://www.kernel.org/doc/html/latest/mm/slab.html>；OpenBSD **malloc(3)** 手册页 [EB/OL]. <https://man.openbsd.org/malloc.3> ［A］
+
+## 191.1.4 发布说明与 commit 记录考据
+
+**要点**：OpenBSD 4.0-4.4 的 Release Notes 与 CVS commit log 是研究此时期安全与工程改进的核心史料；openbsd.duckdb openbsd-src 仓库 2005-2010 年间贡献者以 deraadt@（5416 条）、jmc@（3921 条）、miod@（3760 条）、brad@（2728 条）、kettenis@（2271 条）为主；OpenBSD 4.0 release 的开发周期起点以 2006-09-17 steven commit e8d7e8373d3b "4.0-current" 为标识；统计结论印证——openbsd.duckdb openbsd-src 仓库总 commit 数 245,904（统计结论 C-05），4.x 时期（2005-2010）处于 Pettitt 检验变点 2001-01（统计结论 C-14）之后的工程节奏阶段，反映 OpenBSD 从 fork 后的高位 commit 量向稳态工程节奏的持续收敛
+
+**史料**：openbsd.duckdb openbsd-src 仓库 2005-2010 commit 统计（deraadt 5416、jmc 3921、miod 3760、brad 2728、kettenis 2271）；commit e8d7e8373d3b（2006-09-17 steven "4.0-current"）；OpenBSD 4.0-4.4 Release Notes（<https://www.openbsd.org/40.html> 至 <https://www.openbsd.org/44.html>）；OpenBSD 邮件列表档案（<https://marc.info/?laccopenbsd-tech>）；openbsd.duckdb openbsd-src 仓库 commits 表（统计结论 C-05 总 commit 数 245,904，SQL `SELECT COUNT(*) FROM commits WHERE repo_name='openbsd-src'`；查询日期 2026-07-27）；openbsd.duckdb openbsd-src 仓库变点检测（统计结论 C-14：Pettitt 检验变点 2001-01 / BUISHAND 检验变点 2017-09，Python Pettitt 自实现 + BUISHAND R 自实现；查询日期 2026-07-27）；openbsd.duckdb 查询 L1.1.1（经 L1.1.2 交叉验证）显示 openbsd-src 仓库 2005-2010 年逐年 commit 量与占 4 大 BSD src 合计百分比数据未在报告前 30 行中显示（L1.1.2 查询结果共 124 行，报告仅显示前 30 行覆盖 1995-2002 年），须以数据库直接查询补全 ［A］
+
+**史观**：总纲第 25 条——0 信任原则：Release Notes 与 commit log 的交叉验证是 0 信任原则在版本史研究中的实践——Release Notes 仅记录 “重要的和用户可见的变更”（<https://www.openbsd.org/plus.html>），部分内部代码重构（如 tedu@ 的 malloc 分配器拆分）可能在 Release Notes 中简化描述但可在 commit log 中定位完整变更；统计结论印证——C-14 Pettitt 变点 2001-01 反映 “分离聚合是永恒规律”（总纲第 4 条）的工程节奏显现：4.x 时期（2005-2010）处于 2001-01 变点之后的工程节奏阶段，OpenBSD 从 fork 后的高位 commit 量（2.x-3.x 时期的 pf fork、W^X、SSP 集中引入）向稳态工程节奏（4.x 时期的 malloc 替代、softraid 加密、pf 语法持续改进）过渡，commit 量层面的变点与工程节奏转换在 2001-01 时点形成可检测的工程节点
+
+**辨析**：Release Notes 的完整性以 plus.html 页面为准——该页面仅记录用户可见变更，内部代码重构需以 commit log 补充；OpenBSD 仓库无 release tag（OpenBSD 使用 CVS 而非 git tag 标记 release），故 release 日期以 OpenBSD 官方网站公告为准 [考据完成：2026-07-28 openbsd.duckdb tags 表中无 openbsd-src 仓库的 release tag，OpenBSD release 日期须以 openbsd.org 官方公告为准]；openbsd.duckdb 查询 L1.1.1 局限：L1.1.1 报告仅显示 23 仓库 572 行结果中的前 30 行（全为 dragonfly 仓库），openbsd-src 逐年数据须经 L1.1.2 查询交叉验证获取，但 L1.1.2 报告亦仅显示 124 行中的前 30 行（覆盖 1995-2002 年），2003-2010 年 openbsd-src 份额数据须以数据库直接查询补全；openbsd-src 为 GitHub 镜像，commit 量可能滞后于 OpenBSD CVS 主仓；commit 量反映开发活跃度但不等于代码质量；**统计局限性标注**——C-05 总 commit 数 245,904 包含 1995-10 fork 后至 2026 年全部 commit，非 4.x 时期专属，跨期引用时须结合时间窗口切片；C-14 变点检测的 Pettitt 与 BUISHAND 两检验变点时点不一致（2001-01 vs 2017-09），反映变点检测方法的方法学敏感性——Pettitt 检验对中段变点敏感，BUISHAND 检验对全样本变点敏感，两检验变点不一致不等于 “变点不存在” 而反映 “不同检验对变点位置的统计推断差异”；统计显著 ≠ 实际显著，Pettitt 2001-01 变点须与 OpenBSD 3.0（2001-12-01）发布、IPFilter 许可证争议（2001-05）、pf fork（2001）等工程事件交叉验证后方可归因；多重比较风险——C-14 与 C-12（freebsd-src 变点 1999-08）、C-13（netbsd-src 变点 2011/2012）、C-15（dragonfly-src 变点 2016/2017）跨项目对比时须按 Bonferroni 校正；0 信任原则适用——变点检测基于月度 commit 量序列，commit 量本身无法区分审计 commit 与功能 commit，变点的工程归因须以 commit message 与 release event 交叉验证
+
+**文献**：bsd_commits.db openbsd-src 仓库；OpenBSD 4.0-4.4 Release Notes [EB/OL]. <https://www.openbsd.org/40.html>；OpenBSD CVS 仓库 [EB/OL]. <https://cvsweb.openbsd.org/>；bsd_commits.db 查询 L1.1.1 与 L1.1.2（来源：原材料/研究/bsd 仓库分析/数据分析/宏观趋势统计.md §L1.1.1、§L1.1.2）；统计分析报告：描述性统计.md SubTask 2.1 [R/OL]. 2026-07-27. 文件路径：`c:\Users\ykla\Documents\hibsd\03-原始史料库\01-代码仓库史料\01-数据库本体\统计分析\描述性统计.md`；统计分析报告：推断性统计.md Task 6 [R/OL]. 2026-07-27. 文件路径：`c:\Users\ykla\Documents\hibsd\03-原始史料库\01-代码仓库史料\01-数据库本体\统计分析\推断性统计.md`；SQL 查询：`SELECT COUNT(*) FROM commits WHERE repo_name='openbsd-src'`. bsd_commits.db [DB/OL]. 查询日期：2026-07-27；Python 统计脚本：`script/phase2_inferential.py`. Task 6 Pettitt + BUISHAND 变点检测。执行日期：2026-07-27 ［A］
+
+---
+
+## 史料登记与辩证校准（2026-08-08 追加）
+
+> **本卷命题**：24.3 长期主义（详见本卷 00-总览“编纂指导思想叙事参照”）
+
+### 史料文献
+
+- OpenBSD 安全机制文档；DARPA 资助史
+
+### 人物关联（person_research 表）
+
+- Theo de Raadt（西奥·德·若特）（id 8）、Marc Espie（马克·埃斯皮）（id 28）
+
+### 辩证校准（依据 sacred_sources.db 编纂指导思想）
+
+- OpenBSD 反战立场致 DARPA 撤资（2001）是其独立姿态的代价——如实记录（24.1 少数≠错误），不渲染‘殉道’叙事
+
+<!-- DB_REF:openbsd.duckdb -->
+> **数据库引用（openbsd.duckdb）**：本子节对应 openbsd 代码仓库。
+> 2006-2008 年间：49,370 次提交。
+> 仓库总览：491,195 次提交，3,352 位贡献者，1995-10-18 至 2026-08-25。
+
+<!-- DEEP_ANALYSIS: openbsd.duckdb.commits -->
+**数据库分析发现**（证据等级：L1，来源：`openbsd.duckdb.commits.openbsd`）
+
+openbsd 核心贡献者：ajacoutot(35528), deraadt(31454), sthen(30592), espie(18328), jasper(16649)
+
+<!-- DEEP_ANALYSIS: sacred_sources.duckdb.blocks -->
+**史家判断**（证据等级：L2，来源：`sacred_sources.duckdb.blocks.188`）
+
+以食品安全为例：人们永远无法得到真正的认识。你既不能说科学证明其在某量无毒害就真的无毒害，也不能证明它真的有毒害。用科学说服人本身就不科学——因为科学本身就是非充分决定性的，本身的正确性是得不到保证的。且你能得到的所有科学解释，正因为它是科学解释，所以它必定也是错误的。这并非反智，而是对科学边界的清醒认识。好坏是对于人来说的，所谓“剂量决定论”也是无意义的——零剂量不是更安全吗？
+
+<!-- DEEP_ANALYSIS: sacred_sources.duckdb.blocks -->
+**史家判断**（证据等级：L2，来源：`sacred_sources.duckdb.blocks.283`）
+
+王充因为个人境遇而提出了德福不一致论，其否定了个人努力的作用。可以看到人生的遭遇会对其理论有决定性的作用，有时是偏差，有时是谬误，但根本上说是一种悲伤。这揭示了理论建构的偶然性：任何理论都深深打上 theorist 个人经历的烙印。不存在客观的、超越个人境遇的理论。历史哲学的建构者同样如此——本书的理论亦不例外，它诞生于特定的境遇、特定的悲伤、特定的选择。
+
+<!-- DEEP_ANALYSIS: cross_indexes.duckdb.concept_history -->
+**史家判断**（证据等级：L2，来源：`cross_indexes.duckdb.concept_history.13`）
+
+出口管制：出口管制概念的演化: ①冷战成型期（1949–1951）：COCOM 建立，协调对苏联、东欧、中国的禁运货单；1951 年美国《相互防御援助管制法》（Battle Act）以停止援助迫使盟国参与（1980 年废止）；②缓和调整期（60–80 年代）：因缓和与贸易增长，管制多次放宽；③转型重组期（1993–1996）：1994 年 3 月 31 日 COCOM 解散；1995 年 12 月 19 日成立“瓦森纳协定”（Wassenaar Arrangement），1996 年 11 月 1 日起运作；④数字与加密期：加密早在冷战期被列为军品（由国务院依 AECA 管，即 ITAR），1996 年底部分非军用加密移至商
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-1-011`）
+
+Thompson 在 1984 年图灵奖演讲中称，特洛伊木马攻击的构想最早见于一份对 Multics 早期实现安全性的空军批判报告。
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-3-004`）
+
+Theodore Roszak 1969 年出版《The Making of a Counter Culture》，副标题为“对技术官僚社会及其青年反抗的反思”。
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-4-010`）
+
+Anonymous CVS 源码分发机制由 Charles D. Cranor 与 Theo de Raadt 创建，用于开放 OpenBSD 源码仓库。
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-4-011`）
+
+创建 Anonymous CVS 的目标之一是开放 OpenBSD 的 CVS 源码仓库访问，使项目更开放并鼓励开发者兴趣。
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-4-100`）
+
+1995 年秋启动 OpenBSD 项目时，Cranor 与 de Raadt 决定用 CVS 管理源代码树，并创建匿名 CVS 以开放源码仓库。
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-5-111`）
+
+Anonymous CVS 由 Charles D. Cranor 与 Theo de Raadt 在 1995 年秋创建 OpenBSD 时设计，使匿名互联网用户无需写权限账户即可访问源码库。
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-5-112`）
+
+Anonymous CVS 是一种让匿名互联网用户在不危及安全的前提下访问源码库的机制，将开放源码推进为开放源码库。
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-6-017`）
+
+Harris、Jha、Reps 等人提出声明式、时序化且实用的 capability 编程方法，用于在 Capsicum 上满足安全策略。
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-6-108`）
+
+OpenBSD 自 2005 年起对 SCSI 中间层（SCSI midlayer）实施重大重构，引入 mpath(4) 多路径虚拟总线与 iopools 资源池、将适配器命令处理器改为回调式 scsi_done API，以改善稳定性、性能与可扩展性。
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L2，来源：`historical_claims.duckdb.claim.CL-7-046`）
+
+参考文献全文数据库收录《20260805 Glass deRaadt expulsion email 19941223 en》（unknown，2026），作为本章主题的候选史料。
+
+## 文献
+
+- Ingo Schwarze. bsdcan15-mandoc[M]. 2015.
+- Ingo Schwarze. bsdcan18-mandoc[M]. 2018.
+- Paul Irofti. bsdcan2014-octeon dsr500[M]. 2014.
+- bsdcan2015-rdomains[M].
+- bsdcan2016-bfd[M].
+- bsdcan2016-xen[M].
+- bsdcan2019-syspatch[M].
+- bsdcan2019-tls13[M].
+- bsdcan2025-hshoexer-confidential-computing[M].
+- andrew, afresh1. 2024-Why-Rewrite-fw update-Euro BSDcon[M]. 2024.
+- eurobsdcon2008-sensors[M].
+- eurobsdcon2011-kettenis[M].
+- eurobsdcon2011-openbsdscsievolution[M].
+- eurobsdcon2014-mandoc-paper[M].
+- eurobsdcon2014-mandoc-slides[M].
+- eurobsdcon2014-parallel-make[M].
+- eurobsdcon2015-packages[M].
+- eurobsdcon2015-softraid-boot[M].
+- eurobsdcon2016-openbsd-11n[M].
+- eurobsdcon2016-privsep[M].
+- eurobsdcon2017-device-drivers[M].
+- eurobsdcon2017-opensmtpd[M].
+- eurobsdcon2018-mandoc[M].
+- eurobsdcon2018-rop[M].
+- eurobsdcon2019-plist[M].
+- eurobsdcon2022-krw-blockstobooting[M].
+- eurobsdcon2023-bluhm-mitigations[M].
+- eurobsdcon2023-espie-cache[M].
+- eurobsdcon2024-bluhm-packetflow[M].
+- eurobsdcon2025-bluhm-protomp[M].
+- eurobsdcon2025-florian-easy[M].
+- Marc Espie. eurobsdcon 2018 https[M]. 2018.
+- Claudio Jeker. asiabsdcon08-network[M]. 2008.
+- Murenin C A, Boutaba R. OpenBSD Hardware Sensors Framework[C]//AsiaBSDCon 2009 Proceedings. Tokyo, 2009.
+- Murenin C A. OpenBSD Hardware Sensors Framework（幻灯片）[EB/OL]. AsiaBSDCon 2009. <https://www.openbsd.org/papers/asiabsdcon2009-sensors-slides.pdf>.
+- syuu. asiabsdcon2010 smp for sgi paper[C]. 2010.
+- Alexandre Ratchov. asiabsdcon2010 sndio slides[C]. 2010.
+- asiabsdcon2016-vmm-slides[M].
+- asiabsdcon2019-rop-slides[M].
+- Dave Voutila. asiabsdcon2023-hardening vmd devices-slides[M]. 2023.
+- andrew, afresh1. 2024-Why-Rewrite-fw update-Fossy[M]. 2024.
+- chuck, deraadt. anoncvs-paper[M]. [存疑]
+- Niels Provos. crypt-slides[M]. 2002.
+- eurobsd-firewalls-2002[M]. 2002.
+- eurobsd2017-pkgtools[M].
+- Brian Bamsch. Porting Open BSD to RISCV Final Report[M]. 2020.
+- Paul Irofti. eurobsdcon2014-octeon dsr500[M]. 2014.
+- eurobsdcon2014-rdomains[M].
+- eurobsdcon2015-mandoc[M].
+- eurobsdcon2016-utf8[M].
+- eurobsdcon2017-schedisnot[M].
+- eurobsdcon2017-syslog-slides[M].
+- eurobsdcon2019-bwfm[M].
+- Software Freedom Conservancy. Form-990 fy-2022-23[M]. 2022.
+- eurobsdcon2019-gameoftrees[M].
+- eurobsdcon2019-perform-slides[M].
+- eurobsdcon2022-bluhm-networkmp[M].
+- eurobsdcon2022-espie-arches[M].
+- eurobsdcon2022-tb-libressl[M].
+- Marc Espie. lse clang[M]. 2017.
+- eurobsdcon2023-matthieu-pf-rdomain[M].
+- Dave Voutila. eurobsdcon2024-vmd multiprocessing[M]. 2024.
+- 未知. openbsd Open BSD-jitsi[M]. 2022.
+- Giovanni Bechis 12 ` ~~~ alse. openbsd seccomp-pledge-oss2017[M]. 2017.
+- eurobsdcon2025-hshoexer-confidential-computing[M].
+- eurobsdcon2016-embracingbsdrt[M].
+- eurobsdcon2021-espie-debug[M].
+- eurobsdcon2023-otto-malloc[M].
+- eurobsdcon2024-hshoexer-confidential-computing[M].
+- eurobsdcon2025-espie-dpb[M].
+
+<!-- PODCAST_REVIEW v20260829 -->
+<!-- 语义复核范围：BSDTalk EP111、BSDTalk EP133、BSDTalk EP161、BSDTalk EP97（共 4 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
+
+**要点**：
+
+- Diane Bruce 自述为职业驱动编写者（driver writer），近年将 FreeBSD 开发精力集中于业余无线电方向，另有零星内核工作；驱动写作的难度取决于厂商文档质量，偶尔需要逆向工程与汇编技能。其编程启蒙来自身为 COBOL 程序员的父亲，自幼学码、后写 C；大学原修数学、考虑过音乐，最终偶入计算机行业。她表示希望未来更深入 BSD 内核本身。　[存疑脚注] 转写作“some BSD carl work”，疑为 BSD/OS 或 BSDi 相关工作的误转，其早年工作经历细节待核（BSDTalk EP111，[92.5-108.98, 322.26-383.02, 526.06-567.42]，L1）
+- 当事人勾勒的业余无线电技术图景已远异于大众想象中的莫尔斯电码与人声：数字模式配合数字信号处理使极低功率的弱信号通信成为可能，地月反射通信即依赖 DSP 大幅降低功率需求；业余无线电可在完全不依赖互联网的条件下实现全球数字通信，甚至可在无线电数字模式上承载 TCP/IP。硬件门槛分层：软件定义无线电需附加设备，而多数数字模式仅用计算机声卡即可。　[存疑脚注] 转写作“TCTIP”，按语境应为 TCP/IP over amateur radio（BSDTalk EP111，[118.98-199.02]，L1）
+- 关于 BSD 与业余无线电社区的耦合，当事人的解释是双重的：业余无线电应用多为收费的 Windows 软件，BSD 提供免费可用的替代；且使用 BSD 的极客群体与业余无线电爱好者高度重叠，其他 committer 中即有无线电爱好者。其具体工作是维护 ports 集合中的业余无线电应用——ports 自动处理依赖的机制使 WSJT（月面反射通信软件，她本人为该项目成员）等应用的安装远较各 Linux 发行版省力，她持续收到用户要求适配各种 Linux 的负担，而在 FreeBSD 上仅需常规 ports 安装。同类可用应用还包括 PSK31 客户端、慢扫描电视与业余卫星预测程序。　[存疑脚注] 转写作“WSAT/MoonBound”，WSJT 为 Joe Taylor 弱信号通信软件之通行拼写，MoonBound 疑为 moon bounce 误转（BSDTalk EP111，[205.44-319.26]，L1）
+- OpenCon 是全球唯一专门面向 OpenBSD 的会议，2007 年在威尼斯机场附近酒店举行（与上年同址）；本届首次增设周五教程日，设 packet filter、OpenBSD ports 与 OpenBSD 可用 VPN 技术三场教程，讲者多为 OpenBSD 开发者；周六周日为多主题演讲马拉松。（BSDTalk EP133，[52.34-104.13]，L1）
+- 会议日程与发布节奏耦合：OpenBSD 4.2 定于 2007 年 11 月 1 日发布，OpenCon 于 12 月首个周末举行，届时与会者多已用上 4.2，现场可购 CD-ROM，讲者可将 4.2 新特性纳入演讲；发布切分在会前数月已完成，开发已转入 -current，因而演讲更多面向更新的事物。（BSDTalk EP133，[132.66-179.11]，L1）
+- 预告的技术演讲包括：瑞士 OpenBSD 开发者 Claudio Jeker 讲 OSPF6 守护进程（IPv6 的 OSPF 路由协议），以及关于 OpenBSD 4.2 缓冲区缓存改进的演讲等。（BSDTalk EP133，[179.58-217.60]，L1）
+- 社区庆典与经济安排：周六晚举办 OpenSSH 八周年生日派对（OpenSSH 生于 1999 年 10 月，2007 年满八岁），周五晚设酒吧非正式聚会以促进与会者与开发者交流构想；会议与教程全免费、无入场费，成本由组织者承担，午餐需自购、派对收少量费用；会议不做录像录音，理由是人们应当亲临现场。（BSDTalk EP133，[226.47-315.13]，L1）
+- Balmer 在 OpenCon 之外的工作是组织 OpenBSD 开发者会议（hackathon）：属非公开、仅受邀的内部活动，且趋势是越办越小规模，如上年葡萄牙的 hackathon；此类活动公开可见度低。（BSDTalk EP133，[315.13-344.45]，L1）
+- 规模与国际化：注册开放的首个周末已有来自 11 个国家的 28 人报名；上年参会者超过 130 人，甚至有来自黎巴嫩者；Balmer 感叹 BSD 社区已成长到足以支撑专门的国际会议。（BSDTalk EP133，[357.94-384.05]，L1）
+- NYCBSDCon 2008 周日现场：因周六日程延误，组织方压缩午休以追赶进度；OpenBSD 摊位预售 11 月 1 日正式发布的 4.4 版 CD 与 T 恤，旧 T 恤以十美元折扣出售，摊位负责人 Austin Hook 自述 T 恤与 CD 销售构成 OpenBSD 项目的重要资金来源；现场有五六位以上 OpenBSD 开发者，Joshua Stein 与 Sun 的 David Lawler 等亦在场；PC-BSD 主题的 BoF 场由 Chris Morris 主持，约八人参加、面向所有感兴趣者，话题涉及在虚拟机中运行等。（BSDTalk EP161，[242.42-358.05]，L1）
+- DataPipe 的 Unix 部门受访者 Mark Satt 自述：该公司为托管主机与主机托管服务商，1998 年创立、约三百名员工，办公地点遍布硅谷、纽约、伦敦、香港与上海；自创立起即以 BSD 为公司操作系统，内部系统与大量客户系统均运行 BSD，纽约周边客户全部为 BSD 客户，服务涵盖 VPN、防火墙、入侵检测与应用管理；此次为其首次赞助 BSD 会议，动机即纽约地区客户群的实际使用。（BSDTalk EP161，[120.58-218.42]，L1）
+- Theo Schlossnagle 的 Reconnoiter 网络监控系统演讲综述：定位与 Zenoss、Nagios 类似但设计思路迥异，面向数千台机器规模的监控问题，彼时尚处 alpha 阶段；其 web 界面绘图表现出色，并提供类似 Cisco 命令行界面的管理接口，明确以系统管理员的可用性为设计目标；主持人判断其值得跟踪但尚不宜投入生产。（BSDTalk EP161，[581.85-667.38]，L2）
+- Pavel 的 ZFS 演讲及其维护者瓶颈自述：演讲分两场合一，前半以作者自绘卡通动画轻松介绍 ZFS 的文件系统特性与 UFS 等早期文件系统的局限，后半面向开发者展开实现组件的技术讨论、无现场建池演示；他自述自己是 FreeBSD 上极少数从事 ZFS 的开发者之一，人手瓶颈使其不愿宣称生产可用——用户规模一旦扩大，问题报告将超出其个人处理能力，故呼吁更多开发者参与分担；Matthew Dillon 在场，会后两人就 ZFS 与 HAMMER 两个文件系统的设计交谈，主持人评论这种平日仅靠邮件列表往来的跨项目开发者面对面交流正是此类会议的核心价值。（BSDTalk EP161，[660.38-783.58]，L1）
+- Kurt Miller 的 OpenBSD PIE 演讲综述：位置无关可执行文件技术旨在使应用对特定类型的缓冲区溢出攻击更具抵抗力，项目拟在性能与其他副作用可接受的前提下将其加入默认构建，作为纵深防御的又一层次。（BSDTalk EP161，[784.70-825.02]，L2）
+- 周六技术讲座的转述综述：Adrian Chadd 讲 FreeBSD 高吞吐并发磁盘 IO，议题源于 squid 的经验教训并含 squid 与 varnish 的对比及 POSIX 同步异步 IO 概述与规模扩展性讨论；Jason Wright 讲硬件出错时，揭示硬件缺陷之普遍、以幽默幻灯呈现；Matthew Dillon 讲 HAMMER 文件系统，技术性强、面向开发者；Anders 讲 PCC 复兴进展并公开寻求资助以投入更多时间，PCC 尚需证明可用性与速度；另一场报告指出只要目标 CPU 有文档，PCC 移植到新架构约一周即可完成。（BSDTalk EP161，[825.02-1018.66]，L2）
+- 周六另外两场讲座的转述综述：Julio 讲 ATF 自动化测试框架——虽列于 NetBSD 名下但强调其通用定位、无开发工具依赖，源自 Summer of Code 项目，NetBSD 拟借其统一基系统中现有测试，易用且自动化的框架比完善却需手动使用的框架更具实效，跨平台可移植性有望吸引更多开发者；Jeremy Reed 讲 DNSSec——在近月 DNS 欺骗事件频发、DNS 协议事务 ID 与源端口随机化薄弱的背景下，演示以 ISC BIND 实施 DNSSEC 签名的步骤，并寄望大型 ISP 在上游部署以防缓存投毒。（BSDTalk EP161，[1018.66-1152.98]，L2）
+- Jason Dixon 的 BSD versus GPL 演讲综述：延续其此前 BSD is dying 演讲的轻松幽默风格，以笑话包裹许可证议题——讨论人们对各许可证自由程度的假设与哪种更自由的持久争论，并强调正试探涉足开源的企业有必要了解各许可证在可为与不可为、担保与自由保障上的差异。（BSDTalk EP161，[1152.98-1223.62]，L2）
+- 受访者自述 hoststated（Host State Demon）源于一个快速的临时实现：OpenBSD 当时没有任何监控主机状态并把存活主机放入 PF 表的工具，他写了一个执行 TCP 连接检查、将存活主机置于 PF 表中、使重定向规则永不指向宕机主机的程序。与 round-robin DNS 相比，DNS 负载均衡无从得知主机死活、依赖客户端自行切换到下一主机（多数浏览器会如此、并非全部）；hoststated 则借 PF 的三层目的地址重写对客户端完全透明。典型部署为服务器池置于负载均衡器之后，DNS 将连接指向均衡器，PF 以 RDR 规则把连接分发到池内机器。（BSDTalk EP97，[62.86-198.28]，L1）
+- hoststated 实为围绕 PF 的包装器，以非阻塞方式检查主机响应是否足够快；他仿照 OSPFD 实现了配套的 hoststated ctl，管理员可借此查看在线主机、并在维护或升级时禁用某台。检查方法包括 ICMP（对 IPv6 主机用 ping6）、TCP 连接检查、HTTP 检查（校验指定 URL 的返回码与页面内容的 SHA1 摘要），以及通用的 send/expect 方法——向连接发送一段数据并期待特定回应（如 SMTP banner 可只期待不发送），初以正则实现后改用 fnmatch；SSL 代码可用，所有 TCP 类检查方法均可包裹于 SSL。（BSDTalk EP97，[198.28-365.8]，L1）
+- 关于演进方向：按服务器负载加权的均衡是计划中的目标——但加权所需的代码在内核中与 PF 绑定，须在 PF 侧实现方可让某些主机被查询得更少；团队的长期目标是功能完整的负载均衡器。初始可用版本的目标已然达成，他希望 hoststated 能赶在 4.1 之前链入 build（否则将于 4.1 打标签后的早期 snapshot 提供）。测试环境为笔记本电脑加上家与单位各一组负载均衡测试机器，另有一台由他自管、带真实均衡器与专用主机的准生产部署用于大改动验证，并尽量实现每种场景以测试回归。（BSDTalk EP97，[365.8-498.68]，L1）
+- 受访者澄清负载均衡的一个常见误解：PF 式的基本负载均衡只重写目的地址、不重写源地址，因此 Web 服务器日志中记录的是真实的客户端信息，站点统计仍然准确；只有当均衡器与 Web 主机不在同一网段时才须同时重写源地址——此场景下若无七层负载均衡介入则丢失客户端信息（服务器只见来自均衡器的连接），做七层时通常附加 X-Forwarded 头。多数部署不采用该场景，源地址得以保留。（BSDTalk EP97，[517.96-600.4]，L1）
+- 与 CARP 冗余防火墙的配合及可移植性：两台防火墙各自运行 hoststated、分别维护 PF 表，CARP 切换时备份机上的表处于良好状态；代价是须在 CARP 设备与底层接口上共预留三个 IP、双机都要运行，略显过度。hoststated ctl 暂只支持本地连接。依赖方面只要操作系统支持 PF 与 C 库即可——有人尝试在 FreeBSD 上编译且据称顺利（需要 3.5 之后版本的 PF ioctl 及 strlcpy 等函数），虽此后未再收到回音，据他所见可以运行。（BSDTalk EP97，[600.4-716.24]，L1）
+
+**史料**：
+
+- 当事人描述的 2007 年多系统使用图景具有生态标本价值：FreeBSD 承担日常桌面与业余无线电专用机，OpenBSD 担任防火墙与路由器，一台原 DragonFly 机器已转为 FreeBSD 7-CURRENT，另有意购入 PC-BSD 机器，并另有 OS X 设备；她自称“BSD 无门户之见”（BSD agnostic）。此为单一 committer 的系统组合偏好陈述，不构成对各系统市场地位的判断。（BSDTalk EP111，[383.02-426.02]，L1）
+- 新闻段记录两条 2007 年 5 月社区动态：OpenBSD 4.1 于月初发布、全镜像可下载，主持人呼吁购买 CD 资助项目开发（并称此理适用于所有 BSD 发行版）；BSD 认证考试 beta 报名开放，在多个会议提供 beta 考试，通过 beta 不授予认证但可获正式考试折扣。（BSDTalk EP111，[27.2-46.24, 53.28-81.6]，L2）
+- OpenCon 2007 组织材料：官网 www.opencon.org、威尼斯会场、周五教程日安排与演讲名单（含 Claudio Jeker 的 OSPF6d 演讲）；OpenBSD 4.2 的 2007 年 11 月 1 日发布日期与更早的发布切分时点。（BSDTalk EP133，[122.61-179.11]，L1）
+- OpenSSH 诞生时间线的社区纪念证据：2007 年 10 月前后社区庆祝其八周岁生日，与 1999 年 10 月首次发布相互印证。（BSDTalk EP133，[226.47-238.75]，L1）
+- 本期留存的会议一手与二手记录包括：DataPipe 自 1998 年创立即全面使用 BSD 并拥有纽约地区 BSD 客户群的运营自述；OpenBSD 4.4 于 2008 年 11 月 1 日发布的日程及会议现场预售实况；Pavel 关于 FreeBSD ZFS 维护者稀缺与生产可用宣称瓶颈的自述；Theo Schlossnagle 的 Reconnoiter 监控系统 alpha 状态；OpenBSD PIE 拟纳入默认构建的动向；PCC 复兴与资助呼吁；ATF 测试框架的 NetBSD 采用计划。（BSDTalk EP161，[120.58-1152.98]，L1）
+- 本期为 OpenBSD 开发者 Pierre-Yves Ritschard 的口述访谈（bsdtalk097，2007-02-01），提供其履历与 commit 历程的一手陈述：自 OpenBSD 2.3 起（上大学前装于工作站）为其用户，此前用过 FreeBSD 与少量 Linux；视 OpenBSD 为开发平台、后用于网络架构；贡献自提交 ports 与小补丁起步，工作中深度使用后发现需要修复之处、渐多投入、尤以 OSPFD 为主；因工作常用 keepalived 而不喜其设计，遂以 OpenBSD 工具风格自写 hoststated——初始六成以上代码复用自 OSPFD（父进程架构与配置文件解析器几乎相同），先以 port 形式提交；Reyk Floeter 等开发者因同样需要而接洽、邀其维护，经邮件与代码往来后获得 commit 账号。访谈后 hoststated 被链入 build、随二月 snapshot 发布。（BSDTalk EP97，[725.8-895.88]，L1）
+
+**史观**：
+
+- 总纲20 历史地理塑造思想土壤：OpenCon 的地理组织——威尼斯会场、11 国乃至黎巴嫩的参会者流动——显示欧洲城市节点与会议空间如何承载并塑造 BSD 社区的交流形态，社区思想的生长与其地理聚点不可分。（BSDTalk EP133，[59.18-72.61]，L1）
+- 总纲10 动手者创造历史：工程生产的核心场域在非公开的 hackathon 而非公开舞台：仅受邀、趋小规模、低公开可见度的开发者会议承载实际工作，而公开会议拒绝录像、强调亲临现场——可见的庆典之下，动手者的协作空间另有其处。（BSDTalk EP133，[304.13-344.45]，L1）
+- 总纲10 动手者创造历史：hoststated 的进入路径是运维痛点驱动的个体劳动案例：作者在工作中对既有工具不满，以复用 OSPFD 代码与设计范式的方式为自身需求造轮，先以 port 交付、再经核心开发者因共同需要而接洽，最终获得 commit 权限并链入官方 build。工具的正规化不是自上而下规划的结果，而是动手者的局部方案被社区需求放大的过程。（BSDTalk EP97，[804.24-895.88]，L1）
+
+**辨析**：
+
+- 业余无线电的准入在当事人看来对 BSD 从业者技术门槛很低——所需知识大多已具备，主要新增学习内容是无线电法规（其以遵守交规作类比），故推荐通过本地俱乐部入门。关于无线组网的法规边界她给出具体说明：美国 802.11 属 FCC Part 15 规则、功率严格受限，而改按业余无线电规则运行同一物理层可获大得多的功率，社区中有人从事此类实验；她本人尚未在分组无线电上跑 cvsup 但认为带宽上可行。　[存疑脚注] 转写作“non part 15 802 11”与“H2 Force Commits”，后者疑为某 committer 群体或邮件列表的误转，待核（BSDTalk EP111，[426.02-517.06]，L1）
+- 转写人名讹误集中且部分不可辨识：Mark Ballmer 应为 Marc Balmer，Peter Hansen 应为 Peter Hansteen，Byrne Arlers 疑为 Bernd Ahlers，Felix Kronlager 应为 Felix Kronlage，Claudio Jäker 应为 Claudio Jeker，缓冲区缓存讲者讹作 Miky Schallaeffel 无法辨识，soft rate 疑为其他主题讹写；上述均须以 OpenCon 2007 官方日程核证。　[存疑脚注] 人名与讲题经上下文推断校正或无法辨识，须回溯会议官方日程（BSDTalk EP133，[79.69-217.60]，L4）
+- 转写中“首次在威尼斯举办”与“与上年同址”两种表述并存，OpenCon 2006 是否同在威尼斯无法由本期单独确证，须以历届 OpenCon 会址记录核证。　[存疑脚注] 会址沿革内部矛盾，待历届会议记录核证（BSDTalk EP133，[59.18-118.05]，L4）
+- 转写专名失真较多：Theo Schlossnagle 转写作 Theo 加 Schloss-Nagel、监控系统 Zenoss 转写作 Xenos、Adrian Chadd 转写作 Adrian Chad、PCC 全称转写作 portable sieve andpiler、受访者姓名 Mark Satt 拼写存疑、演讲者 Anders 与 Julio 的姓氏未在转写中出现。引用人名与项目名时须回溯原始音频或会议议程核对。　[存疑脚注] 多处专名转写失真，校正依据为上下文语义与同期外部史料，须以原始音频复核（BSDTalk EP161，[581.85-1159.98]，L4）
+- 讲座综述部分均系主持人的会后口头转述，其自承非开发者、部分技术内容超出其理解范围；转述的技术细节与论断须以各讲座的幻灯、录音或后续论文等一手材料复核，不可径直采信。　[存疑脚注] 转述者的理解深度有限，技术结论存在失真风险（BSDTalk EP161，[575.85-1223.62]，L4）
+- quality 元数据提示 repetition_detected，通读确认重复主要源于现场直播的信号重试与主持人的填场独白，实质访谈与综述内容完整可读；本卡片全部观点取自语义完整的片段。　[存疑脚注] 直播信号中断与重复段落的成因判断基于转写文本特征推断，须回听原始录音核对现场实况。（BSDTalk EP161，[0.00-1510.88]，L4）
+
+**文献**：
+
+- [BSDTalk EP111] Backman W. BSDTalk: 111: bsdtalk111 - FreeBSD Developer Diane Bruce[EB/OL]. (2007-05-09)[2026-08-27]. <https://archive.org/details/bsdtalk111>.
+- [BSDTalk EP133] Backman W. BSDTalk: 133: bsdtalk133 - OpenCon 2007 update from Marc Balmer[EB/OL]. (2007-10-17)[2026-08-27]. <https://bsdtalk.blogspot.com/2007/10/bsdtalk133-opencon-2007-update-from.html>.
+- [BSDTalk EP161] Backman W. BSDTalk: 161: bsdtalk161 - Live from NYCBSDCon Sunday[EB/OL]. (2008-10-12)[2026-08-27]. <https://bsdtalk.blogspot.com/2008/10/bsdtalk161-live-from-nycbsdcon-sunday.html>.
+- [BSDTalk EP97] Backman W. BSDTalk: 97: bsdtalk097 - OpenBSD Developer Pierre-Yves Ritschard[EB/OL]. (2007-02-01)[2026-08-27]. <https://archive.org/details/bsdtalk097>.
+
+<!-- /PODCAST_REVIEW -->
