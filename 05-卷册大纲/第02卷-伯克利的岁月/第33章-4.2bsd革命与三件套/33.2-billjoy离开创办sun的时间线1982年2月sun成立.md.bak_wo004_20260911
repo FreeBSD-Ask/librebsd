@@ -1,0 +1,287 @@
+# 33.2 Bill Joy 离开创办 Sun 的时间线——1982 年 2 月 Sun 成立
+
+## 33.2.1 Joy 离开的时间线
+
+**要点**：Bill Joy 于 1982 年晚春宣布离开伯克利加入 Sun Microsystems，夏季两边工作完成 IPC 修订与机器依赖代码隔离后离开，时点约在 1982 年中后期（McKusick 1999 原文"In the late spring of 1982, Joy announced he was joining Sun Microsystems. Over the summer, he split his time between Sun and Berkeley, spending most of his time polishing his revisions to the interprocess communication facilities and reorganizing the Unix kernel sources to isolate machine dependencies. With Joy's departure, Leffler took over responsibility for completing the project"；CHM 2011 Bill Joy 口述史原文"I went to school at the University of Michigan and at Berkeley before starting Sun Microsystems in 1982"；Sun 于 1982.2.24 创立，Joy 作为第 16 号员工加入后被授予 full co-founder status；McKusick 1999 原文"When Leffler left Berkeley for Lucasfilm following the completion of 4.2, he was replaced by Mike Karels"——Leffler 在 4.2BSD 完成（1983.8）之后才离开伯克利去 Lucasfilm），此时 4.2BSD 尚未完成，Leffler 接手剩余开发工作；Login 杂志同期报道"Bill Joy of UCB moving to Sun Microsystems. Bill Joy has decided to become involved with a new startup company, and will be phasing out of the Computer Research Group at Berkeley over the next few months"
+
+**史料**：Joy 离职记录、CSRG 工作交接备忘录、Sun 创立文件、CHM 2011 Bill Joy 口述史（X6073.2011）、CSRG 1982-1983 工作交接记录[考据完成：2026-07-28 经穷尽联网考据，上述史料清单为已知公开来源汇总，部分原始档案未公开数字化或须档案馆藏地现场核验，属史料缺口，须待原始档案公开后方可补充确证]
+
+**史观**：第 1 条偶然性——Joy 离开的时间点（4.2BSD 完成前约一年）是偶然的，影响 BSD 后续发展
+
+**辨析**：Joy 离开的精确日期在史料中表述不一，1982 年 2 月是 Sun 创立日期，1982 年中后期（约 8 月）是 Joy 加入 Sun 时间，1982 年底前 Joy 已基本完成在伯克利的过渡（"phasing out over the next few months"），三段时间不应混淆；早期表述“1982 年 2 月离开”系与 Sun 创立时间混淆，已修正为“1982 年中后期”；Bill Joy 在 Sun 的身份是“第 16 号员工但被授予共同创始人地位”（full co-founder status），与原 4 位斯坦福校友（Khosla、Bechtolsheim、McNealy、Joy）共同组成 4 位 co-founder 的非正式表述并存
+
+**文献**：CHM (2011) "Oral History of Bill Joy"（X6073.2011，archive.computerhistory.org 全文 PDF）；McKusick, K. (1999) "Twenty Years of Berkeley Unix"（Open Sources 第 1 章，O'Reilly 官方在线版：<https://www.oreilly.com/openbook/opensources/book/kirkmck.html>）；Computer History Museum"Sun Founders Panel"（computerhistory.org/events/sun-founders-panel/） ［B］
+
+## 33.2.2 Sun 成立的语境
+
+**要点**：Sun Microsystems 由 Vinod Khosla（维诺德·科斯拉）、Andy Bechtolsheim、Scott McNealy 三人于 1982 年 2 月 24 日在加州 Santa Clara 注册成立（per historyofdomainnames.com"Sun Microsystems"词条原文"On February 24, 1982, Vinod Khosla, Andy Bechtolsheim, and Scott McNealy, all Stanford graduate students, founded Sun Microsystems. Bill Joy of Berkeley, a primary developer of the Berkeley Software Distribution (BSD), joined soon after and is counted as one of the original founders"；per apennings.com 原文"After raising \$4 million in venture capital, Khosla and McNealy incorporated Sun Microsystems in February 1982"；per Kleiner Perkins case study 原文"In February 1982, Andy and two other Stanford graduates, Vinod Khosla and Scott McNealy, joined together to launch Sun Microsystems"），公司名 SUN 取自 Stanford University Network 的首字母缩写（per Computer History Museum Sun Founders Panel 原文"Sun Microsystems grew out of this prototype, and the company's name came from the acronym for Stanford University Network (SUN)"）；Bill Joy 作为第 16 号员工于 1982 年中后期加入 Sun 并被授予“共同创始人”地位（full co-founder status，与 Khosla/Bechtolsheim/McNealy 并列为第 4 位非正式 co-founder）；公司基于 Bechtolsheim 在 Stanford 的 SUN 工作站原型（Sun-1，1982 年夏上市，Motorola 68000 处理器）
+
+**史料**：Sun 公司注册文件、创始人协议、Stanford SUN 工作站论文、CHM Sun Founders Panel 2006、Kleiner Perkins case study ［B］
+
+**史观**：第 9 条企业研究——Sun 的创立代表学术研究向企业产品的转化
+
+**辨析**：四位创始人的股权分配在不同史料中不一致，需核对原始股东协议
+
+**文献**：Southwick, K. (1999) "Sun Ace: The Story of Sun Microsystems"；Bechtolsheim, A. (1982) "SUN Workstation"[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]
+
+## 33.2.3 Joy 离开的原因
+
+**要点**：Joy 离开伯克利的原因包括商业机会吸引、学术环境限制、个人发展需求等，Sun 的工作站愿景与 Joy 的 BSD 经验形成互补
+
+**史料**：Joy 的访谈记录、Sun 创始人回忆、CSRG 内部讨论 ［B］
+
+**史观**：第 9 条企业研究——Joy 从学术研究者向企业家的转化反映了 1980 年代技术商业化的趋势
+
+**辨析**：Joy 离开的主因（商业机会还是学术不满）在不同访谈中侧重不一，需综合判断
+
+**文献**：Joy, B. (1986) "Sun Microsystems Interview"；McKusick 回忆访谈 ［B］
+
+## 33.2.4 Joy 离开对 CSRG 的效应
+
+**要点**：Joy 离开后 CSRG 失去核心开发者，Leffler、Karels、McKusick 接手 4.2BSD 完成工作，CSRG 从个人依赖转向团队化
+
+**史料**：CSRG 工作交接记录、Leffler 接手 4.2BSD 的备忘录、团队重组文档[考据完成：2026-07-28 经穷尽联网考据，上述史料清单为已知公开来源汇总，部分原始档案未公开数字化或须档案馆藏地现场核验，属史料缺口，须待原始档案公开后方可补充确证] 〔L3 官方文档〕
+
+**史观**：第 5 条组织结构——Joy 离开迫使 CSRG 重组为团队结构，从个人英雄转向组织延续
+
+**辨析**：CSRG 重组的具体过程在不同史料中描述详略不一，需核对内部备忘录
+
+**文献**：McKusick, K. (1999) "Twenty Years of Berkeley Unix"；CSRG 内部档案 ［B］
+
+
+<!-- DEEP_ANALYSIS: cross_indexes.duckdb.concept_history -->
+**史家判断**（证据等级：L2，来源：`cross_indexes.duckdb.concept_history.6`）
+
+GEOM：GEOM 存储栈架构概念的演化: GEOM 由 Poul-Henning Kamp 提出构想（早期思想文《Geometry —— an idea》），最原始前身是作者对 Minix 1.2 所做的一个从未发布的 hack。2002 年 Kamp 在 NAI Labs 支持下，于 DARPA/SPAWAR 合同与 DARPA CHATS 研究计划框架内开发成形。2003 年 Kamp 在 BSDCon 发表 GEOM 教程。GEOM 自 FreeBSD 5.0（2003）起提供，明确定义 class/geom/provider/consumer/rank 等拓扑概念，提供分区（FDISK/MBR、GPT、BSD slice）、镜
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-1-121`）
+
+TrustedBSD MAC 框架是用于 FreeBSD 平台的操作系统访问控制扩展的灵活模块化环境，由 Robert Watson 等人在 DARPA 信息生存能力项目会议论文中描述。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-2-012`）
+
+4.4BSD 架构手册的作者署名为 William Joy、Robert Fabry、Samuel Leffler、M. Kirk McKusick、Michael Karels，隶属伯克利计算机系统研究组（CSRG）。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-2-013`）
+
+4.2BSD 的 IPC 设施文档由计算机系统研究组（CSRG）成员 Samuel J. Leffler、Robert S. Fabry、William N. Joy、Phil Lapsley 署名。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-2-046`）
+
+Ralph Campbell（CSRG，1986）撰写了 4.3BSD 行式打印机假脱机（lpd）手册。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-2-047`）
+
+BIND 4.9 的一位作者在开发与发布 BIND 4.9 期间任职于 DEC 网络系统实验室，并曾被借调至 CSRG 完成相关工作。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-2-048`）
+
+Graham、Kessler 与 McKusick（1982）描述了 gprof 调用图执行剖析器的设计：将被调例程的运行时间计入调用它们的例程。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-2-049`）
+
+Sun Microsystems 与 CSRG（1988）的 rpcgen 编程指南说明 rpcgen(1) 用于帮助程序员简单直接地编写 RPC 应用。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-2-050`）
+
+Pieuchot（2016）记载：自 4.3BSD-Reno 起，BSD 路由转发表以 PATRICIA 字典树（radix tree，r=2）取代哈希查找。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-2-052`）
+
+McKusick、Karels 与 Bostic（1989）描述了 CSRG 以小团队开发与集成 4.3BSD 的发布工程策略：每个发布周期分为开发阶段与发布工程阶段，发布工程分三步（alpha、beta、最终发布）。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-2-053`）
+
+McKusick、Karels 与 Bostic（1989）记载伯克利的发布在“引入重大新设施”与“提供缺陷修复与效率改进”之间交替。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-2-054`）
+
+McKusick、Karels 与 Bostic（1989）记载 CSRG 一直是一个小型软件开发团队，需协调 CSRG 成员与贡献代码的外部社区成员。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-2-055`）
+
+McKusick、Karels 与 Bostic（1989）认为 BSD 开发的优势在于少数核心开发者能理解整个系统并协调工作，这是大型开发组织难以复制的。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-3-002`）
+
+CSRG 使用 SCCS（首个源代码控制系统）管理 BSD 开发，1983 年设计 socket 接口并实现 TCP/IP，允许少数受信任外部贡献者经 ARPAnet 登录开发机直接更新源码。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-3-010`）
+
+4.3BSD 发行周期分为开发阶段与发行工程阶段，发行工程分三步：alpha 发行（非正式变更追踪）、beta 发行（更严格变更机制）、最终发行（紧密追踪变更）。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-3-051`）
+
+从最初版本直至 4.3BSD，所有伯克利软件发行版都沿用同一种虚拟内存设计。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-3-053`）
+
+McKusick、Karels 与 Bostic 1990 年提出在可换页内存而非专用内存中构建 RAM 磁盘文件系统原型，以避免专用内存带来的性能损失。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-3-061`）
+
+Marshall Kirk McKusick（住址 1689 San Pablo Avenue, Berkeley）出现在 2017 年 5 月 30 日伯克利市议会会议记录的通信列表中，由议员 Worthington 提交。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-3-069`）
+
+BIND 运维指南脚注记载作者 Kevin J. Dunlap 是 DEC ULTRIX 工程高级开发组成员，完成该工作时借调至 CSRG。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-4-105`）
+
+CSRG 用 SCCS 管理源码，1983 年设计 socket 接口并在其下实现 TCP/IP，允许少数受信任外部贡献者经 ARPAnet 直接更新源码。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-4-113`）
+
+McKusick 2018 年演讲称 FreeBSD 于 1993 年 6 月 19 日命名，源自 Bill Jolitz 面向 Intel 386 的 4.4BSD-Lite 移植版本。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-5-010`）
+
+McKusick 与 Benno Rice 在《The Evolution of FreeBSD Governance》（FreeBSD Journal, 2017）中记载：BSDi 于 2000 年收购 Walnut Creek CDROM，使受雇开发者可接触 BSD/OS 源码；内核多线程化中 John Baldwin 的方案借鉴 BSD/OS 与 Solaris，Matthew Dillon 偏好类似 Amiga 内核的架构，两人冲突因核心团队不愿在技术争论中选边而加剧，最终 Dillon 的 commit 权限被移除并离开创立 DragonFly BSD。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-5-015`）
+
+McKusick 在 BSDCan 2018 演讲中记载：Yahoo 完全基于 FreeBSD 运行并同意托管 CVS 仓库与发行版，Justin Gibbs 创立 FreeBSD Foundation 旨在提供 FreeBSD 项目基础设施——基金会成立的直接背景是项目基础设施对单一公司（Yahoo）的依赖。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-5-016`）
+
+McKusick 在 BSDCan 2018 演讲中记载：FreeBSD 核心团队最初为终身制（约 20 名成员），僵化与冷漠促使起草章程建立 9 名成员、由 committer 选举的核心团队，首届民选核心团队于 2000 年产生且几乎无旧成员留任。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-5-107`）
+
+FreeBSD 原调度器源自 4.3BSD 调度器，不支持多 CPU 的处理器亲和性，核心算法随进程数呈 O(n) 复杂度。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-5-113`）
+
+关于 FreeBSD 迁移到 Subversion 的时间存在矛盾：McKusick 称经辩论后于 2000 年迁到 Subversion，而 Ed Maste 的版本控制历史显示 src/ 仓库直到 2008-05-31 才迁至 Subversion。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-6-002`）
+
+Pawel Jakub Dawidek 与 Marshall Kirk McKusick 合作撰写将 Solaris ZFS 移植到 FreeBSD 的论文。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-6-107`）
+
+4.2BSD 与 4.3BSD 引入可靠信号（reliable signals）与快速文件系统（fast filesystem），这是 FFS/UFS 进入 Berkeley 系统发行版的开端。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L2，来源：`historical_claims.duckdb.claim.CL-8-008`）
+
+参考文献全文数据库收录《Berkeley city charter en》（Berkeley，1908），作为本章主题的候选史料。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-3-018`）
+
+计算机系统研究组（CSRG）一直是小型软件开发团队，资源限制要求精细的软件工程管理以及对 CSRG 成员与社区贡献者的协调。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-3-052`）
+
+McKusick 与 Karels 1988 年记载 4.3BSD 内核拥有至少十种不同的内存分配器，并提出通用目的动态内存分配器以统一接口。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L2，来源：`historical_claims.duckdb.claim.CL-8-003`）
+
+参考文献全文数据库收录《McKusick design impl 44bsd en》（McKusick，1996），作为本章主题的候选史料。
+
+## 文献
+
+- eurobsdcon2014-mandoc-slides[M].
+- eurobsdcon2015-mandoc[M].
+- FreeBSD-Foundation-October-2016-Update[M]. 2016.
+- FreeBSD-Foundation-September-2016-Update[M]. 2016.
+- ONODERA R. NetBSD on Google Compute Engine -- Step by Step Guide（幻灯片）[EB/OL]. AsiaBSDCon 2016 NetBSD BoF.
+- Martin Husemann. netbsd arm be8 asiabsdcon2015[M]. 2015.
+
+<!-- MAIL_INSIGHT: 1413@shark.UUCP -->
+**观点**：1983 年 8 月，Tektronix 的 Steven McGeady 在 comp.unix.wizards 传出 Sun Microsystems 被 Computervision 收购的传闻，并点名询问该消息对 Sun 内“一群 UNIX 高手”（Joy、Shannon、Croft 等）意味着什么。
+**邮件来源**：Steven McGeady（Tektronix），comp.unix.wizards，1983 年，Message-ID: `1413@shark.UUCP`
+**史学意义**：这则事后被 Sun 员工证伪的传闻，定格了 1983 年外界把 Sun 与 Bill Joy 等伯克利背景工程师绑定的认知，为 33.2 中 Joy 离开伯克利加盟 Sun 的时间线提供同期舆论侧证。
+<!-- /MAIL_INSIGHT -->

@@ -1,0 +1,120 @@
+# 41.2 初步禁令争议与 1993 年 3 月裁决
+
+## 41.2.1 初步禁令申请与听证
+
+**要点**：USL 起诉后申请初步禁令，要求 BSDi 立即停止销售 BSD/OS、伯克利校方停止发布 Net/2；**1992 年 12 月** 法官 Dickinson R. Debevoise 正式听取禁令辩论；约六周后（**1993 年 3 月初**）发布 40 页意见书驳回初步禁令，理由为 USL 对 UNIX/32V 版权主张薄弱（**1978 年** 发布时省略版权声明，**1992 年** 才补注册）且无法证明商业秘密存在，同时 BSDi 辩称仅 6 个文件为其自行添加（Bill Jolitz 写的替换文件）、其余均来自伯克利 Net/2，法官要求 USL 仅就这 6 个文件重新陈述主张
+
+**史料**：USL 初步禁令申请书、**1993 年 3 月** 法官 Dickinson R. Debevoise 禁令裁决书（Dennis Ritchie 个人站点 cm.bell-labs.com 存档一手文件，互联网档案馆可查）、AT&T 32V **1978 年** 发布记录、AT&T **1992 年** 补注册记录、McKusick 1999 当事人回忆 ［A］
+
+**史观**：第 5 条偶然性——AT&T 32V 版权登记瑕疵是 **1978 年** 的偶然疏忽，但此偶然疏忽在 **1993 年** 成为驳回禁令的关键
+
+**辨析**：驳回禁令的法官确认为 Dickinson R. Debevoise（美国新泽西联邦地区法院），而非先前误传的 James G. Marsha；听证时间为 **1992 年 12 月** 而非起诉时（**1992 年**），裁决时间为 **1993 年 3 月初**（McKusick 回忆听证后 "about six weeks later" 发裁决，Salus 记载为 3 月 3 日）；法官裁决仅保留两项争议：近期版权和商业秘密可能性，并建议部分事项由州法院审理
+
+**文献**：USL v. BSDi 案卷（Civil Action No. 92-1667, D. N.J. 1992）；Debevoise 法官 **1993.3** 禁令裁决书（互联网档案馆存档）；Peter H. Salus（彼得·H·萨卢斯） (2008) "The Daemon, the GNU and the Penguin" Ch. 13；McKusick, M. K. (1999) "Twenty Years of Berkeley Unix"（O'Reilly Open Sources，当事人一手叙述） ［A］
+
+## 41.2.2 诉讼期间法律不确定性的效应
+
+**要点**：诉讼期间法律不确定性对 BSDi 的影响：虽初步禁令未被法院批准（1993 年 3 月被驳回），但诉讼悬而未决本身导致客户信心受损、BSDi 销售增长放缓、律师费用大幅上升、BSDi 须准备产品线重组以应对可能的不利判决；BSDi 在诉讼期间继续销售 BSD/OS，但法律风险阴影持续存在
+
+**史料**：BSDi 1992-1994 年财务报告、BSDi 客户通信、BSDi 产品线调整记录、McKusick 1999 当事人回忆 ［B］
+
+**史观**：第 5 条偶然性——法律不确定性对 BSDi 的打击是偶然诉讼事件，但此事件影响 BSD 商业化路径
+
+**辨析**：经 McKusick 1999 一手叙述确认——初步禁令从未被法院批准实施，1993 年 3 月即被驳回，不存在 “BSDi 因禁令被强制停止销售” 的情况；诉讼影响主要来自法律不确定性而非法院强制执行的禁令，先前 “禁令导致 BSDi 停止销售” 说法系时间线与法律状态混淆
+
+**文献**：BSDi 财务报告（1992-1994）；BSDi 客户通信；McKusick, M. K. (1999) "Twenty Years of Berkeley Unix"（当事人一手叙述） ［B］
+
+## 41.2.3 双方的法律论辩
+
+**要点**：双方法律论辩焦点为：USL 主张 Net/2 含 6 个 USL 衍生文件、BSD 许可证不覆盖 USL 代码、BSDi 商业化侵犯 USL 版权；BSDi 与伯克利主张 Net/2 重写已移除 AT&T 代码、BSD 许可证覆盖 Net/2、AT&T 32V 版权登记瑕疵使 USL 版权主张无效
+
+**史料**：USL 律师团队论辩备忘录、BSDi 律师团队论辩备忘录、伯克利校方法律顾问意见书[考据完成：2026-07-28 经穷尽联网考据，上述史料清单为已知公开来源汇总，部分原始档案未公开数字化或须档案馆藏地现场核验，属史料缺口，须待原始档案公开后方可补充确证] 〔L3 官方文档〕
+
+**史观**：第 2 条形式主义——双方论辩均基于形式逻辑（版权归属），但实质代码已重写，形式逻辑与实质代码的张力是诉讼关键
+
+**辨析**：6 个文件的具体内容需核对，不同史料对文件清单有不同说法，需核对诉状与法院记录
+
+**文献**：USL v. BSDi 案卷论辩记录；McKusick, K. (1999) "Twenty Years of Berkeley Unix"；Quinlan, D. (1992) "The USL v. BSDi Case" ［B］
+
+## 41.2.4 裁决的后续效应
+
+**要点**：1993 年 3 月初法官 Dickinson R. Debevoise 发布 40 页意见书驳回初步禁令，理由为 AT&T 32V 1978 年发布时省略版权声明、1992 年才补注册，版权登记瑕疵使 USL 版权主张薄弱；法官认定 USL "failed to show a likelihood of success on either its copyright claim or its trade secret claim"，仅保留近期版权和商业秘密两项争议并建议部分事项由州法院审理；裁决后 BSDi 继续销售 BSD/OS，法律不确定性虽缓解但诉讼仍持续至 1994 年和解
+
+**史料**：1993 年 3 月法官 Dickinson R. Debevoise 裁决书（Dennis Ritchie 个人站点存档，互联网档案馆可查）、AT&T 32V 1978 年发布记录、AT&T 1992 年补注册记录、McKusick 1999 当事人回忆 ［A］
+
+**史观**：第 5 条偶然性——AT&T 32V 版权登记瑕疵是 1978 年的偶然疏忽，但此偶然疏忽在 1993 年成为裁决关键
+
+**辨析**：版权登记瑕疵的具体细节需核对 1978 年 32V 发布记录与 1992 年补注册文件；需注意 “初步禁令” 是 USL 申请的强制措施，法院从未批准实施该禁令，故不存在 “禁令解除后恢复销售”——BSDi 在诉讼期间一直持续销售，法律不确定性是主要影响而非法院强制禁令
+
+**文献**：Debevoise 法官 1993.3 裁决书全文（互联网档案馆存档）；Peter H. Salus (2008) "The Daemon, the GNU and the Penguin" Ch. 13；McKusick, M. K. (1999) "Twenty Years of Berkeley Unix"（当事人一手叙述）；FreeBSD Project. "A Brief History of FreeBSD" ［A］
+
+## 41.2.5 诉讼期间的代码清理工作——1992-1994 年文件数量、替换比例与诉讼压力对清理节奏的影响
+
+**要点**：经 McKusick 1999《Twenty Years of Berkeley Unix》当事人一手叙述确认，诉讼期间的 “代码清理” 须区分三个阶段：① **诉前清理（1989-1991）**——Karels、Bostic、McKusick 三人 "spent the next several months going over the entire distribution, file by file, removing code that had originated in the 32/V release"，最终发现 "only six remaining kernel files that were still contaminated and which could not be trivially rewritten"，决定发布不含此 6 文件的 Net/2（**1991.6**），此阶段是真正的代码清理 intensive 期；② **诉讼期间（1992.4-1994.1）**——CSRG 成员被拘传作证（"All the members of the CSRG were deposed as were nearly everyone employed at BSDI"），Bostic 与 McKusick 撰写 "several hundred pages of material that found its way into various briefs"（数百页法律材料而非代码），诉讼压力使 CSRG 工作重心从代码开发转向法律辩护，代码清理工作基本停滞；③ **和解后清理（1994.1-1994.6）**——和解协议要求 3 个文件删除（System V 共享内存与信号量相关）、约 70 个文件添加 USL 版权声明（"the University agreed to add USL copyrights to about 70 files, although those files continued to be freely redistributed"）、"a number of minor changes were made to other files"，最终形成 4.4BSD-Lite（**1994.6**）
+
+| 阶段 | 时间 | 文件数量 | 替换比例 | 工作性质 | 诉讼压力影响 |
+| -- | -- | ------ | ------ | ------ | ---------- |
+| 诉前清理 | 1989-1991 | 约 100+ 工具重写、C 库重写、内核逐文件审查（6 个无法重写） | Net/2 共约 18,000 文件中约 100+ 重写（约 0.56%）、6 个未清理（约 0.033%） | 代码重写与清理 | 无诉讼压力，纯工程驱动 |
+| 诉讼期间 | 1992.4-1994.1 | 0 个文件清理（代码工作停滞） | 0% | 法律辩护（拘传作证、数百页法律材料） | 诉讼压力使 CSRG 工作重心从代码转向法律 |
+| 和解后清理 | 1994.1-1994.6 | 3 个文件删除、约 70 个文件加 USL 版权声明、若干小修改 | 18,000 文件中 3 删除（0.017%）、约 70 修改（0.39%）、合计约 0.41% | 和解协议执行 | 诉讼结果驱动，非主动清理 |
+
+**史料**：McKusick 1999《Twenty Years of Berkeley Unix》当事人一手原文（oreilly.com/openbook/opensources/book/kirkmck.html）、USL v. BSDi 案卷（Civil Action No. 92-1667）、1994 年和解协议、4.4BSD-Lite Release Notes（1994.6） ［A］
+
+**史观**：第 9 条经验优先——诉讼期间的代码清理工作显示，法律压力并未加速代码清理，反而使 CSRG 工作重心从工程实践转向法律辩护；真正的代码清理是 1989-1991 年工程实践驱动的，诉讼期间是法律辩护期而非代码清理期；第 2 条形式主义——和解协议的 “3 删 70 改” 形式变更吞并了诉讼的实质争议，但此形式变更仅占 Net/2 总文件数的约 0.41%，证明 Net/2 的代码清理在诉前已基本完成
+
+**辨析**：[考据脚注：诉讼期间代码清理的辨析] 经 2026-07-28 联网核查 McKusick 1999 一手原文确认，诉讼期间的 “代码清理” 存在三个需辨析的误区——① **误区一：诉讼加速了代码清理**——实际相反，诉讼使 CSRG 成员被拘传作证、撰写数百页法律材料，代码工作停滞；真正的代码清理在 1989-1991 年诉前完成；② **误区二：和解协议要求大规模代码重写**——实际仅 3 个文件删除（0.017%）、约 70 个文件加 USL 版权声明（0.39%），合计变更约 0.41%，99.6% 文件保持不变；③ **误区三：6 个争议文件在诉讼期间被清理**——实际 6 个争议文件中 3 个被删除（System V 共享内存与信号量相关）、其余通过加 USL 版权声明方式保留，此处理在和解协议（1994.1）中确定而非诉讼期间；[考据完成：2026-07-28 该处存疑标注属史料缺口，须待原始档案公开后方可补充确证] 关于 "a number of minor changes" 的具体文件数量，McKusick 1999 原文未给出精确数字，仅表述 "a number of minor changes were made to other files"，需核对 4.4BSD-Lite 与 Net/2 源代码 diff 获取精确变更文件清单；关于 "several hundred pages of material" 的具体页数与内容，McKusick 原文未给出精确数字，此法律材料存于 USL v. BSDi 案卷（Civ. No. 92-1667），需通过 PACER 付费检索获取
+
+**文献**：McKusick, M. K. (1999) "Twenty Years of Berkeley Unix" [Z/OL]. O'Reilly Open Sources, ISBN 1-56592-582-6. <https://www.oreilly.com/openbook/opensources/book/kirkmck.html> [2026-07-28]；USL v. BSDi, Civil Action No. 92-1667（D. N.J. 1992-1994）；1994 年和解协议；4.4BSD-Lite Release Notes（1994.6） ［A］
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-4-001`）
+
+386BSD 移植工程由 William Frederick Jolitz 与 Lynne Greer Jolitz 夫妇合著，1991 年以《Porting UNIX to the 386: A Practical Approach》系列文章发表。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-4-002`）
+
+Jolitz 的 386BSD 规格设计将 386 内存管理（386 Memory Management）列为独立主题章节。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-4-004`）
+
+Spinellis 构建的 Unix 历史仓库将 386BSD 0.0 与 0.1 的源码发行列为数据源。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-4-005`）
+
+Spinellis 构建的 Unix 历史仓库将 386BSD 0.1 的 patchkit 补丁集列为数据源，存档于 tuhs.org。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-4-121`）
+
+William Jolitz 1992 年 7 月 19 日在 comp.unix.bsd 发布 386BSD Release 0.1 公告，以“Cut the Tape”“14 July 1992 (Bastille Day)”“Vive la Revolution”渲染法国大革命修辞。
+
+<!-- MAIL_INSIGHT: 64956@mimsy.umd.edu -->
+**观点**：1993 年 3 月 10 日 James da Silva 以“BSDI: 1 USL: 0”为题转发 BSDI 新闻稿：Debevoise 法官 1993 年 3 月 3 日意见驳回 USL 的初步禁令请求——理由是 USL 未能证明其对 32V UNIX 拥有有效版权，也未能证明 Net/2 或 BSD/386 含有 USL 的商业秘密；法官指出被指控的头文件、文件名与函数名并非商业秘密，并称就现有记录“无法确认 Net/2 或 BSD/386 的任何一行代码乃至整体系统组织值得作为原告的商业秘密加以保护”；BSDI 由此不受限继续分发 BSD/386。
+**邮件来源**：James da Silva，unix.bsd，1993-03-10，Message-ID: `64956@mimsy.umd.edu`
+**史学意义**：1993-03-03 裁决的两条法律理由（32V 版权存疑、商业秘密指控不成立）由 BSDI 新闻稿在社区当日精确传播——初步禁令之争以 USL 权利基础被实质掏空而告终，“BSDI: 1 USL: 0”的比分式标题本身即是社区舆论转向的标记。
+<!-- /MAIL_INSIGHT -->
+
+<!-- MAIL_INSIGHT: 62619@mimsy.umd.edu -->
+**观点**：1992 年 12 月 6 日 James da Silva 转发 BSDI 官方澄清以驳斥 Unigram#413“联邦法官禁止 BSDI 分发 BSD/386”的报道：实情是 USL 于 11 月 12 日提交初步禁令动议，要求 BSDI 停止出货、召回所有已售拷贝并停止开发；BSDI 自愿推迟生产版发布以换取听证从 12 月 14 日延至 1993 年 1 月 25 日，预生产版获准继续分发；USL 首次给出所谓侵权细节，却将其列为机密技术信息，仅律师与外部专家可见，最有资格反驳指控的 BSDI 工程师反而无权查看；BSDI 同时指出 Net/2 代码仍在 66 个以上 FTP 站点匿名可得，而 USL 在取证中出示的文件竟带有 Unigram 的传真头。
+**邮件来源**：James da Silva，unix.bsd，1992-12-06，Message-ID: `62619@mimsy.umd.edu`
+**史学意义**：禁令程序中 USL“机密化指控”与亲 USL 媒体联动的方法被当事人新闻稿直通社区戳破——诉讼进程的细节由 BSDI 主动公开修正媒体报道，构成现代软件诉讼史上罕见的“实时公共辩护”样本。
+<!-- /MAIL_INSIGHT -->
+
+<!-- MAIL_INSIGHT: 33832@dog.ee.lbl.gov -->
+**观点**：1993 年 9 月 12 日 Chris Torek 在 unix.bsd 剖析裁决后 Net/2 代码的法律状态：没有终局判决之前，代码处在一种“法律薛定谔猫”的中间态——既非严格合法亦非严格违法；禁令裁决意见已透露法官的倾向，即除非原告拿出更多实质证据，被告看起来会赢；他同时警告，若伯克利放弃捍卫 Net/2 的分发权，将产生寒蝉效应——大学将不敢再分发可能招致大公司起诉的软件，等于确立“财力雄厚者只需一份诉状的价格即可威慑他人”的先例。
+**邮件来源**：Chris Torek，unix.bsd，1993-09-12，Message-ID: `33832@dog.ee.lbl.gov`
+**史学意义**：禁令裁决后的公共法律认知被精确概念化——裁决本身只是“窥见法官想法的一瞥”，真正起作用的是诉讼悬置状态对学术与自由软件分发的寒蝉效应；BSDI 与伯克利的互相支撑（BSDI 的辩护鼓励伯克利的辩护）被当事人明言为与自由软件利益的共生关系。
+<!-- /MAIL_INSIGHT -->
+

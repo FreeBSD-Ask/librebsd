@@ -1,0 +1,238 @@
+# 32.12 4.1BSD 安全机制继承——chroot(2) 系统调用的早期定型与原始动机辨析（1981）
+
+## 32.12.1 4.1BSD 继承 4BSD 的 chroot(2) 与 setuid 检查机制
+
+**要点**：4.1BSD（1981 年 6 月）继承 4BSD（1980 年 10 月）引入的 `setuid` 检查机制与 **chroot(2)** 系统调用[存疑脚注：经 FreeBSD 14.1 / OpenBSD / NetBSD chroot(2) man page HISTORY 交叉核验，chroot(2) 系统调用源自 V7 AT&T UNIX（1979），首次进入 BSD 家族系 4.2BSD（1983-08）；4BSD（1980-10）与 4.1BSD（1981-06）的官方发行文档中并无该调用。原稿“4BSD 引入 chroot(2)”表述有误，特此订正。]；4.1BSD 的安全机制实际为 setuid 检查与继承自 V7 的 chroot 用法之组合，**chroot(2)** 改变进程的根目录至指定路径，原始动机为软件构建与测试环境提供隔离的根目录（如 4.4BSD SMM: 1《Installing and Operating 4.4BSD》所述），并非作为安全沙箱设计；4.1BSD 时期 **chroot(2)** 仍仅作为测试环境隔离使用，安全用途在 1990 年代后才被社区广泛重新解读并赋予 [考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]；4.1BSD 的 `/etc/passwd` 文件格式（含 **crypt(3)** DES 25 轮散列）在 4BSD 基础上定型，所有用户可读 `/etc/passwd`，密码散列字段虽加密但可被字典攻击破解，与 System V R3.2（1987 年）引入的 `/etc/shadow` 形成分野
+
+**史料**：4.1BSD Release Notes (1981.6)；4BSD Release Notes (1980.10)；4.4BSD SMM: 1《Installing and Operating 4.4BSD》；McKusick et al. 1996《4.4BSD 操作系统设计与实现》；`unix-wizards` 邮件列表存档（须查互联网档案馆） ［A］
+
+**史观**：第 17 条软件工程——**chroot(2)** 是软件工程中 “环境隔离” 的早期实践，原始动机非安全；第 2 条形式主义——后世将 **chroot(2)** 重新解读为安全沙箱是形式主义膨胀，将测试便利重新叙事为安全机制
+
+**辨析**：[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证] “Bill Joy 为 chroot 设计者” 的说法来自后世二手叙述（如 Salus 1994 编年史与互联网博客），缺乏 Bill Joy 本人自述与同时期 `unix-wizards` 邮件列表存档的直接佐证；“1982 年引入” 的说法与 4BSD（1980 年）已有 **chroot(2)** 矛盾，[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证] 标注引入年份的不确定性；4.1BSD 时期 **chroot(2)** 仍仅作为测试环境隔离使用，安全用途在 1990 年代后才被社区广泛重新解读并赋予，须区分 “原始设计动机” 与 “后世重新解读”；[2026-08-14 两库核查：参考文献库 facts 检索 "chroot" 命中 fact_id=2496/reference_id=499（kamp-phk-jails-paper, 2000），source_quote="According to the SCCS logs, the chroot call was added by Bill Joy on March 18, 1982 approximately 1.5 years before the release of 4.2BSD"，经参考文献库验证通过（reference_id=499），确认 chroot(2) 由 Bill Joy 于 1982 年 3 月 18 日添加；邮件库 usenet 1983 年 comp.unix.wizards 帖（Message-ID 2290@root44.UUCP，1983-05-27）记载 "Chroot not blocking 'cd /..' was a v7 bug fixed in System III"，佐证 chroot(2) 源自 V7；comp.bugs.4bsd 1983 帖（mhb5b.158）提及 4.1BSD ttyname 与 chroot logins，佐证 4.1BSD 时代 chroot 已存在]；BSD 与 System V 的 shadow password 分野源于安全哲学差异——System V 优先考虑商用客户的密码安全，BSD 优先考虑兼容性与简洁性
+
+**文献**：4.1BSD Release Notes (1981.6)；4.4BSD SMM: 1《Installing and Operating 4.4BSD》；McKusick M K, Bostic K, Karels M J, Quarterman J S. The Design and Implementation of the 4.4BSD Operating System [M]. Reading: Addison-Wesley, 1996. ISBN 0-201-54979-4；Salus P H. A Quarter Century of UNIX [M]. Addison-Wesley, 1994. ISBN 0-201-54777-5 ［B］
+
+<!-- DEEP_ANALYSIS: cross_indexes.duckdb.concept_history -->
+**史家判断**（证据等级：L2，来源：`cross_indexes.duckdb.concept_history.6`）
+
+GEOM 由 Poul-Henning Kamp 提出构想（早期思想文《Geometry —— an idea》），最原始前身是作者对 Minix 1.2 所做的一个从未发布的 hack。2002 年 Kamp 在 NAI Labs 支持下，于 DARPA/SPAWAR 合同与 DARPA CHATS 研究计划框架内开发成形。2003 年 Kamp 在 BSDCon 发表 GEOM 教程。GEOM 自 FreeBSD 5.0（2003）起提供，明确定义 class/geom/provider/consumer/rank 等拓扑概念，提供分区（FDISK/MBR、GPT、BSD slice）、镜像（geom_mirror）、RAID、UFS 卷标、GBDE/geli 磁盘加密等类，并支持 ggate 用户态网关。至 FreeBSD 13.0，GEOM_BSD、GEOM_MBR、GEOM_SUNLABEL 等过时组件被移除，由 GEOM_PART_* 与 GEOM_LABEL 等替代，框架持续演化。
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-1-121`）
+
+TrustedBSD MAC 框架是用于 FreeBSD 平台的操作系统访问控制扩展的灵活模块化环境，由 Robert Watson 等人在 DARPA 信息生存能力项目会议论文中描述。
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-2-012`）
+
+4.4BSD 架构手册的作者署名为 William Joy、Robert Fabry、Samuel Leffler、M. Kirk McKusick、Michael Karels，隶属伯克利计算机系统研究组（CSRG）。
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-2-013`）
+
+4.2BSD 的 IPC 设施文档由计算机系统研究组（CSRG）成员 Samuel J. Leffler、Robert S. Fabry、William N. Joy、Phil Lapsley 署名。
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-2-040`）
+
+Morris（1985）指出 4.2BSD 的 TCP/IP 软件存在信任缺陷：每个 4.2BSD 系统“信任”一组其他主机，允许来自受信主机的用户在不提供口令的情况下通过 TCP/IP 网络远程执行命令。
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-2-046`）
+
+Ralph Campbell（CSRG，1986）撰写了 4.3BSD 行式打印机假脱机（lpd）手册。
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-2-047`）
+
+BIND 4.9 的一位作者在开发与发布 BIND 4.9 期间任职于 DEC 网络系统实验室，并曾被借调至 CSRG 完成相关工作。
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-2-048`）
+
+Graham、Kessler 与 McKusick（1982）描述了 gprof 调用图执行剖析器的设计：将被调例程的运行时间计入调用它们的例程。
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-2-049`）
+
+Sun Microsystems 与 CSRG（1988）的 rpcgen 编程指南说明 rpcgen(1) 用于帮助程序员简单直接地编写 RPC 应用。
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-2-052`）
+
+McKusick、Karels 与 Bostic（1989）描述了 CSRG 以小团队开发与集成 4.3BSD 的发布工程策略：每个发布周期分为开发阶段与发布工程阶段，发布工程分三步（alpha、beta、最终发布）。
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-2-053`）
+
+McKusick、Karels 与 Bostic（1989）记载伯克利的发布在“引入重大新设施”与“提供缺陷修复与效率改进”之间交替。
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-2-054`）
+
+McKusick、Karels 与 Bostic（1989）记载 CSRG 一直是一个小型软件开发团队，需协调 CSRG 成员与贡献代码的外部社区成员。
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-2-055`）
+
+McKusick、Karels 与 Bostic（1989）认为 BSD 开发的优势在于少数核心开发者能理解整个系统并协调工作，这是大型开发组织难以复制的。
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-3-001`）
+
+BSD 于 1977 年由 Bill Joy 在伯克利以单人项目起步，1980 年成长为四人协调的计算机系统研究组（CSRG）。
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-3-002`）
+
+CSRG 使用 SCCS（首个源代码控制系统）管理 BSD 开发，1983 年设计 socket 接口并实现 TCP/IP，允许少数受信任外部贡献者经 ARPAnet 登录开发机直接更新源码。
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-3-009`）
+
+CSRG 始终是小型软件开发者团队，资源限制要求谨慎的软件工程管理及对 CSRG 人员与社区贡献者的协调。
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-3-018`）
+
+计算机系统研究组（CSRG）一直是小型软件开发团队，资源限制要求精细的软件工程管理以及对 CSRG 成员与社区贡献者的协调。
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-3-052`）
+
+McKusick 与 Karels 1988 年记载 4.3BSD 内核拥有至少十种不同的内存分配器，并提出通用目的动态内存分配器以统一接口。
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-3-053`）
+
+McKusick、Karels 与 Bostic 1990 年提出在可换页内存而非专用内存中构建 RAM 磁盘文件系统原型，以避免专用内存带来的性能损失。
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-3-061`）
+
+Marshall Kirk McKusick（住址 1689 San Pablo Avenue, Berkeley）出现在 2017 年 5 月 30 日伯克利市议会会议记录的通信列表中，由议员 Worthington 提交。
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-3-069`）
+
+BIND 运维指南脚注记载作者 Kevin J. Dunlap 是 DEC ULTRIX 工程高级开发组成员，完成该工作时借调至 CSRG。
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-4-105`）
+
+CSRG 用 SCCS 管理源码，1983 年设计 socket 接口并在其下实现 TCP/IP，允许少数受信任外部贡献者经 ARPAnet 直接更新源码。
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-4-113`）
+
+McKusick 2018 年演讲称 FreeBSD 于 1993 年 6 月 19 日命名，源自 Bill Jolitz 面向 Intel 386 的 4.4BSD-Lite 移植版本。
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-5-010`）
+
+McKusick 与 Benno Rice 在《The Evolution of FreeBSD Governance》（FreeBSD Journal, 2017）中记载：BSDi 于 2000 年收购 Walnut Creek CDROM，使受雇开发者可接触 BSD/OS 源码；内核多线程化中 John Baldwin 的方案借鉴 BSD/OS 与 Solaris，Matthew Dillon 偏好类似 Amiga 内核的架构，两人冲突因核心团队不愿在技术争论中选边而加剧，最终 Dillon 的 commit 权限被移除并离开创立 DragonFly BSD。
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-5-015`）
+
+McKusick 在 BSDCan 2018 演讲中记载：Yahoo 完全基于 FreeBSD 运行并同意托管 CVS 仓库与发行版，Justin Gibbs 创立 FreeBSD Foundation 旨在提供 FreeBSD 项目基础设施——基金会成立的直接背景是项目基础设施对单一公司（Yahoo）的依赖。
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-5-016`）
+
+McKusick 在 BSDCan 2018 演讲中记载：FreeBSD 核心团队最初为终身制（约 20 名成员），僵化与冷漠促使起草章程建立 9 名成员、由 committer 选举的核心团队，首届民选核心团队于 2000 年产生且几乎无旧成员留任。
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-5-113`）
+
+关于 FreeBSD 迁移到 Subversion 的时间存在矛盾：McKusick 称经辩论后于 2000 年迁到 Subversion，而 Ed Maste 的版本控制历史显示 src/ 仓库直到 2008-05-31 才迁至 Subversion。
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-6-107`）
+
+4.2BSD 与 4.3BSD 引入可靠信号（reliable signals）与快速文件系统（fast filesystem），这是 FFS/UFS 进入 Berkeley 系统发行版的开端。
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L2，来源：`historical_claims.duckdb.claim.CL-8-008`）
+
+参考文献全文数据库收录《Berkeley city charter en》（Berkeley，1908），作为本章主题的候选史料。
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-3-054`）
+
+Leffler 等 1983 年记载进程间通信与网络是 4.2BSD 对 UNIX 最重要的新增之一，是两年以上讨论与研究的成果。
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-6-002`）
+
+Pawel Jakub Dawidek 与 Marshall Kirk McKusick 合作撰写将 Solaris ZFS 移植到 FreeBSD 的论文。
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L2，来源：`historical_claims.duckdb.claim.CL-8-003`）
+
+参考文献全文数据库收录《McKusick design impl 44bsd en》（McKusick，1996），作为本章主题的候选史料。
+
+## 文献
+
+- bsdcon. kamp-phk-devfs-paper[M]. 2002.
+- standalone. dowse-ufs optimizations-paper[M]. 2002.
+- eurobsdcon2014-mandoc-slides[M].
+- eurobsdcon2015-mandoc[M].
+- FreeBSD-Foundation-October-2016-Update[M]. 2016.
+- FreeBSD-Foundation-September-2016-Update[M]. 2016.
+- ONODERA R. NetBSD on Google Compute Engine -- Step by Step Guide（幻灯片）[EB/OL]. AsiaBSDCon 2016 NetBSD BoF.
+- Martin Husemann. netbsd arm be8 asiabsdcon2015[M]. 2015.
+
+<!-- MAIL_INSIGHT: 2850@sri-arpa.UUCP -->
+**观点**：1983 年 7 月，Robert S. Miles 解释 V7 引入的每进程根目录指针并未完全安全，V7 上可经 .. 越出假根；而 System III、BSD 4.1 与 BSD 4.2 的内核会在根目录处把 .. 重新映射到根目录本身。
+**邮件来源**：Robert S. Miles（BRL），comp.unix.wizards，1983 年，Message-ID: `2850@sri-arpa.UUCP`
+**史学意义**：明确把 chroot 的 .. 逃逸修复归入 BSD 4.1 及以后版本，为 4.1BSD 安全机制继承提供内核级一手说明。
+<!-- /MAIL_INSIGHT -->
+
+<!-- MAIL_INSIGHT: 807@rlgvax.UUCP -->
+**观点**：1983 年 7 月，Guy Harris 追问为何 4.1BSD 手册不记录 chroot 而 V7、System III/System V 手册均记录；并指出 V7 的 chroot 可经 .. 上逃，此 bug 已在 4.1BSD 与 System III 修复。
+**邮件来源**：Guy Harris（rlgvax），comp.unix.wizards，1983 年，Message-ID: `807@rlgvax.UUCP`
+**史学意义**：同期开发者注意到 4.1BSD 的 chroot 修复与文档缺失并存，提示其安全改进常以未文档化形式进入发行版。
+<!-- /MAIL_INSIGHT -->
+
+<!-- PODCAST_REVIEW v20260829 -->
+<!-- 语义复核范围：BSD Now EP392（共 1 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
+
+**要点**：
+
+- Phoronix 的 FreeBSD 13 beta 基准显示相对 12 的全面性能提升，其中 if_bridge 改进最具戏剧性：Kristof Provost 在 FreeBSD 基金会社区资助下，把桥设备状态修改的全局互斥锁替换为 epoch 机制，使转发能力自约 370 万包/秒量级跃升至近 1900 万包/秒；瓶颈探测源自法国运营商 Orange 级别的真实负载，且多核扩展性预期更佳。（BSD Now EP392，[338.76-430.44]，L1）
+- Klara Systems 的 Jails 前史文章把容器谱系上溯到 IBM：CP/CMS（约 1972 年稳定版）以控制程序创建虚拟机承载单用户交互系统，是 OS 级隔离的起点；chroot 于第 7 版 Unix（1979）引入并随进程树继承；网页托管商 Derek Woolworth 为在同一主机运行多个 Apache/MySQL/Perl 版本而付费委托开发，Poul-Henning Kamp 据此实现 jails，独占一年后并入 FreeBSD 4，jail 套 jail 与单向镜像语义（宿主可见内、内不可见外）构成其运维美学。（BSD Now EP392，[559.84-875.2]，L2）
+- 文章引 Marshall Kirk McKusick 称 chroot 系 Bill Joy 为构建 4.2BSD 测试环境而造（依据 SCCS 日志），但 Warner Losh 考订此说不确：chroot 实为 1979 年第 7 版 Unix 自贝尔实验室引入，SCCS 中的“出现”只是代码在内核内搬迁的错觉；Michael Lucas 亦指出最早的 jail 类代码见于 1975-1979 年 Unix 快照。（BSD Now EP392，[752.12-806.12]，L1）
+- FreeBSD 基金会公开招聘资深 ARM64 内核工程师（目标是 aarch64 与 x86 完全同级并支持 ARMv8.2 至 8.5 扩展）与开源项目协调员；岗位为全职远程，基金会说明疫情停办会议的预算正转投直接开发岗位，以支持 ARM64 冲刺 tier-1。（BSD Now EP392，[1033.44-1349.18]，L1）
+- helloSystem 发布新 ISO：以 FreeBSD 为底、桌面部件以 PyQt5 实现、界面借鉴 macOS 的简洁取向，面向创作者与初学者提供免终端入门路径；讨论将其定位为桌面 BSD 生态降低门槛的新尝试，并期待未来的 GPU 直通能力。（BSD Now EP392，[1361.54-1523.74]，L2）
+- 一位 Linux 背景用户的 FreeBSD 初体验报告：QEMU/KVM 安装后因 DNS 探测卡死、树莓派 4 启动失败（nmap 未见上线），换树莓派 3 才成功；随后按 Handbook 完成口令、pkg、fish、Go 工具链与自定义 rc.d 服务（以专用用户运行），作者称赞 Handbook 完备，同时抱怨 rc.conf/rc 脚本生态不如 NixOS 便利。（BSD Now EP392，[1523.74-1958.42]，L2）
+- Beastie Bits：GhostBSD 借 Linuxulator 运行 Steam 与 Proton（兼容层之上再套兼容层）跑通多款游戏；DragonFly BSD 5.8 发布基于 FreeBSD ports 的新二进制包集（约三万个包，含 sudo CVE-2021-3156 修复）；OpenBSD 6.8 成功安装于 Pine64 Rock64（USB 端口受限已有 issue 跟进）；FOSDEM 2021 线上 BSD devroom 收录 CBSD、helloSystem、fwupd 移植与 syslog-ng/sudo 四讲。（BSD Now EP392，[2096.54-2240.84]，L2）
+
+**史料**：
+
+- Kristof Provost 关于 if_bridge mutex 至 epoch 改造与 Orange 运营商瓶颈的第一手工程叙述（经 Alan Jude 转述其提交与邮件说明）。（BSD Now EP392，[382.96-430.44]，L1）
+- Klara 文章引用的 McKusick 论 chroot 起源（SCCS 依据）与 Warner Losh 的反驳考证，构成当事人考据交锋的一手记录；Michael Lucas 关于 1975-1979 快照中早期 jail 类代码的旁证。（BSD Now EP392，[724.44-806.12]，L1）
+- Derek Woolworth 付费开发 jails 的合同结构（独占一年后开源并入 FreeBSD 4）为 Klara 文章所述历史细节，与 phk 既有记述互证。（BSD Now EP392，[815.26-872.96]，L1）
+- 基金会招聘启事原文（全职、401k、远程、ARMv8.2-8.5 职责清单、与社区及企业协作要求），一手人事史料。（BSD Now EP392，[1189.62-1232.86]，L1）
+- FOSDEM 2021 BSD devroom 议程（CBSD、helloSystem、fwupd 移植、syslog-ng 与 sudo）与预录视频链接。（BSD Now EP392，[2169.37-2226.06]，L2）
+
+**史观**：
+
+- 总纲11 商品是形式主义：jails 的诞生由托管商的付费合同驱动（一年独占换取开源）：商业需求的货币化形式规定了功能的诞生时点，商品交换是这段容器史的实际发生机制。（BSD Now EP392，[815.26-872.96]，L1）
+- 总纲5 没有必然性，只有偶然性：chroot 起源归于 Bill Joy 的通行叙事被 Warner Losh 的代码搬迁考据推翻：权威口述与版本控制痕迹的偶然错位，制造了流传数十年的归因误差。（BSD Now EP392，[752.12-806.12]，L1）
+- 总纲3 不存在进步，只有权力再分配：基金会把疫情空出的会议预算转为 ARM64 全职岗位，并非项目“进步”的自然演化，而是资源在治理结构内的再分配：从社区聚会转向企业级平台竞争力的直接投入。（BSD Now EP392，[1189.62-1215.74]，L2）
+- 总纲9 经验优先：Linux 用户的初体验报告以亲身安装-失败-成功路径记录 FreeBSD 的真实可用性，其价值在于未修饰的当事人经验而非基准分数。（BSD Now EP392，[1523.74-1958.42]，L2）
+- 总纲4 分离聚合是永恒规律：GhostBSD 上 Steam 与 Proton 的“兼容层套兼容层”结构（FreeBSD Linuxulator 之上再套 Proton 的 Windows 兼容层）展示分离-聚合的技术形态：各层保持语义独立又层层聚合。（BSD Now EP392，[2096.54-2159.8]，L2）
+
+**辨析**：
+
+- chroot 起源之争（McKusick 的 Bill Joy 说对 Losh 的第 7 版 Unix 说）尚未完全闭合：两种说法都指向 1979 年前后，但发明动机叙事不同，4.2BSD SCCS 日志解读与 V7 源码证据须并置裁决。（BSD Now EP392，[752.12-806.12]，L1）
+- FreeBSD 13 beta 基准的公平性存疑：beta 快照可能含调试符号，主持人的怀疑未获证实，数据宜作趋势参考而非定论。（BSD Now EP392，[461.56-493.08]，L2）
+- helloSystem 的“macOS 启发”定位与 PyQt5 技术选型系主持人转述，项目自述与许可细节待核。[存疑脚注] helloSystem 项目细节以 GitHub 官方说明为准　[存疑脚注] helloSystem 项目细节系转述，须以项目仓库自述核对（BSD Now EP392，[1394.66-1406.5]，L4）
+- DragonFly 5.8 的新包集在讨论中被误认为新版本发布，后澄清为季度二进制包集：版本发布与包集发布的语义边界需在引用时保持区分。（BSD Now EP392，[2259.02-2289.32]，L2）
+
+**文献**：
+
+- [BSD Now EP392] Pennington J. BSD Now: 392: macOS inspired Desktop[EB/OL]. (2021-03-04)[2026-08-15]. <https://www.bsdnow.tv/392>.
+
+<!-- /PODCAST_REVIEW -->

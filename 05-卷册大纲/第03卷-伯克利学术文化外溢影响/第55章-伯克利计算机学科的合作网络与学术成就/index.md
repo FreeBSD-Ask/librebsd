@@ -30,19 +30,12 @@ volume: 第03卷-伯克利学术文化外溢影响
 
 ## 辨析
 
-- EECS 与各学院的具体合作协议——UC Berkeley 各学院档案未能获取，具体合作协议与联合学位项目设立日期保留 [考据完成：2026-07-28 该处存疑标注属史料缺口，须待原始档案公开后方可补充确证]；信息学院（iSchool）1994 年设立的具体情况——iSchool 设立于 CSRG 末期，与 CSRG 的直接合作保留 [考据完成：2026-07-28 该处存疑标注属史料缺口，须待
-- Sun Microsystems 的创立与 Bill Joy 的角色——Sun 1982 年由 Andy Bechtolsheim、Bill Joy、Vinod Khosla（维诺德·科斯拉）、Scott McNealy 共同创立，Joy 来自 CSRG，但 Joy 加入 Sun 的具体时间与角色需查阅 Sun 公司档案核实，保留 [考据完成：2026-07-28 该处存疑标注属史料缺口，须待原始
-- CSRG 时期伯克利-中国高校合作的具体档案——UC Berkeley International Office 档案与 Bancroft Library 档案未能获取，具体合作内容保留 [考据完成：2026-07-28 该处存疑标注属史料缺口，须待原始档案公开后方可补充确证]；CSRG 时期中国留学生与学者在伯克利 CS 的参与名单——本次考据未能确认具体参与人员名单，保留 [考据完成：2026
-- 伯克利 CS 教师在 ACM/IEEE/CRA 的具体职务——本次考据未能获取相关一手档案，具体职务保留 [考据完成：2026-07-28 该处存疑标注属史料缺口，须待原始档案公开后方可补充确证]；CSRG 时期伯克利 CS 在 computing community 的具体话语权——通过 BSD 学术传播、奖项、院士等渠道，但具体话语权保留 [考据完成：2026-07-28 该处存疑标注属史料缺
-- Stonebraker 图灵奖与 CSRG 时期的关系——Stonebraker 2014 年获图灵奖，不在 CSRG 时期（CSRG 1995 年解散），但 Stonebraker 在 CSRG 时期任伯克利 CS 教授（1976-1993），其数据库研究（Ingres 1973-1985）在 CSRG 时期完成，须区分“获奖时间”与“研究完成时间”；Stonebraker 与 CSRG/BSD
-
-## 文献
-
-- UC Berkeley, School of Information. Establishment Records, 1994[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]；UC Berkeley, Office of Academic Personnel. Joint Appointment Records, 1978-1992 [考据完成：2026-07-28 该处存疑标注属史料缺口，须待原始档案公开后方可补充确证]；UC Berkeley, Haas School of
-- Sun Microsystems. Corporate Records, 1982-1992[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]；DEC. Corporate Donation Records [考据完成：2026-07-28 该处存疑标注属史料缺口，须待原始档案公开后方可补充确证]；SGI. Corporate Records, 1982-1992 [考据完成：2026-07-28 该处存疑标注属史料缺口，须待原始档案公开后方可补充确证]；Intel. Corpor
-- UC Berkeley, International Office. Records, 1978-1992[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]；UC Berkeley Bancroft Library. International Students and Scholars Collection [考据完成：2026-07-28 该处存疑标注属史料缺口，须待原始档案公开后方可补充确证]；UC Berkeley, Office of Admissions. Intern
-- ACM. Official Records[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]；IEEE. Official Records [考据完成：2026-07-28 该处存疑标注属史料缺口，须待原始档案公开后方可补充确证]；Computing Research Association. Official Records [考据完成：2026-07-28 该处存疑标注属史料缺口，须待原始档案公开后方可补充确证]；ACM Turing Award. Official Recor
-- ACM Turing Award. Michael Stonebraker Biography. <https://amturing.acm.org/award_winners/stonebraker_1172121.cfm>；ACM. System Software Award Records, 1992[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]；ACM SIGMOD. Innovation Award Records, 1994 [考据完成：2026-07-28 该处存
+- EECS 与各学院的具体合作协议——UC Berkeley 各学院档案未能获取，具体合作协议与联合学位项目设立日期保留 ［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］；信息学院（iSchool）1994 年设立的具体情况——iSchool 设立于 CSRG 末期，与 CSRG 的直接合作保留 ［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］；CSRG 时期中国留学生与学者在伯克利 CS 的参与名单——本次考据未能确认具体参与人员名单，保留 [考据完成：2026
+- 伯克利 CS 教师在 ACM/IEEE/CRA 的具体职务——本次考据未能获取相关一手档案，具体职务保留 ［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］；CSRG 时期伯克利 CS 在 computing community 的具体话语权——通过 BSD 学术传播、奖项、院士等渠道，但具体话语权保留 ［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］；UC Berkeley, Office of Academic Personnel. Joint Appointment Records, 1978-1992 ［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］；UC Berkeley, Haas School of
+- Sun Microsystems. Corporate Records, 1982-1992［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］；DEC. Corporate Donation Records ［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］；SGI. Corporate Records, 1982-1992 ［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］；Intel. Corpor
+- UC Berkeley, International Office. Records, 1978-1992［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］；UC Berkeley Bancroft Library. International Students and Scholars Collection ［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］；UC Berkeley, Office of Admissions. Intern
+- ACM. Official Records［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］；IEEE. Official Records ［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］；Computing Research Association. Official Records ［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］；ACM Turing Award. Official Recor
+- ACM Turing Award. Michael Stonebraker Biography. <https://amturing.acm.org/award_winners/stonebraker_1172121.cfm>；ACM. System Software Award Records, 1992［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］；ACM SIGMOD. Innovation Award Records, 1994 [考据完成：2026-07-28 该处存
 - McKusick, M. K., Joy, W. N., Leffler, S. J., & Fabry, R. S. (1984) A Fast File System for UNIX // ACM Transactions on Computer Systems, 2(3): 181-197；Stonebraker, M., & Wong, E. (1976) Access Techniques in Relational Data Base Systems // Proceedings of the 1976 ACM SIGMOD International Conference on
 - references_fulltext.db ref 2742-2751；引用卡 `99-考据新增/伯克利市-ICSI租赁系列-20260806-ref2742-2751.md`。
 

@@ -40,8 +40,7 @@ volume: 第07卷-freebsd的工程体系重构
 ## 文献
 
 - FreeBSD Project. *SMPng Project Documentation*. freebsd.org/smp; McKusick, M. K., Neville-Neil, G. V., & Watson, R. N. M. (2014). *The Design and Implementation of the FreeBSD Operating System* (2nd ed.), Chapter 4; Oppermann, A. (2004-2006). *Network Stack Locking and Performance Posts*. freebsd-ne
-- Internet Archive. *FreeBSD SMPng Project Pages* (2003-2006 snapshots). web.archive.org; Lucas, M. W. (2007). *Absolute FreeBSD* (2nd ed.). No Starch Press; FreeBSD Project. *Release Notes for FreeBSD 5.0 through 7.0*. freebsd.org.[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始
-- FreeBSD Project. *ktls(4) Manual Page*; Baldwin, J. (2019). *Kernel TLS offload*. BSDCan '19; Netflix Technology Blog. (2018-2022). *KTLS and Open Connect CDN Posts*. netflixtechblog.com; FreeBSD Project. (2021-04). *FreeBSD 13.0 Release Notes* (KTLS section). freebsd.org. ［C］
+- Internet Archive. *FreeBSD SMPng Project Pages* (2003-2006 snapshots). web.archive.org; Lucas, M. W. (2007). *Absolute FreeBSD* (2nd ed.). No Starch Press; FreeBSD Project. *Release Notes for FreeBSD 5.0 through 7.0*. freebsd.org.［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
     FreeBSD 社区论文与演讲 [3
 - Linux Kernel Documentation. *Kernel TLS (kTLS)*. kernel.org; Watson, D. (2017). *Linux kTLS Patches*. lkml.org; Baldwin, J. (2019). *Cross-Platform KTLS Comparison*. freebsd-net@; Chelsio Communications. (2020-2026). *TLS Offload Documentation*. chelsio.com. ［A］
     FreeBSD 社区论文与演讲 [313]，[313] Mateu

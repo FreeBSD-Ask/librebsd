@@ -33,14 +33,7 @@ volume: 第11卷-dragonflybsd的历史
 ## 辨析
 
 - 部分引述的 Hsu 发言缺乏原始邮件 ID，正式撰写时须以 lists.dragonflybsd.org 邮件列表时间戳与 Message-ID 追溯完整讨论线程
-- 决议的完整文本是否已公开——freebsd.org/administration/ 公开 Core Team 决议摘要但未公开完整投票记录，Dillon 在 dragonfly.kernel 邮件列表称程序不透明；正式撰写时须以 freebsd-hackers 邮件列表原始公告与 Core Team 公开声明交叉核对 [考据完成：2026-07-28 该处存疑标注属史料缺口，须待原始档案公开后方可
-- 设计文档与实际实现之间的差异——dragonfly.duckdb 显示 HAMMER 首引（2007-10）至 v2.0.1 默认启用（2008-12）间 1 年 2 个月的设计文档与源码同步演进，期间设计文档多次修订；正式撰写时须以源码 sys/vfs/hammer/README 最终版本与设计文档 dragonflybsd.org/docs/hammer/ 交叉核对
-- 版权持有者信息的完整性——DragonFly COPYRIGHT 文件列明 "Copyright (c) 1992-2003 The FreeBSD Project. All rights reserved." 等继承版权声明，以及 Matt Dillon 等 DragonFly 贡献者版权声明；dragonfly.duckdb 显示 2003-2026 年间 COPYRIGHT 文件的 commit
-- 无法确定 “原始版本”，应记录所有已知变体——Usenet 存档中最早可追溯版本（1996 年）已为引用而非原创，后续版本（10 个/3 个开发者、比萨饼/蛋糕、“死了”/“打起来” 等变体）均为传播中的再创作；正式撰写时须以 Usenet 存档与邮件列表归档交叉核对，记录所有已知变体而非选定单一版本
-
-## 文献
-
-- lists.dragonflybsd.org 邮件列表归档 [EB/OL]；lists.freebsd.org 邮件列表归档 [EB/OL]；marc.info 归档 [EB/OL]. marc.info/?l = freebsd-hackers ［A］
+- 决议的完整文本是否已公开——freebsd.org/administration/ 公开 Core Team 决议摘要但未公开完整投票记录，Dillon 在 dragonfly.kernel 邮件列表称程序不透明；正式撰写时须以 freebsd-hackers 邮件列表原始公告与 Core Team 公开声明交叉核对 ［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］；lists.freebsd.org 邮件列表归档 [EB/OL]；marc.info 归档 [EB/OL]. marc.info/?l = freebsd-hackers ［A］
 
 <!-- DB_REF:dragonfly.duckdb -->
 > **数据库引用（dragonfly.duckdb）**：本子节对应 dragonfly 代码仓库。> 2003-2026 年间：656,206 次提交。> 仓库总览：656,206 次提交，535 位贡献者，2003-06-17 至 2026-08-18。

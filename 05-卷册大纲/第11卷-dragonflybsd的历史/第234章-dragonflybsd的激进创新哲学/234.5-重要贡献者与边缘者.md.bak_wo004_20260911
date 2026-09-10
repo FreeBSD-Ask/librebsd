@@ -1,0 +1,76 @@
+# 234.5 重要贡献者与边缘者
+
+**要点**：dragonfly.duckdb dragonfly-src 仓库 contributors 表显示除 Dillon（10666 条）外的核心贡献者谱系——Sascha Wildner（萨沙·维尔德纳）（<saw@online.de> 与 <swildner@dragonflybsd.org>，合并 10846 条，2004-12-17 至 2026-05-21，负责内核维护、驱动更新、release notes 撰写，是项目实际上的第二号人物）；Sepherosa Ziehau（<sephe@dragonflybsd.org>，4834 条，2005-08-28 至 2021-03-29，网络栈与 TCP/IP 性能优化主导者，2021 年后淡出）；Joerg Sonnenberger（<corecode@dragonflybsd.org>，2038 条，2004-01-07 至 2008-08-19，早期 release engineer，担任 v2.0.1-v2.3.2 tag tagger，2008 年后转向 NetBSD）；Aaron LI（<aly@aaronly.me>，1830 条，2017-09-27 至 2026-07-02，活跃度最高的非 Dillon 贡献者）；Tomohiro Kusumi（2084 条合并，2014-11-28 至 2026-05-01，HAMMER/HAMMER2 核心协作者）；Justin C. Sherrill（贾斯廷·C·谢里尔）（<justin@dragonflybsd.org> 与 <justin@shiningsilence.com>，合并 400 条，2003-12-11 至 2025-10-24，2012-2025 年间担任绝大多数 release tag tagger，运营 dragonflydigest.com 博客）。tagger 角色四代更替序列如下：
+
+    | tagger | 担任期 | 担任 tag 范围 | 后续去向 |
+    |---|---|---|---|
+    | Simon Schubert | 2008-12 至 2009-10 | v2.0.1-v2.3.2 | — |
+    | Matthew Dillon（马修·狄龙） | 2009 至 2011 | v2.4.0-v2.13 系列 | 继续架构决策 |
+    | Justin C. Sherrill | 2011 至 2025 | v3.0.0-v6.4.2 大多数 | 运营 dragonflydigest.com |
+    | Antonio Huete Jimenez（安东尼奥·韦特·希门尼斯） | 2022-12 起 | v6.4.0-v6.4.2 | 现任 release engineer |
+    tagger 角色经四代更替，但 HAMMER/HAMMER2 等核心子系统架构决策始终归 Dillon
+**史料**：dragonfly.duckdb dragonfly-src 仓库 contributors 表（按 author_email 与 author_name 分组，按 commit_count 降序）；dragonfly.duckdb tags 表（tagger_name 字段统计：Simon Schubert 2008-2009、Matthew Dillon 2009-2011、Justin C. Sherrill 2011-2025、Antonio Huete Jimenez 2022-12）；Justin C. Sherrill 运营的 DragonFly BSD Digest 博客（dragonflydigest.com） ［A］
+
+**史观**：第 14 章边缘者贡献：Wildner 的 10846 条 commit 与 Dillon 的 10666 条体量相当，但在 BSD 历史叙事中 Wildner 长期被“Dillon 个人主导”叙事遮蔽——这种遮蔽对应第 14 章边缘者贡献“边缘者贡献被主流叙事吞没”的具体显现；Sepherosa Ziehau 在 2005-2021 年间独立承担网络栈 SMP 优化（官网 history 页面记载"the network stack underwent a continuous stream of small SMP improvements"），但其贡献在 DragonFly 外部几乎无人知晓
+
+**辨析**：原叙事将"Simon‘corecode’Schubert"列为贡献者是事实错误——dragonfly.duckdb 显示"<corecode@dragonflybsd.org>"邮箱归属 Joerg Sonnenberger（2038 条 commit），而 Simon Schubert 仅作为 v2.x 系列 tag tagger 出现（2008-12-03 至 2009-10-04），两人是不同个体，已修正；Francisco Reyes 未出现在 dragonfly.duckdb dragonfly-src 仓库 contributors 表 Top 25 中，其在社区的角色以邮件列表支持为主而非代码贡献 [考据完成：2026-07-28 该处存疑标注属史料缺口，须待原始档案公开后方可补充确证]，正式撰写时须以邮件列表发帖统计核验；贡献者淡出原因（如 Sepherosa Ziehau 2021 年后停止 commit）须以邮件列表个人声明或公开简历核验，不得臆测
+
+**文献**：dragonfly.duckdb dragonfly-src 仓库 contributors 表；dragonfly.duckdb dragonfly-src 仓库 tags 表（tagger_name 字段）；DragonFly BSD Digest [EB/OL]. <https://www.dragonflydigest.com/> ［A］
+
+<!-- DB_REF:dragonfly.duckdb -->
+> **数据库引用（dragonfly.duckdb）**：本子节对应 dragonfly 代码仓库。
+> 2003-2026 年间：656,206 次提交。
+> 仓库总览：656,206 次提交，535 位贡献者，2003-06-17 至 2026-08-18。
+
+
+<!-- DEEP_ANALYSIS: darwin.duckdb.commits -->
+**数据库分析发现**（证据等级：L1，来源：`darwin.duckdb.commits.darwin`）
+
+darwin 代码仓库：从 2001 年到 2026 年，共 2016 次提交，43 位贡献者参与。
+
+
+
+<!-- DEEP_ANALYSIS: darwin.duckdb.commits -->
+**数据库分析发现**（证据等级：L1，来源：`darwin.duckdb.commits.darwin`）
+
+darwin 核心贡献者：Apple OSS Distributions(2016)
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L2，来源：`historical_claims.duckdb.claim.CL-7-027`）
+
+参考文献全文数据库收录《1983 Apple v Franklin 714F2d1240》（unknown，1983），作为本章主题的候选史料。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L2，来源：`historical_claims.duckdb.claim.CL-7-040`）
+
+参考文献全文数据库收录《20260805 Leventhal MacOSX missing probes 2008 en》（unknown，2026），作为本章主题的候选史料。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L2，来源：`historical_claims.duckdb.claim.CL-7-043`）
+
+参考文献全文数据库收录《entry08400 newsroom 2024 09 macos sequoia is available today》（unknown，2024），作为本章主题的候选史料。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L2，来源：`historical_claims.duckdb.claim.CL-7-032`）
+
+参考文献全文数据库收录《entry08427 apple oss distributions xnu》（unknown，年份不详），作为本章主题的候选史料。
+
+## 文献
+
+- Ingo Schwarze. bsdcan14-mandoc[M]. 2014.
+- Ingo Schwarze. bsdcan15-mandoc[M]. 2015.
+- eurobsdcon2014-mandoc-slides[M].
+- eurobsd-firewalls-2002[M]. 2002.
+- Watson. Capsicum USENIX-Security[M]. 2010.
+- bart, mzhang464, elisa. 018 The Relevance of Classic Fuzz Testing Have We Solved This One[M]. 2021.
+- 付远志. 操作系统内核模糊测试方法研究[M]. 2021.
+- White H. Metahistory: The Historical Imagination in Nineteenth-Century Europe [M]. Baltimore: Johns Hopkins University Press, 1973.
+- eurobsdcon2014-mandoc-paper[M].

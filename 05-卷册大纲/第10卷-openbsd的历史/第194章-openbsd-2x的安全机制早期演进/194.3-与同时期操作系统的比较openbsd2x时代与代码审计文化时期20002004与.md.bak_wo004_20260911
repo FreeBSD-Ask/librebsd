@@ -1,0 +1,233 @@
+# 194.3 与同时期操作系统的比较：OpenBSD 2.x 时代与代码审计文化时期（2000-2004）——与 NetBSD 1.5/1.6、FreeBSD 4.x/5.0、Linux 2.4、Windows 2000/XP 的对照
+
+## 194.3.1 NetBSD 1.5/1.6（2000-2002）
+
+**要点**：NetBSD 在 OpenBSD 2.x 同期为 1.5（2000）/1.6（2002），以多平台与代码整洁见长；与 OpenBSD 2.x 的“代码审计/安全第一”文化对照——NetBSD 1.x 重可移植与工程，OpenBSD 2.x 重安全审查，二者同源但优先级分野。
+
+**史料**：NetBSD 1.5/1.6 发布说明；OpenBSD 2.x 发布说明（2001-2002）［B］
+
+**史观**：总纲第 7 条——BSD 谱系：NetBSD 与 OpenBSD 同源于 4.4BSD-Lite，安全 vs 可移植文化分化。
+
+**辨析**：NetBSD 1.x 的代码整洁文化为安全审计提供基础，但 OpenBSD 2.x 将审计制度化。
+
+**文献**：NetBSD. 1.5/1.6 Release Notes [EB/OL]；OpenBSD. 2.x Release Notes [Z]. ［B］
+
+## 194.3.2 FreeBSD 4.x/5.0（2000-2003）
+
+**要点**：FreeBSD 在 OpenBSD 2.x 同期为 4.x（2000-2002）与 5.0（2003），以 x86 性能、Ports 与 SMPng 演进见长；与 OpenBSD 2.x 的安全文化对照——FreeBSD 4.x 重性能/兼容，OpenBSD 2.x 重代码审计，二者在 BSD 家族内目标分化。
+
+**史料**：FreeBSD 4.x/5.0 发布史；freebsd.duckdb freebsd-src ［A］
+
+**史观**：总纲第 7 条——BSD 谱系：FreeBSD 与 OpenBSD 同期演进，性能 vs 安全目标分化。
+
+**辨析**：FreeBSD 4.x 的健壮性部分源自长期工程，但安全审计制度化由 OpenBSD 引领。
+
+**文献**：FreeBSD. 4.x/5.0 Release Notes [EB/OL]；freebsd.duckdb freebsd-src [DB/OL]. ［A］
+
+## 194.3.3 Linux 2.4（2001）
+
+**要点**：Linux 2.4（2001）在 OpenBSD 2.x 同期以稳定化、多架构与企业采用见长；与 OpenBSD 2.x 的安全审计文化对照——Linux 2.4 的社区规模驱动快速迭代，安全修复依赖分散维护，OpenBSD 2.x 以集中代码审计建立安全声誉。
+
+**史料**：Linux 2.4 发布说明（2001）［B］
+
+**史观**：总纲第 6 条——技术路线分化：Linux 社区规模模式 vs OpenBSD 集中审计模式在 2000-2004 形成安全文化对照。
+
+**辨析**：Linux 2.4 的安全靠社区响应，OpenBSD 2.x 靠主动审计，二者路径不同。
+
+**文献**：Linux Kernel. 2.4 Release Notes [EB/OL]. ［B］
+
+## 194.3.4 Windows 2000/XP（2000-2001）
+
+**要点**：Microsoft 在 OpenBSD 2.x 同期发布 Windows 2000（2000）与 XP（2001），以商业桌面/企业市场主导；与 OpenBSD 2.x 的开源安全审计对照——Windows 闭源使安全依赖微软响应，OpenBSD 2.x 以开源可审计建立“默认安全”声誉。
+
+**史料**：Microsoft Windows 2000/XP 发布史 ［B］
+
+**史观**：总纲第 6 条——技术路线分化：闭源安全响应 vs 开源代码审计在 2000-2004 形成对照。
+
+**辨析**：Windows 2000/XP 的安全事件（如冲击波）凸显闭源响应劣势，OpenBSD 2.x 以审计预防。
+
+**文献**：Microsoft. Windows 2000/XP History [EB/OL].[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]
+
+## 194.3.5 同期代码审计/安全文化总览（2000-2004）
+
+**要点**：2000-2004 安全文化分野：OpenBSD 2.x 以集中代码审计建立“安全优先”标杆，FreeBSD 4.x/NetBSD 1.x 在工程/可移植中兼顾，Linux 2.4 靠社区响应，Windows 闭源响应；OpenBSD 2.x 的审计文化成为 BSD 家族乃至行业的安全范式源头。
+
+**史料**：各系统 2000-2004 安全文化史料 ［B］
+
+**史观**：总纲第 7 条——BSD 谱系：OpenBSD 的审计文化反哺家族（如部分加固被 FreeBSD/NetBSD 借鉴）。
+
+**辨析**：安全文化非“优劣”线性——OpenBSD 2.x 的极端审计适合其目标，其他系统有不同权衡。
+
+**文献**：OpenBSD. Security Practices (2000-2004)[EB/OL]；BSD 安全文化史料。［B］
+
+<!-- DB_REF:openbsd.duckdb -->
+> **数据库引用（openbsd.duckdb）**：本子节对应 openbsd 代码仓库。
+> 2000-2004 年间：81,488 次提交。
+> 仓库总览：491,195 次提交，3,352 位贡献者，1995-10-18 至 2026-08-25。
+
+
+<!-- DEEP_ANALYSIS: openbsd.duckdb.commits -->
+**数据库分析发现**（证据等级：L1，来源：`openbsd.duckdb.commits.openbsd`）
+
+openbsd 核心贡献者：ajacoutot(35528), deraadt(31454), sthen(30592), espie(18328), jasper(16649)
+
+
+
+<!-- DEEP_ANALYSIS: sacred_sources.duckdb.blocks -->
+**史家判断**（证据等级：L2，来源：`sacred_sources.duckdb.blocks.188`）
+
+以食品安全为例：人们永远无法得到真正的认识。你既不能说科学证明其在某量无毒害就真的无毒害，也不能证明它真的有毒害。用科学说服人本身就不科学——因为科学本身就是非充分决定性的，本身的正确性是得不到保证的。且你能得到的所有科学解释，正因为它是科学解释，所以它必定也是错误的。这并非反智，而是对科学边界的清醒认识。好坏是对于人来说的，所谓“剂量决定论”也是无意义的——零剂量不是更安全吗？
+
+
+
+<!-- DEEP_ANALYSIS: sacred_sources.duckdb.blocks -->
+**史家判断**（证据等级：L2，来源：`sacred_sources.duckdb.blocks.283`）
+
+王充因为个人境遇而提出了德福不一致论，其否定了个人努力的作用。可以看到人生的遭遇会对其理论有决定性的作用，有时是偏差，有时是谬误，但根本上说是一种悲伤。这揭示了理论建构的偶然性：任何理论都深深打上 theorist 个人经历的烙印。不存在客观的、超越个人境遇的理论。历史哲学的建构者同样如此——本书的理论亦不例外，它诞生于特定的境遇、特定的悲伤、特定的选择。
+
+
+
+<!-- DEEP_ANALYSIS: cross_indexes.duckdb.concept_history -->
+**史家判断**（证据等级：L2，来源：`cross_indexes.duckdb.concept_history.13`）
+
+出口管制：出口管制概念的演化: ①冷战成型期（1949–1951）：COCOM 建立，协调对苏联、东欧、中国的禁运货单；1951 年美国《相互防御援助管制法》（Battle Act）以停止援助迫使盟国参与（1980 年废止）；②缓和调整期（60–80 年代）：因缓和与贸易增长，管制多次放宽；③转型重组期（1993–1996）：1994 年 3 月 31 日 COCOM 解散；1995 年 12 月 19 日成立“瓦森纳协定”（Wassenaar Arrangement），1996 年 11 月 1 日起运作；④数字与加密期：加密早在冷战期被列为军品（由国务院依 AECA 管，即 ITAR），1996 年底部分非军用加密移至商
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-1-011`）
+
+Thompson 在 1984 年图灵奖演讲中称，特洛伊木马攻击的构想最早见于一份对 Multics 早期实现安全性的空军批判报告。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-3-004`）
+
+Theodore Roszak 1969 年出版《The Making of a Counter Culture》，副标题为“对技术官僚社会及其青年反抗的反思”。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-4-010`）
+
+Anonymous CVS 源码分发机制由 Charles D. Cranor 与 Theo de Raadt 创建，用于开放 OpenBSD 源码仓库。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-4-011`）
+
+创建 Anonymous CVS 的目标之一是开放 OpenBSD 的 CVS 源码仓库访问，使项目更开放并鼓励开发者兴趣。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-4-100`）
+
+1995 年秋启动 OpenBSD 项目时，Cranor 与 de Raadt 决定用 CVS 管理源代码树，并创建匿名 CVS 以开放源码仓库。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-5-111`）
+
+Anonymous CVS 由 Charles D. Cranor 与 Theo de Raadt 在 1995 年秋创建 OpenBSD 时设计，使匿名互联网用户无需写权限账户即可访问源码库。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-5-112`）
+
+Anonymous CVS 是一种让匿名互联网用户在不危及安全的前提下访问源码库的机制，将开放源码推进为开放源码库。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-6-017`）
+
+Harris、Jha、Reps 等人提出声明式、时序化且实用的 capability 编程方法，用于在 Capsicum 上满足安全策略。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-6-108`）
+
+OpenBSD 自 2005 年起对 SCSI 中间层（SCSI midlayer）实施重大重构，引入 mpath(4) 多路径虚拟总线与 iopools 资源池、将适配器命令处理器改为回调式 scsi_done API，以改善稳定性、性能与可扩展性。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L2，来源：`historical_claims.duckdb.claim.CL-7-046`）
+
+参考文献全文数据库收录《20260805 Glass deRaadt expulsion email 19941223 en》（unknown，2026），作为本章主题的候选史料。
+
+## 文献
+
+- Ingo Schwarze. bsdcan15-mandoc[M]. 2015.
+- Ingo Schwarze. bsdcan18-mandoc[M]. 2018.
+- Paul Irofti. bsdcan2014-octeon dsr500[M]. 2014.
+- bsdcan2015-rdomains[M].
+- bsdcan2016-bfd[M].
+- bsdcan2016-xen[M].
+- bsdcan2019-syspatch[M].
+- bsdcan2019-tls13[M].
+- bsdcan2025-hshoexer-confidential-computing[M].
+- andrew, afresh1. 2024-Why-Rewrite-fw update-Euro BSDcon[M]. 2024.
+- eurobsdcon2008-sensors[M].
+- eurobsdcon2011-kettenis[M].
+- eurobsdcon2011-openbsdscsievolution[M].
+- eurobsdcon2014-mandoc-paper[M].
+- eurobsdcon2014-mandoc-slides[M].
+- eurobsdcon2014-parallel-make[M].
+- eurobsdcon2015-packages[M].
+- eurobsdcon2015-softraid-boot[M].
+- eurobsdcon2016-openbsd-11n[M].
+- eurobsdcon2016-privsep[M].
+- eurobsdcon2017-device-drivers[M].
+- eurobsdcon2017-opensmtpd[M].
+- eurobsdcon2018-mandoc[M].
+- eurobsdcon2018-rop[M].
+- eurobsdcon2019-plist[M].
+- eurobsdcon2022-krw-blockstobooting[M].
+- eurobsdcon2023-bluhm-mitigations[M].
+- eurobsdcon2023-espie-cache[M].
+- eurobsdcon2024-bluhm-packetflow[M].
+- eurobsdcon2025-bluhm-protomp[M].
+- eurobsdcon2025-florian-easy[M].
+- Marc Espie. eurobsdcon 2018 https[M]. 2018.
+- Claudio Jeker. asiabsdcon08-network[M]. 2008.
+- Murenin C A, Boutaba R. OpenBSD Hardware Sensors Framework[C]//AsiaBSDCon 2009 Proceedings. Tokyo, 2009.
+- Murenin C A. OpenBSD Hardware Sensors Framework（幻灯片）[EB/OL]. AsiaBSDCon 2009. <https://www.openbsd.org/papers/asiabsdcon2009-sensors-slides.pdf>.
+- syuu. asiabsdcon2010 smp for sgi paper[C]. 2010.
+- Alexandre Ratchov. asiabsdcon2010 sndio slides[C]. 2010.
+- asiabsdcon2016-vmm-slides[M].
+- asiabsdcon2019-rop-slides[M].
+- Dave Voutila. asiabsdcon2023-hardening vmd devices-slides[M]. 2023.
+- andrew, afresh1. 2024-Why-Rewrite-fw update-Fossy[M]. 2024.
+- chuck, deraadt. anoncvs-paper[M]. [存疑]
+- Niels Provos. crypt-slides[M]. 2002.
+- eurobsd-firewalls-2002[M]. 2002.
+- eurobsd2017-pkgtools[M].
+- Brian Bamsch. Porting Open BSD to RISCV Final Report[M]. 2020.
+- Paul Irofti. eurobsdcon2014-octeon dsr500[M]. 2014.
+- eurobsdcon2014-rdomains[M].
+- eurobsdcon2015-mandoc[M].
+- eurobsdcon2016-embracingbsdrt[M].
+- eurobsdcon2017-schedisnot[M].
+- eurobsdcon2019-bwfm[M].
+- Software Freedom Conservancy. Form-990 fy-2022-23[M]. 2022.
+- eurobsdcon2019-gameoftrees[M].
+- eurobsdcon2019-perform-slides[M].
+- eurobsdcon2022-espie-arches[M].
+- eurobsdcon2022-tb-libressl[M].
+- Marc Espie. lse clang[M]. 2017.
+- eurobsdcon2023-matthieu-pf-rdomain[M].
+- eurobsdcon2023-otto-malloc[M].
+- Dave Voutila. eurobsdcon2024-vmd multiprocessing[M]. 2024.
+- 未知. openbsd Open BSD-jitsi[M]. 2022.
+- Giovanni Bechis 12 ` ~~~ alse. openbsd seccomp-pledge-oss2017[M]. 2017.
+- eurobsdcon2025-hshoexer-confidential-computing[M].
+- eurobsdcon2021-espie-debug[M].
+- eurobsdcon2024-hshoexer-confidential-computing[M].
+- eurobsdcon2025-espie-dpb[M].

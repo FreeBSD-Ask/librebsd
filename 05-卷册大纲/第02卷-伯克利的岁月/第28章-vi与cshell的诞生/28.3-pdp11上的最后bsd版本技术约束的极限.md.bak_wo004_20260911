@@ -1,0 +1,367 @@
+# 28.3 PDP-11 上的最后 BSD 版本——技术约束的极限
+
+## 28.3.1 PDP-11 硬件的极限约束
+
+**要点**：PDP-11 的 16 位地址空间（64KB）与有限内存（最大 4MB）成为 BSD 发展的硬件瓶颈，迫使 2BSD 在内核大小与功能取舍上做出严格妥协
+
+**史料**：DEC PDP-11 硬件手册、2BSD 内核配置文档、伯克利 CSRG 性能测试报告 ［A］
+
+**史观**：第 7 条硬件与软件辩证——PDP-11 的硬件极限直接塑造了 2BSD 的内核架构与功能边界
+
+**辨析**：PDP-11/70 与 /45 的内存上限在不同 DEC 文档中表述不一，需核对硬件规格表；[2026-08-14 两库核查：PDP-11 16 位地址空间/64KB 寻址、最大 4MB 内存等硬件规格两库无条目，邮件库 freebsd 1994-/usenet 1981- 早于覆盖范围，两库无法验证，保留存疑]
+
+**文献**：DEC (1976) "PDP-11/70 Processor Handbook"；伯克利 CSRG 技术报告 ［B］
+
+## 28.3.2 2BSD 在 PDP-11 上的优化
+
+**要点**：2BSD 针对 PDP-11 的内存限制进行内核覆盖（overlay）、代码紧凑化、可交换代码段等优化，使 BSD 能在有限的 PDP-11 资源下运行
+
+**史料**：2BSD 内核源代码、覆盖技术文档、伯克利性能优化报告 ［A］
+
+**史观**：第 7 条硬件与软件辩证——硬件限制催生的优化技术成为 BSD 工程传统的组成部分
+
+**辨析**：覆盖技术的具体实现细节在不同史料中描述不一，需核对内核源代码注释
+
+**文献**：Joy, W. (1978) "2BSD Release Notes"；DEC (1976) "PDP-11 Software Handbook" ［B］
+
+## 28.3.3 从 PDP-11 到 VAX 的迁移压力
+
+**要点**：PDP-11 的地址空间限制使 BSD 无法支撑日益增长的网络与虚拟内存需求，1979-1980 年伯克利启动向 VAX 32 位架构的迁移，催生 3BSD
+
+**史料**：3BSD 项目计划书、CSRG 迁移备忘录、VAX 硬件文档[考据完成：2026-07-28 经穷尽联网考据，上述史料清单为已知公开来源汇总，部分原始档案未公开数字化或须档案馆藏地现场核验，属史料缺口，须待原始档案公开后方可补充确证] 〔L3 官方文档〕
+
+**史观**：第 7 条硬件与软件辩证——PDP-11 的硬件瓶颈迫使 BSD 寻求新平台，硬件演化推动软件迁移
+
+**辨析**：迁移决策的具体时间（1979 还是 1980）在不同史料中不一致，需查证 CSRG 会议记录
+
+**文献**：DEC (1978) "VAX Architecture Reference Manual"；McKusick, K. (1999) "Twenty Years of Berkeley Unix" ［B］
+
+## 28.3.4 PDP-11 时代的终结
+
+**要点**：2BSD 是 PDP-11 平台上最后的主要 BSD 版本，1980 年代 BSD 主力转向 VAX，PDP-11 上的 2BSD 进入维护模式，但 2BSD 的代码与工具持续影响后续版本
+
+**史料**：2BSD 后续维护记录、3BSD 发布说明、DEC PDP-11 退市公告[考据完成：2026-07-28 经穷尽联网考据，上述史料清单为已知公开来源汇总，部分原始档案未公开数字化或须档案馆藏地现场核验，属史料缺口，须待原始档案公开后方可补充确证] 〔L1 代码 + L3 官方文档〕
+
+**史观**：第 6 条技术路线分化——PDP-11 路线与 VAX 路线的分化标志着 BSD 从小型机向超级小型机的迁移
+
+**辨析**：PDP-11 上 2BSD 的最后维护版本号在不同史料中不一致，需核对伯克利发布记录
+
+**文献**：DEC (1990) "PDP-11 End of Life Announcement"；伯克利 CSRG 维护日志[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]
+
+<!-- DEEP_ANALYSIS: cross_indexes.duckdb.concept_history -->
+**史家判断**（证据等级：L2，来源：`cross_indexes.duckdb.concept_history.17`）
+
+文件系统概念演化大体历经：①顺序/平坦期（1950–1960s）：磁带顺序访问与早期磁盘平面目录；②层次化突破（1960s–1970s）：Multics（始于 1965）首创树状文件目录与路径名，Unix（1970s）以 inode 架构、挂载点、“一切皆文件”简明化并推广层次文件系统；③性能重构期（1980s）：Marshall Kirk McKusick 等为 4.2BSD 设计 Fast File System（FFS/现称 UFS1，1982 年写出、随 4.2BSD 发行），引入柱面组、碎片、软更新，UFS2（2002–2003）改用 64 位块指针扩展至多 TB；④网络化期：Sun Microsystems 1984 年推出网络文件系统 NFS，确立 VFS/vnode 接口；⑤存储与纠错集成期：如 ZFS（2001–2006）将文件系统与卷管理、写时拷贝、校验和集成。
+
+<!-- DEEP_ANALYSIS: cross_indexes.duckdb.concept_history -->
+**史家判断**（证据等级：L2，来源：`cross_indexes.duckdb.concept_history.3`）
+
+Capsicum 源自剑桥大学计算机实验室 Robert N.M. Watson 与 Jonathan Anderson 的 TrustedBSD 研究项目，受 Google、FreeBSD 基金会与 DARPA 资助。2010 年 12 月 USENIX ;login 刊发《introducing Capsicum: practical capabilities for UNIX》正式公开。原型在 FreeBSD 8.x 开发，2011 年起作为实验特性随 FreeBSD 9.0 提供。其思想可上溯至 Dennis 与 Van Horn 1966 年的 capability 理论。2013 年 Google 与 FreeBSD 基金会联合资助 Pawel Jakub Dawidek 整合改进 API 并开发 Casper 后台服务，Casper 自 FreeBSD 10.1 起提供并用于 tcpdump、kdump 等组件。此后持续移植到 Linux、DragonFlyBSD 等。
+
+<!-- DEEP_ANALYSIS: cross_indexes.duckdb.concept_history -->
+**史家判断**（证据等级：L2，来源：`cross_indexes.duckdb.concept_history.6`）
+
+GEOM 由 Poul-Henning Kamp 提出构想（早期思想文《Geometry —— an idea》），最原始前身是作者对 Minix 1.2 所做的一个从未发布的 hack。2002 年 Kamp 在 NAI Labs 支持下，于 DARPA/SPAWAR 合同与 DARPA CHATS 研究计划框架内开发成形。2003 年 Kamp 在 BSDCon 发表 GEOM 教程。GEOM 自 FreeBSD 5.0（2003）起提供，明确定义 class/geom/provider/consumer/rank 等拓扑概念，提供分区（FDISK/MBR、GPT、BSD slice）、镜像（geom_mirror）、RAID、UFS 卷标、GBDE/geli 磁盘加密等类，并支持 ggate 用户态网关。至 FreeBSD 13.0，GEOM_BSD、GEOM_MBR、GEOM_SUNLABEL 等过时组件被移除，由 GEOM_PART_* 与 GEOM_LABEL 等替代，框架持续演化。
+
+<!-- ROW_MINE: references_fulltext.key_facts.2496 -->
+**数据库分析发现**（证据等级：L5，来源：`historical_claims.duckdb.claim.CL-RM-002001`；2026-08-31 全库行级遍历考据采纳）
+
+**chroot(2) 的精确加入日期得以确证**：据 SCCS 版本日志记载（经文献一手引用转存），chroot 系统调用由 Bill Joy 于 **1982 年 3 月 18 日**加入 BSD 代码库，加入时间距 4.2BSD 开发起点约一年半。此前叙事仅能表述为“1979 年前后（一说 2BSD 时期）引入”，本条以版本控制日志为据将引入时间收窄至具体日期；chroot 本为构建与测试环境切换而设计，而非安全机制（其可被再次 chroot 逃逸的缺陷在 FreeBSD jail 出现前长期存在），此时间线为 27.3.2 节所述 2BSD 工具集演进提供精确坐标。引用时按 L5 代码证据纪律：可写版本控制事实，不得扩大到代码之外。
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-1-022`）
+
+第一个伯克利软件发行版（1BSD）是作为 UNIX 第六版的更新发布的，随后是用于第七版/PDP-11 的 2BSD，以及用于 VAX 的 3BSD 和 4BSD。
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-1-016`）
+
+McKusick 等人在 1984 年快速文件系统论文中明确称，UNIX 操作系统从 Multics 这一大型高性能操作系统借鉴了许多思想。
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-2-001`）
+
+Berkeley Pascal PX 实现说明（1979 年 1 月）由 PDP-11/70 原始版本更新，以反映运行于 VAX-11/780 上的解释器。
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-2-002`）
+
+Berkeley Pascal 的 px 解释器是 Ken Thompson 原始实现的 PDP-11/70 到 VAX-11/780 操作码映射，经 William Joy 与 Charles Haley 大量修改扩充。
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-2-003`）
+
+Kridle 与 McKusick（1983）在运行 4.2BSD 的 VAX-11/780 与 VAX-11/750 上测量了多种 I/O 操作下的 UNIX 文件系统吞吐量。
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-1-121`）
+
+TrustedBSD MAC 框架是用于 FreeBSD 平台的操作系统访问控制扩展的灵活模块化环境，由 Robert Watson 等人在 DARPA 信息生存能力项目会议论文中描述。
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-2-009`）
+
+curses 屏幕包建立在 Bill Joy 编写编辑器时创建的终端通用描述能力、termcap 数据库读取例程与最优光标移动例程之上。
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-2-010`）
+
+PDP-11 的 16 位虚拟地址空间到 1975 年已成为应用的真实限制，DEC 因而设计 32 位虚拟地址的 VAX 作为其继任者。
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-2-011`）
+
+VAX-11/780 于 1978 年推出，是 VAX 架构的首个实现；VAX 设计始于 1975 年，目标是成为 PDP-11 的兼容扩展以解决其虚拟地址空间限制，名称 VAX-11 源自“PDP-11 的虚拟地址扩展”。
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-2-012`）
+
+4.4BSD 架构手册的作者署名为 William Joy、Robert Fabry、Samuel Leffler、M. Kirk McKusick、Michael Karels，隶属伯克利计算机系统研究组（CSRG）。
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-2-013`）
+
+4.2BSD 的 IPC 设施文档由计算机系统研究组（CSRG）成员 Samuel J. Leffler、Robert S. Fabry、William N. Joy、Phil Lapsley 署名。
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-2-041`）
+
+McKusick、Joy、Leffler 与 Fabry（1984）描述了从原始 512 字节 UNIX 文件系统到 4.2BSD 发布的新文件系统（快速文件系统 FFS）的变更。
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-2-046`）
+
+Ralph Campbell（CSRG，1986）撰写了 4.3BSD 行式打印机假脱机（lpd）手册。
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-2-047`）
+
+BIND 4.9 的一位作者在开发与发布 BIND 4.9 期间任职于 DEC 网络系统实验室，并曾被借调至 CSRG 完成相关工作。
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-2-048`）
+
+Graham、Kessler 与 McKusick（1982）描述了 gprof 调用图执行剖析器的设计：将被调例程的运行时间计入调用它们的例程。
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-2-049`）
+
+Sun Microsystems 与 CSRG（1988）的 rpcgen 编程指南说明 rpcgen(1) 用于帮助程序员简单直接地编写 RPC 应用。
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-2-052`）
+
+McKusick、Karels 与 Bostic（1989）描述了 CSRG 以小团队开发与集成 4.3BSD 的发布工程策略：每个发布周期分为开发阶段与发布工程阶段，发布工程分三步（alpha、beta、最终发布）。
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-2-053`）
+
+McKusick、Karels 与 Bostic（1989）记载伯克利的发布在“引入重大新设施”与“提供缺陷修复与效率改进”之间交替。
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-2-054`）
+
+McKusick、Karels 与 Bostic（1989）记载 CSRG 一直是一个小型软件开发团队，需协调 CSRG 成员与贡献代码的外部社区成员。
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-2-055`）
+
+McKusick、Karels 与 Bostic（1989）认为 BSD 开发的优势在于少数核心开发者能理解整个系统并协调工作，这是大型开发组织难以复制的。
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-3-001`）
+
+BSD 于 1977 年由 Bill Joy 在伯克利以单人项目起步，1980 年成长为四人协调的计算机系统研究组（CSRG）。
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-3-002`）
+
+CSRG 使用 SCCS（首个源代码控制系统）管理 BSD 开发，1983 年设计 socket 接口并实现 TCP/IP，允许少数受信任外部贡献者经 ARPAnet 登录开发机直接更新源码。
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-3-014`）
+
+伯克利 UNIX 性能改进工作由 NSF 资助（MCS80-05144）与 DARPA（ARPA Order No. 4031，合同 N00039-82-C-0235）资助。
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-3-050`）
+
+McKusick 与 Karels 1986 年提出伯克利 UNIX 新虚拟内存实现方案：虚拟内存上限应为物理内存与交换空间之和，而非受预分配交换区大小限制。
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-3-052`）
+
+McKusick 与 Karels 1988 年记载 4.3BSD 内核拥有至少十种不同的内存分配器，并提出通用目的动态内存分配器以统一接口。
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-3-053`）
+
+McKusick、Karels 与 Bostic 1990 年提出在可换页内存而非专用内存中构建 RAM 磁盘文件系统原型，以避免专用内存带来的性能损失。
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-3-056`）
+
+McKusick、Joy、Leffler 与 Fabry 1984 年记载快速文件系统（FFS）的文件访问速率可达传统 UNIX 文件系统的十倍。
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-3-061`）
+
+Marshall Kirk McKusick（住址 1689 San Pablo Avenue, Berkeley）出现在 2017 年 5 月 30 日伯克利市议会会议记录的通信列表中，由议员 Worthington 提交。
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-3-069`）
+
+BIND 运维指南脚注记载作者 Kevin J. Dunlap 是 DEC ULTRIX 工程高级开发组成员，完成该工作时借调至 CSRG。
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-4-105`）
+
+CSRG 用 SCCS 管理源码，1983 年设计 socket 接口并在其下实现 TCP/IP，允许少数受信任外部贡献者经 ARPAnet 直接更新源码。
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-4-113`）
+
+McKusick 2018 年演讲称 FreeBSD 于 1993 年 6 月 19 日命名，源自 Bill Jolitz 面向 Intel 386 的 4.4BSD-Lite 移植版本。
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-4-122`）
+
+McKusick《Twenty Years of Berkeley Unix》记载，Thompson 与 Ritchie 1973 年 11 月在普渡大学 SOSP 发表首篇 Unix 论文，伯克利 Fabry 教授与会后即着手在伯克利获取该系统。
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-5-010`）
+
+McKusick 与 Benno Rice 在《The Evolution of FreeBSD Governance》（FreeBSD Journal, 2017）中记载：BSDi 于 2000 年收购 Walnut Creek CDROM，使受雇开发者可接触 BSD/OS 源码；内核多线程化中 John Baldwin 的方案借鉴 BSD/OS 与 Solaris，Matthew Dillon 偏好类似 Amiga 内核的架构，两人冲突因核心团队不愿在技术争论中选边而加剧，最终 Dillon 的 commit 权限被移除并离开创立 DragonFly BSD。
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-5-015`）
+
+McKusick 在 BSDCan 2018 演讲中记载：Yahoo 完全基于 FreeBSD 运行并同意托管 CVS 仓库与发行版，Justin Gibbs 创立 FreeBSD Foundation 旨在提供 FreeBSD 项目基础设施——基金会成立的直接背景是项目基础设施对单一公司（Yahoo）的依赖。
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-5-016`）
+
+McKusick 在 BSDCan 2018 演讲中记载：FreeBSD 核心团队最初为终身制（约 20 名成员），僵化与冷漠促使起草章程建立 9 名成员、由 committer 选举的核心团队，首届民选核心团队于 2000 年产生且几乎无旧成员留任。
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-5-113`）
+
+关于 FreeBSD 迁移到 Subversion 的时间存在矛盾：McKusick 称经辩论后于 2000 年迁到 Subversion，而 Ed Maste 的版本控制历史显示 src/ 仓库直到 2008-05-31 才迁至 Subversion。
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-6-107`）
+
+4.2BSD 与 4.3BSD 引入可靠信号（reliable signals）与快速文件系统（fast filesystem），这是 FFS/UFS 进入 Berkeley 系统发行版的开端。
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L2，来源：`historical_claims.duckdb.claim.CL-7-024`）
+
+参考文献全文数据库收录《1984 McKusick A Fast File System for UNIX en》（unknown，1984），作为本章主题的候选史料。
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L2，来源：`historical_claims.duckdb.claim.CL-8-008`）
+
+参考文献全文数据库收录《Berkeley city charter en》（Berkeley，1908），作为本章主题的候选史料。
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-3-018`）
+
+计算机系统研究组（CSRG）一直是小型软件开发团队，资源限制要求精细的软件工程管理以及对 CSRG 成员与社区贡献者的协调。
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-6-002`）
+
+Pawel Jakub Dawidek 与 Marshall Kirk McKusick 合作撰写将 Solaris ZFS 移植到 FreeBSD 的论文。
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L2，来源：`historical_claims.duckdb.claim.CL-8-003`）
+
+参考文献全文数据库收录《McKusick design impl 44bsd en》（McKusick，1996），作为本章主题的候选史料。
+
+## 文献
+
+- bsdcon. kamp-phk-devfs-paper[M]. 2002.
+- standalone. dowse-ufs optimizations-paper[M]. 2002.
+- eurobsdcon2014-mandoc-slides[M].
+- eurobsdcon2015-mandoc[M].
+- FreeBSD-Foundation-October-2016-Update[M]. 2016.
+- FreeBSD-Foundation-September-2016-Update[M]. 2016.
+- Marshall Kirk McKusick, Keith Bostic, Michael J. Karels, John S. Quarterman. The Design and Implementation of the 4.4 BSD Operating System[M]. Addison-Wesley, 1996.
+- ONODERA R. NetBSD on Google Compute Engine -- Step by Step Guide（幻灯片）[EB/OL]. AsiaBSDCon 2016 NetBSD BoF.
+- Martin Husemann. netbsd arm be8 asiabsdcon2015[M]. 2015.
+
+<!-- MAIL_INSIGHT: ucbvax.5145 -->
+**观点**：1981 年 11 月，署名 Bill Jolitz 的伯克利发帖称 2.8BSD 发行带中的 job control 目录“完全是一堆垃圾”，未经其同意被留下；并透露下一版（约 12 月）会正式纳入，但配套 csh 太大，在非分离 I/D 机器上可能须 overlay 运行。
+**邮件来源**：Bill Jolitz（伯克利 william），comp.bugs.2bsd，1981 年，Message-ID: `ucbvax.5145`
+**史学意义**：同期记录揭示 PDP-11 上 csh 与 job control 受内存所迫的工程取舍，直接印证 2BSD 作为 PDP-11 末期系统的技术极限。
+<!-- /MAIL_INSIGHT -->
+
+<!-- ROW_MINE: usenet_mail.messages.170 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-010011`；2026-08-31 全库行级遍历考据采纳）
+
+1981 年 7 月 10 日，署名 mark 的伯克利侧发帖（utzoo!duke!decvax!ucbvax!mark，主题 coryv7bugs => 2bsd-bugs, NET.2bsd-bugs）记录了 2BSD 维护交接的一手安排：“Carl Smith will be taking over 2bsd when I leave next week”——发帖者宣布自己下周离任后由 Carl Smith 接手 2BSD 维护，继续监看 bug 报告并合并修复，且说明自原始版本出发的 diff 更容易被合并，“因为 Carl 还不能读心”；同时将 bug 报告渠道由 coryv7bugs 重组为 2bsd-bugs 与 NET.2bsd-bugs。此陈述揭示早期 2BSD 发行维护的实际运作：主拷贝（master copy）集中保管、补丁经新闻组渠道汇集、由维护者人工甄别合并，为 27.3.4“2BSD 进入维护模式”的抽象表述提供了可溯源的当事人细节，并与本文件既有 MAIL_INSIGHT 所录 1981 年 Bill Jolitz 对 2.8BSD job control 的批评互为补充。引用时按 L4 纪律：可写“据当事人陈述”，交接细节以邮件原文为限，不外推其后的维护谱系。
+
+<!-- ROW_MINE: usenet_mail.messages.195 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-010015`；2026-08-31 全库行级遍历考据采纳）
+
+1981 年 9 月 15 日，2BSD 维护者 Carl 经 dist2 发布“first 2BSD bug list”——现存可考的首份 2BSD 官方缺陷修复清单，按日期列出自 8/19 以来的 stty、login、sys2.c、sys3.c、rdwri.c 等十余项修复并附 diff：“There follows a list of currently known bug fixes to 2.8BSD. Some tapes may have fixes already installed. The crucial fixes are the ones involving sys2.c and sys3.c.”——修复以“适用于某日期之前制作的所有磁带”的方式滚动广播，与 comp.bugs.2bsd 的用户缺陷报告构成“报告—甄别—再广播”闭环。此为本节 27.3.4“2BSD 进入维护模式”之下发行工程实际运作的最直接一手证据，与本文件既有的维护交接记录（ROW_MINE usenet_mail.messages.170）互补，共同呈现磁带时代 BSD 发行维护的原始形态。
+
+<!-- ROW_MINE: usenet_mail.messages.206 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-010017`；2026-08-31 全库行级遍历考据采纳）
+
+1981 年 9 月 26 日，Carl 就“将 I/O 缓冲移出内核”（UCB_BUFOUT）引发的时钟中断丢失问题宣布回退决定：用户报告重映射期间的 spl7 导致丢中断后，“We decided to put the buffers back in and see what happens”，并逐项列出移回缓冲所需的配置开关与汇编常量修改；对话中用户一句“Apparently, the kernel was never tested with the buffers in.”与维护者回敬的“Apparently so.”，直白呈现 2.8BSD 发行工程“发行先于测试”的实态。此记录为 27.3.1 与 27.3.2 所述 PDP-11 内存约束下的内核取舍（缓冲内置与外置、spl 级别与 UCB_CLIST 依赖）提供可溯源的决策现场。
+
+<!-- ROW_MINE: usenet_mail.messages.231 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-010023`；2026-08-31 全库行级遍历考据采纳）
+
+1981 年 11 月 7 日，Bill Jolitz 回应外界对 2.8BSD 网络线路规程（NETLDISC，为 berknet 而设）质量的追问，给出罕见的当事人工程账目：缓冲同步/锁死与 dz11 丢字符两类问题中，前者是“没时间修”的编程错误——“The total amount of time allotted to NETDISC was about 20 hours.”，后者的 silo 代码在另一台机器上完成却从未合并；他总结“The problems with NETLDISC probably are more due to sheer negligence that to serious technical problems.”，估计一天工作量即可解决，而根因之一是核心开发机甚至未接入 berknet、无人有兴趣清理。此陈述为观察早期 BSD 网络代码质量与其所获投入之间的关系提供当事人自述的量化锚点，亦提示以“技术困难”笼统解释缺陷的叙事需谨慎。
+
+<!-- ROW_MINE: usenet_mail.messages.295 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-010053`；2026-09-10 全库行级遍历考据采纳）
+
+1982 年 4 月 9 日，2BSD 维护者 Mark 阐明 2.8BSD 的发行定位：它是 V7 之上的叠加发行而非自足发行，原因是“一卷磁带装不下完整发行”且伯克利自身磁盘空间不足以存放全部源码——发行形态由磁带容量与机房磁盘等物质条件直接塑造。此陈述为本节 27.3.1/27.3.2 所述 PDP-11 资源约束提供当事人自述的制度性注脚：2BSD 的“叠加”性格并非单纯技术选择，而是物流现实的产物。引用时按 L4 纪律：发行定位表述以邮件原文为限。
+
+<!-- ROW_MINE: usenet_mail.messages.450 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-010083`；2026-09-10 全库行级遍历考据采纳）
+
+1984 年 12 月 3 日，Keith Bostic 公开动员 2.9BSD 缺陷持有者“倾囊相告”，承诺把散落各站点的修复汇总成名单——CSRG 人员首次以组织者身份介入 2BSD 系缺陷治理的当事人记录。结合 1985 年 1 月犹他 USENIX 鸟群会（CL-RM-010087），可观察到 2.9BSD 末期“社区自救—伯克利接手”的接力结构，为本节 27.3.4“2BSD 进入维护模式”补上与 1981 年维护交接记录（ROW_MINE usenet_mail.messages.170）相隔三年的后续环节。引用时按 L4 纪律：动员承诺以邮件原文为限。
+
+<!-- ROW_MINE: usenet_mail.messages.452 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-010084`；2026-09-10 全库行级遍历考据采纳）
+
+1984 年 12 月 6 日，Bostic 公布他与 Terry Slattery 为使 2.9BSD 网络代码完成编译链接所作的全部改动清单，并如实声明“仅编译、未运行”——修复网络代码的第一步是让它重新可构建。该清单与同年 12 月 9 日的 TCP/IP 移植谱系确证（CL-RM-010085）同月出现，显示 2.9 网络线工作的两条路径：让旧代码可编译与追溯新代码从何而来。引用时按 L4 纪律：改动清单内容以邮件原文为限，“仅编译未运行”状态不得表述为可用。
+
+<!-- ROW_MINE: usenet_mail.messages.453 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-010085`；2026-09-10 全库行级遍历考据采纳）
+
+1984 年 12 月 9 日，Greg Satz 确证 2.8/2.9BSD 的 TCP/IP 是伯克利首个 TCP 工程的落地载体：Jerald Croft 完成 4.1a→2.8 的移植、恰逢 NCP→TCP 切换，Tektronix 执行 2.8→2.9 移植，伯克利则委托 SRI 集成并回交全部成果。此当事人陈述把“BSD 与 TCP/IP 共生”的宏观叙事落到具体机构分工（伯克利/Tektronix/SRI），为 PDP-11 线在 TCP/IP 历史中的位置提供直接证据——27.3.4 述 2BSD 遗产时应补入此维度。引用时按 L4 纪律：机构分工以邮件原文为限。
+
+<!-- ROW_MINE: usenet_mail.messages.462 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-010087`；2026-09-10 全库行级遍历考据采纳）
+
+1985 年 1 月 28 日，Bostic 报告犹他 USENIX 的 2.9BSD 鸟群会逾百人到场，会上形成社区自救计划：快速整合已知修复，并寻求让伯克利以社区磁带形式改发。2.9BSD 的发行迟滞由此转化为有组织的集体行动，是 BSD 史上“用户倒逼发行”的罕见完整案例，与 CL-RM-010083/010088 构成同一事件链。引用时按 L4 纪律：与会规模与计划内容以邮件原文为限。
+
+<!-- ROW_MINE: usenet_mail.messages.464 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-010088`；2026-09-10 全库行级遍历考据采纳）
+
+1985 年 1 月 15 日，Bostic 预告 2.9 鸟群会议程：修复整合、伯克利会否出 3.0、社区是否代发磁带、4.2 网络代码向 PDP-11 的移植，并以“修好的 param.h”作门奖——议程本身就是 1984-1985 年 PDP-11 社区问题清单的一手目录，其中“社区是否代发磁带”一项预示了 BSD 分发去中心化的先声，为 27.3.4 提供制度史素材。引用时按 L4 纪律：议程细节以邮件原文为限。
+
+<!-- ROW_MINE: usenet_mail.messages.89304 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-014915`；2026-09-10 全库行级遍历考据采纳）
+
+1984 年初，有站点记述 2.9BSD 磁带供不应求的实况：致电索取须隔日方获回话，实际拿到磁带要等约一个月，分发经 Carl Smith 处经手。该记录为 27.3.4“2BSD 进入维护模式”补上物流维度的当事人证词——PDP-11 线在末期不仅受技术约束，其发行能力亦受制于人手与磁带制作流程；与同年 12 月 Bostic 动员修复（ROW_MINE usenet_mail.messages.450）所反映的社区倒逼发行互为因果。引用时按 L4 纪律：等待时长与经手人以邮件原文为限。
+
+<!-- ROW_MINE: usenet_mail.messages.89168 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-014914`；2026-09-10 全库行级遍历考据采纳）
+
+1984 年 1 月，波特兰州立大学（PSU）的 Owens、Irwin 与 Eckhardt 发布 PSUnix 1.0——基于 V7M（V7 的机器独立维护版）重造的 PDP-11 V7 系统：宣称运行速度快数倍、与 4.1BSD 兼容度约 99%（可原样运行 Berkeley 的 csh 与 vi），并以覆盖机制承载 netnews 与 Rogue 游戏，向 beta 站点征募、要求持有 V7 许可证。此公告为 PDP-11 线上“以 V7 为基座自行重造、兼容 Berkeley 应用”的第三方工程提供一手在场证据：表明 2BSD 系之外，社区对 PDP-11 小型系统的需求还存在平行路径——以 V7M 重造而非移植 2.9BSD。引用时按 L4 纪律：性能与兼容度数字以公告原文为限。
+
+<!-- ROW_MINE: usenet_mail.messages.89606 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-014933`；2026-09-10 全库行级遍历考据采纳）
+
+1984 年 2 月至 3 月间，伯克利的 Carl Smith（2BSD 维护者）在网路回应 PSUnix 之争时阐明：2.9BSD 是完整发行（complete distribution）而非仅提供新内核，并逐点对照其内容构成。该回应系 PDP-11 线两派路径（移植 2.9BSD 完整发行 vs. 以 V7M 重造）对峙中的官方口径——维护者本人确认 2.9 的完整发行定位，为 27.3.4 与 ROW_MINE usenet_mail.messages.89168（PSUnix 公告）所述“平行路径”之争提供对照主证。引用时按 L4 纪律：发行完整性表述以邮件原文为限。
+
+<!-- ROW_MINE: usenet_mail.messages.90337 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-014972`；2026-09-10 全库行级遍历考据采纳）
+
+1984 年 1 月底，Spencer Thomas 在网路转述其在 UniForum 会场所闻的 Berkeley 代表口径：2.9BSD 不再继续开发，将照现样（as is）发带。此转述为 2.9 冻结宣告的网络在场证据——PDP-11 线的官方维护在 1984 年初转入收束，与 27.3.4“2BSD 进入维护模式”的时序吻合，亦与 ROW_MINE usenet_mail.messages.450（Bostic 1984-12 动员社区修复）所反映的“伯克利停止开发、社区接手收尾”接力结构相接。引用时按 L4 纪律：此为与会者转述口径，非 Berkeley 官方公告原文。

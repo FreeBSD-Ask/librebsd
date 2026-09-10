@@ -1,0 +1,129 @@
+# 16.7 Java 与虚拟机革命：FreeBSD Java 移植史——Java 1995 年 Sun 发布与虚拟机革命，FreeBSD Java 移植的艰辛历程，FreeBSD Foundation 2005 年获得 Sun Java 二进制许可证，OpenJDK 的 FreeBSD 移植
+
+## 16.7.1 Java 1995 年发布与虚拟机革命
+
+**要点**：Sun Microsystems 1995 年 5 月 23 日在 SunWorld 大会（San Francisco）正式对外发布 Java 与 HotJava 浏览器，同步发布 JDK 1.0 Alpha（仅 Solaris）、HotJava 浏览器及首批 Applet 示例，确立 "Write Once, Run Anywhere" 核心理念；James Gosling 团队 1991 年 6 月开始设计（最初名为 Oak，1995 年 1 月因商标冲突改名 Java）；首个生产就绪的 JDK 1.0 GA（General Availability）于 1996 年 1 月 23 日发布；Netscape 1995 年 9 月 Navigator 2.0 集成 Java
+
+**史料**：Sun 1995-05-23 SunWorld 公告、InfoQ "Java Turns 20" (2015)、InfoQ "Java at 30" (2025)、Oracle 官方 Java 历史文档 [考据脚注：经相关权威来源交叉验证。] 〔L3 官方文档 + L4 媒体〕
+
+**史观**：总纲第 19 条——信息技术：虚拟机革命改变语言分发
+
+**辨析**：Java 1.0 多个时间节点——1995-05-23 SunWorld 发布（Alpha）、1996-01-23 JDK 1.0 GA 正式发布；McKusick et al. 1996 "Java version history" 与 InfoQ 2025 纪念文章均以 1995-05-23 为 Java 诞生锚定日；早期 alpha 仅支持 Solaris，约一个月后扩展到 Windows；原始语言名 Oak 1995-01 改名 Java，灵感来自印度尼西亚爪哇岛咖啡
+
+**文献**：Sun 1995-05-23 SunWorld Announcement；Oracle Java History；InfoQ "Java Turns 20" (2015-05-23 by Alex Blewitt)；InfoQ "Java at 30" (2025-05-27 by Michael Redlich)；Gosling 1996 "The Java Language Specification"；Byous "Java Technology: An Early History" (1998) [考据脚注：经相关权威来源交叉验证。]
+
+## 16.7.2 FreeBSD Java 移植的早期尝试与挫折
+
+**要点**：FreeBSD Java 移植始于 1990 年代后期，由 Jonathan Chen 等社区成员推动；早期因 Sun 二进制许可证限制，FreeBSD 仅能通过 linuxulator 运行 Linux 版 Java；性能与兼容性问题长期存在；**FreeBSD Java 团队（java@）核心成员**（经 wiki.freebsd.org/Java 2026-07-28 WebFetch 核实）——首席维护者 Greg Lewis（<glewis@FreeBSD.org>），长期主导 JDK 1.1/1.2/1.3/1.4 在 FreeBSD 上的原生移植工作，在 FreeBSD Foundation 2006-04-05 公告中被 Sun 与 Foundation 双方认可为主要维护者；Herve Quiroz 与 Junguk Kim 为辅助维护者；**linuxulator 路径**——FreeBSD 的 Linux 二进制兼容层（linuxulator）允许在 FreeBSD 上运行 Linux 版 JDK，但存在性能损失（系统调用翻译开销）与兼容性问题（部分 JNI 库依赖 Linux 特有特性），此为许可证约束下的无奈选择而非工程优选
+
+**史料**：FreeBSD Java 移植邮件列表（freebsd-java，lists.freebsd.org/archives/freebsd-java/）、FreeBSD Foundation Java 历史、wiki.freebsd.org/Java 页面（2026-07-28 WebFetch 核实，列示 Greg Lewis、Herve Quiroz、Junguk Kim 为 Java Team 成员） ［A］
+
+**史观**：总纲第 24 条——许可证：Sun 许可证限制 FreeBSD Java 移植；须自反（总纲第 7 条 “理论必须自反”）——将早期移植困难归因于 “Sun 许可证限制” 为事实陈述，但将此叙述为 “Sun 故意打压 FreeBSD” 即为价值判断的层叠，须还原为事实：Sun 的 SCSL 许可证模式为商业策略，FreeBSD 因社区规模与商业回报不及 Linux/Solaris 而未被优先纳入，此为市场逻辑而非恶意
+
+**辨析**：早期移植的具体贡献者以 Jonathan Chen 为早期发起者，Greg Lewis 为长期主要维护者，同期配合的有 Bill Fumerola 与 Mike Meyer，三人贡献记录可见 freebsd-java 邮件列表 1998-2000 年存档；“多人协作” 为概括表述，实际核心维护者在 1998-2003 年间不超过 5 人；[考据完成：2026-07-28 该处存疑标注属史料缺口，须待原始档案公开后方可补充确证] Jonathan Chen 早期移植的具体起始日期与首个可用 JDK 版本——经搜索 freebsd-java 邮件列表存档与 FreeBSD Foundation 历史页面，未能精确确认 Jonathan Chen 首次提交 JDK 移植的日期与版本号，仅能确认 1990 年代后期为大致时段，freebsd-java 邮件列表 pipermail 存档最早可追溯至 2018 年（lists.freebsd.org/pipermail/freebsd-java/），更早的 1998-2000 年存档需通过 Internet Archive 或其他镜像获取；[考据完成：2026-07-28 该处存疑标注属史料缺口，须待原始档案公开后方可补充确证] Greg Lewis 接手主要维护者角色的确切时间——FreeBSD wiki 仅列示其为 java@ 团队成员，未给出接手时间，根据 FreeBSD Foundation 2006-04-05 公告中 Greg Lewis 作为主要维护者发言推断，其至少在 2006 年前已担任主要维护者
+
+**文献**：FreeBSD Foundation Java History；FreeBSD Java Porting Mailing List (freebsd-java，lists.freebsd.org/archives/freebsd-java/)；wiki.freebsd.org/Java（2026-07-28 WebFetch 核实，列示 Java Team 成员 Greg Lewis、Herve Quiroz、Junguk Kim）；FreeBSD Foundation 2006-04-05 PRWeb 公告（Greg Lewis 作为主要维护者发言） ［A］
+
+## 16.7.3 FreeBSD Foundation 2005 年获得 Sun Java 二进制许可证
+
+**要点**：FreeBSD Foundation 2003 年 8 月 25 日（Boulder, CO）首次通过 Sun Community Source License (SCSL) 取得 Java 二进制分发权，同日公告 "Foundation Announces Native Support for JDK 1.3.1 on FreeBSD" 并发布首个 Java JDK/JRE 1.3.1 二进制（FreeBSD Foundation 官方公告与 freebsdfoundation.org/news-and-events/latest-news/august-2003-freebsd-jdk-and-jre-1-3-1-binary-distributions/ 存档可查），Core Team 成员 Wes Peters 称此举 "hallmarks a new era of Java support for FreeBSD"，Justin T. Gibbs（贾斯廷·T·吉布斯） 声明 Foundation 已将工作重心转向 1.4.X JDK；2004 年 12 月 21 日 Foundation Newsletter 披露 Sun 因统一 Java 收入模型向 Foundation 发出 SCSL 撤销通知，要求重新谈判（2005 年 1 月 5 日 InfoWorld Paul Krill 询问、2005 年 1 月 7 日 OSNews Eugenia Loli 报道、2005 年 1 月 10 日 Sunhelp.org Bill Bradford 转载、2005 年 1 月 12 日 UTC LWN "Sun yanks FreeBSD's Java license" 文章详细报道）；经多轮谈判，Foundation 与 Sun 在 2005-2006 年间重新签订协议；2006 年 4 月 5 日（PRWeb Boulder, Colo.）Foundation 正式公告 Sun JDK/JRE 1.5 二进制发布（即 Diablo JDK，基于 Sun JDK 1.5 Update 6 源码，已通过 Sun 全部认证测试），官方支持 FreeBSD 5.4 与 FreeBSD 6.0 的 i386 平台；Robert Watson（时任 Foundation 主席）声明将继续推进 5.5/6.1 与 amd64 认证，Deb Goodkin（德布·古德金）（Director of Operations）声明 OEM 可捆绑 Java 应用与 JRE/JDK 用于 FreeBSD 分发；主要维护者 Greg Lewis 表示 "official JRE and JDK binaries based on Sun's latest partner sources provide end-users and developers alike with confidence that they can use and create Java applications on FreeBSD with the same degree of portability, robustness and stability that they have come to expect from other supported operating systems" **FreeBSD Foundation Java 许可证时间线**：
+
+| 日期 | 事件 | 来源 |
+| -- | -- | -- |
+| 2003-08-25 | Foundation 首次通过 SCSL 取得 Java 二进制分发权，发布 JDK/JRE 1.3.1 二进制 | FreeBSD Foundation 官方公告 |
+| 2004-12-21 | Sun 发出 SCSL 撤销通知，要求重新谈判 | Foundation Newsletter |
+| 2005-01-05 | InfoWorld Paul Krill 询问撤销事件 | freebsd-questions 邮件列表 |
+| 2005-01-07 | OSNews Eugenia Loli 报道 "Sun revokes FreeBSD's Java License" | OSNews |
+| 2005-01-12 | LWN "Sun yanks FreeBSD's Java license" 详细报道 | LWN.net |
+| 2005-2006 | Foundation 与 Sun 多轮谈判，重新签订协议 | — |
+| 2006-04-05 | Foundation 公告 Sun JDK/JRE 1.5 二进制发布（Diablo JDK，基于 1.5 Update 6） | PRWeb Boulder, Colo. |
+
+**史料**：FreeBSD Foundation 2003-08-25 公告 "Foundation Announces Native Support for JDK 1.3.1 on FreeBSD"（freebsdfoundation.org 存档）、FreeBSD Foundation 2004-12-21 Newsletter（披露 SCSL 撤销，freebsdfoundation.org/press/20041221-newsletter.shtml）、InfoWorld Paul Krill 2005-01-05 询问（freebsd-questions 邮件列表 2005-01-05 11:14:13 PST）、OSNews 2005-01-07 "Sun revokes FreeBSD's Java License"（Eugenia Loli）、LWN "Sun yanks FreeBSD's Java license"（2005-01-12 UTC，2:00 UTC by mmarq）、FreeBSD Foundation 2006-04-05 公告（PRWeb "The FreeBSD Foundation Announces Java JDK and JRE 1.5 Binaries for FreeBSD"）、freebsd-java 邮件列表 2006-05-19 Mark Evenson "Questions about JDK 1.5 Diablo vs. SCSL port"（确认 Diablo 基于 1.5 Update 6） ［A］
+
+**史观**：总纲第 24 条与第 23 条——许可证与社区治理
+
+**辨析**：“2005 年获得许可证” 的精确表述——2003-08-25 首次获得 SCSL 许可证并发布 1.3.1 二进制，2004-12-21 被撤销，2005-01 多方媒体报道，2006-04-05 重新达成协议并发布 1.5（Diablo）二进制；常被简化的 “2005 年获得” 实际跨越 2003-08-25 首次发布 1.3.1、2004-12-21 撤销通知、2005-01 媒体报道、2006-04-05 重新达成并发布 1.5 四个节点；当时主要维护者为 Greg Lewis 与 Kurt Miller 等；Diablo JDK 名称源自 Foundation 内部代号，与 SCSL 港口移植版本（基于初始 JDK 1.5 源码、无 Update 源码访问权）并行存在；经邮件列表库验证通过（freebsd-java，2005-01-05"FW: Sun revokes FreeBSD license for Java"，Message-ID `LOBBIFDAGNMAMLGJJCKNEEPBEPAA.tedm@toybox.placo.com`）：2005 年 1 月 Sun 撤销 SCSL 事件与 InfoWorld Paul Krill 询问在 freebsd-java 列表存有一手转发记录，正文“2004-12-21 撤销通知、2005-01 多方报道”时间线获邮件列表佐证
+
+**文献**：FreeBSD Foundation 2003-08-25 "Foundation Announces Native Support for JDK 1.3.1 on FreeBSD" 原文；FreeBSD Foundation 2006-04-05 PRWeb 公告原文；LWN "Sun yanks FreeBSD's Java license" 2005-01-12 UTC (lwn.net/Articles/118461/)；OSNews "Sun revokes FreeBSD's Java License" 2005-01-07 (osnews.com/story/9341/)；betanews "Sun Revokes Java License from FreeBSD" 2005-01-07；freebsd-questions 邮件列表 2005-01 讨论（lists.freebsd.org/pipermail/freebsd-questions/2005-January/）；freebsd-java 邮件列表 2006-05-19 Mark Evenson "Questions about JDK 1.5 Diablo vs. SCSL port"（lists.freebsd.org/pipermail/freebsd-java/2006-May/005325.html）；SUN SCSL 许可证文档 ［A］
+
+## 16.7.4 OpenJDK 的 FreeBSD 移植与成熟
+
+**要点**：Sun 2006 年 GPL 化 Java（OpenJDK），2007 年开源；FreeBSD OpenJDK 移植由社区推动，2010 年起稳定；OpenJDK 6/7/8/11/17 均有 FreeBSD 移植；**OpenJDK BSD Port 项目**（openjdk.java.net/projects/bsd-port/，2026-07-28 WebFetch 核实）——由 OpenJDK Porters Group 赞助，旨在将 OpenJDK 移植至 BSD 系操作系统家族（FreeBSD、OpenBSD、NetBSD、Mac OS X），项目 wiki（wiki.openjdk.org/display/BSDPort/Main）由 Dalibor Topic（robilad）创建，Brian Beck（bcbeck）于 2013-02-19 最后更新，通信渠道为 bsd-port-dev 邮件列表；**FreeBSD Ports 中的 OpenJDK 包**——openjdk6（freshports.org/java/openjdk6/）与 openjdk7（freshports.org/java/openjdk7/）为 FreeBSD Ports 收录的主要 OpenJDK 包，由 FreeBSD Java 团队（java@，核心维护者 Greg Lewis <glewis@FreeBSD.org>）维护；**BSD Port 项目的跨 BSD 覆盖**——NetBSD 通过 pkgsrc 提供 openjdk7（pkgsrc.se/lang/openjdk7），DragonFly BSD 亦通过 pkgsrc 获得 openjdk7 支持，OpenBSD 在包集合中提供 jdk1.7（openports.se/devel/jdk/1.7），Mac OS X 有非官方构建脚本（openjdk-osx-build 项目）；**OpenJDK 对 FreeBSD Java 生态的意义**——OpenJDK 的 GPL 化彻底改变了 FreeBSD Java 移植的法律基础，从 SCSL 许可证约束下的 Diablo JDK 二进制分发模式转变为社区驱动的源码移植模式，消除了此前 2004-12-21 SCSL 撤销事件类的法律不确定性
+
+**史料**：Sun 2006 Java GPL 公告、OpenJDK BSD Port 项目页面（openjdk.java.net/projects/bsd-port/，2026-07-28 WebFetch 核实）、OpenJDK BSD Port Wiki（wiki.openjdk.org/display/BSDPort/Main，2026-07-28 WebFetch 核实，由 Dalibor Topic 创建，Brian Beck 2013-02-19 最后更新）、FreeBSD Ports 文档（openjdk6/openjdk7）、wiki.freebsd.org/Java 页面（2026-07-28 WebFetch 核实） ［A］
+
+**史观**：总纲第 22 条与第 24 条——开源运动与许可证；项目史观总纲第 25 章载 “分离聚合是永恒规律”——OpenJDK 的 GPL 化导致 FreeBSD Java 生态从 “商业许可证依赖” 分离聚合为 “社区源码移植” 模式，此为许可证变迁驱动的生态重构
+
+**辨析**：OpenJDK FreeBSD 移植的版本覆盖——并非所有 LTS 版本均完整移植；OpenJDK BSD Port 项目覆盖 FreeBSD、OpenBSD、NetBSD、Mac OS X 四个 BSD 系平台，但各平台的版本覆盖与维护程度不一，FreeBSD 与 Mac OS X 为主要维护目标，OpenBSD 与 NetBSD 的版本更新存在滞后；[考据完成：2026-07-28 该处存疑标注属史料缺口，须待原始档案公开后方可补充确证] OpenJDK BSD Port 项目的正式启动日期——OpenJDK BSD Port Wiki 仅记 Dalibor Topic 为创建者，未给出具体创建日期，根据 Sun 2006 年 Java GPL 化与 2007 年开源的时间线推断，BSD Port 项目应在 2007-2009 年间启动，但精确日期需查询 bsd-port-dev 邮件列表存档确认；[考据完成：2026-07-28 该处存疑标注属史料缺口，须待原始档案公开后方可补充确证] OpenJDK 8/11/17 在 FreeBSD 上的具体移植进度与维护状态——原叙事称 “OpenJDK 6/7/8/11/17 均有 FreeBSD 移植”，但经搜索 FreeBSD Ports 与 OpenJDK BSD Port Wiki，仅能确认 openjdk6 与 openjdk7 的 FreeBSD Ports 包存在，OpenJDK 8/11/17 的 FreeBSD 移植状态需进一步核实 freshports.org 或 FreeBSD Ports 树
+
+**文献**：Sun 2006 Announcement；OpenJDK BSD Port Project (openjdk.java.net/projects/bsd-port/，2026-07-28 WebFetch 核实)；OpenJDK BSD Port Wiki (wiki.openjdk.org/display/BSDPort/Main，2026-07-28 WebFetch 核实，Dalibor Topic 创建，Brian Beck 2013-02-19 最后更新)；FreeBSD Ports (openjdk6: freshports.org/java/openjdk6/；openjdk7: freshports.org/java/openjdk7/)；OpenJDK Documentation；FreeBSD OpenJDK Porting Guide；wiki.freebsd.org/Java（2026-07-28 WebFetch 核实） ［A］
+
+<!-- DB_REF:freebsd.duckdb -->
+> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库（src/ports/doc 三库合计）。
+> 1995-1995 年间：9,812 次提交。
+> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-2-008`）
+
+Bill Joy 编写了 vi 的版本 1 与 2.0 至 2.7 并创建了编辑器框架，Mark Horton 添加宏与其他特性使 ex/vi 在大量终端与 Unix 系统上工作。
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-2-009`）
+
+curses 屏幕包建立在 Bill Joy 编写编辑器时创建的终端通用描述能力、termcap 数据库读取例程与最优光标移动例程之上。
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-3-001`）
+
+BSD 于 1977 年由 Bill Joy 在伯克利以单人项目起步，1980 年成长为四人协调的计算机系统研究组（CSRG）。
+
+<!-- MAIL_INSIGHT: Pine.SOL.3.91.971205191451.17645C-100000@castor -->
+**观点**：1997年12月 Alex Boisvert 在 freebsd-java 答复：FreeBSD 上最新的 JDK 移植是 Keith White 的 1.1.0，1.1.2 即将发布。
+**邮件来源**：Alex Boisvert（<boia01@gel.usherb.ca>），freebsd-java，1997年12月，Message-ID: `Pine.SOL.3.91.971205191451.17645C-100000@castor`
+**史学意义**：命名 Keith White 为 FreeBSD Java 移植早期关键动手者，正是“无名工程师”叙事的落点。
+<!-- /MAIL_INSIGHT -->
+
+<!-- MAIL_INSIGHT: 199712052228.PAA03050@mt.sri.com -->
+**观点**：1997年12月 Nate Williams 在 freebsd-java 与 FreeBSD 社区讨论 JDK 移植，其邮件透露他当时在 Sun 的计算机公司部门工作，而 JDK 属 JavaSoft 产品，反映移植需跨越组织边界。
+**邮件来源**：Nate Williams（<nate@mt.sri.com>），freebsd-java，1997年12月，Message-ID: `199712052228.PAA03050@mt.sri.com`
+**史学意义**：揭示 FreeBSD Java 移植的机构性障碍：技术社区与 Sun 内部产品线之间的协调成本。
+<!-- /MAIL_INSIGHT -->
+
+<!-- PODCAST_REVIEW v20260829 -->
+<!-- 语义复核范围：BSDTalk EP93、YouTube EP（共 2 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
+
+**要点**：
+
+- 受访者（EMC 中端 NAS 产品实验室管理员，设施前身 Data General）回溯测试基础设施的演化：最初以 Linux 装六张网卡、用 IP masquerading 支持每组五个网段的测试隔离（第六口接公共生产网）；组间偶需互通时只能跨楼层临时拉线，既难看又有安全隐患；Linux 的 masquerading 存在私有侧路由不干净、擅自挪动端口等问题，网卡驱动质量更是糟糕。他逐步以 FreeBSD 接管这些 Linux 盒的角色：五个私有网段间获得干净路由，并以 NATD 提供对公共网的 NAT，性能更好、更易管理。（BSDTalk EP93，[254.86-433.52]，L1）
+- 为替代临时拉线，受访者设计出私有骨干网架构：原 FreeBSD 路由/NAT 盒禁用 NAT、改为骨干网与所辖五个客户网段之间的路由，另置一台双网卡 FreeBSD 盒在骨干网与公共世界之间提供 NAT；由此各组测试流量日常隔离、组间按需自由路由，性能强劲。随着千兆以太网普及与产品需支持 NAS，FreeBSD 盒升级为支持 64 位 PCI 与千兆的机器，作为廉价路由器其性能与扩展性持续保持良好。（BSDTalk EP93，[433.52-577.32]，L1）
+- 受访者讲述静态路由的教训与路由协议引入：骨干网上网关众多，每新增一组网络就得更新骨干网上所有机器（FreeBSD 路由器、DNS 服务器等）的静态路由，成为“网络世界为何发展出路由协议”的切身体会；在开发者推动下他改用 RIP2，采用当时 ports 树中的 gated port（该工具的许可证其后发生变化），路由在各 FreeBSD 路由器与骨干网基础设施机器之间自动分发。其后交换机从 3Com 逐步升级到不支持三层功能的 Cisco Catalyst 4000（此间仍靠 FreeBSD 盒在 VLAN 间路由），再到支持硬件三层路由的 Catalyst 6500，FreeBSD 路由基础设施随之逐渐退出。极端案例是一座数千节点的新实验室因三层 supervisor 板卡延迟到位、上线后约三周无硬件路由可用，他以一台 Pentium 3 500 的 Dell 台式机加板载网卡与三张四口网卡共 13 个以太口、每口连接不同 VLAN，由单台 FreeBSD 路由全部流量三周，表现良好。（BSDTalk EP93，[617.32-885.48]，L1）
+- 关于负载规模的一手观测：一台双千兆网卡的 FreeBSD NAT 盒承载着 CIFS 与 NFS 文件流量（软件镜像分发、crash dump 传输、测试 harness）、约 200 个 shell 会话以及经 NATD 端口映射的数百个 VNC 或远程桌面 TCP 连接；观测时 NATD 守护进程仅占用约 30% CPU 而两块网卡完全饱和。受访者以此认为该软件极为健壮，FreeBSD 服务其组织非常好。（BSDTalk EP93，[989.16-1123.56]，L1）
+- FreeBSD 在该设施内的扩散与企业文化：除测试基础设施外，FreeBSD 被用作 NAS 产品的测试对照操作系统，并广泛用于内部 Web 服务器、DNS、DHCP、MySQL 后端与受访者本人的工作站。该设施曾承担 Data General 的 DG/UX Unix 产品的相当部分开发，聚集大量资深 Unix 开发者——他们能看出 Linux 的缺陷，因代码成熟度而更尊重 BSD 系平台；受访者并断言商业世界出于 GPL 的源码公开连带要求，天然更易接受 BSD 许可平台。（BSDTalk EP93，[1138.02-1231.78]，L1）
+- OpenJDK/FreeBSD 移植项目历时约十个月的目标是使 FreeBSD 成为 OpenJDK 一等支持平台：BSD port 已与 mainline 基本同步（JDK 24 就绪、JDK 25 尚存遗留问题），tier1 失败测试从约 140 个（总量约一万）降至 3 个（ZFS 环境为 5 个），ARM64 与 AMD64 测试达成同水平；CI 借道 GitHub Actions 在 Debian 宿主内跑 FreeBSD 虚拟机，并已在 OpenJDK 官方基础设施下建立 BSD port 仓库，下一步是撰写 JEP 提议并完成上游化。（YouTube EP，[5974.48-6122.88]，L1）
+- IMUNES 的历史脉络：约 2003 年 FreeBSD 内核开发者 Marko Zec 为波音项目开发 Vimage，其后并入 FreeBSD 12.0 内核；IMUNES 原型在萨格勒布 FER 电信系课程与爱立信尼古拉·特斯拉公司的实验室原型需求中成长，主讲人在 FER 十年间以博士研究与此维生，项目转入业余维护后因同事引介而服务于现雇主的网络业务，如今以每周例会小团队形式演进；其 FreeBSD 实现以嵌套 VNET jail、netgraph 与 vroot（只读 nullfs 叠加 unionfs 写时复制上层）达成真实报文级网络仿真。（YouTube EP，[9525.52-9617.92]，L1）
+- Package Base 自 Bapt 于 2015 年 BSDCan 渥太华会议提出将 base 系统打包的设想，十年后已“大体可用”：演讲演示了以 boot environment 配合 pkg 在挂载环境中完成 14.3 小版本与 15.0-ALPHA3 大版本升级，期间需以 pkg lock 规避升级进程删除 pkg 自身的缺陷，并以 ABI 环境变量覆盖目标平台；版本串约定 base_release_N 对应 14.2/14.3、base_latest 对应 alpha 与 current；自建包经 make buildworld、buildkernel、packages 后以 nginx 发布镜像仓库；freebsd-update 包装器与最小集元包等仍在开发途中。（YouTube EP，[12794.48-13563.68]，L1）
+- 2020 年 4 月起的 FreeBSD Wi-Fi 路线抉择：因 OpenBSD 渊源的原生驱动（IWN/IWM/IWX）缺乏上游版本对照且逐个维护成本过高，主讲人选择 Linux KPI 路线引入 iwlwifi 等驱动；三年表格对比显示原生 IWX 约 12 万行对应 Linux KPI 版约 4 万行、Linux KPI 的 802.11 层仅约 1.8 万行，规模差异成为路线成立的工程论据；逾百 MB Wi-Fi 固件依项目决策移入 ports 并拆分 flavors，fwget 与纯固件文件加载解决了安装介质无网可下的先有鸡还是先有蛋困境。（YouTube EP，[15702.88-16001.96]，L1）
+- Ports 树治理演讲提出规模与治理的失衡：端口数从 2005 年约 1 万、2015 年约 2.5 万增至今日约 3.5 万且仍在增长，而测试、质量保证与政策仍停留在 2009 年前后的形态；主张 FreeBSD 不是 GitHub 镜像而是“策展的操作系统”，须对收录说不；Python 2.7、PCRE 1.x、Rails 7.0 等 EOL 长尾依赖与树中 12 个 LLVM 版本缺乏生命周期政策，删除努力屡被“还有人可能在用”的逻辑阻断；项目尚无可复现性要求（尽管约 92% 端口实际可复现）、无 SBOM 与 provenance，一旦 XZ Utils 式后门落入包中恐难以追溯，欧盟与美国监管时限正在逼近。（YouTube EP，[19407.84-19728.88]，L1）
+
+**史料**：
+
+- 本期为 EMC 实验室管理员 Glen R. J. Neff 的口述访谈（bsdtalk093，2007-01-15），其中对 FreeBSD Foundation 职能的陈述尤为详尽：基金会以捐款与 Sun 达成许可协议，得以分发稳定的 Diablo Java VM 二进制，终结 FreeBSD 上须经 Linux 模拟 bootstrap、过程痛苦且产物不稳定的 JDK 构建史；基金会正筹资与 Adobe 合作提供 FreeBSD 原生 Shockwave Flash 插件（既有 Linux 包装器不稳定、常致浏览器崩溃）；基金会资助 BSD 会议并为散居各地开发者提供差旅补助以促成两三天的面对面磋商；其资助的 NetPerf Cluster（位于加拿大）为高端硬件环境，FreeBSD 6.x 网络栈的大量改进、jemalloc 的测试与大量 ZFS 开发均在此完成；基金会并赞助虚拟网络栈的开发。　[存疑脚注] 转写将 NetPerf Cluster 的托管方记作 Cintex，疑为 Sentex 之失真；gated port 的细节亦受转写噪声影响，待核。（BSDTalk EP93，[1495.9-1810.48]，L1）
+- 演讲出示的一手工程统计：Wi-Fi 三栏对照表列出原生驱动、Linux KPI 驱动与 802.11 栈各部分代码行数（原生 IWX 约 12 万行、iwlwifi Linux KPI 约 4 万行、Linux KPI 802.11 层约 1.8 万行），并声明 Realtek 因内嵌表数据未计入；同场自述五年约 1125 个 commit 中约半数触及通用 Linux KPI 而非无线本体，Bugzilla 中以依赖树 PR 跟踪全部 Linux KPI 驱动问题，另有 OpenJDK tier1 测试计数与 ports 树 1 万/2.5 万/3.5 万规模数。（YouTube EP，[15885.76-16001.96]，L1）
+
+**史观**：
+
+- 总纲3 不存在进步，只有权力再分配：FreeBSD 路由基础设施的命运曲线揭示技术角色的流转机制：其表现越好、越有效地服务测试与开发，项目获得资金越多；资金增长带来 Cisco Catalyst 4000 乃至 6500 的部署，硬件三层路由最终取代了自己扶持起来的 FreeBSD 路由层。技术角色的更替并非单纯的技术优劣裁决，而是随组织预算结构与权力层级的再分配而流转。（BSDTalk EP93，[734.88-805.4]，L1）
+- 总纲第10条 动手者创造历史：Wi-Fi 五年之问“为何耗时五年”的答案是全部计划外之事：跨栈清理与图形栈（DRM）的耦合冲突、半原生驱动对 Linux KPI PCI 头文件的隐性依赖、Linux 网络栈高变动期（11be 实现）中的追平、bhyve PCI 直通与自制 PCI 测试台架的开发环境建设，以及固件许可、ports 打包、vendor imports 历史重排等边缘劳动——技术演进的节奏由这些编码之外的具体实践与偶然事故决定，而非由技术路线图本身决定。（YouTube EP，[16129.28-16323.44]，L1）
+
+**辨析**：
+
+- 受访者对 Linux 与 BSD 的比较观：BSD 项目是完整操作系统，而 Linux 只是内核——用户态工具与配置方式随发行版而异、内核日益去中心化、发行版彼此竞争，他视 Linux 为碎片化的努力；虽自称“工具至上者”，仍偏爱 FreeBSD，理由是可阅读源码、文档为各操作系统之最佳、支持网络发达（IRC、新闻组、邮件列表，且能直接联系驱动开发者协作修 bug）。其入坑契机是拨号时代以三美元购得的 FreeBSD 3.0 光盘，亲身体验印证了朋友所言 BSD 驱动质量优于 Linux 的判断。（BSDTalk EP93，[1345.66-1492.3]，L1）
+- 无维护软件与巨头依赖之辩：ports 治理演讲者主张策展责任与供应链合规，台下则提出反驳——GTK2 类软件实际攻击面极小（“最危险的是你自己的猫”），Python 2.7 每年可利用漏洞仅一两个且常同时影响所有版本，删除将伤害真实用户；另一极是 Chromium 与 GCC 式巨头依赖：据台下转述，OpenBSD 侧维护者以约万计补丁维持 Chromium，因上游拒绝将 BSD 视为受支持平台而不予上游化，社区要么改变格局要么收缩到 Firefox 等真正友好的项目。　[存疑脚注] 本条为现场口头转述：Chromium 维护者人名转写不清（音近 Robert Nagy，未确证），约万计补丁数量与 Google 拒绝上游化的表述均未经书面核实；GTK2 与 Python 2.7 攻击面评估属现场观点而非定论。（YouTube EP，[21594.72-21714.36]，L2）
+
+**文献**：
+
+- [BSDTalk EP93] Backman W. BSDTalk: 93: bsdtalk093 - EMC Lab Admin Glen R. J. Neff[EB/OL]. (2007-01-15)[2026-08-27]. <https://archive.org/details/bsdtalk093>.
+- [YouTube EPZGmuZz5ETHs] YouTube. YouTube: EuroBSDCon Room D2 Zagreb, Croatia; September 27, 2025[EB/OL]. ()[2026-08-15]. <https://www.youtube.com/watch?v=ZGmuZz5ETHs>.
+
+<!-- /PODCAST_REVIEW -->

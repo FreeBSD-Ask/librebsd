@@ -38,7 +38,7 @@ volume: 第05卷-freebsd的工程化奠基
 
 <!-- DB_REF:freebsd.duckdb -->
 > **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 2009-2011 年间：102,147 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
-- LWN.net SCO v. Novell verdict coverage (2010)；Groklaw.net SCO saga coverage (2003-2010)；The FreeBSD Foundation statement on SCO verdict (2010)；FreeBSD Quarterly Status Report (2010-Q2)[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]
+- LWN.net SCO v. Novell verdict coverage (2010)；Groklaw.net SCO saga coverage (2003-2010)；The FreeBSD Foundation statement on SCO verdict (2010)；FreeBSD Quarterly Status Report (2010-Q2)［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
 
 <!-- DB_REF:freebsd.duckdb -->
 > **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 2009-2010 年间：69,391 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。

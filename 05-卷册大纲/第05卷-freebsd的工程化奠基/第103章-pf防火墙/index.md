@@ -22,7 +22,7 @@ volume: 第05卷-freebsd的工程化奠基
   - 辨析：经 bsd_commits.db commits 表验证，PF 导入 commit 为 2004-06-16T23:03:14Z（早于 5.3-RELEASE 约 4.5 个月，属 5-CURRENT 开发周期）；经 bsd_commits.db tags 表验证，5.3-RELEASE 的
 - 总纲第 9 条——简洁与复杂的辩证，iptables 重简洁、nftables 重灵活
   - 辨析：iptables/nftables 与 PF 优劣，需查基准测试
-  - 文献：iptables 文档；nftables 文档[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]
+  - 文献：iptables 文档；nftables 文档［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
 
 ##
 
@@ -35,14 +35,7 @@ volume: 第05卷-freebsd的工程化奠基
 - 要点：FreeBSD 社区在 ipfw/IPF/PF 三者间争论持续多年（2001-2006），核
 - 总纲第 1 条——偶然性改写历史，许可证修改偶然引发 PF 诞生
   - 辨析：修改的具体内容与时间，需查 LICENSE 文件版本对比；Reed 修改的动机
-  - 文献：IPFilter LICENSE 文件；OpenBSD misc 邮件[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补
-
-## 辨析
-
-- PF 是否完全由 Hartmeier 一人开发，需查 commit log 确认其他 OpenBSD 开发者的贡献；0 信任原则适用说明：L2.3.1.pf 查询在中观模式挖掘报告中缺失，须直接查询 netbsd.duckdb 验证 PF 引入周期；L2.4.1.Import from 查询使用 "Import from" 关键词未命中 PF 导入 commit（message_subject 为 "Im
-- 经 bsd_commits.db commits 表验证，PF 导入 commit 为 2004-06-16T23:03:14Z（早于 5.3-RELEASE 约 4.5 个月，属 5-CURRENT 开发周期）；经 bsd_commits.db tags 表验证，5.3-RELEASE 的 tagger_date 为 2004-11-04T19:12:42Z（非旧叙事 2004.11.6，误差
-- iptables/nftables 与 PF 优劣，需查基准测试
-  - 文献：iptables 文档；nftables 文档[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]
+  - 文献：IPFilter LICENSE 文件；OpenBSD misc 邮件［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
 
 ## 102.10.2 Windows Firewall 与 Solaris IP Filter
 
@@ -53,7 +46,7 @@ volume: 第05卷-freebsd的工程化奠基
 
 - 要点：FreeBSD 社区在 ipfw/IPF/PF 三者间争论持续多年（2001-2006），核心是默认防火墙的选择；最终 FreeBSD 同时保留三者，由用户选择，但 PF 逐渐成为推
 - 修改的具体内容与时间，需查 LICENSE 文件版本对比；Reed 修改的动机
-  - 文献：IPFilter LICENSE 文件；OpenBSD misc 邮件[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]
+  - 文献：IPFilter LICENSE 文件；OpenBSD misc 邮件［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
 
 ## 102.3.2 开源合规质疑的爆发
 
@@ -67,7 +60,7 @@ volume: 第05卷-freebsd的工程化奠基
 
 - 要点
 - FreeBSD 5.3 Release Notes；freebsd-pf 邮件列表；Max Laier. Import pf from OpenBSD 3.5 (OPENBSD_3_5_BASE). freebsd-src [DB/OL]. 2004-06-16T23:03:14Z. commit: 32b30983561ed562aa495d8e124488ab94b332aa；release/5.3.0. freebsd-src 仓库 tag [DB/OL]. 2004-11-04T19:12:42Z. tag: release/5.3.0; commit: f8d4987d7271c10
-- iptables 文档；nftables 文档[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]
+- iptables 文档；nftables 文档［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
 
 ## 102.10.2 Windows Firewall 与 Solaris IP Filter
 
@@ -82,13 +75,13 @@ volume: 第05卷-freebsd的工程化奠基
 - 史观：总纲第 6 条——形式主义膨胀与抽象克制，三者并存是否形式主义膨胀
 - 辨析：争论是否促进改进，需查改进记录；三者并存是否增加维护成本
   
-- IPFilter LICENSE 文件；OpenBSD misc 邮件[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]
+- IPFilter LICENSE 文件；OpenBSD misc 邮件［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
 
 ## 102.3.2 开源合规质疑的爆发
 
 - 要点：OpenBSD 团队（Theo de Raadt（西奥·德·若特） 等）于 2001 年公开质疑 IPFilter 许可证合规性，认为修改后的措辞不符合 OpenBSD 的许可证政策；OpenBSD 3.0（2001.12）移除 IPFilter 并以 PF 替代
 - 史料：OpenBSD misc 邮
-- IPFilter LICENSE 文件[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]
+- IPFilter LICENSE 文件［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
 
 ## 102.4.2 社区的应对策略
 
@@ -99,7 +92,7 @@ volume: 第05卷-freebsd的工程化奠基
 ## 102.5.2 移除的工程效应
 
 - 要点：移除 IPFilter 后，DragonFly BSD 用户需迁移至 PF 或 ipfw；移除简化了内核维护但增加了用户迁移成本
-- 史料：DragonFly BSD Release Notes[考据完成：2026-07-28 经穷尽联网考据，上述史料清单为已知公开来源汇总，部分原始档案未公开数字化或须档案馆藏地现场核验，属史料缺口，须待原始档案公开后方可补充确证] 〔L3 官方文档〕
+- 史料：DragonFly BSD Release Notes［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］ 〔L3 官方文档〕
 - 史观：总纲第 9 条——简洁与复杂的辩证，移除简化内核但增加用户负担
 - 辨析：迁移
 - Adamo & Tablo 论文（USENIX ; login: 2005） ［B］

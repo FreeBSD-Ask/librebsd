@@ -24,7 +24,7 @@ volume: 第10卷-openbsd的历史
 
 ## 辨析
 
-- 市场份额统计无权威数据源——DistroWatch 排名仅反映桌面用户关注度，不反映服务器部署；BSD 实际部署规模以厂商报告（如 Juniper JunOS 基于 FreeBSD、NetApp ONTAP 基于 FreeBSD）与调查为准 [考据完成：2026-07-28 BSD 实际部署规模无单一权威统计，厂商报告仅覆盖商业用户]
+- 市场份额统计无权威数据源——DistroWatch 排名仅反映桌面用户关注度，不反映服务器部署；BSD 实际部署规模以厂商报告（如 Juniper JunOS 基于 FreeBSD、NetApp ONTAP 基于 FreeBSD）与调查为准 ［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
 - 考据过程留痕——【查证来源】LibreSSL 与 OpenSSL 的并存状态以两项目当前 Release Notes（<https://www.openssl.org/news/> 与 <https://www.libressl.org/>）与部署统计为来源——OpenSSL 仍是多数 Linux 发行版与商业产品的默认 TLS 库，LibreSSL 是 OpenBSD 默认 TLS 库并被部分其
 - 革命与改革的交织须以 openbsd.duckdb openbsd-src 仓库 commit log 的代码级证据为基准——LibreSSL fork 后的渐进性改革（2014-04-13 至 2014-04-14 代码清理 commit、2014-07-12 后持续演进）与 OpenSSL 1.1.0 的革命性重构（2016.9 移除 SSLv2/SSLv3 默认支持）在时间上形成对照，证明革
 - CVE-2013-4547 的 nginx 认证绕过具体利用路径须对照 nginx 安全公告核验——涉及 URI 解析与 location 匹配；CVE-2015-8605 的 DHCP 拒绝服务是否影响 OpenBSD 默认配置须核验——是否需要特定 DHCP 选项；CVE-2016-0718 的 expat 缓冲区溢出在 OpenBSD 基本系统中的暴露面须考据——哪些程序链接 expat
@@ -32,7 +32,7 @@ volume: 第10卷-openbsd的历史
 
 ## 文献
 
-- 各 BSD 项目 Release Notes [EB/OL]. <https://www.openbsd.org/plus.html>、<https://www.freebsd.org/releases/；openbsd.duckdb> tags 表；Linux 发行版统计[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]
+- 各 BSD 项目 Release Notes [EB/OL]. <https://www.openbsd.org/plus.html>、<https://www.freebsd.org/releases/；openbsd.duckdb> tags 表；Linux 发行版统计［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
 
 <!-- DB_REF:netbsd.duckdb -->
 > **数据库引用（netbsd.duckdb）**：本子节对应 netbsd 代码仓库。> 2005-2012 年间：711,435 次提交。> 仓库总览：1,999,412 次提交，1,545 位贡献者（contributors 表行数，1992-07-13 至 2026-08-24）。

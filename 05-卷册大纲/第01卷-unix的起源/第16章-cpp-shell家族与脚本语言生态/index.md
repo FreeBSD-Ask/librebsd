@@ -25,12 +25,7 @@ volume: 第01卷-unix的起源
 
 - FreeBSD 切换至 Clang 的具体时间线——FreeBSD 9.0（2012 年 1 月）已默认安装 Clang 3.0 但默认编译器仍为 GCC 4.2.1，需设置 WITH_CLANG_IS_CC 选项方可切换；FreeBSD 10.0（2014 年 1 月）i386/amd64/arm 等平台正式以 Clang 为默认系统编译器，GCC 4.2.1 仅在 pc98 等平台保留；GCC
 - csh 不适合脚本编程——这是 UNIX 社区长期共识，经典论文《Csh Programming Considered Harmful》（1995？）有详述；系统脚本坚持使用 POSIX sh 是工程与可移植性的选择
-- OpenJDK FreeBSD 移植的版本覆盖——并非所有 LTS 版本均完整移植；OpenJDK BSD Port 项目覆盖 FreeBSD、OpenBSD、NetBSD、Mac OS X 四个 BSD 系平台，但各平台的版本覆盖与维护程度不一，FreeBSD 与 Mac OS X 为主要维护目标，OpenBSD 与 NetBSD 的版本更新存在滞后；[考据完成：2026-07-28 该处存疑标
-- Ports 系统的 “语言中立性”——实际偏向 C 与 shell，脚本语言为被管理对象
-
-## 文献
-
-- FreeBSD 10.0 Release Notes（2014-01）；FreeBSD 2012 Q1 Status Report（Clang Replacing GCC 章节）；LLVM Documentation；GCC Documentation [考据脚注：经相关权威来源交叉验证。]
+- OpenJDK FreeBSD 移植的版本覆盖——并非所有 LTS 版本均完整移植；OpenJDK BSD Port 项目覆盖 FreeBSD、OpenBSD、NetBSD、Mac OS X 四个 BSD 系平台，但各平台的版本覆盖与维护程度不一，FreeBSD 与 Mac OS X 为主要维护目标，OpenBSD 与 NetBSD 的版本更新存在滞后；［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
 - FreeBSD src/etc/rc.d/ 脚本源码；POSIX 1003.1-2008 Shell Command Language；FreeBSD Porter's Handbook ［A］
 - Sun 2006 Announcement；OpenJDK BSD Port Project (openjdk.java.net/projects/bsd-port/，2026-07-28 WebFetch 核实)；OpenJDK BSD Port Wiki (wiki.openjdk.org/display/BSDPort/Main，2026-07-28 WebFetch 核实，Dalibor Topic 创建，Brian Beck 2013-02-19 最后更新)；FreeBSD Ports (openjdk6: freshports.org/java/openjdk6/；openjdk7: freshports.org/java/openjdk7/)；OpenJDK Documentation；FreeBSD OpenJDK Porting Guide；wiki.freebsd.org/Java（2026-07-28 WebFetch 核实） ［A］
 

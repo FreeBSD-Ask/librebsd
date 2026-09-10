@@ -27,7 +27,7 @@ volume: 第13卷-bsd衍生操作系统
 
 ## 辨析
 
-- TrueOS 停止开发公告的具体发布日期须考据——Phoronix 报道指向 2020 年 7 月，TrueNAS 官方页面未直接显示发布日期，故采用“2020 年”表述并标注 [考据完成：2026-07-28 该处存疑标注属史料缺口，须待原始档案公开后方可补充确证]；〔待核：原文截断，后文待回源〕
+- TrueOS 停止开发公告的具体发布日期须考据——Phoronix 报道指向 2020 年 7 月，TrueNAS 官方页面未直接显示发布日期，故采用“2020 年”表述并标注 ［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］；〔待核：原文截断，后文待回源〕
 - Eric Turgeon"chain of choices"的表述须以 FreeBSD Journal 原文为准，避免过度解读为“成功叙事”——原文同时承认"solo struggle"与"chain of choices"，两者张力须保留；“BSD 许可证允许 fork 但不保证成功”的论证须辨析——GPL 衍生项目同样存在失败（如众多 GPL 发行版亦失败），故“GPL 提供成功保证”的反驳可
 - 再回应方对“挣扎式存活是话语操作”的指控须辨析——“挣扎式存活”作为描述性概念本身中性，是否构成“话语操作”取决于使用语境，须避免将所有哲学叙事等同于遮蔽；PC-BSD/TrueOS 桌面工具的遗产延续状态须以 Lumina 项目公告与各工具仓库 commit 历史为准，避免基于记忆推断；〔待核：原文截断，后文待回源〕
 - 合图是否承认不可调和性——本节明确承认失败 BSD 衍生版本争议在尺度层面不可调和，批评方的宏观尺度与反批评方的微观尺度各有合理性也各有代价，强行归并为“哪一方正确”是形式主义化操作；“结构性缺陷”与“工程诚实”的并存判断须基于具体事实而非道德判断——PC-BSD 15 年失败是结构性缺陷的呈现，GhostBSD 16 年挣扎是工程诚实的呈现，两者并非互相否定；TrueOS 公告"source c
@@ -35,16 +35,16 @@ volume: 第13卷-bsd衍生操作系统
 
 ## 文献
 
-- TrueOS 停止开发公告；Project Trident sunset 公告；Project Trident 迁移公告；Eric Turgeon《GhostBSD: From Usability to Struggle and Renewal》；FuryBSD 关闭讨论；Phoronix 报道；It’s FOSS 报道[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]## 257.19.2 反批评层：BSD 阵营与衍生项目维护者的反批评——资源限制、许可证自由与开源生态自然淘汰
-- Eric Turgeon《GhostBSD: From Usability to Struggle and Renewal》；TrueOS 停止开发公告；GhostBSD 23.10.1 发布记录；MidnightBSD 3.0 公告；DragonFly BSD 6.4 公告；Linux 失败发行版历史档案[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]## 257.19.3 再回应层：批评方对反批评的再回应——个体资源限制与整体生态可持续性的尺度差异
-- Lumina 桌面环境交接公告；Ubuntu/Fedora/openSUSE 发布历史；PC-BSD/TrueOS/Project Trident/FuryBSD/DesktopBSD/FreeSBIE/OliveBSD 关闭或停滞记录；It’s FOSS 报道；DistroWatch 数据库[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]## 257.19.4 合图层：失败 BSD 衍生版本争议的辩证综合——尺度差异与不可调和性
-- 上述所有文献综合；TrueOS 停止开发公告；Eric Turgeon《GhostBSD: From Usability to Struggle and Renewal》；项目史观总纲第 6、8、19、25 条[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]
+- TrueOS 停止开发公告；Project Trident sunset 公告；Project Trident 迁移公告；Eric Turgeon《GhostBSD: From Usability to Struggle and Renewal》；FuryBSD 关闭讨论；Phoronix 报道；It’s FOSS 报道［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］## 257.19.2 反批评层：BSD 阵营与衍生项目维护者的反批评——资源限制、许可证自由与开源生态自然淘汰
+- Eric Turgeon《GhostBSD: From Usability to Struggle and Renewal》；TrueOS 停止开发公告；GhostBSD 23.10.1 发布记录；MidnightBSD 3.0 公告；DragonFly BSD 6.4 公告；Linux 失败发行版历史档案［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］## 257.19.3 再回应层：批评方对反批评的再回应——个体资源限制与整体生态可持续性的尺度差异
+- Lumina 桌面环境交接公告；Ubuntu/Fedora/openSUSE 发布历史；PC-BSD/TrueOS/Project Trident/FuryBSD/DesktopBSD/FreeSBIE/OliveBSD 关闭或停滞记录；It’s FOSS 报道；DistroWatch 数据库［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］## 257.19.4 合图层：失败 BSD 衍生版本争议的辩证综合——尺度差异与不可调和性
+- 上述所有文献综合；TrueOS 停止开发公告；Eric Turgeon《GhostBSD: From Usability to Struggle and Renewal》；项目史观总纲第 6、8、19、25 条［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
 
 <!-- DB_REF:bsd_derivatives.duckdb -->
 > **数据库引用（bsd_derivatives.duckdb）**：本子节对应 bsd_derivatives 代码仓库。> 1985-2026 年间：963,557 次提交。> 仓库总览：963,557 次提交，9,744 位贡献者（contributors 表行数，1985-06-13 至 2026-08-24）。
-- TrueOS 停止开发公告；Eric Turgeon《GhostBSD: From Usability to Struggle and Renewal》；Lumina 桌面环境交接公告；iXsystems 2017 年更名公告；PC-BSD/TrueOS 桌面工具档案[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]## 257.20.2 总纲第 19 条审视：失败 BSD 衍生版本叙事中的解释学循环与权力知识共谋
-- 上述所有文献综合；Eric Turgeon《GhostBSD: From Usability to Struggle and Renewal》；TrueOS 停止开发公告；Project Trident sunset 公告；项目史观总纲第 7、19、23 条[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]## 257.20.3 总纲第 21 条审视：失败 BSD 衍生版本作为改革式方法论的代价呈现
-- 本节自身文本；上述 120.19.1-120.19.4 与 120.20.1-120.20.3 文本；Eric Turgeon《GhostBSD: From Usability to Struggle and Renewal》；Lumina 桌面环境交接公告；Project Trident sunset 公告；项目史观总纲第 2、7、23 条[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]
+- TrueOS 停止开发公告；Eric Turgeon《GhostBSD: From Usability to Struggle and Renewal》；Lumina 桌面环境交接公告；iXsystems 2017 年更名公告；PC-BSD/TrueOS 桌面工具档案［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］## 257.20.2 总纲第 19 条审视：失败 BSD 衍生版本叙事中的解释学循环与权力知识共谋
+- 上述所有文献综合；Eric Turgeon《GhostBSD: From Usability to Struggle and Renewal》；TrueOS 停止开发公告；Project Trident sunset 公告；项目史观总纲第 7、19、23 条［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］## 257.20.3 总纲第 21 条审视：失败 BSD 衍生版本作为改革式方法论的代价呈现
+- 本节自身文本；上述 120.19.1-120.19.4 与 120.20.1-120.20.3 文本；Eric Turgeon《GhostBSD: From Usability to Struggle and Renewal》；Lumina 桌面环境交接公告；Project Trident sunset 公告；项目史观总纲第 2、7、23 条［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
 
 <!-- DB_REF:bsd_derivatives.duckdb -->
 > **数据库引用（bsd_derivatives.duckdb）**：本子节对应 bsd_derivatives 代码仓库。> 1985-2026 年间：963,557 次提交。> 仓库总览：963,557 次提交，9,744 位贡献者（contributors 表行数，1985-06-13 至 2026-08-24）。

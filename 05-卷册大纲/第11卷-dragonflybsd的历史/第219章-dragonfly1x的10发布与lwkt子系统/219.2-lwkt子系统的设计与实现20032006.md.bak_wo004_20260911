@@ -1,0 +1,150 @@
+# 219.2 LWKT 子系统的设计与实现（2003-2006）——Light Weight Kernel Threading（LWKT）是 DragonFly 的核心创新，实现轻量级内核线程与细粒度调度
+
+## 219.2.1 LWKT 的设计原则
+
+**要点**：LWKT（Light Weight Kernel Threading）由 Dillon 设计，原则包括 “轻量级线程、消息传递、避免锁竞争”；LWKT 让每个 CPU 拥有独立的线程队列与调度器，通过 IPI（Inter-Processor Interrupt）消息传递替代传统锁；LWKT 是 DragonFly 工程哲学的核心——以消息传递替代锁
+
+**史料**：Dillon 的 LWKT 设计文档；DragonFly 邮件列表中关于 LWKT 的讨论；DragonFly 源码 sys/kern/lwkt_thread.c；dragonfly.duckdb 专门查询 dragonfly-src 中 sys/sys/lwkt *与 sys/kern/lwkt* 路径 commit 演化显示：LWKT 子系统在 2003 年即有 63 条 commit（涉及 3 个文件），2004 年 66 条 commit（6 个文件），2005 年 63 条 commit（7 个文件），反映 LWKT 作为 DragonFly fork 后首个核心子系统在 1.x 时代持续密集开发；LWKT 相关文件数从 2003 年的 3 个增长至 2005 年的 7 个，反映子系统逐步扩展；dragonfly.duckdb 查询 L1.1.1 显示：dragonfly-src 2003 年仅 10 位贡献者，2004 年 17 位，2005 年 22 位，反映 fork 初期社区规模极小，LWKT 设计主要由 Dillon 个人完成（2003 年 Dillon 占比 53.13%，2004 年 33.99%） ［A］
+
+**史观**：总纲第 17 条——软件工程：LWKT 是软件工程中 “消息传递 vs 锁” 哲学分歧的具体实现
+
+**辨析**：LWKT 与 FreeBSD SMPng 的设计哲学比较在不同叙事中存在简化——两者目标不同；LWKT 的实际性能收益需对照基准测试核验；【0 信任原则·文件路径匹配局限】LWKT commit 统计基于 sys/sys/lwkt *与 sys/kern/lwkt* 路径匹配，可能遗漏散落在其他路径的 LWKT 相关 commit（如 sys/platform/ 下的 IPI 实现），实际 LWKT 工程 commit 量可能高于统计值
+
+**文献**：DragonFly LWKT 设计文档；Dillon 邮件列表发言；DragonFly 源码；dragonfly.duckdb dragonfly-src LWKT 路径 commit 查询（sys/sys/lwkt *、sys/kern/lwkt*，2003-2026） ［A］
+
+## 219.2.2 LWKT 与 FreeBSD 5.x SMPng 的比较
+
+**要点**：SMPng（FreeBSD 5.x）采用细粒度锁改造内核，让多核并行进入内核；LWKT（DragonFly）采用消息传递与每 CPU 独立调度，避免锁竞争；两种路径在 SMP 性能上各有优势——SMPng 适配现有代码，LWKT 适配重新设计
+
+**史料**：SMPng 设计文档（Baldwin 2002 FreeBSD SMPng 实现文档）；LWKT 设计文档（dragonflybsd.org/goals/threads.cgi）；FreeBSD 与 DragonFly SMP 性能对比基准测试；dragonfly.duckdb dragonfly-src 仓库 commits 表与 commit_files 表（路径 `d:\librebsd\03-原始史料库\01-代码仓库史料\01-数据库本体\`，含 LWKT 首引 commit `8ad65e080342` 2003-06-20、sys/kern/lwkt_thread.c 与 sys/sys/lwkt_token.h 路径 commit 演化）；DragonFly BSD 邮件列表存档（**<https://www.dragonflybsd.org/mailinglists/**，kernel@> 关于 LWKT vs SMPng 的讨论）；DragonFly BSD Release Notes（**<https://www.dragonflybsd.org/releases/**）；Dillon> fork 公告（**<https://lists.freebsd.org/pipermail/freebsd-current/2003-July/006889.html**，"too> heavily mutexed" 表述）；HAMMER 设计 PDF（**<https://www.dragonflybsd.org/hammer/hammer.pdf**）[三角验证：dragonfly.duckdb> 代码层 + 邮件列表言论层 + Release Notes 官方层] ［A］
+
+**史观**：总纲第 6 条——技术路线分化：SMPng 与 LWKT 的根本分歧反映 FreeBSD 与 DragonFly 的技术路线分化
+
+**辨析**：两种路径的性能对比缺乏权威基准——需对照同硬件同负载核验；SMPng 的实际复杂度需考据
+
+**文献**：SMPng 设计文档；LWKT 设计文档；BSD SMP 性能对比研究[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]
+
+## 219.2.3 LWKT 的工程效应
+
+**要点**：LWKT 让 DragonFly 在多核扩展性上独树一帜——通过消息传递避免锁竞争，理论上可线性扩展；LWKT 影响后续 DragonFly 设计——HAMMER、网络栈、VFS 层均基于 LWKT；LWKT 是 DragonFly 区别于其他 BSD 的核心技术
+
+**史料**：DragonFly LWKT 相关 commit log；DragonFly 网络栈与 VFS 设计文档；Dillon 在 kernel@ 关于 LWKT 工程影响的发言 ［A］
+
+**史观**：总纲第 17 条——软件工程：LWKT 作为 DragonFly 的工程基础塑造后续所有子系统设计
+
+**辨析**：LWKT 的实际线性扩展性需对照基准测试核验；LWKT 在不同负载下的表现差异需考据
+
+**文献**：DragonFly 设计文档；LWKT commit log；Dillon 邮件列表发言 ［A］
+
+## 219.2.4 LWKT 设计文档与源码考据
+
+**要点**：LWKT 的设计文档与 DragonFly 源码（sys/kern/lwkt_thread.c、sys/sys/lwkt_token.h 等）是研究 LWKT 的核心史料；考据需对照设计文档、源码、邮件列表以核验实现细节
+
+**史料**：DragonFly 设计文档；DragonFly 源码 lwkt 相关文件；kernel@ 邮件列表 LWKT 讨论 ［A］
+
+**史观**：总纲第 25 条——终结与延续：LWKT 考据是 0 信任原则在内核设计史研究中的应用
+
+**辨析**：设计文档与源码的差异需考据——部分文档可能滞后于实现；commit log 中的 LWKT 相关 commit 需对照源码核验；【数据缺口】netbsd.duckdb 数据分析规划中 L2.3.1.lwkt（LWKT 特性引入周期）与 L2.2.1.sys_sys_lwkt（sys/sys/lwkt 子系统 commit 演化）两项查询在卷章数据映射中已登记，但实际数据报告中未见对应查询结果——L2.3.1 系列仅执行 ZFS/Capsicum/bhyve/Clang/ARM64/RISC-V 六项关键词查询，L2.2.1 系列仅执行 sys/kern/sys/net/sys/geom/sys/cam/sys/dev/sys/vm/sys/fs/sys/contrib 八项子系统路径查询，均未覆盖 lwkt；LWKT 特性引入周期与 sys/sys/lwkt 目录 commit 演化须待补充查询后量化，当前只能依据 commit hash（如 LWKT 首引 `8ad65e080342`）定性叙述
+  -。经 2026-08-15 邮件列表库双库核查，2003 年多项 LWKT 相关 bug 报告证实 LWKT 在 fork 后即处于活跃开发状态：lwkt_preempt() panic（2003-09-05）、lwkt_send_ipiq: UP box!（2003-10-18）、Dillon NTFS 修复涉及 LWKT（2003-12-28）
+**文献**：DragonFly 设计文档；DragonFly 源码；kernel@ 邮件列表档案 ［A］
+
+<!-- DB_REF:dragonfly.duckdb -->
+> **数据库引用（dragonfly.duckdb）**：本子节对应 dragonfly 代码仓库。
+> 2003-2006 年间：10,441 次提交。
+> 仓库总览：656,206 次提交，535 位贡献者，2003-06-17 至 2026-08-18。
+
+<!-- DEEP_ANALYSIS: dragonfly.duckdb.commits -->
+**数据库分析发现**（证据等级：L1，来源：`dragonfly.duckdb.commits.dragonfly`）
+
+dragonfly 核心贡献者：DPorts Builder(562567), Automaton(29485), Sascha Wildner(10869), Matthew Dillon(10664), Charlie Root(8176)
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-4-107`）
+
+Torvalds 自述是“偶然的革命者”，开始 Linux 是因为在电脑上玩耍有乐趣，且当时其他选择不够吸引人。
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-4-108`）
+
+Lerner 与 Tirole（2000）引 IDC 估计，个人电脑操作系统市场中 Linux 全球用户约 700 万至 2100 万，年增长率 200%。
+
+## 文献
+
+- Ingo Schwarze. bsdcan15-mandoc[M]. 2015.
+- eurobsdcon2014-mandoc-paper[M].
+- eurobsdcon2015-mandoc[M].
+- Murenin C A, Boutaba R. OpenBSD Hardware Sensors Framework[C]//AsiaBSDCon 2009 Proceedings. Tokyo, 2009.
+
+<!-- PODCAST_REVIEW v20260829 -->
+<!-- 语义复核范围：BSDTalk EP53、YouTube EPEfNZ4jMQic4（共 2 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
+
+**要点**：
+
+- 1.6 定位以修复为主，修复清单长达两三百条且以文件系统代码居多；基础设施层面完成缓冲缓存的 buffer 与 BIO 拆分（与 FreeBSD 约一年前的做法类似）、彻底废除块编号改用 64 位字节偏移，并将大内核锁显著推进，使多数文件描述符例程已可 MP safe 运行；另含新随机数生成器与 soft updates、NFS、浮点子系统、线程等大量修复。（BSDTalk EP53，[164.24-249.12]，L1）
+- Dillon 列出三大目标：userland VFS（允许文件系统作为用户进程运行的 API）、ZFS 移植（依赖 userland VFS，直接移植进内核相当困难）与集群（他称之为最大的一盘棋）；并坦言创立 DragonFly 时未料到集群之前需完成如此大量的内核基础设施工作。（BSDTalk EP53，[293.5-348.74]，L1）
+- 集群的正确含义远超 NFS：跨机共享打开文件须做到百分之百缓存一致性，因为单一线程化程序的线程可能分属两台物理机；为此需要类似 SMP 硬件缓存一致性协议的软件机制，把 BSD 传统上对写操作独占整个 v-node 的锁改为按文件的范围锁，由此牵出整条基础设施改造链。（BSDTalk EP53，[354.34-454.78]，L1）
+- 部分机制已获实现验证：并行路由表工作正常，线程化网络栈运转良好（性能测试暂不理想，因 MP 锁尚未完全移除）；线程切换时间低于一微秒，进程间消息低于一微秒且可批处理——批模式下首条约一微秒、后续每条仅 10-15 纳秒；这些量化证明使内核能以更模块化、更可调试的方式编写。（BSDTalk EP53，[836.86-894.9]，L1）
+- Dillon 自述内核设计立场：既不属于微内核阵营也不属于单整体阵营，支持模块化但承认大型基础设施必须单整体才能获得真实性能，稳定性也要求代码集成于一处——他以 Windows 由五万个厂商提供驱动、兼容性碰运气作反例，自认处于中间地带。（BSDTalk EP53，[895.9-962.0]，L1）
+- Dillon 开场自我定位为 DragonFly 项目创始人，自述过去两年一直在谈理论，本场是他首次就 DragonFly 已实现的 SMP 机制给出实测硬数字；测试平台为 AMD Athlon 3800+ 低成本双核（约 300 美元、2 GHz）装于 Shuttle 机箱，因机载 Nvidia 千兆网卡不工作而改插 Intel em 的 PCI 网卡，并明言测试目的是算法性能而非吞吐量，故无法测吞吐。（YouTube EPEfNZ4jMQic4，[51.6-67.4, 594.5-643.8, 194.1-231.2, 241.4-263.7]，L1）
+- 测量前他先量化测量工具本身：KTR 内核追踪日志机制经其确认原创于 BSDi，设计极简且 MP 安全，无参数记录一次约 40 纳秒，该开销从全部结果中扣除。critical section 为 CPU 本地原语，承袭 FreeBSD 4 SPL“置内存标记、中断仅记录即返回”的思想而不复用 cli/sti，纯标准指令高度可缓存，进出合计实测 9.5 纳秒，设计意图是让内核代码随处进入临界区而不必顾虑性能代价。（YouTube EPEfNZ4jMQic4，[262.2-299.1, 286.2-293.4, 427.5-497.7, 438.2-467.3]，L1）
+- IPIQ 是 DragonFly 的低层异步跨 CPU 消息机制，底层为各 CPU 间完全无锁的软件 FIFO（独立读写索引追赶式推进），连续多条消息只触发一次实际 IPI 中断；端到端乒乓测试给出约 1 微秒的单次往返（含全部中断与 APIC 开销，两 CPU 各摊约 500 纳秒），流水线预热后单条消息开销降至 40 纳秒以下，据此他向缺乏 SMP 经验的开发者澄清：跨 CPU 发消息远没有直觉中昂贵，除非达到每秒百万级消息量。（YouTube EPEfNZ4jMQic4，[503.3-592.4, 599.6-745.0, 644.3-698.1, 709.3-743.4]，L1）
+- 唤醒与内存释放路径呈现同一无锁化逻辑：单 CPU 上 tsleep 唤醒端到端约 1.2-1.3 微秒，跨 CPU 时发起侧仅 75 纳秒（异步排队即返回），目标侧延迟约 1.7 微秒，wakeup 实现完全无锁，仅存一个 CPU 掩码的总线锁周期且他仍在设法消除；slab 分配器按 CPU 拥有内存，跨 CPU 释放以 IPI 归还属主，使分配器仅需临界区即可本地运作；passive IPI 更把释放请求滞留于 FIFO、由时钟中断顺带冲刷，实现目标 CPU 上的“保证聚合”，多次释放可摊薄单次 IPI 成本。（YouTube EPEfNZ4jMQic4，[776.4-911.9, 908.8-948.1, 1090.9-1160.5, 1125.4-1159.5]，L1）
+- 测量中的异常本身成为方法论注脚：跨 CPU 释放在目标侧最初测得 745 纳秒的怪值，他排查缓存效应无果后归因于 malloc/free 路径携带参数的 KTR 日志干扰，精简日志后降至 359 纳秒。网络栈方面每 CPU 各设一个 TCP 线程，输入包按地址与端口解复用，特定连接的报文恒由同一线程处理其 TCB，故重负载下完全无需自旋锁，但 giant lock 尚未彻底去除；em 中断单包开销 2.5 微秒，部分源于发送前为消息头而 malloc，预分配嵌入 mbuf 预计可省两三百纳秒；全场最大结论是缓存效应巨大——一次缓存失效相当于 10-30 条可缓存指令，这促使他更坚定地推进工作聚合。（YouTube EPEfNZ4jMQic4，[964.6-1058.9, 1274.7-1323.4, 1176.5-1234.2, 1251.8-1277.1]，L1）
+
+**史料**：
+
+- 该期为 1.6 发布前一周的一手口述，载明：1.8 预计 2006 年底或 2007 年初，2007 年 7 月前有望在 ZFS 与集群中完成其一但恐难兼得；AMD64 移植尚无实际代码（仅 makefile 支持），当时真正从事重内核工作的约三人；移除 IPFW 至少还需六个月，前提是 pf 先补齐 dummynet、管道与限速能力；pkgsrc 移植已有数千包可在 DragonFly 编译运行、X 及基本工具可用，修复经 pkgsrc 提交者永久化并进入季度分发；安装器始终经由 Live CD 提供，下一版将收入内核源码。（BSDTalk EP53，[459.46-765.3]，L1）
+- 该演讲含多条项目史关键一手陈述：DragonFly 的目标被界定为透明集群与进程迁移，且他承认“人总得有一个未必能达成的目标”；核心重写已基本完成——分配器、调度器等皆已重写，与既有 BSD 的共享代码未来只存在于边缘；进程迁移预计至少还需两年，前置条件是先完成 DFS 与 I/O 子系统从 buffer cache 到无页（pageless）的改造，因为缓存一致性层是最重要也最复杂的部件；社区规模自述为相当小的团体、仅约三人在较大系统上运行 DragonFly，且他没有财力也没有电力预算（个人机房已到断路器极限），因而转向更省电的 AMD 设备；对于当年分叉的缘由，他当众拒绝展开，称那“是留给酒吧的话题”。（YouTube EPEfNZ4jMQic4，[1613.6-1650.4, 1784.9-1818.2, 1557.9-1585.8, 1667.7-1682.2]，L1）
+
+**史观**：
+
+- 总纲9 经验优先：Dillon 认同“讨论理论没有比实际实现它更好的方式”，将 DragonFly 定位为内核机制的试验场，并以并行路由表与线程化网络栈的实现结果作为论证依据——技术主张的效力来自动手实现与实测，而非纸面论辩。（BSDTalk EP53，[821.7-836.86]，L1）
+- 总纲10 动手者创造历史：自述在 Commodore PET 一兆赫 6502 上成长起来的 Dillon，把动手拿数字置于空谈理论之上：过去两年只谈理论、本场才给出第一批实测硬数字；以三百美元的低成本双核与已达供电极限的私人机房搭建测试环境，亲手测量操作系统核心原语，展示了动手者在有限资源下以实证推进系统设计的路径。（YouTube EPEfNZ4jMQic4，[1237.0-1251.3, 594.5-643.8, 241.4-263.7, 1569.9-1585.8]，L1）
+- 总纲9 经验优先：他偏爱的端到端测试方法论与本场宗旨均体现经验优先：端到端测试能覆盖未被单独记录的全部隐藏开销，连测量工具自身的 40 纳秒开销与日志干扰造成的异常值都必须经实测识别并扣除；被问及此举的高层目标时，他明确回答是要验证 DragonFly 所实现算法确实合适且高效——理论须交由运行中的系统检验。（YouTube EPEfNZ4jMQic4，[554.7-569.2, 1592.8-1613.6, 286.2-299.1, 964.6-1035.4]，L1）
+
+**辨析**：
+
+- Dillon 自评 1.6 “可能比作为过去稳定性标杆的 FreeBSD 4.x 各版本稳定得多”，该判断出自项目领导者本人，本期无独立基准测试佐证，引用时应视为当事人自评而非第三方测定。　[存疑脚注] 稳定性超越 FreeBSD 4.x 的说法为 Dillon 自我评价，缺乏本期内的可比数据支持。（BSDTalk EP53，[785.14-809.78]，L4）
+- 双核 TSC 不同步导致乒乓测试两方向时延不对称的现象，Dillon 当场推测为两核各自独立 PLL、厂商不愿在大面积硅片上同步时钟而经 HyperTransport 处理所致，属未经硬件资料核实的现场推断；此外其测试平台自承无法测吞吐量（机载网卡故障改用 PCI 网卡），算法性能结论的外推范围应有保留。　[存疑脚注] TSC 漂移成因为演讲现场口头推测，未见后续硬件文档佐证；转写乱序严重，个别数字与先后顺序经语义重排，须与幻灯片原件核对（YouTube EPEfNZ4jMQic4，[1687.2-1730.0, 621.4-643.8, 217.3-231.2]，L4）
+
+**文献**：
+
+- [BSDTalk EP53] Backman W. BSDTalk: 53: bsdtalk053 - Interview with Matthew Dillon[EB/OL]. (2006-07-12)[2026-08-27]. <https://archive.org/details/bsdtalk053>.
+- [YouTube EPEfNZ4jMQic4] YouTube. YouTube: BayLISA December 2005 SBC - DragonFly BSD with Matt Dillon[EB/OL]. ()[2026-08-15]. <https://www.youtube.com/watch?v=EfNZ4jMQic4>.
+
+<!-- /PODCAST_REVIEW -->
+
+<!-- ROW_MINE: dragonfly_mail.messages.17722 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-014685`；2026-09-10 大库战线行级遍历考据采纳）
+
+2003 年 9 月 13 日，Dillon 解释 top 显示无中断占比的原因：中断仍持 Giant 大锁，并预计 6 至 12 个月内逐步将中断移出 MP lock。这是 fork 后 LWKT 化路线图的最早公开时间表之一——Dillon 从一开始就规划了以“把中断从大锁移出”为标志的渐进式去大锁过程，而这一承诺的兑现贯穿 1.x 时期，构成 DragonFly 与 FreeBSD SMPng 路线分野的技术底层。引用时按 L4 纪律：本叙事仅以该邮件原文为限。
+
+**文献**：DragonFly BSD 邮件列表档案（dragonfly_mail.duckdb.messages.17722）［A］
+
+<!-- ROW_MINE: dragonfly_mail.messages.35806 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-014710`；2026-09-10 大库战线行级遍历考据采纳）
+
+2004 年 2 月 13 日，用户升级后触发 lwkt 相关 fatal trap，Dillon 连续八封调查 lwkt_send_ipiq() 在轮转调度代码中的错误使用，牵出 IPI（处理器间中断）机制与调度器的交互缺陷。LWKT 子系统在 1.0 发布前的这一系列调试，显示消息传递式调度在真实负载下的边界问题多集中于 IPI 与调度器交接处，也记录了小团队以长线程方式攻克调度器核心 bug 的协作常态。引用时按 L4 纪律：本叙事仅以该邮件原文为限。
+
+**文献**：DragonFly BSD 邮件列表档案（dragonfly_mail.duckdb.messages.35806）［A］
+
+<!-- ROW_MINE: dragonfly_mail.messages.44415 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-015170`；2026-09-10 大库战线行级遍历考据采纳）
+
+2004 年 7 月 27 日，Johan Kruger-Haglert 就“新调度器”发出 12360 字长文：DVD 刻录无恙但 mpg123 间歇跳音、XMMS 换曲迟滞、调整 nice 值使一切更糟；Dillon 以 1805 字严肃长回复剖析调度器交互。1.0 发布后新调度器的实时性瑕疵由音频场景最先暴露，这封往来展示了 LWKT 调度器在多媒体负载下的初期局限，以及 Dillon 对调度语义的逐项辩护。引用时按 L4 纪律：本叙事仅以该邮件原文为限。
+
+**文献**：DragonFly BSD 邮件列表档案（dragonfly_mail.duckdb.messages.44415）［A］
+
+<!-- ROW_MINE: dragonfly_mail.messages.103185 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-015222`；2026-09-10 大库战线行级遍历考据采纳）
+
+2005 年 7 月 18 日，Dillon 发布 patch #4 汇总补丁：修两个 SMP 相关 bug（LWKT 调度器大锁处理与 sockbuf）、强化 IPS 驱动、为 UFS inode 代码加调试，自述补丁已私下发给多人、因名单过长而公开到 bugs 列表。从私下分发到公开列表的转变，是 1.3 期 SMP 攻坚协作方式走向透明的标志，也显示补丁审阅在开发者规模有限时依赖点对点与列表并行的双重渠道。引用时按 L4 纪律：本叙事仅以该邮件原文为限。
+
+**文献**：DragonFly BSD 邮件列表档案（dragonfly_mail.duckdb.messages.103185）［A］
+
+<!-- ROW_MINE: dragonfly_mail.messages.108021 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-015235`；2026-09-10 大库战线行级遍历考据采纳）
+
+2005 年 6 月 4 日，Dillon 给出 smbfs 凭据缓存补丁并说明设计取舍：VFS 改造后 inactive 路径不再提供 cred，三个需要凭据的文件系统须自行在辅助节点缓存打开时的凭据，他同时批评 NFS 协议规范的历史缺陷。vnode 回收线程去进程化是 LWKT 纯线程化的直接后果之一，此信记录了线程化改造对文件系统层的连带约束及其处理原则。引用时按 L4 纪律：本叙事仅以该邮件原文为限。
+
+**文献**：DragonFly BSD 邮件列表档案（dragonfly_mail.duckdb.messages.108021）［A］

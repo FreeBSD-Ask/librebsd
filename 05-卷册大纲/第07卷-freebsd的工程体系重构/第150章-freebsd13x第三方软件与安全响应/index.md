@@ -49,7 +49,7 @@ volume: 第07卷-freebsd的工程体系重构
 ## 149.12.2 LLD 成为所有架构的默认链接器
 
 - 将 LLD（LLVM Linker）设为所有架构的默认系统链接器，完成 LLD 从“部分架构默认”到“全架构默认”的迁移。
-- Kernel Newbies. *Linux Kernel Release Notes*. kernelnewbies.org; LWN.net. (2021-2024). Kernel Development Coverage.[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]
+- Kernel Newbies. *Linux Kernel Release Notes*. kernelnewbies.org; LWN.net. (2021-2024). Kernel Development Coverage.［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
 
 ## 149.13.2 Windows 11/Server 2022、macOS 11-14 与 BSD 谱系
 

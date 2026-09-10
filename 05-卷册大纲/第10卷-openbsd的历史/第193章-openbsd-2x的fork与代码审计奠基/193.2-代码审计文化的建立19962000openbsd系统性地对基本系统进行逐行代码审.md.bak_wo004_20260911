@@ -1,0 +1,232 @@
+# 193.2 代码审计文化的建立（1996-2000）——OpenBSD 系统性地对基本系统进行逐行代码审计，发现并修复数千个安全漏洞，建立“默认安全”的工程范式
+
+## 193.2.1 代码审计的方法论与流程
+
+**要点**：OpenBSD 代码审计方法论由 de Raadt 主导，包括逐行审查基本系统源码、关注缓冲区溢出与格式化字符串漏洞、关注信任边界与权限提升；审计流程为发现问题 → 修复 →commit log 详细记录 →security advisory；审计成果通过 Release Notes 与 **security(8)** 手册页公开；统计结论印证——openbsd.duckdb openbsd-src 仓库变点检测（统计结论 C-14）显示 Pettitt 检验变点位于 2001-01（BUISHAND 检验变点位于 2017-09），2001-01 变点恰位于 2.x 时期末端与 3.x 时期起点交界，反映代码审计文化从 2.x 时期 “逐行审计建立” 阶段向 3.x 时期 “加密集成深化” 阶段的工程节奏转换
+
+**史料**：OpenBSD Security Advisories 1996-2000；OpenBSD CVS commit log 中 audit 相关 tag；OpenBSD 手册页 **security(8)** 与 **afterboot(8)**；openbsd.duckdb 查询 L1.1.1（经 L1.1.2 交叉验证）显示 openbsd-src 仓库 1996-2000 年 commit 量稳定运行，与代码审计周期并行，但 commit 量本身无法区分审计 commit 与功能 commit；openbsd.duckdb openbsd-src 仓库变点检测（统计结论 C-14：Pettitt 检验变点 2001-01 / BUISHAND 检验变点 2017-09，Python Pettitt 自实现 + BUISHAND R 自实现，查询日期 2026-07-27） ［A］
+
+  **openbsd-src 仓库 1996-2000 年 commit 时间序列**：
+
+  | 年份 | commit 量 | 备注 |
+  | --- | --- | --- |
+  | 1996 | 5,240 | OpenBSD 1.0/1.1/1.2 发布周期 |
+  | 1997 | 6,888 | OpenBSD 2.0 发布，确立 6 个月发布周期 |
+  | 1998 | 5,207 | 代码审计持续进行 |
+  | 1999 | 6,547 | OpenSSH 1.0 fork 自 SSH 1.2.12 |
+  | 2000 | 7,265 | OpenBSD 2.8 引入 OpenSSH 2.0 |
+
+**史观**：总纲第 8 条——社区文化即技术资产：代码审计作为社区文化资产，是 OpenBSD 区别于其他 BSD 的核心；统计结论印证——C-14 Pettitt 变点 2001-01 反映 “分离聚合是永恒规律”（总纲第 4 条）的工程节奏显现：2.x 时期的审计文化建立阶段（1996-2000）与 3.x 时期的加密集成深化阶段（2001-2005）在 2001-01 时点形成工程节奏转换，审计文化的 “建立” 与 “深化” 两个阶段在 commit 量层面呈现可检测的变点
+
+**辨析**：审计方法论在不同叙事中存在差异——部分资料强调 “逐行审查”，部分强调 “分类审查”，需对照 commit log 核验；审计的具体范围（基本系统 vs ports）需考据；openbsd.duckdb 查询 L3.1.1.audit 在数据报告中无独立查询条目——深层信息挖掘.md §L3.1.1 仅含 MFC/Fix/Add/Refactor/Document/Linux/Import/Update 关键词分析（跨 22 仓库汇总，非 openbsd-src 专属），无法直接获取 openbsd-src 中 audit/fix/security 关键词 commit 频率，此为数据缺口 [考据完成：2026-07-28 L3.1.1.audit 查询在数据报告中不存在，须以 OpenBSD Security Advisories 数据库与 CVS commit log 中 audit tag 直接核验]；**统计局限性标注**——C-14 变点检测的 Pettitt 与 BUISHAND 两检验变点时点不一致（2001-01 vs 2017-09），反映变点检测方法的方法学敏感性——Pettitt 检验对中段变点敏感，BUISHAND 检验对全样本变点敏感，两检验变点不一致不等于 “变点不存在” 而反映 “不同检验对变点位置的统计推断差异”；统计显著 ≠ 实际显著，Pettitt 2001-01 变点须与 OpenBSD 3.0（2001-12-01）发布、IPFilter 许可证争议（2001-05）、pf fork（2001）等工程事件交叉验证后方可归因；多重比较风险——C-14 与 C-12（freebsd-src 变点 1999-08）、C-13（netbsd-src 变点 2011/2012）、C-15（dragonfly-src 变点 2016/2017）跨项目对比时须按 Bonferroni 校正；0 信任原则适用——变点检测基于月度 commit 量序列，commit 量本身无法区分审计 commit 与功能 commit，变点的工程归因须以 commit message 与 release event 交叉验证
+
+**文献**：OpenBSD Security Advisories；OpenBSD CVS 仓库；security(8) 手册页；openbsd.duckdb 查询 L1.1.1（来源：原材料/研究/bsd 仓库分析/数据分析/宏观趋势统计.md §L1.1.1）；openbsd.duckdb 查询 L3.1.1（来源：原材料/研究/bsd 仓库分析/数据分析/深层信息挖掘.md §L3.1.1，仅含通用关键词分析）；统计分析报告：推断性统计.md Task 6 [R/OL]. 2026-07-27. 文件路径：`c:\Users\ykla\Documents\hibsd\03-原始史料库\01-代码仓库史料\01-数据库本体\统计分析\推断性统计.md`；Python 统计脚本：`script/phase2_inferential.py`. Task 6 Pettitt + BUISHAND 变点检测。执行日期：2026-07-27 ［A］
+
+## 193.2.2 早期发现的重大漏洞
+
+**要点**：OpenBSD 1996-2000 年间通过代码审计发现并修复数千个安全漏洞，包括缓冲区溢出（如 ftpd、telnetd）、格式化字符串漏洞、信任边界问题；部分漏洞在审计前已被利用，部分是审计发现的新型漏洞；OpenBSD 的审计成果被其他 BSD/Linux 项目移植修复
+
+**史料**：OpenBSD Security Advisories 1996-2000；CVS commit log；BUGTRAQ 邮件列表档案 ［A］
+
+**史观**：总纲第 10 条——边缘者贡献：OpenBSD 作为边缘项目通过审计贡献安全成果至整个 Unix 生态
+
+**辨析**：“数千个漏洞”的具体数字在不同叙事中差异较大——部分资料称 2000+，部分称 5000+，需对照 security advisory 与 commit log 核验；经 WebFetch OpenBSD 官方 **security.html**（<https://www.openbsd.org/security.html>，2026-07-30 访问）核实，OpenBSD 官方 Security 页面 §The Reward 明确表述 "The most intense part of our security auditing happened immediately before the OpenBSD 2.0 release and during the 2.0→2.1 transition, over the last third of 1996 and first half of 1997. Thousands (yes, thousands) of security issues were fixed rapidly over this year-long period; bugs like the standard buffer overflows, protocol implementation weaknesses, information gathering, and filesystem races. Hence most of the security problems that we encountered were fixed before our 2.1 release, and then a far smaller number needed fixing for our 2.2 release."，OpenBSD 官方一手表述使用 "Thousands (yes, thousands)" 强调 “数千” 量级，但未给出精确数字；OpenBSD 官方 Security 页面 §Audit Process 确认 "We have been auditing since the summer of 1996."，证实审计始于 1996 年夏；OpenBSD 官方 errata 链接从 2.0 起（errata20.html 至 errata79.html），1.0/1.1 无 errata 页面，advisory 数量须以各版本 errata 页面逐版本统计；[考据完成：2026-07-30 OpenBSD 官方 security.html 已证实 “数千” 量级为官方表述，但精确数字须以各版本 errata 页面逐版本统计，"2000+" 与 "5000+" 等具体数字无官方一手来源，属二手转述]
+
+**文献**：OpenBSD Security Advisories；BUGTRAQ 档案；CVS commit log ［A］
+
+## 193.2.3 与 FreeBSD/Linux 安全审计实践的比较
+
+**要点**：FreeBSD 1990 年代后期建立 Security Officer 制度但未系统性代码审计；Linux 1990 年代缺乏系统性审计，依赖用户与厂商报告；OpenBSD 是 1990 年代唯一系统性代码审计的 Unix 系统；OpenBSD 审计成果通过 cross-BSD 协调反馈至 FreeBSD/NetBSD
+
+**史料**：FreeBSD Security Advisories 1996-2000；Linux Security Audit 项目文档；cross-BSD 安全协调邮件列表 ［A］
+
+**史观**：总纲第 8 条——社区文化即技术资产：OpenBSD 的“审计文化”与 FreeBSD/Linux 的“反应式安全”是两种文化资产
+
+**辨析**：OpenBSD 与 FreeBSD/Linux 安全实践的“严格程度”对比缺乏权威评估——需对照实际漏洞修复时序核验；OpenBSD 审计成果被其他项目移植的具体数量需考据
+
+**文献**：FreeBSD Security Advisories；Linux Security Audit 项目；cross-BSD 协调邮件列表 ［A］
+
+## 193.2.4 审计记录与漏洞修复 commit 考据
+
+**要点**：OpenBSD 审计记录与漏洞修复 commit 是研究审计文化的核心史料；commit log 中的"audit"与"fix"标签标识审计工作；security advisory 与 commit 的对应关系是考据关键；考据需对照 CVS commit log 与 advisory 数据库
+
+**史料**：OpenBSD CVS commit log；OpenBSD Security Advisories 数据库；BUGTRAQ 档案 ［A］
+
+**史观**：总纲第 25 条——0 信任原则：审计记录与 commit 需考据——部分 commit 在迁移过程中可能丢失 audit 标签
+
+**辨析**：审计 commit 与一般 commit 的区分需考据——OpenBSD commit log 中部分 commit 未明确标注 audit，需对照 advisory 推断
+
+**文献**：OpenBSD CVS 仓库；Security Advisories 数据库；BUGTRAQ 档案[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]
+
+<!-- DB_REF:openbsd.duckdb -->
+> **数据库引用（openbsd.duckdb）**：本子节对应 openbsd 代码仓库。
+> 1996-2000 年间：44,681 次提交。
+> 仓库总览：491,195 次提交，3,352 位贡献者，1995-10-18 至 2026-08-25。
+
+
+<!-- DEEP_ANALYSIS: openbsd.duckdb.commits -->
+**数据库分析发现**（证据等级：L1，来源：`openbsd.duckdb.commits.openbsd`）
+
+openbsd 核心贡献者：ajacoutot(35528), deraadt(31454), sthen(30592), espie(18328), jasper(16649)
+
+
+
+<!-- DEEP_ANALYSIS: sacred_sources.duckdb.blocks -->
+**史家判断**（证据等级：L2，来源：`sacred_sources.duckdb.blocks.188`）
+
+以食品安全为例：人们永远无法得到真正的认识。你既不能说科学证明其在某量无毒害就真的无毒害，也不能证明它真的有毒害。用科学说服人本身就不科学——因为科学本身就是非充分决定性的，本身的正确性是得不到保证的。且你能得到的所有科学解释，正因为它是科学解释，所以它必定也是错误的。这并非反智，而是对科学边界的清醒认识。好坏是对于人来说的，所谓“剂量决定论”也是无意义的——零剂量不是更安全吗？
+
+
+
+<!-- DEEP_ANALYSIS: sacred_sources.duckdb.blocks -->
+**史家判断**（证据等级：L2，来源：`sacred_sources.duckdb.blocks.283`）
+
+王充因为个人境遇而提出了德福不一致论，其否定了个人努力的作用。可以看到人生的遭遇会对其理论有决定性的作用，有时是偏差，有时是谬误，但根本上说是一种悲伤。这揭示了理论建构的偶然性：任何理论都深深打上 theorist 个人经历的烙印。不存在客观的、超越个人境遇的理论。历史哲学的建构者同样如此——本书的理论亦不例外，它诞生于特定的境遇、特定的悲伤、特定的选择。
+
+
+
+<!-- DEEP_ANALYSIS: cross_indexes.duckdb.concept_history -->
+**史家判断**（证据等级：L2，来源：`cross_indexes.duckdb.concept_history.13`）
+
+出口管制：出口管制概念的演化: ①冷战成型期（1949–1951）：COCOM 建立，协调对苏联、东欧、中国的禁运货单；1951 年美国《相互防御援助管制法》（Battle Act）以停止援助迫使盟国参与（1980 年废止）；②缓和调整期（60–80 年代）：因缓和与贸易增长，管制多次放宽；③转型重组期（1993–1996）：1994 年 3 月 31 日 COCOM 解散；1995 年 12 月 19 日成立“瓦森纳协定”（Wassenaar Arrangement），1996 年 11 月 1 日起运作；④数字与加密期：加密早在冷战期被列为军品（由国务院依 AECA 管，即 ITAR），1996 年底部分非军用加密移至商
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-1-011`）
+
+Thompson 在 1984 年图灵奖演讲中称，特洛伊木马攻击的构想最早见于一份对 Multics 早期实现安全性的空军批判报告。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-3-004`）
+
+Theodore Roszak 1969 年出版《The Making of a Counter Culture》，副标题为“对技术官僚社会及其青年反抗的反思”。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-4-010`）
+
+Anonymous CVS 源码分发机制由 Charles D. Cranor 与 Theo de Raadt 创建，用于开放 OpenBSD 源码仓库。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-4-011`）
+
+创建 Anonymous CVS 的目标之一是开放 OpenBSD 的 CVS 源码仓库访问，使项目更开放并鼓励开发者兴趣。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-4-100`）
+
+1995 年秋启动 OpenBSD 项目时，Cranor 与 de Raadt 决定用 CVS 管理源代码树，并创建匿名 CVS 以开放源码仓库。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-5-111`）
+
+Anonymous CVS 由 Charles D. Cranor 与 Theo de Raadt 在 1995 年秋创建 OpenBSD 时设计，使匿名互联网用户无需写权限账户即可访问源码库。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-5-112`）
+
+Anonymous CVS 是一种让匿名互联网用户在不危及安全的前提下访问源码库的机制，将开放源码推进为开放源码库。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-6-017`）
+
+Harris、Jha、Reps 等人提出声明式、时序化且实用的 capability 编程方法，用于在 Capsicum 上满足安全策略。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-6-108`）
+
+OpenBSD 自 2005 年起对 SCSI 中间层（SCSI midlayer）实施重大重构，引入 mpath(4) 多路径虚拟总线与 iopools 资源池、将适配器命令处理器改为回调式 scsi_done API，以改善稳定性、性能与可扩展性。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L2，来源：`historical_claims.duckdb.claim.CL-7-046`）
+
+参考文献全文数据库收录《20260805 Glass deRaadt expulsion email 19941223 en》（unknown，2026），作为本章主题的候选史料。
+
+## 文献
+
+- Ingo Schwarze. bsdcan15-mandoc[M]. 2015.
+- Ingo Schwarze. bsdcan18-mandoc[M]. 2018.
+- Paul Irofti. bsdcan2014-octeon dsr500[M]. 2014.
+- bsdcan2015-rdomains[M].
+- bsdcan2016-bfd[M].
+- bsdcan2016-xen[M].
+- bsdcan2019-syspatch[M].
+- bsdcan2019-tls13[M].
+- bsdcan2025-hshoexer-confidential-computing[M].
+- andrew, afresh1. 2024-Why-Rewrite-fw update-Euro BSDcon[M]. 2024.
+- eurobsdcon2008-sensors[M].
+- eurobsdcon2011-kettenis[M].
+- eurobsdcon2011-openbsdscsievolution[M].
+- eurobsdcon2014-mandoc-paper[M].
+- eurobsdcon2014-mandoc-slides[M].
+- eurobsdcon2014-parallel-make[M].
+- eurobsdcon2015-packages[M].
+- eurobsdcon2015-softraid-boot[M].
+- eurobsdcon2016-openbsd-11n[M].
+- eurobsdcon2016-privsep[M].
+- eurobsdcon2017-device-drivers[M].
+- eurobsdcon2017-opensmtpd[M].
+- eurobsdcon2018-mandoc[M].
+- eurobsdcon2018-rop[M].
+- eurobsdcon2019-plist[M].
+- eurobsdcon2022-krw-blockstobooting[M].
+- eurobsdcon2023-bluhm-mitigations[M].
+- eurobsdcon2023-espie-cache[M].
+- eurobsdcon2024-bluhm-packetflow[M].
+- eurobsdcon2025-bluhm-protomp[M].
+- eurobsdcon2025-florian-easy[M].
+- Marc Espie. eurobsdcon 2018 https[M]. 2018.
+- Claudio Jeker. asiabsdcon08-network[M]. 2008.
+- Murenin C A, Boutaba R. OpenBSD Hardware Sensors Framework[C]//AsiaBSDCon 2009 Proceedings. Tokyo, 2009.
+- Murenin C A. OpenBSD Hardware Sensors Framework（幻灯片）[EB/OL]. AsiaBSDCon 2009. <https://www.openbsd.org/papers/asiabsdcon2009-sensors-slides.pdf>.
+- syuu. asiabsdcon2010 smp for sgi paper[C]. 2010.
+- Alexandre Ratchov. asiabsdcon2010 sndio slides[C]. 2010.
+- asiabsdcon2016-vmm-slides[M].
+- asiabsdcon2019-rop-slides[M].
+- Dave Voutila. asiabsdcon2023-hardening vmd devices-slides[M]. 2023.
+- andrew, afresh1. 2024-Why-Rewrite-fw update-Fossy[M]. 2024.
+- chuck, deraadt. anoncvs-paper[M]. [存疑]
+- Niels Provos. crypt-slides[M]. 2002.
+- eurobsd-firewalls-2002[M]. 2002.
+- eurobsd2017-pkgtools[M].
+- Brian Bamsch. Porting Open BSD to RISCV Final Report[M]. 2020.
+- Paul Irofti. eurobsdcon2014-octeon dsr500[M]. 2014.
+- eurobsdcon2014-rdomains[M].
+- eurobsdcon2015-mandoc[M].
+- eurobsdcon2016-embracingbsdrt[M].
+- eurobsdcon2017-schedisnot[M].
+- eurobsdcon2019-bwfm[M].
+- Software Freedom Conservancy. Form-990 fy-2022-23[M]. 2022.
+- eurobsdcon2019-gameoftrees[M].
+- eurobsdcon2019-perform-slides[M].
+- eurobsdcon2022-bluhm-networkmp[M].
+- eurobsdcon2022-espie-arches[M].
+- eurobsdcon2022-tb-libressl[M].
+- Marc Espie. lse clang[M]. 2017.
+- eurobsdcon2023-matthieu-pf-rdomain[M].
+- eurobsdcon2023-otto-malloc[M].
+- Dave Voutila. eurobsdcon2024-vmd multiprocessing[M]. 2024.
+- 未知. openbsd Open BSD-jitsi[M]. 2022.
+- Giovanni Bechis 12 ` ~~~ alse. openbsd seccomp-pledge-oss2017[M]. 2017.
+- eurobsdcon2025-hshoexer-confidential-computing[M].
+- eurobsdcon2021-espie-debug[M].
+- eurobsdcon2024-hshoexer-confidential-computing[M].
+- eurobsdcon2025-espie-dpb[M].

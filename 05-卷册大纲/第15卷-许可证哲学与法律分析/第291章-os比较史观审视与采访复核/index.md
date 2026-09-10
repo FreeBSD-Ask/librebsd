@@ -32,11 +32,7 @@ volume: 第15卷-许可证哲学与法律分析
 ## 辨析
 
 - Linux“生态规模”是否真大于 BSD 须量化对比；Linux 基金会托管项目是否真“Linux 内核影响”须辨析——这些项目多为独立运行于 Linux 但非内核衍生；GPL 与 BSD 影响模式的对比须避免简单化
-  - 文献：Linux 基金会项目列表；许可证对比研究[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料
-- 考据过程留痕——【查证来源】Linux 基金会项目列表（linuxfoundation.org/projects，Kubernetes、Node.js 等托管项目）经 linuxfoundation.org 一手核验；GPL 与 BSD 许可证对比研究经 freebsd.org/copyright/freebsd-license/ 与 gnu.org/licenses/ 双向核验；GNU 项目官网
-- 考据过程留痕——【查证来源】Linux 基金会项目列表与 Kubernetes/Node.js 历史经 linuxfoundation.org/projects 一手核验；GNU 工具链历史（GCC、glibc、bash、coreutils）经 gnu.org 一手核验；FreeBSD Clang/LLVM 替代 GCC 历史（9.0 可选、10.0 默认）经 freebsd.org/releas
-- 道与术的辩证在 BSD 跨项目投入中是否存在“道高于术”的层级——此层级判断在 BSD 阵营中隐含存在（BSD 许可证哲学被视为高于具体项目产出），但若“道”是相对的则不存在“道高于术”的层级，故采信“道与术的辩证在 BSD 跨项目投入中不存在层级高低，而存在路径差异”的判断。
-- 文献**：项目史观总纲第五章“道与术的辩证”[Z]. **原材料/哲学/项目统摄史观/第 5 章.md**; q.md“道与术的辩证”[Z]. **原材料/哲学/原始哲学/**; FreeBSD Project. FreeBSD License [EB/OL]. <https://www.freebsd.org/copyright/freebsd-license/>.
+  - 文献：Linux 基金会项目列表；许可证对比研究［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］. **原材料/哲学/项目统摄史观/第 5 章.md**; q.md“道与术的辩证”[Z]. **原材料/哲学/原始哲学/**; FreeBSD Project. FreeBSD License [EB/OL]. <https://www.freebsd.org/copyright/freebsd-license/>.
 
 ##### 289.12.2 从总纲第 6 条审视：主体性与和解
 
@@ -46,7 +42,7 @@ volume: 第15卷-许可证哲学与法律分析
 
 ## 文献
 
-- Linux 基金会项目列表；许可证对比研究[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]
+- Linux 基金会项目列表；许可证对比研究［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
 
 
 <!-- dangan-20260908 消解回写 -->

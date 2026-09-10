@@ -41,14 +41,14 @@ volume: 第04卷-大分裂与四大bsd的诞生
 - Jolitz DDJ 连载；FreeBSD Project 官方历史文档；Marshall Kirk McKusick（马歇尔·柯克·麦库西克） "Design and Implementation of 4.4BSD" (Addison-Wesley 1996) ［B］---## 史料登记与辩证校准（2026-08-08 追加）> **本卷命题**：24.4 历史非断裂而是循环（详见本卷 00-总览“编纂指导思想叙事参照”）### 史料文献
 - DDJ 1992 年度报告；FreeBSD Project FAQ 历史；Marshall Kirk McKusick 个人回忆 ［B］
 - Jordan Hubbard freebsd-announce (1993.6.19)；NetBSD Project 历史；Marshall Kirk McKusick（马歇尔·柯克·麦库西克） 回忆录 ［A］
-- Chalmers, R. "The unknown hackers" Salon, 17 May 2000；386BSD 0.1 Release Notes (14 July 1992)[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]
+- Chalmers, R. "The unknown hackers" Salon, 17 May 2000；386BSD 0.1 Release Notes (14 July 1992)［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
 - Chalmers, R. "The unknown hackers" Salon, 17 May 2000；FreeBSD 邮件列表 2000 年讨论 ［A］
-- Torvalds, L. & Diamond, D. "Just for Fun" (2001)；Linux 1.0 Release Announcement (14 March 1994)；Linksvayer, M. Meta Magazine interview, late 1993[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]
+- Torvalds, L. & Diamond, D. "Just for Fun" (2001)；Linux 1.0 Release Announcement (14 March 1994)；Linksvayer, M. Meta Magazine interview, late 1993［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
 - Torvalds 1991; Jolitz 1991-1992 ［A］
 
 <!-- DB_REF:linux_kernel.duckdb -->
 > **数据库引用（linux_kernel.duckdb）**：本子节对应 linux_kernel 代码仓库。> 1991-1991 年间：0 次提交。> 仓库总览：1,474,341 次提交，39,865 位贡献者（contributors 表行数，1970-01-01 至 2026-08-24）。
-- Chalmers, R. "The unknown hackers" Salon, 17 May 2000；FreeBSD Project "A Brief History of FreeBSD"[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]
+- Chalmers, R. "The unknown hackers" Salon, 17 May 2000；FreeBSD Project "A Brief History of FreeBSD"［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
 - Usenet 历史档案；FreeBSD 邮件列表档案 ［A］[^doubt-resolved-257]: 据 new-york-anchor-press-doubleday (Levy, 1984) 消解[^doubt-resolved-258]: 据 Mac OS X Internals A Systems Approach (Amit Singh（阿米特·辛格）)  (未署名) 消解[^doubt-resolved-259]: 据 Mac OS X Internals A Systems Approach (Amit Singh)  (未署名) 消解
 - Gödel, K. (1931); Jolitz & Jolitz DDJ (1991-1992); FreeBSD 1.0 Release Notes (1993); NetBSD 0.8 Release Notes (1993)
 

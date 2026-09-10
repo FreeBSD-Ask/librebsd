@@ -48,8 +48,7 @@ volume: 第07卷-freebsd的工程体系重构
 
 ## 文献
 
-- Dillon, M. (2003-2014). *DragonFly Kernel Design Posts*. dragonflybsd.org; DragonFly Project. (2009-2014). *Release Notes* (MPSAFE sections). dragonflybsd.org; Sherrill, J. (2014). *DragonFly Networking Performance*. BSDCan '14.[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案
-- Dillon, M., & Watson, R. N. M. (2013). *SMP Networking: DragonFly vs FreeBSD Approaches*. BSDCan Panel; FreeBSD Project. (2003-2020). *Giant Lock Removal Commits*. cgit.freebsd.org; Gagniere, T. (2020). *FreeBSD Network Stack Scaling*. EuroBSDCon '20. ［A］
+- Dillon, M. (2003-2014). *DragonFly Kernel Design Posts*. dragonflybsd.org; DragonFly Project. (2009-2014). *Release Notes* (MPSAFE sections). dragonflybsd.org; Sherrill, J. (2014). *DragonFly Networking Performance*. BSDCan '14.［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
 
 
 <!-- dangan-20260908 消解回写 -->

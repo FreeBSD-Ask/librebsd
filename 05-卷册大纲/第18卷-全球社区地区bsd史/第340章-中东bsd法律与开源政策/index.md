@@ -42,4 +42,4 @@ volume: 第18卷-全球社区地区bsd史
 - 社区邮件列表存档；社区论坛历史讨论档案；口述史记录 ［A］
 - Israel FreeBSD User Group 邮件列表 [EB/OL]；Arabeyes 项目 [EB/OL]. <https://www.arabeyes.org/> （访问日期 2026-07-23）；FreeBSD Foundation 合规声明；OFAC 制裁清单；参见 150.6、150.4 节部分史料 ［A］
 - Arabeyes 项目（同 150.14a）；Arabeyes GitLab 仓库；Israel FreeBSD User Group 邮件列表；FreeBSD 邮件列表存档；EFF、OSI 关于 EAR 影响的公开声明；参见 150.4、150.6 节部分史料 ［A］
-- 上述所有文献综合；FreeBSD Foundation 地缘政治中立声明[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]；AsiaBSDCon 议程；《亚伯拉罕协议》公开文本；参见 150.4、150.6、150.14.1-150.14.4、150.14a、150.14b 节部分史料 ［A］[^doubt-resolved-1485]: 据 oxford-oxford-university-press (Collingwood, 1946) 消解
+- 上述所有文献综合；FreeBSD Foundation 地缘政治中立声明［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］；AsiaBSDCon 议程；《亚伯拉罕协议》公开文本；参见 150.4、150.6、150.14.1-150.14.4、150.14a、150.14b 节部分史料 ［A］[^doubt-resolved-1485]: 据 oxford-oxford-university-press (Collingwood, 1946) 消解

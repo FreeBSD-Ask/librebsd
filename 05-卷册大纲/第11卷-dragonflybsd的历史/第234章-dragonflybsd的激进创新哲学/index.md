@@ -27,12 +27,7 @@ volume: 第11卷-dragonflybsd的历史
 - 部分二手叙事将 Dillon 哲学概括为"chip away everything that gets in the way"（凿除一切阻碍），但经检索 dragonflybsd.org 官方页面与 fork 公告均无此精确措辞，官网最接近的表述为"no reservation about cutting ties with legacy when it makes sense"——该"chip
 - 无 VSA 系统不等于无安全响应——DragonFly 通过 commit message 与 kernel@/commits@ 邮件列表通知用户安全修复，regreSSHion（CVE-2024-6387）3 天内响应即为案例；但无 VSA 系统意味着用户难以系统跟踪安全修复状态，须自行监控 dragonfly-src 仓库 commit log 或订阅 commits@ 邮件列表；errata
 - 贡献者国籍判定以邮箱域名（.de/.fr/.jp/.cn 等）与姓名拼写为初步线索，但邮箱域名不等于国籍（如 Dillon 使用 @dragonflybsd.org 而非美国域名）——上述归属以 commits 表 author_email 与 author_name 为依据，正式撰写时须以邮件列表自我介绍或公开简历交叉验证；Sepherosa Ziehau 的地理归属 [考据完成：2026-07
-- 关于 2003 年 Dillon 提交权限被撤销的具体经过，不同当事人叙事存在差异——dragonflybsd.org 官方 history 仅称“forked from FreeBSD 4.8 in June of 2003 by Matthew Dillon（马修·狄龙）”而未提及权限撤销，FreeBSD 官方文档对 fork 事件着墨亦少 [考据完成：2026-07-28 该处存疑标注属史料
-- 原叙事将"Simon‘corecode’Schubert"列为贡献者是事实错误——dragonfly.duckdb 显示"<corecode@dragonflybsd.org>"邮箱归属 Joerg Sonnenberger（2038 条 commit），而 Simon Schubert 仅作为 v2.x 系列 tag tagger 出现（2008-12-03 至 2009-10-04），两人是不同个
-
-## 文献
-
-- DragonFly BSD Project. DragonFly BSD history [EB/OL]. <https://www.dragonflybsd.org/history/> (last edited 2019-01-17)；Dillon M. Initial import from FreeBSD RELENG_4 [DB/OL]. dragonfly-src 仓库 commit 984263bcb83a, 2003-06-17T02:57:24Z；Dillon M. thread stage 7: Implement basic LWKTs [DB/OL]. dragonfly-src 仓库 commit 8ad65e080342, 2003-06-20T02:09:59Z；Dillon M. DragonFly BSD fork announcement [EB/OL]. <https://lists.freebsd.org/pipermail/freebsd-current/2003-July/006889.html>, 2003-07；深层信息挖掘.md §L3.1.1（数据补充：dragonfly-src 仓库 2004-2022 年共 12 条 innovat/radical commit） ［A］
+- 关于 2003 年 Dillon 提交权限被撤销的具体经过，不同当事人叙事存在差异——dragonflybsd.org 官方 history 仅称“forked from FreeBSD 4.8 in June of 2003 by Matthew Dillon（马修·狄龙）”而未提及权限撤销，FreeBSD 官方文档对 fork 事件着墨亦少 ［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］. <https://www.dragonflybsd.org/history/> (last edited 2019-01-17)；Dillon M. Initial import from FreeBSD RELENG_4 [DB/OL]. dragonfly-src 仓库 commit 984263bcb83a, 2003-06-17T02:57:24Z；Dillon M. thread stage 7: Implement basic LWKTs [DB/OL]. dragonfly-src 仓库 commit 8ad65e080342, 2003-06-20T02:09:59Z；Dillon M. DragonFly BSD fork announcement [EB/OL]. <https://lists.freebsd.org/pipermail/freebsd-current/2003-July/006889.html>, 2003-07；深层信息挖掘.md §L3.1.1（数据补充：dragonfly-src 仓库 2004-2022 年共 12 条 innovat/radical commit） ［A］
 
 <!-- DB_REF:dragonfly.duckdb -->
 > **数据库引用（dragonfly.duckdb）**：本子节对应 dragonfly 代码仓库。> 2003-2026 年间：656,206 次提交。> 仓库总览：656,206 次提交，535 位贡献者，2003-06-17 至 2026-08-18。

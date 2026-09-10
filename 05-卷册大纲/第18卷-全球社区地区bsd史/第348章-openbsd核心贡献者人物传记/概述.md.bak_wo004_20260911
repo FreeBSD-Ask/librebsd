@@ -1,0 +1,167 @@
+---
+chapter: 第 348 章
+id: CH348
+volume: 第18卷-全球社区地区bsd史
+---
+
+# 第 348 章 重要人物传记——OpenBSD 核心贡献者群体：de Raadt、Espie、Moerbeek
+
+## 本章节索引
+
+1. [348.1 硬件与大型机一代-Olsen-Amdahl-Cray-Bell-Brooks](348.1-硬件与大型机一代-Olsen-Amdahl-Cray-Bell-Brooks.md)
+2. [348.2 小型机与工作站一代-de-Castro-Bechtolsheim-McNealy](348.2-小型机与工作站一代-de-Castro-Bechtolsheim-McNealy.md)
+3. [348.3 编程语言创造者-Backus-Hopper-Wirth-Wall-Rossum-Eich](348.3-编程语言创造者-Backus-Hopper-Wirth-Wall-Rossum.md)
+4. [348.4 学术科研一代-McCarthy-Minsky-Perlis-Simon-Licklider](348.4-学术科研一代-McCarthy-Minsky-Perlis-Simon-Lick.md)
+
+> **勘误登记（Phase 20 存疑释疑收尾 2026-08-15）**：
+>
+> - 存疑 id 1535：存疑点一：Backus 死因。家属讣告称 “自然衰老”，但未公开完整医疗记录，本章标注 [考据完成：2026-07-28 该处存疑标注属史料缺口，须待原始档案公开后方可补充确证]。 — 2026-08-15 双库复核无法验证，暂存疑
+
+<!-- 原 2026-08-04 数据核验块已并入下方 v20260811 回填块（WO-003 合并；原生成时间：2026-08-04） -->
+
+> **来源库**：资料数据库 · materials / material_cross_references；references_fulltext · chapter_matches / chapter_reviews；doubts_standalone · doubts_to_resolve
+> **方法**：基于全局章号 1–348 直接 SQL 聚合；未做外部事实验证；`ch=0`/未映射条目不计入本章。
+> **生成时间**：2026-08-04 ｜ **复现**：`script/_engine_integrity_analysis.py`
+
+| 指标 | 数值 |
+| -- | -- |
+| 锚定素材 | 0 篇（含存疑标记 0 篇） |
+| 存疑点 | 20 条 |
+| 参考文献匹配 | 0 条 |
+| 章节述评 | 未生成 |
+| 章内交叉引用 | 出 0 / 入 0 |
+
+**数据质量备注**：本章尚无锚定素材，属史料回填优先对象；暂无参考文献匹配
+
+<!-- DATA_VERIFY_BLOCK v20260804 -->
+> 原 2026-08-04 块数值（锚定/存疑/文献）已由本 v20260811 回填块取代；如有出入以回填块为准（WO-003 合并）。
+> 2026-08-11 补：批量修复 DVB 缺失
+>
+## 数据核验与统计（自动增补 · 0-信任）
+
+> **来源库**：资料数据库 · materials / material_cross_references；references_fulltext · chapter_matches / chapter_reviews；doubts_standalone · doubts_to_resolve
+> **方法**：基于全局章号 1–348 直接 SQL 聚合
+> **生成时间**：2026-08-11（批量回填） ｜ **复现**：`script/_engine_integrity_analysis.py`
+
+| 指标 | 数值 |
+| -- | -- |
+| 锚定素材 | 6 篇（含存疑标记 0 篇） |
+| 存疑点 | 0 条 |
+| 参考文献匹配 | 1 条 |
+| 章节述评 | 未生成 |
+| 章内交叉引用 | 出 0 / 入 0 |
+
+**数据质量备注**：属史料回填优先对象；2026-08-11 批量回填 DVB 框架
+
+<!-- MAIL_MINE v20260813 -->
+## 邮件史料增补
+
+> 基于 6 个邮件数据库（260 万封）+ FTS5 全文索引自动挖掘，供编纂引用参考。
+> 以下为本章主题相关的邮件史料线索（精确词命中，含时间范围与代表邮件）。
+
+- **openbsd**（netbsd）: 7,419 封 · 1995-2026
+  - [1995] Re: kern/1774: Problems with identd/kvm_read — Joao Carlos Mendes Luis <
+  - [1996] Re: Warnings in nfsv3 code--buggy gcc? — David Brownlee <david@mon
+  - [1996] Re: SMP (was Re: VXLOCK race? ) — Thorsten Lockert <tholo@S
+
+<!-- /MAIL_MINE -->
+
+<!-- DB_POINTS:cross_indexes_person -->
+**数据库要点引用（cross_indexes.db · person_bio_research · 2026-08-13）**
+
+> 来源：`10-交叉索引/cross_indexes.db` 表 `person_bio_research`（去重后 276 条，P0 26/P1 75/P2 175/未分级 0）。映射：数据库旧章号 +1 → 磁盘章号。本章涉及人物 22 位。
+
+- [P1] 约瑟夫·利克莱德（Joseph Carl Robnett Licklider）：人机共生/ARPA IPTO 首任主任
+- [P1] Guido van Rossum（吉多·范罗苏姆）：Python 创造者/BDFL 治理模式；在世（1956-01-31 生）
+- [P1] 吉恩·阿姆达尔（Gene Myron Amdahl）：IBM System/360 主架构师/Amdahl 定律
+- [P1] Edson de Castro（埃德森·德卡斯特罗）：Data General 创始人/Nova 小型机
+- [P1] 大卫·帕特森（David Andrew Patterson）：RISC/RAID/Berkeley 教授
+- [P1] Andreas von Bechtolsheim（安德里亚斯·冯·贝托尔斯海姆）：Sun 联合创始人/Sun-1 工作站/Arista
+- [P1] 尼古拉斯·沃思（Niklaus Emil Wirth）：Pascal/Modula/Oberon 设计者；已故（1934-02-15—2024-01-01）
+- [P1] Brendan Eich（布兰登·艾奇）：JavaScript 创造者/Mozilla/Brave
+- [P1] 弗雷德里克·布鲁克斯（Frederick Phillips Brooks Jr.）：OS/360 项目经理/《人月神话》作者
+- [P1] 戈登·贝尔（Chester Gordon Bell）：DEC VAX 架构师/Bell 定律
+- [P1] 拉里·沃尔（Larry Arnold Wall）：Perl 创造者
+- [P1] 格蕾丝·霍珀（Grace Brewster Murray Hopper）：COBOL/首个编译器 A-0
+- [P1] 王安（An Wang）：王安实验室创始人/磁芯存储器
+- [P1] 约翰·巴克斯（John Warner Backus）：FORTRAN/BNF 设计者
+- [P1] 约翰·亨尼西（John L. Hennessy）：MIPS 架构/Stanford 大学校长
+- [P1] 约翰·麦卡锡（John McCarthy）：AI 一词提出者/LISP 设计者
+- [P1] 肯·奥尔森（Kenneth Harry Olsen）：DEC 创始人/PDP 系列推动者
+- [P1] Alan Jay Perlis（艾伦·佩利）：ALGOL 60/首届图灵奖；已故（1922-04-01—1990-02-07）
+- [P1] 西摩·克雷（Seymour Roger Cray）：Cray Research 创始人/超级计算机
+- [P1] James G. Treybig（詹姆斯·特雷比格）：Tandem Computers 创始人/容错机先驱
+- [P1] 司马贺（Herbert Alexander Simon）：AI 奠基/诺贝尔经济学奖
+- [P1] 马文·明斯基（Marvin Lee Minsky）：MIT AI Lab 共同创始/《感知机》
+<!-- /DB_POINTS:cross_indexes_person -->
+
+<!-- DB_POINTS:doubts_resolved -->
+**数据库要点引用（doubts_standalone.db · 2026-08-13）**
+
+> 来源：`04-现代研究文献/06-存疑数据库/doubts_standalone.db` 表 `doubts_to_resolve`（1987 条，1966 已解决）。本章存疑 19 条已解决。类别分布：other(19)
+
+> 存疑管理体系：98.9% 已闭环，解决结论含 date/fact/source_conflict/name/version 等类型，具体结论见 doubts_standalone.db 表 `resolution_summary` 字段。
+<!-- /DB_POINTS:doubts_resolved -->
+
+<!-- DB_POINTS:chapter_reviews -->
+**数据库要点引用（references_fulltext.db · chapter_reviews · 2026-08-13）**
+
+> 来源：`04-现代研究文献/05-参考文献全文数据库/references_fulltext.db` 表 `chapter_reviews`（348 章全覆盖）。本章级文献综述 384 字、匹配 0 篇文献，状态 imported。映射：旧章号 +1 → 磁盘章号。
+
+> **综述要点**：本章围绕“重要人物传记——OpenBSD 核心贡献者群体：de Raadt、Espie、M…”展开，覆盖 347.1 硬件与大型机一代-Olsen-Amdahl-Cray-Be…；347.2 小型机与工作站一代-de-Castro-Bechtolsh…；347.3 编程语言创造者-Backus-Hopper-Wirth-W…；347.4 学术科研一代-McCarthy-Minsky-Perlis…。数据核验显示：锚定素材 0 篇（含存疑
+
+<!-- /DB_POINTS:chapter_reviews -->
+
+<!-- COL_SCAN v20260826 -->
+## 内容包复核增补（Phase 4 · 2026-08-26）
+
+> 基于 4 个核心数据库（doubts_standalone、historical_claims、original_sources、资料数据库）内容包自动匹配与审核。
+> 内容包总行数：430 | 去重主张数：15 | 复核方法：12 步流程（详见 vol01_phase4_summary.md）
+
+### 证据等级分布
+
+| 等级 | 说明 | 数量 | 占比 |
+| -- | -- | -- | -- |
+| L1 | 代码与构建产物 | 0 | 0.0% |
+| L2 | 即时通讯记录 | 0 | 0.0% |
+| L3 | 官方文档与公告 | 419 | 97.4% |
+| L4 | 事后叙述 | 0 | 0.0% |
+| L5 | 二手研究 | 11 | 2.6% |
+
+### 来源数据库分布
+
+| 来源 | 行数 |
+| -- | -- |
+| doubts_standalone | 400 |
+| historical_claims | 11 |
+| 资料数据库 | 19 |
+
+### 新增证据点
+
+1. [L3] `资料数据库.freebsd_sa` — Incorrect audit records for ptrace(2) syscall requests
+2. [L3] `资料数据库.freebsd_sa` — Buffer overflow in some filesystems via NFS
+3. [L3] `资料数据库.freebsd_sa` — NFS client accepts file names containing path separators
+4. [L3] `资料数据库.freebsd_sa` — NFS client data corruption and kernel memory disclosure
+5. [L3] `资料数据库.freebsd_sa` — msdosfs data disclosure
+6. [L3] `资料数据库.freebsd_sa` — Kernel stack disclosure in UFS/FFS
+7. [L3] `资料数据库.freebsd_sa` — Multiple vulnerabilities in NFS server code
+8. [L3] `资料数据库.freebsd_sa` — Deadlock in the NFS server
+9. [L3] `资料数据库.freebsd_sa` — Incorrect privilege validation in the NFS server
+10. [L3] `资料数据库.freebsd_sa` — Insufficient input validation in the NFS server
+11. [L3] `资料数据库.freebsd_sa` — Unvalidated input in nfsclient
+12. [L3] `资料数据库.freebsd_sa` — Remote denial of service in NFS server
+
+### 0 信任评估
+
+- 独立来源数：3 个数据库
+- 一级史料通过率：97.4%（L1+L2+L3 / 总行数）
+- 本章 L3 级史料 419 条，可纳入大纲但需标注来源
+- 所有主张均来自内容包自动匹配，未经人工逐一核实
+- 单一来源支撑的主张须标注 (单一文献支撑，待交叉验证)
+- L5 级别来源不得独立支撑事实性陈述
+
+### 交叉验证提示
+
+- 本章有 419 条 L3 级证据，建议优先与此前已入库的 MAIL_MINE、DB_POINTS、PODCAST_MINE 块交叉验证
+
+<!-- /COL_SCAN -->

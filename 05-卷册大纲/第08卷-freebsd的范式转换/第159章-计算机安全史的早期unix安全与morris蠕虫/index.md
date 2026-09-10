@@ -49,14 +49,11 @@ volume: 第08卷-freebsd的范式转换
 ## 158.1.4 1980 年代黑客文化与安全漏洞
 
 - 要点：还原 1980 年代黑客文化的社会语境与安全漏洞的传播生态——1983 年电影《WarGames
-- Carnegie Mellon University. (2016, Sep 1). *CERT Director Richard Pethia Retires*. sei.cmu.edu; FIRST Organization. (2025). *Richard (Rich) D. Pethia - Hall of Fame*. first.org/hof/inductees; CERT/CC. *Frequently Asked Questions*. cert.org/faq[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费
-- Rivest, R. L., Shamir, A., & Adleman, L. (1978). *A Method for Obtaining Digital Signatures and Public-Key Cryptosystems*. Communications of the ACM, 21(2); Diffie, W., & Hellman, M. E. (1976). *New Directions in Cryptography*. IEEE Transactions on Information Theory ［B］
+- Carnegie Mellon University. (2016, Sep 1). *CERT Director Richard Pethia Retires*. sei.cmu.edu; FIRST Organization. (2025). *Richard (Rich) D. Pethia - Hall of Fame*. first.org/hof/inductees; CERT/CC. *Frequently Asked Questions*. cert.org/faq［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
 
 ## 158.3.2 PGP 1991 年与出口管制冲突
 
-- IETF. (2018). *RFC 8446 - The Transport Layer Security (TLS) Protocol Version 1.3*; OpenBSD Project. (2014). *LibreSSL - Release of OpenBSD's fork of OpenSSL*. openbsd.org/56.html; Durumeric, Z. et al. (2014). *The Matter of Heartbleed*. IMC '14[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须
-- OpenSSH Project. (2025). *OpenSSH Project History*. openssh.org/history.html; Ylönen, T. (1996). *SSH — Secure Login Connections over the Internet*. Proceedings of the 6th USENIX Security Symposium; OpenBSD Project. (1999, Oct 25). *Press Release: OpenSSH integrated into OpenBSD operating system*. o
-- OpenBSD CVS Repository. *src/usr.bin/ssh/ initial import*. cvsweb.openbsd.org (Sep 26, 1999); OpenBSD Project. (1999). *OpenBSD 2.6 Release Notes*. openbsd.org/26.html; Provos, N. et al. (2000). *OpenSSH: Open Source Secure Shell*. USENIX Security Symposium ［B］
+- IETF. (2018). *RFC 8446 - The Transport Layer Security (TLS) Protocol Version 1.3*; OpenBSD Project. (2014). *LibreSSL - Release of OpenBSD's fork of OpenSSL*. openbsd.org/56.html; Durumeric, Z. et al. (2014). *The Matter of Heartbleed*. IMC '14［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
 
 ## 158.4.3 OpenSSH 的全球部署与安全审计传统
 

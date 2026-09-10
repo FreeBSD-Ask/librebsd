@@ -34,10 +34,10 @@ volume: 第13卷-bsd衍生操作系统
 ## 文献
 
 - FreeBSD Foundation 奖项公告；OSCON 档案；InfoWorld 档案；FreeBSD Foundation. Sovereign Tech Fund to Invest €686,400 in FreeBSD Infrastructure Modernization [EB/OL]. 2024-08-26. <https://freebsdfoundation.org/blog/sovereign-tech-fund-to-invest-e686400-in-freebsd-infrastructure-modernization/> （访问日期 2026-07-22）；Sovereign Tech Fund. FreeBSD Project [Z/OL]. <https://www.sovereigntechfund.de/projects/freebsd>（访问日期 2026-07-22，原始链接失效，互联网档案馆无存档） ［A］## 255.10.2 NetBSD 获得的奖项
-- NetBSD 奖项公告；OSNews/Slashdot 档案；吉尼斯世界纪录档案[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]## 255.10.3 OpenBSD 获得的奖项
+- NetBSD 奖项公告；OSNews/Slashdot 档案；吉尼斯世界纪录档案［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］## 255.10.3 OpenBSD 获得的奖项
 - USENIX STUG Award 公告；OpenBSD 声明；信息安全社区表彰档案 ［B］## 255.10.4 CSRG 时期奖项在 BSD 整体奖项谱系中的位置
-- CSRG 时期奖项档案；CSRG 解散后 BSD 各项目奖项档案[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]## 255.10.5 BSD 奖项的史观辨析：奖项的形式主义与实质认可
-- BSD/Linux 奖项档案；奖项研究文献；用户文章[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]
+- CSRG 时期奖项档案；CSRG 解散后 BSD 各项目奖项档案［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］## 255.10.5 BSD 奖项的史观辨析：奖项的形式主义与实质认可
+- BSD/Linux 奖项档案；奖项研究文献；用户文章［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
 
 <!-- DB_REF:freebsd.duckdb -->
 > **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 1985-2026 年间：1,294,851 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。

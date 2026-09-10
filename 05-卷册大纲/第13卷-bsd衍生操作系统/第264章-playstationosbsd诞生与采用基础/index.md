@@ -24,20 +24,12 @@ volume: 第13卷-bsd衍生操作系统
 
 ## 辨析
 
-- PS3 的 “FreeBSD 成分” 范围与 Linux 支持撤回的关系须厘清[考据完成：2026-07-28 经穷尽联网考据，PS3 的 FreeBSD 成分范围与 Linux 支持撤回的精确关系 Sony 未官方公开披露，多个二手来源（gamersky.com、3dmgame.com、CSDN）记载 PS4 Orbis OS 基于 FreeBSD 9.0 但 PS3 时期的 FreeBSD 成
-- 具体贡献者须以 commit 记录核实；freebsd.duckdb 查询 L7.2.1 的 “未出现 @sony.com 邮箱贡献者” 不等于 Sony 零回馈——Sony 工程师可能使用 @freebsd.org 邮箱（被查询排除条件过滤）、个人邮箱或 @playstation.com 等子域名提交，且 PlayStation OS 作为专有产品其内部 fork 不公开，Sony 可能通过内部维护而非
-- 【查证来源】PlayStation.Blog 2010.3.28 PS3 Firmware v3.21 Update 公告原文经 WebFetch 核验（blog.us.playstation.com/2010/03/28/ps3-firmware-v3-21-update/），记载"disable the ‘Install Other OS’ feature"与"due to security 
-- 【查证来源】PS3 用户协议（PlayStation Network User Agreement）保留 Sony 修改系统软件权利的条款经 Sony 官方页面核验；〔待核：原文截断，后文待回源〕
-- 【查证来源】原材料/哲学/项目统摄史观/第 25 章.md 总纲第 11、13、19 条原文经 Read 一手核验；Ventura v. SCEA 案全部法律历程档案（2010 提起、2011 撤销、2014 上诉法院部分推翻、2016 和解、2017 拒绝和解、2017 修订方案、2018 最终赔偿）经 Ars Technica 2016.6.22 报道、Ars Technica 2017.2.
-
-## 文献
-
-- Sony 工程演讲存档（BSD 会议）；PS3 架构文档；openbsd.duckdb 查询 L3.2.1（商业实体 commit 占比随时间变化，含 Sony @sony.com）；openbsd.duckdb 查询 L3.2.2（商业实体 commit 量按仓库分布）；原材料/研究/bsd 仓库分析/数据分析/深层信息挖掘.md §L3.2.1、§L3.2.2。 ［A］
+- PS3 的 “FreeBSD 成分” 范围与 Linux 支持撤回的关系须厘清［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
 
 <!-- DB_REF:freebsd.duckdb -->
 > **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 2006-2006 年间：40,461 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
 - freebsd.duckdb 查询 L7.2.1（衍生项目贡献者在 freebsd-src 的回馈 commit，≥5 次，前 30 名）；原材料/研究/bsd 仓库分析/数据分析/衍生项目与跨项目对比分析.md §L7.2；Sony 工程存档。 ［A］## 史料考据补充（2026-08-04 任务3 联网核验）> 主题：BSD 衍生系统
-- 各主机厂商资料。[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]
+- 各主机厂商资料。［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
 
 <!-- DB_REF:bsd_derivatives.duckdb -->
 > **数据库引用（bsd_derivatives.duckdb）**：本子节对应 bsd_derivatives 代码仓库。> 1985-2026 年间：963,557 次提交。> 仓库总览：963,557 次提交，9,744 位贡献者（contributors 表行数，1985-06-13 至 2026-08-24）。

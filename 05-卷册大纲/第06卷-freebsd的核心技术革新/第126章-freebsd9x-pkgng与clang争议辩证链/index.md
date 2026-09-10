@@ -28,11 +28,11 @@ volume: 第06卷-freebsd的核心技术革新
 
 ## 文献
 
-- Debian Project. Debian Packages [EB/OL]. [2026-07-23]. <https://packages.debian.org/>; FreeBSD Project. Ports Collection [EB/OL]. [2026-07-23]. <https://www.freebsd.org/ports/>; FreeBSD 10.0-RELEASE Announcement [Z]. 2014-01-20.[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]
+- Debian Project. Debian Packages [EB/OL]. [2026-07-23]. <https://packages.debian.org/>; FreeBSD Project. Ports Collection [EB/OL]. [2026-07-23]. <https://www.freebsd.org/ports/>; FreeBSD 10.0-RELEASE Announcement [Z]. 2014-01-20.［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
 
 <!-- DB_REF:freebsd.duckdb -->
 > **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 2010-2020 年间：488,947 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
-- Apache Software Foundation. Apache License, Version 2.0 [Z]. 2004-01（§3）; Free Software Foundation. Various Licenses and Comments about Them: Apache 2.0 [EB/OL]. [2026-07-23]. <https://www.gnu.org/licenses/license-list.html#apache2>; LLVM Project. LLVM License Change to Apache 2.0 [EB/OL]. 2019; GCC Steering Committee. GCC Governance [EB/OL]. [2026-07-23]. <https://gcc.gnu.org/>; LLVM Foundation. Governance [EB/OL].[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]. ［A］
+- Apache Software Foundation. Apache License, Version 2.0 [Z]. 2004-01（§3）; Free Software Foundation. Various Licenses and Comments about Them: Apache 2.0 [EB/OL]. [2026-07-23]. <https://www.gnu.org/licenses/license-list.html#apache2>; LLVM Project. LLVM License Change to Apache 2.0 [EB/OL]. 2019; GCC Steering Committee. GCC Governance [EB/OL]. [2026-07-23]. <https://gcc.gnu.org/>; LLVM Foundation. Governance [EB/OL].［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］. ［A］
 
 <!-- DB_REF:freebsd.duckdb -->
 > **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 2010-2020 年间：488,947 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。

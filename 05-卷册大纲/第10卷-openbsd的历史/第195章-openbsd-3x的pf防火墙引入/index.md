@@ -32,12 +32,12 @@ volume: 第10卷-openbsd的历史
 
 ## 文献
 
-- OpenBSD 3.0 公告；OpenBSD CVS 仓库；Hartmeier pf 历史文章；openbsd.duckdb 查询 L1.1.1 与 L1.1.2（来源：原材料/研究/bsd 仓库分析/数据分析/宏观趋势统计.md §L1.1.1、§L1.1.2）；统计分析报告：描述性统计.md SubTask 2.1 [R/OL]. 2026-07-27. 文件路径：`c:\Users\ykla\Documents\hibsd\03-原始史料库\01-代码仓库史料\01-数据库本体\统计分析\描述性统计.md`；SQL 查询：`SELECT COUNT(*) FROM commits WHERE repo_name='openbsd-src'`. openbsd.duckdb [DB/OL]. 查询日期：2026-07-27[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]
+- OpenBSD 3.0 公告；OpenBSD CVS 仓库；Hartmeier pf 历史文章；openbsd.duckdb 查询 L1.1.1 与 L1.1.2（来源：原材料/研究/bsd 仓库分析/数据分析/宏观趋势统计.md §L1.1.1、§L1.1.2）；统计分析报告：描述性统计.md SubTask 2.1 [R/OL]. 2026-07-27. 文件路径：`c:\Users\ykla\Documents\hibsd\03-原始史料库\01-代码仓库史料\01-数据库本体\统计分析\描述性统计.md`；SQL 查询：`SELECT COUNT(*) FROM commits WHERE repo_name='openbsd-src'`. openbsd.duckdb [DB/OL]. 查询日期：2026-07-27［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
 
 <!-- DB_REF:openbsd.duckdb -->
 > **数据库引用（openbsd.duckdb）**：本子节对应 openbsd 代码仓库。> 2001-2001 年间：18,985 次提交。> 仓库总览：491,195 次提交，3,352 位贡献者，1995-10-18 至 2026-08-25。
 - OpenBSD CVS 仓库；OpenBSD 邮件列表；统计分析报告：推断性统计.md Task 5 + Task 10 [R/OL]. 2026-07-27. 文件路径：`c:\Users\ykla\Documents\hibsd\03-原始史料库\01-代码仓库史料\01-数据库本体\统计分析\推断性统计.md`；描述性统计.md SubTask 2.3 [R/OL]. 2026-07-27. 文件路径：`c:\Users\ykla\Documents\hibsd\03-原始史料库\01-代码仓库史料\01-数据库本体\统计分析\描述性统计.md`；Python 统计脚本：`script/phase2_inferential.py`. Task 5 Mann-Kendall 趋势检验 + Task 10 Gini 系数 Bootstrap. 执行日期：2026-07-27 ［A］#### 194.3“默认安装仅两个远程漏洞”口号的演变——OpenBSD 提出“在默认安装中 6 年仅两个远程漏洞”的口号，该口号长期受批评，批评者认为计数依赖于严格定义
-- OpenBSD 官网 Security 页面；Wayback Machine 快照；de Raadt 演讲[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]
+- OpenBSD 官网 Security 页面；Wayback Machine 快照；de Raadt 演讲［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
 - CVE 数据库；Bugtraq/Full Disclosure 邮件列表；OpenBSD Security 页面 ［A］
 - OpenBSD 邮件列表；de Raadt 演讲；OpenBSD FAQ ［A］
 - OpenBSD 邮件列表存档；OpenBSD 官网；Wayback Machine ［A］

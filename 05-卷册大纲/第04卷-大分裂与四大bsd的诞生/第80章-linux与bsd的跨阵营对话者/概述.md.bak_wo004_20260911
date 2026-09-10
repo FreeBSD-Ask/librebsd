@@ -1,0 +1,213 @@
+---
+chapter: 第 80 章
+id: CH80
+volume: 第04卷-大分裂与四大bsd的诞生
+---
+
+# 第 80 章 Linux 与 BSD 的跨阵营对话者
+
+> 本子章由原第 31 章拆分而来，承载 80.10-80.12 节。
+
+## 本章节索引
+
+1. [80.10 重要贡献者与边缘者](80.10-重要贡献者与边缘者.md)
+2. [80.11 linux对bsd的具体技术挪用考据](80.11-linux对bsd的具体技术挪用考据.md)
+3. [80.12 文化挪用的遮蔽本质](80.12-文化挪用的遮蔽本质.md)
+
+## 数据核验与统计（自动增补 · 0-信任）
+
+> **来源库**：资料数据库 · materials / material_cross_references；references_fulltext · chapter_matches / chapter_reviews；doubts_standalone · doubts_to_resolve
+> **方法**：基于全局章号 1–348 直接 SQL 聚合；未做外部事实验证；`ch=0`/未映射条目不计入本章。
+> **生成时间**：2026-08-04 ｜ **复现**：`script/_engine_integrity_analysis.py`
+
+| 指标 | 数值 |
+| -- | -- |
+| 锚定素材 | 26 篇（含存疑标记 1 篇） |
+| 存疑点 | 0 条 |
+| 参考文献匹配 | 4 条 |
+| 章节述评 | 已生成 |
+| 章内交叉引用 | 出 1 / 入 1 |
+
+**数据质量备注**：本章数据齐备
+
+<!-- MAIL_MINE v20260813 -->
+## 邮件史料增补
+
+> 基于 6 个邮件数据库（260 万封）+ FTS5 全文索引自动挖掘，供编纂引用参考。
+> 以下为本章主题相关的邮件史料线索（精确词命中，含时间范围与代表邮件）。
+
+- **linux**（openbsd）: 8,803 封 · 1994-2026
+  - [1994] kerberosIV — David Jericho ()
+  - [1997] Re: problem with cvs get ksrc-amiga — Niklas Hallqvist ()
+  - [1997] New Product Announcement — “Outsource Sales” <sales@
+
+<!-- /MAIL_MINE -->
+
+<!-- DB_POINTS:chapter_reviews -->
+**数据库要点引用（references_fulltext.db · chapter_reviews · 2026-08-13）**
+
+> 来源：`04-现代研究文献/05-参考文献全文数据库/references_fulltext.db` 表 `chapter_reviews`（348 章全覆盖）。本章级文献综述 528 字、匹配 21 篇文献，状态 imported。映射：旧章号 +1 → 磁盘章号。
+
+> **综述要点**：本节文献综述围绕 Linux 内核研讨会（Ottawa Linux Symposium, OLS）2002 至 2014 年间涉及 BSD 相关贡献的会议论文集展开。OLS 作为 2000 年代最具影响力的 Linux 内核开发者年度盛会，其论文集中收录了多项与 FreeBSD、NetBSD、OpenBSD 技术交流密切相关的研究成果。
+
+<!-- /DB_POINTS:chapter_reviews -->
+
+<!-- COL_SCAN v20260826 -->
+## 内容包复核增补（Phase 4 · 2026-08-26）
+
+> 基于 4 个核心数据库（doubts_standalone、historical_claims、original_sources、references_fulltext）内容包自动匹配与审核。
+> 内容包总行数：185 | 去重主张数：15 | 复核方法：12 步流程（详见 vol01_phase4_summary.md）
+
+### 证据等级分布
+
+| 等级 | 说明 | 数量 | 占比 |
+| -- | -- | -- | -- |
+| L1 | 代码与构建产物 | 0 | 0.0% |
+| L2 | 即时通讯记录 | 0 | 0.0% |
+| L3 | 官方文档与公告 | 185 | 100.0% |
+| L4 | 事后叙述 | 0 | 0.0% |
+| L5 | 二手研究 | 0 | 0.0% |
+
+### 来源数据库分布
+
+| 来源 | 行数 |
+| -- | -- |
+| doubts_standalone | 185 |
+
+### 新增证据点
+
+1. [L3] `doubts_standalone.doubts_to_resolve` — ics 系统（DND-H）执行最后关机；Tom Van Vleck 记录了最后会话。先前叙事称“17:08 UTC（Zulu 时间，哈利法克斯当地 14:08 ADT）”精确时间，按 0 信任原则标注存疑：经多轮联网检索（multician
+2. [L3] `doubts_standalone.doubts_to_resolve` — ---仍保留存疑。＝ multicians.org/project-mac.html（Tom Van Vleck 撰）载：
+3. [L3] `doubts_standalone.doubts_to_resolve` — ---仍保留存疑。＝ multicians.org/project-mac.html（Tom Van Vleck 撰）载：
+4. [L3] `doubts_standalone.doubts_to_resolve` — ”而非“opposite”的措辞暗示务实替代而非哲学对立。此问题本质为史学意向性（intentionality）问题——设计者的主观意图无法通过事后文献确证，属历史学基本方法论局限。穷尽考据，最终保留存疑。第四轮尝试：Thompson 19
+5. [L3] `doubts_standalone.doubts_to_resolve` — ursive.com/058-brian-kernighan-unix-bell-labs/)；Bell> Labs Record 建筑专题；AT&T Archives Bell Labs 建筑历史 ［ 存疑：UNIX 诞生的具体房间号在一
+6. [L3] `doubts_standalone.doubts_to_resolve` — gazine August 1979，原文未公开数字化，属档案缺口）；TUHS PDP-7 UNIX 重建档案（tuhs.org/cgi-bin/utree.pl?file = PDP7-Unix） ［ 存疑：UNIX 诞生的具体月份或季节
+7. [L3] `doubts_standalone.doubts_to_resolve` — Bell System“ [考据脚注：1956 年 Consent Decree 的法律效应经 Temin 1987 与 Watzinger et al. 2023 (AEA) 交叉验证确证。] [存疑脚注：Federal Register
+8. [L3] `doubts_standalone.doubts_to_resolve` — 对管道的回顾 [考据脚注：McIlroy 1964 备忘录提出管道概念、Thompson 1973 年实现等核心事实经 Ritchie 1984 BLTJ 与 McIlroy 1986 交叉验证确证。存疑：McIlroy 1964 年备忘录
+9. [L3] `doubts_standalone.doubts_to_resolve` — Labs Computing Sciences Research Center 直接参与者（Ritchie、Thompson、Kernighan、Johnson、Lesk）亲笔撰写的一手文献，无二手或存疑条目。
+10. [L3] `doubts_standalone.doubts_to_resolve` — custodian of the specification for the UNIX system and the trademark since 1993”；[考据完成：2026-07-28 该处存疑标注属史料缺口，须待原始档案公开后方
+11. [L3] `doubts_standalone.doubts_to_resolve` — rc' AND author_email IN ('<dmr@bell-labs.com>','<dmr@research.bell-labs.com>','<ken@bell-labs.com>')`），暂保留存疑。[考据脚注·皮尔士、詹姆斯、杜威实
+12. [L3] `doubts_standalone.doubts_to_resolve` — ，以 Wiley 出版商元数据为准，DOI 10.1002/j.1538-7305.1984.tb00054.x）。原表述 ”1996 BLTJ“ 系年份错误，已修正为 ”1984 BLTJ“；早期 ［ 存疑脚注：此文献待 0 信任原则考据
+
+### 0 信任评估
+
+- 独立来源数：1 个数据库
+- 一级史料通过率：100.0%（L1+L2+L3 / 总行数）
+- 本章 L3 级史料 185 条，可纳入大纲但需标注来源
+- 所有主张均来自内容包自动匹配，未经人工逐一核实
+- 单一来源支撑的主张须标注 (单一文献支撑，待交叉验证)
+
+### 交叉验证提示
+
+- 本章有 185 条 L3 级证据，建议优先与此前已入库的 MAIL_MINE、DB_POINTS、PODCAST_MINE 块交叉验证
+
+<!-- /COL_SCAN -->
+
+
+<!-- DEEP_ANALYSIS: sacred_sources.duckdb.blocks -->
+**史家判断**（证据等级：L2，来源：`sacred_sources.duckdb.blocks.327`）
+
+对于实际意义来说，不说话就是死了。只有能说得上话的人，对于自己来说才算活人。和这个人生理健康无关。这里死人遍地都是，我们不是一直活在墓地之上吗？聊天群也会消失不见，人还在，群没了，再拉回来也是不活跃的人。所有聊天群都迟早变成数字墓地。这不只是关于社交网络的观察，而是一个存在主义命题：存在之于他人，在于交往与表达。沉默的主体在他人眼中已经不存在。BSD 社区中那些沉默的用户——安装了系统却从不发声、从不贡献、从不报告 bug——在社区的意义上，他们已经不存在。
+
+
+
+<!-- DEEP_ANALYSIS: cross_indexes.duckdb.concept_history -->
+**史家判断**（证据等级：L2，来源：`cross_indexes.duckdb.concept_history.18`）
+
+网络中立：网络中立概念的演化: 2002 年吴修铭先有 A Proposal for Network Neutrality；2003 年在《网络中立、宽带歧视》中系统提出并推广。2005 年 FCC 对 Madison River Communications 首次执法并发布开放互联网四大原则。2008 年 Comcast 干扰事件后，FCC 于 2010 年通过《开放互联网令》。2014 年哥伦比亚特区巡回法院在 Verizon v. FCC 中裁定 FCC 无权对“信息服务”施加此类禁止性规则，促使 2015 年 FCC 将宽带重分类为《通信法》第二篇“电信服务”并通过更严格规则。2017 年 FCC 通过《恢复互联网自
+
+
+
+<!-- DEEP_ANALYSIS: cross_indexes.duckdb.concept_history -->
+**史家判断**（证据等级：L2，来源：`cross_indexes.duckdb.concept_history.24`）
+
+network: 由 technologies_mentioned 类别聚类提炼（含 19 项技术）
+
+
+
+<!-- DEEP_ANALYSIS: cross_indexes.duckdb.concept_history -->
+**史家判断**（证据等级：L2，来源：`cross_indexes.duckdb.concept_history.8`）
+
+netmap：netmap 高速网络框架概念的演化: netmap 由意大利比萨大学 Luigi Rizzo 设计开发，获欧盟 FP7 项目 CHANGE 与 OPENLAB 资助。2011 年 6 月首个原型与 FreeBSD 版本发布，随后整合进 FreeBSD 9/10 及 HEAD 基准树；2012 年 2 月发布 Linux 内核外部模块版本，同期实现 libpcap 兼容层。2012 年 6 月发表 USENIX ATC 2012 论文《netmap: a novel framework for fast packet I/O》，同年刊出《Revisiting Network I/O APIs: the netmap framewor
+
+
+
+<!-- DEEP_ANALYSIS: cross_indexes.duckdb.concept_history -->
+**史家判断**（证据等级：L2，来源：`cross_indexes.duckdb.concept_history.9`）
+
+pf与ipfw：pf/ipfw 防火墙概念的演化: ipfw 最早随 FreeBSD 2.0（1994）引入，其前身由 Daniel Boulet 为 BSDI 编写、Ugen J. S. Antsilevich 为 FreeBSD 重写；dummynet 流量整形于 FreeBSD 2.2.8（1998）加入（Luigi Rizzo 编写）；2002 年夏 Luigi Rizzo 全面重写为 ipfw2，FreeBSD 4.7 首次完整包含，2005 年加入内核态 NAT。pf 源于 2001 年 OpenBSD 因许可问题将 Darren Reed 的 IPFilter 移出 CVS（2001-05-30），Daniel Hartmeier
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-2-040`）
+
+Morris（1985）指出 4.2BSD 的 TCP/IP 软件存在信任缺陷：每个 4.2BSD 系统“信任”一组其他主机，允许来自受信主机的用户在不提供口令的情况下通过 TCP/IP 网络远程执行命令。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-3-063`）
+
+Denning 1989 年记载美国国家科学基金会于 1984 年开始连接其超级计算中心，建立高带宽网络 NSFNET，作为社区网络与研究互联网的骨干。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-4-110`）
+
+麒麟操作系统的系统服务层基于 FreeBSD 改进，提供 UFS2 文件系统与 BSD 网络协议。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-5-009`）
+
+Kamp 与 Watson 的 Jails 论文（SANE 2000）记载：jails 工作由 servetheweb.com 赞助并捐赠给 FreeBSD 项目，FreeBSD 4.0-RELEASE 是首个包含该代码的发布，后续工作由 Safeport Network Services 赞助——构成 4.0 引入 jails 的一手史料。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-5-012`）
+
+Jails 论文列举 jailed root 的八项限制：禁止直接修改内核与加载内核模块、禁止修改网络配置（接口、地址、路由表）、禁止挂载/卸载文件系统、禁止创建设备节点、禁止访问 raw/divert/routing socket、禁止修改内核运行时参数（大部分 sysctl）、禁止修改 securelevel 相关文件标志、禁止访问与 jail 无关的网络资源。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-7-008`）
+
+TrustedBSD MAC Framework 由 Robert Watson、Brian Feldman、Adam Migus 与 Chris Vance 在 Network Associates Laboratories 设计实现，为 FreeBSD 提供灵活的模块化访问控制扩展环境。
+
+
+
+
+
+
+## 文献
+
+- Anne Dickison. Cloudnium-CASE-STUDY[M]. [无固定出版年]
+- The FreeBSD Foundation. 11xbrochure 110616 screen[M].
+- FreeBSD-Foundation-July-August-2017-Update[M]. 2017.
+- The FreeBSD Foundation. FINAL[M]. [无固定出版年]
+- freebsd-foundation-newsletter-august-9-2[M].
+- GSOC-flyerv. GSOC-flyerv2[M]. 2017.
+- DEB GOODKIN via PRWeb.com. Switch[M]. 2011.
+- Drew Gurkowski. Metify-CASE-STUDY-2[M]. [无固定出版年]
+- Anne Dickison. netflix-CASE-STUDY-1[M]. [无固定出版年]
+- TLS-Offload-in-the-Kernel. TLS-Offload-in-the-Kernel[M]. 2020.
+- Mariusz Zaborski. CARP[M]. 2022.
+- Amit Singh. Mac OS X Internals: A Systems Approach[M]. Addison-Wesley, 2006.
+- eurobsdcon2022-bluhm-networkmp[M].
+- eurobsdcon2024-bluhm-packetflow[M].
+- eurobsdcon2025-bluhm-protomp[M].
+- Kantee A. Rump Device Drivers: Shine On You Kernel Diamond[C]//AsiaBSDCon 2010. Tokyo, 2010.
+- msaitoh. netbsd ABC2014-P6 B-CPE-1[M]. 2014.
+- Saitoh M. Developing CPE Routers based on NetBSD: Fifteen Years of SEIL[C]//Proceedings of AsiaBSDCon 2014. Tokyo: AsiaBSDCon, 2014 ［C］. 2014.
+- Ozaki R. Modernizing NetBSD Networking Facilities and Interrupt Handling[C]//Proceedings of AsiaBSDCon 2015. Tokyo: AsiaBSDCon, 2015 ［C］. 2015.
+- Ozaki R. Modernizing NetBSD Networking Facilities and Interrupt Handling (slides)[C]//Proceedings of AsiaBSDCon 2015. Tokyo: AsiaBSDCon, 2015 ［C］. 2015.
+- Ozaki R, Nakahara K. Current Status of NetBSD MP-safe Network Stack Project（幻灯片）[EB/OL]. AsiaBSDCon 2016 NetBSD BoF.
+- Ozaki R. Progress Reports of MP-safe Networking in NetBSD (work in progress)[C]//Proceedings of AsiaBSDCon 2017. Tokyo: AsiaBSDCon, 2017 ［C］. 2017.
+- Ozaki R. Concurrency Bugs in the Network Stack of NetBSD (BoF)[C]//Proceedings of AsiaBSDCon 2018. Tokyo: AsiaBSDCon, 2018 ［C］. 2018.
+- Enomoto Y, Fukamachi K. Design, Implementation and Operation of NetBSD Base System Packaging[C]//AsiaBSDCon 2018. Tokyo, 2018.
+

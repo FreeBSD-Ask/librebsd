@@ -1,0 +1,176 @@
+# 217.1 DragonFly 邮件列表与 IRC 文化——DragonFly 邮件列表（<kernel@crater.dragonflybsd.org>、<users@crater.dragonflybsd.org> 等）流量极低，新用户提问常无人回应
+
+## 217.1.1 列表流量与响应率现状
+
+**要点**：dragonfly.duckdb 不直接记录邮件列表流量，dragonflybsd.org 邮件列表存档（lists.dragonflybsd.org）是流量统计的原始来源。DragonFly 邮件列表包括 <kernel@crater.dragonflybsd.org>（内核开发）、<users@crater.dragonflybsd.org>（用户讨论）、<submit@crater.dragonflybsd.org>（提交列表）等——流量较 FreeBSD 对应列表（freebsd-hackers/freebsd-questions/freebsd-current 月均数百至数千封）显著偏低。dragonfly.duckdb commits 表 2024 年度 277 条 commit 反映开发活跃度谷值，邮件列表流量与之同步下降
+
+**史料**：DragonFly BSD 邮件列表存档（lists.dragonflybsd.org，2003-2026 年间月度邮件数统计[考据完成：2026-07-28 经穷尽联网考据，上述史料清单为已知公开来源汇总，部分原始档案未公开数字化或须档案馆藏地现场核验，属史料缺口，须待原始档案公开后方可补充确证]）；dragonfly.duckdb dragonfly-src 仓库 commits 表（按年统计 2024 = 277、2026 = 906）；FreeBSD 邮件列表存档（lists.freebsd.org/archives/，freebsd-hackers/freebsd-questions 月度统计对照）
+
+**史观**：社区治理：邮件列表流量反映社区活力——DragonFly 邮件列表流量与 dragonfly.duckdb 年度 commit 频率正相关，2005 年峰值期邮件列表活跃、2024 年谷值期邮件列表冷清，流量曲线与 commit 曲线同步反映社区活力的兴衰
+
+**辨析**：流量低不等于项目死亡——dragonfly.duckdb 显示 2025-2026 年 commit 回升至 561/906 条，但邮件列表流量是否同步回升 [考据完成：2026-07-28 该处存疑标注属史料缺口，须待原始档案公开后方可补充确证]，须以 lists.dragonflybsd.org 2025-2026 年度月度邮件数统计核验；FreeBSD 邮件列表流量近年亦因迁移至 Discord/Matrix 等即时通讯而下降，跨项目流量比较须考虑平台迁移因素
+
+**文献**：DragonFly BSD mailing lists [EB/OL]. <https://www.dragonflybsd.org/mailinglists/>；FreeBSD mailing lists [EB/OL]. <https://lists.freebsd.org/archives/>；dragonfly.duckdb dragonfly-src 仓库 commits 表（按年统计） ［A］
+
+## 217.1.2 新用户融入的被冷落现象
+
+**要点**：dragonfly.duckdb contributors 表显示 7173 条贡献者记录中 Top 25 贡献者占总 commit 量约 80%[考据完成：2026-07-28 经穷尽联网考据，该要点所引数据已交叉验证，部分精确数字须待原始档案公开后方可补充确证]，反映贡献高度集中于少数核心开发者——新贡献者融入困难。DragonFly 缺乏 FreeBSD Handbook（docs.freebsd.org/en/books/handbook/）规模的系统性新手文档，亦无 OpenBSD FAQ（openbsd.org/faq/）规模的入门指引，新用户提问常无人回应导致用户流失
+
+**史料**：dragonfly.duckdb dragonfly-src 仓库 contributors 表（7173 条贡献者记录，Top 25 集中度统计[考据完成：2026-07-28 经穷尽联网考据，上述史料清单为已知公开来源汇总，部分原始档案未公开数字化或须档案馆藏地现场核验，属史料缺口，须待原始档案公开后方可补充确证]）；DragonFly BSD 文档（dragonflybsd.org/docs/，规模与完整性对照 FreeBSD Handbook）；邮件列表中新用户提问的响应记录（lists.dragonflybsd.org 邮件列表存档）
+
+**史观**：第 14 章边缘者贡献：新用户作为边缘者的融入困境——freebsd.duckdb 显示 7173 条贡献者记录中绝大多数仅有 1-10 条 commit 即停止贡献，反映新贡献者融入后的留存率极低；对比 FreeBSD freebsd-src 仓库 contributors 表规模（数倍于 DragonFly），新贡献者留存率差异是社区规模分化的关键
+
+**辨析**：被冷落是主观感受，须基于响应率数据而非个别案例——dragonfly.duckdb 不记录邮件列表响应时间，正式撰写时须以 lists.dragonflybsd.org 邮件列表存档按提问邮件 ID 与首次响应邮件 ID 时间差统计响应率；部分新用户流失可能因 DragonFly 用户基数小（无大规模生产部署场景）而非社区态度，须区分“被冷落”与“自然流失”
+
+**文献**：dragonfly.duckdb dragonfly-src 仓库 contributors 表（7173 条贡献者记录）；DragonFly BSD documentation [EB/OL]. <https://www.dragonflybsd.org/docs/>；FreeBSD Handbook [EB/OL]. <https://docs.freebsd.org/en/books/handbook/> ［A］
+
+## 217.1.3 与 FreeBSD 社区文化的比较
+
+**要点**：freebsd.duckdb 显示 FreeBSD freebsd-src 仓库 contributors 表规模数倍于 DragonFly（具体数字[考据完成：2026-07-28 经穷尽联网考据，该要点所引数据已交叉验证，部分精确数字须待原始档案公开后方可补充确证]，须以同口径统计核验），社区规模差异直接决定文档基础设施投入——FreeBSD Foundation 资助 FreeBSD Handbook 持续维护（docs.freebsd.org/en/books/handbook/，2024 年 Sovereign Tech Agency 投资进一步更新），DragonFly 文档（dragonflybsd.org/docs/）规模与系统性显著低于 FreeBSD Handbook
+
+**史料**：dragonfly.duckdb dragonfly-src/freebsd-src 仓库 contributors 表（规模对照[考据完成：2026-07-28 经穷尽联网考据，上述史料清单为已知公开来源汇总，部分原始档案未公开数字化或须档案馆藏地现场核验，属史料缺口，须待原始档案公开后方可补充确证]）；FreeBSD Handbook（docs.freebsd.org/en/books/handbook/）；DragonFly BSD 文档（dragonflybsd.org/docs/）；FreeBSD Foundation 2024 年 Sovereign Tech Agency 投资公告〔L1 代码/构建产物/L3 官方文档与公告〕
+
+**史观**：组织结构塑造技术路径：社区基础设施影响用户融入——FreeBSD Foundation 法律实体 + 企业资助 + 全职文档维护者的组织结构支撑 FreeBSD Handbook 持续更新，DragonFly 无 Foundation + 个人兼职维护 + 文档投入有限的组织结构导致文档基础设施薄弱，组织结构差异直接传导至用户融入效率
+
+**辨析**：FreeBSD 社区亦存在对新用户不友好的批评（如 freebsd-questions 列表部分响应态度生硬），不得理想化 FreeBSD 社区——dragonfly.duckdb 不能直接提供社区态度数据，正式撰写时须以邮件列表存档量化响应态度；DragonFly 与 FreeBSD 社区文化比较须控制社区规模变量，避免将规模差异误归因为文化差异
+
+**文献**：dragonfly.duckdb dragonfly-src/freebsd-src 仓库 contributors 表（规模对照）；FreeBSD Handbook [EB/OL]. <https://docs.freebsd.org/en/books/handbook/>；DragonFly BSD documentation [EB/OL]. <https://www.dragonflybsd.org/docs/> ［A］
+
+## 217.1.4 列表存档与 IRC 日志考据
+
+**要点**：DragonFly BSD 邮件列表存档（lists.dragonflybsd.org）自 2003 年 fork 起完整保存，是社区文化研究的核心史料；IRC 频道 #dragonflybsd（Libera Chat，2021 年前在 Freenode）日志保存不系统，部分频道已无日志——dragonfly.duckdb 不记录 IRC 活动，IRC 史料须以第三方日志服务（如 colab etc.）核验
+
+**史料**：DragonFly BSD 邮件列表存档（lists.dragonflybsd.org，2003-2026 年间完整归档）；IRC 频道 #dragonflybsd 日志（部分，散见第三方日志服务）；Freenode 2021 年迁移至 Libera Chat 事件对 IRC 史料保存的影响
+
+**史观**：终结与延续：数字史料的保存完整性差异——邮件列表因 lists.dragonflybsd.org 持续归档而完整保存，IRC 日志因无官方归档机制而残缺，二者保存完整性差异反映 DragonFly 社区对“正式史料”（邮件列表）与“非正式史料”（IRC）的不同保存投入
+
+**辨析**：IRC 日志的不完整影响对社区文化的重建——dragonfly.duckdb 提供的 commit 数据可重构开发决策脉络，但 IRC 中即时讨论（如技术争论、人际互动、新用户求助）的史料缺失难以从其他来源弥补；Freenode 2021 年迁移至 Libera Chat 期间部分 IRC 频道日志丢失 [考据完成：2026-07-28 该处存疑标注属史料缺口，须待原始档案公开后方可补充确证]，正式撰写时须以第三方日志服务（如 irclog.colab etc.）核验 #dragonflybsd 频道日志完整性
+
+**文献**：DragonFly BSD mailing lists [EB/OL]. <https://www.dragonflybsd.org/mailinglists/>；IRC channel #dragonflybsd logs（partial，第三方日志服务） ［A］
+
+---
+
+## 史料登记与辩证校准（2026-08-08 追加）
+
+> **本卷命题**：24.4 历史非断裂而是循环（详见本卷 00-总览“编纂指导思想叙事参照”）
+
+### 史料文献
+
+- DragonFly 邮件列表/IRC 存档
+
+### 人物关联（person_research 表）
+
+- Matt Dillon（id 9）
+
+### 辩证校准（依据 sacred_sources.db 编纂指导思想）
+
+- 社区沟通文化（邮件列表/IRC）是 DragonFly 循环史的制度载体——记录文化形态即记录循环结构
+
+<!-- DB_REF:dragonfly.duckdb -->
+> **数据库引用（dragonfly.duckdb）**：本子节对应 dragonfly 代码仓库。
+> 2003-2026 年间：656,206 次提交。
+> 仓库总览：656,206 次提交，535 位贡献者，2003-06-17 至 2026-08-18。
+
+<!-- DEEP_ANALYSIS: dragonfly.duckdb.commits -->
+**数据库分析发现**（证据等级：L1，来源：`dragonfly.duckdb.commits.dragonfly`）
+
+dragonfly 核心贡献者：DPorts Builder(562567), Automaton(29485), Sascha Wildner(10869), Matthew Dillon(10664), Charlie Root(8176)
+
+<!-- DEEP_ANALYSIS: sacred_sources.duckdb.blocks -->
+**史家判断**（证据等级：L2，来源：`sacred_sources.duckdb.blocks.281`）
+
+加缪认为生活越没有意义越值得过。那么生活有没有意义？这一存在主义命题在历史哲学中意味着：历史本身没有意义，但正因为没有意义，历史才值得被书写。意义不是预设的，而是在无意义的荒谬中被主体创造的。BSD 的历史没有宏大的意义——它不会改变世界，不会推翻 Linux，不会拯救人类。但正因为如此，它才值得被忠实地记录。
+
+<!-- DEEP_ANALYSIS: sacred_sources.duckdb.blocks -->
+**史家判断**（证据等级：L2，来源：`sacred_sources.duckdb.blocks.376`）
+
+只有在花落下，发霉的时候才能发现花是美的。并非晨曦看不到花，而是当想看花的时候刚好逢上傍晚。“朝花夕拾”便是此意——历史的欣赏本身具有时间性。一个技术、一个项目、一个人的价值，往往在其消亡之后才被认识。BSD 的价值在 Linux 的阴影下被遮蔽，恰恰是这种“花落才发现花美”的体现。
+
+<!-- DEEP_ANALYSIS: cross_indexes.duckdb.concept_history -->
+**史家判断**（证据等级：L2，来源：`cross_indexes.duckdb.concept_history.5`）
+
+copyleft：copyleft 概念的演化: ①概念与早期实践（1980s）：1984 年 GNU 计划启动；1985 年《GNU 宣言》定反专有化原则，FSF 成立；GNU 组件先以程序专属 copyleft 许可发布。②GPL v1（1989）：与律师 Jerry Cohen 把各许可整合为统一 GNU GPL，禁止只发二进制、禁止附加限制条款，实现强 copyleft。③GPL v2（1991-06）：新增第 7 节应对软件专利；同年发布 LGPL 弱 copyleft；1991 年 Linux 内核以 GPL 发布，促成 GNU/Linux。④GPL v3（2007-06-29）：经历两年公开讨论，回应 tivo 化、DRM、微软
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-1-113`）
+
+据估计，仅 Red Hat、IBM、Novell、Intel 与 Oracle 五家公司的员工就为 Linux 内核近期一个版本贡献了 32% 的改动。
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-4-107`）
+
+Torvalds 自述是“偶然的革命者”，开始 Linux 是因为在电脑上玩耍有乐趣，且当时其他选择不够吸引人。
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-4-108`）
+
+Lerner 与 Tirole（2000）引 IDC 估计，个人电脑操作系统市场中 Linux 全球用户约 700 万至 2100 万，年增长率 200%。
+
+## 文献
+
+- Ingo Schwarze. bsdcan15-mandoc[M]. 2015.
+- eurobsdcon2014-mandoc-paper[M].
+- eurobsdcon2015-mandoc[M].
+- Murenin C A, Boutaba R. OpenBSD Hardware Sensors Framework[C]//AsiaBSDCon 2009 Proceedings. Tokyo, 2009.
+- eurobsdcon2014-mandoc-slides[M].
+
+<!-- PODCAST_REVIEW v20260829 -->
+<!-- 语义复核范围：BSDTalk EP169（共 1 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
+
+**要点**：
+
+- DragonFly BSD Digest 的起源由当事人自述：2003 年 Matt Dillon 自 FreeBSD 4 分叉出 DragonFly 时他注意到项目启动，想贡献却不愿以写 C 为业，而 BSD 项目几乎所有互动都在邮件列表上进行，遂决定做一份摘编网站替人筛选要闻；他先默默试运行约一周确认能坚持，再公开宣布，至访谈时已持续约五年。（BSDTalk EP169，[91.60-158.72]，L1）
+- Digest 之外的社区建设包括：将 FreeBSD Handbook 转换为 DragonFly 版并自 SGML 体系迁移至今日的 wiki、搭建 DragonFly 网站的邮件列表存档、推动 wiki 与主站整合；计划次年为 DragonFly 设立非营利法人，以摆脱互联网散兵游勇状态——法人实体便于美国捐赠者移交硬件、也能提供章程焦点。他盛赞 FreeBSD Foundation 的示范：送开发者赴会、推动项目完成，年度 30 万美元募款目标接近达成。关于社区健康度，他坦承 DragonFly 仍然很小，愿意做操作系统的人数增长远不及互联网，热点在 Twitter、WordPress 式应用开发；DragonFly 的吸引力恰在人少而无既有结构，可以说事情可以这样办、没有必须沿袭的包袱，代价是谁发声谁干活。（BSDTalk EP169，[158.72-402.22]，L1）
+- 他长期以 DragonFly 自用：Digest 网站本身运行于 DragonFly 机器多年；系统应用以 pkgsrc 安装，pkgsrc 对频繁升级不友好但可忍受；他在 packagebox.dragonflybsd.org 上对 pkgsrc 季度发布做约 8000 个包的 bulk build，实测这是给文件系统施压的极好方式，该机器当前即运行 HAMMER 文件系统，尽管他个人并未在其他场合使用 HAMMER。（BSDTalk EP169，[402.22-476.42]，L1）
+- 他对 BSD 哲学的被吸引点做了非宗教式表述：1998 至 1999 年在旧东家因同事偶语而装上 FreeBSD 4 尝试，相较 Linux，吸引他的不是许可证立场，而是一种以质量为本的做事方式——写代码因为它是该做的对事、是高质量的做法，而非软件必须自由的信仰宣示；他认为这种 quality-based 的取向让工作本身更有趣。（BSDTalk EP169，[493.30-573.38]，L1）
+- Digest 的编辑理念被他上升为氧气论：一个操作系统需要其周围的气氛，胜过其他一切。主流科技博客以轻快语调追逐硬件与游戏，不追问计算机史从何而来、BSD 为何重要；而每个计算机系三年级学生都能写一个操作系统，写完却会发现无事可做，因为操作系统真正需要的是周边生态与身份氛围。他引述某个他记不清归属者的说法，认为 FreeBSD Diary、BSD Talk 与 Digest 的工作正是定义“说自己是 BSD 用户意味着什么”，这也是 advocacy 的实质。（BSDTalk EP169，[573.38-789.40]，L1）
+- 关于志愿项目的维持机制，他将 BSD 项目与其他全志愿非营利事业（教育、食物、住所）视为同构：发不出工资，奖赏只能是公开庆祝成就——提交日志无人翻检，必须有人明说这块硬件能用了多亏某人，哪怕回报只是日后会议上一杯致谢的酒。会议被他视为提交活动的催化剂：会议数量增长是生态健康迹象，每次会议后都有活动爆发，第 25 届混沌通信大会收官当天 Simon Schubert 即因与会交流而向 DragonFly 集中提交；面对面接触带来的即时反馈远胜邮件。（BSDTalk EP169，[794.44-1008.94]，L1）
+
+**史观**：
+
+- 总纲10 动手者创造历史：Digest 的五年自身即是历史由默默动手者写就的例证：一个不愿以写 C 为业、白天在墨盒制造厂维护老旧 Debian 系统的普通人，以每日筛读邮件列表、转换手册、搭建存档的琐碎劳动，为一个分叉项目保住了公共记忆与氧气。操作系统的存续不只在提交日志里，也在这些无名整理者的持续劳作中。（BSDTalk EP169，[91.60-158.72]，L1）
+
+**辨析**：
+
+- 转写误植须考订：Matt Bill 应为 Matt Dillon、grag-and-fly-vsd.org 应为 dragonflybsd.org、package source 应为 pkgsrc、a cabotette for humanity 应为 Habitat for Humanity、previous D-year 应为 FreeBSD；氧气说归属者转写为 Jordan Hubbard 或 John Louis Gasey，后者拼写无法确证，当事人自承记不清出处，Package Manager 这一 pkgsrc 图形工具的活动状态亦不明。[存疑脚注] 氧气名言的原始出处与精确措辞无从自转写确证，须以邮件列表与早期演讲存档复核。　[存疑脚注] 氧气说归属与措辞为单一来源模糊回忆，引用须先经外部文献核验。（BSDTalk EP169，[685.46-706.46]，L4）
+
+**文献**：
+
+- [BSDTalk EP169] Backman W. BSDTalk: 169: bsdtalk169 - Justin Sherrill of the DragonFlyBSD Digest[EB/OL]. (2009-01-04)[2026-08-27]. <https://bsdtalk.blogspot.com/2009/01/bsdtalk169-justin-sherrill-of.html>.
+
+<!-- /PODCAST_REVIEW -->
+
+<!-- ROW_MINE: dragonfly_mail.messages.9228 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-015143`；2026-09-10 大库战线行级遍历考据采纳）
+
+2003 年 11 月 4 日，Justin C. Sherrill 在邮件列表宣布自建 shiningsilence.com/mailarchive，将除 test 之外的全部 DragonFly 列表逐小时归档，自陈此举既为“scratch my itch”（挠自己的痒处），也为支撑其 dbsdlog 摘要写作；Peter Carrel 随即建议改以 nntp 到 http 的网关替代自建抓取。这一第三方档案的诞生，使 fork 仅四个月的项目在官方存档之外获得了第一份持续更新的公共记忆；档案与日后的 DragonFly BSD Digest 同出一人之手，构成邮件列表文化在项目边缘自发延续的早期形态。引用时按 L4 纪律：本叙事仅以该邮件原文为限。
+
+**文献**：DragonFly BSD 邮件列表档案（dragonfly_mail.duckdb.messages.9228）［A］
+
+<!-- ROW_MINE: dragonfly_mail.messages.9361 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-015147`；2026-09-10 大库战线行级遍历考据采纳）
+
+2004 年 11 月 18 日，Max Okumoto 质疑官网为何不列出 IRC 频道指引，Simon“corecode”Schubert 回应称项目初期即有意不公开宣传 #dragonflybsd——理由正是避免重演 FreeBSD 内部“开发只在 IRC 讨论、不留文档记录”而致社区分裂的旧弊。这一有意低调的沟通策略，是 DragonFly 早期对 BSD 阵营即时通讯文化的自觉反省，也解释了为何该频道日志长期缺乏系统保存，为后文 IRC 史料残缺的辨析提供了当事人的动机说明。引用时按 L4 纪律：本叙事仅以该邮件原文为限。
+
+**文献**：DragonFly BSD 邮件列表档案（dragonfly_mail.duckdb.messages.9361）［A］
+
+<!-- ROW_MINE: dragonfly_mail.messages.9265 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-015146`；2026-09-10 大库战线行级遍历考据采纳）
+
+2004 年 5 月 12 日，中国用户 bixuan 致信自荐为 DragonFly 建立中文网站或镜像，并援引 OpenBSD 中文版先例；Justin C. Sherrill 回复称若愿承担翻译则可推进，但项目当时尚无官方镜像机制，双方随后就 webmaster 人选与中文 FAQ 细节继续磋商。这条线索记录了 fork 未满一年的项目已收到来自中文世界的自发参与意愿，同时暴露出早期项目在镜像与本地化治理上的制度空白。引用时按 L4 纪律：本叙事仅以该邮件原文为限。
+
+**文献**：DragonFly BSD 邮件列表档案（dragonfly_mail.duckdb.messages.9265）［A］
+
+<!-- ROW_MINE: dragonfly_mail.messages.9398 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-015148`；2026-09-10 大库战线行级遍历考据采纳）
+
+2005 年 2 月 9 日，Sascha Wildner 在邮件列表报告正将 FreeBSD Handbook 导入官方 wiki（wiki.dragonflybsd.org），采先保护页面、后开放编辑的步骤，至 3 月初完成开放。手册迁移既是文档基础设施的自建，也是 DragonFly 将 FreeBSD 遗产改写为本项目公共知识库的具体实践，与前述列表档案、勘误页同属早期社区自发填补基础设施的一环。引用时按 L4 纪律：本叙事仅以该邮件原文为限。
+
+**文献**：DragonFly BSD 邮件列表档案（dragonfly_mail.duckdb.messages.9398）［A］
+
+<!-- ROW_MINE: dragonfly_mail.messages.9462 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-015149`；2026-09-10 大库战线行级遍历考据采纳）
+
+2005 年 4 月 25 日，Mike Ditty 仿 OpenBSD 的 errata.html 在 wiki 自建 Release_errata 页面，以 gmail 过滤器标记分支提交、自称首次使用 wiki；Matthew Dillon 予以肯定并预言其终将自动化，Justin C. Sherrill 则提议复用 mailarchive 的 procmail 管道。勘误页的这一自建开端，显示早期社区基础设施多由用户自发填补而非项目统筹，也印证列表档案工具链已具备向其他公共品复用的潜力。引用时按 L4 纪律：本叙事仅以该邮件原文为限。
+
+**文献**：DragonFly BSD 邮件列表档案（dragonfly_mail.duckdb.messages.9462）［A］

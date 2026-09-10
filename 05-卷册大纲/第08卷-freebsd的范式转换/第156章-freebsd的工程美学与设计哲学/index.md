@@ -34,7 +34,7 @@ volume: 第08卷-freebsd的范式转换
 ## 文献
 
 - FreeBSD Project. *fortune(6)*, *calendar(1)*, *vt(4)*, *syscons(4)*, *loader.conf(5)* Manual Pages. man.freebsd.org; Kamp, P.-H. (1990s-2000s). FreeBSD src repository commits for ASCII daemon artwork. cgit.freebsd.org/src/; The Unix Heritage Society. *BSD ASCII Art Archive*. tuhs.org ［A］---## 史料登记与辩证校准（2026-08-08 追加）> **本卷命题**：24.5 技术优秀不等于商业成功（详见本卷 00-总览“编纂指导思想叙事参照”）### 史料文献
-- Ewing, L. (1996). *Original Tux Design*. <lewing@isc.tamu.edu> (created with GIMP 0.54); Torvalds, L. (1996, May 12). *Re: Linux Logo*. Linux Kernel Mailing List; Free Software Foundation. *GNU Head Graphics*. <https://www.gnu.org/graphics/gnu-head.html>; Hughes, J. (1996, June). Re: Let's name the penguin! (was: Re: Linux 2.0 really really *really* soon). linux-kernel mailing list.[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]
+- Ewing, L. (1996). *Original Tux Design*. <lewing@isc.tamu.edu> (created with GIMP 0.54); Torvalds, L. (1996, May 12). *Re: Linux Logo*. Linux Kernel Mailing List; Free Software Foundation. *GNU Head Graphics*. <https://www.gnu.org/graphics/gnu-head.html>; Hughes, J. (1996, June). Re: Let's name the penguin! (was: Re: Linux 2.0 really really *really* soon). linux-kernel mailing list.［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
 
 <!-- DB_REF:freebsd.duckdb -->
 > **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 2024-2026 年间：168,386 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
@@ -46,7 +46,7 @@ volume: 第08卷-freebsd的范式转换
 
 <!-- DB_REF:freebsd.duckdb -->
 > **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 2024-2026 年间：168,386 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
-- Raymond, E. S. (2003). *The Art of UNIX Programming*. Addison-Wesley. ISBN 0-13-142901-9; Raymond, E. S. (1997). *The Cathedral and the Bazaar*. O'Reilly. ISBN 1-56592-724-9; Salus, P. H. (1994). *A Quarter Century of UNIX*. Addison-Wesley. ISBN 978-0-201-54777-1.[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证][^doubt-resolved-582]: 据 Design_Implementation_FreeBSD_OS (未署名) 消解[^doubt-resolved-583]: 据 bsdcan18-mandoc (未署名) 消解[^doubt-resolved-584]: 据 Design_Implementation_FreeBSD_OS (未署名) 消解[^doubt-resolved-585]: 据 Mac OS X Internals A Systems Approach (Amit Singh（阿米特·辛格）)  (未署名) 消解[^doubt-resolved-586]: 据 Mac OS X Internals A Systems Approach (Amit Singh)  (未署名) 消解
+- Raymond, E. S. (2003). *The Art of UNIX Programming*. Addison-Wesley. ISBN 0-13-142901-9; Raymond, E. S. (1997). *The Cathedral and the Bazaar*. O'Reilly. ISBN 1-56592-724-9; Salus, P. H. (1994). *A Quarter Century of UNIX*. Addison-Wesley. ISBN 978-0-201-54777-1.［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］[^doubt-resolved-582]: 据 Design_Implementation_FreeBSD_OS (未署名) 消解[^doubt-resolved-583]: 据 bsdcan18-mandoc (未署名) 消解[^doubt-resolved-584]: 据 Design_Implementation_FreeBSD_OS (未署名) 消解[^doubt-resolved-585]: 据 Mac OS X Internals A Systems Approach (Amit Singh（阿米特·辛格）)  (未署名) 消解[^doubt-resolved-586]: 据 Mac OS X Internals A Systems Approach (Amit Singh)  (未署名) 消解
 
 <!-- DB_REF:freebsd.duckdb -->
 > **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 2024-2026 年间：168,386 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。

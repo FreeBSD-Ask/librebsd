@@ -33,20 +33,7 @@ volume: 第06卷-freebsd的核心技术革新
 
 ## 文献
 
-- Bonwick, J. (2005). *ZFS: The Last Word in File Systems*. Oracle Blogs; Ahrens, M., & Bonwick, J. (2013). *OpenZFS*. LinuxCon 2013; Prabhakaran, V. et al. (2005). *IRON File Systems*. SOSP '05; Bonwick, J. (2007). *ZFS End-to-End Data Integrity*.[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或
-- Bonwick, J. (2005). *ZFS: The Last Word in File Systems* (128-bit Storage section). Oracle Blogs; Bonwick, J., & Moore, B. (2008). *ZFS: The Last Word in File Systems*. LISA '08; Sun Microsystems. *ZFS On-Disk Format Specification*; Lucas, M. W. (2018). *FreeBSD Mastery: ZFS*.[考据完成：2026-07-28 经穷尽联网考
-- Open Source Initiative. *Common Development and Distribution License 1.0*. opensource.org/licenses/CDDL-1.0; Phipps, S. (2004-2005). *Blog Posts on CDDL*. webmink.com; Rosen, L. (2005). *Open Source Licensing: Software Freedom and Intellectual Property Law*. Prentice Hall.[考据完成：2026-07-28 经穷尽联网考据，上述
-
-## 自反性声明
-
-本章所书皆是形式主义化的重构，并非对“真实的 BSD 历史”的呈现。本章的章节划分、事件选择、叙事策略、因果归因——全部基于编纂者的哲学设定。本章承认这些局限，不声称客观或中立，欢迎被更诚实的叙事所超越。
-
-<!-- PODCAST_REVIEW v20260829 -->
-<!-- 语义复核范围：BSD Now EP164、YouTube EPmZ-dhntnkCQ、YouTube EPpN7OLChclH8（共 3 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
-
-**要点**：
-
-- DragonFly vkernel 类似 jail 但虚拟化整个内核，新支持 copy-on-write 镜像模式，使多个 vkernel 可从同一镜像启动，运行时变更保留在各自层而不写回原镜像文件，近似 UnionFS。（BSD Now EP164，[197.82-249.56]，L2）
+- Bonwick, J. (2005). *ZFS: The Last Word in File Systems*. Oracle Blogs; Ahrens, M., & Bonwick, J. (2013). *OpenZFS*. LinuxCon 2013; Prabhakaran, V. et al. (2005). *IRON File Systems*. SOSP '05; Bonwick, J. (2007). *ZFS End-to-End Data Integrity*.［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］，L2）
 - 若将镜像设为只读，多个 vkernel 共享同一镜像且互不修改；对镜像的改动被保留在分离的变更层中。（BSD Now EP164，[226.9-239.82]，L2）
 - FreeBSD 在 Raspberry Pi 3 上的有限支持已提交 head，多数驱动可用上游，但 RNG 的 call-out 模式失效、SMP 尚未完成、VCHIQ 驱动存在仅对 ARM 成立的假设，且尚无 HDMI 支持。（BSD Now EP164，[328.18-412.58]，L2）
 - OpenBSD 自成立起一直使用 CVS，与 NetBSD 及早期 FreeBSD 相同；本期公布位于 github.com/openbsd 的官方只读镜像，含源码与 ports 等仓库。（BSD Now EP164，[3816.62-3848.04]，L2）

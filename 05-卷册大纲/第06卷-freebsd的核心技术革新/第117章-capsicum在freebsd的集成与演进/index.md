@@ -57,7 +57,7 @@ volume: 第06卷-freebsd的核心技术革新
 
 <!-- DB_REF:freebsd.duckdb -->
 > **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 2010-2020 年间：488,947 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
-- Nuxi. CloudABI Project (archived/deprecated). github.com/NuxiNL/cloudabi; Brown, N. (2016-02-10). CloudABI. LWN.net; WebAssembly Community Group. WASI Preview 2 and Capabilities. wasi.dev; Schouten, E. CloudABI to WASI transition announcement. github.com/NuxiNL/cloudabi.[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]
+- Nuxi. CloudABI Project (archived/deprecated). github.com/NuxiNL/cloudabi; Brown, N. (2016-02-10). CloudABI. LWN.net; WebAssembly Community Group. WASI Preview 2 and Capabilities. wasi.dev; Schouten, E. CloudABI to WASI transition announcement. github.com/NuxiNL/cloudabi.［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
 
 <!-- DB_REF:freebsd.duckdb -->
 > **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 2010-2020 年间：488,947 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。

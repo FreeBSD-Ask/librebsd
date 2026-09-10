@@ -41,7 +41,7 @@ volume: 第06卷-freebsd的核心技术革新
 
 - 要点：除企业核心外，FreeBSD 贡献者横跨多国——德国、法国、俄罗斯等地域 ccTLD 与多所大学（如 Stony Brook）的学术贡献显著；区域志愿者填补本地化与硬件移植空白，学术研究者将 BSD 作为操作系统研究的活体平台。
 - 史料：
-- Linux Kernel Newbies Release Summaries [EB/OL]. kernelnewbies.org；OpenBSD Release Announcements [EB/OL]. openbsd.org/[0-9][0-9].html；DragonFly BSD Release Notes [EB/OL]. dragonflybsd.org/release/.[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]
+- Linux Kernel Newbies Release Summaries [EB/OL]. kernelnewbies.org；OpenBSD Release Announcements [EB/OL]. openbsd.org/[0-9][0-9].html；DragonFly BSD Release Notes [EB/OL]. dragonflybsd.org/release/.［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
 
 ## 134.13.2 GDPR 与全球数
 

@@ -28,7 +28,7 @@ volume: 第16卷-开源运动与合规治理
 
 - 总纲第 7 条——BSD 与 UNIX 谱系的连续性，Apache 继承 BSD 开源传统
   - 辨析：ASF 是否真借鉴 BSD 模式，需查早期组织文档
-  - 文献：ASF 官方历史；Apache Group 早期文档[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]
+  - 文献：ASF 官方历史；Apache Group 早期文档［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
 
 ## 30
 
@@ -38,7 +38,7 @@ volume: 第16卷-开源运动与合规治理
   - 辨析：freebsd.duckdb freebsd-src 仓库的 Mozilla 主题 commit 显示 Mozilla 与 FreeBSD 的交集主要是 FreeBSD 为 Mozilla 提供兼容性修复——Jordan K. Hubbard、John Polstra、Brian Feldman、Scott Long 等核心 committer 均参与过 M
 - 总纲第 1 条——偶然性改写历史，GitHub 普及改变开源协作
   - 辨析：PR 模式是否真优于补丁，需独立判断；Microsoft 收购是否影响开源
-  - 文献：GitHub 官方历史[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]
+  - 文献：GitHub 官方历史［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
 
 ## 301.7.2 PR 模式对 BSD
 
@@ -48,7 +48,7 @@ volume: 第16卷-开源运动与合规治理
 ## 辨析
 
 - ASF 是否真借鉴 BSD 模式，需查早期组织文档
-  - 文献：ASF 官方历史；Apache Group 早期文档[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]
+  - 文献：ASF 官方历史；Apache Group 早期文档［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
 
 ## 301.5.2 Apache 许可证与 BSD 许可证的谱系关系
 
@@ -57,7 +57,7 @@ volume: 第16卷-开源运动与合规治理
   - 文献
 - freebsd.duckdb freebsd-src 仓库的 Mozilla 主题 commit 显示 Mozilla 与 FreeBSD 的交集主要是 FreeBSD 为 Mozilla 提供兼容性修复——Jordan K. Hubbard、John Polstra、Brian Feldman、Scott Long 等核心 committer 均参与过 Mozilla 兼容性修复，Mozilla 是 F
 - PR 模式是否真优于补丁，需独立判断；Microsoft 收购是否影响开源
-  - 文献：GitHub 官方历史[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]
+  - 文献：GitHub 官方历史［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
 
 ## 301.7.2 PR 模式对 BSD 补丁文化的冲击
 
@@ -66,25 +66,25 @@ volume: 第16卷-开源运动与合规治理
 
 ## 文献
 
-- ASF 官方历史；Apache Group 早期文档[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]
+- ASF 官方历史；Apache Group 早期文档［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
 
 ## 301.5.2 Apache 许可证与 BSD 许可证的谱系关系
 
 - 要点：Apache 许可证 1.0（2000 年）基于 BSD 许可证修改，1.1（2001 年）去除 advertising 条款，2.0（2004 年）加入专利授权条款；Apache 2.0 与 BSD 三条款在精神上同属宽松许可证阵营，但 Apache 2.0 加入专利保护；二者在 OSI 认证
-- mozilla.org 历史[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]
+- mozilla.org 历史［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
 
 ## 301.6.2 Mozilla MPL 许可证与 BSD 许可证的关系
 
 - 要点：Mozilla 公共许可证（MPL）由 Mitchell Baker 主导设计，1998 年初版，1.1（1999 年）成熟；MPL 是 “弱 copyleft”（文件级 copyleft），介于 BSDL 与 GPL 之间；MPL 允许与闭源代码链接但要求修改的 MPL 文件开源；BSDL 不要求修改文件开源而
 - freebsd-hackers mailing list archives；FreeBSD Quarterly Status Reports；The FreeBSD Foundation Annual Reports；freebsd.duckdb commits 表 freebsd-src Jordan K. Hubbard commit `e14abeefac54`（1999-12-17T01:47:15Z，"MFC: fixes for dlopen() which allow mozilla to actually work in -stable"）；freebsd.duckdb com
-- GitHub 官方历史[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]
+- GitHub 官方历史［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
 
 ## 301.7.2 PR 模式对 BSD 补丁文化的冲击
 
 - 要点：PR 模式对 BSD 补丁文化的冲击：(1) GitHub PR 简化贡献门槛；(2) BSD 传统补丁文化（diff/patch 邮件提交）显得过时；(3) GitHub fork 模式降低贡献门槛但增加质量风险；(4) BSD 社区面临 “是否迁移 GitHub” 的长期争论；冲击持续至 2021 年 FreeBSD 迁移 GitH
 - FreeBSD Git 迁移公告；freebsd.duckdb commits 表 freebsd-doc Warner Losh commit `86836673be10`（2021-03-16T18:43:35-06:00，"Fix more typos from the original github docs"）；freebsd.duckdb commits 表 freebsd-doc Warner Losh commit `abff932fe818`（2021-03-16T22:23:19-06:00，"Merge in the migration from subversion /
 - ASF 文档； Jagielski 2008 ［A］
-- Weber《The Success of Open Source》；开源会议议程[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]
+- Weber《The Success of Open Source》；开源会议议程［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
 
 ## 301.9.2 Open Source 去政治化对 BSD 的消解
 

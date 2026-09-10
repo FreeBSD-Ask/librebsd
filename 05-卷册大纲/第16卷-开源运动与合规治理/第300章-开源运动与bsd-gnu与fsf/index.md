@@ -20,7 +20,7 @@ volume: 第16卷-开源运动与合规治理
   - 辨析：GNU 宣言具体发布日期与平台，须查 Usenet 存档；宣言是否真影响 BSD 社区；【双库核查 2026-08-15】邮件列表库 freebsd 查询 Stallman GNU 命中 5 条（1998 年 Phillip Salzman 等提及）〔待核：原文截断，后文待回源〕
 - 总纲第 6 条——形式主义膨胀与抽象克制，FSF 组织形式主义是否过度
   - 辨析：FSF 成立日期与 BSD 基金会对比（FSF 1985 vs FreeBSD Foundation 2000）
-  - 文献：FSF 官方历史[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]
+  - 文献：FSF 官方历史［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
 
 ##
 
@@ -37,7 +37,7 @@ volume: 第16卷-开源运动与合规治理
   -
 
 - FSF 成立日期与 BSD 基金会对比（FSF 1985 vs FreeBSD Foundation 2000）
-  - 文献：FSF 官方历史[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]
+  - 文献：FSF 官方历史［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
 
 ## 300.1.3 GNU 项目与 BSD 的早期交集与分歧
 
@@ -48,12 +48,12 @@ volume: 第16卷-开源运动与合规治理
 
 ## 文献
 
-- Stallman "GNU Manifesto"；Williams《Free as in Freedom》[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]
+- Stallman "GNU Manifesto"；Williams《Free as in Freedom》［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
 
 ## 300.1.2 FSF 1985 年成立与组织架构
 
 - 要点：自由软件基金会（FSF）于 1985 年 10 月 4 日成立，由 Stallman 创立，注册为 501(c)(3) 非营利组织；FSF 早期通过销售 GNU 软件磁带筹集资金；组织架构包括董事会、执行董事、雇员开发者；FSF 是 GPL 许可证的版权持
-- FSF 官方历史[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]
+- FSF 官方历史［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
 
 ## 300.1.3 GNU 项目与 BSD 的早期交集与分歧
 
@@ -61,12 +61,12 @@ volume: 第16卷-开源运动与合规治理
 - 史料：GNU
 - Stallman 论 BSD；McKusick 论许可证；freebsd.duckdb commits 表 freebsd-src Robert Watson commit `bf139e9706ee`（2002-11-04T18:11:17Z，"License: update, remove clause three of BSD license per approval of NAI."）；freebsd.duckdb commits 表 freebsd-src Poul-Henning Kamp commit `3b1746df8b34`（2003-01-18T10:08:27Z，"Sa
 - Stallman, R. The GNU Manifesto [EB/OL]. (1985). <https://www.gnu.org/gnu/manifesto.en.html> [2026-07-24]；Free Software Foundation. What is Copyleft? [EB/OL]. <https://www.gnu.org/licenses/copyleft.en.html> [2026-07-24]；Stallman, R. Why Open Source misses the point of Free Software [EB/OL]. <https://
-- Peterson "Open Source: Where It Started"（2006）；Peterson 2018 年 20 周年回顾文[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]
+- Peterson "Open Source: Where It Started"（2006）；Peterson 2018 年 20 周年回顾文［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
 
 ## 300.2.2 Netscape 开源 Navigator 的催化作用
 
 - 要点：Netscape 于 1998 年 1 月 22 日宣布将 Navigator 浏览器源代码开源（mozilla.org），是商业大型软件首次主动开源；Netscape 决策受 Raymond《大教堂
-- OSI 官方历史[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]
+- OSI 官方历史［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
 
 ## 300.3.2 开源定义的十项标准与 BSD 许可证
 

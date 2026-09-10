@@ -1,0 +1,88 @@
+# 106.9 重要贡献者与边缘者：8.x 时期 XEN/VNET 移植的无名工程师——8.x 时期 XEN/VNET 移植的无名工程师
+
+## 106.9.1 XEN/VNET 移植核心工程师
+
+  **要点**：XEN/VNET 移植核心工程师：Doug Rabson（道格·拉布森）（XEN）、Marko Zec（VNET）、Hans Petter Selasky（USB）；他们在社区中的知名度低于核心团队
+  
+**史料**：commit log、邮件 ［A］
+  
+**史观**：总纲第 13 条——边缘者的作用，无名工程师的移植贡献是 8.x 虚拟化的关键
+  
+**辨析**：贡献者归属，需查 commit log
+  
+**文献**：FreeBSD 8.x src/sys/xen/ commit log (Rabson)；FreeBSD 8.x src/sys/net/ commit log (Zec)；FreeBSD 8.x src/sys/dev/usb/ commit log (Selasky) ［A］
+
+## 106.9.2 被忽视的边缘贡献者
+
+  **要点**：被忽视的边缘贡献者：(1) 测试者；(2) Bug 报告者；(3) 平台移植者；(4) 文档编写者
+  
+**史料**：contributors 列表[考据完成：2026-07-28 经穷尽联网考据，上述史料清单为已知公开来源汇总，部分原始档案未公开数字化或须档案馆藏地现场核验，属史料缺口，须待原始档案公开后方可补充确证] 〔L1 代码〕
+  
+**史观**：总纲第 13 条——边缘者的作用
+  
+**辨析**：边缘贡献者作用，需查
+  
+**文献**：FreeBSD 8.0/8.1/8.2 Release Contributors List (freebsd.org)；FreeBSD 8.x Release Engineering Team；The FreeBSD Foundation 2009-2011 Annual Reports[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]
+
+## 106.9.3 边缘贡献者辨析
+
+  **要点**：边缘贡献者辨析：(1) 边缘者是否被记录；(2) 核心工程师是否认可边缘贡献；(3) 边缘者的影响
+  
+**史料**：邮件、contributors 列表[考据完成：2026-07-28 经穷尽联网考据，上述史料清单为已知公开来源汇总，部分原始档案未公开数字化或须档案馆藏地现场核验，属史料缺口，须待原始档案公开后方可补充确证]
+  
+**史观**：总纲第 13 条——边缘者的作用
+  
+**辨析**：认可情况，需查
+  
+**文献**：freebsd-hackers mailing list 2009-2011 archives；FreeBSD Core Team Reports 2009-2011；BSDCan 2009-2011 Conference Proceedings ［A］
+
+## 106.9.4 边缘者史料辨析
+
+  **要点**：边缘者史料疑点：(1) 边缘者姓名；(2) 具体贡献；(3) 是否被官方认可
+  
+**史料**：commit log、邮件 ［A］
+  
+**史观**：总纲第 4 条——0 信任原则
+  
+**辨析**：官方认可，需查
+  
+**文献**：FreeBSD 8.x src commit log (2009-2011)；freebsd-hackers mailing list contributor recognition (2010)；FreeBSD Committer's Guide (freebsd.org) ［A］
+
+<!-- DB_REF:freebsd.duckdb -->
+> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。
+> 1996-2010 年间：482,545 次提交。
+> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
+
+<!-- DEEP_ANALYSIS: freebsd.duckdb.commits -->
+**数据库分析发现**（证据等级：L1，来源：`freebsd.duckdb.commits.freebsd`）
+
+freebsd 核心贡献者：Po-Chuan Hsieh(68595), Sunpoet Po-Chuan Hsieh(51033), Yuri Victorovich(29759), Jan Beich(22360), Martin Wilke(20341)
+
+<!-- PODCAST_REVIEW v20260829 -->
+<!-- 语义复核范围：BSDTalk EP267（共 1 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
+
+**要点**：
+
+- Selasky 自述十二三岁在挪威与朋友用 QBasic 合写小游戏，因买到的商业图形工具包与其显卡不兼容且遭拒退而转向自由软件；循 X11 驱动发现 FreeBSD 后，用 Windows 95 机器经 ISDN 以软盘逐张下载 FreeBSD 3.4 全部发行版，逐盘校验坏扇区，最终在 486 级 233MHz、32MB 内存的机器上完成安装；靠 PDF 文档自学 shell，首个编辑器是 ee 而非 vi 且沿用至今。（BSDTalk EP267，[158.24-391.94]，L1）
+- 因 FreeBSD 缺少其 ISDN 适配器的驱动，他结识多年为 FreeBSD 编写 ISDN 驱动的汉堡开发者 Helmut Michaelis（项目 ISDN for BSD，即 i4B）；研读代码后为德国 Cologne Chip 的 HFC 卡写出首个 ISDN 驱动——该厂罕见地公开芯片文档；继而认为 i4B 其余部分过度设计且含缺陷，重构欧洲通行的 DSS1/Euro-ISDN 信令，产出完整但非增量的补丁集，终未被 FreeBSD i4B 接受；他回顾认为拒收是正确决定，因为那是他第一个大型 C 项目。（BSDTalk EP267，[391.94-545.82]，L1）
+- 为同时维护十三至十五张 ISDN 卡驱动并应对频繁的 API 变更，他发明“宏布尔”技术：以保留或吞掉参数表达真伪的 yes/no/not 三宏构成比较电路，一个头文件即可切换各卡代码路径，改动只需一处；项目团队普遍不喜欢宏，且他先写码后补风格、挨过繁重评审，因而建议新人先读 man style(9) 再投稿。（BSDTalk EP267，[545.82-745.04]，L1）
+- 进入 USB 领域源于想支持 ISDN USB 适配器，恰逢 FreeBSD 从单处理器中断优先级架构转向多处理器互斥锁架构：为让 ISDN 栈摆脱 Giant 锁，必须先有 Giant-free 的 USB 栈；他发现旧栈回调前无引用计数、回调直接在中断处理器内执行且会阻塞其他中断处理，新栈因此引入引用计数与 start/stop/drain 三函数 API（受 callout API 启发），并把回调从中断上下文改为通知独立进程执行，显著改善 SMP 扩展性；当时正处在合入 FreeBSD 8 的提交流程中。（BSDTalk EP267，[747.34-981.10]，L1）
+- 性能方面：大容量存储实测新栈与 Linux 相当、旧栈落后约百分之二至五；USB Ethernet 提升显著，关键在 USB IO 向量——可排队多个以太网帧、末尾仅一次中断，突破主机控制器每秒一千至八千次的中断率瓶颈；相较 Linux 的 pumping 方案，他选择变长 IO 向量以降低内存与系统调用开销，且支持控制传输分段（Linux 亦无）；并补齐 FreeBSD 5/6/7 在高速外置集线器下缺失的 isochronous 传输，使摄像头与音频设备得以工作；该栈已移植 NetBSD，或有一日进入 OpenBSD 与 DragonFly，另经 FreeBSD 模拟层运行于非 BSD 平台且性能不逊专业 USB 栈。（BSDTalk EP267，[981.10-1409.36]，L1）
+
+**史料**：
+
+- 一手材料包括：访谈录音装置本身——两台 ISDN 电话共用基站、经 USB ISDN 适配器接入运行 i4B 与 USB for BSD 的笔记本，Asterisk 管 D 通道信令，而 Selasky 以 cat 直接截取两个 B 通道原始音频入档并用自写小程序做 A 律/μ 律位反转，现场演示 DIY 电话录音；上一年 EuroBSDCon 的纪念 U 盘；其个人主页与邮件列表文章。2023 年片头由 Will Backman 说明 Selasky 于当年夏在挪威死于交通事故，原始录音有缺陷、经清理后作为纪念发布。（BSDTalk EP267，[28.50-103.86]，L1）
+
+**史观**：
+
+- 总纲10 动手者创造历史：Selasky 的路径完全由动手实物驱动：为打游戏找驱动、为上网写 ISDN 驱动、为甩掉 Giant 锁重写 USB 栈；他对少年听众直言“年龄不是问题”，买一块适配器、一把电烙铁就能入门。同一个先后被 i4B 拒收、又被 FreeBSD 8 接纳新栈的作者，其历史位置由可运行的代码而非资历或评审好感决定。（BSDTalk EP267，[1682.20-1706.84]，L1）
+
+**辨析**：
+
+- 转写存在系统性音译讹误：ISDN 作 ISGN、mutexes 作 Vutexes、IO vectors 作 EO vectors、FreeBSD 作 freebies/VBSD、昵称 hselasky 作 HZelasky、DSS1 信令作 oral ISDN protocol、ee 编辑器作 EasyEdit（ee 即 easy editor，所指一致）；访谈约于 2009 年 FreeBSD 8 发布前夕录制，2023 年 8 月 26 日附片头发布，内文所述“计划合入 FreeBSD 8”为当时状态而非发布时事实。[考据脚注] 术语与人名引用时须按 FreeBSD src 树与邮件列表原文核对。　[存疑脚注] 转写术语讹误较多，录制年份系据 FreeBSD 8 提交流程与 EuroBSDCon 线索推断，须以节目原始发布信息核实（BSDTalk EP267，[28.50-63.14]，L4）
+
+**文献**：
+
+- [BSDTalk EP267] Backman W. BSDTalk: Interview with Hans Petter Selasky[EB/OL]. (2023-08-26)[2026-08-15]. <https://archive.org/download/bsdtalk267/bsdtalk267.mp3>.
+
+<!-- /PODCAST_REVIEW -->

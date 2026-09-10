@@ -1,0 +1,307 @@
+# 32.3 软件专利与版权判例：Diehr 与 Franklin 案
+
+1981 年 3 月 3 日最高法院 Diamond v. Diehr 案（450 U.S. 175）5-4 裁定使用计算机程序实现橡胶硫化工艺的专利申请符合 35 U.S.C. § 101，首次确认软件相关发明在应用于特定工业过程时可专利
+
+## 32.3.1 1981.3.3 Diamond v. Diehr 判决与软件相关发明的可专利性
+
+**要点**：1981 年 3 月 3 日美国最高法院在 Diamond v. Diehr 案（450 U.S. 175）中以 5-4 裁定使用计算机程序控制橡胶硫化工艺的专利申请符合 35 U.S.C. § 101，首次确认软件相关发明在应用于特定工业过程时可专利，打破了 Benson 与 Flook 案对软件专利的严格限制
+
+**史料**：Diamond v. Diehr, 450 U.S. 175 (1981) 判决全文、美国专利商标局审查指南、Rehnquist 多数意见与 Stevens 异议意见 ［A］
+
+**史观**：第 2 条形式主义——专利法的形式类别（“方法”）吞并了算法的实质，法律的形式化扩张为后续软件专利浪潮打开了闸门
+
+**辨析**：Diehr 案并非 “软件可专利” 的绝对判决，而是 “软件 + 工业过程” 组合可专利，需核对判决原文与后续 Alice Corp 案的引用关系，警惕事后重述的简化叙事；[2026-08-14 两库核查：经参考文献库验证通过（reference_id=2596，Diamond v. Diehr, 450 U.S. 175 (1981)，US Supreme Court，判决全文入库）]
+
+**文献**：Diamond v. Diehr, 450 U.S. 175 (1981)；Chisum, D. (1985) "Patents in Mathematics"；邹怿《美国软件专利制度史》（2010） [考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]
+
+## 32.3.2 Apple v. Franklin 与目标代码/操作系统版权
+
+**要点**：1983 年 8 月 30 日第三巡回上诉法院在 Apple Computer, Inc. v. Franklin Computer Corp. 案（714 F.2d 1240）中裁定操作系统的目标代码受版权法保护，Franklin ACE 100 复制 Apple II ROM 与操作系统构成侵权，首次明确目标代码与操作系统均为版权客体
+
+**史料**：Apple v. Franklin, 714 F.2d 1240 (3d Cir. 1983) 判决全文、地区法院初步禁令记录、Apple 与 Franklin 的诉状与答辩 [考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证] 〔L3 官方文档〕
+
+**史观**：第 11 条分离与聚合——源代码与目标代码的 “形式分离” 被法律打破，版权聚合到所有表达形式，OS 版权的确立为 BSD 商业 fork 与 AT&T 诉讼提供了法律基础
+
+**辨析**：Franklin 主张 “目标代码非可读表达” 被法院驳回，需核对法院对 102(a) 与 117 条的解释，区分 “版权保护” 与 “专利保护” 对软件的不同路径；[2026-08-14 两库核查：经参考文献库验证通过（reference_id=2389，Apple Computer, Inc. v. Franklin Computer Corp., 714 F.2d 1240 (3d Cir. 1983)，判决全文入库，判决日 1983-08-30 与本节一致）]
+
+**文献**：Apple v. Franklin, 714 F.2d 1240 (3d Cir. 1983)；Litman, J. (1987) "Copyright Protection of Computer Programs"；寿步《计算机软件著作权保护》（1995） ［B］
+
+## 32.3.3 Franklin Computer 公司史与 ACE 100 诉讼
+
+**要点**：Franklin Computer Corporation 1981 年由 Barry Borden、Russ Bower、Joel Shusterman 三人创立于新泽西州 Pennsauken（dfarq.homeip.net 2024 报道，三人分别为 Burroughs/Unisys 背景；成立地点非宾夕法尼亚州），其 ACE 100 个人计算机硬件兼容 Apple II、固件层复制 Apple II Autostart ROM 与 Applesoft ROM 及操作系统，1982 年 5 月 12 日 Apple 起诉（oldcomputers.net 与 dfarq.homeip.net 2024 报道交叉印证），1983 年 8 月 30 日第三巡回上诉法院维持禁令（Apple v. Franklin 714 F.2d 1240，H2O.law.harvard.edu 判决全文页头原文 "Decided August 30, 1983. Rehearing and Rehearing Denied September 23, 1983. Certiorari Dismissed January 4, 1984."），1983 年 12 月 30 日双方达成和解（vlex.com In re Franklin Computer Corp. 案卷原文 "settlement agreement ... dated December 30, 1983"），Franklin 于 1984 年 6 月 21 日申请第 11 章破产重组（vlex.com 同案卷原文 "the debtor filed a petition for reorganization under chapter 11 of the Bankruptcy Code on June 21, 1984"），1992 年正式清算退出计算机业务
+
+| 时间 | 事件 |
+| -- | -- |
+| 1981 | Franklin Computer Corp. 成立于新泽西州 Pennsauken |
+| 1982.5.12 | Apple 起诉 Franklin（ACE 100 复制 ROM 与 OS） |
+| 1983.8.30 | 第三巡回上诉法院维持禁令（714 F.2d 1240） |
+| 1983.12.30 | 双方达成和解 |
+| 1984.6.21 | Franklin 申请第 11 章破产重组 |
+| 1992 | 正式清算，退出计算机业务 |
+
+**史料**：Franklin Computer 公司年报、SEC 8-K 破产公告、Apple 起诉书（1982.5.12）、地区法院与上诉法院判决书 ［A］
+
+**史观**：第 10 条边缘者——Franklin 作为兼容机厂商是早期个人计算机产业的边缘者，其失败被 Apple 的版权叙事吸收，技术兼容性诉求被法律消解
+
+**辨析**：Franklin 辩称 “为兼容 Apple II 软件生态必须复制 ROM”，此 “兼容性抗辩” 被法院以未主张互操作性除外为由驳回，需核对当时 17 U.S.C. § 117 的适用范围
+
+**文献**：Franklin Computer Corp. SEC 文件（1982-1984）；Computer & Communications Industry Assn v. FCC 案卷；方兴东《IT 史记》（2004） [考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]
+
+## 32.3.4 Apple v. Franklin 对 BSD 商业 fork 的先例
+
+**要点**：Apple v. Franklin 确立操作系统目标代码受版权保护，为后续 BSD 商业 fork（SunOS、Ultrix、HP-UX 等）必须获得源代码授权提供了法律先例，亦为 1992 年 USL v. BSDi 诉讼中 AT&T 主张 BSD 源代码版权奠定了判例基础
+
+**史料**：BSD 商业 fork 厂商许可协议（Sun、DEC、HP）、USL v. BSDi 诉状（1992）、Novell 收购 USL 后的版权转让记录 [考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证] 〔L3 官方文档〕
+
+**史观**：第 5 条偶然性——若 Apple v. Franklin 判决反向，BSD 源代码版权归属的模糊性将持续更久，1990 年代的 BSD 商业化路径将截然不同；偶然判例塑造长期路径
+
+**辨析**：BSD 商业 fork 在 1983-1992 年的授权结构（伯克利 BSD 许可证 + AT&T 源代码许可费）需逐家核对，警惕将 “BSD 许可证自由” 等同于 “无版权约束” 的简化叙事
+
+**文献**：McKusick, K. (1999) "Twenty Years of Berkeley Unix"；McKusick & Karels (1999) "The Open Source Release"；张金海《UNIX 商业化史》（2008） ［B］
+## 32.3.5 软件专利判例谱系考据——Benson 至 Alice 全链一手原件
+
+**要点**：软件专利里程碑判例全链一手原件已按“判例与法律文件一手原件入库规则”入库（ref 2593-2600，全部 kaoju_source/primary）——**Gottschalk v. Benson**（409 U.S. 63, 1972-11-20，Douglas 全体一致：BOD 转换算法不可专利，"mental processes and abstract intellectual concepts are not patentable"）、**Parker v. Flook**（437 U.S. 584, 1978-06-22，Stevens：催化过程警报限值算法不可专利，"post-solution activity exalts form over substance"）、**Diamond v. Chakrabarty**（447 U.S. 303, 1980-06-16，Burger 5-4：基因工程细菌可专利，"anything under the sun that is made by man"）、**Diamond v. Diehr**（450 U.S. 175, 1981-03-03，Rehnquist 5-4：软件+工业过程组合可专利，"does not become unpatentable simply because it uses a mathematical formula"，区分 Benson/Flook 不寻求 preempt 公式本身）、**State Street v. Signature**（149 F.3d 1368, Fed. Cir. 1998-07-23，Rich：商业方法可专利，推翻“商业方法除外”规则）、**Bilski v. Kappos**（561 U.S. 593, 2010-06-28，Kennedy：machine-or-transformation 测试"is not the sole test"，风险对冲属抽象概念）、**Mayo v. Prometheus**（566 U.S. 66, 2012-03-20，Breyer 全体一致：自然规律应用不可专利，附加步骤仅为"well-understood, routine, conventional activity"，确立 inventive concept 两步框架）、**Alice v. CLS Bank**（573 U.S. 208, 2014-06-19，Thomas 全体一致：抽象概念+通用计算机实现不可专利，"apply it with a computer"不构成转变，彻底改变软件专利格局）。
+
+**史料**：8 份最高法院/CAFC 判决全文 HTML（ref 2593-2600，来源 web.archive.org 存档 supreme.justia.com + law.cornell.edu LII 交叉核验）［A］
+
+**史观**：总纲第 12 条——法律结构：软件专利判例谱系（Benson→Flook→Chakrabarty→Diehr→State Street→Bilski→Mayo→Alice）构成“算法可专利性”从否定到有限承认再到限缩的完整法律周期，是 BSD 时代软件产业法律环境的基石。
+
+**辨析**：**关键辨析**——Diehr 案并非“软件可专利”的绝对判决而是“软件+工业过程”组合可专利；State Street 的商业方法扩张被 Bilski/Alice 逐步限缩（Alice 两步测试：先定是否针对抽象概念，再看是否有 inventive concept）；Benson/Flook 确立的“算法不可专利”原则经 Mayo/Alice 复活为现代判准。引用时须按案号区分各案立场，不得混用 [考据完成：2026-08-05 经 8 份判决全文一手核验]
+
+**文献**：8 份判决全文（ref 2593-2600）；Chisum. Patents in Mathematics（1985）［A］
+
+
+<!-- DEEP_ANALYSIS: cross_indexes.duckdb.concept_history -->
+**史家判断**（证据等级：L2，来源：`cross_indexes.duckdb.concept_history.6`）
+
+GEOM 由 Poul-Henning Kamp 提出构想（早期思想文《Geometry —— an idea》），最原始前身是作者对 Minix 1.2 所做的一个从未发布的 hack。2002 年 Kamp 在 NAI Labs 支持下，于 DARPA/SPAWAR 合同与 DARPA CHATS 研究计划框架内开发成形。2003 年 Kamp 在 BSDCon 发表 GEOM 教程。GEOM 自 FreeBSD 5.0（2003）起提供，明确定义 class/geom/provider/consumer/rank 等拓扑概念，提供分区（FDISK/MBR、GPT、BSD slice）、镜像（geom_mirror）、RAID、UFS 卷标、GBDE/geli 磁盘加密等类，并支持 ggate 用户态网关。至 FreeBSD 13.0，GEOM_BSD、GEOM_MBR、GEOM_SUNLABEL 等过时组件被移除，由 GEOM_PART_* 与 GEOM_LABEL 等替代，框架持续演化。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-1-121`）
+
+TrustedBSD MAC 框架是用于 FreeBSD 平台的操作系统访问控制扩展的灵活模块化环境，由 Robert Watson 等人在 DARPA 信息生存能力项目会议论文中描述。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-2-012`）
+
+4.4BSD 架构手册的作者署名为 William Joy、Robert Fabry、Samuel Leffler、M. Kirk McKusick、Michael Karels，隶属伯克利计算机系统研究组（CSRG）。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-2-013`）
+
+4.2BSD 的 IPC 设施文档由计算机系统研究组（CSRG）成员 Samuel J. Leffler、Robert S. Fabry、William N. Joy、Phil Lapsley 署名。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-2-040`）
+
+Morris（1985）指出 4.2BSD 的 TCP/IP 软件存在信任缺陷：每个 4.2BSD 系统“信任”一组其他主机，允许来自受信主机的用户在不提供口令的情况下通过 TCP/IP 网络远程执行命令。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-2-046`）
+
+Ralph Campbell（CSRG，1986）撰写了 4.3BSD 行式打印机假脱机（lpd）手册。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-2-047`）
+
+BIND 4.9 的一位作者在开发与发布 BIND 4.9 期间任职于 DEC 网络系统实验室，并曾被借调至 CSRG 完成相关工作。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-2-048`）
+
+Graham、Kessler 与 McKusick（1982）描述了 gprof 调用图执行剖析器的设计：将被调例程的运行时间计入调用它们的例程。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-2-049`）
+
+Sun Microsystems 与 CSRG（1988）的 rpcgen 编程指南说明 rpcgen(1) 用于帮助程序员简单直接地编写 RPC 应用。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-2-052`）
+
+McKusick、Karels 与 Bostic（1989）描述了 CSRG 以小团队开发与集成 4.3BSD 的发布工程策略：每个发布周期分为开发阶段与发布工程阶段，发布工程分三步（alpha、beta、最终发布）。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-2-053`）
+
+McKusick、Karels 与 Bostic（1989）记载伯克利的发布在“引入重大新设施”与“提供缺陷修复与效率改进”之间交替。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-2-054`）
+
+McKusick、Karels 与 Bostic（1989）记载 CSRG 一直是一个小型软件开发团队，需协调 CSRG 成员与贡献代码的外部社区成员。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-2-055`）
+
+McKusick、Karels 与 Bostic（1989）认为 BSD 开发的优势在于少数核心开发者能理解整个系统并协调工作，这是大型开发组织难以复制的。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-3-001`）
+
+BSD 于 1977 年由 Bill Joy 在伯克利以单人项目起步，1980 年成长为四人协调的计算机系统研究组（CSRG）。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-3-002`）
+
+CSRG 使用 SCCS（首个源代码控制系统）管理 BSD 开发，1983 年设计 socket 接口并实现 TCP/IP，允许少数受信任外部贡献者经 ARPAnet 登录开发机直接更新源码。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-3-009`）
+
+CSRG 始终是小型软件开发者团队，资源限制要求谨慎的软件工程管理及对 CSRG 人员与社区贡献者的协调。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-3-018`）
+
+计算机系统研究组（CSRG）一直是小型软件开发团队，资源限制要求精细的软件工程管理以及对 CSRG 成员与社区贡献者的协调。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-3-052`）
+
+McKusick 与 Karels 1988 年记载 4.3BSD 内核拥有至少十种不同的内存分配器，并提出通用目的动态内存分配器以统一接口。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-3-053`）
+
+McKusick、Karels 与 Bostic 1990 年提出在可换页内存而非专用内存中构建 RAM 磁盘文件系统原型，以避免专用内存带来的性能损失。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-3-054`）
+
+Leffler 等 1983 年记载进程间通信与网络是 4.2BSD 对 UNIX 最重要的新增之一，是两年以上讨论与研究的成果。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-3-061`）
+
+Marshall Kirk McKusick（住址 1689 San Pablo Avenue, Berkeley）出现在 2017 年 5 月 30 日伯克利市议会会议记录的通信列表中，由议员 Worthington 提交。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-3-069`）
+
+BIND 运维指南脚注记载作者 Kevin J. Dunlap 是 DEC ULTRIX 工程高级开发组成员，完成该工作时借调至 CSRG。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-4-105`）
+
+CSRG 用 SCCS 管理源码，1983 年设计 socket 接口并在其下实现 TCP/IP，允许少数受信任外部贡献者经 ARPAnet 直接更新源码。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-4-113`）
+
+McKusick 2018 年演讲称 FreeBSD 于 1993 年 6 月 19 日命名，源自 Bill Jolitz 面向 Intel 386 的 4.4BSD-Lite 移植版本。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-5-010`）
+
+McKusick 与 Benno Rice 在《The Evolution of FreeBSD Governance》（FreeBSD Journal, 2017）中记载：BSDi 于 2000 年收购 Walnut Creek CDROM，使受雇开发者可接触 BSD/OS 源码；内核多线程化中 John Baldwin 的方案借鉴 BSD/OS 与 Solaris，Matthew Dillon 偏好类似 Amiga 内核的架构，两人冲突因核心团队不愿在技术争论中选边而加剧，最终 Dillon 的 commit 权限被移除并离开创立 DragonFly BSD。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-5-015`）
+
+McKusick 在 BSDCan 2018 演讲中记载：Yahoo 完全基于 FreeBSD 运行并同意托管 CVS 仓库与发行版，Justin Gibbs 创立 FreeBSD Foundation 旨在提供 FreeBSD 项目基础设施——基金会成立的直接背景是项目基础设施对单一公司（Yahoo）的依赖。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-5-016`）
+
+McKusick 在 BSDCan 2018 演讲中记载：FreeBSD 核心团队最初为终身制（约 20 名成员），僵化与冷漠促使起草章程建立 9 名成员、由 committer 选举的核心团队，首届民选核心团队于 2000 年产生且几乎无旧成员留任。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-5-113`）
+
+关于 FreeBSD 迁移到 Subversion 的时间存在矛盾：McKusick 称经辩论后于 2000 年迁到 Subversion，而 Ed Maste 的版本控制历史显示 src/ 仓库直到 2008-05-31 才迁至 Subversion。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-6-002`）
+
+Pawel Jakub Dawidek 与 Marshall Kirk McKusick 合作撰写将 Solaris ZFS 移植到 FreeBSD 的论文。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-6-107`）
+
+4.2BSD 与 4.3BSD 引入可靠信号（reliable signals）与快速文件系统（fast filesystem），这是 FFS/UFS 进入 Berkeley 系统发行版的开端。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L2，来源：`historical_claims.duckdb.claim.CL-8-008`）
+
+参考文献全文数据库收录《Berkeley city charter en》（Berkeley，1908），作为本章主题的候选史料。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L2，来源：`historical_claims.duckdb.claim.CL-8-003`）
+
+参考文献全文数据库收录《McKusick design impl 44bsd en》（McKusick，1996），作为本章主题的候选史料。
+
+## 文献
+
+- Gottschalk v. Benson, 409 U.S. 63 (1972)——软件算法可专利性首个判例[EB/OL]. 1972.
+- bsdcon. kamp-phk-devfs-paper[M]. 2002.
+- standalone. dowse-ufs optimizations-paper[M]. 2002.
+- eurobsdcon2014-mandoc-slides[M].
+- eurobsdcon2015-mandoc[M].
+- FreeBSD-Foundation-October-2016-Update[M]. 2016.
+- FreeBSD-Foundation-September-2016-Update[M]. 2016.
+- ONODERA R. NetBSD on Google Compute Engine -- Step by Step Guide（幻灯片）[EB/OL]. AsiaBSDCon 2016 NetBSD BoF.
+- Martin Husemann. netbsd arm be8 asiabsdcon2015[M]. 2015.
+

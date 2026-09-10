@@ -1,0 +1,209 @@
+# 192.6 OpenBSD 4.x 时期 RELEASE 公告与 release song 演进（2006-2011）——10 次 release 公告汇总，release song“Puffy 系列”延续并扩展
+
+## 192.6.1 OpenBSD 4.0-4.9 RELEASE 公告清单与 release song
+
+**要点**：OpenBSD 4.x 时期共发布 10 次 release（4.0 至 4.9），发布周期严格遵循 6 个月节奏；4.x 时期 release song 延续 3.x 时期的“Puffy 系列”叙事传统——4.0"Puff the Magic OpenBSD"、4.2"Puffy's Smoke"、4.3"Puff the Daddy"、4.6"Puff the Magic OpenBSD II"、4.9"Puffy's Garden"——同时引入非 Puffy 主题的 release song（4.1"Distribution of the Few"、4.4"100% Pure Cheese"、4.5"The Slow Bravado"、4.7"Game Over"、4.8"The World's Most Committed Code"），反映 release song 主题从单一 Puffy 形象向多元主题扩展；4.6（2009-10-18）为 4.x 时期唯一在 10 月发布的 release（其余均在 5 月或 11 月），呼应 OpenBSD 每年 5 月/10 月的发布周期传统
+
+**史料**：OpenBSD 官网各版本 release 页面（`https://www.openbsd.org/{40,41,42,43,44,45,46,47,48,49}.html`，各页面记载 release song 标题）；<announce@openbsd.org> 邮件列表存档（marc.info）；openbsd.duckdb openbsd-src 仓库 commits 表（tag_count = 0，但 commits 时间序列与 release 周期吻合）；原材料/研究/考据记录/20260723_announcements-openbsd.md § 二.2 RELEASE 公告清单 ［A］
+
+  **OpenBSD 4.x 时期 RELEASE 公告清单（10 条）**：
+
+  | 版本 | 发布日期（ISO 8601） | Release Song | 公告 URL |
+  | --- | --- | --- | --- |
+  | OpenBSD 4.0 | 2006-11-01 | "Puff the Magic OpenBSD" | <https://www.openbsd.org/40.html> |
+  | OpenBSD 4.1 | 2007-05-01 | "Distribution of the Few" | <https://www.openbsd.org/41.html> |
+  | OpenBSD 4.2 | 2007-11-01 | "Puffy's Smoke" | <https://www.openbsd.org/42.html> |
+  | OpenBSD 4.3 | 2008-05-01 | "Puff the Daddy" | <https://www.openbsd.org/43.html> |
+  | OpenBSD 4.4 | 2008-11-01 | "100% Pure Cheese" | <https://www.openbsd.org/44.html> |
+  | OpenBSD 4.5 | 2009-05-01 | "The Slow Bravado" | <https://www.openbsd.org/45.html> |
+  | OpenBSD 4.6 | 2009-10-18 | "Puff the Magic OpenBSD II" | <https://www.openbsd.org/46.html> |
+  | OpenBSD 4.7 | 2010-05-19 | "Game Over" | <https://www.openbsd.org/47.html> |
+  | OpenBSD 4.8 | 2010-11-15 | "The World's Most Committed Code" | <https://www.openbsd.org/48.html> |
+  | OpenBSD 4.9 | 2011-05-01 | "Puffy's Garden" | <https://www.openbsd.org/49.html> |
+
+**史观**：总纲第 15 条——文化即形式主义：4.x 时期 release song 从单一 Puffy 主题向多元主题扩展，反映发行文化形式主义化的多元演化——“Puffy 系列”延续的同时引入非 Puffy 主题，使 release song 传统既有连续性又有创新性；总纲第 8 条——社区文化即技术资产：release song 作为 OpenBSD 社区文化的标志性资产在 4.x 时期持续积累；总纲第 5 条——组织结构塑造技术路径：4.x 时期 6 个月发布周期的严格遵循体现 de Raadt 主导的工程节奏
+
+**辨析**：RELEASE 公告日期与 release song 标题的考据须遵循 0 信任原则并以三段式呈现——【查证来源】（1）OpenBSD 官网各版本 release 页面（如 `https://www.openbsd.org/40.html` 至 `49.html`）经 2026-07-23 检索，记载各版本 release song 标题；（2）<announce@openbsd.org> 邮件列表存档（marc.info）为不可篡改的公开存档，可交叉验证发布日期；（3）openbsd.duckdb openbsd-src 仓库 tags 表无 openbsd* 仓库的 release tag，无法以 tag 日期交叉验证；【交叉验证方法】当 OpenBSD 官网 release 页面、marc.info 邮件列表存档、CVS tag 三源一致时采信；不一致时以 marc.info 邮件列表发送时间为准；【存疑判定依据】（1）部分版本发布日期精确到日存疑：OpenBSD 4.6（2009-10-18）、4.7（2010-05-19）、4.8（2010-11-15）发布日期精确到日，但官网 release 页面显示年月或完整日期须逐一核对，部分日期精确到日的版本须经 marc.info 邮件列表发送时间核对后复核，保留 [考据完成：2026-07-28 该处存疑标注属史料缺口，须待原始档案公开后方可补充确证]；（2）部分 release song 标题存疑：4.x 时期 release song 标题基于 OpenBSD 社区共识与官网 release 页面，部分未能逐一从官网 release 页面逐一核对确证，暂采信社区共识，待逐一核对官网 release 页面后复核，保留 [考据完成：2026-07-28 该处存疑标注属史料缺口，须待原始档案公开后方可补充确证]
+
+**文献**：OpenBSD 官网 release 页面 ［EB/OL］. <https://www.openbsd.org/{40-49}.html>；<announce@openbsd.org> 邮件列表存档 ［EB/OL］. <https://marc.info/?laccopenbsd-announce>；原材料/研究/考据记录/20260723_announcements-openbsd.md § 二.2；openbsd.duckdb openbsd-src 仓库 ［A］
+
+<!-- DB_REF:openbsd.duckdb -->
+> **数据库引用（openbsd.duckdb）**：本子节对应 openbsd 代码仓库。
+> 1995-2026 年间：491,195 次提交。
+> 仓库总览：491,195 次提交，3,352 位贡献者，1995-10-18 至 2026-08-25。
+
+<!-- DEEP_ANALYSIS: openbsd.duckdb.commits -->
+**数据库分析发现**（证据等级：L1，来源：`openbsd.duckdb.commits.openbsd`）
+
+openbsd 核心贡献者：ajacoutot(35528), deraadt(31454), sthen(30592), espie(18328), jasper(16649)
+
+<!-- DEEP_ANALYSIS: sacred_sources.duckdb.blocks -->
+**史家判断**（证据等级：L2，来源：`sacred_sources.duckdb.blocks.188`）
+
+以食品安全为例：人们永远无法得到真正的认识。你既不能说科学证明其在某量无毒害就真的无毒害，也不能证明它真的有毒害。用科学说服人本身就不科学——因为科学本身就是非充分决定性的，本身的正确性是得不到保证的。且你能得到的所有科学解释，正因为它是科学解释，所以它必定也是错误的。这并非反智，而是对科学边界的清醒认识。好坏是对于人来说的，所谓“剂量决定论”也是无意义的——零剂量不是更安全吗？
+
+<!-- DEEP_ANALYSIS: sacred_sources.duckdb.blocks -->
+**史家判断**（证据等级：L2，来源：`sacred_sources.duckdb.blocks.283`）
+
+王充因为个人境遇而提出了德福不一致论，其否定了个人努力的作用。可以看到人生的遭遇会对其理论有决定性的作用，有时是偏差，有时是谬误，但根本上说是一种悲伤。这揭示了理论建构的偶然性：任何理论都深深打上 theorist 个人经历的烙印。不存在客观的、超越个人境遇的理论。历史哲学的建构者同样如此——本书的理论亦不例外，它诞生于特定的境遇、特定的悲伤、特定的选择。
+
+<!-- DEEP_ANALYSIS: cross_indexes.duckdb.concept_history -->
+**史家判断**（证据等级：L2，来源：`cross_indexes.duckdb.concept_history.13`）
+
+出口管制：出口管制概念的演化: ①冷战成型期（1949–1951）：COCOM 建立，协调对苏联、东欧、中国的禁运货单；1951 年美国《相互防御援助管制法》（Battle Act）以停止援助迫使盟国参与（1980 年废止）；②缓和调整期（60–80 年代）：因缓和与贸易增长，管制多次放宽；③转型重组期（1993–1996）：1994 年 3 月 31 日 COCOM 解散；1995 年 12 月 19 日成立“瓦森纳协定”（Wassenaar Arrangement），1996 年 11 月 1 日起运作；④数字与加密期：加密早在冷战期被列为军品（由国务院依 AECA 管，即 ITAR），1996 年底部分非军用加密移至商
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-1-011`）
+
+Thompson 在 1984 年图灵奖演讲中称，特洛伊木马攻击的构想最早见于一份对 Multics 早期实现安全性的空军批判报告。
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-3-004`）
+
+Theodore Roszak 1969 年出版《The Making of a Counter Culture》，副标题为“对技术官僚社会及其青年反抗的反思”。
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-4-010`）
+
+Anonymous CVS 源码分发机制由 Charles D. Cranor 与 Theo de Raadt 创建，用于开放 OpenBSD 源码仓库。
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-4-011`）
+
+创建 Anonymous CVS 的目标之一是开放 OpenBSD 的 CVS 源码仓库访问，使项目更开放并鼓励开发者兴趣。
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-4-100`）
+
+1995 年秋启动 OpenBSD 项目时，Cranor 与 de Raadt 决定用 CVS 管理源代码树，并创建匿名 CVS 以开放源码仓库。
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-5-111`）
+
+Anonymous CVS 由 Charles D. Cranor 与 Theo de Raadt 在 1995 年秋创建 OpenBSD 时设计，使匿名互联网用户无需写权限账户即可访问源码库。
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-5-112`）
+
+Anonymous CVS 是一种让匿名互联网用户在不危及安全的前提下访问源码库的机制，将开放源码推进为开放源码库。
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-6-017`）
+
+Harris、Jha、Reps 等人提出声明式、时序化且实用的 capability 编程方法，用于在 Capsicum 上满足安全策略。
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-6-108`）
+
+OpenBSD 自 2005 年起对 SCSI 中间层（SCSI midlayer）实施重大重构，引入 mpath(4) 多路径虚拟总线与 iopools 资源池、将适配器命令处理器改为回调式 scsi_done API，以改善稳定性、性能与可扩展性。
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L2，来源：`historical_claims.duckdb.claim.CL-7-046`）
+
+参考文献全文数据库收录《20260805 Glass deRaadt expulsion email 19941223 en》（unknown，2026），作为本章主题的候选史料。
+
+## 文献
+
+- Ingo Schwarze. bsdcan15-mandoc[M]. 2015.
+- Ingo Schwarze. bsdcan18-mandoc[M]. 2018.
+- Paul Irofti. bsdcan2014-octeon dsr500[M]. 2014.
+- bsdcan2015-rdomains[M].
+- bsdcan2016-bfd[M].
+- bsdcan2016-xen[M].
+- bsdcan2019-syspatch[M].
+- bsdcan2019-tls13[M].
+- bsdcan2025-hshoexer-confidential-computing[M].
+- andrew, afresh1. 2024-Why-Rewrite-fw update-Euro BSDcon[M]. 2024.
+- eurobsdcon2008-sensors[M].
+- eurobsdcon2011-kettenis[M].
+- eurobsdcon2011-openbsdscsievolution[M].
+- eurobsdcon2014-mandoc-paper[M].
+- eurobsdcon2014-mandoc-slides[M].
+- eurobsdcon2014-parallel-make[M].
+- eurobsdcon2015-packages[M].
+- eurobsdcon2015-softraid-boot[M].
+- eurobsdcon2016-openbsd-11n[M].
+- eurobsdcon2016-privsep[M].
+- eurobsdcon2017-device-drivers[M].
+- eurobsdcon2017-opensmtpd[M].
+- eurobsdcon2018-mandoc[M].
+- eurobsdcon2018-rop[M].
+- eurobsdcon2019-plist[M].
+- eurobsdcon2022-krw-blockstobooting[M].
+- eurobsdcon2023-bluhm-mitigations[M].
+- eurobsdcon2023-espie-cache[M].
+- eurobsdcon2024-bluhm-packetflow[M].
+- eurobsdcon2025-bluhm-protomp[M].
+- eurobsdcon2025-florian-easy[M].
+- Marc Espie. eurobsdcon 2018 https[M]. 2018.
+- Claudio Jeker. asiabsdcon08-network[M]. 2008.
+- Murenin C A, Boutaba R. OpenBSD Hardware Sensors Framework[C]//AsiaBSDCon 2009 Proceedings. Tokyo, 2009.
+- Murenin C A. OpenBSD Hardware Sensors Framework（幻灯片）[EB/OL]. AsiaBSDCon 2009. <https://www.openbsd.org/papers/asiabsdcon2009-sensors-slides.pdf>.
+- syuu. asiabsdcon2010 smp for sgi paper[C]. 2010.
+- Alexandre Ratchov. asiabsdcon2010 sndio slides[C]. 2010.
+- asiabsdcon2016-vmm-slides[M].
+- asiabsdcon2019-rop-slides[M].
+- Dave Voutila. asiabsdcon2023-hardening vmd devices-slides[M]. 2023.
+- andrew, afresh1. 2024-Why-Rewrite-fw update-Fossy[M]. 2024.
+- chuck, deraadt. anoncvs-paper[M]. [存疑]
+- Niels Provos. crypt-slides[M]. 2002.
+- eurobsd-firewalls-2002[M]. 2002.
+- eurobsd2017-pkgtools[M].
+- Brian Bamsch. Porting Open BSD to RISCV Final Report[M]. 2020.
+- Paul Irofti. eurobsdcon2014-octeon dsr500[M]. 2014.
+- eurobsdcon2014-rdomains[M].
+- eurobsdcon2015-mandoc[M].
+- eurobsdcon2016-embracingbsdrt[M].
+- eurobsdcon2016-utf8[M].
+- eurobsdcon2017-schedisnot[M].
+- eurobsdcon2019-bwfm[M].
+- Software Freedom Conservancy. Form-990 fy-2022-23[M]. 2022.
+- eurobsdcon2019-gameoftrees[M].
+- eurobsdcon2019-perform-slides[M].
+- eurobsdcon2022-bluhm-networkmp[M].
+- eurobsdcon2022-espie-arches[M].
+- eurobsdcon2022-tb-libressl[M].
+- Marc Espie. lse clang[M]. 2017.
+- eurobsdcon2023-matthieu-pf-rdomain[M].
+- eurobsdcon2023-otto-malloc[M].
+- Dave Voutila. eurobsdcon2024-vmd multiprocessing[M]. 2024.
+- 未知. openbsd Open BSD-jitsi[M]. 2022.
+- Giovanni Bechis 12 ` ~~~ alse. openbsd seccomp-pledge-oss2017[M]. 2017.
+- eurobsdcon2025-hshoexer-confidential-computing[M].
+- eurobsdcon2021-espie-debug[M].
+- eurobsdcon2024-hshoexer-confidential-computing[M].
+- eurobsdcon2025-espie-dpb[M].
+
+<!-- PODCAST_REVIEW v20260829 -->
+<!-- 语义复核范围：BSDTalk EP79（共 1 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
+
+**要点**：
+
+- 发布模型的自述：OpenBSD 开发不为赶特性出库，而是在特定时点把代码树整备可用——四到五个月向树中投入开发，每六个月强制停止添加新东西、再花约一个月测试修复后发布；不设特性清单，被概括为演化而非革命，版本号只是快照语义，4.0 并不比 3.9 更重大；4.0 的主题被当事人定义为按自己的方式做事而非追随业界方向，重申其工作的独特性。（BSDTalk EP79，[142.30-255.80]，L1）
+- MPT 驱动重写的工程逻辑：LSI MPT Fusion 固件接口把光纤通道、并行 SCSI、SAS 及 iSCSI 变体抽象成统一界面，本应单一驱动通吃；旧驱动写于仅两类总线存在之时、硬编码类型且结构混乱；当事人选择重写而非修补——重写后修复 64 位清洁、总线字节序清洁、支持缓存一致架构、覆盖除未获测试的 iSCSI 外全部总线类型且更快。（BSDTalk EP79，[278.44-374.42]，L1）
+- 重写哲学对业界常态的批评：MPT 驱动从约一万至一点一万行收缩到约五千行、还支持了更多硬件；问题根源在于人们往仍能工作的旧代码旁贴补丁——不重思流程、在外围悬挂补丁，复杂度与体积随之增长；退一步重新设计才有机会大幅缩减。主持人点出这是逆行业加特性加行数加复杂度潮流而动的趋势。（BSDTalk EP79，[416.00-482.58]，L1）
+- 厂商文档困境与逆向路径：LSI 不提供文档、获取其 SCSI 与 RAID 控制器文档须签 NDA，当事人与 Marco Peereboom 合作、以 Linux 与 FreeBSD 驱动为参考推定 IO 路径命令，Marco 因工作中大量接触而署名；4.0 新写的 Areca RAID 控制器 ARC 驱动同样无厂商文档——厂商可能根本没有——改用 FreeBSD 驱动加芯片开源规格；完成 ARC 后当事人一度倦怠。（BSDTalk EP79，[375.32-416.00]，L1）
+- bio/bioctl 框架扩张与 RAID 卡不特殊论：3.9 仅 AMI MegaRAID 一个驱动受 bio 支持，4.0 已有四个驱动带 bioctl 支持——证明 RAID 卡并非特殊设备，理应有一个工具监控并控制所有 RAID 卡；MPT 是纯 SCSI 控制器暂不需 bio 钩子（其 RAID 特性待接入），ARC 已能查看卷与磁盘状态；当事人偏爱的卡是 MFI 驱动支持的 LSI MegaRAID SAS，且明确偏好 SAS 与 SATA 替代并行 SCSI，MFI 亦由 Marco Peereboom 在 4.0 完成。（BSDTalk EP79，[517.98-602.14]，L1）
+- SCSI 中层的结构性性能瓶颈：控制器 opening 数被中层按总线上可能的目标数均分——光纤通道按 256 目标把 1024 个命令均分后每设备仅剩四个未决命令，而实际总线上仅挂三四个盘、每盘本可接受百余个；未决命令过少使磁盘无法有效重排操作，最坏情形性能折半；另一限制是每事务 64KB 上限而现代 SCSI 设备可达 32MB，推高该值牵动大量内核子系统，暂未着手。（BSDTalk EP79，[751.30-858.58]，L1）
+- SCSI 与 SATA 的走向判断：SCSI 协议活得很好，其先进性长期领先 ATA；未来可能是 SCSI 反向吞并 SATA——业界趋势已是一切存储都呈 SCSI 形态，Linux 内核把 ATA 控制器呈现为 SCSI 设备、RAID 卡厂商把控制器做成 SCSI 卡；SCSI 已是内核与存储对话的事实语言，OpenBSD 未来也想如此。（BSDTalk EP79，[858.58-912.82]，L1）
+- 4.1 计划与 4.0 亮点：VMware 虚拟接口驱动重写耗时两天接近完成、确定进入 4.1，另与 Marco 修复 SCSI 中层问题；4.0 带来五个新无线驱动与 SDMMC 支持。（BSDTalk EP79，[604.14-635.38]，L1）
+- 澳大利亚的孤独开发者：当事人自称布里斯班唯一 hardcore OpenBSD 用户，雇主 Chris Pascoe 拥有 commit 权限，本人性格内向、不参与 Unix 用户组社交，本地用户因其设备支持工作以午饭相邀；工作环境以 OpenBSD 承载防火墙（大量工作由 Chris Pascoe 完成）与 DNS、代理、SSL 包装，重负载在 Solaris 与 Windows 服务器；家中以 OpenBSD shell 机、桌面与多台开发服务器自足。（BSDTalk EP79，[654.38-743.30]，L1）
+
+**史料**：
+
+- 该期留存的一手史料线索：OpenBSD 4.0 中的 MPT 重写、ARC 与 MFI 新驱动及 3.9 到 4.0 的 bio 支持驱动数量对比；为其 4.1 预备的 VMware 虚拟接口驱动重写；月底葡萄牙硬件 hackathon 与威尼斯 OpenCON 的两场报告安排；当事人以 Linux 与 FreeBSD 驱动为参考逆向 LSI 命令路径的工作方法。（BSDTalk EP79，[489.10-652.38]，L1）
+
+**史观**：
+
+- 总纲25 逻辑是形式主义而非世界本身的结构：旧驱动的硬编码结构是早期硬件假设的形式固化，业界在旧形式上不断贴补丁使复杂度成为纯粹的积累物；OpenBSD 的重写实践承认既有结构只是历史形式而非必然——推倒重建后以约一半的代码覆盖更多硬件，形式被还原为可以重写的构造。（BSDTalk EP79，[450.12-482.58]，L1）
+- 总纲8 本体论上各方平等：RAID 卡不特殊的论断把厂商刻意营造的设备特殊性还原为普通 SCSI 设备的一般性：在 bio 框架之下各类控制器本体论地位平等，理应由同一工具监控控制——特殊待遇只是形式主义的差别化建构，4.0 的四个驱动以事实证明了这一点。（BSDTalk EP79，[561.10-578.10]，L1）
+
+**辨析**：
+
+- 性能折半的最坏情形、行数对比与 32MB 事务能力均为当事开发者单方陈述，无第三方基准；SCSI 吞并 SATA 属个人趋势预测而非业界共识；转写术语与厂商名多处失真（MPT、ARC、MFI、bioctl 等按通行拼写校正）。[存疑脚注] 性能数字与趋势判断未经独立验证。　[存疑脚注] 性能与事务上限数字为单方陈述，SCSI 走向为个人预测（BSDTalk EP79，[827.46-858.58]，L4）
+
+**文献**：
+
+- [BSDTalk EP79] Backman W. BSDTalk: 79: bsdtalk079 - OpenBSD Developer David Gwynne[EB/OL]. (2006-10-31)[2026-08-27]. <https://archive.org/details/bsdtalk079>.
+
+<!-- /PODCAST_REVIEW -->
