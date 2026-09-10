@@ -4,13 +4,13 @@
 
 **要点**：illumos-gate.duckdb 显示 DragonFly fork 后 23 年间（2003-2026）LWKT 消息传递、HAMMER/HAMMER2、vkernel 三大核心创新均未被 Linux/illumos 主流内核采纳——Linux 选择 BKL 逐步消除（2.6 系列 2003-2011）+ ext4/btrfs + KVM 路线，illumos 选择细粒度锁 + ZFS + Zones 路线。Linux/illumos 社区对 DragonFly fork 必要性的质疑基于该事实：DragonFly 技术产出未对业界产生显著影响，fork 的边际收益难以证明其分裂成本
 
-**史料**：bsd_commits.db dragonfly-src 仓库 commits 表与 commit_files 表（LWKT/HAMMER/HAMMER2/vkernel 首引 commit 序列）；Linux 2.6 内核变更日志（kernelnewbies.org/LinuxVersions）；illumos 源码仓库（github.com/illumos/illumos-gate）；Slashdot/LWN/Hacker News 讨论（2003-2007 年间 DragonFly fork 讨论原始帖[考据完成：2026-07-28 经穷尽联网考据，上述史料清单为已知公开来源汇总，部分原始档案未公开数字化或须档案馆藏地现场核验，属史料缺口，须待原始档案公开后方可补充确证]）〔L1 代码/构建产物/L2 即时通讯记录/L3 官方文档与公告〕
+**史料**：dragonfly.duckdb dragonfly-src 仓库 commits 表与 commit_files 表（LWKT/HAMMER/HAMMER2/vkernel 首引 commit 序列）；Linux 2.6 内核变更日志（kernelnewbies.org/LinuxVersions）；illumos 源码仓库（github.com/illumos/illumos-gate）；Slashdot/LWN/Hacker News 讨论（2003-2007 年间 DragonFly fork 讨论原始帖[考据完成：2026-07-28 经穷尽联网考据，上述史料清单为已知公开来源汇总，部分原始档案未公开数字化或须档案馆藏地现场核验，属史料缺口，须待原始档案公开后方可补充确证]）〔L1 代码/构建产物/L2 即时通讯记录/L3 官方文档与公告〕
 
 **史观**：分离与聚合：外部视角对分裂的批评——Linux/illumos 社区以“未被采纳”标准评判 DragonFly fork 价值，反映业界主流以“技术影响力”为分裂正当性量度的实用主义史观；该标准与第 14 章边缘者贡献史观冲突——边缘者贡献不以业界采纳为唯一量度，DragonFly 23 年持续维护与 HAMMER2 生产可用本身即 fork 的内在价值
 
 **辨析**：外部批评是否了解 BSD 内部政治须区分——Linux/illumos 社区对 Dillon 与 FreeBSD Core Team 5.x 路线分歧的内部政治了解有限，其批评多基于“BSD 阵营整体竞争力”的外部视角；illumos-gate.duckdb 不能直接提供 Slashdot/LWN/Hacker News 评论数据，正式撰写时须以原始帖 URL 与时间戳追溯核验，避免二手转述变形
 
-**文献**：bsd_commits.db dragonfly-src 仓库 commits 表与 commit_files 表（核心子系统首引 commit）；Linux 2.6 内核变更日志 [EB/OL]. <https://kernelnewbies.org/LinuxVersions>；illumos source repository [EB/OL]. <https://github.com/illumos/illumos-gate> ［A］
+**文献**：dragonfly.duckdb dragonfly-src 仓库 commits 表与 commit_files 表（核心子系统首引 commit）；Linux 2.6 内核变更日志 [EB/OL]. <https://kernelnewbies.org/LinuxVersions>；illumos source repository [EB/OL]. <https://github.com/illumos/illumos-gate> ［A］
 
 ## 217.3.2 FreeBSD Core Team 的辩护与批评
 
@@ -28,13 +28,13 @@
 
 **要点**：NetBSD 1996 年被 OpenBSD fork 后亦面临类似批评——bsd_commits.db 显示 OpenBSD 23 年间（1996-2019，至 de Raadt 2019 年仍主导）建立安全细分市场领导地位，fork 的边际收益明显；DragonFly 23 年间（2003-2026）LWKT/HAMMER/HAMMER2 未建立类似细分市场，fork 的边际收益存疑。BSD 社区对频繁分裂的反思长期存在但未形成有效预防机制——1996 OpenBSD fork 与 2003 DragonFly fork 间隔仅 7 年
 
-**史料**：bsd_commits.db dragonfly-src/openbsd-src/netbsd-src 仓库 commits 表（按年统计对照）；OpenBSD 1996 fork 公告（openbsd.org/）；DragonFly 2003 fork 公告（lists.freebsd.org/pipermail/freebsd-current/2003-July/006889.html）；BSDCan 会议记录（bsdcan.org）〔L1 代码/构建产物/L3 官方文档与公告/L4 事后叙述〕
+**史料**：dragonfly.duckdb dragonfly-src/openbsd-src/netbsd-src 仓库 commits 表（按年统计对照）；OpenBSD 1996 fork 公告（openbsd.org/）；DragonFly 2003 fork 公告（lists.freebsd.org/pipermail/freebsd-current/2003-July/006889.html）；BSDCan 会议记录（bsdcan.org）〔L1 代码/构建产物/L3 官方文档与公告/L4 事后叙述〕
 
 **史观**：终结与延续：分裂历史的循环——OpenBSD 1996 fork 与 DragonFly 2003 fork 间隔 7 年，BSD 社区对频繁分裂的反思未形成有效预防机制；OpenBSD fork 后建立安全细分市场（pledge/unveil/LibreSSL）证明 fork 的边际收益，DragonFly fork 后未建立类似细分市场反映 fork 收益的不确定性
 
 **辨析**：分裂是否真是 BSD 文化的“缺陷”还是分散演化的策略存在争议——bsd_commits.db 显示四大 BSD 项目（FreeBSD/NetBSD/OpenBSD/DragonFly）在 1996-2026 年间各自建立不同细分市场（FreeBSD 通用服务器、NetBSD 跨平台、OpenBSD 安全、DragonFly 消息传递架构），分裂客观上促成 BSD 阵营的细分市场覆盖；“分裂是缺陷”的判断以“阵营整体竞争力”为量度，“分裂是策略”的判断以“细分市场覆盖”为量度，二者标准不同
 
-**文献**：bsd_commits.db dragonfly-src/openbsd-src/netbsd-src 仓库 commits 表（按年统计对照）；OpenBSD 1996 fork announcement [EB/OL]. <https://www.openbsd.org/>；Dillon M. DragonFly BSD fork announcement [EB/OL]. <https://lists.freebsd.org/pipermail/freebsd-current/2003-July/006889.html>, 2003-07 ［A］
+**文献**：dragonfly.duckdb dragonfly-src/openbsd-src/netbsd-src 仓库 commits 表（按年统计对照）；OpenBSD 1996 fork announcement [EB/OL]. <https://www.openbsd.org/>；Dillon M. DragonFly BSD fork announcement [EB/OL]. <https://lists.freebsd.org/pipermail/freebsd-current/2003-July/006889.html>, 2003-07 ［A］
 
 ## 217.3.4 批评原始发言与引用考据
 

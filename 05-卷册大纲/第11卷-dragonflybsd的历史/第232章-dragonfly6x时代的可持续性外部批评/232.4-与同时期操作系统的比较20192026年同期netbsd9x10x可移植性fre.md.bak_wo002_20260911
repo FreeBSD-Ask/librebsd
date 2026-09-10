@@ -38,7 +38,7 @@
 
 ## 232.4.4 各项目发布数据与市场份额考据
 
-**要点**：bsd_commits.db 提供四仓库 2019-2026 年 commit 量对照量化数据：2019 年 freebsd-src = 14273、netbsd-src = 10227、openbsd-src = 7930、dragonfly-src = 1962；2024 年 freebsd-src = 14541、netbsd-src = 5985、openbsd-src = 6512、dragonfly-src = 277；2026 年截至 7 月 freebsd-src = 9041、netbsd-src = 3247、openbsd-src = 3205、dragonfly-src = 906。DragonFly 在四仓库中 commit 量持续最低，2024 年谷值 277 条仅为 FreeBSD 同期 1.9%。各项目发布频率、committer 数量、用户社区规模、市场份额数据须结合 release notes、Foundation 年报、邮件列表活跃度多源交叉验证。四仓库 2019/2024/2026 年 commit 量对照如下：
+**要点**：freebsd.duckdb 提供四仓库 2019-2026 年 commit 量对照量化数据：2019 年 freebsd-src = 14273、netbsd-src = 10227、openbsd-src = 7930、dragonfly-src = 1962；2024 年 freebsd-src = 14541、netbsd-src = 5985、openbsd-src = 6512、dragonfly-src = 277；2026 年截至 7 月 freebsd-src = 9041、netbsd-src = 3247、openbsd-src = 3205、dragonfly-src = 906。DragonFly 在四仓库中 commit 量持续最低，2024 年谷值 277 条仅为 FreeBSD 同期 1.9%。各项目发布频率、committer 数量、用户社区规模、市场份额数据须结合 release notes、Foundation 年报、邮件列表活跃度多源交叉验证。四仓库 2019/2024/2026 年 commit 量对照如下：
 
     | 仓库 | 2019 年 | 2024 年 | 2026 年截至 7 月 | 2024 年与 DragonFly 比值 |
     |---|---|---|---|---|

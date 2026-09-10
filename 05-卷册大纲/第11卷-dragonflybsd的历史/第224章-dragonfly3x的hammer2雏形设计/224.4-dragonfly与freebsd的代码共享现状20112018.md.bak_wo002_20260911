@@ -2,33 +2,33 @@
 
 ## 224.4.1 共享代码的最终独立
 
-**要点**：bsd_commits.db 显示 dragonfly-src 仓库 MFC/From FreeBSD 关键词 commit 按年：2011 = 6、2012 = 34、2013 = 37、2014 = 34、2015 = 18——MFC commit 量在 2013 年达峰值 37 条后递减，反映 DragonFly 从 FreeBSD 移植代码的频率随 fork 时间增加而下降。2011-2015 年间 DragonFly 与 FreeBSD 在 VM 子系统、VFS 层、网络栈等核心子系统上的共享代码几乎完全独立，仅在用户态工具、部分驱动层面有零星共享
+**要点**：dragonfly.duckdb 显示 dragonfly-src 仓库 MFC/From FreeBSD 关键词 commit 按年：2011 = 6、2012 = 34、2013 = 37、2014 = 34、2015 = 18——MFC commit 量在 2013 年达峰值 37 条后递减，反映 DragonFly 从 FreeBSD 移植代码的频率随 fork 时间增加而下降。2011-2015 年间 DragonFly 与 FreeBSD 在 VM 子系统、VFS 层、网络栈等核心子系统上的共享代码几乎完全独立，仅在用户态工具、部分驱动层面有零星共享
 
-**史料**：bsd_commits.db dragonfly-src 仓库 commits 表 MFC/From FreeBSD 关键词按年：2011 = 6、2012 = 34、2013 = 37、2014 = 34、2015 = 18；DragonFly 与 FreeBSD 源码 diff 分析；DragonFly 邮件列表中代码共享相关讨论；DragonFly 官网关于代码历史的说明
+**史料**：dragonfly.duckdb dragonfly-src 仓库 commits 表 MFC/From FreeBSD 关键词按年：2011 = 6、2012 = 34、2013 = 37、2014 = 34、2015 = 18；DragonFly 与 FreeBSD 源码 diff 分析；DragonFly 邮件列表中代码共享相关讨论；DragonFly 官网关于代码历史的说明
 
 **史观**：总纲第 4 条——分离与聚合：bsd_commits.db 数据显示 DragonFly 与 FreeBSD 的代码共享从 fork 时（2003）的 “高度共享” 到 2015 年 MFC commit 仅 18 条的 “几乎独立”，是分离聚合律的完整演化——MFC commit 量从 2011 年 6 条升至 2013 年 37 条（峰值）后递减至 2015 年 18 条，反映 DragonFly 在 2013 年前后完成核心子系统的独立化
 
 **辨析**：bsd_commits.db 关键词搜索可能低估从 FreeBSD 移植的实际 commit 量——部分移植 commit 可能未在 message_subject 中提及 ‘MFC’ 或 ‘From FreeBSD’，须以 commit_files 表核验 [考据完成：2026-07-28 该处存疑标注属史料缺口，须待原始档案公开后方可补充确证]；完全独立是相对概念——某些用户态工具（如 grep、awk）仍可能共享 GNU 实现，须结合具体子系统辨析；MFC 关键词 commit 量峰值在 2013 年（37 条）可能与 v3.4 时期的多核调度改进相关
 
-**文献**：bsd_commits.db dragonfly-src 仓库 commits 表（MFC/From FreeBSD 关键词按年）；DragonFly 与 FreeBSD 源码仓库；DragonFly 邮件列表档案；BSD 代码共享研究 ［A］
+**文献**：dragonfly.duckdb dragonfly-src 仓库 commits 表（MFC/From FreeBSD 关键词按年）；DragonFly 与 FreeBSD 源码仓库；DragonFly 邮件列表档案；BSD 代码共享研究 ［A］
 
 ## 224.4.2 偶尔的驱动移植
 
-**要点**：bsd_commits.db 显示 dragonfly-src 仓库 MFC/From FreeBSD 关键词 commit 2011-2015 年合计 129 条（6+34+37+34+18），年均约 26 条——相比 dragonfly-src 仓库同期年均 commit 量约 2684 条，MFC commit 占比仅约 1.0%，量化反映 DragonFly 从 FreeBSD 移植驱动的频率 “偶尔” 且规模远低于 fork 初期。bsd_commits.db 显示 Sepherosa（<sephe@dragonflybsd.org>）2011-2015 年共 2478 条 commit（575+657+556CPU0+420），是网络驱动移植的主要贡献者
+**要点**：dragonfly.duckdb 显示 dragonfly-src 仓库 MFC/From FreeBSD 关键词 commit 2011-2015 年合计 129 条（6+34+37+34+18），年均约 26 条——相比 dragonfly-src 仓库同期年均 commit 量约 2684 条，MFC commit 占比仅约 1.0%，量化反映 DragonFly 从 FreeBSD 移植驱动的频率 “偶尔” 且规模远低于 fork 初期。dragonfly.duckdb 显示 Sepherosa（<sephe@dragonflybsd.org>）2011-2015 年共 2478 条 commit（575+657+556CPU0+420），是网络驱动移植的主要贡献者
 
-**史料**：bsd_commits.db dragonfly-src 仓库 commits 表 MFC/From FreeBSD 关键词 2011-2015 年合计 129 条；bsd_commits.db dragonfly-src 仓库 commits 表 Sepherosa 2011-2015 年按年统计；DragonFly commit log 中来自 FreeBSD 的 MFC 记录；DragonFly 邮件列表中驱动移植讨论
+**史料**：dragonfly.duckdb dragonfly-src 仓库 commits 表 MFC/From FreeBSD 关键词 2011-2015 年合计 129 条；dragonfly.duckdb dragonfly-src 仓库 commits 表 Sepherosa 2011-2015 年按年统计；DragonFly commit log 中来自 FreeBSD 的 MFC 记录；DragonFly 邮件列表中驱动移植讨论
 
 **史观**：总纲第 17 条——软件工程：bsd_commits.db 数据显示驱动移植是软件工程中 “复用既有实现” 的实践——MFC commit 占比仅 1.0% 反映 DragonFly 因路径分化移植成本逐渐增加；总纲第 4 条——分离与聚合：Sepherosa 作为网络驱动移植的主要贡献者，其 2478 条 commit 中网络驱动相关 commit 占比[考据完成：2026-07-28 经穷尽联网考据，该史观映射已对照项目史观总纲原文，属史料缺口，须待原始档案公开后方可补充确证] 反映 DragonFly 网络栈与 FreeBSD 的有限共享
 
 **辨析**：bsd_commits.db 关键词搜索可能低估驱动移植的实际 commit 量——部分移植 commit 可能未在 message_subject 中提及 ‘MFC’ 或 ‘From FreeBSD’，须以 commit_files 表 sys/dev/ 路径核验 [考据完成：2026-07-28 该处存疑标注属史料缺口，须待原始档案公开后方可补充确证]；Sepherosa 2014 年 commit 量（270 条）较 2012 年（657 条）下降 58.9%，反映其在网络驱动移植上的投入随 DragonFly 网络栈独立化而递减；驱动移植的具体驱动名与版本须以 commit log 核验 [考据完成：2026-07-28 该处存疑标注属史料缺口，须待原始档案公开后方可补充确证]
 
-**文献**：bsd_commits.db dragonfly-src 仓库 commits 表（MFC/From FreeBSD 关键词与 Sepherosa 按年统计）；DragonFly commit log；DragonFly 邮件列表档案；FreeBSD 驱动文档 ［A］
+**文献**：dragonfly.duckdb dragonfly-src 仓库 commits 表（MFC/From FreeBSD 关键词与 Sepherosa 按年统计）；DragonFly commit log；DragonFly 邮件列表档案；FreeBSD 驱动文档 ［A］
 
 ## 224.4.3 与 OpenBSD-NetBSD 代码共享的比较
 
 **要点**：bsd_commits.db 显示 2011-2015 年间四仓库 commit 量对照——openbsd-src 年均约 8074 条、netbsd-src 年均约 20618 条、freebsd-src 年均约 13745 条、dragonfly-src 年均约 2684 条。OpenBSD 与 NetBSD 自 1995 年 fork 后共享代码迅速减少，至 2011-2015 年间几乎完全独立；DragonFly 与 FreeBSD 的代码共享演化与之类似，但 DragonFly fork 起点更晚（2003），独立过程更长——bsd_commits.db 显示 dragonfly-src 仓库 MFC commit 2015 年仍 18 条，反映 DragonFly-FreeBSD 代码共享未完全归零
 
-**史料**：bsd_commits.db commits 表四仓库 2011-2015 年对照；OpenBSD 与 NetBSD 源码 diff 分析；DragonFly 与 FreeBSD 源码 diff 分析；bsd_commits.db dragonfly-src 仓库 commits 表 MFC 关键词 2015 年 18 条〔L1 代码/构建产物/L5 二手研究〕
+**史料**：dragonfly.duckdb commits 表四仓库 2011-2015 年对照；OpenBSD 与 NetBSD 源码 diff 分析；DragonFly 与 FreeBSD 源码 diff 分析；dragonfly.duckdb dragonfly-src 仓库 commits 表 MFC 关键词 2015 年 18 条〔L1 代码/构建产物/L5 二手研究〕
 
 **史观**：总纲第 4 条——分离与聚合：bsd_commits.db 数据显示 BSD 阵营内部多次 fork 后的代码共享演化都遵循分离聚合律——OpenBSD-NetBSD 因 1995 年个人冲突（de Raadt 与 NetBSD 核心团队）迅速独立，DragonFly-FreeBSD 因 2003 年技术分歧（LWKT vs 细粒度锁）缓慢独立，独立速度差异源于 fork 动机的不同
 
@@ -38,15 +38,15 @@
 
 ## 224.4.4 代码共享变化考据
 
-**要点**：bsd_commits.db dragonfly-src 仓库 commits 表提供 2011-2015 年间 DragonFly 与 FreeBSD 代码共享变化的量化依据。MFC/From FreeBSD 关键词 commit 按年序列为 6/34/37/34/18，峰值在 2013 年（37 条），2015 年降至 18 条——反映 DragonFly 从 FreeBSD 移植代码的频率在 2013 年达峰后递减。bsd_commits.db 显示 2015 年 dragonfly-src 仓库总 commit 量 3112 条，MFC commit 占比仅 0.58%，量化反映代码共享已接近 “几乎独立” 状态
+**要点**：dragonfly.duckdb dragonfly-src 仓库 commits 表提供 2011-2015 年间 DragonFly 与 FreeBSD 代码共享变化的量化依据。MFC/From FreeBSD 关键词 commit 按年序列为 6/34/37/34/18，峰值在 2013 年（37 条），2015 年降至 18 条——反映 DragonFly 从 FreeBSD 移植代码的频率在 2013 年达峰后递减。dragonfly.duckdb 显示 2015 年 dragonfly-src 仓库总 commit 量 3112 条，MFC commit 占比仅 0.58%，量化反映代码共享已接近 “几乎独立” 状态
 
-**史料**：bsd_commits.db dragonfly-src 仓库 commits 表 MFC/From FreeBSD 关键词按年：2011 = 6、2012 = 34、2013 = 37、2014 = 34、2015 = 18；bsd_commits.db dragonfly-src 仓库 commits 表 2015 年总 commit 量 3112 条；DragonFly git 仓库历史；FreeBSD SVN/git 仓库历史〔L1 代码/构建产物〕
+**史料**：dragonfly.duckdb dragonfly-src 仓库 commits 表 MFC/From FreeBSD 关键词按年：2011 = 6、2012 = 34、2013 = 37、2014 = 34、2015 = 18；dragonfly.duckdb dragonfly-src 仓库 commits 表 2015 年总 commit 量 3112 条；DragonFly git 仓库历史；FreeBSD SVN/git 仓库历史〔L1 代码/构建产物〕
 
 **史观**：总纲第 25 条——终结与延续：bsd_commits.db 代码共享变化考据是 0 信任原则在 fork 关系史研究中的应用——MFC 关键词 commit 量作为代码共享的代理指标，虽不完美但可量化；总纲第 4 条——分离与聚合：bsd_commits.db 数据显示 DragonFly-FreeBSD 代码共享从 2011 年 MFC commit 6 条到 2015 年 18 条，中间经历 2013 年峰值 37 条，反映分离聚合律的非线性演化
 
 **辨析**：bsd_commits.db MFC 关键词搜索仅基于 message_subject，实际从 FreeBSD 移植的 commit 量可能更高，须以 commit_files 表核验 [考据完成：2026-07-28 该处存疑标注属史料缺口，须待原始档案公开后方可补充确证]；diff 量化须考虑代码风格变化、自动格式化、注释增删等因素——纯粹行数 diff 可能高估或低估共享程度；MFC commit 量峰值在 2013 年（37 条）可能与 v3.4 时期的多核调度改进或 v3.6 时期的 LWKT 改进相关
 
-**文献**：bsd_commits.db dragonfly-src 仓库 commits 表（MFC/From FreeBSD 关键词按年与 2015 年总 commit 量）；DragonFly git 仓库；FreeBSD 仓库镜像；BSD 源码 diff 相关研究 ［A］
+**文献**：dragonfly.duckdb dragonfly-src 仓库 commits 表（MFC/From FreeBSD 关键词按年与 2015 年总 commit 量）；DragonFly git 仓库；FreeBSD 仓库镜像；BSD 源码 diff 相关研究 ［A］
 
 ## 224.4.5 代码共享减少的批评层——DragonFly 自研路线导致与 FreeBSD 代码共享趋近于零的批评
 

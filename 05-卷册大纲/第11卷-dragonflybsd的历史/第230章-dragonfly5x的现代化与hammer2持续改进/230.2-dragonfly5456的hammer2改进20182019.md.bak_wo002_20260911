@@ -14,7 +14,7 @@
 
 **史观**：总纲第 17 条——软件工程：bsd_commits.db 数据显示 HAMMER 2 性能改进是对既有形式主义结构的渐进优化——2018-2019 年间 HAMMER2 关键词 commit 共 231 条，反映 Dillon 在 HAMMER 2 上的持续投入
 
-**辨析**：bsd_commits.db 关键词搜索可能低估 HAMMER 2 改进的实际 commit 量——部分 HAMMER 2 commit 可能以‘hammer2’小写或具体函数名为关键词，须以 commit_files 表核验 [考据完成：2026-07-28 该处存疑标注属史料缺口，须待原始档案公开后方可补充确证]；性能改进的具体数值须以 benchmark 报告核验，不同 benchmark 工具与负载下结果差异较大；v5.4.0 发布日期以 bsd_commits.db tags 表 tagger_date 为准——2018-12-01 而非 2020 年，原大纲“5.4（2020 年发布）”错误已修正；【数据缺口】bsd_commits.db 数据分析规划中 L2.2.1.sys_vfs_hammer2 查询在卷章数据映射中已登记，但实际数据报告中未见对应查询结果——L2.2.1 系列仅执行 sys/kern、sys/net、sys/geom、sys/cam、sys/dev、sys/vm、sys/fs、sys/contrib 八项子系统路径查询（均针对 freebsd-src 仓库），未覆盖 dragonfly-src 仓库 sys/vfs/hammer2/ 目录，本节 HAMMER 2 commit 数据来自 dragonfly-src 仓库 commits 表关键词搜索而非路径查询
+**辨析**：freebsd.duckdb 关键词搜索可能低估 HAMMER 2 改进的实际 commit 量——部分 HAMMER 2 commit 可能以‘hammer2’小写或具体函数名为关键词，须以 commit_files 表核验 [考据完成：2026-07-28 该处存疑标注属史料缺口，须待原始档案公开后方可补充确证]；性能改进的具体数值须以 benchmark 报告核验，不同 benchmark 工具与负载下结果差异较大；v5.4.0 发布日期以 freebsd.duckdb tags 表 tagger_date 为准——2018-12-01 而非 2020 年，原大纲“5.4（2020 年发布）”错误已修正；【数据缺口】freebsd.duckdb 数据分析规划中 L2.2.1.sys_vfs_hammer2 查询在卷章数据映射中已登记，但实际数据报告中未见对应查询结果——L2.2.1 系列仅执行 sys/kern、sys/net、sys/geom、sys/cam、sys/dev、sys/vm、sys/fs、sys/contrib 八项子系统路径查询（均针对 freebsd-src 仓库），未覆盖 dragonfly-src 仓库 sys/vfs/hammer2/ 目录，本节 HAMMER 2 commit 数据来自 dragonfly-src 仓库 commits 表关键词搜索而非路径查询
 
 **文献**：dragonfly.duckdb dragonfly-src 仓库 tags 表（v5.4.0 tagger_date）；dragonfly.duckdb dragonfly-src 仓库 commits 表（HAMMER2 关键词按年）；DragonFly 5.4 release notes [EB/OL]. dragonflybsd.org/release/；HAMMER 2 性能 benchmark 报告；中观模式挖掘.md §L2.2.1（数据缺口标注） ［A］
 
@@ -50,13 +50,13 @@
     | 加密支持 | 无 | 有 |
     | 去重改进 | 实时去重 | 持续改进 |
     DragonFly HAMMER 2 同期改进性能与快照，但功能集与生态仍弱于 OpenZFS——OpenZFS 有 FreeBSD/Linux 两大用户基础，HAMMER 2 仅在 DragonFly 内使用
-**史料**：bsd_commits.db dragonfly-src 仓库 commits 表（HAMMER2 关键词 commit 2018-2019 年统计）；OpenZFS 2.0/2.1 release notes；DragonFly 5.4/5.6 release notes〔L3 官方文档与公告/L5 二手研究〕
+**史料**：dragonfly.duckdb dragonfly-src 仓库 commits 表（HAMMER2 关键词 commit 2018-2019 年统计）；OpenZFS 2.0/2.1 release notes；DragonFly 5.4/5.6 release notes〔L3 官方文档与公告/L5 二手研究〕
 
 **史观**：总纲第 6 条——技术路线分化：openzfs.duckdb 数据显示 HAMMER 2 与 OpenZFS 在文件系统技术路线上持续分化——HAMMER 2 是 DragonFly 自研的轻量级写时复制文件系统，OpenZFS 是跨平台的开源 ZFS 实现，二者设计哲学不同
 
 **辨析**：技术比较须结合使用场景——openzfs.duckdb 显示 HAMMER 2 commit 量远低于 OpenZFS，但 HAMMER 2 适合资源受限场景（64MB 内存即可运行），OpenZFS 适合大规模存储场景（256MB ARC 内存基线）；OpenZFS 的跨平台特性为其带来更大用户基础，HAMMER 2 的 DragonFly 专属特性限制其生态；HAMMER 2 与 OpenZFS 设计哲学差异（HAMMER 2 采用 B+Tree 结构，OpenZFS 采用 merkle tree 结构）导致二者在快照、去重、加密等特性集上分化——OpenZFS 支持原生加密与持续改进的去重，HAMMER 2 无加密支持但具备实时去重；v5.4.0/v5.6.0 release notes 中 "HAMMER2" 表述须经 commit_files 表 sys/vfs/hammer2/ 路径互参以确认实际改进范围 [存疑脚注：HAMMER 与 ZFS 的设计哲学差异（B+Tree vs merkle tree）须经 sys/vfs/hammer2/ 与 OpenZFS 源码逐文件对比核验，本轮考据未联网核验]。0 信任原则应用维度：author 字段可伪造（HAMMER 2 commit 作者归属须与 committer 字段交叉验证，Dillon 作为 HAMMER 2 主要作者须与 <dillon@dragonflybsd.org>/dillon@apollo.backplane.com 双邮箱合并统计）、tagger_date 与实际发布日期可能偏差（v5.4.0/v5.6.0 tagger 均为 Sherrill，须与 Release Notes 互参）、关键词匹配局限（commit 量比较中 HAMMER2 关键词搜索可能低估实际 commit 量，部分 commit 可能以 hammer2 小写或具体函数名为关键词，须以 commit_files 表细分核验）。考据留痕至 `03-原始史料库/06-考据记录/20260730_jianyi缺口补全考据.md` 8ah 节
 
-**文献**：bsd_commits.db dragonfly-src 仓库 commits 表（HAMMER2 关键词统计）；OpenZFS 2.0/2.1 release notes [EB/OL]. openzfs.github.io/；DragonFly 5.4/5.6 release notes [EB/OL]. dragonflybsd.org/release/ ［A］
+**文献**：dragonfly.duckdb dragonfly-src 仓库 commits 表（HAMMER2 关键词统计）；OpenZFS 2.0/2.1 release notes [EB/OL]. openzfs.github.io/；DragonFly 5.4/5.6 release notes [EB/OL]. dragonflybsd.org/release/ ［A］
 
 ## 230.2.4 HAMMER 2 commit 记录考据
 

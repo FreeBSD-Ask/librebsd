@@ -28,13 +28,13 @@
 
 **要点**：freebsd.duckdb 显示 FreeBSD freebsd-src 仓库 contributors 表规模数倍于 DragonFly（具体数字[考据完成：2026-07-28 经穷尽联网考据，该要点所引数据已交叉验证，部分精确数字须待原始档案公开后方可补充确证]，须以同口径统计核验），社区规模差异直接决定边缘贡献者融入效率——FreeBSD 因社区规模更大、Core Team 选举机制、Foundation 资助的文档与外联项目，边缘贡献者融入相对容易；DragonFly 因社区规模小、Dillon 单一决策、无 Foundation 资助，边缘贡献者处境更为严峻
 
-**史料**：bsd_commits.db dragonfly-src/freebsd-src 仓库 contributors 表（规模对照[考据完成：2026-07-28 经穷尽联网考据，上述史料清单为已知公开来源汇总，部分原始档案未公开数字化或须档案馆藏地现场核验，属史料缺口，须待原始档案公开后方可补充确证]）；bsd_commits.db dragonfly-src/freebsd-src 仓库 commits 表（按年统计对照）；FreeBSD Foundation 年报（freebsdfoundation.org/our-donors/）；DragonFly BSD 无 Foundation 法律实体（dragonflybsd.org/foundation/ 404）〔L1 代码/构建产物/L3 官方文档与公告〕
+**史料**：dragonfly.duckdb dragonfly-src/freebsd-src 仓库 contributors 表（规模对照[考据完成：2026-07-28 经穷尽联网考据，上述史料清单为已知公开来源汇总，部分原始档案未公开数字化或须档案馆藏地现场核验，属史料缺口，须待原始档案公开后方可补充确证]）；dragonfly.duckdb dragonfly-src/freebsd-src 仓库 commits 表（按年统计对照）；FreeBSD Foundation 年报（freebsdfoundation.org/our-donors/）；DragonFly BSD 无 Foundation 法律实体（dragonflybsd.org/foundation/ 404）〔L1 代码/构建产物/L3 官方文档与公告〕
 
 **史观**：组织结构塑造技术路径：社区规模影响边缘者融入——FreeBSD Foundation 资助的社区外联项目（如 FreeBSD Journal、MeetBSD 会议、Google 编程之夏 参与）为边缘贡献者提供融入路径，DragonFly 无 Foundation 资助的对应项目，组织结构差异直接传导至边缘者融入效率
 
 **辨析**：比较须控制贡献类型（文档/代码/测试）的差异——bsd_commits.db 仅记录代码 commit，文档贡献与测试贡献不在统计范围内，正式撰写时须以邮件列表与文档仓库（freebsd-doc）补充非代码贡献统计；FreeBSD 社区亦存在边缘贡献者融入困难的问题（如部分 Core Team 成员公开批评新贡献者代码质量），不得理想化 FreeBSD 社区
 
-**文献**：bsd_commits.db dragonfly-src/freebsd-src 仓库 contributors 表（规模对照）；FreeBSD Foundation. Annual Reports [EB/OL]. <https://www.freebsdfoundation.org/our-donors/>；bsd_commits.db freebsd-doc 仓库（文档贡献统计对照） ［A］
+**文献**：dragonfly.duckdb dragonfly-src/freebsd-src 仓库 contributors 表（规模对照）；FreeBSD Foundation. Annual Reports [EB/OL]. <https://www.freebsdfoundation.org/our-donors/>；freebsd.duckdb freebsd-doc 仓库（文档贡献统计对照） ［A］
 
 ## 217.4.4 贡献者邮件与提交记录考据
 

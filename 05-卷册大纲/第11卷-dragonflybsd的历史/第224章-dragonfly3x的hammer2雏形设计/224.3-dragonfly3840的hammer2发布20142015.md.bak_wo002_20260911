@@ -8,7 +8,7 @@
 
 **史观**：总纲第 3 条——形式主义膨胀：HAMMER 2 是 Dillon 形式主义化的极致——将 “轻量级写时复制” 的哲学固化为完整的代码结构
 
-**辨析**：经 bsd_commits.db dragonfly-src 仓库 tags 表验证，v4.0.0 tag 的 tagger_date 为 2014-11-23T19:54:13-05:00（tagger: Justin C. Sherrill），与原叙事所称 “2016 年发布” 存在约 1 年 1 个月的偏差，已修正为 2014.11.23；tagger_date 作为 release tag 的创建时间，是发布日期的最权威代码级证据；HAMMER 2 的 “轻量级” 是相对概念——相比 ZFS 内存占用更小，但相比 HAMMER 1 仍有复杂度增加，需结合具体场景辨析 [存疑脚注：HAMMER 与 ZFS 的设计哲学差异（B+Tree vs merkle tree）须经 sys/vfs/hammer2/ 与 OpenZFS 源码逐文件对比核验，本轮考据未联网核验]。0 信任原则应用维度：tagger_date 与实际发布日期可能偏差（tagger 为 Justin C. Sherrill 而非 Dillon，须与 DragonFly 官方 Release Notes 互参）、author 字段可伪造（Sherrill 作为 release engineer 创建 tag，但实际代码作者须经 commit log 核验）、关键词匹配局限（tags 表中 "v4.0.0" 命名须与 DragonFly 版本命名规范交叉验证）。考据留痕至 `03-原始史料库/06-考据记录/20260730_jianyi缺口补全考据.md` 8ac 节
+**辨析**：经 dragonfly.duckdb dragonfly-src 仓库 tags 表验证，v4.0.0 tag 的 tagger_date 为 2014-11-23T19:54:13-05:00（tagger: Justin C. Sherrill），与原叙事所称 “2016 年发布” 存在约 1 年 1 个月的偏差，已修正为 2014.11.23；tagger_date 作为 release tag 的创建时间，是发布日期的最权威代码级证据；HAMMER 2 的 “轻量级” 是相对概念——相比 ZFS 内存占用更小，但相比 HAMMER 1 仍有复杂度增加，需结合具体场景辨析 [存疑脚注：HAMMER 与 ZFS 的设计哲学差异（B+Tree vs merkle tree）须经 sys/vfs/hammer2/ 与 OpenZFS 源码逐文件对比核验，本轮考据未联网核验]。0 信任原则应用维度：tagger_date 与实际发布日期可能偏差（tagger 为 Justin C. Sherrill 而非 Dillon，须与 DragonFly 官方 Release Notes 互参）、author 字段可伪造（Sherrill 作为 release engineer 创建 tag，但实际代码作者须经 commit log 核验）、关键词匹配局限（tags 表中 "v4.0.0" 命名须与 DragonFly 版本命名规范交叉验证）。考据留痕至 `03-原始史料库/06-考据记录/20260730_jianyi缺口补全考据.md` 8ac 节
 
 **文献**：DragonFly 4.0 release notes；HAMMER 2 设计文档；DragonFly 源码 sys/vfs/hammer2/；Justin C. Sherrill. v4.0.0 tag. dragonfly-src 仓库 [DB/OL]. 2014-11-23T19:54:13-05:00. tagger: Justin C. Sherrill; target commit: 9f7cee0f8e5c; target_commit_date: 2014-11-12T21:21:09+01:00 ［A］
 
@@ -26,15 +26,15 @@
 
 ## 224.3.3 HAMMER 2 与 OpenZFS/btrfs 的比较
 
-**要点**：bsd_commits.db 显示 dragonfly-src 仓库 HAMMER2 关键词 commit 2014 年 48 条、2015 年 86 条；freebsd-src 仓库 OpenZFS 关键词 commit 2014 年 0 条、2015 年 3 条——DragonFly 在 HAMMER 2 上的自研投入远超 FreeBSD 在 OpenZFS 上的整合投入。HAMMER 2 与 OpenZFS 相比——内存占用更小（64MB 即可运行 vs 256MB ARC 基线）、设计更轻量，但功能集与生态较弱；与 btrfs 相比——成熟度更高、稳定性更好，但社区支持与工具链较弱
+**要点**：dragonfly.duckdb 显示 dragonfly-src 仓库 HAMMER2 关键词 commit 2014 年 48 条、2015 年 86 条；freebsd-src 仓库 OpenZFS 关键词 commit 2014 年 0 条、2015 年 3 条——DragonFly 在 HAMMER 2 上的自研投入远超 FreeBSD 在 OpenZFS 上的整合投入。HAMMER 2 与 OpenZFS 相比——内存占用更小（64MB 即可运行 vs 256MB ARC 基线）、设计更轻量，但功能集与生态较弱；与 btrfs 相比——成熟度更高、稳定性更好，但社区支持与工具链较弱
 
-**史料**：bsd_commits.db dragonfly-src 仓库 commits 表 HAMMER2 关键词按年：2014 = 48、2015 = 86；bsd_commits.db freebsd-src 仓库 commits 表 OpenZFS 关键词按年：2014 = 0、2015 = 3；HAMMER 2、OpenZFS、btrfs 的技术比较文献；各文件系统的性能 benchmark；用户邮件列表讨论
+**史料**：dragonfly.duckdb dragonfly-src 仓库 commits 表 HAMMER2 关键词按年：2014 = 48、2015 = 86；freebsd.duckdb freebsd-src 仓库 commits 表 OpenZFS 关键词按年：2014 = 0、2015 = 3；HAMMER 2、OpenZFS、btrfs 的技术比较文献；各文件系统的性能 benchmark；用户邮件列表讨论
 
 **史观**：总纲第 6 条——技术路线分化：openzfs.duckdb 数据显示 HAMMER 2、OpenZFS、btrfs 是文件系统技术路线分化的典型——HAMMER 2 自研轻量级（2014-2015 年 134 条 HAMMER2 commit），OpenZFS 跨平台整合（FreeBSD 2014-2015 年仅 3 条 OpenZFS commit），btrfs Linux 主流生态
 
 **辨析**：openzfs.duckdb 关键词搜索可能低估 OpenZFS 整合的实际 commit 量——FreeBSD 的 ZFS commit 可能以 ‘zfs’ 小写或具体函数名为关键词而未提及 ‘OpenZFS’ [考据完成：2026-07-28 该处存疑标注属史料缺口，须待原始档案公开后方可补充确证]；技术比较须结合使用场景——HAMMER 2 适合资源受限的 BSD 场景，OpenZFS 适合大规模存储，btrfs 适合 Linux 主流生态；btrfs 与 HAMMER 2 同为 CoW 文件系统，但 btrfs 由 Oracle 主导、社区广，HAMMER 2 由 Dillon 个人主导、社区小
 
-**文献**：bsd_commits.db dragonfly-src 仓库 commits 表（HAMMER2 关键词按年）；bsd_commits.db freebsd-src 仓库 commits 表（OpenZFS 关键词按年）；HAMMER 2、OpenZFS、btrfs 的官方文档；第三方性能 benchmark 报告；用户邮件列表档案 ［A］
+**文献**：dragonfly.duckdb dragonfly-src 仓库 commits 表（HAMMER2 关键词按年）；freebsd.duckdb freebsd-src 仓库 commits 表（OpenZFS 关键词按年）；HAMMER 2、OpenZFS、btrfs 的官方文档；第三方性能 benchmark 报告；用户邮件列表档案 ［A］
 
 ## 224.3.4 HAMMER 2 设计文档与源码考据
 

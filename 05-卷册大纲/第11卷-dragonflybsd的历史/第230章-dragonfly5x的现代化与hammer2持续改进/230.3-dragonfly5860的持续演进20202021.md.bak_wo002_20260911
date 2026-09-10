@@ -15,11 +15,11 @@
     bsd_commits.db 显示 Sepherosa 2020 年仅 1 条 commit（其 2021-03-29 后淡出），反映 v5.8.0 是 DragonFly 网络栈由 Sepherosa 主导的末个版本——其后网络栈维护由 Dillon 与 Aaron LI 接续，但投入量显著下降
 **史料**：dragonfly.duckdb dragonfly-src 仓库 tags 表 v5.8.0 = 2020-02-29T12:19:38-05:00（tagger = Justin C. Sherrill，target_commit_hash = 3e3e37ead5f5541ecc6e5305287f44994bf55616）；dragonfly.duckdb dragonfly-src 仓库 contributors 表（Sepherosa Ziehau 4834 条 commit，first = 2005-08-28，last = 2021-03-29，2020 年仅 1 条）；DragonFly 5.8 release notes；kernel@ 邮件列表中网络栈讨论
 
-**史观**：总纲第 10 条——边缘者贡献：Sepherosa Ziehau 自 2005 年起持续维护 DragonFly 网络栈 15 年，bsd_commits.db 显示其 commit 量占 dragonfly-src 仓库总量约 12.4%（4834/38979），是 DragonFly 网络栈实际上的“边缘者支柱”——其淡出后网络栈改进投入下降，反映个人主导项目中边缘贡献者退场的直接后果；总纲第 7 条——硬件与软件辩证：高速网卡硬件普及推动 DragonFly 在网络栈上的投入，但 Sepherosa 淡出后 25GbE/100GbE 支持改进减缓
+**史观**：总纲第 10 条——边缘者贡献：Sepherosa Ziehau 自 2005 年起持续维护 DragonFly 网络栈 15 年，dragonfly.duckdb 显示其 commit 量占 dragonfly-src 仓库总量约 12.4%（4834/38979），是 DragonFly 网络栈实际上的“边缘者支柱”——其淡出后网络栈改进投入下降，反映个人主导项目中边缘贡献者退场的直接后果；总纲第 7 条——硬件与软件辩证：高速网卡硬件普及推动 DragonFly 在网络栈上的投入，但 Sepherosa 淡出后 25GbE/100GbE 支持改进减缓
 
 **辨析**：bsd_commits.db 关键词搜索可能低估网络栈改进的实际 commit 量——网络栈相关 commit 可能以‘tcp’/‘ip’/‘inp’等具体协议名为关键词而未提及‘network’，须以 commit_files 表核验 [考据完成：2026-07-28 该处存疑标注属史料缺口，须待原始档案公开后方可补充确证]；v5.8.0 发布日期以 bsd_commits.db tags 表 tagger_date 为准——2020-02-29 而非 2021 年，原大纲“5.8（2021 年发布）”错误已修正；Sepherosa 2020 年仅 1 条 commit 的事实须结合其 2019 年 commit 量核验 [考据完成：2026-07-28 该处存疑标注属史料缺口，须待原始档案公开后方可补充确证]——可能反映其已在 2019 年下半年开始淡出
 
-**文献**：bsd_commits.db dragonfly-src 仓库 tags 表（v5.8.0 tagger_date）；bsd_commits.db dragonfly-src 仓库 contributors 表（Sepherosa Ziehau 统计）；DragonFly 5.8 release notes [EB/OL]. dragonflybsd.org/release/；kernel@ 邮件列表档案 ［A］
+**文献**：dragonfly.duckdb dragonfly-src 仓库 tags 表（v5.8.0 tagger_date）；dragonfly.duckdb dragonfly-src 仓库 contributors 表（Sepherosa Ziehau 统计）；DragonFly 5.8 release notes [EB/OL]. dragonflybsd.org/release/；kernel@ 邮件列表档案 ［A］
 
 ## 230.3.2 SMP 性能与 LWKT 调度改进
 
@@ -30,13 +30,13 @@
     | 2020 | 301 | — |
     | 2021 | 161 | 下降 46.5% |
     bsd_commits.db 显示 Dillon 2021 年 commit 161 条（较 2020 年 301 条下降 46.5%），反映 v6.0.0 是 Dillon 个人投入下降背景下的版本发布——v6.0.0 的 SMP 改进主要由 Dillon 在 2020 年下半年至 2021 年 4 月间完成
-**史料**：bsd_commits.db dragonfly-src 仓库 tags 表 v6.0.0 = 2021-05-07T22:25:43-04:00（tagger = Justin C. Sherrill，target_commit_date = 2021-04-27T21:32:59+02:00）；bsd_commits.db dragonfly-src 仓库 commits 表（Dillon 2020 = 301、2021 = 161 条）；DragonFly 6.0 release notes；SMP 与 LWKT 改进 commit log；性能 benchmark 邮件
+**史料**：dragonfly.duckdb dragonfly-src 仓库 tags 表 v6.0.0 = 2021-05-07T22:25:43-04:00（tagger = Justin C. Sherrill，target_commit_date = 2021-04-27T21:32:59+02:00）；dragonfly.duckdb dragonfly-src 仓库 commits 表（Dillon 2020 = 301、2021 = 161 条）；DragonFly 6.0 release notes；SMP 与 LWKT 改进 commit log；性能 benchmark 邮件
 
 **史观**：总纲第 17 条——软件工程：bsd_commits.db 数据显示 v6.0.0 的 SMP 改进是在 Dillon commit 量下降（301→161）背景下完成的——LWKT 调度改进属“渐进优化”而非“重大重构”，反映 DragonFly 在 6.x 系列起已转入维护性改进阶段；总纲第 7 条——硬件与软件辩证：多核硬件普及推动 DragonFly 在 SMP 性能上的投入，但投入规模受限于开发者基数
 
 **辨析**：bsd_commits.db 显示 v6.0.0 的 target_commit_date（2021-04-27）与 tagger_date（2021-05-07）相差 10 天，反映 tag 创建与最后 commit 提交的时间差——v6.0.0 发行说明日期 2021.5.10 是 tag 创建后 3 天对外发布；性能改进的具体数值须以 benchmark 报告核验，不同 benchmark 工具与负载下结果差异较大；SMP/LWKT 改进的具体 commit 须以 commit_files 表核验 sys/kern/ 与 sys/sys/ 目录 [考据完成：2026-07-28 该处存疑标注属史料缺口，须待原始档案公开后方可补充确证]
 
-**文献**：bsd_commits.db dragonfly-src 仓库 tags 表（v6.0.0 tagger_date 与 target_commit_date）；bsd_commits.db dragonfly-src 仓库 commits 表（Dillon 按年统计）；DragonFly 6.0 release notes [EB/OL]. dragonflybsd.org/release60/；LWKT 设计文档；Justin C. Sherrill. v6.0.0 tag. dragonfly-src 仓库 [DB/OL]. 2021-05-07T22:25:43-04:00 ［A］
+**文献**：dragonfly.duckdb dragonfly-src 仓库 tags 表（v6.0.0 tagger_date 与 target_commit_date）；dragonfly.duckdb dragonfly-src 仓库 commits 表（Dillon 按年统计）；DragonFly 6.0 release notes [EB/OL]. dragonflybsd.org/release60/；LWKT 设计文档；Justin C. Sherrill. v6.0.0 tag. dragonfly-src 仓库 [DB/OL]. 2021-05-07T22:25:43-04:00 ［A］
 
 ## 230.3.3 与 FreeBSD 13.x/14.x 技术进展的比较
 
@@ -59,20 +59,20 @@
 
 ## 230.3.4 发布说明与 commit 记录考据
 
-**要点**：bsd_commits.db dragonfly-src 仓库 tags 表提供 v5.8.0 与 v6.0.0 的 tagger_date、tagger_name、target_commit_date 字段。v5.8.0 与 v6.0.0 对照如下：
+**要点**：dragonfly.duckdb dragonfly-src 仓库 tags 表提供 v5.8.0 与 v6.0.0 的 tagger_date、tagger_name、target_commit_date 字段。v5.8.0 与 v6.0.0 对照如下：
 
     | tag | tagger_date | target_commit_date | 时间差 | 发布模式 |
     |---|---|---|---|---|
     | v5.8.0 | 2020-02-29T12:19:38-05:00 | 2020-02-29T12:19:38-05:00 | 同日 | 快速发布 |
     | v6.0.0 | 2021-05-07T22:25:43-04:00 | 2021-04-27T21:32:59+02:00 | 10 天 | 长期积累后发布 |
     反映 v5.8.0 为快速发布（commit 与 tag 同日），v6.0.0 为长期积累后发布（commit 准备 10 天后 tag）
-**史料**：bsd_commits.db dragonfly-src 仓库 tags 表 v5.8.0/v6.0.0 完整字段序列；DragonFly 5.8/6.0 release notes；kernel@ 邮件列表中发布相关讨论
+**史料**：dragonfly.duckdb dragonfly-src 仓库 tags 表 v5.8.0/v6.0.0 完整字段序列；DragonFly 5.8/6.0 release notes；kernel@ 邮件列表中发布相关讨论
 
 **史观**：总纲第 25 条——终结与延续：bsd_commits.db tags 表 tagger_date 与 target_commit_date 字段对比是 0 信任原则在版本史研究中的应用——release notes 可能因时区或编辑延迟出现偏差，tagger_date 作为 git tag 创建时间是首选证据；总纲第 2 条——实践先于理论：v5.8.0 commit 与 tag 同日发布反映“实践完成即发布”的工程节奏，v6.0.0 commit 准备 10 天后 tag 反映“实践完成后预留审查期”的工程节奏
 
 **辨析**：release notes 与 commit log 偶有不一致——dragonfly.duckdb 显示 v6.0.0 的 target_commit_date（2021-04-27）与 tagger_date（2021-05-07）相差 10 天，反映 tag 创建与最后 commit 提交的时间差；v5.8.0 的 commit 与 tag 同日须以 commit_hash 与 target_commit_hash 是否一致核验 [考据完成：2026-07-28 该处存疑标注属史料缺口，须待原始档案公开后方可补充确证]；AMD64 与 NVMe 改进的具体 commit 须以 commit_files 表核验 [考据完成：2026-07-28 该处存疑标注属史料缺口，须待原始档案公开后方可补充确证]
 
-**文献**：bsd_commits.db dragonfly-src 仓库 tags 表（v5.8.0/v6.0.0 完整字段）；DragonFly 5.8/6.0 release notes [EB/OL]. dragonflybsd.org/release/；kernel@ 邮件列表档案 ［A］
+**文献**：dragonfly.duckdb dragonfly-src 仓库 tags 表（v5.8.0/v6.0.0 完整字段）；DragonFly 5.8/6.0 release notes [EB/OL]. dragonflybsd.org/release/；kernel@ 邮件列表档案 ［A］
 
 <!-- DB_REF:dragonfly.duckdb -->
 > **数据库引用（dragonfly.duckdb）**：本子节对应 dragonfly 代码仓库。

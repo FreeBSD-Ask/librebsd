@@ -43,7 +43,7 @@
     FreeBSD 采用 Core Team 选举+Foundation 治理的双重权限模型，OpenBSD 采用 de Raadt 主导+committer 集体讨论的混合模型，DragonFly 采用 Dillon 个人主导的单一模型——commit 量差距反映三种权限模型在社区动员能力上的差异
 **史料**：bsd_commits.db commits 表四仓库 2016-2018 年对照；FreeBSD Core Team 选举记录档案（**freebsd.org/administration/**）；OpenBSD Foundation 年报（**openbsdfoundation.org/**）；DragonFly 无 Foundation 法律实体〔L1 代码/构建产物/L3 官方文档与公告〕
 
-**史观**：总纲第 5 条——组织结构塑造技术路径：bsd_commits.db 数据显示三种权限模型分别塑造三个项目的不同文化与技术路径——FreeBSD Core Team 集体审议机制支持 GEOM/ZFS/bhyve 等大型子系统的多贡献者协作，bsd_commits.db 显示 freebsd-src 2016-2018 年年均 commit 量约 16168 条是 DragonFly 的 8.3 倍；OpenBSD de Raadt 主导但有 misc@ 邮件列表公开讨论机制，bsd_commits.db 显示 openbsd-src 年均 commit 量是 DragonFly 的 3.7 倍；DragonFly Dillon 个人主导无公开审议机制，commit 量最低
+**史观**：总纲第 5 条——组织结构塑造技术路径：freebsd.duckdb 数据显示三种权限模型分别塑造三个项目的不同文化与技术路径——FreeBSD Core Team 集体审议机制支持 GEOM/ZFS/bhyve 等大型子系统的多贡献者协作，freebsd.duckdb 显示 freebsd-src 2016-2018 年年均 commit 量约 16168 条是 DragonFly 的 8.3 倍；OpenBSD de Raadt 主导但有 misc@ 邮件列表公开讨论机制，openbsd.duckdb 显示 openbsd-src 年均 commit 量是 DragonFly 的 3.7 倍；DragonFly Dillon 个人主导无公开审议机制，commit 量最低
 
 **辨析**：commit 量差距非仅由权限模型决定——FreeBSD 与 OpenBSD 均有 Foundation 法律实体接收企业赞助，DragonFly 无 Foundation 法律实体（dragonflybsd.org/foundation/ 404），资金支撑差异与权限模型差异共同影响社区动员能力；权限模型的优劣无绝对标准，须结合项目目标辨析
 
