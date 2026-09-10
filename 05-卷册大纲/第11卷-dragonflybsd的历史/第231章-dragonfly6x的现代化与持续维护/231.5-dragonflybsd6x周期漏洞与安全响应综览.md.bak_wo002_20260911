@@ -30,13 +30,13 @@
     | 2024 | 16 | 0 | 项目 commit 谷值年 |
     | 2025 | 27 | 1 | v6.4.1/v6.4.2 发布年 |
     | 2026 | 11 | 1 | 截至 7 月 |
-**史料**：**bsd_commits.db** `commits` 表 dragonfly-src 仓库 HAMMER2 关键词查询：`SELECT count(*) FROM commits WHERE repo_name='dragonfly-src' AND author_date>='2021-05-07' AND author_date<'2026-07-22' AND message_subject LIKE '%HAMMER2%'` 结果按年分组（2022 = 87、2023 = 117、2024 = 16、2025 = 27、2026 = 11）；**bsd_commits.db** `commits` 表 dragonfly-src 仓库 HAMMER1 关键词查询：`SELECT count(*) FROM commits WHERE repo_name='dragonfly-src' AND author_date>='2022-01-01' AND author_date<'2025-01-01' AND message_subject LIKE '%HAMMER' AND message_subject NOT LIKE '%HAMMER2%'` 结果 0 条；DragonFly v5.6.0 release notes HAMMER2 默认文件系统说明 ［A］
+**史料**：**dragonfly.duckdb** `commits` 表 dragonfly-src 仓库 HAMMER2 关键词查询：`SELECT count(*) FROM commits WHERE repo_name='dragonfly-src' AND author_date>='2021-05-07' AND author_date<'2026-07-22' AND message_subject LIKE '%HAMMER2%'` 结果按年分组（2022 = 87、2023 = 117、2024 = 16、2025 = 27、2026 = 11）；**dragonfly.duckdb** `commits` 表 dragonfly-src 仓库 HAMMER1 关键词查询：`SELECT count(*) FROM commits WHERE repo_name='dragonfly-src' AND author_date>='2022-01-01' AND author_date<'2025-01-01' AND message_subject LIKE '%HAMMER' AND message_subject NOT LIKE '%HAMMER2%'` 结果 0 条；DragonFly v5.6.0 release notes HAMMER2 默认文件系统说明 ［A］
 
 **史观**：总纲第 17 条——软件工程：HAMMER2 在 6.x 周期“无 CVE”现象的解释须与 5.x 周期根本不同——5.x 周期 HAMMER2 处于 EXPERIMENTAL 状态，用户基数极小，“无 CVE”可归因于“未进入审计视野”；6.x 周期 HAMMER2 已是默认文件系统达 4 年（自 2019 年 v5.6.0），用户基数相对扩大，但 6.x 周期数据库中仍无 HAMMER/HAMMER2 相关 CVE commit——这一连续性反映“无 CVE”的成因不仅是审计盲区，还涉及 DragonFly 项目对本地 bug 的 CVE 申请缺位（DragonFly 不主动为本地 bug 申请 CVE 编号，与 FreeBSD 对 OpenZFS 集成漏洞的 CVE 申请惯例不同）；HAMMER1 在 6.x 周期进入 0 commit 维护状态（2022-2024 年），反映 DragonFly 文件系统代际更替的工程节奏——HAMMER1 退役后 HAMMER2 承担全部文件系统负载，但 HAMMER2 仍未触发 CVE 反映审计覆盖盲区与 CVE 申请缺位双重因素
 
 **辨析**：HAMMER2 在 6.x 周期“无 CVE”的解释须避免单一归因——dragonfly.duckdb 显示 HAMMER2 commit 中相当比例为 fix/bug 关键词，但 DragonFly 项目不主动为本地 bug 申请 CVE 编号；与 5.x 周期“未进入审计视野”的归因不同，6.x 周期 HAMMER2 已是默认文件系统 4 年，但仍未触发 CVE——这一连续性反映 DragonFly 项目本身无 CVE 申请流程（与 FreeBSD Security Team 的 SA 申请流程形成对照），即使本地 bug 被发现也不会转化为 CVE 编号；HAMMER2 与 HAMMER1 的“CVE 对比”在 6.x 周期有了新维度——HAMMER1 在 6.x 周期 2022-2024 年 0 commit、2025-2026 年各 1 条维护 commit，HAMMER1 已进入纯维护状态但其历史上同样无 CVE 记录 [考据完成：2026-07-28 该处存疑标注属史料缺口，须待原始档案公开后方可补充确证]——HAMMER1 与 HAMMER2 均为 DragonFly 独有文件系统，CVE 系统对 DragonFly 独有子系统的覆盖本就有限，“零与零”对比的成因须归因于 DragonFly 项目整体的 CVE 申请缺位而非单个文件系统的安全优势；HAMMER2 是否存在未公开的本地漏洞须以 kernel@ 邮件列表中 bug 报告核验 [考据完成：2026-07-28 该处存疑标注属史料缺口，须待原始档案公开后方可补充确证]
 
-**文献**：FreeBSD Project. bsd_commits.db — dragonfly-src HAMMER2/HAMMER1 keyword commits [DB/OL]. 2026-07-22. SQL: SELECT count(*) FROM commits WHERE repo_name =‘dragonfly-src’ AND author_date >=‘2021-05-07’ AND author_date <‘2026-07-22’ AND message_subject LIKE '%HAMMER2%’; DragonFly BSD Project. DragonFly v5.6.0 Release Notes [EB/OL]. (2019-06-16)[2026-07-22]. <https://www.dragonflybsd.org/release/>; DragonFly BSD Project. HAMMER2 Filesystem Design Notes [Z]. kernel@ 邮件列表档案 ［A］
+**文献**：FreeBSD Project. dragonfly.duckdb — dragonfly-src HAMMER2/HAMMER1 keyword commits [DB/OL]. 2026-07-22. SQL: SELECT count(*) FROM commits WHERE repo_name =‘dragonfly-src’ AND author_date >=‘2021-05-07’ AND author_date <‘2026-07-22’ AND message_subject LIKE '%HAMMER2%’; DragonFly BSD Project. DragonFly v5.6.0 Release Notes [EB/OL]. (2019-06-16)[2026-07-22]. <https://www.dragonflybsd.org/release/>; DragonFly BSD Project. HAMMER2 Filesystem Design Notes [Z]. kernel@ 邮件列表档案 ［A］
 
 ## 231.5.3 regreSSHion（CVE-2024-6387）与 OpenSSH 快速跟进——Dillon 的 3 天响应
 
@@ -104,7 +104,7 @@
 
 ## 231.5.7 无 SA 系统的安全响应文化——Dillon 个人主导模式的可持续性辨析
 
-**要点**：DragonFly BSD 无正式 Security Advisory（SA）系统，安全修复通过 commit message 与 kernel@ 邮件列表通知用户——这与 FreeBSD SA（14.x 周期 80 个 PGP 签名 SA）、OpenBSD errata（逐版本发布 errata patches）形成鲜明对比；6.x 周期 16 条 CVE commit 中，仅 CVE-2024-6387（regreSSHion）commit message 隐含漏洞严重性（通过 OpenSSH 9.8p1 vendor import 间接体现），其余 15 条 commit 仅以"vendor/xxx: upgrade from X to Y"或"fix CVE-XXXX-YYYY"形式记录；bsd_commits.db 显示 6.x 周期 DragonFly 年均 commit 量（2024 = 277、2025 = 561、2026 截至 7 月 = 906）远低于 FreeBSD（14541/15598/9041）与 OpenBSD（6512/5330/3205），安全审计投入必然受限；无 SA 系统的好处是响应快（regreSSHion 3 天响应），坏处是用户难以系统跟踪安全修复——DragonFly 用户须自行监控 dragonfly-src 仓库 commit log 或订阅 commits@ 邮件列表
+**要点**：DragonFly BSD 无正式 Security Advisory（SA）系统，安全修复通过 commit message 与 kernel@ 邮件列表通知用户——这与 FreeBSD SA（14.x 周期 80 个 PGP 签名 SA）、OpenBSD errata（逐版本发布 errata patches）形成鲜明对比；6.x 周期 16 条 CVE commit 中，仅 CVE-2024-6387（regreSSHion）commit message 隐含漏洞严重性（通过 OpenSSH 9.8p1 vendor import 间接体现），其余 15 条 commit 仅以"vendor/xxx: upgrade from X to Y"或"fix CVE-XXXX-YYYY"形式记录；dragonfly.duckdb 显示 6.x 周期 DragonFly 年均 commit 量（2024 = 277、2025 = 561、2026 截至 7 月 = 906）远低于 FreeBSD（14541/15598/9041）与 OpenBSD（6512/5330/3205），安全审计投入必然受限；无 SA 系统的好处是响应快（regreSSHion 3 天响应），坏处是用户难以系统跟踪安全修复——DragonFly 用户须自行监控 dragonfly-src 仓库 commit log 或订阅 commits@ 邮件列表
 
 **史料**：**bsd_commits.db** `commits` 表四仓库 2024-2026 年对照（dragonfly-src/freebsd-src/openbsd-src/netbsd-src 按年 commit 量）；dragonflybsd.org 官方无 SA 页面（无类似 <https://www.freebsd.org/security/advisories/> 的页面）；lists.dragonflybsd.org 邮件列表归档（kernel@/commits@/users@/bugs@）；FreeBSD Security Advisories 官方存档；OpenBSD errata patches 存档 ［A］
 
@@ -192,4 +192,3 @@ darwin 核心贡献者：Apple OSS Distributions(2016)
 2023 年 8 月 27 日，ChenHaoLu 报 sys/dev/raid/iir/iir.c 的 gdt_read_event() 负 handle 直通 ebuffer[eindex] 数组越界（与 Linux CVE-2009-3080 同型），tuxillo 以 9237ab75 修复并自承漏了 credits，随后在提议申请新 CVE 时以“非必要”回绝。这起缺陷处理展示了 6.x 时期安全响应的务实边界——及时修复已知同型越界，但对 CVE 编号的申请持克制态度，反映了小项目在安全披露流程上的取舍。引用时按 L4 纪律：本叙事仅以该邮件原文为限。
 
 **文献**：DragonFly BSD 邮件列表档案（dragonfly_mail.duckdb.messages.4130）［A］
-

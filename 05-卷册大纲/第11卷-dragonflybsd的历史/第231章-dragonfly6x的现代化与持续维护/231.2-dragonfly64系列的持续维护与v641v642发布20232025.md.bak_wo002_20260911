@@ -10,13 +10,13 @@
     | v6.4.1 | 2025-04-29T16:03:04-04:00 | Justin C. Sherrill | 28 个月 |
     | v6.4.2 | 2025-05-09T13:44:10-04:00 | Justin C. Sherrill | 10 天（快速修复） |
     v6.4.0 至 v6.4.1 间隔约 28 个月，v6.4.1 至 v6.4.2 间隔仅 10 天，反映 v6.4.1 为长期积累后的集中发布、v6.4.2 为 v6.4.1 的快速修复版本；据 2026-07-23 公告考据（详见 `原材料/研究/考据记录/20260723_announcements-dragonfly.md`），DragonFly BSD 自 1.0（2004-07-12）至 6.4.2（2025-05-09）共发布 80 条 RELEASE 公告，bsd_commits.db tags 表有 131 个 tag（多出的 51 个为 rc 候选 tag、.0 分支点 tag、开发分支 tag）；tagger_date 与公告日期偏差规律为：0-1 天偏差（约 60%，时区差异）、2-5 天偏差（约 30%，镜像同步与公告滞后）、大偏差仅见于 2008-12-03 批量回溯创建的早期 tag；v6.4.2 tagger_date 2025-05-09T13:44:10-04:00 与公告日期 2025-05-09 一致（0 天偏差）
-**史料**：bsd_commits.db dragonfly-src 仓库 tags 表 v6.4.0 = 2022-12-30（Antonio Huete Jimenez tagger）、v6.4.1 = 2025-04-29（Justin C. Sherrill tagger）、v6.4.2 = 2025-05-09（Justin C. Sherrill tagger）；DragonFly 6.4.1/6.4.2 release notes（dragonflybsd.org/release/）〔L1 代码/构建产物/L3 官方文档与公告〕
+**史料**：dragonfly.duckdb dragonfly-src 仓库 tags 表 v6.4.0 = 2022-12-30（Antonio Huete Jimenez tagger）、v6.4.1 = 2025-04-29（Justin C. Sherrill tagger）、v6.4.2 = 2025-05-09（Justin C. Sherrill tagger）；DragonFly 6.4.1/6.4.2 release notes（dragonflybsd.org/release/）〔L1 代码/构建产物/L3 官方文档与公告〕
 
 **史观**：总纲第 25 条——终结与延续：DragonFly v6.4 系列（2022-12 至 2025-05）长达 28 个月的点版本间隔反映项目从“高速迭代”转为“低速维护”——bsd_commits.db 显示 2024 年 commit 量谷值 277 条、2025 年回升至 561 条，v6.4.1（2025-04-29）与 v6.4.2（2025-05-09）的发布与 commit 回升同步
 
 **辨析**：v6.4.0 tagger 为 Antonio Huete Jimenez，v6.4.1/v6.4.2 tagger 回归 Justin C. Sherrill，反映 release engineer 职能在两人间的轮替；v6.4.1 发布日期 2025-04-29 而非 2024 年 [考据完成：2026-07-28 该处存疑标注属史料缺口，须待原始档案公开后方可补充确证]，部分早期资料可能误载为 2024-01-15，须以 bsd_commits.db tags 表 tagger_date 字段为准
 
-**文献**：bsd_commits.db dragonfly-src 仓库 tags 表（v6.4.0/v6.4.1/v6.4.2 tagger_date 与 tagger_name 序列）；DragonFly 6.4.1/6.4.2 release notes [EB/OL]. dragonflybsd.org/release/ ［A］
+**文献**：dragonfly.duckdb dragonfly-src 仓库 tags 表（v6.4.0/v6.4.1/v6.4.2 tagger_date 与 tagger_name 序列）；DragonFly 6.4.1/6.4.2 release notes [EB/OL]. dragonflybsd.org/release/ ［A］
 
 ## 231.2.2 持续维护状态与新版本停滞
 
@@ -34,13 +34,13 @@
 
 **要点**：FreeBSD 14.x/15.x（2024-2026）持续推进现代化，包括对 64-bit ARM 的 Tier-1 支持、改进 bhyve、引入新调度器等；OpenBSD 7.x 同期持续安全审计与 pledge/unveil 改进；DragonFly v6.4.1/v6.4.2（2025）为点版本发布，无新 major 版本，整体仍落后。bsd_commits.db 显示 DragonFly 2024 年 commit 277 条远低于 OpenBSD 同期约 5097 条[考据完成：2026-07-28 经穷尽联网考据，该要点所引数据已交叉验证，部分精确数字须待原始档案公开后方可补充确证]
 
-**史料**：FreeBSD 14.x/15.x release notes（freebsd.org/releases/）；OpenBSD 7.x release notes（openbsd.org/）；bsd_commits.db dragonfly-src 仓库 tags 表（v6.4.1/v6.4.2 tagger_date）；bsd_commits.db dragonfly-src 仓库 commits 表（2024 年 = 277 条）〔L3 官方文档与公告/L5 二手研究〕
+**史料**：FreeBSD 14.x/15.x release notes（freebsd.org/releases/）；OpenBSD 7.x release notes（openbsd.org/）；dragonfly.duckdb dragonfly-src 仓库 tags 表（v6.4.1/v6.4.2 tagger_date）；dragonfly.duckdb dragonfly-src 仓库 commits 表（2024 年 = 277 条）〔L3 官方文档与公告/L5 二手研究〕
 
 **史观**：总纲第 6 条——技术路线分化：FreeBSD、OpenBSD、DragonFly 在技术路线上的分化持续加深——bsd_commits.db 显示 DragonFly 2024 年 commit 量（277 条）仅为 OpenBSD 同期约 5.4%[考据完成：2026-07-28 经穷尽联网考据，该史观映射已对照项目史观总纲原文，属史料缺口，须待原始档案公开后方可补充确证]，反映三个项目在社区规模与开发节奏上的分化
 
 **辨析**：技术比较须结合项目目标——FreeBSD 追求主流服务器市场（Tier-1 ARM64、bhyve、Kunai 调度器），OpenBSD 追求安全细分市场（pledge/unveil/LibreSSL），DragonFly 追求轻量级内核哲学（LWKT/HAMMER/vkernel）；三个项目目标不同，无简单优劣关系
 
-**文献**：FreeBSD 14.x/15.x release notes [EB/OL]. freebsd.org/releases/；OpenBSD 7.x release notes [EB/OL]. openbsd.org/；bsd_commits.db dragonfly-src 仓库 commits 表（2024 年统计） ［A］
+**文献**：FreeBSD 14.x/15.x release notes [EB/OL]. freebsd.org/releases/；OpenBSD 7.x release notes [EB/OL]. openbsd.org/；dragonfly.duckdb dragonfly-src 仓库 commits 表（2024 年统计） ［A］
 
 ## 231.2.4 发布说明与 commit 记录考据
 
@@ -125,4 +125,3 @@ darwin 核心贡献者：Apple OSS Distributions(2016)
 - 付远志. 操作系统内核模糊测试方法研究[M]. 2021.
 - White H. Metahistory: The Historical Imagination in Nineteenth-Century Europe [M]. Baltimore: Johns Hopkins University Press, 1973.
 - eurobsdcon2014-mandoc-paper[M].
-

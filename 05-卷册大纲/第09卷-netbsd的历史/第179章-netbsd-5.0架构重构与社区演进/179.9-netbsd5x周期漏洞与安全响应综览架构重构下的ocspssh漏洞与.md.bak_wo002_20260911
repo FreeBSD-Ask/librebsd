@@ -29,7 +29,7 @@
 
 **辨析**：Security fix commit 量骤降是否等同于 “主动安全审计衰退” 须考据——可能部分源于 CVE 编号体系普及使原本归类为 Security fix 的 commit 改为引用 CVE 编号，从而被计入 CVE commit 而非 Security fix commit；NetBSD 5.0 架构重构是否直接引入新漏洞须对照源码 diff 核验——架构变化与漏洞出现的时序关联不等于因果关系；【0 信任原则·CVSS 评分缺失】35 条去重 CVE 全部无 CVSS v3 评分系 NVD 回填滞后所致
 
-**文献**：bsd_commits.db netbsd-src 仓库 commits 表；NetBSD 5.0 Release Notes ［A］
+**文献**：netbsd.duckdb netbsd-src 仓库 commits 表；NetBSD 5.0 Release Notes ［A］
 
 ## 179.9.2 OCSP 与认证绕过漏洞群（2011）
 
@@ -127,4 +127,3 @@ netbsd 核心贡献者：wiz(222791), adam(71900), taca(66560), christos(58421),
 - Upadhyay A. Applying Machine Learning to Improve apropos(1)[C]//AsiaBSDCon 2017. Tokyo, 2017.
 - SAITOH M. Wireless LAN Service in AsiaBSDCon 2016（幻灯片）[EB/OL]. AsiaBSDCon 2016 NetBSD BoF.
 - Ozaki R, Nakahara K. Current status of NetBSD MP-safe network stack project (BoF)[C]//Proceedings of AsiaBSDCon 2016. Tokyo: AsiaBSDCon, 2016 ［C］. 2016.
-

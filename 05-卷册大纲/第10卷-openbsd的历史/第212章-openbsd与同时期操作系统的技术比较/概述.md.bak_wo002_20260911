@@ -112,7 +112,7 @@ volume: 第10卷-openbsd的历史
 
 **查证来源**：
 
-- bsd_commits.db freebsd-src 仓库查询：`SELECT * FROM commit_files WHERE file_path LIKE 'lib/libressl%' AND status='A...
+- freebsd.duckdb freebsd-src 仓库查询：`SELECT * FROM commit_files WHERE file_path LIKE 'lib/libressl%' AND status='A...
 
 5. [L3] `original_sources.kaoju_records.source_verification#43` — ### 一手史料
 
@@ -267,4 +267,3 @@ Lerner 与 Tirole（2000）引 IDC 估计，个人电脑操作系统市场中 Li
 - eurobsdcon2015-mandoc[M].
 - Murenin C A, Boutaba R. OpenBSD Hardware Sensors Framework[C]//AsiaBSDCon 2009 Proceedings. Tokyo, 2009.
 - eurobsdcon2014-mandoc-slides[M].
-

@@ -107,4 +107,3 @@ Lerner 与 Tirole（2000）引 IDC 估计，个人电脑操作系统市场中 Li
 2004 年 5 月 30 日，FreeBSD 日本核心开发者 Hiroki Sato 报告 5/29 内核 root 挂载失败：ad4 设备 cdevsw usurpation 警告升级为 fatal 的 no such device 'ad'（5/19 内核仅告警）；Dillon、Hiten 四轮定位设备注册顺序回归。FreeBSD 资深开发者直接参与 DragonFly 发布前缺陷排查，是分叉初期“人员流动性”的表征——共享代码库使两项目开发者能在对方平台上快速定位回归。引用时按 L4 纪律：本叙事仅以该邮件原文为限。
 
 **文献**：DragonFly BSD 邮件列表档案（dragonfly_mail.duckdb.messages.61974）［A］
-

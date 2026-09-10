@@ -1,6 +1,6 @@
 # 234.6 与同时期操作系统的比较
 
-**要点**：DragonFly BSD（Dillon 单一决策 + 无独立 Foundation 法律实体，dragonflybsd.org/foundation/ 页面 404）与同期 FreeBSD（Core Team 选举 + FreeBSD Foundation 2000 年注册，2024 年预算约 180 万美元）、NetBSD（Foundation 董事会选举 + bylaws 公开）、OpenBSD（de Raadt 单一主导 + OpenBSD Foundation 2007 年注册、c2k donations 模式）、Linux（Linus Torvalds 单一决策 + Linux Foundation 2007 年注册、企业赞助为主）的治理与资金模式差异显著；bsd_commits.db 按年统计显示 DragonFly commit 频率从 2005 年峰值 4194 条降至 2024 年 277 条，同期 FreeBSD freebsd-src 仓库年 commit 维持数千条量级——治理模式与社区规模的关联在数据层面可量化。五项目治理与资金模式对照如下：
+**要点**：DragonFly BSD（Dillon 单一决策 + 无独立 Foundation 法律实体，dragonflybsd.org/foundation/ 页面 404）与同期 FreeBSD（Core Team 选举 + FreeBSD Foundation 2000 年注册，2024 年预算约 180 万美元）、NetBSD（Foundation 董事会选举 + bylaws 公开）、OpenBSD（de Raadt 单一主导 + OpenBSD Foundation 2007 年注册、c2k donations 模式）、Linux（Linus Torvalds 单一决策 + Linux Foundation 2007 年注册、企业赞助为主）的治理与资金模式差异显著；freebsd.duckdb 按年统计显示 DragonFly commit 频率从 2005 年峰值 4194 条降至 2024 年 277 条，同期 FreeBSD freebsd-src 仓库年 commit 维持数千条量级——治理模式与社区规模的关联在数据层面可量化。五项目治理与资金模式对照如下：
 
     | 维度 | DragonFly | FreeBSD | NetBSD | OpenBSD | Linux |
     |---|---|---|---|---|---|
@@ -75,4 +75,3 @@ darwin 核心贡献者：Apple OSS Distributions(2016)
 - 付远志. 操作系统内核模糊测试方法研究[M]. 2021.
 - White H. Metahistory: The Historical Imagination in Nineteenth-Century Europe [M]. Baltimore: Johns Hopkins University Press, 1973.
 - eurobsdcon2014-mandoc-paper[M].
-

@@ -4,7 +4,7 @@
 
 **要点**：FreeBSD 16.0 计划将 base system 中最后的 GPL 许可组件彻底清除，标志性事件包括：**dialog(1)**（GPLv2 许可）被 bsddialog（BSD 许可，由 Alfonso Sabato Siciliano 开发）替换，contrib/dialog 目录从源码树移除；**gnu/** 目录（包含 GNU grep、GNU diff 等最后的 GPL 工具）从源码树清理，相关功能由 BSD 许可的实现覆盖。这是 FreeBSD 许可证纯洁化工程的最终阶段——自 2007 年 GPLv3 发布以来，FreeBSD 项目用近 20 年时间将 base 中的每一个 GPL 组件替换为 BSD 许可/兼容许可的实现。16.0 的 GPL 清除包括：dialog→bsddialog（基于 FreeBSD 基础库，BSD 许可）、GNU grep→BSD grep（已于 10.0 完成，此处确认 GNU grep 源码从 base 删除）、GNU diff→BSD diff（已实施多年）、GNU gzip→bsdgzip（基于 libarchive，由 Xin LI 开发）、GNU cpio→BSD cpio（基于 libarchive）。GNU 目录的移除是符号性的——它标志着“GNU 时代”在 FreeBSD base 中的正式终结。
 
-**史料**：FreeBSD 16.0 Release Notes（计划中）、bsddialog 项目文档、freebsd-arch 邮件列表 GPL 组件清除讨论、commit 系列；**bsd_commits.db** `tags` 表验证——截至 2026-07-21 查询时，`bsd_commits.db` 中无 `release/16.0.0` tag 记录（查询条件：`SELECT tag_name, tagger_date FROM tags WHERE repo_name='freebsd-src' AND tag_name LIKE '%16.0%'` 返回空集），证实 16.0-RELEASE 尚未发布，本节所述 GPL 组件清除截至 2026 年 7 月仍处于 16.0-CURRENT 分支状态；`release/10.0.0` tagger_date = 2014-01-16T18:43:50Z（Glen Barber）证实 10.0 引入 Clang 默认编译器、移除 GCC 默认地位的时间基线，与“GNU grep→BSD grep（已于 10.0 完成）”声明交叉验证一致 ［A］
+**史料**：FreeBSD 16.0 Release Notes（计划中）、bsddialog 项目文档、freebsd-arch 邮件列表 GPL 组件清除讨论、commit 系列；**freebsd.duckdb** `tags` 表验证——截至 2026-07-21 查询时，`freebsd.duckdb` 中无 `release/16.0.0` tag 记录（查询条件：`SELECT tag_name, tagger_date FROM tags WHERE repo_name='freebsd-src' AND tag_name LIKE '%16.0%'` 返回空集），证实 16.0-RELEASE 尚未发布，本节所述 GPL 组件清除截至 2026 年 7 月仍处于 16.0-CURRENT 分支状态；`release/10.0.0` tagger_date = 2014-01-16T18:43:50Z（Glen Barber）证实 10.0 引入 Clang 默认编译器、移除 GCC 默认地位的时间基线，与“GNU grep→BSD grep（已于 10.0 完成）”声明交叉验证一致 ［A］
 
 **史观**：总纲第 24 条——许可证：GNU 目录移除是 FreeBSD 许可证纯洁化工程的最终纪念碑——从 2007 年 GPLv3 发布启动，到 16.0（预计 2027 年）完成，历时 20 年，涉及编译器（GCC）、链接器（GNU ld）、调试器（GDB）、DNS 解析器（BIND）、MTA（sendmail 默认地位变更）、文本工具（grep/diff/sort/patch 等）、构建工具（make）、数字工具（bc/dc）、归档工具（gzip/cpio）、交互式对话框（dialog）等数十个组件的替换，这是操作系统史上最完整、最持久的许可证迁移工程之一
 
@@ -38,4 +38,3 @@
 **数据库分析发现**（证据等级：L1，来源：`freebsd.duckdb.commits.freebsd`）
 
 freebsd 核心贡献者：Po-Chuan Hsieh(68595), Sunpoet Po-Chuan Hsieh(51033), Yuri Victorovich(29759), Jan Beich(22360), Martin Wilke(20341)
-
