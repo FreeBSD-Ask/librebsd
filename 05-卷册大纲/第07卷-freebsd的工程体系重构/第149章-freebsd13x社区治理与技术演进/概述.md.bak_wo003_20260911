@@ -1,0 +1,133 @@
+---
+chapter: 第 149 章
+id: CH149
+volume: 第07卷-freebsd的工程体系重构
+---
+
+# 第 149 章 FreeBSD 13.x 社区治理与技术演进
+
+> 本子章由原第 62 章拆分而来，承载 149.5-149.11 节。
+
+## 本章节索引
+
+1. [149.5 2021-2024-年社区治理-Core-Team-选举-Security-Officer-与-Foundation](149.5-2021-2024-年社区治理-Core-Team-选举.md)
+2. [149.6 OpenZFS-合并与-13-x-ZFS-演进-OpenZFS-2-0-2-1-统一代码库](149.6-OpenZFS-合并与-13-x-ZFS-演进-OpenZFS-2-0-2-1.md)
+3. [149.7 Linux-ABI-兼容层-bhyve-改进与-13-x-其他核心特性](149.7-Linux-ABI-兼容层-bhyve-改进与-13-x-其他核心特性.md)
+4. [149.8 freebsd13x的安全特性与mitigation机制对比](149.8-freebsd13x的安全特性与mitigation机制对比.md)
+5. [149.9 重要贡献者与社区生态](149.9-重要贡献者与社区生态.md)
+6. [149.10 2021-4-5-Google-v-Oracle-终审判决与-API-版权-Fair-Use-的胜利](149.10-2021-4-5-Google-v-Oracle-终审判决与-API-版权.md)
+7. [149.11 FreeBSD-13-x-时期的技术淘汰与架构支持变动](149.11-FreeBSD-13-x-时期的技术淘汰与架构支持变动.md)
+
+## 数据核验与统计（自动增补 · 0-信任）
+
+> **来源库**：资料数据库 · materials / material_cross_references；references_fulltext · chapter_matches / chapter_reviews；doubts_standalone · doubts_to_resolve
+> **方法**：基于全局章号 1–348 直接 SQL 聚合；未做外部事实验证；`ch=0`/未映射条目不计入本章。
+> **生成时间**：2026-08-04 ｜ **复现**：`script/_engine_integrity_analysis.py`
+
+| 指标 | 数值 |
+| --- | --- |
+| 锚定素材 | 113 篇（含存疑标记 9 篇） |
+| 存疑点 | 0 条 |
+| 参考文献匹配 | 0 条 |
+| 章节述评 | 未生成 |
+| 章内交叉引用 | 出 1 / 入 1 |
+
+**数据质量备注**：暂无参考文献匹配
+
+<!-- DATA_VERIFY_BLOCK v20260804 -->
+> 2026-08-11 补：批量修复 DVB 缺失（最终批）
+>
+## 数据核验与统计（自动增补 · 0-信任）
+>
+> **来源库**：资料数据库 · materials / material_cross_references；references_fulltext
+> **生成时间**：2026-08-11（批量回填）
+
+| 指标 | 数值 |
+| --- | --- |
+| 锚定素材 | 96 篇（含存疑标记 0 篇） |
+| 存疑点 | 0 条 |
+| 参考文献匹配 | 0 条 |
+| 章节述评 | 未生成 |
+| 章内交叉引用 | 出 0 / 入 0 |
+
+**数据质量备注**：史料回填优先对象；2026-08-11 批量回填 DVB 框架
+
+<!-- DB_POINTS:chapter_reviews -->
+**数据库要点引用（references_fulltext.db · chapter_reviews · 2026-08-13）**
+
+> 来源：`04-现代研究文献/05-参考文献全文数据库/references_fulltext.db` 表 `chapter_reviews`（348 章全覆盖）。本章级文献综述 1432 字、匹配 0 篇文献，状态 imported。映射：旧章号 +1 → 磁盘章号。
+
+> **综述要点**：本章围绕“FreeBSD 13.x 社区治理与技术演进”展开，覆盖 148.5 2021-2024-年社区治理-Core-Team-选举-…；148.6 OpenZFS-合并与-13-x-ZFS-演进-OpenZ…；148.7 Linux-ABI-兼容层-bhyve-改进与-13-x-…；148.8 freebsd13x的安全特性与mitigation机制对…；148.9 重要贡献者与社区生态 等 7 个子节。数据核验显示：锚定素材 1
+
+<!-- /DB_POINTS:chapter_reviews -->
+
+<!-- COL_SCAN v20260826 -->
+## 内容包复核增补（Phase 4 · 2026-08-26）
+
+> 基于 4 个核心数据库（doubts_standalone、historical_claims、original_sources、资料数据库）内容包自动匹配与审核。
+> 内容包总行数：255 | 去重主张数：185 | 复核方法：12 步流程（详见 vol2to5_phase4_summary.md）
+
+### 证据等级分布
+
+| 等级 | 说明 | 数量 | 占比 |
+| --- | --- | --- | --- |
+| L1 | 代码与构建产物 | 0 | 0.0% |
+| L2 | 即时通讯记录 | 0 | 0.0% |
+| L3 | 官方文档与公告 | 255 | 100.0% |
+| L4 | 事后叙述 | 0 | 0.0% |
+| L5 | 二手研究 | 0 | 0.0% |
+
+### 来源数据库分布
+
+| 来源 | 行数 |
+| --- | --- |
+| original_sources | 148 |
+| 资料数据库 | 107 |
+
+### 新增证据点（L1-L3）
+
+1. [L3] `资料数据库.freebsd_sa.module#11` — execve
+2. [L3] `资料数据库.freebsd_sa.module#15` — openssl
+3. [L3] `资料数据库.freebsd_sa.module#21` — ip6_multicast
+4. [L3] `资料数据库.freebsd_sa.module#27` — bsdinstall
+5. [L3] `资料数据库.freebsd_sa.module#32` — setcred
+6. [L3] `资料数据库.freebsd_sa.module#37` — execve(2)
+7. [L3] `资料数据库.freebsd_sa.module#47` — blocklistd
+8. [L3] `资料数据库.freebsd_sa.module#57` — openssh
+9. [L3] `资料数据库.freebsd_sa.module#88` — msdosfs (FAT) file system driver
+10. [L3] `资料数据库.freebsd_sa.module#165` — Intel CPU microcode
+11. [L3] `资料数据库.freebsd_sa.module#265` — routed
+12. [L3] `资料数据库.freebsd_sa.module#386` — libc_stdlib / libutil
+13. [L3] `资料数据库.freebsd_sa.module#422` — texinfo
+14. [L3] `资料数据库.freebsd_sa.module#468` — openssh, ports_openssh, openssh-portable
+15. [L3] `资料数据库.freebsd_sa.module#494` — crypto/openssl
+
+> 另有 170 条 L1-L3 证据点未列出，详见内容包文件。
+
+### 0 信任评估
+
+- 独立来源数：2 个数据库
+- 一级史料通过率：100.0%（L1+L2+L3 / 总行数）
+- 本章 L1-L3 级史料 185 条，可纳入大纲但需标注来源
+- 所有主张均来自内容包自动匹配，未经人工逐一核实
+- 单一来源支撑的主张须标注 (单一文献支撑，待交叉验证)
+
+### 交叉验证提示
+
+- 本章有 185 条 L1-L3 级证据，建议优先与此前已入库的 MAIL_MINE、DB_POINTS、PODCAST_MINE 块交叉验证
+
+<!-- /COL_SCAN -->
+
+
+<!-- DEEP_ANALYSIS: freebsd.duckdb.commits -->
+**数据库分析发现**（证据等级：L1，来源：`freebsd.duckdb.commits.freebsd`）
+
+freebsd 代码仓库：从 1993 年到 2026 年，共 1294851 次提交，5671 位贡献者参与。
+
+
+
+<!-- DEEP_ANALYSIS: freebsd.duckdb.commits -->
+**数据库分析发现**（证据等级：L1，来源：`freebsd.duckdb.commits.freebsd`）
+
+freebsd 核心贡献者：Po-Chuan Hsieh(68595), Sunpoet Po-Chuan Hsieh(51033), Yuri Victorovich(29759), Jan Beich(22360), Martin Wilke(20341)
+

@@ -1,0 +1,132 @@
+---
+chapter: 第 296 章
+id: CH296
+volume: 第15卷-许可证哲学与法律分析
+---
+
+# 第 296 章 当代 UNIX 史——HP-UX、AIX、Solaris 等商业 UNIX 的演化，1994-2026
+
+## 本章节索引
+
+1. [296.1 HP-UX-的演化-从-PA-RISC-到-Itanium-的停滞](296.1-HP-UX-的演化-从-PA-RISC-到-Itanium-的停滞.md)
+2. [296.2 z-OS-与-IBM-Z-的-UNIX-化](296.2-z-OS-与-IBM-Z-的-UNIX-化.md)
+3. [296.3 UNIX-商标与认证的现状](296.3-UNIX-商标与认证的现状.md)
+4. [296.4 Linux-对商业-UNIX-的替代进程](296.4-Linux-对商业-UNIX-的替代进程.md)
+5. [296.5 当代-UNIX-与-BSD-的比较-技术-许可证-哲学](296.5-当代-UNIX-与-BSD-的比较-技术-许可证-哲学.md)
+6. [296.6 当代-UNIX-史的辩证运动-项目统摄史观视角](296.6-当代-UNIX-史的辩证运动-项目统摄史观视角.md)
+
+## 数据核验与统计（自动增补 · 0-信任）
+
+> **来源库**：资料数据库 · materials / material_cross_references；references_fulltext · chapter_matches / chapter_reviews；doubts_standalone · doubts_to_resolve
+> **方法**：基于全局章号 1–348 直接 SQL 聚合；未做外部事实验证；`ch=0`/未映射条目不计入本章。
+> **生成时间**：2026-08-04 ｜ **复现**：`script/_engine_integrity_analysis.py`
+
+| 指标 | 数值 |
+| --- | --- |
+| 锚定素材 | 12 篇（含存疑标记 1 篇） |
+| 存疑点 | 2 条 |
+| 参考文献匹配 | 0 条 |
+| 章节述评 | 已生成 |
+| 章内交叉引用 | 出 0 / 入 0 |
+
+**数据质量备注**：暂无参考文献匹配
+
+<!-- DATA_VERIFY_BLOCK v20260804 -->
+> 2026-08-11 补：本卷原缺 DATA_VERIFY_BLOCK，此为批量修复补入。
+>
+## 数据核验与统计（自动增补 · 0-信任）
+
+> **来源库**：资料数据库 · materials / material_cross_references；references_fulltext · chapter_matches / chapter_reviews；doubts_standalone · doubts_to_resolve
+> **方法**：基于全局章号 1–348 直接 SQL 聚合；未做外部事实验证；`ch=0`/未映射条目不计入本章。
+> **生成时间**：2026-08-11（批量回填） ｜ **复现**：`script/_engine_integrity_analysis.py`
+
+| 指标 | 数值 |
+| --- | --- |
+| 锚定素材 | 0 篇（含存疑标记 0 篇） |
+| 存疑点 | 0 条 |
+| 参考文献匹配 | 0 条 |
+| 章节述评 | 未生成 |
+| 章内交叉引用 | 出 0 / 入 0 |
+
+**数据质量备注**：属史料回填优先对象；2026-08-11 批量回填 DVB 框架
+
+<!-- DB_POINTS:doubts_resolved -->
+**数据库要点引用（doubts_standalone.db · 2026-08-13）**
+
+> 来源：`04-现代研究文献/06-存疑数据库/doubts_standalone.db` 表 `doubts_to_resolve`（1987 条，1966 已解决）。本章存疑 2 条已解决。类别分布：other(2)
+
+> 存疑管理体系：98.9% 已闭环，解决结论含 date/fact/source_conflict/name/version 等类型，具体结论见 doubts_standalone.db 表 `resolution_summary` 字段。
+<!-- /DB_POINTS:doubts_resolved -->
+
+<!-- DB_POINTS:chapter_reviews -->
+**数据库要点引用（references_fulltext.db · chapter_reviews · 2026-08-13）**
+
+> 来源：`04-现代研究文献/05-参考文献全文数据库/references_fulltext.db` 表 `chapter_reviews`（348 章全覆盖）。本章级文献综述 502 字、匹配 0 篇文献，状态 revised。映射：旧章号 +1 → 磁盘章号。
+
+> **综述要点**：本章匹配到两篇 AT&T Bell Laboratories Technical Journal 1984 年第 63 卷第 8 期的 UNIX 系统论文，均出自 AT&T 内部技术传统，为当代 UNIX 史研究提供一手史料。
+
+<!-- /DB_POINTS:chapter_reviews -->
+
+<!-- COL_SCAN v20260826 -->
+## 内容包复核增补（Phase 4 · 2026-08-26）
+
+> 基于 4 个核心数据库（doubts_standalone、historical_claims、original_sources、资料数据库）内容包自动匹配与审核。
+> 内容包总行数：739 | 去重主张数：15 | 复核方法：12 步流程（详见 vol01_phase4_summary.md）
+
+### 证据等级分布
+
+| 等级 | 说明 | 数量 | 占比 |
+| --- | --- | --- | --- |
+| L1 | 代码与构建产物 | 0 | 0.0% |
+| L2 | 即时通讯记录 | 0 | 0.0% |
+| L3 | 官方文档与公告 | 739 | 100.0% |
+| L4 | 事后叙述 | 0 | 0.0% |
+| L5 | 二手研究 | 0 | 0.0% |
+
+### 来源数据库分布
+
+| 来源 | 行数 |
+| --- | --- |
+| doubts_standalone | 393 |
+| original_sources | 146 |
+| 资料数据库 | 200 |
+
+### 新增证据点
+
+1. [L3] `资料数据库.nvd_cve_metadata` — Race condition in bzip2 1.0.2 and earlier allows local users to modify permissions of arbitrary files via a hard link at
+2. [L3] `资料数据库.nvd_cve_metadata` — Cross-site scripting (XSS) vulnerability in the mod_imap module of Apache httpd before 1.3.35-dev and Apache httpd 2.0.x
+3. [L3] `资料数据库.nvd_cve_metadata` — Buffer overflow in pl_main.c in sail in BSDgames before 2.17-7 allows local users to execute arbitrary code via a long p
+4. [L3] `资料数据库.nvd_cve_metadata` — Buffer overflow in getsym in tekhex.c in libbfd in Free Software Foundation GNU Binutils before 20060423, as used by GNU
+5. [L3] `资料数据库.nvd_cve_metadata` — http_protocol.c in (1) IBM HTTP Server 6.0 before 6.0.2.13 and 6.1 before 6.1.0.1, and (2) Apache HTTP Server 1.3 before
+6. [L3] `资料数据库.nvd_cve_metadata` — Buffer overflow in the readline function in util/texindex.c, as used by the (1) texi2dvi and (2) texindex commands, in t
+7. [L3] `资料数据库.nvd_cve_metadata` — Cross-site scripting (XSS) vulnerability in mod_status.c in the mod_status module in Apache HTTP Server (httpd), when Ex
+8. [L3] `资料数据库.nvd_cve_metadata` — Off-by-one buffer overflow in the parse_elements function in the 802.11 printer code (print-802_11.c) for tcpdump 3.9.5
+9. [L3] `资料数据库.nvd_cve_metadata` — Integer underflow in the file_printf function in the "file" program before 4.20 allows user-assisted attackers to execut
+10. [L3] `资料数据库.nvd_cve_metadata` — Integer overflow in the "file" program 4.20, when running on 32-bit systems, as used in products including The Sleuth Ki
+11. [L3] `资料数据库.nvd_cve_metadata` — Apache httpd 1.3.37, 2.0.59, and 2.2.4 with the Prefork MPM module, allows local users to cause a denial of service by m
+12. [L3] `资料数据库.nvd_cve_metadata` — Cross-site scripting (XSS) vulnerability in the (1) mod_imap module in the Apache HTTP Server 1.3.0 through 1.3.39 and 2
+
+### 0 信任评估
+
+- 独立来源数：3 个数据库
+- 一级史料通过率：100.0%（L1+L2+L3 / 总行数）
+- 本章 L3 级史料 739 条，可纳入大纲但需标注来源
+- 所有主张均来自内容包自动匹配，未经人工逐一核实
+- 单一来源支撑的主张须标注 (单一文献支撑，待交叉验证)
+- L5 级别来源不得独立支撑事实性陈述
+
+### 交叉验证提示
+
+- 本章有 739 条 L3 级证据，建议优先与此前已入库的 MAIL_MINE、DB_POINTS、PODCAST_MINE 块交叉验证
+
+<!-- /COL_SCAN -->
+
+
+<!-- DEEP_ANALYSIS: linux-kernel.duckdb.commits -->
+**数据库分析发现**（证据等级：L1，来源：`linux-kernel.duckdb.commits.linux-kernel`）
+
+linux-kernel 代码仓库：从 1970 年到 2026 年，共 1474341 次提交，39865 位贡献者参与。
+
+
+
+

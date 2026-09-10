@@ -1,0 +1,141 @@
+---
+chapter: 第 317 章
+id: CH317
+volume: 第17卷-政治制度与社区治理
+---
+
+# 第 317 章 三大 BSD 团队批评与社会背景——FreeBSD 各团队批评与联系渠道批评
+
+> 卷：第17卷-政治制度与社区治理
+> 子章号：第 316 章
+> 字数估算：约 17205 字
+
+## 本章节索引
+
+1. [317.1 FreeBSD-各团队批评-核心小组-安全团队-Port-管理团队-文档工程团队-集群管理团队](317.1-FreeBSD-各团队批评-核心小组-安全团队-Port-管理团队-文档工程团队.md)
+2. [317.2 FreeBSD-联系渠道批评-论坛-Discord-FreeBSD-期刊-邮件列表](317.2-FreeBSD-联系渠道批评-论坛-Discord-FreeBSD-期刊.md)
+
+## 数据核验与统计（自动增补 · 0-信任）
+
+> **来源库**：资料数据库 · materials / material_cross_references；references_fulltext · chapter_matches / chapter_reviews；doubts_standalone · doubts_to_resolve
+> **方法**：基于全局章号 1–348 直接 SQL 聚合；未做外部事实验证；`ch=0`/未映射条目不计入本章。
+> **生成时间**：2026-08-04 ｜ **复现**：`script/_engine_integrity_analysis.py`
+
+| 指标 | 数值 |
+| -- | -- |
+| 锚定素材 | 0 篇（含存疑标记 0 篇） |
+| 存疑点 | 0 条 |
+| 参考文献匹配 | 0 条 |
+| 章节述评 | 未生成 |
+| 章内交叉引用 | 出 0 / 入 0 |
+
+**数据质量备注**：本章尚无锚定素材，属史料回填优先对象；暂无参考文献匹配
+
+<!-- DATA_VERIFY_BLOCK v20260804 -->
+> 2026-08-11 补：本卷原大量缺 DATA_VERIFY_BLOCK，此为批量修复补入。卷级综述见 [vol-17.md](../../../04-现代研究文献/02-卷级文献综述/vol-17.md)
+>
+## 数据核验与统计（自动增补 · 0-信任）
+
+> **来源库**：资料数据库 · materials / material_cross_references；references_fulltext · chapter_matches / chapter_reviews；doubts_standalone · doubts_to_resolve
+> **方法**：基于全局章号 1–348 直接 SQL 聚合；未做外部事实验证；`ch=0`/未映射条目不计入本章。
+> **生成时间**：2026-08-11（批量回填） ｜ **复现**：`script/_engine_integrity_analysis.py`
+
+| 指标 | 数值 |
+| -- | -- |
+| 锚定素材 | 待补（本卷大量章节原缺锚定素材，属史料回填优先对象） |
+| 存疑点 | 0 条 |
+| 参考文献匹配 | 0 条 |
+| 章节述评 | 未生成 |
+| 章内交叉引用 | 出 0 / 入 0 |
+
+**数据质量备注**：本章属 V17 政治制度与社区治理卷，史料档案待从 03-原始史料库/ 补充；2026-08-11 批量回填 DVB 框架
+
+<!-- DB_POINTS:chapter_reviews -->
+**数据库要点引用（references_fulltext.db · chapter_reviews · 2026-08-13）**
+
+> 来源：`04-现代研究文献/05-参考文献全文数据库/references_fulltext.db` 表 `chapter_reviews`（348 章全覆盖）。本章级文献综述 1059 字、匹配 0 篇文献，状态 imported。映射：旧章号 +1 → 磁盘章号。
+
+> **综述要点**：本章围绕“三大 BSD 团队批评与社会背景——FreeBSD 各团队批评与联系渠道批评”展开，覆盖 316.1 FreeBSD-各团队批评-核心小组-安全团队-Port-…；316.2 FreeBSD-联系渠道批评-论坛-Discord-Fre…。数据核验显示：锚定素材 0 篇（含存疑标记 0 篇）、参考文献匹配 0 条、存疑点 0 条（自动增补，0 信任原则下须人工复核）。子节要点：316.1 FreeBSD 各团队批评：核心小组、安
+
+<!-- /DB_POINTS:chapter_reviews -->
+
+<!-- COL_SCAN v20260826 -->
+## 内容包复核增补（Phase 4 · 2026-08-26 · fix1 统一口径）
+
+> 基于 5 个核心数据库（doubts_standalone、historical_claims、original_sources、资料数据库、references_fulltext）内容包自动匹配与审核（fix1 统一口径重新提取，解除 500MB 库大小限制）。
+> 内容包总行数：153 | 去重主张数：15 | 复核方法：12 步流程（详见 vol01_phase4_summary.md）
+
+### 证据等级分布
+
+| 等级 | 说明 | 数量 | 占比 |
+| -- | -- | -- | -- |
+| L1 | 代码与构建产物 | 0 | 0.0% |
+| L2 | 即时通讯记录 | 0 | 0.0% |
+| L3 | 官方文档与公告 | 0 | 0.0% |
+| L4 | 事后叙述 | 0 | 0.0% |
+| L5 | 二手研究 | 153 | 100.0% |
+
+### 来源数据库分布
+
+| 来源 | 行数 |
+| -- | -- |
+| references_fulltext | 153 |
+
+### 新增证据点
+
+1. [L5] `references_fulltext.people_mentioned` — and gain ﬂexibil- ity. In particular, a centralized master makes it much easier to implement sophis
+2. [L5] `references_fulltext.people_mentioned` — ter 14. Newbus Special thanks to Matthew N. Dodd, Warner Losh, Bill Paul, Doug Rabson, Mike Smith, P
+3. [L5] `references_fulltext.people_mentioned` — Warner Losh, Bill Paul, Doug Rabson, Mike Smith, Peter Wemm and Scott Long. This chapter explains t
+4. [L5] `references_fulltext.people_mentioned` — users,o=example.com mail: <trhodes@example.com> cn: Tom Rhodes uid: trhodes telephoneNumber: (123) 456
+5. [L5] `references_fulltext.people_mentioned` — nglas, Martin Natano, Philipp Guenther (OpenBSD), Ed Maste (FreeBSD), and Peter Bray for patches, bu
+6. [L5] `references_fulltext.people_mentioned` — ), Abhinav Upadhyay, Joerg Sonnenberger (NetBSD), Dag-Erling Smørgrav (FreeBSD), Benny Lofgren, Davi
+7. [L5] `references_fulltext.people_mentioned` — nderson, Theo Bühler, Tobias Stöckmann (OpenBSD), Andrey Chernov (FreeBSD), Christos Zoulas (NetBSD)
+8. [L5] `references_fulltext.people_mentioned` — nglas, Martin Natano, Philipp Guenther (OpenBSD), Ed Maste (FreeBSD), and Peter Bray for patches, bu
+9. [L5] `references_fulltext.people_mentioned` — ), Abhinav Upadhyay, Joerg Sonnenberger (NetBSD), Dag-Erling Smørgrav (FreeBSD), Benny Lofgren, Davi
+10. [L5] `references_fulltext.people_mentioned` — heile.arch07] Volker Theile, Alexander Leidinger, LI Xin, Bruno Ducrot. “Any plans to implement Open
+11. [L5] `references_fulltext.people_mentioned` — heets/BBB_ SRM.pdf. (Accessed on 03/09/2020). [4] Marshall Kirk McKusick, George Neville-Neil, and R
+12. [L5] `references_fulltext.people_mentioned` — essed on 03/09/2020). [4] Marshall Kirk McKusick, George Neville-Neil, and Robert N.M. Watson. The D
+
+### 0 信任评估
+
+- 独立来源数：1 个数据库
+- 一级史料通过率：0.0%（L1+L2+L3 / 总行数）
+- 本章内容包无 L3/L4 级史料，所有条目均为 L5 二手研究，不可独立支撑事实性陈述
+- 所有主张均来自内容包自动匹配，未经人工逐一核实
+- 单一来源支撑的主张须标注 (单一文献支撑，待交叉验证)
+
+### 交叉验证提示
+
+- 本章 L5 级二手研究数量较大（153 条），需注意区分学术文献与通俗技术博客，仅学术文献可作参考
+
+<!-- /COL_SCAN -->
+
+<!-- MAIL_INSIGHT_SECTION v20260828-v2 -->
+## 邮件史料蒸馏（V2 · 2026-08-28）
+
+### 四大 BSD 治理模式比较
+
+<!-- MAIL_INSIGHT: marc:105164507532606 -->
+**观点**：OpenBSD 的治理是一种“开明独裁”模式——Ben Goren 在 2003 年将其概括为"Public Broadcasting model"："Stop thinking of OpenBSD like a software company. Think of it instead as PBS or NPR." Theo de Raadt 拥有最终决定权，但决策过程涉及核心开发者的广泛讨论和共识。
+**邮件来源**：Ben Goren，openbsd-misc，2003 年，Message-ID: `marc:105164507532606`
+**史学意义**：OpenBSD 的 BDFL 模式是 BSD 社区治理三角（FreeBSD 制度化→NetBSD 民主化→OpenBSD BDFL）中最集中的一端，其“开明独裁”模式在保持项目独立性的同时限制了商业采用。
+<!-- /MAIL_INSIGHT -->
+
+<!-- MAIL_INSIGHT: 200307162144.h6GLiAjT094884@apollo.backplane.com -->
+**观点**：DragonFly BSD 的治理是 BSD 社区中最集中的——Matthew Dillon 作为 BDFL 直接发起并最终拍板所有重大决策，从分叉决策到 LWKT 架构设计到 HAMMER 文件系统设计，Dillon 始终是决策的中心。Dillon 坚持将讨论 CC 到邮件列表"for archival purposes"，确保所有决策有公开记录可查。
+**邮件来源**：Matthew Dillon，DragonFly BSD kernel，2003-07-16，Message-ID: `200307162144.h6GLiAjT094884@apollo.backplane.com`
+**史学意义**：Dillon 的 BDFL 模式与 FreeBSD 的 Core Team 选举制形成鲜明对比——同一项目的人物在分裂后走向了不同的治理模式，这验证了“治理模式是偶然历史条件的产物，而非技术必然性”的史学洞见。
+<!-- /MAIL_INSIGHT -->
+
+<!-- MAIL_INSIGHT: 200307162042.h6GKge0T094438@apollo.backplane.com -->
+**观点**：Dillon 坚持将技术讨论 CC 到邮件列表以"for archival purposes"，这一做法与 FreeBSD core team 会议纪要公开发布、NetBSD 的定期报告一起，构成了 BSD 治理透明度的核心保障——“邮件列表作为公共技术讨论空间”是 BSD 区别于商业软件公司的制度特征。
+**邮件来源**：Matthew Dillon，DragonFly BSD kernel，2003-07-16，Message-ID: `200307162042.h6GKge0T094438@apollo.backplane.com`
+**史学意义**：BSD 社区的四种治理模式（FreeBSD 选举制、NetBSD 民主制、OpenBSD BDFL、DragonFly BDFL）呈现在“制度化 vs. 集中化”三角分布，这种分化反映了开源社区治理中“效率 vs. 包容性”的根本张力。
+<!-- /MAIL_INSIGHT -->
+
+<!-- MAIL_INSIGHT: marc:90222462031906 -->
+**观点**：OpenBSD 社区在许可证纯净性上的激进立场——chuck 在 1998 年关于 IPFilter 版本更新的讨论中明确表示"under NO circumstance should we track any"，这反映了 OpenBSD 社区对许可证纯洁性的高度重视，也是 pf 防火墙从 IPFilter 许可证争议中诞生的历史背景。
+**邮件来源**：chuck，openbsd-tech，1998 年，Message-ID: `marc:90222462031906`
+**史学意义**：许可证纯洁性是 OpenBSD 社区身份认同的核心要素——ISC 优先、明确反对 GPL 的立场使 OpenBSD 在 BSD 家族中处于“意识形态”一极，与 FreeBSD 的“实用主义”形成对比。
+<!-- /MAIL_INSIGHT -->
+<!-- /MAIL_INSIGHT_SECTION -->

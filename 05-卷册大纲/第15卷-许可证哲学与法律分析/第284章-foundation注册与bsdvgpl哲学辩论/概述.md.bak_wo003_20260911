@@ -1,0 +1,181 @@
+---
+chapter: 第 284 章
+id: CH284
+volume: 第15卷-许可证哲学与法律分析
+---
+
+# 第 284 章 BSD vs GPL 哲学辩论——Articles of Incorporation 与 Foundation 注册文件
+
+> 本子章由原第 135 章拆分而来，承载 284.1-284.9 节。
+
+### 核心内容
+
+> **勘误（doubt 1742）**：Linux Foundation 由 OSDL 与 Free Standards Group 合并的官方日期为 2007-01-22（非 2010）；501(c)(6) 定性正确；283.3 节文件名含 2010 保留待修订。
+
+> **勘误登记（doubt 批量 2026-08-04）**：
+>
+> - 存疑 id 1745：SPI 1997-06-16 纽约注册成立，501(c)(3) 公共慈善身份由 IRS 于 1999 年认定；成立年与认定年应区分
+
+## 本章节索引[考据完成：2026-08-04 存疑 [1745] 勘误登记][考据完成：2026-08-04 权威：OSDL 与 FSG 合并为 Linux Foundation 官方日期 2007-01-22；存疑 id 1742]
+
+1. [284.1 Articles-of-Incorporation-详见相关章节-科罗拉多州注册](284.1-Articles-of-Incorporation-详见相关章节-科罗拉多州注册.md)
+2. [284.2 IRS-Determination-Letter-2000-12-7-501-c-3-509-a-1-公共慈善实体身份与四年观察期](284.2-IRS-Determination-Letter-2000-12-7-501.md)
+3. [284.3 Foundation-治理结构的法律比较-与-Linux-Foundation-2010-年由-OSDL-与-FSG-合并-非-501-c-3-而是-501-c](284.3-Foundation-治理结构的法律比较-与-Linux-Foundation.md)
+4. [284.4 Committer's-Big-List-of-Rules-参见相关章节-committer-制度与文档贡献者部分-Core-Team-治理-`committe](284.4-Committer's-Big-List-of-Rules-参见相关章节.md)
+5. [284.5 Core-Team-与-Development-Team-历任名单-1992-2022-年-Core-Team-成员的完整名单作为治理史料](284.5-Core-Team-与-Development-Team-历任名单-1992.md)
+6. [284.6 开源许可证的法律判例-Jacobsen-v-Katzer-2008-联邦巡回上诉法院确认开源许可证具有可执行性（考据完成：2026-08-04 Jacobsen v. Katzer 涉及 Artistic License（非 BSD 许可证），确立‘开源许可证条件具版权可执行性’一般原则；存疑 id 1）-Artifex-Software,-Inc](284.6-BSD-许可证的法律判例-Jacobsen-v-Katzer-2008.md)
+7. [284.7 AI-时代的-BSD-许可证新困境-LLM-训练使用-BSD-许可代码不要求署名或通知-与-Apple-零回馈模式在许可证层面一致](284.7-AI-时代的-BSD-许可证新困境-LLM-训练使用-BSD.md)
+8. [284.8 BSD-化的概念与历史语境-BSD-化-BSD-ification-是-FreeBSD-社区系统性替换-GPL-许可证组件为-BSD-许可证替代品的工程实践-是](284.8-BSD-化的概念与历史语境-BSD-化-BSD-ification-是.md)
+9. [284.9 GPL-BSD-许可证的司法实践-国内外判例综述](284.9-GPL-BSD-许可证的司法实践-国内外判例综述.md)
+
+## 数据核验与统计（自动增补 · 0-信任）
+
+> **来源库**：资料数据库 · materials / material_cross_references；references_fulltext · chapter_matches / chapter_reviews；doubts_standalone · doubts_to_resolve
+> **方法**：基于全局章号 1–348 直接 SQL 聚合；未做外部事实验证；`ch=0`/未映射条目不计入本章。
+> **生成时间**：2026-08-04 ｜ **复现**：`script/_engine_integrity_analysis.py`
+
+| 指标 | 数值 |
+| --- | --- |
+| 锚定素材 | 0 篇（含存疑标记 0 篇） |
+| 存疑点 | 1 条 |
+| 参考文献匹配 | 0 条 |
+| 章节述评 | 未生成 |
+| 章内交叉引用 | 出 0 / 入 0 |
+
+**数据质量备注**：本章尚无锚定素材，属史料回填优先对象；暂无参考文献匹配
+
+<!-- DATA_VERIFY_BLOCK v20260804 -->
+> 2026-08-11 补：本卷原缺 DATA_VERIFY_BLOCK，此为批量修复补入。
+>
+## 数据核验与统计（自动增补 · 0-信任）
+
+> **来源库**：资料数据库 · materials / material_cross_references；references_fulltext · chapter_matches / chapter_reviews；doubts_standalone · doubts_to_resolve
+> **方法**：基于全局章号 1–348 直接 SQL 聚合；未做外部事实验证；`ch=0`/未映射条目不计入本章。
+> **生成时间**：2026-08-11（批量回填） ｜ **复现**：`script/_engine_integrity_analysis.py`
+
+| 指标 | 数值 |
+| --- | --- |
+| 锚定素材 | 0 篇（含存疑标记 0 篇） |
+| 存疑点 | 0 条 |
+| 参考文献匹配 | 0 条 |
+| 章节述评 | 未生成 |
+| 章内交叉引用 | 出 0 / 入 0 |
+
+**数据质量备注**：属史料回填优先对象；2026-08-11 批量回填 DVB 框架
+
+<!-- MAIL_MINE v20260813 -->
+## 邮件史料增补
+
+> 基于 6 个邮件数据库（260 万封）+ FTS5 全文索引自动挖掘，供编纂引用参考。
+> 以下为本章主题相关的邮件史料线索（精确词命中，含时间范围与代表邮件）。
+
+- **foundation**（openbsd）: 763 封 · 1996-2026
+  - [1993] kern/41: Suggestion: Incorporate new PS/2 mouse driver — None <<jarle@darling.idt.u>
+  - [1994] lib/222: stat(2) returns 0 for path="" — Jarle Greipsland <jarle@d
+  - [1994] misc/240: Remove bootpd sources from /usr/othersrc? — None <jarle@idt.unit.no>
+- **foundation**（usenet）: 1,906 封 · 1981-2013
+  - [1993] kern/41: Suggestion: Incorporate new PS/2 mouse driver — None <<jarle@darling.idt.u>
+  - [1994] lib/222: stat(2) returns 0 for path="" — Jarle Greipsland <jarle@d
+  - [1994] misc/240: Remove bootpd sources from /usr/othersrc? — None <jarle@idt.unit.no>
+- **foundation**（netbsd）: 5,154 封 · 1993-2026
+  - [1993] kern/41: Suggestion: Incorporate new PS/2 mouse driver — None <<jarle@darling.idt.u>
+  - [1994] lib/222: stat(2) returns 0 for path="" — Jarle Greipsland <jarle@d
+  - [1994] misc/240: Remove bootpd sources from /usr/othersrc? — None <jarle@idt.unit.no>
+
+<!-- /MAIL_MINE -->
+
+<!-- DB_POINTS:doubts_resolved -->
+**数据库要点引用（doubts_standalone.db · 2026-08-13）**
+
+> 来源：`04-现代研究文献/06-存疑数据库/doubts_standalone.db` 表 `doubts_to_resolve`（1987 条，1966 已解决）。本章存疑 4 条已解决。类别分布：年代(2)、source_conflict(1)、事实(1)
+
+> 存疑管理体系：98.9% 已闭环，解决结论含 date/fact/source_conflict/name/version 等类型，具体结论见 doubts_standalone.db 表 `resolution_summary` 字段。
+<!-- /DB_POINTS:doubts_resolved -->
+
+<!-- DB_POINTS:chapter_reviews -->
+**数据库要点引用（references_fulltext.db · chapter_reviews · 2026-08-13）**
+
+> 来源：`04-现代研究文献/05-参考文献全文数据库/references_fulltext.db` 表 `chapter_reviews`（348 章全覆盖）。本章级文献综述 1268 字、匹配 0 篇文献，状态 imported。映射：旧章号 +1 → 磁盘章号。
+
+> **综述要点**：本章围绕“BSD vs GPL 哲学辩论——Articles of Incorporati…”展开，覆盖 283.1 Articles-of-Incorporation-详见相…；283.2 IRS-Determination-Letter-2000…；283.3 Foundation-治理结构的法律比较-与-Linux-…；283.4 Committer's-Big-List-of-Rules…；283.5 Core-Team-与-D
+
+<!-- /DB_POINTS:chapter_reviews -->
+
+<!-- COL_SCAN v20260826 -->
+## 内容包复核增补（Phase 4 · 2026-08-26）
+
+> 基于 4 个核心数据库（doubts_standalone、historical_claims、original_sources、资料数据库）内容包自动匹配与审核。
+> 内容包总行数：400 | 去重主张数：15 | 复核方法：12 步流程（详见 vol01_phase4_summary.md）
+
+### 证据等级分布
+
+| 等级 | 说明 | 数量 | 占比 |
+| --- | --- | --- | --- |
+| L1 | 代码与构建产物 | 0 | 0.0% |
+| L2 | 即时通讯记录 | 0 | 0.0% |
+| L3 | 官方文档与公告 | 0 | 0.0% |
+| L4 | 事后叙述 | 400 | 100.0% |
+| L5 | 二手研究 | 0 | 0.0% |
+
+### 来源数据库分布
+
+| 来源 | 行数 |
+| --- | --- |
+| 资料数据库 | 400 |
+
+### 新增证据点
+
+1. [L4] `资料数据库.materials` — Fano 1966 年 MAC Project 进展报告
+2. [L4] `资料数据库.materials` — multicians.org/project-mac.html Project MAC 专题页（Tom Van Vleck 撰） ［B］
+3. [L4] `资料数据库.materials` — MIT Project MAC 1965-1966 组织章程
+4. [L4] `资料数据库.materials` — 三方协议原文（MIT 档案馆藏）
+5. [L4] `资料数据库.materials` — Corbató 1962 年论文 "An Experimental Time-Sharing System" (AFIPS Conference Proceedings)
+6. [L4] `资料数据库.materials` — Corbató & Vyssotsky 1965 年 Multics 设计论文 "Preliminary Discussion of the Design of a Multics System" ［A］
+7. [L4] `资料数据库.materials` — MIT LCS RFC 37 "A Census of Ring 0" (Victor Voydock, 1973-09-05)
+8. [L4] `资料数据库.materials` — MIT LCS RFC 140 "The Multics Kernel Design Project" (Schroeder, Clark, Saltzer, Wells, 1977-03-31)
+9. [L4] `资料数据库.materials` — MIT LCS "Final Report of the Multics Kernel Design Project" (1977-06-30) [存疑脚注]
+10. [L4] `资料数据库.materials` — Multics 设计文档 (Multics System Programmers' Manual)
+11. [L4] `资料数据库.materials` — DEC PDP-7 1964 年产品手册（archive.computerhistory.org 存档） ［A］
+12. [L4] `资料数据库.materials` — Unix Heritage Society s1 目录树（PDP-7 UNIX 重建）
+
+### 0 信任评估
+
+- 独立来源数：1 个数据库
+- 一级史料通过率：0.0%（L1+L2+L3 / 总行数）
+- 本章 L3 级史料仅 0 条，核心事实需经 >=2 独立来源交叉验证后方可写入大纲
+- 所有主张均来自内容包自动匹配，未经人工逐一核实
+- 单一来源支撑的主张须标注 (单一文献支撑，待交叉验证)
+- L5 级别来源不得独立支撑事实性陈述
+
+### 交叉验证提示
+
+- 本章有 400 条 L4 级事后叙述，需与 L3 级一手史料交叉验证后方可采信
+
+<!-- /COL_SCAN -->
+
+<!-- DEEP_ANALYSIS: linux-kernel.duckdb.commits -->
+**数据库分析发现**（证据等级：L1，来源：`linux-kernel.duckdb.commits.linux-kernel`）
+
+linux-kernel 代码仓库：从 1970 年到 2026 年，共 1474341 次提交，39865 位贡献者参与。
+
+<!-- DEEP_ANALYSIS: sacred_sources.duckdb.blocks -->
+**史家判断**（证据等级：L2，来源：`sacred_sources.duckdb.blocks.32`）
+
+史学含义：历史书写本身即是一种形式主义化的非存在。史家所记述的从来不是历史本身，而是经过人化加工的非存在。任何史书都是主体对存在的形式主义化重构。承认这一点，是本书一切叙述的前提。人类文明历史发展就是形式主义发展史，BSD 的历史亦不例外——许可证、社区规范、技术决策、文档传统，皆为形式主义。
+
+<!-- DEEP_ANALYSIS: cross_indexes.duckdb.concept_history -->
+**史家判断**（证据等级：L2，来源：`cross_indexes.duckdb.concept_history.31`）
+
+license: 由 technologies_mentioned 类别聚类提炼（含 6 项技术）
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-4-102`）
+
+硬件厂商为节省成本不再在芯片内固化固件，改由操作系统加载固件，由此产生固件分发许可证问题。
+
+## 文献
+
+- Ingo Schwarze. bsdcan14-mandoc[M]. 2014.
+- eurobsdcon2014-mandoc-paper[M].
+- Nadge F. Writing for Translation: No Ambiguity – No Worries[R/OL]. FreeBSD Foundation, 2012. <https://freebsdfoundation.org/wp-content/uploads/2012/08/simple_writing_oh_fnadge.pdf>.
+

@@ -1,0 +1,186 @@
+---
+chapter: 第 303 章
+id: CH303
+volume: 第16卷-开源运动与合规治理
+---
+
+# 第 303 章 FreeBSD 合规、认证与标准遵守史——Liberty 词源考据与 BSD 哲学语义契合度
+
+> 本子章由原第 139 章拆分而来，承载 303.0-303.6 节。
+
+### 核心内容
+
+## 本章节索引
+
+1. [303.0 liberty-词源考据与-BSD-哲学语义契合度-本子节为第十二卷卷头子节-承接全书主线-FreeBSD-赓续-CSRG-未竟事业-坚守-BSD-UNIX-哲](303.0-liberty-词源考据与-BSD-哲学语义契合度-本子节为第十二卷卷头子节.md)
+2. [303.1 POSIX-标准遵守史-POSIX-Portable-Operating-System-Interface-可移植操作系统接口-由-IEEE-与-The-Ope](303.1-POSIX-标准遵守史-POSIX-Portable-Operating-Sys.md)
+3. [303.2 C-语言标准遵守史](303.2-C-语言标准遵守史.md)
+4. [303.3 RFC-系列标准遵守史](303.3-RFC-系列标准遵守史.md)
+5. [303.4 LSB-Linux-Standard-Base-兼容性史](303.4-LSB-Linux-Standard-Base-兼容性史.md)
+6. [303.5 UNIX-03-认证与-FreeBSD-的关系](303.5-UNIX-03-认证与-FreeBSD-的关系.md)
+7. [303.6 FIPS-140-密码模块认证史](303.6-FIPS-140-密码模块认证史.md)
+
+## 数据核验与统计（自动增补 · 0-信任）
+
+> **来源库**：资料数据库 · materials / material_cross_references；references_fulltext · chapter_matches / chapter_reviews；doubts_standalone · doubts_to_resolve
+> **方法**：基于全局章号 1–348 直接 SQL 聚合；未做外部事实验证；`ch=0`/未映射条目不计入本章。
+> **生成时间**：2026-08-04 ｜ **复现**：`script/_engine_integrity_analysis.py`
+
+| 指标 | 数值 |
+| -- | -- |
+| 锚定素材 | 0 篇（含存疑标记 0 篇） |
+| 存疑点 | 10 条 |
+| 参考文献匹配 | 4 条 |
+| 章节述评 | 已生成 |
+| 章内交叉引用 | 出 0 / 入 0 |
+
+**数据质量备注**：本章尚无锚定素材，属史料回填优先对象
+
+<!-- DOUBT_PENDING_BLOCK v20260804 -->
+
+> **待核验登记（doubt 批量 2026-08-04）**：
+> 下列条目经联网考据未能从权威一手源直接确认，依 0 信任原则不改动正文，登记待核验：
+>
+> - 存疑 id 1748：2004 POSIX 授权 FreeBSD 接口数('1400余个')：数量口径待 IEEE/Open Group 官方确认
+> - 存疑 id 1749：‘FreeBSD 15.0 起以 C23 为目标’——**已解决（2026-08-04）**：FreeBSD 15.0-RELEASE 已于 2025-12-02 正式发布，官方发布说明确认 "significant progress has been made towards complete support for the C23 version of the C programming language"（15.1 亦重申）——前瞻表述已兑现为实际工程进展
+
+<!-- DATA_VERIFY_BLOCK v20260804 -->
+> 2026-08-11 补：批量修复 DVB 缺失
+>
+## 数据核验与统计（自动增补 · 0-信任）
+
+> **来源库**：资料数据库 · materials / material_cross_references；references_fulltext · chapter_matches / chapter_reviews；doubts_standalone · doubts_to_resolve
+> **方法**：基于全局章号 1–348 直接 SQL 聚合
+> **生成时间**：2026-08-11（批量回填） ｜ **复现**：`script/_engine_integrity_analysis.py`
+
+| 指标 | 数值 |
+| -- | -- |
+| 锚定素材 | 0 篇（含存疑标记 0 篇） |
+| 存疑点 | 0 条 |
+| 参考文献匹配 | 2 条 |
+| 章节述评 | 未生成 |
+| 章内交叉引用 | 出 0 / 入 0 |
+
+**数据质量备注**：属史料回填优先对象；2026-08-11 批量回填 DVB 框架
+
+<!-- MAIL_MINE v20260813 -->
+## 邮件史料增补
+
+> 基于 6 个邮件数据库（260 万封）+ FTS5 全文索引自动挖掘，供编纂引用参考。
+> 以下为本章主题相关的邮件史料线索（精确词命中，含时间范围与代表邮件）。
+
+- **liberty**（netbsd）: 202 封 · 1994-2026
+  - [1995] FreeBSD mailing list —
+  - [1995] docs/232: the mandoc .St macro seems to be broken — J Wunsch
+  - [1995] Re: bin/643 — Jordan K. Hubbard（乔丹·哈伯德）
+- **liberty**（openbsd）: 271 封 · 1998-2026
+  - [1995] FreeBSD mailing list —
+  - [1995] docs/232: the mandoc .St macro seems to be broken — J Wunsch
+  - [1995] Re: bin/643 — Jordan K. Hubbard
+- **liberty**（freebsd）: 1,659 封 · 1995-2024
+  - [1995] FreeBSD mailing list —
+  - [1995] docs/232: the mandoc .St macro seems to be broken — J Wunsch
+  - [1995] Re: bin/643 — Jordan K. Hubbard
+
+<!-- /MAIL_MINE -->
+
+<!-- DB_POINTS:doubts_resolved -->
+**数据库要点引用（doubts_standalone.db · 2026-08-13）**
+
+> 来源：`04-现代研究文献/06-存疑数据库/doubts_standalone.db` 表 `doubts_to_resolve`（1987 条，1966 已解决）。本章存疑 14 条已解决。类别分布：date(7)、other(3)、fact(1)、version(1)、出处(1)、年代(1)
+
+> 存疑管理体系：98.9% 已闭环，解决结论含 date/fact/source_conflict/name/version 等类型，具体结论见 doubts_standalone.db 表 `resolution_summary` 字段。
+<!-- /DB_POINTS:doubts_resolved -->
+
+<!-- DB_POINTS:chapter_reviews -->
+**数据库要点引用（references_fulltext.db · chapter_reviews · 2026-08-13）**
+
+> 来源：`04-现代研究文献/05-参考文献全文数据库/references_fulltext.db` 表 `chapter_reviews`（348 章全覆盖）。本章级文献综述 658 字、匹配 10 篇文献，状态 imported。映射：旧章号 +1 → 磁盘章号。
+
+> **综述要点**：本节文献综述围绕 FreeBSD 合规、认证与标准遵守史的多维度史料展开，涵盖开源许可证合规、POSIX 标准实现、自由哲学理论根源三个层面。
+
+<!-- /DB_POINTS:chapter_reviews -->
+
+<!-- COL_SCAN v20260826 -->
+## 内容包复核增补（Phase 4 · 2026-08-26）
+
+> 基于 4 个核心数据库（doubts_standalone、historical_claims、original_sources、资料数据库）内容包自动匹配与审核。
+> 内容包总行数：103 | 去重主张数：15 | 复核方法：12 步流程（详见 vol01_phase4_summary.md）
+
+### 证据等级分布
+
+| 等级 | 说明 | 数量 | 占比 |
+| -- | -- | -- | -- |
+| L1 | 代码与构建产物 | 0 | 0.0% |
+| L2 | 即时通讯记录 | 0 | 0.0% |
+| L3 | 官方文档与公告 | 103 | 100.0% |
+| L4 | 事后叙述 | 0 | 0.0% |
+| L5 | 二手研究 | 0 | 0.0% |
+
+### 来源数据库分布
+
+| 来源 | 行数 |
+| -- | -- |
+| 资料数据库 | 103 |
+
+### 新增证据点
+
+1. [L3] `资料数据库.freebsd_sa` — FreeBSD 14.3, FreeBSD 14.4 and FreeBSD 15.0
+2. [L3] `资料数据库.freebsd_sa` — FreeBSD 14.3, FreeBSD 14.4 and FreeBSD 15.0
+3. [L3] `资料数据库.freebsd_sa` — FreeBSD 15.0 and later
+4. [L3] `资料数据库.freebsd_sa` — FreeBSD 14.x and FreeBSD 15.0
+5. [L3] `资料数据库.freebsd_sa` — FreeBSD 14.x and FreeBSD 15.0
+6. [L3] `资料数据库.freebsd_sa` — All supported versions of FreeBSD.                 2016-09-22 21:05:21 UTC (stable/11, 11.0-STABLE)                 2016
+7. [L3] `资料数据库.freebsd_sa` — FreeBSD 10.0-RELEASE and later
+8. [L3] `资料数据库.freebsd_sa` — FreeBSD 10.0 prior to 10.0-RC5
+9. [L3] `资料数据库.freebsd_sa` — FreeBSD 10.0-BETA
+10. [L3] `资料数据库.freebsd_sa` — FreeBSD 8.4-RELEASE and FreeBSD 9.x
+11. [L3] `资料数据库.freebsd_sa` — FreeBSD 7.x prior to 7.3-RELEASE, 8.x prior to 8.0-RC1
+12. [L3] `资料数据库.freebsd_sa` — FreeBSD 7.0-RELEASE, FreeBSD 7.0-STABLE
+
+### 0 信任评估
+
+- 独立来源数：1 个数据库
+- 一级史料通过率：100.0%（L1+L2+L3 / 总行数）
+- 本章 L3 级史料 103 条，可纳入大纲但需标注来源
+- 所有主张均来自内容包自动匹配，未经人工逐一核实
+- 单一来源支撑的主张须标注 (单一文献支撑，待交叉验证)
+- L5 级别来源不得独立支撑事实性陈述
+
+### 交叉验证提示
+
+- 本章有 103 条 L3 级证据，建议优先与此前已入库的 MAIL_MINE、DB_POINTS、PODCAST_MINE 块交叉验证
+
+<!-- /COL_SCAN -->
+
+
+Version 1.1
+Last Updated: 2 December 2024
+The Eclipse Foundation Website Privacy Policy (“Privacy Policy”) is the Eclipse Foundation’s
+commitment to meet our privacy obligations. In turn, this Eclipse Foundation Hosted Services
+P
+
+
+
+MEMBERSHIP
+AGREEMENT
+(the
+“Agreement”)
+is
+effective
+as
+of
+this
+_____
+of
+______________________, 20___  (the “Effective Date”) by and between Eclipse Foundation AISBL (the
+“Eclipse Foundation”), a Belgian in
+
+
+
+The purpose of this Policy is twofold:
+[1]
+Subject to the EMO following the process specified herein, the Eclipse
+Foundation Board delegates the responsibility for approvi
+
+
