@@ -9,7 +9,7 @@ volume: 第12卷-macos的bsd遗产
 ## 要点
 
 - Apple 于 **2016 年 6 月 13 日** 在 WWDC 2016 公布 **APFS**（Apple File System），**2017 年 3 月 27 日** 随 iOS 10.3 首次部署于 iOS 设备，**2017 年 9 月 25 日** 随 macOS 10.13 High Sierra 部署于 Mac（作为可选文件系统，**2018 年 9 月 24 日** ma
-- 此期 Darwin 开源仍经 **APSL 2.0 许可证**（**2003 年 8 月 6 日** 起），独立开发者贡献网络与安全补丁。bsd_commits.db 查询显示 **2016-2019 年** 间 freebsd-src 仓库中 message_subject 含"From Apple"/"From Darwin"的 commit 数量较低（延续 2010 年后的“低密度回馈”特征
+- 此期 Darwin 开源仍经 **APSL 2.0 许可证**（**2003 年 8 月 6 日** 起），独立开发者贡献网络与安全补丁。freebsd.duckdb 查询显示 **2016-2019 年** 间 freebsd-src 仓库中 message_subject 含"From Apple"/"From Darwin"的 commit 数量较低（延续 2010 年后的“低密度回馈”特征
 - **2016-2019 年** macOS 10.12-10.15 对比 **FreeBSD 11.x**（**2016 年 10 月 10 日** 发布）/**12.x**（**2018 年 12 月 11 日** 发布）、**Linux 4.x**（2016-2019 年）、**Windows 10**（2015-2019 年），其 APFS 与 64 位纯净化在文件系统与架构演进上各有侧重。
 - BSD 社区针对 2016-2019 年（macOS 10.12 Sierra 至 10.15 Catalina）Apple 与 FreeBSD 之间代码交流的批评可归纳为三点。其一，**apple.com 邮箱 commit 在 2016-2019 年间为零**——freebsd.duckdb 查询 2-3 显示，freebsd-src 仓库中 author_email 含 apple.com
 - Apple 阵营对“2016-2019 年零回馈”批评的回应可归纳为三条路径。其一，**BSDL 契约即允许零回馈**——BSD 许可证明文允许"with or without modification"的商业使用与闭源发行，“允许不回馈”是 BSDL 的哲学选择，“零回馈”是此哲学选择在 2016-2019 年间的极端显现；要求 Apple 在 BSDL 契约之外“主动”提供回馈，是将法律契约与
@@ -28,7 +28,7 @@ volume: 第12卷-macos的bsd遗产
 - APFS 是否“基于”BSD FFS/UFS——经 Darwin 源码仓库比对，APFS 是 Apple 自研文件系统，其代码结构与 BSD FFS/UFS 无直接派生关系。APFS 与 ZFS 均支持 Copy-on-Write 与快照，但 APFS 的设计针对固态存储（SSD/NVMe）优化，ZFS 针对池化存储（storage pool）优化。采信“APFS 是 Apple 自研，与 BSD
 - 2016-2019 年间 Apple 与 FreeBSD 的代码交流是否“双向”——bsd_commits.db 显示 FreeBSD 端的 Apple 相关 commit 以硬件支持为主（FreeBSD→Apple 硬件适配），而 Apple→FreeBSD 的用户空间代码回馈较少。采信“此期代码交流以 FreeBSD 适配 Apple 硬件为主，Apple 向 FreeBSD 回馈用户空间代码
 - APFS 与 ZFS 的设计哲学差异须客观论述——APFS 针对固态存储优化（SSD/NVMe），ZFS 针对池化存储优化（storage pool）；APFS 是闭源，ZFS 是开源（CDDL）。此差异不意味着优劣，而是不同的设计目标。采信“APFS 与 ZFS 是不同设计目标的文件系统，非优劣关系”的判断。
-- 批评层的量化依据须明确数据库覆盖盲区——bsd_commits.db 仅含 freebsd-src 等仓库的 commit，不含 Darwin/XNU 仓库的 commit，故“零回馈”是“FreeBSD 端可观察的零回馈”，非“Apple 端实际回馈的零”。Apple 可能在 Darwin 仓库中接受了 FreeBSD 提交者的 pull request，但此部分不在 bsd_commits.d
+- 批评层的量化依据须明确数据库覆盖盲区——freebsd.duckdb 仅含 freebsd-src 等仓库的 commit，不含 Darwin/XNU 仓库的 commit，故“零回馈”是“FreeBSD 端可观察的零回馈”，非“Apple 端实际回馈的零”。Apple 可能在 Darwin 仓库中接受了 FreeBSD 提交者的 pull request，但此部分不在 bsd_commits.d
 - Apple 阵营的回应须按 0 信任原则考据——“许可证设计意图”论点虽逻辑自洽，但 BSDL 创始者的“意图”本身是事后诠释，须谨慎对待；“509 个开源仓库”是事实但多数为 Apple 自有项目的源码发布，并非向 FreeBSD 的主动回馈；“Catalina 64 位纯净化推动 FreeBSD”属叙事建构而非因果事实。APFS 自研的合理性论点须厘清——APFS 针对 SSD/NVMe 优化
 
 ## 文献

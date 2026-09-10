@@ -19,7 +19,7 @@
   
 **史观**：总纲第 2 条——实践先于理论，3 年延期源于 SMPng 工程挑战而非计划
   
-**辨析**：经 bsd_commits.db tags 表验证，5.0-RELEASE 的 tagger_date 为 2003-01-16（非旧叙事 2003.1.19，误差 3 天，可能为公告日期与 tag 日期差异），5.0 开发起始日期存在 2000.3 与 2000.1 两种说法，需查 SVN；0 信任原则适用说明：L1.1.1 年度 commit 量基于 author_date 聚合，FreeBSD SVN-to-Git 2020 迁移可能引入日期偏差但 author_date 应保持一致；commit 量下降（2002→2003）不等于开发停滞，可能反映 SMPng 细粒度锁改造使单个 commit 涉及更多文件与审查周期；L3.4.1.top10 集中度基于 4 大 BSD src 合计（freebsd-src + openbsd-src + netbsd-src + dragonfly-src），freebsd-src 单仓库集中度可能更高；bus factor 低不等于风险高，须结合关键子系统（SMPng、GEOM、ULE）贡献集中度综合判断；L1.4.1 release tag 间隔数据中部分 tag 为 svn2git 重构时打的标签，非原始发布时间，须排除 _cvs 后缀 tag
+**辨析**：经 freebsd.duckdb tags 表验证，5.0-RELEASE 的 tagger_date 为 2003-01-16（非旧叙事 2003.1.19，误差 3 天，可能为公告日期与 tag 日期差异），5.0 开发起始日期存在 2000.3 与 2000.1 两种说法，需查 SVN；0 信任原则适用说明：L1.1.1 年度 commit 量基于 author_date 聚合，FreeBSD SVN-to-Git 2020 迁移可能引入日期偏差但 author_date 应保持一致；commit 量下降（2002→2003）不等于开发停滞，可能反映 SMPng 细粒度锁改造使单个 commit 涉及更多文件与审查周期；L3.4.1.top10 集中度基于 4 大 BSD src 合计（freebsd-src + openbsd-src + netbsd-src + dragonfly-src），freebsd-src 单仓库集中度可能更高；bus factor 低不等于风险高，须结合关键子系统（SMPng、GEOM、ULE）贡献集中度综合判断；L1.4.1 release tag 间隔数据中部分 tag 为 svn2git 重构时打的标签，非原始发布时间，须排除 _cvs 后缀 tag
   
 **文献**：FreeBSD 5.0 Release Notes；BSDCon 2003 5.0 演讲；release/5.0.0. freebsd-src 仓库 tag [DB/OL]. 2003-01-16T16:56:23Z. tag: release/5.0.0; commit: 47227ef0ef663b7abb81ab5a60a450da9a93d24b；freebsd.duckdb L1.1.1 查询结果（freebsd-src 年度 commit 量 2002-2003）[DB/OL]；freebsd.duckdb L1.4.1 查询结果（freebsd-src release tag 间隔）[DB/OL]；freebsd.duckdb L3.4.1.top10 查询结果（4 大 BSD src top 10 贡献者集中度 2002-2006）[DB/OL] ［A］
 

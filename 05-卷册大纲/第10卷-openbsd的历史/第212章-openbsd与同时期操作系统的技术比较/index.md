@@ -42,7 +42,7 @@ volume: 第10卷-openbsd的历史
 | 权限模型 | 白名单内建于程序代码 | 策略外置为可加载模块 |
 | 管理员干预 | 无可关闭选项 | 可后置配置策略 |
 | 时间差 | — | 早约 12 年 |
-- NSA SELinux 项目 [EB/OL]. <https://www.nsa.gov/what-we-do/research/selinux/>；AppArmor 项目 [EB/OL]. <https://apparmor.net/>；Linux Kernel 2.6.0 Release Notes [EB/OL]. <https://kernelnewbies.org/LinuxChanges>；OpenBSD pledge(2) 手册页 [EB/OL]. <https://man.openbsd.org/pledge.2>；OpenBSD unveil(2) 手册页 [EB/OL]. <https://man.openbsd.org/unveil.2>；Red Hat SELinux 文档 [EB/OL]. <https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/>；bsd_commits.db 查询 L7.3.1（来源：原材料/研究/bsd 仓库分析/数据分析/衍生项目与跨项目对比分析.md §L7.3.1） ［A］**SELinux/AppArmor/pledge/unveil 安全模块对比**：
+- NSA SELinux 项目 [EB/OL]. <https://www.nsa.gov/what-we-do/research/selinux/>；AppArmor 项目 [EB/OL]. <https://apparmor.net/>；Linux Kernel 2.6.0 Release Notes [EB/OL]. <https://kernelnewbies.org/LinuxChanges>；OpenBSD pledge(2) 手册页 [EB/OL]. <https://man.openbsd.org/pledge.2>；OpenBSD unveil(2) 手册页 [EB/OL]. <https://man.openbsd.org/unveil.2>；Red Hat SELinux 文档 [EB/OL]. <https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/>；openbsd.duckdb 查询 L7.3.1（来源：原材料/研究/bsd 仓库分析/数据分析/衍生项目与跨项目对比分析.md §L7.3.1） ［A］**SELinux/AppArmor/pledge/unveil 安全模块对比**：
 
 | 维度 | SELinux | AppArmor | OpenBSD pledge/unveil |
 | --- | --- | --- | --- |

@@ -26,7 +26,7 @@
 
 **要点**：NetBSD 主仓库自 2019-2020 年间由 CVS 迁移至 Mercurial（位于 **<https://anonhg.netbsd.org/**>）——这一迁移是 NetBSD 基础设施现代化的关键事件，使 NetBSD 跟上现代分布式版本控制工具的步伐；但** 精确迁移完成日期未能从 netbsd-announce 邮件列表取得**——在 netbsd-announce 2019/02-2020/10 各月存档中未发现明确的“CVS-to-Mercurial 迁移完成公告”[考据完成：2026-07-28 经穷尽联网考据，该要点所引数据已交叉验证，部分精确数字须待原始档案公开后方可补充确证]；迁移公告可能发布于 tech-repository、source-changes 或 core 等其他邮件列表而非 netbsd-announce；bsd_commits.db 的 tags 表不含 NetBSD 仓库 release tag，原因之一即为 NetBSD 主仓库已迁至 Mercurial，GitHub 镜像不携带 Mercurial 主仓的 release tag
 
-**史料**：netbsd-announce 邮件列表 2019/02-2020/10 各月存档（逐月抓取，未发现迁移完成公告）；NetBSD-SA2024-002 PGP 原文（**<https://ftp.netbsd.org/pub/NetBSD/security/advisories/NetBSD-SA2024-002.txt.asc**>，2024-07-01，仍使用"cvs update -d -P"指令，提示文档可能未及时更新）；bsd_commits.db tags 表查询结果（tags 表不含 netbsd-src/netbsd-pkgsrc，commits 表含 netbsd-src 773,687 条与 netbsd-pkgsrc 1,222,307 条）；考据记录 20260723_announcements-netbsd.md §C-5、§ 存疑判定依据-二 -3 ［A］
+**史料**：netbsd-announce 邮件列表 2019/02-2020/10 各月存档（逐月抓取，未发现迁移完成公告）；NetBSD-SA2024-002 PGP 原文（**<https://ftp.netbsd.org/pub/NetBSD/security/advisories/NetBSD-SA2024-002.txt.asc**>，2024-07-01，仍使用"cvs update -d -P"指令，提示文档可能未及时更新）；netbsd.duckdb tags 表查询结果（tags 表不含 netbsd-src/netbsd-pkgsrc，commits 表含 netbsd-src 773,687 条与 netbsd-pkgsrc 1,222,307 条）；考据记录 20260723_announcements-netbsd.md §C-5、§ 存疑判定依据-二 -3 ［A］
 
 **史观**：形式与内容：版本控制系统作为 “形式”（开发工具框架）改变了开发 “内容”（协作方式）；CVS-to-Mercurial 迁移是 NetBSD 基础设施形式主义化的关键事件；商业与社区的张力：NetBSD 选择 Mercurial 而非 Git，与 FreeBSD（2020-12 SVN-to-Git）、DragonFly BSD（Git）、OpenBSD（CVS）形成对照，反映各 BSD 项目在版本控制工具选择上的分化
 

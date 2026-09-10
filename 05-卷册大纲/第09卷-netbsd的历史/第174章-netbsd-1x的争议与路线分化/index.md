@@ -22,7 +22,7 @@ volume: 第09卷-netbsd的历史
 
 ## 辨析
 
-- 考据过程留痕——【查证来源】合图层的史观审视基于现有公开史料（NetBSD 官方文档、FreeBSD 4.0 公告、bsd_commits.db commit 量数据）与项目史观总纲第 13、19、21 条；【交叉验证方法】NetBSD 1.5/1.6 公告中的嵌入式平台支持（Dreamcast、Zaurus、Cobalt 等）与 NetBSD history.html 的"architectur
+- 考据过程留痕——【查证来源】合图层的史观审视基于现有公开史料（NetBSD 官方文档、FreeBSD 4.0 公告、netbsd.duckdb commit 量数据）与项目史观总纲第 13、19、21 条；【交叉验证方法】NetBSD 1.5/1.6 公告中的嵌入式平台支持（Dreamcast、Zaurus、Cobalt 等）与 NetBSD history.html 的"architectur
 - 撤权的具体原因在不同叙事中差异较大——部分归因于沟通风格，部分归因于技术分歧，部分归因于项目治理分歧；OpenBSD 首次正式发布日期在不同叙事中存在分歧——部分早期资料误作 1996.5，部分资料区分 OpenBSD 1.1 CVS 标签（1995.10.18）与 OpenBSD 1.2 首次正式发行（1996.7），需对照 OpenBSD 官方档案进一步核验。经 bsd_commits.db
 
 ## 文献

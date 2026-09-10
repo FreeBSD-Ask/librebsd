@@ -75,7 +75,7 @@
 
   | 原大纲辨析修正 | 原表述 | 修正 |
 | ------------ | ---- | -- |
-| Lewis/Dillon PostgreSQL 基准 | “Greg Lewis 与 Matthew Dillon（马修·狄龙） 等的 PostgreSQL on FreeBSD 性能基准测试” | 经 bsd_commits.db 查询二者在 freebsd-src 与 freebsd-ports 中均无 PostgreSQL 性能相关提交，可能源自社区流传而非正式发表文献，[考据完成：2026-07-28 该处存疑标注属史料缺口，须待原始档案公开后方可补充确证] |
+| Lewis/Dillon PostgreSQL 基准 | “Greg Lewis 与 Matthew Dillon（马修·狄龙） 等的 PostgreSQL on FreeBSD 性能基准测试” | 经 freebsd.duckdb 查询二者在 freebsd-src 与 freebsd-ports 中均无 PostgreSQL 性能相关提交，可能源自社区流传而非正式发表文献，[考据完成：2026-07-28 该处存疑标注属史料缺口，须待原始档案公开后方可补充确证] |
 
   | Phoronix 测试方法争议 | 内容 |
 | ------------------- | -- |
@@ -88,7 +88,7 @@
   
 **史观**：第 14 章边缘者与第 9 条经验优先——数据库基准测试志愿者是数据库生态的边缘者，其实践（性能数据）先于形式化的性能理论，但缺乏系统性使数据质量参差不齐
   
-**辨析**：原大纲提及“Greg Lewis 与 Matthew Dillon 等的 PostgreSQL on FreeBSD 性能基准测试”——经 bsd_commits.db 查询二者在 freebsd-src 与 freebsd-ports 中均无 PostgreSQL 性能相关提交，此说法可能源自社区流传而非正式发表文献，[考据完成：2026-07-28 Greg Lewis/Matthew Dillon PostgreSQL on FreeBSD 性能基准的原始文献未能定位，暂保留存疑]；Yahoo! MySQL on FreeBSD 性能基准的具体数据未公开，仅有定性描述；Phoronix 性能比较自 2008 年起发布，但 Phoronix 测试方法在社区中存在争议——测试样本小、配置不一致、硬件选择偏向 Linux 等
+**辨析**：原大纲提及“Greg Lewis 与 Matthew Dillon 等的 PostgreSQL on FreeBSD 性能基准测试”——经 freebsd.duckdb 查询二者在 freebsd-src 与 freebsd-ports 中均无 PostgreSQL 性能相关提交，此说法可能源自社区流传而非正式发表文献，[考据完成：2026-07-28 Greg Lewis/Matthew Dillon PostgreSQL on FreeBSD 性能基准的原始文献未能定位，暂保留存疑]；Yahoo! MySQL on FreeBSD 性能基准的具体数据未公开，仅有定性描述；Phoronix 性能比较自 2008 年起发布，但 Phoronix 测试方法在社区中存在争议——测试样本小、配置不一致、硬件选择偏向 Linux 等
   
 **文献**：freebsd-performance 邮件列表存档；freebsd-databases 邮件列表存档；Yahoo! 工程博客存档；Phoronix FreeBSD/Linux 性能比较文章（phoronix.com）[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]
 

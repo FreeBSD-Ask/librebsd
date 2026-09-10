@@ -38,7 +38,7 @@ volume: 第14卷-商业生态与企业案例
 ## 文献
 
 - Google v. Oracle; FSF 指南 ［A］## 史料考据补充（2026-08-04 任务3 联网核验）> 主题：BSD 许可/商业
-- 项目史观总纲第 13、19、21 条（见 据原文第 25 章）；**BSD 2-Clause** 原文；**GPL** 原文；**Linux** 内核 **COPYING** 文件（torvalds/linux 仓库）；**Committer's Big List of Rules**；**FreeBSD Committer's Guide**；**FreeBSD Foundation** **IRS** **990** 表；bsd_commits.db L3.2.1/L3.2.2 查询报告；**Berlin** I. "Two Concepts of Liberty"（1958）；**TrueNAS** 2025 迁移公告；上述 278.38.1-279.38.5 引用的综合文献 ［A］
+- 项目史观总纲第 13、19、21 条（见 据原文第 25 章）；**BSD 2-Clause** 原文；**GPL** 原文；**Linux** 内核 **COPYING** 文件（torvalds/linux 仓库）；**Committer's Big List of Rules**；**FreeBSD Committer's Guide**；**FreeBSD Foundation** **IRS** **990** 表；freebsd.duckdb L3.2.1/L3.2.2 查询报告；**Berlin** I. "Two Concepts of Liberty"（1958）；**TrueNAS** 2025 迁移公告；上述 278.38.1-279.38.5 引用的综合文献 ［A］
 
 <!-- PODCAST_REVIEW v20260829 -->
 <!-- 语义复核范围：BSDTalk EP146（共 1 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
