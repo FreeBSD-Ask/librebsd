@@ -39,7 +39,7 @@ volume: 第08卷-freebsd的范式转换
 - 上述第 67.11.1-67.11.5 节所有文献综合；项目史观总纲第 4、5、7、8、13、23 条 ［A］<!-- DB_REF:freebsd.duckdb -->> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 2024-2026 年间：168,386 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
 - 基金会页面； 社区文化研究 ［B］## 史料考据补充（2026-08-04 任务3 联网核验）> 主题：FreeBSD 组件/特性
 - FreeBSD Foundation Netflix Case Study、OpenZFS Main Page、FreeBSD 7.0/8.0/5.0 Release Notes、Juniper Junos OS Documentation、Sony PS4 SDK、FreeBSD Commit Bit Expiration Policy、本项目既有考据记录 `03-原始史料库/06-考据记录/20260727_rumors-freebsd.md`#### 概率学量化分析
-- bsd_commits.db（freebsd-src）；0 信任原则方法论；FreeBSD 贡献者多样性研究（如有）据一手文献印证消解^doubt-resolved-590：此文献待 0 信任原则考据验证 ］<!-- DB_REF:freebsd.duckdb -->> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 2010-2026 年间：831,293 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
+- freebsd.duckdb（freebsd-src）；0 信任原则方法论；FreeBSD 贡献者多样性研究（如有）据一手文献印证消解^doubt-resolved-590：此文献待 0 信任原则考据验证 ］<!-- DB_REF:freebsd.duckdb -->> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 2010-2026 年间：831,293 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
 - McKusick M K, Neville-Neil G. The Design and Implementation of the FreeBSD Operating System [M]. 2nd ed. Addison-Wesley, 2015. ［B］<!-- DB_REF:freebsd.duckdb -->> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 2024-2026 年间：168,386 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
 
 <!-- PODCAST_REVIEW v20260829 -->

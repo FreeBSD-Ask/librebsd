@@ -18,7 +18,7 @@ volume: 第06卷-freebsd的核心技术革新
 
 - 总纲第 7 条——技术选择即政治选择：企业赞助方向直接塑造 FreeBSD 在该时期的子系统优先级（如 Netflix 推动内核 TLS 卸载与网络栈高性能化）。
   - 辨析：企业提交多属受雇工作期间的“有组织贡献”，不宜与志愿者个人贡献混同；corp 名单随年份变动，须以 contributors 表逐期核验。
-  - 文献：bsd_commits.db（freebsd-src contrib
+  - 文献：freebsd.duckdb（freebsd-src contrib
 - 总纲第 6 条——技术路线分化：2018-2022 年是操作系统格局深刻变化的五年：Linux 在云原生领域（Kubernetes、容器、eBPF）建立绝对主导地位；Windows 通过 WSL2 拥抱 Linux 生态；macOS 经历架构转换（x86→Apple Silicon）；OpenBSD 坚持安全优先路线；FreeBSD 在 Netflix、WhatsApp（部分基础设施）、Cloud
 - 总纲第 17 条——软件工程：12.x 周期 68 个 SA 与 14.x 周期 80 个 SA 的对比须放置在时间尺度上理解——14.x 周期 80 个 SA 集中在 32 个月内（2023.11-2026.7），12.x 周期 68 个 SA 分布在 28 个月内，月均速率相近（约 2.4-2.5 个/月），但 12.x 周期 SA 的“主题分布”显著不同：12.x 周期 SA 主要围绕 In
 - 执行、乱序执行、TSX 事务内存）；FreeBSD 在 12.x 周期响应这一浪潮的方式是“逐次合入缓解、每次都引入新的内核机制”——MDS 引入 `mds_insn` 与 `mds_insn_atomic` 缓解、MCEPSC 引入页面大小变更时的特殊处理、TAA 引入 TSX 禁用选项、SwapGS 引入 lfence 序列化——这种“漏洞驱动机制叠加”使 12.x 末期的内核侧信道缓解代码远比 12.0 发布时复杂，性能开销也持续累积；
@@ -27,7 +27,7 @@ volume: 第06卷-freebsd的核心技术革新
 ## 辨析
 
 - 企业提交多属受雇工作期间的“有组织贡献”，不宜与志愿者个人贡献混同；corp 名单随年份变动，须以 contributors 表逐期核验。
-  - 文献：bsd_commits.db（freebsd-src contributors 表，窗口 2017–2019，检索 2026-07-21）［A］；FreeBSD 项目贡献者指南（<<https://docs.freebsd.org/en/artic>
+  - 文献：freebsd.duckdb（freebsd-src contributors 表，窗口 2017–2019，检索 2026-07-21）［A］；FreeBSD 项目贡献者指南（<<https://docs.freebsd.org/en/artic>
 - Linux 在 2018-2022 年引入了大量新功能（io_uring、BPF、WireGuard 等），FreeBSD 采取更谨慎的策略，功能引入慢但稳定性优先；OpenBSD 的 **unveil(2)** 与 FreeBSD Capsicum 理念相似但 API 设计不同；FreeBSD 的 jails 与 Linux cgroups/namespaces/Docker 功能范围不同——F
 - 2-01 至 2021-04-01），但 SA-21:08.vm、SA-21:09.accept_filter、SA-21:10.jail_mount 三个 SA 发布于 2021-04-06，恰在 13.0-RELEASE（2021-04-13）
 - **需精确说明 MCEPSC 与 Meltdown/Spectre 的区别**：MCEPSC（CVE-2018-12207）不是数据泄露而是 DoS——恶意 guest 通过强制页面大小变更触发 host MCE panic，是“虚拟化安全边界”问题（host 被 guest 攻击导致宕机），与 Meltdown 的“用户态读取内核数据”性质不同；MCEPSC 的修复涉及 Intel SKL002
@@ -35,7 +35,7 @@ volume: 第06卷-freebsd的核心技术革新
 
 ## 文献
 
-- bsd_commits.db（freebsd-src contributors 表，窗口 2017–2019，检索 2026-07-21）［A］；FreeBSD 项目贡献者指南（<https://docs.freebsd.org/en/articles/contributing/>）［B］
+- freebsd.duckdb（freebsd-src contributors 表，窗口 2017–2019，检索 2026-07-21）［A］；FreeBSD 项目贡献者指南（<https://docs.freebsd.org/en/articles/contributing/>）［B］
 
 ## 134.12.2 地域与学术的志愿者多样性
 
@@ -45,7 +45,7 @@ volume: 第06卷-freebsd的核心技术革新
 
 ## 134.13.2 GDPR 与全球数
 
-- FreeBSD Security Team. FreeBSD Security Advisories Archive [EB/OL]. (2018-12-04 至 2021-03-25)[2026-07-22]. <https://www.freebsd.org/security/advisories/>; MITRE. CVE Project cvelistV5 Repository [Z]. (2026-07). <https://github.com/CVEProject/cvelistV5>; FreeBSD Project. bsd_commits.db — freebsd-src
+- FreeBSD Security Team. FreeBSD Security Advisories Archive [EB/OL]. (2018-12-04 至 2021-03-25)[2026-07-22]. <https://www.freebsd.org/security/advisories/>; MITRE. CVE Project cvelistV5 Repository [Z]. (2026-07). <https://github.com/CVEProject/cvelistV5>; FreeBSD Project. freebsd.duckdb — freebsd-src
 - FreeBSD Security Team. FreeBSD-SA-19:07.mds: Microarchitectural Data Sampling [EB/OL]. (2019-05-14)[2026-07-22]. <https://security.freebsd.org/advisories/FreeBSD-SA-19:07.mds.asc>; FreeBSD Security Team. FreeBSD-SA-19:25.mcepsc: Machine Check Exception on Page Size Change [EB/OL]. (2019-11-12)[2026-
 - FreeBSD Security Team. FreeBSD-SA-18:14.bhyve: Insufficient bounds checking in bhyve(8) device model [EB/OL]. (2018-12-04)[2026-07-22]. <https://security.freebsd.org/advisories/FreeBSD-SA-18:14.bhyve.asc>; FreeBSD Security Team. FreeBSD-SA-20:28.bhyve_vmcs: Privilege escalation via VMCS access [EB/O
 - FreeBSD Security Team. FreeBSD-SA-19:05.pf: IPv6 fragment reassembly panic [EB/OL]. (2019-05-14)[2026-07-22]. <https://security.freebsd.org/advisories/FreeBSD-SA-19:05.pf.asc>; FreeBSD Security Team. FreeBSD-SA-19:06.pf: ICMP/ICMP6 packet filter bypass [EB/OL]. (2019-05-14)[2026-07-22]. <<https://sec>

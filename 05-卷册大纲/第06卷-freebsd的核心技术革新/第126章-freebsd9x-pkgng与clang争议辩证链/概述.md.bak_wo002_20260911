@@ -1,0 +1,167 @@
+---
+chapter: 第 126 章
+id: CH126
+volume: 第06卷-freebsd的核心技术革新
+---
+
+# 第 126 章 FreeBSD 9.x：pkgng 与 Clang 争议辩证链
+
+> 本子章由原第 57 章拆分而来，承载 126.21-126.23 节及史观映射、采访录、媒体反响，涵盖 pkgng 孵化争议、Clang/LLVM 早期导入争议及项目统摄史观审视。
+
+## 本章节索引
+
+1. [126.21 pkgng-孵化争议的辩证链-工程必要性-生态滞后与-ports-范式的张力](126.21-pkgng-孵化争议的辩证链-工程必要性-生态滞后与-ports-范式的张力.md)
+2. [126.22 Clang-LLVM-早期导入争议的辩证链-许可证纯洁化-Apple-主导与编译器性能张力](126.22-Clang-LLVM-早期导入争议的辩证链-许可证纯洁化-Apple.md)
+3. [126.23 项目统摄史观审视-pkgng-与-Clang-LLVM-争议的方法论反思](126.23-项目统摄史观审视-pkgng-与-Clang-LLVM-争议的方法论反思.md)
+
+## 第 123.25 节 媒体反响与社区舆论（详见 [媒体反响与社区舆论.md](媒体反响与社区舆论.md)）
+
+---
+
+> [文献缺口提示] 本章文献支撑不足（匹配 0 篇），建议后续补充文献下载。
+
+<!-- DATA_VERIFY_BLOCK v20260804 -->
+## 数据核验与统计（自动增补 · 0-信任）
+
+> **来源库**：资料数据库 · materials / material_cross_references；references_fulltext · chapter_matches / chapter_reviews；doubts_standalone · doubts_to_resolve
+> **方法**：基于全局章号 1–348 直接 SQL 聚合；未做外部事实验证；`ch=0`/未映射条目不计入本章。
+> **生成时间**：2026-08-04 ｜ **复现**：`script/_engine_integrity_analysis.py`
+
+| 指标 | 数值 |
+| --- | --- |
+| 锚定素材 | 11 篇（含存疑标记 2 篇） |
+| 存疑点 | 9 条 |
+| 参考文献匹配 | 1 条 |
+| 章节述评 | 未生成 |
+| 章内交叉引用 | 出 1 / 入 1 |
+
+**数据质量备注**：本章数据齐备
+
+<!-- GITREPO_FINE_BLOCK v20260804 -->
+## Git 仓库细粒度技术分析（FreeBSD · 自动增补 · 0-信任）
+
+> 来源：`03-原始史料库/01-代码仓库史料/02-FreeBSD/db/freebsd.duckdb` 的 `tech_features` 表（提交级特性标记）。
+> 方法：按特性聚合 `commits` 提交计数与首/峰/末年；未做外部事实验证。
+
+| 技术特性 | 类别 | 提交标记 | 活跃跨度 |
+| --- | --- | ---: | --- |
+| Clang/LLVM | 工具链 | 16,070 | 2002–2026 |
+
+- **Clang/LLVM**（工具链，2002–2026）：C 编译器栈：FreeBSD 2012 用 Clang 取代 GCC（许可证原因） 替代：GCC → Clang/LLVM（FreeBSD 默认）
+
+**跨项目代码流动（Clang/LLVM）**：
+
+- 各项目匹配路径数：FreeBSD=50,976，NetBSD=64,174，OpenBSD=49,676，DragonFlyBSD=1,595，BSD衍生项目=69,029，illumos-gate=5，Darwin(macOS)=45，Linux内核=42
+- 主要共享路径对（源→目标）：FreeBSD→BSD衍生项目 共享 47,375；FreeBSD→DragonFlyBSD 共享 1,220；DragonFlyBSD→BSD衍生项目 共享 599；FreeBSD→OpenBSD 共享 6
+
+> 说明：上述为含"Clang/LLVM"关键字的 DISTINCT 文件路径计数；高共享对反映该子系统从起源项目向其它 BSD 的移植/同步。
+
+---
+
+<!-- AUX_REF_RESTORE v20260804 -->
+
+### 辅助参考
+
+- [采访录.md](采访录.md)
+
+<!-- DB_POINTS:doubts_resolved -->
+**数据库要点引用（doubts_standalone.db · 2026-08-13）**
+
+> 来源：`04-现代研究文献/06-存疑数据库/doubts_standalone.db` 表 `doubts_to_resolve`（1987 条，1966 已解决）。本章存疑 9 条已解决。类别分布：other(5)、fact(2)、date(1)、version(1)
+
+> 存疑管理体系：98.9% 已闭环，解决结论含 date/fact/source_conflict/name/version 等类型，具体结论见 doubts_standalone.db 表 `resolution_summary` 字段。
+<!-- /DB_POINTS:doubts_resolved -->
+
+<!-- DB_POINTS:chapter_reviews -->
+**数据库要点引用（references_fulltext.db · chapter_reviews · 2026-08-13）**
+
+> 来源：`04-现代研究文献/05-参考文献全文数据库/references_fulltext.db` 表 `chapter_reviews`（348 章全覆盖）。本章级文献综述 1273 字、匹配 1 篇文献，状态 imported。映射：旧章号 +1 → 磁盘章号。
+
+> **综述要点**：本章围绕“FreeBSD 9.x：pkgng 与 Clang 争议辩证链”展开，覆盖 125.21 pkgng-孵化争议的辩证链-工程必要性-生态滞后与-p…；125.22 Clang-LLVM-早期导入争议的辩证链-许可证纯洁化…；125.23 项目统摄史观审视-pkgng-与-Clang-LLVM-…。数据核验显示：锚定素材 11 篇（含存疑标记 2 篇）、参考文献匹配 1 条、存疑点 9 条（自动增补，0 信任原则下须人工复核）。
+
+<!-- /DB_POINTS:chapter_reviews -->
+
+<!-- COL_SCAN v20260826 -->
+## 内容包复核增补（Phase 4 · 2026-08-26）
+
+> 基于 4 个核心数据库（doubts_standalone、historical_claims、original_sources、资料数据库）内容包自动匹配与审核。
+> 内容包总行数：13 | 去重主张数：9 | 复核方法：12 步流程（详见 vol2to5_phase4_summary.md）
+
+### 证据等级分布
+
+| 等级 | 说明 | 数量 | 占比 |
+| --- | --- | --- | --- |
+| L1 | 代码与构建产物 | 0 | 0.0% |
+| L2 | 即时通讯记录 | 0 | 0.0% |
+| L3 | 官方文档与公告 | 13 | 100.0% |
+| L4 | 事后叙述 | 0 | 0.0% |
+| L5 | 二手研究 | 0 | 0.0% |
+
+### 来源数据库分布
+
+| 来源 | 行数 |
+| --- | --- |
+| 资料数据库 | 13 |
+
+### 新增证据点（L1-L3）
+
+1. [L3] `资料数据库.fact_check_records.sources#2` — 本次考据综合调用以下来源：
+
+- **WebSearch 检索**：约 30 次英文/中文关键词检索，关键词涵盖 `BSD origin`、`Linux history`、`OpenBSD`、`FreeBSD`、`4.2BSD`、`4.3BSD`、`4.4BSD`、`Daniel Hartmeier`、`Eric Allman`、`Poul-Henning Kamp`、`William LeFeb...
+
+2. [L3] `资料数据库.fact_check_records.sources#22` — ### 一手来源
+
+1. **bsd_commits.db SQLite 数据库**（[旧项目路径已移除] 24.97 GB，23 仓库，8,404,397 条提交记录）
+   - 用于查询 openbsd-src 仓库的 commit 量、贡献者统计、file_path 维度数据
+   - 查询维度：author_date、committer_date、message_subject、messa...
+3. [L3] `资料数据库.fact_check_records.sources#26` — ### ARPANET/NSFNET 早期历史（23.1.1-23.1.4）
+
+- 腾讯云开发者社区、Symbolics.com 确认 ARPANET 1969.10.29 首个消息"lo"（UCLA Charley Kline → SRI）
+- 四节点拓扑：UCLA 1969.10.29、SRI 1969.10.29、UCSB 1969.11、Utah 1969.12（多源一致）
+- ARPANE...
+
+4. [L3] `资料数据库.fact_check_records.sources#27` — ### 数据库来源
+
+1. **bsd_commits.db** SQLite 数据库（24.97 GB，23 仓库，8,404,397 commits）
+   - 位置：`[旧项目路径已移除]`
+   - 访问方式：通过数据分析报告文件间接引用，未直接执行 SQL 查询
+   - 访问日期：2026-07-22
+
+### 数据分析报告文件
+
+以下报告文件均位于 `[旧项目路径已移除]` 目录下：...
+5. [L3] `资料数据库.fact_check_records.sources#29` — ### 一手史料
+
+1. **bsd_commits.db SQLite 数据库**（位于 `原材料/研究/bsd仓库分析/bsd_commits.db`，约 11 GB，含 6 个仓库 2,358,055 条提交记录、7,173 位贡献者）
+   - 获取方式：Phase 0 数据库扩展阶段克隆并导入 BSD 谱系仓库
+   - 查询工具：SQL 查询，查询 ID 体系见 `原材料/研究/bsd...
+6. [L3] `资料数据库.fact_check_records.sources#31` — ### 一手数据来源
+
+bsd_commits.db（BSD 上游仓库提交数据库，约 11 GB，含 6 个仓库 2,358,055 条提交记录、7,173 位贡献者；位于 [旧项目路径已移除] SQL 查询结果，通过以下三份数据分析报告间接引用：
+
+1. **宏观趋势统计.md**（[旧项目路径已移除] 含 L1.1.1 查询（23 仓库 1993-2026 年每年 commit 量时间序列，共...
+7. [L3] `资料数据库.fact_check_records.sources#36` — claim: FreeBSD 项目于 2012 年完成从 Subversion(SVN)到 Git 的迁移,2020 年 12 月正式关闭 SVN 写权限 | evidence_strength: medium | verifier: FreeBSD 官方公告 + FreeBSD Foundation 博客 + 仓库元数据 commit 历史
+8. [L3] `资料数据库.fact_check_records.sources#46` — 查证来源：Gearty-Delmore 殡仪馆讣告（1956-08-02—2024-06-02，渥太华心脏事件）；Star Tribune 2024-06-05；FreeBSD 2024Q2 状态报告《Passing of Mike Karels》；FreeBSD 基金会 freebsdfoundation.org/mike_karels/；heise.de 2024-06
+9. [L3] `资料数据库.fact_check_records.sources#47` — 查证来源：同 Karels 逝世核查（Gearty-Delmore 讣告/Star Tribune/FreeBSD 2024Q2 状态报告/FreeBSD 基金会悼念页/heise.de）
+
+### 0 信任评估
+
+- 独立来源数：1 个数据库
+- 一级史料通过率：100.0%（L1+L2+L3 / 总行数）
+- 本章 L1-L3 级史料 9 条，可纳入大纲但需标注来源
+- 所有主张均来自内容包自动匹配，未经人工逐一核实
+- 单一来源支撑的主张须标注 (单一文献支撑，待交叉验证)
+
+### 交叉验证提示
+
+- 本章有 9 条 L1-L3 级证据，建议优先与此前已入库的 MAIL_MINE、DB_POINTS、PODCAST_MINE 块交叉验证
+- 本章仅从单一数据库获取证据，须标注 (单一文献支撑，待交叉验证)
+
+<!-- /COL_SCAN -->
+
+
+<!-- DEEP_ANALYSIS: freebsd.duckdb.commits -->
+**数据库分析发现**（证据等级：L1，来源：`freebsd.duckdb.commits.freebsd`）
+
+freebsd 核心贡献者：Po-Chuan Hsieh(68595), Sunpoet Po-Chuan Hsieh(51033), Yuri Victorovich(29759), Jan Beich(22360), Martin Wilke(20341)
+

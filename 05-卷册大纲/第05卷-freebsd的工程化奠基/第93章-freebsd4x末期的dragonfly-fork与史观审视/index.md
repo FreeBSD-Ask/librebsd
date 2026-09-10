@@ -87,11 +87,11 @@ volume: 第05卷-freebsd的工程化奠基
 ## 92.13.2 容器与事件通知领先性
 
 - 要点：FreeBSD 4.x 在容器 (Jails 2000) 与事件通知 (kqueue 2000) 上领先 Linux 3-7 年，Linux cgroups(2007)/LXC(2008) 与 epoll(2002) 均晚于 FreeBSD；这一领先未转化为市
-- FreeBSD-SA-02:08.exec 公告；FreeBSD-SA-03:01.cvs 公告；CVE-2002-0005 NVD 条目；CVE-2003-0015 NVD 条目；bsd_commits.db freebsd-src 仓库 security fix commit 记录；本项目。原材料/研究/bsd 漏洞史/版本周期/freebsd-4.x.md；本项目。原材料/研究/bsd 漏洞史/早期漏洞补遗/freebsd-早期漏洞.md ［A］
+- FreeBSD-SA-02:08.exec 公告；FreeBSD-SA-03:01.cvs 公告；CVE-2002-0005 NVD 条目；CVE-2003-0015 NVD 条目；freebsd.duckdb freebsd-src 仓库 security fix commit 记录；本项目。原材料/研究/bsd 漏洞史/版本周期/freebsd-4.x.md；本项目。原材料/研究/bsd 漏洞史/早期漏洞补遗/freebsd-早期漏洞.md ［A］
 
 ## 92.14.2 setproctitle/ssh-agent/TCP ECE/ipfw/IRC DCC 漏洞群——网络服务与防火墙安全修
 
-- FreeBSD 4.0-RELEASE Announcement [EB/OL]. 2000-03-14. <https://www.freebsd.org/releases/4.0R/announce/>；FreeBSD 4.11-RELEASE Announcement [EB/OL]. 2005-01-25. <https://www.freebsd.org/releases/4.11R/announce/>；bsd_commits.db freebsd-src 仓库 commits 表（ULE 首次 commit 2003-01-26）；Linux 2.4 ChangeLog；Red
+- FreeBSD 4.0-RELEASE Announcement [EB/OL]. 2000-03-14. <https://www.freebsd.org/releases/4.0R/announce/>；FreeBSD 4.11-RELEASE Announcement [EB/OL]. 2005-01-25. <https://www.freebsd.org/releases/4.11R/announce/>；freebsd.duckdb freebsd-src 仓库 commits 表（ULE 首次 commit 2003-01-26）；Linux 2.4 ChangeLog；Red
 - 据原文第 25 章（总纲第 13、19、21 条）；综合 37.15.1 至 37.15.4 节文献 ［A］
 FreeBSD 社区论文：[FP-2021-002] An Overview of Scheduling in the FreeBSD Kernel（Marshall Kirk McKusick（马歇尔·柯克·麦库西克），2021）<https://papers.freebsd.org/2021/eurobsdcon/mckusick-overview_scheduling_freebsd/>
 FreeBSD 社区论文：[FP-2020-002] An Overview of Sche

@@ -26,7 +26,7 @@ volume: 第10卷-openbsd的历史
 - de Raadt 发言的语义以 marc.info 存档原始帖子为准——部分帖子被社区解读为“粗暴”，但原始语境中多为技术论证；邮件列表档案的完整性以 marc.info 与 OpenBSD 官方存档为准——早期档案（1995-2000）可能存在缺失 [考据完成：2026-07-28 OpenBSD 邮件列表 1995-2000 年存档的完整性未经验证，marc.info 的 openbsd-mi
 - 邮件列表档案的完整性以 marc.info 存档为准——部分权限撤销讨论可能在私有列表进行，公开档案无法覆盖全部讨论；个别权限撤销事件的具体细节以多源交叉验证为准——邮件列表、hackathons 记录、contributors 表三者交叉
 - 批评的具体语境以原始邮件列表帖子为准——OSNews、Slashdot 等技术媒体的报道常简化邮件列表讨论的完整语境；de Raadt 回应的语义以 marc.info 存档原始帖子为准——部分回应被解读为“粗暴”但在原始语境中多为技术论证
-- commit 记录的归属以 bsd_commits.db openbsd-src 仓库 commits 表 author_name 与 commit_files 表 file_path 交叉验证为准——部分 patch 由多人协作但仅一人 commit，commit_files 表可定位实际代码变更者；邮件列表档案的完整性以 marc.info 存档为准
+- commit 记录的归属以 openbsd.duckdb openbsd-src 仓库 commits 表 author_name 与 commit_files 表 file_path 交叉验证为准——部分 patch 由多人协作但仅一人 commit，commit_files 表可定位实际代码变更者；邮件列表档案的完整性以 marc.info 存档为准
 
 ## 文献
 

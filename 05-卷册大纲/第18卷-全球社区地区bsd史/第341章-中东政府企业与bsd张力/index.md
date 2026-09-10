@@ -86,7 +86,7 @@ volume: 第18卷-全球社区地区bsd史
 
 - 要点：1990 年代末至 2000 年代中期中东 OS 生态以 Linux 为主，BSD 边缘化；2010 年代后云计算与容器化使中东 OS 生态同质化，BSD 与 Linux 的本地差异缩小；趋势须通过历届中东技术会议议题统计验证
 - 史料：中东技术会议议程、中东 ISP 部署统计、中东云服务商公开数据[考据完成：2026-07-28 经穷尽联网考据，上述史料清单为已知公开来源汇总，部分原始档案未公开数字化
-- 项目史观总纲第 5、8、13、19 条（经 Read 一手核验，见 据原文第 25 章 第 9/12/17/23 行）；Arabeyes 项目（同 150.14a）；Arabeyes GitLab 仓库；Israel FreeBSD User Group 邮件列表；Check Point 官方公司概况页面 [EB/OL]. <https://www.checkpoint.com/about-us/company-overview/> （访问日期 2026-07-23）；《亚伯拉罕协议》公开文本；OFAC 制裁清单；bsd_commits.db freebsd-src 仓库以色列与阿拉伯语开发者
+- 项目史观总纲第 5、8、13、19 条（经 Read 一手核验，见 据原文第 25 章 第 9/12/17/23 行）；Arabeyes 项目（同 150.14a）；Arabeyes GitLab 仓库；Israel FreeBSD User Group 邮件列表；Check Point 官方公司概况页面 [EB/OL]. <https://www.checkpoint.com/about-us/company-overview/> （访问日期 2026-07-23）；《亚伯拉罕协议》公开文本；OFAC 制裁清单；freebsd.duckdb freebsd-src 仓库以色列与阿拉伯语开发者
 
 ## 自反性声明
 

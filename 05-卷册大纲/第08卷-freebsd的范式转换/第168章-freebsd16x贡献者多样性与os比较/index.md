@@ -59,7 +59,7 @@ volume: 第08卷-freebsd的范式转换
 - 原材料/哲学/项目统摄史观/第 25 章.md；FreeBSD src repository cgit [EB/OL]. [2026-07-22]. <https://cgit.freebsd.org/src/>; FreeBSD FreshPorts. misc/dialog, lang/gcc [EB/OL]. [2026-07-22]. <https://www.freshports.org/>; Linuxiac. FreeBSD Base System No Longer Contains Any GPL-Licensed Software [EB/OL]. (2026-07-17)
 - 原材料/哲学/项目统摄史观/第 25 章.md；FreeBSD Project. FreeBSD Licensing Policy [EB/OL]. [2026-07-22]. <https://docs.freebsd.org/en/articles/license-guide/>; FreeBSD Foundation. 2024 Annual Report [EB/OL]. [2026-07-22]. <https://freebsdfoundation.org/our-donors/>; FreeBSD FreshPorts. misc/dialog, lang/gcc [EB/OL]
 - 原材料/哲学/项目统摄史观/第 25 章.md；CSRG. 4.4BSD-Lite Release Notes [EB/OL]. (1994)[2026-07-22]. <https://www.freebsd.org/44bsd/>; FreeBSD src repository cgit [EB/OL]. [2026-07-22]. <https://cgit.freebsd.org/src/>; FreeBSD FreshPorts. devel/libfigpar, devel/libdpv, sysutils/dpv [EB/OL]. (2026-06-30)[2026-07-22]
-- FreeBSD Project. bsd_commits.db freebsd-src 仓库 commit 数据库 [DB/OL]. 2026-07-27. `c:\Users\ykla\Documents\hibsd\03-原始史料库\01-代码仓库史料\01-数据库本体\bsd_commits.db`; FreeBSD Project. Release Engineering Information [EB/OL]. [2026-07-27]. <https://www.freebsd.org/releng/>; FreeBSD Foundation. 2026 Q1 Status Rep
+- FreeBSD Project. freebsd.duckdb freebsd-src 仓库 commit 数据库 [DB/OL]. 2026-07-27. `c:\Users\ykla\Documents\hibsd\03-原始史料库\01-代码仓库史料\01-数据库本体\freebsd.duckdb`; FreeBSD Project. Release Engineering Information [EB/OL]. [2026-07-27]. <https://www.freebsd.org/releng/>; FreeBSD Foundation. 2026 Q1 Status Rep
 
 ## 自反性声明
 

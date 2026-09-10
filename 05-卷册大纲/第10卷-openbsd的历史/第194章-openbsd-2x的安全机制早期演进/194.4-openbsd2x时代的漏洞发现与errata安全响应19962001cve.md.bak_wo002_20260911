@@ -1,0 +1,232 @@
+# 194.4 OpenBSD 2.x 时代的漏洞发现与 errata 安全响应（1996-2001）——CVE 编号体系尚未普及，OpenBSD 以 errata patches 存档为漏洞跟踪主轴，代码审计驱动的“发现漏洞—快速修复—加固重构”循环在 2.x 时期奠基
+
+## 194.4.1 CVE 编号缺位与 errata patches 存档体系（1996-2001）
+
+**要点**：openbsd.duckdb openbsd-src 仓库在 1996-10-01 至 2001-06-01 期间的 CVE 相关 commit 数为零，去重 CVE 数为零，但 Security fix commit（无 CVE 编号）有 5 条，早期漏洞补遗条目 19 条；这一数据格局并非意味着 OpenBSD 2.x 时期无漏洞，而是反映 CVE 编号体系在 1999-2001 年间尚未被 OpenBSD 社区系统性地引用——OpenBSD 以自有的 errata patches 存档作为漏洞跟踪与修复公告的主轴，errata 原文通常不引用 CVE 编号，仅标注 SECURITY FIX 与受影响版本；5 条 Security fix commit 涵盖 1998 年 8 月 deraadt 恢复被 downsj 误删的安全修复、2000 年 5 月 itojun 修复 NetBSD 安全公告涉及的选项长度下溢、2001 年 3-4 月 fgsch 修复 timed 协议短包处理；19 条早期漏洞补遗覆盖 OpenBSD 2.0 至 2.9 全部次版本，涉及 BIND DNS、**cron(8)**、IP 源路由、NFS 文件句柄可预测性、Kerberos V5、**procfs(5)**、**rfork(2)**、**vacation(1)**、**lpd(8)**、**tgetent(3)**、**xterm(1)**、`USER_LDT` 内核选项、**rm(1)** 等组件。
+
+  **Security fix commit 列表（1998-2001）**：
+
+  | commit hash | 日期 | 作者 | 说明 |
+  | --- | --- | --- | --- |
+  | `e9c24f64af83b204d7a1ae324638873d6e4d6a03` | 1998-08-31 | deraadt | 恢复被 downsj 误删的安全修复 |
+  | `b1847376027c1fcbf7570b990861ab21508d188c` | 2000-05-06 | itojun | 修复 NetBSD 安全公告涉及的选项长度下溢 |
+  | `2a6be46ef2855608aed33bee9976d282e2b4c62c` | 2001-03-31 | fgsch | 修复 timed 协议短包处理 |
+  | `db6846956ee03c261001da9491a0f4b981fbf02f` | 2001-03/04 | fgsch | 修复 timed 协议短包处理 |
+  | `28c97ceb003a0200c7b12d005359e580282886e2` | 2001-03/04 | fgsch | 修复 timed 协议短包处理 |
+
+**史料**：openbsd.duckdb openbsd-src 仓库（CVE commit 数 = 0，Security fix commit 数 = 5，早期漏洞补遗 = 19）；OpenBSD errata patches 存档（2.0-2.9 各版本）；commit `e9c24f64af83b204d7a1ae324638873d6e4d6a03`（1998-08-31 deraadt）、`b1847376027c1fcbf7570b990861ab21508d188c`（2000-05-06 itojun）、`2a6be46ef2855608aed33bee9976d282e2b4c62c`（2001-03-31 fgsch）［A］
+
+**史观**：总纲第 17 条——形式主义化：OpenBSD errata 体系将漏洞跟踪形式主义化为“SECURITY FIX + 受影响版本 + 补丁”的三元结构，早于 CVE 编号的普及；总纲第 10 条——边缘者贡献：deraadt 个人恢复被误删的安全修复体现“动手者”的安全责任感
+
+**辨析**：CVE 编号缺位不等于无漏洞——19 条早期漏洞补遗证明 OpenBSD 2.x 时期漏洞发现活跃，仅因 CVE 体系尚未普及而未被编号；errata 原文多未注明具体日期与 CVE 编号，考据须以版本发布时间窗与 commit hash 交叉验证；"put back a security fix downsj removed ages ago"的"ages ago"措辞模糊，具体删除时间与原因须考据 downsj 的 commit 历史
+
+**文献**：bsd_commits.db openbsd-src 仓库；OpenBSD errata patches 存档 [EB/OL]. **<https://www.openbsd.org/errata.html>** ［A］
+
+## 194.4.2 内核与网络栈漏洞群——procfs/rfork/源路由/NFS 文件句柄（1996-1998）
+
+**要点**：OpenBSD 2.0-2.2 时期的内核与网络栈漏洞集中在继承自 4.4BSD 的代码缺陷——2.0 的 BIND 4.9.x 缓存中毒与 NXT 记录处理缺陷可被远程攻击者利用伪造 DNS 响应污染缓存；2.0 的 IP 源路由默认接受缺陷允许攻击者构造带源路由选项的 IP 包绕过地址验证实现 TCP 连接劫持；2.0 的 4.4BSD NFS 文件句柄可预测性使攻击者可猜测文件句柄绕过 NFS 导出限制；2.0 的 Kerberos V5 实现存在可伪造的票据授予票据与密钥分发中心缺陷；2.1 的 **procfs(5)** 挂载后进程内存映射对其他用户可读，本地用户可借 **`/proc/[pid]/mem`** 读取其他用户进程内存；2.1 的 **rfork(2)** 系统调用存在文件描述符表与信号处理表共享逻辑缺陷；2.2 的内核 IP 源路由处理逻辑在 `net.inet.ip.forwarding` 启用且 `net.inet.ip.sourceroute` 禁用时存在缺陷；这些漏洞的共性是继承自 4.4BSD 的“信任默认配置”假设——OpenBSD 2.x 时期的代码审计正是对这些继承缺陷的系统性清理。
+
+**史料**：OpenBSD 2.0/2.1/2.2 errata patches；早期漏洞补遗条目（BIND/cron/源路由/NFS/Kerberos/procfs/rfork）；bsd_commits.db openbsd-src 仓库 ［A］
+
+**史观**：总纲第 7 条——技术选择即政治选择：OpenBSD 选择“默认拒绝源路由”作为安全策略，与 4.4BSD 的“默认接受”形成对照；总纲第 17 条——形式主义化：procfs 权限收紧是从“信任继承”到“默认最小权限”的形式主义化重构
+
+**辨析**：4.4BSD NFS 文件句柄可预测性的具体随机化修复方案须考据 OpenBSD 源码 commit；IP 源路由默认禁用的具体 sysctl 变量名与默认值变更时间须对照源码核验；Kerberos V5 的“可伪造票据授予票据”缺陷涉及 MIT Kerberos V5 上游还是 OpenBSD 本地实现须区分
+
+**文献**：OpenBSD 2.0-2.2 errata patches [EB/OL]. **<https://www.openbsd.org/errata.html**>；4.4BSD-Lite 源码；bsd_commits.db openbsd-src 仓库 ［A］
+
+## 194.4.3 用户态服务漏洞群——lpd/vacation/cron/tgetent/xterm（1997-1999）
+
+**要点**：OpenBSD 2.0-2.2 时期的用户态服务漏洞集中于继承自 4.4BSD 的传统 Unix 工具——2.1 的 **lpd(8)** 在处理远程打印请求时缺乏充分的输入验证与地址认证，远程攻击者可发送特制打印请求触发缓冲区溢出或未授权打印；2.1 的 **vacation(1)** 自动回复程序在处理邮件头字段时存在输入验证缺陷，可被构造的邮件头触发缓冲区溢出或命令注入；2.0 的 Vixie **cron(8)** 4.1 存在权限检查缺陷，本地用户可借由 **crontab(1)** 提交特制 crontab 文件提升权限；2.1 的 **tgetent(3)** termcap 数据库读取函数在读取超长 termcap 条目至固定大小缓冲区时缺乏边界检查；2.2 的 **xterm(1)** 与 Xaw 库在处理 `inputMethod`、`preeditType`、`*Keymap` 资源时存在缓冲区溢出（含 XFree86 3.3.x）；这些漏洞的修复体现了 OpenBSD“修复即加固”的循环——不仅修补具体缺陷，还在 2.x 末期至 3.x 初期由 Todd Miller 与 Theo de Raadt（西奥·德·若特） 设计 strlcpy/strlcat 安全字符串 API 替代 strcpy/strcat，将边界检查从开发者手动责任提升为 API 级别的强制约束。
+
+**史料**：OpenBSD 2.0-2.2 errata patches；早期漏洞补遗条目（lpd/vacation/cron/tgetent/xterm）；bsd_commits.db openbsd-src 仓库 strlcpy/strlcat 引入 commit；Miller C, de Raadt T. strlcpy and strlcat — Consistent, Safe, String Copy and Concatenation [C]//USENIX Annual Technical Conference. 1999 ［A］
+
+**史观**：总纲第 17 条——形式主义化：strlcpy/strlcat 的设计是将“边界检查”从开发者手动责任形式主义化为 API 级别的强制约束；总纲第 10 条——边缘者贡献：传统 Unix 工具的安全加固由 OpenBSD 小团队而非上游原始维护者推动
+
+**辨析**：strlcpy/strlcat 的具体首次引入 commit 与版本须考据——OpenBSD 2.x 末期还是 3.x 初期存在不同说法，须对照源码 commit 历史核验；Vixie cron 4.1 的权限检查缺陷具体为 crontab 文件解析还是权限验证须对照源码核验；XFree86 3.3.x 的 xterm 溢出是否为上游已修复缺陷的 OpenBSD 同步须区分
+
+**文献**：OpenBSD 2.0-2.2 errata patches [EB/OL]. **<https://www.openbsd.org/errata.html**>；Miller C, de Raadt T. strlcpy and strlcat [C]//USENIX ATC. 1999；bsd_commits.db openbsd-src 仓库 ［A］
+
+## 194.4.4 OpenSSH 与加密栈早期漏洞——isakmpd/sslUSA26/USER_LDT/rm(1)（1999-2001）
+
+**要点**：OpenBSD 2.6-2.9 时期的加密栈与安全工具漏洞标志着“安全操作系统”自身安全组件的信任危机——2.6 的 `sslUSA26` 软件包（美国版 SSL 库）在 **isakmpd(8)** 中启用 SSL/RSA 特性时可被利用，errata 建议使用国际版 `sslUSA26` 替代（1999-12-02）；2.7 的 **`/etc/sshd_config`** 配置文件存在缺陷“不应被使用”（2000-06-06），此时 OpenSSH 刚于 1999 年 10 月 fork 自 SSH 1.2.12 不久；2.7 的 X11 服务器安全认证模块 `xc/programs/Xserver/os/secauth.c` 与 Xlib 存在多处漏洞（2000-07-14）；2.8 的 `USER_LDT` 内核选项允许攻击者访问内核内存特权区域，为 i386 架构特有的本地权限提升漏洞（2001-03-02，默认未启用）；2.8 的 **rm(1)** 带 `-R` 选项递归删除时存在竞态条件，当父目录在其下方被更改时 **rm(1)** 可被骗入错误目录（2001-05-30，与旧 fts 库漏洞相关）；2.9 的最后一条 errata（第 027 条，2002-06-25）仅标注 SECURITY FIX 未附技术描述；这些漏洞反映 OpenBSD 2.x 时期“安全组件自身也可能成为攻击面”的工程认知，为 3.x 时期引入 W^X 与权限分离奠定了需求基础。
+
+**史料**：OpenBSD 2.6-2.9 errata patches；早期漏洞补遗条目（sslUSA26/sshd_config/X11/USER_LDT/rm）；bsd_commits.db openbsd-src 仓库 ［A］
+
+**史观**：总纲第 17 条——形式主义化：W^X 与权限分离的引入是对 2.x 时期“安全组件自身有漏洞”认知的形式主义化回应——将“信任”从组件级降级为机制级；总纲第 21 条——密码学：sslUSA26 与 isakmpd 的漏洞反映 1990 年代末加密库实现质量参差不齐
+
+**辨析**：`sslUSA26` 的美国版与国际版具体差异须考据——涉及 RSA 专利与美国出口管制；`USER_LDT` 漏洞的具体利用路径（LDT 操纵如何访问内核内存）须对照 i386 架构手册核验；**rm(1)** 竞态条件与 fts 库漏洞的关联须考据 fts 库 commit 历史
+
+**文献**：OpenBSD 2.6-2.9 errata patches [EB/OL]. **<https://www.openbsd.org/errata.html**>；bsd_commits.db openbsd-src 仓库；i386 LDT 架构手册 ［A］
+
+<!-- DB_REF:openbsd.duckdb -->
+> **数据库引用（openbsd.duckdb）**：本子节对应 openbsd 代码仓库。
+> 1996-2001 年间：63,666 次提交。
+> 仓库总览：491,195 次提交，3,352 位贡献者，1995-10-18 至 2026-08-25。
+
+
+<!-- DEEP_ANALYSIS: openbsd.duckdb.commits -->
+**数据库分析发现**（证据等级：L1，来源：`openbsd.duckdb.commits.openbsd`）
+
+openbsd 核心贡献者：ajacoutot(35528), deraadt(31454), sthen(30592), espie(18328), jasper(16649)
+
+
+
+<!-- DEEP_ANALYSIS: sacred_sources.duckdb.blocks -->
+**史家判断**（证据等级：L2，来源：`sacred_sources.duckdb.blocks.188`）
+
+以食品安全为例：人们永远无法得到真正的认识。你既不能说科学证明其在某量无毒害就真的无毒害，也不能证明它真的有毒害。用科学说服人本身就不科学——因为科学本身就是非充分决定性的，本身的正确性是得不到保证的。且你能得到的所有科学解释，正因为它是科学解释，所以它必定也是错误的。这并非反智，而是对科学边界的清醒认识。好坏是对于人来说的，所谓“剂量决定论”也是无意义的——零剂量不是更安全吗？
+
+
+
+<!-- DEEP_ANALYSIS: sacred_sources.duckdb.blocks -->
+**史家判断**（证据等级：L2，来源：`sacred_sources.duckdb.blocks.283`）
+
+王充因为个人境遇而提出了德福不一致论，其否定了个人努力的作用。可以看到人生的遭遇会对其理论有决定性的作用，有时是偏差，有时是谬误，但根本上说是一种悲伤。这揭示了理论建构的偶然性：任何理论都深深打上 theorist 个人经历的烙印。不存在客观的、超越个人境遇的理论。历史哲学的建构者同样如此——本书的理论亦不例外，它诞生于特定的境遇、特定的悲伤、特定的选择。
+
+
+
+<!-- DEEP_ANALYSIS: cross_indexes.duckdb.concept_history -->
+**史家判断**（证据等级：L2，来源：`cross_indexes.duckdb.concept_history.13`）
+
+出口管制：出口管制概念的演化: ①冷战成型期（1949–1951）：COCOM 建立，协调对苏联、东欧、中国的禁运货单；1951 年美国《相互防御援助管制法》（Battle Act）以停止援助迫使盟国参与（1980 年废止）；②缓和调整期（60–80 年代）：因缓和与贸易增长，管制多次放宽；③转型重组期（1993–1996）：1994 年 3 月 31 日 COCOM 解散；1995 年 12 月 19 日成立“瓦森纳协定”（Wassenaar Arrangement），1996 年 11 月 1 日起运作；④数字与加密期：加密早在冷战期被列为军品（由国务院依 AECA 管，即 ITAR），1996 年底部分非军用加密移至商
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-1-011`）
+
+Thompson 在 1984 年图灵奖演讲中称，特洛伊木马攻击的构想最早见于一份对 Multics 早期实现安全性的空军批判报告。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-3-004`）
+
+Theodore Roszak 1969 年出版《The Making of a Counter Culture》，副标题为“对技术官僚社会及其青年反抗的反思”。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-4-010`）
+
+Anonymous CVS 源码分发机制由 Charles D. Cranor 与 Theo de Raadt 创建，用于开放 OpenBSD 源码仓库。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-4-011`）
+
+创建 Anonymous CVS 的目标之一是开放 OpenBSD 的 CVS 源码仓库访问，使项目更开放并鼓励开发者兴趣。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-4-100`）
+
+1995 年秋启动 OpenBSD 项目时，Cranor 与 de Raadt 决定用 CVS 管理源代码树，并创建匿名 CVS 以开放源码仓库。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-5-111`）
+
+Anonymous CVS 由 Charles D. Cranor 与 Theo de Raadt 在 1995 年秋创建 OpenBSD 时设计，使匿名互联网用户无需写权限账户即可访问源码库。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-5-112`）
+
+Anonymous CVS 是一种让匿名互联网用户在不危及安全的前提下访问源码库的机制，将开放源码推进为开放源码库。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-6-017`）
+
+Harris、Jha、Reps 等人提出声明式、时序化且实用的 capability 编程方法，用于在 Capsicum 上满足安全策略。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-6-108`）
+
+OpenBSD 自 2005 年起对 SCSI 中间层（SCSI midlayer）实施重大重构，引入 mpath(4) 多路径虚拟总线与 iopools 资源池、将适配器命令处理器改为回调式 scsi_done API，以改善稳定性、性能与可扩展性。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L2，来源：`historical_claims.duckdb.claim.CL-7-046`）
+
+参考文献全文数据库收录《20260805 Glass deRaadt expulsion email 19941223 en》（unknown，2026），作为本章主题的候选史料。
+
+## 文献
+
+- Ingo Schwarze. bsdcan15-mandoc[M]. 2015.
+- Ingo Schwarze. bsdcan18-mandoc[M]. 2018.
+- Paul Irofti. bsdcan2014-octeon dsr500[M]. 2014.
+- bsdcan2015-rdomains[M].
+- bsdcan2016-bfd[M].
+- bsdcan2016-xen[M].
+- bsdcan2019-syspatch[M].
+- bsdcan2019-tls13[M].
+- bsdcan2025-hshoexer-confidential-computing[M].
+- andrew, afresh1. 2024-Why-Rewrite-fw update-Euro BSDcon[M]. 2024.
+- eurobsdcon2008-sensors[M].
+- eurobsdcon2011-kettenis[M].
+- eurobsdcon2011-openbsdscsievolution[M].
+- eurobsdcon2014-mandoc-paper[M].
+- eurobsdcon2014-mandoc-slides[M].
+- eurobsdcon2014-parallel-make[M].
+- eurobsdcon2015-packages[M].
+- eurobsdcon2015-softraid-boot[M].
+- eurobsdcon2016-openbsd-11n[M].
+- eurobsdcon2016-privsep[M].
+- eurobsdcon2017-device-drivers[M].
+- eurobsdcon2017-opensmtpd[M].
+- eurobsdcon2018-mandoc[M].
+- eurobsdcon2018-rop[M].
+- eurobsdcon2019-plist[M].
+- eurobsdcon2022-krw-blockstobooting[M].
+- eurobsdcon2023-bluhm-mitigations[M].
+- eurobsdcon2023-espie-cache[M].
+- eurobsdcon2024-bluhm-packetflow[M].
+- eurobsdcon2025-bluhm-protomp[M].
+- eurobsdcon2025-florian-easy[M].
+- Marc Espie. eurobsdcon 2018 https[M]. 2018.
+- Claudio Jeker. asiabsdcon08-network[M]. 2008.
+- Murenin C A, Boutaba R. OpenBSD Hardware Sensors Framework[C]//AsiaBSDCon 2009 Proceedings. Tokyo, 2009.
+- Murenin C A. OpenBSD Hardware Sensors Framework（幻灯片）[EB/OL]. AsiaBSDCon 2009. <https://www.openbsd.org/papers/asiabsdcon2009-sensors-slides.pdf>.
+- syuu. asiabsdcon2010 smp for sgi paper[C]. 2010.
+- Alexandre Ratchov. asiabsdcon2010 sndio slides[C]. 2010.
+- asiabsdcon2016-vmm-slides[M].
+- asiabsdcon2019-rop-slides[M].
+- Dave Voutila. asiabsdcon2023-hardening vmd devices-slides[M]. 2023.
+- andrew, afresh1. 2024-Why-Rewrite-fw update-Fossy[M]. 2024.
+- chuck, deraadt. anoncvs-paper[M]. [存疑]
+- Niels Provos. crypt-slides[M]. 2002.
+- eurobsd-firewalls-2002[M]. 2002.
+- eurobsd2017-pkgtools[M].
+- Brian Bamsch. Porting Open BSD to RISCV Final Report[M]. 2020.
+- Paul Irofti. eurobsdcon2014-octeon dsr500[M]. 2014.
+- eurobsdcon2014-rdomains[M].
+- eurobsdcon2015-mandoc[M].
+- eurobsdcon2016-embracingbsdrt[M].
+- eurobsdcon2017-schedisnot[M].
+- eurobsdcon2019-bwfm[M].
+- Software Freedom Conservancy. Form-990 fy-2022-23[M]. 2022.
+- eurobsdcon2019-gameoftrees[M].
+- eurobsdcon2019-perform-slides[M].
+- eurobsdcon2022-espie-arches[M].
+- eurobsdcon2022-tb-libressl[M].
+- Marc Espie. lse clang[M]. 2017.
+- eurobsdcon2023-matthieu-pf-rdomain[M].
+- eurobsdcon2023-otto-malloc[M].
+- Dave Voutila. eurobsdcon2024-vmd multiprocessing[M]. 2024.
+- 未知. openbsd Open BSD-jitsi[M]. 2022.
+- Giovanni Bechis 12 ` ~~~ alse. openbsd seccomp-pledge-oss2017[M]. 2017.
+- eurobsdcon2025-hshoexer-confidential-computing[M].
+- eurobsdcon2021-espie-debug[M].
+- eurobsdcon2024-hshoexer-confidential-computing[M].
+- eurobsdcon2025-espie-dpb[M].
+

@@ -1,0 +1,216 @@
+---
+chapter: 第 83 章
+id: CH83
+volume: 第04卷-大分裂与四大bsd的诞生
+---
+
+# 第 83 章 UNIX 版权归属争议与 Novell 卖 SCO
+
+> 本子章由原第 32 章拆分而来，承载 83.8-83.11 节。
+
+## 本章节索引
+
+1. [83.8 1995novell卖sco与unix版权归属争议](83.8-1995novell卖sco与unix版权归属争议.md)
+2. [83.9 44bsd](83.9-44bsd.md)
+3. [83.10 与同时期操作系统的比较](83.10-与同时期操作系统的比较.md)
+4. [83.11 44bsd](83.11-44bsd.md)
+
+## 数据核验与统计（自动增补 · 0-信任）
+
+> **来源库**：资料数据库 · materials / material_cross_references；references_fulltext · chapter_matches / chapter_reviews；doubts_standalone · doubts_to_resolve
+> **方法**：基于全局章号 1–348 直接 SQL 聚合；未做外部事实验证；`ch=0`/未映射条目不计入本章。
+> **生成时间**：2026-08-04 ｜ **复现**：`script/_engine_integrity_analysis.py`
+
+| 指标 | 数值 |
+| -- | -- |
+| 锚定素材 | 79 篇（含存疑标记 1 篇） |
+| 存疑点 | 0 条 |
+| 参考文献匹配 | 0 条 |
+| 章节述评 | 未生成 |
+| 章内交叉引用 | 出 2 / 入 1 |
+
+**数据质量备注**：暂无参考文献匹配
+
+<!-- MAIL_MINE v20260813 -->
+## 邮件史料增补
+
+> 基于 6 个邮件数据库（260 万封）+ FTS5 全文索引自动挖掘，供编纂引用参考。
+> 以下为本章主题相关的邮件史料线索（精确词命中，含时间范围与代表邮件）。
+
+- **novell**（netbsd）: 99 封 · 1994-2023
+  - [1994] Who has an EISA config file !HIT0001?? — Rodney W Grimes
+  - [1994] RE: Multiple IP addresses on ethernet if ? — Ugen J.S.Antsilevich
+  - [1995] FreeBSD 2.0.5 CD from Walnut Creek CDROM now shipping. — Jordan K. Hubbard（乔丹·哈伯德）
+- **novell**（openbsd）: 144 封 · 1998-2023
+  - [1994] Who has an EISA config file !HIT0001?? — Rodney W Grimes
+  - [1994] RE: Multiple IP addresses on ethernet if ? — Ugen J.S.Antsilevich
+  - [1995] FreeBSD 2.0.5 CD from Walnut Creek CDROM now shipping. — Jordan K. Hubbard
+- **sco**（openbsd）: 308 封 · 1998-2025
+  - [1985] Two questions — farber at rochester.UUCP
+  - [1985] Unix Technical Digest V2 #6 — netnews at wnuxb.UUCP (He
+  - [1986] INed keypad mapping — billr at ism780c.UUCP (Bi
+- **sco**（netbsd）: 409 封 · 1994-2026
+  - [1985] Two questions — farber at rochester.UUCP
+  - [1985] Unix Technical Digest V2 #6 — netnews at wnuxb.UUCP (He
+  - [1986] INed keypad mapping — billr at ism780c.UUCP (Bi
+- **novell**（usenet）: 1,899 封 · 1982-2012
+  - [1994] Who has an EISA config file !HIT0001?? — Rodney W Grimes
+  - [1994] RE: Multiple IP addresses on ethernet if ? — Ugen J.S.Antsilevich
+  - [1995] FreeBSD 2.0.5 CD from Walnut Creek CDROM now shipping. — Jordan K. Hubbard
+- **novell**（freebsd）: 1,962 封 · 1994-2021
+  - [1994] Who has an EISA config file !HIT0001?? — Rodney W Grimes
+  - [1994] RE: Multiple IP addresses on ethernet if ? — Ugen J.S.Antsilevich
+  - [1995] FreeBSD 2.0.5 CD from Walnut Creek CDROM now shipping. — Jordan K. Hubbard
+- **sco**（freebsd）: 3,627 封 · 1994-2024
+  - [1985] Two questions — farber at rochester.UUCP
+  - [1985] Unix Technical Digest V2 #6 — netnews at wnuxb.UUCP (He
+  - [1986] INed keypad mapping — billr at ism780c.UUCP (Bi
+- **sco**（usenet）: 5,638 封 · 1982-2009
+  - [1985] Two questions — farber at rochester.UUCP
+  - [1985] Unix Technical Digest V2 #6 — netnews at wnuxb.UUCP (He
+  - [1986] INed keypad mapping — billr at ism780c.UUCP (Bi
+
+<!-- /MAIL_MINE -->
+
+<!-- DB_POINTS:chapter_reviews -->
+**数据库要点引用（references_fulltext.db · chapter_reviews · 2026-08-13）**
+
+> 来源：`04-现代研究文献/05-参考文献全文数据库/references_fulltext.db` 表 `chapter_reviews`（348 章全覆盖）。本章级文献综述 1055 字、匹配 0 篇文献，状态 imported。映射：旧章号 +1 → 磁盘章号。
+
+> **综述要点**：本章围绕“UNIX 版权归属争议与 Novell 卖 SCO”展开，覆盖 82.8 1995novell卖sco与unix版权归属争议；82.9 44bsd；82.10 与同时期操作系统的比较；82.11 44bsd。数据核验显示：锚定素材 79 篇（含存疑标记 1 篇）、参考文献匹配 0 条、存疑点 0 条（自动增补，0 信任原则下须人工复核）。子节要点：82.10 **与同时期操作系统的比较**：1994 年同期…：**1994年*
+
+<!-- /DB_POINTS:chapter_reviews -->
+
+<!-- COL_SCAN v20260826 -->
+## 内容包复核增补（Phase 4 · 2026-08-26）
+
+> 基于 4 个核心数据库（doubts_standalone、historical_claims、original_sources、references_fulltext）内容包自动匹配与审核。
+> 内容包总行数：100 | 去重主张数：15 | 复核方法：12 步流程（详见 vol01_phase4_summary.md）
+
+### 证据等级分布
+
+| 等级 | 说明 | 数量 | 占比 |
+| -- | -- | -- | -- |
+| L1 | 代码与构建产物 | 0 | 0.0% |
+| L2 | 即时通讯记录 | 0 | 0.0% |
+| L3 | 官方文档与公告 | 100 | 100.0% |
+| L4 | 事后叙述 | 0 | 0.0% |
+| L5 | 二手研究 | 0 | 0.0% |
+
+### 来源数据库分布
+
+| 来源 | 行数 |
+| -- | -- |
+| original_sources | 100 |
+
+### 新增证据点
+
+1. [L3] `original_sources.kaoju_records` — ### 存疑项一：FreeBSD 1.0 时期（1993-1995）漏洞的完整性  - **已确证**：FreeBSD 1.0（1993-11）基于 386BSD 0.1 与 4.3BSD-Reno/Net-2，此时期 FreeBSD-SA
+2. [L3] `original_sources.kaoju_records` — 按 `规则/考据规则.md` 存疑处理原则，穷尽考据后仍无法确证的史实保留 [存疑脚注] 标注。本批考据的存疑项如下：  ### 存疑项一：setuid/setgid 机制引入的确切年份与版本  任务清单提示“1972 年 Dennis R
+3. [L3] `original_sources.kaoju_records` — ### 3.1 已解决的存疑（1 处，多处共享同一存疑）
+
+ **Steven G. Kargl 2015.6.28 事件 [存疑]——已解决**
+
+ 原 [存疑] 内容：bsd_commits.db 显示 kargl@FreeBSD.
+4. [L3] `original_sources.kaoju_records` — 1. **和解协议原文未公开——保留 [存疑脚注]**    - 和解协议原文（即作为法律合同的完整文本）截至 2026-07-22 未在公开渠道检索到，本附录翻译的是 McKusick 一手叙述所披露的条款要点    - 已尝试的查证路径
+5. [L3] `original_sources.kaoju_records` — ### 已确证事项  1. **BSD Daemon 版权归属**：Marshall Kirk McKusick 个人持有，1988 年版权，非商标、非 Regents——已由 <https://www.freebsd.org/copyrig>
+6. [L3] `original_sources.kaoju_records` — - **已确证**：章号修复依据三重独立印证（文件名、子节编号、总览章目列表），无分歧。
+
+- **误置章结论**：第 97/116 章不存在于第七卷，审阅提及的“误置”判断基于过时信息，实际文件已正确位于各自所属卷。
+- **占位章扩展
+
+7. [L3] `original_sources.kaoju_records` — ### L7.1.1.openbsd-src 查询不存在（核心存疑）  卷章数据映射文件 ch28 引用 L7.1.1.openbsd-src 查询，但衍生项目与跨项目对比分析.md 中 L7.1.1 系列仅含 4 个 FreeBSD 衍生
+8. [L3] `original_sources.kaoju_records` — ### 已确证事项  1. bsd_commits.db 数据库规模与查询结果行数经 SQL 查询直接验证，数据本身可靠 2. 各查询 ID 的 SQL 语句与参数见数据报告原文，可复现 3. 数据补充范围与卷章数据映射文件第 193-31
+9. [L3] `original_sources.kaoju_records` — ### 数据查询不匹配问题（核心存疑）  卷章数据映射文件（[旧项目路径已移除] SQL 查询 ID 在实际数据报告文件中**不存在**，具体如下：  1. **L2.3.1.jemalloc、L2.3.1.pf、L2.3.1.vimage
+10. [L3] `original_sources.kaoju_records` — **日期**：2026-07-22 **卷章**：第四卷 第34章 FreeBSD 2.x：站稳脚跟 **涉及子节**：34.8.2、34.8.3、34.8.4、34.9.2 **数据库**：bsd_commits.db（路径：`原材料/研
+11. [L3] `original_sources.kaoju_records` — ### 一、已确证事项  1. **NetBSD 最新正式版本为 NetBSD 10.1（2024-12-16 发布）**    - 采信依据：NetBSD Releases 主页（<https://www.netbsd.org/releas>
+12. [L3] `original_sources.kaoju_records` — ### 已确证事项  以下事项经多源交叉验证一致且通过 0 信任审查，予以采信：  1. **CSRG 末期版本发布日期**（4.3BSD 1986-06、4.3BSD-Tahoe 1988-06、Networking Release 1
+
+### 0 信任评估
+
+- 独立来源数：1 个数据库
+- 一级史料通过率：100.0%（L1+L2+L3 / 总行数）
+- 本章 L3 级史料 100 条，可纳入大纲但需标注来源
+- 所有主张均来自内容包自动匹配，未经人工逐一核实
+- 单一来源支撑的主张须标注 (单一文献支撑，待交叉验证)
+
+### 交叉验证提示
+
+- 本章有 100 条 L3 级证据，建议优先与此前已入库的 MAIL_MINE、DB_POINTS、PODCAST_MINE 块交叉验证
+
+<!-- /COL_SCAN -->
+
+
+<!-- DEEP_ANALYSIS: cross_indexes.duckdb.concept_history -->
+**史家判断**（证据等级：L2，来源：`cross_indexes.duckdb.concept_history.10`）
+
+ZFS：ZFS 文件系统概念的演化: 2001 年夏 Jeff Bonwick 与 Matt Ahrens 在 Sun Microsystems 启动 ZFS 项目，历时约 4 年由十余人团队实现存储池、写时拷贝（CoW）、RAID-Z、快照、send/receive 等核心；2005 年并入 Solaris trunk，作为 OpenSolaris build 27 向开发者发布（2005-11-16），此后以 CDDL 许可证开源；2006 年在 Solaris 10 6/06 更新中正式纳入。2005–2010 年移植到 FreeBSD、Linux、Mac OS X。2010 年 Oracle 收购 Sun 后停止向社区贡献
+
+
+
+<!-- DEEP_ANALYSIS: cross_indexes.duckdb.concept_history -->
+**史家判断**（证据等级：L2，来源：`cross_indexes.duckdb.concept_history.14`）
+
+分时系统：分时系统概念的演化: 分时思想出现于 1950 年代末：1959 年 Strachey 与 McCarthy 各自提出 time-sharing。1961 年 11 月，Fernando Corbató 与 Robert Daley 等在 MIT 建成并演示 Compatible Time-Sharing System（CTSS），成为首个可运行的分时系统，1963 年发展为稳定大规模系统；其后 CTSS 在 ARPA 支持下演进为 Project MAC（1963 年上线）。1965 年 CMOS 分时设计更上层楼，MIT Project MAC、贝尔电话实验室与通用电气联合启动 Multics（由 Corbat
+
+
+
+<!-- DEEP_ANALYSIS: cross_indexes.duckdb.concept_history -->
+**史家判断**（证据等级：L2，来源：`cross_indexes.duckdb.concept_history.26`）
+
+filesystem: 由 technologies_mentioned 类别聚类提炼（含 13 项技术）
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-1-017`）
+
+运行于 PDP-11 的原 UNIX 系统采用简单优雅的文件系统，所有磁盘传输均为 512 字节块。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-4-008`）
+
+Dennis M. Ritchie 的论文《The Evolution of the Unix Time-sharing System》(1984) 概述 UNIX 早期发展史，聚焦文件系统、进程控制机制与管道命令思想的演进。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-4-110`）
+
+麒麟操作系统的系统服务层基于 FreeBSD 改进，提供 UFS2 文件系统与 BSD 网络协议。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-4-111`）
+
+麒麟 LmBench 测试显示 Kylin 2.0 在系统调用开销、文件系统与虚存延迟上与 FreeBSD 5.3 基本相当，但与 RedHat 9.0 仍有差距。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-5-012`）
+
+Jails 论文列举 jailed root 的八项限制：禁止直接修改内核与加载内核模块、禁止修改网络配置（接口、地址、路由表）、禁止挂载/卸载文件系统、禁止创建设备节点、禁止访问 raw/divert/routing socket、禁止修改内核运行时参数（大部分 sysctl）、禁止修改 securelevel 相关文件标志、禁止访问与 jail 无关的网络资源。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-7-006`）
+
+GBDE（GEOM Based Disk Encryption）是 Poul-Henning Kamp 为 FreeBSD 提出的基于 GEOM 的磁盘加密设施，在磁盘（分区）级别运行，可保护任意类型的文件系统或数据库。
+
+## 文献
+
+- FreeBSD-Foundation-April-2016-Update[M]. 2016.
+- FreeBSD-Foundation-May-2016-Update[M]. 2016.
+- Amit Singh. Mac OS X Internals: A Systems Approach[M]. Addison-Wesley, 2006.
+- eurobsdcon2022-krw-blockstobooting[M].
+- Michael Neumann. Neumann M. The HAMMER Filesystem[ report]. Karlsruher Institut für Technologie,[M]. 2010.
+- 未知. tuhs bstj1978 ritchie thompson unix time sharing[M]. 2004.
+- 未知. tuhs bstj1978 thompson unix implementation[M]. 2004.
+- Goyal H. Addition of Ext4 Extent and Ext3 HTree DIR Read-Only Support in NetBSD[C]//AsiaBSDCon 2017. Tokyo, 2017.
+- Goyal H. Addition of Ext4 Extent and Ext3 HTree DIR Read-Only Support in NetBSD（幻灯片）[EB/OL]. AsiaBSDCon 2017.
+

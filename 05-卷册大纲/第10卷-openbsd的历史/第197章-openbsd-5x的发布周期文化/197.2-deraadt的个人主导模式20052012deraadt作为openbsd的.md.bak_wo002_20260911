@@ -1,0 +1,181 @@
+# 197.2 de Raadt 的个人主导模式（2005-2012）——de Raadt 作为 OpenBSD 的"benign dictator"，所有重大架构决策由 de Raadt 拍板，与 Linus Torvalds 模式各有侧重
+
+## 197.2.1 de Raadt 主导的治理结构特征
+
+**要点**：de Raadt 作为 OpenBSD 的"benign dictator"，所有重大架构决策由其拍板；OpenBSD 无 Core Team 选举，committer 直接对 de Raadt 负责；de Raadt 的权威来自其创始贡献与持续主导（bsd_commits.db 显示 deraadt 自 1995 年 fork 起持续提交至 2024 年），而非正式职衔
+
+**史料**：OpenBSD 治理结构文档（<https://www.openbsd.org/faq/faq0.html>）；de Raadt 在 misc@、tech@ 的决策性发言（<https://marc.info/?laccopenbsd-misc>、<https://marc.info/?laccopenbsd-tech）；bsd_commits.db> openbsd-src 仓库 deraadt commit 记录 ［A］
+
+**史观**：总纲第 23 条——社区治理：de Raadt 的个人主导模式是 OpenBSD 社区治理的核心特征——这一模式的优势是决策效率与技术方向一致性（如 pledge/unveil 从设计到落地仅需 de Raadt 批准），风险是巴士因子极低
+
+**辨析**：de Raadt 的权威边界以 misc@、tech@ 邮件列表中 de Raadt 的决策性发言为准——技术细节由领域负责人主导（如 pf 由 Brauer 维护、OpenSSH 由 Friedl 维护），重大架构决策（如 gcc→clang 切换、LibreSSL fork）由 de Raadt 拍板；committer 权限的撤销以 OpenBSD CVS access log 为准，部分撤销事件在邮件列表公开讨论
+
+**文献**：OpenBSD 治理结构文档 [EB/OL]. <https://www.openbsd.org/faq/faq0.html>；de Raadt 邮件列表发言 [EB/OL]. <https://marc.info/?laccopenbsd-misc>；bsd_commits.db openbsd-src 仓库 deraadt commit ［A］
+
+## 197.2.2 与 Linus 模式及 Dillon 模式的比较
+
+**要点**：de Raadt、Linus Torvalds、Matt Dillon 三人均为"benign dictator"模式，但风格各异——Linus 通过 lieutenant 体系管理 Linux 内核，Dillon 几乎独自维护 DragonFly，de Raadt 介于两者之间；Linus 在公开场合激烈批评但接受贡献者意见，de Raadt 在邮件列表直接拒绝不合格 patch，Dillon 几乎不参与公开讨论
+
+**史料**：Linux Kernel mailing list（<https://lore.kernel.org/lkml/>）；DragonFly users@ 邮件列表（<https://www.dragonflybsd.org/mailinglists/>）；OpenBSD misc@、tech@ 邮件列表（<https://marc.info/?laccopenbsd-misc>）［A］
+
+**史观**：总纲第 23 条——社区治理：三种个人主导模式各有适配——Linus 模式适配 Linux 内核的规模（数千贡献者需分层管理），Dillon 模式限制 DragonFly 扩展（单人维护难以规模化），de Raadt 模式确保 OpenBSD 一致性（小团队 + BDFL 决策确保技术方向不分裂）
+
+**辨析**：三种模式的具体差异以三个项目的邮件列表记录为准——Linus 在 LKML 中的"review-and-merge"流程、de Raadt 在 misc@/tech@ 中的"reject-or-accept"流程、Dillon 在 DragonFly users@ 中的"commit-and-announce"流程，三者决策风格在邮件列表档案中有直接记录
+
+**文献**：Linux Kernel 邮件列表档案 [EB/OL]. <https://lore.kernel.org/lkml/>；OpenBSD 邮件列表档案 [EB/OL]. <https://marc.info/?laccopenbsd-misc>；DragonFly 邮件列表档案 [EB/OL]. <https://www.dragonflybsd.org/mailinglists/> ［A］
+
+## 197.2.3 个人主导的风险与优势
+
+**要点**：个人主导模式的优势在于决策效率高、技术方向一致、避免委员会政治；风险在于巴士因子极低——若 de Raadt 退出，OpenBSD 可能陷入治理真空；de Raadt 通过培养核心 committer（如 Brauer、Beck、guenther）部分缓解巴士因子风险
+
+**史料**：OpenBSD committer 名单与权限记录（<https://www.openbsd.org/developers.html>）；bsd_commits.db openbsd-src 仓库贡献者活跃度统计；OpenBSD hackathons 记录（<https://www.openbsd.org/hackathons.html>）［A］
+
+**史观**：总纲第 10 条——边缘者贡献：guenther、Brauer、Beck 等核心 committer 作为“边缘者”分担 de Raadt 的治理负担——guenther 负责 libc 与系统调用层、Brauer 负责 pf、Beck 负责 LibreSSL，三人的领域分工使 OpenBSD 在 de Raadt 之外仍有技术延续性
+
+**辨析**：巴士因子的评估以 bsd_commits.db openbsd-src 仓库贡献者活跃度为准——deraadt 的 commit 数量在仓库中排名前列，但 guenther、miod、art 等核心 committer 亦持续活跃；继任计划以 de Raadt 在 misc@ 的发言为准——de Raadt 公开表态未指定继任者，但 OpenBSD Foundation 的存在为项目延续提供法律框架 [考据完成：2026-07-28 OpenBSD 的实际巴士因子无权威评估，commit 数量分布可从 bsd_commits.db 查询但 commit 数量不等于关键知识独占度]【代码级证据·openbsd.duckdb openbsd-src 仓库】前 20 名 committer 的 commit 计数（全仓库，截至 2026 年）：1. deraadt 27182、2. miod 9646、3. jmc 9154、4. jsg 8661、5. millert 8315、6. kettenis 7837、7. tb 7172、8. espie 6103、9. mickey 5836、10. schwarze 5777、11. claudio 5572、12. nicm 5242、13. dlg 4995、14. krw 4622、15. jsing 4404、16. djm 3908、17. henning 3585、18. brad 3575、19. tedu 3533、20. mpi 3530——deraadt 以 27182 条 commit 占全仓库约 15%-20%，commit 数量分布呈长尾，前 20 名 committer 合计覆盖仓库绝大多数 commit，但 commit 数量不等于关键知识独占度（如内核子系统、驱动栈、用户态工具的领域知识分布在各 committer 中），巴士因子评估须以关键子系统知识独占度而非 commit 计数为最终判断依据
+
+**文献**：OpenBSD committer 记录 [EB/OL]. <https://www.openbsd.org/developers.html>；bsd_commits.db openbsd-src 仓库贡献者统计；OpenBSD hackathons 记录 [EB/OL]. <https://www.openbsd.org/hackathons.html> ［A］
+
+## 197.2.4 治理相关邮件与发言考据
+
+**要点**：de Raadt 在 misc@、tech@ 邮件列表的发言是研究 OpenBSD 治理模式的核心史料；de Raadt 的发言风格直接、不留情面，常引发争议——bsd_commits.db 中 deraadt 的 commit message 风格同样简洁直接（如 2015-07-19 commit 586b470f3a48"tame(2) is a subsystem which restricts programs..."）
+
+**史料**：OpenBSD misc@、tech@ 邮件列表档案（<https://marc.info/?laccopenbsd-misc>、<https://marc.info/?laccopenbsd-tech）；de> Raadt 的公开演讲与访谈；OpenBSD hackathons 记录（<https://www.openbsd.org/hackathons.html>）［A］
+
+**史观**：总纲第 25 条——0 信任原则：邮件列表考据是 0 信任原则在治理史研究中的应用——de Raadt 的发言须以 marc.info 存档原始帖子为准，转载或二手报道可能简化或扭曲语境
+
+**辨析**：de Raadt 发言的语义以 marc.info 存档原始帖子为准——部分帖子被社区解读为“粗暴”，但原始语境中多为技术论证；邮件列表档案的完整性以 marc.info 与 OpenBSD 官方存档为准——早期档案（1995-2000）可能存在缺失 [考据完成：2026-07-28 OpenBSD 邮件列表 1995-2000 年存档的完整性未经验证，marc.info 的 openbsd-misc 存档始于 1997 年]
+
+**文献**：OpenBSD 邮件列表档案 [EB/OL]. <https://marc.info/?laccopenbsd-misc>；de Raadt 公开演讲；OpenBSD hackathons 记录 [EB/OL]. <https://www.openbsd.org/hackathons.html> ［A］
+
+<!-- DB_REF:openbsd.duckdb -->
+> **数据库引用（openbsd.duckdb）**：本子节对应 openbsd 代码仓库。
+> 2005-2012 年间：129,773 次提交。
+> 仓库总览：491,195 次提交，3,352 位贡献者，1995-10-18 至 2026-08-25。
+
+<!-- DEEP_ANALYSIS: openbsd.duckdb.commits -->
+**数据库分析发现**（证据等级：L1，来源：`openbsd.duckdb.commits.openbsd`）
+
+openbsd 核心贡献者：ajacoutot(35528), deraadt(31454), sthen(30592), espie(18328), jasper(16649)
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-4-010`）
+
+Anonymous CVS 源码分发机制由 Charles D. Cranor 与 Theo de Raadt 创建，用于开放 OpenBSD 源码仓库。
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-4-011`）
+
+创建 Anonymous CVS 的目标之一是开放 OpenBSD 的 CVS 源码仓库访问，使项目更开放并鼓励开发者兴趣。
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-4-100`）
+
+1995 年秋启动 OpenBSD 项目时，Cranor 与 de Raadt 决定用 CVS 管理源代码树，并创建匿名 CVS 以开放源码仓库。
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-5-111`）
+
+Anonymous CVS 由 Charles D. Cranor 与 Theo de Raadt 在 1995 年秋创建 OpenBSD 时设计，使匿名互联网用户无需写权限账户即可访问源码库。
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-6-108`）
+
+OpenBSD 自 2005 年起对 SCSI 中间层（SCSI midlayer）实施重大重构，引入 mpath(4) 多路径虚拟总线与 iopools 资源池、将适配器命令处理器改为回调式 scsi_done API，以改善稳定性、性能与可扩展性。
+
+## 文献
+
+- Ingo Schwarze. bsdcan15-mandoc[M]. 2015.
+- Ingo Schwarze. bsdcan18-mandoc[M]. 2018.
+- Paul Irofti. bsdcan2014-octeon dsr500[M]. 2014.
+- bsdcan2015-rdomains[M].
+- bsdcan2016-bfd[M].
+- bsdcan2016-xen[M].
+- bsdcan2019-syspatch[M].
+- bsdcan2019-tls13[M].
+- bsdcan2025-hshoexer-confidential-computing[M].
+- andrew, afresh1. 2024-Why-Rewrite-fw update-Euro BSDcon[M]. 2024.
+- eurobsdcon2008-sensors[M].
+- eurobsdcon2011-kettenis[M].
+- eurobsdcon2011-openbsdscsievolution[M].
+- eurobsdcon2014-mandoc-paper[M].
+- eurobsdcon2014-mandoc-slides[M].
+- eurobsdcon2014-parallel-make[M].
+- eurobsdcon2015-packages[M].
+- eurobsdcon2015-softraid-boot[M].
+- eurobsdcon2016-openbsd-11n[M].
+- eurobsdcon2016-privsep[M].
+- eurobsdcon2017-device-drivers[M].
+- eurobsdcon2017-opensmtpd[M].
+- eurobsdcon2018-mandoc[M].
+- eurobsdcon2018-rop[M].
+- eurobsdcon2019-plist[M].
+- eurobsdcon2022-krw-blockstobooting[M].
+- eurobsdcon2023-bluhm-mitigations[M].
+- eurobsdcon2023-espie-cache[M].
+- eurobsdcon2024-bluhm-packetflow[M].
+- eurobsdcon2025-bluhm-protomp[M].
+- eurobsdcon2025-florian-easy[M].
+- Marc Espie. eurobsdcon 2018 https[M]. 2018.
+- Claudio Jeker. asiabsdcon08-network[M]. 2008.
+- Murenin C A, Boutaba R. OpenBSD Hardware Sensors Framework[C]//AsiaBSDCon 2009 Proceedings. Tokyo, 2009.
+- Murenin C A. OpenBSD Hardware Sensors Framework（幻灯片）[EB/OL]. AsiaBSDCon 2009. <https://www.openbsd.org/papers/asiabsdcon2009-sensors-slides.pdf>.
+- syuu. asiabsdcon2010 smp for sgi paper[C]. 2010.
+- Alexandre Ratchov. asiabsdcon2010 sndio slides[C]. 2010.
+- asiabsdcon2016-vmm-slides[M].
+- asiabsdcon2019-rop-slides[M].
+- Dave Voutila. asiabsdcon2023-hardening vmd devices-slides[M]. 2023.
+- andrew, afresh1. 2024-Why-Rewrite-fw update-Fossy[M]. 2024.
+- chuck, deraadt. anoncvs-paper[M]. [存疑]
+- Niels Provos. crypt-slides[M]. 2002.
+- eurobsd-firewalls-2002[M]. 2002.
+- eurobsd2017-pkgtools[M].
+- Brian Bamsch. Porting Open BSD to RISCV Final Report[M]. 2020.
+- Paul Irofti. eurobsdcon2014-octeon dsr500[M]. 2014.
+- eurobsdcon2014-rdomains[M].
+- eurobsdcon2015-mandoc[M].
+- eurobsdcon2016-embracingbsdrt[M].
+- eurobsdcon2017-schedisnot[M].
+- eurobsdcon2019-bwfm[M].
+- eurobsdcon2019-gameoftrees[M].
+- eurobsdcon2019-perform-slides[M].
+- eurobsdcon2022-espie-arches[M].
+- eurobsdcon2022-tb-libressl[M].
+- Marc Espie. lse clang[M]. 2017.
+- eurobsdcon2023-matthieu-pf-rdomain[M].
+- eurobsdcon2023-otto-malloc[M].
+- 未知. openbsd Open BSD-jitsi[M]. 2022.
+- Giovanni Bechis 12 ` ~~~ alse. openbsd seccomp-pledge-oss2017[M]. 2017.
+- eurobsdcon2025-hshoexer-confidential-computing[M].
+- eurobsdcon2021-espie-debug[M].
+- eurobsdcon2024-hshoexer-confidential-computing[M].
+- eurobsdcon2025-espie-dpb[M].
+
+<!-- PODCAST_REVIEW v20260829 -->
+<!-- 语义复核范围：YouTube EPieLN_5j7G1g（共 1 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
+
+**要点**：
+
+- Theo de Raadt 自述身兼 OpenBSD 项目领导人（时近 15 年）、开发者与发布工程师三重角色，并批评当代所谓 release management 名义工程实无工程——不对系统每个组件、所处环境与整体复杂性保持自觉即是不负责任；OpenBSD 之名正是要将发布当作工程来做。（YouTube EPieLN_5j7G1g，[33.84-293.12]，L1）
+- OpenBSD 流程与传统模式完全倒置：树解锁后先放进大型变更，六个月周期发布日固定，减速点由 de Raadt 对源码树的手感决定；当察觉众人不再测试而仍在开发时，随机宣布 ABI/API 锁定（惊喜日），锁定即通知 ports 与 packages 开始构建——部分架构构建需时一个月，包构建先于最终回归修复启动，发布分支随后切出，分支期仅 de Raadt 一人负责，目标从一个月压至 10 天（4.1 版曾达两周）。（YouTube EPieLN_5j7G1g，[1062.52-1442.559]，L1）
+- 流程成立的物质基础是每日快照：OpenBSD 每天产出快照安装镜像，de Raadt 自家 CVS 服务器与笔记本全部运行 -current，改动两三天内即被项目成员自用（自述为吃自家狗粮），错误趁记忆新鲜即被发现，故最终测试周期仅剩约两周的最后确认；锁定必须以惊喜方式宣布，因为预知锁定的开发者会抢在锁前塞入变更。（YouTube EPieLN_5j7G1g，[1174.36-1337.279]，L1）
+- 问答环节陈述两项制度细节：其一，OpenBSD 对典型 Unix 安全问题五至七年的修复已足够彻底，旧版本几乎不存在需回推安全补丁的理由，其家中无线路由器运行 OpenBSD 3.8 即无需升级，以此消解多分支维护的合法性；其二，共享库版本号采取激进的 major/minor 策略——API 增加即升 minor、API 变更或消失即升 major，包树亦弃用 vendor 版本号而自记版本，且明确拒绝 ELF symbol versioning，认为其不可用。（YouTube EPieLN_5j7G1g，[1626.36-1785.08]，L1）
+
+**史料**：
+
+- 本演讲本身即发布流程史的核心一手史料：AsiaBSDCon 2009 上 Theo de Raadt 的主题报告，含发布日历流程图解、每日约 300 commits 的减速期数据、惩罚周期的当事人自述、4.1 版分支期两周的量化目标，以及 Matthieu Herrb 转任 X 组件集成者的点名记载。（YouTube EPieLN_5j7G1g，[1062.52-1442.559]，L1）
+
+**史观**：
+
+- 总纲9 经验优先：de Raadt 说明现行流程源于二十年前在另一项目（其 NetBSD 时期经历）的痛苦记忆——测试乐观开局、发布迟到、带病出街、社区自我合理化，遂彻底改造流程；制度设计出自具体遭遇而非理论推演，这与以偶然经验为制度成因的取径一致。（YouTube EPieLN_5j7G1g，[793.56-803.56]，L1）
+
+**辨析**：
+
+- de Raadt 披露约 2003 至 2005 年间连续两三个发布周期运行过惩罚流程：未在发布说明中被点名参与测试的提交者，在源码树重新解锁前两周内被禁止 commit；此举令测试恢复全员参与，但他承认 OpenBSD 不够友善（树五分钟不编译即惩罚并嘲笑提交者），此类纪律手段的正当性在社区中存在争议。（YouTube EPieLN_5j7G1g，[1337.279-1580.44]，L1）
+- 对其他项目的批评构成演讲的对照面：Debian 发布一再拖延数年未出门；FreeBSD 同时维护 11 个 stable 版本令他自承完全无法理解，认为这是把本可开发的人力用于最小收益之处；X11 拆成 200 个组件各自随意发布、发布前无测试致质量无从谈起，OpenBSD 开发者 Matthieu Herrb 的工作已是挑选兼容组件的集成而非开发；OpenSolaris 则以公司财力维持商业与开源双发布线。（YouTube EPieLN_5j7G1g，[321.0-601.64]，L2）
+
+**文献**：
+
+- [YouTube EPi7pkyDUX5uM] YouTube. YouTube: AsiaBSDCon 2009:The OpenBSD Release Process: A Success Story[EB/OL]. ()[2026-08-15]. <https://www.youtube.com/watch?v=i7pkyDUX5uM>.
+
+<!-- /PODCAST_REVIEW -->

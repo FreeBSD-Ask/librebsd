@@ -1,0 +1,164 @@
+# 197.4 外部批评与反对者：OpenBSD 硬件支持与社区规模批评——Linux 社区对 OpenBSD“硬件支持滞后”的批评、FreeBSD 社区对 OpenBSD“社区规模过小”的质疑、用户对 OpenBSD“SMP 性能不足”的抱怨
+
+## 197.4.1 硬件支持滞后的批评
+
+**要点**：Linux 社区对 OpenBSD 的常见批评是“硬件支持滞后”——OpenBSD 对新硬件（特别是无线网卡、GPU）的支持通常滞后 Linux 1-2 年；原因包括 OpenBSD 开发者规模小、拒绝签署 NDA 获取厂商文档、坚持开源驱动哲学；de Raadt 反击称 Linux 接受 binary blob 牺牲了自由
+
+**史料**：Linux 邮件列表与论坛对 OpenBSD 硬件支持的批评；de Raadt 在 misc@ 的反击发言（<https://marc.info/?laccopenbsd-misc>）；OpenBSD 硬件支持文档（<https://www.openbsd.org/faq/faq6.html>）［A］
+
+**史观**：总纲第 24 条——许可证：OpenBSD 拒绝 binary blob 的许可证哲学直接导致硬件支持滞后——以“代码必须可审计为可信来源”为预设，宁可支持滞后也不接受厂商提供的闭源固件，这一选择是法律结构（许可证纯洁性）对技术实现（硬件支持范围）的直接塑造
+
+**辨析**：硬件支持滞后的具体时间差以 OpenBSD 手册页与 Linux wireless 文档的型号覆盖范围对比为准——OpenBSD **iwm(4)** 支持 Intel Wi-Fi 5 8260/8265/9260，**iwx(4)** 支持 Intel Wi-Fi 6 AX200/AX201/AX210，Linux wireless 驱动覆盖范围更广（含 binary blob 驱动）；“拒绝 NDA”的具体实践以 de Raadt 在 misc@ 的发言为准——OpenBSD 个别情况下接受 NDA 但要求文档最终可公开 [考据完成：2026-07-28 OpenBSD 接受 NDA 的具体案例数量无公开统计]
+
+**文献**：OpenBSD 硬件支持文档 [EB/OL]. <https://www.openbsd.org/faq/faq6.html>；Linux 社区批评档案；de Raadt 邮件列表发言 [EB/OL]. <https://marc.info/?laccopenbsd-misc> ［A］
+
+## 197.4.2 社区规模过小的质疑
+
+**要点**：FreeBSD 社区对 OpenBSD 的常见质疑是“社区规模过小”——OpenBSD committer 数量约为 FreeBSD 的 1/3-1/2，邮件列表流量也较低；de Raadt 反击称社区质量重于数量，小社区确保技术方向一致性；社区规模与项目影响力的关系存在争议
+
+**史料**：bsd_commits.db openbsd-src 仓库与 freebsd-src 仓库 contributors 表对比（openbsd-src 245857 commits、freebsd-src 444067 commits）；misc@ 与 freebsd-hackers 邮件列表流量对比；OpenBSD 与 FreeBSD 镜像数量对比 ［A］
+
+**史观**：总纲第 23 条——社区治理：社区规模与治理模式的关系——小社区适配个人主导（OpenBSD BDFL 制），大社区需要委员会治理（FreeBSD Core Team 选举制），二者是组织结构对规模的适配而非优劣之分
+
+**辨析**：committer 数量的具体定义以 bsd_commits.db contributors 表为准——openbsd-src 仓库 7173 位贡献者中有 commit 权限的 active committer 比例低于 freebsd-src；社区规模与项目质量的关联无权威研究 [考据完成：2026-07-28 BSD 项目质量与社区规模的关联性研究无权威学术来源]
+
+**文献**：bsd_commits.db openbsd-src 与 freebsd-src 仓库 contributors 表；OpenBSD committer 记录 [EB/OL]. <https://www.openbsd.org/developers.html>；FreeBSD committer 记录 [EB/OL]. <https://www.freebsd.org/internal/core/> ［A］
+
+## 197.4.3 SMP 性能不足的抱怨
+
+**要点**：用户对 OpenBSD 的常见抱怨是“SMP 性能不足”——OpenBSD 长期保留 big-lock 模型，多核扩展性不及 FreeBSD SMPng 与 Linux；OpenBSD 在网络设备与桌面场景表现尚可，但在数据库等高并发场景落后；de Raadt 辩称安全优先于性能
+
+**史料**：OpenBSD SMP 设计文档；基准测试对比报告；misc@ 邮件列表中关于 SMP 性能的抱怨（<https://marc.info/?laccopenbsd-misc>）；bsd_commits.db openbsd-src 仓库 guenther 2011-06-01 commit fe87c1086dc1c35c10f7ebc07d0d8cff3ba09b9d（NOLOCK 标记）与 art 2011-07-07 commit 22bce29c5f9a889e73b7b15a16f9b2c974ce4862（kernel lock 修复）［A］
+
+**史观**：总纲第 6 条——技术路线分化：OpenBSD 选择安全优先的 SMP 路线（保留 big-lock 但通过 NOLOCK 标记渐进改进），牺牲多核扩展性换安全审计可行性——big-lock 模型使内核代码审计更简单，符合 OpenBSD“代码可审计为可信来源”的预设
+
+**辨析**：SMP 性能差距以同硬件同负载的基准测试为准——OpenBSD big-lock 模型在高并发数据库场景（如 PostgreSQL/pgbench）落后于 FreeBSD SMPng 与 Linux，但在网络设备场景（如 pf 路由）差距较小；big-lock 模型的改进幅度以 bsd_commits.db openbsd-src 仓库中 NOLOCK 标记与 kernel lock 相关 commit 计数为准——5.0 周期 guenther 与 art 的 commit 是渐进改进的代表
+
+**文献**：OpenBSD SMP 文档；bsd_commits.db openbsd-src 仓库 commit fe87c1086dc1c35c10f7ebc07d0d8cff3ba09b9d、22bce29c5f9a889e73b7b15a16f9b2c974ce4862；misc@ 邮件列表档案 [EB/OL]. <https://marc.info/?laccopenbsd-misc> ［A］
+
+## 197.4.4 批评原始发言与邮件列表考据
+
+**要点**：OpenBSD 5.x 时期外部批评的原始发言与邮件列表档案是研究 OpenBSD 形象塑造的核心史料；Linux Kernel mailing list、freebsd-hackers、misc@ 等邮件列表的交叉阅读可还原批评的具体语境与回应
+
+**史料**：Linux Kernel mailing list（<https://lore.kernel.org/lkml/>）、freebsd-hackers（<https://lists.freebsd.org/）、misc@（https://marc.info/?laccopenbsd-misc）等邮件列表档案；OSNews、Slashdot> 等技术媒体文章；de Raadt 的反击发言 ［A］
+
+**史观**：总纲第 25 条——0 信任原则：批评档案考据是 0 信任原则在 BSD 公共形象研究中的应用——批评的具体语境须以原始邮件为准，转载或二手报道可能简化或扭曲
+
+**辨析**：批评的具体语境以原始邮件列表帖子为准——OSNews、Slashdot 等技术媒体的报道常简化邮件列表讨论的完整语境；de Raadt 回应的语义以 marc.info 存档原始帖子为准——部分回应被解读为“粗暴”但在原始语境中多为技术论证
+
+**文献**：各 BSD/Linux 邮件列表档案 [EB/OL]. <https://marc.info/>、<https://lists.freebsd.org/；技术媒体文章；de> Raadt 公开发言 [EB/OL]. <https://marc.info/?laccopenbsd-misc> ［A］
+
+<!-- DB_REF:openbsd.duckdb -->
+> **数据库引用（openbsd.duckdb）**：本子节对应 openbsd 代码仓库。
+> 1995-2026 年间：491,195 次提交。
+> 仓库总览：491,195 次提交，3,352 位贡献者，1995-10-18 至 2026-08-25。
+
+
+<!-- DEEP_ANALYSIS: openbsd.duckdb.commits -->
+**数据库分析发现**（证据等级：L1，来源：`openbsd.duckdb.commits.openbsd`）
+
+openbsd 核心贡献者：ajacoutot(35528), deraadt(31454), sthen(30592), espie(18328), jasper(16649)
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-4-010`）
+
+Anonymous CVS 源码分发机制由 Charles D. Cranor 与 Theo de Raadt 创建，用于开放 OpenBSD 源码仓库。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-4-011`）
+
+创建 Anonymous CVS 的目标之一是开放 OpenBSD 的 CVS 源码仓库访问，使项目更开放并鼓励开发者兴趣。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-4-100`）
+
+1995 年秋启动 OpenBSD 项目时，Cranor 与 de Raadt 决定用 CVS 管理源代码树，并创建匿名 CVS 以开放源码仓库。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-5-111`）
+
+Anonymous CVS 由 Charles D. Cranor 与 Theo de Raadt 在 1995 年秋创建 OpenBSD 时设计，使匿名互联网用户无需写权限账户即可访问源码库。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-6-108`）
+
+OpenBSD 自 2005 年起对 SCSI 中间层（SCSI midlayer）实施重大重构，引入 mpath(4) 多路径虚拟总线与 iopools 资源池、将适配器命令处理器改为回调式 scsi_done API，以改善稳定性、性能与可扩展性。
+
+## 文献
+
+- Ingo Schwarze. bsdcan15-mandoc[M]. 2015.
+- Ingo Schwarze. bsdcan18-mandoc[M]. 2018.
+- Paul Irofti. bsdcan2014-octeon dsr500[M]. 2014.
+- bsdcan2015-rdomains[M].
+- bsdcan2016-bfd[M].
+- bsdcan2016-xen[M].
+- bsdcan2019-syspatch[M].
+- bsdcan2019-tls13[M].
+- bsdcan2025-hshoexer-confidential-computing[M].
+- andrew, afresh1. 2024-Why-Rewrite-fw update-Euro BSDcon[M]. 2024.
+- eurobsdcon2008-sensors[M].
+- eurobsdcon2011-kettenis[M].
+- eurobsdcon2011-openbsdscsievolution[M].
+- eurobsdcon2014-mandoc-paper[M].
+- eurobsdcon2014-mandoc-slides[M].
+- eurobsdcon2014-parallel-make[M].
+- eurobsdcon2015-packages[M].
+- eurobsdcon2015-softraid-boot[M].
+- eurobsdcon2016-openbsd-11n[M].
+- eurobsdcon2016-privsep[M].
+- eurobsdcon2017-device-drivers[M].
+- eurobsdcon2017-opensmtpd[M].
+- eurobsdcon2018-mandoc[M].
+- eurobsdcon2018-rop[M].
+- eurobsdcon2019-plist[M].
+- eurobsdcon2022-krw-blockstobooting[M].
+- eurobsdcon2023-bluhm-mitigations[M].
+- eurobsdcon2023-espie-cache[M].
+- eurobsdcon2024-bluhm-packetflow[M].
+- eurobsdcon2025-bluhm-protomp[M].
+- eurobsdcon2025-florian-easy[M].
+- Marc Espie. eurobsdcon 2018 https[M]. 2018.
+- Claudio Jeker. asiabsdcon08-network[M]. 2008.
+- Murenin C A, Boutaba R. OpenBSD Hardware Sensors Framework[C]//AsiaBSDCon 2009 Proceedings. Tokyo, 2009.
+- Murenin C A. OpenBSD Hardware Sensors Framework（幻灯片）[EB/OL]. AsiaBSDCon 2009. <https://www.openbsd.org/papers/asiabsdcon2009-sensors-slides.pdf>.
+- syuu. asiabsdcon2010 smp for sgi paper[C]. 2010.
+- Alexandre Ratchov. asiabsdcon2010 sndio slides[C]. 2010.
+- asiabsdcon2016-vmm-slides[M].
+- asiabsdcon2019-rop-slides[M].
+- Dave Voutila. asiabsdcon2023-hardening vmd devices-slides[M]. 2023.
+- andrew, afresh1. 2024-Why-Rewrite-fw update-Fossy[M]. 2024.
+- chuck, deraadt. anoncvs-paper[M]. [存疑]
+- Niels Provos. crypt-slides[M]. 2002.
+- eurobsd-firewalls-2002[M]. 2002.
+- eurobsd2017-pkgtools[M].
+- Brian Bamsch. Porting Open BSD to RISCV Final Report[M]. 2020.
+- Paul Irofti. eurobsdcon2014-octeon dsr500[M]. 2014.
+- eurobsdcon2014-rdomains[M].
+- eurobsdcon2015-mandoc[M].
+- eurobsdcon2016-embracingbsdrt[M].
+- eurobsdcon2017-schedisnot[M].
+- eurobsdcon2019-gameoftrees[M].
+- eurobsdcon2019-perform-slides[M].
+- eurobsdcon2022-espie-arches[M].
+- eurobsdcon2022-tb-libressl[M].
+- Marc Espie. lse clang[M]. 2017.
+- eurobsdcon2023-matthieu-pf-rdomain[M].
+- eurobsdcon2023-otto-malloc[M].
+- 未知. openbsd Open BSD-jitsi[M]. 2022.
+- Giovanni Bechis 12 ` ~~~ alse. openbsd seccomp-pledge-oss2017[M]. 2017.
+- eurobsdcon2025-hshoexer-confidential-computing[M].
+- eurobsdcon2019-bwfm[M].
+- eurobsdcon2021-espie-debug[M].
+- eurobsdcon2024-hshoexer-confidential-computing[M].
+- eurobsdcon2025-espie-dpb[M].
+

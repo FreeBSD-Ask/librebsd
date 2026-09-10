@@ -1,0 +1,207 @@
+---
+chapter: 第 86 章
+id: CH86
+volume: 第04卷-大分裂与四大bsd的诞生
+---
+
+# 第 86 章 分裂时期文化叙事的批评与反思
+
+> 本子章由原第 33 章拆分而来，承载 86.9-86.11 节。
+
+## 本章节索引
+
+1. [86.9 对分裂时期文化叙事的批评](86.9-对分裂时期文化叙事的批评.md)
+2. [86.10 重要贡献者与边缘者](86.10-重要贡献者与边缘者.md)
+3. [86.11 时代语境](86.11-时代语境.md)
+
+## 数据核验与统计（自动增补 · 0-信任）
+
+> **来源库**：资料数据库 · materials / material_cross_references；references_fulltext · chapter_matches / chapter_reviews；doubts_standalone · doubts_to_resolve
+> **方法**：基于全局章号 1–348 直接 SQL 聚合；未做外部事实验证；`ch=0`/未映射条目不计入本章。
+> **生成时间**：2026-08-04 ｜ **复现**：`script/_engine_integrity_analysis.py`
+
+| 指标 | 数值 |
+| -- | -- |
+| 锚定素材 | 0 篇（含存疑标记 0 篇） |
+| 存疑点 | 0 条 |
+| 参考文献匹配 | 0 条 |
+| 章节述评 | 未生成 |
+| 章内交叉引用 | 出 4 / 入 3 |
+
+**数据质量备注**：本章尚无锚定素材，属史料回填优先对象；暂无参考文献匹配
+
+<!-- DB_POINTS:chapter_reviews -->
+**数据库要点引用（references_fulltext.db · chapter_reviews · 2026-08-13）**
+
+> 来源：`04-现代研究文献/05-参考文献全文数据库/references_fulltext.db` 表 `chapter_reviews`（348 章全覆盖）。本章级文献综述 1252 字、匹配 0 篇文献，状态 imported。映射：旧章号 +1 → 磁盘章号。
+
+> **综述要点**：本章围绕“分裂时期文化叙事的批评与反思”展开，覆盖 85.9 对分裂时期文化叙事的批评；85.10 重要贡献者与边缘者；85.11 时代语境。数据核验显示：锚定素材 0 篇（含存疑标记 0 篇）、参考文献匹配 0 条、存疑点 0 条（自动增补，0 信任原则下须人工复核）。子节要点：85.10 重要贡献者与边缘者：分裂时期的边缘社区与无名传播…：分裂时期（**1994-2000**）的边缘社区包括——非英语BSD用户组（日本BSD用户会、
+
+<!-- /DB_POINTS:chapter_reviews -->
+
+<!-- COL_SCAN v20260826 -->
+## 内容包复核增补（Phase 4 · 2026-08-26）
+
+> 基于 4 个核心数据库（doubts_standalone、historical_claims、original_sources、references_fulltext）内容包自动匹配与审核。
+> 内容包总行数：325 | 去重主张数：15 | 复核方法：12 步流程（详见 vol01_phase4_summary.md）
+
+### 证据等级分布
+
+| 等级 | 说明 | 数量 | 占比 |
+| -- | -- | -- | -- |
+| L1 | 代码与构建产物 | 0 | 0.0% |
+| L2 | 即时通讯记录 | 0 | 0.0% |
+| L3 | 官方文档与公告 | 325 | 100.0% |
+| L4 | 事后叙述 | 0 | 0.0% |
+| L5 | 二手研究 | 0 | 0.0% |
+
+### 来源数据库分布
+
+| 来源 | 行数 |
+| -- | -- |
+| doubts_standalone | 200 |
+| original_sources | 125 |
+
+### 新增证据点
+
+1. [L3] `original_sources.kaoju_records` — 本次考据综合调用以下来源：  - **WebSearch 检索**：约 30 次英文/中文关键词检索，关键词涵盖 `BSD origin`、`Linux history`、`OpenBSD`、`FreeBSD`、`4.2BSD`、`4.3B
+2. [L3] `original_sources.kaoju_records` — 本文件各案例的“证据来源”小节即对应“查证来源”字段，列出每个案例的一手论文（如 Bonwick 1994 USENIX 论文、Kleiman 1986 SunOS 论文）、Linux 内核源码注释、kernel.org 官方文档与互联网档
+3. [L3] `original_sources.kaoju_records` — 1. **一手数据库**：`原材料/研究/bsd仓库分析/bsd_commits.db`（freebsd-src / freebsd-doc / freebsd-ports / netbsd-src / openbsd-src / drag
+4. [L3] `original_sources.kaoju_records` — ### 一手史料  - **OpenBSD errata patches 官方存档**：`<https://www.openbsd.org/errata.html>` 与各版本 errataXX.html（访问日期 2026-07-22）。本地
+5. [L3] `original_sources.kaoju_records` — ### 一手史料  - **FreeBSD Security Advisories 官方存档**：`<https://www.freebsd.org/security/advisories/`（访问日>期 2026-07-22）。第三卷时期（1
+6. [L3] `original_sources.kaoju_records` — ### 一手史料  - **NetBSD Security Advisories 官方存档**：`<https://www.netbsd.org/support/security/advisory.html`（访问日>期 2026-07-22）
+7. [L3] `original_sources.kaoju_records` — ### 一手史料  - **CSRG 技术报告（EECS/TR）**：加州大学伯克利分校计算机系统研究小组（CSRG）发布的官方技术报告系列，含 3BSD/4BSD/4.1BSD/4.2BSD/4.3BSD/4.3BSD-Tahoe/4.3
+8. [L3] `original_sources.kaoju_records` — - 数据库：`原材料/研究/bsd仓库分析/bsd_commits.db`（约 11 GB，6 仓库 2,358,055 条 commit，2026-07-21 快照） - 查询表：`tags`（4171 行，本次查询 freebsd-sr
+9. [L3] `original_sources.kaoju_records` — ### 2.1 一手来源（数据库）
+
+- `bsd_commits.db` 的 commits 表（netbsd-src/openbsd-src/dragonfly-src 三仓库）
+- `bsd_commits.db` 的 tags
+
+10. [L3] `original_sources.kaoju_records` — ### 1. FreeBSD 基础系统加密库事实核查（93.2 辨析字段修正）  **原声明**：FreeBSD 14.0 起默认使用 LibreSSL  **查证来源**： - bsd_commits.db freebsd-src 仓库查
+11. [L3] `original_sources.kaoju_records` — ### 1.1 一手来源（primary sources）  1. **DragonFly BSD 官方网站**（<https://www.dragonflybsd.org/>）    - 首页：`<https://www.dragonflybs>
+12. [L3] `original_sources.kaoju_records` — ### A. 一手来源（FreeBSD 官方站点）  下列来源均于 2026-07-23 通过 WebFetch 工具直接访问，未引用任何二手中文转载。  1. **FreeBSD News Flash 主页**    - URL：http
+
+### 0 信任评估
+
+- 独立来源数：2 个数据库
+- 一级史料通过率：100.0%（L1+L2+L3 / 总行数）
+- 本章 L3 级史料 325 条，可纳入大纲但需标注来源
+- 所有主张均来自内容包自动匹配，未经人工逐一核实
+- 单一来源支撑的主张须标注 (单一文献支撑，待交叉验证)
+
+### 交叉验证提示
+
+- 本章有 325 条 L3 级证据，建议优先与此前已入库的 MAIL_MINE、DB_POINTS、PODCAST_MINE 块交叉验证
+
+<!-- /COL_SCAN -->
+
+
+<!-- DEEP_ANALYSIS: sacred_sources.duckdb.blocks -->
+**史家判断**（证据等级：L2，来源：`sacred_sources.duckdb.blocks.67`）
+
+人民群众是社会的一部分，当人民群众的意识符合条件，会推进世界的发展；当人民群众的意识不符合条件时，会导致世界倒退。先进人物在条件满足时可以决定历史的发展进程——先进人物是少数掌握真理的人，人民群众有时会做出错误的事情，先进人物的意义即避免这种情况发生。但这并不矛盾于偶然性原则：先进人物的出现是偶然的，其在条件满足时的影响也是偶然条件下的偶然结果。
+
+
+
+<!-- DEEP_ANALYSIS: cross_indexes.duckdb.concept_history -->
+**史家判断**（证据等级：L2，来源：`cross_indexes.duckdb.concept_history.14`）
+
+分时思想出现于 1950 年代末：1959 年 Strachey 与 McCarthy 各自提出 time-sharing。1961 年 11 月，Fernando Corbató 与 Robert Daley 等在 MIT 建成并演示 Compatible Time-Sharing System（CTSS），成为首个可运行的分时系统，1963 年发展为稳定大规模系统；其后 CTSS 在 ARPA 支持下演进为 Project MAC（1963 年上线）。1965 年 CMOS 分时设计更上层楼，MIT Project MAC、贝尔电话实验室与通用电气联合启动 Multics（由 Corbató 领导），引入分页、分段存储与树状文件系统；贝尔实验室 1969 年退出，1970 年 GE 计算机业务转售 Honeywell 将其商业化，1985 年被取消。1990 年 Corbató 因在 CTSS 与 Multics 上的开创性工作获 ACM 图灵奖。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-1-015`）
+
+Hoare 在 1978 年 CSP 论文中将进程间通信定义为一个进程将另一进程命名为输出目的地、后者将前者命名为输入来源。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-1-100`）
+
+Salus 1994《A Quarter Century of UNIX》引录了 UNIX V6 内核中著名的注释 “/* You are not expected to understand this */”，该注释位于进程上下文切换相关代码段（lines 2240-2243 处，注释本身在第 2238 行），出自第六版内核源码。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-1-116`）
+
+Hoare 提出输入输出是编程的基本原语，而通信顺序进程的并行组合是基本的程序结构方法。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-3-055`）
+
+Leffler 等 1983 年记载 BSD 进程间通信设施已成为 UNIX 的事实标准。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-3-068`）
+
+BIND 运维指南记载伯克利互联网名字域（BIND）为 BSD 衍生操作系统实现互联网名字服务器，由名为 named 的守护进程与 resolver 库组成。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-3-070`）
+
+Stonebraker、Wong、Kreps 与 Held 1976 年记载当时已运行的 INGRES 数据库管理系统给出关系数据视图，作为用户进程集合运行于 UNIX 之上（DEC PDP-11）。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-5-006`）
+
+Greg Lehey 2001 年论文指出，FreeBSD 初始 SMP 支持只允许一个进程同时在内核态运行，并在多处理器间屏蔽中断，导致 I/O 密集系统性能严重次优；该论文描述移除这一瓶颈的工作，即 SMPng。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-5-107`）
+
+FreeBSD 原调度器源自 4.3BSD 调度器，不支持多 CPU 的处理器亲和性，核心算法随进程数呈 O(n) 复杂度。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-6-018`）
+
+CheriABI 是纯 capability 进程环境，构建于 CheriBSD（FreeBSD 的 CHERI 修改版）之上，所有程序指针均为 capability。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-6-103`）
+
+2024 年 6 月，FreeBSD Foundation 委托 Alpha-Omega 项目赞助的代码审计覆盖 bhyve 与 Capsicum 两大子系统，由攻击性安全公司 Synacktiv 执行，发现可导致内核与 bhyve 用户态进程代码执行的漏洞。
+
+## 文献
+
+- eurobsdcon2014-mandoc-slides[M].
+- McKusick M K, Joy W N, Leffler S J, Fabry R S. A Fast File System for UNIX[J]. ACM Transactions on Computer Systems, 1984, 2(3): 181-197. DOI: 10.1145/989.990.
+- eurobsdcon2015-mandoc[M].
+- FreeBSD-2025-Community-Survey-Report-Final[M]. 2025.
+- submit-your-freebsd-project-proposal[M].
+- Eclipse Foundation. eclipse-fact-sheet[M]. 2021.
+- conduct. eclipse-foundation-conduct-committee-charter[M]. [存疑]
+- Mike Milinkovich. ef-be-internal-rules[M]. 2025.
+- Mike Milinkovich. implementing-the-ip-policy[M]. 2018.
+- recognizing-project-contributions-policy-2008[M]. 2008.
+- Amit Singh. Mac OS X Internals: A Systems Approach[M]. Addison-Wesley, 2006.
+- eurobsdcon2023-kn-installer[M].
+- Dave Voutila. eurobsdcon2024-vmd multiprocessing[M]. 2024.
+- 未知. tuhs Interprocess Communications in the 8th Edition Unix Ritchie+Presotto USENIX SUMMER 19850612[M].
+- eurobsdcon2025-bluhm-protomp[M].
+- Giovanni Bechis 12 ` ~~~ alse. openbsd seccomp-pledge-oss2017[M]. 2017.
+- Dijkstra. THEMultiprogramming System[M]. 1968.
+- Alexander Bluhm. openbsd eurobsdcon2013 sosplice[M]. 2013.
+- Herwig S. secmodel_sandbox: An Application Sandbox for NetBSD[C]//BSDCan 2017. Ottawa, 2017.
+- Herwig S. secmodel_sandbox: An Application Sandbox for NetBSD（幻灯片）[EB/OL]. BSDCan 2017.
+- Hiroki Sato. netbsd abc2010-P5 A-paper[M]. 2010.
+- Ozaki R. Modernizing NetBSD Networking Facilities and Interrupt Handling[C]//Proceedings of AsiaBSDCon 2015. Tokyo: AsiaBSDCon, 2015 ［C］. 2015.
+- Ozaki R. Modernizing NetBSD Networking Facilities and Interrupt Handling (slides)[C]//Proceedings of AsiaBSDCon 2015. Tokyo: AsiaBSDCon, 2015 ［C］. 2015.
+- k-nakahara. netbsd Asia BSDCon2016-BOF-psref[M]. 2016.
+

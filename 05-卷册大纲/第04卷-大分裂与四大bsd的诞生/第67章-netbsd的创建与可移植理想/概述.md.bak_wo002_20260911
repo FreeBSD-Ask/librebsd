@@ -1,0 +1,125 @@
+---
+chapter: 第 67 章
+id: CH67
+volume: 第04卷-大分裂与四大bsd的诞生
+---
+
+# 第 67 章 NetBSD 的创建与可移植理想
+
+> 本子章由原第 27 章拆分而来，承载 67.1-67.9 节。
+
+## 本章节索引
+
+1. [67.1 1993年netbsd创建](67.1-1993年netbsd创建.md)
+2. [67.2 移植到一切平台的工程目标](67.2-移植到一切平台的工程目标.md)
+3. [67.3 netbsd08](67.3-netbsd08.md)
+4. [67.4 netbsdfoundation的早期组织形态](67.4-netbsdfoundation的早期组织形态.md)
+5. [67.5 netbsdcoreteam内部派系与交情](67.5-netbsdcoreteam内部派系与交情.md)
+6. [67.6 netbsd社区排外与新人困境](67.6-netbsd社区排外与新人困境.md)
+7. [67.7 netbsdfoundation内部张力](67.7-netbsdfoundation内部张力.md)
+8. [67.8 netbsd可移植性承诺与早期架构师的技术遗产](67.8-netbsd可移植性承诺与早期架构师的技术遗产.md)
+9. [67.9 对netbsd可移植理想的批评](67.9-对netbsd可移植理想的批评.md)
+
+## 数据核验与统计（自动增补 · 0-信任）
+
+> **来源库**：资料数据库 · materials / material_cross_references；references_fulltext · chapter_matches / chapter_reviews；doubts_standalone · doubts_to_resolve
+> **方法**：基于全局章号 1–348 直接 SQL 聚合；未做外部事实验证；`ch=0`/未映射条目不计入本章。
+> **生成时间**：2026-08-04 ｜ **复现**：`script/_engine_integrity_analysis.py`
+
+| 指标 | 数值 |
+| -- | -- |
+| 锚定素材 | 115 篇（含存疑标记 16 篇） |
+| 存疑点 | 6 条 |
+| 参考文献匹配 | 10 条 |
+| 章节述评 | 已生成 |
+| 章内交叉引用 | 出 2 / 入 1 |
+
+**数据质量备注**：本章数据齐备
+
+<!-- MAIL_MINE v20260813 -->
+## 邮件史料增补
+
+> 基于 6 个邮件数据库（260 万封）+ FTS5 全文索引自动挖掘，供编纂引用参考。
+> 以下为本章主题相关的邮件史料线索（精确词命中，含时间范围与代表邮件）。
+
+- **netbsd**（openbsd）: 2,533 封 · 1996-2026
+  - [1993] bcd bug — <db@diana.ocunix.on.ca> (Dy
+  - [1993] /usr/games/bcd bug update — <db@diana.ocunix.on.ca> (Dy
+  - [1993] Re: NetBSD switching to the GNATS bug tracking system — <conklin@kaleida.com> (J.T.
+- **netbsd**（usenet）: 7,988 封 · 1984-2013
+  - [1993] bcd bug — <db@diana.ocunix.on.ca> (Dy
+  - [1993] /usr/games/bcd bug update — <db@diana.ocunix.on.ca> (Dy
+  - [1993] Re: NetBSD switching to the GNATS bug tracking system — <conklin@kaleida.com> (J.T.
+
+<!-- /MAIL_MINE -->
+
+<!-- DB_POINTS:doubts_resolved -->
+**数据库要点引用（doubts_standalone.db · 2026-08-13）**
+
+> 来源：`04-现代研究文献/06-存疑数据库/doubts_standalone.db` 表 `doubts_to_resolve`（1987 条，1966 已解决）。本章存疑 5 条已解决。类别分布：date(2)、version(2)、other(1)
+
+> 存疑管理体系：98.9% 已闭环，解决结论含 date/fact/source_conflict/name/version 等类型，具体结论见 doubts_standalone.db 表 `resolution_summary` 字段。
+<!-- /DB_POINTS:doubts_resolved -->
+
+<!-- DB_POINTS:chapter_reviews -->
+**数据库要点引用（references_fulltext.db · chapter_reviews · 2026-08-13）**
+
+> 来源：`04-现代研究文献/05-参考文献全文数据库/references_fulltext.db` 表 `chapter_reviews`（348 章全覆盖）。本章级文献综述 2488 字、匹配 110 篇文献，状态 completed。映射：旧章号 +1 → 磁盘章号。
+
+> **综述要点**：本章综述的 100 条文献集中体现了 NetBSD 在 2006 年至 2025 年间作为可移植性旗舰的技术演进轨迹，整体构成以 AsiaBSDCon、EuroBSDCon、BSDCan、pkgsrcCon 等 BSD 系列技术会议论文为主体，辅以 BoF（Birds of a Feather）报告、WIP（Work in Progress）简报、devsummit 议题纪要与少量期刊长文。从主题分布来看，文献覆盖以下六大方向：其一是
+
+<!-- /DB_POINTS:chapter_reviews -->
+
+<!-- COL_SCAN v20260826 -->
+## 内容包复核增补（Phase 4 · 2026-08-26）
+
+> 基于 4 个核心数据库（doubts_standalone、historical_claims、original_sources、references_fulltext）内容包自动匹配与审核。
+> 内容包总行数：210 | 去重主张数：15 | 复核方法：12 步流程（详见 vol01_phase4_summary.md）
+
+### 证据等级分布
+
+| 等级 | 说明 | 数量 | 占比 |
+| -- | -- | -- | -- |
+| L1 | 代码与构建产物 | 0 | 0.0% |
+| L2 | 即时通讯记录 | 0 | 0.0% |
+| L3 | 官方文档与公告 | 210 | 100.0% |
+| L4 | 事后叙述 | 0 | 0.0% |
+| L5 | 二手研究 | 0 | 0.0% |
+
+### 来源数据库分布
+
+| 来源 | 行数 |
+| -- | -- |
+| doubts_standalone | 10 |
+| original_sources | 200 |
+
+### 新增证据点
+
+1. [L3] `original_sources.kaoju_records` — 1. **一手数据库**：`原材料/研究/bsd仓库分析/bsd_commits.db`（freebsd-src / freebsd-doc / freebsd-ports / netbsd-src / openbsd-src / drag
+2. [L3] `original_sources.kaoju_records` — ### 一手史料  - **OpenBSD errata patches 官方存档**：`<https://www.openbsd.org/errata.html>` 与各版本 errataXX.html（访问日期 2026-07-22）。本地
+3. [L3] `original_sources.kaoju_records` — ### 一手史料  - **FreeBSD Security Advisories 官方存档**：`<https://www.freebsd.org/security/advisories/`（访问日>期 2026-07-22）。第三卷时期（1
+4. [L3] `original_sources.kaoju_records` — ### 一手史料  - **NetBSD Security Advisories 官方存档**：`<https://www.netbsd.org/support/security/advisory.html`（访问日>期 2026-07-22）
+5. [L3] `original_sources.kaoju_records` — - 数据库：`原材料/研究/bsd仓库分析/bsd_commits.db`（约 11 GB，6 仓库 2,358,055 条 commit，2026-07-21 快照） - 查询表：`tags`（4171 行，本次查询 freebsd-sr
+6. [L3] `original_sources.kaoju_records` — ### 1. FreeBSD 基础系统加密库事实核查（93.2 辨析字段修正）  **原声明**：FreeBSD 14.0 起默认使用 LibreSSL  **查证来源**： - bsd_commits.db freebsd-src 仓库查
+7. [L3] `original_sources.kaoju_records` — ### 数据库来源  1. **bsd_commits.db** SQLite 数据库（24.97 GB，23 仓库，8,404,397 commits）    - 位置：`[旧项目路径已移除]`    - 访问方式：通过数据分析报告文件间
+8. [L3] `original_sources.kaoju_records` — ### 一手数据来源
+
+ bsd_commits.db（BSD 上游仓库提交数据库，约 11 GB，含 6 个仓库 2,358,055 条提交记录、7,173 位贡献者；位于 [旧项目路径已移除] SQL 查询结果，通过以下三份数据分析报
+9. [L3] `original_sources.kaoju_records` — ### 1.1 数据库表结构验证 - 查询 `sqlite_master` 表，确认 bsd_commits.db 共 9 张表：branches、commit_branches、commit_files、commits、contribut
+10. [L3] `original_sources.kaoju_records` — ### 1.1 一手来源（primary sources）  1. **DragonFly BSD 官方网站**（<https://www.dragonflybsd.org/>）    - 首页：`<https://www.dragonflybs>
+11. [L3]`original_sources.kaoju_records` — ### A. 一手来源（FreeBSD 官方站点）  下列来源均于 2026-07-23 通过 WebFetch 工具直接访问，未引用任何二手中文转载。  1. **FreeBSD News Flash 主页**    - URL：http
+12. [L3] `original_sources.kaoju_records` — ### A. 一手来源（Apple 官方站点）  下列来源均于 2026-07-23 通过 WebFetch 工具直接访问，未引用任何二手中文转载。  1. **Apple Security Releases 主索引页**（核心一手来源）
+
+### 0 信任评估
+
+- 独立来源数：2 个数据库
+- 一级史料通过率：100.0%（L1+L2+L3 / 总行数）
+- 本章 L3 级史料 210 条，可纳入大纲但需标注来源
+- 所有主张均来自内容包自动匹配，未经人工逐一核实
+- 单一来源支撑的主张须标注 (单一文献支撑，待交叉验证)
+
+### 交叉验证提示
+
+- 本章有 210 条 L3 级证据，建议优先与此前已入库的 MAIL_MINE、DB_POINTS、PODCAST_MINE 块交叉验证
+
+<!-- /COL_SCAN -->

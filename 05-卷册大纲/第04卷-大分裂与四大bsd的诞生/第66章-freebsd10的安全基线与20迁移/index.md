@@ -40,7 +40,7 @@ volume: 第04卷-大分裂与四大bsd的诞生
 ## 文献
 
 - FreeBSD 2.0 Release Announcement (22 Nov 1994)；FreeBSD 1.1.5.1 RELEASE Announcement (5 Jul 1994)；4.4BSD-Lite Release Notes (1994.6)；4.4BSD SMM: 16《On the Security of UNIX》；4.4BSD PSD: 5《Berkeley Software Architecture Manual (4.4 Edition)》；bsd_commits.db `tags` 表与 `commits` 表 ［A］<!-- DB_REF:freebsd.duckdb -->> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 1992-1995 年间：15,540 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
-- bsd_commits.db `commits` 表（freebsd-src, 1993-11-01 至 1995-01-01）；FreeBSD-SA-96:20.stack-overflow 公告；4.4BSD SMM: 16《On the Security of UNIX》；FreeBSD 1.0/2.0 源代码 ［A］
+- freebsd.duckdb `commits` 表（freebsd-src, 1993-11-01 至 1995-01-01）；FreeBSD-SA-96:20.stack-overflow 公告；4.4BSD SMM: 16《On the Security of UNIX》；FreeBSD 1.0/2.0 源代码 ［A］
 - 综合前三层辩证所引文献；本节不引入新文献 ［A］<!-- DB_REF:freebsd.duckdb -->> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 1992-1995 年间：15,540 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
 - 综合 26.1-26.13 各节文献，无新增文献 ［A］### 史观映射> 三个 patchkit 协调人不满意，然后他们动手了——没有宣言，没有请愿，只是把补丁包整理成一个可以独立安装的系统。Williams、Grimes、Hubbard 不是革命者，只是几个不愿意等别人修好东西的普通人。David Greenman 提议了 "FreeBSD" 这个名字，但重要的不是名字，而是有人选择不再等待。Walnut Creek CDROM 提供了开发机器和互联网连接，这笔交易后来被质疑为 “商业绑定”，但在 1993 年的现实中，没有商业支撑的开源项目连磁盘空间和带宽都付不起。自由从来不免费---## 第 26.15 不同时期人员的采访录（详见 [采访录.md](采访录.md)）> 第 26 章采访录子节，覆盖 1993-1994 年 FreeBSD 诞生时期的当事人自述与演讲，含 Jordan K. Hubbard BSDNow 278 采访、Rodney W. Grimes 邮件列表自述、David Greenman 命名由来自述三则，每则采访按 5 字段深化，考据过程另见 原材料/研究/考据记录/ 下对应文件。## 第 26.16 节 媒体反响与社区舆论（详见 [媒体反响与社区舆论.md](媒体反响与社区舆论.md)）---**【本节文献综述】** 详见 [04-现代研究文献/05-参考文献全文数据库/references_fulltext.db](04-现代研究文献/05-参考文献全文数据库/references_fulltext.db) `chapter_reviews` 表（id=8）---**补充证据（基于全文数据库修订）**
 

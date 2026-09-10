@@ -8,7 +8,7 @@ volume: 第09卷-netbsd的历史
 
 ## 要点
 
-- NetBSD 7.0（**2015.9**）改进 ARM 多核支持，支持 Cortex-A15/A57 等多核 SoC；~~引入 big.LITTLE 架构支持~~（经 bsd_commits.db netbsd-src 仓库 commits 表查询 `message_subject LIKE '%big.LITTLE%' OR '%big_little%' OR '%biglittle%'` 未
+- NetBSD 7.0（**2015.9**）改进 ARM 多核支持，支持 Cortex-A15/A57 等多核 SoC；~~引入 big.LITTLE 架构支持~~（经 netbsd.duckdb netbsd-src 仓库 commits 表查询 `message_subject LIKE '%big.LITTLE%' OR '%big_little%' OR '%biglittle%'` 未
 - NetBSD ARM 平台 commit 记录是研究 ARM 移植演进的核心史料；Jared McNeill、Ryo Shimizu 等是 ARM 移植主要贡献者；硬件文档考据需对照 ARM 架构参考手册与 SoC 厂商文档
 - NetBSD 7.0（2015.10）改进内核时间戳从 32-bit 到 64-bit 的迁移，应对 2038 年问题（Y2038）；旧 32-bit time_t 在文件系统、网络协议、用户态 ABI 中广泛存在，7.0 引入 64-bit time_t 内核支持；此改进早于 FreeBSD 与 OpenBSD 的类似迁移，体现 NetBSD 在 Y2038 准备上的前瞻性
 - 2015 年 ARM 成为操作系统竞争焦点：Linux 4.x 以生态规模领先，NetBSD 7.0 以平台广度与 SMP 提升立足，FreeBSD 10/11 在嵌入式产品落地，OpenBSD 5.8 安全利基，Windows 10 试探 ARM；NetBSD 7.0 以 “多核 + ARM 深度” 强化可移植哲学。
@@ -45,4 +45,3 @@ volume: 第09卷-netbsd的历史
 - NetBSD 7.0 Release Notes；tech-kern 邮件列表；Y2038 问题文档 ［A］<!-- DB_REF:netbsd.duckdb -->> **数据库引用（netbsd.duckdb）**：本子节对应 netbsd 代码仓库。> 1993-2026 年间：1,999,408 次提交。> 仓库总览：1,999,412 次提交，1,545 位贡献者（contributors 表行数，1992-07-13 至 2026-08-24）。
 - NetBSD. 7.0 Release Notes [EB/OL]；ARM 生态史料。［B］<!-- DB_REF:netbsd.duckdb -->> **数据库引用（netbsd.duckdb）**：本子节对应 netbsd 代码仓库。> 2015-2015 年间：82,041 次提交。> 仓库总览：1,999,412 次提交，1,545 位贡献者（contributors 表行数，1992-07-13 至 2026-08-24）。
 - netbsd.duckdb netbsd-src 仓库 commit `74e8c71cd1136230728133034816cf03b1f4af1f`、`097731dea099250bc460a975c393fc370c283a95`；NVD CVE-2017-12836、CVE-2018-5732、CVE-2018-5733 条目；ISC DHCP 安全公告 ［A］<!-- DB_REF:netbsd.duckdb -->> **数据库引用（netbsd.duckdb）**：本子节对应 netbsd 代码仓库。> 2017-2017 年间：52,858 次提交。> 仓库总览：1,999,412 次提交，1,545 位贡献者（contributors 表行数，1992-07-13 至 2026-08-24）。
-

@@ -25,7 +25,7 @@ volume: 第13卷-bsd衍生操作系统
 ## 辨析
 
 - 【查证来源】Sony PS4/PS5 基于 FreeBSD 的事实经 FreeBSD Handbook 官方页面（freebsd.org.cn/freebsdhandbook/nutshell.html）一手核验，原文为 “Sony - 两个 PlayStation 3 和 PlayStation 4 游戏机运行在修改版的 FreeBSD 之上”；Sony 工程师 commit 分布经 bsd_c
-- 【查证来源】BSD 许可证原文经 FreeBSD 官方页面一手核验，确认 “再分发与使用” 条款允许商业实体封闭化使用衍生作品；Sony 工程师在 linux-kernel 的 1014 commits 经 bsd_commits.db 查询核验（查询脚本 `script/query_ch126_sony_v4.py`）；Sony PS4 系统软件开源软件声明页面经 playstation.com
+- 【查证来源】BSD 许可证原文经 FreeBSD 官方页面一手核验，确认 “再分发与使用” 条款允许商业实体封闭化使用衍生作品；Sony 工程师在 linux-kernel 的 1014 commits 经 linux-kernel.duckdb 查询核验（查询脚本 `script/query_ch126_sony_v4.py`）；Sony PS4 系统软件开源软件声明页面经 playstation.com
 - 【查证来源】总纲第 8、11、21 条原文经 据原文第 25 章 第 11、14、25 行 Read 一手核验（第 8 条 “本体论上各方平等。FreeBSD、OpenBSD、NetBSD、DragonFly BSD 在本体论上地位相等，差异仅是一刻状态的不同。文档与代码本体平等”、第 11 条 “商品是形式主义。技术市场的选择不是自然选择，而是形式主义的权力运作。劣币驱逐良币是普遍规律”、第 2
 - 【查证来源】合图层所依据的总纲第 8、11、19、21 条原文经 据原文第 25 章 第 11、14、19、25 行 Read 一手核验；BSD 与 GPL 许可证原文经 FreeBSD 官方页面与 GNU 官方页面一手核验；〔待核：原文截断，后文待回源〕
 - 【查证来源】本节所引用的总纲第 1、2、7、8、11、21、23、25 条原文均经 据原文第 25 章 Read 一手核验；【交叉验证方法】自反的辨析须区分 “审视的有限性” 与 “审视的无效性”——审视的有限性指本节对 PlayStation OS 商业采用争议的哲学审视本身亦是形式主义化的非存在，不宣称 “客观真实”；审视的无效性指因审视有限即否定审视价值，这是错误的——审视虽有限但通过项目史

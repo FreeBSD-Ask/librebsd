@@ -29,7 +29,7 @@ volume: 第13卷-bsd衍生操作系统
 
 - JunOS 的“基于 FreeBSD”指用户空间，转发平面为 Juniper 自研，须区分控制平面与转发平面；freebsd.duckdb 查询 L3.2.1 与 L3.2.2 的 Juniper 占比须警惕邮箱域名识别不精确——员工可能用个人邮箱提交，公司被收购后邮箱域名变更，且占比为全 23 仓库合计，须按 freebsd-src 单仓库与 juniper.net/juniper.com 单实体细分查
 - 具体贡献者须以公开记录核实；freebsd.duckdb 查询 L7.2.1 的“未出现 @juniper.net 邮箱贡献者”不等于 Juniper 零回馈——Juniper 员工可能使用 @freebsd.org 邮箱（被查询排除条件过滤）、个人邮箱或通过第三方（如 IronPort 被 Cisco 收购后邮箱变更）提交，且 Juniper 可能通过内部 fork 维护而非直接推送 freebsd-s
-- 考据过程留痕——【查证来源】JunOS 基于 FreeBSD 用户空间经 Juniper 官方架构文档可验证；bsd_commits.db L7.2.1 查询结果显示 @juniper.net/@juniper.com 邮箱贡献者未进入 freebsd-src 回馈 commit 前 30 名（≥5 次）；CVE-2015-7755 与 CVE-2015-7756 的存在性、CVSS 评分、CWE
+- 考据过程留痕——【查证来源】JunOS 基于 FreeBSD 用户空间经 Juniper 官方架构文档可验证；freebsd.duckdb L7.2.1 查询结果显示 @juniper.net/@juniper.com 邮箱贡献者未进入 freebsd-src 回馈 commit 前 30 名（≥5 次）；CVE-2015-7755 与 CVE-2015-7756 的存在性、CVSS 评分、CWE
 - 考据过程留痕——【查证来源】JunOS 的控制平面与转发平面分离架构经 Juniper 官方架构文档可验证；Juniper 在转发平面的 R&D 投入（自研 packet forwarding engine）不依赖 FreeBSD 经 Juniper 工程博客可验证；bsd_commits.db L7.2.1 查询结果显示 @juniper.net/@juniper.com 邮箱贡献者未进入 fr
 - 考据过程留痕——【查证来源】JunOS 内部 fork 维护模式经 Juniper 官方架构文档可验证；Linux 兼容层引入经 JunOS 版本发布说明可验证；BSDL 文本不要求上游回馈为法律事实；openbsd.duckdb L3.2.1 查询结果显示 2017-2020 年商业实体 commit 占比不足 1.3%【交叉验证方法】四条再批评论证线索各自独立评估——(1) 内部 fork 维护使上游
 

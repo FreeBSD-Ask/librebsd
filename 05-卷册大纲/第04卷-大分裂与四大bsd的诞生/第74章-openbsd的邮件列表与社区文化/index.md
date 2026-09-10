@@ -42,7 +42,7 @@ volume: 第04卷-大分裂与四大bsd的诞生
 - OpenBSD 基金会档案 ［A］<!-- DB_REF:openbsd.duckdb -->> **数据库引用（openbsd.duckdb）**：本子节对应 openbsd 代码仓库。> 1992-1995 年间：770 次提交。> 仓库总览：491,195 次提交，3,352 位贡献者，1995-10-18 至 2026-08-25。
 - OpenBSD 安全审计文档；安全认证对比研究[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]<!-- DB_REF:openbsd.duckdb -->> **数据库引用（openbsd.duckdb）**：本子节对应 openbsd 代码仓库。> 1992-1995 年间：770 次提交。> 仓库总览：491,195 次提交，3,352 位贡献者，1995-10-18 至 2026-08-25。
 - Linux/FreeBSD 阵营历年评论；OpenBSD 内部反思帖[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]<!-- DB_REF:openbsd.duckdb -->> **数据库引用（openbsd.duckdb）**：本子节对应 openbsd 代码仓库。> 1992-1995 年间：770 次提交。> 仓库总览：491,195 次提交，3,352 位贡献者，1995-10-18 至 2026-08-25。
-- 被疏远贡献者案例综合研究；bsd_commits.db openbsd-src contributors 表；BSD 三项目贡献者保留率对比研究；被疏远贡献者与核心开发者对照访谈录；OpenBSD security.html [EB/OL]. <https://www.openbsd.org/security.html>；OpenBSD goals.html [EB/OL]. <https://www.openbsd.org/goals.html>；OpenBSD KNF 代码风格文档 style(9) ［A］
+- 被疏远贡献者案例综合研究；openbsd.duckdb openbsd-src contributors 表；BSD 三项目贡献者保留率对比研究；被疏远贡献者与核心开发者对照访谈录；OpenBSD security.html [EB/OL]. <https://www.openbsd.org/security.html>；OpenBSD goals.html [EB/OL]. <https://www.openbsd.org/goals.html>；OpenBSD KNF 代码风格文档 style(9) ［A］
 
 <!-- PODCAST_REVIEW v20260829 -->
 <!-- 语义复核范围：BSD Now EP230、BSD Now EP105、BSD Now EP84、BSD Now EP81、BSD Now EP42（共 5 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
