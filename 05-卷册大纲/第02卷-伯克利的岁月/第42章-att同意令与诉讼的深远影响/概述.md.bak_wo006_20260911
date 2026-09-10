@@ -1,0 +1,160 @@
+---
+chapter: 第 42 章
+id: CH42
+volume: 第02卷-伯克利的岁月
+---
+
+# 第 42 章 AT&T 同意令与诉讼的深远影响
+
+> 本子章由原第 21 章拆分而来，承载 42.4-42.12 节。
+
+## 本章节索引
+
+1. [42.4 att1956年反垄断同意令效应禁止att销售软件使unix源代码以极低成本分发至大学](42.4-att1956年反垄断同意令效应禁止att销售软件使unix.md)
+2. [42.5 版权登记瑕疵att1978年发布32v时省略版权声明直到1992年才注册法官dickinsonrdebevoise据此驳回初步禁令](42.5-版权登记瑕疵att1978年发布32v时省略版权声明直到1992年才注册法官.md)
+3. [42.6 诉讼给予linux18个月无竞争窗口的结构性后果分析](42.6-诉讼给予linux18个月无竞争窗口的结构性后果分析.md)
+4. [42.7 usl诉讼和解后bsd代码的法律清白认证流程](42.7-usl诉讼和解后bsd代码的法律清白认证流程.md)
+5. [42.8 对usl诉讼的批评法律策略与社区代价对usl诉讼法律策略与社区代价的批评](42.8-对usl诉讼的批评法律策略与社区代价对usl诉讼法律策略与社区代价的批评.md)
+6. [42.9 重要贡献者与边缘者律师团队与被忽视的证人律师团队与被忽视的证人](42.9-重要贡献者与边缘者律师团队与被忽视的证人律师团队与被忽视的证人.md)
+7. [42.10 与同时期操作系统的比较同期scovibmlinux20032010applevmicrosoft19881997的诉讼路径对比](42.10-与同时期操作系统的比较同期scovibmlinux20032010.md)
+8. [42.11 同期反垄断诉讼对比us-v-microsoft与eu-v-microsoft](42.11-同期反垄断诉讼对比us-v-microsoft与eu-v-microsoft.md)
+9. [42.12 微软反垄断诉讼系列-caldera-v-microsoft与novell-v-microsoft](42.12-微软反垄断诉讼系列-caldera-v-microsoft与.md)
+
+## 数据核验与统计（自动增补 · 0-信任）
+
+> **来源库**：资料数据库 · materials / material_cross_references；references_fulltext · chapter_matches / chapter_reviews；doubts_standalone · doubts_to_resolve
+> **方法**：基于全局章号 1–348 直接 SQL 聚合；未做外部事实验证；`ch=0`/未映射条目不计入本章。
+> **生成时间**：2026-08-04 ｜ **复现**：`script/_engine_integrity_analysis.py`
+
+| 指标 | 数值 |
+| -- | -- |
+| 锚定素材 | 263 篇（含存疑标记 30 篇） |
+| 存疑点 | 12 条 |
+| 参考文献匹配 | 7 条 |
+| 章节述评 | 未生成 |
+| 章内交叉引用 | 出 6 / 入 5 |
+
+**数据质量备注**：本章数据齐备
+
+<!-- NOISE_REF_CLEANUP v20260804 -->
+
+> **噪声文献引用清理（doubt 批量 2026-08-04）**：
+> 本文件下列 `NEWREF` 注释指向的参考文献为自动入库的派生存根/跨领域噪声条目（bibliography_entry 缺失、与 BSD 主题无关），经复核确认后移除注释：
+> 涉及存疑 id：[1772, 1782, 1785, 1806, 1824, 1839, 1846]
+> 移除 NEWREF 编号：[1715, 1737, 1743, 1877, 1907, 1951, 1974]
+> 零信任原则：未以任何形式还原为伪文献；正文阶段如需支撑请另采权威一手来源。
+
+<!-- MAIL_MINE v20260813 -->
+## 邮件史料增补
+
+> 基于 6 个邮件数据库（260 万封）+ FTS5 全文索引自动挖掘，供编纂引用参考。
+> 以下为本章主题相关的邮件史料线索（精确词命中，含时间范围与代表邮件）。
+
+- **att**（netbsd）: 528 封 · 1993-2026
+  - [1982] Call for 3B20S/CDC/CDS help! — utzoo!decvax!harpo!floyd!
+  - [1983] VAX UNIX from DEC; clarifications — aps at decvax.UUCP (aps a
+  - [1983] more — schoff at bbn-unix (schof
+- **att**（freebsd）: 4,217 封 · 1994-2021
+  - [1982] Call for 3B20S/CDC/CDS help! — utzoo!decvax!harpo!floyd!
+  - [1983] VAX UNIX from DEC; clarifications — aps at decvax.UUCP (aps a
+  - [1983] more — schoff at bbn-unix (schof
+- **att**（usenet）: 6,889 封 · 1982-2016
+  - [1982] Call for 3B20S/CDC/CDS help! — utzoo!decvax!harpo!floyd!
+  - [1983] VAX UNIX from DEC; clarifications — aps at decvax.UUCP (aps a
+  - [1983] more — schoff at bbn-unix (schof
+
+<!-- /MAIL_MINE -->
+
+<!-- DB_POINTS:doubts_resolved -->
+**数据库要点引用（doubts_standalone.db · 2026-08-13）**
+
+> 来源：`04-现代研究文献/06-存疑数据库/doubts_standalone.db` 表 `doubts_to_resolve`（1987 条，1966 已解决）。本章存疑 19 条已解决。类别分布：文献(7)、other(6)、source_conflict(4)、date(1)、fact(1)
+
+> 存疑管理体系：98.9% 已闭环，解决结论含 date/fact/source_conflict/name/version 等类型，具体结论见 doubts_standalone.db 表 `resolution_summary` 字段。
+<!-- /DB_POINTS:doubts_resolved -->
+
+<!-- DB_POINTS:chapter_reviews -->
+**数据库要点引用（references_fulltext.db · chapter_reviews · 2026-08-13）**
+
+> 来源：`04-现代研究文献/05-参考文献全文数据库/references_fulltext.db` 表 `chapter_reviews`（348 章全覆盖）。本章级文献综述 404 字、匹配 7 篇文献，状态 imported。映射：旧章号 +1 → 磁盘章号。
+
+> **综述要点**：本章围绕“AT&T 同意令与诉讼的深远影响”展开，覆盖 41.4 att1956年反垄断同意令效应禁止att销售软件使unix…；41.5 版权登记瑕疵att1978年发布32v时省略版权声明直到19…；41.6 诉讼给予linux18个月无竞争窗口的结构性后果分析；41.7 usl诉讼和解后bsd代码的法律清白认证流程；41.8 对usl诉讼的批评法律策略与社区代价对usl诉讼法律策略与社… 等 9 个子节。数据核验显示：锚定素材 2
+
+<!-- /DB_POINTS:chapter_reviews -->
+
+<!-- COL_SCAN v20260826 -->
+## 内容包复核增补（Phase 4 · fix1 统一口径）
+
+> 基于 5 个核心数据库（doubts_standalone、historical_claims、original_sources、资料数据库、references_fulltext）内容包自动匹配与审核（fix1 统一口径重新提取，解除 500MB 库大小限制）。
+> 内容包总行数：3 | 去重主张数：0 | 复核方法：12 步流程（详见 vol01_phase4_summary.md）
+
+### 证据等级分布
+
+| 等级 | 说明 | 数量 | 占比 |
+| -- | -- | -- | -- |
+| L1 | 代码与构建产物 | 0 | 0.0% |
+| L2 | 即时通讯记录 | 0 | 0.0% |
+| L3 | 官方文档与公告 | 0 | 0.0% |
+| L4 | 事后叙述 | 3 | 100.0% |
+| L5 | 二手研究 | 0 | 0.0% |
+
+### 来源数据库分布
+
+| 来源 | 行数 |
+| -- | -- |
+| 资料数据库 | 3 |
+
+### 0 信任评估
+
+- 独立来源数：1 个数据库
+- 一级史料通过率：0.0%（L1+L2+L3 / 总行数）
+- 本章 L3 级史料仅 0 条，核心事实需经 ≥2 独立来源交叉验证后方可写入大纲
+- 所有主张均来自内容包自动匹配，未经人工逐一核实
+- 单一来源支撑的主张须标注 (单一文献支撑，待交叉验证)
+
+### 交叉验证提示
+
+- 本章有 3 条 L4 级事后叙述，需与 L3 级一手史料交叉验证后方可采信
+
+<!-- /COL_SCAN -->
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-4-001`）
+
+386BSD 移植工程由 William Frederick Jolitz 与 Lynne Greer Jolitz 夫妇合著，1991 年以《Porting UNIX to the 386: A Practical Approach》系列文章发表。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-4-002`）
+
+Jolitz 的 386BSD 规格设计将 386 内存管理（386 Memory Management）列为独立主题章节。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-4-004`）
+
+Spinellis 构建的 Unix 历史仓库将 386BSD 0.0 与 0.1 的源码发行列为数据源。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-4-005`）
+
+Spinellis 构建的 Unix 历史仓库将 386BSD 0.1 的 patchkit 补丁集列为数据源，存档于 tuhs.org。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-4-106`）
+
+因不满 Bill Jolitz 386BSD 开发节奏缓慢，一组开发者分叉 386BSD 创建 FreeBSD 项目。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-4-121`）
+
+William Jolitz 1992 年 7 月 19 日在 comp.unix.bsd 发布 386BSD Release 0.1 公告，以“Cut the Tape”“14 July 1992 (Bastille Day)”“Vive la Revolution”渲染法国大革命修辞。
