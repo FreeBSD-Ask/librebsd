@@ -1,0 +1,152 @@
+---
+chapter: 第 112 章
+id: CH112
+volume: 第06卷-freebsd的核心技术革新
+---
+
+# 第 112 章 ZFS 在 FreeBSD 的演进与 DragonFly 对比
+
+> 卷：第06卷-freebsd的核心技术革新
+> 子章号：第 109 章
+> 字数估算：约 16745 字
+
+## 本章节索引
+
+1. [112.10 ZFS-在各版本-FreeBSD-中的演进-lz4-压缩-加密-克隆发送-zfs-send-I-书签-持久化](112.10-ZFS-在各版本-FreeBSD-中的演进-lz4-压缩-加密-克隆发送.md)
+2. [112.11 DragonFly-HAMMER-HAMMER2-与-ZFS-的对照-DragonFly-的-HAMMER-2008](112.11-DragonFly-HAMMER-HAMMER2-与-ZFS-的对照.md)
+3. [112.12 外部批评与反对者-1-林纳斯-托瓦兹-Linus-Torvalds-RealWorldTech-2020-1-6-对](112.12-外部批评与反对者-1-林纳斯-托瓦兹-Linus-Torvalds-RealWo.md)
+
+## 数据核验与统计（自动增补 · 0-信任）
+
+> **来源库**：资料数据库 · materials / material_cross_references；references_fulltext · chapter_matches / chapter_reviews；doubts_standalone · doubts_to_resolve
+> **方法**：基于全局章号 1–348 直接 SQL 聚合；未做外部事实验证；`ch=0`/未映射条目不计入本章。
+> **生成时间**：2026-08-04 ｜ **复现**：`script/_engine_integrity_analysis.py`
+
+| 指标 | 数值 |
+| --- | --- |
+| 锚定素材 | 8 篇（含存疑标记 0 篇） |
+| 存疑点 | 0 条 |
+| 参考文献匹配 | 1 条 |
+| 章节述评 | 未生成 |
+| 章内交叉引用 | 出 1 / 入 1 |
+
+**数据质量备注**：本章数据齐备
+
+<!-- GITREPO_FINE_BLOCK v20260804 -->
+## Git 仓库细粒度技术分析（FreeBSD · 自动增补 · 0-信任）
+
+> 来源：`03-原始史料库/01-代码仓库史料/02-FreeBSD/db/freebsd.db` 的 `tech_features` 表（提交级特性标记）。
+> 方法：按特性聚合 `commits` 提交计数与首/峰/末年；未做外部事实验证。
+
+| 技术特性 | 类别 | 提交标记 | 活跃跨度 |
+| --- | --- | ---: | --- |
+| ZFS | 存储 | 4,352 | 2007–2026 |
+
+- **ZFS**（存储，2007–2026）：写时复制(CoW)日志文件系统 + 存储池（Sun 2005，OpenZFS 跨项目） 替代：UFS → ZFS → OpenZFS；Linux 迟至 2010s 借 ZFS-on-Linux
+
+**跨项目代码流动（ZFS）**：
+
+- 各项目匹配路径数：FreeBSD=8,528，NetBSD=302，OpenBSD=4，DragonFlyBSD=135，OpenZFS=4,441，BSD衍生项目=8,732，illumos-gate=2,589，Darwin(macOS)=2
+- 主要共享路径对（源→目标）：FreeBSD→BSD衍生项目 共享 8,142；FreeBSD→OpenZFS 共享 4,316；OpenZFS→BSD衍生项目 共享 4,213；FreeBSD→DragonFlyBSD 共享 129
+
+> 说明：上述为含"ZFS"关键字的 DISTINCT 文件路径计数；高共享对反映该子系统从起源项目向其它 BSD 的移植/同步。
+
+---
+
+<!-- MAIL_MINE v20260813 -->
+## 邮件史料增补
+
+> 基于 6 个邮件数据库（260 万封）+ FTS5 全文索引自动挖掘，供编纂引用参考。
+> 以下为本章主题相关的邮件史料线索（精确词命中，含时间范围与代表邮件）。
+
+- **dragonfly**（freebsd）: 2,770 封 · 1995-2026
+  - [1995] Re: vendor bytes (ethernet address, a list?) — Christoph Kukulies
+  - [1996] Happy New Year —
+  - [1998] Draft manpages available for review — Doug Rabson（道格·拉布森）
+
+<!-- /MAIL_MINE -->
+
+<!-- DB_POINTS:cross_indexes_person -->
+**数据库要点引用（cross_indexes.db · person_bio_research · 2026-08-13）**
+
+> 来源：`10-交叉索引/cross_indexes.db` 表 `person_bio_research`（去重后 276 条，P0 26/P1 75/P2 175/未分级 0）。映射：数据库旧章号 +1 → 磁盘章号。本章涉及人物 1 位。
+
+- [P2] Allan Jude（艾伦·裘德）：BSDNow 播客/TrueNAS
+<!-- /DB_POINTS:cross_indexes_person -->
+
+<!-- DB_POINTS:chapter_reviews -->
+**数据库要点引用（references_fulltext.db · chapter_reviews · 2026-08-13）**
+
+> 来源：`04-现代研究文献/05-参考文献全文数据库/references_fulltext.db` 表 `chapter_reviews`（348 章全覆盖）。本章级文献综述 973 字、匹配 1 篇文献，状态 imported。映射：旧章号 +1 → 磁盘章号。
+
+> **综述要点**：本章围绕“ZFS 在 FreeBSD 的演进与 DragonFly 对比”展开，覆盖 111.10 ZFS-在各版本-FreeBSD-中的演进-lz4-压缩…；111.11 DragonFly-HAMMER-HAMMER2-与-Z…；111.12 外部批评与反对者-1-林纳斯-托瓦兹-Linus-Tor…。数据核验显示：锚定素材 8 篇（含存疑标记 0 篇）、参考文献匹配 1 条、存疑点 0 条（自动增补，0 信任原则下须人工复核）。子
+
+<!-- /DB_POINTS:chapter_reviews -->
+
+<!-- COL_SCAN v20260826 -->
+## 内容包复核增补（Phase 4 · 2026-08-26）
+
+> 基于 4 个核心数据库（doubts_standalone、historical_claims、original_sources、资料数据库）内容包自动匹配与审核。
+> 内容包总行数：200 | 去重主张数：194 | 复核方法：12 步流程（详见 vol2to5_phase4_summary.md）
+
+### 证据等级分布
+
+| 等级 | 说明 | 数量 | 占比 |
+| --- | --- | --- | --- |
+| L1 | 代码与构建产物 | 200 | 100.0% |
+| L2 | 即时通讯记录 | 0 | 0.0% |
+| L3 | 官方文档与公告 | 0 | 0.0% |
+| L4 | 事后叙述 | 0 | 0.0% |
+| L5 | 二手研究 | 0 | 0.0% |
+
+### 来源数据库分布
+
+| 来源 | 行数 |
+| --- | --- |
+| 资料数据库 | 200 |
+
+### 新增证据点（L1-L3）
+
+1. [L1] `资料数据库.nvd_cve_metadata.description#cve_id=CVE-2005-0953` — Race condition in bzip2 1.0.2 and earlier allows local users to modify permissions of arbitrary files via a hard link attack on a file while it is being decompressed, whose permissions are changed by ...
+2. [L1] `资料数据库.nvd_cve_metadata.description#cve_id=CVE-2005-1797` — The design of Advanced Encryption Standard (AES), aka Rijndael, allows remote attackers to recover AES keys via timing attacks on S-box lookups, which are difficult to perform in constant time in AES ...
+3. [L1] `资料数据库.nvd_cve_metadata.description#cve_id=CVE-2005-3352` — Cross-site scripting (XSS) vulnerability in the mod_imap module of Apache httpd before 1.3.35-dev and Apache httpd 2.0.x before 2.0.56-dev allows remote attackers to inject arbitrary web script or HTM...
+4. [L1] `资料数据库.nvd_cve_metadata.description#cve_id=CVE-2006-0225` — scp in OpenSSH 4.2p1 allows attackers to execute arbitrary commands via filenames that contain shell metacharacters or spaces, which are expanded twice.
+5. [L1] `资料数据库.nvd_cve_metadata.description#cve_id=CVE-2006-1744` — Buffer overflow in pl_main.c in sail in BSDgames before 2.17-7 allows local users to execute arbitrary code via a long player name that is used in a scanf function call.
+6. [L1] `资料数据库.nvd_cve_metadata.description#cve_id=CVE-2006-2362` — Buffer overflow in getsym in tekhex.c in libbfd in Free Software Foundation GNU Binutils before 20060423, as used by GNU strings, allows context-dependent attackers to cause a denial of service (appli...
+7. [L1] `资料数据库.nvd_cve_metadata.description#cve_id=CVE-2006-3918` — http_protocol.c in (1) IBM HTTP Server 6.0 before 6.0.2.13 and 6.1 before 6.1.0.1, and (2) Apache HTTP Server 1.3 before 1.3.35, 2.0 before 2.0.58, and 2.2 before 2.2.2, does not sanitize the Expect h...
+8. [L1] `资料数据库.nvd_cve_metadata.description#cve_id=CVE-2006-4810` — Buffer overflow in the readline function in util/texindex.c, as used by the (1) texi2dvi and (2) texindex commands, in texinfo 4.8 and earlier allows local users to execute arbitrary code via a crafte...
+9. [L1] `资料数据库.nvd_cve_metadata.description#cve_id=CVE-2006-4924` — sshd in OpenSSH before 4.4, when using the version 1 SSH protocol, allows remote attackers to cause a denial of service (CPU consumption) via an SSH packet that contains duplicate blocks, which is not...
+10. [L1] `资料数据库.nvd_cve_metadata.description#cve_id=CVE-2006-5051` — Signal handler race condition in OpenSSH before 4.4 allows remote attackers to cause a denial of service (crash), and possibly execute arbitrary code if GSSAPI authentication is enabled, via unspecifi...
+11. [L1] `资料数据库.nvd_cve_metadata.description#cve_id=CVE-2006-5752` — Cross-site scripting (XSS) vulnerability in mod_status.c in the mod_status module in Apache HTTP Server (httpd), when ExtendedStatus is enabled and a public server-status page is used, allows remote a...
+12. [L1] `资料数据库.nvd_cve_metadata.description#cve_id=CVE-2006-5794` — Unspecified vulnerability in the sshd Privilege Separation Monitor in OpenSSH before 4.5 causes weaker verification that authentication has been successful, which might allow attackers to bypass authe...
+13. [L1] `资料数据库.nvd_cve_metadata.description#cve_id=CVE-2007-0494` — ISC BIND 9.0.x, 9.1.x, 9.2.0 up to 9.2.7, 9.3.0 up to 9.3.3, 9.4.0a1 up to 9.4.0a6, 9.4.0b1 up to 9.4.0b4, 9.4.0rc1, and 9.5.0a1 (Bind Forum only) allows remote attackers to cause a denial of service ...
+14. [L1] `资料数据库.nvd_cve_metadata.description#cve_id=CVE-2007-1218` — Off-by-one buffer overflow in the parse_elements function in the 802.11 printer code (print-802_11.c) for tcpdump 3.9.5 and earlier allows remote attackers to cause a denial of service (crash) via a c...
+15. [L1] `资料数据库.nvd_cve_metadata.description#cve_id=CVE-2007-1536` — Integer underflow in the file_printf function in the "file" program before 4.20 allows user-assisted attackers to execute arbitrary code via a file that triggers a heap-based buffer overflow.
+
+> 另有 179 条 L1-L3 证据点未列出，详见内容包文件。
+
+### 0 信任评估
+
+- 独立来源数：1 个数据库
+- 一级史料通过率：100.0%（L1+L2+L3 / 总行数）
+- 本章 L1-L3 级史料 194 条，可纳入大纲但需标注来源
+- 所有主张均来自内容包自动匹配，未经人工逐一核实
+- 单一来源支撑的主张须标注 (单一文献支撑，待交叉验证)
+
+### 交叉验证提示
+
+- 本章有 194 条 L1-L3 级证据，建议优先与此前已入库的 MAIL_MINE、DB_POINTS、PODCAST_MINE 块交叉验证
+- 本章仅从单一数据库获取证据，须标注 (单一文献支撑，待交叉验证)
+
+<!-- /COL_SCAN -->
+
+<!-- DEEP_ANALYSIS: freebsd.duckdb.commits -->
+**数据库分析发现**（证据等级：L1，来源：`freebsd.duckdb.commits.freebsd`）
+
+freebsd 代码仓库：从 1993 年到 2026 年，共 1294851 次提交，5671 位贡献者参与。
+
+<!-- DEEP_ANALYSIS: freebsd.duckdb.commits -->
+**数据库分析发现**（证据等级：L1，来源：`freebsd.duckdb.commits.freebsd`）
+
+freebsd 核心贡献者：Po-Chuan Hsieh(68595), Sunpoet Po-Chuan Hsieh(51033), Yuri Victorovich(29759), Jan Beich(22360), Martin Wilke(20341)
+

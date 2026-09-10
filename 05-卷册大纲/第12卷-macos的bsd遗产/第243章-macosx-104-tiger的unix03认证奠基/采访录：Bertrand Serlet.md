@@ -21,7 +21,7 @@ Serlet 在 WWDC 2004 技术环节预览 Mac OS X 10.4 Tiger 的核心技术—�
 
 **字段 3 考据脚注**
 
-本则来自 Apple WWDC 2004 主题演讲录像，Apple Developer 官方存档。Serlet 关于 Tiger BSD 子系统同步 FreeBSD 5.x 的陈述，经 Apple 2005-04-29 Tiger 发布新闻稿与 openbsd.db 查询 L7.5.1 交叉验证。其关于 64 位支持的陈述，经 Singh《Mac OS X Internals》（2006）对 Tiger 64 位 ABI 的描述交叉验证。自利偏差审查：Serlet 作为 Apple 软件工程高级副总裁，其对 Tiger 技术进步的陈述带有 Apple 官方立场。完整考据过程见 [20260724_serlet-wwdc-2004-keynote.md](../../../原材料/研究/考据记录/20260724_serlet-wwdc-2004-keynote.md)。
+本则来自 Apple WWDC 2004 主题演讲录像，Apple Developer 官方存档。Serlet 关于 Tiger BSD 子系统同步 FreeBSD 5.x 的陈述，经 Apple 2005-04-29 Tiger 发布新闻稿与 openbsd.duckdb 查询 L7.5.1 交叉验证。其关于 64 位支持的陈述，经 Singh《Mac OS X Internals》（2006）对 Tiger 64 位 ABI 的描述交叉验证。自利偏差审查：Serlet 作为 Apple 软件工程高级副总裁，其对 Tiger 技术进步的陈述带有 Apple 官方立场。完整考据过程见 [20260724_serlet-wwdc-2004-keynote.md](../../../原材料/研究/考据记录/20260724_serlet-wwdc-2004-keynote.md)。
 
 **字段 4 与本章节内容的关联**
 

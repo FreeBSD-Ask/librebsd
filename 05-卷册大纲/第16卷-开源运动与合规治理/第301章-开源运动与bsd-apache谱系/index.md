@@ -35,7 +35,7 @@ volume: 第16卷-开源运动与合规治理
 - 总纲第 1 条——偶然性改写历史，商业困境催生开源决策
   - 辨析：【双库核查 2026-08-15】邮件列表库 freebsd 1997-1999 年查询 'Netscape Mozilla' 命中 5 条，参考文献库 'Netscape' 命中 5 条（Meeker 2008、bsdcan2019 等）——双库间接验证；Netscape 1998-01-22 精确日期双库无法直接确证 [存疑
 - 总纲第 13 条——边缘者的作用
-  - 辨析：freebsd.db freebsd-src 仓库的 Mozilla 主题 commit 显示 Mozilla 与 FreeBSD 的交集主要是 FreeBSD 为 Mozilla 提供兼容性修复——Jordan K. Hubbard、John Polstra、Brian Feldman、Scott Long 等核心 committer 均参与过 M
+  - 辨析：freebsd.duckdb freebsd-src 仓库的 Mozilla 主题 commit 显示 Mozilla 与 FreeBSD 的交集主要是 FreeBSD 为 Mozilla 提供兼容性修复——Jordan K. Hubbard、John Polstra、Brian Feldman、Scott Long 等核心 committer 均参与过 M
 - 总纲第 1 条——偶然性改写历史，GitHub 普及改变开源协作
   - 辨析：PR 模式是否真优于补丁，需独立判断；Microsoft 收购是否影响开源
   - 文献：GitHub 官方历史[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]
@@ -43,7 +43,7 @@ volume: 第16卷-开源运动与合规治理
 ## 301.7.2 PR 模式对 BSD
 
 - 总纲第 1 条——偶然性改写历史，2020 年迁移是 FreeBSD 工具链关键转折
-  - 辨析：FreeBSD 是否完全接受 GitHub PR，须查当前文档；freebsd.db freebsd-doc 仓库的 Git 迁移主题 commit 显示原大纲 “2021 年 1 月正式完成” 叙事在 doc 仓库层面需修正——doc 仓库的 Git 迁移文档更新集中在 2021-03-16 至
+  - 辨析：FreeBSD 是否完全接受 GitHub PR，须查当前文档；freebsd.duckdb freebsd-doc 仓库的 Git 迁移主题 commit 显示原大纲 “2021 年 1 月正式完成” 叙事在 doc 仓库层面需修正——doc 仓库的 Git 迁移文档更新集中在 2021-03-16 至
 
 ## 辨析
 
@@ -55,14 +55,14 @@ volume: 第16卷-开源运动与合规治理
 - 要点：Apache 许可证 1.0（
 - 【双库核查 2026-08-15】邮件列表库 freebsd 1997-1999 年查询 'Netscape Mozilla' 命中 5 条，参考文献库 'Netscape' 命中 5 条（Meeker 2008、bsdcan2019 等）——双库间接验证；Netscape 1998-01-22 精确日期双库无法直接确证 [存疑脚注]；Barksdale 是否真读 CatB，须查自述
   - 文献
-- freebsd.db freebsd-src 仓库的 Mozilla 主题 commit 显示 Mozilla 与 FreeBSD 的交集主要是 FreeBSD 为 Mozilla 提供兼容性修复——Jordan K. Hubbard、John Polstra、Brian Feldman、Scott Long 等核心 committer 均参与过 Mozilla 兼容性修复，Mozilla 是 F
+- freebsd.duckdb freebsd-src 仓库的 Mozilla 主题 commit 显示 Mozilla 与 FreeBSD 的交集主要是 FreeBSD 为 Mozilla 提供兼容性修复——Jordan K. Hubbard、John Polstra、Brian Feldman、Scott Long 等核心 committer 均参与过 Mozilla 兼容性修复，Mozilla 是 F
 - PR 模式是否真优于补丁，需独立判断；Microsoft 收购是否影响开源
   - 文献：GitHub 官方历史[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]
 
 ## 301.7.2 PR 模式对 BSD 补丁文化的冲击
 
 - 要点：PR 模式对 BSD 补丁文化的冲击：(1) G
-- FreeBSD 是否完全接受 GitHub PR，须查当前文档；freebsd.db freebsd-doc 仓库的 Git 迁移主题 commit 显示原大纲 “2021 年 1 月正式完成” 叙事在 doc 仓库层面需修正——doc 仓库的 Git 迁移文档更新集中在 2021-03-16 至 2021-06-16，说明 doc 仓库的实际迁移完成时间在 2021 年 3 月中旬而非 1 月；
+- FreeBSD 是否完全接受 GitHub PR，须查当前文档；freebsd.duckdb freebsd-doc 仓库的 Git 迁移主题 commit 显示原大纲 “2021 年 1 月正式完成” 叙事在 doc 仓库层面需修正——doc 仓库的 Git 迁移文档更新集中在 2021-03-16 至 2021-06-16，说明 doc 仓库的实际迁移完成时间在 2021 年 3 月中旬而非 1 月；
 
 ## 文献
 

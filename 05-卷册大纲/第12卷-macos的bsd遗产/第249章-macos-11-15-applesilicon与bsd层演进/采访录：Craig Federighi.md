@@ -21,7 +21,7 @@ Federighi 在 WWDC 2020 技术环节阐述 macOS 11 Big Sur 与 Apple Silicon（
 
 **字段 3 考据脚注**
 
-本则来自 Apple WWDC 2020 主题演讲录像，Apple Developer 官方存档。Federighi 关于 macOS BSD 子系统 ARM64 迁移的陈述，经 Apple 2020-11-10 Big Sur 与 M1 发布新闻稿与 Apple Developer 文档中 ARM64 ABI Guide 交叉验证。其关于 Mach 调度器 ARM big.LITTLE 适配的陈述，经 darwin.db 查询 L7.5.1 中 XNU osfmk/kern/ 与 ARM64 相关文件 commit 历史交叉验证。自利偏差审查：Federighi 作为 Apple 软件工程高级副总裁，其陈述带有 Apple 官方立场。完整考据过程见 [20260724_federighi-wwdc-2020-keynote.md](../../../原材料/研究/考据记录/20260724_federighi-wwdc-2020-keynote.md)。
+本则来自 Apple WWDC 2020 主题演讲录像，Apple Developer 官方存档。Federighi 关于 macOS BSD 子系统 ARM64 迁移的陈述，经 Apple 2020-11-10 Big Sur 与 M1 发布新闻稿与 Apple Developer 文档中 ARM64 ABI Guide 交叉验证。其关于 Mach 调度器 ARM big.LITTLE 适配的陈述，经 darwin.duckdb 查询 L7.5.1 中 XNU osfmk/kern/ 与 ARM64 相关文件 commit 历史交叉验证。自利偏差审查：Federighi 作为 Apple 软件工程高级副总裁，其陈述带有 Apple 官方立场。完整考据过程见 [20260724_federighi-wwdc-2020-keynote.md](../../../原材料/研究/考据记录/20260724_federighi-wwdc-2020-keynote.md)。
 
 **字段 4 与本章节内容的关联**
 

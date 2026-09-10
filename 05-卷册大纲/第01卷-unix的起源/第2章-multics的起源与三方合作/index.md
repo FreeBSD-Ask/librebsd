@@ -47,7 +47,7 @@ volume: 第01卷-unix的起源
 - Honeywell Info Systems, "Multics System Programmer's Manual," 1977; Thomas W. Doeppner, "Operating Systems In Depth," Wiley, 2011（第 6 章多处理器调度对 Multics 的回顾） ［B］
 - Peter Neumann RISKS Forum (ACM)；Multics.org 社区评论；Neumann"Computer Security in Open Systems" (1995) ［B］
 - Ritchie 1984 BLTJ 63 No. 6 Part 2:1577-1593, DOI 10.1002/j.1538-7305.1984.tb00054.x；Thompson 1979 BYTE；Kernighan 2019 回忆录 ［B］
-- Ritchie & Thompson 1974 CACM"The UNIX Time-Sharing System"；Ritchie 1979/1984"The Evolution of the Unix Time-sharing System"（1979 年 AUUG 研讨会首次发表，1984 年 BLTJ 正式刊出）；US Patent 4,135,240"Protection of data file contents"；Morris 蠕虫 1988 事件报告；freebsd.db：freebsd-src commit `26f9a76710a312a951848542b9ca1f44100450e2`（1994-05-25，4.4BSD-Lite import）；freebsd.db：freebsd-src commit `c2f46557264110fb353a0f512292db9330c09dc4`（1996-03-11，4.4BSD-Lite2 import） ［A］
+- Ritchie & Thompson 1974 CACM"The UNIX Time-Sharing System"；Ritchie 1979/1984"The Evolution of the Unix Time-sharing System"（1979 年 AUUG 研讨会首次发表，1984 年 BLTJ 正式刊出）；US Patent 4,135,240"Protection of data file contents"；Morris 蠕虫 1988 事件报告；freebsd.duckdb：freebsd-src commit `26f9a76710a312a951848542b9ca1f44100450e2`（1994-05-25，4.4BSD-Lite import）；freebsd.duckdb：freebsd-src commit `c2f46557264110fb353a0f512292db9330c09dc4`（1996-03-11，4.4BSD-Lite2 import） ［A］
 - Shannon C E. A Symbolic Analysis of Relay and Switching Circuits [J]. Transactions of the AIEE, 1938, 57(12): 713-723；同本节 1.2.1-1.2.4 所列 [考据脚注：香农 1938 年硕士论文内容为逻辑史与信息论史学界公认，经信息论史文献与本章 1.15.13 节既有考据交叉验证确证。]
 - 同本节 1.3.1-1.3.4 所列；另参见 Ceruzzi P. A History of Modern Computing [M]. 2003（模型—机器关系的二手研究）
 - 同本节 1.4.1-1.4.4 所列；另参见 Ceruzzi 2003 第 1-3 章；Campbell-Kelly & Aspray"Computer"(1996) 相关章节
@@ -80,3 +80,7 @@ volume: 第01卷-unix的起源
 - [YouTube EPnwbqBdghh6E] YouTube. YouTube: FreeBSD Kernel Internals, Dr. Marshall Kirk McKusick[EB/OL]. ()[2026-08-15]. <https://www.youtube.com/watch?v=nwbqBdghh6E>.
 
 <!-- /PODCAST_REVIEW -->
+
+<!-- dangan-20260908 消解回写 -->
+- MIT. LCS RFC 37 (Voydock 1973, <https://people.csail.mit.edu/saltzer/Multics/MHP-Saltzer-060508/bookcases/RFCs/csr-rfc-037.pdf)>[EB/OL]. 1973. ［待核·needs_fix］［DKC-0981→fulltext:5751］
+<!-- /dangan-20260908 -->

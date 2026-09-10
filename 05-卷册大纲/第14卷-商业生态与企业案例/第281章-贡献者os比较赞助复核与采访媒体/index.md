@@ -76,12 +76,12 @@ volume: 第14卷-商业生态与企业案例
 - 史观：总纲第 16 条——经济周期：商业数据反映经济周期
 - 辨析：市场份额数据的方法论差异需评估
 - 文献：**IDC** 市场报告；**Gartner** 报告[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口
-- `openbsd.db` L3.2.1/L3.2.2 查询报告；**Apple**/**Sony**/**NetApp**/**Juniper**/**Netflix** 商业产品技术文档；**TrueNAS** 2025 迁移公告；**Sony** 2010 **OtherOS** 移除公告；项目史观总纲第 11 条（见原材料/哲学/项目统摄史观/第 25 章.md） ［A］
+- `openbsd.duckdb` L3.2.1/L3.2.2 查询报告；**Apple**/**Sony**/**NetApp**/**Juniper**/**Netflix** 商业产品技术文档；**TrueNAS** 2025 迁移公告；**Sony** 2010 **OtherOS** 移除公告；项目史观总纲第 11 条（见原材料/哲学/项目统摄史观/第 25 章.md） ［A］
 
 ## 281.41.2 利益分配法律化与 **BSDL**/`committer` 权限/企业赞助的形式主义（总纲第 13 条）
 
 - 要点：从项目史观总纲第 13 条 “法律与道德是利益分配” 切入，**FreeB
-- 项目史观总纲第 21 条（见 据原文第 25 章）；**BSD 2-Clause** 原文；**Linux** 内核 **COPYING** 文件（torvalds/linux 仓库）；**Committer's Big List of Rules**；**FreeBSD Committer's Guide**；**FreeBSD Foundation** **IRS** **990** 表；openbsd.db L3.2.1/L3.2.2 查询报告；**Berlin** I. "Two Concepts of Liberty"（1958）；**TrueNAS** 2025 迁移公告；上述 1
+- 项目史观总纲第 21 条（见 据原文第 25 章）；**BSD 2-Clause** 原文；**Linux** 内核 **COPYING** 文件（torvalds/linux 仓库）；**Committer's Big List of Rules**；**FreeBSD Committer's Guide**；**FreeBSD Foundation** **IRS** **990** 表；openbsd.duckdb L3.2.1/L3.2.2 查询报告；**Berlin** I. "Two Concepts of Liberty"（1958）；**TrueNAS** 2025 迁移公告；上述 1
 
 ## 自反性声明
 

@@ -1,0 +1,434 @@
+---
+chapter: 第 191 章
+id: CH191
+volume: 第10卷-openbsd的历史
+---
+
+# 第 191 章 OpenBSD 4.x 的安全工程与发布周期文化
+
+> 本子章由原第 86 章拆分而来，承载 191.1-191.6 节。
+
+## 本章节索引
+
+1. [191.1 openbsd4044的安全与工程改进2006200840引入malloc替代41改进pf语法42引入softraid加密雏形44完整启用softraid加密](191.1-openbsd4044的安全与工程改进2006200840引入malloc替代.md)
+2. [191.2 pf防火墙的持续演进20052012pf从40到52持续改进引入synproxystatetrackingaltq队列调度carp冗余协议等特性](191.2-pf防火墙的持续演进20052012pf从40到52持续改进引入.md)
+3. [191.3 openbsd与加密学的深度结合20052012openbsd将加密视为基本系统核心组件集成openssldiskencryptionnetworkencryption的全面支持](191.3-openbsd与加密学的深度结合20052012openbsd.md)
+4. [191.4 openbsd的6个月发布周期文化openbsd坚持6个月固定发布周期是bsd世界中最严格的发布节奏确保稳定性与可预测性](191.4-openbsd的6个月发布周期文化openbsd坚持6个月固定发布周期是bsd.md)
+5. [191.5 openbsdfoundation的正式成立20072007年openbsdfoundation在加拿大注册为非营利组织为项目提供资金与法律支持](191.5-openbsdfoundation的正式成立20072007年.md)
+6. [191.6 多元群体贡献openbsd4x时期的贡献者多样性核心团队基金会与全球志愿者](191.6-多元群体贡献openbsd4x时期的贡献者多样性核心团队基金会与全球志愿者.md)
+
+## 文献缺口提示
+
+> 本章在参考文献数据库中匹配文献数为 0（< 3），存在文献缺口。依据整书级跨卷主题清单（**d:\librebsd\script\_lit_supplement_logs\book_level_themes.md**）中与第 10 卷相关的增补建议，建议补充以下文献：
+
+1. Theo de Raadt（西奥·德·若特） 关于 privilege separation（privsep）的 mailing list 原文，对应 4.x 时期 privsep 在 OpenSSH、smtpd、ntpd 中的工程化推广（来源：整书级主题 2 安全哲学演化）。
+
+2. Daniel Hartmeier（丹尼尔·哈特迈尔） pf 防火墙原始设计文档与 4.0-4.4 版本 commit 历史，覆盖 synproxy、state tracking、ALTQ 队列调度演进（来源：整书级主题 5 网络栈演进）。
+
+3. OpenBSD Foundation 2007 年加拿大注册原始章程与首次公开募款邮件，对应 1.5 节 Foundation 成立叙事（来源：整书级主题 10 国际与地区社区）。
+
+> 注：上述建议基于整书级主题增补建议，具体文献须从 **d:\librebsd\04-现代研究文献\05-参考文献全文数据库\references_fulltext.db** 按 `reference_id` 提取并执行多源交叉验证；单一文献支撑的内容须标注“（单一文献支撑，需后续交叉验证）”。
+
+> 2026-08-04 卷级综述标记：详见 [vol-10.md](../../../04-现代研究文献/02-卷级文献综述/vol-10.md)
+>
+## 数据核验与统计（自动增补 · 0-信任）
+
+> **来源库**：资料数据库 · materials / material_cross_references；references_fulltext · chapter_matches / chapter_reviews；doubts_standalone · doubts_to_resolve
+> **方法**：基于全局章号 1–348 直接 SQL 聚合；未做外部事实验证；`ch=0`/未映射条目不计入本章。
+> **生成时间**：2026-08-04 ｜ **复现**：`script/_engine_integrity_analysis.py`
+
+| 指标 | 数值 |
+| --- | --- |
+| 锚定素材 | 0 篇（含存疑标记 0 篇） |
+| 存疑点 | 11 条 |
+| 参考文献匹配 | 2 条 |
+| 章节述评 | 未生成 |
+| 章内交叉引用 | 出 0 / 入 0 |
+
+**数据质量备注**：本章尚无锚定素材，属史料回填优先对象
+
+<!-- GITREPO_BLOCK v20260804 -->
+## Git 仓库数据分析（自动增补 · 0-信任）
+
+> **来源库**：`03-原始史料库/01-代码仓库史料/` 下对应项目的 git 仓库数据库（commits / contributors / tags / org_contributions / tech_features 等表）
+> **方法**：SQL 侧按 `author_date` 提取年度并聚合；年份过滤 1990–2026 以排除 Unix epoch（1970/2106 等）脏数据；未做外部事实验证。
+> **生成时间**：2026-08-04 ｜ **复现**：`script/_gitrepo_analysis_20260804.py`
+
+### OpenBSD（openbsd）
+
+| 指标 | 数值 |
+| --- | --- |
+| 提交总数 | 489,470 |
+| 有效年份内提交 | 489,470 |
+| 活跃年份跨度 | 1995–2026 |
+| 年度提交峰值 | 2015（22,014 次） |
+| 贡献者总数 | 1,031 |
+
+**核心贡献者（Top 8，按提交数，跨仓库同名合并）**：
+
+- ajacoutot：33,664 次（活跃 2006–2026）
+- deraadt：27,181 次（活跃 1995–2026）
+- sthen：26,772 次（活跃 2007–2026）
+- jasper：15,338 次（活跃 2006–2025）
+- espie：11,992 次（活跃 1998–2024）
+- miod：9,646 次（活跃 2000–2026（共 23 年））
+- jmc：9,154 次（活跃 2003–2025）
+- landry：8,760 次（活跃 2007–2026）
+
+**主要组织贡献（Top 6，按提交数）**：
+
+- Other/Unclassified：37 次（— 人）
+- ROSA Linux：8 次（— 人）
+- FreeBSD 项目：5 次（— 人）
+- Academic/Gov：5 次（— 人）
+- Internet Business Solutions Ltd., Switzerland：1 次（— 人）
+- SystemNet AS (<www.systemnet.no：1> 次（— 人）
+
+**技术特性演进（Top 6，按提交数）**：
+
+- TLS/加密（安全，1995–2026）
+- Clang/LLVM（工具链，2008–2026）
+- 许可/治理（治理，1995–2026）
+- TCP/IP（网络，1995–2026）
+- ARM（硬件支持，1996–2026）
+- 性能优化（性能，1995–2026）
+
+**年度提交趋势（全量）**：1995:770、1996:5,466、1997:7,748、1998:7,414、1999:10,362、2000:13,691、2001:18,985、2002:16,379、2003:15,549、2004:16,884、2005:17,716、2006:17,977、2007:16,998、2008:14,395、2009:16,484、2010:16,628、2011:15,409、2012:14,166、2013:16,823、2014:20,651、2015:22,014、2016:19,333、2017:19,042、2018:16,734、2019:17,951、2020:17,807、2021:17,315、2022:16,676、2023:18,404、2024:16,988、2025:16,333、2026:10,378
+
+> **规律提示**：OpenBSD 在 2015 年达到提交峰值（22,014 次），活跃跨度 1995–2026；贡献者 1,031 人。
+
+---
+
+<!-- GITREPO_FINE_BLOCK v20260804 -->
+
+## Git 仓库细粒度技术分析（OpenBSD · 自动增补 · 0-信任）
+<!-- FINE_openbsd v20260804 -->
+
+> 来源：`03-原始史料库/01-代码仓库史料/04-OpenBSD/db/openbsd.db` 的 `tech_features` 表（提交级特性标记）。方法：按特性聚合 `commits` 与首/末年；未做外部事实验证。
+
+| 技术特性 | 类别 | 提交标记 | 活跃跨度 |
+| --- | --- | ---: | --- |
+| TLS/加密 | 安全 | 9,405 | 1995–2026 |
+| Clang/LLVM | 工具链 | 3,829 | 2008–2026 |
+| 许可/治理 | 治理 | 3,786 | 1995–2026 |
+| TCP/IP | 网络 | 2,364 | 1995–2026 |
+| ARM | 硬件支持 | 2,304 | 1996–2026 |
+| 性能优化 | 性能 | 2,143 | 1995–2026 |
+| GPU/DRM | 硬件支持 | 1,909 | 1997–2026 |
+| OpenSSH | 安全 | 1,542 | 1997–2026 |
+| USB | 硬件支持 | 1,540 | 1999–2026 |
+| 无线 | 网络 | 1,295 | 1996–2026 |
+| IPsec | 安全/网络 | 963 | 1997–2026 |
+| pf防火墙 | 网络 | 949 | 2001–2026 |
+| 内存管理 | 内存管理 | 761 | 1995–2026 |
+| UFS/FFS | 存储 | 752 | 1995–2026 |
+| SMP/多核 | 进程/并行 | 599 | 1995–2026 |
+| pledge/unveil | 安全 | 541 | 2015–2026 |
+| RISC-V | 硬件支持 | 481 | 2018–2026 |
+| 调度器 | 进程/并行 | 355 | 1996–2026 |
+| kqueue | 可观测性 | 354 | 1999–2026 |
+| pkg/ports | 工具链 | 351 | 1997–2026 |
+| 虚拟化 | 虚拟化 | 324 | 2006–2026 |
+| 容器化 | 容器隔离 | 136 | 2007–2026 |
+| Rust | 工具链 | 109 | 2016–2026 |
+| ASLR | 安全 | 58 | 2000–2025 |
+| Jails | 容器隔离 | 53 | 1996–2026 |
+| AI/ML | 前沿 | 22 | 2001–2026 |
+| NUMA | 硬件支持 | 19 | 2000–2024 |
+| bhyve | 虚拟化 | 11 | 2012–2021 |
+| KVM | 虚拟化 | 6 | 2001–2025 |
+| Capsicum | 安全 | 5 | 2015–2020 |
+| IPFW | 网络 | 4 | 2000–2018 |
+| GEOM | 存储 | 2 | 1997–2015 |
+| eBPF | 可观测性 | 2 | 2014–2015 |
+| HAMMER | 存储 | 1 | 2012–2012 |
+| ZFS | 存储 | 0 | — |
+| DTrace | 可观测性 | 0 | — |
+| DPDK | 网络 | 0 | — |
+
+- **TLS/加密**（安全，1995–2026）：传输加密：OpenSSL→LibreSSL（OpenBSD 2014 分叉）
+- **Clang/LLVM**（工具链，2008–2026）：C 编译器栈：FreeBSD 2012 用 Clang 取代 GCC（许可证原因）
+- **许可/治理**（治理，1995–2026）：许可证与治理：BSD 许可宽松，Linux GPL；基金会治理（FreeBSD/NetBSD/OpenBSD 基金会）
+- **TCP/IP**（网络，1995–2026）：TCP 拥塞控制演进：Reno→NewReno→CUBIC，BSD 与 Linux 并行
+- **ARM**（硬件支持，1996–2026）：ARM64 支持：Linux 2012 官方；FreeBSD 2016 起
+- **性能优化**（性能，1995–2026）：持续性能工程：内核网络/存储/调度微优化
+- **GPU/DRM**（硬件支持，1997–2026）：显卡驱动：Linux DRM 2010s 成熟，FreeBSD 借 LinuxKPI 移植 DRM
+- **OpenSSH**（安全，1997–2026）：安全远程登录套件（OpenBSD 1999 开发）
+- **USB**（硬件支持，1999–2026）：USB 栈：FreeBSD usb4bsd 重写，Linux 成熟
+- **无线**（网络，1996–2026）：802.11 无线栈：FreeBSD 用 net80211，Linux 用 mac80211/cfg80211
+- **IPsec**（安全/网络，1997–2026）：IP 安全协议（RFC 2401），内核加密隧道
+- **pf防火墙**（网络，2001–2026）：OpenBSD 包过滤防火墙（2001），OpenBSD 安全旗舰
+- **内存管理**（内存管理，1995–2026）：虚拟内存、slab 分配、大页/HugeTLB 透明大页
+- **UFS/FFS**（存储，1995–2026）：伯克利快速文件系统（1984），soft updates（1998）
+- **SMP/多核**（进程/并行，1995–2026）：对称多处理与内核并行化（自旋锁→睡眠锁→无锁结构）
+- **pledge/unveil**（安全，2015–2026）：OpenBSD 进程权限承诺（2015/2018），更小的攻击面
+- **RISC-V**（硬件支持，2018–2026）：开放指令集：Linux 2017；BSD 陆续支持
+- **调度器**（进程/并行，1996–2026）：任务调度策略：FreeBSD ULE、Linux CFS/EEVDF、NetBSD sched_4BSD
+
+---
+
+<!-- DB_POINTS:doubts_resolved -->
+**数据库要点引用（doubts_standalone.db · 2026-08-13）**
+
+> 来源：`04-现代研究文献/06-存疑数据库/doubts_standalone.db` 表 `doubts_to_resolve`（1987 条，1966 已解决）。本章存疑 11 条已解决。类别分布：other(5)、date(2)、fact(2)、source_conflict(1)、version(1)
+
+> 存疑管理体系：98.9% 已闭环，解决结论含 date/fact/source_conflict/name/version 等类型，具体结论见 doubts_standalone.db 表 `resolution_summary` 字段。
+<!-- /DB_POINTS:doubts_resolved -->
+
+<!-- DB_POINTS:chapter_reviews -->
+**数据库要点引用（references_fulltext.db · chapter_reviews · 2026-08-13）**
+
+> 来源：`04-现代研究文献/05-参考文献全文数据库/references_fulltext.db` 表 `chapter_reviews`（348 章全覆盖）。本章级文献综述 1501 字、匹配 3 篇文献，状态 imported。映射：旧章号 +1 → 磁盘章号。
+
+> **综述要点**：本章围绕“OpenBSD 4.x 的安全工程与发布周期文化”展开，覆盖 190.1 openbsd4044的安全与工程改进2006200840…；190.2 pf防火墙的持续演进20052012pf从40到52持续改…；190.3 openbsd与加密学的深度结合20052012openb…；190.4 openbsd的6个月发布周期文化openbsd坚持6个月…；190.5 openbsdfoundation的正式成立2007200…
+
+<!-- /DB_POINTS:chapter_reviews -->
+
+<!-- COL_SCAN v20260826 -->
+## 内容包复核增补（Phase 4 · 2026-08-26 · fix1 统一口径）
+
+> 基于 5 个核心数据库（doubts_standalone、historical_claims、original_sources、资料数据库、references_fulltext）内容包自动匹配与审核（fix1 统一口径重新提取，解除 500MB 库大小限制）。
+> 内容包总行数：136 | 去重主张数：15 | 复核方法：12 步流程（详见 vol01_phase4_summary.md）
+
+### 证据等级分布
+
+| 等级 | 说明 | 数量 | 占比 |
+| --- | --- | --- | --- |
+| L1 | 代码与构建产物 | 0 | 0.0% |
+| L2 | 即时通讯记录 | 0 | 0.0% |
+| L3 | 官方文档与公告 | 0 | 0.0% |
+| L4 | 事后叙述 | 0 | 0.0% |
+| L5 | 二手研究 | 136 | 100.0% |
+
+### 来源数据库分布
+
+| 来源 | 行数 |
+| --- | --- |
+| references_fulltext | 136 |
+
+### 新增证据点
+
+1. [L5] `references_fulltext.reference_duplicates` — 自动检测到exact重复: title=Malloc3_revisited, author=Kamp, year=1998
+2. [L5] `references_fulltext.reference_duplicates` — 自动检测到exact重复: title=Jails, author=KampWatson, year=2000
+3. [L5] `references_fulltext.reference_duplicates` — 自动检测到exact重复: title=GEOM_Modular_Disk_Framework, author=Kamp, year=2002
+4. [L5] `references_fulltext.reference_duplicates` — 自动检测到exact重复: title=GBDE, author=Kamp, year=2003
+5. [L5] `references_fulltext.reference_duplicates` — 自动检测到exact重复: title=GEOM_tutorial, author=Kamp, year=2003
+6. [L5] `references_fulltext.reference_duplicates` — 自动检测到exact重复: title=packages, author=Espie, year=2015
+7. [L5] `references_fulltext.reference_duplicates` — 自动检测到exact重复: title=privsep_dpb, author=Espie, year=2016
+8. [L5] `references_fulltext.reference_duplicates` — 自动检测到exact重复: title=pkgtools, author=Espie, year=2017
+9. [L5] `references_fulltext.reference_duplicates` — 自动检测到exact重复: title=https, author=Espie, year=2018
+10. [L5] `references_fulltext.reference_duplicates` — 自动检测到exact重复: title=plist, author=Espie, year=2019
+11. [L5] `references_fulltext.reference_duplicates` — 自动检测到exact重复: title=debug, author=Espie, year=2021
+12. [L5] `references_fulltext.reference_duplicates` — 自动检测到exact重复: title=arches, author=Espie, year=2022
+
+### 0 信任评估
+
+- 独立来源数：1 个数据库
+- 一级史料通过率：0.0%（L1+L2+L3 / 总行数）
+- 本章内容包无 L3/L4 级史料，所有条目均为 L5 二手研究，不可独立支撑事实性陈述
+- 所有主张均来自内容包自动匹配，未经人工逐一核实
+- 单一来源支撑的主张须标注 (单一文献支撑，待交叉验证)
+
+### 交叉验证提示
+
+- 本章 L5 级二手研究数量较大（136 条），需注意区分学术文献与通俗技术博客，仅学术文献可作参考
+
+<!-- /COL_SCAN -->
+
+
+<!-- DEEP_ANALYSIS: openbsd.duckdb.commits -->
+**数据库分析发现**（证据等级：L1，来源：`openbsd.duckdb.commits.openbsd`）
+
+openbsd 核心贡献者：ajacoutot(35528), deraadt(31454), sthen(30592), espie(18328), jasper(16649)
+
+
+
+<!-- DEEP_ANALYSIS: sacred_sources.duckdb.blocks -->
+**史家判断**（证据等级：L2，来源：`sacred_sources.duckdb.blocks.188`）
+
+以食品安全为例：人们永远无法得到真正的认识。你既不能说科学证明其在某量无毒害就真的无毒害，也不能证明它真的有毒害。用科学说服人本身就不科学——因为科学本身就是非充分决定性的，本身的正确性是得不到保证的。且你能得到的所有科学解释，正因为它是科学解释，所以它必定也是错误的。这并非反智，而是对科学边界的清醒认识。好坏是对于人来说的，所谓“剂量决定论”也是无意义的——零剂量不是更安全吗？
+
+
+
+<!-- DEEP_ANALYSIS: sacred_sources.duckdb.blocks -->
+**史家判断**（证据等级：L2，来源：`sacred_sources.duckdb.blocks.283`）
+
+王充因为个人境遇而提出了德福不一致论，其否定了个人努力的作用。可以看到人生的遭遇会对其理论有决定性的作用，有时是偏差，有时是谬误，但根本上说是一种悲伤。这揭示了理论建构的偶然性：任何理论都深深打上 theorist 个人经历的烙印。不存在客观的、超越个人境遇的理论。历史哲学的建构者同样如此——本书的理论亦不例外，它诞生于特定的境遇、特定的悲伤、特定的选择。
+
+
+
+<!-- DEEP_ANALYSIS: cross_indexes.duckdb.concept_history -->
+**史家判断**（证据等级：L2，来源：`cross_indexes.duckdb.concept_history.13`）
+
+出口管制：出口管制概念的演化: ①冷战成型期（1949–1951）：COCOM 建立，协调对苏联、东欧、中国的禁运货单；1951 年美国《相互防御援助管制法》（Battle Act）以停止援助迫使盟国参与（1980 年废止）；②缓和调整期（60–80 年代）：因缓和与贸易增长，管制多次放宽；③转型重组期（1993–1996）：1994 年 3 月 31 日 COCOM 解散；1995 年 12 月 19 日成立“瓦森纳协定”（Wassenaar Arrangement），1996 年 11 月 1 日起运作；④数字与加密期：加密早在冷战期被列为军品（由国务院依 AECA 管，即 ITAR），1996 年底部分非军用加密移至商
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-1-011`）
+
+Thompson 在 1984 年图灵奖演讲中称，特洛伊木马攻击的构想最早见于一份对 Multics 早期实现安全性的空军批判报告。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-3-004`）
+
+Theodore Roszak 1969 年出版《The Making of a Counter Culture》，副标题为“对技术官僚社会及其青年反抗的反思”。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-4-010`）
+
+Anonymous CVS 源码分发机制由 Charles D. Cranor 与 Theo de Raadt 创建，用于开放 OpenBSD 源码仓库。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-4-011`）
+
+创建 Anonymous CVS 的目标之一是开放 OpenBSD 的 CVS 源码仓库访问，使项目更开放并鼓励开发者兴趣。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-4-100`）
+
+1995 年秋启动 OpenBSD 项目时，Cranor 与 de Raadt 决定用 CVS 管理源代码树，并创建匿名 CVS 以开放源码仓库。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-5-111`）
+
+Anonymous CVS 由 Charles D. Cranor 与 Theo de Raadt 在 1995 年秋创建 OpenBSD 时设计，使匿名互联网用户无需写权限账户即可访问源码库。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-5-112`）
+
+Anonymous CVS 是一种让匿名互联网用户在不危及安全的前提下访问源码库的机制，将开放源码推进为开放源码库。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-6-017`）
+
+Harris、Jha、Reps 等人提出声明式、时序化且实用的 capability 编程方法，用于在 Capsicum 上满足安全策略。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-6-108`）
+
+OpenBSD 自 2005 年起对 SCSI 中间层（SCSI midlayer）实施重大重构，引入 mpath(4) 多路径虚拟总线与 iopools 资源池、将适配器命令处理器改为回调式 scsi_done API，以改善稳定性、性能与可扩展性。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L2，来源：`historical_claims.duckdb.claim.CL-7-046`）
+
+参考文献全文数据库收录《20260805 Glass deRaadt expulsion email 19941223 en》（unknown，2026），作为本章主题的候选史料。
+
+
+
+## 邮件列表定性分析（2026-08-28 实施）
+
+> 基于 6 个邮件数据库的定性阅读与人物分析，提取与本章主题相关的核心史实与讨论。
+
+**主题标签**：人物关系、版本发布、社区治理
+
+**涉及社区**：FreeBSD
+
+**分析数据量**：3 条定性分析记录（共约 0 封邮件）
+
+**代表性讨论**：
+- Re: Experimental musl Port for FreeBSD` (7 次)
+- `Re: Tragic State of FreeBSD Audio/Sound` (7 次)
+- `Re: video(4) landed. "No webcam driver" is dead.` (6 次)
+- `Re: RFC: Minimal Intel ME Diagnostic Drive...
+- `Re: JailStation: FreeBSD for game consoles` (13 次)
+- `Re: video(4) landed. "No webcam driver" is dead.` (10 次)
+- `Re: 5 gigs of contiguos kernel VM shared with userspace` (4 次)
+- `Re: st
+- `Re: Experimental musl Port for FreeBSD` (7 次)
+- `Re: Tragic State of FreeBSD Audio/Sound` (7 次)
+- `Re: video(4) landed. "No webcam driver" is dead.` (6 次)
+- `Re: RFC: Minimal Intel ME Di
+
+<!-- /MAIL_INSIGHT -->
+
+## 文献
+
+- Ingo Schwarze. bsdcan15-mandoc[M]. 2015.
+- Ingo Schwarze. bsdcan18-mandoc[M]. 2018.
+- Paul Irofti. bsdcan2014-octeon dsr500[M]. 2014.
+- bsdcan2015-rdomains[M].
+- bsdcan2016-bfd[M].
+- bsdcan2016-xen[M].
+- bsdcan2019-syspatch[M].
+- bsdcan2019-tls13[M].
+- bsdcan2025-hshoexer-confidential-computing[M].
+- andrew, afresh1. 2024-Why-Rewrite-fw update-Euro BSDcon[M]. 2024.
+- eurobsdcon2008-sensors[M].
+- eurobsdcon2011-kettenis[M].
+- eurobsdcon2011-openbsdscsievolution[M].
+- eurobsdcon2014-mandoc-paper[M].
+- eurobsdcon2014-mandoc-slides[M].
+- eurobsdcon2014-parallel-make[M].
+- eurobsdcon2015-packages[M].
+- eurobsdcon2015-softraid-boot[M].
+- eurobsdcon2016-openbsd-11n[M].
+- eurobsdcon2016-privsep[M].
+- eurobsdcon2017-device-drivers[M].
+- eurobsdcon2017-opensmtpd[M].
+- eurobsdcon2018-mandoc[M].
+- eurobsdcon2018-rop[M].
+- eurobsdcon2019-plist[M].
+- eurobsdcon2022-krw-blockstobooting[M].
+- eurobsdcon2023-bluhm-mitigations[M].
+- eurobsdcon2023-espie-cache[M].
+- eurobsdcon2024-bluhm-packetflow[M].
+- eurobsdcon2025-bluhm-protomp[M].
+- eurobsdcon2025-florian-easy[M].
+- Marc Espie. eurobsdcon 2018 https[M]. 2018.
+- Claudio Jeker. asiabsdcon08-network[M]. 2008.
+- Murenin C A, Boutaba R. OpenBSD Hardware Sensors Framework[C]//AsiaBSDCon 2009 Proceedings. Tokyo, 2009.
+- Murenin C A. OpenBSD Hardware Sensors Framework（幻灯片）[EB/OL]. AsiaBSDCon 2009. <https://www.openbsd.org/papers/asiabsdcon2009-sensors-slides.pdf>.
+- syuu. asiabsdcon2010 smp for sgi paper[C]. 2010.
+- Alexandre Ratchov. asiabsdcon2010 sndio slides[C]. 2010.
+- asiabsdcon2016-vmm-slides[M].
+- asiabsdcon2019-rop-slides[M].
+- Dave Voutila. asiabsdcon2023-hardening vmd devices-slides[M]. 2023.
+- andrew, afresh1. 2024-Why-Rewrite-fw update-Fossy[M]. 2024.
+- chuck, deraadt. anoncvs-paper[M]. [存疑]
+- Niels Provos. crypt-slides[M]. 2002.
+- eurobsd-firewalls-2002[M]. 2002.
+- eurobsd2017-pkgtools[M].
+- Brian Bamsch. Porting Open BSD to RISCV Final Report[M]. 2020.
+- Paul Irofti. eurobsdcon2014-octeon dsr500[M]. 2014.
+- eurobsdcon2014-rdomains[M].
+- eurobsdcon2015-mandoc[M].
+- eurobsdcon2016-embracingbsdrt[M].
+- eurobsdcon2016-utf8[M].
+- eurobsdcon2017-schedisnot[M].
+- eurobsdcon2017-syslog-slides[M].
+- Software Freedom Conservancy. Form-990 fy-2022-23[M]. 2022.
+- eurobsdcon2019-gameoftrees[M].
+- eurobsdcon2019-perform-slides[M].
+- eurobsdcon2022-bluhm-networkmp[M].
+- eurobsdcon2022-espie-arches[M].
+- eurobsdcon2022-tb-libressl[M].
+- Marc Espie. lse clang[M]. 2017.
+- eurobsdcon2023-matthieu-pf-rdomain[M].
+- eurobsdcon2023-otto-malloc[M].
+- Dave Voutila. eurobsdcon2024-vmd multiprocessing[M]. 2024.
+- 未知. openbsd Open BSD-jitsi[M]. 2022.
+- Giovanni Bechis 12 ` ~~~ alse. openbsd seccomp-pledge-oss2017[M]. 2017.
+- eurobsdcon2025-hshoexer-confidential-computing[M].
+- eurobsdcon2021-espie-debug[M].
+- eurobsdcon2024-hshoexer-confidential-computing[M].
+- eurobsdcon2025-espie-dpb[M].
+

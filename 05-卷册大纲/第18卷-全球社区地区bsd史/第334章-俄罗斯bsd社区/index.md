@@ -87,7 +87,7 @@ volume: 第18卷-全球社区地区bsd史
 - 史料：俄语技术社区档案、freebsd-russian 邮件列表、参与者口述访谈 ［A］
 - 史观：总纲第 10 条——边缘者的贡献被中心叙事遮蔽，俄语技术文化特征须结合地域文化语境
 - 辨析：文化特征的描述须避免刻板印象；“封闭性” 与 “高技术水平”
-- FreeBSD committers 列表；FreeBSD SVN/Git 仓库提交日志；FreeBSD Core Team 年度报告 ［A］；openbsd.db 查询 L3.3.1（committer_date 时区偏移分布前 30，22 仓库合计，30 行结果）、L3.3.2（author_email 域名 TLD 分布，22 仓库合计，16 行结果），见 `原材料/研究/bsd仓库分析/数据分析/深层信息挖掘.md` §L3.3.1、§L3.3.2
+- FreeBSD committers 列表；FreeBSD SVN/Git 仓库提交日志；FreeBSD Core Team 年度报告 ［A］；openbsd.duckdb 查询 L3.3.1（committer_date 时区偏移分布前 30，22 仓库合计，30 行结果）、L3.3.2（author_email 域名 TLD 分布，22 仓库合计，16 行结果），见 `原材料/研究/bsd仓库分析/数据分析/深层信息挖掘.md` §L3.3.1、§L3.3.2
 
 ## 333.3.2 提交者权限的演变过程
 

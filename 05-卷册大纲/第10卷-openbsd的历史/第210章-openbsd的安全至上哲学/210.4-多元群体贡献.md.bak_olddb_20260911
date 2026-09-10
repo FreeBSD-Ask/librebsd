@@ -1,0 +1,65 @@
+# 210.4 多元群体贡献
+
+**要点**：OpenBSD 生态多元群体贡献包括 de Raadt 本人（南非裔加拿大人，1968 年生于比勒陀利亚，1977 年随家移居加拿大）、Niels Provos（尼尔斯·普罗沃斯）（德国，OpenSSH 主导开发者，bsd_commits.db openbsd-src 仓库 provos 贡献者记录）、Jun-ichiro itojun Hagino（日本，IPv6 贡献者，2007-10-29 逝世，openbsd.db openbsd-src 仓库最后 commit 为 2007-08-03 commit `44be632afd37` "curly brace issues..."）、Damien Miller（澳大利亚，OpenSSH portable 维护者）、Bob Beck（加拿大，LibreSSL；bsd_commits.db openbsd-src 仓库 beck commit 8b23add8c74b 2018-07-13 引入 unveil）；OpenBSD 社区具有显著的跨国特征，贡献者来自北美、欧洲、亚洲、大洋洲
+
+**史料**：OpenBSD CVS/Git commit log 中贡献者地理分布（<https://cvsweb.openbsd.org/>、<https://github.com/openbsd）；OpenBSD> 邮件列表中贡献者互动记录（<https://marc.info/?laccopenbsd-misc>）；bsd_commits.db openbsd-src 仓库 contributors 表中的 provos、itojun、djm、beck 等贡献者活动时间；**【2026-07-30 itojun 逝世一手纪念页面考据·7au 条目】**undeadly.org 2007-10-30 纪念文章（**<https://undeadly.org/cgi?action=article&sid=20071030220114>**）原文载 "Jun-ichiro ‘itojun’ Itoh Hagino passed away on October 29, 2007 at the age of 37"，并载葬仪时间地点（2007-11-06 守夜、2007-11-07 葬礼，东京临海斎場）；itojun 个人站点 **<http://www.itojun.org/>**；BSDTalk 115 采访（**<http://bsdtalk.blogspot.com/2007/06/bsdtalk115-jun-ichiro-itojun-itoh.html>**）；bsd_commits.db openbsd-src 仓库 itojun 最后 commit 为 2007-08-03 commit `44be632afd37` "curly brace issues..."（逝世前约 3 个月）
+
+**史观**：总纲第 10 条——边缘者贡献：OpenBSD 作为边缘项目的多元群体贡献——多位核心开发者来自非美国地区，与 Linux 内核早期以美国/欧洲为中心的贡献者分布有显著差异；总纲第 8 条——社区文化即技术资产：跨国贡献者群体使 OpenBSD 文化不限于北美工程传统，融入日本工程美学（itojun 的 IPv6 实现）、德国密码学严谨（Provos 的 OpenSSH 加密设计）等多元文化元素
+
+**辨析**：多元群体贡献的发掘基于 commit log 与邮件列表记录——de Raadt 1968 年生于南非比勒陀利亚，1977 年随家移居加拿大，其反战立场（2003-04 伊拉克战争公开言论导致 DARPA 撤销 OpenBSD 项目约 230 万 USD 资助）对项目资金结构产生长期影响；DARPA 撤资的具体时间点是 2003-04-21 前后（DARPA 项目经理 Jan Cargnelli 通知 University of Calgary 的 POSSE 计划负责人），具体金额 230 万 USD 涵盖原定的 2003-2008 年 5 年资助；de Raadt 本人在 misc@ 邮件列表 2003-04 的相关发言须逐份核对
+
+**文献**：OpenBSD CVS 仓库 [EB/OL]. <https://cvsweb.openbsd.org/>；DARPA 资助撤销事件 misc@ 邮件列表讨论 2003 [EB/OL]. <https://marc.info/?laccopenbsd-misc>；de Raadt 公开采访 [EB/OL]. <https://undeadly.org/>；OpenBSD GitHub 镜像 [EB/OL]. <https://github.com/openbsd> ［A］
+
+**OpenBSD 核心贡献者地理分布**：
+
+| 贡献者 | 国籍/地区 | 主要贡献 | bsd_commits.db 记录 |
+| --- | --- | --- | --- |
+| de Raadt | 南非裔加拿大人（1968 生于比勒陀利亚） | 项目主导 | 27181 commits（1995-10-18 起） |
+| Niels Provos | 德国 | OpenSSH 主导 | openbsd-src provos 贡献者记录 |
+| Jun-ichiro itojun Hagino | 日本 | IPv6 贡献 | contributors 表 itojun；最后 commit 2007-08-03（`44be632afd37`），2007-10-29 逝世 |
+| Damien Miller | 澳大利亚 | OpenSSH portable 维护 | contributors 表 djm |
+| Bob Beck | 加拿大 | LibreSSL、unveil | commit `8b23add8c74b`（2018-07-13） |
+
+<!-- DB_REF:openbsd.duckdb -->
+> **数据库引用（openbsd.duckdb）**：本子节对应 openbsd 代码仓库。
+> 1995-2026 年间：491,195 次提交。
+> 仓库总览：491,195 次提交，3,352 位贡献者，1995-10-18 至 2026-08-25。
+
+<!-- DEEP_ANALYSIS: openbsd.duckdb.commits -->
+**数据库分析发现**（证据等级：L1，来源：`openbsd.duckdb.commits.openbsd`）
+
+openbsd 核心贡献者：ajacoutot(35528), deraadt(31454), sthen(30592), espie(18328), jasper(16649)
+
+<!-- PODCAST_REVIEW v20260829 -->
+<!-- 语义复核范围：BSDTalk EP180（共 1 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
+
+**要点**：
+
+- Girish Venkatachalam 的路径：1999 年在班加罗尔 Novell 的第一份工作时安装 FreeBSD（所识第一个 BSD），此后在多种 Unix 间往复，约五六年前涉足 OpenBSD、四年前起坚定专守；2000 年前后对密码学的偏好与第四份工作（2002 至 2003 年间）被派往公司路由器的 Nucleus 实时操作系统实现 IPsec，构成其转向的技术契机。（BSDTalk EP180，[83.5-103.9]，L1）
+- IPsec 代码考察的排序叙事：先读 Linux 内核的 IPsec 实现两三周而无进展、沮丧放弃；再看 FreeBSD 的 KAME 项目，对其 IPv6 与整体不满；最后看 OpenBSD，第一眼即折服于缩进风格、编程的严肃性、代码简洁与可循 RFC 标准阅读的品质，自述如一见钟情；遂决定把 OpenBSD 的 IPsec 实现移植到 Nucleus OS——BSD 许可证助益很大，但代码质量重于许可证。（BSDTalk EP180，[196.3-309.2]，L1）
+- 首次贡献经历：2003 年修复 IPsec 内存泄漏的约三行补丁，因不知邮件列表存在而直接寄给 OpenBSD IPsec 实现作者 Angelos Keromytis，次晨发现补丁在下一分钟已被提交；其后在家联网时的 PPPoE 补丁亦于次日提交；社区对无名贡献者的接纳与尊重成为其情感归属的开端。　[存疑脚注] PPPoE 代码作者姓名转写无法可靠复原。（BSDTalk EP180，[347.4-422.0]，L1）
+- 选择并留在 OpenBSD 的论据：在低端与旧机器上 Linux 中以 Debian 的硬件资源利用最佳、次为 FreeBSD，嵌入式或低端 PC 则首推 OpenBSD；极简主义与不向用户多问的取向、安装与包安装的简易；IPsec 工作使其完整理解 OpenBSD 内核与网络子系统，对比 FreeBSD 与 Linux 内核后确信代码质量、纪律与最小必需物取向是其长久根基；美与优雅遍布内核、用户态与 ports，言论自由与诚实的开发者文化带来内心的安宁。（BSDTalk EP180，[434.2-714.4]，L1）
+- 商业化路径：以 OpenBSD 为唯一商业平台，理由即内核代码的技术质量本身；自任底层 C 程序员只做硬核产品（路由器、防火墙、垃圾控制），不拿定义不清之物赌市场名声；对客户直言别家商业产品基于 Linux 而其产品基于 OpenBSD，视之为天然优势。（BSDTalk EP180，[721.2-801.6]，L1）
+- SpamCheetah 器件：在 OpenBSD spamd 之上加 web 界面的垃圾邮件过滤器，印度售硬件盒装、全球售 live CD，恪守只做一件事并做好的精神——仅做垃圾过滤、不干预用户邮件服务器选择；内容扫描方案须使过滤器成为邮件服务器的一部分，而 spamd 在网络层拦截。（BSDTalk EP180，[806.3-907.9]，L1）
+- spamd 的技术论：OpenBSD spamd 及关联代码由 Bob Beck 开发，在网络层就地拦截垃圾邮件，与 SpamAssassin 等内容扫描路径——垃圾先进网、耗尽带宽与存储再事后反应——根本不同；邮件以线速流入且无假阳性之虞；他从不声称产品为自己所开发，只求推广 OpenBSD 之名，并已向 Google、Yahoo 等推介，产品在其两个客户现场运行良好。（BSDTalk EP180，[841.2-986.3]，L1）
+- 印度市场与认知生态：客户不在乎底层（南印度最大珠宝展厅只求能用且指定 Linux 方案），价格敏感市场中开源的成本优势是关键；多数人知道 Linux 甚至不知 OpenBSD 存在，BSD 各分支常被混为一谈——他几周前向朋友明确澄清自己与 FreeBSD 无关；开源概念广为人知、贡献意愿真实（友人立志月底提交补丁）但受制于日常工作无暇；其 PPTP 工作因想做时无人评审、有评审时无时间的时间错位至今未进入基本系统。（BSDTalk EP180，[986.6-1204.5]，L1）
+- 自由分享与商业的调和：所有产品将开源，器件模式本身即为自由分享知识与代码的精神服务；赚钱与慈善并行，若只为赚钱 OpenBSD 或非最佳选择；他惊讶于商业厂商仍不认真对待一个主动鼓励公司取用源码获益的社区；Live USB 为周末级项目、无财务动机，旨在让更多人熟悉 OpenBSD；并寄望印度涌现大量开源开发者、未来能在印度举办会议。（BSDTalk EP180，[1256.9-1341.0]，L1）
+
+**史料**：
+
+- 该期提及的一手线索包括：OpenBSD IPsec 实现（作者 Angelos Keromytis）与 2003 年内存泄漏补丁的提交记录；PPPoE 补丁；Bob Beck 的 spamd 及关联代码；www.spam-cheetah.com 器件产品与 live CD 版本；OpenBSD live USB 发行；其在 BSD Magazine 发表的 OpenBSD 垃圾控制特性文章；本地 BSD 与 Linux 用户组活动记录。（BSDTalk EP180，[363.6-371.2]，L1）
+
+**史观**：
+
+- 总纲9 经验优先：其全部论据皆出自亲手经历：逐个读码比较 IPsec 实现、低端机器上的资源利用观察、两个客户现场的 spamd 运行反馈——技术判断始终以第一手操作与阅读经验为准，而非阵营话语。（BSDTalk EP180，[626.9-657.7]，L1）
+- 总纲10 动手者创造历史：其叙事中心始终是补丁、器件与客户现场——三行内存泄漏补丁与两个客户点的运行即构成其全部权威来源；他刻意把功劳归于 Bob Beck 与 OpenBSD 并自定位为推广者，凸显动手劳作而非头衔在社区声望体系中的位置。（BSDTalk EP180，[982.4-986.3]，L1）
+
+**辨析**：
+
+- 转写讹误较多：受访者姓名转写作 Gharish V（应为 Girish Venkatachalam），Novel 应为 Novell，Zen Guest 应为 Xen Guest，KM project 应为 KAME project，Angelos Curomatis 应为 Angelos Keromytis，OpenBSG、Open VSD、OpenBusy 均应为 OpenBSD，IPSX 应为 IPsec，spam daman 应为 spamd；curve-based load balancing 与 core operators 疑为 CARP 相关表述之讹；PPTP 补丁未入基本系统的原因仅凭口述，未经邮件列表记录核证。　[存疑脚注] 上述复原与 PPTP 去向均未经原始音频或邮件存档比对确认。（BSDTalk EP180，[59.3-63.9]，L4）
+
+**文献**：
+
+- [BSDTalk EP180] Backman W. BSDTalk: 180: bsdtalk180 - OpenBSD Enthusiast Girish Venkatachalam[EB/OL]. (2009-11-30)[2026-08-27]. <https://bsdtalk.blogspot.com/2009/11/bsdtalk180-openbsd-enthusiast-girish.html>.
+
+<!-- /PODCAST_REVIEW -->

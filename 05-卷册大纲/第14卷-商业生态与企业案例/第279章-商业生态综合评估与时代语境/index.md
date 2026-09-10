@@ -112,7 +112,7 @@ volume: 第14卷-商业生态与企业案例
 ## 279.38.2 企业搭便车的批评：商业巨头从 BSD 社区免费获取劳动力
 
 - 要点：批评者指出，**Apple**、**Sony**、**NetApp**、**Juniper** 等商业巨头从 **BSD** 社区免费获取了大量高质量的代码与劳动力，相当于社区开发者在为这些盈利公司 “免费打工”；这种
-- FreeBSD Foundation 年报；各公司财报；Linux Foundation 年报；开源经济学研究文献；企业受雇 FreeBSD 开发者比例统计 ［B］；openbsd.db L3.2.1 查询报告（深层信息挖掘.md §L3.2.1）；openbsd.db L3.2.2 查询报告（深层信息挖掘.md §L3.2.2）
+- FreeBSD Foundation 年报；各公司财报；Linux Foundation 年报；开源经济学研究文献；企业受雇 FreeBSD 开发者比例统计 ［B］；openbsd.duckdb L3.2.1 查询报告（深层信息挖掘.md §L3.2.1）；openbsd.duckdb L3.2.2 查询报告（深层信息挖掘.md §L3.2.2）
 
 ## 279.38.3 社区可持续性危机的批评：志愿者模式难以支撑复杂操作系统
 

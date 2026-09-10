@@ -75,7 +75,7 @@ volume: 第18卷-全球社区地区bsd史
 - 史料：EAR 修订历史、OFAC 制裁名单变化、社区邮件列表、法律评论文章 ［A］
 - 史观：总纲第 6 条——技术路线的分化与并行演化，BSD 可用性质疑的演变反映法律框架的渐进明确
 - 辨析：“质疑增加”与“质疑缓解”的判断须量化——社
-- Israel FreeBSD User Group 邮件列表存档；Check Point 企业档案；伊朗地下镜像维护者访谈记录 ［A］；openbsd.db 查询 L3.3.2（author_email 域名 TLD 分布，22 仓库合计，16 行结果），见 `原材料/研究/bsd仓库分析/数据分析/深层信息挖掘.md` §L3.3.2
+- Israel FreeBSD User Group 邮件列表存档；Check Point 企业档案；伊朗地下镜像维护者访谈记录 ［A］；openbsd.duckdb 查询 L3.3.2（author_email 域名 TLD 分布，22 仓库合计，16 行结果），见 `原材料/研究/bsd仓库分析/数据分析/深层信息挖掘.md` §L3.3.2
 
 ## 340.19.2 贡献者从活跃到边缘的演变
 

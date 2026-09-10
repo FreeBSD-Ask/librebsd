@@ -22,7 +22,7 @@ volume: 第13卷-bsd衍生操作系统
 
 ## 辨析
 
-- GhostBSD 版本对应的 FreeBSD 基底须以项目 Release Notes 核实；openbsd.db 查询 L7.1.1.ghostbsd-src 的 commit 量须警惕 fork 分歧识别局限——ghostbsd-src 仓库 1993 年起的 commit 是 fork 自 FreeBSD 继承的上游历史，非 GhostBSD 项目本地 commit，识别 GhostBSD 
+- GhostBSD 版本对应的 FreeBSD 基底须以项目 Release Notes 核实；openbsd.duckdb 查询 L7.1.1.ghostbsd-src 的 commit 量须警惕 fork 分歧识别局限——ghostbsd-src 仓库 1993 年起的 commit 是 fork 自 FreeBSD 继承的上游历史，非 GhostBSD 项目本地 commit，识别 GhostBSD 
 - 须纠正原文中 “helloSystem 由 GhostBSD 衍生思想启发” 的表述——经联网考据，helloSystem 由 Simon Peter 独立发起，其设计灵感明确来源于早期 MacOS（System 1），与 GhostBSD 无直接衍生关系，二者仅同属 “FreeBSD 桌面化” 大类；helloSystem “无密码/无用户账户” 的设计在多用户场景与远程管理中存在结构性局限，须
 - 桌面 BSD 与 Linux 桌面在硬件支持、应用生态、许可证三维度存在结构性差异——(1) 硬件支持：桌面 BSD 在 amdgpu 驱动支持上滞后于 Linux（参照 120.19.1 节已考据内容，FreeBSD amdgpu 驱动由 AMD 在 Linux 内核维护，FreeBSD 须通过 drm-kmod 移植，存在版本滞后），Wayland 支持不完整（FreeBSD Wayland 
 - ghostbsd-src 的 592 个去重 CVE 须区分 “继承自 FreeBSD 上游” 与 “GhostBSD 本地特有”——fork 仓库的 commit 历史包含上游继承部分，识别本地特有 commit 须通过 parent_hashes 交叉验证；2022 年 merge commit 比例降至 1.1% 的原因须与 Eric Turgeon 的 GhostBSD 公告、FreeBS

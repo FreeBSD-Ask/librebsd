@@ -39,16 +39,20 @@ volume: 第07卷-freebsd的工程体系重构
 
 - FreeBSD 14.0-RELEASE Announcement [Z]. 2023-11-20；FreeBSD 14.0 Release Notes [Z]. 2023；DragonFly BSD. dma - DragonFly Mail Agent [EB/OL]. dragonflybsd.org[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]
 
+
+<!-- dangan-20260908 消解回写 -->
+- Red. Hat. RHSA-2024:1644: Critical security update for xz [EB/OL]. (2024-03-29)[2026-07-22]. <https://access.redhat.com/errata/RHSA-2024:1644>[EB/OL]. 2024. ［待核·needs_fix］［DKC-2286→fulltext:6141］
+<!-- /dangan-20260908 -->
 ## 154.18.2 OpenSSL 3.0 引入与许可证变更
 
 - 要点：FreeBSD 14.0-RELEASE 搭载
 - Linux Kernel Archives. Linux Kernel Releases [EB/OL]. [2026-07-19]. <https://www.kernel.org/>; Corbet J, Kroah-Hartman G, McPherson A. Linux Kernel Development Report [R]. The Linux Foundation, 2024; Larabel M. FreeBSD vs. Linux Benchmarks [EB/OL]. (2023-2026)[2026-07-19]. <<https://www.phoronix.com/>
-- FreeBSD Security Team. FreeBSD Security Advisories Archive [EB/OL]. (2024-2026)[2026-07-22]. <https://www.freebsd.org/security/advisories/>; MITRE. CVE Project cvelistV5 Repository [Z]. (2026-07). <https://github.com/CVEProject/cvelistV5>; FreeBSD Project. freebsd.db — freebsd-src commits table [DB/
+- FreeBSD Security Team. FreeBSD Security Advisories Archive [EB/OL]. (2024-2026)[2026-07-22]. <https://www.freebsd.org/security/advisories/>; MITRE. CVE Project cvelistV5 Repository [Z]. (2026-07). <https://github.com/CVEProject/cvelistV5>; FreeBSD Project. freebsd.duckdb — freebsd-src commits table [DB/
 - FreeBSD Security Team. FreeBSD-SA-24:04.openssh: OpenSSH pre-authentication remote code execution [EB/OL]. (2024-07-01)[2026-07-22]. <https://security.freebsd.org/advisories/FreeBSD-SA-24:04.openssh.asc>; FreeBSD Security Team. FreeBSD-SA-24:08.openssh: OpenSSH pre-authentication async signal safety
-- FreeBSD Security Team. FreeBSD-SA-24:13.openssl [EB/OL]. (2024-09-04)[2026-07-22]. <https://security.freebsd.org/advisories/FreeBSD-SA-24:13.openssl.asc>; OpenSSL Project. OpenSSL 3.0 Release Notes [EB/OL]. [2026-07-22]. <https://www.openssl.org/source/>; FreeBSD Project. freebsd.db — freebsd-src Op
+- FreeBSD Security Team. FreeBSD-SA-24:13.openssl [EB/OL]. (2024-09-04)[2026-07-22]. <https://security.freebsd.org/advisories/FreeBSD-SA-24:13.openssl.asc>; OpenSSL Project. OpenSSL 3.0 Release Notes [EB/OL]. [2026-07-22]. <https://www.openssl.org/source/>; FreeBSD Project. freebsd.duckdb — freebsd-src Op
 - MITRE. CVE-2024-3094: Malicious Code in xz-utils 5.6.0/5.6.1 [EB/OL]. (2024-03-29)[2026-07-22]. <https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-3094>; Freund A. oss-security: backdoor in upstream xz/liblzma leading to ssh server compromise [EB/OL]. (2024-03-29)[2026-07-22]. <<https://www.ope>
 - FreeBSD Security Team. FreeBSD Security Information — Disclosure Policy [EB/OL]. [2026-07-22]. <https://www.freebsd.org/security/>; FreeBSD Security Team. FreeBSD-SA-26:28.capsicum [EB/OL]. (2026-06-09)[2026-07-22]. <https://security.freebsd.org/advisories/FreeBSD-SA-26:28.capsicum.asc>; FreeBSD Sec
-- FreeBSD Project. freebsd.db freebsd-src 仓库 commit 数据库 [DB/OL]. 2026-07-27. `c:\Users\ykla\Documents\hibsd\03-原始史料库\01-代码仓库史料\01-数据库本体\freebsd.db`; FreeBSD Security Team. FreeBSD Security Advisories [EB/OL]. (2024-2026)[2026-07-27]. <https://www.freebsd.org/security/advisories/>; FreeBSD Security Tea
+- FreeBSD Project. freebsd.duckdb freebsd-src 仓库 commit 数据库 [DB/OL]. 2026-07-27. `c:\Users\ykla\Documents\hibsd\03-原始史料库\01-代码仓库史料\01-数据库本体\freebsd.duckdb`; FreeBSD Security Team. FreeBSD Security Advisories [EB/OL]. (2024-2026)[2026-07-27]. <https://www.freebsd.org/security/advisories/>; FreeBSD Security Tea
 
 ## 自反性声明
 

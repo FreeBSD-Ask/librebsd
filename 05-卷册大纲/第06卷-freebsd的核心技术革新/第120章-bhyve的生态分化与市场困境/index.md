@@ -21,7 +21,7 @@ volume: 第06卷-freebsd的核心技术革新
 | QEMU | 2003 年 | Fabrice Bellard | GPLv2 | KVM/Xen 的用户态设备模拟层 |
 | bhyve | 2011-2014 年 | Neel Natu（尼尔·纳图）/Peter Grehan（彼得·格雷汉） | BSD 2-Clause | FreeBSD 原生 Type-2 hypervisor，随 FreeBSD 10.0 发布 |
 | Apple Hypervisor.framework | 2014 年 | Apple | 专有 | OS X 10.10 用户态 hypervisor API |
-- **统计分析印证**——`freebsd.db` freebsd-src 仓库 1993-2026 年 commit 月度量 Mann-Kendall 趋势检验结果为显著上升趋势（Sen's slope =+1.40/月，p < 0.001，95% CI [1.11, 1.69]）（统计结论 C-03）；ARIMA(5,0,5) 模型拟合 AIC = 107.39（统计结论 C-29），预测精度
+- **统计分析印证**——`freebsd.duckdb` freebsd-src 仓库 1993-2026 年 commit 月度量 Mann-Kendall 趋势检验结果为显著上升趋势（Sen's slope =+1.40/月，p < 0.001，95% CI [1.11, 1.69]）（统计结论 C-03）；ARIMA(5,0,5) 模型拟合 AIC = 107.39（统计结论 C-29），预测精度
 - bhyve ARM64 支持的探索始于 2015-2016 年，Mihai Carabaș 与 Peter Grehan（彼得·格雷汉） 在 BSDCan 2016 发表了 "Porting bhyve on ARM" 演讲，概述了将 bhyve 移植到 AArch64（ARM64）架构的工程计划；ARM64 虚拟化依赖 ARM Virtualization Extensions（VE），包括 E
 
 ## 史料

@@ -1,0 +1,109 @@
+# 251.4 与同时期操作系统的比较
+
+## 251.4.1 macOS 代码流动模式的独特性
+
+**要点**：对比 **Linux**（GNU 用户空间与 Linux 内核同源，GPL 强制回馈使企业贡献回流上游）、**Windows**（无 BSD 血统，NT 内核独立发展）、其他 BSD（NetBSD/OpenBSD 与 FreeBSD 同源但走不同演进路线），macOS 的 “部分 BSD 派生 + Mach 混合内核 + APSL 许可证” 定位独特——它是唯一一个以商业封闭生态为主体、以 BSD 代码为底层组件、以非 BSD 许可证（APSL/Apache 2.0 混合）管理开源代码的操作系统。freebsd.db 显示 FreeBSD 从 Apple 获得的直接代码回馈（**6 条 apple.com 邮箱 commit + 15 条 "From Apple/Darwin" commit**）远少于 FreeBSD 向 Apple 输出的代码量，此不对称性与 Linux 的 GPL 强制回馈机制截然不同。
+
+  | 操作系统 | 内核血统 | 用户空间来源 | 许可证 | 企业回馈机制 |
+  | --- | --- | --- | --- | --- |
+  | **macOS** | 部分 BSD 派生（XNU Mach + BSD 子系统） | FreeBSD（部分） | APSL + Apache 2.0 混合 | 无强制（BSDL 允许不回馈） |
+  | **Linux** | Linux 内核 + GNU 工具 | GNU（同源） | GPL | GPL 强制回馈 |
+  | **Windows** | NT 内核（无 BSD 血统） | 自研 | 闭源 | 无开源义务 |
+  | **NetBSD/OpenBSD** | 传统 BSD 单内核 | 自研 BSD | BSD 许可证 | 社区驱动 |
+
+  > macOS 是唯一一个以商业封闭生态为主体、以 BSD 代码为底层组件、以非 BSD 许可证（APSL/Apache 2.0 混合）管理开源代码的操作系统——此定位在操作系统谱系中独特。
+**史料**：darwin.db 查询 1-3 结果（量化对比）；各 OS 架构文档（XNU、Linux kernel、Windows NT、NetBSD、OpenBSD）。〔L1 代码/构建产物/L3 官方文档与公告〕
+
+**史观**：总纲第 6 条——主体性与和解。macOS 与 FreeBSD 的代码流动是 “不对称和解”——双方有代码交换但总量不等，此即 q.md “和解的深度” 中 “和解往往取决于等待，或者说，取决于时间” 的显现：macOS 与 FreeBSD 的代码和解是 “沥青滴落般” 的缓慢过程，非一次性事件。
+
+**辨析**：将 macOS 与三大 BSD（FreeBSD、NetBSD、OpenBSD）并列时须明确其 Mach 内核差异——三大 BSD 均为传统单内核，macOS 的 XNU 为 Mach 3.0 微内核 + BSD 子系统的混合架构，此架构差异使 macOS 不能被简单归入 “BSD 操作系统” 类别。采信 “macOS 是使用 BSD 代码的商业操作系统” 而非 “macOS 是 BSD 操作系统” 的表述。
+
+**文献**：darwin.db 查询结果 [EB/OL]. script/vol9_ch118_apple_darwin_commits.py, 2026-07-22; Apple Inc. XNU Source Code [EB/OL]. <https://github.com/apple-oss-distributions/xnu>.
+
+<!-- DB_REF:darwin.duckdb -->
+> **数据库引用（darwin.duckdb）**：本子节对应 darwin 代码仓库。
+> 1985-2026 年间：2,012 次提交。
+> 仓库总览：2,016 次提交，时间跨度 2001-04-10 至 2026-04-13；contributors 表 43 行（42 个镜像仓库 + 1 行 dependabot，全部经 Apple OSS Distributions 自动化账号导入）。
+
+
+<!-- DEEP_ANALYSIS: openzfs.duckdb.commits -->
+**数据库分析发现**（证据等级：L1，来源：`openzfs.duckdb.commits.openzfs`）
+
+openzfs 代码仓库：从 2008 年到 2026 年，共 40615 次提交，967 位贡献者参与。
+
+
+
+<!-- DEEP_ANALYSIS: bsd-derivatives.duckdb.commits -->
+**数据库分析发现**（证据等级：L1，来源：`bsd-derivatives.duckdb.commits.bsd-derivatives`）
+
+bsd-derivatives 代码仓库：从 1985 年到 2026 年，共 963557 次提交，9744 位贡献者参与。
+
+
+
+<!-- DEEP_ANALYSIS: illumos-gate.duckdb.commits -->
+**数据库分析发现**（证据等级：L1，来源：`illumos-gate.duckdb.commits.illumos-gate`）
+
+illumos-gate 代码仓库：从 2005 年到 2026 年，共 23238 次提交，1161 位贡献者参与。
+
+
+
+<!-- DEEP_ANALYSIS: openssh.duckdb.commits -->
+**数据库分析发现**（证据等级：L1，来源：`openssh.duckdb.commits.openssh`）
+
+openssh 代码仓库：从 1999 年到 2026 年，共 14372 次提交，172 位贡献者参与。
+
+
+
+<!-- DEEP_ANALYSIS: openssh-apple.duckdb.commits -->
+**数据库分析发现**（证据等级：L1，来源：`openssh-apple.duckdb.commits.openssh-apple`）
+
+openssh-apple 代码仓库：从 2001 年到 2025 年，共 35 次提交，1 位贡献者参与。
+
+
+
+<!-- DEEP_ANALYSIS: openzfs.duckdb.commits -->
+**数据库分析发现**（证据等级：L1，来源：`openzfs.duckdb.commits.openzfs`）
+
+openzfs 核心贡献者：Brian Behlendorf(27732), Rob Norris(1329), наб(923), Alexander Motin(803), Ryan Moeller(562)
+
+
+
+<!-- DEEP_ANALYSIS: bsd-derivatives.duckdb.commits -->
+**数据库分析发现**（证据等级：L1，来源：`bsd-derivatives.duckdb.commits.bsd-derivatives`）
+
+bsd-derivatives 核心贡献者：Lucas Holt(80498), Oliver Pinter +(39642), William Grzybowski(16279), Franco Fichtner(15390), John Baldwin(13668)
+
+
+
+<!-- DEEP_ANALYSIS: illumos-gate.duckdb.commits -->
+**数据库分析发现**（证据等级：L1，来源：`illumos-gate.duckdb.commits.illumos-gate`）
+
+illumos-gate 核心贡献者：Toomas Soome(2747), Robert Mustacchi(999), Andy Fiddaman(540), Richard Lowe(522), Gordon Ross(428)
+
+
+
+<!-- DEEP_ANALYSIS: openssh.duckdb.commits -->
+**数据库分析发现**（证据等级：L1，来源：`openssh.duckdb.commits.openssh`）
+
+openssh 核心贡献者：Damien Miller(4703), Darren Tucker(3506), djm@openbsd.org(2453), Ben Lindstrom(1289), dtucker@openbsd.org(817)
+
+
+
+<!-- DEEP_ANALYSIS: openssh-apple.duckdb.commits -->
+**数据库分析发现**（证据等级：L1，来源：`openssh-apple.duckdb.commits.openssh-apple`）
+
+openssh-apple 核心贡献者：Apple OSS Distributions(35)
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-6-005`）
+
+OpenZFS 各平台版本的 ZFS 开始分化，OpenZFS 用 Feature Flags 取代旧的 pool version number，因为特性在各平台落地的顺序不同。
+
+## 文献
+
+- 张斌. ZFS文件系统中双容错编码性能的研究[M]. 2010.
+- [15]. 杨梨花 等. 移动设备日志结构文件系统综述[J]. 计算机研究与发展, 2024-08-06 11:04.
+- Michael Neumann. Neumann M. The HAMMER Filesystem[ report]. Karlsruher Institut für Technologie,[M]. 2010.
+

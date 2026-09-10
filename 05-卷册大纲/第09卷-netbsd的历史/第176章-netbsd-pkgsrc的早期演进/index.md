@@ -23,7 +23,7 @@ volume: 第09卷-netbsd的历史
 
 ## 辨析
 
-- 移植的具体范围需考据——FreeBSD Ports 与 pkgsrc 的代码 diff 需对照源码核实。经 netbsd.db netbsd-src 仓库 commits 表验证：pkgsrc 早期发展实际涉及两位核心贡献者——agc（Alistair G. Crooks）1997-06-05 首次导入 FreeBSD packaging tool（pkg_install），1997-08-20
+- 移植的具体范围需考据——FreeBSD Ports 与 pkgsrc 的代码 diff 需对照源码核实。经 netbsd.duckdb netbsd-src 仓库 commits 表验证：pkgsrc 早期发展实际涉及两位核心贡献者——agc（Alistair G. Crooks）1997-06-05 首次导入 FreeBSD packaging tool（pkg_install），1997-08-20
 - commit 记录的完整性需考据——部分 commit 可能未完整记录；需对照多源档案核实。统计结论 [C-13] 局限性继承：netbsd-src 月度 commit 量 Pettitt 检验变点为 2012-04、BUISHAND R 检验变点为 2011-09（10,000 次 Monte Carlo），两检验变点年份均晚于本章覆盖时期（1997-2004）约 7-8 年，反映本章时期的 c
 - OpenBSD Ports 与 pkgsrc 的分化时间需考据——OpenBSD 1996 年 7 月 fork 后软件包管理何时完全独立需对照 commit log 核验；OpenBSD 1.1 CVS 标签日期（1995.10.18）与 OpenBSD 1.2 首次正式发行日期（1996.7）在不同来源中混用，需对照 OpenBSD 官方发布档案进一步核验。经 bsd_commits.db o
 - 不可断言 pkgsrc “优于” RPM/DEB——二者服务不同生态（BSD 跨平台 vs Linux 发行版分发）。

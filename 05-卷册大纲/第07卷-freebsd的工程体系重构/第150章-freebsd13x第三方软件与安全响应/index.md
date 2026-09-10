@@ -54,7 +54,7 @@ volume: 第07卷-freebsd的工程体系重构
 ## 149.13.2 Windows 11/Server 2022、macOS 11-14 与 BSD 谱系
 
 - 要点：同期闭源/混合源操作系统：(1) **Windows 11（2021-10）*
-- FreeBSD Security Team. FreeBSD Security Advisories Archive [EB/OL]. (2021-2023)[2026-07-22]. <https://www.freebsd.org/security/advisories/>; MITRE. CVE Project cvelistV5 Repository [Z]. (2026-07). <https://github.com/CVEProject/cvelistV5>; FreeBSD Project. freebsd.db — freebsd-src commits table [DB/
+- FreeBSD Security Team. FreeBSD Security Advisories Archive [EB/OL]. (2021-2023)[2026-07-22]. <https://www.freebsd.org/security/advisories/>; MITRE. CVE Project cvelistV5 Repository [Z]. (2026-07). <https://github.com/CVEProject/cvelistV5>; FreeBSD Project. freebsd.duckdb — freebsd-src commits table [DB/
 - OpenSSL Project. OpenSSL 1.1.1 Release Notes [EB/OL]. (2018-2023)[2026-07-22]. <https://www.openssl.org/source/>; FreeBSD Security Team. FreeBSD-SA-21:16.openssl: Multiple OpenSSL vulnerabilities [EB/OL]. (2021-08-24)[2026-07-22]. <<https://security.freebsd.org/advisories/FreeBSD-SA-21:16.openssl.asc>
 - FreeBSD Security Team. FreeBSD-SA-21:13.bhyve: **bhyve(8)** device models vq_getchain error handling [EB/OL]. (2021-08-24)[2026-07-22]. <https://security.freebsd.org/advisories/FreeBSD-SA-21:13.bhyve.asc>; FreeBSD Security Team. FreeBSD-SA-22:05.bhyve: **bhyve(8)** e82545 checksum validation [EB/OL]
 - FreeBSD Security Team. FreeBSD-SA-22:14.heimdal: Heimdal multiple vulnerabilities [EB/OL]. (2022-11-15)[2026-07-22]. <https://security.freebsd.org/advisories/FreeBSD-SA-22:14.heimdal.asc>; Heimdal Project. Heimdal Kerberos 5 Implementation History [EB/OL]. [2026-07-22]. <https://www.h5l.org/>; MITRE

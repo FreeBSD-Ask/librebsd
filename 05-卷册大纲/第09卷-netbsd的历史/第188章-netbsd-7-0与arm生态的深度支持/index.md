@@ -34,15 +34,15 @@ volume: 第09卷-netbsd的历史
 
 ## 辨析
 
-- NetBSD ARM 多核支持与 Linux ARM 多核支持的成熟度对比缺乏权威基准——需对照同硬件测试核验。经 netbsd.db netbsd-src 仓库 commits 表验证：aarch64 后端于 2013.2.4 由 joerg 首次引入（LLVM/Clang snapshot r174288），AARCH64 定义于 2013.10.29 由 matt 添加，latent AAr
+- NetBSD ARM 多核支持与 Linux ARM 多核支持的成熟度对比缺乏权威基准——需对照同硬件测试核验。经 netbsd.duckdb netbsd-src 仓库 commits 表验证：aarch64 后端于 2013.2.4 由 joerg 首次引入（LLVM/Clang snapshot r174288），AARCH64 定义于 2013.10.29 由 matt 添加，latent AAr
 - NetBSD ARM 平台支持列表在不同来源中可能略有出入——需对照 NetBSD/doc/PLATFORMS 文件核验；部分老 ARM 平台（如 StrongARM）是否仍在维护需考据
 - 7.0 是否完整迁移到 64-bit time_t 在不同叙事中存在分歧——内核侧与用户态侧进度可能不同，需对照源码核验；与 FreeBSD/OpenBSD Y2038 准备的对比需考据；32-bit time_t 在 7.0 中是否仍可作为兼容选项保留需考据
-- CVE-2017-12836 的 “注入漏洞” 机制须对照 NVD 条目核验具体注入类型（SQL 注入、命令注入、代码注入等）——netbsd.db 仅标注 “注入” 而未细分，须对照 NVD CWE 分类核验；CVE-2018-5732 与 CVE-2018-5733 由同一 commit 修复的论断须对照 commit subject 核验——该 commit 可能同时修复 ISC DHCP
+- CVE-2017-12836 的 “注入漏洞” 机制须对照 NVD 条目核验具体注入类型（SQL 注入、命令注入、代码注入等）——netbsd.duckdb 仅标注 “注入” 而未细分，须对照 NVD CWE 分类核验；CVE-2018-5732 与 CVE-2018-5733 由同一 commit 修复的论断须对照 commit subject 核验——该 commit 可能同时修复 ISC DHCP
 
 ## 文献
 
 - NetBSD CVS 仓库 arm 部分；ARM Architecture Reference Manual；tech-port-arm 邮件列表 ［A］<!-- DB_REF:netbsd.duckdb -->> **数据库引用（netbsd.duckdb）**：本子节对应 netbsd 代码仓库。> 2015-2015 年间：82,041 次提交。> 仓库总览：1,999,412 次提交，1,545 位贡献者（contributors 表行数，1992-07-13 至 2026-08-24）。
 - NetBSD 7.0 Release Notes；tech-kern 邮件列表；Y2038 问题文档 ［A］<!-- DB_REF:netbsd.duckdb -->> **数据库引用（netbsd.duckdb）**：本子节对应 netbsd 代码仓库。> 1993-2026 年间：1,999,408 次提交。> 仓库总览：1,999,412 次提交，1,545 位贡献者（contributors 表行数，1992-07-13 至 2026-08-24）。
 - NetBSD. 7.0 Release Notes [EB/OL]；ARM 生态史料。［B］<!-- DB_REF:netbsd.duckdb -->> **数据库引用（netbsd.duckdb）**：本子节对应 netbsd 代码仓库。> 2015-2015 年间：82,041 次提交。> 仓库总览：1,999,412 次提交，1,545 位贡献者（contributors 表行数，1992-07-13 至 2026-08-24）。
-- netbsd.db netbsd-src 仓库 commit `74e8c71cd1136230728133034816cf03b1f4af1f`、`097731dea099250bc460a975c393fc370c283a95`；NVD CVE-2017-12836、CVE-2018-5732、CVE-2018-5733 条目；ISC DHCP 安全公告 ［A］<!-- DB_REF:netbsd.duckdb -->> **数据库引用（netbsd.duckdb）**：本子节对应 netbsd 代码仓库。> 2017-2017 年间：52,858 次提交。> 仓库总览：1,999,412 次提交，1,545 位贡献者（contributors 表行数，1992-07-13 至 2026-08-24）。
+- netbsd.duckdb netbsd-src 仓库 commit `74e8c71cd1136230728133034816cf03b1f4af1f`、`097731dea099250bc460a975c393fc370c283a95`；NVD CVE-2017-12836、CVE-2018-5732、CVE-2018-5733 条目；ISC DHCP 安全公告 ［A］<!-- DB_REF:netbsd.duckdb -->> **数据库引用（netbsd.duckdb）**：本子节对应 netbsd 代码仓库。> 2017-2017 年间：52,858 次提交。> 仓库总览：1,999,412 次提交，1,545 位贡献者（contributors 表行数，1992-07-13 至 2026-08-24）。
 

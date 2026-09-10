@@ -24,7 +24,7 @@ volume: 第09卷-netbsd的历史
 
 ## 辨析
 
-- NetBSD ZFS 与 FreeBSD OpenZFS 的关系存在叙事分歧——部分资料称 NetBSD 直接移植 FreeBSD OpenZFS，部分称通过 OpenZFS 仓库共享代码，需对照源码核验。经 netbsd.db netbsd-src 仓库 commits 表验证：NetBSD ZFS 代码由 chs（Chuck Silvers）于 2018-05-28 从 FreeBSD SVN
+- NetBSD ZFS 与 FreeBSD OpenZFS 的关系存在叙事分歧——部分资料称 NetBSD 直接移植 FreeBSD OpenZFS，部分称通过 OpenZFS 仓库共享代码，需对照源码核验。经 netbsd.duckdb netbsd-src 仓库 commits 表验证：NetBSD ZFS 代码由 chs（Chuck Silvers）于 2018-05-28 从 FreeBSD SVN
 - 先前叙事中称“9.0 发布日期 2020.5”系误传——NetBSD 官方发布页面（netbsd.org/releases/formal-9/NetBSD-9.0.html）明确为 2020.2.14；9.0 发布周期实际约 1 年 7 个月而非 2.5 年；9.0 的实际功能完整性需对照 release tarball 核验 [考据完成：2026-07-28 该处存疑标注属史料缺口，须待原始档案
 - 9.0 ext2fs 改进支持更多 ext4 特性的具体范围需对照源码核验。重要修正：经 bsd_commits.db netbsd-src 仓库 commits 表验证：查询 `message_subject LIKE '%f2fs%' OR message_subject LIKE '%F2FS%'` 结果为空，原叙事中“NetBSD 9.0 引入对 F2FS 的实验性支持”声明暂未得到代码级
 - ZFS 的 BSD 整合度高，证明 BSD 许可对大型存储栈的友好。

@@ -8,7 +8,7 @@ volume: 第10卷-openbsd的历史
 
 ## 要点
 
-- OpenBSD 4.0-4.4 的 Release Notes 与 CVS commit log 是研究此时期安全与工程改进的核心史料；openbsd.db openbsd-src 仓库 2005-2010 年间贡献者以 deraadt@（5416 条）、jmc@（3921 条）、miod@（3760 条）、brad@（2728 条）、kettenis@（2271 条）为主；OpenBSD 4.0
+- OpenBSD 4.0-4.4 的 Release Notes 与 CVS commit log 是研究此时期安全与工程改进的核心史料；openbsd.duckdb openbsd-src 仓库 2005-2010 年间贡献者以 deraadt@（5416 条）、jmc@（3921 条）、miod@（3760 条）、brad@（2728 条）、kettenis@（2271 条）为主；OpenBSD 4.0
 - pf 2005-2012 年间的 commit 记录与设计文档是研究 pf 演进的核心史料；bsd_commits.db openbsd-src 仓库显示 2005-2010 年间 pf 相关 commit 主要贡献者为 claudio@（198 条，ospfd/route 协议与 pf 集成）、henning@（169 条，ospfd 与 pf 接口组匹配）〔待核：原文截断，后文待回源〕
 - 2005-2012 年间 OpenBSD 加密相关 commit 记录是研究此时期加密演进的核心史料——softraid 加密（2007-2008 tedu@、hshoexer@、jsing@）、IPSec 改进、TLS 库更新等；bsd_commits.db openbsd-src 仓库保留完整 CVS 历史；交叉验证须对照 Release Notes、man page 与 commit log
 - OpenBSD 4.x-5.x 时期 Release Notes 与 CVS commit log 是研究 6 个月周期工程实践的核心史料；release tags、release engineering 邮件、hackathons 报告共同构成考据链；OpenBSD 4.0 release 周期起点以 2006-09-17 steven commit e8d7e8373d3b "4.0-curr
@@ -25,7 +25,7 @@ volume: 第10卷-openbsd的历史
 
 ## 辨析
 
-- Release Notes 的完整性以 plus.html 页面为准——该页面仅记录用户可见变更，内部代码重构需以 commit log 补充；OpenBSD 仓库无 release tag（OpenBSD 使用 CVS 而非 git tag 标记 release），故 release 日期以 OpenBSD 官方网站公告为准 [考据完成：2026-07-28 openbsd.db tags 表中
+- Release Notes 的完整性以 plus.html 页面为准——该页面仅记录用户可见变更，内部代码重构需以 commit log 补充；OpenBSD 仓库无 release tag（OpenBSD 使用 CVS 而非 git tag 标记 release），故 release 日期以 OpenBSD 官方网站公告为准 [考据完成：2026-07-28 openbsd.duckdb tags 表中
 - pf 演进的具体里程碑以 Release Notes 与 commit log 交叉验证为准——Release Notes 记录用户可见的 pf 语法变更（如 4.1 的 interface groups），commit log 记录具体代码变更；OpenBSD 仓库无 release tag，pf 各特性的引入版本须以 Release Notes 与 commit log 的 author_da
 - softraid 加密的 commit 时间线以 bsd_commits.db 为准——2007-11-27 tedu@ 拆分加密函数，2008-06-11 hshoexer@ 移植加密代码，2008-06-14 hshoexer@ 完整启用，时间线清晰；NRL IPSec 代码的具体改动记录以 commit log 的 message_body 中提及 NRL 的 commit 为索引
 - Release Notes 的完整性以 plus.html 页面为准——该页面仅记录用户可见变更；release tags 与实际发布日期的差异以 OpenBSD 官方公告为准——OpenBSD 仓库无 git release tag，release 日期以 openbsd.org 公告为准

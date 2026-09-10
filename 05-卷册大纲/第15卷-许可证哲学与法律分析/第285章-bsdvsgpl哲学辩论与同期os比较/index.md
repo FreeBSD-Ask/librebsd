@@ -35,7 +35,7 @@ volume: 第15卷-许可证哲学与法律分析
 
 - 辩论无终局——两种自由观各服务不同目标，BSD 的务实人文在光谱中独特定位。
 - 【查证来源】FreeBSD Committer’s Guide 第 20 章经 docs.freebsd.org/en/articles/committers-guide/#rules WebFetch 一手核验目录条目存在；FreeBSD Core Bylaws 2000.8.28 版经 freebsd.org/internal/bylaws/ WebFetch 一手核验，规定 active c
-- 【查证来源】项目史观总纲第 21 条原文经 据原文第 25 章 第 25 行 Read 一手核验：“革命与改革是历史方法论的分歧。Linux 靠革命，BSD 靠改革。改革的困难远高于革命。破山中贼易，破心中贼难”；BSD 化工程时间线经 135.8 节史料（OpenBSD LibreSSL 公告、FreeBSD LLVM 迁移文档、openbsd.db L3.6.1 查询报告）交叉核验；FreeB
+- 【查证来源】项目史观总纲第 21 条原文经 据原文第 25 章 第 25 行 Read 一手核验：“革命与改革是历史方法论的分歧。Linux 靠革命，BSD 靠改革。改革的困难远高于革命。破山中贼易，破心中贼难”；BSD 化工程时间线经 135.8 节史料（OpenBSD LibreSSL 公告、FreeBSD LLVM 迁移文档、openbsd.duckdb L3.6.1 查询报告）交叉核验；FreeB
 - 【查证来源】GPLv2 §5 原文：“如果可识别的作品部分不是派生自本程序，且可合理视为独立的分离作品，则本许可证及其条款不适用于那些部分”（WebFetch gnu.org/licenses/old-licenses/gpl-2.0.txt 一手核验）；GPLv3 §5 聚合定义"aggregate"（WebFetch gnu.org/licenses/gpl-3.0.txt 一手核验）；Sta
 - 【查证来源】FSF GPL FAQ 中文版（gnu.org/licenses/old-licenses/gpl-2.0-faq.zh-cn.html）WebFetch 一手核验上述问答原文；GPLv3 §0 “传播”（to convey）定义（gnu.org/licenses/gpl-3.0.txt）一手核验  【交叉验证方法】（1）FSF FAQ 内部一致性核验：修改版自用问答与 SaaS 问答
 
