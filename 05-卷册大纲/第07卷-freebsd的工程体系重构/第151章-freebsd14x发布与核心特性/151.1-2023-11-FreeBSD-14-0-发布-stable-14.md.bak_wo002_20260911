@@ -48,7 +48,7 @@
 
 **文献**：FreeBSD Project. In Memoriam: Mike Karels [EB/OL]. (2024-12)[2026-07-19]. <https://www.freebsd.org/releases/14.2R/announce/> (Dedication section); Salus P H. The Daemon, the GNU and the Penguin [M]. Reed Media Services, 2008. ISBN 978-0-9790342-2-8（BSD 30 年历史叙事参照）.[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]
 
-FreeBSD 14.x 系列 release tag 间隔与发布偏差数据库验证见下表（基于 **bsd_commits.db** `tags` 表 freebsd-src 仓库验证数据，0 信任原则考据过程留痕）。
+FreeBSD 14.x 系列 release tag 间隔与发布偏差数据库验证见下表（基于 **freebsd.duckdb** `tags` 表 freebsd-src 仓库验证数据，0 信任原则考据过程留痕）。
 
 | 版本 | tag 日期 | 公告日期 | 偏差（日）| 间隔（日）| tagger | commit hash | 时区标记 |
 | --- | --- | --- | --- | --- | --- | --- | --- |

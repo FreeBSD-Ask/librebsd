@@ -139,4 +139,3 @@ USL 诉 BSDi 案中，加州大学在诉讼开始后不久被追加为被告。
 **邮件来源**：Mark Blythe，comp.unix.bsd.bsdi.misc，1997 年，Message-ID: `33D99784.23BEC391@cvp.com>#1/1`
 **史学意义**：这份一线移植报告把 MySQL 的 BSD 化难题精确定位在 POSIX 线程函数缺失上，与同期其他用户的 pthread 抱怨互证，说明数据库线程化架构与 BSD 线程库成熟度的错位是 1997 年的核心工程障碍。
 <!-- /MAIL_INSIGHT -->
-

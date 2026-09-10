@@ -23,13 +23,13 @@ volume: 第15卷-许可证哲学与法律分析
 ## 辨析
 
 - 考据过程留痕——【查证来源】libarchive 官网采用列表（libarchive.github.io）经一手核验明确列出 macOS、Debian/Ubuntu、Homebrew 等采用方；jemalloc 在 Rust 中的默认分配器地位经 Rust RFC 1974 与 Rust 1.28 release notes 核实，2018 年 8 月后默认分配器已切换为系统分配器，但 jemal
-- 考据过程留痕——【查证来源】bsd_commits.db 查询 L3.2.1（商业实体 commit 占比长期低于 1.3% 但绝对值增长）与 L7.2.1（衍生项目贡献者回馈前 10 位）经 SQL 查询一手核验；OpenZFS 项目公告（2013 年 9 月成立）经 openzfs.org 一手核验；libarchive 官网采用列表经 libarchive.github.io 一手核验；je
+- 考据过程留痕——【查证来源】openzfs.duckdb 查询 L3.2.1（商业实体 commit 占比长期低于 1.3% 但绝对值增长）与 L7.2.1（衍生项目贡献者回馈前 10 位）经 SQL 查询一手核验；OpenZFS 项目公告（2013 年 9 月成立）经 openzfs.org 一手核验；libarchive 官网采用列表经 libarchive.github.io 一手核验；je
 - 考据过程留痕——【查证来源】项目史观总纲第 4、6、7、13 条经原材料/哲学/项目统摄史观/第 25 章.md 一手核验，原文分别为 “分离聚合是永恒规律。UNIX 与 BSD、BSD 各分支之间的分合循环，是历史的根本结构” “和解优于斗争。历史的动力不是对抗，而是各主体性的呈现与和解。和解是事物真正完整的一刻” “法律与道德是利益分配。任何道德问题本质上是利益问题，社区治理亦是形式主义的政治
 
 ## 文献
 
 - libarchive. Official Website [EB/OL]. <https://libarchive.github.io/>; jemalloc.net [EB/OL]. <https://jemalloc.net/>; Rust RFC 1974. Global Allocator API [S/OL]. 2017; OpenSSH. Official History [EB/OL]. <https://openssh.org/history.html>; OpenZFS Project Announcement [EB/OL]. 2013-09, <<https://openz>
-- bsd_commits.db L3.2.1 查询报告（深层信息挖掘.md §L3.2.1）; bsd_commits.db L7.2.1 查询报告（衍生项目与跨项目对比分析.md §L7.2.1）; OpenZFS Project. Announcement [EB/OL]. 2013-09, <https://openzfs.org/>; libarchive. Official Website [EB/OL]. <https://libarchive.github.io/>; jemalloc.net [EB/OL]. <https://jemalloc.net/>; Joyent. Re
+- openzfs.duckdb L3.2.1 查询报告（深层信息挖掘.md §L3.2.1）; openzfs.duckdb L7.2.1 查询报告（衍生项目与跨项目对比分析.md §L7.2.1）; OpenZFS Project. Announcement [EB/OL]. 2013-09, <https://openzfs.org/>; libarchive. Official Website [EB/OL]. <https://libarchive.github.io/>; jemalloc.net [EB/OL]. <https://jemalloc.net/>; Joyent. Re
 - 项目史观总纲第 4、6、7、13 条 [Z]. 原材料/哲学/项目统摄史观/第 25 章.md; 项目史观总纲第四章 “循环与否定” [Z]. 原材料/哲学/项目统摄史观/第 04 章.md; 项目史观总纲第六章 “主体性与和解” [Z]. 原材料/哲学/项目统摄史观/第 06 章.md; 项目史观总纲第十一章 “法哲学与政治历史哲学” [Z]. 原材料/哲学/项目统摄史观/第 11 章.md; 项目史观总纲第二十七章 “自反：对理论困境的回应” [Z]. 原材料/哲学/项目统摄史观/第 27 章.md; bsd_commits.db L3.2.1 查询报告; bsd_commits.db L
 
 ## 自反性声明

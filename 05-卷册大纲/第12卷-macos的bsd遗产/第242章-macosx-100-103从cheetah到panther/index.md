@@ -8,9 +8,9 @@ volume: 第12卷-macos的bsd遗产
 
 ## 要点
 
-- **Mac OS X 10.0-10.1 期间（2001 年）**，Darwin 开源项目吸引 FreeBSD/NetBSD 背景的独立开发者提交补丁。bsd_commits.db 查询显示，**Robert Watson** 于 **2001 年 8 月 29 日** 在 freebsd-src 仓库提交 "Reduce gratuitous whitespace difference from
+- **Mac OS X 10.0-10.1 期间（2001 年）**，Darwin 开源项目吸引 FreeBSD/NetBSD 背景的独立开发者提交补丁。freebsd.duckdb 查询显示，**Robert Watson** 于 **2001 年 8 月 29 日** 在 freebsd-src 仓库提交 "Reduce gratuitous whitespace difference from
 - **Mac OS X 10.2 Jaguar** 于 **2002 年 8 月 24 日** 发布（首次将代号用于营销，售价 129 美元），引入 **Darwin 6.x**（对应 10.2），BSD 用户空间同步 **FreeBSD 4.4-4.6** 级别。Jaguar 引入 **IPv6** 支持（基于 **KAME 项目**，KAME 是日本 WIDE 项目主持的 IPv6/IPsec
-- **Panther 期（2003 年）** Darwin 持续吸收 FreeBSD 同步补丁。bsd_commits.db 查询显示，**2003 年间** freebsd-src 仓库中 message_subject 含 "From Apple"/"From Darwin" 的 commit 数量较 2001 年增加（延续 **Robert Watson** 2001 年开始的 Darwin
+- **Panther 期（2003 年）** Darwin 持续吸收 FreeBSD 同步补丁。freebsd.duckdb 查询显示，**2003 年间** freebsd-src 仓库中 message_subject 含 "From Apple"/"From Darwin" 的 commit 数量较 2001 年增加（延续 **Robert Watson** 2001 年开始的 Darwin
 - **2001-2003 年** Mac OS X 10.0-10.3 对比 **FreeBSD 4.x**（2001-2003 年）/**5.0**（**2003 年 1 月 19 日** 发布）、**Linux 2.4**（**2001 年 1 月 4 日** 发布）/**2.6**（**2003 年 12 月 17 日** 发布）、**Windows XP**（**2001 年 10 月 25
 - macOS 自 Mac OS X 10.0（**2001-03-24**）起内置 ktrace/kdebug 子系统，源自 Darwin 0.x（开源 Darwin 1.0 于 **2001-04-01** 发布）的 BSD 层——kdebug 是 ktrace 的扩展，提供更细粒度的内核事件追踪（含 Mach 调度、BSD 系统调用、I/O Kit 等）。**kdebug(1)** man pa
 

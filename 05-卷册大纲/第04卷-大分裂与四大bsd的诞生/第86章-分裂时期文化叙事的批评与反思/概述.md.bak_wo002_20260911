@@ -77,7 +77,7 @@ volume: 第04卷-大分裂与四大bsd的诞生
 - `bsd_commits.db` 的 commits 表（netbsd-src/openbsd-src/dragonfly-src 三仓库）
 - `bsd_commits.db` 的 tags
 
-10. [L3] `original_sources.kaoju_records` — ### 1. FreeBSD 基础系统加密库事实核查（93.2 辨析字段修正）  **原声明**：FreeBSD 14.0 起默认使用 LibreSSL  **查证来源**： - bsd_commits.db freebsd-src 仓库查
+10. [L3] `original_sources.kaoju_records` — ### 1. FreeBSD 基础系统加密库事实核查（93.2 辨析字段修正）  **原声明**：FreeBSD 14.0 起默认使用 LibreSSL  **查证来源**： - freebsd.duckdb freebsd-src 仓库查
 11. [L3] `original_sources.kaoju_records` — ### 1.1 一手来源（primary sources）  1. **DragonFly BSD 官方网站**（<https://www.dragonflybsd.org/>）    - 首页：`<https://www.dragonflybs>
 12. [L3] `original_sources.kaoju_records` — ### A. 一手来源（FreeBSD 官方站点）  下列来源均于 2026-07-23 通过 WebFetch 工具直接访问，未引用任何二手中文转载。  1. **FreeBSD News Flash 主页**    - URL：http
 
@@ -204,4 +204,3 @@ CheriABI 是纯 capability 进程环境，构建于 CheriBSD（FreeBSD 的 CHERI
 - Ozaki R. Modernizing NetBSD Networking Facilities and Interrupt Handling[C]//Proceedings of AsiaBSDCon 2015. Tokyo: AsiaBSDCon, 2015 ［C］. 2015.
 - Ozaki R. Modernizing NetBSD Networking Facilities and Interrupt Handling (slides)[C]//Proceedings of AsiaBSDCon 2015. Tokyo: AsiaBSDCon, 2015 ［C］. 2015.
 - k-nakahara. netbsd Asia BSDCon2016-BOF-psref[M]. 2016.
-

@@ -110,7 +110,7 @@ FreeBSD-SA-26:49.iconv                                     Security Advis...
 4. [L3] `original_sources.kaoju_records.source_verification#22` — ### 2.1 一手来源（数据库）
 
 - `bsd_commits.db` 的 commits 表（netbsd-src/openbsd-src/dragonfly-src 三仓库）
-- `bsd_commits.db` 的 tags 表（仅 dragonfly-src 可用，131 个 v* tag 含 tagger_date）
+- `dragonfly.duckdb` 的 tags 表（仅 dragonfly-src 可用，131 个 v* tag 含 tagger_date）
 - `bsd_commits.db` 的 contribu...
 
 5. [L3] `original_sources.kaoju_records.source_verification#34` — ### 1. FreeBSD 基础系统加密库事实核查（93.2 辨析字段修正）
@@ -119,7 +119,7 @@ FreeBSD-SA-26:49.iconv                                     Security Advis...
 
 **查证来源**：
 
-- bsd_commits.db freebsd-src 仓库查询：`SELECT * FROM commit_files WHERE file_path LIKE 'lib/libressl%' AND status='A...
+- freebsd.duckdb freebsd-src 仓库查询：`SELECT * FROM commit_files WHERE file_path LIKE 'lib/libressl%' AND status='A...
 
 6. [L3] `original_sources.kaoju_records.source_verification#43` — ### 一手史料
 
@@ -198,4 +198,3 @@ FreeBSD-SA-26:49.iconv                                     Security Advis...
 **数据库分析发现**（证据等级：L1，来源：`openbsd.duckdb.commits.openbsd`）
 
 openbsd 核心贡献者：ajacoutot(35528), deraadt(31454), sthen(30592), espie(18328), jasper(16649)
-

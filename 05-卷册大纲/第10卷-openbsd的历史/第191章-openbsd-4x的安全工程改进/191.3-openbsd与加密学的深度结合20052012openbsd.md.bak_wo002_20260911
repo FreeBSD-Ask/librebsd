@@ -25,37 +25,37 @@
   | 2007-11-27 | `f18dcc9c26b1` | tedu | split crypto functions out into their own file |
   | 2008-06-14 | `79cdc9424edb` | hshoexer | enable softraid crypto |
 
-**史料**：bsd_commits.db openbsd-src 仓库 commit fa8fd3804712（1997-05-14 niklas "Use svnds"）、commit f18dcc9c26b1（2007-11-27 tedu "split crypto functions"）、commit 79cdc9424edb（2008-06-14 hshoexer "enable softraid crypto"）；OpenBSD 3.0 Release Notes vnd 部分；OpenBSD 4.2/4.4 Release Notes softraid 部分；OpenBSD **softraid(4)**、**bioctl(8)** 手册页 ［A］
+**史料**：openbsd.duckdb openbsd-src 仓库 commit fa8fd3804712（1997-05-14 niklas "Use svnds"）、commit f18dcc9c26b1（2007-11-27 tedu "split crypto functions"）、commit 79cdc9424edb（2008-06-14 hshoexer "enable softraid crypto"）；OpenBSD 3.0 Release Notes vnd 部分；OpenBSD 4.2/4.4 Release Notes softraid 部分；OpenBSD **softraid(4)**、**bioctl(8)** 手册页 ［A］
 
 **史观**：总纲第 6 条——技术选择的代价：OpenBSD 选择与系统启动集成的 softraid 方案，牺牲了灵活性换来了一致性与安全性——softraid 加密卷可在引导阶段解锁（通过 boot prompt），无需额外 initramfs，这一设计简化了部署但限制了加密卷的动态管理
 
 **辨析**：svnd 与 softraid 的关系——softraid 并非 svnd 的简单替代，而是新的 RAID 框架（bsd_commits.db 显示 softraid 首次 commit 为 2007-03-19 dlg commit 98855ba5cdbc "attach softraid to the root of the device tree"），加密是其子功能之一；AES-XTS 支持的具体引入版本以 **softraid(4)** 手册页历次版本与 commit log 为准——softraid 加密自 2008 年启用即支持 AES-XTS
 
-**文献**：bsd_commits.db openbsd-src 仓库 commit 98855ba5cdbc、f18dcc9c26b1、79cdc9424edb；OpenBSD **softraid(4)** 手册页 [EB/OL]. <https://man.openbsd.org/softraid.4>；OpenBSD **bioctl(8)** 手册页 [EB/OL]. <https://man.openbsd.org/bioctl.8> ［A］
+**文献**：openbsd.duckdb openbsd-src 仓库 commit 98855ba5cdbc、f18dcc9c26b1、79cdc9424edb；OpenBSD **softraid(4)** 手册页 [EB/OL]. <https://man.openbsd.org/softraid.4>；OpenBSD **bioctl(8)** 手册页 [EB/OL]. <https://man.openbsd.org/bioctl.8> ［A］
 
 ## 191.3.3 network encryption 的全面支持
 
 **要点**：OpenBSD 网络加密主要由 IPSec 栈（与 NRL 合作）、**isakmpd(8)**（IKE 密钥协商，1998-11-15 niklas commit 2040585efcaf "Initial import of isakmpd" 首次导入）、OpenSSH 默认远程登录、**ssl(8)** SSL/TLS 库组成；**iked(8)** 于 2010-06-26 reyk commit 54a1861596 "Add iked to rc/rc.conf, you can enable it on boot with the iked_flags = var" 首次引入（4.8 周期，2010.11），作为 isakmpd 的现代替代——iked 与 isakmpd 在 4.8 后并存，isakmpd 未立即弃用；OpenBSD 网络加密的 “默认安全” 哲学让其在 VPN 与边界设备部署中获得存在感
 
-**史料**：bsd_commits.db openbsd-src 仓库 commit 2040585efcaf（1998-11-15 niklas "Initial import of isakmpd"）、commit 54a1861596（2010-06-26 reyk "Add iked to rc/rc.conf"）；OpenBSD Release Notes IPSec 部分；NRL IPSec 文档；OpenBSD **isakmpd(8)**、**iked(8)**、**ipsec(4)** 手册页 ［A］
+**史料**：openbsd.duckdb openbsd-src 仓库 commit 2040585efcaf（1998-11-15 niklas "Initial import of isakmpd"）、commit 54a1861596（2010-06-26 reyk "Add iked to rc/rc.conf"）；OpenBSD Release Notes IPSec 部分；NRL IPSec 文档；OpenBSD **isakmpd(8)**、**iked(8)**、**ipsec(4)** 手册页 ［A］
 
 **史观**：总纲第 5 条——组织结构塑造技术路径：OpenBSD 与 NRL 的合作让 IPSec 路径固化于基本系统——NRL IPSec 代码作为研究实现被 OpenBSD 集成，后续由 OpenBSD 团队持续维护与重写，这一路径使 OpenBSD IPSec 与 Linux/FreeBSD 的 IPSec 实现产生分化
 
 **辨析**：NRL IPSec 与 OpenBSD IPSec 的代码血缘以 commit log 的 author_name 与 message_body 交叉确认——部分文件保留 NRL 版权头，部分由 OpenBSD 重写；**iked(8)** 取代 **isakmpd(8)** 的过程是渐进的——iked 于 4.8（2010.11）引入，isakmpd 在后续 release 中仍保留，二者并存至 5.x 周期
 
-**文献**：bsd_commits.db openbsd-src 仓库 commit 2040585efcaf、54a1861596；NRL IPSec 文档；OpenBSD **ipsec(4)** 手册页 [EB/OL]. <https://man.openbsd.org/ipsec.4>；OpenBSD **iked(8)** 手册页 [EB/OL]. <https://man.openbsd.org/iked.8> ［A］
+**文献**：openbsd.duckdb openbsd-src 仓库 commit 2040585efcaf、54a1861596；NRL IPSec 文档；OpenBSD **ipsec(4)** 手册页 [EB/OL]. <https://man.openbsd.org/ipsec.4>；OpenBSD **iked(8)** 手册页 [EB/OL]. <https://man.openbsd.org/iked.8> ［A］
 
 ## 191.3.4 加密相关 commit 记录考据
 
-**要点**：2005-2012 年间 OpenBSD 加密相关 commit 记录是研究此时期加密演进的核心史料——softraid 加密（2007-2008 tedu@、hshoexer@、jsing@）、IPSec 改进、TLS 库更新等；bsd_commits.db openbsd-src 仓库保留完整 CVS 历史；交叉验证须对照 Release Notes、man page 与 commit log
+**要点**：2005-2012 年间 OpenBSD 加密相关 commit 记录是研究此时期加密演进的核心史料——softraid 加密（2007-2008 tedu@、hshoexer@、jsing@）、IPSec 改进、TLS 库更新等；openbsd.duckdb openbsd-src 仓库保留完整 CVS 历史；交叉验证须对照 Release Notes、man page 与 commit log
 
-**史料**：bsd_commits.db openbsd-src 仓库 2005-2012 加密相关 commit（softraid、IPSec、SSL/TLS）；OpenBSD Release Notes；OpenBSD **softraid(4)**、**ipsec(4)**、**ssl(8)** 手册页历次版本 ［A］
+**史料**：openbsd.duckdb openbsd-src 仓库 2005-2012 加密相关 commit（softraid、IPSec、SSL/TLS）；OpenBSD Release Notes；OpenBSD **softraid(4)**、**ipsec(4)**、**ssl(8)** 手册页历次版本 ［A］
 
 **史观**：总纲第 25 条——0 信任原则：commit 记录考据须以多维度交叉筛选——softraid 加密相关 commit 须以 file_path（sys/dev/softraid*.c）与 message_subject（含 "softraid" 与 "crypto"）双重筛选，仅凭 message_subject 关键字可能遗漏跨子系统 commit
 
 **辨析**：softraid 加密的 commit 时间线以 bsd_commits.db 为准——2007-11-27 tedu@ 拆分加密函数，2008-06-11 hshoexer@ 移植加密代码，2008-06-14 hshoexer@ 完整启用，时间线清晰；NRL IPSec 代码的具体改动记录以 commit log 的 message_body 中提及 NRL 的 commit 为索引
 
-**文献**：bsd_commits.db openbsd-src 仓库加密相关 commit；OpenBSD Release Notes [EB/OL]. <https://www.openbsd.org/plus.html>；OpenBSD man pages ［A］
+**文献**：openbsd.duckdb openbsd-src 仓库加密相关 commit；OpenBSD Release Notes [EB/OL]. <https://www.openbsd.org/plus.html>；OpenBSD man pages ［A］
 
 <!-- DB_REF:openbsd.duckdb -->
 > **数据库引用（openbsd.duckdb）**：本子节对应 openbsd 代码仓库。
@@ -231,4 +231,3 @@ OpenBSD 自 2005 年起对 SCSI 中间层（SCSI midlayer）实施重大重构�
 - eurobsdcon2021-espie-debug[M].
 - eurobsdcon2024-hshoexer-confidential-computing[M].
 - eurobsdcon2025-espie-dpb[M].
-

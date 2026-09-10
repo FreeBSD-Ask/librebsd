@@ -11,7 +11,7 @@ volume: 第11卷-dragonflybsd的历史
 - bsd_commits.db 不记录邮件列表发言，批评原始发言须以 lists.dragonflybsd.org（DragonFly）、lists.freebsd.org（FreeBSD）、lkml.org（Linux 内核）等邮件列表归档为准。lists.dragonflybsd.org 完整归档 2003-2026 年间 kernel@/commits@/users@/bugs@ 邮件列表，l
 - dragonfly.duckdb dragonfly-src 仓库 contributors 表提供 Dillon/Wildner/Aaron LI/Huete Jimenez 等贡献者的 commit 量、首末 commit 时间跨度，kernel@ 邮件列表档案提供其设计发言与决策参与记录。dragonfly.duckdb 显示 Dillon 合并多个邮箱（<<dillon@dragonflybsd.o>
 - bsd_commits.db 显示 2022-2026 年间四仓库 commit 量对照：DragonFly 2024 年 277 条 vs FreeBSD 14541 条、OpenBSD 6512 条、NetBSD 5985 条——DragonFly 在资源约束下专注减法（vkernel 移除、HAMMER 1 维护化）〔待核：原文截断，后文待回源〕
-- bsd_commits.db 提供四仓库 2019-2026 年 commit 量对照量化数据：2019 年 freebsd-src = 14273、netbsd-src = 10227、openbsd-src = 7930、dragonfly-src = 1962；2024 年 freebsd-src = 14541、netbsd-src = 5985、openbsd-src = 6512、dr
+- freebsd.duckdb 提供四仓库 2019-2026 年 commit 量对照量化数据：2019 年 freebsd-src = 14273、netbsd-src = 10227、openbsd-src = 7930、dragonfly-src = 1962；2024 年 freebsd-src = 14541、netbsd-src = 5985、openbsd-src = 6512、dr
 
 ## 史料
 

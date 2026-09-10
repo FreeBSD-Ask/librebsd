@@ -4,7 +4,7 @@
 
   **要点**：**1991-2020 年** Linux 与 BSD 命运分化路径——Linux 从 386 PC 起步经企业市场崛起至移动端（Android）统治；BSD 从 4.3BSD-Reno 起步经 4.4BSD-Lite 至服务器、CDN、嵌入式领域深耕；两者形成 “广度胜出”（Linux）与 “深度保留”（BSD）的差异化路径。Linux vs BSD 命运分化路径对照如下：
   
-**史料**：[A] bsd_commits.db 查询 L7.3.1：2005/2020 年 BSD 四大 src 仓库与 Linux kernel 仓库 commit 量、贡献者数对比（资料数据库.db 既有 commit 分析）[C] TUHS 归档（<https://www.tuhs.org/Archive/Distributions/UCB/，>含 4.3BSD-Reno、4.4BSD-Lite 原始发行）[C] Linux 内核版本时间线（Linux 1.0 1994.3、2.0 1996.6；kernel.org 档案）[C] Android 与 Darwin 内核谱系公开技术文档（Android 基于 Linux；iOS/macOS 基于 XNU/Darwin 之 BSD 层）
+**史料**：[A] darwin.duckdb 查询 L7.3.1：2005/2020 年 BSD 四大 src 仓库与 Linux kernel 仓库 commit 量、贡献者数对比（资料数据库.db 既有 commit 分析）[C] TUHS 归档（<https://www.tuhs.org/Archive/Distributions/UCB/，>含 4.3BSD-Reno、4.4BSD-Lite 原始发行）[C] Linux 内核版本时间线（Linux 1.0 1994.3、2.0 1996.6；kernel.org 档案）[C] Android 与 Darwin 内核谱系公开技术文档（Android 基于 Linux；iOS/macOS 基于 XNU/Darwin 之 BSD 层）
 
 | 维度 | Linux 路径 | BSD 路径 |
 | -- | -------- | ------ |

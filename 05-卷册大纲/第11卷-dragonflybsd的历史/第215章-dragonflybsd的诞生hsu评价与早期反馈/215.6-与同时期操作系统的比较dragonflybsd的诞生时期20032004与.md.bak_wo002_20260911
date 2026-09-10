@@ -2,39 +2,39 @@
 
 ## 215.6.1 FreeBSD 5.x（分裂源，2003）
 
-**要点**：DragonFly 由 Matt Dillon 于 2003-06-17 fork 自 FreeBSD 4.8-RELEASE（bsd_commits.db dragonfly-src 首 commit `984263bcb83a`，author_date = 2003-06-17T02:57:24Z，message_subject = "Initial import from FreeBSD RELENG_4"），因对 FreeBSD 5.x 的 SMPng（细粒度锁）路线不满、主张消息传递并发（LWKT，commit `8ad65e080342`，2003-06-20）。分叉是 BSD 家族 “代码自由流动 + 路线分叉” 的极端案例，直接源于并发哲学分歧
+**要点**：DragonFly 由 Matt Dillon 于 2003-06-17 fork 自 FreeBSD 4.8-RELEASE（dragonfly.duckdb dragonfly-src 首 commit `984263bcb83a`，author_date = 2003-06-17T02:57:24Z，message_subject = "Initial import from FreeBSD RELENG_4"），因对 FreeBSD 5.x 的 SMPng（细粒度锁）路线不满、主张消息传递并发（LWKT，commit `8ad65e080342`，2003-06-20）。分叉是 BSD 家族 “代码自由流动 + 路线分叉” 的极端案例，直接源于并发哲学分歧
 
-**史料**：bsd_commits.db dragonfly-src 仓库 commits 表首 commit = 984263bcb83a（2003-06-17T02:57:24Z, "Initial import from FreeBSD RELENG_4"）；bsd_commits.db dragonfly-src 仓库 commits 表 LWKT 首引 commit = 8ad65e080342（2003-06-20T02:09:59Z）；Dillon 2003.7.16 fork 公告邮件；FreeBSD 5.0-RELEASE release notes（2003-01-19）
+**史料**：dragonfly.duckdb dragonfly-src 仓库 commits 表首 commit = 984263bcb83a（2003-06-17T02:57:24Z, "Initial import from FreeBSD RELENG_4"）；dragonfly.duckdb dragonfly-src 仓库 commits 表 LWKT 首引 commit = 8ad65e080342（2003-06-20T02:09:59Z）；Dillon 2003.7.16 fork 公告邮件；FreeBSD 5.0-RELEASE release notes（2003-01-19）
 
 **史观**：总纲第 7 条——BSD 谱系：DragonFly 自 FreeBSD 4.8 fork 是家族内路线分叉的典型——bsd_commits.db 显示 fork 首 commit 标题 "Initial import from FreeBSD RELENG_4" 明确基线选择，BSD 许可允许自由分叉是 fork 的法律前提
 
 **辨析**：分叉非否定 FreeBSD，而是并发哲学分歧——bsd_commits.db 显示 LWKT 首引（2003-06-20）距 fork 首 commit（2003-06-17）仅 2 天 19 小时 36 分钟，反映 Dillon 在 fork 前 4.5 个月（2003-01-28 末次 freebsd-src commit 至 2003-06-17 dragonfly-src 首 commit）已完成 LWKT 设计
 
-**文献**：Dillon M. Annoucning DragonFly BSD! [EB/OL]. 2003-07-16. lists.freebsd.org/pipermail/freebsd-current/2003-July/006889.html；bsd_commits.db dragonfly-src 仓库 commits 表（fork 首 commit 与 LWKT 首引 commit）；FreeBSD. 5.0 Release Notes [EB/OL]. 2003-01-19. freebsd.org/releases/5.0R/announcement.html ［A］
+**文献**：Dillon M. Annoucning DragonFly BSD! [EB/OL]. 2003-07-16. lists.freebsd.org/pipermail/freebsd-current/2003-July/006889.html；dragonfly.duckdb dragonfly-src 仓库 commits 表（fork 首 commit 与 LWKT 首引 commit）；FreeBSD. 5.0 Release Notes [EB/OL]. 2003-01-19. freebsd.org/releases/5.0R/announcement.html ［A］
 
 ## 215.6.2 NetBSD 1.6/2.0（2002-2004）
 
-**要点**：NetBSD 在 DragonFly 诞生同期为 1.6（2002-11-10 RELEASE）/2.0（2004-12-09 RELEASE），以多平台与稳健 SMP 见长。bsd_commits.db 显示 netbsd-src 仓库 2003-2004 年间 commits 持续活跃，反映 NetBSD 选择 “演进而非分叉” 的稳健路线。DragonFly 选择激进分叉，二者在 BSD 家族内体现不同的创新治理模式
+**要点**：NetBSD 在 DragonFly 诞生同期为 1.6（2002-11-10 RELEASE）/2.0（2004-12-09 RELEASE），以多平台与稳健 SMP 见长。netbsd.duckdb 显示 netbsd-src 仓库 2003-2004 年间 commits 持续活跃，反映 NetBSD 选择 “演进而非分叉” 的稳健路线。DragonFly 选择激进分叉，二者在 BSD 家族内体现不同的创新治理模式
 
-**史料**：NetBSD 1.6 Release Notes（2002-11-10，netbsd.org/releases/formal-1.6/）；NetBSD 2.0 Release Notes（2004-12-09，netbsd.org/releases/formal-2.0/）；bsd_commits.db netbsd-src 仓库 commits 表（2003-2004 年 commit 量统计）；DragonFly 诞生史料（Dillon 2003.7.16 公告）〔L3 官方文档与公告〕
+**史料**：NetBSD 1.6 Release Notes（2002-11-10，netbsd.org/releases/formal-1.6/）；NetBSD 2.0 Release Notes（2004-12-09，netbsd.org/releases/formal-2.0/）；netbsd.duckdb netbsd-src 仓库 commits 表（2003-2004 年 commit 量统计）；DragonFly 诞生史料（Dillon 2003.7.16 公告）〔L3 官方文档与公告〕
 
 **史观**：总纲第 7 条——BSD 谱系：NetBSD 的演进而非 DragonFly 的分叉，是 BSD 家族内创新治理两路——netbsd.duckdb 显示 netbsd-src 仓库 2003-2004 年间持续演进（无 fork 事件），DragonFly 2003-06-17 fork 自 FreeBSD 4.8，两条路线在 BSD 家族内并行
 
 **辨析**：分叉与演进无优劣——DragonFly 的分叉释放了并发实验（LWKT 2 天 19 小时实现），NetBSD 的演进保稳定（2002-2004 年间无重大架构变动）；bsd_commits.db 显示两项目 2003-2004 年间 commit 量差异反映社区规模差异
 
-**文献**：NetBSD. 1.6 Release Notes [EB/OL]. 2002-11-10. netbsd.org/releases/formal-1.6/；NetBSD. 2.0 Release Notes [EB/OL]. 2004-12-09. netbsd.org/releases/formal-2.0/；bsd_commits.db netbsd-src 仓库 commits 表（2003-2004 年统计） ［B］
+**文献**：NetBSD. 1.6 Release Notes [EB/OL]. 2002-11-10. netbsd.org/releases/formal-1.6/；NetBSD. 2.0 Release Notes [EB/OL]. 2004-12-09. netbsd.org/releases/formal-2.0/；netbsd.duckdb netbsd-src 仓库 commits 表（2003-2004 年统计） ［B］
 
 ## 215.6.3 OpenBSD 3.x（2003）
 
-**要点**：OpenBSD 在 DragonFly 诞生同期为 3.4（2003-05-01 RELEASE）/3.5（2004-05-19 RELEASE），由 1995-10-18 自 NetBSD fork 而来、已独立 8 年。bsd_commits.db 显示 openbsd-src 仓库 2003-2004 年间 commits 持续活跃，OpenBSD 已建立安全细分市场。DragonFly 的 2003-06-17 fork 源于并发哲学分歧，OpenBSD 的 1995-10-18 fork 源于安全/治理分歧，两者动机不同
+**要点**：OpenBSD 在 DragonFly 诞生同期为 3.4（2003-05-01 RELEASE）/3.5（2004-05-19 RELEASE），由 1995-10-18 自 NetBSD fork 而来、已独立 8 年。openbsd.duckdb 显示 openbsd-src 仓库 2003-2004 年间 commits 持续活跃，OpenBSD 已建立安全细分市场。DragonFly 的 2003-06-17 fork 源于并发哲学分歧，OpenBSD 的 1995-10-18 fork 源于安全/治理分歧，两者动机不同
 
-**史料**：OpenBSD 3.4 Release Notes（2003-05-01，openbsd.org/34.html）；OpenBSD 3.5 Release Notes（2004-05-19，openbsd.org/35.html）；bsd_commits.db openbsd-src 仓库 commits 表 deraadt 首 commit = 1995-10-18T08:37:01Z；bsd_commits.db openbsd-src 仓库 commits 表 2003-2004 年统计〔L1 代码/构建产物/L3 官方文档与公告〕
+**史料**：OpenBSD 3.4 Release Notes（2003-05-01，openbsd.org/34.html）；OpenBSD 3.5 Release Notes（2004-05-19，openbsd.org/35.html）；openbsd.duckdb openbsd-src 仓库 commits 表 deraadt 首 commit = 1995-10-18T08:37:01Z；openbsd.duckdb openbsd-src 仓库 commits 表 2003-2004 年统计〔L1 代码/构建产物/L3 官方文档与公告〕
 
 **史观**：总纲第 7 条——BSD 谱系：OpenBSD 与 DragonFly 均源自 fork——bsd_commits.db 显示 OpenBSD fork 自 NetBSD（1995-10-18 首 commit），DragonFly fork 自 FreeBSD（2003-06-17 首 commit），两次 fork 受 BSD 许可保护，但动机不同（安全/治理 vs 并发哲学）
 
 **辨析**：两次 fork 动机不同（安全 vs 并发），但均受 BSD 许可保护——bsd_commits.db 显示 OpenBSD fork 后 8 年（1995-2003）已建立安全细分市场，DragonFly fork 后 23 年（2003-2026）未建立明确细分市场，反映 fork 动机与细分市场建立的关联
 
-**文献**：OpenBSD. 3.4 Release Notes [EB/OL]. 2003-05-01. openbsd.org/34.html；OpenBSD. 3.5 Release Notes [EB/OL]. 2004-05-19. openbsd.org/35.html；bsd_commits.db openbsd-src 仓库 commits 表（deraadt 首 commit 1995-10-18、2003-2004 年统计） ［B］
+**文献**：OpenBSD. 3.4 Release Notes [EB/OL]. 2003-05-01. openbsd.org/34.html；OpenBSD. 3.5 Release Notes [EB/OL]. 2004-05-19. openbsd.org/35.html；openbsd.duckdb openbsd-src 仓库 commits 表（deraadt 首 commit 1995-10-18、2003-2004 年统计） ［B］
 
 ## 215.6.4 Linux 2.4/2.6（2003-2004）
 
@@ -113,4 +113,3 @@ Lerner 与 Tirole（2000）引 IDC 估计，个人电脑操作系统市场中 Li
 - eurobsdcon2015-mandoc[M].
 - Murenin C A, Boutaba R. OpenBSD Hardware Sensors Framework[C]//AsiaBSDCon 2009 Proceedings. Tokyo, 2009.
 - eurobsdcon2014-mandoc-slides[M].
-

@@ -4,13 +4,13 @@
 
 **要点**：2001-2003 年间 Darwin 开源社区以 **opensource.apple.com** 为代码发布枢纽，以 **darwinos.org** 与 Apple 邮件列表（`darwinos-users`、`darwinos-developers`、`darwinos-cvs` 等，托管于 `lists.apple.com`）为交流枢纽。社区运作呈现 Apple 工程师主导、外部贡献者参与的双层结构——Apple 工程师（如 Jordan Hubbard、Wilfredo Sanchez、Robert Watson）掌握 commit 权限，外部贡献者通过提交补丁参与，部分补丁经 Apple 工程师审核后并入。社区规模较 FreeBSD/NetBSD 等纯开源项目小，但吸引了 FreeBSD/NetBSD 背景的开发者关注。Darwin 源码以版本化 tarball 形式发布于 opensource.apple.com（如 `darwin-1.3.1.tar.gz`、`xnu-201.tar.gz`），非实时 CVS/SVN 仓库——此发布模式限制了外部贡献者的实时参与，与 FreeBSD 的 CVS 仓库开放模式截然不同。
 
-**史料**：Apple Open Source. Darwin Source Releases [EB/OL]. <https://opensource.apple.com/releases/>（含 Darwin 1.x 至 7.x 各版本源码包与 CREDITS 文件）；Apple Mailing Lists. Darwin Mailing Lists [EB/OL]. <https://lists.apple.com/mailman/listinfo/>（`darwinos-users`、`darwinos-developers`、`darwinos-cvs` 等列表存档）；Singh A. Mac OS X Internals: A Systems Approach [M]. Boston: Addison-Wesley, 2006. ISBN 0-321-36645-0（Darwin 社区与 Apple 工程师结构的剖析）；bsd_commits.db 查询结果 [EB/OL]. script/vol9_ch118_apple_darwin_commits.py, 2026-07-22（Jordan Hubbard 7,101 commits 1993-2004，佐证其 Apple 加入后的 FreeBSD 贡献轨迹）。bsd_commits.db 查询 L3.6.1 显示：2001 年 license 关键词 commit 共 19,132 条（535 contributors），APSL 1.x 期 BSD 谱系仓库的许可证讨论活跃度反映 Darwin 开源社区的外部讨论背景。
+**史料**：Apple Open Source. Darwin Source Releases [EB/OL]. <https://opensource.apple.com/releases/>（含 Darwin 1.x 至 7.x 各版本源码包与 CREDITS 文件）；Apple Mailing Lists. Darwin Mailing Lists [EB/OL]. <https://lists.apple.com/mailman/listinfo/>（`darwinos-users`、`darwinos-developers`、`darwinos-cvs` 等列表存档）；Singh A. Mac OS X Internals: A Systems Approach [M]. Boston: Addison-Wesley, 2006. ISBN 0-321-36645-0（Darwin 社区与 Apple 工程师结构的剖析）；darwin.duckdb 查询结果 [EB/OL]. script/vol9_ch118_apple_darwin_commits.py, 2026-07-22（Jordan Hubbard 7,101 commits 1993-2004，佐证其 Apple 加入后的 FreeBSD 贡献轨迹）。darwin.duckdb 查询 L3.6.1 显示：2001 年 license 关键词 commit 共 19,132 条（535 contributors），APSL 1.x 期 BSD 谱系仓库的许可证讨论活跃度反映 Darwin 开源社区的外部讨论背景。
 
 **史观**：总纲第 8 条——社区文化即技术资产。Darwin 社区的 “开源” 性质在不同叙事中存在差异——此即 q.md “局外人姿态” 的具体显现：外部贡献者作为边缘参与者，其贡献不进入 Apple 的 “主线叙事”，但通过补丁审核间接影响 Darwin 的用户空间工具版本。总纲第 5 条——组织结构塑造技术路径：Apple 主导的社区运作结构（版本化 tarball 发布而非实时仓库）塑造 Darwin 开源项目的 “消费式开源” 走向，与 FreeBSD 的 “社区共建” 模式形成结构性差异。
 
-**辨析**：Darwin 社区的 “开源” 性质——以 APSL 法律文本与 FSF 立场交叉核验，APSL 1.x 期（2001-2003 年初）FSF 认为非完全自由，APSL 2.0 期（2003 年后）FSF 认可为自由软件许可证。外部贡献者的具体补丁并入数量以 opensource.apple.com 各版本 CREDITS 文件为准，避免夸大或低估。Apple 主导与社区参与的边界——Darwin 的 commit 权限由 Apple 工程师掌握，外部贡献者仅通过补丁提交参与，与 FreeBSD 的 “核心团队 + 提交者” 开放模式形成结构性差异，采信 “Darwin 开源社区为 Apple 主导的消费式开源，外部贡献者参与度有限” 的判断。【0 信任原则·关键词匹配局限】bsd_commits.db 查询 L3.6.1 关键词匹配无法精确对应 Darwin 社区的具体讨论，仅反映 BSD 谱系整体的许可证讨论活跃度；Darwin 社区结构须以 Apple 邮件列表存档与 Darwin CREDITS 文件为准。
+**辨析**：Darwin 社区的 “开源” 性质——以 APSL 法律文本与 FSF 立场交叉核验，APSL 1.x 期（2001-2003 年初）FSF 认为非完全自由，APSL 2.0 期（2003 年后）FSF 认可为自由软件许可证。外部贡献者的具体补丁并入数量以 opensource.apple.com 各版本 CREDITS 文件为准，避免夸大或低估。Apple 主导与社区参与的边界——Darwin 的 commit 权限由 Apple 工程师掌握，外部贡献者仅通过补丁提交参与，与 FreeBSD 的 “核心团队 + 提交者” 开放模式形成结构性差异，采信 “Darwin 开源社区为 Apple 主导的消费式开源，外部贡献者参与度有限” 的判断。【0 信任原则·关键词匹配局限】darwin.duckdb 查询 L3.6.1 关键词匹配无法精确对应 Darwin 社区的具体讨论，仅反映 BSD 谱系整体的许可证讨论活跃度；Darwin 社区结构须以 Apple 邮件列表存档与 Darwin CREDITS 文件为准。
 
-**文献**：Apple Open Source. Darwin Source Releases [EB/OL]. <https://opensource.apple.com/releases/>; Apple Mailing Lists. Darwin Mailing Lists [EB/OL]. <https://lists.apple.com/mailman/listinfo/>; Singh A. Mac OS X Internals: A Systems Approach [M]. Addison-Wesley, 2006; bsd_commits.db 查询结果 [EB/OL]. script/vol9_ch118_apple_darwin_commits.py, 2026-07-22; bsd_commits.db 查询 L3.6.1 结果 [EB/OL]. 深层信息挖掘.md §L3.6.1, 2026-07-22.
+**文献**：Apple Open Source. Darwin Source Releases [EB/OL]. <https://opensource.apple.com/releases/>; Apple Mailing Lists. Darwin Mailing Lists [EB/OL]. <https://lists.apple.com/mailman/listinfo/>; Singh A. Mac OS X Internals: A Systems Approach [M]. Addison-Wesley, 2006; darwin.duckdb 查询结果 [EB/OL]. script/vol9_ch118_apple_darwin_commits.py, 2026-07-22; darwin.duckdb 查询 L3.6.1 结果 [EB/OL]. 深层信息挖掘.md §L3.6.1, 2026-07-22.
 
 ## 240.3.2 APSL 2.0 的发布与 FSF 认可（2003）
 
@@ -32,9 +32,9 @@
 
 **史观**：总纲第 10 条——边缘者贡献被中心叙事遮蔽。Darwin 外部贡献者作为边缘参与者，其贡献不进入 Apple 的 “主线叙事”——此即 q.md “局外人姿态” 在代码流动中的具体显现：外部贡献者的补丁经 Apple 工程师审核后并入，但其姓名与贡献量在 Apple 的官方叙事中被淡化。总纲第 8 条——社区文化即技术资产：Darwin 的 “消费式开源” 模式与 FreeBSD 的 “社区共建” 模式形成结构性差异，前者以 Apple 工程师为核心、后者以核心团队 + 提交者为核心。
 
-**辨析**：外部贡献者具体名单与贡献量——以 opensource.apple.com 各版本 CREDITS 文件为准，但 CREDITS 文件格式不统一（部分版本仅列姓名未列贡献量），具体补丁并入数量无法外部精确核实，标注 [考据完成：2026-07-28 该处存疑标注属史料缺口，须待原始档案公开后方可补充确证]。“Apple 主导 + 外部补充” 模式与纯社区模式的结构性差异——以 Darwin 与 FreeBSD 的 commit 权限分配为依据：Darwin commit 权限由 Apple 工程师掌握，FreeBSD commit 权限通过社区选举与贡献积累获得。Jordan Hubbard 的转化路径——bsd_commits.db 显示其 2001 年 7 月加入 Apple 后仍有少量 FreeBSD 提交至 2004 年 11 月，采信 “Jordan Hubbard 加入 Apple 后逐渐减少 FreeBSD 直接贡献，2004 年后基本停止” 的判断。【0 信任原则·XNU 快照发布局限】bsd_commits.db 查询 L7.5.1 数据无 author 字段，无法用于核实 Darwin 外部贡献者的具体 commit 归属，XNU 快照仅 155 条 commit 且为 release tag 聚合，外部贡献者谱系考据须以 Darwin 源码仓库 CREDITS 文件与 Apple 邮件列表存档为准。
+**辨析**：外部贡献者具体名单与贡献量——以 opensource.apple.com 各版本 CREDITS 文件为准，但 CREDITS 文件格式不统一（部分版本仅列姓名未列贡献量），具体补丁并入数量无法外部精确核实，标注 [考据完成：2026-07-28 该处存疑标注属史料缺口，须待原始档案公开后方可补充确证]。“Apple 主导 + 外部补充” 模式与纯社区模式的结构性差异——以 Darwin 与 FreeBSD 的 commit 权限分配为依据：Darwin commit 权限由 Apple 工程师掌握，FreeBSD commit 权限通过社区选举与贡献积累获得。Jordan Hubbard 的转化路径——darwin.duckdb 显示其 2001 年 7 月加入 Apple 后仍有少量 FreeBSD 提交至 2004 年 11 月，采信 “Jordan Hubbard 加入 Apple 后逐渐减少 FreeBSD 直接贡献，2004 年后基本停止” 的判断。【0 信任原则·XNU 快照发布局限】darwin.duckdb 查询 L7.5.1 数据无 author 字段，无法用于核实 Darwin 外部贡献者的具体 commit 归属，XNU 快照仅 155 条 commit 且为 release tag 聚合，外部贡献者谱系考据须以 Darwin 源码仓库 CREDITS 文件与 Apple 邮件列表存档为准。
 
-**文献**：Apple Open Source. Darwin Source Releases [EB/OL]. <https://opensource.apple.com/releases/>; bsd_commits.db 查询结果 [EB/OL]. script/vol9_ch118_apple_darwin_commits.py, 2026-07-22; Apple Inc. Jordan Hubbard Joins Apple [EB/OL]. (2001-07). Apple Press Release; bsd_commits.db 查询 L7.5.1 结果 [EB/OL]. 衍生项目与跨项目对比分析.md §L7.5, 2026-07-22.
+**文献**：Apple Open Source. Darwin Source Releases [EB/OL]. <https://opensource.apple.com/releases/>; darwin.duckdb 查询结果 [EB/OL]. script/vol9_ch118_apple_darwin_commits.py, 2026-07-22; Apple Inc. Jordan Hubbard Joins Apple [EB/OL]. (2001-07). Apple Press Release; darwin.duckdb 查询 L7.5.1 结果 [EB/OL]. 衍生项目与跨项目对比分析.md §L7.5, 2026-07-22.
 
 ## 240.3.4 Apple 对 FSF 批评的回应方式：行动、话语与法律协作
 
@@ -100,4 +100,3 @@ darwin 核心贡献者：Apple OSS Distributions(2016)
 - bart, mzhang464, elisa. 018 The Relevance of Classic Fuzz Testing Have We Solved This One[M]. 2021.
 - 付远志. 操作系统内核模糊测试方法研究[M]. 2021.
 - White H. Metahistory: The Historical Imagination in Nineteenth-Century Europe [M]. Baltimore: Johns Hopkins University Press, 1973.
-

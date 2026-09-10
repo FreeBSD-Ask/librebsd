@@ -10,25 +10,25 @@
     | vkernel 用户态内核 | 前瞻性主张 | `39619464950a` | 2006-10-22 | 2 年后实现 | 3 年 3 个月 |
     | HAMMER 文件系统 | 前瞻性主张 | `8750964d1997` | 2007-10-10T19:37:25Z | 3 年后实现 | 4 年 3 个月 |
     Dillon 在 2004 年采访中的 vkernel 与 HAMMER 主张属 “理论宣示先于实践落地” 的工程现实，反映 DragonFly 设计在实践中演进而非理论推导
-**史料**：ONLamp 2004 "DragonFly BSD: A Fork in the FreeBSD Road" 采访原文（archive.org 存档）；bsd_commits.db dragonfly-src 仓库 commits 表 commit 8ad65e080342（LWKT 首引 2003-06-20）、commit 39619464950a（vkernel 首引 2006-10-22）、commit 8750964d1997（HAMMER 首引 2007-10-10）；freebsd-hackers 邮件列表对采访的同期讨论
+**史料**：ONLamp 2004 "DragonFly BSD: A Fork in the FreeBSD Road" 采访原文（archive.org 存档）；dragonfly.duckdb dragonfly-src 仓库 commits 表 commit 8ad65e080342（LWKT 首引 2003-06-20）、commit 39619464950a（vkernel 首引 2006-10-22）、commit 8750964d1997（HAMMER 首引 2007-10-10）；freebsd-hackers 邮件列表对采访的同期讨论
 
 **史观**：总纲第 2 条——实践先于理论：DragonFly 设计在实践中演进而非理论推导——LWKT 在 2003 年 6 月 fork 后 3 天即实现（984263bcb83a → 8ad65e080342，2 天 19 小时 36 分钟），vkernel 与 HAMMER 则在 3-4 年后才落地，Dillon 在 2004 年采访中的前瞻性主张反映 “理论宣示先于实践落地” 的工程现实
 
-**辨析**：采访中 vkernel 与 HAMMER 主张与实际实现存在时间差——vkernel 至 2006-10-22 方首引（commit `39619464950a`，v1.6 系列），HAMMER 至 2007-10-10 方首引（commit `8750964d1997`，v1.12 系列），采访发表时二者均属设计意图而非已实现特性；vkernel 移除事件（2021 年 6.0 Release）须经 commit 770134 与 DragonFly BSD Digest 2021.1.8 报道交叉印证；HAMMER 与 ZFS 设计哲学差异（B+Tree vs merkle tree）须经 sys/vfs/hammer2/ 与 OpenZFS 源码逐文件对比核验 [存疑脚注：vkernel 移除事件须经 commit 770134 与 DragonFly BSD Digest 2021.1.8 报道交叉印证；HAMMER 与 ZFS 设计哲学差异须经源码逐文件对比核验，本轮考据未联网核验]。0 信任原则应用维度：author 字段可伪造（vkernel 与 HAMMER 首引 commit 作者归属须与 committer 字段交叉验证，Dillon 作为主要作者须与双邮箱合并统计）、tagger_date 与实际发布日期可能偏差（v1.6/v1.12 系列 tagger 须经 bsd_commits.db tags 表核验）、关键词匹配局限（vkernel/HAMMER 关键词搜索可能遗漏以具体函数名为关键词的 commit，须以 commit_files 表细分核验）。考据留痕至 `03-原始史料库/06-考据记录/20260730_jianyi缺口补全考据.md` 8ap 节
+**辨析**：采访中 vkernel 与 HAMMER 主张与实际实现存在时间差——vkernel 至 2006-10-22 方首引（commit `39619464950a`，v1.6 系列），HAMMER 至 2007-10-10 方首引（commit `8750964d1997`，v1.12 系列），采访发表时二者均属设计意图而非已实现特性；vkernel 移除事件（2021 年 6.0 Release）须经 commit 770134 与 DragonFly BSD Digest 2021.1.8 报道交叉印证；HAMMER 与 ZFS 设计哲学差异（B+Tree vs merkle tree）须经 sys/vfs/hammer2/ 与 OpenZFS 源码逐文件对比核验 [存疑脚注：vkernel 移除事件须经 commit 770134 与 DragonFly BSD Digest 2021.1.8 报道交叉印证；HAMMER 与 ZFS 设计哲学差异须经源码逐文件对比核验，本轮考据未联网核验]。0 信任原则应用维度：author 字段可伪造（vkernel 与 HAMMER 首引 commit 作者归属须与 committer 字段交叉验证，Dillon 作为主要作者须与双邮箱合并统计）、tagger_date 与实际发布日期可能偏差（v1.6/v1.12 系列 tagger 须经 openzfs.duckdb tags 表核验）、关键词匹配局限（vkernel/HAMMER 关键词搜索可能遗漏以具体函数名为关键词的 commit，须以 commit_files 表细分核验）。考据留痕至 `03-原始史料库/06-考据记录/20260730_jianyi缺口补全考据.md` 8ap 节
 
-**文献**：ONLamp. DragonFly BSD: A Fork in the FreeBSD Road [EB/OL]. 2004. 经 archive.org 核验；bsd_commits.db dragonfly-src 仓库 commits 表（LWKT/vkernel/HAMMER 首引 commit 序列） ［A］
+**文献**：ONLamp. DragonFly BSD: A Fork in the FreeBSD Road [EB/OL]. 2004. 经 archive.org 核验；dragonfly.duckdb dragonfly-src 仓库 commits 表（LWKT/vkernel/HAMMER 首引 commit 序列） ［A］
 
 ## 214.2.2 采访的传播与社区反应
 
-**要点**：ONLamp 采访经 Slashdot 转载后在 BSD 社区广泛传播，freebsd-hackers 邮件列表 2004 年出现多条讨论线程。社区反应呈两极——部分 FreeBSD committer（如 Jeffrey Hsu，bsd_commits.db 显示 Hsu 在 dragonfly-src 首 commit 为 2003-07-24，距 fork 公告仅 8 天，反映其早期支持立场）转向 DragonFly；FreeBSD Core Team 成员公开表态较少，维持沉默态度
+**要点**：ONLamp 采访经 Slashdot 转载后在 BSD 社区广泛传播，freebsd-hackers 邮件列表 2004 年出现多条讨论线程。社区反应呈两极——部分 FreeBSD committer（如 Jeffrey Hsu，dragonfly.duckdb 显示 Hsu 在 dragonfly-src 首 commit 为 2003-07-24，距 fork 公告仅 8 天，反映其早期支持立场）转向 DragonFly；FreeBSD Core Team 成员公开表态较少，维持沉默态度
 
-**史料**：Slashdot 2004 DragonFly BSD 讨论帖（slashdot.org/article/2004 年）；freebsd-hackers 邮件列表 2004 年 ONLamp 采访讨论线程；bsd_commits.db dragonfly-src 仓库 commits 表 Jeffrey Hsu 首 commit = 2003-07-24T05:21:48Z
+**史料**：Slashdot 2004 DragonFly BSD 讨论帖（slashdot.org/article/2004 年）；freebsd-hackers 邮件列表 2004 年 ONLamp 采访讨论线程；dragonfly.duckdb dragonfly-src 仓库 commits 表 Jeffrey Hsu 首 commit = 2003-07-24T05:21:48Z
 
 **史观**：总纲第 23 条——社区治理：fork 引发社区对治理模式的反思——Hsu 8 天内即转向 DragonFly 反映 5.x SMPng 路线在 committer 群体中已积累不满，ONLamp 采访加速了潜在不满的显性化
 
-**辨析**：社区反应的 “支持” 与 “反对” 比例难以量化——freebsd-hackers 邮件列表为主要讨论载体，但 IRC 日志与私人邮件不可考；bsd_commits.db 显示 2003-2004 年间 dragonfly-src 新增 committer 约 10 人（Hsu、Pandya、Okumoto 等），但同期 FreeBSD committer 群体未出现大规模流失，反映 fork 吸引力局限于少数开发者
+**辨析**：社区反应的 “支持” 与 “反对” 比例难以量化——freebsd-hackers 邮件列表为主要讨论载体，但 IRC 日志与私人邮件不可考；dragonfly.duckdb 显示 2003-2004 年间 dragonfly-src 新增 committer 约 10 人（Hsu、Pandya、Okumoto 等），但同期 FreeBSD committer 群体未出现大规模流失，反映 fork 吸引力局限于少数开发者
 
-**文献**：Slashdot. DragonFly BSD discussion [EB/OL]. 2004. slashdot.org；freebsd-hackers 邮件列表 2004 年归档；bsd_commits.db dragonfly-src 仓库 contributors 表（2003-2004 年新增 committer） ［A］
+**文献**：Slashdot. DragonFly BSD discussion [EB/OL]. 2004. slashdot.org；freebsd-hackers 邮件列表 2004 年归档；dragonfly.duckdb dragonfly-src 仓库 contributors 表（2003-2004 年新增 committer） ［A］
 
 ## 214.2.3 与同期 de Raadt 采访的对比
 
@@ -46,7 +46,7 @@
 
 **要点**：ONLamp 原文 URL 经 O'Reilly Media 多次网站迁移后失效，archive.org 保留 2004-2008 年间多个快照。不同引述版本的措辞差异主要源于 archive.org 快照时间点与网页 HTML 转码方式
 
-**史料**：ONLamp 原始 URL（onlamp.com/pub/a/bsd/2004/...，经 archive.org 核验）；archive.org 快照（web.archive.org/web/2004*/onlamp.com）；O'Reilly Media 内部存档（未公开）；bsd_commits.db dragonfly-src 仓库 commits 表与 commit_files 表（路径 `c:\Users\ykla\Documents\hibsd\03-原始史料库\01-代码仓库史料\01-数据库本体\bsd_commits.db`）；DragonFly BSD 邮件列表存档（**<https://www.dragonflybsd.org/mailinglists/**）；DragonFly> BSD Release Notes（**<https://www.dragonflybsd.org/releases/**）；Dillon> fork 公告（**<https://lists.freebsd.org/pipermail/freebsd-current/2003-July/006889.html**）；HAMMER> 设计 PDF（**<https://www.dragonflybsd.org/hammer/hammer.pdf**）——至少> 5 类来源构成三角验证
+**史料**：ONLamp 原始 URL（onlamp.com/pub/a/bsd/2004/...，经 archive.org 核验）；archive.org 快照（web.archive.org/web/2004*/onlamp.com）；O'Reilly Media 内部存档（未公开）；dragonfly.duckdb dragonfly-src 仓库 commits 表与 commit_files 表（路径 `c:\Users\ykla\Documents\hibsd\03-原始史料库\01-代码仓库史料\01-数据库本体\dragonfly.duckdb`）；DragonFly BSD 邮件列表存档（**<https://www.dragonflybsd.org/mailinglists/**）；DragonFly> BSD Release Notes（**<https://www.dragonflybsd.org/releases/**）；Dillon> fork 公告（**<https://lists.freebsd.org/pipermail/freebsd-current/2003-July/006889.html**）；HAMMER> 设计 PDF（**<https://www.dragonflybsd.org/hammer/hammer.pdf**）——至少> 5 类来源构成三角验证
 
 **史观**：总纲第 25 条——终结与延续：网络内容的链接腐烂是数字史料的常态——ONLamp 原文在 O'Reilly 网站多次迁移后原始 URL 失效，archive.org 快照成为唯一可考存档，反映 “延续” 须依赖第三方存档机构的边缘者贡献
 
@@ -114,4 +114,3 @@ Lerner 与 Tirole（2000）引 IDC 估计，个人电脑操作系统市场中 Li
 - eurobsdcon2015-mandoc[M].
 - Murenin C A, Boutaba R. OpenBSD Hardware Sensors Framework[C]//AsiaBSDCon 2009 Proceedings. Tokyo, 2009.
 - eurobsdcon2014-mandoc-slides[M].
-

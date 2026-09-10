@@ -18,7 +18,7 @@
 
 **要点**：4 条 DragonFly BSD 相关键传言自 2003-07 fork 事件起，至 2026 年 GitHub 仓库多开发者活动核验止，覆盖 fork 起因（与核心团队冲突）、技术生态（HAMMER 与 ZFS 关系、HAMMER2 高可用状态）、治理模式（单开发者项目定性）三大维度，构成 DragonFly BSD 传言生态从工程事实到社区叙事的形式主义化骨架；考证结论分布为真伪混杂 1 条（fork 起因）、史实失实 3 条（HAMMER ZFS 替代、HAMMER2 高可用、单开发者项目）
 
-**史料**：Dillon 2003-07-16 fork 公告（lists.freebsd.org/pipermail/freebsd-current/2003-July/006889.html）；DragonFly BSD 官方 history 页面（dragonflybsd.org/history/）；bsd_commits.db dragonfly-src 仓库 commit 元数据（首 commit `984263bcb83a`，2003-06-17T02:57:24Z）；HAMMER 设计文档 PDF（dragonflybsd.org/hammer/hammer.pdf，2008-06-21）；DragonFly 官方 HAMMER 页面（dragonflybsd.org/hammer/，"Future and TBD Features" 段落）；DragonFly BSD GitHub 仓库主页（github.com/DragonFlyBSD/DragonFlyBSD）；HAMMER2 设计文档 v1（2012-02-08）与 v6（2018-12-08）；Linux 伊甸园转载报道（2008-07-22）；腾讯新闻《FreeBSD 大败局》（2022-02-24） 〔L1 代码/构建产物；L2 即时通讯记录；L3 官方文档与公告；L4 事后叙述〕
+**史料**：Dillon 2003-07-16 fork 公告（lists.freebsd.org/pipermail/freebsd-current/2003-July/006889.html）；DragonFly BSD 官方 history 页面（dragonflybsd.org/history/）；dragonfly.duckdb dragonfly-src 仓库 commit 元数据（首 commit `984263bcb83a`，2003-06-17T02:57:24Z）；HAMMER 设计文档 PDF（dragonflybsd.org/hammer/hammer.pdf，2008-06-21）；DragonFly 官方 HAMMER 页面（dragonflybsd.org/hammer/，"Future and TBD Features" 段落）；DragonFly BSD GitHub 仓库主页（github.com/DragonFlyBSD/DragonFlyBSD）；HAMMER2 设计文档 v1（2012-02-08）与 v6（2018-12-08）；Linux 伊甸园转载报道（2008-07-22）；腾讯新闻《FreeBSD 大败局》（2022-02-24） 〔L1 代码/构建产物；L2 即时通讯记录；L3 官方文档与公告；L4 事后叙述〕
 
 **史观**：总纲 9 经验优先（Dillon fork 公告陈述的技术动机是 SMPng 路线在工程实践中的经验沉淀）、总纲 19 解释学循环（fork 起因传言须在 Dillon 自述与第三方转述之间往复印证）、总纲 15 文化即形式主义（HAMMER 是 ZFS 替代传言将特征相似性形式主义归因为竞争关系）、总纲 7 理论必须自反（本子节嵌入 “多开发者协作即善” 前理解须自觉呈现）、总纲 23 一切历史写作都是基于哲学设定的历史小说（“Dillon 是独裁型创始人” 等社区叙事是史家基于有限公开史料的形式主义建构）；含自反性声明
 
@@ -83,4 +83,3 @@ darwin 核心贡献者：Apple OSS Distributions(2016)。
 - 付远志. 操作系统内核模糊测试方法研究[M]. 2021.
 - White H. Metahistory: The Historical Imagination in Nineteenth-Century Europe [M]. Baltimore: Johns Hopkins University Press, 1973.
 - eurobsdcon2014-mandoc-paper[M].
-

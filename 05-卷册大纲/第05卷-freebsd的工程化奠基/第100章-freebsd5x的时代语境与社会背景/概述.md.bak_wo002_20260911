@@ -97,7 +97,7 @@ volume: 第05卷-freebsd的工程化奠基
 7. [L3] `doubts_standalone.doubts_to_resolve` — - 辨析：Sendmail 配置复杂性——sendmail.cf 的 M4 宏生成规则集复杂，管理员须理解地址重写规则（rewriting rules）方能维护（与 23.4.2 一致）；Postfix 1998 年发布（原名 VMaile
 8. [L3] `doubts_standalone.doubts_to_resolve` — - 要点：FreeBSD 作为数据库服务器的部署优势：（1）ZFS 文件系统于 2007-04-06 由 Pawel Jakub Dawidek 首次引入 freebsd-src（commit f0a75d27“Please welcome
 9. [L3] `doubts_standalone.doubts_to_resolve` — - 辨析：FreeBSD 7.0-RELEASE 发布日期确认为 2008-02-27（非 2007 年，亦非笼统的 2008 年 2 月）；ZFS 引入 freebsd-src 的代码级证据为 2007-04-06 commit f0a7
-10. [L3] `doubts_standalone.doubts_to_resolve` — | Lewis/Dillon PostgreSQL 基准 | “Greg Lewis 与 Matthew Dillon 的测试” | 经 bsd_commits.db 查询二者在 freebsd-src 与 freebsd-ports 中均
+10. [L3] `doubts_standalone.doubts_to_resolve` — | Lewis/Dillon PostgreSQL 基准 | “Greg Lewis 与 Matthew Dillon 的测试” | 经 freebsd.duckdb 查询二者在 freebsd-src 与 freebsd-ports 中均
 11. [L3] `doubts_standalone.doubts_to_resolve` — - 辨析：ULE 调度器首次引入时间经 bsd_commits.db 查询确认为 2003-01-26T05:23:15Z by Jeff Roberson（commit 35e6168f），原大纲“ULE 调度器（2003 年 Jeff
 12. [L3] `doubts_standalone.doubts_to_resolve` — | Lewis/Dillon PostgreSQL 基准 | “Greg Lewis 与 Matthew Dillon 等的 PostgreSQL on FreeBSD 性能基准测试” | 经 bsd_commits.db 查询二者在 fr
 
@@ -127,6 +127,3 @@ freebsd 代码仓库：从 1993 年到 2026 年，共 1294851 次提交，5671 �
 **数据库分析发现**（证据等级：L1，来源：`freebsd.duckdb.commits.freebsd`）
 
 freebsd 核心贡献者：Po-Chuan Hsieh(68595), Sunpoet Po-Chuan Hsieh(51033), Yuri Victorovich(29759), Jan Beich(22360), Martin Wilke(20341)
-
-
-

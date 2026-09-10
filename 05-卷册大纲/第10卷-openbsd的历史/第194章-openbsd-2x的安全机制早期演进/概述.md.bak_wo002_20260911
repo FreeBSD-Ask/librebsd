@@ -160,7 +160,7 @@ volume: 第10卷-openbsd的历史
 15. [L3] `original_sources.kaoju_records.source_verification#22` — ### 2.1 一手来源（数据库）
 
 - `bsd_commits.db` 的 commits 表（netbsd-src/openbsd-src/dragonfly-src 三仓库）
-- `bsd_commits.db` 的 tags 表（仅 dragonfly-src 可用，131 个 v* tag 含 tagger_date）
+- `dragonfly.duckdb` 的 tags 表（仅 dragonfly-src 可用，131 个 v* tag 含 tagger_date）
 - `bsd_commits.db` 的 contribu...
 
 > 另有 168 条 L1-L3 证据点未列出，详见内容包文件。
@@ -358,4 +358,3 @@ OpenBSD 自 2005 年起对 SCSI 中间层（SCSI midlayer）实施重大重构�
 - eurobsdcon2021-espie-debug[M].
 - eurobsdcon2024-hshoexer-confidential-computing[M].
 - eurobsdcon2025-espie-dpb[M].
-

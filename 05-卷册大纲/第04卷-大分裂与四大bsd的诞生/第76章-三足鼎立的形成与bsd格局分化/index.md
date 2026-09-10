@@ -61,7 +61,7 @@ volume: 第04卷-大分裂与四大bsd的诞生
 
 ## 文献
 
-- BSD 三项目 1995-1996 年发布历史；Salus"A Quarter Century of UNIX"；bsd_commits.db commits 表（freebsd-src/netbsd-src/openbsd-src 首条 commit 与 1995 年 commit 数统计） ［A］；本项目。bsd_commits.db 数据分析报告：宏观趋势统计 [R/OL]. 2026.
+- BSD 三项目 1995-1996 年发布历史；Salus"A Quarter Century of UNIX"；freebsd.duckdb commits 表（freebsd-src/netbsd-src/openbsd-src 首条 commit 与 1995 年 commit 数统计） ［A］；本项目。openbsd.duckdb 数据分析报告：宏观趋势统计 [R/OL]. 2026.
 
 ## 75.1.2 FreeBSD 的 x86 性能定位
 

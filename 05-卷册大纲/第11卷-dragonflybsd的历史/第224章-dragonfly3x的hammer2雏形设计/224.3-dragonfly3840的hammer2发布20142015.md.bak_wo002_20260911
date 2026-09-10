@@ -4,7 +4,7 @@
 
 **要点**：DragonFly 4.0（**2014.11.23** 发布）正式引入 HAMMER 2 文件系统，支持多卷、快照、去重、本地簇缓存等特性，采用 B-tree 写时复制与方框树（blockset tree）结构，是 Dillon 个人哲学的形式主义化实现。原叙事所称 “~~2016 年发布~~” 经 bsd_commits.db tags 表核验错误——v4.0.0 tag 的 tagger_date 为 2014-11-23T19:54:13-05:00。
 
-**史料**：DragonFly 4.0 release notes；HAMMER 2 设计文档；DragonFly 源码 `sys/vfs/hammer2/`；bsd_commits.db dragonfly-src 仓库 tags 表验证：v4.0.0 tag tagger_date = 2014-11-23T19:54:13-05:00（tagger: Justin C. Sherrill），target_commit_date = 2014-11-12T21:21:09+01:00（commit `9f7cee0f8e5c`），证实 4.0 发布日期为 **2014.11.23** 而非原叙事所称 2016 年 ［A］
+**史料**：DragonFly 4.0 release notes；HAMMER 2 设计文档；DragonFly 源码 `sys/vfs/hammer2/`；dragonfly.duckdb dragonfly-src 仓库 tags 表验证：v4.0.0 tag tagger_date = 2014-11-23T19:54:13-05:00（tagger: Justin C. Sherrill），target_commit_date = 2014-11-12T21:21:09+01:00（commit `9f7cee0f8e5c`），证实 4.0 发布日期为 **2014.11.23** 而非原叙事所称 2016 年 ［A］
 
 **史观**：总纲第 3 条——形式主义膨胀：HAMMER 2 是 Dillon 形式主义化的极致——将 “轻量级写时复制” 的哲学固化为完整的代码结构
 
@@ -30,23 +30,23 @@
 
 **史料**：bsd_commits.db dragonfly-src 仓库 commits 表 HAMMER2 关键词按年：2014 = 48、2015 = 86；bsd_commits.db freebsd-src 仓库 commits 表 OpenZFS 关键词按年：2014 = 0、2015 = 3；HAMMER 2、OpenZFS、btrfs 的技术比较文献；各文件系统的性能 benchmark；用户邮件列表讨论
 
-**史观**：总纲第 6 条——技术路线分化：bsd_commits.db 数据显示 HAMMER 2、OpenZFS、btrfs 是文件系统技术路线分化的典型——HAMMER 2 自研轻量级（2014-2015 年 134 条 HAMMER2 commit），OpenZFS 跨平台整合（FreeBSD 2014-2015 年仅 3 条 OpenZFS commit），btrfs Linux 主流生态
+**史观**：总纲第 6 条——技术路线分化：openzfs.duckdb 数据显示 HAMMER 2、OpenZFS、btrfs 是文件系统技术路线分化的典型——HAMMER 2 自研轻量级（2014-2015 年 134 条 HAMMER2 commit），OpenZFS 跨平台整合（FreeBSD 2014-2015 年仅 3 条 OpenZFS commit），btrfs Linux 主流生态
 
-**辨析**：bsd_commits.db 关键词搜索可能低估 OpenZFS 整合的实际 commit 量——FreeBSD 的 ZFS commit 可能以 ‘zfs’ 小写或具体函数名为关键词而未提及 ‘OpenZFS’ [考据完成：2026-07-28 该处存疑标注属史料缺口，须待原始档案公开后方可补充确证]；技术比较须结合使用场景——HAMMER 2 适合资源受限的 BSD 场景，OpenZFS 适合大规模存储，btrfs 适合 Linux 主流生态；btrfs 与 HAMMER 2 同为 CoW 文件系统，但 btrfs 由 Oracle 主导、社区广，HAMMER 2 由 Dillon 个人主导、社区小
+**辨析**：openzfs.duckdb 关键词搜索可能低估 OpenZFS 整合的实际 commit 量——FreeBSD 的 ZFS commit 可能以 ‘zfs’ 小写或具体函数名为关键词而未提及 ‘OpenZFS’ [考据完成：2026-07-28 该处存疑标注属史料缺口，须待原始档案公开后方可补充确证]；技术比较须结合使用场景——HAMMER 2 适合资源受限的 BSD 场景，OpenZFS 适合大规模存储，btrfs 适合 Linux 主流生态；btrfs 与 HAMMER 2 同为 CoW 文件系统，但 btrfs 由 Oracle 主导、社区广，HAMMER 2 由 Dillon 个人主导、社区小
 
 **文献**：bsd_commits.db dragonfly-src 仓库 commits 表（HAMMER2 关键词按年）；bsd_commits.db freebsd-src 仓库 commits 表（OpenZFS 关键词按年）；HAMMER 2、OpenZFS、btrfs 的官方文档；第三方性能 benchmark 报告；用户邮件列表档案 ［A］
 
 ## 224.3.4 HAMMER 2 设计文档与源码考据
 
-**要点**：bsd_commits.db dragonfly-src 仓库 commits 表提供 HAMMER 2 设计文档与源码的考据依据。v4.0.0（2014-11-23）至 v4.0.6（2015-06-11）共 6 个点版本，期间 sys/vfs/hammer2/ 目录 distinct commit 2014 年 29 个、2015 年 75 个，合计 104 个——反映 HAMMER 2 在 v4.0 发布后持续改进。bsd_commits.db 显示 2014 年 TOP 3 贡献者为 Wildner（<saw@online.de>，803 条）、Dillon（<dillon@apollo.backplane.com>，323 条）、Sepherosa（<sephe@dragonflybsd.org>，270 条）——HAMMER 2 关键算法的作者归属须以 commit log 核验，但根据 Dillon 个人主导的治理结构与 HAMMER 2 自研路径，主要作者应为 Dillon
+**要点**：dragonfly.duckdb dragonfly-src 仓库 commits 表提供 HAMMER 2 设计文档与源码的考据依据。v4.0.0（2014-11-23）至 v4.0.6（2015-06-11）共 6 个点版本，期间 sys/vfs/hammer2/ 目录 distinct commit 2014 年 29 个、2015 年 75 个，合计 104 个——反映 HAMMER 2 在 v4.0 发布后持续改进。dragonfly.duckdb 显示 2014 年 TOP 3 贡献者为 Wildner（<saw@online.de>，803 条）、Dillon（<dillon@apollo.backplane.com>，323 条）、Sepherosa（<sephe@dragonflybsd.org>，270 条）——HAMMER 2 关键算法的作者归属须以 commit log 核验，但根据 Dillon 个人主导的治理结构与 HAMMER 2 自研路径，主要作者应为 Dillon
 
-**史料**：bsd_commits.db dragonfly-src 仓库 commits 表（sys/vfs/hammer2/ 目录 2014-2015 年 distinct commit：2014 = 29、2015 = 75）；bsd_commits.db dragonfly-src 仓库 commits 表（2014 年 TOP 3 贡献者）；HAMMER 2 设计文档；DragonFly 源码 sys/vfs/hammer2/；kernel@ 邮件列表中 HAMMER 2 相关讨论
+**史料**：dragonfly.duckdb dragonfly-src 仓库 commits 表（sys/vfs/hammer2/ 目录 2014-2015 年 distinct commit：2014 = 29、2015 = 75）；dragonfly.duckdb dragonfly-src 仓库 commits 表（2014 年 TOP 3 贡献者）；HAMMER 2 设计文档；DragonFly 源码 sys/vfs/hammer2/；kernel@ 邮件列表中 HAMMER 2 相关讨论
 
 **史观**：总纲第 25 条——终结与延续：bsd_commits.db HAMMER 2 设计文档与源码考据是 0 信任原则在文件系统史研究中的应用——commit log 较设计文档更为可靠，设计文档可能未及时反映源码最新变化；总纲第 3 条——形式主义膨胀：bsd_commits.db 数据显示 HAMMER 2 在 v4.0 发布后持续改进（104 个 distinct commit），反映 Dillon 形式主义化的持续投入
 
-**辨析**：设计文档与源码可能有滞后——文档可能未及时反映源码最新变化，须对照 commit log 辨析；HAMMER 2 关键算法（如方框树 blockset tree、本地簇缓存）的作者归属须以 commit log 与 kernel@ 邮件列表核验 [考据完成：2026-07-28 该处存疑标注属史料缺口，须待原始档案公开后方可补充确证]；bsd_commits.db 显示 Dillon 2014 年 commit 量 323 条占全年 dragonfly-src 仓库总量（2205 条）约 14.6%，反映其作为项目创始人的持续主导；【数据缺口】bsd_commits.db 数据分析规划中 L2.3.1.hammer2（HAMMER2 特性引入周期）查询在卷章数据映射中已登记，但实际数据报告中未见对应查询结果——L2.3.1 系列仅执行 ZFS/Capsicum/bhyve/Clang/ARM64/RISC-V 六项关键词查询，未覆盖 hammer2；本节 HAMMER2 关键词 commit 数据来自 commits 表 message_subject 搜索，非 L2.3.1 查询结果，特性引入周期须待补充查询后量化
+**辨析**：设计文档与源码可能有滞后——文档可能未及时反映源码最新变化，须对照 commit log 辨析；HAMMER 2 关键算法（如方框树 blockset tree、本地簇缓存）的作者归属须以 commit log 与 kernel@ 邮件列表核验 [考据完成：2026-07-28 该处存疑标注属史料缺口，须待原始档案公开后方可补充确证]；dragonfly.duckdb 显示 Dillon 2014 年 commit 量 323 条占全年 dragonfly-src 仓库总量（2205 条）约 14.6%，反映其作为项目创始人的持续主导；【数据缺口】dragonfly.duckdb 数据分析规划中 L2.3.1.hammer2（HAMMER2 特性引入周期）查询在卷章数据映射中已登记，但实际数据报告中未见对应查询结果——L2.3.1 系列仅执行 ZFS/Capsicum/bhyve/Clang/ARM64/RISC-V 六项关键词查询，未覆盖 hammer2；本节 HAMMER2 关键词 commit 数据来自 commits 表 message_subject 搜索，非 L2.3.1 查询结果，特性引入周期须待补充查询后量化
 
-**文献**：bsd_commits.db dragonfly-src 仓库 commits 表（sys/vfs/hammer2/ 目录 distinct commit 与 TOP 3 贡献者）；HAMMER 2 设计文档；DragonFly 源码 sys/vfs/hammer2/；kernel@ 邮件列表档案 ［A］
+**文献**：dragonfly.duckdb dragonfly-src 仓库 commits 表（sys/vfs/hammer2/ 目录 distinct commit 与 TOP 3 贡献者）；HAMMER 2 设计文档；DragonFly 源码 sys/vfs/hammer2/；kernel@ 邮件列表档案 ［A］
 
 <!-- DB_REF:dragonfly.duckdb -->
 > **数据库引用（dragonfly.duckdb）**：本子节对应 dragonfly 代码仓库。

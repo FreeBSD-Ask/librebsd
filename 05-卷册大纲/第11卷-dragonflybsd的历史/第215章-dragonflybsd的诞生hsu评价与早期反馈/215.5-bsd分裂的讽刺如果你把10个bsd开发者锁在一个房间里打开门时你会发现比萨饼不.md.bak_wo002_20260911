@@ -16,7 +16,7 @@
 
 **要点**：比萨饼隐喻被广泛引用以说明 BSD 频繁分裂的特性，成为 BSD 社区自我调侃的经典话语。Linux 社区也常引用此隐喻以对比 Linux 内核的统一性。bsd_commits.db 显示 DragonFly fork（2003-06-17）后该隐喻在 dragonfly.kernel 邮件列表与 Slashdot DragonFly 讨论帖中多次出现
 
-**史料**：Slashdot、Reddit r/BSD、Hacker News 等社区讨论；bsd_commits.db dragonfly-src 仓库 commits 表 commit message 中偶有引用（如 2003-2006 年间 Dillon 或其他 committer 在 commit message 中提及）；技术博客引用记录〔L1 代码/构建产物/L2 即时通讯记录/L4 事后叙述〕
+**史料**：Slashdot、Reddit r/BSD、Hacker News 等社区讨论；dragonfly.duckdb dragonfly-src 仓库 commits 表 commit message 中偶有引用（如 2003-2006 年间 Dillon 或其他 committer 在 commit message 中提及）；技术博客引用记录〔L1 代码/构建产物/L2 即时通讯记录/L4 事后叙述〕
 
 **史观**：总纲第 4 条——分离与聚合：隐喻反映 BSD 分裂与 Linux 聚合的对比——bsd_commits.db 显示 BSD 家族 1993-2003 年间产生 3 次内核 fork（NetBSD、OpenBSD、DragonFly），Linux 内核同期无成功 fork，比萨饼隐喻在 2003 年 DragonFly fork 后传播达到高峰
 
@@ -117,4 +117,3 @@ Lerner 与 Tirole（2000）引 IDC 估计，个人电脑操作系统市场中 Li
 - eurobsdcon2015-mandoc[M].
 - Murenin C A, Boutaba R. OpenBSD Hardware Sensors Framework[C]//AsiaBSDCon 2009 Proceedings. Tokyo, 2009.
 - eurobsdcon2014-mandoc-slides[M].
-

@@ -2,13 +2,13 @@
 
 ## 217.3.1 Linux 与 illumos 阵营的质疑内容
 
-**要点**：bsd_commits.db 显示 DragonFly fork 后 23 年间（2003-2026）LWKT 消息传递、HAMMER/HAMMER2、vkernel 三大核心创新均未被 Linux/illumos 主流内核采纳——Linux 选择 BKL 逐步消除（2.6 系列 2003-2011）+ ext4/btrfs + KVM 路线，illumos 选择细粒度锁 + ZFS + Zones 路线。Linux/illumos 社区对 DragonFly fork 必要性的质疑基于该事实：DragonFly 技术产出未对业界产生显著影响，fork 的边际收益难以证明其分裂成本
+**要点**：illumos-gate.duckdb 显示 DragonFly fork 后 23 年间（2003-2026）LWKT 消息传递、HAMMER/HAMMER2、vkernel 三大核心创新均未被 Linux/illumos 主流内核采纳——Linux 选择 BKL 逐步消除（2.6 系列 2003-2011）+ ext4/btrfs + KVM 路线，illumos 选择细粒度锁 + ZFS + Zones 路线。Linux/illumos 社区对 DragonFly fork 必要性的质疑基于该事实：DragonFly 技术产出未对业界产生显著影响，fork 的边际收益难以证明其分裂成本
 
 **史料**：bsd_commits.db dragonfly-src 仓库 commits 表与 commit_files 表（LWKT/HAMMER/HAMMER2/vkernel 首引 commit 序列）；Linux 2.6 内核变更日志（kernelnewbies.org/LinuxVersions）；illumos 源码仓库（github.com/illumos/illumos-gate）；Slashdot/LWN/Hacker News 讨论（2003-2007 年间 DragonFly fork 讨论原始帖[考据完成：2026-07-28 经穷尽联网考据，上述史料清单为已知公开来源汇总，部分原始档案未公开数字化或须档案馆藏地现场核验，属史料缺口，须待原始档案公开后方可补充确证]）〔L1 代码/构建产物/L2 即时通讯记录/L3 官方文档与公告〕
 
 **史观**：分离与聚合：外部视角对分裂的批评——Linux/illumos 社区以“未被采纳”标准评判 DragonFly fork 价值，反映业界主流以“技术影响力”为分裂正当性量度的实用主义史观；该标准与第 14 章边缘者贡献史观冲突——边缘者贡献不以业界采纳为唯一量度，DragonFly 23 年持续维护与 HAMMER2 生产可用本身即 fork 的内在价值
 
-**辨析**：外部批评是否了解 BSD 内部政治须区分——Linux/illumos 社区对 Dillon 与 FreeBSD Core Team 5.x 路线分歧的内部政治了解有限，其批评多基于“BSD 阵营整体竞争力”的外部视角；bsd_commits.db 不能直接提供 Slashdot/LWN/Hacker News 评论数据，正式撰写时须以原始帖 URL 与时间戳追溯核验，避免二手转述变形
+**辨析**：外部批评是否了解 BSD 内部政治须区分——Linux/illumos 社区对 Dillon 与 FreeBSD Core Team 5.x 路线分歧的内部政治了解有限，其批评多基于“BSD 阵营整体竞争力”的外部视角；illumos-gate.duckdb 不能直接提供 Slashdot/LWN/Hacker News 评论数据，正式撰写时须以原始帖 URL 与时间戳追溯核验，避免二手转述变形
 
 **文献**：bsd_commits.db dragonfly-src 仓库 commits 表与 commit_files 表（核心子系统首引 commit）；Linux 2.6 内核变更日志 [EB/OL]. <https://kernelnewbies.org/LinuxVersions>；illumos source repository [EB/OL]. <https://github.com/illumos/illumos-gate> ［A］
 
@@ -16,13 +16,13 @@
 
 **要点**：bsd_commits.db 显示 DragonFly fork 后 FreeBSD 5.x 路线继续推进——FreeBSD 5.0（2003-01-19 release）、5.1（2003-06-09 release，DragonFly fork 前 8 天）、5.2（2004-01-09 release）、5.3（2004-11-06 release）至 5.5（2006-05-25 release）持续 SMPng 重构，6.x 系列（2005-11-04 起）继承 5.x SMPng 成果。FreeBSD Core Team 对撤权决定既辩护（Dillon 行为违反社区规范）亦批评（撤权导致 fork 不必要）的两种声音散见 freebsd-hackers 邮件列表
 
-**史料**：bsd_commits.db freebsd-src 仓库 tags 表（FreeBSD 5.0-5.5 release tagger_date 序列）；FreeBSD Core Team 公开声明（freebsd.org/administration/）；freebsd-hackers 邮件列表存档（lists.freebsd.org/archives/freebsd-hackers/，2003-2007 年间 fork 讨论线程）
+**史料**：freebsd.duckdb freebsd-src 仓库 tags 表（FreeBSD 5.0-5.5 release tagger_date 序列）；FreeBSD Core Team 公开声明（freebsd.org/administration/）；freebsd-hackers 邮件列表存档（lists.freebsd.org/archives/freebsd-hackers/，2003-2007 年间 fork 讨论线程）
 
 **史观**：社区治理：治理决策的内部争议——FreeBSD Core Team 撤权决定是 5.x 路线分歧升级为治理冲突的结果，bsd_commits.db 显示撤权后 FreeBSD 继续 5.x 路线（5.1-5.5 系列持续 3 年），证明 Core Team 路线未因 fork 动摇；Core Team 内部对撤权必要性的分歧反映集体治理决策的非一致性
 
 **辨析**：Core Team 内部分歧的程度因决议保密而难以完全重建——FreeBSD Core Team 决议记录（freebsd.org/administration/core/）公开但内部审议过程保密，bsd_commits.db 不能提供审议过程数据；正式撰写时须以 freebsd-hackers 邮件列表 2003 年 6-7 月间 Core Team 成员发言统计核验辩护/批评两派的具体人物与论据
 
-**文献**：bsd_commits.db freebsd-src 仓库 tags 表（FreeBSD 5.0-5.5 release 序列）；FreeBSD Core Team. Resolutions [EB/OL]. <https://www.freebsd.org/administration/core/>；freebsd-hackers mailing list [EB/OL]. <https://lists.freebsd.org/archives/freebsd-hackers/> ［A］
+**文献**：freebsd.duckdb freebsd-src 仓库 tags 表（FreeBSD 5.0-5.5 release 序列）；FreeBSD Core Team. Resolutions [EB/OL]. <https://www.freebsd.org/administration/core/>；freebsd-hackers mailing list [EB/OL]. <https://lists.freebsd.org/archives/freebsd-hackers/> ［A］
 
 ## 217.3.3 与 NetBSD 分裂批评的横向比较
 
@@ -108,4 +108,3 @@ Lerner 与 Tirole（2000）引 IDC 估计，个人电脑操作系统市场中 Li
 - eurobsdcon2015-mandoc[M].
 - Murenin C A, Boutaba R. OpenBSD Hardware Sensors Framework[C]//AsiaBSDCon 2009 Proceedings. Tokyo, 2009.
 - eurobsdcon2014-mandoc-slides[M].
-
