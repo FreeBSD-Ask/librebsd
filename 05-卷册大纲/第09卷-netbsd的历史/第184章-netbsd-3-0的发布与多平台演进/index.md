@@ -27,5 +27,11 @@ volume: 第09卷-netbsd的历史
 
 ## 文献
 
-- NetBSD 2.1 Release Notes [EB/OL]. (2005-11-14). <https://www.netbsd.org/releases/formal-2.1.html>（原始链接失效，互联网档案馆无存档）；NetBSD 3.0 Release Notes [EB/OL]. (2005-12-23). <https://www.netbsd.org/releases/formal-3.0.html>（原始链接失效，互联网档案馆无存档）；NetBSD Foundation 2005-2007 Annual Reports [EB/OL]. <https://www.NetBSD.org/foundation/reports/>；netbsd.duckdb netbsd-src 仓库（commits 表，repo_name ='netbsd-src'，message_subject LIKE '%Welcome to NetBSD 3.0%’）；netbsd.duckdb 数据分析·宏观趋势统计.md §L1.1.1（netbsd-src 2005-2007 年度 commit 量）、§L2.3.1.smp（netbsd-src SMP 相关 commit 2005-2007） ［A］<!-- DB_REF:netbsd.duckdb -->> **数据库引用（netbsd.duckdb）**：本子节对应 netbsd 代码仓库。> 2005-2007 年间：289,144 次提交。> 仓库总览：1,999,412 次提交，1,545 位贡献者（contributors 表行数，1992-07-13 至 2026-08-24）。
-- NetBSD Foundation 2003-2007 Annual Reports [EB/OL]. <https://www.NetBSD.org/foundation/reports/>；release-engineering 邮件列表 [EB/OL]. <https://mail-index.netbsd.org/release-engineering/>；Jeff Rizzo、Soren Jacobsen releng commit 记录 [DB/OL]. netbsd.duckdb netbsd-src 仓库；netbsd.duckdb 数据分析·宏观趋势统计.md §L1.1.1（netbsd-src 2003-2007 年度 commit 量）、§L1.4.1（netbsd-src tags 表为空，分支命名约定差异） ［A］<!-- DB_REF:netbsd.duckdb -->> **数据库引用（netbsd.duckdb）**：本子节对应 netbsd 代码仓库。> 1993-2026 年间：1,999,408 次提交。> 仓库总览：1,999,412 次提交，1,545 位贡献者（contributors 表行数，1992-07-13 至 2026-08-24）。
+- NetBSD 2.1 Release Notes [EB/OL]. (2005-11-14). <https://www.netbsd.org/releases/formal-2.1.html>（原始链接失效，互联网档案馆无存档）；NetBSD 3.0 Release Notes [EB/OL]. (2005-12-23). <https://www.netbsd.org/releases/formal-3.0.html>（原始链接失效，互联网档案馆无存档）；NetBSD Foundation 2005-2007 Annual Reports [EB/OL]. <https://www.NetBSD.org/foundation/reports/>；netbsd.duckdb netbsd-src 仓库（commits 表，repo_name ='netbsd-src'，message_subject LIKE '%Welcome to NetBSD 3.0%’）；netbsd.duckdb 数据分析·宏观趋势统计.md §L1.1.1（netbsd-src 2005-2007 年度 commit 量）、§L2.3.1.smp（netbsd-src SMP 相关 commit 2005-2007） ［A］
+
+<!-- DB_REF:netbsd.duckdb -->
+> **数据库引用（netbsd.duckdb）**：本子节对应 netbsd 代码仓库。> 2005-2007 年间：289,144 次提交。> 仓库总览：1,999,412 次提交，1,545 位贡献者（contributors 表行数，1992-07-13 至 2026-08-24）。
+- NetBSD Foundation 2003-2007 Annual Reports [EB/OL]. <https://www.NetBSD.org/foundation/reports/>；release-engineering 邮件列表 [EB/OL]. <https://mail-index.netbsd.org/release-engineering/>；Jeff Rizzo、Soren Jacobsen releng commit 记录 [DB/OL]. netbsd.duckdb netbsd-src 仓库；netbsd.duckdb 数据分析·宏观趋势统计.md §L1.1.1（netbsd-src 2003-2007 年度 commit 量）、§L1.4.1（netbsd-src tags 表为空，分支命名约定差异） ［A］
+
+<!-- DB_REF:netbsd.duckdb -->
+> **数据库引用（netbsd.duckdb）**：本子节对应 netbsd 代码仓库。> 1993-2026 年间：1,999,408 次提交。> 仓库总览：1,999,412 次提交，1,545 位贡献者（contributors 表行数，1992-07-13 至 2026-08-24）。

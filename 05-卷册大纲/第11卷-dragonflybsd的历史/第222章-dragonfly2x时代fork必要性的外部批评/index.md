@@ -29,6 +29,12 @@ volume: 第11卷-dragonflybsd的历史
 
 ## 文献
 
-- 原材料/哲学/项目统摄史观/第 25 章.md（总纲第 6、8 条）；dragonfly.duckdb dragonfly-src 仓库 commits/contributors 表（2.x 时代客观数据） ［A］<!-- DB_REF:dragonfly.duckdb -->> **数据库引用（dragonfly.duckdb）**：本子节对应 dragonfly 代码仓库。> 2003-2026 年间：656,206 次提交。> 仓库总览：656,206 次提交，535 位贡献者，2003-06-17 至 2026-08-18。
+- 原材料/哲学/项目统摄史观/第 25 章.md（总纲第 6、8 条）；dragonfly.duckdb dragonfly-src 仓库 commits/contributors 表（2.x 时代客观数据） ［A］
+
+<!-- DB_REF:dragonfly.duckdb -->
+> **数据库引用（dragonfly.duckdb）**：本子节对应 dragonfly 代码仓库。> 2003-2026 年间：656,206 次提交。> 仓库总览：656,206 次提交，535 位贡献者，2003-06-17 至 2026-08-18。
 - DragonFly commit log；kernel@ 邮件列表档案；贡献者个人简历 ［A］## 史料考据补充（2026-08-04 任务3 联网核验）> 主题：DragonFly 特性
-- 原材料/哲学/项目统摄史观/第 25 章.md（总纲第 6、8 条）；dragonfly.duckdb dragonfly-src 仓库 contributors 表；DragonFly pkgsrc 采纳公告；DragonFly 2.10 release notes ［A］---<!-- DB_REF:dragonfly.duckdb -->> **数据库引用（dragonfly.duckdb）**：本子节对应 dragonfly 代码仓库。> 2003-2026 年间：656,206 次提交。> 仓库总览：656,206 次提交，535 位贡献者，2003-06-17 至 2026-08-18。
+- 原材料/哲学/项目统摄史观/第 25 章.md（总纲第 6、8 条）；dragonfly.duckdb dragonfly-src 仓库 contributors 表；DragonFly pkgsrc 采纳公告；DragonFly 2.10 release notes ［A］---
+
+<!-- DB_REF:dragonfly.duckdb -->
+> **数据库引用（dragonfly.duckdb）**：本子节对应 dragonfly 代码仓库。> 2003-2026 年间：656,206 次提交。> 仓库总览：656,206 次提交，535 位贡献者，2003-06-17 至 2026-08-18。

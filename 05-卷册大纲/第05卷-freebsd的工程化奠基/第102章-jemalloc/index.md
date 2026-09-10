@@ -35,12 +35,39 @@ volume: 第05卷-freebsd的工程化奠基
 
 ## 文献
 
-- jemalloc source code commit log (github.com/jemalloc)；Evans (2006) BSDCan paper；Mozilla Bugzilla jemalloc tracking ［A］；统计分析报告：描述性统计.md SubTask 2.1 [R/OL]. 2026-07-27. 文件路径：`c:\Users\ykla\Documents\hibsd\03-原始史料库\01-代码仓库史料\01-数据库本体\统计分析\描述性统计.md`；SQL 查询：`SELECT COUNT(*) FROM commits WHERE repo_name='freebsd-src'`. freebsd.duckdb [DB/OL]. 查询日期：2026-07-27 [考据脚注：C-03 freebsd-src 444,203 commits 经 `script/phase2_inferential.py` 执行结果与 `phase2_results.json` 结构化结果交叉验证。]<!-- DB_REF:freebsd.duckdb -->> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 1996-2010 年间：482,545 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
-- Evans (2006) BSDCan paper；Berger et al. (2000) Hoard ACM SIGPLAN Notices 35(11)；Evans, J. jemalloc design notes (2005-2006) ［B］<!-- DB_REF:freebsd.duckdb -->> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 1996-2010 年间：482,545 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
-- FreeBSD 7.0 src/lib/libc/stdlib/ commit log；freebsd-hackers jemalloc integration threads (2007-2008)；Kamp, P.-H. phkmalloc retirement discussion (2007) ［A］<!-- DB_REF:freebsd.duckdb -->> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 1996-2010 年间：482,545 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
-- jemalloc contributors list (github.com/jemalloc/jemalloc)；Facebook jemalloc contributions (github.com/jemalloc/jemalloc/graphs/contributors)；FreeBSD src committers jemalloc patches (freebsd.org) ［A］<!-- DB_REF:freebsd.duckdb -->> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 1996-2010 年间：482,545 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
-- freebsd-hackers jemalloc criticism threads (2008-2010)；Evans, J. jemalloc response to criticism (personal blog)；Mozilla Bugzilla jemalloc defect tracking ［A］<!-- DB_REF:freebsd.duckdb -->> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 1996-2010 年间：482,545 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
-- Evans 2006/2011; jemalloc.net ［A］<!-- DB_REF:freebsd.duckdb -->> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 1996-2010 年间：482,545 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
-- Drepper, U. glibc malloc maintainer statements (sourceware.org)；freebsd-hackers Linux jemalloc adoption threads (2009-2011)；Evans, J. jemalloc on Linux reflection (blog, 2011) ［A］<!-- DB_REF:freebsd.duckdb -->> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 1996-2010 年间：482,545 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
-- jemalloc contributors list (github.com/jemalloc/jemalloc)；FreeBSD committers jemalloc patches (freebsd.org)；Facebook jemalloc contributions (github.com/jemalloc) ［A］<!-- DB_REF:freebsd.duckdb -->> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 1996-2010 年间：482,545 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
-- Phoronix malloc allocator benchmarks (2008-2011)；Evans, J. jemalloc performance data (BSDCan 2006 paper)；Ghemawat, S. TCMalloc performance comparison (2004)[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]### 史观映射> jemalloc 是 BSD 代码散逸的教科书案例——Jason Evans 写出的 arena 分配器被 Facebook 和 Mozilla 拿走，BSDL 允许他们这样做，也允许他们不回馈。但更深的散逸不在代码，在话语：Evans 自己承认 jemalloc 在 Linux 上相对 glibc ptmalloc 的优势“不足以构成替换理由”，Linux 社区评论者普遍认为“除非系统分配器真的糟透了，否则没理由换”——一个技术优秀的分配器，就这样被“够用就行”的保守态度挡在了 glibc 的墙外---## 第 43.10 不同时期人员的采访录（详见 [采访录.md](采访录.md)）## 第 43.11 节 媒体反响与社区舆论（详见 [媒体反响与社区舆论.md](媒体反响与社区舆论.md)）[^doubt-resolved-469]: 据 Mac OS X Internals A Systems Approach (Amit Singh（阿米特·辛格）)  (未署名) 消解[^doubt-resolved-470]: 据 Mac OS X Internals A Systems Approach (Amit Singh)  (未署名) 消解<!-- DB_REF:freebsd.duckdb -->> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 1996-2010 年间：482,545 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
+- jemalloc source code commit log (github.com/jemalloc)；Evans (2006) BSDCan paper；Mozilla Bugzilla jemalloc tracking ［A］；统计分析报告：描述性统计.md SubTask 2.1 [R/OL]. 2026-07-27. 文件路径：`c:\Users\ykla\Documents\hibsd\03-原始史料库\01-代码仓库史料\01-数据库本体\统计分析\描述性统计.md`；SQL 查询：`SELECT COUNT(*) FROM commits WHERE repo_name='freebsd-src'`. freebsd.duckdb [DB/OL]. 查询日期：2026-07-27 [考据脚注：C-03 freebsd-src 444,203 commits 经 `script/phase2_inferential.py` 执行结果与 `phase2_results.json` 结构化结果交叉验证。]
+
+<!-- DB_REF:freebsd.duckdb -->
+> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 1996-2010 年间：482,545 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
+- Evans (2006) BSDCan paper；Berger et al. (2000) Hoard ACM SIGPLAN Notices 35(11)；Evans, J. jemalloc design notes (2005-2006) ［B］
+
+<!-- DB_REF:freebsd.duckdb -->
+> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 1996-2010 年间：482,545 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
+- FreeBSD 7.0 src/lib/libc/stdlib/ commit log；freebsd-hackers jemalloc integration threads (2007-2008)；Kamp, P.-H. phkmalloc retirement discussion (2007) ［A］
+
+<!-- DB_REF:freebsd.duckdb -->
+> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 1996-2010 年间：482,545 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
+- jemalloc contributors list (github.com/jemalloc/jemalloc)；Facebook jemalloc contributions (github.com/jemalloc/jemalloc/graphs/contributors)；FreeBSD src committers jemalloc patches (freebsd.org) ［A］
+
+<!-- DB_REF:freebsd.duckdb -->
+> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 1996-2010 年间：482,545 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
+- freebsd-hackers jemalloc criticism threads (2008-2010)；Evans, J. jemalloc response to criticism (personal blog)；Mozilla Bugzilla jemalloc defect tracking ［A］
+
+<!-- DB_REF:freebsd.duckdb -->
+> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 1996-2010 年间：482,545 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
+- Evans 2006/2011; jemalloc.net ［A］
+
+<!-- DB_REF:freebsd.duckdb -->
+> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 1996-2010 年间：482,545 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
+- Drepper, U. glibc malloc maintainer statements (sourceware.org)；freebsd-hackers Linux jemalloc adoption threads (2009-2011)；Evans, J. jemalloc on Linux reflection (blog, 2011) ［A］
+
+<!-- DB_REF:freebsd.duckdb -->
+> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 1996-2010 年间：482,545 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
+- jemalloc contributors list (github.com/jemalloc/jemalloc)；FreeBSD committers jemalloc patches (freebsd.org)；Facebook jemalloc contributions (github.com/jemalloc) ［A］
+
+<!-- DB_REF:freebsd.duckdb -->
+> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 1996-2010 年间：482,545 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
+- Phoronix malloc allocator benchmarks (2008-2011)；Evans, J. jemalloc performance data (BSDCan 2006 paper)；Ghemawat, S. TCMalloc performance comparison (2004)[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]### 史观映射> jemalloc 是 BSD 代码散逸的教科书案例——Jason Evans 写出的 arena 分配器被 Facebook 和 Mozilla 拿走，BSDL 允许他们这样做，也允许他们不回馈。但更深的散逸不在代码，在话语：Evans 自己承认 jemalloc 在 Linux 上相对 glibc ptmalloc 的优势“不足以构成替换理由”，Linux 社区评论者普遍认为“除非系统分配器真的糟透了，否则没理由换”——一个技术优秀的分配器，就这样被“够用就行”的保守态度挡在了 glibc 的墙外---## 第 43.10 不同时期人员的采访录（详见 [采访录.md](采访录.md)）## 第 43.11 节 媒体反响与社区舆论（详见 [媒体反响与社区舆论.md](媒体反响与社区舆论.md)）[^doubt-resolved-469]: 据 Mac OS X Internals A Systems Approach (Amit Singh（阿米特·辛格）)  (未署名) 消解[^doubt-resolved-470]: 据 Mac OS X Internals A Systems Approach (Amit Singh)  (未署名) 消解
+
+<!-- DB_REF:freebsd.duckdb -->
+> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 1996-2010 年间：482,545 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。

@@ -32,11 +32,26 @@ volume: 第06卷-freebsd的核心技术革新
 
 ## 文献
 
-- Cantrill, B. et al. (2008). Fishworks: Now it can be told. dtrace.org/blogs/bmc/; illumos Project. Dynamic Tracing Guide. illumos.org/books/dtrace/; Gregg, B. DTrace Tools and DTraceToolkit. brendangregg.com/dtrace.html; Leventhal, A. H. (2008). Mac OS X and the missing probes. dtrace.org/blogs/ahl/ ［C］<!-- DB_REF:freebsd.duckdb -->> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 2010-2020 年间：488,947 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
-- Cantrill, B. M. et al. (2004). Dynamic Instrumentation of Production Systems. USENIX ATC '04; illumos Project. Solaris Dynamic Tracing Guide. illumos.org/books/dtrace/; FreeBSD Project. **dtrace(1)** Manual Page (D Language Reference) ［B］<!-- DB_REF:freebsd.duckdb -->> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 2010-2020 年间：488,947 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
-- Phipps, S. (2005). Why We Chose CDDL. webmink.com; Open Source Initiative. CDDL Approval Archives (2004-12/2005-01). opensource.org; Sun Microsystems. (2005-06-14). OpenSolaris Launches. Press Release[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]<!-- DB_REF:freebsd.duckdb -->> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 2004-2004 年间：45,499 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
-- Apple Inc. opensource.apple.com/source/dtrace/ (archived); Leventhal, A. H. dtrace.org/blogs/ahl/ (2008 posts); Apple Inc. Mac OS X 10.5 Technical Specifications (2007-10-26) ［C］<!-- DB_REF:freebsd.duckdb -->> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 2007-2008 年间：65,762 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
-- FreeBSD Project Mailing List Archives. lists.freebsd.org (freebsd-current, freebsd-dtrace); FreeBSD Source Repository. cddl/ import history; FreeBSD Project. Release Notes 7.1-12.x (DTrace changelog entries) ［A］[^doubt-resolved-616]: 据 Handbook (未署名) 消解[^doubt-resolved-617]: 据 Handbook (未署名) 消解[^doubt-resolved-618]: 据 upper-saddle-river-prentice-hall (Gregg, 2011) 消解[^doubt-resolved-619]: 据 操作系统内核并发错误检测研究进展_期刊 (石剑君, 2021) 消解[^doubt-resolved-620]: 据 Design_Implementation_FreeBSD_OS (未署名) 消解[^doubt-resolved-621]: 据 Arch_Handbook (未署名) 消解[^doubt-resolved-622]: 据 Mac OS X Internals A Systems Approach (Amit Singh（阿米特·辛格）)  (未署名) 消解[^doubt-resolved-623]: 据 The Fall of the Bell System A Study in Prices and Politics (Peter Temin, Louis Galambos)  (未署名) 消解<!-- DB_REF:freebsd.duckdb -->> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 2010-2020 年间：488,947 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
+- Cantrill, B. et al. (2008). Fishworks: Now it can be told. dtrace.org/blogs/bmc/; illumos Project. Dynamic Tracing Guide. illumos.org/books/dtrace/; Gregg, B. DTrace Tools and DTraceToolkit. brendangregg.com/dtrace.html; Leventhal, A. H. (2008). Mac OS X and the missing probes. dtrace.org/blogs/ahl/ ［C］
+
+<!-- DB_REF:freebsd.duckdb -->
+> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 2010-2020 年间：488,947 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
+- Cantrill, B. M. et al. (2004). Dynamic Instrumentation of Production Systems. USENIX ATC '04; illumos Project. Solaris Dynamic Tracing Guide. illumos.org/books/dtrace/; FreeBSD Project. **dtrace(1)** Manual Page (D Language Reference) ［B］
+
+<!-- DB_REF:freebsd.duckdb -->
+> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 2010-2020 年间：488,947 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
+- Phipps, S. (2005). Why We Chose CDDL. webmink.com; Open Source Initiative. CDDL Approval Archives (2004-12/2005-01). opensource.org; Sun Microsystems. (2005-06-14). OpenSolaris Launches. Press Release[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]
+
+<!-- DB_REF:freebsd.duckdb -->
+> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 2004-2004 年间：45,499 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
+- Apple Inc. opensource.apple.com/source/dtrace/ (archived); Leventhal, A. H. dtrace.org/blogs/ahl/ (2008 posts); Apple Inc. Mac OS X 10.5 Technical Specifications (2007-10-26) ［C］
+
+<!-- DB_REF:freebsd.duckdb -->
+> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 2007-2008 年间：65,762 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
+- FreeBSD Project Mailing List Archives. lists.freebsd.org (freebsd-current, freebsd-dtrace); FreeBSD Source Repository. cddl/ import history; FreeBSD Project. Release Notes 7.1-12.x (DTrace changelog entries) ［A］[^doubt-resolved-616]: 据 Handbook (未署名) 消解[^doubt-resolved-617]: 据 Handbook (未署名) 消解[^doubt-resolved-618]: 据 upper-saddle-river-prentice-hall (Gregg, 2011) 消解[^doubt-resolved-619]: 据 操作系统内核并发错误检测研究进展_期刊 (石剑君, 2021) 消解[^doubt-resolved-620]: 据 Design_Implementation_FreeBSD_OS (未署名) 消解[^doubt-resolved-621]: 据 Arch_Handbook (未署名) 消解[^doubt-resolved-622]: 据 Mac OS X Internals A Systems Approach (Amit Singh（阿米特·辛格）)  (未署名) 消解[^doubt-resolved-623]: 据 The Fall of the Bell System A Study in Prices and Politics (Peter Temin, Louis Galambos)  (未署名) 消解
+
+<!-- DB_REF:freebsd.duckdb -->
+> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 2010-2020 年间：488,947 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
 
 <!-- PODCAST_REVIEW v20260829 -->
 <!-- 语义复核范围：BSD Now EP112（共 1 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->

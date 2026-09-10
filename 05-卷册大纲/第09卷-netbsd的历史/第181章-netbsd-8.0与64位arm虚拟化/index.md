@@ -43,10 +43,22 @@ volume: 第09卷-netbsd的历史
 
 ## 文献
 
-- man **nvmm(4)**；tech-virt 邮件列表；Maxime Villard 博客 ［A］<!-- DB_REF:netbsd.duckdb -->> **数据库引用（netbsd.duckdb）**：本子节对应 netbsd 代码仓库。> 2018-2018 年间：43,308 次提交。> 仓库总览：1,999,412 次提交，1,545 位贡献者（contributors 表行数，1992-07-13 至 2026-08-24）。
-- NetBSD 8.0 Release Notes；Maxime Villard 博客；tech-kern 邮件列表；maxv. Add GENERIC_KASLR, only toolchain parts for now. netbsd-src 仓库 [DB/OL]. 2017-10-07T10:16:47Z. commit: 650b1fa4d5f1e80900b37549c6a3e41dbf4e4f8b；maxv. Add a new option in libsa, to load dynamic binaries. netbsd-src 仓库 [DB/OL]. 2017-10-07T10:26:38Z. commit: a8d8f69c27897a4f3e4c90cc075d9038a10d29ed；maxv. Bump bootloader version, support for booting KASLR amd64 kernels. netbsd-src 仓库 [DB/OL]. 2017-10-07T10:32:56Z. commit: d37438c8bb2c5630e82aafa11470be5c585f14e6；maxv. KASLR: add workarounds to compute the bootinfo VAs. netbsd-src 仓库 [DB/OL]. 2017-10-08T09:06:50Z. commit: 53aa2af033e38e189ca4b120c3cf110483a00d58；mortimer. Add RETGUARD to clang for amd64. openbsd-src 仓库 [DB/OL]. 2018-06-06T00:14:29Z. commit: e688c2b0648a80551cf7353d9f455c7cbb98f13c ［A］<!-- DB_REF:netbsd.duckdb -->> **数据库引用（netbsd.duckdb）**：本子节对应 netbsd 代码仓库。> 1993-2026 年间：1,999,408 次提交。> 仓库总览：1,999,412 次提交，1,545 位贡献者（contributors 表行数，1992-07-13 至 2026-08-24）。
-- NetBSD. 8.0 Release Notes [EB/OL]；虚拟化生态史料。［B］<!-- DB_REF:netbsd.duckdb -->> **数据库引用（netbsd.duckdb）**：本子节对应 netbsd 代码仓库。> 2018-2018 年间：43,308 次提交。> 仓库总览：1,999,412 次提交，1,545 位贡献者（contributors 表行数，1992-07-13 至 2026-08-24）。
-- NetBSD Project. NetBSD Security Advisories Archive [EB/OL]. (2018-2019)[2026-07-22]. <https://www.netbsd.org/support/security/advisory.html>; NetBSD Project. NetBSD Security Officer Team — SA Release Process [EB/OL]. [2026-07-22]. <https://www.netbsd.org/support/security/>; FreeBSD Security Team. FreeBSD Security Advisories Archive [EB/OL]. (2023-2026)[2026-07-22]. <https://www.freebsd.org/security/advisories/>; OpenBSD Project. OpenBSD Errata Patches [EB/OL]. [2026-07-22]. <https://www.openbsd.org/errata.html>; NetBSD Project. netbsd.duckdb — netbsd-src SA pull-up commits [DB/OL]. 2026-07-22. `SQL: SELECT commit_hash, author_date, author_name, message_subject FROM commits WHERE repo_name='netbsd-src' AND author_date>='2018-05-01' AND author_date<'2020-05-01' AND (message_subject LIKE '%SA%' OR message_subject LIKE '%pull-up%' OR message_subject LIKE '%ticket%') ORDER BY author_date ASC` ［A］<!-- DB_REF:netbsd.duckdb -->> **数据库引用（netbsd.duckdb）**：本子节对应 netbsd 代码仓库。> 1993-2026 年间：1,999,408 次提交。> 仓库总览：1,999,412 次提交，1,545 位贡献者（contributors 表行数，1992-07-13 至 2026-08-24）。
+- man **nvmm(4)**；tech-virt 邮件列表；Maxime Villard 博客 ［A］
+
+<!-- DB_REF:netbsd.duckdb -->
+> **数据库引用（netbsd.duckdb）**：本子节对应 netbsd 代码仓库。> 2018-2018 年间：43,308 次提交。> 仓库总览：1,999,412 次提交，1,545 位贡献者（contributors 表行数，1992-07-13 至 2026-08-24）。
+- NetBSD 8.0 Release Notes；Maxime Villard 博客；tech-kern 邮件列表；maxv. Add GENERIC_KASLR, only toolchain parts for now. netbsd-src 仓库 [DB/OL]. 2017-10-07T10:16:47Z. commit: 650b1fa4d5f1e80900b37549c6a3e41dbf4e4f8b；maxv. Add a new option in libsa, to load dynamic binaries. netbsd-src 仓库 [DB/OL]. 2017-10-07T10:26:38Z. commit: a8d8f69c27897a4f3e4c90cc075d9038a10d29ed；maxv. Bump bootloader version, support for booting KASLR amd64 kernels. netbsd-src 仓库 [DB/OL]. 2017-10-07T10:32:56Z. commit: d37438c8bb2c5630e82aafa11470be5c585f14e6；maxv. KASLR: add workarounds to compute the bootinfo VAs. netbsd-src 仓库 [DB/OL]. 2017-10-08T09:06:50Z. commit: 53aa2af033e38e189ca4b120c3cf110483a00d58；mortimer. Add RETGUARD to clang for amd64. openbsd-src 仓库 [DB/OL]. 2018-06-06T00:14:29Z. commit: e688c2b0648a80551cf7353d9f455c7cbb98f13c ［A］
+
+<!-- DB_REF:netbsd.duckdb -->
+> **数据库引用（netbsd.duckdb）**：本子节对应 netbsd 代码仓库。> 1993-2026 年间：1,999,408 次提交。> 仓库总览：1,999,412 次提交，1,545 位贡献者（contributors 表行数，1992-07-13 至 2026-08-24）。
+- NetBSD. 8.0 Release Notes [EB/OL]；虚拟化生态史料。［B］
+
+<!-- DB_REF:netbsd.duckdb -->
+> **数据库引用（netbsd.duckdb）**：本子节对应 netbsd 代码仓库。> 2018-2018 年间：43,308 次提交。> 仓库总览：1,999,412 次提交，1,545 位贡献者（contributors 表行数，1992-07-13 至 2026-08-24）。
+- NetBSD Project. NetBSD Security Advisories Archive [EB/OL]. (2018-2019)[2026-07-22]. <https://www.netbsd.org/support/security/advisory.html>; NetBSD Project. NetBSD Security Officer Team — SA Release Process [EB/OL]. [2026-07-22]. <https://www.netbsd.org/support/security/>; FreeBSD Security Team. FreeBSD Security Advisories Archive [EB/OL]. (2023-2026)[2026-07-22]. <https://www.freebsd.org/security/advisories/>; OpenBSD Project. OpenBSD Errata Patches [EB/OL]. [2026-07-22]. <https://www.openbsd.org/errata.html>; NetBSD Project. netbsd.duckdb — netbsd-src SA pull-up commits [DB/OL]. 2026-07-22. `SQL: SELECT commit_hash, author_date, author_name, message_subject FROM commits WHERE repo_name='netbsd-src' AND author_date>='2018-05-01' AND author_date<'2020-05-01' AND (message_subject LIKE '%SA%' OR message_subject LIKE '%pull-up%' OR message_subject LIKE '%ticket%') ORDER BY author_date ASC` ［A］
+
+<!-- DB_REF:netbsd.duckdb -->
+> **数据库引用（netbsd.duckdb）**：本子节对应 netbsd 代码仓库。> 1993-2026 年间：1,999,408 次提交。> 仓库总览：1,999,412 次提交，1,545 位贡献者（contributors 表行数，1992-07-13 至 2026-08-24）。
 
 <!-- PODCAST_REVIEW v20260829 -->
 <!-- 语义复核范围：BSD Now EP345、BSD Now EP200（共 2 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->

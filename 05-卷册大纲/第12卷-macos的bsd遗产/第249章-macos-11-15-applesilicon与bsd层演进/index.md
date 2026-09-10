@@ -30,9 +30,18 @@ volume: 第12卷-macos的bsd遗产
 
 ## 文献
 
-- Apple Inc. Rosetta 2 Technical Overview [Z]. Apple Developer Documentation, 2020; AnandTech. Apple M1 Review [EB/OL]. (2020-11-18). <https://www.anandtech.com/show/16252/mac-mini-apple-m1-tested>.<!-- DB_REF:darwin.duckdb -->> **数据库引用（darwin.duckdb）**：本子节对应 darwin 代码仓库。> 2020-2021 年间：186 次提交。> 仓库总览：2,016 次提交，42 个 Apple 开源镜像仓库（contributors 表 43 行），2001-04-10 至 2026-04-13。
-- Apple Inc. WWDC 2022 Keynote [EB/OL]. (2022-06-06). Apple Press Release; Apple Inc. Mac Studio and Mac Pro with M2 Ultra [EB/OL]. (2023-06-05). Apple Press Release; Asahi Linux Project. m1n1 Hypervisor Documentation [EB/OL]. <https://asahilinux.org/>.<!-- DB_REF:darwin.duckdb -->> **数据库引用（darwin.duckdb）**：本子节对应 darwin 代码仓库。> 2021-2024 年间：343 次提交。> 仓库总览：2,016 次提交，42 个 Apple 开源镜像仓库（contributors 表 43 行），2001-04-10 至 2026-04-13。
-- Apple Security Releases [EB/OL]. <https://support.apple.com/en-us/100100>, 2026-07-23 访问; Apple Inc. macOS Tahoe 26 Security Content [EB/OL]. (2025-09-15). <https://support.apple.com/en-us/125110>; darwin.duckdb 查询结果 [EB/OL]. script/query_xnu_tags.py, 2026-07-23; 原材料/研究/考据记录/20260723_announcements-macos.md [EB/OL]. 2026-07-23.<!-- DB_REF:darwin.duckdb -->> **数据库引用（darwin.duckdb）**：本子节对应 darwin 代码仓库。> 2025-2026 年间：138 次提交。> 仓库总览：2,016 次提交，42 个 Apple 开源镜像仓库（contributors 表 43 行），2001-04-10 至 2026-04-13。
+- Apple Inc. Rosetta 2 Technical Overview [Z]. Apple Developer Documentation, 2020; AnandTech. Apple M1 Review [EB/OL]. (2020-11-18). <https://www.anandtech.com/show/16252/mac-mini-apple-m1-tested>.
+
+<!-- DB_REF:darwin.duckdb -->
+> **数据库引用（darwin.duckdb）**：本子节对应 darwin 代码仓库。> 2020-2021 年间：186 次提交。> 仓库总览：2,016 次提交，42 个 Apple 开源镜像仓库（contributors 表 43 行），2001-04-10 至 2026-04-13。
+- Apple Inc. WWDC 2022 Keynote [EB/OL]. (2022-06-06). Apple Press Release; Apple Inc. Mac Studio and Mac Pro with M2 Ultra [EB/OL]. (2023-06-05). Apple Press Release; Asahi Linux Project. m1n1 Hypervisor Documentation [EB/OL]. <https://asahilinux.org/>.
+
+<!-- DB_REF:darwin.duckdb -->
+> **数据库引用（darwin.duckdb）**：本子节对应 darwin 代码仓库。> 2021-2024 年间：343 次提交。> 仓库总览：2,016 次提交，42 个 Apple 开源镜像仓库（contributors 表 43 行），2001-04-10 至 2026-04-13。
+- Apple Security Releases [EB/OL]. <https://support.apple.com/en-us/100100>, 2026-07-23 访问; Apple Inc. macOS Tahoe 26 Security Content [EB/OL]. (2025-09-15). <https://support.apple.com/en-us/125110>; darwin.duckdb 查询结果 [EB/OL]. script/query_xnu_tags.py, 2026-07-23; 原材料/研究/考据记录/20260723_announcements-macos.md [EB/OL]. 2026-07-23.
+
+<!-- DB_REF:darwin.duckdb -->
+> **数据库引用（darwin.duckdb）**：本子节对应 darwin 代码仓库。> 2025-2026 年间：138 次提交。> 仓库总览：2,016 次提交，42 个 Apple 开源镜像仓库（contributors 表 43 行），2001-04-10 至 2026-04-13。
 
 <!-- PODCAST_REVIEW v20260829 -->
 <!-- 语义复核范围：BSD Now EP651（共 1 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->

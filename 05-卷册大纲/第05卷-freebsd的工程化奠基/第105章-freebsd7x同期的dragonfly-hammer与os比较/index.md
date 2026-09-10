@@ -30,10 +30,31 @@ volume: 第05卷-freebsd的工程化奠基
 
 ## 文献
 
-- Phoronix FreeBSD 7.0 Benchmarks (2008)；freebsd-arch mailing list 2008 archives；LWN.net FreeBSD 7.0 review (2008) ［A］FreeBSD 社区论文：[FP-2008-005] An Independent H-TCP Implementation under FreeBSD 7.0 – Description and Observed Behaviour（Jeff Healy，2008）<https://papers.freebsd.org/2008/healy-cc_htcp/>### 史观映射> ULE 调度器从 5.0 引入到 7.1 成为默认，花了六年——当它终于成熟时，Linux 的 CFS 已经接替了 O(1)，性能竞赛的赛道又往前挪了一步。7.x 的基准测试数字确实漂亮，但“更快”不是“进步”——调度器的本质从 4BSD 的 O(n) 到 ULE 的 O(1)，变的是算法复杂度，不变的是“谁该在什么时候跑到哪个 CPU 上”这个永恒的调度问题---## 第 45.12 不同时期人员的采访录（详见 [采访录.md](采访录.md)）## 第 45.13 节 媒体反响与社区舆论（详见 [媒体反响与社区舆论.md](媒体反响与社区舆论.md)）<!-- DB_REF:freebsd.duckdb -->> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 2008-2009 年间：67,619 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
-- freebsd.duckdb freebsd-src 仓库 5.x/6.x/7.x 版本周期 commit 统计对比；FreeBSD 7.x Release Notes；John Birrell DTrace 移植档案；freebsd-hackers 邮件列表 DTrace 讨论 ［A］<!-- DB_REF:freebsd.duckdb -->> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 1996-2010 年间：482,545 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
-- Dillon, M. Kernel Native Threading (DragonFly BSD Digest, 2007)；freebsd-threads mailing list 2005-2008 archives；FreeBSD libthr commit log ［A］<!-- DB_REF:freebsd.duckdb -->> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 1996-2010 年间：482,545 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
-- FreeBSD 邮件存档 ［A］<!-- DB_REF:freebsd.duckdb -->> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 1996-2010 年间：482,545 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
-- freebsd-current mailing list 2008-2009 archives；freebsd-hackers ULE feedback threads (2008)；LWN.net FreeBSD ULE coverage (2008-2009) ［A］<!-- DB_REF:freebsd.duckdb -->> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 1996-2010 年间：482,545 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
-- FreeBSD 7.0/7.1 src/sys/kern/sched_ule.c commit log；freebsd-hackers mailing list ULE contributors (2008)；FreeBSD Committer's Guide (freebsd.org) ［A］<!-- DB_REF:freebsd.duckdb -->> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 1996-2010 年间：482,545 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
-- 7.0/7.1 Release Notes；freebsd-alpha/freebsd-ipfw 邮件；EPFL USENIX ATC 2018 论文；NetBSD/alpha 文档 ［A］<!-- DB_REF:freebsd.duckdb -->> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 1996-2010 年间：482,545 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
+- Phoronix FreeBSD 7.0 Benchmarks (2008)；freebsd-arch mailing list 2008 archives；LWN.net FreeBSD 7.0 review (2008) ［A］FreeBSD 社区论文：[FP-2008-005] An Independent H-TCP Implementation under FreeBSD 7.0 – Description and Observed Behaviour（Jeff Healy，2008）<https://papers.freebsd.org/2008/healy-cc_htcp/>### 史观映射> ULE 调度器从 5.0 引入到 7.1 成为默认，花了六年——当它终于成熟时，Linux 的 CFS 已经接替了 O(1)，性能竞赛的赛道又往前挪了一步。7.x 的基准测试数字确实漂亮，但“更快”不是“进步”——调度器的本质从 4BSD 的 O(n) 到 ULE 的 O(1)，变的是算法复杂度，不变的是“谁该在什么时候跑到哪个 CPU 上”这个永恒的调度问题---## 第 45.12 不同时期人员的采访录（详见 [采访录.md](采访录.md)）## 第 45.13 节 媒体反响与社区舆论（详见 [媒体反响与社区舆论.md](媒体反响与社区舆论.md)）
+
+<!-- DB_REF:freebsd.duckdb -->
+> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 2008-2009 年间：67,619 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
+- freebsd.duckdb freebsd-src 仓库 5.x/6.x/7.x 版本周期 commit 统计对比；FreeBSD 7.x Release Notes；John Birrell DTrace 移植档案；freebsd-hackers 邮件列表 DTrace 讨论 ［A］
+
+<!-- DB_REF:freebsd.duckdb -->
+> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 1996-2010 年间：482,545 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
+- Dillon, M. Kernel Native Threading (DragonFly BSD Digest, 2007)；freebsd-threads mailing list 2005-2008 archives；FreeBSD libthr commit log ［A］
+
+<!-- DB_REF:freebsd.duckdb -->
+> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 1996-2010 年间：482,545 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
+- FreeBSD 邮件存档 ［A］
+
+<!-- DB_REF:freebsd.duckdb -->
+> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 1996-2010 年间：482,545 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
+- freebsd-current mailing list 2008-2009 archives；freebsd-hackers ULE feedback threads (2008)；LWN.net FreeBSD ULE coverage (2008-2009) ［A］
+
+<!-- DB_REF:freebsd.duckdb -->
+> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 1996-2010 年间：482,545 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
+- FreeBSD 7.0/7.1 src/sys/kern/sched_ule.c commit log；freebsd-hackers mailing list ULE contributors (2008)；FreeBSD Committer's Guide (freebsd.org) ［A］
+
+<!-- DB_REF:freebsd.duckdb -->
+> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 1996-2010 年间：482,545 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
+- 7.0/7.1 Release Notes；freebsd-alpha/freebsd-ipfw 邮件；EPFL USENIX ATC 2018 论文；NetBSD/alpha 文档 ［A］
+
+<!-- DB_REF:freebsd.duckdb -->
+> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 1996-2010 年间：482,545 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。

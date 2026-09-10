@@ -30,7 +30,19 @@ volume: 第11卷-dragonflybsd的历史
 
 ## 文献
 
-- lists.dragonflybsd.org 邮件列表归档；lists.freebsd.org 邮件列表归档；lkml.org Linux 内核邮件列表归档；archive.org 技术媒体报道存档 ［A］<!-- DB_REF:dragonfly.duckdb -->> **数据库引用（dragonfly.duckdb）**：本子节对应 dragonfly 代码仓库。> 2003-2026 年间：656,206 次提交。> 仓库总览：656,206 次提交，535 位贡献者，2003-06-17 至 2026-08-18。
-- dragonfly.duckdb dragonfly-src 仓库 contributors 表（多邮箱合并统计）；dragonfly.duckdb dragonfly-src 仓库 commits 表（按 author_email 与 author_date 交叉统计）；kernel@ 邮件列表档案 ［A］<!-- DB_REF:dragonfly.duckdb -->> **数据库引用（dragonfly.duckdb）**：本子节对应 dragonfly 代码仓库。> 2003-2026 年间：656,206 次提交。> 仓库总览：656,206 次提交，535 位贡献者，2003-06-17 至 2026-08-18。
-- dragonfly.duckdb commits 表（四仓库 2022-2026 年对照）；FreeBSD 14.x/15.x release notes [EB/OL]. freebsd.org/releases/；OpenBSD 7.x release notes [EB/OL]. openbsd.org/；NetBSD 10.x release notes [EB/OL]. netbsd.org/；DragonFly 6.x release notes [EB/OL]. dragonflybsd.org/release/ ［A］---**卷末**：书目述评（约 3,500 字）——讨论“BSD 大败局”叙事的形式主义性质，分析许可证哲学差异的历史后果。<!-- DB_REF:dragonfly.duckdb -->> **数据库引用（dragonfly.duckdb）**：本子节对应 dragonfly 代码仓库。> 2003-2026 年间：656,206 次提交。> 仓库总览：656,206 次提交，535 位贡献者，2003-06-17 至 2026-08-18。
-- bsd_commits.db commits 表（四仓库 2019-2026 年对照）；各项目 release notes；OpenBSD/NetBSD/FreeBSD Foundation 年报 ［A］FreeBSD 社区论文：[FP-2004-001] The Challenges of Dynamic Network Interfaces（Brooks Davis，2004）<https://papers.freebsd.org/2004/eurobsdcon/davis-challenges_of_dynamic_network_interfaces/><!-- DB_REF:netbsd.duckdb -->> **数据库引用（netbsd.duckdb）**：本子节对应 netbsd 代码仓库。> 2019-2026 年间：243,053 次提交。> 仓库总览：1,999,412 次提交，1,545 位贡献者（contributors 表行数，1992-07-13 至 2026-08-24）。
+- lists.dragonflybsd.org 邮件列表归档；lists.freebsd.org 邮件列表归档；lkml.org Linux 内核邮件列表归档；archive.org 技术媒体报道存档 ［A］
+
+<!-- DB_REF:dragonfly.duckdb -->
+> **数据库引用（dragonfly.duckdb）**：本子节对应 dragonfly 代码仓库。> 2003-2026 年间：656,206 次提交。> 仓库总览：656,206 次提交，535 位贡献者，2003-06-17 至 2026-08-18。
+- dragonfly.duckdb dragonfly-src 仓库 contributors 表（多邮箱合并统计）；dragonfly.duckdb dragonfly-src 仓库 commits 表（按 author_email 与 author_date 交叉统计）；kernel@ 邮件列表档案 ［A］
+
+<!-- DB_REF:dragonfly.duckdb -->
+> **数据库引用（dragonfly.duckdb）**：本子节对应 dragonfly 代码仓库。> 2003-2026 年间：656,206 次提交。> 仓库总览：656,206 次提交，535 位贡献者，2003-06-17 至 2026-08-18。
+- dragonfly.duckdb commits 表（四仓库 2022-2026 年对照）；FreeBSD 14.x/15.x release notes [EB/OL]. freebsd.org/releases/；OpenBSD 7.x release notes [EB/OL]. openbsd.org/；NetBSD 10.x release notes [EB/OL]. netbsd.org/；DragonFly 6.x release notes [EB/OL]. dragonflybsd.org/release/ ［A］---**卷末**：书目述评（约 3,500 字）——讨论“BSD 大败局”叙事的形式主义性质，分析许可证哲学差异的历史后果。
+
+<!-- DB_REF:dragonfly.duckdb -->
+> **数据库引用（dragonfly.duckdb）**：本子节对应 dragonfly 代码仓库。> 2003-2026 年间：656,206 次提交。> 仓库总览：656,206 次提交，535 位贡献者，2003-06-17 至 2026-08-18。
+- bsd_commits.db commits 表（四仓库 2019-2026 年对照）；各项目 release notes；OpenBSD/NetBSD/FreeBSD Foundation 年报 ［A］FreeBSD 社区论文：[FP-2004-001] The Challenges of Dynamic Network Interfaces（Brooks Davis，2004）<https://papers.freebsd.org/2004/eurobsdcon/davis-challenges_of_dynamic_network_interfaces/>
+
+<!-- DB_REF:netbsd.duckdb -->
+> **数据库引用（netbsd.duckdb）**：本子节对应 netbsd 代码仓库。> 2019-2026 年间：243,053 次提交。> 仓库总览：1,999,412 次提交，1,545 位贡献者（contributors 表行数，1992-07-13 至 2026-08-24）。

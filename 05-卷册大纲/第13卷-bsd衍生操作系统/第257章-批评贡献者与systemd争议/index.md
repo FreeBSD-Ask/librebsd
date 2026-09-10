@@ -48,10 +48,16 @@ volume: 第13卷-bsd衍生操作系统
 - Oracle/IBM/HP 文档；企业 IT 咨询报告[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]## 256.13.3 BSD 社区对 Linux 阵营的反向批评
 - FreeBSD/OpenBSD 邮件列表；Theo de Raadt 发言 ［A］## 256.13.4 学术界对 BSD/Linux 治理的批评
 - O'Mahony 2007；Kelty 2008；开源治理学术研究[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]## 256.13.5 外部批评的史观辨析：BSD/Linux 话语权争夺的形式主义
-- BSD/Linux 对立档案；话语权研究文献；用户文章[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]<!-- DB_REF:linux_kernel.duckdb -->> **数据库引用（linux_kernel.duckdb）**：本子节对应 linux_kernel 代码仓库。> 1985-2026 年间：1,474,340 次提交。> 仓库总览：1,474,341 次提交，39,865 位贡献者（contributors 表行数，1970-01-01 至 2026-08-24）。
+- BSD/Linux 对立档案；话语权研究文献；用户文章[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]
+
+<!-- DB_REF:linux_kernel.duckdb -->
+> **数据库引用（linux_kernel.duckdb）**：本子节对应 linux_kernel 代码仓库。> 1985-2026 年间：1,474,340 次提交。> 仓库总览：1,474,341 次提交，39,865 位贡献者（contributors 表行数，1970-01-01 至 2026-08-24）。
 - 维护者/批评者自述；邮件列表；学术批评；用户史料 ［A］## 256.14.6 BSD 衍生项目中的经费滥用案例：iXsystems 与 PC-BSD 的经费争议
 - iXsystems 公告与财务披露；PC-BSD/TrueOS 社区讨论存档；GhostBSD/MidnightBSD 捐赠页面 ［A］## 256.14.7 社区治理中的利益冲突丑闻：Core Team 成员与企业利益的交织
-- FreeBSD Core Team 成员列表与雇主信息；FreeBSD Foundation IRS 990 表；Core Team 邮件列表；OpenBSD 邮件列表；Linux 内核 maintainer 统计 ［A］<!-- DB_REF:bsd_derivatives.duckdb -->> **数据库引用（bsd_derivatives.duckdb）**：本子节对应 bsd_derivatives 代码仓库。> 1985-2026 年间：963,557 次提交。> 仓库总览：963,557 次提交，9,744 位贡献者（contributors 表行数，1985-06-13 至 2026-08-24）。
+- FreeBSD Core Team 成员列表与雇主信息；FreeBSD Foundation IRS 990 表；Core Team 邮件列表；OpenBSD 邮件列表；Linux 内核 maintainer 统计 ［A］
+
+<!-- DB_REF:bsd_derivatives.duckdb -->
+> **数据库引用（bsd_derivatives.duckdb）**：本子节对应 bsd_derivatives 代码仓库。> 1985-2026 年间：963,557 次提交。> 仓库总览：963,557 次提交，9,744 位贡献者（contributors 表行数，1985-06-13 至 2026-08-24）。
 - Ubuntu/Fedora/openSUSE 文档；Linux/BSD 桌面用户统计；硬件兼容性列表[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]## 256.15.2 BSD 与 Linux 在嵌入式与服务器市场的反向对比
 - Juniper/NetApp/Sony 文档；Netflix/WhatsApp 文档；Android/Linux 文档[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]## 256.15.3 BSD 与商业 Unix（Solaris/AIX/HP-UX）的失败对比
 

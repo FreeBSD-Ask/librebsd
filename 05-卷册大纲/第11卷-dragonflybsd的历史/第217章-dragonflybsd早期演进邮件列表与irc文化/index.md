@@ -32,6 +32,15 @@ volume: 第11卷-dragonflybsd的历史
 ## 文献
 
 - DragonFly BSD mailing lists [EB/OL]. <https://www.dragonflybsd.org/mailinglists/>；IRC channel #dragonflybsd logs（partial，第三方日志服务） ［A］---## 史料登记与辩证校准（2026-08-08 追加）> **本卷命题**：24.4 历史非断裂而是循环（详见本卷 00-总览“编纂指导思想叙事参照”）### 史料文献
-- 原材料/哲学/项目统摄史观/第 25 章.md（总纲第 6、8、21 条原文）；dragonfly.duckdb dragonfly-src 仓库 commits/contributors/tags 表；DragonFly BSD Project. DragonFly BSD history [EB/OL]. <https://www.dragonflybsd.org/history/>；freeoa. DragonFly BSD [EB/OL]. 2010-01-30. <http://www.freeoa.net/osuport/intronix/dragonflybsd_1777.html> ［A］<!-- DB_REF:dragonfly.duckdb -->> **数据库引用（dragonfly.duckdb）**：本子节对应 dragonfly 代码仓库。> 2003-2026 年间：656,206 次提交。> 仓库总览：656,206 次提交，535 位贡献者，2003-06-17 至 2026-08-18。
-- Dillon M. DragonFly BSD fork announcement [EB/OL]. <https://lists.freebsd.org/pipermail/freebsd-current/2003-July/006889.html>, 2003-07；FreeBSD Core Team mailing list archives [EB/OL]. <https://lists.freebsd.org/archives/freebsd-core/>；Slashdot/LWN/Hacker News 原始讨论（2003-2007） ［A］<!-- DB_REF:dragonfly.duckdb -->> **数据库引用（dragonfly.duckdb）**：本子节对应 dragonfly 代码仓库。> 2003-2026 年间：656,206 次提交。> 仓库总览：656,206 次提交，535 位贡献者，2003-06-17 至 2026-08-18。
-- dragonfly.duckdb dragonfly-src 仓库 commits 表（message_subject 与 message_body 字段）；DragonFly BSD mailing lists [EB/OL]. <https://www.dragonflybsd.org/mailinglists/>；marc.info 第三方邮件列表归档 [EB/OL]. <https://marc.info/> ［A］<!-- DB_REF:dragonfly.duckdb -->> **数据库引用（dragonfly.duckdb）**：本子节对应 dragonfly 代码仓库。> 2003-2026 年间：656,206 次提交。> 仓库总览：656,206 次提交，535 位贡献者，2003-06-17 至 2026-08-18。
+- 原材料/哲学/项目统摄史观/第 25 章.md（总纲第 6、8、21 条原文）；dragonfly.duckdb dragonfly-src 仓库 commits/contributors/tags 表；DragonFly BSD Project. DragonFly BSD history [EB/OL]. <https://www.dragonflybsd.org/history/>；freeoa. DragonFly BSD [EB/OL]. 2010-01-30. <http://www.freeoa.net/osuport/intronix/dragonflybsd_1777.html> ［A］
+
+<!-- DB_REF:dragonfly.duckdb -->
+> **数据库引用（dragonfly.duckdb）**：本子节对应 dragonfly 代码仓库。> 2003-2026 年间：656,206 次提交。> 仓库总览：656,206 次提交，535 位贡献者，2003-06-17 至 2026-08-18。
+- Dillon M. DragonFly BSD fork announcement [EB/OL]. <https://lists.freebsd.org/pipermail/freebsd-current/2003-July/006889.html>, 2003-07；FreeBSD Core Team mailing list archives [EB/OL]. <https://lists.freebsd.org/archives/freebsd-core/>；Slashdot/LWN/Hacker News 原始讨论（2003-2007） ［A］
+
+<!-- DB_REF:dragonfly.duckdb -->
+> **数据库引用（dragonfly.duckdb）**：本子节对应 dragonfly 代码仓库。> 2003-2026 年间：656,206 次提交。> 仓库总览：656,206 次提交，535 位贡献者，2003-06-17 至 2026-08-18。
+- dragonfly.duckdb dragonfly-src 仓库 commits 表（message_subject 与 message_body 字段）；DragonFly BSD mailing lists [EB/OL]. <https://www.dragonflybsd.org/mailinglists/>；marc.info 第三方邮件列表归档 [EB/OL]. <https://marc.info/> ［A］
+
+<!-- DB_REF:dragonfly.duckdb -->
+> **数据库引用（dragonfly.duckdb）**：本子节对应 dragonfly 代码仓库。> 2003-2026 年间：656,206 次提交。> 仓库总览：656,206 次提交，535 位贡献者，2003-06-17 至 2026-08-18。
