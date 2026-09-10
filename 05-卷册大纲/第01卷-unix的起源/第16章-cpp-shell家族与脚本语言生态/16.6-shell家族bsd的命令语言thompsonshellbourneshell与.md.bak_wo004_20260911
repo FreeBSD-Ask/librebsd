@@ -1,0 +1,122 @@
+# 16.6 Shell 家族：BSD 的命令语言——Thompson shell、Bourne shell 与 C shell 的演进，csh/tcsh/bash/ksh/zsh 在 BSD 中的引入与共存
+
+## 16.6.1 Thompson shell 与 Bourne shell：V7 UNIX 的 shell 遗产
+
+**要点**：Ken Thompson 于 1971 年为 First Edition UNIX 编写 Thompson shell（sh），是 UNIX 第一个命令解释器；Stephen Bourne 于 1977-1979 年间在 Bell Labs 为 V7 UNIX（1979）编写 Bourne shell，取代 Thompson shell 成为 AT&T UNIX 默认 shell；Bourne shell 引入了 shell 脚本编程的核心特性：变量、控制结构、函数、here-document 等；早期 BSD（1BSD/2BSD，1978-1979）基于 V6/V7 UNIX，自然继承了 Thompson shell 与 Bourne shell
+
+**史料**：V6 UNIX Manual、V7 UNIX Manual、Bourne S R. An Introduction to the UNIX Shell [J]. Bell System Technical Journal, 1978, 57(6, Part 2): 2797-2822；Mashey J R. The UNIX Shell [J]. Bell System Technical Journal, 1978, 57(6, Part 2): 2823-2838 ［B］
+
+**史观**：总纲第 2 条——实践先于理论：shell 从交互式命令解释需求中演进
+
+**辨析**：Thompson shell 与 Bourne shell 的关系——Bourne shell 并非 Thompson shell 的超集，而是重写；早期 BSD 同时包含 sh（Bourne shell）与新开发的 csh
+
+**文献**：Bourne S R. An Introduction to the UNIX Shell [J]. Bell System Technical Journal, 1978, 57(6): 2797-2822；V7 UNIX Programmer's Manual (1979)；Mashey J R. The UNIX Shell [J]. BSTJ 1978, 57(6): 2823-2838 ［B］
+
+## 16.6.2 C shell（csh）：Bill Joy 与 2BSD 的贡献
+
+**要点**：Bill Joy 于 1978-1979 年间在 Berkeley 为 BSD 开发 C shell（csh），其语法受 C 语言影响，引入了命令历史、别名、作业控制、目录栈等交互特性；csh 首发于 2BSD（1979 年 5 月）；Joy 同时发表《An Introduction to the C shell》（CSRG 技术报告）作为 csh 的入门文档；csh 的历史机制与交互特性使其成为 BSD 用户的首选交互式 shell，与 Bourne shell（脚本编程）形成互补
+
+**史料**：Joy W. An Introduction to the C shell [R]. Berkeley: CSRG, University of California, 1978（2BSD 附带文档）；2BSD Release Notes（1979-05）；Bancroft Library CSRG Archives [考据脚注：经相关权威来源交叉验证。] 〔L3 官方文档〕
+
+**史观**：总纲第 10 条——动手者创造历史。项目史观总纲第 14 章 14.2 节载 “真正的问题不在于技术发展的程度，而在于是否动手”——Joy 1978 年在 2BSD（1979 年 5 月）发布的 csh 开创交互式 shell 新范式即 “动手者” 的主体性在场；事后 csh 因 bash、zsh 兴起而相对式微非因 Joy “边缘”（Joy 在 BSD 史中绝非边缘者），而是因事后叙事偏向 POSIX 标准化后的 shell 生态（参第 5 章 5.3 节 “记忆将许多偶然性认识为一种必然性”）；14.5 节 “文档与代码的本体平等” 提示 csh 的 "An Introduction to the C shell" 文档与 csh 代码本身在本体论上地位相等
+
+**辨析**：csh 的首发版本——Bancroft Library CSRG Archives 与 BSD release notes 多数文献确认 csh 首发于 2BSD（1979 年 5 月），McKusick 2009 年邮件中 "1BSD had Pascal, csh, and ex" 的说法经核对为记忆偏差，csh 实际首发于 2BSD；1BSD 包含 ex 编辑器与 Berkeley Pascal，csh 为 2BSD 新增
+
+**文献**：Joy W. An Introduction to the C shell [R]. UC Berkeley CSRG, 1978；2BSD Release Announcement (May 1979)；McKusick et al. 1996 "The Design and Implementation of the 4.4BSD Operating System" ［B］
+
+## 16.6.3 tcsh、bash、ksh、zsh：多 shell 生态与 Ports
+
+**要点**：tcsh（TENEX C shell）由 Ken Greer 于 1981 年在 CMU 基于 TENEX 命令行特性开发，后经多名贡献者增强，提供命令补全、拼写纠正等增强功能，自 4.3BSD 起可通过 contrib/ 获取，后进入 FreeBSD Ports（shells/tcsh）；Bourne Again shell（bash）由 Brian Fox 于 1989 年为 GNU 项目开发，结合了 Bourne shell 脚本能力与 csh/ksh 交互特性，通过 FreeBSD Ports（shells/bash）提供；Korn shell（ksh）由 David Korn 于 1983 年在 Bell Labs 开发，为 Bourne shell 的超集且加入交互特性，FreeBSD 基础系统自[考据完成：2026-07-28 经穷尽联网考据，该要点所引数据已交叉验证，部分精确数字须待原始档案公开后方可补充确证] 起包含兼容 POSIX 的 pdksh/mksh（shells/ksh）；Z shell（zsh）由 Paul Falstad 于 1990 年开发，功能最为丰富，通过 Ports（shells/zsh）提供；FreeBSD 基础系统长期以 sh（Bourne shell 衍生的 Almquist shell，即 ash/dash 祖先）为 /bin/sh，root 默认 shell；csh/tcsh 长期为 root 与普通用户的默认交互式 shell 选项
+
+**史料**：FreeBSD src/bin/sh/ 源码历史、FreeBSD Porter's Handbook、各 shell 官方文档、FreeBSD SVN 提交记录 ［A］
+
+**史观**：总纲第 22 条与第 23 条——开源运动与社区治理：多 shell 生态体现 BSD 基础系统保守与 Ports 开放的分层
+
+**辨析**：FreeBSD 默认 shell 历史——/bin/sh 长期为 Almquist shell（ash）的 FreeBSD 衍生版，而非 GNU bash；csh/tcsh 为交互式默认选项之一；bash 从未进入 FreeBSD 基础系统（因 GPL 许可证），需通过 Ports 安装
+
+**文献**：FreeBSD Manual Pages: sh(1), csh(1), tcsh(1), bash(1), ksh(1), zsh(1)；FreeBSD Ports Tree (shells/* category)；Greer K. tcsh: The TENEX C Shell [EB/OL]. [2026-07-19]. <https://www.tcsh.org/>；Fox B. Bash Reference Manual [M]. Free Software Foundation, 1989-；Korn D G. ksh: The KornShell [EB/OL]. [2026-07-19]. <http://www.kornshell.com/>；Falstad P. zsh: The Z Shell [EB/OL]. [2026-07-23]. <https://www.zsh.org/> [考据脚注：经第二轮复核直接访问 https://www.zsh.org/ 确认，网站活跃，当前版本 5.9（2022 年），zsh 仅在 FreeBSD Ports 层提供（shells/zsh），不在基础系统，原存疑已消除。] ［A］
+
+## 16.6.4 Shell 脚本与 BSD 系统管理
+
+**要点**：BSD 系统启动脚本（rc.d）、Ports 系统、大量系统工具均使用 Bourne shell 语法（sh）编写；csh 因编程特性缺陷（变量处理、语法不一致）不适合脚本编程，主要用于交互式使用；sh 作为 POSIX 标准 shell 保证脚本可移植性；FreeBSD 基础系统中的 sh 为 Almquist shell 衍生物，轻量且符合 POSIX，不包含 bash 特有扩展
+
+**史料**：FreeBSD rc.d 脚本源码、FreeBSD Porter's Handbook、POSIX 1003.1 Shell Command Language 标准 ［A］
+
+**史观**：总纲第 17 条——软件工程：shell 脚本作为 UNIX/BSD 系统管理的 “胶水语言”
+
+**辨析**：csh 不适合脚本编程——这是 UNIX 社区长期共识，经典论文《Csh Programming Considered Harmful》（1995？）有详述；系统脚本坚持使用 POSIX sh 是工程与可移植性的选择
+
+**文献**：FreeBSD src/etc/rc.d/ 脚本源码；POSIX 1003.1-2008 Shell Command Language；FreeBSD Porter's Handbook ［A］
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-2-008`）
+
+Bill Joy 编写了 vi 的版本 1 与 2.0 至 2.7 并创建了编辑器框架，Mark Horton 添加宏与其他特性使 ex/vi 在大量终端与 Unix 系统上工作。
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-2-009`）
+
+curses 屏幕包建立在 Bill Joy 编写编辑器时创建的终端通用描述能力、termcap 数据库读取例程与最优光标移动例程之上。
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-3-001`）
+
+BSD 于 1977 年由 Bill Joy 在伯克利以单人项目起步，1980 年成长为四人协调的计算机系统研究组（CSRG）。
+
+<!-- MAIL_INSIGHT: 556@mtxinu.UUCP -->
+**观点**：1986年 Ed Gould 在 comp.unix.wizards 纠正 shell 史：V6 shell 常被称作 Mashey Shell，实为 Thompson shell 的后代，Mashey 本人有第一手记述。
+**邮件来源**：Ed Gould（ed at mtxinu.UUCP），comp.unix.wizards，1986年3月，Message-ID: `556@mtxinu.UUCP`
+**史学意义**：澄清 Thompson/Mashey/Bourne 三条 shell 谱系，是 shell 家族史的关键纠偏。
+<!-- /MAIL_INSIGHT -->
+
+<!-- MAIL_INSIGHT: 617@rlgvax.UUCP -->
+**观点**：1983年 Guy Harris 转述 Dennis Ritchie 的确认：V7 中的 osh 确为 V6 shell，因 Bell 向 Interdata 移植 UNIX 而保留。
+**邮件来源**：Guy Harris（guy at rlgvax.UUCP），comp.unix.wizards，1983年6月，Message-ID: `617@rlgvax.UUCP`
+**史学意义**：以 Ritchie 本人证词锁定 osh/V6 shell 的来历，把口述史锚定到可引用邮件。
+<!-- /MAIL_INSIGHT -->
+
+<!-- MAIL_INSIGHT: 37241@mips.mips.COM -->
+**观点**：1990年 John Mashey 在 comp.unix.wizards 以当事人身份参与讨论 sh 与 csh 的历史源流。
+**邮件来源**：John Mashey（mash at mips.COM），comp.unix.wizards，1990年3月，Message-ID: `37241@mips.mips.COM`
+**史学意义**：作为 shell 史关键人物的第一手参与，为 shell 家族谱系提供当事者回忆。
+<!-- /MAIL_INSIGHT -->
+
+<!-- PODCAST_REVIEW v20260829 -->
+<!-- 语义复核范围：BSD Now EP236、BSD Now EP116（共 2 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
+
+**要点**：
+
+- 节目解读 OpenBSD 的 pledge 机制：程序在完成启动阶段所需的特权操作后调用 pledge 承诺此后仅使用特定资源，违约即由内核以 SIGABRT 终止；execpromises 可为子进程单独设定承诺集，error 标志使违约返回错误而非杀死进程。（BSD Now EP236，[0.0-463.3]，L2）
+- 一篇博客通过把 ArcPiece 漏洞示例从 FreeBSD 8 i386 移植到 FreeBSD 11.1 amd64，说明 32 位平台经栈传递 syscall 参数、64 位平台经寄存器与 struct syscall_args 传递的差异，并指出 Linux 32 位用寄存器而非栈。（BSD Now EP236，[509.4-857.8]，L2）
+- FreeBSD 源代码库越过 330000 次提交，第 330001 次提交是 Patrick Kelsey 在 Limelight Networks 赞助下完成的 TCP Fast Open 客户端实现，其服务端若干年前为 Verisign 的 DNS over TCP 需求而写，可缩短高频连接的三次握手延迟。（BSD Now EP236，[4559.8-4701.3]，L2）
+- 博客讲解 cd 命令：cd 是 shell 内建命令，由标准 Unix 的 chdir 函数发起 chdir 系统调用，内核执行并校验目录权限；/usr/bin/cd 是供无内建实现的 shell 使用的脚本包装，实际 shell 不会去执行它。（BSD Now EP236，[3430.9-3872.6]，L2）
+- Warner Losh 宣布 FreeBSD 引入 Lua bootloader：源自 2014 年 Google Summer of Code，经 Pedro Souza、Reeve Hallow、Pedro Arthur 与基金会 co-op 学生 Zachary Neve Zinger 等推进，与 Forth loader 共存，在 11.2 中可选、12 中计划默认。（BSD Now EP236，[2221.4-2702.9]，L2）
+- Delphix 的 George Wilson 阐明 Compressed ARC 的设计路线：放弃业界通行的内存换出前压缩方案，利用磁盘块本已压缩的事实，让内存始终保持压缩形态、仅在读取瞬间解压，即“uncompressing data is a heck of a lot faster than compressing it”（2309.42-2314.38）。第一轮激进实现（跨文件系统共享块加回调通知机制）在完成约百分之九十五时暴露重大架构缺陷而中止，第二轮简化方案成为最终交付版本，计划于 2016 年 1 月进入 OpenZFS；实测 ARC 有效容量膨胀约 2.5 至 3 倍，128K 块解压读取约 200 微秒，单核解压吞吐 1.8-2 GB/s，不可压缩块经 shared ARC 共享指针免二次拷贝。（BSD Now EP116，[2258.47-2443.30]，L1）
+- Wilson 回顾池恢复工作的起点：入职 ZFS 团队后的首个任务即排查一起客户存储池损坏，通过解析全盘 DD 镜像中的文件头，最终发现损坏根源是一名管理员误将池中磁盘重新分区为 Linux 盘，与 ZFS 本身无关；此后约完成百余次池恢复，多数归因于用户误操作或其他软件的编程错误。他将池恢复视为超越本职、观察用户真实用法的窗口，此叙事呈现了维护者隐性运维经验的生成过程。（BSD Now EP116，[3839.40-3959.18]，L1）
+
+**史料**：
+
+- 一手史料：OpenBSD pledge 介绍博客；k3research 的 syscall 约定博客；FreeBSD 提交 330001（Patrick Kelsey 的 TCP Fast Open 客户端）；Safiya Abdallah 的 cd 实现博客；Warner Losh 的 Lua bootloader 公告；TorBSD Diversity Project 公开信。（BSD Now EP236，[0.0-3872.6]，L2）
+- 本期涉及的一手与准一手材料：Theo de Raadt 在邮件列表发布 OpenBSD pledge 改造状态更新；Kenneth D. Merry 以 SpectraLogic 名义在 FreeBSD 邮件列表发布 SMR 驱动补丁（camcontrol zone、camdd、diskzone API，同时面向 head 与 stable 分支）；Nicholas Marriott 以 Garrett D'Amore 的 Illumos less 分叉替换 OpenBSD 老旧 less，本地改动回灌上游；George Wilson 在欧洲 OpenZFS 会议报告 allocation throttle；Michael Dexter 获西雅图 GNU/Linux 会议 Cascadia Community Builder 奖并撰写 FreeNAS 博客 ZIL/SLOG 释疑文章（经 Matt Ahrens 审校）；2002 年 Unix 开发者桌面截图文章；另有 DigitalOcean FreeBSD 教程系列与 HardenBSD 开发者发布的 OpenSense 构建教程（转写作 Sean Webb，疑为 Shawn Webb）。（BSD Now EP116，[4699.46-5206.80]，L2）
+
+**史观**：
+
+- 总纲25 逻辑是形式主义而非世界本身的结构：cd 的语义由 shell 内建命令与内核 chdir 系统调用共同完成，目录权限由内核强制而非信任用户程序，说明命令语义是经系统调用形式化的产物。（BSD Now EP236，[3777.2-3821.5]，L2）
+- 总纲10 动手者创造历史：Lua bootloader 从 GSoC 学生 Pedro Souza 起步，经多位提交者与基金会 co-op 学生接力才进入 FreeBSD，说明默默动手者接力塑造系统基础设施。（BSD Now EP236，[2232.8-2360.0]，L2）
+- 总纲9 经验优先：allocation throttle 反转了跨设备均分分配的理论预设，以客户环境与内部系统的实际观测为准：池碎片化后各设备分配速度分化，索性“why not give more work to devices that are actually responding faster”（2193.18-2199.20），按响应能力倾斜工作负载使快设备保持满载。这一设计出自运维经验而非抽象公平原则，印证经验观测优先于理论均分的工程认识论。（BSD Now EP116，[2145.16-2202.86]，L1）
+- 总纲4 分离聚合是永恒规律：Compressed ARC 衍生出 compressed send/receive 复制（由其同事 Dan Kimmel 完成接收端关键工作），后续 ABD 内存表示（以散布-聚集页表取代 KMEM 缓存）源于 Linux 侧设计并回流惠及全部平台，L2ARC 元数据精简则复用块指针校验和以获得 SHA-256/512 级校验。代码在 Illumos/Delphix、Linux、FreeBSD 等平台间分离又聚合，恰是 OpenZFS 时代跨平台分叉之后走向再聚合的活体样本。（BSD Now EP116，[2949.82-3055.54]，L1）
+- 总纲10 动手者创造历史：Theo de Raadt 的 pledge 状态更新显示 600 个基础系统 ELF 二进制中 368 个已完成改造，并区分不值得列出的平凡工具与 reboot、mount、perl 等无法 pledge 的顽固组件，主张“low hanging fruit first”（715.35-717.25）。pledge 的历史不是安全理论史，而是无数默默改造工具的手工劳动史——默默做事的转换工作而非台前宣言构成 OpenBSD 安全路线的实体。（BSD Now EP116，[539.38-590.78]，L2）
+- 总纲22 知识注定过时：主持人翻检 2002 年 Unix 开发者桌面截图：Dennis Ritchie 运行 Windows NT 4、Richard Stallman 使用 X 与 GNOME、Jordan Hubbard 身在 Apple 而用 OS X、多位开发者与 FreeBSD、NetBSD 桌面同框；当年前沿的图形环境如今看来粗糙过时，而当事人各自的选择亦充满偶然。技术在当下总显新颖、注定沦为过时之物，历史书写须与这种过时性共处而非以今日标准追认优劣。（BSD Now EP116，[5743.24-5979.92]，L2）
+
+**辨析**：
+
+- [存疑脚注] 节目对 pledge 内部机制与 execpromises 的说明系二手解读，须以 OpenBSD 手册页与源码为准。　[存疑脚注] pledge 机制细节系二手解读。（BSD Now EP236，[80.4-463.3]，L4）
+- [考据脚注] FreeBSD 提交号 330001、TCP Fast Open 的作者与赞助方信息系主持人口播，须以 FreeBSD 版本库提交记录为准。　[考据脚注] 提交信息系口播转述。（BSD Now EP236，[4559.8-4595.8]，L4）
+- OpenSSH HPN（高性能网络）补丁去留之争：OpenSSH 6.8/7.x 代码重构使补丁维护困难，FreeBSD 邮件列表就弃用与否展开讨论，有参与者称 HPN 反而劣化性能；Alan Jude 以背靠背 10GbE 实测回应——基础 OpenSSH 达 5-6 Gbps，AES-CTR/GCM 足以喂饱链路、瓶颈在 MAC 与 CPU 而非加密本身，且 HPN 动态窗口行为异常；又借 dummy net 模拟 50/100 毫秒往返时延，按带宽时延积推导出 62.5/128 MB 套接字缓冲需求。辨析点在于：邮件列表的直觉争论最终须让位于可复现的基准测试，同时基准设计本身（背靠背、回环、时延模拟）决定了结论的适用边界。[存疑脚注] 转写人名失真：“deg erling smart grave”疑为 Dag-Erling Smørgrav，“john margurney”与“brian drury”均无法凭本转写确证。　[存疑脚注] HPN 之争涉及的多方邮件列表参与者人名在转写中失真，仅能部分推断，引用前须回查原始邮件列表。（BSD Now EP116，[1257.30-1498.32]，L1）
+
+**文献**：
+
+- [BSD Now EP236] Pennington J. BSD Now: 236: How a cd works[EB/OL]. (2018-03-07)[2026-08-15]. <https://www.bsdnow.tv/236>.
+- [BSD Now EP116] Pennington J. BSD Now: 116: Arcing ZFS[EB/OL]. (2015-11-18)[2026-08-15]. <https://www.bsdnow.tv/116>.
+
+<!-- /PODCAST_REVIEW -->

@@ -33,7 +33,7 @@ volume: 第11卷-dragonflybsd的历史
 
 ## 辨析
 
-- openbsd.duckdb 显示 OpenBSD 移除 i386 的精确时间须以 openbsd-src 仓库 tag 核验 [考据完成：2026-07-28 该处存疑标注属史料缺口，须待原始档案公开后方可补充确证]——openbsd.duckdb openbsd-src 仓库 tag 列表为空（可能因仓库镜像未抓取 tag），OpenBSD 5.7 release date 2015-05-0
+- openbsd.duckdb 显示 OpenBSD 移除 i386 的精确时间须以 openbsd-src 仓库 tag 核验 ［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］——openbsd.duckdb openbsd-src 仓库 tag 列表为空（可能因仓库镜像未抓取 tag），OpenBSD 5.7 release date 2015-05-0
 - 考据过程留痕——【查证来源】DragonFly BSD 4.0 Release Notes（**<https://www.dragonflybsd.org/release40/**>）〔待核：原文截断，后文待回源〕
 - 考据过程留痕——【查证来源】DragonFly BSD 4.0 Release Notes（**<https://www.dragonflybsd.org/release40/**>）经 WebFetch 一手核验，原文记载"DragonFly 4.0 now supports GPUs from the Haswell family, and OpenGL acceleration is now
 - 考据过程留痕——【查证来源】dragonfly.duckdb dragonfly-src 仓库 contributors 表 Tigeot first = 2011-03-06 last = 2020-12-19 total = 1346 经数据库查询核验，末次 commit 2020-12-19 为“维护负担的双向性”再反驳提供代码级证据——Tigeot 停止贡献后 DragonFly 的 DRM
@@ -48,7 +48,7 @@ volume: 第11卷-dragonflybsd的历史
 
 <!-- DB_REF:dragonfly.duckdb -->
 > **数据库引用（dragonfly.duckdb）**：本子节对应 dragonfly 代码仓库。> 2003-2026 年间：656,206 次提交。> 仓库总览：656,206 次提交，535 位贡献者，2003-06-17 至 2026-08-18。
-- dragonfly.duckdb commits 表（四仓库 2011-2018 年对照与 DragonFly 活跃 committer 数）；dragonfly.duckdb dragonfly-src 仓库 commits 表（2014-2017 年 TOP 5）；各项目 release notes 与官网；BSD 相关市场调研报告[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证] ［A］
+- dragonfly.duckdb commits 表（四仓库 2011-2018 年对照与 DragonFly 活跃 committer 数）；dragonfly.duckdb dragonfly-src 仓库 commits 表（2014-2017 年 TOP 5）；各项目 release notes 与官网；BSD 相关市场调研报告［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］ ［A］
 
 <!-- DB_REF:netbsd.duckdb -->
 > **数据库引用（netbsd.duckdb）**：本子节对应 netbsd 代码仓库。> 2011-2018 年间：568,339 次提交。> 仓库总览：1,999,412 次提交，1,545 位贡献者（contributors 表行数，1992-07-13 至 2026-08-24）。

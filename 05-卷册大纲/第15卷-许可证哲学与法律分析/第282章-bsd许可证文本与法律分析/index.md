@@ -20,7 +20,7 @@ volume: 第15卷-许可证哲学与法律分析
   - 公告与 OSI 批准时点可交叉核查；[考据完成：2026-07-30 三次联网核查确认——**William Hoskins** 职务为 **Director, Office of Technology Licensing, University of California, Berkeley**（加州大学伯克利分校技术许可办公室主任，非 OTL 主任的缩写疑问，OTL 即 Office of Technology Licensing 的缩写，Hoskins 确为该办公室主任）
 - 总纲第 14 条——许可证约束：宽松许可证谱系
   - 辨析：**BSD** 与 **MIT** 在法律效力上是否完全等价
-  - 文献：**MIT License** 文本；**Apache License 2.0** 文本[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]
+  - 文献：**MIT License** 文本；**Apache License 2.0** 文本［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
 
 ## 2
 
@@ -38,7 +38,7 @@ volume: 第15卷-许可证哲学与法律分析
 
 - 广告条款弃用是 1999 年还是更早，Hoskins 公告与 OSI 批准时点可交叉核查；[考据完成：2026-07-30 三次联网核查确认——**William Hoskins** 职务为 **Director, Office of Technology Licensing, University of California, Berkeley**（加州大学伯克利分校技术许可办公室主任，非 OT
 - **BSD** 与 **MIT** 在法律效力上是否完全等价
-  - 文献：**MIT License** 文本；**Apache License 2.0** 文本[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]
+  - 文献：**MIT License** 文本；**Apache License 2.0** 文本［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
 
 ## 282.1.4 史料辨析
 
@@ -52,8 +52,7 @@ volume: 第15卷-许可证哲学与法律分析
 
 ## 文献
 
-- Berkeley 1999.7.22 公告（**University of California, Berkeley** **Office of Technology Licensing** 版权修正通知，签署人 **William Hoskins**，Director, Office of Technology Licensing，原始文件 `ftp://ftp.cs.berkeley.edu/pub/4bsd/README.Impt.License.Change`）；OSI License List[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档
-- **MIT License** 文本；**Apache License 2.0** 文本[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]
+- Berkeley 1999.7.22 公告（**University of California, Berkeley** **Office of Technology Licensing** 版权修正通知，签署人 **William Hoskins**，Director, Office of Technology Licensing，原始文件 `ftp://ftp.cs.berkeley.edu/pub/4bsd/README.Impt.License.Change`）；OSI License List［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
 
 ## 282.1.4 史料辨析
 

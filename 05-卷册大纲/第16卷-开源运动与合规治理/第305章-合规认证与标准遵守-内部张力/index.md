@@ -35,15 +35,7 @@ volume: 第16卷-开源运动与合规治理
 - 要点：操作系统教科书（如 Ta
 - 总纲第 16 条——经济周期与商业竞争驱动批评话语
   - 辨析：批评的具体时间点与传播范围需追溯；vendor 营销材料中是否直接点名 FreeBSD 需查证
-  - 文献：Red Hat Enterprise Linux Security White Paper；Oracle Solaris Security Features[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知
-- 总纲第 10 条——边缘者贡献塑造合规工程
-  - 辨析：CMVP 测试工程师中是否有 FreeBSD 项目成员需查公开档案；评估实验室是否公开测试平台需查 NLAP 文档
-  - 文献：NIST NVLAP Laboratory Directory；Common Criteria Testing Laboratories[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源
-
-## 辨析
-
-- 两派的具体人物与时间线需逐一考证；“形式认证派”是否曾正式提案 Foundation 申请认证需查董事会记录
-- 文献：freebsd-advocacy 邮件列表存档；FreeBSD Foundation Board Minutes ［A］
+  - 文献：Red Hat Enterprise Linux Security White Paper；Oracle Solaris Security Features［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
 
 ## 305.13.2 POSIX 兼容与 BSD 传统路线之争
 
@@ -56,14 +48,7 @@ volume: 第16卷-开源运动与合规治理
 
 - 要点：操作系统教科书（如 Tanenbaum、Silberschatz）对 BSD 合规的讨论简
 - 批评的具体时间点与传播范围需追溯；vendor 营销材料中是否直接点名 FreeBSD 需查证
-  - 文献：Red Hat Enterprise Linux Security White Paper；Oracle Solaris Security Features[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须
-- CMVP 测试工程师中是否有 FreeBSD 项目成员需查公开档案；评估实验室是否公开测试平台需查 NLAP 文档
-  - 文献：NIST NVLAP Laboratory Directory；Common Criteria Testing Laboratories[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须
-- Inspur K-UX 是否仍维持 UNIX 03 认证需查最新 Open Group 数据库（2014 年后疑似失效）；SUSE SLES 9 CC EAL 4+ 认证的具体 EAL 等级与证书号需核实；macOS UNIX 03 认证从哪个版本起需逐一查证；联网核查结论：本节涉及的官方权威数据库（The Open Group UNIX 03 Register、NIST CMVP、Common
-
-## 文献
-
-- freebsd-advocacy 邮件列表存档；FreeBSD Foundation Board Minutes ［A］
+  - 文献：Red Hat Enterprise Linux Security White Paper；Oracle Solaris Security Features［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
 
 
 <!-- dangan-20260908 消解回写 -->
@@ -80,14 +65,13 @@ volume: 第16卷-开源运动与合规治理
 ## 305.15.2 教科书与科普中的合规叙事
 
 - 要点：操作系统教科书（如 Tanenbaum、Silberschatz）对 BSD 合规的讨论简略，多数仅提及 UNIX 03 与 POSIX 概念
-- 史料：Tanenbaum"Modern Operating Systems"4th ed.、Silberschatz"Operating System Concepts"10th ed.[考据完成：2026-07-28 经穷尽联网考据，上述史料清单为已知公开来源汇总，部分原始档案未公开数字化
-- Red Hat Enterprise Linux Security White Paper；Oracle Solaris Security Features[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]
+- 史料：Tanenbaum"Modern Operating Systems"4th ed.、Silberschatz"Operating System Concepts"10th ed.［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
 
 ## 305.16.2 POSIX 认证成本与 UNIX 03 争议
 
 - 要点：UNIX 03 认证成本与 The Open Group 商标政策长期受社区批评，Linux Foundation 主导 LSB 部分原因即规避 UNIX 03 费用
 - 史料：The Op
-- NIST NVLAP Laboratory Directory；Common Criteria Testing Laboratories[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]
+- NIST NVLAP Laboratory Directory；Common Criteria Testing Laboratories［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
 
 ## 305.17.2 HIPAA/SOC2 审计中的 FreeBSD 管理员
 

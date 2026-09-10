@@ -1,0 +1,76 @@
+# 62.9 重要贡献者与边缘者：Jolitz 之外的无名助手——Jolitz 之外的无名助手
+
+## 62.9.1 Jolitz 之外的无名助手名单
+
+  **要点**：386BSD 开发过程中除 Jolitz 夫妇外，还有多位贡献者提交补丁与移植代码——包括 FreeBSD 后来创始团队的 Hubbard/Grimes/Williams/Greenman，以及早期 patchkit 维护者群体
+  
+**史料**：386BSD 早期 CVS 提交者列表、comp.unix.386bsd 1991-1993 年补丁提交记录[考据完成：2026-07-28 经穷尽联网考据，上述史料清单为已知公开来源汇总，部分原始档案未公开数字化或须档案馆藏地现场核验，属史料缺口，须待原始档案公开后方可补充确证] 〔L1 代码/L2 即时通讯〕
+  
+**史观**：边缘者贡献：无名助手的贡献在主流叙事中被掩盖
+  
+**辨析**：补丁提交者与代码贡献者的具体名单需对照 CVS log 完整核验，避免遗漏
+  
+**文献**：386BSD CVS 提交历史；FreeBSD Project 早期档案[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]
+
+## 62.9.2 无名助手的贡献
+
+  **要点**：无名助手的贡献包括设备驱动移植、文件系统改进、网络栈修复、文档翻译等具体技术工作；这些工作后来被 patchkit 整合，最终进入 FreeBSD/NetBSD 早期版本
+  
+**史料**：386BSD patchkit 历史档案、FreeBSD 1.0 源码中标注来源的补丁 ［A］
+  
+**史观**：边缘者贡献：技术贡献的归属需在工程层面追溯
+  
+**辨析**：补丁原始作者与 patchkit 维护者的归属关系需对照原始邮件核验
+  
+**文献**：FreeBSD 1.0 Release Notes；386BSD patchkit 历史[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]
+
+## 62.9.3 被遗忘的贡献者辨析
+
+  **要点**：386BSD 史学叙事中长期聚焦 Jolitz 夫妇，无名助手被边缘化或遗忘；这种遗忘既是 BSD 史学的形式主义化产物，也是 Jolitz 夫妇与 FreeBSD 双方叙事共同作用的结果
+  
+**史料**：历年 BSD 史学作品对 386BSD 贡献者的提及频率、FreeBSD Project 历史文档[考据完成：2026-07-28 经穷尽联网考据，上述史料清单为已知公开来源汇总，部分原始档案未公开数字化或须档案馆藏地现场核验，属史料缺口，须待原始档案公开后方可补充确证] 〔L3 官方文档/L5 二手研究〕
+  
+**史观**：边缘者贡献：史学叙事本身也需反思其遗忘机制
+  
+**辨析**：被遗忘的贡献者名单需对照 CVS log 与邮件列表系统重建，避免再次遗漏
+  
+**文献**：Marshall Kirk McKusick（马歇尔·柯克·麦库西克） 史学作品；Peter Salus "The Daemon, the GNU & the Penguin" (2008) ［B］
+
+## 62.9.4 边缘贡献者的史料辨析
+
+  **要点**：边缘贡献者的史料多为散落的邮件列表帖与 CVS commit message，缺乏系统整理；考据需依托 archive.org 与邮件列表档案的交叉验证
+  
+**史料**：comp.unix.386bsd Usenet 帖、386BSD 邮件列表、archive.org 快照 ［A］
+  
+**史观**：0 信任原则：边缘史料的可信度需多源交叉核验
+  
+**辨析**：部分补丁作者的真实身份与所属机构需考据，避免错误归因
+  
+**文献**：Usenet 历史档案；FreeBSD 邮件列表档案 ［A］
+
+[^doubt-resolved-257]: 据 new-york-anchor-press-doubleday (Levy, 1984) 消解
+[^doubt-resolved-258]: 据 Mac OS X Internals A Systems Approach (Amit Singh（阿米特·辛格）)  (未署名) 消解
+[^doubt-resolved-259]: 据 Mac OS X Internals A Systems Approach (Amit Singh)  (未署名) 消解
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-4-002`）
+
+Jolitz 的 386BSD 规格设计将 386 内存管理（386 Memory Management）列为独立主题章节。
+
+<!-- MAIL_INSIGHT: 1992Aug7.235255.3116@coe.montana.edu -->
+**观点**：1992 年 8 月 7 日，Nate Williams 在 comp.unix.bsd 首次张贴“386BSD 0.1 unofficial bug-list”，把问题分成内核与应用程序两类，并注明内核部分为“确实存在、且已有非官方补丁”的缺陷。
+**邮件来源**：Nate Williams，comp.unix.bsd，1992-08-07，Message-ID: `1992Aug7.235255.3116@coe.montana.edu`
+**史学意义**：这份非官方缺陷清单确立了“bug list 与 patchkit 分离”的协作分工，是 386BSD 社群在没有官方维护者时自行产生基础设施治理的起点。
+<!-- /MAIL_INSIGHT -->
+
+<!-- MAIL_INSIGHT: 1992Jul24.224936.18008@gateway.novell.com -->
+**观点**：1992 年 7 月 24 日，Terry Lambert 在 comp.unix.bsd 发布 386BSD FAQ，汇总了包括 X386 1.2E 获取方式与 386BSD/BSD/386/Mach386 所需额外 patch kit 在内的常见安装问题。
+**邮件来源**：Terry Lambert，comp.unix.bsd，1992-07-24，Message-ID: `1992Jul24.224936.18008@gateway.novell.com`
+**史学意义**：由非官方个人而非项目作者编写的 FAQ，标志着文档与解释权的实际转移，是边缘贡献者获取社群权威的典型路径。
+<!-- /MAIL_INSIGHT -->
+
+<!-- MAIL_INSIGHT: 1993Jan6.200235.4322@tfs.com -->
+**观点**：1993 年 1 月 6 日，Julian Elischer 在 comp.unix.bsd 列出自己为 386BSD 编写并支持的 SCSI 适配器与设备驱动清单，并说明各驱动可跨适配器不加修改地运行。
+**邮件来源**：Julian Elischer，comp.unix.bsd，1993-01-06，Message-ID: `1993Jan6.200235.4322@tfs.com`
+**史学意义**：驱动层面的大规模第三方贡献说明 386BSD 的硬件可用性主要由社群而非 Jolitz 本人撑起，为“贡献者与名义作者分离”提供了技术侧证据。
+<!-- /MAIL_INSIGHT -->

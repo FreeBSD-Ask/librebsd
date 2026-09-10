@@ -27,14 +27,7 @@ volume: 第11卷-dragonflybsd的历史
 ## 辨析
 
 - 并发路线无绝对优劣——LWKT 的优雅与 SMPng 的实用各有拥趸。具体争议点：1) “优雅” 与 “实用” 的价值判断须以项目目标而非统一标准衡量——DragonFly 追求轻量级内核哲学，FreeBSD 追求主流服务器市场适配，二者目标不同 [存疑脚注：LWKT “优雅” 与 SMPng “实用” 的价值判断属主观工程判断，须以具体部署场景核验]；2) 各路径的长期演化须以 2026 年回溯
-- LWKT 消息传递模型对竞态条件漏洞的防御效果无同行评审研究证实——token 机制理论上减少了持锁等待导致的死锁，但 IPI 消息传递的异步性可能引入新的时序漏洞；1.x 周期未见直接归因于 LWKT 并发缺陷的 CVE，可能因 DragonFly 1.x 时期 SMP 部署规模有限，并发漏洞未充分暴露 [考据完成：2026-07-28 LWKT 与传统锁模型在竞态条件漏洞防御效果上的差异无同行
-- 贡献者高度集中——Top 1 贡献者 DPorts Builder 占比 88.0%，需考量'个人主导'与'社区协作'的叙事张力
-- 贡献者高度集中——Top 1 贡献者 DPorts Builder 占比 88.0%，需考量'个人主导'与'社区协作'的叙事张力
-- DragonFly BSD nullfs 与 FreeBSD 5.0+ 的 **mount_nullfs(8)** 在命令名上相同但代码路径独立——FreeBSD 5.0 将 nullfs 重构为 GEOM 类，DragonFly BSD 保留传统 layered fs 路径。与 NetBSD null 层在 4.4BSD-Lite2 前同源，分叉发生在 NetBSD 1.6 layered fs
-
-## 文献
-
-- McKusick M K, Neville-Neil G. The Design and Implementation of the FreeBSD Operating System [M]. 2nd ed. Addison-Wesley, 2015；dragonfly.duckdb dragonfly-src 仓库；各 BSD/Linux 项目 Release Notes. ［B］
+- LWKT 消息传递模型对竞态条件漏洞的防御效果无同行评审研究证实——token 机制理论上减少了持锁等待导致的死锁，但 IPI 消息传递的异步性可能引入新的时序漏洞；1.x 周期未见直接归因于 LWKT 并发缺陷的 CVE，可能因 DragonFly 1.x 时期 SMP 部署规模有限，并发漏洞未充分暴露 ［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］. 2nd ed. Addison-Wesley, 2015；dragonfly.duckdb dragonfly-src 仓库；各 BSD/Linux 项目 Release Notes. ［B］
 
 <!-- DB_REF:dragonfly.duckdb -->
 > **数据库引用（dragonfly.duckdb）**：本子节对应 dragonfly 代码仓库。> 2004-2004 年间：3,366 次提交。> 仓库总览：656,206 次提交，535 位贡献者，2003-06-17 至 2026-08-18。

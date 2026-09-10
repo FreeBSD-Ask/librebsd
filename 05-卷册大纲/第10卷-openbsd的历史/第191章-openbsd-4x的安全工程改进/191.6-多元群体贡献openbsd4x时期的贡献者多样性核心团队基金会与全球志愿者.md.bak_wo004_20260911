@@ -1,0 +1,231 @@
+# 191.6 多元群体贡献：OpenBSD 4.x 时期的贡献者多样性——核心团队、基金会与全球志愿者
+
+## 191.6.1 核心开发者与基金会治理的多元化
+
+**要点**：OpenBSD 4.x 时期（2005-2010）延续小而精核心模式——Theo de Raadt（创始人，加拿大卡尔加里）主导方向（openbsd.duckdb 显示 deraadt@ 2005-2010 共 5416 条 commit），otto@（Otto Moerbeek（奥托·穆尔贝克），malloc 子系统维护，1020 条 commit）、henning@（Henning Brauer（亨宁·布劳尔），pf 与 ospfd 维护，1017 条 commit）、reyk@（Reyk Flöter，网络服务与 iked，1004 条 commit）等资深开发者负责关键子系统；2007 年 OpenBSD Foundation 在加拿大注册为非营利组织（详见 86.5），引入企业赞助与法律/资金支撑，使贡献者群体从 “纯志愿者” 扩展到 “基金会 + 企业 + 志愿者” 三元结构
+
+**史料**：openbsd.duckdb openbsd-src 仓库 2005-2010 贡献者统计（deraadt 5416、jmc 3921、miod 3760、brad 2728、kettenis 2271、espie 1984、otto 1020、henning 1017、reyk 1004）；OpenBSD 4.x Release Notes；OpenBSD Foundation 2007 注册公告 ［A］
+
+**史观**：总纲第 7 条——技术选择即政治选择：基金会的企业赞助结构改变了 OpenBSD 的贡献者政治构成——4.x 时期前 OpenBSD 资金主要来自个人捐赠与 hackathons 赞助，Foundation 成立后企业赞助（如 Google 编程之夏、Microsoft 等）的引入使贡献者群体从纯志愿者扩展至包含企业赞助参与者
+
+**辨析**：Moerbeek、Brauer、Flöter 等核心开发者的具体隶属/国别以邮件列表自述与 hackathons 记录为准——本章仅确认其在 OpenBSD 提交中的主导角色，不推断国别或族裔；Foundation 赞助者名单的具体构成随年份变动，以 Foundation 年报为准
+
+**文献**：openbsd.duckdb openbsd-src 仓库 2005-2010 贡献者统计；OpenBSD 4.x Release Notes [EB/OL]. <https://www.openbsd.org/plus.html>；OpenBSD Foundation 公告 [EB/OL]. <https://www.openbsdfoundation.org/> ［A］
+
+## 191.6.2 国际志愿者基数的考证困境
+
+**要点**：与 2.x 时期相同，4.x 时期的提交统一经 @openbsd.org 账号，openbsd.duckdb openbsd-src 仓库 contributors 数据无法直接以邮箱域识别国别/机构；openbsd.duckdb 显示 openbsd-src 仓库 2005-2010 年间活跃贡献者约 100 人以上，邮件列表与发布注记显示贡献者横跨欧洲、北美及其他地区
+
+**史料**：openbsd.duckdb openbsd-src 仓库 2005-2010 contributors 统计；OpenBSD 邮件列表存档（<https://marc.info/?laccopenbsd-misc>） ［A］
+
+**史观**：总纲第 10 条——边缘者贡献：OpenBSD 作为边缘项目的国际志愿者基数，是其安全成果反哺生态的基础——pf 被 FreeBSD 移植、OpenSSH 被产业广泛采用，均源于国际志愿者在 OpenBSD 上的贡献累积
+
+**辨析**：任何具体国别占比均须以多源交叉验证为准，不得由姓名推断族裔/国籍 [考据完成：2026-07-28 OpenBSD 贡献者国别分布无权威统计，openbsd.duckdb 仅记录 commit author_name 而无国别字段]
+
+**文献**：openbsd.duckdb openbsd-src 仓库 contributors；OpenBSD 邮件列表存档 [EB/OL]. <https://marc.info/?laccopenbsd-misc> ［A］
+
+## 191.6.3 企业赞助与产业协作的多元贡献
+
+**要点**：OpenBSD Foundation 引入企业赞助后，OpenBSD 的 “贡献者” 概念扩展到资金与法律层面；4.x 时期 OpenBSD 成果（pf 被 FreeBSD 移植、OpenSSH 被产业广泛采用）形成跨项目贡献闭环——openbsd.duckdb 显示 FreeBSD 于 2004-02-26 由 Max Laier commit 5c45a928b954 "Vendor import of OpenBSD's packet filter (pf) as of OpenBSD 3.4" 首次移植 pf；CARP、synproxy 等特性亦受益于网络运营商与安全公司的实际需求反馈；注意：LibreSSL 在 4.x 时期（2005-2010）尚未 fork（LibreSSL fork 于 2014 年 4 月 Heartbleed 后），4.x 时期的 TLS 库仍是 OpenSSL 集成
+
+**史料**：freebsd.duckdb freebsd-src 仓库 commit 5c45a928b954（2004-02-26 Max Laier "Vendor import of OpenBSD's packet filter (pf) as of OpenBSD 3.4"）；openbsd.duckdb openbsd-src 仓库 LibreSSL 相关 commit 统计（2014 年前 0 条，验证 4.x 时期无 LibreSSL）；OpenBSD Foundation 赞助者名单（<https://www.openbsdfoundation.org/>） ［A］
+
+**史观**：总纲第 22 条——开源运动：BSD 许可证使 OpenBSD 成果被产业自由采纳，放大多元群体贡献——pf 被 FreeBSD 移植、OpenSSH 被产业广泛采用，是 BSD 许可证 “允许 fork 不强制回馈” 特性的具体显现
+
+**辨析**：“企业回馈” 的具体程度以 openbsd.duckdb commit 记录为准——部分赞助为资金而非代码，对代码库的直接贡献以 commit author_name 与 committer_email 维度核查；FreeBSD pf 移植始于 2004-02-26（5.3 周期），后续 pf 3.5（2004-06-16）、pf 3.7（2005-05-03）持续同步
+
+**文献**：freebsd.duckdb freebsd-src 仓库 commit 5c45a928b954；OpenBSD Foundation 年报 [EB/OL]. <https://www.openbsdfoundation.org/>；cross-BSD 协调邮件列表 ［A］
+
+## 191.6.4 史料辨析与局限
+
+**要点**：4.x 时期多元群体贡献的史料局限——提交元数据丢失机构/国别信号，且 contributors 表仅覆盖提交者；须以邮件列表、Foundation 年报与访谈多源交叉，遵循 0 信任原则
+
+**史料**：OpenBSD CVS/Git 提交日志；Foundation 年报；邮件列表存档 ［A］
+
+**史观**：总纲第 25 条——0 信任原则：多元群体画像须多源交叉，警惕由姓名推断身份的刻板印象——bsd_commits.db 的 author_name 字段仅记录用户名（如 "otto"、"henning"），不包含国别或机构信息
+
+**辨析**：非提交贡献者（文档、ports、翻译）的记录缺口以 OpenBSD ports 仓库与文档仓库的 commit 记录补充 [考据完成：2026-07-28 非代码贡献的记录完整性无单一权威来源]
+
+**文献**：OpenBSD 提交/文档/ports 贡献记录；OpenBSD Foundation 年报 ［A］
+
+<!-- DB_REF:openbsd.duckdb -->
+> **数据库引用（openbsd.duckdb）**：本子节对应 openbsd 代码仓库。
+> 1995-2026 年间：491,195 次提交。
+> 仓库总览：491,195 次提交，3,352 位贡献者，1995-10-18 至 2026-08-25。
+
+<!-- DEEP_ANALYSIS: openbsd.duckdb.commits -->
+**数据库分析发现**（证据等级：L1，来源：`openbsd.duckdb.commits.openbsd`）
+
+openbsd 核心贡献者：ajacoutot(35528), deraadt(31454), sthen(30592), espie(18328), jasper(16649)
+
+<!-- DEEP_ANALYSIS: sacred_sources.duckdb.blocks -->
+**史家判断**（证据等级：L2，来源：`sacred_sources.duckdb.blocks.188`）
+
+以食品安全为例：人们永远无法得到真正的认识。你既不能说科学证明其在某量无毒害就真的无毒害，也不能证明它真的有毒害。用科学说服人本身就不科学——因为科学本身就是非充分决定性的，本身的正确性是得不到保证的。且你能得到的所有科学解释，正因为它是科学解释，所以它必定也是错误的。这并非反智，而是对科学边界的清醒认识。好坏是对于人来说的，所谓“剂量决定论”也是无意义的——零剂量不是更安全吗？
+
+<!-- DEEP_ANALYSIS: sacred_sources.duckdb.blocks -->
+**史家判断**（证据等级：L2，来源：`sacred_sources.duckdb.blocks.283`）
+
+王充因为个人境遇而提出了德福不一致论，其否定了个人努力的作用。可以看到人生的遭遇会对其理论有决定性的作用，有时是偏差，有时是谬误，但根本上说是一种悲伤。这揭示了理论建构的偶然性：任何理论都深深打上 theorist 个人经历的烙印。不存在客观的、超越个人境遇的理论。历史哲学的建构者同样如此——本书的理论亦不例外，它诞生于特定的境遇、特定的悲伤、特定的选择。
+
+<!-- DEEP_ANALYSIS: cross_indexes.duckdb.concept_history -->
+**史家判断**（证据等级：L2，来源：`cross_indexes.duckdb.concept_history.13`）
+
+出口管制：出口管制概念的演化: ①冷战成型期（1949–1951）：COCOM 建立，协调对苏联、东欧、中国的禁运货单；1951 年美国《相互防御援助管制法》（Battle Act）以停止援助迫使盟国参与（1980 年废止）；②缓和调整期（60–80 年代）：因缓和与贸易增长，管制多次放宽；③转型重组期（1993–1996）：1994 年 3 月 31 日 COCOM 解散；1995 年 12 月 19 日成立“瓦森纳协定”（Wassenaar Arrangement），1996 年 11 月 1 日起运作；④数字与加密期：加密早在冷战期被列为军品（由国务院依 AECA 管，即 ITAR），1996 年底部分非军用加密移至商
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-1-011`）
+
+Thompson 在 1984 年图灵奖演讲中称，特洛伊木马攻击的构想最早见于一份对 Multics 早期实现安全性的空军批判报告。
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-3-004`）
+
+Theodore Roszak 1969 年出版《The Making of a Counter Culture》，副标题为“对技术官僚社会及其青年反抗的反思”。
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-4-010`）
+
+Anonymous CVS 源码分发机制由 Charles D. Cranor 与 Theo de Raadt 创建，用于开放 OpenBSD 源码仓库。
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-4-011`）
+
+创建 Anonymous CVS 的目标之一是开放 OpenBSD 的 CVS 源码仓库访问，使项目更开放并鼓励开发者兴趣。
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-4-100`）
+
+1995 年秋启动 OpenBSD 项目时，Cranor 与 de Raadt 决定用 CVS 管理源代码树，并创建匿名 CVS 以开放源码仓库。
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-5-111`）
+
+Anonymous CVS 由 Charles D. Cranor 与 Theo de Raadt 在 1995 年秋创建 OpenBSD 时设计，使匿名互联网用户无需写权限账户即可访问源码库。
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-5-112`）
+
+Anonymous CVS 是一种让匿名互联网用户在不危及安全的前提下访问源码库的机制，将开放源码推进为开放源码库。
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-6-017`）
+
+Harris、Jha、Reps 等人提出声明式、时序化且实用的 capability 编程方法，用于在 Capsicum 上满足安全策略。
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-6-108`）
+
+OpenBSD 自 2005 年起对 SCSI 中间层（SCSI midlayer）实施重大重构，引入 mpath(4) 多路径虚拟总线与 iopools 资源池、将适配器命令处理器改为回调式 scsi_done API，以改善稳定性、性能与可扩展性。
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L2，来源：`historical_claims.duckdb.claim.CL-7-046`）
+
+参考文献全文数据库收录《20260805 Glass deRaadt expulsion email 19941223 en》（unknown，2026），作为本章主题的候选史料。
+
+## 文献
+
+- Ingo Schwarze. bsdcan15-mandoc[M]. 2015.
+- Ingo Schwarze. bsdcan18-mandoc[M]. 2018.
+- Paul Irofti. bsdcan2014-octeon dsr500[M]. 2014.
+- bsdcan2015-rdomains[M].
+- bsdcan2016-bfd[M].
+- bsdcan2016-xen[M].
+- bsdcan2019-syspatch[M].
+- bsdcan2019-tls13[M].
+- bsdcan2025-hshoexer-confidential-computing[M].
+- andrew, afresh1. 2024-Why-Rewrite-fw update-Euro BSDcon[M]. 2024.
+- eurobsdcon2008-sensors[M].
+- eurobsdcon2011-kettenis[M].
+- eurobsdcon2011-openbsdscsievolution[M].
+- eurobsdcon2014-mandoc-paper[M].
+- eurobsdcon2014-mandoc-slides[M].
+- eurobsdcon2014-parallel-make[M].
+- eurobsdcon2015-packages[M].
+- eurobsdcon2015-softraid-boot[M].
+- eurobsdcon2016-openbsd-11n[M].
+- eurobsdcon2016-privsep[M].
+- eurobsdcon2017-device-drivers[M].
+- eurobsdcon2017-opensmtpd[M].
+- eurobsdcon2018-mandoc[M].
+- eurobsdcon2018-rop[M].
+- eurobsdcon2019-plist[M].
+- eurobsdcon2022-krw-blockstobooting[M].
+- eurobsdcon2023-bluhm-mitigations[M].
+- eurobsdcon2023-espie-cache[M].
+- eurobsdcon2024-bluhm-packetflow[M].
+- eurobsdcon2025-bluhm-protomp[M].
+- eurobsdcon2025-florian-easy[M].
+- Marc Espie. eurobsdcon 2018 https[M]. 2018.
+- Claudio Jeker. asiabsdcon08-network[M]. 2008.
+- Murenin C A, Boutaba R. OpenBSD Hardware Sensors Framework[C]//AsiaBSDCon 2009 Proceedings. Tokyo, 2009.
+- Murenin C A. OpenBSD Hardware Sensors Framework（幻灯片）[EB/OL]. AsiaBSDCon 2009. <https://www.openbsd.org/papers/asiabsdcon2009-sensors-slides.pdf>.
+- syuu. asiabsdcon2010 smp for sgi paper[C]. 2010.
+- Alexandre Ratchov. asiabsdcon2010 sndio slides[C]. 2010.
+- asiabsdcon2016-vmm-slides[M].
+- asiabsdcon2019-rop-slides[M].
+- Dave Voutila. asiabsdcon2023-hardening vmd devices-slides[M]. 2023.
+- andrew, afresh1. 2024-Why-Rewrite-fw update-Fossy[M]. 2024.
+- chuck, deraadt. anoncvs-paper[M]. [存疑]
+- Niels Provos. crypt-slides[M]. 2002.
+- eurobsd-firewalls-2002[M]. 2002.
+- eurobsd2017-pkgtools[M].
+- Brian Bamsch. Porting Open BSD to RISCV Final Report[M]. 2020.
+- Paul Irofti. eurobsdcon2014-octeon dsr500[M]. 2014.
+- eurobsdcon2014-rdomains[M].
+- eurobsdcon2015-mandoc[M].
+- eurobsdcon2016-embracingbsdrt[M].
+- eurobsdcon2016-utf8[M].
+- eurobsdcon2017-schedisnot[M].
+- eurobsdcon2017-syslog-slides[M].
+- eurobsdcon2019-bwfm[M].
+- Software Freedom Conservancy. Form-990 fy-2022-23[M]. 2022.
+- eurobsdcon2019-gameoftrees[M].
+- eurobsdcon2019-perform-slides[M].
+- eurobsdcon2022-bluhm-networkmp[M].
+- eurobsdcon2022-espie-arches[M].
+- eurobsdcon2022-tb-libressl[M].
+- Marc Espie. lse clang[M]. 2017.
+- eurobsdcon2023-matthieu-pf-rdomain[M].
+- Dave Voutila. eurobsdcon2024-vmd multiprocessing[M]. 2024.
+- 未知. openbsd Open BSD-jitsi[M]. 2022.
+- Giovanni Bechis 12 ` ~~~ alse. openbsd seccomp-pledge-oss2017[M]. 2017.
+- eurobsdcon2025-hshoexer-confidential-computing[M].
+- eurobsdcon2021-espie-debug[M].
+- eurobsdcon2023-otto-malloc[M].
+- eurobsdcon2024-hshoexer-confidential-computing[M].
+- eurobsdcon2025-espie-dpb[M].
+
+<!-- PODCAST_REVIEW v20260829 -->
+<!-- 语义复核范围：BSDTalk EP195、BSDTalk EP97（共 2 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
+
+**要点**：
+
+- ACPI 的本质与 AML 机制：它是现代 PC 的大规模配置与电源接口，源自旧式即插即用规范的演进——厂商把以 AML 语言写就的代码编译成字节码置入内存，操作系统须在电源键按下、合盖、热区过热等事件发生时执行相应片段；早期实现集中于挂起恢复，如今扩展到热管理、PCI 自动配置、设备枚举、嵌入式控制器、背光与时钟，规范随每个版本增厚数百页、已逾七百页。（BSDTalk EP195，[241.76-326.76]，L1）
+- AML 解析器呈三足格局：其余 BSD 采用 Intel 参考实现，另一家是微软，第三家即 OpenBSD 自研解析器（由 Marco Peereboom、Jordan Hargrave 等人写成）；OpenBSD 实现仅数个文件、极为轻量，立场是不依附厂商实现——Intel 实现并无具体缺陷，只是庞大且会迫使项目跟随其取舍。　[存疑脚注] 转写将 Jordan Hargrave 仅呈为 Jordan，i386、amd64 分别误作 I-286、AIMB64，均依语境辨正，建议核对原始音频。（BSDTalk EP195，[371.64-433.34]，L1）
+- 挂起恢复的工程结构：合盖动作的策略代码被故意禁用，唤醒须以睡眠键或 zzz 命令并运行 APMD；2009 年 Edmonton 与其后 Coimbra 两次 hackathon 先行铺设胶水层，使各设备驱动的作者得以编写自己的挂起恢复钩子——没有驱动层的关断与重编程，宣称支持挂起恢复只是空话；工作优先磁盘、网络与屏幕，Intel 与 ATI 视频芯片表现尚可，Nvidia 则因开发者少有该硬件而无人修复。　[存疑脚注] 转写将 ATI 误作 EKI，依语境辨正，建议核对原始音频。（BSDTalk EP195，[593.42-735.22]，L1）
+- 测试报告文化：邮件列表用户两分——认真测试者与只喊坏了帮我修者；有效报告须附 ACPI dump（机器 AML 的快照，曾据此修复数台机器）、dmesg 与硬件信息，缺乏信息的报告会被忽略，PCI 与 USB 转储亦有价值；部分机器仅凭 AML 无法推演，必须实物上手，社区遂以捐款购置 HP 笔记本专供热区与 AML 方法调试。（BSDTalk EP195，[825.76-939.04]，L1）
+- 下一步是 ACPI S4：睡眠级别中 S0 为全功率运行，S1、S2 为低功耗模式，S3 关闭 CPU 而保持内存，S4 为挂起到盘即休眠；S4 更复杂，需在初始引导环境中从磁盘读回内存页并要求更多设备支持，但方案已有腹稿；这将使 OpenBSD 拥有其他 BSD 尚不具备的能力，当事人期待实现会传播到其他 BSD 阵营。（BSDTalk EP195，[945.04-1012.76]，L1）
+- 受访者自述 hoststated（Host State Demon）源于一个快速的临时实现：OpenBSD 当时没有任何监控主机状态并把存活主机放入 PF 表的工具，他写了一个执行 TCP 连接检查、将存活主机置于 PF 表中、使重定向规则永不指向宕机主机的程序。与 round-robin DNS 相比，DNS 负载均衡无从得知主机死活、依赖客户端自行切换到下一主机（多数浏览器会如此、并非全部）；hoststated 则借 PF 的三层目的地址重写对客户端完全透明。典型部署为服务器池置于负载均衡器之后，DNS 将连接指向均衡器，PF 以 RDR 规则把连接分发到池内机器。（BSDTalk EP97，[62.86-198.28]，L1）
+- hoststated 实为围绕 PF 的包装器，以非阻塞方式检查主机响应是否足够快；他仿照 OSPFD 实现了配套的 hoststated ctl，管理员可借此查看在线主机、并在维护或升级时禁用某台。检查方法包括 ICMP（对 IPv6 主机用 ping6）、TCP 连接检查、HTTP 检查（校验指定 URL 的返回码与页面内容的 SHA1 摘要），以及通用的 send/expect 方法——向连接发送一段数据并期待特定回应（如 SMTP banner 可只期待不发送），初以正则实现后改用 fnmatch；SSL 代码可用，所有 TCP 类检查方法均可包裹于 SSL。（BSDTalk EP97，[198.28-365.8]，L1）
+- 关于演进方向：按服务器负载加权的均衡是计划中的目标——但加权所需的代码在内核中与 PF 绑定，须在 PF 侧实现方可让某些主机被查询得更少；团队的长期目标是功能完整的负载均衡器。初始可用版本的目标已然达成，他希望 hoststated 能赶在 4.1 之前链入 build（否则将于 4.1 打标签后的早期 snapshot 提供）。测试环境为笔记本电脑加上家与单位各一组负载均衡测试机器，另有一台由他自管、带真实均衡器与专用主机的准生产部署用于大改动验证，并尽量实现每种场景以测试回归。（BSDTalk EP97，[365.8-498.68]，L1）
+- 受访者澄清负载均衡的一个常见误解：PF 式的基本负载均衡只重写目的地址、不重写源地址，因此 Web 服务器日志中记录的是真实的客户端信息，站点统计仍然准确；只有当均衡器与 Web 主机不在同一网段时才须同时重写源地址——此场景下若无七层负载均衡介入则丢失客户端信息（服务器只见来自均衡器的连接），做七层时通常附加 X-Forwarded 头。多数部署不采用该场景，源地址得以保留。（BSDTalk EP97，[517.96-600.4]，L1）
+- 与 CARP 冗余防火墙的配合及可移植性：两台防火墙各自运行 hoststated、分别维护 PF 表，CARP 切换时备份机上的表处于良好状态；代价是须在 CARP 设备与底层接口上共预留三个 IP、双机都要运行，略显过度。hoststated ctl 暂只支持本地连接。依赖方面只要操作系统支持 PF 与 C 库即可——有人尝试在 FreeBSD 上编译且据称顺利（需要 3.5 之后版本的 PF ioctl 及 strlcpy 等函数），虽此后未再收到回音，据他所见可以运行。（BSDTalk EP97，[600.4-716.24]，L1）
+
+**史料**：
+
+- 个人背景与入项路径：加州软件从业者约十五至二十年，九十年代末曾在 IBM 参与 AIX 及更早 RTPC 相关底层技术的实现；长期 Linux 用户并一度使用 NetBSD，约 2007 至 2008 年间作为用户重拾 OpenBSD；2008 年 10 月或 11 月，Marco Peereboom 在邮件列表征集人手处理挂起恢复问题，自此应征入项。　[存疑脚注] 转写中 OpenBSD 误作 open PSD、Marco Peereboom 误作 Marco Piragrom、年份表述模糊，均依语境辨正，建议核对原始音频。（BSDTalk EP195，[62.58-147.60]，L1）
+- 本期为 OpenBSD 开发者 Pierre-Yves Ritschard 的口述访谈（bsdtalk097，2007-02-01），提供其履历与 commit 历程的一手陈述：自 OpenBSD 2.3 起（上大学前装于工作站）为其用户，此前用过 FreeBSD 与少量 Linux；视 OpenBSD 为开发平台、后用于网络架构；贡献自提交 ports 与小补丁起步，工作中深度使用后发现需要修复之处、渐多投入、尤以 OSPFD 为主；因工作常用 keepalived 而不喜其设计，遂以 OpenBSD 工具风格自写 hoststated——初始六成以上代码复用自 OSPFD（父进程架构与配置文件解析器几乎相同），先以 port 形式提交；Reyk Floeter 等开发者因同样需要而接洽、邀其维护，经邮件与代码往来后获得 commit 账号。访谈后 hoststated 被链入 build、随二月 snapshot 发布。（BSDTalk EP97，[725.8-895.88]，L1）
+
+**史观**：
+
+- 总纲5 没有必然性，只有偶然性：其入项全系偶然：一位用户重拾旧好，恰逢邮件列表上一则征集人手处理挂起恢复的帖子，遂从读者变为 ACPI 维护者；项目的技术走向由这类一次性招募帖与应征者的偶然相遇所塑造。（BSDTalk EP195，[123.52-135.88]，L1）
+- 总纲9 经验优先：调试方法本身即是经验优先的注脚：规范七百页读来直白，厂商却视之为宽松建议，怪异实现层出不穷，故仅凭阅读 AML 无法推演若干机器的真实行为——ACPI dump、dmesg、实物上手与社区捐款购机，构成了以具体经验对抗纸面规范的认识路径。（BSDTalk EP195，[899.16-918.40]，L1）
+- 总纲10 动手者创造历史：hoststated 的进入路径是运维痛点驱动的个体劳动案例：作者在工作中对既有工具不满，以复用 OSPFD 代码与设计范式的方式为自身需求造轮，先以 port 交付、再经核心开发者因共同需要而接洽，最终获得 commit 权限并链入官方 build。工具的正规化不是自上而下规划的结果，而是动手者的局部方案被社区需求放大的过程。（BSDTalk EP97，[804.24-895.88]，L1）
+
+**文献**：
+
+- [BSDTalk EP195] Backman W. BSDTalk: 195: bsdtalk195 - Mike Larkin[EB/OL]. (2010-08-19)[2026-08-27]. <https://bsdtalk.blogspot.com/2010/08/bsdtalk195-mike-larkin.html>.
+- [BSDTalk EP97] Backman W. BSDTalk: 97: bsdtalk097 - OpenBSD Developer Pierre-Yves Ritschard[EB/OL]. (2007-02-01)[2026-08-27]. <https://archive.org/details/bsdtalk097>.
+
+<!-- /PODCAST_REVIEW -->

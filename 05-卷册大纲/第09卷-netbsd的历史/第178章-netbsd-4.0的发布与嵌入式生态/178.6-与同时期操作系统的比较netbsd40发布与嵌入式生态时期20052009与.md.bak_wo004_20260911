@@ -1,0 +1,133 @@
+# 178.6 与同时期操作系统的比较：NetBSD 4.0 发布与嵌入式生态时期（2005-2009）——与 FreeBSD 6.x/7.x、OpenBSD 4.x、Linux 2.6、Windows Embedded/CE 的对照
+
+**2005-2009 年同期嵌入式 OS 生态对照表**：
+
+| 操作系统 | 版本 | 主要特性 | 嵌入式定位 | 商业模式 | 与 NetBSD 4.0 关系 |
+| --- | --- | --- | --- | --- | --- |
+| NetBSD | 4.0（**2007.12.19**） | 细粒度 SMP、原生线程、GPIO 框架 | 平台广度（NAS/网络设备） | 开源 BSD 许可证 | — |
+| FreeBSD | 6.x/7.x | SMPng 优化、ZFS 引入（7.x） | pfSense/NAS 产品落地 | 开源 BSD 许可证 | SMP 较 NetBSD 早约 2 年，嵌入式互补 |
+| OpenBSD | 4.x | W^X、ASLR 演进 | 安全敏感设备利基 | 开源 ISC 许可证 | 嵌入式存在感弱，安全利基 |
+| Linux | 2.6 | ARM 嵌入式爆发、PREEMPT 实时性 | 消费嵌入式（手机/路由）规模领先 | 开源 GPL 许可证 | ARM 生态规模碾压 BSD |
+| Windows Embedded | XP Embedded/CE 6.0 | 商业嵌入式 OS 服务 | 工业/手持设备（POS、工控 HMI） | 闭源商业许可 | 商业设备占优 |
+
+## 178.6.1 FreeBSD 6.x/7.x（SMP 与嵌入式，2005-2009）
+
+**要点**：FreeBSD 在 NetBSD 4.0 同期从 6.x（2005-2007）演进至 7.x（2008-2009），以 SMPng 优化、嵌入式（ARM/MIPS）拓展与 ZFS 引入（7.x）见长；与 NetBSD 4.0 的细粒度 SMP、原生线程形成对照——FreeBSD 在嵌入式市场以 pfSense/NAS 产品落地，NetBSD 4.0 以平台广度渗透 NAS/网络设备。
+
+**史料**：FreeBSD 6.x/7.x 发布史；freebsd.duckdb freebsd-src ［A］
+
+**史观**：总纲第 7 条——BSD 谱系：FreeBSD 与 NetBSD 4.0 同期推进 SMP 与现代硬件，体现家族并行创新。
+
+**辨析**：NetBSD 4.0 的 SMP 较 FreeBSD 5.x 晚约 2 年，但吸收其经验；二者在嵌入式市场互补而非直接竞争。
+
+**文献**：FreeBSD. Release Notes 6.x/7.x [EB/OL]；freebsd.duckdb freebsd-src [DB/OL]. ［A］
+
+## 178.6.2 OpenBSD 4.x（嵌入式与安全，2005-2009）
+
+**要点**：OpenBSD 在 NetBSD 4.0 同期发布 4.x（2006-2009），以安全加固（W^X、ASLR 演进）与部分嵌入式平台（如 ARM、SPARC）支持见长；与 NetBSD 4.0 的 “嵌入式广度” 形成对照——OpenBSD 4.x 嵌入式侧重安全敏感设备，NetBSD 4.0 侧重平台覆盖。
+
+**史料**：OpenBSD 4.x 发布史与平台支持 ［B］
+
+**史观**：总纲第 7 条——BSD 谱系：OpenBSD 与 NetBSD 4.0 同期演进，安全 vs 嵌入式广度目标分化。
+
+**辨析**：OpenBSD 4.x 的嵌入式存在感弱于 NetBSD 4.0，但在安全设备利基有价值。
+
+**文献**：OpenBSD. 4.x Release Notes [EB/OL]. ［B］
+
+## 178.6.3 Linux 2.6（嵌入式与 ARM，2003-2009）
+
+**要点**：Linux 2.6（2003）在 NetBSD 4.0 同期以 ARM 嵌入式爆发、实时性（PREEMPT）与设备树（后期）著称；与 NetBSD 4.0 的嵌入式渗透形成对照——Linux 2.6 借 ARM 生态与社区规模在消费嵌入式（手机/路由）碾压 BSD，但 NetBSD 4.0 在工控/NAS 利基保持。
+
+**史料**：Linux 2.6 嵌入式史料；ARM Linux 发展 ［B］
+
+**史观**：总纲第 6 条——技术路线分化：Linux 2.6 的 ARM 生态规模与 NetBSD 4.0 的平台广度在嵌入式市场形成落差。
+
+**辨析**：嵌入式 “胜负” 更多由生态（芯片厂支持）决定，非内核技术优劣；NetBSD 4.0 在教育/利基仍有意义。
+
+**文献**：Linux Kernel. 2.6 Release Notes [EB/OL]；ARM Linux 档案。［B］
+
+## 178.6.4 Windows Embedded / CE（2005-2009）
+
+**要点**：Microsoft 在 NetBSD 4.0 同期推 Windows Embedded（XP Embedded 2002、CE 6.0 2006），以商业嵌入式 OS 服务工业/手持设备；与 NetBSD 4.0 的开源嵌入式形成对照——Windows Embedded 在商业设备（POS、工控 HMI）占优，NetBSD 4.0 在开源可定制设备（NAS、路由器）立足。
+
+**史料**：Microsoft Windows Embedded/CE 发布史 ［B］
+
+**史观**：总纲第 6 条——技术路线分化：闭源商业嵌入式 vs 开源可移植嵌入式在 2005-2009 形成市场分割。
+
+**辨析**：Windows Embedded 的份额不否定 NetBSD 4.0 价值——后者在可审计/可定制利基具优势。
+
+**文献**：Microsoft. Windows Embedded/CE History [EB/OL].[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]
+
+## 178.6.5 同期嵌入式 OS 生态总览（2005-2009）
+
+**要点**：2005-2009 嵌入式 OS 呈 “Linux 2.6 规模领先 vs NetBSD 4.0 平台广度 vs FreeBSD 7.x 产品落地 vs OpenBSD 4.x 安全利基 vs Windows Embedded 商业主导” 格局；NetBSD 4.0 以 GPIO 框架、细粒度 SMP 与跨平台在开源嵌入式保持独特定位。
+
+**史料**：各嵌入式 OS 2005-2009 史料 ［B］
+
+**史观**：总纲第 6 条——技术路线分化：嵌入式市场的多路线并存，NetBSD 4.0 以广度与开放立足。
+
+**辨析**：不应以份额单一维度评判——NetBSD 4.0 的可移植性为后续 IoT/边缘计算埋下伏笔。
+
+**文献**：McKusick M K, Neville-Neil G. The Design and Implementation of the FreeBSD Operating System [M]. 2nd ed. Addison-Wesley, 2015. ［B］
+
+<!-- DB_REF:netbsd.duckdb -->
+> **数据库引用（netbsd.duckdb）**：本子节对应 netbsd 代码仓库。
+> 2005-2009 年间：468,780 次提交。
+> 仓库总览：1,999,412 次提交，1,545 位贡献者（contributors 表行数，1992-07-13 至 2026-08-24）。
+
+
+<!-- DEEP_ANALYSIS: netbsd.duckdb.commits -->
+**数据库分析发现**（证据等级：L1，来源：`netbsd.duckdb.commits.netbsd`）
+
+netbsd 核心贡献者：wiz(222791), adam(71900), taca(66560), christos(58421), joerg(57785)
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-4-006`）
+
+1994 年 12 月 20 日，Theo de Raadt 被 NetBSD core 其余成员要求辞去 NetBSD 项目职务。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-4-007`）
+
+媒体记述 de Raadt 被逐出 NetBSD 的导因是其“粗暴的风格”令项目成员反感。
+
+
+
+<!-- DEEP_ANALYSIS: review_reports.duckdb.review_records -->
+**数据库分析发现**（证据等级：L3，来源：`review_reports.duckdb.review_records.7`）
+
+<Theo离开NetBSD 争议的历史背景>
+
+## 文献
+
+- Ingo Schwarze. bsdcan14-mandoc[M]. 2014.
+- Ingo Schwarze. bsdcan18-mandoc[M]. 2018.
+- bsdcan2019-syspatch[M].
+- eurobsdcon2014-mandoc-paper[M].
+- eurobsdcon2014-mandoc-slides[M].
+- eurobsdcon2014-parallel-make[M].
+- eurobsdcon2015-mandoc[M].
+- Murenin C A, Boutaba R. OpenBSD Hardware Sensors Framework[C]//AsiaBSDCon 2009 Proceedings. Tokyo, 2009.
+- [4] 肖晨阳. NetBsd操作系统网络部分ICMP缺陷的修正[J]. 电脑知识与技术, 2009.
+- 付远志. 操作系统内核模糊测试方法研究[M]. 2021.
+- ebihara. Japan Net BSD Users Group booth reports[M]. 2018.
+- Horn. performance arch Net BSD[M]. 2025.
+- Horn. performance Net BSD[M]. 2025.
+- Siegert. pkgsrc git Net BSD[M]. 2025.
+- taccari. Introduction to Terraform Open Tofu and their packaging in pkgsrc[M]. 2025.
+- Taccari. Lima Net BSD[M]. 2025.
+- Taccari. Open Tofu pkgsrc Net BSD[M].
+- masanobu. netbsd 2023-Asia BSDCon-tprof-on-netbsd[M]. 2023.
+- Cagney A. What Happens When a Dwarf and a Daemon Start Dancing（幻灯片）[EB/OL]. BSDCan 2015.
+- Herwig S. secmodel_sandbox: An Application Sandbox for NetBSD（幻灯片）[EB/OL]. BSDCan 2017.
+- Borrill S. Building Products with NetBSD - Thin-Clients[C]//BSDCan 2009. Ottawa, 2009.
+- msaitoh. netbsd ABC2014-P7 B-CPE-2[M]. 2014.
+- Saitoh M. Implementation and Modification for CPE Routers: Filter Rule Optimization, IPsec Interface and Ethernet Switch[C]//Proceedings of AsiaBSDCon 2014. Tokyo: AsiaBSDCon, 2014 ［C］. 2014.
+- Raju S, Mathew C G. Portable Hotplugging: NetBSD's uvm_hotplug(9) API Development（幻灯片）[EB/OL]. AsiaBSDCon 2017.
+- Upadhyay A. Applying Machine Learning to Improve apropos(1)[C]//AsiaBSDCon 2017. Tokyo, 2017.
+- SAITOH M. Wireless LAN Service in AsiaBSDCon 2016（幻灯片）[EB/OL]. AsiaBSDCon 2016 NetBSD BoF.
+- Ozaki R, Nakahara K. Current status of NetBSD MP-safe network stack project (BoF)[C]//Proceedings of AsiaBSDCon 2016. Tokyo: AsiaBSDCon, 2016 ［C］. 2016.

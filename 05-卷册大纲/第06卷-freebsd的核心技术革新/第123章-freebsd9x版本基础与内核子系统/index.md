@@ -48,7 +48,7 @@ volume: 第06卷-freebsd的核心技术革新
 ## 文献
 
 - FreeBSD Release Engineering Team. FreeBSD 9.0-RELEASE Announcement [Z]. 2012-01-12；FreeBSD Release Engineering Team. FreeBSD 9.3-RELEASE Announcement [Z]. 2014-07-16；Lucas M W. FreeBSD Mastery: Specialty Filesystems [M]. Tilton: Tilted Windmill Press, 2016；FreeBSD Project. release/9.0.0. freebsd-src
-- FreeBSD Security Team. FreeBSD Security Support [Z]. security.freebsd.org；各版本 Release Announcement Support 章节[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]
+- FreeBSD Security Team. FreeBSD Security Support [Z]. security.freebsd.org；各版本 Release Announcement Support 章节［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
 - FreeBSD 9.0-RELEASE Release Notes [Z]. docs.freebsd.org；Whitehorn N. bsdinstall: A New Installation System for FreeBSD [C]//BSDCan 2011. Ottawa, 2011；**bsdinstall(8)** man page
 
 ## 122.2.2 从 sysinstall 到 bsdinstall 的过渡与向后兼容

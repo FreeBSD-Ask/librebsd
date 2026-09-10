@@ -29,7 +29,7 @@ volume: 第11卷-dragonflybsd的历史
 
 ## 文献
 
-- 原材料/哲学/项目统摄史观/第 25 章.md（总纲第 13、19、21 条）；DragonFly BSD 官方页面（**dragonflybsd.org**，BSD 许可证）；OpenSolaris ZFS 设计文档（CDDL 1.0）；FreeBSD 8.x release notes（ZFS 集成许可证兼容性）；Phoronix、OSNews 等技术媒体存档（ZFS 与 HAMMER 报道频率对比）[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证] ［A］
+- 原材料/哲学/项目统摄史观/第 25 章.md（总纲第 13、19、21 条）；DragonFly BSD 官方页面（**dragonflybsd.org**，BSD 许可证）；OpenSolaris ZFS 设计文档（CDDL 1.0）；FreeBSD 8.x release notes（ZFS 集成许可证兼容性）；Phoronix、OSNews 等技术媒体存档（ZFS 与 HAMMER 报道频率对比）［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］ ［A］
 
 <!-- DB_REF:dragonfly.duckdb -->
 > **数据库引用（dragonfly.duckdb）**：本子节对应 dragonfly 代码仓库。> 2008-2022 年间：570,543 次提交。> 仓库总览：656,206 次提交，535 位贡献者，2003-06-17 至 2026-08-18。

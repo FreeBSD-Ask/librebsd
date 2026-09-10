@@ -47,7 +47,7 @@ volume: 第07卷-freebsd的工程体系重构
 
 ## 文献
 
-- Supreme Court of the United States. (2021-04-05). *Google LLC v. Oracle America, Inc., 593 U.S. 1*; Electronic Frontier Foundation. (2021). *Supreme Court Rules API Copying Is Fair Use*. eff.org.[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]
+- Supreme Court of the United States. (2021-04-05). *Google LLC v. Oracle America, Inc., 593 U.S. 1*; Electronic Frontier Foundation. (2021). *Supreme Court Rules API Copying Is Fair Use*. eff.org.［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
 
 ## 148.10.2 判决对 BSD 与开
 
@@ -61,7 +61,7 @@ volume: 第07卷-freebsd的工程体系重构
 ## 148.5.2 Security Officer 与安全团队
 
 - 要点：FreeBSD 13.0-RELEASE 时 Security Officer 为 Gordon Tetlow（戈登·泰特洛），Ed Maste（埃德·马斯特） 担任 Security Officer Deputy；Securit
-- OpenZFS Project. (2020-11-30). *OpenZFS 2.0.0 Release Notes*. github.com/openzfs/zfs/releases; FreeBSD Release Engineering Team. (2021-2024). 13.x Release Notes ZFS sections.[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]
+- OpenZFS Project. (2020-11-30). *OpenZFS 2.0.0 Release Notes*. github.com/openzfs/zfs/releases; FreeBSD Release Engineering Team. (2021-2024). 13.x Release Notes ZFS sections.［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
 
 ## 148.6.2 OpenZFS 2.1 核心特性：zstd 压缩、Persist
 

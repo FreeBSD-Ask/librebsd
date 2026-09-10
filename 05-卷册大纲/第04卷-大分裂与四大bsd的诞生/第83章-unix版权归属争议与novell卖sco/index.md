@@ -38,17 +38,17 @@ volume: 第04卷-大分裂与四大bsd的诞生
 
 ## 文献
 
-- Windows NT 3.5 与 4.4BSD-Lite 比较研究[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]
+- Windows NT 3.5 与 4.4BSD-Lite 比较研究［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
 
 ## 82.10.2 Solaris 2.4 的比较
 
 - 要点：1994 年 SunOS 5.4 (Solaris 2.4) 发布，基于 SVR4，支持 SPARC 与 x86，提供与企业 Unix 兼容的 ABI；与 4.4BSD-Lite 相比，Solaris 2.4 是商业 UNIX 的延续，BSD 与 SVR4 的分野在 1994 年已基本定型
 -
-- 操作系统比较史研究[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]
+- 操作系统比较史研究［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
 FreeBSD 社区论文：[FP-2021-002] An Overview of Scheduling in the FreeBSD Kernel（Marshall Kirk McKusick（马歇尔·柯克·麦库西克），2021）<https://papers.freebsd.org/2021/eurobsdcon/mckusick-overview_scheduling_freebsd/>
 FreeBSD 社
 - FreeBSD 2.0 Release Announcement 1994.11.22；NetBSD 1.0 Release Announcement 1994.10.26；4.4BSD-Lite Release Notes 1994.6；USL v. BSDi 和解协议 1994.1；bsd_commits.db `tags` 表（release/2.0_cvs）与 `commits` 表（4.4BSD-Lite 导入 commit `59deaec541ae8baaa58daf6c5a2196ea7de180c3`、`26f9a76710a312a951848542b9ca1f441004
-- Novell-SCO APA 原文；UNIX 版权归属史研究[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]
+- Novell-SCO APA 原文；UNIX 版权归属史研究［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
 
 ## 82.8.2 APA 中 UNIX 版权转移的模糊条款与 Amendment No. 2
 

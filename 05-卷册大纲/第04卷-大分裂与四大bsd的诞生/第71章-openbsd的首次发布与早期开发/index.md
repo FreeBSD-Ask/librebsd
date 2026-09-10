@@ -46,7 +46,7 @@ volume: 第04卷-大分裂与四大bsd的诞生
 
 <!-- DB_REF:openbsd.duckdb -->
 > **数据库引用（openbsd.duckdb）**：本子节对应 openbsd 代码仓库。> 1992-1995 年间：770 次提交。> 仓库总览：491,195 次提交，3,352 位贡献者，1995-10-18 至 2026-08-25。
-- Sun Microsystems. Solaris 2.5 Documentation [Z]. 1995.[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]
+- Sun Microsystems. Solaris 2.5 Documentation [Z]. 1995.［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
 - OpenBSD CVS 历史早期记录；OpenBSD 1.2 Release Notes (1996.7)；OpenBSD 官方 FAQ；de Raadt 关于审计的公开声明；本项目。原材料/研究/bsd 漏洞史/bsd 前安全史/386bsd-security-1992-1994.md；本项目。原材料/研究/bsd 漏洞史/bsd 前安全史/4.4bsd-lite-security-1992-1995.md；本项目。bsd_commits.db 数据分析报告：宏观趋势统计 [R/OL]. 2026. ［A］[^doubt-resolved-305]: 据 Mac OS X Internals A Systems Approach (Amit Singh（阿米特·辛格）)  (未署名) 消解
 
 <!-- DB_REF:openbsd.duckdb -->
@@ -55,6 +55,6 @@ volume: 第04卷-大分裂与四大bsd的诞生
 
 <!-- DB_REF:openbsd.duckdb -->
 > **数据库引用（openbsd.duckdb）**：本子节对应 openbsd 代码仓库。> 1995-1996 年间：6,236 次提交。> 仓库总览：491,195 次提交，3,352 位贡献者，1995-10-18 至 2026-08-25。
-- OpenBSD 官方 FAQ；BSD 与 Linux 安全实践对比研究[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]
-- DARPA POSSE 项目公告；OpenBSD 关于 POSSE 的声明[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]
-- OpenBSD 2003-2010 年度财务报告；OpenBSD Foundation 注册文件[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]
+- OpenBSD 官方 FAQ；BSD 与 Linux 安全实践对比研究［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
+- DARPA POSSE 项目公告；OpenBSD 关于 POSSE 的声明［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
+- OpenBSD 2003-2010 年度财务报告；OpenBSD Foundation 注册文件［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］

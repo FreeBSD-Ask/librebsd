@@ -80,18 +80,7 @@ volume: 第05卷-freebsd的工程化奠基
 - [1] Stevens UNP Vol. I 2nd ed. 1998、[2] Stevens TCP/IP Illustrated Vol. 1 1994、[3] Banga & Mogul USENIX ATC 1998、[4] Banga Druschel Mogul SIGMETRICS 1998、[5] Banga & Druschel USENIX ITS 1997、[6] Provos & Lever "Scalable Network I/O in Linux" CITI techreport 2000、[7] Dan Kegel "The C10K problem" kege
 - Linux **epoll(7)** 手册页；Lemon BSDCon 2000 论文 ［A］
 - bsd_commits.db commits 表；Banga USENIX 1998 ［A］
-- Linux man-pages project. epoll(7). man-pages-6.18. 2026-02-08 ［A］；Libenzi D. Improving (network) I/O performance. xmailserver.org/linux-patches/nio-improve.html. 2001-07-01 初稿，2002-10-30 更新 ［A］；Dan Kegel. The C10K problem. kegel.com/c10k.html ［A］；LKML 2001-2002 邮件存档[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知
-
-## 自反性声明
-
-本章所书皆是形式主义化的重构，并非对“真实的 BSD 历史”的呈现。本章的章节划分、事件选择、叙事策略、因果归因——全部基于编纂者的哲学设定。本章承认这些局限，不声称客观或中立，欢迎被更诚实的叙事所超越。
-
-<!-- PODCAST_REVIEW v20260829 -->
-<!-- 语义复核范围：BSD Now EP142（共 1 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
-
-**要点**：
-
-- 主持人细读 NSA 面向通用操作系统的 W^X（write XOR execute）安全功能要求：内存页要么可执行、要么可写、决不可兼得，以防攻击者把写入的数据当作程序执行（288.04-330.38）；并对照 Intel 的 NX 位与 DEP 机制、即时编译等例外情形（344.10-362.82），以及 SPARC 与 ARM 处理器在这类 RISC 平台上的原生支持差异（362.82-369.38），与本期标题的 RISC 主题相呼应。（BSD Now EP142，[288.04-369.38]，L2）
+- Linux man-pages project. epoll(7). man-pages-6.18. 2026-02-08 ［A］；Libenzi D. Improving (network) I/O performance. xmailserver.org/linux-patches/nio-improve.html. 2001-07-01 初稿，2002-10-30 更新 ［A］；Dan Kegel. The C10K problem. kegel.com/c10k.html ［A］；LKML 2001-2002 邮件存档［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］，L2）
 - Perlstein 回顾入坑史：少年时代在 MS-DOS 上写汇编自学编程，进大学被计算机系同学讥笑“MS-Dog”，恰逢学校以 FreeBSD 为教学平台，其多任务与内存管理令他感到这是一个真正完整的操作环境；1998 至 1999 年间他在邮件列表提问文件系统问题，收到详尽而易懂的长篇技术答复，自此被社区吸引而留下。（BSD Now EP142，[1536.28-1617.20]，L1）
 - Perlstein 自述其 FreeBSD 内核工程履历：2000 年前后参与 SMP 项目，完成 select 与 poll 的初始 SMP 锁定、SIGIO 锁定与 System V 资源锁等叶区锁；USB2 大型代码库合入时充当“牧羊人”，协调在真空中工作的外部开发者与社区的磨合；又改造大于 4GB 内存机器的默认参数，使插电即得足够 mbuf 支撑万兆网卡，承认短期引入破坏但认为长期值得。（BSD Now EP142，[1706.00-1839.22]，L1）
 - FreeBSD 成为 Perlstein 的立身之本：1999 年经 Paul Saab 引导将 Yahoo 的 accept filters 推入系统，配合当时新出现的 kqueue，在单颗 Pentium 400 上实现每秒 1500 连接的 web 追踪服务；受雇 Apple 内核团队解决 NFS 断连导致系统挂起的问题；在 Juniper 把 Junos（FreeBSD 改版）部署到高速线卡并做粗粒度线程化；任 OkCupid CTO 期间全栈运行 FreeBSD；后来还赞助 libuinet 用户态网络栈用于安全设备并期望其合回主线。（BSD Now EP142，[1923.76-2127.04]，L1）

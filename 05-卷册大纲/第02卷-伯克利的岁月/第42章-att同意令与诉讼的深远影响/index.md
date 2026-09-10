@@ -35,7 +35,7 @@ volume: 第02卷-伯克利的岁月
 
 ## 文献
 
-- 1990-2010 年操作系统市场份额报告；DiBona, C. (1999) "Open Sources"；Moody, G. (2001) "Rebel Code"[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]---## 文献增补与辩证校准（2026-08-08 追加）> 41.4-41.5 AT&T 同意令与版权瑕疵：> - **文献增补（ref 3778）**：McKusick 记载 1974 年 UNIX 以低价磁带进入伯克利——41.4 'AT&T 禁止销售软件使 UNIX 以极低成本分发’的直接依据> - **文献增补（ref 3780）**：4.4BSD 设计书历史章（History and Goals）覆盖 AT&T→BSD 版权演变> - **辩证校准（总纲 24.2）**：‘劣币驱逐良币’命题——AT&T 的法律约束（非技术优劣）塑造了 UNIX 分发史，本章分析应聚焦形式主义权力运作
+- 1990-2010 年操作系统市场份额报告；DiBona, C. (1999) "Open Sources"；Moody, G. (2001) "Rebel Code"［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］---## 文献增补与辩证校准（2026-08-08 追加）> 41.4-41.5 AT&T 同意令与版权瑕疵：> - **文献增补（ref 3778）**：McKusick 记载 1974 年 UNIX 以低价磁带进入伯克利——41.4 'AT&T 禁止销售软件使 UNIX 以极低成本分发’的直接依据> - **文献增补（ref 3780）**：4.4BSD 设计书历史章（History and Goals）覆盖 AT&T→BSD 版权演变> - **辩证校准（总纲 24.2）**：‘劣币驱逐良币’命题——AT&T 的法律约束（非技术优劣）塑造了 UNIX 分发史，本章分析应聚焦形式主义权力运作
 
 <!-- DB_REF:linux_kernel.duckdb -->
 > **数据库引用（linux_kernel.duckdb）**：本子节对应 linux_kernel 代码仓库。> 2003-2010 年间：230,969 次提交。> 仓库总览：1,474,341 次提交，39,865 位贡献者（contributors 表行数，1970-01-01 至 2026-08-24）。
@@ -43,7 +43,7 @@ volume: 第02卷-伯克利的岁月
 - CALDERA v. Microsoft 案卷；NOVELL v. Microsoft 案卷；United States v. Microsoft Corp., 253 F.3d 34 (D.C. Cir. 2001)；European Commission IP/04/382；本卷 40-42 章案卷 ［A］<!-- NEWREF:2392 --><!-- NEWREF:2393 --><!-- NEWREF:2394 --><!-- NEWREF:2493 --><!-- NEWREF:2545 -->
 - AT&T UNIX Software Operation (1990.3.28) 公开邮件列表（确认 SVR4 商业 $100,000）；McKusick, K. (1999) "Twenty Years of Berkeley Unix" 及 klarasystems 转引的 McKusick 1999 视频（回忆“约 \$250,000 ”）；Salus, P. (1994) " A Quarter Century of UNIX "；TUHS 邮件列表 1983 年 $43k/CPU 记录 ［A］
 - USL v. BSDi 案卷；Novell-UC Berkeley 和解协议（1994）；McKusick, K. (1999) "Twenty Years of Berkeley Unix" ［B］
-- Linux/BSD 市场份额报告（1992-2000）；Moody, G. (2001) "Rebel Code"；DiBona, C. (1999) "Open Sources"[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]
+- Linux/BSD 市场份额报告（1992-2000）；Moody, G. (2001) "Rebel Code"；DiBona, C. (1999) "Open Sources"［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
 
 <!-- DB_REF:linux_kernel.duckdb -->
 > **数据库引用（linux_kernel.duckdb）**：本子节对应 linux_kernel 代码仓库。> 1978-1992 年间：0 次提交。> 仓库总览：1,474,341 次提交，39,865 位贡献者（contributors 表行数，1970-01-01 至 2026-08-24）。

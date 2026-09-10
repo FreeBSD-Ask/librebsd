@@ -18,16 +18,7 @@ volume: 第18卷-全球社区地区bsd史
 
 - 总纲第 20 条——日本作为 UNIX 工作站大国，其硬件生态塑造了 BSD 的早期渗透路径
   - 辨析：Sony NEWS-OS 的 BSD 衍生程度需区分不同版本；IIJ 使用 FreeBSD 的具体规模需考据
-  - 文献：Sony NEWS Technical Reference；IIJ 1992-2000 技术报告；NEC EWS-4800 系统文档[考据完成：2026-07-28 经
-- 总纲第 6 条——日本 Linux 与 BSD 社区的分化与并行演化
-  - 辨析：日本 Linux 社区的具体规模对比需统计；Linux 超越 BSD 的时间节点需考据
-  - 文献：日本 Linux Users Group Archive；日本 Linux 内核贡献者统计[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史
-- 总纲第 10 条——日本学术界的 “动手者” 通过 KAME 项目塑造了 IPv6 的全球部署路径
-  - 辨析：KAME 项目 1998 年确切的发起日期需考据；CRL 资助的具体金额需分析
-  - 文献：KAME Project (1998-2006) Official Website Archive；WIDE Project Documentation[考据完成：2026-07-28 经穷尽
-- 总纲第 22 条——日本 BSD 用户组是 BSD 社区去中心化组织结构的重要体现
-  - 辨析：JBUG 的确切成立日期需考据；东京/大阪/名古屋各地用户组的活跃时间需分析
-  - 文献：freebsd-users-jp Mailing List Archive；JBUG 活动记录 ［A］
+  - 文献：Sony NEWS Technical Reference；IIJ 1992-2000 技术报告；NEC EWS-4800 系统文档［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
 
 ## 331.3.2 AsiaBSDCon（首届 2004 年于台北，2007 年届在东京）[考据完成：2
 
@@ -36,16 +27,12 @@ volume: 第18卷-全球社区地区bsd史
 ## 辨析
 
 - Sony NEWS-OS 的 BSD 衍生程度需区分不同版本；IIJ 使用 FreeBSD 的具体规模需考据
-  - 文献：Sony NEWS Technical Reference；IIJ 1992-2000 技术报告；NEC EWS-4800 系统文档[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案
-- 日本 Linux 社区的具体规模对比需统计；Linux 超越 BSD 的时间节点需考据
-  - 文献：日本 Linux Users Group Archive；日本 Linux 内核贡献者统计[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]
+  - 文献：Sony NEWS Technical Reference；IIJ 1992-2000 技术报告；NEC EWS-4800 系统文档［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
 
 ## 331.10.2 TRON 项目与
 
 - KAME 项目 1998 年确切的发起日期需考据；CRL 资助的具体金额需分析
-  - 文献：KAME Project (1998-2006) Official Website Archive；WIDE Project Documentation[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可
-- JBUG 的确切成立日期需考据；东京/大阪/名古屋各地用户组的活跃时间需分析
-  - 文献：freebsd-users-jp Mailing List Archive；JBUG 活动记录 ［A］
+  - 文献：KAME Project (1998-2006) Official Website Archive；WIDE Project Documentation［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
 
 ## 331.3.2 AsiaBSDCon（首届 2004 年于台北，2007 年届在东京）[考据完成：2026-08-04 首届 AsiaBSDCon 为 2004-03-12~15 台北中央研究院，非
 
@@ -53,17 +40,17 @@ volume: 第18卷-全球社区地区bsd史
 
 ## 文献
 
-- Sony NEWS Technical Reference；IIJ 1992-2000 技术报告；NEC EWS-4800 系统文档[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]
+- Sony NEWS Technical Reference；IIJ 1992-2000 技术报告；NEC EWS-4800 系统文档［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
 
 ## 331.1.2 早稻田大学等高校 BSD 教育
 
 - 要点：早稻田大学、东京大学、东京工业大学、庆应义塾大学等高校在 1990 年代开设 BSD 相关课程，东京大学 1991 年出版《The Design and Implementation of the 4.3BSD UNIX Operat
-- 日本 Linux Users Group Archive；日本 Linux 内核贡献者统计[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]
+- 日本 Linux Users Group Archive；日本 Linux 内核贡献者统计［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
 
 ## 331.10.2 TRON 项目与 BSD 的关系
 
 - 要点：TRON 项目（The Real-time Operating system Nucleus）由坂村健（Ken Sakamura）1984 年于东京大学发起，是日本特有的嵌入式实时操作系统家族。TRON 与 BSD 在技术路线上未直接竞争（TRON 面向嵌入式、BSD 面
-- KAME Project (1998-2006) Official Website Archive；WIDE Project Documentation[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]
+- KAME Project (1998-2006) Official Website Archive；WIDE Project Documentation［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
 
 ## 331.2.2 IPv6 协议栈的 BSD 实现
 

@@ -57,12 +57,12 @@ volume: 第08卷-freebsd的范式转换
 - 要点：FreeBSD 15.0-RELEASE 标记 **bsdlabel(8)** 与 **fdisk(8)** 为 deprecated
 - lists.freebsd.org freebsd-current 2024-January/005419 头邮件；lists.freebsd.org freebsd-current 2024-January/005420 Warner Losh 回复；Phabricator D43575；Phabricator D43563；lists.freebsd.org dev-commits-src-all 2025-October commit 2be4c64a0d27；lists.freebsd.org dev-commits-src-branches 2025-October commit 6
 - FreeBSD Project. FreeBSD 15.0-RELEASE Release Notes [EB/OL]. (2025-12-02)[2026-07-19]. <https://www.freebsd.org/releases/15.0R/relnotes/>; FreeBSD Project. agp(4) Manual Page [EB/OL]. [2026-07-19]. <https://man.freebsd.org/agp/4>; FreeBSD Project. vt(4) Manual Page [EB/OL]. [2026-07-19]. <<https://ma>
-- FreeBSD Project. Release Announcements Archive [EB/OL]. [2026-07-19]. <https://www.freebsd.org/releases/>.[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]
+- FreeBSD Project. Release Announcements Archive [EB/OL]. [2026-07-19]. <https://www.freebsd.org/releases/>.［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
 
 ## 163.8.2 核心开发者与新兴贡献者
 
 - 要点：15.x 周期 FreeBSD 核心开发持续活跃的开发者群体包括（不完全名单）：Colin Percival（cperciva@，Release Engineer
-- FreeBSD Project. Contributors List [EB/OL]. [2026-07-19]. <https://www.freebsd.org/doc/en_US.ISO8859-1/articles/contributors/>.[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]
+- FreeBSD Project. Contributors List [EB/OL]. [2026-07-19]. <https://www.freebsd.org/doc/en_US.ISO8859-1/articles/contributors/>.［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
 
 ## 163.8.3 30 周年后社区生态（2023-2026）
 

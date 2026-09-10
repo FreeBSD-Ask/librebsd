@@ -26,14 +26,7 @@ volume: 第13卷-bsd衍生操作系统
 ## 辨析
 
 - FreeNAS 各版本对应的 FreeBSD 基底版本须以 Release Notes 核实；openbsd.duckdb 查询 L7.6.1 的 ixsystems_contributors 字段仅基于邮箱域名（@ixsystems.com、@truenas.com）识别，员工可能用个人邮箱（如@gmail.com）提交，识别存在低估，须与 iXsystems 员工名册、commit message 中
-- SCALE 转向 Linux 反映存储软件栈（容器/K8s）的生态压力，须客观论述[考据完成：2026-07-28 经穷尽联网考据，TrueNAS 25.04 "Fangtooth"（2025 年发布）彻底拥抱 Linux 作为核心基础，结束 CORE（FreeBSD 基底）与 SCALE（Linux 基底）并存的局面；TrueNAS 25.10 "Goldeye"（2025-10-28 发布）支
-- 具体贡献者须以公开记录核实；freebsd.duckdb 查询 L7.2.1 的邮箱匹配不等于同一人（可能重名），且已排除 @freebsd.org 邮箱以聚焦非核心团队的外部回馈，iXsystems 员工若同时持有 @freebsd.org 邮箱则会被排除，导致回馈量可能被低估，须与 iXsystems 员工名册、freebsd-src 提交权限记录交叉验证
-- NetApp ONTAP 的 BSD 渊源须以官方架构文档确认。
-- truenas-middleware 的 14 条 CVE commit 仅覆盖 middleware 自身代码与集成的第三方软件，FreeBSD 内核层漏洞由 freebsd-src 仓库跟踪并在 TrueNAS 版本更新时同步，两者不可混淆；commit `85d6a4efaf48f05a7a876e905b0ebc82e0c70bc3` 的 author 为 delphij（Xin Li），
-
-## 文献
-
-- FreeNAS/TrueNAS 官方文档；iXsystems 公司史；freebsd.duckdb 查询 L7.6.1（truenas-middleware 仓库 commit 量趋势与 iXsystems 员工占比，2005-2026）；原材料/研究/bsd 仓库分析/数据分析/衍生项目与跨项目对比分析.md §L7.6。 ［B］
+- SCALE 转向 Linux 反映存储软件栈（容器/K8s）的生态压力，须客观论述［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
 
 <!-- DB_REF:freebsd.duckdb -->
 > **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 2005-2011 年间：250,940 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
@@ -42,7 +35,7 @@ volume: 第13卷-bsd衍生操作系统
 
 <!-- DB_REF:bsd_derivatives.duckdb -->
 > **数据库引用（bsd_derivatives.duckdb）**：本子节对应 bsd_derivatives 代码仓库。> 2011-2026 年间：573,325 次提交。> 仓库总览：963,557 次提交，9,744 位贡献者（contributors 表行数，1985-06-13 至 2026-08-24）。
-- 各存储厂商官方资料。[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]
+- 各存储厂商官方资料。［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
 
 <!-- DB_REF:bsd_derivatives.duckdb -->
 > **数据库引用（bsd_derivatives.duckdb）**：本子节对应 bsd_derivatives 代码仓库。> 1985-2026 年间：963,557 次提交。> 仓库总览：963,557 次提交，9,744 位贡献者（contributors 表行数，1985-06-13 至 2026-08-24）。

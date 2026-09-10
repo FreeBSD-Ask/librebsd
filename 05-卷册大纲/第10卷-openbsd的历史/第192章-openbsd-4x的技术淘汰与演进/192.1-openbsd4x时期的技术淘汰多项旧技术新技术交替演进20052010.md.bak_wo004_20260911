@@ -1,0 +1,364 @@
+# 192.1 OpenBSD 4.x 时期的技术淘汰——多项旧技术 → 新技术交替演进（2005-2010）
+
+**OpenBSD 4.x 时期技术淘汰时间线**：
+
+| 旧技术 | 新技术 | 关键 commit | 引入版本 | 淘汰动因 |
+| --- | --- | --- | --- | --- |
+| XFree86 4.4.0 | X.org + xenocara | `8462c87f5bf9`（2005-05-04 jaredy）、`fcb4a8a3b89b`（2007-03-26 matthieu） | 4.1（2007.5） | XFree86 4.4.0 许可证加入广告条款 |
+| gcc 4.x（默认） | pcc 探索失败 → clang/LLVM | 邮件列表讨论（2007-2008） | 5.7（2015.5）切换至 clang | gcc GPLv3 许可证争议与代码质量 |
+| yplib/ypcat（NIS） | ypldap（LDAP 桥接） | `f624240892b9`（2008-06-26 pyr）、`33b8cba20fd2`（2008-10-14 deraadt） | 4.4-4.5（2008-2009） | NIS 安全设计缺陷 |
+| svnd（Blowfish） | softraid（AES-XTS） | `f18dcc9c26b1`（2007-11-27 tedu）、`79cdc9424edb`（2008-06-14 hshoexer） | 4.2-4.4（2007-2008） | AES-XTS 取代 Blowfish |
+| Kerberos IV（krb4） | Kerberos V（Heimdal 0.7.2） | `ed832e58feb0`（2005-10-05 biorn "Remove kerberos4 services"）、`10e361c8b7f1`（2005-12-16 todd "rm kerberosIV remnant"）、`ad528311addf`（2006-04-14 biorn "Import of heimdal-0.7.2"）、`2bb5d18aad7b`（2006-04-14 biorn "Merge of heimdal 0.7.2"） | 3.8-4.0（2005-2006） | Kerberos IV 协议过时，Heimdal 0.7.2 提供 Kerberos V 完整实现 |
+
+**注**：原 jianyi.md 7s 条目建议补“IPFilter→pf 完成”一行，但经 openbsd.duckdb openbsd-src 仓库查询，2005-2010 年间 `sys/netinet/ipf*`、`sbin/ipf*` 等文件路径下无任何 commit（`ipf` 关键字搜索结果均为 `ipforward_rt`、`ip_mib`、`per-ipf mbuf cluster` 等误匹配），证实 IPFilter 代码在 4.x 时期之前（即 3.x 时期 pf fork 后）已从 openbsd-src 仓库移除，“IPFilter→pf 完成”不属于 4.x 时期技术淘汰项，故本表不列入。原建议中"hebibmd"系"heimdal"拼写之误，OpenBSD 4.x 时期的 Kerberos 演进为 Kerberos IV → Kerberos V（Heimdal 实现），heimdal 0.7.2 于 4.0 周期（2006.11 release）导入。Release Notes 详见 **<https://www.openbsd.org/40.html>**。
+
+## 192.1.1 XFree86 → X.org 转换（OpenBSD 4.1-4.2，2007）
+
+**要点**：XFree86 项目因 2004 年 1 月 XFree86 4.4.0 许可证变更（加入类似 “广告条款” 的限制性条款）引发社区分裂，X.Org 基金会 fork 形成 X.org 服务器；openbsd.duckdb 显示 OpenBSD 在 4.x 时期完成从 XFree86 到 X.org 的转换——2005-05-04 jaredy commit 8462c87f5bf9 "change XFree86 -> X.Org" 标识手册页转换，2007-03-26 matthieu commit fcb4a8a3b89b "Switch X build instructions to xenocara. ok deraadt@ jmc@ mbalmer@" 标识 xenocara 构建框架首次引入（4.1 周期）；xenocara 是 OpenBSD 对 X.org 的定制构建框架，整合 X server、驱动、字体等组件；原大纲称 “为后续 xenocara 重组（6.0）奠定基础” 系误记——xenocara 于 4.1（2007.5）引入，非 6.0（2015.10）
+
+**史料**：openbsd.duckdb openbsd-src 仓库 commit 8462c87f5bf9（2005-05-04 jaredy "change XFree86 -> X.Org"）、commit fcb4a8a3b89b（2007-03-26 matthieu "Switch X build instructions to xenocara"）；XFree86 4.4.0 LICENSE 文件变更；X.Org 基金会成立公告；OpenBSD 4.1 Release Notes X11 部分 ［A］
+
+**史观**：总纲第 24 条——许可证：XFree86 4.4.0 许可证变更（加入广告条款）催生 X.org fork，OpenBSD 通过 xenocara 聚合 X.org 完成替代——这一路径是 OpenBSD 许可证纯洁性哲学的实践，OpenBSD 拒绝接受含广告条款的 XFree86 4.4.0，选择 fork 后的 X.org
+
+**辨析**：OpenBSD 从 XFree86 切换到 X.org 的具体版本以 commit log 与 Release Notes 交叉确认——2005-05-04 jaredy commit 标识手册页转换，2007-03-26 matthieu commit 标识 xenocara 构建框架引入，二者间隔约 2 年，反映 X.org 切换是渐进过程；XFree86 4.4.0 许可证变更的具体条款以原始 LICENSE 文件为准——新增条款要求所有文档与广告材料中提及 XFree86 项目
+
+**文献**：openbsd.duckdb openbsd-src 仓库 commit 8462c87f5bf9、fcb4a8a3b89b；XFree86 4.4.0 LICENSE 文件；X.Org 基金会公告；OpenBSD 4.1 Release Notes [EB/OL]. <https://www.openbsd.org/41.html> ［A］
+
+## 192.1.2 gcc → pcc 尝试与 clang/LLVM 转向前期（2010 起）
+
+**要点**：OpenBSD 4.x 时期（2005-2010）仍以 gcc 4.x 为默认编译器；2007 年起 de Raadt 对 gcc GPLv3 许可证与代码质量不满，开始探索替代方案；OpenBSD 团队曾尝试集成 pcc（Portable C Compiler）作为 gcc 替代，但因 pcc 功能不足（不支持 C99 完整特性、缺乏优化）放弃——openbsd.duckdb openbsd-src 仓库中无 pcc（Portable C Compiler）实际集成 commit，pcc 探索主要在邮件列表讨论；至 4.x 末期（2010-2011）OpenBSD 开始评估 clang/LLVM 作为最终替代，为 5.7（2014.5）完全切换至 clang/LLVM 奠定基础
+
+**史料**：de Raadt 关于 gcc GPLv3 的邮件列表发言（<https://marc.info/?laccopenbsd-tech>）；pcc 项目文档（<http://pcc.ludd.ltu.se/>）；OpenBSD tech@ 邮件列表关于 pcc/clang 的讨论；openbsd.duckdb openbsd-src 仓库 pcc 相关 commit（数据库中 "pcc" 关键字搜索结果均为 pccons/pccom 误匹配，无 Portable C Compiler 实际集成记录） ［A］
+
+**史观**：总纲第 24 条——许可证：gcc GPLv3 许可证争议是 OpenBSD 探索编译器替代的根本动因——OpenBSD 的 ISC 许可证偏好与 gcc GPLv3 的 copyleft 要求存在张力，这一张力推动 OpenBSD 评估 pcc（失败）与 clang/LLVM（成功）作为替代
+
+**辨析**：OpenBSD 尝试 pcc 的具体时间以 tech@ 邮件列表讨论存档为准——pcc 探索主要在 2007-2008 年的邮件列表讨论中进行，未进入 openbsd-src 主干；pcc 放弃的具体原因以 de Raadt 与其他开发者的邮件列表发言为准——pcc 不支持 C99 完整特性、缺乏现代优化器；gcc 到 clang/LLVM 的切换动机以 OpenBSD 5.7 Release Notes 与 de Raadt 的公告为准——GPLv3 担忧与技术优势（更好的诊断信息、模块化设计）均为动机
+
+**文献**：pcc 项目文档 [EB/OL]. <http://pcc.ludd.ltu.se/>；OpenBSD tech@ 邮件列表档案 [EB/OL]. <https://marc.info/?laccopenbsd-tech>；de Raadt 关于 gcc 的发言；clang/LLVM 项目文档 ［A］
+
+## 192.1.3 yplib/ypcat → ypldap 替换（NIS → LDAP）
+
+**要点**：NIS（Network Information Service，原 Yellow Pages）是 Sun Microsystems 1980 年代设计的网络目录服务，OpenBSD 早期通过 **yplib(3)**、**ypcat(1)**、**ypmatch(1)** 等工具支持；NIS 因安全设计缺陷（无认证、明文传输）逐步被 LDAP 取代；openbsd.duckdb 显示 ypldap 首次 commit 为 2008-06-26 pyr commit f624240892b9 "ypldap -- Intended to be a drop-in replacement for ypserv, gluing in a LDAP directory a..."（4.4 周期，2008.11 release），2008-10-14 deraadt commit 33b8cba20fd2 "enable ypldap. serious development needs it to be enabled." 在 4.5 周期正式启用——原大纲称 “5.x 时期成熟” 系误记，ypldap 在 4.4-4.5 周期（2008-2009）已引入并启用；ypldap 作为 NIS 与 LDAP 的桥接，让 NIS 客户端可查询 LDAP 目录
+
+**史料**：openbsd.duckdb openbsd-src 仓库 commit f624240892b9（2008-06-26 pyr "ypldap -- Intended to be a drop-in replacement for ypserv"）、commit 33b8cba20fd2（2008-10-14 deraadt "enable ypldap"）；Sun NIS 文档；OpenBSD **ypldap(8)** 手册页（<https://man.openbsd.org/ypldap.8>） ［A］
+
+**史观**：总纲第 19 条——信息技术：NIS 作为 1980 年代的网络目录信息技术被 LDAP 聚合替代——ypldap 的引入是 OpenBSD 对网络目录服务从 NIS 向 LDAP 迁移趋势的响应，但 OpenBSD 选择桥接（ypldap）而非直接取代（删除 ypserv）的渐进路径
+
+**辨析**：ypldap 在 OpenBSD 中的引入版本以 openbsd.duckdb commit log 为准——2008-06-26 pyr@ 首次引入（4.4 周期），2008-10-14 deraadt@ 启用（4.5 周期），原大纲称 “4.5 或更早” 与 “5.x 时期成熟” 均不准确；ypldap 与传统 ypserv 的关系以 **ypldap(8)** 手册页为准——ypldap 模拟 ypserv 协议让 NIS 客户端透明查询 LDAP，二者并存而非替代；NIS 在 OpenBSD 中的实际部署规模无权威统计 [考据完成：2026-07-28 NIS 在 OpenBSD 部署中的占比无公开调研]
+
+**文献**：openbsd.duckdb openbsd-src 仓库 commit f624240892b9、33b8cba20fd2；Sun NIS 文档；OpenBSD **ypldap(8)** 手册页 [EB/OL]. <https://man.openbsd.org/ypldap.8> ［A］
+
+## 192.1.4 OpenSSL 集成与磁盘加密演进（softraid 加密等）
+
+**要点**：OpenBSD 3.0（2001.12）引入 vnd 块设备的加密模式 svnd，使用 Blowfish 算法；OpenBSD 4.x 时期持续改进加密栈——softraid 加密于 2007-11-27 tedu commit f18dcc9c26b1 首次引入（4.2 周期），2008-06-14 hshoexer commit 79cdc9424edb 完整启用（4.4 周期），支持 AES-XTS，取代 svnd 成为推荐的磁盘加密方案；4.x 时期的 OpenSSL 集成为后续 LibreSSL fork（2014 年 4 月 Heartbleed 后）积累了 OpenSSL 工程实践——但 LibreSSL fork 发生在 5.6 周期（2014.11），与 4.x 时期（2005-2010）相隔约 4 年，二者不构成直接的 “前期演进” 关系
+
+**史料**：openbsd.duckdb openbsd-src 仓库 commit f18dcc9c26b1（2007-11-27 tedu "split crypto functions"）、commit 79cdc9424edb（2008-06-14 hshoexer "enable softraid crypto"）；OpenBSD 3.0 Release Notes vnd 部分；OpenBSD 4.2/4.4 Release Notes softraid 部分；OpenBSD **softraid(4)**、**bioctl(8)** 手册页 ［A］
+
+**史观**：总纲第 21 条——密码学：加密栈从 svnd（Blowfish）到 softraid（AES-XTS）的演进是 OpenBSD 对密码学最佳实践变化的响应——AES-XTS 作为 NIST SP 800-38E 推荐的磁盘加密模式取代 Blowfish，这一路径是密码学标准演进对操作系统实现的具体塑造
+
+**辨析**：svnd 与 softraid 的关系以 openbsd.duckdb commit log 为准——softraid 首次 commit 为 2007-03-19 dlg commit 98855ba5cdbc "attach softraid to the root of the device tree"，是新的 RAID 框架，加密是其子功能；AES-XTS 支持的具体引入版本以 **softraid(4)** 手册页与 commit log 为准——softraid 加密自 2008 年启用即支持 AES-XTS；4.x 时期 OpenSSL 集成的具体版本以 OpenBSD Release Notes 为准
+
+**文献**：openbsd.duckdb openbsd-src 仓库 commit 98855ba5cdbc、f18dcc9c26b1、79cdc9424edb；OpenBSD Release Notes [EB/OL]. <https://www.openbsd.org/plus.html>；OpenBSD **softraid(4)** 手册页 [EB/OL]. <https://man.openbsd.org/softraid.4> ［A］
+FreeBSD 社区论文：[FP-2022-001] Refining FreeBSD's Kernel Crypto Framework（John Baldwin（约翰·鲍德温），2022）<https://papers.freebsd.org/2022/bsdcan/baldwin-refining_freebsds_kernel_crypto_framework/>
+FreeBSD 社区论文：[FP-2021-008] smart(8) Update: A Permissively-Licensed Alternative to smartctl(8)（Michael Dexter（迈克尔·德克斯特）; Chuck Tuffli，2021）<https://papers.freebsd.org/2021/eurobsdcon/dexter-tuffli-update_on_smart/>
+FreeBSD 社区论文：[FP-2019-076] FreeBSD at Work: Building Network and Storage Infrastructure with pfSense and FreeNAS（Conor Beh，2019）<https://papers.freebsd.org/2019/vbsdcon/beh-freebsd_at_work/>
+FreeBSD 社区论文：[FP-2019-002] BSD Unix Solutions in the Australian NFP/NGO Health Sector（Jason Tubnor，2019）<https://papers.freebsd.org/2019/asiabsdcon/tubnor-bsd_unix_solutions_in_the_australian_nfp_ngo_health_sector/>
+FreeBSD 社区论文：[FP-2019-014] LLVM and the state of sanitizers on BSD（David Carlier，2019）<https://papers.freebsd.org/2019/asiabsdcon/carlier-llvm_and_the_state_of_sanitizers_on_bsd/>
+FreeBSD 社区论文：[FP-2018-010] Preparing your home router(s) for the future: A journey through Homenet and interconnected objects（Massimiliano Stucchi，2018）<https://papers.freebsd.org/2018/bsdcan/stucchi-preparing_your_home_routers_for_the_future/>
+FreeBSD 社区论文：[FP-2017-014] Isolated BSD build environments using virtual and hardware machines（Michael Dexter，2017）<https://papers.freebsd.org/2017/vbsdcon/dexter-isolated_bsd_build_environments_using_virtual_and_hardware_machines/>
+FreeBSD 社区论文：[FP-2017-009] My BSD sucks less than yours（Baptiste Daroussin（巴蒂斯特·达鲁桑） Antoine Jacoutot（安托万·雅库托），2017）<https://papers.freebsd.org/2017/fosdem/bapt-my_bsd_suck_less_than_yours/>
+
+### 史观映射
+
+OpenBSD 4.x 时期是项目统摄史观中 “形式主义化” 与 “修道度人” 在网络安全领域的双重实践。6 个月发布周期作为形式主义化结构（总纲第 17 条——软件工程），将时间固化为不可动摇的规则——krw@ 与 espie@ 的 release engineering 工作严格遵循 5 月与 11 月的节奏，这一形式化结构带来稳定性与可预测性，但也限制了单周期内的重大架构重构。pf 的持续演进是 “修道度人” 的工程实践（总纲第 17 条——软件工程）——claudio@ 与 henning@ 在 2005-2010 年间持续改进 pf，让 pf 守护着无数网络的边界，但 pf 的作者们很少在公众视野中出现。CARP 冗余协议的开发是对法律结构障碍的重新设计（总纲第 12 条——法律结构）——当 VRRP 协议的 Cisco 专利 US 5,473,599 成为障碍时，OpenBSD 选择重新设计协议（CARP）而非寻求专利授权，这一选择是法律结构对技术实现的直接塑造。malloc 替代（tedu@ 2006-10-24 commit 66e23c51）是 “边缘者承担安全关键基础设施” 的具体显现（总纲第 10 条——边缘者贡献）——OpenBSD 的 malloc 安全替代由单一开发者响应安全研究社区的漏洞披露而实现，非由大厂商团队推动。softraid 加密的引入（tedu@ 2007-11-27 commit f18dcc9c26b1 至 hshoexer@ 2008-06-14 commit 79cdc9424edb）是密码学标准演进对操作系统实现的具体塑造（总纲第 21 条——密码学）——AES-XTS 作为 NIST SP 800-38E 推荐模式取代 Blowfish。de Raadt 的个人主导模式是 “动手者” 存在主义的体现——一个人在不被理解中坚持自己的工程哲学，BDFL 治理（总纲第 23 条——社区治理）使 OpenBSD 在 4.x 时期保持技术方向一致性。
+
+<!-- DB_REF:openbsd.duckdb -->
+> **数据库引用（openbsd.duckdb）**：本子节对应 openbsd 代码仓库。
+> 2005-2010 年间：100,198 次提交。
+> 仓库总览：491,195 次提交，3,352 位贡献者，1995-10-18 至 2026-08-25。
+
+<!-- DEEP_ANALYSIS: openbsd.duckdb.commits -->
+**数据库分析发现**（证据等级：L1，来源：`openbsd.duckdb.commits.openbsd`）
+
+openbsd 核心贡献者：ajacoutot(35528), deraadt(31454), sthen(30592), espie(18328), jasper(16649)
+
+<!-- DEEP_ANALYSIS: sacred_sources.duckdb.blocks -->
+**史家判断**（证据等级：L2，来源：`sacred_sources.duckdb.blocks.188`）
+
+以食品安全为例：人们永远无法得到真正的认识。你既不能说科学证明其在某量无毒害就真的无毒害，也不能证明它真的有毒害。用科学说服人本身就不科学——因为科学本身就是非充分决定性的，本身的正确性是得不到保证的。且你能得到的所有科学解释，正因为它是科学解释，所以它必定也是错误的。这并非反智，而是对科学边界的清醒认识。好坏是对于人来说的，所谓“剂量决定论”也是无意义的——零剂量不是更安全吗？
+
+<!-- DEEP_ANALYSIS: sacred_sources.duckdb.blocks -->
+**史家判断**（证据等级：L2，来源：`sacred_sources.duckdb.blocks.283`）
+
+王充因为个人境遇而提出了德福不一致论，其否定了个人努力的作用。可以看到人生的遭遇会对其理论有决定性的作用，有时是偏差，有时是谬误，但根本上说是一种悲伤。这揭示了理论建构的偶然性：任何理论都深深打上 theorist 个人经历的烙印。不存在客观的、超越个人境遇的理论。历史哲学的建构者同样如此——本书的理论亦不例外，它诞生于特定的境遇、特定的悲伤、特定的选择。
+
+<!-- DEEP_ANALYSIS: cross_indexes.duckdb.concept_history -->
+**史家判断**（证据等级：L2，来源：`cross_indexes.duckdb.concept_history.13`）
+
+出口管制：出口管制概念的演化: ①冷战成型期（1949–1951）：COCOM 建立，协调对苏联、东欧、中国的禁运货单；1951 年美国《相互防御援助管制法》（Battle Act）以停止援助迫使盟国参与（1980 年废止）；②缓和调整期（60–80 年代）：因缓和与贸易增长，管制多次放宽；③转型重组期（1993–1996）：1994 年 3 月 31 日 COCOM 解散；1995 年 12 月 19 日成立“瓦森纳协定”（Wassenaar Arrangement），1996 年 11 月 1 日起运作；④数字与加密期：加密早在冷战期被列为军品（由国务院依 AECA 管，即 ITAR），1996 年底部分非军用加密移至商
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-1-011`）
+
+Thompson 在 1984 年图灵奖演讲中称，特洛伊木马攻击的构想最早见于一份对 Multics 早期实现安全性的空军批判报告。
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-3-004`）
+
+Theodore Roszak 1969 年出版《The Making of a Counter Culture》，副标题为“对技术官僚社会及其青年反抗的反思”。
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-4-010`）
+
+Anonymous CVS 源码分发机制由 Charles D. Cranor 与 Theo de Raadt 创建，用于开放 OpenBSD 源码仓库。
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-4-011`）
+
+创建 Anonymous CVS 的目标之一是开放 OpenBSD 的 CVS 源码仓库访问，使项目更开放并鼓励开发者兴趣。
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-4-100`）
+
+1995 年秋启动 OpenBSD 项目时，Cranor 与 de Raadt 决定用 CVS 管理源代码树，并创建匿名 CVS 以开放源码仓库。
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-5-111`）
+
+Anonymous CVS 由 Charles D. Cranor 与 Theo de Raadt 在 1995 年秋创建 OpenBSD 时设计，使匿名互联网用户无需写权限账户即可访问源码库。
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-5-112`）
+
+Anonymous CVS 是一种让匿名互联网用户在不危及安全的前提下访问源码库的机制，将开放源码推进为开放源码库。
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-6-017`）
+
+Harris、Jha、Reps 等人提出声明式、时序化且实用的 capability 编程方法，用于在 Capsicum 上满足安全策略。
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-6-108`）
+
+OpenBSD 自 2005 年起对 SCSI 中间层（SCSI midlayer）实施重大重构，引入 mpath(4) 多路径虚拟总线与 iopools 资源池、将适配器命令处理器改为回调式 scsi_done API，以改善稳定性、性能与可扩展性。
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L2，来源：`historical_claims.duckdb.claim.CL-7-046`）
+
+参考文献全文数据库收录《20260805 Glass deRaadt expulsion email 19941223 en》（unknown，2026），作为本章主题的候选史料。
+
+## 文献
+
+- Ingo Schwarze. bsdcan15-mandoc[M]. 2015.
+- Ingo Schwarze. bsdcan18-mandoc[M]. 2018.
+- Paul Irofti. bsdcan2014-octeon dsr500[M]. 2014.
+- bsdcan2015-rdomains[M].
+- bsdcan2016-bfd[M].
+- bsdcan2016-xen[M].
+- bsdcan2019-syspatch[M].
+- bsdcan2019-tls13[M].
+- bsdcan2025-hshoexer-confidential-computing[M].
+- andrew, afresh1. 2024-Why-Rewrite-fw update-Euro BSDcon[M]. 2024.
+- eurobsdcon2008-sensors[M].
+- eurobsdcon2011-kettenis[M].
+- eurobsdcon2011-openbsdscsievolution[M].
+- eurobsdcon2014-mandoc-paper[M].
+- eurobsdcon2014-mandoc-slides[M].
+- eurobsdcon2014-parallel-make[M].
+- eurobsdcon2015-packages[M].
+- eurobsdcon2015-softraid-boot[M].
+- eurobsdcon2016-openbsd-11n[M].
+- eurobsdcon2016-privsep[M].
+- eurobsdcon2017-device-drivers[M].
+- eurobsdcon2017-opensmtpd[M].
+- eurobsdcon2018-mandoc[M].
+- eurobsdcon2018-rop[M].
+- eurobsdcon2019-plist[M].
+- eurobsdcon2022-krw-blockstobooting[M].
+- eurobsdcon2023-bluhm-mitigations[M].
+- eurobsdcon2023-espie-cache[M].
+- eurobsdcon2024-bluhm-packetflow[M].
+- eurobsdcon2025-bluhm-protomp[M].
+- eurobsdcon2025-florian-easy[M].
+- Marc Espie. eurobsdcon 2018 https[M]. 2018.
+- Claudio Jeker. asiabsdcon08-network[M]. 2008.
+- Murenin C A, Boutaba R. OpenBSD Hardware Sensors Framework[C]//AsiaBSDCon 2009 Proceedings. Tokyo, 2009.
+- Murenin C A. OpenBSD Hardware Sensors Framework（幻灯片）[EB/OL]. AsiaBSDCon 2009. <https://www.openbsd.org/papers/asiabsdcon2009-sensors-slides.pdf>.
+- syuu. asiabsdcon2010 smp for sgi paper[C]. 2010.
+- Alexandre Ratchov. asiabsdcon2010 sndio slides[C]. 2010.
+- asiabsdcon2016-vmm-slides[M].
+- asiabsdcon2019-rop-slides[M].
+- Dave Voutila. asiabsdcon2023-hardening vmd devices-slides[M]. 2023.
+- andrew, afresh1. 2024-Why-Rewrite-fw update-Fossy[M]. 2024.
+- chuck, deraadt. anoncvs-paper[M]. [存疑]
+- Niels Provos. crypt-slides[M]. 2002.
+- eurobsd-firewalls-2002[M]. 2002.
+- eurobsd2017-pkgtools[M].
+- Brian Bamsch. Porting Open BSD to RISCV Final Report[M]. 2020.
+- Paul Irofti. eurobsdcon2014-octeon dsr500[M]. 2014.
+- eurobsdcon2014-rdomains[M].
+- eurobsdcon2015-mandoc[M].
+- eurobsdcon2016-embracingbsdrt[M].
+- eurobsdcon2016-utf8[M].
+- eurobsdcon2017-schedisnot[M].
+- Software Freedom Conservancy. Form-990 fy-2022-23[M]. 2022.
+- eurobsdcon2019-perform-slides[M].
+- eurobsdcon2022-espie-arches[M].
+- eurobsdcon2022-tb-libressl[M].
+- Marc Espie. lse clang[M]. 2017.
+- eurobsdcon2023-matthieu-pf-rdomain[M].
+- eurobsdcon2023-otto-malloc[M].
+- Dave Voutila. eurobsdcon2024-vmd multiprocessing[M]. 2024.
+- 未知. openbsd Open BSD-jitsi[M]. 2022.
+- Giovanni Bechis 12 ` ~~~ alse. openbsd seccomp-pledge-oss2017[M]. 2017.
+- eurobsdcon2025-hshoexer-confidential-computing[M].
+- eurobsdcon2019-gameoftrees[M].
+- eurobsdcon2021-espie-debug[M].
+- eurobsdcon2022-bluhm-networkmp[M].
+- eurobsdcon2024-hshoexer-confidential-computing[M].
+- eurobsdcon2025-espie-dpb[M].
+
+<!-- PODCAST_REVIEW v20260829 -->
+<!-- 语义复核范围：BSDTalk EP106、BSDTalk EP136、BSDTalk EP192、BSDTalk EP221、BSDTalk EP27、BSDTalk EP46、BSDTalk EP50、BSDTalk EP51、BSDTalk EP79、BSDTalk EP82、BSDTalk EP95（共 11 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
+
+**要点**：
+
+- Herrb 的技术路径起于具体的动手困境：他在法国图卢兹求学，博士实验室以 Sun 工作站等接触 UNIX；约 1993 年免费 UNIX 可在家用 PC 运行时，他的图形卡不为 X386 支持便动手修改以驱动自己的硬件，从此未辍；先做 NetBSD 的 X 移植，后转入 OpenBSD。（BSDTalk EP106，[81.36-134.56]，L1）
+- Xorg 7 的架构变革是构建体系的换代：弃用 X 专属的 imake 而改用新构建工具并走向模块化，库、客户端、X server 与每个驱动各自成包，合计三百余个包须按正确顺序分别构建；OpenBSD 希望直接在 base system 中构建 X，管理这批包的需求催生了 Xenocara——其核心只是 BSD make 文件加一套通用规则，技术亦可移植到其他 BSD（向 NetBSD 的初步尝试因 make 宏差异而复杂但可解）。（BSDTalk EP106，[269.6-351.96]，L1）
+- 他澄清 OpenBSD 的 X 并非 Xorg 分叉，仅含少量本地补丁与配置微调且多不为用户所见；用户感知的差异在于 OpenBSD 默认不装 GNOME/KDE 而以 fvwm 为窗口管理器；目标是 OpenBSD 4.2 时全部架构改用 Xenocara，唯最慢架构与 SH4/Landisk 因尚无共享库而与新构建体系的假设冲突待解；旧 X386 3.x 时代因 setup 程序依赖 Tk 而需另装 Tcl/Tk 的负担随之消失。　[存疑脚注] SH4 与 Landisk 细节经转写受损重建，须以 Xenocara 架构支持文档核对（BSDTalk EP106，[208.6-445.84]，L1）
+- Herrb 兼任 X.org 安全官，管理流向 X.org 的全部安全类缺陷报告，长期计划是更主动地修复 X.org 代码库；他期待模块化降低参与门槛、吸引更多开发者关注 X 的局部如 3D 硬件加速，而 OpenBSD 此方向正缺志愿者。（BSDTalk EP106，[521.44-594.4]，L1）
+- 他发出 Linux 中心化的当事人警示：X 是覆盖操作系统最广的开源项目之一（各 UNIX 变体、Windows、Mac OS X 等），但 X.org 的主导者似乎日益漠视非 Linux 系统；并非全世界都是 Linux，任何操作系统都不应以独占世界为目标；非 Linux 用户因自认小众而不报缺陷，使缺陷数量不反映各系统的重要性，他呼吁其他系统用户向上游提交报告以纠正这一错误计算。（BSDTalk EP106，[663.34-775.8]，L1）
+- 访谈于 OpenCon 2007 之后在威尼斯 Bar Piccolo Martini 进行，对象为 Peter Hansteen；其著作 The Book of PF（No Starch Press，OpenBSD 防火墙实务指南）定于 2007 年 12 月 15 日出版，OpenCon 上私印样书已拍卖，亚马逊与出版社渠道可预订，会上已有人洽谈多语种翻译；作者称读者仅需基础 TCP/IP 知识，内容从规则集求值逐步进阶。（BSDTalk EP136，[220.79-901.72]，L1）
+- 其转向 PF 的经历：为小公司管理网络时平台先以 Linux 为主、渐转 FreeBSD，但防火墙始终在 Linux 上，iptables 维护渐成苦役；旧防火墙硬件烧毁后改用 OpenBSD 加 pf，“再未回头”。（BSDTalk EP136，[253.15-296.63]，L1）
+- PF 的可读性哲学：向 iptables 用户展示配置时对方常难以相信规则能如此简单——“这不是 shell 脚本”；装好系统的机器上五到十行 pf.conf 置于网络与世界之间即可工作。宏以符号名为服务列表（ssh、domain、www、https 等）提供可读简称；表是专为 IP 地址与网段设计的高效数据结构，支持 CIDR 与取反、可自命令行操纵，配合锚点使外部程序与规则集交互；“PF 不能动态改规则”的质疑至多部分成立。（BSDTalk EP136，[296.63-446.16]，L1）
+- CARP（Common Address Redundancy Protocol）的诞生部分是对一个故障切换协议在 IETF 冲向标准途中被发现牵涉约三百余项专利的回应，OpenBSD 团队遂自行撰写替代；CARP 作为虚拟网络接口让一组机器共享对外 IP，一主多备，主机故障时备份近乎透明地接管——凌晨三点主防火墙宕机无需短信叫醒管理员，半年一次的 OpenBSD 升级可挪至工作时间完成，主机恢复后备机再行交还。（BSDTalk EP136，[458.44-546.15]，L1）
+- hoststated 由 Reyk Floeter 与另一开发者（转写姓氏不可辨）写成，经 PF 表与规则集集成：对外发布单一 IP 与主机名并以轮询重定向到后端机器表，守护进程检测后端存活、将死机移出地址池，从而令服务更可靠；至 OpenBSD 4.2，hoststated 已能较好处理 SSL 连接。（BSDTalk EP136，[546.15-621.95]，L1）
+- 抗 DDoS 的状态追踪选项源自一次拒绝服务受害者的通用化追问，于 OpenBSD 3.7 前后加入：规则中可限定单主机最大并发连接数与时间窗内连接速率，超限者落入专门表；处置方式从直接封锁（配合 flush global）到借 ALTQ 队列给超限者极小带宽任其排队。（BSDTalk EP136，[626.33-689.28]，L1）
+- spamd 与灰名单：spamd 约于 OpenBSD 3.5 引入，最初对黑名单来源的 SMTP 连接以每字节一次的应答拖延至对方放弃；同期出现的灰名单基于对 SMTP 规范“临时错误须在合理时间内重试”的较真解读——垃圾邮件多出自被劫持 Windows 机器上的简易软件、从不检查返回码亦不重试，真实邮件服务器则会在约半小时内回来；五年后灰名单仍能当场消灭约 95% 的垃圾邮件；spamd 消除的是低垂果实，最精明的发件者或借开放中继者仍可能通过；spamd 亦伪装成开放中继诱捕不校验投递的中继检查器，其灰名单中可见上万封从未投递的转发尝试。（BSDTalk EP136，[695.52-840.75]，L1）
+- 结语立场：支持 OpenBSD 请购买 OpenBSD 用品，支持作者请购买其书；并以略带激烈的方式断言——不运行 OpenBSD 或未在其他 BSD 上运行 PF 的管理员“错失良多，把事情做得比必要的更难”。（BSDTalk EP136，[903.76-928.32]，L1）
+- 主播两周年回顾：BSDTalk 首期发布于 2005 年 12 月 20 日；两年间 NetBSD 自 3.0（2005 年 12 月 23 日发布）演进至 4.0，PC-BSD 从未及 1.0 到今日，FreeBSD 7.0 正筹备候选版本；主播感谢社区与听众在时间、金钱、主机与精力上的捐助。（BSDTalk EP136，[119.63-183.73]，L2）
+- Brauer 回顾 match 规则的起源与根本性：他自 2003 年起就想要 pass 与 block 之外的中性动作而始终无法说服同侪；NAT 改造使其成为刚需——否则每条 pass 规则都得附带 nat to。实现之后他才意识到这是 PF 的根本变化：旧模型由最后匹配规则决定一切，状态只需保存指回该规则的指针；新模型下一个包可被多个 match 规则依次作用（队列、日志、标签、scrub 等），状态上须维护命中的 match 规则链表。（BSDTalk EP192，[207.12-330.88]，L1）
+- 4.6 的 scrub 重写源于 scrub 混杂了本不应混杂的职责：碎片重组、规范化与 MSS 钳制、TOS 改写等，且作为独立规则集须对每个进入的包遍历，代价高昂。拆分后规范化成为可选的常规规则，碎片重组简化为单一的开关并改为默认开启；此前用户忘记书写 scrub 行时，未经重组的碎片会被静默丢弃，而几乎没有人的规则集按碎片情形写过。（BSDTalk EP192，[424.76-586.58]，L1）
+- 碎片重组原有三种方法，实际上无人使用替代方案，归一为全量重组有两条环境性理由：互联网因 path MTU discovery 基本生效而碎片大为稀少；OpenBSD 内核内存管理从 3.4 时代启动时静态池分配（PF 内存耗尽即 panic）转向动态分配，压力不再。4.7 的 NAT 重写则带来约三成的实测提速，从 4.4 直接跃升可叠加 scrub 与翻译规则集消除的双重收益达约六成且体感明显；NAT 重写净删近千行，整个过程共去除约一千三百至一千五百行，当事人自陈因改进过于显然而未再做大量基准测试。（BSDTalk EP192，[491.96-729.28]，L1）
+- NAT 与 RDR 成为常规规则上的动作（nat-to、rdr-to）后改变了规则书写范式：地址自用户视角即时改写，先 match in nat to 某地址、后继 pass in from 同一地址即可命中；需要时也可写多条带不同 NAT 设置的 pass 规则。管理员的规则集得以按逻辑分组——以一组 match 规则完成队列挂接等魔法，再把放行或阻止的裁决推迟到别处。（BSDTalk EP192，[871.08-929.16]，L1）
+- Xenocara 的起源：因 X 窗口系统上游实现项目变更许可证条款、且旧名称已成商标，OpenBSD 一度考虑自行 fork 并另起新名；开发者 Matthieu Herrb 借清洁鱼缸玻璃的小鱼学名造出 Xenocara 一词（以 X 开头，呼应 OpenBSD 以鱼类命名的传统）。最终项目决定不 fork 而跟随 X.org，Xenocara 遂成为既有做法的正式名称——为把 X 作为 OpenBSD base 系统的一部分而设的构建系统（X 不经 ports 与包系统分发）。　[存疑脚注] 转写将许可证变更写作 X386 许可证与 David Davis，通行记载为 XFree86 许可证争议，人名与项目名待核。（BSDTalk EP221，[80.04-161.60]，L1）
+- Xenocara 的实质是构建封装而非分叉：它按依赖顺序对超过 250 个 X.org 模块调用 configure、make、make install；因 X 属于 base 系统，构建不得依赖外部工具——Mesa 构建系统过深依赖 GNU make 与 Python，OpenBSD 遂将预生成文件作为源文件提交进 CVS 树，免除全体开发者构建时的 Python 与 GNU make 依赖；另有支持 Vax、Sparc 等旧平台的本地改动未上游化。（BSDTalk EP221，[161.60-213.88]，L1）
+- X server 特权分离代码由 Herrb 于约十年前（2002-2003）实现，至今仍在 OpenBSD 正常工作，但因在 Linux、Solaris 等 X.org 支持平台上移植该代码缺乏足够兴趣——他本人无意独力承担，其他项目亦无人接手——始终以一组 diffs 形式存于 Xenocara 树内，未提交上游。（BSDTalk EP221，[214.12-251.72]，L1）
+- KMS（内核模式设置）困境是当时 OpenBSD 图形栈的核心问题：X.org 驱动整体转向 KMS，而 OpenBSD 内核尚无 KMS 支持，使项目要么困于旧版驱动，要么另辟蹊径——开发者将源自 Linux KMS 驱动的模式设置代码回植用户态，为 Sandy Bridge 与 Ivy Bridge 芯片组维护自定义 Intel 驱动，以传统用户态 X 驱动方式运行，保住 3D 加速与 X 视频加速能力；受访者视向内核移植 KMS 为 X 的未来，也是去除 X 服务器额外特权（系统主要安全隐患之一）的前提。　[存疑脚注] 转写将两位开发者名记作 Owen Haysworth 与 Jonathan Gray，人名拼写待与源码提交记录核对。（BSDTalk EP221，[262.44-372.14]，L1）
+- 对 Wayland 的评估：该项目由 Kristian Høgsberg 等人自零开始、面向 Linux 设计，深度依赖 Linux 特有内核接口（输入子系统尤甚）；模式设置部分因 BSD 拟采用类似 KMS 的内核接口而在理论上可移植，但 Wayland 开发者明确不愿构建操作系统无关抽象层，故移植到 BSD 近乎按其合成 API 思想重写，工作量巨大且尚无人启动；其理念（削减 X 开销、提升本地图形性能、经合成管理器以另一方式实现远程显示）是否根本正确、能否满足真实应用需求，受访者直言尚无把握，而 X 目前工作良好、使用无处不在。　[存疑脚注] Wayland 发起人名依转写为 Christian Huxberg，通行记载为 Kristian Høgsberg，待核。（BSDTalk EP221，[456.46-572.66]，L1）
+- 构建系统的可移植性与线程议题：Xenocara 构建系统因刻意保持简单（仅是 autotools 流程的封装）而具备合理可移植性，已被 DPB（OpenBSD 分布式包构建器）用于在 ports 集群上并行构建 Xenocara 且无需改动其本身；X 内部多线程场景不多，但新版 Mesa 的 LLVMpipe 软件渲染驱动使用线程，rthreads 真线程将使其受益，前提是解决 LLVMpipe 对 LLVM 与 Clang 的依赖——像 FreeBSD 那样以 LLVM/Clang 构建 base 并非易事，因 LLVM 构建系统存在大量 base 系统所无的外部依赖。　[存疑脚注] 转写记作 Mark SP 的演讲者疑为 DPB 作者 Marc Espié，待核。（BSDTalk EP221，[374.68-448.84]，L1）
+- 工作范围与个人部署：Marco Peereboom 在 OpenBSD 主要从事存储与 SCSI 中间层工作；3.9 周期中被岔去实现 IPMI（智能平台管理接口）——新型与高端服务器内置的传感器协议，跟踪风扇、温度、电压等状态并把信息呈现给用户空间，可配合 sensors 命令监控告警；i386 与 AMD64 平台均适用。其个人机器多台运行 OpenBSD：一台旧的工作站（转写含混，疑为 Alpha 或旧 SPARC64）、一台 i386 web 服务器（朋友网站亦托管其上）、一台 HPPA 防火墙（将升级 3.9 并使用 PF 新特性）。（BSDTalk EP27，[90.24-208.04]，L1）
+- 资金困境与 hackathon 机制：项目已亏损运行一段时间；开销主要在基础设施——网络费用昂贵、电费极高，因为项目坚持所有平台全部本地原生构建（Zaurus 快照即在 Zaurus 上构建），地下室机器全天候运转；已收捐赠获致谢，同时呼吁企业级赞助——盼有公司愿意为 hackathon 买单。年度 hackathon 为开发者大聚会：多数人飞赴 Calgary 写代码、规划战略，邮件往返缓慢的事项在面谈中大大加速；其副作用是总能发现需要多人不同技能协作才能定位的重大 bug，产出大量好代码与想法进入下个发布；面对面建立信任，而这种开发模式极依赖信任。另有定向 hackathon：如前一年威尼斯的 ports hackathon，约 10 名专家使 ports 系统大幅进步；ports 与包工具近期升级体验显著改善且质量可直接测得。（BSDTalk EP27，[218.08-430.34]，L1）
+- 开发哲学与安全记录：OpenBSD 开发模式不讲废话——永远做对的事，不适合操作系统的特性就不会发生，因此对社区有时显得生硬；对许可证绝不妥协并引以为豪，纵然承受社区与其他方面的压力，流程中保持理性，不合格的代码不会进入发布、甚至直接移出树——想在此协作就得守此规则。对保持默认安装无远程漏洞的纪录表示自信——正是这一点当初吸引他入坑（厌倦了隔三差五担心被入侵的日子），但他不能替全世界打包票。（BSDTalk EP27，[436.30-552.92]，L1）
+- 升级流程与包工具评价：当事人认为 OpenBSD 的升级过程比 apt-get 更透明——他试装 Ubuntu 后觉得 apt-get 要求用户预先懂得太多；承认 OpenBSD 安装器对新用户略显生畏，但这只是习惯问题：图形安装器问的是同样的问题，打字与点击之别而已；升级复用与安装相同的安装器、识别现有系统、连按回车即开始，最难的一步是敲出二进制路径；ports 侧的工具已做到完全透明——一条命令即可升级全部 ports 并解析依赖；ports 升级与替换功能为 3.8 与 3.9 之间引入、随 3.9 发布；他本人不做 ports，靠定时任务自动升级。（BSDTalk EP27，[552.92-700.92]，L1）
+- 在研项目：正与 Jordan Hargrave 合作重写 ACPI——工程巨大、代码要写要调、BIOS 环境充满敌意、进展缓慢；另在升级磁盘控制器驱动以支持即将到来的 SAS 技术；并循 Theo de Raadt 的指引为 bioctl 增加更多 RAID 控制器支持——bioctl 为 3.8 引入的通用 RAID 管理工具，理念是各家 RAID 控制器虽差异巨大、基本视角下功能相同，bioctl 以简单方式确保 RAID 栈完好，提供换盘与重建工具且全程无需重启——磁盘故障后不重启即可恢复；此工具面向硬件 RAID 而非软件 RAID，二者将来或合并但为时尚远。桌面方面用 Ion 或 Ratpoison 平铺窗口管理器，在高分辨率宽屏上并排三个全尺寸窗口，重度使用 screen 切换文本终端，编辑器只用 vi——唯一确定永远在场的编辑器。（BSDTalk EP27，[700.92-925.88]，L1）
+- sensors 框架的状态自述：该框架自 OpenBSD 3.4 或 3.5 经由 NetBSD 继承而来，近六至八个月才被真正发力推进，整体仍属粗糙、用户态部分亟待重写；其固有难点是低端主板上的廉价监控芯片只报出挂接数量，软件只能枚举 fan1 至 fan4 而不知物理对应，高端 SCSI 领域则可经 enclosure services、ESM 或 IPMI 查询到 Baseboard Fan1、Power Supply 2 一类的设备名；驱动集中于 i386 与 AMD64，框架本身在全部架构启用且至少五个架构有专属驱动，SCSI 设备的温度报告亦接入。（BSDTalk EP46，[162.92-308.44]，L1）
+- bio 框架的动机是让 RAID 状态首次可被软件感知：此前树内 RAID 控制器一律伪装为 SCSI 驱动，管理员只见逻辑盘，盘阵降级无从得知，只能进机房看闪灯或听蜂鸣——有管理员甚至一日两次派初级员工巡视机房；bio 的目标是经软件检测 RAID 降级并以邮件告警、进而支持软件修复盘阵；该框架完全自产、于最近一次 hackathon 才问世却已惊人可用，暂只支持 MegaRAID 控制器且限于 i386 与 AMD64，向其他架构扩展容易只是缺硬件。（BSDTalk EP46，[326.64-380.88]，L1）
+- 软件 RAID 在 OpenBSD 的被忽视现状：树内仅有两个驱动——自 NetBSD 继承的 RAIDframe 极为庞大、亟须裁剪（NetBSD 在该领域投入远多），以及仅做镜像与条带化的极轻量 CCD、缺乏对付硬件故障族的智能；受访者坦言若有空闲愿意投入，制约因素纯粹是时间。（BSDTalk EP46，[382.36-434.80]，L1）
+- 入门路径：1996 或 1997 年首装 Linux，得到提示符后不知所措而退回 Windows；入大学后因功课与共享网络需要 Unix，发现 OpenBSD 文档远比 Linux 的 howto 与贫乏文档可读而选择后者，自认当时不知为何没有选 FreeBSD；其对 OpenBSD 的第一项贡献是引入 USB 支持，经持续提交修复后获自行提交权限；此后遍历各 BSD 与多个 Linux，并在工作中照看 Solaris 机器。（BSDTalk EP46，[447.76-526.80]，L1）
+- 桌面与服务器推荐的分野：其桌面定义仅为能 ssh、有浏览器、能放 MP3，此标准下 OpenBSD 完全胜任；但音频编辑、矢量图形等场景他不讳言会推荐 Mac OS 或 Windows，并自知此论会令社区不快；服务器端则除日历与 Exchange 支持外，OpenBSD 作任何他所工作过的网络的后端都能直接运转。（BSDTalk EP46，[675.60-717.52]，L1）
+- 开发环境与社区对照：日常为 vi 加 make 加 screen 加当值语言，screen 被其称作有史以来第二重要的软件；他对 OpenBSD 开发社区的评价是极为支持与鼓励——报告 bug 会被认真对待、他人愿与你一同追踪直至修复，而其对比的图景是某些上游维护者一句我这儿正常便终结报告，令他困惑于对方无意改进软件；两种社区对待缺陷的方式构成鲜明差异。（BSDTalk EP46，[727.72-790.52]，L1）
+- OpenCVS 的重写突破：hackathon 前两周他因受够 GNU CVS 的代码而与项目同侪商讨重写，获得实现思路后决定部分重写；会前已完成大量代码，抵达 hackathon 后集中提交、进展迅速——commit、update、checkout、status 等常规仓库操作命令在三周内全部可用，按其说法这三周做完的工作量超过 OpenCVS 此前两年的积累。（BSDTalk EP50，[143.12-200.74]，L1）
+- OpenRCS 的先行策略：OpenCVS 开发一度停滞，遂与 Theo 商定先做 OpenRCS——既可将更多 BSD 许可程序收进 base 树，又能复用 OpenCVS 已有的 RCS parser；OpenRCS 反而先于 OpenCVS 完成，已成为 GNU RCS 套件的近乎全面替代（尚缺向分支提交的能力）；其后因共用 parser 并非长久之计而彻底分叉，如今两者的共性仅存于 RCS parser 本身。（BSDTalk EP50，[202.82-297.70]，L1）
+- 对 pserver 的拒绝是明确的安全决策：其认证协议与口令加密算法属公开已知、加密口令极易被提取，支持如此不安全的机制在他看来非常愚蠢；OpenCVS 依赖 OpenSSH——以 SSH 连接远程 shell、执行 CVS 服务端命令、经标准输入输出通信；未来或许会有自带用户认证与真实 ACL 的 CVS 守护进程以解决匿名读与扩展访问控制，但他对此并不确定。（BSDTalk EP50，[428.54-503.50]，L1）
+- GNU CVS 缺失而 OpenCVS 拟增的工程特性：目录与分支级的访问控制列表——如 portable 与 stable 分支并存的大项目中只允许特定人选向 stable 分支提交安全修复；离线 diff——在火车或飞机上无服务器连接时对先前的 head 修订查看自身改动；revert——按指定提交自动将所涉文件回滚至先前 head 修订、相当于反向合并；原子提交——保证提交要么完整发生要么完全不发生，而非五个文件只改了两个。（BSDTalk EP50，[518.02-652.38]，L1）
+- 仓库接管的责任与容错空间：OpenCVS 尚未用于管理 OpenBSD 官方仓库——若他此时向 OpenBSD 仓库提交会被立即制止——但他已用其管理个人本地仓库； eventual 切换意味着巨大责任，RCS 文件一旦损坏则满盘皆乱；所幸 OpenCVS 沿用 RCS 纯文本格式——管理段与全部 delta 皆为明文、修订即相互施加的文本补丁，尚存恢复希望；二进制 delta 的支持刚在 OpenRCS 侧取得进展，OpenCVS 仍付阙如。（BSDTalk EP50，[311.50-426.54]，L1）
+- 项目参与的动机：他为自己的小项目长期使用 CVS，却总遇到不应发生之事——最著名的莫过于运行简单的 cvs update 时抱怨既有文件挡路、要求挪开的无稽行为；阅读 GNU CVS 源码的经历令他深感可怖，认定读之只会陷入痛苦；其后经聊天渠道得知有人为 OpenBSD 发起 OpenCVS 项目，因自己常用 OpenBSD 便决定加入出力。（BSDTalk EP50，[656.30-716.70]，L1）
+- 入坑 OpenBSD 的机缘是一块声卡：家中旧机的声卡在 Windows 与 Linux 下皆无法发声，而他极重音乐，遍寻替代时将 NetBSD 与 FreeBSD 都试过而无效，转试 OpenBSD 后声音竟然直接正常；此后他持续惊叹于 OpenBSD 中一切基本都能正常运作，并敬佩驱动作者的才智；以 OpenBSD 听音乐、聊天，对他而言已是完美的多媒体系统。（BSDTalk EP50，[722.86-803.54]，L1）
+- 哑终端的本质是显示器、键盘与一条连回中央计算机的长电缆，终端本身不承担实际处理任务，内部仅有少量电路且无运动部件；其存在意义在于让多个用户在文本模式下同时使用同一台计算机。（BSDTalk EP51，[50.36-74.32]，L1）
+- 主播完整演示将 Wyse WY-50 哑终端经串口与 null adapter 以 9600 波特接入 OpenBSD 3.9 的流程：在 /etc/ttys 为 tty00 配置 /usr/libexec/getty，在 /usr/share/misc/termcap 检索 Wyse 50 对应的 WY50 类型，状态列设为 on 并加 secure 选项；他对 secure 的取舍依据是终端位于家中而非共享网络之上，体现了以物理边界界定信任域的经验性安全判断。（BSDTalk EP51，[86.94-246.46]，L1）
+- 将默认控制台设为串口是调试与无头服务器（不装显卡）运维的常见做法；但 i386 架构的 BIOS 不向 COM 口输出，导致无头启动受限，而 alpha 与 Sun 等架构可全程经串口完成。（BSDTalk EP51，[257.66-286.34]，L1）
+- 主播观察到 2006 年哑终端几乎随处可得、人们正将其当作垃圾丢弃甚至已不认识这种设备，同时串行端口正从个人计算机上消失，使此类配置愈发困难；他以此期录制作为对旧硬件的怀旧实践。（BSDTalk EP51，[291.32-310.42]，L1）
+- 发布模型的自述：OpenBSD 开发不为赶特性出库，而是在特定时点把代码树整备可用——四到五个月向树中投入开发，每六个月强制停止添加新东西、再花约一个月测试修复后发布；不设特性清单，被概括为演化而非革命，版本号只是快照语义，4.0 并不比 3.9 更重大；4.0 的主题被当事人定义为按自己的方式做事而非追随业界方向，重申其工作的独特性。（BSDTalk EP79，[142.30-255.80]，L1）
+- MPT 驱动重写的工程逻辑：LSI MPT Fusion 固件接口把光纤通道、并行 SCSI、SAS 及 iSCSI 变体抽象成统一界面，本应单一驱动通吃；旧驱动写于仅两类总线存在之时、硬编码类型且结构混乱；当事人选择重写而非修补——重写后修复 64 位清洁、总线字节序清洁、支持缓存一致架构、覆盖除未获测试的 iSCSI 外全部总线类型且更快。（BSDTalk EP79，[278.44-374.42]，L1）
+- 重写哲学对业界常态的批评：MPT 驱动从约一万至一点一万行收缩到约五千行、还支持了更多硬件；问题根源在于人们往仍能工作的旧代码旁贴补丁——不重思流程、在外围悬挂补丁，复杂度与体积随之增长；退一步重新设计才有机会大幅缩减。主持人点出这是逆行业加特性加行数加复杂度潮流而动的趋势。（BSDTalk EP79，[416.00-482.58]，L1）
+- 厂商文档困境与逆向路径：LSI 不提供文档、获取其 SCSI 与 RAID 控制器文档须签 NDA，当事人与 Marco Peereboom 合作、以 Linux 与 FreeBSD 驱动为参考推定 IO 路径命令，Marco 因工作中大量接触而署名；4.0 新写的 Areca RAID 控制器 ARC 驱动同样无厂商文档——厂商可能根本没有——改用 FreeBSD 驱动加芯片开源规格；完成 ARC 后当事人一度倦怠。（BSDTalk EP79，[375.32-416.00]，L1）
+- bio/bioctl 框架扩张与 RAID 卡不特殊论：3.9 仅 AMI MegaRAID 一个驱动受 bio 支持，4.0 已有四个驱动带 bioctl 支持——证明 RAID 卡并非特殊设备，理应有一个工具监控并控制所有 RAID 卡；MPT 是纯 SCSI 控制器暂不需 bio 钩子（其 RAID 特性待接入），ARC 已能查看卷与磁盘状态；当事人偏爱的卡是 MFI 驱动支持的 LSI MegaRAID SAS，且明确偏好 SAS 与 SATA 替代并行 SCSI，MFI 亦由 Marco Peereboom 在 4.0 完成。（BSDTalk EP79，[517.98-602.14]，L1）
+- SCSI 中层的结构性性能瓶颈：控制器 opening 数被中层按总线上可能的目标数均分——光纤通道按 256 目标把 1024 个命令均分后每设备仅剩四个未决命令，而实际总线上仅挂三四个盘、每盘本可接受百余个；未决命令过少使磁盘无法有效重排操作，最坏情形性能折半；另一限制是每事务 64KB 上限而现代 SCSI 设备可达 32MB，推高该值牵动大量内核子系统，暂未着手。（BSDTalk EP79，[751.30-858.58]，L1）
+- SCSI 与 SATA 的走向判断：SCSI 协议活得很好，其先进性长期领先 ATA；未来可能是 SCSI 反向吞并 SATA——业界趋势已是一切存储都呈 SCSI 形态，Linux 内核把 ATA 控制器呈现为 SCSI 设备、RAID 卡厂商把控制器做成 SCSI 卡；SCSI 已是内核与存储对话的事实语言，OpenBSD 未来也想如此。（BSDTalk EP79，[858.58-912.82]，L1）
+- 4.1 计划与 4.0 亮点：VMware 虚拟接口驱动重写耗时两天接近完成、确定进入 4.1，另与 Marco 修复 SCSI 中层问题；4.0 带来五个新无线驱动与 SDMMC 支持。（BSDTalk EP79，[604.14-635.38]，L1）
+- 澳大利亚的孤独开发者：当事人自称布里斯班唯一 hardcore OpenBSD 用户，雇主 Chris Pascoe 拥有 commit 权限，本人性格内向、不参与 Unix 用户组社交，本地用户因其设备支持工作以午饭相邀；工作环境以 OpenBSD 承载防火墙（大量工作由 Chris Pascoe 完成）与 DNS、代理、SSL 包装，重负载在 Solaris 与 Windows 服务器；家中以 OpenBSD shell 机、桌面与多台开发服务器自足。（BSDTalk EP79，[654.38-743.30]，L1）
+- 入门史与驱动者画像：OpenBSD 开发者约八年，自 1997 或 1998 年底起；入伙缘于 OpenBSD 2.3 在其老 Sun 4/300——25 MHz、32 MB 内存、9U VME 机箱——上无法启动而 2.2 正常，他定位出致病补丁并提交，随后收到素未谋面的 Theo de Raadt 主动给账号的邮件；此后写遍各类设备驱动，刻意回避磁盘设备以求存储稳定，多涉串口、网卡、网络层、显示与 USB。（BSDTalk EP82，[63.64-117.92]，L1）
+- Theo de Raadt 的通才角色：其早期专注 SPARC port——尤以尚为 NetBSD 核心开发者时期为甚——但真正价值在于对树中各处皆有深入了解的通才能力，随兴趣转向树的其余部分；如今仍非常活跃，正不断催促 Jason 支持众多 SPARC64 机器与部分企业系统内置的 Cassini 以太网芯片——凡不带 Broadcom、HME 或 Gem 的机器皆有之，目前尚不支持。（BSDTalk EP82，[157.92-228.78]，L1）
+- SPARC64 port 维护实况：过去五年 Jason 任该 port 维护者——覆盖自 Ultra 1 起步到当代 Enterprise 机器的 64 位产品线，甚至有人尝试在 Enterprise 15000 上运行、接近启动而未竟，是其须回归的项目；Sun 每台新机都藏着 quirk 或需要新驱动，必须在新机问世时尽早取得实机；他的名字出现在大量版权声明中，只因某种怪异设备仅存于约两台机器——沮丧与乐趣并存的 port 经历。（BSDTalk EP82，[139.92-476.98]，L1）
+- 当前硬件缺口与调试现实：手头一台 Ultra 3 至为关键——该机指令缓存已支持而数据缓存未支持；缓存调试几乎必须物理接触机器，因为电源键使用频繁，上次 hackathon 的受害机五天内经历约六十次上电循环，机器会进入拒绝关机的状态。（BSDTalk EP82，[519.42-558.18]，L1）
+- 厂商文档的混合图景：Intel 存储部门的 RAID 卡态度优秀、曾多次向 OpenBSD 开发者寄送实卡；Intel 网络组三年前连 FXP 十兆百兆网卡都不给文档——那并非新技术，人们要文档主要是为研究其 bug——如今才终于开始放文档；Broadcom 从未向任何人放过文档，除非签下卖身式 NDA；台湾以太网芯片厂商乐于发布他们所谓的文档——洋泾浜英语、质量欠佳但足以起步；再辅以 Linux、FreeBSD 甚至 OpenSolaris 的源码找线索；Sun 内部亦不一致——UltraSPARC III 处理器文档易得，而 PCI 主桥（Schizo、Tomatillo）文档近乎不可能获取，形成处理器可跑代码却碰不到设备的断裂。（BSDTalk EP82，[242.52-356.66]，L1）
+- Cassini 文档与 NDA 立场：Cassini 以太网的文档同样不可得，Linux 阵营能支持它只因 David Miller 等人签下 NDA 让渡了权利——这既不是 Jason 个人也不是 OpenBSD 项目整体愿意接受的选项。（BSDTalk EP82，[359.18-376.70]，L1）
+- Sun 硬件收藏与平台迁移：工作站曾为装有三块帧缓冲的 UltraSPARC 2——不算最快但够用——约八个月前转向 Macintosh；家中实验室散落大量 Sun 机器（因搬家仍处拆箱状态）：Ultra 1、2、5、30、60、80，Enterprise 220 与极为沉重的 Enterprise 4500，Blade 1000 与 2000——Ultra 10 不过是竖立机箱里的 Ultra 5。（BSDTalk EP82，[388.86-447.94]，L1）
+- 业余无线电与 APRS 实践：新近参与分组无线电以支持自动位置报告系统 APRS——业余无线电社区周期性广播设备或电台位置，兼作带确认机制的慢速消息系统（半可靠、丢包可知），常用 1200 波特且收发切换须等待电台循环；UNIX 下主要应用 Xastir 接收他台位置、配合 GPS 显示相对位置与地图，华盛顿海军陆战队马拉松曾用于医疗站间传递选手信息；另涉数字模式无线电——RTTY 以 45.45 波特运行 Baudot 五位编码、以移位序列切换字母与数字符号档，PSK31 与 GMFSK 则面向键盘对键盘对话，类比是没有可靠性的 AIM 加上信号衰落；相关应用已移植 OpenBSD、待修整入 ports，Xastir 因几何、地图与 GPS 依赖成为可怕工程。（BSDTalk EP82，[576.54-807.30]，L1）
+- 编辑器与桌面哲学：编辑器无宗派——长坐同一处迭代用 Emacs、在树中飞检索用 vi，而用得最多的是 OpenBSD 树中的 Emacs 克隆 MG；曾在 NFR 工作时为求各平台统一编辑器而把 MG 移植到 Linux on PowerPC、FreeBSD 4.8、macOS 等，其中 FreeBSD 反而是较难的移植目标而 Linux 尚好；图形环境不用桌面管理器——那只会浪费屏幕空间——用 TWM 且懒于安装他物；shell 用系统自带的 ksh，bash 中他喜欢的特性已并入其中；尽量使用每个发行版自带的工具。（BSDTalk EP82，[809.18-923.28]，L1）
+- AMD64 IOMMU 未竟项目：IOMMU 概念源自 SPARCstation 1 与 2 时代——让地址空间受限的设备经由窗口访问全部主存，Sun 系统因所用以太网芯片只能寻址二十或二十四位而发明页映射表；AMD64 平台亦内置同类表；他一年前开始的工作已躺在 OpenBSD 树中未完成——不缺硬件只缺时间——该机制可让 32 位 PCI 设备经小窗口窥见 64 位地址空间，并公开征集协助。（BSDTalk EP82，[927.78-1010.32]，L1）
+- 受访者以其 BGPD 工作起步进入 BSD 开发，此后参与 OSPFD 与 RIPD（替代旧的 routed），并开始多播路由守护进程 DVMRPD。他解释路由协议的分工：自治系统内部运行 OSPF 或 RIP 等内部网关协议，自动计算内部路由并在断纤等故障时重路由；自治系统之间则由 BGP 这一事实上唯一的外部网关协议计算全部外部路由。BGP 的路径选择（最短、最便宜或最快）实为政治性定义——出向策略由购买上游带宽的位置决定，并反过来影响入向流量，故须做大量过滤，这也正是其复杂所在。（BSDTalk EP95，[62.08-276.66]，L1）
+- 开源路由的前史：OpenBGPD 与 OpenOSPFD 出现之前，开源世界唯一被广泛使用的路由套件是 Zebra——一套 GPL 软件，实现 OSPF、BGP、RIP 及二者的 IPv6 对应物，因几乎支持所有 Unix 系统而流行；约三年前 Zebra 走向商业化并告分裂，新团队以 Quagga 项目延续，仍约八成代码承自 Zebra、以修 bug 为主；gated 与 MRP 等同类项目从未成气候。　[存疑脚注] 转写将 Zebra 记作 Cibra、Quagga 相关细节受转写噪声影响，项目名据史实复原，待核。（BSDTalk EP95，[276.66-361.66]，L1）
+- OpenBGPD/OpenOSPFD 的独特设计在于默认安全与权限分离：BGPD 首创三进程结构——与网络对话的进程自行丢弃特权、切换至专用用户，第二个进程专事路由表计算，第三个父进程是唯一以 root 运行、有权修改内核路由表的进程；OSPFD、RIPD 与数周前刚加入 OpenBSD 的 hoststated 沿用同一模式，形成 OpenBSD 编写守护进程的新范式。（BSDTalk EP95，[361.66-449.66]，L1）
+- 关于各族守护进程的成熟度：BGPD 约三年历史、已相当成熟并被大量用于生产（受访者本人及多家大型站点）；尚待完成 4 字节 AS 号支持与重要的过滤语言重写；OSPFD 约两年、非常稳定，尚不能在运行中重载配置而须杀进程重启（计划数周内解决）；RIPD 协议简单、入树不久但基本稳定；DVMRPD 仍存在大量问题、未达生产就绪。（BSDTalk EP95，[453.46-554.7]，L1）
+- 可移植性的不对称：NetBSD 与 FreeBSD 均有 BGPD 的移植，OSPFD 亦被移植过去——因各 BSD 修改内核路由表的接口彼此相似，移植属相对轻松的任务；而移植到 Linux 或 Solaris 几乎不可能：二者更新内核路由表的架构完全不同，须近乎重写父进程，虽属可行但无人承担此项工作，项目仍在等待愿意做 Linux 移植的人。（BSDTalk EP95，[555.7-621.46]，L1）
+- 无线驱动工作：受访者经瑞士开发者 Markus Glocker 引入该领域，先协助 PGT 与 ACX 驱动，随后与之一道做 Marvell 无线驱动（已接近完成、基本稳定但仍有问题）及其他驱动；但他坦言每个新拿到的无线芯片都比上一个更糟，乐趣大减，正在寻找无线领域的新目标。（BSDTalk EP95，[621.46-690.22]，L1）
+
+**史料**：
+
+- 本期指向的一手材料包括：Xenocara 项目与 xenocara.org 网页及其 2007 年 2 月演讲幻灯片、Herrb 任职的 X.org 安全官职能与安全缺陷报告流、Xorg 7 的模块化包体系（三百余包）与 imake 旧构建体系、以及早期 X386 源码磁带与约二十小时构建经历的口述回忆。（BSDTalk EP106，[160.0-615.64]，L1）
+- The Book of PF（No Starch Press，2007-12-15 出版计划）与 OpenCon 2007 私印样书拍卖；CARP 反专利起源叙述（VRRP 约 304 项专利）；hoststated 及其作者；spamd 灰名单实践数据（约 95% 当场拦截率、上万封滞留的转发尝试）。（BSDTalk EP136，[458.44-840.75]，L1）
+- BSDTalk 播客史锚点：首期 2005-12-20；NetBSD 3.0 发布于 2005-12-23、4.0 于 2007 年末发布；FreeBSD 7.0 候选版本筹备；PC-BSD 2005 年时尚未达 1.0。（BSDTalk EP136，[119.63-155.30]，L2）
+- Hansteen 自述文档一侧的处境：新版《The Book of PF》因 FreeBSD 与 NetBSD 移植 4.7 等价代码的时间无从预料，索性完整收录新旧两套示例；现役版本中古老的 FTP proxy 示例被整体移除，而 FTP proxy 是一项“长期的挣扎”，已第三次从头实现；三大 BSD 的 PF 已严重分叉，FreeBSD 基线约为 4.1 加补丁。（BSDTalk EP192，[1077.74-1185.94]，L1）
+- 一手口述史料：EuroBSDCon 2012（波兰华沙）会场由 Michael Dexter 对 Matthieu Herrb 的访谈录音（BSDTalk 221，2012-12-31 发布），内容涉 Xenocara 起源、特权分离补丁、KMS 用户态回植与 Wayland 评估。（BSDTalk EP221，[44.00-57.32]，L1）
+- 代码史料线索：X server 特权分离补丁以 diffs 集形式存于 OpenBSD Xenocara CVS 树（Xenocara tree），约 2002-2003 年由 Matthieu Herrb 实现，截至访谈未上游化；另 Xenocara 构建系统以 CVS 管理、含预生成源文件的提交记录。（BSDTalk EP221，[214.12-249.36]，L1）
+- 会议史料线索：EuroBSDCon 2012 会期演讲两场——DPB 在 ports 集群并行构建 Xenocara 的演示、rthreads（真内核线程）主题演讲——经受访者在访谈中提及，可与会议议程存档互证。（BSDTalk EP221，[413.88-436.54]，L2）
+- OpenBSD 开发者 Marco Peereboom 一手访谈：存储与 SCSI 中间层工作、IPMI 传感器框架实现、个人多平台部署（工作站、web 服务器、HPPA 防火墙）、项目亏损与基础设施成本结构（网络费用、全平台本地原生构建的电费）、hackathon 年会与威尼斯定向 ports hackathon、no nonsense 开发哲学与许可证不妥协、对 apt-get 与 OpenBSD 升级流程的对比评价、ports 升级替换功能的时间点（3.8-3.9 之间）、ACPI 重写与 Jordan Hargrave 合作、SAS 驱动计划、bioctl 通用 RAID 工具理念、桌面环境（Ion/Ratpoison、screen、vi）、OpenSSH 使用广度与零收入的悖论陈述。（BSDTalk EP27，[35.96-1001.24]，L1）
+- 该期留存的一手线索：BSDCan 2006 上的 sensors 与 bio 演讲；bio 框架诞生于 hackathon 的记录；受访者自澳大利亚经东京十二小时航程赴会、过境美国海关被开箱查验设备的旅途见闻；家中系统构成——一个月前 Windows 桌面硬盘报废后除笔记本（Mac OS）外全为 OpenBSD。（BSDTalk EP46，[59.76-127.28]，L1）
+- 该期留存的环境与社区一手线索：其桌面为 Ion 窗口管理器加 vi 与 make，仅用 i386 机器（MacPPC 毁于电源尖峰事故）；曾关注 VFS 而目睹 Pedro 为修复 VFS 疑难 bug 奋战后方知深浅、兴趣转淡；OpenCVS彼时不随 userland 默认构建、须在源树内手动 make，make install 亦不覆盖既有 GNU cvs 二进制；c2k6 hackathon 约五十名开发者与会、较上年的约六十为少；bug 报告须附 dmesg 与崩溃回溯；末了向捐赠 OpenBSD 的企业与个人致谢——正是这些捐助使开发者得以每年聚首做其所爱之事。（BSDTalk EP50，[813.54-938.36]，L1）
+- 该期录音构成 2006 年 6 月 OpenBSD 串口终端实操的一手口述记录，涉及当期系统配置实物：/etc/ttys 的 tty00 行与 /usr/libexec/getty 路径、termcap 数据库中的 WY50 条目、ttys 的 on 与 secure 选项，以及 Wyse WY-50 实物出厂默认参数与 OpenBSD 兼容的实证。（BSDTalk EP51，[0.0-328.02]，L1）
+- 该期留存的一手史料线索：OpenBSD 4.0 中的 MPT 重写、ARC 与 MFI 新驱动及 3.9 到 4.0 的 bio 支持驱动数量对比；为其 4.1 预备的 VMware 虚拟接口驱动重写；月底葡萄牙硬件 hackathon 与威尼斯 OpenCON 的两场报告安排；当事人以 Linux 与 FreeBSD 驱动为参考逆向 LSI 命令路径的工作方法。（BSDTalk EP79，[489.10-652.38]，L1）
+- 该期留存的一手史料线索：OpenBSD 2.3 的 Sun 4/300 启动 bug 及其定位补丁；SPARC64 port 对 Ultra 系至 Enterprise 系的覆盖与 E15K 尝试记录；Ultra 3 数据缓存与 Cassini 支持的树内缺口；MG 编辑器的多平台移植（Linux on PowerPC、FreeBSD 4.8、macOS）；Xastir、GMFSK、gPSK31 等业余无线电应用的 OpenBSD 移植；厂商向开发者寄送的 Intel RAID 实卡。（BSDTalk EP82，[811.46-878.34]，L1）
+
+**史观**：
+
+- 总纲8 本体论上各方平等：Herrb 明言没有任何操作系统应当以成为世界唯一系统为目标，X 的价值恰在于跨系统的广泛可移植；他反对以 Linux 为唯一中心的生态趋向，主张各操作系统在 X 生态中保持平等地位，是多方平等立场在图形基础设施层的直接表达。（BSDTalk EP106，[663.34-732.56]，L1）
+- 总纲10 动手者创造历史：从为自己不被支持的显卡修改 X386 驱动，到主导 Xenocara 重构 OpenBSD 的 X 构建体系，Herrb 的轨迹显示基础设施变革往往源于个体动手者解决自身具体困境的行动，而非自上而下的规划。（BSDTalk EP106，[119.36-134.56]，L1）
+- 总纲13 法律与道德是利益分配：CARP 的诞生直接由专利墙改写：VRRP 标准化途中暴露的数百项专利使自由实现无从下手，OpenBSD 团队以自写协议回应——法律权利的分配格局决定了技术标准的生死与替代品的出生。（BSDTalk EP136，[458.44-486.72]，L1）
+- 总纲10 动手者创造历史：spamd 与灰名单的效力来自对一线实践知识的运用：发件者是否重试、返回码是否被检查——这些来自管理现场的经验事实，而非规范文本本身，塑造了反垃圾技术的形态与效力边界。（BSDTalk EP136，[729.03-786.79]，L1）
+- 总纲3 不存在进步，只有权力再分配：PF 的可读性设计把防火墙配置能力从少数专家扩展到普通管理员——从 iptables 苦役到数行规则集的转换，是网络控制权的再分配而非单纯的技术改进。（BSDTalk EP136，[296.63-334.63]，L1）
+- 总纲5 没有必然性，只有偶然性：match 规则今日被视为 PF 的根基，其诞生却是偶然的聚合：一个 2003 年起的个人执念多年无人附议，恰逢 NAT 改造的工程需要才获得实现契机，连实现者本人也未曾预料其根本性——数年前社区 consensus 还将其斥为无用的东西。技术共识的方向并不由先验论证决定。（BSDTalk EP192，[214.34-251.26]，L1）
+- 总纲22 知识注定过时：文档作者随 4.7 双轨重写全部示例、FTP proxy 第三次从头再来、man page 因黏着性语义反复改写，共同印证围绕活跃系统的技术知识注定过时：写作者的劳动不是记录恒定之理，而是追赶形式不断重铸的表述。（BSDTalk EP192，[1136.42-1157.26]，L1）
+- 总纲5 没有必然性，只有偶然性：Xenocara 的诞生系于一次外部许可证变更的偶然：若非上游许可证条款突变，OpenBSD 无须另立名目、也无从讨论 fork 与否；连名称本身也来自命名者翻检鱼类学名的即兴之举。技术分叉的契机不在必然规律，而在具体的法律事件与个人裁量。（BSDTalk EP221，[80.04-133.72]，L1）
+- 总纲4 分离聚合是永恒规律：OpenBSD 对 X 栈的处置呈现分离与聚合的往复：聚合的一面是明确拒绝 fork、尽量跟随 X.org 发布节奏；分离的一面是本地特权分离补丁、旧平台支持等 diffs 长期驻留本树不上游。系统活力恰在于这两极之间的张力维持，而非单向的合并或独立。（BSDTalk EP221，[139.18-261.68]，L1）
+- 总纲3 不存在进步，只有权力再分配：图形栈的 KMS 与 Wayland 转型显示技术演进并非中性进步：内核图形接口的设计主导权集中于 Linux 一方，BSD 阵营须以用户态回植等方式被动跟随，原本掌握在 BSD 开发者手中的 X server 安全设计（特权分离）亦因无人移植而边缘化——演进即接口权力在阵营间的再分配。（BSDTalk EP221，[262.44-372.14]，L1）
+- 总纲13 法律与道德是利益分配：OpenSSH 悖论呈现了价值创造与利益分配的错位：OpenSSH 内置于 Cisco 交换机、AIX、OS X 等无处不在的平台，使用者以百万计，却无一分收入回流项目，连自身运转账单都难以支付；企业把公共品内化为基础设施而不承担其维护成本，公共品的存续被迫仰赖个人捐赠与偶发的企业善举——技术上的巨大成功与经济上的悬空并存。（BSDTalk EP27，[945.60-998.24]，L1）
+- 总纲9 经验优先：代码质量教育的反思：大学课程教会 C、进阶 C 与 C++ 的语法基础，却没有教良好的编程实践，构成糟糕的代码质量根基；他自言是接触 OpenBSD 之后才相信自己能写出好代码；对新手的建议是去解决真正烦扰自己的问题并阅读他人优秀源码——项目之外坏代码被大量阅读并衍生更多坏代码，而好范例明明更多，决定代码能力的不是教材而是接触好代码的经验。（BSDTalk EP46，[533.12-622.68]，L1）
+- 总纲10 动手者创造历史：主播以一线动手者身份记录保持旧硬件可用性的完整日常操作，表明技术史的延续不仅存在于版本发布与会议叙事中，也存在于普通实践者让被淘汰设备继续运转的动手环节里。（BSDTalk EP51，[0.0-328.02]，L1）
+- 总纲3 不存在进步，只有权力再分配：哑终端“运行良好”却仍被丢弃、串口仍在消失的同期观察显示，旧技术的退场并非源于功能丧失，而是硬件产业取向转移的结果，技术更替并非线性进步叙事。（BSDTalk EP51，[291.32-310.42]，L1）
+- 总纲25 逻辑是形式主义而非世界本身的结构：旧驱动的硬编码结构是早期硬件假设的形式固化，业界在旧形式上不断贴补丁使复杂度成为纯粹的积累物；OpenBSD 的重写实践承认既有结构只是历史形式而非必然——推倒重建后以约一半的代码覆盖更多硬件，形式被还原为可以重写的构造。（BSDTalk EP79，[450.12-482.58]，L1）
+- 总纲8 本体论上各方平等：RAID 卡不特殊的论断把厂商刻意营造的设备特殊性还原为普通 SCSI 设备的一般性：在 bio 框架之下各类控制器本体论地位平等，理应由同一工具监控控制——特殊待遇只是形式主义的差别化建构，4.0 的四个驱动以事实证明了这一点。（BSDTalk EP79，[561.10-578.10]，L1）
+- 总纲13 法律与道德是利益分配：NDA 是个人利益与项目原则之间的分配选择：David Miller 等人以让渡权利换取 Cassini 文档，从而 Linux 获得支持；Jason 与 OpenBSD 项目整体拒绝同一交易，宁缺驱动不签卖身契约——文档的开放与否由此不是技术可得性问题，而是不同主体间利益分配格局的产物。（BSDTalk EP82，[359.18-376.70]，L1）
+- 总纲9 经验优先：SPARC64 port 的推进方法是把每台新机器尽快拿到手——quirk 与驱动缺口只能来自实机经验，文档缺失之下经验成为唯一路径；从 Sun 4/300 的启动 bug 定位到 Ultra 3 缓存调试的六十次上电循环，技术史在这一 port 上由反复上电的双手写成。（BSDTalk EP82，[450.54-466.46]，L1）
+- 总纲10 动手者创造历史：受访者的成长路径呈现系统理解的时间纵深：约十五年前以一本附章末习题与答案的 C 语言书自学四年，继而写 qmail 的 LDAP 扩展等用户态程序，再经长期使用 BSD、逐步修修补补并阅读代码而深入；操作系统、用户态与驱动是三个相对独立的部分，真正理解须以年计，绝非一两个月之功。对系统的把握由长年的读码与修补劳动积累而成。（BSDTalk EP95，[690.22-790.82]，L1）
+
+**辨析**：
+
+- 转写受损较重：Xenocara 多处误转、OpenBSD 误作 OpenGLD、X.org 误作 IFFDOT.org、fvwm 误作 SDWM、人名误作 Matteo Herb（应为 Matthieu Herrb）；另有若干短语无法复原，且转写含重复片段，引用细节前须核对原始音频与 Xenocara 文档。　[存疑脚注] ASR 识别错误密集且含重复，人名、项目名均须以原始音频与官方文档核正（BSDTalk EP106，[27.56-44.16]，L4）
+- 转写讹误较多：Peter Hensden 应为 Peter N. M. Hansteen，Host8D 与 HostateD 应为 hoststated，Rayk Flöte 应为 Reyk Floeter，Pierre Verchardt 疑为 hoststated 另一作者 Pierre-Yves Ritschard 之讹，ITF 应为 IETF，OpenVC、OpenBC 与 Open beasts 应为 OpenBSD，cube framework 疑为 ALTQ 之讹，地址样例 192.040301.24 应为 192.0.2.0/24。　[存疑脚注] 专名经上下文推断校正，hoststated 第二作者姓名无法辨识，须以 OpenBSD 手册页与作者署名核证（BSDTalk EP136，[220.79-689.28]，L4）
+- 关键数字均为当事人凭记忆叙述：VRRP 相关专利约 304 项、灰名单约 95% 拦截率均未给出处；hoststated 在 4.2 处理 SSL 的表述含混（hoststated 后于 4.3 演进为 relayd），须以 OpenBSD 各版本变更记录与 spamd 相关文献核证。　[存疑脚注] 记忆性数字与版本能力表述待外部史料核证（BSDTalk EP136，[472.63-621.95]，L4）
+- 语义陷阱与保守策略并存：match 与 pass 在动作黏着性上不同，旧 PF 实现中许多动作不黏着本属设计缺陷，却不可更改——旧规则集仍会被加载，静默改变行为过于危险，man page 为此打磨良久；NAT 只能出向、RDR 只能入向的旧限制源于返回流量路由查找使用未改回的地址，4.7 以 pfctl 的简单检查阻止反向用法，Brauer 倾向未来移除检查并以文档说明后果，4.8 或许放开。（BSDTalk EP192，[805.32-1049.02]，L1）
+- 转写人名与项目名多处存疑：转写中的 X386 与 David Davis（疑为 XFree86 许可证争议及其主导者）、Christian Huxberg（疑为 Kristian Høgsberg）、Mark SP（疑为 Marc Espié）、Owen Haysworth（疑为 OpenBSD Intel 驱动 KMS 回植者）等拼写与通行记载不符，引用前须对照 EuroBSDCon 2012 议程、Xenocara CVS 提交记录与邮件列表存档逐一定谳。　[存疑脚注] 上述人名均依转写记录，未经一手文献核实，不得径直采用通行拼写替代。（BSDTalk EP221，[80.04-333.82]，L5）
+- Wayland 对 BSD 的适配前景在访谈时点并无定论：受访者明言 Wayland 理念是否根本正确、其远程显示替代方案能否覆盖真实应用需求均未知，移植工程量巨大且无人启动；本期证言只能说明 2012 年底 BSD 阵营的态度，不能推断后来 Wayland 生态的实际走向。　[存疑脚注] 对 Wayland 前景的判断限于受访者个人当时的评估，非社区决议或后续事实验证。（BSDTalk EP221，[498.70-572.66]，L4）
+- 转写讹误提示（该期质量标记为重复检测，经通读主线完整但专名讹误多）：受访者名讹作 Perebum（通行拼写为 Marco Peereboom），bioctl 讹作 BioCuttle，apt-get 讹作 AppGet，OpenSSH 讹作 OpenXSage，ports 讹作 porch，Ratpoison 讹作 Redpoison，Jordan Hargrave 讹作 Jordan Hardraith，SAS 讹作 SaaS，AMD64 讹作 A&B64，mpi 驱动讹作 empty key driver，Calgary 一处转写含混；引用本访谈的专名、地名与人名前须逐一对音核实。[存疑脚注] 专名讹误密集，需系统核对。　[存疑脚注] 人名、工具名与术语讹误密集，引用前需系统对音核实。（BSDTalk EP27，[35.96-1001.24]，L5）
+- 关于 i386 BIOS 不向 COM 口输出、alpha 与 Sun 架构可全程经串口操作、i386 串口扩展卡价格昂贵的跨架构断言，本期仅有口述而无实测演示，属单一来源技术陈述，引用时应以各架构硬件手册复核。　[存疑脚注] 跨架构串行控制台能力对比为主播个人技术知识陈述，未在本期中演示或给出文档依据。（BSDTalk EP51，[269.82-291.32]，L4）
+- 性能折半的最坏情形、行数对比与 32MB 事务能力均为当事开发者单方陈述，无第三方基准；SCSI 吞并 SATA 属个人趋势预测而非业界共识；转写术语与厂商名多处失真（MPT、ARC、MFI、bioctl 等按通行拼写校正）。[存疑脚注] 性能数字与趋势判断未经独立验证。　[存疑脚注] 性能与事务上限数字为单方陈述，SCSI 走向为个人预测（BSDTalk EP79，[827.46-858.58]，L4）
+- E15K 接近启动、受害机五天六十次上电循环、Intel 网络组前后行为等细节均为当事人口述、无独立佐证；Cassini 所在的具体机型他本人亦不能确指，仅以 Solaris 下的 CE 网卡机型圈定范围；转写术语与人名多处失真（UltraSPARC、Schizo、Tomatillo、IOMMU、Xastir、Baudot 等按通行拼写校正）。[存疑脚注] 硬件细节与厂商行为均为单一来源陈述。　[存疑脚注] 机型与厂商行为细节无第三方佐证（BSDTalk EP82，[481.06-514.18]，L4）
+- 志愿者劳动与雇佣劳动的挤压关系：受访者自述工作极其繁忙，几乎无时间处理自己想做的项目——树中长期压着 OSPFD 与 BGPD 的补丁、计划中的内核路由表提速工作无暇展开、hoststated 主要由他人推进而自己无力协助代码。开源产出量在此直接受雇佣劳动的时间预算约束，个人意愿并不足以转化为贡献。（BSDTalk EP95，[793.66-875.84]，L1）
+
+**文献**：
+
+- [BSDTalk EP106] Backman W. BSDTalk: 106: bsdtalk106 - Interview with Matthieu Herrb about Xenocara[EB/OL]. (2007-04-09)[2026-08-27]. <https://archive.org/details/bsdtalk106>.
+- [BSDTalk EP136] Backman W. BSDTalk: 136: bsdtalk136 - PF with Peter N. M. Hansteen[EB/OL]. (2007-12-21)[2026-08-27]. <https://bsdtalk.blogspot.com/2007/12/bsdtalk136-pf-with-peter-n-m-hansteen.html>.
+- [BSDTalk EP192] Backman W. BSDTalk: 192: bsdtalk192 - PF update with Henning Brauer and Peter Hansteen[EB/OL]. (2010-06-18)[2026-08-27]. <https://bsdtalk.blogspot.com/2010/06/bsdtalk192-pf-update-with-henning.html>.
+- [BSDTalk EP221] Backman W. BSDTalk: 221: bsdtalk221 - Xenocara with Matthieu Herrb[EB/OL]. (2012-12-31)[2026-08-27]. <https://bsdtalk.blogspot.com/2012/12/bsdtalk221-xenocara-with-matthieu-herrb.html>.
+- [BSDTalk EP27] Backman W. BSDTalk: 27: bsdtalk027 - Interview with OpenBSD developer Marco Peereboom[EB/OL]. (2006-03-23)[2026-08-27]. <https://archive.org/details/bsdtalk027>.
+- [BSDTalk EP46] Backman W. BSDTalk: 46: bsdtalk046 - Interview with OpenBSD Developer David Gwynne[EB/OL]. (2006-05-19)[2026-08-27]. <https://archive.org/details/bsdtalk046>.
+- [BSDTalk EP50] Backman W. BSDTalk: 50: bsdtalk050 - Interview with OpenBSD Developer Joris Vink[EB/OL]. (2006-06-06)[2026-08-27]. <https://archive.org/details/bsdtalk050>.
+- [BSDTalk EP51] Backman W. BSDTalk: 51: bsdtalk051 - Dumb Terminals[EB/OL]. (2006-06-25)[2026-08-27]. <https://archive.org/details/bsdtalk051>.
+- [BSDTalk EP79] Backman W. BSDTalk: 79: bsdtalk079 - OpenBSD Developer David Gwynne[EB/OL]. (2006-10-31)[2026-08-27]. <https://archive.org/details/bsdtalk079>.
+- [BSDTalk EP82] Backman W. BSDTalk: 82: bsdtalk082 - OpenBSD Developer Jason Wright[EB/OL]. (2006-11-08)[2026-08-27]. <https://archive.org/details/bsdtalk082>.
+- [BSDTalk EP95] Backman W. BSDTalk: 95: bsdtalk095 - OpenBSD Developer Claudio Jeker[EB/OL]. (2007-01-23)[2026-08-27]. <https://archive.org/details/bsdtalk095>.
+
+<!-- /PODCAST_REVIEW -->
