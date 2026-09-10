@@ -73,7 +73,7 @@ volume: 第18卷-全球社区地区bsd史
 ## 331.3.2 AsiaBSDCon（首届 2004 年于台北，2007 年届在东京）[考据完成：2026-08-04 首届 AsiaBSDCon 为 2004-03-12~15 台北中央研究院，非 2007 东京；存疑 id 1764]
 
 - 要点：AsiaBSDCon 首届于 2004 年在台北中央研究院举办；2007 年届于东京大学举办（由 George Neville-Neil、Hiroki Sato（佐藤広生）、Jun Kuriyama 等人组织），此后多届在东京举办，成为
-- FreeBSD Committers List；NetBSD Developers List；OpenBSD Contributors List ［A］；openbsd.db 查询 L3.3.1（committer_date 时区偏移分布前 30，22 仓库合计，30 行结果）、L3.3.2（author_email 域名 TLD 分布，22 仓库合计，16 行结果），见 `原材料/研究/bsd仓库分析/数据分析/深层信息挖掘.md` §L3.3.1、§L3.3.2
+- FreeBSD Committers List；NetBSD Developers List；OpenBSD Contributors List ［A］；openbsd.duckdb 查询 L3.3.1（committer_date 时区偏移分布前 30，22 仓库合计，30 行结果）、L3.3.2（author_email 域名 TLD 分布，22 仓库合计，16 行结果），见 `原材料/研究/bsd仓库分析/数据分析/深层信息挖掘.md` §L3.3.1、§L3.3.2
 
 ## 331.4.2 Hiroki Sato 与 Japan FreeBSD Users Group
 

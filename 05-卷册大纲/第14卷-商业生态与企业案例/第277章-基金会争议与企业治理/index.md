@@ -121,11 +121,11 @@ volume: 第14卷-商业生态与企业案例
 - 史观：总纲第 23 条——社区治理：决议记录的透明度
 - 辨析：内部决议的公开程度有限，史料重建不完整
 - 文献：freebsd-hackers 邮件列表；
-- freebsd.db commits 表；`script/query_ch133_enterprise_commits.py` 查询脚本；L3.2.1 查询报告；**FreeBSD Committer's Guide**；**FreeBSD Foundation** 年报 ［A］
+- freebsd.duckdb commits 表；`script/query_ch133_enterprise_commits.py` 查询脚本；L3.2.1 查询报告；**FreeBSD Committer's Guide**；**FreeBSD Foundation** 年报 ［A］
 
 ## 277.13.2 重要企业 committer 历史档案
 
-- 要点：基于 133.12.7 节核验的 freebsd.db 查询结论，**freebsd-src** 仓库中企业 committer 的 commit 分布为：**iXsystems** 530 commit（最高，反映 iXsystems 作
+- 要点：基于 133.12.7 节核验的 freebsd.duckdb 查询结论，**freebsd-src** 仓库中企业 committer 的 commit 分布为：**iXsystems** 530 commit（最高，反映 iXsystems 作
 
 ## 自反性声明
 

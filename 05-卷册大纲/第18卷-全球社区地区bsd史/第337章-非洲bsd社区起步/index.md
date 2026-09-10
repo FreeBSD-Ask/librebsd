@@ -51,7 +51,7 @@ volume: 第18卷-全球社区地区bsd史
 
 ## 文献
 
-- 南非 ISP 企业档案；Standard Bank/Absa/FNB 年度报告；ZA FreeBSD User Group 邮件列表存档 ［A］；openbsd.db 查询 L3.3.1（committer_date 时区偏移分布前 30，22 仓库合计，30 行结果）、L3.3.2（author_email 域名 TLD 分布，22 仓库合计，16 行结果），见 `原材料/研究/bsd仓库分析/数据分析/深层信息挖掘.md` §L3.3.1、§L3.3.2
+- 南非 ISP 企业档案；Standard Bank/Absa/FNB 年度报告；ZA FreeBSD User Group 邮件列表存档 ［A］；openbsd.duckdb 查询 L3.3.1（committer_date 时区偏移分布前 30，22 仓库合计，30 行结果）、L3.3.2（author_email 域名 TLD 分布，22 仓库合计，16 行结果），见 `原材料/研究/bsd仓库分析/数据分析/深层信息挖掘.md` §L3.3.1、§L3.3.2
 
 ## 336.1.2 南非 BSD 社区的演进演变
 

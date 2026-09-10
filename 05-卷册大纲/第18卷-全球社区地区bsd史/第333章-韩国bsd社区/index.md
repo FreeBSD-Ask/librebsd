@@ -77,7 +77,7 @@ volume: 第18卷-全球社区地区bsd史
 ## 332.2.2 韩国 BSD 社区参与 AsiaBSDCon
 
 - 要点：韩国 BSD 社区自 2007 年 AsiaBSDCon 首届起即参与，韩国 BSD 贡献者（如 Hye-Shik Chang、Jung-uk Kim 等）在 AsiaBSDCon 发表论文与演讲。韩国 BSD 社区的参会者人数在亚洲 BSD 社区中仅次于日本，AsiaBS
-- FreeBSD Committers List；committer 个人主页 ［A］；openbsd.db 查询 L3.3.1（committer_date 时区偏移分布前 30，22 仓库合计，30 行结果）、L3.3.2（author_email 域名 TLD 分布，22 仓库合计，16 行结果），见 `原材料/研究/bsd仓库分析/数据分析/深层信息挖掘.md` §L3.3.1、§L3.3.2
+- FreeBSD Committers List；committer 个人主页 ［A］；openbsd.duckdb 查询 L3.3.1（committer_date 时区偏移分布前 30，22 仓库合计，30 行结果）、L3.3.2（author_email 域名 TLD 分布，22 仓库合计，16 行结果），见 `原材料/研究/bsd仓库分析/数据分析/深层信息挖掘.md` §L3.3.1、§L3.3.2
 
 ## 332.3.2 Hye-Shik Chang 与 Jung-uk Kim 的贡献
 

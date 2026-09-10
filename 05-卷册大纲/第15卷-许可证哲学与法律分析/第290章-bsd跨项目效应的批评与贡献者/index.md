@@ -51,15 +51,15 @@ volume: 第15卷-许可证哲学与法律分析
 
 - 要点：BSD 跨项目贡献中存在大量被忽视的贡献——jemalloc 曾被 Rust 作为默认分配器（后随 RFC 1974 全局分配器机制
 - Varnish Software. Official History [EB/OL]. <https://varnish-software.com/varnish-history/>; Berg A. Q&A 2016 [EB/OL]. <https://varnish-software.com/blog>; OpenSSH. Official History [EB/OL]. <https://openssh.org/history.html>; Mewburn L. The Design and Implementation of the NetBSD rc.d System [R]. U
-- Varnish Software. Official History [EB/OL]. <https://varnish-software.com/varnish-history/>; OpenSSH. Official History [EB/OL]. <https://openssh.org/history.html>; openbsd.db L7.2.1 查询报告; 项目史观总纲第十章“边缘者贡献”[Z]. 原材料/哲学/项目统摄史观/第 10 章.md.
+- Varnish Software. Official History [EB/OL]. <https://varnish-software.com/varnish-history/>; OpenSSH. Official History [EB/OL]. <https://openssh.org/history.html>; openbsd.duckdb L7.2.1 查询报告; 项目史观总纲第十章“边缘者贡献”[Z]. 原材料/哲学/项目统摄史观/第 10 章.md.
 - de Raadt 资金呼吁；Torvalds 评论；基金会年报 ［B］；bsd_commits.db L3.2.1 查询报告（深层信息挖掘.md §L3.2.1）；bsd_commits.db L7.2.1 查询报告（衍生项目与跨项目对比分析.md §L7.2.1）
 
 ## 290.9.2 BSD 效应力被 Linux 阵营抢占话语权的批评
 
 - 要点：BSD 跨项目影响虽广但话语权长期被 Linux 阵营抢占——Jails 早于 Docker 13 年但 Docker 流行化后被广泛称为“容器革命”，Jails 的开创性贡献被忽视；socket API 进入 POSIX 后被普遍称为"POS
 - Torvalds L. LinuxFocus Interview [EB/OL]. (1998-03). <https://linuxdoc.org/linuxfocus/English/March1998/article27.html>; de Raadt T. Request for Funding our Electricity [EB/OL]. openbsd-misc mailing list, 2014-01; bsd_commits.db L3.2.1 查询报告; bsd_commits.db L7.2.1 查询报告; 项目史观总纲第五章“道与术的辩证”[Z]. 原材料/哲学/项
-- de Raadt T. Request for Funding our Electricity [EB/OL]. openbsd-misc mailing list, 2014-01; The Register. Bitcoin donation saves OpenBSD [EB/OL]. 2014-01-20; openbsd.db L3.2.1 查询报告; Postel J. RFC 793: Transmission Control Protocol [S]. 1981; FreeBSD 4.0 release notes [EB/OL]. 2000-03; Docker offici
-- openbsd.db L3.2.1 查询报告； openbsd.db L7.2.1 查询报告； 项目史观总纲第六章“主体性与和解”[Z]. 原材料/哲学/项目统摄史观/第 6 章.md; 项目史观总纲第二十四章“许可证哲学”[Z]. 原材料/哲学/项目统摄史观/第 24 章.md.
+- de Raadt T. Request for Funding our Electricity [EB/OL]. openbsd-misc mailing list, 2014-01; The Register. Bitcoin donation saves OpenBSD [EB/OL]. 2014-01-20; openbsd.duckdb L3.2.1 查询报告; Postel J. RFC 793: Transmission Control Protocol [S]. 1981; FreeBSD 4.0 release notes [EB/OL]. 2000-03; Docker offici
+- openbsd.duckdb L3.2.1 查询报告； openbsd.duckdb L7.2.1 查询报告； 项目史观总纲第六章“主体性与和解”[Z]. 原材料/哲学/项目统摄史观/第 6 章.md; 项目史观总纲第二十四章“许可证哲学”[Z]. 原材料/哲学/项目统摄史观/第 24 章.md.
 - 项目史观总纲第 13、19、21 条 [Z]. 原材料/哲学/项目统摄史观/第 25 章.md; 项目史观总纲第十三章“文艺与审美历史哲学”[Z]. 原材料/哲学/项目统摄史观/第 13 章.md; 项目史观总纲第十九章“历史解释学与权力”[Z]. 原材料/哲学/项目统摄史观/第 19 章.md; 项目史观总纲第二十一章“革命与改革：历史方法论”[Z]. 原材料/哲学/项目统摄史观/第 21 章.md; BSD 许可证文本 [EB/OL]. <https://www.freebsd.org/copyright/freebsd-license/>; GPL 文本 [EB/OL]. <https:
 
 ## 自反性声明

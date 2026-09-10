@@ -99,7 +99,7 @@ volume: 第16卷-开源运动与合规治理
 ## 305.19.2 FreeBSD 安全团队在漏洞响应流程中的角色
 
 - 要点：FreeBSD 安全团队（Security Team）由核心团
-- FreeBSD Security Advisories [EB/OL]. <https://www.freebsd.org/security/advisories/> (2026-07-22 访问)；FreeBSD Security Officer Handbook；openbsd.db 查询 L3.1.1，见 `原材料/研究/bsd仓库分析/数据分析/深层信息挖掘.md` §L3.1.1
+- FreeBSD Security Advisories [EB/OL]. <https://www.freebsd.org/security/advisories/> (2026-07-22 访问)；FreeBSD Security Officer Handbook；openbsd.duckdb 查询 L3.1.1，见 `原材料/研究/bsd仓库分析/数据分析/深层信息挖掘.md` §L3.1.1
 
 ## 305.19.3 FIPS 140 认证密码模块的漏洞修复流程与 FreeBSD 运行环境
 

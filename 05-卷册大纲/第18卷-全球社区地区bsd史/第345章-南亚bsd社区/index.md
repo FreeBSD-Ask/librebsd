@@ -80,7 +80,7 @@ volume: 第18卷-全球社区地区bsd史
 - 要点：印度 BSD 用户组的活动以技术讲座（Tech Talks）、BSD 安装会（Install Fest）、黑客松（Hackathon）为主，活动频率低于欧美 BSD 用户组。印度 BSD 用户组与印度 Linux 用户组（ILUG）有交叉参与，部分 BSD 用户同时活跃于 Linux 社区
 - 史料：印度 BSD 用户组活动照片与记录、印度 BSD 技术讲座议程、印度 BSD 用户组博客 ［C］
 - 史观：总纲第 22 条——印度 BSD 用户组
-- FreeBSD Committers List；NetBSD Developers List ［A］；openbsd.db 查询 L3.3.2（author_email 域名 TLD 分布，16 行结果），见 `原材料/研究/bsd仓库分析/数据分析/深层信息挖掘.md` §L3.3.2
+- FreeBSD Committers List；NetBSD Developers List ［A］；openbsd.duckdb 查询 L3.3.2（author_email 域名 TLD 分布，16 行结果），见 `原材料/研究/bsd仓库分析/数据分析/深层信息挖掘.md` §L3.3.2
 
 ## 344.3.2 Deb Goodkin 与 FreeBSD Foundation
 

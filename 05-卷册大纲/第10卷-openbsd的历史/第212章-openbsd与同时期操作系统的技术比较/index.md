@@ -12,7 +12,7 @@ volume: 第10卷-openbsd的历史
 - SELinux 由 NSA 主导开发，2000 年 12 月首次发布（基于 Flask 架构与 Type Enforcement），2003 年合入 Linux 2.6 内核主线，依赖 Linux Security Modules（LSM）框架；AppArmor 由 Immunix 公司开发（1998 起），2006 年随 SUSE Linux Enterprise 10 集成；〔待核：原文截断，后文待回源〕
 - Solaris 自 8（2000）起提供 RBAC（Role-Based Access Control），Solaris 10（2005-01）引入 Trusted Extensions 与 Zones；AIX 5L（2001）提供多级安全（MLS）与 Trusted Computing Base（TCB）评估；HP-UX 11i v2（2003）提供 Security Containment 与
 - macOS 基于 Darwin（含 BSD 用户空间，自 Mac OS X 10.0 起源自 FreeBSD 4.x 用户空间与 Mach 3.0 内核混合）；macOS 通过 Sandbox（10.5 Leopard 2007 引入 Seatbelt sandbox，基于 TrustedBSD MAC Framework）〔待核：原文截断，后文待回源〕
-- OpenBSD pf 由 Daniel Hartmeier（丹尼尔·哈特迈尔） 主导开发，2001 年随 OpenBSD 3.0（2001-12-01 发布）引入——openbsd.db openbsd-src 仓库 commit 148b55c022b1（2001-06-24 kjell 引入 sys/net/pf.c 与 sys/net/pfvar.h）证实代码引入时间早于 3.0 发布约 5
+- OpenBSD pf 由 Daniel Hartmeier（丹尼尔·哈特迈尔） 主导开发，2001 年随 OpenBSD 3.0（2001-12-01 发布）引入——openbsd.duckdb openbsd-src 仓库 commit 148b55c022b1（2001-06-24 kjell 引入 sys/net/pf.c 与 sys/net/pfvar.h）证实代码引入时间早于 3.0 发布约 5
 
 ## 史料
 
@@ -77,7 +77,7 @@ volume: 第10卷-openbsd的历史
 | 2001-12-01 | pf 随 OpenBSD 3.0 发布 | — | Daniel Hartmeier |
 | 2003 | pf 随 FreeBSD 5.3 移植 | — | Hartmeier 本人提交 |
 | 2007-12 | pf 随 NetBSD 4.0 集成 | — | — |
-- OpenBSD "Only two remote holes" 声明 [EB/OL]. <https://www.openbsd.org/>；OpenBSD Security Advisories [EB/OL]. <https://www.openbsd.org/security.html>；CVE 数据库 [EB/OL]. <https://cve.mitre.org/>；W3Techs OS 市场占有率 [EB/OL]. <https://w3techs.com/technologies/overview/operating_system>；OpenBSD strlcpy(3) 手册页 [EB/OL]. <https://man.openbsd.org/strlcpy.3>；OpenSSH 项目 [EB/OL]. <https://www.openssh.com/>；freebsd.db 查询 L1.1.2（来源：原材料/研究/bsd 仓库分析/数据分析/宏观趋势统计.md §L1.1.2） ［A］**OpenBSD 安全成果扩散时间线**：
+- OpenBSD "Only two remote holes" 声明 [EB/OL]. <https://www.openbsd.org/>；OpenBSD Security Advisories [EB/OL]. <https://www.openbsd.org/security.html>；CVE 数据库 [EB/OL]. <https://cve.mitre.org/>；W3Techs OS 市场占有率 [EB/OL]. <https://w3techs.com/technologies/overview/operating_system>；OpenBSD strlcpy(3) 手册页 [EB/OL]. <https://man.openbsd.org/strlcpy.3>；OpenSSH 项目 [EB/OL]. <https://www.openssh.com/>；freebsd.duckdb 查询 L1.1.2（来源：原材料/研究/bsd 仓库分析/数据分析/宏观趋势统计.md §L1.1.2） ［A］**OpenBSD 安全成果扩散时间线**：
 
 | 成果 | 引入日期 | commit hash | 关键人物 | 跨项目采纳情况 |
 | --- | --- | --- | --- | --- |

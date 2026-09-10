@@ -21,7 +21,7 @@ Federighi 在 WWDC 2016 技术环节宣布 OS X 正式改名为 macOS，并阐�
 
 **字段 3 考据脚注**
 
-本则来自 Apple WWDC 2016 主题演讲录像，Apple Developer 官方存档。Federighi 关于 macOS 改名的陈述，经 Apple 2016-09-20 Sierra 发布新闻稿交叉验证。其关于 APFS 预览的陈述，经 Apple Developer 文档中 APFS File System Reference（2016）与 openbsd.db 查询 L7.5.1 交叉验证。自利偏差审查：Federighi 作为 Apple 软件工程高级副总裁，其陈述带有 Apple 官方立场。完整考据过程见 [20260724_federighi-wwdc-2016-keynote.md](../../../原材料/研究/考据记录/20260724_federighi-wwdc-2016-keynote.md)。
+本则来自 Apple WWDC 2016 主题演讲录像，Apple Developer 官方存档。Federighi 关于 macOS 改名的陈述，经 Apple 2016-09-20 Sierra 发布新闻稿交叉验证。其关于 APFS 预览的陈述，经 Apple Developer 文档中 APFS File System Reference（2016）与 openbsd.duckdb 查询 L7.5.1 交叉验证。自利偏差审查：Federighi 作为 Apple 软件工程高级副总裁，其陈述带有 Apple 官方立场。完整考据过程见 [20260724_federighi-wwdc-2016-keynote.md](../../../原材料/研究/考据记录/20260724_federighi-wwdc-2016-keynote.md)。
 
 **字段 4 与本章节内容的关联**
 

@@ -21,7 +21,7 @@ Cheshire 在 ; login: 2006 年 4 月号的自述文章中系统阐述基于 DNS 
 
 **字段 3 考据脚注**
 
-本则自述来自 USENIX ; login: 2006 年 4 月号，USENIX 为 Unix 社区权威学术组织。Cheshire 与 Krochmal 为 Bonjour/mDNS 协议的设计者，其陈述属当事人一手自述。其关于 mDNS 在 BSD 网络栈之上实现的陈述，经 Apple Developer 文档中 Bonjour API Reference 与 openbsd.db 查询 L7.5.1 中 bsd/net/ 目录 mDNS 相关文件交叉验证。自利偏差审查：Cheshire 作为 Apple 网络架构师与 Bonjour 设计者，其对 mDNS 优越性的陈述带有项目立场，正文引用时另以 IETF Zeroconf Working Group 的 RFC 6762/6763 标准化过程加以对照。完整考据过程见 [20260724_cheshire-login-2006-mdns.md](../../../原材料/研究/考据记录/20260724_cheshire-login-2006-mdns.md)。
+本则自述来自 USENIX ; login: 2006 年 4 月号，USENIX 为 Unix 社区权威学术组织。Cheshire 与 Krochmal 为 Bonjour/mDNS 协议的设计者，其陈述属当事人一手自述。其关于 mDNS 在 BSD 网络栈之上实现的陈述，经 Apple Developer 文档中 Bonjour API Reference 与 openbsd.duckdb 查询 L7.5.1 中 bsd/net/ 目录 mDNS 相关文件交叉验证。自利偏差审查：Cheshire 作为 Apple 网络架构师与 Bonjour 设计者，其对 mDNS 优越性的陈述带有项目立场，正文引用时另以 IETF Zeroconf Working Group 的 RFC 6762/6763 标准化过程加以对照。完整考据过程见 [20260724_cheshire-login-2006-mdns.md](../../../原材料/研究/考据记录/20260724_cheshire-login-2006-mdns.md)。
 
 **字段 4 与本章节内容的关联**
 

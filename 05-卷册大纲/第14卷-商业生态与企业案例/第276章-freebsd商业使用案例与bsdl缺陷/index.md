@@ -19,7 +19,7 @@ volume: 第14卷-商业生态与企业案例
 - 总纲第 24 条——许可证：BSD 许可证允许 **Apple** 取走代码而不回馈
   - 辨析：**Darwin** 中 **FreeBSD** 代码的确切比例难以量化，需逐子系统分析。双库核查（2026-08-15）：参考文献库 ref_id=1136（Amit Singh《Mac OS X Internals》，2006）确证 Darwin/XNU 架构整合 FreeBSD 代码；ref_
 - 总纲第 24 条——许可证：**BSDL** 的设计决定了回馈不足的结构性
-  - 辨析：回馈 “不足” 的量化标准需明确，是 commit 数还是代码行数；经 freebsd.db SQL 查询核验（数据库快照截至 2026-06-25），**Apple** 员工（`@apple.com` 邮箱）〔待核：原文截断，后文待回源〕
+  - 辨析：回馈 “不足” 的量化标准需明确，是 commit 数还是代码行数；经 freebsd.duckdb SQL 查询核验（数据库快照截至 2026-06-25），**Apple** 员工（`@apple.com` 邮箱）〔待核：原文截断，后文待回源〕
 - 总纲第 24 条——许可证：BSD 许可证允许 **Sony** 闭源使用
   - 辨析：**PS3** 的操作系统（**Cell OS**）是否基于 **FreeBSD** 存在争议，需区分 **PS3** 与 **PS4** 双库核查（2026-08-15）：参考文献库 ref_id=3989（The Register 2021-03-10）提及 FreeBSD 用于 PlayStation
 - 总纲第 24 条——许可证：零回馈是 **BSDL** 的合法结果
@@ -36,7 +36,7 @@ volume: 第14卷-商业生态与企业案例
 ## 辨析
 
 - **Darwin** 中 **FreeBSD** 代码的确切比例难以量化，需逐子系统分析。双库核查（2026-08-15）：参考文献库 ref_id=1136（Amit Singh《Mac OS X Internals》，2006）确证 Darwin/XNU 架构整合 FreeBSD 代码；ref_id=2458 确证 Apple 于 2000-04-05 发布 Darwin 1.0；ref_id
-- 回馈 “不足” 的量化标准需明确，是 commit 数还是代码行数；经 freebsd.db SQL 查询核验（数据库快照截至 2026-06-25），**Apple** 员工（`@apple.com` 邮箱）在 `freebsd-src` 的 commit 统计为——仅 **6 次** commit（占 freebsd-src 总 commit 量 1,289,525 的 0.0005%），由
+- 回馈 “不足” 的量化标准需明确，是 commit 数还是代码行数；经 freebsd.duckdb SQL 查询核验（数据库快照截至 2026-06-25），**Apple** 员工（`@apple.com` 邮箱）在 `freebsd-src` 的 commit 统计为——仅 **6 次** commit（占 freebsd-src 总 commit 量 1,289,525 的 0.0005%），由
 - **PS3** 的操作系统（**Cell OS**）是否基于 **FreeBSD** 存在争议，需区分 **PS3** 与 **PS4** 双库核查（2026-08-15）：参考文献库 ref_id=3989（The Register 2021-03-10）提及 FreeBSD 用于 PlayStation 但为二手报道；邮件列表库无法验证。非 Sony 官方一手来源，建议补充 Sony 官方文档
 - 零回馈是确认事实还是缺乏证据需谨慎表述
   - 文献：FreeBSD git commit 统计；Sony 公开文档 ［A］

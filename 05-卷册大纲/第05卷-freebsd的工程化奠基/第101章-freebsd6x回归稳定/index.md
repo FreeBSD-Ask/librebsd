@@ -17,7 +17,7 @@ volume: 第05卷-freebsd的工程化奠基
 ## 史观
 
 - 总纲第 5 条——技术债务与代码考古，6.x 是 5.x 债务的偿还
-  - 辨析：经 freebsd.db tags 表验证，6.0-RELEASE 的 tagger_date 为 2005-11-03T00:35:26Z（非旧叙事 2005.11.4，误差 1 天，可能为公告日期与 tag 日期差异）；6.x 是否真稳定，需查早期 bug 报告；〔待核：原文截断，后文待回源〕
+  - 辨析：经 freebsd.duckdb tags 表验证，6.0-RELEASE 的 tagger_date 为 2005-11-03T00:35:26Z（非旧叙事 2005.11.4，误差 1 天，可能为公告日期与 tag 日期差异）；6.x 是否真稳定，需查早期 bug 报告；〔待核：原文截断，后文待回源〕
 - 总纲第 13 条——边缘者的作用
   - 辨析：贡献者是否被记录，需查
   - 文献：作者不详. FreeBSD commit log[Z]. 年份不详；作者不详. FreeBSD 邮件列表[EB/OL]. 年份不详 ［A］
@@ -42,7 +42,7 @@ volume: 第05卷-freebsd的工程化奠基
 
 ## 辨析
 
-- 经 freebsd.db tags 表验证，6.0-RELEASE 的 tagger_date 为 2005-11-03T00:35:26Z（非旧叙事 2005.11.4，误差 1 天，可能为公告日期与 tag 日期差异）；6.x 是否真稳定，需查早期 bug 报告；0 信任原则适用说明：L1.1.1 年度 commit 量基于 author_date 聚合，FreeBSD SVN-to-Git
+- 经 freebsd.duckdb tags 表验证，6.0-RELEASE 的 tagger_date 为 2005-11-03T00:35:26Z（非旧叙事 2005.11.4，误差 1 天，可能为公告日期与 tag 日期差异）；6.x 是否真稳定，需查早期 bug 报告；0 信任原则适用说明：L1.1.1 年度 commit 量基于 author_date 聚合，FreeBSD SVN-to-Git
 - 贡献者是否被记录，需查
   - 文献：作者不详. FreeBSD commit log[Z]. 年份不详；作者不详. FreeBSD 邮件列表[EB/OL]. 年份不详 ［A］
 
@@ -66,7 +66,7 @@ volume: 第05卷-freebsd的工程化奠基
 
 ## 文献
 
-- 6.0 Release Notes；freebsd-stable 邮件；release/6.0.0. freebsd-src 仓库 tag [DB/OL]. 2005-11-03T00:35:26Z. tag: release/6.0.0; commit: 3d215489fe03c6c5cecc3b5ed9ea39118e6ce379 ［A］；freebsd.db L1.1.1 查询结果（freebsd-src 年度 commit 量 2005-2008，报告截断）[DB/OL]；freebsd.db L1.4.1 查询结果（freebsd-src release tag 间隔 6.x 系列
+- 6.0 Release Notes；freebsd-stable 邮件；release/6.0.0. freebsd-src 仓库 tag [DB/OL]. 2005-11-03T00:35:26Z. tag: release/6.0.0; commit: 3d215489fe03c6c5cecc3b5ed9ea39118e6ce379 ［A］；freebsd.duckdb L1.1.1 查询结果（freebsd-src 年度 commit 量 2005-2008，报告截断）[DB/OL]；freebsd.duckdb L1.4.1 查询结果（freebsd-src release tag 间隔 6.x 系列
 - 作者不详. FreeBSD commit log[Z]. 年份不详；作者不详. FreeBSD 邮件列表[EB/OL]. 年份不详 ［A］
 
 ## 100.10.2 边缘贡献者辨析

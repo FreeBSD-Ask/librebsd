@@ -1,0 +1,141 @@
+---
+chapter: 第 122 章
+id: CH122
+volume: 第06卷-freebsd的核心技术革新
+---
+
+# 第 122 章 FreeBSD 存储栈的分区与 I/O 调度
+
+> 本子章由原第 56 章拆分而来，承载 122.5-122.10 节。
+
+## 本章节索引
+
+1. [122.5 磁盘标签-分区与-I-O-调度](122.5-磁盘标签-分区与-I-O-调度.md)
+2. [122.6 iSCSI-与网络存储](122.6-iSCSI-与网络存储.md)
+3. [122.7 DragonFly-BSD-HAMMER-HAMMER2-与外部批评](122.7-DragonFly-BSD-HAMMER-HAMMER2-与外部批评.md)
+4. [122.8 存储栈贡献者群体](122.8-存储栈贡献者群体.md)
+5. [122.9 多元群体贡献-FreeBSD-2008–2018-时期的贡献者多样性-企业-地域与志愿者的协同生态](122.9-多元群体贡献-FreeBSD-2008–2018-时期的贡献者多样性-企业.md)
+6. [122.10 与同时期操作系统的比较-FreeBSD-非-ZFS-存储栈-GEOM-gvinum-UFS-与-Linux](122.10-与同时期操作系统的比较-FreeBSD-非-ZFS-存储栈.md)
+
+## 第 119.13 节 媒体反响与社区舆论（详见 [媒体反响与社区舆论.md](媒体反响与社区舆论.md)）
+
+---
+
+**【本节文献综述】** 详见 [04-现代研究文献/05-参考文献全文数据库/references_fulltext.db](04-现代研究文献/05-参考文献全文数据库/references_fulltext.db) `chapter_reviews` 表（id=15）
+
+---
+
+> [文献缺口提示] 本章文献支撑不足（匹配 0 篇），建议后续补充文献下载。
+
+## 数据核验与统计（自动增补 · 0-信任）
+
+> **来源库**：资料数据库 · materials / material_cross_references；references_fulltext · chapter_matches / chapter_reviews；doubts_standalone · doubts_to_resolve
+> **方法**：基于全局章号 1–348 直接 SQL 聚合；未做外部事实验证；`ch=0`/未映射条目不计入本章。
+> **生成时间**：2026-08-04 ｜ **复现**：`script/_engine_integrity_analysis.py`
+
+| 指标 | 数值 |
+| --- | --- |
+| 锚定素材 | 7 篇（含存疑标记 0 篇） |
+| 存疑点 | 3 条 |
+| 参考文献匹配 | 14 条 |
+| 章节述评 | 未生成 |
+| 章内交叉引用 | 出 5 / 入 3 |
+
+**数据质量备注**：本章数据齐备
+
+<!-- GITREPO_FINE_BLOCK v20260804 -->
+## Git 仓库细粒度技术分析（FreeBSD · 自动增补 · 0-信任）
+
+> 来源：`03-原始史料库/01-代码仓库史料/02-FreeBSD/db/freebsd.db` 的 `tech_features` 表（提交级特性标记）。
+> 方法：按特性聚合 `commits` 提交计数与首/峰/末年；未做外部事实验证。
+
+| 技术特性 | 类别 | 提交标记 | 活跃跨度 |
+| --- | --- | ---: | --- |
+| GEOM | 存储 | 1,801 | 2002–2026 |
+
+- **GEOM**（存储，2002–2026）：FreeBSD 存储几何层，模块化 RAID 与设备映射 替代：手工分区 → GEOM 模块（gmirror/gstripe）
+
+---
+
+<!-- DOUBT_PENDING_BLOCK v20260804 -->
+
+> **待核验登记（doubt 批量 2026-08-04 批11）**：
+> 下列条目依 0 信任原则不改动正文，登记待核验：
+>
+> - 存疑 id 1874：freebsd_ref_ver3_09 无法对应公开文献（描述性占位），待核
+
+<!-- DB_POINTS:doubts_resolved -->
+**数据库要点引用（doubts_standalone.db · 2026-08-13）**
+
+> 来源：`04-现代研究文献/06-存疑数据库/doubts_standalone.db` 表 `doubts_to_resolve`（1987 条，1966 已解决）。本章存疑 4 条已解决。类别分布：fact(1)、name(1)、other(1)、文献(1)
+
+> 存疑管理体系：98.9% 已闭环，解决结论含 date/fact/source_conflict/name/version 等类型，具体结论见 doubts_standalone.db 表 `resolution_summary` 字段。
+<!-- /DB_POINTS:doubts_resolved -->
+
+<!-- DB_POINTS:chapter_reviews -->
+**数据库要点引用（references_fulltext.db · chapter_reviews · 2026-08-13）**
+
+> 来源：`04-现代研究文献/05-参考文献全文数据库/references_fulltext.db` 表 `chapter_reviews`（348 章全覆盖）。本章级文献综述 1710 字、匹配 14 篇文献，状态 imported。映射：旧章号 +1 → 磁盘章号。
+
+> **综述要点**：本章围绕“FreeBSD 存储栈的分区与 I/O 调度”展开，覆盖 121.5 磁盘标签-分区与-I-O-调度；121.6 iSCSI-与网络存储；121.7 DragonFly-BSD-HAMMER-HAMMER2-…；121.8 存储栈贡献者群体；121.9 多元群体贡献-FreeBSD-2008–2018-时期的贡… 等 6 个子节。本章新入库考据文献有 《8805796 Characterizing Modeling Relia
+
+<!-- /DB_POINTS:chapter_reviews -->
+
+<!-- COL_SCAN v20260826 -->
+## 内容包复核增补（Phase 4 · 2026-08-26）
+
+> 基于 4 个核心数据库（doubts_standalone、historical_claims、original_sources、资料数据库）内容包自动匹配与审核。
+> 内容包总行数：200 | 去重主张数：200 | 复核方法：12 步流程（详见 vol2to5_phase4_summary.md）
+
+### 证据等级分布
+
+| 等级 | 说明 | 数量 | 占比 |
+| --- | --- | --- | --- |
+| L1 | 代码与构建产物 | 0 | 0.0% |
+| L2 | 即时通讯记录 | 0 | 0.0% |
+| L3 | 官方文档与公告 | 0 | 0.0% |
+| L4 | 事后叙述 | 200 | 100.0% |
+| L5 | 二手研究 | 0 | 0.0% |
+
+### 来源数据库分布
+
+| 来源 | 行数 |
+| --- | --- |
+| historical_claims | 200 |
+
+### 备用证据点（L4）
+
+此项关键事实涉及“1. [L4] `historical_claims.evidence.fact_text#evidence_id=EV-KF-000366` — UFS”，其历史脉络与本章主题的关联有待进一步考据。
+此项关键事实涉及“2. [L4] `historical_claims.evidence.fact_text#evidence_id=EV-KF-000367` — NFS”，其历史脉络与本章主题的关联有待进一步考据。
+此项关键事实涉及“3. [L4] `historical_claims.evidence.fact_text#evidence_id=EV-KF-000384` — FFS”，其历史脉络与本章主题的关联有待进一步考据。
+此项关键事实涉及“4. [L4] `historical_claims.evidence.fact_text#evidence_id=EV-KF-000395` — UFS”，其历史脉络与本章主题的关联有待进一步考据。
+此项关键事实涉及“5. [L4] `historical_claims.evidence.fact_text#evidence_id=EV-KF-000416` — FFS”，其历史脉络与本章主题的关联有待进一步考据。
+此项关键事实涉及“6. [L4] `historical_claims.evidence.fact_text#evidence_id=EV-KF-000417` — UFS”，其历史脉络与本章主题的关联有待进一步考据。
+此项关键事实涉及“7. [L4] `historical_claims.evidence.fact_text#evidence_id=EV-KF-000437` — NFS”，其历史脉络与本章主题的关联有待进一步考据。
+此项关键事实涉及“8. [L4] `historical_claims.evidence.fact_text#evidence_id=EV-KF-000541` — SMB”，其历史脉络与本章主题的关联有待进一步考据。
+
+> 另有 192 条 L4 证据点未列出。
+
+### 0 信任评估
+
+- 独立来源数：1 个数据库
+- 一级史料通过率：0.0%（L1+L2+L3 / 总行数）
+- 所有主张均来自内容包自动匹配，未经人工逐一核实
+- 单一来源支撑的主张须标注 (单一文献支撑，待交叉验证)
+
+### 交叉验证提示
+
+- 本章仅从单一数据库获取证据，须标注 (单一文献支撑，待交叉验证)
+
+<!-- /COL_SCAN -->
+
+<!-- DEEP_ANALYSIS: freebsd.duckdb.commits -->
+**数据库分析发现**（证据等级：L1，来源：`freebsd.duckdb.commits.freebsd`）
+
+freebsd 代码仓库：从 1993 年到 2026 年，共 1294851 次提交，5671 位贡献者参与。
+
+<!-- DEEP_ANALYSIS: freebsd.duckdb.commits -->
+**数据库分析发现**（证据等级：L1，来源：`freebsd.duckdb.commits.freebsd`）
+
+freebsd 核心贡献者：Po-Chuan Hsieh(68595), Sunpoet Po-Chuan Hsieh(51033), Yuri Victorovich(29759), Jan Beich(22360), Martin Wilke(20341)
+

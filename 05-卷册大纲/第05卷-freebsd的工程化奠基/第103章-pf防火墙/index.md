@@ -17,7 +17,7 @@ volume: 第05卷-freebsd的工程化奠基
 ## 史观
 
 - 总纲第 1 条——偶然性改写历史，IPFilter 许可证争议催生 PF 这一全新防火墙
-  - 辨析：PF 是否完全由 Hartmeier 一人开发，需查 commit log 确认其他 OpenBSD 开发者的贡献；0 信任原则适用说明：L2.3.1.pf 查询在中观模式挖掘报告中缺失，须直接查询 netbsd.db 验证 PF 引入周期；L2.4.1.Import from 查询使用 "Im
+  - 辨析：PF 是否完全由 Hartmeier 一人开发，需查 commit log 确认其他 OpenBSD 开发者的贡献；0 信任原则适用说明：L2.3.1.pf 查询在中观模式挖掘报告中缺失，须直接查询 netbsd.duckdb 验证 PF 引入周期；L2.4.1.Import from 查询使用 "Im
 - 总纲第 7 条——BSD 与 UNIX 谱系的连续性，PF 跨 BSD 项目流动体现谱系共享
   - 辨析：经 bsd_commits.db commits 表验证，PF 导入 commit 为 2004-06-16T23:03:14Z（早于 5.3-RELEASE 约 4.5 个月，属 5-CURRENT 开发周期）；经 bsd_commits.db tags 表验证，5.3-RELEASE 的
 - 总纲第 9 条——简洁与复杂的辩证，iptables 重简洁、nftables 重灵活
@@ -39,7 +39,7 @@ volume: 第05卷-freebsd的工程化奠基
 
 ## 辨析
 
-- PF 是否完全由 Hartmeier 一人开发，需查 commit log 确认其他 OpenBSD 开发者的贡献；0 信任原则适用说明：L2.3.1.pf 查询在中观模式挖掘报告中缺失，须直接查询 netbsd.db 验证 PF 引入周期；L2.4.1.Import from 查询使用 "Import from" 关键词未命中 PF 导入 commit（message_subject 为 "Im
+- PF 是否完全由 Hartmeier 一人开发，需查 commit log 确认其他 OpenBSD 开发者的贡献；0 信任原则适用说明：L2.3.1.pf 查询在中观模式挖掘报告中缺失，须直接查询 netbsd.duckdb 验证 PF 引入周期；L2.4.1.Import from 查询使用 "Import from" 关键词未命中 PF 导入 commit（message_subject 为 "Im
 - 经 bsd_commits.db commits 表验证，PF 导入 commit 为 2004-06-16T23:03:14Z（早于 5.3-RELEASE 约 4.5 个月，属 5-CURRENT 开发周期）；经 bsd_commits.db tags 表验证，5.3-RELEASE 的 tagger_date 为 2004-11-04T19:12:42Z（非旧叙事 2004.11.6，误差
 - iptables/nftables 与 PF 优劣，需查基准测试
   - 文献：iptables 文档；nftables 文档[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]
@@ -61,7 +61,7 @@ volume: 第05卷-freebsd的工程化奠基
 
 ## 文献
 
-- Hartmeier "OpenBSD Packet Filter"（ONLamp 2002）；**pf.conf(5)** 手册页 ［A］；freebsd.db L2.3.1.pf 查询结果（中观模式挖掘报告缺失，须直接查询）[DB/OL]；freebsd.db L2.4.1.Import from 查询结果（PF 导入 commit 未命中，关键词匹配局限）[DB/OL]；freebsd.db L2.2.1.sys_net 查询结果（freebsd-src sys/net/ 年度 commit 量 2004-2010）[DB/OL] ［A］
+- Hartmeier "OpenBSD Packet Filter"（ONLamp 2002）；**pf.conf(5)** 手册页 ［A］；freebsd.duckdb L2.3.1.pf 查询结果（中观模式挖掘报告缺失，须直接查询）[DB/OL]；freebsd.duckdb L2.4.1.Import from 查询结果（PF 导入 commit 未命中，关键词匹配局限）[DB/OL]；freebsd.duckdb L2.2.1.sys_net 查询结果（freebsd-src sys/net/ 年度 commit 量 2004-2010）[DB/OL] ［A］
 
 ## 102.1.2 移植的工程过程
 

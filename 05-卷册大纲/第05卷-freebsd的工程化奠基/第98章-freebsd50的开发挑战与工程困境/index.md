@@ -69,7 +69,7 @@ volume: 第05卷-freebsd的工程化奠基
 
 ## 97.4.2 ULE 的双队列设计
 
-- 要点：ULE 调度器采用三个 per-CPU 队列 (current/next/idle) 设计，目标 O(1) 复杂度、CPU 亲和性、SMP 优化、交互式响应优先；算法基于时间片与交互性评分；ULE 首次 commit 于 2003-01-26T05:23:15Z（commit_hash = 35e6168fcdc76ba3ff2927279f9a48aa5ac3157d，freebsd.db freebsd-src 仓库 commits 表 Jeff Roberson 提交，mess
+- 要点：ULE 调度器采用三个 per-CPU 队列 (current/next/idle) 设计，目标 O(1) 复杂度、CPU 亲和性、SMP 优化、交互式响应优先；算法基于时间片与交互性评分；ULE 首次 commit 于 2003-01-26T05:23:15Z（commit_hash = 35e6168fcdc76ba3ff2927279f9a48aa5ac3157d，freebsd.duckdb freebsd-src 仓库 commits 表 Jeff Roberson 提交，mess
 - Roberson 论文；EPFL USENIX ATC 2018 论文；Jeff Roberson. Add the ule scheduler. freebsd-src [DB/OL]. 2003-01-26T05:23:15Z. commit: 35e6168fcdc76ba3ff2927279f9a48aa5ac3157d ［A］
 
 ## 97.4.3 默认禁用的辨析

@@ -1,0 +1,140 @@
+---
+chapter: 第 118 章
+id: CH118
+volume: 第06卷-freebsd的核心技术革新
+---
+
+# 第 118 章 CHERI 的法律基础与硬件合作协议
+
+> 本子章由原第 52 章拆分而来，承载 118.8-118.13 节。
+
+## 本章节索引
+
+1. [118.8 CHERI-的法律基础-BSD-许可证与硬件合作协议-CHERI-ISA-以-BSD-风格许可证发布-但-ARM](118.8-CHERI-的法律基础-BSD-许可证与硬件合作协议-CHERI-ISA-以.md)
+2. [118.9 CheriBSD-Watson-团队维护的-CHERI-扩展-FreeBSD-分支-作为-CHERI](118.9-CheriBSD-Watson-团队维护的-CHERI-扩展-FreeBSD.md)
+3. [118.10 2023-2025-年-Armv9-R-与-CCA-CHERI-商用化与-RISC-V-标准化进程](118.10-2023-2025-年-Armv9-R-与-CCA-CHERI-商用化与.md)
+4. [118.11 外部批评与安全争议-Capsicum-沙箱逃逸案例-CHERI-侧信道攻击与性能开销批评-应用改造门槛争议](118.11-外部批评与安全争议-Capsicum-沙箱逃逸案例-CHERI.md)
+5. [118.12 重要贡献者-Capsicum-与-CHERI-核心设计者-实现者与跨项目协作者](118.12-重要贡献者-Capsicum-与-CHERI-核心设计者-实现者与跨项目协作者.md)
+6. [118.13 与同时期操作系统的比较-2010-2013-年同期能力安全与沙箱机制-Linux-seccomp-SELinux](118.13-与同时期操作系统的比较-2010-2013-年同期能力安全与沙箱机制.md)
+
+## 数据核验与统计（自动增补 · 0-信任）
+
+> **来源库**：资料数据库 · materials / material_cross_references；references_fulltext · chapter_matches / chapter_reviews；doubts_standalone · doubts_to_resolve
+> **方法**：基于全局章号 1–348 直接 SQL 聚合；未做外部事实验证；`ch=0`/未映射条目不计入本章。
+> **生成时间**：2026-08-04 ｜ **复现**：`script/_engine_integrity_analysis.py`
+
+| 指标 | 数值 |
+| --- | --- |
+| 锚定素材 | 6 篇（含存疑标记 0 篇） |
+| 存疑点 | 0 条 |
+| 参考文献匹配 | 1 条 |
+| 章节述评 | 未生成 |
+| 章内交叉引用 | 出 2 / 入 1 |
+
+**数据质量备注**：本章数据齐备
+
+<!-- GITREPO_FINE_BLOCK v20260804 -->
+## Git 仓库细粒度技术分析（FreeBSD · 自动增补 · 0-信任）
+
+> 来源：`03-原始史料库/01-代码仓库史料/02-FreeBSD/db/freebsd.db` 的 `tech_features` 表（提交级特性标记）。
+> 方法：按特性聚合 `commits` 提交计数与首/峰/末年；未做外部事实验证。
+
+| 技术特性 | 类别 | 提交标记 | 活跃跨度 |
+| --- | --- | ---: | --- |
+| CHERI | — | — | — |
+
+---
+
+<!-- MAIL_MINE v20260813 -->
+## 邮件史料增补
+
+> 基于 6 个邮件数据库（260 万封）+ FTS5 全文索引自动挖掘，供编纂引用参考。
+> 以下为本章主题相关的邮件史料线索（精确词命中，含时间范围与代表邮件）。
+
+- **cheri**（freebsd）: 140 封 · 2012-2024
+  - [2012] DTrace/MIPS port — rwatson at FreeBSD.org (R
+  - [2012] DTrace/MIPS port — rwatson at FreeBSD.org (R
+  - [2013] [FreeBSD-Announce] FreeBSD Quarterly Status Report, July-September,
+	2 — issyl0 at FreeBSD.org (Is
+- **capability hardware**（freebsd）: 2,023 封 · 1994-2021
+  - [1994] Install question... —
+  - [1995] Re: Ask for help to FreeBSD team. — Julian Howard Stacey
+  - [1995] Re: bug in libc — J Wunsch
+
+<!-- /MAIL_MINE -->
+
+<!-- DB_POINTS:chapter_reviews -->
+**数据库要点引用（references_fulltext.db · chapter_reviews · 2026-08-13）**
+
+> 来源：`04-现代研究文献/05-参考文献全文数据库/references_fulltext.db` 表 `chapter_reviews`（348 章全覆盖）。本章级文献综述 1810 字、匹配 1 篇文献，状态 imported。映射：旧章号 +1 → 磁盘章号。
+
+> **综述要点**：本章围绕“CHERI 的法律基础与硬件合作协议”展开，覆盖 117.8 CHERI-的法律基础-BSD-许可证与硬件合作协议-CH…；117.9 CheriBSD-Watson-团队维护的-CHERI-扩…；117.10 2023-2025-年-Armv9-R-与-CCA-CH…；117.11 外部批评与安全争议-Capsicum-沙箱逃逸案例-CH…；117.12 重要贡献者-Capsicum-与-CHERI-核心设计者… 等 6 个
+
+<!-- /DB_POINTS:chapter_reviews -->
+
+<!-- COL_SCAN v20260826 -->
+## 内容包复核增补（Phase 4 · 2026-08-26）
+
+> 基于 4 个核心数据库（doubts_standalone、historical_claims、original_sources、资料数据库）内容包自动匹配与审核。
+> 内容包总行数：205 | 去重主张数：115 | 复核方法：12 步流程（详见 vol2to5_phase4_summary.md）
+
+### 证据等级分布
+
+| 等级 | 说明 | 数量 | 占比 |
+| --- | --- | --- | --- |
+| L1 | 代码与构建产物 | 0 | 0.0% |
+| L2 | 即时通讯记录 | 0 | 0.0% |
+| L3 | 官方文档与公告 | 205 | 100.0% |
+| L4 | 事后叙述 | 0 | 0.0% |
+| L5 | 二手研究 | 0 | 0.0% |
+
+### 来源数据库分布
+
+| 来源 | 行数 |
+| --- | --- |
+| 资料数据库 | 205 |
+
+### 新增证据点（L1-L3）
+
+1. [L3] `资料数据库.freebsd_sa.topic#10` — Multiple vulnerabilities in OpenZFS
+2. [L3] `资料数据库.freebsd_sa.topic#12` — Jail reference count underflow
+3. [L3] `资料数据库.freebsd_sa.topic#46` — Jail chroot escape via fd exchange with a different jail
+4. [L3] `资料数据库.freebsd_sa.topic#48` — Jail escape by a privileged user via nullfs
+5. [L3] `资料数据库.freebsd_sa.topic#57` — Multiple vulnerabilities in OpenSSH
+6. [L3] `资料数据库.freebsd_sa.topic#58` — Uninitialized kernel memory disclosure via ktrace(2)
+7. [L3] `资料数据库.freebsd_sa.topic#61` — OpenSSH Keystroke Obfuscation Bypass
+8. [L3] `资料数据库.freebsd_sa.topic#64` — Multiple issues in the bhyve hypervisor
+9. [L3] `资料数据库.freebsd_sa.topic#66` — bhyve(8) out-of-bounds read access via XHCI emulation
+10. [L3] `资料数据库.freebsd_sa.topic#69` — bhyve(8) privileged guest escape via USB controller
+11. [L3] `资料数据库.freebsd_sa.topic#71` — bhyve(8) privileged guest escape via TPM device passthrough
+12. [L3] `资料数据库.freebsd_sa.topic#73` — OpenSSH pre-authentication async signal safety issue
+13. [L3] `资料数据库.freebsd_sa.topic#75` — ktrace(2) fails to detach when executing a setuid binary
+14. [L3] `资料数据库.freebsd_sa.topic#77` — OpenSSH pre-authentication remote code execution
+15. [L3] `资料数据库.freebsd_sa.topic#80` — bhyveload(8) host file access
+
+> 另有 100 条 L1-L3 证据点未列出，详见内容包文件。
+
+### 0 信任评估
+
+- 独立来源数：1 个数据库
+- 一级史料通过率：100.0%（L1+L2+L3 / 总行数）
+- 本章 L1-L3 级史料 115 条，可纳入大纲但需标注来源
+- 所有主张均来自内容包自动匹配，未经人工逐一核实
+- 单一来源支撑的主张须标注 (单一文献支撑，待交叉验证)
+
+### 交叉验证提示
+
+- 本章有 115 条 L1-L3 级证据，建议优先与此前已入库的 MAIL_MINE、DB_POINTS、PODCAST_MINE 块交叉验证
+- 本章仅从单一数据库获取证据，须标注 (单一文献支撑，待交叉验证)
+
+<!-- /COL_SCAN -->
+
+<!-- DEEP_ANALYSIS: freebsd.duckdb.commits -->
+**数据库分析发现**（证据等级：L1，来源：`freebsd.duckdb.commits.freebsd`）
+
+freebsd 代码仓库：从 1993 年到 2026 年，共 1294851 次提交，5671 位贡献者参与。
+
+<!-- DEEP_ANALYSIS: freebsd.duckdb.commits -->
+**数据库分析发现**（证据等级：L1，来源：`freebsd.duckdb.commits.freebsd`）
+
+freebsd 核心贡献者：Po-Chuan Hsieh(68595), Sunpoet Po-Chuan Hsieh(51033), Yuri Victorovich(29759), Jan Beich(22360), Martin Wilke(20341)

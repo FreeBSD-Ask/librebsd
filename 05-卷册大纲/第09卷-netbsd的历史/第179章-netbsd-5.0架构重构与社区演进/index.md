@@ -25,7 +25,7 @@ volume: 第09卷-netbsd的历史
 
 ## 辨析
 
-- Doran 新调度器与 FreeBSD Jeff Roberson 的 ULE 2.0（2007.5 引入 FreeBSD 7.0）的关系存在叙事分歧——Doran 在邮件列表中提及参考 ULE 但强调独立性，需对照源码 diff 核验；新调度器的性能基准数据在第三方测试中差异较大，需查 Phoronix/BSD Insights 等早期基准。经 netbsd.db netbsd-src 仓库 b
+- Doran 新调度器与 FreeBSD Jeff Roberson 的 ULE 2.0（2007.5 引入 FreeBSD 7.0）的关系存在叙事分歧——Doran 在邮件列表中提及参考 ULE 但强调独立性，需对照源码 diff 核验；新调度器的性能基准数据在第三方测试中差异较大，需查 Phoronix/BSD Insights 等早期基准。经 netbsd.duckdb netbsd-src 仓库 b
 - CVS 与后续 Git 迁移过程中的元数据保真度问题——部分早期 commit 在迁移后丢失 author 字段；邮件列表存档在 mail-index.netbsd.org 与 MaraRepos 等多镜像中存在版本差异
 - pkgsrc 软件包数量统计在不同来源中差异较大——2005Q1 与 2009Q4 的具体数字需对照原始 release tarball 核验；Sonnenberger 的 commit 量在统计工具中可能被低估（部分 commit 以 typos 或 docs 形式提交）
 - NetBSD Foundation 2005-2009 年度报告的连续性存在缺口——部分年份的报告未公开发布，需对照邮件列表年度总结补全；编程之夏 2005 年首届的学生项目记录在 Google 官方档案中部分缺失
@@ -41,7 +41,7 @@ volume: 第09卷-netbsd的历史
 - NetBSD CVS 仓库统计；邮件列表存档；BSDCan 演讲视频档案 ［A］## 史料考据补充（2026-08-04 任务3 联网核验）> 主题：NetBSD 发布工程（Manuel Bouyer 等）
 - NetBSD 5.0 Release Notes；Kengo NAKAHARA MPLS 设计邮件；BSD MPLS 实现比较研究[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]<!-- DB_REF:netbsd.duckdb -->> **数据库引用（netbsd.duckdb）**：本子节对应 netbsd 代码仓库。> 1993-2026 年间：1,999,408 次提交。> 仓库总览：1,999,412 次提交，1,545 位贡献者（contributors 表行数，1992-07-13 至 2026-08-24）。
 - Netcraft Web Server Survey 2005-2009；IDC 服务器操作系统市场报告；Distrowatch 统计页面[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]<!-- DB_REF:freebsd.duckdb -->> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 2005-2009 年间：183,657 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
-- netbsd.db netbsd-src 仓库 commits 表；CVE-2011-0014、CVE-2011-0539 NVD 条目 ［A］<!-- DB_REF:netbsd.duckdb -->> **数据库引用（netbsd.duckdb）**：本子节对应 netbsd 代码仓库。> 1993-2026 年间：1,999,408 次提交。> 仓库总览：1,999,412 次提交，1,545 位贡献者（contributors 表行数，1992-07-13 至 2026-08-24）。
+- netbsd.duckdb netbsd-src 仓库 commits 表；CVE-2011-0014、CVE-2011-0539 NVD 条目 ［A］<!-- DB_REF:netbsd.duckdb -->> **数据库引用（netbsd.duckdb）**：本子节对应 netbsd 代码仓库。> 1993-2026 年间：1,999,408 次提交。> 仓库总览：1,999,412 次提交，1,545 位贡献者（contributors 表行数，1992-07-13 至 2026-08-24）。
 
 <!-- PODCAST_REVIEW v20260829 -->
 <!-- 语义复核范围：BSD Now EP210（共 1 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->

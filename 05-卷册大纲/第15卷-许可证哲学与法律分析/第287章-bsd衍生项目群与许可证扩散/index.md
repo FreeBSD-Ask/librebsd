@@ -53,7 +53,7 @@ volume: 第15卷-许可证哲学与法律分析
 
 - 要点：libarchive 由 FreeBSD 提交者 Tim Kientzle 创建，是一个支持多种压缩与归档格式（tar、zip、cpio、7-Zip、xz、bzip2、gzip、lz4、zstd 等）的 C 库；libarchive 采用 BSD 许可证，后被 FreeBSD 基础系统、macOS（自 10.6 Snow Leopard 起 bsdtar 即基于 libarchive）、Debian/Ubuntu
 - 文献**：FreeBSD Project. FreeBSD License [EB/OL]. <https://www.freebsd.org/copyright/freebsd-license/>; BuiltWith. Varnish Usage Statistics [EB/OL]. <https://trends.builtwith.com/cdn/Varnish>; libarchive. Official Website [EB/OL]. <https://libarchive.github.io/>; Joyent. Reintroducing Bhyve [EB/OL]. (2021-07-08)
-- openbsd.db L3.2.1 查询报告; BuiltWith. Varnish Statistics [EB/OL]. <https://trends.builtwith.com/cdn/Varnish>; libarchive. Official Website [EB/OL]. <https://libarchive.github.io/>; 项目史观总纲第六章“主体性与和解”[Z]. 原材料/哲学/项目统摄史观/第 6 章.md.
+- openbsd.duckdb L3.2.1 查询报告; BuiltWith. Varnish Statistics [EB/OL]. <https://trends.builtwith.com/cdn/Varnish>; libarchive. Official Website [EB/OL]. <https://libarchive.github.io/>; 项目史观总纲第六章“主体性与和解”[Z]. 原材料/哲学/项目统摄史观/第 6 章.md.
 - pkgsrc.org；NetBSD 软件包文档；Joyent pkgsrc 文档[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]
 
 ## 287.3.2 pkgsrc 被 DragonFly BSD 采用的历史

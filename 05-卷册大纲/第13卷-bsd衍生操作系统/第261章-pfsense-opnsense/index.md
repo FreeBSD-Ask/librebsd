@@ -11,7 +11,7 @@ volume: 第13卷-bsd衍生操作系统
 - pfSense 由 Chris Buechler 与 Scott Ullrich 于 2004 年 9 月自 Manuel Kasper 的 m0n0wall（FreeBSD 嵌入式防火墙）分叉而来，目标是克服 m0n0wall 作为嵌入式系统的可扩展性局限——m0n0wall 功能强大但受限于嵌入式形态，pfSense 旨在提供更完整的 FreeBSD 防火墙发行版；pfSense 沿用 Fre
 - pfSense/OPNsense 依赖 FreeBSD 网络栈贡献者与各自社区；Manuel Kasper（瑞士）、Deciso 团队（荷兰）属非英美贡献者。
 - 要点：pfSense 由 Chris Buechler 与 Scott Ullrich 于 2004 年 9 月自 Manuel Kasper 的 m0n0wall（FreeBSD 嵌入式防火墙）分叉而来，目标是克服 m0n0wall 作为嵌入式系统的可扩展性局限——m0n0wall 功能强大但受限于嵌入式形态，pfSense 旨在提供更完整的 FreeBSD 防火墙发行版；pfSense 沿用 FreeBSD 的 `pf`/`ipfw`、Packet Filter 与 Web 管理，并由 BSD Perimeter（后更名为 Netgate）提供商业支持，是 FreeBSD 在网络防火墙领域的主导产品。m0n0wall 项目于 2015 年 2 月 15 日由 Manuel Kasper 宣布永久终止，Manuel Kasper 在终止公告中鼓励 m0n0wall 用户迁移至 OPNsense，标志 BSD 防火墙谱系中 m0n0wall 时代的终结与 pfSense/OPNsense 双雄格局的最终形成。
-- freebsd.db 查询显示 pfsense-src 仓库共 929 条 CVE 相关 commit、567 个去重 CVE，merge commit 比例在 2016 年为 2.3%（661/28,813）、2017 年 2.4%（629/26,654）、2022 年 1.3%（133/10,179），长期维持在 1-3% 水平，显著低于 hardenedbsd-src 同期 24.3% 的
+- freebsd.duckdb 查询显示 pfsense-src 仓库共 929 条 CVE 相关 commit、567 个去重 CVE，merge commit 比例在 2016 年为 2.3%（661/28,813）、2017 年 2.4%（629/26,654）、2022 年 1.3%（133/10,179），长期维持在 1-3% 水平，显著低于 hardenedbsd-src 同期 24.3% 的
 - 2019 年 5 月 19 日，opnsense-core 仓库记录了 CVE-2019-11816 的修复 commit `03c75f71be88d4d2d930c217377b5ff23f0ecae7`（author Ad Schellevis，committer Franco Fichtner），subject 为 "system: address CVE-2019-11816 privl
 
 ## 史料
@@ -25,7 +25,7 @@ volume: 第13卷-bsd衍生操作系统
 
 ## 辨析
 
-- pfSense 与 m0n0wall 的分支关系时间点（2004）须以项目历史核实；openbsd.db 查询 L7.1.1.pfsense-src 的 commit 量须警惕 fork 分歧识别局限——pfsense-src 仓库 1993 年起的 commit 是 fork 自 FreeBSD 继承的上游历史，非 pfSense 项目本地 commit，识别 pfSense 本地特有 comm
+- pfSense 与 m0n0wall 的分支关系时间点（2004）须以项目历史核实；openbsd.duckdb 查询 L7.1.1.pfsense-src 的 commit 量须警惕 fork 分歧识别局限——pfsense-src 仓库 1993 年起的 commit 是 fork 自 FreeBSD 继承的上游历史，非 pfSense 项目本地 commit，识别 pfSense 本地特有 comm
 - 市场份额须以独立报告（一手来源）核实；“BSD 防火墙在开源市场统治”的判断须警惕社区叙事偏差——pfSense/OPNsense 的社区声誉可能被放大为市场份额优势，实际部署数据须以第三方调研为准；IPFire 与 Untangle 的技术细节（内核版本、过滤框架）须以其官方文档核实，不得仅凭一般认知推断。
 - pfsense-src 的 567 个去重 CVE 须区分 “继承自 FreeBSD 上游的修复” 与 “pfSense 本地特有 commit”——fork 仓库的 commit 历史包含上游继承部分，识别本地特有 commit 须通过 merge commit 与 parent_hashes 交叉验证，不可仅凭时间戳判定；merge commit 比例低不必然意味着安全修复滞后，须与 Netg
 - CVE-2019-11816 的具体技术细节（权限提升路径）须以 NVD 条目与 OPNsense 官方公告为据，commit subject 中的 "privlege" 为原 commit 中的拼写错误（应为 "privilege"），本节保留原始 subject 文本不篡改；opnsense-core 的 4 个去重 CVE（CVE-2019-11816、CVE-2026-49131、CVE-

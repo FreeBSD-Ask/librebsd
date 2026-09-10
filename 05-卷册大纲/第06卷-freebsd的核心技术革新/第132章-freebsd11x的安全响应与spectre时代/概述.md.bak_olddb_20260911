@@ -1,0 +1,203 @@
+---
+chapter: 第 132 章
+id: CH132
+volume: 第06卷-freebsd的核心技术革新
+---
+
+# 第 132 章 FreeBSD 11.x 的安全响应与 Spectre 时代
+
+> 本子章由原第 60 章拆分而来，承载 24.10 节。
+
+## 本章节索引
+
+1. [132.10 11-x-周期漏洞与安全响应综览-Spectre-时代开启与-OpenSSL-1-0-2-守旧期的安全债务清算](132.10-11-x-周期漏洞与安全响应综览-Spectre-时代开启与-OpenSSL-1.md)
+
+## 第 129.13 节 媒体反响与社区舆论（详见 [媒体反响与社区舆论.md](媒体反响与社区舆论.md)）
+
+---
+
+> [文献缺口提示] 本章文献支撑不足（匹配 0 篇），建议后续补充文献下载。
+
+<!-- DATA_VERIFY_BLOCK v20260804 -->
+## 数据核验与统计（自动增补 · 0-信任）
+
+> **来源库**：资料数据库 · materials / material_cross_references；references_fulltext · chapter_matches / chapter_reviews；doubts_standalone · doubts_to_resolve
+> **方法**：基于全局章号 1–348 直接 SQL 聚合；未做外部事实验证；`ch=0`/未映射条目不计入本章。
+> **生成时间**：2026-08-04 ｜ **复现**：`script/_engine_integrity_analysis.py`
+
+| 指标 | 数值 |
+| --- | --- |
+| 锚定素材 | 1 篇（含存疑标记 0 篇） |
+| 存疑点 | 0 条 |
+| 参考文献匹配 | 17 条 |
+| 章节述评 | 未生成 |
+| 章内交叉引用 | 出 1 / 入 1 |
+
+**数据质量备注**：本章数据齐备
+
+<!-- GITREPO_FINE_BLOCK v20260804 -->
+## Git 仓库细粒度技术分析（FreeBSD · 自动增补 · 0-信任）
+
+> 来源：`03-原始史料库/01-代码仓库史料/02-FreeBSD/db/freebsd.db` 的 `tech_features` 表（提交级特性标记）。
+> 方法：按特性聚合 `commits` 提交计数与首/峰/末年；未做外部事实验证。
+
+| 技术特性 | 类别 | 提交标记 | 活跃跨度 |
+| --- | --- | ---: | --- |
+| IPsec | 安全/网络 | 995 | 1998–2026 |
+| TLS/加密 | 安全 | 12,878 | 1993–2026 |
+| ASLR | 安全 | 204 | 1999–2026 |
+| OpenSSH | 安全 | 1,644 | 1995–2026 |
+
+- **IPsec**（安全/网络，1998–2026）：IP 安全协议（RFC 2401），内核加密隧道 替代：早期实现 → RFC 4301 标准
+- **TLS/加密**（安全，1993–2026）：传输加密：OpenSSL→LibreSSL（OpenBSD 2014 分叉） 替代：OpenSSL → LibreSSL（OpenBSD）
+- **ASLR**（安全，1999–2026）：地址空间布局随机化（2001 OpenBSD 首创） 替代：固定地址 → ASLR → KASLR
+- **OpenSSH**（安全，1995–2026）：安全远程登录套件（OpenBSD 1999 开发） 替代：telnet/rlogin → SSH → OpenSSH
+
+---
+
+<!-- MAIL_MINE v20260813 -->
+## 邮件史料增补
+
+> 基于 6 个邮件数据库（260 万封）+ FTS5 全文索引自动挖掘，供编纂引用参考。
+> 以下为本章主题相关的邮件史料线索（精确词命中，含时间范围与代表邮件）。
+
+- **spectre**（freebsd）: 608 封 · 1995-2024
+  - [1995] 2.0 Problems — Vince Chan
+  - [1995] ytalk and nntpclient — Telebit Corporation
+  - [1997] variable sized arrays and gcc — Bill Paul
+
+<!-- /MAIL_MINE -->
+
+<!-- DB_POINTS:cross_indexes_person -->
+**数据库要点引用（cross_indexes.db · person_bio_research · 2026-08-13）**
+
+> 来源：`10-交叉索引/cross_indexes.db` 表 `person_bio_research`（去重后 276 条，P0 26/P1 75/P2 175/未分级 0）。映射：数据库旧章号 +1 → 磁盘章号。本章涉及人物 1 位。
+
+- [P2] Konstantin Belousov（康斯坦丁·别洛乌索夫）：FreeBSD 内核贡献者(kib)
+<!-- /DB_POINTS:cross_indexes_person -->
+
+<!-- DB_POINTS:chapter_reviews -->
+**数据库要点引用（references_fulltext.db · chapter_reviews · 2026-08-13）**
+
+> 来源：`04-现代研究文献/05-参考文献全文数据库/references_fulltext.db` 表 `chapter_reviews`（348 章全覆盖）。本章级文献综述 480 字、匹配 17 篇文献，状态 imported。映射：旧章号 +1 → 磁盘章号。
+
+> **综述要点**：本章围绕“FreeBSD 11.x 的安全响应与 Spectre 时代”展开，覆盖 131.10 11-x-周期漏洞与安全响应综览-Spectre-时代开…。数据核验显示：锚定素材 1 篇（含存疑标记 0 篇）、参考文献匹配 17 条、存疑点 0 条（自动增补，0 信任原则下须人工复核）。子节要点：131.10 11.x 周期漏洞与安全响应综览——Spect…：FreeBSD11.x周期（**2016年10月10日**11.0-RELE
+
+<!-- /DB_POINTS:chapter_reviews -->
+
+<!-- COL_SCAN v20260826 -->
+## 内容包复核增补（Phase 4 · 2026-08-26）
+
+> 基于 4 个核心数据库（doubts_standalone、historical_claims、original_sources、资料数据库）内容包自动匹配与审核。
+> 内容包总行数：222 | 去重主张数：23 | 复核方法：12 步流程（详见 vol2to5_phase4_summary.md）
+
+### 证据等级分布
+
+| 等级 | 说明 | 数量 | 占比 |
+| --- | --- | --- | --- |
+| L1 | 代码与构建产物 | 0 | 0.0% |
+| L2 | 即时通讯记录 | 0 | 0.0% |
+| L3 | 官方文档与公告 | 222 | 100.0% |
+| L4 | 事后叙述 | 0 | 0.0% |
+| L5 | 二手研究 | 0 | 0.0% |
+
+### 来源数据库分布
+
+| 来源 | 行数 |
+| --- | --- |
+| 资料数据库 | 222 |
+
+### 新增证据点（L1-L3）
+
+1. [L3] `资料数据库.fact_check_records.cross_verify#2` — - 各案例的“作者归属”与“首次出现时间”字段须由至少两类独立来源印证：(a) 官方手册页 HISTORY/AUTHORS 节；(b) 一手论文或官方项目历史页；(c) 内核文档或源码头部版权注释。三类来源满足“不同作者、不同载体、不同社区”中至少两项差异。
+
+- 对于手册页中保留的原始版权注释（如 `Copyright (c) 1983, 1988, 1993, 1994 The Regents ...
+
+2. [L3] `资料数据库.fact_check_records.cross_verify#9` — ### 1. <kargl@FreeBSD.org> 活跃期（核查大纲/index.md L21 叙事）
+
+- 大纲叙事：<kargl@FreeBSD.org> 提交活动自 2011-03-06 持续至 2026-06-07，与“2015 年退役”叙事冲突
+- 数据库查询：`SELECT author_name,commit_count,first_commit_date,last_commit_date...
+
+3. [L3] `资料数据库.fact_check_records.cross_verify#10` — ### 1. 双 tag tagger_date 一致性验证
+
+对 2.x-9.x 系列同时存在 _cvs（SVN 时代）与非_cvs（Git 时代迁移后）双 tag 的版本，比较两者的 tagger_date：
+
+- **结果**：所有双 tag 的 tagger_date 一致性 100%，无非_cvs 与 _cvs tagger_date 不一致的版本
+- **说明**：证明 2020 ...
+
+4. [L3] `资料数据库.fact_check_records.cross_verify#15` — ### 一、商标注册
+
+- **来源独立性**：FreeBSD Foundation 官方商标页（freebsdfoundation.org）与 BSD Daemon 版权页（freebsd.org）分属两个独立域名与发布主体，满足“不同载体、不同社区”差异要求
+- **一致性情况**：两来源对“BSD Daemon 由 McKusick 个人持有”的事实完全一致，与任务描述"BSD Daemon...
+
+5. [L3] `资料数据库.fact_check_records.cross_verify#17` — 采用 index.md 子节索引 vs 文件名 vs 内容标签三方对比的交叉验证方法：
+
+- **第 50 章**：
+  - index.md 索引检查：14 个条目 72.1-72.14（重排后应为 50.1-50.14）
+  - 文件名检查：14 个文件名已是 50.X（正确）
+  - 内容标签检查：14 个子文件内容仍为 72.X.Y（错误）
+  - 三方对比结论：内容标签滞后，需修正内容；...
+
+6. [L3] `资料数据库.fact_check_records.cross_verify#22` — ### L1.1.1 与 L1.1.2 交叉验证
+
+L1.1.1 查询（23 仓库 commit 量与贡献者数量）报告仅显示 572 行结果中的前 30 行（全为 dragonfly 仓库），无法直接获取 openbsd-src 逐年数据。采用 L1.1.2 查询（4 大 BSD src commit 量相对比例）交叉验证获取 openbsd-src 1995-2002 年逐年 commit 量与...
+7. [L3] `资料数据库.fact_check_records.cross_verify#23` — 上述四项查证均基于 bsd_commits.db 数据库查询与 WebSearch/WebFetch 联网核查双重验证，遵循 0 信任原则——数据库 commit 记录不豁免考据（FreeBSD SVN-to-Git 迁移 2020 可能引入日期偏差），故叠加 WebSearch 与 WebFetch 联网核查交叉验证。
+8. [L3] `资料数据库.fact_check_records.cross_verify#25` — ### L1.1.1 4 大 BSD src 年度 commit 量验证
+
+L1.1.1 查询（4 大 BSD src 年度 commit 时间序列）覆盖 ch25（386BSD 先驱的悲剧）、ch26（FreeBSD 的诞生）、ch27（NetBSD 可移植的理想）、ch28（OpenBSD 安全至上的起源）、ch29（OpenBSD 安全文化的奠基）。数据反映 1992-1996 年间 BSD...
+9. [L3] `资料数据库.fact_check_records.cross_verify#27` — ### 1. L2.1 与 L1.1.1 数据交叉验证异常
+
+- **验证对象**：L2.1.FreeBSD_SVN_to_Git_migration 查询返回的 2020 年 commit 量 14,203 vs L1.1.1 查询返回的 2020 年总 commit 量 111,482
+- **差异**：7.85 倍，远超合理的统计口径差异范围
+- **验证方法**：对比两个独立查询的 SQL...
+
+10. [L3] `资料数据库.fact_check_records.cross_verify#28` — ### L1.1.1 netbsd-src 年度 commit 量验证
+
+L1.1.1 查询（年度 commit 时间序列）报告共 572 行，仅显示前 30 行（按 repo_name 字母序排列，前 30 行全为 dragonfly 仓库），netbsd-src 行未在截断输出中显示。采用数据库查询脚本 `script/vol6_ch73_ch83_data_query.py` 直接查询 bs...
+11. [L3] `资料数据库.fact_check_records.cross_verify#29` — ### 数据补充范围
+
+第十一卷共 9 章（ch130-ch138），每章根据卷章数据映射补充对应 SQL 查询数据点，共修改 13 个文件、23 个子节：
+
+| 章号 | 章题 | 补充查询 ID | 补充子节 |
+|---|---|---|---|
+| ch130 | 人类瘟疫流行病对技术社区的影响 | L1.1.4、L3.7.1、L7.3.1 | 130.3.3、130.3.4、130.9....
+
+12. [L3] `资料数据库.fact_check_records.cross_verify#30` — ### 数据补充范围
+
+第十二卷共 19 章（ch139-ch157），每章根据卷章数据映射补充对应 SQL 查询数据点：
+
+| 章号 | 章题 | 补充查询 ID | 补充子节 |
+|---|---|---|---|
+| ch139 | FreeBSD 合规、认证与标准遵守史 | L3.6.1 | 139.1.1 POSIX、139.6.1 FIPS |
+| ch140 | FreeBSD 社区...
+
+13. [L3] `资料数据库.fact_check_records.cross_verify#31` — ### 多源对比路径
+
+1. **fork 分歧路径数据**（L7.1.1.trueos-src/ghostbsd-src/hardenedbsd-src/pfsense-src/midnightbsd-src/opnsense-core）—— 通过 merge commit 比例与 parent_hashes 识别 fork 项目本地特有 commit，与各项目公告、邮件列表、维护者声明交叉验证...
+14. [L3] `资料数据库.fact_check_records.cross_verify#32` — ### L1.1.1 与 L1.3.2 交叉验证（报告截断替代方案）
+
+L1.1.1 查询（freebsd-src 年度 commit 量）报告共 572 行，仅显示前 30 行（全为 dragonfly 仓库），无法直接获取 freebsd-src 逐年数据。采用 L1.3.2 查询（freebsd-src 年度文件操作数：files_modified/files_added/files_del...
+15. [L3] `资料数据库.fact_check_records.cross_verify#34` — 三源交叉验证:OpenBSD 官方 about 页面、NetBSD核心邮件列表 1995-1996 存档、de Raadt 在 slashdot 与 OSNews 的访谈;并对照 McKusick《The Design and Implementation of the 4.4BSD Operating System》中 BSD 分裂章节
+
+> 另有 8 条 L1-L3 证据点未列出，详见内容包文件。
+
+### 0 信任评估
+
+- 独立来源数：1 个数据库
+- 一级史料通过率：100.0%（L1+L2+L3 / 总行数）
+- 本章 L1-L3 级史料 23 条，可纳入大纲但需标注来源
+- 所有主张均来自内容包自动匹配，未经人工逐一核实
+- 单一来源支撑的主张须标注 (单一文献支撑，待交叉验证)
+
+### 交叉验证提示
+
+- 本章有 23 条 L1-L3 级证据，建议优先与此前已入库的 MAIL_MINE、DB_POINTS、PODCAST_MINE 块交叉验证
+- 本章仅从单一数据库获取证据，须标注 (单一文献支撑，待交叉验证)
+
+<!-- /COL_SCAN -->
+
+<!-- DEEP_ANALYSIS: freebsd.duckdb.commits -->
+**数据库分析发现**（证据等级：L1，来源：`freebsd.duckdb.commits.freebsd`）
+
+freebsd 核心贡献者：Po-Chuan Hsieh(68595), Sunpoet Po-Chuan Hsieh(51033), Yuri Victorovich(29759), Jan Beich(22360), Martin Wilke(20341)
+

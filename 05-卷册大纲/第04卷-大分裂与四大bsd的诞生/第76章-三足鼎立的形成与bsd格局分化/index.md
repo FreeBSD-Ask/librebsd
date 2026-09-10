@@ -10,14 +10,14 @@ volume: 第04卷-大分裂与四大bsd的诞生
 
 - **1996 年** BSD 格局形成——FreeBSD、NetBSD、OpenBSD 三项目定位分化，共享 4.4BSD-Lite 遗产但走向不同方向；背景涉及 386BSD 中断、三项目创建与定位选择。三项目首条 commit 时间节点对照如下：
 - FreeBSD 选择 x86 性能定位——聚焦 i386 平台性能优化与 Walnut Creek CDROM 商业绑定；定位选择决定 FreeBSD 后续发展路径
-- NetBSD 选择可移植定位——聚焦多平台移植，扩展至 50+ 平台；定位选择决定 NetBSD 后续工程方向；freebsd.db 统计结论 C-04 显示：netbsd-src 总 commit 数 773,683（SQL 查询 `SELECT COUNT(*) FROM commits WHERE repo_name='netbsd-src'`），为四 BSD 项目 src 仓库中累计 commit 量最高者——与 C-03 freebsd-src 总 commit 数 444,203、C-05 openbsd-src 总 commit 数 245,904 对照，NetBSD 累计 commit 量约为 FreeBSD 的 1.74 倍、OpenBSD 的 3.15 倍，反映 NetBSD 在更多平台移植目标（50+ 平台）下的累计工程产出规模最大，可移植定位的工程代价体现为单平台深度优化 commit 的分散
+- NetBSD 选择可移植定位——聚焦多平台移植，扩展至 50+ 平台；定位选择决定 NetBSD 后续工程方向；freebsd.duckdb 统计结论 C-04 显示：netbsd-src 总 commit 数 773,683（SQL 查询 `SELECT COUNT(*) FROM commits WHERE repo_name='netbsd-src'`），为四 BSD 项目 src 仓库中累计 commit 量最高者——与 C-03 freebsd-src 总 commit 数 444,203、C-05 openbsd-src 总 commit 数 245,904 对照，NetBSD 累计 commit 量约为 FreeBSD 的 1.74 倍、OpenBSD 的 3.15 倍，反映 NetBSD 在更多平台移植目标（50+ 平台）下的累计工程产出规模最大，可移植定位的工程代价体现为单平台深度优化 commit 的分散
 - OpenBSD 选择安全定位——聚焦全代码审计与安全默认配置；定位选择决定 OpenBSD 后续工程方向。三项目定位分化对照如下：
 - BSD 4 条款许可证包括版权声明、许可证声明、免责声明与“广告条款”（所有广告材料须提及原始作者）；4 条款是 BSD 许可证原始形态，影响后续演化
 
 ## 史观
 
 - 总纲第 2 条——分离与聚合：1996 年 BSD 格局是分离后产生的新聚合
-- 辨析：格局形成的具体时点在不同叙事中略有差异——需对照三项目发布历史核实；netbsd.db 中 NetBSD src 首条 commit（1992-07-13）为仓库初始化脚本，非实际源码导入，须区分“仓库初始化”与“项目实际启动”；OpenBSD src GitHub 镜像可能滞后于 CVS 主仓，commit
+- 辨析：格局形成的具体时点在不同叙事中略有差异——需对照三项目发布历史核实；netbsd.duckdb 中 NetBSD src 首条 commit（1992-07-13）为仓库初始化脚本，非实际源码导入，须区分“仓库初始化”与“项目实际启动”；OpenBSD src GitHub 镜像可能滞后于 CVS 主仓，commit
 - 总纲第 6 条——技术选择的代价：安全定位带来可用性与生态支持的牺牲
 - 辨析：定位选择的具体诱因在不同叙事中略有差异——需对照 OpenBSD 早期邮件列表核实
 - 文献：OpenBSD 1.0 发布声明；安全审计文档[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]
@@ -40,7 +40,7 @@ volume: 第04卷-大分裂与四大bsd的诞生
 
 ## 辨析
 
-- 格局形成的具体时点在不同叙事中略有差异——需对照三项目发布历史核实；netbsd.db 中 NetBSD src 首条 commit（1992-07-13）为仓库初始化脚本，非实际源码导入，须区分“仓库初始化”与“项目实际启动”；OpenBSD src GitHub 镜像可能滞后于 CVS 主仓，commit 数统计仅供参考；【0 信任原则·commit 量不等于质量】L1.1.2 的 1995-
+- 格局形成的具体时点在不同叙事中略有差异——需对照三项目发布历史核实；netbsd.duckdb 中 NetBSD src 首条 commit（1992-07-13）为仓库初始化脚本，非实际源码导入，须区分“仓库初始化”与“项目实际启动”；OpenBSD src GitHub 镜像可能滞后于 CVS 主仓，commit 数统计仅供参考；【0 信任原则·commit 量不等于质量】L1.1.2 的 1995-
 - 定位选择的具体诱因在不同叙事中略有差异——需对照 OpenBSD 早期邮件列表核实
 - 文献：OpenBSD 1.0 发布声明；安全审计文档[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]
 - 广告条款的具体范围在不同叙事中略有差异——需对照许可证原文核实
