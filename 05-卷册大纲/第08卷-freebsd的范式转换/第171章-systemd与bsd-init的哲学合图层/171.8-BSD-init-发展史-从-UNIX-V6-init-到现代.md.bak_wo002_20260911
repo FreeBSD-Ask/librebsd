@@ -97,7 +97,7 @@ OpenBSD rc.d 与 NetBSD/FreeBSD rc.d 的关键差异：OpenBSD **rc.d(8)** **仅
 
 OpenBSD rc 简化时间窗口 2014-07 集中爆发（对应 OpenBSD 5.6 开发周期，5.6 于 2014-11 发布），代表 commit `8799e9c877093a6c8cab0864613896a160b0c87a`（2014-07-12，<robert@openbsd.org>，"Make rc.conf a parsed configuration file and stop sourcing it as a shell script"）、`e6e1e0799a3fc0c129c95f72dfc955a50f57d021`（2014-07-14，<deraadt@openbsd.org>，"rc.{local, securelevel, shutdown} become examples"）——但这些是 rc.conf 解析方式调整与 rc.local/rc.securelevel/rc.shutdown 角色调整，非 rc.d 系统本身的重写。
 
-DragonFly BSD 一手来源：`bsd_commits.db` dragonfly-src 仓库 commit `984263bcb83ad82313113c6ac840d99124d8f90c`（2003-06-17，<dillon@dragonflybsd.org>，"Initial import from FreeBSD RELENG_4"）—— fork 时继承 FreeBSD 4.x 旧 rc；commit `9c600e7dc7d49484402b035e0603d6447f88d960`（2003-07-24，<dillon@dragonflybsd.org>，"Bring RCNG in from 5.x and adjust config files and scripts accordingly. Bring in the 5.x mergemaster. Bring in the 5.x rcorder. Adjust Makefile's and mtree to deal with /etc/rc.d"）—— DragonFly BSD 主动从 FreeBSD 5.x 引入 RCNG。
+DragonFly BSD 一手来源：`dragonfly.duckdb` dragonfly-src 仓库 commit `984263bcb83ad82313113c6ac840d99124d8f90c`（2003-06-17，<dillon@dragonflybsd.org>，"Initial import from FreeBSD RELENG_4"）—— fork 时继承 FreeBSD 4.x 旧 rc；commit `9c600e7dc7d49484402b035e0603d6447f88d960`（2003-07-24，<dillon@dragonflybsd.org>，"Bring RCNG in from 5.x and adjust config files and scripts accordingly. Bring in the 5.x mergemaster. Bring in the 5.x rcorder. Adjust Makefile's and mtree to deal with /etc/rc.d"）—— DragonFly BSD 主动从 FreeBSD 5.x 引入 RCNG。
 
 #### 史观
 

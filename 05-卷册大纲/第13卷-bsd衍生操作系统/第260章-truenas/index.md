@@ -33,7 +33,7 @@ volume: 第13卷-bsd衍生操作系统
 
 ## 文献
 
-- FreeNAS/TrueNAS 官方文档；iXsystems 公司史；bsd_commits.db 查询 L7.6.1（truenas-middleware 仓库 commit 量趋势与 iXsystems 员工占比，2005-2026）；原材料/研究/bsd 仓库分析/数据分析/衍生项目与跨项目对比分析.md §L7.6。 ［B］<!-- DB_REF:freebsd.duckdb -->> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 2005-2011 年间：250,940 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
+- FreeNAS/TrueNAS 官方文档；iXsystems 公司史；freebsd.duckdb 查询 L7.6.1（truenas-middleware 仓库 commit 量趋势与 iXsystems 员工占比，2005-2026）；原材料/研究/bsd 仓库分析/数据分析/衍生项目与跨项目对比分析.md §L7.6。 ［B］<!-- DB_REF:freebsd.duckdb -->> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 2005-2011 年间：250,940 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
 - iXsystems 官方文档；bsd_commits.db 查询 L7.6.1（truenas-middleware commit 量趋势与 iXsystems 员工占比，2005-2026）；bsd_commits.db 查询 L3.2.1（商业实体 commit 占比随时间变化）；bsd_commits.db 查询 L3.2.2（商业实体 commit 量按仓库分布）；原材料/研究/bsd 仓库分析/数据分析/衍生项目与跨项目对比分析.md §L7.6；原材料/研究/bsd 仓库分析/数据分析/深层信息挖掘.md §L3.2.1、§L3.2.2。 ［B］## 259.2.2 外部贡献者
 - iXsystems 工程档案；freebsd.duckdb 查询 L7.2.1（衍生项目贡献者在 freebsd-src 的回馈 commit，≥5 次，前 30 名）；原材料/研究/bsd 仓库分析/数据分析/衍生项目与跨项目对比分析.md §L7.2。 ［A］<!-- DB_REF:bsd_derivatives.duckdb -->> **数据库引用（bsd_derivatives.duckdb）**：本子节对应 bsd_derivatives 代码仓库。> 2011-2026 年间：573,325 次提交。> 仓库总览：963,557 次提交，9,744 位贡献者（contributors 表行数，1985-06-13 至 2026-08-24）。
 - 各存储厂商官方资料。[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]<!-- DB_REF:bsd_derivatives.duckdb -->> **数据库引用（bsd_derivatives.duckdb）**：本子节对应 bsd_derivatives 代码仓库。> 1985-2026 年间：963,557 次提交。> 仓库总览：963,557 次提交，9,744 位贡献者（contributors 表行数，1985-06-13 至 2026-08-24）。

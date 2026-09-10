@@ -26,7 +26,7 @@ volume: 第10卷-openbsd的历史
 - 考据过程留痕——【查证来源】项目史观总纲第 5、8、19 条原文经原材料/哲学/项目统摄史观/第 25 章.md 一手核验，三条总纲的原文表述与本节引用一致；Adam Glass 通知邮件措辞经 <https://mail-index.netbsd.org/netbsd-users/1994/12/23/0000.html> 一手核验，"asked to resign" "long history
 - 考据过程留痕——【查证来源】Adam Glass 通知邮件原文经 <https://mail-index.netbsd.org/netbsd-users/1994/12/23/0000.html> 一手核验，邮件头 Date 字段为 12/23/1994 11:26:09，正文首句 "On December 20, Theo de Raadt was asked to resign" "remai
 - 考据过程留痕——【查证来源】Adam Glass 通知邮件原文经 <https://mail-index.netbsd.org/netbsd-users/1994/12/23/0000.html> 一手核验，"long history of rudeness towards and abuse of users and developers" "remaining members of ‘core
-- 考据过程留痕——【查证来源】项目史观总纲第 13、19、21 条原文经原材料/哲学/项目统摄史观/第 25 章.md 一手核验，三条总纲的原文表述与本节引用一致；Adam Glass 通知邮件措辞经 <https://mail-index.netbsd.org/netbsd-users/1994/12/23/0000.html> 一手核验；bsd_commits.db openbsd-src 仓库
+- 考据过程留痕——【查证来源】项目史观总纲第 13、19、21 条原文经原材料/哲学/项目统摄史观/第 25 章.md 一手核验，三条总纲的原文表述与本节引用一致；Adam Glass 通知邮件措辞经 <https://mail-index.netbsd.org/netbsd-users/1994/12/23/0000.html> 一手核验；openbsd.duckdb openbsd-src 仓库
 
 ## 文献
 

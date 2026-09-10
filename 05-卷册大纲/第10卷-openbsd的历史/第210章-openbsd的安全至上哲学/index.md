@@ -12,7 +12,7 @@ volume: 第10卷-openbsd的历史
 - OpenBSD 长期依赖 CD 销售（每张约 50 USD，每 6 个月发行一版）、海报销售（如 posters 系列）与捐赠维持运转；2014 年 1 月因卡尔加里电费危机（约 20,000 USD/月）发出募捐公告，引发全球募捐（HTTP dues 与 Winamp 创始人 Justin Frankel 等捐赠），最终募集资金超过 100,000 USD；OpenBSD 资金模式与 FreeB
 - OpenBSD 自 2.0（1997-06-01 发布）起保持每年 5 月与 11 月 6 个月固定发布周期传统——OpenBSD 7.9（2026-05-19 发布）是第 60 个 release，从未出现因外部事件推迟发布的情况（OpenBSD 各版本发布日期均见 <https://www.openbsd.org/> 各版本页面）；CD 封面艺术（每版由不同艺术家创作，如 3.4 的 Puff
 - OpenBSD 生态多元群体贡献包括 de Raadt 本人（南非裔加拿大人，1968 年生于比勒陀利亚，1977 年随家移居加拿大）、Niels Provos（尼尔斯·普罗沃斯）（德国，OpenSSH 主导开发者，openbsd.duckdb openbsd-src 仓库 provos 贡献者记录）、Jun-ichiro itojun Hagino（日本，IPv6 贡献者，2007-10-29
-- OpenBSD（BDFL 模式，de Raadt 单一决策，bsd_commits.db 显示 deraadt 27181 commits 占 OpenBSD 总 245857 commits 约 11%）、FreeBSD（Core Team 9 人集体治理，2000 年起直选制）、NetBSD（Foundation 董事会治理，1995 年成立）、Linux（Linus Torvalds BDF
+- OpenBSD（BDFL 模式，de Raadt 单一决策，openbsd.duckdb 显示 deraadt 27181 commits 占 OpenBSD 总 245857 commits 约 11%）、FreeBSD（Core Team 9 人集体治理，2000 年起直选制）、NetBSD（Foundation 董事会治理，1995 年成立）、Linux（Linus Torvalds BDF
 
 ## 史料
 
@@ -28,11 +28,11 @@ volume: 第10卷-openbsd的历史
 - OpenBSD 资金困境的具体程度在不同叙事中存在差异——OpenBSD Foundation 年报披露的 2023 年收入约 30 万 USD 与 de Raadt 在 misc@ 邮件列表多次提及的“无法承担电费”叙事并存，须区分“项目运营资金”（CD/海报销售维持 hackathon 等）与“Foundation 接受捐赠”（用于法律/财务事务）两个口径；2014 年电费危机的具体经过是 d
 - 原叙事中“2003 年因 Iraq War 推迟 3.4 发布”的说法与官方记录不符——OpenBSD 3.4 于 2003-11-01 按期发布（<https://www.openbsd.org/34.html>），与 Iraq War（2003-03-20 开始）无推迟关系；DARPA 撤资事件发生于 2003-04，亦未影响 3.4 发布；〔待核：原文截断，后文待回源〕
 - 多元群体贡献的发掘基于 commit log 与邮件列表记录——de Raadt 1968 年生于南非比勒陀利亚，1977 年随家移居加拿大，其反战立场（2003-04 伊拉克战争公开言论导致 DARPA 撤销 OpenBSD 项目约 230 万 USD 资助）对项目资金结构产生长期影响；DARPA 撤资的具体时间点是 2003-04-21 前后（DARPA 项目经理 Jan Cargnelli
-- 各项目治理结构的比较须避免简单褒贬——BDFL 模式在 OpenBSD 31 年历史中（1995-2026）未出现 succession 危机，但这不证明 BDFL 模式可持续，仅证明 de Raadt 个人持续活跃（bsd_commits.db 显示其 2026-07-16 仍有 commit）；〔待核：原文截断，后文待回源〕
+- 各项目治理结构的比较须避免简单褒贬——BDFL 模式在 OpenBSD 31 年历史中（1995-2026）未出现 succession 危机，但这不证明 BDFL 模式可持续，仅证明 de Raadt 个人持续活跃（openbsd.duckdb 显示其 2026-07-16 仍有 commit）；〔待核：原文截断，后文待回源〕
 
 ## 文献
 
-- OpenBSD Foundation 文档 [EB/OL]. <https://www.openbsdfoundation.org/>；de Raadt 邮件列表发言存档 [EB/OL]. <https://marc.info/?laccopenbsd-misc>；OpenBSD 项目主页 [EB/OL]. <https://www.openbsd.org/>；OpenBSD 项目目标 [EB/OL]. <https://www.openbsd.org/goals.html>；bsd_commits.db 查询 L3.4.1.top10（来源：原材料/研究/bsd 仓库分析/数据分析/深层信息挖掘.md §L3.4.1.top10） ［A］**四大 BSD/Linux 治理结构对比**：
+- OpenBSD Foundation 文档 [EB/OL]. <https://www.openbsdfoundation.org/>；de Raadt 邮件列表发言存档 [EB/OL]. <https://marc.info/?laccopenbsd-misc>；OpenBSD 项目主页 [EB/OL]. <https://www.openbsd.org/>；OpenBSD 项目目标 [EB/OL]. <https://www.openbsd.org/goals.html>；openbsd.duckdb 查询 L3.4.1.top10（来源：原材料/研究/bsd 仓库分析/数据分析/深层信息挖掘.md §L3.4.1.top10） ［A］**四大 BSD/Linux 治理结构对比**：
 
 | 项目 | 治理模式 | 决策核心 | Foundation 职能 |
 | --- | --- | --- | --- |

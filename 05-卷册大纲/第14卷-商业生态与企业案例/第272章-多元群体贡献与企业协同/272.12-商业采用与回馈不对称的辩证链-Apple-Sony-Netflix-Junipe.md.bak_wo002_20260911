@@ -27,7 +27,7 @@
 
 **要点**：商业第三方阵营的反批评是——商业采用者并非零回馈，而是以工程贡献、雇佣 committer、资金赞助三种形式回馈 FreeBSD 社区：Netflix 回馈了 RACK/TLP、KTLS 等网络栈优化至 freebsd-src 上游；Juniper 工程师参与 FreeBSD 网络社区并提交 patch；Apple 通过 Darwin 开源项目发布部分 BSD 衍生代码；NetApp 工程师参与 FreeBSD 文件系统相关工作；Jan Koum 以 WhatsApp 被 Facebook 收购后的 2014 年 11 月大额捐赠（$1,000,000）回馈 Foundation；商业采用者通过雇佣 FreeBSD committer（如 Netflix 雇佣 Jonathan Looney 等）间接支撑社区维护；BSDL 的“消极自由”明确允许商业使用不强制回馈，这是设计意图而非缺陷，是 CSRG 自 1980 年代起的策略选择
 
-**史料**：Netflix Tech Blog（RACK/TLP、KTLS 发布公告）、BSDCan 演讲视频（Jonathan Looney 等 Netflix 工程师）、FreeBSD Foundation 2014 年 11 月官方博客公告（Jan Koum 捐赠）、Apple Darwin Source 发布页、Juniper 工程档案；bsd_commits.db contributors 表显示 Netflix 工程师在 freebsd-src 仓库有 commit 记录（具体名单与 commit 数须按 @netflix.com 邮箱域名细分查询）[考据完成：2026-07-28 经穷尽联网考据，上述史料清单为已知公开来源汇总，部分原始档案未公开数字化或须档案馆藏地现场核验，属史料缺口，须待原始档案公开后方可补充确证]〔L1 代码/构建产物/L3 官方文档与公告/L4 事后叙述〕
+**史料**：Netflix Tech Blog（RACK/TLP、KTLS 发布公告）、BSDCan 演讲视频（Jonathan Looney 等 Netflix 工程师）、FreeBSD Foundation 2014 年 11 月官方博客公告（Jan Koum 捐赠）、Apple Darwin Source 发布页、Juniper 工程档案；freebsd.duckdb contributors 表显示 Netflix 工程师在 freebsd-src 仓库有 commit 记录（具体名单与 commit 数须按 @netflix.com 邮箱域名细分查询）[考据完成：2026-07-28 经穷尽联网考据，上述史料清单为已知公开来源汇总，部分原始档案未公开数字化或须档案馆藏地现场核验，属史料缺口，须待原始档案公开后方可补充确证]〔L1 代码/构建产物/L3 官方文档与公告/L4 事后叙述〕
 
 **史观**：总纲第 13 条——法律与道德是利益分配，BSDL 的设计意图是利益分配的工程化选择
 
@@ -63,7 +63,7 @@
 
 **要点**：从项目史观总纲第 11、13、19、21 条审视 Apple/Sony/Netflix/Juniper/NetApp 商业采用与回馈不对称，并非评判“谁对谁错”，而是揭示争议的形式主义性质、利益分配的政治产物属性、前理解差异的不可调和性，以及 Linux 革命路径与 BSD 改革路径的方法论分歧。第 21 条切入旨在将 BSDL 宽松许可与 GPL copyleft 强制回馈的许可证哲学对照，提升至“改革难于革命”的史观高度——BSD 改革路径承受散逸成本以换影响，Linux 革命路径承受法律执行成本以保回馈，二者在前理解差异（心中贼）面前同样无法彻底化解。
 
-**总纲第 11 条——商品是形式主义**。技术市场的选择不是自然选择，而是形式主义的权力运作。Apple 选择 FreeBSD 作为 Darwin 用户空间、Sony 选择 FreeBSD 作为 PS 系列固件底座、Netflix 选择 FreeBSD 作为 CDN 操作系统、Juniper 选择 FreeBSD 作为 Junos 控制平面、NetApp 选择 FreeBSD 作为 ONTAP 基底，这些选择不是技术最优的自然结果而是商业形式主义的权力运作——劣币驱逐良币的普遍规律在此表现为商业采用者选择 BSD 恰恰因为 BSDL 允许其不开源核心商业逻辑，这是“形式主义”对“技术纯粹性”的驱逐。FreeBSD Handbook 官方文档（**<https://www.freebsd.org.cn/freebsdhandbook/nutshell.html**>，访问日期 2026-07-23）确认上述五家商业采用事实，bsd_commits.db 查询显示 `@sony.com` 邮箱在 freebsd-src 仓库零 commit——Sony 选择 FreeBSD 作为 PS 系列固件底座但完全未以企业邮箱回馈上游，是“形式主义”对“技术纯粹性”驱逐的代码级具象。
+**总纲第 11 条——商品是形式主义**。技术市场的选择不是自然选择，而是形式主义的权力运作。Apple 选择 FreeBSD 作为 Darwin 用户空间、Sony 选择 FreeBSD 作为 PS 系列固件底座、Netflix 选择 FreeBSD 作为 CDN 操作系统、Juniper 选择 FreeBSD 作为 Junos 控制平面、NetApp 选择 FreeBSD 作为 ONTAP 基底，这些选择不是技术最优的自然结果而是商业形式主义的权力运作——劣币驱逐良币的普遍规律在此表现为商业采用者选择 BSD 恰恰因为 BSDL 允许其不开源核心商业逻辑，这是“形式主义”对“技术纯粹性”的驱逐。FreeBSD Handbook 官方文档（**<https://www.freebsd.org.cn/freebsdhandbook/nutshell.html**>，访问日期 2026-07-23）确认上述五家商业采用事实，freebsd.duckdb 查询显示 `@sony.com` 邮箱在 freebsd-src 仓库零 commit——Sony 选择 FreeBSD 作为 PS 系列固件底座但完全未以企业邮箱回馈上游，是“形式主义”对“技术纯粹性”驱逐的代码级具象。
 
 **总纲第 13 条——法律与道德是利益分配**。任何道德问题本质上是利益问题，社区治理亦是形式主义的政治产物。BSDL 作为利益分配的法律形式，其“允许商业使用不强制回馈”的设计不是道德中立而是利益分配的工程化选择——CSRG 在 1980 年代选择宽松许可证是为了扩大 UNIX 影响力（CSRG 利益），商业采用者在 1990-2020 年代选择 BSD 是为了获得免费 R&D（企业利益），FreeBSD 社区在 2000-2020 年代接受不对称是为了换取影响力（社区利益）。三方利益在 BSDL 框架内达成动态平衡，“白嫖”与“回馈”的道德指控本质上是利益分配争议的政治产物。Jan Koum 2014-11 捐赠 $1,000,000 至 Foundation（**<https://freebsdfoundation.blogspot.com/2014/11/freebsd-foundation-announces-generous.html**>，访问日期  2026-07-22）是利益分配的具象——WhatsApp 因依赖 FreeBSD 而以资金回馈，而非道德义务的履行。
 

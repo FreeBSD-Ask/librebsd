@@ -28,7 +28,7 @@ volume: 第03卷-伯克利学术文化外溢影响
 - CSRG 1986-1988 年在 4.4BSD 中实现 db(3) 库（多源一致：CSDN 内嵌数据库对比文章确认“db 的第一个发行版在 1991 年出现，当时还包含了 b+ 树数据访问算法。在 1992 年，BSD UNIX 第 4.4 发行版中包含了 Berkeley DB 1.85 版”——此处的"db"即指 db(3)/Berkeley DB 早期版本，db(3) 与 Berkeley
 - Sleepycat Software 1996 年由 Seltzer 与 Bostic 成立（多源一致：澎湃新闻 2021 年报道确认“seltzer 和 bostic 随后于 1996 年成立了 sleepycat software 公司，继续开发 berkeley db 并提供商业支持”；CCF 2021-06 简报确认同一事实）；Michael Olson 1997 年加入 Sleepyca
 - Redis 最初采用 BSD 3-Clause 许可证（多来源提及，[据一手文献印证消解^doubt-resolved-154——需查阅 Redis GitHub 早期 LICENSE 文件核实]）；2018 年 Redis Labs 将 Redis Modules 许可证改为 Commons Clause（[存疑——具体日期需查阅 Redis Labs 2018 公告归档]）；2024 年 3
-- Docker 引入 freebsd-ports 时间经 bsd_commits.db 查询确认为 2015-07-06T15:37:33Z by Kris Moore（commit b9d84bad"FreeBSD port of Docker"），同日 x11/docker 重命名为 x11/docker-tray（commit dd5c9a9c by Kris Moore"- Rename x
+- Docker 引入 freebsd-ports 时间经 freebsd.duckdb 查询确认为 2015-07-06T15:37:33Z by Kris Moore（commit b9d84bad"FreeBSD port of Docker"），同日 x11/docker 重命名为 x11/docker-tray（commit dd5c9a9c by Kris Moore"- Rename x
 
 ## 文献
 
@@ -36,11 +36,11 @@ volume: 第03卷-伯克利学术文化外溢影响
 - 4.4BSD-Lite db(3) 源代码与手册页（CSRG Archive CD-ROM / TUHS 归档）；Seltzer M, Ozmat N. Hash Strategies for Hash-Based Databases [J]. 1992 [据一手文献印证消解^doubt-resolved-150——具体期刊与卷期待核实]；McKusick M K, Bostic K, Karels M J, Quarterman J S. The Design and Implementation of the 4.4BSD Operating System [M]. Reading, MA: Addison-Wesley, 1996 ［B］
 - CCF 简报：2021 年 6 月——11 位学者获 ACM 四大技术奖项（<https://www.ccf.org.cn/ACM_News/2021-06-16/730235.shtml）；澎湃新>闻 2021 年报道（<https://m.thepaper.cn/newsDetail_forward_12875589）；Oracl>e 2006 收购 Sleepycat 公告（oracle.com） [存疑脚注——具体收购日期与金额需查阅 Oracle 官方公告] ［B］
 - Redis 2024-03 许可证变更公告（redis.io/blog）[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]；Valkey 项目页面（valkey.io）[考据完成：2026-07-28 该处存疑标注属史料缺口，须待原始档案公开后方可补充确证]；OSI 开源定义与许可证判定（opensource.org）[考据完成：2026-07-28 该处存疑标注属史料缺口，须待原始档案公开后方可补充确证] ［B］### 史观映射> 数据库的历史与 BSD 的历史在伯克利的 Evans Hall 四楼交汇——Ingres 和 BSD 共享同一台 PDP-11，Stonebraker 和 Joy 在同一个走廊里擦肩而过，关系数据库和 UNIX 操作系统在同一个学术环境中共同演化。但演化方向的分离来得比任何人预想的都快：Ingres 变成了 Sybase 和 SQL Server，Postgres 变成了 PostgreSQL，而 BSD 变成了 FreeBSD——它们都从伯克利出发，但走向了不同的商业命运。MySQL 在 FreeBSD 上跑得很好，PostgreSQL 在 BSD 许可证下活得很好，但 Oracle 从来没有认真考虑过 FreeBSD——数据库的世界被 Linux 和 Windows 瓜分，BSD 在角落里安静地跑着它自己的小数据库，偶尔有人想起“其实 Ingres 也是从伯克利出来的”**卷末**：书目述评（约 4,000 字）——评述 CSRG 时期文献，讨论“诉讼给予 Linux 18 个月无竞争窗口”的结构性后果，以及“4.4BSD-Lite 是否真实存在”的史料辨析。## 第 24.14 不同时期人员的采访录（详见 [采访录：Michael Stonebraker.md](采访录：Michael Stonebraker.md)）## 第 24.15 节 媒体反响与社区舆论（详见 [媒体反响与社区舆论.md](媒体反响与社区舆论.md)）## 附录链接
-- bsd_commits.db commit_files 表（sysutils/docker commit b9d84bad，2015-07-06 by Kris Moore；x11/docker commit eb5518047，2003-06-05 by Adam Weinberger；x11/docker-tray rename commit dd5c9a9c，2015-07-06 by Kris Moore）；Docker 官方历史；Kubernetes 官方历史；freebsd-ports/databases/ 目录索引 ［B］
+- freebsd.duckdb commit_files 表（sysutils/docker commit b9d84bad，2015-07-06 by Kris Moore；x11/docker commit eb5518047，2003-06-05 by Adam Weinberger；x11/docker-tray rename commit dd5c9a9c，2015-07-06 by Kris Moore）；Docker 官方历史；Kubernetes 官方历史；freebsd-ports/databases/ 目录索引 ［B］
 - Stonebraker 1986; MySQL 文档 ［A/B］
 - Stanford Encyclopedia of Philosophy. Mathematical Style [EB/OL]. plato.stanford.edu；freebsd-questions 邮件列表存档；LWN.net BSD 数据库相关文章；BSD 数据库社区档案 ［B］；资料数据库.db 文献计量学分析报告（`03-原始史料库/01-代码仓库史料/01-数据库本体/统计分析/文献计量学分析.md` Task 22，2026-07-27）；卷章数据映射表（`03-原始史料库/01-代码仓库史料/01-数据库本体/统计分析/卷章数据映射.md` 第二卷第 24 章）
-- bsd_commits.db commits 表与 commit_files 表（含迁移异常记录分析）；freebsd-databases 与 freebsd-ports 邮件列表存档；0 信任原则方法论（参见 规则/考据规则.md） ［A］
-- bsd_commits.db commits 表（ZFS commit f0a75d27 by Pawel Jakub Dawidek，2007-04-06；SQLite commit by Stanislav Sedov，2011-10-05）；FreeBSD 10.0 Release Notes（2014-01，pkgng 默认）；BSD 数据库社区档案；BSD 哲学文档 ［B］
+- freebsd.duckdb commits 表与 commit_files 表（含迁移异常记录分析）；freebsd-databases 与 freebsd-ports 邮件列表存档；0 信任原则方法论（参见 规则/考据规则.md） ［A］
+- freebsd.duckdb commits 表（ZFS commit f0a75d27 by Pawel Jakub Dawidek，2007-04-06；SQLite commit by Stanislav Sedov，2011-10-05）；FreeBSD 10.0 Release Notes（2014-01，pkgng 默认）；BSD 数据库社区档案；BSD 哲学文档 ［B］
 
 <!-- PODCAST_REVIEW v20260829 -->
 <!-- 语义复核范围：BSD Now EP196（共 1 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->

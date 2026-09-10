@@ -32,7 +32,7 @@
 
 **史观**：总纲第 22 条——开源运动：BSD 许可证使 OpenBSD 成果被产业自由采纳，放大多元群体贡献——pledge/unveil 的设计思想被 Linux seccomp 社区讨论，LibreSSL 被 Alpine Linux 采用，pf 被 FreeBSD/NetBSD 导入
 
-**辨析**：“企业回馈”的具体程度以 bsd_commits.db openbsd-src 仓库的企业邮箱贡献者 commit 计数为准——部分赞助为资金而非代码，对代码库的直接贡献须以提交历史核验；Apple/macOS 对 OpenBSD 安全机制的采用以 Apple Darwin 源码为准 [考据完成：2026-07-28 Apple 对 OpenBSD 安全机制的具体采用清单须以 Darwin 源码审计为准]
+**辨析**：“企业回馈”的具体程度以 openbsd.duckdb openbsd-src 仓库的企业邮箱贡献者 commit 计数为准——部分赞助为资金而非代码，对代码库的直接贡献须以提交历史核验；Apple/macOS 对 OpenBSD 安全机制的采用以 Apple Darwin 源码为准 [考据完成：2026-07-28 Apple 对 OpenBSD 安全机制的具体采用清单须以 Darwin 源码审计为准]
 
 **文献**：OpenBSD Foundation 年报 [EB/OL]. <https://www.openbsdfoundation.org/>；Apple/Cisco 与 OpenBSD 关系文档；cross-BSD 协调邮件列表 ［B］
 

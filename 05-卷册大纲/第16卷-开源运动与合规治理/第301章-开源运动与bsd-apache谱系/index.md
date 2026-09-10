@@ -82,7 +82,7 @@ volume: 第16卷-开源运动与合规治理
 ## 301.7.2 PR 模式对 BSD 补丁文化的冲击
 
 - 要点：PR 模式对 BSD 补丁文化的冲击：(1) GitHub PR 简化贡献门槛；(2) BSD 传统补丁文化（diff/patch 邮件提交）显得过时；(3) GitHub fork 模式降低贡献门槛但增加质量风险；(4) BSD 社区面临 “是否迁移 GitHub” 的长期争论；冲击持续至 2021 年 FreeBSD 迁移 GitH
-- FreeBSD Git 迁移公告；bsd_commits.db commits 表 freebsd-doc Warner Losh commit `86836673be10`（2021-03-16T18:43:35-06:00，"Fix more typos from the original github docs"）；bsd_commits.db commits 表 freebsd-doc Warner Losh commit `abff932fe818`（2021-03-16T22:23:19-06:00，"Merge in the migration from subversion /
+- FreeBSD Git 迁移公告；freebsd.duckdb commits 表 freebsd-doc Warner Losh commit `86836673be10`（2021-03-16T18:43:35-06:00，"Fix more typos from the original github docs"）；freebsd.duckdb commits 表 freebsd-doc Warner Losh commit `abff932fe818`（2021-03-16T22:23:19-06:00，"Merge in the migration from subversion /
 - ASF 文档； Jagielski 2008 ［A］
 - Weber《The Success of Open Source》；开源会议议程[考据完成：2026-07-28 经穷尽联网考据，上述文献清单为已知公开来源汇总，部分原始档案未公开数字化或须付费访问，属史料缺口，须待原始档案公开后方可补充确证]
 
