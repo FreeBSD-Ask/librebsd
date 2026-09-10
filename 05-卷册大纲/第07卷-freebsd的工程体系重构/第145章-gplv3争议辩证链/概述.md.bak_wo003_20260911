@@ -1,0 +1,143 @@
+---
+chapter: 第 145 章
+id: CH145
+volume: 第07卷-freebsd的工程体系重构
+---
+
+# 第 145 章 GPLv3 争议辩证链
+
+## 本章节索引
+
+1. [145.17 FreeBSD-阵营的反批评层-BSDL-与-GPLv3-不兼容的具体技术论证](145.17-FreeBSD-阵营的反批评层-BSDL-与-GPLv3-不兼容的具体技术论证.md)
+2. [145.18 FSF-GPL-阵营的再回应层与合图层-争议不可调和性的法律与哲学合图](145.18-FSF-GPL-阵营的再回应层与合图层-争议不可调和性的法律与哲学合图.md)
+3. [145.19 项目统摄史观审视-GPLv3-争议四层辩证链的元层反思](145.19-项目统摄史观审视-GPLv3-争议四层辩证链的元层反思.md)
+
+## 数据核验与统计（自动增补 · 0-信任）
+
+> **来源库**：资料数据库 · materials / material_cross_references；references_fulltext · chapter_matches / chapter_reviews；doubts_standalone · doubts_to_resolve
+> **方法**：基于全局章号 1–348 直接 SQL 聚合；未做外部事实验证；`ch=0`/未映射条目不计入本章。
+> **生成时间**：2026-08-04 ｜ **复现**：`script/_engine_integrity_analysis.py`
+
+| 指标 | 数值 |
+| --- | --- |
+| 锚定素材 | 356 篇（含存疑标记 24 篇） |
+| 存疑点 | 13 条 |
+| 参考文献匹配 | 0 条 |
+| 章节述评 | 未生成 |
+| 章内交叉引用 | 出 1 / 入 1 |
+
+**数据质量备注**：暂无参考文献匹配
+
+<!-- DATA_VERIFY_BLOCK v20260804 -->
+> 2026-08-11 补：批量修复 DVB 缺失（最终批）
+>
+## 数据核验与统计（自动增补 · 0-信任）
+>
+> **来源库**：资料数据库 · materials / material_cross_references；references_fulltext
+> **生成时间**：2026-08-11（批量回填）
+
+| 指标 | 数值 |
+| --- | --- |
+| 锚定素材 | 245 篇（含存疑标记 0 篇） |
+| 存疑点 | 0 条 |
+| 参考文献匹配 | 0 条 |
+| 章节述评 | 未生成 |
+| 章内交叉引用 | 出 0 / 入 0 |
+
+**数据质量备注**：史料回填优先对象；2026-08-11 批量回填 DVB 框架
+
+<!-- MAIL_MINE v20260813 -->
+## 邮件史料增补
+
+> 基于 6 个邮件数据库（260 万封）+ FTS5 全文索引自动挖掘，供编纂引用参考。
+> 以下为本章主题相关的邮件史料线索（精确词命中，含时间范围与代表邮件）。
+
+- **gplv3**（freebsd）: 3,572 封 · 2007-2021
+  - [2007] [FreeBSD-Announce] End-of-Year Fund Raising Drive — deb at freebsd.org (Deb G
+  - [2007] C++ in the kernel — bms at incunabulum.net (B
+  - [2007] C++ in the kernel — alfred at freebsd.org (Al
+- **gpl**（freebsd）: 7,718 封 · 1994-2021
+  - [1994] Who has an EISA config file !HIT0001?? — Rodney W Grimes
+  - [1994] Re: Don't scream.. — Thomas David Rivers
+  - [1994] Setting up Sliplogin.. — John Herks
+
+<!-- /MAIL_MINE -->
+
+<!-- DB_POINTS:doubts_resolved -->
+**数据库要点引用（doubts_standalone.db · 2026-08-13）**
+
+> 来源：`04-现代研究文献/06-存疑数据库/doubts_standalone.db` 表 `doubts_to_resolve`（1987 条，1966 已解决）。本章存疑 13 条已解决。类别分布：other(9)、source_conflict(2)、date(1)、fact(1)
+
+> 存疑管理体系：98.9% 已闭环，解决结论含 date/fact/source_conflict/name/version 等类型，具体结论见 doubts_standalone.db 表 `resolution_summary` 字段。
+<!-- /DB_POINTS:doubts_resolved -->
+
+<!-- DB_POINTS:chapter_reviews -->
+**数据库要点引用（references_fulltext.db · chapter_reviews · 2026-08-13）**
+
+> 来源：`04-现代研究文献/05-参考文献全文数据库/references_fulltext.db` 表 `chapter_reviews`（348 章全覆盖）。本章级文献综述 1354 字、匹配 0 篇文献，状态 imported。映射：旧章号 +1 → 磁盘章号。
+
+> **综述要点**：本章围绕“GPLv3 争议辩证链”展开，覆盖 144.17 FreeBSD-阵营的反批评层-BSDL-与-GPLv3…；144.18 FSF-GPL-阵营的再回应层与合图层-争议不可调和性的…；144.19 项目统摄史观审视-GPLv3-争议四层辩证链的元层反思。数据核验显示：锚定素材 356 篇（含存疑标记 24 篇）、参考文献匹配 0 条、存疑点 13 条（自动增补，0 信任原则下须人工复核）。子节要点：144.17 FreeBSD
+
+<!-- /DB_POINTS:chapter_reviews -->
+
+<!-- COL_SCAN v20260826 -->
+## 内容包复核增补（Phase 4 · 2026-08-26 · fix1 统一口径）
+
+> 基于 5 个核心数据库（doubts_standalone、historical_claims、original_sources、资料数据库、references_fulltext）内容包自动匹配与审核（fix1 统一口径重新提取，解除 500MB 库大小限制）。
+> 内容包总行数：200 | 去重主张数：15 | 复核方法：12 步流程（详见 vol01_phase4_summary.md）
+
+### 证据等级分布
+
+| 等级 | 说明 | 数量 | 占比 |
+| --- | --- | --- | --- |
+| L1 | 代码与构建产物 | 0 | 0.0% |
+| L2 | 即时通讯记录 | 0 | 0.0% |
+| L3 | 官方文档与公告 | 0 | 0.0% |
+| L4 | 事后叙述 | 0 | 0.0% |
+| L5 | 二手研究 | 200 | 100.0% |
+
+### 来源数据库分布
+
+| 来源 | 行数 |
+| --- | --- |
+| references_fulltext | 200 |
+
+### 新增证据点
+
+1. [L5] `references_fulltext.references` — Kernighan_Pike_UNIX_Programming_Environment_EN
+2. [L5] `references_fulltext.references` — THEMultiprogrammingSystem
+3. [L5] `references_fulltext.references` — DecomposingSystemsIntoModules
+4. [L5] `references_fulltext.references` — AFastFileSystemForUNIX
+5. [L5] `references_fulltext.references` — ReflectionsOnTrustingTrust
+6. [L5] `references_fulltext.references` — understanding risks and -- Meeker, Heather J_, 1959- -- John Wiley & Sons, Inc_ (trade), Hoboken, N_J_, 2008 -- Hoboken,
+7. [L5] `references_fulltext.references` — The Fall of the Bell System A Study in Prices and Politics (Peter Temin, Louis Galambos) 
+8. [L5] `references_fulltext.references` — BECK B. Pledge & Unveil[C]//BSDCan 2018. Ottawa, 2018.
+9. [L5] `references_fulltext.references` — bsdcan2019-perform-slides
+10. [L5] `references_fulltext.references` — bsdcan2025-hshoexer-confidential-computing
+11. [L5] `references_fulltext.references` — florian_slaacd_bsdcan2018
+12. [L5] `references_fulltext.references` — 2024-Why-Rewrite-fw_update-EuroBSDcon
+
+### 0 信任评估
+
+- 独立来源数：1 个数据库
+- 一级史料通过率：0.0%（L1+L2+L3 / 总行数）
+- 本章内容包无 L3/L4 级史料，所有条目均为 L5 二手研究，不可独立支撑事实性陈述
+- 所有主张均来自内容包自动匹配，未经人工逐一核实
+- 单一来源支撑的主张须标注 (单一文献支撑，待交叉验证)
+
+### 交叉验证提示
+
+- 本章 L5 级二手研究数量较大（200 条），需注意区分学术文献与通俗技术博客，仅学术文献可作参考
+
+<!-- /COL_SCAN -->
+
+<!-- DEEP_ANALYSIS: freebsd.duckdb.commits -->
+**数据库分析发现**（证据等级：L1，来源：`freebsd.duckdb.commits.freebsd`）
+
+freebsd 代码仓库：从 1993 年到 2026 年，共 1294851 次提交，5671 位贡献者参与。
+
+<!-- DEEP_ANALYSIS: freebsd.duckdb.commits -->
+**数据库分析发现**（证据等级：L1，来源：`freebsd.duckdb.commits.freebsd`）
+
+freebsd 核心贡献者：Po-Chuan Hsieh(68595), Sunpoet Po-Chuan Hsieh(51033), Yuri Victorovich(29759), Jan Beich(22360), Martin Wilke(20341)
+

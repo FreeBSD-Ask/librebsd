@@ -1,0 +1,232 @@
+---
+chapter: 第 231 章
+id: CH231
+volume: 第11卷-dragonflybsd的历史
+---
+
+# 第 231 章 DragonFly 6.x 的现代化与持续维护
+
+> 本子章由原第 101 章拆分而来，承载 231.1-231.5 节。
+
+## 本章节索引
+
+1. [231.1 dragonfly6264的现代化20222025](231.1-dragonfly6264的现代化20222025.md)
+2. [231.2 dragonfly64系列的持续维护与v641v642发布20232025](231.2-dragonfly64系列的持续维护与v641v642发布20232025.md)
+3. [231.3 committer权限记录20192026](231.3-committer权限记录20192026.md)
+4. [231.4 dragonfly的现状与未来2026](231.4-dragonfly的现状与未来2026.md)
+5. [231.5 dragonflybsd6x周期漏洞与安全响应综览](231.5-dragonflybsd6x周期漏洞与安全响应综览.md)
+
+## 数据核验与统计（自动增补 · 0-信任）
+
+> **来源库**：资料数据库 · materials / material_cross_references；references_fulltext · chapter_matches / chapter_reviews；doubts_standalone · doubts_to_resolve
+> **方法**：基于全局章号 1–348 直接 SQL 聚合；未做外部事实验证；`ch=0`/未映射条目不计入本章。
+> **生成时间**：2026-08-04 ｜ **复现**：`script/_engine_integrity_analysis.py`
+
+| 指标 | 数值 |
+| --- | --- |
+| 锚定素材 | 0 篇（含存疑标记 0 篇） |
+| 存疑点 | 33 条 |
+| 参考文献匹配 | 0 条 |
+| 章节述评 | 未生成 |
+| 章内交叉引用 | 出 0 / 入 0 |
+
+**数据质量备注**：本章尚无锚定素材，属史料回填优先对象；存疑点较多（33 条），建议优先考据核验；暂无参考文献匹配
+
+<!-- DATA_VERIFY_BLOCK v20260804 -->
+> 2026-08-11 补：本卷全部 23 章原缺 DATA_VERIFY_BLOCK，此为批量修复补入。卷级综述见 [vol-11.md](../../../04-现代研究文献/02-卷级文献综述/vol-11.md)
+>
+## 数据核验与统计（自动增补 · 0-信任）
+
+> **来源库**：资料数据库 · materials / material_cross_references；references_fulltext · chapter_matches / chapter_reviews；doubts_standalone · doubts_to_resolve
+> **方法**：基于全局章号 1–348 直接 SQL 聚合；未做外部事实验证；`ch=0`/未映射条目不计入本章。
+> **生成时间**：2026-08-11（批量回填） ｜ **复现**：`script/_engine_integrity_analysis.py`
+
+| 指标 | 数值 |
+| --- | --- |
+| 锚定素材 | 待补（本卷全部 23 章原缺锚定素材，属史料回填优先对象） |
+| 存疑点 | 0 条 |
+| 参考文献匹配 | 1 条 |
+| 章节述评 | 未生成 |
+| 章内交叉引用 | 出 0 / 入 0 |
+
+**数据质量备注**：本章为 DragonFly BSD 卷，史料档案待从 03-原始史料库/11-邮件列表史料/ 和 dragonfly.duckdb dragonfly-src 仓库补充；2026-08-11 批量回填 DVB 框架
+
+<!-- DB_POINTS:cross_indexes_person -->
+**数据库要点引用（cross_indexes.db · person_bio_research · 2026-08-13）**
+
+> 来源：`10-交叉索引/cross_indexes.db` 表 `person_bio_research`（去重后 276 条，P0 26/P1 75/P2 175/未分级 0）。映射：数据库旧章号 +1 → 磁盘章号。本章涉及人物 1 位。
+
+- [P2] Antonio Huete Jimenez（安东尼奥·韦特·希门尼斯）：DragonFly BSD 维护者
+<!-- /DB_POINTS:cross_indexes_person -->
+
+<!-- DB_POINTS:doubts_resolved -->
+**数据库要点引用（doubts_standalone.db · 2026-08-13）**
+
+> 来源：`04-现代研究文献/06-存疑数据库/doubts_standalone.db` 表 `doubts_to_resolve`（1987 条，1966 已解决）。本章存疑 33 条已解决。类别分布：other(23)、date(6)、version(3)、name(1)
+
+> 存疑管理体系：98.9% 已闭环，解决结论含 date/fact/source_conflict/name/version 等类型，具体结论见 doubts_standalone.db 表 `resolution_summary` 字段。
+<!-- /DB_POINTS:doubts_resolved -->
+
+<!-- DB_POINTS:chapter_reviews -->
+**数据库要点引用（references_fulltext.db · chapter_reviews · 2026-08-13）**
+
+> 来源：`04-现代研究文献/05-参考文献全文数据库/references_fulltext.db` 表 `chapter_reviews`（348 章全覆盖）。本章级文献综述 826 字、匹配 4 篇文献，状态 imported。映射：旧章号 +1 → 磁盘章号。
+
+> **综述要点**：本章围绕“DragonFly 6.x 的现代化与持续维护”展开，覆盖 230.1 dragonfly6264的现代化20222025；230.2 dragonfly64系列的持续维护与v641v642发布…；230.3 committer权限记录20192026；230.4 dragonfly的现状与未来2026；230.5 dragonflybsd6x周期漏洞与安全响应综览。数据核验显示：锚定素材 0 篇（含存疑标记 0 篇）、参考文
+
+<!-- /DB_POINTS:chapter_reviews -->
+
+<!-- COL_SCAN v20260826 -->
+## 内容包复核增补（Phase 4 · 2026-08-26）
+
+> 基于 4 个核心数据库（doubts_standalone、historical_claims、original_sources、资料数据库）内容包自动匹配与审核。
+> 内容包总行数：600 | 去重主张数：198 | 复核方法：12 步流程（详见 vol2to5_phase4_summary.md）
+
+### 证据等级分布
+
+| 等级 | 说明 | 数量 | 占比 |
+| --- | --- | --- | --- |
+| L1 | 代码与构建产物 | 400 | 66.7% |
+| L2 | 即时通讯记录 | 0 | 0.0% |
+| L3 | 官方文档与公告 | 200 | 33.3% |
+| L4 | 事后叙述 | 0 | 0.0% |
+| L5 | 二手研究 | 0 | 0.0% |
+
+### 来源数据库分布
+
+| 来源 | 行数 |
+| --- | --- |
+| 资料数据库 | 600 |
+
+### 新增证据点（L1-L3）
+
+1. [L3] `资料数据库.freebsd_sa.full_text#1` — -----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA512
+
+=============================================================================
+FreeBSD-SA-26:49.iconv                                     Security Advis...
+2. [L1] `资料数据库.nvd_cve_metadata.description#cve_id=CVE-2002-0429` — The iBCS routines in arch/i386/kernel/traps.c for Linux kernels 2.4.18 and earlier on x86 systems allow local users to kill arbitrary processes via a a binary compatibility interface (lcall).
+3. [L1] `资料数据库.nvd_cve_metadata.description#cve_id=CVE-2004-2771` — The expand function in fio.c in Heirloom mailx 12.5 and earlier and BSD mailx 8.1.2 and earlier allows remote attackers to execute arbitrary commands via shell metacharacters in an email address.
+4. [L1] `资料数据库.nvd_cve_metadata.description#cve_id=CVE-2005-0953` — Race condition in bzip2 1.0.2 and earlier allows local users to modify permissions of arbitrary files via a hard link attack on a file while it is being decompressed, whose permissions are changed by ...
+5. [L1] `资料数据库.nvd_cve_metadata.description#cve_id=CVE-2005-1797` — The design of Advanced Encryption Standard (AES), aka Rijndael, allows remote attackers to recover AES keys via timing attacks on S-box lookups, which are difficult to perform in constant time in AES ...
+6. [L1] `资料数据库.nvd_cve_metadata.description#cve_id=CVE-2005-3011` — The sort_offline function for texindex in texinfo 4.8 and earlier allows local users to overwrite arbitrary files via a symlink attack on temporary files.
+7. [L1] `资料数据库.nvd_cve_metadata.description#cve_id=CVE-2005-3352` — Cross-site scripting (XSS) vulnerability in the mod_imap module of Apache httpd before 1.3.35-dev and Apache httpd 2.0.x before 2.0.56-dev allows remote attackers to inject arbitrary web script or HTM...
+8. [L1] `资料数据库.nvd_cve_metadata.description#cve_id=CVE-2006-0225` — scp in OpenSSH 4.2p1 allows attackers to execute arbitrary commands via filenames that contain shell metacharacters or spaces, which are expanded twice.
+9. [L1] `资料数据库.nvd_cve_metadata.description#cve_id=CVE-2006-1539` — Multiple buffer overflows in the checkscores function in scores.c in tetris-bsd in bsd-games before 2.17-r1 in Gentoo Linux might allow local users with games group membership to gain privileges by mo...
+10. [L1] `资料数据库.nvd_cve_metadata.description#cve_id=CVE-2006-1744` — Buffer overflow in pl_main.c in sail in BSDgames before 2.17-7 allows local users to execute arbitrary code via a long player name that is used in a scanf function call.
+11. [L1] `资料数据库.nvd_cve_metadata.description#cve_id=CVE-2006-2362` — Buffer overflow in getsym in tekhex.c in libbfd in Free Software Foundation GNU Binutils before 20060423, as used by GNU strings, allows context-dependent attackers to cause a denial of service (appli...
+12. [L1] `资料数据库.nvd_cve_metadata.description#cve_id=CVE-2006-2937` — OpenSSL 0.9.7 before 0.9.7l and 0.9.8 before 0.9.8d allows remote attackers to cause a denial of service (infinite loop and memory consumption) via malformed ASN.1 structures that trigger an improperl...
+13. [L1] `资料数据库.nvd_cve_metadata.description#cve_id=CVE-2006-2940` — OpenSSL 0.9.7 before 0.9.7l, 0.9.8 before 0.9.8d, and earlier versions allows attackers to cause a denial of service (CPU consumption) via parasitic public keys with large (1) "public exponent" or (2)...
+14. [L1] `资料数据库.nvd_cve_metadata.description#cve_id=CVE-2006-3467` — Integer overflow in FreeType before 2.2 allows remote attackers to cause a denial of service (crash) and possibly execute arbitrary code via a crafted PCF file, as demonstrated by the Red Hat bad1.pcf...
+15. [L1] `资料数据库.nvd_cve_metadata.description#cve_id=CVE-2006-3738` — Buffer overflow in the SSL_get_shared_ciphers function in OpenSSL 0.9.7 before 0.9.7l, 0.9.8 before 0.9.8d, and earlier versions has unspecified impact and remote attack vectors involving a long list ...
+
+> 另有 183 条 L1-L3 证据点未列出，详见内容包文件。
+
+### 0 信任评估
+
+- 独立来源数：1 个数据库
+- 一级史料通过率：100.0%（L1+L2+L3 / 总行数）
+- 本章 L1-L3 级史料 198 条，可纳入大纲但需标注来源
+- 所有主张均来自内容包自动匹配，未经人工逐一核实
+- 单一来源支撑的主张须标注 (单一文献支撑，待交叉验证)
+
+### 交叉验证提示
+
+- 本章有 198 条 L1-L3 级证据，建议优先与此前已入库的 MAIL_MINE、DB_POINTS、PODCAST_MINE 块交叉验证
+- 本章仅从单一数据库获取证据，须标注 (单一文献支撑，待交叉验证)
+
+<!-- /COL_SCAN -->
+
+
+<!-- DEEP_ANALYSIS: openssh-apple.duckdb.commits -->
+**数据库分析发现**（证据等级：L1，来源：`openssh-apple.duckdb.commits.openssh-apple`）
+
+openssh-apple 代码仓库：从 2001 年到 2025 年，共 35 次提交，1 位贡献者参与。
+
+
+
+<!-- DEEP_ANALYSIS: darwin.duckdb.commits -->
+**数据库分析发现**（证据等级：L1，来源：`darwin.duckdb.commits.darwin`）
+
+darwin 代码仓库：从 2001 年到 2026 年，共 2016 次提交，43 位贡献者参与。
+
+
+
+<!-- DEEP_ANALYSIS: openssh-apple.duckdb.commits -->
+**数据库分析发现**（证据等级：L1，来源：`openssh-apple.duckdb.commits.openssh-apple`）
+
+openssh-apple 核心贡献者：Apple OSS Distributions(35)
+
+
+
+<!-- DEEP_ANALYSIS: darwin.duckdb.commits -->
+**数据库分析发现**（证据等级：L1，来源：`darwin.duckdb.commits.darwin`）
+
+darwin 核心贡献者：Apple OSS Distributions(2016)
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L2，来源：`historical_claims.duckdb.claim.CL-7-027`）
+
+参考文献全文数据库收录《1983 Apple v Franklin 714F2d1240》（unknown，1983），作为本章主题的候选史料。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L2，来源：`historical_claims.duckdb.claim.CL-7-040`）
+
+参考文献全文数据库收录《20260805 Leventhal MacOSX missing probes 2008 en》（unknown，2026），作为本章主题的候选史料。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L2，来源：`historical_claims.duckdb.claim.CL-7-043`）
+
+参考文献全文数据库收录《entry08400 newsroom 2024 09 macos sequoia is available today》（unknown，2024），作为本章主题的候选史料。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L2，来源：`historical_claims.duckdb.claim.CL-7-032`）
+
+参考文献全文数据库收录《entry08427 apple oss distributions xnu》（unknown，年份不详），作为本章主题的候选史料。
+
+## 文献
+
+- Ingo Schwarze. bsdcan14-mandoc[M]. 2014.
+- Ingo Schwarze. bsdcan15-mandoc[M]. 2015.
+- eurobsdcon2014-mandoc-slides[M].
+- eurobsd-firewalls-2002[M]. 2002.
+- Watson. Capsicum USENIX-Security[M]. 2010.
+- bart, mzhang464, elisa. 018 The Relevance of Classic Fuzz Testing Have We Solved This One[M]. 2021.
+- 付远志. 操作系统内核模糊测试方法研究[M]. 2021.
+- White H. Metahistory: The Historical Imagination in Nineteenth-Century Europe [M]. Baltimore: Johns Hopkins University Press, 1973.
+- eurobsdcon2014-mandoc-paper[M].
+
+<!-- MAIL_INSIGHT_SECTION v20260828-v2 -->
+## 邮件列表分析观点（2026-08-28 自动增补）
+
+> 数据源：`script/_mail_analysis/topic_analysis_dragonfly.md`（7 主题 × 50 封邮件）+ `person_analysis_dragonfly_dillon.md`（Dillon 500 封邮件分析）
+> 方法：按章主题从报告中提取邮件段落，蒸馏为史学观点（V2 格式）
+> 注意：报告覆盖范围主要为 2023-2026 年 bug 跟踪器与用户邮件列表，早期（2003-2020）历史邮件未纳入分析
+
+
+
+<!-- MAIL_INSIGHT: <redmine.issue-3419.20260719180849.9407@leaf.dragonflybsd.org> -->
+**观点**：jfmai 在 2026 年 7 月报告了 DragonFly 6.4.2-RELEASE 上的 Intel KMS 驱动自动加载问题（Bug #3419）：在 Lenovo ThinkPad X200 上，重启后首次 `startx` 失败，但第二次成功。当 `i915` 模块通过 `i915_load="YES"` 在 `/etc/rc.conf` 中显式加载时，首次 `startx` 即可正常工作。这是一个典型的驱动加载竞态条件。
+**邮件来源**：jfmai，DragonFly BSD Bug Tracker，2026-07-19，Message-ID: `redmine.issue-3419.20260719180849.9407@leaf.dragonflybsd.org`
+**史学意义**：Intel KMS 驱动的自动加载问题表明，DragonFly 6.x 在桌面硬件兼容性方面仍存在基础性问题。用户 jfmai 使用 ThinkPad X200（2008 年发布的老旧硬件）运行 DragonFly 6.4.2，也提示了 DragonFly 用户群可能集中在较旧硬件上。
+<!-- /MAIL_INSIGHT -->
+
+<!-- MAIL_INSIGHT: <redmine.journal-14683.20260705233928.199@leaf.dragonflybsd.org> -->
+**观点**：tuxillo 在 2026 年 7 月将 FreeBSD 的 virtio-mmio 传输驱动导入 DragonFly 并适配 x86 架构（提交 `116009a77fa3`），目标版本为 6.6。这一导入表明 DragonFly 6.x 仍在积极跟进虚拟化基础设施的改进，但依赖 FreeBSD 作为上游代码来源。
+**邮件来源**：tuxillo，DragonFly BSD Bug Tracker，2026-07-05，Message-ID: `redmine.journal-14683.20260705233928.199@leaf.dragonflybsd.org`
+**史学意义**：DragonFly 6.x 的现代化策略本质上仍是“从 FreeBSD 选择性导入”——在 virtio 等通用基础设施方面依赖 FreeBSD 上游，而在内核架构（LWKT）和文件系统（HAMMER 2）方面保持独立路线。这一策略的有效性取决于 FreeBSD API 的兼容程度。
+<!-- /MAIL_INSIGHT -->
+
+<!-- MAIL_INSIGHT: <dragonfly-bugs-2026-June-366732> -->
+**观点**：liweitianux 在 2026 年 6 月提交了 Bug #3415，建议 DragonFly 内核对象应保留目录层次结构，以避免文件名冲突。liweitianux 自己 assign 了这个改进任务，目标版本为 6.6。这表明 DragonFly 6.x 的构建系统仍在进行基础性改进，且贡献者可以自主认领任务。
+**邮件来源**：liweitianux，DragonFly BSD Bug Tracker，2026-06-23，Message-ID: `dragonfly-bugs-2026-June-366732`
+**史学意义**：liweitianux 作为 DragonFly 的活跃贡献者，在构建系统等基础设施方面承担了独立角色。这种“贡献者自主认领任务”的模式是 Dillon 个人主导治理下社区协作的具体形式——Dillon 审查关键内核变更，而基础设施改进可由社区成员自主推进。
+<!-- /MAIL_INSIGHT -->

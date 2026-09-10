@@ -1,0 +1,118 @@
+---
+chapter: 第 295 章
+id: CH295
+volume: 第15卷-许可证哲学与法律分析
+---
+
+# 第 295 章 当代 UNIX 史——USL 诉讼后的 UNIX 归属流转，1994-1998
+
+## 本章节索引
+
+1. [295.1 USL-诉讼后的-UNIX-归属流转](295.1-USL-诉讼后的-UNIX-归属流转.md)
+2. [295.2 标准化的转向-X-Open-Open-Group-Single-UNIX-Specification](295.2-标准化的转向-X-Open-Open-Group-Single-UNIX-Spe.md)
+3. [295.3 SCO-诉-IBM-案-UNIX-版权争议的长尾](295.3-SCO-诉-IBM-案-UNIX-版权争议的长尾.md)
+4. [295.4 Solaris-的演化与-Oracle-收购](295.4-Solaris-的演化与-Oracle-收购.md)
+5. [295.5 AIX-的演化-IBM-Power-与-AIX-7-3](295.5-AIX-的演化-IBM-Power-与-AIX-7-3.md)
+6. [295.6 sco诉讼的延伸打击-sco-v-autozone与sco-v-daimlerchrysler](295.6-sco诉讼的延伸打击-sco-v-autozone与.md)
+
+## 数据核验与统计（自动增补 · 0-信任）
+
+> **来源库**：资料数据库 · materials / material_cross_references；references_fulltext · chapter_matches / chapter_reviews；doubts_standalone · doubts_to_resolve
+> **方法**：基于全局章号 1–348 直接 SQL 聚合；未做外部事实验证；`ch=0`/未映射条目不计入本章。
+> **生成时间**：2026-08-04 ｜ **复现**：`script/_engine_integrity_analysis.py`
+
+| 指标 | 数值 |
+| --- | --- |
+| 锚定素材 | 0 篇（含存疑标记 0 篇） |
+| 存疑点 | 0 条 |
+| 参考文献匹配 | 0 条 |
+| 章节述评 | 未生成 |
+| 章内交叉引用 | 出 0 / 入 0 |
+
+**数据质量备注**：本章尚无锚定素材，属史料回填优先对象；暂无参考文献匹配
+
+<!-- DATA_VERIFY_BLOCK v20260804 -->
+> 2026-08-11 补：本卷原缺 DATA_VERIFY_BLOCK，此为批量修复补入。
+>
+## 数据核验与统计（自动增补 · 0-信任）
+
+> **来源库**：资料数据库 · materials / material_cross_references；references_fulltext · chapter_matches / chapter_reviews；doubts_standalone · doubts_to_resolve
+> **方法**：基于全局章号 1–348 直接 SQL 聚合；未做外部事实验证；`ch=0`/未映射条目不计入本章。
+> **生成时间**：2026-08-11（批量回填） ｜ **复现**：`script/_engine_integrity_analysis.py`
+
+| 指标 | 数值 |
+| --- | --- |
+| 锚定素材 | 12 篇（含存疑标记 0 篇） |
+| 存疑点 | 0 条 |
+| 参考文献匹配 | 0 条 |
+| 章节述评 | 未生成 |
+| 章内交叉引用 | 出 0 / 入 0 |
+
+**数据质量备注**：属史料回填优先对象；2026-08-11 批量回填 DVB 框架
+
+<!-- DB_POINTS:chapter_reviews -->
+**数据库要点引用（references_fulltext.db · chapter_reviews · 2026-08-13）**
+
+> 来源：`04-现代研究文献/05-参考文献全文数据库/references_fulltext.db` 表 `chapter_reviews`（348 章全覆盖）。本章级文献综述 300 字、匹配 0 篇文献，状态 imported。映射：旧章号 +1 → 磁盘章号。
+
+> **综述要点**：本章围绕“当代 UNIX 史——USL 诉讼后的 UNIX 归属流转，1994-1998”展开，覆盖 294.1 USL-诉讼后的-UNIX-归属流转；294.2 标准化的转向-X-Open-Open-Group-Sing…；294.3 SCO-诉-IBM-案-UNIX-版权争议的长尾；294.4 Solaris-的演化与-Oracle-收购；294.5 AIX-的演化-IBM-Power-与-AIX-7-3 等 6 个子节。数据核验显
+
+<!-- /DB_POINTS:chapter_reviews -->
+
+<!-- COL_SCAN v20260826 -->
+## 内容包复核增补（Phase 4 · 2026-08-26）
+
+> 基于 4 个核心数据库（doubts_standalone、historical_claims、original_sources、资料数据库）内容包自动匹配与审核。
+> 内容包总行数：138 | 去重主张数：15 | 复核方法：12 步流程（详见 vol01_phase4_summary.md）
+
+### 证据等级分布
+
+| 等级 | 说明 | 数量 | 占比 |
+| --- | --- | --- | --- |
+| L1 | 代码与构建产物 | 0 | 0.0% |
+| L2 | 即时通讯记录 | 0 | 0.0% |
+| L3 | 官方文档与公告 | 138 | 100.0% |
+| L4 | 事后叙述 | 0 | 0.0% |
+| L5 | 二手研究 | 0 | 0.0% |
+
+### 来源数据库分布
+
+| 来源 | 行数 |
+| --- | --- |
+| original_sources | 138 |
+
+### 新增证据点
+
+1. [L3] `original_sources.kaoju_records` — 本次考据综合调用以下来源：  - **WebSearch 检索**：约 30 次英文/中文关键词检索，关键词涵盖 `BSD origin`、`Linux history`、`OpenBSD`、`FreeBSD`、`4.2BSD`、`4.3B
+2. [L3] `original_sources.kaoju_records` — 本文件各案例的“证据来源”小节即对应“查证来源”字段，列出每个案例的一手论文（如 Bonwick 1994 USENIX 论文、Kleiman 1986 SunOS 论文）、Linux 内核源码注释、kernel.org 官方文档与互联网档
+3. [L3] `original_sources.kaoju_records` — 1. **一手数据库**：`原材料/研究/bsd仓库分析/freebsd.duckdb`（freebsd-src / freebsd-doc / freebsd-ports / netbsd-src / openbsd-src / drag
+4. [L3] `original_sources.kaoju_records` — ### 一手史料  - **OpenBSD errata patches 官方存档**：`https://www.openbsd.org/errata.html` 与各版本 errataXX.html（访问日期 2026-07-22）。本地
+5. [L3] `original_sources.kaoju_records` — ### 一手史料  - **FreeBSD Security Advisories 官方存档**：`https://www.freebsd.org/security/advisories/`（访问日期 2026-07-22）。第三卷时期（1
+6. [L3] `original_sources.kaoju_records` — ### 一手史料  - **NetBSD Security Advisories 官方存档**：`https://www.netbsd.org/support/security/advisory.html`（访问日期 2026-07-22）
+7. [L3] `original_sources.kaoju_records` — ### 一手史料  - **CSRG 技术报告（EECS/TR）**：加州大学伯克利分校计算机系统研究小组（CSRG）发布的官方技术报告系列，含 3BSD/4BSD/4.1BSD/4.2BSD/4.3BSD/4.3BSD-Tahoe/4.3
+8. [L3] `original_sources.kaoju_records` — - 数据库：`原材料/研究/bsd仓库分析/bsd_commits.db`（约 11 GB，6 仓库 2,358,055 条 commit，2026-07-21 快照） - 查询表：`tags`（4171 行，本次查询 freebsd-sr
+9. [L3] `original_sources.kaoju_records` — ### 1. FreeBSD 基础系统加密库事实核查（93.2 辨析字段修正）  **原声明**：FreeBSD 14.0 起默认使用 LibreSSL  **查证来源**： - freebsd.duckdb freebsd-src 仓库查
+10. [L3] `original_sources.kaoju_records` — ### 1.1 一手来源（primary sources）  1. **DragonFly BSD 官方网站**（<https://www.dragonflybsd.org/）>    - 首页：`<https://www.dragonflybs>
+11. [L3] `original_sources.kaoju_records` — ### A. 一手来源（FreeBSD 官方站点）  下列来源均于 2026-07-23 通过 WebFetch 工具直接访问，未引用任何二手中文转载。  1. **FreeBSD News Flash 主页**    - URL：http
+12. [L3] `original_sources.kaoju_records` — ### A. 一手来源（Apple 官方站点）  下列来源均于 2026-07-23 通过 WebFetch 工具直接访问，未引用任何二手中文转载。  1. **Apple Security Releases 主索引页**（核心一手来源）
+
+### 0 信任评估
+
+- 独立来源数：1 个数据库
+- 一级史料通过率：100.0%（L1+L2+L3 / 总行数）
+- 本章 L3 级史料 138 条，可纳入大纲但需标注来源
+- 所有主张均来自内容包自动匹配，未经人工逐一核实
+- 单一来源支撑的主张须标注 (单一文献支撑，待交叉验证)
+- L5 级别来源不得独立支撑事实性陈述
+
+### 交叉验证提示
+
+- 本章有 138 条 L3 级证据，建议优先与此前已入库的 MAIL_MINE、DB_POINTS、PODCAST_MINE 块交叉验证
+
+<!-- /COL_SCAN -->
+
+
+<!-- DEEP_ANALYSIS: linux-kernel.duckdb.commits -->
+**数据库分析发现**（证据等级：L1，来源：`linux-kernel.duckdb.commits.linux-kernel`）
+
+linux-kernel 代码仓库：从 1970 年到 2026 年，共 1474341 次提交，39865 位贡献者参与。

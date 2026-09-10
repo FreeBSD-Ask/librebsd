@@ -1,0 +1,317 @@
+---
+chapter: 第 214 章
+id: CH214
+volume: 第11卷-dragonflybsd的历史
+---
+
+# 第 214 章 DragonFly BSD 的诞生：Fork 公告与启动
+
+> 本子章由原第 102 章拆分而来，承载 214.1-214.3 节。
+
+## 本章节索引
+
+1. [214.1 mattdillon发布dragonflybsd公告我考虑过以5x为基础但它被互斥锁覆盖得太重了从4x开始向前推进比从5x开始向后倒退实际上更快itissimplytooheavilymutexed](214.1-mattdillon发布dragonflybsd公告我考虑过以5x.md)
+2. [214.2 2004年onlamp采访](214.2-2004年onlamp采访.md)
+3. [214.3 dillon谈与freebsd社区的关系](214.3-dillon谈与freebsd社区的关系.md)
+
+## 数据核验与统计（自动增补 · 0-信任）
+
+> **来源库**：资料数据库 · materials / material_cross_references；references_fulltext · chapter_matches / chapter_reviews；doubts_standalone · doubts_to_resolve
+> **方法**：基于全局章号 1–348 直接 SQL 聚合；未做外部事实验证；`ch=0`/未映射条目不计入本章。
+> **生成时间**：2026-08-04 ｜ **复现**：`script/_engine_integrity_analysis.py`
+
+| 指标 | 数值 |
+| --- | --- |
+| 锚定素材 | 0 篇（含存疑标记 0 篇） |
+| 存疑点 | 5 条 |
+| 参考文献匹配 | 0 条 |
+| 章节述评 | 未生成 |
+| 章内交叉引用 | 出 0 / 入 0 |
+
+**数据质量备注**：本章尚无锚定素材，属史料回填优先对象；暂无参考文献匹配
+
+<!-- GITREPO_BLOCK v20260804 -->
+## Git 仓库数据分析（自动增补 · 0-信任）
+
+> **来源库**：`03-原始史料库/01-代码仓库史料/` 下对应项目的 git 仓库数据库（commits / contributors / tags / org_contributions / tech_features 等表）
+> **方法**：SQL 侧按 `author_date` 提取年度并聚合；年份过滤 1990–2026 以排除 Unix epoch（1970/2106 等）脏数据；未做外部事实验证。
+> **生成时间**：2026-08-04 ｜ **复现**：`script/_gitrepo_analysis_20260804.py`
+
+### DragonFlyBSD（dragonfly）
+
+| 指标 | 数值 |
+| --- | --- |
+| 提交总数 | 656,109 |
+| 有效年份内提交 | 656,108 |
+| 活跃年份跨度 | 2003–2026 |
+| 年度提交峰值 | 2014（98,904 次） |
+| 贡献者总数 | 213 |
+| 版本标签数 | 139 |
+
+**核心贡献者（Top 8，按提交数，跨仓库同名合并）**：
+
+- DPorts Builder：598,408 次（活跃 2012–2026）
+- Sascha Wildner（萨沙·维尔德纳）：8,776 次（活跃 2008–2026（共 18 年））
+- Charlie Root：8,164 次（活跃 2021–2021）
+- Matthew Dillon（马修·狄龙）：6,398 次（活跃 2008–2026）
+- Sepherosa Ziehau：4,834 次（活跃 2005–2021）
+- Joerg Sonnenberger：2,038 次（活跃 2004、2005、2006、2008）
+- Aaron LI：1,830 次（活跃 2017–2026）
+- Tomohiro Kusumi：1,582 次（活跃 2014–2020）
+
+**主要组织贡献（Top 6，按提交数）**：
+
+- Other/Unclassified：151 次（— 人）
+- Individual/Volunteer：15 次（— 人）
+- Academic/Gov：12 次（— 人）
+- AllBSD：7 次（— 人）
+- FreeBSD 项目：3 次（— 人）
+- FreeBSD 基金会：2 次（— 人）
+
+**技术特性演进（Top 6，按提交数）**：
+
+- TLS/加密（安全，2003–2026）
+- 性能优化（性能，2003–2026）
+- HAMMER（存储，2009–2026）
+- TCP/IP（网络，2003–2026）
+- Clang/LLVM（工具链，2008–2026）
+- SMP/多核（进程/并行，2003–2026）
+
+**年度提交趋势（全量）**：2003:1,007、2004:3,366、2005:4,194、2006:1,874、2007:2,611、2008:2,880、2009:3,748、2010:3,081、2011:2,510、2012:19,536、2013:73,623、2014:98,904、2015:39,290、2016:50,874、2017:37,979、2018:47,261、2019:46,822、2020:31,866、2021:60,515、2022:51,654、2023:36,972、2024:20,013、2025:14,453、2026:1,075
+
+> **规律提示**：DragonFlyBSD 在 2014 年达到提交峰值（98,904 次），活跃跨度 2003–2026；贡献者 213 人。
+
+---
+
+<!-- GITREPO_FINE_BLOCK v20260804 -->
+
+## Git 仓库细粒度技术分析（DragonFlyBSD · 自动增补 · 0-信任）
+<!-- FINE_dragonfly v20260804 -->
+
+> 来源：`03-原始史料库/01-代码仓库史料/05-DragonFlyBSD/db/dragonfly.duckdb` 的 `tech_features` 表（提交级特性标记）。方法：按特性聚合 `commits` 与首/末年；未做外部事实验证。
+
+| 技术特性 | 类别 | 提交标记 | 活跃跨度 |
+| --- | --- | ---: | --- |
+| TLS/加密 | 安全 | 2,953 | 2003–2026 |
+| 性能优化 | 性能 | 2,849 | 2003–2026 |
+| HAMMER | 存储 | 1,410 | 2009–2026 |
+| TCP/IP | 网络 | 1,352 | 2003–2026 |
+| Clang/LLVM | 工具链 | 1,031 | 2008–2026 |
+| SMP/多核 | 进程/并行 | 816 | 2003–2026 |
+| 内存管理 | 内存管理 | 650 | 2003–2026 |
+| 许可/治理 | 治理 | 550 | 2003–2026 |
+| 无线 | 网络 | 543 | 2004–2026 |
+| GPU/DRM | 硬件支持 | 533 | 2003–2026 |
+| ARM | 硬件支持 | 439 | 2008–2026 |
+| OpenSSH | 安全 | 366 | 2003–2025 |
+| USB | 硬件支持 | 363 | 2003–2026 |
+| UFS/FFS | 存储 | 343 | 2003–2026 |
+| Jails | 容器隔离 | 331 | 2003–2026 |
+| 调度器 | 进程/并行 | 318 | 2003–2026 |
+| IPFW | 网络 | 282 | 2003–2026 |
+| kqueue | 可观测性 | 260 | 2003–2025 |
+| 容器化 | 容器隔离 | 146 | 2012–2025 |
+| 虚拟化 | 虚拟化 | 112 | 2007–2026 |
+| bhyve | 虚拟化 | 88 | 2014–2025 |
+| pf防火墙 | 网络 | 87 | 2004–2024 |
+| RISC-V | 硬件支持 | 65 | 2016–2025 |
+| IPsec | 安全/网络 | 43 | 2003–2025 |
+| pkg/ports | 工具链 | 39 | 2012–2017 |
+| NUMA | 硬件支持 | 31 | 2004–2026 |
+| GEOM | 存储 | 12 | 2004–2023 |
+| AI/ML | 前沿 | 10 | 2024–2026 |
+| ASLR | 安全 | 6 | 2003–2015 |
+| ZFS | 存储 | 5 | 2016–2024 |
+| Capsicum | 安全 | 4 | 2014–2026 |
+| DTrace | 可观测性 | 1 | 2014–2014 |
+| KVM | 虚拟化 | 1 | 2018–2018 |
+| DPDK | 网络 | 1 | 2022–2022 |
+| pledge/unveil | 安全 | 1 | 2016–2016 |
+| eBPF | 可观测性 | 0 | — |
+| Rust | 工具链 | 0 | — |
+
+- **TLS/加密**（安全，2003–2026）：传输加密：OpenSSL→LibreSSL（OpenBSD 2014 分叉）
+- **性能优化**（性能，2003–2026）：持续性能工程：内核网络/存储/调度微优化
+- **HAMMER**（存储，2009–2026）：DragonFly 独有 CoW 文件系统（2007），HAMMER2（2018）
+- **TCP/IP**（网络，2003–2026）：TCP 拥塞控制演进：Reno→NewReno→CUBIC，BSD 与 Linux 并行
+- **Clang/LLVM**（工具链，2008–2026）：C 编译器栈：FreeBSD 2012 用 Clang 取代 GCC（许可证原因）
+- **SMP/多核**（进程/并行，2003–2026）：对称多处理与内核并行化（自旋锁→睡眠锁→无锁结构）
+- **内存管理**（内存管理，2003–2026）：虚拟内存、slab 分配、大页/HugeTLB 透明大页
+- **许可/治理**（治理，2003–2026）：许可证与治理：BSD 许可宽松，Linux GPL；基金会治理（FreeBSD/NetBSD/OpenBSD 基金会）
+- **无线**（网络，2004–2026）：802.11 无线栈：FreeBSD 用 net80211，Linux 用 mac80211/cfg80211
+- **GPU/DRM**（硬件支持，2003–2026）：显卡驱动：Linux DRM 2010s 成熟，FreeBSD 借 LinuxKPI 移植 DRM
+- **ARM**（硬件支持，2008–2026）：ARM64 支持：Linux 2012 官方；FreeBSD 2016 起
+- **OpenSSH**（安全，2003–2025）：安全远程登录套件（OpenBSD 1999 开发）
+- **USB**（硬件支持，2003–2026）：USB 栈：FreeBSD usb4bsd 重写，Linux 成熟
+- **UFS/FFS**（存储，2003–2026）：伯克利快速文件系统（1984），soft updates（1998）
+- **Jails**（容器隔离，2003–2026）：FreeBSD 进程隔离容器（2000），chroot 的强安全超集
+- **调度器**（进程/并行，2003–2026）：任务调度策略：FreeBSD ULE、Linux CFS/EEVDF、NetBSD sched_4BSD
+- **IPFW**（网络，2003–2026）：FreeBSD 传统包过滤（1994），与 dummynet 流量整形结合
+- **kqueue**（可观测性，2003–2025）：BSD 事件通知机制（FreeBSD 2000），与 epoll 对位
+
+---
+
+<!-- DATA_VERIFY_BLOCK v20260804 -->
+> 2026-08-11 补：本卷全部 23 章原缺 DATA_VERIFY_BLOCK，此为批量修复补入。卷级综述见 [vol-11.md](../../../04-现代研究文献/02-卷级文献综述/vol-11.md)
+>
+## 数据核验与统计（自动增补 · 0-信任）
+
+> **来源库**：资料数据库 · materials / material_cross_references；references_fulltext · chapter_matches / chapter_reviews；doubts_standalone · doubts_to_resolve
+> **方法**：基于全局章号 1–348 直接 SQL 聚合；未做外部事实验证；`ch=0`/未映射条目不计入本章。
+> **生成时间**：2026-08-11（批量回填） ｜ **复现**：`script/_engine_integrity_analysis.py`
+
+| 指标 | 数值 |
+| --- | --- |
+| 锚定素材 | 待补（本卷全部 23 章原缺锚定素材，属史料回填优先对象） |
+| 存疑点 | 0 条 |
+| 参考文献匹配 | 3 条 |
+| 章节述评 | 未生成 |
+| 章内交叉引用 | 出 0 / 入 0 |
+
+**数据质量备注**：本章为 DragonFly BSD 卷，史料档案待从 03-原始史料库/11-邮件列表史料/ 和 dragonfly.duckdb dragonfly-src 仓库补充；2026-08-11 批量回填 DVB 框架
+
+<!-- MAIL_MINE v20260813 -->
+## 邮件史料增补
+
+> 基于 6 个邮件数据库（260 万封）+ FTS5 全文索引自动挖掘，供编纂引用参考。
+> 以下为本章主题相关的邮件史料线索（精确词命中，含时间范围与代表邮件）。
+
+- **fork**（dragonfly）: 578 封 · 2003-2023
+  - [2003] The New Fred? — Eugenia Loli-Queru
+  - [2003] The New Fred? — wmoran at potentialtech.c
+  - [2003] The New Fred? — peter-200306 at taronga.c
+
+<!-- /MAIL_MINE -->
+
+<!-- DB_POINTS:cross_indexes_person -->
+**数据库要点引用（cross_indexes.db · person_bio_research · 2026-08-13）**
+
+> 来源：`10-交叉索引/cross_indexes.db` 表 `person_bio_research`（去重后 276 条，P0 26/P1 75/P2 175/未分级 0）。映射：数据库旧章号 +1 → 磁盘章号。本章涉及人物 1 位。
+
+- [P2] Terrence R. Lambert（特伦斯·R·兰伯特）：FreeBSD 早期内核
+<!-- /DB_POINTS:cross_indexes_person -->
+
+<!-- DB_POINTS:doubts_resolved -->
+**数据库要点引用（doubts_standalone.db · 2026-08-13）**
+
+> 来源：`04-现代研究文献/06-存疑数据库/doubts_standalone.db` 表 `doubts_to_resolve`（1987 条，1966 已解决）。本章存疑 5 条已解决。类别分布：date(5)
+
+> 存疑管理体系：98.9% 已闭环，解决结论含 date/fact/source_conflict/name/version 等类型，具体结论见 doubts_standalone.db 表 `resolution_summary` 字段。
+<!-- /DB_POINTS:doubts_resolved -->
+
+<!-- DB_POINTS:chapter_reviews -->
+**数据库要点引用（references_fulltext.db · chapter_reviews · 2026-08-13）**
+
+> 来源：`04-现代研究文献/05-参考文献全文数据库/references_fulltext.db` 表 `chapter_reviews`（348 章全覆盖）。本章级文献综述 660 字、匹配 2 篇文献，状态 imported。映射：旧章号 +1 → 磁盘章号。
+
+> **综述要点**：本章围绕“DragonFly BSD 的诞生：Fork 公告与启动”展开，覆盖 213.1 mattdillon发布dragonflybsd公告我考虑…；213.2 2004年onlamp采访；213.3 dillon谈与freebsd社区的关系。数据核验显示：锚定素材 0 篇（含存疑标记 0 篇）、参考文献匹配 0 条、存疑点 5 条（自动增补，0 信任原则下须人工复核）。子节要点：213.1 Matt Dillon 发布 Drago
+
+<!-- /DB_POINTS:chapter_reviews -->
+
+<!-- COL_SCAN v20260826 -->
+## 内容包复核增补（Phase 4 · 2026-08-26）
+
+> 基于 4 个核心数据库（doubts_standalone、historical_claims、original_sources、资料数据库）内容包自动匹配与审核。
+> 内容包总行数：200 | 去重主张数：195 | 复核方法：12 步流程（详见 vol2to5_phase4_summary.md）
+
+### 证据等级分布
+
+| 等级 | 说明 | 数量 | 占比 |
+| --- | --- | --- | --- |
+| L1 | 代码与构建产物 | 0 | 0.0% |
+| L2 | 即时通讯记录 | 0 | 0.0% |
+| L3 | 官方文档与公告 | 0 | 0.0% |
+| L4 | 事后叙述 | 0 | 0.0% |
+| L5 | 二手研究 | 200 | 100.0% |
+
+### 来源数据库分布
+
+| 来源 | 行数 |
+| --- | --- |
+| doubts_standalone | 200 |
+
+### 0 信任评估
+
+- 独立来源数：1 个数据库
+- 一级史料通过率：0.0%（L1+L2+L3 / 总行数）
+- 所有主张均来自内容包自动匹配，未经人工逐一核实
+- 单一来源支撑的主张须标注 (单一文献支撑，待交叉验证)
+
+### L5 存疑注册
+
+| 来源 | 主张数 | 处理建议 |
+| --- | --- | --- |
+| doubts_standalone | 200 | 不进入大纲，留存疑数据库备查 |
+
+L5 级主张不进入大纲正文，仅注册于此处备查。
+
+### 交叉验证提示
+
+- 本章 L5 级二手研究数量较大（195 条），需注意区分学术文献与通俗技术博客，仅学术文献可作参考
+- 本章仅从单一数据库获取证据，须标注 (单一文献支撑，待交叉验证)
+
+<!-- /COL_SCAN -->
+
+
+<!-- DEEP_ANALYSIS: sacred_sources.duckdb.blocks -->
+**史家判断**（证据等级：L2，来源：`sacred_sources.duckdb.blocks.281`）
+
+加缪认为生活越没有意义越值得过。那么生活有没有意义？这一存在主义命题在历史哲学中意味着：历史本身没有意义，但正因为没有意义，历史才值得被书写。意义不是预设的，而是在无意义的荒谬中被主体创造的。BSD 的历史没有宏大的意义——它不会改变世界，不会推翻 Linux，不会拯救人类。但正因为如此，它才值得被忠实地记录。
+
+
+
+<!-- DEEP_ANALYSIS: sacred_sources.duckdb.blocks -->
+**史家判断**（证据等级：L2，来源：`sacred_sources.duckdb.blocks.376`）
+
+只有在花落下，发霉的时候才能发现花是美的。并非晨曦看不到花，而是当想看花的时候刚好逢上傍晚。“朝花夕拾”便是此意——历史的欣赏本身具有时间性。一个技术、一个项目、一个人的价值，往往在其消亡之后才被认识。BSD 的价值在 Linux 的阴影下被遮蔽，恰恰是这种“花落才发现花美”的体现。
+
+
+
+<!-- DEEP_ANALYSIS: cross_indexes.duckdb.concept_history -->
+**史家判断**（证据等级：L2，来源：`cross_indexes.duckdb.concept_history.5`）
+
+copyleft：copyleft 概念的演化: ①概念与早期实践（1980s）：1984 年 GNU 计划启动；1985 年《GNU 宣言》定反专有化原则，FSF 成立；GNU 组件先以程序专属 copyleft 许可发布。②GPL v1（1989）：与律师 Jerry Cohen 把各许可整合为统一 GNU GPL，禁止只发二进制、禁止附加限制条款，实现强 copyleft。③GPL v2（1991-06）：新增第 7 节应对软件专利；同年发布 LGPL 弱 copyleft；1991 年 Linux 内核以 GPL 发布，促成 GNU/Linux。④GPL v3（2007-06-29）：经历两年公开讨论，回应 tivo 化、DRM、微软
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-1-113`）
+
+据估计，仅 Red Hat、IBM、Novell、Intel 与 Oracle 五家公司的员工就为 Linux 内核近期一个版本贡献了 32% 的改动。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-4-107`）
+
+Torvalds 自述是“偶然的革命者”，开始 Linux 是因为在电脑上玩耍有乐趣，且当时其他选择不够吸引人。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-4-108`）
+
+Lerner 与 Tirole（2000）引 IDC 估计，个人电脑操作系统市场中 Linux 全球用户约 700 万至 2100 万，年增长率 200%。
+
+## 文献
+
+- Ingo Schwarze. bsdcan15-mandoc[M]. 2015.
+- eurobsdcon2014-mandoc-paper[M].
+- eurobsdcon2015-mandoc[M].
+- Murenin C A, Boutaba R. OpenBSD Hardware Sensors Framework[C]//AsiaBSDCon 2009 Proceedings. Tokyo, 2009.
+- eurobsdcon2014-mandoc-slides[M].
+
+<!-- MAIL_INSIGHT_SECTION v20260828-v2 -->
+## 邮件列表分析观点（2026-08-28 自动增补）
+
+> 数据源：`script/_mail_analysis/topic_analysis_dragonfly.md`（7 主题 × 50 封邮件）+ `person_analysis_dragonfly_dillon.md`（Dillon 500 封邮件分析）
+> 方法：按章主题从报告中提取邮件段落，蒸馏为史学观点（V2 格式）
+> 注意：报告覆盖范围主要为 2023-2026 年 bug 跟踪器与用户邮件列表，早期（2003-2020）历史邮件未纳入分析
+
+
+
+<!-- MAIL_INSIGHT: <redmine.journal-14660.20260507051555.5@leaf.dragonflybsd.org> -->
+**观点**：Matthew Dillon 在 2026 年仍亲自处理 HAMMER2 内核 panic 级别的 bug（Bug #3407），将问题 assign 给自己后迅速关闭。这一模式反映了 DragonFly 从 2003 年 fork 以来一以贯之的治理特征——Dillon 是项目的最终技术决策者与主要代码审查者，即使在 fork 二十三年后，这一模式仍未改变。
+**邮件来源**：dillon，DragonFly BSD Bug Tracker，2026-05-07，Message-ID: `redmine.journal-14660.20260507051555.5@leaf.dragonflybsd.org`
+**史学意义**：Dillon 的持续个人主导是理解 DragonFly fork 事件长期后果的关键——fork 不仅是一次技术路线的选择，更确立了一种以单人技术权威为核心的项目治理模式，这一模式在二十三年后仍然有效运作。
+<!-- /MAIL_INSIGHT -->

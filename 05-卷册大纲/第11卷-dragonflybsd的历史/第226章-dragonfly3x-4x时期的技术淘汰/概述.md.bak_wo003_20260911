@@ -1,0 +1,146 @@
+---
+chapter: 第 226 章
+id: CH226
+volume: 第11卷-dragonflybsd的历史
+---
+
+# 第 226 章 DragonFly 3.x-4.x 时期的技术淘汰
+
+> 本子章由原第 98 章拆分而来，承载 226.1-226.4 节。
+
+## 本章节索引
+
+1. [226.1 dragonfly3x4x时期的技术淘汰](226.1-dragonfly3x4x时期的技术淘汰.md)
+2. [226.2 与同时期操作系统的比较dragonfly3x时代与hammer2文件系统时期20](226.2-与同时期操作系统的比较dragonfly3x时代与hammer2文件系统时期20.md)
+3. [226.3 dragonfly3x周期漏洞与安全响应](226.3-dragonfly3x周期漏洞与安全响应.md)
+4. [226.4 项目统摄史观审视](226.4-项目统摄史观审视.md)
+
+## 数据核验与统计（自动增补 · 0-信任）
+
+> **来源库**：资料数据库 · materials / material_cross_references；references_fulltext · chapter_matches / chapter_reviews；doubts_standalone · doubts_to_resolve
+> **方法**：基于全局章号 1–348 直接 SQL 聚合；未做外部事实验证；`ch=0`/未映射条目不计入本章。
+> **生成时间**：2026-08-04 ｜ **复现**：`script/_engine_integrity_analysis.py`
+
+| 指标 | 数值 |
+| --- | --- |
+| 锚定素材 | 0 篇（含存疑标记 0 篇） |
+| 存疑点 | 3 条 |
+| 参考文献匹配 | 0 条 |
+| 章节述评 | 未生成 |
+| 章内交叉引用 | 出 0 / 入 0 |
+
+**数据质量备注**：本章尚无锚定素材，属史料回填优先对象；暂无参考文献匹配
+
+<!-- DATA_VERIFY_BLOCK v20260804 -->
+> 2026-08-11 补：本卷全部 23 章原缺 DATA_VERIFY_BLOCK，此为批量修复补入。卷级综述见 [vol-11.md](../../../04-现代研究文献/02-卷级文献综述/vol-11.md)
+>
+## 数据核验与统计（自动增补 · 0-信任）
+
+> **来源库**：资料数据库 · materials / material_cross_references；references_fulltext · chapter_matches / chapter_reviews；doubts_standalone · doubts_to_resolve
+> **方法**：基于全局章号 1–348 直接 SQL 聚合；未做外部事实验证；`ch=0`/未映射条目不计入本章。
+> **生成时间**：2026-08-11（批量回填） ｜ **复现**：`script/_engine_integrity_analysis.py`
+
+| 指标 | 数值 |
+| --- | --- |
+| 锚定素材 | 待补（本卷全部 23 章原缺锚定素材，属史料回填优先对象） |
+| 存疑点 | 0 条 |
+| 参考文献匹配 | 1 条 |
+| 章节述评 | 未生成 |
+| 章内交叉引用 | 出 0 / 入 0 |
+
+**数据质量备注**：本章为 DragonFly BSD 卷，史料档案待从 03-原始史料库/11-邮件列表史料/ 和 dragonfly.duckdb dragonfly-src 仓库补充；2026-08-11 批量回填 DVB 框架
+
+<!-- DB_POINTS:doubts_resolved -->
+**数据库要点引用（doubts_standalone.db · 2026-08-13）**
+
+> 来源：`04-现代研究文献/06-存疑数据库/doubts_standalone.db` 表 `doubts_to_resolve`（1987 条，1966 已解决）。本章存疑 3 条已解决。类别分布：date(2)、version(1)
+
+> 存疑管理体系：98.9% 已闭环，解决结论含 date/fact/source_conflict/name/version 等类型，具体结论见 doubts_standalone.db 表 `resolution_summary` 字段。
+<!-- /DB_POINTS:doubts_resolved -->
+
+<!-- DB_POINTS:chapter_reviews -->
+**数据库要点引用（references_fulltext.db · chapter_reviews · 2026-08-13）**
+
+> 来源：`04-现代研究文献/05-参考文献全文数据库/references_fulltext.db` 表 `chapter_reviews`（348 章全覆盖）。本章级文献综述 906 字、匹配 1 篇文献，状态 imported。映射：旧章号 +1 → 磁盘章号。
+
+> **综述要点**：本章围绕“DragonFly 3.x-4.x 时期的技术淘汰”展开，覆盖 225.1 dragonfly3x4x时期的技术淘汰；225.2 与同时期操作系统的比较dragonfly3x时代与hamm…；225.3 dragonfly3x周期漏洞与安全响应；225.4 项目统摄史观审视。数据核验显示：锚定素材 0 篇（含存疑标记 0 篇）、参考文献匹配 0 条、存疑点 3 条（自动增补，0 信任原则下须人工复核）。子节要点：225.1 D
+
+<!-- /DB_POINTS:chapter_reviews -->
+
+<!-- COL_SCAN v20260826 -->
+## 内容包复核增补（Phase 4 · 2026-08-26）
+
+> 基于 4 个核心数据库（doubts_standalone、historical_claims、original_sources、资料数据库）内容包自动匹配与审核。
+> 内容包总行数：200 | 去重主张数：190 | 复核方法：12 步流程（详见 vol2to5_phase4_summary.md）
+
+### 证据等级分布
+
+| 等级 | 说明 | 数量 | 占比 |
+| --- | --- | --- | --- |
+| L1 | 代码与构建产物 | 0 | 0.0% |
+| L2 | 即时通讯记录 | 0 | 0.0% |
+| L3 | 官方文档与公告 | 0 | 0.0% |
+| L4 | 事后叙述 | 0 | 0.0% |
+| L5 | 二手研究 | 200 | 100.0% |
+
+### 来源数据库分布
+
+| 来源 | 行数 |
+| --- | --- |
+| doubts_standalone | 200 |
+
+### 0 信任评估
+
+- 独立来源数：1 个数据库
+- 一级史料通过率：0.0%（L1+L2+L3 / 总行数）
+- 所有主张均来自内容包自动匹配，未经人工逐一核实
+- 单一来源支撑的主张须标注 (单一文献支撑，待交叉验证)
+
+### L5 存疑注册
+
+| 来源 | 主张数 | 处理建议 |
+| --- | --- | --- |
+| doubts_standalone | 200 | 不进入大纲，留存疑数据库备查 |
+
+L5 级主张不进入大纲正文，仅注册于此处备查。
+
+### 交叉验证提示
+
+- 本章 L5 级二手研究数量较大（190 条），需注意区分学术文献与通俗技术博客，仅学术文献可作参考
+- 本章仅从单一数据库获取证据，须标注 (单一文献支撑，待交叉验证)
+
+<!-- /COL_SCAN -->
+
+
+<!-- DEEP_ANALYSIS: dragonfly.duckdb.commits -->
+**数据库分析发现**（证据等级：L1，来源：`dragonfly.duckdb.commits.dragonfly`）
+
+dragonfly 代码仓库：从 2003 年到 2026 年，共 656207 次提交，213 位贡献者参与。
+
+
+
+<!-- DEEP_ANALYSIS: dragonfly.duckdb.commits -->
+**数据库分析发现**（证据等级：L1，来源：`dragonfly.duckdb.commits.dragonfly`）
+
+dragonfly 核心贡献者：DPorts Builder(562567), Automaton(29485), Sascha Wildner(10869), Matthew Dillon(10664), Charlie Root(8176)
+
+<!-- MAIL_INSIGHT_SECTION v20260828-v2 -->
+## 邮件列表分析观点（2026-08-28 自动增补）
+
+> 数据源：`script/_mail_analysis/topic_analysis_dragonfly.md`（7 主题 × 50 封邮件）+ `person_analysis_dragonfly_dillon.md`（Dillon 500 封邮件分析）
+> 方法：按章主题从报告中提取邮件段落，蒸馏为史学观点（V2 格式）
+> 注意：报告覆盖范围主要为 2023-2026 年 bug 跟踪器与用户邮件列表，早期（2003-2020）历史邮件未纳入分析
+
+
+
+<!-- MAIL_INSIGHT: <CAOZ7CpARBhRcKdjLuLkhh43XPM7vgiebaGXBequ-A8z6pwVv_w@mail.gmail.com> -->
+**观点**：Matthew Dillon 在 2023 年 12 月回复用户时指出，DragonFly 的 RC 系统中的 VLAN 支持“相当过时，可以追溯到 2014 年”，并承认他自己通常手动在 `/etc/rc.local` 中添加 `ifconfig` 命令来配置 VLAN。这一坦诚的技术评估揭示了 DragonFly 在系统管理基础设施方面的长期维护滞后。
+**邮件来源**：Matthew Dillon，dragonfly-users 邮件列表，2023-12-06，Message-ID: `CAOZ7CpARBhRcKdjLuLkhh43XPM7vgiebaGXBequ-A8z6pwVv_w@mail.gmail.com`
+**史学意义**：Dillon 对 DragonFly 技术债务的公开承认，为“技术淘汰”章节提供了珍贵的一手证据。VLAN 配置基础设施从 2014 年到 2023 年未更新，反映了小型项目在基础设施维护方面的资源约束。
+<!-- /MAIL_INSIGHT -->
+
+<!-- MAIL_INSIGHT: <CAOZ7CpB_Nssm7CPj3rB0AbHrySF5KAtYZa0D0=Mv8esXbYVSYw@mail.gmail.com> -->
+**观点**：Matthew Dillon 在 2023 年 11 月坦承“大多数较新的网络驱动尚未从 FreeBSD 移植过来”，因为 FreeBSD “大幅改变了 API，移植不再像以前那么容易”。这一表态表明，DragonFly 在 3.x-4.x 时期未能跟进的网络驱动缺口，在 2020 年代已演变为结构性技术债务。
+**邮件来源**：Matthew Dillon，dragonfly-users 邮件列表，2023-11-19，Message-ID: `CAOZ7CpB_Nssm7CPj3rB0AbHrySF5KAtYZa0D0=Mv8esXbYVSYw@mail.gmail.com`
+**史学意义**：驱动移植的困难是 DragonFly 技术淘汰叙事的核心要素——fork 初期的技术路线选择（从 4.x 分叉、独立的 LWKT 锁模型）在二十年后以“API 分歧导致驱动无法移植”的形式转化为结构性约束。
+<!-- /MAIL_INSIGHT -->

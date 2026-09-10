@@ -1,0 +1,159 @@
+---
+chapter: 第 136 章
+id: CH136
+volume: 第07卷-freebsd的工程体系重构
+---
+
+# 第 136 章 FreeBSD 安全模型的 UNIX DAC 与权限机制
+
+> 本子章由原第 54 章拆分而来，承载 136.1-136.4 节。
+
+## 本章节索引
+
+1. [136.1 传统-UNIX-自主访问控制-DAC-基础-FreeBSD-安全模型的历史起点](136.1-传统-UNIX-自主访问控制-DAC-基础-FreeBSD-安全模型的历史起点.md)
+2. [136.2 Jails-Capsicum-CHERI-的三阶段演进-从进程隔离到能力模型到硬件强制的安全范式转换](136.2-Jails-Capsicum-CHERI-的三阶段演进.md)
+3. [136.3 MAC-Mandatory-Access-Control-框架-BSD-框架下的-Biba-MLS-LOMAC-BSE](136.3-MAC-Mandatory-Access-Control-框架-BSD-框架下的.md)
+4. [136.4 audit-子系统-OpenBSM-与-FreeBSD-audit-的整合历史](136.4-audit-子系统-OpenBSM-与-FreeBSD-audit-的整合历史.md)
+
+## 数据核验与统计（自动增补 · 0-信任）
+
+> **来源库**：资料数据库 · materials / material_cross_references；references_fulltext · chapter_matches / chapter_reviews；doubts_standalone · doubts_to_resolve
+> **方法**：基于全局章号 1–348 直接 SQL 聚合；未做外部事实验证；`ch=0`/未映射条目不计入本章。
+> **生成时间**：2026-08-04 ｜ **复现**：`script/_engine_integrity_analysis.py`
+
+| 指标 | 数值 |
+| --- | --- |
+| 锚定素材 | 69 篇（含存疑标记 7 篇） |
+| 存疑点 | 0 条 |
+| 参考文献匹配 | 0 条 |
+| 章节述评 | 未生成 |
+| 章内交叉引用 | 出 43 / 入 43 |
+
+**数据质量备注**：暂无参考文献匹配
+
+<!-- DATA_VERIFY_BLOCK v20260804 -->
+> 2026-08-11 补：批量修复 DVB 缺失（最终批）
+>
+## 数据核验与统计（自动增补 · 0-信任）
+>
+> **来源库**：资料数据库 · materials / material_cross_references；references_fulltext
+> **生成时间**：2026-08-11（批量回填）
+
+| 指标 | 数值 |
+| --- | --- |
+| 锚定素材 | 160 篇（含存疑标记 0 篇） |
+| 存疑点 | 0 条 |
+| 参考文献匹配 | 0 条 |
+| 章节述评 | 未生成 |
+| 章内交叉引用 | 出 0 / 入 0 |
+
+**数据质量备注**：史料回填优先对象；2026-08-11 批量回填 DVB 框架
+
+<!-- MAIL_MINE v20260813 -->
+## 邮件史料增补
+
+> 基于 6 个邮件数据库（260 万封）+ FTS5 全文索引自动挖掘，供编纂引用参考。
+> 以下为本章主题相关的邮件史料线索（精确词命中，含时间范围与代表邮件）。
+
+- **dac**（freebsd）: 1,296 封 · 1995-2022
+  - [1995] Re: Named garbage — J Wunsch
+  - [1995] Re: kern/810 — David Greenman（大卫·格林曼）
+  - [1995] Brokenness in make world (savecore) — Mark Murray
+
+<!-- /MAIL_MINE -->
+
+<!-- DB_POINTS:doubts_resolved -->
+**数据库要点引用（doubts_standalone.db · 2026-08-13）**
+
+> 来源：`04-现代研究文献/06-存疑数据库/doubts_standalone.db` 表 `doubts_to_resolve`（1987 条，1966 已解决）。本章存疑 2 条已解决。类别分布：事实(2)
+
+> 存疑管理体系：98.9% 已闭环，解决结论含 date/fact/source_conflict/name/version 等类型，具体结论见 doubts_standalone.db 表 `resolution_summary` 字段。
+<!-- /DB_POINTS:doubts_resolved -->
+
+<!-- DB_POINTS:chapter_reviews -->
+**数据库要点引用（references_fulltext.db · chapter_reviews · 2026-08-13）**
+
+> 来源：`04-现代研究文献/05-参考文献全文数据库/references_fulltext.db` 表 `chapter_reviews`（348 章全覆盖）。本章级文献综述 1240 字、匹配 0 篇文献，状态 imported。映射：旧章号 +1 → 磁盘章号。
+
+> **综述要点**：本章围绕“FreeBSD 安全模型的 UNIX DAC 与权限机制”展开，覆盖 135.1 传统-UNIX-自主访问控制-DAC-基础-FreeBSD…；135.2 Jails-Capsicum-CHERI-的三阶段演进-从…；135.3 MAC-Mandatory-Access-Control-…；135.4 audit-子系统-OpenBSM-与-FreeBSD-a…。数据核验显示：锚定素材 69 篇（含存疑标记 7 篇）、参考文献
+
+<!-- /DB_POINTS:chapter_reviews -->
+
+<!-- COL_SCAN v20260826 -->
+## 内容包复核增补
+
+> 基于 4 个核心数据库（doubts_standalone、historical_claims、original_sources、资料数据库）内容包自动匹配与审核。
+> 内容包总行数：449 | 去重主张数：347 | 复核方法：12 步流程（详见 vol2to5_phase4_summary.md）
+
+### 证据等级分布
+
+| 等级 | 说明 | 数量 | 占比 |
+| --- | --- | --- | --- |
+| L1 | 代码与构建产物 | 0 | 0.0% |
+| L2 | 即时通讯记录 | 0 | 0.0% |
+| L3 | 官方文档与公告 | 444 | 98.9% |
+| L4 | 事后叙述 | 5 | 1.1% |
+| L5 | 二手研究 | 0 | 0.0% |
+
+### 来源数据库分布
+
+| 来源 | 行数 |
+| --- | --- |
+| 资料数据库 | 444 |
+| historical_claims | 5 |
+
+### 新增证据点（L1-L3）
+
+1. [L3] `资料数据库.freebsd_sa.topic#5` — Incorrect audit records for ptrace(2) syscall requests
+2. [L3] `资料数据库.freebsd_sa.topic#10` — Multiple vulnerabilities in OpenZFS
+3. [L3] `资料数据库.freebsd_sa.topic#12` — Jail reference count underflow
+4. [L3] `资料数据库.freebsd_sa.topic#46` — Jail chroot escape via fd exchange with a different jail
+5. [L3] `资料数据库.freebsd_sa.topic#48` — Jail escape by a privileged user via nullfs
+6. [L3] `资料数据库.freebsd_sa.topic#57` — Multiple vulnerabilities in OpenSSH
+7. [L3] `资料数据库.freebsd_sa.topic#61` — OpenSSH Keystroke Obfuscation Bypass
+8. [L3] `资料数据库.freebsd_sa.topic#64` — Multiple issues in the bhyve hypervisor
+9. [L3] `资料数据库.freebsd_sa.topic#66` — bhyve(8) out-of-bounds read access via XHCI emulation
+10. [L3] `资料数据库.freebsd_sa.topic#69` — bhyve(8) privileged guest escape via USB controller
+11. [L3] `资料数据库.freebsd_sa.topic#71` — bhyve(8) privileged guest escape via TPM device passthrough
+12. [L3] `资料数据库.freebsd_sa.topic#73` — OpenSSH pre-authentication async signal safety issue
+13. [L3] `资料数据库.freebsd_sa.topic#77` — OpenSSH pre-authentication remote code execution
+14. [L3] `资料数据库.freebsd_sa.topic#80` — bhyveload(8) host file access
+15. [L3] `资料数据库.freebsd_sa.topic#81` — Prefix Truncation Attack in the SSH protocol
+
+> 另有 327 条 L1-L3 证据点未列出，详见内容包文件。
+
+### 备用证据点（L4）
+
+1. [L4] `historical_claims.entity_type_class.note#entity_subtype=distribution` — GhostBSD/OPNsense 类衍生发行
+2. [L4] `historical_claims.entity_type_class.note#entity_subtype=version` — 如 4.4BSD-Lite、FreeBSD 2.0；挂 parent 项目于 attrs
+3. [L4] `historical_claims.entity_type_class.note#entity_subtype=standard` — POSIX/SUS/RFC 等
+4. [L4] `historical_claims.entity_type_class.note#entity_subtypeacconference` — BSDCan/EuroBSDCon 等
+5. [L4] `historical_claims.entity_type_class.note#entity_subtype=legal_event` — 诉讼/判决/和解，如 USL v. BSDi
+
+### 0 信任评估
+
+- 独立来源数：2 个数据库
+- 一级史料通过率：98.9%（L1+L2+L3 / 总行数）
+- 本章 L1-L3 级史料 342 条，可纳入大纲但需标注来源
+- 所有主张均来自内容包自动匹配，未经人工逐一核实
+- 单一来源支撑的主张须标注 (单一文献支撑，待交叉验证)
+
+### 交叉验证提示
+
+- 本章有 342 条 L1-L3 级证据，建议优先与此前已入库的 MAIL_MINE、DB_POINTS、PODCAST_MINE 块交叉验证
+
+<!-- /COL_SCAN -->
+
+
+<!-- DEEP_ANALYSIS: freebsd.duckdb.commits -->
+**数据库分析发现**（证据等级：L1，来源：`freebsd.duckdb.commits.freebsd`）
+
+freebsd 代码仓库：从 1993 年到 2026 年，共 1294851 次提交，5671 位贡献者参与。
+
+
+
+<!-- DEEP_ANALYSIS: freebsd.duckdb.commits -->
+**数据库分析发现**（证据等级：L1，来源：`freebsd.duckdb.commits.freebsd`）
+
+freebsd 核心贡献者：Po-Chuan Hsieh(68595), Sunpoet Po-Chuan Hsieh(51033), Yuri Victorovich(29759), Jan Beich(22360), Martin Wilke(20341)
+

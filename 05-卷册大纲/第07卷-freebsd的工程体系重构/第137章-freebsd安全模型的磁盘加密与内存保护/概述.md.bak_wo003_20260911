@@ -1,0 +1,118 @@
+---
+chapter: 第 137 章
+id: CH137
+volume: 第07卷-freebsd的工程体系重构
+---
+
+# 第 137 章 FreeBSD 安全模型的磁盘加密与内存保护
+
+> 本子章由原第 54 章拆分而来，承载 137.5-137.8 节。
+
+## 本章节索引
+
+1. [137.5 磁盘加密与随机数生成-GBDE-GELI-与-random-4-CSPRNG](137.5-磁盘加密与随机数生成-GBDE-GELI-与-random-4-CSPRNG.md)
+2. [137.6 FreeBSD-Security-Team-与安全响应体系-安全公告-更新机制与支持周期](137.6-FreeBSD-Security-Team-与安全响应体系-安全公告.md)
+3. [137.7 典型-FreeBSD-安全事件与响应](137.7-典型-FreeBSD-安全事件与响应.md)
+4. [137.8 外部批评与跨-OS-安全模型比较](137.8-外部批评与跨-OS-安全模型比较.md)
+
+## 数据核验与统计（自动增补 · 0-信任）
+
+> **来源库**：资料数据库 · materials / material_cross_references；references_fulltext · chapter_matches / chapter_reviews；doubts_standalone · doubts_to_resolve
+> **方法**：基于全局章号 1–348 直接 SQL 聚合；未做外部事实验证；`ch=0`/未映射条目不计入本章。
+> **生成时间**：2026-08-04 ｜ **复现**：`script/_engine_integrity_analysis.py`
+
+| 指标 | 数值 |
+| --- | --- |
+| 锚定素材 | 160 篇（含存疑标记 41 篇） |
+| 存疑点 | 0 条 |
+| 参考文献匹配 | 0 条 |
+| 章节述评 | 未生成 |
+| 章内交叉引用 | 出 6 / 入 1 |
+
+**数据质量备注**：暂无参考文献匹配
+
+<!-- DATA_VERIFY_BLOCK v20260804 -->
+> 2026-08-11 补：批量修复 DVB 缺失（最终批）
+>
+## 数据核验与统计（自动增补 · 0-信任）
+>
+> **来源库**：资料数据库 · materials / material_cross_references；references_fulltext
+> **生成时间**：2026-08-11（批量回填）
+
+| 指标 | 数值 |
+| --- | --- |
+| 锚定素材 | 343 篇（含存疑标记 0 篇） |
+| 存疑点 | 0 条 |
+| 参考文献匹配 | 1 条 |
+| 章节述评 | 未生成 |
+| 章内交叉引用 | 出 0 / 入 0 |
+
+**数据质量备注**：史料回填优先对象；2026-08-11 批量回填 DVB 框架
+
+<!-- DB_POINTS:chapter_reviews -->
+**数据库要点引用（references_fulltext.db · chapter_reviews · 2026-08-13）**
+
+> 来源：`04-现代研究文献/05-参考文献全文数据库/references_fulltext.db` 表 `chapter_reviews`（348 章全覆盖）。本章级文献综述 1129 字、匹配 0 篇文献，状态 imported。映射：旧章号 +1 → 磁盘章号。
+
+> **综述要点**：本章围绕“FreeBSD 安全模型的磁盘加密与内存保护”展开，覆盖 136.5 磁盘加密与随机数生成-GBDE-GELI-与-random…；136.6 FreeBSD-Security-Team-与安全响应体系…；136.7 典型-FreeBSD-安全事件与响应；136.8 外部批评与跨-OS-安全模型比较。数据核验显示：锚定素材 160 篇（含存疑标记 41 篇）、参考文献匹配 0 条、存疑点 0 条（自动增补，0 信任原则下须人工
+
+<!-- /DB_POINTS:chapter_reviews -->
+
+<!-- COL_SCAN v20260826 -->
+## 内容包复核增补
+
+> 基于 4 个核心数据库（doubts_standalone、historical_claims、original_sources、资料数据库）内容包自动匹配与审核。
+> 内容包总行数：200 | 去重主张数：1 | 复核方法：12 步流程（详见 vol2to5_phase4_summary.md）
+
+### 证据等级分布
+
+| 等级 | 说明 | 数量 | 占比 |
+| --- | --- | --- | --- |
+| L1 | 代码与构建产物 | 0 | 0.0% |
+| L2 | 即时通讯记录 | 0 | 0.0% |
+| L3 | 官方文档与公告 | 200 | 100.0% |
+| L4 | 事后叙述 | 0 | 0.0% |
+| L5 | 二手研究 | 0 | 0.0% |
+
+### 来源数据库分布
+
+| 来源 | 行数 |
+| --- | --- |
+| 资料数据库 | 200 |
+
+### 新增证据点（L1-L3）
+
+1. [L3] `资料数据库.freebsd_sa.full_text#1` — -----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA512
+
+=============================================================================
+FreeBSD-SA-26:49.iconv                                     Security Advis...
+
+### 0 信任评估
+
+- 独立来源数：1 个数据库
+- 一级史料通过率：100.0%（L1+L2+L3 / 总行数）
+- 本章 L1-L3 级史料 1 条，可纳入大纲但需标注来源
+- 所有主张均来自内容包自动匹配，未经人工逐一核实
+- 单一来源支撑的主张须标注 (单一文献支撑，待交叉验证)
+
+### 交叉验证提示
+
+- 本章有 1 条 L1-L3 级证据，建议优先与此前已入库的 MAIL_MINE、DB_POINTS、PODCAST_MINE 块交叉验证
+- 本章仅从单一数据库获取证据，须标注 (单一文献支撑，待交叉验证)
+
+<!-- /COL_SCAN -->
+
+
+<!-- DEEP_ANALYSIS: freebsd.duckdb.commits -->
+**数据库分析发现**（证据等级：L1，来源：`freebsd.duckdb.commits.freebsd`）
+
+freebsd 代码仓库：从 1993 年到 2026 年，共 1294851 次提交，5671 位贡献者参与。
+
+
+
+<!-- DEEP_ANALYSIS: freebsd.duckdb.commits -->
+**数据库分析发现**（证据等级：L1，来源：`freebsd.duckdb.commits.freebsd`）
+
+freebsd 核心贡献者：Po-Chuan Hsieh(68595), Sunpoet Po-Chuan Hsieh(51033), Yuri Victorovich(29759), Jan Beich(22360), Martin Wilke(20341)
+

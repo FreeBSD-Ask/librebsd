@@ -1,0 +1,151 @@
+---
+chapter: 第 289 章
+id: CH289
+volume: 第15卷-许可证哲学与法律分析
+---
+
+# 第 289 章 BSD 代码双向流动与许可模式扩散——跨项目协作的工程与法律治理
+
+### 核心内容
+
+> 本子章为原第 136 章“BSD 跨项目的投入与主持”按主题拆分的第三子章，聚焦 BSD 代码在跨项目协作中的双向流动与许可模式扩散。原第 136 章共约 81,000 字，超出单章 20,000 字硬约束，按主题拆分为第 136A-136E 五个子章。
+
+- 拆分日期：2026-07-30
+- 原章号：第 136 章
+- 拆分依据：spec `unified-word-count-rebalance-2026-07-30` 任务 10.2
+
+## 本章节索引
+
+1. [289.8 BSD-代码双向流动与许可模式扩散-跨项目协作的工程与法律治理](289.8-BSD-代码双向流动与许可模式扩散-跨项目协作的工程与法律治理.md)
+
+## 数据核验与统计（自动增补 · 0-信任）
+
+> **来源库**：资料数据库 · materials / material_cross_references；references_fulltext · chapter_matches / chapter_reviews；doubts_standalone · doubts_to_resolve
+> **方法**：基于全局章号 1–348 直接 SQL 聚合；未做外部事实验证；`ch=0`/未映射条目不计入本章。
+> **生成时间**：2026-08-04 ｜ **复现**：`script/_engine_integrity_analysis.py`
+
+| 指标 | 数值 |
+| --- | --- |
+| 锚定素材 | 31 篇（含存疑标记 1 篇） |
+| 存疑点 | 0 条 |
+| 参考文献匹配 | 0 条 |
+| 章节述评 | 未生成 |
+| 章内交叉引用 | 出 0 / 入 0 |
+
+**数据质量备注**：暂无参考文献匹配
+
+<!-- DATA_VERIFY_BLOCK v20260804 -->
+> 2026-08-11 补：本卷原缺 DATA_VERIFY_BLOCK，此为批量修复补入。
+>
+## 数据核验与统计（自动增补 · 0-信任）
+
+> **来源库**：资料数据库 · materials / material_cross_references；references_fulltext · chapter_matches / chapter_reviews；doubts_standalone · doubts_to_resolve
+> **方法**：基于全局章号 1–348 直接 SQL 聚合；未做外部事实验证；`ch=0`/未映射条目不计入本章。
+> **生成时间**：2026-08-11（批量回填） ｜ **复现**：`script/_engine_integrity_analysis.py`
+
+| 指标 | 数值 |
+| --- | --- |
+| 锚定素材 | 0 篇（含存疑标记 0 篇） |
+| 存疑点 | 0 条 |
+| 参考文献匹配 | 0 条 |
+| 章节述评 | 未生成 |
+| 章内交叉引用 | 出 0 / 入 0 |
+
+**数据质量备注**：属史料回填优先对象；2026-08-11 批量回填 DVB 框架
+
+<!-- DB_POINTS:chapter_reviews -->
+**数据库要点引用（references_fulltext.db · chapter_reviews · 2026-08-13）**
+
+> 来源：`04-现代研究文献/05-参考文献全文数据库/references_fulltext.db` 表 `chapter_reviews`（348 章全覆盖）。本章级文献综述 367 字、匹配 0 篇文献，状态 imported。映射：旧章号 +1 → 磁盘章号。
+
+> **综述要点**：本章围绕“BSD 代码双向流动与许可模式扩散——跨项目协作的工程与法律治理”展开，覆盖 288.8 BSD-代码双向流动与许可模式扩散-跨项目协作的工程与法律…。数据核验显示：锚定素材 31 篇（含存疑标记 1 篇）、参考文献匹配 0 条、存疑点 0 条（自动增补，0 信任原则下须人工复核）。子节要点：288.8 BSD 代码双向流动与许可模式扩散——跨项目协作…：BSD代码向其他开源项目的正向流出主要通过三种工程机制实现——（1）**
+
+<!-- /DB_POINTS:chapter_reviews -->
+
+<!-- COL_SCAN v20260826 -->
+## 内容包复核增补（Phase 4 · 2026-08-26）
+
+> 基于 4 个核心数据库（doubts_standalone、historical_claims、original_sources、资料数据库）内容包自动匹配与审核。
+> 内容包总行数：5 | 去重主张数：4 | 复核方法：12 步流程（详见 vol01_phase4_summary.md）
+
+### 证据等级分布
+
+| 等级 | 说明 | 数量 | 占比 |
+| --- | --- | --- | --- |
+| L1 | 代码与构建产物 | 0 | 0.0% |
+| L2 | 即时通讯记录 | 0 | 0.0% |
+| L3 | 官方文档与公告 | 0 | 0.0% |
+| L4 | 事后叙述 | 0 | 0.0% |
+| L5 | 二手研究 | 5 | 100.0% |
+
+### 来源数据库分布
+
+| 来源 | 行数 |
+| --- | --- |
+| historical_claims | 5 |
+
+### 新增证据点
+
+1. [L5] `historical_claims.entity_type_class` — GhostBSD/OPNsense 类衍生发行
+2. [L5] `historical_claims.entity_type_class` — 如 4.4BSD-Lite、FreeBSD 2.0；挂 parent 项目于 attrs
+3. [L5] `historical_claims.entity_type_class` — BSDCan/EuroBSDCon 等
+4. [L5] `historical_claims.entity_type_class` — 诉讼/判决/和解，如 USL v. BSDi
+
+### 0 信任评估
+
+- 独立来源数：1 个数据库
+- 一级史料通过率：0.0%（L1+L2+L3 / 总行数）
+- 本章内容包无 L3/L4 级史料，所有条目均为 L5 二手研究，不可独立支撑事实性陈述
+- 所有主张均来自内容包自动匹配，未经人工逐一核实
+- 单一来源支撑的主张须标注 (单一文献支撑，待交叉验证)
+- L5 级别来源不得独立支撑事实性陈述
+
+### 交叉验证提示
+
+<!-- /COL_SCAN -->
+
+
+<!-- DEEP_ANALYSIS: linux-kernel.duckdb.commits -->
+**数据库分析发现**（证据等级：L1，来源：`linux-kernel.duckdb.commits.linux-kernel`）
+
+linux-kernel 代码仓库：从 1970 年到 2026 年，共 1474341 次提交，39865 位贡献者参与。
+
+
+
+
+
+
+<!-- DEEP_ANALYSIS: sacred_sources.duckdb.blocks -->
+**史家判断**（证据等级：L2，来源：`sacred_sources.duckdb.blocks.32`）
+
+史学含义：历史书写本身即是一种形式主义化的非存在。史家所记述的从来不是历史本身，而是经过人化加工的非存在。任何史书都是主体对存在的形式主义化重构。承认这一点，是本书一切叙述的前提。人类文明历史发展就是形式主义发展史，BSD 的历史亦不例外——许可证、社区规范、技术决策、文档传统，皆为形式主义。
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- DEEP_ANALYSIS: cross_indexes.duckdb.concept_history -->
+**史家判断**（证据等级：L2，来源：`cross_indexes.duckdb.concept_history.31`）
+
+license: 由 technologies_mentioned 类别聚类提炼（含 6 项技术）
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-4-102`）
+
+硬件厂商为节省成本不再在芯片内固化固件，改由操作系统加载固件，由此产生固件分发许可证问题。
+
+## 文献
+
+- Ingo Schwarze. bsdcan14-mandoc[M]. 2014.
+- eurobsdcon2014-mandoc-paper[M].
+- Nadge F. Writing for Translation: No Ambiguity – No Worries[R/OL]. FreeBSD Foundation, 2012. <https://freebsdfoundation.org/wp-content/uploads/2012/08/simple_writing_oh_fnadge.pdf>.
+

@@ -1,0 +1,167 @@
+---
+chapter: 第 139 章
+id: CH139
+volume: 第07卷-freebsd的工程体系重构
+---
+
+# 第 139 章 FreeBSD 网络栈的 TCP/IP 谱系与 KAME IPv6
+
+> 本子章由原第 55 章拆分而来，承载 139.1-139.5 节。
+
+## 本章节索引
+
+1. [139.1 4-2BSD-TCP-IP-协议栈的现代演进-FreeBSD-网络栈是-BSD-血脉最直接的继承者](139.1-4-2BSD-TCP-IP-协议栈的现代演进-FreeBSD-网络栈是-BSD.md)
+2. [139.2 netgraph-框架-1999-年-Julian-Elischer-与-Archie-Cobbs-在-Whistle](139.2-netgraph-框架-1999-年-Julian-Elischer-与.md)
+3. [139.3 if_bridge-if_lagg-二层网桥与链路聚合](139.3-if_bridge-if_lagg-二层网桥与链路聚合.md)
+4. [139.4 VNET-综述-网络栈虚拟化-使每个-Jail-epair-可拥有独立协议栈实例](139.4-VNET-综述-网络栈虚拟化-使每个-Jail-epair-可拥有独立协议栈实例.md)
+
+## 数据核验与统计（自动增补 · 0-信任）
+
+> **来源库**：资料数据库 · materials / material_cross_references；references_fulltext · chapter_matches / chapter_reviews；doubts_standalone · doubts_to_resolve
+> **方法**：基于全局章号 1–348 直接 SQL 聚合；未做外部事实验证；`ch=0`/未映射条目不计入本章。
+> **生成时间**：2026-08-04 ｜ **复现**：`script/_engine_integrity_analysis.py`
+
+| 指标 | 数值 |
+| --- | --- |
+| 锚定素材 | 93 篇（含存疑标记 18 篇） |
+| 存疑点 | 0 条 |
+| 参考文献匹配 | 0 条 |
+| 章节述评 | 已生成 |
+| 章内交叉引用 | 出 20 / 入 18 |
+
+**数据质量备注**：暂无参考文献匹配
+
+<!-- DATA_VERIFY_BLOCK v20260804 -->
+> 2026-08-11 补：批量修复 DVB 缺失（最终批）
+>
+## 数据核验与统计（自动增补 · 0-信任）
+>
+> **来源库**：资料数据库 · materials / material_cross_references；references_fulltext
+> **生成时间**：2026-08-11（批量回填）
+
+| 指标 | 数值 |
+| --- | --- |
+| 锚定素材 | 104 篇（含存疑标记 0 篇） |
+| 存疑点 | 0 条 |
+| 参考文献匹配 | 1 条 |
+| 章节述评 | 未生成 |
+| 章内交叉引用 | 出 0 / 入 0 |
+
+**数据质量备注**：史料回填优先对象；2026-08-11 批量回填 DVB 框架
+
+<!-- MAIL_MINE v20260813 -->
+## 邮件史料增补
+
+> 基于 6 个邮件数据库（260 万封）+ FTS5 全文索引自动挖掘，供编纂引用参考。
+> 以下为本章主题相关的邮件史料线索（精确词命中，含时间范围与代表邮件）。
+
+- **tcpip**（freebsd）: 428 封 · 1994-2021
+  - [1994] RE: Multiple IP addresses on ethernet if ? — Ugen J.S.Antsilevich
+  - [1994] Install question... —
+  - [1995] Re: bin/386: *s field width specification doesn't seem to work for pri — J Wunsch
+- **kame**（freebsd）: 1,738 封 · 1998-2024
+  - [1998] ATM in FreeBSD, status requested! — Poul-Henning Kamp（波尔-亨宁·坎普）
+  - [1998] bin/7258: bad four-letter words in /usr/src — Sergei S. Laskavy
+  - [1998] Re: conf/7621 — Dag-Erling C. Smxf8rgrav
+
+<!-- /MAIL_MINE -->
+
+<!-- DB_POINTS:chapter_reviews -->
+**数据库要点引用（references_fulltext.db · chapter_reviews · 2026-08-13）**
+
+> 来源：`04-现代研究文献/05-参考文献全文数据库/references_fulltext.db` 表 `chapter_reviews`（348 章全覆盖）。本章级文献综述 1674 字、匹配 6 篇文献，状态 revised。映射：旧章号 +1 → 磁盘章号。
+
+> **综述要点**：本章匹配 19 篇文献，但匹配质量整体偏低——多为通用参考书籍与 BSD 会议交叉资料，与 FreeBSD 网络栈直接相关的文献较少。Ritchie 的"The Evolution of the UNIX Time-sharing System"（Ritchie, 1984）是 UNIX 文件系统、进程控制与管道机制的经典历史论文，其中对管道（pipeline）与进程间通信的原始设计讨论可佐证第 55.1 节关于 BSD Socket
+
+<!-- /DB_POINTS:chapter_reviews -->
+
+<!-- COL_SCAN v20260826 -->
+## 内容包复核增补（Phase 4 · 2026-08-26）
+
+> 基于 4 个核心数据库（doubts_standalone、historical_claims、original_sources、资料数据库）内容包自动匹配与审核。
+> 内容包总行数：605 | 去重主张数：596 | 复核方法：12 步流程（详见 vol2to5_phase4_summary.md）
+
+### 证据等级分布
+
+| 等级 | 说明 | 数量 | 占比 |
+| --- | --- | --- | --- |
+| L1 | 代码与构建产物 | 0 | 0.0% |
+| L2 | 即时通讯记录 | 0 | 0.0% |
+| L3 | 官方文档与公告 | 200 | 33.1% |
+| L4 | 事后叙述 | 205 | 33.9% |
+| L5 | 二手研究 | 200 | 33.1% |
+
+### 来源数据库分布
+
+| 来源 | 行数 |
+| --- | --- |
+| historical_claims | 205 |
+| 资料数据库 | 200 |
+| doubts_standalone | 200 |
+
+### 新增证据点（L1-L3）
+
+1. [L3] `资料数据库.materials.title#1` — ARPA IPTO 1963 年度报告
+2. [L3] `资料数据库.materials.title#2` — Fano 1966 年 MAC Project 进展报告
+3. [L3] `资料数据库.materials.title#4` — multicians.org/project-mac.html Project MAC 专题页（Tom Van Vleck 撰） ［B］
+4. [L3] `资料数据库.materials.title#5` — MIT Project MAC 1965-1966 组织章程
+5. [L3] `资料数据库.materials.title#8` — MIT-GE 设备采购合同
+6. [L3] `资料数据库.materials.title#12` — 三方协议原文（MIT 档案馆藏）
+7. [L3] `资料数据库.materials.title#15` — Corbató 1962 年论文 "An Experimental Time-Sharing System" (AFIPS Conference Proceedings)
+8. [L3] `资料数据库.materials.title#19` — Corbató & Vyssotsky 1965 年 Multics 设计论文 "Preliminary Discussion of the Design of a Multics System" ［A］
+9. [L3] `资料数据库.materials.title#22` — MIT LCS RFC 37 "A Census of Ring 0" (Victor Voydock, 1973-09-05)
+10. [L3] `资料数据库.materials.title#23` — MIT LCS RFC 140 "The Multics Kernel Design Project" (Schroeder, Clark, Saltzer, Wells, 1977-03-31)
+11. [L3] `资料数据库.materials.title#24` — MIT LCS "Final Report of the Multics Kernel Design Project" (1977-06-30) [存疑脚注]
+12. [L3] `资料数据库.materials.title#25` — Multics 设计文档 (Multics System Programmers' Manual)
+13. [L3] `资料数据库.materials.title#33` — PDP-7 技术手册
+14. [L3] `资料数据库.materials.title#35` — DEC 官方规格说明
+15. [L3] `资料数据库.materials.title#36` — DEC PDP-7 1964 年产品手册（archive.computerhistory.org 存档） ［A］
+
+> 另有 178 条 L1-L3 证据点未列出，详见内容包文件。
+
+### 备用证据点（L4）
+
+1. [L4] `historical_claims.claim.claim_text#claim_id=CL-1-001` — Multics 最初是 MIT、贝尔实验室（BTL）、通用电气（GE）三方联合项目，其开发跨度多年
+2. [L4] `historical_claims.claim.claim_text#claim_id=CL-1-002` — UNIX 的名称源于对 Multics（Multiplexed Information and Computing System）的类比；Brian Kernighan 命名时意在对比 Multics 的“多选项、多命令”哲学与 UNIX 的“小而统一”哲学
+3. [L4] `historical_claims.claim.claim_text#claim_id=CL-1-003` — Unix 的诞生是对 Multics 在贝尔实验室默里山（BTL-MH）开发拖期、无法提供交互能力的直接反应——默里山团队被迫退回到运行 GECOS 的状态
+4. [L4] `historical_claims.claim.claim_text#claim_id=CL-1-004` — rc 命令名源于 MIT CTSS 系统的 RUNCOM（run commands），CTSS 的 RUNCOM 相当于 Unix 的 shell 脚本
+5. [L4] `historical_claims.claim.claim_text#claim_id=CL-1-005` — Dennis Ritchie 本人持“Unix 是 CTSS 的现代版本”的论点，约 1973 年首次提出，1981 年仍坚持此论
+6. [L4] `historical_claims.claim.claim_text#claim_id=CL-1-006` — “Unix 是阉割版 Multics（castrated Multics）”是同时使用过两套系统者之间的戏称，并非 Unix 命名的起源；Dennis Ritchie 在 1981 年 USENIX 会议上明确否认此说法
+7. [L4] `historical_claims.claim.claim_text#claim_id=CL-1-007` — 1981 年时 Multics 上已有读写 Unix tar 磁带格式的实用工具（PL/1 实现），Bill Jolitz 提及
+8. [L4] `historical_claims.claim.claim_text#claim_id=CL-1-008` — Dijkstra 1968 年描述的 THE 多道程序系统明确声明不作为多访问系统、无公共数据库供独立用户间通信，与 Multics 的多访问分时设计形成同时期路径对照
+
+> 另有 197 条 L4 证据点未列出。
+
+### 0 信任评估
+
+- 独立来源数：3 个数据库
+- 一级史料通过率：33.1%（L1+L2+L3 / 总行数）
+- 本章 L1-L3 级史料 193 条，可纳入大纲但需标注来源
+- 所有主张均来自内容包自动匹配，未经人工逐一核实
+- 单一来源支撑的主张须标注 (单一文献支撑，待交叉验证)
+
+### L5 存疑注册
+
+| 来源 | 主张数 | 处理建议 |
+| --- | --- | --- |
+| doubts_standalone | 200 | 不进入大纲，留存疑数据库备查 |
+
+L5 级主张不进入大纲正文，仅注册于此处备查。
+
+### 交叉验证提示
+
+- 本章有 193 条 L1-L3 级证据，建议优先与此前已入库的 MAIL_MINE、DB_POINTS、PODCAST_MINE 块交叉验证
+- 本章 L5 级二手研究数量较大（198 条），需注意区分学术文献与通俗技术博客，仅学术文献可作参考
+
+<!-- /COL_SCAN -->
+
+<!-- DEEP_ANALYSIS: freebsd.duckdb.commits -->
+**数据库分析发现**（证据等级：L1，来源：`freebsd.duckdb.commits.freebsd`）
+
+freebsd 代码仓库：从 1993 年到 2026 年，共 1294851 次提交，5671 位贡献者参与。
+
+<!-- DEEP_ANALYSIS: freebsd.duckdb.commits -->
+**数据库分析发现**（证据等级：L1，来源：`freebsd.duckdb.commits.freebsd`）
+
+freebsd 核心贡献者：Po-Chuan Hsieh(68595), Sunpoet Po-Chuan Hsieh(51033), Yuri Victorovich(29759), Jan Beich(22360), Martin Wilke(20341)
+

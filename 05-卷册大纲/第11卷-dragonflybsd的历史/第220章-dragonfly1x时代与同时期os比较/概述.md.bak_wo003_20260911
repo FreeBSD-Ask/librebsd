@@ -1,0 +1,171 @@
+---
+chapter: 第 220 章
+id: CH220
+volume: 第11卷-dragonflybsd的历史
+---
+
+# 第 220 章 DragonFly 1.x 时代与同时期 OS 比较
+
+> 本子章由原第 96 章拆分而来，承载 220.1-220.8 节。
+
+## 本章节索引
+
+1. [220.1 与同时期操作系统的比较dragonfly1x时代与lwkt子系统时期200420](220.1-与同时期操作系统的比较dragonfly1x时代与lwkt子系统时期200420.md)
+2. [220.2 dragonfly1x周期漏洞与安全响应](220.2-dragonfly1x周期漏洞与安全响应.md)
+3. [220.3 项目统摄史观审视](220.3-项目统摄史观审视.md)
+4. [220.4 项目统摄史观审视](220.4-项目统摄史观审视.md)
+5. [220.5 dragonflybsd保留的nullfs实现跨bsdunixmacos扩展](220.5-dragonflybsd保留的nullfs实现跨bsdunixmacos扩展.md)
+6. [220.6 dragonflybsd继承自freebsd48的ktrace跨bsdunixm](220.6-dragonflybsd继承自freebsd48的ktrace跨bsdunixm.md)
+7. [220.7 dragonflybsd继承自freebsd48的fstat1跨bsdunixm](220.7-dragonflybsd继承自freebsd48的fstat1跨bsdunixm.md)
+8. [220.8 dragonflybsd继承自freebsd48的pcm4音频驱动跨bsduni](220.8-dragonflybsd继承自freebsd48的pcm4音频驱动跨bsduni.md)
+
+## 数据核验与统计（自动增补 · 0-信任）
+
+> **来源库**：资料数据库 · materials / material_cross_references；references_fulltext · chapter_matches / chapter_reviews；doubts_standalone · doubts_to_resolve
+> **方法**：基于全局章号 1–348 直接 SQL 聚合；未做外部事实验证；`ch=0`/未映射条目不计入本章。
+> **生成时间**：2026-08-04 ｜ **复现**：`script/_engine_integrity_analysis.py`
+
+| 指标 | 数值 |
+| --- | --- |
+| 锚定素材 | 0 篇（含存疑标记 0 篇） |
+| 存疑点 | 5 条 |
+| 参考文献匹配 | 0 条 |
+| 章节述评 | 未生成 |
+| 章内交叉引用 | 出 0 / 入 0 |
+
+**数据质量备注**：本章尚无锚定素材，属史料回填优先对象；暂无参考文献匹配
+
+<!-- DATA_VERIFY_BLOCK v20260804 -->
+> 2026-08-11 补：本卷全部 23 章原缺 DATA_VERIFY_BLOCK，此为批量修复补入。卷级综述见 [vol-11.md](../../../04-现代研究文献/02-卷级文献综述/vol-11.md)
+>
+## 数据核验与统计（自动增补 · 0-信任）
+
+> **来源库**：资料数据库 · materials / material_cross_references；references_fulltext · chapter_matches / chapter_reviews；doubts_standalone · doubts_to_resolve
+> **方法**：基于全局章号 1–348 直接 SQL 聚合；未做外部事实验证；`ch=0`/未映射条目不计入本章。
+> **生成时间**：2026-08-11（批量回填） ｜ **复现**：`script/_engine_integrity_analysis.py`
+
+| 指标 | 数值 |
+| --- | --- |
+| 锚定素材 | 待补（本卷全部 23 章原缺锚定素材，属史料回填优先对象） |
+| 存疑点 | 0 条 |
+| 参考文献匹配 | 3 条 |
+| 章节述评 | 未生成 |
+| 章内交叉引用 | 出 0 / 入 0 |
+
+**数据质量备注**：本章为 DragonFly BSD 卷，史料档案待从 03-原始史料库/11-邮件列表史料/ 和 dragonfly.duckdb dragonfly-src 仓库补充；2026-08-11 批量回填 DVB 框架
+
+<!-- DB_POINTS:doubts_resolved -->
+**数据库要点引用（doubts_standalone.db · 2026-08-13）**
+
+> 来源：`04-现代研究文献/06-存疑数据库/doubts_standalone.db` 表 `doubts_to_resolve`（1987 条，1966 已解决）。本章存疑 5 条已解决。类别分布：date(3)、version(2)
+
+> 存疑管理体系：98.9% 已闭环，解决结论含 date/fact/source_conflict/name/version 等类型，具体结论见 doubts_standalone.db 表 `resolution_summary` 字段。
+<!-- /DB_POINTS:doubts_resolved -->
+
+<!-- DB_POINTS:chapter_reviews -->
+**数据库要点引用（references_fulltext.db · chapter_reviews · 2026-08-13）**
+
+> 来源：`04-现代研究文献/05-参考文献全文数据库/references_fulltext.db` 表 `chapter_reviews`（348 章全覆盖）。本章级文献综述 961 字、匹配 3 篇文献，状态 imported。映射：旧章号 +1 → 磁盘章号。
+
+> **综述要点**：本章围绕“DragonFly 1.x 时代与同时期 OS 比较”展开，覆盖 219.1 与同时期操作系统的比较dragonfly1x时代与lwkt…；219.2 dragonfly1x周期漏洞与安全响应；219.3 项目统摄史观审视；219.4 项目统摄史观审视；219.5 dragonflybsd保留的nullfs实现跨bsdun… 等 8 个子节。数据核验显示：锚定素材 0 篇（含存疑标记 0 篇）、参考文献匹配 0 条、存疑点 5
+
+<!-- /DB_POINTS:chapter_reviews -->
+
+<!-- COL_SCAN v20260826 -->
+## 内容包复核增补（Phase 4 · 2026-08-26 · fix1 统一口径）
+
+> 基于 5 个核心数据库（doubts_standalone、historical_claims、original_sources、资料数据库、references_fulltext）内容包自动匹配与审核（fix1 统一口径重新提取，解除 500MB 库大小限制）。
+> 内容包总行数：141 | 去重主张数：15 | 复核方法：12 步流程（详见 vol01_phase4_summary.md）
+
+### 证据等级分布
+
+| 等级 | 说明 | 数量 | 占比 |
+| --- | --- | --- | --- |
+| L1 | 代码与构建产物 | 0 | 0.0% |
+| L2 | 即时通讯记录 | 0 | 0.0% |
+| L3 | 官方文档与公告 | 0 | 0.0% |
+| L4 | 事后叙述 | 0 | 0.0% |
+| L5 | 二手研究 | 141 | 100.0% |
+
+### 来源数据库分布
+
+| 来源 | 行数 |
+| --- | --- |
+| references_fulltext | 141 |
+
+### 新增证据点
+
+1. [L5] `references_fulltext.people_mentioned` — 尔实验室的主页被保留了下来，在其 上面有丹尼斯写的大部分论文和其他历史资料的链接。 柯克·迈库西克（Kirk McKusick）是BSD 的核心人物，他写了一 本详尽的 BSD 历史，可以在奥莱利（O
+2. [L5] `references_fulltext.people_mentioned` — Appendix A: Bibliography [1] Marshall Kirk McKusick, Keith Bostic, Michael J Ka
+3. [L5] `references_fulltext.people_mentioned` — endix A: Bibliography [1] Marshall Kirk McKusick, Keith Bostic, Michael J Karels, and John S Quarter
+4. [L5] `references_fulltext.people_mentioned` — stem snapshots, including technical papers, visit Marshall Kirk McKusick’s website at <http://www.mck>
+5. [L5] `references_fulltext.people_mentioned` — permission of Alcatel-Lucent USA Inc. <http://www.mckusick.com/beastie/shirts/bsdunix.html> USENIX: 4
+6. [L5] `references_fulltext.people_mentioned` — s, Joerg Sonnenberger, Matthias Scheler (NetBSD), Pedro Giffuni, Ulrich Spörlein (FreeBSD), Garrett
+7. [L5] `references_fulltext.people_mentioned` — ), Abhinav Upadhyay, Joerg Sonnenberger (NetBSD), Dag-Erling Smørgrav (FreeBSD), Benny Lofgren, Davi
+8. [L5] `references_fulltext.people_mentioned` — permission of Alcatel-Lucent USA Inc. <http://www.mckusick.com/beastie/shirts/bsdunix.html> USENIX: 4
+9. [L5] `references_fulltext.people_mentioned` — 08m and Vihren 2914m, Pirin (by-nc-nd) <http://www.mckusick.com/beastie/shirts/bsdunix.html> USENIX: 4
+10. [L5] `references_fulltext.people_mentioned` — ), Abhinav Upadhyay, Joerg Sonnenberger (NetBSD), Dag-Erling Smørgrav (FreeBSD), Benny Lofgren, Davi
+11. [L5] `references_fulltext.people_mentioned` — heile.arch07] Volker Theile, Alexander Leidinger, LI Xin, Bruno Ducrot. “Any plans to implement Open
+12. [L5] `references_fulltext.people_mentioned` — w.freebsd.org /handbook/synching.html#CTM. [5] M. McKusick, K. Bostic, M. Karels, and J. Quar- terma
+
+### 0 信任评估
+
+- 独立来源数：1 个数据库
+- 一级史料通过率：0.0%（L1+L2+L3 / 总行数）
+- 本章内容包无 L3/L4 级史料，所有条目均为 L5 二手研究，不可独立支撑事实性陈述
+- 所有主张均来自内容包自动匹配，未经人工逐一核实
+- 单一来源支撑的主张须标注 (单一文献支撑，待交叉验证)
+
+### 交叉验证提示
+
+- 本章 L5 级二手研究数量较大（141 条），需注意区分学术文献与通俗技术博客，仅学术文献可作参考
+
+<!-- /COL_SCAN -->
+
+
+<!-- DEEP_ANALYSIS: dragonfly.duckdb.commits -->
+**数据库分析发现**（证据等级：L1，来源：`dragonfly.duckdb.commits.dragonfly`）
+
+dragonfly 代码仓库：从 2003 年到 2026 年，共 656207 次提交，213 位贡献者参与。
+
+
+
+<!-- DEEP_ANALYSIS: dragonfly.duckdb.commits -->
+**数据库分析发现**（证据等级：L1，来源：`dragonfly.duckdb.commits.dragonfly`）
+
+dragonfly 核心贡献者：DPorts Builder(562567), Automaton(29485), Sascha Wildner(10869), Matthew Dillon(10664), Charlie Root(8176)
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-4-107`）
+
+Torvalds 自述是“偶然的革命者”，开始 Linux 是因为在电脑上玩耍有乐趣，且当时其他选择不够吸引人。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-4-108`）
+
+Lerner 与 Tirole（2000）引 IDC 估计，个人电脑操作系统市场中 Linux 全球用户约 700 万至 2100 万，年增长率 200%。
+
+<!-- MAIL_INSIGHT_SECTION v20260828-v2 -->
+## 邮件列表分析观点（2026-08-28 自动增补）
+
+> 数据源：`script/_mail_analysis/topic_analysis_dragonfly.md`（7 主题 × 50 封邮件）+ `person_analysis_dragonfly_dillon.md`（Dillon 500 封邮件分析）
+> 方法：按章主题从报告中提取邮件段落，蒸馏为史学观点（V2 格式）
+> 注意：报告覆盖范围主要为 2023-2026 年 bug 跟踪器与用户邮件列表，早期（2003-2020）历史邮件未纳入分析
+
+
+
+<!-- MAIL_INSIGHT: <CAOZ7CpB_Nssm7CPj3rB0AbHrySF5KAtYZa0D0=Mv8esXbYVSYw@mail.gmail.com> -->
+**观点**：Matthew Dillon 在 2023 年 11 月明确表示，FreeBSD 网络驱动的 API 变更使得从 FreeBSD 移植驱动到 DragonFly 变得困难。这一技术分歧直接源于 DragonFly 选择从 FreeBSD 4.x 而非 5.x 分叉的初始决策——FreeBSD 5.x 开始的 SMPng 重构改变了内核 API 基础，而 DragonFly 的 LWKT 路线走向了不同的内核锁模型。
+**邮件来源**：Matthew Dillon，dragonfly-users 邮件列表，2023-11-19，Message-ID: `CAOZ7CpB_Nssm7CPj3rB0AbHrySF5KAtYZa0D0=Mv8esXbYVSYw@mail.gmail.com`
+**史学意义**：fork 二十年后的 API 分歧是评估 DragonFly 与同时期 OS 关系的关键证据——DragonFly 在 1.x 时期确立的 LWKT 路线虽然在 SMP 可扩展性方面有其优势，但也付出了与 FreeBSD 生态渐行渐远的代价。
+<!-- /MAIL_INSIGHT -->
+
+<!-- MAIL_INSIGHT: <CAOZ7CpCChjHZbeegDhvgieCAnNyZdOUJFKEKsgnJkYPY4t7tupA@mail.gmail.com> -->
+**观点**：Matthew Dillon 在 2023 年 10 月透露，他在自己的 AMD Ryzen 2400G 工作站上使用 DragonFly 时，需要先 `kldload amdgpu`、等待两秒、再启动 X server，才能避免驱动加载竞态条件。他为此编写了一个小脚本来处理这一流程。
+**邮件来源**：Matthew Dillon，dragonfly-users 邮件列表，2023-10-29，Message-ID: `CAOZ7CpCChjHZbeegDhvgieCAnNyZdOUJFKEKsgnJkYPY4t7tupA@mail.gmail.com`
+**史学意义**：Dillon 本人在日常使用中遇到的桌面体验问题，揭示了 DragonFly 在桌面/工作站场景中的实际状态——即便是项目创始人，也需要 workaround 来处理基本的 GPU 驱动问题。这与同时期 FreeBSD 和 Linux 的桌面体验形成显著对比。
+<!-- /MAIL_INSIGHT -->

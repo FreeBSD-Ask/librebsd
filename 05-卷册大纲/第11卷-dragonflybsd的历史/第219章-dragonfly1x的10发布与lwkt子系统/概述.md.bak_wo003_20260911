@@ -1,0 +1,154 @@
+---
+chapter: 第 219 章
+id: CH219
+volume: 第11卷-dragonflybsd的历史
+---
+
+# 第 219 章 DragonFly 1.x 的 1.0 发布与 LWKT 子系统
+
+> 本子章由原第 96 章拆分而来，承载 219.1-219.7 节。
+
+> **勘误登记（doubt 批量 2026-08-04）**：
+>
+> - 存疑 id 1721：第218章 1.x 版本日期系统性后移约1年（1.2/1.4/1.6/1.8），HAMMER 误植于 1.2（实为 1.12 实验性、2.0 正式）；见 corrections C-1/C-2
+
+## 本章节索引[考据完成：2026-08-04 存疑 [1721] 勘误登记]
+
+1. [219.1 dragonfly10的发布2004712](219.1-dragonfly10的发布2004712.md)
+2. [219.2 lwkt子系统的设计与实现20032006](219.2-lwkt子系统的设计与实现20032006.md)
+3. [219.3 dragonfly1218的持续改进20052006](219.3-dragonfly1218的持续改进20052006.md)
+4. [219.4 dragonfly110112的smp改进20072008](219.4-dragonfly110112的smp改进20072008.md)
+5. [219.5 dragonfly与freebsd4x的关系演变20032010](219.5-dragonfly与freebsd4x的关系演变20032010.md)
+6. [219.6 dragonfly的治理结构20032010](219.6-dragonfly的治理结构20032010.md)
+7. [219.7 dragonflybsd1x时期的技术淘汰](219.7-dragonflybsd1x时期的技术淘汰.md)
+
+## 数据核验与统计（自动增补 · 0-信任）
+
+> **来源库**：资料数据库 · materials / material_cross_references；references_fulltext · chapter_matches / chapter_reviews；doubts_standalone · doubts_to_resolve
+> **方法**：基于全局章号 1–348 直接 SQL 聚合；未做外部事实验证；`ch=0`/未映射条目不计入本章。
+> **生成时间**：2026-08-04 ｜ **复现**：`script/_engine_integrity_analysis.py`
+
+| 指标 | 数值 |
+| --- | --- |
+| 锚定素材 | 0 篇（含存疑标记 0 篇） |
+| 存疑点 | 9 条 |
+| 参考文献匹配 | 1 条 |
+| 章节述评 | 未生成 |
+| 章内交叉引用 | 出 0 / 入 0 |
+
+**数据质量备注**：本章尚无锚定素材，属史料回填优先对象
+
+<!-- GITREPO_FINE_BLOCK v20260804 -->
+
+## Git 仓库标志特性深化（DragonFlyBSD · SMP/多核 · 自动增补 · 0-信任）
+<!-- FINE_SP_dragonfly_218 v20260804 -->
+
+> 来源：`tech_features` 表（提交级标记，源自 dragonfly 库）。方法：特性 `commits` 聚合 + 首/末年；未做外部事实验证。
+
+- **特性**：SMP/多核（DragonFlyBSD）
+- **提交标记**：816 次（活跃 2003–2026）
+- **说明**：对称多处理与内核并行化（自旋锁→睡眠锁→无锁结构）
+- **跨项目定位**：轻量级内核线程(LWKT)并发模型基石；DragonFly 1.0 以 SMP/多核调度为架构重心
+
+---
+
+<!-- /GITREPO_FINE_BLOCK -->
+
+<!-- DATA_VERIFY_BLOCK v20260804 -->
+> 2026-08-11 补：本卷全部 23 章原缺 DATA_VERIFY_BLOCK，此为批量修复补入。卷级综述见 [vol-11.md](../../../04-现代研究文献/02-卷级文献综述/vol-11.md)
+>
+## 数据核验与统计（自动增补 · 0-信任）
+
+> **来源库**：资料数据库 · materials / material_cross_references；references_fulltext · chapter_matches / chapter_reviews；doubts_standalone · doubts_to_resolve
+> **方法**：基于全局章号 1–348 直接 SQL 聚合；未做外部事实验证；`ch=0`/未映射条目不计入本章。
+> **生成时间**：2026-08-11（批量回填） ｜ **复现**：`script/_engine_integrity_analysis.py`
+
+| 指标 | 数值 |
+| --- | --- |
+| 锚定素材 | 待补（本卷全部 23 章原缺锚定素材，属史料回填优先对象） |
+| 存疑点 | 0 条 |
+| 参考文献匹配 | 3 条 |
+| 章节述评 | 未生成 |
+| 章内交叉引用 | 出 0 / 入 0 |
+
+**数据质量备注**：本章为 DragonFly BSD 卷，史料档案待从 03-原始史料库/11-邮件列表史料/ 和 dragonfly.duckdb dragonfly-src 仓库补充；2026-08-11 批量回填 DVB 框架
+
+<!-- MAIL_MINE v20260813 -->
+## 邮件史料增补
+
+> 基于 6 个邮件数据库（260 万封）+ FTS5 全文索引自动挖掘，供编纂引用参考。
+> 以下为本章主题相关的邮件史料线索（精确词命中，含时间范围与代表邮件）。
+
+- **light weight kernel**（dragonfly）: 54 封 · 2003-2010
+  - [2003] contigmalloc for low address in SI_SUB_KMEM — qhwt at myrealbox.com
+  - [2003] Annoucning DragonFly BSD! — dillon at apollo.backplan
+  - [2003] Does this code compile and run at present? — dillon at apollo.backplan
+- **lwkt**（dragonfly）: 1,695 封 · 2003-2026
+  - [2003] contigmalloc for low address in SI_SUB_KMEM — qhwt at myrealbox.com
+  - [2003] bin/41647: ifconfig doesn't accept lladdr along with inet address fami —
+  - [2003] Ports Build Failer — dragonfly
+- **thread**（dragonfly）: 4,342 封 · 2003-2026
+  - [2003] The New Fred? — Eugenia Loli-Queru
+  - [2003] rcNG bug — Robert Garrett
+  - [2003] contigmalloc for low address in SI_SUB_KMEM — qhwt at myrealbox.com
+
+<!-- /MAIL_MINE -->
+
+<!-- DB_POINTS:doubts_resolved -->
+**数据库要点引用（doubts_standalone.db · 2026-08-13）**
+
+> 来源：`04-现代研究文献/06-存疑数据库/doubts_standalone.db` 表 `doubts_to_resolve`（1987 条，1966 已解决）。本章存疑 11 条已解决。类别分布：date(4)、other(4)、source_conflict(2)、年代(1)
+
+> 存疑管理体系：98.9% 已闭环，解决结论含 date/fact/source_conflict/name/version 等类型，具体结论见 doubts_standalone.db 表 `resolution_summary` 字段。
+<!-- /DB_POINTS:doubts_resolved -->
+
+<!-- DB_POINTS:chapter_reviews -->
+**数据库要点引用（references_fulltext.db · chapter_reviews · 2026-08-13）**
+
+> 来源：`04-现代研究文献/05-参考文献全文数据库/references_fulltext.db` 表 `chapter_reviews`（348 章全覆盖）。本章级文献综述 1628 字、匹配 3 篇文献，状态 imported。映射：旧章号 +1 → 磁盘章号。
+
+> **综述要点**：本章围绕“DragonFly 1.x 的 1.0 发布与 LWKT 子系统”展开，覆盖 218.1 dragonfly10的发布2004712；218.2 lwkt子系统的设计与实现20032006；218.3 dragonfly1218的持续改进20052006；218.4 dragonfly110112的smp改进20072008；218.5 dragonfly与freebsd4x的关系演变20032… 等 7 个子节。数据核验显示
+
+<!-- /DB_POINTS:chapter_reviews -->
+
+
+<!-- DEEP_ANALYSIS: dragonfly.duckdb.commits -->
+**数据库分析发现**（证据等级：L1，来源：`dragonfly.duckdb.commits.dragonfly`）
+
+dragonfly 核心贡献者：DPorts Builder(562567), Automaton(29485), Sascha Wildner(10869), Matthew Dillon(10664), Charlie Root(8176)
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-4-107`）
+
+Torvalds 自述是“偶然的革命者”，开始 Linux 是因为在电脑上玩耍有乐趣，且当时其他选择不够吸引人。
+
+
+
+<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
+**史家判断**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-4-108`）
+
+Lerner 与 Tirole（2000）引 IDC 估计，个人电脑操作系统市场中 Linux 全球用户约 700 万至 2100 万，年增长率 200%。
+
+## 文献
+
+- Ingo Schwarze. bsdcan15-mandoc[M]. 2015.
+- eurobsdcon2014-mandoc-paper[M].
+- eurobsdcon2015-mandoc[M].
+- Murenin C A, Boutaba R. OpenBSD Hardware Sensors Framework[C]//AsiaBSDCon 2009 Proceedings. Tokyo, 2009.
+
+<!-- MAIL_INSIGHT_SECTION v20260828-v2 -->
+## 邮件列表分析观点（2026-08-28 自动增补）
+
+> 数据源：`script/_mail_analysis/topic_analysis_dragonfly.md`（7 主题 × 50 封邮件）+ `person_analysis_dragonfly_dillon.md`（Dillon 500 封邮件分析）
+> 方法：按章主题从报告中提取邮件段落，蒸馏为史学观点（V2 格式）
+> 注意：报告覆盖范围主要为 2023-2026 年 bug 跟踪器与用户邮件列表，早期（2003-2020）历史邮件未纳入分析
+
+
+
+<!-- MAIL_INSIGHT: <CAOZ7CpDNEQdonw1bZ+kLDng99=bPy+=3N3dzqC-Ta7Kwe9Hjig@mail.gmail.com> -->
+**观点**：Matthew Dillon 在 2025 年 7 月审查 POSIX `O_CLOFORK` 补丁时，对 Ricardo 提交的代码进行了细致的逐行审查，指出 `fsetfdflags()` 中的掩码操作应改为类型转换并附注释说明。Dillon 写道：“我们非常感激你的工作！”（"A great deal of work on your part, we really appreciate it!"）。
+**邮件来源**：Matthew Dillon，dragonfly-kernel 邮件列表，2025-07-03，Message-ID: `CAOZ7CpDNEQdonw1bZ+kLDng99=bPy+=3N3dzqC-Ta7Kwe9Hjig@mail.gmail.com`
+**史学意义**：Dillon 在代码审查中体现的严谨与对贡献者的尊重，是理解他的技术领导风格的关键——他并非独断专行，而是兼具技术严格性与人际关怀。这种风格贯穿了 DragonFly 从 LWKT 设计到 HAMMER2 维护的整个历史。
+<!-- /MAIL_INSIGHT -->
