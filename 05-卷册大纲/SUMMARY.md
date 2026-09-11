@@ -1725,7 +1725,7 @@
 - [第 204 章 OpenBSD 的起源：从 NetBSD 分叉](./第10卷-openbsd的历史/第204章-openbsd的起源从netbsd分叉/概述.md)
   - [204.1 1995 年从 NetBSD 分叉的动因与经过](./第10卷-openbsd的历史/第204章-openbsd的起源从netbsd分叉/204.1-1995年从netbsd分叉的动因与经过.md)
   - [204.2 Theo de Raadt 与 NetBSD Core Team 的冲突考据（1994）](./第10卷-openbsd的历史/第204章-openbsd的起源从netbsd分叉/204.2-theoderaadt与netbsdcoreteam的冲突考据1994.md)
-  - [204.3 OpenBSD 1.0/2.1/2.2 的早期发布历程（1996）](./第10卷-openbsd的历史/第204章-openbsd的起源从netbsd分叉/204.3-openbsd101112的早期发布历程1996.md)
+  - [204.3 OpenBSD 1.0/1.1/1.2 的早期发布历程（1996）](./第10卷-openbsd的历史/第204章-openbsd的起源从netbsd分叉/204.3-openbsd101112的早期发布历程1996.md)
   - [204.4 早期开发团队与卡尔加里据点](./第10卷-openbsd的历史/第204章-openbsd的起源从netbsd分叉/204.4-早期开发团队与卡尔加里据点.md)
   - [204.5 与 NetBSD 1.x 的源码共享与逐步分化](./第10卷-openbsd的历史/第204章-openbsd的起源从netbsd分叉/204.5-与netbsd1x的源码共享与逐步分化.md)
   - [204.6 **与同时期操作系统的比较](./第10卷-openbsd的历史/第204章-openbsd的起源从netbsd分叉/204.6-与同时期操作系统的比较.md)
