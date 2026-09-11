@@ -56,7 +56,7 @@ volume: 第09卷-netbsd的历史
 
 <!-- DB_REF:netbsd.duckdb -->
 > **数据库引用（netbsd.duckdb）**：本子节对应 netbsd 代码仓库。> 1993-2026 年间：1,999,408 次提交。> 仓库总览：1,999,412 次提交，1,545 位贡献者（contributors 表行数，1992-07-13 至 2026-08-24）。
-- NetBSD Project. 10 years of pkgsrc - Alistair Crooks [EB/OL]. (2007-10-17)[2026-07-24]. **<https://www.netbsd.org/gallery/10years.html#alcrooks>**; NetBSD Project. pkgsrc Guide [EB/OL]. [2026-07-27]. **<https://www.netbsd.org/docs/pkgsrc/>**; 本项目既有考据记录 `03-原始史料库/06-考据记录/20260724_alistair-crooks-netbsd-1x-growth.md`; 本项目既有考据记录 `03-原始史料库/06-考据记录/20260727_rumors-netbsd.md` ［A］### 史纲映射本节在项目统摄史观 29 章 191 子节中的主要承载映射：1.md 第七章 “文化历史哲学”——本节为 NetBSD 传言与都市传说作为文化形式主义建构的核心考据，“文化即形式主义” 总纲在 “Of course it runs NetBSD” 口号、Theo de Raadt 驱逐事件、Tainted Code 政策等传言中的实例化；1.md 第二十五章 “总纲”——本节映射 5 条总纲（总纲 9 经验优先、总纲 15 文化即形式主义、总纲 19 解释学循环、总纲 7 理论必须自反、总纲 23 一切历史写作都是基于哲学设定的历史小说），含自反性声明；1.md 第二十九章 “元哲学”——本节以 6 条 NetBSD 传言为经验材料检验项目统摄史观，同时以项目统摄史观为分析工具释读 NetBSD 传言，构成双向检验的方法论实验。### 核心内容#### 186.9.1 NetBSD 相关键传言与都市传说考据（6 条）——可移植性口号、Theo de Raadt 驱逐、Tainted Code 政策、pkgsrc 鼻祖地位、NASA 航天器应用等
+- NetBSD Project. 10 years of pkgsrc - Alistair Crooks [EB/OL]. (2007-10-17)[2026-07-24]. **<https://www.netbsd.org/gallery/10years.html#alcrooks>**; NetBSD Project. pkgsrc Guide [EB/OL]. [2026-07-27]. **<https://www.netbsd.org/docs/pkgsrc/>**; 本项目既有考据记录 `03-原始史料库/06-考据记录/20260724_alistair-crooks-netbsd-1x-growth.md`; 本项目既有考据记录 `03-原始史料库/06-考据记录/20260727_rumors-netbsd.md` ［A］
 - NetBSD 官方历史页面、Ports 列表、Adam Glass 1994 邮件、OpenBSD FAQ、pkgsrc Guide、本项目既有考据记录 `03-原始史料库/06-考据记录/20260727_rumors-netbsd.md`
 
 <!-- DB_REF:netbsd.duckdb -->
