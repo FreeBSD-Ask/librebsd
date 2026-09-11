@@ -8,7 +8,7 @@ volume: 第02卷-伯克利的岁月
 
 ## 要点
 
-- 1985 年 6 月 Usenix 会议预告后，BBN 向 DARPA 投诉称 Berkeley 从未将 4.2BSD 更新为 BBN 网络代码的最终版本，仍使用多年前 BBN 交付的 "much-hacked initial prototype"（被大幅修改的初始原型），要求 Berkeley 在 4.3BSD 中以 BBN 实现替换 TCP/IP 代码；BBN 的主张基于分工约定——Berke
+- 1985 年 6 月 Usenix 会议预告后，BBN 向 DARPA 投诉称 Berkeley 从未将 4.2BSD 更新为 BBN 网络代码的最终版本，仍使用多年前 BBN 交付的 “much-hacked initial prototype”（被大幅修改的初始原型），要求 Berkeley 在 4.3BSD 中以 BBN 实现替换 TCP/IP 代码；BBN 的主张基于分工约定——Berke
 - Morris 蠕虫事件后，**1988 年 11 月 17 日** DARPA 决定成立计算机紧急响应小组协调中心（Computer Emergency Response Team Coordination Center, CERT/CC），由 DARPA 资助卡内基梅隆大学软件工程研究所（SEI）运营（apricot.net 1997 回顾性编年史料 "November 17, 1988 Def
 - 4.3BSD 早期安全模型为 “隐式信任”——开发者信任用户输入合法性、信任网络主机身份、信任本地用户协作，缺乏显式审计日志与安全事件响应机制；Morris 蠕虫（1988.11.2）暴露此模型的根本缺陷——网络规模扩大后信任链可被滥用传播恶意代码，且缺乏制度化安全事件响应机制；Berkeley 修复补丁（1988.11.8 NCSC Worm Postmortem Meeting 同步发布）引入
 - CSRG 在 Morris 蠕虫事件后建立的安全响应文化——补丁快速分发、漏洞报告接收、版本发布纪律——直接为 1990 年代 FreeBSD、NetBSD、OpenBSD 的安全响应机制奠基；FreeBSD 1.0（1993 年 12 月发布）〔待核：原文截断，后文待回源〕
@@ -39,13 +39,13 @@ volume: 第02卷-伯克利的岁月
 
 ## 文献
 
-- McKusick, M. K. (1999) "Twenty Years of Berkeley Unix" O'Reilly Open Sources；BBN (1985) TCP/IP 投诉信函（须查 DARPA 档案）；Muuss, M. J. (1985-1986) BRL TCP/IP 评估报告（须查 BRL 档案）；DARPA (1985-1986) 关于 4.3BSD TCP/IP 实现的决定 ［A］
-- CERT/CC CA-1988-01 公告；CMU SEI 年度报告（1989）；Denning, P. (1989) "The Internet Worm" ［B］
-- 4.3BSD 安全模型文档；BSD 修复补丁（1988.11.8）；DARPA-CMU SEI CERT/CC 合同（1988.11）；CERT/CC CA-1988-01；CMU SEI 年度报告；OpenBSD fork 公告（1995）；Denning, P. (1989) "The Internet Worm"；统计分析报告 `03-原始史料库/01-代码仓库史料/01-数据库本体/统计分析/文献计量学分析.md` Task 22；卷章数据映射 `03-原始史料库/01-代码仓库史料/01-数据库本体/统计分析/卷章数据映射.md` 第二卷第 17 章 ［A］---
+- McKusick, M. K. (1999) “Twenty Years of Berkeley Unix” O'Reilly Open Sources；BBN (1985) TCP/IP 投诉信函（须查 DARPA 档案）；Muuss, M. J. (1985-1986) BRL TCP/IP 评估报告（须查 BRL 档案）；DARPA (1985-1986) 关于 4.3BSD TCP/IP 实现的决定 ［A］
+- CERT/CC CA-1988-01 公告；CMU SEI 年度报告（1989）；Denning, P. (1989) “The Internet Worm” ［B］
+- 4.3BSD 安全模型文档；BSD 修复补丁（1988.11.8）；DARPA-CMU SEI CERT/CC 合同（1988.11）；CERT/CC CA-1988-01；CMU SEI 年度报告；OpenBSD fork 公告（1995）；Denning, P. (1989) “The Internet Worm”；统计分析报告 `03-原始史料库/01-代码仓库史料/01-数据库本体/统计分析/文献计量学分析.md` Task 22；卷章数据映射 `03-原始史料库/01-代码仓库史料/01-数据库本体/统计分析/卷章数据映射.md` 第二卷第 17 章 ［A］---
 - FreeBSD 1.0 Release Notes (1993.12) 与 FreeBSD 安全公告档案；NetBSD 0.8/1.0 Release Notes 与 NetBSD 安全公告档案；OpenBSD fork 公告（1995.10）与 OpenBSD 全源码审计记录；CSRG 邮件列表存档（互联网档案馆）；4.4BSD SMM 文档；Salus P H. A Quarter Century of UNIX [M]. Addison-Wesley, 1994. ISBN 0-201-54777-5 ［A］
 - Spafford 文件（普渡大学档案）；Bellovin 论文集；CERT/CC 公告集 ［B］
-- McKusick, M. K. (1999) "Twenty Years of Berkeley Unix" O'Reilly Open Sources；4.3BSD-Tahoe Release Notes (1988.06)；System V Release 3/4 技术文档 ［A］
+- McKusick, M. K. (1999) “Twenty Years of Berkeley Unix” O'Reilly Open Sources；4.3BSD-Tahoe Release Notes (1988.06)；System V Release 3/4 技术文档 ［A］
 - Jacobson 1988; 4.3BSD 网络代码变更日志 ［A］
 - CSRG. CSRG 季度报告[R]. 1984-1986 ［A］
 - 作者不详. USENET comp.unix.wizards 讨论存档[EB/OL]. 1985-1986 ［B］
-- McKusick, M. K. (1999) "Twenty Years of Berkeley Unix" O'Reilly Open Sources；Salus, P. H. (1994) "A Quarter Century of UNIX" Addison-Wesley, ISBN 0-201-54777-5［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］；CERT/CC CA-1988:01；4.4BSD SMM 文档 ［A］
+- McKusick, M. K. (1999) “Twenty Years of Berkeley Unix” O'Reilly Open Sources；Salus, P. H. (1994) “A Quarter Century of UNIX” Addison-Wesley, ISBN 0-201-54777-5［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］；CERT/CC CA-1988:01；4.4BSD SMM 文档 ［A］

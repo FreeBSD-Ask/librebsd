@@ -44,9 +44,9 @@ volume: 第02卷-伯克利的岁月
 
 ## 文献
 
-- Schmidt, E. (1978) 伯克利硕士论文 Berknet 设计文档；Joy, W. (1978) "2BSD Release Notes"；Allman, E. (1983) "Sendmail Installation and Operation Guide"；Postel, J. (1982) RFC 821 "Simple Mail Transfer Protocol"；Nowitz, M. (1978) UUCP Documentation Bell Labs；McKusick, K. (1999) "Twenty Years of Berkeley Unix"；统计分析报告：文献计量学分析.md Task 22 [R/OL]. 2026-07-27. 文件路径：**c:\Users\ykla\Documents\hibsd\03-原始史料库\01-代码仓库史料\01-数据库本体\统计分析\文献计量学分析.md**；SQL 查询：`SELECT id, gbt7714 FROM "references"`. 资料数据库.db [DB/OL]. 查询日期：2026-07-27；Python 统计脚本：`script/phase6_bibliometrics.py`. Task 22 参考文献增长曲线与 Price 指数。执行日期：2026-07-27 ［B］
-- Raymond, E. S. (1996) "The Art of Unix Programming"；USENIX 1979 年会议论文集 ［B］
-- Dewey, J. (1929) "Experience and Nature"；Rorty, R. (1979) "Philosophy and the Mirror of Nature"［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
+- Schmidt, E. (1978) 伯克利硕士论文 Berknet 设计文档；Joy, W. (1978) “2BSD Release Notes”；Allman, E. (1983) “Sendmail Installation and Operation Guide”；Postel, J. (1982) RFC 821 “Simple Mail Transfer Protocol”；Nowitz, M. (1978) UUCP Documentation Bell Labs；McKusick, K. (1999) “Twenty Years of Berkeley Unix”；统计分析报告：文献计量学分析.md Task 22 [R/OL]. 2026-07-27. 文件路径：**c:\Users\ykla\Documents\hibsd\03-原始史料库\01-代码仓库史料\01-数据库本体\统计分析\文献计量学分析.md**；SQL 查询：`SELECT id, gbt7714 FROM "references"`. 资料数据库.duckdb [DB/OL]. 查询日期：2026-07-27；Python 统计脚本：`script/phase6_bibliometrics.py`. Task 22 参考文献增长曲线与 Price 指数。执行日期：2026-07-27 ［B］
+- Raymond, E. S. (1996) “The Art of Unix Programming”；USENIX 1979 年会议论文集 ［B］
+- Dewey, J. (1929) “Experience and Nature”；Rorty, R. (1979) “Philosophy and the Mirror of Nature”［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
 - USENIX Association 会议论文集（1978-1985）；伯克利 CSRG 邮件列表存档 ［A］
 - 综合 11.8.1（Neovim/vim/elvis/nvi）、11.8.2（viper-mode/evil-mode/VS Code Vim/IdeaVim）、11.8.3（tcsh/bash vi-mode/zsh vi-mode）各小节文献 ［A］
 - Christiansen 1995; GNU bash 文档； tcsh/zsh 发行说明 ［A］

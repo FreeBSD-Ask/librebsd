@@ -48,13 +48,13 @@ volume: 第02卷-伯克利的岁月
 
 ## 文献
 
-- Salus, P. (1994) "A Quarter Century of UNIX"；USL v. BSDi 诉讼档案 ［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
-- McKusick, K. (1999) "Twenty Years of Berkeley Unix"（当事人一手叙述，4.1a/4.1b/4.1c 精确月份、分发范围、Joy 离职交接）；4.1a/b/c 磁带存档；4.2BSD Release Notes (1983.8) ［A］；文献计量学分析.md Task 22（参考文献增长曲线与历史分期分布）；卷章数据映射.md 第二卷第 14 章映射条目；SQL 与 Python 查询清单.md Phase 6 文献计量学查询清单---
+- Salus, P. (1994) “A Quarter Century of UNIX”；USL v. BSDi 诉讼档案 ［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
+- McKusick, K. (1999) “Twenty Years of Berkeley Unix”（当事人一手叙述，4.1a/4.1b/4.1c 精确月份、分发范围、Joy 离职交接）；4.1a/b/c 磁带存档；4.2BSD Release Notes (1983.8) ［A］；文献计量学分析.md Task 22（参考文献增长曲线与历史分期分布）；卷章数据映射.md 第二卷第 14 章映射条目；SQL 与 Python 查询清单.md Phase 6 文献计量学查询清单---
 - Mark Williams Co. Coherent User's Guide [Z]. 1983；Computer History Museum. Coherent artifacts [EB/OL]. ［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
 - 4.1BSD Release Notes (1981.6)；4.4BSD SMM: 1《Installing and Operating 4.4BSD》；McKusick M K, Bostic K, Karels M J, Quarterman J S. The Design and Implementation of the 4.4BSD Operating System [M]. Reading: Addison-Wesley, 1996. ISBN 0-201-54979-4；Salus P H. A Quarter Century of UNIX [M]. Addison-Wesley, 1994. ISBN 0-201-54777-5 ［B］
 - CSRG 邮件列表存档；4.2BSD Release Notes ［A］
 - 8 份判决全文（ref 2593-2600）；Chisum. Patents in Mathematics（1985）［A］
-- McKusick, K. (1999) "Twenty Years of Berkeley Unix"（当事人一手发行数据） ［B］
-- McKusick, K. (1999) "Twenty Years of Berkeley Unix"（当事人一手完整列举 4BSD 特性清单）；4BSD Release Notes (1980.10) ［B］
+- McKusick, K. (1999) “Twenty Years of Berkeley Unix”（当事人一手发行数据） ［B］
+- McKusick, K. (1999) “Twenty Years of Berkeley Unix”（当事人一手完整列举 4BSD 特性清单）；4BSD Release Notes (1980.10) ［B］
 - 4BSD Release Notes (1980.10)；4.1BSD Release Notes (1981.6)；TUHS Unix Tree 4BSD 条目（<https://www.tuhs.org/cgi-bin/utree.pl?file=4BSD，CSRG> Archives Kirk McKusick 捐赠）
-- McKusick, K. (1999) "Twenty Years of Berkeley Unix"（当事人一手完整列举 12 人委员会名单） ［B］
+- McKusick, K. (1999) “Twenty Years of Berkeley Unix”（当事人一手完整列举 12 人委员会名单） ［B］

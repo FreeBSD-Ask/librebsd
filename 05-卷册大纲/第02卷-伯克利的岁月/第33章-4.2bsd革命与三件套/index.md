@@ -42,9 +42,9 @@ volume: 第02卷-伯克利的岁月
 
 ## 文献
 
-- Leffler, S. J., Fabry, R. S., Joy, W. N., Lapsley, P., Miller, S. (1983) "4.2BSD Networking Implementation Notes", SRI International CSRG, University of California, Berkeley（第 6.1 节"Socket layer"）；McKusick, K. (1999) "Twenty Years of Berkeley Unix"（Open Sources 第 1 章）；Stevens, W. R. (1990) "UNIX Network Programming", Prentice Hall, ISBN 0-13-949876-1（经多源交叉验证：Open Library 书目记录（OL2203754M）明确记载 1990 年 UNIX Network Programming ISBN 0-139-49876-1，与多个引文一致，据一手文献印证消解^doubt-resolved-193：此文献待 0 信任原则考据验证 ］ 已解除）；CSRG (1983) "4.2BSD Unix Programmer's Manual"
-- McKusick, K. (1999) "Twenty Years of Berkeley Unix"；CSRG 内部档案 ［B］
-- BSD conferences 历年海报档案；Raymond, E. S. (1996) "The New Hacker's Dictionary" ［B］
+- Leffler, S. J., Fabry, R. S., Joy, W. N., Lapsley, P., Miller, S. (1983) “4.2BSD Networking Implementation Notes”, SRI International CSRG, University of California, Berkeley（第 6.1 节“Socket layer”）；McKusick, K. (1999) “Twenty Years of Berkeley Unix”（Open Sources 第 1 章）；Stevens, W. R. (1990) “UNIX Network Programming”, Prentice Hall, ISBN 0-13-949876-1（经多源交叉验证：Open Library 书目记录（OL2203754M）明确记载 1990 年 UNIX Network Programming ISBN 0-139-49876-1，与多个引文一致，据一手文献印证消解^doubt-resolved-193：此文献待 0 信任原则考据验证 ］ 已解除）；CSRG (1983) “4.2BSD Unix Programmer's Manual”
+- McKusick, K. (1999) “Twenty Years of Berkeley Unix”；CSRG 内部档案 ［B］
+- BSD conferences 历年海报档案；Raymond, E. S. (1996) “The New Hacker's Dictionary” ［B］
 - McKusick 1999; Salus 1994 ［B］
-- McKusick, K. (1999) "Twenty Years of Berkeley Unix"；Salus, P. H. (1994) "A Quarter Century of UNIX", Addison-Wesley, ISBN 0-201-54777-5；Leffler et al. (1989) 4.3BSD 设计书（ISBN 0-201-06196-1）；CSRG 发行统计 ［B］
+- McKusick, K. (1999) “Twenty Years of Berkeley Unix”；Salus, P. H. (1994) “A Quarter Century of UNIX”, Addison-Wesley, ISBN 0-201-54777-5；Leffler et al. (1989) 4.3BSD 设计书（ISBN 0-201-06196-1）；CSRG 发行统计 ［B］
 - USENIX 会议论文集（1983-1985）；伯克利 CSRG 邮件列表存档 ［A］[^doubt-resolved-193]: 据 Handbook (未署名) 消解

@@ -9,7 +9,7 @@ volume: 第02卷-伯克利的岁月
 ## 要点
 
 - Sun 早期战略为 “开放系统 + 高性价比工作站”，以 32 位 Motorola 68000 处理器为基础，配 BSD 操作系统与网络功能，主攻工程与科研市场，与 DEC VAX 工作站、Apollo Computer 工作站竞争，1982-1985 年实现营收从 0 到 1 亿美元增长
-- AT&T 与 Sun 合作开发 SVR4 并非 “1988.6.13 联合公告” 的单日事件，而是 1985-1992 年的多阶段连续过程：1985 年 9 月 AT&T 与 Sun 首次达成合作意向，AT&T "enlisted Sun's efforts back in 1985"（techmonitor.ai 1988-01-18 一手报道）；1987 年 4 月 AT&T 与 Sun 签订
+- AT&T 与 Sun 合作开发 SVR4 并非 “1988.6.13 联合公告” 的单日事件，而是 1985-1992 年的多阶段连续过程：1985 年 9 月 AT&T 与 Sun 首次达成合作意向，AT&T “enlisted Sun's efforts back in 1985”（techmonitor.ai 1988-01-18 一手报道）；1987 年 4 月 AT&T 与 Sun 签订
 - 1980 年代工作站技术路线分化为：通用 BSD 路线（Sun、SGI、DEC）、专用 OS 路线（Apollo Aegis、Symbolics Genera）、专有 UNIX 路线（IBM AIX、HP-UX），BSD 路线在通用性上胜出，但 1990 年代被 Linux 路线取代
 
 | 技术路线 | 代表厂商 | 硬件基础 | 操作系统 | 市场结局 |
@@ -49,15 +49,15 @@ volume: 第02卷-伯克利的岁月
 
 ## 文献
 
-- Sun Microsystems 年报（1984-1986）；Joy, B. (1985) "The Network Is the Computer" 演讲原稿；Salus, P. (1994) "A Quarter Century of UNIX" ［B］
-- techmonitor.ai 1988-01-18 "THE UNIX YEAR IN REVIEW – PART TWO"（techmonitor.ai/analysis/the_unix_year_in_review_part_two）；techmonitor.ai 1988-09-29 "AT&T AND SUN HOLD TECHNICAL SESSIONS ON FORTHCOMING UNIX SYSTEM V.4"（techmonitor.ai/technology/att_and_sun_hold_technical_sessions_on_forthcoming_unix_system_v4）；TUHS 邮件列表 2017-01-11 "the guy who brought up SVr4 on Sun machines"（www.tuhs.org/pipermail/tuhs/2017-January/009512.html）；SVR4 设计文档（1988）；SunOS 4.0/5.0 Release Notes；McKusick, K. (1999) "Twenty Years of Berkeley Unix"；Salus, P. (1994) "A Quarter Century of UNIX" ［A］；文献计量学分析.md Task 22（参考文献增长曲线与历史分期分布）；卷章数据映射.md 第二卷第 16 章映射条目；SQL 与 Python 查询清单.md Phase 6 文献计量学查询清单
-- Ceruzzi, P. (2003) "A History of Modern Computing"；Salus, P. (1994) "A Quarter Century of UNIX"；DiBona, C. (1999) "Open Sources"［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］FreeBSD 社区论文：[FP-2019-081] OpenZFS: Best Filesystem for every OS（Allan Jude（艾伦·裘德），2019）<https://papers.freebsd.org/2019/jude-openzfs-everyos/>FreeBSD 社区论文：[FP-2001-001] SMPng（Greg Lehey，2001）<https://papers.freebsd.org/2001/grog-smpng/>
-- SunOS 4.0 Release Notes（1988.12）；Sun-AT&T 合作多阶段时间线（1985.9 合作意向、1987.4 协议、1988.10 SVR4 宣布、1989 Q3 SVR4 4.0 发布）；Bach, M. (1986) "The Design of the UNIX Operating System"［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
-- McKusick, M. K. (1999) "Twenty Years of Berkeley Unix" O'Reilly Open Sources；Sandberg, R. et al. (1985) "Design and Implementation of the Sun Network Filesystem" Sun Microsystems；RFC 1094 (1989) "NFS: Network File System Protocol Specification"；Macklem, R. (1990) "The 4.3BSD-Reno NFS Implementation" ［A］
-- CSRG 档案（伯克利 Bancroft 图书馆）；McKusick, K. (1999) "Twenty Years of Berkeley Unix"；USENIX 会议论文集（1984-1985） ［B］
-- McKusick, K. (1999) "Twenty Years of Berkeley Unix"；USL v. BSDi 案卷；DiBona, C. (1999) "Open Sources" ［B］
+- Sun Microsystems 年报（1984-1986）；Joy, B. (1985) “The Network Is the Computer” 演讲原稿；Salus, P. (1994) “A Quarter Century of UNIX” ［B］
+- techmonitor.ai 1988-01-18 “THE UNIX YEAR IN REVIEW – PART TWO”（techmonitor.ai/analysis/the_unix_year_in_review_part_two）；techmonitor.ai 1988-09-29 "AT&T AND SUN HOLD TECHNICAL SESSIONS ON FORTHCOMING UNIX SYSTEM V.4"（techmonitor.ai/technology/att_and_sun_hold_technical_sessions_on_forthcoming_unix_system_v4）；TUHS 邮件列表 2017-01-11 “the guy who brought up SVr4 on Sun machines”（www.tuhs.org/pipermail/tuhs/2017-January/009512.html）；SVR4 设计文档（1988）；SunOS 4.0/5.0 Release Notes；McKusick, K. (1999) “Twenty Years of Berkeley Unix”；Salus, P. (1994) “A Quarter Century of UNIX” ［A］；文献计量学分析.md Task 22（参考文献增长曲线与历史分期分布）；卷章数据映射.md 第二卷第 16 章映射条目；SQL 与 Python 查询清单.md Phase 6 文献计量学查询清单
+- Ceruzzi, P. (2003) “A History of Modern Computing”；Salus, P. (1994) “A Quarter Century of UNIX”；DiBona, C. (1999) “Open Sources”［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］FreeBSD 社区论文：[FP-2019-081] OpenZFS: Best Filesystem for every OS（Allan Jude（艾伦·裘德），2019）<https://papers.freebsd.org/2019/jude-openzfs-everyos/>FreeBSD 社区论文：[FP-2001-001] SMPng（Greg Lehey，2001）<https://papers.freebsd.org/2001/grog-smpng/>
+- SunOS 4.0 Release Notes（1988.12）；Sun-AT&T 合作多阶段时间线（1985.9 合作意向、1987.4 协议、1988.10 SVR4 宣布、1989 Q3 SVR4 4.0 发布）；Bach, M. (1986) “The Design of the UNIX Operating System”［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
+- McKusick, M. K. (1999) “Twenty Years of Berkeley Unix” O'Reilly Open Sources；Sandberg, R. et al. (1985) “Design and Implementation of the Sun Network Filesystem” Sun Microsystems；RFC 1094 (1989) “NFS: Network File System Protocol Specification”；Macklem, R. (1990) “The 4.3BSD-Reno NFS Implementation” ［A］
+- CSRG 档案（伯克利 Bancroft 图书馆）；McKusick, K. (1999) “Twenty Years of Berkeley Unix”；USENIX 会议论文集（1984-1985） ［B］
+- McKusick, K. (1999) “Twenty Years of Berkeley Unix”；USL v. BSDi 案卷；DiBona, C. (1999) “Open Sources” ［B］
 - USL 诉讼档案； Sun 技术文档 ［A］
-- McKusick, M. K. (1999) "Twenty Years of Berkeley Unix" O'Reilly Open Sources；RFC 1094 (1989)；RFC 1057 (1988)；Sandberg, R. et al. (1985) "Design and Implementation of the Sun Network Filesystem"；Stanford University Libraries, Special Collections (Sun Microsystems Archives)；Internet Archive sun1.sunhelp.org 镜像 ［A］
+- McKusick, M. K. (1999) “Twenty Years of Berkeley Unix” O'Reilly Open Sources；RFC 1094 (1989)；RFC 1057 (1988)；Sandberg, R. et al. (1985) “Design and Implementation of the Sun Network Filesystem”；Stanford University Libraries, Special Collections (Sun Microsystems Archives)；Internet Archive sun1.sunhelp.org 镜像 ［A］
 - Sun 专利申请记录（USPTO）；SunOS 源代码注释；USENIX 会议论文集（1983-1990） ［A］
 
 <!-- PODCAST_REVIEW v20260829 -->

@@ -37,11 +37,11 @@ volume: 第02卷-伯克利的岁月
 
 ## 文献
 
-- Bostic, K. (1991) "Net/2 Release Notes"；CSRG 法律评估文件（1990-1991）；McKusick, K. (1999) "Twenty Years of Berkeley Unix" ［B］
-- Jolitz, B. (1991) "Porting UNIX to the 386"；FreeBSD/NetBSD Release Notes（1993）；McKusick, K. (1999) "Twenty Years of Berkeley Unix" ［B］
-- Net/2 贡献者名单；Raymond, E. (1997) "The Cathedral and the Bazaar"；McKusick, K. (1999) "Twenty Years of Berkeley Unix" ［B］
+- Bostic, K. (1991) “Net/2 Release Notes”；CSRG 法律评估文件（1990-1991）；McKusick, K. (1999) “Twenty Years of Berkeley Unix” ［B］
+- Jolitz, B. (1991) “Porting UNIX to the 386”；FreeBSD/NetBSD Release Notes（1993）；McKusick, K. (1999) “Twenty Years of Berkeley Unix” ［B］
+- Net/2 贡献者名单；Raymond, E. (1997) “The Cathedral and the Bazaar”；McKusick, K. (1999) “Twenty Years of Berkeley Unix” ［B］
 - USL v. BSDi 案卷；Novell-UC Berkeley 和解协议（1994）；4.4BSD-Lite Release Notes（1994.6）［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］<!-- NEWREF:2527 --><!-- NEWREF:2528 --><!-- NEWREF:2529 --><!-- NEWREF:2530 --><!-- NEWREF:2531 --><!-- NEWREF:2532 --><!-- NEWREF:2533 --><!-- NEWREF:2534 --><!-- NEWREF:2535 --><!-- NEWREF:2536 --><!-- NEWREF:2537 --><!-- NEWREF:2538 -->
-- McKusick, M. K. (1999) "Twenty Years of Berkeley Unix"；*Unix System Laboratories v. Berkeley Software*, 832 F. Supp. 790 (D.N.J. 1993)；TUHS Net2 目录归档（tuhs.org/Archive/Distributions/UCB/Net2/）；Jolitz, B. (1991) "Porting UNIX to the 386" ［B］
+- McKusick, M. K. (1999) “Twenty Years of Berkeley Unix”；*Unix System Laboratories v. Berkeley Software*, 832 F. Supp. 790 (D.N.J. 1993)；TUHS Net2 目录归档（tuhs.org/Archive/Distributions/UCB/Net2/）；Jolitz, B. (1991) “Porting UNIX to the 386” ［B］
 - CSRG 内部档案（伯克利 Bancroft 图书馆）；USL v. BSDi 案卷；1992-1994 年媒体报道集 ［C］[^doubt-resolved-230]: 据 Handbook (未署名) 消解<!-- NEWREF:2527 --><!-- NEWREF:2528 --><!-- NEWREF:2529 --><!-- NEWREF:2530 --><!-- NEWREF:2531 --><!-- NEWREF:2532 --><!-- NEWREF:2533 --><!-- NEWREF:2534 --><!-- NEWREF:2535 --><!-- NEWREF:2536 --><!-- NEWREF:2537 --><!-- NEWREF:2538 -->
 
 <!-- PODCAST_REVIEW v20260829 -->
