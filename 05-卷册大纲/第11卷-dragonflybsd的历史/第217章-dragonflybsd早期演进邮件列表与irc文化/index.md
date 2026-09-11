@@ -10,10 +10,10 @@ volume: 第11卷-dragonflybsd的历史
 
 ## 要点
 
-- DragonFly BSD 邮件列表存档（lists.dragonflybsd.org）自 2003 年 fork 起完整保存，是社区文化研究的核心史料；IRC 频道 #dragonflybsd（Libera Chat，2021 年前在 Freenode）日志保存不系统，部分频道已无日志——dragonfly.duckdb 不记录 IRC 活动，IRC 史料须以第三方日志服务（如 colab etc.）核验
+- DragonFly BSD 邮件列表存档（lists.dragonflybsd.org）自 2003 年 fork 起完整保存，是社区文化研究的核心史料；IRC 频道 #dragonflybsd（Libera Chat，2021 年前在 Freenode）日志保存不系统，部分频道已无日志——**dragonfly.duckdb** 不记录 IRC 活动，IRC 史料须以第三方日志服务（如 colabti.org 的 irclogger 存档等）核验
 - 合图层以项目史观总纲第 6 条（和解优于斗争）与第 8 条（本体论上各方平等）审视 DragonFly 早期发展方向争议——批评方以“方向不明确”与“代码同步停止”质疑 fork 必要性，反批评方以“工程产出证明”与“evolution not jump”维护 fork 合法性，再回应方以“未被业界采纳”与“社区萎缩”质疑反批评，三方在本体论上地位平等，争议本身是 BSD 阵营内部对 fork 后方向摸索的多元判断的具体显现
-- dragonfly.duckdb 不记录外部批评发言，Slashdot/LWN/Hacker News 等第三方平台原始评论是批评发言的原始来源。Dillon 2003 年 7 月 fork 公告（lists.freebsd.org/pipermail/freebsd-current/2003-July/006889.html）是 DragonFly 方面原始发言的核心来源；部分批评引述可能为断章取义，须回溯原始上下文，正式撰写时以原始帖 URL 与时间戳追溯完整讨论线程（同源补自 217.3）
-- dragonfly.duckdb dragonfly-src 仓库 commits 表 `message_subject` 与 `message_body` 字段保留 commit message 原文，可与邮件列表发言交叉核对——Dillon 的 commit message 多为技术细节描述（如“thread stage 1: convert curproc to curthread”），Wildner 的 commit message 多为驱动更新与 bug 修复描述
+- **dragonfly.duckdb** 不记录外部批评发言，Slashdot/LWN/Hacker News 等第三方平台原始评论是批评发言的原始来源。Dillon 2003 年 7 月 fork 公告（lists.freebsd.org/pipermail/freebsd-current/2003-July/006889.html）是 DragonFly 方面原始发言的核心来源；部分批评引述可能为断章取义，须回溯原始上下文，正式撰写时以原始帖 URL 与时间戳追溯完整讨论线程（同源补自 217.3）
+- **dragonfly.duckdb** dragonfly-src 仓库 commits 表 `message_subject` 与 `message_body` 字段保留 commit message 原文，可与邮件列表发言交叉核对——Dillon 的 commit message 多为技术细节描述（如“thread stage 1: convert curproc to curthread”），Wildner 的 commit message 多为驱动更新与 bug 修复描述
 
 ## 史料
 
@@ -32,10 +32,10 @@ volume: 第11卷-dragonflybsd的历史
 
 ## 辨析
 
-- IRC 日志的不完整影响对社区文化的重建——**dragonfly.duckdb** 提供的 commit 数据可重构开发决策脉络，但 IRC 中即时讨论（如技术争论、人际互动、新用户求助）的史料缺失难以从其他来源弥补；Freenode 2021 年迁移至 Libera Chat 期间部分 IRC 频道日志丢失 ［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］，正式撰写时须以第三方日志服务（如 irclog.colab etc.）核验 #dragonflybsd 频道日志完整性
+- IRC 日志的不完整影响对社区文化的重建——**dragonfly.duckdb** 提供的 commit 数据可重构开发决策脉络，但 IRC 中即时讨论（如技术争论、人际互动、新用户求助）的史料缺失难以从其他来源弥补；Freenode 2021 年迁移至 Libera Chat 期间部分 IRC 频道日志丢失 ［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］，正式撰写时须以第三方日志服务（如 colabti.org 的 irclogger 存档等）核验 #dragonflybsd 频道日志完整性
 - 不得以“和解”为名取消对争议的考据与分析；【革命与改革的辩证边界】“Linux 靠革命，BSD 靠改革”在 DragonFly 案例中的适用性须谨慎——Dillon 选择 fork 是改革失败后的革命，但 DragonFly fork 后仍延续 BSD 改革传统（持续维护、渐进演进）
 - 正式撰写时须以原始帖 URL 与时间戳追溯完整讨论线程；FreeBSD Core Team 2003 年邮件列表存档仅部分公开 ［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］，未公开部分须以互联网档案馆（web.archive.org）历史存档核验
-- commit 记录可能遗漏非代码贡献（如文档、测试、社区管理）——dragonfly.duckdb 仅记录代码 commit，文档贡献须以 freebsd-doc 仓库（仅 FreeBSD 文档，DragonFly 无对应独立文档仓库 ［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］）核验，测试贡献须以邮件列表 bug 报告记录核验；部分贡献者的 commit message 简略（如仅“Fix”），具体贡献内容须以邮件列表讨论核验
+- commit 记录可能遗漏非代码贡献（如文档、测试、社区管理）——**dragonfly.duckdb** 仅记录代码 commit，文档贡献须以 freebsd-doc 仓库（仅 FreeBSD 文档，DragonFly 无对应独立文档仓库 ［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］）核验，测试贡献须以邮件列表 bug 报告记录核验；部分贡献者的 commit message 简略（如仅“Fix”），具体贡献内容须以邮件列表讨论核验
 
 ## 文献
 
@@ -49,7 +49,7 @@ volume: 第11卷-dragonflybsd的历史
 
 ### 史料文献
 
-- 原材料/哲学/项目统摄史观/第 25 章.md（总纲第 6、8、21 条原文）；dragonfly.duckdb dragonfly-src 仓库 commits/contributors/tags 表；DragonFly BSD Project. DragonFly BSD history [EB/OL]. <https://www.dragonflybsd.org/history/>；freeoa. DragonFly BSD [EB/OL]. 2010-01-30. <http://www.freeoa.net/osuport/intronix/dragonflybsd_1777.html> ［C］（中文转载站，仅作辅助线索；正式引用以 DragonFly 官方 history 页与邮件列表原始存档为准）
+- 原材料/哲学/项目统摄史观/第 25 章.md（总纲第 6、8、21 条原文）；**dragonfly.duckdb** dragonfly-src 仓库 commits/contributors/tags 表；DragonFly BSD Project. DragonFly BSD history [EB/OL]. <https://www.dragonflybsd.org/history/>；freeoa. DragonFly BSD [EB/OL]. 2010-01-30. <http://www.freeoa.net/osuport/intronix/dragonflybsd_1777.html> ［C］（中文转载站，仅作辅助线索；正式引用以 DragonFly 官方 history 页与邮件列表原始存档为准）
 
 <!-- DB_REF:dragonfly.duckdb -->
 > **数据库引用（dragonfly.duckdb）**：本子节对应 dragonfly 代码仓库。
@@ -63,7 +63,7 @@ volume: 第11卷-dragonflybsd的历史
 > 2003-2026 年间：656,206 次提交。
 > 仓库总览：656,206 次提交，535 位贡献者，2003-06-17 至 2026-08-18。
 
-- dragonfly.duckdb dragonfly-src 仓库 commits 表（`message_subject` 与 `message_body` 字段）；DragonFly BSD mailing lists [EB/OL]. <https://www.dragonflybsd.org/mailinglists/>；marc.info 第三方邮件列表归档 [EB/OL]. <https://marc.info/> ［A］
+- **dragonfly.duckdb** dragonfly-src 仓库 commits 表（`message_subject` 与 `message_body` 字段）；DragonFly BSD mailing lists [EB/OL]. <https://www.dragonflybsd.org/mailinglists/>；marc.info 第三方邮件列表归档 [EB/OL]. <https://marc.info/> ［A］
 
 <!-- DB_REF:dragonfly.duckdb -->
 > **数据库引用（dragonfly.duckdb）**：本子节对应 dragonfly 代码仓库。
