@@ -20,7 +20,7 @@ volume: 第12卷-macos的bsd遗产
 
 ## 史观
 
-总纲映射（汇总 238.1-238.4 子节史观字段）：总纲第 2 条（实践先于理论）——OpenStep 规范是 NeXTSTEP 工程实践的事后抽象而非事前设计；总纲第 6 条（主体性与和解）——1996 年 NeXTSTEP/OpenStep 与 Windows 95/NT 4.0/Linux 1.2/FreeBSD 2.1 共享 Unix/POSIX 哲学根基但发展出不同主体性；总纲第 7 条（技术选择即政治选择）——Apple 选择 NeXTSTEP 而非 BeOS 决定其后 25 年技术路径；总纲第 9 条（企业研究投入的双重性）——WebObjects 体现 NeXT 将 BSD 网络能力商品化；总纲第 10 条（边缘者贡献被中心叙事遮蔽）——Sun 对 OpenStep 的贡献在 Apple 收购后的主线叙事中被淡化；总纲第 24 条（许可证与授权决定跨平台可移植性）——OpenStep 的 API 抽象是“许可证即跨平台策略”的显现；总纲第 25 条（终结中的延续）——NeXT 硬件终结但 BSD 层工程遗产在 Apple 延续。
+总纲映射（汇总 238.1-238.4 子节史观字段）：总纲第 17 条（证明世界先于解释和改造世界）——OpenStep 规范是 NeXTSTEP 工程实践的事后抽象而非事前设计；总纲第 8 条（本体论上各方平等）——1996 年 NeXTSTEP/OpenStep 与 Windows 95/NT 4.0/Linux 1.2/FreeBSD 2.1 共享 Unix/POSIX 哲学根基但发展出不同主体性；总纲第 7 条（技术选择即政治选择）——Apple 选择 NeXTSTEP 而非 BeOS 决定其后 25 年技术路径；总纲第 9 条（企业研究投入的双重性）——WebObjects 体现 NeXT 将 BSD 网络能力商品化；总纲第 10 条（边缘者贡献被中心叙事遮蔽）——Sun 对 OpenStep 的贡献在 Apple 收购后的主线叙事中被淡化；总纲第 24 条（许可证与授权决定跨平台可移植性）——OpenStep 的 API 抽象是“许可证即跨平台策略”的显现；总纲第 25 条（终结中的延续）——NeXT 硬件终结但 BSD 层工程遗产在 Apple 延续。
 
 ## 辨析
 
