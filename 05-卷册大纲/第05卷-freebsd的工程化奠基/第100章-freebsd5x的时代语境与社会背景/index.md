@@ -23,7 +23,7 @@ volume: 第05卷-freebsd的工程化奠基
 ## 99.15.2 1996-2010 伯克利校长谱系：Tien、Berdahl 与
 
 - 总纲第 4 条——分离与聚合：GEOM 通过模块化 class 分离存储功能，通过 provider/consumer 链聚合为完整磁盘 I/O 路径；总纲第 17 条——软件工程：GEOM 的可堆叠设计是软件工程对存储子系统模块化的典型实现
-  - 辨析**：经 bsd_commits.db tags 表验证，5.0-RELEASE 的 tagger_date 为 2003-01-16（非旧叙事 2003.1.19，误差 3 天，可能为公告日期与 tag 日期差异）
+  - 辨析**：经 bsd_commits.duckdb tags 表验证，5.0-RELEASE 的 tagger_date 为 2003-01-16（非旧叙事 2003.1.19，误差 3 天，可能为公告日期与 tag 日期差异）
 - 总纲第 7 条——BSD 与 UNIX 谱系的连续性：PF 从 OpenBSD 到 FreeBSD 的移植是 BSD 家族内部代码共享的典型案例——OpenBSD 因许可证问题移除 IPFilter 后编写 PF，FreeBSD 因 PF 的技术优势将其移植，两个 BSD 项目在防火墙领域的代码流动体现了 BSD 社区 “择优而用” 的务实传统；总纲第 24 条——许可证：IPFilter 许可证
 - 总纲第 7 条——技术选择即政治选择：企业赞助方向直接塑造 FreeBSD 在该时期的子系统优先级（如 Netflix 推动内核 TLS 卸载与网络栈高性能化）。
   - 辨析：企业提交多属受雇工作期间的 “有组织贡献”，不宜与志愿者个人贡献混同；corp 名单随年份变动，须以 contributors 表逐期核验。
@@ -40,8 +40,8 @@ volume: 第05卷-freebsd的工程化奠基
 ## 99.15.2 1996-2010 伯克利校长谱系：Tien、Berdahl 与 Birgeneau
 
 - 要点：1996-201
-- 经 bsd_commits.db tags 表验证，5.0-RELEASE 的 tagger_date 为 2003-01-16（非旧叙事 2003.1.19，误差 3 天，可能为公告日期与 tag 日期差异）；GEOM 是否真正 “取代” 旧 disk 子系统需考据——5.0 引入但 4.x 的 disk 子系统仍保留兼容直至 7.x；〔待核：原文截断，后文待回源〕
-- 经 bsd_commits.db tags 表验证，5.3-RELEASE 的 tagger_date 为 2004-11-04T19:12:42Z（非旧叙事 2004.11.6，误差 2 天，可能为公告日期与 tag 日期差异）；经 bsd_commits.db commits 表验证，PF 导入 commit 为 2004-06-16T23:03:14Z Max Laier "Import p
+- 经 bsd_commits.duckdb tags 表验证，5.0-RELEASE 的 tagger_date 为 2003-01-16（非旧叙事 2003.1.19，误差 3 天，可能为公告日期与 tag 日期差异）；GEOM 是否真正 “取代” 旧 disk 子系统需考据——5.0 引入但 4.x 的 disk 子系统仍保留兼容直至 7.x；〔待核：原文截断，后文待回源〕
+- 经 bsd_commits.duckdb tags 表验证，5.3-RELEASE 的 tagger_date 为 2004-11-04T19:12:42Z（非旧叙事 2004.11.6，误差 2 天，可能为公告日期与 tag 日期差异）；经 bsd_commits.duckdb commits 表验证，PF 导入 commit 为 2004-06-16T23:03:14Z Max Laier "Import p
 - 企业提交多属受雇工作期间的 “有组织贡献”，不宜与志愿者个人贡献混同；corp 名单随年份变动，须以 contributors 表逐期核验。
   - 文献：freebsd.duckdb（freebsd-src contributors 表，窗口 2002–2005，检索 2026-07-21）［A］；FreeBSD 项目贡献者指南（<<https://docs.freebsd.org/en/arti>
 - 将 5.x 早期性能问题等同于 “FreeBSD 衰落” 是片面——5.x 的架构债务清理为 6.x/7.x 的性能回升奠定基础；Linux 2.5 同样经历开发期不稳定。
@@ -55,7 +55,7 @@ volume: 第05卷-freebsd的工程化奠基
 
 - 要点：1996-2010 伯克利校长：Chang-Lin Tien(1990-1997)、Robert M. Berdahl(1997-2004)、Robert J. Birgeneau(2004-2013)；三人对 CSRG 遗产与 BSD 项目的态度不同
 - 史料：U
-- FreeBSD 5.0-RELEASE Release Notes (2003.1)；Kamp, P.-H. 2002 BSDCon “GEOM—Modular Disk Framework”；geom(4) 手册页；FreeBSD Handbook "GEOM" Chapter；release/5.0.0. freebsd-src 仓库 tag [DB/OL]. 2003-01-16T16:56:23Z. tag: release/5.0.0; commit: 47227ef0ef663b7abb81ab5a60a450da9a93d24b ［A］
+- FreeBSD 5.0-RELEASE Release Notes (2003.1)；Kamp, P.-H. 2002 BSDCon “GEOM—Modular Disk Framework”；geom(4) 手册页；FreeBSD Handbook “GEOM” Chapter；release/5.0.0. freebsd-src 仓库 tag [DB/OL]. 2003-01-16T16:56:23Z. tag: release/5.0.0; commit: 47227ef0ef663b7abb81ab5a60a450da9a93d24b ［A］
 
 ## 99.16.2 UFS2 取代 UF
 

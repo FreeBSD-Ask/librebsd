@@ -33,7 +33,7 @@ volume: 第16卷-开源运动与合规治理
 
 ## 辨析
 
-- FDA 510(k) 数据库中检索"BSD"或"FreeBSD"的命中率低，需结合厂商技术文档与维修手册交叉验证；MAUDE 数据库中是否有 BSD 相关事故需查
+- FDA 510(k) 数据库中检索“BSD”或“FreeBSD”的命中率低，需结合厂商技术文档与维修手册交叉验证；MAUDE 数据库中是否有 BSD 相关事故需查
 - 汇丰/渣打/中银香港是否“公开”使用 FreeBSD 需查证，部分信息可能源自旧 Foundation case studies 而未更新；金融科技企业的具体合规细节多受银行保密法限制
 - 百度/阿里巴巴/腾讯是否“公开”使用 FreeBSD 需查企业技术博客，部分信息可能过时；Nubank 等巴西金融科技企业是否使用 FreeBSD 需查工程博客
 - DARPA 资助 TrustedBSD 的具体金额与起止时间需查 DARPA 公开合同数据库；TrustedBSD 与 SRI International 的 CHERI 项目是否共享资金需区分
@@ -44,7 +44,7 @@ volume: 第16卷-开源运动与合规治理
 - FDA 510(k) Database；FDA MAUDE Database［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
 - FreeBSD Foundation Case Studies（金融业条目）；LinkedIn BSD 技能招聘数据［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
 - Tencent Cloud Security White Paper；Nubank Engineering Blog［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
-- DARPA 2001-2005 年度报告；Watson"TrustedBSD Final Report" ［B］
+- DARPA 2001-2005 年度报告；Watson“TrustedBSD Final Report” ［B］
 - NIST SSP Repository；FreeBSD Foundation 2023-09 SSDF Statement［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
 - NIST SP 800-218 Appendix C；FedRAMP SSP Template［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
 

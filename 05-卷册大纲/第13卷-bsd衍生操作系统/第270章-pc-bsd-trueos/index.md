@@ -12,7 +12,7 @@ volume: 第13卷-bsd衍生操作系统
 - 2018 年 PC-BSD 更名为 TrueOS，转向服务端/嵌入式定位（延续 FreeBSD 基底），桌面努力由 Project Trident（基于 TrueOS）承接；2020 年前后 TrueOS/Trident 项目渐止，标志一轮桌面 BSD 实验的落幕。具体时间须以项目公告核实。
 - PC-BSD/TrueOS 依赖 Kris Moore（美国）与小型志愿者团队；项目体现个人驱动力在 BSD 衍生中的关键作用。
 - 对比 PC-BSD/TrueOS（FreeBSD）与 Linux 桌面（Ubuntu 等）、其他桌面 BSD（参见相关章节桌面 BSD 部分），分析桌面 BSD 实验的共性教训（生态/硬件/应用）。
-- bsd_commits.db 查询显示 trueos-src 仓库共 273 条 CVE 相关 commit、377 个去重 CVE，commit 数（273）低于去重 CVE 数（377），表明 TrueOS 存在单次 commit 合并多个 CVE 修复的批量化安全维护模式；trueos-src 的 CVE commit 跨越 2005 至 2020 年，2020 年后无新增 CVE comm
+- bsd_commits.duckdb 查询显示 trueos-src 仓库共 273 条 CVE 相关 commit、377 个去重 CVE，commit 数（273）低于去重 CVE 数（377），表明 TrueOS 存在单次 commit 合并多个 CVE 修复的批量化安全维护模式；trueos-src 的 CVE commit 跨越 2005 至 2020 年，2020 年后无新增 CVE comm
 
 ## 史料
 
@@ -50,7 +50,7 @@ volume: 第13卷-bsd衍生操作系统
 
 <!-- DB_REF:bsd_derivatives.duckdb -->
 > **数据库引用（bsd_derivatives.duckdb）**：本子节对应 bsd_derivatives 代码仓库。> 1985-2026 年间：963,557 次提交。> 仓库总览：963,557 次提交，9,744 位贡献者（contributors 表行数，1985-06-13 至 2026-08-24）。
-- bsd_commits.db 查询 trueos-src CVE commit（273 条，377 去重 CVE，2026-07-23）；bsd_commits.db 查询 L7.1.1.trueos-src；`原材料/研究/bsd漏洞史/数据库提取/trueos-src-cve-commits.md`；`原材料/研究/bsd仓库分析/数据分析/衍生项目与跨项目对比分析.md` §L7.1。 ［B］## 269.4.2 PC-BSD 时期 CVE 处置与 iXsystems 商业安全维护投入
+- bsd_commits.duckdb 查询 trueos-src CVE commit（273 条，377 去重 CVE，2026-07-23）；bsd_commits.duckdb 查询 L7.1.1.trueos-src；`原材料/研究/bsd漏洞史/数据库提取/trueos-src-cve-commits.md`；`原材料/研究/bsd仓库分析/数据分析/衍生项目与跨项目对比分析.md` §L7.1。 ［B］## 269.4.2 PC-BSD 时期 CVE 处置与 iXsystems 商业安全维护投入
 - freebsd.duckdb 查询 L1.1.1（trueos-src 每年 commit 量）；freebsd.duckdb 查询 L7.1.1.trueos-src；PC-BSD 官方文档；iXsystems 年度报告。 ［B］FreeBSD 社区论文：[FP-2018-035] The TrueOS Difference: Changing Methodologies for Changing Times（Ken Moore，2018）<https://papers.freebsd.org/2018/bsdcan/moore-the_trueos_difference/>
 
 <!-- DB_REF:freebsd.duckdb -->

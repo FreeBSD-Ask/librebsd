@@ -12,7 +12,7 @@ volume: 第17卷-政治制度与社区治理
 - 商业 Unix 厂商（Sun/Oracle Solaris、IBM AIX、HP HP-UX）对 BSD 文化溯源的态度各有差异——Sun 曾承认 BSD 传承（如 SunOS 4.x 基于 BSD），Oracle 收购后淡化；IBM AIX 与 BSD 关系较远；HP-UX 与 BSD 关系亦较远；商业 Unix 的文化战略以企业品牌为主，对 BSD 文化溯源的工具化程度低于 Linux Foundation；商业 Unix 在 2000-2010 年代逐渐衰退，其文化战略随之淡化
 - Microsoft Windows 与 Apple macOS 作为主流商业操作系统，其推广预算远超 FreeBSD Foundation 与 Linux Foundation 之和；macOS 的 Darwin 内核基于 FreeBSD（特别是用户空间），但 Apple 对 FreeBSD 项目的回馈有限（参见相关章节企业赞助提交者与志愿者张力部分）；Windows 与 macOS 的商业化推广模式与 BSD 社区驱动模式形成根本张力——前者以营销驱动市场份额，后者以技术质量驱动社区认同；macOS UNIX 03 认证与 FreeBSD 未申请认证形成对比（参见相关章节合规认证史部分）
 - 各 OS（Linux、商业 Unix、Windows、macOS）的文化战略文档须系统收集与比较——官方声明、营销材料、社区指南、吉祥物版权条款等；比较维度须包括——文化溯源的承认程度、文化符号的商业化程度、社区参与的开放程度、对外部贡献者的态度；BSD 与各 OS 的文化战略差异须基于具体文档而非印象
-- 四大 BSD 各自维护独立的 Security Advisory 公告体系——FreeBSD-SA（713 条，1996-2026）[2026-08-15 双库核查：资料数据库.db freebsd_sa 表 COUNT=713，最早 1996-04-20，最晚 2026-06-30]、NetBSD-SA（289 条，1998-2026）、OpenBSD errata（563 条，1996-2026）、DragonFly VSA（166 条 CVE，2003-2024，官方页面 404 须以邮件列表存档补全）；Linux kernel 由 Linux kernel security team（私密邮件列表 <security@kernel.org>）集中协调，2024 年 1 月 Linux kernel 正式成为 CNA（CVE Numbering Authority）可自主分配 CVE 编号；freebsd.duckdb L7.3.1 查询显示 2020 年 Linux kernel 90,911 commits、4,864 contributors，BSD 四大 src 合计 36,392 commits、574 contributors，Linux 贡献者量级为 BSD 的 8.5 倍，但 BSD 项目以更小的人力规模维持独立的 SA 公告体系，反映其“小而精”的安全响应文化
+- 四大 BSD 各自维护独立的 Security Advisory 公告体系——FreeBSD-SA（713 条，1996-2026）[2026-08-15 双库核查：资料数据库.duckdb freebsd_sa 表 COUNT=713，最早 1996-04-20，最晚 2026-06-30]、NetBSD-SA（289 条，1998-2026）、OpenBSD errata（563 条，1996-2026）、DragonFly VSA（166 条 CVE，2003-2024，官方页面 404 须以邮件列表存档补全）；Linux kernel 由 Linux kernel security team（私密邮件列表 <security@kernel.org>）集中协调，2024 年 1 月 Linux kernel 正式成为 CNA（CVE Numbering Authority）可自主分配 CVE 编号；freebsd.duckdb L7.3.1 查询显示 2020 年 Linux kernel 90,911 commits、4,864 contributors，BSD 四大 src 合计 36,392 commits、574 contributors，Linux 贡献者量级为 BSD 的 8.5 倍，但 BSD 项目以更小的人力规模维持独立的 SA 公告体系，反映其“小而精”的安全响应文化
 
 ## 史观
 
@@ -29,7 +29,7 @@ volume: 第17卷-政治制度与社区治理
 ## 辨析
 
 - “Linux Foundation 对 BSD 文化溯源的工具主义态度”的判断须有具体证据；Tux 与 BSD daemon 的文化运作差异须基于具体案例比较
-  - 文献：Linux Foundation 营销档案；Tux 商业化记录；BSD daemon 版权条款［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］ FreeBSD-SA 713 条（1996-2026）经资料数据库.db freebsd_sa 表直接 COUNT 验证；NVD CVE 各项目数量经 nvd_cve_metadata 表 bsd_projects 字段 GROUP BY 验证：FreeBSD 421、OpenBSD 143、NetBSD 82、DragonFly 32；原大纲 FreeBSD-
+  - 文献：Linux Foundation 营销档案；Tux 商业化记录；BSD daemon 版权条款［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］ FreeBSD-SA 713 条（1996-2026）经资料数据库.duckdb freebsd_sa 表直接 COUNT 验证；NVD CVE 各项目数量经 nvd_cve_metadata 表 bsd_projects 字段 GROUP BY 验证：FreeBSD 421、OpenBSD 143、NetBSD 82、DragonFly 32；原大纲 FreeBSD-
 - 本目遵循 0 信任原则，其“被动修复→代码审计革命→Proactive 工程”的三阶段划分须以 FreeBSD/OpenBSD 安全公告历史（1995-2024）一手核验——1996 OpenBSD 代码审计革命的起点、2010s-2020s Proactive 机制（CET/ASLR/KASAN/pledge）〔待核：原文截断，后文待回源〕
 - 考据过程留痕——【查证来源】BSD Daemon 版权页面经 <https://www.freebsd.org/copyright/daemon/> 一手核验，确认版权由 Marshall Kirk McKusick 个人持有（1988 年版权注册），版权私有化是事实陈述；FreeBSD Core Bylaws 2000.8.28 版与 2026.5.27 新版经 <<https://www.fre>
 - 考据过程留痕——【查证来源】freebsd-advocacy 邮件列表存档经 <https://lists.freebsd.org/archives/freebsd-advocacy/> 一手核验，确认 2022-2024 年共 7 条消息（作为 BSD 阵营话语权争夺正式渠道近乎停滞的证据）；BSD daemon 版权页面经 <<https://www.freebsd.org/copyright/>
@@ -78,7 +78,7 @@ volume: 第17卷-政治制度与社区治理
 
 **辨析**：
 
-- 转录将 David Gwynne 记作 David Gwynn 或 David Gwendt，标题 Two's interview 疑为 Gwynne's interview 的转写偏差，人名以 OpenBSD 官方为准。　[存疑脚注] 人名与标题存在语音转写偏差，须以 OpenBSD 官方资料核验（BSD Now EP623，[1068.26-1075.34]，L4）
+- 转录将 David Gwynne 记作 David Gwynn 或 David Gwendt，标题 Two‘s interview 疑为 Gwynne’s interview 的转写偏差，人名以 OpenBSD 官方为准。　[存疑脚注] 人名与标题存在语音转写偏差，须以 OpenBSD 官方资料核验（BSD Now EP623，[1068.26-1075.34]，L4）
 - sec(4) 相关表述中 IPsec 接口在转录混用 sec 与 sec4，具体版本与接口名须以 OpenBSD 手册页核验。　[考据脚注] 接口名称存在转写混用，须以 sec(4) 手册页为准（BSD Now EP623，[1971.80-2235.62]，L4）
 
 **文献**：

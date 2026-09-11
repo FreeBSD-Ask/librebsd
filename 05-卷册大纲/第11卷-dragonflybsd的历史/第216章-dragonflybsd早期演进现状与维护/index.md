@@ -22,5 +22,5 @@ volume: 第11卷-dragonflybsd的历史
 
 ## 辨析
 
-- release notes 与 git changelog 对照——bsd_commits.db 显示 v6.4.0 tagger_date = 2022-12-30T22:34:52+01:00 而 target_commit_date = 2022-12-29T03:03:14+01:00，二者相差约 43 小时，反映 tag 创建与 commit 提交的时间差；v6.4.0 tagger =
+- release notes 与 git changelog 对照——bsd_commits.duckdb 显示 v6.4.0 tagger_date = 2022-12-30T22:34:52+01:00 而 target_commit_date = 2022-12-29T03:03:14+01:00，二者相差约 43 小时，反映 tag 创建与 commit 提交的时间差；v6.4.0 tagger =
 - 从 commit message 与邮件讨论重构治理实践存在解读偏差风险——commit message 经常省略决策过程（如为何选择消息传递而非细粒度锁的论证），仅记录实现细节；邮件列表发言可能被截取脱离上下文，正式撰写时须以 lists.dragonflybsd.org 原始邮件 ID 与时间戳追溯完整讨论线程；Dillon 关于治理的系统性发言 ［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］ 参考文献全文数据库（4077 篇全文，27138 条时间线事件）—— 对应 dragonfly.duckdb

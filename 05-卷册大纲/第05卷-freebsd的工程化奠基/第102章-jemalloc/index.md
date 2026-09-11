@@ -35,7 +35,7 @@ volume: 第05卷-freebsd的工程化奠基
 
 ## 文献
 
-- jemalloc source code commit log (github.com/jemalloc)；Evans (2006) BSDCan paper；Mozilla Bugzilla jemalloc tracking ［A］；统计分析报告：描述性统计.md SubTask 2.1 [R/OL]. 2026-07-27. 文件路径：`c:\Users\ykla\Documents\hibsd\03-原始史料库\01-代码仓库史料\01-数据库本体\统计分析\描述性统计.md`；SQL 查询：`SELECT COUNT(*) FROM commits WHERE repo_name='freebsd-src'`. freebsd.duckdb [DB/OL]. 查询日期：2026-07-27 [考据脚注：C-03 freebsd-src 444,203 commits 经 `script/phase2_inferential.py` 执行结果与 `phase2_results.json` 结构化结果交叉验证。]
+- jemalloc source code commit log (github.com/jemalloc)；Evans (2006) BSDCan paper；Mozilla Bugzilla jemalloc tracking ［A］；统计分析报告：描述性统计.md SubTask 2.1 [R/OL]. 2026-07-27. 文件路径：**03-原始史料库/01-代码仓库史料/01-数据库本体/统计分析/描述性统计.md**；SQL 查询：`SELECT COUNT(*) FROM commits WHERE repo_name='freebsd-src'`. freebsd.duckdb [DB/OL]. 查询日期：2026-07-27 [考据脚注：C-03 freebsd-src 444,203 commits 经 `script/phase2_inferential.py` 执行结果与 `phase2_results.json` 结构化结果交叉验证。]
 
 <!-- DB_REF:freebsd.duckdb -->
 > **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 1996-2010 年间：482,545 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。

@@ -18,7 +18,7 @@ volume: 第10卷-openbsd的历史
 
 ## 史观
 
-- 自反性：de Raadt 的独裁治理模式是对'开源社区民主'神话的自反性挑战
+- 自反性：de Raadt 的独裁治理模式是对‘开源社区民主’神话的自反性挑战
 
 ## 辨析
 
@@ -106,7 +106,7 @@ volume: 第10卷-openbsd的历史
 - de Raadt 对 X 安全团队协调不力的批评属当事人立场，其“提前一小时才通知”的表述须与 X 安全团队与 OpenBSD 的往来记录交叉核实。　[存疑脚注] 披露时间线仅来自 OpenBSD 一方叙述。（BSD Now EP273，[2430.02-2489.74]，L4）
 - 对 fork 的批评系博客作者个人立场，节目主持人在结尾补充“无法改变应用使用习惯”的采纳难题，替代方案在 FreeBSD 仅停留在讨论阶段。　[存疑脚注] 系单一来源的个人技术立场（BSD Now EP229，[4888.6-4949.3]，L4）
 - Theo de Raadt 对 Intel 的指控（“被告知忽略风险”）系其个人推断，无直接证据，节目亦未提供 Intel 回应。　[存疑脚注] 系个人推断，无直接证据（BSD Now EP229，[763.4-807.38]，L4）
-- 转录将 David Gwynne 记作 David Gwynn 或 David Gwendt，标题 Two's interview 疑为 Gwynne's interview 的转写偏差，人名以 OpenBSD 官方为准。　[存疑脚注] 人名与标题存在语音转写偏差，须以 OpenBSD 官方资料核验（BSD Now EP623，[1068.26-1075.34]，L4）
+- 转录将 David Gwynne 记作 David Gwynn 或 David Gwendt，标题 Two‘s interview 疑为 Gwynne’s interview 的转写偏差，人名以 OpenBSD 官方为准。　[存疑脚注] 人名与标题存在语音转写偏差，须以 OpenBSD 官方资料核验（BSD Now EP623，[1068.26-1075.34]，L4）
 - sec(4) 相关表述中 IPsec 接口在转录混用 sec 与 sec4，具体版本与接口名须以 OpenBSD 手册页核验。　[考据脚注] 接口名称存在转写混用，须以 sec(4) 手册页为准（BSD Now EP623，[1971.80-2235.62]，L4）
 - 转写中的若干专名存疑：whurley 所自述的原雇主转写作 Clusters 与 Symbia，其 Nagios 顾问相关的合伙人名转写作 Ethan Volstead，与通行记载（OpenQRM 源自 Qlusters 公司、Nagios 创始人作 Ethan Galstad）存在疑似转写误差，采用前须以邮件列表档案与企业传记材料交叉核对；另其关于 GPL 与开发者社区相悖的判断系单方立场陈述，历史评价应与 GPL 阵营当事人论述对读。　[存疑脚注] 转写专名 Clusters、Symbia、Ethan Volstead 疑为语音识别误差，未经外部来源确证；whurley 的反 GPL 论断属单一来源立场推断。（BSDTalk EP123，[1429.02-1460.30]，L4）
 
@@ -116,6 +116,6 @@ volume: 第10卷-openbsd的历史
 - [BSD Now EP273] Pennington J. BSD Now: Episode 273: A Thoughtful Episode | BSD Now 273[EB/OL]. (2018-11-23)[2026-08-15]. <https://www.bsdnow.tv/273>.
 - [BSD Now EP229] Pennington J. BSD Now: 229: The Meltdown of Spectre[EB/OL]. (2018-01-17)[2026-08-15]. <https://www.bsdnow.tv/229>.
 - [BSD Now EP623] Pennington J. BSD Now: 623: Two's interview[EB/OL]. (2025-08-07)[2026-08-15]. <https://www.bsdnow.tv/623>.
-- [BSDTalk EP123] Backman W. BSDTalk: 123: bsdtalk123 - William "whurley" Hurley, Chief Architect of Open Source Strategy at BMC Software, Inc.[EB/OL]. (2007-07-30)[2026-08-27]. <https://bsdtalk.blogspot.com/2007/07/bsdtalk123-william-whurley-hurley-chief.html>.
+- [BSDTalk EP123] Backman W. BSDTalk: 123: bsdtalk123 - William “whurley” Hurley, Chief Architect of Open Source Strategy at BMC Software, Inc.[EB/OL]. (2007-07-30)[2026-08-27]. <https://bsdtalk.blogspot.com/2007/07/bsdtalk123-william-whurley-hurley-chief.html>.
 
 <!-- /PODCAST_REVIEW -->

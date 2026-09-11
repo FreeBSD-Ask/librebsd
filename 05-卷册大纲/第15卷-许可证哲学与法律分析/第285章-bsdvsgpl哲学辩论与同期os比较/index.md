@@ -11,7 +11,7 @@ volume: 第15卷-许可证哲学与法律分析
 - 许可哲学光谱：“义务自由（GPL）←→ 信任自由（BSD/宽松）←→ 闭源保护（Windows）”；BSD vs GPL 辩论的本质是“自由如何保障”的分歧，BSD 以信任、GPL 以约束，二者共同定义开源运动的哲学边界。
 - Committer’s Big List of Rules 的沉默反映分层设计——治理程序处理“谁有权提交”，许可证哲学通过社区讨论与工程实践处理“提交什么”。BSD 化工程未通过修订 committer 规则实现，而是通过构建 BSD 许可证替代品逐步完成，证明规则的程序中立未阻碍许可证纯化，反而为工程替代争取了时间——若规则在早期强制禁绝 GPL 代码，FreeBSD 将因缺乏可用编译器而无法
 - Committer’s Big List of Rules 争议映射出革命与改革的方法论分歧。革命路径主张直接修订规则——禁止 GPL 代码进入 base 系统、强制许可证审查、将 BSD 化写入治理章程；改革路径则在不修订规则的前提下，通过工程替代（Clang、LibreSSL、mandoc）逐步实现许可证纯化。FreeBSD 选择了改革路径，其困难远高于革命——须先构建功能对等的 BSD 替代
-- 中文技术圈普遍以“病毒/传染”描述 GPL copyleft 机制，此隐喻**在法律意义上具有系统性误导**。词源可考：1990 年即出现 "General Public Virus"（GPV）贬称；2001 年 Microsoft 高管 Craig Mundie 称 GPL "viral aspect"，Steve Ballmer 更称 GPL 代码是 "a cancer that attach
+- 中文技术圈普遍以“病毒/传染”描述 GPL copyleft 机制，此隐喻**在法律意义上具有系统性误导**。词源可考：1990 年即出现 “General Public Virus”（GPV）贬称；2001 年 Microsoft 高管 Craig Mundie 称 GPL “viral aspect”，Steve Ballmer 更称 GPL 代码是 "a cancer that attach
 - GPL 义务的触发条件是**分发（distribute，GPLv2）/传播（convey，GPLv3）**，而非“使用”或“修改”。中文圈“只要用了 GPL 代码就必须开源”的表述是核心误读之一。FSF GPL FAQ 明确：①**内部使用修改版不触发开源义务**——“GPL 不要求你发布修改版……你有自由修改并自用，而不必发布。这个规则也适用于机构（包括公司）”；〔待核：原文截断，后文待回源〕
 
 ## 史料
@@ -36,7 +36,7 @@ volume: 第15卷-许可证哲学与法律分析
 - 辩论无终局——两种自由观各服务不同目标，BSD 的务实人文在光谱中独特定位。
 - 【查证来源】FreeBSD Committer’s Guide 第 20 章经 docs.freebsd.org/en/articles/committers-guide/#rules WebFetch 一手核验目录条目存在；FreeBSD Core Bylaws 2000.8.28 版经 freebsd.org/internal/bylaws/ WebFetch 一手核验，规定 active c
 - 【查证来源】项目史观总纲第 21 条原文经 据原文第 25 章 第 25 行 Read 一手核验：“革命与改革是历史方法论的分歧。Linux 靠革命，BSD 靠改革。改革的困难远高于革命。破山中贼易，破心中贼难”；BSD 化工程时间线经 135.8 节史料（OpenBSD LibreSSL 公告、FreeBSD LLVM 迁移文档、openbsd.duckdb L3.6.1 查询报告）交叉核验；FreeB
-- 【查证来源】GPLv2 §5 原文：“如果可识别的作品部分不是派生自本程序，且可合理视为独立的分离作品，则本许可证及其条款不适用于那些部分”（WebFetch gnu.org/licenses/old-licenses/gpl-2.0.txt 一手核验）；GPLv3 §5 聚合定义"aggregate"（WebFetch gnu.org/licenses/gpl-3.0.txt 一手核验）；Sta
+- 【查证来源】GPLv2 §5 原文：“如果可识别的作品部分不是派生自本程序，且可合理视为独立的分离作品，则本许可证及其条款不适用于那些部分”（WebFetch gnu.org/licenses/old-licenses/gpl-2.0.txt 一手核验）；GPLv3 §5 聚合定义“aggregate”（WebFetch gnu.org/licenses/gpl-3.0.txt 一手核验）；Sta
 - 【查证来源】FSF GPL FAQ 中文版（gnu.org/licenses/old-licenses/gpl-2.0-faq.zh-cn.html）WebFetch 一手核验上述问答原文；GPLv3 §0 “传播”（to convey）定义（gnu.org/licenses/gpl-3.0.txt）一手核验  【交叉验证方法】（1）FSF FAQ 内部一致性核验：修改版自用问答与 SaaS 问答
 
 ## 文献
@@ -56,10 +56,10 @@ volume: 第15卷-许可证哲学与法律分析
 | 2 | “只要用了 GPL 代码就必须开源” | 义务触发条件是分发/传播，内部使用与 SaaS（GPLv2）不触发 | 触发条件误读 |  |  |  |  |  |
 | 3 | “违反 GPL 只是违约，不构成侵权” | Jacobsen（2008）：许可条件是 copyright conditions，违反=侵权；中国广州案：合同性质+授权终止=侵权 | 法律性质误读 |  |  |  |  |  |
 | 4 | “最坏情况就是被起诉、判停止使用” | 南京案 300 万惩罚性赔偿；济宁/广州案授权终止；FSF v. Cisco 合规导向 | 救济范围误读 |  |  |  |  |  |
-| 5 | “GPL 是免费午餐/自由软件=免费” | GPL 允许商业收费（GPL FAQ：可销售拷贝赚钱）；"free" 指自由非价格 | 概念混淆（freedom vs gratis） |  |  |  |  |  |
+| 5 | “GPL 是免费午餐/自由软件=免费” | GPL 允许商业收费（GPL FAQ：可销售拷贝赚钱）；“free” 指自由非价格 | 概念混淆（freedom vs gratis） |  |  |  |  |  |
 | 6 | “GPL 软件不能商用” | GPL 明确允许商业使用/销售（FSF 商业例外策略） | 商用限制误读 |  |  |  |  |  |
 | 7 | “GPLv3 与 GPLv2 区别不大” | v3 增加专利授权、反 Tivoization、与 Apache 2.0 兼容；Linux 内核固守 v2-only | 版本差异误读 |  |  |  |  |  |
-| 8 | “违反 GPL 后权利人不享有著作权” | 最高法 51 号案：违反 GPL 与著作权独立——开发者基于独创贡献仍享有著作权（演绎作品保护） | 权利关联误读 | > 本表为法律意义维度的系统性梳理，供正文写作与编辑引用；每条均有判例/FSF 官方来源支撑（详见 284.13.1-284.13.5 各小节辨析字段）。---## 附录：判例一手原件清单（2026-08-04 依据“判例与法律文件一手原件入库规则”采集）> 全部一手原件已下载存档于 `04-现代研究文献/03-文献下载/01-判决书案例/`，并在 references_fulltext.db 入库（ref id），大纲概述以 `<!-- NEWREF:ID -->` 标记引用。案件总清单：`03-原始史料库/06-考据记录/20260804_gpl_cases_inventory.md`。 | 案件 | 一手原件 | ref id | 本地存档 |
+| 8 | “违反 GPL 后权利人不享有著作权” | 最高法 51 号案：违反 GPL 与著作权独立——开发者基于独创贡献仍享有著作权（演绎作品保护） | 权利关联误读 | > 本表为法律意义维度的系统性梳理，供正文写作与编辑引用；每条均有判例/FSF 官方来源支撑（详见 284.13.1-284.13.5 各小节辨析字段）。---## 附录：判例一手原件清单（2026-08-04 依据“判例与法律文件一手原件入库规则”采集）> 全部一手原件已下载存档于 `04-现代研究文献/03-文献下载/01-判决书案例/`，并在 references_fulltext.duckdb 入库（ref id），大纲概述以 `<!-- NEWREF:ID -->` 标记引用。案件总清单：`03-原始史料库/06-考据记录/20260804_gpl_cases_inventory.md`。 | 案件 | 一手原件 | ref id | 本地存档 |
 | ------ | --------- | -------- | --------- |  |  |  |  |  |
 | Jacobsen v. Katzer（CAFC 2008） | CAFC 判决书 PDF（535 F.3d 1373） | 2417 | `Jacobsen_v_Katzer/` |  |  |  |  |  |
 | Jacobsen 上诉卷宗 | appellant/appellee brief、CC amicus brief（445KB）、oral argument order 等 10 份 | 2418 | `Jacobsen_v_Katzer/` |  |  |  |  |  |
@@ -175,7 +175,7 @@ volume: 第15卷-许可证哲学与法律分析
 - [BSD Now EP74] Pennington J. BSD Now: 74: That Sly MINIX[EB/OL]. (2015-01-28)[2026-08-15]. <https://www.bsdnow.tv/74>.
 - [BSD Now EP27] Pennington J. BSD Now: 27: BSD Now vs. BSDTalk[EB/OL]. (2014-03-05)[2026-08-15]. <https://www.bsdnow.tv/27>.
 - [BSDTalk EP7] Backman W. BSDTalk: Live BSD CDs[EB/OL]. (2006-01-18)[2026-08-15]. <https://archive.org/download/bsdtalk007/bsdtalk007.ogg>.
-- [BSDTalk EP123] Backman W. BSDTalk: 123: bsdtalk123 - William "whurley" Hurley, Chief Architect of Open Source Strategy at BMC Software, Inc.[EB/OL]. (2007-07-30)[2026-08-27]. <https://bsdtalk.blogspot.com/2007/07/bsdtalk123-william-whurley-hurley-chief.html>.
+- [BSDTalk EP123] Backman W. BSDTalk: 123: bsdtalk123 - William “whurley” Hurley, Chief Architect of Open Source Strategy at BMC Software, Inc.[EB/OL]. (2007-07-30)[2026-08-27]. <https://bsdtalk.blogspot.com/2007/07/bsdtalk123-william-whurley-hurley-chief.html>.
 - [BSDTalk EP9] Backman W. BSDTalk: Interview with Webmin Author Jamie Cameron[EB/OL]. (2006-01-24)[2026-08-15]. <https://archive.org/download/bsdtalk009/bsdtalk009.ogg>.
 - [BSDTalk EP161] Backman W. BSDTalk: 161: bsdtalk161 - Live from NYCBSDCon Sunday[EB/OL]. (2008-10-12)[2026-08-27]. <https://bsdtalk.blogspot.com/2008/10/bsdtalk161-live-from-nycbsdcon-sunday.html>.
 - [BSDTalk EP166] Backman W. BSDTalk: 166: bsdtalk166 - Asterisk Open Source Community Director John Todd[EB/OL]. (2008-11-25)[2026-08-27]. <https://bsdtalk.blogspot.com/2008/11/bsdtalk166-asterisk-open-source.html>.

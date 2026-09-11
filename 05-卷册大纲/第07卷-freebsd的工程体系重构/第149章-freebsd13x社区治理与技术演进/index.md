@@ -30,7 +30,7 @@ volume: 第07卷-freebsd的工程体系重构
   - 辨析：Core Team 成员名单随选举变动，具体成员列表需查阅对应年份的官方公告，本书记载的是制度层面的延续性而非特定个人；〔待核：原文截断，后文待回源〕
 - 总纲第 4 条——分离与聚合：ZFS 从 illumos/FreeBSD/Linux 三端分叉（分离）到 OpenZFS 统一代码库（聚合），是开源项目“分久必合”的典型案例——分叉让各平台快速适配，统一后共享维护成本
   - 辨析：OpenZFS 2.0 统一发生在 13.0 发布前（2020-11），13.0 是首个包含统一 OpenZFS 的 FreeBSD 大版本；13.0 之前 Free
-- 总纲第 6 条——技术路线分化：Linux ABI 兼容层体现了 FreeBSD 的实用主义哲学——不做宗教式的"Not Invented Here"排斥，而是承认 Linux 软件生态的主导地位，提供兼容层让用户能够运行需要的软件，同时保留 FreeBSD 内核和用户态的优势
+- 总纲第 6 条——技术路线分化：Linux ABI 兼容层体现了 FreeBSD 的实用主义哲学——不做宗教式的“Not Invented Here”排斥，而是承认 Linux 软件生态的主导地位，提供兼容层让用户能够运行需要的软件，同时保留 FreeBSD 内核和用户态的优势
   - 辨析：Linux ABI 层不是“Linux 虚拟机”——它直接在 FreeBSD 内核上运行 Linux 二进
 
 ## 辨析

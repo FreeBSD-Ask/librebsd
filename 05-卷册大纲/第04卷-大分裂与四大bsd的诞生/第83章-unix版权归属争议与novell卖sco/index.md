@@ -29,7 +29,7 @@ volume: 第04卷-大分裂与四大bsd的诞生
 
 ## 辨析
 
-- NT 3.5 与 4.4BSD-Lite 的比较须区分 “市场份额”（NT 3.5 经微软企业销售渠道在商业市场胜出）与 “技术影响”（4.4BSD-Lite 经 FreeBSD 2.0 1994.11.22、NetBSD 1.0 1994.10.26、OpenBSD 1995.10 fork 在开源生态影响深远）；技术影响的多维评估经 bsd_commits.db 三大 fork 首条 comm
+- NT 3.5 与 4.4BSD-Lite 的比较须区分 “市场份额”（NT 3.5 经微软企业销售渠道在商业市场胜出）与 “技术影响”（4.4BSD-Lite 经 FreeBSD 2.0 1994.11.22、NetBSD 1.0 1994.10.26、OpenBSD 1995.10 fork 在开源生态影响深远）；技术影响的多维评估经 bsd_commits.duckdb 三大 fork 首条 comm
 - 比较的解释力存在边界——部分学者过于强调单一维度（如许可模式），架构（微内核 vs 宏内核）、市场（企业 vs 桌面 vs 服务器）、生态（商业支持 vs 开源社区）多维因素须综合评估——Windows NT 3.5 在商业市场胜出但开源生态影响为零，4.4BSD-Lite 在商业市场份额有限但开源生态影响深远，二者经不同维度评估结论不同
 - 文献：操作系统比较史研究[考据完成：2026-07-2
 - 4.4BSD-Lite 取代 386BSD 作为直接安全基线的时间点须严格区分——NetBSD 1.0（1994.10.26）与 FreeBSD 2.0（1994.11.22）几乎同期 rebase 至 4.4BSD-Lite，二者间隔不足一个月，386BSD 作为直接安全基线的地位在 1994 年下半年被 4.4BSD-Lite 几乎同时取代；【0 信任原则·release tag 验证局限】b
@@ -47,13 +47,13 @@ volume: 第04卷-大分裂与四大bsd的诞生
 - 操作系统比较史研究［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
 FreeBSD 社区论文：[FP-2021-002] An Overview of Scheduling in the FreeBSD Kernel（Marshall Kirk McKusick（马歇尔·柯克·麦库西克），2021）<https://papers.freebsd.org/2021/eurobsdcon/mckusick-overview_scheduling_freebsd/>
 FreeBSD 社
-- FreeBSD 2.0 Release Announcement 1994.11.22；NetBSD 1.0 Release Announcement 1994.10.26；4.4BSD-Lite Release Notes 1994.6；USL v. BSDi 和解协议 1994.1；bsd_commits.db `tags` 表（release/2.0_cvs）与 `commits` 表（4.4BSD-Lite 导入 commit `59deaec541ae8baaa58daf6c5a2196ea7de180c3`、`26f9a76710a312a951848542b9ca1f441004
+- FreeBSD 2.0 Release Announcement 1994.11.22；NetBSD 1.0 Release Announcement 1994.10.26；4.4BSD-Lite Release Notes 1994.6；USL v. BSDi 和解协议 1994.1；bsd_commits.duckdb `tags` 表（release/2.0_cvs）与 `commits` 表（4.4BSD-Lite 导入 commit `59deaec541ae8baaa58daf6c5a2196ea7de180c3`、`26f9a76710a312a951848542b9ca1f441004
 - Novell-SCO APA 原文；UNIX 版权归属史研究［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
 
 ## 82.8.2 APA 中 UNIX 版权转移的模糊条款与 Amendment No. 2
 
 - 要点：APA 中 UNIX 版权转移的条款存在模糊——APA Schedule 1.1(a) 列出 “版权” 作为转移资产，但 Amendment No. 2（**1996.10.16**）明确 Novell 保留 UNIX 版权，SCO 仅获得授权销售权；Amendm
-- McKusick M K. Twenty Years of Berkeley Unix [M]//Open Sources, 1999；4.4BSD-Lite/Lite2 Release Notes；USL v. BSDi 和解协议 1994.1；FreeBSD 2.0/NetBSD 1.0 Release Announcements ［B］；本项目。bsd_commits.db 数据分析报告：深层信息挖掘 [R/OL]. 2026.
+- McKusick M K. Twenty Years of Berkeley Unix [M]//Open Sources, 1999；4.4BSD-Lite/Lite2 Release Notes；USL v. BSDi 和解协议 1994.1；FreeBSD 2.0/NetBSD 1.0 Release Announcements ［B］；本项目。bsd_commits.duckdb 数据分析报告：深层信息挖掘 [R/OL]. 2026.
 
 ## 82.9.2 CSRG 机构化开发 → CSRG 解散后三大 fork 继承（1995-1996）
 

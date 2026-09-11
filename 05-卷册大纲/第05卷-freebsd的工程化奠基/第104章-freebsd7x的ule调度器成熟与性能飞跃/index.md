@@ -17,43 +17,43 @@ volume: 第05卷-freebsd的工程化奠基
 ## 史观
 
 - 总纲第 2 条——实践先于理论，ULE 的 6 年演进是工程实践驱动的而非理论预设
-  - 辨析：ULE 是否真比 4BSD 优越，需查基准测试；6 年成熟期是否过长；7.0 与 7.1 对 ULE 状态的表述差异；经 bsd_commits.db tags 表验证，7.0-RELEASE 的 tagger_date 为 2008-02-24T05:45:17Z（cvs2svn 创建 tag），7
+  - 辨析：ULE 是否真比 4BSD 优越，需查基准测试；6 年成熟期是否过长；7.0 与 7.1 对 ULE 状态的表述差异；经 bsd_commits.duckdb tags 表验证，7.0-RELEASE 的 tagger_date 为 2008-02-24T05:45:17Z（cvs2svn 创建 tag），7
 - 总纲第 2 条——实践先于理论，SMP 性能是工程迭代的结果
   - 辨析：测试方法是否公平，需查测试环境（硬件、内核配置）
-  - 文献：FreeBSD 7.0 SMP Performance Benchmarks (freebsd.org 2008)；Phoronix"FreeBSD 7.0 Performance" (2008.3)；Roberson (2003) BSDCon paper[
+  - 文献：FreeBSD 7.0 SMP Performance Benchmarks (freebsd.org 2008)；Phoronix“FreeBSD 7.0 Performance” (2008.3)；Roberson (2003) BSDCon paper[
 - 总纲第 4 条——0 信任原则
   - 辨析：选择性报告，需查原始数据
-  - 文献：Phoronix"FreeBSD 7.0 SMP Performance" (2008.3)；OpenBenchmarking.org FreeBSD 7.0 test results；McKusick & Neville-Neil (2014), Chapter 4 ［B］
+  - 文献：Phoronix“FreeBSD 7.0 SMP Performance” (2008.3)；OpenBenchmarking.org FreeBSD 7.0 test results；McKusick & Neville-Neil (2014), Chapter 4 ［B］
 - 总纲第 4 条——0 信任原则
   - 辨析：厂商赞助，需查利益关系
   - 文献：FreeBSD 7.0-RELEASE/7.1-RELEASE Release Notes；McKusick & Neville-Neil (2014)；The FreeBSD Foundation 2007-2009 Annual Reports；BSDCan 2007-2009 Conference Proce
 - 总纲第 9 条——简洁与复杂的辩证，大页增加复杂度但减少 TLB miss
   - 辨析：大页是否真提升性能，需查基准测试
-  - 文献：Cox, A. et al. "Practical Transparent Superpage Support for FreeBSD" (FreeBSD Project, 2007)；FreeBSD 7.0 Release Notes；Navarro, J.
+  - 文献：Cox, A. et al. “Practical Transparent Superpage Support for FreeBSD” (FreeBSD Project, 2007)；FreeBSD 7.0 Release Notes；Navarro, J.
 
 ## 辨析
 
-- ULE 是否真比 4BSD 优越，需查基准测试；6 年成熟期是否过长；7.0 与 7.1 对 ULE 状态的表述差异；经 bsd_commits.db tags 表验证，7.0-RELEASE 的 tagger_date 为 2008-02-24T05:45:17Z（cvs2svn 创建 tag）〔待核：原文截断，后文待回源〕
+- ULE 是否真比 4BSD 优越，需查基准测试；6 年成熟期是否过长；7.0 与 7.1 对 ULE 状态的表述差异；经 bsd_commits.duckdb tags 表验证，7.0-RELEASE 的 tagger_date 为 2008-02-24T05:45:17Z（cvs2svn 创建 tag）〔待核：原文截断，后文待回源〕
 - 测试方法是否公平，需查测试环境（硬件、内核配置）
-  - 文献：FreeBSD 7.0 SMP Performance Benchmarks (freebsd.org 2008)；Phoronix"FreeBSD 7.0 Performance" (2008.3)；Roberson (2003) BSDCon paper［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］ 〔L3 官方文档〕
+  - 文献：FreeBSD 7.0 SMP Performance Benchmarks (freebsd.org 2008)；Phoronix“FreeBSD 7.0 Performance” (2008.3)；Roberson (2003) BSDCon paper［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］ 〔L3 官方文档〕
   - 史观：总纲第 4 条——0 信任原则
   - 辨析：
 - 厂商赞助，需查利益关系
   - 文献：FreeBSD 7.0-RELEASE/7.1-RELEASE Release Notes；McKusick & Neville-Neil (2014)；The FreeBSD Foundation 2007-2009 Annual Reports；BSDCan 2007-2009 Conference Proceedings；Phoronix FreeBSD
 - 大页是否真提升性能，需查基准测试
-  - 文献：Cox, A. et al. "Practical Transparent Superpage Support for FreeBSD" (FreeBSD Project, 2007)；FreeBSD 7.0 Release Notes；Navarro, J. et al. "Practical, Transparent Operating Syst
+  - 文献：Cox, A. et al. “Practical Transparent Superpage Support for FreeBSD” (FreeBSD Project, 2007)；FreeBSD 7.0 Release Notes；Navarro, J. et al. "Practical, Transparent Operating Syst
 
 ## 文献
 
-- Roberson, J. "ULE: A Modern Scheduler for FreeBSD"Proceedings of BSDCon 2003 (USENIX, 2003)；McKusick, M. K. & Neville-Neil, G. V. The Design and Implementation of the FreeBSD Operating System, 2nd ed. (Addison-Wesley, 2014), Chapter 4；FreeBSD 7.0/7.1 Release Notes；〔待核：原文截断，后文待回源〕
-- FreeBSD 7.0 SMP Performance Benchmarks (freebsd.org 2008)；Phoronix"FreeBSD 7.0 Performance" (2008.3)；Roberson (2003) BSDCon paper［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
+- Roberson, J. “ULE: A Modern Scheduler for FreeBSD”Proceedings of BSDCon 2003 (USENIX, 2003)；McKusick, M. K. & Neville-Neil, G. V. The Design and Implementation of the FreeBSD Operating System, 2nd ed. (Addison-Wesley, 2014), Chapter 4；FreeBSD 7.0/7.1 Release Notes；〔待核：原文截断，后文待回源〕
+- FreeBSD 7.0 SMP Performance Benchmarks (freebsd.org 2008)；Phoronix“FreeBSD 7.0 Performance” (2008.3)；Roberson (2003) BSDCon paper［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
 
 ## 103.2.2 性能提升的工程意义
 
 - 要点：性能提升的工程意义：(1) FreeBSD 重新成为高性能服务器选择；(2) SMPng 项目终于见效；(3) 为后续
-- Phoronix"FreeBSD 7.0 SMP Performance" (2008.3)；OpenBenchmarking.org FreeBSD 7.0 test results；McKusick & Neville-Neil (2014), Chapter 4 ［B］
+- Phoronix“FreeBSD 7.0 SMP Performance” (2008.3)；OpenBenchmarking.org FreeBSD 7.0 test results；McKusick & Neville-Neil (2014), Chapter 4 ［B］
 - FreeBSD 7.0-RELEASE/7.1-RELEASE Release Notes；McKusick & Neville-Neil (2014)；The FreeBSD Foundation 2007-2009 Annual Reports；BSDCan 2007-2009 Conference Proceedings；Phoronix FreeBSD Benchmarks 2008；freebsd-hackers 邮件列表 2008 年归档 ［A］
-- Cox, A. et al. "Practical Transparent Superpage Support for FreeBSD" (FreeBSD Project, 2007)；FreeBSD 7.0 Release Notes；Navarro, J. et al. "Practical, Transparent Operating System Support for Superpages"ACM SIGOPS 2002 ［B］
+- Cox, A. et al. “Practical Transparent Superpage Support for FreeBSD” (FreeBSD Project, 2007)；FreeBSD 7.0 Release Notes；Navarro, J. et al. "Practical, Transparent Operating System Support for Superpages"ACM SIGOPS 2002 ［B］
 
 ## 103.3.2 大页支持的工程实现
 

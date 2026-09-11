@@ -13,7 +13,7 @@ volume: 第04卷-大分裂与四大bsd的诞生
 
 - 总纲第 19 条明示“解释学循环是历史认识的根本条件。前理解的差异使分歧不可避免。权力与知识在历史书写中共谋——什么被记录、什么被遗忘，本身就是权力行使”。项目史观总纲第 19 章第 2 节“前理解与分歧的产生”进一步阐释“我们往往预设了读者与作者享有相同的‘前理解’与‘前意识’。因此，随着讨论深入，分歧只会越来越多”，第 19 章第 3 节“权力与知识的共谋”指出“什么是‘重要的’历史事件，什么被记录，什么被遗忘，什么被视为‘错误’，什么被视为‘进步’——这些判断背后都有权力的运作”。将这三重阐释应用于本章所述 BSD 三项目排外性争议，可揭示：BSD 阵营与批评方对“排外性”的解释受各自前理解支配而不可调和。批评方的前理解将“透明度与开放性”视为社区健康标准，故读出排外性是“治理缺陷”——Jordan Hubbard 2001 年辞职信、trasz@ 2025 年 12 月批评、LWN 2007 Corbet 报道、BSDCan 2011 仅 3 人到场，皆是先前理解框架下的“治理缺陷”证据。BSD 阵营的前理解将“工程质量与文化特异性”视为社区使命，故读出排外性是“必要代价”——OpenBSD 二十余年安全审计、FreeBSD Core Team 选举制的代码质量保证、NetBSD 可移植定位的工程专注，皆是先前理解框架下的“必要代价”证据。前理解的不可调和性决定了辩证链不会以一方说服另一方终结，而以各方在各自前理解框架内自洽地解释排外性而持续——这正是总纲第 19 条所揭示的历史认识的根本条件。项目统摄史观“权力与知识的共谋”进一步揭示：什么被记录为“排外性事件”、什么被遗忘为“日常社区运作”，本身就是权力行使——批评方记录 Jordan Hubbard 2001 年辞职信与 trasz@ 2025 年 12 月批评以建构“BSD 排外”叙事，BSD 阵营记录 OpenBSD 安全审计与 FreeBSD Foundation 年报以建构“BSD 工程”叙事，二者皆是权力与知识的共谋。史家须警惕：将“排外性事件”作为 BSD 阵营的核心特征记录，与将“工程成就”作为 BSD 阵营的核心特征记录，皆是形式主义化的选择，背后皆有权力运作。
 - FreeBSD 近 **30 年** 无正式路线图——首份 Technology Roadmap 迟至 **2021 年 9 月** 由 FreeBSD Foundation 发布，涵盖终端用户、商用服务器、工具应用、虚拟化容器四个方向；先前 FreeBSD 无任何形式化的发展规划或优先级文档。BSD vs Linux 路线图对比对照如下：
-- NetBSD“无截止日期”发布模式（Pronchery 2014 论文"Carve your NetBSD"）——"it is done when considered ready"；NetBSD 无公开的功能路线图或战略文档；OpenBSD 唯一可预测结构为六个月发布周期但无公开功能规划
+- NetBSD“无截止日期”发布模式（Pronchery 2014 论文“Carve your NetBSD”）——“it is done when considered ready”；NetBSD 无公开的功能路线图或战略文档；OpenBSD 唯一可预测结构为六个月发布周期但无公开功能规划
 
 ## 史观
 
@@ -44,12 +44,12 @@ volume: 第04卷-大分裂与四大bsd的诞生
 ## 76.7.2 协同失败的批评
 
 - 要点：BSD 三项目协同失败被长期批评——代码共享减少、跨
-- 考据过程留痕——【查证来源】FreeBSD 官方关于页面、NetBSD 官方关于页面与历史页面、OpenBSD 官方 FAQ 与 goals 页面经 WebFetch 一手核验（2026-07-24 复核），三项目定位声明的关键表述（"features, speed, and stability""portability""correctness, security, standardizatio
+- 考据过程留痕——【查证来源】FreeBSD 官方关于页面、NetBSD 官方关于页面与历史页面、OpenBSD 官方 FAQ 与 goals 页面经 WebFetch 一手核验（2026-07-24 复核），三项目定位声明的关键表述（“features, speed, and stability”“portability”"correctness, security, standardizatio
 - 考据过程留痕——【查证来源】Linux 内核 subsystem maintainer 体系与 driver 子系统架构的官方文档经 WebSearch 检索，具体一手原文 URL 未取得，沿用既有公开技术资料 ［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］；OpenBSD `pf` 跨项目移植与 OpenSSH 跨项目采用的具体 release not
 
 ## 文献
 
-- 本项目内部哲学文献《项目统摄史观》第 5 章“偶然性与必然性”、第 25 章总纲第 5 条（sacred 哲学源材料）；本章 30.1.1〔待核实节号〕 节 bsd_commits.db 数据库证据；Jordan Hubbard 2001 辞职信［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］；LWN 2007 Corbet 报道 ［A］；jmmv 2013 EuroBSDCon 报道 ［A］
+- 本项目内部哲学文献《项目统摄史观》第 5 章“偶然性与必然性”、第 25 章总纲第 5 条（sacred 哲学源材料）；本章 30.1.1〔待核实节号〕 节 bsd_commits.duckdb 数据库证据；Jordan Hubbard 2001 辞职信［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］；LWN 2007 Corbet 报道 ［A］；jmmv 2013 EuroBSDCon 报道 ［A］
 
 
 <!-- dangan-20260908 消解回写 -->
@@ -62,7 +62,7 @@ volume: 第04卷-大分裂与四大bsd的诞生
 
 ## 76.6.2 NetBSD 与 OpenBSD 的无规划传统
 
-- 要点：NetBSD“无截止日期”发布模式（Pronchery 2014 论文"Carve your NetBSD"）——"it is done when considered ready"；NetBSD 无公开的功能路线图或战略文档；O
+- 要点：NetBSD“无截止日期”发布模式（Pronchery 2014 论文“Carve your NetBSD”）——“it is done when considered ready”；NetBSD 无公开的功能路线图或战略文档；O
 - BSD 三项目发展史；BSD vs Linux 对比研究［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
 
 ## 76.7.2 协同失败的批评

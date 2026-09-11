@@ -33,7 +33,7 @@ volume: 第05卷-freebsd的工程化奠基
 ## 100.11.2 2007.8.10 Judge Kimball 即决判决 Nove
 
 - 总纲第 6 条——技术选择的代价：Giant 锁分解付出工程复杂度代价（细粒度锁设计与验证困难），但获得多核扩展性；总纲第 17 条——形式与内容：锁粒度作为 “形式” 改变 “内容”（内核并发执行能力）
-  - 辨析：经 bsd_commits.db tags 表验证，6.0-RELEASE 的 tagger_date 为 2005-11-03T00:35:26Z（非旧叙事 2005.11.4）
+  - 辨析：经 bsd_commits.duckdb tags 表验证，6.0-RELEASE 的 tagger_date 为 2005-11-03T00:35:26Z（非旧叙事 2005.11.4）
 - 总纲第 7 条——BSD 与 UNIX 谱系的连续性
   - 辨析：Linux 2.6 成熟对 FreeBSD 影响，需查市场份额
   - 文献：Release Notes；Distrowatch［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
@@ -56,7 +56,7 @@ volume: 第05卷-freebsd的工程化奠基
 ## 100.11.2 2007.8.10 Judge Kimball 即决判决 Novell 持有 UNIX 版权
 
 - 要点：2007.
-- 经 bsd_commits.db tags 表验证，6.0-RELEASE 的 tagger_date 为 2005-11-03T00:35:26Z（非旧叙事 2005.11.4）；［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］ MPSAFE VFS 在 6.0 的具体完成度在不同叙事中存在差异——部分资料称 6.0 完成 MPSAFE VFS，部分称
+- 经 bsd_commits.duckdb tags 表验证，6.0-RELEASE 的 tagger_date 为 2005-11-03T00:35:26Z（非旧叙事 2005.11.4）；［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］ MPSAFE VFS 在 6.0 的具体完成度在不同叙事中存在差异——部分资料称 6.0 完成 MPSAFE VFS，部分称
 - Linux 2.6 成熟对 FreeBSD 影响，需查市场份额
   - 文献：Release Notes；Distrowatch［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
 
@@ -80,7 +80,7 @@ volume: 第05卷-freebsd的工程化奠基
 ## 100.11.2 2007.8.10 Judge Kimball 即决判决 Novell 持有 UNIX 版权
 
 - 要点：2007.8.10 犹他联邦法院 Judge Dale Kimball 即决判决 Novell（而非 SCO）持有 UNIX 版权，初步终结 SCO v. IBM 案件的法律基础；SCO 随后于 2007.9 申请 Chapter 11 破产保护；但该即决判
-- FreeBSD 6.0-RELEASE Release Notes；Robert Watson "FreeBSD SMPng Project" 演讲；Michael W. Lucas "FreeBSD 5 SMPng"（; login: vol. 30 no. 5, 2005）；release/6.0.0. freebsd-src 仓库 tag [DB/OL]. 2005-11-03T00:35:26Z. tag: release/6.0.0; commit: 3d215489fe03c6c5cecc3b5ed9ea39118e6ce379 ［A］
+- FreeBSD 6.0-RELEASE Release Notes；Robert Watson “FreeBSD SMPng Project” 演讲；Michael W. Lucas “FreeBSD 5 SMPng”（; login: vol. 30 no. 5, 2005）；release/6.0.0. freebsd-src 仓库 tag [DB/OL]. 2005-11-03T00:35:26Z. tag: release/6.0.0; commit: 3d215489fe03c6c5cecc3b5ed9ea39118e6ce379 ［A］
 
 ## 100.12.2 KSE M: N 线
 

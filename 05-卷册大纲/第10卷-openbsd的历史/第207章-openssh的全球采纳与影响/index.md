@@ -26,7 +26,7 @@ volume: 第10卷-openbsd的历史
 - 考据过程留痕——【查证来源】三类批评的具体诉求经以下一手史料核验：Provos 赴加拿大移除加密与 GPL 组件，经 OpenSSH 官方历史页面（<https://www.openssh.com/history.html>，2026-07-24 WebFetch 一手核验）确认原文"Niels Provos (GERMANY but living in USA) quickly removed
 - 考据过程留痕——【查证来源】OpenBSD 阵营反批评的三点论据经以下一手史料核验：第一点（Provos 移除 libgmp 是修复既有 GPL 违规），经 OpenSSH 官方历史页面（<https://www.openssh.com/history.html>，2026-07-24 WebFetch 一手核验）确认原文"Rapidly after Tatu's 1.2.12 release,
 - 考据过程留痕——【查证来源】再回应三点的评估经以下一手史料核验：第一点（libgmp 移除时机由发布截止日期驱动），经 OpenSSH 官方历史页面（<https://www.openssh.com/history.html>，2026-07-24 WebFetch 一手核验）确认原文"OpenBSD project members became aware of Björn's work les
-- 考据过程留痕——【查证来源】合图“成功”判定的各项事实经以下一手史料核验：Provos 移除 libgmp 的长期正确性，经 OpenSSH 官方历史页面（<https://www.openssh.com/history.html>，2026-07-24 WebFetch 一手核验）确认原文"that effectively made SSH a GPL violation"——移除 libgmp
+- 考据过程留痕——【查证来源】合图“成功”判定的各项事实经以下一手史料核验：Provos 移除 libgmp 的长期正确性，经 OpenSSH 官方历史页面（<https://www.openssh.com/history.html>，2026-07-24 WebFetch 一手核验）确认原文“that effectively made SSH a GPL violation”——移除 libgmp
 
 ## 文献
 

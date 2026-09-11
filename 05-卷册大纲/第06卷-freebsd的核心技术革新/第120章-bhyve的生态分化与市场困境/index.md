@@ -22,7 +22,7 @@ volume: 第06卷-freebsd的核心技术革新
 | bhyve | 2011-2014 年 | Neel Natu（尼尔·纳图）/Peter Grehan（彼得·格雷汉） | BSD 2-Clause | FreeBSD 原生 Type-2 hypervisor，随 FreeBSD 10.0 发布 |
 | Apple Hypervisor.framework | 2014 年 | Apple | 专有 | OS X 10.10 用户态 hypervisor API |
 - **统计分析印证**——`freebsd.duckdb` freebsd-src 仓库 1993-2026 年 commit 月度量 Mann-Kendall 趋势检验结果为显著上升趋势（Sen's slope =+1.40/月，p < 0.001，95% CI [1.11, 1.69]）（统计结论 C-03）；ARIMA(5,0,5) 模型拟合 AIC = 107.39（统计结论 C-29），预测精度
-- bhyve ARM64 支持的探索始于 2015-2016 年，Mihai Carabaș 与 Peter Grehan（彼得·格雷汉） 在 BSDCan 2016 发表了 "Porting bhyve on ARM" 演讲，概述了将 bhyve 移植到 AArch64（ARM64）架构的工程计划；ARM64 虚拟化依赖 ARM Virtualization Extensions（VE），包括 E
+- bhyve ARM64 支持的探索始于 2015-2016 年，Mihai Carabaș 与 Peter Grehan（彼得·格雷汉） 在 BSDCan 2016 发表了 “Porting bhyve on ARM” 演讲，概述了将 bhyve 移植到 AArch64（ARM64）架构的工程计划；ARM64 虚拟化依赖 ARM Virtualization Extensions（VE），包括 E
 
 ## 史料
 
@@ -40,7 +40,7 @@ volume: 第06卷-freebsd的核心技术革新
 ## 辨析
 
 - illumos bhyve 移植的时间线需精确——Pluribus Networks 于 2012-2013 年左右开始初始移植，Joyent 随后加入并将其集成到 SmartOS [存疑——精确日期需 Joyent/Pluribus 官方公告验证]；xhyve 对 macOS Hypervisor.framework 的利用是一个有趣的架构创新——将原本需要内核模块的 hypervisor 完全
-- 原文中提到的 "Qing Huang" 作为主要维护者需要核实——该名字未在 bhyve 主要 commit 历史与演讲作者中显著出现 ［ 存疑脚注：此处事实待多源交叉验证 ］，bhyve 核心维护者应为 Neel Natu、Peter Grehan、John Baldwin 等人；bhyve 维护团队规模较小是事实，这直接导致了功能开发速度慢于 KVM，但也意味着代码审查严格、架构一致性保持较好
+- 原文中提到的 “Qing Huang” 作为主要维护者需要核实——该名字未在 bhyve 主要 commit 历史与演讲作者中显著出现 ［ 存疑脚注：此处事实待多源交叉验证 ］，bhyve 核心维护者应为 Neel Natu、Peter Grehan、John Baldwin 等人；bhyve 维护团队规模较小是事实，这直接导致了功能开发速度慢于 KVM，但也意味着代码审查严格、架构一致性保持较好
 - bhyve 与各虚拟化技术的比较需避免简单的 “成败论” 叙事——bhyve 没有成为云标准并不意味着技术失败，它在其目标场景（FreeBSD 原生虚拟化、存储设备集成、BSD/illumos 生态）中是成功的；bhyve 与 KVM 的架构差异反映了不同的设计哲学：KVM 追求 “Linux 内核中的通用 hypervisor，支持一切场景”，bhyve 追求 “FreeBSD 内核中的简洁 h
 - *统计局限性标注**——(1) 统计显著 ≠ 实际显著：Mann-Kendall 趋势检验 p < 0.001 表明 freebsd-src commit 量存在统计学显著上升趋势，但 Sen's slope =+1.40/月 的实际工程意义须结合 FreeBSD 版本周期与 commit 粒度变化综合判断；(2) bhyve 贡献率未量化：commit 量统计不区分 bhyve 相关 commi
 - bhyve ARM64 支持状态需精确区分：截至 FreeBSD 14.0（2023 年），arm64 bhyve 仍处于实验阶段，功能完整性落后于 x86 版本，不支持 PCI 直通、GPU 加速等高级功能；NetBSD 也开发了自己的 NVMM hypervisor 用于 ARM64，与 FreeBSD bhyve 独立；bhyve ARM64 支持并非从零开始，FreeBSD/arm64 架
@@ -59,7 +59,7 @@ volume: 第06卷-freebsd的核心技术革新
 
 <!-- DB_REF:freebsd.duckdb -->
 > **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 2010-2020 年间：488,947 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
-- FreeBSD Project. freebsd.duckdb freebsd-src 仓库 commit 数据库 [DB/OL]. 2026-07-27. `c:\Users\ykla\Documents\hibsd\03-原始史料库\01-代码仓库史料\01-数据库本体\freebsd.duckdb`; Hibsd Project. 推断性统计.md [R/OL]. 2026-07-27. `c:\Users\ykla\Documents\hibsd\03-原始史料库\01-代码仓库史料\01-数据库本体\统计分析\推断性统计.md` Task 5; Hibsd Project. 时间序列分析.md [R/OL]. 2026-07-27. `c:\Users\ykla\Documents\hibsd\03-原始史料库\01-代码仓库史料\01-数据库本体\统计分析\时间序列分析.md` Task 14-15; Hibsd Project. 卷章数据映射.md [R/OL]. 2026-07-27. `c:\Users\ykla\Documents\hibsd\03-原始史料库\01-代码仓库史料\01-数据库本体\统计分析\卷章数据映射.md` 第五卷第 53 章映射。［A］### 史观映射> bhyve 写出了 FreeBSD 自己的 hypervisor，却没有写出 KVM 身后那条庞大的产业链——这不是代码的失败，而是时机与生态的判决。Neel Natu 在 NetApp 启动 BHyVe 项目时，KVM 已随 Linux 主线进入全球公有云，VMware 已统治企业数据中心十余年，hypervisor 市场的网络效应早已锁死。bhyve 的代码简洁、架构优雅、BSD 许可证自由，它在 FreeBSD/TrueNAS/illumos 生态中是一个成功的虚拟化方案，但它永远不会成为云时代的标准——这不是因为 bhyve 技术不好，而是因为当 2014 年 bhyve 随 FreeBSD 10.0 正式发布时，虚拟化战争早已结束。bhyve 的故事是 BSD 生态的缩影：技术优秀但资源有限，许可证自由但缺乏商业锁定，在大型厂商主导的基础设施市场中，它找到了属于自己的 niche，却无法打破既有格局。历史的判决不是 “bhyve 输给了 KVM”，而是 “在一个赢者通吃的网络效应市场中，晚到者即使做得更好，也很难改写格局”。bhyve 没有输，它只是生不逢时。---> ## 第 53.14 不同时期人员的采访录（详见 [采访录.md](采访录.md)）
+- FreeBSD Project. freebsd.duckdb freebsd-src 仓库 commit 数据库 [DB/OL]. 2026-07-27. **03-原始史料库/01-代码仓库史料/01-数据库本体/freebsd.duckdb**; Hibsd Project. 推断性统计.md [R/OL]. 2026-07-27. **03-原始史料库/01-代码仓库史料/01-数据库本体/统计分析/推断性统计.md** Task 5; Hibsd Project. 时间序列分析.md [R/OL]. 2026-07-27. **03-原始史料库/01-代码仓库史料/01-数据库本体/统计分析/时间序列分析.md** Task 14-15; Hibsd Project. 卷章数据映射.md [R/OL]. 2026-07-27. **03-原始史料库/01-代码仓库史料/01-数据库本体/统计分析/卷章数据映射.md** 第五卷第 53 章映射。［A］### 史观映射> bhyve 写出了 FreeBSD 自己的 hypervisor，却没有写出 KVM 身后那条庞大的产业链——这不是代码的失败，而是时机与生态的判决。Neel Natu 在 NetApp 启动 BHyVe 项目时，KVM 已随 Linux 主线进入全球公有云，VMware 已统治企业数据中心十余年，hypervisor 市场的网络效应早已锁死。bhyve 的代码简洁、架构优雅、BSD 许可证自由，它在 FreeBSD/TrueNAS/illumos 生态中是一个成功的虚拟化方案，但它永远不会成为云时代的标准——这不是因为 bhyve 技术不好，而是因为当 2014 年 bhyve 随 FreeBSD 10.0 正式发布时，虚拟化战争早已结束。bhyve 的故事是 BSD 生态的缩影：技术优秀但资源有限，许可证自由但缺乏商业锁定，在大型厂商主导的基础设施市场中，它找到了属于自己的 niche，却无法打破既有格局。历史的判决不是 “bhyve 输给了 KVM”，而是 “在一个赢者通吃的网络效应市场中，晚到者即使做得更好，也很难改写格局”。bhyve 没有输，它只是生不逢时。---> ## 第 53.14 不同时期人员的采访录（详见 [采访录.md](采访录.md)）
 
 <!-- DB_REF:freebsd.duckdb -->
 > **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 2010-2020 年间：488,947 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
@@ -67,7 +67,7 @@ volume: 第06卷-freebsd的核心技术革新
 
 <!-- DB_REF:freebsd.duckdb -->
 > **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 2010-2020 年间：488,947 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
-- iXsystems. Introducing TrueNAS SCALE [EB/OL]. (2020)[2026-07-19]. <https://www.truenas.com/>; iXsystems. TrueNAS CORE Release Notes [EB/OL]. [2026-07-19]. <https://www.truenas.com/docs/core/>; Kennedy C. Why We're Moving TrueNAS from FreeBSD to Debian [EB/OL]. Blocks & Files, 2024-04-08 [2026-07-19]. [考据脚注：该文章标题本身存在误导——"Moving TrueNAS from FreeBSD" 暗示 TrueNAS 整体从 FreeBSD 迁移，但文章实际讨论的是 SCALE 版本的 Linux 选择，并非 CORE 版本放弃 FreeBSD。经核查，该 URL 当前返回 404，但文章标题在互联网多个转载中可确认。]; Moore K. On the TrueNAS CORE Deprecation [EB/OL]. iXsystems Blog, 2024-04 [2026-07-19]. ［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］.［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
+- iXsystems. Introducing TrueNAS SCALE [EB/OL]. (2020)[2026-07-19]. <https://www.truenas.com/>; iXsystems. TrueNAS CORE Release Notes [EB/OL]. [2026-07-19]. <https://www.truenas.com/docs/core/>; Kennedy C. Why We're Moving TrueNAS from FreeBSD to Debian [EB/OL]. Blocks & Files, 2024-04-08 [2026-07-19]. [考据脚注：该文章标题本身存在误导——“Moving TrueNAS from FreeBSD” 暗示 TrueNAS 整体从 FreeBSD 迁移，但文章实际讨论的是 SCALE 版本的 Linux 选择，并非 CORE 版本放弃 FreeBSD。经核查，该 URL 当前返回 404，但文章标题在互联网多个转载中可确认。]; Moore K. On the TrueNAS CORE Deprecation [EB/OL]. iXsystems Blog, 2024-04 [2026-07-19]. ［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］.［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
 
 <!-- DB_REF:freebsd.duckdb -->
 > **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 2010-2020 年间：488,947 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。

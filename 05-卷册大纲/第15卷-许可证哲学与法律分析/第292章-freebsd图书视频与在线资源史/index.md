@@ -8,7 +8,7 @@ volume: 第15卷-许可证哲学与法律分析
 
 ## 要点
 
-- McKusick et al. "The Design and Implementation of the 4.4BSD Operating System"（1996）是 BSD 技术图书的奠基之作，后续 4.4BSD、FreeBSD 5.x、FreeBSD 11.x 版本延续此系列，形成学术-工程双重参照的写作传统
+- McKusick et al. “The Design and Implementation of the 4.4BSD Operating System”（1996）是 BSD 技术图书的奠基之作，后续 4.4BSD、FreeBSD 5.x、FreeBSD 11.x 版本延续此系列，形成学术-工程双重参照的写作传统
 - 翻译者史料分散在邮件列表、社区 wiki、个人 blog 中，需通过多源交叉与口述史方法还原。
 - 1990s-2020s OS 文档生态：Linux 以社区广度领先，FreeBSD 以手册严谨著称，OpenBSD/NetBSD 以 man/Guide 质量见长，Windows 以厂商权威文档封闭维护；FreeBSD 的文档传统（手册 + 书籍如 McKusick 著作）在开源 OS 中具标杆地位。
 - Michael W. Lucas 自 2010 年代起以自助出版模式创作 FreeBSD Mastery 系列（Storage Essentials、Advanced ZFS、Networking 等），填补商业出版商放弃 BSD 市场后的空白
@@ -36,7 +36,7 @@ volume: 第15卷-许可证哲学与法律分析
 - FreeBSD 文档的 “少而精” 在质量上对标 Linux 的 “多而广”。
 - Lucas 自助出版的商业可持续性需通过其销量数据；[考据完成：2026-07-30 三次联网核查——(1) FreeBSD Mastery 系列精确销量数据三次复查未得，Lucas 未公开披露销量，其著作 `Cash Flow For Creators`（2020）讨论自助出版财务模型但未给出 FreeBSD Mastery 系列具体销量；(2) 商业可持续性间接证据——Lucas 自 2014
 - man pages 与 info 系统的优劣需从工程哲学角度分析
-- 翻译项目的可持续性问题需分析；[考据完成：2026-07-30 三次联网核查——(1) 中文 Handbook 翻译可持续性问题核心在于翻译滞后——官方中文 Handbook 前言明确标注 "This translation may be out of date"，反映翻译进度长期滞后于英文原版；(2) 翻译平台从 CVS（doc/zh_CN.GB2312/）〔待核：原文截断，后文待回源〕
+- 翻译项目的可持续性问题需分析；[考据完成：2026-07-30 三次联网核查——(1) 中文 Handbook 翻译可持续性问题核心在于翻译滞后——官方中文 Handbook 前言明确标注 “This translation may be out of date”，反映翻译进度长期滞后于英文原版；(2) 翻译平台从 CVS（doc/zh_CN.GB2312/）〔待核：原文截断，后文待回源〕
 - 考据过程留痕——【查证来源】项目统摄史观 据原文第 14 章 14.2 节 “动手者创造历史” 经一手核验——原文 “真正推动 BSD 的是‘Get your hands dirty’（动手去做）的人，而非旁观者……技术的发展使曾经需要数年完成的工作如今数日可成，但问题始终在于是否有人去做。AI 的确给了大家参与的机会与能力，但 AI 自己不会动，无论什么时候街道总是需要人去扫”；〔待核：原文截断，后文待回源〕
 
 ## 文献

@@ -45,7 +45,7 @@ volume: 第14卷-商业生态与企业案例
 
 ## 文献
 
-- Apple Darwin 源码；Sirkin 2005 "Mac OS X Internals" ［A］
+- Apple Darwin 源码；Sirkin 2005 “Mac OS X Internals” ［A］
 
 ## 276.1.2 Apple 回馈不足的量化与社区反应
 
@@ -198,7 +198,7 @@ volume: 第14卷-商业生态与企业案例
 
 **辨析**：
 
-- 转录将 David Gwynne 记作 David Gwynn 或 David Gwendt，标题 Two's interview 疑为 Gwynne's interview 的转写偏差，人名以 OpenBSD 官方为准。　[存疑脚注] 人名与标题存在语音转写偏差，须以 OpenBSD 官方资料核验（BSD Now EP623，[1068.26-1075.34]，L4）
+- 转录将 David Gwynne 记作 David Gwynn 或 David Gwendt，标题 Two‘s interview 疑为 Gwynne’s interview 的转写偏差，人名以 OpenBSD 官方为准。　[存疑脚注] 人名与标题存在语音转写偏差，须以 OpenBSD 官方资料核验（BSD Now EP623，[1068.26-1075.34]，L4）
 - sec(4) 相关表述中 IPsec 接口在转录混用 sec 与 sec4，具体版本与接口名须以 OpenBSD 手册页核验。　[考据脚注] 接口名称存在转写混用，须以 sec(4) 手册页为准（BSD Now EP623，[1971.80-2235.62]，L4）
 - 当事人对 Linux 与 BSD 用户态差异的批评：这些差异多数无人能说明为何存在或是否重要，却每一个都构成迁移路障——wc 输出带前导空格而 GNU 版没有、make 与 GNU make 不兼容常使 Node 原生模块编译爆掉、GNU 工具新增旗标抢占 BSD 同字母旗标（sort 例）、cp -R 尾部斜杠语义差异曾使其从 Linux 转到 Mac 时脚本大面积失效。建议提供 GNU 工具优先的安装路径或易装的 Linux 用户态层以降低新用户门槛；bash 默认 shell 因 ports 不得触碰 base 的规则而受阻，与 illumos 社区拒绝适应导致采用度落后相对照；一切为平滑过渡做的投入都将换来更大的社区。（BSD Now EP58，[1617.26-2031.17]，L1）
 - 社区文化比较的当事人评价：BSD 邮件列表上的讨论相较 Linux 界更像严肃技术专业人士之间的理性辩论；主持人引述某调查显示 BSD 开发者平均年龄比 Linux 开发者大十岁，并认为这与讨论形态相关。George 称其习惯的 illumos 世界信息更难寻，FreeBSD 的文档与 Google 可寻性远优于 illumos 文档，“能用 Google 解决问题在这个年代至关重要”。（BSD Now EP58，[2032.53-2160.41]，L1）

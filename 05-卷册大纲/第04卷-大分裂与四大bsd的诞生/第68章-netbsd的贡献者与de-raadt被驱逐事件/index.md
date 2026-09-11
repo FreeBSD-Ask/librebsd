@@ -54,7 +54,7 @@ volume: 第04卷-大分裂与四大bsd的诞生
 - NetBSD CVS 历史全量；补丁提交记录；邮件列表历年贡献者统计 ［A］
 - NetBSD Foundation Annual Reports 2010-2015；Wasabi 工程资产主线合并记录［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
 - Wasabi Systems 公司公告；NetBSD Foundation Annual Report 2000［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
-- Michaelson"On Wasabi"访谈；Wasabi 产品介绍 ［B］
+- Michaelson“On Wasabi”访谈；Wasabi 产品介绍 ［B］
 - BSD vs GPL 商业化对比研究；Wasabi 战略文档摘要［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
 - Wasabi Certified BSD 产品介绍；Wasabi 产品文档［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
 - Wasabi 雇佣公告；NetBSD Foundation 利益冲突声明；Mewburn 个人主页［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］

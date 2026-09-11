@@ -35,7 +35,7 @@ volume: 第11卷-dragonflybsd的历史
 
 ## 辨析
 
-- release notes 与 commit log 偶有不一致——bsd_commits.db 显示 v5.2.0 的 tagger_date（2018-04-08）与 target_commit_date（2018-04-03）相差 5 天，反映 tag 创建与最后 commit 提交的时间差；AMD64 与 NVMe 改进的具体 commit 须以 commit_files 表核验 [考据完
+- release notes 与 commit log 偶有不一致——bsd_commits.duckdb 显示 v5.2.0 的 tagger_date（2018-04-08）与 target_commit_date（2018-04-03）相差 5 天，反映 tag 创建与最后 commit 提交的时间差；AMD64 与 NVMe 改进的具体 commit 须以 commit_files 表核验 [考据完
 - commit log 可能不完整反映改进全貌——dragonfly.duckdb 关键词搜索仅基于 message_subject，部分 HAMMER 2 commit 可能未在 message_subject 中提及‘HAMMER2’；Dillon 2019 年 HAMMER 2 commit 占比须以 commit_files 表核验 ［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］. dragonflybsd.org/release/；kernel@ 邮件列表档案 ［A］
 
 <!-- DB_REF:dragonfly.duckdb -->

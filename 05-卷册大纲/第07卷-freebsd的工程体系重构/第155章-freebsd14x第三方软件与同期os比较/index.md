@@ -31,7 +31,7 @@ volume: 第07卷-freebsd的工程体系重构
 
 - 再是默认 MTA，DMA 成为默认；DMA 的功能范围远小于 sendmail——DMA 不支持监听外部 SMTP 连接、不支持邮件队列管理、不支持反垃圾邮件，仅适用于 “本地投递 + 外部 smarthost 转发” 场景，需要完整邮件服务器的用户必须从 ports 自行安装 MTA；
 - 关于 “FreeBSD 与 Linux 性能” 的比较需谨慎——不同工作负载下结果差异很大：网络转发（特别是小包处理）场景 FreeBSD 往往有优势、ZFS 文件服务器场景 FreeBSD/ZFS 是业界标杆、Web 服务器场景两者接近、AI/ML/GPU 计算场景 Linux 占据绝对优势（框架与驱动支持完善）；性能比较永远依赖具体工作负载、硬件配置与调优参数，不存在通用的 “X 比 Y 快”
-- 80 个 SA 的“数量”本身不是安全态势好坏的直接指标——SA 数量多既可解读为“代码质量差、漏洞频发”，也可解读为“安全审计积极、漏洞主动清理”；14.x 周期 SA 数量增长同时伴随 base 系统架构现代化（Capsicum、bhyve、Jail、ktls 等），表明这是审计覆盖面扩大而非代码质量下降；2026 年 SA 数量激增与 SA-26 系列中"audit"主题（SA-26:45.
+- 80 个 SA 的“数量”本身不是安全态势好坏的直接指标——SA 数量多既可解读为“代码质量差、漏洞频发”，也可解读为“安全审计积极、漏洞主动清理”；14.x 周期 SA 数量增长同时伴随 base 系统架构现代化（Capsicum、bhyve、Jail、ktls 等），表明这是审计覆盖面扩大而非代码质量下降；2026 年 SA 数量激增与 SA-26 系列中“audit”主题（SA-26:45.
 - Qualys 同时指出实际利用难度极高——需要绕过 ASLR 并在极窄的时间窗口内赢得竞争，但理论上可实施；一个月后 **FreeBSD-SA-24:08.openssh**（**2024 年 8 月 7 日**）修复 CVE-2024-7589——这是 regreSSHion 修复后发现的“同一问题的另一实例”，由 FreeBSD 特有的 blacklistd 集成引入，是 base 系统特定的
 - **需精确说明 CVE 来源**：14.x 周期 OpenSSL CVE 中，部分是 OpenSSL 上游漏洞（如 CVE-2024-6119 证书名称检查拒绝服务），FreeBSD 通过 vendor import 同步修复；部分是 OpenSSL 3.0 引入的新漏洞（如 CVE-2024-5535 SSL_select_next_proto 空指针解引用，是 OpenSSL 3.0 重构 A
 
@@ -52,7 +52,7 @@ volume: 第07卷-freebsd的工程体系重构
 - FreeBSD Security Team. FreeBSD-SA-24:13.openssl [EB/OL]. (2024-09-04)[2026-07-22]. <https://security.freebsd.org/advisories/FreeBSD-SA-24:13.openssl.asc>; OpenSSL Project. OpenSSL 3.0 Release Notes [EB/OL]. [2026-07-22]. <https://www.openssl.org/source/>; FreeBSD Project. freebsd.duckdb — freebsd-src Op
 - MITRE. CVE-2024-3094: Malicious Code in xz-utils 5.6.0/5.6.1 [EB/OL]. (2024-03-29)[2026-07-22]. <https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-3094>; Freund A. oss-security: backdoor in upstream xz/liblzma leading to ssh server compromise [EB/OL]. (2024-03-29)[2026-07-22]. <<https://www.ope>
 - FreeBSD Security Team. FreeBSD Security Information — Disclosure Policy [EB/OL]. [2026-07-22]. <https://www.freebsd.org/security/>; FreeBSD Security Team. FreeBSD-SA-26:28.capsicum [EB/OL]. (2026-06-09)[2026-07-22]. <https://security.freebsd.org/advisories/FreeBSD-SA-26:28.capsicum.asc>; FreeBSD Sec
-- FreeBSD Project. freebsd.duckdb freebsd-src 仓库 commit 数据库 [DB/OL]. 2026-07-27. `c:\Users\ykla\Documents\hibsd\03-原始史料库\01-代码仓库史料\01-数据库本体\freebsd.duckdb`; FreeBSD Security Team. FreeBSD Security Advisories [EB/OL]. (2024-2026)[2026-07-27]. <https://www.freebsd.org/security/advisories/>; FreeBSD Security Tea
+- FreeBSD Project. freebsd.duckdb freebsd-src 仓库 commit 数据库 [DB/OL]. 2026-07-27. **03-原始史料库/01-代码仓库史料/01-数据库本体/freebsd.duckdb**; FreeBSD Security Team. FreeBSD Security Advisories [EB/OL]. (2024-2026)[2026-07-27]. <https://www.freebsd.org/security/advisories/>; FreeBSD Security Tea
 
 ## 自反性声明
 

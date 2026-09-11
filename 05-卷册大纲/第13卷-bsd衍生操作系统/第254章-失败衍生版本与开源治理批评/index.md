@@ -37,7 +37,7 @@ volume: 第13卷-bsd衍生操作系统
 
 ## 文献
 
-- Distrowatch BSD 衍生发行版页面；PC-BSD/TrueOS 公告档案；DesktopBSD 互联网档案馆存档；FreeSBIE SourceForge 档案；GhostBSD 公告；MidnightBSD 项目档案；DragonFly BSD announce 邮件列表；bsd_commits.db 查询 L7.1.1.trueos-src（trueos-src 仓库 merge commit 比例时间序列，2006-2020）；原材料/研究/bsd 仓库分析/数据分析/衍生项目与跨项目对比分析.md §L7.1 ［A］## 253.1.2 桌面 BSD 失败的工程原因：硬件兼容性与图形栈滞后
+- Distrowatch BSD 衍生发行版页面；PC-BSD/TrueOS 公告档案；DesktopBSD 互联网档案馆存档；FreeSBIE SourceForge 档案；GhostBSD 公告；MidnightBSD 项目档案；DragonFly BSD announce 邮件列表；bsd_commits.duckdb 查询 L7.1.1.trueos-src（trueos-src 仓库 merge commit 比例时间序列，2006-2020）；原材料/研究/bsd 仓库分析/数据分析/衍生项目与跨项目对比分析.md §L7.1 ［A］## 253.1.2 桌面 BSD 失败的工程原因：硬件兼容性与图形栈滞后
 - FreeBSD hardware notes；FreeBSD Foundation 年报；phoronix 报道；Wayland on BSD 邮件；OpenBSD xenocara 档案 ［B］## 253.1.3 桌面 BSD 失败的商业原因：iXsystems 商业模式的桌面不可持续性
 - iXsystems 2017 公告；PC-BSD/TrueOS 公告档案；DesktopBSD 项目档案；MidnightBSD 项目档案；GhostBSD 捐赠记录［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］## 253.1.4 桌面 BSD 失败的社区原因：开发者基数与代际断层
 - FreeBSD Foundation 年报；Linux Foundation 年报；PC-BSD/GhostBSD commit 历史；编程之夏 BSD 项目记录 ［A］## 253.1.5 仍在继续的挣扎：GhostBSD、MidnightBSD、DragonFly BSD 的 2026 年现状

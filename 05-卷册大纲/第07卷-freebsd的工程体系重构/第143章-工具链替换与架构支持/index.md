@@ -54,7 +54,7 @@ volume: 第07卷-freebsd的工程体系重构
     FreeBSD 社区论文与演讲 [179]，[179] Davi
 - Linux Kernel Project. COPYING: Linux Kernel Licensing (GPLv2 only)[Z]. kernel.org；Linux Kernel Documentation. Building Linux with Clang/LLVM [EB/OL]. kernel.org/doc；Free Software Foundation. GCC Runtime Library Exception [Z]. gcc.gnu.org.［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］. 2008-2011 年间系列文章。〔禁引来源·仅作线索·须与一手史料交叉验证·不得直接采信〕［C］
     FreeBSD 社区论文与演讲 [179]，[179] David Carlier. LLVM and the state of sanitizers on BSD [C]//AsiaBSDCon 2019. [S.l.]: [s.n.], 2019. 获取路径：<<https://papers.freebsd.org/2019/asiabsdcon/carlier-llvm_and_the_state_of_sanitizers_on_b>
-- Torvalds L. LKML postings on BSD license [Z]. lkml.org, various dates；Williams S. Free as in Freedom: Richard Stallman's Crusade for Free Software [M]. Sebastopol: O'Reilly, 2002. ISBN: 0-596-00287-4.［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
+- Torvalds L. LKML postings on BSD license [Z]. lkml.org, various dates；Williams S. Free as in Freedom: Richard Stallman‘s Crusade for Free Software [M]. Sebastopol: O’Reilly, 2002. ISBN: 0-596-00287-4.［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
 
 ## 142.7.4 史料辨析
 

@@ -25,11 +25,11 @@ volume: 第12卷-macos的bsd遗产
 
 ## 辨析
 
-- [2026-08-15 双库核查] APSL 2.0 第 2 条（修改通报义务）经参考文献库 entry08182 apsl 全文印证；Darwin 用户态大量源自 FreeBSD 经参考文献库 "Mac OS X Internals"（Amit Singh, 2006）与邮件列表库 2003-07-18 Darwin→FreeBSD 代码导入邮件印证。〔待核：原文截断，后文待回源〕
+- [2026-08-15 双库核查] APSL 2.0 第 2 条（修改通报义务）经参考文献库 entry08182 apsl 全文印证；Darwin 用户态大量源自 FreeBSD 经参考文献库 “Mac OS X Internals”（Amit Singh, 2006）与邮件列表库 2003-07-18 Darwin→FreeBSD 代码导入邮件印证。〔待核：原文截断，后文待回源〕
 - “开发者偏好 macOS”的归因存在三层混淆——第一层为 BSD/POSIX 环境（Unix 原生性），第二层为硬件设计（Retina 屏幕、触控板），第三层为工具链生态（Xcode、Homebrew）。Stack Overflow 2023 调查未细分归因，仅记录操作系统选择。根据 GitHub Octoverse 2023 报告，macOS 上 GitHub 活跃开发者占比约 31%，与 St
 - 具体贡献者人名的核实存在困难——Apple 内部工程团队的组织架构未完全公开，opensource.apple.com 的 CREDITS 文件仅记录外部贡献者而非 Apple 内部工程师。Kevin Van Vechten 的角色经 LinkedIn 公开档案（已由本人确认）与 Darwin 初始发布邮件列表存档交叉验证。Cheryl Webb 的文档贡献经 Apple Developer Co
 - WSL 是否构成对 macOS BSD 层的“替代”——存在两种判断。第一种认为 WSL 使 Windows 用户获得 Unix 环境，削弱了 macOS 的“原生 Unix”竞争优势；第二种认为 WSL 的兼容层架构与 macOS 的原生内核集成在性能与一致性上有本质差异，不构成直接替代。〔待核：原文截断，后文待回源〕
-- 贡献者高度集中——Top 1 贡献者 Apple OSS Distributions 占比 100.0%，需考量'个人主导'与'社区协作'的叙事张力
+- 贡献者高度集中——Top 1 贡献者 Apple OSS Distributions 占比 100.0%，需考量‘个人主导’与‘社区协作’的叙事张力
 
 ## 文献
 

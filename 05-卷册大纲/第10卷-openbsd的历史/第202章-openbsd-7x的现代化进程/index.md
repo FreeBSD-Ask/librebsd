@@ -31,11 +31,11 @@ volume: 第10卷-openbsd的历史
 - 邮件列表档案的完整性以 marc.info 与 mail-index.netbsd.org 存档为准——部分讨论可能在私有列表（如各项目的 Core Team 私有列表）进行，公开档案无法覆盖全部讨论；政策文档的修订历史以各项目文档仓库（CVS/Git）的 commit log 为准
 - 邮件列表档案的完整性以 marc.info 存档为准——misc@ 与 tech@ 的公开讨论有完整存档，但 Core Team 私有讨论不在公开档案中；个别权限撤销事件的具体细节以邮件列表原始帖子为准，转载或二手报道可能简化或扭曲；**【2026-07-30 committer 权限撤销案例考据·7ah 条目】**经 WebSearch 检索 "openbsd committer removed
 - 批评的具体语境以原始邮件列表帖子为准——转载至 OSNews/Slashdot/Hacker News 的报道可能简化或扭曲原始语境；de Raadt 回应的语义以 <misc@openbsd.org> 原始帖子为准，二手报道的解读可能与原文有差异
-- commit 记录的归属以 bsd_commits.db author_name 字段为准——部分 patch 由多人协作但仅 committer 一人出现在 author_name 字段，实际贡献者可能在 commit message 的 "from" 或 "ok" 行中署名；邮件列表档案的完整性以 marc.info 存档为准
+- commit 记录的归属以 bsd_commits.duckdb author_name 字段为准——部分 patch 由多人协作但仅 committer 一人出现在 author_name 字段，实际贡献者可能在 commit message 的 “from” 或 “ok” 行中署名；邮件列表档案的完整性以 marc.info 存档为准
 
 ## 文献
 
-- OpenBSD Release Notes [EB/OL]. <https://www.openbsd.org/plus.html>；OpenBSD CVS 仓库 [EB/OL]. <https://cvsweb.openbsd.org/>；man pages [EB/OL]. <https://man.openbsd.org/>；freebsd.duckdb 查询 L1.1.1 与 L1.1.2（来源：原材料/研究/bsd 仓库分析/数据分析/宏观趋势统计.md §L1.1.1、§L1.1.2）；统计分析报告：推断性统计.md Task 6 [R/OL]. 2026-07-27. 文件路径：`c:\Users\ykla\Documents\hibsd\03-原始史料库\01-代码仓库史料\01-数据库本体\统计分析\推断性统计.md`；Python 统计脚本：`script/phase2_inferential.py`. Task 6 Pettitt + BUISHAND 变点检测。执行日期：2026-07-27 ［A］
+- OpenBSD Release Notes [EB/OL]. <https://www.openbsd.org/plus.html>；OpenBSD CVS 仓库 [EB/OL]. <https://cvsweb.openbsd.org/>；man pages [EB/OL]. <https://man.openbsd.org/>；freebsd.duckdb 查询 L1.1.1 与 L1.1.2（来源：原材料/研究/bsd 仓库分析/数据分析/宏观趋势统计.md §L1.1.1、§L1.1.2）；统计分析报告：推断性统计.md Task 6 [R/OL]. 2026-07-27. 文件路径：**03-原始史料库/01-代码仓库史料/01-数据库本体/统计分析/推断性统计.md**；Python 统计脚本：`script/phase2_inferential.py`. Task 6 Pettitt + BUISHAND 变点检测。执行日期：2026-07-27 ［A］
 
 <!-- DB_REF:openbsd.duckdb -->
 > **数据库引用（openbsd.duckdb）**：本子节对应 openbsd 代码仓库。> 2020-2026 年间：115,626 次提交。> 仓库总览：491,195 次提交，3,352 位贡献者，1995-10-18 至 2026-08-25。

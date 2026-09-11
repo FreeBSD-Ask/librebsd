@@ -9,7 +9,7 @@ volume: 第05卷-freebsd的工程化奠基
 ## 要点
 
 - PF（Packet Filter）由 Daniel Hartmeier（丹尼尔·哈特迈尔） 与 OpenBSD 团队于 2001 年开发，替代因许可证争议被移除的 IPFilter；PF 采用规则集优化（skip steps）与状态保持（stateful inspection）设计，首版随 OpenBSD 3.0（2001.12）发布
-- FreeBSD 于 2004 年（5.3 RELEASE，2004.11.4，release/5.3.0 tagger_date = 2004-11-04T19:12:42Z，tagger = Ken Smith）首次将 PF 作为可选防火墙引入，由 Pyun YongHyeon、Max Laier 等完成移植；PF 导入 commit 为 2004-06-16T23:03:14Z（commit_hash = 32b30983561ed562aa495d8e124488ab94b332aa，committer = Max Laier，message_subject = "Import pf from OpenBSD 3.5 (OPENBSD_3_5_BASE)"），早于 5.3-RELEASE 约 4.5 个月，属 5-CURRENT 开发周期；移植包括内核钩子、用户态 pfctl 工具与 ALTQ 流量整形框架
+- FreeBSD 于 2004 年（5.3 RELEASE，2004.11.4，release/5.3.0 tagger_date = 2004-11-04T19:12:42Z，tagger = Ken Smith）首次将 PF 作为可选防火墙引入，由 Pyun YongHyeon、Max Laier 等完成移植；PF 导入 commit 为 2004-06-16T23:03:14Z（commit_hash = 32b30983561ed562aa495d8e124488ab94b332aa，committer = Max Laier，message_subject = “Import pf from OpenBSD 3.5 (OPENBSD_3_5_BASE)”），早于 5.3-RELEASE 约 4.5 个月，属 5-CURRENT 开发周期；移植包括内核钩子、用户态 pfctl 工具与 ALTQ 流量整形框架
 - PF 从 OpenBSD 流入 FreeBSD/NetBSD/DragonFly BSD，体现 BSD 生态的代码共享性；但各 BSD 对 PF 的维护投入不同，FreeBSD 增加了 SMP 扩展与 VNET 支持，导致功能分化
 - 移植史料疑点：(1) 移植起始时间（2003 年 编程之夏 项目 vs 2004 年 5.3 集成）；(2) 主要移植者的归属；(3) OpenBSD 团队是否参与 FreeBSD 移植
 - Linux iptables（1998，Rusty Russell 设计）采用规则链 + 目标设计，是 Linux 2.4+ 主流防火墙；nftables（2014，Patrick McHardy 主导）采用虚拟机字节码设计，替代 iptables；二者是 Linux 主流防火墙路线
@@ -19,7 +19,7 @@ volume: 第05卷-freebsd的工程化奠基
 - 总纲第 1 条——偶然性改写历史，IPFilter 许可证争议催生 PF 这一全新防火墙
   - 辨析：PF 是否完全由 Hartmeier 一人开发，需查 commit log 确认其他 OpenBSD 开发者的贡献；0 信任原则适用说明：L2.3.1.pf 查询在中观模式挖掘报告中缺失，须直接查询 netbsd.duckdb 验证 PF 引入周期；L2.4.1.Import from 查询使用 "Im
 - 总纲第 7 条——BSD 与 UNIX 谱系的连续性，PF 跨 BSD 项目流动体现谱系共享
-  - 辨析：经 bsd_commits.db commits 表验证，PF 导入 commit 为 2004-06-16T23:03:14Z（早于 5.3-RELEASE 约 4.5 个月，属 5-CURRENT 开发周期）；经 bsd_commits.db tags 表验证，5.3-RELEASE 的
+  - 辨析：经 bsd_commits.duckdb commits 表验证，PF 导入 commit 为 2004-06-16T23:03:14Z（早于 5.3-RELEASE 约 4.5 个月，属 5-CURRENT 开发周期）；经 bsd_commits.duckdb tags 表验证，5.3-RELEASE 的
 - 总纲第 9 条——简洁与复杂的辩证，iptables 重简洁、nftables 重灵活
   - 辨析：iptables/nftables 与 PF 优劣，需查基准测试
   - 文献：iptables 文档；nftables 文档［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
@@ -54,7 +54,7 @@ volume: 第05卷-freebsd的工程化奠基
 
 ## 文献
 
-- Hartmeier "OpenBSD Packet Filter"（ONLamp 2002）；**pf.conf(5)** 手册页 ［A］；freebsd.duckdb L2.3.1.pf 查询结果（中观模式挖掘报告缺失，须直接查询）[DB/OL]；freebsd.duckdb L2.4.1.Import from 查询结果（PF 导入 commit 未命中，关键词匹配局限）[DB/OL]；freebsd.duckdb L2.2.1.sys_net 查询结果（freebsd-src sys/net/ 年度 commit 量 2004-2010）[DB/OL] ［A］
+- Hartmeier “OpenBSD Packet Filter”（ONLamp 2002）；**pf.conf(5)** 手册页 ［A］；freebsd.duckdb L2.3.1.pf 查询结果（中观模式挖掘报告缺失，须直接查询）[DB/OL]；freebsd.duckdb L2.4.1.Import from 查询结果（PF 导入 commit 未命中，关键词匹配局限）[DB/OL]；freebsd.duckdb L2.2.1.sys_net 查询结果（freebsd-src sys/net/ 年度 commit 量 2004-2010）[DB/OL] ［A］
 
 ## 102.1.2 移植的工程过程
 

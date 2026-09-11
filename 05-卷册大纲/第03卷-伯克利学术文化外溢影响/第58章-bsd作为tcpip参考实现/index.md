@@ -32,18 +32,18 @@ volume: 第03卷-伯克利学术文化外溢影响
 
 ## 史观
 
-(待人工回填——详见子节文件史观/辨析字段)
+（章级史观/辨析按子节字段聚合回填——本卷 58 章；2026-09-11 整改将占位改为编排说明，完整聚合随正文阶段逐章完成。子节级映射详见各节史观字段。）
 
 ## 辨析
 
 - NFS 设计始于 1984 年，RFC 1094（1989.3）是 NFSv2 的正式标准发布，先前已有 SunOS 实现；NFS 首次集成入 BSD 的确切版本存在模糊性 [据 Lessig (1999) 一手文献印证消解^doubt-resolved-124——经 freebsd.duckdb 查询未得明确证据（查询条件：`SELECT * FROM commits WHERE message
 - Apache License 1.0（1995）与 2.0（2004）经多源确认（Apache License 1.0 借鉴 BSD 许可证，2.0 增加专利反诉条款与 Apache 品牌保护条款）；BSD 许可证版本——BSD 2-Clause（Simplified BSD License）与 BSD 3-Clause（New BSD License）为两种主要变体，均允许商业使用与闭源衍生，保
-- 批评的具体文本——freebsd-questions 邮件列表、LWN 文章与社区博客中的 BSD 互联网遗产批评（缺乏系统性学术分析）；形式主义分析方法的适用性——形式主义作为 19-20 世纪数学哲学流派（斯坦福哲学百科"Formalism in Mathematics"与"Mathematical Style"词条）〔待核：原文截断，后文待回源〕
+- 批评的具体文本——freebsd-questions 邮件列表、LWN 文章与社区博客中的 BSD 互联网遗产批评（缺乏系统性学术分析）；形式主义分析方法的适用性——形式主义作为 19-20 世纪数学哲学流派（斯坦福哲学百科“Formalism in Mathematics”与“Mathematical Style”词条）〔待核：原文截断，后文待回源〕
 
 ## 文献
 
-- RFC 1094（Sun Microsystems, 1989）NFS: Network File System Protocol Specification；RFC 1057（Sun, 1988）RPC: Remote Procedure Call Protocol Specification；RFC 1014（Sun, 1987）XDR: External Data Representation Standard；Sandberg, R., Goldberg, D., Kleiman, S., Walsh, D. & Lyon, B. (1985) "Design and Implementation of the Sun Network Filesystem" Proc. USENIX Summer Conference 1985, pp. 119-130；Stern, H. (1991) "Managing NFS and NIS" O'Reilly ISBN 0-937175-75-7 ［B］
-- Apache License 1.0/2.0 原文；BSD 许可证原文；开源许可证比较研究（如 Rosen, L. (2005) "Open Source Licensing"）［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
+- RFC 1094（Sun Microsystems, 1989）NFS: Network File System Protocol Specification；RFC 1057（Sun, 1988）RPC: Remote Procedure Call Protocol Specification；RFC 1014（Sun, 1987）XDR: External Data Representation Standard；Sandberg, R., Goldberg, D., Kleiman, S., Walsh, D. & Lyon, B. (1985) “Design and Implementation of the Sun Network Filesystem” Proc. USENIX Summer Conference 1985, pp. 119-130；Stern, H. (1991) “Managing NFS and NIS” O'Reilly ISBN 0-937175-75-7 ［B］
+- Apache License 1.0/2.0 原文；BSD 许可证原文；开源许可证比较研究（如 Rosen, L. (2005) “Open Source Licensing”）［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
 - Apache 历史； Allman 1983 ［A］
 - 互联网与 BSD 关系批评文本；市场史方法论研究；BSD 历史语境研究［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］[^doubt-resolved-124]: 据 new-york-basic-books (Lessig, 1999) 消解
 

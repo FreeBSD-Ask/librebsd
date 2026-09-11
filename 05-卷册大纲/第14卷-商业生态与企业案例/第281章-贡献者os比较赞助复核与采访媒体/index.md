@@ -60,7 +60,7 @@ volume: 第14卷-商业生态与企业案例
 ## 281.39.3 Apple Darwin 2005 年 5 月 x86 关闭：APSL 下的选择性开放
 
 - 要点：**Apple** 于 2000 年在 **Apple Public Source License**（**APSL**）1.0 下释出 **Darwi
-- IBM AIX Documentation；HP-UX Documentation；Tru64 UNIX Documentation（HP.com 存档）；SGI 破产重组法院文件（2006）；Unix 史学综述文章（如 Peter Salus"The Daemon, the GNU & the Penguin"） ［A］
+- IBM AIX Documentation；HP-UX Documentation；Tru64 UNIX Documentation（HP.com 存档）；SGI 破产重组法院文件（2006）；Unix 史学综述文章（如 Peter Salus“The Daemon, the GNU & the Penguin”） ［A］
 - **Red Hat** 年报；**LWN** 内核统计 ［B］
     FreeBSD 社区论文与演讲 [124]，[124] Matt Ahrens. Flexible Disk Use in OpenZFS [C]//BSDCan 2018. [S.l.]: [s.n.], 2018. 获取路径：<https://papers.freebsd.org/2018/bsdcan/ahrens-flexible_disk_use_in_openzfs/> [访问日期 2026-07-26].
 
@@ -80,7 +80,7 @@ volume: 第14卷-商业生态与企业案例
 ## 281.41.2 利益分配法律化与 **BSDL**/`committer` 权限/企业赞助的形式主义（总纲第 13 条）
 
 - 要点：从项目史观总纲第 13 条 “法律与道德是利益分配” 切入，**FreeB
-- 项目史观总纲第 21 条（见 据原文第 25 章）；**BSD 2-Clause** 原文；**Linux** 内核 **COPYING** 文件（torvalds/linux 仓库）；**Committer's Big List of Rules**；**FreeBSD Committer's Guide**；**FreeBSD Foundation** **IRS** **990** 表；openbsd.duckdb L3.2.1/L3.2.2 查询报告；**Berlin** I. "Two Concepts of Liberty"（1958）；**TrueNAS** 2025 迁移公告；上述 1
+- 项目史观总纲第 21 条（见 据原文第 25 章）；**BSD 2-Clause** 原文；**Linux** 内核 **COPYING** 文件（torvalds/linux 仓库）；**Committer‘s Big List of Rules**；**FreeBSD Committer’s Guide**；**FreeBSD Foundation** **IRS** **990** 表；openbsd.duckdb L3.2.1/L3.2.2 查询报告；**Berlin** I. “Two Concepts of Liberty”（1958）；**TrueNAS** 2025 迁移公告；上述 1
 
 ## 自反性声明
 

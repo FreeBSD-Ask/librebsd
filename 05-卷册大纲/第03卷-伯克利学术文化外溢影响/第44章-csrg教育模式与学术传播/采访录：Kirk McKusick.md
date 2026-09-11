@@ -19,7 +19,7 @@
 
 **字段 3 考据脚注**
 
-本则采访的互联网档案馆归档页经联网抓取核实。麦库西克关于 CSRG 教育模式的陈述，经 Salus 1994 年《A Quarter Century of UNIX》中关于 CSRG 文化的章节与 McKusick 1999 年 "Twenty Years of Berkeley Unix" 一文交叉验证。自利偏差审查：麦库西克作为 CSRG 长期成员与 BSD 商业培训从业者，对 CSRG 教育模式的叙述可能存在职业立场偏向，正文引用时须对照 Mike Karels、Sam Leffler 等同侪的视角。完整考据过程见 [20260724_kirk-mckusick-bsdtalk-018-csrg-education.md](../../../原材料/研究/考据记录/20260724_kirk-mckusick-bsdtalk-018-csrg-education.md)。
+本则采访的互联网档案馆归档页经联网抓取核实。麦库西克关于 CSRG 教育模式的陈述，经 Salus 1994 年《A Quarter Century of UNIX》中关于 CSRG 文化的章节与 McKusick 1999 年 “Twenty Years of Berkeley Unix” 一文交叉验证。自利偏差审查：麦库西克作为 CSRG 长期成员与 BSD 商业培训从业者，对 CSRG 教育模式的叙述可能存在职业立场偏向，正文引用时须对照 Mike Karels、Sam Leffler 等同侪的视角。完整考据过程见 [20260724_kirk-mckusick-bsdtalk-018-csrg-education.md](../../../原材料/研究/考据记录/20260724_kirk-mckusick-bsdtalk-018-csrg-education.md)。
 
 **字段 4 与本章节内容的关联**
 

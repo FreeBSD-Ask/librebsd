@@ -10,7 +10,7 @@ volume: 第11卷-dragonflybsd的历史
 
 - DragonFly 阵营对社区规模萎缩批评的回应集中于 niche 价值与持续维护两点——其一，niche 价值：DragonFly 的 LWKT 消息传递架构、HAMMER/HAMMER2 写时复制文件系统、vkernel 用户态虚拟化三大创新在 BSD 阵营中具有不可替代性——dragonfly.duckdb 显示 sys/kern/lwkt_thread.c（commit `8ad65e0803
 - **辩证合图**——DragonFly 哲学文化与社区的辩证综合：Dillon 个人主导模式既是 DragonFly 决策效率的保障（反批评层）也具有继承风险与法律实体缺位（批评层与再批评层），二者并非非此即彼；Dillon 个人主导模式在 Dillon 主导下具有历史合理性（小团队 + 激进创新哲学 + 23 年持续发布），但这一合理性以继承风险（无公开继任机制）〔待核：原文截断，后文待回源〕
-- 从项目史观总纲第 19 条“解释学循环是历史认识的根本条件”与“权力与知识在历史书写中共谋”审视，DragonFly 哲学文化叙事的权力知识共谋体现在三个层次——其一，命名权的权力行使：Dillon 在 2003 年 fork 时选择"DragonFly BSD"作为项目名称（fork 公告原标题"Annoucning DragonFly BSD!"，原拼写错误保留），这一命名本身是权力行使——以
+- 从项目史观总纲第 19 条“解释学循环是历史认识的根本条件”与“权力与知识在历史书写中共谋”审视，DragonFly 哲学文化叙事的权力知识共谋体现在三个层次——其一，命名权的权力行使：Dillon 在 2003 年 fork 时选择“DragonFly BSD”作为项目名称（fork 公告原标题“Annoucning DragonFly BSD!”，原拼写错误保留），这一命名本身是权力行使——以
 
 ## 史料
 

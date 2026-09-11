@@ -12,7 +12,7 @@ volume: 第16卷-开源运动与合规治理
 - 自由软件基金会（FSF）于 1985 年 10 月 4 日成立，由 Stallman 创立，注册为 501(c)(3) 非营利组织；FSF 早期通过销售 GNU 软件磁带筹集资金；组织架构包括董事会、执行董事、雇员开发者；FSF 是 GPL 许可证的版权持有者
 - GNU 项目与 BSD 的早期交集：(1) GNU 工具链（gcc、gdb、make、bash）长期与 BSD 系统协同；(2) FreeBSD 用户空间大量使用 GNU 工具；(3) 1990 年代起 GNU 与 BSD 在许可证哲学上分歧加深；(4) GNU C Library 与 BSD libc 的长期竞争
 - GPL 与 BSDL 两种自由观的张力：(1) GPL 强调 “用户自由” 通过 copyleft 强制回馈；(2) BSDL 强调 “开发者自由” 允许任意使用；(3) Stallman 批评 BSDL “允许专有化” 为缺陷；(4) BSD 社区认为 BSDL 才是真正的自由，因不强制任何行为；GPL 的强制执行在 2008 年 FSF v. Cisco 案中有具体体现——FSF 起诉 Cisco 的 Linksys 产品违反 GPL（含 GCC、binutils、GNU C Library 等代码），案件约 4.5 个月快速和解（2008.12.11 起诉，2009.4.22 终结），Cisco 被要求任命 free software compliance officer 并建立合规流程，BSD 许可证因不强制回馈而无类似执行案例
-- GNU/FSF 阵营对 BSD 在 GNU 生态中角色的批评集中在三个维度。(1) 许可证维度：Stallman 在 GNU Manifesto（1985，**gnu.org/gnu/manifesto.en.html** 确认，2026-07-24 联网核查）中明确提出 "proprietary modifications will not be allowed"（不允许专有化修改），此即 copyleft 原则的最早表述，BSD 许可证因允许专有化修改而被 FSF 视为缺陷；FSF 官方页面 "What is Copyleft?"（**gnu.org/licenses/copyleft.en.html**）明确表述 "the GPL gives users freedom to distribute and modify free software, and to charge for it, while ensuring that all modified versions remain free"，BSD 许可证不保障修改版本保持自由，故被 FSF 划入 “非 copyleft” 许可证范畴。(2) 协作维度：GNU 项目长期为 BSD 系统提供工具链（GCC 编译器、GDB 调试器、Bash shell、groff 排版系统、GNU coreutils），但 BSD 社区未对等回馈 GNU 工程——FreeBSD 用户空间长期依赖 GNU 工具链直至 2014 年 FreeBSD 10.0 以 Clang 替换 GCC（**freebsd.org/releases/10.0R/announce/** 确认，2026-07-24 联网核查，原文 "GCC is no longer installed by default on architectures where clang(1) is the default compiler"）与 2021 年 FreeBSD 13.0 移除 GNU grep（**freebsd.org/releases/13.0R/relnotes/** 确认），此长期依赖被 FSF 视为 BSD 对 GNU 工程的实质性受惠。(3) 哲学维度：FSF 认为 BSD 的 “消极自由” 哲学（不强制回馈、不强制开源）削弱了自由软件运动的道德立场——Stallman 在 GNU "Why Open Source misses the point of Free Software"（**gnu.org/philosophy/open-source-misses-the-point.html**）中明确表述 "the values of open source are not the values of free software"，BSD 社区因接受 “开放” 而非 “自由” 话语而被 FSF 视为运动中的妥协派
+- GNU/FSF 阵营对 BSD 在 GNU 生态中角色的批评集中在三个维度。(1) 许可证维度：Stallman 在 GNU Manifesto（1985，**gnu.org/gnu/manifesto.en.html** 确认，2026-07-24 联网核查）中明确提出 “proprietary modifications will not be allowed”（不允许专有化修改），此即 copyleft 原则的最早表述，BSD 许可证因允许专有化修改而被 FSF 视为缺陷；FSF 官方页面 “What is Copyleft?”（**gnu.org/licenses/copyleft.en.html**）明确表述 "the GPL gives users freedom to distribute and modify free software, and to charge for it, while ensuring that all modified versions remain free"，BSD 许可证不保障修改版本保持自由，故被 FSF 划入 “非 copyleft” 许可证范畴。(2) 协作维度：GNU 项目长期为 BSD 系统提供工具链（GCC 编译器、GDB 调试器、Bash shell、groff 排版系统、GNU coreutils），但 BSD 社区未对等回馈 GNU 工程——FreeBSD 用户空间长期依赖 GNU 工具链直至 2014 年 FreeBSD 10.0 以 Clang 替换 GCC（**freebsd.org/releases/10.0R/announce/** 确认，2026-07-24 联网核查，原文 "GCC is no longer installed by default on architectures where clang(1) is the default compiler"）与 2021 年 FreeBSD 13.0 移除 GNU grep（**freebsd.org/releases/13.0R/relnotes/** 确认），此长期依赖被 FSF 视为 BSD 对 GNU 工程的实质性受惠。(3) 哲学维度：FSF 认为 BSD 的 “消极自由” 哲学（不强制回馈、不强制开源）削弱了自由软件运动的道德立场——Stallman 在 GNU “Why Open Source misses the point of Free Software”（**gnu.org/philosophy/open-source-misses-the-point.html**）中明确表述 "the values of open source are not the values of free software"，BSD 社区因接受 “开放” 而非 “自由” 话语而被 FSF 视为运动中的妥协派
 
 ## 史观
 
@@ -25,11 +25,11 @@ volume: 第16卷-开源运动与合规治理
 ##
 
 - 总纲第 4 条——0 信任原则
-  - 辨析：两种自由观无对错，需独立判断；是否实际影响技术演进；freebsd.duckdb freebsd-src 仓库的 license 主题 commit 显示 BSD 社区不仅在哲学上反对 GPL，更在工程实践上持续清理 GPL 代码——"GPL infected" 措辞与 "reduce whining" 措辞反映 BSD 社区对 GPL 的明确态度；FreeB
+  - 辨析：两种自由观无对错，需独立判断；是否实际影响技术演进；freebsd.duckdb freebsd-src 仓库的 license 主题 commit 显示 BSD 社区不仅在哲学上反对 GPL，更在工程实践上持续清理 GPL 代码——“GPL infected” 措辞与 “reduce whining” 措辞反映 BSD 社区对 GPL 的明确态度；FreeB
 - 总纲第 13 条——法律与道德是利益分配；Stallman 对 BSD 许可证的批评表面为道德判断（“专有化是缺陷”），实质为利益分配之争——copyleft 通过法律强制保障修改版本回馈社区，BSD 许可证不强制回馈即放弃此利益再分配工具
   - 辨析：考据过程留痕——【查证来源】GNU Manifesto、What is Copyleft?、Why Open Source misses the
 - 总纲第 1 条——偶然性改写历史，Peterson 的命名偶然改变开源运动话语
-  - 辨析：【双库核查 2026-08-15】邮件列表库 freebsd 1997-1999 年查询 'open source' 命中 5 条，参考文献库 'open source' 命中 5 条（simsong 1994、Brooks 1987、Exokernel 1995）——双库间接验证 1998 年前后 'o
+  - 辨析：【双库核查 2026-08-15】邮件列表库 freebsd 1997-1999 年查询 ‘open source’ 命中 5 条，参考文献库 ‘open source’ 命中 5 条（simsong 1994、Brooks 1987、Exokernel 1995）——双库间接验证 1998 年前后 'o
 
 ## 辨析
 
@@ -42,13 +42,13 @@ volume: 第16卷-开源运动与合规治理
 ## 300.1.3 GNU 项目与 BSD 的早期交集与分歧
 
 - 要点：GNU 项目
-- 两种自由观无对错，需独立判断；是否实际影响技术演进；freebsd.duckdb freebsd-src 仓库的 license 主题 commit 显示 BSD 社区不仅在哲学上反对 GPL，更在工程实践上持续清理 GPL 代码——"GPL infected" 措辞与 "reduce whining" 措辞反映 BSD 社区对 GPL 的明确态度；〔待核：原文截断，后文待回源〕
+- 两种自由观无对错，需独立判断；是否实际影响技术演进；freebsd.duckdb freebsd-src 仓库的 license 主题 commit 显示 BSD 社区不仅在哲学上反对 GPL，更在工程实践上持续清理 GPL 代码——“GPL infected” 措辞与 “reduce whining” 措辞反映 BSD 社区对 GPL 的明确态度；〔待核：原文截断，后文待回源〕
 - 考据过程留痕——【查证来源】GNU Manifesto、What is Copyleft?、Why Open Source misses the point 三份文献均经 **gnu.org** 官方页面一手核验（2026-07-24 联网核查），原文引述准确；FreeBSD 10.0-RELEASE Announcement 经 **freebsd.org** 官方页面一手核验。〔待核：原文截断，后文待回源〕
-- 【双库核查 2026-08-15】邮件列表库 freebsd 1997-1999 年查询 'open source' 命中 5 条，参考文献库 'open source' 命中 5 条（simsong 1994、Brooks 1987、Exokernel 1995）——双库间接验证 1998 年前后 'open source' 术语在 BSD 社区的讨论；Peterson 1998-02-03 精
+- 【双库核查 2026-08-15】邮件列表库 freebsd 1997-1999 年查询 ‘open source’ 命中 5 条，参考文献库 ‘open source’ 命中 5 条（simsong 1994、Brooks 1987、Exokernel 1995）——双库间接验证 1998 年前后 ‘open source’ 术语在 BSD 社区的讨论；Peterson 1998-02-03 精
 
 ## 文献
 
-- Stallman "GNU Manifesto"；Williams《Free as in Freedom》［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
+- Stallman “GNU Manifesto”；Williams《Free as in Freedom》［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
 
 ## 300.1.2 FSF 1985 年成立与组织架构
 
@@ -61,7 +61,7 @@ volume: 第16卷-开源运动与合规治理
 - 史料：GNU
 - Stallman 论 BSD；McKusick 论许可证；freebsd.duckdb commits 表 freebsd-src Robert Watson commit `bf139e9706ee`（2002-11-04T18:11:17Z，"License: update, remove clause three of BSD license per approval of NAI."）；freebsd.duckdb commits 表 freebsd-src Poul-Henning Kamp commit `3b1746df8b34`（2003-01-18T10:08:27Z，"Sa
 - Stallman, R. The GNU Manifesto [EB/OL]. (1985). <https://www.gnu.org/gnu/manifesto.en.html> [2026-07-24]；Free Software Foundation. What is Copyleft? [EB/OL]. <https://www.gnu.org/licenses/copyleft.en.html> [2026-07-24]；Stallman, R. Why Open Source misses the point of Free Software [EB/OL]. <https://
-- Peterson "Open Source: Where It Started"（2006）；Peterson 2018 年 20 周年回顾文［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
+- Peterson “Open Source: Where It Started”（2006）；Peterson 2018 年 20 周年回顾文［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
 
 ## 300.2.2 Netscape 开源 Navigator 的催化作用
 

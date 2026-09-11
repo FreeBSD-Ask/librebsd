@@ -55,7 +55,7 @@ volume: 第14卷-商业生态与企业案例
 
 ## 273.11.2 与 OpenBSD 社区的疫情应对对照
 
-- 要点：OpenBSD 在 **COVID-19** 期间因 hackathon 转为线上（"OpenBSD t2d2" 等）而调整协作节奏，**Theo de
+- 要点：OpenBSD 在 **COVID-19** 期间因 hackathon 转为线上（“OpenBSD t2d2” 等）而调整协作节奏，**Theo de
 - H1N1 期间会议调整的实际尺度缺乏系统记录
   - 文献：BSDCan 公告；EuroBSDCon 程序；WHO 宣告［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
 
@@ -87,7 +87,7 @@ volume: 第14卷-商业生态与企业案例
 
 ## 273.11.2 与 OpenBSD 社区的疫情应对对照
 
-- 要点：OpenBSD 在 **COVID-19** 期间因 hackathon 转为线上（"OpenBSD t2d2" 等）而调整协作节奏，**Theo de Raadt（西奥·德·若特）** 强调线下 hackathon 对 OpenBSD 创新的不可替代性，与 FreeBSD 的远程化适应存在差异
+- 要点：OpenBSD 在 **COVID-19** 期间因 hackathon 转为线上（“OpenBSD t2d2” 等）而调整协作节奏，**Theo de Raadt（西奥·德·若特）** 强调线下 hackathon 对 OpenBSD 创新的不可替代性，与 FreeBSD 的远程化适应存在差异
 - 史料：OpenBSD hackathon 公告、Theo de Raadt 邮件列表声明、undeadly.o
 - BSDCan 公告；EuroBSDCon 程序；WHO 宣告［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
 
@@ -100,12 +100,12 @@ volume: 第14卷-商业生态与企业案例
 
 - 要点：**COVID-19** 期间 BSD 会议全面采用 `Zoom`、`Jitsi`、`OBS` 等工具，**EuroBSDCon 2020-2021** 与 **BSDCan 2020-2021** 为纯线上会议，会议录制公开化使非与会者也能观看，扩大了社区辐射
 - 史料：EuroBSDCo
-- 邮件列表；phabricator 记录；committer 声明 ［A］；bsd_commits.db L1.1.4 查询报告（宏观趋势统计.md §L1.1.4）；bsd_commits.db L7.3.1 查询报告（衍生项目与跨项目对比分析.md §L7.3.1）
+- 邮件列表；phabricator 记录；committer 声明 ［A］；bsd_commits.duckdb L1.1.4 查询报告（宏观趋势统计.md §L1.1.4）；bsd_commits.duckdb L7.3.1 查询报告（衍生项目与跨项目对比分析.md §L7.3.1）
 
 ## 273.3.4 COVID-19 史料辨析
 
 - 要点：**COVID-19** 对 BSD 社区影响的史料保存较完整（邮件列表、会议录制、社交媒体），但部分内部讨论未公开，需通过公开档案与当事人回忆
-- 邮件列表；会议录制；社交媒体档案 ［A］；openbsd.duckdb L3.7.1 查询报告（深层信息挖掘.md §L3.7.1）；资料数据库.db C-41/C-42/C-43 查询报告（文献计量学分析.md Task 22）
+- 邮件列表；会议录制；社交媒体档案 ［A］；openbsd.duckdb L3.7.1 查询报告（深层信息挖掘.md §L3.7.1）；资料数据库.duckdb C-41/C-42/C-43 查询报告（文献计量学分析.md Task 22）
 - phabricator 记录；IRC 日志；committer 访谈 ［A］
 
 ## 273.4.2 线上会议的常态化与录制归档
