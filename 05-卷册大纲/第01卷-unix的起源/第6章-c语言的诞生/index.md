@@ -16,9 +16,9 @@ volume: 第01卷-unix的起源
 
 ## 史料
 
-- [DB:references_fulltext:chapter_matches:chmatch_4167] 卷“第01卷-unix的起源”第 6 章，匹配置信度 1.0，原因：5 个参考卡 PDF（67MB）；工具史一手史料
-- [DB:references_fulltext:chapter_matches:chmatch_4170] 卷“第01卷-unix的起源”第 6 章，匹配置信度 1.0，原因：PWB 4.0 从未对外授权（Clem Cole 注）；Matt Gilmore/Arnold Robbins 捐赠扫描
-- [DB:references_fulltext:chapter_matches:chmatch_4223] 卷“第01卷-unix的起源”第 6 章，匹配置信度 1.0，原因：9 篇论文；unix_cacm74 为 UNIX 首篇公开发表论文
+- [DB:references_fulltext:chapter_matches:chmatch_4167] 卷“第01卷-unix的起源”第 6 章，匹配置信度 6.0，原因：5 个参考卡 PDF（67MB）；工具史一手史料
+- [DB:references_fulltext:chapter_matches:chmatch_4170] 卷“第01卷-unix的起源”第 6 章，匹配置信度 6.0，原因：PWB 4.0 从未对外授权（Clem Cole 注）；Matt Gilmore/Arnold Robbins 捐赠扫描
+- [DB:references_fulltext:chapter_matches:chmatch_4223] 卷“第01卷-unix的起源”第 6 章，匹配置信度 6.0，原因：9 篇论文；unix_cacm74 为 UNIX 首篇公开发表论文
 - [DB:references_fulltext:chapter_matches:chmatch_1527] 卷“第01卷-unix的起源”第 6 章，匹配置信度 0.9，原因：关键词搜索下载文献，标题含章节主题
 - [DB:references_fulltext:chapter_matches:chmatch_1149] 卷“第01卷-unix的起源”第 6 章，匹配置信度 0.6，原因：无匹配
 - [DB:references_fulltext:chapter_matches:chmatch_1150] 卷“第01卷-unix的起源”第 6 章，匹配置信度 0.6，原因：无匹配
@@ -38,14 +38,14 @@ volume: 第01卷-unix的起源
 
 ## 文献
 
-- Ritchie 1993 "Development of C"；Kernighan & Ritchie 1978 K&R；Kernighan 2019 "Unix: A History and a Memoir"；freebsd.duckdb：freebsd-src commit `5b81b6b301437eb9a6df491c829475bd29ae5d6c`（1993-06-12，Initial import 含 C 语言源码） ［A］
-- Ritchie D M 1975 "C Reference Manual" (Bell Labs Computing Science Technical Report #31)；Ritchie 1993 HOPL II；Kernighan & Ritchie 1978 K&R；Kernighan 2019 [考据脚注：C 语言 “数组退化为指针” 设计决策经 Ritchie 1993 HOPL II 原文与 K&R 1978 交叉验证确证；CSTR #31 数组与指针关系表述的演化痕迹经卷末书目述评.md 争议二史家判断与 CSTR #31、K&R 1978、ANSI C 标准三方对照确证。]
+- Ritchie 1993 “Development of C”；Kernighan & Ritchie 1978 K&R；Kernighan 2019 “Unix: A History and a Memoir”；freebsd.duckdb：freebsd-src commit `5b81b6b301437eb9a6df491c829475bd29ae5d6c`（1993-06-12，Initial import 含 C 语言源码） ［A］
+- Ritchie D M 1975 “C Reference Manual” (Bell Labs Computing Science Technical Report #31)；Ritchie 1993 HOPL II；Kernighan & Ritchie 1978 K&R；Kernighan 2019 [考据脚注：C 语言 “数组退化为指针” 设计决策经 Ritchie 1993 HOPL II 原文与 K&R 1978 交叉验证确证；CSTR #31 数组与指针关系表述的演化痕迹经卷末书目述评.md 争议二史家判断与 CSTR #31、K&R 1978、ANSI C 标准三方对照确证。]
 - Ritchie 1993 HOPL II；DEC PDP-11 Processor Handbook (1970) ［B］
-- Salus 1994；Kernighan 2019；Ritchie D M 1978 "UNIX Time-Sharing System: A Retrospective" (Bell System Technical Journal Vol. 57 No. 6) ［B］
-- ANSI/ISO C Standard; P. J. Plauger, 1992; Dennis Ritchie, "noalias" 相关 USENET 帖子（1988，收集于 TUHS 与 comp.lang.c 存档） ［B］
+- Salus 1994；Kernighan 2019；Ritchie D M 1978 “UNIX Time-Sharing System: A Retrospective” (Bell System Technical Journal Vol. 57 No. 6) ［B］
+- ANSI/ISO C Standard; P. J. Plauger, 1992; Dennis Ritchie, “noalias” 相关 USENET 帖子（1988，收集于 TUHS 与 comp.lang.c 存档） ［B］
 - Torvalds, L. 对 Rust 的邮件列表陈述；Kaspersky 2017 演讲；Linux Kernel Rust RFC ［A］
 - Ritchie 1993 HOPL II；Richards 2003 回顾 [考据脚注：Thompson 1969 年为了让 Space Travel 在 PDP-7 上运行精简 B 语言创建 B、BCPL→B→C 演化路径等核心事实经 Ritchie 1993 HOPL II 与 Richards 2003 回顾交叉验证确证。]
-- Wulf, W. et al. (1981) "The Design of an Optimizing Compiler" (Elsevier North-Holland)；Lohr, S. "Go To" (2001) 对语言史的比较；统计分析报告：文献计量学分析.md Task 22 [R/OL]. 2026-07-27. 文件路径：`c:\Users\ykla\Documents\hibsd\03-原始史料库\01-代码仓库史料\01-数据库本体\统计分析\文献计量学分析.md`；SQL 查询：`SELECT id, gbt7714 FROM "references"`. 资料数据库.db [DB/OL]. 查询日期：2026-07-27；Python 统计脚本：`script/phase6_bibliometrics.py`. Task 22 参考文献增长曲线与 Price 指数。执行日期：2026-07-27 [考据脚注：C 与 Euclid 编译器设计比较经 Wulf 1981 与 Lohr 2001 交叉验证确证；references 表 16,867 条、年份提取率 44.42%、1975-1979 年累计 9.09% 占比等统计结论经 `script/phase6_bibliometrics.py` 执行结果与 `phase6_results.json` 结构化结果交叉验证。]
+- Wulf, W. et al. (1981) “The Design of an Optimizing Compiler” (Elsevier North-Holland)；Lohr, S. “Go To” (2001) 对语言史的比较；统计分析报告：文献计量学分析.md Task 22 [R/OL]. 2026-07-27. 文件路径：**03-原始史料库/01-代码仓库史料/01-数据库本体/统计分析/文献计量学分析.md**；SQL 查询：`SELECT id, gbt7714 FROM "references"`. 资料数据库.duckdb [DB/OL]. 查询日期：2026-07-27；Python 统计脚本：`script/phase6_bibliometrics.py`. Task 22 参考文献增长曲线与 Price 指数。执行日期：2026-07-27 [考据脚注：C 与 Euclid 编译器设计比较经 Wulf 1981 与 Lohr 2001 交叉验证确证；references 表 16,867 条、年份提取率 44.42%、1975-1979 年累计 9.09% 占比等统计结论经 `script/phase6_bibliometrics.py` 执行结果与 `phase6_results.json` 结构化结果交叉验证。]
 
 <!-- PODCAST_REVIEW v20260829 -->
 <!-- 语义复核范围：BSD Now EP273（共 1 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->

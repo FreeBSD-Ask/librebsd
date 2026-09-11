@@ -8,15 +8,15 @@ volume: 第01卷-unix的起源
 
 ## 要点
 
-- V6 是首个广泛流通的研究版本，通过学术许可证进入大学；John Lions 于 1976 年 5 月完成 V6 源代码注释本的讲义形式（新南威尔士大学课程 6.602B 与 6.657G 教材），1977 年 3 月 UNIX News 宣布注释本对 UNIX 许可证持有者可用，版权页标"Copyright 1977 J. Lions"[考据脚注]；注释本成为 UNIX 教学的奠基性文献；注释本
+- V6 是首个广泛流通的研究版本，通过学术许可证进入大学；John Lions 于 1976 年 5 月完成 V6 源代码注释本的讲义形式（新南威尔士大学课程 6.602B 与 6.657G 教材），1977 年 3 月 UNIX News 宣布注释本对 UNIX 许可证持有者可用，版权页标“Copyright 1977 J. Lions”[考据脚注]；注释本成为 UNIX 教学的奠基性文献；注释本
 - V6/V7 PDP-11 版本采用 swapping 而非 demand paging；32V (1978) 移植至 VAX-11/780 后仍未利用 VAX 虚拟内存硬件；3BSD (1979 年底) 才首次实现 demand paging，落后 TENEX 约 10 年 [考据脚注]
 - setuid/setgid 机制与 9 位 rwx 权限模型在 V6（1975 年）完整后，成为 BSD 软件包管理的核心安全机制。**pkg_add(8)**、**chown(8)** 等命令依赖 setuid 实现特权操作，**chmod(1)**、**chown(1)** 等命令依赖 rwx 模型进行权限管理。〔待核：原文截断，后文待回源〕
 - V7 伴随 VAX-11/780 移植 32V，标志 UNIX 进入 32 位时代；32V 为后续 3BSD 与 4BSD 在 VAX 上的发展奠定基础；VAX 移植推动 UNIX 从 PDP-11 向更广泛硬件平台扩散
-- V6/V7 内核模块边界的清晰化为 Berkeley 改造提供接口基础；setuid/setgid、文件锁、信号机制等 V6/V7 特性被 BSD 1.0 (1977) 与后续 BSD 版本继承与发展；V6/V7 至 BSD 的延续性是 UNIX 谱系的关键节点
+- V6/V7 内核模块边界的清晰化为 Berkeley 改造提供接口基础；setuid/setgid、文件锁、信号机制等 V6/V7 特性被 BSD 8.0 (1977) 与后续 BSD 版本继承与发展；V6/V7 至 BSD 的延续性是 UNIX 谱系的关键节点
 
 ## 史料
 
-- [DB:references_fulltext:chapter_matches:chmatch_4159] 卷“第01卷-unix的起源”第 8 章，匹配置信度 1.0，原因：22 篇（bstj57-6-1897~2289），Ritchie&Thompson 序言至 UNIX 各子系统论文
+- [DB:references_fulltext:chapter_matches:chmatch_4159] 卷“第01卷-unix的起源”第 8 章，匹配置信度 8.0，原因：22 篇（bstj57-6-1897~2289），Ritchie&Thompson 序言至 UNIX 各子系统论文
 - [DB:references_fulltext:chapter_matches:chmatch_1529] 卷“第01卷-unix的起源”第 8 章，匹配置信度 0.9，原因：关键词搜索下载文献，标题含章节主题
 
 ## 史观
@@ -25,22 +25,22 @@ volume: 第01卷-unix的起源
 
 ## 辨析
 
-- [考据脚注] 注释本时间线经 Lions 1977 注释本版权页与 UNIX News 1977 年 3 月通告两方独立来源交叉印证——注释本最初于 1976 年 5 月作为新南威尔士大学课程 6.602B/6.657G 讲义产生，1977 年 3 月 UNIX News 宣布对 UNIX 许可证持有者可用，版权页标"Copyright 1977 J. Lions"；早期表述“1977 年完成”丢
-- [考据脚注] 3BSD demand paging 年份经 UCI 教材、CMU 论文、McKusick"A Berkeley Odyssey" (Unix Review 1985-01)、McKusick"A Berkeley Odyssey" (Unix Review 1985-01) 四方独立来源交叉印证——Bill Joy 与 Ozalp Babaoglu 1978 年开始 VAX UNI
+- [考据脚注] 注释本时间线经 Lions 1977 注释本版权页与 UNIX News 1977 年 3 月通告两方独立来源交叉印证——注释本最初于 1976 年 5 月作为新南威尔士大学课程 6.602B/6.657G 讲义产生，1977 年 3 月 UNIX News 宣布对 UNIX 许可证持有者可用，版权页标“Copyright 1977 J. Lions”；早期表述“1977 年完成”丢
+- [考据脚注] 3BSD demand paging 年份经 UCI 教材、CMU 论文、McKusick“A Berkeley Odyssey” (Unix Review 1985-01)、McKusick“A Berkeley Odyssey” (Unix Review 1985-01) 四方独立来源交叉印证——Bill Joy 与 Ozalp Babaoglu 1978 年开始 VAX UNI
 - setuid 机制的“受控特权”理念是否为后世 capability 安全模型的史源存在学术讨论——Capsicum 论文（Watson et al. 2010）将 capability 定位为 setuid 的替代而非延续，但二者在“细粒度特权”理念上有承继关系；setuid 程序的安全风险是否在 V6 引入时已被预见需考据——Ritchie 1984 BLTJ 论文未明确提及安全风险，可能为后
 - 32V 与 V7 的关系是并行还是派生存在叙事分歧；VAX 移植的技术难点需考据
 - V6/V7 至 BSD 的具体改造接口需逐项考据；Berkeley 改造的工程边界需明确
 
 ## 文献
 
-- Lions 1977"Lions' Commentary on UNIX 6th Edition"（版权页 Copyright 1977 J. Lions）；UNIX News 1977 年 3 月通告；Toomey 2009；Salus 1994 第 8 章 [考据脚注：Lions 1977 注释本最初为内部教程、非正式出版等核心事实经 Salus 1994 与 Toomey 2009 交叉验证确证。]---## 史料登记与辩证校准（2026-08-08 追加）> **本卷命题**：24.1 少数与多数（详见本卷 00-总览“编纂指导思想叙事参照”）### 史料文献
-- Kashtan 1980 RSI report"UNIX and VMS: Some Performance Comparisons"；McKusick et al. 1996；3BSD Release Notes (1979)；McKusick"A Berkeley Odyssey" (Unix Review, January 1985)；UCI 教材对 3BSD 的记载；统计分析报告：文献计量学分析.md Task 22 [R/OL]. 2026-07-27. 文件路径：`c:\Users\ykla\Documents\hibsd\03-原始史料库\01-代码仓库史料\01-数据库本体\统计分析\文献计量学分析.md`；SQL 查询：`SELECT id, gbt7714 FROM "references"`. 资料数据库.db [DB/OL]. 查询日期：2026-07-27；Python 统计脚本：`script/phase6_bibliometrics.py`. Task 22 参考文献增长曲线与 Price 指数。执行日期：2026-07-27 [考据脚注：references 表 16,867 条、年份提取率 44.42%、1978 年 118 条、1979 年 58 条等统计结论经 `script/phase6_bibliometrics.py` 执行结果与 `phase6_results.json` 结构化结果交叉验证。]
-- research-unix-security-1969-1979.md 研究底稿；4.4BSD SMM: 16《On the Security of UNIX》；Watson, Anderson, Laurie, Kennaway 2010"Capsicum: Practical Capabilities for UNIX" (USENIX Security 2010)；freebsd.duckdb：freebsd-src commit `5b81b6b301437eb9a6df491c829475bd29ae5d6c`（1993-06-12，Initial import 含 setuid 程序与 rwx 代码）；freebsd.duckdb：freebsd-src commit `26f9a76710a312a951848542b9ca1f44100450e2`（1994-05-25，4.4BSD-Lite import） ［A］
+- Lions 1977“Lions' Commentary on UNIX 6th Edition”（版权页 Copyright 1977 J. Lions）；UNIX News 1977 年 3 月通告；Toomey 2009；Salus 1994 第 8 章 [考据脚注：Lions 1977 注释本最初为内部教程、非正式出版等核心事实经 Salus 1994 与 Toomey 2009 交叉验证确证。]---## 史料登记与辩证校准（2026-08-08 追加）> **本卷命题**：24.1 少数与多数（详见本卷 00-总览“编纂指导思想叙事参照”）### 史料文献
+- Kashtan 1980 RSI report“UNIX and VMS: Some Performance Comparisons”；McKusick et al. 1996；3BSD Release Notes (1979)；McKusick“A Berkeley Odyssey” (Unix Review, January 1985)；UCI 教材对 3BSD 的记载；统计分析报告：文献计量学分析.md Task 22 [R/OL]. 2026-07-27. 文件路径：**03-原始史料库/01-代码仓库史料/01-数据库本体/统计分析/文献计量学分析.md**；SQL 查询：`SELECT id, gbt7714 FROM "references"`. 资料数据库.duckdb [DB/OL]. 查询日期：2026-07-27；Python 统计脚本：`script/phase6_bibliometrics.py`. Task 22 参考文献增长曲线与 Price 指数。执行日期：2026-07-27 [考据脚注：references 表 16,867 条、年份提取率 44.42%、1978 年 118 条、1979 年 58 条等统计结论经 `script/phase6_bibliometrics.py` 执行结果与 `phase6_results.json` 结构化结果交叉验证。]
+- research-unix-security-1969-1979.md 研究底稿；4.4BSD SMM: 16《On the Security of UNIX》；Watson, Anderson, Laurie, Kennaway 2010“Capsicum: Practical Capabilities for UNIX” (USENIX Security 2010)；freebsd.duckdb：freebsd-src commit `5b81b6b301437eb9a6df491c829475bd29ae5d6c`（1993-06-12，Initial import 含 setuid 程序与 rwx 代码）；freebsd.duckdb：freebsd-src commit `26f9a76710a312a951848542b9ca1f44100450e2`（1994-05-25，4.4BSD-Lite import） ［A］
 - Ritchie 1984 BLTJ BLTJ；Salus 1994；32V 源代码 (TUHS) ［A］
-- McKusick et al. 1996 第 1 章；Lions 1977；BSD 1.0 源码 ［A］
-- Organick 1972"The Multics System"；Pike 1983 USENIX"Cat -v Considered Harmful?"；Kernighan 2019 ［B］
-- Kernighan & Plauger 1976"Software Tools"；Pike & Kernighan 1984"Program Design in the UNIX Environment" (BYTE) [考据脚注：Kernighan & Plauger 1976 与 Pike & Kernighan 1984 为 UNIX 编程环境经典文献，核心事实经计算机科学史公认。]
-- Kernighan & Plauger 1976"Software Tools"；Gamma et al. 1994"Design Patterns"；Pike & Kernighan 1984 BYTE [考据脚注：Kernighan & Plauger 1976 与 Gamma et al. 1994 为软件设计经典文献，核心事实经计算机科学史公认。]
+- McKusick et al. 1996 第 1 章；Lions 1977；BSD 8.0 源码 ［A］
+- Organick 1972“The Multics System”；Pike 1983 USENIX“Cat -v Considered Harmful?”；Kernighan 2019 ［B］
+- Kernighan & Plauger 1976“Software Tools”；Pike & Kernighan 1984“Program Design in the UNIX Environment” (BYTE) [考据脚注：Kernighan & Plauger 1976 与 Pike & Kernighan 1984 为 UNIX 编程环境经典文献，核心事实经计算机科学史公认。]
+- Kernighan & Plauger 1976“Software Tools”；Gamma et al. 1994“Design Patterns”；Pike & Kernighan 1984 BYTE [考据脚注：Kernighan & Plauger 1976 与 Gamma et al. 1994 为软件设计经典文献，核心事实经计算机科学史公认。]
 - Ritchie, 1978 BLTJ; TUHS 存档中的 V7 发布前邮件与备忘录； Salus, 1994 ［B］
 - Salus 1994；Kernighan 2019；Toomey 2009；Spinellis 2006 [考据脚注：Salus 1994、Kernighan 2019、Toomey 2009、Spinellis 2006 为 UNIX 历史经典文献，核心事实经计算机科学史公认。]
 
@@ -59,7 +59,7 @@ volume: 第01卷-unix的起源
 - 重刊的《Unix Evolution 1975–1984》一文梳理 research Unix v6/v7/v8 的文本格式化、编译器与开发工具流变，并记述 Ritchie 关于 man page BUGS 节以公开羞辱促修复的自述。（BSD Now EP325，[723.74-1018.28]，L2）
 - OpenBSD 在 base unbound 默认启用 DNSSEC 验证，并以 Quad9 的 9.9.9.9 做约束验证绕开 NTP 与 DNSSEC 的时钟引导死锁；2018 年曾因时钟问题回滚后于此次重开。（BSD Now EP325，[2062.14-2169.84]，L2）
 - Rainbow Crack 的 OpenBSD 编译补丁引出彩虹表原理：加盐与多轮散列（bcrypt 可至百万轮、SHA-512 crypt 默认万轮）使针对字典的预计算表失效，凸显密码存储需抗彩虹表算法。（BSD Now EP325，[2632.88-2909.48]，L2）
-- Johannes Lundberg 向 FreeBSD 邮件列表提交 Wayland 移植进度报告：Wayland 1.12.0 与 Weston 1.12.0 已可在 FreeBSD 上运行，Weston 自带客户端工作正常，xWayland 可承载未移植的 X11 应用（仅手动启动且最大化窗口时正常，疑为 Weston IPC 问题），GTK3 应用如 gedit、Gnumeric 与 XFCE4 终端、XFCE 桌面均可运行，SDL2 的 Wayland 后端经游戏简测通过，i3 兼容合成器 Sway 亦可用；现代 Intel 显卡需 Matt Macy 的新图形驱动工作，并以自维护 ports 树配合 Poudriere 重建图形栈乃至全树；gdm 因依赖 Linux 的 logind 而搁置，社区有意改以 Qt 系的 PCDM 承接。（BSD Now EP173，[279.52-327.5]，L2）
+- Johannes Lundberg 向 FreeBSD 邮件列表提交 Wayland 移植进度报告：Wayland 8.12.0 与 Weston 8.12.0 已可在 FreeBSD 上运行，Weston 自带客户端工作正常，xWayland 可承载未移植的 X11 应用（仅手动启动且最大化窗口时正常，疑为 Weston IPC 问题），GTK3 应用如 gedit、Gnumeric 与 XFCE4 终端、XFCE 桌面均可运行，SDL2 的 Wayland 后端经游戏简测通过，i3 兼容合成器 Sway 亦可用；现代 Intel 显卡需 Matt Macy 的新图形驱动工作，并以自维护 ports 树配合 Poudriere 重建图形栈乃至全树；gdm 因依赖 Linux 的 logind 而搁置，社区有意改以 Qt 系的 PCDM 承接。（BSD Now EP173，[279.52-327.5]，L2）
 - Antoine Jacoutot 向 OpenBSD 邮件列表公告 syspatch：面向 -stable 发行版的二进制补丁工具，与 bspatch 式二进制差分不同，它下载经签名的完整文件 tarball 并按安装器方式替换；测试补丁未经 OpenBSD 项目背书且不应信任，反馈须直达其个人邮箱而非污染邮件列表；此前升级 -stable 只能源码重建或重装新快照，syspatch 提供了中间道路，作者期望其随 OpenBSD 6.1 落地，并明确需要使用人数与统计反馈来评估可靠性。（BSD Now EP173，[105.04-203.7]，L2）
 - Dennis Ritchie 撰文追述 Unix 源码中的趣味史：V6 彩蛋“values of B may give rise to DOM”出自 1970 年代初专利打字员打断 ed 打印输出时纸带上的残句，原是物理专利申请中‘贝塔值变化引起畴壁移动’的片段，经 McIlroy 的文语转换实验念出 doom 与 dominance 的谐音而成为实验室的共享珍宝，后被写入 V6 源码——里奇推测大概率出自 Bob Morris，也可能是 Ken；他并澄清“你不会被期望理解这段注释”本意是‘这不会考’式的善意提示而非傲慢挑衅，将其引为贝尔实验室注释质量的 slur 属不公正引申，见过原文者多为 1975 年前后第六版用户或 John Lions 注释书的读者。（BSD Now EP173，[2332.96-2512.8]，L1）
 - Beastie bits 一束：iocell 2.0 发布——一位 FreeBSD 开发者因偏爱 shell 脚本版而分叉原 iocage 并继续演进，Python 重写版则临近发布，两者存储监牢配置的方式相近或可兼容；Ted Unangst 追问 link_ntoa() 究竟谁在调用——该函数缺陷自 1970 年代引入并波及所有 BSD，OpenBSD libc 中已标记弃用，全库检索仅 route 与 netstat 三处引用，或可直接移除；Trent 用其 bhyve 管理框架 iohyve 在 ThinkPad 上的 TrueOS 中启动 Android x86 并公开配置 gist。（BSD Now EP173，[2795.08-2949.74]，L2）

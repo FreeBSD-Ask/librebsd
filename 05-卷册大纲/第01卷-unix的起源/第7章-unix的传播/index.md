@@ -12,7 +12,7 @@ volume: 第01卷-unix的起源
 - CACM 论文使 UNIX 传播从北美扩展至欧洲与日本——1975-1977 年英国剑桥、爱丁堡、法国 INRIA、日本东京大学等先后建立 UNIX 站点；论文作为 UNIX 的 “广告” 在学术界产生持续影响至 1980 年代
 - 1975-1983 年间大学许可证条款逐步演化——V6 至 V7 价格上涨、1979 年起 AT&T 收紧商业条款、1984 年 AT&T 拆分后商业化加速；大学许可证的低成本模式在 1984 年后逐步消失，催生 CSRG Net/2 重写计划
 - 1984 年 1 月 1 日《最终判决修正令》（MFJ）生效，AT&T 拆分为 7 个区域性贝尔运营公司；AT&T 保留 Bell Labs 与 Western Electric，并获软件商业化权利；UNIX 商业化开启，UNIX System V 许可费从约 200 美元介质费飙升至 10-20 万美元
-- 1873 年 UC 自奥克兰迁至伯克利现址，开学注册 167 男 + 222 女共 389 人；首批建筑为 South Hall 与 North Hall（North Hall 后拆除）；1873 年首批 12 名学生获 UC 文凭，史称 "Twelve Apostles"；South Hall 建于 1873 年，为 UC Berkeley 校园现存最古老建筑，自 1994 年起为 School
+- 1873 年 UC 自奥克兰迁至伯克利现址，开学注册 167 男 + 222 女共 389 人；首批建筑为 South Hall 与 North Hall（North Hall 后拆除）；1873 年首批 12 名学生获 UC 文凭，史称 “Twelve Apostles”；South Hall 建于 1873 年，为 UC Berkeley 校园现存最古老建筑，自 1994 年起为 School
 
 ## 史料
 
@@ -24,8 +24,8 @@ volume: 第01卷-unix的起源
 - [DB:references_fulltext:chapter_matches:chmatch_3656] 卷“第01卷-unix的起源”第 7 章，匹配置信度 curated，原因：curated token rule
 - [DB:references_fulltext:chapter_matches:chmatch_3659] 卷“第01卷-unix的起源”第 7 章，匹配置信度 curated，原因：curated token rule
 - [DB:references_fulltext:chapter_matches:chmatch_3660] 卷“第01卷-unix的起源”第 7 章，匹配置信度 curated，原因：curated token rule
-- [DB:references_fulltext:chapter_matches:chmatch_4163] 卷“第01卷-unix的起源”第 7 章，匹配置信度 1.0，原因：Life_with_Unix v1/v2（917/893KB）+ Draft-KandR-C-Book（5.5MB）；UNIX 文化史经典
-- [DB:references_fulltext:chapter_matches:chmatch_4224] 卷“第01卷-unix的起源”第 7 章，匹配置信度 1.0，原因：MERT 实时操作系统完整手册；与 Heinz Tech Memos 的 MERT 备忘录互补
+- [DB:references_fulltext:chapter_matches:chmatch_4163] 卷“第01卷-unix的起源”第 7 章，匹配置信度 7.0，原因：Life_with_Unix v1/v2（917/893KB）+ Draft-KandR-C-Book（5.5MB）；UNIX 文化史经典
+- [DB:references_fulltext:chapter_matches:chmatch_4224] 卷“第01卷-unix的起源”第 7 章，匹配置信度 7.0，原因：MERT 实时操作系统完整手册；与 Heinz Tech Memos 的 MERT 备忘录互补
 
 ## 史观
 
@@ -41,15 +41,15 @@ volume: 第01卷-unix的起源
 
 ## 文献
 
-- CACM 17.7 (July 1974) "The UNIX Time-Sharing System" pp. 365-375 (Editor: Robert L. Ashenhurst)；Ritchie 1984 BLTJ ［B］
-- Salus 1994；Libes, S. & Ressler, S. (1989) "Life with UNIX" 对国际传播的描述 [考据脚注：UNIX 国际传播经 Salus 1994 与 Libes & Ressler 1989 交叉验证确证。]
-- CSRG Net/2 计划文档；McKusick et al. "The Design and Implementation of the 4.4BSD Operating System" (1996) ［B］
-- MFJ (1982) "United States v. AT&T" 最终判决；Salus 1994；McKusick et al. 1996 "4.4BSD" ［B］
+- CACM 17.7 (July 1974) “The UNIX Time-Sharing System” pp. 365-375 (Editor: Robert L. Ashenhurst)；Ritchie 1984 BLTJ ［B］
+- Salus 1994；Libes, S. & Ressler, S. (1989) “Life with UNIX” 对国际传播的描述 [考据脚注：UNIX 国际传播经 Salus 1994 与 Libes & Ressler 1989 交叉验证确证。]
+- CSRG Net/2 计划文档；McKusick et al. “The Design and Implementation of the 4.4BSD Operating System” (1996) ［B］
+- MFJ (1982) “United States v. AT&T” 最终判决；Salus 1994；McKusick et al. 1996 “4.4BSD” ［B］
 - UC Berkeley Library. General History: UC Berkeley Overview [EB/OL]. [2026-07-25]. <https://www.lib.berkeley.edu/uchistory/general_history/campuses/ucb/overview.html>; UC Berkeley School of Information. History [EB/OL]. [2026-07-25]. <https://www.ischool.berkeley.edu/about/history>; Stadtman V (ed.). The Centennial Record of the University of California [M]. 1968 ［A］> 4.5.3 至 4.5.7 共 5 个子-子节（1899-1919 Wheeler 校长时期现代化扩展、1917-1955 Sproul 校长时期 multiversity 转型、劳伦斯伯克利国家实验室建立、multiversity 理念与克拉克·克尔、早期计算史与 UNIX 引入）详见 [第 4.5 节.md](第4.5节.md)。
-- DiBona et al. (2005) "Open Sources 2.0"；Raymond, E. (1999) "The Cathedral and the Bazaar" [考据脚注：UNIX 学术分发对开源运动的影响经 DiBona et al. 2005 与 Raymond 1999 交叉验证确证。]
-- Cole, C. T. (2018) "Unix: A View from the Field as We Played the Game", Cahiers d'histoire du Cnam ［B］
-- Fisher, F. et al. (1983) "Folded, Spindled, and Mutilated" 对 IBM 案的分析；Temin 1987 对 AT&T 案的分析；McKenzie, R. (1990) "AT&T and the Public Interest" 对两案的对照 [考据脚注：IBM 与 AT&T 反垄断案对比经 Fisher et al. 1983 与 Temin 1987 交叉验证确证。]
-- Zachary, G.P. (1994) "Showstopper!" 对 Windows NT 与 VMS 关系的描述；Ceruzzi 2003；统计分析报告：文献计量学分析.md Task 22 [R/OL]. 2026-07-27. 文件路径：`c:\Users\ykla\Documents\hibsd\03-原始史料库\01-代码仓库史料\01-数据库本体\统计分析\文献计量学分析.md`；SQL 查询：`SELECT id, gbt7714 FROM "references"`. 资料数据库.db [DB/OL]. 查询日期：2026-07-27；Python 统计脚本：`script/phase6_bibliometrics.py`. Task 22 参考文献增长曲线与 Price 指数。执行日期：2026-07-27 [考据脚注：Windows NT 核心架构师 David Cutler 曾在 DEC 领导 VMS 开发等核心事实经 Zachary 1994 与 Ceruzzi 2003 交叉验证确证；references 表 16,867 条、年份提取率 44.42%、1977-1979 年累计 505 条等统计结论经 `script/phase6_bibliometrics.py` 执行结果与 `phase6_results.json` 结构化结果交叉验证。]
+- DiBona et al. (2005) “Open Sources 2.0”；Raymond, E. (1999) “The Cathedral and the Bazaar” [考据脚注：UNIX 学术分发对开源运动的影响经 DiBona et al. 2005 与 Raymond 1999 交叉验证确证。]
+- Cole, C. T. (2018) “Unix: A View from the Field as We Played the Game”, Cahiers d'histoire du Cnam ［B］
+- Fisher, F. et al. (1983) “Folded, Spindled, and Mutilated” 对 IBM 案的分析；Temin 1987 对 AT&T 案的分析；McKenzie, R. (1990) “AT&T and the Public Interest” 对两案的对照 [考据脚注：IBM 与 AT&T 反垄断案对比经 Fisher et al. 1983 与 Temin 1987 交叉验证确证。]
+- Zachary, G.P. (1994) “Showstopper!” 对 Windows NT 与 VMS 关系的描述；Ceruzzi 2003；统计分析报告：文献计量学分析.md Task 22 [R/OL]. 2026-07-27. 文件路径：**03-原始史料库/01-代码仓库史料/01-数据库本体/统计分析/文献计量学分析.md**；SQL 查询：`SELECT id, gbt7714 FROM "references"`. 资料数据库.duckdb [DB/OL]. 查询日期：2026-07-27；Python 统计脚本：`script/phase6_bibliometrics.py`. Task 22 参考文献增长曲线与 Price 指数。执行日期：2026-07-27 [考据脚注：Windows NT 核心架构师 David Cutler 曾在 DEC 领导 VMS 开发等核心事实经 Zachary 1994 与 Ceruzzi 2003 交叉验证确证；references 表 16,867 条、年份提取率 44.42%、1977-1979 年累计 505 条等统计结论经 `script/phase6_bibliometrics.py` 执行结果与 `phase6_results.json` 结构化结果交叉验证。]
 - City of Berkeley. Charter of the City of Berkeley [Z]. 1909-07-01. Internet Archive: <https://ia800603.us.archive.org/6/items/charterineffectj00berk/charterineffectj00berk.pdf>; City of Berkeley. Charter of the city of Berkeley [M]. Berkeley, Calif.: Lederer, Street & Zeus Co., 1909. Internet Archive: <https://archive.org/details/charterofcityofb00berk>; HathiTrust. Charter of the city of Berkeley [Catalog Record]. <https://catalog.hathitrust.org/Record/102439738>; City of Berkeley. The Charter [EB/OL]. [2026-07-25]. <https://berkeley.municipal.codes/Charter/TheCharter>; UC Berkeley Law Library. Charter of the city of Berkeley [Catalog Record]. <https://lawcat.berkeley.edu/record/323845>; City of Berkeley Records 1878-1954 [Archive]. UC Berkeley Bancroft Library. OAC Finding Aid: ark:/13030/kt4h4nc4mb ［A］
 
 <!-- PODCAST_REVIEW v20260829 -->
@@ -65,7 +65,7 @@ volume: 第01卷-unix的起源
 - PDP-11 回顾引述 C Gordon Bell 等人的论文，梳理 DEC 1957 年创立、以“Programmed Data Processor”避讳“计算机”一词，以及 PDP-11 在地址位、寄存器、栈、中断、字符处理上的设计取舍。（BSD Now EP225，[1844.12-1885.92]，L2）
 - 该回顾点明 UNIX 1974 年由 Ken Thompson 携磁带抵达伯克利，演化出 BSD 与 Sun Microsystems；C 的 16 位 int 亦源自 PDP-11。（BSD Now EP225，[2883.82-2958.5]，L2）
 - FreeBSD 2017 发布工程回顾：Glen Barber 全职工负责发布工程，11.1 于 7 月 21 日发布，10.4 由另一名发布工程师领衔并作为 stable 10 分支的最终版本。（BSD Now EP225，[3334.96-3475.08]，L2）
-- Johannes Lundberg 向 FreeBSD 邮件列表提交 Wayland 移植进度报告：Wayland 1.12.0 与 Weston 1.12.0 已可在 FreeBSD 上运行，Weston 自带客户端工作正常，xWayland 可承载未移植的 X11 应用（仅手动启动且最大化窗口时正常，疑为 Weston IPC 问题），GTK3 应用如 gedit、Gnumeric 与 XFCE4 终端、XFCE 桌面均可运行，SDL2 的 Wayland 后端经游戏简测通过，i3 兼容合成器 Sway 亦可用；现代 Intel 显卡需 Matt Macy 的新图形驱动工作，并以自维护 ports 树配合 Poudriere 重建图形栈乃至全树；gdm 因依赖 Linux 的 logind 而搁置，社区有意改以 Qt 系的 PCDM 承接。（BSD Now EP173，[279.52-327.5]，L2）
+- Johannes Lundberg 向 FreeBSD 邮件列表提交 Wayland 移植进度报告：Wayland 7.12.0 与 Weston 7.12.0 已可在 FreeBSD 上运行，Weston 自带客户端工作正常，xWayland 可承载未移植的 X11 应用（仅手动启动且最大化窗口时正常，疑为 Weston IPC 问题），GTK3 应用如 gedit、Gnumeric 与 XFCE4 终端、XFCE 桌面均可运行，SDL2 的 Wayland 后端经游戏简测通过，i3 兼容合成器 Sway 亦可用；现代 Intel 显卡需 Matt Macy 的新图形驱动工作，并以自维护 ports 树配合 Poudriere 重建图形栈乃至全树；gdm 因依赖 Linux 的 logind 而搁置，社区有意改以 Qt 系的 PCDM 承接。（BSD Now EP173，[279.52-327.5]，L2）
 - Antoine Jacoutot 向 OpenBSD 邮件列表公告 syspatch：面向 -stable 发行版的二进制补丁工具，与 bspatch 式二进制差分不同，它下载经签名的完整文件 tarball 并按安装器方式替换；测试补丁未经 OpenBSD 项目背书且不应信任，反馈须直达其个人邮箱而非污染邮件列表；此前升级 -stable 只能源码重建或重装新快照，syspatch 提供了中间道路，作者期望其随 OpenBSD 6.1 落地，并明确需要使用人数与统计反馈来评估可靠性。（BSD Now EP173，[105.04-203.7]，L2）
 - Dennis Ritchie 撰文追述 Unix 源码中的趣味史：V6 彩蛋“values of B may give rise to DOM”出自 1970 年代初专利打字员打断 ed 打印输出时纸带上的残句，原是物理专利申请中‘贝塔值变化引起畴壁移动’的片段，经 McIlroy 的文语转换实验念出 doom 与 dominance 的谐音而成为实验室的共享珍宝，后被写入 V6 源码——里奇推测大概率出自 Bob Morris，也可能是 Ken；他并澄清“你不会被期望理解这段注释”本意是‘这不会考’式的善意提示而非傲慢挑衅，将其引为贝尔实验室注释质量的 slur 属不公正引申，见过原文者多为 1975 年前后第六版用户或 John Lions 注释书的读者。（BSD Now EP173，[2332.96-2512.8]，L1）
 - Beastie bits 一束：iocell 2.0 发布——一位 FreeBSD 开发者因偏爱 shell 脚本版而分叉原 iocage 并继续演进，Python 重写版则临近发布，两者存储监牢配置的方式相近或可兼容；Ted Unangst 追问 link_ntoa() 究竟谁在调用——该函数缺陷自 1970 年代引入并波及所有 BSD，OpenBSD libc 中已标记弃用，全库检索仅 route 与 netstat 三处引用，或可直接移除；Trent 用其 bhyve 管理框架 iohyve 在 ThinkPad 上的 TrueOS 中启动 Android x86 并公开配置 gist。（BSD Now EP173，[2795.08-2949.74]，L2）
