@@ -124,13 +124,13 @@
 
 * 3.9　C 语言在编程语言史中的位置
 
-### 第 4 章　贝尔实验室九号项目（Plan9）：对 UNIX 哲学的批判
+### 第 4 章　贝尔实验室九号项目（Plan 9）：对 UNIX 哲学的批判
 
-* 4.1　Plan9 的起源：贝尔实验室 1985-1992 的 UNIX 反思
+* 4.1　Plan 9 的起源：贝尔实验室 1985-1992 的 UNIX 反思
 
 * 4.2　Plan 9 核心概念：9P 协议、Rio 窗口系统、每个进程一个命名空间
 
-* 4.3　Plan9 的当代影响：UTF-8、Inferno、9front
+* 4.3　Plan 9 的当代影响：UTF-8、Inferno、9front
 
 ### 第 5 章　UNIX 习俗考据与都市传说辨析
 
@@ -146,7 +146,7 @@
 
 * 1.1　贝克莱
 
-* 1.2　行政组织法案（ Organic Act）与伯克利市城建史
+* 1.2　行政组织法案（Organic Act）与伯克利市城建史
 
 * 1.3　伯克利市发展史
 
@@ -468,7 +468,7 @@
 
 * 5.5　版权登记瑕疵
 
-* 5.6　诉讼给予 Linux 18 个月无竞争窗口 的结构性后果分析
+* 5.6　诉讼给予 Linux 18 个月无竞争窗口的结构性后果分析
 
 * 5.7　对 USL 诉讼的批评：法律策略与社区代价
 
@@ -650,7 +650,7 @@
 
 * 3.3　SMP 移植的无名工程师；多元群体贡献：FreeBSD 1998–2000 时期的贡献者多样性
 
-* 3.4　外部批评与反对者 ：（1） Valerie Aurora（LWN 2009）对 soft updates 的批评；SMP 路线滞后的批评
+* 3.4　外部批评与反对者：（1）Valerie Aurora（LWN 2009）对 soft updates 的批评；SMP 路线滞后的批评
 
 * 3.5　与同时期操作系统的比较：1998-2000 年同期 Linux 2.2（1999.1，SMP 支持大幅改进，引入 spinlock 优化，但仍保留大内核锁 BKL，调度器仍为 O(n)）、Windows 2000（2000.2，NT 5.0，微内核混合架构，调度器优先级驱动 32 级，NTFS 日志文件系统，Active Directory 域目录服务）、Solaris 8（2000.2，SVR4，完全抢占式内核，细粒度锁，Solaris Threads/UltraSPARC 多线程优化，UFS Logging + VxFS 可选，ZFS 尚未出现）
 
@@ -690,7 +690,7 @@
 
 * 5.3　多元群体贡献：FreeBSD 2002–2005 时期的贡献者多样性
 
-* 5.4　外部批评与反对者 ：（1） EPFL 与 Sorbonne/Inria 团队（USENIX ATC '18）对 ULE 饥饿问题的学术批评
+* 5.4　外部批评与反对者：（1）EPFL 与 Sorbonne/Inria 团队（USENIX ATC '18）对 ULE 饥饿问题的学术批评
 
 * 5.5　与同时期操作系统的比较：2002-2003 年同期操作系统
 
@@ -926,23 +926,23 @@
 
 ### 第 1 章　NetBSD 诞生（1993–1994）
 
-* 1.1　NetBSD 诞生（1993–1994）
+* 1.1　NetBSD 0.8 的发布与版本概况（1993–1994）
 
 * 1.2　NetBSD 0.8-0.9 的胎动与 1.0 发布（1994-1995）；多平台移植的工程架构（1995-1998）；Theo de Raadt 与 Core Team 冲突（1994-1996）
 
-* 1.3　重要贡献者与边缘者：NetBSD 诞生 时期的贡献者谱系与 committer 变动
+* 1.3　重要贡献者与边缘者：NetBSD 诞生时期的贡献者谱系与 committer 变动
 
 * 1.4　外部批评与反对者：对 NetBSD 诞生 技术路线与治理方式的批评
 
-* 1.5　与同时期操作系统的比较：NetBSD 诞生 时期与 Linux、Windows、商业 UNIX 及其他 BSD 的对照
+* 1.5　与同时期操作系统的比较：NetBSD 诞生时期与 Linux、Windows、商业 UNIX 及其他 BSD 的对照
 
-* 1.6　NetBSD 诞生 时期的技术淘汰与版本更替
+* 1.6　NetBSD 诞生时期的技术淘汰与版本更替
 
-* 1.7　漏洞与安全响应：NetBSD 诞生 周期的漏洞群与修复模型
+* 1.7　漏洞与安全响应：NetBSD 诞生周期的漏洞群与修复模型
 
-* 1.8　项目统摄史观审视：NetBSD 诞生 的偶然性与本体论平等
+* 1.8　项目统摄史观审视：NetBSD 诞生的偶然性与本体论平等
 
-* 1.9　NetBSD 诞生 的跨 BSD/UNIX/macOS 代码外溢与工具扩散
+* 1.9　NetBSD 诞生的跨 BSD/UNIX/macOS 代码外溢与工具扩散
 
 ### 第 2 章　NetBSD 1.x（1994–2002）
 
@@ -1152,15 +1152,15 @@
 
 * 1.2　Theo de Raadt 与 NetBSD Core Team 的冲突考据（1994）；OpenBSD 1.0/2.1/2.2 的早期发布历程（1996）；早期开发团队与卡尔加里据点；与 NetBSD 1.x 的源码共享与逐步分化
 
-* 1.3　重要贡献者与边缘者：OpenBSD 起源 时期的贡献者谱系与 committer 变动
+* 1.3　重要贡献者与边缘者：OpenBSD 起源时期的贡献者谱系与 committer 变动
 
 * 1.4　NetBSD Core Team 回应层（反批评层）；de Raadt 行动性再回应层（再批评层）；批评层——de Raadt 被逐过程的程序正义批评；再回应层
 
 * 1.5　与同时期操作系统的比较
 
-* 1.6　OpenBSD 起源 时期的技术淘汰与版本更替
+* 1.6　OpenBSD 起源时期的技术淘汰与版本更替
 
-* 1.7　漏洞与安全响应：OpenBSD 起源 周期的漏洞群与修复模型
+* 1.7　漏洞与安全响应：OpenBSD 起源周期的漏洞群与修复模型
 
 * 1.8　辩证链合图；OpenBSD 起源：项目统摄史观审视：偶然性、本体论平等与解释学循环；项目统摄史观审视（扩展）：许可证哲学、解释学循环与革命改革
 
@@ -1306,17 +1306,17 @@
 
 * 1.5　与同时期操作系统的比较：DragonFly BSD 的诞生时期（2003-2004）
 
-* 1.6　DragonFly 诞生 时期的技术淘汰与版本更替
+* 1.6　DragonFly 诞生时期的技术淘汰与版本更替
 
-* 1.7　漏洞与安全响应：DragonFly 诞生 周期的漏洞群与修复模型
+* 1.7　漏洞与安全响应：DragonFly 诞生周期的漏洞群与修复模型
 
 * 1.8　项目统摄史观审视：偶然性、和解与本体论平等
 
-* 1.9　DragonFly 诞生 的跨 BSD/UNIX/macOS 代码外溢与工具扩散
+* 1.9　DragonFly 诞生的跨 BSD/UNIX/macOS 代码外溢与工具扩散
 
 ### 第 2 章　DragonFly 早期演进（2003–2004）
 
-* 2.1　DragonFly 早期演进（2003–2004）
+* 2.1　DragonFly 1.0 的发布与版本概况（2003–2004）
 
 * 2.2　DragonFly 的现状；DragonFly 项目内部的 Dillon 个人主导模式；DragonFly 与 FreeBSD 的分裂后紧张；DragonFly 邮件列表与 IRC 文化；vkernel 虚拟内核详述；DragonFly userland 与 FreeBSD 的差异
 
@@ -1326,9 +1326,9 @@
 
 * 2.5　与同时期操作系统的比较：2003-2026 年同期 Linux 内核（Linus Torvalds 维持独裁模式，无重大 fork 成功）、OpenBSD（Theo de Raadt 1996 年从 NetBSD fork，与 DragonFly 形成对照）、NetBSD（被 fork 后仍持续演进）、illumos（2010 年从 OpenSolaris fork）
 
-* 2.6　DragonFly 早期演进 时期的技术淘汰与版本更替
+* 2.6　DragonFly 早期演进时期的技术淘汰与版本更替
 
-* 2.7　漏洞与安全响应：DragonFly 早期演进 周期的漏洞群与修复模型
+* 2.7　漏洞与安全响应：DragonFly 早期演进周期的漏洞群与修复模型
 
 * 2.8　DragonFly 早期演进：项目统摄史观审视：偶然性、和解与本体论平等
 
