@@ -39,7 +39,7 @@ volume: 第09卷-netbsd的历史
 - OpenBSD 主页 “Only two remote holes in a heck of a long time!” 声明 [EB/OL]. <https://www.openbsd.org/>；strlcpy(3)/strlcat(3) 手册页 [EB/OL]. <https://man.openbsd.org/strlcpy>；NetBSD security-announce 邮件列表 [EB/OL]. <https://mail-index.netbsd.org/security-announce/> ［A］
 
 <!-- DB_REF:netbsd.duckdb -->
-> **数据库引用（netbsd.duckdb）**：本子节对应 netbsd 代码仓库。> 1993-2026 年间：1,999,408 次提交。> 仓库总览：1,999,412 次提交，1,545 位贡献者（contributors 表行数，1992-07-13 至 2026-08-24）。
+> **数据库引用（netbsd.duckdb）**：本子节对应 netbsd 代码仓库。> 1993-2026 年间：1,999,408 次提交。> 仓库总览：1,999,412 次提交，1,545 位贡献者（contributors 表行数，1992-07-13 至 2026-08-24）。（两口径之差 4 条系 1992-07-13 初始导入的窗口外提交，2026-09-11 经 netbsd.duckdb 实查核证，非数据矛盾）
 - Linux Foundation Annual Reports [EB/OL]. <https://www.linuxfoundation.org/reports/>；NetBSD Foundation 年度报告 [EB/OL]. <https://www.NetBSD.org/foundation/reports/>；GPLv2 文本 [EB/OL]. <https://www.gnu.org/licenses/gpl-2.0.txt>；BSD License 文本 [EB/OL]. <https://opensource.org/licenses/BSD-3-Clause>；netbsd.duckdb 数据分析·衍生项目与跨项目对比分析.md §L7.3.1（BSD 四仓库合计 vs Linux commit 量 2008/2020/2026）；netbsd.duckdb 数据分析·文献计量学分析.md Task 22（统计结论 C-41：references 表总数 16,867、统计结论 C-42：年份提取率 44.42%）、Task 23（统计结论 C-44：Top 10% 章节占 28.23%、Gini 0.3913） ［A］
 
 - Apple Darwin 开源档案 [EB/OL]. <https://opensource.apple.com/>；OpenSolaris 项目档案 [EB/OL]. <https://www.openindiana.org/>；IDC/Gartner 商业 UNIX 市场份额报告 [EB/OL]. <https://www.idc.com/> ［A］
