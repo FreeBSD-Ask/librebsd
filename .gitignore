@@ -289,3 +289,5 @@ _consistency_check.py
 # git 历史重写离线备份包（changelog 移除前全史，333MB，禁止入库）
 12-数据库备份/git-history-backup-20260911/
 *.bak_p4_20260910
+*.bak_fm_b024_20260911
+/12-数据库备份
