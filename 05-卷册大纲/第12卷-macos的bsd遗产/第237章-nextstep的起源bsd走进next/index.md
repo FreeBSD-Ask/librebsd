@@ -28,28 +28,39 @@ volume: 第12卷-macos的bsd遗产
 - NeXT 选用 BSD 究竟是工程务实还是 Jobs 对 BSD 的学术偏好——经查证 Jobs 本人无公开记录表明对 BSD 有特定偏好，BSD 选型决策的主要推动者是 Avie Tevanian（Mach 背景）与 NeXT 工程团队（需成熟 TCP/IP 与 VMS）。采信 “工程务实驱动 BSD 选型” 而非 “Jobs 个人偏好驱动” 的判断。〔待核：原文截断，后文待回源〕
 - NeXTSTEP 的 Mach 2.5（单内核式 Mach + BSD 在同一地址空间）与后续 Mach 3.0（微内核，BSD 作为用户态服务器）的架构差异直接影响 later Darwin/XNU 的设计——XNU 至 2024 年仍使用 Mach 3.0 的 “collocated” 模式（Mach 与 BSD 在同一地址空间而非真正的用户态服务器），此设计选择可追溯至 NeXTSTEP 2
 - Objective-C 是否 “基于” BSD 须澄清——Objective-C 是编程语言与运行时（Brad Cox 1983 年设计），BSD 是操作系统接口，二者是共生而非派生关系。Objective-C 可在任何提供 C 编译器的操作系统上运行（如 GNUstep 在 Linux 上实现），但 NeXTSTEP/macOS 的 Objective-C 运行时与 BSD 系统调用深度集成，此
-- 具体人名（Mike Parkhill、Doug McCallum、Peter Lipson）的核实经 Stanford University Library NeXT Inc. Records 档案与 NeXTSTEP 源码中的 CREDITS 文件交叉验证。部分贡献者因 NeXT 被 Apple 收购后的组织重组无法核实后续贡献范围。Stanford 档案中 1988-1996 年间的邮件列表存
-- NeXTSTEP 市场占有率与架构影响的不对称是否可归因于硬件价格——NeXT Cube 首发价格 6,500 美元（1988 年，相当于 2024 年约 16,000 美元），远高于同期 PC 与 Mac，此高价是市场占有率低的重要因素。但市场占有率低亦受 NeXT 1993 年退出硬件市场的影响——NeXT 转纯软件后，NeXTSTEP 仅能在 NeXT 硬件与少数 SPARC 平台上运行，限
+- 具体人名（Mike Parkhill、Doug McCallum、Peter Lipson）的核实经 Stanford University Library NeXT Inc. Records 档案与 NeXTSTEP 源码中的 CREDITS 文件交叉验证。部分贡献者因 NeXT 被 Apple 收购后的组织重组无法核实后续贡献范围。Stanford 档案中 1988-1996 年间的邮件列表存档可提供更多工程师名单，但需现场查阅（档案不在线上公开），此部分保留为史料缺口。
+- NeXTSTEP 市场占有率与架构影响的不对称是否可归因于硬件价格——NeXT Cube 首发价格 6,500 美元（1988 年，相当于 2024 年约 16,000 美元），远高于同期 PC 与 Mac，此高价是市场占有率低的重要因素。但市场占有率低亦受 NeXT 1993 年退出硬件市场的影响——NeXT 转纯软件后，NeXTSTEP 仅能在 NeXT 硬件与少数 SPARC 平台上运行，限制了扩散。采信 “高价与平台限制共同导致低市场份额” 的双因归因。
 
 ## 文献
 
-- Accetta M, et al. Mach: A New Kernel Foundation for UNIX Development [C]. USENIX Summer 1986; Tevanian A. PhD Thesis [D]. CMU, 1988; Rashid R F. Threads of a New System [J]. Unix Review, 1986, 4(8): 37-49; bsd_commits.duckdb 查询 L7.5.1 结果 [EB/OL]. 衍生项目与跨项目对比分析.md §L7.5, 2026-07-22; 统计结论 [C-41] [C-42] 结果 [EB/OL]. 文献计量学分析.md Task 22, 2026-07-22.---## 史料登记与辩证校准（2026-08-08 追加）> **本卷命题**：24.5 技术优秀不等于商业成功（详见本卷 00-总览“编纂指导思想叙事参照”）### 史料文献
+- Accetta M, et al. Mach: A New Kernel Foundation for UNIX Development [C]. USENIX Summer 1986; Tevanian A. PhD Thesis [D]. CMU, 1988; Rashid R F. Threads of a New System [J]. Unix Review, 1986, 4(8): 37-49; bsd_commits.duckdb 查询 L7.5.1 结果 [EB/OL]. 衍生项目与跨项目对比分析.md §L7.5, 2026-07-22; 统计结论 [C-41] [C-42] 结果 [EB/OL]. 文献计量学分析.md Task 22, 2026-07-22.
+
+---
+
+## 史料登记与辩证校准（2026-08-08 追加）
+
+> **本卷命题**：24.5 技术优秀不等于商业成功（详见本卷 00-总览“编纂指导思想叙事参照”）
+
+### 史料文献
 - NeXT Computer Inc. NeXTSTEP Reference, Release 0.9-3.0 [Z]. 1988-1992; CSRG. 4.3BSD-Tahoe/Reno Release Notes [Z]. Berkeley, 1988-1990; Golub D, et al. Unix as an Application Program [C]. USENIX Summer 1990 Conference Proceedings; darwin.duckdb 查询 L7.5.1 结果 [EB/OL]. 衍生项目与跨项目对比分析.md §L7.5, 2026-07-22.
 
-<!-- DB_REF:darwin.duckdb -->
-> **数据库引用（darwin.duckdb）**：本子节对应 darwin 代码仓库。> 1988-1993 年间：0 次提交。> 仓库总览：2,016 次提交，时间跨度 2001-04-10 至 2026-04-13；contributors 表 43 行（42 个镜像仓库 + 1 行 dependabot，全部经 Apple OSS Distributions 自动化账号导入）。
 - Cox B J, Novobilski A J. Object-Oriented Programming: An Evolutionary Approach [M]. 2nd ed. Addison-Wesley, 1991; NeXT Computer Inc. NeXTSTEP Object-Oriented Programming and the Objective-C Language [Z]. 1993; darwin.duckdb 查询 L7.5.1 结果 [EB/OL]. 衍生项目与跨项目对比分析.md §L7.5, 2026-07-22.
 
-<!-- DB_REF:darwin.duckdb -->
-> **数据库引用（darwin.duckdb）**：本子节对应 darwin 代码仓库。> 1989-1996 年间：0 次提交。> 仓库总览：2,016 次提交，时间跨度 2001-04-10 至 2026-04-13；contributors 表 43 行（42 个镜像仓库 + 1 行 dependabot，全部经 Apple OSS Distributions 自动化账号导入）。
-- Stanford University Library. NeXT Inc. Records, 1985-1996 [Z]. M1412; NeXT Inc. NeXTSTEP Source Code CREDITS Files [Z]. 1988-1996; darwin.duckdb 查询 L7.5.1 结果 [EB/OL]. 衍生项目与跨项目对比分析.md §L7.5, 2026-07-22.<!-- DOUBT_PENDING_BLOCK v20260804 -->> **待核验登记（doubt 批量 2026-08-04 批11）**：> 下列条目依 0 信任原则不改动正文，登记待核验：> - 存疑 id 1728：NeXT 工程师贡献/OpenStep 规范依赖 Stanford M1412 纸质档案(未数字化)，待档案核验
+- Stanford University Library. NeXT Inc. Records, 1985-1996 [Z]. M1412; NeXT Inc. NeXTSTEP Source Code CREDITS Files [Z]. 1988-1996; darwin.duckdb 查询 L7.5.1 结果 [EB/OL]. 衍生项目与跨项目对比分析.md §L7.5, 2026-07-22.
 
-<!-- DB_REF:darwin.duckdb -->
-> **数据库引用（darwin.duckdb）**：本子节对应 darwin 代码仓库。> 1994-1996 年间：0 次提交。> 仓库总览：2,016 次提交，时间跨度 2001-04-10 至 2026-04-13；contributors 表 43 行（42 个镜像仓库 + 1 行 dependabot，全部经 Apple OSS Distributions 自动化账号导入）。
+<!-- DOUBT_PENDING_BLOCK v20260804 -->
+
+> **待核验登记（doubt 批量 2026-08-04 批11）**：
+> 下列条目依 0 信任原则不改动正文，登记待核验：
+>
+> - 存疑 id 1728：NeXT 工程师贡献/OpenStep 规范依赖 Stanford M1412 纸质档案(未数字化)，待档案核验
+
 - NeXT Computer Inc. Annual Reports, 1988-1993 [Z]; Levy S. Insanely Great [M]. Viking, 1994; USENIX Conference Proceedings, 1988-1996 [C]; darwin.duckdb 查询 L7.5.1 结果 [EB/OL]. 衍生项目与跨项目对比分析.md §L7.5, 2026-07-22.
 
 <!-- DB_REF:darwin.duckdb -->
-> **数据库引用（darwin.duckdb）**：本子节对应 darwin 代码仓库。> 1985-2026 年间：2,012 次提交。> 仓库总览：2,016 次提交，时间跨度 2001-04-10 至 2026-04-13；contributors 表 43 行（42 个镜像仓库 + 1 行 dependabot，全部经 Apple OSS Distributions 自动化账号导入）。
+> **数据库引用（darwin.duckdb）**：本子节对应 darwin 代码仓库。
+> 1985-2026 年间：2,012 次提交。
+> 仓库总览：2,016 次提交，时间跨度 2001-04-10 至 2026-04-13；contributors 表 43 行（42 个镜像仓库 + 1 行 dependabot，全部经 Apple OSS Distributions 自动化账号导入）。
 
 <!-- PODCAST_REVIEW v20260829 -->
 <!-- 语义复核范围：BSD Now EP591（共 1 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
