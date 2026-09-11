@@ -17,27 +17,20 @@ volume: 第04卷-大分裂与四大bsd的诞生
 
 ## 史料
 
-- [DB:references_fulltext:chapter_matches:chmatch_3842] 卷“第04卷-大分裂与四大bsd的诞生”第 71 章，匹配置信度 folder，原因：folder 第69章
-- [DB:references_fulltext:chapter_matches:chmatch_3843] 卷“第04卷-大分裂与四大bsd的诞生”第 71 章，匹配置信度 folder，原因：folder 第69章
-- [DB:references_fulltext:chapter_matches:chmatch_3844] 卷“第04卷-大分裂与四大bsd的诞生”第 71 章，匹配置信度 folder，原因：folder 第69章
-- [DB:references_fulltext:chapter_matches:chmatch_3845] 卷“第04卷-大分裂与四大bsd的诞生”第 71 章，匹配置信度 folder，原因：folder 第69章
-- [DB:references_fulltext:chapter_matches:chmatch_3846] 卷“第04卷-大分裂与四大bsd的诞生”第 71 章，匹配置信度 folder，原因：folder 第69章
-- [DB:references_fulltext:chapter_matches:chmatch_3847] 卷“第04卷-大分裂与四大bsd的诞生”第 71 章，匹配置信度 folder，原因：folder 第69章
-- [DB:references_fulltext:chapter_matches:chmatch_3848] 卷“第04卷-大分裂与四大bsd的诞生”第 71 章，匹配置信度 folder，原因：folder 第69章
-- [DB:references_fulltext:chapter_matches:chmatch_3849] 卷“第04卷-大分裂与四大bsd的诞生”第 71 章，匹配置信度 folder，原因：folder 第69章
+- 本章章级史料著录暂缺：原自动匹配的 8 条数据库锚点经查 references_fulltext.duckdb 均为 UNKNOWN REFERENCE（id=1854-1861，主库无可用题名/作者信息），不具可考据性。　[存疑脚注] 章级史料清单待依 71.7-71.13 各节史料字段按 GB/T 7714 复核回填
 
 ## 史观
 
-- 总纲第 5 条——组织结构塑造技术路径：基于 NetBSD 分叉的开发路径与 de Raadt 个人主导的全代码审计方法论决定 OpenBSD 的工程方向（据 71.7、71.13）。
-- 总纲第 2 条——分离与聚合：OpenBSD 1.2 的发布标志 BSD 阵营的新聚合；NIS 退役后其功能由 LDAP 与 Kerberos 等分散聚合（据 71.7、71.11）。
-- 总纲第 11 条——分离与聚合：4.4BSD-Lite 替代 386BSD 成为 OpenBSD 直接基线，安全基线经 NetBSD 1.0 间接继承 386BSD 遗留基因并直接继承 4.4BSD-Lite 新机制（据 71.13）。
-- 总纲第 6 条——技术选择的代价与技术路线分化：安全至上的工程选择带来性能与功能广度的牺牲；FreeBSD 与 OpenBSD 形成“性能/生态 vs 安全/审计”路线分叉（据 71.7、71.12）。
-- 总纲第 21 条——密码学与信息安全：全代码审计是从被动安全响应转向主动安全审计的关键工程实践；安全驱动淘汰是 OpenBSD 工程文化的核心特征（据 71.11、71.13）。
-- 总纲第 12 条——法律结构：许可证解释的差异与许可证审计是 BSD 项目法律结构的关键节点与实践（据 71.10）。
-- 总纲第 8 条——社区文化即技术资产：OpenBSD 1.2 的反响反映开源社区对安全审计路径的关注（据 71.7）。
-- 总纲第 16 条——史学方法论：避免将工程权衡叙事为抽象原则（据 71.11）。
-- 总纲第 25 条——终结中的延续：r-commands 在 1996-2021 年共 25 年的渐进退役周期中保留兼容形式直至完全移除；386BSD 的安全基因经中转在 OpenBSD 主线延续（据 71.11、71.13）。
-- 总纲第 7 条——BSD 谱系：OpenBSD 是 NetBSD 的直接派生，证明 BSD 许可证允许自由分叉以追求不同工程优先级（据 71.12）。
+- 总纲第 10 条——动手者创造历史：基于 NetBSD 分叉的开发路径与 de Raadt 个人主导的全代码审计方法论决定 OpenBSD 的工程方向（据 71.7、71.13）。
+- 总纲第 4 条——分离聚合是永恒规律：OpenBSD 1.2 的发布标志 BSD 阵营的新聚合；NIS 退役后其功能由 LDAP 与 Kerberos 等分散聚合（据 71.7、71.11）。
+- 总纲第 4 条——分离聚合是永恒规律：4.4BSD-Lite 替代 386BSD 成为 OpenBSD 直接基线，安全基线经 NetBSD 1.0 间接继承 386BSD 遗留基因并直接继承 4.4BSD-Lite 新机制（据 71.13）。
+- 总纲第 4 条——分离聚合是永恒规律：安全至上的工程选择带来性能与功能广度的牺牲；FreeBSD 与 OpenBSD 形成“性能/生态 vs 安全/审计”路线分叉（据 71.7、71.12）。
+- 总纲第 21 条——革命与改革是历史方法论的分歧：全代码审计是从被动安全响应转向主动安全审计的改革式关键工程实践；安全驱动淘汰是 OpenBSD 工程文化的核心特征（据 71.11、71.13）。
+- 总纲第 13 条——法律与道德是利益分配：许可证解释的差异与许可证审计是 BSD 项目法律利益结构的关键节点与实践（据 71.10）。
+- 总纲第 15 条——文化即形式主义：OpenBSD 1.2 的反响反映开源社区对安全审计路径的关注（据 71.7）。
+- 总纲第 23 条——一切历史写作都是基于哲学设定的历史小说：避免将工程权衡回溯性叙事为抽象原则（据 71.11）。
+- 总纲第 22 条——知识注定过时：r-commands 在 1996-2021 年共 25 年的渐进退役周期中保留兼容形式直至完全移除；386BSD 的安全基因经中转在 OpenBSD 主线延续（据 71.11、71.13）。
+- 总纲第 4 条——分离聚合是永恒规律：OpenBSD 是 NetBSD 的直接派生，证明 BSD 许可证允许自由分叉以追求不同工程优先级（据 71.12）。
 
 ## 辨析
 
@@ -49,13 +42,13 @@ volume: 第04卷-大分裂与四大bsd的诞生
 
 ## 文献
 
-- OpenBSD 许可证审计文档；openbsd-cvs 邮件列表 2001-2003 年提交日志 ［A］
+- OpenBSD 许可证审计文档；openbsd-cvs 邮件列表 2001-2003 年提交日志——未取得具体题录信息。　[存疑脚注] 上述条目的具体题名、责任者、URL 与访问日期待核，须对照 openbsd.org 许可证审计页面与邮件列表存档补全著录后方可独立佐证 ［A］
 - 4.4BSD SMM: 16《On the Security of UNIX》
-- OpenBSD 邮件列表 1996-2003 存档；de Raadt 公开演讲；OpenBSD Security FAQ ［A］
+- OpenBSD 邮件列表 1996-2003 存档；de Raadt 公开演讲；OpenBSD Security FAQ——未取得具体题录信息。　[存疑脚注] 上述条目的具体题名、责任者、URL 与访问日期待核，须对照邮件列表存档与 openbsd.org 官网补全著录后方可独立佐证 ［A］
 
 ## 史观映射
 
-> 本章体现项目统摄史观中“偶然性改写历史”与“分离与聚合”的双重运作——de Raadt 被 NetBSD Core Team 逐出是具体的个人决定，但直接催生 OpenBSD 这一 BSD 家族的安全堡垒；fork 是“分离”的极端形式，但分离后的“聚合”（加密代码集成、代码审计文化建立）才是 OpenBSD 真正的创造性贡献；“安全至上”作为差异化定位是“技术选择即政治选择”的典型——de Raadt 选择安全而非可移植性或性能，这一选择反映了 OpenBSD 对 BSD 哲学的不同理解；Core Team 的驱逐决议则体现了“组织结构塑造技术路径”——NetBSD 的精英决策结构直接改变了 BSD 家族的格局
+> 本章体现项目统摄史观中“没有必然性，只有偶然性”与“分离聚合是永恒规律”的双重运作——de Raadt 被 NetBSD Core Team 逐出是具体的个人决定，但直接催生 OpenBSD 这一 BSD 家族的安全堡垒；fork 是“分离”的极端形式，但分离后的“聚合”（加密代码集成、代码审计文化建立）才是 OpenBSD 真正的创造性贡献；“安全至上”作为差异化定位是“技术选择即政治选择”的典型——de Raadt 选择安全而非可移植性或性能，这一选择反映了 OpenBSD 对 BSD 哲学的不同理解；Core Team 的驱逐决议则体现了“组织结构塑造技术路径”——NetBSD 的精英决策结构直接改变了 BSD 家族的格局
 
 ---
 
@@ -63,8 +56,6 @@ volume: 第04卷-大分裂与四大bsd的诞生
 > **数据库引用（openbsd.duckdb）**：本子节对应 openbsd 代码仓库。> 1992-1995 年间：770 次提交。> 仓库总览：491,195 次提交，3,352 位贡献者，1995-10-18 至 2026-08-25。
 - Sun Microsystems. Solaris 2.5 Documentation [Z]. 1995.［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
 - OpenBSD CVS 历史早期记录；OpenBSD 1.2 Release Notes (1996.7)；OpenBSD 官方 FAQ；de Raadt 关于审计的公开声明；本项目。原材料/研究/bsd 漏洞史/bsd 前安全史/386bsd-security-1992-1994.md；本项目。原材料/研究/bsd 漏洞史/bsd 前安全史/4.4bsd-lite-security-1992-1995.md；本项目。bsd_commits.duckdb 数据分析报告：宏观趋势统计 [R/OL]. 2026. ［A］
-
-[^doubt-resolved-305]: 据 Mac OS X Internals A Systems Approach (Amit Singh（阿米特·辛格）)  (未署名) 消解
 
 <!-- DB_REF:openbsd.duckdb -->
 > **数据库引用（openbsd.duckdb）**：本子节对应 openbsd 代码仓库。> 1992-1995 年间：770 次提交。> 仓库总览：491,195 次提交，3,352 位贡献者，1995-10-18 至 2026-08-25。

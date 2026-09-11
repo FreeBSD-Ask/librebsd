@@ -16,19 +16,19 @@ volume: 第05卷-freebsd的工程化奠基
 
 ## 史观
 
-- 总纲第 2 条——实践先于理论，3 年延期源于 SMPng 工程挑战而非计划
-  - 辨析：经 bsd_commits.duckdb tags 表验证，5.0-RELEASE 的 tagger_date 为 2003-01-16（非旧叙事 2003.1.19，误差 3 天，可能为公告日期与 tag 日期差异），5.0 开发起始日期存在 2000.3 与 2000.1 两种说法，需查 SVN；0 信任原则适用说明：L1.1.1 年度 commit 量基于 author_date 聚合，FreeBS〔存疑：原文截断，待考〕
-- 总纲第 5 条——技术债务与代码考古，4BSD 调度器是 1980s 设计的债务
+- 总纲第 17 条——证明世界先于解释和改造世界，3 年延期源于 SMPng 工程挑战而非计划
+  - 辨析：经 bsd_commits.duckdb tags 表验证，5.0-RELEASE 的 tagger_date 为 2003-01-16（非旧叙事 2003.1.19，误差 3 天，可能为公告日期与 tag 日期差异），5.0 开发起始日期存在 2000.3 与 2000.1 两种说法，需查 SVN；0 信任原则适用说明：L1.1.1 年度 commit 量基于 author_date 聚合，FreeBS〔待核：原文截断，待回源〕
+- 总纲第 22 条——知识注定过时，4BSD 调度器是 1980s 设计的债务
   - 辨析：Roberson 批评是否公平，需独立验证 4BSD 调度器性能
   - 文献：Roberson BSDCon 2003 论文 ［B］
 
 ## 98.4 ULE 的双队列设计（2026-09-11 整改按磁盘实况 98.4 归位，三次重复合并为一节）
 
-- 要点：ULE 调度器采用三个 per-CPU 队列 (current/next/idle) 设计，目标 O(1) 复杂度、CPU 亲和性、SMP 优化、交互式响应优先；算法基于时间片与交互性评分；ULE 首次 commit 于 2003-01-26T05:23:15Z（commit_hash = 35e6168fcdc76ba3ff2927279f9a48aa5ac3157d，freebsd.duckdb freebsd-src 仓库 commits 表 Jeff Roberson 提交，commit message 细节〔存疑：原文截断，待考〕）
-- 总纲第 6 条——形式主义膨胀与抽象克制，ULE 设计相对克制
+- 要点：ULE 调度器采用三个 per-CPU 队列 (current/next/idle) 设计，目标 O(1) 复杂度、CPU 亲和性、SMP 优化、交互式响应优先；算法基于时间片与交互性评分；ULE 首次 commit 于 2003-01-26T05:23:15Z（commit_hash = 35e6168fcdc76ba3ff2927279f9a48aa5ac3157d，freebsd.duckdb freebsd-src 仓库 commits 表 Jeff Roberson 提交，commit message 经 freebsd.duckdb commits 表验证为 “Add the ule scheduler. This is intended to be a general purpose process scheduler with many SMP benefits. It is still very experimental and should be used only in test environments.”（message_body 为空，主题行折叠空白已按规范合并；2026-09-11 回源补全））
+- 总纲第 25 条——逻辑是形式主义而非世界本身的结构，ULE 设计相对克制
   - 辨析：经 bsd_commits.duckdb commits 表验证，ULE 首次 commit 为 2003-01-26T05:23:15Z（5.0-RELEASE 之后 10 天，属 5.1-CURRENT 开发周期）；ULE 是否真 O(1)，EPFL 2018 论文证明存在饥饿问题
   - 文献：Roberson 论文；EPFL USENIX ATC 2018 论文；Jeff Roberson. Add the ule scheduler. freebsd-src [DB/OL]. 2003-01-26T05:23:15Z. commit: 35e6168fcdc76ba3ff2927279f9a48aa5ac3157d ［A］
-- 总纲第 4 条——0 信任原则，学术批评需独立验证
+- 总纲第 9 条——经验优先，学术批评需独立验证
   - 辨析：ULE 移植是否准确反映原版，需查移植方法
   - 文献：Bouron et al. USENIX ATC 2018 论文 ［B］
 - 默认禁用辨析：ULE 在 5.x 默认禁用 (4BSD 仍为默认)，因稳定性问题；6.0 起部分版本默认 ULE；7.1 起 ULE 成为默认（release/7.1.0 tagger_date = 2008-12-31T22:57:14Z，经 freebsd.duckdb tags 表验证：freebsd-src 仓库，tagger Ken Smith，tag_message “Copy releng/7.1 to release/7.1.0 for the 7.1-RELEASE.”；2026-09-11 回源补全）
