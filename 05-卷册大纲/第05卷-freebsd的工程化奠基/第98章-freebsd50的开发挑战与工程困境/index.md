@@ -31,26 +31,26 @@ volume: 第05卷-freebsd的工程化奠基
 - 总纲第 4 条——0 信任原则，学术批评需独立验证
   - 辨析：ULE 移植是否准确反映原版，需查移植方法
   - 文献：Bouron et al. USENIX ATC 2018 论文 ［B］
-- 默认禁用辨析：ULE 在 5.x 默认禁用 (4BSD 仍为默认)，因稳定性问题；6.0 起部分版本默认 ULE；7.1 起 ULE 成为默认（release/7.1.0 tagger_date = 2008-12-31T2〔存疑：原文截断，待考〕）
+- 默认禁用辨析：ULE 在 5.x 默认禁用 (4BSD 仍为默认)，因稳定性问题；6.0 起部分版本默认 ULE；7.1 起 ULE 成为默认（release/7.1.0 tagger_date = 2008-12-31T22:57:14Z，经 freebsd.duckdb tags 表验证：freebsd-src 仓库，tagger Ken Smith，tag_message “Copy releng/7.1 to release/7.1.0 for the 7.1-RELEASE.”；2026-09-11 回源补全）
   - 文献：Bouron et al. USENIX ATC 2018 论文 ［B］
 
 ## 98.10 Torvalds 对 VM 的辱骂性批评——四层辩证（批评—反批评—再批评—合图）（2026-09-11 整改按磁盘实况 98.10 归位，三次重复合并为一节）
 
 - 要点：【批评层】Linus Torvalds 曾在 Linux 内核邮件列表（LKML）中辱骂 FreeBSD VM 开发者为 “incompetent idiots”（不胜任的白痴），反映 BSD 与 Linux 社区在虚拟内存子系统设计哲学上的长期张力；该辱骂被 FreeBSD 社区长期记忆，成为 BSD 与 Linux 关系史中的标志性话语事件。需特别辨析：任务描述中提及的 “Alan Cox” 实〔存疑：原文截断，待考；2026-09-11 联网核验：语录一手出处为 Torvalds 2006-04-20 致 LKML 邮件 “Re: Linux 2.6.17-rc2”（针对 FreeBSD zero-copy COW 页表方案的批评），帖内未见 Alan Cox 参与〕　[存疑脚注] “incompetent idiots” 语录原文经 comp.unix.bsd.freebsd.misc 新闻组存档转载（含邮件头 From: Linus Torvalds, Subject: Re: Linux 2.6.17-rc2, Date: 2006-04-20）与 LWN 2008-02-12 报道转引双重核验，LKML 官方存档原始链接待补。（2026-09-11 整改补标）
-- 总纲第 7 条——性能回撤为可扩展性的代价。
+- 总纲第 3 条——不存在进步，只有权力再分配，性能回撤为可扩展性的代价。
   - 文献：SMPng 文档 ［A］；KSE 文档；7.0 发行说明 ［A］；Roberson 2003; 基准测试 ［A］
 
 ## 98.5 MAC 的策略架构（2026-09-11 整改按磁盘实况 98.5 归位，两次重复合并为一节）
 
 - 要点：MAC 策略架构：(1) 策略模块通过 MAC Framework 钩子介入内核；(2) 内核对象关联 label；(3) 策略检查在客体访问时执行；(4) 支持策略组合 (多策略并行)
 - 史料：**mac(4)** 手册页、Watson PhD 论文 ［A］
-- 史观：总纲第 9 条——简洁与复杂的辩证，多策略组合增加复杂性
+- 史观：总纲第 4 条——分离聚合是永恒规律，多策略组合增加复杂性
 - 辨析：多策略组合是否真可用，需查测试；MAC 是否真被广泛使用，需查部署案例
 - 文献：**mac(4)** 手册页；Watson BSDCon 2001 演讲；FreeBSD 5.0 Release Notes ［A］
 
 ## 文献
 
-- FreeBSD 5.0 Release Notes；BSDCon 2003 5.0 演讲；release/5.0.0. freebsd-src 仓库 tag [DB/OL]. 2003-01-16T16:56:23Z. tag: release/5.0.0; commit: 47227ef0ef663b7abb81ab5a60a450da9a93d24b；freebsd.duckdb L1.1.1 查询结果（freebsd-src 年度 commit 量 2002-2003）[DB/OL]；freebsd.duckdb L1.4.1 查询结果（freebsd-src release tag 间〔存疑：原文截断，待考〕）
+- FreeBSD 5.0 Release Notes；BSDCon 2003 5.0 演讲；release/5.0.0. freebsd-src 仓库 tag [DB/OL]. 2003-01-16T16:56:23Z. tag: release/5.0.0; commit: 47227ef0ef663b7abb81ab5a60a450da9a93d24b；freebsd.duckdb L1.1.1 查询结果（freebsd-src 年度 commit 量 2002-2003）[DB/OL]；freebsd.duckdb L1.4.1 查询结果（freebsd-src release tag 间〔待核：原文截断，待回源〕）
 - Roberson BSDCon 2003 论文 ［B］
 
 ## 自反性声明
