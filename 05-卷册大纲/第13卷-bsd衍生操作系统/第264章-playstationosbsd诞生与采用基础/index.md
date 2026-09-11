@@ -4,15 +4,15 @@ id: CH264
 volume: 第13卷-bsd衍生操作系统
 ---
 
-# 第 264 章 playstationosbsd诞生与采用基础
+# 第 264 章 PlayStation OS 诞生与 BSD 在游戏主机的采用基础，2006-2026
 
 ## 要点
 
 - PS3（2006）的 GameOS 在 Linux 早期支持撤回后，底层含 FreeBSD 派生组件，Sony 工程师在 BSD 会议（如 BSDCan）披露 PlayStation 对 FreeBSD 的使用；具体组件范围须以 Sony 工程演讲核实。
 - Sony 工程师（含日本籍与非英美成员）向 FreeBSD 回馈驱动/网络补丁，构成企业 →BSD 的代码流动案例。
 - 对比 PlayStation OS（FreeBSD）与 Xbox（Windows 定制内核）、Nintendo（专有/FreeBSD 混合），分析游戏主机 OS 的 BSD 占比。
-- 从用户与 BSD/Linux 阵营视角，Sony 移除 OtherOS 存在三重张力——（1）已交付功能的撤回：OtherOS 是 PS3 2006 年 11 月发售后即向用户承诺的功能，Yellow Dog Linux 5.0 于 2006 年 11 月发布官方支持 PS3，安装手册明确写道 "It was fully intended that you, a PS3 owner, could
-- Sony 阵营的移除正当性论证沿四条线索展开——（1）服务条款保留修改权：PS3 用户协议（PlayStation Network User Agreement）保留 Sony 修改系统软件与服务的权利，用户在激活 PS3 与登录 PSN 时已同意此条款，固件 3.21 移除 OtherOS 是 Sony 在用户协议框架内的合法权利行使，非合同违约——Sony 在 Ventura v. SCEA
+- 从用户与 BSD/Linux 阵营视角，Sony 移除 OtherOS 存在三重张力——（1）已交付功能的撤回：OtherOS 是 PS3 2006 年 11 月发售后即向用户承诺的功能，Yellow Dog Linux 5.0 于 2006 年 11 月发布官方支持 PS3，安装手册明确写道 "It was fully intended that you, a PS3 owner, could play games, watch movies, view photos, listen to music, and run a full-featured Linux operating system that transforms your PS3 into a home computer"；（2）“自愿更新”实质强制：拒绝更新将丧失 PSN、新游戏、蓝光电影等核心功能；（3）“安全理由”不透明：Sony 仅以 “due to security concerns” 为由未详述（2026-09-11 整改自本章 264.4 节回源补全）
+- Sony 阵营的移除正当性论证沿四条线索展开——（1）服务条款保留修改权：PS3 用户协议（PlayStation Network User Agreement）保留 Sony 修改系统软件与服务的权利，用户在激活 PS3 与登录 PSN 时已同意此条款，固件 3.21 移除 OtherOS 是 Sony 在用户协议框架内的合法权利行使，非合同违约——Sony 在 Ventura v. SCEA 案中主张 "its terms of service allowed it to remove the Other OS feature"（2026-09-11 整改自本章 264.4 节回源补全；其余三条线索详见 264.4 节）
 
 ## 史料
 
@@ -20,7 +20,7 @@ volume: 第13卷-bsd衍生操作系统
 
 ## 史观
 
-(待人工回填——详见子节文件史观/辨析字段)
+- 总纲第 13 条（法律与道德是利益分配）与总纲第 11 条（商品是形式主义）：PS3 OtherOS 移除争议呈现 Sony 商业利益（防盗版、维护游戏生态）与用户权益（已交付功能保留）的利益分配冲突，“自愿更新”是商品形式主义下形式自愿对实质强制的掩盖；总纲第 2 条（历史是形式主义化的非存在）：用户协议的形式主义文本先于实质的功能撤回；企业→BSD 的代码流动案例须与社区主导移植（FreeBSD PS3 支持由 Nathan Whitehorn 等社区成员于 2011 年导入）区分呈现（2026-09-11 整改回填，归纳自本章 264.4 节史观字段）
 
 ## 辨析
 
