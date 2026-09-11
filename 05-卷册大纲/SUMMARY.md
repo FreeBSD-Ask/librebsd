@@ -1730,7 +1730,7 @@
   - [204.5 与 NetBSD 1.x 的源码共享与逐步分化](./第10卷-openbsd的历史/第204章-openbsd的起源从netbsd分叉/204.5-与netbsd1x的源码共享与逐步分化.md)
   - [204.6 **与同时期操作系统的比较](./第10卷-openbsd的历史/第204章-openbsd的起源从netbsd分叉/204.6-与同时期操作系统的比较.md)
   - [204.7 NetBSD Core Team 回应层（反批评层）——Adam Glass（亚当·格拉斯）通知邮件的逐条考证与 Core Team 的程序性发声策略](./第10卷-openbsd的历史/第204章-openbsd的起源从netbsd分叉/204.7-netbsdcoreteam回应层反批评层adamglass通知邮件的逐条考证与.md)
-  - [204.8 de Raadt 行动性再回应层（再批评层）——OpenBSD 1.0/2.1/2.2 早期版本时间线与卡尔加里据点运作](./第10卷-openbsd的历史/第204章-openbsd的起源从netbsd分叉/204.8-deraadt行动性再回应层再批评层openbsd101112.md)
+  - [204.8 de Raadt 行动性再回应层（再批评层）——OpenBSD 1.0/1.1/1.2 早期版本时间线与卡尔加里据点运作](./第10卷-openbsd的历史/第204章-openbsd的起源从netbsd分叉/204.8-deraadt行动性再回应层再批评层openbsd101112.md)
   - [204.9 辩证链合图——de Raadt 被逐事件的不可调和性与史观审视](./第10卷-openbsd的历史/第204章-openbsd的起源从netbsd分叉/204.9-辩证链合图deraadt被逐事件的不可调和性与史观审视.md)
   - [204.10 项目统摄史观审视——偶然性、本体论平等与解释学循环](./第10卷-openbsd的历史/第204章-openbsd的起源从netbsd分叉/204.10-项目统摄史观审视偶然性本体论平等与解释学循环.md)
   - [204.11 批评层——de Raadt 被逐过程的程序正义批评](./第10卷-openbsd的历史/第204章-openbsd的起源从netbsd分叉/204.11-批评层deraadt被逐过程的程序正义批评.md)
