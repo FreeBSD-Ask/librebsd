@@ -40,29 +40,13 @@ volume: 第05卷-freebsd的工程化奠基
 - 总纲第 7 条——性能回撤为可扩展性的代价。
   - 文献：SMPng 文档 ［A］；KSE 文档；7.0 发行说明 ［A］；Roberson 2003; 基准测试 ［A］
 
-## 辨析
+## 98.5 MAC 的策略架构（2026-09-11 整改按磁盘实况 98.5 归位，两次重复合并为一节）
 
-- 经 bsd_commits.duckdb tags 表验证，5.0-RELEASE 的 tagger_date 为 2003-01-16（非旧叙事 2003.1.19，误差 3 天，可能为公告日期与 tag 日期差异），5.0 开发起始日期存在 2000.3 与 2000.1 两种说法，需查 SVN；0 信任原则适用说明：L1.1.1 年度 commit 量基于 author_date 聚合，FreeBS
-- Roberson 批评是否公平，需独立验证 4BSD 调度器性能
-  - 文献：Roberson BSDCon 2003 论文 ［B］
-
-## 97.4.2 ULE 的双队列设计
-
-- 要点：ULE 调度器采用三个 per-CPU 队列 (current/next/idle) 设计，目标 O(1) 复杂度、CPU 亲和性、SMP 优化、交互式响应优先；算法基于时间片与交互性评分；ULE 首次 co
-- 经 bsd_commits.duckdb commits 表验证，ULE 首次 commit 为 2003-01-26T05:23:15Z（5.0-RELEASE 之后 10 天，属 5.1-CURRENT 开发周期）；ULE 是否真 O(1)，EPFL 2018 论文证明存在饥饿问题
-  - 文献：Roberson 论文；EPFL USENIX ATC 2018 论文；Jeff Roberson. Ad
-- ULE 移植是否准确反映原版，需查移植方法
-  - 文献：Bouron et al. USENIX ATC 2018 论文 ［B］
-
-## 97.10.2 Torvalds 对 VM 的辱骂性批评——四层辩证（批评—反批评—再批评—合图）
-
-- 要点：【批评层】Linus Torvalds 据传曾在 Linux 内核邮件列表（LKML）中辱骂 FreeBSD VM 开发者为 "incompeten
-- MAC 是否真被广泛使用，需查部署案例
-  - 文献：Watson BSDCon 2001 演讲；mac(4) 手册页；FreeBSD 5.0 Release Notes ［A］
-
-## 97.5.2 MAC 的策略架构
-
-- 要点：MAC 策略架构：(1) 策略模块通过 MAC Framework 钩子介入内核；(2) 内核对象关联 label;(3) 策略检查在客体访问时执行；(4) 支持策略
+- 要点：MAC 策略架构：(1) 策略模块通过 MAC Framework 钩子介入内核；(2) 内核对象关联 label；(3) 策略检查在客体访问时执行；(4) 支持策略组合 (多策略并行)
+- 史料：**mac(4)** 手册页、Watson PhD 论文 ［A］
+- 史观：总纲第 9 条——简洁与复杂的辩证，多策略组合增加复杂性
+- 辨析：多策略组合是否真可用，需查测试；MAC 是否真被广泛使用，需查部署案例
+- 文献：**mac(4)** 手册页；Watson BSDCon 2001 演讲；FreeBSD 5.0 Release Notes ［A］
 
 ## 文献
 
