@@ -33,13 +33,12 @@ volume: 第06卷-freebsd的核心技术革新
 
 - Debian Project. Debian Packages [EB/OL]. [2026-07-23]. <https://packages.debian.org/>; FreeBSD Project. Ports Collection [EB/OL]. [2026-07-23]. <https://www.freebsd.org/ports/>; FreeBSD 10.0-RELEASE Announcement [Z]. 2014-01-20.［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
 
-<!-- DB_REF:freebsd.duckdb -->
-> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 2010-2020 年间：488,947 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
 - Apache Software Foundation. Apache License, Version 2.0 [Z]. 2004-01（§3）; Free Software Foundation. Various Licenses and Comments about Them: Apache 2.0 [EB/OL]. [2026-07-23]. <https://www.gnu.org/licenses/license-list.html#apache2>; LLVM Project. LLVM License Change to Apache 2.0 [EB/OL]. 2019; GCC Steering Committee. GCC Governance [EB/OL]. [2026-07-23]. <https://gcc.gnu.org/>; LLVM Foundation. Governance [EB/OL].［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］. ［A］
+- FreeBSD Project. freebsd.duckdb freebsd-src 仓库 commit 数据库 [DB/OL]. 2026-07-27. **03-原始史料库/01-代码仓库史料/01-数据库本体/freebsd.duckdb**; Hibsd Project. 推断性统计.md [R/OL]. 2026-07-27. **03-原始史料库/01-代码仓库史料/01-数据库本体/统计分析/推断性统计.md** Task 5; Hibsd Project. 卷章数据映射.md [R/OL]. 2026-07-27. **03-原始史料库/01-代码仓库史料/01-数据库本体/统计分析/卷章数据映射.md** 第五卷第 57 章映射。［A］
 
 <!-- DB_REF:freebsd.duckdb -->
-> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 2010-2020 年间：488,947 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
-- FreeBSD Project. freebsd.duckdb freebsd-src 仓库 commit 数据库 [DB/OL]. 2026-07-27. **03-原始史料库/01-代码仓库史料/01-数据库本体/freebsd.duckdb**; Hibsd Project. 推断性统计.md [R/OL]. 2026-07-27. **03-原始史料库/01-代码仓库史料/01-数据库本体/统计分析/推断性统计.md** Task 5; Hibsd Project. 卷章数据映射.md [R/OL]. 2026-07-27. **03-原始史料库/01-代码仓库史料/01-数据库本体/统计分析/卷章数据映射.md** 第五卷第 57 章映射。［A］### 史观映射> 9.x 不是什么 “新一代”，而是 8.x 到 10.x 之间一座漫长的桥。bsdinstall 在 9.0 替换了年迈的 sysinstall，但 sysinstall 还在；Clang 导入了 base，但 GCC 4.2.1 仍是默认；Capsicum 进了 GENERIC，但标记为实验性；bhyve 在 -CURRENT 里写着，但 10.0 才正式发布；pkgng 在 ports 里孵化，pkg_add 仍在统治世界。Sony 把 FreeBSD 9.0 塞进 PS4，不是因为 9.0 比 Linux 更好，而是因为 BSD 许可证允许闭源——在这个版本里，你能看到许可证纯洁化工程的序幕（BSD patch 替换 GNU patch）和安全灾难（2012 年入侵），能看到 丹尼斯·里奇 的献辞和从数据中心到游戏主机的版图扩张。9.3 被支持到 2017 年不是偶然——它是旧世界（GPL 工具、sysinstall、pkg_add、GCC 默认）的最后一个稳定坐标。---> ## 第 57.24 不同时期人员的采访录（详见 [采访录.md](采访录.md)）> ## 第 57.24 不同时期人员的采访录（详见 [采访录.md](采访录.md)）## 第 57.25 节 媒体反响与社区舆论（详见 [媒体反响与社区舆论.md](媒体反响与社区舆论.md)）## 第 57.25 节 媒体反响与社区舆论（详见 [媒体反响与社区舆论.md](媒体反响与社区舆论.md)）
+> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。
+> 2010-2020 年间：488,947 次提交。
+> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
 
-<!-- DB_REF:freebsd.duckdb -->
-> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 2010-2020 年间：488,947 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
+> **旧章残段处置登记（2026-09-11 整改）**：原行尾混入的旧第 57 章“史观映射”长评（9.x 桥梁论）已回填至本文件史观字段；旧 57.24“不同时期人员的采访录”、57.25“媒体反响与社区舆论”标题残段（各重复两次）已移除——采访录.md、媒体反响与社区舆论.md 两节未随旧章拆分迁移至本章磁盘目录（磁盘实况仅 126.21-126.23），所指内容无落盘载体，登记备考，待卷级规划决定补齐或放弃；原有三个重复 DB_REF 块合并为本规范块，引用行按节文件规范形态分行。
