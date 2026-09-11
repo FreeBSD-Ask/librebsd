@@ -4,7 +4,7 @@ id: CH98
 volume: 第05卷-freebsd的工程化奠基
 ---
 
-# 第98章 freebsd50的开发挑战与工程困境
+# 第 98 章 freebsd50的开发挑战与工程困境
 
 ## 要点
 
@@ -17,26 +17,28 @@ volume: 第05卷-freebsd的工程化奠基
 ## 史观
 
 - 总纲第 2 条——实践先于理论，3 年延期源于 SMPng 工程挑战而非计划
-  - 辨析：经 bsd_commits.duckdb tags 表验证，5.0-RELEASE 的 tagger_date 为 2003-01-16（非旧叙事 2003.1.19，误差 3 天，可能为公告日期与 tag 日期差异），5.0 开发起始日期存在 2000.3 与 2000.1 两种说法，需查 SVN；0 信任原则适
+  - 辨析：经 bsd_commits.duckdb tags 表验证，5.0-RELEASE 的 tagger_date 为 2003-01-16（非旧叙事 2003.1.19，误差 3 天，可能为公告日期与 tag 日期差异），5.0 开发起始日期存在 2000.3 与 2000.1 两种说法，需查 SVN；0 信任原则适用说明：L1.1.1 年度 commit 量基于 author_date 聚合，FreeBS〔存疑：原文截断，待考〕
 - 总纲第 5 条——技术债务与代码考古，4BSD 调度器是 1980s 设计的债务
   - 辨析：Roberson 批评是否公平，需独立验证 4BSD 调度器性能
   - 文献：Roberson BSDCon 2003 论文 ［B］
 
-## 97.4.2 ULE 的双队列设计
+## 98.4 ULE 的双队列设计（2026-09-11 整改按磁盘实况 98.4 归位，三次重复合并为一节）
 
-- 要点：ULE 调度器采用三个 per-CPU 队列 (current/next/idle) 设计，目标 O(1) 复杂
+- 要点：ULE 调度器采用三个 per-CPU 队列 (current/next/idle) 设计，目标 O(1) 复杂度、CPU 亲和性、SMP 优化、交互式响应优先；算法基于时间片与交互性评分；ULE 首次 commit 于 2003-01-26T05:23:15Z（commit_hash = 35e6168fcdc76ba3ff2927279f9a48aa5ac3157d，freebsd.duckdb freebsd-src 仓库 commits 表 Jeff Roberson 提交，commit message 细节〔存疑：原文截断，待考〕）
 - 总纲第 6 条——形式主义膨胀与抽象克制，ULE 设计相对克制
   - 辨析：经 bsd_commits.duckdb commits 表验证，ULE 首次 commit 为 2003-01-26T05:23:15Z（5.0-RELEASE 之后 10 天，属 5.1-CURRENT 开发周期）；ULE 是否真 O(1)，EPFL 2018 论文证明存在饥饿问题
-  - 文献：Roberson 论文；EP
+  - 文献：Roberson 论文；EPFL USENIX ATC 2018 论文；Jeff Roberson. Add the ule scheduler. freebsd-src [DB/OL]. 2003-01-26T05:23:15Z. commit: 35e6168fcdc76ba3ff2927279f9a48aa5ac3157d ［A］
 - 总纲第 4 条——0 信任原则，学术批评需独立验证
   - 辨析：ULE 移植是否准确反映原版，需查移植方法
   - 文献：Bouron et al. USENIX ATC 2018 论文 ［B］
+- 默认禁用辨析：ULE 在 5.x 默认禁用 (4BSD 仍为默认)，因稳定性问题；6.0 起部分版本默认 ULE；7.1 起 ULE 成为默认（release/7.1.0 tagger_date = 2008-12-31T2〔存疑：原文截断，待考〕）
+  - 文献：Bouron et al. USENIX ATC 2018 论文 ［B］
 
-## 97.10.2 Torvalds 对 VM 的辱骂性批评——四层辩证（批评—反批评—再批评—合图）
+## 98.10 Torvalds 对 VM 的辱骂性批评——四层辩证（批评—反批评—再批评—合图）（2026-09-11 整改按磁盘实况 98.10 归位，三次重复合并为一节）
 
-- 要点：【批评层】Linus Torvalds 据传曾在 Linux 内核邮件列表（LKM〔待核：原文截断〕
+- 要点：【批评层】Linus Torvalds 曾在 Linux 内核邮件列表（LKML）中辱骂 FreeBSD VM 开发者为 “incompetent idiots”（不胜任的白痴），反映 BSD 与 Linux 社区在虚拟内存子系统设计哲学上的长期张力；该辱骂被 FreeBSD 社区长期记忆，成为 BSD 与 Linux 关系史中的标志性话语事件。需特别辨析：任务描述中提及的 “Alan Cox” 实〔存疑：原文截断，待考；2026-09-11 联网核验：语录一手出处为 Torvalds 2006-04-20 致 LKML 邮件 “Re: Linux 2.6.17-rc2”（针对 FreeBSD zero-copy COW 页表方案的批评），帖内未见 Alan Cox 参与〕　[存疑脚注] “incompetent idiots” 语录原文经 comp.unix.bsd.freebsd.misc 新闻组存档转载（含邮件头 From: Linus Torvalds, Subject: Re: Linux 2.6.17-rc2, Date: 2006-04-20）与 LWN 2008-02-12 报道转引双重核验，LKML 官方存档原始链接待补。（2026-09-11 整改补标）
 - 总纲第 7 条——性能回撤为可扩展性的代价。
-- 文献：SMPng 文档 ［A］
+  - 文献：SMPng 文档 ［A］；KSE 文档；7.0 发行说明 ［A］；Roberson 2003; 基准测试 ［A］
 
 ## 辨析
 
