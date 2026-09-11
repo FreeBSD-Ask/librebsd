@@ -23,59 +23,59 @@ volume: 第07卷-freebsd的工程体系重构
 ## 史观
 
 - 总纲第 12 条——法律结构：这一判决对 BSD 社区具有特殊历史意义——BSD 从诞生之日起就在重新实现 UNIX API（从 BSD 4.x 到 386BSD 到 FreeBSD），API 重新实现的法律地位长期处于灰色地带；最高法院的判决为“重新实现 API 构成 fair use”提供了法律确定性，这是 BSD 社区 40 年实践的法律背书
-  - 辨析：判决并未直接裁定“API 不受版权
+  - 辨析：判决并未直接裁定“API 不受版权保护”——多数意见回避了这一宪法问题，而是基于 fair use 作出判决，这是司法最小主义（judicial minimalism）的体现；判决对软件行业影响深远，但具体边界仍需后续案件澄清
 - 总纲第 7 条——BSD 与 UNIX 谱系的连续性：MIPS 是 RISC 处理器的先驱，SGI IRIX 是重要的商业 UNIX 平台；FreeBSD 对 MIPS 的支持延续了 BSD 在非 x86 架构上的传统，但市场和技术的变化使其退役成为必然
-  - 辨析：13.0 是 MIPS 降级而非完全移除——MIPS 代码在 13.x 源码树中仍存在但不再作为正式支持架构；MIPS 完全移除发
+  - 辨析：13.0 是 MIPS 降级而非完全移除——MIPS 代码在 13.x 源码树中仍存在但不再作为正式支持架构；MIPS 完全移除发生在 FreeBSD 14.0；与 sparc64、PC98、armv6 等退役架构类似，MIPS 退役是架构生态演化的自然结果
 - 总纲第 23 条——社区治理：Core Team 两年一次的选举制度是 FreeBSD 治理形式化的体现——定期换届防止权力固化，选举过程向所有 committer 开放，这一制度自 FreeBSD 项目早期延续至今
-  - 辨析：Core Team 成员名单随选举变动，具体成员列表需查阅对应年份的官方公告，本书记载的是制度层面的延续性而非特定个人；〔待核：原文截断，后文待回源〕
+  - 辨析：Core Team 成员名单随选举变动，具体成员列表需查阅对应年份的官方公告，本书记载的是制度层面的延续性而非特定个人；Core Team 决策通常采用协商一致（consensus）原则，而非投票表决，这是 BSD 社区的传统治理风格
 - 总纲第 4 条——分离与聚合：ZFS 从 illumos/FreeBSD/Linux 三端分叉（分离）到 OpenZFS 统一代码库（聚合），是开源项目“分久必合”的典型案例——分叉让各平台快速适配，统一后共享维护成本
-  - 辨析：OpenZFS 2.0 统一发生在 13.0 发布前（2020-11），13.0 是首个包含统一 OpenZFS 的 FreeBSD 大版本；13.0 之前 Free
-- 总纲第 6 条——技术路线分化：Linux ABI 兼容层体现了 FreeBSD 的实用主义哲学——不做宗教式的“Not Invented Here”排斥，而是承认 Linux 软件生态的主导地位，提供兼容层让用户能够运行需要的软件，同时保留 FreeBSD 内核和用户态的优势
-  - 辨析：Linux ABI 层不是“Linux 虚拟机”——它直接在 FreeBSD 内核上运行 Linux 二进
+  - 辨析：OpenZFS 2.0 统一发生在 13.0 发布前（2020-11），13.0 是首个包含统一 OpenZFS 的 FreeBSD 大版本；13.0 之前 FreeBSD ZFS 维护独立分支，与 ZoL（ZFS on Linux）、illumos ZFS 存在代码分叉，这一分叉状态持续了约 13 年（2007-2020）
+- 总纲第 6 条——和解优于斗争：Linux ABI 兼容层体现了 FreeBSD 的实用主义哲学——不做宗教式的“Not Invented Here”排斥，而是承认 Linux 软件生态的主导地位，提供兼容层让用户能够运行需要的软件，同时保留 FreeBSD 内核和用户态的优势
+  - 辨析：Linux ABI 层不是“Linux 虚拟机”——它直接在 FreeBSD 内核上运行 Linux 二进制，没有硬件虚拟化开销，但也并非 100% 兼容；某些 Linux 特定内核功能、驱动、cgroups 深度依赖的程序可能无法正常运行；支持的 Linux 发行版版本有特定范围，不是所有 Debian/Ubuntu 版本都支持
 
 ## 辨析
 
 - 判决并未直接裁定“API 不受版权保护”——多数意见回避了这一宪法问题，而是基于 fair use 作出判决，这是司法最小主义（judicial minimalism）的体现；判决对软件行业影响深远，但具体边界仍需后续案件澄清
-  - 文献：Supreme Court of the United States. (2021-04-05). *Google LLC v. Oracle America
+  - 文献：Supreme Court of the United States. (2021-04-05). *Google LLC v. Oracle America, Inc., 593 U.S. 1*; Electronic Frontier Foundation. (2021). *Supreme Court Rules API Copying Is Fair Use*. eff.org.
 - 13.0 是 MIPS 降级而非完全移除——MIPS 代码在 13.x 源码树中仍存在但不再作为正式支持架构；MIPS 完全移除发生在 FreeBSD 14.0；与 sparc64、PC98、armv6 等退役架构类似，MIPS 退役是架构生态演化的自然结果
-  - 文献：FreeBSD Project. (2021). *13.0 Release Notes* (Architectures se
+  - 文献：FreeBSD Project. (2021). *13.0 Release Notes* (Architectures section); Tymoshenko, O. (2020-2021). freebsd-mips mailing list posts on MIPS support status.
 - Core Team 成员名单随选举变动，具体成员列表需查阅对应年份的官方公告，本书记载的是制度层面的延续性而非特定个人；Core Team 决策通常采用协商一致（consensus）原则，而非投票表决，这是 BSD 社区的传统治理风格
-  - 文献：FreeBSD Project. *Core Team Information*. freebsd.org/core/; FreeBSD Projec
-- OpenZFS 2.0 统一发生在 13.0 发布前（2020-11），13.0 是首个包含统一 OpenZFS 的 FreeBSD 大版本；13.0 之前 FreeBSD ZFS 维护独立分支，与 ZoL（ZFS on Linux）、illumos ZFS 存在代码分叉，这一分叉状态持续了约 13 年（2007-2020）；〔待核：原文截断，后文待回源〕
+  - 文献：FreeBSD Project. *Core Team Information*. freebsd.org/core/; FreeBSD Project. *Core Team Election Results* (2020, 2022, 2024). freebsd.org.
+- OpenZFS 2.0 统一发生在 13.0 发布前（2020-11），13.0 是首个包含统一 OpenZFS 的 FreeBSD 大版本；13.0 之前 FreeBSD ZFS 维护独立分支，与 ZoL（ZFS on Linux）、illumos ZFS 存在代码分叉，这一分叉状态持续了约 13 年（2007-2020）；ZFS 文件系统本身的历史详见相关章节，本节仅讨论 13.x 时期（2021-2024）的 OpenZFS 代码库合并与版本演进，不重复 ZFS 起源叙事
 - Linux ABI 层不是“Linux 虚拟机”——它直接在 FreeBSD 内核上运行 Linux 二进制，没有硬件虚拟化开销，但也并非 100% 兼容；某些 Linux 特定内核功能、驱动、cgroups 深度依赖的程序可能无法正常运行；支持的 Linux 发行版版本有特定范围，不是所有 Debian/Ubuntu 版本都支持
-  - 文献**：FreeBSD Project. April 2021 announcements; Supreme Court decision date; Git migration announcement date. ［A］
+  - 文献：FreeBSD Project. **linux(4)** Manual Page; FreeBSD Project. *Linux Emulation* wiki page; freebsd-emulation mailing list.
 
 ## 文献
 
 - Supreme Court of the United States. (2021-04-05). *Google LLC v. Oracle America, Inc., 593 U.S. 1*; Electronic Frontier Foundation. (2021). *Supreme Court Rules API Copying Is Fair Use*. eff.org.［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
 
-## 148.10.2 判决对 BSD 与开
+## 149.10.2 判决对 BSD 与开源生态的意义
 
 - FreeBSD Project. (2021). *13.0 Release Notes* (Architectures section); Tymoshenko, O. (2020-2021). freebsd-mips mailing list posts on MIPS support status. ［A］
 
-## 148.11.2 riscv64sf（软浮点 RISC-V）退役与 riscv64 演进
+## 149.11.2 riscv64sf（软浮点 RISC-V）退役与 riscv64 演进
 
-- 要点：FreeBSD 13.0 移除了 riscv64sf（64 位 RISC-V 软浮点变体）架构支持，仅保留 riscv64（hard-float）作为 Tier-2 支持；
+- 要点：FreeBSD 13.0 移除了 riscv64sf（64 位 RISC-V 软浮点变体）架构支持，仅保留 riscv64（hard-float）作为 Tier-2 支持；riscv64 与 riscv64sf 最初由 Ruslan Bukin、Mitchell Horne（米切尔·霍恩） 等于 FreeBSD 12.0 时期移植；riscv64sf 退役原因：(1) RISC-V 规范明确 hard-float 为标准配置，软浮点仅用于早期 FPGA 原型和模拟器；(2) 主流 RISC-V 硬件（SiFive U74、Allwinner D1、StarFive JH7110 等）均使用 hard-float；(3) 维护两个 ABI 变体成本高于收益；(4) riscv64sf 实际用户基数极小；riscv64 在 13.x 期间持续改进，但仍保持 Tier-2 地位，13.x 发布 RISC-V 虚拟机镜像但不提供 RELEASE 级别的阻塞保证
 - FreeBSD Project. *Core Team Information*. freebsd.org/core/; FreeBSD Project. *Core Team Election Results* (2020, 2022, 2024). freebsd.org. ［A］
 
-## 148.5.2 Security Officer 与安全团队
+## 149.5.2 Security Officer 与安全团队
 
-- 要点：FreeBSD 13.0-RELEASE 时 Security Officer 为 Gordon Tetlow（戈登·泰特洛），Ed Maste（埃德·马斯特） 担任 Security Officer Deputy；Securit
+- 要点：FreeBSD 13.0-RELEASE 时 Security Officer 为 Gordon Tetlow（戈登·泰特洛），Ed Maste（埃德·马斯特） 担任 Security Officer Deputy；Security Officer Team 负责安全漏洞处理、安全公告发布、安全更新协调；13.x 期间 FreeBSD 处理了多个安全漏洞，包括但不限于：CPU 侧信道漏洞（Spectre/Meltdown 系列后续变种）、网络栈漏洞、加密库问题等；WireGuard 争议也促使 Security Team 更早介入新安全功能的审查；FreeBSD 安全公告通过 freebsd-security-notify@ 邮件列表发布
 - OpenZFS Project. (2020-11-30). *OpenZFS 2.0.0 Release Notes*. github.com/openzfs/zfs/releases; FreeBSD Release Engineering Team. (2021-2024). 13.x Release Notes ZFS sections.［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
 
-## 148.6.2 OpenZFS 2.1 核心特性：zstd 压缩、Persist
+## 149.6.2 OpenZFS 2.1 核心特性：zstd 压缩、Persistent L2ARC、Sequential Resilver、dRAID
 
 - FreeBSD Project. **linux(4)** Manual Page; FreeBSD Project. *Linux Emulation* wiki page; freebsd-emulation mailing list. ［A］
 
-## 148.7.2 bhyve 虚拟化改进
+## 149.7.2 bhyve 虚拟化改进
 
-- 要点：bhyve（BSD Hypervisor）是 FreeBSD 原生虚拟化管理器，13.x 期间持续改进：(1) **13.2 起支持超过 16 个 vCPU**：bhyve 客户机之前限制最多 16 个 vCPU，13.2 解除此限制，支持更多 vCPU 以适配高性能工作负载；(2) AM
+- 要点：bhyve（BSD Hypervisor）是 FreeBSD 原生虚拟化管理器，13.x 期间持续改进：(1) **13.2 起支持超过 16 个 vCPU**：bhyve 客户机之前限制最多 16 个 vCPU，13.2 解除此限制，支持更多 vCPU 以适配高性能工作负载；(2) AMD-V（AMD-Vi/AMD IOMMU）和 Intel VT-d（IOMMU）改进，包括 PCI passthrough 稳定性提升；(3) 更多外设模拟改进：NVMe 控制器模拟、virtio 设备性能改进；(4) UEFI 固件改进；(5) 快照/迁移功能持续完善；(6) 对 Linux、Windows、其他 BSD 客户机的兼容性改进；bhyve 是 FreeBSD 基金会持续资助的项目之一，iXsystems、Netgate 等公司在产品中使用 bhyve
 - 13.x 文档； OpenBSD 安全文档 ［A］
 - FreeBSD Project. src/conf/COMMITTERS; FreeBSD Release Engineering Team. (2022-05-16). 13.1-RELEASE Dedication to Bill Jolitz; FreeBSD Foundation. Annual Reports contributor lists. ［A］
 
-## 148.9.2 Git 迁移后新贡献者路径
+## 149.9.2 Git 迁移后新贡献者路径
 
-- 要点：Git 迁移完成后，新贡献者参与 FreeBSD 的路径更加清晰：(1) 在 GitHub 镜像（github.com/freebsd/freebsd-src）提交 P
+- 要点：Git 迁移完成后，新贡献者参与 FreeBSD 的路径更加清晰：(1) 在 GitHub 镜像（github.com/freebsd/freebsd-src）提交 Pull Request，或在 reviews.freebsd.org 提交 Gerrit 审查；(2) 经过 committer 审查后代码可被合入；(3) 多次高质量贡献后可申请 committer 权限，由现有 committer 推荐、Core Team 投票；(4) FreeBSD 基金会举办“FreeBSD Friday”等线上活动指导新贡献者；(5) Google 编程之夏（编程之夏）每年接收学生为 FreeBSD 贡献功能；与 svn 时代相比，Git 降低了参与门槛，但 committer 标准并未降低——仍需要展示对 FreeBSD 代码风格、工程文化的理解
 
 ## 自反性声明
 
