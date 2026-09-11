@@ -50,34 +50,8 @@ volume: 第05卷-freebsd的工程化奠基
 
 ## 文献
 
-- FreeBSD 5.0 Release Notes；BSDCon 2003 5.0 演讲；release/5.0.0. freebsd-src 仓库 tag [DB/OL]. 2003-01-16T16:56:23Z. tag: release/5.0.0; commit: 47227ef0ef663b7abb81ab5a60a450da9a93d24b；freebsd.duckdb L1.1.1 查询结果（freebsd-src 年度 commit 量 2002-2003）[DB/OL]；freebsd.duckdb L1.4.1 查询结果（freebsd-src release tag 间
+- FreeBSD 5.0 Release Notes；BSDCon 2003 5.0 演讲；release/5.0.0. freebsd-src 仓库 tag [DB/OL]. 2003-01-16T16:56:23Z. tag: release/5.0.0; commit: 47227ef0ef663b7abb81ab5a60a450da9a93d24b；freebsd.duckdb L1.1.1 查询结果（freebsd-src 年度 commit 量 2002-2003）[DB/OL]；freebsd.duckdb L1.4.1 查询结果（freebsd-src release tag 间〔存疑：原文截断，待考〕）
 - Roberson BSDCon 2003 论文 ［B］
-
-## 97.4.2 ULE 的双队列设计
-
-- 要点：ULE 调度器采用三个 per-CPU 队列 (current/next/idle) 设计，目标 O(1) 复杂度、CPU 亲和性、SMP 优化、交互式响应优先；算法基于时间片与交互性评分；ULE 首次 commit 于 2003-01-26T05:23:15Z（commit_hash = 35e6168fcdc76ba3ff2927279f9a48aa5ac3157d，freebsd.duckdb freebsd-src 仓库 commits 表 Jeff Roberson 提交，mess
-- Roberson 论文；EPFL USENIX ATC 2018 论文；Jeff Roberson. Add the ule scheduler. freebsd-src [DB/OL]. 2003-01-26T05:23:15Z. commit: 35e6168fcdc76ba3ff2927279f9a48aa5ac3157d ［A］
-
-## 97.4.3 默认禁用的辨析
-
-- 要点：ULE 在 5.x 默认禁用 (4BSD 仍为默认)，因稳定性问题；6.0 起部分版本默认 ULE；7.1 起 ULE 成为默认（release/7.1.0 tagger_date = 2008-12-31T2
-- Bouron et al. USENIX ATC 2018 论文 ［B］
-
-## 97.10.2 Torvalds 对 VM 的辱骂性批评——四层辩证（批评—反批评—再批评—合图）
-
-- 要点：【批评层】Linus Torvalds 据传曾在 Linux 内核邮件列表（LKML）中辱骂 FreeBSD VM 开发者为 “incompetent idiots”（不胜任的白痴），反映 BSD 与 Linux 社区在虚拟内存子系统设计哲学上的长期张力；该辱骂被 FreeBSD 社区长期记忆，成为 BSD 与 Linux 关系史中的标志性话语事件。需特别辨析：任务描述中提及的 “Alan Cox” 实
-- SMPng 文档 ［A］
-- KSE 文档； 7.0 发行说明 ［A］
-- Roberson 2003; 基准测试 ［A］
-- Watson BSDCon 2001 演讲；mac(4) 手册页；FreeBSD 5.0 Release Notes ［A］
-
-## 97.5.2 MAC 的策略架构
-
-- 要点：MAC 策略架构：(1) 策略模块通过 MAC Framework 钩子介入内核；(2) 内核对象关联 label;(3) 策略检查在客体访问时执行；(4) 支持策略组合 (多策略并行)
-- 史料：mac(4) 手册页、Watson PhD 论文 ［A］
-- 史观：总纲第 9 条——简洁与复杂的辩证，多策略组合增加复杂性
-- 辨析：多策略组合是否真可用，需查测试
-- 文献：mac(4) 手册页；Wat
 
 ## 自反性声明
 
