@@ -25,8 +25,8 @@ volume: 第02卷-伯克利的岁月
 - [DB:references_fulltext:chapter_matches:chmatch_4187] 卷“第02卷-伯克利的岁月”第 27 章，匹配置信度 1.0，原因：PSD:13 RCS 功能说明
 - [DB:references_fulltext:chapter_matches:chmatch_4189] 卷“第02卷-伯克利的岁月”第 27 章，匹配置信度 1.0，原因：PSD:19 curses 屏幕库
 - [DB:references_fulltext:chapter_matches:chmatch_4212] 卷“第02卷-伯克利的岁月”第 27 章，匹配置信度 1.0，原因：USD:4 C shell 入门
-- [DB:references_fulltext:key_facts:kf_7314] 类别"origin"：C Shell（csh）由 Bill Joy 在伯克利开发，作为交互式命令行解释器随 BSD 发行。
-- [DB:references_fulltext:key_facts:kf_8353] 类别"quote-kaoju"：Bill Joy 引述部分英文段落(如 Hubbard 对 Joy 的描述)疑为中文回译——已标注, 英文引述须谨慎
+- [DB:references_fulltext:key_facts:kf_7314] 类别“origin”：C Shell（csh）由 Bill Joy 在伯克利开发，作为交互式命令行解释器随 BSD 发行。
+- [DB:references_fulltext:key_facts:kf_8353] 类别“quote-kaoju”：Bill Joy 引述部分英文段落(如 Hubbard 对 Joy 的描述)疑为中文回译——已标注, 英文引述须谨慎
 - [DB:references_fulltext:people_mentioned:p_34] 文献 ref 55 提及 Bill Joy，3 次
 - [DB:references_fulltext:people_mentioned:p_109] 文献 ref 499 提及 Bill Joy，1 次
 - [DB:references_fulltext:people_mentioned:p_126] 文献 ref 506 提及 Bill Joy，1 次
@@ -94,49 +94,49 @@ FreeBSD 发展关键里程碑
 - [DB:ziliao:materials:mat_2727] 类型“未分类”：1BSD/2BSD/3BSD 贡献者清单
 - [DB:ziliao:materials:mat_2737] 类型“未分类”：1BSD READ_ME 原始文件（1977-11-23，TUHS 归档，记载 ex-1.1）；Joy 与 Haley 在伯克利的开发笔记；Coulouris 在 Queen Mary College 的 em 源码（1975）；Bill
 - [DB:ziliao:materials:mat_2738] 类型“一手”：Thompson 在伯克利 1975-1976 访问学者档案；Joy 的 Berkeley Pascal User's Manual（1977）；1BSD 磁带源码（Pascal 子目录）；CSRG 早期邮件存档；McKusick 1999
-- [DB:ziliao:materials:mat_2741] 类型“未分类”：1BSD READ_ME 原始文件（1977-11-23，TUHS 归档）；1BSD 磁带目录结构（TUHS 归档）；McKusick, K. (1999) "Twenty Years of Berkeley Unix"；Salus, P.
+- [DB:ziliao:materials:mat_2741] 类型“未分类”：1BSD READ_ME 原始文件（1977-11-23，TUHS 归档）；1BSD 磁带目录结构（TUHS 归档）；McKusick, K. (1999) “Twenty Years of Berkeley Unix”；Salus, P.
 - [DB:ziliao:materials:mat_2764] 类型“未分类”：1BSD 磁带清单（1978.3.9）
 - [DB:ziliao:materials:mat_2966] 类型“未分类”：Joy 1BSD Release Notes ［A］
 - [DB:ziliao:materials:mat_2968] 类型“未分类”：4.1BSD Release Notes (1981.6)
 - [DB:ziliao:materials:mat_3084] 类型“未分类”：4.1BSD 发布说明
-- [DB:ziliao:materials:mat_3087] 类型“未分类”：Joy "Changes in the Kernel in 4.1bsd" (1981.5.10) [存疑脚注]
+- [DB:ziliao:materials:mat_3087] 类型“未分类”：Joy “Changes in the Kernel in 4.1bsd” (1981.5.10) [存疑脚注]
 - [DB:ziliao:materials:mat_3100] 类型“未分类”：4.1BSD 发布时间线
-- [DB:ziliao:materials:mat_3120] 类型“未分类”：Kashtan, D. (1981?) "VMS vs UNIX Performance Benchmarks" SRI 报告；Joy, W. (1981) "Rebuttal to Kashtan Benchmarks"；4.1BSD R
-- [DB:ziliao:materials:mat_3121] 类型“未分类”：4.1BSD 内核配置源代码；Elz, R. (1981) "Autoconfiguration for BSD"；4.1BSD Release Notes (1981.6)；McKusick, K. (1999) "Twenty Year
-- [DB:ziliao:materials:mat_3126] 类型“未分类”：curses 源代码；Arnold, K. (1980s) "curses: Screen Optimization for UNIX"；4BSD/4.1BSD 发行磁带；rogue 游戏源代码 ［A］
-- [DB:ziliao:materials:mat_3131] 类型“未分类”：4.1BSD Release Notes (1981.6)；4.2BSD Release Notes (1983.8)；McKusick, K. (1999) "Twenty Years of Berkeley Unix" ［B］
+- [DB:ziliao:materials:mat_3120] 类型“未分类”：Kashtan, D. (1981?) “VMS vs UNIX Performance Benchmarks” SRI 报告；Joy, W. (1981) “Rebuttal to Kashtan Benchmarks”；4.1BSD R
+- [DB:ziliao:materials:mat_3121] 类型“未分类”：4.1BSD 内核配置源代码；Elz, R. (1981) “Autoconfiguration for BSD”；4.1BSD Release Notes (1981.6)；McKusick, K. (1999) "Twenty Year
+- [DB:ziliao:materials:mat_3126] 类型“未分类”：curses 源代码；Arnold, K. (1980s) “curses: Screen Optimization for UNIX”；4BSD/4.1BSD 发行磁带；rogue 游戏源代码 ［A］
+- [DB:ziliao:materials:mat_3131] 类型“未分类”：4.1BSD Release Notes (1981.6)；4.2BSD Release Notes (1983.8)；McKusick, K. (1999) “Twenty Years of Berkeley Unix” ［B］
 - [DB:ziliao:materials:mat_3136] 类型“一手”：4.1BSD Release Notes (1981.6)；4BSD Release Notes (1980.10)；4.4BSD SMM:1《Installing and Operating 4.4BSD》；McKusick et al.
 - [DB:ziliao:materials:mat_3163] 类型“未分类”：CHM 2011 Bill Joy 口述史（X6073.2011）
 - [DB:ziliao:materials:mat_3272] 类型“未分类”：4.1BSD 与 SunOS 1.0 源代码对比
-- [DB:ziliao:materials:mat_3343] 类型“未分类”：MSST 2025 "NFS: Genesis" 主题演讲 PDF（Tom Lyon 2025 演讲稿，msstconference.org 一手档案，列示 NFS 团队 8 人名单："Bill Joy, Dave Goldberg, Bo
+- [DB:ziliao:materials:mat_3343] 类型“未分类”：MSST 2025 “NFS: Genesis” 主题演讲 PDF（Tom Lyon 2025 演讲稿，msstconference.org 一手档案，列示 NFS 团队 8 人名单："Bill Joy, Dave Goldberg, Bo
 - [DB:ziliao:materials:mat_3381] 类型“未分类”：4.1BSD/4.2BSD 发布说明（学术开源分发）；SunOS 1.0/2.0/3.0/4.0 Release Notes（商业化专有产品）；〔待核：原文截断，后文待回源〕
 - [DB:ziliao:materials:mat_3824] 类型“未分类”：4.0BSD/4.1BSD delivermail 源代码
 - [DB:ziliao:materials:mat_3898] 类型“一手”：4.0BSD/4.1BSD delivermail 源代码；4.1cBSD/4.2BSD Sendmail 源代码（1983.8）；RFC 780（MTP 邮件传输协议，1981 年 5 月）；〔待核：原文截断，后文待回源〕
-- [DB:ziliao:materials:mat_4337] 类型“未分类”：Bill Joy 1978-1982 年 BSD 开发记录（McKusick, K. (1999) "Twenty Years of Berkeley Unix"）；CSRG 1980 年 DARPA 合同档案；Joy 1982 年离开伯克
+- [DB:ziliao:materials:mat_4337] 类型“未分类”：Bill Joy 1978-1982 年 BSD 开发记录（McKusick, K. (1999) “Twenty Years of Berkeley Unix”）；CSRG 1980 年 DARPA 合同档案；Joy 1982 年离开伯克
 - [DB:ziliao:materials:mat_5639] 类型“未分类”：4.2BSD 源码中 chroot 实现（Bill Joy 提交记录）
 - [DB:ziliao:materials:mat_5640] 类型“工具书”：jail(8) 手册页脚注（明确记载 1982 年 3 月 18 日 Bill Joy 加入 chroot）
 - [DB:ziliao:references:ref_649] 1BSD Release Notes (1978)
 - [DB:ziliao:references:ref_650] TUHS 1BSD 档案 READ_ME（1977-11-23）
 - [DB:ziliao:references:ref_653] discoverbsd.blogspot.com 1BSD 历史记叙 ［C］
 - [DB:ziliao:references:ref_1130] 1BSD 1978 公告
-- [DB:ziliao:references:ref_3014] Joy, W. (1977) "1BSD READ_ME"（TUHS 归档） ［B］
-- [DB:ziliao:references:ref_3017] Joy, W. (1977) "1BSD READ_ME"（TUHS 归档，1977-11-23）
-- [DB:ziliao:references:ref_3018] Joy, W. (1978) "1BSD Release Notes"
-- [DB:ziliao:references:ref_3022] Joy, W. (1977) "1BSD READ_ME"（TUHS 归档）
-- [DB:ziliao:references:ref_3026] Computer History Museum (2011) "Bill Joy Fellow Biography" ［B］
+- [DB:ziliao:references:ref_3014] Joy, W. (1977) “1BSD READ_ME”（TUHS 归档） ［B］
+- [DB:ziliao:references:ref_3017] Joy, W. (1977) “1BSD READ_ME”（TUHS 归档，1977-11-23）
+- [DB:ziliao:references:ref_3018] Joy, W. (1978) “1BSD Release Notes”
+- [DB:ziliao:references:ref_3022] Joy, W. (1977) “1BSD READ_ME”（TUHS 归档）
+- [DB:ziliao:references:ref_3026] Computer History Museum (2011) “Bill Joy Fellow Biography” ［B］
 - [DB:ziliao:references:ref_3053] 1BSD 原始源代码注释 ［A］
-- [DB:ziliao:references:ref_3066] Joy, W. (1978) "ex Reference Manual" 1BSD
-- [DB:ziliao:references:ref_3081] Joy, W. (1977) "1BSD READ_ME"（TUHS 归档，1977-11-23） ［B］
+- [DB:ziliao:references:ref_3066] Joy, W. (1978) “ex Reference Manual” 1BSD
+- [DB:ziliao:references:ref_3081] Joy, W. (1977) “1BSD READ_ME”（TUHS 归档，1977-11-23） ［B］
 - [DB:ziliao:references:ref_3099] 1BSD 磁带清单（1978.3.9） ［B］
 - [DB:ziliao:references:ref_3271] 4.1BSD Release Notes (1981.6)
-- [DB:ziliao:references:ref_3334] Bostic, K. "2.11BSD Maintenance Records" ［B］
+- [DB:ziliao:references:ref_3334] Bostic, K. “2.11BSD Maintenance Records” ［B］
 - [DB:ziliao:references:ref_3363] 4.1BSD Release Notes (1981)
-- [DB:ziliao:references:ref_3364] Joy, W. (1981) "Changes in the Kernel in 4.1bsd"
+- [DB:ziliao:references:ref_3364] Joy, W. (1981) “Changes in the Kernel in 4.1bsd”
 - [DB:ziliao:references:ref_3391] 4.1BSD Release Notes (1981.6) ［B］
-- [DB:ziliao:references:ref_3392] McKusick, K. (1999) "Twenty Years of Berkeley Unix"（当事人一手记载 Robert Elz autoconfig 随 4.1BSD 引入）
+- [DB:ziliao:references:ref_3392] McKusick, K. (1999) “Twenty Years of Berkeley Unix”（当事人一手记载 Robert Elz autoconfig 随 4.1BSD 引入）
 - [DB:ziliao:references:ref_3402] 4.1BSD Release Notes (1981.6) [存疑脚注]
-- [DB:ziliao:references:ref_3407] McKusick, K. (1999) "Twenty Years of Berkeley Unix"（当事人一手明确区分 4.1BSD 正式版特性与 4.1a/b/c 开发线功能）
-- [DB:ziliao:references:ref_3454] CHM (2011) "Oral History of Bill Joy"（X6073.2011，archive.computerhistory.org 全文 PDF）
+- [DB:ziliao:references:ref_3407] McKusick, K. (1999) “Twenty Years of Berkeley Unix”（当事人一手明确区分 4.1BSD 正式版特性与 4.1a/b/c 开发线功能）
+- [DB:ziliao:references:ref_3454] CHM (2011) “Oral History of Bill Joy”（X6073.2011，archive.computerhistory.org 全文 PDF）
 - [DB:ziliao:references:ref_3662] 4.1BSD/4.2BSD Release Notes
 - [DB:ziliao:references:ref_4231] 4.0BSD/4.1BSD delivermail 源代码
 - [DB:ziliao:references:ref_4241] 4.1BSD BBN TCP/IP
@@ -192,12 +192,12 @@ FreeBSD 发展关键里程碑
 
 ## 文献
 
-- Joy, W. (1977) "1BSD READ_ME"（TUHS 归档，1977-11-23）
-- Joy, W. (1978) "1BSD Release Notes"
-- Joy, W. (1978) "ex Reference Manual"1BSD
-- McKusick, M. K. (1999) "Twenty Years of Berkeley Unix"，出自 O'Reilly《Open Sources》
-- Joy, W. & McKusick, M. K. (1979) "Berkeley Pascal PX Implementation Notes"，第二版
-- Computer History Museum (2011) "Bill Joy Fellow Biography"
+- Joy, W. (1977) “1BSD READ_ME”（TUHS 归档，1977-11-23）
+- Joy, W. (1978) “1BSD Release Notes”
+- Joy, W. (1978) “ex Reference Manual”1BSD
+- McKusick, M. K. (1999) “Twenty Years of Berkeley Unix”，出自 O'Reilly《Open Sources》
+- Joy, W. & McKusick, M. K. (1979) “Berkeley Pascal PX Implementation Notes”，第二版
+- Computer History Museum (2011) “Bill Joy Fellow Biography”
 - BSDTalk #170 (2009) Marshall Kirk McKusick at DCBSDCon 访谈
 
 <!-- PODCAST_REVIEW v20260829 -->

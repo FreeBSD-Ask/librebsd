@@ -45,15 +45,15 @@ volume: 第02卷-伯克利的岁月
 
 ## 文献
 
-- Net/2 Release Notes (1991.6)；4.4BSD-Lite/4.4BSD-Encumbered Release Notes (1994.6)；4.4BSD-Lite 2 Release Notes (1995.6)；Novell-UC Berkeley 和解协议（1994.2）；FreeBSD/NetBSD/OpenBSD Release Notes；McKusick, M. K. (1999) "Twenty Years of Berkeley Unix"；McKusick M K, Bostic K, Karels M J, Quarterman J S. The Design and Implementation of the 4.4BSD Operating System [M]. Reading: Addison-Wesley, 1996. ISBN: 0-201-54979-4 ［B］；资料数据库.db 文献计量学分析报告（`03-原始史料库/01-代码仓库史料/01-数据库本体/统计分析/文献计量学分析.md` Task 22，2026-07-27）；外部基准报告（`03-原始史料库/01-代码仓库史料/01-数据库本体/统计分析/外部基准-Academic-CVE.md` 第 1.2 节，E-19，2026-07-27）；卷章数据映射表（`03-原始史料库/01-代码仓库史料/01-数据库本体/统计分析/卷章数据映射.md` 第二卷第 20 章）
-- Bostic, K. (1991) "Net/2 Release Notes"；McKusick, K. (1999) "Twenty Years of Berkeley Unix"；Moody, G. (2001) "Rebel Code" ［B］
+- Net/2 Release Notes (1991.6)；4.4BSD-Lite/4.4BSD-Encumbered Release Notes (1994.6)；4.4BSD-Lite 2 Release Notes (1995.6)；Novell-UC Berkeley 和解协议（1994.2）；FreeBSD/NetBSD/OpenBSD Release Notes；McKusick, M. K. (1999) “Twenty Years of Berkeley Unix”；McKusick M K, Bostic K, Karels M J, Quarterman J S. The Design and Implementation of the 4.4BSD Operating System [M]. Reading: Addison-Wesley, 1996. ISBN: 0-201-54979-4 ［B］；资料数据库.duckdb 文献计量学分析报告（`03-原始史料库/01-代码仓库史料/01-数据库本体/统计分析/文献计量学分析.md` Task 22，2026-07-27）；外部基准报告（`03-原始史料库/01-代码仓库史料/01-数据库本体/统计分析/外部基准-Academic-CVE.md` 第 1.2 节，E-19，2026-07-27）；卷章数据映射表（`03-原始史料库/01-代码仓库史料/01-数据库本体/统计分析/卷章数据映射.md` 第二卷第 20 章）
+- Bostic, K. (1991) “Net/2 Release Notes”；McKusick, K. (1999) “Twenty Years of Berkeley Unix”；Moody, G. (2001) “Rebel Code” ［B］
 
 <!-- DB_REF:linux_kernel.duckdb -->
 > **数据库引用（linux_kernel.duckdb）**：本子节对应 linux_kernel 代码仓库。> 1991-1991 年间：0 次提交。> 仓库总览：1,474,341 次提交，39,865 位贡献者（contributors 表行数，1970-01-01 至 2026-08-24）。
-- *4.2BSD** `/etc/passwd` 文件格式规范；System V **R3.2** `/etc/shadow` 文件规范 (**1987**)；**4.4BSD-Lite** Release Notes (**1994.6**)；4.4BSD 系统管理员手册（SMM）；**FreeBSD 4.0** Release Notes (**2000.3**)；Salus, P. H. (1994) "A Quarter Century of UNIX"；Leffler, S. J. et al. (1989) "The Design and Implementation of the 4.3BSD UNIX Operating System" ［A］[^doubt-resolved-235]: 据 Design_Implementation_FreeBSD_OS (未署名) 消解[^doubt-resolved-238]: 据 Design_Implementation_FreeBSD_OS (未署名) 消解
+- *4.2BSD** `/etc/passwd` 文件格式规范；System V **R3.2** `/etc/shadow` 文件规范 (**1987**)；**4.4BSD-Lite** Release Notes (**1994.6**)；4.4BSD 系统管理员手册（SMM）；**FreeBSD 4.0** Release Notes (**2000.3**)；Salus, P. H. (1994) “A Quarter Century of UNIX”；Leffler, S. J. et al. (1989) "The Design and Implementation of the 4.3BSD UNIX Operating System" ［A］[^doubt-resolved-235]: 据 Design_Implementation_FreeBSD_OS (未署名) 消解[^doubt-resolved-238]: 据 Design_Implementation_FreeBSD_OS (未署名) 消解
 - Net/2 源代码注释；CSRG 邮件列表存档（伯克利 Bancroft 图书馆）；comp.unix.bsd 新闻组存档 ［A］---## 文献增补与辩证校准（2026-08-08 追加）> - **文献增补（ref 3778）**：McKusick《Twenty Years of Berkeley Unix》(1999) 确认“约一百个工具”18 个月内由社区志愿者完成——39.7 匿名贡献者考据的直接一手依据> - **文献增补（ref 3780）**：4.4BSD 设计书作者简介（Bostic GWU 背景/CSRG 400+ 工具管理）可补充 39.7 人物档案> - **辩证校准（总纲 24.1/20.5）**：39.7 “需主动恢复其历史可见性”的表述，应以“如实记录”替代“主动恢复”——边缘化是形式主义固有结构（20.5），匿名贡献者的价值按其实际贡献记录即可，不须以“被亏欠”姿态写作（24.1：少数≠错误；总纲5：无必然性）
 - CSRG Net/2 档案； McKusick 1999 ［A］
-- McKusick, M. K. (1999) "Twenty Years of Berkeley Unix"；FreeBSD Handbook 第 1 章（docs.freebsd.org/en/books/handbook/introduction/#history）；NetBSD 官方历史页面（netbsd.org/about/history.html）；*Unix System Laboratories v. Berkeley Software*, 832 F. Supp. 790 (D.N.J. 1993) ［B］
+- McKusick, M. K. (1999) “Twenty Years of Berkeley Unix”；FreeBSD Handbook 第 1 章（docs.freebsd.org/en/books/handbook/introduction/#history）；NetBSD 官方历史页面（netbsd.org/about/history.html）；*Unix System Laboratories v. Berkeley Software*, 832 F. Supp. 790 (D.N.J. 1993) ［B］
 
 <!-- PODCAST_REVIEW v20260829 -->
 <!-- 语义复核范围：YouTube EP7d7fwAE-2Aw（共 1 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->

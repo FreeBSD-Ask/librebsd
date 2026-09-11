@@ -10,7 +10,7 @@ volume: 第02卷-伯克利的岁月
 
 - 3BSD 的历史意义在于证明 BSD 可在 VAX 上运行，为 DARPA 招标提供了技术基础，是 BSD 从 PDP-11 时代迈向 VAX 时代的关键转折
 - UNIX/32V（1978 年由 Bell Labs 的 John Reiser 和 Tom London 完成移植）作为 Bell Labs V7 UNIX 的 VAX 移植版，其内核结构与 V7 UNIX 基本一致——简单换页、无虚拟内存抽象、无网络支持；3BSD（1979.12）以 32V 内核为基础进行深度改造——加入由 Özalp Babaoğlu 实现的请求调页式虚拟内存、加入 2BS
-- CDC NOS/VE 1984-1985 年间发布，运行于 Cyber 180 系列主机（CDC NOS/VE Product Documentation 记载 "1984 – Cyber 810, Cyber 830, Cyber 840, Cyber 850"）〔待核：原文截断，后文待回源〕
+- CDC NOS/VE 1984-1985 年间发布，运行于 Cyber 180 系列主机（CDC NOS/VE Product Documentation 记载 “1984 – Cyber 810, Cyber 830, Cyber 840, Cyber 850”）〔待核：原文截断，后文待回源〕
 - 3BSD 的虚拟内存实现为后续 4.xBSD 的 VAX 支持奠定基础，其设计影响了 FreeBSD 的虚拟内存子系统与现代化操作系统内存管理
 - 1980 年代后期 VAX 逐渐被 RISC 工作站（Sun SPARC、MIPS）与 x86 PC 替代，BSD 在 VAX 上的开发逐步减少，1990 年代初 BSD 主力转向 386 与 SPARC
 
@@ -51,11 +51,11 @@ volume: 第02卷-伯克利的岁月
 
 ## 文献
 
-- McKusick, K. (1999) "Twenty Years of Berkeley Unix"；Salus, P. (1994) "A Quarter Century of UNIX" ［B］
-- UNIX/32V 源代码（1978）；3BSD 内核源代码；3BSD Release Notes (1979.12)；Joy, W. (1979) "3BSD Kernel Changes"；McKusick, K. (1999) "Twenty Years of Berkeley Unix" ［A］
-- CDC (1984) "NOS/VE Reference Manual"；CDC Cyber 180 硬件文档；museumwaalsdorp.nl "NOS/VE operating system"（Cyber 170-835 TNO 1985.8 首次安装）；60bits.net "NOS/VE Operating System"（1985 NOS/VE not ready for prime time）［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
-- McKusick, K. et al. (1996) "The Design and Implementation of the 4.4BSD Operating System" ［B］
-- DEC (1992) "VAX Product Strategy"；McKusick, K. (1999) "Twenty Years of Berkeley Unix" ［B］
+- McKusick, K. (1999) “Twenty Years of Berkeley Unix”；Salus, P. (1994) “A Quarter Century of UNIX” ［B］
+- UNIX/32V 源代码（1978）；3BSD 内核源代码；3BSD Release Notes (1979.12)；Joy, W. (1979) “3BSD Kernel Changes”；McKusick, K. (1999) “Twenty Years of Berkeley Unix” ［A］
+- CDC (1984) “NOS/VE Reference Manual”；CDC Cyber 180 硬件文档；museumwaalsdorp.nl “NOS/VE operating system”（Cyber 170-835 TNO 1985.8 首次安装）；60bits.net “NOS/VE Operating System”（1985 NOS/VE not ready for prime time）［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
+- McKusick, K. et al. (1996) “The Design and Implementation of the 4.4BSD Operating System” ［B］
+- DEC (1992) “VAX Product Strategy”；McKusick, K. (1999) “Twenty Years of Berkeley Unix” ［B］
 - DEC VAX Handbook; Babaoglu & Joy 1981 ［A］
 - CSRG 邮件列表存档；USENIX 1979-1980 年会议论文集 ［A］
 - USENIX 会议论文集（1979-1980）；伯克利 CSRG 邮件列表存档 ［A］
