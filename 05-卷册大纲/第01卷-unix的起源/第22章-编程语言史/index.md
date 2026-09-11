@@ -19,7 +19,7 @@ C语言的诞生（1972年，Dennis Ritchie）与UNIX的共生关系构成了BSD
 
 ## 史观
 
-总纲第6条——动手者创造历史：C语言是Ritchie为满足系统编程的实际需求而创造的，而非学院派语言设计的产物，其“信任程序员”的设计哲学体现了“没有多余形式主义的老实人”精神。总纲第9条——经验优先：C语言的成功源于其在UNIX内核与工具移植中的实用性验证，而非理论完备性——其类型系统的宽松与指针的自由度，在实践中被证明是系统编程不可或缺的灵活性来源。总纲第3条——偶然性优先：C语言成为“系统编程的通用语”并非必然，ALGOL 68的过度复杂、Pascal的过度约束、PL/I的过度庞大，都构成了C语言胜出的偶然条件。
+总纲第 10 条——动手者创造历史：C语言是Ritchie为满足系统编程的实际需求而创造的，而非学院派语言设计的产物，其“信任程序员”的设计哲学体现了“没有多余形式主义的老实人”精神。总纲第9条——经验优先：C语言的成功源于其在UNIX内核与工具移植中的实用性验证，而非理论完备性——其类型系统的宽松与指针的自由度，在实践中被证明是系统编程不可或缺的灵活性来源。总纲第 5 条——没有必然性，只有偶然性：C语言成为“系统编程的通用语”并非必然，ALGOL 68的过度复杂、Pascal的过度约束、PL/I的过度庞大，都构成了C语言胜出的偶然条件。
 
 ## 辨析
 
@@ -27,4 +27,4 @@ C语言的设计哲学（信任程序员、不隐藏底层细节）既是其灵�
 
 ## 文献
 
-（待补：Ritchie D M. The Development of the C Language[C]//HOPL-II. ACM, 1993；Kernighan B W, Ritchie D M. The C Programming Language[M]. 2nd ed. Prentice Hall, 1988；Bergin T J, Gibson R G. History of Programming Languages II[M]. ACM Press/Addison-Wesley, 1996；[DB:references_fulltext:chapter_matches:chmatch_3598]；[DB:references_fulltext:chapter_matches:chmatch_1538]）
+- Ritchie D M. The Development of the C Language[C]//HOPL-II. ACM, 1993；Kernighan B W, Ritchie D M. The C Programming Language[M]. 2nd ed. Prentice Hall, 1988；Bergin T J, Gibson R G. History of Programming Languages II[M]. ACM Press/Addison-Wesley, 1996；[DB:references_fulltext:chapter_matches:chmatch_3598]；[DB:references_fulltext:chapter_matches:chmatch_1538]
