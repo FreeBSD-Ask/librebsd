@@ -42,22 +42,12 @@ volume: 第09卷-netbsd的历史
 > **数据库引用（netbsd.duckdb）**：本子节对应 netbsd 代码仓库。> 1993-2026 年间：1,999,408 次提交。> 仓库总览：1,999,412 次提交，1,545 位贡献者（contributors 表行数，1992-07-13 至 2026-08-24）。
 - Linux Foundation Annual Reports [EB/OL]. <https://www.linuxfoundation.org/reports/>；NetBSD Foundation 年度报告 [EB/OL]. <https://www.NetBSD.org/foundation/reports/>；GPLv2 文本 [EB/OL]. <https://www.gnu.org/licenses/gpl-2.0.txt>；BSD License 文本 [EB/OL]. <https://opensource.org/licenses/BSD-3-Clause>；netbsd.duckdb 数据分析·衍生项目与跨项目对比分析.md §L7.3.1（BSD 四仓库合计 vs Linux commit 量 2008/2020/2026）；netbsd.duckdb 数据分析·文献计量学分析.md Task 22（统计结论 C-41：references 表总数 16,867、统计结论 C-42：年份提取率 44.42%）、Task 23（统计结论 C-44：Top 10% 章节占 28.23%、Gini 0.3913） ［A］
 
-<!-- DB_REF:netbsd.duckdb -->
-> **数据库引用（netbsd.duckdb）**：本子节对应 netbsd 代码仓库。> 1993-2026 年间：1,999,408 次提交。> 仓库总览：1,999,412 次提交，1,545 位贡献者（contributors 表行数，1992-07-13 至 2026-08-24）。
 - Apple Darwin 开源档案 [EB/OL]. <https://opensource.apple.com/>；OpenSolaris 项目档案 [EB/OL]. <https://www.openindiana.org/>；IDC/Gartner 商业 UNIX 市场份额报告 [EB/OL]. <https://www.idc.com/> ［A］
 
-<!-- DB_REF:netbsd.duckdb -->
-> **数据库引用（netbsd.duckdb）**：本子节对应 netbsd 代码仓库。> 1993-2026 年间：1,999,408 次提交。> 仓库总览：1,999,412 次提交，1,545 位贡献者（contributors 表行数，1992-07-13 至 2026-08-24）。
 - Wind River VxWorks 产品文档 [EB/OL]. <https://www.windriver.com/products/vxworks>；QNX 产品文档 [EB/OL]. <https://blackberry.qnx.com/>；NetBSD 嵌入式部署案例 [EB/OL]. <https://www.NetBSD.org/gallery/embedded.html>（原始链接失效，互联网档案馆无存档） ［A］
 
-<!-- DB_REF:netbsd.duckdb -->
-> **数据库引用（netbsd.duckdb）**：本子节对应 netbsd 代码仓库。> 1993-2026 年间：1,999,408 次提交。> 仓库总览：1,999,412 次提交，1,545 位贡献者（contributors 表行数，1992-07-13 至 2026-08-24）。
 - BSD License 文本 [EB/OL]. <https://opensource.org/licenses/BSD-3-Clause>；GPLv2 文本 [EB/OL]. <https://www.gnu.org/licenses/gpl-2.0.txt>；FSF 对许可证的解读 [EB/OL]. <https://www.fsf.org/licensing/>；OSI 对许可证的解读 [EB/OL]. <https://opensource.org/licenses/>；Apple Darwin 仓库 [EB/OL]. <https://opensource.apple.com/>；Juniper Junos 文档 [EB/OL]. <https://www.juniper.net/documentation/> ［A］
 
-<!-- DB_REF:netbsd.duckdb -->
-> **数据库引用（netbsd.duckdb）**：本子节对应 netbsd 代码仓库。> 1993-2026 年间：1,999,408 次提交。> 仓库总览：1,999,412 次提交，1,545 位贡献者（contributors 表行数，1992-07-13 至 2026-08-24）。
 - NetBSD Project. 10 years of pkgsrc - Alistair Crooks [EB/OL]. (2007-10-17)[2026-07-24]. **<https://www.netbsd.org/gallery/10years.html#alcrooks>**; NetBSD Project. pkgsrc Guide [EB/OL]. [2026-07-27]. **<https://www.netbsd.org/docs/pkgsrc/>**; 本项目既有考据记录 `03-原始史料库/06-考据记录/20260724_alistair-crooks-netbsd-1x-growth.md`; 本项目既有考据记录 `03-原始史料库/06-考据记录/20260727_rumors-netbsd.md` ［A］
 - NetBSD 官方历史页面、Ports 列表、Adam Glass 1994 邮件、OpenBSD FAQ、pkgsrc Guide、本项目既有考据记录 `03-原始史料库/06-考据记录/20260727_rumors-netbsd.md`
 
-<!-- DB_REF:netbsd.duckdb -->
-> **数据库引用（netbsd.duckdb）**：本子节对应 netbsd 代码仓库。> 1993-2026 年间：1,999,408 次提交。> 仓库总览：1,999,412 次提交，1,545 位贡献者（contributors 表行数，1992-07-13 至 2026-08-24）。
