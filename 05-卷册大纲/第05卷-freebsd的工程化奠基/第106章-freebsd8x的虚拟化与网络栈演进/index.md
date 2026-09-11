@@ -34,7 +34,7 @@ volume: 第05卷-freebsd的工程化奠基
 
 ## 文献
 
-- FreeBSD 8.0 src/sys/xen/ commit log；freebsd-xen mailing list 2008-2009 archives；Rabson, D. FreeBSD Xen port status (2009) ［A］；统计分析报告：描述性统计.md SubTask 2.1 + SubTask 2.4 [R/OL]. 2026-07-27. 文件路径：`c:\Users\ykla\Documents\hibsd\03-原始史料库\01-代码仓库史料\01-数据库本体\统计分析\描述性统计.md`；SQL 查询：`SELECT COUNT(*) FROM commits WHERE repo_name='freebsd-src'`. freebsd.duckdb [DB/OL]. 查询日期：2026-07-27；Python 统计脚本：`script/phase2_descriptive.py`. SubTask 2.4 Kaplan-Meier 生存估计。执行日期：2026-07-27 [考据脚注：C-03、C-40 经 `script/phase2_descriptive.py` 执行结果与 `phase2_results.json` 结构化结果交叉验证；Kaplan-Meier 估计基于 lifelines 0.30.0 实现。]
+- FreeBSD 8.0 src/sys/xen/ commit log；freebsd-xen mailing list 2008-2009 archives；Rabson, D. FreeBSD Xen port status (2009) ［A］；统计分析报告：描述性统计.md SubTask 2.1 + SubTask 2.4 [R/OL]. 2026-07-27. 文件路径：**03-原始史料库/01-代码仓库史料/01-数据库本体/统计分析/描述性统计.md**；SQL 查询：`SELECT COUNT(*) FROM commits WHERE repo_name='freebsd-src'`. freebsd.duckdb [DB/OL]. 查询日期：2026-07-27；Python 统计脚本：`script/phase2_descriptive.py`. SubTask 2.4 Kaplan-Meier 生存估计。执行日期：2026-07-27 [考据脚注：C-03、C-40 经 `script/phase2_descriptive.py` 执行结果与 `phase2_results.json` 结构化结果交叉验证；Kaplan-Meier 估计基于 lifelines 0.30.0 实现。]
 
 <!-- DB_REF:freebsd.duckdb -->
 > **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 2009-2011 年间：102,147 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。

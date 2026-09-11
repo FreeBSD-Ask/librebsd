@@ -19,7 +19,7 @@ volume: 第18卷-全球社区地区bsd史
   - 辨析：数据库统计受 CVS-to-Git 迁移、镜像滞后等因素影响，commit 数量与贡献者统计存在系统性偏差，须结合一手史料交叉验证
   - 文献：[DB:references_fulltext] 参考文献全文数据库（4,077 篇全文，27,138 条时间线事件）—— 对应 freebsd.duckdb 代码仓库数据
 - 动手者创造历史：记录默默做事的人，而非只写站在台前的大佬
-  - 辨析：贡献者高度集中——Top 1 贡献者 wiz 占比 33.4%，需考量'个人主导'与'社区协作'的叙事张力
+  - 辨析：贡献者高度集中——Top 1 贡献者 wiz 占比 33.4%，需考量‘个人主导’与‘社区协作’的叙事张力
   - 文献：[DB:references_fulltext] 参考文献全文数据库（4,077 篇全文，27,138 条时间线事件）—— 对应 netbsd.duckdb 代码仓库数据
 
 ## 辨析
@@ -28,7 +28,7 @@ volume: 第18卷-全球社区地区bsd史
   - 文献：[DB:historical_claims] 历史主张数据库（853 条主张，26,898 条证据）
 - 数据库统计受 CVS-to-Git 迁移、镜像滞后等因素影响，commit 数量与贡献者统计存在系统性偏差，须结合一手史料交叉验证
   - 文献：[DB:references_fulltext] 参考文献全文数据库（4,077 篇全文，27,138 条时间线事件）—— 对应 freebsd.duckdb 代码仓库数据
-- 贡献者高度集中——Top 1 贡献者 wiz 占比 33.4%，需考量'个人主导'与'社区协作'的叙事张力
+- 贡献者高度集中——Top 1 贡献者 wiz 占比 33.4%，需考量‘个人主导’与‘社区协作’的叙事张力
   - 文献：[DB:references_fulltext] 参考文献全文数据库（4,077 篇全文，27,138 条时间线事件）—— 对应 netbsd.duckdb 代码仓库数据
 
 ## 文献
@@ -41,7 +41,7 @@ volume: 第18卷-全球社区地区bsd史
     - McKusick M
 - McKusick M K, Bostic K, Karels M J, et al. The design and implementation of the 4.4BSD operating system [M]. Reading: Addison-Wesley, 1996.
     - Karels M J, Quarterman J S. The 4.3BSD-Tahoe release [J]. CSRG Technical Report, 1988.
-    - Gearty-Delmore Funeral Homes. Michael "Mike" John Karels ob
+    - Gearty-Delmore Funeral Homes. Michael “Mike” John Karels ob
 - Bostic K. Berkeley DB 1.85 reference guide [M]. Berkeley: CSRG, 1991.
     - McKusick M K, Bostic K, Karels M J, et al. The design and implementation of the 4.4BSD operating system [M]. Reading: Addison-Wesley, 1996.
     - Sleepycat Software. Berkeley DB documentation [EB/OL]. Emeryville: Sleepycat

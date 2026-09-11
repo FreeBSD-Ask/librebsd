@@ -58,7 +58,7 @@ volume: 第10卷-openbsd的历史
 | 7.9 | 2026-05-19 | 第 60 个 release |
 - OpenBSD CVS 仓库 [EB/OL]. <https://cvsweb.openbsd.org/>；DARPA 资助撤销事件 misc@ 邮件列表讨论 2003 [EB/OL]. <https://marc.info/?laccopenbsd-misc>；de Raadt 公开采访 [EB/OL]. <https://undeadly.org/>；OpenBSD GitHub 镜像 [EB/OL]. <https://github.com/openbsd> ［A］**OpenBSD 核心贡献者地理分布**：
 
-| 贡献者 | 国籍/地区 | 主要贡献 | bsd_commits.db 记录 |
+| 贡献者 | 国籍/地区 | 主要贡献 | bsd_commits.duckdb 记录 |
 | --- | --- | --- | --- |
 | de Raadt | 南非裔加拿大人（1968 生于比勒陀利亚） | 项目主导 | 27181 commits（1995-10-18 起） |
 | Niels Provos | 德国 | OpenSSH 主导 | openbsd-src provos 贡献者记录 |

@@ -25,7 +25,7 @@ volume: 第05卷-freebsd的工程化奠基
 
 ## 史观
 
-- 形式主义：Ports 系统是'软件包管理'这一形式主义概念在 FreeBSD 生态中的物质化
+- 形式主义：Ports 系统是‘软件包管理’这一形式主义概念在 FreeBSD 生态中的物质化
 
 ## 辨析
 
@@ -71,7 +71,7 @@ volume: 第05卷-freebsd的工程化奠基
 - SMPNG 的直接诱因是 1999 年 Mindcraft 基准：微软展示 Windows 在部分网络场景胜过 Linux，BSD 方面自知成绩亦不会好看而选择沉默；约一年后社区聚议，认定真正问题在于 Linux 与 BSD 处理多处理器的方式，遂于 2000 年 6 月在 Yahoo 园区开会确立 SMPNG（新一代 SMP 支持）；Lehey 从头参与并先做了约六个月中断处理程序，其后主要由 John Baldwin 接手；项目启动时预计约两年，最终五年后才正式宣告结束。　[考据脚注] 转写将 Mindcraft 误作 Minecraft、将 SMPNG 会址写作 Yahoo complex，本条按通行名称重写，细节以当期录音与 SMPNG 设计文档复核为准。（BSDTalk EP55，[558.88-625.44]，L1）
 - Lehey 的职业生涯呈连续跨界：1982 年起在 Tandem 十年，从专有操作系统转到 UNIX；1992 年认定大公司不知去向而转做顾问，由此获得写书时间；1999 年底经 Dan Shearer 召集加入 LinuxCare 澳洲分部任“BSD 专员”，但公司不知如何使用 BSD，他自述大半年未做实际工作；.com 泡沫破灭后澳洲分部关闭，多数同事转往 IBM 从事 Linux，他因居家办公方式不合 IBM 文化而离开，此后在阿德莱德一家存储系统公司任职（因保密协议不能详述），约 2005 年转投 MySQL。（BSDTalk EP55，[78.96-660.16]，L1）
 - 在 MySQL 任在线备份方向高级软件工程师，重点工作之一是确保 MySQL 在 FreeBSD 上良好运行，同时也是 NetBSD 开发者；其自述旨趣是防止 BSD 碎片化、推广所有 BSD 项目，认为 2006 年碎片化正在改善——跨项目沟通增多、个人恩怨减少；其经手的大型 FreeBSD 安装上存在仅在线上复现的竞态类崩溃（MySQL bug 12187，追踪逾半年、无法在测试环境重现），公开向听众征集相似案例。（BSDTalk EP55，[683.4-876.16]，L1）
-- 著述经历：O'Reilly 的 Porting UNIX Software 于 1995 年底出版（Tim O'Reilly 曾断言此类书只有两年好卖）；The Complete FreeBSD 起于与 Jack Velte 等 FreeBSD 人士在德国书展的会面，原约化为 50 页安装手册、成书 200 页，历经五版并相当成功；因无暇更新，他选择将全书放入公有领域而非任其消亡，并希望组建团队维护。（BSDTalk EP55，[222.32-331.0]，L1）
+- 著述经历：O‘Reilly 的 Porting UNIX Software 于 1995 年底出版（Tim O’Reilly 曾断言此类书只有两年好卖）；The Complete FreeBSD 起于与 Jack Velte 等 FreeBSD 人士在德国书展的会面，原约化为 50 页安装手册、成书 200 页，历经五版并相当成功；因无暇更新，他选择将全书放入公有领域而非任其消亡，并希望组建团队维护。（BSDTalk EP55，[222.32-331.0]，L1）
 
 **史料**：
 

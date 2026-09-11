@@ -24,7 +24,7 @@ volume: 第11卷-dragonflybsd的历史
 
 ## 辨析
 
-- DragonFly 160 位贡献者中，dports 提交量（606813）远超 src（49379），需区分'ports 维护者'与'内核开发者'
+- DragonFly 160 位贡献者中，dports 提交量（606813）远超 src（49379），需区分‘ports 维护者’与‘内核开发者’
 
 ## 文献
 

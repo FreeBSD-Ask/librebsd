@@ -104,7 +104,7 @@ volume: 第14卷-商业生态与企业案例
 - 史观：总纲第 21 条——文档化传统：**BSD** 商业生态的资料基础
 - 辨析：基金会年报与企业公告的可信度与完整性
 - 文献：FreeBSD Foundation Annual Rep
-- GPLv2/v3 文本；BSD 2-Clause/3-Clause 文本；Stallman 1985 "The GNU Manifesto"；Torvalds 2007 Linux 内核邮件列表发言；Android 内核修改与上游回馈争议资料；GPLv3 采纳率下降的研究文献 ［A］
+- GPLv2/v3 文本；BSD 2-Clause/3-Clause 文本；Stallman 1985 “The GNU Manifesto”；Torvalds 2007 Linux 内核邮件列表发言；Android 内核修改与上游回馈争议资料；GPLv3 采纳率下降的研究文献 ［A］
 
 ## 279.38.2 企业搭便车的批评：商业巨头从 BSD 社区免费获取劳动力
 
@@ -114,7 +114,7 @@ volume: 第14卷-商业生态与企业案例
 ## 279.38.3 社区可持续性危机的批评：志愿者模式难以支撑复杂操作系统
 
 - 要点：**BSD** 商业化模式的批评者认为，过度依赖志愿者劳动的社区模式在 2020 年代面临可持续性危机——操作系统作为最复杂的软件系统之一，需要持续的大规模投入才能跟上硬件
-- GPLv2/v3 文本；BSD 2-Clause 文本；Stallman "Why Copyleft?"（gnu.org）；Moglen F. "Free as in Freedom: The GPL v3 and the Future of Free Software"；各项目许可证选择声明［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
+- GPLv2/v3 文本；BSD 2-Clause 文本；Stallman “Why Copyleft?”（gnu.org）；Moglen F. "Free as in Freedom: The GPL v3 and the Future of Free Software"；各项目许可证选择声明［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
 
   ### 278.38.6.2 **GPL** 商业生态的批评：**Red Hat** 模式的剥削性与企业控制
 

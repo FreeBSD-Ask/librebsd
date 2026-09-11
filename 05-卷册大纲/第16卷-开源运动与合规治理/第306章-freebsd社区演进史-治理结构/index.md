@@ -21,10 +21,10 @@ volume: 第16卷-开源运动与合规治理
   - 文献：FreeBSD List Archives 1995-2000；majordomo doc
 - 总纲第 23 条——社区治理形式主义化的渐进过程；统计结论印证：统计结论 [C-24] FreeBSD freebsd-src 仓库贡献者 Gini 系数 0.9188（Bootstrap 95% CI [0.9093, 0.9270]）、统计结论 [C-25] DragonFly BSD dragonfly-src Gini 0.8972（[0.8517, 0.9187]）、统计结论 [C-26
 - 总纲第 25 条——延续与终结，关键人物离场
-- 辨析：【双库核查 2026-08-15】邮件列表库 freebsd-hackers 2000-2002 年查询 'Jordan Hubbard' 命中 5 条（Jordan Hubbard 本人 2000 年活跃参与），参考文献库 'Jordan Hubbard' 命中 5 条（lisa08、bsdcan 2015/2016、coscup 2019
+- 辨析：【双库核查 2026-08-15】邮件列表库 freebsd-hackers 2000-2002 年查询 ‘Jordan Hubbard’ 命中 5 条（Jordan Hubbard 本人 2000 年活跃参与），参考文献库 ‘Jordan Hubbard’ 命中 5 条（lisa08、bsdcan 2015/2016、coscup 2019
 - 总纲第 23 条——社区治理的共识模式效率局限
   - 辨析：Rice 演讲的具体原文需查 AsiaBSDCon proceedings；2008 年前讨论的具体提案需考据
-  - 文献：Benno Rice 2018 AsiaBSDCon"A Tale of Two Repositories"；LWN 2018 FreeBSD coverage［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
+  - 文献：Benno Rice 2018 AsiaBSDCon“A Tale of Two Repositories”；LWN 2018 FreeBSD coverage［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
 
 ## 306.1.2 治理结构演变历程
 
@@ -40,7 +40,7 @@ volume: 第16卷-开源运动与合规治理
 
 - 要点：Hubbard 离开削弱 FreeBSD 早期创始团队的凝聚力，象征“创始时代”终结
 - 史料：freebsd-hackers 2001-20
-- Benno Rice 2018 AsiaBSDCon"A Tale of Two Repositories"；LWN 2018 FreeBSD coverage［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
+- Benno Rice 2018 AsiaBSDCon“A Tale of Two Repositories”；LWN 2018 FreeBSD coverage［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
 
 ## 306.11.2 CVS 到 SVN 到 Git 迁移迟缓
 

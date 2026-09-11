@@ -61,7 +61,7 @@ volume: 第04卷-大分裂与四大bsd的诞生
 
 ## 文献
 
-- BSD 三项目 1995-1996 年发布历史；Salus"A Quarter Century of UNIX"；freebsd.duckdb commits 表（freebsd-src/netbsd-src/openbsd-src 首条 commit 与 1995 年 commit 数统计） ［A］；本项目。openbsd.duckdb 数据分析报告：宏观趋势统计 [R/OL]. 2026.
+- BSD 三项目 1995-1996 年发布历史；Salus“A Quarter Century of UNIX”；freebsd.duckdb commits 表（freebsd-src/netbsd-src/openbsd-src 首条 commit 与 1995 年 commit 数统计） ［A］；本项目。openbsd.duckdb 数据分析报告：宏观趋势统计 [R/OL]. 2026.
 
 ## 75.1.2 FreeBSD 的 x86 性能定位
 
@@ -81,7 +81,7 @@ volume: 第04卷-大分裂与四大bsd的诞生
 - 史料：NetBSD Foundation By-Laws、董事会历年选举记录、Foundation 关于治理的声明 ［A］
 - 史观：总纲第 12 条——法律结构：Foundation 董事会制是 BSD 项目治理结构的另一典型形态
 - 辨析：董事会制的具体程序在不同时期存在差异——需对照 B
-- 三项目治理结构文档；BSD 治理结构对比研究［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］；本项目。bsd_commits.db 数据分析报告：深层信息挖掘 [R/OL]. 2026.
+- 三项目治理结构文档；BSD 治理结构对比研究［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］；本项目。bsd_commits.duckdb 数据分析报告：深层信息挖掘 [R/OL]. 2026.
 - de Raadt 1997; CCS 2019 ［A］
 - Hubbard 2001 辞职信；freebsd-hackers 2025.12 邮件；jmmv EuroBSDCon 报道 ［A］
 

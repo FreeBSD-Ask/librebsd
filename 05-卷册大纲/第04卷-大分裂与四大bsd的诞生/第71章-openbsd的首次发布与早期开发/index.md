@@ -47,7 +47,7 @@ volume: 第04卷-大分裂与四大bsd的诞生
 <!-- DB_REF:openbsd.duckdb -->
 > **数据库引用（openbsd.duckdb）**：本子节对应 openbsd 代码仓库。> 1992-1995 年间：770 次提交。> 仓库总览：491,195 次提交，3,352 位贡献者，1995-10-18 至 2026-08-25。
 - Sun Microsystems. Solaris 2.5 Documentation [Z]. 1995.［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
-- OpenBSD CVS 历史早期记录；OpenBSD 1.2 Release Notes (1996.7)；OpenBSD 官方 FAQ；de Raadt 关于审计的公开声明；本项目。原材料/研究/bsd 漏洞史/bsd 前安全史/386bsd-security-1992-1994.md；本项目。原材料/研究/bsd 漏洞史/bsd 前安全史/4.4bsd-lite-security-1992-1995.md；本项目。bsd_commits.db 数据分析报告：宏观趋势统计 [R/OL]. 2026. ［A］[^doubt-resolved-305]: 据 Mac OS X Internals A Systems Approach (Amit Singh（阿米特·辛格）)  (未署名) 消解
+- OpenBSD CVS 历史早期记录；OpenBSD 1.2 Release Notes (1996.7)；OpenBSD 官方 FAQ；de Raadt 关于审计的公开声明；本项目。原材料/研究/bsd 漏洞史/bsd 前安全史/386bsd-security-1992-1994.md；本项目。原材料/研究/bsd 漏洞史/bsd 前安全史/4.4bsd-lite-security-1992-1995.md；本项目。bsd_commits.duckdb 数据分析报告：宏观趋势统计 [R/OL]. 2026. ［A］[^doubt-resolved-305]: 据 Mac OS X Internals A Systems Approach (Amit Singh（阿米特·辛格）)  (未署名) 消解
 
 <!-- DB_REF:openbsd.duckdb -->
 > **数据库引用（openbsd.duckdb）**：本子节对应 openbsd 代码仓库。> 1992-1995 年间：770 次提交。> 仓库总览：491,195 次提交，3,352 位贡献者，1995-10-18 至 2026-08-25。

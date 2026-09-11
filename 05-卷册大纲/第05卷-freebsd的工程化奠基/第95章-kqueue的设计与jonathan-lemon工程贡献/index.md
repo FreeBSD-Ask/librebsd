@@ -17,7 +17,7 @@ volume: 第05卷-freebsd的工程化奠基
 ## 史观
 
 - 总纲第 2 条——实践先于理论，select/poll 的工程瓶颈催生 kqueue 设计而非理论驱动
-  - 辨析：经 bsd_commits.db commits 表验证，kqueue 首次 commit 为 2000-04-16（非旧叙事 2000.7.5），属 4.1-CURRENT 开发周期内合入主干，4.1-RELEASE 2000.7.26 正式发布；〔待核：原文截断，后文待回源〕
+  - 辨析：经 bsd_commits.duckdb commits 表验证，kqueue 首次 commit 为 2000-04-16（非旧叙事 2000.7.5），属 4.1-CURRENT 开发周期内合入主干，4.1-RELEASE 2000.7.26 正式发布；〔待核：原文截断，后文待回源〕
 - 总纲第 6 条——形式主义膨胀与抽象克制，kqueue 用 filter 抽象取代多套 API 是抽象克制的典范
   - 辨析：filter 中心化设计与 epoll 的 composable 设计的优劣争议，Conill 2021 批评称 filter 中心化导致技术债务
   - 文献：Lemon BSDCon 2000 论文；Banga & Mogul "Scalable Kernel Per
@@ -26,15 +26,15 @@ volume: 第05卷-freebsd的工程化奠基
   - 文献：Stevens《UNIX Network Programming》第 6 章；Banga USENIX 1998 ［
 - 总纲第 1 条——偶然性改写历史，Libenzi 选择 composable 而非 filter 路线导致后续 Linux 生态与 BSD 生态分野
   - 辨析：Libenzi 与 Lemon 的设计是否独立演化，需对比二者 2002 前的邮件往来
-  - 文献：Libenzi "Improving (network) I/O performance"(xmailserver.org, 2001
+  - 文献：Libenzi “Improving (network) I/O performance”(xmailserver.org, 2001
 - 总纲第 4 条——0 信任原则，对 Libenzi 自述的灵感来源须独立考据，**epoll(7)** 手册页与 Libenzi 论文 References 节的措辞选择本身即是形式主义的权力标记；总纲第 19 条——权力与知识的共谋，Libenzi 通过在论文 References 节中系统性地不引用 kqueue，行使了“什么被记录、什么被遗忘”的权力
   - 辨析：**epoll(7)**
 
 ## 辨析
 
-- 经 bsd_commits.db commits 表验证，kqueue 首次 commit 为 2000-04-16（非旧叙事 2000.7.5），属 4.1-CURRENT 开发周期内合入主干，4.1-RELEASE 2000.7.26 正式发布；经邮件列表库验证通过（fact-check 2026-08-14），Jonathan Lemon 2000-06-22《Re: tail after
+- 经 bsd_commits.duckdb commits 表验证，kqueue 首次 commit 为 2000-04-16（非旧叙事 2000.7.5），属 4.1-CURRENT 开发周期内合入主干，4.1-RELEASE 2000.7.26 正式发布；经邮件列表库验证通过（fact-check 2026-08-14），Jonathan Lemon 2000-06-22《Re: tail after
 - filter 中心化设计与 epoll 的 composable 设计的优劣争议，Conill 2021 批评称 filter 中心化导致技术债务
-  - 文献：Lemon BSDCon 2000 论文；Banga & Mogul "Scalable Kernel Performance for Internet Servers"(USENIX 1998) 作对比 ［B］
+  - 文献：Lemon BSDCon 2000 论文；Banga & Mogul “Scalable Kernel Performance for Internet Servers”(USENIX 1998) 作对比 ［B］
 
 ## 94.1.3 设计
 
@@ -45,20 +45,20 @@ volume: 第05卷-freebsd的工程化奠基
 
 - 要点：kqueue 在内核维护就绪事件列表，**kevent(2)** 调用仅
 - Libenzi 与 Lemon 的设计是否独立演化，需对比二者 2002 前的邮件往来
-  - 文献：Libenzi "Improving (network) I/O performance"(xmailserver.org, 2001-07-01 初稿，2002-10-30 更新)；Lemon BSDCon 2000 论文 ［B］
+  - 文献：Libenzi “Improving (network) I/O performance”(xmailserver.org, 2001-07-01 初稿，2002-10-30 更新)；Lemon BSDCon 2000 论文 ［B］
 
 ## 94.3.2 kqueue 对 epoll 的效应
 
 -
-- **epoll(7)** 手册页将 kqueue 定性为"similar mechanism"而非"inspiration source"，这一措辞选择是否反映 Libenzi 的个人立场抑或 Linux man-pages 项目维护者的编辑决策，须区分二者；Libenzi 论文 References 节的文献选择则更直接反映 Libenzi 个人立场，因论文由 Libenzi 本人撰写，Refe
+- **epoll(7)** 手册页将 kqueue 定性为“similar mechanism”而非“inspiration source”，这一措辞选择是否反映 Libenzi 的个人立场抑或 Linux man-pages 项目维护者的编辑决策，须区分二者；Libenzi 论文 References 节的文献选择则更直接反映 Libenzi 个人立场，因论文由 Libenzi 本人撰写，Refe
 
 ## 文献
 
-- Lemon "Kqueue: A Generic and Scalable Event Notification Facility"(USENIX BSDCon 2000)；kqueue(2) 手册页；Jonathan Lemon. Introduce kqueue() and kevent(), a kernel event notification facility. freebsd-src [DB/OL]. 2000-04-16T18:53:38Z. cb679c385ef325d11f162e09b604df7532fc8009 ［A］
+- Lemon “Kqueue: A Generic and Scalable Event Notification Facility”(USENIX BSDCon 2000)；kqueue(2) 手册页；Jonathan Lemon. Introduce kqueue() and kevent(), a kernel event notification facility. freebsd-src [DB/OL]. 2000-04-16T18:53:38Z. cb679c385ef325d11f162e09b604df7532fc8009 ［A］
 
 ## 94.1.2 kevent 的系统调用设计
 
-- Lemon BSDCon 2000 论文；Banga & Mogul "Scalable Kernel Performance for Internet Servers"(USENIX 1998) 作对比 ［B］
+- Lemon BSDCon 2000 论文；Banga & Mogul “Scalable Kernel Performance for Internet Servers”(USENIX 1998) 作对比 ［B］
 
 ## 94.1.3 设计意义分析
 
@@ -71,15 +71,15 @@ volume: 第05卷-freebsd的工程化奠基
 - 要点：kqueue 在内核维护就绪事件列表，**kevent(2)** 调用仅返回已就绪事件，复杂度从 O(N) 降至 O(1)，且支持水平触发 (LT) 与边沿触发 (ET) 两种模式，stateful 设计避免每次重新注册
 - 史料：kqueue(2) 手册页 EV_CLEAR 标志说明、Lemon BSDCon 2000 论文第 4 节性能数据 ［A］
 - 史观：总纲第 2 条——实践先于理论，st
-- Libenzi "Improving (network) I/O performance"(xmailserver.org, 2001-07-01 初稿，2002-10-30 更新)；Lemon BSDCon 2000 论文 ［B］
+- Libenzi “Improving (network) I/O performance”(xmailserver.org, 2001-07-01 初稿，2002-10-30 更新)；Lemon BSDCon 2000 论文 ［B］
 
 ## 94.3.2 kqueue 对 epoll 的效应
 
 - 要点：kqueue 对 epoll 的具体影响体现在：(1) stateful 设计思想一致；(2) 内核维护就绪列表；(3) 但 epoll 拒绝 filter 抽象，改为 “任意 fd 即可挂载” 的 composable 模型，每新增一种资源不需改内核
 - 史料：Libenzi "Impr
-- [1] Stevens UNP Vol. I 2nd ed. 1998、[2] Stevens TCP/IP Illustrated Vol. 1 1994、[3] Banga & Mogul USENIX ATC 1998、[4] Banga Druschel Mogul SIGMETRICS 1998、[5] Banga & Druschel USENIX ITS 1997、[6] Provos & Lever "Scalable Network I/O in Linux" CITI techreport 2000、[7] Dan Kegel "The C10K problem" kege
+- [1] Stevens UNP Vol. I 2nd ed. 1998、[2] Stevens TCP/IP Illustrated Vol. 1 1994、[3] Banga & Mogul USENIX ATC 1998、[4] Banga Druschel Mogul SIGMETRICS 1998、[5] Banga & Druschel USENIX ITS 1997、[6] Provos & Lever “Scalable Network I/O in Linux” CITI techreport 2000、[7] Dan Kegel “The C10K problem” kege
 - Linux **epoll(7)** 手册页；Lemon BSDCon 2000 论文 ［A］
-- bsd_commits.db commits 表；Banga USENIX 1998 ［A］
+- bsd_commits.duckdb commits 表；Banga USENIX 1998 ［A］
 - Linux man-pages project. epoll(7). man-pages-6.18. 2026-02-08 ［A］；Libenzi D. Improving (network) I/O performance. xmailserver.org/linux-patches/nio-improve.html. 2001-07-01 初稿，2002-10-30 更新 ［A］；Dan Kegel. The C10K problem. kegel.com/c10k.html ［A］；LKML 2001-2002 邮件存档［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］，L2）
 - Perlstein 回顾入坑史：少年时代在 MS-DOS 上写汇编自学编程，进大学被计算机系同学讥笑“MS-Dog”，恰逢学校以 FreeBSD 为教学平台，其多任务与内存管理令他感到这是一个真正完整的操作环境；1998 至 1999 年间他在邮件列表提问文件系统问题，收到详尽而易懂的长篇技术答复，自此被社区吸引而留下。（BSD Now EP142，[1536.28-1617.20]，L1）
 - Perlstein 自述其 FreeBSD 内核工程履历：2000 年前后参与 SMP 项目，完成 select 与 poll 的初始 SMP 锁定、SIGIO 锁定与 System V 资源锁等叶区锁；USB2 大型代码库合入时充当“牧羊人”，协调在真空中工作的外部开发者与社区的磨合；又改造大于 4GB 内存机器的默认参数，使插电即得足够 mbuf 支撑万兆网卡，承认短期引入破坏但认为长期值得。（BSD Now EP142，[1706.00-1839.22]，L1）

@@ -8,8 +8,8 @@
 
 #### 史料
 
-- Dillon M. "DragonFly BSD announcement"（2003-07-16）——DragonFly kernel@ 列表首帖，阐述选择 4.x 作为起点的技术原因。
-- Dillon M. "Light Weight Kernel Threading vs Scheduler Activations"（2003-11-08）——DragonFly kernel@ 列表长文，系统语言对比 LWKT 与 FreeBSD 5.x KSE/SMPng 的范型差异。
+- Dillon M. “DragonFly BSD announcement”（2003-07-16）——DragonFly kernel@ 列表首帖，阐述选择 4.x 作为起点的技术原因。
+- Dillon M. “Light Weight Kernel Threading vs Scheduler Activations”（2003-11-08）——DragonFly kernel@ 列表长文，系统语言对比 LWKT 与 FreeBSD 5.x KSE/SMPng 的范型差异。
 - Kamp P-H. “FreeBSD 5.0 稳定性的批评”（2003-07-22）——PHK 在 FreeBSD-current@ 列表中公开批评 5.x 的稳定性时说 “我们用两年时间把一个不稳定的系统替换成了另一个不稳定的系统”。
 - FreeBSD 5.0 正式发布（2003-01-19）——FreeBSD 5.0 是首个启用 SMPng 的生产版本，其稳定性问题直至 5.3（2004-11-06）才基本解决。
 - Lehey G. *The Complete FreeBSD* [M]. 4th ed. 2003——附录记载 5.x 的架构争议与 Dillon 的分歧。
@@ -42,8 +42,8 @@
 
 - 要点：dragonfly 代码仓库共 656,206 次提交（2003-06-17 至 2026-08-18），535 位贡献者
 - 史料：[DB:code_repos:dragonfly.duckdb] dragonfly 仓库总览：656,206 次提交，535 位贡献者，时间跨度 2003-06-17 至 2026-08-18
-- 史观：分离聚合循环：自反性：DragonFly 的 Dillon 个人主导模式是对'开源社区民主'神话的挑战
-- 辨析：贡献者高度集中——Top 1 贡献者 DPorts Builder 占比 88.0%，需考量'个人主导'与'社区协作'的叙事张力
+- 史观：分离聚合循环：自反性：DragonFly 的 Dillon 个人主导模式是对‘开源社区民主’神话的挑战
+- 辨析：贡献者高度集中——Top 1 贡献者 DPorts Builder 占比 88.0%，需考量‘个人主导’与‘社区协作’的叙事张力
 - 文献：[DB:references_fulltext] 参考文献全文数据库（4,077 篇全文，27,138 条时间线事件）—— 对应 dragonfly.duckdb 代码仓库数据
 
 

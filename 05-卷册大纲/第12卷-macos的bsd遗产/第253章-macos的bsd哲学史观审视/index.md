@@ -20,7 +20,7 @@ macOS 的 BSD 遗产是全书最复杂的身份认同问题——XNU 内核中 M
 
 ## 辨析
 
-- 贡献者高度集中——Top 1 贡献者 Apple OSS Distributions 占比 100.0%，需考量'个人主导'与'社区协作'的叙事张力
+- 贡献者高度集中——Top 1 贡献者 Apple OSS Distributions 占比 100.0%，需考量‘个人主导’与‘社区协作’的叙事张力
 
 ## 文献
 

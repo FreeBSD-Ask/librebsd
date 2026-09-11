@@ -17,7 +17,7 @@ volume: 第16卷-开源运动与合规治理
 ## 史观
 
 - 总纲第 14 条——话语权与边缘者
-  - 辨析：【双库核查 2026-08-15】邮件列表库 freebsd 1997-1999 年查询 'open source initiative' 命中 5 条（Jordan K. Hubbard 1998 年直接参与 OSI 讨论为强证据），参考文献库 'OSI' 命中 5 条——双库验证；BSD 是否真缺席 OSI，须查邮件
+  - 辨析：【双库核查 2026-08-15】邮件列表库 freebsd 1997-1999 年查询 ‘open source initiative’ 命中 5 条（Jordan K. Hubbard 1998 年直接参与 OSI 讨论为强证据），参考文献库 ‘OSI’ 命中 5 条——双库验证；BSD 是否真缺席 OSI，须查邮件
   - 文献：OSI 早期
 - 总纲第 14 条——话语权与边缘者，Linux 话语权压倒 BSD
   - 辨析：Linux 主导是否因技术优势还是商业与话语权，需独立判断
@@ -35,7 +35,7 @@ volume: 第16卷-开源运动与合规治理
 
 ## 辨析
 
-- 【双库核查 2026-08-15】邮件列表库 freebsd 1997-1999 年查询 'open source initiative' 命中 5 条（Jordan K. Hubbard 1998 年直接参与 OSI 讨论为强证据），参考文献库 'OSI' 命中 5 条——双库验证；BSD 是否真缺席 OSI，须查邮件
+- 【双库核查 2026-08-15】邮件列表库 freebsd 1997-1999 年查询 ‘open source initiative’ 命中 5 条（Jordan K. Hubbard 1998 年直接参与 OSI 讨论为强证据），参考文献库 ‘OSI’ 命中 5 条——双库验证；BSD 是否真缺席 OSI，须查邮件
   - 文献：OSI 早期邮件［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
 
 ## 302.11.2 Windows 的闭源与逐步开源路径
@@ -43,7 +43,7 @@ volume: 第16卷-开源运动与合规治理
 - 要点：Microsoft Windows 的开源路径：(1) Windows 长期闭源；(2) Microsoft 2014 年起在 Satya Nadella
 - BSD 是否真 “被沉默”，需独立判断；BSD 社区是否应争夺话语权；freebsd.duckdb 数据显示 FreeBSD 仓库首条 commit 1993-06-12 与 Linux 1991-08-25 之间约 22 个月的时间差，反映 FreeBSD 作为 386BSD 后继项目晚于 Linux 启动，但 BSD 代码谱系（CSRG 1BSD 1977）早于 Linux 14 年；〔待核：原文截断，后文待回源〕
 - 第 11 条审视不否定 Linux 的技术价值，仅揭示“市场选择”非中立——Linux 的话语胜利含形式主义维度。须避免将“劣币驱逐良币”简化为“Linux 劣 BSD 良”的道德判断，第 11 条指出的是形式主义市场的一般规律，非针对具体项目的褒贬。考据过程留痕：Raymond CatB 原文的 Revision 1.29（1998-02-09）改名操作经 **catb.org** 确认，此改名
-- 第 19 条审视揭示 BSD 边缘化争议非“事实清楚只是被忽视”的问题，而是认识论层面的前理解之争。史家无法跳出解释学循环而获得“上帝视角”，只能自反地呈现各方前理解并承认自身的形式主义位置。考据过程留痕：Raymond CatB 原文经 **catb.org** 确认，Raymond 未直接点名 BSD 而是将"operating systems and Emacs"归入大教堂模式，此考据修正强
+- 第 19 条审视揭示 BSD 边缘化争议非“事实清楚只是被忽视”的问题，而是认识论层面的前理解之争。史家无法跳出解释学循环而获得“上帝视角”，只能自反地呈现各方前理解并承认自身的形式主义位置。考据过程留痕：Raymond CatB 原文经 **catb.org** 确认，Raymond 未直接点名 BSD 而是将“operating systems and Emacs”归入大教堂模式，此考据修正强
 
 ## 文献
 
@@ -58,8 +58,8 @@ volume: 第16卷-开源运动与合规治理
 
 - 要点：Microsoft Windows 的开源路径：(1) Windows 长期闭源；(2) Microsoft 2014 年起在 Satya Nadella 主导下转向 “Microsoft 爱开源”；(3) 2016 年收购 Xamarin；(4) 2018 年收购 GitHub（75 亿美元）；(5) 2018 年加入 OSI；(6) 开源 .NET Core、VS Code 等；Windows 内核仍闭源
 - 史料：M
-- freebsd-hackers mailing list archives；FreeBSD Quarterly Status Reports；The FreeBSD Foundation Annual Reports；freebsd.duckdb commits 表 freebsd-src Rodney W. Grimes commit `9002c02abc58`（1993-06-12T14:49:13Z，"Initial import, 0.1 + pk 0.2.4-B1"）；freebsd.duckdb commits 表 freebsd-doc John Fieber commit `
-- 项目史观总纲第 25 章总纲；bsd_commits.db L7.3.1 查询结果 [DB/OL]；Raymond, E. S. The Cathedral and the Bazaar [EB/OL]. (1997-05-21). <http://catb.org/~esr/writings/cathedral-bazaar/cathedral-bazaar/> [2026-07-22]；Kamp, P.-H. A bike shed (any colour will do) on greener grass... [EB/OL]. (1999-10-02). <<https://phk.fr>
+- freebsd-hackers mailing list archives；FreeBSD Quarterly Status Reports；The FreeBSD Foundation Annual Reports；freebsd.duckdb commits 表 freebsd-src Rodney W. Grimes commit `9002c02abc58`（1993-06-12T14:49:13Z，“Initial import, 0.1 + pk 0.2.4-B1”）；freebsd.duckdb commits 表 freebsd-doc John Fieber commit `
+- 项目史观总纲第 25 章总纲；bsd_commits.duckdb L7.3.1 查询结果 [DB/OL]；Raymond, E. S. The Cathedral and the Bazaar [EB/OL]. (1997-05-21). <http://catb.org/~esr/writings/cathedral-bazaar/cathedral-bazaar/> [2026-07-22]；Kamp, P.-H. A bike shed (any colour will do) on greener grass... [EB/OL]. (1999-10-02). <<https://phk.fr>
 - 项目史观总纲第 19 章；项目史观总纲第 25 章总纲；Raymond, E. S. The Cathedral and the Bazaar [EB/OL]. (1997-05-21). <http://catb.org/~esr/writings/cathedral-bazaar/cathedral-bazaar/> [2026-07-22]；Weber, S. The Success of Open Source [M]. Cambridge, MA: Harvard University Press, 2004 [Z/OL]. <<https://book.douban.com/subj>
 - 项目史观总纲第 23 章；项目史观总纲第 25 章总纲；Raymond, E. S. The Cathedral and the Bazaar [EB/OL]. (1997-05-21). <http://catb.org/~esr/writings/cathedral-bazaar/cathedral-bazaar/> [2026-07-22]；Raymond《开拓智域》；DiBona, C., Ockman, S., Stone, M. (eds.) Open Sources: Voices from the Open Source Revolution [M]. Sebastopol:
 - 项目史观总纲第 25 章总纲；Stallman, R. The GNU Manifesto [EB/OL]. (1985). <https://www.gnu.org/gnu/manifesto.en.html> [2026-07-24]；freebsd.duckdb commits 表 freebsd-src David E. O'Brien commit `23059e66356e`（参见 49.1.4）[DB/OL] ［A］

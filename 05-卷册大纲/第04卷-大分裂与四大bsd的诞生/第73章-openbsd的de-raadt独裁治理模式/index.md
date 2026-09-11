@@ -40,7 +40,7 @@ volume: 第04卷-大分裂与四大bsd的诞生
 
 ## 辨析
 
-- 考据过程留痕——【查证来源】独裁模式与社区治理模式的对照证据基于 OpenBSD 官方 goals.html（<https://www.openbsd.org/goals.html>，"Focus on being developer-oriented in all senses " 与 " Be as politics-free as possible " 经一手核验）、FreeBSD Core
+- 考据过程留痕——【查证来源】独裁模式与社区治理模式的对照证据基于 OpenBSD 官方 goals.html（<https://www.openbsd.org/goals.html>，“Focus on being developer-oriented in all senses ” 与 “ Be as politics-free as possible ” 经一手核验）、FreeBSD Core
 - 考据过程留痕——【查证来源】项目史观总纲第 13、19、21 条原文经 原材料/哲学/项目统摄史观/第 25 章.md 一手核验——第 13 条原文为“法律与道德是利益分配。任何道德问题本质上是利益问题，社区治理亦是形式主义的政治产物”，第 19 条原文为“解释学循环是历史认识的根本条件。前理解的差异使分歧不可避免。权力与知识在历史书写中共谋——什么被记录、什么被遗忘，本身就是权力行使”，第 21
 
 ## 文献
@@ -49,7 +49,7 @@ volume: 第04卷-大分裂与四大bsd的诞生
 
 <!-- DB_REF:openbsd.duckdb -->
 > **数据库引用（openbsd.duckdb）**：本子节对应 openbsd 代码仓库。> 1992-1995 年间：770 次提交。> 仓库总览：491,195 次提交，3,352 位贡献者，1995-10-18 至 2026-08-25。
-- 原材料/哲学/项目统摄史观/第 25 章.md（总纲第 13、19、21 条原文）；NetBSD core.html [EB/OL]. <https://www.netbsd.org/people/core.html>；OpenBSD lyrics.html [EB/OL]. <https://www.openbsd.org/lyrics.html>；OpenBSD security.html [EB/OL]. <https://www.openbsd.org/security.html>；OpenBSD goals.html [EB/OL]. <https://www.openbsd.org/goals.html>；netbsd.duckdb netbsd-src deraadt 末次 commit `699d2a37b0e3c0c6ff29ea0d407c3feeba5642b4`（1994-12-17T23:12:41Z）；openbsd.duckdb openbsd-src 首条 commit `df930be708d50e9715f173caa26ffe1b7599b157`（deraadt, 1995-10-18T08:37:01Z, "initial import of NetBSD tree"） ［A］
+- 原材料/哲学/项目统摄史观/第 25 章.md（总纲第 13、19、21 条原文）；NetBSD core.html [EB/OL]. <https://www.netbsd.org/people/core.html>；OpenBSD lyrics.html [EB/OL]. <https://www.openbsd.org/lyrics.html>；OpenBSD security.html [EB/OL]. <https://www.openbsd.org/security.html>；OpenBSD goals.html [EB/OL]. <https://www.openbsd.org/goals.html>；netbsd.duckdb netbsd-src deraadt 末次 commit `699d2a37b0e3c0c6ff29ea0d407c3feeba5642b4`（1994-12-17T23:12:41Z）；openbsd.duckdb openbsd-src 首条 commit `df930be708d50e9715f173caa26ffe1b7599b157`（deraadt, 1995-10-18T08:37:01Z, “initial import of NetBSD tree”） ［A］
 
 <!-- DB_REF:freebsd.duckdb -->
 > **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 1992-1995 年间：15,540 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。

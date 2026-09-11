@@ -9,7 +9,7 @@
 - 史料：FreeBSD Ports 系统设计邮件（Jordan Hubbard, 1994-1995）；Ports 增长曲线（34,000+ 端口，1994-2026）；FreeBSD Porter's Handbook；第 88 章 88.1-88.5 节现有内容
 - 史观：shigang §6 伦理学——“认识到苦难的普遍性与不可避免性同反对苦难本身并不存在任何张力。”(27.4 节) Ports 系统的“不求回报”既是开源伦理的最高表达，也是开源生态的结构性脆弱——不要求回馈意味着无法保证可持续性。shigang §12 经济哲学——Ports 维护者的斩杀线：当维护者的个人精力/时间跌破阈值，端口成为“无人维护”(unmaintained)状态——系统不会主动杀死这些端口，但它们的“社会性死亡”（被标记为 DEPRECATED 然后 EXPIRED）是斩杀线的延迟执行。
 - 辨析：Ports 的“不求回报”是否在道德上优于 GPL 的“要求传递自由”？——shigang §6 的回应是：不存在道德上的“优越”，只存在利益分配方案的不同。“不求回报”在道德上高尚但在经济上脆弱，“要求传递自由”在经济上可持续但在道德上具有强制性。两者都是“德福一致不可能”条件下的不同策略——选择 Ports 模式意味着接受“你的贡献不被市场奖赏”的风险。
-- 文献：Hubbard, J. (1994-1995). FreeBSD Ports 系统设计邮件；FreeBSD Porter's Handbook; Kamp, P-H. (2007). "A bike shed (any colour will do) on greener grass..."; shigang.md §6（伦理学）、§12（经济哲学）
+- 文献：Hubbard, J. (1994-1995). FreeBSD Ports 系统设计邮件；FreeBSD Porter's Handbook; Kamp, P-H. (2007). “A bike shed (any colour will do) on greener grass...”; shigang.md §6（伦理学）、§12（经济哲学）
 
 <!-- DB_REF:freebsd.duckdb -->
 > **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。
@@ -693,7 +693,7 @@ FreeBSD 是少数人的选择，是“百分之一的生活”。选择是自由
 - Mischa Peters. openbsd The%20 Open BSD%20hypervisor%20in%20the%20wild,%20a%20short%20story%20-%20 Mischa%20 Peters[M]. 2019.
 - Kantee A. Rump Device Drivers: Shine On You Kernel Diamond[C]//AsiaBSDCon 2010. Tokyo, 2010.
 - ONODERA R. How to Package GitHub Softwares（幻灯片）[EB/OL]. AsiaBSDCon 2015 NetBSD BoF.
-- Heitor E 'iM'. SMOLBSD: Making NetBSD a fast(er) booting microvm[C]//Proceedings of BSDCan 2024. Ottawa: BSDCan, 2024 ［C］. 2024.
+- Heitor E ‘iM’. SMOLBSD: Making NetBSD a fast(er) booting microvm[C]//Proceedings of BSDCan 2024. Ottawa: BSDCan, 2024 ［C］. 2024.
 - Cagney A. What Happens When a Dwarf and a Daemon Start Dancing（幻灯片）[EB/OL]. BSDCan 2015.
 - Herwig S. secmodel_sandbox: An Application Sandbox for NetBSD[C]//BSDCan 2017. Ottawa, 2017.
 - Hiroki Sato. netbsd abc2010-P5 A-paper[M]. 2010.

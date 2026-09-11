@@ -19,7 +19,7 @@ volume: 第09卷-netbsd的历史
 
 ## 史观
 
-- 形式主义：pkgsrc 是'跨平台软件包管理'的形式主义解决方案，与 FreeBSD Ports 形成镜像
+- 形式主义：pkgsrc 是‘跨平台软件包管理’的形式主义解决方案，与 FreeBSD Ports 形成镜像
 
 ## 辨析
 

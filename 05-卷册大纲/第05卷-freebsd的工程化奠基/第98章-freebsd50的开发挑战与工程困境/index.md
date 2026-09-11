@@ -17,7 +17,7 @@ volume: 第05卷-freebsd的工程化奠基
 ## 史观
 
 - 总纲第 2 条——实践先于理论，3 年延期源于 SMPng 工程挑战而非计划
-  - 辨析：经 bsd_commits.db tags 表验证，5.0-RELEASE 的 tagger_date 为 2003-01-16（非旧叙事 2003.1.19，误差 3 天，可能为公告日期与 tag 日期差异），5.0 开发起始日期存在 2000.3 与 2000.1 两种说法，需查 SVN；0 信任原则适
+  - 辨析：经 bsd_commits.duckdb tags 表验证，5.0-RELEASE 的 tagger_date 为 2003-01-16（非旧叙事 2003.1.19，误差 3 天，可能为公告日期与 tag 日期差异），5.0 开发起始日期存在 2000.3 与 2000.1 两种说法，需查 SVN；0 信任原则适
 - 总纲第 5 条——技术债务与代码考古，4BSD 调度器是 1980s 设计的债务
   - 辨析：Roberson 批评是否公平，需独立验证 4BSD 调度器性能
   - 文献：Roberson BSDCon 2003 论文 ［B］
@@ -26,7 +26,7 @@ volume: 第05卷-freebsd的工程化奠基
 
 - 要点：ULE 调度器采用三个 per-CPU 队列 (current/next/idle) 设计，目标 O(1) 复杂
 - 总纲第 6 条——形式主义膨胀与抽象克制，ULE 设计相对克制
-  - 辨析：经 bsd_commits.db commits 表验证，ULE 首次 commit 为 2003-01-26T05:23:15Z（5.0-RELEASE 之后 10 天，属 5.1-CURRENT 开发周期）；ULE 是否真 O(1)，EPFL 2018 论文证明存在饥饿问题
+  - 辨析：经 bsd_commits.duckdb commits 表验证，ULE 首次 commit 为 2003-01-26T05:23:15Z（5.0-RELEASE 之后 10 天，属 5.1-CURRENT 开发周期）；ULE 是否真 O(1)，EPFL 2018 论文证明存在饥饿问题
   - 文献：Roberson 论文；EP
 - 总纲第 4 条——0 信任原则，学术批评需独立验证
   - 辨析：ULE 移植是否准确反映原版，需查移植方法
@@ -40,14 +40,14 @@ volume: 第05卷-freebsd的工程化奠基
 
 ## 辨析
 
-- 经 bsd_commits.db tags 表验证，5.0-RELEASE 的 tagger_date 为 2003-01-16（非旧叙事 2003.1.19，误差 3 天，可能为公告日期与 tag 日期差异），5.0 开发起始日期存在 2000.3 与 2000.1 两种说法，需查 SVN；0 信任原则适用说明：L1.1.1 年度 commit 量基于 author_date 聚合，FreeBS
+- 经 bsd_commits.duckdb tags 表验证，5.0-RELEASE 的 tagger_date 为 2003-01-16（非旧叙事 2003.1.19，误差 3 天，可能为公告日期与 tag 日期差异），5.0 开发起始日期存在 2000.3 与 2000.1 两种说法，需查 SVN；0 信任原则适用说明：L1.1.1 年度 commit 量基于 author_date 聚合，FreeBS
 - Roberson 批评是否公平，需独立验证 4BSD 调度器性能
   - 文献：Roberson BSDCon 2003 论文 ［B］
 
 ## 97.4.2 ULE 的双队列设计
 
 - 要点：ULE 调度器采用三个 per-CPU 队列 (current/next/idle) 设计，目标 O(1) 复杂度、CPU 亲和性、SMP 优化、交互式响应优先；算法基于时间片与交互性评分；ULE 首次 co
-- 经 bsd_commits.db commits 表验证，ULE 首次 commit 为 2003-01-26T05:23:15Z（5.0-RELEASE 之后 10 天，属 5.1-CURRENT 开发周期）；ULE 是否真 O(1)，EPFL 2018 论文证明存在饥饿问题
+- 经 bsd_commits.duckdb commits 表验证，ULE 首次 commit 为 2003-01-26T05:23:15Z（5.0-RELEASE 之后 10 天，属 5.1-CURRENT 开发周期）；ULE 是否真 O(1)，EPFL 2018 论文证明存在饥饿问题
   - 文献：Roberson 论文；EPFL USENIX ATC 2018 论文；Jeff Roberson. Ad
 - ULE 移植是否准确反映原版，需查移植方法
   - 文献：Bouron et al. USENIX ATC 2018 论文 ［B］
@@ -79,7 +79,7 @@ volume: 第05卷-freebsd的工程化奠基
 
 ## 97.10.2 Torvalds 对 VM 的辱骂性批评——四层辩证（批评—反批评—再批评—合图）
 
-- 要点：【批评层】Linus Torvalds 据传曾在 Linux 内核邮件列表（LKML）中辱骂 FreeBSD VM 开发者为 "incompetent idiots"（不胜任的白痴），反映 BSD 与 Linux 社区在虚拟内存子系统设计哲学上的长期张力；该辱骂被 FreeBSD 社区长期记忆，成为 BSD 与 Linux 关系史中的标志性话语事件。需特别辨析：任务描述中提及的 "Alan Cox" 实
+- 要点：【批评层】Linus Torvalds 据传曾在 Linux 内核邮件列表（LKML）中辱骂 FreeBSD VM 开发者为 “incompetent idiots”（不胜任的白痴），反映 BSD 与 Linux 社区在虚拟内存子系统设计哲学上的长期张力；该辱骂被 FreeBSD 社区长期记忆，成为 BSD 与 Linux 关系史中的标志性话语事件。需特别辨析：任务描述中提及的 “Alan Cox” 实
 - SMPng 文档 ［A］
 - KSE 文档； 7.0 发行说明 ［A］
 - Roberson 2003; 基准测试 ［A］

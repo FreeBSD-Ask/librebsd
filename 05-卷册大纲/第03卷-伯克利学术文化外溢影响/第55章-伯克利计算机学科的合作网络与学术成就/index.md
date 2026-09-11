@@ -9,7 +9,7 @@ volume: 第03卷-伯克利学术文化外溢影响
 ## 史料
 
 - [WEB:dl.acm.org ACM Curricula 1968-1981] ACM 课程建议书（一手）：Curriculum 68 奠定计算机科学学科化基础，伯克利 1968 年设立独立 CS 系属此浪潮
-- [WEB:Berkeley CS History] UC Berkeley CS 系史：1968 年建系（首任系主任 David Hart）；1970s-80s BSD Unix/FFS/TCP/IP、RISC-I/II（Patterson 1980 年代，1985 年 "The Case for the RISC Architecture"）——CSRG 学术成就主线；图灵奖得主 Michael Stonebraker（Ingres/Postgres 数据库研究）与伯克利 CS 的交集
+- [WEB:Berkeley CS History] UC Berkeley CS 系史：1968 年建系（首任系主任 David Hart）；1970s-80s BSD Unix/FFS/TCP/IP、RISC-I/II（Patterson 1980 年代，1985 年 “The Case for the RISC Architecture”）——CSRG 学术成就主线；图灵奖得主 Michael Stonebraker（Ingres/Postgres 数据库研究）与伯克利 CS 的交集
 - [WEB:mckusick.com/articles.html] McKusick 论文总目录（一手）：CSRG 核心产出文献链——FFS（4.2BSD fast filesystem）、Soft Updates（TOCS 2000）、4.4BSD Design and Implementation（1996 Addison Wesley）等学术发表记录
 
 ## 要点
@@ -37,7 +37,7 @@ volume: 第03卷-伯克利学术文化外溢影响
 - ACM. Official Records［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］；IEEE. Official Records ［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］；Computing Research Association. Official Records ［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］；ACM Turing Award. Official Recor
 - ACM Turing Award. Michael Stonebraker Biography. <https://amturing.acm.org/award_winners/stonebraker_1172121.cfm>；ACM. System Software Award Records, 1992［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］；ACM SIGMOD. Innovation Award Records, 1994 [考据完成：2026-07-28 该处存
 - McKusick, M. K., Joy, W. N., Leffler, S. J., & Fabry, R. S. (1984) A Fast File System for UNIX // ACM Transactions on Computer Systems, 2(3): 181-197；Stonebraker, M., & Wong, E. (1976) Access Techniques in Relational Data Base Systems // Proceedings of the 1976 ACM SIGMOD International Conference on
-- references_fulltext.db ref 2742-2751；引用卡 `99-考据新增/伯克利市-ICSI租赁系列-20260806-ref2742-2751.md`。
+- references_fulltext.duckdb ref 2742-2751；引用卡 `99-考据新增/伯克利市-ICSI租赁系列-20260806-ref2742-2751.md`。
 
 ## 自反性声明
 

@@ -11,7 +11,6 @@ volume: 第11卷-dragonflybsd的历史
 - 2003-2007 并发模型竞争：FreeBSD 5/6 走 SMPng 锁路线，DragonFly 1.x 走 LWKT 消息传递，NetBSD 2/3 稳健 SMP，OpenBSD 3.x 保守，Linux 2.6 抢占/锁成熟；DragonFly 1.x 的 LWKT 是 BSD 家族内少有的 “去锁化” 并发实验。
 - DragonFly 1.x 时期 LWKT（Light Weight Kernel Threading）子系统的 MP-safe 设计对漏洞响应产生双重影响——其一，LWKT 的消息传递模型与 token 机制替代传统 mutex，减少了部分竞态条件漏洞的风险（token 不持有时不阻塞其他 CPU，降低了锁竞争导致的死锁类漏洞）；其二，LWKT 引入新的并发复杂性——每 CPU 线程模型与 IP
 - dragonfly 代码仓库共 656,206 次提交（2003-06-17 至 2026-08-18），535 位贡献者
-- dragonfly 代码仓库共 656,206 次提交（2003-06-17 至 2026-08-18），535 位贡献者
 - DragonFly BSD 自 fork 自 FreeBSD 4.8（**2003-06-20**）起保留 nullfs 实现，源码位于 **sys/vfs/nullfs/** 目录——此实现未跟随 FreeBSD 5.0（2003）的 GEOM 框架重构，保留了 4.4BSD-Lite2 时代的传统 layered fs 路径。DragonFly BSD 的 nullfs 用于挂载点别名与 ja
 
 ## 史料

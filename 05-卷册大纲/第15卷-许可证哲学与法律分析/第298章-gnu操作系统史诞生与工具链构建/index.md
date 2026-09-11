@@ -12,7 +12,7 @@ volume: 第15卷-许可证哲学与法律分析
 | 组合 | 兼容性 | 说明 |
 |---|---|---|
 | GPLv3 ↔ Apache-2.0 | ✅ 兼容 | Apache-2.0 项目可并入 GPLv3（单向） |
-| GPLv3 ↔ GPLv2 | ⚠ 有条件 | "GPLv2 or later" 可升级；"GPLv2 only" 不兼容 v3 |
+| GPLv3 ↔ GPLv2 | ⚠ 有条件 | “GPLv2 or later” 可升级；“GPLv2 only” 不兼容 v3 |
 | GPLv2 ↔ Apache-2.0 | ❌ 不兼容 | Apache-2.0 专利条款与 GPLv2 冲突 |
 | LGPL ↔ GPL | ✅ 兼容 | LGPL 库可并入 GPL 项目（§6 可重新许可） |
 | LGPL-3.0 → GPLv3 | ✅ 可升级 | LGPLv3+ 可升级为 GPLv3，反之不可 |
@@ -44,7 +44,7 @@ volume: 第15卷-许可证哲学与法律分析
 
 ## 辨析
 
-- 贡献者高度集中——Top 1 贡献者 Linus Torvalds 占比 33.2%，需考量'个人主导'与'社区协作'的叙事张力
+- 贡献者高度集中——Top 1 贡献者 Linus Torvalds 占比 33.2%，需考量‘个人主导’与‘社区协作’的叙事张力
 - 许可证兼容性是单向的（如 GPLv3 ↔ Apache-2.0 仅 Apache→GPLv3 可行）；引用须以 FSF 官方列表为准 [考据完成：2026-08-04]
 
 ## 文献

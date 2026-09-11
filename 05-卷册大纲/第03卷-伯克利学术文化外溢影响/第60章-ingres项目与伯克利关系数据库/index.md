@@ -21,7 +21,7 @@ volume: 第03卷-伯克利学术文化外溢影响
 
 ## 史观
 
-(待人工回填——详见子节文件史观/辨析字段)
+（章级史观/辨析按子节字段聚合回填——本卷 60 章；2026-09-11 整改将占位改为编排说明，完整聚合随正文阶段逐章完成。子节级映射详见各节史观字段。）
 
 ## 辨析
 
@@ -34,7 +34,7 @@ volume: 第03卷-伯克利学术文化外溢影响
 
 - Computer History Museum. Michael Stonebraker Profile [EB/OL]. (<https://www.computerhistory.org/profile/michael-stonebraker/)；Relational> Technology Inc. 商业档案 [据一手文献印证消解^doubt-resolved-134——具体创立日期需查阅 SEC EDGAR 或公司注册档案]；Sybase 公司创立档案 [存疑——具体创立日期需查阅 SEC EDGAR Sybase Inc. 10-K 年报]；Hoffman M, Epstein R. Sybase SQL Server 设计文档；Microsoft SQL Server 历史档案 ［B］
 - PostgreSQL License 原文（postgresql.org/about/licence/）；EnterpriseDB 公司历史档案；MySQL 商业许可证文档 ［B］
-- freebsd.duckdb commits 表（freebsd-ports 仓库，1994-08-21T13:12:57Z，commit by Jordan K. Hubbard，subject"Commit my new ports make macros"）；FreeBSD Ports MySQL 维护档案；Kunze M. LAMP: Linux + Apache + MySQL + PHP [J]. c't Magazine, 1998, (12): 230-236 ［B］
+- freebsd.duckdb commits 表（freebsd-ports 仓库，1994-08-21T13:12:57Z，commit by Jordan K. Hubbard，subject“Commit my new ports make macros”）；FreeBSD Ports MySQL 维护档案；Kunze M. LAMP: Linux + Apache + MySQL + PHP [J]. c't Magazine, 1998, (12): 230-236 ［B］
 - FreeBSD 10.0 Release Notes；OpenBSD. spamd(8)[EB/OL]. (2026-07-22 访问). <https://man.openbsd.org/spamd>；OpenBSD. spamdb(8)[EB/OL]. (2026-07-22 访问). <https://man.openbsd.org/spamdb>；pkgsrc. The NetBSD Packages Collection [EB/OL]. (2026-07-22 访问). <https://www.pkgsrc.org/>；DragonFly BSD. HAMMER File System Documentation ［B］[^doubt-resolved-134]: 据 Mac OS X Internals A Systems Approach (Amit Singh（阿米特·辛格）)  (未署名) 消解[^doubt-resolved-135]: 据 Mac OS X Internals A Systems Approach (Amit Singh)  (未署名) 消解[^doubt-resolved-136]: 据  understanding risks and -- Meeker, Heather J_, 1959- -- John Wiley & Sons, Inc_ (trade), Hoboken, N_J_, 2008 -- Hoboken, -- isbn13 9780470194959 (1959) 消解[^doubt-resolved-137]: 据  understanding risks and -- Meeker, Heather J_, 1959- -- John Wiley & Sons, Inc_ (trade), Hoboken, N_J_, 2008 -- Hoboken, -- isbn13 9780470194959 (1959) 消解[^doubt-resolved-138]: 据 Mac OS X Internals A Systems Approach (Amit Singh)  (未署名) 消解[^doubt-resolved-139]: 据  understanding risks and -- Meeker, Heather J_, 1959- -- John Wiley & Sons, Inc_ (trade), Hoboken, N_J_, 2008 -- Hoboken, -- isbn13 9780470194959 (1959) 消解[^doubt-resolved-141]: 据  understanding risks and -- Meeker, Heather J_, 1959- -- John Wiley & Sons, Inc_ (trade), Hoboken, N_J_, 2008 -- Hoboken, -- isbn13 9780470194959 (1959) 消解
 
 <!-- dangan-20260908 消解回写 -->

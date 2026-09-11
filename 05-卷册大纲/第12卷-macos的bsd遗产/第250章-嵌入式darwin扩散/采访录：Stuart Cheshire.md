@@ -12,7 +12,7 @@
 - 采访者：自述，无采访者（USENIX ; login: 期刊技术文章自述）
 - 采访时间：2006-04（期刊发表时间，iPhone 发布前一年）
 - 采访形式：自述文章（期刊技术文章）
-- 原始来源：Cheshire S, Krochmal M. "DNS-Based Service Discovery"[J]. *; login:*, 2006, 31(4): 18-25。USENIX ; login: 期刊存档 **<https://www.usenix.org/publications/login>** （USENIX 官方存档，访问日期 2026-07-24）
+- 原始来源：Cheshire S, Krochmal M. “DNS-Based Service Discovery”[J]. *; login:*, 2006, 31(4): 18-25。USENIX ; login: 期刊存档 **<https://www.usenix.org/publications/login>** （USENIX 官方存档，访问日期 2026-07-24）
 - 存档信息：原始 URL 经联网抓取可访问（访问日期 2026-07-24），USENIX ; login: 为机构永久存储；互联网档案馆存档链接待补充【2026-07-30 联网核查：穷尽检索 Internet Archive Wayback Machine `web.archive.org` 中 `usenix.org/publications/login` 2006 年 4 月号（volume 31, issue 4）的存档快照未获，USENIX ; login: 期刊 2006 年存档仅以机构永久存储形式提供，Internet Archive 存档 URL 无法获取。依据 0 信任原则 + 严禁臆造约束，本子节不予著录 Internet Archive 存档 URL，待后续核查 USENIX ; login: 期刊 2006 年 4 月号具体文章存档或第三方存档后补全——详 `03-原始史料库/06-考据记录/20260730_jianyi缺口补全考据.md` §9v】
 
 **字段 2 采访摘要**
@@ -42,7 +42,7 @@ Cheshire 在 ; login: 2006 年 4 月号的自述文章中系统阐述基于 DNS 
 
 ### 嵌入式 Darwin 工程团队（2007-2024 时期当事人）
 
-Apple 嵌入式 Darwin 内部团队（Maxime Bellengé、Jean-Daniel Dupuy 等）的公开口述史与采访来源稀缺。经三次复查（检索路径：CHM oral-histories 按"iOS""tvOS""watchOS"检索；Apple Developer 录像存档按"Darwin embedded"关键词检索；BSD Now/BSDCan 按"embedded Darwin"检索）未发现可直接引用的公开采访。Apple 嵌入式 Darwin 团队的工程实践主要以 WWDC 技术环节录像形式公开，但具体工程师的姓名与角色在 Apple 品牌叙事下被遮蔽。
+Apple 嵌入式 Darwin 内部团队（Maxime Bellengé、Jean-Daniel Dupuy 等）的公开口述史与采访来源稀缺。经三次复查（检索路径：CHM oral-histories 按“iOS”“tvOS”“watchOS”检索；Apple Developer 录像存档按“Darwin embedded”关键词检索；BSD Now/BSDCan 按“embedded Darwin”检索）未发现可直接引用的公开采访。Apple 嵌入式 Darwin 团队的工程实践主要以 WWDC 技术环节录像形式公开，但具体工程师的姓名与角色在 Apple 品牌叙事下被遮蔽。
 
 按“如有”判定原则，本时期嵌入式 Darwin 内部团队（Bellengé、Dupuy 等）的公开采访暂未发现，留待后续补充。已尝试的检索路径与判定依据见 [20260724_ch117-interview-survey.md](../../../原材料/研究/考据记录/20260724_ch117-interview-survey.md)。
 

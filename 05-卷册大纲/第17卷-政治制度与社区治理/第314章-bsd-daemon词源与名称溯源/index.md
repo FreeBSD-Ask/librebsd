@@ -43,7 +43,7 @@ volume: 第17卷-政治制度与社区治理
 ## 文献
 
 - `原材料/教材/` BSD daemon 翻译章节；用户文章（BSD daemon 词源考察）；中国民间信仰研究（如乌丙安《中国民间信仰》）；东北保家仙田野调查档案 ［B］---## 史料登记与辩证校准（2026-08-08 追加）> **本卷命题**：24.1 少数与多数（详见本卷 00-总览“编纂指导思想叙事参照”）### 史料文献
-- 伯克利市档案；UC Berkeley 校史；SEP, "George Berkeley"；Berkeley, Principles；`原材料/教材/`；用户文章 ［B］
+- 伯克利市档案；UC Berkeley 校史；SEP, “George Berkeley”；Berkeley, Principles；`原材料/教材/`；用户文章 ［B］
 - Netcraft 调查；W3Techs 统计；FreeBSD Foundation 年报；用户文章 ［B］
 - The Open Group 认证费用文档；NIST CMVP 数据库；FreeBSD Foundation 年报 ［B］
 - 政府采购合规要求文献；FreeBSD 市场分析；认证的商业价值研究 ［A］

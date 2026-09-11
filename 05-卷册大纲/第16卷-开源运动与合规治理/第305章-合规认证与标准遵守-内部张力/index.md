@@ -65,7 +65,7 @@ volume: 第16卷-开源运动与合规治理
 ## 305.15.2 教科书与科普中的合规叙事
 
 - 要点：操作系统教科书（如 Tanenbaum、Silberschatz）对 BSD 合规的讨论简略，多数仅提及 UNIX 03 与 POSIX 概念
-- 史料：Tanenbaum"Modern Operating Systems"4th ed.、Silberschatz"Operating System Concepts"10th ed.［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
+- 史料：Tanenbaum“Modern Operating Systems”4th ed.、Silberschatz“Operating System Concepts”10th ed.［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
 
 ## 305.16.2 POSIX 认证成本与 UNIX 03 争议
 
@@ -78,7 +78,7 @@ volume: 第16卷-开源运动与合规治理
 - 要点：HIPAA/SOC2 审计中作为被审计方系统管理员的 FreeBSD 工程师长期隐身于企业合规档案中
 - 史料：HHS HIPAA Enforcement 数据库、AICPA SOC 2 报告模板[考
 - The Open Group UNIX 03 Register [EB/OL]. <https://www.opengroup.org/certifications/unix> (2026-07-22 访问)；NIST CMVP Active Modules [EB/OL]. <https://csrc.nist.gov/projects/cryptographic-module-validation-program> (2026-07-22 访问)；Common Criteria Portal Certified Products [EB/OL]. <<https://www.commoncr>
-- MITRE CVE Official Website [EB/OL]. <https://cve.mitre.org/> (2026-07-22 访问)；NIST National Vulnerability Database [EB/OL]. <https://nvd.nist.gov/> (2026-07-22 访问)；bsd_commits.db 查询结果，见 `原材料/研究/bsd漏洞史/数据库提取/` 各仓库 CVE commit 清单
+- MITRE CVE Official Website [EB/OL]. <https://cve.mitre.org/> (2026-07-22 访问)；NIST National Vulnerability Database [EB/OL]. <https://nvd.nist.gov/> (2026-07-22 访问)；bsd_commits.duckdb 查询结果，见 `原材料/研究/bsd漏洞史/数据库提取/` 各仓库 CVE commit 清单
 
 ## 305.19.2 FreeBSD 安全团队在漏洞响应流程中的角色
 

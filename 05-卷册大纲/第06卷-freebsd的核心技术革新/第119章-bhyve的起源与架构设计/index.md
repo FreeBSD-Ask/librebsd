@@ -8,7 +8,7 @@ volume: 第06卷-freebsd的核心技术革新
 
 ## 要点
 
-- bhyve 最初由 Neel Natu（nneul@）在 NetApp 工作期间开发，内部项目名为 "BSD Hypervisor"（缩写 BHyVe，发音 "bee hive"，后简化为 bhyve）；Peter Grehan（grehan@）后来成为项目主要维护者与核心贡献者，持续推动 bhyve 进入 FreeBSD 基础系统；在 bhyve 之前，FreeBSD 平台虚拟化方案主要依赖 Xen dom0/domU 移植与 QEMU/KVM 兼容层，缺乏原生的、BSD 许可的 Type-2 hypervisor 实现；bhyve 代码最初于 2011 年在 FreeBSD Perforce 仓库的 //depot/projects/bhyve/ 分支开发，后通过 SVN 导入 FreeBSD-CURRENT
+- bhyve 最初由 Neel Natu（nneul@）在 NetApp 工作期间开发，内部项目名为 “BSD Hypervisor”（缩写 BHyVe，发音 “bee hive”，后简化为 bhyve）；Peter Grehan（grehan@）后来成为项目主要维护者与核心贡献者，持续推动 bhyve 进入 FreeBSD 基础系统；在 bhyve 之前，FreeBSD 平台虚拟化方案主要依赖 Xen dom0/domU 移植与 QEMU/KVM 兼容层，缺乏原生的、BSD 许可的 Type-2 hypervisor 实现；bhyve 代码最初于 2011 年在 FreeBSD Perforce 仓库的 //depot/projects/bhyve/ 分支开发，后通过 SVN 导入 FreeBSD-CURRENT
 - 在 bhyve 出现之前，FreeBSD 平台的硬件虚拟化方案主要依赖三条路径：第一是 Xen 的 dom0/domU 移植，FreeBSD 8.0 引入了 domU 支持（作为客户机运行），dom0 支持（作为宿主机）长期处于实验阶段，Xen 的 blkfront/netfront 驱动曾合入 FreeBSD 基础系统但维护成本高且与 FreeBSD SMP 子系统存在兼容性问题；第二是 QEMU 的 FreeBSD 移植，QEMU 作为用户态全系统模拟器可在 FreeBSD 上运行但性能极差，纯软件模拟无法利用 Intel VT-x/AMD-V 硬件虚拟化扩展；第三是 FreeBSD Jail 容器化方案，Jail 提供 OS 级虚拟化但仅支持 FreeBSD 客户机，无法运行 Linux 或 Windows；bhyve 填补了 “FreeBSD 原生硬件虚拟化” 这一空白，使 FreeBSD 首次拥有与 Linux KVM 对等的 Type-2 hypervisor
 - bhyve 采用 FreeBSD License（Simplified BSD License / BSD 2-Clause License），这是一种宽松的 permissive 许可证，允许商业厂商在专有产品中集成 bhyve 而无需强制开源修改；bhyve 源码所有文件均包含标准的 FreeBSD 版权声明，版权归 FreeBSD Project 与各贡献者所有；NetApp 作为 bhyve 的初始开发方选择 BSD 许可证，使其可将 bhyve 集成到 NetApp 存储产品中而不必公开专有修改；iXsystems 基于 bhyve 构建了 TrueNAS/FreeNAS 的虚拟化功能；这与 Linux KVM（Kernel-based Virtual Machine）采用 GPLv2 许可证形成鲜明对比，KVM 的 GPL 许可证要求衍生作品必须以 GPL 发布
 - bhyve 的 BSD 许可证在商业回馈模式上呈现 “双向流动” 特征：iXsystems 作为最重要的商业贡献者，将持续的工程投入回馈上游 FreeBSD——包括 bhyve 的 bug 修复、性能优化、新设备模型支持（如 NVMe 控制器模拟）、grub2-bhyve 维护等；NetApp 作为初始开发方贡献了 bhyve 的核心架构与早期代码，但后续的公开回馈较少，主要维持内部使用；Joyent 贡献了 illumos 移植相关的工程经验与部分上游补丁；这种回馈模式与 KVM 的 GPL 强制回馈形成对比——KVM 的 GPL 许可证确保所有分发修改必须开源，但也导致部分厂商选择不使用 KVM 以避免 GPL 义务（如 NetApp 选择自建 bhyve 而非使用 KVM）
@@ -29,7 +29,7 @@ volume: 第06卷-freebsd的核心技术革新
 
 ## 辨析
 
-- bhyve 的初始作者归属存在常见误传——部分资料称 Peter Grehan 为唯一创始人，但经 FreeBSD commit log 与 bhyve 源码版权头交叉验证，Neel Natu 是 bhyve 内核 vmm 模块与早期用户态代码的主要初始作者，Peter Grehan 在项目导入 FreeBSD 后承担了长期维护与功能扩展工作；"bhyve" 名称的由来：BHyVe 最初为 "BS
+- bhyve 的初始作者归属存在常见误传——部分资料称 Peter Grehan 为唯一创始人，但经 FreeBSD commit log 与 bhyve 源码版权头交叉验证，Neel Natu 是 bhyve 内核 vmm 模块与早期用户态代码的主要初始作者，Peter Grehan 在项目导入 FreeBSD 后承担了长期维护与功能扩展工作；“bhyve” 名称的由来：BHyVe 最初为 "BS
 - 需纠正一个常见误解——“BSD 许可证促进商业采用而 GPL 阻碍商业采用” 是过度简化的叙事：KVM 采用 GPLv2 许可证，但因其随 Linux 内核主线集成而获得了 AWS、Google Cloud、Azure、阿里云等几乎所有主流云厂商的大规模采用，市场份额远超 bhyve；bhyve 的 BSD 许可证确实降低了商业集成门槛，但未能形成规模生态的根本原因并非许可证，而是 FreeBSD
 - 原文标题 “2014.1 FreeBSD 11.0 正式发布 bhyve” 存在严重事实错误——bhyve 首次随 FreeBSD 10.0-RELEASE（非 11.0）发布，FreeBSD 11.0 直到 2016 年 10 月才发布；FreeBSD 10.0-RELEASE 的 `release/10.0.0` tag 经 `freebsd.duckdb` `tags` 表验证 tagger_dat
 - bhyve 与 KVM/QEMU 的架构差异常被简化为 “bhyve 更简洁、KVM 更复杂”，这种比较需要放在具体语境中：KVM 作为 Linux 内核主线组件，需支持极广泛的硬件平台、客户机操作系统、向后兼容旧设备、实时迁移、内存 ballooning 等大量企业级功能，代码量庞大是功能广度的结果；bhyve 初始版本功能有限、仅支持 x86-64、仅支持现代硬件辅助虚拟化，代码简洁是范围限制

@@ -39,11 +39,11 @@ volume: 第05卷-freebsd的工程化奠基
 - 不应神化基金会——FreeBSD 的成功仍依赖核心开发者与社区；基金会是赋能工具而非替代。
 - Determination Letter 是否曾在 IRS EO Select Check 中可查，需核实
 - 州务卿备案是否包含完整 By-Laws，需查科罗拉多州备案规则
-- McKusick 为亲历者，其"deadwood"表述带有当事人视角；首届民选核心团队（2000）与 Foundation 成立（2000）同年，二者是否同一治理改革的组成部分须对照 Core Team 档案核验
+- McKusick 为亲历者，其“deadwood”表述带有当事人视角；首届民选核心团队（2000）与 Foundation 成立（2000）同年，二者是否同一治理改革的组成部分须对照 Core Team 档案核验
 
 ## 文献
 
-- Foundation 官方文档；Gibbs BSDCon 2001 演讲 ［B］；统计分析报告：描述性统计.md SubTask 2.1 [R/OL]. 2026-07-27. 文件路径：`c:\Users\ykla\Documents\hibsd\03-原始史料库\01-代码仓库史料\01-数据库本体\统计分析\描述性统计.md`；统计分析报告：推断性统计.md Task 6 [R/OL]. 2026-07-27. 文件路径：`c:\Users\ykla\Documents\hibsd\03-原始史料库\01-代码仓库史料\01-数据库本体\统计分析\推断性统计.md`；SQL 查询：`SELECT COUNT(*) FROM commits WHERE repo_name='freebsd-src'`. freebsd.duckdb [DB/OL]. 查询日期：2026-07-27；Python 统计脚本：`script/phase2_inferential.py`. Task 6 变点检测（Pettitt + BUISHAND）. 执行日期：2026-07-27 [考据脚注：C-03 freebsd-src 444,203 commits 与 C-12 变点 1999-08 经 `script/phase2_inferential.py` 执行结果与 `phase2_results.json` 结构化结果交叉验证；变点判定非迁移伪变点已通过距 2020-01 SVN-to-Git 迁移 245 个月的时间间距排除。]
+- Foundation 官方文档；Gibbs BSDCon 2001 演讲 ［B］；统计分析报告：描述性统计.md SubTask 2.1 [R/OL]. 2026-07-27. 文件路径：**03-原始史料库/01-代码仓库史料/01-数据库本体/统计分析/描述性统计.md**；统计分析报告：推断性统计.md Task 6 [R/OL]. 2026-07-27. 文件路径：**03-原始史料库/01-代码仓库史料/01-数据库本体/统计分析/推断性统计.md**；SQL 查询：`SELECT COUNT(*) FROM commits WHERE repo_name='freebsd-src'`. freebsd.duckdb [DB/OL]. 查询日期：2026-07-27；Python 统计脚本：`script/phase2_inferential.py`. Task 6 变点检测（Pettitt + BUISHAND）. 执行日期：2026-07-27 [考据脚注：C-03 freebsd-src 444,203 commits 与 C-12 变点 1999-08 经 `script/phase2_inferential.py` 执行结果与 `phase2_results.json` 结构化结果交叉验证；变点判定非迁移伪变点已通过距 2020-01 SVN-to-Git 迁移 245 个月的时间间距排除。]
 
 <!-- DB_REF:freebsd.duckdb -->
 > **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 2000-2000 年间：29,754 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。

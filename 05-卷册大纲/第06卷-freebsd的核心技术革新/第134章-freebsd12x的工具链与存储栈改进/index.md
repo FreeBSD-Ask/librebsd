@@ -16,7 +16,7 @@ volume: 第06卷-freebsd的核心技术革新
 
 ## 史观
 
-- 总纲第 17 条——软件工程：pkgbase 反映了 FreeBSD 从"monolithic base"向"packageable components"的工程范式迁移。类 Unix 操作系统长期以来将基础系统与第三方软件严格分离（base vs ports/pkg），这种分离保证了 base 的纯净与一致性但也限制了灵活性。pkgbase 试图在保持 base 质量标准的同时引入更现代的软件管
+- 总纲第 17 条——软件工程：pkgbase 反映了 FreeBSD 从“monolithic base”向“packageable components”的工程范式迁移。类 Unix 操作系统长期以来将基础系统与第三方软件严格分离（base vs ports/pkg），这种分离保证了 base 的纯净与一致性但也限制了灵活性。pkgbase 试图在保持 base 质量标准的同时引入更现代的软件管
 - 总纲第 24 条——许可证：GCC 移除是 FreeBSD 许可证纯洁化工程的最终阶段——GCC 4.2.1 是最后一个 GPLv2 许可的 GCC 版本（GCC 4.3+ 转为 GPLv3），FreeBSD 项目拒绝引入 GPLv3 代码到 base，因此长期使用 2007 年发布的 GCC 4.2.1 作为“最后的 GPL 编译器”；总纲第 5 条——技术债务：GCC 4.2.1 在 2018
 - 总纲第 13 条——法律与道德是利益分配：GPL 阵营的批评反映 copyleft 主义内部的逻辑自洽——若“自由”定义为“用户免于被锁定的自由”，则宽容许可证确为“较弱的保护”，BSD 阵营驱逐 GPL 工具实为削弱对用户自由的保护。但该批评同样遮蔽了 BSD 阵营对“自由”的不同定义（开发者任意处置代码的自由），双方在各自哲学框架内均自洽，争议的实质是“自由”定义权之争而非道德高下之分。
   

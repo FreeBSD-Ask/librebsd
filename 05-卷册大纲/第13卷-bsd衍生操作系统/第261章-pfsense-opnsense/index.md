@@ -28,7 +28,7 @@ volume: 第13卷-bsd衍生操作系统
 - pfSense 与 m0n0wall 的分支关系时间点（2004）须以项目历史核实；openbsd.duckdb 查询 L7.1.1.pfsense-src 的 commit 量须警惕 fork 分歧识别局限——pfsense-src 仓库 1993 年起的 commit 是 fork 自 FreeBSD 继承的上游历史，非 pfSense 项目本地 commit，识别 pfSense 本地特有 comm
 - 市场份额须以独立报告（一手来源）核实；“BSD 防火墙在开源市场统治”的判断须警惕社区叙事偏差——pfSense/OPNsense 的社区声誉可能被放大为市场份额优势，实际部署数据须以第三方调研为准；IPFire 与 Untangle 的技术细节（内核版本、过滤框架）须以其官方文档核实，不得仅凭一般认知推断。
 - pfsense-src 的 567 个去重 CVE 须区分 “继承自 FreeBSD 上游的修复” 与 “pfSense 本地特有 commit”——fork 仓库的 commit 历史包含上游继承部分，识别本地特有 commit 须通过 merge commit 与 parent_hashes 交叉验证，不可仅凭时间戳判定；merge commit 比例低不必然意味着安全修复滞后，须与 Netg
-- CVE-2019-11816 的具体技术细节（权限提升路径）须以 NVD 条目与 OPNsense 官方公告为据，commit subject 中的 "privlege" 为原 commit 中的拼写错误（应为 "privilege"），本节保留原始 subject 文本不篡改；opnsense-core 的 4 个去重 CVE（CVE-2019-11816、CVE-2026-49131、CVE-
+- CVE-2019-11816 的具体技术细节（权限提升路径）须以 NVD 条目与 OPNsense 官方公告为据，commit subject 中的 “privlege” 为原 commit 中的拼写错误（应为 “privilege”），本节保留原始 subject 文本不篡改；opnsense-core 的 4 个去重 CVE（CVE-2019-11816、CVE-2026-49131、CVE-
 
 ## 文献
 
@@ -44,7 +44,7 @@ volume: 第13卷-bsd衍生操作系统
 
 <!-- DB_REF:bsd_derivatives.duckdb -->
 > **数据库引用（bsd_derivatives.duckdb）**：本子节对应 bsd_derivatives 代码仓库。> 1985-2026 年间：963,557 次提交。> 仓库总览：963,557 次提交，9,744 位贡献者（contributors 表行数，1985-06-13 至 2026-08-24）。
-- bsd_commits.db 查询 pfsense-src CVE commit（929 条，567 去重 CVE，2026-07-23）；bsd_commits.db 查询 L7.1.1.pfsense-src；`原材料/研究/bsd漏洞史/数据库提取/pfsense-src-cve-commits.md`；`原材料/研究/bsd仓库分析/数据分析/衍生项目与跨项目对比分析.md` §L7.1。 ［B］## 260.4.2 CVE-2019-11816 OPNsense 权限提升漏洞与 Web 界面安全
+- bsd_commits.duckdb 查询 pfsense-src CVE commit（929 条，567 去重 CVE，2026-07-23）；bsd_commits.duckdb 查询 L7.1.1.pfsense-src；`原材料/研究/bsd漏洞史/数据库提取/pfsense-src-cve-commits.md`；`原材料/研究/bsd仓库分析/数据分析/衍生项目与跨项目对比分析.md` §L7.1。 ［B］## 260.4.2 CVE-2019-11816 OPNsense 权限提升漏洞与 Web 界面安全
 - freebsd.duckdb 查询 opnsense-core CVE commit（8 条，4 去重 CVE，2026-07-23）；NVD. CVE-2019-11816 [EB/OL]. <https://nvd.nist.gov/vuln/detail/CVE-2019-11816>（访问日期 2026-07-23）；`原材料/研究/bsd漏洞史/数据库提取/opnsense-core-cve-commits.md`。 ［B］FreeBSD 社区论文：[FP-2020-021] How an Australian IaaS uses FreeBSD（Ruben Schade，2020）<https://papers.freebsd.org/2020/linux.conf.au/schade_how_an_australian_iaas_uses_freebsd/>FreeBSD 社区论文：[FP-2019-045] FreeBSD and the absurdities of security compliance（Eirik Øverby，2019）<https://papers.freebsd.org/2019/eurobsdcon/oeverby-freebsd_and_the_absurdities_of_security_compliance/>FreeBSD 社区论文：[FP-2019-076] FreeBSD at Work: Building Network and Storage Infrastructure with pfSense and FreeNAS（Conor Beh，2019）<https://papers.freebsd.org/2019/vbsdcon/beh-freebsd_at_work/>FreeBSD 社区论文：[FP-2018-010] Preparing your home router(s) for the future: A journey through Homenet and interconnected objects（Massimiliano Stucchi，2018）<https://papers.freebsd.org/2018/bsdcan/stucchi-preparing_your_home_routers_for_the_future/>
 
 <!-- DB_REF:freebsd.duckdb -->

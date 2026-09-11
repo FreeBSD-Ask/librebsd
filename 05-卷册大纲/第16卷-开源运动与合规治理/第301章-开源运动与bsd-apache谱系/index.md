@@ -33,7 +33,7 @@ volume: 第16卷-开源运动与合规治理
 ## 30
 
 - 总纲第 1 条——偶然性改写历史，商业困境催生开源决策
-  - 辨析：【双库核查 2026-08-15】邮件列表库 freebsd 1997-1999 年查询 'Netscape Mozilla' 命中 5 条，参考文献库 'Netscape' 命中 5 条（Meeker 2008、bsdcan2019 等）——双库间接验证；Netscape 1998-01-22 精确日期双库无法直接确证 [存疑
+  - 辨析：【双库核查 2026-08-15】邮件列表库 freebsd 1997-1999 年查询 ‘Netscape Mozilla’ 命中 5 条，参考文献库 ‘Netscape’ 命中 5 条（Meeker 2008、bsdcan2019 等）——双库间接验证；Netscape 1998-01-22 精确日期双库无法直接确证 [存疑
 - 总纲第 13 条——边缘者的作用
   - 辨析：freebsd.duckdb freebsd-src 仓库的 Mozilla 主题 commit 显示 Mozilla 与 FreeBSD 的交集主要是 FreeBSD 为 Mozilla 提供兼容性修复——Jordan K. Hubbard、John Polstra、Brian Feldman、Scott Long 等核心 committer 均参与过 M
 - 总纲第 1 条——偶然性改写历史，GitHub 普及改变开源协作
@@ -53,7 +53,7 @@ volume: 第16卷-开源运动与合规治理
 ## 301.5.2 Apache 许可证与 BSD 许可证的谱系关系
 
 - 要点：Apache 许可证 1.0（
-- 【双库核查 2026-08-15】邮件列表库 freebsd 1997-1999 年查询 'Netscape Mozilla' 命中 5 条，参考文献库 'Netscape' 命中 5 条（Meeker 2008、bsdcan2019 等）——双库间接验证；Netscape 1998-01-22 精确日期双库无法直接确证 [存疑脚注]；Barksdale 是否真读 CatB，须查自述
+- 【双库核查 2026-08-15】邮件列表库 freebsd 1997-1999 年查询 ‘Netscape Mozilla’ 命中 5 条，参考文献库 ‘Netscape’ 命中 5 条（Meeker 2008、bsdcan2019 等）——双库间接验证；Netscape 1998-01-22 精确日期双库无法直接确证 [存疑脚注]；Barksdale 是否真读 CatB，须查自述
   - 文献
 - freebsd.duckdb freebsd-src 仓库的 Mozilla 主题 commit 显示 Mozilla 与 FreeBSD 的交集主要是 FreeBSD 为 Mozilla 提供兼容性修复——Jordan K. Hubbard、John Polstra、Brian Feldman、Scott Long 等核心 committer 均参与过 Mozilla 兼容性修复，Mozilla 是 F
 - PR 模式是否真优于补丁，需独立判断；Microsoft 收购是否影响开源
@@ -82,14 +82,14 @@ volume: 第16卷-开源运动与合规治理
 ## 301.7.2 PR 模式对 BSD 补丁文化的冲击
 
 - 要点：PR 模式对 BSD 补丁文化的冲击：(1) GitHub PR 简化贡献门槛；(2) BSD 传统补丁文化（diff/patch 邮件提交）显得过时；(3) GitHub fork 模式降低贡献门槛但增加质量风险；(4) BSD 社区面临 “是否迁移 GitHub” 的长期争论；冲击持续至 2021 年 FreeBSD 迁移 GitH
-- FreeBSD Git 迁移公告；freebsd.duckdb commits 表 freebsd-doc Warner Losh commit `86836673be10`（2021-03-16T18:43:35-06:00，"Fix more typos from the original github docs"）；freebsd.duckdb commits 表 freebsd-doc Warner Losh commit `abff932fe818`（2021-03-16T22:23:19-06:00，"Merge in the migration from subversion /
+- FreeBSD Git 迁移公告；freebsd.duckdb commits 表 freebsd-doc Warner Losh commit `86836673be10`（2021-03-16T18:43:35-06:00，“Fix more typos from the original github docs”）；freebsd.duckdb commits 表 freebsd-doc Warner Losh commit `abff932fe818`（2021-03-16T22:23:19-06:00，"Merge in the migration from subversion /
 - ASF 文档； Jagielski 2008 ［A］
 - Weber《The Success of Open Source》；开源会议议程［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
 
 ## 301.9.2 Open Source 去政治化对 BSD 的消解
 
 - 要点：Open Source 一词去政治化对 BSD 哲学的消解：(1) BSD 哲学强调 “代码在那里，拿走就好” 的低调；(2) Open Source 运动强调 “开放作为商业策略”；(3) BSD 低调哲学被 Open Source 话语淹没；(4) BSD 社区
-- DiBona, C., Ockman, S., Stone, M. (eds.) Open Sources: Voices from the Open Source Revolution [M]. Sebastopol: O'Reilly Media, 1999. ISBN 1-56592-582-3（McKusick 章节"From AT&T-Owned to Freely Redistributable"）[Z/OL]. <http://www.oreilly.com/catalog/opensources/book/toc.html> [2026-07-22]；McKusick, M.
+- DiBona, C., Ockman, S., Stone, M. (eds.) Open Sources: Voices from the Open Source Revolution [M]. Sebastopol: O'Reilly Media, 1999. ISBN 1-56592-582-3（McKusick 章节“From AT&T-Owned to Freely Redistributable”）[Z/OL]. <http://www.oreilly.com/catalog/opensources/book/toc.html> [2026-07-22]；McKusick, M.
 
 ## 自反性声明
 
