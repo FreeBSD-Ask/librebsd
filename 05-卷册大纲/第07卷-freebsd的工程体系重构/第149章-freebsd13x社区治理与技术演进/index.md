@@ -51,12 +51,12 @@ volume: 第07卷-freebsd的工程体系重构
 
 ## 149.10.2 判决对 BSD 与开源生态的意义
 
-- FreeBSD Project. (2021). *13.0 Release Notes* (Architectures section); Tymoshenko, O. (2020-2021). freebsd-mips mailing list posts on MIPS support status. ［A］
+- FreeBSD Project. (2021). *13.0 Release Notes* (Architectures section); Tymoshenko, O. (2020-2021). freebsd-mips mailing list posts on MIPS support status.
 
 ## 149.11.2 riscv64sf（软浮点 RISC-V）退役与 riscv64 演进
 
 - 要点：FreeBSD 13.0 移除了 riscv64sf（64 位 RISC-V 软浮点变体）架构支持，仅保留 riscv64（hard-float）作为 Tier-2 支持；riscv64 与 riscv64sf 最初由 Ruslan Bukin、Mitchell Horne（米切尔·霍恩） 等于 FreeBSD 12.0 时期移植；riscv64sf 退役原因：(1) RISC-V 规范明确 hard-float 为标准配置，软浮点仅用于早期 FPGA 原型和模拟器；(2) 主流 RISC-V 硬件（SiFive U74、Allwinner D1、StarFive JH7110 等）均使用 hard-float；(3) 维护两个 ABI 变体成本高于收益；(4) riscv64sf 实际用户基数极小；riscv64 在 13.x 期间持续改进，但仍保持 Tier-2 地位，13.x 发布 RISC-V 虚拟机镜像但不提供 RELEASE 级别的阻塞保证
-- FreeBSD Project. *Core Team Information*. freebsd.org/core/; FreeBSD Project. *Core Team Election Results* (2020, 2022, 2024). freebsd.org. ［A］
+- FreeBSD Project. *Core Team Information*. freebsd.org/core/; FreeBSD Project. *Core Team Election Results* (2020, 2022, 2024). freebsd.org.
 
 ## 149.5.2 Security Officer 与安全团队
 
@@ -65,13 +65,13 @@ volume: 第07卷-freebsd的工程体系重构
 
 ## 149.6.2 OpenZFS 2.1 核心特性：zstd 压缩、Persistent L2ARC、Sequential Resilver、dRAID
 
-- FreeBSD Project. **linux(4)** Manual Page; FreeBSD Project. *Linux Emulation* wiki page; freebsd-emulation mailing list. ［A］
+- FreeBSD Project. **linux(4)** Manual Page; FreeBSD Project. *Linux Emulation* wiki page; freebsd-emulation mailing list.
 
 ## 149.7.2 bhyve 虚拟化改进
 
 - 要点：bhyve（BSD Hypervisor）是 FreeBSD 原生虚拟化管理器，13.x 期间持续改进：(1) **13.2 起支持超过 16 个 vCPU**：bhyve 客户机之前限制最多 16 个 vCPU，13.2 解除此限制，支持更多 vCPU 以适配高性能工作负载；(2) AMD-V（AMD-Vi/AMD IOMMU）和 Intel VT-d（IOMMU）改进，包括 PCI passthrough 稳定性提升；(3) 更多外设模拟改进：NVMe 控制器模拟、virtio 设备性能改进；(4) UEFI 固件改进；(5) 快照/迁移功能持续完善；(6) 对 Linux、Windows、其他 BSD 客户机的兼容性改进；bhyve 是 FreeBSD 基金会持续资助的项目之一，iXsystems、Netgate 等公司在产品中使用 bhyve
-- 13.x 文档； OpenBSD 安全文档 ［A］
-- FreeBSD Project. src/conf/COMMITTERS; FreeBSD Release Engineering Team. (2022-05-16). 13.1-RELEASE Dedication to Bill Jolitz; FreeBSD Foundation. Annual Reports contributor lists. ［A］
+- **bhyve(4)**、**bhyve(8)** 手册页；FreeBSD 13.2 Release Notes bhyve 章节；Peter Grehan（彼得·格雷汉）、Conrad Meyer 等 bhyve 开发者的演讲；bhyve 官网（bhyve.org）
+- FreeBSD Project. src/conf/COMMITTERS; FreeBSD Release Engineering Team. (2022-05-16). 13.1-RELEASE Dedication to Bill Jolitz; FreeBSD Foundation. Annual Reports contributor lists.
 
 ## 149.9.2 Git 迁移后新贡献者路径
 
