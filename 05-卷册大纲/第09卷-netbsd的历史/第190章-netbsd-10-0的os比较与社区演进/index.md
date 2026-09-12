@@ -9,24 +9,25 @@ volume: 第09卷-netbsd的历史
 ## 要点
 
 - 2010-2026 年间市场份额数据——Linux 服务器市场占有率约 70%-80%（云时代主导），FreeBSD 约 1%-2%，NetBSD 不足 0.1%，OpenBSD 不足 0.1%；BSD 整体在云时代被 Linux 进一步挤压
-- NetBSD 10.x 周期（**2023 年 4 月 1 日** 至 **2026 年 7 月 22 日**，覆盖 10.0 发布前后主流与稳定分支维护期）共发布 **仅 2 个 NetBSD-SA**——**NetBSD-SA2024-001**（**utmp_update(8)** 用户主机名验证不足）与 **NetBSD-SA2024-002**（OpenSSH CVE-2024-6387
-- NetBSD 10.x 周期安全响应文化呈现三个根本性转变：① **SA 发布近乎停滞**——10.x 周期仅 2 个 SA（2024 年发布），2025-2026 两年零 SA，与 9.x 周期 5 年 18 个 SA（年化 3.6 SA/年）形成断崖式下降，与 FreeBSD 14.x 周期不足 3 年 80 个 SA（年化约 30 SA/年）形成两极对照——SA 发布停滞反映 NetBSD
-- pkgsrc-2026Q2 分支于 **2026 年 6 月 24 日** 由 maya（<maya@NetBSD.org>，即 Maya Rashbox，pkgsrc PMC 成员）在 netbsd-announce 邮件列表公告（邮件主题“Announcing the pkgsrc-2026Q2 branch”，UTC 时间 22:25）；pkgsrc 季度分支遵循惯例——每季度末 branc
+- NetBSD 10.x 周期（**2023 年 4 月 1 日** 至 **2026 年 7 月 22 日**，覆盖 10.0 发布前后主流与稳定分支维护期）共发布 **仅 2 个 NetBSD-SA**——**NetBSD-SA2024-001**（**utmp_update(8)** 用户主机名验证不足）与 **NetBSD-SA2024-002**（OpenSSH CVE-2024-6387 “regreSSHion”——sshd 信号处理竞态条件，未认证远程攻击者可触发远程代码执行或拒绝服务）
+- NetBSD 10.x 周期安全响应文化呈现三个根本性转变：① **SA 发布近乎停滞**——10.x 周期仅 2 个 SA（2024 年发布），2025-2026 两年零 SA，与 9.x 周期 5 年 18 个 SA（年化 3.6 SA/年）形成断崖式下降，与 FreeBSD 14.x 周期不足 3 年 80 个 SA（年化约 30 SA/年）形成两极对照——SA 发布停滞反映 NetBSD 安全维护方式的结构性转变——从“SA+ 二进制补丁”转向“vendor import commit”，而非安全维护的终止
+- pkgsrc-2026Q2 分支于 **2026 年 6 月 24 日** 由 maya（<maya@NetBSD.org>，即 Maya Rashbox，pkgsrc PMC 成员）在 netbsd-announce 邮件列表公告（邮件主题“Announcing the pkgsrc-2026Q2 branch”，UTC 时间 22:25）；pkgsrc 季度分支遵循惯例——每季度末从 HEAD 切出 pkgsrc-YYYYQn 稳定分支（Q1-Q4 对应 3、6、9、12 月末），切出后进入该分支的稳定维护期
 
 ## 史料
 
-- [DB:references_fulltext:chapter_matches:chmatch_3756] 卷“第10卷-openbsd的历史”第 190 章，匹配置信度 folder，原因：folder 第188章
-- [DB:references_fulltext:chapter_matches:chmatch_3896] 卷“第10卷-openbsd的历史”第 190 章，匹配置信度 folder，原因：folder 第188章
-- [DB:references_fulltext:chapter_matches:chmatch_4025] 卷“第10卷-openbsd的历史”第 190 章，匹配置信度 1.0，原因：任务4 衍生组官方文档采集
+- [DB:references_fulltext:chapter_matches:chmatch_3756] 卷“第10卷-openbsd的历史”第 190 章，匹配置信度 folder，原因：folder 第188章〔存疑：经 2026-09-12 实查 chapter_matches 表，id=3756 行 primary_volume 确为“第10卷-openbsd的历史”、match_confidence 字段值为 folder，系库侧 auto_keyword 匹配错挂，须库侧修复，非本文件可改〕
+- [DB:references_fulltext:chapter_matches:chmatch_3896] 卷“第10卷-openbsd的历史”第 190 章，匹配置信度 folder，原因：folder 第188章〔存疑：经 2026-09-12 实查 chapter_matches 表，id=3896 行 primary_volume 确为“第10卷-openbsd的历史”、match_confidence 字段值为 folder，系库侧 auto_keyword 匹配错挂，须库侧修复，非本文件可改〕
+- [DB:references_fulltext:chapter_matches:chmatch_4025] 卷“第10卷-openbsd的历史”第 190 章，匹配置信度 1.0，原因：任务4 衍生组官方文档采集〔存疑：经 2026-09-12 实查 references_fulltext.duckdb chapter_matches 表，id=4025 行 primary_volume 确为“第10卷-openbsd的历史”（task4_official 来源），系库侧匹配错挂——本章属第09卷 netbsd 第 190 章，须库侧修复，非本文件可改〕
 
 ## 史观
 
-(待人工回填——详见子节文件史观/辨析字段)
+- 总纲第 3 条——不存在进步，只有权力再分配：2010-2026 年 BSD 与 Linux 在服务器市场的份额消长系云计算时代资源与注意力的再分配，并非进步序列上的先进与落后之别
+- 总纲第 9 条——经验优先：10.x 周期安全维护的实际状态须以 SA 原文、CVE commit 与 netbsd-announce 公告等一手记录为准——SA 发布近乎停滞不等于安全维护停滞，维护方式已转向 vendor import commit
 
 ## 辨析
 
 - NetBSD 服务器市场份额“不足 0.1%”在不同调查中差异较大——需对照多源核验；BSD 在嵌入式市场的部署未被服务器市场报告统计
-- *需严格区分**：① “SA 发布停滞”不等于“安全维护停滞”——10.x 周期 97 条 CVE commit 与 6 条 Security fix commit 证明安全维护仍在持续，但维护方式从“SA+ 二进制补丁”转向“vendor import commit”；② **2 个 SA 的归属辨析**——SA2024-001 针对 NetBSD 自有代码 **utmp_update(8)**
+- **需严格区分**：① “SA 发布停滞”不等于“安全维护停滞”——10.x 周期 97 条 CVE commit 与 6 条 Security fix commit 证明安全维护仍在持续，但维护方式从“SA+ 二进制补丁”转向“vendor import commit”；② **2 个 SA 的归属辨析**——SA2024-001 针对 NetBSD 自有代码 **utmp_update(8)**
 - **SA 锐减的归因辨析**：10.x 周期 SA 从 9.x 周期年化 3.6 SA/年降至 0.67 SA/年（2 SA / 3 年），降幅 81%——这一降幅的可能归因有三：其一，10.x 周期 base 中贡献组件 CVE 由 vendor import 同步修复，Security Officer Team 将其视为“上游修复”而非“NetBSD SA 范畴”，故不发布 SA；其二，10.x
 - **文献**：NetBSD Project. NetBSD Security Advisories Archive [EB/OL]. (2024-2026)[2026-07-22]. <https://www.netbsd.org/support/security/advisory.html>（完整列表共 269 条 SA，时间跨度 2000 年至 2024-07-01，2025-2026 年无新 SA）; NetBSD Project. NetBSD-SA2024-001 PGP 签名原文 [EB/OL]. (2024-03-10)[2026-07-23]. <https://ftp.netbsd.org/pub/NetBSD/security/advisories/NetBSD-SA2024-001.txt.asc>（Revision History“2024-03-10 Initial release”；致谢 Adam Simuntis 发现并报告，Christos Zoulas（克里斯托斯·祖拉斯） 修复）; NetBSD Project. NetBSD-SA2024-002 PGP 签名原文 [EB/OL]. (2024-07-01)[2026-07-23]. <https://ftp.netbsd.org/pub/NetBSD/security/advisories/NetBSD-SA2024-002.txt.asc>（Revision History“2024-07-01 Initial release”；文件版本 $NetBSD: NetBSD-SA2024-002.txt,v 1.4 2024/07/02 19:26:35 riastradh Exp $，含 riastradh 即 Taylor R. Campbell 署名）; NetBSD Project. netbsd.duckdb — netbsd-src commits table [DB/OL]. 2026-07-22. SQL: SELECT commit_hash, author_date, author_name, message_subject, message_body FROM commits WHERE repo_name =‘netbsd-src’ AND author_date >=‘2023-04-01’ AND author_date <‘2026-07-22’ AND (message_subject LIKE ‘%CVE-%’ OR message_body LIKE ’%CVE-%’) ORDER BY author_date ASC; NetBSD Project. 版本周期文件 netbsd-10.x.md [Z]. 2026-07-22; 考据记录 20260723_announcements-netbsd.md §A.2、§ 交叉验证方法-二、§ 存疑判定依据-一 -3/4/5 ［A］
 
