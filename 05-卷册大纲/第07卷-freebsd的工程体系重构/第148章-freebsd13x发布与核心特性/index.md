@@ -8,9 +8,9 @@ volume: 第07卷-freebsd的工程体系重构
 
 ## 史料
 
-- [DB:research_notes:blocks:6] 关键词「核心特性」命中：史实考据：Marshall Kirk McKusick、Keith Bostic、Michael J. Karels、J…
-- [DB:research_notes:blocks:8] 关键词「核心特性」命中：史实考据：CSRG 于 1994 年 6 月发布的 4.4BSD-Lite 官方 Release Notes，是 4.4…
-- [DB:research_notes:blocks:1202] 关键词「核心特性」命中：史实考据：Michael W. Lucas 撰写的《Absolute FreeBSD》第三版，基于 FreeBSD 11…
+- FreeBSD Release Engineering Team. FreeBSD 13.0/13.1/13.2-RELEASE Announcement 与对应 Release Notes（2021-04-13、2022-05-16、2023-04-11）：KTLS、arm64 Tier 1、GCC 4.2.1 完全移除、OpenZFS 2.x、wg(4) 缺席与加入等核心特性演进的一手官方记载
+- [DB:code_repos:freebsd.duckdb] freebsd 仓库 13.x 时段（stable/13 分支 2021-04 起）commit 元数据：GCC 移除、LLVM/Clang 11.0.1 工具链统一、Git 迁移完成（2021-04-06）等关键事件的代码档案记录
+- freebsd-announce / freebsd-current 邮件列表存档（2021-04）：13.0-RELEASE Now Available 公告（Message-ID 20210413185035.34DD1202D@nucleus，发件人 Glen Barber）与 Git 迁移完成公告的现场记录
 
 ## 要点
 
@@ -23,13 +23,13 @@ volume: 第07卷-freebsd的工程体系重构
 ## 史观
 
 - 总纲第 1 条——项目统摄史观：2021 年 4 月是 FreeBSD 历史的关键一刻——Git 迁移完成（2021-04-06）、最高法院 API 版权判决（2021-04-05）、13.0 正式发布（2021-04-13），三件大事在八天内相继发生，共同标志着 FreeBSD 从 12.x 时代向 13.x 时代的过渡
-  - 辨析：[双库核查：2026-08-15] 13.0-RELEASE
+  - 辨析：[双库核查：2026-08-15] 13.0-RELEASE 发布日期（2021-04-13）经邮件列表库验证通过——Message-ID 20210413185035.34DD1202D@nucleus，发件人 Glen Barber，主题 FreeBSD 13.0-RELEASE Now Available
 - 总纲第 2 条——实践先于理论：KTLS 不是学术界设计的“完美方案”，而是 Netflix 生产环境中遇到 TLS 性能瓶颈后的工程解决方案——内容分发网络需要处理海量 TLS 连接，用户态 TLS 终止的上下文切换和数据拷贝开销过高，因此推动内核态 TLS 实现；这符合 FreeBSD“生产需求驱动开发”的传统
-  - 辨析：常见误解称 13.0“默认启用 KTLS”，实际上需要重新编译 wo
+  - 辨析：常见误解称 13.0“默认启用 KTLS”，实际上需要重新编译 world 启用 WITH_OPENSSL_KTLS 选项，KTLS 在 13.0 是“可用但非默认”状态
 - 总纲第 25 条——终结与延续：2021 年 4 月 6 日标志着 FreeBSD 使用了 20 年（2001-2021）的 CVS/SVN 时代终结，Git 时代开始；这不是简单的工具替换，而是开发工作流的深刻变革——Gerrit 代码审查、GitHub Pull Request 镜像、CI/CD 集成等现代开发实践成为可能
-  - 辨析：“13.0 是 Git 迁移后第一个 RELEASE”是
+  - 辨析：“13.0 是 Git 迁移后第一个 RELEASE”是准确的——svn 在 2021 年 3 月冻结提交，13.0 构建在 Git 迁移完成后进行，而 13.1 才是完全在 Git 工作流下开发的第一个版本，二者以此为界
 - 总纲第 4 条——分离与聚合：WireGuard 争议是开源社区“商业公司利益”“上游作者权威”“核心团队治理”“安全审计”多方力量分离后的剧烈冲突，也是 FreeBSD 治理模式成熟过程中必须经历的阵痛；争议最终促成代码重写和流程改进，体现了开源社区“在争论中进步”的特性
-  - 辨析：**重大事实修正**：原大纲称“13.1 启用重构后版本”是 **错误** 的——经 13.1 和 13.2
+  - 辨析：**重大事实修正**：原大纲称“13.1 启用重构后版本”是 **错误** 的——经 13.1 和 13.2 官方 Release Notes 交叉验证，13.1（2022-05-16）不包含 **wg(4)** 驱动，**wg(4)** 在 **13.2（2023-04-11）** 才正式可用
 - 总纲第 19 条——解释学循环是历史认识的根本条件：Scott Long 与 Kyle Evans 的邮件揭示了 WireGuard 争议中各方前理解的不可调和——Scott Long 的前理解以“Netgate 商业利益与安全披露伦理”为框架，将 Donenfeld 的公告解读为“协同抹黑行动”；Kyle Evans 的前理解以“FreeBSD 工程文化与技术准确性”为框架，既承认代码问题存在又
 
 ## 辨析
@@ -38,7 +38,7 @@ volume: 第07卷-freebsd的工程体系重构
 - 常见误解称 13.0“默认启用 KTLS”，实际上需要重新编译 world 启用 WITH_OPENSSL_KTLS 选项，KTLS 在 13.0 是“可用但非默认”状态；KTLS 并非“零拷贝”的银弹，它减少了用户态/内核态之间的数据拷贝次数，但仍需要正确的套接字选项和应用程序支持；KTLS 接收卸载在 13.0 中仅支持 TLS 1.2 AES-GCM，TLS 1.3 接收卸载在后续版本完善
 
 - “13.0 是 Git 迁移后第一个 RELEASE”是准确的——svn 在 2021 年 3 月冻结提交，13.0 构建在 Git 迁移完成后进行；但 13.0 的开发周期大部分时间仍在 svn 上进行，13.1 才是完全在 Git 工作流下开发的第一个版本；迁移并非“所有人都满意”——部分老 committer 对 Git 工作流不适应，但社区整体接受了迁移
-  - 文献：FreeBSD Pr
+  - 文献：FreeBSD Project. (2021-04-06). *Git Migration Complete Announcement*. freebsd.org; FreeBSD Release Engineering Team. (2022-05-16). *FreeBSD 13.1-RELEASE Announcement*. freebsd.org
 - **重大事实修正**：原大纲称“13.1 启用重构后版本”是 **错误** 的——经 13.1 和 13.2 官方 Release Notes 交叉验证，13.1（2022-05-16）不包含 **wg(4)** 驱动，**wg(4)** 在 **13.2（2023-04-11）** 才正式可用；争议双方的核心分歧不是“WireGuard 好不好”，而是“代码质量是否达到可进入 RELEASE 的
 - **0 信任原则考据过程留痕**——(1) **Scott Long 邮件的真实性验证**：Scott Long 原邮件为私人邮件，非公开发布，但其全文经 Donenfeld 2021-03-16T01:18:19Z 在 wireguard 邮件列表公开回复中逐段引用而进入公开记录；邮件列表存档（lists.zx2c4.com）为 WireGuard 项目官方存档，邮件 ID 006499，时间戳
 
@@ -52,16 +52,16 @@ volume: 第07卷-freebsd的工程体系重构
 - Salter. J. In-kernel WireGuard is on its way to FreeBSD and the pfSense router [EB/OL]. (2021-03-16)[2026-07-22]. <https://arstechnica.com/gadgets/2021/03/in-kernel-wireguard-is-on-its-way-to-freebsd-and-the-pfsense-router/>[EB/OL]. 2021. ［DKC-2234→fulltext:6118］
 - Solidot.. WireGuard 将进入 FreeBSD 内核 [EB/OL]. (2021-03-16)[2026-07-22]. <https://www.solidot.org/story?sid=67219>[EB/OL]. 2021. ［DKC-2235→fulltext:6119］
 <!-- /dangan-20260908 -->
-## 147.2.2 KTLS 的工程效应与生态
+## 148.2.2 KTLS 的工程效应与生态
 
-- 要点：KTLS 的引入对 FreeBSD 网络栈有深远工程影响：(1) 推动内核加密框架（OPCF，Open Crypto Framework）重构，支持异步加密操作；(2) 促进 **sendfil
+- 要点：KTLS 的引入对 FreeBSD 网络栈有深远工程影响：(1) 推动内核加密框架（OPCF，Open Crypto Framework）重构，支持异步加密操作；(2) 促进 **sendfile(2)** 与 KTLS 协同实现内核态加密零拷贝发送，Netflix 的规模化内容分发即是此路径的生产应用
 - FreeBSD Project. (2021-04-06). *Git Migration Complete Announcement*. freebsd.org; Maste, E. (2020). *FreeBSD Git Migration*. EuroBSDCon 2020; FreeBSD Foundation. (2021). Git Migration Project Retrospective. ［A］
 
-## 147.3.2 Git 迁移对开发模式的效应
+## 148.3.2 Git 迁移对开发模式的效应
 
 - 要点：Git 迁移对 FreeBSD 开发模式产生多方面深远影响：(1) 代码审查：引入 Gerrit 代码审查系统
-- Donenfeld, J. A. (2021-03-15). *WireGuard for FreeBSD*. wireguard mailing list (lists.zx2c4.com/pipermail/wireguard/2021-March/006494.html); Ars Technica. (2021-03). *Buffeted by bug reports, FreeBSD reverts WireGuard support before 13.0 release*. arstechnica.com; FreeBSD Release Engineering Team. (〔待核：原文截断〕
-- Donenfeld J A. Re: [ANNOUNCE] WireGuard for FreeBSD in development for 13.y – and a note of how we got here (公开回复 Scott Long 私人邮件)[EB/OL]. (2021-03-16T01:18:19Z)[2026-07-23]. <https://lists.zx2c4.com/pipermail/wireguard/2021-March/006499.html>; Evans K. Re: [ANNOUNCE] WireGuard for FreeBSD in develo〔待核：原文截断〕
+- Donenfeld, J. A. (2021-03-15). *WireGuard for FreeBSD*. wireguard mailing list (lists.zx2c4.com/pipermail/wireguard/2021-March/006494.html); Ars Technica. (2021-03). *Buffeted by bug reports, FreeBSD reverts WireGuard support before 13.0 release*. arstechnica.com; FreeBSD Release Engineering Team. (2021-04-13). *FreeBSD 13.0-RELEASE Announcement*. freebsd.org
+- Donenfeld J A. Re: [ANNOUNCE] WireGuard for FreeBSD in development for 13.y – and a note of how we got here (公开回复 Scott Long 私人邮件)[EB/OL]. (2021-03-16T01:18:19Z)[2026-07-23]. <https://lists.zx2c4.com/pipermail/wireguard/2021-March/006499.html>; Evans K. Re: [ANNOUNCE] WireGuard for FreeBSD in development for 13.y（公开回复，lists.zx2c4.com 存档）〔存疑：存档邮件 ID 待核补〕
 
 ## 自反性声明
 
