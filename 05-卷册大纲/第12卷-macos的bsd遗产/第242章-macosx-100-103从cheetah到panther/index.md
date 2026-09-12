@@ -10,7 +10,7 @@ volume: 第12卷-macos的bsd遗产
 
 - **Mac OS X 10.0-10.1 期间（2001 年）**，Darwin 开源项目吸引 FreeBSD/NetBSD 背景的独立开发者提交补丁。**freebsd.duckdb** 查询显示，**Robert Watson** 于 **2001 年 8 月 29 日** 在 freebsd-src 仓库提交 “Reduce gratuitous whitespace difference from Darwin” 的 commit——此 commit 证明 FreeBSD 与 Darwin 的代码同步是双向的。
 - **Mac OS X 10.2 Jaguar** 于 **2002 年 8 月 24 日** 发布（首次将代号用于营销，售价 129 美元），引入 **Darwin 6.x**（对应 10.2），BSD 用户空间同步 **FreeBSD 4.4-4.6** 级别。Jaguar 引入 **IPv6** 支持（基于 **KAME 项目**，KAME 是日本 WIDE 项目主持的 IPv6/IPsec 实现于 BSD 系统，1998 年启动，2000 年首次合入 FreeBSD 4.0）。
-- **Panther 期（2003 年）** Darwin 持续吸收 FreeBSD 同步补丁。**freebsd.duckdb** 查询显示，**2003 年间** freebsd-src 仓库中 message_subject 含 “From Apple”/“From Darwin” 的 commit 数量较 2001 年增加（延续 **Robert Watson** 2001 年开始的 Darwin 同步工作）。
+- **Panther 期（2003 年）** Darwin 持续吸收 FreeBSD 同步补丁。**freebsd.duckdb** 查询显示，**2003 年间** freebsd-src 仓库中 message_subject 含 `"From Apple"`/`"From Darwin"` 的 commit 数量较 2001 年增加（延续 **Robert Watson** 2001 年开始的 Darwin 同步工作）。
 - **2001-2003 年** Mac OS X 10.0-10.3 对比 **FreeBSD 4.x**（2001-2003 年）/**5.0**（**2003 年 1 月 19 日** 发布）、**Linux 2.4**（**2001 年 1 月 4 日** 发布）/**2.6**（**2003 年 12 月 17 日** 发布）、**Windows XP**（**2001 年 10 月 25 日** 发布），其 BSD 内核 + Aqua 桌面的组合首次让普通用户接触完整 Unix。
 - macOS 自 Mac OS X 10.0（**2001-03-24**）起内置 ktrace/kdebug 子系统，源自 Darwin 0.x（开源 Darwin 1.0 于 **2001-04-01** 发布）的 BSD 层——kdebug 是 ktrace 的扩展，提供更细粒度的内核事件追踪（含 Mach 调度、BSD 系统调用、I/O Kit 等）。**kdebug(1)** man page 在 Mojave（10.14，**2018-09-24**）及之前版本可见，Catalina（10.15，**2019-10-07**）之后 man page 被移除，但内核 KDEBUG 机制仍可通过 Instruments 工具与 **trace(1)** 命令使用。
 
@@ -37,15 +37,27 @@ volume: 第12卷-macos的bsd遗产
 
 <!-- DB_REF:darwin.duckdb -->
 > **数据库引用（darwin.duckdb）**：本子节对应 darwin 代码仓库。> 2001-2001 年间：29 次提交。> 仓库总览：2,016 次提交，时间跨度 2001-04-10 至 2026-04-13；contributors 表 43 行（42 个镜像仓库 + 1 行 dependabot，全部经 Apple OSS Distributions 自动化账号导入）。
+
+<!-- /DB_REF -->
+
 - Apple Inc. Mac OS X 10.2 Jaguar Release Notes [EB/OL]. (2002-08-24). Apple Developer; KAME Project [EB/OL]. <https://www.kame.net/>; FreeBSD Project. FreeBSD 4.4/4.6 Release Notes [EB/OL]. (2001-09-20, 2002-06-15). <https://www.freebsd.org/releases/>; **darwin.duckdb** 查询 L7.5.1 结果 [EB/OL]. 衍生项目与跨项目对比分析.md §L7.5, 2026-07-22.
 
 <!-- DB_REF:darwin.duckdb -->
 > **数据库引用（darwin.duckdb）**：本子节对应 darwin 代码仓库。> 2002-2002 年间：39 次提交。> 仓库总览：2,016 次提交，时间跨度 2001-04-10 至 2026-04-13；contributors 表 43 行（42 个镜像仓库 + 1 行 dependabot，全部经 Apple OSS Distributions 自动化账号导入）。
+
+<!-- /DB_REF -->
+
 - FreeBSD Project. FreeBSD 4.x/5.0 Release Notes [EB/OL]. (2001-2003). <https://www.freebsd.org/releases/>; Linux Kernel Archives. Linux 2.4/2.6 Release Notes [EB/OL]. (2001-01-04, 2003-12-17). <https://www.kernel.org/>; Microsoft. Windows XP Launch [EB/OL]. (2001-10-25). Microsoft Press Release.FreeBSD 社区论文：[FP-2008-003] Mac OS X - From the server room to your pocket（Jordan K. Hubbard（乔丹·哈伯德），2008）<https://papers.freebsd.org/2008/lisa08/hubbard-macosx_from_the_server_room_to_your_pocket/>
 
 <!-- DB_REF:darwin.duckdb -->
-> **数据库引用（darwin.duckdb）**：本子节对应 darwin 代码仓库。> 1985-2026 年间：2,012 次提交。> 仓库总览：2,016 次提交，时间跨度 2001-04-10 至 2026-04-13；contributors 表 43 行（42 个镜像仓库 + 1 行 dependabot，全部经 Apple OSS Distributions 自动化账号导入）。
+> **数据库引用（darwin.duckdb）**：本子节对应 darwin 代码仓库。> 2001-2026 年间：2,016 次提交。> 仓库总览：2,016 次提交，时间跨度 2001-04-10 至 2026-04-13；contributors 表 43 行（42 个镜像仓库 + 1 行 dependabot，全部经 Apple OSS Distributions 自动化账号导入）。
+
+<!-- /DB_REF -->
+
 - Apple Inc. *Mac OS X 10.0 Release Notes*[EB/OL]. (2001-03-24). Apple Developer; Apple Inc. *Darwin Source Code Repository*[EB/OL]. <https://opensource.apple.com/>; Singh, A. (2006). *Mac OS X Internals: A Systems Approach*. Addison-Wesley. Chapter 10.
 
 <!-- DB_REF:darwin.duckdb -->
-> **数据库引用（darwin.duckdb）**：本子节对应 darwin 代码仓库。> 1985-2026 年间：2,012 次提交。> 仓库总览：2,016 次提交，时间跨度 2001-04-10 至 2026-04-13；contributors 表 43 行（42 个镜像仓库 + 1 行 dependabot，全部经 Apple OSS Distributions 自动化账号导入）。
+> **数据库引用（darwin.duckdb）**：本子节对应 darwin 代码仓库。> 2001-2026 年间：2,016 次提交。> 仓库总览：2,016 次提交，时间跨度 2001-04-10 至 2026-04-13；contributors 表 43 行（42 个镜像仓库 + 1 行 dependabot，全部经 Apple OSS Distributions 自动化账号导入）。
+
+<!-- /DB_REF -->
+
