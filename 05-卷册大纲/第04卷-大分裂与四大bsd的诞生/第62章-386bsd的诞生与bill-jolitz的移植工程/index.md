@@ -4,7 +4,7 @@ id: CH62
 volume: 第04卷-大分裂与四大bsd的诞生
 ---
 
-# 第 62 章 386bsd的诞生与bill-jolitz的移植工程
+# 第 62 章 386BSD 的诞生与 Bill Jolitz 的移植工程
 
 ## 要点
 
@@ -26,7 +26,10 @@ volume: 第04卷-大分裂与四大bsd的诞生
 
 ## 史观
 
-(待人工回填——详见子节文件史观/辨析字段)
+- 总纲第 10 条——动手者创造历史：Jolitz 夫妇的移植工程使 BSD 落地普通 PC，无名维护者群体以 patchkit 接力
+- 总纲第 4 条——分离聚合是永恒规律：unofficial patchkit 自 386BSD 分离，聚合为 FreeBSD 与 NetBSD
+- 总纲第 3 条——不存在进步，只有权力再分配：发布节奏之争实为维护权与起源叙事权的再分配
+- 总纲第 7 条——理论必须自反：Salon 专访引发 FreeBSD 社区对自身起源叙事的反思
 
 ## 辨析
 
@@ -38,7 +41,14 @@ volume: 第04卷-大分裂与四大bsd的诞生
 
 ## 文献
 
-- Jolitz DDJ 连载；FreeBSD Project 官方历史文档；Marshall Kirk McKusick（马歇尔·柯克·麦库西克） “Design and Implementation of 4.4BSD” (Addison-Wesley 1996) ［B］---## 史料登记与辩证校准（2026-08-08 追加）> **本卷命题**：24.4 历史非断裂而是循环（详见本卷 00-总览“编纂指导思想叙事参照”）### 史料文献
+- Jolitz DDJ 连载；FreeBSD Project 官方历史文档；Marshall Kirk McKusick（马歇尔·柯克·麦库西克） “Design and Implementation of 4.4BSD” (Addison-Wesley 1996) ［B］
+
+## 史料登记与辩证校准（2026-08-08 追加）
+
+> **本卷命题**：历史非断裂而是循环——总纲第 4 条——分离聚合是永恒规律（原追加块编号“24.4”系旧卷册基准口径残留，2026-09-12 整改统一为总纲条目口径；详见本卷 00-总览“编纂指导思想叙事参照”）
+
+### 史料文献
+
 - DDJ 1992 年度报告；FreeBSD Project FAQ 历史；Marshall Kirk McKusick 个人回忆 ［B］
 - Jordan Hubbard freebsd-announce (1993.6.19)；NetBSD Project 历史；Marshall Kirk McKusick（马歇尔·柯克·麦库西克） 回忆录 ［A］
 - Chalmers, R. “The unknown hackers” Salon, 17 May 2000；386BSD 0.1 Release Notes (14 July 1992)［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
