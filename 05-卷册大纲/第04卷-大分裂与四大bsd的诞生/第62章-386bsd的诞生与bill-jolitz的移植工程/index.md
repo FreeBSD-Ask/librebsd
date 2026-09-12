@@ -69,4 +69,3 @@ volume: 第04卷-大分裂与四大bsd的诞生
 - Usenet 历史档案；FreeBSD 邮件列表档案 ［A］
 <!-- 原 [^doubt-resolved-257/258/259] 三条悬空脚注引用（文件内无定义、来源 slug 乱码、Amit Singh 条目重复）于 2026-09-12 整改移除 -->
 - Gödel, K. (1931); Jolitz & Jolitz DDJ (1991-1992); FreeBSD 1.0 Release Notes (1993); NetBSD 0.8 Release Notes (1993)
-
