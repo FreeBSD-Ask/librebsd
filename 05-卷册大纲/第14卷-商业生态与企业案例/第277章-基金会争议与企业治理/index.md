@@ -16,86 +16,29 @@ volume: 第14卷-商业生态与企业案例
 
 ## 史观
 
-- 总纲第 12 条——法律结构：基金会收入结构的法律披露
+- 总纲第 13 条——法律与道德是利益分配：基金会收入结构的法律披露（原挂“总纲第 12 条——法律结构”，权威表第 12 条为“科学是形式主义”，主题不符，按 R2140 先例改挂）
   - 辨析：**Juniper** 占比的确切数字需核查 IRS 990 表
-  - 文献：FreeBSD Foundation IRS 990；年报；FreeBSD Foundation 官方财务页面 `<https://freebsdfoundation.org/about-us/about-the-foundation/financia>
-- 总纲第 23 条——社区治理：资金治理与社区参与
+  - 文献：FreeBSD Foundation IRS 990；年报；FreeBSD Foundation 官方财务页面 <https://freebsdfoundation.org/about-us/about-the-foundation/financials/>
+- 专题语（不设条号）：资金治理与社区参与（原挂“总纲第 23 条——社区治理”，权威表第 23 条为“一切历史写作都是基于哲学设定的历史小说”，主题不符，改专题语）
   - 辨析：个人捐赠低迷的原因需多角度分析
   - 文献：Twitter 存档；Foundation 筹款记录 ［A］
 
-## 277.10.3 与 Linux Foundation 资金规模的比较
-
-- 要点：**Linux Foundation** 的资金规模远超 **FreeBSD Foundation**，2020 年代年收入已达数亿美元
-- 总纲第 16 条——经济周期：商业闭环与经济规模的差异
-  - 辨析：两个 **Foundation** 的法律结构不同（501(c)(3) vs 501(c)(6)），比较需注意
-  - 文献：Linux Foundation 年报；IRS 990 ［B］
-
-## 277.10.4 基金会年报与 IRS 990 表考据
-
-- 要点：**FreeBSD Foundation** 的年报与 IRS
-- 总纲第 25 条——终结与延续：**TrueNAS CORE** 的终结
-  - 辨析：转向 **Linux** 的技术动机是否为唯一原因需分析
-  - 文献：iXsystems 公告；TrueNAS 25.04 文档［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
-
-## 277.1
-
-- 总纲第 23 条——社区治理：权限管理的平等原则
-  - 辨析：未公开撤销不等于无争议，可能存在私下警告
-  - 文献：Committer's Big List of Rules；Core Team 决议 ［A］
-
-## 277.12.2 企业与志愿者 committer 权限平等原则
-
-- 要点：**FreeBSD** 的 committer 权限规则不区分企业 committer 与志愿者 c
-
-## 辨析
-
-- **Juniper** 占比的确切数字需核查 IRS 990 表
-  - 文献：FreeBSD Foundation IRS 990；年报；FreeBSD Foundation 官方财务页面 `https://freebsdfoundation.org/about-us/about-the-foundation/financials/`（2021-2025 年度 P&L 与 Balance She
-- 个人捐赠低迷的原因需多角度分析
-  - 文献：Twitter 存档；Foundation 筹款记录 ［A］
-
-## 277.10.3 与 Linux Foundation 资金规模的比较
-
-- 要点：**Linux Foundation** 的资金规模远超 **FreeBSD Foundation**，2020 年代年收入已达数亿美元。**Linux Foundation** 的商业模式包括会员费
-- 两个 **Foundation** 的法律结构不同（501(c)(3) vs 501(c)(6)），比较需注意
-  - 文献：Linux Foundation 年报；IRS 990 ［B］
-
-## 277.10.4 基金会年报与 IRS 990 表考据
-
-- 要点：**FreeBSD Foundation** 的年报与 IRS 990 表是财务分析的主要史料，需逐年核查。
-- 史料：**Fre
-- 转向 **Linux** 的技术动机是否为唯一原因需分析
-  - 文献：iXsystems 公告；TrueNAS 25.04 文档［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
-
-## 277.11.2 CORE 与 SCALE 并存时代的终结
-
-- 要点：**TrueNAS CO
-- 未公开撤销不等于无争议，可能存在私下警告
-  - 文献：Committer's Big List of Rules；Core Team 决议 ［A］
-
-## 277.12.2 企业与志愿者 committer 权限平等原则
-
-- 要点：**FreeBSD** 的 committer 权限规则不区分企业 committer 与志愿者 committer，所有 committer 遵守相同规则。这是
-
-## 文献
-
-- FreeBSD Foundation IRS 990；年报；FreeBSD Foundation 官方财务页面 `https://freebsdfoundation.org/about-us/about-the-foundation/financials/`（2021-2025 年度 P&L 与 Balance Sheet PDF） ［B］
-
 ## 277.10.2 个人捐赠低迷与 Twitter 催款事件
 
-- 要点：**FreeBSD Foundation** 的个人捐赠低迷，曾出现 **Core Team** 成员在 Twitter 催款的尴尬事件。个人捐赠的低迷反映 BSD 社区的商业
+- 要点：**FreeBSD Foundation** 的个人捐赠低迷，曾出现 **Core Team** 成员在 Twitter 催款的尴尬事件。个人捐赠的低迷反映 BSD 社区的商业闭环缺失。
 - Twitter 存档；Foundation 筹款记录 ［A］
 
 ## 277.10.3 与 Linux Foundation 资金规模的比较
 
 - 要点：**Linux Foundation** 的资金规模远超 **FreeBSD Foundation**，2020 年代年收入已达数亿美元。**Linux Foundation** 的商业模式包括会员费与认证服务。
-- Linux Foundation 年报；IRS 990 ［B］
+- 总纲第 8 条——本体论上各方平等：两个 **Foundation** 的法律结构不同（501(c)(3) vs 501(c)(6)），治理模式与资金规模差异不构成优劣序（原挂“总纲第 16 条——经济周期”非基线条名，按权威表改挂）
+  - 辨析：两个 **Foundation** 的法律结构不同（501(c)(3) vs 501(c)(6)），比较需注意
+  - 文献：Linux Foundation 年报；IRS 990 ［B］
 
 ## 277.10.4 基金会年报与 IRS 990 表考据
 
 - 要点：**FreeBSD Foundation** 的年报与 IRS 990 表是财务分析的主要史料，需逐年核查。
-- 史料：**FreeBSD Foundation** 年报、IRS 990 表（公开可查） ［B］
-- 史观：总纲第 12 条——法律结构：非营利组织的财务透明度
+- 史观：总纲第 13 条——法律与道德是利益分配：非营利组织的财务透明度属利益披露的法律与道德维度（原挂“总纲第 12 条——法律结构”非基线条名，改挂）
 - 辨析：IRS 990 表的解读需会计专业知识
 - 文献：FreeBSD Foundation IRS 990；年报 ［B］
 - iXsystems 公告；TrueNAS 25.04 文档［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
@@ -103,29 +46,30 @@ volume: 第14卷-商业生态与企业案例
 ## 277.11.2 CORE 与 SCALE 并存时代的终结
 
 - 要点：**TrueNAS CORE**（**FreeBSD**）与 **SCALE**（**Linux**）的并存局面在 25.04 终结，**iXsystems** 统一于 **Linux**。**CORE** 用户面临迁移压力。
+- 史观：总纲第 22 条——知识注定过时：TrueNAS CORE（FreeBSD 基底）被 SCALE（Linux 基底）取代，反映存储 appliance 领域 FreeBSD 系知识栈的代际更替（原挂“总纲第 25 条——终结与延续”非基线条名，按报告建议改挂）
 - 史料：**iXsystems** 迁移指南、社区论坛中的用户
-- Committer's Big List of Rules；Core Team 决议 ［A］
+- 辨析：转向 **Linux** 的技术动机是否为唯一原因需分析
+- 文献：iXsystems 公告；TrueNAS 25.04 文档［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
 
 ## 277.12.2 企业与志愿者 committer 权限平等原则
 
 - 要点：**FreeBSD** 的 committer 权限规则不区分企业 committer 与志愿者 committer，所有 committer 遵守相同规则。这是 **FreeBSD** 治理的核心原则之一。
 - 史料：Committer's Big List of Rules 文本、**Core Team** 治理文档 ［A］
-- 史观：总纲第 12 条——法律结构：权限规则的法律文本
-- 辨析：平等原
-- Linux MAINTAINERS 文件；FreeBSD committer 文档 ［A］
+- 史观：总纲第 13 条——法律与道德是利益分配：权限规则以统一法律文本约束企业与志愿者两类主体（原挂“总纲第 12 条——法律结构”非基线条名，改挂）
+- 辨析：平等原则的实施须以 Committer's Big List of Rules 与 **Core Team** 决议公开记录为据；未公开撤销不等于无争议，可能存在私下警告〔注：辨析句原文截断，按上下文收束〕
+- 文献：Committer's Big List of Rules；Core Team 决议；Linux MAINTAINERS 文件；FreeBSD committer 文档 ［A］
 
 ## 277.12.4 Core Team 权限决议与邮件记录考据
 
 - 要点：**Core Team** 的权限决议记录存于 `freebsd-hackers` 邮件列表与 **Core Team** 内部文档（部分公开）。
 - 史料：`freebsd-hackers` 邮件列表、**Core Team** 公开决议 ［A］
-- 史观：总纲第 23 条——社区治理：决议记录的透明度
+- 史观：专题语（不设条号）：决议记录的透明度（原挂“总纲第 23 条——社区治理”非基线条名，改专题语）
 - 辨析：内部决议的公开程度有限，史料重建不完整
-- 文献：freebsd-hackers 邮件列表；
-- freebsd.duckdb commits 表；`script/query_ch133_enterprise_commits.py` 查询脚本；L3.2.1 查询报告；**FreeBSD Committer's Guide**；**FreeBSD Foundation** 年报 ［A］
+- 文献：freebsd-hackers 邮件列表；**FreeBSD Committer's Guide**；**FreeBSD Foundation** 年报 ［A］〔注：原混入的内部脚本路径与查询编号（freebsd.duckdb commits 表、script/query_ch133_enterprise_commits.py、L3.2.1）已按可读来源著录规则移除，记录见 **04-现代研究文献/09-bsd仓库数据分析/**〕
 
 ## 277.13.2 重要企业 committer 历史档案
 
-- 要点：基于 133.12.7 节核验的 freebsd.duckdb 查询结论，**freebsd-src** 仓库中企业 committer 的 commit 分布为：**iXsystems** 530 commit（最高，反映 iXsystems 作
+- 要点：基于 277.12 节核验脉络（原稿称“133.12.7 节”系拆分前旧章号）的 freebsd.duckdb 查询结论，**freebsd-src** 仓库中企业 committer 的 commit 分布为：**iXsystems** 530 commit（最高，反映 iXsystems 作为企业 committer 的贡献集中度）〔原文截断，后续分布数据待回源〕
 
 ## 自反性声明
 
