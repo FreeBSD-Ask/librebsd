@@ -17,7 +17,7 @@ volume: 第05卷-freebsd的工程化奠基
 ## 史观
 
 - 总纲第 17 条——证明世界先于解释和改造世界，3 年延期源于 SMPng 工程挑战而非计划
-  - 辨析：经 bsd_commits.duckdb tags 表验证，5.0-RELEASE 的 tagger_date 为 2003-01-16（非旧叙事 2003.1.19，误差 3 天，可能为公告日期与 tag 日期差异），5.0 开发起始日期存在 2000.3 与 2000.1 两种说法，需查 SVN；0 信任原则适用说明：L1.1.1 年度 commit 量基于 author_date 聚合，FreeBS〔待核：原文截断，待回源〕
+  - 辨析：经 bsd_commits.duckdb tags 表验证，5.0-RELEASE 的 tagger_date 为 2003-01-16（非旧叙事 2003.1.19，误差 3 天，可能为公告日期与 tag 日期差异），5.0 开发起始日期存在 2000.3 与 2000.1 两种说法，需查 SVN；0 信任原则适用说明：L1.1.1 年度 commit 量基于 author_date 聚合，FreeBSD SVN-to-Git 2020 迁移可能引入日期偏差但 author_date 应保持一致（2026-09-12 回源补全，据同章 98.1 子节辨析段）
 - 总纲第 22 条——知识注定过时，4BSD 调度器是 1980s 设计的债务
   - 辨析：Roberson 批评是否公平，需独立验证 4BSD 调度器性能
   - 文献：Roberson BSDCon 2003 论文 ［B］
@@ -50,7 +50,7 @@ volume: 第05卷-freebsd的工程化奠基
 
 ## 文献
 
-- FreeBSD 5.0 Release Notes；BSDCon 2003 5.0 演讲；release/5.0.0. freebsd-src 仓库 tag [DB/OL]. 2003-01-16T16:56:23Z. tag: release/5.0.0; commit: 47227ef0ef663b7abb81ab5a60a450da9a93d24b；freebsd.duckdb L1.1.1 查询结果（freebsd-src 年度 commit 量 2002-2003）[DB/OL]；freebsd.duckdb L1.4.1 查询结果（freebsd-src release tag 间〔待核：原文截断，待回源〕）
+- FreeBSD 5.0 Release Notes；BSDCon 2003 5.0 演讲；release/5.0.0. freebsd-src 仓库 tag [DB/OL]. 2003-01-16T16:56:23Z. tag: release/5.0.0; commit: 47227ef0ef663b7abb81ab5a60a450da9a93d24b；freebsd.duckdb L1.1.1 查询结果（freebsd-src 年度 commit 量 2002-2003）[DB/OL]；freebsd.duckdb L1.4.1 查询结果（freebsd-src release tag 间隔）（2026-09-12 回源补全，据同章 98.1 子节文献段）
 - Roberson BSDCon 2003 论文 ［B］
 
 ## 自反性声明
