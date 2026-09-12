@@ -39,37 +39,13 @@ volume: 第05卷-freebsd的工程化奠基
 ## 文献
 
 - jemalloc source code commit log (github.com/jemalloc)；Evans (2006) BSDCan paper；Mozilla Bugzilla jemalloc tracking ［A］；统计分析报告：描述性统计.md SubTask 2.1 [R/OL]. 2026-07-27. 文件路径：**03-原始史料库/01-代码仓库史料/01-数据库本体/统计分析/描述性统计.md**；SQL 查询：`SELECT COUNT(*) FROM commits WHERE repo_name='freebsd-src'`. freebsd.duckdb [DB/OL]. 查询日期：2026-07-27 [考据脚注：C-03 freebsd-src 444,203 commits 经 `script/phase2_inferential.py` 执行结果与 `phase2_results.json` 结构化结果交叉验证。]
-
-<!-- DB_REF:freebsd.duckdb -->
-> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 1996-2010 年间：482,545 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
 - Evans (2006) BSDCan paper；Berger et al. (2000) Hoard ACM SIGPLAN Notices 35(11)；Evans, J. jemalloc design notes (2005-2006) ［B］
-
-<!-- DB_REF:freebsd.duckdb -->
-> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 1996-2010 年间：482,545 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
 - FreeBSD 7.0 src/lib/libc/stdlib/ commit log；freebsd-hackers jemalloc integration threads (2007-2008)；Kamp, P.-H. phkmalloc retirement discussion (2007) ［A］
-
-<!-- DB_REF:freebsd.duckdb -->
-> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 1996-2010 年间：482,545 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
 - jemalloc contributors list (github.com/jemalloc/jemalloc)；Facebook jemalloc contributions (github.com/jemalloc/jemalloc/graphs/contributors)；FreeBSD src committers jemalloc patches (freebsd.org) ［A］
-
-<!-- DB_REF:freebsd.duckdb -->
-> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 1996-2010 年间：482,545 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
 - freebsd-hackers jemalloc criticism threads (2008-2010)；Evans, J. jemalloc response to criticism (personal blog)；Mozilla Bugzilla jemalloc defect tracking ［A］
-
-<!-- DB_REF:freebsd.duckdb -->
-> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 1996-2010 年间：482,545 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
 - Evans 2006/2011; jemalloc.net ［A］
-
-<!-- DB_REF:freebsd.duckdb -->
-> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 1996-2010 年间：482,545 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
 - Drepper, U. glibc malloc maintainer statements (sourceware.org)；freebsd-hackers Linux jemalloc adoption threads (2009-2011)；Evans, J. jemalloc on Linux reflection (blog, 2011) ［A］
-
-<!-- DB_REF:freebsd.duckdb -->
-> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 1996-2010 年间：482,545 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
 - jemalloc contributors list (github.com/jemalloc/jemalloc)；FreeBSD committers jemalloc patches (freebsd.org)；Facebook jemalloc contributions (github.com/jemalloc) ［A］
-
-<!-- DB_REF:freebsd.duckdb -->
-> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 1996-2010 年间：482,545 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
 - Phoronix malloc allocator benchmarks (2008-2011)；Evans, J. jemalloc performance data (BSDCan 2006 paper)；Ghemawat, S. TCMalloc performance comparison (2004)［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
 
 ## 章内关联文件
@@ -78,4 +54,8 @@ volume: 第05卷-freebsd的工程化奠基
 - 媒体反响与社区舆论（详见 [媒体反响与社区舆论.md](媒体反响与社区舆论.md)）
 
 <!-- DB_REF:freebsd.duckdb -->
-> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 1996-2010 年间：482,545 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
+> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。
+> 1996-2010 年间：482,545 次提交。
+> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
+
+<!-- /DB_REF -->
