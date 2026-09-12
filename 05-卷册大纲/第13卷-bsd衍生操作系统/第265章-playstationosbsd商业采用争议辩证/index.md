@@ -33,9 +33,9 @@ volume: 第13卷-bsd衍生操作系统
 ## 文献
 
 - FreeBSD Handbook 官方页面（freebsd.org.cn/freebsdhandbook/nutshell.html）；freebsd.duckdb 查询脚本 `script/query_ch126_sony_v4.py`；freebsd-src commit 2011-01-06T04:12:29Z Nathan Whitehorn PS3 支持导入（commit_hash `03479763b279`）；freebsd-src commit 2021-08-16T23:18:27+03:00 Vladimir Kondratyev ps4dshock 修复（commit_hash `bb5eb85e5c01`）；Sony PS4 系统软件开源软件声明页面（**<https://doc.dl.playstation.net/doc/ps4-oss/**>）；Steam Deck 内核源代码公开页面 ［A］## 264.6.2 反批评——Sony 阵营对封闭生态与回馈问题的回应
-- BSD 许可证原文；Sony PS4 系统软件开源软件声明页面；freebsd.duckdb 查询脚本 `script/query_ch126_sony_v4.py`；Xbox 与 Nintendo Switch 封闭生态公开报道；BSDCan 会议存档；FreeBSD Foundation 关于 BSD 许可证的官方声明 ［A］## 264.6.3 再批评——BSD 许可证哲学的张力与商品形式主义深化
-- 原材料/哲学/项目统摄史观/第 25 章.md；BSD 许可证原文；GPL 许可证原文（GNU General Public License v2/v3）；freebsd.duckdb 查询脚本 `script/query_ch126_sony_v4.py`；126.6.1-126.6.2 节记录；FreeBSD Foundation 关于 BSD 许可证的官方声明；GNU Project 关于 GPL copyleft 的官方说明 ［A］## 264.6.4 合图——BSD 许可证允许封闭使用的辩证综合
-- 原材料/哲学/项目统摄史观/第 25 章.md；BSD 许可证原文；GPL 许可证原文；freebsd.duckdb 查询脚本 `script/query_ch126_sony_v4.py`；FreeBSD Handbook 官方页面（freebsd.org.cn/freebsdhandbook/nutshell.html）；Sony PS4 系统软件开源软件声明页面；Steam Deck 内核源代码公开页面；126.6.1-126.6.3 节记录；FreeBSD Foundation 关于 BSD 许可证的官方声明；GNU Project 关于 GPL copyleft 的官方说明 ［A］
+- BSD 许可证原文；Sony PS4 系统软件开源软件声明页面；**freebsd.duckdb** 查询脚本 `script/query_ch126_sony_v4.py`；Xbox 与 Nintendo Switch 封闭生态公开报道；BSDCan 会议存档；FreeBSD Foundation 关于 BSD 许可证的官方声明
+- 原材料/哲学/项目统摄史观/第 25 章.md；BSD 许可证原文；GPL 许可证原文（GNU General Public License v2/v3）；**freebsd.duckdb** 查询脚本 `script/query_ch126_sony_v4.py`；265.6.1-265.6.2 节记录；FreeBSD Foundation 关于 BSD 许可证的官方声明；GNU Project 关于 GPL copyleft 的官方说明
+- 原材料/哲学/项目统摄史观/第 25 章.md；BSD 许可证原文；GPL 许可证原文；**freebsd.duckdb** 查询脚本 `script/query_ch126_sony_v4.py`；FreeBSD Handbook 官方页面（**freebsd.org.cn/freebsdhandbook/nutshell.html**）；Sony PS4 系统软件开源软件声明页面；Steam Deck 内核源代码公开页面；265.6.1-265.6.3 节记录；FreeBSD Foundation 关于 BSD 许可证的官方声明；GNU Project 关于 GPL copyleft 的官方说明
 
 <!-- DB_REF:bsd_derivatives.duckdb -->
 > **数据库引用（bsd_derivatives.duckdb）**：本子节对应 bsd_derivatives 代码仓库。> 1985-2026 年间：963,557 次提交。> 仓库总览：963,557 次提交，9,744 位贡献者（contributors 表行数，1985-06-13 至 2026-08-24）。
