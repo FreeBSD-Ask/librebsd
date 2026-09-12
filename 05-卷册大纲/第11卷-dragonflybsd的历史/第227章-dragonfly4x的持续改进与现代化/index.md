@@ -42,12 +42,18 @@ volume: 第11卷-dragonflybsd的历史
 > 2015-2016 年间：90,164 次提交。
 > 仓库总览：656,206 次提交，535 位贡献者，2003-06-17 至 2026-08-18。
 
+<!-- /DB_REF -->
+
+<!-- /DB_REF -->
+
 - dragonfly.duckdb dragonfly-src 仓库 commits 表（v4.6.0/v4.8.0 期间 commit 与 TOP 10 贡献者）；kernel@ 邮件列表档案；NVMe/虚拟化性能 benchmark 报告 ［A］
 
 <!-- DB_REF:dragonfly.duckdb -->
 > **数据库引用（dragonfly.duckdb）**：本子节对应 dragonfly 代码仓库。
 > 2016-2017 年间：88,853 次提交。
 > 仓库总览：656,206 次提交，535 位贡献者，2003-06-17 至 2026-08-18。
+
+<!-- /DB_REF -->
 
 - lists.dragonflybsd.org 邮件列表归档；dragonfly.duckdb dragonfly-src 仓库 contributors 表（first_commit_date 序列）；marc.info DragonFly 备份 ［A］
 
@@ -56,12 +62,16 @@ volume: 第11卷-dragonflybsd的历史
 > 2014-2017 年间：227,047 次提交。
 > 仓库总览：656,206 次提交，535 位贡献者，2003-06-17 至 2026-08-18。
 
+<!-- /DB_REF -->
+
 - dragonfly.duckdb commits 表（两仓库对照）；lists.dragonflybsd.org 邮件列表归档；lists.freebsd.org 邮件列表归档；LKML 档案；技术媒体报道 ［A］
 
 <!-- DB_REF:dragonfly.duckdb -->
 > **数据库引用（dragonfly.duckdb）**：本子节对应 dragonfly 代码仓库。
 > 2003-2026 年间：656,206 次提交。
 > 仓库总览：656,206 次提交，535 位贡献者，2003-06-17 至 2026-08-18。
+
+<!-- /DB_REF -->
 
 - dragonfly.duckdb dragonfly-src 仓库 commits 表与 contributors 表（2014-2017 年 TOP 10）；kernel@ 邮件列表档案；贡献者个人简历［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］ ［A］
 
