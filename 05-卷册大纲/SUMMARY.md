@@ -588,7 +588,7 @@
   - [采访录](./第04卷-大分裂与四大bsd的诞生/第67章-netbsd的创建与可移植理想/采访录.md)
 
 - [第 68 章 NetBSD 的贡献者与 de Raadt 被驱逐事件](./第04卷-大分裂与四大bsd的诞生/第68章-netbsd的贡献者与de-raadt被驱逐事件/概述.md)
-  - [68.10 重要贡献者与边缘者：被驱逐的 de Raadt 与边缘移植者——被驱逐的 de Raadt 与边缘移植者](./第04卷-大分裂与四大bsd的诞生/第68章-netbsd的贡献者与de-raadt被驱逐事件/68.10-重要贡献者与边缘者.md)
+  - [68.10 重要贡献者与边缘者：被驱逐的 de Raadt 与边缘移植者](./第04卷-大分裂与四大bsd的诞生/第68章-netbsd的贡献者与de-raadt被驱逐事件/68.10-重要贡献者与边缘者.md)
   - [68.11 Wasabi Systems 商业化兴衰（2000-2009）——Wasabi Systems 2000 年中成立，定位为 NetBSD 商业支持公司](./第04卷-大分裂与四大bsd的诞生/第68章-netbsd的贡献者与de-raadt被驱逐事件/68.11-wasabisystems商业化兴衰2000.md)
   - [68.12 NetBSD 早期技术淘汰——UVM 取代 4.4BSD VM 与 pkgsrc 取代 ports](./第04卷-大分裂与四大bsd的诞生/第68章-netbsd的贡献者与de-raadt被驱逐事件/68.12-netbsd早期技术淘汰.md)
   - [68.13 **与同时期操作系统的比较**：1993 年同期 Linux 1.0 路径、FreeBSD 1.0 路径、386BSD 1.0 路径](./第04卷-大分裂与四大bsd的诞生/第68章-netbsd的贡献者与de-raadt被驱逐事件/68.13-与同时期操作系统的比较.md)
