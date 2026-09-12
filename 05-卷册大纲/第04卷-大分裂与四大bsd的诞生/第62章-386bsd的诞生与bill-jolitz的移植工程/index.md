@@ -47,8 +47,16 @@ volume: 第04卷-大分裂与四大bsd的诞生
 - Torvalds 1991; Jolitz 1991-1992 ［A］
 
 <!-- DB_REF:linux_kernel.duckdb -->
-> **数据库引用（linux_kernel.duckdb）**：本子节对应 linux_kernel 代码仓库。> 1991-1991 年间：0 次提交。> 仓库总览：1,474,341 次提交，39,865 位贡献者（contributors 表行数，1970-01-01 至 2026-08-24）。
+> **数据库引用（linux_kernel.duckdb）**：本子节对应 linux_kernel 代码仓库。
+>
+> 1991-1991 年间：0 次提交。
+>
+> 仓库总览：1,474,341 次提交，39,865 位贡献者（contributors 表行数，1970-01-01 至 2026-08-24）。
+
+<!-- 取数窗口“1991-1991 年间：0 次提交”与 linux_kernel 仓库 1991 年起始的表述矛盾，系库侧取数条件所致，2026-09-12 整改留痕，待库侧核正取数条件 -->
+
 - Chalmers, R. “The unknown hackers” Salon, 17 May 2000；FreeBSD Project “A Brief History of FreeBSD”［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
-- Usenet 历史档案；FreeBSD 邮件列表档案 ［A］[^doubt-resolved-257]: 据 new-york-anchor-press-doubleday (Levy, 1984) 消解[^doubt-resolved-258]: 据 Mac OS X Internals A Systems Approach (Amit Singh（阿米特·辛格）)  (未署名) 消解[^doubt-resolved-259]: 据 Mac OS X Internals A Systems Approach (Amit Singh)  (未署名) 消解
+- Usenet 历史档案；FreeBSD 邮件列表档案 ［A］
+<!-- 原 [^doubt-resolved-257/258/259] 三条悬空脚注引用（文件内无定义、来源 slug 乱码、Amit Singh 条目重复）于 2026-09-12 整改移除 -->
 - Gödel, K. (1931); Jolitz & Jolitz DDJ (1991-1992); FreeBSD 1.0 Release Notes (1993); NetBSD 0.8 Release Notes (1993)
 
