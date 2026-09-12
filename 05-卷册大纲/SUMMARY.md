@@ -885,7 +885,7 @@
   - [100.16 FreeBSD 5.x 时期的技术淘汰——GEOM、UFS2、rcNG、ULE 的并行引入与取代](./第05卷-freebsd的工程化奠基/第100章-freebsd5x的时代语境与社会背景/100.16-FreeBSD-5-x-时期的技术淘汰-GEOM-UFS2-rcNG-ULE.md)
   - [100.17 第三方软件变更——PF 防火墙引入与 MTA 格局](./第05卷-freebsd的工程化奠基/第100章-freebsd5x的时代语境与社会背景/100.17-第三方软件变更-PF-防火墙引入与-MTA-格局.md)
   - [100.18 多元群体贡献：FreeBSD 2002–2005 时期的贡献者多样性——企业、地域与志愿者的协同生态](./第05卷-freebsd的工程化奠基/第100章-freebsd5x的时代语境与社会背景/100.18-多元群体贡献-FreeBSD-2002–2005-时期的贡献者多样性-企业.md)
-  - [100.19 **与同时期操作系统的比较**：2002-2003 年同期操作系统——Linux 2.4/3.5、Windows XP/2003、NetBSD 1.6、OpenBSD 3.x、Solaris 9——FreeBSD 5.x 的 SMPng 转型坐标](./第05卷-freebsd的工程化奠基/第100章-freebsd5x的时代语境与社会背景/100.19-与同时期操作系统的比较-2002-2003-年同期操作系统-Linux-2-4.md)
+  - [100.19 **与同时期操作系统的比较**：2002-2003 年同期操作系统——Linux 2.4/2.5、Windows XP/2003、NetBSD 1.6、OpenBSD 3.x、Solaris 9——FreeBSD 5.x 的 SMPng 转型坐标](./第05卷-freebsd的工程化奠基/第100章-freebsd5x的时代语境与社会背景/100.19-与同时期操作系统的比较-2002-2003-年同期操作系统-Linux-2-4.md)
   - [100.20 漏洞与安全响应：FreeBSD 5.x 时期的 mksnap_ffs 权限缺陷、OpenSSL DoS、telnet 缓冲区溢出与 SSL 版本回滚漏洞群及 GEOM/MAC 架构关联（2003-2005）](./第05卷-freebsd的工程化奠基/第100章-freebsd5x的时代语境与社会背景/100.20-漏洞与安全响应-FreeBSD-5-x-时期的-mksnap_ffs-权限缺陷.md)
 
 - [第 101 章 FreeBSD 6.x：回归稳定](./第05卷-freebsd的工程化奠基/第101章-freebsd6x回归稳定/概述.md)
