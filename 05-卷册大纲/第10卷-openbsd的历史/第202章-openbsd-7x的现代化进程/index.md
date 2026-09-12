@@ -8,7 +8,7 @@ volume: 第10卷-openbsd的历史
 
 ## 要点
 
-- OpenBSD 7.0-7.7 的 Release Notes 与 CVS commit log 是研究此时期现代化的核心史料；特性引入时间以 Release Notes 与 commit log 交叉验证为准——Release Notes 记录用户可见变更，commit log 记录具体代码变更，二者交叉验证可确定特性引入的精确时间；统计结论印证——openbsd.duckdb openbsd-src
+- OpenBSD 7.0-7.7 的 Release Notes 与 CVS commit log 是研究此时期现代化的核心史料；特性引入时间以 Release Notes 与 commit log 交叉验证为准——Release Notes 记录用户可见变更，commit log 记录具体代码变更，二者交叉验证可确定特性引入的精确时间；统计结论印证——openbsd.duckdb openbsd-src 仓库 commit 序列的量化结论（口径见文末章级 DB_REF 总览块与辨析 L1.1.1 局限注）与方法论互证〔2026-09-12 整改：句尾截断收束——批次 C218 问题 4〕
 - OpenBSD/NetBSD/FreeBSD 关于 AI 代码政策的邮件列表档案是研究 BSD 社区应对 AI 浪潮的核心史料；政策形成过程以三个项目的官方政策文档修订历史与邮件列表讨论交叉验证为准
 - OpenBSD misc@、tech@ 邮件列表中关于权限授予、撤销、committer 行为规范的讨论是研究权限模型的核心史料；权限变更的具体内容与时间以邮件列表档案与 CVS access log 交叉验证为准
 - OpenBSD 7.x 时期外部批评的原始发言与邮件列表档案是研究 OpenBSD 现代化滞后形象塑造的核心史料；批评的具体语境与回应以 Linux、FreeBSD、OpenBSD 多个社区邮件列表交叉验证为准
@@ -16,52 +16,48 @@ volume: 第10卷-openbsd的历史
 
 ## 史料
 
-- [DB:references_fulltext:chapter_matches:chmatch_3901] 卷“第10卷-openbsd的历史”第 202 章，匹配置信度 folder，原因：folder 第200章
-- [DB:references_fulltext:chapter_matches:chmatch_4016] 卷“第10卷-openbsd的历史”第 202 章，匹配置信度 1.0，原因：任务4 衍生组官方文档采集
-- [DB:references_fulltext:chapter_matches:chmatch_4022] 卷“第10卷-openbsd的历史”第 202 章，匹配置信度 1.0，原因：任务4 衍生组官方文档采集
-- [DB:references_fulltext:chapter_matches:chmatch_4029] 卷“第10卷-openbsd的历史”第 202 章，匹配置信度 1.0，原因：任务4 衍生组官方文档采集
+- OpenBSD 7.0-7.7 Release Notes（plus.html 用户可见变更页）与 CVS commit log（cvsweb.openbsd.org）〔一手〕
+- OpenBSD misc@/tech@ 邮件列表档案（marc.info）——AI 代码政策讨论、权限授予/撤销与行为规范讨论存档
+- 各 BSD 项目官方 AI 代码政策文档修订历史（CVS/Git commit log）
+- [DB:references_fulltext:chapter_matches:chmatch_3901/4016/4022/4029] 库侧匹配登记（2026-09-12 整改：原机器标识串充当史料改可读著录，匹配行含「folder 第200章」跨章零信息匹配与「任务4」内部任务号，仅作检索登记不作证据——批次 C218 问题 2）
 
 ## 史观
 
-(待人工回填——详见子节文件史观/辨析字段)
+总纲第 9 条——经验优先：7.x 现代化以 Release Notes 与 commit log 的经验记录交叉验证为准，拒绝二手概括（据要点 1）；总纲第 3 条——不存在进步，只有权力再分配：AI 代码政策、committer 权限规则与「现代化滞后」批评的演进是社区治理权力的再分配而非线性进步（据要点 2/3/4）；总纲第 10 条——动手者创造历史：7.x 各项特性由 committer 的 commit 与 hackathon 劳动逐项落地（据要点 5）；总纲第 8 条——本体论上各方平等：OpenBSD/NetBSD/FreeBSD 三项目对 AI 浪潮的不同政策取向地位平等（据要点 2）；总纲第 19 条——解释学循环是历史认识的根本条件：外部批评与社区回应的理解均受前理解制约，须以原始语境核验（据要点 4）。（2026-09-12 整改：史观字段按批次 C218 自 202.1-202.6 各节归纳回填，映射依 25 条权威表）
 
 ## 辨析
 
-- Release Notes 的完整性以 plus.html 页面为准——该页面仅记录 “重要的和用户可见的变更”，部分内部代码重构可能未记录；commit log 中的 arm64/桌面/无线相关 commit 须通过文件路径（如 sys/arch/arm64/、sys/dev/pci/drm/）筛选方可定位；openbsd.duckdb 查询 L1.1.1 局限：L1.1.1 报告仅显示 23 仓库 5
+- Release Notes 的完整性以 plus.html 页面为准——该页面仅记录 “重要的和用户可见的变更”，部分内部代码重构可能未记录；commit log 中的 arm64/桌面/无线相关 commit 须通过文件路径（如 sys/arch/arm64/、sys/dev/pci/drm/）筛选方可定位；openbsd.duckdb 查询 L1.1.1 局限：L1.1.1 报告仅显示 23 仓库 572 行结果中的前 30 行（按仓库名字母序排列，前 30 行全为 dragonfly 仓库），openbsd-src 行未在截断输出中显示，须另用查询脚本直查〔2026-09-12 整改：句尾截断按已知查询口径收束——批次 C218 问题 4〕
 - 邮件列表档案的完整性以 marc.info 与 mail-index.netbsd.org 存档为准——部分讨论可能在私有列表（如各项目的 Core Team 私有列表）进行，公开档案无法覆盖全部讨论；政策文档的修订历史以各项目文档仓库（CVS/Git）的 commit log 为准
-- 邮件列表档案的完整性以 marc.info 存档为准——misc@ 与 tech@ 的公开讨论有完整存档，但 Core Team 私有讨论不在公开档案中；个别权限撤销事件的具体细节以邮件列表原始帖子为准，转载或二手报道可能简化或扭曲；**【2026-07-30 committer 权限撤销案例考据·7ah 条目】**经 WebSearch 检索 "openbsd committer removed
+- 邮件列表档案的完整性以 marc.info 存档为准——misc@ 与 tech@ 的公开讨论有完整存档，但 Core Team 私有讨论不在公开档案中；个别权限撤销事件的具体细节以邮件列表原始帖子为准，转载或二手报道可能简化或扭曲；committer 权限撤销案例考据（2026-07-30 联网核查留痕）：经 WebSearch 检索 “openbsd committer removed”相关条目，具体撤销案例的细节须以 misc@/tech@ 原始帖核实〔2026-09-12 整改：内部条目编号移除、直引号弯引号化、截断收束——批次 C218 问题 8〕
 - 批评的具体语境以原始邮件列表帖子为准——转载至 OSNews/Slashdot/Hacker News 的报道可能简化或扭曲原始语境；de Raadt 回应的语义以 <misc@openbsd.org> 原始帖子为准，二手报道的解读可能与原文有差异
-- commit 记录的归属以 bsd_commits.duckdb author_name 字段为准——部分 patch 由多人协作但仅 committer 一人出现在 author_name 字段，实际贡献者可能在 commit message 的 “from” 或 “ok” 行中署名；邮件列表档案的完整性以 marc.info 存档为准
+- commit 记录的归属以 openbsd.duckdb author_name 字段为准（2026-09-12 整改：旧合并库名改指 openbsd.duckdb——批次 C218 问题 9）——部分 patch 由多人协作但仅 committer 一人出现在 author_name 字段，实际贡献者可能在 commit message 的 “from” 或 “ok” 行中署名；邮件列表档案的完整性以 marc.info 存档为准
 
 ## 文献
 
-- OpenBSD Release Notes [EB/OL]. <https://www.openbsd.org/plus.html>；OpenBSD CVS 仓库 [EB/OL]. <https://cvsweb.openbsd.org/>；man pages [EB/OL]. <https://man.openbsd.org/>；freebsd.duckdb 查询 L1.1.1 与 L1.1.2（来源：原材料/研究/bsd 仓库分析/数据分析/宏观趋势统计.md §L1.1.1、§L1.1.2）；统计分析报告：推断性统计.md Task 6 [R/OL]. 2026-07-27. 文件路径：**03-原始史料库/01-代码仓库史料/01-数据库本体/统计分析/推断性统计.md**；Python 统计脚本：`script/phase2_inferential.py`. Task 6 Pettitt + BUISHAND 变点检测。执行日期：2026-07-27 ［A］
+- OpenBSD Release Notes [EB/OL]. <https://www.openbsd.org/plus.html>；OpenBSD CVS 仓库 [EB/OL]. <https://cvsweb.openbsd.org/>；man pages [EB/OL]. <https://man.openbsd.org/>
+- 统计分析报告：推断性统计.md（Pettitt + BUISHAND 变点检测），存于 **03-原始史料库/01-代码仓库史料/01-数据库本体/统计分析/**（2026-09-12 整改：原条目混入的「原材料/」断链路径、Python 脚本名与执行日期等非文献要素移除留痕——批次 C218 问题 10）
 
 <!-- DB_REF:openbsd.duckdb -->
-> **数据库引用（openbsd.duckdb）**：本子节对应 openbsd 代码仓库。> 2020-2026 年间：115,626 次提交。> 仓库总览：491,195 次提交，3,352 位贡献者，1995-10-18 至 2026-08-25。
-- 各 BSD 项目邮件列表档案 [EB/OL]. <https://marc.info/>、<https://mail-index.netbsd.org/；各项目政策文档；BSD> 社区讨论档案 ［A］
+> **数据库引用（openbsd.duckdb）**：本子节对应 openbsd 代码仓库（2026-09-12 整改：原六连 DB_REF 块〔2020-2026/2023-2026/2013-2026/1995-2026×2/2020-2026 六种窗口〕去重合并为章级总览块并补闭合；各块后交错文献条目已归位「## 文献」——批次 C218 问题 3/12/13）。
+> 窗口切片：2020-2026 年 115,626 次；2023-2026 年 63,828 次；2013-2026 年 248,174 次；1995-2026 年（全库）491,195 次。
+> 仓库总览：491,195 次提交，3,352 位贡献者，1995-10-18 至 2026-08-25。
 
-<!-- DB_REF:openbsd.duckdb -->
-> **数据库引用（openbsd.duckdb）**：本子节对应 openbsd 代码仓库。> 2023-2026 年间：63,828 次提交。> 仓库总览：491,195 次提交，3,352 位贡献者，1995-10-18 至 2026-08-25。
-- OpenBSD 邮件列表档案 [EB/OL]. <https://marc.info/?laccopenbsd-misc>；CVS access log；OpenBSD hackathons 记录 ［A］
+<!-- /DB_REF:openbsd.duckdb -->
 
-<!-- DB_REF:openbsd.duckdb -->
-> **数据库引用（openbsd.duckdb）**：本子节对应 openbsd 代码仓库。> 2013-2026 年间：248,174 次提交。> 仓库总览：491,195 次提交，3,352 位贡献者，1995-10-18 至 2026-08-25。
-- 各 BSD/Linux 邮件列表档案 [EB/OL]. <https://marc.info/>、<https://lists.freebsd.org/；技术媒体文章；de> Raadt 公开发言 ［A］
+## 文献
 
-<!-- DB_REF:openbsd.duckdb -->
-> **数据库引用（openbsd.duckdb）**：本子节对应 openbsd 代码仓库。> 1995-2026 年间：491,195 次提交。> 仓库总览：491,195 次提交，3,352 位贡献者，1995-10-18 至 2026-08-25。
-- OpenBSD CVS 仓库 [EB/OL]. <https://cvsweb.openbsd.org/>；OpenBSD 邮件列表档案 [EB/OL]. <https://marc.info/?laccopenbsd-misc>；OpenBSD hackathons 记录 ［A］
-
-<!-- DB_REF:openbsd.duckdb -->
-> **数据库引用（openbsd.duckdb）**：本子节对应 openbsd 代码仓库。> 1995-2026 年间：491,195 次提交。> 仓库总览：491,195 次提交，3,352 位贡献者，1995-10-18 至 2026-08-25。
-- OpenBSD 7.0-7.7 Release Notes [EB/OL]. <https://www.openbsd.org/plus.html>；**pledge(2)**手册页 [EB/OL]. <https://man.openbsd.org/pledge.2>；**unveil(2)** 手册页 [EB/OL]. <https://man.openbsd.org/unveil.2>；OpenBSD 安全机制文档；tech@ 邮件列表档案 [EB/OL]. <https://marc.info/?laccopenbsd-tech> ［A］---
+- 各 BSD 项目邮件列表档案 [EB/OL]. <https://marc.info/>、<https://mail-index.netbsd.org/>；各项目政策文档；BSD 社区讨论档案
+- OpenBSD 邮件列表档案 [EB/OL]. <https://marc.info/?l=openbsd-misc>；CVS access log；OpenBSD hackathons 记录（2026-09-12 整改：URL 参数 ?lacc → ?l= 修正，批次 C218 问题 7）
+- 各 BSD/Linux 邮件列表档案 [EB/OL]. <https://lists.freebsd.org/>；技术媒体文章；de Raadt 公开发言（2026-09-12 整改：分号与中文移出尖括号，批次 C218 问题 6）
+- OpenBSD 7.0-7.7 Release Notes [EB/OL]. <https://www.openbsd.org/plus.html>；**pledge(2)** 手册页 <https://man.openbsd.org/pledge.2>；**unveil(2)** 手册页 <https://man.openbsd.org/unveil.2>；tech@ 邮件列表档案 [EB/OL]. <https://marc.info/?l=openbsd-tech>
 
 <!-- DB_REF:openbsd.duckdb -->
 > **数据库引用（openbsd.duckdb）**：本子节对应 openbsd 代码仓库。> 2020-2026 年间：115,626 次提交。> 仓库总览：491,195 次提交，3,352 位贡献者，1995-10-18 至 2026-08-25。
 
 <!-- PODCAST_REVIEW v20260829 -->
 <!-- 语义复核范围：BSD Now EP368、BSD Now EP626（共 2 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
+<!-- 主题限定注（2026-09-12 整改补，批次 C218 问题 14）：EP626 主体为 FreeBSD Journal/NetBSD 11/Foundation 内容，与本章 OpenBSD 7.x 主题直接相关者仅 USB 摄像头测试（7.8 征集）与 OpenSSH refuse connection 两条，引用时以该段落范围为限 -->
 
 **要点**：
 
@@ -92,9 +88,9 @@ volume: 第10卷-openbsd的历史
 
 - 总纲9 经验优先：OpenBSD 控制台改进源自对文本模式与帧缓冲显示带宽差异的实际测量，而非抽象设计。（BSD Now EP368，[169.94-214.16]，L2）
 - 总纲3 不存在进步，只有权力再分配：操作系统角色变化的叙事揭示各系统在不同场景中的功能再分配，而非单向的线性进步。（BSD Now EP368，[373.44-634.26]，L2）
-- 总纲10 动手者创造历史：总纲10 动手者创造历史：Chuck Tuffley 报告中 Google Summer of Code 学生与 Kyle Evans 接力推进 squashfs 驱动，体现未完成工作由后来者接续。（BSD Now EP626，[1232.26-1271.62]，L1）
-- 总纲22 知识注定过时：总纲22 知识注定过时：NetBSD 11 将 32 位兼容、CD 安装集等旧有默认拆分为可选集，反映旧硬件假设随时代过时。（BSD Now EP626，[1647.40-1682.94]，L2）
-- 总纲20 历史地理塑造思想土壤：总纲20 历史地理塑造思想土壤：Nico Cartron 的法国计算机学校以 NetBSD 教学机房塑造其 BSD 使用路径，体现机构地理对技术选择的塑造。（BSD Now EP626，[1973.62-2103.06]，L1）
+- 总纲10 动手者创造历史：Chuck Tuffley 报告中 Google Summer of Code 学生与 Kyle Evans 接力推进 squashfs 驱动，体现未完成工作由后来者接续。（BSD Now EP626，[1232.26-1271.62]，L1）
+- 总纲22 知识注定过时：NetBSD 11 将 32 位兼容、CD 安装集等旧有默认拆分为可选集，反映旧硬件假设随时代过时。（BSD Now EP626，[1647.40-1682.94]，L2）
+- 总纲20 历史地理塑造思想土壤：Nico Cartron 的法国计算机学校以 NetBSD 教学机房塑造其 BSD 使用路径，体现机构地理对技术选择的塑造。（BSD Now EP626，[1973.62-2103.06]，L1）
 
 **辨析**：
 
@@ -109,6 +105,4 @@ volume: 第10卷-openbsd的历史
 
 <!-- /PODCAST_REVIEW -->
 
-<!-- dangan-20260908 消解回写 -->
-- IT. 之家 2024-05-17 报道 [EB/OL]. <https://cloud.tencent.com.cn/developer/news/1400568>[EB/OL]. 2024. ［DKC-0046→fulltext:5461］
-<!-- /dangan-20260908 -->
+> （2026-09-12 整改：原 dangan-20260908 消解回写块（「IT. 之家 2024-05-17 报道」条，含内部工单标记 DKC-0046→fulltext:5461、[EB/OL] 重复、URL 系腾讯云开发者转载非一手）删除留痕；如该报道确有史料价值须另行按规范著录后归档——批次 C218 问题 5。）
