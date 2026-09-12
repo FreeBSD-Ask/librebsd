@@ -14,6 +14,13 @@ volume: 第14卷-商业生态与企业案例
 - SARS 对 BSD 社区影响的史料散落于会议公告与邮件列表，部分 IRC 日志未完整归档，需通过当事人回忆
 - **COVID-19** 期间（2020-2022），FreeBSD **Core Team** 成员如 **Warner Losh（沃纳·洛什）**、**Ed Maste（埃德·马斯特）**、**Gordon Tetlow（戈登·泰特洛）** 等持续推进 **FreeBSD 13.0**（2021.4）与 **13.1**（2022.5）的发布工作，Foundation 员工如 **Deb Goodkin（德布·古德金）** 统筹远程协作与资金筹措，2020 年 Foundation 筹款仍超过年度目标
 
+## 史料
+
+- `freebsd-doc` 邮件列表 2003 春季档案；IRC 日志；CVS commit log ［A］
+- OpenBSD hackathon 公告；Theo de Raadt 邮件列表声明；undeadly.org
+- BSDCon 2009 远程演讲记录；视频归档；参与者反馈
+- EuroBSDCon/BSDCan 2020-2021 官方公告与会议录制归档
+
 ## 史观
 
 - 总纲第 16 条——经济周期，疫情对线下社区活动的冲击反映社区对物理流动的依赖
@@ -31,7 +38,6 @@ volume: 第14卷-商业生态与企业案例
 
 ## 273.11.2 与 OpenBSD 社区的疫情应对对照
 
-- 要点：OpenBSD 在 **COVID-19** 期间因 ha
 - 总纲第 16 条——经济周期，H1N1 对国际会议的冲击介于 SARS 与 COVID-19 之间
   - 辨析：H1N1 期间会议调整的实际尺度缺乏系统记录
   - 文献：BSDCan 公告；EuroBSDCon 程序；WHO 宣告［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
