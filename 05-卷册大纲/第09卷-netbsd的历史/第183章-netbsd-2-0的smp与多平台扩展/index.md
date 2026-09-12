@@ -4,12 +4,12 @@ id: CH183
 volume: 第09卷-netbsd的历史
 ---
 
-# 第 183 章 netbsd-2-0的smp与多平台扩展
+# 第 183 章 NetBSD 2.0 的 SMP 与多平台扩展
 
 ## 要点
 
-- NetBSD 2.0 分支（约 2003 年底切出）引入基于 FreeBSD SMPng 移植的细粒度锁机制，逐步替换 4.x 时代的 Giant Lock；2.0 正式发布于 2004.12，标志 NetBSD 进入真正的 SMP 时代
-- NetBSD 2.x/3.x 时期 SMP 性能基准在 2-8 核机器上较 FreeBSD 5.x/6.x 落后，但在嵌入式 ARM/MIPS 多核场景占优；硬件支持广度（ports 数量）是同期 BSD 中最广；NetBSD 的跨平台能力不仅体现在 src 仓库的 ports 数量上，亦体现在 pkgsrc 跨平台包管理系统的规模上——pkgsrc 作为 NetBSD 的跨平台包管理系统，可独立
+- NetBSD 2.0 分支（约 2003 年底切出）引入基于 FreeBSD SMPng 移植的细粒度锁机制，逐步替换 4.x 时代的 Giant Lock〔存疑：经 2026-09-12 联网复核，FreeBSD SMPng 系 FreeBSD 基于 BSD/OS 5.0 实现的自有项目（Lehey USENIX 论文），NetBSD 2.0 官方公告未提 SMPng 移植，2005 年官方演示材料仍载内核 Big lock 局限——2.0 是否引入细粒度锁并替换 Giant Lock 未能确证，须对照源码核验〕；2.0 正式发布于 2004.12，标志 NetBSD 进入真正的 SMP 时代
+- NetBSD 2.x/3.x 时期 SMP 性能基准在 2-8 核机器上较 FreeBSD 5.x/6.x 落后，但在嵌入式 ARM/MIPS 多核场景占优；硬件支持广度（ports 数量）是同期 BSD 中最广；NetBSD 的跨平台能力不仅体现在 src 仓库的 ports 数量上，亦体现在 pkgsrc 跨平台包管理系统的规模上——pkgsrc 作为 NetBSD 的跨平台包管理系统，可独立于 NetBSD 引导并运行于 Solaris、Linux、macOS 等多个平台
 - FreeBSD 5.x（2003-2005）推进 SMPng 与 Giant Lock 细化，5.2（2004）实验性引入 ULE 调度器；NetBSD 2.x/3.x 移植 SMPng 但调度器仍以 4BSD 为基础〔存疑：经 2026-09-12 联网复核，FreeBSD SMPng 系 FreeBSD 基于 BSD/OS 5.0 实现的自有项目（Lehey USENIX 论文），NetBSD 2.0 官方公告仅载为 i386、SPARC、PowerPC 新增 SMP 支持并改进 Alpha/VAX，未提 SMPng 移植，2005 年官方演示材料仍载内核 Big lock 局限——“移植 SMPng”未能确证，是否共享代码须对照 CVS 历史核验〕，反映两项目不同的工程节奏
 - Linux 2.6（2003.12）引入 O(1) 调度器与抢占式内核，SMP 扩展性快速领先；Solaris 10（2005.1）引入 ZFS 与 DTrace，企业级 SMP 成熟度最高；NetBSD 2.x/3.x 在 SMP 上保守，但在可移植性上独树一帜
 
@@ -21,11 +21,12 @@ volume: 第09卷-netbsd的历史
 
 ## 史观
 
-(待人工回填——详见子节文件史观/辨析字段)
+- 总纲第 5 条——没有必然性，只有偶然性：NetBSD 2.x/3.x 在 SMP 路线上以 4BSD 调度器为基础渐进推进，系具体工程条件下的偶然取舍，并非通向多核时代的必然进步序列
+- 总纲第 8 条——本体论上各方平等：FreeBSD 5.x/6.x、Linux 2.6、Solaris 10 与 NetBSD 2.x/3.x 的同期 SMP 路线在本体论上平等并立，性能与功能差异系路线取舍与资源约束的表现，非先进与落后之分
 
 ## 辨析
 
-- 经 netbsd.duckdb 验证，NetBSD 2.0 发布日期为 2004.12.09（commit message 明确记载 “NetBSD 2.0 was released on December 09, 2004”）；SMPng 移植的具体完成度需考据，2.0 是否已完全移除 Giant Lock 需对照源码核验。L1.1.1 查询的 commit 量数据存在 GitHub 镜像滞后风险——n
+- 经 netbsd.duckdb 验证，NetBSD 2.0 发布日期为 2004.12.09（commit message 明确记载 “NetBSD 2.0 was released on December 09, 2004”）；SMPng 移植的具体完成度需考据，2.0 是否已完全移除 Giant Lock 需对照源码核验。L1.1.1 查询的 commit 量数据存在 GitHub 镜像滞后风险——netbsd-src 为 GitHub 镜像（主仓为 Mercurial **hg.NetBSD.org**），2003-2004 年 commit 量可能不完整
 - 基准测试的硬件配置差异需对照原始测试脚本核验，不得直接采信结论。L1.1.1 查询的 commit 量数据存在 GitHub 镜像滞后风险——netbsd-src 为 GitHub 镜像（主仓为 Mercurial **hg.NetBSD.org**），2004-2008 年 commit 量可能不完整；commit 量持续下降与 “性能落后” 叙事方向一致，但 commit 量下降不等于性能下降
 - SMPng 是否为两项目共享代码需对照 CVS 历史核验，部分叙事夸大了共享程度
 - 三项目同期 SMP 性能比较需在同一硬件上测试，跨硬件比较易误导
