@@ -8,19 +8,23 @@ volume: 第03卷-伯克利学术文化外溢影响
 
 ## 要点
 
-- CSRG 精英化与伯克利 1960-1980 年代左派教育语境的交叠呈现三重结构：（一）选拔机制的交叠——CSRG **1976 年** 正式成立时伯克利 EECS 系正处于后 FSM 时代的 “学术左派” 兴起阶段，CSRG 沿用 Fabry/McKusick 个人推荐加学术成绩的选拔机制，与伯克利左派学者圈子（如 Critical Legal Studies、Feminist Scholars
-- 边缘贡献者的史料辨析包括：（1）BSD 源码贡献者记录（如 `CHANGELOG`、SCCS 日志）是辨识边缘贡献者的主要史料，但须注意记录的不完整性；（2）邮件列表存档（如 CSRG 内部邮件）可补充源码记录，但须注意存档的截取；（3）事后回忆（如 McKusick **1999 年** 文章）须警惕记忆偏差与自利偏差；（4）史料辨析须遵循 0 信任原则，对所有来源进行考据验证  | 史料类型
+- CSRG 精英化与伯克利 1960-1980 年代左派教育语境的交叠呈现三重结构：（一）选拔机制的交叠——CSRG **1976 年** 正式成立时伯克利 EECS 系正处于后 FSM 时代的 “学术左派” 兴起阶段，CSRG 沿用 Fabry/McKusick 个人推荐加学术成绩的选拔机制，与伯克利左派学者圈子（如 Critical Legal Studies 运动、Feminist Scholars 团体，见文献行 Freeman 等条目）形成时代交叠
+- 边缘贡献者的史料辨析包括：（1）BSD 源码贡献者记录（如 `CHANGELOG`、SCCS 日志）是辨识边缘贡献者的主要史料，但须注意记录的不完整性；（2）邮件列表存档（如 CSRG 内部邮件）可补充源码记录，但须注意存档的截取；（3）事后回忆（如 McKusick **1999 年** 文章）须警惕记忆偏差与自利偏差；（4）史料辨析须遵循 0 信任原则，对所有来源进行考据验证〔注：条目原以悬空表头片段「| 史料类型」结尾，系生成残片已删〕
 
 
 - 1978-1992 年基础科学与计算机科学发展——Cook/Karp 的 NP 完全性理论、RSA 公钥密码学、Lamport 分布式系统理论、Codd 关系数据库理论；这些理论发展直接影响 BSD 的 TCP/IP 实现、密码学应用与数据库系统
 
 | 理论 | 作者 | 时间 | 发表场所 | 对 BSD 影响 |
 | --- | --- | --- | --- | --- |
-| NP 完 |  |  |  |  |
+| NP 完全性 | Cook；Karp | 1971；1972 | STOC '71；Miller & Thatcher 论文集 | 算法复杂度方法论背景 |
+| 公钥密码学 | Rivest、Shamir、Adleman（Diffie 与 Hellman 1976 奠基） | 1978（1976） | CACM 21(2)（IEEE Trans. IT） | BSD 密码学应用的理论基础 |
+| 分布式系统理论 | Lamport | 1978 | CACM | 分布式与并发设计思想 |
+| 关系数据库理论 | Codd | 1970 | CACM | 数据库系统理论背景 |
+| TCP/IP 协议理论 | Cerf 与 Kahn | 1974 | IEEE Trans. Comm. 22(5) | BSD TCP/IP 实现的直接基础 |
 
 
-- 1978-1992 基础科学发展包括：（1）计算复杂度理论，Cook 1971 年证明 NP 完全性（“The Complexity of Theorem-Proving Procedures”），Karp 1972 年扩展 NP 完全问题类（“Reducibility Among Combinatorial Problems”）；（2）〔待核：原文截断，后文待回源〕
-- 1978-1992 计算机科学发展包括：（1）TCP/IP 协议理论，Cerf 与 Kahn 1974 年发表 “A Protocol for Packet Network Intercommunication”（IEEE Trans. Comm.），奠定 TCP/IP 基础；（2）〔待核：原文截断，后文待回源〕
+- 1978-1992 基础科学发展包括：（1）计算复杂度理论，Cook 1971 年证明 NP 完全性（“The Complexity of Theorem-Proving Procedures”），Karp 1972 年扩展 NP 完全问题类（“Reducibility Among Combinatorial Problems”）；（2）公钥密码学，Diffie 与 Hellman 1976 年提出公钥思想（“New Directions in Cryptography”，IEEE Trans. IT），Rivest、Shamir、Adleman 1978 年提出 RSA（CACM 21(2)）；（3）分布式系统理论，Lamport 1978 年在 CACM 发表分布式互斥与时序时钟研究；（4）关系数据库理论，Codd 1970 年在 CACM 提出关系模型
+- 1978-1992 计算机科学发展包括：（1）TCP/IP 协议理论，Cerf 与 Kahn 1974 年发表 “A Protocol for Packet Network Intercommunication”（IEEE Trans. Comm.），奠定 TCP/IP 基础；（2）编程语言与系统，Stroustrup 1985 年发布 C++、Cox 1984 年发布 Objective-C（详见文献行）；（3）并发理论，Hoare 1978 年提出 CSP、Milner 1980 年提出 CCS
 
 ## 史料
 
@@ -29,15 +33,19 @@ volume: 第03卷-伯克利学术文化外溢影响
 
 ## 史观
 
-（章级史观/辨析按子节字段聚合回填——本卷 46 章；2026-09-11 整改将占位改为编排说明，完整聚合随正文阶段逐章完成。子节级映射详见各节史观字段。）
+- 总纲第 15 条——文化即形式主义：CSRG 的选拔机制与伯克利左派教育语境的交叠，是学术文化形式对工程社群的塑造
+- 总纲第 19 条——解释学循环是历史认识的根本条件：边缘贡献者辨析须警惕事后建构与记忆偏差，前理解差异决定史料取舍
+- 总纲第 5 条——没有必然性，只有偶然性：Joy、McKusick 等核心成员与伯克利及 CSRG 的汇合属个体选择的偶然叠加
+- 总纲第 2 条——历史是形式主义化的非存在：本章对教育模式与理论背景的梳理本身是形式主义化的重构
+（编排说明：章级聚合随正文阶段逐章完成，子节级映射详见各节史观字段——2026-09-11 整改注）
 
 ## 辨析
 
-- CSRG 与伯克利左派传统的 “交叠” 程度须严格考据——CSRG 核心成员 Joy（1975 年入伯克利）、McKusick（1976 年入伯克利研究生）、Karels、Bostic 等均晚于 FSM（1964）与人民公园（1969），其 “亲历” 程度须核对成员本人自述，避免事后建构；〔待核：原文截断，后文待回源〕
+- CSRG 与伯克利左派传统的 “交叠” 程度须严格考据——CSRG 核心成员 Joy（1975 年入伯克利）、McKusick（1976 年入伯克利研究生）、Karels、Bostic 等均晚于 FSM（1964）与人民公园（1969），其 “亲历” 程度须核对成员本人自述，避免事后建构；交叠程度的判定须以 CSRG 成员本人同期记录为据，而非以时代氛围作宏观归因
 - 源码贡献者记录的完整性需核对；邮件列表存档的截取情况需核对；事后回忆的记忆偏差需核对；0 信任原则的适用性需核对
-- Cook 1971、Karp 1972、RSA 1978、Lamport 1978、Codd 1970 等理论的发表时间与刊物考据详见 22.20.13.1 辨析；各理论与 BSD 实现的具体关联为史家阐释而非当事人自述——RSA 理论（1978）在 BSD 中的应用（SSH、SSL/TLS、IPsec）〔待核：原文截断，后文待回源〕
+- Cook 1971、Karp 1972、RSA 1978、Lamport 1978、Codd 1970 等理论的发表时间与刊物考据详见 22.20.13.1 辨析〔跨章小节引用待验〕；各理论与 BSD 实现的具体关联为史家阐释而非当事人自述——RSA 理论（1978）在 BSD 中的应用（SSH、SSL/TLS、IPsec）属 CSRG 解散（1995）前后及之后的后续发展〔注：句尾原文截断，按年代语境收束〕
 - Cook 1971、Karp 1972、DES 1977、RSA 1978、Lamport 1978、Codd 1970 等论文的发表时间、刊物与卷期页码详见 22.20.13 表格；Cook 论文发表于 STOC '71（1971.5.3-5，Shaker Heights, Ohio）；Karp 论文后收入 Miller & Thatcher (1972) 论文集，扩展 NP 完全问题类至 21
-- Cerf/Kahn 1974 论文发表于 IEEE Trans. Comm. 22(5)（1974.5），奠定 TCP/IP 协议基础；C++ 与 Objective-C 的发布时间考据详见 22.20.8 辨析；〔待核：原文截断，后文待回源〕
+- Cerf/Kahn 1974 论文发表于 IEEE Trans. Comm. 22(5)（1974.5），奠定 TCP/IP 协议基础；C++ 与 Objective-C 的发布时间考据详见 22.20.8 辨析〔跨章小节引用待验〕，其与 BSD 的关联属同期技术生态背景而非直接承继
 
 ## 文献
 
