@@ -6,90 +6,37 @@ volume: 第05卷-freebsd的工程化奠基
 
 # 第101章 freebsd6x回归稳定
 
+> 本章前部五字段为全章要点的摘要，子节详目见 [概述.md](概述.md)；编纂立场与局限详见文末〈自反性声明〉。
+
 ## 要点
 
-- FreeBSD 6.0(2005.11.3，release/6.0.0 tagger_date = 2005-11-03T00:35:26Z，tagger = cvs2svn) 回归稳定设计哲学：放弃 5.x 的激进改造，专注性能调优与 bug 修复；目标 “5.x 适合生产环境”; 6.0 是 5.x 的 “稳定化版本”
+- FreeBSD 6.0(2005.11.3，release/6.0.0 tagger_date = 2005-11-03T00:35:26Z，tagger = cvs2svn) 回归稳定设计哲学：放弃 5.x 的激进改造，专注性能调优与 bug 修复；目标 “5.x 适合生产环境”；6.0 是 5.x 的 “稳定化版本”
 - 6.0 发布过程：2005.4 6.0-BETA1、2005.8 6.0-BETA4、2005.10 6.0-RC1、2005.11.3 6.0-RELEASE（release/6.0.0 tagger_date = 2005-11-03T00:35:26Z，tagger = cvs2svn）；Release Engineering 团队由 Scott Long 主导
-- 设计哲学辨析：(1) 6.x 是 5.x 的稳定化还是新方向；(2) 渐进改造 vs 激进改造；(3) 与 Linux 2.6 渐进对比
-- 6.0 史料疑点：(1) 6.0 是否真 “稳定”;(2) 6.0 发布日期是否延期；(3) 6.0 是否完全抛弃 5.x 遗产
+- 6.x 稳定化是渐进路线而非新方向：6.0 起 libthr 1:1 取代失败的 KSE M: N 成为默认线程模型，ULE 调度器仅为实验性选项而 4BSD 保持默认；发布工程自 2005 年起拉开发布间隔并终结 4.x/5.x 双发布周期并行，发布分支内只进 bug 修复与少量驱动更新（据 101.1、101.2、101.12）
+- 6.0 发布日期以 release/6.0.0 tagger_date = 2005-11-03T00:35:26Z 为准，与旧叙事 2005.11.4 的 1 天误差属公告日期与 tag 日期差异；6.x 稳定与否须结合早期 bug 报告与 bug tracker、release engineering 数据综合判断，commit 量升降不直接等同于稳定性（据 101.1.1、101.1.4 辨析）
 - 6.x 时期无名贡献者：(1) 测试与 bug 报告志愿者；(2) 文档翻译志愿者；(3) Port 维护者；(4) 邮件列表回答者
+- 与同时期操作系统相比：Linux 2.6（2003-2010）进入成熟期、市场份额持续增长，Windows Vista（2006.11, NT 6.0）失败促使企业重新评估 Linux/BSD，Solaris 10（2005.1 起，Update 1-8 至 2008）持续更新；同期 BIND DNS 拒绝服务漏洞群、OpenSSL DTLS 整数溢出与 tcpdump 缓冲区溢出等安全响应贯穿 6.x 版本周期（据 101.13、101.14）
 
 ## 史观
 
-- 总纲第 5 条——技术债务与代码考古，6.x 是 5.x 债务的偿还
-  - 辨析：经 freebsd.duckdb tags 表验证，6.0-RELEASE 的 tagger_date 为 2005-11-03T00:35:26Z（非旧叙事 2005.11.4，误差 1 天，可能为公告日期与 tag 日期差异）；6.x 是否真稳定，需查早期 bug 报告；〔待核：原文截断，后文待回源〕
-- 总纲第 13 条——边缘者的作用
-  - 辨析：贡献者是否被记录，需查
-  - 文献：作者不详. FreeBSD commit log[Z]. 年份不详；作者不详. FreeBSD 邮件列表[EB/OL]. 年份不详 ［A］
-
-## 100.10.2 边缘贡献者辨析
-
-- 要点：边缘贡献者辨析：(1) 边缘标准；(2) 是否被承认；(3) 边缘贡献对 6.x 稳定性的作用
-- 史料：contr
-- 总纲第 11 条——历史书写的可错性
-  - 辨析：判决对开源的实际影响，需独立判断
-  - 文献：545 U.S. 913；Lessig 评论［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
-
-## 100.11.2 2007.8.10 Judge Kimball 即决判决 Nove
-
-- 总纲第 6 条——技术选择的代价：Giant 锁分解付出工程复杂度代价（细粒度锁设计与验证困难），但获得多核扩展性；总纲第 17 条——形式与内容：锁粒度作为 “形式” 改变 “内容”（内核并发执行能力）
-  - 辨析：经 bsd_commits.duckdb tags 表验证，6.0-RELEASE 的 tagger_date 为 2005-11-03T00:35:26Z（非旧叙事 2005.11.4）
-- 总纲第 7 条——BSD 与 UNIX 谱系的连续性
-  - 辨析：Linux 2.6 成熟对 FreeBSD 影响，需查市场份额
-  - 文献：Release Notes；Distrowatch［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
-
-## 100.13.2 Windows
+- 总纲第 22 条——知识注定过时：6.x 是 5.x 债务的偿还——5.x 寄望的 KSE M: N 线程模型被证实实现复杂、性能不及预期，由更简单的 libthr 1:1 取代；曾被当作方向的激进改造让位于稳定化（据 101.1、101.2、101.12）
+- 总纲第 10 条——动手者创造历史：6.x 的稳定性由测试与 bug 报告志愿者、文档翻译志愿者、Port 维护者与邮件列表回答者等无名贡献者支撑，其劳动多未被既有记录完整留存（据 101.10）
+- 否定之否定的回归稳定：6.x 不是革命，而是对 5.x 一厢情愿的否定之否定——KSE M: N 死了，libthr 1:1 接班；SMPng 还在抖，那就再稳一版；用户被 5.x 吓跑了，就把他们叫回来；回归稳定不是倒退（本章史观映射，见概述）
 
 ## 辨析
 
-- 经 freebsd.duckdb tags 表验证，6.0-RELEASE 的 tagger_date 为 2005-11-03T00:35:26Z（非旧叙事 2005.11.4，误差 1 天，可能为公告日期与 tag 日期差异）；6.x 是否真稳定，需查早期 bug 报告；0 信任原则适用说明：L1.1.1 年度 commit 量基于 author_date 聚合，FreeBSD SVN-to-Git
-- 贡献者是否被记录，需查
-  - 文献：作者不详. FreeBSD commit log[Z]. 年份不详；作者不详. FreeBSD 邮件列表[EB/OL]. 年份不详 ［A］
-
-## 100.10.2 边缘贡献者辨析
-
-- 要点：边缘贡献者辨析：(1) 边缘标准；(2) 是否被承认；(3) 边缘贡献对 6.x 稳定性的作用
-- 史料：contributors 列表、邮件[考据完成：2026-
-- 判决对开源的实际影响，需独立判断
-  - 文献：545 U.S. 913；Lessig 评论［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
-
-## 100.11.2 2007.8.10 Judge Kimball 即决判决 Novell 持有 UNIX 版权
-
-- 要点：2007.
-- 经 bsd_commits.duckdb tags 表验证，6.0-RELEASE 的 tagger_date 为 2005-11-03T00:35:26Z（非旧叙事 2005.11.4）；［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］ MPSAFE VFS 在 6.0 的具体完成度在不同叙事中存在差异——部分资料称 6.0 完成 MPSAFE VFS，部分称
-- Linux 2.6 成熟对 FreeBSD 影响，需查市场份额
-  - 文献：Release Notes；Distrowatch［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
-
-## 100.13.2 Windows Vista 与 Solaris 10
-
-- 要点：Windows
+- 经 freebsd.duckdb tags 表验证，6.0-RELEASE 的 tagger_date 为 2005-11-03T00:35:26Z（非旧叙事 2005.11.4，误差 1 天，可能为公告日期与 tag 日期差异）；6.x 是否真稳定，需查早期 bug 报告；0 信任原则适用说明：L1.1.1 年度 commit 量基于 author_date 聚合，FreeBSD SVN-to-Git 2020 迁移可能引入日期偏差；L1.1.1/L1.1.2 报告截断（仅显示前 30 行）导致 2004-2008 年 freebsd-src 数据不可直接获取，须直接查询 freebsd.duckdb 验证；L1.3.2 文件修改数为替代指标，不等于 commit 量（单个 commit 可修改多文件）；L1.4.1/L1.4.2 release tag 间隔报告同样截断，部分 tag 为 svn2git 重构标签须排除 _cvs 后缀（据 101.1.1）
+- MPSAFE VFS 在 6.0 的具体完成度在不同叙事中存在差异——部分资料称 6.0 完成 MPSAFE VFS，部分称 6.1 才完整，经 freebsd.duckdb 查询未得明确证据（MPSAFE 为代码级概念，无单一 commit/tag 标记完成时间），需对照 6.0 Release Notes 与 commit log 核验；Giant 锁在 6.x 时期残余的具体范围需考据（据 101.12.1）
+- 边缘贡献者的界定标准、承认机制及其对 6.x 稳定性的作用需独立判断；贡献者是否被记录，需查 contributors 列表与邮件列表（据 101.10.2）
+- Linux 2.6 成熟对 FreeBSD 的影响需查市场份额；Vista 失败是否真使企业转向 BSD，需独立判断（据 101.13）
+- 范围注：2007.8.10 Judge Kimball 即决判决 Novell 持有 UNIX 版权与 MGM v. Grokster（545 U.S. 913）属 SCO 诉讼法律语境，见本章 [101.11](101.11-法律语境-SCO-诉讼与-MGM-v-Grokster.md)（其中 Novell v. SCO 即决判决属第 15 卷 295.3 章范围），本章不再展开
 
 ## 文献
 
-- 6.0 Release Notes；freebsd-stable 邮件；release/6.0.0. freebsd-src 仓库 tag [DB/OL]. 2005-11-03T00:35:26Z. tag: release/6.0.0; commit: 3d215489fe03c6c5cecc3b5ed9ea39118e6ce379 ［A］；freebsd.duckdb L1.1.1 查询结果（freebsd-src 年度 commit 量 2005-2008，报告截断）[DB/OL]；freebsd.duckdb L1.4.1 查询结果（freebsd-src release tag 间隔 6.x 系列
-- 作者不详. FreeBSD commit log[Z]. 年份不详；作者不详. FreeBSD 邮件列表[EB/OL]. 年份不详 ［A］
-
-## 100.10.2 边缘贡献者辨析
-
-- 要点：边缘贡献者辨析：(1) 边缘标准；(2) 是否被承认；(3) 边缘贡献对 6.x 稳定性的作用
-- 史料：contributors 列表、邮件［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
-- 史观：总纲第 13 条——边缘者的作用
-- 辨析：边缘贡献者作用，需独立
-- 545 U.S. 913；Lessig 评论［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
-
-## 100.11.2 2007.8.10 Judge Kimball 即决判决 Novell 持有 UNIX 版权
-
-- 要点：2007.8.10 犹他联邦法院 Judge Dale Kimball 即决判决 Novell（而非 SCO）持有 UNIX 版权，初步终结 SCO v. IBM 案件的法律基础；SCO 随后于 2007.9 申请 Chapter 11 破产保护；但该即决判
-- FreeBSD 6.0-RELEASE Release Notes；Robert Watson “FreeBSD SMPng Project” 演讲；Michael W. Lucas “FreeBSD 5 SMPng”（; login: vol. 30 no. 5, 2005）；release/6.0.0. freebsd-src 仓库 tag [DB/OL]. 2005-11-03T00:35:26Z. tag: release/6.0.0; commit: 3d215489fe03c6c5cecc3b5ed9ea39118e6ce379 ［A］
-
-## 100.12.2 KSE M: N 线
-
-- Release Notes；Distrowatch［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
-
-## 100.13.2 Windows Vista 与 Solaris 10
-
-- 要点：Windows Vista(2006.11, NT 6.0) 与 Solaris 10(2005.1, Update 1-8 至 2008) 同期；Vista 失败使企业重新评估 Linux/BSD; Solaris 10 持续更新
-- 史料：Vista Release Notes、So
+- 6.0 Release Notes；freebsd-stable 邮件；6.0 Release Schedule；Scott Long 发布公告；release/6.0.0. freebsd-src 仓库 tag [DB/OL]. 2005-11-03T00:35:26Z. tag: release/6.0.0; commit: 3d215489fe03c6c5cecc3b5ed9ea39118e6ce379 ［A］；freebsd.duckdb L1.1.1 查询结果（freebsd-src 年度 commit 量 2005-2008）[DB/OL]；freebsd.duckdb L1.4.1 查询结果（freebsd-src release tag 间隔 6.x 系列）[DB/OL]；freebsd.duckdb L1.3.2 查询结果（freebsd-src 年度文件操作数 2005-2008）[DB/OL] ［A］
+- Robert Watson “FreeBSD SMPng Project” 演讲；Michael W. Lucas “FreeBSD 5 SMPng”（; login: vol. 30 no. 5, 2005）；freebsd-threads 邮件；libthr(3) 手册页 ［A］
+- 作者不详. FreeBSD commit log[Z]. 年份不详；作者不详. FreeBSD 邮件列表[EB/OL]. 年份不详；contributors 列表；FreeBSD 6.0-RELEASE src/sys/ commit log；McKusick & Neville-Neil (2014), Chapter 4 ［A］
+- Linux 2.6 Release Notes；Vista Release Notes；Solaris 10 Update Notes；Distrowatch［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
 - ISC BIND Security Advisories（isc.org/ops/advisories）；FreeBSD-SA-07:07.bind；freebsd.duckdb freebsd-src 仓库 BIND 相关 commit（2006-11 至 2007-07） ［A］
 - OpenSSL Security Advisory（2007-10）；tcpdump ChangeLog（2007-08）；FreeBSD-SA-07:06.tcpdump；FreeBSD-SA-07:08.openssl；freebsd.duckdb freebsd-src 仓库 OpenSSL/tcpdump 相关 commit（2007-07 至 2007-10） ［A］
 - freebsd.duckdb freebsd-src 仓库 6.x 版本周期 security fix commit 清单（2006-01 至 2008-01）；TrustedBSD 项目页面；OpenBSM 1.0 alpha 10 Release Notes ［A］
