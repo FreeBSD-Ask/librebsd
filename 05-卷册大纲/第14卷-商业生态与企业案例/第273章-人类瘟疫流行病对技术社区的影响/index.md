@@ -30,14 +30,6 @@ volume: 第14卷-商业生态与企业案例
   - 辨析：Core Team 成员在疫情期间的具体贡献需通过 commit 记录与公告验证
   - 文献：FreeBSD Core Team 公告；Foundation Annual Report；Release Notes ［A］
 
-## 273.10.2 疫情中被边缘化的贡献者
-
-- 要点：总纲第 6 条——技术路线分化，Linux 与 BSD 在疫情应对资源上的分化
-  - 辨析：资源差异是否 “实质” 影响疫情应对效果存在争议
-  - 文献：Linux Foundation 报告；FreeBSD Foundation 年报；LPC 公告 ［B］
-
-## 273.11.2 与 OpenBSD 社区的疫情应对对照
-
 - 总纲第 16 条——经济周期，H1N1 对国际会议的冲击介于 SARS 与 COVID-19 之间
   - 辨析：H1N1 期间会议调整的实际尺度缺乏系统记录
   - 文献：BSDCan 公告；EuroBSDCon 程序；WHO 宣告［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
@@ -52,28 +44,6 @@ volume: 第14卷-商业生态与企业案例
   - 文献：AsiaBSDCon 互联网档案馆存档；BSDCan 2004 官方档案；WHO SARS 报告；JUF 邮件列表 ［A］
 - Core Team 成员在疫情期间的具体贡献需通过 commit 记录与公告验证
   - 文献：FreeBSD Core Team 公告；Foundation Annual Report；Release Notes ［A］
-
-## 273.10.2 疫情中被边缘化的贡献者
-
-- 要点**：COVID-19 期间，部分依赖线下 hackathon 与会议进行贡献的边缘参与者（如学生贡献者、初次参与者、非英语母语贡献者）
-- 资源差异是否 “实质” 影响疫情应对效果存在争议
-  - 文献：Linux Foundation 报告；FreeBSD Foundation 年报；LPC 公告 ［B］
-
-## 273.11.2 与 OpenBSD 社区的疫情应对对照
-
-- 要点：OpenBSD 在 **COVID-19** 期间因 hackathon 转为线上（“OpenBSD t2d2” 等）而调整协作节奏，**Theo de
-- H1N1 期间会议调整的实际尺度缺乏系统记录
-  - 文献：BSDCan 公告；EuroBSDCon 程序；WHO 宣告［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
-
-## 273.2.2 远程演讲机制的初步试验
-
-- 要点：**H1N1** 期间部分 BSD 会议试验远程视频演
-- 会议取消与转为线上的比例需逐会议核实
-  - 文献：BSDCan 公告；AsiaBSDCon 公告；EuroBSDCon 公告［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
-
-## 273.3.2 线上会议的成熟与工具栈转型
-
-- 要点：**COVID-19** 期间 BSD 会议
 
 ## 文献
 
@@ -90,11 +60,12 @@ volume: 第14卷-商业生态与企业案例
 
 - 要点：COVID-19 期间，部分依赖线下 hackathon 与会议进行贡献的边缘参与者（如学生贡献者、初次参与者、非英语母语贡献者）因会议取消而失去参与渠道，BSDCan/EuroBSDCon/AsiaBSDCon 2020-2021 均取消或转为线上，线下 hackathon 特有的 “面对面调试” 与 “新手引导” 功能难以在线复刻，学生贡献者与首次贡献者数量在 2020-2021 年可能下降
 - 史料：Linux Foundation 报告；FreeBSD Foundation 年报；LPC 公告 ［B］
+- 辨析：资源差异是否 “实质” 影响疫情应对效果存在争议
 
 ## 273.11.2 与 OpenBSD 社区的疫情应对对照
 
 - 要点：OpenBSD 在 **COVID-19** 期间因 hackathon 转为线上（“OpenBSD t2d2” 等）而调整协作节奏，**Theo de Raadt（西奥·德·若特）** 强调线下 hackathon 对 OpenBSD 创新的不可替代性，与 FreeBSD 的远程化适应存在差异
-- 史料：OpenBSD hackathon 公告、Theo de Raadt 邮件列表声明、undeadly.o
+- 史料：OpenBSD hackathon 公告、Theo de Raadt 邮件列表声明、undeadly.org
 - BSDCan 公告；EuroBSDCon 程序；WHO 宣告［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
 
 ## 273.2.2 远程演讲机制的初步试验
@@ -105,7 +76,7 @@ volume: 第14卷-商业生态与企业案例
 ## 273.3.2 线上会议的成熟与工具栈转型
 
 - 要点：**COVID-19** 期间 BSD 会议全面采用 `Zoom`、`Jitsi`、`OBS` 等工具，**EuroBSDCon 2020-2021** 与 **BSDCan 2020-2021** 为纯线上会议，会议录制公开化使非与会者也能观看，扩大了社区辐射
-- 史料：EuroBSDCo
+- 史料：EuroBSDCon 2020-2021 官方公告与会议录制归档
 - 邮件列表；phabricator 记录；committer 声明 ［A］；bsd_commits.duckdb L1.1.4 查询报告（宏观趋势统计.md §L1.1.4）；bsd_commits.duckdb L7.3.1 查询报告（衍生项目与跨项目对比分析.md §L7.3.1）
 
 ## 273.3.4 COVID-19 史料辨析
@@ -117,7 +88,7 @@ volume: 第14卷-商业生态与企业案例
 ## 273.4.2 线上会议的常态化与录制归档
 
 - 要点：BSD 会议线上化使录制成为标配，**EuroBSDCon** 与 **BSDCan** 录制长期归档于 YouTube 与 **Internet Archive**，形成可持续的社区知识库；部分资深开发者偏好线上会议的低成本与高可达性
-- 史料：YouTube 频道、**Internet Archive** BSD 会议合集、参与者调查[考据完成：2026-07-28 经穷尽联网考据，上述史料清单为已知公开来源汇总，部分原始档案未公开数字化或须档案
+- 史料：YouTube 频道、**Internet Archive** BSD 会议合集、参与者调查[考据完成：2026-07-28 经穷尽联网考据，上述史料清单为已知公开来源汇总，部分原始档案未公开数字化或须档案机构授权]
 
 ## 自反性声明
 
