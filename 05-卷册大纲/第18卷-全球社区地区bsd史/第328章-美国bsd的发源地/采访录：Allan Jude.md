@@ -55,7 +55,7 @@ Jude 在 BSD Now 多期节目与 AsiaBSDCon 2018 演讲中自述其访华交流�
 
 #### 采访 1：未发现公开采访来源的时期
 
-经三次复查（关键词 ``FreeBSD China user group interview`、`China BSD community interview`、`高伟 FreeBSD 采访`` 等，分别通过 Google、DuckDuckGo、Bing 检索），未发现针对本时期当事人的系统性公开采访来源。现有材料多为散落于邮件列表、Slashdot 评论、LWN.net 文章的零散评论，缺乏符合采访录编纂规范的系统性口述史。
+经三次复查（关键词 `FreeBSD China user group interview`、`China BSD community interview`、`高伟 FreeBSD 采访` 等，分别通过 Google、DuckDuckGo、Bing 检索），未发现针对本时期当事人的系统性公开采访来源。现有材料多为散落于邮件列表、Slashdot 评论、LWN.net 文章的零散评论，缺乏符合采访录编纂规范的系统性口述史。
 
 本时期暂未发现公开采访来源，留待后续补充。完整检索过程另行归档，正式位置为 `03-原始史料库/06-考据记录/`。
 
@@ -86,6 +86,6 @@ Jude 在 BSD Now 多期节目与 AsiaBSDCon 2018 演讲中自述其访华交流�
 
 **文献**：
 
-- [BSD Now EP132] Pennington J. BSD Now: 132: Scaling up with BSD[EB/OL]. (2016-03-08)[2026-08-15]. <https://www.bsdnow.tv/132>.
+- [BSD Now EP132] Jude A.（受访嘉宾；主持人：Reuschling B.）BSD Now: 132: Scaling up with BSD[EB/OL]. (2016-03-08)[2026-08-15]. <https://www.bsdnow.tv/132>.
 
 <!-- /PODCAST_REVIEW -->
