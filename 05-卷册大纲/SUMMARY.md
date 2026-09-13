@@ -3558,6 +3558,12 @@
   - [69 【Linux社区】MS2019文档与补丁接受一致性](./第20卷-linux社区史与比较研究/69-MS2019文档与补丁接受一致性.md)
   - [71 【Linux社区】commit版本史与lore归档大讨论](./第20卷-linux社区史与比较研究/71-commit版本史与lore归档大讨论.md)
   - [72 【Linux社区】Link标签强制与git元数据终局](./第20卷-linux社区史与比较研究/72-Link标签强制与git元数据终局.md)
+  - [73 【Linux社区】Cc标签去留与AUTOSEL稳定树定义之争](./第20卷-linux社区史与比较研究/73-Cc标签去留与AUTOSEL稳定树定义之争.md)
+  - [74 【Linux社区】回归追踪与seccomp深过滤](./第20卷-linux社区史与比较研究/74-回归追踪与seccomp深过滤.md)
+  - [75 【Linux社区】ChangeId之争与Linus定调](./第20卷-linux社区史与比较研究/75-ChangeId之争与Linus定调.md)
+  - [76 【Linux社区】mb2q工具与Link定型](./第20卷-linux社区史与比较研究/76-mb2q工具与Link定型.md)
+  - [77 【Linux社区】lore链接定型与KS2019筹备](./第20卷-linux社区史与比较研究/77-lore链接定型与KS2019筹备.md)
+  - [78 【Linux社区】MS2019议程与lore客户端工具构想](./第20卷-linux社区史与比较研究/78-MS2019议程与lore客户端工具构想.md)
 ## 读者指引（大纲侧）
 
 - 大纲侧手动维护区，脚本重跑保留。
