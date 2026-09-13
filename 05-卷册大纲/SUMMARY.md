@@ -3721,6 +3721,10 @@
   - [99 【Linux社区】术语论战与历届选举](./第20卷-linux社区史与比较研究/99-术语论战与历届选举.md)
   - [100 【Linux社区】TAB候选人陈述与CoC报告](./第20卷-linux社区史与比较研究/100-TAB候选人陈述与CoC报告.md)
   - [101 【Linux社区】OSDL首届选举与术语v2](./第20卷-linux社区史与比较研究/101-OSDL首届选举与术语v2.md)
+  - [156 【Linux社区】缺陷跟踪与buffercache力挺](./第20卷-linux社区史与比较研究/156-缺陷跟踪与buffercache力挺.md)
+  - [157 【Linux社区】linuxnext流程与Bugzilla存废](./第20卷-linux社区史与比较研究/157-linuxnext流程与Bugzilla存废.md)
+  - [158 【Linux社区】Rust入核与字符串API重构](./第20卷-linux社区史与比较研究/158-Rust入核与字符串API重构.md)
+  - [159 【Linux社区】Rust抽象与AI评审推进](./第20卷-linux社区史与比较研究/159-Rust抽象与AI评审推进.md)
 ## 读者指引（大纲侧）
 
 - 大纲侧手动维护区，脚本重跑保留。
