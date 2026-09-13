@@ -16,57 +16,57 @@ volume: 第06卷-freebsd的核心技术革新
 
 ## 史观
 
-- 总纲第 10 条——边缘者贡献：FreeBSD 图形驱动开发长期依赖少数志愿者（如 Konstantin Belousov（康斯坦丁·别洛乌索夫）、Konrad Witaszczyk 等）从 Linux 移植 DRM/KMS 代码，是项目中资源相对匮乏但需求广泛的领域；图形栈的延迟成熟是 FreeBSD 桌面体验落后于 Linux 的重要原因
-  - 辨析：9.1 Intel KMS 仅支持较旧的
-- 总纲第 10 条——边缘者贡献：PS3 支持是 FreeBSD 支持游戏主机的罕见案例——它与 PS4 Orbis OS（见 79.12）形成有趣对照：前者是 hobbyist 级的非官方支持，后者是 Sony 官方基于 FreeBSD 的产品级派生；Sony 移除 OtherOS 的决定引发了集体诉讼，最终以赔偿和解告终
-  - 辨析：PS3 OtherOS 支持仅在 3.15 及更早固件有效，
-- 总纲第 24 条——许可证：PS4 是 BSD 许可证商业友好性的标志性案例——它与 Apple macOS/Darwin（基于 FreeBSD 5.x 时期）、Netflix Open Connect、Juniper Junos、pfSense/OPNsense、Blue Coat、NetApp 等共同构成 BSD 许可证商业模式的实证；GPL 许可证要求公开派生作品源代码，这使得商业公司在闭源
-- 总纲第 23 条——社区治理：Security Officer 是 FreeBSD 最关键的角色之一，掌握安全公告发布、漏洞协调、基础设施安全等核心权力；Colin Percival 长达 7 年（2005-2012）的任期塑造了 FreeBSD 安全响应的文化与流程，其继任者延续了严格、保守、透明的安全公告风格
+- 总纲第 10 条——动手者创造历史：FreeBSD 图形驱动开发长期依赖少数志愿者（如 Konstantin Belousov（康斯坦丁·别洛乌索夫）、Konrad Witaszczyk 等）从 Linux 移植 DRM/KMS 代码，是项目中资源相对匮乏但需求广泛的领域；图形栈的延迟成熟是 FreeBSD 桌面体验落后于 Linux 的重要原因
+  - 辨析：9.1 Intel KMS 仅支持较旧的〔存疑：原文截断，待回源补全〕
+- 总纲第 10 条——动手者创造历史：PS3 支持是 FreeBSD 支持游戏主机的罕见案例——它与 PS4 Orbis OS（见本章 124.12）形成有趣对照：前者是 hobbyist 级的非官方支持，后者是 Sony 官方基于 FreeBSD 的产品级派生；Sony 移除 OtherOS 的决定引发了集体诉讼，最终以赔偿和解告终
+  - 辨析：PS3 OtherOS 支持仅在 3.15 及更早固件有效，〔存疑：原文截断，待回源补全〕
+- 总纲第 13 条——法律与道德是利益分配：PS4 是 BSD 许可证商业友好性的标志性案例——它与 Apple macOS/Darwin（基于 FreeBSD 5.x 时期）、Netflix Open Connect、Juniper Junos、pfSense/OPNsense、Blue Coat、NetApp 等共同构成 BSD 许可证商业模式的实证；GPL 许可证要求公开派生作品源代码，这使得商业公司在闭源
+- 总纲第 3 条——不存在进步，只有权力再分配：Security Officer 是 FreeBSD 最关键的角色之一，掌握安全公告发布、漏洞协调、基础设施安全等核心权力；Colin Percival 长达 7 年（2005-2012）的任期塑造了 FreeBSD 安全响应的文化与流程，其继任者延续了严格、保守、透明的安全公告风格
 - 124.13.1 Security Officer 交接
 
 **要点**：FreeBSD Security Officer 在 9.x 时期经历有序交接：9.0-RELEASE 时期 Security Officer 为 Colin Percival（cperciva@）
-- 总纲第 1 条——知识管理的制度化。
+- 专题语（不设总纲条号）——知识管理的制度化。
 - 文献：安全团队报告 ［A］
 
 ## 辨析
 
 - 9.1 Intel KMS 仅支持较旧的 Intel GPU（Ironlake/Sandy Bridge 时期），Ivy Bridge 及更新 GPU 支持在后续版本添加；Radeon/NVIDIA KMS 在 9.x 不可用
-  - 文献：FreeBSD 9.1-RELEASE Release Notes（Graphics Drivers 章节）；**drm(4)**、**i915kms(4)*
+  - 文献：FreeBSD 9.1-RELEASE Release Notes（Graphics Drivers 章节）；**drm(4)**、**i915kms(4)**〔存疑：原文截断，待回源补全〕
 - PS3 OtherOS 支持仅在 3.15 及更早固件有效，绝大多数 PS3 用户因在线游戏和 PSN 需求早已升级固件，因此该支持的实用价值有限，但作为 FreeBSD 支持非传统硬件平台的案例具有历史意义
-  - 辨析（2026-08-05 一手原件补充，ref 2632-2637/2647）：**In re Sony PS3 “OtherOS” Litigation**（N.D. Cal.,
+  - 辨析（2026-08-05 一手原件补充，ref 2632-2637/2647）：**In re Sony PS3 “OtherOS” Litigation**（N.D. Cal.,〔存疑：原文截断，待回源补全〕
 - **重要事实纠正——Orbis OS 基于 FreeBSD 9.0 而非 10.0**：时间线证据是决定性的——PS4 2013.11.15 发售，FreeBSD 10.0 2014.1.20 才发布；PS4 开发周期中 10.0 尚未发布，Sony 不可能基于未发布的版本；CTurt 等 PS4 越狱者的逆向分析也确认内核基于 9.0；部分媒体可能因 PS4 生命周期中后续升级包含 10.x 代
-- Security Officer 交接在 9.x 密集发生（9.0 cperciva→9.1 simon→9.2 des，9.3 新增 delphij），部分源于 Colin Percival 在 Tarsnap 等商业项目上的精力分配，也与 2012 年入侵事件后安全团队扩充有关；从 9.2 开始采用 “Security Officer + Emeritus” 双轨制，保留前任经验；这种有序的权
+- Security Officer 交接在 9.x 密集发生（9.0 cperciva→9.1 simon→9.2 des，9.3 新增 delphij），部分源于 Colin Percival 在 Tarsnap 等商业项目上的精力分配，也与 2012 年入侵事件后安全团队扩充有关；从 9.2 开始采用 “Security Officer + Emeritus” 双轨制，保留前任经验；这种有序的权〔存疑：原文截断，待回源补全〕
 - 谱系叙述中须区分两个层次——技术源头是 Larry Wall 原始 **patch(1)**，许可证源头是 OpenBSD 替换 GPL 文件为 PD/无限制版本；DragonFly 的 “进一步增强” 具体内容须对照 DragonFly commit log 核实；pfg “反向移植 FreeBSD 原有增强” 表明 FreeBSD 版本与 DragonFly 版本并非简单复制关系，而是双向融合
 
 ## 文献
 
 - FreeBSD 9.1-RELEASE Release Notes（Graphics Drivers 章节）；**drm(4)**、**i915kms(4)** man pages（9.1 版本） ［B］
 
-## 123.10.2 网络驱动更新
+## 124.10 网络驱动更新
 
 - 要点：9.x 系列新增大量网卡驱动：9.0 新增 **bxe(4)**（Broadcom NetXtreme II 10GbE）、**cxgbe(4)**（Chelsio T4 10Gb/1Gb）、**vte(4)**（RDC R6040）、**vxge(4)**（Neterion X3100 10GbE）；**em(4)** 更新至 7.3.2
 - FreeBSD 9.0-RELEASE Release Notes（Architectures 章节）；svn commit r217044；Sony Computer Entertainment. PS3 System Software Update 3.21 [Z]. 2010-03-28 ［A］
 
-## 123.11.2 9.x 支持架构与状态
+## 124.11 9.x 支持架构与状态
 
 - powerpc64、sparc64；9.1-RELEASE 初始仅发布 amd64、i386、powerpc64、sparc64（ia64/powerpc 因构建资源受限后补）
 - Sony Computer Entertainment. PlayStation 4 Developer Documentation（Orbis OS 章节）；CTurt. PS4 Kernel Exploitation Analysis [Z]. 2015-2017；多家技术媒体 2013.6 E3 报道（确认 Orbis OS 基于 FreeBSD 9.0）；Rosen L. Open Source Licensing: Software Freedom and Intellectual Property Law [M]. Upper Saddle River: Prentice Hall
 - FreeBSD 9.0/9.1/9.2/9.3-RELEASE Announcement Acknowledgments 章节 [Z]. 2012-2014；FreeBSD Security Team 页面（security.freebsd.org）［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
 
-## 123.13.2 Release Engineering 团队构成
+## 124.13 Release Engineering 团队构成
 
-- 要点：9.0 Release Engineering Team 由 Ken Smith（kensmit〔待核：原文截断〕
+- 要点：9.0 Release Engineering Team 由 Ken Smith（kensmit〔存疑：原文截断，待回源补全〕
 - 安全团队报告 ［A］
 - Pedro Giffuni 2013.1.29 [CFT] WITH_BSD_PATCH（freebsd-current 邮件列表 archives/2013-January/039367.html）；FreeBSD Bugzilla PR 99173（bugs.freebsd.org/bugzilla/show_bug.cgi?id = 99173）；Kohn A. 2006.6.19 lwpatch 提案附件 ［A］
 
-## 123.15.2 r246074 首次导入与 WITH_BSD_PATCH 构建选项
+## 124.15 r246074 首次导入与 WITH_BSD_PATCH 构建选项
 
-- 要点：2013 年 1 月 29 日 17:03 由 Gabor Kove
+- 要点：2013 年 1 月 29 日 17:03 由 Gabor Kove〔存疑：原文截断，待回源补全〕
 - Pedro Giffuni. [CFT] WITH_BSD_PATCH [EB/OL]. freebsd-current mailing list, 2013-01-29; Free Software Foundation. Various Licenses and Comments about Them [EB/OL]. gnu.org/licenses/license-list.html（#ModifiedBSD、#FreeBSD 条目，2026-07-22 核实）.［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
 
-## 123.16.2 被忽视的边缘贡献者
+## 124.16 被忽视的边缘贡献者
 
-- 要点：9.x 时期核心技术的知名贡献者（McKusick、Watson、Motin、Selasky、Grehan、Percival、Whitehorn、Dawidek 等）常被历史记录，但大量 ports 维护者、文档翻译者、bug 报告者、测试者的贡献被主流叙事忽视；FreeBSD 9.x 时期 ports 数量从约 22,000 增长至超过 24,000，背后是数百名 ports c
+- 要点：9.x 时期核心技术的知名贡献者（McKusick、Watson、Motin、Selasky、Grehan、Percival、Whitehorn、Dawidek 等）常被历史记录，但大量 ports 维护者、文档翻译者、bug 报告者、测试者的贡献被主流叙事忽视；FreeBSD 9.x 时期 ports 数量从约 22,000 增长至超过 24,000，背后是数百名 ports c〔存疑：原文截断，待回源补全〕
 
 ## 自反性声明
 
@@ -106,9 +106,9 @@ volume: 第06卷-freebsd的核心技术革新
 
 - 总纲10 动手者创造历史：图形栈这一基础设施长期由少数动手者维持，其工作依赖社区测试反馈与硬件样本的缓慢积累，属于被主流叙事边缘化的劳动。（BSD Now EP283，[690.18-747.68]，L1）
 - 总纲15 文化即形式主义：用户组、会议、教程与雇主赞助共同构成社区再生产的社会形式；受访者特别指出参加一次会议即可让人意识到自己的工作被他人实际使用。（BSD Now EP283，[386.88-424.68]，L1）
-- 总纲5 没有必然性，只有偶然性：总纲5 没有必然性，只有偶然性：基本失效模式定理强调复杂系统运行状态由具体故障与补偿关系决定，而非设计意图的必然实现。（BSD Now EP631，[138.14-224.48]，L1）
-- 总纲10 动手者创造历史：总纲10 动手者创造历史：笔记本作者通过动手排查定位 Nvidia 与 DRM 驱动文件覆盖问题，而非依赖文档结论。（BSD Now EP631，[874.40-908.32]，L1）
-- 总纲25 逻辑是形式主义而非世界本身的结构：总纲25 逻辑是形式主义而非世界本身的结构：ZFS 快照的不可变是概念化标签，其元数据实现仍随操作可变，说明概念与实现之间的形式主义距离。（BSD Now EP631，[1324.62-1407.46]，L1）
+- 总纲5 没有必然性，只有偶然性：基本失效模式定理强调复杂系统运行状态由具体故障与补偿关系决定，而非设计意图的必然实现。（BSD Now EP631，[138.14-224.48]，L1）
+- 总纲10 动手者创造历史：笔记本作者通过动手排查定位 Nvidia 与 DRM 驱动文件覆盖问题，而非依赖文档结论。（BSD Now EP631，[874.40-908.32]，L1）
+- 总纲25 逻辑是形式主义而非世界本身的结构：ZFS 快照的不可变是概念化标签，其元数据实现仍随操作可变，说明概念与实现之间的形式主义距离。（BSD Now EP631，[1324.62-1407.46]，L1）
 - 总纲10 动手者创造历史：嘉宾从昔日高产 committer 转向培养新一代动手者——推动 Mariusz Zaborski 成为 committer 从事 Capsicum 与 Casper、Konrad Witaszczyk 打磨加密内核转储补丁历时两年；他以 vendor 视角点出生态症结：厂商补丁常有九成就绪而最后一步永无余力完成者（3919.84-3932.04），故寄望基金会雇用专人收尾入库。BSD 史的推进动力在此显形为具体人手的持续劳动与“加入 FreeBSD 项目是我技术生涯最大的加速器”（4290.64-4303.08）式的代际传承，而非路线图或宣言。（BSD Now EP120，[3892.59-4303.08]，L2）
 - 总纲5 没有必然性，只有偶然性：geli 开发史成为偶然性优先的注脚：当年可预测初始化向量的 CBC 模式被普遍视为安全，嘉宾凭超出共识的直觉实现不可预测初始化向量（3764.35-3772.27），日后该共识方案确被证明不安全，一次未按主流走的工程选择意外成为先见；与之呼应，OpenSSH 历史提权漏洞仅系一个比较运算符之差、修复前后二进制只差一比特，安全史的走向悬于这类无必然性的微小偶然。（BSD Now EP120，[3736.59-3778.55]，L1）
 
