@@ -3766,6 +3766,8 @@
   - [196 【Linux社区】THEREST分流与generatedcontent](./第20卷-linux社区史与比较研究/196-THEREST分流与generatedcontent.md)
   - [202 【Linux社区】TAB得票排名与文件系统划分](./第20卷-linux社区史与比较研究/202-TAB得票排名与文件系统划分.md)
   - [203 【Linux社区】文件系统威胁模型与RustAPI债](./第20卷-linux社区史与比较研究/203-文件系统威胁模型与RustAPI债.md)
+  - [199 【Linux社区】挺Rust正方陈述与选举资格新规](./第20卷-linux社区史与比较研究/199-挺Rust正方陈述与选举资格新规.md)
+  - [201 【Linux社区】Link尾注立场声明与Smatch停摆](./第20卷-linux社区史与比较研究/201-Link尾注立场声明与Smatch停摆.md)
 ## 读者指引（大纲侧）
 
 - 大纲侧手动维护区，脚本重跑保留。
