@@ -1,10 +1,10 @@
-# 第 153 章 freebsd14x维护版本与发布工程
-
 ---
 chapter: 第 153 章
 id: CH153
 volume: 第07卷-freebsd的工程体系重构
 ---
+
+# 第 153 章 freebsd14x维护版本与发布工程
 
 ## 要点
 
@@ -16,14 +16,13 @@ volume: 第07卷-freebsd的工程体系重构
 
 ## 史观
 
-- 总纲第 17 条——软件工程：.1 维护版本的定位是“稳定性、bug 修复、小功能增强”而非大的架构变更——SIMD string 函数、音效热插拔、cloud-init 支持都是不破坏 ABI 的渐进改进；这种“大版本创新 + 小版本稳定”的发布节奏是 FreeBSD 工程可靠性的基础
-  - 辨析：libc SIMD 优化最初由 David C Lawrence（tale@）与其他贡献者开发，
-- 总纲第 22 条——开源运动：此漏洞是典型的 “UNIX 工具组合哲学” 安全缺陷——rtsold 作为网络配置守护进程调用 resolvconf shell 脚本更新 DNS 配置，而 shell 脚本的字符串拼接与引号处理是传统 UNIX 工具中常见的安全隐患；这一漏洞提醒我们：即使是设计简洁、代码量小的 BSD 系统，在不同组件的交互边界仍可能出现严重安全问题；与 C 语言内存漏洞不同，sh
-- 总纲第 23 条——社区治理：FreeBSD Core Team 选举制度是开源社区 “代议民主” 治理模式的典范——9 名核心成员由 committer 民主选举产生，任期两年，可连任；这一制度既避免了 BDFL（仁慈独裁者）模式的个人依赖风险，也避免了完全开放投票的民粹化倾向（只有具有代码提交记录的活跃开发者才有投票权）；〔待核：原文截断，后文待回源〕
+- 专题语（不设总纲条号）——软件工程：.1 维护版本的定位是“稳定性、bug 修复、小功能增强”而非大的架构变更——SIMD string 函数、音效热插拔、cloud-init 支持都是不破坏 ABI 的渐进改进；这种“大版本创新 + 小版本稳定”的发布节奏是 FreeBSD 工程可靠性的基础
+- 专题语（不设总纲条号）——开源运动：此漏洞是典型的 “UNIX 工具组合哲学” 安全缺陷——rtsold 作为网络配置守护进程调用 resolvconf shell 脚本更新 DNS 配置，而 shell 脚本的字符串拼接与引号处理是传统 UNIX 工具中常见的安全隐患；这一漏洞提醒我们：即使是设计简洁、代码量小的 BSD 系统，在不同组件的交互边界仍可能出现严重安全问题；与 C 语言内存漏洞不同，sh
+- 总纲第 3 条——不存在进步只有权力再分配：FreeBSD Core Team 选举制度是开源社区 “代议民主” 治理模式的典范——9 名核心成员由 committer 民主选举产生，任期两年，可连任；这一制度既避免了 BDFL（仁慈独裁者）模式的个人依赖风险，也避免了完全开放投票的民粹化倾向（只有具有代码提交记录的活跃开发者才有投票权）；〔待核：原文截断，后文待回源〕
 
 ## 辨析
 
-- libc SIMD 优化最初由 David C Lawrence（tale@）与其他贡献者开发，针对现代 x86-64 处理器的 SSE/AVX 指令集优化；这些优化在微基准测试中显著提升字符串操作性能（某些场景达数倍），对真实工作负载的影响因应用而异；音效热插拔改进解决了 USB 音频设备在系统运行中插入/拔出时的稳定性问题。**数据库验证结论**：`release/14.1.0` tagger
+- libc SIMD 优化最初由 Robert Clausecker（fuz）与其他贡献者开发，针对现代 x86-64 处理器的 SSE/AVX 指令集优化；这些优化在微基准测试中显著提升字符串操作性能（某些场景达数倍），对真实工作负载的影响因应用而异；音效热插拔改进解决了 USB 音频设备在系统运行中插入/拔出时的稳定性问题。**数据库验证结论**：`release/14.1.0` tagger
 - 漏洞影响范围需精确说明：仅运行 rtsold/rtsol 且接口启用 ACCEPT_RTADV 的系统受影响；不使用 IPv6 或静态配置 IPv6 的系统不受影响；RA 报文是二层本地网段报文，路由器不应转发 RA 报文（否则违反 IPv6 规范），因此攻击无法跨越路由器实施远程攻击——这限制了漏洞的实际危害范围，但同一网络段（如公共 WiFi、企业局域网）的攻击者仍可利用；14.3-RELEA
 - Hiroki Sato（hrs@）在 FreeBSD 社区地位崇高——他是文档项目负责人、亚洲 BSD 社区（特别是日本 BSD 用户组）的核心组织者、担任 Core Team 成员多年；原 ch85 草稿称他于 2022 年逝世且 13.1-RELEASE 献词给他，**经核实 13.1-RELEASE 实际献词给 Bill Jolitz**（386BSD 共同创建者），而非 Hiroki Sa
 
@@ -31,7 +30,9 @@ volume: 第07卷-freebsd的工程体系重构
 
 - FreeBSD Project. FreeBSD 14.1-RELEASE Announcement [EB/OL]. (2024-06-04)[2026-07-19]. <https://www.freebsd.org/releases/14.1R/announce/>; FreeBSD Project. release/14.1.0. freebsd-src 仓库 tag [DB/OL]. 2024-05-30T17:34:21-07:00. tag: release/14.1.0; commit: 10e31f0946d820d53adc58b7d013b969e4a9a8ed ［A］
 
-- FreeBSD Security Team. FreeBSD-SA-25:12.rtsold — Remote Code Execution via ND6 Router Advertisements [EB/OL]. (2025-12-16)[2026-07-19]. <https://security.FreeBSD.org/advisories/FreeBSD-SA-25:12.rtsold.asc>; MITRE. CVE-2025-14558 [EB/OL]. (2025-12)[2026-07-19]. <<https://cve.mitre.org/cgi-bin/cvename>.
+- FreeBSD Project. FreeBSD 14.2-RELEASE Announcement [EB/OL]. (2024-12-03)[2026-07-19]. <https://www.freebsd.org/releases/14.2R/announce/>; FreeBSD Project. FreeBSD 14.3-RELEASE Announcement [EB/OL]. (2025-06-10)[2026-07-19]. <https://www.freebsd.org/releases/14.3R/announce/>; FreeBSD Project. FreeBSD 14.4-RELEASE Announcement [EB/OL]. (2026-03-10)[2026-07-19]. <https://www.freebsd.org/releases/14.4R/announce/>.［A］
+
+- FreeBSD Security Team. FreeBSD-SA-25:12.rtsold — Remote Code Execution via ND6 Router Advertisements [EB/OL]. (2025-12-16)[2026-07-19]. <https://security.FreeBSD.org/advisories/FreeBSD-SA-25:12.rtsold.asc>; MITRE. CVE-2025-14558 [EB/OL]. (2025-12)[2026-07-19]. <https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-14558>.
 - FreeBSD Project. FreeBSD Administration and Management [EB/OL]. [2026-07-19]. <https://www.freebsd.org/administration/>; FreeBSD Core Team. Core Team Charter [EB/OL]. [2026-07-19]. <https://www.freebsd.org/internal/core-charter/>（原始链接失效，互联网档案馆无存档）. ［A］
 
 
