@@ -12,7 +12,7 @@ volume: 第06卷-freebsd的核心技术革新
 
 ## 史料
 
-- [DB:references_fulltext:chapter_matches:chmatch_3777] 卷“第06卷-freebsd的核心技术革新”第 129 章，匹配置信度 folder，原因：folder 第127章
+- [DB:references_fulltext:chapter_matches:chmatch_3777] 卷“第06卷-freebsd的核心技术革新”第 129 章，匹配置信度 folder，原因：folder 第127章〔存疑：原因字段“第127章”系旧章号匹配噪声（本章为 129），DB 源记录不可回改，依核查报告标注为匹配噪声〕
 - [DB:references_fulltext:chapter_matches:chmatch_52] 卷“第06卷-freebsd的核心技术革新”第 129 章，匹配置信度 0.6，原因：关键词重合 1 项
 - [DB:references_fulltext:chapter_matches:chmatch_200] 卷“第06卷-freebsd的核心技术革新”第 129 章，匹配置信度 0.6，原因：关键词重合 1 项
 - [DB:references_fulltext:chapter_matches:chmatch_828] 卷“第06卷-freebsd的核心技术革新”第 129 章，匹配置信度 0.6，原因：关键词重合 1 项
@@ -22,7 +22,7 @@ volume: 第06卷-freebsd的核心技术革新
 
 ## 史观
 
-- 多方平等：贡献者无论提交量多少，在本体论层面平等——这是对‘精英治理’的形式主义批判
+- 总纲8 本体论上各方平等：贡献者无论提交量多少，在本体论层面平等——这是对‘精英治理’的形式主义批判〔订正：原作裸专题语“多方平等”，依核查报告改挂权威表第 8 条〕
 
 ## 辨析
 
