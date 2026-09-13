@@ -42,7 +42,7 @@ volume: 第06卷-freebsd的核心技术革新
 
 <!-- DB_REF:freebsd.duckdb -->
 > **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 2010-2020 年间：488,947 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
-- University of Cambridge Computer Laboratory. Capsicum and CHERI Project Licensing Statements. cl.cam.ac.uk; cheribsd.org. CheriBSD License. github.com/CTSRD-CHERI/cheribsd.［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］**【本节文献综述】** 详见 [04-现代研究文献/05-参考文献全文数据库/references_fulltext.db](04-现代研究文献/05-参考文献全文数据库/references_fulltext.db) `chapter_reviews` 表（id=36）---**补充证据（基于全文数据库修订）**本次修订从全文数据库补充 1 篇新匹配文献的证据。**新增核心事实**
+- University of Cambridge Computer Laboratory. Capsicum and CHERI Project Licensing Statements. cl.cam.ac.uk; cheribsd.org. CheriBSD License. github.com/CTSRD-CHERI/cheribsd.［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］**【本节文献综述】** 详见 [04-现代研究文献/05-参考文献全文数据库/references_fulltext.duckdb](04-现代研究文献/05-参考文献全文数据库/references_fulltext.duckdb) `chapter_reviews` 表（id=36）---**补充证据（基于全文数据库修订）**本次修订从全文数据库补充 1 篇新匹配文献的证据。**新增核心事实**
 文献 (201305-temporal-practical-capabilities, 年份不详, p.15) 指出：FreeBSD 作为 Capsicum 能力系统的实现平台，该论文以 FreeBSD 为基础讨论了时间性能力的安全应用。
 **新增技术**
 文献 (201305-temporal-practical-capabilities, 年份不详) 讨论 Capsicum，该论文探讨了 Capsicum 能力系统在时间性安全策略中的应用，为操作系统安全研究提供了新方向。
@@ -77,13 +77,13 @@ volume: 第06卷-freebsd的核心技术革新
 
 **史观**：
 
-- 总纲10 动手者创造历史：总纲10 动手者创造历史：Robert Watson 团队以编写并落地 Capsicum、BERI/CHERI 的方式实际推动操作系统安全演进。（BSD Now EP50，[1380.46-1462.14]，L1）
-- 总纲9 经验优先：总纲9 经验优先：访谈以当事人对代码、硬件与漏洞的一手经验为叙述依据，而非抽象安全口号。（BSD Now EP50，[1451.54-1571.28]，L1）
-- 总纲22 知识注定过时：总纲22 知识注定过时：OpenSSL 与 LibreSSL 的持续修补显示安全知识处于不断失效与重写的循环之中。（BSD Now EP50，[957.56-988.06]，L2）
-- 总纲5 没有必然性，只有偶然性：没有必然性，只有偶然性：jail 并非源自宏大规划，而是由一个南卡罗来纳州托管商的具体商业需求偶然催生。（BSD Now EP7，[968.64-1052.26]，L1）
-- 总纲10 动手者创造历史：动手者创造历史：Poul-Henning Kamp 为具体托管需求动手实现 jail，而非在抽象层面提出容器概念。（BSD Now EP7，[968.64-1052.26]，L1）
-- 总纲13 法律与道德是利益分配：法律与道德是利益分配：美国加密出口管制直接塑造了 FreeBSD 密码扰码器的技术路径，使 MD5 crypt 与南非 secure 发行版成为法律约束下的工程选择。（BSD Now EP7，[1481.56-1534.78]，L1）
-- 总纲8 本体论上各方平等：本体论上各方平等：jail 与完整虚拟化各有价值，Poul-Henning Kamp 不将 jail 宣称为唯一正确的虚拟化方案，而是强调其单向镜等独特优势。（BSD Now EP7，[1095.10-1257.20]，L1）
+- 总纲10 动手者创造历史：Robert Watson 团队以编写并落地 Capsicum、BERI/CHERI 的方式实际推动操作系统安全演进。（BSD Now EP50，[1380.46-1462.14]，L1）
+- 总纲9 经验优先：访谈以当事人对代码、硬件与漏洞的一手经验为叙述依据，而非抽象安全口号。（BSD Now EP50，[1451.54-1571.28]，L1）
+- 总纲22 知识注定过时：OpenSSL 与 LibreSSL 的持续修补显示安全知识处于不断失效与重写的循环之中。（BSD Now EP50，[957.56-988.06]，L2）
+- 总纲5 没有必然性，只有偶然性：jail 并非源自宏大规划，而是由一个南卡罗来纳州托管商的具体商业需求偶然催生。（BSD Now EP7，[968.64-1052.26]，L1）
+- 总纲10 动手者创造历史：Poul-Henning Kamp 为具体托管需求动手实现 jail，而非在抽象层面提出容器概念。（BSD Now EP7，[968.64-1052.26]，L1）
+- 总纲13 法律与道德是利益分配：美国加密出口管制直接塑造了 FreeBSD 密码扰码器的技术路径，使 MD5 crypt 与南非 secure 发行版成为法律约束下的工程选择。（BSD Now EP7，[1481.56-1534.78]，L1）
+- 总纲8 本体论上各方平等：jail 与完整虚拟化各有价值，Poul-Henning Kamp 不将 jail 宣称为唯一正确的虚拟化方案，而是强调其单向镜等独特优势。（BSD Now EP7，[1095.10-1257.20]，L1）
 
 **辨析**：
 
