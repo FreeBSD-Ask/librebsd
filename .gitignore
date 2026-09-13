@@ -226,14 +226,6 @@ $RECYCLE.BIN/
 *.pyc
 *.json
 /script/*
-!/script/_db_row_mining/
-/script/_db_row_mining/*
-!/script/_db_row_mining/dslinux/
-/script/_db_row_mining/dslinux/*
-!/script/_db_row_mining/dslinux/01-战线spec
-!/script/_db_row_mining/dslinux/02-遍历留痕
-!/script/_db_row_mining/dslinux/03-候选
-!/script/_db_row_mining/dslinux/06-大纲增补
 /en
 /.trae
 /.trae-cn
