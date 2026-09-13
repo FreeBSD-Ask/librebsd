@@ -11,7 +11,7 @@ volume: 第08卷-freebsd的范式转换
 - FreeBSD 社区关于迁移到分布式版本控制系统的讨论始于 **2010 年代初期**，几乎与 Git 在 Linux 内核成功后开始流行同步；社区评估了多种分布式 VCS 选项，包括 Git、Mercurial（hg）、Bazaar（bzr）等；Git 之所以最终胜出而非 Mercurial 等其他 DVCS，原因包括：(1) Linux 内核采用 Git 产生的网络效应；(2) GitHub 官方只读镜像（github.com/freebsd/freebsd-src）降低浏览与克隆门槛〔存疑：原列举其后各项原文截断，待回源补录〕
 - Git 工作组决策过程的一手史料主要包括：(1) freebsd-git@ 邮件列表的公开讨论存档（最完整、最权威）；(2) Git Transition Wiki 页面的历史版本（记录了方案演变）；(3) Ed Maste、Warner Losh 等人的会议演讲和博客文章；(4) Core Team 的公开状态报告；Core Team 内部讨论和投票细节未完全公开，部分决策理由只能从公开信息推断
 - FreeBSD-doc Subversion to Git 迁移公告邮件经 freebsd-announce 邮件列表存档一手核验，发信人为 Warner Losh 与 Ed Maste（代表 git conversion working group），公告于 2020-12-02 发布：doc 仓库为首个由 Subversion 迁移至 Git 的 FreeBSD 仓库，迁移于 12 月 5 日前后启动、计划 12 月 8 日前后完成
-- Git 迁移为 FreeBSD 带来的最显著长期变化是 CI/CD（持续集成/持续交付）能力的提升和外部贡献门槛的降低：(1) **CI/CD**：基于 GitLab CI 和 Cirrus CI 的自动化构建和测试管道在 Git 迁移后逐步建立，每次提交都会触发多架构构建和测试，这在 SVN 时代难以实现；(2) **外部贡献**：虽然 GitHub 不接受直接 PR，但开发者可以更容易地GitHub 上浏览与克隆源码、检视提交历史，并据此向邮件列表或代码评审流程提交补丁，参与门槛显著低于 SVN 时代
+- Git 迁移为 FreeBSD 带来的最显著长期变化是 CI/CD（持续集成/持续交付）能力的提升和外部贡献门槛的降低：(1) **CI/CD**：基于 GitLab CI 和 Cirrus CI 的自动化构建和测试管道在 Git 迁移后逐步建立，每次提交都会触发多架构构建和测试，这在 SVN 时代难以实现；(2) **外部贡献**：虽然 GitHub 不接受直接 PR，但开发者可以更容易地在 GitHub 上浏览与克隆源码、检视提交历史，并据此向邮件列表或代码评审流程提交补丁，参与门槛显著低于 SVN 时代
 - Git 迁移争议相关一手史料的可靠性需分级评估：(1) **最高可信度**：官方 Wiki 时间表、freebsd-git 邮件列表原始帖子、版本控制系统中的 commit 记录——这些是当时形成的一手文档，可信度最高；(2) **高可信度**：Ed Maste（埃德·马斯特）、Warner Losh（沃纳·洛什） 等核心成员的会议演讲和博客文章——作者是亲历者，但事后回忆可能存在细节偏差；(3) **中等可信度**：事后整理的综述、媒体报道与社区回忆——距离事件现场较远，具体细节须与前两级史料交叉核验后方可采信
 
 ## 史料
@@ -36,7 +36,7 @@ volume: 第08卷-freebsd的范式转换
 
 - 经邮件列表库验证通过（来源：freebsd-git 列表，Message-ID <CAPyFy2CKdHW_KkOOQozPW04jBDz8ZaNWSJLqFWAdzKcaDfSzcA@mail.gmail.com>，2017-02-21，Ed Maste 发起“Reconsider switching from svn to git?”，Warner Losh 回复）；经邮件列表库验证通过〔存疑：本条其后另有一条独立验证记录，原文截断待回源补录〕
 - 部分评论称“Git 迁移是基金会强行推动的”——这一说法不准确：基金会提供了资金支持，但技术决策由 Git 工作组（由资深 committer 组成）做出，Core Team 保留最终批准权；基金会资助使迁移工作能够更快推进，但并未改变社区决策流程
-- 考据过程留痕——【查证来源】(1) freebsd-announce 邮件列表 mailman 存档经 lists.freebsd.org/pipermail/freebsd-announce/2020-December/002002.html 一手核验，确认邮件标题“[FreeBSD-Announce] FreeBSD-doc Subversion to Git migration”、发发信人为 Warner Losh 与 Ed Maste（代表 git conversion working group），公告于 2020-12-02 发布：doc 仓库为首个由 Subversion 迁移至 Git 的 FreeBSD 仓库，迁移于 12 月 5 日前后启动、计划 12 月 8 日前后完成
+- 考据过程留痕——【查证来源】(1) freebsd-announce 邮件列表 mailman 存档经 lists.freebsd.org/pipermail/freebsd-announce/2020-December/002002.html 一手核验，确认邮件标题“[FreeBSD-Announce] FreeBSD-doc Subversion to Git migration”、发信人为 Warner Losh 与 Ed Maste（代表 git conversion working group），公告于 2020-12-02 发布：doc 仓库为首个由 Subversion 迁移至 Git 的 FreeBSD 仓库，迁移于 12 月 5 日前后启动、计划 12 月 8 日前后完成
 - “Git 迁移使 FreeBSD 开发速度大幅提升”这一说法需辩证看待——单个提交的合入速度不一定更快（因为审查流程可能更规范），但整体开发吞吐量确实因更好的工具链、更多外部贡献和 CI 自动化而提升；开发质量也因自动化测试而提高
 - 部分争议点可能永远没有完全清晰的答案——例如 Core Team 内部讨论的细节、某些决策的真实考量、个别 committer 退役的真实原因等；史笔至此须存疑，不可为了叙事完整性而编造或推断
 

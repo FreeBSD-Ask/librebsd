@@ -930,7 +930,7 @@
 
 - [第 94 章 FreeBSD Jails：容器的先驱](./第05卷-freebsd的工程化奠基/第94章-freebsd-jails容器的先驱/概述.md)
   - [94.1 2000 年 phk](./第05卷-freebsd的工程化奠基/第94章-freebsd-jails容器的先驱/94.1-2000-年-phk.md)
-  - [94.2 Jails 与 chroot 的技术谱系——从 **chroot(2)** 到 **jail(2)](./第05卷-freebsd的工程化奠基/第94章-freebsd-jails容器的先驱/94.2-Jails-与-chroot-的技术谱系-从-chroot-2-到-jail-2.md)
+  - [94.2 Jails 与 chroot 的技术谱系——从 chroot(2) 到 jail(2)](./第05卷-freebsd的工程化奠基/第94章-freebsd-jails容器的先驱/94.2-Jails-与-chroot-的技术谱系-从-chroot-2-到-jail-2.md)
   - [94.3 Jails 的设计哲学——OS 级虚拟化的早期实践](./第05卷-freebsd的工程化奠基/第94章-freebsd-jails容器的先驱/94.3-Jails-的设计哲学-OS-级虚拟化的早期实践.md)
   - [94.4 Jails 的技术局限——网络栈共享与权限模型](./第05卷-freebsd的工程化奠基/第94章-freebsd-jails容器的先驱/94.4-Jails-的技术局限-网络栈共享与权限模型.md)
   - [94.5 外部批评与反对者 **：(1)** VMware 开源博客（2018.2.27）——"The Story of Containers"一文（blogs.vmware.com/opensource/2018/02/27/the-story-of-containers/）梳理容器演化史时直言 FreeBSD Jails 存在"（详见正文）](./第05卷-freebsd的工程化奠基/第94章-freebsd-jails容器的先驱/94.5-外部批评与反对者-1-VMware-开源博客-2018-2-27.md)
@@ -2708,7 +2708,7 @@
   - [282.1 BSD 许可证文本的法律分析——**BSD 2-Clause "Simplified" License**（**Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met: 1. Redistribution（详见正文）](./第15卷-许可证哲学与法律分析/第282章-bsd许可证文本与法律分析/282.1-BSD-许可证文本的法律分析-BSD-2-Clause-Simplified-L.md)
   - [282.2 BSD vs GPL 的哲学差异——**BSDL** 不强制 **copyleft**，**GPL §5** 要求分发修改后的完整源代码](./第15卷-许可证哲学与法律分析/第282章-bsd许可证文本与法律分析/282.2-BSD-vs-GPL-的哲学差异-BSDL-不强制-copyleft-GPL-§.md)
   - [282.3 商业友好 vs copyleft——**BSD** 许可证对技术传播的效应](./第15卷-许可证哲学与法律分析/第282章-bsd许可证文本与法律分析/282.3-商业友好-vs-copyleft-BSD-许可证对技术传播的效应.md)
-  - [282.4 根本争议——**Linus Torvalds** 批评 “**BSD** 许可证会让开发人员觉得大公司在利用他们的工作”](./第15卷-许可证哲学与法律分析/第282章-bsd许可证文本与法律分析/282.4-根本争议-Linus-Torvalds-批评-BSD.md)
+  - [282.4 根本争议——Linus Torvalds 批评 “BSD 许可证会让开发人员觉得大公司在利用他们的工作”](./第15卷-许可证哲学与法律分析/第282章-bsd许可证文本与法律分析/282.4-根本争议-Linus-Torvalds-批评-BSD.md)
   - [282.5 FreeBSD Foundation 捐赠与筹款史——**Foundation** 作为 **IRS** 501(c)(3)/509(a)(1) 公共慈善实体（详见相关章节）可接受免税捐赠](./第15卷-许可证哲学与法律分析/第282章-bsd许可证文本与法律分析/282.5-FreeBSD-Foundation-捐赠与筹款史-Foundation-作为.md)
   - [282.6 **FreeBSD Foundation 商标持有与保护责任**（详见相关章节）——**Foundation** 拥有 **FreeBSD®** 注册商标、**FreeBSD Logo** 商标、**THE POWER TO SERVE** 文字商标，**Trademark Usage Terms and Conditions**（最新版 2025 年 5 月 13 日）的具体条款](./第15卷-许可证哲学与法律分析/第282章-bsd许可证文本与法律分析/282.6-FreeBSD-Foundation-商标持有与保护责任-详见相关章节.md)
   - [282.7 BSD 许可证全系逐版本考据——BSD 4/3/2/1-Clause 与 0BSD 的文本演变、SPDX 标识与语义差异](./第15卷-许可证哲学与法律分析/第282章-bsd许可证文本与法律分析/282.7-BSD-许可证全系逐版本考据-BSD-4-3-2-1-Clause-与-0.md)
