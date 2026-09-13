@@ -4,7 +4,7 @@ id: CH291
 volume: 第15卷-许可证哲学与法律分析
 ---
 
-# 第291章 os比较史观审视与采访复核
+# 第 291 章 OS 比较、史观审视与采访复核——跨项目效应对比、项目统摄史观审视与赞助复核
 
 ## 史料
 
@@ -20,25 +20,22 @@ volume: 第15卷-许可证哲学与法律分析
 
 ## 史观
 
-- 总纲第 24 条——许可证：GPL 与 BSD 的法律结构差异塑造不同跨项目影响模式；总纲第 14 条——商业与社区的张力：Linux 生态规模优势 vs BSD 许可证宽松优势
-  - 辨析：Linux“生态规模”是否真大于 BSD 须量化对比；Linux 基金会托管项目是否真“Linux 内核影响”须辨析——这些项目多为独立运行于 Linux 但非内核衍生；GPL 与 BSD 影响模式的对比须
-- 总纲第 5 条（道与术的辩证）与总纲第 24 条（许可证哲学）。BSD 阵营的再回应实质上是将“Linux 生态规模优势”“GNU 工具链基础”“Solaris 企业级特性”“商业 Unix 影响有限”的比较置于“许可证法律结构差异”的框架下重新审视——Linux 的规模优势源于 GPL 强制回馈，BSD 的许可证宽松性是设计选择；GNU 工具链是 BSD 工具链的竞争者而非替代者；Solaris
+- 总纲第 13 条——法律与道德是利益分配：GPL 与 BSD 的法律结构差异塑造不同跨项目影响模式；总纲第 3 条——不存在进步只有权力再分配：Linux 生态规模优势 vs BSD 许可证宽松优势
+- 项目史观总纲第五章“道与术的辩证”（源文本章节，非 25 条总纲条目）与总纲第 13 条（法律与道德是利益分配）。BSD 阵营的再回应实质上是将“Linux 生态规模优势”“GNU 工具链基础”“Solaris 企业级特性”“商业 Unix 影响有限”的比较置于“许可证法律结构差异”的框架下重新审视——Linux 的规模优势源于 GPL 强制回馈，BSD 的许可证宽松性是设计选择；GNU 工具链是 BSD 工具链的竞争者而非替代者；Solaris 企业级特性的 CDDL 许可证兼容性是双向的——CDDL 与 BSD 兼容使 ZFS、DTrace 进入 FreeBSD，CDDL 与 GPLv2 不兼容阻碍其进入 Linux 主线
 - 总纲第 6 条（主体性与和解）与总纲第 24 条（许可证哲学）。BSD 跨项目效应与同时期操作系统比较的核心即“许可证宽松性与生态规模代价的辩证统一”——BSD 许可证的“消极自由”使代码进入全球软件基础设施，但同一“消极自由”使 BSD 阵营生态规模不及 Linux。项目史观总纲第六章“主体性与和解”在此显现：各操作系统阵营各为主体性，二者的辩证不可调和但可分离聚合。
-- **辨析**：考据过程
-- 总纲第 5 条。BSD 跨项目投入的核心即“道”与“术”的分离与重构——BSD 许可证作为“道”使代码以“术”的方式扩散，但同一“道”使“术”的回馈无法强制。项目史观总纲第 5 章“道与术的辩证”在 BSD 跨项目语境中的具体显现即：道与术非二分，道即术的形式主义化，术即道的非形式主义化基础；BSD 许可证的“消极自由”作为“道”允许“术”的无回馈，此“无回馈”非“道”的失败而是“道”的工程化显现
-- 总纲第 6 条。BSD 跨项目投入的核心即“分离聚合的循环”——BSD 阵营与采用者各为主体性，二者的辩证不可调和但可分离聚合。项目史观总纲第六章“主体性与和解”在 BSD 跨项目语境中的具体显现即：和解非“消除矛盾”而是“旧矛盾被新矛盾替代的一瞬”，BSD 跨项目投入的“基础设施性与许可证代价”的矛盾不可消除但可被新的跨项目投入（如 Apple→FreeBSD 反向回馈）部分缓解。
-- **辨析
+- 项目史观总纲第五章。BSD 跨项目投入的核心即“道”与“术”的分离与重构——BSD 许可证作为“道”使代码以“术”的方式扩散，但同一“道”使“术”的回馈无法强制。项目史观总纲第 5 章“道与术的辩证”在 BSD 跨项目语境中的具体显现即：道与术非二分，道即术的形式主义化，术即道的非形式主义化基础；BSD 许可证的“消极自由”作为“道”允许“术”的无回馈，此“无回馈”非“道”的失败而是“道”的工程化显现
+- 项目史观总纲第六章。BSD 跨项目投入的核心即“分离聚合的循环”——BSD 阵营与采用者各为主体性，二者的辩证不可调和但可分离聚合。项目史观总纲第六章“主体性与和解”在 BSD 跨项目语境中的具体显现即：和解非“消除矛盾”而是“旧矛盾被新矛盾替代的一瞬”，BSD 跨项目投入的“基础设施性与许可证代价”的矛盾不可消除但可被新的跨项目投入（如 Apple→FreeBSD 反向回馈）部分缓解。
 
 ## 辨析
 
 - Linux“生态规模”是否真大于 BSD 须量化对比；Linux 基金会托管项目是否真“Linux 内核影响”须辨析——这些项目多为独立运行于 Linux 但非内核衍生；GPL 与 BSD 影响模式的对比须避免简单化
-  - 文献：Linux 基金会项目列表；许可证对比研究［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］. **原材料/哲学/项目统摄史观/第 5 章.md**; q.md“道与术的辩证”[Z]. **原材料/哲学/原始哲学/**; FreeBSD Project. FreeBSD License [EB/OL]. <https://www.freebsd.org/copyright/freebsd-license/>.
+  - 文献：Linux 基金会项目列表；许可证对比研究［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］. **sacred_sources.duckdb**（项目统摄史观第 5 章）; q.md“道与术的辩证”[Z]. **sacred_sources.duckdb**（原始哲学）; FreeBSD Project. FreeBSD License [EB/OL]. <https://www.freebsd.org/copyright/freebsd-license/>.
 
-##### 289.12.2 从总纲第 6 条审视：主体性与和解
+##### 291.12.2 从项目史观总纲第六章审视：主体性与和解
 
-- **要点**：BSD 跨项目投入在项目史观总纲第 6 条“主体性与和解”下显现为“分离聚合的循环”——BSD 阵营与采用者（Apple、Meta、Linux 发行版、Windows 等）
+- **要点**：BSD 跨项目投入在项目史观总纲第六章“主体性与和解”（源文本章节，非 25 条总纲条目）下显现为“分离聚合的循环”——BSD 阵营与采用者（Apple、Meta、Linux 发行版、Windows 等）各为主体性，二者的辩证不可调和但可分离聚合。
 - 主体性与和解在 BSD 跨项目投入中是否存在“BSD 阵营应强制采用者回馈”的主张——此主张在回馈层面成立（强制回馈确能缓解“回馈不足”）但在许可证层面不成立（BSD 许可证的设计意图即允许无回馈采用），故采信“回馈层面主张成立但与许可证哲学矛盾，故不可调和但可分离聚合”的判断。
-- **文献**：项目史观总纲第六章“主体性与和解”[Z]. 原材料/哲学/项目统摄史观/第 6 章.md; q.md
+- **文献**：项目史观总纲第六章“主体性与和解”[Z]. **sacred_sources.duckdb**（项目统摄史观第 6 章）; q.md
 
 ## 文献
 
@@ -52,16 +49,17 @@ volume: 第15卷-许可证哲学与法律分析
 <!-- dangan-20260908 消解回写 -->
 - FreeBSD. Experimental support for Sun's ZFS filesystem[Z]. 2008. ［DKC-0309→fulltext:5522］
 <!-- /dangan-20260908 -->
+<!-- 整改留痕 2026-09-13：本节系 291.11 子节内容误入 index 文件，构成跨文件双写；按核查报告问题 3 判 DEFERRED（跨文件内容迁移超出单文件权限，留待专项迁归 291.11-与同时期操作系统的比较 文件并核定主从） -->
 ## 291.11.2 GNU 项目对其他开源项目的效应对比
 
 - 要点：GNU 项目通过 GPL 工具链（GCC、glibc、bash、coreutils、Emacs 等）影响其他开源项目；GNU 工具链长期是 Linux 发行版默认工具链，也是 BSD 项目早期默认工具链（后被 Clang/LLVM 替代）；〔待核：原文截断，后文待回源〕
-- Linux Foundation. Projects [EB/OL]. <https://www.linuxfoundation.org/projects>; GNU Project. Official Website [EB/OL]. <https://www.gnu.org/>; FreeBSD 10.0 Release Notes [EB/OL]. (2014-01-31). <https://www.freebsd.org/releases/10.0R/relnotes/>; OpenSolaris. Archive [EB/OL]. <<https://www.opensolaris>.
-- Linux Foundation. Projects [EB/OL]. <https://www.linuxfoundation.org/projects>; FreeBSD 10.0 Release Notes [EB/OL]. (2014-01-31). <https://www.freebsd.org/releases/10.0R/relnotes/>; 项目史观总纲第六章“主体性与和解”[Z]. 原材料/哲学/项目统摄史观/第 6 章.md; 项目史观总纲第二十四章“许可证哲学”[Z]. 原材料/哲学/项目统摄史观/第 24 章.md.
-- 项目史观总纲第五章“道与术的辩证”[Z]. 原材料/哲学/项目统摄史观/第 5 章.md; q.md“道与术的辩证”[Z]. 原材料/哲学/原始哲学/; FreeBSD Project. FreeBSD License [EB/OL]. <https://www.freebsd.org/copyright/freebsd-license/>.
-- 项目史观总纲第六章“主体性与和解”[Z]. 原材料/哲学/项目统摄史观/第 6 章.md; q.md“和解的深度”[Z]. 原材料/哲学/原始哲学/; openbsd.duckdb L3.2.1 查询报告； openbsd.duckdb L7.2.1 查询报告。
+- Linux Foundation. Projects [EB/OL]. <https://www.linuxfoundation.org/projects>; GNU Project. Official Website [EB/OL]. <https://www.gnu.org/>; FreeBSD 10.0 Release Notes [EB/OL]. (2014-01-31). <https://www.freebsd.org/releases/10.0R/relnotes/>; OpenSolaris. Archive [EB/OL]. <https://www.opensolaris.org/>.
+- Linux Foundation. Projects [EB/OL]. <https://www.linuxfoundation.org/projects>; FreeBSD 10.0 Release Notes [EB/OL]. (2014-01-31). <https://www.freebsd.org/releases/10.0R/relnotes/>; 项目史观总纲第六章“主体性与和解”[Z]. **sacred_sources.duckdb**（项目统摄史观第 6 章）; 项目史观总纲第二十四章“许可证哲学”[Z]. **sacred_sources.duckdb**（项目统摄史观第 24 章）.
+- 项目史观总纲第五章“道与术的辩证”[Z]. **sacred_sources.duckdb**（项目统摄史观第 5 章）; q.md“道与术的辩证”[Z]. **sacred_sources.duckdb**（原始哲学）; FreeBSD Project. FreeBSD License [EB/OL]. <https://www.freebsd.org/copyright/freebsd-license/>.
+- 项目史观总纲第六章“主体性与和解”[Z]. **sacred_sources.duckdb**（项目统摄史观第 6 章）; q.md“和解的深度”[Z]. **sacred_sources.duckdb**（原始哲学）; openbsd.duckdb L3.2.1 查询报告； openbsd.duckdb L7.2.1 查询报告。
 - 项目史观总纲第八章“自由的张力”[Z]. 原材料/哲学/项目统摄史观/第 8 章.md; q.md“自由的张力”[Z]. 原材料/哲学/原始哲学/; Torvalds L. LinuxFocus Interview [EB/OL]. (1998-03). <https://linuxdoc.org/linuxfocus/English/March1998/article27.html>.
-- 项目史观总纲第十章“边缘者贡献”[Z]. 原材料/哲学/项目统摄史观/第 10 章.md; q.md“局外人姿态”[Z]. 原材料/哲学/原始哲学/; OpenSSH. Official History [EB/OL]. <https://openssh.org/history.html>; Varnish Software. Official History [EB/OL]. <https://varnish-software.com/varnish-history/>; Mewburn L. The Design and Implementation of the NetBSD rc.d
-- 项目史观总纲第二十四章“许可证哲学”[Z]. 原材料/哲学/项目统摄史观/第 24 章.md; FreeBSD Project. FreeBSD License [EB/OL]. <https://www.freebsd.org/copyright/freebsd-license/>; Free Software Foundation. GNU Licenses [EB/OL]. <https://www.gnu.org/licenses/>; OpenSolaris. CDDL [EB/OL]. <https://www.opensolaris.org/>; FreeBSD 8.0 Rele
+- 项目史观总纲第十章“边缘者贡献”[Z]. **sacred_sources.duckdb**（项目统摄史观第 10 章）; q.md“局外人姿态”[Z]. **sacred_sources.duckdb**（原始哲学）; OpenSSH. Official History [EB/OL]. <https://openssh.org/history.html>; Varnish Software. Official History [EB/OL]. <https://varnish-software.com/varnish-history/>; Mewburn L. The Design and Implementation of the NetBSD rc.d
+- 项目史观总纲第二十四章“许可证哲学”[Z]. **sacred_sources.duckdb**（项目统摄史观第 24 章）; FreeBSD Project. FreeBSD License [EB/OL]. <https://www.freebsd.org/copyright/freebsd-license/>; Free Software Foundation. GNU Licenses [EB/OL]. <https://www.gnu.org/licenses/>; OpenSolaris. CDDL [EB/OL]. <https://www.opensolaris.org/>; FreeBSD 8.0 Rele
 
 ## 自反性声明
 
