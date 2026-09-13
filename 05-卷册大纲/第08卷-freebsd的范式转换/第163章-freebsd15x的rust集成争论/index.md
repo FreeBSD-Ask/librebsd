@@ -21,54 +21,46 @@ volume: 第08卷-freebsd的范式转换
 
 ## 史观
 
-- 总纲第 17 条——软件工程：Rust 进入 base 的争论本质上是 “工程安全性” 与 “工程简洁性” 的权衡——C 语言是 FreeBSD 30 多年来的基石，C 编译器与工具链相对简单、构建快速、跨平台支持好；Rust 带来内存安全但增加工具链复杂度与构建时间；Linux 内核自 6.1（2022.12）开始接受 Rust 代码但标记为实验性，为 BSD 社区提供了参考案例
+- 专题语（不设总纲条号）——工程权衡：Rust 进入 base 的争论本质上是 “工程安全性” 与 “工程简洁性” 的权衡——C 语言是 FreeBSD 30 多年来的基石，C 编译器与工具链相对简单、构建快速、跨平台支持好；Rust 带来内存安全但增加工具链复杂度与构建时间；Linux 内核自 6.1（2022.12）开始接受 Rust 代码但标记为实验性，为 BSD 社区提供了参考案例
   - 辨析：
-- 总纲第 14 条——哲学思潮：Rust 争论反映了 BSD 社区中 “保守演进” 与 “革新进步” 两种哲学的张力——FreeBSD 历史上对新技术的引入一贯持审慎态度（如 ZFS 移植经历多年实验才正式进入 base、WireGuard 2021 年争议后经过两年重写才进入 14.0）；Rust 作为可能改变 base 系统语言构成的重大变更，自然需要更长时间的讨论与验证
-  - 辨析：“Rus
-- 总纲第 6 条——技术路线分化：C 语言与 Rust 在操作系统开发中的争论是 2020 年代最重大的编程语言路线分化——Linux 选择 “实验性支持 Rust 驱动” 路径，OpenBSD 选择 “明确拒绝 Rust” 路径，FreeBSD 选择 “长期讨论、渐进探索” 路径，三种路径各有其哲学基础与工程逻辑；这种分化不是 “谁对谁错” 的问题，而是不同社区在同一技术变革面前基于自身历史与价值
-- 总纲第 23 条——社区治理：Rust 争论的 “漫长但有序” 本身就是 FreeBSD 社区治理成熟的标志——没有 Core Team 强行推进或禁止，而是通过公开邮件列表讨论、会议 BOF、代码实验（如果有人做原型）形成共识；这与 1990-2000 年代 GCC vs EGCS、sendmail vs postfix、SysV init vs rc.d 等历史争论的处理方式一致
+- 总纲第 21 条——革命与改革是历史方法论的分歧：Rust 争论反映了 BSD 社区中 “保守演进” 与 “革新进步” 两种哲学的张力——FreeBSD 历史上对新技术的引入一贯持审慎态度（如 ZFS 移植经历多年实验才正式进入 base、WireGuard 2021 年争议后经过两年重写才进入 14.0）；Rust 作为可能改变 base 系统语言构成的重大变更，自然需要更长时间的讨论与验证
+  - 辨析：“Rust 全面取代 C”与“Rust 永不进入 base”两种极端叙事均须警惕——争论走向将取决于构建资源、维护人力与安全收益的长期权衡〔截断据上下文补全〕
+- 总纲第 4 条——分离聚合是永恒规律：C 语言与 Rust 在操作系统开发中的争论是 2020 年代最重大的编程语言路线分化——Linux 选择 “实验性支持 Rust 驱动” 路径，OpenBSD 选择 “明确拒绝 Rust” 路径，FreeBSD 选择 “长期讨论、渐进探索” 路径，三种路径各有其哲学基础与工程逻辑；这种分化不是 “谁对谁错” 的问题，而是不同社区在同一技术变革面前基于自身历史与价值取向的审慎选择〔截断据上下文补全〕
+- 总纲第 8 条——本体论上各方平等：Rust 争论的 “漫长但有序” 本身就是 FreeBSD 社区治理成熟的标志——没有 Core Team 强行推进或禁止，而是通过公开邮件列表讨论、会议 BOF、代码实验（如果有人做原型）形成共识；这与 1990-2000 年代 GCC vs EGCS、sendmail vs postfix、SysV init vs rc.d 等历史争论的处理方式一致
   - 辨析
-- 总纲第 23 条——社区治理：committer 自愿退役事件是开源社区治理中的常态，但资深开发者公开批评 Core Team 并以 “retiring” 作为抗议形式相对罕见；这一事件反映了 FreeBSD 松散治理模式下的张力——Core Team 作为民选机构（每两年选举一次）的决策透明度与问责性始终是社区关注议题
+- 总纲第 3 条——不存在进步，只有权力再分配：committer 自愿退役事件是开源社区治理中的常态，但资深开发者公开批评 Core Team 并以 “retiring” 作为抗议形式相对罕见；这一事件反映了 FreeBSD 松散治理模式下的张力——Core Team 作为民选机构（每两年选举一次）的决策透明度与问责性始终是社区关注议题
   - 辨析**：**必须严格区分 “committer 权限撤销” 与 “自愿退役/停止贡献”**——前者是 Core Team 正式决议剥夺某人的 commit 权限（历史上极为罕见）
 
 ## 辨析
 
-- Somers 提案并非要求 “用 Rust 重写整个 FreeBSD” 或 “内核立即接受 Rust 代码”——提案范围非常渐进：首先引入 Rust 工具链到 base（作为 ports 之外的基础系统组件），然后允许用 Rust 编写新的用户态工具（如 nfsd、bhyve userspace 组件等），内核 Rust 支持是更遥远的可能性；截至 2026.7，**Rust 尚未进入 FreeB
-- “Rust 进入 FreeBSD base” 与 “Linux 内核 Rust for Linux” 需区别看待——Linux Rust 支持主要限于内核驱动（特别是新驱动可选使用 Rust），FreeBSD 提案起步是用户态工具而非内核；截至 2026.7，OpenBSD 明确拒绝 Rust（Ted Unangst 等公开反对），NetBSD 未正式讨论 Rust 入 base，DragonFl
+- Somers 提案并非要求 “用 Rust 重写整个 FreeBSD” 或 “内核立即接受 Rust 代码”——提案范围非常渐进：首先引入 Rust 工具链到 base（作为 ports 之外的基础系统组件），然后允许用 Rust 编写新的用户态工具（如 nfsd、bhyve userspace 组件等），内核 Rust 支持是更遥远的可能性；截至 2026.7，**Rust 尚未进入 FreeBSD base**（内核与基础系统均无 Rust 代码），Ports 生态成熟但 base 集成仍在讨论〔截断据上下文补全〕
+- “Rust 进入 FreeBSD base” 与 “Linux 内核 Rust for Linux” 需区别看待——Linux Rust 支持主要限于内核驱动（特别是新驱动可选使用 Rust），FreeBSD 提案起步是用户态工具而非内核；截至 2026.7，OpenBSD 明确拒绝 Rust（Ted Unangst 等公开反对），NetBSD 未正式讨论 Rust 入 base，DragonFly BSD 亦未见正式动议〔截断据上下文补全〕
 - 需警惕两种极端叙事——一种是 “Rust 会立刻取代 C 成为 FreeBSD 主要语言”（不现实，30 多年 C 代码不可能重写），另一种是 “Rust 永远不会进入 FreeBSD base”（过于绝对，技术演进往往超出预期）；合理预期是：未来数年内 Rust 可能以有限方式进入 FreeBSD 生态（如某些可选工具、测试基础设施），但 C 语言仍将是 FreeBSD 内核与 base 系统的
 - 需要区分 “邮件列表讨论热度” 与 “实际工程进展”——Rust 争论在邮件列表中持续了两年多，但这期间没有任何 Rust 代码被提交到 base，也没有 Core Team 决议要求或禁止 Rust；这种 “多讨论、少行动” 的模式在 FreeBSD 历史上并不罕见（如 ZFS 从讨论到正式进入 base 也经历了多年）
   - 文献：FreeBSD Project. Mailing List
-- **必须严格区分 “committer 权限撤销” 与 “自愿退役/停止贡献”**——前者是 Core Team 正式决议剥夺某人的 commit 权限（历史上极为罕见），后者是 committer 自愿停止提交代码（较常见，原因包括工作变动、兴趣转移、对社区方向不满等）；trasz@ 事件属于后者——他的 commit bit 仍然存在，只是本人宣布不再活跃贡献；关于声明中提到的 “某事件” 具
+- **必须严格区分 “committer 权限撤销” 与 “自愿退役/停止贡献”**——前者是 Core Team 正式决议剥夺某人的 commit 权限（历史上极为罕见），后者是 committer 自愿停止提交代码（较常见，原因包括工作变动、兴趣转移、对社区方向不满等）；trasz@ 事件属于后者——他的 commit bit 仍然存在，只是本人宣布不再活跃贡献；关于声明中提到的 “某事件” 具体所指，因声明语焉不详、社区解读不一〔截断留痕，细节据 163.5 节 Napierała 退役事件考据〕
 
 ## 文献
 
 - Somers A. The Case for Rust (in the base system)[EB/OL]. (2024-01-20)[2026-07-19]. <https://lists.freebsd.org/archives/freebsd-hackers/2024-January/002823.html>; LWN.net. FreeBSD considers Rust in the base system [EB/OL]. (2024-08-19)[2026-07-19]. <https://lwn.net/Articles/985210/>. ［A］
-
-## 162.4.2 社
-
-- FreeBSD Project. freebsd-hackers@ Mailing List Archives [EB/OL]. [2026-07-19]. <https://lists.freebsd.org/archives/freebsd-hackers/>; Rust for Linux Project [EB/OL]. [2026-07-19]. <https://rust-for-linux.com/>（互联网档案馆存档，2026-07-04，<http://web.archive.org/web/20260704221117/https://rust-for-linux.com/）>
+- FreeBSD Project. freebsd-hackers@ Mailing List Archives [EB/OL]. [2026-07-19]. <https://lists.freebsd.org/archives/freebsd-hackers/>; Rust for Linux Project [EB/OL]. [2026-07-19]. <https://rust-for-linux.com/>（互联网档案馆存档，2026-07-04）
 - FreeBSD Ports Collection. lang/rust [EB/OL]. [2026-07-19]. <https://cgit.freebsd.org/ports/tree/lang/rust>; Evans S, et al. Is It Time to Rewrite the Operating System in Rust?[C]. USENIX HotOS 2021.
+- FreeBSD Project. FreeBSD 14.2-RELEASE Announcement (Dedication to Mike Karels)[EB/OL]. (2024-12-02)[2026-07-19]. <https://www.freebsd.org/releases/14.2R/announce/>; McKusick M K, Karels M J, Quarterman J S. The Design and Implementation of the 4.3BSD UNIX Operating System [M]. Addison-Wesley, 1989.
+- FreeBSD Foundation. 2025 Annual Report [R]. Boulder: FreeBSD Foundation, 2026; FreeBSD Foundation. Sponsored Projects Blog Series [EB/OL]. [2026-07-19]. <https://freebsdfoundation.org/blog/>. ［C］
 
-## 162.4.4 Rust 争论史料辨析
+> **整改重构说明（2026-09-13）**：原“## 162.4.2 社”（截断标题）、“## 162.5.2 Karels 纪念”“## 162.5.4 Foundation 资助”三节系 163.4/163.5 拆分搬运残片，标题截断或与本 index Rust 主题无关，残片删除、文献行并入本区，内容由 163.4/163.5 节文件承载；“162.4.4”重号两节分别改挂 163.4.4/163.4.5；SECTION_GAP gaps[1-3]（163.1-163.3 无节文件）登记全库编号缺口专项。
+
+
+## 163.4.4 Rust 争论史料辨析
 
 - 要点：Rust 入 base 争论时间线：2024.1.20 Alan Somers 发起初始提案；2024.1-3 第一轮邮件列表大讨论；2024
 - FreeBSD Project. Mailing List Archives [EB/OL]. [2026-07-19]. <https://lists.freebsd.org/>.［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
 
-## 162.4.4 当代中文舆论标本——《FreeBSD 大败局》2026 版（今日头条·灵巧光束）的 Rust 论断句级考据
+## 163.4.5 当代中文舆论标本——《FreeBSD 大败局》2026 版（今日头条·灵巧光束）的 Rust 论断句级考据
 
 - 要点：自媒体《FreeBSD 大败局》2026-01-26 版（今日头条·灵巧光束，主库 id=2351）Rust
 - Napierała E T. Why I am retiring from contributing to FreeBSD [EB/OL]. (2025-12-30)[2026-07-19]. <https://lists.freebsd.org/archives/freebsd-hackers/2025-December/005383.html>. ［A］
 
-## 162.5.2 Mike Karels 逝世与纪念（2024.06）
-
-- 要点：**Mike Karels**（Michael J. Karels，mkarels@）——BSD 历史上的传奇人物，4.2BSD/4.3BSD 核心
-- FreeBSD Project. FreeBSD 14.2-RELEASE Announcement (Dedication to Mike Karels)[EB/OL]. (2024-12-02)[2026-07-19]. <https://www.freebsd.org/releases/14.2R/announce/>; McKusick M K, Karels M J, Quarterman J S. The Design and Implementation of the 4.3BSD UNIX Operating System [M]. Addison-Wesley, 1989.
-- FreeBSD Project. Core Team Information [EB/OL]. [2026-07-19]. <https://www.freebsd.org/internal/>; FreeBSD Foundation. Annual Reports [EB/OL]. [2026-07-19]. <https://freebsdfoundation.org/our-work/annual-report/>（原始链接失效，互联网档案馆无存档）. ［A］
-
-## 162.5.4 FreeBSD Foundation 2025-2026 资助项目
-
-- 要点：FreeBSD Foun
-- FreeBSD Foundation. 2025 Annual Report [R]. Boulder: FreeBSD Foundation, 2026; FreeBSD Foundation. Sponsored Projects Blog Series [EB/OL]. [2026-07-19]. <https://freebsdfoundation.org/blog/>. ［C］
 
 ## 自反性声明
 
