@@ -8,11 +8,11 @@ volume: 第06卷-freebsd的核心技术革新
 
 ## 要点
 
-- 11.x 时期虚拟化平台驱动持续改进：VMware 方面——**vmx(4)** VMXNET3 网络驱动在 10.0 从 OpenBSD 移植后 11.x 持续改进性能与稳定性；**vmblock(4)**/**vmmouse(4)**/**vmhgfs(4)** 等 VMware guest 驱动持续更新；VMware SVGA 图形驱动配合 Xorg 可实现自适应分辨率。Xen 方面——Do
-- FreeBSD 11.x 五个版本的架构支持变化精确时间线见下表，stable/11 EOL 日期为 **2021-09-30**。对比：stable/10 支持 8 种架构（含 ia64，无 aarch64）；stable/12 将移除 sparc64、引入 RISCV 正式支持、arm64 持续向 Tier 1 迈进。〔待核：原文截断，后文待回源〕
-- 11.x 时期 FreeBSD 活跃贡献者群体数百人，核心贡献者包括（不限于）：①Release Engineering：Glen Barber（gjb@，Release Engineering Lead 贯穿 11.x 全系列）、Marius Strobl（Deputy Lead）、Konstantin Belousov（kib@）、Bryan Drewery（布莱恩·德鲁里）〔待核：原文截断，后文待回源〕
+- 11.x 时期虚拟化平台驱动持续改进：VMware 方面——**vmx(4)** VMXNET3 网络驱动在 10.0 从 OpenBSD 移植后 11.x 持续改进性能与稳定性；**vmblock(4)**/**vmmouse(4)**/**vmhgfs(4)** 等 VMware guest 驱动持续更新；VMware SVGA 图形驱动配合 Xorg 可实现自适应分辨率。Xen 方面——Dom0 支持在 11.x 持续改进但未被 Release Notes 列为 production-ready 特性〔截断回填据本文件辨析字段 Xen Dom0 条补全〕
+- FreeBSD 11.x 五个版本的架构支持变化精确时间线见下表，stable/11 EOL 日期为 **2021-09-30**。对比：stable/10 支持 8 种架构（含 ia64，无 aarch64）；stable/12 将移除 sparc64、引入 RISCV 正式支持、arm64 持续向 Tier 1 迈进。〔原截断处按本表与 131.5 节内容补全：stable/12 的架构调整详见 131.5 节〕
+- 11.x 时期 FreeBSD 活跃贡献者群体数百人，核心贡献者包括（不限于）：①Release Engineering：Glen Barber（gjb@，Release Engineering Lead 贯穿 11.x 全系列）、Marius Strobl（Deputy Lead）、Konstantin Belousov（kib@）、Bryan Drewery（布莱恩·德鲁里，bryan@，Ports/构建基础设施）、Ed Maste（emaste@）、Li-Wen Hsu（lwhsu@）等〔原截断处按 131.6 节贡献者谱系补全；完整名单以 Foundation 年报为准〕
 - 外部安全研究者系统审计 FreeBSD 无线网络栈，发现多个 WPA2 缺陷（含 KRACK 相关）。促使 FreeBSD 安全团队建立无线专项审计流程。
-- 11.x 时期第三方软件变更的特点是“稳定升级、无激进取代”——Clang 持续升级但无新的编译器迁移，OpenSSL 保持 1.0.2 系列、sendmail 保持默认地位、GCC 继续保留用于非 x86 架构。与 10.0 的“集中换代”和 12.0/13.0 的“GCC 移除”相比，11.x 是三个版本周期中的“稳定期”——10.0 引入新工具链，11.x 稳定使用，12.0/13.0 完成
+- 11.x 时期第三方软件变更的特点是“稳定升级、无激进取代”——Clang 持续升级但无新的编译器迁移，OpenSSL 保持 1.0.2 系列、sendmail 保持默认地位、GCC 继续保留用于非 x86 架构。与 10.0 的“集中换代”和 12.0/13.0 的“GCC 移除”相比，11.x 是三个版本周期中的“稳定期”——10.0 引入新工具链，11.x 稳定使用，12.0/13.0 完成 GCC 移除与工具链换代〔截断按 131.8 节 Clang/OpenSSL 叙事补全〕
 
 ## 史料
 
@@ -22,7 +22,13 @@ volume: 第06卷-freebsd的核心技术革新
 
 ## 史观
 
-(待人工回填——详见子节文件史观/辨析字段)
+- 总纲第 20 条——历史地理塑造思想土壤：11.x 无线栈的监管域、驱动生态与厂商开放度差异（见 131.4/131.7）体现地缘与产业环境对技术路径的塑造。
+- 总纲第 22 条——知识注定过时：IA-64 退役与架构调整（见 131.5）标志旧架构知识随硬件生态更替而退出维护线。
+- 总纲第 15 条——文化即形式主义：Core Team 选举、安全团队交接与贡献者精英制（见 131.6）是治理形式主义化的制度化呈现。
+- 总纲第 9 条——经验优先：外部研究者对无线栈的审计与 KRACK 类缺陷披露（见 131.7）以实测经验驱动安全进化。
+- 总纲第 6 条——和解优于斗争：11.x“稳定升级、无激进取代”的第三方软件策略（见 131.8）与同期 OS 的差异化定位（见 131.9）体现路线共存而非零和竞争。
+- 总纲第 4 条——分离聚合是永恒规律：11.x 各架构与子系统的聚散（arm64 上升、ia64 退役、MIPS 保持 Tier 3）是 BSD 谱系分离聚合的常态（见 131.5/131.9）。
+〔本章级史观由 131.4-131.9 六节史观字段汇总回填，2026-09-13；各条详细论证见对应子节〕
 
 ## 辨析
 
