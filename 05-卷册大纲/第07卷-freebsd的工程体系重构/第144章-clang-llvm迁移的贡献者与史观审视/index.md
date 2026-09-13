@@ -62,7 +62,7 @@ volume: 第07卷-freebsd的工程体系重构
 ## 144.15.3 总纲第 21 条审视——革命与改革的方法论分歧
 
 - 要点：总纲第 21 条断言“革命与改革是历史方法论的分歧。Linux 靠革命，BSD 靠改革。改革的困难远高于革命”。以此审视 FreeBSD 许可证纯洁化工程，可见其方法论本质是典型的“改革”而非“革命”——FreeBSD 采取“导入 → 可选 → 默认 → 移除”四阶段渐进策略（以 GCC 为例：2009 可编译 →2012 base 可选 →2014 默认 →
-- Free Software Foundation. 各类许可证及其评论 [EB/OL]. **<https://www.gnu.org/licenses/license-list.html**>（2026-07-23 核验）；Free Software Foundation. GNU General Public License Version 3 [Z]. 2007-06-29；Apache Software Foundation. Apache License, Version 2.0 [Z]. 2004-01. ［A］
+- Free Software Foundation. 各类许可证及其评论 [EB/OL]. **<https://www.gnu.org/licenses/license-list.html>**（2026-07-23 核验）；Free Software Foundation. GNU General Public License Version 3 [Z]. 2007-06-29；Apache Software Foundation. Apache License, Version 2.0 [Z]. 2004-01. ［A］
 
 ## 自反性声明
 
