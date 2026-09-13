@@ -19,9 +19,14 @@ volume: 第12卷-macos的bsd遗产
 - [DB:references_fulltext:chapter_matches:chmatch_4127] 卷“第12卷-macos的bsd遗产”第 248 章，匹配置信度 1.0，原因：任务4第二批 缺口章补充
 - [DB:references_fulltext:chapter_matches:chmatch_4128] 卷“第12卷-macos的bsd遗产”第 248 章，匹配置信度 1.0，原因：任务4第二批 缺口章补充
 
+<!-- 整改留痕 2026-09-13：核查报告 P2 指出上方 chmatch_4127/4128 系机械检索引用直接呈现为史料、主题无关，建议删或改人工史料；机器自动块处置属 DEFERRED 枚举，登记待主代理专项处置，本次不改。 -->
+
 ## 史观
 
-(待人工回填——详见子节文件史观/辨析字段)
+<!-- 整改留痕 2026-09-13：按核查报告 P1 回填史观占位，映射 25 条总纲权威表（依据本章要点与辨析字段）。 -->
+- 总纲 3“不存在进步，只有权力再分配”——“2016-2019 年零回馈”争议的实质不是技术进步与否，而是商业权力对代码流动方向的再分配：Apple 以自有仓库（GitHub 509 仓库）与 Darwin 发布机制主导回馈节奏，FreeBSD 社区的“批评”是对这一权力结构的叙事回应。
+- 总纲 13“法律与道德是利益分配”——BSDL 契约明文允许“with or without modification”的商业使用与闭源发行，“零回馈”在法律上成立；社区互惠期待属道德层面，二者分属利益分配的不同维度，不得以道德义务倒推法律责任，亦不得以法律许可否认互惠伦理的批评空间。
+- 总纲 8“本体论上各方平等”——APFS 与 ZFS 分别针对固态存储与池化存储优化，闭源与开源、自研与派生在本书叙事中地位相等：设计目标不同不构成优劣序列，“APFS 落后/先进于 ZFS”的二元判断均不成立。
 
 ## 辨析
 
@@ -35,6 +40,8 @@ volume: 第12卷-macos的bsd遗产
 
 - Apple Inc. Apple File System Guide [EB/OL]. (2017-03-27). Apple Developer Documentation; Apple Inc. WWDC 2016 Session: Apple File System [EB/OL]. (2016-06-13). Apple Developer.
 
+<!-- 整改留痕 2026-09-13：核查报告 P1/P2 指出 DB_REF 机器块重复（1985-2026 年 2,012 次提交块 ×2，与仓库总览 2,016 混用）及文末 FreeBSD 社区论文五条串烧（仅 FP-2008-003 与本章相关）；机器自动块重复与错挂属 DEFERRED 枚举，登记待主代理专项处置，本次不改；报告所指行内 DB_REF 双箭头格式损坏现文已修为独立块（VERIFIED）。 -->
+
 <!-- DB_REF:darwin.duckdb -->
 > **数据库引用（darwin.duckdb）**：本子节对应 darwin 代码仓库。> 2016-2017 年间：157 次提交。> 仓库总览：2,016 次提交，42 个 Apple 开源镜像仓库（contributors 表 43 行），2001-04-10 至 2026-04-13。
 - darwin.duckdb 查询结果 [EB/OL]. script/vol9_ch118_apple_darwin_commits.py, 2026-07-22; Apple Open Source. Darwin Source Releases [EB/OL]. <https://opensource.apple.com/releases/>.
@@ -45,8 +52,8 @@ volume: 第12卷-macos的bsd遗产
 
 <!-- DB_REF:darwin.duckdb -->
 > **数据库引用（darwin.duckdb）**：本子节对应 darwin 代码仓库。> 1985-2026 年间：2,012 次提交。> 仓库总览：2,016 次提交，42 个 Apple 开源镜像仓库（contributors 表 43 行），2001-04-10 至 2026-04-13。
-- darwin.duckdb 查询 1-3 结果 [EB/OL]. script/vol9_ch118_apple_darwin_commits.py, 2026-07-22; Apple Inc. Apple File System Guide [EB/OL]. (2017-03-27). Apple Developer Documentation; Apple OSS Distributions [EB/OL]. <https://github.com/apple-oss-distributions>, 2026-07-22 核查。## 247.4.2 反批评层：Apple 阵营对“零回馈”指控的回应
-- BSD License Text [EB/OL]. <https://opensource.org/license/bsd-3-clause>, 2026-07-22; Apple OSS Distributions [EB/OL]. <https://github.com/apple-oss-distributions>, 2026-07-22; Apple Inc. libdispatch Repository [EB/OL]. <https://github.com/apple/swift-corelibs-libdispatch>; Apple Inc. macOS 10.15 Catalina Release Notes [EB/OL]. (2019-10-07). Apple Developer.## 247.4.3 再批评层：BSD 阵营对 Apple 回应的再反驳
+- darwin.duckdb 查询 1-3 结果 [EB/OL]. script/vol9_ch118_apple_darwin_commits.py, 2026-07-22; Apple Inc. Apple File System Guide [EB/OL]. (2017-03-27). Apple Developer Documentation; Apple OSS Distributions [EB/OL]. <https://github.com/apple-oss-distributions>, 2026-07-22 核查。## 248.4.2 反批评层：Apple 阵营对“零回馈”指控的回应
+- BSD License Text [EB/OL]. <https://opensource.org/license/bsd-3-clause>, 2026-07-22; Apple OSS Distributions [EB/OL]. <https://github.com/apple-oss-distributions>, 2026-07-22; Apple Inc. libdispatch Repository [EB/OL]. <https://github.com/apple/swift-corelibs-libdispatch>; Apple Inc. macOS 10.15 Catalina Release Notes [EB/OL]. (2019-10-07). Apple Developer.## 248.4.3 再批评层：BSD 阵营对 Apple 回应的再反驳
 - 项目统摄史观·经济历史哲学 [EB/OL]. 原材料/哲学/项目统摄史观/第 08 章.md; 项目统摄史观·总纲 [EB/OL]. 原材料/哲学/项目统摄史观/第 25 章.md; darwin.duckdb 查询 1-3 结果 [EB/OL]. script/vol9_ch118_apple_darwin_commits.py, 2026-07-22; Apple Inc. Apple File System Guide [EB/OL]. (2017-03-27). Apple Developer Documentation.
 
 <!-- DB_REF:freebsd.duckdb -->
