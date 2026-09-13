@@ -26,7 +26,7 @@ volume: 第06卷-freebsd的核心技术革新
 
 ## 史观
 
-(待人工回填——详见子节文件史观/辨析字段)
+总纲第 4 条——分离聚合是永恒规律：DTrace 自 Solaris 分离，经 FreeBSD 移植与 OpenDTrace 跨平台整理，再聚合入 macOS、Windows 与 illumos；其验证器、探针抽象与聚合模型又经 eBPF 在 Linux 生态重生——追踪技术的传承呈反复分离与聚合，不以许可证或阵营为边界。各子节逐条史观映射详见本章各子节文件的史观字段。
 
 ## 辨析
 
@@ -46,7 +46,21 @@ volume: 第06卷-freebsd的核心技术革新
 
 <!-- DB_REF:freebsd.duckdb -->
 > **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 2010-2020 年间：488,947 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
-- FreeBSD Project. freebsd.duckdb freebsd-src 仓库 commit 数据库 [DB/OL]. 2026-07-27. **03-原始史料库/01-代码仓库史料/01-数据库本体/freebsd.duckdb**; Hibsd Project. 推断性统计.md [R/OL]. 2026-07-27. **03-原始史料库/01-代码仓库史料/01-数据库本体/统计分析/推断性统计.md** Task 5-6; Hibsd Project. 时间序列分析.md [R/OL]. 2026-07-27. **03-原始史料库/01-代码仓库史料/01-数据库本体/统计分析/时间序列分析.md** Task 14-15; Hibsd Project. 卷章数据映射.md [R/OL]. 2026-07-27. **03-原始史料库/01-代码仓库史料/01-数据库本体/统计分析/卷章数据映射.md** 第五卷第 51 章映射。［A］### 史观映射> DTrace 的“零开销”许诺是一种消解性的美——在生产环境中做到观测而不扰动，本身就是对复杂性最安静的否定。但这份安静没能传到 Linux 那一侧：CDDL 让 DTrace 成为 Linux 社区口中“嫉妒的对象”而非“技术的同行”，Corbet 勾勒的“嫉妒”话语框架将 DTrace 定位为可望不可即的彼岸而非可对话的伙伴；但 DTrace 的设计思想并未因许可证壁垒而消亡——安全验证器、探针抽象、聚合模型通过 eBPF 在 Linux 生态中获得了新生，Brendan Gregg 从 DTrace 布道者到 eBPF 核心贡献者的转变本身就是这一技术谱系的最佳证明；Oracle 以 GPLv2+ 重新许可 DTrace Linux 代码的那一天，CDDL 路线在 Linux 上的工程话语权败局已写定——不是 DTrace 的探针失效了，而是许可证的边界比探针划得更深；然而 DTrace 在 FreeBSD、macOS、illumos 上继续安静地运行着，Netflix Open Connect CDN 每天用它分析 TB 级流量，这本身就是对“被击败”叙事最沉默的反驳——好的技术不需要赢下所有平台，只要在它存在的地方可靠地工作---> ## 第 51.13 不同时期人员的采访录（详见 [采访录.md](采访录.md)）## 第 51.14 节 媒体反响与社区舆论（详见 [媒体反响与社区舆论.md](媒体反响与社区舆论.md)）[^doubt-resolved-624]: 据 piotrowski-benchmarking-performance-overhead-of-dtrace-on-freebsd-and-ebpf-on-linux-paper (asiabsdcon, 2024) 消解[^doubt-resolved-625]: 据 Mac OS X Internals A Systems Approach (Amit Singh（阿米特·辛格）)  (未署名) 消解[^doubt-resolved-626]: 据 Handbook (未署名) 消解[^doubt-resolved-627]: 据 Design_Implementation_FreeBSD_OS (未署名) 消解[^doubt-resolved-628]: 据 Design_Implementation_FreeBSD_OS (未署名) 消解[^doubt-resolved-629]: 据 JavaScriptFirst20Years (WirfsBrockEich, 2020) 消解[^doubt-resolved-630]: 据 Mac OS X Internals A Systems Approach (Amit Singh)  (未署名) 消解
+- FreeBSD Project. freebsd.duckdb freebsd-src 仓库 commit 数据库 [DB/OL]. 2026-07-27. **03-原始史料库/01-代码仓库史料/01-数据库本体/freebsd.duckdb**; Hibsd Project. 推断性统计.md [R/OL]. 2026-07-27. **03-原始史料库/01-代码仓库史料/01-数据库本体/统计分析/推断性统计.md** Task 5-6; Hibsd Project. 时间序列分析.md [R/OL]. 2026-07-27. **03-原始史料库/01-代码仓库史料/01-数据库本体/统计分析/时间序列分析.md** Task 14-15; Hibsd Project. 卷章数据映射.md [R/OL]. 2026-07-27. **03-原始史料库/01-代码仓库史料/01-数据库本体/统计分析/卷章数据映射.md** 第五卷第 51 章映射。［A］
+
+### 史观映射
+
+> DTrace 的“零开销”许诺是一种消解性的美——在生产环境中做到观测而不扰动，本身就是对复杂性最安静的否定。但这份安静没能传到 Linux 那一侧：CDDL 让 DTrace 成为 Linux 社区口中“嫉妒的对象”而非“技术的同行”，Corbet 勾勒的“嫉妒”话语框架将 DTrace 定位为可望不可即的彼岸而非可对话的伙伴；但 DTrace 的设计思想并未因许可证壁垒而消亡——安全验证器、探针抽象、聚合模型通过 eBPF 在 Linux 生态中获得了新生，Brendan Gregg 从 DTrace 布道者到 eBPF 核心贡献者的转变本身就是这一技术谱系的最佳证明；Oracle 以 GPLv2+ 重新许可 DTrace Linux 代码的那一天，CDDL 路线在 Linux 上的工程话语权败局已写定——不是 DTrace 的探针失效了，而是许可证的边界比探针划得更深；然而 DTrace 在 FreeBSD、macOS、illumos 上继续安静地运行着，Netflix Open Connect CDN 每天用它分析 TB 级流量，这本身就是对“被击败”叙事最沉默的反驳——好的技术不需要赢下所有平台，只要在它存在的地方可靠地工作。
+
+本章不同时期人员的采访录详见 [采访录.md](采访录.md)。
+
+[^doubt-resolved-624]: 据 piotrowski-benchmarking-performance-overhead-of-dtrace-on-freebsd-and-ebpf-on-linux-paper (asiabsdcon, 2024) 消解
+[^doubt-resolved-625]: 据 Mac OS X Internals A Systems Approach (Amit Singh（阿米特·辛格）)  (未署名) 消解
+[^doubt-resolved-626]: 据 Handbook (未署名) 消解
+[^doubt-resolved-627]: 据 Design_Implementation_FreeBSD_OS (未署名) 消解
+[^doubt-resolved-628]: 据 Design_Implementation_FreeBSD_OS (未署名) 消解
+[^doubt-resolved-629]: 据 JavaScriptFirst20Years (WirfsBrockEich, 2020) 消解
+[^doubt-resolved-630]: 据 Mac OS X Internals A Systems Approach (Amit Singh)  (未署名) 消解
 
 <!-- DB_REF:freebsd.duckdb -->
 > **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 2010-2020 年间：488,947 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
@@ -93,9 +107,9 @@ volume: 第06卷-freebsd的核心技术革新
 
 - 总纲4 分离聚合是永恒规律：DTrace 从 Solaris 发明、经 FreeBSD 移植、再由微软带入 Windows，追踪工具的跨系统传承显示技术思想的流动并不以许可证或阵营为边界。（BSD Now EP269，[3441.20-3510.40]，L2）
 - 总纲10 动手者创造历史：波兰 BSD 用户组以“先做起来、控制在十五分钟演讲、保持低成本”的方式维系社区，说明地方社区依靠组织者的持续投入而非宏大规划得以存续。（BSD Now EP269，[3019.68-3177.30]，L2）
-- 总纲15 文化即形式主义：总纲15 文化即形式主义：Mark Phillips 把营销还原为讲故事的形式，提示技术传播中的品牌叙事同样是形式化构造。（BSD Now EP622，[2702.70-2727.46]，L1）
-- 总纲10 动手者创造历史：总纲10 动手者创造历史：他以工程师背景亲手测试 ZFS 根镜像并反馈给 Colin Percival，体现使用者参与塑造云镜像。（BSD Now EP622，[1215.20-1244.40]，L1）
-- 总纲9 经验优先：总纲9 经验优先：其讲故事方法论基于多年创业与营销一线经验，而非抽象理论推演。（BSD Now EP622，[2553.94-2822.94]，L1）
+- 总纲15 文化即形式主义：Mark Phillips 把营销还原为讲故事的形式，提示技术传播中的品牌叙事同样是形式化构造。（BSD Now EP622，[2702.70-2727.46]，L1）
+- 总纲10 动手者创造历史：他以工程师背景亲手测试 ZFS 根镜像并反馈给 Colin Percival，体现使用者参与塑造云镜像。（BSD Now EP622，[1215.20-1244.40]，L1）
+- 总纲9 经验优先：其讲故事方法论基于多年创业与营销一线经验，而非抽象理论推演。（BSD Now EP622，[2553.94-2822.94]，L1）
 
 **辨析**：
 
