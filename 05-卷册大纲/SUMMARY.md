@@ -3763,6 +3763,7 @@
   - [197 【Linux社区】峰会日程全文与威胁模型注入](./第20卷-linux社区史与比较研究/197-峰会日程全文与威胁模型注入.md)
   - [198 【Linux社区】kernelorg年报与C去UB进度](./第20卷-linux社区史与比较研究/198-kernelorg年报与C去UB进度.md)
   - [193 【Linux社区】维护门槛与无声离场证言](./第20卷-linux社区史与比较研究/193-维护门槛与无声离场证言.md)
+  - [196 【Linux社区】THEREST分流与generatedcontent](./第20卷-linux社区史与比较研究/196-THEREST分流与generatedcontent.md)
 ## 读者指引（大纲侧）
 
 - 大纲侧手动维护区，脚本重跑保留。
