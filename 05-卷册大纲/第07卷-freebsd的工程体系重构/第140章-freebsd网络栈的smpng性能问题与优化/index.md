@@ -32,24 +32,18 @@ volume: 第07卷-freebsd的工程体系重构
 - D 6 周期的优化主要针对这些热点；部分网络文章称 “FreeBSD 5 网络慢得 unusable”，这是相对于 FreeBSD 4 和 Linux 2.6 的比较级说法，不是绝对不可用
 
 **文献**：FreeBSD Project. *SMPng Project Documentation*. freebsd.org/smp; McKusick, M. K., Neville-Neil, G. V., & Watson, R. N. M. (2014)
-- 性能倒退百分比的准确数字——不同硬件配置、不同工作负载下倒退幅度差异巨大，单 CPU 几乎无倒退，4 路 SMP 高网络负载下可能倒退 50% 以上，网上常说的 “50% 倒退” 是特定测试场景数字，不是普遍情况；“FreeBSD 5.0 是失败的版本”——从工程角度看 5.0 是技术预览版，向 SMP 架构迁移的必要步骤，但项目在版本命名和用户预期管理上存在不足；FreeBSD 5.x 持续了约
-- KTLS 引入版本——基础框架在 FreeBSD 12.0（2018）但只支持发送方向且功能有限，完整的双向 TLS 1.2/1.3 支持和硬件 offload 在 FreeBSD 13.0（2021）完成；KTLS 不是 “绕过加密”——它只是把记录层操作移到内核，加密本身仍使用相同的密码套件（AES-GCM、ChaCha20-Poly1305 等），安全性不变；Netflix 800 Gbps
+- 性能倒退百分比的准确数字——不同硬件配置、不同工作负载下倒退幅度差异巨大，单 CPU 几乎无倒退，4 路 SMP 高网络负载下可能倒退 50% 以上，网上常说的 “50% 倒退” 是特定测试场景数字，不是普遍情况；“FreeBSD 5.0 是失败的版本”——从工程角度看 5.0 是技术预览版，向 SMP 架构迁移的必要步骤，但项目在版本命名和用户预期管理上存在不足。［订正注：原句尾部 “FreeBSD 5.x 持续了约” 断尾无法回源，2026-09-14 按核查报告删除断尾］
+- KTLS 引入版本——基础框架在 FreeBSD 12.0（2018）但只支持发送方向且功能有限，完整的双向 TLS 1.2/1.3 支持和硬件 offload 在 FreeBSD 13.0（2021）完成；KTLS 不是 “绕过加密”——它只是把记录层操作移到内核，加密本身仍使用相同的密码套件（AES-GCM、ChaCha20-Poly1305 等），安全性不变。［订正注：原句尾部 “Netflix 800 Gbps” 断尾无法回源，2026-09-14 按核查报告删除断尾］
 - “Linux KTLS 比 FreeBSD 早 4 年”——技术上 Linux 4.13（2017）有初始框架，但生产可用的完整支持（包括 sendfile 零拷贝、TLS 1.3、硬件 offload）两者时间相近（2019-2021）；Nginx 在两个平台上都支持 KTLS，但是配置方式不同；KTLS 是否会取代用户态 TLS（如 OpenSSL）——不会完全取代——用户态 TLS 仍有灵活
-- “丑闻” 一词是否准确——事件中没有发现后门或恶意代码，核心问题是代码质量和审查流程，“丑闻” 是媒体和社区的修辞，实际是工程流程争议；Matt Macy 的代码是否 “完全不合格”——代码可以运行，但存在多个安全和协议一致性问题，需要修复；Netgate 的角色——Netgate 赞助开发本身没有错，争议在于代码合并过程中社区审查不足；部分描述称 “未经任何审查”，这不准确——代码确实经过了 c
+**文献**：FreeBSD Project. *SMPng Project Documentation*. freebsd.org/smp; McKusick, M. K., Neville-Neil, G. V., & Watson, R. N. M. (2014)
+- “丑闻” 一词是否准确——事件中没有发现后门或恶意代码，核心问题是代码质量和审查流程，“丑闻” 是媒体和社区的修辞，实际是工程流程争议；Matt Macy 的代码是否 “完全不合格”——代码可以运行，但存在多个安全和协议一致性问题，需要修复；Netgate 的角色——Netgate 赞助开发本身没有错，争议在于代码合并过程中社区审查不足。［订正注：原句尾部 “部分描述称 “未经任何审查”……确实经过了 c” 句中截断，2026-09-14 按核查报告删除断尾］
 
 ## 文献
 
-- FreeBSD Project. *SMPng Project Documentation*. freebsd.org/smp; McKusick, M. K., Neville-Neil, G. V., & Watson, R. N. M. (2014). *The Design and Implementation of the FreeBSD Operating System* (2nd ed.), Chapter 4; Oppermann, A. (2004-2006). *Network Stack Locking and Performance Posts*. freebsd-ne
+- FreeBSD Project. *SMPng Project Documentation*. freebsd.org/smp; McKusick, M. K., Neville-Neil, G. V., & Watson, R. N. M. (2014). *The Design and Implementation of the FreeBSD Operating System* (2nd ed.), Chapter 4.［订正注：原条目尾部 "Oppermann, A. (2004-2006)……freebsd-ne" 句中截断无法回源补全，2026-09-14 按核查报告删除断尾］
 - Internet Archive. *FreeBSD SMPng Project Pages* (2003-2006 snapshots). web.archive.org; Lucas, M. W. (2007). *Absolute FreeBSD* (2nd ed.). No Starch Press; FreeBSD Project. *Release Notes for FreeBSD 5.0 through 7.0*. freebsd.org.［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
-    FreeBSD 社区论文与演讲 [3
 - Linux Kernel Documentation. *Kernel TLS (kTLS)*. kernel.org; Watson, D. (2017). *Linux kTLS Patches*. lkml.org; Baldwin, J. (2019). *Cross-Platform KTLS Comparison*. freebsd-net@; Chelsio Communications. (2020-2026). *TLS Offload Documentation*. chelsio.com. ［A］
-    FreeBSD 社区论文与演讲 [313]，[313] Mateu
 - FreeBSD Project. *if_wg(4) Initial Commit*. cgit.freebsd.org (2020-11); Netgate Inc. (2020-2021). *WireGuard for FreeBSD Statements*. netgate.com; Donenfeld, J. A. (2020-12). *WireGuard for FreeBSD Review*. <freebsd-net@freebsd.org> mailing list. ［A］
-
-## 139.7.2 Donenfeld 批评与从头重构过程
-
-- 要点：2020 年 12 月
-- FreeBSD Net Mailing List Archives. (2020-11 to 2021-06). *WireGuard Implementation Thread*[Z/OL]. freebsd.org. 获取路径：<https://lists.freebsd.org/archives/freebsd-net/> [访问日期 2026-07-30]; FreeBSD Project. *wg(4) and if_wg(4) Commit History*[Z/OL]. cgit.freebsd.org. 获取路径：<<https://cgit.freebsd.org/src/lo>
 
 ## 自反性声明
 
