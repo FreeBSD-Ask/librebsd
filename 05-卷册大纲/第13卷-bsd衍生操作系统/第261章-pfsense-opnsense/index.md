@@ -8,44 +8,48 @@ volume: 第13卷-bsd衍生操作系统
 
 ## 要点
 
-- pfSense 由 Chris Buechler 与 Scott Ullrich 于 2004 年 9 月自 Manuel Kasper 的 m0n0wall（FreeBSD 嵌入式防火墙）分叉而来，目标是克服 m0n0wall 作为嵌入式系统的可扩展性局限——m0n0wall 功能强大但受限于嵌入式形态，pfSense 旨在提供更完整的 FreeBSD 防火墙发行版；pfSense 沿用 Fre
+- pfSense 由 Chris Buechler 与 Scott Ullrich 于 2004 年 9 月自 Manuel Kasper 的 m0n0wall（FreeBSD 嵌入式防火墙）分叉而来，目标是克服 m0n0wall 作为嵌入式系统的可扩展性局限——m0n0wall 功能强大但受限于嵌入式形态，pfSense 旨在提供更完整的 FreeBSD 防火墙发行版；pfSense 沿用 FreeBSD 的 `pf`/`ipfw`、Packet Filter 与 Web 管理，并由 BSD Perimeter（后更名为 Netgate）提供商业支持，是 FreeBSD 在网络防火墙领域的主导产品。m0n0wall 项目于 2015 年 2 月 15 日由 Manuel Kasper 宣布永久终止，Manuel Kasper 在终止公告中鼓励 m0n0wall 用户迁移至 OPNsense，标志 BSD 防火墙谱系中 m0n0wall 时代的终结与 pfSense/OPNsense 双雄格局的最终形成。
 - pfSense/OPNsense 依赖 FreeBSD 网络栈贡献者与各自社区；Manuel Kasper（瑞士）、Deciso 团队（荷兰）属非英美贡献者。
-- 要点：pfSense 由 Chris Buechler 与 Scott Ullrich 于 2004 年 9 月自 Manuel Kasper 的 m0n0wall（FreeBSD 嵌入式防火墙）分叉而来，目标是克服 m0n0wall 作为嵌入式系统的可扩展性局限——m0n0wall 功能强大但受限于嵌入式形态，pfSense 旨在提供更完整的 FreeBSD 防火墙发行版；pfSense 沿用 FreeBSD 的 `pf`/`ipfw`、Packet Filter 与 Web 管理，并由 BSD Perimeter（后更名为 Netgate）提供商业支持，是 FreeBSD 在网络防火墙领域的主导产品。m0n0wall 项目于 2015 年 2 月 15 日由 Manuel Kasper 宣布永久终止，Manuel Kasper 在终止公告中鼓励 m0n0wall 用户迁移至 OPNsense，标志 BSD 防火墙谱系中 m0n0wall 时代的终结与 pfSense/OPNsense 双雄格局的最终形成。
-- freebsd.duckdb 查询显示 pfsense-src 仓库共 929 条 CVE 相关 commit、567 个去重 CVE，merge commit 比例在 2016 年为 2.3%（661/28,813）、2017 年 2.4%（629/26,654）、2022 年 1.3%（133/10,179），长期维持在 1-3% 水平，显著低于 hardenedbsd-src 同期 24.3% 的
-- 2019 年 5 月 19 日，opnsense-core 仓库记录了 CVE-2019-11816 的修复 commit `03c75f71be88d4d2d930c217377b5ff23f0ecae7`（author Ad Schellevis，committer Franco Fichtner），subject 为 "system: address CVE-2019-11816 privl
+- freebsd.duckdb 查询显示 pfsense-src 仓库共 929 条 CVE 相关 commit、567 个去重 CVE，merge commit 比例在 2016 年为 2.3%（661/28,813）、2017 年 2.4%（629/26,654）、2022 年 1.3%（133/10,179），长期维持在 1-3% 水平，显著低于 hardenedbsd-src 同期 24.3% 的 merge commit 比例。
+- 2019 年 5 月 19 日，opnsense-core 仓库记录了 CVE-2019-11816 的修复 commit `03c75f71be88d4d2d930c217377b5ff23f0ecae7`（author Ad Schellevis，committer Franco Fichtner），subject 为 “system: address CVE-2019-11816 privlege”（原文拼写如此，应为 privilege）。
 
 ## 史料
 
-- [DB:references_fulltext:chapter_matches:chmatch_4137] 卷“第13卷-bsd衍生操作系统”第 261 章，匹配置信度 1.0，原因：任务4第二批 缺口章补充
-- [DB:references_fulltext:chapter_matches:chmatch_4138] 卷“第13卷-bsd衍生操作系统”第 261 章，匹配置信度 1.0，原因：任务4第二批 缺口章补充
+- m0n0wall 项目档案（Manuel Kasper 项目存档，含 2015-02-15 终止公告）；pfSense/OPNsense 官方文档与发布记录 ［A］
 
 ## 史观
 
-(待人工回填——详见子节文件史观/辨析字段)
+- 总纲第 4 条——分离聚合是永恒规律：pfSense 自 m0n0wall 分叉（2004）、OPNsense 又自 pfSense 分叉（2015），是 BSD 防火墙谱系持续分离聚合的典型；m0n0wall 2015 年终止引导用户迁移 OPNsense，完成谱系的再聚合。
+- 总纲第 10 条——动手者创造历史：防火墙发行版的演进由 Chris Buechler、Scott Ullrich、Ad Schellevis 等动手者的具体 commit 与安全修复推动，非抽象的“产品线”演化。
+- 总纲第 22 条——知识注定过时：m0n0wall 时代的嵌入式防火墙形态被 pfSense/OPNsense 迭代，CVE 修复的持续积累表明安全知识必须持续更新。
 
 ## 辨析
 
-- pfSense 与 m0n0wall 的分支关系时间点（2004）须以项目历史核实；openbsd.duckdb 查询 L7.1.1.pfsense-src 的 commit 量须警惕 fork 分歧识别局限——pfsense-src 仓库 1993 年起的 commit 是 fork 自 FreeBSD 继承的上游历史，非 pfSense 项目本地 commit，识别 pfSense 本地特有 comm
+- pfSense 与 m0n0wall 的分支关系时间点（2004）须以项目历史核实；openbsd.duckdb 查询 L7.1.1.pfsense-src 的 commit 量须警惕 fork 分歧识别局限——pfsense-src 仓库 1993 年起的 commit 是 fork 自 FreeBSD 继承的上游历史，非 pfSense 项目本地 commit，识别 pfSense 本地特有 commit 须通过 merge commit 与 parent_hashes 交叉验证，不可仅凭时间戳判定。
 - 市场份额须以独立报告（一手来源）核实；“BSD 防火墙在开源市场统治”的判断须警惕社区叙事偏差——pfSense/OPNsense 的社区声誉可能被放大为市场份额优势，实际部署数据须以第三方调研为准；IPFire 与 Untangle 的技术细节（内核版本、过滤框架）须以其官方文档核实，不得仅凭一般认知推断。
-- pfsense-src 的 567 个去重 CVE 须区分 “继承自 FreeBSD 上游的修复” 与 “pfSense 本地特有 commit”——fork 仓库的 commit 历史包含上游继承部分，识别本地特有 commit 须通过 merge commit 与 parent_hashes 交叉验证，不可仅凭时间戳判定；merge commit 比例低不必然意味着安全修复滞后，须与 Netg
-- CVE-2019-11816 的具体技术细节（权限提升路径）须以 NVD 条目与 OPNsense 官方公告为据，commit subject 中的 “privlege” 为原 commit 中的拼写错误（应为 “privilege”），本节保留原始 subject 文本不篡改；opnsense-core 的 4 个去重 CVE（CVE-2019-11816、CVE-2026-49131、CVE-
+- pfsense-src 的 567 个去重 CVE 须区分 “继承自 FreeBSD 上游的修复” 与 “pfSense 本地特有 commit”——fork 仓库的 commit 历史包含上游继承部分，识别本地特有 commit 须通过 merge commit 与 parent_hashes 交叉验证，不可仅凭时间戳判定；merge commit 比例低不必然意味着安全修复滞后，须与 Netgate 的官方安全公告及发布记录交叉验证。
+- CVE-2019-11816 的具体技术细节（权限提升路径）须以 NVD 条目与 OPNsense 官方公告为据，commit subject 中的 “privlege” 为原 commit 中的拼写错误（应为 “privilege”），本节保留原始 subject 文本不篡改；opnsense-core 的 4 个去重 CVE（CVE-2019-11816、CVE-2026-49131 等共 4 个〔其余编号待回源〕）的修复轨迹须逐条核对。
 
 ## 文献
 
-- pfSense 官方文档；m0n0wall 档案；freebsd.duckdb 查询 L7.1.1.pfsense-src（pfsense-src 仓库 merge commit 比例时间序列，2004-2026）；freebsd.duckdb 查询 L1.1.1（pfsense-src 仓库每年 commit 量时间序列）；原材料/研究/bsd 仓库分析/数据分析/衍生项目与跨项目对比分析.md §L7.1；原材料/研究/bsd 仓库分析/数据分析/宏观趋势统计.md §L1.1.1。 ［B］
+- pfSense 官方文档；m0n0wall 档案；freebsd.duckdb 查询 L7.1.1.pfsense-src（pfsense-src 仓库 merge commit 比例时间序列，2004-2026）；freebsd.duckdb 查询 L1.1.1（pfsense-src 仓库每年 commit 量时间序列）；〔原引用内部路径 `原材料/研究/bsd 仓库分析/数据分析/衍生项目与跨项目对比分析.md` §L7.1、`原材料/研究/bsd 仓库分析/数据分析/宏观趋势统计.md` §L1.1.1 现断链，待回源定位〕。 ［B］
 
 <!-- DB_REF:freebsd.duckdb -->
 > **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 2004-2014 年间：433,494 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
-- 项目档案；bsd_commits.db。 ［A］
+- 项目档案；bsd_derivatives.duckdb。 ［A］
 
 <!-- DB_REF:bsd_derivatives.duckdb -->
 > **数据库引用（bsd_derivatives.duckdb）**：本子节对应 bsd_derivatives 代码仓库。> 2014-2026 年间：484,691 次提交。> 仓库总览：963,557 次提交，9,744 位贡献者（contributors 表行数，1985-06-13 至 2026-08-24）。
-- 各防火墙厂商资料；IPFire 官方文档；Untangle 官方文档；Cisco ASA 文档；Fortinet FortiGate 文档。［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
+- 各防火墙厂商资料；IPFire 官方文档；Untangle 官方文档；Cisco ASA 文档；Fortinet FortiGate 文档。［B］
 
 <!-- DB_REF:bsd_derivatives.duckdb -->
 > **数据库引用（bsd_derivatives.duckdb）**：本子节对应 bsd_derivatives 代码仓库。> 1985-2026 年间：963,557 次提交。> 仓库总览：963,557 次提交，9,744 位贡献者（contributors 表行数，1985-06-13 至 2026-08-24）。
-- bsd_commits.duckdb 查询 pfsense-src CVE commit（929 条，567 去重 CVE，2026-07-23）；bsd_commits.duckdb 查询 L7.1.1.pfsense-src；`原材料/研究/bsd漏洞史/数据库提取/pfsense-src-cve-commits.md`；`原材料/研究/bsd仓库分析/数据分析/衍生项目与跨项目对比分析.md` §L7.1。 ［B］## 260.4.2 CVE-2019-11816 OPNsense 权限提升漏洞与 Web 界面安全
-- freebsd.duckdb 查询 opnsense-core CVE commit（8 条，4 去重 CVE，2026-07-23）；NVD. CVE-2019-11816 [EB/OL]. <https://nvd.nist.gov/vuln/detail/CVE-2019-11816>（访问日期 2026-07-23）；`原材料/研究/bsd漏洞史/数据库提取/opnsense-core-cve-commits.md`。 ［B］FreeBSD 社区论文：[FP-2020-021] How an Australian IaaS uses FreeBSD（Ruben Schade，2020）<https://papers.freebsd.org/2020/linux.conf.au/schade_how_an_australian_iaas_uses_freebsd/>FreeBSD 社区论文：[FP-2019-045] FreeBSD and the absurdities of security compliance（Eirik Øverby，2019）<https://papers.freebsd.org/2019/eurobsdcon/oeverby-freebsd_and_the_absurdities_of_security_compliance/>FreeBSD 社区论文：[FP-2019-076] FreeBSD at Work: Building Network and Storage Infrastructure with pfSense and FreeNAS（Conor Beh，2019）<https://papers.freebsd.org/2019/vbsdcon/beh-freebsd_at_work/>FreeBSD 社区论文：[FP-2018-010] Preparing your home router(s) for the future: A journey through Homenet and interconnected objects（Massimiliano Stucchi，2018）<https://papers.freebsd.org/2018/bsdcan/stucchi-preparing_your_home_routers_for_the_future/>
+- bsd_commits.duckdb 查询 pfsense-src CVE commit（929 条，567 去重 CVE，2026-07-23）；bsd_commits.duckdb 查询 L7.1.1.pfsense-src；〔原引用内部路径 `原材料/研究/bsd漏洞史/数据库提取/pfsense-src-cve-commits.md`、`原材料/研究/bsd仓库分析/数据分析/衍生项目与跨项目对比分析.md` §L7.1 现断链，待回源定位〕。 ［B］
+- freebsd.duckdb 查询 opnsense-core CVE commit（8 条，4 去重 CVE，2026-07-23）；NVD. CVE-2019-11816 [EB/OL]. <https://nvd.nist.gov/vuln/detail/CVE-2019-11816>（访问日期 2026-07-23）；〔原引用内部路径 `原材料/研究/bsd漏洞史/数据库提取/opnsense-core-cve-commits.md` 现断链，待回源定位〕。 ［B］
+- FreeBSD 社区论文：[FP-2020-021] How an Australian IaaS uses FreeBSD（Ruben Schade，2020）<https://papers.freebsd.org/2020/linux.conf.au/schade_how_an_australian_iaas_uses_freebsd/>
+- FreeBSD 社区论文：[FP-2019-045] FreeBSD and the absurdities of security compliance（Eirik Øverby，2019）<https://papers.freebsd.org/2019/eurobsdcon/oeverby-freebsd_and_the_absurdities_of_security_compliance/>
+- FreeBSD 社区论文：[FP-2019-076] FreeBSD at Work: Building Network and Storage Infrastructure with pfSense and FreeNAS（Conor Beh，2019）<https://papers.freebsd.org/2019/vbsdcon/beh-freebsd_at_work/>
+- FreeBSD 社区论文：[FP-2018-010] Preparing your home router(s) for the future: A journey through Homenet and interconnected objects（Massimiliano Stucchi，2018）<https://papers.freebsd.org/2018/bsdcan/stucchi-preparing_your_home_routers_for_the_future/>
 
 <!-- DB_REF:freebsd.duckdb -->
 > **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 1985-2026 年间：1,294,851 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
@@ -60,8 +64,8 @@ volume: 第13卷-bsd衍生操作系统
 - m0n0wall 1.81 发布，为面向嵌入式设备的 BSD 防火墙发行版；pfSense 于 2004 年自 m0n0wall 分叉，面向普通 PC 且开发更活跃。（BSD Now EP21，[4458.98-4516.38]，L2）
 - NTPD 被发现可利用欺骗 UDP 包返回放大响应而充当 DDoS 放大器，FreeBSD 与 pfSense 均通过安全公告与配置更新进行缓解。（BSD Now EP21，[4540.34-4636.46]，L2）
 - PC-BSD 10.0 随 FreeBSD 10 发布，RC4 支持 Wine 与 9.2 升级保留 PBI；因 FreeBSD 10 的 ABI 变化，升级需重建或重装全部包。（BSD Now EP21，[4751.26-4801.10]，L2）
-- 主持人自述其所在的三镇联合学区于 2015 年暑期将防火墙整体迁移至 PFsense：选择暑期低峰窗口执行，理由是“不能在飞机飞行途中修理引擎”；上线后每台防火墙承载逾千用户，运行平稳；安装直接，主要工作量在于将旧防火墙的手写配置笔记转译为 PFsense 的规则与 NAT 写法。（BSDTalk EP255，[80.68-148.68]，L1）
-- 其对 PFsense 技术层面的评价：底层 PF 的规则语法可读性好，但 PFsense 为完成自身工作会自动生成大量规则，命令行下经 PF 工具查看可达数页，多数并非管理员手写；质量图（丢包等监测）、一键式包管理与 Web 界面广受其团队好评，团队无需正式培训即可上手，整体运行被形容为“bulletproof”。（BSDTalk EP255，[149.5-250.56]，L1）
+- 主持人自述其所在的三镇联合学区于 2015 年暑期将防火墙整体迁移至 pfSense：选择暑期低峰窗口执行，理由是“不能在飞机飞行途中修理引擎”；上线后每台防火墙承载逾千用户，运行平稳；安装直接，主要工作量在于将旧防火墙的手写配置笔记转译为 pfSense 的规则与 NAT 写法。（BSDTalk EP255，[80.68-148.68]，L1）
+- 其对 pfSense 技术层面的评价：底层 PF 的规则语法可读性好，但 pfSense 为完成自身工作会自动生成大量规则，命令行下经 PF 工具查看可达数页，多数并非管理员手写；质量图（丢包等监测）、一键式包管理与 Web 界面广受其团队好评，团队无需正式培训即可上手，整体运行被形容为“bulletproof”。（BSDTalk EP255，[149.5-250.56]，L1）
 - 2015 年 8 月 BSD 社区公布 Next BSD 项目；主持人在网络论战升温之前引导听众回看 2014 年 MeetBSD California 上 Jordan Hubbard 的演讲“The Next 10 Years of BSD”以理解项目动机，并指出 Next BSD 当时仅有承载基础信息的网站。（BSDTalk EP255，[253.56-296.80]，L2）
 
 **史料**：
@@ -71,9 +75,9 @@ volume: 第13卷-bsd衍生操作系统
 
 **史观**：
 
-- 总纲22 知识注定过时：总纲22 知识注定过时：SSH 旧密钥派生函数因安全进展被 bcrypt 取代，既有加密方法随攻防演进而过时。（BSD Now EP21，[531.18-545.14]，L1）
-- 总纲10 动手者创造历史：总纲10 动手者创造历史：Colin Percival 等安全工程师以具体维护与发布工作维持 FreeBSD 的安全响应体系。（BSD Now EP21，[5597.60-5655.20]，L1）
-- 总纲3 不存在进步，只有权力再分配：总纲3 不存在进步，只有权力再分配：安全机制的替换体现攻防双方能力的再分配，而非简单的线性安全进步。（BSD Now EP21，[4540.34-4636.46]，L2）
+- 总纲第 22 条 知识注定过时：SSH 旧密钥派生函数因安全进展被 bcrypt 取代，既有加密方法随攻防演进而过时。（BSD Now EP21，[531.18-545.14]，L1）
+- 总纲第 10 条 动手者创造历史：Colin Percival 等安全工程师以具体维护与发布工作维持 FreeBSD 的安全响应体系。（BSD Now EP21，[5597.60-5655.20]，L1）
+- 总纲第 3 条 不存在进步，只有权力再分配：安全机制的替换体现攻防双方能力的再分配，而非简单的线性安全进步。（BSD Now EP21，[4540.34-4636.46]，L2）
 - 总纲6 和解优于斗争：主持人明确呼吁 BSD 社区勿围绕 Next BSD 重演 Linux/systemd 式的论战机器，而应把它当作有意思的项目看待，检验哪些部分可用、哪些行不通，并声明珍视任何人引入新技术或做概念验证的意愿——以和解与实验检验取代立场斗争。（BSDTalk EP255，[303.40-334.52]，L1）
 
 **辨析**：
@@ -87,3 +91,7 @@ volume: 第13卷-bsd衍生操作系统
 - [BSDTalk EP255] Backman W. BSDTalk: 255: bsdtalk255 - A quick update[EB/OL]. (2015-08-31)[2026-08-27]. <https://bsdtalk.blogspot.com/2015/08/bsdtalk255-quick-update.html>.
 
 <!-- /PODCAST_REVIEW -->
+
+## 自反性声明
+
+本章所书皆是形式主义化的重构，并非对“真实的 pfSense/OPNsense 历史”的呈现。本章的章节划分、事件选择、叙事策略、因果归因——全部基于编纂者的哲学设定。本章承认这些局限，不声称客观或中立，欢迎被更诚实的叙事所超越。
