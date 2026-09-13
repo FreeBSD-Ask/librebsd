@@ -3,7 +3,7 @@
 > 来源：ksummit-discuss p111（50 封全读，2018-10-07/09，夹杂 KS2014 档案信 2014-05-15）。
 > 判定：50 CAND / 0 NV。主题分布：coc 43、KS2014 5、zufs 2。
 
-## 59.1 Alan Cox 法理重磅：TAB 隐私承诺与现实的三重不兼容
+## 59.1 【Linux社区】Alan Cox 法理重磅：TAB 隐私承诺与现实的三重不兼容
 
 2018-10-08 CoC 论战的法律纵深：Alan Cox 的 EUCD/强制报告/快通道三重不兼容推演与法庭五问、Viro 的"upstream 不适配"社区结构论与 Airlie 的"CoC 维护者是谁"之问。
 
@@ -13,7 +13,7 @@
 - 【Linux社区】Viro 自嘲更正 explanations→clarifications——"或任何你偏好的训诂委婉语" `<!-- ROW_MINE: ksummit-discuss.messages.349758 -->`
 - 【Linux社区】Airlie："好问题：我们有 CoC 维护者吗？Linus？Greg？TAB？第一步是找到能改内核 CoC 的人"；"修上游值得——省得大家各自分叉"；GPL 类比"GPLv2 only+syscall 例外" `<!-- ROW_MINE: ksummit-discuss.messages.349759 -->`
 
-## 59.2 Mauro 替代补丁与 GitHub 源流论
+## 59.2 【Linux社区】Mauro 替代补丁与 GitHub 源流论
 
 Mauro 的第三版 CoC 补丁（may remove+Reports 节最小化）与 GitHub 源流论的完整阐述：X.400 历史旁注、A/B/C 责任错位解构、邮件/Bugzilla/Mediawiki 三工作流不可执行性证明。
 
@@ -24,7 +24,7 @@ Mauro 的第三版 CoC 补丁（may remove+Reports 节最小化）与 GitHub 源
 - 【Linux社区】Mauro："加入 MAINTAINERS 则请加 R: 条目——它在我国的立法下可能有法律价值、我想被通知变更"（呼应 CoC 维护者之问） `<!-- ROW_MINE: ksummit-discuss.messages.349791 -->`
 - 【Linux社区】Mauro："报 bug/回补丁时邮件会被看见并可能用于修复补丁——不想如此须明确声明；此类特例适合 FAQ 而非正文" `<!-- ROW_MINE: ksummit-discuss.messages.349792 -->`
 
-## 59.3 反剥同盟：Mason、Triplett 与 Williams
+## 59.3 【Linux社区】反剥同盟：Mason、Triplett 与 Williams
 
 剥 enforcement 的最强反对声：Mason 的"社区整体不承诺帮助"定性、Triplett 的"专职受训团队优于技术决策机构"、Williams 的"求助即合理参与"——与 Bottomley/Shuah 剥除派的形成对照。
 
@@ -34,7 +34,7 @@ Mauro 的第三版 CoC 补丁（may remove+Reports 节最小化）与 GitHub 源
 - 【Linux社区】Triplett 答 Rainer Fiebig（28 行 vs 81 行还要 FAQ）：“事实证明这比之前被过度简化的更复杂——人们不会自动共享共同理解” `<!-- ROW_MINE: ksummit-discuss.messages.349802 -->`
 - 【Linux社区】Dan Williams："这些情形可能很乱、维护者可能没能力或没情绪资源随时应对——合理方式是求助；需要可信赖的人愿意帮助贡献者与维护者 alike、TAB 的任务就是提供帮助；旧 CoC 即此情形、新 CoC 更显式" `<!-- ROW_MINE: ksummit-discuss.messages.349805 -->`
 
-## 59.4 上游 FAQ 实测与"他人控制的文档"之辩
+## 59.4 【Linux社区】上游 FAQ 实测与"他人控制的文档"之辩
 
 Contributor Covenant 上游互动实录：Tim Bird 的 FAQ 实测报告（Coraline 支持/issue 590/575/610）、Bottomley-Mauro 的"他人控制文档"反对论、Triplett 的 FAQ 已 merge 回执与 Brown 的"长得像法律文档"观察。
 
@@ -50,7 +50,7 @@ Contributor Covenant 上游互动实录：Tim Bird 的 FAQ 实测报告（Corali
 - 【Linux社区】Brown："人们把 contributor covenant 当法律文件解读不算不合理——它明确列出行为、指定后果，看起来就像法律文档；对非母语者尤甚；若大家宁过于严肃对待 CoC，也不算最坏" `<!-- ROW_MINE: ksummit-discuss.messages.349798 -->`
 - 【Linux社区】Tim Bird："不为修改 CoC 论所动：我们已经改了措辞/与上游不会太冲突/上游不会剧变到难以采纳；不担心 fork——上游重大变更采纳前应有内核社区辩论（类似 GPL v3 的辩论与最终拒绝）" `<!-- ROW_MINE: ksummit-discuss.messages.349773 -->`
 
-## 59.5 fork 之辩与上游同步成本
+## 59.5 【Linux社区】fork 之辩与上游同步成本
 
 fork 成本与同步模型之争：Geert 的 ABI 类比 revert 论、Bottomley 的 vendor driver 流程移植、Brown 的 Debian rules-lawyer 经验与 Luck 的 500 词反讽。
 
@@ -61,7 +61,7 @@ fork 成本与同步模型之争：Geert 的 ABI 类比 revert 论、Bottomley �
 - 【Linux社区】Bottomley 答 Airlie："CoC 应清晰、不该被脚注和解释包围；vendor driver 类比——先为我们自己改好、再看源怎么处理；共识定形后我保证尝试推回" `<!-- ROW_MINE: ksummit-discuss.messages.349768 -->`
 - 【Linux社区】Tony Luck："整个文档不足 500 词——我们能 merge 数万行代码、这容易得多；难 merge 新上游版本也可视为好事" `<!-- ROW_MINE: ksummit-discuss.messages.349782 -->`
 
-## 59.6 剥 enforcement 节之辩：起点还是回归
+## 59.6 【Linux社区】剥 enforcement 节之辩：起点还是回归
 
 剥除派与保留派的细部拉锯：Tim Bird 的"中央报告=Code of Conflict 已有"论与"十年三封禁"统计、Bottomley 的"不预判结果"程序原则与 v2 承诺。
 
@@ -71,7 +71,7 @@ fork 成本与同步模型之争：Geert 的 ABI 类比 revert 论、Bottomley �
 - 【Linux社区】Bottomley："补丁目的是 Shuah 峰会 CoC 辩论的有用起点（v2 将澄清）；不预判结果" `<!-- ROW_MINE: ksummit-discuss.messages.349784 -->`
 - 【Linux社区】Tim Bird："第二个 hunk 可作起点、第一个不行——第一 hunk 是回归、接近 Code of Conflict 已有内容" `<!-- ROW_MINE: ksummit-discuss.messages.349786 -->`
 
-## 59.7 Eich 领导层攻击论与"房间里的大象"
+## 59.7 【Linux社区】Eich 领导层攻击论与"房间里的大象"
 
 CoC 论战的目标层分歧：jonsmirl 的"领导层攻击才是真问题"、Vivi 的"角落案例拆关键条款"批评与"加法而非减法"主张、Pinchart 的共同目标之问与 Bottomley 的 GPLv2 式回应。
 
@@ -81,14 +81,14 @@ CoC 论战的目标层分歧：jonsmirl 的"领导层攻击才是真问题"、Vi
 - 【Linux社区】Pinchart："房间里的大象：我们一直小心避免讨论人们是否共享共同目标 :-/" `<!-- ROW_MINE: ksummit-discuss.messages.349803 -->`
 - 【Linux社区】Bottomley："我们不需要共享共同目标；只需按其本身价值发现文档有用——正如我们是 mostly GPLv2 项目而不接受多数 FSF 哲学；也因此要把自己的解释与澄清留在内部" `<!-- ROW_MINE: ksummit-discuss.messages.349804 -->`
 
-## 59.8 ZUFS 轨道问答二则
+## 59.8 【Linux社区】ZUFS 轨道问答二则
 
 ZUFS 议题的程序性尾声：议题定案时程不明与订机票现实。
 
 - 【Linux社区】Boaz 问 Kernel sub-tracks [TECH TOPIC] 何时定案——"我要订机票" `<!-- ROW_MINE: ksummit-discuss.messages.349761 -->`
 - 【Linux社区】Greg："不知道何时定案，抱歉" `<!-- ROW_MINE: ksummit-discuss.messages.349766 -->`
 
-## 59.9 KS2014 档案五封
+## 59.9 【Linux社区】KS2014 档案五封
 
 页内夹杂的 KS2014 档案信（2014-05-15）：tinification 三连附议、QR 线程转 LKML、kerneloops 数据实况与 printk softlockups 议题立项。
 

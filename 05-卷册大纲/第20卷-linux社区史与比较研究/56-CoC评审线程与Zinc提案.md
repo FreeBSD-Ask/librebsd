@@ -3,7 +3,7 @@
 > 来源：ksummit-discuss p108（50 封全读，2018-09-23/28，夹杂 KS2014 档案信 2014-05-15 与 MOXA 旧硬件证言）。
 > 判定：49 CAND / 1 NV（349633 垃圾邮件）。主题分布：coc 34、security 4、KS2014 4、communication 3、hw-deprecation 2、wireguard-zinc 2、spam 1（NV）。
 
-## 56.1 Shuah Khan 评审线程：程序性问责与 Debian 中间地带
+## 56.1 【Linux社区】Shuah Khan 评审线程：程序性问责与 Debian 中间地带
 
 2018-09-24/27 Shuah Khan 以 TECH-TOPIC 名义开启 CoC 正式评审线程：程序性问责（未经评审即替换获大量签署的 Code of Conflict）、反骚扰政策定性、Debian CoC 中间地带、"Code of Conflict 是否真失败"之问与 Fedora 先例。
 
@@ -29,7 +29,7 @@
 - 【Linux社区】Gorman："不只是 email 地址——补丁与 SOB 一般要求真名而非假名" `<!-- ROW_MINE: ksummit-discuss.messages.349615 -->`
 - 【Linux社区】Leon 答 Gorman：真名要求已由 DCO (d) 覆盖（附链接） `<!-- ROW_MINE: ksummit-discuss.messages.349626 -->`
 
-## 56.2 行为哲学之辩：tglx 私下关怀 vs codify 强制
+## 56.2 【Linux社区】行为哲学之辩：tglx 私下关怀 vs codify 强制
 
 2018-09-24/25 CoC 战线最深的哲学层：tglx 的失态者自白与 John Stultz 关怀案例、Olof 的 Popper 悖论与"朋友之事非社区义务"边界、Vetter 的"codify 反对"与零余量平衡论、Dan Williams 的双向共情。
 
@@ -42,7 +42,7 @@
 - 【Linux社区】Vetter：同意私下关怀但"codify 进 CoC 不是好主意——爆炸后清理已是巨量工作；精心措辞回复是零余量平衡"；"crack down 过头；共情有底线" `<!-- ROW_MINE: ksummit-discuss.messages.349636 -->`
 - 【Linux社区】Shuah："受端者以中性语气回应很难但我做过几次"；"担心受端者退场停更"；"小心不过度反应于被感知的冒犯——一个人的玩笑是另一个人的侮辱" `<!-- ROW_MINE: ksummit-discuss.messages.349639 -->`
 
-## 56.3 单一 CoC vs 子系统 A/B 与既有文档冲突
+## 56.3 【Linux社区】单一 CoC vs 子系统 A/B 与既有文档冲突
 
 2018-09-26 治理结构层之争：Jason Cooper 的子系统自选 CoC+默认回退 A/B 提案、Mauro 的 Debian 邮件列表 CoC 移植与 VGER 过滤设想、全局 CoC 与既有隐私政策/子文档的冲突面。
 
@@ -52,7 +52,7 @@
 - 【Linux社区】Geert 调侃 Mauro 过滤设想："至少维护者不必再手动处理请从源码注释中移除冒犯性词语的补丁了" `<!-- ROW_MINE: ksummit-discuss.messages.349647 -->`
 - 【Linux社区】Mauro 答 Cooper A/B 提议：media 隐私政策（EU 驱动）确有交集——"发布到 wiki 或列表的信息就是公开的"；"可能与既有 CoC 类文档冲突" `<!-- ROW_MINE: ksummit-discuss.messages.349652 -->`
 
-## 56.4 安全公开列表之辩：CRD 与 security@ 定位
+## 56.4 【Linux社区】安全公开列表之辩：CRD 与 security@ 定位
 
 Carpenter 公开安全列表倡议的续辩：Kosina 引入 CRD（协调发布日期）概念与 security@ 的双重定位澄清（联络点 vs 全局严重 bug 处理）。
 
@@ -61,7 +61,7 @@ Carpenter 公开安全列表倡议的续辩：Kosina 引入 CRD（协调发布�
 - 【Linux社区】Kosina：CRD="Coordinated release date across the various affected vendors" `<!-- ROW_MINE: ksummit-discuss.messages.349608 -->`
 - 【Linux社区】Carpenter 答：非消灭 security@（也不替其答每个 suspicious code）；协调响应用 linux-distros、security@ 不做；security@ 两大职能——报告联络点（半数直转维护者）+核心开发者处理 ptrace 类全局严重 bug `<!-- ROW_MINE: ksummit-discuss.messages.349614 -->`
 
-## 56.5 WireGuard/Zinc 提案与邮件丢失插曲与补丁 bot 续
+## 56.5 【Linux社区】WireGuard/Zinc 提案与邮件丢失插曲与补丁 bot 续
 
 Zinc 密码 API 议题立项（提案全文入档）与 LF 邮件服务器静默丢信实录（250 queued 三次仍未见档）；附件补丁 bot 的 MIME/重复解析缺陷补论。
 
@@ -71,14 +71,14 @@ Zinc 密码 API 议题立项（提案全文入档）与 LF 邮件服务器静默
 - 【Linux社区】Donenfeld 重发 Zinc 提案全文（原信被静默拒收）：极简内核密码 API——非抽象框架而是简单函数；实现选择与 fuzzing、形式化验证实现、SIMD from kernel space 成本 `<!-- ROW_MINE: ksummit-discuss.messages.349613 -->`
 - 【Linux社区】Mauro 答 Olof bot：可行但有坑——MIME 误标/服务器判 evil 拒收/企业只许 webmail；bot 收两遍会引多机器人重复回复——"加 meta-tags 防其他机器人重复解析" `<!-- ROW_MINE: ksummit-discuss.messages.349635 -->`
 
-## 56.6 MOXA 旧硬件证言与 CIP 僵尸论
+## 56.6 【Linux社区】MOXA 旧硬件证言与 CIP 僵尸论
 
 硬件弃用之辩的厂商第一手证言与最强反驳同页：Moxa 的 CIP 加入理由 vs tglx 的"僵尸内核"论与"最新内核+厂商负责"主张。
 
 - 【Linux社区】SZ Lin（Moxa，个人观点）：ART SoC 由 Faraday 顾问团供 IP；EM-1240（ARMv4）与 EP93xx（ARMv4T）仍活跃部署甚至推荐新项目；Moxart 加了工业专用 IP；"长期维护内核对工业应用极重要——Moxa 因此加入 CIP" `<!-- ROW_MINE: ksummit-discuss.messages.349654 -->`
 - 【Linux社区】tglx 驳：问题不在保活旧内核而在"如何在最新内核中保住旧硬件支持、谁负责"；"CIP 是把死内核维持僵尸状态——speculation mess 证明回移侵入式安全修复危险"；"Meltdown/Spectre/L1TF 正解是在旧硬件上换新内核；bitrotting 不如移除；要保住就得厂商站出来" `<!-- ROW_MINE: ksummit-discuss.messages.349655 -->`
 
-## 56.7 KS2014 档案四封
+## 56.7 【Linux社区】KS2014 档案四封
 
 页内夹杂的 KS2014 档案信（2014-05-15）：per topic people 提名名录的增补与勘误。
 

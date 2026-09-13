@@ -3,7 +3,7 @@
 > 来源：ksummit-discuss p110（50 封全读，2018-10-04/08，夹杂 KS2014 档案信 2014-05-15）。
 > 判定：50 CAND / 0 NV。主题分布：coc 46、KS2014 4。
 
-## 58.1 Bottomley [PATCH 0/2] 实发与 Acked-by 潮：CoC 修订进入补丁流程
+## 58.1 【Linux社区】Bottomley [PATCH 0/2] 实发与 Acked-by 潮：CoC 修订进入补丁流程
 
 2018-10-06/07 CoC 论战从口水转向补丁：Bottomley 双补丁实发（email 豁免+剥 enforcement）、Fixes: 8a104f8b5867 引用规范、Shuah/Geert/Roeck 的 Acked-by 潮与 Roeck"未被咨询"宣言。
 
@@ -20,7 +20,7 @@
 - 【Linux社区】Bottomley："我采纳你的建议发成具体补丁集看反响" `<!-- ROW_MINE: ksummit-discuss.messages.349733 -->`
 - 【Linux社区】Shuah 先行建议："Zephyr 版与 4.19-rc4 的 CoC 几乎全同只差 enforcement 节；我偏好 4.19 修订掉 enforcement 而非带着 v1 现文发布" `<!-- ROW_MINE: ksummit-discuss.messages.349727 -->`
 
-## 58.2 免责声明 vs revert：4.19 发布前的路线之争
+## 58.2 【Linux社区】免责声明 vs revert：4.19 发布前的路线之争
 
 4.19 final 倒计时的路线分歧：Vetter 的免责声明中间路线与"等 Linus 澄清"的克制立场、Bottomley 的"免责声明=什么都没有不如 revert"、hch 的"绝非假想"与 Geert 的寒蝉效应警告。
 
@@ -33,7 +33,7 @@
 - 【Linux社区】Geert："享受不可 rebase git 的 append-only 本性吧 ;)；提议发补丁修 CoC——寒蝉效应恐怕已在发生" `<!-- ROW_MINE: ksummit-discuss.messages.349707 -->`
 - 【Linux社区】hch 驳"假想情形论"："鉴于安全社区里某些非常聪明但 abusive 的人，这绝非假想" `<!-- ROW_MINE: ksummit-discuss.messages.349706 -->`
 
-## 58.3 封禁 Alice 续辩：剥名版权论与 netfilter 先例
+## 58.3 【Linux社区】封禁 Alice 续辩：剥名版权论与 netfilter 先例
 
 "封禁 Alice"思想实验的深化：Geert 的剥名=版权违反新论、Ted 的 netfilter 集体拒收先例（25 年一遇、无诉无祸）与 Bottomley 的房产记录类比。
 
@@ -44,7 +44,7 @@
 - 【Linux社区】Geert 答 Vivi："你这么表述就容易回答了；可惜现实并非如此黑白分明" `<!-- ROW_MINE: ksummit-discuss.messages.349709 -->`
 - 【Linux社区】Bottomley："讨论过但未达共识——问题在把 email address 明文列为 private information；房产记录类比：physical address 对自有房者也是公共记录——措辞没覆盖日常流程用的东西" `<!-- ROW_MINE: ksummit-discuss.messages.349725 -->`
 
-## 58.4 CoC fork 之辩与公司实体适用性
+## 58.4 【Linux社区】CoC fork 之辩与公司实体适用性
 
 CoC 治理结构层之争：fork 权与"标签效应"的镜像论证（Pinchart vs Jani）、公司实体适用性新问（Google 中国假设案）与 Zephyr PR 采信纠错。
 
@@ -62,7 +62,7 @@ CoC 治理结构层之争：fork 权与"标签效应"的镜像论证（Pinchart 
 - 【Linux社区】Triplett 纠正："Zephyr 没采纳——只是有人提议未 merge"；"上游会欢迎澄清邮件列表社区适用的补丁" `<!-- ROW_MINE: ksummit-discuss.messages.349728 -->`
 - 【Linux社区】Bottomley：“‘someone’恰好是 Zephyr 社区经理；路线应是先让它为我们工作、再看上游要不要” `<!-- ROW_MINE: ksummit-discuss.messages.349729 -->`
 
-## 58.5 discrimination 列表与 doxxing 边界
+## 58.5 【Linux社区】discrimination 列表与 doxxing 边界
 
 Geert 的 discrimination 列表删除补丁与 Triplett 的"显式指南"辩护、Vetter/Bottomley 的 doxxing 边界之辩与 Airlie 的上游同步顾虑——CoC 修订的方法论之争。
 
@@ -74,7 +74,7 @@ Geert 的 discrimination 列表删除补丁与 Triplett 的"显式指南"辩护�
 - 【Linux社区】Reinecke："我的解读相同；submitting-patches.rst 本就写了——不必再澄清" `<!-- ROW_MINE: ksummit-discuss.messages.349740 -->`
 - 【Linux社区】Airlie："同意要类似的东西；问题是改上游 CoC 文本还是单独节澄清——偏离上游措辞会让将来合并上游新版本更棘手" `<!-- ROW_MINE: ksummit-discuss.messages.349755 -->`
 
-## 58.6 KS2014 档案四封
+## 58.6 【Linux社区】KS2014 档案四封
 
 页内夹杂的 KS2014 档案信（2014-05-15）：kerneloops 衰落实录、ARM legacy TODO 文件设想、tinification 谱系论与摩斯码 oops 前史。
 

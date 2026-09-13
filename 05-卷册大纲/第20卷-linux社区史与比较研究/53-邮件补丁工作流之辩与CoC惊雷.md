@@ -3,7 +3,7 @@
 > 来源：ksummit-discuss p105（50 封全读，2018-09-17/18，夹杂 KS2014 档案信 2014-05-03/15）。
 > 判定：50 CAND / 0 NV。主题分布：communication 28、distro-bugzilla 7、coc 6、KS2014 6、EXPORT_SYMBOL_GPL 1、stable-ml 1、Banbury 1。
 
-## 53.1 CoC 惊雷：仓促、阴谋论与"罐头已开"
+## 53.1 【Linux社区】CoC 惊雷：仓促、阴谋论与"罐头已开"
 
 2018-09-18 ksummit-discuss CoC 议题正式立项：五种立场同页——立项者 Airlie、牵头者 Rostedt、接受者 Bottomley、忧虑者 Vetter、程序性问责者 Geert。
 
@@ -14,7 +14,7 @@
 - 【Linux社区】Vetter 回 Bottomley："多年坚持没什么可讨论"正是走到今天的原因，此策略不可持续 `<!-- ROW_MINE: ksummit-discuss.messages.349482 -->`
 - 【Linux社区】Geert：Code of Conflict commit ddbd2b7ad99a418c 曾获 66 人 ack、大改动应 CC 原 ack 者"显然这次没有" `<!-- ROW_MINE: ksummit-discuss.messages.349483 -->`
 
-## 53.2 邮件工具地狱：Sony 防钓鱼重写与"附件派"之争
+## 53.2 【Linux社区】邮件工具地狱：Sony 防钓鱼重写与"附件派"之争
 
 企业邮件环境与补丁工作流之辩的白热化：Sony URL 重写实录（proofpoint 链接原文留档）、附件派（Luck/Bird）与正文派（Torokhov/Brown）对峙、Linus 的 patchwork 语义网关构想与 Konstantin 的 web 提交流程草案。
 
@@ -33,7 +33,7 @@
 - 【Linux社区】Sean Paul：chromium.org 开 DMARC 三周、邮件全进 Spam 而无人知——静默失败 `<!-- ROW_MINE: ksummit-discuss.messages.349504 -->`
 - 【Linux社区】Konstantin 构想"想象中的 web 工具"：开户/验邮箱/教补丁/checkpatch/get_maintainer/代发——能解问题还是添麻烦？ `<!-- ROW_MINE: ksummit-discuss.messages.349505 -->`
 
-## 53.3 SCSI 树 rebase 之辩与 topic 分支实录
+## 53.3 【Linux社区】SCSI 树 rebase 之辩与 topic 分支实录
 
 Distribution kernel bugzillas considered harmful 线程的 SCSI 技术层：rebase 动因（测试覆盖不足+整系列撤下）、topic 分支三条实践证言（Brown/Geert 提议/hch 与 Axboe 的失败史）。
 
@@ -45,7 +45,7 @@ Distribution kernel bugzillas considered harmful 线程的 SCSI 技术层：reba
 - 【Linux社区】Brown 自述：-next 为各 topic 分支自动合并、坏分支整个丢弃；曾因 Linus 嫌分支多而停用 `<!-- ROW_MINE: ksummit-discuss.messages.349489 -->`
 - 【Linux社区】Brown：topic 分支多为每驱动一支、内嵌跨树嵌入式改动；core 改动叠同支或并入驱动支 `<!-- ROW_MINE: ksummit-discuss.messages.349496 -->`
 
-## 53.4 邮件替代方案的攻防续局
+## 53.4 【Linux社区】邮件替代方案的攻防续局
 
 通信系统之辩的攻防续局：Mauro 的单一模型反对论、hch-ACPI 指控的澄清（ACPICA 上游实情）、moderated 数字之纠（221→32）、public-inbox/lore.kernel.org 的历史意义与企业环境三重印证。
 
@@ -64,7 +64,7 @@ Distribution kernel bugzillas considered harmful 线程的 SCSI 技术层：reba
 - 【Linux社区】Bottomley 答 Vetter：format-patch+evolution 不难、指向 email-clients.rst `<!-- ROW_MINE: ksummit-discuss.messages.349473 -->`
 - 【Linux社区】Randy Dunlap：系列用 git send-email、单补丁用邮件客户端 `<!-- ROW_MINE: ksummit-discuss.messages.349485 -->`
 
-## 53.5 EXPORT_SYMBOL_GPL 判据与 stable 机器学习与 Banbury 异步 I/O
+## 53.5 【Linux社区】EXPORT_SYMBOL_GPL 判据与 stable 机器学习与 Banbury 异步 I/O
 
 三笔技术要点收束：_GPL 的"Linux 独有"判据、stable 树机器学习议题立项、Banbury 的文件系统异步 I/O 错误上报维度。
 
@@ -72,7 +72,7 @@ Distribution kernel bugzillas considered harmful 线程的 SCSI 技术层：reba
 - 【Linux社区】Sasha Levin 与 Julia Lawall 提 stable 机器学习议题：ML 识别 bug 修复提交、已向 stable 树提交逾千补丁 `<!-- ROW_MINE: ksummit-discuss.messages.349463 -->`
 - 【Linux社区】Reinecke 反驳 Banbury"用户态为主"：多数文件系统无法向应用直接报 I/O 错误；建议异步上报如 DAX；次年 LSF 续议 `<!-- ROW_MINE: ksummit-discuss.messages.349470 -->`
 
-## 53.6 KS2014 档案六封
+## 53.6 【Linux社区】KS2014 档案六封
 
 页内夹杂的 KS2014 档案信（2014-05-03/15）：ARM minisprint 提议、2038 嵌入式展望、统一资源 API 之难、QR oops 技术细节、kmemleak 开销之辩。
 

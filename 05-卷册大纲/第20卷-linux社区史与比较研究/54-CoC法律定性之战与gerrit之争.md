@@ -3,7 +3,7 @@
 > 来源：ksummit-discuss p106（50 封全读，2018-09-18/19，夹杂 KS2014 档案信 2014-05-15）。
 > 判定：50 CAND / 0 NV。主题分布：coc 13、communication 23、distro-bugzilla 7、KS2014 4、next-discipline 2、governance 1。
 
-## 54.1 CoC"私人信息"条款法律定性之战：从补丁标签到附合合同
+## 54.1 【Linux社区】CoC"私人信息"条款法律定性之战：从补丁标签到附合合同
 
 2018-09-18/19 CoC 之战的法律深化：Mauro 的标签-条款冲突论与"附合合同"定性、Bottomley 的 DCO 解释与"non-public ⊃ private"思想实验、Pinchart 的意图澄清与 Josh 的 GPL FAQ 类比——新旧 CoC 文本对比首次全引。
 
@@ -21,7 +21,7 @@
 - 【Linux社区】Bottomley 思想实验："non-public"措辞可覆盖标签情形但 US 法上 non-public ⊃ private、原文义务更窄——标签用法不违反隐私义务 `<!-- ROW_MINE: ksummit-discuss.messages.349553 -->`
 - 【Linux社区】Mauro 总攻："可修则修、否则 revert"；"每读一遍更信它是 utter crap"；举 LF 隐私政策把 email 列为 Personal information；须由懂开源的律师准备；引旧 Code of Conflict 全文对比——旧文不阻止标签、不把维护者变保姆 `<!-- ROW_MINE: ksummit-discuss.messages.349554 -->`
 
-## 54.2 gerrit 之争与 vapor-git-thingy：kernel.org 补丁网关构想
+## 54.2 【Linux社区】gerrit 之争与 vapor-git-thingy：kernel.org 补丁网关构想
 
 kernel.org 补丁网关构想的全景：Konstantin 八步草案与 vapor-git-thingy CLI、Greg 的 feedback loop 质疑、gerrit 三种立场（Ted 喜欢/Torokhov 反感/Pinchart 判死刑"会杀死内核社区"）、CI 归位之争与 Fuego 接口。
 
@@ -39,7 +39,7 @@ kernel.org 补丁网关构想的全景：Konstantin 八步草案与 vapor-git-th
 - 【Linux社区】Pinchart：能否用（未认证）git push 作第 3/4 步？ `<!-- ROW_MINE: ksummit-discuss.messages.349535 -->`
 - 【Linux社区】Belloni：问 SRS0 munging 会不会破坏 patchwork（作者名被按邮箱旧名改写的前科） `<!-- ROW_MINE: ksummit-discuss.messages.349533 -->`
 
-## 54.3 附件补丁攻防收束与 Outlook/Exchange 强制用例
+## 54.3 【Linux社区】附件补丁攻防收束与 Outlook/Exchange 强制用例
 
 附件补丁之辩的工具层收束：claws-mail/mutt/hch 证言、reply-as-inline 构想、2FA 与 EWS OAuth2 出路。
 
@@ -54,7 +54,7 @@ kernel.org 补丁网关构想的全景：Konstantin 八步草案与 vapor-git-th
 - 【Linux社区】hch："近来附件补丁鲜有问题、mutt 回复透明处理" `<!-- ROW_MINE: ksummit-discuss.messages.349541 -->`
 - 【Linux社区】Bottomley：SCSI 早收 exchange 人附件补丁（空白损伤无解时）；"若这是补丁出公司的唯一通道，痛可接受" `<!-- ROW_MINE: ksummit-discuss.messages.349549 -->`
 
-## 54.4 SCSI patch-id 之辩收束：distro 自动化 95%
+## 54.4 【Linux社区】SCSI patch-id 之辩收束：distro 自动化 95%
 
 SCSI/distro 排序之辩的技术收束：git patch-id 概念教学（HID redragon 实例）、"95% rebase 自动化"共识与 topic 分支短命数之争。
 
@@ -66,7 +66,7 @@ SCSI/distro 排序之辩的技术收束：git patch-id 概念教学（HID redrag
 - 【Linux社区】Jan Kara：patch-id 定位 rebase 后新 commit id 再推排序——"可自动化解决 SCSI 树 95% rebase" `<!-- ROW_MINE: ksummit-discuss.messages.349547 -->`
 - 【Linux社区】Iwai 与同事核过可行："patch-id 作 commit-id 补充信息，谢妙策" `<!-- ROW_MINE: ksummit-discuss.messages.349548 -->`
 
-## 54.5 linux-next 纪律与维护者特权续论
+## 54.5 【Linux社区】linux-next 纪律与维护者特权续论
 
 linux-next 通报机制与维护者特权之辩的续篇：Pinchart 评审被无视案例的完整叙述。
 
@@ -74,7 +74,7 @@ linux-next 通报机制与维护者特权之辩的续篇：Pinchart 评审被无
 - 【Linux社区】Brown 答 sfr："都在列表上、不每件 CC 你除非急、你要的话可以" `<!-- ROW_MINE: ksummit-discuss.messages.349555 -->`
 - 【Linux社区】Pinchart 回 tglx：维护者特权=绕过正常流程；亲身案例"评审数小时求改动仍原样合入、两次回复原评无答"；曾为客户谈成评审预算之例外 `<!-- ROW_MINE: ksummit-discuss.messages.349546 -->`
 
-## 54.6 KS2014 档案四封
+## 54.6 【Linux社区】KS2014 档案四封
 
 页内夹杂的 KS2014 档案信（2014-05-15）：QR oops 线程的 what/who 之辩与 kerneloops 基础设施细节。
 

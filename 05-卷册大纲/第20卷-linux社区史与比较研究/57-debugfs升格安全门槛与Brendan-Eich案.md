@@ -3,7 +3,7 @@
 > 来源：ksummit-discuss p109（50 封全读，2018-10-01/04，夹杂 KS2014 档案信 2014-05-03/15）。
 > 判定：50 CAND / 0 NV。主题分布：debugfs 27、coc 13、KS2014 6、zufs 4。
 
-## 57.1 debugfs 定位之争：tracefs 先例与"直接干"流程观
+## 57.1 【Linux社区】debugfs 定位之争：tracefs 先例与"直接干"流程观
 
 2018-10-01/02 debugfs→sysfs 迁移议题的定位之争：Rostedt 提案、Greg 的"debugfs 只属于调试"红线与电池测量事故实录、Olof 的容器命名空间升格判据。
 
@@ -13,7 +13,7 @@
 - 【Linux社区】Rostedt："调试用的东西往往变成生产系统想要的（tracing/perf/powertop）"；debugfs 或可用作开发中接口存放处 `<!-- ROW_MINE: ksummit-discuss.messages.349661 -->`
 - 【Linux社区】Olof 升格判据：命名空间与安全理顺方可毕业进 sysfs；容器想要的功能进 sysfs 却无法提供给非特权容器——应避免 `<!-- ROW_MINE: ksummit-discuss.messages.349663 -->`
 
-## 57.2 模块参数反向迁移与 probe 时序之利
+## 57.2 【Linux社区】模块参数反向迁移与 probe 时序之利
 
 Jani 的"模块参数即调试旋钮"反向提案与 Mauro 的廉价硬件用例反驳，probe 时序成为模块参数不可替代的技术根由。
 
@@ -22,7 +22,7 @@ Jani 的"模块参数即调试旋钮"反向提案与 Mauro 的廉价硬件用例
 - 【Linux社区】Mauro 反对一刀切：media 廉价硬件无 eeprom/无 ID 靠非调试类 modprobe 参数加载配置；也不动现有参数以免破坏用户空间 `<!-- ROW_MINE: ksummit-discuss.messages.349668 -->`
 - 【Linux社区】Jani：调试参数无法在 probe 时生效（驱动须先注册 debugfs 文件）——正是模块参数独有便利 `<!-- ROW_MINE: ksummit-discuss.messages.349672 -->`
 
-## 57.3 debugfs 安全门槛与发行版实态
+## 57.3 【Linux社区】debugfs 安全门槛与发行版实态
 
 debugfs 安全门槛之辩全景：Greg 的"完全不稳→root-only 默认"时间线、Shuah 的发行版 CONFIG 实查、Brown 的"须改内核方可写"regmap 模式、SUSE 的客户排障依赖与默认挂载之辨。
 
@@ -41,7 +41,7 @@ debugfs 安全门槛之辩全景：Greg 的"完全不稳→root-only 默认"时�
 - 【Linux社区】Jan Kara：bdi/ stats 契合 debugfs 宗旨；"不必常挂 debugfs——但必须编译进内核" `<!-- ROW_MINE: ksummit-discuss.messages.349687 -->`
 - 【Linux社区】Iwai："问题是 debugfs 默认挂载在我们系统上；想在生产系统收集调试数据故禁编译 no-go；禁挂载是另一回事" `<!-- ROW_MINE: ksummit-discuss.messages.349690 -->`
 
-## 57.4 HID debugfs 实例之辩
+## 57.4 【Linux社区】HID debugfs 实例之辩
 
 HID debugfs 的去留实例战：verbatim 描述符与解析后呈现之别、usbfs 对称设想——debugfs 合法用例的最具体呈现。
 
@@ -50,7 +50,7 @@ HID debugfs 的去留实例战：verbatim 描述符与解析后呈现之别、us
 - 【Linux社区】Greg："为何不放 sysfs？你已有 report_descriptor；为何还要 debugfs 版？" `<!-- ROW_MINE: ksummit-discuss.messages.349684 -->`
 - 【Linux社区】Kosina："sysfs 是从设备读的 verbatim 二进制、debugfs 是内核解析器理解后的呈现——两回事；events 无 sysfs 对应物" `<!-- ROW_MINE: ksummit-discuss.messages.349688 -->`
 
-## 57.5 ZUFS 用户态文件系统提案
+## 57.5 【Linux社区】ZUFS 用户态文件系统提案
 
 ZUFS（零拷贝用户态文件系统）一周年进展提案与"该在哪讨论"的轨道归位问答。
 
@@ -59,7 +59,7 @@ ZUFS（零拷贝用户态文件系统）一周年进展提案与"该在哪讨论
 - 【Linux社区】Harrosh：已过 LSF 全场讨论（半年前远未 ready）；现代码完整稳定、技术超越纯 FS——用户态服务器通信新方式、cpu-locality 与 NUMA aware；"实为我睡岗错过 Plumbers 截止" `<!-- ROW_MINE: ksummit-discuss.messages.349676 -->`
 - 【Linux社区】Boaz 重发 ZUFS 提案（个人 gmail 版） `<!-- ROW_MINE: ksummit-discuss.messages.349685 -->`
 
-## 57.6 Brendan Eich 案引入与法务暴露之辩
+## 57.6 【Linux社区】Brendan Eich 案引入与法务暴露之辩
 
 2018-10-04 Brendan Eich 案例引入：CoC 的诉讼暴露论（2000 万期权假设案）、LF 出资法律顾问倡议、Zephyr 去 enforcement 先例与 Pinchart 的程序/代表性两问。
 
@@ -71,7 +71,7 @@ ZUFS（零拷贝用户态文件系统）一周年进展提案与"该在哪讨论
 - 【Linux社区】Pinchart："LF 或其代表 TAB 咨询社区+获取法律建议才合理——个人各请律师无法 scale；需要汇集关切的论坛+有人出资法律顾问" `<!-- ROW_MINE: ksummit-discuss.messages.349696 -->`
 - 【Linux社区】jonsmirl："被解雇者很可能起诉维护者在指控中的角色——维护者从此背上法律辩护负担" `<!-- ROW_MINE: ksummit-discuss.messages.349697 -->`
 
-## 57.7 "封禁 Alice"思想实验：被禁贡献者的有效修复
+## 57.7 【Linux社区】"封禁 Alice"思想实验：被禁贡献者的有效修复
 
 Al Viro 的"封禁 Alice"思想实验及四方回应：Viro/Triplett/Tim Bird 的处理路径（代提交/自修整/类比失效邮箱）、tglx 的列表封禁-CC 送达漏洞、Corbet 的"过渡人"机制——CoC 执行论最锋利的一组推演。
 
@@ -82,7 +82,7 @@ Al Viro 的"封禁 Alice"思想实验及四方回应：Viro/Triplett/Tim Bird �
 - 【Linux社区】Corbet："没人设想禁止维护者接受补丁；常见做法是让当事人经由愿意与其打交道的人过渡——全面拒收我从未见过" `<!-- ROW_MINE: ksummit-discuss.messages.349704 -->`
 - 【Linux社区】Tim Bird："辩论假想情形不太有生产力——低概率；维护者可清理提交信息——一直这么干；补丁上游后没人该在乎来自谁——CoC 不是 witch hunt" `<!-- ROW_MINE: ksummit-discuss.messages.349705 -->`
 
-## 57.8 KS2014 档案六封
+## 57.8 【Linux社区】KS2014 档案六封
 
 页内夹杂的 KS2014 档案信（2014-05-03/15）：提名名录勘误、DT bindings 活文档设想、QR oops 的 hpa 三连与 mailman 收件人上限。
 

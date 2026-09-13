@@ -4,7 +4,7 @@
 > 判定：45 CAND / 5 NV（347809/347813/347821/347839/347854 纯出席确认或单句反问）
 > 编号：DSLXC-4033..4077 | claim 已入库（45/45，dslinux_claims.duckdb）
 
-## 7.1 人数定调与首轮名单配比
+## 7.1 【Linux社区】人数定调与首轮名单配比
 
 **要点**：
 1. Linus：人数必砍；「每人至少带一个 process pain-point + 改善建议，没有可自退为 happy」机制；20 维护者+10 下游/基建配比；top-10 名单只是 first round
@@ -17,11 +17,11 @@
 
 **史料**：`347806`、`347817`、`347823`、`347818`、`347828`、`347831`、`347830`
 
-**史料锚**：
+【Linux社区】**史料锚**：
 
-`<!-- ROW_MINE: ksummit-discuss.messages.347806 -->` `<!-- ROW_MINE: ksummit-discuss.messages.347817 -->` `<!-- ROW_MINE: ksummit-discuss.messages.347823 -->` `<!-- ROW_MINE: ksummit-discuss.messages.347818 -->` `<!-- ROW_MINE: ksummit-discuss.messages.347828 -->` `<!-- ROW_MINE: ksummit-discuss.messages.347831 -->` `<!-- ROW_MINE: ksummit-discuss.messages.347830 -->`
+【Linux社区】`<!-- ROW_MINE: ksummit-discuss.messages.347806 -->` `<!-- ROW_MINE: ksummit-discuss.messages.347817 -->` `<!-- ROW_MINE: ksummit-discuss.messages.347823 -->` `<!-- ROW_MINE: ksummit-discuss.messages.347818 -->` `<!-- ROW_MINE: ksummit-discuss.messages.347828 -->` `<!-- ROW_MINE: ksummit-discuss.messages.347831 -->` `<!-- ROW_MINE: ksummit-discuss.messages.347830 -->`
 
-## 7.2 distro 与 stable 视角
+## 7.2 【Linux社区】distro 与 stable 视角
 
 **要点**：
 1. Linus：Fedora/RHEL 对照——RHEL 有意滞后做 backport（"knows what it's doing"），Android 属同村但更值得谈；Fedora Laura 去年 KS 已谈过 stable 流程
@@ -30,11 +30,11 @@
 
 **史料**：`347811`、`347814`、`347815`
 
-**史料锚**：
+【Linux社区】**史料锚**：
 
-`<!-- ROW_MINE: ksummit-discuss.messages.347811 -->` `<!-- ROW_MINE: ksummit-discuss.messages.347814 -->` `<!-- ROW_MINE: ksummit-discuss.messages.347815 -->`
+【Linux社区】`<!-- ROW_MINE: ksummit-discuss.messages.347811 -->` `<!-- ROW_MINE: ksummit-discuss.messages.347814 -->` `<!-- ROW_MINE: ksummit-discuss.messages.347815 -->`
 
-## 7.3 sub-maintainer 名单与推进方式
+## 7.3 【Linux社区】sub-maintainer 名单与推进方式
 
 **要点**：
 1. Mauro：media 以 quilt 单树收 pull、sub-maintainer（Hans Verkuil/V4L2）不上 top-50；提出文档分组制议题（单书 vs 多主题分书）需峰会多维护者共议
@@ -46,11 +46,11 @@
 
 **史料**：`347807`、`347808`、`347810`、`347825`、`347816`、`347847`
 
-**史料锚**：
+【Linux社区】**史料锚**：
 
-`<!-- ROW_MINE: ksummit-discuss.messages.347807 -->` `<!-- ROW_MINE: ksummit-discuss.messages.347808 -->` `<!-- ROW_MINE: ksummit-discuss.messages.347810 -->` `<!-- ROW_MINE: ksummit-discuss.messages.347825 -->` `<!-- ROW_MINE: ksummit-discuss.messages.347816 -->` `<!-- ROW_MINE: ksummit-discuss.messages.347847 -->`
+【Linux社区】`<!-- ROW_MINE: ksummit-discuss.messages.347807 -->` `<!-- ROW_MINE: ksummit-discuss.messages.347808 -->` `<!-- ROW_MINE: ksummit-discuss.messages.347810 -->` `<!-- ROW_MINE: ksummit-discuss.messages.347825 -->` `<!-- ROW_MINE: ksummit-discuss.messages.347816 -->` `<!-- ROW_MINE: ksummit-discuss.messages.347847 -->`
 
-## 7.4 圆桌与反馈机制之争
+## 7.4 【Linux社区】圆桌与反馈机制之争
 
 **要点**：
 1. Laurent：匿名/聚合式维护者反馈机制提议（周期收集、去芜存菁、匿名提交）；维护者峰会决策是否启用
@@ -62,11 +62,11 @@
 
 **史料**：`347819`、`347820`、`347827`、`347829`、`347842`、`347844`
 
-**史料锚**：
+【Linux社区】**史料锚**：
 
-`<!-- ROW_MINE: ksummit-discuss.messages.347819 -->` `<!-- ROW_MINE: ksummit-discuss.messages.347820 -->` `<!-- ROW_MINE: ksummit-discuss.messages.347827 -->` `<!-- ROW_MINE: ksummit-discuss.messages.347829 -->` `<!-- ROW_MINE: ksummit-discuss.messages.347842 -->` `<!-- ROW_MINE: ksummit-discuss.messages.347844 -->`
+【Linux社区】`<!-- ROW_MINE: ksummit-discuss.messages.347819 -->` `<!-- ROW_MINE: ksummit-discuss.messages.347820 -->` `<!-- ROW_MINE: ksummit-discuss.messages.347827 -->` `<!-- ROW_MINE: ksummit-discuss.messages.347829 -->` `<!-- ROW_MINE: ksummit-discuss.messages.347842 -->` `<!-- ROW_MINE: ksummit-discuss.messages.347844 -->`
 
-## 7.5 议程提案与既往提案回响
+## 7.5 【Linux社区】议程提案与既往提案回响
 
 **要点**：
 1. James 议程提案：①patch 状态通知邮件标准化（commit-id/tree/维护者/列表/目标版本五要素）②kernel.org 托管 blessed 脚本集中化 ③「tasteful rebasing」准则整理 ④ 0day+linux-next 是否够格的 CI 讨论
@@ -79,11 +79,11 @@
 
 **史料**：`347822`、`347826`、`347833`、`347834`、`347836`、`347837`、`347838`
 
-**史料锚**：
+【Linux社区】**史料锚**：
 
-`<!-- ROW_MINE: ksummit-discuss.messages.347822 -->` `<!-- ROW_MINE: ksummit-discuss.messages.347826 -->` `<!-- ROW_MINE: ksummit-discuss.messages.347833 -->` `<!-- ROW_MINE: ksummit-discuss.messages.347834 -->` `<!-- ROW_MINE: ksummit-discuss.messages.347836 -->` `<!-- ROW_MINE: ksummit-discuss.messages.347837 -->` `<!-- ROW_MINE: ksummit-discuss.messages.347838 -->`
+【Linux社区】`<!-- ROW_MINE: ksummit-discuss.messages.347822 -->` `<!-- ROW_MINE: ksummit-discuss.messages.347826 -->` `<!-- ROW_MINE: ksummit-discuss.messages.347833 -->` `<!-- ROW_MINE: ksummit-discuss.messages.347834 -->` `<!-- ROW_MINE: ksummit-discuss.messages.347836 -->` `<!-- ROW_MINE: ksummit-discuss.messages.347837 -->` `<!-- ROW_MINE: ksummit-discuss.messages.347838 -->`
 
-## 7.6 文档议题与 Sphinx 中期评估
+## 7.6 【Linux社区】文档议题与 Sphinx 中期评估
 
 **要点**：
 1. Corbet：文档议题——责任归属不清多树抢收/冲突；Sphinx 转换中期评估与去向
@@ -94,11 +94,11 @@
 
 **史料**：`347832`、`347840`、`347843`、`347849`、`347852`
 
-**史料锚**：
+【Linux社区】**史料锚**：
 
-`<!-- ROW_MINE: ksummit-discuss.messages.347832 -->` `<!-- ROW_MINE: ksummit-discuss.messages.347840 -->` `<!-- ROW_MINE: ksummit-discuss.messages.347843 -->` `<!-- ROW_MINE: ksummit-discuss.messages.347849 -->` `<!-- ROW_MINE: ksummit-discuss.messages.347852 -->`
+【Linux社区】`<!-- ROW_MINE: ksummit-discuss.messages.347832 -->` `<!-- ROW_MINE: ksummit-discuss.messages.347840 -->` `<!-- ROW_MINE: ksummit-discuss.messages.347843 -->` `<!-- ROW_MINE: ksummit-discuss.messages.347849 -->` `<!-- ROW_MINE: ksummit-discuss.messages.347852 -->`
 
-## 7.7 longterm/stable 生态与现状
+## 7.7 【Linux社区】longterm/stable 生态与现状
 
 **要点**：
 1. Jani：kernel.org 现状 1 stable+8 longterm+1 eol——多家 longterm 信号「滞后也 OK」，早年鼓励用最新稳定 的力度更强
@@ -108,11 +108,11 @@
 
 **史料**：`347841`、`347848`、`347851`、`347853`
 
-**史料锚**：
+【Linux社区】**史料锚**：
 
-`<!-- ROW_MINE: ksummit-discuss.messages.347841 -->` `<!-- ROW_MINE: ksummit-discuss.messages.347848 -->` `<!-- ROW_MINE: ksummit-discuss.messages.347851 -->` `<!-- ROW_MINE: ksummit-discuss.messages.347853 -->`
+【Linux社区】`<!-- ROW_MINE: ksummit-discuss.messages.347841 -->` `<!-- ROW_MINE: ksummit-discuss.messages.347848 -->` `<!-- ROW_MINE: ksummit-discuss.messages.347851 -->` `<!-- ROW_MINE: ksummit-discuss.messages.347853 -->`
 
-## 7.8 arm-soc 拆分与跨树协作
+## 7.8 【Linux社区】arm-soc 拆分与跨树协作
 
 **要点**：
 1. Vetter：arm-soc 拆分批评深论——drm 跨子系统靠 review 全员+acks合并单树 或 topic branch 双 pull；arm-soc 拆树毁 bisect、测试难、甚至最终启用补丁整版延迟；单入口缺失只见人（vacation/bikeshed 生态）
@@ -120,22 +120,22 @@
 
 **史料**：`347845`、`347850`
 
-**史料锚**：
+【Linux社区】**史料锚**：
 
-`<!-- ROW_MINE: ksummit-discuss.messages.347845 -->` `<!-- ROW_MINE: ksummit-discuss.messages.347850 -->`
+【Linux社区】`<!-- ROW_MINE: ksummit-discuss.messages.347845 -->` `<!-- ROW_MINE: ksummit-discuss.messages.347850 -->`
 
-## 7.9 收束与展望
+## 7.9 【Linux社区】收束与展望
 
 **要点**：
 1. James 收束：峰会轮转美/欧/亚+绑定各自技术会议解决「没一个会议覆盖全员」；「赋能」观（大多数人会给机会参与）；民主比喻
 
 **史料**：`347855`
 
-**史料锚**：
+【Linux社区】**史料锚**：
 
-`<!-- ROW_MINE: ksummit-discuss.messages.347855 -->`
+【Linux社区】`<!-- ROW_MINE: ksummit-discuss.messages.347855 -->`
 
-## 7.10 KS2014 混档档案信（2014-05-02 / 2014-05-12）
+## 7.10 【Linux社区】KS2014 混档档案信（2014-05-02 / 2014-05-12）
 
 **要点**：
 1. John Linville（2014-05-02）：[CORE TOPIC]维护者树深度——tree too flat? 直接向 Linus 收 pull 报的浸润、「eaten by raptors」保险、无线树流向 Davem（二级树）；加层带来 merge latency 与新管理成本
@@ -145,9 +145,9 @@
 
 **史料**：`347812`、`347824`、`347835`、`347846`
 
-**史料锚**：
+【Linux社区】**史料锚**：
 
-`<!-- ROW_MINE: ksummit-discuss.messages.347812 -->` `<!-- ROW_MINE: ksummit-discuss.messages.347824 -->` `<!-- ROW_MINE: ksummit-discuss.messages.347835 -->` `<!-- ROW_MINE: ksummit-discuss.messages.347846 -->`
+【Linux社区】`<!-- ROW_MINE: ksummit-discuss.messages.347812 -->` `<!-- ROW_MINE: ksummit-discuss.messages.347824 -->` `<!-- ROW_MINE: ksummit-discuss.messages.347835 -->` `<!-- ROW_MINE: ksummit-discuss.messages.347846 -->`
 
 ---
 注：本文件由判定表程序化生成（10 块，覆盖 45/45 CAND）；要点逐字采用判定表「要点」列（审读实录），史料锚与 CAND 一一对应。

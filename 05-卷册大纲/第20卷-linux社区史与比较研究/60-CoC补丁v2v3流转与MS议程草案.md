@@ -3,7 +3,7 @@
 > 来源：ksummit-discuss p112（50 封全读，2018-10-10/16，夹杂 KS2014 档案信 2014-05-02/15）。
 > 判定：50 CAND / 0 NV。主题分布：coc 44、KS2014 6。
 
-## 60.1 [PATCH v2/v3 0/3] 全文流转与 Acked 潮
+## 60.1 【Linux社区】[PATCH v2/v3 0/3] 全文流转与 Acked 潮
 
 2018-10-10/16 CoC 补丁系列的 v2→v3 全文流转：三补丁形态定型（email 修复/剥 enforcement 起点非终点/Reporting 节回归+except where required by law）、Acked-Reviewed 潮名单与 Mauro 的个人身份署名更正。
 
@@ -20,7 +20,7 @@
 - 【Linux社区】Mauro：“按 Alan 提议改后可加我的 Reviewed-by” `<!-- ROW_MINE: ksummit-discuss.messages.349844 -->`
 - 【Linux社区】Mauro：“请把我的 Reviewed-by 改为 mchehab@kernel.org——以个人身份非雇主” `<!-- ROW_MINE: ksummit-discuss.messages.349845 -->`
 
-## 60.2 should 措辞与执行语义之辩
+## 60.2 【Linux社区】should 措辞与执行语义之辩
 
 right and responsibility→may→should 的措辞演化全程：Geert 五步清单与责任普遍化修正案、Cox 的 should 定稿与 0day 笑谈、Airlie 的现实主义的驳。
 
@@ -32,7 +32,7 @@ right and responsibility→may→should 的措辞演化全程：Geert 五步清�
 - 【Linux社区】Airlie 答 Cox 0day 假设：“为什么？仍可与那人谈行为、建议其改——带着 0day 的混蛋多半不会发给我们” `<!-- ROW_MINE: ksummit-discuss.messages.349829 -->`
 - 【Linux社区】Mauro Reviewed-by v2 2/3；“我仍认为本系列该含第四补丁：responsibilities 节按 Alan 文本改 right and responsibility→should” `<!-- ROW_MINE: ksummit-discuss.messages.349847 -->`
 
-## 60.3 巴西 Whatsapp 群 CoC 实测与习语陷阱
+## 60.3 【Linux社区】巴西 Whatsapp 群 CoC 实测与习语陷阱
 
 CoC 执行的两组现场证据：Mauro 的百人 Whatsapp 群“回 CoC 引用无用论”与非母语习语陷阱实录（key signing party 漏词）、Triplett 的 intent 分级与 git 历史 permanence 之辩。
 
@@ -43,7 +43,7 @@ CoC 执行的两组现场证据：Mauro 的百人 Whatsapp 群“回 CoC 引用�
 - 【Linux社区】Mauro：“除非很快收到修复、我不会 rebase 树——坏措辞永远留在 git 历史、还可能被回移 -stable” `<!-- ROW_MINE: ksummit-discuss.messages.349825 -->`
 - 【Linux社区】Triplett：“It happens. 不是世界末日——不会指望为这点小事 rebase 工作树” `<!-- ROW_MINE: ksummit-discuss.messages.349827 -->`
 
-## 60.4 revert 呼声与“4.19 魔力”/独裁者交锋
+## 60.4 【Linux社区】revert 呼声与“4.19 魔力”/独裁者交锋
 
 revert 路线的民意与程序之辩：Pavel/Dunlap 的“未走流程”双证、Luck 与 Bottomley 的“独裁者 git push 即生效吗”交锋、Kees 的 -stable 修复路径提议。
 
@@ -55,7 +55,7 @@ revert 路线的民意与程序之辩：Pavel/Dunlap 的“未走流程”双证
 - 【Linux社区】Luck：“也许你该复习一下独裁者一词的意思 :-)” `<!-- ROW_MINE: ksummit-discuss.messages.349837 -->`
 - 【Linux社区】Kees：“Greg 说 4.19 将是下个 LTS；若把 CoC 的 bug 当 bug——修复也可进 -stable、落在 4.19.z；不必赶 4.19——花时间把 CoC 做对符合我们自己的利益” `<!-- ROW_MINE: ksummit-discuss.messages.349852 -->`
 
-## 60.5 政治声明之辩与 RFC 程序
+## 60.5 【Linux社区】政治声明之辩与 RFC 程序
 
 Geert 删列表补丁的政治维度：Rowand 的“政治声明不属于文档”与 ESR 的 RFC/rough consensus 程序论、Triplett 的“不删也是政治声明”对称反驳。
 
@@ -65,7 +65,7 @@ Geert 删列表补丁的政治维度：Rowand 的“政治声明不属于文档�
 - 【Linux社区】Triplett 答 Rowand：“不说是政治声明也是政治声明；见原 commit message Explicit guidelines have demonstrated success；见 FAQ 条目（我写并上游热情 merge）” `<!-- ROW_MINE: ksummit-discuss.messages.349838 -->`
 - 【Linux社区】Rowand 引 ESR：“选择受保护类是 CoC 隐含政治的改变——从 LKML 流量看显然极有争议——若是纯技术事务会被描述为 not backwards-compatible——不该未经明确共识而做；我们的文化有流程叫 RFC——达成 rough consensus 才改”；“谢谢 Eric 清晰表述——我退出此点后续讨论” `<!-- ROW_MINE: ksummit-discuss.messages.349841 -->`
 
-## 60.6 Biederman 三问题与 Viro 树型论
+## 60.6 【Linux社区】Biederman 三问题与 Viro 树型论
 
 Our Responsibilities 节的结构性批评：Biederman 三问题（git 不可编辑/责任不对称/语气失配）+ Viro 第四问题（列表 moderation 物理不可持续）与 Bottomley 的逐条回应、Mauro 的 FAQ 提议与“集中式模型不适配”总评。
 
@@ -75,14 +75,14 @@ Our Responsibilities 节的结构性批评：Biederman 三问题（git 不可编
 - 【Linux社区】Mauro 答 Biederman：“MS/KS 应多谈 rebase——rebase 该是例外不是规则；我会在 FAQ 或 CoC 本身加：维护者不会因 CoC 做 git rebase——投诉应尽快回以便合并前看到；此 CoC 模式太绑集中式网站托管模型、缺去中心化邮件流适配——后续可能须替换或大改” `<!-- ROW_MINE: ksummit-discuss.messages.349848 -->`
 - 【Linux社区】Dan Carpenter：“其实你该对 TAB 之外的人保密报告——几年后他们会面试你找工作” `<!-- ROW_MINE: ksummit-discuss.messages.349850 -->`
 
-## 60.7 Maintainer's Summit 议程草案与出席名单
+## 60.7 【Linux社区】Maintainer's Summit 议程草案与出席名单
 
 温哥华 Maintainer's Summit 议程草案全文与 30 人名单、Vetter 的“CoC 运营经验者缺席”程序批评——本战线下阶段的事实坐标。
 
 - 【Linux社区】Ted 发布 Maintainer's Summit 议程草案：12:00 CoC: How did we get here report-out/12:30 CoC: next steps/1:00 stable 对社区发行版更有用（Abbott）/1:30 API 替换与弃用（Kees）/2:00 embargo 安全议题（Kosina）/3:30 旧硬件弃用（Arnd）/4:00 EXPORT_SYMBOL_GPL 指南（Greg）/5:00 峰会反馈；出席者 30 人全名单 `<!-- ROW_MINE: ksummit-discuss.messages.349853 -->`
 - 【Linux社区】Vetter：“CoC 在议程上、而唯一对完全相同 CoC 有实际运营经验的子系统（fd.o/dri-devel）无人出席——也没请外部社区有真经验者或该领域顾问补位” `<!-- ROW_MINE: ksummit-discuss.messages.349854 -->`
 
-## 60.8 KS2014 档案六封
+## 60.8 【Linux社区】KS2014 档案六封
 
 页内夹杂的 KS2014 档案信（2014-05-02/15）：syscall 攻击面 profiles、ACPI-DT 两股人流、printk 话多与 NMI 加剧、Howells 头文件重构八步纲领。
 

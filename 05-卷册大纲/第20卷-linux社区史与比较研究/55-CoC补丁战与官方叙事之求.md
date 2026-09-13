@@ -3,7 +3,7 @@
 > 来源：ksummit-discuss p107（50 封全读，2018-09-19/23，夹杂 KS2014 档案信 2014-05-03/15）。
 > 判定：50 CAND / 0 NV。主题分布：coc 31、KS2014 6、communication 5、governance 3、security 3、memory-model 1、next-discipline 1。
 
-## 55.1 CoC 补丁战与官方叙事之求
+## 55.1 【Linux社区】CoC 补丁战与官方叙事之求
 
 2018-09-19/20 CoC 补丁战全记录：Tony Luck 与 Mauro 的两版 code-of-conduct.rst 补丁全文、Airlie/Tim/Jani/Woodhouse/Vetter 的法理与流程之争、Rafael 的执行责任三问与 dri-devel 操作经验、Perches"代码/行为"二分。
 
@@ -30,7 +30,7 @@
 - 【Linux社区】Tim Bird：法诉风险被夸大；责任方向误解论（维护者夹在贡献者与 Linus 之间）；"无记录有人因未执行 CoC 被封" `<!-- ROW_MINE: ksummit-discuss.messages.349588 -->`
 - 【Linux社区】Mauro："期待 FAQ；若当初加顶注说明 roll-out 时序则好得多；这一份为 GitHub 而生" `<!-- ROW_MINE: ksummit-discuss.messages.349597 -->`
 
-## 55.2 Biederman 坏补丁论与 Mauro 攻击剧本
+## 55.2 【Linux社区】Biederman 坏补丁论与 Mauro 攻击剧本
 
 CoC 之战的两个极端文本：Biederman 的补丁审查视角全面检视（rc4 时点/无讨论/领导力空转/GPL 疑虑）与 Mauro 的"假账号自演控告"攻击剧本及镜像档案不可编辑论。
 
@@ -39,7 +39,7 @@ CoC 之战的两个极端文本：Biederman 的补丁审查视角全面检视（
 - 【Linux社区】Mauro 回击：解析强制链（不作为→TAB→维护者受罚、无一字罚违规者）；"邮件被镜像后如何 remove/edit？只封人不改档案就没按 CoC 字面执行" `<!-- ROW_MINE: ksummit-discuss.messages.349586 -->`
 - 【Linux社区】Mauro 驳"广泛采用"论：Contributor Covenant 为 GitHub 而生；LKML 无法 moderate；伪造账号自演控告即可搞掉任意维护者的攻击剧本；三选项（revert/换 CoC/打补丁）；"或等到 Maintainer's Summit 再发 PR" `<!-- ROW_MINE: ksummit-discuss.messages.349577 -->`
 
-## 55.3 官方叙事之求：沉默震耳欲聋与 Corbet 回应
+## 55.3 【Linux社区】官方叙事之求：沉默震耳欲聋与 Corbet 回应
 
 2018-09-20 CoC 变更后的社区心理实录：Pinchart 的"Bastille"隐喻与官方叙事之求、Corbet 的断头台否认与图景之诺、Torokhov 的"凭空冒出"指控。
 
@@ -49,7 +49,7 @@ CoC 之战的两个极端文本：Biederman 的补丁审查视角全面检视（
 - 【Linux社区】Pinchart 求公开论坛：FAQ 同样方式再扔会再现同样感受；"能被听见的中道即可" `<!-- ROW_MINE: ksummit-discuss.messages.349591 -->`
 - 【Linux社区】Tim Bird：Maintainer's Summit 前有可讨论之物；FAQ 避免无尽缠斗；开放其他场 `<!-- ROW_MINE: ksummit-discuss.messages.349593 -->`
 
-## 55.4 治理续论：维护者特权词汇之争与 RTC 数据再辩
+## 55.4 【Linux社区】治理续论：维护者特权词汇之争与 RTC 数据再辩
 
 维护者特权词汇之辩的收束与 RTC 贡献数据战的第三回合（Perches 孤立子系统论+Zummo 事实）。
 
@@ -58,7 +58,7 @@ CoC 之战的两个极端文本：Biederman 的补丁审查视角全面检视（
 - 【Linux社区】Perches 驳 Vetter：孤立子系统论；Zummo 2015 后未签 commit；一次性贡献偏向空白与 checkpatch 更新 `<!-- ROW_MINE: ksummit-discuss.messages.349602 -->`
 - 【Linux社区】sfr：linux-next 列表上可见、不必每件 CC `<!-- ROW_MINE: ksummit-discuss.messages.349560 -->`
 
-## 55.5 新议题三连与附件补丁 bot 设计
+## 55.5 【Linux社区】新议题三连与附件补丁 bot 设计
 
 议题池扩充：Security 会话（Morris/Carpenter/Abbott）、内存一致性模型 hands-on（Parri/McKenney）、附件补丁 bot 设计（Olof）与工具链流失数据（Vetter/Pinchart）。
 
@@ -72,7 +72,7 @@ CoC 之战的两个极端文本：Biederman 的补丁审查视角全面检视（
 - 【Linux社区】Pinchart 求离职者痛点；"gerrit 强推你会失去我" `<!-- ROW_MINE: ksummit-discuss.messages.349582 -->`
 - 【Linux社区】Vetter 自嘲与 stone tablets 出处 `<!-- ROW_MINE: ksummit-discuss.messages.349583 -->`
 
-## 55.6 KS2014 档案六封
+## 55.6 【Linux社区】KS2014 档案六封
 
 页内夹杂的 KS2014 档案信（2014-05-03/15）：QR oops 与发行版时滞、2038、tinification、议题人事名录。
 

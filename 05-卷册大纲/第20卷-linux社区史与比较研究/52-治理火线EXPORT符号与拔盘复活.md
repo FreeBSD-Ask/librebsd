@@ -3,7 +3,7 @@
 > 来源：ksummit-discuss p104（50 封全读，2018-09-13 ~ 2018-09-17，夹杂 KS2014 档案信 2014-05-14/15）。
 > 判定：50 CAND / 0 NV。主题分布：governance 13、communication 14、EXPORT_SYMBOL_GPL 9、Banbury 8、KS2014 4、tooling 1、safety 1。
 
-## 52.1 治理火线第二轮：指标之辩与 tglx 退出通牒
+## 52.1 【Linux社区】治理火线第二轮：指标之辩与 tglx 退出通牒
 
 2018-09-13/17 ksummit-discuss 治理辩论第二轮收束：指标有效性、组维护制的历史与边界、tglx "out of discussion" 通牒与 Vetter 的系统化回应。
 
@@ -18,7 +18,7 @@
 - 【Linux社区】tglx 长篇反驳：DRM 贡献者是企业团队、tip 侧是 drive-by 与甩栅栏；工具标准化不会变出关爱者；除非系统性分析否则退出讨论 `<!-- ROW_MINE: ksummit-discuss.messages.349426 -->`
 - 【Linux社区】Vetter 压稿两日的总结陈词：drm-misc 强制交叉评审提升 bus factor、漏斗损耗、commit 权利留人、CoC 严格执行+维护者无特权 `<!-- ROW_MINE: ksummit-discuss.messages.349439 -->`
 
-## 52.2 单任维护者之殇：Brownell 案例与 GPIO sysfs 遗产
+## 52.2 【Linux社区】单任维护者之殇：Brownell 案例与 GPIO sysfs 遗产
 
 单任维护者消失的真实代价：Brownell 2011 年去世对 GPIO/SPI/MMC 子系统的长期影响与 sysfs ABI 遗产之辩。
 
@@ -26,7 +26,7 @@
 - 【Linux社区】Geert 纠正时间线：GPIO sysfs 接口 commit d8f388d8dc8d4f36 作者正是 Brownell 本人 `<!-- ROW_MINE: ksummit-discuss.messages.349424 -->`
 - 【Linux社区】Walleij 认错（git history never lies）；其他作者只记得"当时只是需要从用户态控制 GPIO" `<!-- ROW_MINE: ksummit-discuss.messages.349425 -->`
 
-## 52.3 EXPORT_SYMBOL_GPL 语义之辩：从 Rusty 2005 到 ABI 稳定性分界线
+## 52.3 【Linux社区】EXPORT_SYMBOL_GPL 语义之辩：从 Rusty 2005 到 ABI 稳定性分界线
 
 EXPORT_SYMBOL_GPL 议题全景：2005 年 Rusty Russell commit b6c17ea4 与 LWN 154602 的源头、政治/法律/技术三重解读、Greg 与 Ted 两种成文路线。
 
@@ -40,7 +40,7 @@ EXPORT_SYMBOL_GPL 议题全景：2005 年 Rusty Russell commit b6c17ea4 与 LWN 
 - 【Linux社区】Ted：程序员辩论法律解释无价值且有害；2005 建议只要求"存在差异并显式表达"；个人分界线是 ABI 稳定性——_GPL 更不稳定 `<!-- ROW_MINE: ksummit-discuss.messages.349437 -->`
 - 【Linux社区】Mauro：media 强烈偏好 kAPI 用 _GPL；现存 EXPORT_SYMBOL 是历史遗留；重写顺手改 _GPL、小改不动 `<!-- ROW_MINE: ksummit-discuss.messages.349440 -->`
 
-## 52.4 Project Banbury：拔盘复活之辩
+## 52.4 【Linux社区】Project Banbury：拔盘复活之辩
 
 Project Banbury 热插拔回写复活议题：Wilcox 提案、Linus 可行性质疑（NFS intr 先例）、Bottomley 缓存谎言论与 Ted 的 device-mapper 重传缓冲设计。
 
@@ -53,7 +53,7 @@ Project Banbury 热插拔回写复活议题：Wilcox 提案、Linus 可行性质
 - 【Linux社区】Ted 方案：device-mapper 设备 + TCP 式重传缓冲保留已写块副本、可配上限、CACHE FLUSH 释放、用户态重连重放 `<!-- ROW_MINE: ksummit-discuss.messages.349436 -->`
 - 【Linux社区】Howells 问 fscache 能否帮忙 `<!-- ROW_MINE: ksummit-discuss.messages.349438 -->`
 
-## 52.5 通信系统之辩：邮件强制性与 GitHub 账户墙
+## 52.5 【Linux社区】通信系统之辩：邮件强制性与 GitHub 账户墙
 
 通信系统之辩全景：Mauro 的"为何强制邮件"挑战、hch 的账户墙底线与 Pinchart 的推送式/可脚本化/离线三需求，221 条 moderated 列表等价论之驳。
 
@@ -72,7 +72,7 @@ Project Banbury 热插拔回写复活议题：Wilcox 提案、Linus 可行性质
 - 【Linux社区】Pinchart 驳 221 条等价论：ML 订阅一次后无需认证、web UI 每次都要认证；各起 gitlab 实例后情形就变了 `<!-- ROW_MINE: ksummit-discuss.messages.349454 -->`
 - 【Linux社区】Geert：linux-arm-kernel 是通往众多维护者的网关；核心 ARM 仍须走 ARM patch system `<!-- ROW_MINE: ksummit-discuss.messages.349455 -->`
 
-## 52.6 KS2014 档案：能耗偏置与 ACPI-DT 资源查找
+## 52.6 【Linux社区】KS2014 档案：能耗偏置与 ACPI-DT 资源查找
 
 页内夹杂的 KS2014 档案信（2014-05-14/15）：能耗偏置接口三档旋钮、EAS workshop 筹备与 ACPI-DT 资源查找统一接口之辩。
 
@@ -81,7 +81,7 @@ Project Banbury 热插拔回写复活议题：Wilcox 提案、Linus 可行性质
 - 【Linux社区】Preeti 回 Rafael：governor 不知是否节能、任务级 latency 站不住、手机/手表场景内核自行决策（2014-05-15） `<!-- ROW_MINE: ksummit-discuss.messages.349434 -->`
 - 【Linux社区】Rafael 论 ACPI-DT 资源查找：acpi_find_gpio() 只用 index、主动 vs 被动固件模型、PCI host bridge 好例子（2014-05-15） `<!-- ROW_MINE: ksummit-discuss.messages.349445 -->`
 
-## 52.7 工具链与议题归位
+## 52.7 【Linux社区】工具链与议题归位
 
 零散两封：维护者 merge-config 工具链经验与安全关键议题的轨道归位（Maintainer Summit → Plumbers）。
 
