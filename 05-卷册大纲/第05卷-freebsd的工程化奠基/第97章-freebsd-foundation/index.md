@@ -31,7 +31,7 @@ volume: 第05卷-freebsd的工程化奠基
 
 ## 史观
 
-(待人工回填——详见子节文件史观/辨析字段)
+- 本章不设章级史观综合；史观映射详见各子节文件的“史观/辨析”字段（如 97.7 历年决议文档概览——治理留痕、97.8 社区争议——技术派与商业派的分歧）。
 
 ## 辨析
 
@@ -47,7 +47,11 @@ volume: 第05卷-freebsd的工程化奠基
 
 <!-- DB_REF:freebsd.duckdb -->
 > **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 2000-2000 年间：29,754 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
-- Foundation 990 表；Core Team 名单 ［A］## 史料考据补充（2026-08-04 任务3 联网核验）> 主题：staff developer 与志愿者的张力
+- Foundation 990 表；Core Team 名单 ［A］
+
+## 史料考据补充（2026-08-04 任务3 联网核验）
+
+> 主题：staff developer 与志愿者的张力
 - 作者不详. FreeBSD Foundation 董事会名单[Z]. 年份不详；作者不详. freebsd-hackers 邮件列表[EB/OL]. 年份不详 ［A］
 
 <!-- DB_REF:freebsd.duckdb -->
@@ -60,11 +64,37 @@ volume: 第05卷-freebsd的工程化奠基
 
 <!-- DB_REF:freebsd.duckdb -->
 > **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 1996-2010 年间：482,545 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
-- Foundation 档案［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］FreeBSD 社区论文：[FP-2020-014] FreeBSD Around the World!（Deb Goodkin（德布·古德金），2020）<https://papers.freebsd.org/2020/fosdem/goodkin-freebsd_around_the_world/>FreeBSD 社区论文：[FP-2018-002] Flexible Disk Use in OpenZFS（Matt Ahrens，2018）<https://papers.freebsd.org/2018/bsdcan/ahrens-flexible_disk_use_in_openzfs/>FreeBSD 社区论文：[FP-2018-043] The FreeBSD Foundation and How We Are Changing the World（Deb Goodkin，2018）<https://papers.freebsd.org/2018/fosdem/deb-the_freebsd_foundation_and_how-we_are_changing_the_world/>FreeBSD 社区论文：[FP-2015-008] Supporting a BSD Project（Ed Maste（埃德·马斯特），2015）<https://papers.freebsd.org/2015/vbsdcon/maste-supporting_a_bsd_project/>FreeBSD 社区论文：[FP-2010-002] Software Tools - Mission Accomplished or Mission Failure ?（Poul-Henning Kamp（波尔-亨宁·坎普），2010）<https://papers.freebsd.org/2010/phk-software-tools/>FreeBSD 社区论文：[FP-2007-003] Lousy virtualization, Happy users: FreeBSD's jail(2) facility（Poul-Henning Kamp，2007）<https://papers.freebsd.org/2007/euug/phk-jail/>FreeBSD 社区论文：[FP-2005-001] Building a FreeBSD Appliance With NanoBSD（Poul-Henning Kamp，2005）<https://papers.freebsd.org/2005/phk-nanobsd/>FreeBSD 社区论文：[FP-2005-004] Ioctl(2) is so 1980ies（Poul-Henning Kamp，2005）<https://papers.freebsd.org/2005/phk-ioctl/>FreeBSD 社区论文：[FP-2004-003] GEOM（Poul-Henning Kamp，2004）<https://papers.freebsd.org/2004/phk-geom/>FreeBSD 社区论文：[FP-2004-004] GEOM Tutorial（Poul-Henning Kamp，2004）<https://papers.freebsd.org/2004/phk-geom-tutorial/>FreeBSD 社区论文：[FP-2004-005] Making sure data is lost（Poul-Henning Kamp，2004）<https://papers.freebsd.org/2004/phk-gbde/>FreeBSD 社区论文：[FP-2003-001] GBDE - GEOM Based Disk Encryption（Poul-Henning Kamp，2003）<https://papers.freebsd.org/2003/bsdcon/phk-gbde-paper/>FreeBSD 社区论文：[FP-2003-002] GEOM tutorial（Poul-Henning Kamp，2003）<https://papers.freebsd.org/2003/bsdcon/phk-geom-tutorial/>FreeBSD 社区论文：[FP-2003-003] Making sure data is lost（Poul-Henning Kamp，2003）<https://papers.freebsd.org/2003/bsdcon/phk-gbde-slides/>FreeBSD 社区论文：[FP-2002-004] Rethinking /dev and devices in the UNIX kernel（Poul-Henning Kamp，2002）<https://papers.freebsd.org/2002/bsdcon/phk-devfs/>FreeBSD 社区论文：[FP-2002-009] Timecounters: Efficient and precise timekeeping in SMP kernels（Poul-Henning Kamp，2002）<https://papers.freebsd.org/2002/phk-timecounters/>FreeBSD 社区论文：[FP-2000-001] Jails: Confining the omnipotent root（Poul-Henning Kamp; Robert N. M. Watson（罗伯特·N·M·沃森），2000）<https://papers.freebsd.org/2000/phk-jails/>FreeBSD 社区论文：[FP-2000-003] The Nanokernel（Dave L. Mills; Poul-Henning Kamp，2000）<https://papers.freebsd.org/2000/phk-nanokernel/>FreeBSD 社区论文：[FP-1998-001] Raw data: Interrupt latency measurements（Poul-Henning Kamp，1998）<https://papers.freebsd.org/1998/phk-interrupts/>FreeBSD 社区论文：[FP-1998-002] Malloc(3) revisited（Poul-Henning Kamp，1998）<https://papers.freebsd.org/1998/phk-malloc/>### 史观映射> 基金会的诞生把一个松散的黑客共同体推入了法律实体的模具——科罗拉多州注册、IRS 501(c)(3) 裁定、By-Laws 条款、officer 职责分工，每一份表格都在把 “谁有权做什么” 从默契变成条文。形式主义化不一定是堕落——没有基金会，Jan Koum（简·库姆） 的支票无处可签；但形式主义化也不一定是进步——当执行总监与董事会争夺日常运营权，当技术派与商业派在预算表上对峙，当员工开发者因有薪酬而比志愿者更有话语权，治理就不再是服务社区的工具，而是社区必须服从的结构---
+- Foundation 档案［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
+FreeBSD 社区论文：[FP-2020-014] FreeBSD Around the World!（Deb Goodkin（德布·古德金），2020）<https://papers.freebsd.org/2020/fosdem/goodkin-freebsd_around_the_world/>
+FreeBSD 社区论文：[FP-2018-002] Flexible Disk Use in OpenZFS（Matt Ahrens，2018）<https://papers.freebsd.org/2018/bsdcan/ahrens-flexible_disk_use_in_openzfs/>
+FreeBSD 社区论文：[FP-2018-043] The FreeBSD Foundation and How We Are Changing the World（Deb Goodkin，2018）<https://papers.freebsd.org/2018/fosdem/deb-the_freebsd_foundation_and_how-we_are_changing_the_world/>
+FreeBSD 社区论文：[FP-2015-008] Supporting a BSD Project（Ed Maste（埃德·马斯特），2015）<https://papers.freebsd.org/2015/vbsdcon/maste-supporting_a_bsd_project/>
+FreeBSD 社区论文：[FP-2010-002] Software Tools - Mission Accomplished or Mission Failure ?（Poul-Henning Kamp（波尔-亨宁·坎普），2010）<https://papers.freebsd.org/2010/phk-software-tools/>
+FreeBSD 社区论文：[FP-2007-003] Lousy virtualization, Happy users: FreeBSD's jail(2) facility（Poul-Henning Kamp，2007）<https://papers.freebsd.org/2007/euug/phk-jail/>
+FreeBSD 社区论文：[FP-2005-001] Building a FreeBSD Appliance With NanoBSD（Poul-Henning Kamp，2005）<https://papers.freebsd.org/2005/phk-nanobsd/>
+FreeBSD 社区论文：[FP-2005-004] Ioctl(2) is so 1980ies（Poul-Henning Kamp，2005）<https://papers.freebsd.org/2005/phk-ioctl/>
+FreeBSD 社区论文：[FP-2004-003] GEOM（Poul-Henning Kamp，2004）<https://papers.freebsd.org/2004/phk-geom/>
+FreeBSD 社区论文：[FP-2004-004] GEOM Tutorial（Poul-Henning Kamp，2004）<https://papers.freebsd.org/2004/phk-geom-tutorial/>
+FreeBSD 社区论文：[FP-2004-005] Making sure data is lost（Poul-Henning Kamp，2004）<https://papers.freebsd.org/2004/phk-gbde/>
+FreeBSD 社区论文：[FP-2003-001] GBDE - GEOM Based Disk Encryption（Poul-Henning Kamp，2003）<https://papers.freebsd.org/2003/bsdcon/phk-gbde-paper/>
+FreeBSD 社区论文：[FP-2003-002] GEOM tutorial（Poul-Henning Kamp，2003）<https://papers.freebsd.org/2003/bsdcon/phk-geom-tutorial/>
+FreeBSD 社区论文：[FP-2003-003] Making sure data is lost（Poul-Henning Kamp，2003）<https://papers.freebsd.org/2003/bsdcon/phk-gbde-slides/>
+FreeBSD 社区论文：[FP-2002-004] Rethinking /dev and devices in the UNIX kernel（Poul-Henning Kamp，2002）<https://papers.freebsd.org/2002/bsdcon/phk-devfs/>
+FreeBSD 社区论文：[FP-2002-009] Timecounters: Efficient and precise timekeeping in SMP kernels（Poul-Henning Kamp，2002）<https://papers.freebsd.org/2002/phk-timecounters/>
+FreeBSD 社区论文：[FP-2000-001] Jails: Confining the omnipotent root（Poul-Henning Kamp; Robert N. M. Watson（罗伯特·N·M·沃森），2000）<https://papers.freebsd.org/2000/phk-jails/>
+FreeBSD 社区论文：[FP-2000-003] The Nanokernel（Dave L. Mills; Poul-Henning Kamp，2000）<https://papers.freebsd.org/2000/phk-nanokernel/>
+FreeBSD 社区论文：[FP-1998-001] Raw data: Interrupt latency measurements（Poul-Henning Kamp，1998）<https://papers.freebsd.org/1998/phk-interrupts/>
+FreeBSD 社区论文：[FP-1998-002] Malloc(3) revisited（Poul-Henning Kamp，1998）<https://papers.freebsd.org/1998/phk-malloc/>
+
+### 史观映射
+
+> 基金会的诞生把一个松散的黑客共同体推入了法律实体的模具——科罗拉多州注册、IRS 501(c)(3) 裁定、By-Laws 条款、officer 职责分工，每一份表格都在把 “谁有权做什么” 从默契变成条文。形式主义化不一定是堕落——没有基金会，Jan Koum（简·库姆） 的支票无处可签；但形式主义化也不一定是进步——当执行总监与董事会争夺日常运营权，当技术派与商业派在预算表上对峙，当员工开发者因有薪酬而比志愿者更有话语权，治理就不再是服务社区的工具，而是社区必须服从的结构
+
+---
 
 <!-- DB_REF:freebsd.duckdb -->
 > **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 1996-2010 年间：482,545 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
-- FreeBSD 相关记录（详情见存疑库）。文献 (Code, 2024) 提及 Tetlow, Gordon，作为 FreeBSD Foundation 执行董事，在基金会治理和项目战略规划中发挥关键作用。文献 (FreeBSD-Foundation-April-2016-Update, 2016) 提及 Neville-Neil, George，作为 FreeBSD Core Team 成员，在存储系统方面做出了重要贡献。文献 (FreeBSD-Foundation-August-2016-Update, 2016) 提及 Baldwin, John，作为 FreeBSD 核心开发者，在内核修复和架构支持方面做出了重要贡献。文献 (FreeBSD-Foundation-December-2016-Update, 2016) 提及 Watson, Robert N. M.，以基金会董事会成员身份在上海 BSD 聚会中发表了演讲。文献 (FreeBSD-Foundation-January-2018-Update, 2018) 提及 Percival, Colin，作为 Tarsnap 总裁，对 FreeBSD 安全更新基础设施做出了重要贡献。**新增技术**文献 (Code, 2024) 讨论 bhyve，该安全审计报告对 Capsicum 和 bhyve 子系统进行了全面的安全审查。文献 (Code, 2024) 讨论 FreeBSD，该报告由 FreeBSD Foundation 于 2024 年 11 月发布。文献 (FreeBSD-Foundation-April-2016-Update, 2016) 讨论 Ports Collection，FreeBSD 社区贡献者持续将改进和错误修复贡献回上游项目。文献 (FreeBSD-Foundation-December-2016-Update, 2016) 讨论 DTrace，社区成员对 Jails、DTrace 和 ZFS 等主题表现出浓厚兴趣。文献 (FreeBSD-Foundation-February-2018-Update, 2018) 讨论 lld，FreeBSD 工具链现代化项目将 LLVM 的 LLD 链接器引入基础系统。文献 (FreeBSD-Foundation-January-2018-Update, 2018) 讨论 clang，FreeBSD 在基础系统中采用 Clang 编译器作为默认编译器。**新增时间线事件**文献 (Code, 2024) 记录 2019：FreeBSD 安全公告涉及 CVE-2019-5607 漏洞。文献 (Code, 2024) 记录 2019：该安全公告涉及的漏洞模式分析。文献 (FreeBSD-Foundation-April-2016-Update, 2016) 记录 2012：FreeBSD 项目在 NYI 数据中心部署了东海岸镜像站点。文献 (FreeBSD-Foundation-April-2016-Update, 2016) 记录 2015：FreeBSD 测试集群在 2015 年底进行了重大升级。文献 (FreeBSD-Foundation-April-2018-Update, 2018) 记录 2018：FreeBSD 基金会参加了 Rootconf 2018 和 BSDCan 2018 等社区活动。文献 (FreeBSD-Foundation-April-2018-Update, 2018) 记录 2018：FreeBSD 基金会 2018 年 4 月更新，涵盖 Rootconf 2018 和 BSDCan 2018 
+- FreeBSD 相关记录（详情见存疑库；本条为自动抽取块，未经人工核验，引用前须逐条验证）。文献 (Code, 2024) 提及 Tetlow, Gordon〔存疑：原文记作“FreeBSD Foundation 执行董事”，与 97.11 报告（Goodkin 任执行总监）及 EP616 口述冲突，Gordon Tetlow 系开发者，职务归属待核〕，在基金会治理和项目战略规划中发挥关键作用。文献 (FreeBSD-Foundation-April-2016-Update, 2016) 提及 Neville-Neil, George，作为 FreeBSD Core Team 成员，在存储系统方面做出了重要贡献。文献 (FreeBSD-Foundation-August-2016-Update, 2016) 提及 Baldwin, John，作为 FreeBSD 核心开发者，在内核修复和架构支持方面做出了重要贡献。文献 (FreeBSD-Foundation-December-2016-Update, 2016) 提及 Watson, Robert N. M.，以基金会董事会成员身份在上海 BSD 聚会中发表了演讲。文献 (FreeBSD-Foundation-January-2018-Update, 2018) 提及 Percival, Colin，作为 Tarsnap 总裁，对 FreeBSD 安全更新基础设施做出了重要贡献。**新增技术**文献 (Code, 2024) 讨论 bhyve，该安全审计报告对 Capsicum 和 bhyve 子系统进行了全面的安全审查。文献 (Code, 2024) 讨论 FreeBSD，该报告由 FreeBSD Foundation 于 2024 年 11 月发布。文献 (FreeBSD-Foundation-April-2016-Update, 2016) 讨论 Ports Collection，FreeBSD 社区贡献者持续将改进和错误修复贡献回上游项目。文献 (FreeBSD-Foundation-December-2016-Update, 2016) 讨论 DTrace，社区成员对 Jails、DTrace 和 ZFS 等主题表现出浓厚兴趣。文献 (FreeBSD-Foundation-February-2018-Update, 2018) 讨论 lld，FreeBSD 工具链现代化项目将 LLVM 的 LLD 链接器引入基础系统。文献 (FreeBSD-Foundation-January-2018-Update, 2018) 讨论 clang，FreeBSD 在基础系统中采用 Clang 编译器作为默认编译器。**新增时间线事件**文献 (Code, 2024) 记录 2019：FreeBSD 安全公告涉及 CVE-2019-5607 漏洞。文献 (Code, 2024) 记录 2019：该安全公告涉及的漏洞模式分析。文献 (FreeBSD-Foundation-April-2016-Update, 2016) 记录 2012：FreeBSD 项目在 NYI 数据中心部署了东海岸镜像站点。文献 (FreeBSD-Foundation-April-2016-Update, 2016) 记录 2015：FreeBSD 测试集群在 2015 年底进行了重大升级。文献 (FreeBSD-Foundation-April-2018-Update, 2018) 记录 2018：FreeBSD 基金会参加了 Rootconf 2018 和 BSDCan 2018 等社区活动。文献 (FreeBSD-Foundation-April-2018-Update, 2018) 记录 2018：FreeBSD 基金会 2018 年 4 月更新，涵盖 Rootconf 2018 和 BSDCan 2018 
 <!-- DB_REF:freebsd.duckdb -->> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 2000-2000 年间：29,754 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
 
 - IRS EO Select Check；Foundation 历年 990 表［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
@@ -235,11 +265,11 @@ volume: 第05卷-freebsd的工程化奠基
 
 - 总纲10 动手者创造历史：Tom Jones 以受资助的工程工作完成 VPP 移植并推动上游改进，体现动手者通过具体技术贡献塑造系统生态。（BSD Now EP566，[1513.74-1930.24]，L1）
 - 总纲13 法律与道德是利益分配：VPP 移植由基金会与商业公司共同出资，显示开源工程背后持续存在的资金与利益安排。（BSD Now EP566，[1557.02-1567.42]，L1）
-- 总纲10 动手者创造历史：总纲10 动手者创造历史：Hansteen 以十八年持续运维累积的灰度陷阱数据，记录的是不被聚光灯照到的反垃圾邮件一线工作。（BSD Now EP648，[257.02-1152.28]，L1）
-- 总纲4 分离聚合是永恒规律：总纲4 分离聚合是永恒规律：BSDCan 领导权在代际之间交接、规划委员会持续吸纳新人，体现社区组织的聚合与再分配。（BSD Now EP648，[1382.64-1467.34]，L1）
-- 总纲9 经验优先：总纲9 经验优先：Siebenmann 从自身运维规则集与工具链出发评估防火墙迁移，而非依赖抽象性能宣传。（BSD Now EP648，[3368.44-3441.68]，L1）
-- 总纲10 动手者创造历史：总纲10 动手者创造历史：FreeBSD Foundation 报告将捐款落到 Wi-Fi 支持、安全响应等具体工程，而非口号。（BSD Now EP333，[136.72-161.1]，L2）
-- 总纲9 经验优先：总纲9 经验优先：multicians.org 以当事人回忆与一手技术文档保存 Multics 经验，体现经验优先。（BSD Now EP333，[1837.68-1883.14]，L2）
+- 总纲10 动手者创造历史：Hansteen 以十八年持续运维累积的灰度陷阱数据，记录的是不被聚光灯照到的反垃圾邮件一线工作。（BSD Now EP648，[257.02-1152.28]，L1）
+- 总纲4 分离聚合是永恒规律：BSDCan 领导权在代际之间交接、规划委员会持续吸纳新人，体现社区组织的聚合与再分配。（BSD Now EP648，[1382.64-1467.34]，L1）
+- 总纲9 经验优先：Siebenmann 从自身运维规则集与工具链出发评估防火墙迁移，而非依赖抽象性能宣传。（BSD Now EP648，[3368.44-3441.68]，L1）
+- 总纲10 动手者创造历史：FreeBSD Foundation 报告将捐款落到 Wi-Fi 支持、安全响应等具体工程，而非口号。（BSD Now EP333，[136.72-161.1]，L2）
+- 总纲9 经验优先：multicians.org 以当事人回忆与一手技术文档保存 Multics 经验，体现经验优先。（BSD Now EP333，[1837.68-1883.14]，L2）
 - 总纲10 动手者创造历史：McKusick 强调软件与项目的持续“养护”远非社区驱动项目所长，人们倾向做新奇有趣之事；文档与基础设施的默默维护恰是系统得以存活的关键。（BSD Now EP278，[451.46-489.68]，L1）
 - 总纲3 不存在进步，只有权力再分配：McKusick 指出历史上 IBM、微软各自占据过绝对支配地位又相继让位，Linux 今日的支配地位同样不会永远持续，FreeBSD 甘居雷达之下反而得以延续。（BSD Now EP278，[2247.34-2342.26]，L1）
 - 总纲5 没有必然性，只有偶然性：McKusick 以“容器发明于 FreeBSD 却成功于他处”为例，指出技术领先与市场成功之间并无必然因果，成功更多依赖偶然的产品化时机。（BSD Now EP278，[2596.78-2625.54]，L1）
@@ -264,21 +294,21 @@ volume: 第05卷-freebsd的工程化奠基
 - 总纲10 动手者创造历史：MySQL 与 ZFS 的优化均来自动手部署者的具体记录，性能改进由实际操作者而非抽象方案推动。（BSD Now EP166，[566.72-1010.56]，L3）
 - 总纲10 动手者创造历史：“我是文档人”的自谦与“源码提交者已经够多”的回应，使这次董事补选成为对何种劳动被计入治理的再定义：文档、翻译、法务、布道与组织工作在基金会层面获得与内核开发同等的代表权——书写 BSD 史时，维持项目运转的动手者与提交代码的动手者同为历史的创造者（1664-1688 秒）。（BSD Now EP138，[1664.16-1687.68]，L1）
 - 总纲1 一切真历史都是古代史：calendar(1) 漏洞是“古代制度活在当代”的活标本：主持人的解释是，该工具为全校共用一台主机、每人维护日历文件的时代而设计，以 root 身份遍历所有用户日历并邮寄提醒在当时合理；2016 年它仍以 root 日任务存续，特权未剥离的旧设计在新语境中变成提权漏洞——理解这一漏洞必须回到其诞生的分时主机时代而非仅看当代代码（3666-3696 秒）。（BSD Now EP138，[3666.52-3695.82]，L2）
-- 总纲15 文化即形式主义：总纲15 文化即形式主义：Mark Phillips 把营销还原为讲故事的形式，提示技术传播中的品牌叙事同样是形式化构造。（BSD Now EP622，[2702.70-2727.46]，L1）
-- 总纲10 动手者创造历史：总纲10 动手者创造历史：他以工程师背景亲手测试 ZFS 根镜像并反馈给 Colin Percival，体现使用者参与塑造云镜像。（BSD Now EP622，[1215.20-1244.40]，L1）
-- 总纲9 经验优先：总纲9 经验优先：其讲故事方法论基于多年创业与营销一线经验，而非抽象理论推演。（BSD Now EP622，[2553.94-2822.94]，L1）
+- 总纲15 文化即形式主义：Mark Phillips 把营销还原为讲故事的形式，提示技术传播中的品牌叙事同样是形式化构造。（BSD Now EP622，[2702.70-2727.46]，L1）
+- 总纲10 动手者创造历史：他以工程师背景亲手测试 ZFS 根镜像并反馈给 Colin Percival，体现使用者参与塑造云镜像。（BSD Now EP622，[1215.20-1244.40]，L1）
+- 总纲9 经验优先：其讲故事方法论基于多年创业与营销一线经验，而非抽象理论推演。（BSD Now EP622，[2553.94-2822.94]，L1）
 - 总纲10 动手者创造历史：Justin Gibbs 自述大学二年级即因 FreeBSD 社区的信任而获得为大型 FTP 站点编写设备驱动的机会，体现技术史中默默动手者借社区空间成长的路径。（BSD Now EP616，[2482.00-2531.14]，L1）
 - 总纲3 不存在进步，只有权力再分配：基金会与 core team 在技术方向上的权责随选举制与职业化进程持续再分配，呈现治理权力的流动与重新配置，而非线性进步叙事。（BSD Now EP616，[1876.88-1997.64]，L1）
 - 总纲20 历史地理塑造思想土壤：日本 BSD 社区轨迹的地域性：PC-98 这一日本特有硬件生态决定了斋藤只能在 FreeBSD 与 Linux 的本地移植中择路；语言与文化边界使技术上占优的日本补丁因拒绝进入英文邮件列表的讨论形式而被系统性忽略，进而引发整个开发者群体向 NetBSD 的迁移。硬件土壤与沟通文化共同塑造了日本 BSD 版图从 FreeBSD 倾向转为 NetBSD 倾向的历史路径，而非任何技术必然性。（BSD Now EP59，[2227.32-2483.87]，L1）
-- 总纲7 理论必须自反：总纲7 理论必须自反：Peter Wemm 反复以事故教训反观并修正基础设施设计，而非固守既有运维惯例。（BSD Now EP56，[1982.06-2022.30]，L1）
-- 总纲5 没有必然性，只有偶然性：总纲5 没有必然性，只有偶然性：2012 年事件由跳板主机、共享 NFS home 与可写 authorized_keys 等偶然叠加而成，并非必然发生。（BSD Now EP56，[2102.38-2192.90]，L1）
-- 总纲10 动手者创造历史：总纲10 动手者创造历史：集群由 Peter Wemm、Glen Barber、Sean Bruno 等动手维护者在长周期中持续改造。（BSD Now EP56，[666.00-748.68]，L1）
-- 总纲13 法律与道德是利益分配：总纲13 法律与道德是利益分配：Xinuos 选择 BSD 许可证的本质是转售商与专有业务利益的分配安排。（BSD Now EP51，[1163.86-1179.76]，L1）
-- 总纲3 不存在进步，只有权力再分配：总纲3 不存在进步，只有权力再分配：Xinuos 由专有 System V 转向参与 FreeBSD，是商业权力格局的再分配而非线性技术进步。（BSD Now EP51，[1014.92-1128.06]，L1）
-- 总纲11 商品是形式主义：总纲11 商品是形式主义：访谈将操作系统视为可支持、可转售的商品，并以支持周期与许可证作为商品属性展开叙述。（BSD Now EP51，[1322.60-1363.72]，L1）
-- 总纲10 动手者创造历史：总纲10 动手者创造历史：Ted Unangst、Marc Espie 与 Alexander Hall 以具体工具开发补齐 OpenBSD 发布签名空白。（BSD Now EP23，[949.00-1006.76]，L1）
-- 总纲5 没有必然性，只有偶然性：总纲5 没有必然性，只有偶然性：Theo 的一封邮件触发 signify 开发，当事人明确不知动机，说明安全工程由具体事件偶然推动。（BSD Now EP23，[1615.30-1651.60]，L1）
-- 总纲22 知识注定过时：总纲22 知识注定过时：signify 以极简设计替代 GPG 的部分用途，体现工具随需求演进而更替。（BSD Now EP23，[898.44-930.08]，L1）
+- 总纲7 理论必须自反：Peter Wemm 反复以事故教训反观并修正基础设施设计，而非固守既有运维惯例。（BSD Now EP56，[1982.06-2022.30]，L1）
+- 总纲5 没有必然性，只有偶然性：2012 年事件由跳板主机、共享 NFS home 与可写 authorized_keys 等偶然叠加而成，并非必然发生。（BSD Now EP56，[2102.38-2192.90]，L1）
+- 总纲10 动手者创造历史：集群由 Peter Wemm、Glen Barber、Sean Bruno 等动手维护者在长周期中持续改造。（BSD Now EP56，[666.00-748.68]，L1）
+- 总纲13 法律与道德是利益分配：Xinuos 选择 BSD 许可证的本质是转售商与专有业务利益的分配安排。（BSD Now EP51，[1163.86-1179.76]，L1）
+- 总纲3 不存在进步，只有权力再分配：Xinuos 由专有 System V 转向参与 FreeBSD，是商业权力格局的再分配而非线性技术进步。（BSD Now EP51，[1014.92-1128.06]，L1）
+- 总纲11 商品是形式主义：访谈将操作系统视为可支持、可转售的商品，并以支持周期与许可证作为商品属性展开叙述。（BSD Now EP51，[1322.60-1363.72]，L1）
+- 总纲10 动手者创造历史：Ted Unangst、Marc Espie 与 Alexander Hall 以具体工具开发补齐 OpenBSD 发布签名空白。（BSD Now EP23，[949.00-1006.76]，L1）
+- 总纲5 没有必然性，只有偶然性：Theo 的一封邮件触发 signify 开发，当事人明确不知动机，说明安全工程由具体事件偶然推动。（BSD Now EP23，[1615.30-1651.60]，L1）
+- 总纲22 知识注定过时：signify 以极简设计替代 GPG 的部分用途，体现工具随需求演进而更替。（BSD Now EP23，[898.44-930.08]，L1）
 - 总纲9 经验优先：发行工程对稳定分支宁可关闭新特性也不愿引入回归，体现以既有用户升级经验为优先的保守取向，而非功能扩张优先的进步叙事。（BSD Now EP2，[3189.04-3237.52]，L1）
 - 总纲13 法律与道德是利益分配：GCC 退出基础系统与 BIND 替换是许可证与维护成本共同驱动的工具替换，属利益与负担在工具链层面的重新分配。（BSD Now EP2，[543.86-645.78]，L2）
 - 总纲4 分离聚合是永恒规律：Poudriere 以 jail 将单一构建任务分离为按版本、架构与选项隔离的并发构建，并以增量重建聚合为统一二进制仓库，是分离与聚合的工程实践。（BSD Now EP2，[865.40-1801.56]，L2）
