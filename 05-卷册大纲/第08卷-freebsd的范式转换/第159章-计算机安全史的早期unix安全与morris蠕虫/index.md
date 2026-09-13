@@ -16,49 +16,35 @@ volume: 第08卷-freebsd的范式转换
 
 ## 史观
 
-- 总纲第 14 条——哲学思潮：Morris 蠕虫之前的安全状况是一种 “自然状态”——没有规则、没有机构、没有标准，每个人各自为战。这种状态的终结标志着安全从个人技艺走向制度化学科
+- 总纲第 15 条——文化即形式主义（原“哲学思潮”系伪标签，按报告处方重挂）：Morris 蠕虫之前的安全状况是一种 “自然状态”——没有规则、没有机构、没有标准，每个人各自为战。这种状态的终结标志着安全从个人技艺走向制度化学科
   - 辨析：“1988 年之前没有安全研究” 是常见误解——实际上 Bell Labs、MIT、Purdue 等机构已有扎实的安全研究，但研究成果与工程实践之间存在巨大鸿沟；漏洞是已知的，但修补的激励和协调机制不存在
-- 总纲第 3 条——形式主义膨胀：setuid 和 chroot 都是用极简的形式机制（一个比特位、一个系统调用）解决复杂的安全问题，它们的简洁性既是力量的源泉，也是问题的渊薮——形式化抽象越简洁，误用和被绕过的可能性就越大
-  - 辨析：chroot 常被误认为是安全隔离机制，但它的设计初衷是构建环境，安全性只是 “副产品”；这一误解导致了大量基于 chroot 的不安全部署，直到 FreeBSD
-- 总纲第 22 条——开源运动：CERT/CC 的成立标志着互联网安全从个人自发应对转向制度化协作，这与开源运动从个人黑客到社区协作的演进路径同构
+- 总纲第 15 条——文化即形式主义（原“形式主义膨胀”系伪标签，按报告处方重挂）：setuid 和 chroot 都是用极简的形式机制（一个比特位、一个系统调用）解决复杂的安全问题，它们的简洁性既是力量的源泉，也是问题的渊薮——形式化抽象越简洁，误用和被绕过的可能性就越大
+  - 辨析：chroot 常被误认为是安全隔离机制，但它的设计初衷是构建环境，安全性只是 “副产品”；这一误解导致了大量基于 chroot 的不安全部署，直到 FreeBSD jail（2000 年）和 Linux namespaces 才真正从设计层面解决了隔离问题；setuid 机制则被反复证明是安全事故的重灾区，但至今仍无更优的普适替代方案
+- 总纲第 13 条——法律与道德是利益分配（原“开源运动”系伪标签，按报告处方重挂）：CERT/CC 的成立标志着互联网安全从个人自发应对转向制度化协作，这与开源运动从个人黑客到社区协作的演进路径同构
   - 辨析：CERT/CC 成立的精确日期存在多种说法（11 月中旬、11 月底、12 月初），经交叉验证应以 11 月 17 日 DARPA 正式批准日为准；“CERT 是缩写” 的说法是常见误解，官方明确说明 CERT 是注册商标而非首字母缩写
 
-- 总纲第 21 条——密码学：RSA 算法的发明与专利化体现了密码学从军事机密向民用技术转变过程中的法律与经济张力，BSD 系统在这一张力中寻求技术可能性与法律合规的平衡
-  - 辨析：RSA 专利的到期日（2000 年 9 月）是加密软件生态的重要转折点，先前 BSD 系统需通过 RSAREF 等受限实现绕开专利，此后 OpenSSL 等自由实现得以完整包含 RSA；但专利只是制约因素之一，出口管
-- 总纲第 25 条——终结与延续：SSL/TLS 从 Netscape 的商业产品演变为 IETF 开放标准，从早期脆弱的 SSL 2.0 发展到高度优化的 TLS 1.3，既是加密技术的延续，也是安全工程实践不断进化的结果
-  - 辨析：LibreSSL fork 事件（2014 年 Heartbleed 后）是安全工程路线分歧的典型案例——OpenBSD 团队认为 OpenSSL 代码质量差、过
+- 总纲第 13 条——法律与道德是利益分配（原“密码学”系伪标签，挂靠存疑，按报告处方重挂）：RSA 算法的发明与专利化体现了密码学从军事机密向民用技术转变过程中的法律与经济张力，BSD 系统在这一张力中寻求技术可能性与法律合规的平衡
+  - 辨析：RSA 专利的到期日（2000 年 9 月）是加密软件生态的重要转折点，先前 BSD 系统需通过 RSAREF 等受限实现绕开专利，此后 OpenSSL 等自由实现得以完整包含 RSA；但专利只是制约因素之一，出口管制的影响更为深远
+- 总纲第 3 条——不存在进步，只有权力再分配（原“终结与延续”系伪标签，挂靠存疑，按报告处方重挂）：SSL/TLS 从 Netscape 的商业产品演变为 IETF 开放标准，从早期脆弱的 SSL 2.0 发展到高度优化的 TLS 1.3，既是加密技术的延续，也是安全工程实践不断进化的结果
+  - 辨析：LibreSSL fork 事件（2014 年 Heartbleed 后）是安全工程路线分歧的典型案例——OpenBSD 团队认为 OpenSSL 代码质量差、过度工程化，选择 fork 并大规模清理；FreeBSD 选择继续使用 OpenSSL 但加强本地安全加固；不同选择反映了不同项目的风险偏好和工程哲学
 
 ## 辨析
 
 - “1988 年之前没有安全研究” 是常见误解——实际上 Bell Labs、MIT、Purdue 等机构已有扎实的安全研究，但研究成果与工程实践之间存在巨大鸿沟；漏洞是已知的，但修补的激励和协调机制不存在；Morris 蠕虫的真正历史意义不在于发现了新漏洞，而在于证明了互联系统的系统性风险
-  - 文献：Bishop, M. (2009). *Reflections on UNIX Vulnera
+  - 文献：Bishop, M. (2009). *Reflections on UNIX Vulnerabilities*. ACSAC '09
 - chroot 常被误认为是安全隔离机制，但它的设计初衷是构建环境，安全性只是 “副产品”；这一误解导致了大量基于 chroot 的不安全部署，直到 FreeBSD jail（2000 年）和 Linux namespaces 才真正从设计层面解决了隔离问题；setuid 机制则被反复证明是安全事故的重灾区，但至今仍无更优的普适替代方案
-  - 文献：Chen, H., Wagner, D., &
+  - 文献：Chen, H., Wagner, D., & Dean, D. (2002). *Setuid Demystified*. USENIX Security Symposium; McKusick, M. K. (2000). *Jails: Confining the Omnipotent Root*. BSDCon 2000; FreeBSD Project. **jail(8)** 手册页（4.4BSD 历史注释）
 - CERT/CC 成立的精确日期存在多种说法（11 月中旬、11 月底、12 月初），经交叉验证应以 11 月 17 日 DARPA 正式批准日为准；“CERT 是缩写” 的说法是常见误解，官方明确说明 CERT 是注册商标而非首字母缩写
-  - 文献：Carnegie Mellon University. (2016, Sep 1). *CERT Director Richard Pethia R
+  - 文献：Carnegie Mellon University. (2016, Sep 1). *CERT Director Richard Pethia Retires*. sei.cmu.edu; FIRST Organization. (2025). *Richard (Rich) D. Pethia - Hall of Fame*. first.org/hof/inductees; CERT/CC. *Frequently Asked Questions*. cert.org/faq
 - RSA 专利的到期日（2000 年 9 月）是加密软件生态的重要转折点，先前 BSD 系统需通过 RSAREF 等受限实现绕开专利，此后 OpenSSL 等自由实现得以完整包含 RSA；但专利只是制约因素之一，出口管制的影响更为深远
-  - 文献：Rivest, R. L., Shamir, A., & Adleman, L. (1978). *A Method for Obtaining Dig
+  - 文献：Rivest, R. L., Shamir, A., & Adleman, L. (1978). *A Method for Obtaining Digital Signatures and Public-Key Cryptosystems*. Communications of the ACM, 21(2), 120-126
 - LibreSSL fork 事件（2014 年 Heartbleed 后）是安全工程路线分歧的典型案例——OpenBSD 团队认为 OpenSSL 代码质量差、过度工程化，选择 fork 并大规模清理；FreeBSD 选择继续使用 OpenSSL 但加强本地安全加固；不同选择反映了不同项目的风险偏好和工程哲学
-  - 文献：IETF. (2018). *RFC 8446 - The Transpo
+  - 文献：IETF. (2018). *RFC 8446 - The Transport Layer Security (TLS) Protocol Version 1.3*
 
 ## 文献
 
-- Bishop, M. (2009). *Reflections on UNIX Vulnerabilities*. ACSAC '09; Vagts, B. K. (2024). Telenet, the 1983 Hacking Incidents, and the Construction of Network Security. IEEE Annals of the History of Computing, 46(1); Spafford, E. H. (1989). *The Internet Worm: Crisis and Aftermath*. Communications o
+- Bishop, M. (2009). *Reflections on UNIX Vulnerabilities*. ACSAC '09; Vagts, B. K. (2024). Telenet, the 1983 Hacking Incidents, and the Construction of Network Security. IEEE Annals of the History of Computing, 46(1); Spafford, E. H. (1989). *The Internet Worm: Crisis and Aftermath*. Communications of the ACM, 32(6), 678-702
 - Chen, H., Wagner, D., & Dean, D. (2002). *Setuid Demystified*. USENIX Security Symposium; McKusick, M. K. (2000). *Jails: Confining the Omnipotent Root*. BSDCon 2000; FreeBSD Project. **jail(8)** 手册页（4.4BSD 历史注释） ［A］
-
-## 158.1.4 1980 年代黑客文化与安全漏洞
-
-- 要点：还原 1980 年代黑客文化的社会语境与安全漏洞的传播生态——1983 年电影《WarGames
-- Carnegie Mellon University. (2016, Sep 1). *CERT Director Richard Pethia Retires*. sei.cmu.edu; FIRST Organization. (2025). *Richard (Rich) D. Pethia - Hall of Fame*. first.org/hof/inductees; CERT/CC. *Frequently Asked Questions*. cert.org/faq［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
-
-## 158.3.2 PGP 1991 年与出口管制冲突
-
-- IETF. (2018). *RFC 8446 - The Transport Layer Security (TLS) Protocol Version 1.3*; OpenBSD Project. (2014). *LibreSSL - Release of OpenBSD's fork of OpenSSL*. openbsd.org/56.html; Durumeric, Z. et al. (2014). *The Matter of Heartbleed*. IMC '14［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
-
-## 158.4.3 OpenSSH 的全球部署与安全审计传统
-
-- 要点
-- Puppy, R. F. (2000). *RFPolicy for vulnerability disclosure*. Bugtraq Mailing List; Cencini, A., Yu, K., & Chan, T. (2005). *Software Vulnerabilities: Full-, Responsible-, and Non-Disclosure*. University of Washington; Schneier, B. (2000). *Why We Disclose: Full Disclosure and Why It's Good for Secu〔待核：原文截断〕
 
 ## 自反性声明
 
