@@ -3740,6 +3740,10 @@
   - [172 【Linux社区】fwctl征稿与API废弃执行](./第20卷-linux社区史与比较研究/172-fwctl征稿与API废弃执行.md)
   - [173 【Linux社区】AI版权与API弃用定调](./第20卷-linux社区史与比较研究/173-AI版权与API弃用定调.md)
   - [174 【Linux社区】Sashiko实证与folios之争](./第20卷-linux社区史与比较研究/174-Sashiko实证与folios之争.md)
+  - [175 【Linux社区】除名机制与C内存安全提案](./第20卷-linux社区史与比较研究/175-除名机制与C内存安全提案.md)
+  - [176 【Linux社区】bugzilla近死实录与b4工作流](./第20卷-linux社区史与比较研究/176-bugzilla近死实录与b4工作流.md)
+  - [177 【Linux社区】AI流程落地与Rust稳定性反驳](./第20卷-linux社区史与比较研究/177-AI流程落地与Rust稳定性反驳.md)
+  - [178 【Linux社区】Rust实验推演与Improves标签博弈](./第20卷-linux社区史与比较研究/178-Rust实验推演与Improves标签博弈.md)
 ## 读者指引（大纲侧）
 
 - 大纲侧手动维护区，脚本重跑保留。
