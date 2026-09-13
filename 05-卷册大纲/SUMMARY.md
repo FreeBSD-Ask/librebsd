@@ -3565,6 +3565,7 @@
   - [77 【Linux社区】lore链接定型与KS2019筹备](./第20卷-linux社区史与比较研究/77-lore链接定型与KS2019筹备.md)
   - [78 【Linux社区】MS2019议程与lore客户端工具构想](./第20卷-linux社区史与比较研究/78-MS2019议程与lore客户端工具构想.md)
   - [79 【Linux社区】MEP定稿与workflows列表创建](./第20卷-linux社区史与比较研究/79-MEP定稿与workflows列表创建.md)
+  - [80 【Linux社区】mediaProfile定稿与getmaintainer之争](./第20卷-linux社区史与比较研究/80-mediaProfile定稿与getmaintainer之争.md)
 ## 读者指引（大纲侧）
 
 - 大纲侧手动维护区，脚本重跑保留。
