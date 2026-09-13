@@ -8,11 +8,11 @@ volume: 第12卷-macos的bsd遗产
 
 ## 要点
 
-- 项目史观总纲第 5 条“没有必然性，只有偶然性”为审视 libdispatch 流动史提供了根本框架。libdispatch 在 2009 年 9 月 10 日以 Apache 2.0 开源是多重偶然因素的交汇：Snow Leopard 的“无新功能、重工程质量”定位（偶然因素一，为 GCD 工程投入创造了空间）〔待核：原文截断，后文待回源〕
-- 项目史观总纲第 8 条“本体论上各方平等”为审视 libdispatch 流动史提供了去中心化视角。freebsd.duckdb 显示 2009-2015 年间 Apple、FreeBSD、Linux 三方在并发抽象上的关系不是“先进-落后”的等级关系，而是各自独立演化的本体论平等主体：Apple 的 GCD+libdispatch（任务队列抽象）是 Apple 主体性的显现，FreeBSD 的 pthr
-- spatch 流动史提供了双重透镜。形式主义层面：libdispatch 作为并发抽象库，其代码在 Apple 与 FreeBSD 间流动时被“形式主义化”——同一份 libdispatch 代码在 FreeBSD ports 树中被重组为 FreeBSD 用户空间工具，其“商品形式”（可移植的并发抽象 API）
-- Mac OS X 10.6 Snow Leopard 时代（2009-2011）正值 BSD 社区对 Apple 使用 FreeBSD 代码但不回馈的批评集中爆发期。批判方以 FreeBSD 内核开发者 **John Baldwin（约翰·鲍德温）** 与 **Marshall Kirk McKusick（马歇尔·柯克·麦库西克）**（4.3BSD 与 4.4BD 开发者，深度参与 FreeBSD
-- BSD 阵营与 Apple 工程师对“无薪员工”批判提出反驳，论证分三支。其一，许可证契约层面——BSD 许可证条款明确允许商业使用、修改、再发布而无强制回馈义务，FreeBSD 社区选择 BSD 许可证即是选择此契约模式，批判 Apple 不回馈等同于否认 BSD 许可证契约本身。**Marshall Kirk McKusick** 的公开表述“BSD 许可证就是一个复制中心，可以为所欲为，但我
+- 项目史观总纲第 5 条“没有必然性，只有偶然性”为审视 libdispatch 流动史提供了根本框架。libdispatch 在 2009 年 9 月 10 日以 Apache 2.0 开源是多重偶然因素的交汇：Snow Leopard 的“无新功能、重工程质量”定位（为 GCD 工程投入创造了空间）、2009 年 Apple 与 Microsoft 在桌面 OS 市场的竞争压力（GCD 作为差异化竞争点）、Apple 与 FSF 在 APSL 历史争议后的关系修复需求（Apache 2.0 选择是对 FSF 的让步）、Stanislav Sedov 个人对并发抽象的兴趣（其 2009-09-23T15:02:29Z 的 FreeBSD 移植非 Apple 主动委托）——freebsd-src 仓库 `libdispatch` 关键词 0 条 commit，实际移植位于 freebsd-ports 仓库，libdispatch 未进入 FreeBSD 内核主线是偶然因素交汇的结果，非“历史必然”（详见 246.1.1）
+- 项目史观总纲第 8 条“本体论上各方平等”为审视 libdispatch 流动史提供了去中心化视角。freebsd.duckdb 显示 2009-2015 年间 Apple、FreeBSD、Linux 三方在并发抽象上的关系不是“先进-落后”的等级关系，而是各自独立演化的本体论平等主体：Apple 的 GCD+libdispatch（任务队列抽象）、FreeBSD 的 pthread+kqueue/kevent（事件驱动）、Linux 的 NPTL+epoll——libdispatch 流向 FreeBSD 是对等交往而非等级臣服（详见 246.1.2）
+- 项目史观总纲第 11 条“商品是形式主义”与第 19 条“解释学循环是历史认识的根本条件”为审视 libdispatch 流动史提供了双重透镜。形式主义层面：同一份 libdispatch 代码在 FreeBSD ports 树中被重组为 FreeBSD 用户空间工具，其“商品形式”（可移植的并发抽象 API）被剥离原有 Mac OS X 语境而保留功能形式；解释学循环层面：Apple、FreeBSD、Linux 与第三方观察者四方视角的循环对话构成 libdispatch 流动史的完整认识（详见 246.1.3）
+- Mac OS X 10.6 Snow Leopard 时代（2009-2011）正值 BSD 社区对 Apple 使用 FreeBSD 代码但不回馈的批评集中爆发期。批判方以 FreeBSD 内核开发者 **John Baldwin（约翰·鲍德温）** 与 **Marshall Kirk McKusick（马歇尔·柯克·麦库西克）**（4.3BSD 与 4.4BSD 开发者，深度参与 FreeBSD）的公开访谈为主要论据，指出 Apple 长期从 FreeBSD 用户空间吸收代码而仅以 APSL 2.0 选择性发布 Darwin 源代码（详见 246.2.1）
+- BSD 阵营与 Apple 工程师对“无薪员工”批判提出反驳，论证分三支。其一，许可证契约层面——BSD 许可证条款明确允许商业使用、修改、再发布而无强制回馈义务，**Marshall Kirk McKusick** 的公开表述“BSD 许可证就是一个复制中心，可以为所欲为，但我们不在乎”即此反驳的典型；其二，Apple 的实质性回馈——Darwin 源码公开与 libdispatch 以 Apache 2.0 开源；其三，Apple 聘用 Jordan Hubbard（2001 年）构成 BSD 与 Apple 的人才流动（详见 246.2.2）
 
 ## 史料
 
@@ -22,7 +22,7 @@ volume: 第12卷-macos的bsd遗产
 
 ## 史观
 
-(待人工回填——详见子节文件史观/辨析字段)
+本章史观以 libdispatch 流动史与 Apple 使用 FreeBSD 代码但不回馈争议为双主题，依 246.1-246.3 三节史观字段汇总：总纲第 5 条（没有必然性，只有偶然性）——libdispatch 以 Apache 2.0 开源与 Sedov 2009-09-23 的 FreeBSD 移植是多重偶然因素的交汇，非历史必然；总纲第 8 条（本体论上各方平等）与第 6 条（和解优于斗争）——Apple、FreeBSD、Linux 等方在并发抽象上是对等交往的平等主体，非等级臣服；总纲第 11 条（商品是形式主义）与第 19 条（解释学循环是历史认识的根本条件）——libdispatch 代码流动呈“商品形式主义”，其历史认识须经四方视角的解释学循环，freebsd.duckdb 一手数据用于还原被二手叙事遮蔽的 Sedov 首条移植贡献；总纲第 13 条（法律与道德是利益分配）——“无薪员工”争议的实质是 BSD 许可证契约下利益分配的结构性失衡，而非 Apple 道德指控；总纲第 21 条（革命与改革是历史方法论的分歧）——GPL 革命式与 BSD 改革式方法论在 Apple 案例中显现为对结构性不对称的不同处理方式（详见 246.1-246.3 各节史观与辨析字段）。
 
 ## 辨析
 
