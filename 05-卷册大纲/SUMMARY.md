@@ -3554,6 +3554,10 @@
   - [65 【Linux社区】TAB选举与CoC私下征询争议](./第20卷-linux社区史与比较研究/65-TAB选举与CoC私下征询争议.md)
   - [66 【Linux社区】SubsystemProfile评审与可信名单之争](./第20卷-linux社区史与比较研究/66-SubsystemProfile评审与可信名单之争.md)
   - [67 【Linux社区】KS2019筹备与Profile评审续](./第20卷-linux社区史与比较研究/67-KS2019筹备与Profile评审续.md)
+  - [68 【Linux社区】KS2019议题征集与bug跟踪大讨论](./第20卷-linux社区史与比较研究/68-KS2019议题征集与bug跟踪大讨论.md)
+  - [69 【Linux社区】MS2019文档与补丁接受一致性](./第20卷-linux社区史与比较研究/69-MS2019文档与补丁接受一致性.md)
+  - [71 【Linux社区】commit版本史与lore归档大讨论](./第20卷-linux社区史与比较研究/71-commit版本史与lore归档大讨论.md)
+  - [72 【Linux社区】Link标签强制与git元数据终局](./第20卷-linux社区史与比较研究/72-Link标签强制与git元数据终局.md)
 ## 读者指引（大纲侧）
 
 - 大纲侧手动维护区，脚本重跑保留。
