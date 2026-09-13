@@ -19,34 +19,31 @@ volume: 第07卷-freebsd的工程体系重构
 
 ## 史观
 
-(待人工回填——详见子节文件史观/辨析字段)
+- 总纲 10“动手者创造历史”——磁盘加密（GBDE/GELI）、CSPRNG 与 freebsd-update 等安全基础设施均系具体 committer 的个体工程实践累积，事件响应亦由一线志愿者劳动推进（概括 137.5-137.8 各节史观字段）。
+- 总纲 8“本体论上各方平等”——跨 OS 安全模型比较中，FreeBSD、OpenBSD、Linux 的安全路线被置于对等比较而非优劣裁决；厂商认证产品与上游项目的关系亦非单向优劣。
+- 总纲 15“文化即形式主义”——Security Team 流程正规化、SA/EN 分类、PGP 签名公告与支持周期政策的制度化，是开源安全响应成熟度的文化表征。
+- 总纲 4“分离聚合是永恒规律”——OpenBSD 与 FreeBSD 安全哲学的路线分化（默认最大安全 vs 渐进稳健）是 BSD 家族内部分合循环的具现。
 
 ## 辨析
 
 - 原大纲本节无专门子节，磁盘加密和随机数生成内容缺失，已补全；“FreeBSD 使用 NSA 后门加密算法” 是阴谋论——AES 是 NIST 标准化算法，经过公开密码分析，FreeBSD 实现为公开源码可审计；GELI 支持多种算法，用户可自行选择
 - “VuXML 由 FreeBSD Security Team 维护”——不准确，VuXML 主要由 ports 社区和安全团队共同维护，ports committer 可以直接提交 VuXML 条目；“VuXML 包含 FreeBSD 基础系统漏洞”——不包含，基础系统漏洞通过 SA/EN 公告处理；“pkg audit 自动更新 VuXML 数据库”——需要定期运行 `pkg audit -F`
-- 原大纲本节列入的 “Anthropic Claude Mythos 2026.4 AI 发现 OpenBSD TCP SACK 27 年漏洞” 事件——经多轮 WebSearch 核查，截至 2026 年 7 月 19 日无任何公开可验证的一手来源（Anthropic 官网、OpenBSD 官网、MITRE CVE、oss-security 邮件列表）证实该事件，按 0 信任原则标注为 据一手文献
-- “macOS 是 FreeBSD 所以 macOS 的安全就是 FreeBSD 的安全”——这是极其常见的误解；macOS/Darwin 仅在用户层和部分 API 层面源自 FreeBSD，XNU 内核是 Mach + FreeBSD 紧密混合，安全机制（SIP、Seatbelt、Code Signing、Notarization、Secure Enclave）均为 Apple 私有技术；〔待核：原文截断，后文待回源〕
+- 原大纲本节列入的 “Anthropic Claude Mythos 2026.4 AI 发现 OpenBSD TCP SACK 27 年漏洞” 事件——经多轮 WebSearch 核查，截至 2026 年 7 月 19 日无任何公开可验证的一手来源（Anthropic 官网、OpenBSD 官网、MITRE CVE、oss-security 邮件列表）证实该事件，按 0 信任原则标注为〔无一手来源，不采信〕。
+- “macOS 是 FreeBSD 所以 macOS 的安全就是 FreeBSD 的安全”——这是极其常见的误解；macOS/Darwin 仅在用户层和部分 API 层面源自 FreeBSD，XNU 内核是 Mach + FreeBSD 紧密混合，安全机制（SIP、Seatbelt、Code Signing、Notarization、Secure Enclave）均为 Apple 私有技术；“FreeBSD 没有 Common Criteria 认证所以不安全”——CC 认证是过程/文档认证，不是安全性的直接度量；OpenBSD 也没有 CC 认证，但被普遍认为是最安全的通用 OS 之一（完整辨析见 137.8 节）。
 
 ## 文献
 
-- Kamp P H. GBDE (USENIX Security 2003); Ferguson N, Schneier B. Practical Cryptography (2003); FreeBSD Project. **gbde(8)**, **geli(8)**, **random(4)** Manual Pages; FreeBSD cgit commit history for geom/bde, geom/eli, dev/random. ［A］
+- Kamp P H. GBDE (USENIX Security 2003). ［A］
+- Ferguson N, Schneier B. Practical Cryptography (2003).
+- FreeBSD Project. **gbde(8)**, **geli(8)**, **random(4)** Manual Pages; FreeBSD cgit commit history for geom/bde, geom/eli, dev/random. ［A］
 
 <!-- DB_REF:freebsd.duckdb -->
 > **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 2020-2024 年间：291,070 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
 - FreeBSD Project. VuXML Homepage. vuxml.freebsd.org; FreeBSD Project. **pkg-audit(8)** Manual Page; FreeBSD Project. FreeBSD Ports Collection: security/vuxml/.［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
 
-<!-- DB_REF:freebsd.duckdb -->
-> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 2020-2024 年间：291,070 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
 - FreeBSD Project. Security Advisories Archives. security.freebsd.org; MITRE CVE Database. cve.mitre.org; LWN.net Security Coverage. lwn.net.［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
 
-<!-- DB_REF:freebsd.duckdb -->
-> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 2020-2024 年间：291,070 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
-- Apple Inc. Apple Platform Security. support.apple.com/guide/security/; Apple Inc. XNU Source Code (opensource.apple.com); The Open Group. Common Criteria Portal. commoncriteriaportal.org; The Open Group. UNIX Certification Directory. opengroup.org. ［A］[^doubt-resolved-478]: 据 Arch_Handbook (未署名) 消解[^doubt-resolved-479]: 据 Mac OS X Internals A Systems Approach (Amit Singh（阿米特·辛格）)  (未署名) 消解[^doubt-resolved-480]: 据 Mac OS X Internals A Systems Approach (Amit Singh)  (未署名) 消解[^doubt-resolved-481]: 据 Mac OS X Internals A Systems Approach (Amit Singh)  (未署名) 消解[^doubt-resolved-485]: 据 001_Benchmarking Mythos-Linked Bug Rediscovery (未署名) 消解[^doubt-resolved-486]: 据 Mac OS X Internals A Systems Approach (Amit Singh)  (未署名) 消解
-
-<!-- DB_REF:freebsd.duckdb -->
-> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 2020-2024 年间：291,070 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
-
+- Apple Inc. Apple Platform Security. support.apple.com/guide/security/; Apple Inc. XNU Source Code (opensource.apple.com); The Open Group. Common Criteria Portal. commoncriteriaportal.org; The Open Group. UNIX Certification Directory. opengroup.org. ［A］
 <!-- PODCAST_REVIEW v20260829 -->
 <!-- 语义复核范围：BSD Now EP120、BSD Now EP52（共 2 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
 
@@ -68,9 +65,9 @@ volume: 第07卷-freebsd的工程体系重构
 
 - 总纲10 动手者创造历史：嘉宾从昔日高产 committer 转向培养新一代动手者——推动 Mariusz Zaborski 成为 committer 从事 Capsicum 与 Casper、Konrad Witaszczyk 打磨加密内核转储补丁历时两年；他以 vendor 视角点出生态症结：厂商补丁常有九成就绪而最后一步永无余力完成者（3919.84-3932.04），故寄望基金会雇用专人收尾入库。BSD 史的推进动力在此显形为具体人手的持续劳动与“加入 FreeBSD 项目是我技术生涯最大的加速器”（4290.64-4303.08）式的代际传承，而非路线图或宣言。（BSD Now EP120，[3892.59-4303.08]，L2）
 - 总纲5 没有必然性，只有偶然性：geli 开发史成为偶然性优先的注脚：当年可预测初始化向量的 CBC 模式被普遍视为安全，嘉宾凭超出共识的直觉实现不可预测初始化向量（3764.35-3772.27），日后该共识方案确被证明不安全，一次未按主流走的工程选择意外成为先见；与之呼应，OpenSSH 历史提权漏洞仅系一个比较运算符之差、修复前后二进制只差一比特，安全史的走向悬于这类无必然性的微小偶然。（BSD Now EP120，[3736.59-3778.55]，L1）
-- 总纲10 动手者创造历史：总纲10 动手者创造历史：Sean Webb 以动手实现并上游 ASLR/PIE 的方式直接改变 FreeBSD 安全能力。（BSD Now EP52，[1110.02-1421.06]，L1）
-- 总纲5 没有必然性，只有偶然性：总纲5 没有必然性，只有偶然性：ASLR 采用 PaX 模型而非 OpenBSD 模型，源于实现者个人偏好与 HardenedBSD 协作的偶然路径。（BSD Now EP52，[1381.32-1435.42]，L1）
-- 总纲8 本体论上各方平等：总纲8 本体论上各方平等：FreeBSD、OpenBSD 与 HardenedBSD 在 ASLR 实现上各有路径，被置于对等比较而非优劣判定。（BSD Now EP52，[1381.32-1449.58]，L1）
+- 总纲10 动手者创造历史：Sean Webb 以动手实现并上游 ASLR/PIE 的方式直接改变 FreeBSD 安全能力。（BSD Now EP52，[1110.02-1421.06]，L1）
+- 总纲5 没有必然性，只有偶然性：ASLR 采用 PaX 模型而非 OpenBSD 模型，源于实现者个人偏好与 HardenedBSD 协作的偶然路径。（BSD Now EP52，[1381.32-1435.42]，L1）
+- 总纲8 本体论上各方平等：FreeBSD、OpenBSD 与 HardenedBSD 在 ASLR 实现上各有路径，被置于对等比较而非优劣判定。（BSD Now EP52，[1381.32-1449.58]，L1）
 
 **辨析**：
 

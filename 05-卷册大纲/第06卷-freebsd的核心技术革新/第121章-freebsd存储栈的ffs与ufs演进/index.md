@@ -4,7 +4,7 @@ id: CH121
 volume: 第06卷-freebsd的核心技术革新
 ---
 
-# 第 121 章 freebsd存储栈的ffs与ufs演进
+# 第 121 章 FreeBSD 存储栈的 FFS 与 UFS 演进
 
 ## 要点
 
@@ -15,8 +15,6 @@ volume: 第06卷-freebsd的核心技术革新
 
 ## 史料
 
-- [DB:references_fulltext:chapter_matches:chmatch_3827] 卷“第06卷-freebsd的核心技术革新”第 121 章，匹配置信度 folder，原因：folder 第119章
-- [DB:references_fulltext:chapter_matches:chmatch_3967] 卷“第06卷-freebsd的核心技术革新”第 121 章，匹配置信度 folder，原因：folder 第119章
 - [DB:references_fulltext:chapter_matches:chmatch_3661] 卷“第06卷-freebsd的核心技术革新”第 121 章，匹配置信度 curated，原因：curated token rule
 - [DB:references_fulltext:chapter_matches:chmatch_3662] 卷“第06卷-freebsd的核心技术革新”第 121 章，匹配置信度 curated，原因：curated token rule
 - [DB:references_fulltext:chapter_matches:chmatch_3664] 卷“第06卷-freebsd的核心技术革新”第 121 章，匹配置信度 curated，原因：curated token rule
@@ -39,7 +37,7 @@ volume: 第06卷-freebsd的核心技术革新
 
 ## 史观
 
-(待人工回填——详见子节文件史观/辨析字段)
+总纲第 4 条——分离聚合是永恒规律：UFS 与 FFS 分层共生——ufs/ 承担目录结构与元数据处理，ffs/ 承担数据块分配与物理布局，二者分离而聚合为完整的文件系统实现；存储栈自旧 UFS、Soft Updates、SUJ 至 GEOM/CAM 的演进，亦呈各层反复分离与重新聚合的循环。章级各子节的逐条史观映射详见本章各子节文件的史观字段。
 
 ## 辨析
 
@@ -54,7 +52,7 @@ volume: 第06卷-freebsd的核心技术革新
 
 <!-- DB_REF:freebsd.duckdb -->
 > **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 2010-2020 年间：488,947 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
-- Kamp, P.-H. (2004). *GEOM Tutorial*. BSDCan 2004; FreeBSD Project. **geom(4)**, **geom(8)** Manual Pages; Linux Kernel Documentation. *Device Mapper*. kernel.org/doc; Lucas, M. W. (2018). *FreeBSD Mastery: Storage Essentials*. Chapter 3-5.［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
+- Kamp, P.-H. (2004). *GEOM Tutorial*. BSDCan 2004; FreeBSD Project. **geom(4)**, **geom(8)** Manual Pages; Linux Kernel Documentation. *Device Mapper*. kernel.org/doc; Lucas, M. W. (2018). *FreeBSD Mastery: Storage Essentials*. Chapter 3-5.［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简；语义以正文与所引来源为准］
 
 <!-- DB_REF:freebsd.duckdb -->
 > **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 2010-2020 年间：488,947 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
