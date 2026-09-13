@@ -30,7 +30,7 @@ volume: 第15卷-许可证哲学与法律分析
 - 总纲第 14 条——许可证约束：标准冲突是“自由”定义之争的文本化——OSD/FSD 以“可修改、可再分发、可商用”为内核，NC/ND 与之根本冲突。
 - 辨析：**编号防错**——FSD 四自由官方编号为 0–3，NC 违反自由0（不是“第1条”），ND 违反自由1+自由3（不是“第3条”）；OSD 引用须用 §1/§3/§6 条款号，不得混用。
 - 文献：OSI. The Open Sourc
-- 总纲第 14 条——许可证约束：CC 家族中恰好落入开源/自由标准的三者，分别对应公共领域、permissive、copyleft 三种制度原型。
+- 总纲第 13 条——法律与道德是利益分配：CC 家族中恰好落入开源/自由标准的三者，分别对应公共领域、permissive、copyleft 三种制度原型。
 - 辨析：CC-BY-SA 与 GPL 同为 share-alike 家族，但适用对象（文化作品 vs 软件）与传染边界不同，不得将二者混同；CC0 与 Unlicense 的公共领域奉献机制差异（CC0 含“不得反悔”条款）须辨析。
 - 文献：Creative Commons. CC0 1.0 Universal [Z/OL]. <https://creativecommons.org/publicdomain/zero/1.0/>.
 
