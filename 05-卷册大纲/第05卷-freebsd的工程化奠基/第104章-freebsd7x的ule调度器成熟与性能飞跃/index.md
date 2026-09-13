@@ -4,7 +4,7 @@ id: CH104
 volume: 第05卷-freebsd的工程化奠基
 ---
 
-# 第104章 freebsd7x的ule调度器成熟与性能飞跃
+# 第 104 章 freebsd7x的ule调度器成熟与性能飞跃
 
 ## 要点
 
@@ -16,28 +16,25 @@ volume: 第05卷-freebsd的工程化奠基
 
 ## 史观
 
-- 总纲第 2 条——实践先于理论，ULE 的 6 年演进是工程实践驱动的而非理论预设
-  - 辨析：ULE 是否真比 4BSD 优越，需查基准测试；6 年成熟期是否过长；7.0 与 7.1 对 ULE 状态的表述差异；经 bsd_commits.duckdb tags 表验证，7.0-RELEASE 的 tagger_date 为 2008-02-24T05:45:17Z（cvs2svn 创建 tag），7
-- 总纲第 2 条——实践先于理论，SMP 性能是工程迭代的结果
+- 总纲第 9 条——经验优先：ULE 的 6 年演进是工程实践驱动的而非理论预设
+  - 辨析：ULE 是否真比 4BSD 优越，需查基准测试；6 年成熟期是否过长；7.0 与 7.1 对 ULE 状态的表述差异；经 bsd_commits.duckdb tags 表验证，7.0-RELEASE 的 tagger_date 为 2008-02-24T05:45:17Z（cvs2svn 创建 tag），7.1-RELEASE 的 tagger_date 则为 2008-12-31T22:57:14Z（Ken Smith）——叙事中须区分“tag 创建时间”与“官方公告时间”（两者分别为 2008 年 2 月 27 日与 2009 年 1 月 4 日）。
+- 总纲第 9 条——经验优先：SMP 性能是工程迭代的结果
   - 辨析：测试方法是否公平，需查测试环境（硬件、内核配置）
   - 文献：FreeBSD 7.0 SMP Performance Benchmarks (freebsd.org 2008)；Phoronix“FreeBSD 7.0 Performance” (2008.3)；Roberson (2003) BSDCon paper[
-- 总纲第 4 条——0 信任原则
-  - 辨析：选择性报告，需查原始数据
+- 总纲第 9 条——经验优先：选择性报告的检验须回到原始数据
   - 文献：Phoronix“FreeBSD 7.0 SMP Performance” (2008.3)；OpenBenchmarking.org FreeBSD 7.0 test results；McKusick & Neville-Neil (2014), Chapter 4 ［B］
-- 总纲第 4 条——0 信任原则
+- 总纲第 13 条——法律与道德是利益分配：厂商赞助关系影响基准报告的立场与取舍
   - 辨析：厂商赞助，需查利益关系
   - 文献：FreeBSD 7.0-RELEASE/7.1-RELEASE Release Notes；McKusick & Neville-Neil (2014)；The FreeBSD Foundation 2007-2009 Annual Reports；BSDCan 2007-2009 Conference Proce
-- 总纲第 9 条——简洁与复杂的辩证，大页增加复杂度但减少 TLB miss
+- 专题语（不设总纲条号）——复杂度与性能的工程权衡：大页增加管理复杂度但减少 TLB miss
   - 辨析：大页是否真提升性能，需查基准测试
   - 文献：Cox, A. et al. “Practical Transparent Superpage Support for FreeBSD” (FreeBSD Project, 2007)；FreeBSD 7.0 Release Notes；Navarro, J.
 
 ## 辨析
 
-- ULE 是否真比 4BSD 优越，需查基准测试；6 年成熟期是否过长；7.0 与 7.1 对 ULE 状态的表述差异；经 bsd_commits.duckdb tags 表验证，7.0-RELEASE 的 tagger_date 为 2008-02-24T05:45:17Z（cvs2svn 创建 tag）〔待核：原文截断，后文待回源〕
+- ULE 是否真比 4BSD 优越，须以基准测试回答；6 年成熟期是否过长；7.0 与 7.1 对 ULE 状态的表述差异——经 bsd_commits.duckdb tags 表验证，7.0-RELEASE 的 tagger_date 为 2008-02-24T05:45:17Z（cvs2svn 创建 tag），7.1-RELEASE 的 tagger_date 则为 2008-12-31T22:57:14Z（Ken Smith），官方公告日期分别为 2008 年 2 月 27 日与 2009 年 1 月 4 日，叙事须区分 tag 创建与公告发布两个时点。
 - 测试方法是否公平，需查测试环境（硬件、内核配置）
   - 文献：FreeBSD 7.0 SMP Performance Benchmarks (freebsd.org 2008)；Phoronix“FreeBSD 7.0 Performance” (2008.3)；Roberson (2003) BSDCon paper［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］ 〔L3 官方文档〕
-  - 史观：总纲第 4 条——0 信任原则
-  - 辨析：
 - 厂商赞助，需查利益关系
   - 文献：FreeBSD 7.0-RELEASE/7.1-RELEASE Release Notes；McKusick & Neville-Neil (2014)；The FreeBSD Foundation 2007-2009 Annual Reports；BSDCan 2007-2009 Conference Proceedings；Phoronix FreeBSD
 - 大页是否真提升性能，需查基准测试
@@ -45,25 +42,18 @@ volume: 第05卷-freebsd的工程化奠基
 
 ## 文献
 
-- Roberson, J. “ULE: A Modern Scheduler for FreeBSD”Proceedings of BSDCon 2003 (USENIX, 2003)；McKusick, M. K. & Neville-Neil, G. V. The Design and Implementation of the FreeBSD Operating System, 2nd ed. (Addison-Wesley, 2014), Chapter 4；FreeBSD 7.0/7.1 Release Notes；〔待核：原文截断，后文待回源〕
+- Roberson, J. ULE: A Modern Scheduler For Threaded SMP Applications in FreeBSD[C]//Proceedings of BSDCon 2003 (USENIX, 2003)；McKusick, M. K. & Neville-Neil, G. V. The Design and Implementation of the FreeBSD Operating System, 2nd ed. (Addison-Wesley, 2014), Chapter 4；FreeBSD 7.0/7.1 Release Notes
 - FreeBSD 7.0 SMP Performance Benchmarks (freebsd.org 2008)；Phoronix“FreeBSD 7.0 Performance” (2008.3)；Roberson (2003) BSDCon paper［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
 
-## 103.2.2 性能提升的工程意义
+## 104.3 大页支持的工程实现（存目）
 
-- 要点：性能提升的工程意义：(1) FreeBSD 重新成为高性能服务器选择；(2) SMPng 项目终于见效；(3) 为后续
-- Phoronix“FreeBSD 7.0 SMP Performance” (2008.3)；OpenBenchmarking.org FreeBSD 7.0 test results；McKusick & Neville-Neil (2014), Chapter 4 ［B］
-- FreeBSD 7.0-RELEASE/7.1-RELEASE Release Notes；McKusick & Neville-Neil (2014)；The FreeBSD Foundation 2007-2009 Annual Reports；BSDCan 2007-2009 Conference Proceedings；Phoronix FreeBSD Benchmarks 2008；freebsd-hackers 邮件列表 2008 年归档 ［A］
-- Cox, A. et al. “Practical Transparent Superpage Support for FreeBSD” (FreeBSD Project, 2007)；FreeBSD 7.0 Release Notes；Navarro, J. et al. "Practical, Transparent Operating System Support for Superpages"ACM SIGOPS 2002 ［B］
+- 本节正文见磁盘节文件 104.3-SUPERPAGE-大页支持.md；原 103.3.2 抢救残片（要点截断）已按正本体删除。
 
-## 103.3.2 大页支持的工程实现
+## 附：Sony 开放策略的效应（原 103.4.2，迁移处置 DEFERRED）
 
-- 要点：大页支持的工程实现：(1) 修改 pmap 层；(2) 支持 reservation 机制；(3)
-- FreeBSD 7.0-RELEASE hardware notes (powerpc)；Hachmann, U. FreeBSD on PS3 (2008)；freebsd-ppc mailing list 2007-2008 archives ［A］
-
-## 103.4.2 Sony 开放策略的效应
-
-- 要点：Sony 的 OtherOS 功能（PS3 初始固件支持）允许用户安装第三方 OS，影响包括：(1) 推动 BSD/Linux 在游戏机上运行；(2) 2010 年 Sony 通过固件更新移除 OtherOS 引发社区抗议
+- 要点：Sony 的 OtherOS 功能（PS3 初始固件支持）允许用户安装第三方 OS，影响包括：（1）推动 BSD/Linux 在游戏机上运行；（2）2010 年 Sony 通过固件更新移除 OtherOS 引发社区抗议。
 - 史料：Sony PS3 固件更新说明、新闻 ［C］
+- 迁移说明：本节属第 13 卷 PlayStation 叙事（跨文件内容迁移），按整改规程登记 DEFERRED 交专项回迁，此处保留原 103.4.2 残片并改挂非节号标题。
 
 ## 自反性声明
 
