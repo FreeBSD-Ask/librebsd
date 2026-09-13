@@ -16,20 +16,20 @@ volume: 第15卷-许可证哲学与法律分析
 
 ## 史观
 
-- 总纲第 14 条——许可证约束：BSD 许可证文本的逐版简化
-  - 公告与 OSI 批准时点可交叉核查；[考据完成：2026-07-30 三次联网核查确认——**William Hoskins** 职务为 **Director, Office of Technology Licensing, University of California, Berkeley**（加州大学伯克利分校技术许可办公室主任，非 OTL 主任的缩写疑问，OTL 即 Office of Technology Licensing 的缩写，Hoskins 确为该办公室主任）
-- 总纲第 14 条——许可证约束：宽松许可证谱系
+- 总纲第 13 条——法律与道德是利益分配：BSD 许可证文本的逐版简化
+  - 公告与 OSI 批准时点可交叉核查；[考据完成：2026-07-30 三次联网核查确认——**William Hoskins** 职务为 **Director, Office of Technology Licensing, University of California, Berkeley**（加州大学伯克利分校技术许可办公室主任，非 OTL 主任的缩写疑问，OTL 即 Office of Technology Licensing 的缩写，Hoskins 确为该办公室主任）]
+- 总纲第 13 条——法律与道德是利益分配：宽松许可证谱系
   - 辨析：**BSD** 与 **MIT** 在法律效力上是否完全等价
   - 文献：**MIT License** 文本；**Apache License 2.0** 文本［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
 
-## 2
+## 史观
 
-- 总纲第 14 条——许可证约束：CC 以“some rights reserved”（部分权利保留）反对版权绝对主义，是“作者自决”原则的文化作品实现。
+- 总纲第 13 条——法律与道德是利益分配：CC 以“some rights reserved”（部分权利保留）反对版权绝对主义，是“作者自决”原则的文化作品实现。
 - 辨析：CC 1.0 精确发布日（2002-12-16）须 creativecommons.org 存档进一步确证（存疑项）；CC 4.0 国际版与 3.0 移植版的差异（4.0 引入全球适用条款、明确数据库权利处理）须逐版对照。
-- 文献：C
-- 总纲第 14 条——许可证约束：标准冲突是“自由”定义之争的文本化——OSD/FSD 以“可修改、可再分发、可商用”为内核，NC/ND 与之根本冲突。
+- 文献：Creative Commons. License Versions [EB/OL]. <https://creativecommons.org/share-your-work/licensing-types-examples/>.
+- 总纲第 13 条——法律与道德是利益分配：标准冲突是“自由”定义之争的文本化——OSD/FSD 以“可修改、可再分发、可商用”为内核，NC/ND 与之根本冲突。
 - 辨析：**编号防错**——FSD 四自由官方编号为 0–3，NC 违反自由0（不是“第1条”），ND 违反自由1+自由3（不是“第3条”）；OSD 引用须用 §1/§3/§6 条款号，不得混用。
-- 文献：OSI. The Open Sourc
+- 文献：OSI. The Open Source Definition [EB/OL]. <https://opensource.org/osd>.
 - 总纲第 13 条——法律与道德是利益分配：CC 家族中恰好落入开源/自由标准的三者，分别对应公共领域、permissive、copyleft 三种制度原型。
 - 辨析：CC-BY-SA 与 GPL 同为 share-alike 家族，但适用对象（文化作品 vs 软件）与传染边界不同，不得将二者混同；CC0 与 Unlicense 的公共领域奉献机制差异（CC0 含“不得反悔”条款）须辨析。
 - 文献：Creative Commons. CC0 1.0 Universal [Z/OL]. <https://creativecommons.org/publicdomain/zero/1.0/>.
