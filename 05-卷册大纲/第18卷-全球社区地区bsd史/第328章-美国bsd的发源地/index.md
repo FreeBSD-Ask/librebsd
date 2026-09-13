@@ -14,34 +14,74 @@ volume: 第18卷-全球社区地区bsd史
 - 捐赠公告与 990 表数据是评估筹款的关键史料，须交叉验证
 - 法院文件与和解协议是评估诉讼影响的关键史料，须遵循 0 信任原则
 
+## 本章节索引
+
+- 328.1 伯克利 CSRG 的地缘遗产：从 1976 年 Unix 到 PDP-11
+- 328.2 美国大学中的 BSD 教学
+- 328.3 美国企业与 BSD
+- 328.4 BSDCan 与 MeetBSD 会议文化
+- 328.5 美国联邦政府与军方的 BSD 部署
+- 328.6 Core Team 成员的地理分布变迁
+- 328.7 硅谷文化与 BSD 社区
+- 328.8 美国开源法律环境与 BSD
+- 328.9 FreeBSD Foundation 在美国科罗拉多州注册的法律意义
+- 328.10 美国 501(c)(3) 公益慈善地位
+- 328.11 美国 BSD 商标持有情况
+- 328.12 美国捐赠文化与基金会筹款
+- 328.13 美国 BSD 相关诉讼与争议案例
+- 328.14 committer 权限记录（美国地区）
+- 328.15 美国社区内部矛盾与排外
+- 328.16 美国政府与军方参与 BSD 时的内部张力
+- 328.17 基金会所在城市概况：博尔德、布鲁姆菲尔德与阿瓦达
+- 328.18 美国 BSD 用户组的当代生态与活动模式
+- 328.19 公众的认识
+- 328.20 外部批评与反对者：美国 BSD 中心主义与边缘声音
+- 328.21 重要贡献者与边缘者：被忽视的美国地区社区维护者
+- 328.22 与同时期操作系统的比较（美国地区）
+
 ## 史料
 
-- [DB:references_fulltext:chapter_matches:chmatch_4226] 卷“第18卷-全球社区地区bsd史”第 328 章，匹配置信度 1.0，原因：澳大利亚 UNIX 社区史一手史料
 - [DB:bsdnow_podcast:outline_mappings:om_11814] BSD Now 第 487 期，匹配 CH328 章，关联度 1.0
 - [DB:bsdnow_podcast:outline_mappings:om_12029] BSD Now 第 465 期，匹配 CH328 章，关联度 1.0
 - [DB:bsdnow_podcast:outline_mappings:om_12626] BSD Now 第 404 期，匹配 CH328 章，关联度 1.0
 
 ## 史观
 
-(待人工回填——详见子节文件史观/辨析字段)
+本章章级史观由子节文件与本章注入块承载，汇总如下（注入块五条已与总纲 25 条权威表逐字核对相符）：总纲第 18 条——时间是一种形式主义（“二十五年才能成为二十五年项目”，项目年龄即时间累积的形式）；总纲第 10 条——动手者创造历史（OpenBSD 以既有代码持续加固而非另起炉灶；FreeBSDCon 1999 由开发者与倡导者自发组织）；总纲第 6 条——和解优于斗争（core team 首次线下聚首呈现协作优先于对抗的组织形态）；总纲第 8 条——本体论上各方平等（SDF 的 Alpha 加 NetBSD 组合以“被使用与被维护”而非市场份额自证存续）。各子节史观与辨析详见对应子节文件。
 
 ## 辨析
 
 - 4.4BSD-Lite Release 2 的发布日期需考据；代码释放的法律条款需分析
-- CIA 资助 MIT AI Lab 的具体金额与渠道在不同解密文件中描述不一致，需区分 “直接资助” 与 “通过 ONR 等掩护机构间接资助”；Church Committee 1976 年报告披露 CIA 在大学校园的资助网络，但 MIT AI Lab 在其中的角色需以 MIT 档案为准；Bernstein 诉讼的完整过程（1995 年起诉至 2002 年最终裁决）期间加密出口管制政策已多次修订
+- 〔跨章背景素材标注：本条 CIA/MIT AI Lab 内容与本章“美国 BSD 的发源地”主题弱关联，迁移归位待专项处理；同句 Bernstein 出口管制内容与本章相关〕CIA 资助 MIT AI Lab 的具体金额与渠道在不同解密文件中描述不一致，需区分 “直接资助” 与 “通过 ONR 等掩护机构间接资助”；Church Committee 1976 年报告披露 CIA 在大学校园的资助网络，但 MIT AI Lab 在其中的角色需以 MIT 档案为准；Bernstein 诉讼的完整过程（1995 年起诉至 2002 年最终裁决）期间加密出口管制政策已多次修订
 
 ## 文献
 
-- 4.4BSD-Lite Release 2 Documentation；CSRG Final Announcement［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］---## 史料登记与辩证校准（2026-08-08 追加）> **本卷命题**：24.1 少数与多数（详见本卷 00-总览“编纂指导思想叙事参照”）### 史料文献
+- 4.4BSD-Lite Release 2 Documentation；CSRG Final Announcement［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
+
+---
+
+## 史料登记与辩证校准（2026-08-08 追加）
+
+> **本卷命题**：24.1 少数与多数（详见本卷 00-总览“编纂指导思想叙事参照”）
+
+### 史料文献
 - IRS 990 Forms；IRS Determination Letter［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
 - USPTO Trademark Records；Foundation Trademark Policy ［A］
 - Foundation Donation Announcements；IRS 990 Forms［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
 - USL v. BSDi Court Records Archive；Settlement Agreement［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
 - committer Access Logs Archive ［A］
-- freebsd-hackers Archive；Majordomo Logs ［A］## 史料考据补充（2026-08-04 任务3 联网核验）> 主题：美国社区内部矛盾与排外——代际双轨、硅谷文化冲突、非英语社区忽视
+- freebsd-hackers Archive；Majordomo Logs ［A］
+
+## 史料考据补充（2026-08-04 任务3 联网核验）——美国社区内部矛盾与排外
+
+> 主题：美国社区内部矛盾与排外——代际双轨、硅谷文化冲突、非英语社区忽视
 - Federal Register；GAO Reports；DARPA Funding Records［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
 - Colorado Secretary of State；IRS 990；USPTO Records ［A］
-- bsd.org; Meetup 数据 ［B］## 史料考据补充（2026-08-04 任务3 联网核验）> 主题：美国 BSD 用户组的当代生态——BUUG 伯克利、NYCBUG、CDBUG（2004 成立）、TFUG 等
+- bsd.org; Meetup 数据 ［B］
+
+## 史料考据补充（2026-08-04 任务3 联网核验）——美国 BSD 用户组的当代生态
+
+> 主题：美国 BSD 用户组的当代生态——BUUG 伯克利、NYCBUG、CDBUG（2004 成立）、TFUG 等
 
 <!-- PODCAST_REVIEW v20260829 -->
 <!-- 语义复核范围：BSD Now EP270、BSD Now EP261、BSDTalk EP21（共 3 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
