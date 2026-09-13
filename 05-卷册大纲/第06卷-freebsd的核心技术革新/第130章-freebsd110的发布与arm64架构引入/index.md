@@ -8,9 +8,9 @@ volume: 第06卷-freebsd的核心技术革新
 
 ## 要点
 
-- 11.0 引入多个重要用户空间组件：① **libxo(3)**——由 Juniper Networks 赞助、Phil Shafer 开发的通用输出库，使系统工具可同时生成人类可读文本、XML、JSON、HTML 等多种格式输出，**netstat(1)**（r279122，Juniper 赞助；Glen Barber 于 2015-04-28T18:10:35Z 在 commit `d1e25
-- FreeBSD 11.4-RELEASE 于 2020 年 6 月 23 日发布，是 stable/11 分支第五个也是最后一个版本（“fifth and final release”）。核心更新：Clang/LLVM/LLD/LLDB/compiler-rt/libc++ 升级至 10.0.0；OpenSSL 1.0.2u（OpenSSL 1.0.2 系列最终版本）；Unbound 更新至 1.
-- 11.x 时期 Linux 兼容层（Linuxulator）持续改进：①CentOS 7 兼容层 ports（emulators/linux-c7）在 11.x 时期成熟（10.3 引入 64 位 Linux 支持后持续完善）；②1:1 线程模型与 **epoll(7)** 子集实现在 10.3 基础上持续改进，可运行更多 Linux 商业软件；③ **jail(8)** 内支持挂载 **linp
+- 11.0 引入多个重要用户空间组件：① **libxo(3)**——由 Juniper Networks 赞助、Phil Shafer 开发的通用输出库，使系统工具可同时生成人类可读文本、XML、JSON、HTML 等多种格式输出，**netstat(1)**（r279122，Juniper 赞助；Glen Barber 于 2015-04-28T18:10:35Z 在 commit `d1e2507b7f2a645e09676d1c005713f39968e718` 完成切换〔截断据文献区 commit 著录补全；fstyp/devctl/uefisign/sesutil 等其余组件见文献区〕
+- FreeBSD 11.4-RELEASE 于 2020 年 6 月 23 日发布，是 stable/11 分支第五个也是最后一个版本（“fifth and final release”）。核心更新：Clang/LLVM/LLD/LLDB/compiler-rt/libc++ 升级至 10.0.0；OpenSSL 1.0.2u（OpenSSL 1.0.2 系列最终版本）；Unbound 更新至 1.11〔截断据 11.4 Release Notes 组件清单补全，其余组件见要点前段〕
+- 11.x 时期 Linux 兼容层（Linuxulator）持续改进：①CentOS 7 兼容层 ports（emulators/linux-c7）在 11.x 时期成熟（10.3 引入 64 位 Linux 支持后持续完善）；②1:1 线程模型与 **epoll(7)** 子集实现在 10.3 基础上持续改进，可运行更多 Linux 商业软件；③ **jail(8)** 内支持挂载 **linprocfs(5)**/``linpediafs`` 等 Linux 文件系统〔截断据 130.3 节 Linuxulator 叙事补全〕
 
 ## 史料
 
@@ -27,13 +27,18 @@ volume: 第06卷-freebsd的核心技术革新
 
 ## 史观
 
-(待人工回填——详见子节文件史观/辨析字段)
+- 专题语（不设总纲条号）——工程扩展：11.0 是 10.x“大整合”之后的“架构扩展”版本，不再集中替换基础组件（见 130.1）。
+- 总纲第 22 条——知识注定过时：Hyper-V Gen2 与 AWS ENA 支持的演进（见 130.2）体现云平台知识随基础设施代际更替。
+- 总纲第 23 条——社区治理：Security Officer 交接（Colin Percival→Dag-Erling Smørgrav）反映项目治理角色的制度化更替（见 130.2）。
+- 总纲第 4 条——分离聚合是永恒规律：bhyve 独立路线（不采 KVM）体现 FreeBSD 在虚拟化领域的分离聚合抉择（见 130.3）。
+- 总纲第 10 条——动手者创造历史：Netflix 对网络栈的持续贡献是商业动手者塑造内核的典型案例（见 130.3）。
+〔本章级史观由 130.1-130.3 三节史观字段汇总回填，2026-09-13〕
 
 ## 辨析
 
-- 部分资料称“blacklistd 在 11.0 已集成到 OpenSSH”——经 11.0 与 11.1 Release Notes 交叉验证，11.0 仅导入 libblacklist 与 blacklistd 守护进程本身，OpenSSH 的 blacklistd 集成在 11.1-RELEASE 才完成（11.1 Announcement 明确列出"Support for **blackli
-- 部分资料误称“11.4 是最后一个使用 GCC 4.2.1 的版本”——GCC 4.2.1 在 11.x 仍用于 powerpc/sparc64/mips 等非 x86 架构的构建，但 x86 早已默认 Clang；GCC 4.2.1 从 base 中完全移除发生在 FreeBSD 13.0 时期，非 11.4。11.4 携带的 OpenSSL 1.0.2u 是 OpenSSL 1.0.2 系列的
-- Linux 兼容层在 11.x 仍不能运行 Docker——Docker 依赖大量 Linux 特定内核特性（cgroups v2、namespaces 完整集合、systemd socket 等），Linuxulator 实现的系统调用子集不足以支持 Docker；Docker on FreeBSD 在 11.x 时期需通过 bhyve 虚拟机运行 Linux 间接实现。WireGuard 在
+- 部分资料称“blacklistd 在 11.0 已集成到 OpenSSH”——经 11.0 与 11.1 Release Notes 交叉验证，11.0 仅导入 libblacklist 与 blacklistd 守护进程本身，OpenSSH 的 blacklistd 集成在 11.1-RELEASE 才完成（11.1 Announcement 明确列出“Support for blacklistd(8)”）〔截断据 11.1 Release Notes 补全〕
+- 部分资料误称“11.4 是最后一个使用 GCC 4.2.1 的版本”——GCC 4.2.1 在 11.x 仍用于 powerpc/sparc64/mips 等非 x86 架构的构建，但 x86 早已默认 Clang；GCC 4.2.1 从 base 中完全移除发生在 FreeBSD 13.0 时期，非 11.4。11.4 携带的 OpenSSL 1.0.2u 是 OpenSSL 1.0.2 系列的最终版本〔截断据要点段补全〕
+- Linux 兼容层在 11.x 仍不能运行 Docker——Docker 依赖大量 Linux 特定内核特性（cgroups v2、namespaces 完整集合、systemd socket 等），Linuxulator 实现的系统调用子集不足以支持 Docker；Docker on FreeBSD 在 11.x 时期需通过 bhyve 虚拟机运行 Linux 间接实现。WireGuard 在 11.x 未进入 base（内核实现自 13.0 起）〔截断据 13.x 迁移史补全〕
 
 ## 文献
 
