@@ -10,7 +10,7 @@ volume: 第06卷-freebsd的核心技术革新
 
 - FreeBSD 12.0 将 OpenSSL 升级至 1.1.1a 版本（r340711），这是 OpenSSL 项目于 2018 年 9 月发布的 LTS（长期支持）版本，首次正式支持 TLS 1.3 协议（RFC 8446）。TLS 1.3 相比 TLS 1.2 具有显著改进：握手延迟从 2-RTT 减少至 1-RTT（0-RTT 可选），并废弃 RC4、SHA-1 等过时算法，密码套件全面转向 AEAD。
 - Meltdown/Spectre 对 FreeBSD 工程实践产生了深远影响：① 安全响应流程成熟化——FreeBSD Security Team 在此事件中展现了与 Intel、AMD、Linux/Windows/macOS 安全团队协调响应的能力，Security Officer Gordon Tetlow（戈登·泰特洛） 主导了披露前的协调工作；② 性能退化与优化权衡——KPTI 对系统调用与中断路径引入页表切换开销，安全缓解以性能为代价，须按负载权衡启用。
-- 12.0 引入 **netdump(4)** 驱动与功能，允许内核崩溃（panic）时将 crash dump 通过网络传输到远程主机，而非仅写入本地交换分区。这对无本地存储的磁盘 less 系统、云环境虚拟机、嵌入式设备的内核调试具有重要意义。**netdump(4)** 由 John Baldwin（约翰·鲍德温）（jhb@）等人开发，FreeBSD Foundation 赞助。**netma
+- 12.0 引入 **netdump(4)** 驱动与功能，允许内核崩溃（panic）时将 crash dump 通过网络传输到远程主机，而非仅写入本地交换分区。这对无本地存储的磁盘 less 系统、云环境虚拟机、嵌入式设备的内核调试具有重要意义。**netdump(4)** 由 John Baldwin（约翰·鲍德温）（jhb@）等人开发，FreeBSD Foundation 赞助。**netmap(4)** 等相关网络驱动亦在 12.0 中更新，以支撑 netdump 所需的网卡适配。
 - FreeBSD 12.4-RELEASE 于 2022 年 12 月 5 日发布，是 stable/12 第五个也是最后一个版本（“fifth release”，12.x 系列终版）。核心更新：LLVM 工具链套件升级至 13.0.0（跨度极大——从 12.3 使用的 10.x 直接跳到 13.0.0）；OpenSSL 1.1.1q；OpenSSH 9.1p1；**ena(4)** Amazon ENA 弹性网络适配器驱动随之升级；12.4 作为 12.x 终版不含重大新特性，以安全修复与驱动维护收束该系列。
 - FreeBSD 12.0-RELEASE 正式移除 PC98（NEC PC-9801/9821）与 armeb（32 位 big-endian ARM）架构支持。PC98 由 John Baldwin（约翰·鲍德温） 在 commit r312910（2017.2.1）从 -CURRENT 中移除，12.0 生效，结束了自 FreeBSD 2.2-RELEASE（1995）起 23 年的支持。PC98 与 armeb 退役后，12.x 系列不再为这两个平台提供任何支持，此系 FreeBSD 对早期旧平台支持整体收缩的标志。
 
@@ -50,9 +50,6 @@ volume: 第06卷-freebsd的核心技术革新
 <!-- DB_REF:freebsd.duckdb -->
 > **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 2010-2020 年间：488,947 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
 - FreeBSD **netdump(4)**/**netmap(4)** Manual Pages [Z]；FreeBSD 12.0-RELEASE Release Notes Userland/Kernel sections [Z]. 2018.［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
-
-<!-- DB_REF:freebsd.duckdb -->
-> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 2010-2020 年间：488,947 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
 - FreeBSD Release Engineering Team. FreeBSD 12.4-RELEASE Announcement [Z]. 2022-12-05；FreeBSD 12.4-RELEASE Release Notes [Z]. 2022；FreeBSD Security Information Unsupported Releases page [EB/OL]. freebsd.org/security/unsupported/；FreeBSD Project. release/12.4.0. freebsd-src 仓库 tag [DB/OL]. 2022-12-05T14:35:22-05:00. tag: release/12.4.0; commit: f2877ac4fb03265070b1cf97a07eb0e265bcaff9 ［A］FreeBSD 12.x 系列 release tag 间隔与发布偏差数据库验证（基于 **freebsd.duckdb** `tags` 表）见下表。
 
 | 版本 | tag 日期 | 公告日期 | 偏差（日） | 间隔（日） | tagger | commit hash | 版本控制时代 |
