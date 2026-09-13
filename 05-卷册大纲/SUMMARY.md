@@ -3725,6 +3725,9 @@
   - [157 【Linux社区】linuxnext流程与Bugzilla存废](./第20卷-linux社区史与比较研究/157-linuxnext流程与Bugzilla存废.md)
   - [158 【Linux社区】Rust入核与字符串API重构](./第20卷-linux社区史与比较研究/158-Rust入核与字符串API重构.md)
   - [159 【Linux社区】Rust抽象与AI评审推进](./第20卷-linux社区史与比较研究/159-Rust抽象与AI评审推进.md)
+  - [160 【Linux社区】sparse实测与linusnext树争议](./第20卷-linux社区史与比较研究/160-sparse实测与linusnext树争议.md)
+  - [161 【Linux社区】AI内容政策与highmem路线图](./第20卷-linux社区史与比较研究/161-AI内容政策与highmem路线图.md)
+  - [162 【Linux社区】文件系统维护门槛与stable标签](./第20卷-linux社区史与比较研究/162-文件系统维护门槛与stable标签.md)
 ## 读者指引（大纲侧）
 
 - 大纲侧手动维护区，脚本重跑保留。
