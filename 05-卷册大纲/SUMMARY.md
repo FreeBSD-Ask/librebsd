@@ -3744,6 +3744,8 @@
   - [176 【Linux社区】bugzilla近死实录与b4工作流](./第20卷-linux社区史与比较研究/176-bugzilla近死实录与b4工作流.md)
   - [177 【Linux社区】AI流程落地与Rust稳定性反驳](./第20卷-linux社区史与比较研究/177-AI流程落地与Rust稳定性反驳.md)
   - [178 【Linux社区】Rust实验推演与Improves标签博弈](./第20卷-linux社区史与比较研究/178-Rust实验推演与Improves标签博弈.md)
+  - [179 【Linux社区】加速器uAPI原则与PGP过期驳斥](./第20卷-linux社区史与比较研究/179-加速器uAPI原则与PGP过期驳斥.md)
+  - [180 【Linux社区】bcachefs反思与-next运维复盘](./第20卷-linux社区史与比较研究/180-bcachefs反思与-next运维复盘.md)
 ## 读者指引（大纲侧）
 
 - 大纲侧手动维护区，脚本重跑保留。
