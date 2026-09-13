@@ -3760,6 +3760,8 @@
   - [195 【Linux社区】ext4弃bh与unsafe语义](./第20卷-linux社区史与比较研究/195-ext4弃bh与unsafe语义.md)
   - [190 【Linux社区】拒收pull标准与AI文档争议](./第20卷-linux社区史与比较研究/190-拒收pull标准与AI文档争议.md)
   - [192 【Linux社区】回归时效统计与rustc协调](./第20卷-linux社区史与比较研究/192-回归时效统计与rustc协调.md)
+  - [197 【Linux社区】峰会日程全文与威胁模型注入](./第20卷-linux社区史与比较研究/197-峰会日程全文与威胁模型注入.md)
+  - [198 【Linux社区】kernelorg年报与C去UB进度](./第20卷-linux社区史与比较研究/198-kernelorg年报与C去UB进度.md)
 ## 读者指引（大纲侧）
 
 - 大纲侧手动维护区，脚本重跑保留。
