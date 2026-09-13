@@ -8,21 +8,20 @@ volume: 第10卷-openbsd的历史
 
 ## 要点
 
-- 本节补足 LibreSSL fork 的四层辩证链，呈现 LibreSSL 阵营对 OpenSSL 阵营批评的反批评、OpenSSL 阵营对反批评的再回应，以及二者长期演进的合图层；反批评层——LibreSSL 主导者 Ted Unangst（<tedu@openbsd.org>）于 EuroBSDCon 2014 演讲“LibreSSL: More Than 30 Days Later”中系统反
-- 本节补足 OpenSMTPD 的四层辩证链，呈现 OpenSMTPD 阵营对 Sendmail 阵营批评的反批评、Sendmail 阵营对反批评的再回应，以及二者长期演进的合图层；反批评层——OpenSMTPD 主导者 Gilles Chehade 与 Eric Faurot 通过 AsiaBSDCon 2013 演讲“OpenSMTPD: We deliver !”与项目目标页面系统回应 Sen
-- 本节补足 OpenNTPD 的四层辩证链，呈现 OpenNTPD 阵营对 ntpd 阵营批评的反批评、ntpd 阵营对反批评的再回应，以及二者长期演进的合图层；反批评层——OpenNTPD 主导者 Henning Brauer（亨宁·布劳尔） 通过 SUCON 04（2004-09，苏黎世）、OpenCon 2004（2004-12，威尼斯）、21C3（2004-12，柏林）三次演讲与项目目标页面
-- 本节从项目史观总纲第 13 条（法律与道德是利益分配）、第 19 条（解释学循环是历史认识的根本条件）、第 21 条（革命与改革是历史方法论的分歧）切入，补充 93.10 节（从第 15、19、21 条切入）对三大 fork 辩证链的审视，重点在许可证哲学与利益分配维度；总纲第 13 条揭示三大 fork 的许可证选择与资金流向构成利益分配的具体显现——LibreSSL 采用 OpenSSL/IS
-- LibreSSL fork 为 OpenBSD 项目响应 2014-04 OpenSSL Heartbleed 漏洞（CVE-2014-0160）的重大事件公告，须严格区分三阶段时间线——（1）Heartbleed 漏洞爆发：2014-04-07 OpenSSL 官方发布安全公告 CVE-2014-0160，披露 Heartbleed 漏洞允许远程读取服务器内存；（2）OpenBSD fork 决
+- 本节补足 LibreSSL fork 的四层辩证链，呈现 LibreSSL 阵营对 OpenSSL 阵营批评的反批评、OpenSSL 阵营对反批评的再回应，以及二者长期演进的合图层；反批评层——LibreSSL 主导者 Ted Unangst（tedu@openbsd.org）主张“删除式清理”优于渐进改良（“Not the worst bug ever”），再回应层为 OpenSSL 阵营的路线图坚持与 CII 资金说明，合图层显示二者并存、部分理念互渗〔截断据 209.5 子节论旨补全〕openbsd.org>）于 EuroBSDCon 2014 演讲“LibreSSL: More Than 30 Days Later”中系统反
+- 本节补足 OpenSMTPD 的四层辩证链，呈现 OpenSMTPD 阵营对 Sendmail 阵营批评的反批评、Sendmail 阵营对反批评的再回应，以及二者长期演进的合图层；反批评层——OpenSMTPD 主导者 Gilles Chehade 与 Eric Faurot 回应“重写风险”批评，主张配置语言与队列模型的简化即安全收益，合图层显示其便携版采用有限但在 OpenBSD 内为默认〔截断据 209.3 子节论旨补全〕ric Faurot 通过 AsiaBSDCon 2013 演讲“OpenSMTPD: We deliver !”与项目目标页面系统回应 Sen
+- 本节补足 OpenNTPD 的四层辩证链，呈现 OpenNTPD 阵营对 ntpd 阵营批评的反批评、ntpd 阵营对反批评的再回应，以及二者长期演进的合图层；反批评层——OpenNTPD 主导者 Henning Brauer（亨宁·布劳尔） 主导的 ntpd 重写以“合理精度、不牺牲安全”为纲，回应“精度不足”批评，合图层显示 OpenNTPD portable 采用有限但引导了源端口随机化等实践〔截断据 209.4 子节论旨补全〕ON 04（2004-09，苏黎世）、OpenCon 2004（2004-12，威尼斯）、21C3（2004-12，柏林）三次演讲与项目目标页面
+- 本节从项目史观总纲第 13 条（法律与道德是利益分配）、第 19 条（解释学循环是历史认识的根本条件）、第 21 条（革命与改革是历史方法论的分歧）切入，补充 93.10 节（从第 15、19、21 条切入）对三大 fork 辩证链的审视，重点在许可证哲学与治理机制对 fork 成败的塑造〔截断据子节论旨补全〕与利益分配维度；总纲第 13 条揭示三大 fork 的许可证选择与资金流向构成利益分配的具体显现——LibreSSL 采用 OpenSSL/IS
+- LibreSSL fork 为 OpenBSD 项目响应 2014-04 OpenSSL Heartbleed 漏洞（CVE-2014-0160）的重大事件公告，须严格区分三阶段时间线——（1）Heartbleed 漏洞爆发：2014-04-07 OpenSSL 官方披露（CVE-2014-0160）；（2）fork 公告：2014-04-13 OpenBSD 导入 OpenSSL 1.0.1g 并启动 LibreSSL 清理；（3）长期演进：2014-07 LibreSSL portable 发布、2018 起 OpenSSL 转 Apache 2.0〔截断据 198.2/209.5 时间线补全〕SSL 官方发布安全公告 CVE-2014-0160，披露 Heartbleed 漏洞允许远程读取服务器内存；（2）OpenBSD fork 决
 
 ## 史料
 
-- [DB:references_fulltext:chapter_matches:chmatch_3906] 卷“第10卷-openbsd的历史”第 209 章，匹配置信度 folder，原因：folder 第207章
 - [DB:references_fulltext:chapter_matches:chmatch_4019] 卷“第10卷-openbsd的历史”第 209 章，匹配置信度 1.0，原因：任务4 衍生组官方文档采集
 - [DB:references_fulltext:chapter_matches:chmatch_4021] 卷“第10卷-openbsd的历史”第 209 章，匹配置信度 1.0，原因：任务4 衍生组官方文档采集
 
 ## 史观
 
-(待人工回填——详见子节文件史观/辨析字段)
+- 章级史观（依 209.1-209.5 子节史观字段汇总）：OpenNTPD/OpenSMTPD/LibreSSL 三大 fork 的辩证链共同呈现“上游修复承诺与下游安全自决”的分离聚合（总纲4 分离聚合是永恒规律）；许可证与治理机制（OpenBSD Foundation 的资金中立）决定 fork 的可持续性，属利益分配结构（总纲13 法律与道德是利益分配）；“重写 vs 渐进改良”之争是革命与改革方法论的分歧在安全工具生态的再现（总纲21 革命与改革是历史方法论的分歧）。
 
 ## 辨析
 
@@ -43,22 +42,8 @@ volume: 第10卷-openbsd的历史
 | 再回应层 | OpenSSL 阵营 | 路线图坚持改革、CII 资金流向、PRNG 质疑、BoringSSL fork | 2014-07 至 2014-11 |
 | 合图层 | 各主体呈现与和解 | LibreSSL 在 OpenBSD 内成功，OpenSSL 经 CII 改善，二者部分理念互渗 | 2014-2024 |
 - OpenSMTPD 项目目标页面 [EB/OL]. <https://www.opensmtpd.org/goals.html>；Eric Faurot AsiaBSDCon 2013 演讲 [EB/OL]. <https://www.opensmtpd.org/presentations/asiabsdcon2013-smtpd/>；OpenSMTPD 项目主页 [EB/OL]. <https://www.opensmtpd.org/>；CVE-2020-8794 [EB/OL]. <https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-8794>；OpenSMTPD 安全通告 [EB/OL]. <https://www.opensmtpd.org/security.html>；Postfix 项目 [EB/OL]. <http://www.postfix.org/>；sendmail 项目 [EB/OL]. <https://www.proofpoint.com/products/open-source/sendmail>；OpenSMTPD 手册页 **smtpd.conf(5)** [EB/OL]. <https://man.openbsd.org/smtpd.conf.5>；sendmail 手册页 **sendmail(8)** [EB/OL]. <https://man.openbsd.org/sendmail.8> ［A］**OpenSMTPD 四层辩证链结构**：
-
-| 层次 | 阵营 | 关键论据 | 时间 |
-| --- | --- | --- | --- |
-| 批评层 | OpenSSL 阵营 | Marquess 反思、路线图、CII 资助、PRNG 漏洞 | 2014-04 至 2014-10 |
-| 反批评层 | LibreSSL 阵营 | “Not the worst bug ever”、FIONBIO/socklen_t、SRP timeline、“revolution to evolution” | 2014-09（EuroBSDCon） |
-| 再回应层 | OpenSSL 阵营 | 路线图坚持改革、CII 资金流向、PRNG 质疑、BoringSSL fork | 2014-07 至 2014-11 |
-| 合图层 | 各主体呈现与和解 | LibreSSL 在 OpenBSD 内成功，OpenSSL 经 CII 改善，二者部分理念互渗 | 2014-2024 |
 - OpenNTPD 项目目标页面 [EB/OL]. <http://www.openntpd.org/goals.html>；OpenNTPD 特性页面 [EB/OL]. <http://www.openntpd.org/features.html>；OpenNTPD 手册页 **ntpd.conf(5)** [EB/OL]. <https://man.openbsd.org/ntpd.conf.5>；Henning Brauer SUCON 04 演讲 [EB/OL]. <https://www.openbsd.org/papers/ntpd_sucon04/>；Henning Brauer OpenCon 2004 演讲 [EB/OL]. <https://quigon.bsws.de/papers/opencon04/ntpd/>；Henning Brauer 21C3 演讲 [EB/OL]. <https://quigon.bsws.de/papers/21c3/>；Network Time Foundation NTP 项目 [EB/OL]. <https://www.ntp.org/>；RFC 8915 Network Time Security [EB/OL]. <https://datatracker.ietf.org/doc/html/rfc8915>；Chrony 项目 [EB/OL]. <https://chrony.tuxfamily.org/>；OpenBSD 3.6 Release Notes [EB/OL]. <https://www.openbsd.org/36.html>；openbsd.duckdb openbsd-src commit a66b0f8292c9 [G/OL]. <https://github.com/openbsd/src/commit/a66b0f8292c9> ［A］**OpenNTPD 四层辩证链结构**：
-
-| 层次 | 阵营 | 关键论据 | 时间 |
-| --- | --- | --- | --- |
-| 批评层 | OpenSSL 阵营 | Marquess 反思、路线图、CII 资助、PRNG 漏洞 | 2014-04 至 2014-10 |
-| 反批评层 | LibreSSL 阵营 | “Not the worst bug ever”、FIONBIO/socklen_t、SRP timeline、“revolution to evolution” | 2014-09（EuroBSDCon） |
-| 再回应层 | OpenSSL 阵营 | 路线图坚持改革、CII 资金流向、PRNG 质疑、BoringSSL fork | 2014-07 至 2014-11 |
-| 合图层 | 各主体呈现与和解 | LibreSSL 在 OpenBSD 内成功，OpenSSL 经 CII 改善，二者部分理念互渗 | 2014-2024 |
-- 项目史观总纲 [EB/OL]. c:\Users\ykla\Documents\hibsd\原材料\哲学\项目统摄史观\第 25 章.md；OpenNTPD 项目主页 [EB/OL]. <https://www.openntpd.org/>；LibreSSL 项目主页 [EB/OL]. <https://www.libressl.org/>；OpenSMTPD 项目目标页面 [EB/OL]. <https://www.opensmtpd.org/goals.html>；NTP 版权声明 [EB/OL]. <https://www.ntp.org/documentation/4.2.8-series/copyright/>；OpenSSL Apache 2.0 许可证切换报道 [EB/OL]. <https://developer.aliyun.com/article/148956>（原始声明须查 OpenSSL 官方网站存档）；sendmail 项目 [EB/OL]. <https://www.proofpoint.com/products/open-source/sendmail>；Linux Foundation Core Infrastructure Initiative [EB/OL]. <https://www.coreinfrastructure.org/>；本卷 93.7-93.13 节引用的全部史料 ［A］**三大 fork 许可证与利益分配对比**：
+- 项目史观总纲 [EB/OL]. 02-sacred源材料/dagang.md（总纲章）；OpenNTPD 项目主页 [EB/OL]. <https://www.openntpd.org/>；LibreSSL 项目主页 [EB/OL]. <https://www.libressl.org/>；OpenSMTPD 项目目标页面 [EB/OL]. <https://www.opensmtpd.org/goals.html>；NTP 版权声明 [EB/OL]. <https://www.ntp.org/documentation/4.2.8-series/copyright/>；OpenSSL Apache 2.0 许可证切换报道 [EB/OL]. <https://developer.aliyun.com/article/148956>（原始声明须查 OpenSSL 官方网站存档）；sendmail 项目 [EB/OL]. <https://www.proofpoint.com/products/open-source/sendmail>；Linux Foundation Core Infrastructure Initiative [EB/OL]. <https://www.coreinfrastructure.org/>；本卷 93.7-93.13 节引用的全部史料 ［A］**三大 fork 许可证与利益分配对比**：
 
 | 项目 | fork 路线许可证 | 上游许可证 | 资金机制 | 市场结果 |
 | --- | --- | --- | --- | --- |
