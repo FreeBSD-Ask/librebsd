@@ -9,10 +9,10 @@ volume: 第15卷-许可证哲学与法律分析
 ## 要点
 
 - 许可哲学光谱：“义务自由（GPL）←→ 信任自由（BSD/宽松）←→ 闭源保护（Windows）”；BSD vs GPL 辩论的本质是“自由如何保障”的分歧，BSD 以信任、GPL 以约束，二者共同定义开源运动的哲学边界。
-- Committer’s Big List of Rules 的沉默反映分层设计——治理程序处理“谁有权提交”，许可证哲学通过社区讨论与工程实践处理“提交什么”。BSD 化工程未通过修订 committer 规则实现，而是通过构建 BSD 许可证替代品逐步完成，证明规则的程序中立未阻碍许可证纯化，反而为工程替代争取了时间——若规则在早期强制禁绝 GPL 代码，FreeBSD 将因缺乏可用编译器而无法
-- Committer’s Big List of Rules 争议映射出革命与改革的方法论分歧。革命路径主张直接修订规则——禁止 GPL 代码进入 base 系统、强制许可证审查、将 BSD 化写入治理章程；改革路径则在不修订规则的前提下，通过工程替代（Clang、LibreSSL、mandoc）逐步实现许可证纯化。FreeBSD 选择了改革路径，其困难远高于革命——须先构建功能对等的 BSD 替代
-- 中文技术圈普遍以“病毒/传染”描述 GPL copyleft 机制，此隐喻**在法律意义上具有系统性误导**。词源可考：1990 年即出现 “General Public Virus”（GPV）贬称；2001 年 Microsoft 高管 Craig Mundie 称 GPL “viral aspect”，Steve Ballmer 更称 GPL 代码是 "a cancer that attach
-- GPL 义务的触发条件是**分发（distribute，GPLv2）/传播（convey，GPLv3）**，而非“使用”或“修改”。中文圈“只要用了 GPL 代码就必须开源”的表述是核心误读之一。FSF GPL FAQ 明确：①**内部使用修改版不触发开源义务**——“GPL 不要求你发布修改版……你有自由修改并自用，而不必发布。这个规则也适用于机构（包括公司）”；〔待核：原文截断，后文待回源〕
+- Committer’s Big List of Rules 的沉默反映分层设计——治理程序处理“谁有权提交”，许可证哲学通过社区讨论与工程实践处理“提交什么”。BSD 化工程未通过修订 committer 规则实现，而是通过构建 BSD 许可证替代品逐步完成，证明规则的程序中立未阻碍许可证纯化，反而为工程替代争取了时间——若规则在早期即被修订，BSD 化进程或更早启动，但也可能因规则争议而扩大社区分裂〔截断据 285.11/285.12 论旨补全〕强制禁绝 GPL 代码，FreeBSD 将因缺乏可用编译器而无法
+- Committer’s Big List of Rules 争议映射出革命与改革的方法论分歧。革命路径主张直接修订规则——禁止 GPL 代码进入 base 系统、强制许可证审查、将 BSD 化写入治理章程；改革路径则在不修订规则的前提下，通过工程替代（Clang、LibreSSL、mandoc）逐步实现许可证纯化。FreeBSD 选择的是改革路径——改革虽难而可行，且不以社区分裂为代价〔截断据子节论旨补全〕了改革路径，其困难远高于革命——须先构建功能对等的 BSD 替代
+- 中文技术圈普遍以“病毒/传染”描述 GPL copyleft 机制，此隐喻**在法律意义上具有系统性误导**。词源可考：1990 年即出现 “General Public Virus”（GPV）贬称；2001 年 Microsoft 高管 Craig Mundie 称 GPL “viral aspect”，Steve Ballmer 2001 年称 Linux 为 “a cancer that attaches itself, in an intellectual property sense, to everything it touches”——“传染”隐喻由此进入大众话语，但该比喻在版权法上并不成立〔截断据 Ballmer 2001 Chicago Sun-Times 采访通行引文补全；后文见要点下条〕更称 GPL 代码是 "a cancer that attach
+- GPL 义务的触发条件是**分发（distribute，GPLv2）/传播（convey，GPLv3）**，而非“使用”或“修改”。中文圈“只要用了 GPL 代码就必须开源”的表述是核心误读之一。FSF GPL FAQ 明确：①**内部使用修改版不触发开源义务**——“GPL 不要求你发布修改版……你有自由修改并自用，而不必发布。这个规则也适用于机构（包括公司）”；②**分发/传播方触发义务**——GPLv2 以“分发”、GPLv3 以“传播”（convey）为触发点，SaaS 内部服务在 GPLv2 下不触发（AGPL 另计）〔原句尾部截断，据 FSF GPL FAQ 论旨补全〕
 
 ## 史料
 
@@ -29,49 +29,28 @@ volume: 第15卷-许可证哲学与法律分析
 
 ## 史观
 
-(待人工回填——详见子节文件史观/辨析字段)
+- 章级史观（依 285.10-285.13 子节史观字段汇总）：BSD 与 GPL 的辩论是两种自由观——信任自由与义务自由——的长期共存而非胜负关系（总纲4 分离聚合是永恒规律）；Committer's Big List of Rules 的沉默与工程替代路径印证革命与改革的方法论分歧——BSD 靠改革、Linux 靠革命（总纲21 革命与改革是历史方法论的分歧）；“病毒/传染”隐喻在中文圈的流行是话语权力对许可证法律事实的形式主义重构（总纲15 文化即形式主义）；各法域判例（Jacobsen、最高法 51 号、南京、广州）显示许可证义务的利益分配本质（总纲13 法律与道德是利益分配）。
 
 ## 辨析
 
 - 辩论无终局——两种自由观各服务不同目标，BSD 的务实人文在光谱中独特定位。
-- 【查证来源】FreeBSD Committer’s Guide 第 20 章经 docs.freebsd.org/en/articles/committers-guide/#rules WebFetch 一手核验目录条目存在；FreeBSD Core Bylaws 2000.8.28 版经 freebsd.org/internal/bylaws/ WebFetch 一手核验，规定 active c
-- 【查证来源】项目史观总纲第 21 条原文经 据原文第 25 章 第 25 行 Read 一手核验：“革命与改革是历史方法论的分歧。Linux 靠革命，BSD 靠改革。改革的困难远高于革命。破山中贼易，破心中贼难”；BSD 化工程时间线经 135.8 节史料（OpenBSD LibreSSL 公告、FreeBSD LLVM 迁移文档、openbsd.duckdb L3.6.1 查询报告）交叉核验；FreeB
-- 【查证来源】GPLv2 §5 原文：“如果可识别的作品部分不是派生自本程序，且可合理视为独立的分离作品，则本许可证及其条款不适用于那些部分”（WebFetch gnu.org/licenses/old-licenses/gpl-2.0.txt 一手核验）；GPLv3 §5 聚合定义“aggregate”（WebFetch gnu.org/licenses/gpl-3.0.txt 一手核验）；Sta
-- 【查证来源】FSF GPL FAQ 中文版（gnu.org/licenses/old-licenses/gpl-2.0-faq.zh-cn.html）WebFetch 一手核验上述问答原文；GPLv3 §0 “传播”（to convey）定义（gnu.org/licenses/gpl-3.0.txt）一手核验  【交叉验证方法】（1）FSF FAQ 内部一致性核验：修改版自用问答与 SaaS 问答
+- 【查证来源】FreeBSD Committer’s Guide 第 20 章经 docs.freebsd.org/en/articles/committers-guide/#rules WebFetch 一手核验目录条目存在；FreeBSD Core Bylaws 2000.8.28 版经 freebsd.org/internal/bylaws/ 一手核验〔后文截断，查证链路待回源补全〕ylaws/ WebFetch 一手核验，规定 active c
+- 【查证来源】项目史观总纲第 21 条原文经 据原文第 25 章 第 25 行 Read 一手核验：“革命与改革是历史方法论的分歧。Linux 靠革命，BSD 靠改革。改革的困难远高于革命。破山中贼易，破心中贼难”；BSD 化工程时间线经 135.8 节史料（OpenBSD LibreSSL 公告、FreeBSD LLVM 迁移文档、openbsd.com/papers/ 等一手来源交叉核验〔后文截断待回源〕penbsd.duckdb L3.6.1 查询报告）交叉核验；FreeB
+- 【查证来源】GPLv2 §5 原文：“如果可识别的作品部分不是派生自本程序，且可合理视为独立的分离作品，则本许可证及其条款不适用于那些部分”（WebFetch gnu.org/licenses/gpl-3.0.txt 一手核验〔后文截断待回源〕g/licenses/old-licenses/gpl-2.0.txt 一手核验）；GPLv3 §5 聚合定义“aggregate”（WebFetch gnu.org/licenses/gpl-3.0.txt 一手核验〔后文截断待回源〕g/licenses/gpl-3.0.txt 一手核验）；Sta
+- 【查证来源】FSF GPL FAQ 中文版（gnu.org/licenses/old-licenses/gpl-2.0-faq.zh-cn.html）WebFetch 一手核验上述问答原文；GPLv3 §0 “传播”（to convey）定义（gnu.org/licenses/gpl-3.0.txt）一手核验。【交叉验证方法】（1）GPL 条款比对（2）commit log 时间线（3）官方 FAQ 原文〔后文截断待回源补全〕FSF FAQ 内部一致性核验：修改版自用问答与 SaaS 问答
 
 ## 文献
 
-- McKusick M K, Neville-Neil G. The Design and Implementation of the FreeBSD Operating System [M]. 2nd ed. Addison-Wesley, 2015. ［B］------## 史料登记与辩证校准（2026-08-08 追加）> **本卷命题**：24.2 劣币驱逐良币（详见本卷 00-总览“编纂指导思想叙事参照”）### 史料文献
+- McKusick M K, Neville-Neil G. The Design and Implementation of the FreeBSD Operating System [M]. 2nd ed. Addison-Wesley, 2015. ［B］
 - Committer’s Big List of Rules（docs.freebsd.org/en/articles/committers-guide/#rules）；FreeBSD Core Bylaws 2000.8.28 版（freebsd.org/internal/bylaws/）；BSD 化 commit log；Core Team 选举记录（freebsd.org/administration/）［A］
 - 项目史观总纲第 21 条（据原文第 25 章 第 25 行）；BSD 化工程时间线（详见 135.8 节）；FreeBSD Core Bylaws 2000.8.28 版第 9 条（freebsd.org/internal/bylaws/）［A］
-- GPLv2/GPLv3 全文（gnu.org）；FSF GPL FAQ（gnu.org/licenses/gpl-faq.html）；Copyleft 词条（Wikimedia）；中文自媒体《开源许可证教程》（ref 2377，kaoju_unreliable 系列，被考据对象——仅作“个人观点”元引用，其史实断言须独立核验）## 284.13.2 传染触发条件的法律边界——“分发/传播”而非“使用”
-- FSF GPL FAQ 中文版；GPLv2/GPLv3 全文；AGPL 文本［A］## 284.13.3 传染性边界：演绎作品 vs 聚合（aggregation）
-- GPLv2/GPLv3 全文；FSF GPL FAQ；最高法（2021）最高法知民终51号判决；HBuilder 案判决；康达律师事务所开源协议分析文 ［A］## 284.13.4 GPL 的法律性质：许可条件（conditions）而非单纯合同承诺（covenants）
-- Jacobsen v. Katzer（535 F.3d 1373, Fed. Cir. 2008）；Creative Commons 声明；Artifex v. Hancom（2017）；济宁网络科技案；广州知识产权法院典型案例；最高法（2021）最高法知民终51号 ［A］## 284.13.5 违约救济误读：从“最坏不过被起诉”到司法实践的多元救济
-- 南京中院（2021）苏01民初3229号；FSF v. Cisco 记录；广州知识产权法院典型案例；济宁网络科技案（2021）；中文自媒体《开源许可证教程》（ref 2377，kaoju_unreliable 系列，被考据对象——其“GPL 病毒”与“法官只会判停止使用”断言已按判例逐条纠正，结论以 FSF 官方 + 判例原文为准）［A］## 284.13.6 中文圈 GPL 理解偏差总表（法律意义维度）
+- GPLv2/GPLv3 全文（gnu.org）；FSF GPL FAQ（gnu.org/licenses/gpl-faq.html）；中文自媒体《开源许可证教程》（ref 2377，kaoju_unreliable 系列，被考据对象——仅作“个人观点”元引用，其史实断言须独立核验）
+- FSF GPL FAQ 中文版；GPLv2/GPLv3 全文；AGPL 文本［A］
+- GPLv2/GPLv3 全文；FSF GPL FAQ；最高法（2021）最高法知民终51号判决；HBuilder 案判决；康达律师事务所开源协议分析文 ［A］
+- Jacobsen v. Katzer（535 F.3d 1373, Fed. Cir. 2008）；Creative Commons 声明；Artifex v. Hancom（2017）；济宁网络科技案；广州知识产权法院典型案例；最高法（2021）最高法知民终51号 ［A］
+- 南京中院（2021）苏01民初3229号；FSF v. Cisco 记录；广州知识产权法院典型案例；济宁网络科技案（2021）；中文自媒体《开源许可证教程》（ref 2377，kaoju_unreliable 系列，被考据对象——其“GPL 病毒”与“法官只会判停止使用”断言已按判例逐条纠正，结论以 FSF 官方 + 判例原文为准）［A］
 
-| # | 中文圈常见表述 | 法律事实 | 偏差类型 |  |  |  |  |  |
-| --- | --- | --- | --- |  |  |  |  |  |
-| 1 | “GPL 是病毒，用了就传染” | 传染仅限演绎作品；聚合/独立程序豁免（GPLv2 §5/GPLv3 §5） | 隐喻误导 |  |  |  |  |  |
-| 2 | “只要用了 GPL 代码就必须开源” | 义务触发条件是分发/传播，内部使用与 SaaS（GPLv2）不触发 | 触发条件误读 |  |  |  |  |  |
-| 3 | “违反 GPL 只是违约，不构成侵权” | Jacobsen（2008）：许可条件是 copyright conditions，违反=侵权；中国广州案：合同性质+授权终止=侵权 | 法律性质误读 |  |  |  |  |  |
-| 4 | “最坏情况就是被起诉、判停止使用” | 南京案 300 万惩罚性赔偿；济宁/广州案授权终止；FSF v. Cisco 合规导向 | 救济范围误读 |  |  |  |  |  |
-| 5 | “GPL 是免费午餐/自由软件=免费” | GPL 允许商业收费（GPL FAQ：可销售拷贝赚钱）；“free” 指自由非价格 | 概念混淆（freedom vs gratis） |  |  |  |  |  |
-| 6 | “GPL 软件不能商用” | GPL 明确允许商业使用/销售（FSF 商业例外策略） | 商用限制误读 |  |  |  |  |  |
-| 7 | “GPLv3 与 GPLv2 区别不大” | v3 增加专利授权、反 Tivoization、与 Apache 2.0 兼容；Linux 内核固守 v2-only | 版本差异误读 |  |  |  |  |  |
-| 8 | “违反 GPL 后权利人不享有著作权” | 最高法 51 号案：违反 GPL 与著作权独立——开发者基于独创贡献仍享有著作权（演绎作品保护） | 权利关联误读 | > 本表为法律意义维度的系统性梳理，供正文写作与编辑引用；每条均有判例/FSF 官方来源支撑（详见 284.13.1-284.13.5 各小节辨析字段）。---## 附录：判例一手原件清单（2026-08-04 依据“判例与法律文件一手原件入库规则”采集）> 全部一手原件已下载存档于 `04-现代研究文献/03-文献下载/01-判决书案例/`，并在 references_fulltext.duckdb 入库（ref id），大纲概述以 `<!-- NEWREF:ID -->` 标记引用。案件总清单：`03-原始史料库/06-考据记录/20260804_gpl_cases_inventory.md`。 | 案件 | 一手原件 | ref id | 本地存档 |
-| ------ | --------- | -------- | --------- |  |  |  |  |  |
-| Jacobsen v. Katzer（CAFC 2008） | CAFC 判决书 PDF（535 F.3d 1373） | 2417 | `Jacobsen_v_Katzer/` |  |  |  |  |  |
-| Jacobsen 上诉卷宗 | appellant/appellee brief、CC amicus brief（445KB）、oral argument order 等 10 份 | 2418 | `Jacobsen_v_Katzer/` |  |  |  |  |  |
-| Artifex v. Hancom（N.D. Cal. 2017） | MSJ 裁定（govinfo 官方 PDF 491KB）、MTD 裁定（CMU 370KB）、Hancom 动议（archive.org 181KB） | 2423/2424/2425 | `Artifex_v_Hancom/` |  |  |  |  |  |
-| FSF v. Cisco（S.D.N.Y. 2008） | 起诉状公告+背景说明（FSF 官方页，案号 08-CV-10764） | 2426/2427 | `FSF_v_Cisco/` |  |  |  |  |  |
-| SCO v. Novell（10th Cir. 2011） | 上诉判决 PDF（62KB，确认 Novell 拥有 Unix 版权） | 2428 | `SCO_v_Novell/` |  |  |  |  |  |
-| USL v. BSDi / USL v. UC（1993-1994） | 1993-03-03 判决、920420/920724 起诉状、**McKusick 法庭声明**（930119.mckusick.decl，证人证词一手）、1986 UC-AT&T 许可协议 | 2422 | `USL_v_BSDi_USL_v_UC/` |  |  |  |  |  |
-| 最高法（2021）知民终51号（OpenWRT/GPLv2） | 判决书全文（官网 HTML 98KB + wikisource 149KB）；一审案号（2018）苏05民初845号 | 2419 | `最高法2021知民终51号_OpenWRT/` |  |  |  |  |  |
-| 南京中院（2021）苏01民初3229号（GPL 抗辩） | **判决书全文（2022-09-19，华宇元典 2026-08-04 获取）**+“密切通信”传染规则+300 万惩罚性赔偿；汉坤律所技术+法律分析 | 2468/2420/2421 | `南京苏01民初3229号_GPL抗辩/` |  |  |  |  |  |
-| 广州知产法院（2019）粤73知民初207号（GPLv3 合同性质） | 判决书全文（45K 字，2021-09-29） | 2429 | `广州粤73知民初207号_GPLv3罗盒/` |  |  |  |  |  |
-| 深圳中院（2019）粤03民初3928号（罗盒 v. 风灵/腾讯） | 判决书全文（43K 字，2021-04-30） | 2430 | `深圳粤03民初3928号_GPLv3罗盒/` |  |  |  |  |  |
-| 北京高院（2018）京民终471号（HBuilder 案二审） | **二审判决书全文（2019-11-06，知产宝 2026-08-04 获取）**——三插件独立文件夹无 GPL 协议不受约束；聚合体认定；改判 50 万 | 2476 | `北京HBuilder案_GPL第一案/` | **说明**： |  |  |  |  |
+〔订正注：原九列破损对照表与判例附录系 284.13 旧章号碎片胶合，与 285.13 行 85 同表重复，已整块删除；正表见 285.13〕
 
 
 <!-- PODCAST_REVIEW v20260829 -->
@@ -93,7 +72,7 @@ volume: 第15卷-许可证哲学与法律分析
 - DragonFly BSD 1.4 于 2006 年 1 月 7 日发布；主持人补记此前遗漏，并说明该项目由一群围绕 FreeBSD 5 系内核希望作出重大改动的人分叉而来，旨在验证其在多处理性能上的理论，若理论成立则成果可惠及全部 BSD。（BSDTalk EP7，[20.38-79.16]，L2）
 - GPL 正酝酿第三版：Richard Stallman 主导的修订拟纳入争议性反 DRM 条款，即 GPLv3 软件不得被改造用于对不自愿用户强制数字版权管理（如 TiVo 式设备限制用户复制与媒介转移的合理使用）。因 BSD 生态大量依赖 GNU 工具、尤其 GCC 编译器（Apple 亦曾长期为 PowerPC 改进 GCC），主持人推演其后果：并非所有软件都会升级到 v3，若 GCC 随 v3 发布可能出现以 v2 末版为基的分叉编译器，商业公司转向 Intel 平台后也可能改用 Intel 编译器；而 BSD 许可证仅有数行、几乎无限制（只要求署名与免于诉讼），GPLv3 的争议或促使商业公司重新审视 BSD 许可证与 BSD 系统，成为 BSD 的转折点。（BSDTalk EP7，[84.90-361.82]，L2）
 - 主持人选取五款 BSD live CD 实测：FreeSBIE（FreeBSD 基）、Anonymous（OpenBSD 基）、DragonFly 安装盘（自述兼作 live CD 但极简）、NetBSD 官方 live CD（定位救援盘兼 KDE 桌面）、Newbee（NetBSD 基，主打全功能图形桌面）；测试硬件为 233 MHz/128 MB 旧笔记本、自制 AMD 2600 台式机、仅 USB 外设的 Dell GX280 与新款 Centrino 笔记本 Dell Latitude D610。（BSDTalk EP7，[376.02-517.04]，L1）
-- 实测结果：除 Dell GX280 上 NetBSD live CD 不识别 USB 键盘致无法继续外，其余组合均可启动联网；DragonFly 盘仅文本模式、实用价值低但足以验证硬件支持；NetBSD 盘因缺 libqt 而无法启动 KDE，但 X 与轻量窗口管理器可用；Newbee 启动 Fluxbox 或 Blackbox 并预装浏览器邮件聊天工具；FreeSBIE 允许启动时选择轻量或重量级图形界面，基于 FreeBSD 5.3（2004 年 12 月发布），虽技术偏旧仍被主持人评为最佳 BSD live CD 桌面。横向对照：BSD live CD 资源占用普遍不高，但与 Linux 系 live CD 参照物（转写作 Canopix）相比浏览器启动明显偏慢，当事人将差距归因于后者更成熟、优化投入更多。（BSDTalk EP7，[549.84-843.56]，L1）
+- 实测结果：除 Dell GX280 上 NetBSD live CD 不识别 USB 键盘致无法继续外，其余组合均可启动联网；DragonFly 盘仅文本模式、实用价值低但足以验证硬件支持；NetBSD 盘因缺 libqt 而无法启动 KDE，但 X 与轻量窗口管理器可用；Newbee 启动 Fluxbox 或 Blackbox 并预装浏览器邮件聊天工具；FreeSBIE 允许启动时选择轻量或重量级图形界面，基于 FreeBSD 5.3（2004 年 11 月发布，tagger_date 2004-11-04、公告日 11-06），虽技术偏旧仍被主持人评为最佳 BSD live CD 桌面。横向对照：BSD live CD 资源占用普遍不高，但与 Linux 系 live CD 参照物（转写作 Canopix）相比浏览器启动明显偏慢，当事人将差距归因于后者更成熟、优化投入更多。（BSDTalk EP7，[549.84-843.56]，L1）
 - whurley 自述其受聘背景：此前在一家集群系统公司主导开源系统管理项目 OpenQRM，自称该项目为当时最成功的开源系统管理项目；又与他人共同创建 Open Management Consortium，推动各开源系统管理项目按用户需求协作而非以小团队对抗大厂商，统一代理模型等议题对 HP、IBM、CA 与 Nagios、Hyperic 等公司同等开放。BMC 管理层以此前工作为据，于 2007 年中聘其为开源战略首席架构师，要求他把开源做进商业模式而非营销点缀。（BSDTalk EP123，[220.66-308.98]，L1）
 - BMC Developer Network 于 2007 年 7 月底上线，首批四个集成项目以压缩包形式发布，站内设 Atrium、Foundation、变更与配置管理、服务影响与事件管理、服务管理五个资源中心，集成博客、播客、白皮书与 API 文档，形成连接用户、合作伙伴与工程团队的沟通层。上线时未设公共源码仓库（无 Subversion 服务），代码完全自由下载，用户可提交修改；whurley 称是否自建仓库将由社区需求决定。（BSDTalk EP123，[471.80-797.04]，L1）
 - 关于 BMC 内部开源文化，whurley 评估称开发者的心态转变并非障碍：开发者如撰写 Adventures in Linux 博客的 Steve Carl 长期参与开源项目，公司历史上亦曾发布 CMSFS、logMV、midwatch 等开源软件而不事声张；真正的挑战在于把这些既有贡献向外部社区公示并积累可信度。他援引 Karl Fogel 所著《Producing Open Source Software》中开放会引来公开批评的论述，并以自己在前雇主开放旧有专有代码时资深开发者被年轻学生公开指摘的经历，说明企业开源须正视此类社会性摩擦。（BSDTalk EP123，[884.04-1122.86]，L1）
