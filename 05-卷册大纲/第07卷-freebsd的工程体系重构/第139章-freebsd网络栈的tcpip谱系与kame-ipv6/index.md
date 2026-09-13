@@ -4,18 +4,17 @@ id: CH139
 volume: 第07卷-freebsd的工程体系重构
 ---
 
-# 第 139 章 freebsd网络栈的tcpip谱系与kame-ipv6
+# 第 139 章 FreeBSD 网络栈的 TCP/IP 谱系与 KAME IPv6
 
 ## 要点
 
-- BSD TCP/IP 实现的一手史料包括 CSRG 发布的 4.2BSD（1983）、4.3BSD（1986）、4.4BSD-Lite（1994）磁带和源码光盘（部分可在 TUHS 档案馆获取）；FreeBSD 源码仓库（cgit.freebsd.org）完整记录了从 1994 年至今的每一次网络栈代码变更，是研究网络栈演进的一手史料；二手史料中 McKusick 等人的两版 *The Desig
-- netgraph 早期设计史料包括 Julian Elischer 和 Archie Cobbs 在 freebsd-current 和 freebsd-net 邮件列表上的设计讨论（1997-1999 年）、初始 commit 日志、两人在 BSDCon 1999/2000 的演讲；netgraph 最初设计目的之一是替代当时繁琐的 PPP 和拨号网络配置，为 Whistle InterJet
-- if_bridge 从 NetBSD 移植的精确时间——FreeBSD 5.2（2004 年 1 月）是首个包含 if_bridge 的版本，但代码导入时间约为 2003 年下半年；if_lagg 初始开发者——Mykola Dzham 完成了初始实现，Andrew Thompson 做了大量代码审查和 LACP 完善；早期 FreeBSD 网桥历史的一手资料较为分散——FreeBSD 2.x-4
-- VNET 开发的一手史料包括 TrustedBSD 项目的技术报告（2006-2009）、罗伯特·N. M. 沃森 和 Bjoern Zeeb 在 freebsd-jail 和 freebsd-net 邮件列表的设计讨论、FreeBSD 源码仓库 sys/net/vnet.c 的提交历史；VNET 从实验性到稳定经历了约 7 年（2009-2016），核心挑战包括：① 将内核中数百个全局网络变量标
+- BSD TCP/IP 实现的一手史料包括 CSRG 发布的 4.2BSD（1983）、4.3BSD（1986）、4.4BSD-Lite（1994）磁带和源码光盘（部分可在 TUHS 档案馆获取）；FreeBSD 源码仓库（cgit.freebsd.org）完整记录了从 1994 年至今的每一次网络栈代码变更，是研究网络栈演进的一手史料；二手史料中 McKusick 等人的两版 *The Design and Implementation* 系权威参考，但需注意第一版（1996）描述 4.4BSD，第二版（2014）描述 FreeBSD 8/9 时代架构。
+- netgraph 早期设计史料包括 Julian Elischer 和 Archie Cobbs 在 freebsd-current 和 freebsd-net 邮件列表上的设计讨论（1997-1999 年）、初始 commit 日志、两人在 BSDCon 1999/2000 的演讲；netgraph 最初设计目的之一是替代当时繁琐的 PPP 和拨号网络配置，为 Whistle InterJet 路由器产品提供灵活的协议扩展框架，而非通用可编程数据面——ISP 和防火墙用户后来发现了 netgraph 更多用途。
+- if_bridge 从 NetBSD 移植的精确时间——FreeBSD 5.2（2004 年 1 月）是首个包含 if_bridge 的版本，但代码导入时间约为 2003 年下半年；if_lagg 初始开发者——Mykola Dzham 完成了初始实现，Andrew Thompson 做了大量代码审查和 LACP 完善；早期 FreeBSD 网桥历史的一手资料较为分散——FreeBSD 2.x-4.x 时代没有原生网桥，用户使用 Luigi Rizzo 的 dummynet 网桥或用户态解决方案。
+- VNET 开发的一手史料包括 TrustedBSD 项目的技术报告（2006-2009）、罗伯特·N. M. 沃森 和 Bjoern Zeeb 在 freebsd-jail 和 freebsd-net 邮件列表的设计讨论、FreeBSD 源码仓库 sys/net/vnet.c 的提交历史；VNET 从实验性到稳定经历了约 7 年（2009-2016），核心挑战包括：① 将内核中数百个全局网络变量标记为 VNET_PUBLIC 或 VNET_PRIVATE。
 
 ## 史料
 
-- [DB:references_fulltext:chapter_matches:chmatch_1138] 卷“第07卷-freebsd的工程体系重构”第 139 章，匹配置信度 0.5，原因：关键词匹配: atlas shrugged
 - [DB:bsdnow_podcast:outline_mappings:om_11515] BSD Now 第 528 期，匹配 CH139 章，关联度 2.0
 - [DB:bsdnow_podcast:outline_mappings:om_12363] BSD Now 第 435 期，匹配 CH139 章，关联度 2.0
 - [DB:bsdnow_podcast:outline_mappings:om_12614] BSD Now 第 404 期，匹配 CH139 章，关联度 2.0
@@ -30,14 +29,17 @@ volume: 第07卷-freebsd的工程体系重构
 
 ## 史观
 
-(待人工回填——详见子节文件史观/辨析字段)
+- 总纲 8“本体论上各方平等”——KAME 作为 IPv6 参考实现被各 BSD 各自演化吸收，多实现并行演化、提供选择并保障互操作性，在本体论层面平等看待各 BSD 分支的独立道路（详见概述与子节史观字段及本章采访史料）。
+- 总纲 10“动手者创造历史”——从 netgraph 的 Elischer 与 Cobbs 到 VNET 的 Watson 与 Zeeb，网络栈各子系统均由一线实现者以代码直接推进；一线实现者将一手工程经验整理为教材与文档，属技术共同体的知识再生产。
+- 总纲 13“法律与道德是利益分配”——IPv6 当事人口述中，版权与专利制度被指已从促进创造的初衷扭转为利益分配工具（itojun 以迪士尼版权延期为例的批评）。
+- 总纲 4“分离聚合是永恒规律”——网络栈谱系自身即分合循环的具现：if_bridge 系 FreeBSD 5.2 自 NetBSD 移植回流，KAME 代码汇入各 BSD 后各自演化、偶尔回流对齐。
 
 ## 辨析
 
-- 需纠正几个常见史实错误：① “FreeBSD 网络栈来自 386BSD”——386BSD 0.1（1992）确实包含网络栈，但 FreeBSD 在 1994 年 2.0 版本就完整迁移到了 4.4BSD-Lite 代码基，此后网络栈直接演进自 CSRG 代码而非 Jolitz 的 386BSD 代码；② “**sendfile(2)** 是 Linux 发明”——错误，**sendfile(2)*
-- netgraph 引入版本先前多处误写为 FreeBSD 3.0（1998-10），经 FreeBSD 3.4 Release Notes 一手核验，正确版本为 FreeBSD 3.4（1999-12）；先前误将 Archie Cobbs 记为唯一设计者，实际是 Julian Elischer 与 Archie Cobbs 两人共同设计，Elischer 是长期主要维护者；Cobbs 在 2000
+- 需纠正几个常见史实错误：① “FreeBSD 网络栈来自 386BSD”——386BSD 0.1（1992）确实包含网络栈，但 FreeBSD 在 1994 年 2.0 版本就完整迁移到了 4.4BSD-Lite 代码基，此后网络栈直接演进自 CSRG 代码而非 Jolitz 的 386BSD 代码；② “**sendfile(2)** 是 Linux 发明”——错误，**sendfile(2)** 由 David Greenman 于 FreeBSD 2.2（1997 年）首创，Linux 在 2.2 内核（1999 年）才引入类似系统调用。
+- netgraph 引入版本先前多处误写为 FreeBSD 3.0（1998-10），经 FreeBSD 3.4 Release Notes 一手核验，正确版本为 FreeBSD 3.4（1999-12）；先前误将 Archie Cobbs 记为唯一设计者，实际是 Julian Elischer 与 Archie Cobbs 两人共同设计，Elischer 是长期主要维护者；Cobbs 在 2000 年代初减少 netgraph 活跃维护后，netgraph 由 Julian Elischer、Ruslan Ermilov、Gleb Smirnoff 等人持续维护。
 - FreeBSD 网桥历史常被简化为“if_bridge 一直存在”——实际上在 5.2 之前 FreeBSD 缺少原生内核网桥，这是一个重要的史实修正；**brconfig(8)** 命令在 FreeBSD 8 之后被 ifconfig bridge 取代，成为历史遗留命令；部分文档提到的“if_trunk”是 OpenBSD 的链路聚合接口名，不是 FreeBSD 的
-- VIMAGE 选项改名——VNET 框架在内核配置中最初名为 options VIMAGE，后来虽框架改名 VNET 但内核选项名保留为 VIMAGE 以避免破坏现有配置，这是一个“历史遗留命名”的小案例；Bjoern Zeeb 在 VNET 开发中的角色常被低估——Watson 是项目领导者，但 Zeeb 完成了大量实际代码实现和 vnet 化改造工作；VNET 第一个正式生产就绪声明是在 Fr
+- VIMAGE 选项改名——VNET 框架在内核配置中最初名为 options VIMAGE，后来虽框架改名 VNET 但内核选项名保留为 VIMAGE 以避免破坏现有配置，这是一个“历史遗留命名”的小案例；Bjoern Zeeb 在 VNET 开发中的角色常被低估——Watson 是项目领导者，但 Zeeb 完成了大量实际代码实现和 vnet 化改造工作；VNET 第一个正式生产就绪声明是在 FreeBSD 11.0 Release Notes 中。
 
 ## 文献
 
