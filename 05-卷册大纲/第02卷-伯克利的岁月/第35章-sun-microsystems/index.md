@@ -42,16 +42,16 @@ volume: 第02卷-伯克利的岁月
 ## 辨析
 
 - “开放系统” 在 Sun 语境中指 “UNIX 标准 + 开放接口”，但 SunOS 本身是专有商业产品，需区分 Sun 的 “开放” 修辞与实际授权策略
-- SunOS 4.x 与 Solaris 1.x 的命名关系需核对——Solaris 1 = SunOS 4.x（BSD 基础），Solaris 2 = SunOS 5.x（SVR4 基础），须严格区分命名与基础；SunOS 4.x 在 1992-1994 年作为兼容版本保留，须区分 “主线转换”（SunOS 5.0 1991 移植 / 1992 发布）〔待核：原文截断，后文待回源〕
+- SunOS 4.x 与 Solaris 1.x 的命名关系需核对——Solaris 1 = SunOS 4.x（BSD 基础），Solaris 2 = SunOS 5.x（SVR4 基础），须严格区分命名与基础；SunOS 4.x 在 1992-1994 年作为兼容版本保留，须区分 “主线转换”（SunOS 5.0 1991 移植 / 1992 发布）与 “兼容版本保留”（SunOS 4.x 持续供给存量用户）两件事
 - 技术路线 “胜出” 的判断需区分短期（1985-1990 BSD）与长期（1995- Linux），避免线性进步史观
 - SunOS 4.x 与 Solaris 1.x 的命名关系常被混淆，需核对 Sun 命名规则（Solaris 1 = SunOS 4.x；Solaris 2 = SunOS 5.x）；SunOS 4.0 基于 SVR3 而非 SVR4，SVR4 融合在 SunOS 5.0 中完成
-- 需精确区分 “协议兼容” 与 “代码贡献”——Sun 开发了 NFS 协议并公开（RFC 1094, 1989），但 BSD 中的 NFS 代码由 Rick Macklem 独立实现，并非 Sun 贡献；需精确区分 “协议开源” 与 “实现开源”——Sun 通过 RFC 公开 NFS 协议规范，但 Sun 的 NFS 参考实现并未开源贡献给 CSRG；〔待核：原文截断，后文待回源〕
+- 需精确区分 “协议兼容” 与 “代码贡献”——Sun 开发了 NFS 协议并公开（RFC 1094, 1989），但 BSD 中的 NFS 代码由 Rick Macklem 独立实现，并非 Sun 贡献；需精确区分 “协议开源” 与 “实现开源”——Sun 通过 RFC 公开 NFS 协议规范，但 Sun 的 NFS 参考实现并未开源贡献给 CSRG。
 
 ## 文献
 
 - Sun Microsystems 年报（1984-1986）；Joy, B. (1985) “The Network Is the Computer” 演讲原稿；Salus, P. (1994) “A Quarter Century of UNIX” ［B］
-- techmonitor.ai 1988-01-18 “THE UNIX YEAR IN REVIEW – PART TWO”（techmonitor.ai/analysis/the_unix_year_in_review_part_two）；techmonitor.ai 1988-09-29 "AT&T AND SUN HOLD TECHNICAL SESSIONS ON FORTHCOMING UNIX SYSTEM V.4"（techmonitor.ai/technology/att_and_sun_hold_technical_sessions_on_forthcoming_unix_system_v4）；TUHS 邮件列表 2017-01-11 “the guy who brought up SVr4 on Sun machines”（www.tuhs.org/pipermail/tuhs/2017-January/009512.html）；SVR4 设计文档（1988）；SunOS 4.0/5.0 Release Notes；McKusick, K. (1999) “Twenty Years of Berkeley Unix”；Salus, P. (1994) “A Quarter Century of UNIX” ［A］；文献计量学分析.md Task 22（参考文献增长曲线与历史分期分布）；卷章数据映射.md 第二卷第 16 章映射条目；SQL 与 Python 查询清单.md Phase 6 文献计量学查询清单
-- Ceruzzi, P. (2003) “A History of Modern Computing”；Salus, P. (1994) “A Quarter Century of UNIX”；DiBona, C. (1999) “Open Sources”［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］FreeBSD 社区论文：[FP-2019-081] OpenZFS: Best Filesystem for every OS（Allan Jude（艾伦·裘德），2019）<https://papers.freebsd.org/2019/jude-openzfs-everyos/>FreeBSD 社区论文：[FP-2001-001] SMPng（Greg Lehey，2001）<https://papers.freebsd.org/2001/grog-smpng/>
+- techmonitor.ai 1988-01-18 “THE UNIX YEAR IN REVIEW – PART TWO”（techmonitor.ai/analysis/the_unix_year_in_review_part_two）；techmonitor.ai 1988-09-29 “AT&T AND SUN HOLD TECHNICAL SESSIONS ON FORTHCOMING UNIX SYSTEM V.4”（techmonitor.ai/technology/att_and_sun_hold_technical_sessions_on_forthcoming_unix_system_v4）；TUHS 邮件列表 2017-01-11 “the guy who brought up SVr4 on Sun machines”（www.tuhs.org/pipermail/tuhs/2017-January/009512.html）；SVR4 设计文档（1988）；SunOS 4.0/5.0 Release Notes；McKusick, K. (1999) “Twenty Years of Berkeley Unix”；Salus, P. (1994) “A Quarter Century of UNIX” ［A］；文献计量学分析.md Task 22（参考文献增长曲线与历史分期分布）；卷章数据映射.md 第二卷第 16 章映射条目；SQL 与 Python 查询清单.md Phase 6 文献计量学查询清单
+- Ceruzzi, P. (2003) “A History of Modern Computing”；Salus, P. (1994) “A Quarter Century of UNIX”；DiBona, C. (1999) “Open Sources”［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
 - SunOS 4.0 Release Notes（1988.12）；Sun-AT&T 合作多阶段时间线（1985.9 合作意向、1987.4 协议、1988.10 SVR4 宣布、1989 Q3 SVR4 4.0 发布）；Bach, M. (1986) “The Design of the UNIX Operating System”［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
 - McKusick, M. K. (1999) “Twenty Years of Berkeley Unix” O'Reilly Open Sources；Sandberg, R. et al. (1985) “Design and Implementation of the Sun Network Filesystem” Sun Microsystems；RFC 1094 (1989) “NFS: Network File System Protocol Specification”；Macklem, R. (1990) “The 4.3BSD-Reno NFS Implementation” ［A］
 - CSRG 档案（伯克利 Bancroft 图书馆）；McKusick, K. (1999) “Twenty Years of Berkeley Unix”；USENIX 会议论文集（1984-1985） ［B］
