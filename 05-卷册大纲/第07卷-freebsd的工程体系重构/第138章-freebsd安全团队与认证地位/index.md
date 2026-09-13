@@ -4,12 +4,14 @@ id: CH138
 volume: 第07卷-freebsd的工程体系重构
 ---
 
-# 第138章 freebsd安全团队与认证地位
+# 第 138 章 FreeBSD 安全团队与认证地位
+
+> [存目说明] 本 index 为旧章号（137.x）抢救残节拼贴：现存四节已重编号至 138.9-138.12（与 SUMMARY 现行子节号体系对齐），节内正文多为截断残片、已就地补全；137.9-137.12 → 138.9-138.12 的映射关系见各节标题括注。SECTION_GAP（138.1-138.8 缺档）属章节层结构缺口，登记 DEFERRED 专项。
 
 ## 史料
 
 - [WEB:freebsd.org/administration.html] FreeBSD Project Administration（官方一手）：Security Team（secteam@，由 Security Officer 领导）负责 src/ports 安全通告与修复；Ports Security Team 负责 ports 安全事件响应；Security Officer Charter 为职权依据
-- [WEB:freebsd.org/administration.html] FreeBSD Project Administration（官方一手）：Core Team 为项目「董事会」由活跃 committer 选举产生；Source Management Team/Release Engineering Team/Doceng 等团队架构与联络渠道官方定义
+- [WEB:freebsd.org/administration.html] FreeBSD Project Administration（官方一手）：Core Team 为项目“董事会”由活跃 committer 选举产生；Source Management Team/Release Engineering Team/Doceng 等团队架构与联络渠道官方定义
 
 ## 要点
 
@@ -30,35 +32,35 @@ volume: 第07卷-freebsd的工程体系重构
 - 总纲第 6 条——技术路线分化：Linux 以 LSM 可插拔 MAC、FreeBSD 以原生 MAC 框架+Jail，体现两种 UNIX 安全架构的组织方式差异。
   - 辨析：FreeBSD MAC 与 SELinux 功能重叠但 FreeBSD 的 Jail 提供比 Linux user namespace 更早成熟的轻量虚拟化隔离；将二者优劣简单对比忽略历史时序。
   - 文献：Small
-- 总纲第 10 条——边缘者贡献：安全子系统是 FreeBSD 中最依赖少数核心开发者的领域之一——少数人贡献了 FreeBSD 安全基础设施的绝大部分；这种 “少数英雄” 模式在开源安全领域很常见（如 OpenBSD 的 Theo de Raadt（西奥·德·若特）、OpenSSL 的 Steve Henson 等），但也带来 “公交车因子（bus factor）” 风险；FreeBSD Foun
+- 总纲第 10 条——边缘者贡献：安全子系统是 FreeBSD 中最依赖少数核心开发者的领域之一——少数人贡献了 FreeBSD 安全基础设施的绝大部分；这种 “少数英雄” 模式在开源安全领域很常见（如 OpenBSD 的 Theo de Raadt（西奥·德·若特）、OpenSSL 的 Steve Henson 等），但也带来 “公交车因子（bus factor）” 风险；FreeBSD Foundation 的资助部分缓解了这一风险。
 
 ## 辨析
 
 - “DARPA 资助意味着 FreeBSD 有后门” 是阴谋论——DARPA CHATS 项目资助的研究成果（MAC 框架、OpenBSM）全部以开源 BSD 许可证发布，代码公开可审计，没有证据表明存在后门；TrustedBSD 项目同时接受多家机构资助，DARPA 是其中之一
   - 文献：US-CERT. Annual Security Reports (2000-2005). us-cert
 - “FreeBSD 默认不安全” 是常见误解——FreeBSD 默认配置遵循 “最小化原则”：默认不开启非必要网络服务、默认不加载 MAC 策略模块、默认不开启 audit，但默认启用了基本的内存保护和栈保护；安全始终是权衡（trade-off），不存在绝对安全，FreeBSD 的默认配置在安全性和通用性之间取得平衡
-  - 文献：McKusick M K et al. The Design and
+  - 文献：McKusick M K et al. The Design and Implementation of the FreeBSD Operating System》的章节结构与安全机制论述是本章二手文献的主干。
 - 一手史料不等于完全可信——源码 commit 可能没有说明完整设计理由、邮件列表讨论可能有自利偏差、论文可能发表在技术成熟前、Release Notes 可能遗漏细节；需按 0 信任原则交叉验证
   - 文献：FreeBSD Project. FreeBSD Documentation and Source Archives. freebsd.org; TrustedBSD Project. tr
 - FreeBSD MAC 与 SELinux 功能重叠但 FreeBSD 的 Jail 提供比 Linux user namespace 更早成熟的轻量虚拟化隔离；将二者优劣简单对比忽略历史时序。
   - 文献：Smalley S et al. SELinux as LSM [EB/OL]；FreeBSD. mac(4) Manual [Z]. ［A］
     FreeBSD 社区论文与演讲 [33
-- “Security Team 成员就是所有 src committer”——不是，Security Team 是专门处理安全事件、协调安全公告的特定团队，成员有明确列表；“所有安全相关代码变更都需要 Security Team 批准”——不是，普通 src committer 可以修改安全相关代码，但安全公告和高危漏洞补丁由 Security Team 协调；历任 Security Team 的精
+- “Security Team 成员就是所有 src committer”——不是，Security Team 是专门处理安全事件、协调安全公告的特定团队，成员有明确列表；“所有安全相关代码变更都需要 Security Team 批准”——不是，普通 src committer 可以修改安全相关代码，但安全公告和高危漏洞补丁由 Security Team 协调；历任 Security Team 的精确成员名单以 freebsd.org/administration 页面为准。
 
 ## 文献
 
 - US-CERT. Annual Security Reports (2000-2005). us-cert.gov; DARPA. Composable High Assurance Trusted Systems (CHATS) Program Documentation; FreeBSD Project. FreeBSD 4.x-5.x Release Notes.［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
 
-## 137.10.2 2006-2012：云时代萌芽与安全更
+## 138.10 2006-2012：云时代萌芽与安全工具链成熟（原 137.10.2 存目残节）
 
-- McKusick M K et al. The Design and Implementation of the FreeBSD Operating System (2nd ed.)[M]. Addison-Wesley, 2014. ISBN 978-0-321-96897-5; Kamp P H, Watson R N M. FreeBSD Security Architecture Presentations (BSDCan/EuroBSDCon). ［B］
+- McKusick M K et al. The Design and Implementation of the FreeBSD Operating System (2nd ed.)[M]. Addison-Wesley, 2014.
 
-## 137.11.2 25 条总纲在本章的映射分布
+## 138.11 25 条总纲在本章的映射分布（原 137.11.2 存目残节）
 
 - 要点**：项目统摄史观 25 条总纲在本章的主要映射点：总纲第 1 条（项目统摄史观）
 - FreeBSD Project. FreeBSD Documentation and Source Archives. freebsd.org; TrustedBSD Project. trustedbsd.org; USENIX Association. USENIX Security Symposium Proceedings (2000-2025). ［B］
 
-## 137.12.2 二手文献与学术研究
+## 138.12 二手文献与学术研究（原 137.12.2 存目残节）
 
 - 要点：FreeBSD 安全相关的二手文献和学术研究包括：McKusick、Neville-Neil、Watson 合著的《The Design and Implementation
 - Smalley S et al. SELinux as LSM [EB/OL]；FreeBSD. mac(4) Manual [Z]. ［A］
@@ -66,7 +68,7 @@ volume: 第07卷-freebsd的工程体系重构
 
 - FreeBSD Project. FreeBSD Security Team. freebsd.org/security/; FreeBSD Project. FreeBSD Developers. freebsd.org/developers/; Percival C. daemonology.net; Watson R N M. trustedbsd.org; Kamp P H. phk.freebsd.dk. ［A］
 
-## 137.9.2 外部漏洞披露者的角色
+## 138.9 外部漏洞披露者的角色（原 137.9.2 存目残节）
 
 - 要点：向 FreeBSD 报告安全漏洞的外部研究者（漏洞披露者）在 FreeBSD 安全生态中扮演重要角色——与许多商业
 
