@@ -8,30 +8,33 @@ volume: 第10卷-openbsd的历史
 
 ## 要点
 
-- OpenSSH 仓库共 14372 次提交（1999-10-27 至 2026-08-20），173 位贡献者，是 OpenBSD 项目最具全球影响力的子项目
+- OpenSSH 诞生于 1999-12：OpenBSD 2.6（1999-12-01）内置 OpenSSH 1.2.2，portable 版本随后首次单独发布，现已覆盖全球绝大多数 UNIX/Linux 发行版
+- 四项纯洁化工作在 fork 数周内完成——de Raadt 移除非可移植代码、Provos 前往加拿大移除加密与 GPL 组件、Friedl 以 SSH 1.5 替换 SSH 1.3、Beck 改写 Makefile 规避 RSA 专利
+- SSH1 弃用贯穿全史：2015-03 编译期默认禁用，7.4（2016-12-19）移除服务端支持，7.6（2017-10-03）完全删除客户端代码；OpenSSH 仓库共 14372 次提交（1999-10-27 至 2026-08-20），173 位贡献者
 
 ## 史料
 
-- [DB:references_fulltext:chapter_matches:chmatch_3904] 卷“第10卷-openbsd的历史”第 206 章，匹配置信度 folder，原因：folder 第204章
-- [DB:references_fulltext:chapter_matches:chmatch_4017] 卷“第10卷-openbsd的历史”第 206 章，匹配置信度 1.0，原因：任务4 衍生组官方文档采集
+- OpenSSH 官方文档与发布说明（openssh.com 一手官方来源，衍生组官方文档采集所得）
 
-- [DB:code_repos:openssh.duckdb] OpenSSH 仓库共 14372 次提交（1999-10-27 至 2026-08-20），173 位贡献者，是 OpenBSD 项目最具全球影响力的子项目
+- OpenSSH 代码仓库统计（openssh.duckdb）：共 14372 次提交、173 位贡献者（1999-10-27 至 2026-08-20）
 
 ## 史观
 
-- 动手者创造历史：OpenSSH 的全球采纳是无数系统管理员默默部署的结果，非营销之功
+- 总纲第 10 条——动手者创造历史：OpenSSH 的全球采纳是无数系统管理员默默部署的结果，非营销之功
 
 ## 辨析
 
-- fork 日期在不同叙事中存在差异——部分来源称“1999 年 9 月（随 OpenBSD 2.6 于 1999-12-01 正式发布）”（以 OpenSSH-1.0 commit 日期 1999-10-01 为准），部分称“1999 年 9 月”（以初始导入 commit 84959968510b 日期 1999-09-26 为准）；经 openbsd.duckdb 核查，初始导入为 1999-09-2
-- 考据过程留痕——【查证来源】合图“成功”判定的各项事实经以下一手史料核验：SSH1 移除时间线，经 OpenSSH 7.4 Release Notes（<https://www.openssh.com/txt/release-7.4>，2026-07-23 WebFetch 一手核验）确认原文"This release removes server support for the SSH v.1
-- 纯洁化工作的具体范围经 OpenSSH 官方历史页面确认涵盖四项——de Raadt 的非可移植代码移除、Provos 的加密与 GPL 组件移除、Friedl 的 SSH 1.3→1.5 协议替换、Beck 的 RSA 专利规避 Makefile；纯洁化完成时间节点为 OpenSSH 1.2.2 随 OpenBSD 2.6 发布日 1999-12-01，因 1.2.2 是首个随 OpenBSD
-- FreeBSD 4.0（2000-03-14）包含 OpenSSH 但 sshd 未默认启用——vendor import 在 2000-02-24，MFC 至 4-STABLE 在 2000-03-13，但“sshd enabled by default”MFC 在 2000-09-07（commit 94e00feef2e1），故 FreeBSD 4.0 用户需手动启用 sshd，FreeBS
-- SSH1 移除时间线经 OpenSSH 官方 Release Notes 与 openbsd.duckdb 双重核实——7.4（2016-12-19）移除服务端 SSH1，7.6（2017-10-03）完全删除客户端 SSH1（含配置选项与文档），部分二手资料将“OpenSSH 8.2（2020-02-14）”误记为 SSH1 移除版本，但 8.2 Release Notes 实际记载的是 FIDO/U2
+- fork 日期在不同叙事中存在差异——部分来源称“1999 年 9 月（随 OpenBSD 2.6 于 1999-12-01 正式发布）”（以 OpenSSH-1.0 commit 日期 1999-10-01 为准），部分称“1999 年 9 月”（以初始导入 commit 84959968510b 日期 1999-09-26 为准）；经 openbsd.duckdb 核查，初始导入为 1999-09-26（口径注：1999-09-26 系 openbsd-src 树内初始导入日，而要点所载“1999-10-27 至 2026-08-20”统计窗出自独立的 OpenSSH portable 仓库，二者口径不同，非矛盾）
+- 考据过程留痕——【查证来源】合图“成功”判定的各项事实经以下一手史料核验：SSH1 移除时间线，经 OpenSSH 7.4 Release Notes（<https://www.openssh.com/txt/release-7.4>，2026-07-23 WebFetch 一手核验）确认原文“This release removes server support for the SSH v.1 protocol.”
+- 纯洁化工作的具体范围经 OpenSSH 官方历史页面确认涵盖四项——de Raadt 的非可移植代码移除、Provos 的加密与 GPL 组件移除、Friedl 的 SSH 1.3→1.5 协议替换、Beck 的 RSA 专利规避 Makefile；纯洁化完成时间节点为 OpenSSH 1.2.2 随 OpenBSD 2.6 发布日 1999-12-01，因 1.2.2 是首个随 OpenBSD 正式发布的 OpenSSH 版本。
+- FreeBSD 4.0（2000-03-14）包含 OpenSSH 但 sshd 未默认启用——vendor import 在 2000-02-24，MFC 至 4-STABLE 在 2000-03-13，但“sshd enabled by default”MFC 在 2000-09-07（commit 94e00feef2e1），故 FreeBSD 4.0 用户需手动启用 sshd，FreeBSD 4-STABLE 直至 2000-09-07 MFC 后才默认启用 sshd。
+- SSH1 移除时间线经 OpenSSH 官方 Release Notes 与 openbsd.duckdb 双重核实——7.4（2016-12-19）移除服务端 SSH1，7.6（2017-10-03）完全删除客户端 SSH1（含配置选项与文档），部分二手资料将“OpenSSH 8.2（2020-02-14）”误记为 SSH1 移除版本，但 8.2 Release Notes 实际记载的是 FIDO/U2F 支持。
 
 ## 文献
 
-- [DB:references_fulltext] 参考文献全文数据库（4077 篇全文，27138 条时间线事件）—— 对应 openssh.duckdb
+- OpenSSH 官方项目历史 [EB/OL]. <https://www.openssh.com/history.html>
+- OpenSSH 7.4 Release Notes [EB/OL]. <https://www.openssh.com/txt/release-7.4>
+- OpenSSH 7.6 Release Notes [EB/OL]. <https://www.openssh.com/txt/release-7.6>
 
 <!-- PODCAST_REVIEW v20260829 -->
 <!-- 语义复核范围：BSD Now EP194、BSD Now EP192、BSD Now EP191、BSD Now EP190（共 4 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
@@ -108,5 +111,5 @@ volume: 第10卷-openbsd的历史
 <!-- /PODCAST_REVIEW -->
 
 <!-- dangan-20260908 消解回写 -->
-- SSH. Communications Security 1999 商业许可证声明 [EB/OL]. <https://www.ssh.com/>[EB/OL]. 1999. ［待核·needs_fix］［DKC-0055→fulltext:5462］
+- SSH Communications Security 1999 商业许可证声明 [EB/OL]. 1999. <https://www.ssh.com/>
 <!-- /dangan-20260908 -->
