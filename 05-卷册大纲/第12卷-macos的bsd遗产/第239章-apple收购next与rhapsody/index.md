@@ -8,10 +8,10 @@ volume: 第12卷-macos的bsd遗产
 
 ## 要点
 
-- **Apple** 于 **1996 年 12 月** 宣布收购 **NeXT**，**1997 年 2 月** 完成收购，交易金额约 **4.29 亿美元**（含 150 万股 Apple 股票）。**Jobs** 回归 Apple 任顾问，后任临时 CEO（iCEO，**1997 年 9 月 16 日** 任命）。**NeXTSTEP** 的 BSD 层与 Mach 内核成为 Apple 下一
-- Rhapsody 采用 **Yellow Box** 与 **Blue Box** 双层架构——**Yellow Box** 是 Rhapsody 的面向对象应用框架（基于 NeXTSTEP 的 Foundation/AppKit，跨平台可移植至 Windows NT），提供 OpenStep API 兼容；〔待核：原文截断，后文待回源〕
-- Rhapsody 早期工程团队由原 NeXT 团队与 Apple 收购后并入的 BSD/Mach 工程师构成。核心工程师包括 Avie Tevanian（原 NeXT 工程副总裁，Mach 内核核心开发者，随收购并入 Apple 任软件工程高级副总裁，主持 Rhapsody/Mac OS X 开发）；Wilfredo Sanchez（Apple 工程师，前 Apple/NeXT 工程师，负责 Da
-- **1999 年** Mac OS X Server 1.0（3 月 16 日发布）对比 **FreeBSD 3.1**（1999 年 2 月 15 日发布）、**Linux 2.2**（1999 年 1 月 26 日发布）、**Windows NT 4.0 Server**（1996 年发布，1999 年仍为主流服务器 OS）、**Solaris 7**（1998 年 11 月发布，32 位与
+- **Apple** 于 **1996 年 12 月** 宣布收购 **NeXT**，**1997 年 2 月** 完成收购，交易金额约 **4.29 亿美元**（含 150 万股 Apple 股票）。**Jobs** 回归 Apple 任顾问，后任临时 CEO（iCEO，**1997 年 9 月 16 日** 任命）。**NeXTSTEP** 的 BSD 层与 Mach 内核成为 Apple 下一代操作系统（Rhapsody 至 Mac OS X）XNU 内核中 Mach 与 BSD 层的直接基础。
+- Rhapsody 采用 **Yellow Box** 与 **Blue Box** 双层架构——**Yellow Box** 是 Rhapsody 的面向对象应用框架（基于 NeXTSTEP 的 Foundation/AppKit，跨平台可移植至 Windows NT），提供 OpenStep API 兼容；**Blue Box** 是经典 Mac OS 兼容环境（以 MacOS.app 应用形式加载 Mac ROM 运行 Mac OS 8 应用，仅限 PowerPC），后演化为 Mac OS X 的 Classic 环境。
+- Rhapsody 早期工程团队由原 NeXT 团队与 Apple 收购后并入的 BSD/Mach 工程师构成。核心工程师包括 Avie Tevanian（原 NeXT 工程副总裁，Mach 内核核心开发者，随收购并入 Apple 任软件工程高级副总裁，主持 Rhapsody/Mac OS X 开发）；Wilfredo Sanchez（Apple 工程师，1997 年加入后参与 Rhapsody 与 Darwin 开发，负责 Darwin 项目开源工程与 BSD 用户空间同上游 NetBSD/FreeBSD 的同步）等。
+- **1999 年** Mac OS X Server 1.0（3 月 16 日发布）对比 **FreeBSD 3.1**（1999 年 2 月 15 日发布）、**Linux 2.2**（1999 年 1 月 26 日发布）、**Windows NT 4.0 Server**（1996 年发布，1999 年仍为主流服务器 OS）、**Solaris 7**（1998 年 11 月发布，32 位与 64 位双环境支持，系首个提供 64 位运行环境的 Solaris 版本）
 
 ## 史料
 
@@ -19,14 +19,17 @@ volume: 第12卷-macos的bsd遗产
 
 ## 史观
 
-(待人工回填——详见子节文件史观/辨析字段)
+<!-- 整改留痕 2026-09-13：按核查报告 P1 回填史观占位，映射 25 条总纲权威表。 -->
+- 总纲 3“不存在进步，只有权力再分配”——Apple 收购 NeXT 并非“技术优胜劣汰”的进步叙事，而是资本与人事权力对 BSD/Mach 技术谱系的再分配：NeXTSTEP 遗产的去向取决于董事会决策与工程评估，而非纯技术优劣。
+- 总纲 4“分离聚合是永恒规律”——NeXT 1985 年自 Apple 出走、1996-1997 年并入 Apple，是分久必合循环的具体一例；Rhapsody 的 Yellow Box/Blue Box 双层架构（新应用环境与经典 Mac OS 兼容环境并存）亦是分离与聚合的结构呈现。
+- 总纲 5“没有必然性，只有偶然性”——收购达成、Jobs 回归与 Rhapsody 路线均由偶然条件塑造：Copland 项目失败、BeOS 等备选落空，将 Apple 推向 NeXT；反事实下 Mac 平台的 BSD 谱系可能完全改写（本章 PODCAST_REVIEW EP591 的反事实讨论与此同构）。
 
 ## 辨析
 
-- 收购金额——以 Apple 1997 年 Form 10-K 与多源新闻报道交叉核验，约 4.29 亿美元（含 150 万股 Apple 股票），部分二手资料称 4.27 亿美元，差异源于汇率换算与股票估值时点，采信 “约 4.29 亿美元” 的判断。Jobs 回归与 NeXT 技术入选的因果关系——Jobs 回归是 Apple 董事会的人事决策，NeXT 技术入选是 Apple 工程团队的评估结
-- Yellow Box 与 Cocoa 的关系——Yellow Box 是 Rhapsody 期的命名，Cocoa 是 Mac OS X 期（2000 年后）的命名，二者为同一 OpenStep API 实现的不同命名阶段。Blue Box 与 Classic/Carbon 的关系——Blue Box 是 Rhapsody 期的命名，Classic 是 Mac OS X 期的运行环境命名，Carbo
-- Apple 与 FreeBSD 3.x 的代码关系——以 Darwin 源码仓库为准，Rhapsody 期（1997-1999）Darwin 的 BSD 层主要基于 NeXTSTEP 的 4.3BSD 派生代码，FreeBSD 3.x 的代码同步在 later Darwin 版本（Darwin 1.x，2001 年后）才显著。Jordan Hubbard 加入 Apple 的时间为 2001 年
-- Mac OS X Server 1.0 的服务器市场定位——Apple 首次进入 “类 Unix 服务器” 市场，但其 Mach/BSD 混合内核在服务器性能上较 FreeBSD/Linux 单内核存在上下文切换开销，且 Apple 的硬件生态（Power Macintosh G3/G4）与服务器市场的 x86/SPARC 主流不兼容。Mac OS X Server 1.0 的 BSD 身份——其
+- 收购金额——以 Apple 1997 年 Form 10-K 与多源新闻报道交叉核验，约 4.29 亿美元（含 150 万股 Apple 股票），部分二手资料称 4.27 亿美元，差异源于汇率换算与股票估值时点，采信 “约 4.29 亿美元” 的判断。Jobs 回归与 NeXT 技术入选的因果关系——Jobs 回归是 Apple 董事会的人事决策，NeXT 技术入选是 Apple 工程团队的评估结果，二者分属人事决策与技术选型两条线，不宜混为一谈。
+- Yellow Box 与 Cocoa 的关系——Yellow Box 是 Rhapsody 期的命名，Cocoa 是 Mac OS X 期（2000 年后）的命名，二者为同一 OpenStep API 实现的不同命名阶段。Blue Box 与 Classic/Carbon 的关系——Blue Box 是 Rhapsody 期的命名，Classic 是 Mac OS X 期的运行环境命名，Carbon 则是 Mac OS X 期将经典 Mac OS 应用 API 移植为原生 API 的过渡技术路线，与 Classic 兼容环境并行而非同一物。
+- Apple 与 FreeBSD 3.x 的代码关系——以 Darwin 源码仓库为准，Rhapsody 期（1997-1999）Darwin 的 BSD 层主要基于 NeXTSTEP 的 4.3BSD 派生代码，FreeBSD 3.x 的代码同步在 later Darwin 版本（Darwin 1.x，2001 年后）才显著。Jordan Hubbard 加入 Apple 的时间为 2001 年 7 月。
+- Mac OS X Server 1.0 的服务器市场定位——Apple 首次进入 “类 Unix 服务器” 市场，但其 Mach/BSD 混合内核在服务器性能上较 FreeBSD/Linux 单内核存在上下文切换开销，且 Apple 的硬件生态（Power Macintosh G3/G4）与服务器市场的 x86/SPARC 主流不兼容。Mac OS X Server 1.0 的 BSD 身份——其 BSD 用户空间源自 NeXTSTEP 的 4.3BSD 派生代码而非 FreeBSD 3.x 派生，与同期 FreeBSD 3.x 对比时须明确区分谱系归属。
 
 ## 文献
 
