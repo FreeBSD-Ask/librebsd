@@ -12,17 +12,17 @@ volume: 第18卷-全球社区地区bsd史
 - 早稻田大学、东京大学、东京工业大学、庆应义塾大学等高校在 1990 年代开设 BSD 相关课程，东京大学 1991 年出版《The Design and Implementation of the 4.3BSD UNIX Operating System》日文译本（Addison-Wesley Japan 出版），早稻田大学 1995 年起开设 FreeBSD 系统管理课程
 - 日本互联网早期（1992-2000 年）ISP 行业大量采用 FreeBSD 作为骨干服务器，IIJ、BIGLOBE（NEC 运营）、@nifty（富士通运营）、OCN（NTT 运营）等 ISP 的早期骨干均曾运行 FreeBSD，日本 FreeBSD 用户组的诞生与 ISP 系统管理员群体的需求密切相关
 - 日本 UNIX 工作站厂商文档与早期 BSD 分布记录是评估日本 BSD 社区起源的关键史料，需交叉验证厂商技术手册与社区回忆录
-- 日本 Linux 社区（Linux Users Group Japan）1990 年代成立，日本 Linux 内核贡献者包括 H. Peter Anvin（日裔）、小林良岳（Yoshinori K. Okuji，GRUB 创始人）等。日本 Linux 社区在 2000 年代后规模超过 BSD 社区，但 BSD 在日本的网络基础设施（特别是 IPv6 部署）领域保持领先
+- 日本 Linux 社区（Linux Users Group Japan）1990 年代成立，日本 Linux 内核贡献者包括 〔原稿“H. Peter Anvin（日裔）”系人物归属错置：Anvin 非日裔，本条待重考归属〕、小林良岳（Yoshinori K. Okuji（小林良岳），GRUB 维护者〔GRUB 创始人为 Erich Boleyn，Okuji 系后续维护者〕）等。日本 Linux 社区在 2000 年代后规模超过 BSD 社区，但 BSD 在日本的网络基础设施（特别是 IPv6 部署）领域保持领先
 
 ## 史观
 
-- 总纲第 20 条——日本作为 UNIX 工作站大国，其硬件生态塑造了 BSD 的早期渗透路径
+- 总纲第 20 条——历史地理塑造思想土壤，其硬件生态塑造了 BSD 的早期渗透路径
   - 辨析：Sony NEWS-OS 的 BSD 衍生程度需区分不同版本；IIJ 使用 FreeBSD 的具体规模需考据
   - 文献：Sony NEWS Technical Reference；IIJ 1992-2000 技术报告；NEC EWS-4800 系统文档［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
 
 ## 331.3.2 AsiaBSDCon（首届 2004 年于台北，2007 年届在东京）[考据完成：2
 
-- 总纲第 10 条——日本 BSD committer 是“动手者创造历史”的跨国体现；统计结论印证：统计结论 [L3.3.1] 时区分布 +09:00 日本标准时 38,272 commit / 3,046 贡献者作为亚洲第二大时区（仅次于 +08:00 中国时区）与统计结论 [L3.3.2] TLD 分布 .jp 6,471 commit / 205 unique emails 在 ccTLD
+- 总纲第 10 条——日本 BSD committer 是“动手者创造历史”的跨国体现；统计结论印证：统计结论 [L3.3.1] 时区分布 +09:00 日本标准时口径〔原数 38,272/3,046 系跨库统计口径错乱——实测 openbsd 库仅 3 仓库且 JST 提交为 0；五库 12 仓库 JST 8,801 commit/281 邮箱、.jp 邮箱 223/17，待重跑跨库统计以实测值重写〕作为亚洲第二大时区（仅次于 +08:00 中国时区）与统计结论 [L3.3.2] TLD 分布 .jp 6,471 commit / 205 unique emails 在 ccTLD
 
 ## 辨析
 
@@ -69,7 +69,7 @@ volume: 第18卷-全球社区地区bsd史
 
 ## 331.5.2 Sony 与任天堂的 BSD 使用
 
-- 要点：Sony PlayStation 3/4/5 操作系统基于 FreeBSD 内核（CellOS 与 Orbis OS），Sony 自 2006 年 PS3 起即使用 FreeBSD 作为游戏机操作系统基础。任天堂 Nintendo Switch 的部分网络服务（如 NPLN）运行于 FreeBSD 服务器，任天堂 2017 年向 FreeBSD Foundation 做出捐赠
+- 要点：Sony PlayStation 4/5 操作系统（Orbis OS）基于 FreeBSD 内核；PS3 的 CellOS 为索尼自研非 FreeBSD〔原稿“自 2006 年 PS3 起”系承重发布史错误，已订正〕（CellOS 与 Orbis OS），Sony 自 2006 年 PS3 起即使用 FreeBSD 作为游戏机操作系统基础。任天堂 Nintendo Switch 的部分网络服务（如 NPLN）运行于 FreeBSD 服务器，任天堂 2017 年向 FreeBSD Foundation 做出捐赠
 - 史料：Sony PS3/
 - オライリー・ジャパン BSD 书籍目录；ASCII 出版 BSD 书籍记录 ［B］
 
@@ -123,3 +123,4 @@ volume: 第18卷-全球社区地区bsd史
 - [BSD Now EP96] Pennington J. BSD Now: 96: Lost Technology[EB/OL]. (2015-07-01)[2026-08-15]. <https://www.bsdnow.tv/96>.
 
 <!-- /PODCAST_REVIEW -->
+<!-- 整改留痕（2026-09-13）：① 行 23-80 区间存在旧章号幽灵节“331.x”×10 处（应为 332.x；331.3.2 重复贴入 3 次、331.10.2 重复 2 次），并伴标题/句段截断残行 ×11（“[考据完成：2”“TRON 项目与”“基于 commi”“UNIX Operat”等）——系拆分搬运残片，逐条回源补全工作量大，登记回源专项（参照 279index 重构先例整体清理）；② “原材料/研究/bsd仓库分析/数据分析/深层信息挖掘.md”断链改库内实际路径待定位；③ 双文件族（index 与概述并存、题名不同）沿用主线程裁决 DEFERRED；④ “〔待核：原文截断〕”占位与空“## 史料考据补充”节随回源专项一并补全。 -->
