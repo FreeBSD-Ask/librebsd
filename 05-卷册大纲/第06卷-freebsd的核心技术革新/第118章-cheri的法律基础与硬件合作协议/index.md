@@ -51,7 +51,7 @@ volume: 第06卷-freebsd的核心技术革新
 
 <!-- DB_REF:freebsd.duckdb -->
 > **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 2010-2020 年间：488,947 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
-- Apple. App Sandbox Design Guide [Z]. 2011；TrustedBSD Project. MAC Framework [EB/OL]. ［B］    FreeBSD 社区论文与演讲 [258]，[258] Ryan Stone. Oblivious Sandboxing with Capsicum and EBPF [C]//BSDCan 2020. [S.l.]: [s.n.], 2020. 获取路径：<https://papers.freebsd.org/2020/bsdcan/stone-oblivious_sandboxing_capsicum_ebpf/> [访问日期 2026-07-26].    FreeBSD 社区论文与演讲 [250]，[250] Brooks Davis. CheriABI: Enforcing Valid Pointer Provenance and Minimizing Pointer Privilege in the POSIX C Run-time Environment [C]//独立发布 2019. [S.l.]: [s.n.], 2019. 获取路径：<https://papers.freebsd.org/2019/davis-asplos-cheriabi/> [访问日期 2026-07-26].    FreeBSD 社区论文与演讲 [79]，[79] Mariusz Zaborski. Capsicum and Casper - a fairy tale about solving security problems [C]//AsiaBSDCon 2016. [S.l.]: [s.n.], 2016. 获取路径：<https://papers.freebsd.org/2016/asiabsdcon/oshogbo-capsicum_and_casper/> [访问日期 2026-07-26].    FreeBSD 社区论文与演讲 [27]，[27] Robert N. M. Watson. The TrustedBSD MAC Framework: Extensible Kernel Access Control for FreeBSD 5.0 [C]//独立发布 2003. [S.l.]: [s.n.], 2003. 获取路径：<https://papers.freebsd.org/2003/rwatson-mac_framework/> [访问日期 2026-07-26].[^doubt-resolved-641]: 据 张鹏宇_基于微内核的操作系统安全机制研究 (03-15, 2024) 消解[^doubt-resolved-642]: 据 young-m-1958-the-rise-of-the-meritocracy-thames-hudson-isbn (Young, 1958) 消解[^doubt-resolved-643]: 据 unknown_Charter-of-the-City-of-Berkeley_v1 (未署名) 消解[^doubt-resolved-644]: 据 The-copyinout-Framework (未署名) 消解[^doubt-resolved-645]: 据 Mac OS X Internals A Systems Approach (Amit Singh（阿米特·辛格）)  (未署名) 消解[^doubt-resolved-646]: 据 Design_Implementation_FreeBSD_OS (未署名) 消解
+- Apple. App Sandbox Design Guide [Z]. 2011；TrustedBSD Project. MAC Framework [EB/OL]. ［B］    FreeBSD 社区论文与演讲 [258] Ryan Stone. Oblivious Sandboxing with Capsicum and EBPF [C]//BSDCan 2020. [S.l.]: [s.n.], 2020. 获取路径：<https://papers.freebsd.org/2020/bsdcan/stone-oblivious_sandboxing_capsicum_ebpf/> [访问日期 2026-07-26].    FreeBSD 社区论文与演讲 [250] Brooks Davis. CheriABI: Enforcing Valid Pointer Provenance and Minimizing Pointer Privilege in the POSIX C Run-time Environment [C]//ASPLOS 2019. [S.l.]: [s.n.], 2019. 获取路径：<https://papers.freebsd.org/2019/davis-asplos-cheriabi/> [访问日期 2026-07-26].    FreeBSD 社区论文与演讲 [79] Mariusz Zaborski. Capsicum and Casper - a fairy tale about solving security problems [C]//AsiaBSDCon 2016. [S.l.]: [s.n.], 2016. 获取路径：<https://papers.freebsd.org/2016/asiabsdcon/oshogbo-capsicum_and_casper/> [访问日期 2026-07-26].    FreeBSD 社区论文与演讲 [27] Robert N. M. Watson. The TrustedBSD MAC Framework: Extensible Kernel Access Control for FreeBSD 5.0 [C]//BSDCon 2003. [S.l.]: [s.n.], 2003. 获取路径：<https://papers.freebsd.org/2003/rwatson-mac_framework/> [访问日期 2026-07-26].[^doubt-resolved-641]: 据 张鹏宇_基于微内核的操作系统安全机制研究 (03-15, 2024) 消解[^doubt-resolved-642]: 据 young-m-1958-the-rise-of-the-meritocracy-thames-hudson-isbn (Young, 1958) 消解[^doubt-resolved-643]: 据 unknown_Charter-of-the-City-of-Berkeley_v1 (未署名) 消解[^doubt-resolved-644]: 据 The-copyinout-Framework (未署名) 消解[^doubt-resolved-645]: 据 Mac OS X Internals A Systems Approach (Amit Singh（阿米特·辛格）)  (未署名) 消解[^doubt-resolved-646]: 据 Design_Implementation_FreeBSD_OS (未署名) 消解
 
 <!-- DB_REF:freebsd.duckdb -->
 > **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 2010-2013 年间：148,830 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
@@ -85,9 +85,9 @@ volume: 第06卷-freebsd的核心技术革新
 **史观**：
 
 - 总纲12 科学是形式主义：CHERI 以形式化的能力边界约束内存访问，安全收益取决于软件对形式规则的适配，呈现安全机制作为形式主义系统的特征。（BSD Now EP529，[943.14-1150.42]，L2）
-- 总纲10 动手者创造历史：总纲10 动手者创造历史：Robert Watson 团队以编写并落地 Capsicum、BERI/CHERI 的方式实际推动操作系统安全演进。（BSD Now EP50，[1380.46-1462.14]，L1）
-- 总纲9 经验优先：总纲9 经验优先：访谈以当事人对代码、硬件与漏洞的一手经验为叙述依据，而非抽象安全口号。（BSD Now EP50，[1451.54-1571.28]，L1）
-- 总纲22 知识注定过时：总纲22 知识注定过时：OpenSSL 与 LibreSSL 的持续修补显示安全知识处于不断失效与重写的循环之中。（BSD Now EP50，[957.56-988.06]，L2）
+- 总纲10 动手者创造历史：Robert Watson 团队以编写并落地 Capsicum、BERI/CHERI 的方式实际推动操作系统安全演进。（BSD Now EP50，[1380.46-1462.14]，L1）
+- 总纲9 经验优先：访谈以当事人对代码、硬件与漏洞的一手经验为叙述依据，而非抽象安全口号。（BSD Now EP50，[1451.54-1571.28]，L1）
+- 总纲22 知识注定过时：OpenSSL 与 LibreSSL 的持续修补显示安全知识处于不断失效与重写的循环之中。（BSD Now EP50，[957.56-988.06]，L2）
 
 **辨析**：
 

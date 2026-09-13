@@ -9,28 +9,30 @@ volume: 第10卷-openbsd的历史
 ## 要点
 
 - OpenSSH 时间跨度（1999-10-27 至 2026-08-20），高峰期 2001年(1266次) 对应早期快速迭代
+- 微软因在 Windows 中集成 OpenSSH 而向 OpenBSD 基金会捐赠并成为金牌赞助商；Oracle Solaris 以原生 OpenSSH 取代 Sun SSH，并自 OpenBSD 借入 getentropy、将 arc4random 并入 libc
+- OpenSSH 8.1 修复 XMSS 私钥解析整数溢出，RSA 证书签名默认改用 SHA2-512
 
 ## 史料
 
-- [DB:references_fulltext:chapter_matches:chmatch_3905] 卷“第10卷-openbsd的历史”第 207 章，匹配置信度 folder，原因：folder 第205章
-
 - [DB:code_repos:openssh.duckdb] OpenSSH 时间跨度（1999-10-27 至 2026-08-20），高峰期 2001年(1266次) 对应早期快速迭代
+- OpenSSH Project. OpenSSH History — The Birth of OpenSSH [EB/OL]. (1999)[2026-07-24]. <https://www.openssh.com/history.html>（Provos 赴加拿大移除加密与 GPL 组件、libgmp 移除时序等一手自述）
 
 ## 史观
 
-- 形式主义：OpenSSH 的全球采纳率超过 90% 这一统计本身就带有形式主义化的简化
+- 总纲 12“科学是形式主义”：OpenSSH 全球采纳率“超过 90%”的说法缺口径与出处，仅是意见而非知识——把统计数字当作事物本身，正是形式主义化的简化。
+- 章级史观：OpenSSH 的全球采纳呈现价值创造与利益分配的错位（总纲 13“法律与道德是利益分配”）：其代码内置于 Windows、Solaris、Cisco、AIX、OS X 等平台，使用者以百万计，却无一分收入回流项目——采纳的广度与项目经济基础的悬空并存，构成“OpenSSH 悖论”（详见 PODCAST_REVIEW 史观条）。
 
 ## 辨析
 
-- 考据过程留痕——【查证来源】项目统摄史观审视的史料基础经以下核验：项目史观总纲第 15 条（“文化即形式主义”）、第 19 条（“解释学循环是历史认识的根本条件”）、第 21 条（“革命与改革是历史方法论的分歧”）原文经本书原材料核验（c:\Users\ykla\Documents\hibsd\原材料\哲学\项目统摄史观\第 25 章.md，2026-07-23 Read 工具一手核验，三条总纲均
-- 考据过程留痕——【查证来源】三类批评的具体诉求经以下一手史料核验：Provos 赴加拿大移除加密与 GPL 组件，经 OpenSSH 官方历史页面（<https://www.openssh.com/history.html>，2026-07-24 WebFetch 一手核验）确认原文"Niels Provos (GERMANY but living in USA) quickly removed
-- 考据过程留痕——【查证来源】OpenBSD 阵营反批评的三点论据经以下一手史料核验：第一点（Provos 移除 libgmp 是修复既有 GPL 违规），经 OpenSSH 官方历史页面（<https://www.openssh.com/history.html>，2026-07-24 WebFetch 一手核验）确认原文"Rapidly after Tatu's 1.2.12 release,
-- 考据过程留痕——【查证来源】再回应三点的评估经以下一手史料核验：第一点（libgmp 移除时机由发布截止日期驱动），经 OpenSSH 官方历史页面（<https://www.openssh.com/history.html>，2026-07-24 WebFetch 一手核验）确认原文"OpenBSD project members became aware of Björn's work les
-- 考据过程留痕——【查证来源】合图“成功”判定的各项事实经以下一手史料核验：Provos 移除 libgmp 的长期正确性，经 OpenSSH 官方历史页面（<https://www.openssh.com/history.html>，2026-07-24 WebFetch 一手核验）确认原文“that effectively made SSH a GPL violation”——移除 libgmp
+- 考据过程留痕——【查证来源】项目统摄史观审视的史料基础经以下核验：项目史观总纲第 15 条（“文化即形式主义”）、第 19 条（“解释学循环是历史认识的根本条件”）、第 21 条（“革命与改革是历史方法论的分歧”）原文经核验（原引 c:\Users\ykla\Documents\hibsd\原材料\哲学\项目统摄史观\第 25 章.md，2026-07-23 Read 工具一手核验；该库外路径已断链，2026-09-13 改引库内权威原文 **02-sacred源材料/dagang.md** 复核，三条总纲均与 25 条总纲原文一致）。
+- 考据过程留痕——【查证来源】三类批评的具体诉求经以下一手史料核验：Provos 赴加拿大移除加密与 GPL 组件，经 OpenSSH 官方历史页面（<https://www.openssh.com/history.html>，2026-07-24 WebFetch 一手核验）确认原文“Niels Provos (GERMANY but living in USA) quickly removed the remaining cryptographic and GPL'd components by doing road trips to Canada”——三类批评所涉的移除事实与地理约束均获原文支持。（2026-09-13 补全截断句留痕）
+- 考据过程留痕——【查证来源】OpenBSD 阵营反批评的三点论据经以下一手史料核验：第一点（Provos 移除 libgmp 是修复既有 GPL 违规），经 OpenSSH 官方历史页面（<https://www.openssh.com/history.html>，2026-07-24 WebFetch 一手核验）确认原文“Rapidly after Tatu's 1.2.12 release, newer versions bore successively more restrictive licenses.”——彼时 libgmp 仍随分发捆绑，反批评的版本前提成立。（2026-09-13 补全截断句留痕）
+- 考据过程留痕——【查证来源】再回应三点的评估经以下一手史料核验：第一点（libgmp 移除时机由发布截止日期驱动），经 OpenSSH 官方历史页面（<https://www.openssh.com/history.html>，2026-07-24 WebFetch 一手核验）确认原文“OpenBSD project members became aware of Björn's work less than two months before the OpenBSD 2.6 release.”——移除 libgmp 的时机约束由此获原文支持。（2026-09-13 补全截断句留痕）
+- 考据过程留痕——【查证来源】合图“成功”判定的各项事实经以下一手史料核验：Provos 移除 libgmp 的长期正确性，经 OpenSSH 官方历史页面（<https://www.openssh.com/history.html>，2026-07-24 WebFetch 一手核验）确认原文“that effectively made SSH a GPL violation”——移除 libgmp 系对既有 GPL 违规的修复，此判定的史料依据至此完整。（2026-09-13 补全截断句留痕）
 
 ## 文献
 
-- [DB:references_fulltext] 参考文献全文数据库（4077 篇全文，27138 条时间线事件）—— 对应 openssh.duckdb
+- OpenSSH Project. OpenSSH History — The Birth of OpenSSH [EB/OL]. (1999)[2026-07-24]. <https://www.openssh.com/history.html>.
 
 <!-- PODCAST_REVIEW v20260829 -->
 <!-- 语义复核范围：BSD Now EP322、BSD Now EP97、BSDTalk EP27（共 3 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
@@ -63,11 +65,11 @@ volume: 第10卷-openbsd的历史
 
 **史观**：
 
-- 总纲1 一切真历史都是古代史：总纲1 一切真历史都是古代史：50 年前的机器被当作文物考据，当下的档案即未来的历史。（BSD Now EP322，[985.90-1007.10]，L2）
-- 总纲17 证明世界先于解释和改造世界：总纲17 证明世界先于解释和改造世界：先有 PDP-7 实物与影片证据，再谈 Unix 起源解释。（BSD Now EP322，[461.82-466.08]，L2）
-- 总纲19 解释学循环是历史认识的根本条件：总纲19 解释学循环是历史认识的根本条件：影片截图与目录照片互为印证，逐项比对构成循环解释。（BSD Now EP322，[558.72-631.14]，L2）
-- 总纲22 知识注定过时：总纲22 知识注定过时：SSH 旧客户端与 RSA-SHA1 证书兼容性被新默认淘汰，知识随版本更替失效。（BSD Now EP322，[2236.64-2265.46]，L2）
-- 总纲8 本体论上各方平等：总纲8 本体论上各方平等：OpenBSD 6.6 与 OPNsense、GhostBSD 同屏，各项目如实呈现。（BSD Now EP322，[1608.32-1616.96]，L2）
+- 总纲1 一切真历史都是古代史：50 年前的机器被当作文物考据，当下的档案即未来的历史。（BSD Now EP322，[985.90-1007.10]，L2）
+- 总纲17 证明世界先于解释和改造世界：先有 PDP-7 实物与影片证据，再谈 Unix 起源解释。（BSD Now EP322，[461.82-466.08]，L2）
+- 总纲19 解释学循环是历史认识的根本条件：影片截图与目录照片互为印证，逐项比对构成循环解释。（BSD Now EP322，[558.72-631.14]，L2）
+- 总纲22 知识注定过时：SSH 旧客户端与 RSA-SHA1 证书兼容性被新默认淘汰，知识随版本更替失效。（BSD Now EP322，[2236.64-2265.46]，L2）
+- 总纲8 本体论上各方平等：OpenBSD 6.6 与 OPNsense、GhostBSD 同屏，各项目如实呈现。（BSD Now EP322，[1608.32-1616.96]，L2）
 - 总纲10 动手者创造历史：总纲10 动手者创造历史：Warner Losh 逐帧考证、OpenBSD 开发者逐锁解锁，动手者推动认识与系统演进。（BSD Now EP322，[982.99-1036.46]，L2）
 - 总纲10 动手者创造历史：SmallWall 的谱系由动手者而非明星人物书写：Lee Sharp 自述当年受教于 monoWall 周边的实践者——Chris 后执掌 pfSense 与 BSD Perimeter，写文档者独立门户，做网络架构者遍及全球——如今他刻意降低开发门槛、把工具与文档摆出来，请有想法的人跳进来，以日常劳动的传递续写项目，而非依赖英雄叙事。　[存疑脚注] 转写将相关人名误作 Michael Adema、Escozia、Jonathan DeGraves 等，准确拼写待核（BSD Now EP97，[1986.33-2023.69]，L1）
 - 总纲5 没有必然性，只有偶然性：项目的存在本身即偶然性的产物：没有那份宣布停更的邮件便没有 SmallWall，Lee Sharp 强调少数人 “had the same idea at the same time”（1078.33-1083.33），复活不是历史必然，而是几个用户在同一周内的应急反应；其早期声势亦系于 Slashdot 曝光这类无法规划的事件。（BSD Now EP97，[1031.14-1090.33]，L1）
