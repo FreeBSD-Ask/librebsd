@@ -16,7 +16,7 @@ volume: 第06卷-freebsd的核心技术革新
 | --- | --- | --- | --- | --- |
 | Linux KVM | 2007 年 | Avi Kivity/Red Hat | GPLv2 | 云虚拟化事实标准（AWS Nitro、GCE、Azure 部分） |
 | Xen | 2003 年 | 剑桥大学 | GPLv2 | AWS 早期使用，后转向 KVM Nitro |
-| VMware ESXi | 1999 年 | VMware | 商业闭源 | 企业数据中心主流 |
+| VMware ESX/ESXi | 2001 年（ESX）/2007 年（ESXi） | VMware | 商业闭源 | 企业数据中心主流 |
 | Microsoft Hyper-V | 2008 年 | Microsoft | 商业闭源 | Windows Server 内置，Azure 早期使用 |
 | QEMU | 2003 年 | Fabrice Bellard | GPLv2 | KVM/Xen 的用户态设备模拟层 |
 | bhyve | 2011-2014 年 | Neel Natu（尼尔·纳图）/Peter Grehan（彼得·格雷汉） | BSD 2-Clause | FreeBSD 原生 Type-2 hypervisor，随 FreeBSD 10.0 发布 |
@@ -26,8 +26,6 @@ volume: 第06卷-freebsd的核心技术革新
 
 ## 史料
 
-- [DB:references_fulltext:chapter_matches:chmatch_3776] 卷“第06卷-freebsd的核心技术革新”第 120 章，匹配置信度 folder，原因：folder 第118章
-- [DB:references_fulltext:chapter_matches:chmatch_1136] 卷“第06卷-freebsd的核心技术革新”第 120 章，匹配置信度 0.95，原因：Amit Singh 的 Mac OS X Internals 是 macOS 系统内部机制的权威参考，详细剖析 XNU 内核（Mach 微内核 + BSD 层）、启动流程、文件系统、IPC 等核心子系统。与第118章 macOS 与 FreeBSD 的代码双向流动、第119B章 macOS 的 BSD 哲学与文化效应直接相关。
 - [DB:references_fulltext:chapter_matches:chmatch_635] 卷“第06卷-freebsd的核心技术革新”第 120 章，匹配置信度 0.8，原因：关键词重合 2 项 + 加分 1
 - [DB:references_fulltext:chapter_matches:chmatch_666] 卷“第06卷-freebsd的核心技术革新”第 120 章，匹配置信度 0.8，原因：关键词重合 2 项 + 加分 1
 - [DB:references_fulltext:chapter_matches:chmatch_701] 卷“第06卷-freebsd的核心技术革新”第 120 章，匹配置信度 0.8，原因：关键词重合 2 项 + 加分 1
@@ -35,14 +33,14 @@ volume: 第06卷-freebsd的核心技术革新
 
 ## 史观
 
-(待人工回填——详见子节文件史观/辨析字段)
+- 总纲第 5 条——没有必然性只有偶然性：bhyve 写出了 FreeBSD 自己的 hypervisor，却没有写出 KVM 身后那条庞大的产业链——这不是代码的失败，而是时机与生态的偶然判决。Neel Natu 在 NetApp 启动 BHyVe 项目时，KVM 已随 Linux 主线进入全球公有云，VMware 已统治企业数据中心十余年，hypervisor 市场的网络效应早已锁死。bhyve 的代码简洁、架构优雅、BSD 许可证自由，它在 FreeBSD/TrueNAS/illumos 生态中是一个成功的虚拟化方案，但它永远不会成为云时代的标准——这不是因为 bhyve 技术不好，而是因为当 2014 年 bhyve 随 FreeBSD 10.0 正式发布时，虚拟化战争早已结束。bhyve 的故事是 BSD 生态的缩影：技术优秀但资源有限，许可证自由但缺乏商业锁定，在大型厂商主导的基础设施市场中，它找到了属于自己的 niche，却无法打破既有格局。历史的判决不是 “bhyve 输给了 KVM”，而是 “在一个赢者通吃的网络效应市场中，晚到者即使做得更好，也很难改写格局”。bhyve 没有输，它只是生不逢时。
 
 ## 辨析
 
 - illumos bhyve 移植的时间线需精确——Pluribus Networks 于 2012-2013 年左右开始初始移植，Joyent 随后加入并将其集成到 SmartOS [存疑——精确日期需 Joyent/Pluribus 官方公告验证]；xhyve 对 macOS Hypervisor.framework 的利用是一个有趣的架构创新——将原本需要内核模块的 hypervisor 完全
 - 原文中提到的 “Qing Huang” 作为主要维护者需要核实——该名字未在 bhyve 主要 commit 历史与演讲作者中显著出现 ［ 存疑脚注：此处事实待多源交叉验证 ］，bhyve 核心维护者应为 Neel Natu、Peter Grehan、John Baldwin 等人；bhyve 维护团队规模较小是事实，这直接导致了功能开发速度慢于 KVM，但也意味着代码审查严格、架构一致性保持较好
 - bhyve 与各虚拟化技术的比较需避免简单的 “成败论” 叙事——bhyve 没有成为云标准并不意味着技术失败，它在其目标场景（FreeBSD 原生虚拟化、存储设备集成、BSD/illumos 生态）中是成功的；bhyve 与 KVM 的架构差异反映了不同的设计哲学：KVM 追求 “Linux 内核中的通用 hypervisor，支持一切场景”，bhyve 追求 “FreeBSD 内核中的简洁 h
-- *统计局限性标注**——(1) 统计显著 ≠ 实际显著：Mann-Kendall 趋势检验 p < 0.001 表明 freebsd-src commit 量存在统计学显著上升趋势，但 Sen's slope =+1.40/月 的实际工程意义须结合 FreeBSD 版本周期与 commit 粒度变化综合判断；(2) bhyve 贡献率未量化：commit 量统计不区分 bhyve 相关 commi
+- **统计局限性标注**——(1) 统计显著 ≠ 实际显著：Mann-Kendall 趋势检验 p < 0.001 表明 freebsd-src commit 量存在统计学显著上升趋势，但 Sen's slope =+1.40/月 的实际工程意义须结合 FreeBSD 版本周期与 commit 粒度变化综合判断；(2) bhyve 贡献率未量化：commit 量统计不区分 bhyve 相关 commi
 - bhyve ARM64 支持状态需精确区分：截至 FreeBSD 14.0（2023 年），arm64 bhyve 仍处于实验阶段，功能完整性落后于 x86 版本，不支持 PCI 直通、GPU 加速等高级功能；NetBSD 也开发了自己的 NVMM hypervisor 用于 ARM64，与 FreeBSD bhyve 独立；bhyve ARM64 支持并非从零开始，FreeBSD/arm64 架
 
 ## 文献
@@ -59,7 +57,7 @@ volume: 第06卷-freebsd的核心技术革新
 
 <!-- DB_REF:freebsd.duckdb -->
 > **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 2010-2020 年间：488,947 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
-- FreeBSD Project. freebsd.duckdb freebsd-src 仓库 commit 数据库 [DB/OL]. 2026-07-27. **03-原始史料库/01-代码仓库史料/01-数据库本体/freebsd.duckdb**; Hibsd Project. 推断性统计.md [R/OL]. 2026-07-27. **03-原始史料库/01-代码仓库史料/01-数据库本体/统计分析/推断性统计.md** Task 5; Hibsd Project. 时间序列分析.md [R/OL]. 2026-07-27. **03-原始史料库/01-代码仓库史料/01-数据库本体/统计分析/时间序列分析.md** Task 14-15; Hibsd Project. 卷章数据映射.md [R/OL]. 2026-07-27. **03-原始史料库/01-代码仓库史料/01-数据库本体/统计分析/卷章数据映射.md** 第五卷第 53 章映射。［A］### 史观映射> bhyve 写出了 FreeBSD 自己的 hypervisor，却没有写出 KVM 身后那条庞大的产业链——这不是代码的失败，而是时机与生态的判决。Neel Natu 在 NetApp 启动 BHyVe 项目时，KVM 已随 Linux 主线进入全球公有云，VMware 已统治企业数据中心十余年，hypervisor 市场的网络效应早已锁死。bhyve 的代码简洁、架构优雅、BSD 许可证自由，它在 FreeBSD/TrueNAS/illumos 生态中是一个成功的虚拟化方案，但它永远不会成为云时代的标准——这不是因为 bhyve 技术不好，而是因为当 2014 年 bhyve 随 FreeBSD 10.0 正式发布时，虚拟化战争早已结束。bhyve 的故事是 BSD 生态的缩影：技术优秀但资源有限，许可证自由但缺乏商业锁定，在大型厂商主导的基础设施市场中，它找到了属于自己的 niche，却无法打破既有格局。历史的判决不是 “bhyve 输给了 KVM”，而是 “在一个赢者通吃的网络效应市场中，晚到者即使做得更好，也很难改写格局”。bhyve 没有输，它只是生不逢时。---> ## 第 53.14 不同时期人员的采访录（详见 [采访录.md](采访录.md)）
+- FreeBSD Project. freebsd.duckdb freebsd-src 仓库 commit 数据库 [DB/OL]. 2026-07-27. **03-原始史料库/01-代码仓库史料/01-数据库本体/freebsd.duckdb**; Hibsd Project. 推断性统计.md [R/OL]. 2026-07-27. **03-原始史料库/01-代码仓库史料/01-数据库本体/统计分析/推断性统计.md** Task 5; Hibsd Project. 时间序列分析.md [R/OL]. 2026-07-27. **03-原始史料库/01-代码仓库史料/01-数据库本体/统计分析/时间序列分析.md** Task 14-15; Hibsd Project. 卷章数据映射.md [R/OL]. 2026-07-27. **03-原始史料库/01-代码仓库史料/01-数据库本体/统计分析/卷章数据映射.md** 第五卷第 53 章映射。［A］
 
 <!-- DB_REF:freebsd.duckdb -->
 > **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 2010-2020 年间：488,947 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
@@ -95,8 +93,8 @@ volume: 第06卷-freebsd的核心技术革新
 
 **史观**：
 
-- 总纲10 动手者创造历史：总纲10 动手者创造历史：CBSD 作者以几小时工程实践搭起 K8s 集群，体现工具链由动手者驱动。（BSD Now EP337，[1728.62-1743.02]，L2）
-- 总纲19 解释学循环是历史认识的根本条件：总纲19 解释学循环是历史认识的根本条件：Warner 借助重放的 Venix 源码与 TUHS 社群重新理解 Unix 早期史，史料与解释互为前提。（BSD Now EP337，[2838.34-2889.14]，L2）
+- 总纲10 动手者创造历史：CBSD 作者以几小时工程实践搭起 K8s 集群，体现工具链由动手者驱动。（BSD Now EP337，[1728.62-1743.02]，L2）
+- 总纲19 解释学循环是历史认识的根本条件：Warner 借助重放的 Venix 源码与 TUHS 社群重新理解 Unix 早期史，史料与解释互为前提。（BSD Now EP337，[2838.34-2889.14]，L2）
 - 总纲10 动手者创造历史：本期叙事重心不在发布与机构而在动手者：独力接管全州 FreeBSD 基础设施的年轻工程师、照标准把 SHA-512/256 写进 FreeBSD 内核的播客主持人、把 Tor 客户端移植到 OpenBSD 的志愿团队，均以具体修补而非宣言推动系统演进；主持人点出私有 workaround 只有被个别人推进主干才能惠及众人（2684.98-2688.86），正是动手者创造历史的注脚（BSD Now EP128，[2678.40-2688.86]，L2）
 
 **辨析**：
