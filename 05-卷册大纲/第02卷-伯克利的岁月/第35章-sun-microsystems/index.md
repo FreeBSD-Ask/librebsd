@@ -9,7 +9,7 @@ volume: 第02卷-伯克利的岁月
 ## 要点
 
 - Sun 早期战略为 “开放系统 + 高性价比工作站”，以 32 位 Motorola 68000 处理器为基础，配 BSD 操作系统与网络功能，主攻工程与科研市场，与 DEC VAX 工作站、Apollo Computer 工作站竞争，1982-1985 年实现营收从 0 到 1 亿美元增长
-- AT&T 与 Sun 合作开发 SVR4 并非 “1988.6.13 联合公告” 的单日事件，而是 1985-1992 年的多阶段连续过程：1985 年 9 月 AT&T 与 Sun 首次达成合作意向，AT&T “enlisted Sun's efforts back in 1985”（techmonitor.ai 1988-01-18 一手报道）；1987 年 4 月 AT&T 与 Sun 签订
+- AT&T 与 Sun 合作开发 SVR4 并非 “1988.6.13 联合公告” 的单日事件，而是 1985-1992 年的多阶段连续过程：1985 年 9 月 AT&T 与 Sun 首次达成合作意向，AT&T “enlisted Sun's efforts back in 1985”（techmonitor.ai 1988-01-18 一手报道）；1987 年 4 月 AT&T 与 Sun 签订正式合作协议（多阶段时间线的第二站，继 1985 年 9 月合作意向之后）
 - 1980 年代工作站技术路线分化为：通用 BSD 路线（Sun、SGI、DEC）、专用 OS 路线（Apollo Aegis、Symbolics Genera）、专有 UNIX 路线（IBM AIX、HP-UX），BSD 路线在通用性上胜出，但 1990 年代被 Linux 路线取代
 
 | 技术路线 | 代表厂商 | 硬件基础 | 操作系统 | 市场结局 |
@@ -18,8 +18,8 @@ volume: 第02卷-伯克利的岁月
 | 专用 OS 路线 | Apollo、Symbolics | Apollo 专有 / Symbolics 专用 Lisp | Aegis、Genera | 1989 Apollo 被 HP 收购，1996 Symbolics 关闭 |
 | 专有 UNIX 路线 | IBM、HP | IBM POWER / HP PA-RISC | AIX、HP-UX（含 BSD 部分遗产） | 1990 年代延续至今 |
 | Linux 路线 | 多厂商 | 通用 x86 / RISC | Linux（继承 BSD 部分遗产） | 1995 后逐步聚合所有路线 |
-- SunOS 1.0 于 **1983 年** 随 Sun-100/Sun-1 工作站系列发布，基于 4.1BSD（1981 年 6 月发布）移植到 Motorola 68000 平台，同时包含 Joy 从 CSRG 带回的部分 4.2BSD 开发版（4.1a/4.1b）特性，包含 BSD 虚拟内存、文件系统、TCP/IP 网络栈，是首个大规模商业化的 BSD 衍生操作系统| SunOS 版本 |
-- SunOS 4.0 于 1988 年 12 月发布，融合 System V Release 3、4.3BSD 与 SunOS 自有特性，引入新的虚拟内存系统、动态链接与 System V STREAMS I/O 架构，支持 Sun386i 平台，是 Sun 在 AT&T 合作前的过渡产品；1992 年 SunOS 5.0（Solaris 2）完全转向 SVR4，标志 Sun 与 BSD 主体血缘关
+- SunOS 1.0 于 **1983 年** 随 Sun-100/Sun-1 工作站系列发布，基于 4.1BSD（1981 年 6 月发布）移植到 Motorola 68000 平台，同时包含 Joy 从 CSRG 带回的部分 4.2BSD 开发版（4.1a/4.1b）特性，包含 BSD 虚拟内存、文件系统、TCP/IP 网络栈，是首个大规模商业化的 BSD 衍生操作系统
+- SunOS 4.0 于 1988 年 12 月发布，融合 System V Release 3、4.3BSD 与 SunOS 自有特性，引入新的虚拟内存系统、动态链接与 System V STREAMS I/O 架构，支持 Sun386i 平台，是 Sun 在 AT&T 合作前的过渡产品；1992 年 SunOS 5.0（Solaris 2）完全转向 SVR4，标志 Sun 与 BSD 主体血缘关系的基本终结（句尾原截断，按 SunOS 5.0 完全转向 SVR4 语境补全）
 
 ## 史料
 
@@ -37,7 +37,7 @@ volume: 第02卷-伯克利的岁月
 
 ## 史观
 
-(待人工回填——详见子节文件史观/辨析字段)
+- 章级史观综述：Sun 是 BSD 学术成果经商业路径放大的枢纽案例——总纲第 11 条（商品是形式主义）：SunOS 将 BSD 的学术协作成果封装为商业商品，商业化逻辑塑造了工作站市场形态；总纲第 4 条（分离聚合是永恒规律）：Sun 从 BSD 主线分离出 SunOS 商业分支，又在 SVR4 阶段与 AT&T 聚合，1992 年 SunOS 5.0 完成再分离；总纲第 5 条（没有必然性，只有偶然性）：Joy 1982 年加入 Sun 与 AT&T-Sun 多阶段合作均非注定的路径；总纲第 3 条（不存在进步，只有权力再分配）：工作站市场 BSD 路线对专用 OS 路线的“胜出”与 1990 年代被 Linux 路线取代，是权力与资源的再分配而非单向进步。各子节 35.1-35.11 的史观/辨析字段为本综述的展开依据。
 
 ## 辨析
 

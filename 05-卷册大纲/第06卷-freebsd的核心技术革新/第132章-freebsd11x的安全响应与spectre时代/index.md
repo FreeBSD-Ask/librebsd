@@ -8,23 +8,35 @@ volume: 第06卷-freebsd的核心技术革新
 
 ## 要点
 
-- **统计分析印证**——`freebsd.duckdb` freebsd-src 仓库 1993-2026 年 commit 月度量 Mann-Kendall 趋势检验结果为显著上升趋势（Sen's slope =+1.40/月，p < 0.001，95% CI [1.11, 1.69]）（统计结论 C-03）；ARIMA(5,0,5) 模型拟合 AIC = 107.39（统计结论 C-29），表明 fr
+- **统计分析印证**——`freebsd.duckdb` freebsd-src 仓库 1993-2026 年 commit 月度量 Mann-Kendall 趋势检验结果为显著上升趋势（Sen's slope =+1.40/月，p < 0.001，95% CI [1.11, 1.69]）（统计结论 C-03）；ARIMA(5,0,5) 模型拟合 AIC = 107.39（统计结论 C-29），表明 freebsd-src 仓库 commit 月度量模型的 AIC 为四仓库中最低（最优拟合），但 Ljung-Box(15) 检验 p=0.0113 < 0.05，残差仍含未建模自相关，模型充分性不足，ar.L4/ma.L4 系数显著暗示 4 阶 AR/MA 结构、可能与季度发布周期相关［回源补全：2026-09-13 据 **03-原始史料库/01-代码仓库史料/01-数据库本体/统计分析/时间序列分析.md** Task 14］
 
 ## 史料
 
-- [DB:references_fulltext:chapter_matches:chmatch_3828] 卷“第06卷-freebsd的核心技术革新”第 132 章，匹配置信度 folder，原因：folder 第130章
+- ［留痕：2026-09-13 按核查报告 C227 整改——原 references_fulltext chapter_matches chmatch_3828 机器匹配记录行（匹配置信度字段值为“folder”、原因字段“folder 第130章”语义不通且章号错挂第 130 章）系脏数据，已删除留痕；库侧匹配记录质量治理 DEFERRED。］
 
 ## 史观
 
-(待人工回填——详见子节文件史观/辨析字段)
+- 本章以 FreeBSD 11.x 时期对 Spectre/Meltdown 侧信道漏洞的安全响应为主线：各 BSD 面对 2018 年初同一批漏洞各自独立响应——FreeBSD 合入 KPTI（Konstantin Belousov，基金会赞助）、OpenBSD 引入微码更新工具、DragonFly 提交 MMU 隔离与 IBRS/IBPB、NetBSD 引入 SVS 分离页表，无单一正确解（总纲第 8 条——本体论上各方平等）；选择性披露仅惠及一级厂商，使大厂之外者受损，披露秩序实为利益分配（总纲第 13 条——法律与道德是利益分配）；基金会出资使专职开发者放下原计划集中应对漏洞，呈现动手者创造历史的工程逻辑（总纲第 10 条——动手者创造历史）。章级综述依 PODCAST_REVIEW 史观短式综摄，详见各子节文件史观/辨析字段。
 
 ## 辨析
 
-- *统计局限性标注**——(1) 统计显著 ≠ 实际显著：Mann-Kendall 趋势检验 p < 0.001 表明 freebsd-src commit 量存在统计学显著上升趋势，但 11.x 时期架构扩展的实际工程意义须结合 arm64 具体代码量与 commit 分布综合判断；(2) ARIMA 模型局限：ARIMA(5,0,5) AIC = 107.39 为 freebsd-src 整体
+- *统计局限性标注**——(1) 统计显著 ≠ 实际显著：Mann-Kendall 趋势检验 p < 0.001 表明 freebsd-src commit 量存在统计学显著上升趋势，但 11.x 时期架构扩展的实际工程意义须结合 arm64 具体代码量与 commit 分布综合判断；(2) ARIMA 模型局限：ARIMA(5,0,5) AIC = 107.39 为 freebsd-src 整体 1993-2026 年全样本拟合结果，非 11.x 子周期专有口径，且 Ljung-Box(15) 检验 p=0.0113 < 0.05 表明残差含未建模自相关、模型不充分，须慎以之外推 11.x 子阶段趋势［回源补全：2026-09-13 据 **03-原始史料库/01-代码仓库史料/01-数据库本体/统计分析/时间序列分析.md** Task 14］
 
 ## 文献
 
-- FreeBSD Project. freebsd.duckdb freebsd-src 仓库 commit 数据库 [DB/OL]. 2026-07-27. **03-原始史料库/01-代码仓库史料/01-数据库本体/freebsd.duckdb**; Hibsd Project. 推断性统计.md [R/OL]. 2026-07-27. **03-原始史料库/01-代码仓库史料/01-数据库本体/统计分析/推断性统计.md** Task 5; Hibsd Project. 时间序列分析.md [R/OL]. 2026-07-27. **03-原始史料库/01-代码仓库史料/01-数据库本体/统计分析/时间序列分析.md** Task 14; Hibsd Project. 卷章数据映射.md [R/OL]. 2026-07-27. **03-原始史料库/01-代码仓库史料/01-数据库本体/统计分析/卷章数据映射.md** 第五卷第 60 章映射。［A］> ## 第 60.12 不同时期人员的采访录（详见 [采访录.md](采访录.md)）FreeBSD 社区论文：[FP-2021-008] smart(8) Update: A Permissively-Licensed Alternative to smartctl(8)（Michael Dexter（迈克尔·德克斯特）; Chuck Tuffli，2021）<https://papers.freebsd.org/2021/eurobsdcon/dexter-tuffli-update_on_smart/>FreeBSD 社区论文：[FP-2019-055] Fuzzing the kernel（Andrew Turner，2019）<https://papers.freebsd.org/2019/eurobsdcon/turner-fuzzing_the_kernel/>FreeBSD 社区论文：[FP-2019-022] Frankenstein's Disk Drive（Chuck Tuffli，2019）<https://papers.freebsd.org/2019/bsdcan/tuffli-frankensteins_disk_drive/>FreeBSD 社区论文：[FP-2019-031] Fuzzing the kernel: Porting the Clang Sanitizers to FreeBSD（Andrew Turner，2019）<https://papers.freebsd.org/2019/bsdcan/turner-fuzzing_the_kernel/>FreeBSD 社区论文：[FP-2019-066] KLEAK - Practical Kernel Memory Disclosure Detection（Thomas Barabosch，2019）<https://papers.freebsd.org/2019/fosdem/barabosch-kleak/>FreeBSD 社区论文：[FP-2018-013] Running Linux applications on FreeBSD（Chuck Tuffli，2018）<https://papers.freebsd.org/2018/bsdcan/tuffli-running_linux_applications_on_freebsd/>FreeBSD 社区论文：[FP-2018-022] devmatch -- matching devices to modules: PNP plays matchmaker for kernel modules（Warner Losh（沃纳·洛什），2018）<https://papers.freebsd.org/2018/bsdcan/losh-devmatch_matching_devices_to_modules/>FreeBSD 社区论文：[FP-2018-001] Tuning FreeBSD for routing and firewalling（Olivier Cochard-Labbé，2018）<https://papers.freebsd.org/2018/asiabsdcon/cochard-tuning_freebsd_for_routing_and_firewalling/>## 第 60.13 节 媒体反响与社区舆论（详见 [媒体反响与社区舆论.md](媒体反响与社区舆论.md)）
+- FreeBSD Project. freebsd.duckdb freebsd-src 仓库 commit 数据库 [DB/OL]. 2026-07-27. **03-原始史料库/01-代码仓库史料/01-数据库本体/freebsd.duckdb**
+- “BSD 史”项目内部统计分析：推断性统计.md [R/OL]. 2026-07-27. **03-原始史料库/01-代码仓库史料/01-数据库本体/统计分析/推断性统计.md** Task 5
+- “BSD 史”项目内部统计分析：时间序列分析.md [R/OL]. 2026-07-27. **03-原始史料库/01-代码仓库史料/01-数据库本体/统计分析/时间序列分析.md** Task 14
+- “BSD 史”项目内部统计分析：卷章数据映射.md [R/OL]. 2026-07-27. **03-原始史料库/01-代码仓库史料/01-数据库本体/统计分析/卷章数据映射.md** 第五卷第 60 章映射。［A］
+- ［留痕：2026-09-13 按核查报告 C227 整改——删除行内残留 H2 标题“第 60.12 不同时期人员的采访录”“第 60.13 节 媒体反响与社区舆论”旧章号残迹（两文件已在 SUMMARY 独立收录）；原“Hibsd Project”项目代号误入著录已改内部资料格式；以下 7 条 FreeBSD 社区论文系旧章 60.12/60.13 杂项灌入，与本章 Spectre 安全主题弱相关，移卷级文献综述的跨文件迁移登记 DEFERRED：］
+- [FP-2021-008] smart(8) Update: A Permissively-Licensed Alternative to smartctl(8)（Michael Dexter（迈克尔·德克斯特）; Chuck Tuffli，2021）<https://papers.freebsd.org/2021/eurobsdcon/dexter-tuffli-update_on_smart/>
+- [FP-2019-055] Fuzzing the kernel（Andrew Turner，2019）<https://papers.freebsd.org/2019/eurobsdcon/turner-fuzzing_the_kernel/>
+- [FP-2019-022] Frankenstein's Disk Drive（Chuck Tuffli，2019）<https://papers.freebsd.org/2019/bsdcan/tuffli-frankensteins_disk_drive/>
+- [FP-2019-031] Fuzzing the kernel: Porting the Clang Sanitizers to FreeBSD（Andrew Turner，2019）<https://papers.freebsd.org/2019/bsdcan/turner-fuzzing_the_kernel/>
+- [FP-2019-066] KLEAK - Practical Kernel Memory Disclosure Detection（Thomas Barabosch，2019）<https://papers.freebsd.org/2019/fosdem/barabosch-kleak/>
+- [FP-2018-013] Running Linux applications on FreeBSD（Chuck Tuffli，2018）<https://papers.freebsd.org/2018/bsdcan/tuffli-running_linux_applications_on_freebsd/>
+- [FP-2018-022] devmatch -- matching devices to modules: PNP plays matchmaker for kernel modules（Warner Losh（沃纳·洛什），2018）<https://papers.freebsd.org/2018/bsdcan/losh-devmatch_matching_devices_to_modules/>
+- [FP-2018-001] Tuning FreeBSD for routing and firewalling（Olivier Cochard-Labbé，2018）<https://papers.freebsd.org/2018/asiabsdcon/cochard-tuning_freebsd_for_routing_and_firewalling/>
 
 <!-- DB_REF:freebsd.duckdb -->
 > **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 2010-2020 年间：488,947 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
