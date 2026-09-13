@@ -3736,6 +3736,10 @@
   - [168 【Linux社区】AI缺陷分诊与特性准入](./第20卷-linux社区史与比较研究/168-AI缺陷分诊与特性准入.md)
   - [169 【Linux社区】reiserfs弃用定调与回归痛点](./第20卷-linux社区史与比较研究/169-reiserfs弃用定调与回归痛点.md)
   - [170 【Linux社区】bugzilla改革与Rust别名之争](./第20卷-linux社区史与比较研究/170-bugzilla改革与Rust别名之争.md)
+  - [171 【Linux社区】AI内容指南与Folio进化论](./第20卷-linux社区史与比较研究/171-AI内容指南与Folio进化论.md)
+  - [172 【Linux社区】fwctl征稿与API废弃执行](./第20卷-linux社区史与比较研究/172-fwctl征稿与API废弃执行.md)
+  - [173 【Linux社区】AI版权与API弃用定调](./第20卷-linux社区史与比较研究/173-AI版权与API弃用定调.md)
+  - [174 【Linux社区】Sashiko实证与folios之争](./第20卷-linux社区史与比较研究/174-Sashiko实证与folios之争.md)
 ## 读者指引（大纲侧）
 
 - 大纲侧手动维护区，脚本重跑保留。
