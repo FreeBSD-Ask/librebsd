@@ -8,7 +8,7 @@ volume: 第09卷-netbsd的历史
 
 ## 要点
 
-- NetBSD 10.0（**2024.3.31**）引入对 Apple Silicon M1/M2 的实验性支持，由 Jared McNeill（jmcneill）、Nick Hudson（skrll）、Ryo Shimizu（ryo）等共同推动；移植工作最早可追溯至 2021-08-30（jmcneill"Identify Apple M1 ‘Icestorm’ and ‘Firestorm’
+- NetBSD 10.0（**2024.3.31**）引入对 Apple Silicon M1/M2 的实验性支持，由 Jared McNeill（jmcneill）、Nick Hudson（skrll）、Ryo Shimizu（ryo）等共同推动；移植工作最早可追溯至 2021-08-30（jmcneill“Identify Apple M1 ‘Icestorm’ and ‘Firestorm’…”）
 - NetBSD 10.0 硬件支持 commit 记录是研究现代硬件移植的核心史料；Jared McNeill、Taylor R Campbell 等是主要贡献者；考据需对照 CVS commit log 与硬件厂商文档
 - pkgsrc 2010-2026 年间的 commit 记录与季度发布说明是研究 pkgsrc 现代演进的核心史料；Joerg Sonnenberger、Thomas Klausner（托马斯·克劳斯纳） 等是主要维护者；考据需对照 CVS commit log 与 pkgsrc-doc 邮件列表
 - tainted code 政策公告与邮件列表讨论是研究政策出台过程的核心史料；公告由 Core Team 发布，邮件列表讨论涉及 committer、用户、外部观察者；考据需对照公告原文与邮件列表存档
@@ -23,11 +23,13 @@ volume: 第09卷-netbsd的历史
 
 ## 史观
 
-(待人工回填——详见子节文件史观/辨析字段)
+- 总纲第 10 条——动手者创造历史：Apple Silicon M1/M2 的实验性支持由 jmcneill、skrll、ryo 等动手者在 CVS commit 层面接续完成，pkgsrc 的现代演进亦由 Sonnenberger、Klausner 等维护者的具体劳动推动，现代硬件支持史首先是这些动手者的历史
+- 总纲第 9 条——经验优先：移植时间线、发布日期与政策出台过程均以 commit log、官方发布页面与公告原文为断代依据，二手转述（如先前叙事中的 “2024.5” 误传）一律回溯一手记录核验
+- 总纲第 22 条——知识注定过时：硬件兼容性列表与内核支持范围随版本迭代迅速过时，本所述支持广度仅为 NetBSD 10.0 时点的快照
 
 ## 辨析
 
-- 经 netbsd.duckdb netbsd-src 仓库 commits 表验证：Apple Silicon M1 移植最早可追溯至 2021-08-30（jmcneill），早于 10.0 发布 2024.3.31 约 2 年 7 个月；移植由 jmcneill（2021-2022）、skrll（2022）、ryo（2022）〔待核：原文截断，后文待回源〕
+- 经 netbsd.duckdb netbsd-src 仓库 commits 表验证：Apple Silicon M1 移植最早可追溯至 2021-08-30（jmcneill），早于 10.0 发布 2024.3.31 约 2 年 7 个月；移植由 jmcneill（2021-2022）、skrll（2022）、ryo（2022）等人接续完成——jmcneill 于 2021-08-30 提交 Apple M1 初始支持（commit db7e12da2c51），skrll 于 2022 年 4-5 月补齐电源域控制器、GPIO、邮箱通信通道、I2C 与 RTKit SMC 等驱动，并自 OpenBSD 移植 Apple silicon NVME 支持（2022-05-07，commit e24a9df7237c），移植时间线延续至 10.0 发布前
 - 先前叙事中称“NetBSD 10.0 发布日期 2024.5”系误传——NetBSD 官方发布页面（netbsd.org/releases/formal-10/NetBSD-10.0.html）明确为 2024.3.31；10.0 的实际硬件支持广度需对照硬件兼容性列表核验
 - pkgsrc 软件包数量增长在不同来源中存在差异——2010Q1 与 2026Q4 的具体数字需对照原始 release tarball 核验；Sonnenberger 的 commit 量在统计工具中可能被低估
 - 政策公告的具体发布日期在不同来源中可能略有差异——需对照 NetBSD 官方页面核验；外部媒体报道可能存在简化或误解
