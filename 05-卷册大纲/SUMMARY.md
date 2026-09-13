@@ -3730,6 +3730,8 @@
   - [162 【Linux社区】文件系统维护门槛与stable标签](./第20卷-linux社区史与比较研究/162-文件系统维护门槛与stable标签.md)
   - [163 【Linux社区】linusnext树创建与trivial政策](./第20卷-linux社区史与比较研究/163-linusnext树创建与trivial政策.md)
   - [164 【Linux社区】AI审阅与维护者峰会存废](./第20卷-linux社区史与比较研究/164-AI审阅与维护者峰会存废.md)
+  - [165 【Linux社区】Bugzilla存废与加速器用户态交锋](./第20卷-linux社区史与比较研究/165-Bugzilla存废与加速器用户态交锋.md)
+  - [166 【Linux社区】TAB选举与AI标注验证门](./第20卷-linux社区史与比较研究/166-TAB选举与AI标注验证门.md)
 ## 读者指引（大纲侧）
 
 - 大纲侧手动维护区，脚本重跑保留。
