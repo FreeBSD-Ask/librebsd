@@ -4,15 +4,15 @@ id: CH212
 volume: 第10卷-openbsd的历史
 ---
 
-# 第 212 章 openbsd与同时期操作系统的技术比较
+# 第 212 章 OpenBSD 与同时期操作系统的技术比较
 
 ## 要点
 
-- OpenBSD 采用 “默认安全 + 代码审计” 模型，FreeBSD 采用 “Security Officer + MAC Framework” 模型；FreeBSD 通过 TrustedBSD 项目（2000-2003 年由 Robert Watson、Poul-Henning Kamp（波尔-亨宁·坎普） 等推动）引入 MAC、Jails（1999 年由 Poul-Henning Kamp
-- SELinux 由 NSA 主导开发，2000 年 12 月首次发布（基于 Flask 架构与 Type Enforcement），2003 年合入 Linux 2.6 内核主线，依赖 Linux Security Modules（LSM）框架；AppArmor 由 Immunix 公司开发（1998 起），2006 年随 SUSE Linux Enterprise 10 集成；〔待核：原文截断，后文待回源〕
-- Solaris 自 8（2000）起提供 RBAC（Role-Based Access Control），Solaris 10（2005-01）引入 Trusted Extensions 与 Zones；AIX 5L（2001）提供多级安全（MLS）与 Trusted Computing Base（TCB）评估；HP-UX 11i v2（2003）提供 Security Containment 与
-- macOS 基于 Darwin（含 BSD 用户空间，自 Mac OS X 10.0 起源自 FreeBSD 4.x 用户空间与 Mach 3.0 内核混合）；macOS 通过 Sandbox（10.5 Leopard 2007 引入 Seatbelt sandbox，基于 TrustedBSD MAC Framework）〔待核：原文截断，后文待回源〕
-- OpenBSD pf 由 Daniel Hartmeier（丹尼尔·哈特迈尔） 主导开发，2001 年随 OpenBSD 3.0（2001-12-01 发布）引入——openbsd.duckdb openbsd-src 仓库 commit 148b55c022b1（2001-06-24 kjell 引入 sys/net/pf.c 与 sys/net/pfvar.h）证实代码引入时间早于 3.0 发布约 5
+- OpenBSD 采用 “默认安全 + 代码审计” 模型，FreeBSD 采用 “Security Officer + MAC Framework” 模型；FreeBSD 通过 TrustedBSD 项目（2000-2003 年由 Robert Watson、Poul-Henning Kamp（波尔-亨宁·坎普） 等推动）引入 MAC、Jails（1999 年由 Poul-Henning Kamp 开发）与 MAC Framework（随 FreeBSD 5.0，2003-01-19 合入）
+- SELinux 由 NSA 主导开发，2000 年 12 月首次发布（基于 Flask 架构与 Type Enforcement），2003 年合入 Linux 2.6 内核主线，依赖 Linux Security Modules（LSM）框架；AppArmor 由 Immunix 公司开发（1998 起），2006 年随 SUSE Linux Enterprise 10 集成；pledge/unveil 由 OpenBSD 社区开发（pledge 随 5.9 引入，unveil 随 6.4 引入）
+- Solaris 自 8（2000）起提供 RBAC（Role-Based Access Control），Solaris 10（2005-01）引入 Trusted Extensions 与 Zones；AIX 5L（2001）提供多级安全（MLS）与 Trusted Computing Base（TCB）评估；HP-UX 11i v2（2003）提供 Security Containment 等安全特性；Solaris/AIX/HP-UX 均持有 Common Criteria EAL4+ 认证，OpenBSD 从未申请
+- macOS 基于 Darwin（含 BSD 用户空间，自 Mac OS X 10.0 起源自 FreeBSD 4.x 用户空间与 Mach 3.0 内核混合）；macOS 通过 Sandbox（10.5 Leopard 2007 引入 Seatbelt sandbox，基于 TrustedBSD MAC Framework），后续引入 Gatekeeper（10.8，2012）、SIP（10.11，2015）与 Apple Silicon PAC（A12 起，2018）
+- OpenBSD pf 由 Daniel Hartmeier（丹尼尔·哈特迈尔） 主导开发，2001 年随 OpenBSD 3.0（2001-12-01 发布）引入——openbsd.duckdb openbsd-src 仓库 commit 148b55c022b1（2001-06-24 kjell 引入 sys/net/pf.c 与 sys/net/pfvar.h）证实代码引入时间早于 3.0 发布约 5 个月
 
 ## 史料
 
@@ -20,7 +20,10 @@ volume: 第10卷-openbsd的历史
 
 ## 史观
 
-(待人工回填——详见子节文件史观/辨析字段)
+- 总纲8 本体论上各方平等：OpenBSD 与 FreeBSD、Linux、商业 UNIX、macOS 的安全机制比较不预设孰优孰劣——默认安全＋代码审计、Security Officer＋MAC Framework、LSM 策略框架、CC 认证体系各有其生成语境与代价，比较以技术层级与粒度差异呈现而非排名。（汇总自 212.1-212.6 各节史观字段）
+- 总纲9 经验优先：pledge/unveil、MAC Framework、SELinux 等机制的实际效果以部署经验与漏洞处置记录为准，认证与宣传不替代经验检验。
+- 总纲5 没有必然性，只有偶然性：各系统安全路线的分岔源于具体的人、机构与时机（NSA 主导 SELinux、Hartmeier 重写 pf、de Raadt 拍板发布流程），而非抽象必然。
+- 总纲4 分离聚合是永恒规律：pf 自 OpenBSD 分离后聚合于 FreeBSD/NetBSD，arc4random/strlcpy 自 OpenBSD 扩散至 POSIX.1-2024，代码在分离与聚合间循环流动。
 
 ## 辨析
 
@@ -32,7 +35,9 @@ volume: 第10卷-openbsd的历史
 
 ## 文献
 
-- FreeBSD TrustedBSD 项目 [EB/OL]. <https://docs.freebsd.org/en/books/arch-handbook/mac/>；FreeBSD Jails 文档 [EB/OL]. <https://docs.freebsd.org/en/books/handbook/jails/>；OpenBSD pledge(2) 手册页 [EB/OL]. <https://man.openbsd.org/pledge.2>；OpenBSD unveil(2) 手册页 [EB/OL]. <https://man.openbsd.org/unveil.2>；OpenBSD commit df174574d401 [G/OL]. <https://github.com/openbsd/src/commit/df174574d401>；OpenBSD commit 8b23add8c74b [G/OL]. <https://github.com/openbsd/src/commit/8b23add8c74b>；统计分析报告：推断性统计.md Task 11 [R/OL]. 2026-07-27. 文件路径：**03-原始史料库/01-代码仓库史料/01-数据库本体/统计分析/推断性统计.md**；Python 统计脚本：`script/phase2_inferential.py`. Task 11 各卷 doubt_flag 卡方检验 + Cramer's V 效应量。执行日期：2026-07-27 ［A］**OpenBSD pledge/unveil vs FreeBSD MAC Framework 对比**：
+- FreeBSD TrustedBSD 项目 [EB/OL]. <https://docs.freebsd.org/en/books/arch-handbook/mac/>；FreeBSD Jails 文档 [EB/OL]. <https://docs.freebsd.org/en/books/handbook/jails/>；OpenBSD pledge(2) 手册页 [EB/OL]. <https://man.openbsd.org/pledge.2>；OpenBSD unveil(2) 手册页 [EB/OL]. <https://man.openbsd.org/unveil.2>；OpenBSD commit df174574d401 [G/OL]. <https://github.com/openbsd/src/commit/df174574d401>；OpenBSD commit 8b23add8c74b [G/OL]. <https://github.com/openbsd/src/commit/8b23add8c74b>；统计分析报告：推断性统计.md Task 11 [R/OL]. 2026-07-27. 文件路径：**03-原始史料库/01-代码仓库史料/01-数据库本体/统计分析/推断性统计.md**；Python 统计脚本：`script/phase2_inferential.py`. Task 11 各卷 doubt_flag 卡方检验 + Cramer's V 效应量。执行日期：2026-07-27 ［A］
+
+**OpenBSD pledge/unveil vs FreeBSD MAC Framework 对比**：
 
 | 维度 | OpenBSD pledge/unveil | FreeBSD MAC Framework |
 | --- | --- | --- |
@@ -42,7 +47,9 @@ volume: 第10卷-openbsd的历史
 | 权限模型 | 白名单内建于程序代码 | 策略外置为可加载模块 |
 | 管理员干预 | 无可关闭选项 | 可后置配置策略 |
 | 时间差 | — | 早约 12 年 |
-- NSA SELinux 项目 [EB/OL]. <https://www.nsa.gov/what-we-do/research/selinux/>；AppArmor 项目 [EB/OL]. <https://apparmor.net/>；Linux Kernel 2.6.0 Release Notes [EB/OL]. <https://kernelnewbies.org/LinuxChanges>；OpenBSD pledge(2) 手册页 [EB/OL]. <https://man.openbsd.org/pledge.2>；OpenBSD unveil(2) 手册页 [EB/OL]. <https://man.openbsd.org/unveil.2>；Red Hat SELinux 文档 [EB/OL]. <https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/>；openbsd.duckdb 查询 L7.3.1（来源：原材料/研究/bsd 仓库分析/数据分析/衍生项目与跨项目对比分析.md §L7.3.1） ［A］**SELinux/AppArmor/pledge/unveil 安全模块对比**：
+- NSA SELinux 项目 [EB/OL]. <https://www.nsa.gov/what-we-do/research/selinux/>；AppArmor 项目 [EB/OL]. <https://apparmor.net/>；Linux Kernel 2.6.0 Release Notes [EB/OL]. <https://kernelnewbies.org/LinuxChanges>；OpenBSD pledge(2) 手册页 [EB/OL]. <https://man.openbsd.org/pledge.2>；OpenBSD unveil(2) 手册页 [EB/OL]. <https://man.openbsd.org/unveil.2>；Red Hat SELinux 文档 [EB/OL]. <https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/>；openbsd.duckdb 查询 L7.3.1（来源：原材料/研究/bsd 仓库分析/数据分析/衍生项目与跨项目对比分析.md §L7.3.1） ［A］
+
+**SELinux/AppArmor/pledge/unveil 安全模块对比**：
 
 | 维度 | SELinux | AppArmor | OpenBSD pledge/unveil |
 | --- | --- | --- | --- |
@@ -52,7 +59,9 @@ volume: 第10卷-openbsd的历史
 | 策略规模 | RHEL 默认约 4000+ 类型 | 路径前缀配置 | pledge 约 30 个 promise 关键字 |
 | 路线 | 策略可配置 MAC | 策略可配置 MAC | 白名单沙箱默认 |
 | 关键字示例 | 用户/角色/类型三元组 | 路径模式 | “stdio”、“rpath”、“wpath”、“inet”、“dns” |
-- Solaris 10 Trusted Extensions 文档 [EB/OL]. <https://docs.oracle.com/cd/E19253-01/>；AIX Security Guide [EB/OL]. <https://www.ibm.com/docs/en/aix/>；HP-UX Security Features [EB/OL]. <https://docs.hp.com/>；Common Criteria 证书数据库 [EB/OL]. <https://www.commoncriteriaportal.org/>；OpenBSD 安全声明 [EB/OL]. <https://www.openbsd.org/> ［A］**商业 UNIX 安全机制与 OpenBSD 路线对比**：
+- Solaris 10 Trusted Extensions 文档 [EB/OL]. <https://docs.oracle.com/cd/E19253-01/>；AIX Security Guide [EB/OL]. <https://www.ibm.com/docs/en/aix/>；HP-UX Security Features [EB/OL]. <https://docs.hp.com/>；Common Criteria 证书数据库 [EB/OL]. <https://www.commoncriteriaportal.org/>；OpenBSD 安全声明 [EB/OL]. <https://www.openbsd.org/> ［A］
+
+**商业 UNIX 安全机制与 OpenBSD 路线对比**：
 
 | 系统 | 关键安全机制 | 引入版本 | Common Criteria 认证 | OpenBSD 对应路线 |
 | --- | --- | --- | --- | --- |
@@ -60,7 +69,11 @@ volume: 第10卷-openbsd的历史
 | AIX | MLS、Trusted Computing Base | AIX 5L（2001） | EAL4+ | 无对应 |
 | HP-UX | Security Containment | HP-UX 11i v2（2003） | EAL4+ | 无对应 |
 | OpenBSD | 代码审计、pledge/unveil | 自 1995-10-18 fork | 从未申请 | 纯社区审计驱动 |
-- Apple Platform Security 白皮书 [EB/OL]. <https://support.apple.com/guide/security/welcome/web>；Darwin/XNU 开源代码 [EB/OL]. <https://opensource.apple.com/projects/xnu/>；OpenBSD pledge(2) 手册页 [EB/OL]. <https://man.openbsd.org/pledge.2>；OpenBSD unveil(2) 手册页 [EB/OL]. <https://man.openbsd.org/unveil.2> ［A］**macOS 安全机制演进与 OpenBSD 对应**：
+
+注：EAL4+ 证书随版本与评估期限更新，表中认证以各系统对应版本的评估时点证书为准，避免过期误读。
+- Apple Platform Security 白皮书 [EB/OL]. <https://support.apple.com/guide/security/welcome/web>；Darwin/XNU 开源代码 [EB/OL]. <https://opensource.apple.com/projects/xnu/>；OpenBSD pledge(2) 手册页 [EB/OL]. <https://man.openbsd.org/pledge.2>；OpenBSD unveil(2) 手册页 [EB/OL]. <https://man.openbsd.org/unveil.2> ［A］
+
+**macOS 安全机制演进与 OpenBSD 对应**：
 
 | macOS 机制 | 引入版本 | 时间 | 技术层级 | OpenBSD 对应 |
 | --- | --- | --- | --- | --- |
@@ -68,7 +81,9 @@ volume: 第10卷-openbsd的历史
 | Gatekeeper | 10.8 Mountain Lion | 2012 | 代码签名验证 | 无对应 |
 | SIP | 10.11 El Capitan | 2015 | 系统目录保护 | 无对应（root 权限边界由程序源码声明） |
 | Apple Silicon PAC | A12 起 | 2018 | 硬件级控制流完整性 | OpenBSD 7.6（2024-10）arm64 部分支持 |
-- Daniel Hartmeier pf 历史 [EB/OL]. <https://www.benzedrine.ch/pf.html>；OpenBSD 3.0 Release Notes [EB/OL]. <https://www.openbsd.org/30.html>；FreeBSD IPFW 手册页 **ipfw(8)** [EB/OL]. <https://www.freebsd.org/cgi/man.cgi?ipfw(8)>；Linux nftables 项目 [EB/OL]. <https://www.netfilter.org/projects/nftables/>；NetBSD NPF 手册页 **npf(7)** [EB/OL]. <https://man.netbsd.org/npf.7> ［A］**pf 关键 commit 时间线**：
+- Daniel Hartmeier pf 历史 [EB/OL]. <https://www.benzedrine.ch/pf.html>；OpenBSD 3.0 Release Notes [EB/OL]. <https://www.openbsd.org/30.html>；FreeBSD IPFW 手册页 **ipfw(8)** [EB/OL]. <https://www.freebsd.org/cgi/man.cgi?ipfw(8)>；Linux nftables 项目 [EB/OL]. <https://www.netfilter.org/projects/nftables/>；NetBSD NPF 手册页 **npf(7)** [EB/OL]. <https://man.netbsd.org/npf.7> ［A］
+
+**pf 关键 commit 时间线**：
 
 | 日期 | 事件 | commit | 关键人物 |
 | --- | --- | --- | --- |
@@ -77,7 +92,9 @@ volume: 第10卷-openbsd的历史
 | 2001-12-01 | pf 随 OpenBSD 3.0 发布 | — | Daniel Hartmeier |
 | 2003 | pf 随 FreeBSD 5.3 移植 | — | Hartmeier 本人提交 |
 | 2007-12 | pf 随 NetBSD 4.0 集成 | — | — |
-- OpenBSD “Only two remote holes” 声明 [EB/OL]. <https://www.openbsd.org/>；OpenBSD Security Advisories [EB/OL]. <https://www.openbsd.org/security.html>；CVE 数据库 [EB/OL]. <https://cve.mitre.org/>；W3Techs OS 市场占有率 [EB/OL]. <https://w3techs.com/technologies/overview/operating_system>；OpenBSD strlcpy(3) 手册页 [EB/OL]. <https://man.openbsd.org/strlcpy.3>；OpenSSH 项目 [EB/OL]. <https://www.openssh.com/>；freebsd.duckdb 查询 L1.1.2（来源：原材料/研究/bsd 仓库分析/数据分析/宏观趋势统计.md §L1.1.2） ［A］**OpenBSD 安全成果扩散时间线**：
+- OpenBSD “Only two remote holes” 声明 [EB/OL]. <https://www.openbsd.org/>；OpenBSD Security Advisories [EB/OL]. <https://www.openbsd.org/security.html>；CVE 数据库 [EB/OL]. <https://cve.mitre.org/>；W3Techs OS 市场占有率 [EB/OL]. <https://w3techs.com/technologies/overview/operating_system>；OpenBSD strlcpy(3) 手册页 [EB/OL]. <https://man.openbsd.org/strlcpy.3>；OpenSSH 项目 [EB/OL]. <https://www.openssh.com/>；freebsd.duckdb 查询 L1.1.2（来源：原材料/研究/bsd 仓库分析/数据分析/宏观趋势统计.md §L1.1.2） ［A］
+
+**OpenBSD 安全成果扩散时间线**：
 
 | 成果 | 引入日期 | commit hash | 关键人物 | 跨项目采纳情况 |
 | --- | --- | --- | --- | --- |
@@ -105,12 +122,12 @@ volume: 第10卷-openbsd的历史
 
 **史观**：
 
-- 总纲9 经验优先：总纲9 经验优先：ZFS 迁移与 OpenBSD 评估都来自动手记录与亲身使用，而非厂商宣传或抽象判断。（BSD Now EP324，[106.52-115.00]，L2）
-- 总纲8 本体论上各方平等：总纲8 本体论上各方平等：OpenBSD 的优点被承认、缺点被具体列出，不神话也不贬低任何一方。（BSD Now EP324，[501.72-909.04]，L2）
-- 总纲4 分离聚合是永恒规律：总纲4 分离聚合是永恒规律：ZFS 数据可从一台机器分离、在另一台聚合，硬件代际更替体现分离聚合的循环。（BSD Now EP324，[263.66-301.54]，L2）
-- 总纲12 科学是形式主义：总纲12 科学是形式主义：写时复制、紧急模式、slop 空间是文件系统对空间与安全的形式化约定。（BSD Now EP324，[1542.42-1671.52]，L2）
-- 总纲22 知识注定过时：总纲22 知识注定过时：OpenBSD 体验帖中列出的坏项可能已被修复，工具行为随版本变化，知识需持续更新。（BSD Now EP324，[898.80-921.40]，L2）
-- 总纲5 没有必然性，只有偶然性：总纲5 没有必然性，只有偶然性：能否顺利迁移取决于托盘规格、热插拔适配等偶然硬件条件，而非抽象必然。（BSD Now EP324，[142.44-153.60]，L2）
+- 总纲9 经验优先：ZFS 迁移与 OpenBSD 评估都来自动手记录与亲身使用，而非厂商宣传或抽象判断。（BSD Now EP324，[106.52-115.00]，L2）
+- 总纲8 本体论上各方平等：OpenBSD 的优点被承认、缺点被具体列出，不神话也不贬低任何一方。（BSD Now EP324，[501.72-909.04]，L2）
+- 总纲4 分离聚合是永恒规律：ZFS 数据可从一台机器分离、在另一台聚合，硬件代际更替体现分离聚合的循环。（BSD Now EP324，[263.66-301.54]，L2）
+- 总纲12 科学是形式主义：写时复制、紧急模式、slop 空间是文件系统对空间与安全的形式化约定。（BSD Now EP324，[1542.42-1671.52]，L2）
+- 总纲22 知识注定过时：OpenBSD 体验帖中列出的坏项可能已被修复，工具行为随版本变化，知识需持续更新。（BSD Now EP324，[898.80-921.40]，L2）
+- 总纲5 没有必然性，只有偶然性：能否顺利迁移取决于托盘规格、热插拔适配等偶然硬件条件，而非抽象必然。（BSD Now EP324，[142.44-153.60]，L2）
 
 **辨析**：
 
