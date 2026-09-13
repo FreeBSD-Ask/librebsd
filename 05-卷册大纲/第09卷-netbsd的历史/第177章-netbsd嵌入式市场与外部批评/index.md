@@ -8,34 +8,37 @@ volume: 第09卷-netbsd的历史
 
 ## 要点
 
-- 嵌入式部署记录与硬件文档考据——NetBSD 嵌入式部署记录（ports/* 目录）与硬件文档是研究嵌入式应用的一手史料；考据需对照多源档案交叉验证
-- 批评原始发言与邮件列表考据——批评 NetBSD 的原始发言与邮件列表讨论是研究外部批评的一手史料；考据需对照多源档案交叉验证
+- NetBSD 嵌入式部署记录（**ports/** 目录）与硬件支持文档是研究嵌入式应用的一手史料
+- 批评 NetBSD 的原始发言与邮件列表讨论是研究外部批评的一手史料
 - NetBSD 缺乏商业支持体系是嵌入式市场应用的障碍；2000 年 Wasabi Systems 成立，提供 NetBSD 商业支持、定制开发、咨询与培训；Wasabi 模式借鉴 Red Hat 商业模式但规模较小，主要客户为嵌入式设备厂商；Wasabi 贡献了 NetBSD ARM 移植、嵌入式优化等代码；Wasabi 模式是 NetBSD 早期商业-社区平衡的尝试，但因规模有限未能持续
-- 各项目发布数据与市场份额考据——NetBSD、FreeBSD、OpenBSD、Linux 在 1994-2004 年的发布数据与市场份额；考据需对照多源档案交叉验证
-- NetBSD 1.x 时期内核权限边界缺陷在嵌入式场景下具有特殊影响——NetBSD-SA1998-005（**mmap(2)** 设备驱动权限检查缺陷，本地用户可映射设备内存访问任意物理内存）、NetBSD-SA2000-001（**procfs(5)** 权限检查缺陷，本地用户可读取其他进程内存映射）、NetBSD-SA2001-009（SUID 程序执行与 **ptrace(2)** 竞态条
+- NetBSD、FreeBSD、OpenBSD、Linux 在 1994-2004 年的发布节奏与市场份额变化
+- NetBSD 1.x 时期内核权限边界缺陷在嵌入式场景下具有特殊影响——NetBSD-SA1998-005（**mmap(2)** 设备驱动权限检查缺陷，本地用户可映射设备内存访问任意物理内存）、NetBSD-SA2000-001（**procfs(5)** 权限检查缺陷，本地用户可读取其他进程内存映射）、NetBSD-SA2001-009（SUID 程序执行与 **ptrace(2)** 竞态条件
 
 ## 史料
 
-- [DB:references_fulltext:chapter_matches:chmatch_3996] 卷“第09卷-netbsd的历史”第 177 章，匹配置信度 1.0，原因：任务4 衍生组官方文档采集
+- NetBSD 官方嵌入式移植文档（**ports/** 目录）与硬件支持列表（PLATFORMS）；NetBSD、FreeBSD、OpenBSD 与 Linux 1994-2004 年发布公告档案；NetBSD-SA1998-005、NetBSD-SA2000-001、NetBSD-SA2001-009 安全公告原文
 
 ## 史观
 
-(待人工回填——详见子节文件史观/辨析字段)
+- 总纲第 4 条（分离聚合是永恒规律）：NetBSD 在嵌入式细分市场的深耕系从通用工作站市场分离后的再聚合——ports 架构矩阵的扩张与收缩即分合循环的物质层。
+- 总纲第 3 条（不存在进步，只有权力再分配）：1994-2004 年嵌入式市场份额的升降并非线性进步叙事，Wasabi Systems（2000 年成立、借鉴 Red Hat 模式、终未能持续）的商业兴衰即权力再分配的注脚。
+- 自反性声明：本章史观映射系基于项目统摄史观的具体时点释读，欢迎被超越。
 
 ## 辨析
 
 - 部署记录的完整性需考据——部分部署可能未被完整记录；需对照多源档案核实
-- Wasabi 成立的具体时间存在叙事分歧——部分资料称 2000 年，部分称 1999 年，需对照公司注册档案核验；Wasabi 衰退的具体时间与原因需考据。经 netbsd.duckdb netbsd-src 仓库 commits 表验证：Wasabi 相关 commit 最早可追溯至 2000-10-24（thorpej 性能计数器工具，署名 From Frank），2001-11-24 j
+- Wasabi 成立的具体时间存在叙事分歧——部分资料称 2000 年，部分称 1999 年，需对照公司注册档案核验；Wasabi 衰退的具体时间与原因需考据。经 netbsd.duckdb netbsd-src 仓库 commits 表验证：Wasabi 相关 commit 最早可追溯至 2000-10-24（thorpej 性能计数器工具，署名 From Frank），2001-11-24 jhawk 提交 Wasabi 版权声明更新（commit 记录见文献），与 Wasabi 运营期吻合
 - 市场份额数据的具体口径需考据——不同统计口径可能差异较大；需对照多源档案核实
-- 嵌入式设备是否普遍以 root 运行单一应用须考据——Dreamcast、Zaurus 等设备的具体权限配置须对照设备文档核验；“远程 → 本地 → 内核” 攻击链在嵌入式场景下的实际案例须考据——公开攻击案例可能有限，须对照安全研究报告核验；he 的 procfs 修复 commit `a685050c3f4b3919cc804eea7792397efc311b4e` 标注 "Fix a cri
+- 嵌入式设备是否普遍以 root 运行单一应用须考据——Dreamcast、Zaurus 等设备的具体权限配置须对照设备文档核验；“远程 → 本地 → 内核” 攻击链在嵌入式场景下的实际案例须考据——公开攻击案例可能有限，须对照安全研究报告核验；he 的 procfs 修复 commit `a685050c3f4b3919cc804eea7792397efc311b4e` 标注 “Fix a cri…”（引文系 commit subject 截断残留，全文须以 commit 记录原文为准）
 
 ## 文献
 
-- NetBSD 嵌入式史料分析［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
+- NetBSD-SA1998-005、NetBSD-SA2000-001、NetBSD-SA2001-009 公告原文；netbsd.duckdb netbsd-src 仓库 he procfs 修复 commit ［A］
+- NetBSD 嵌入式史料分析
 
 <!-- DB_REF:netbsd.duckdb -->
 > **数据库引用（netbsd.duckdb）**：本子节对应 netbsd 代码仓库。> 1998-2004 年间：549,070 次提交。> 仓库总览：1,999,412 次提交，1,545 位贡献者（contributors 表行数，1992-07-13 至 2026-08-24）。
-- NetBSD 外部批评史料分析［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
+- NetBSD 外部批评史料分析
 
 <!-- DB_REF:netbsd.duckdb -->
 > **数据库引用（netbsd.duckdb）**：本子节对应 netbsd 代码仓库。> 1993-2026 年间：1,999,408 次提交。> 仓库总览：1,999,412 次提交，1,545 位贡献者（contributors 表行数，1992-07-13 至 2026-08-24）。
@@ -43,14 +46,15 @@ volume: 第09卷-netbsd的历史
 
 <!-- DB_REF:netbsd.duckdb -->
 > **数据库引用（netbsd.duckdb）**：本子节对应 netbsd 代码仓库。> 1993-2026 年间：1,999,408 次提交。> 仓库总览：1,999,412 次提交，1,545 位贡献者（contributors 表行数，1992-07-13 至 2026-08-24）。
-- BSD 与 Linux 市场份额史料分析［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
+- BSD 与 Linux 市场份额史料分析
 
 <!-- DB_REF:freebsd.duckdb -->
 > **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 1994-2004 年间：279,033 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
-- NetBSD-SA1998-005、NetBSD-SA2000-001、NetBSD-SA2001-009 公告原文；netbsd.duckdb netbsd-src 仓库 he procfs 修复 commit ［A］
 
 <!-- DB_REF:netbsd.duckdb -->
 > **数据库引用（netbsd.duckdb）**：本子节对应 netbsd 代码仓库。> 1993-2026 年间：1,999,408 次提交。> 仓库总览：1,999,412 次提交，1,545 位贡献者（contributors 表行数，1992-07-13 至 2026-08-24）。
+
+（收录限定：本期为 BSDCan 2026 周六流多场演讲合并转写，与本章直接相关者仅 RiscBSD→acorn32 演化与 NetStation NFS 网络引导两段，其余 anyRAID、扩展错误消息、CHERI、pkg base 段落系同期演讲背景收录）
 
 <!-- PODCAST_REVIEW v20260829 -->
 <!-- 语义复核范围：YouTube EPmZ-dhntnkCQ（共 1 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
