@@ -3728,6 +3728,8 @@
   - [160 【Linux社区】sparse实测与linusnext树争议](./第20卷-linux社区史与比较研究/160-sparse实测与linusnext树争议.md)
   - [161 【Linux社区】AI内容政策与highmem路线图](./第20卷-linux社区史与比较研究/161-AI内容政策与highmem路线图.md)
   - [162 【Linux社区】文件系统维护门槛与stable标签](./第20卷-linux社区史与比较研究/162-文件系统维护门槛与stable标签.md)
+  - [163 【Linux社区】linusnext树创建与trivial政策](./第20卷-linux社区史与比较研究/163-linusnext树创建与trivial政策.md)
+  - [164 【Linux社区】AI审阅与维护者峰会存废](./第20卷-linux社区史与比较研究/164-AI审阅与维护者峰会存废.md)
 ## 读者指引（大纲侧）
 
 - 大纲侧手动维护区，脚本重跑保留。
