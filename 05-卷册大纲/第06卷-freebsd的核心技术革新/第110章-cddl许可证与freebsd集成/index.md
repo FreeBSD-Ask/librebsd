@@ -8,9 +8,9 @@ volume: 第06卷-freebsd的核心技术革新
 
 ## 要点
 
-- CDDL 与 GPL 不兼容争议从 2005 年 CDDL 发布持续至今（2025 年），核心事件时间线为：2004 年 12 月 CDDL 提交 OSI；2005 年 1 月 OSI 批准 CDDL；2005 年 6 月 OpenSolaris 发布；2005 年 11 月 ZFS 源码发布；2006 年 FSF 在许可证列表中标注 CDDL 为 GPL 不兼容；2007-2008 年 Pawe
-- OpenSolaris 时期（2005-2010 年）的 ZFS 一手史料面临严重的访问性问题：OpenSolaris 源码仓库（hg.opensolaris.org）于 2010 年 Oracle 收购后逐渐下线；Sun 官方文档站点（docs.sun.com）在 Oracle 收购后多次迁移，大量 ZFS 文档链接失效；OpenSolaris 邮件列表（opensolaris.org/os/c
-- Dawidek 的 ZFS 移植工作主要在 <freebsd-current@freebsd.org> 和 <freebsd-arch@freebsd.org> 邮件列表上公开讨论，关键邮件包括：2006 年末 Dawidek 宣布启动 ZFS 移植的邮件；2007 年 4 月 ZFS 代码导入 Perforce 仓库的通知；〔待核：原文截断，后文待回源〕
+- CDDL 与 GPL 不兼容争议从 2005 年 CDDL 发布持续至今（2025 年），核心事件时间线为：2004 年 12 月 CDDL 提交 OSI；2005 年 1 月 OSI 批准 CDDL；2005 年 6 月 OpenSolaris 发布；2005 年 11 月 ZFS 源码发布；2006 年 FSF 在许可证列表中标注 CDDL 为 GPL 不兼容；2007-2008 年 Pawel Dawidek 完成 ZFS 向 FreeBSD 的移植（2007-04-06 导入 freebsd-src 主干，2008-02 随 FreeBSD 7.0 发布，详见辨析与文献段著录）
+- OpenSolaris 时期（2005-2010 年）的 ZFS 一手史料面临严重的访问性问题：OpenSolaris 源码仓库（hg.opensolaris.org）于 2010 年 Oracle 收购后逐渐下线；Sun 官方文档站点（docs.sun.com）在 Oracle 收购后多次迁移，大量 ZFS 文档链接失效；OpenSolaris 邮件列表（opensolaris.org/os/community 等社区版面）档案亦随站点关闭而大量散佚，仅可经互联网档案馆等第三方存档部分回溯
+- Dawidek 的 ZFS 移植工作主要在 <freebsd-current@freebsd.org> 和 <freebsd-arch@freebsd.org> 邮件列表上公开讨论，关键邮件包括：2006 年末 Dawidek 宣布启动 ZFS 移植的邮件；2007 年 4 月 ZFS 代码导入 Perforce 仓库的通知；2007-04-06 ZFS 主干导入 freebsd-src 的提交通知（commit `f0a75d274af375d15b97b830966b99a02b7db911`，“Please welcome ZFS - The last word in file systems”，2007-04-06T01:09:06Z，详见辨析与文献段完整著录）
 
 ## 史料
 
@@ -23,13 +23,16 @@ volume: 第06卷-freebsd的核心技术革新
 
 ## 史观
 
-(待人工回填——详见子节文件史观/辨析字段)
+- 总纲第 24 条——许可证：CDDL 与 GPL 的互斥不是简单的“Sun 恶意”或“GPL 极端”，而是文件级 copyleft 与作品级 copyleft 两种设计哲学的根本冲突；FSF 的 GPL 不兼容分类虽非法院判决，却在社区中具有类似“准法律”的效力（详见 110.4 子节史观字段）
+- 总纲第 25 条——终结与延续：OpenSolaris 开源是 Sun 向开源转型的关键一刻，但转型未拯救 Sun——2010 年 Sun 被 Oracle 收购、OpenSolaris 被关闭；ZFS 是 OpenSolaris 遗产中生命力最持久的组件，后续发展（illumos/OpenZFS/FreeBSD ZFS）完全脱离了 Sun/Oracle 的控制，“创造者不必然是继承者”（详见 110.5/110.6 子节史观字段）
+- 总纲第 6 条——技术路线分化：Dawidek 以在 BSD 内核中模拟 Solaris API 的兼容层策略移植 ZFS 而非改写 ZFS 适配 BSD，使 FreeBSD 在其后 15 年持续从上游合并新功能而无需承担代码分叉维护成本，体现 BSD 内核工程文化的“最小侵入”原则（详见 110.6 子节史观字段）
+- 总纲第 3 条——形式主义膨胀：长达 20 年的 CDDL-GPL 争议未产生任何法院判例，社区经由技术架构（DKMS、独立代码库、分离分发）而非诉讼化解冲突；OpenSolaris 史料随单一商业实体战略转变而系统性散佚，其历史能被重建全靠社区分叉（illumos）、第三方存档与 BSD 世界的独立导入（详见 110.4/110.5 子节史观字段）
 
 ## 辨析
 
 - 需纠正一个常见误解：FreeBSD 之所以能集成 ZFS，并非因为 BSD 许可证 “比 GPL 更自由”，而是因为 BSD 许可证是 permissive（宽松许可）——它不对与之聚合分发的代码施加许可要求；GPL 是 copyleft 许可，要求衍生作品整体以 GPL 发布，因此与 CDDL 的文件级 copyleft 冲突；这不是 “自由程度” 的差异，而是 copyleft 边界设计的差异
-- 原文 50.5 节标题写 “2007 年 ZFS 开源至 OpenSolaris” 有事实错误——ZFS 于 2005 年 11 月开源，OpenSolaris 本身于 2005 年 6 月发布，2007 年并非 ZFS 开源年份；Pawel Dawidek 的 FreeBSD ZFS 移植 commit hash 经 freebsd.duckdb `commits` 表查询验证——FreeBSD src
-- 经 freebsd.duckdb `commits` 表与 `commit_files` 表交叉验证，Dawidek 的 ZFS 主干导入 commit 已确认为 `f0a75d274af375d15b97b830966b99a02b7db911`（author = committer = Pawel Jakub Dawidek，<pjd@FreeBSD.org>，author_date = commit
+- 原文 50.5 节标题写 “2007 年 ZFS 开源至 OpenSolaris” 有事实错误——ZFS 于 2005 年 11 月开源，OpenSolaris 本身于 2005 年 6 月发布，2007 年并非 ZFS 开源年份；Pawel Dawidek 的 FreeBSD ZFS 移植 commit hash 经 freebsd.duckdb `commits` 表查询验证——FreeBSD src 仓库中该 commit 为 `f0a75d274af375d15b97b830966b99a02b7db911`（2007-04-06T01:09:06Z，详见下行辨析与文献段著录）
+- 经 freebsd.duckdb `commits` 表与 `commit_files` 表交叉验证，Dawidek 的 ZFS 主干导入 commit 已确认为 `f0a75d274af375d15b97b830966b99a02b7db911`（author = committer = Pawel Jakub Dawidek，<pjd@FreeBSD.org>，author_date = commit_date = 2007-04-06T01:09:06Z，与文献段两处完整著录一致）
 
 ## 文献
 

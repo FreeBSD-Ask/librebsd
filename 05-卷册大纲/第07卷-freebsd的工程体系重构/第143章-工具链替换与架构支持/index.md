@@ -47,22 +47,25 @@ volume: 第07卷-freebsd的工程体系重构
 <!-- dangan-20260908 消解回写 -->
 - Google.. Clang is now used to build Chrome for Windows [EB/OL]. LLVM Project Blog, 2018-03-05[EB/OL]. 2018. ［DKC-2149→fulltext:6085］
 <!-- /dangan-20260908 -->
-## 142.10.4 架构支持对迁移时间线的效应
+## 143.10.4 架构支持对迁移时间线的效应
 
-- 要点：非 x86 架构的 Clang 支持进度是 GCC 从 FreeBSD base 完全移除的主要阻塞因素。迁移的关键时间节点如下：①2009.2——i386/amd64 内核可启动
+- 要点：非 x86 架构的 Clang 支持进度是 GCC 从 FreeBSD base 完全移除的主要阻塞因素。迁移的关键时间节点如下：①2009.2——i386/amd64 内核可启动（Divacky）；②2012.1——FreeBSD 9.0 发布，Clang 导入 base 但 GCC 默认；③2012.11——x86 -CURRENT 默认 Clang；④2014.1——FreeBSD 10.0 发布，i386/amd64 默认 Clang
 - OpenBSD Project. OpenBSD 6.2 Release Notes [Z]. 2017-10-09；Nagy R. switch the default compiler on amd64 and i386 to clang [EB/OL]. openbsd-cvs, 2017-07-26；Schwarze I. mandoc history [EB/OL]. mandoc.bsd.lv；OpenBSD Project. LibreSSL [EB/OL]. libressl.org, 2014. ［A］
     FreeBSD 社区论文与演讲 [179]，[179] Davi
 - Linux Kernel Project. COPYING: Linux Kernel Licensing (GPLv2 only)[Z]. kernel.org；Linux Kernel Documentation. Building Linux with Clang/LLVM [EB/OL]. kernel.org/doc；Free Software Foundation. GCC Runtime Library Exception [Z]. gcc.gnu.org.［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］. 2008-2011 年间系列文章。〔禁引来源·仅作线索·须与一手史料交叉验证·不得直接采信〕［C］
-    FreeBSD 社区论文与演讲 [179]，[179] David Carlier. LLVM and the state of sanitizers on BSD [C]//AsiaBSDCon 2019. [S.l.]: [s.n.], 2019. 获取路径：<<https://papers.freebsd.org/2019/asiabsdcon/carlier-llvm_and_the_state_of_sanitizers_on_b>
-- Torvalds L. LKML postings on BSD license [Z]. lkml.org, various dates；Williams S. Free as in Freedom: Richard Stallman‘s Crusade for Free Software [M]. Sebastopol: O’Reilly, 2002. ISBN: 0-596-00287-4.［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
+    FreeBSD 社区论文与演讲 [179]，[179] David Carlier. LLVM and the state of sanitizers on BSD [C]//AsiaBSDCon 2019. [S.l.]: [s.n.], 2019. 获取路径：<https://papers.freebsd.org/2019/asiabsdcon/carlier-llvm_and_the_state_of_sanitizers_on_bsd/>
+- Torvalds L. LKML postings on BSD license [Z]. lkml.org, various dates；Williams S. Free as in Freedom: Richard Stallman’s Crusade for Free Software [M]. Sebastopol: O’Reilly, 2002. ISBN: 0-596-00287-4.［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
 
-## 142.7.4 史料辨析
+## 143.7.4 史料辨析
 
+- 要点：中文社区对 BSD 许可证的认知深受 Linux/GPL 话语影响（红旗 Linux、中国开源软件推进联盟等渠道），BSD 家族在中国用户基数较小、声音相对微弱；早期中文启蒙材料（如阮一峰 2008-2011 年博客）对 BSD 许可证的描述带有时代局限，其史实主张须以一手史料独立核验，阮一峰系禁引来源，仅作观点元引用考据。
 - Torvalds L. LKML postings on BSD license and GPLv3 [Z]. lkml.org, 1999-2007；Williams S, DiBona C, et al. Open Sources 2.0: The Continuing Evolution [M]. Sebastopol: O'Reilly, 2005. ISBN: 0-596-00802-3.［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
-    FreeBSD 社区论文
+    FreeBSD 社区论文与演讲 [179]，[179] David Carlier. LLVM and the state of sanitizers on BSD [C]//AsiaBSDCon 2019. [S.l.]: [s.n.], 2019.
 - FreeBSD 9.1/10.0 Release Notes [Z]；Chisnall D. GNU-Free C++11 Stack entry in FreeBSD Quarterly Status Report [R]. 2012 Q1；LLVM Project. libc++ C++ Standard Library [EB/OL]. libcxx.llvm.org.［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
 
-## 142.9.2 lld 链接器替换 GNU ld
+## 143.9.2 lld 链接器替换 GNU ld
+
+- 要点：lld 自 FreeBSD 12.0 起成为 x86/armv7 默认链接器，替换 GNU ld；此后逐架构推进，至 13.0 时期随过时 GNU 工具移除完成主体切换（详见本章要点时间线⑥⑧）。lld 替换消除了 base 中对 GNU binutils 链接器组件的许可依赖，并与 ELF Tool Chain 工具更新同步推进。
 
 ## 自反性声明
 
@@ -73,30 +76,19 @@ volume: 第07卷-freebsd的工程体系重构
 
 **要点**：
 
-- Raymond Chen 复述复杂系统的基本失效模式定理：任何复杂系统都处于某种失效模式，局部补偿使问题潜伏，改变只会带来更复杂的反制。（BSD Now EP631，[138.14-224.48]，L1）
 - Dr. Brian Robert Callahan 为 QBE 的 ARM64 后端编写窥孔优化，消除冗余寄存器拷贝与可即时数化的算术指令，说明 ARM64 定长指令下只能通过删除指令获利。（BSD Now EP631，[286.40-737.76]，L1）
-- FreeBSD 笔记本作者发现 Nvidia 驱动会覆盖 Xorg 与 DRM 模块的文件，导致 GL 支持判定错乱，移除 Nvidia 驱动并重装 Intel 与 DRM 驱动后恢复正常。（BSD Now EP631，[765.84-908.32]，L1）
-- 以 devd 规则按 USB 厂商与产品 ID 建立符号链接，并把链接置于 jail 根目录而非 /dev，可将设备以稳定名称传入 FreeBSD jail。（BSD Now EP631，[921.84-1316.76]，L1）
-- Chris Siebenmann 澄清 ZFS 快照并非完全不可变，快照元数据会随独有空间统计、快照删除与重命名而更新，只有文件系统状态被冻结。（BSD Now EP631，[1321.58-1407.46]，L1）
-- 将 PeerTube 从 Debian 迁移到 FreeBSD 的过程以 UFS 而非 ZFS 作为客户机文件系统，以避免在 OmniOS 的 ZFS 上嵌套 ZFS。（BSD Now EP631，[1417.28-1794.48]，L1）
 
 **史料**：
 
-- Raymond Chen 于 devblogs.microsoft.com 的《The fundamental failure mode theorem》。（BSD Now EP631，[138.14-224.48]，L1）
 - Dr. Brian Robert Callahan 博客 QBE ARM64 窥孔优化系列。（BSD Now EP631，[286.40-737.76]，L1）
-- Chris Siebenmann 博客 ZFS snapshots aren't as immutable as I thought。（BSD Now EP631，[1321.58-1407.46]，L1）
-- 关于 FreeBSD jail 设备稳定名称与 PeerTube 迁移的两篇博客。（BSD Now EP631，[921.84-1794.48]，L1）
 
 **史观**：
 
-- 总纲5 没有必然性，只有偶然性：总纲5 没有必然性，只有偶然性：基本失效模式定理强调复杂系统运行状态由具体故障与补偿关系决定，而非设计意图的必然实现。（BSD Now EP631，[138.14-224.48]，L1）
-- 总纲10 动手者创造历史：总纲10 动手者创造历史：笔记本作者通过动手排查定位 Nvidia 与 DRM 驱动文件覆盖问题，而非依赖文档结论。（BSD Now EP631，[874.40-908.32]，L1）
-- 总纲25 逻辑是形式主义而非世界本身的结构：总纲25 逻辑是形式主义而非世界本身的结构：ZFS 快照的不可变是概念化标签，其元数据实现仍随操作可变，说明概念与实现之间的形式主义距离。（BSD Now EP631，[1324.62-1407.46]，L1）
+- 总纲10 动手者创造历史：Callahan 亲手为 QBE ARM64 后端编写窥孔优化，以逐条删除指令获取性能，属编译器一线动手者的直接经验。（BSD Now EP631，[286.40-737.76]，L1）
 
 **辨析**：
 
-- 转录将 Raymond Chen 所属微软博客名称与若干命令参数出现错词，具体规则与命令须以原文核验。　[存疑脚注] 命令与规则细节存在转写歧义，须以原文核验（BSD Now EP631，[132.46-143.76]，L4）
-- PeerTube 迁移文章作者在转录中记作 Tom Fatigue，疑为主持人 Tom Jones 或他人，署名须以原文核验。　[存疑脚注] 作者署名存在转写歧义（BSD Now EP631，[1417.28-1432.32]，L4）
+- 本块原注入六条要点中五条（失效模式定理、Nvidia/Xorg 驱动、jail 设备名、ZFS 快照、PeerTube 迁移）与本章工具链与架构主题无关，已按核查报告移除，原文见 BSD Now EP631 转写；Callahan 系列优化细节须以其博客原文核验。
 
 **文献**：
 
