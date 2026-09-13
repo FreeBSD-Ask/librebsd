@@ -88,7 +88,13 @@ volume: 第08卷-freebsd的范式转换
 [] Bernstein D J. daemontools [EB/OL]. [2026-07-22]. <https://cr.yp.to/daemontools.html>.
 [] Raymond E S. The Art of Unix Programming [M]. Boston: Addison-Wesley, 2003.
 [] Kernighan B W, Pike R. The UNIX Programming Environment [M]. Englewood Cliffs: Prentice Hall, 1984.
-[] Remnant S J. Upstart: A replacement for the init daemon [EB/OL]. (2006)[2026-07-22]. <https://wiki.ubuntu.com/ReplacementInitDaemon>.> ## 不同时期人员的采访录（详见 [采访录.md](采访录.md)）## 第 68B.13 节 媒体反响与社区舆论（详见 [媒体反响与社区舆论.md](媒体反响与社区舆论.md)）---**【本节文献综述】** 详见 [04-现代研究文献/05-参考文献全文数据库/references_fulltext.db](04-现代研究文献/05-参考文献全文数据库/references_fulltext.db) `chapter_reviews` 表（id=13）---**补充证据（基于全文数据库修订）**本次修订从全文数据库补充 4 篇新匹配文献的证据。**新增核心事实**文献 (asiabsdcon, 2015, p.5) 指出：FreeBSD 9.2-RELEASE，该文献的引用为该主题提供了相关学术背景。文献 (asiabsdcon, 2015, p.5) 指出：FreeBSD 10.1-RELEASE，该文献的引用为该主题提供了相关学术背景。**新增技术**：ipfw 防火墙（BSD 4.4 引入内核级包过滤，需启用 IPFIREWALL 选项）；TCP/IP 网络管理信息库（MIB-II）标准化；UDP 无连接数据报通信实现；AsiaBSDCon 2015 上 Go 语言内容过滤软件在 FreeBSD 的移植；top 命令 CPU 使用率报告改进。
+[] Remnant S J. Upstart: A replacement for the init daemon [EB/OL]. (2006)[2026-07-22]. <https://wiki.ubuntu.com/ReplacementInitDaemon>.> ## 不同时期人员的采访录（详见 [采访录.md](采访录.md)）
+
+---
+
+**【本节文献综述】** 详见 [04-现代研究文献/05-参考文献全文数据库/references_fulltext.db](04-现代研究文献/05-参考文献全文数据库/references_fulltext.db) `chapter_reviews` 表（id=13）---**补充证据（基于全文数据库修订）**
+
+本次修订从全文数据库补充 4 篇新匹配文献的证据。**新增核心事实**文献 (asiabsdcon, 2015, p.5) 指出：FreeBSD 9.2-RELEASE，该文献的引用为该主题提供了相关学术背景。文献 (asiabsdcon, 2015, p.5) 指出：FreeBSD 10.1-RELEASE，该文献的引用为该主题提供了相关学术背景。**新增技术**：ipfw 防火墙（BSD 4.4 引入内核级包过滤，需启用 IPFIREWALL 选项）；TCP/IP 网络管理信息库（MIB-II）标准化；UDP 无连接数据报通信实现；AsiaBSDCon 2015 上 Go 语言内容过滤软件在 FreeBSD 的移植；top 命令 CPU 使用率报告改进。
 
 **新增时间线事件**：〔订正：原“1991 年……王波《FreeBSD 使用大全》出版”句纪年疑讹已删〕2015 年 AsiaBSDCon 2015 展示 Go 语言内容过滤软件在 FreeBSD 上的实现。<!-- DB_REF:freebsd.duckdb -->
 > **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。

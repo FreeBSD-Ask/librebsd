@@ -16,14 +16,14 @@ volume: 第07卷-freebsd的工程体系重构
 
 ## 史观
 
-- 总纲第 10 条——边缘者贡献：编译器迁移是典型的 “基础设施工程”——没有耀眼的新功能发布，没有媒体关注，只有经年累月的 bug 修复和兼容性调整。Divacky（2009 年首告内核可启动时甚至不是全职 committer）、Andric（做了最多日常版本维护和 bug 修复的无名英雄）、Worach（测试和补丁贡献者）等人的工作往往不在聚光灯下，但他们是迁移真正的基石。
+- 总纲第 10 条——动手者创造历史：编译器迁移是典型的 “基础设施工程”——没有耀眼的新功能发布，没有媒体关注，只有经年累月的 bug 修复和兼容性调整。Divacky（2009 年首告内核可启动时甚至不是全职 committer）、Andric（做了最多日常版本维护和 bug 修复的无名英雄）、Worach（测试和补丁贡献者）等人的工作往往不在聚光灯下，但他们是迁移真正的基石。
   - 辨析：Dav
-- 总纲第 10 条——边缘者贡献：每个 GNU 工具的替换都是一个独立的小型工程项目，由 1-2 名核心开发者主导，历经数年渐进完成。这些工具替换工作在 Release Notes 中仅占一行，但背后是数百个 commit 和数千小时的测试工作。
+- 总纲第 10 条——动手者创造历史：每个 GNU 工具的替换都是一个独立的小型工程项目，由 1-2 名核心开发者主导，历经数年渐进完成。这些工具替换工作在 Release Notes 中仅占一行，但背后是数百个 commit 和数千小时的测试工作。
   - 辨析：BSD sort 的主要开发者在 Q1 2012 status report 中未明确署名（仅列为项目条目），需对照 SVN 历史确认具体贡
-- 总纲第 25 条——终结与延续：dialog 移除是一个时代的终结——从 1992/1993 年 FreeBSD 创立以来，GPL 代码（GCC、gdb、binutils、groff、make、dialog、grep、sort、patch、BIND、texinfo、rcs 等）一直是 FreeBSD base 的重要组成部分（CSRG 时代 BSD 即包含 GCC 和 GNU 工具）。2024 年
-- 总纲第 17 条——软件工程：编译速度是影响开发者生产力的关键因素——Clang 的编译速度优势在 FreeBSD 这类需频繁从源码构建整个系统的 OS 项目中尤为明显（buildworld 时间缩短对开发者体验有直接影响）。但运行时性能在服务器/生产环境中通常比编译速度更重要，这也是为什么 Clang 运行时性能追赶花费了近十年时间才达到与 GCC 持平。
+- 总纲第 3 条——不存在进步，只有权力再分配（原挂“总纲第 25 条——终结与延续”系伪标签，依核查报告改挂）：dialog 移除是一个时代的终结——从 1992/1993 年 FreeBSD 创立以来，GPL 代码（GCC、gdb、binutils、groff、make、dialog、grep、sort、patch、BIND、texinfo、rcs 等）一直是 FreeBSD base 的重要组成部分（CSRG 时代 BSD 即包含 GCC 和 GNU 工具）。2024 年
+- 软件工程（专题语，不设总纲条号；原挂“总纲第 17 条”系伪标签，依核查报告订正）：编译速度是影响开发者生产力的关键因素——Clang 的编译速度优势在 FreeBSD 这类需频繁从源码构建整个系统的 OS 项目中尤为明显（buildworld 时间缩短对开发者体验有直接影响）。但运行时性能在服务器/生产环境中通常比编译速度更重要，这也是为什么 Clang 运行时性能追赶花费了近十年时间才达到与 GCC 持平。
   - 辨析：基准测试结果高度依赖测试
-- 总纲第 17 条——软件工程：双编译器支持虽然增加了代码复杂度，却迫使内核代码更符合标准 C、减少对编译器特定行为的依赖，长期来看提高了代码质量。迁移完成后，Clang 独有的安全工具（CFI、sanitizers）为 FreeBSD 内核安全加固提供了 GCC 生态无法提供的能力。
+- 软件工程（专题语，不设总纲条号；原挂“总纲第 17 条”系伪标签，依核查报告订正）：双编译器支持虽然增加了代码复杂度，却迫使内核代码更符合标准 C、减少对编译器特定行为的依赖，长期来看提高了代码质量。迁移完成后，Clang 独有的安全工具（CFI、sanitizers）为 FreeBSD 内核安全加固提供了 GCC 生态无法提供的能力。
   - 辨析：Linux 内核 Clang 编译的许多问题（如 variable length arrays in
 
 ## 辨析
@@ -43,23 +43,23 @@ volume: 第07卷-freebsd的工程体系重构
 - FreeBSD Quarterly Status Report 2012 Q1 [R]；Chisnall D. LLVM in the FreeBSD Toolchain [C]//AsiaBSDCon 2014（作者署名 David Chisnall）；Divacky R. 2009 kernel announcement [EB/OL]；Davis B. 2012 default announcement [EB/OL].
 - FreeBSD 10.0-RELEASE Announcement [Z]. 2014-01-20；Giffuni P. [CFT] WITH_BSD_PATCH [EB/OL]. freebsd-current, 2013-01-29；FreeBSD Quarterly Status Report 2012 Q1 [R]. ［A］
 
-## 143.12.3 被忽视的测试者和 ports 贡献者
+## 144.12.3 被忽视的测试者和 ports 贡献者
 
 - 要点：Clang/LLVM 迁移的成功不仅依赖 base 系统 committer，大量 ports 维护者和测试者的工作同样不可或缺。迁移期间需要修复数千个 ports 软件的 Clang 兼
 - Linuxiac. FreeBSD Base System Is Now GPL-Free [EB/OL]. linuxiac.com, 2024-07-17；FreeBSD Git repository. dialog removal commit [Z]. cgit.freebsd.org/src, 2024. ［A］
 
-## 143.13.2 许可证纯洁化的法律里程碑意义
+## 144.13.2 许可证纯洁化的法律里程碑意义
 
-- 要点：FreeBSD base 系统 GPL 代码清零具有重要的法律和生态里程碑意义：① 法律确定性——商业用户可确信 FreeBSD base 不包含 GPLv2/v3 代码，不存在 GPL 许可证合规风险（除〔待核：原文截断〕
+- 要点：FreeBSD base 系统 GPL 代码清零具有重要的法律和生态里程碑意义：① 法律确定性——商业用户可确信 FreeBSD base 不包含 GPLv2/v3 代码，不存在 GPL 许可证合规风险（除〔存疑：原文截断，回源补全待考〕
 - Clang Team. Clang Features and Goals: Fast compiles and Low Memory Use [EB/OL]. clang.llvm.org/features.html, 2007；Larabel M. GCC 4.9 VS. LLVM Clang 3.5 Benchmarks [EB/OL]. OpenBenchmarking.org, 2014-04-14；Larabel M. LLVM Clang 16 vs. GCC 13 Performance [EB/OL]. Phoronix, 2023-05-11.［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］. wiki.freebsd.org；LLVM Project. Clang Control Flow Integrity [EB/OL]. clang.llvm.org/docs/ControlFlowIntegrity.html. ［B］
 
-## 143.14.3 静态分析与工具链质量工具
+## 144.14.3 静态分析与工具链质量工具
 
 - 要点：Clang/LLVM 带来的不仅是编译器替换，更包括一系列基于 Clang AST 的代码质量工具：Clang Static Analyzer（静态分析器，可在编译时检测空指针解引用、内存泄漏、
 - 原材料/哲学/项目统摄史观/第 25 章.md（总纲第 13 条）；Free Software Foundation. GNU General Public License Version 3 [Z]. 2007-06-29（§11）；Apache Software Foundation. Apache License, Version 2.0 [Z]. 2004-01（§3）.［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
 - 原材料/哲学/项目统摄史观/第 25 章.md（总纲第 19 条）；原材料/哲学/项目统摄史观/第 19 章.md（19.2、19.3 节）. ［A］
 
-## 143.15.3 总纲第 21 条审视——革命与改革的方法论分歧
+## 144.15.3 总纲第 21 条审视——革命与改革的方法论分歧
 
 - 要点：总纲第 21 条断言“革命与改革是历史方法论的分歧。Linux 靠革命，BSD 靠改革。改革的困难远高于革命”。以此审视 FreeBSD 许可证纯洁化工程，可见其方法论本质是典型的“改革”而非“革命”——FreeBSD 采取“导入 → 可选 → 默认 → 移除”四阶段渐进策略（以 GCC 为例：2009 可编译 →2012 base 可选 →2014 默认 →
 - Free Software Foundation. 各类许可证及其评论 [EB/OL]. **<https://www.gnu.org/licenses/license-list.html**>（2026-07-23 核验）；Free Software Foundation. GNU General Public License Version 3 [Z]. 2007-06-29；Apache Software Foundation. Apache License, Version 2.0 [Z]. 2004-01. ［A］
