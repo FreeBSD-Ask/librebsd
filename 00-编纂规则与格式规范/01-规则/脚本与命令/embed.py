@@ -4,24 +4,31 @@
 
 用途：
   把 `重构2026/data/catalog.json`（语义数据中枢）序列化后重写
-  `重构2026/index.html` 的 `var DATA = {...};` 行（发布态装配）。
-  单体 HTML 交付物不变：除 DATA 行外其余位零改动。
-  构建幂等：同一 catalog 两次运行产物位相同（diff 为空）。
+  `重构2026/index.html` 的压缩数据块 `<script type="application/gzip+base64" id="opt-data-blob">`（发布态装配）。
+  单体 HTML 交付物不变：除数据块内容外其余位零改动。
+  构建幂等：同一 catalog 两次运行产物位相同（diff 为空；gzip 头 mtime 固定为 0）。
 
 流程：
   1) 校验 catalog 结构（必需字段 + persons 数量 > 0）；
-  2) 定位 index.html 的 `var DATA = ...;` 声明（正则锚定，标记块外零触碰）；
-  3) 以 `json.dumps(..., ensure_ascii=False, separators=(",", ":"))` 序列化；
+  2) 定位 index.html 的压缩数据块标记（正则锚定，标记外零触碰）；
+  3) 以 `json.dumps(..., ensure_ascii=False, separators=(",", ":"))` 序列化，
+     gzip -9 压缩（mtime=0 保证幂等）、base64 按 120 列折行；
   4) 写回（UTF-8 无 BOM、LF）；
   5) 输出 SHA-256 摘要供 changelog 审计。
 
+  历史（2026-09-13 O-2 前）：数据载体为 behavior-layer 内 `var DATA = {...};` 字面量。
+  O-2（2026-09-13 批复施工）后改为压缩数据块 + 运行时 DecompressionStream 异步装配，
+  浏览器端装载器见 index.html 数据联动 IIFE 开头。
+
 用法：
   python embed.py              # 装配（默认）
-  python embed.py --check      # 仅检测 catalog 与 html 内嵌 DATA 是否一致（漂移检测）
+  python embed.py --check      # 仅检测 catalog 与内嵌数据块是否一致（漂移检测）
 
 规则依据：流程规则.md「重构大纲目录口径同步规则」→「DATA 数据完整性门禁」小节。
 """
 import argparse
+import base64
+import gzip
 import hashlib
 import io
 import json
@@ -35,7 +42,26 @@ REPO = pathlib.Path(__file__).resolve().parents[3]
 CATALOG = REPO / "08-核查报告与多轮复核" / "重构2026" / "data" / "catalog.json"
 INDEX = REPO / "08-核查报告与多轮复核" / "重构2026" / "index.html"
 
-DATA_RE = re.compile(r"(var\s+DATA\s*=\s*)(\{.*?\})(;\s*(?=\n\s*var\s+\w+\s*=|$))", re.S)
+# 压缩数据块标记（2026-09-13 O-2 起；历史载体 var DATA 字面量已废弃）
+BLOB_RE = re.compile(
+    r'(<script type="application/gzip\+base64" id="opt-data-blob">\n)(.*?)(\n</script>)', re.S)
+
+
+def serialize_content(content):
+    return json.dumps(content, ensure_ascii=False, separators=(",", ":"))
+
+
+def encode_blob(serialized: str) -> str:
+    """gzip -9（mtime=0 幂等）→ base64 → 120 列折行。"""
+    gz = gzip.compress(serialized.encode("utf-8"), 9, mtime=0)
+    b64 = base64.b64encode(gz).decode("ascii")
+    return "\n".join(b64[i:i + 120] for i in range(0, len(b64), 120))
+
+
+def decode_blob(blob_body: str):
+    """数据块正文（折行 base64）→ JSON 对象。任一步失败抛异常。"""
+    raw = base64.b64decode(re.sub(r"\s+", "", blob_body))
+    return json.loads(gzip.decompress(raw).decode("utf-8"))
 
 
 def read_text(p):
@@ -89,15 +115,18 @@ def sync_meta_triple(html: str) -> str:
 def cmd_check():
     data = load_catalog()
     html = read_text(INDEX)
-    m = DATA_RE.search(html)
+    m = BLOB_RE.search(html)
     if not m:
-        sys.exit("错误：index.html 未定位 var DATA 声明")
-    embedded = json.loads(m.group(2))
-    # 比较内容字段（catalog 的 $schema/version 为源文件元数据，不在内嵌 DATA 中）
+        sys.exit("错误：index.html 未定位压缩数据块 opt-data-blob")
+    try:
+        embedded = decode_blob(m.group(2))
+    except Exception as e:
+        sys.exit(f"错误：数据块解码失败：{e}")
+    # 比较内容字段（catalog 的 $schema/version 为源文件元数据，不在内嵌数据中）
     content_data = {k: v for k, v in data.items() if k not in ("$schema", "version")}
     content_embedded = {k: v for k, v in embedded.items() if k not in ("$schema", "version")}
     same = content_embedded == content_data
-    print(f"catalog 与内嵌 DATA 一致性：{'✅ 一致' if same else '❌ 漂移'}")
+    print(f"catalog 与内嵌数据块一致性：{'✅ 一致' if same else '❌ 漂移'}")
     if not same:
         # 输出首个差异键
         for k in content_data:
@@ -114,21 +143,22 @@ def cmd_check():
 
 def cmd_embed():
     data = load_catalog()
-    # 内嵌 DATA 只承载内容字段（$schema/version 为源元数据）
+    # 内嵌数据只承载内容字段（$schema/version 为源元数据）
     content = {k: v for k, v in data.items() if k not in ("$schema", "version")}
     html = read_text(INDEX)
-    m = DATA_RE.search(html)
+    m = BLOB_RE.search(html)
     if not m:
-        sys.exit("错误：index.html 未定位 var DATA 声明")
-    serialized = json.dumps(content, ensure_ascii=False, separators=(",", ":"))
-    new_html = html[:m.start(2)] + serialized + html[m.end(2):]
+        sys.exit("错误：index.html 未定位压缩数据块 opt-data-blob")
+    serialized = serialize_content(content)
+    body_new = encode_blob(serialized)
+    new_html = html[:m.start(2)] + body_new + html[m.end(2):]
     # 元数据口径同步（og/meta/JSON-LD）
     new_html = sync_meta_triple(new_html)
     if new_html == html:
-        print("embed：无变更（catalog 与内嵌 DATA 已一致，幂等）")
+        print("embed：无变更（catalog 与内嵌数据块已一致，幂等）")
     else:
         write_text(INDEX, new_html)
-        print(f"embed：已装配（DATA 段 {len(m.group(2))} → {len(serialized)} 字符）")
+        print(f"embed：已装配（数据块正文 {len(m.group(2))} → {len(body_new)} 字符）")
     digest = hashlib.sha256(serialized.encode("utf-8")).hexdigest()
     print(f"SHA-256（序列化 DATA）：{digest[:16]}…")
     return 0
