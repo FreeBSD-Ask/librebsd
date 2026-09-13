@@ -3653,6 +3653,12 @@
   - [85 【Linux社区】包容术语v3定稿与graylist](./第20卷-linux社区史与比较研究/85-包容术语v3定稿与graylist.md)
   - [86 【Linux社区】TAB2020选举与代码退役提案](./第20卷-linux社区史与比较研究/86-TAB2020选举与代码退役提案.md)
   - [87 【Linux社区】linux-issues列表与reporting转正](./第20卷-linux社区史与比较研究/87-linux-issues列表与reporting转正.md)
+  - [88 【Linux社区】reporting-issues转正与eBPF边界之争](./第20卷-linux社区史与比较研究/88-reporting-issues转正与eBPF边界之争.md)
+  - [89 【Linux社区】Rust大辩论与背光uAPI](./第20卷-linux社区史与比较研究/89-Rust大辩论与背光uAPI.md)
+  - [90 【Linux社区】测试标准化与评审付费之辩](./第20卷-linux社区史与比较研究/90-测试标准化与评审付费之辩.md)
+  - [91 【Linux社区】评审标签改革与Link标签溯源](./第20卷-linux社区史与比较研究/91-评审标签改革与Link标签溯源.md)
+  - [92 【Linux社区】上游优先之辩与块层API归属](./第20卷-linux社区史与比较研究/92-上游优先之辩与块层API归属.md)
+  - [93 【Linux社区】评审者稀缺与Acked-by论战收束](./第20卷-linux社区史与比较研究/93-评审者稀缺与Acked-by论战收束.md)
 ## 读者指引（大纲侧）
 
 - 大纲侧手动维护区，脚本重跑保留。
