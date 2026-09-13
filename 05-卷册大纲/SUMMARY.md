@@ -3764,6 +3764,8 @@
   - [198 【Linux社区】kernelorg年报与C去UB进度](./第20卷-linux社区史与比较研究/198-kernelorg年报与C去UB进度.md)
   - [193 【Linux社区】维护门槛与无声离场证言](./第20卷-linux社区史与比较研究/193-维护门槛与无声离场证言.md)
   - [196 【Linux社区】THEREST分流与generatedcontent](./第20卷-linux社区史与比较研究/196-THEREST分流与generatedcontent.md)
+  - [202 【Linux社区】TAB得票排名与文件系统划分](./第20卷-linux社区史与比较研究/202-TAB得票排名与文件系统划分.md)
+  - [203 【Linux社区】文件系统威胁模型与RustAPI债](./第20卷-linux社区史与比较研究/203-文件系统威胁模型与RustAPI债.md)
 ## 读者指引（大纲侧）
 
 - 大纲侧手动维护区，脚本重跑保留。
