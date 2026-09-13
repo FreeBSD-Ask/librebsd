@@ -3,7 +3,7 @@
 > 来源：ksummit-discuss p114（50 封全读，2018-10-18/23 为主，夹杂 2014-05 档案信与回归追踪通讯）。
 > 判定：49 CAND / 1 NV。主题分布：Greg解释文档系列 8、保密承诺与报案权 11、CallToAction 5、MagnaCarta纲领 10、GITPULL与冷却令 5、程序之辩与Samba先例 2、2014档案与回归追踪 6、email措辞收束 1。
 
-## 62.1 Rowand 收束与 Greg KH [PATCH 0/7] CoC 解释文档系列
+## 62.1 【Linux社区】Rowand 收束与 Greg KH [PATCH 0/7] CoC 解释文档系列
 
 2018-10-20 CoC 争议的制度化出口：Greg KH 七补丁系列（Mason 删维护者责任段+90 人 Ack 名单+153 行 Interpretation 文档全文——执法仅最后手段/TAB 委员会/季度匿名报告）+Rowand 对 email 措辞之辩的收束确认。
 
@@ -17,7 +17,7 @@
 - 【Linux社区】[PATCH 6/7] 联系邮箱改为 CoC 委员会 conduct@kernel.org（不再整个 TAB） `<!-- ROW_MINE: ksummit-discuss.messages.349914 -->`
 - 【Linux社区】[PATCH 7/7] Greg 自任 CoC 文件维护者（MAINTAINERS 条目 S: Supported）——“文件是我引入的、愿意维护” `<!-- ROW_MINE: ksummit-discuss.messages.349915 -->`
 
-## 62.2 保密承诺、执法报案权与 LF 律师审查
+## 62.2 【Linux社区】保密承诺、执法报案权与 LF 律师审查
 
 PATCH 6/7 保密条款引出的法理交锋：Cox 的数据保护法/天主教会对比例证与报案权主张、Trond 的法域管辖与 terms-of-use 替代方案、Tim Bird 的在线范围论、Bottomley 合并方案与受害者保密意愿论、LF 律师审查的 Ted-Greg 双重确认。
 
@@ -33,7 +33,7 @@ PATCH 6/7 保密条款引出的法理交锋：Cox 的数据保护法/天主教�
 - 【Linux社区】Ted：LF 律师已审 CoC 与本补丁集、发送之前 `<!-- ROW_MINE: ksummit-discuss.messages.349929 -->`
 - 【Linux社区】Greg 确认：“That is correct.”（LF 律师审查属实） `<!-- ROW_MINE: ksummit-discuss.messages.349931 -->`
 
-## 62.3 NeilBrown Call to Action 与 Ted 权威回应
+## 62.3 【Linux社区】NeilBrown Call to Action 与 Ted 权威回应
 
 NeilBrown 的四 hashtag 宣言（#Iobject/#Iforgive/#Iapologise/#Isupportreversion）与各方回应：Triplett 的“文档就在树里”反问、Perches-Dunlap 的进程反对、Ted 的权威叙事（Linus 指令+git 统计咨询+Greg 义务承担+Gamergate 恐惧渲染）。
 
@@ -44,7 +44,7 @@ NeilBrown 的四 hashtag 宣言（#Iobject/#Iforgive/#Iapologise/#Isupportrevers
 - 【Linux社区】Ted 权威长文：CoC 非 Greg 强加——指令/签署/时点皆 Linus、初始 commit 极少评审正因 Linus -rc4 休假前不愿被认为背后搞鬼；本系列大量 Ack 因事前以 git 统计与 top contributors 巨量咨询；Greg 出于义务感接下吃了很多 flak——“我感谢他做这不讨好的任务”；Gamergate 般外部恐惧渲染促成 interpretation 文档；技术理由拒码不会被影子委员会二次猜测、Netfilter 版权流氓先例仍在；最终目标是文化变革——Neil 说得对重要的不是文档而是行为 `<!-- ROW_MINE: ksummit-discuss.messages.349937 -->`
 - 【Linux社区】Pavel Acked Geert 删列表：“更想回旧 code of conflict。但即便如此也是改进” `<!-- ROW_MINE: ksummit-discuss.messages.349941 -->`
 
-## 62.4 Magna Carta 纲领与无力感之辩
+## 62.4 【Linux社区】Magna Carta 纲领与无力感之辩
 
 NeilBrown 的权力结构分析与 Magna Carta 替代纲领：无力感作为伤害主因的核心命题、Ted 的技术质量论驳斥、Viro 的 petition 现实主义与双头制质问、团队维护者制辩护与 Carpenter 的羞辱式拒绝两案实证——CoC 时代关于权力与无力的最深一轮辩论。
 
@@ -59,7 +59,7 @@ NeilBrown 的权力结构分析与 Magna Carta 替代纲领：无力感作为伤
 - 【Linux社区】Viro 二问：“真分歧怎么办——‘交给 Linus 最终决定’在这里显然不管用；他们一致认为补丁无可救药时怎么办？”；BTW 何时有人建议过脑叶切除——NANAE 98 年 SGI sendmail 轶闻注 `<!-- ROW_MINE: ksummit-discuss.messages.349952 -->`
 - 【Linux社区】Dan Carpenter 两案自述：曾发 bugfix 被维护者羞辱式拒绝——只因主题不用祈使语气+“NULL dereference”少写 pointer；“十年前有个补丁被拒因为‘F*** you, 女人懂什么编程？’——现在无法想象但当时我也震惊” `<!-- ROW_MINE: ksummit-discuss.messages.349955 -->`
 
-## 62.5 GIT PULL、冷却令与 Debian CoC 之议
+## 62.5 【Linux社区】GIT PULL、冷却令与 Debian CoC 之议
 
 Bottomley 的 coc-fixes GIT PULL 与 Greg 的 MS 冷却令（文本冻结+假设情境搁置）、Perches 的 Debian CoC 采纳主张与 Dunlap 的“单方面合并”批评、cabal like 之讥——补丁治理的最终路线分歧。
 
@@ -69,14 +69,14 @@ Bottomley 的 coc-fixes GIT PULL 与 Greg 的 MS 冷却令（文本冻结+假设
 - 【Linux社区】Dunlap：Debian/Samba URL 都好；“失望的是 James 的补丁在列表被 ack/review 后基本被无视（直到 MS）而其他补丁合入主线 git 树——似乎很单方面” `<!-- ROW_MINE: ksummit-discuss.messages.349953 -->`
 - 【Linux社区】Perches：“或许恰当的描述是 cabal like（小集团作派）” `<!-- ROW_MINE: ksummit-discuss.messages.349954 -->`
 
-## 62.6 程序之辩与 TAB 选举
+## 62.6 【Linux社区】程序之辩与 TAB 选举
 
 Bottomley 的程序自省（最后一分钟硬塞 commit 自认）与 Samba 先例（同路径终点是量身定制文档）、Mason 的 TAB 五席改选公告（书面陈述取代演讲）——治理程序的两个现场坐标。
 
 - 【Linux社区】Bottomley：“我们真会搞砸进程——又在最后一分钟硬塞（8e630c31a3df commit）——我反对我们无法遵循公开进程”；但需要文档因为感知问题（对外部多于内部）；Edinburgh 与 Jeremy Allison 谈话：Samba 经历几乎相同（先强推 Contributor Covenant 后私下激辩）、终点 How to do Samba: Nicely——量身定制的价值观声明、最终全员包括最初强推者都同意 `<!-- ROW_MINE: ksummit-discuss.messages.349938 -->`
 - 【Linux社区】Mason TAB 选举公告：LF TAB 十人、一人入 LF 董事会；温哥华 KS 11 月 13 日 5:30pm 选五席（2016 席到期）；今年弃演讲改书面陈述 slideshow+公共 google doc；现役名单与届年全列 `<!-- ROW_MINE: ksummit-discuss.messages.349939 -->`
 
-## 62.7 2014 档案与回归追踪六封
+## 62.7 【Linux社区】2014 档案与回归追踪六封
 
 页内夹杂的档案信：Move Fast 的并行度质疑、stable workflow 的 for-stable 拒绝、git metadata 标签实践（Fixes/Link/Coverletter）、Leemhuis 回归追踪暂搁声明、tip-bot 合并通知参照、ARM legacy DT 的 TODO 实务。
 

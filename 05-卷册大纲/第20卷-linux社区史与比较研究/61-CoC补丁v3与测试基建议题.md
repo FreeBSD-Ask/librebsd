@@ -3,7 +3,7 @@
 > 来源：ksummit-discuss p113（50 封全读，2018-10-16/18 为主，夹杂 KS2014 档案信 2014-05-15/16）。
 > 判定：48 CAND / 2 NV。主题分布：CoC补丁v3流转 4、MS议程出席辩论 9、测试基建议题 8、CoC歧视列表之争 11、CoC email措辞之辩 11、KS2014档案 5。
 
-## 61.1 CoC 补丁 v3 三连发与 MS 议程出席之辩
+## 61.1 【Linux社区】CoC 补丁 v3 三连发与 MS 议程出席之辩
 
 2018-10-16 CoC 补丁 v3 三连发（email 措辞/剥 enforcement 起点、Reporting 节回归+法定例外）与 Maintainer’s Summit 出席名单之辩：领域专家论、营销与信心工程两面论、火与怒无近事例、carefully cut 交锋与 Bottomley 道歉、讨论会非决策会定性。
 
@@ -21,7 +21,7 @@
 - 【Linux社区】Bottomley 道歉误读与过激：自曝“见太多人付出巨大努力而零认可故过敏”；同意开放的 KS/Plumbers 场次更重要 `<!-- ROW_MINE: ksummit-discuss.messages.349867 -->`
 - 【Linux社区】Vetter 澄清：与己无关（日程已订满）、ELC 本就有一批 DRM 人在场、非差旅物流问题；“去年就有讨论我们该派谁顶替 Dave” `<!-- ROW_MINE: ksummit-discuss.messages.349869 -->`
 
-## 61.2 回归测试基建议题与 ATS 邀请制风波
+## 61.2 【Linux社区】回归测试基建议题与 ATS 邀请制风波
 
 Borntraeger 从 MS 议程空 slot 引出的回归测试基建议题：Ted 的流程/技术分场与架构资源方论、SUSE 的 Power/Z 立场、Roeck 的场地重复之疑、ATS 邀请制引出的 Ellerman 慕名求入与 Tim Bird 的录像补救承诺、Shuah 的 Kselftest 代言举荐。
 
@@ -34,7 +34,7 @@ Borntraeger 从 MS 议程空 slot 引出的回归测试基建议题：Ted 的流
 - 【Linux社区】Tim Bird：ATS 场地有限、与 Kevin 决定邀请制且流程已毕保持小规模；Linaro 将录制、Kevin Hilman 拟在 LPC testing 场次汇报；盼未来办更开放的 automated-testing 活动 `<!-- ROW_MINE: ksummit-discuss.messages.349876 -->`
 - 【Linux社区】Shuah 力荐 Ellerman 与会代言 Kselftest：其做了共同框架奠基工作、slides 已发——“有本人在场胜过一切” `<!-- ROW_MINE: ksummit-discuss.messages.349877 -->`
 
-## 61.3 删除歧视因素列表之争：UNESCO 引文与 include but not limited to
+## 61.3 【Linux社区】删除歧视因素列表之争：UNESCO 引文与 include but not limited to
 
 Geert 删列表补丁引发的文法与法律之辩：UNESCO 反种族文献引证、explicit list 的边际语义、Roeck 的折中措辞与政治表达质问、Bottomley 的第九修正案类比与“include but are not limited to”定案方向、Brown 的复制粘贴贬值警语。
 
@@ -50,7 +50,7 @@ Geert 删列表补丁引发的文法与法律之辩：UNESCO 反种族文献引�
 - 【Linux社区】Triplett：Bottomley 方案远优于整删列表 `<!-- ROW_MINE: ksummit-discuss.messages.349893 -->`
 - 【Linux社区】Brown 现实警语：强推显式列表反而使其贬值的抱怨渐多——难辨复制粘贴还是真理解；朋友在同性恋死罪国办会质疑列入 sexuality 的轶事；此类问题从无唯一正确答案 `<!-- ROW_MINE: ksummit-discuss.messages.349894 -->`
 
-## 61.4 email 地址措辞之辩：carve out 与 public space
+## 61.4 【Linux社区】email 地址措辞之辩：carve out 与 public space
 
 v3 1/3 email 措辞的语义拉锯：Rowand 的 which/where 之辨与 public 定义清单、bugzilla 与私密补丁的边界案例、Bottomley 的 carve out 非许可论与 doxxing/房产记录收束、Tim Bird 的 FAQ 路线与删 such as 方案——CoC email 例外条款的全部论证面。
 
@@ -66,7 +66,7 @@ v3 1/3 email 措辞的语义拉锯：Rowand 的 which/where 之辨与 public 定
 - 【Linux社区】Tim Bird 综述：Rowand 文案缺 not；决定不动 CoC 本体、只在上游 CoC FAQ 增澄清；理由“such as”系例示非穷尽；观点一：若改则删“such as...”整句；观点二：保留原句＋澄清文档亦可 `<!-- ROW_MINE: ksummit-discuss.messages.349904 -->`
 - 【Linux社区】Bottomley 收束：美国地址本在公共空间（房产记录）——doxxing 多为从公共来源翻出并广播、这正是选“not ordinarily collected”的原因；Tim 删“such as”方案同样可行；单一 CoC 应与运作方式一致故提补丁 `<!-- ROW_MINE: ksummit-discuss.messages.349905 -->`
 
-## 61.5 KS2014 档案五封
+## 61.5 【Linux社区】KS2014 档案五封
 
 页内夹杂的 KS2014 档案信（2014-05-15/16）：Move Fast and Oops Things 三议题与吴峰光提名、Pinchart 的 IOMMU/复合设备 PM 依赖两实例与 power domains 质疑、Zanussi 补充提名、Cooper 的 IoT 可抛弃设备思路。
 
