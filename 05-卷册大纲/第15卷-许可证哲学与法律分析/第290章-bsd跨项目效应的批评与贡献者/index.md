@@ -26,14 +26,14 @@ volume: 第15卷-许可证哲学与法律分析
 
 ## 史观
 
-- 总纲第 10 条——边缘者贡献：跨项目贡献者是 BSD 阵营跨项目影响的关键贡献者；总纲第 25 条——0 信任原则：贡献者名单需通过考据程序验证；统计结论印证：C-24/C-25/C-26/C-27 揭示 BSD 4 项目贡献者分布的高度集中——Gini 系数 0.82-0.92 意味着贡献极度不均，top 10% 贡献者承担约 90% commit 量，此量化结论为 “明星效应” 提供数据基础
-- 总纲第 10 条（边缘者贡献）与总纲第 25 条（0 信任原则）。BSD 阵营的再回应实质上是将“明星效应”与“边缘者被遗忘”的批评置于“贡献可见度差异”与“考据程序修复”的框架下重新审视——明星效应部分源于贡献性质差异而非纯粹叙事偏差，且考据程序本身是对边缘者的重新归位。项目史观总纲第十章“边缘者贡献”在此显现：边缘者非“被动的受害者”而是“主动的贡献者”，考据程序使其贡献被重新发现。
-- **
-- 总纲第 10 条（边缘者贡献）与总纲第 6 条（主体性与和解）。BSD 跨项目贡献者的核心即“明星可见与边缘者被遗忘的辩证统一”——明星因技术产出可见度高而被铭记，边缘者因协调角色可见度低而被遗忘，二者是同一项目的两面。项目史观总纲第十章“边缘者贡献”在此显现：边缘者非“被动的受害者”而是“主动的贡献者”，考据程序使其贡献被重新发现。
-- **辨析**：考据过程留痕——【查证来源】Varnish
-- 总纲第 24 条——许可证：BSD 许可证的设计决定了回馈不足的结构性；总纲第 14 条——商业与社区的张力：商业采用与社区回馈的不对称
+- 总纲第 10 条——动手者创造历史：跨项目贡献者是 BSD 阵营跨项目影响的关键贡献者；考据规则（专题语，不设总纲条号）：贡献者名单需通过考据程序验证；统计结论印证：C-24/C-25/C-26/C-27 揭示 BSD 4 项目贡献者分布的高度集中——Gini 系数 0.82-0.92 意味着贡献极度不均，top 10% 贡献者承担约 90% commit 量，此量化结论为 “明星效应” 提供数据基础
+- 总纲第 10 条（动手者创造历史）与考据规则（专题语，不设总纲条号）。BSD 阵营的再回应实质上是将“明星效应”与“边缘者被遗忘”的批评置于“贡献可见度差异”与“考据程序修复”的框架下重新审视——明星效应部分源于贡献性质差异而非纯粹叙事偏差，且考据程序本身是对边缘者的重新归位。项目统摄史观第十章“边缘者贡献”（源文本章节，非 25 条总纲条目）在此显现：边缘者非“被动的受害者”而是“主动的贡献者”，考据程序使其贡献被重新发现。
+- 〔待核：史观段原文截断，后文待回源〕
+- 总纲第 10 条（动手者创造历史）与项目统摄史观第六章（主体性与和解，源文本章节，非 25 条总纲条目）。BSD 跨项目贡献者的核心即“明星可见与边缘者被遗忘的辩证统一”——明星因技术产出可见度高而被铭记，边缘者因协调角色可见度低而被遗忘，二者是同一项目的两面。项目统摄史观第十章“边缘者贡献”（源文本章节）在此显现：边缘者非“被动的受害者”而是“主动的贡献者”，考据程序使其贡献被重新发现。
+- **辨析**：考据过程留痕——【查证来源】Varnish Software 官方历史（varnish-software.com/varnish-history/）与 Berg 2016 年 Q&A〔待核：本行原文截断，详见辨析节同源条目；后文待回源补全〕
+- 总纲第 13 条——法律与道德是利益分配：BSD 许可证的设计决定了回馈不足的结构性；总纲第 3 条——不存在进步只有权力再分配：商业采用与社区回馈的不对称
   - rvalds 批评的语境须查原访谈；0 信任原则局限标注：L3.2.1 查询基于 12 类商业邮箱域名（@netflix.com/@juniper.net/@netapp.com/@ixsystems.com 等）
-- 总纲第 5 条（道与术的辩证）与总纲第 24 条（许可证哲学）。BSD 阵营的反批评实质上是将“回馈不足”“话语权丧失”“资源分散”的批评置于“许可证设计意图”“标准化必然结果”“广泛孵化文化代价”的框架下重新审视——此三者非“失败”而是“设计代价”。项目史观总纲第五章“道与术的辩证”在此显现：BSD 许可证作为“道”（哲学原则）允许“术”（具体采用）的无回馈，此“无回馈”非“道”的失败而是“道”
+- 项目统摄史观第五章（道与术的辩证，源文本章节，非 25 条总纲条目）与总纲第 13 条（法律与道德是利益分配）。BSD 阵营的反批评实质上是将“回馈不足”“话语权丧失”“资源分散”的批评置于“许可证设计意图”“标准化必然结果”“广泛孵化文化代价”的框架下重新审视——此三者非“失败”而是“设计代价”。项目统摄史观第五章“道与术的辩证”（源文本章节）在此显现：BSD 许可证作为“道”（哲学原则）允许“术”（具体采用）的无回馈，此“无回馈”非“道”的失败而是“道”〔待核：原文截断，后文待回源〕
 
 ## 辨析
 
@@ -51,16 +51,21 @@ volume: 第15卷-许可证哲学与法律分析
 
 - 要点：BSD 跨项目贡献中存在大量被忽视的贡献——jemalloc 曾被 Rust 作为默认分配器（后随 RFC 1974 全局分配器机制
 - Varnish Software. Official History [EB/OL]. <https://varnish-software.com/varnish-history/>; Berg A. Q&A 2016 [EB/OL]. <https://varnish-software.com/blog>; OpenSSH. Official History [EB/OL]. <https://openssh.org/history.html>; Mewburn L. The Design and Implementation of the NetBSD rc.d System [R]. U
-- Varnish Software. Official History [EB/OL]. <https://varnish-software.com/varnish-history/>; OpenSSH. Official History [EB/OL]. <https://openssh.org/history.html>; openbsd.duckdb L7.2.1 查询报告; 项目史观总纲第十章“边缘者贡献”[Z]. 原材料/哲学/项目统摄史观/第 10 章.md.
+- Varnish Software. Official History [EB/OL]. <https://varnish-software.com/varnish-history/>; OpenSSH. Official History [EB/OL]. <https://openssh.org/history.html>; openbsd.duckdb L7.2.1 查询报告; 项目史观总纲第十章“边缘者贡献”[Z]. **sacred_sources.duckdb**（项目统摄史观第 10 章）.
 - de Raadt 资金呼吁；Torvalds 评论；基金会年报 ［B］；bsd_commits.duckdb L3.2.1 查询报告（深层信息挖掘.md §L3.2.1）；bsd_commits.duckdb L7.2.1 查询报告（衍生项目与跨项目对比分析.md §L7.2.1）
 
 ## 290.9.2 BSD 效应力被 Linux 阵营抢占话语权的批评
 
 - 要点：BSD 跨项目影响虽广但话语权长期被 Linux 阵营抢占——Jails 早于 Docker 13 年但 Docker 流行化后被广泛称为“容器革命”，Jails 的开创性贡献被忽视；socket API 进入 POSIX 后被普遍称为"POS
-- Torvalds L. LinuxFocus Interview [EB/OL]. (1998-03). <https://linuxdoc.org/linuxfocus/English/March1998/article27.html>; de Raadt T. Request for Funding our Electricity [EB/OL]. openbsd-misc mailing list, 2014-01; bsd_commits.duckdb L3.2.1 查询报告; bsd_commits.duckdb L7.2.1 查询报告; 项目史观总纲第五章“道与术的辩证”[Z]. 原材料/哲学/项
+- Torvalds L. LinuxFocus Interview [EB/OL]. (1998-03). <https://linuxdoc.org/linuxfocus/English/March1998/article27.html>; de Raadt T. Request for Funding our Electricity [EB/OL]. openbsd-misc mailing list, 2014-01; bsd_commits.duckdb L3.2.1 查询报告; bsd_commits.duckdb L7.2.1 查询报告; 项目史观总纲第五章“道与术的辩证”[Z]. **sacred_sources.duckdb**（项目统摄史观第 5 章）〔待核：原文截断，后文待回源〕
 - de Raadt T. Request for Funding our Electricity [EB/OL]. openbsd-misc mailing list, 2014-01; The Register. Bitcoin donation saves OpenBSD [EB/OL]. 2014-01-20; openbsd.duckdb L3.2.1 查询报告; Postel J. RFC 793: Transmission Control Protocol [S]. 1981; FreeBSD 4.0 release notes [EB/OL]. 2000-03; Docker offici
-- openbsd.duckdb L3.2.1 查询报告； openbsd.duckdb L7.2.1 查询报告； 项目史观总纲第六章“主体性与和解”[Z]. 原材料/哲学/项目统摄史观/第 6 章.md; 项目史观总纲第二十四章“许可证哲学”[Z]. 原材料/哲学/项目统摄史观/第 24 章.md.
-- 项目史观总纲第 13、19、21 条 [Z]. 原材料/哲学/项目统摄史观/第 25 章.md; 项目史观总纲第十三章“文艺与审美历史哲学”[Z]. 原材料/哲学/项目统摄史观/第 13 章.md; 项目史观总纲第十九章“历史解释学与权力”[Z]. 原材料/哲学/项目统摄史观/第 19 章.md; 项目史观总纲第二十一章“革命与改革：历史方法论”[Z]. 原材料/哲学/项目统摄史观/第 21 章.md; BSD 许可证文本 [EB/OL]. <https://www.freebsd.org/copyright/freebsd-license/>; GPL 文本 [EB/OL]. <https:
+- openbsd.duckdb L3.2.1 查询报告； openbsd.duckdb L7.2.1 查询报告； 项目史观总纲第六章“主体性与和解”[Z]. **sacred_sources.duckdb**（项目统摄史观第 6 章）; 项目史观总纲第二十四章“许可证哲学”[Z]. **sacred_sources.duckdb**（项目统摄史观第 24 章）.
+- 项目史观总纲第 13、19、21 条 [Z]. **sacred_sources.duckdb**（项目统摄史观第 25 章）; 项目史观总纲第十三章“文艺与审美历史哲学”[Z]. **sacred_sources.duckdb**（项目统摄史观第 13 章）; 项目史观总纲第十九章“历史解释学与权力”[Z]. **sacred_sources.duckdb**（项目统摄史观第 19 章）; 项目史观总纲第二十一章“革命与改革：历史方法论”[Z]. **sacred_sources.duckdb**（项目统摄史观第 21 章）; BSD 许可证文本 [EB/OL]. <https://www.freebsd.org/copyright/freebsd-license/>; GPL 文本 [EB/OL]. <https:
+
+## 本章节索引
+
+- [290.9 对 BSD 跨项目效应的批评：自由放任的代价与话语权丧失](290.9-对-BSD-跨项目效应的批评-自由放任的代价与话语权丧失.md)
+- [290.10 重要贡献者与边缘者：跨项目贡献者与被边缘化者](290.10-重要贡献者与边缘者-跨项目贡献者与被边缘化者.md)
 
 ## 自反性声明
 
