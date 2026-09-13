@@ -10,8 +10,8 @@ volume: 第04卷-大分裂与四大bsd的诞生
 
 - FreeBSD 2.0（1994-11-22 网络公告，12 月 CD-ROM 分发）是首个完全基于 4.4BSD-Lite 的版本，消除 Net/2 争议代码的法律风险，同时引入 4.4BSD-Lite 的新安全机制——securelevel 内核安全等级机制（level 0 不安全模式、level 1 安全模式禁止 `/dev/mem` 访问与原始磁盘写入并强制 **chflags(2)**
 - FreeBSD 1.x 版本周期内仅有的安全响应（2 条 isprint() 修复 commit）与回溯影响的栈溢出漏洞（FreeBSD-SA-96:20）共同反映 FreeBSD 1.x 安全基线的架构性缺陷——FreeBSD 1.0 基于 Net/2（4.3BSD 网络栈），未引入 securelevel 内核安全等级机制（securelevel 于 4.4BSD-Lite 引入，FreeBS
-- 综合四层辩证，FreeBSD 从 386BSD patchkit fork 争议不能简化为 “窃取 vs 自救” 或 “合法 vs 不道德” 的二元结构——双方叙事都存在选择性记忆。Jolitz 夫妇 “全面窃取” 指控在事实层面部分不成立（用户流失是 386BSD 停滞的自然结果而非 “窃取”，代码继承基于 BSD 许可证合法）〔待核：原文截断，后文待回源〕
-- FreeBSD fork 既是“革命”又是“改革”——作为“革命”，FreeBSD 脱离 386BSD 单人维护模式，引入 Core Team 集体治理，是对 386BSD 治理结构的否定；作为“改革”，FreeBSD 继承 BSD 工程传统（基于 4.3BSD-Lite Net/2 + 386BSD 组件 + FSF 组件），延续 CSRG 的工程化路径，是对 BSD 工程传统的延续。项目史观总
+- 综合四层辩证，FreeBSD 从 386BSD patchkit fork 争议不能简化为 “窃取 vs 自救” 或 “合法 vs 不道德” 的二元结构——双方叙事都存在选择性记忆。Jolitz 夫妇 “全面窃取” 指控在事实层面部分不成立（用户流失是 386BSD 停滞的自然结果而非 “窃取”，代码继承基于 BSD 许可证合法），但在叙事层面有其合理性（FreeBSD 起源叙事确有简化，“被迫 fork” 叙事遮蔽了 patchkit 群体的主动选择与 Jolitz 夫妇的工程哲学）（据 66.13 节补全原截断）
+- FreeBSD fork 既是“革命”又是“改革”——作为“革命”，FreeBSD 脱离 386BSD 单人维护模式，引入 Core Team 集体治理，是对 386BSD 治理结构的否定；作为“改革”，FreeBSD 继承 BSD 工程传统（基于 4.3BSD-Lite Net/2 + 386BSD 组件 + FSF 组件），延续 CSRG 的工程化路径，是对 BSD 工程传统的延续。项目史观总纲第 21 条“Linux 靠革命，BSD 靠改革”在此需要细化——FreeBSD fork 是“改革失败后的革命”：386BSD 单人维护模式在 1993 年初已无法维持社区贡献，patchkit 群体尝试通过“补丁包维护”改革 386BSD 维护模式但未获 Bill Jolitz 接受，fork 决策遂以“革命”方式重构治理结构（据 66.14 节补全原截断）
 
 ## 史料
 
@@ -23,12 +23,10 @@ volume: 第04卷-大分裂与四大bsd的诞生
 - [DB:references_fulltext:chapter_matches:chmatch_3878] 卷“第04卷-大分裂与四大bsd的诞生”第 66 章，匹配置信度 folder，原因：folder 第65章
 - [DB:references_fulltext:chapter_matches:chmatch_3960] 卷“第04卷-大分裂与四大bsd的诞生”第 66 章，匹配置信度 folder，原因：folder 第65章
 - [DB:references_fulltext:chapter_matches:chmatch_3970] 卷“第04卷-大分裂与四大bsd的诞生”第 66 章，匹配置信度 folder，原因：folder 第65章
-- [DB:references_fulltext:chapter_matches:chmatch_1213] 卷“第04卷-大分裂与四大bsd的诞生”第 66 章，匹配置信度 0.8，原因：关键词匹配: gotd
-- [DB:references_fulltext:chapter_matches:chmatch_1220] 卷“第04卷-大分裂与四大bsd的诞生”第 66 章，匹配置信度 0.8，原因：关键词匹配: gothub
 
 ## 史观
 
-(待人工回填——详见子节文件史观/辨析字段)
+> 三个 patchkit 协调人不满意，然后他们动手了——没有宣言，没有请愿，只是把补丁包整理成一个可以独立安装的系统。Williams、Grimes、Hubbard 不是革命者，只是几个不愿意等别人修好东西的普通人。David Greenman 提议了 “FreeBSD” 这个名字，但重要的不是名字，而是有人选择不再等待。Walnut Creek CDROM 提供了开发机器和互联网连接，这笔交易后来被质疑为 “商业绑定”，但在 1993 年的现实中，没有商业支撑的开源项目连磁盘空间和带宽都付不起。自由从来不免费（原 “史观映射” 段自文献区错置迁入）
 
 ## 辨析
 
@@ -48,7 +46,12 @@ volume: 第04卷-大分裂与四大bsd的诞生
 
 <!-- DB_REF:freebsd.duckdb -->
 > **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 1992-1995 年间：15,540 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
-- 综合 26.1-26.13 各节文献，无新增文献 ［A］### 史观映射> 三个 patchkit 协调人不满意，然后他们动手了——没有宣言，没有请愿，只是把补丁包整理成一个可以独立安装的系统。Williams、Grimes、Hubbard 不是革命者，只是几个不愿意等别人修好东西的普通人。David Greenman 提议了 “FreeBSD” 这个名字，但重要的不是名字，而是有人选择不再等待。Walnut Creek CDROM 提供了开发机器和互联网连接，这笔交易后来被质疑为 “商业绑定”，但在 1993 年的现实中，没有商业支撑的开源项目连磁盘空间和带宽都付不起。自由从来不免费---## 第 26.15 不同时期人员的采访录（详见 [采访录.md](采访录.md)）> 第 26 章采访录子节，覆盖 1993-1994 年 FreeBSD 诞生时期的当事人自述与演讲，含 Jordan K. Hubbard BSDNow 278 采访、Rodney W. Grimes 邮件列表自述、David Greenman 命名由来自述三则，每则采访按 5 字段深化，考据过程另见 原材料/研究/考据记录/ 下对应文件。## 第 26.16 节 媒体反响与社区舆论（详见 [媒体反响与社区舆论.md](媒体反响与社区舆论.md)）---**【本节文献综述】** 详见 [04-现代研究文献/05-参考文献全文数据库/references_fulltext.db](04-现代研究文献/05-参考文献全文数据库/references_fulltext.db) `chapter_reviews` 表（id=8）---**补充证据（基于全文数据库修订）**
+- 综合 66.1-66.14 各节文献，无新增文献 ［A］
+- 章内采访录指引：第 66 章采访录（详见 [采访录.md](采访录.md)），覆盖 1993-1994 年 FreeBSD 诞生时期的当事人自述与演讲，含 Jordan K. Hubbard BSDNow 278 采访、Rodney W. Grimes 邮件列表自述、David Greenman 命名由来自述三则，每则采访按 5 字段深化，考据过程另见 **原材料/研究/考据记录/** 下对应文件
+- 章内媒体反响指引：第 66 章媒体反响与社区舆论（详见 [媒体反响与社区舆论.md](媒体反响与社区舆论.md)）
+- **【本节文献综述】** 详见 [04-现代研究文献/05-参考文献全文数据库/references_fulltext.db](04-现代研究文献/05-参考文献全文数据库/references_fulltext.db) `chapter_reviews` 表（id=8）
+
+**补充证据（基于全文数据库修订）**
 
 本次修订从全文数据库补充 7 篇新匹配文献的证据。
 
