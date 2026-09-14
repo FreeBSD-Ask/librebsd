@@ -10,7 +10,7 @@ volume: 第02卷-伯克利的岁月
 
 - **CCI Power 6/32 硬件规格**（经 gunkies.org Computer History Wiki 与 4.3BSD-Reno/src/share/doc/smm/01.setup/tahoe/1.t 一手 setup 文档交叉验证）：① **CPU 架构**——TTL（晶体管-晶体管逻辑）离散实现，非微处理器；32 位寄存器组（r0—r13 通用寄存器、r14 栈指针 sp、
 - **缺口 2ah 原标题 “Tahoe 的虚拟内存重写” 存在前提错误**——4.3BSD-Tahoe（1988.6）**并未进行虚拟内存重写**，Tahoe 时期虚拟内存方面的工作仅为机器相关虚拟内存代码的分离（`tahoe/vm_machdep.c` 9969 字节，将 VAX 特有的虚拟内存机器相关部分从 `sys/` 分离到 `tahoe/`），而非虚拟内存子系统的架构重写；4.3BSD-
-- 4.2BSD/4.3BSD 早期 TCP/IP 实现采用简单窗口控制——发送方按接收方通告窗口大小发送数据，未考虑网络中间路由器的拥塞状态，导致网络拥塞时大量数据包丢失与重传（即“congestion collapse”现象，**1986 年 10 月** 互联网首次大规模拥塞崩溃事件发生，**LBL Lawrence Berkeley Laboratory 至 UC Berkeley 间 32
+- 4.2BSD/4.3BSD 早期 TCP/IP 实现采用简单窗口控制——发送方按接收方通告窗口大小发送数据，未考虑网络中间路由器的拥塞状态，导致网络拥塞时大量数据包丢失与重传（即“congestion collapse”现象，**1986 年 10 月** 互联网首次大规模拥塞崩溃事件发生，**LBL Lawrence Berkeley Laboratory 至 UC Berkeley 间 32**
 - OS/2 是 IBM 与微软为 80286/386 平台开发的“下一代”PC 操作系统，1.0（1987）为文本模式、1.1（1988）引入 Presentation Manager 图形界面与保护模式多任务；它面向比 MS-DOS 更强的硬件，却在与 Windows 3.0（1990）的竞争中失利，未能取代 DOS 成为 PC 标准。
 - 4.3BSD-Tahoe（1988 年 6 月发布）早于 Morris 蠕虫（1988 年 11 月 2 日晚 8:30 EST）约 5 个月，Tahoe 发布时 **sendmail(8)** DEBUG 命令后门、**fingerd(8)** 缓冲区溢出、**rshd(8)** 信任传递三类漏洞仍以 4.3BSD 时期的形态存在，Tahoe 未包含任何蠕虫修复补丁；Morris 蠕虫爆发后 C
 
@@ -25,7 +25,7 @@ volume: 第02卷-伯克利的岁月
 ## 辨析
 
 - 分离工作与多分支形成的因果关系需谨慎判断，避免线性因果，386BSD 的 Bill Jolitz 个人努力亦是关键因素
-- ① **“Tahoe 虚拟内存重写” 表述的前提错误**——经 McKusick 1999 一手记载与 TUHS 源代码目录结构交叉验证，4.3BSD-Tahoe 未进行虚拟内存重写，Tahoe 时期 VM 工作仅为机器相关代码分离（`tahoe/vm_machdep.c` 与 `tahoe/vmparam.h`），虚拟内存子系统架构与 4.3BSD 无本质差异；② **“重写前后架构对比” 的请
+- ① **“Tahoe 虚拟内存重写” 表述的前提错误**——经 McKusick 1999 一手记载与 TUHS 源代码目录结构交叉验证，4.3BSD-Tahoe 未进行虚拟内存重写，Tahoe 时期 VM 工作仅为机器相关代码分离（`tahoe/vm_machdep.c` 与 `tahoe/vmparam.h`），虚拟内存子系统架构与 4.3BSD 无本质差异；② **“重写前后架构对比” 的请**
 - Van Jacobson 1988 年 SIGCOMM 论文与 4.3BSD-Tahoe 集成的时间关系——论文 1988 年 8 月 26-30 日 SIGCOMM 发表（论文 PDF 版本为 1988 年 11 月修订版）〔待核：原文截断，后文待回源〕
 - OS/2 与 BSD 无直接竞争——OS/2 瞄准 286/386 PC 的企业市场，BSD 固守 VAX/科研；OS/2 真正的对手是 Windows 与 DOS，而非 UNIX 变体。
 - Tahoe 与 Morris 蠕虫的时序关系须严格区分“Tahoe 发布时漏洞存在”与“Tahoe 引入漏洞”——三类漏洞源自 4.2BSD（1983）网络栈引入，Tahoe 仅继承而非引入，须避免将漏洞归咎于 Tahoe；蠕虫修复补丁以独立补丁形式分发而非集成入 Tahoe 版本，须区分“补丁分发”与“版本集成”——Tahoe 本身作为已发布版本未回溯集成补丁，用户需手动应用；Net/1 发布时

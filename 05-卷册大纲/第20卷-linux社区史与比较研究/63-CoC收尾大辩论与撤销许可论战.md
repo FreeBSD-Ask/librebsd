@@ -9,7 +9,7 @@
 
 ## 63.1 【Linux社区】女程序员案追问
 
-- 【Linux社区】Viro 追问 Carpenter“F*** you 女人懂什么编程”案 URL：“我真心想知道是谁、在哪说的——十年前若在公开内核列表早该引发大规模且完全应得的风暴” `<!-- ROW_MINE: ksummit-discuss.messages.349956 -->`
+- 【Linux社区】Viro 追问 Carpenter“F*** you 女人懂什么编程”案 URL：“我真心想知道是谁、在哪说的——十年前若在公开内核列表早该引发大规模且完全应得的风暴” `<!-- ROW_MINE: ksummit-discuss.messages.349956 -->`**
 - 【Linux社区】Carpenter：那是私人邮件、不知维护者是谁；从当事女性在 Linux 会议听说——她是称职程序员、bug 当时仍在 `<!-- ROW_MINE: ksummit-discuss.messages.349958 -->`
 
 ## 63.2 【Linux社区】2014档案与回归追踪

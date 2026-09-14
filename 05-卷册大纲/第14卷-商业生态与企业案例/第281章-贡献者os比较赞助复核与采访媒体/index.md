@@ -21,10 +21,10 @@ volume: 第14卷-商业生态与企业案例
   - 文献：Netflix 技术博客；FreeBSD 源码 Juniper ARM64 commit ［A］
     FreeBSD 社区论文与演讲 [124]，[124] Matt Ahrens. Flexibl
 - 总纲第 10 条与第 17 条的张力——商业版本的封闭是开源史学不可绕过的盲区，被遮蔽的源码意味着被遮蔽的叙事
-  - 辨析：［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］ **SunOS 4.x** 源码是否在 **Oracle** 收购 **Sun** 后仍完整保存于 **Oracle** 内部档案无公开确认；**BSD/OS** 源码在 **
+  - 辨析：［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］ **SunOS 4.x** 源码是否在 **Oracle** 收购 **Sun** 后仍完整保存于 **Oracle** 内部档案无公开确认；**BSD/OS** 源码在 ****
 - 总纲第 4 条与第 25 条的张力——分离是新的聚合的开始，**Oracle** 关闭 **OpenSolaris** 反而催生 **illumos** 这一独立的开放分支；但 **illumos** 与 **OpenSolaris** 之间的源码连续性在 2010 年 8 月后部分断裂，**Oracle** 后续 **Solaris 11.x** 的开发完全闭源，**illumos** 无法再吸
 - 总纲第 10 条——边缘者的贡献被中心叙事遮蔽，商业 **Unix** 源码的封闭意味着这些系统的开发者贡献无法被史学完整记录
-  - 辨析：［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］ **AIX** 源码访问的“air-gapped 机器、8mm 磁带签名”流程在不同 ex-**IBM** 员工口述中细节不一致，可能为不同时期的内部政策；**
+  - 辨析：［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］ **AIX** 源码访问的“air-gapped 机器、8mm 磁带签名”流程在不同 ex-**IBM** 员工口述中细节不一致，可能为不同时期的内部政策；
 - 总纲第 24 条——许可证：**GPL** 催化商业闭环
   - 辨析：**Linux** 商业闭环的成功不能全归因于 **GPL**，也涉及商业策略
   - 文献：**Red Hat** 年报；**LWN** 内核统计 ［B］
@@ -35,7 +35,7 @@ volume: 第14卷-商业生态与企业案例
 - **Netflix** 与 **Juniper** 哪家对 **FreeBSD** 上游贡献更大
   - 文献：Netflix 技术博客；FreeBSD 源码 Juniper ARM64 commit ［A］
     FreeBSD 社区论文与演讲 [124]，[124] Matt Ahrens. Flexible Disk Use in OpenZFS [C]//BSDCan 2018. [S.
-- ［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］ **SunOS 4.x** 源码是否在 **Oracle** 收购 **Sun** 后仍完整保存于 **Oracle** 内部档案无公开确认；**BSD/OS** 源码在 **Wind River** 2005 年停止 **BSD/OS** 产品线后的去向无公开档案，需通过 **Wind River*
+- ［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］ **SunOS 4.x** 源码是否在 **Oracle** 收购 **Sun** 后仍完整保存于 **Oracle** 内部档案无公开确认；**BSD/OS** 源码在 **Wind River** 2005 年停止 **BSD/OS** 产品线后的去向无公开档案，需通过 **Wind River***
 - ［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］ **OpenSolaris** 闭源后 **Oracle** 是否保留 **CDDL** 许可证下已发布源码的完整可访问性无公开声明；**illumos** 重新实现的闭源替代组件与 **Oracle** **Solaris 11.x** 中对应组件的功能等价性需通过 **API** 兼容性测试独立验
 - ［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］ **AIX** 源码访问的“air-gapped 机器、8mm 磁带签名”流程在不同 ex-**IBM** 员工口述中细节不一致，可能为不同时期的内部政策；**SGI** **IRIX** 源码在 **SGI** 破产后的最终归属无公开法院文件确认，传闻 **Rackable Systems** 收购
 - **Linux** 商业闭环的成功不能全归因于 **GPL**，也涉及商业策略
@@ -59,7 +59,7 @@ volume: 第14卷-商业生态与企业案例
 
 ## 281.39.3 Apple Darwin 2005 年 5 月 x86 关闭：APSL 下的选择性开放
 
-- 要点：**Apple** 于 2000 年在 **Apple Public Source License**（**APSL**）1.0 下释出 **Darwi
+- 要点：**Apple** 于 2000 年在 **Apple Public Source License**（**APSL**）1.0 下释出 **Darwi**
 - IBM AIX Documentation；HP-UX Documentation；Tru64 UNIX Documentation（HP.com 存档）；SGI 破产重组法院文件（2006）；Unix 史学综述文章（如 Peter Salus“The Daemon, the GNU & the Penguin”） ［A］
 - **Red Hat** 年报；**LWN** 内核统计 ［B］
     FreeBSD 社区论文与演讲 [124]，[124] Matt Ahrens. Flexible Disk Use in OpenZFS [C]//BSDCan 2018. [S.l.]: [s.n.], 2018. 获取路径：<https://papers.freebsd.org/2018/bsdcan/ahrens-flexible_disk_use_in_openzfs/> [访问日期 2026-07-26].
@@ -79,7 +79,7 @@ volume: 第14卷-商业生态与企业案例
 
 ## 281.41.2 利益分配法律化与 **BSDL**/`committer` 权限/企业赞助的形式主义（总纲第 13 条）
 
-- 要点：从项目史观总纲第 13 条 “法律与道德是利益分配” 切入，**FreeB
+- 要点：从项目史观总纲第 13 条 “法律与道德是利益分配” 切入，**FreeB**
 - 项目史观总纲第 21 条（见 据原文第 25 章）；**BSD 2-Clause** 原文；**Linux** 内核 **COPYING** 文件（torvalds/linux 仓库）；**Committer‘s Big List of Rules**；**FreeBSD Committer’s Guide**；**FreeBSD Foundation** **IRS** **990** 表；openbsd.duckdb L3.2.1/L3.2.2 查询报告；**Berlin** I. “Two Concepts of Liberty”（1958）；**TrueNAS** 2025 迁移公告；上述 1
 
 ## 自反性声明

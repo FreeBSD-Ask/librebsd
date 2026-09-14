@@ -10,7 +10,7 @@ volume: 第12卷-macos的bsd遗产
 
 - **OS X 10.8 Mountain Lion**（**2012 年 7 月 25 日** 发布）引入 **Gatekeeper**——代码签名机制，限制未签名应用运行。Gatekeeper 提供“**Mac App Store**”、“**Identified Developers**”、“**Anywhere**”三档安全级别（默认为“Identified Developers”，仅允许签
 - 此期 Darwin 同步吸收 FreeBSD 网络栈与安全相关补丁，独立开发者经 APSL 2.0 流程贡献。freebsd.duckdb 查询显示，**David Chisnall** 于 **2011 年 11 月 20 日** 在 freebsd-src 仓库提交“Implement xlocale APIs from Darwin, mainly for use by libc++”——此
-- **2011-2015 年** OS X 10.7-10.11 对比 **FreeBSD 9.x**（**2012 年 1 月 12 日** 发布）/**10.x**（**2014 年 1 月 14 日** 发布）、**Linux 3.x**（2011-2015 年）、**Windows 8**（**2012 年 10 月 26 日** 发布）/**8.1**（**2013 年 10 月 17 日
+- **2011-2015 年** OS X 10.7-10.11 对比 **FreeBSD 9.x**（**2012 年 1 月 12 日** 发布）/**10.x**（**2014 年 1 月 14 日** 发布）、**Linux 3.x**（2011-2015 年）、**Windows 8**（**2012 年 10 月 26 日** 发布）/**8.1**（**2013 年 10 月 17 日**
 - BSD 社区针对 2011-2015 年（OS X 10.7 Lion 至 10.11 El Capitan）Apple 与 FreeBSD 之间桥梁贡献的批评可归纳为三点。其一，**桥梁贡献者数量稀疏**——darwin.duckdb 查询显示，此期横跨 FreeBSD 与 Apple 两个社区的桥梁贡献者仅 **David Chisnall** 与 **Pedro F. Giffuni**
 - Apple 阵营对“桥梁贡献稀疏”批评的回应可归纳为三条路径。其一，**BSDL 设计意图即允许稀疏**——BSD 许可证明文允许“with or without modification”的商业使用与闭源发行，“允许不回馈”是 BSDL 的哲学选择而非 Apple 的剥削，桥梁贡献的稀疏恰是 BSDL 创始者有意授予的自由在 2011-2015 年间的自然显现；要求 Apple 在 BSDL 契
 

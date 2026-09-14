@@ -21,6 +21,7 @@ volume: 第02卷-伯克利的岁月
 - vi 与 csh 的边缘贡献者史料散见于邮件列表、文档署名与会议记录，缺乏系统化档案，这是 BSD 史学研究的重要空白
 - vi 与 csh 自 1978 年 2BSD 发布以来已延续 **47 年**（截至 2026 年），其影响力体现于三个层面——(1) 直接谱系延续：vi 谱系经 vim（1991）、elvis（1990）、nvi（1994）、Neovim（2015）持续演化，csh 谱系经 tcsh（1981）延续；(2) 功能扩散：vi 模态被 emacs（viper-mode/evil-mode）、VS Code（Vim 扩展）等编辑器吸纳〔2026-09-12 整改：句尾截断按批次 B042 指引补全〕
 
+- 2BSD 线在 1981-1991 年延续：2.9BSD 磁带寄达普遍需一至三个季度，2.10BSD 仅提供 1600bpi 磁带且不提供匿名 FTP，取得套件须先持 AT&T 源许可（1986 年约 53,000 美元）；维护责任自 Bill Jolitz 后经失联期，由 Keith Bostic 与 Steven Schultz 接续（详见 29.12）
 ## 史料
 
 - [DB:references_fulltext:chapter_matches:chmatch_3720] 卷“第02卷-伯克利的岁月”第 29 章，匹配置信度 folder，原因：folder 第29章

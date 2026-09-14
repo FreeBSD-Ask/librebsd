@@ -35,7 +35,7 @@ volume: 第06卷-freebsd的核心技术革新
 - “pkgng” 是开发代号，正式名称为 **pkg(8)**——命令行工具名为 pkg，手册页分 **pkg(7)**（概述）与 **pkg(8)**（命令参考）；常被误写为 “pkgng” 指代正式版本，但官方文档中 10.0 后统一称 **pkg(8)**。**pkg(8)** 并非从零设计——借鉴了 Debian apt、Red Hat yum/dnf、OpenBSD pkg_add、Net
 - **pkg(8)** 并未取代 ports——两者设计为协同工作，pkg 负责二进制软件包安装与管理，ports 负责源码编译定制，这是 FreeBSD 区别于多数 Linux 发行版（二进制/源码通常二选一）的特色。
   - 文献：FreeBSD Handbook. Using pkg for Binary Package Management [Z]. docs.freebsd.org. ［B
-- 部分资料称 “10.0 用 Unbound 完全替代 BIND”——需明确：Unbound 仅替代 BIND 的 “本地递归解析器” 功能，不替代 BIND 的 “权威 DNS 服务器” 功能，base 中不再包含权威 DNS 服务器软件，这是有意的设计决策——权威服务器场景多样不应强制放入 base；nslookup/dig 工具移除给习惯传统 DNS 工具的用户带来不便，**drill(1)*
+- 部分资料称 “10.0 用 Unbound 完全替代 BIND”——需明确：Unbound 仅替代 BIND 的 “本地递归解析器” 功能，不替代 BIND 的 “权威 DNS 服务器” 功能，base 中不再包含权威 DNS 服务器软件，这是有意的设计决策——权威服务器场景多样不应强制放入 base；nslookup/dig 工具移除给习惯传统 DNS 工具的用户带来不便，**drill(1)***
 
 ## 文献
 
@@ -57,7 +57,7 @@ volume: 第06卷-freebsd的核心技术革新
 
 ## 127.7.2 sysinstall 退役与 bsdinstall 继任
 
-- 要点：**sysi
+- 要点：**sysi**
 - FreeBSD 10.1-RELEASE Announcement/Release Notes [Z]. 2014；FreeBSD autofs(5) Manual Page [Z].；Napierala E T. autofs: FreeBSD Automounter [C]//BSDCan 2015. Ottawa, 2015.
 
 ## 127.8.2 RCTL 资源控制与其他内核改进
