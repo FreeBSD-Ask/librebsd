@@ -1,10 +1,10 @@
-# 第 124 章 freebsd9x图形架构与社区治理
-
 ---
 chapter: 第 124 章
 id: CH124
 volume: 第06卷-freebsd的核心技术革新
 ---
+
+# 第 124 章 freebsd9x图形架构与社区治理
 
 ## 要点
 
