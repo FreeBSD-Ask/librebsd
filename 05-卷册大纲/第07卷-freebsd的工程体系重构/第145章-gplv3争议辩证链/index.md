@@ -9,7 +9,7 @@ volume: 第07卷-freebsd的工程体系重构
 ## 要点
 
 - FreeBSD 阵营反批评层的一手史料包括 GPLv3 官方法律文本（§5c/§6/§11）、FreeBSD Foundation 2007 年公开信、GCC Steering Committee 2007 年许可转换公告、C++11 ISO 标准（ISO/IEC 14882:2011）等，这些材料经一手核验可作为反批评层法律与工程论证的可靠依据。FreeBSD Foundation 2007 年
-- GPL 阵营再回应层与合图层的一手史料包括 GPLv3 官方法律文本（§6“用户产品”定义、§11 专利报复条款）、Apache 2.0 官方法律文本（§3 专利防御性授权与终止条款）、FSF 许可证评论页面（**<https://www.gnu.org/licenses/license-list.html**>，确认 FSF 推荐 Apache 2.0 优于 BSD 因“防止专利背叛”但 Apa
+- GPL 阵营再回应层与合图层的一手史料包括 GPLv3 官方法律文本（§6“用户产品”定义、§11 专利报复条款）、Apache 2.0 官方法律文本（§3 专利防御性授权与终止条款）、FSF 许可证评论页面（**<https://www.gnu.org/licenses/license-list.html>**，确认 FSF 推荐 Apache 2.0 优于 BSD 因“防止专利背叛”但 Apa
 - 总纲第 21 条断言“革命与改革是历史方法论的分歧。Linux 靠革命，BSD 靠改革。改革的困难远高于革命。破山中贼易，破心中贼难”。以此审视 GPLv3 争议四层辩证链，可见辩证链本身即是 BSD 改革方法论的史家体现——而非 GPL 革命方法论的体现。革命式方法论会以一次性道德判决裁决“哪方更道德”（如直接断言“BSD 阵营意识形态驱动”或“GPL 阵营教条主义”），而改革式方法论则以四层渐
 
 ## 史料
@@ -37,7 +37,7 @@ volume: 第07卷-freebsd的工程体系重构
 
 ## 文献
 
-- Free Software Foundation. GNU General Public License Version 3 [Z]. 2007-06-29（§5c、§6、§11）；FreeBSD Foundation. FreeBSD Foundation 2007 年 8 月致社区关于 GPLv3 的公开信 [EB/OL]. **<https://www.freebsdfoundation.org/press/2007Aug-newsletter.shtml**>；GCC Steering Committee. GCC 4.3 and GPLv3 [EB/OL]. gcc.gnu.org, 2007；International Organization for Standardization. ISO/IEC 14882:2011 [S]. 2011. ［A］
+- Free Software Foundation. GNU General Public License Version 3 [Z]. 2007-06-29（§5c、§6、§11）；FreeBSD Foundation. FreeBSD Foundation 2007 年 8 月致社区关于 GPLv3 的公开信 [EB/OL]. **<https://www.freebsdfoundation.org/press/2007Aug-newsletter.shtml>**；GCC Steering Committee. GCC 4.3 and GPLv3 [EB/OL]. gcc.gnu.org, 2007；International Organization for Standardization. ISO/IEC 14882:2011 [S]. 2011. ［A］
 
 <!-- DB_REF:freebsd.duckdb -->
 > **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 2020-2024 年间：291,070 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
