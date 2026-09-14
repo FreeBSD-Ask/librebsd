@@ -1,6 +1,7 @@
-# 100. TAB 候选人陈述系列与 CoC 季度报告（tbd p5）（tbd p5）
+# 100 【Linux社区】TAB候选人陈述与CoC报告
 
 > 来源：tech-board-discuss p5（50 封全读，2006-10 至 2026-03，2020 选举结果 955 选民 235 投票、Rust for Linux 维护者参选、bcachefs 治理立场、CoC 季度报告三轮、xz 供应链 Fedora chroot、2010/2018 选举公告）
+> 体例说明：本页 45 块（46 条目，100.24 块下并列两条）采用**速览体例**——块下仅存单行摘记（主题陈述＋史料锚），要点、史观、辨析、文献四字段另立详表承载；五字段完整体例见 00-总览 §一.2。本页卷头未登记 claim 编号区间，文献著录与史观映射待详表单独立卷时补录。
 > 判定：46 CAND / 4 NV。主题分布：TAB nomination 1、TAB 章程修订讨论 1、CoC 季度报告答疑 1、TAB 选举场地质疑 1、TAB 候选人陈述 1、TAB 选举流程更新 1、bcachefs pull request 治理立场 1、TAB 信息可及性问询 1、维护者支持小组提案澄清 1、TAB non-nomination 与 CoC 评估 1、列表迁移完成公告 1、CoC 报告与文档建议 1、选举人资格方案讨论 1、包容性术语数据更正 1、2010 TAB 选举公告 1、Fixes 标签加日期讨论 1、CoC 季度报告原版 1、2024 TAB 候选人陈述 1、TAB 候选人陈述 Ts'o 1、TAB 成效质疑 1、候选登记确认 1、选举场地权宜性质表态 1、包容性术语补丁表态 1、2018 TAB 候选人陈述 2、术语辩论论点 1、2020 TAB 选举结果 1、2017 选举提名提醒 1、CoC 季度报告 v2 1、Fixes 日期讨论 1、LLM 重写与 clean-room 1、2008 选举公告更新 1、CoC 解释文档辩护 1、xz 事件后供应链讨论 1、包容性术语论证 1、2025 TAB 自荐 Cong Wang 1、技术写作岗位与纪要公开 1、成熟度模型出处更正 1、章程修订与缺席投票 1、2019 年 6 月 TAB 电话会纪要 1、2025 选举最终提醒 1、CoC 报告反馈回应 1、TAB 问责问询 1、2015 选举自荐 1、kernel.org 账号资格澄清 1、TAB 角色预期问询 1。
 
 ## 100.1 TAB nomination
@@ -122,7 +123,7 @@
 
 ## 100.30 LLM 重写与 clean-room
 
-- 【Linux社区】论点：clean-room 需隔离团队且通信可审计，用 LLM 重写来relicense不构成 clean-room。 `<!-- ROW_MINE: tech-board-discuss.messages.9362825 -->`
+- 【Linux社区】论点：clean-room 需隔离团队且通信可审计，用 LLM 重写来 relicense 不构成 clean-room。 `<!-- ROW_MINE: tech-board-discuss.messages.9362825 -->`
 
 ## 100.31 2008 选举公告更新
 

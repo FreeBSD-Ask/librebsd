@@ -1,4 +1,4 @@
-150 【Linux社区】python实测与2.2TAB结果
+# 150 【Linux社区】python实测与2.2TAB结果
 
 > 来源：ksummit 独有 p14（50 封全读，2021-04 至 2026-08，kernel-doc python3.13/3.9/3.6 耗时 31.7/59/76.5 秒实测、2022 TAB 选举 960 选民 267 票五人当选、git 统计 Fixes 仅约 2% 针对已发布版缺陷、Link-Origin/Origin 标签提案、soc-tools.git 钩子工具集、BPF CI 需专人值守倦怠论、AI 补丁回迁训练设想）
 > 判定：43 CAND / 7 NV。主题分布：Rust kernel policy 1、稳定分支提交标签提案 2、DRM panel API 现代化 1、退役 bugzilla 1、trivial 补丁接受政策（UMN 事件） 1、AI 与 LLM 在内核流程中的角色 1、加速器驱动的用户态要求 1、b4 新维护者功能 1、每 cgroup 交换分区控制 1、linux-next 反馈 2、Rust 议题征集 1、替换 Link 尾注 2、工具生成内容指南 1、文件系统信任与维护 2、linus-next 功能测试 1、加速器驱动用户态要求 1、bugzilla 变更计划 2、Rust 内核策略（cleanup 属性） 1、Rust for Linux 议题 2、trivial 补丁接受政策 1、Rust 内核政策 2、TAB 选举 CIVS opt-in 1、应对新开发者洪流 1、内核文档议题 1、C 聚合传参（Rust 策略） 1、2022 TAB 选举结果 1、工具生成内容指南 v2 1、设备直通 2、C 聚合传参（gccrs） 1、LLM 相关议题 1、AI 补丁审查工具 1、API 弃用强制 1、sashiko 审查模型 1、AI 辅助代码标注 1、维护者倦怠 1。

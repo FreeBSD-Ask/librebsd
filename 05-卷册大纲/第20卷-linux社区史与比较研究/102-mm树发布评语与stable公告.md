@@ -1,6 +1,7 @@
-# 102. Andrew Morton -mm 树发布评语与 stable 公告开篇（ann p1）（ann p1）
+# 102 【Linux社区】mm树发布评语与stable公告
 
 > 来源：linux-kernel-announce 人工信 p1（10 封全读，2004-09 至 2008-06，-mm 发布评语五封（SCHED_BATCH/hrtimers 更名/PCI MSI/USB autosuspend）、stable 2.6.13.2/.3、loop-AES v2.2a、Bug 8885 实质回应）
+> 体例说明：本页 10 块采用**速览体例**——块下仅存单行摘记（主题陈述＋史料锚），要点、史观、辨析、文献四字段另立详表承载；五字段完整体例见 00-总览 §一.2。本页卷头未登记 claim 编号区间，文献著录与史观映射待详表单独立卷时补录。
 > 判定：10 CAND / 0 NV。主题分布：-mm 发布 2.6.15-rc5-mm2 1、-mm 发布 2.6.18-rc6-mm1 1、loop-AES v2.2a 工具公告 1、-mm 发布 2.6.17-mm4 1、stable 发布 2.6.13.2 1、bug 回应 Bug 8885 读卡器失效 1、-mm 发布 2.6.26-rc5-mm2 1、-mm 发布 2.6.16-rc6-mm1 1、-mm 发布 2.6.15-rc2-mm1 1、stable 2.6.13.3 补丁全文 1。
 
 ## 102.1 -mm 发布 2.6.15-rc5-mm2

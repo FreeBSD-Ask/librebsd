@@ -1,4 +1,4 @@
-152 【Linux社区】kallsyms44MiB与565新人
+# 152 【Linux社区】kallsyms44MiB与565新人
 
 > 来源：ksummit 独有 p16（50 封全读，2021-04 至 2026-08，kallsyms 行号 RFC 全文（+44MiB/崩溃路径免分配免 IO）、GPU merge criteria 作大棒阻断 dump-and-run、7.2 创纪录 565 首次贡献者与迎新机制提案、韦氏年度词汇 slop 论证、Linus OSS 峰会 eBPF 表态转述、相机 ISP 换子系统逃避文档义务举证、Wine/VMware 曾受 PAGE_OFFSET 影响）
 > 判定：45 CAND / 5 NV。主题分布：Rust policy 2、LLM 与审查 1、cdev 生命周期竞态 1、Bugzilla 与邮件 7、设备直通 3、kallsyms 行号信息 1、C 聚合传参 2、内核可持续性 1、Rust for Linux 4、LLM 标签 1、stable 邮件量 1、工具生成内容文档 5、AI 与 LLM 角色 1、regzbot RFC 回应 1、内核文档工具链 1、eBPF 边界 1、stable 标签 1、TAB 选举 1、HIGHMEM 淘汰 2、LLM 与维护者 1、kernel.org 工具 1、AI 标注 1、Link 标签 1、THE REST 列表 2、内核 malloc 1、新贡献者洪峰 1。

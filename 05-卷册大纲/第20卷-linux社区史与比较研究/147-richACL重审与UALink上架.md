@@ -1,4 +1,4 @@
-147 【Linux社区】richACL重审与UALink上架
+# 147 【Linux社区】richACL重审与UALink上架
 
 > 来源：ksummit 独有 p11（50 封全读，2021-04 至 2026-08，RichACL 重审提案（AI 存储场景 POSIX ACL 不敷使用/百万装机）、UALink drivers/ualink 独立子系统经 DRM 流转决策、两周回归修复时限“最坏主意”之驳、SoftISP 量化验收标准与校准文件≈固件 blob、DT 绑定即 ABI 过渡路径原则、b4 tip 启发式 commitish→lore 已实现、lock-free 算法反驳“总有锁”）
 > 判定：45 CAND / 5 NV。主题分布：AI工具生成内容文档争论 1、新开发者洪水与stable回迁 1、bugzilla默认订阅争论 1、Rust内核策略UBSan争论 1、本地LLM评审Sashiko实测 1、richACL与AI相册共享场景 1、内核malloc提案反驳 1、linus-next树运作机制 1、AI辅助代码标注争论 1、THE REST收件列表讨论 1、维护者峰会存废争论 1、Rust聚合体传参与aliasing 1、richACL议题征集 1、AI辅助补丁标注与SOB链 1、UALink驱动上架决策 1、回归修复时限提案反驳 1、API废弃执行机制 1、崩溃回溯价值争论 1、补丁自动测试反馈机制 1、linus-next与next路线之争 1、trivial补丁受理政策 1、LLM补丁洪流归因之争 1、Link trailer替换提案 1、bugzilla与邮件报告流程 1、内核文档构建噪音治理 1、维护者支持小组讨论 1、b4 dig实现进展 1、Rust GPIO包装层布局 1、栈回溯源码行号与调试符号 1、bugzilla triage自荐 1、安全embargo披露机制 1、C聚合体与无锁代码 1、文件系统维护与虚拟硬件 1、工具生成内容文档v5评审 1、特性纳入与驱逐程序 1、工具生成内容文档背书 1、设备直通开放性争议 1、dt-bindings独立仓库动议 1、per-cgroup swap控制路由 1、工具生成内容文档v3质疑 1、工具生成内容文档措辞 1、UnsafeCell与C指针语义 1、DT绑定ABI变更原则 1、静态分析注解探讨 1、内核文档质量与CI 1。

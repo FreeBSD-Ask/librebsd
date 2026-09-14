@@ -1,4 +1,4 @@
-159 【Linux社区】Rust抽象与AI评审推进
+# 159 【Linux社区】Rust抽象与AI评审推进
 
 > 来源：ksummit 独有 p23（50 封全读，2021-04 至 2026-07：Linus 系统论证 C 标准把内存访问定为不可观测是错误、单次读拆两次引入 TOCTOU 漏洞；Leemhuis 回归处理守则官方化提案全文含严重 bug 两三天一般三周时限与 FASTTRACK 标签；Mauro 对 conclave 项目延续预案逐条批评 72 小时失联兜底与 TAB 零当选最坏情况；Starovoitov 宣布 BPF AI 评审工具以纯文本邮件直接进入开发流程；Rust 抽象架构与演化稳定性、Link 标签替代与规范、Bugzilla 退役、malloc 提案争论、AI 生成内容版权与准则）
 > 判定：45 CAND / 5 NV。主题分布：AI补丁评审工具 2、Rust别名模型讨论 1、Rust与C安全对比 1、AI生成内容版权 1、闭源用户态政策 1、AI标注与隐私 1、Link标签替代 2、CC列表自动化 1、Link标签规范 3、回归处理准则 1、Revocable防UAF 1、AI评审提示词 1、PGP密钥过期争论 1、TAB选举资格 1、C标准UB争论 1、CC列表实践 1、Rust文件布局争论 1、面板驱动生态 1、trivial 补丁信任 1、Rust GPIO驱动 1、AI slop条款争论 1、malloc提案争论 2、DT绑定仓库 1、linux-next测试 1、变量声明风格 1、文档构建痛点 1、Bugzilla退役 2、安全披露流程 1、维护者倦怠 1、维护者档案文档 1、HIGHMEM淘汰 1、AI生成内容准则 1、Rust演化稳定性 1、Rust抽象架构 2、Rust内核政策争论 1、文档构建性能 2、项目延续预案 1。

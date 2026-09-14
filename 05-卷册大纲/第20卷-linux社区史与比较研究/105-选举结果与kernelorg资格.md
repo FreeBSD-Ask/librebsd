@@ -1,6 +1,7 @@
-# 105. 历届选举官方结果与 kernel.org 资格之辩（tbd p8）（tbd p8）
+# 105 【Linux社区】选举结果与kernelorg资格
 
 > 来源：tech-board-discuss p8（50 封全读，2007-08 至 2026-03，2016 选举 108 票/2007 八选五/2008 递补规则官方公告、kernel.org 账号投票门槛裁量权之辩、Wilcox 抗议 KS 邀请绑投票权、xz 供应链 Kees 可复现构建之限、Rostedt tracing 两维护者之困）
+> 体例说明：本页 35 块采用**速览体例**——块下仅存单行摘记（主题陈述＋史料锚），要点、史观、辨析、文献四字段另立详表承载；五字段完整体例见 00-总览 §一.2。本页卷头未登记 claim 编号区间，文献著录与史观映射待详表单独立卷时补录。
 > 判定：37 CAND / 13 NV。主题分布：CodingStyle 包容性术语 1、贡献成熟度模型 2、TAB 选举投票程序 1、竞选 LF TAB 1、维护者支持小组 2、TAB 自我提名 1、TAB 章程修改（kernel.org 账号投票） 1、2016 TAB 选举结果 1、2007 TAB 选举程序 1、TAB 选举提名 1、CoC 委员会报告（2021-09-30） 1、unwind_user 导出与维护者带宽 1、2018 TAB 选举可达性 1、2008 TAB 选举更新 1、2007 TAB 选举结果 1、新任 TAB 主席 1、TAB 成员职责说明 1、LLM 重写代码的合法性 1、xz 事件与 Lasse Collin 1、选举投票规则澄清 1、提名 David Woodhouse 1、2018 选举可达性 1、xz 事件与构建供应链 1、xz 事件与构建注入 1、术语替换语义 1、竞选 TAB 连任 1、竞选 TAB 1、2007 选举程序立场 1、缺席候选人处理 1、2007 选举代表性异议 1、背书 Julia Lawall 竞选 1、维护者心理支持 1、Fixes 标签加作者日期 1、TAB 章程修改 1、CoC 争议与参选表态 1。
 
 ## 105.1 CodingStyle 包容性术语
@@ -95,7 +96,7 @@
 
 ## 105.23 xz 事件与构建供应链
 
-- 【Linux社区】指出可复现构建虽成熟但拦不住恶意构建依赖，举“Jai Tan” groundwork 注入为例 `<!-- ROW_MINE: tech-board-discuss.messages.9362977 -->`
+- 【Linux社区】指出可复现构建虽成熟但拦不住恶意构建依赖，举“Jia Tan” groundwork 注入为例 `<!-- ROW_MINE: tech-board-discuss.messages.9362977 -->`
 
 ## 105.24 xz 事件与构建注入
 

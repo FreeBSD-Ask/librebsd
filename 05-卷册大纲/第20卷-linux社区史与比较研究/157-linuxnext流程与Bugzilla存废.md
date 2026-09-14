@@ -1,4 +1,4 @@
-157 【Linux社区】linuxnext流程与Bugzilla存废
+# 157 【Linux社区】linuxnext流程与Bugzilla存废
 
 > 来源：ksummit 独有 p21（50 封全读，2021-07 至 2025-09：Leemhuis 完整重发 bugzilla.kernel.org 整改计划附 MAINTAINERS 约 2500 条目仅约 20 条指向 Bugzilla 实测；Kees Cook 给出 2018-2024 六年 TAB 选举投票率序列 2024 年 229/934=24.5%；Sasha Levin 以 80%/70%/85% 三组统计论证 Fixes/Stable 标签语义失灵并提出 Improves 标签；Chris Mason 披露维护者峰会年成本约 2.5 万美元与赞助断档；linux-next 流程六封、Rust 内核迁移、AI 评审与政策、HIGHMEM 淘汰争议、内核密钥管理与安全禁运流程）
 > 判定：42 CAND / 8 NV。主题分布：linux-next流程 6、AI生成内容政策 2、贡献者信任 2、HIGHMEM淘汰争议 3、Bugzilla存废 4、Rust内核迁移 3、Link标签存废 1、AI评审与政策 4、文档工具链 3、TAB选举 2、安全禁运流程 1、峰会存续资金 1、社区健康资源 1、ISP框架争论 1、稳定分支标签 2、内核密钥管理 2、用户态开放要求 2、维护者列表改革 1、GitLab工作流 1。

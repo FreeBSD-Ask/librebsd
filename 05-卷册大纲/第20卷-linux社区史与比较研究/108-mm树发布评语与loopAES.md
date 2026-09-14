@@ -1,6 +1,7 @@
-# 108. mm 树发布评语续篇与 loop-AES v3.0b（ann p3）（ann p3）
+# 108 【Linux社区】mm树发布评语与loopAES
 
 > 来源：linux-kernel-announce 人工信 p3（10 封全读，2005-01 至 2008-04，-mm 发布评语八封（git-xfs 恢复/git-selinux 弃置/pselect/ppoll 与 unshare() 新系统调用/section-mismatch alpha 358 错、“凌晨 5:41 懒得逐一描述”）、vgacon scrollback 修复、loop-AES v3.0b）
+> 体例说明：本页 10 块采用**速览体例**——块下仅存单行摘记（主题陈述＋史料锚），要点、史观、辨析、文献四字段另立详表承载；五字段完整体例见 00-总览 §一.2。本页卷头未登记 claim 编号区间，文献著录与史观映射待详表单独立卷时补录。
 > 判定：10 CAND / 0 NV。主题分布：-mm 发布 2.6.25-mm1 1、-mm 发布 2.6.15-rc5-mm1 1、-mm 发布 2.6.12-rc4-mm1 1、-mm 发布 2.6.13-rc3-mm3 1、vgacon printk scrolling fix（补丁提交） 1、-mm 发布 2.6.15-mm4 1、-mm 发布 2.6.16-rc4-mm2 1、-mm 发布 2.6.18-rc3-mm2 1、-mm 发布 2.6.24-rc5-mm1 1、loop-AES v3.0b 加密包公告 1。
 
 ## 108.1 -mm 发布 2.6.25-mm1

@@ -1,4 +1,4 @@
-141 【Linux社区】WoT过期与folio五缺口
+# 141 【Linux社区】WoT过期与folio五缺口
 
 > 来源：ksummit 独有 p4（50 封全读，2021-04 至 2026-07，sq cert lint 637 证书 SHA-1 数据论证密钥过期、folio 流程五大缺口剖析与 DAX 类比、Bug-fix-from: 激励标签提案、DRM panel 即 bridge 与 eBPF quirk 用户空间化、Rust 与 Wedson 资源撤销之辩、wifi 子系统因 Sphinx 同名 bug 改名决策、Linux 过大不敢冒险之问）
 > 判定：47 CAND / 3 NV。主题分布：stable 回退回归防范 2、MAINTAINERS 条目校验 1、CONFIG_HIGHMEM 淘汰 1、C 聚合传参（Rust 政策） 2、文件系统维护信任之争 1、内核文档 2、Link 尾注与 Message-ID 1、Rust 内核政策 1、Web of Trust 与密钥有效期 1、稳定分支提交打标 1、维护者倦怠与审查机器人 1、邮件引用修剪与 KTODO 1、Link 尾注文档补丁 1、工具生成内容准则 1、维护者倦怠与 CI 1、DRM panel API 现代化 1、C 聚合传参 1、设备直通议题组织 1、eBPF 用户态边界 1、trivial 补丁接收政策 2、sashiko 审查模型 1、维护者倦怠与激励 1、替换 Link 尾注 1、硬件使能的期望管理 1、MAINTAINERS 校验 1、Folios 议题与流程 2、维护者导师制 1、trivial 补丁政策 2、加速器驱动的用户态要求 1、项目连续性文档 1、MAINTAINERS THE REST 改抄送 1、字符串助手迁移 1、Rust for Linux 2、bugzilla 退役与崩溃日志工具 1、AI 审查的位置 1、未订阅列表的回信方法 1、Rust for Linux 与 irqchip 1、Bugzilla 改进与回归追踪 1、cdev/devm 陷阱 1、项目过大与过度恐惧 1。

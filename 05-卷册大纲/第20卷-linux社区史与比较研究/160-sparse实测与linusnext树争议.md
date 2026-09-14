@@ -1,4 +1,4 @@
-160 【Linux社区】sparse实测与linusnext树争议
+# 160 【Linux社区】sparse实测与linusnext树争议
 
 > 来源：ksummit 独有 p24（50 封全读，2021-04 至 2026-08：Linus 详析自制 sparse 有符号无符号比较补丁实跑揪出 null_blk blk_status_t 强转真 bug；Mark Brown 给出 -next 重复挑选硬数据 drm 1739 提交 111 重复约 6%；Sasha Levin 归纳 AI/LLM 议题五点共识四大分歧含约 20% 提交为修复的 bug 率数据、hpa 主张 AI 代码推定抄袭；Vegard Nossum 系统剖析评审激励失衡与 Reviewed-by 改造方案；Bugzilla 争议四封、静态检查工具四封、DRM 挑选回迁三封）
 > 判定：44 CAND / 6 NV。主题分布：Rust引入争论 2、AI评审角色 3、峰会存废经费 1、AI标注政策 3、补丁基址标注 1、linus-next树争议 4、AI生成内容准则 1、峰会疫情筹备 1、驱动资源管理 1、AI训练版权 1、缺陷报告流程 1、CoC委员会职责 1、AI应用边界 1、峰会远程参与 1、stable回迁策略 2、DRM挑选回迁 3、Bugzilla争议 3、Fixes标签语义 1、Rust工具链 1、加速器用户态接口 2、峰会筹备反馈 1、静态检查工具 3、Link尾注争议 2、背光亮度接口 1、维护者倦怠激励 1、lore与b4工具 1、邮件引用规范 1。

@@ -1,6 +1,7 @@
-# 109. mm 树已知破损实录与 iswraid 工具公告（ann p4）（ann p4）
+# 109 【Linux社区】mm树破损实录与iswraid
 
 > 来源：linux-kernel-announce 人工信 p4（10 封全读，2004-07 至 2019-04，-mm 发布评语五封（2.6.18-rc7-mm1 十小时勉强可登录、CONFIG_BROKEN 大面积、bk 转 git、USB 电源管理恢复编译）、iswraid 0.1.4、kmap_atomic 修法、glibc 手册 bug 归因）
+> 体例说明：本页 9 块采用**速览体例**——块下仅存单行摘记（主题陈述＋史料锚），要点、史观、辨析、文献四字段另立详表承载；五字段完整体例见 00-总览 §一.2。本页卷头未登记 claim 编号区间，文献著录与史观映射待详表单独立卷时补录。
 > 判定：9 CAND / 1 NV。主题分布：2.6.18-mm1 1、Re: bug#35275: spelling mistake manual pages 1、2.6.14-rc5-mm1 1、2.6.22-rc4-mm1 1、[Announce] “iswraid” (ICH5R/ICH6R ataraid sub-driver) for 2.4.26 1、Re: kmap_atomic() oopses in current mainline 1、2.6.27-rc1-mm1 1、2.6.12-rc3-mm1 1、2.6.18-rc7-mm1 1。
 
 ## 109.1 2.6.18-mm1
