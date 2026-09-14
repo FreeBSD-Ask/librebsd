@@ -33,15 +33,15 @@ volume: 第13卷-bsd衍生操作系统
 
 - 考据过程留痕——【查证来源】IDC 2012 年将 NetApp Data ONTAP 评为“2012 年度开放式网络磁盘存储系统市场第一品牌存储操作系统”经多来源交叉确认（NetApp 官方资料与媒体报道均提及，可作为“商业封装商品形式获得市场认知度”的实证）；FreeBSD 官方手册（**<https://www.freebsd.org.cn/freebsdhandbook/nutshell.html>**〔注：原引 URL 于 nutshell. 处截断，已按 FreeBSD 手册 nutshell 页路径补全，有效性待核〕）〔注：本行原文于此后截断，已按上下文收束〕
 - 考据过程留痕——【查证来源】BSD-3-Clause 许可证文本经 Open Source Initiative（**<https://opensource.org/licenses/BSD-3-Clause>**）一手核验，确实允许闭源使用而不要求回馈；GPL v3 文本经 GNU 官方（**<https://www.gnu.org/licenses/gpl-3.0.html>**）一手核验，确认 §5 强制回馈（copyleft）条款内容属实。
-- 考据过程留痕——【查证来源】**原材料/哲学/项目统摄史观/第 25 章.md** 总纲第 19 条原文与**原材料/哲学/项目统摄史观/第 19 章.md** 解释学循环章经本项目哲学源材料核验；BSD-3-Clause 许可证文本经 Open Source Initiative（**<https://opensource.org/licenses/BSD-3-Clause>**）一手核验；bsd_commits.duckdb 相关查询记录经库内核验〔注：原行于 bsd_commit 处截断，已按上下文收束〕
-- 考据过程留痕——【查证来源】**原材料/哲学/项目统摄史观/第 25 章.md** 总纲第 1、2、7、11、13、19、23、25 条原文经本项目哲学源材料核验；本节 269.5（原 128.5.1-128.5.3 节审视文本并入）作为自反对象；BSD-3-Clause 许可证文本经 Open Source Initiative（**<https://opensource.org/licenses/BSD-3-Clause>**）一手核验。
+- 考据过程留痕——【查证来源】**02-sacred源材料/sacred_sources.duckdb（第 25 章）** 总纲第 19 条原文与**02-sacred源材料/sacred_sources.duckdb（第 19 章）** 解释学循环章经本项目哲学源材料核验；BSD-3-Clause 许可证文本经 Open Source Initiative（**<https://opensource.org/licenses/BSD-3-Clause>**）一手核验；bsd_commits.duckdb 相关查询记录经库内核验〔注：原行于 bsd_commit 处截断，已按上下文收束〕
+- 考据过程留痕——【查证来源】**02-sacred源材料/sacred_sources.duckdb（第 25 章）** 总纲第 1、2、7、11、13、19、23、25 条原文经本项目哲学源材料核验；本节 269.5（原 128.5.1-128.5.3 节审视文本并入）作为自反对象；BSD-3-Clause 许可证文本经 Open Source Initiative（**<https://opensource.org/licenses/BSD-3-Clause>**）一手核验。
 
 ## 文献
 
-- **原材料/哲学/项目统摄史观/第 25 章.md**；**原材料/哲学/项目统摄史观/第 08 章.md**；openbsd.duckdb 查询 L7.2.1、L3.2.1、L3.2.2；NetApp/Isilon/Citrix 架构文档；IDC 2012 年存储操作系统市场报告；269.5 节记录（原 128.4.1-128.4.4 节记录〔旧结构节号，现行对应待结构映射核验〕） ［A］
-- **原材料/哲学/项目统摄史观/第 25 章.md**；BSD 许可证文本；GPL v3 §5 文本；Berkeley CSRG 1999.7.22 公告；FreeBSD Foundation 许可证立场文件；openbsd.duckdb 查询 L7.2.1；269.5 节记录（原 128.4.1-128.4.4 节〔旧结构节号，现行对应待结构映射核验〕）；134 章 BSD 许可证文本与历史记录；133 章 FreeBSD 商业生态记录；134.2 节 BSD vs GPL 哲学差异记录 ［A］
-- **原材料/哲学/项目统摄史观/第 25 章.md**；**原材料/哲学/项目统摄史观/第 19 章.md**；BSD 许可证文本；openbsd.duckdb 查询 L7.2.1；NetApp/Isilon/Citrix 商品形式营销材料；FreeBSD Foundation 年报；行业媒体报道；269.5 节记录（原 128.4.1-128.4.4 节〔旧结构节号，现行对应待结构映射核验〕） ［A］
-- **原材料/哲学/项目统摄史观/第 25 章.md** 总纲第 1、2、7、11、13、19、23、25 条；BSD 许可证文本；openbsd.duckdb 查询 L7.2.1、L3.2.1、L3.2.2；NetApp/Isilon/Citrix 架构文档；FreeBSD Foundation 年报；WhatsApp/NetApp/Isilon/Citrix 工程演讲存档；行业媒体报道 ［A］
+- **02-sacred源材料/sacred_sources.duckdb（第 25 章）**；**02-sacred源材料/sacred_sources.duckdb（第 08 章）**；openbsd.duckdb 查询 L7.2.1、L3.2.1、L3.2.2；NetApp/Isilon/Citrix 架构文档；IDC 2012 年存储操作系统市场报告；269.5 节记录（原 128.4.1-128.4.4 节记录〔旧结构节号，现行对应待结构映射核验〕） ［A］
+- **02-sacred源材料/sacred_sources.duckdb（第 25 章）**；BSD 许可证文本；GPL v3 §5 文本；Berkeley CSRG 1999.7.22 公告；FreeBSD Foundation 许可证立场文件；openbsd.duckdb 查询 L7.2.1；269.5 节记录（原 128.4.1-128.4.4 节〔旧结构节号，现行对应待结构映射核验〕）；134 章 BSD 许可证文本与历史记录；133 章 FreeBSD 商业生态记录；134.2 节 BSD vs GPL 哲学差异记录 ［A］
+- **02-sacred源材料/sacred_sources.duckdb（第 25 章）**；**02-sacred源材料/sacred_sources.duckdb（第 19 章）**；BSD 许可证文本；openbsd.duckdb 查询 L7.2.1；NetApp/Isilon/Citrix 商品形式营销材料；FreeBSD Foundation 年报；行业媒体报道；269.5 节记录（原 128.4.1-128.4.4 节〔旧结构节号，现行对应待结构映射核验〕） ［A］
+- **02-sacred源材料/sacred_sources.duckdb（第 25 章）** 总纲第 1、2、7、11、13、19、23、25 条；BSD 许可证文本；openbsd.duckdb 查询 L7.2.1、L3.2.1、L3.2.2；NetApp/Isilon/Citrix 架构文档；FreeBSD Foundation 年报；WhatsApp/NetApp/Isilon/Citrix 工程演讲存档；行业媒体报道 ［A］
 
 <!-- DB_REF:bsd_derivatives.duckdb -->
 > **数据库引用（bsd_derivatives.duckdb）**：本子节对应 bsd_derivatives 代码仓库。> 1985-2026 年间：963,557 次提交。> 仓库总览：963,557 次提交，9,744 位贡献者（contributors 表行数，1985-06-13 至 2026-08-24）。
