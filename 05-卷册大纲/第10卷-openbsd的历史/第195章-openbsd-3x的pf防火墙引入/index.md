@@ -8,7 +8,7 @@ volume: 第10卷-openbsd的历史
 
 ## 要点
 
-- pf 2001 年原始公告与 CVS commit log 是研究 pf 诞生的核心史料；公告由 de Raadt 与 Hartmeier 发布至 OpenBSD 邮件列表；commit log 反映 Hartmeier 等的早期开发节奏；统计结论印证——openbsd.duckdb openbsd-src 仓库总 commit 数 245,904（统计结论 C-05），3.x 时期（2001-2004）
+- pf 2001 年原始公告与 CVS commit log 是研究 pf 诞生的核心史料；公告由 de Raadt 与 Hartmeier 发布至 OpenBSD 邮件列表；commit log 反映 Hartmeier 等的早期开发节奏；统计结论印证——openbsd.duckdb openbsd-src 仓库总 commit 数 246,535〔订正注：原 245,904 系 C-05 统计结论旧值，openbsd-src 现测 246,535，按 C-05 回填任务订正〕，3.x 时期（2001-2004）
 - OpenBSD 3.1-3.6 安全特性（W^X、SSP、privilege separation、swap encryption）的 commit 记录是研究此时期安全演进的核心史料；Provos、Etoh、de Raadt 等的 commit 反映开发节奏；考据需对照 CVS commit log 与 Release Notes；统计结论印证——openbsd.duckdb openbsd-src 仓
 - OpenBSD 提出“在默认安装中 6 年仅两个远程漏洞”口号，最初由 de Raadt 在 OpenBSD 网站上宣称；口号中的“远程漏洞”指默认安装下可被远程攻击者利用的漏洞；口号随时间演变，至 2000 年代中期改为“多年无远程漏洞”
 - 批评者（如 CVE 数据库研究者、Linux 社区成员）指出 OpenBSD 口号依赖于严格定义——“默认安装”排除了 ports 与第三方软件，“远程漏洞”排除了本地漏洞与权限提升漏洞；批评者认为 OpenBSD 实际安全记录虽有改进，但口号夸大宣传
@@ -20,7 +20,7 @@ volume: 第10卷-openbsd的历史
 
 ## 史观
 
-(待人工回填——详见子节文件史观/辨析字段)
+本章史观映射汇总：各子节共挂 9 条——总纲 10“动手者创造历史”×4、总纲 4“分离聚合是永恒规律”、总纲 6“和解优于斗争”、总纲 13“法律与道德是利益分配”、总纲 9“经验优先”、总纲 22“知识注定过时”，条目名均与权威表相符，详见子节文件史观/辨析字段〔订正注：原为“(待人工回填)”占位，按子节实测映射回填摘要〕
 
 ## 辨析
 
@@ -36,7 +36,8 @@ volume: 第10卷-openbsd的历史
 
 <!-- DB_REF:openbsd.duckdb -->
 > **数据库引用（openbsd.duckdb）**：本子节对应 openbsd 代码仓库。> 2001-2001 年间：18,985 次提交。> 仓库总览：491,195 次提交，3,352 位贡献者，1995-10-18 至 2026-08-25。
-- OpenBSD CVS 仓库；OpenBSD 邮件列表；统计分析报告：推断性统计.md Task 5 + Task 10 [R/OL]. 2026-07-27. 文件路径：**03-原始史料库/01-代码仓库史料/01-数据库本体/统计分析/推断性统计.md**；描述性统计.md SubTask 2.3 [R/OL]. 2026-07-27. 文件路径：**03-原始史料库/01-代码仓库史料/01-数据库本体/统计分析/描述性统计.md**；Python 统计脚本：`script/phase2_inferential.py`. Task 5 Mann-Kendall 趋势检验 + Task 10 Gini 系数 Bootstrap. 执行日期：2026-07-27 ［A］#### 194.3“默认安装仅两个远程漏洞”口号的演变——OpenBSD 提出“在默认安装中 6 年仅两个远程漏洞”的口号，该口号长期受批评，批评者认为计数依赖于严格定义
+- OpenBSD CVS 仓库；OpenBSD 邮件列表；统计分析报告：推断性统计.md Task 5 + Task 10 [R/OL]. 2026-07-27. 文件路径：**03-原始史料库/01-代码仓库史料/01-数据库本体/统计分析/推断性统计.md**；描述性统计.md SubTask 2.3 [R/OL]. 2026-07-27. 文件路径：**03-原始史料库/01-代码仓库史料/01-数据库本体/统计分析/描述性统计.md**；Python 统计脚本：`script/phase2_inferential.py`. Task 5 Mann-Kendall 趋势检验 + Task 10 Gini 系数 Bootstrap. 执行日期：2026-07-27 ［A］
+**195.4（口号主题子目）**“默认安装仅两个远程漏洞”口号的演变——〔订正注：原文以 H4 标题混入文献列表且章号误作 194.3（off-by-one），改挂第 195 章并移出文献列表体例〕OpenBSD 提出“在默认安装中 6 年仅两个远程漏洞”的口号，该口号长期受批评，批评者认为计数依赖于严格定义
 - OpenBSD 官网 Security 页面；Wayback Machine 快照；de Raadt 演讲［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
 - CVE 数据库；Bugtraq/Full Disclosure 邮件列表；OpenBSD Security 页面 ［A］
 - OpenBSD 邮件列表；de Raadt 演讲；OpenBSD FAQ ［A］
@@ -48,11 +49,11 @@ volume: 第10卷-openbsd的历史
 
 <!-- DB_REF:openbsd.duckdb -->
 > **数据库引用（openbsd.duckdb）**：本子节对应 openbsd 代码仓库。> 1996-2004 年间：112,478 次提交。> 仓库总览：491,195 次提交，3,352 位贡献者，1995-10-18 至 2026-08-25。
-- 原材料/哲学/项目统摄史观/第 25 章.md（总纲第 6 条与第 8 条原文）；OpenBSD CVS 仓库；FreeBSD CVS/Git 仓库（PF 相关）；OpenBSD 邮件列表存档 ［A］
+- 02-sacred源材料/sacred_sources.duckdb 第 25 章（总纲第 6 条与第 8 条原文）〔订正注：原引 原材料/哲学/项目统摄史观/第 25 章.md 系库外断链路径，改挂库内规范出处〕；OpenBSD CVS 仓库；FreeBSD CVS/Git 仓库（PF 相关）；OpenBSD 邮件列表存档 ［A］
 
 <!-- DB_REF:openbsd.duckdb -->
 > **数据库引用（openbsd.duckdb）**：本子节对应 openbsd 代码仓库。> 1996-2004 年间：112,478 次提交。> 仓库总览：491,195 次提交，3,352 位贡献者，1995-10-18 至 2026-08-25。
-- 原材料/哲学/项目统摄史观/第 25 章.md（总纲第 8 条与第 13 条原文）；OpenBSD 邮件列表存档 [EB/OL]. **<https://marc.info/?laccopenbsd-misc**>；FreeBSD CVS/Git 仓库（`sys/netpfil/pf/`）；OpenBSD security.html [EB/OL].** <https://www.openbsd.org/security/**>；FreeBSD TrustedBSD 项目文档；NSA SELinux 项目文档 ［A］
+- 02-sacred源材料/sacred_sources.duckdb 第 25 章（总纲第 8 条与第 13 条原文）〔订正注：原引 原材料/哲学/项目统摄史观/第 25 章.md 系库外断链路径，改挂库内规范出处〕；OpenBSD 邮件列表存档 [EB/OL]. **<https://marc.info/?laccopenbsd-misc**>；FreeBSD CVS/Git 仓库（`sys/netpfil/pf/`）；OpenBSD security.html [EB/OL].** <https://www.openbsd.org/security/**>；FreeBSD TrustedBSD 项目文档；NSA SELinux 项目文档 ［A］
 
 <!-- DB_REF:freebsd.duckdb -->
 > **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 1995-2026 年间：1,289,123 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
