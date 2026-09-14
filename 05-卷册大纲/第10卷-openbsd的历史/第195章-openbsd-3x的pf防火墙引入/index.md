@@ -53,7 +53,7 @@ volume: 第10卷-openbsd的历史
 
 <!-- DB_REF:openbsd.duckdb -->
 > **数据库引用（openbsd.duckdb）**：本子节对应 openbsd 代码仓库。> 1996-2004 年间：112,478 次提交。> 仓库总览：491,195 次提交，1,031 位贡献者（contributors 表实测），1995-10-18 至 2026-08-25。
-- 02-sacred源材料/sacred_sources.duckdb 第 25 章（总纲第 8 条与第 13 条原文）〔订正注：原引 原材料/哲学/项目统摄史观/第 25 章.md 系库外断链路径，改挂库内规范出处〕；OpenBSD 邮件列表存档 [EB/OL]. **<https://marc.info/?laccopenbsd-misc**>；FreeBSD CVS/Git 仓库（`sys/netpfil/pf/`）；OpenBSD security.html [EB/OL].** <https://www.openbsd.org/security/**>；FreeBSD TrustedBSD 项目文档；NSA SELinux 项目文档 ［A］
+- 02-sacred源材料/sacred_sources.duckdb 第 25 章（总纲第 8 条与第 13 条原文）〔订正注：原引 原材料/哲学/项目统摄史观/第 25 章.md 系库外断链路径，改挂库内规范出处〕；OpenBSD 邮件列表存档 [EB/OL]. **<https://marc.info/?laccopenbsd-misc>**；FreeBSD CVS/Git 仓库（`sys/netpfil/pf/`）；OpenBSD security.html [EB/OL].** <https://www.openbsd.org/security/**>；FreeBSD TrustedBSD 项目文档；NSA SELinux 项目文档 ［A］
 
 <!-- DB_REF:freebsd.duckdb -->
 > **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 1995-2026 年间：1,289,123 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。

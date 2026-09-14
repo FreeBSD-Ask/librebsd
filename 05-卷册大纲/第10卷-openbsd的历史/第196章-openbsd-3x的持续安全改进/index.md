@@ -51,11 +51,11 @@ volume: 第10卷-openbsd的历史
 
 <!-- DB_REF:netbsd.duckdb -->
 > **数据库引用（netbsd.duckdb）**：本子节对应 netbsd 代码仓库。> 1996-2004 年间：593,615 次提交。> 仓库总览：1,999,412 次提交，1,545 位贡献者（contributors 表行数，1992-07-13 至 2026-08-24）。
-- openbsd.duckdb openbsd-src 仓库；OpenBSD 3.x errata patches [EB/OL]. **<https://www.openbsd.org/errata.html**>；MIT Kerberos 安全公告；zlib 安全公告 ［A］
+- openbsd.duckdb openbsd-src 仓库；OpenBSD 3.x errata patches [EB/OL]. **<https://www.openbsd.org/errata.html>**；MIT Kerberos 安全公告；zlib 安全公告 ［A］
 
 <!-- DB_REF:openbsd.duckdb -->
 > **数据库引用（openbsd.duckdb）**：本子节对应 openbsd 代码仓库。> 2001-2006 年间：103,490 次提交。> 仓库总览：491,195 次提交，1,031 位贡献者（contributors 表实测），1995-10-18 至 2026-08-25。
-- 原材料/哲学/项目统摄史观/第 25 章.md（总纲第 13、19、21 条原文）；OpenBSD security.html [EB/OL]. **<https://www.openbsd.org/security/**>；OpenBSD 3.0-3.6 Release Notes [EB/OL].** <https://www.openbsd.org/plus.html**>；FreeBSD 5.x Release Notes [EB/OL]. **<https://www.freebsd.org/releases/**>；Linux 2.6 内核 changelog [EB/OL].** <https://www.kernel.org/**>；NSA SELinux 项目文档；FreeBSD TrustedBSD 项目文档；openbsd.duckdb openbsd-src 与 freebsd-src 仓库 commits 表 ［A］
+- 原材料/哲学/项目统摄史观/第 25 章.md（总纲第 13、19、21 条原文）；OpenBSD security.html [EB/OL]. **<https://www.openbsd.org/security/>**；OpenBSD 3.0-3.6 Release Notes [EB/OL].** <https://www.openbsd.org/plus.html**>；FreeBSD 5.x Release Notes [EB/OL]. **<https://www.freebsd.org/releases/>**；Linux 2.6 内核 changelog [EB/OL].** <https://www.kernel.org/**>；NSA SELinux 项目文档；FreeBSD TrustedBSD 项目文档；openbsd.duckdb openbsd-src 与 freebsd-src 仓库 commits 表 ［A］
 
 <!-- DB_REF:openbsd.duckdb -->
 > **数据库引用（openbsd.duckdb）**：本子节对应 openbsd 代码仓库。> 1995-2026 年间：491,195 次提交。> 仓库总览：491,195 次提交，1,031 位贡献者（contributors 表实测），1995-10-18 至 2026-08-25。

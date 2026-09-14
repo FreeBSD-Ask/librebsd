@@ -45,7 +45,7 @@ volume: 第10卷-openbsd的历史
 
 <!-- DB_REF:openbsd.duckdb -->
 > **数据库引用（openbsd.duckdb）**：本子节对应 openbsd 代码仓库。> 2000-2004 年间：81,488 次提交。> 仓库总览：491,195 次提交，1,031 位贡献者（contributors 表实测），1995-10-18 至 2026-08-25。
-- OpenBSD 2.6-2.9 errata patches [EB/OL]. **<https://www.openbsd.org/errata.html**>；openbsd.duckdb openbsd-src 仓库；i386 LDT 架构手册 ［A］
+- OpenBSD 2.6-2.9 errata patches [EB/OL]. **<https://www.openbsd.org/errata.html>**；openbsd.duckdb openbsd-src 仓库；i386 LDT 架构手册 ［A］
 
 <!-- DB_REF:openbsd.duckdb -->
 > **数据库引用（openbsd.duckdb）**：本子节对应 openbsd 代码仓库。> 1996-2001 年间：63,666 次提交。> 仓库总览：491,195 次提交，1,031 位贡献者（contributors 表实测），1995-10-18 至 2026-08-25。

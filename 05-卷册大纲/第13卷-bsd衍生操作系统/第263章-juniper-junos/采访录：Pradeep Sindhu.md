@@ -12,7 +12,7 @@
 - 采访者：计算机历史博物馆口述历史项目
 - 采访时间：2008-08-26（CHM 口述历史采访）
 - 采访形式：口述历史（Computer History Museum Oral History Project）
-- 原始来源：Oral History of Pradeep Sindhu, Computer History Museum。完整 URL **<https://computerhistory.org/oral-histories/**>（CHM 口述历史集合入口，确切参考号与 transcript PDF 须三次复查核实）
+- 原始来源：Oral History of Pradeep Sindhu, Computer History Museum。完整 URL **<https://computerhistory.org/oral-histories/>**（CHM 口述历史集合入口，确切参考号与 transcript PDF 须三次复查核实）
 - 存档信息：原始 URL 须经三次复查核实确切 transcript PDF；互联网档案馆存档链接待补充
 
 **字段 2 采访摘要**
