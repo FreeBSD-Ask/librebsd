@@ -30,7 +30,7 @@ volume: 第01卷-unix的起源
 - Sun 2006 Announcement；OpenJDK BSD Port Project (openjdk.java.net/projects/bsd-port/，2026-07-28 WebFetch 核实)；OpenJDK BSD Port Wiki (wiki.openjdk.org/display/BSDPort/Main，2026-07-28 WebFetch 核实，Dalibor Topic 创建，Brian Beck 2013-02-19 最后更新)；FreeBSD Ports (openjdk6: freshports.org/java/openjdk6/；openjdk7: freshports.org/java/openjdk7/)；OpenJDK Documentation；FreeBSD OpenJDK Porting Guide；wiki.freebsd.org/Java（2026-07-28 WebFetch 核实） ［A］
 
 <!-- DB_REF:freebsd.duckdb -->
-> **数据库引用（**freebsd.duckdb**）**：本子节对应 freebsd 代码仓库。
+> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。
 
 > 1995-1995 年间：9,812 次提交。
 
