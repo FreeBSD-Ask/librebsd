@@ -1,6 +1,7 @@
-# 110. TAB 自荐系列、slave 用量统计与选举投票率（tbd p14）（tbd p14）
+# 110 【Linux社区】自荐系列与slave用量统计
 
 > 来源：tech-board-discuss p14（50 封全读，2007-08 至 2026-03，Mason/Sang/Hildenbrand/Rostedt/Taht 自荐、Wilcox drivers/ slave 用量 grep 统计、Kees 2018-2024 投票率数据、纪要公开至 kernel.org git、列表迁移 lore 归档、CoC 私下 ack 三选择困境、Pavel 对 denylist 投 NAK）
+> 体例说明：本页 46 块采用**速览体例**——块下仅存单行摘记（主题陈述＋史料锚），要点、史观、辨析、文献四字段另立详表承载；五字段完整体例见 00-总览 §一.2。本页卷头未登记 claim 编号区间，文献著录与史观映射待详表单独立卷时补录。
 > 判定：47 CAND / 3 NV。主题分布：TAB竞选自荐（重发） 1、TAB选举CIVS投票链接问题 1、千行补丁系列的流程建议 1、TAB竞选自荐 1、TAB会议纪要发布承诺 1、2010 TAB选举最终提醒 1、包容性术语补丁审阅 1、2007 TAB提名进展 1、EXPORT_SYMBOL_GPL政策立场 1、CIVS重复激活缺陷报告 1、TAB自荐 2、2008 TAB选举BoF安排 1、“device”替代slave之争 1、TAB纪要公开git仓库 1、借用SPI选举系统 1、2019选举候选人不足 1、KS举办选举本是权宜 1、章程修改与kernel.org账户投票 1、Fixes标签加作者日期提案被拒 1、自荐加入2009 TAB名单 1、2024 TAB选举开票通知 1、2010 TAB选举结果 1、TAB在LF三论坛中的定位 1、LLM改写与净室成本论证 1、CoC私下征求ack的困境分析 1、列表迁移lists.linux.dev公告 1、2022年9月CoC委员会报告 1、TAB选举投票率数据 1、CIVS配置页无投票列表 1、2015自荐TAB 1、代码之外的多元文化讨论 1、slave术语的个人观察 1、贡献成熟度模型公司偏向补丁 1、Dave Taht自荐（200词版） 1、反对denylist替换blacklist 1、反对纯民主的治理立场 1、slave用法量化统计 1、提名规则澄清 1、选举方式沿革 1、CoC报告反馈与提议 1、多邮箱合并成投票痛点 1、热点讨论流程两项提案 1、为驱动开发获取硬件的提案 1、质疑blacklist替换必要性 1、包容性术语详细技术反馈 1、为device替代辩护 1。
 
 ## 110.1 TAB竞选自荐（重发）
@@ -146,7 +147,7 @@
 
 ## 110.36 反对纯民主的治理立场
 
-- 【Linux社区】Ted Tso主张精英制而非Debian式纯民主，支持实体会议投票以过滤选民资格。 `<!-- ROW_MINE: tech-board-discuss.messages.9363281 -->`
+- 【Linux社区】Ted Ts'o 主张精英制而非 Debian 式纯民主，支持实体会议投票以过滤选民资格。 `<!-- ROW_MINE: tech-board-discuss.messages.9363281 -->`
 
 ## 110.37 slave用法量化统计
 
