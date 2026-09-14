@@ -34,8 +34,8 @@ volume: 第11卷-dragonflybsd的历史
 - 上述 236.1-236.2 节所有文献综合；项目史观总纲第 4、5、7、8、9、10、21、22、23 条 ［A］
 
 <!-- DB_REF:dragonfly.duckdb -->
-> **数据库引用（dragonfly.duckdb）**：本子节对应 dragonfly 代码仓库。> 2003-2026 年间：656,206 次提交。> 仓库总览：656,207 次提交，213 位贡献者，2003-06-17 至 2026-08-18。
+> **数据库引用（dragonfly.duckdb）**：本子节对应 dragonfly 代码仓库。> 2003-2026 年间：656,207 次提交。> 仓库总览：656,207 次提交，213 位贡献者，2003-06-17 至 2026-08-18。
 - Dillon M. Announcing DragonFly BSD [EB/OL]. (2003-07-16)[2026-07-27]. **<https://lists.freebsd.org/pipermail/freebsd-current/2003-July/006889.html>**; DragonFly BSD Project. DragonFly BSD History [EB/OL]. [2026-07-27]. **<https://www.dragonflybsd.org/history/>**; Dillon M. THE HAMMER FILESYSTEM [R/OL]. (2008-06-21)[2026-07-27]. **<https://www.dragonflybsd.org/hammer/hammer.pdf>**; DragonFly BSD Project. DragonFly BSD HAMMER Page [EB/OL]. [2026-07-27]. **<https://www.dragonflybsd.org/hammer/>**; DragonFly BSD Project. DragonFly BSD GitHub Repository [CP/OL]. [2026-07-27]. **<https://github.com/DragonFlyBSD/DragonFlyBSD>**; 本项目既有考据记录 `03-原始史料库/06-考据记录/20260727_rumors-dragonfly.md`
 
 <!-- DB_REF:dragonfly.duckdb -->
-> **数据库引用（dragonfly.duckdb）**：本子节对应 dragonfly 代码仓库。> 2003-2026 年间：656,206 次提交。> 仓库总览：656,207 次提交，213 位贡献者，2003-06-17 至 2026-08-18。
+> **数据库引用（dragonfly.duckdb）**：本子节对应 dragonfly 代码仓库。> 2003-2026 年间：656,207 次提交。> 仓库总览：656,207 次提交，213 位贡献者，2003-06-17 至 2026-08-18。

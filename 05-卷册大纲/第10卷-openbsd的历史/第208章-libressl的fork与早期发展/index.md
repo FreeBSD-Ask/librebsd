@@ -43,7 +43,7 @@ volume: 第10卷-openbsd的历史
 | 2014-07-11 | LibreSSL 2.0 发布 | LibreSSL Release Notes |
 | 2014-07-12 | LibreSSL 代码引入 OpenBSD 源码树 | commit `b6553af36068`（jsing） |
 | 2014-11-01 | LibreSSL 2.0 随 OpenBSD 5.6 发布 | OpenBSD 5.6 Release Notes |
-- 项目史观总纲 [EB/OL]. c:\Users\ykla\Documents\hibsd\原材料\哲学\项目统摄史观\第 25 章.md；LibreSSL EuroBSDCon 2014 演讲 [EB/OL]. <https://www.openbsd.org/papers/eurobsdcon2014-libressl.html>；OpenSSH/LibreSSL/OpenNTPD/OpenSMTPD 项目主页 [EB/OL]. <https://www.openssh.com/>、<https://www.libressl.org/、http://www.openntpd.org/、https://www.opensmtpd.org/；本卷> 93.7-93.9 节引用的全部史料 ［A］
+- 项目史观总纲 [EB/OL]. c:\Users\ykla\Documents\LibreBSD\原材料\哲学\项目统摄史观\第 25 章.md；LibreSSL EuroBSDCon 2014 演讲 [EB/OL]. <https://www.openbsd.org/papers/eurobsdcon2014-libressl.html>；OpenSSH/LibreSSL/OpenNTPD/OpenSMTPD 项目主页 [EB/OL]. <https://www.openssh.com/>、<https://www.libressl.org/、http://www.openntpd.org/、https://www.opensmtpd.org/；本卷> 93.7-93.9 节引用的全部史料 ［A］
 
 <!-- DB_REF:openbsd.duckdb -->
 > **数据库引用（openbsd.duckdb）**：本子节对应 openbsd 代码仓库。> 1921-1921 年间：0 次提交。> 仓库总览：491,195 次提交，1,031 位贡献者（contributors 表实测），1995-10-18 至 2026-08-25。

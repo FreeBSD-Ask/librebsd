@@ -28,7 +28,7 @@ volume: 第06卷-freebsd的核心技术革新
 - “BSD 史”项目内部统计分析：推断性统计.md [R/OL]. 2026-07-27. **03-原始史料库/01-代码仓库史料/01-数据库本体/统计分析/推断性统计.md** Task 5
 - “BSD 史”项目内部统计分析：时间序列分析.md [R/OL]. 2026-07-27. **03-原始史料库/01-代码仓库史料/01-数据库本体/统计分析/时间序列分析.md** Task 14
 - “BSD 史”项目内部统计分析：卷章数据映射.md [R/OL]. 2026-07-27. **03-原始史料库/01-代码仓库史料/01-数据库本体/统计分析/卷章数据映射.md** 第五卷第 60 章映射。［A］
-- ［留痕：2026-09-13 按核查报告 C227 整改——删除行内残留 H2 标题“第 60.12 不同时期人员的采访录”“第 60.13 节 媒体反响与社区舆论”旧章号残迹（两文件已在 SUMMARY 独立收录）；原“Hibsd Project”项目代号误入著录已改内部资料格式；以下 7 条 FreeBSD 社区论文系旧章 60.12/60.13 杂项灌入，与本章 Spectre 安全主题弱相关，移卷级文献综述的跨文件迁移登记 DEFERRED：］
+- ［留痕：2026-09-13 按核查报告 C227 整改——删除行内残留 H2 标题“第 60.12 不同时期人员的采访录”“第 60.13 节 媒体反响与社区舆论”旧章号残迹（两文件已在 SUMMARY 独立收录）；原“LibreBSD Project”项目代号误入著录已改内部资料格式；以下 7 条 FreeBSD 社区论文系旧章 60.12/60.13 杂项灌入，与本章 Spectre 安全主题弱相关，移卷级文献综述的跨文件迁移登记 DEFERRED：］
 - [FP-2021-008] smart(8) Update: A Permissively-Licensed Alternative to smartctl(8)（Michael Dexter（迈克尔·德克斯特）; Chuck Tuffli，2021）<https://papers.freebsd.org/2021/eurobsdcon/dexter-tuffli-update_on_smart/>
 - [FP-2019-055] Fuzzing the kernel（Andrew Turner，2019）<https://papers.freebsd.org/2019/eurobsdcon/turner-fuzzing_the_kernel/>
 - [FP-2019-022] Frankenstein's Disk Drive（Chuck Tuffli，2019）<https://papers.freebsd.org/2019/bsdcan/tuffli-frankensteins_disk_drive/>
