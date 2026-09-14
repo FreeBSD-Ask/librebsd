@@ -57,21 +57,3 @@ Salus 在《A Quarter Century of UNIX》前言中回顾了自己作为 Unix 历�
 
 > **本时期采访来源说明**：操作系统谱系梳理时期的核心史料为 Salus 的《A Quarter Century of UNIX》与里奇的 1984 年自述。经三次复查查询（搜索 `Peter Salus Quarter Century UNIX interview`、`Eric Raymond Art of Unix Programming history`、`Mike Karels BSD history interview`），Eric S. Raymond（《Unix 编程艺术》作者）与 Mike Karels 等人员的公开采访来源暂未发现，留待后续补充。
 
-
-<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
-**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-1-103`）
-
-Pike 等人 1995 年在《Plan 9 from Bell Labs》论文中称，1980 年代中期计算趋势正从大型集中式分时计算机转向由较小个人机器组成的网络，这是 Plan 9 的设计动机。
-
-
-
-<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
-**史家判断**（证据等级：L5，来源：`historical_claims.duckdb.claim.CL-1-107`）
-
-1956 年 1 月 24 日，美国新泽西联邦地区法院就美国诉 Western Electric 与 AT&T（民事案件第 17-49 号）作出最终判决，该案依据《谢尔曼法》起诉。
-
-## 文献
-
-- Salus P H. A Quarter Century of UNIX[M]. Addison-Wesley, 1994. ISBN 0-201-54777-5.
-- Ritchie D M. The Evolution of the UNIX Time-sharing System[J]. AT&T Bell Laboratories Technical Journal, 1984, 63(6): 1577-1593（Salus 谱系叙述的交叉验证一手文献）.
-
