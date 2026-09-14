@@ -44,15 +44,15 @@ volume: 第10卷-openbsd的历史
 - openbsd.duckdb openbsd-src 仓库 pledge 相关 commit；OpenBSD **pledge(2)** 手册页 [EB/OL]. <https://man.openbsd.org/pledge.2>；OpenBSD Release Notes [EB/OL]. <https://www.openbsd.org/plus.html>；openbsd.duckdb 查询 L1.1.1 与 L1.1.2（原引来源 宏观趋势统计.md §L1.1.1、§L1.1.2〔存疑：原路径 原材料/研究/bsd 仓库分析/ 为树外断链，库内实测未入库〕）；openbsd.duckdb 查询 L2.3.1.pledge 与 L2.3.1.unveil（原引来源 中观模式挖掘.md §L2.3.1〔存疑：同为树外断链路径〕，数据缺口）；统计分析报告：时间序列分析.md Task 14 [R/OL]. 2026-07-27. 文件路径：**03-原始史料库/01-代码仓库史料/01-数据库本体/统计分析/时间序列分析.md**；Python 统计脚本：`script/phase4_time_series.py`. Task 14 ARIMA 建模 + Task 15 MAPE/RMSE 预测精度。执行日期：2026-07-27 ［A］
 
 <!-- DB_REF:openbsd.duckdb -->
-> **数据库引用（openbsd.duckdb）**：本子节对应 openbsd 代码仓库。> 2015-2016 年间：41,347 次提交。> 仓库总览：491,195 次提交，3,352 位贡献者，1995-10-18 至 2026-08-25。
+> **数据库引用（openbsd.duckdb）**：本子节对应 openbsd 代码仓库。> 2015-2016 年间：41,347 次提交。> 仓库总览：491,195 次提交，1,031 位贡献者（contributors 表实测），1995-10-18 至 2026-08-25。
 - LibreSSL 与 OpenSSL 综合对比研究；TLS 库生态演进史；openbsd.duckdb openbsd-src 仓库 LibreSSL/OpenSSL CVE commit 对比 ［A］
 
 <!-- DB_REF:openbsd.duckdb -->
-> **数据库引用（openbsd.duckdb）**：本子节对应 openbsd 代码仓库。> 2014-2014 年间：20,651 次提交。> 仓库总览：491,195 次提交，3,352 位贡献者，1995-10-18 至 2026-08-25。
+> **数据库引用（openbsd.duckdb）**：本子节对应 openbsd 代码仓库。> 2014-2014 年间：20,651 次提交。> 仓库总览：491,195 次提交，1,031 位贡献者（contributors 表实测），1995-10-18 至 2026-08-25。
 - 项目史观总纲第 13、19、21 条原文；de Raadt 邮件列表发言 [EB/OL]. <https://marc.info/?laccopenbsd-misc>；OpenBSD **pledge(2)** 手册页 [EB/OL]. <https://man.openbsd.org/pledge.2>；Linux seccomp-bpf 文档 [EB/OL]. <https://www.kernel.org/doc/html/latest/userspace-api/seccomp_filter.html>；Linux landlock 文档 [EB/OL]. <https://docs.kernel.org/userspace-api/landlock.html>；openbsd.duckdb openbsd-src 仓库 pledge 覆盖扩展 commit ［A］
 
 <!-- DB_REF:openbsd.duckdb -->
-> **数据库引用（openbsd.duckdb）**：本子节对应 openbsd 代码仓库。> 2018-2018 年间：16,734 次提交。> 仓库总览：491,195 次提交，3,352 位贡献者，1995-10-18 至 2026-08-25。
+> **数据库引用（openbsd.duckdb）**：本子节对应 openbsd 代码仓库。> 2018-2018 年间：16,734 次提交。> 仓库总览：491,195 次提交，1,031 位贡献者（contributors 表实测），1995-10-18 至 2026-08-25。
 
 <!-- PODCAST_REVIEW v20260829 -->
 <!-- 语义复核范围：BSD Now EP498、BSD Now EP144、BSD Now EP140（共 3 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->

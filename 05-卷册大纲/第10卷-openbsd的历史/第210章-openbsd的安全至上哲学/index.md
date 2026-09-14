@@ -74,15 +74,15 @@ volume: 第10卷-openbsd的历史
 | FreeBSD Foundation | 约 500 万 + USD | 16.7× | 数十名全职员工 |
 | Linux Foundation | 资产超 1 亿 USD | 333× | 数十名全职内核维护者 |
 - openbsd.duckdb openbsd-src 仓库 contributors 表；OpenBSD Project Goals [EB/OL]. <https://www.openbsd.org/goals.html>；FreeBSD Core Team bylaws [EB/OL]. <https://www.freebsd.org/internal/core-team/>；NetBSD Foundation bylaws [EB/OL]. <https://www.netbsd.org/foundation/>；de Raadt 邮件列表发言 [EB/OL]. <https://marc.info/?laccopenbsd-misc>；OpenBSD Foundation [EB/OL]. <https://www.openbsdfoundation.org/>；**【2026-07-30 de Raadt vs Torvalds 公开争论一手报道·7av 条目】**2005-06-19 eNet 硅谷动力/新浪科技报道（**<http://tech.sina.com.cn/it/2005-06-19/1009639712.shtml>**）记录 de Raadt 接受《福布斯》采访原文 “I think our code quality is higher, and that is because of the way we develop and the focus we have，而 Linux 系统根本就无质量可言”，Torvalds 通过电子邮件回应称 “de Raadt 是个很难相处的人” 并拒绝进一步评论；de Raadt 在同一采访中称 “Linux 社区之所以这么做是因为他们憎恨微软，而我们之所以这么做是因为我们热爱 Unix”；该报道为《福布斯》英文采访的中文转译，英文原文须以《福布斯》2005 年原始采访存档为准 ［A］
-- OpenBSD Foundation 财务报告 [EB/OL]. <https://www.openbsdfoundation.org/>；FreeBSD Foundation Annual Report [EB/OL]. <https://www.freebsdfoundation.org/annual-report/>；2014 年电费危机 misc@ 邮件列表讨论 [EB/OL]. <https://marc.info/?laccopenbsd-misc>；OpenSSH 项目文档 [EB/OL]. <https://www.openssh.com/>；LibreSSL 项目文档 [EB/OL]. <https://www.libressl.org/>；商业支持案例［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］ ［A］
+- OpenBSD Foundation 财务报告 [EB/OL]. <https://www.openbsdfoundation.org/>；FreeBSD Foundation Annual Report [EB/OL]. <https://www.freebsdfoundation.org/annual-report/>；2014 年电费危机 misc@ 邮件列表讨论 [EB/OL]. <https://marc.info/?laccopenbsd-misc>；OpenSSH 项目文档 [EB/OL]. <https://www.openssh.com/>；LibreSSL 项目文档 [EB/OL]. <https://www.libressl.org/>；商业支持案例［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］ ［A］
 
 <!-- DB_REF:openbsd.duckdb -->
-> **数据库引用（openbsd.duckdb）**：本子节对应 openbsd 代码仓库。> 1995-2026 年间：491,195 次提交。> 仓库总览：491,195 次提交，3,352 位贡献者，1995-10-18 至 2026-08-25。
+> **数据库引用（openbsd.duckdb）**：本子节对应 openbsd 代码仓库。> 1995-2026 年间：491,195 次提交。> 仓库总览：491,195 次提交，1,031 位贡献者（contributors 表实测），1995-10-18 至 2026-08-25。
 - OpenBSD Release Notes [EB/OL]. <https://www.openbsd.org/plus.html>；openbsd.duckdb openbsd-src 仓库 commit df174574d401 与 b6553af36068；openbsd.duckdb openbsd-src 仓库 contributors 表；de Raadt 邮件列表发言 [EB/OL]. <https://marc.info/?laccopenbsd-misc> ［A］
 - de Raadt 邮件列表发言；Van Gennep (1909); Turner, V. (1969). *The Ritual Process: Structure and Anti-Structure*. [仪式理论的后续发展]; shigang.md §19（人类学）、§13（社会哲学）、§25（解释学）
 
 <!-- DB_REF:openbsd.duckdb -->
-> **数据库引用（openbsd.duckdb）**：本子节对应 openbsd 代码仓库。> 1995-2026 年间：491,195 次提交。> 仓库总览：491,195 次提交，3,352 位贡献者，1995-10-18 至 2026-08-25。
+> **数据库引用（openbsd.duckdb）**：本子节对应 openbsd 代码仓库。> 1995-2026 年间：491,195 次提交。> 仓库总览：491,195 次提交，1,031 位贡献者（contributors 表实测），1995-10-18 至 2026-08-25。
 
 <!-- PODCAST_REVIEW v20260829 -->
 <!-- 语义复核范围：BSD Now EP331、BSD Now EP189、BSDTalk EP229、BSDTalk EP66（共 4 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->

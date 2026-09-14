@@ -32,11 +32,11 @@ volume: 第06卷-freebsd的核心技术革新
 
 <!-- DB_REF:freebsd.duckdb -->
 > **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 2010-2020 年间：488,947 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
-- Sun Microsystems (2004). *Common Development and Distribution License 1.0* §3.5 [EB/OL]. 获取路径：<https://opensource.org/licenses/cddl1.php> [访问日期 2026-07-30]; Dillon, M. DragonFly BSD Kernel Mailing List Posts [EB/OL] (2007-2008). 获取路径：<https://www.dragonflybsd.org/mailinglists/> [访问日期 2026-07-30].［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
+- Sun Microsystems (2004). *Common Development and Distribution License 1.0* §3.5 [EB/OL]. 获取路径：<https://opensource.org/licenses/cddl1.php> [访问日期 2026-07-30]; Dillon, M. DragonFly BSD Kernel Mailing List Posts [EB/OL] (2007-2008). 获取路径：<https://www.dragonflybsd.org/mailinglists/> [访问日期 2026-07-30].［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］
 
 <!-- DB_REF:freebsd.duckdb -->
 > **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 2010-2020 年间：488,947 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
-- Torvalds, L. (2020-01-06). Real World Tech Forum Post [EB/OL] (archived via Wayback Machine). 获取路径：<https://www.realworldtech.com/forum/?threadid=189311> [访问日期 2026-07-30]; Phoronix (2020-01-07). *Linus Torvalds: Don't Use ZFS* [EB/OL]. 获取路径：<https://www.phoronix.com/news/Linux-5.6-ZFS-Oracle> [访问日期 2026-07-30]; LWN.net (2020-01). *Linus on ZFS* [EB/OL]. 获取路径：<https://lwn.net/Articles/809272/> [访问日期 2026-07-30].［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
+- Torvalds, L. (2020-01-06). Real World Tech Forum Post [EB/OL] (archived via Wayback Machine). 获取路径：<https://www.realworldtech.com/forum/?threadid=189311> [访问日期 2026-07-30]; Phoronix (2020-01-07). *Linus Torvalds: Don't Use ZFS* [EB/OL]. 获取路径：<https://www.phoronix.com/news/Linux-5.6-ZFS-Oracle> [访问日期 2026-07-30]; LWN.net (2020-01). *Linus on ZFS* [EB/OL]. 获取路径：<https://lwn.net/Articles/809272/> [访问日期 2026-07-30].［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］
 
 <!-- DB_REF:freebsd.duckdb -->
 > **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 2010-2020 年间：488,947 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。

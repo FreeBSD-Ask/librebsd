@@ -21,7 +21,7 @@ volume: 第05卷-freebsd的工程化奠基
 - 总纲第 11 条——商品是形式主义，“版本更新”话语本身是市场形式主义的运作
   - 辨析：VMware 博客是否构成“VMware 阵营”的正式立场须审慎判断——博客作者 Rostislav M. Georgiev 以 VMware Open Source Technology Center 工程师身份署名、发布于 VMware 官方开源博客，属员工署名技术博客性质，非 VMware 公司正式立
 - 总纲第 11 条——商品是形式主义，容器市场的选择是形式主义权力运作
-  - 辨析：Docker 是否“工程粗糙”存在争议，Docker 阵营会反驳镜像与编排是工程创新而非营销；“劣币驱逐良币”的判定标准须明确——若以“生态完整性”为标准，Docker 非劣币 ［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］；phk 自评"shitty Virtualiz
+  - 辨析：Docker 是否“工程粗糙”存在争议，Docker 阵营会反驳镜像与编排是工程创新而非营销；“劣币驱逐良币”的判定标准须明确——若以“生态完整性”为标准，Docker 非劣币 ［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］；phk 自评"shitty Virtualiz
 - 总纲第 4 条——分离聚合是永恒规律，Jails 终结 chroot 安全用途、延续文件隔离（原挂第 25 条“终结与延续”系伪标签，按赓续论旨改挂第 4 条）
   - 辨析：chroot 是否 “完全不安全” 存在争议，非 root 进程仍有一定隔离
   - 文献：chroot(2) 手册页；4.2BSD 文档；安全分析论文 ［A］
@@ -41,7 +41,7 @@ volume: 第05卷-freebsd的工程化奠基
 
 - 经 bsd_commits.duckdb commits 表与 commit_files 表交叉验证，Jails 的确切诞生日为 1999-04-28（commit 02daf150a4434305b9181b0ac9150762afb4c8ce）〔待核：原文截断，后文待回源〕
 - VMware 博客是否构成“VMware 阵营”的正式立场须审慎判断——博客作者 Rostislav M. Georgiev 以 VMware Open Source Technology Center 工程师身份署名、发布于 VMware 官方开源博客，属员工署名技术博客性质，非 VMware 公司正式立场声明；“被动跟进”的判定标准须明确——若以“主动预告”为标准，Jails 的 VNET 改〔存疑：原文截断，后文待回源〕
-- Docker 是否“工程粗糙”存在争议，Docker 阵营会反驳镜像与编排是工程创新而非营销；“劣币驱逐良币”的判定标准须明确——若以“生态完整性”为标准，Docker 非劣币 ［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］；phk 自评“shitty Virtualization”是否构成“劣币”的自我承认须结合其行文风格判断——phk 行文惯用自嘲，
+- Docker 是否“工程粗糙”存在争议，Docker 阵营会反驳镜像与编排是工程创新而非营销；“劣币驱逐良币”的判定标准须明确——若以“生态完整性”为标准，Docker 非劣币 ［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］；phk 自评“shitty Virtualization”是否构成“劣币”的自我承认须结合其行文风格判断——phk 行文惯用自嘲，
 - chroot 是否 “完全不安全” 存在争议，非 root 进程仍有一定隔离
   - 文献：chroot(2) 手册页；4.2BSD 文档；安全分析论文 ［A］
 
@@ -103,7 +103,7 @@ volume: 第05卷-freebsd的工程化奠基
 ## 94.5.2 Solaris Zones 的工程否定
 
 - 要点：Sun 在推出 Solaris Zones(2004) 时以 Jails 为反面论证，强调 Zones 的细粒度资源管理 (如 CPU/shm 限制) 与全局区域管理，暗示 Jails 工程不足
-- 史料：Solaris Zones 设计文档、Sun White Paper、BSDCon 2004 Zones vs Jails 讨论［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
+- 史料：Solaris Zones 设计文档、Sun White Paper、BSDCon 2004 Zones vs Jails 讨论［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］
 
 ## 自反性声明
 

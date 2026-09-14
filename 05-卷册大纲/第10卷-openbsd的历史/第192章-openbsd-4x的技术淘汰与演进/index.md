@@ -50,23 +50,23 @@ volume: 第10卷-openbsd的历史
 OpenBSD 4.x 时期是项目统摄史观中 “形式主义化” 与 “修道度人” 在网络安全领域的双重实践。6 个月发布周期作为形式主义化结构（总纲第 15 条——文化即形式主义），将时间固化为不可动摇的规则——krw@ 与 espie@ 的 release engineering 工作严格遵循 5 月与 11 月的节奏，这一形式化结构带来稳定性与可预测性，但也限制了单周期内的重大架构重构。pf 的持续演进是 “修道度人” 的工程实践（总纲第 15 条——文化即形式主义）——claudio@ 与 henning@ 在 2005-2010 年间持续改进 pf，让 pf 守护着无数网络的边界，但 pf 的作者们很少在公众视野中出现。CARP 冗余协议的开发是对法律结构障碍的重新设计（总纲第 13 条——法律与道德是利益分配）——当 VRRP 协议的 Cisco 专利 US 5,473,599 成为障碍时，OpenBSD 选择重新设计协议（CARP）而非寻求专利授权，这一选择是法律结构对技术实现的直接塑造。malloc 替代（tedu@ 2006-10-24 commit 66e23c51）是 “边缘者承担安全关键基础设施” 的具体显现（总纲第 10 条——动手者创造历史）——OpenBSD 的 malloc 安全替代由单一开发者响应安全研究社区的漏洞披露而实现，非由大厂商团队推动。softraid 加密的引入（tedu@ 2007-11-27 commit f18dcc9c26b1 至 hshoexer@ 2008-06-14 commit 79cdc9424edb）是密码学标准演进对操作系统实现的具体塑造（总纲第 22 条——知识注定过时）——AES-XTS 作为 NIST SP 800-38E 推荐模式取代 Blowfish。de Raadt 的个人主导模式是 “动手者” 存在主义的体现——一个人在不被理解中坚持自己的工程哲学，BDFL 治理（总纲第 15 条——文化即形式主义）使 OpenBSD 在 4.x 时期保持技术方向一致性。
 
 <!-- DB_REF:openbsd.duckdb -->
-> **数据库引用（openbsd.duckdb）**：本子节对应 openbsd 代码仓库。> 2005-2010 年间：100,198 次提交。> 仓库总览：491,195 次提交，3,352 位贡献者，1995-10-18 至 2026-08-25。
+> **数据库引用（openbsd.duckdb）**：本子节对应 openbsd 代码仓库。> 2005-2010 年间：100,198 次提交。> 仓库总览：491,195 次提交，1,031 位贡献者（contributors 表实测），1995-10-18 至 2026-08-25。
 - OpenBSD pf 指南 [EB/OL]. <https://www.openbsd.org/faq/pf/>；freebsd.duckdb freebsd-src 仓库 pf import commit；BSD 防火墙比较文档 ［B］
 
 <!-- DB_REF:openbsd.duckdb -->
-> **数据库引用（openbsd.duckdb）**：本子节对应 openbsd 代码仓库。> 2006-2009 年间：65,854 次提交。> 仓库总览：491,195 次提交，3,352 位贡献者，1995-10-18 至 2026-08-25。
+> **数据库引用（openbsd.duckdb）**：本子节对应 openbsd 代码仓库。> 2006-2009 年间：65,854 次提交。> 仓库总览：491,195 次提交，1,031 位贡献者（contributors 表实测），1995-10-18 至 2026-08-25。
 - de Raadt、espie@ 邮件列表发言 [EB/OL]. <https://marc.info/?l=openbsd-tech>；otto. Import ragge's version of PCC. openbsd-src [DB/OL]. 2007-09-15T18:12:23Z. 60b4da4bc6418e6654a995e733a66436798b5bc0；openbsd.duckdb openbsd-src 仓库 clang/LLVM 相关 commit；FreeBSD 10.0 Release Notes [EB/OL]. <https://www.freebsd.org/releases/10.0R/relnotes/>；OpenBSD 5.7 Release Notes [EB/OL]. <https://www.openbsd.org/57.html>；Linux 发行版编译器文档；FSF 与 OpenBSD 许可证文档 ［A］
 
 <!-- DB_REF:openbsd.duckdb -->
-> **数据库引用（openbsd.duckdb）**：本子节对应 openbsd 代码仓库。> 1995-2026 年间：491,195 次提交。> 仓库总览：491,195 次提交，3,352 位贡献者，1995-10-18 至 2026-08-25。
+> **数据库引用（openbsd.duckdb）**：本子节对应 openbsd 代码仓库。> 1995-2026 年间：491,195 次提交。> 仓库总览：491,195 次提交，1,031 位贡献者（contributors 表实测），1995-10-18 至 2026-08-25。
 - openbsd.duckdb openbsd-src 仓库；NVD CVE-2008-1483/CVE-2006-5752/CVE-2007-3304/CVE-2007-5000/CVE-2007-6388/CVE-2011-2748/CVE-2011-2749；OpenBSD 4.x errata patches [EB/OL]. **<https://www.openbsd.org/errata.html>** ［A］
 
 <!-- DB_REF:openbsd.duckdb -->
-> **数据库引用（openbsd.duckdb）**：本子节对应 openbsd 代码仓库。> 2006-2012 年间：112,057 次提交。> 仓库总览：491,195 次提交，3,352 位贡献者，1995-10-18 至 2026-08-25。
+> **数据库引用（openbsd.duckdb）**：本子节对应 openbsd 代码仓库。> 2006-2012 年间：112,057 次提交。> 仓库总览：491,195 次提交，1,031 位贡献者（contributors 表实测），1995-10-18 至 2026-08-25。
 - OpenBSD 官网 release 页面 ［EB/OL］. <https://www.openbsd.org/40.html> 至 <https://www.openbsd.org/49.html>；<announce@openbsd.org> 邮件列表存档 ［EB/OL］. <https://marc.info/?l=openbsd-announce>；**03-原始史料库/06-考据记录**（原引“**原材料/研究/考据记录/20260723_announcements-openbsd.md**”，该路径全库未检出〔存疑〕）；openbsd.duckdb openbsd-src 仓库 ［A］
 
 <!-- DB_REF:openbsd.duckdb -->
-> **数据库引用（openbsd.duckdb）**：本子节对应 openbsd 代码仓库。> 1995-2026 年间：491,195 次提交。> 仓库总览：491,195 次提交，3,352 位贡献者，1995-10-18 至 2026-08-25。
+> **数据库引用（openbsd.duckdb）**：本子节对应 openbsd 代码仓库。> 1995-2026 年间：491,195 次提交。> 仓库总览：491,195 次提交，1,031 位贡献者（contributors 表实测），1995-10-18 至 2026-08-25。
 
 <!-- PODCAST_REVIEW v20260829 -->
 <!-- 语义复核范围：BSDTalk EP204（共 1 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->

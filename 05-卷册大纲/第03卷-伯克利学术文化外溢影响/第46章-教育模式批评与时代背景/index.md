@@ -53,12 +53,12 @@ volume: 第03卷-伯克利学术文化外溢影响
 - BSD 源码 CHANGELOG/SCCS 日志；CSRG 邮件列表存档；McKusick (1999) “Twenty Years of Berkeley Unix”；0 信任原则方法论 ［A］
 - Cook 1971 STOC；Karp 1972 “Reducibility Among Combinatorial Problems”；RSA 1978 CACM；Lamport 1978 CACM；Codd 1970 CACM ［B］
 - Cook, S. (1971) “The Complexity of Theorem-Proving Procedures”, STOC；Karp, R. (1972) “Reducibility Among Combinatorial Problems”；FIPS PUB 46（1977）；Rivest, R., Shamir, A., Adleman, L. (1978) CACM；Lamport, L. (1978) CACM；Codd, E. (1970) CACM ［B］
-- Cerf, V. & Kahn, R. (1974) IEEE Trans. Comm.；Stroustrup, B. (1985) “The C++ Programming Language”；Cox, B. (1984) Objective-C；Tanenbaum-Torvalds 1992 usenet 争论档案；Hoare, C. (1978) CSP；Milner, R. (1980) CCS［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
+- Cerf, V. & Kahn, R. (1974) IEEE Trans. Comm.；Stroustrup, B. (1985) “The C++ Programming Language”；Cox, B. (1984) Objective-C；Tanenbaum-Torvalds 1992 usenet 争论档案；Hoare, C. (1978) CSP；Milner, R. (1980) CCS［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］
 - RSA 1978 CACM；DES FIPS PUB 46；Diffie-Hellman 1976 IEEE IT；PGP 1991 发布档案 ［B］
 - Rivest, R., Shamir, A., Adleman, L. (1978) CACM 21(2)；US Patent 4,405,829（1983）；FIPS PUB 46（1977）；Diffie, W. & Hellman, M. (1976) IEEE Trans. IT；Zimmermann, P. (1991) PGP ［B］
 - Koblitz, N. (1985) “Elliptic Curve Cryptosystems”, Math. Comp.；Miller, V. (1985) “Use of Elliptic Curves in Cryptography”, CRYPTO；Shamir, A. (1979) Comm. ACM；Rabin, M. (1979) MIT LCS ［B］
-- Morris 蠕虫档案；CERT/CC 建立档案；Stoll, C. (1989) “The Cuckoo's Egg”；Computer Fraud and Abuse Act（1986）［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
-- Morris 蠕虫漏洞分析；4.3BSD-Reno/4.4BSD 安全审计档案；Morris, R. & Thompson, K. (1979) “Password Security: A Case History”；BSD Kerberos 集成档案［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
+- Morris 蠕虫档案；CERT/CC 建立档案；Stoll, C. (1989) “The Cuckoo's Egg”；Computer Fraud and Abuse Act（1986）［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］
+- Morris 蠕虫漏洞分析；4.3BSD-Reno/4.4BSD 安全审计档案；Morris, R. & Thompson, K. (1979) “Password Security: A Case History”；BSD Kerberos 集成档案［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］
 
 <!-- dangan-20260908 消解回写 -->
 - Leslie. The Cold War and American Science[Z]. 1993. ［DKC-1304→fulltext:5860］

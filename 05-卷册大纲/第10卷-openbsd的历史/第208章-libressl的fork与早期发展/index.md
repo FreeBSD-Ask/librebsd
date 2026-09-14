@@ -46,7 +46,7 @@ volume: 第10卷-openbsd的历史
 - 项目史观总纲 [EB/OL]. c:\Users\ykla\Documents\hibsd\原材料\哲学\项目统摄史观\第 25 章.md；LibreSSL EuroBSDCon 2014 演讲 [EB/OL]. <https://www.openbsd.org/papers/eurobsdcon2014-libressl.html>；OpenSSH/LibreSSL/OpenNTPD/OpenSMTPD 项目主页 [EB/OL]. <https://www.openssh.com/>、<https://www.libressl.org/、http://www.openntpd.org/、https://www.opensmtpd.org/；本卷> 93.7-93.9 节引用的全部史料 ［A］
 
 <!-- DB_REF:openbsd.duckdb -->
-> **数据库引用（openbsd.duckdb）**：本子节对应 openbsd 代码仓库。> 1921-1921 年间：0 次提交。> 仓库总览：491,195 次提交，3,352 位贡献者，1995-10-18 至 2026-08-25。
+> **数据库引用（openbsd.duckdb）**：本子节对应 openbsd 代码仓库。> 1921-1921 年间：0 次提交。> 仓库总览：491,195 次提交，1,031 位贡献者（contributors 表实测），1995-10-18 至 2026-08-25。
 - LibreSSL Release Notes [EB/OL]. <https://www.libressl.org/releases.html>；LibreSSL 仓库 [EB/OL]. <https://github.com/libressl-portable/portable>；OpenBSD 5.6 Release Notes [EB/OL]. <https://www.openbsd.org/56.html>；LibreSSL 邮件列表 [EB/OL]. <https://marc.info/?l=libressl>；openbsd.duckdb 查询 L2.3.1.libressl（来源：原材料/研究/bsd 仓库分析/数据分析/中观模式挖掘.md §L2.3.1，数据缺口） ［A］**LibreSSL 各系统采用情况对比**：
 
 | 系统 | 默认加密库 | LibreSSL 状态 | 备注 |

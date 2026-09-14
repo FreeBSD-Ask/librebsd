@@ -747,7 +747,7 @@
   - [76.2 三项目的许可证条款逐条对比——BSD 4 条款 vs 3 条款 vs 2 条款的演化](./第04卷-大分裂与四大bsd的诞生/第76章-三足鼎立的形成与bsd格局分化/76.2-三项目的许可证条款逐条对比.md)
   - [76.3 三项目的治理结构对比——Core Team 选举制、NetBSD Foundation 董事会制、OpenBSD 个体主导制](./第04卷-大分裂与四大bsd的诞生/第76章-三足鼎立的形成与bsd格局分化/76.3-三项目的治理结构对比.md)
   - [BSD 三项目安全文化比较——安全叙事的形成](./第04卷-大分裂与四大bsd的诞生/第76章-三足鼎立的形成与bsd格局分化/76.4-bsd三项目安全文化比较与安全叙事的形成.md)
-  - [76.5 BSD 三项目的排外性与小团体文化——三项目共享的精英主义排外传统与内部小团体现象：Bill Joy 精英主义源头（“大多数人都是糟糕的程序员”——二手引述［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］](./第04卷-大分裂与四大bsd的诞生/第76章-三足鼎立的形成与bsd格局分化/76.5-bsd三项目的排外性与小团体文化.md)
+  - [76.5 BSD 三项目的排外性与小团体文化——三项目共享的精英主义排外传统与内部小团体现象：Bill Joy 精英主义源头（“大多数人都是糟糕的程序员”——二手引述［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］](./第04卷-大分裂与四大bsd的诞生/第76章-三足鼎立的形成与bsd格局分化/76.5-bsd三项目的排外性与小团体文化.md)
   - [媒体反响与社区舆论](./第04卷-大分裂与四大bsd的诞生/第76章-三足鼎立的形成与bsd格局分化/媒体反响与社区舆论.md)
   - [本章索引](./第04卷-大分裂与四大bsd的诞生/第76章-三足鼎立的形成与bsd格局分化/index.md)
 
@@ -2101,7 +2101,7 @@
 
 - [第 217 章 DragonFly BSD 早期演进：邮件列表与 IRC 文化](./第11卷-dragonflybsd的历史/第217章-dragonflybsd早期演进邮件列表与irc文化/概述.md)
   - [217.1 DragonFly 邮件列表与 IRC 文化——DragonFly 邮件列表（<kernel@crater.dragonflybsd.org>、<users@crater.dragonflybsd.org> 等）流量极低，新用户提问常无人回应](./第11卷-dragonflybsd的历史/第217章-dragonflybsd早期演进邮件列表与irc文化/217.1-dragonfly邮件列表与irc文化.md)
-  - [217.2 DragonFly 早期发展方向争议的四层辩证链——对 DragonFly 早期发展方向不明确、与 FreeBSD 代码同步逐渐停止的批评，及 DragonFly 阵营的反批评、批评方再回应与项目统摄史观合图［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］](./第11卷-dragonflybsd的历史/第217章-dragonflybsd早期演进邮件列表与irc文化/217.2-dragonfly早期发展方向争议的四层辩证链.md)
+  - [217.2 DragonFly 早期发展方向争议的四层辩证链——对 DragonFly 早期发展方向不明确、与 FreeBSD 代码同步逐渐停止的批评，及 DragonFly 阵营的反批评、批评方再回应与项目统摄史观合图［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］](./第11卷-dragonflybsd的历史/第217章-dragonflybsd早期演进邮件列表与irc文化/217.2-dragonfly早期发展方向争议的四层辩证链.md)
   - [217.3 外部批评与反对者：DragonFly 分裂的必要性与代价——Linux 内核社区与 illumos 阵营对 DragonFly fork 必要性的质疑、FreeBSD Core Team 对 Dillon 撤权决策的辩护与批评、NetBSD/OpenBSD 社区对 BSD 频繁分裂的反思](./第11卷-dragonflybsd的历史/第217章-dragonflybsd早期演进邮件列表与irc文化/217.3-外部批评与反对者dragonfly分裂的必要性与代价.md)
   - [217.4 重要贡献者与边缘者：Dillon 之外的 DragonFly 贡献者——Jeffrey Hsu（核心开发者）、Sascha Wildner（长期 release engineer）、Francois Tigeot（HAMMER 文件系统协作者）等被忽视的 DragonFly 贡献者群体](./第11卷-dragonflybsd的历史/第217章-dragonflybsd早期演进邮件列表与irc文化/217.4-重要贡献者与边缘者dillon之外的dragonfly贡献者.md)
   - [本章索引](./第11卷-dragonflybsd的历史/第217章-dragonflybsd早期演进邮件列表与irc文化/index.md)

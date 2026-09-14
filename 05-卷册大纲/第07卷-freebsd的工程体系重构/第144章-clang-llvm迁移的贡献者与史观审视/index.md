@@ -51,12 +51,12 @@ volume: 第07卷-freebsd的工程体系重构
 ## 144.13.2 许可证纯洁化的法律里程碑意义
 
 - 要点：FreeBSD base 系统 GPL 代码清零具有重要的法律和生态里程碑意义：① 法律确定性——商业用户可确信 FreeBSD base 不包含 GPLv2/v3 代码，不存在 GPL 许可证合规风险（除〔存疑：原文截断，回源补全待考〕
-- Clang Team. Clang Features and Goals: Fast compiles and Low Memory Use [EB/OL]. clang.llvm.org/features.html, 2007；Larabel M. GCC 4.9 VS. LLVM Clang 3.5 Benchmarks [EB/OL]. OpenBenchmarking.org, 2014-04-14；Larabel M. LLVM Clang 16 vs. GCC 13 Performance [EB/OL]. Phoronix, 2023-05-11.［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］. wiki.freebsd.org；LLVM Project. Clang Control Flow Integrity [EB/OL]. clang.llvm.org/docs/ControlFlowIntegrity.html. ［B］
+- Clang Team. Clang Features and Goals: Fast compiles and Low Memory Use [EB/OL]. clang.llvm.org/features.html, 2007；Larabel M. GCC 4.9 VS. LLVM Clang 3.5 Benchmarks [EB/OL]. OpenBenchmarking.org, 2014-04-14；Larabel M. LLVM Clang 16 vs. GCC 13 Performance [EB/OL]. Phoronix, 2023-05-11.［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］. wiki.freebsd.org；LLVM Project. Clang Control Flow Integrity [EB/OL]. clang.llvm.org/docs/ControlFlowIntegrity.html. ［B］
 
 ## 144.14.3 静态分析与工具链质量工具
 
 - 要点：Clang/LLVM 带来的不仅是编译器替换，更包括一系列基于 Clang AST 的代码质量工具：Clang Static Analyzer（静态分析器，可在编译时检测空指针解引用、内存泄漏、
-- 02-sacred源材料/dagang.md（总纲第 13 条〔订正：原引“原材料/哲学/项目统摄史观/第 25 章.md”系库外断链，2026-09-14 依核查报告改挂现存载体〕）；Free Software Foundation. GNU General Public License Version 3 [Z]. 2007-06-29（§11）；Apache Software Foundation. Apache License, Version 2.0 [Z]. 2004-01（§3）.［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
+- 02-sacred源材料/dagang.md（总纲第 13 条〔订正：原引“原材料/哲学/项目统摄史观/第 25 章.md”系库外断链，2026-09-14 依核查报告改挂现存载体〕）；Free Software Foundation. GNU General Public License Version 3 [Z]. 2007-06-29（§11）；Apache Software Foundation. Apache License, Version 2.0 [Z]. 2004-01（§3）.［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］
 - 02-sacred源材料/dagang.md（总纲第 19 条；〔存疑：《项目统摄史观》第 19 章分章文本 19.2/19.3 节现存载体待考〕）. ［A］
 
 ## 144.15.3 总纲第 21 条审视——革命与改革的方法论分歧

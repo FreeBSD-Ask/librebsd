@@ -46,7 +46,7 @@ volume: 第05卷-freebsd的工程化奠基
 - Evans 2006/2011; jemalloc.net ［A］
 - Drepper, U. glibc malloc maintainer statements (sourceware.org)；freebsd-hackers Linux jemalloc adoption threads (2009-2011)；Evans, J. jemalloc on Linux reflection (blog, 2011) ［A］
 - jemalloc contributors list (github.com/jemalloc/jemalloc)；FreeBSD committers jemalloc patches (freebsd.org)；Facebook jemalloc contributions (github.com/jemalloc) ［A］
-- Phoronix malloc allocator benchmarks (2008-2011)；Evans, J. jemalloc performance data (BSDCan 2006 paper)；Ghemawat, S. TCMalloc performance comparison (2004)［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
+- Phoronix malloc allocator benchmarks (2008-2011)；Evans, J. jemalloc performance data (BSDCan 2006 paper)；Ghemawat, S. TCMalloc performance comparison (2004)［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］
 
 ## 章内关联文件
 

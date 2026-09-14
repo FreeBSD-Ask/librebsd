@@ -49,7 +49,7 @@ volume: 第08卷-freebsd的范式转换
 
 <!-- DB_REF:freebsd.duckdb -->
 > **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 2024-2026 年间：168,386 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
-- Searle, J. R. (1995). *The Construction of Social Reality*. Free Press; Latour, B. (1987). *Science in Action: How to Follow Scientists and Engineers Through Society*. Harvard University Press; Spinellis, D. (2017). *A Repository of Unix History and Evolution*. Empirical Software Engineering［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
+- Searle, J. R. (1995). *The Construction of Social Reality*. Free Press; Latour, B. (1987). *Science in Action: How to Follow Scientists and Engineers Through Society*. Harvard University Press; Spinellis, D. (2017). *A Repository of Unix History and Evolution*. Empirical Software Engineering［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］
 
 <!-- DB_REF:freebsd.duckdb -->
 > **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 2024-2026 年间：168,386 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。

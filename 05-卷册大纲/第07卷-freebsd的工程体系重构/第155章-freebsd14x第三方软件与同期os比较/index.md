@@ -37,7 +37,7 @@ volume: 第07卷-freebsd的工程体系重构
 
 ## 文献
 
-- FreeBSD 14.0-RELEASE Announcement [Z]. 2023-11-20；FreeBSD 14.0 Release Notes [Z]. 2023；DragonFly BSD. dma - DragonFly Mail Agent [EB/OL]. dragonflybsd.org［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
+- FreeBSD 14.0-RELEASE Announcement [Z]. 2023-11-20；FreeBSD 14.0 Release Notes [Z]. 2023；DragonFly BSD. dma - DragonFly Mail Agent [EB/OL]. dragonflybsd.org［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］
 
 
 <!-- dangan-20260908 消解回写 -->

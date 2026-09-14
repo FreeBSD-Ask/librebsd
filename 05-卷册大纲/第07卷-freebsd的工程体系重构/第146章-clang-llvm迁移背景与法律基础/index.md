@@ -49,7 +49,7 @@ volume: 第07卷-freebsd的工程体系重构
 ## 146.2.3 与 FSF 立场的比较辨析
 
 - 要点：FSF 与 BSD 社区在 GPLv3 上的立场分歧反映了自由软件运动内部 “自由（freedom）” 概念的根本差异。
-- LLVM Developer Group. LICENSE.TXT (Apache 2.0 with LLVM Exceptions)[Z]. releases.llvm.org, 2019-09-19 (LLVM 9.0.0)；University of Illinois. UIUC/NCSA Open Source License [Z]. opensource.org/licenses/NCSA；Apache Software Foundation. Apache License, Version 2.0 [Z]. 2004-01.［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］. foundation.llvm.org/docs/relicensing-long-tail/, 2022-11-11；LLVM Developer Group. LICENSE.TXT changelog [Z]. github.com/llvm/llvm-project.［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
+- LLVM Developer Group. LICENSE.TXT (Apache 2.0 with LLVM Exceptions)[Z]. releases.llvm.org, 2019-09-19 (LLVM 9.0.0)；University of Illinois. UIUC/NCSA Open Source License [Z]. opensource.org/licenses/NCSA；Apache Software Foundation. Apache License, Version 2.0 [Z]. 2004-01.［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］. foundation.llvm.org/docs/relicensing-long-tail/, 2022-11-11；LLVM Developer Group. LICENSE.TXT changelog [Z]. github.com/llvm/llvm-project.［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］
 
 ## 自反性声明
 

@@ -49,13 +49,13 @@ volume: 第03卷-伯克利学术文化外溢影响
 
 ## 文献
 
-- Roszak, T. (1969) “The Making of a Counter Culture”；Black Panther Party 档案；伯克利地理档案［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］---## 史料登记与辩证校准（2026-08-08 追加）> **本卷命题**：24.4 历史非断裂而是循环（详见本卷 00-总览“编纂指导思想叙事参照”）### 史料文献
-- CSRG 技术报告；伯克利计算机中心档案；Padlipsky, M. (1983) “The Elements of Networking Style”［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
-- Bayh-Dole Act（1980）；Computer Software Copyright Act（1980）；Diamond v. Diehr, 450 U.S. 175（1981）；Computer Associates v. Altai, 982 F.2d 693（1992）；Salus, P. (1994) “A Quarter Century of UNIX”［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
-- LBNL 科学计算档案；CSRG 提交记录；伯克利校园-LBNL 合作档案［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
-- MIT AI Lab 档案；Stanford SAIL 档案；CSRG 档案；Leslie, S. W. (1993) “The Cold War and American Science”；Saxenian, A. (1994) “Regional Advantage”［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
+- Roszak, T. (1969) “The Making of a Counter Culture”；Black Panther Party 档案；伯克利地理档案［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］---## 史料登记与辩证校准（2026-08-08 追加）> **本卷命题**：24.4 历史非断裂而是循环（详见本卷 00-总览“编纂指导思想叙事参照”）### 史料文献
+- CSRG 技术报告；伯克利计算机中心档案；Padlipsky, M. (1983) “The Elements of Networking Style”［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］
+- Bayh-Dole Act（1980）；Computer Software Copyright Act（1980）；Diamond v. Diehr, 450 U.S. 175（1981）；Computer Associates v. Altai, 982 F.2d 693（1992）；Salus, P. (1994) “A Quarter Century of UNIX”［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］
+- LBNL 科学计算档案；CSRG 提交记录；伯克利校园-LBNL 合作档案［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］
+- MIT AI Lab 档案；Stanford SAIL 档案；CSRG 档案；Leslie, S. W. (1993) “The Cold War and American Science”；Saxenian, A. (1994) “Regional Advantage”［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］
 - 伯克利校方章程修订档案；CSRG 报告档案；大学治理研究 ［A］
-- FSM 后校方学术自由政策；TWLF 后课程改革档案；CSRG 内部讨论档案［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
+- FSM 后校方学术自由政策；TWLF 后课程改革档案；CSRG 内部讨论档案［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］
 - UC Berkeley Bancroft Library. CU-551 CSRG Records, 1974-2005；CSRG 技术备忘录清单；BSD 源码注释档案；McKusick, M. K. (1999) Twenty Years of Berkeley Unix；Salus, P. (1994) A Quarter Century of UNIX. Reading, MA: Addison-Wesley ［B］> **释读自反性声明**：本节对项目统摄史观的释读（含总纲 4、8、9、10、19、22、25 的引用）本身也是一种形式主义化的重构，不声称是对项目统摄史观的客观正确解读。本节所述“学生自主研究—源码自学—同伴学习—反向贡献—传承链条”五段式框架是史家的事后叙事，非 CSRG 时期学生自觉遵循的方法论。本释读承认自身是项目史观总纲第 27 章 27.2 节所谓“反对得好就不是形式主义”的一种尝试，但不声称已经“反对得好”——本释读可能仍然是一种形式主义，欢迎被更自反的释读所超越。已回溯到原文第 4 章 4.1 节、第 9 章 9.1 节、第 14 章 14.2/14.5 节、第 22 章 22.1/22.2 节、第 25 章总纲第 8/19/25 条、第 27 章 27.2 节核验。
 - UC Berkeley 校园地图；Google Maps 距离测量；McKusick 1999 论文；伯克利校园地理变迁档案 ［B］
 

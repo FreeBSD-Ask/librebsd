@@ -48,7 +48,7 @@ volume: 第04卷-大分裂与四大bsd的诞生
 - OpenBSD 治理结构综合文档；BSD 三项目治理对比研究；被疏远贡献者与核心开发者对照访谈录；OpenBSD goals.html [EB/OL]. <https://www.openbsd.org/goals.html>；OpenBSD security.html [EB/OL]. <https://www.openbsd.org/security.html>；OpenBSD hackathons.html [EB/OL]. <https://www.openbsd.org/hackathons.html>；Linux 内核 MAINTAINERS 文件；openbsd.duckdb openbsd-src contributors 表 ［A］
 
 <!-- DB_REF:openbsd.duckdb -->
-> **数据库引用（openbsd.duckdb）**：本子节对应 openbsd 代码仓库。> 1992-1995 年间：770 次提交。> 仓库总览：491,195 次提交，3,352 位贡献者，1995-10-18 至 2026-08-25。
+> **数据库引用（openbsd.duckdb）**：本子节对应 openbsd 代码仓库。> 1992-1995 年间：770 次提交。> 仓库总览：491,195 次提交，1,031 位贡献者（contributors 表实测），1995-10-18 至 2026-08-25。
 - 原材料/哲学/项目统摄史观/第 25 章.md（总纲第 13、19、21 条原文）；NetBSD core.html [EB/OL]. <https://www.netbsd.org/people/core.html>；OpenBSD lyrics.html [EB/OL]. <https://www.openbsd.org/lyrics.html>；OpenBSD security.html [EB/OL]. <https://www.openbsd.org/security.html>；OpenBSD goals.html [EB/OL]. <https://www.openbsd.org/goals.html>；netbsd.duckdb netbsd-src deraadt 末次 commit `699d2a37b0e3c0c6ff29ea0d407c3feeba5642b4`（1994-12-17T23:12:41Z）；openbsd.duckdb openbsd-src 首条 commit `df930be708d50e9715f173caa26ffe1b7599b157`（deraadt, 1995-10-18T08:37:01Z, “initial import of NetBSD tree”） ［A］
 
 <!-- DB_REF:freebsd.duckdb -->

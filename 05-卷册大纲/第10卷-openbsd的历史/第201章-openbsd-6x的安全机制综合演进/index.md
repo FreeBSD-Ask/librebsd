@@ -38,15 +38,15 @@ volume: 第10卷-openbsd的历史
 ---
 
 <!-- DB_REF:openbsd.duckdb -->
-> **数据库引用（openbsd.duckdb）**：本子节对应 openbsd 代码仓库。> 1995-2026 年间：491,195 次提交。> 仓库总览：491,195 次提交，3,352 位贡献者，1995-10-18 至 2026-08-25。
+> **数据库引用（openbsd.duckdb）**：本子节对应 openbsd 代码仓库。> 1995-2026 年间：491,195 次提交。> 仓库总览：491,195 次提交，1,031 位贡献者（contributors 表实测），1995-10-18 至 2026-08-25。
 - OpenBSD Project. OpenBSD 6.0 Errata [EB/OL]. [2026-07-22]. <https://www.openbsd.org/errata60.html>; OpenBSD Project. OpenBSD 6.4 Errata [EB/OL]. [2026-07-22]. <https://www.openbsd.org/errata64.html>; OpenBSD Project. pledge(2) Manual Page [EB/OL]. [2026-07-22]. <https://man.openbsd.org/pledge.2>; OpenBSD Project. unveil(2) Manual Page [EB/OL]. [2026-07-22]. <https://man.openbsd.org/unveil.2>; OpenBSD Project. syspatch(8) Manual Page [EB/OL]. [2026-07-22]. <https://man.openbsd.org/syspatch.8>; OpenBSD Project. signify(1) Manual Page [EB/OL]. [2026-07-22]. <https://man.openbsd.org/signify.1>; FreeBSD Security Team. FreeBSD Security Advisories Archive [EB/OL]. [2026-07-22]. <https://www.freebsd.org/security/advisories/>; OpenBSD Project. openbsd.duckdb — openbsd-src 6.x security commits [DB/OL]. 2026-07-22. SQL: SELECT commit_hash, author_date, author_name, message_subject FROM commits WHERE repo_name =‘openbsd-src’ AND author_date >=‘2016-09-01’ AND author_date <‘2019-10-01’ AND (message_subject LIKE ‘%CVE-%’ OR message_body LIKE ’%CVE-%’ OR message_subject LIKE ‘%security%’ OR message_subject LIKE ’%spectre%’ OR message_subject LIKE '%meltdown%’) ORDER BY author_date ASC ［A］
 
 <!-- DB_REF:openbsd.duckdb -->
-> **数据库引用（openbsd.duckdb）**：本子节对应 openbsd 代码仓库。> 1995-2026 年间：491,195 次提交。> 仓库总览：491,195 次提交，3,352 位贡献者，1995-10-18 至 2026-08-25。
+> **数据库引用（openbsd.duckdb）**：本子节对应 openbsd 代码仓库。> 1995-2026 年间：491,195 次提交。> 仓库总览：491,195 次提交，1,031 位贡献者（contributors 表实测），1995-10-18 至 2026-08-25。
 - 项目史观总纲第 5 条、第 13 条。见：据原文第 25 章；项目史观总纲第 5 章偶然性论述。见：据原文第 5 章；openbsd.duckdb openbsd-src 仓库 LibreSSL/RETGUARD 相关 commit（af0b15b8442f、b6553af36068、e688c2b0648a）；LibreSSL 官方公告 [EB/OL]. <https://www.libressl.org/>；OpenSSL Apache 许可证文本；LibreSSL ISC 许可证文本 ［A］
 
 <!-- DB_REF:openbsd.duckdb -->
-> **数据库引用（openbsd.duckdb）**：本子节对应 openbsd 代码仓库。> 1995-2026 年间：491,195 次提交。> 仓库总览：491,195 次提交，3,352 位贡献者，1995-10-18 至 2026-08-25。
+> **数据库引用（openbsd.duckdb）**：本子节对应 openbsd 代码仓库。> 1995-2026 年间：491,195 次提交。> 仓库总览：491,195 次提交，1,031 位贡献者（contributors 表实测），1995-10-18 至 2026-08-25。
 - OpenBSD 6.2 release 页面 ［EB/OL］. <https://www.openbsd.org/62.html>；**unveil(2)** 手册页；OpenBSD 邮件列表存档；undeadly.org 报道；03-原始史料库/06-考据记录/（20260723_announcements-openbsd.md，〔存疑：原件未入库，待迁移〕） § 二.4.3；openbsd.duckdb openbsd-src 仓库 ［A］
 - FreeBSD 社区论文：[FP-2022-001] Refining FreeBSD's Kernel Crypto Framework（John Baldwin（约翰·鲍德温），2022）<https://papers.freebsd.org/2022/bsdcan/baldwin-refining_freebsds_kernel_crypto_framework/>
 - FreeBSD 社区论文：[FP-2021-008] smart(8) Update: A Permissively-Licensed Alternative to smartctl(8)（Michael Dexter（迈克尔·德克斯特）; Chuck Tuffli，2021）<https://papers.freebsd.org/2021/eurobsdcon/dexter-tuffli-update_on_smart/>
@@ -58,7 +58,7 @@ volume: 第10卷-openbsd的历史
 - FreeBSD 社区论文：[FP-2017-009] My BSD sucks less than yours（Baptiste Daroussin（巴蒂斯特·达鲁桑） Antoine Jacoutot（安托万·雅库托），2017）<https://papers.freebsd.org/2017/fosdem/bapt-my_bsd_suck_less_than_yours/>
 
 <!-- DB_REF:openbsd.duckdb -->
-> **数据库引用（openbsd.duckdb）**：本子节对应 openbsd 代码仓库。> 1995-2026 年间：491,195 次提交。> 仓库总览：491,195 次提交，3,352 位贡献者，1995-10-18 至 2026-08-25。
+> **数据库引用（openbsd.duckdb）**：本子节对应 openbsd 代码仓库。> 1995-2026 年间：491,195 次提交。> 仓库总览：491,195 次提交，1,031 位贡献者（contributors 表实测），1995-10-18 至 2026-08-25。
 
 <!-- PODCAST_REVIEW v20260829 -->
 <!-- 语义复核范围：BSD Now EP374、BSD Now EP351、BSD Now EP325、BSD Now EP322、BSD Now EP203（共 5 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->

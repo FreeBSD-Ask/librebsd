@@ -51,7 +51,7 @@ volume: 第06卷-freebsd的核心技术革新
 
 - powerpc64、sparc64；9.1-RELEASE 初始仅发布 amd64、i386、powerpc64、sparc64（ia64/powerpc 因构建资源受限后补）
 - Sony Computer Entertainment. PlayStation 4 Developer Documentation（Orbis OS 章节）；CTurt. PS4 Kernel Exploitation Analysis [Z]. 2015-2017；多家技术媒体 2013.6 E3 报道（确认 Orbis OS 基于 FreeBSD 9.0）；Rosen L. Open Source Licensing: Software Freedom and Intellectual Property Law [M]. Upper Saddle River: Prentice Hall
-- FreeBSD 9.0/9.1/9.2/9.3-RELEASE Announcement Acknowledgments 章节 [Z]. 2012-2014；FreeBSD Security Team 页面（security.freebsd.org）［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
+- FreeBSD 9.0/9.1/9.2/9.3-RELEASE Announcement Acknowledgments 章节 [Z]. 2012-2014；FreeBSD Security Team 页面（security.freebsd.org）［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］
 
 ## 124.13 Release Engineering 团队构成
 
@@ -62,7 +62,7 @@ volume: 第06卷-freebsd的核心技术革新
 ## 124.15 r246074 首次导入与 WITH_BSD_PATCH 构建选项
 
 - 要点：2013 年 1 月 29 日 17:03 由 Gabor Kove〔存疑：原文截断，待回源补全〕
-- Pedro Giffuni. [CFT] WITH_BSD_PATCH [EB/OL]. freebsd-current mailing list, 2013-01-29; Free Software Foundation. Various Licenses and Comments about Them [EB/OL]. gnu.org/licenses/license-list.html（#ModifiedBSD、#FreeBSD 条目，2026-07-22 核实）.［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
+- Pedro Giffuni. [CFT] WITH_BSD_PATCH [EB/OL]. freebsd-current mailing list, 2013-01-29; Free Software Foundation. Various Licenses and Comments about Them [EB/OL]. gnu.org/licenses/license-list.html（#ModifiedBSD、#FreeBSD 条目，2026-07-22 核实）.［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］
 
 ## 124.16 被忽视的边缘贡献者
 

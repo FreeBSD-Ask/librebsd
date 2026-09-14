@@ -50,5 +50,5 @@ volume: 第02卷-伯克利的岁月
 - Reno 发行说明； CSRG OSI 文档 ［A］## 史料考据补充（2026-08-04 任务3 联网核验）> 主题：4.3BSD Reno 的网络改进与 OSI 协议栈探索
 - 4.3BSD Tahoe/Reno 源代码注释（TUHS Unix Archive，www.tuhs.org/Archive/4BSD/Distributions/4.3BSD-Reno/，Rick Copeland 与 Kirk McKusick 捐赠）；CSRG 邮件列表存档（伯克利 Bancroft 图书馆）；USENIX 会议论文集（1986-1990） ［A］
 - Bostic, K. (1990.7.6) “V1.90 (4.3BSD-Reno)”comp.archives 公告；McKusick, M. K. (1999) “Twenty Years of Berkeley Unix”；McKusick et al. (1996) 《The Design and Implementation of the 4.4BSD Operating System》ISBN 0-201-54979-4；CSRG 1990 年度技术报告 ［B］；资料数据库.duckdb 文献计量学分析报告（`03-原始史料库/01-代码仓库史料/01-数据库本体/统计分析/文献计量学分析.md` Task 22，2026-07-27）；卷章数据映射表（`03-原始史料库/01-代码仓库史料/01-数据库本体/统计分析/卷章数据映射.md` 第二卷第 19 章）---
-- CSRG 网络栈性能报告（1988）；各厂商 TCP/IP 性能基准测试（1986-1990）；Salus, P. (1994) “A Quarter Century of UNIX”［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
+- CSRG 网络栈性能报告（1988）；各厂商 TCP/IP 性能基准测试（1986-1990）；Salus, P. (1994) “A Quarter Century of UNIX”［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］
 - 4.4BSD/4.4BSD-Lite Release Notes (1994)；FreeBSD 1.0-3.x Release Notes；NetBSD 早期版本 Release Notes；Ylönen, T. (1995) SSH 1.0 发布记录；Kohl, J. & Neuman, C. (1993) RFC 1510“The Kerberos Network Authentication Service (V5)”；OpenSSH 发布记录；FreeBSD 5.x Release Notes (2003) ［A］

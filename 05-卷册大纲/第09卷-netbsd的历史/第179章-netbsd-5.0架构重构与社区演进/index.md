@@ -46,16 +46,16 @@ volume: 第09卷-netbsd的历史
 <!-- DB_REF:netbsd.duckdb -->
 > **数据库引用（netbsd.duckdb）**：本子节对应 netbsd 代码仓库。> 2005-2009 年间：468,780 次提交。> 仓库总览：1,999,412 次提交，1,545 位贡献者（contributors 表行数，1992-07-13 至 2026-08-24）。
 - NetBSD core 邮件列表；Core Team 决议记录；NetBSD Foundation 年度报告 ［A］## 史料考据补充（2026-08-04 任务3 联网核验）> 主题：NetBSD Core Team 与 committer
-- Linux Weekly News 档案；Slashdot BSD 相关帖；OSNews NetBSD 评论［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
+- Linux Weekly News 档案；Slashdot BSD 相关帖；OSNews NetBSD 评论［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］
 
 <!-- DB_REF:netbsd.duckdb -->
 > **数据库引用（netbsd.duckdb）**：本子节对应 netbsd 代码仓库。> 1993-2026 年间：1,999,408 次提交。> 仓库总览：1,999,412 次提交，1,545 位贡献者（contributors 表行数，1992-07-13 至 2026-08-24）。
 - NetBSD CVS 仓库统计；邮件列表存档；BSDCan 演讲视频档案 ［A］## 史料考据补充（2026-08-04 任务3 联网核验）> 主题：NetBSD 发布工程（Manuel Bouyer 等）
-- NetBSD 5.0 Release Notes；Kengo NAKAHARA MPLS 设计邮件；BSD MPLS 实现比较研究［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
+- NetBSD 5.0 Release Notes；Kengo NAKAHARA MPLS 设计邮件；BSD MPLS 实现比较研究［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］
 
 <!-- DB_REF:netbsd.duckdb -->
 > **数据库引用（netbsd.duckdb）**：本子节对应 netbsd 代码仓库。> 1993-2026 年间：1,999,408 次提交。> 仓库总览：1,999,412 次提交，1,545 位贡献者（contributors 表行数，1992-07-13 至 2026-08-24）。
-- Netcraft Web Server Survey 2005-2009；IDC 服务器操作系统市场报告；Distrowatch 统计页面［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
+- Netcraft Web Server Survey 2005-2009；IDC 服务器操作系统市场报告；Distrowatch 统计页面［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］
 
 <!-- DB_REF:freebsd.duckdb -->
 > **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 2005-2009 年间：183,657 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。

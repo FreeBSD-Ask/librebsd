@@ -49,7 +49,7 @@ volume: 第07卷-freebsd的工程体系重构
 
 ## 文献
 
-- US-CERT. Annual Security Reports (2000-2005). us-cert.gov; DARPA. Composable High Assurance Trusted Systems (CHATS) Program Documentation; FreeBSD Project. FreeBSD 4.x-5.x Release Notes.［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
+- US-CERT. Annual Security Reports (2000-2005). us-cert.gov; DARPA. Composable High Assurance Trusted Systems (CHATS) Program Documentation; FreeBSD Project. FreeBSD 4.x-5.x Release Notes.［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］
 
 ## 138.10 2006-2012：云时代萌芽与安全工具链成熟（原 137.10.2 存目残节）
 

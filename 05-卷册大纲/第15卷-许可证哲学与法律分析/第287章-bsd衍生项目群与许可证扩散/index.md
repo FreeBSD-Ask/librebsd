@@ -10,7 +10,7 @@ volume: 第15卷-许可证哲学与法律分析
 
 - OpenSSH 由 OpenBSD 项目于 1999 年 9 月 26 日从 Björn Grönvall 的 OSSH（其本身 fork 自 Tatu Ylönen 的 SSH 1.2.12 最后自由版本）import 入 OpenBSD 源代码树，1999 年 12 月 1 日随 OpenBSD 2.6 正式发布；创始团队为 Theo de Raadt（西奥·德·若特）、Niels Provos（尼尔斯·普罗沃斯）、Markus Friedl（马库斯·弗里德尔）、Bob Beck、Aaron Campbell、Dug Song；许可证为 BSD、ISC 与公共领域的混合；OpenSSH 此后被 Linux 发行版、macOS、Windows 10（1803 起 OpenSSH 客户端内置）、Solaris、AIX 等几乎所有现代操作系统采用，成为 SSH 协议事实标准实现；portable 版本由 Damien Miller（达米安·米勒） 等维护，独立于 OpenBSD 基础系统但同步演化
 - LibreSSL 由 OpenBSD 项目于 2014 年 4 月 Heartbleed 漏洞（CVE-2014-0160，2014 年 4 月 7 日公开）公开后启动 fork，由 Bob Beck 与 Theo de Raadt 主导；首个 portable 版本于 2014 年 7 月 11 日发布，2014 年 11 月 1 日随 OpenBSD 5.6 首次进入基础系统；Beck 自述 fork 真正诱因并非 Heartbleed 而是 OpenSSL 的 LIFO 内存分配器破坏了 Coverity 与 Valgrind 的可用性；fork 后首周内删除约 9 万行 C 代码，发现大量 20 年未维护的 FIPS 认证遗留代码（“abandonware”）；LibreSSL 后被 FreeBSD ports（2014 年 7 月 12 日加入 security/libressl）、Linux 发行版（Gentoo 等）、macOS 等采用
-- pf（packet filter）由 Daniel Hartmeier（丹尼尔·哈特迈尔） 原创开发并由 OpenBSD 项目维护，首次出现在 OpenBSD 3.0（2001 年 12 月 1 日），作为 IPFilter（IPF）许可证争议后的替代品——IPF 作者 Darren Reed（达伦·里德） 的许可证条款引发 OpenBSD 法律审查后，OpenBSD 决定自研 pf，Hartmeier 提交初版并被 OpenBSD 纳入基础系统；pf 后被 FreeBSD（FreeBSD 5.3 起，2004 年 11 月 6 日）、NetBSD、Mac OS X（自 10.6 Snow Leopard 起 Apple 在 pf 基础上构建应用层防火墙）、QNX 等采用；pf 的状态检测、ALTQ 集成、语法设计［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］ **[存疑：经 2026-07-30 复核 McHardy 2009-03-18 nftables 首次发布公告与 nftables 官方 wiki，均未提及 pf 为设计来源，“pf 影响 nftables 设计” 叙事无 primary source 支持，应视为存疑推断，详见辨析字段]** 影响了 Linux nftables 的设计
+- pf（packet filter）由 Daniel Hartmeier（丹尼尔·哈特迈尔） 原创开发并由 OpenBSD 项目维护，首次出现在 OpenBSD 3.0（2001 年 12 月 1 日），作为 IPFilter（IPF）许可证争议后的替代品——IPF 作者 Darren Reed（达伦·里德） 的许可证条款引发 OpenBSD 法律审查后，OpenBSD 决定自研 pf，Hartmeier 提交初版并被 OpenBSD 纳入基础系统；pf 后被 FreeBSD（FreeBSD 5.3 起，2004 年 11 月 6 日）、NetBSD、Mac OS X（自 10.6 Snow Leopard 起 Apple 在 pf 基础上构建应用层防火墙）、QNX 等采用；pf 的状态检测、ALTQ 集成、语法设计［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］ **[存疑：经 2026-07-30 复核 McHardy 2009-03-18 nftables 首次发布公告与 nftables 官方 wiki，均未提及 pf 为设计来源，“pf 影响 nftables 设计” 叙事无 primary source 支持，应视为存疑推断，详见辨析字段]** 影响了 Linux nftables 的设计
 - OpenBSD 长期以 “自给自足” 策略孵化独立工具：mandoc（手册页格式化器，由 Kristaps Dzonsons 与 Ingo Schwarze（英戈·施瓦茨） 开发，替代 groff，后被 Linux 发行版与 FreeBSD 采用）、signify（签名工具，由 Marc Espie（马克·埃斯皮） 与 Ted Unangst 开发，用于 OpenBSD 发布签名）、iked（IKEv2 守护进程，由 Reyk Flöter 开发）、bgpd（BGP 守护进程，由 Claudio Jeker（克劳迪奥·耶克尔） 开发，后被 OpenBGPD 独立项目化）、httpd（OpenBSD 自带 HTTP 服务器，基于 relayd 框架）、relayd、smtpd（由 Gilles Chehade、Jacek Masiulaniec、Charles Longeau 开发）、ntpd（由 Henning Brauer（亨宁·布劳尔） 开发）、snmpd、ldapd 等；这些工具均以 ISC 或 BSD 许可证发布，构成 OpenBSD 衍生项目群
 - Varnish Cache 由 FreeBSD 核心开发者 Poul-Henning Kamp（phk）于 2006 年 2 月开始设计，2006 年 9 月发布 Varnish 1.0；项目由挪威报纸 Verdens Gang（VG）的 Anders Berg 发起并提供资金，由挪威开源咨询公司 Linpro（后改名 Redpill-Linpro）提供开发支持；Varnish 设计目标为替代 Squid 作为反向代理缓存，PHK 的核心设计决策是将缓存置换交给操作系统虚拟内存管理（而非应用层），以利用现代操作系统的页缓存与多级 CPU 缓存；Varnish 采用 BSD-2-Clause 许可证；2010 年 Varnish Software 从 Linpro 分拆独立商业化，Varnish Cache 开源项目保持独立；采用方包括 Wikipedia、Facebook、Twitter、Vimeo、Tumblr、The New York Times、The Guardian、The Hindu 等，BuiltWith 统计显示前 1 万网站中 13% 以上采用 Varnish〔原禁引来源（仅作考据留痕）·已改引官方主源 ref2514（PHK 一手设计笔记 varnish-cache.org/docs/7.5/phk/firstdesign.html，2006-02-02）〕
 
@@ -38,7 +38,7 @@ volume: 第15卷-许可证哲学与法律分析
 - 考据过程留痕——【查证来源】BSD 许可证文本经 <https://www.freebsd.org/copyright/freebsd-license/> 一手核验，确认“AS IS”条款与“无强制回馈”条款为许可证核心；BuiltWith Varnish 采用统计（前一万网站 13% 以上采用率）经 trends.builtwith.com 一手核验；〔待核：原文截断，后文待回源〕
 - 考据过程留痕——【查证来源】bsd_commits.duckdb 查询 L3.2.1（商业实体 commit 占比长期低于 1.3% 但绝对值增长）经 SQL 查询一手核验；BuiltWith Varnish 统计（前一万网站 13% 以上采用率）经 trends.builtwith.com 一手核验；libarchive 采用列表（macOS 10.6+、Debian/Ubuntu、Homebrew）经
 - pkgsrc 支持的平台数量在不同叙事中略有差异，须查 pkgsrc.org 当前平台列表；Joyent 赞助的具体金额与时限须查 Joyent 公开声明；pkgsrc 与 FreeBSD Ports 的语法差异须查两项目文档对比
-  - 文献：pkgsrc.org；NetBSD 软件包文档；Joyent pkgsrc 文档［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
+  - 文献：pkgsrc.org；NetBSD 软件包文档；Joyent pkgsrc 文档［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］
 
 ## 287.1.2 LibreSSL 从 OpenSSL fork 的工程史
 
@@ -50,12 +50,12 @@ volume: 第15卷-许可证哲学与法律分析
 - 要点：libarchive 由 FreeBSD 提交者 Tim Kientzle 创建，是一个支持多种压缩与归档格式（tar、zip、cpio、7-Zip、xz、bzip2、gzip、lz4、zstd 等）的 C 库；libarchive 采用 BSD 许可证，后被 FreeBSD 基础系统、macOS（自 10.6 Snow Leopard 起 bsdtar 即基于 libarchive）、Debian/Ubuntu
 - 文献**：FreeBSD Project. FreeBSD License [EB/OL]. <https://www.freebsd.org/copyright/freebsd-license/>; BuiltWith. Varnish Usage Statistics [EB/OL]. <https://trends.builtwith.com/cdn/Varnish>; libarchive. Official Website [EB/OL]. <https://libarchive.github.io/>; Joyent. Reintroducing Bhyve [EB/OL]. (2021-07-08)
 - openbsd.duckdb L3.2.1 查询报告; BuiltWith. Varnish Statistics [EB/OL]. <https://trends.builtwith.com/cdn/Varnish>; libarchive. Official Website [EB/OL]. <https://libarchive.github.io/>; 项目史观总纲第六章“主体性与和解”[Z]. 原材料/哲学/项目统摄史观/第 6 章.md.
-- pkgsrc.org；NetBSD 软件包文档；Joyent pkgsrc 文档［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
+- pkgsrc.org；NetBSD 软件包文档；Joyent pkgsrc 文档［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］
 
 ## 287.3.2 pkgsrc 被 DragonFly BSD 采用的历史
 
 - 要点：DragonFly BSD（Matt Dillon 2003 年从 FreeBSD 4.x fork，2004 年 7 月 12 日发布 1.0 版本）最初使用 FreeBSD Ports 作为软件包管理系统，2005 年 9 月 Matt Dillon 宣布
-- PostgreSQL 许可证；Nginx 许可证；PostgreSQL 历史［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
+- PostgreSQL 许可证；Nginx 许可证；PostgreSQL 历史［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］
 
 ## 287.4.2 BSD 许可证与 MIT/Apache 许可证的扩散对比
 

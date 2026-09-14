@@ -34,11 +34,11 @@ volume: 第03卷-伯克利学术文化外溢影响
 
 ## 辨析
 
-- OCF（Open Computing Facility）的具体成立年份与 CSRG 时期的活动——OCF 官方档案未在 2026-07-25 直接核查，OCF 的成立年份、CSRG 时期的具体活动需查阅 OCF Archives 或 ASUC Archives CU-282 核实，保留 ［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］；CSRG 与 ASUC/GA 的关系属间接支持性质（见要点（二）），OCF 之外未发现 CSRG 与学生社团的直接协作记录（2026-09-12 整改：截断收束——批次 C073 问题 3）
+- OCF（Open Computing Facility）的具体成立年份与 CSRG 时期的活动——OCF 官方档案未在 2026-07-25 直接核查，OCF 的成立年份、CSRG 时期的具体活动需查阅 OCF Archives 或 ASUC Archives CU-282 核实，保留 ［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］；CSRG 与 ASUC/GA 的关系属间接支持性质（见要点（二）），OCF 之外未发现 CSRG 与学生社团的直接协作记录（2026-09-12 整改：截断收束——批次 C073 问题 3）
 
 ## 文献
 
-- Associated Students of the University of California. About. <https://asuc.org/about/> (accessed 2026-07-25)；Graduate Assembly. About the GA. <https://ga.berkeley.edu/about/about-the-ga/> (accessed 2026-07-25)；Open Computing Facility. Official Archives［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］；UC Berkeley Bancroft Library. Associated Students of the University of California, Berkeley, records, CU-282, 1893-2012. Finding aid: <https://oac.cdlib.org/findaid/ark:/13030/c8vm4m5p/> (accessed 2026-07-28)；UC Berkeley Bancroft Library. Graduate Assembly Archives ［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］；UC Berkeley Bancroft Library. CU-551 CSRG Records, 1974-2005 ［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］；McKusick, M. K. (1999) Twenty Years of Berkeley Unix // Open Sources: Voices from the Open Source Revolution. O'Reilly Media ［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］> （2026-09-12 整改：原「### 史观映射」整块误接于「## 文献」末条（行内嵌标题+--- 收尾），已迁至「## 史观」——批次 C073 问题 4。）
+- Associated Students of the University of California. About. <https://asuc.org/about/> (accessed 2026-07-25)；Graduate Assembly. About the GA. <https://ga.berkeley.edu/about/about-the-ga/> (accessed 2026-07-25)；Open Computing Facility. Official Archives［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］；UC Berkeley Bancroft Library. Associated Students of the University of California, Berkeley, records, CU-282, 1893-2012. Finding aid: <https://oac.cdlib.org/findaid/ark:/13030/c8vm4m5p/> (accessed 2026-07-28)；UC Berkeley Bancroft Library. Graduate Assembly Archives ［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］；UC Berkeley Bancroft Library. CU-551 CSRG Records, 1974-2005 ［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］；McKusick, M. K. (1999) Twenty Years of Berkeley Unix // Open Sources: Voices from the Open Source Revolution. O'Reilly Media ［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］> （2026-09-12 整改：原「### 史观映射」整块误接于「## 文献」末条（行内嵌标题+--- 收尾），已迁至「## 史观」——批次 C073 问题 4。）
 
 ---
 

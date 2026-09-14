@@ -51,7 +51,7 @@ volume: 第05卷-freebsd的工程化奠基
 
 ## 文献
 
-- iPhone Dev Team 越狱档案；Apple Developer Release Notes［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
+- iPhone Dev Team 越狱档案；Apple Developer Release Notes［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］
 
 <!-- DB_REF:freebsd.duckdb -->
 > **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。
@@ -81,7 +81,7 @@ volume: 第05卷-freebsd的工程化奠基
 > **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。
 > 1996-2010 年间：482,545 次提交。
 > 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
-- BSDCon 2000 proceedings；DANCES 2002 proceedings［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
+- BSDCon 2000 proceedings；DANCES 2002 proceedings［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］
 
 <!-- DB_REF:freebsd.duckdb -->
 > **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。

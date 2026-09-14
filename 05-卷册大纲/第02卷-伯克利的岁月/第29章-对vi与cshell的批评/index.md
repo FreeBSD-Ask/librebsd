@@ -48,7 +48,7 @@ volume: 第02卷-伯克利的岁月
 
 - Joy, W. (1978) “2BSD Release Notes”；McKusick, K. (1999) “Twenty Years of Berkeley Unix”（2026-09-12 整改：原行混入的 Berknet 硕士论文、sendmail 安装指南、RFC 821、UUCP 文档与文献计量学分析 Task 22 工作留痕（含本机绝对路径与 SQL 查询记录）经复核与本章主题无关（批次 B042 问题 6/9 同源），移除留痕）
 - Raymond, E. S. (1996) “The Art of Unix Programming”；USENIX 1979 年会议论文集 ［B］
-- Dewey, J. (1929) “Experience and Nature”；Rorty, R. (1979) “Philosophy and the Mirror of Nature”［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
+- Dewey, J. (1929) “Experience and Nature”；Rorty, R. (1979) “Philosophy and the Mirror of Nature”［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］
 - USENIX Association 会议论文集（1978-1985）；伯克利 CSRG 邮件列表存档 ［A］
 - 综合 11.8.1（Neovim/vim/elvis/nvi）、11.8.2（viper-mode/evil-mode/VS Code Vim/IdeaVim）、11.8.3（tcsh/bash vi-mode/zsh vi-mode）各小节文献 ［A］
 - Christiansen 1995; GNU bash 文档； tcsh/zsh 发行说明 ［A］

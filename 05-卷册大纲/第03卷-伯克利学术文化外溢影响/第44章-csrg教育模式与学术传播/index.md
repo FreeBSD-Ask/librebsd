@@ -53,9 +53,9 @@ volume: 第03卷-伯克利学术文化外溢影响
 - CS162/6.828/CS140 课程档案；McKusick, K. (1999) “Twenty Years of Berkeley Unix”；MIT/Stanford CS 系历史 ［B］
 - BSD 学术网络档案；Salus, P. (1994) “A Quarter Century of UNIX”；McKusick, K. (1999) “Twenty Years of Berkeley Unix” ［B］
 - Levy, S. (1984) “Hackers”；McKusick, K. (1999) “Twenty Years of Berkeley Unix”；CSRG 文化访谈 ［B］
-- 四校 CS 系历史；ARPANET 影响记录；Ceruzzi, P. (2003) “A History of Modern Computing”［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
-- Soda Hall 建筑档案；CSRG 办公记录；伯克利校园档案［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
-- CSRG 与校方通信；加州大学治理档案；Douglass, J. (2007) “The California Idea and American Higher Education”［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
+- 四校 CS 系历史；ARPANET 影响记录；Ceruzzi, P. (2003) “A History of Modern Computing”［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］
+- Soda Hall 建筑档案；CSRG 办公记录；伯克利校园档案［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］
+- CSRG 与校方通信；加州大学治理档案；Douglass, J. (2007) “The California Idea and American Higher Education”［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］
 - McKusick, M. K. (1999) “Twenty Years of Berkeley Unix”；UC Copyright Policy (1980s)；DARPA-UC Berkeley 合同条款档案；CSRG 成员就业记录；Bostic, K. (1991) Net/2 重写运动相关通信 ［A］
 
 <!-- dangan-20260908 消解回写 -->

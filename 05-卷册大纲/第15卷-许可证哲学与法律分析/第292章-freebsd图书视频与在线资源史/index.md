@@ -62,7 +62,7 @@ volume: 第15卷-许可证哲学与法律分析
 <!-- DB_REF:freebsd.duckdb -->
 > **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 2003-2026 年间：1,102,265 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
 - FreeBSD man pages 源码；CSRG 手册页历史 ［A］
-- BSD Now 播客档案；Jupiter Broadcasting 节目历史［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
+- BSD Now 播客档案；Jupiter Broadcasting 节目历史［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］
 - FreeBSD Wiki 历史；freebsd-doc 邮件列表 ［A］
   - 〔史料考据补充（2026-08-04 任务3 联网核验）· 主题：在线书籍与 Wiki 生态——该块正文未随标题回填，留待补全〕
 - FreeBSD 官方中文 Handbook（`https://docs.freebsd.org/zh-cn/books/handbook/`）；FreeBSD 翻译平台 Weblate（`https://translate-dev.freebsd.org/`）；FreeBSD 7.0-RELEASE 文档存档（`https://docs-archive.freebsd.org/doc/7.0-RELEASE/usr/share/doc/zh_CN/`，delphij CVS 标签一手核验）；FreeBSD 中文社区博客园（`https://www.cnblogs.com/FreeBSD-CN`）[考据完成：2026-07-30 经 docs.freebsd.org、translate-dev.freebsd.org、docs-archive.freebsd.org 一手核验]

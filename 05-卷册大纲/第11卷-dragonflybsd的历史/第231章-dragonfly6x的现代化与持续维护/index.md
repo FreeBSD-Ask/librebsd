@@ -26,8 +26,8 @@ volume: 第11卷-dragonflybsd的历史
 
 - commit log 可能不完整反映改进全貌——部分改进可能分散在多个 commit 中，部分改进可能合并入单一 commit；dragonfly.duckdb 显示 v6.2 系列期间 sys/dev/drm/ 目录 commit 多为 Linux DRM 回移，DragonFly 自研 GPU 改进贡献有限
 - release notes 与 commit log 偶有不一致——dragonfly.duckdb 显示 v6.4.1 与 v6.4.2 间隔仅 10 天，反映 v6.4.1 可能存在已知 bug 由 v6.4.2 快速修复；正式撰写时须以 commit log 为事实依据，release notes 为辅助参考
-- 邮件记录可能不完整——部分权限决策可能在私下邮件或 IRC 中进行；dragonfly.duckdb 显示 Aaron LI 首 commit = 2017-09-27，但其在 kernel@ 邮件列表的首次发言 ［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］ 须单独核验；权限撤销记录在 DragonFly 中罕见——dragonfly.duckdb contributors 表显示贡献者停止贡献是自然淡出而非被撤销权限。
-- 仓库统计须考虑 commit 粒度差异——dragonfly.duckdb 显示 DragonFly 2024 年 277 条 commit 中 Aaron LI 贡献 ［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］，须按 author_email 按年分组核验；v6.5.0 tag 与 v6.4.0rc1 同日（2022-12-20）且相差仅 2 分钟（23:36:19 与 23:38:31，UTC+1），且 v6.5.0 打标先于 v6.4.0rc1——版本号序列与打标顺序的错位须以 release notes 交叉核验。
+- 邮件记录可能不完整——部分权限决策可能在私下邮件或 IRC 中进行；dragonfly.duckdb 显示 Aaron LI 首 commit = 2017-09-27，但其在 kernel@ 邮件列表的首次发言 ［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］ 须单独核验；权限撤销记录在 DragonFly 中罕见——dragonfly.duckdb contributors 表显示贡献者停止贡献是自然淡出而非被撤销权限。
+- 仓库统计须考虑 commit 粒度差异——dragonfly.duckdb 显示 DragonFly 2024 年 277 条 commit 中 Aaron LI 贡献 ［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］，须按 author_email 按年分组核验；v6.5.0 tag 与 v6.4.0rc1 同日（2022-12-20）且相差仅 2 分钟（23:36:19 与 23:38:31，UTC+1），且 v6.5.0 打标先于 v6.4.0rc1——版本号序列与打标顺序的错位须以 release notes 交叉核验。
 - *无 SA 系统可持续性的辨析（vs 5.x 周期）**：5.x 周期无 SA 系统在 Dillon 主导代码贡献的背景下可行（Dillon 4 条 CVE commit 中 2 条为 embargo 期内修复），6.x 周期无 SA 系统面临 Dillon 淡出的可持续性挑战——dragonfly.duckdb 显示 6.x 周期 Dillon 仅 1 条 CVE commit，其余 15 条由其他贡献者提交。
 
 ## 文献
@@ -35,23 +35,23 @@ volume: 第11卷-dragonflybsd的历史
 - dragonfly.duckdb dragonfly-src 仓库 commits 表与 commit_files 表（v6.2/v6.4 系列 GPU 与驱动 commit）；kernel@ 邮件列表档案；DragonFly 硬件兼容性列表 ［A］
 
 <!-- DB_REF:dragonfly.duckdb -->
-> **数据库引用（dragonfly.duckdb）**：本子节对应 dragonfly 代码仓库。> 2022-2025 年间：123,092 次提交。> 仓库总览：656,206 次提交，535 位贡献者，2003-06-17 至 2026-08-18。
+> **数据库引用（dragonfly.duckdb）**：本子节对应 dragonfly 代码仓库。> 2022-2025 年间：123,092 次提交。> 仓库总览：656,207 次提交，213 位贡献者，2003-06-17 至 2026-08-18。
 - dragonfly.duckdb dragonfly-src 仓库 tags 表（v6.4.1/v6.4.2 target_commit_hash）；dragonfly.duckdb dragonfly-src 仓库 commits 表（v6.4.1 与 v6.4.2 间 commit）；DragonFly 6.4.1/6.4.2 release notes [EB/OL]. dragonflybsd.org/release/ ［A］
 
 <!-- DB_REF:dragonfly.duckdb -->
-> **数据库引用（dragonfly.duckdb）**：本子节对应 dragonfly 代码仓库。> 2023-2025 年间：71,438 次提交。> 仓库总览：656,206 次提交，535 位贡献者，2003-06-17 至 2026-08-18。
+> **数据库引用（dragonfly.duckdb）**：本子节对应 dragonfly 代码仓库。> 2023-2025 年间：71,438 次提交。> 仓库总览：656,207 次提交，213 位贡献者，2003-06-17 至 2026-08-18。
 - lists.dragonflybsd.org 邮件列表归档；dragonfly.duckdb dragonfly-src 仓库 contributors 表（first_commit_date 序列）；marc.info DragonFly 备份 ［A］
 
 <!-- DB_REF:dragonfly.duckdb -->
-> **数据库引用（dragonfly.duckdb）**：本子节对应 dragonfly 代码仓库。> 2019-2026 年间：263,468 次提交。> 仓库总览：656,206 次提交，535 位贡献者，2003-06-17 至 2026-08-18。
+> **数据库引用（dragonfly.duckdb）**：本子节对应 dragonfly 代码仓库。> 2019-2026 年间：263,468 次提交。> 仓库总览：656,207 次提交，213 位贡献者，2003-06-17 至 2026-08-18。
 - dragonfly.duckdb dragonfly-src 仓库 tags 表（131 条 tag 完整序列）；dragonfly.duckdb 查询 L1.1.1（dragonfly-src 2019-2026 年按年 commit 量）；宏观趋势统计.md §L1.1.1；DragonFly BSD Project. Releases [EB/OL]. <https://www.dragonflybsd.org/release/> ［A］
 
 <!-- DB_REF:dragonfly.duckdb -->
-> **数据库引用（dragonfly.duckdb）**：本子节对应 dragonfly 代码仓库。> 2026 年间（截至 2026-08-18）：1,173 次提交。> 仓库总览：656,206 次提交，535 位贡献者，2003-06-17 至 2026-08-18。
+> **数据库引用（dragonfly.duckdb）**：本子节对应 dragonfly 代码仓库。> 2026 年间（截至 2026-08-18）：1,173 次提交。> 仓库总览：656,207 次提交，213 位贡献者，2003-06-17 至 2026-08-18。
 - dragonfly.duckdb — four repos annual commit count comparison [DB/OL]. 查询日期：2026-07-22. SQL: SELECT repo_name, strftime('%Y', author_date) AS year, count(*) FROM commits WHERE repo_name IN ('dragonfly-src','freebsd-src','openbsd-src','netbsd-src') AND author_date >='2024-01-01' AND author_date <'2026-07-22' GROUP BY repo_name, year ORDER BY repo_name, year; DragonFly BSD Project. Mailing Lists Archives [EB/OL]. [2026-07-22]. <https://www.dragonflybsd.org/mailinglists/>; FreeBSD Security Team. FreeBSD Security Advisories Archive [EB/OL]. [2026-07-22]. <https://www.freebsd.org/security/advisories/>; OpenBSD Project. OpenBSD Errata Patches [EB/OL]. [2026-07-22]. <https://www.openbsd.org/errata.html> ［A］
 
 <!-- DB_REF:dragonfly.duckdb -->
-> **数据库引用（dragonfly.duckdb）**：本子节对应 dragonfly 代码仓库。> 2003-2026 年间：656,206 次提交。> 仓库总览：656,206 次提交，535 位贡献者，2003-06-17 至 2026-08-18。
+> **数据库引用（dragonfly.duckdb）**：本子节对应 dragonfly 代码仓库。> 2003-2026 年间：656,206 次提交。> 仓库总览：656,207 次提交，213 位贡献者，2003-06-17 至 2026-08-18。
 
 <!-- PODCAST_REVIEW v20260829 -->
 <!-- 语义复核范围：BSD Now EP491（共 1 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->

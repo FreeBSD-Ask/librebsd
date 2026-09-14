@@ -52,4 +52,4 @@ volume: 第02卷-伯克利的岁月
 - Jacobson 1988; 4.3BSD 网络代码变更日志 ［A］
 - CSRG. CSRG 季度报告[R]. 1984-1986 ［A］
 - 作者不详. USENET comp.unix.wizards 讨论存档[EB/OL]. 1985-1986 ［B］
-- McKusick, M. K. (1999) “Twenty Years of Berkeley Unix” O'Reilly Open Sources；Salus, P. H. (1994) “A Quarter Century of UNIX” Addison-Wesley, ISBN 0-201-54777-5［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］；CERT/CC CA-1988:01；4.4BSD SMM 文档 ［A］
+- McKusick, M. K. (1999) “Twenty Years of Berkeley Unix” O'Reilly Open Sources；Salus, P. H. (1994) “A Quarter Century of UNIX” Addison-Wesley, ISBN 0-201-54777-5［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］；CERT/CC CA-1988:01；4.4BSD SMM 文档 ［A］

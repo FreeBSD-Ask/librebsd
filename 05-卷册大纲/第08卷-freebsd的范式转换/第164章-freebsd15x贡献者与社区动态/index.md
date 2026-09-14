@@ -47,7 +47,7 @@ volume: 第08卷-freebsd的范式转换
 
 ## 164.10.3 bsdlabel 与 fdisk 弃用——fdisk 移除推迟至 16.0
 
-- lists.freebsd.org freebsd-current 2024-January/005419 头邮件；lists.freebsd.org freebsd-current 2024-January/005420 Warner Losh 回复；Phabricator D43575；Phabricator D43563；lists.freebsd.org dev-commits-src-all 2025-October commit `2be4c64a0d27`；FreeBSD Project. FreeBSD 15.0-RELEASE Release Notes [EB/OL]. (2025-12-02)[2026-07-19]. <https://www.freebsd.org/releases/15.0R/relnotes/>; FreeBSD Project. agp(4) Manual Page [EB/OL]. [2026-07-19]. <https://man.freebsd.org/agp/4>; FreeBSD Project. vt(4) Manual Page [EB/OL]. [2026-07-19]. <https://man.freebsd.org/vt/4>; FreeBSD Project. Release Announcements Archive [EB/OL]. [2026-07-19]. <https://www.freebsd.org/releases/>.［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准；原「<<https://ma>」截断残句已按 man.freebsd.org 惯例补全〕
+- lists.freebsd.org freebsd-current 2024-January/005419 头邮件；lists.freebsd.org freebsd-current 2024-January/005420 Warner Losh 回复；Phabricator D43575；Phabricator D43563；lists.freebsd.org dev-commits-src-all 2025-October commit `2be4c64a0d27`；FreeBSD Project. FreeBSD 15.0-RELEASE Release Notes [EB/OL]. (2025-12-02)[2026-07-19]. <https://www.freebsd.org/releases/15.0R/relnotes/>; FreeBSD Project. agp(4) Manual Page [EB/OL]. [2026-07-19]. <https://man.freebsd.org/agp/4>; FreeBSD Project. vt(4) Manual Page [EB/OL]. [2026-07-19]. <https://man.freebsd.org/vt/4>; FreeBSD Project. Release Announcements Archive [EB/OL]. [2026-07-19]. <https://www.freebsd.org/releases/>.［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准；原「<<https://ma>」截断残句已按 man.freebsd.org 惯例补全〕
 
 ## 164.8.2 核心开发者与新兴贡献者
 

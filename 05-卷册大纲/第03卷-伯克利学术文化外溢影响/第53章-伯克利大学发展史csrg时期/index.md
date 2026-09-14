@@ -27,18 +27,18 @@ volume: 第03卷-伯克利学术文化外溢影响
 
 ## 辨析
 
-- Tien 校长任期的精确日期——UC Berkeley 官方讣告未能在 2026-07-25 直接抓取，Tien 任伯克利校长（1990-1997）的事实仅通过二手转述间接验证，保留 ［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］；Tien 任 Vice Chancellor of Research（1983-1985）的具体职责——此期间 Tien 负责全校科研管理体系的行政协调，具体职责边界须以加州大学系统行政档案核验〔存疑：官方职责清单未获取〕〔2026-09-12 整改：截断按考据语境收束——批次 C045 问题 3〕
+- Tien 校长任期的精确日期——UC Berkeley 官方讣告未能在 2026-07-25 直接抓取，Tien 任伯克利校长（1990-1997）的事实仅通过二手转述间接验证，保留 ［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］；Tien 任 Vice Chancellor of Research（1983-1985）的具体职责——此期间 Tien 负责全校科研管理体系的行政协调，具体职责边界须以加州大学系统行政档案核验〔存疑：官方职责清单未获取〕〔2026-09-12 整改：截断按考据语境收束——批次 C045 问题 3〕
 
 ## 文献
 
-- UC Berkeley. (2002, November 1). Chang-Lin Tien Dies at 67. Berkeley News［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
+- UC Berkeley. (2002, November 1). Chang-Lin Tien Dies at 67. Berkeley News［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］
 - UC Berkeley Bancroft Library. CU-5 Regents Records, 1868-present
 - UC Berkeley, Office of the Chancellor. Tien Chancellor Records, 1990-1997
 - UC Berkeley Bancroft Library. CU-551 CSRG Records, 1974-2005
-- UC Irvine. Office of the Executive Vice-Chancellor Records, 1988-1990［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
-- UC Berkeley, Department of Mechanical Engineering. Faculty Records, 1959-1988［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
+- UC Irvine. Office of the Executive Vice-Chancellor Records, 1988-1990［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］
+- UC Berkeley, Department of Mechanical Engineering. Faculty Records, 1959-1988［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］
 - Douglass, J. A. (2007). The California Idea and American Higher Education. Stanford: Stanford University Press
-- Tien, C.-L. & Tien, J. H. (1999). Diagnosing the Berkeley Campus. Berkeley: UC Berkeley Institute of Governmental Studies［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
+- Tien, C.-L. & Tien, J. H. (1999). Diagnosing the Berkeley Campus. Berkeley: UC Berkeley Institute of Governmental Studies［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］
 
 （2026-09-12 整改：原文献清单以分号串接为单行并与三级标题粘连，已逐条独立成行——批次 C045 问题 4/8。）
 

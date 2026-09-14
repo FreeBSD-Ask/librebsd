@@ -56,7 +56,7 @@ volume: 第18卷-全球社区地区bsd史
 
 ## 文献
 
-- 4.4BSD-Lite Release 2 Documentation；CSRG Final Announcement［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
+- 4.4BSD-Lite Release 2 Documentation；CSRG Final Announcement［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］
 
 ---
 
@@ -65,17 +65,17 @@ volume: 第18卷-全球社区地区bsd史
 > **本卷命题**：24.1 少数与多数（详见本卷 00-总览“编纂指导思想叙事参照”）
 
 ### 史料文献
-- IRS 990 Forms；IRS Determination Letter［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
+- IRS 990 Forms；IRS Determination Letter［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］
 - USPTO Trademark Records；Foundation Trademark Policy ［A］
-- Foundation Donation Announcements；IRS 990 Forms［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
-- USL v. BSDi Court Records Archive；Settlement Agreement［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
+- Foundation Donation Announcements；IRS 990 Forms［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］
+- USL v. BSDi Court Records Archive；Settlement Agreement［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］
 - committer Access Logs Archive ［A］
 - freebsd-hackers Archive；Majordomo Logs ［A］
 
 ## 史料考据补充（2026-08-04 任务3 联网核验）——美国社区内部矛盾与排外
 
 > 主题：美国社区内部矛盾与排外——代际双轨、硅谷文化冲突、非英语社区忽视
-- Federal Register；GAO Reports；DARPA Funding Records［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
+- Federal Register；GAO Reports；DARPA Funding Records［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］
 - Colorado Secretary of State；IRS 990；USPTO Records ［A］
 - bsd.org; Meetup 数据 ［B］
 

@@ -53,7 +53,7 @@ volume: 第08卷-freebsd的范式转换
 
 <!-- DB_REF:freebsd.duckdb -->
 > **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 2024-2026 年间：168,386 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
-- Raymond, E. S. (2003). *The Art of UNIX Programming*. Addison-Wesley. ISBN 0-13-142901-9; Raymond, E. S. (1997). *The Cathedral and the Bazaar*. O'Reilly. ISBN 1-56592-724-9; Salus, P. H. (1994). *A Quarter Century of UNIX*. Addison-Wesley. ISBN 978-0-201-54777-1.［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
+- Raymond, E. S. (2003). *The Art of UNIX Programming*. Addison-Wesley. ISBN 0-13-142901-9; Raymond, E. S. (1997). *The Cathedral and the Bazaar*. O'Reilly. ISBN 1-56592-724-9; Salus, P. H. (1994). *A Quarter Century of UNIX*. Addison-Wesley. ISBN 978-0-201-54777-1.［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］
 
 <!-- DB_REF:freebsd.duckdb -->
 > **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 2024-2026 年间：168,386 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。

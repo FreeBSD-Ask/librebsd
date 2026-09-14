@@ -33,8 +33,8 @@ OpenBSD 加密与固件开放政策的章级史观——总纲第 4 条“分离
 - afresh1, 2024《Why rewrite fw_update(8)?》BSDCan 2024 演讲
 
 <!-- DB_REF:openbsd.duckdb -->
-> **数据库引用（openbsd.duckdb）**：本子节对应 openbsd 代码仓库。> 1992-1995 年间：770 次提交。> 仓库总览：491,195 次提交，3,352 位贡献者，1995-10-18 至 2026-08-25。
-- 四个项目 1995-1996 年安全文档；安全对比研究［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］；本项目。freebsd.duckdb 数据分析报告：描述性统计与推断性统计 [R/OL]. 2026.（统计结论 C-05 openbsd-src 总 commit 数 245,904，SQL 查询 `SELECT COUNT(*) FROM commits WHERE repo_name='openbsd-src'`；统计结论 C-03 freebsd-src 总 commit 数 444,203；统计结论 C-14 openbsd-src 变点 Pettitt 2001-01 / BUISHAND 2017-09，Python 脚本自实现 Pettitt + BUISHAND R 检验 10,000 次 Monte Carlo；统计结论 C-12 freebsd-src 变点 1999-08 双检验一致 p < 0.001） ［A］
+> **数据库引用（openbsd.duckdb）**：本子节对应 openbsd 代码仓库。> 1992-1995 年间：770 次提交。> 仓库总览：491,195 次提交，1,031 位贡献者（contributors 表实测），1995-10-18 至 2026-08-25。
+- 四个项目 1995-1996 年安全文档；安全对比研究［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］；本项目。freebsd.duckdb 数据分析报告：描述性统计与推断性统计 [R/OL]. 2026.（统计结论 C-05 openbsd-src 总 commit 数 245,904，SQL 查询 `SELECT COUNT(*) FROM commits WHERE repo_name='openbsd-src'`；统计结论 C-03 freebsd-src 总 commit 数 444,203；统计结论 C-14 openbsd-src 变点 Pettitt 2001-01 / BUISHAND 2017-09，Python 脚本自实现 Pettitt + BUISHAND R 检验 10,000 次 Monte Carlo；统计结论 C-12 freebsd-src 变点 1999-08 双检验一致 p < 0.001） ［A］
 - OpenBSD 2.6/2.7/2.8/2.9 errata 页面；OpenBSD hackathons.html；OpenBSD security.html；OpenBSD 3.x errata 页面；本项目。原材料/研究/bsd 漏洞史/版本周期/openbsd-2.x.md；本项目。bsd_commits.duckdb 数据分析报告：宏观趋势统计 [R/OL]. 2026. ［A］
 - 项目史观总纲第 5 条、第 6 条、第 21 条（据原文第 25 章）；OpenBSD security.html [EB/OL]. <https://www.openbsd.org/security.html>；OpenBSD hackathons.html [EB/OL]. <https://www.openbsd.org/hackathons.html>；OpenBSD goals.html [EB/OL]. <https://www.openbsd.org/goals.html>；openbsd.duckdb openbsd-src 仓库 deraadt 首 commit 与累计 commit 量 ［A］
 

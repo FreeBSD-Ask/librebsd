@@ -22,7 +22,7 @@ volume: 第05卷-freebsd的工程化奠基
   - 辨析：经 bsd_commits.duckdb commits 表验证，PF 导入 commit 为 2004-06-16T23:03:14Z（早于 5.3-RELEASE 约 4.5 个月，属 5-CURRENT 开发周期）；经 bsd_commits.duckdb tags 表验证，5.3-RELEASE 的
 - 专题语（不设总纲条号）——简洁与复杂的辩证，iptables 重简洁、nftables 重灵活
   - 辨析：iptables/nftables 与 PF 优劣，需查基准测试
-  - 文献：iptables 文档；nftables 文档［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
+  - 文献：iptables 文档；nftables 文档［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］
 
 > 本章各节要点与史观详见 103.2-103.10 对应节文件；行 27-104 系重构前第 102 章残节碎片（重复截断、不可用），已按核查报告删除。
 

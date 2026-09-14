@@ -25,7 +25,7 @@ volume: 第05卷-freebsd的工程化奠基
 
 ## 文献
 
-- Kivity (2007) KVM paper；Barham et al. (2003) Xen paper；Solaris Zones admin guide；FreeBSD 8.0/8.1 Release Notes［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
+- Kivity (2007) KVM paper；Barham et al. (2003) Xen paper；Solaris Zones admin guide；FreeBSD 8.0/8.1 Release Notes［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］
 
 ### 史观映射
 

@@ -42,13 +42,13 @@ volume: 第16卷-开源运动与合规治理
 ## 文献
 
 - FreeBSD src commit log；Core Team Activity Reports ［A］
-- 编程之夏 2012 FreeBSD Project Page；FreeBSD src/sys/fs/fusefs history［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
+- 编程之夏 2012 FreeBSD Project Page；FreeBSD src/sys/fs/fusefs history［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］
 - FreeBSD Bugzilla Statistics；freebsd-hackers 讨论 ［A］
 - FreeBSD Foundation 990 Forms；freebsd-foundation 邮件列表 ［A］
-- FreeBSD Foundation 990 Forms；Annual Reports 2014-2024［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
+- FreeBSD Foundation 990 Forms；Annual Reports 2014-2024［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］
 - FreeBSD src/access 历史；Core Team Reports ［A］## 史料考据补充（2026-08-04 任务3 联网核验）> 主题：开源治理
 - freebsd-hackers Archive；Majordomo Logs ［A］
 - Core Team Meeting Minutes；freebsd-core Archive ［A］## 史料考据补充（2026-08-04 任务3 联网核验）> 主题：开源治理
-- FreeBSD Security Advisories Archive；ERRATA Notices［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
+- FreeBSD Security Advisories Archive；ERRATA Notices［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］
 - FreeBSD doc Repository History；Handbook Archives ［B］## 史料考据补充（2026-08-04 任务3 联网核验）> 主题：开源治理
 

@@ -41,7 +41,7 @@ volume: 第10卷-openbsd的历史
 <!-- DB_REF:openbsd.duckdb -->
 > **数据库引用（openbsd.duckdb）**：本子节对应 openbsd 代码仓库（2026-09-12 整改：原六连 DB_REF 块〔2020-2026/2023-2026/2013-2026/1995-2026×2/2020-2026 六种窗口〕去重合并为章级总览块并补闭合；各块后交错文献条目已归位「## 文献」——批次 C218 问题 3/12/13）。
 > 窗口切片：2020-2026 年 115,626 次；2023-2026 年 63,828 次；2013-2026 年 248,174 次；1995-2026 年（全库）491,195 次。
-> 仓库总览：491,195 次提交，3,352 位贡献者，1995-10-18 至 2026-08-25。
+> 仓库总览：491,195 次提交，1,031 位贡献者（contributors 表实测），1995-10-18 至 2026-08-25。
 
 <!-- /DB_REF:openbsd.duckdb -->
 
@@ -53,7 +53,7 @@ volume: 第10卷-openbsd的历史
 - OpenBSD 7.0-7.7 Release Notes [EB/OL]. <https://www.openbsd.org/plus.html>；**pledge(2)** 手册页 <https://man.openbsd.org/pledge.2>；**unveil(2)** 手册页 <https://man.openbsd.org/unveil.2>；tech@ 邮件列表档案 [EB/OL]. <https://marc.info/?l=openbsd-tech>
 
 <!-- DB_REF:openbsd.duckdb -->
-> **数据库引用（openbsd.duckdb）**：本子节对应 openbsd 代码仓库。> 2020-2026 年间：115,626 次提交。> 仓库总览：491,195 次提交，3,352 位贡献者，1995-10-18 至 2026-08-25。
+> **数据库引用（openbsd.duckdb）**：本子节对应 openbsd 代码仓库。> 2020-2026 年间：115,626 次提交。> 仓库总览：491,195 次提交，1,031 位贡献者（contributors 表实测），1995-10-18 至 2026-08-25。
 
 <!-- PODCAST_REVIEW v20260829 -->
 <!-- 语义复核范围：BSD Now EP368、BSD Now EP626（共 2 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->

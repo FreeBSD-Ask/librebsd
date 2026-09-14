@@ -34,10 +34,10 @@ volume: 第13卷-bsd衍生操作系统
 ## 文献
 
 - FreeBSD Foundation 奖项公告；OSCON 档案；InfoWorld 档案；FreeBSD Foundation. Sovereign Tech Fund to Invest €686,400 in FreeBSD Infrastructure Modernization [EB/OL]. 2024-08-26. <https://freebsdfoundation.org/blog/sovereign-tech-fund-to-invest-e686400-in-freebsd-infrastructure-modernization/> （访问日期 2026-07-22）；Sovereign Tech Fund. FreeBSD Project [Z/OL]. <https://www.sovereigntechfund.de/projects/freebsd>（访问日期 2026-07-22，原始链接失效，互联网档案馆无存档） ［A］
-- NetBSD 奖项公告；OSNews/Slashdot 档案；吉尼斯世界纪录档案［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
+- NetBSD 奖项公告；OSNews/Slashdot 档案；吉尼斯世界纪录档案［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］
 - USENIX STUG Award 公告；OpenBSD 声明；信息安全社区表彰档案 ［B］
-- CSRG 时期奖项档案；CSRG 解散后 BSD 各项目奖项档案［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
-- BSD/Linux 奖项档案；奖项研究文献；用户文章［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
+- CSRG 时期奖项档案；CSRG 解散后 BSD 各项目奖项档案［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］
+- BSD/Linux 奖项档案；奖项研究文献；用户文章［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］
 
 <!-- DB_REF:freebsd.duckdb -->
 > **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。
