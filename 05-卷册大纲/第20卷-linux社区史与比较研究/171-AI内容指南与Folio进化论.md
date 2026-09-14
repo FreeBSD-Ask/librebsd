@@ -1,7 +1,11 @@
-# 171. generated-content.rst 全文、Folio 进化论辩护与加速器用户态要求（ks p35）
+# 171 【Linux社区】AI内容指南与Folio进化论
 
-> 来源：ksummit 独有 p35（50 封全读，2022-06 至 2025-11：完整转抄 TAB 起草的 generated-content.rst 全文含工具与提示词披露及维护者处置权系 2025 年 AI 内容政策核心一手文献；Ted Tso 以 Linux 是进化而非智能设计为 Folio 辩护引 USB 与网络栈三次重写史；Ted 一手叙述 2023 维护者峰会上 Linus buffer cache 言论被 Dave Chinner 指为 CoC 违规争议；Daniel Vetter 论厂商开源真实驱动机制法律障碍无用成功项目与 DRM uAPI 要求文档才是大棒；加速器用户态要求六封、AI 生成内容指南五封、Rust 入核初期争论五封、稳定树回归治理四封）
+> 来源：ksummit 独有 p35（50 封全读，2022-06 至 2025-11：完整转抄 TAB 起草的 generated-content.rst 全文含工具与提示词披露及维护者处置权系 2025 年 AI 内容政策核心一手文献；Ted Tso 以 Linux 是进化而非智能设计为 Folio 辩护引 USB 与网络栈三次重写史；Ted 一手叙述 2023 维护者峰会上 Linus buffer cache 言论被 Dave Chinner 指为 CoC 违规争议；Daniel Vetter 论厂商开源真实驱动机制法律障碍无用成功项目与 DRM uAPI 要求文档才是大棒；加速器用户态要求六封、AI 生成内容指南四封、Rust 入核初期争论三封、稳定树回归治理四封）
 > 判定：43 CAND / 7 NV。主题分布：文档Sphinx版本 1、CoC执行边界 1、bugzilla治理困境 1、稳定树回归治理 4、加速器用户态要求 6、AI生成内容指南 4、明大假补丁事件 1、设计文档可及性 1、TAB选举投票故障 1、LKML流量改造方案 1、错误指针返回规范 1、DAMON峰会提案 1、Rust政策与C安全 4、strscpy替换争论 1、补丁基址标注 1、厂商开源驱动机制 1、Rust入核初期争论 3、HIGHMEM淘汰进展 2、RHEL GitLab工作流 1、Folio演进论辩护 1、峰会远程参与 1、面板厂商贡献策略 1、eBPF接口稳定争论 1、栈回溯行号内嵌 1、ChatGPT驱动质量 1、内核密钥信任网 1。
+
+## 【Linux社区】零、体例说明
+
+本文件系 ksummit-discuss p35 的逐封提取（2022-06 至 2025-11，43 CAND / 7 NV），全 26 块采用**精简块体例**（丙型）：每块一行，由【Linux社区】叙述句与 `<!-- ROW_MINE: … -->` 来源坐标构成，不逐块展开要点/史料/史观/辨析/文献五字段。取舍依据：本层为页面级逐封索引——叙述句承担“要点”职能、ROW_MINE 坐标承担“史料锚”职能（与 claim 库 `source_ref` 一致，可反查去重）；史观/辨析/文献三项不在本层给出，其著录须回 claim 库逐封核对后另行落盘，本层不重复、不臆补（00-总览 §一.2 的五字段标准适用于正式入卷块）。块内叙述仅为当事人原话的转述与节选，史家判断不在本层给出。
 
 ## 171.1 文档Sphinx版本
 

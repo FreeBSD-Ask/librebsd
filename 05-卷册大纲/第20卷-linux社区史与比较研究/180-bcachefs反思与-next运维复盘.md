@@ -1,7 +1,11 @@
-# 180. bcachefs 事件反思、-next 整建制运维复盘与 Fixes 标签制度由来（ks p44）
+# 180 【Linux社区】bcachefs反思与-next运维复盘
 
 > 来源：ksummit 独有 p44（50 封全读，2023-11 至 2026-08：Ted Ts'o 把 bcachefs 争议定性为人事问题宜私下调解并系统反驳当初拒收即可避免与民主投票两种替代方案；Mark Brown 2026 年 -next 维护者对 Rust 构建 KASAN+KUnit kselftest 接入弃树决策的全面自述属罕见整建制运维史料；Coly Li 详述 NAS 本地 AI 相册分类权限用例与 LSM 只能拒绝不能授权设计困境；Sasha 与 Linus 论 Fixes 标签披露回传 AUTOSEL 与谷歌机器人强制 Fixes 制度由来且 Linus 拒绝新增 Improves 标签；linux-next 运维复盘与 AI 审查工具与 CI 双封、GitLab 流程迁移争论双封）
 > 判定：44 CAND / 6 NV。主题分布：linux-next 运维复盘 2、AI 审查工具与 CI 2、AI 辅助补丁标注 2、峰会议程安排 1、cleanup 属性之争 2、GitLab 流程迁移争论 2、Link 标签与 lore 链接 1、fwctl 与 EDAC 之争 1、checkpatch 局限 1、buffer_head 淘汰路线 1、AI 生成内容守则 1、倦怠支持资源 1、API 弃用执行方案 1、Rust 语义争论 2、linux-next 驻留时长 1、Fixes 标签政策 2、驱动 probe 设计澄清 1、高端内存淘汰调查 1、加速器驱动开源门槛 1、AI 审查提示词工程 1、Sphinx 版本下限 1、稳定版回归修复义务 1、b4 线程回填用法 1、Rust 内核政策 1、安全 embargo 代码质量 1、引文礼仪之争 1、Werror 处置之争 1、设备直通与相机 ISP 1、AI 时代 ACL 需求 1、审查自动化减负 1、文件系统用户态化构想 1、bcachefs 事件反思 1、AI 代码质量标准 1、trivial 树兴衰 1、linus-next 测试价值 1、kernel.org 信任改造 1、Rust 寄存器访问安全 1。
+
+## 【Linux社区】零、体例说明
+
+本文件系 ksummit-discuss p44 的逐封提取（2023-11 至 2026-08，44 CAND / 6 NV），全 37 块采用**精简块体例**（丙型）：每块一行，由【Linux社区】叙述句与 `<!-- ROW_MINE: … -->` 来源坐标构成，不逐块展开要点/史料/史观/辨析/文献五字段。取舍依据：本层为页面级逐封索引——叙述句承担“要点”职能、ROW_MINE 坐标承担“史料锚”职能（与 claim 库 `source_ref` 一致，可反查去重）；史观/辨析/文献三项不在本层给出，其著录须回 claim 库逐封核对后另行落盘，本层不重复、不臆补（00-总览 §一.2 的五字段标准适用于正式入卷块）。块内叙述仅为当事人原话的转述与节选，史家判断不在本层给出。
 
 ## 180.1 linux-next 运维复盘
 

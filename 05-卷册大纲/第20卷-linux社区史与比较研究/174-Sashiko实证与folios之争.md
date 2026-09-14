@@ -1,7 +1,11 @@
-# 174. Sashiko 一手用户实证、folios 文化批评与峰会经费（ks p38）
+# 174 【Linux社区】Sashiko实证与folios之争
 
 > 来源：ksummit 独有 p38（50 封全读，2021-04 至 2026-08：SeongJae Park 对 Sashiko AI 审阅一手用户叙述曾抓出其手工 stable 回移错误并逐条表态 LTS 审阅与提示词入 kernel.org；Kent Overstreet folios 之争长篇文化批评跨子系统重构文化已坏与 Chris Mason 回应构成 MM 治理史成对史料；Maintainer Summit 经费具体数字 30+7 人人均日 2500 美元对比 Pinchart 自办 100 欧元；Pinchart 披露大型 SoC 厂因直通空白支票临门放弃开放相机栈；加速器 UAPI 四封、设备直通三封、Rust 内核政策三封）
 > 判定：40 CAND / 10 NV。主题分布：DRM樱桃派流程 1、隐藏提交 1、drm-misc权限 1、加速器UAPI 4、Rust链表疑虑 1、Link尾注之争 1、变量声明风格 2、设备直通 3、trivial补丁政策 2、Sashiko AI审阅 1、安全提交验证 1、峰会疫情形式 2、AI代码标注 3、MAINTAINERS列表迁移 1、信任之网 2、峰会经费成本 1、Rust内核政策 3、工具生成内容 2、stable回移回归 1、错误指针约定 1、峰会远程形式 1、AI审阅之辩 1、Folios文化争论 2、ACPI音频怪癖 1、文件系统维护 1。
+
+## 【Linux社区】零、体例说明
+
+本文件系 ksummit-discuss p38 的逐封提取（2021-04 至 2026-08，40 CAND / 10 NV），全 25 块采用**精简块体例**（丙型）：每块一行，由【Linux社区】叙述句与 `<!-- ROW_MINE: … -->` 来源坐标构成，不逐块展开要点/史料/史观/辨析/文献五字段。取舍依据：本层为页面级逐封索引——叙述句承担“要点”职能、ROW_MINE 坐标承担“史料锚”职能（与 claim 库 `source_ref` 一致，可反查去重）；史观/辨析/文献三项不在本层给出，其著录须回 claim 库逐封核对后另行落盘，本层不重复、不臆补（00-总览 §一.2 的五字段标准适用于正式入卷块）。块内叙述仅为当事人原话的转述与节选，史家判断不在本层给出。
 
 ## 174.1 DRM樱桃派流程
 

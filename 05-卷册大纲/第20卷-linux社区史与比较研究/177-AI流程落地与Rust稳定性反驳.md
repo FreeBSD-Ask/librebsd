@@ -1,7 +1,11 @@
-# 177. AI 内核流程落地实践、Rust 稳定性反驳与 Bugzilla 退役尾声（ks p41）
+# 177 【Linux社区】AI流程落地与Rust稳定性反驳
 
-> 来源：ksummit 独有 p41（50 封全读，2022-09 至 2023-10：Arnaldo Melo 详述用 Claude 把 AI 报告存量问题归档进 perf TODO 文件 TODO.hardening 达 106KB 并推荐 kres 多代理审计工具与 confirmed/invalid 分级流程；Ventura Jack 对 Ralf Jung 长篇技术反驳含 Rust 1.80 破坏 time crate 波及 5000+ crates 与 trait solver 重写难题；Bottomley 依据版权局报告论证纯 AI 代码属公有领域 DCO 可接受加 Mauro 实测 AI 生成单元测试五至六成首跑失败；Bottomley 与 Greg KH 就 Rust 维护者辞职事件开发者退出仅剩 Linus 独扛正面交锋；AI 内核流程七封、内核文档建设五封、Rust 聚合传递五封、Bugzilla 退役五封）
+> 来源：ksummit 独有 p41（50 封全读，2022-09 至 2023-10：Arnaldo Melo 详述用 Claude 把 AI 报告存量问题归档进 perf TODO 文件 TODO.hardening 达 106KB 并推荐 kres 多代理审计工具与 confirmed/invalid 分级流程；Ventura Jack 对 Ralf Jung 长篇技术反驳含 Rust 1.80 破坏 time crate 波及 5000+ crates 与 trait solver 重写难题；Bottomley 依据版权局报告论证纯 AI 代码属公有领域 DCO 可接受加 Mauro 实测 AI 生成单元测试五至六成首跑失败；Bottomley 与 Greg KH 就 Rust 维护者辞职事件开发者退出仅剩 Linus 独扛正面交锋；AI 内核流程七封、内核文档建设四封、Rust 聚合传递四封、Bugzilla 退役五封）
 > 判定：44 CAND / 6 NV。主题分布：API弃用治理 1、峰会疫苗之争 1、AI内核流程 7、补丁基线流程 1、文件系统维护 1、设备树绑定ABI 1、Rust进内核 3、回归治理 2、linus-next测试 2、维护者倦怠 2、stable补丁流程 1、峰会赞助机制 1、Bugzilla退役 5、Rust聚合传递 4、内核文档建设 4、TAB选举 1、DRM面板驱动 1、Link标签之争 1、生成代码入库 2、治理透明度 1、内存分配API 1、uAPI准入标准 1。
+
+## 【Linux社区】零、体例说明
+
+本文件系 ksummit-discuss p41 的逐封提取（2022-09 至 2023-10，44 CAND / 6 NV），全 22 块采用**精简块体例**（丙型）：每块一行，由【Linux社区】叙述句与 `<!-- ROW_MINE: … -->` 来源坐标构成，不逐块展开要点/史料/史观/辨析/文献五字段。取舍依据：本层为页面级逐封索引——叙述句承担“要点”职能、ROW_MINE 坐标承担“史料锚”职能（与 claim 库 `source_ref` 一致，可反查去重）；史观/辨析/文献三项不在本层给出，其著录须回 claim 库逐封核对后另行落盘，本层不重复、不臆补（00-总览 §一.2 的五字段标准适用于正式入卷块）。块内叙述仅为当事人原话的转述与节选，史家判断不在本层给出。
 
 ## 177.1 API弃用治理
 
