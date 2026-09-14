@@ -33,11 +33,11 @@ volume: 第14卷-商业生态与企业案例
 
 ## 辨析
 
-- *DEC** 文档的获取难度较大，需依赖 `archive.org`
-- *Oracle** 收购后 **Sun** 文档的获取需依赖 `archive.org`
-- *Oracle** 路线图的变更时点难以精确还原，可从 **SEC** 文件与新闻稿交叉验证
-- *SFU** 与 **Interix** 的版本对应关系可从 **Windows** 版本号核对
-- *Google** 倾向 **Apache 2.0** 是否包含专利防御考量
+- **DEC** 文档的获取难度较大，需依赖 `archive.org`
+- **Oracle** 收购后 **Sun** 文档的获取需依赖 `archive.org`
+- **Oracle** 路线图的变更时点难以精确还原，可从 **SEC** 文件与新闻稿交叉验证
+- **SFU** 与 **Interix** 的版本对应关系可从 **Windows** 版本号核对
+- **Google** 倾向 **Apache 2.0** 是否包含专利防御考量
 
 ## 文献
 
