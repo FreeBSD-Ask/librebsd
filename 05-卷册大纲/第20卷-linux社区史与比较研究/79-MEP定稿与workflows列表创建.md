@@ -1,7 +1,11 @@
-# 79. Maintainer Entry Profile v2 定稿之争与 workflows 列表创建（ksd p131）
+# 79 【Linux社区】MEP定稿与workflows列表创建
 
 > 来源：ksummit-discuss p131（50 封全读，2019-09-09/13 MEP 评审链+TAB 选举结果+MS 会后产物，夹杂 2014-05 档案信）
 > 判定：48 CAND / 2 NV。主题分布：KS2014档案-单测文化 1、继承码与公司压力 1、notes工作流缘由 1、公司阻力细辨 1、patchid签名与TOFU 1、ksummit入lore 1、TAB2019选举结果 1、am标签解析诉求 1、Vyukov议题入MS 1、MEPv2改名 1、P回收补丁 1、KS2014档案-PM 1、MEP模板全文 1、libnvdimm首例 1、SCSI准则全文 1、双缩进批驳 1、Axboe声援 1、反对分文件 1、自省clangformat 1、Vyukov视频上线 1、MS2019议程V2 1、gatekeeper推演 1、clangformat无味 1、putt三阶段提案 1、多样性即恶 1、SCSI准则四问 1、vger上限论 1、W=1辩护 1、记录现实 1、workflows列表创建 1、GitGitGadget引入 1、规则清单 1、KS2014档案-时钟 1、checkpatch前缀规则 1、kerneldoc默认化 1、W=1默认支持 1、千警告现实 1、dtsW=2 1、接受度前提 1、E标签提议 1、workflows入lore 1、MauroAck 1、理想遇现实 1、正则填充提议 1、提交侧工具 1、浅克隆问 1、mediaProfile补丁 1、2010先例引用 1。
+
+## 【Linux社区】零、体例说明
+
+本文件系 ksummit-discuss p131（实锚 pk 350756-350805）的逐封提取（48 CAND / 2 NV），全 48 块采用**单行摘要体例**（丙型）：每块由“## 79.x 【Linux社区】题名”与若干“- 【Linux社区】… ROW_MINE 来源坐标”条目构成，不逐块展开要点、史料、史观、辨析、文献五字段。取舍依据：本层为页面级逐封索引——叙述句承担“要点”职能、ROW_MINE 坐标承担“史料锚”职能（与 claim 库 source_ref 一致，可反查去重）；史观、辨析、文献三项不在本层给出，其著录须回 claim 库逐封核对后另行落盘，本层不重复、不臆补（00-总览 §一.2 的五字段标准适用于正式入卷块）。块内叙述仅为当事人原话的转述与节选，史家判断不在本层给出。
 
 ## 79.1 【Linux社区】KS2014档案-单测文化
 
@@ -81,7 +85,7 @@
 
 ## 79.20 【Linux社区】Vyukov视频上线
 
-- 【Linux社区】Ted 上传"hot wash"未剪辑视频（YouTube）——“在 Linux 视频编辑工具界面我的 saving throw 失败了直接传” `<!-- ROW_MINE: ksummit-discuss.messages.350776 -->`
+- 【Linux社区】Ted 上传“hot wash”未剪辑视频（YouTube）——“在 Linux 视频编辑工具界面我的 saving throw 失败了直接传” `<!-- ROW_MINE: ksummit-discuss.messages.350776 -->`
 
 ## 79.21 【Linux社区】MS2019议程V2
 
@@ -177,7 +181,7 @@
 
 ## 79.44 【Linux社区】正则填充提议
 
-- 【Linux社区】Herring：“+1 做成正则应对 (net `<!-- ROW_MINE: ksummit-discuss.messages.350801 -->`
+- 【Linux社区】Herring：“+1 做成正则应对 (net|net-next)” `<!-- ROW_MINE: ksummit-discuss.messages.350801 -->`
 
 ## 79.45 【Linux社区】提交侧工具
 
