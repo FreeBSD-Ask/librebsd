@@ -1,7 +1,11 @@
-# 157. linux-next 流程与 Bugzilla 存废整改（ks p21）
+157 【Linux社区】linuxnext流程与Bugzilla存废
 
 > 来源：ksummit 独有 p21（50 封全读，2021-07 至 2025-09：Leemhuis 完整重发 bugzilla.kernel.org 整改计划附 MAINTAINERS 约 2500 条目仅约 20 条指向 Bugzilla 实测；Kees Cook 给出 2018-2024 六年 TAB 选举投票率序列 2024 年 229/934=24.5%；Sasha Levin 以 80%/70%/85% 三组统计论证 Fixes/Stable 标签语义失灵并提出 Improves 标签；Chris Mason 披露维护者峰会年成本约 2.5 万美元与赞助断档；linux-next 流程六封、Rust 内核迁移、AI 评审与政策、HIGHMEM 淘汰争议、内核密钥管理与安全禁运流程）
 > 判定：42 CAND / 8 NV。主题分布：linux-next流程 6、AI生成内容政策 2、贡献者信任 2、HIGHMEM淘汰争议 3、Bugzilla存废 4、Rust内核迁移 3、Link标签存废 1、AI评审与政策 4、文档工具链 3、TAB选举 2、安全禁运流程 1、峰会存续资金 1、社区健康资源 1、ISP框架争论 1、稳定分支标签 2、内核密钥管理 2、用户态开放要求 2、维护者列表改革 1、GitLab工作流 1。
+
+## 【Linux社区】零、体例说明
+
+本文件系 ksummit-discuss p21 的逐封提取（2021-07 至 2025-09，42 CAND / 8 NV），全 19 块采用**精简块体例**（丙型）：每块一行，由【Linux社区】叙述句与 `<!-- ROW_MINE: … -->` 来源坐标构成，不逐块展开要点/史料/史观/辨析/文献五字段。取舍依据：本层为页面级逐封索引——叙述句承担“要点”职能、ROW_MINE 坐标承担“史料锚”职能（与 claim 库 `source_ref` 一致，可反查去重）；史观/辨析/文献三项不在本层给出，其著录须回 claim 库逐封核对后另行落盘，本层不重复、不臆补（00-总览 §一.2 的五字段标准适用于正式入卷块）。块内叙述仅为当事人原话的转述与节选，史家判断不在本层给出。
 
 ## 157.1 linux-next流程
 

@@ -1,7 +1,11 @@
-# 158. Rust 入核早期讨论与 strlcpy 语义剖析（ks p22）
+158 【Linux社区】Rust入核与字符串API重构
 
 > 来源：ksummit 独有 p22（50 封全读，2021-07 至 2026-07：Wedson 详解 PL061 Rust 驱动注册/资源/一般状态三分法与自动撤销顺序；Linus 逐字节剖析 strlcpy 设计性缺陷与 strscpy 按字长拷贝语义差异含 dst[4] 溢出实例；Konstantin 一手披露 bugzilla.kernel.org 平台濒死开发停滞与紧急转 Postgres 及 bugmaster 无从设立困境；Laurent Pinchart 提出 cdev 驱动生命周期四步方案获 Greg KH 认可；设备直通之争三封、Rust 内核策略与入核早期讨论、AI 补丁政策、文件系统维护信任）
 > 判定：39 CAND / 11 NV。主题分布：内核文档工具链 2、加速器驱动用户态 1、Rust内核策略 4、Rust入核早期讨论 3、疫情与线下峰会 1、AI补丁政策 2、linux-next测试 2、LLM审查与语料 1、补丁接受政策 1、字符串API重构 2、设备直通之争 3、cdev生命周期设计 1、静态分析设想 1、C内存安全模式 1、LKML列表政策 1、补丁检查工具 1、API弃用执行 1、编码风格变量声明 1、文件系统维护信任 2、Link标签之争 2、维护者压力与CoC 1、Folio合入流程 1、HIGHMEM退役 1、Bugzilla去留 1、邮件礼仪自动化 1、拒补丁透明度 1。
+
+## 【Linux社区】零、体例说明
+
+本文件系 ksummit-discuss p22 的逐封提取（2021-07 至 2026-07，39 CAND / 11 NV），全 26 块采用**精简块体例**（丙型）：每块一行，由【Linux社区】叙述句与 `<!-- ROW_MINE: … -->` 来源坐标构成，不逐块展开要点/史料/史观/辨析/文献五字段。取舍依据：本层为页面级逐封索引——叙述句承担“要点”职能、ROW_MINE 坐标承担“史料锚”职能（与 claim 库 `source_ref` 一致，可反查去重）；史观/辨析/文献三项不在本层给出，其著录须回 claim 库逐封核对后另行落盘，本层不重复、不臆补（00-总览 §一.2 的五字段标准适用于正式入卷块）。块内叙述仅为当事人原话的转述与节选，史家判断不在本层给出。
 
 ## 158.1 内核文档工具链
 
@@ -37,11 +41,11 @@
 ## 158.7 linux-next测试
 
 - 【Linux社区】Steven Rostedt解释urgent/core分支工作流：曾将urgent推入linux-next但无收益；修复只入Linus树的bug无需再进next，因next从未发现过这些bug。 `<!-- ROW_MINE: ksummit.messages.3387 -->`
-- 【Linux社区】Ted Tso称已对fs-next分支跑xfstests自动化2-3个月覆盖ext4/xfs/f2fs/btrfs且稳定，举generic/564回归经回滚vfs溢出修复解决之例。 `<!-- ROW_MINE: ksummit.messages.3432 -->`
+- 【Linux社区】Ted Ts'o称已对fs-next分支跑xfstests自动化2-3个月覆盖ext4/xfs/f2fs/btrfs且稳定，举generic/564回归经回滚vfs溢出修复解决之例。 `<!-- ROW_MINE: ksummit.messages.3432 -->`
 
 ## 158.8 LLM审查与语料
 
-- 【Linux社区】Ted Tso建议给LKML档案打“被拒/AI废稿/差评审人”标签做微调语料；称前沿模型靠全量抓取、小模型蒸馏后内核知识流失；审评论语比补丁更有价值。 `<!-- ROW_MINE: ksummit.messages.3395 -->`
+- 【Linux社区】Ted Ts'o建议给LKML档案打“被拒/AI废稿/差评审人”标签做微调语料；称前沿模型靠全量抓取、小模型蒸馏后内核知识流失；审评论语比补丁更有价值。 `<!-- ROW_MINE: ksummit.messages.3395 -->`
 
 ## 158.9 补丁接受政策
 

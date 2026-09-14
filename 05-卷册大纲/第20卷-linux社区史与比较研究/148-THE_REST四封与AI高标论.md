@@ -1,7 +1,11 @@
-# 148. THE REST 迁离四封、AI 高于人类标准论（ks p13）（ks p13）
+148 【Linux社区】THE_REST四封与AI高标论
 
 > 来源：ksummit 独有 p13（50 封全读，2021-04 至 2026-07，THE REST 迁离 LKML 四封交锋（lei 工作流/X: drivers/net 过滤/public-inbox 镜像前提）、AI 应设高于人类的标准（计算器 1% 类比）、被拒补丁同样有训练价值论、GPL 代码作 LLM 输入违背精神之问、Linus 接受 hpa cleanup 补丁集、OpenSSF 资助项目未公开之问、umn.edu 补丁整体回退价值质疑、SCSI 大量合入琐碎补丁现实）
 > 判定：42 CAND / 8 NV。主题分布：Rust for Linux 1、加速器驱动用户态要求 2、THE REST 迁离 LKML 3、替换 Link 尾注 2、稳定分支提交标签增强 1、AI 与 LLM 在内核流程的角色 3、trivial 补丁接受政策 4、AI 补丁审查工具 1、TAB 投票程序 2、设备直通之害 1、扩展安全流程 1、next 中隐藏的提交 1、LLM 相关议题 1、内核文档技术议题 2、防止回归补丁被回移 1、Bugzilla 改进计划 1、Folios 峰会议题 1、cleanup.h 变量放置规则 1、每 cgroup 交换设备控制 1、CONFIG_HIGHMEM 退场共识 1、Rust 内核政策 2、C 聚合传递与 Rust 政策 2、Web of Trust 工作 1、工具生成内容文档指南 2、cdev 与 devm 释放问题 1、实现 malloc 1、维护者倦怠 1、stable 邮件数量 1。
+
+## 【Linux社区】零、体例说明
+
+本文件系 ksummit-discuss p13 的逐封提取（2021-04 至 2026-07，42 CAND / 8 NV），全 28 块采用**精简块体例**（丙型）：每块一行，由【Linux社区】叙述句与 `<!-- ROW_MINE: … -->` 来源坐标构成，不逐块展开要点/史料/史观/辨析/文献五字段。取舍依据：本层为页面级逐封索引——叙述句承担“要点”职能、ROW_MINE 坐标承担“史料锚”职能（与 claim 库 `source_ref` 一致，可反查去重）；史观/辨析/文献三项不在本层给出，其著录须回 claim 库逐封核对后另行落盘，本层不重复、不臆补（00-总览 §一.2 的五字段标准适用于正式入卷块）。块内叙述仅为当事人原话的转述与节选，史家判断不在本层给出。
 
 ## 148.1 Rust for Linux
 
