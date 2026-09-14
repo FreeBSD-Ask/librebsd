@@ -1,7 +1,11 @@
-# 63. code大于people之辩、撤销许可论战与女程序员案（ksd p115）
+# 63 【Linux社区】CoC收尾大辩论与撤销许可论战
 
 > 来源：ksummit-discuss p115（50 封全读，2018-10-23/11-03 主线 CoC 大辩论收束+多时间域议题，夹杂 2014-05 档案信）
 > 判定：47 CAND / 3 NV。主题分布：女程序员案追问 2、2014档案与回归追踪 5、DebianCoC之辩 3、code大于people之辩 15、Fiebig自拟CoC 6、撤销许可论战 8、Viro匿名巨魔风波 5、多时间域议题 3。
+
+## 【Linux社区】零、体例说明
+
+本文件系 ksummit-discuss p115（pk 349956-350005）的逐封提取（47 CAND / 3 NV），全 8 块采用**单行摘要体例**（丙型）：每块由“## 63.x 【Linux社区】题名”与若干“- 【Linux社区】… ROW_MINE 来源坐标”条目构成，不逐块展开要点、史料、史观、辨析、文献五字段。取舍依据：本层为页面级逐封索引——叙述句承担“要点”职能、ROW_MINE 坐标承担“史料锚”职能（与 claim 库 source_ref 一致，可反查去重）；史观、辨析、文献三项不在本层给出，其著录须回 claim 库逐封核对后另行落盘，本层不重复、不臆补（00-总览 §一.2 的五字段标准适用于正式入卷块）。块内叙述仅为当事人原话的转述与节选，史家判断不在本层给出。
 
 ## 63.1 【Linux社区】女程序员案追问
 
@@ -66,7 +70,7 @@
 - 【Linux社区】Tim Bird 劝 civility：“请保持文明——称人 wankstain 不专业、我们在努力抬高话语水平；plonk 部分足够传达不认真对待——对坏 faith 者去升级比接战好” `<!-- ROW_MINE: ksummit-discuss.messages.349985 -->`
 - 【Linux社区】Kosina：“匿名通信也不符合我的‘高度专业’标准；CoC 要求对线另一端的人 reasonably nice 是高尚目标——但你至少得知道另一端是谁否则沟通失败难免” `<!-- ROW_MINE: ksummit-discuss.messages.349986 -->`
 - 【Linux社区】Viro 回 Perens（匿名者一般认为是 MikeeUSA、有记录在案的厌女史）：“你误读了——那成员的行为完全由其被注意的绝望需要控制；可悲但这就是社交媒体世代” `<!-- ROW_MINE: ksummit-discuss.messages.349987 -->`
-- 【Linux社区】Neil 反用 CoC：“我同意 Tim：无论对方是谁、重要的是语境；提升标准意味着所有通信”；“既然你玩这游戏：1/code-of-conduct.rst 里根本没有 human 一词 2/interpretation 明说 We know everyone is human——可解读为即使对方不表现得像人也须当人对待；你真想用 CoC 支持你的立场吗？” `<!-- ROW_MINE: ksummit-discuss.messages.349988 -->`
+- 【Linux社区】Neil 反用 CoC：“我同意 Tim：无论对方是谁、重要的是语境；提升标准意味着所有通信”；“既然你玩这游戏：1/**code-of-conduct.rst** 里根本没有 human 一词 2/interpretation 明说 We know everyone is human——可解读为即使对方不表现得像人也须当人对待；你真想用 CoC 支持你的立场吗？” `<!-- ROW_MINE: ksummit-discuss.messages.349988 -->`
 
 ## 63.8 【Linux社区】多时间域议题
 

@@ -1,7 +1,11 @@
-# 75. Change-Id 之争全文与 Linus 定调、seccomp 分层定案（ksd p127）
+# 75 【Linux社区】ChangeId之争与Linus定调
 
 > 来源：ksummit-discuss p127（50 封全读，2019-08 Change-Id/Link 之争主线+Acked-by 释义修订，夹杂 2014-05 档案信）
 > 判定：49 CAND / 1 NV。主题分布：旧板卡 DT 转换收尾 1、fsnotify 模块导出共识 1、patchwork 归档链接落地 1、TAB 选举提名公告 1、seccomp 分层定案 1、seccomp 原型与 LSM 1、seccomp 过滤范围清单 1、seccomp 深过滤细化 1、clone3 入主线定论 1、Acked-by 释义修订 1、R: 强制门槛异议 1、QR oops 项目盘问 1、拒绝标签圈子化 1、轻量审阅标签之问 1、标签用途论断 1、Coccinelle 确认场景 1、R: 行定位澄清 1、R: 列名门槛偏高 1、加 R: 先征同意 1、强制审阅标记设想 1、Reviewed-by 语义裁定 1、Change-Id 提案 1、versatile QEMU 依赖 PCI 1、Linus 拒 Change-Id 1、gerrit 邮件汇入 lore 1、直链 gerrit 提案 1、反对 gerrit 长期链接 1、版本更迭断链论 1、X-Gerrit 头实证 1、Change-Id 去 Gerrit 化 1、拒绑 Gerrit 邮件头 1、指控反 Gerrit 偏见 1、Linus 接受 gerrit Link 1、列表抄送上限放宽 1、跨子系统补丁黑洞 1、Link 通用化主张 1、含 ID 折中链接 1、Change-Id 移出提交 1、Email2git 现状核查 1、Message-Id 链式主张 1、两种 Link 形式权衡 1、手工链接旧版实践 1、封面信链接链方案 1、无服务器链接反驳 1、PM 依赖建模路线 1、折中归档方案重申 1、弃用段规避公私争 1、提交者摩擦之争 1、git 钩子不够论 1。
+
+## 【Linux社区】零、体例说明
+
+本文件系 ksummit-discuss p127 的逐封提取（49 CAND / 1 NV），全 49 块采用**单行摘要体例**（丙型）：每块由“## 75.x 【Linux社区】题名”与若干“- 【Linux社区】… ROW_MINE 来源坐标”条目构成，不逐块展开要点、史料、史观、辨析、文献五字段。取舍依据：本层为页面级逐封索引——叙述句承担“要点”职能、ROW_MINE 坐标承担“史料锚”职能（与 claim 库 source_ref 一致，可反查去重）；史观、辨析、文献三项不在本层给出，其著录须回 claim 库逐封核对后另行落盘，本层不重复、不臆补（00-总览 §一.2 的五字段标准适用于正式入卷块）。块内叙述仅为当事人原话的转述与节选，史家判断不在本层给出。
 
 ## 75.1 【Linux社区】旧板卡 DT 转换收尾
 
@@ -185,7 +189,7 @@
 
 ## 75.46 【Linux社区】折中归档方案重申
 
-- 【Linux社区】tglx 重申把 Change-Id 放封面信或 “---” 弃用段进归档，commit 内只放 Link://lkml.kernel.org/r/$MSGID，“Linus is happy” `<!-- ROW_MINE: ksummit-discuss.messages.350602 -->`
+- 【Linux社区】tglx 重申把 Change-Id 放封面信或 “---” 弃用段进归档，commit 内只放 Link: //lkml.kernel.org/r/$MSGID，“Linus is happy” `<!-- ROW_MINE: ksummit-discuss.messages.350602 -->`
 
 ## 75.47 【Linux社区】弃用段规避公私争
 

@@ -1,7 +1,11 @@
-# 65. TAB 选举结果与 CoC 私下征询争议（ksd p117）
+# 65 【Linux社区】TAB选举与CoC私下征询争议
 
 > 来源：ksummit-discuss p117（50 封全读，2018-11-10/15 TAB 选举全流程+XArray 议题，夹杂 2014-05 档案信）
 > 判定：42 CAND / 8 NV。主题分布：CoC流程交锋 1、提速与维护者瓶颈 1、TAB竞选声明 5、CoC咨询名单争议 1、CoC私下讨论 1、贡献度度量争议 2、CoC补丁流转 2、CoC社区界定 1、CoC流程之争 1、CoC效果归因 1、ARM旧平台清理 3、CoC冻结之争 1、TAB不参选声明 1、TAB选举流程 4、TAB选举公告 1、非技术列表提案 2、XArray议题 1、KS2018议程 2、TAB选举结果 1、TAB选举门槛争议 3、CoC咨询机制 1、DAX面谈安排 1、ZUFS议程安排 2、ACPI/DT议题 1、XArray多阶缓存 1、维护者手册提案 1。
+
+## 【Linux社区】零、体例说明
+
+本文件系 ksummit-discuss p117（pk 350056-350105）的逐封提取（42 CAND / 8 NV），全 26 块采用**单行摘要体例**（丙型）：每块由“## 65.x 【Linux社区】题名”与若干“- 【Linux社区】… ROW_MINE 来源坐标”条目构成，不逐块展开要点、史料、史观、辨析、文献五字段。取舍依据：本层为页面级逐封索引——叙述句承担“要点”职能、ROW_MINE 坐标承担“史料锚”职能（与 claim 库 source_ref 一致，可反查去重）；史观、辨析、文献三项不在本层给出，其著录须回 claim 库逐封核对后另行落盘，本层不重复、不臆补（00-总览 §一.2 的五字段标准适用于正式入卷块）。块内叙述仅为当事人原话的转述与节选，史家判断不在本层给出。
 
 ## 65.1 【Linux社区】CoC流程交锋
 
@@ -15,13 +19,13 @@
 
 - 【Linux社区】Williams 自荐：2015 落选、2016 当选，签署 CoC，称 TAB 的 TA 更近“Trusted Adviser” `<!-- ROW_MINE: ksummit-discuss.messages.350058 -->`
 - 【Linux社区】Pinchart 自荐：治理与维护层级有缺陷、社区弥漫无力感，主张给开发者更多权力 `<!-- ROW_MINE: ksummit-discuss.messages.350071 -->`
-- 【Linux社区】Mauro 自荐：media 子系统由每版约30补丁增至每窗口400-500，从未缺席合并窗口，强调南美代表意义 `<!-- ROW_MINE: ksummit-discuss.messages.350074 -->`
+- 【Linux社区】Mauro 自荐：media 子系统由每版约 30 补丁增至每窗口 400-500，从未缺席合并窗口，强调南美代表意义 `<!-- ROW_MINE: ksummit-discuss.messages.350074 -->`
 - 【Linux社区】Mason 自荐连任 TAB 主席：2000 年起全职内核、主攻 Btrfs、Facebook 内核团队五年 `<!-- ROW_MINE: ksummit-discuss.messages.350078 -->`
 - 【Linux社区】Lutomirski 自荐：security@ 适合小议题，Meltdown 级跨厂商协调需 LF 改进；CoC 重规则轻文化 `<!-- ROW_MINE: ksummit-discuss.messages.350081 -->`
 
 ## 65.4 【Linux社区】CoC咨询名单争议
 
-- 【Linux社区】Tso 以 Signed-off/Ack/Reviewed 计数复核 Perches 约#240不在前200，承认 git 统计客观但可被钻营（game） `<!-- ROW_MINE: ksummit-discuss.messages.350059 -->`
+- 【Linux社区】Tso 以 Signed-off/Ack/Reviewed 计数复核 Perches 约#240 不在前 200，承认 git 统计客观但可被钻营（game） `<!-- ROW_MINE: ksummit-discuss.messages.350059 -->`
 
 ## 65.5 【Linux社区】CoC私下讨论
 
@@ -39,7 +43,7 @@
 
 ## 65.8 【Linux社区】CoC社区界定
 
-- 【Linux社区】Tso 称公开讨论样本偏激（多人近年零提交、一人5年仅3-4个提交），私下征询获未发声者反馈，Linus 愿暂不再改 CoC `<!-- ROW_MINE: ksummit-discuss.messages.350064 -->`
+- 【Linux社区】Tso 称公开讨论样本偏激（多人近年零提交、一人 5 年仅 3-4 个提交），私下征询获未发声者反馈，Linus 愿暂不再改 CoC `<!-- ROW_MINE: ksummit-discuss.messages.350064 -->`
 
 ## 65.9 【Linux社区】CoC流程之争
 
@@ -72,7 +76,7 @@
 
 ## 65.15 【Linux社区】TAB选举公告
 
-- 【Linux社区】温哥华11月13日17:30投票，五席改选、候选人十名（现任四人，hpa 弃选），非改选成员 Corbet/gregkh/Rostedt/Tso/Bird `<!-- ROW_MINE: ksummit-discuss.messages.350080 -->`
+- 【Linux社区】温哥华 11 月 13 日 17:30 投票，五席改选、候选人十名（现任四人，hpa 弃选），非改选成员 Corbet/gregkh/Rostedt/Tso/Bird `<!-- ROW_MINE: ksummit-discuss.messages.350080 -->`
 
 ## 65.16 【Linux社区】非技术列表提案
 
@@ -85,12 +89,12 @@
 
 ## 65.18 【Linux社区】KS2018议程
 
-- 【Linux社区】Tso 确认 XArray 议题排期周三16:00 `<!-- ROW_MINE: ksummit-discuss.messages.350088 -->`
+- 【Linux社区】Tso 确认 XArray 议题排期周三 16:00 `<!-- ROW_MINE: ksummit-discuss.messages.350088 -->`
 - 【Linux社区】Tso 承诺 XArray 演讲录像约次周上线 LPC YouTube 频道 `<!-- ROW_MINE: ksummit-discuss.messages.350094 -->`
 
 ## 65.19 【Linux社区】TAB选举结果
 
-- 【Linux社区】95 张选票：Mason 67、Abbott 62、Olof 53、Dan Williams 47、Cook 45，次高41票 `<!-- ROW_MINE: ksummit-discuss.messages.350089 -->`
+- 【Linux社区】95 张选票：Mason 67、Abbott 62、Olof 53、Dan Williams 47、Cook 45，次高 41 票 `<!-- ROW_MINE: ksummit-discuss.messages.350089 -->`
 
 ## 65.20 【Linux社区】TAB选举门槛争议
 
@@ -104,12 +108,12 @@
 
 ## 65.22 【Linux社区】DAX面谈安排
 
-- 【Linux社区】Wilcox 与 Dan Williams 当日14:00面谈 DAX 与 XArray，自承“邮件列表上一直各说各话” `<!-- ROW_MINE: ksummit-discuss.messages.350099 -->`
+- 【Linux社区】Wilcox 与 Dan Williams 当日 14:00 面谈 DAX 与 XArray，自承“邮件列表上一直各说各话” `<!-- ROW_MINE: ksummit-discuss.messages.350099 -->`
 
 ## 65.23 【Linux社区】ZUFS议程安排
 
-- 【Linux社区】Tso 因 Boaz 病缺将 ZUFS 改排周四9点 KS track（首句误写周五），并请 Phillips 制作标题页 `<!-- ROW_MINE: ksummit-discuss.messages.350100 -->`
-- 【Linux社区】Tso 更正 ZUFS 排期为周四9点（前信误写周五） `<!-- ROW_MINE: ksummit-discuss.messages.350102 -->`
+- 【Linux社区】Tso 因 Boaz 病缺将 ZUFS 改排周四 9 点 KS track（首句误写周五），并请 Phillips 制作标题页 `<!-- ROW_MINE: ksummit-discuss.messages.350100 -->`
+- 【Linux社区】Tso 更正 ZUFS 排期为周四 9 点（前信误写周五） `<!-- ROW_MINE: ksummit-discuss.messages.350102 -->`
 
 ## 65.24 【Linux社区】ACPI/DT议题
 
@@ -121,4 +125,4 @@
 
 ## 65.26 【Linux社区】维护者手册提案
 
-- 【Linux社区】Williams 发 RFC 0/3：Subsystem Profile 记录各子系统潜规则，回收 MAINTAINERS 的 P 标签，附 nvdimm 样例与145行模板 `<!-- ROW_MINE: ksummit-discuss.messages.350105 -->`
+- 【Linux社区】Williams 发 RFC 0/3：Subsystem Profile 记录各子系统潜规则，回收 MAINTAINERS 的 P 标签，附 nvdimm 样例与 145 行模板 `<!-- ROW_MINE: ksummit-discuss.messages.350105 -->`

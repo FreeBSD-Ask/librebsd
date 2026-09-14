@@ -1,7 +1,11 @@
-# 62. CoC 解释文档系列、Magna Carta 纲领与冷却令（ksd p114，pk 349906-349955）
+# 62 【Linux社区】CoC解释文档与MagnaCarta纲领
 
 > 来源：ksummit-discuss p114（50 封全读，2018-10-18/23 为主，夹杂 2014-05 档案信与回归追踪通讯）。
-> 判定：49 CAND / 1 NV。主题分布：Greg解释文档系列 8、保密承诺与报案权 11、CallToAction 5、MagnaCarta纲领 10、GITPULL与冷却令 5、程序之辩与Samba先例 2、2014档案与回归追踪 6、email措辞收束 1。
+> 判定：49 CAND / 1 NV。主题分布：Greg解释文档系列 8、保密承诺与报案权 11、CallToAction 6、MagnaCarta纲领 10、GITPULL与冷却令 5、程序之辩与Samba先例 2、2014档案与回归追踪 6、email措辞收束 1。
+
+## 【Linux社区】零、体例说明
+
+本文件系 ksummit-discuss p114（pk 349906-349955）的逐封提取（49 CAND / 1 NV），全 7 块采用**导语＋带锚条目体例**：每块由“## 62.x 【Linux社区】题名”＋导语段＋“- 【Linux社区】… ROW_MINE 来源坐标”条目构成，不逐块展开要点、史料、史观、辨析、文献五字段。取舍依据：本层为页面级逐封索引——导语段承担“要点”职能、带锚条目承担“史料”与“史料锚”职能（ROW_MINE 坐标与 claim 库 source_ref 一致，可反查去重）；史观、辨析、文献三项不在本层给出，其著录须回 claim 库逐封核对后另行落盘，本层不重复、不臆补（00-总览 §一.2 的五字段标准适用于正式入卷块）。块内叙述仅为当事人原话的转述与节选，史家判断不在本层给出。
 
 ## 62.1 【Linux社区】Rowand 收束与 Greg KH [PATCH 0/7] CoC 解释文档系列
 
@@ -38,7 +42,7 @@ PATCH 6/7 保密条款引出的法理交锋：Cox 的数据保护法/天主教�
 NeilBrown 的四 hashtag 宣言（#Iobject/#Iforgive/#Iapologise/#Isupportreversion）与各方回应：Triplett 的“文档就在树里”反问、Perches-Dunlap 的进程反对、Ted 的权威叙事（Linus 指令+git 统计咨询+Greg 义务承担+Gamergate 恐惧渲染）。
 
 - 【Linux社区】NeilBrown Call to Action：“我拒绝此 CoC 及其‘制定’进程为非法”（#Iobject）；呼吁反对者发声；“我们不需要 CoC 而需要 Leadership in conduct——没有领导力任何代码都像笑话”；呼吁 Linus 从忏悔走向悔改、社区报以宽恕与恢复（#Iforgive+代表社区道歉 #Iapologise）；呼吁 Greg 放弃强制、revert 8a104f8b5867c68（#Isupportreversion） `<!-- ROW_MINE: ksummit-discuss.messages.349932 -->`
-- 【Linux社区】Triplett 反问：“我想读的文档已在 Documentation/process/code-of-conduct.rst”；追问 Neil 实际关切；“我确实想丢掉该系列大部分——一半削弱文档本意；但原 commit 值得庆祝” `<!-- ROW_MINE: ksummit-discuss.messages.349933 -->`
+- 【Linux社区】Triplett 反问：“我想读的文档已在 **Documentation/process/code-of-conduct.rst**”；追问 Neil 实际关切；“我确实想丢掉该系列大部分——一半削弱文档本意；但原 commit 值得庆祝” `<!-- ROW_MINE: ksummit-discuss.messages.349933 -->`
 - 【Linux社区】Perches：“描述愉快互动愿望合法有用、但拒绝这一进程、以私人非公开方式改革充其量 poor form”；Dunlap 双 Agree `<!-- ROW_MINE: ksummit-discuss.messages.349934 -->`
 - 【Linux社区】Perches 正式立场重申（怪异换行格式原文如此）——拒绝进程与私下改革方式 `<!-- ROW_MINE: ksummit-discuss.messages.349936 -->`
 - 【Linux社区】Ted 权威长文：CoC 非 Greg 强加——指令/签署/时点皆 Linus、初始 commit 极少评审正因 Linus -rc4 休假前不愿被认为背后搞鬼；本系列大量 Ack 因事前以 git 统计与 top contributors 巨量咨询；Greg 出于义务感接下吃了很多 flak——“我感谢他做这不讨好的任务”；Gamergate 般外部恐惧渲染促成 interpretation 文档；技术理由拒码不会被影子委员会二次猜测、Netfilter 版权流氓先例仍在；最终目标是文化变革——Neil 说得对重要的不是文档而是行为 `<!-- ROW_MINE: ksummit-discuss.messages.349937 -->`
@@ -63,7 +67,7 @@ NeilBrown 的权力结构分析与 Magna Carta 替代纲领：无力感作为伤
 
 Bottomley 的 coc-fixes GIT PULL 与 Greg 的 MS 冷却令（文本冻结+假设情境搁置）、Perches 的 Debian CoC 采纳主张与 Dunlap 的“单方面合并”批评、cabal like 之讥——补丁治理的最终路线分歧。
 
-- 【Linux社区】Bottomley [GIT PULL] coc-fixes for 4.19-rc8：jejb/linux-coc.git；三补丁合并效果（email 修复+Enforcement 节 CoC 委员会 conduct@kernel.org+except where required by law+Interpretation 链接+删维护者责任段）；“可 rebase 到 Greg 系列不动已收集 tags” `<!-- ROW_MINE: ksummit-discuss.messages.349925 -->`
+- 【Linux社区】Bottomley [GIT PULL] coc-fixes for 4.19-rc8：**jejb/linux-coc.git**；三补丁合并效果（email 修复+Enforcement 节 CoC 委员会 conduct@kernel.org+except where required by law+Interpretation 链接+删维护者责任段）；“可 rebase 到 Greg 系列不动已收集 tags” `<!-- ROW_MINE: ksummit-discuss.messages.349925 -->`
 - 【Linux社区】Greg 冷却令：“让我们让事情冷却、别担心假设性情境——辩论那种事我们能无穷无尽（好技能但不总可迁移）”；CoC 文本与 upstream 一致（除删一段）；真问题出现时再处理、随时可改 `<!-- ROW_MINE: ksummit-discuss.messages.349942 -->`
 - 【Linux社区】Perches 回冷却令：“开发模式不同、论据不 compelling”；“如 Bottomley 多次建议、我更愿内核原样采用 Debian CoC 而非这个修改版” `<!-- ROW_MINE: ksummit-discuss.messages.349948 -->`
 - 【Linux社区】Dunlap：Debian/Samba URL 都好；“失望的是 James 的补丁在列表被 ack/review 后基本被无视（直到 MS）而其他补丁合入主线 git 树——似乎很单方面” `<!-- ROW_MINE: ksummit-discuss.messages.349953 -->`
@@ -84,5 +88,5 @@ Bottomley 的程序自省（最后一分钟硬塞 commit 自认）与 Samba 先�
 - 【Linux社区】Greg KH 2014 stable workflow 回 Kosina for-stable 分支提案：“把额外工作压给子系统维护者而非 stable 维护者不可接受”；去年 KS 面谈过、意见未变（2014-05-03 档案信） `<!-- ROW_MINE: ksummit-discuss.messages.349923 -->`
 - 【Linux社区】Jason Cooper git metadata：自加 Fixes: 12 字符哈希+主题；Link: lkml.kernel.org/r/<Message-Id> 自动生成；设想 Coverletter: 标签供大型系列（2014-05-16 档案信） `<!-- ROW_MINE: ksummit-discuss.messages.349924 -->`
 - 【Linux社区】Thorsten Leemhuis：回归追踪未死——本职与生活占满、旧法繁琐；11 月有闲、拟推进 Prague KS/MS 讨论的回归追踪题目（2018-10-21，正文夹邮件列表损坏字符） `<!-- ROW_MINE: ksummit-discuss.messages.349930 -->`
-- 【Linux社区】Jason Cooper 指引 tip-bot 起点：git.zytor.com/linux/tip-bot.git 作合并通知 git hooks 参照（回应 Triplett 自动化工具提案）（2014-05-16 档案信） `<!-- ROW_MINE: ksummit-discuss.messages.349935 -->`
+- 【Linux社区】Jason Cooper 指引 tip-bot 起点：**git.zytor.com/linux/tip-bot.git** 作合并通知 git hooks 参照（回应 Triplett 自动化工具提案）（2014-05-16 档案信） `<!-- ROW_MINE: ksummit-discuss.messages.349935 -->`
 - 【Linux社区】Olof ARM legacy board DT：TODO 文件随时可加、elinux wiki 亦可；ixp4xx NSLU2“我父亲还在用”轶事；LinuxCon 难答“这 SoC 安静无补丁但活跃使用”（2014-05-16 档案信） `<!-- ROW_MINE: ksummit-discuss.messages.349946 -->`

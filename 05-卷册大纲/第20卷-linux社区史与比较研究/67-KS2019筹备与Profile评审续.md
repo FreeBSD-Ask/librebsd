@@ -1,7 +1,11 @@
-# 67. KS2019 筹备、议题征集与 Profile 评审续（ksd p119）
+# 67 【Linux社区】KS2019筹备与Profile评审续
 
 > 来源：ksummit-discuss p119（50 封全读，2019-05/06 KS2019 筹备+2018-11 Profile 评审链+2014 ACPI/DT 档案）
 > 判定：47 CAND / 3 NV。主题分布：补丁前缀统计脚本 2、KS2014 ACPI与DT 5、多文件提交占比数据 1、可信评审人名单存废 1、评审名单维护难题 1、Profile模板设计细节 1、IRC频道替代名单 1、正式头衔促评审 1、Profile章节取舍 1、跟进节奏字段定名 1、Profile采纳率疑虑 1、采纳率疑虑之回应 1、Profile新规质疑 1、Profile目标澄清 1、IRC频道字段局限 1、IRC频道注释提案 1、KS2019启动公告 1、MS2019首轮邀请 1、KS2019议题CIFSD 1、KS2019议题UniLinux 1、KS2019议题IMS中断 1、KS2019议题ZRAM后端 1、KS2019议题KVA分配器 1、KS2019议题内联加密 1、KS2019议题入门课 1、KS2019议题MapleTree 1、UniLinux查重质询 1、MS2019议题沟通分析 3、MS2019议题清syzbot 5、沟通分析先行研究 3、KVA议题必要性质疑 1、沟通分析验证质疑 1、入门课议题否决 2。
+
+## 【Linux社区】零、体例说明
+
+本文件系 ksummit-discuss p119（pk 350156-350205）的逐封提取（47 CAND / 3 NV），全 33 块采用**单行摘要体例**（丙型）：每块由“## 67.x 【Linux社区】题名”与若干“- 【Linux社区】… ROW_MINE 来源坐标”条目构成，不逐块展开要点、史料、史观、辨析、文献五字段。取舍依据：本层为页面级逐封索引——叙述句承担“要点”职能、ROW_MINE 坐标承担“史料锚”职能（与 claim 库 source_ref 一致，可反查去重）；史观、辨析、文献三项不在本层给出，其著录须回 claim 库逐封核对后另行落盘，本层不重复、不臆补（00-总览 §一.2 的五字段标准适用于正式入卷块）。块内叙述仅为当事人原话的转述与节选，史家判断不在本层给出。
 
 ## 67.1 【Linux社区】补丁前缀统计脚本
 
@@ -12,9 +16,9 @@
 
 - 【Linux社区】Intel Hart 通报已原型验证 DT 节点到 ACPI DEVICE 1:1 映射（含嵌套子节点属性），方针是“fill the gaps in ACPI, not replace”，并请 Olof 推荐必须同时懂两套固件接口的驱动实例。 `<!-- ROW_MINE: ksummit-discuss.messages.350157 -->`
 - 【Linux社区】Hart 表态“Agreed, well said”背书 Arnd 路线：统一命名属性 API 先覆盖仅用 memory/irq 的简单驱动，再渐进扩展到字符串、布尔、整型数组及 GPIO/DMA 通道。 `<!-- ROW_MINE: ksummit-discuss.messages.350168 -->`
-- 【Linux社区】Hart 引 gpio-keys.c 证明存在无 struct device 对应的 DT 子节点，提出属性接口增设子节点参数（device_get_property 传 dev 与 child 两级）并配子节点迭代器的设计。 `<!-- ROW_MINE: ksummit-discuss.messages.350179 -->`
+- 【Linux社区】Hart 引 **gpio-keys.c** 证明存在无 struct device 对应的 DT 子节点，提出属性接口增设子节点参数（device_get_property 传 dev 与 child 两级）并配子节点迭代器的设计。 `<!-- ROW_MINE: ksummit-discuss.messages.350179 -->`
 - 【Linux社区】Hart 主张增量改进 ACPI 而非弃用：支持把 ACPI SSDT 作为独立于板级固件的项加载并重扫命名空间，规范修改应允许描述规范未列设备类型；以其 MinnowBoard“动态基板”路线为据，认为比改走 DT 更保平台兼容性。 `<!-- ROW_MINE: ksummit-discuss.messages.350190 -->`
-- 【Linux社区】Hart 论 pinctrl：嵌入式扩展中 pinctrl 与 PCI/USB 同级、需 OS 级更强控制，MinnowBoard-Max 仅能原生/GPIO 模式切换仍嫌不足；ACPI 规范修改应允许描述规范外设备，pinctrl-baytrail.c 可据新属性适配。 `<!-- ROW_MINE: ksummit-discuss.messages.350201 -->`
+- 【Linux社区】Hart 论 pinctrl：嵌入式扩展中 pinctrl 与 PCI/USB 同级、需 OS 级更强控制，MinnowBoard-Max 仅能原生/GPIO 模式切换仍嫌不足；ACPI 规范修改应允许描述规范外设备，**pinctrl-baytrail.c** 可据新属性适配。 `<!-- ROW_MINE: ksummit-discuss.messages.350201 -->`
 
 ## 67.3 【Linux社区】多文件提交占比数据
 
@@ -22,7 +26,7 @@
 
 ## 67.4 【Linux社区】可信评审人名单存废
 
-- 【Linux社区】Leon 主张整节删除 Trusted Reviewers，称名单会令落选者觉得“untrusted”；Mauro 草拟准入线（每年 25 补丁加 50 次跨驱动评审），Leon 主张改为文档化 get_maintainers.pl。 `<!-- ROW_MINE: ksummit-discuss.messages.350159 -->`
+- 【Linux社区】Leon 主张整节删除 Trusted Reviewers，称名单会令落选者觉得“untrusted”；Mauro 草拟准入线（每年 25 补丁加 50 次跨驱动评审），Leon 主张改为文档化 **get_maintainers.pl**。 `<!-- ROW_MINE: ksummit-discuss.messages.350159 -->`
 
 ## 67.5 【Linux社区】评审名单维护难题
 

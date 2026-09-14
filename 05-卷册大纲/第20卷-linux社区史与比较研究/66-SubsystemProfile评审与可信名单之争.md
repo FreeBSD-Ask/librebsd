@@ -1,7 +1,11 @@
-# 66. Subsystem Profile 评审与可信名单之争（ksd p118）
+# 66 【Linux社区】SubsystemProfile评审与可信名单之争
 
 > 来源：ksummit-discuss p118（50 封全读，2018-11-14/17 Dan Williams RFC 全评审链，夹杂 2014 档案与 XArray 追踪）
 > 判定：48 CAND / 2 NV。主题分布：P:标签回收提案 1、Profile模板提案 1、首个样例Profile 1、P:条目清理与Ack 1、补丁主题行规则 1、media子维护者模式 1、ACPI属性机制 1、Profile工具联动 1、主题行经验之谈 1、样例Profile评审 1、文档受众分立 1、子系统句法红线 1、评审名单去重 1、样例受众批评 1、受众顺位共识 1、媒体样例Profile 1、属性接口设计 1、信任名单异议 1、社会接口辩护 1、名单改名折中 1、删除名单主张 1、名单定位之辩 1、P:条目去留考证 1、XArray报道动向 1、模板逐节评审 1、模板定位澄清 1、XArray适用边界 1、属性模式统一 1、XArray演讲定位 1、R:标签收编论 1、名单入选门槛 1、分文件评审名录 1、名单质疑交锋 1、工作流细节问答 1、主题行统计脚本 1、前缀方案反驳 1、作者逐点回应 1、API增长考证 1、quirk弊端辨析 1、v2改进承诺 1、受众改写承诺 1、名单扩展性质疑 1、media样例校对 1、名单辩护陈述 1、新人措辞建议 1、时区命名规范 1、挂名激励效应 1、media样例补正 1。
+
+## 【Linux社区】零、体例说明
+
+本文件系 ksummit-discuss p118（pk 350106-350155）的逐封提取（48 CAND / 2 NV），全 48 块采用**单行摘要体例**（丙型）：每块由“## 66.x 【Linux社区】题名”与若干“- 【Linux社区】… ROW_MINE 来源坐标”条目构成，不逐块展开要点、史料、史观、辨析、文献五字段。取舍依据：本层为页面级逐封索引——叙述句承担“要点”职能、ROW_MINE 坐标承担“史料锚”职能（与 claim 库 source_ref 一致，可反查去重）；史观、辨析、文献三项不在本层给出，其著录须回 claim 库逐封核对后另行落盘，本层不重复、不臆补（00-总览 §一.2 的五字段标准适用于正式入卷块）。块内叙述仅为当事人原话的转述与节选，史家判断不在本层给出。
 
 ## 66.1 【Linux社区】P:标签回收提案
 
@@ -9,7 +13,7 @@
 
 ## 66.2 【Linux社区】Profile模板提案
 
-- 【Linux社区】Dan 依 LPC2018 报告（event/2/59）提出 14 项维护政策模板，新增 Documentation/maintainer/subsystem-profile.rst。 `<!-- ROW_MINE: ksummit-discuss.messages.350107 -->`
+- 【Linux社区】Dan 依 LPC2018 报告（event/2/59）提出 14 项维护政策模板，新增 **Documentation/maintainer/subsystem-profile.rst**。 `<!-- ROW_MINE: ksummit-discuss.messages.350107 -->`
 
 ## 66.3 【Linux社区】首个样例Profile
 
@@ -33,7 +37,7 @@
 
 ## 66.8 【Linux社区】Profile工具联动
 
-- 【Linux社区】Mauro 提醒按 LPC 讨论需补丁教 get_maintainers.pl 打印子系统规则（Profile）标签。 `<!-- ROW_MINE: ksummit-discuss.messages.350113 -->`
+- 【Linux社区】Mauro 提醒按 LPC 讨论需补丁教 **get_maintainers.pl** 打印子系统规则（Profile）标签。 `<!-- ROW_MINE: ksummit-discuss.messages.350113 -->`
 
 ## 66.9 【Linux社区】主题行经验之谈
 
@@ -57,7 +61,7 @@
 
 ## 66.14 【Linux社区】样例受众批评
 
-- 【Linux社区】Mauro 指 nvdimm 样例开头即面向维护者会吓退开发者，建议文末单列维护者专节并在 index.rst 加指针。 `<!-- ROW_MINE: ksummit-discuss.messages.350120 -->`
+- 【Linux社区】Mauro 指 nvdimm 样例开头即面向维护者会吓退开发者，建议文末单列维护者专节并在 **index.rst** 加指针。 `<!-- ROW_MINE: ksummit-discuss.messages.350120 -->`
 
 ## 66.15 【Linux社区】受众顺位共识
 
@@ -89,7 +93,7 @@
 
 ## 66.22 【Linux社区】名单定位之辩
 
-- 【Linux社区】Tony Luck 定位该名单是给贡献者的提示，应被 scripts/get_maintainer.pl 采集以组织 Cc: 列表。 `<!-- ROW_MINE: ksummit-discuss.messages.350128 -->`
+- 【Linux社区】Tony Luck 定位该名单是给贡献者的提示，应被 **scripts/get_maintainer.pl** 采集以组织 Cc: 列表。 `<!-- ROW_MINE: ksummit-discuss.messages.350128 -->`
 
 ## 66.23 【Linux社区】P:条目去留考证
 
@@ -145,7 +149,7 @@
 
 ## 66.36 【Linux社区】前缀方案反驳
 
-- 【Linux社区】Joe Perches 指统计脚本对多文件补丁失效，建议 basename(dirname) 加 MAINTAINERS 主题文法，并仿 spdxcheck.py 独立成脚本。 `<!-- ROW_MINE: ksummit-discuss.messages.350143 -->`
+- 【Linux社区】Joe Perches 指统计脚本对多文件补丁失效，建议 basename(dirname) 加 MAINTAINERS 主题文法，并仿 **spdxcheck.py** 独立成脚本。 `<!-- ROW_MINE: ksummit-discuss.messages.350143 -->`
 
 ## 66.37 【Linux社区】作者逐点回应
 
