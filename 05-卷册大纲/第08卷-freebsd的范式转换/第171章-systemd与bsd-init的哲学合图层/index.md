@@ -107,7 +107,6 @@ volume: 第08卷-freebsd的范式转换
 <!-- DB_REF:freebsd.duckdb -->
 > **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。
 > 2024-2026 年间：168,386 次提交。
-> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
 
 <!-- PODCAST_REVIEW v20260829 -->
 <!-- 语义复核范围：BSD Now EP370、BSD Now EP71、BSD Now EP55（共 3 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->

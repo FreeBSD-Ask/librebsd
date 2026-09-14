@@ -43,7 +43,6 @@ volume: 第18卷-全球社区地区bsd史
 <!-- DB_REF:freebsd.duckdb -->
 > **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。
 > 1993-2026 年间：1,294,851 次提交。
-> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
 
 - FreeBSD 源代码库 commit 历史档案；Core Team 公告档案；committer 个人页面 ［A］
 - 社区邮件列表存档；社区论坛历史讨论档案；口述史记录 ［A］

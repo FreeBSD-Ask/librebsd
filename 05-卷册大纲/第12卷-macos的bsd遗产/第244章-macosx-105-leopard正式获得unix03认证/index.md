@@ -35,19 +35,16 @@ volume: 第12卷-macos的bsd遗产
 <!-- DB_REF:darwin.duckdb -->
 > **数据库引用（darwin.duckdb）**：本子节对应 darwin 代码仓库。
 > 2007-2007 年间：70 次提交。
-> 仓库总览：2,016 次提交，42 个 Apple 开源镜像仓库（contributors 表 43 行），2001-04-10 至 2026-04-13。
 <!-- /DB_REF -->
 - The Open Group. UNIX 03 Certification Process [EB/OL]. <https://www.opengroup.org/certification/programs/unix>; FreeBSD Project. FreeBSD POSIX Compliance [EB/OL]. <https://docs.freebsd.org/en/books/porters-handbook/standards/>.
 
 <!-- DB_REF:freebsd.duckdb -->
 > **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。
 > 1985-2026 年间：1,294,851 次提交。
-> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数），1993-06-12 至 2026-08-25。
 <!-- /DB_REF -->
 - TrustedBSD Project. *TrustedBSD Home Page*[EB/OL]. <http://www.trustedbsd.net/>; Apple Inc. *Mac OS X 10.5 Leopard Release Notes*[EB/OL]. (2007-10-26). Apple Developer; Watson, R. N. M. (2003). *TrustedBSD: Adding Trusted Operating System Features to FreeBSD*. USENIX Annual Technical Conference 2003, FREENIX Track.
 
 <!-- DB_REF:darwin.duckdb -->
 > **数据库引用（darwin.duckdb）**：本子节对应 darwin 代码仓库。
 > 2007-2007 年间：70 次提交。
-> 仓库总览：2,016 次提交，42 个 Apple 开源镜像仓库（contributors 表 43 行），2001-04-10 至 2026-04-13。
 <!-- /DB_REF -->

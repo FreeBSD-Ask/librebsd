@@ -41,17 +41,14 @@ volume: 第09卷-netbsd的历史
 <!-- DB_REF:netbsd.duckdb -->
 > **数据库引用（netbsd.duckdb）**：本子节对应 netbsd 代码仓库。
 > 1999-2002 年间：295,239 次提交。
-> 仓库总览：1,999,412 次提交，1,545 位贡献者（contributors 表行数，1992-07-13 至 2026-08-24）。
 - NetBSD Foundation. 2003 年报 [EB/OL]. (2004-02-07)[2026-07-23]. <https://www.netbsd.org/foundation/reports/2003.html>; NetBSD Project. About 页面 [EB/OL]. (2026-07-23 访问). <https://www.netbsd.org/about/>; NetBSD Project. formal.html 历史页面 [EB/OL]. (2026-07-23 访问). <https://www.netbsd.org/releases/formal.html>; 考据记录 20260723_announcements-netbsd.md §A.4、§ 存疑判定依据-一 -7 ［A］<!-- foundation-writeback: NetBSD Foundation | NetBSD Foundation 决议文件（2003-2017） -->**NetBSD Foundation 史料**（NetBSD Foundation 决议文件（2003-2017），下载日期 2026-07-26）：
 - NetBSD Project. Developers' Guide [EB/OL]. (2026-08-06 归档). governance/developers.html; NetBSD Project. Core Team 名单 [EB/OL]. (2026-08-06 归档). governance/core.html; 考据记录 20260806_netbsd_core_史料采集.md ［A］
 
 <!-- DB_REF:netbsd.duckdb -->
 > **数据库引用（netbsd.duckdb）**：本子节对应 netbsd 代码仓库。
 > 1994-2004 年间：623,504 次提交。
-> 仓库总览：1,999,412 次提交，1,545 位贡献者（contributors 表行数，1992-07-13 至 2026-08-24）。
 - NetBSD 贡献者史料分析［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］
 
 <!-- DB_REF:netbsd.duckdb -->
 > **数据库引用（netbsd.duckdb）**：本子节对应 netbsd 代码仓库。
 > 1993-2026 年间：1,999,408 次提交。
-> 仓库总览：1,999,412 次提交，1,545 位贡献者（contributors 表行数，1992-07-13 至 2026-08-24）。

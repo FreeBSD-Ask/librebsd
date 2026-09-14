@@ -51,7 +51,6 @@ volume: 第11卷-dragonflybsd的历史
 <!-- DB_REF:dragonfly.duckdb -->
 > **数据库引用（dragonfly.duckdb）**：本子节对应 dragonfly 代码仓库。
 > 2003-2026 年间：656,207 次提交。
-> 仓库总览：656,207 次提交，213 位贡献者（contributors 表行数），2003-06-17 至 2026-08-18。
 - **dragonfly.duckdb** dragonfly-src 仓库 contributors 表（多邮箱合并统计）；**dragonfly.duckdb** dragonfly-src 仓库 commits 表（按 author_email 与 author_date 交叉统计）；kernel@ 邮件列表档案 ［A］
 - **dragonfly.duckdb** commits 表（四仓库 2022-2026 年对照）；FreeBSD 14.x/15.x release notes [EB/OL]. [2026-09-11]. **https://www.freebsd.org/releases/**；OpenBSD 7.x release notes [EB/OL]. [2026-09-11]. **https://www.openbsd.org/**；NetBSD 10.x release notes [EB/OL]. [2026-09-11]. **https://www.netbsd.org/**；DragonFly 6.x release notes [EB/OL]. [2026-09-11]. **https://www.dragonflybsd.org/release/** ［A］
 - **bsd_commits.duckdb** commits 表（四仓库 2019-2026 年对照）；各项目 release notes；OpenBSD/NetBSD/FreeBSD Foundation 年报 ［A］
@@ -60,4 +59,3 @@ volume: 第11卷-dragonflybsd的历史
 <!-- DB_REF:netbsd.duckdb -->
 > **数据库引用（netbsd.duckdb）**：本子节对应 netbsd 代码仓库。
 > 2019-2026 年间：243,053 次提交。
-> 仓库总览：1,999,412 次提交，1,545 位贡献者（contributors 表行数，1992-07-13 至 2026-08-24）。

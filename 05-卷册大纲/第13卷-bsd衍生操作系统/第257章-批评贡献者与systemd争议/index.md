@@ -58,7 +58,6 @@ volume: 第13卷-bsd衍生操作系统
 <!-- DB_REF:linux_kernel.duckdb -->
 > **数据库引用（linux_kernel.duckdb）**：本子节对应 linux_kernel 代码仓库。
 > 1985-2026 年间：1,474,340 次提交。
-> 仓库总览：1,474,341 次提交，39,865 位贡献者（contributors 表行数，1970-01-01 至 2026-08-24）。
 - 维护者/批评者自述；邮件列表；学术批评；用户史料
 - iXsystems 公告与财务披露；PC-BSD/TrueOS 社区讨论存档；GhostBSD/MidnightBSD 捐赠页面 ［A］（2026-09-12 整改：行尾粘接的旧章号小节标题“## 256.14.7 社区治理中的利益冲突丑闻：Core Team 成员与企业利益的交织”系 256 章拆章残留（批次 C123 问题 6/7 剩余最后一处），已剥离留痕；该标题所指内容如须保留，应随 257.13-257.17 节号重排专项一并处置）
 - FreeBSD Core Team 成员列表与雇主信息；FreeBSD Foundation IRS 990 表；Core Team 邮件列表；OpenBSD 邮件列表；Linux 内核 maintainer 统计
@@ -66,7 +65,6 @@ volume: 第13卷-bsd衍生操作系统
 <!-- DB_REF:bsd_derivatives.duckdb -->
 > **数据库引用（bsd_derivatives.duckdb）**：本子节对应 bsd_derivatives 代码仓库。
 > 1985-2026 年间：963,557 次提交。
-> 仓库总览：963,557 次提交，9,744 位贡献者（contributors 表行数，1985-06-13 至 2026-08-24）。
 - Ubuntu/Fedora/openSUSE 文档；Linux/BSD 桌面用户统计；硬件兼容性列表［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］
 - Juniper/NetApp/Sony 文档；Netflix/WhatsApp 文档；Android/Linux 文档［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］
 

@@ -31,16 +31,13 @@ volume: 第11卷-dragonflybsd的历史
 <!-- DB_REF:dragonfly.duckdb -->
 > **数据库引用（dragonfly.duckdb）**：本子节对应 dragonfly 代码仓库。
 > 2004 年间：3,366 次提交（口径注 2026-09-12：原“2004-2004 年间”区间参数异常，实为单年切片；总量口径按实查 656,207 次/213 位贡献者订正——R1943/R1945/R230.5 三次确证）。
-> 仓库总览：656,207 次提交，213 位贡献者（contributors 表行数），2003-06-17 至 2026-08-18。
 - dragonfly.duckdb dragonfly-src 仓库；DragonFly 1.0 Release Notes；Matt Dillon LWKT 设计文档 ［A］
 
 <!-- DB_REF:dragonfly.duckdb -->
 > **数据库引用（dragonfly.duckdb）**：本子节对应 dragonfly 代码仓库。
 > 2003-2026 年间：656,207 次提交（口径订正注 2026-09-12：原 656,207/535 系旧库口径）。
-> 仓库总览：656,207 次提交，213 位贡献者（contributors 表行数），2003-06-17 至 2026-08-18。
 - DragonFly BSD Project. *DragonFly BSD 1.0 Release Notes*[EB/OL]. (2005-07-24). <https://www.dragonflybsd.org/>; DragonFly BSD Project. *mount_nullfs(8) Manual Page*[EB/OL]. <https://man.dragonflybsd.org/>; Dillon, M. (2003). *DragonFly BSD Design Goals*[EB/OL]. dragonflybsd.org 邮件列表存档.
 
 <!-- DB_REF:dragonfly.duckdb -->
 > **数据库引用（dragonfly.duckdb）**：本子节对应 dragonfly 代码仓库。
 > 2003-2026 年间：656,207 次提交（口径订正注 2026-09-12：原 656,207/535 系旧库口径）。
-> 仓库总览：656,207 次提交，213 位贡献者（contributors 表行数），2003-06-17 至 2026-08-18。
