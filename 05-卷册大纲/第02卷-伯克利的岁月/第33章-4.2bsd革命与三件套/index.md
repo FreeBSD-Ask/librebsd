@@ -30,7 +30,7 @@ volume: 第02卷-伯克利的岁月
 
 ## 史观
 
-总纲第 4 条——分离聚合是永恒规律：socket API 将网络与 IPC 聚合为统一抽象（AF_INET/AF_UNIX 多协议族），随后随 BSD 扩散聚合入各厂商系统；总纲第 10 条——动手者创造历史：socket 层由 Joy 与 Leffler 亲手设计实现（McKusick 1999 当事人记载），Joy 离开后的集成由 Leffler/Karels/McKusick 接续完成；总纲第 3 条——不存在进步，只有权力再分配：Joy 离开使 CSRG 从个人依赖转向团队化，是开发权的组织化再分配；总纲第 15 条——文化即形式主义：BSD daemon 作为文化符号在手册、T 恤、海报上的传播是社区文化的形式主义化承载；总纲第 5 条——没有必然性，只有偶然性：4.2BSD 的商业成功（18 个月 1000+ 许可证）系厂商选择与时机等偶然条件的聚合，非「革命」叙事的必然结果。（2026-09-12 整改：史观字段按批次 B050 回填，映射依 25 条权威表）
+总纲第 4 条——分离聚合是永恒规律：socket API 将网络与 IPC 聚合为统一抽象（AF_INET/AF_UNIX 多协议族），随后随 BSD 扩散聚合入各厂商系统；总纲第 10 条——动手者创造历史：socket 层由 Joy 与 Leffler 亲手设计实现（McKusick 1999 当事人记载），Joy 离开后的集成由 Leffler/Karels/McKusick 接续完成；总纲第 3 条——不存在进步，只有权力再分配：Joy 离开使 CSRG 从个人依赖转向团队化，是开发权的组织化再分配；总纲第 15 条——文化即形式主义：BSD daemon 作为文化符号在手册、T 恤、海报上的传播是社区文化的形式主义化承载；总纲第 5 条——没有必然性，只有偶然性：4.2BSD 的商业成功（18 个月 1000+ 许可证）系厂商选择与时机等偶然条件的聚合，非“革命”叙事的必然结果。（2026-09-12 整改：史观字段按批次 B050 回填，映射依 25 条权威表）
 
 ## 辨析
 
@@ -42,9 +42,9 @@ volume: 第02卷-伯克利的岁月
 
 ## 文献
 
-- Leffler, S. J., Fabry, R. S., Joy, W. N., Lapsley, P., Miller, S. (1983) “4.2BSD Networking Implementation Notes”, SRI International CSRG, University of California, Berkeley（第 6.1 节“Socket layer”）；McKusick, K. (1999) “Twenty Years of Berkeley Unix”（Open Sources 第 1 章）；Stevens, W. R. (1990) “UNIX Network Programming”, Prentice Hall, ISBN 0-13-949876-1（经多源交叉验证：Open Library 书目记录（OL2203754M）明确记载 1990 年 UNIX Network Programming ISBN 0-139-49876-1，与多个引文一致，（消解说明 2026-09-12 整改：原「据一手文献印证消解^doubt-resolved-193…］已解除」破碎记录改写为通顺表述——Stevens 1990 ISBN 经 Open Library OL2203754M 与多源引文交叉验证通过，消解有效——批次 B050 问题 7））；CSRG (1983) “4.2BSD Unix Programmer's Manual”
+- Leffler, S. J., Fabry, R. S., Joy, W. N., Lapsley, P., Miller, S. (1983) “4.2BSD Networking Implementation Notes”, SRI International CSRG, University of California, Berkeley（第 6.1 节“Socket layer”）；McKusick, K. (1999) “Twenty Years of Berkeley Unix”（Open Sources 第 1 章）；Stevens, W. R. (1990) “UNIX Network Programming”, Prentice Hall, ISBN 0-13-949876-1（经多源交叉验证：Open Library 书目记录（OL2203754M）明确记载 1990 年 UNIX Network Programming ISBN 0-139-49876-1，与多个引文一致，（消解说明 2026-09-12 整改：原“据一手文献印证消解^doubt-resolved-193…］已解除”破碎记录改写为通顺表述——Stevens 1990 ISBN 经 Open Library OL2203754M 与多源引文交叉验证通过，消解有效——批次 B050 问题 7））；CSRG (1983) “4.2BSD Unix Programmer's Manual”
 - McKusick, K. (1999) “Twenty Years of Berkeley Unix”；CSRG 内部档案 ［B］
 - BSD conferences 历年海报档案；Raymond, E. S. (1996) “The New Hacker's Dictionary” ［B］
 - McKusick 1999; Salus 1994 ［B］
 - McKusick, K. (1999) “Twenty Years of Berkeley Unix”；Salus, P. H. (1994) “A Quarter Century of UNIX”, Addison-Wesley, ISBN 0-201-54777-5；Leffler et al. (1989) 4.3BSD 设计书（ISBN 0-201-06196-1）；CSRG 发行统计 ［B］
-- USENIX 会议论文集（1983-1985）；伯克利 CSRG 邮件列表存档 ［A］（2026-09-12 整改：行内拼接的脚注定义 [^doubt-resolved-193]「据 Handbook (未署名) 消解」删除留痕——该定义系幻觉来源（Handbook 无文献可指）且无正文引用点，Stevens 1990 的 ISBN 消解已由 Open Library 佐证独立成立——批次 B050 问题 8）
+- USENIX 会议论文集（1983-1985）；伯克利 CSRG 邮件列表存档 ［A］（2026-09-12 整改：行内拼接的脚注定义 [^doubt-resolved-193]“据 Handbook (未署名) 消解”删除留痕——该定义系幻觉来源（Handbook 无文献可指）且无正文引用点，Stevens 1990 的 ISBN 消解已由 Open Library 佐证独立成立——批次 B050 问题 8）

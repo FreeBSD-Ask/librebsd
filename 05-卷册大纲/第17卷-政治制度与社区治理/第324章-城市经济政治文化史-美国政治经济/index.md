@@ -31,10 +31,10 @@ volume: 第17卷-政治制度与社区治理
 
 ## 辨析
 
-- 部分二手资料称 “DARPA IPTO 1962 年设立”，部分称 “1963 年” 或 “ARPA 1958 年”；考据结论：ARPA（Advanced Research Projects Agency）于 1958 年由 Eisenhower 总统设立（回应苏联 Sputnik 1957），其 IPTO（信息处理技术办公室）1962 年建制、J. C. R. Licklider 任首任主任——本子节采用「ARPA 1958 / IPTO 1962」的限定性表述（2026-09-12 整改：截断收束——批次 C029 问题 1）
-- 部分二手资料称 “Bayh-Dole Act 1980 年通过”，部分称 “1981 年” 或 “Stevenson-Wydler Act 1980”；考据结论：Bayh-Dole Act（Pub.L. 96-517）于 1980 年 12 月 12 日由 Carter 总统签署，Stevenson-Wydler Technology Innovation Act（Pub.L. 96-480）于 1980 年 10 月 21 日由 Carter 总统签署——本子节采用「Bayh-Dole 1980-12-12 / Stevenson-Wydler 1980-10-21」的限定性表述（2026-09-12 整改：截断补全签署日期——批次 C029 问题 2）
+- 部分二手资料称 “DARPA IPTO 1962 年设立”，部分称 “1963 年” 或 “ARPA 1958 年”；考据结论：ARPA（Advanced Research Projects Agency）于 1958 年由 Eisenhower 总统设立（回应苏联 Sputnik 1957），其 IPTO（信息处理技术办公室）1962 年建制、J. C. R. Licklider 任首任主任——本子节采用“ARPA 1958 / IPTO 1962”的限定性表述（2026-09-12 整改：截断收束——批次 C029 问题 1）
+- 部分二手资料称 “Bayh-Dole Act 1980 年通过”，部分称 “1981 年” 或 “Stevenson-Wydler Act 1980”；考据结论：Bayh-Dole Act（Pub.L. 96-517）于 1980 年 12 月 12 日由 Carter 总统签署，Stevenson-Wydler Technology Innovation Act（Pub.L. 96-480）于 1980 年 10 月 21 日由 Carter 总统签署——本子节采用“Bayh-Dole 1980-12-12 / Stevenson-Wydler 1980-10-21”的限定性表述（2026-09-12 整改：截断补全签署日期——批次 C029 问题 2）
 - 部分二手资料称 “NSFNET 1991 年商业化”，部分称 “1993 年” 或 “1995 年”；考据结论：NSFNET 1991 年起允许商业流量，1993 年 NSF 决定 NSFNET 退役并由商业 ISP 接管，1995 年 4 月 30 日 NSFNET 正式退役。本子节采用 “1991-1995 年 NSFNET 商业化过渡” 的限定性表述。
-- 部分二手资料称 “Diamond v. Diehr 1981 年判决”，部分称 “1980 年” 或 “Chakrabarty 1972”；考据结论：Diamond v. Diehr 案于 1981 年 3 月 3 日由美国最高法院判决（5-4 多数意见），确认计算机软件相关发明可获专利；Diamond v. Chakrabarty（1980-06-16，447 U.S. 303）确认转基因微生物可获专利，是软件可专利性谱系（续接 Diamond v. Diehr 1981）的前导判例〔案名更正 2026-09-12：原「Chakrabarty v. Diamond」系案名颠倒——批次 C029 问题 5〕。本子节采用「Diehr 1981 / Chakrabarty 1980 分列并注明先导关系」的限定性表述（截断收束——批次 C029 问题 3）
+- 部分二手资料称 “Diamond v. Diehr 1981 年判决”，部分称 “1980 年” 或 “Chakrabarty 1972”；考据结论：Diamond v. Diehr 案于 1981 年 3 月 3 日由美国最高法院判决（5-4 多数意见），确认计算机软件相关发明可获专利；Diamond v. Chakrabarty（1980-06-16，447 U.S. 303）确认转基因微生物可获专利，是软件可专利性谱系（续接 Diamond v. Diehr 1981）的前导判例〔案名更正 2026-09-12：原“Chakrabarty v. Diamond”系案名颠倒——批次 C029 问题 5〕。本子节采用“Diehr 1981 / Chakrabarty 1980 分列并注明先导关系”的限定性表述（截断收束——批次 C029 问题 3）
 - 辨析：本章辨析的核心张力在于“形式主义：政治制度与社区治理结构是‘权力’这一形式主义概念的物质化”的边界条件（2026-09-12 整改：禁用符号“”改弯引号、直单引号改‘’——批次 C029 问题 4/7），各子节辨析字段已展开，卷面综合辨析在正文撰写阶段横向汇总（据本章概述史观整理）
   - 文献：[DB:historical_claims] 历史主张数据库（853 条主张，26,898 条证据）
 
