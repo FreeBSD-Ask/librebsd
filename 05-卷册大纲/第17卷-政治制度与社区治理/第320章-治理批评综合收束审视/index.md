@@ -29,15 +29,15 @@ volume: 第17卷-政治制度与社区治理
 
 - 考据过程留痕——【查证来源】FreeBSD Core Bylaws 2000.8.28 版与 2026.5.27 新版经 <https://www.freebsd.org/internal/bylaws/> 一手核验，确认 2000 年章程第 1 条"Active committers have made a commit to the tree in the last 12 months"与 2
 - 考据过程留痕——【查证来源】FreeBSD Core Bylaws 2026.5.27 新版经 <https://www.freebsd.org/internal/bylaws/> 一手核验，确认任期限制条款原文"an Incumbent Core Team Member currently in their third or fourth consecutive year may not run
-- 考据过程留痕——【查证来源】合图层史料综合第 15.1-20.20 节所有引用的一手与二手史料，包括 FreeBSD Core Bylaws 2000.8.28 版与 2026.5.27 新版（经 <https://www.freebsd.org/internal/bylaws/> 一手核验）、FreeBSD BSD Daemon 版权页面（经 <<https://www.freebsd.org/c>
-- 考据过程留痕——【查证来源】收束性合图史料综合第 15.1-20.20 节所有引用的一手与二手史料，包括 FreeBSD Core Bylaws 2000.8.28 版与 2026.5.27 新版（经 <https://www.freebsd.org/internal/bylaws/> 一手核验）、FreeBSD BSD Daemon 版权页面（经 <<https://www.freebsd.org>
+- 考据过程留痕——【查证来源】合图层史料综合第 15.1-20.20 节所有引用的一手与二手史料，包括 FreeBSD Core Bylaws 2000.8.28 版与 2026.5.27 新版（经 <https://www.freebsd.org/internal/bylaws/> 一手核验）、FreeBSD BSD Daemon 版权页面（经 <https://www.freebsd.org/c>
+- 考据过程留痕——【查证来源】收束性合图史料综合第 15.1-20.20 节所有引用的一手与二手史料，包括 FreeBSD Core Bylaws 2000.8.28 版与 2026.5.27 新版（经 <https://www.freebsd.org/internal/bylaws/> 一手核验）、FreeBSD BSD Daemon 版权页面（经 <https://www.freebsd.org>
 
 ## 文献
 
-- 项目史观总纲第 13、8、23 条；FreeBSD Core Bylaws [EB/OL]. <https://www.freebsd.org/internal/bylaws/>（2000.8.28 版与 2026.5.27 新版）；FreeBSD Foundation IRS Determination Letter（2000-12-07）；OpenBSD Project Goals [EB/OL]. <https://www.openbsd.org/goals.html>；FSF 官方许可证列表 [EB/OL]. <<https://www.gnu.org/licenses/license->
+- 项目史观总纲第 13、8、23 条；FreeBSD Core Bylaws [EB/OL]. <https://www.freebsd.org/internal/bylaws/>（2000.8.28 版与 2026.5.27 新版）；FreeBSD Foundation IRS Determination Letter（2000-12-07）；OpenBSD Project Goals [EB/OL]. <https://www.openbsd.org/goals.html>；FSF 官方许可证列表 [EB/OL]. <https://www.gnu.org/licenses/license->
 - 项目史观总纲第 19、8、23 条；FreeBSD Core Bylaws [EB/OL]. <https://www.freebsd.org/internal/bylaws/>（2026.5.27 新版）；FreeBSD Core Team Activity Reports（Core.10 回顾 2020-07-27）；OpenBSD Project Goals [EB/OL]. <https://www.openbsd.org/goals.html>；OpenSSH 维护者档案；pkgsrc 项目档案；mfsBSD 项目档案；Linux Foundation 多项目托管档案；参见相关章节
-- 上述第 15.1-20.20 节所有文献综合；项目史观总纲第 13、19、21、8、23 条；FreeBSD Core Bylaws [EB/OL]. <https://www.freebsd.org/internal/bylaws/>；FreeBSD BSD Daemon 版权页面 [EB/OL]. <https://www.freebsd.org/copyright/daemon/>；OpenBSD Project Goals [EB/OL]. <https://www.openbsd.org/goals.html>；FSF 官方许可证列表 [EB/OL]. <<https://www.gn>
-- 上述第 15.1-20.20 节所有文献综合；项目史观总纲第 6、7、8、13、19、21、23 条；FreeBSD Core Bylaws [EB/OL]. <https://www.freebsd.org/internal/bylaws/>；FreeBSD BSD Daemon 版权页面 [EB/OL]. <https://www.freebsd.org/copyright/daemon/>；OpenBSD Project Goals [EB/OL]. <https://www.openbsd.org/goals.html>；FSF 官方许可证列表 [EB/OL]. <<https://ww>
+- 上述第 15.1-20.20 节所有文献综合；项目史观总纲第 13、19、21、8、23 条；FreeBSD Core Bylaws [EB/OL]. <https://www.freebsd.org/internal/bylaws/>；FreeBSD BSD Daemon 版权页面 [EB/OL]. <https://www.freebsd.org/copyright/daemon/>；OpenBSD Project Goals [EB/OL]. <https://www.openbsd.org/goals.html>；FSF 官方许可证列表 [EB/OL]. <https://www.gn>
+- 上述第 15.1-20.20 节所有文献综合；项目史观总纲第 6、7、8、13、19、21、23 条；FreeBSD Core Bylaws [EB/OL]. <https://www.freebsd.org/internal/bylaws/>；FreeBSD BSD Daemon 版权页面 [EB/OL]. <https://www.freebsd.org/copyright/daemon/>；OpenBSD Project Goals [EB/OL]. <https://www.openbsd.org/goals.html>；FSF 官方许可证列表 [EB/OL]. <https://ww>
 
 ## 自反性声明
 
