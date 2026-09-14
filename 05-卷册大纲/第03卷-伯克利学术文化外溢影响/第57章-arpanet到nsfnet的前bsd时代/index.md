@@ -32,7 +32,7 @@ volume: 第03卷-伯克利学术文化外溢影响
 
 ## 辨析
 
-- 要点**：ARPANET 1969 年建立，由 ARPA（Advanced Research Projects Agency，1958 年成立）资助，Bolt Beranek and Newman（BBN）公司承建，1969 年 10 月 29 日首个节点（UCLA，Leonard Kleinrock 实验室）与第二节点（SRI，Douglas Engelbart 实验室）间发送首个消息 “lo”（本意 “login” 但系统崩溃），1969 年底四节点拓扑（UCLA、SRI、UC Santa Barbara、Utah），早期使用 NCP（Network Control Program）
+- **要点**：ARPANET 1969 年建立，由 ARPA（Advanced Research Projects Agency，1958 年成立）资助，Bolt Beranek and Newman（BBN）公司承建，1969 年 10 月 29 日首个节点（UCLA，Leonard Kleinrock 实验室）与第二节点（SRI，Douglas Engelbart 实验室）间发送首个消息 “lo”（本意 “login” 但系统崩溃），1969 年底四节点拓扑（UCLA、SRI、UC Santa Barbara、Utah），早期使用 NCP（Network Control Program）
 - Mockapetris DNS RFC 882/883 发布时间确认为 1983 年 11 月（RFC 882“Domain Names: Concepts and Facilities”与 RFC 883“Domain Names: Implementation and Specification”，作者 Paul Mockapetris，USC ISI）；SMTP RFC 821 发布时间确认
 - BIND 1990 年代市场份额（约 90%）——多源引用但缺乏权威统计来源（Netcraft 等统计机构 1990 年代后期的 DNS 服务器市场份额数据保留 ［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］）；BIND 4.9.x 具体漏洞时间与版本——CERT/CC 安全公告档案为权威来源，具体漏洞编号与版本须以 CERT/CC 公告为准；BIND
 - Qmail 发布时间确认为 1995 年（Daniel J. Bernstein 发布，强调安全性，许可证为公有领域——Bernstein 本人于 cr.yp.to/qmail/dist.html 声明将 qmail 置于公有领域）；Postfix 发布时间确认为 1998 年（原名 VMailer，IBM T.J. Watson 研究中心 Wietse Venema 开发，使用 IBM Publ

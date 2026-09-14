@@ -28,7 +28,7 @@ volume: 第05卷-freebsd的工程化奠基
 
 ## 94.2.2 **jail(2)** 的系统调用设计
 
-- 要点**：Poul-Henning Kamp（波尔-亨宁·坎普）(phk) 于 1999 年 4 月 28 日在 FreeBSD 4.0-CURRENT 开发周期内提交 Jails 初始实现（早于 4.0-RELEASE 2000.3.20 约 11 个月），起源是为一家托管客户提供安全隔离环境，发现 chroot 不够用，遂在一天下午写了 **jail(2)** 系统调用；
+- **要点**：Poul-Henning Kamp（波尔-亨宁·坎普）(phk) 于 1999 年 4 月 28 日在 FreeBSD 4.0-CURRENT 开发周期内提交 Jails 初始实现（早于 4.0-RELEASE 2000.3.20 约 11 个月），起源是为一家托管客户提供安全隔离环境，发现 chroot 不够用，遂在一天下午写了 **jail(2)** 系统调用；
 - 总纲第 5 条——没有必然性，只有偶然性，Jails 概念早于市场认可
   - 辨析：OS 级虚拟化的 “首创” 归属存在争议，chroot 是早期形式
   - 文献：容器技术史论文；Jails/Zones/LXC/Docker 文档 ［B］

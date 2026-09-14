@@ -11,7 +11,7 @@ volume: 第11卷-dragonflybsd的历史
 - Linux User Mode Linux (UML) 自 Linux 2.6.0（2003-12）起进入主线，与 vkernel 设计理念相似但实现不同——UML 通过 ptrace 拦截实现用户态内核，vkernel 基于 LWKT 消息传递架构实现。UML 在 Linux 2.6 系列后维护逐渐停滞（Linux 内核复杂度提升导致 UML 同步困难），vkernel 在 DragonFly
 - userland 分化使 DragonFly 与 FreeBSD 之间的用户迁移成本增加——dragonfly.duckdb 显示两仓库 userland 目录 2010-2026 年间独立演进，用户迁移须重新学习命令行为与配置文件格式。但差异小于 FreeBSD 与 OpenBSD 之间的差异（OpenBSD 移除 config 语法、独立维护 openssl 替代品 LibreSSL 等），Dra
 - dragonfly.duckdb 提供 DragonFly/FreeBSD/NetBSD/OpenBSD 四仓库同口径 commits/contributors/tags 表统计（dragonfly-src/freebsd-src/netbsd-src/openbsd-src），是跨项目比较的可靠数据来源。Linux 内核与 illumos 不在 openbsd.duckdb 范围内，须以各自官方仓库
-- 要点**：DragonFly 2003 年 fork 事件的历史意义须以多元史观综合审视——以总纲第 5 条（偶然性）审视，fork 事件的偶然性体现于时点选择、跟帖措辞、基线选择等多个环节，但偶然性不否定 fork 事件的历史必然性（5.x 路线分歧已积累至临界点）；以总纲第 8 条（本体论平等）审视，Stacey/Kennaway 的负面话语、Core Team 的沉默、Dillon 的反批评、再批评的质疑，各方在本体论上地位平等，争议无须以“对错”二元裁决；以总纲第 13 条（法律与道德是利益分配）
+- **要点**：DragonFly 2003 年 fork 事件的历史意义须以多元史观综合审视——以总纲第 5 条（偶然性）审视，fork 事件的偶然性体现于时点选择、跟帖措辞、基线选择等多个环节，但偶然性不否定 fork 事件的历史必然性（5.x 路线分歧已积累至临界点）；以总纲第 8 条（本体论平等）审视，Stacey/Kennaway 的负面话语、Core Team 的沉默、Dillon 的反批评、再批评的质疑，各方在本体论上地位平等，争议无须以“对错”二元裁决；以总纲第 13 条（法律与道德是利益分配）
 
 ## 史料
 

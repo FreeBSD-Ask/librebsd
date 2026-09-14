@@ -21,7 +21,7 @@ volume: 第02卷-伯克利的岁月
 - 经 Justia 832 F. Supp. 790 一手判例抬头确认，案件当事方与律师团队如下：原告 USL 为特拉华州公司、总部位于新泽西州 Summit（由 AT&T **1990 年** 成立、**1993 年** 出售给 Novell）；被告 BSDi 为特拉华州公司、总部位于弗吉尼亚州 Richmond Falls（由 CSRG 核心成员 Karels、McKusick、Bostic 等创立——判例原文称 “the CSRG programmers, at least those who founded BSDI (Karels, McKusick, and Bostic)”，2026-09-13 联网回源 832 F. Supp. 790 核验）
 - BSDi 与伯克利的应对包括：BSDi 聘请律师团队应诉、伯克利校方法律顾问介入、CSRG 提供 Net/2 重写过程文件证据、社区组织支持 BSDi（如 USENIX 声明）、1993 年 3 月初（Debevoise 法官驳回初步禁令裁决后的下一个周一）伯克利在加州州法院反诉 USL（声称 USL 未按许可证要求为 System V 中使用的 BSD 代码提供署名）
 - 经 McKusick 1999《Twenty Years of Berkeley Unix》当事人一手叙述确认，诉讼期间的 “代码清理” 须区分三个阶段：① **诉前清理（1989-1991）**——Karels、Bostic、McKusick 三人 "spent the next several months going over the entire distribution, file by
-- 史料**：McKusick 1999《Twenty Years of Berkeley Unix》当事人一手原文（oreilly.com/openbook/opensources/book/kirkmck.html，**2026-07-28** 访问）；Novell-UC Berkeley 和解协议（**1994.1**，部分保密）；4.4BSD-Lite Release Notes（**1994.6**）；FreeBSD 2.0 Release Notes（freebsd.org/releases/2.0/notes/，**1994-1995**）
+- **史料**：McKusick 1999《Twenty Years of Berkeley Unix》当事人一手原文（oreilly.com/openbook/opensources/book/kirkmck.html，**2026-07-28** 访问）；Novell-UC Berkeley 和解协议（**1994.1**，部分保密）；4.4BSD-Lite Release Notes（**1994.6**）；FreeBSD 2.0 Release Notes（freebsd.org/releases/2.0/notes/，**1994-1995**）
 
 ## 史料
 

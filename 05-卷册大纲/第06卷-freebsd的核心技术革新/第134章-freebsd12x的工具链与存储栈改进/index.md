@@ -54,7 +54,7 @@ volume: 第06卷-freebsd的核心技术革新
 
 ## 133.7.2 NFSv4.1 服务端与 pNFS 支持
 
-- 辨析**：OpenSSL 1.1.1 引入 TLS 1.3 支持是 FreeBSD 加密栈的重大升级——TLS 1.3 相比 TLS 1.2 握手从 2-RTT 减至 1-RTT（0-RTT 可选），废弃了 RSA 密钥交换、RC4、3DES 等不安全算法；FreeBSD 12.0 的 KTLS（Kernel TLS）
+- **辨析**：OpenSSL 1.1.1 引入 TLS 1.3 支持是 FreeBSD 加密栈的重大升级——TLS 1.3 相比 TLS 1.2 握手从 2-RTT 减至 1-RTT（0-RTT 可选），废弃了 RSA 密钥交换、RC4、3DES 等不安全算法；FreeBSD 12.0 的 KTLS（Kernel TLS）
 - Watson R N M, et al. Capsicum: Practical Capabilities for UNIX [C]//USENIX Security 2010；FreeBSD **capsicum(4)**/**casper(3)** Manual Pages [Z]；FreeBSD 12.0-RELEASE Announcement [Z]. 2018.
 
 ## 133.8.2 Linux 兼容层——CentOS 7 与 Ubuntu 用户态
