@@ -12,11 +12,11 @@ volume: 第04卷-大分裂与四大bsd的诞生
 - 1994 年 SunOS 5.4 (Solaris 2.4) 发布，基于 SVR4，支持 SPARC 与 x86，提供与企业 Unix 兼容的 ABI；与 4.4BSD-Lite 相比，Solaris 2.4 是商业 UNIX 的延续，BSD 与 SVR4 的分野在 1994 年已基本定型
 - 1994 年 IBM OS/2 Warp 3.0 发布，定位桌面与小型企业市场，提供 32 位抢占式多任务；与 4.4BSD-Lite 相比，OS/2 Warp 定位桌面市场，4.4BSD-Lite 定位服务器市场，两者市场定位不同但都面临 Windows 95 的竞争压力
 - 4.4BSD-Lite 与 Windows NT 3.5、Solaris 2.4、IBM OS/2 Warp 的比较辨析须区分 “技术架构”（微内核 vs 宏内核、SVR4 vs BSD、32 位抢占式多任务 vs 分时多任务）与 “市场定位”（企业 vs SPARC 工作站 vs 桌面 vs 服务器）——前者可技术对比，后者经各操作系统的发布档案与第三方市场份额统计（IDC、Gartner）场景化评估；单一维度的决定论（如仅以许可模式判断胜负）经 Windows NT 3.5 商业市场胜出但开源生态影响为零、4.4BSD-Lite 商业市场份额有限但开源生态影响深远的对照可证伪
-- **1994 年 6 月** 4.4BSD-Lite 发布后，FreeBSD 2.0（**1994 年 11 月 22 日** 网络发布）与 NetBSD 1.0（**1994 年 10 月 26 日** release tag）均 rebase 至 4.4BSD-Lite，4.4BSD-Lite 取代 386BSD 成为 FreeBSD 与 NetBSD 的共同直接安全基线；FreeBSD 1.x（**1993-1995**）与 NetBSD 0.8/0.9（**1993**）先前直接基于 386BSD 0.1（**1992-07**）+ patch kit，其安全基线为 4.3BSD-Reno 安全机制在 80386 平台的移植——root/超级用户二元特权模型、文件权限 rwx、setuid/setgid、DES **crypt(3)** 密码散列、单文件 `/etc/passwd`、4.3BSD 网络栈远程漏洞面；4.4BSD-Lite rebase 后这一 386BSD 安全基线被 4.4BSD-Lite 的安全机制取代，386BSD 作为 FreeBSD 与 NetBSD 直接安全基线的历史地位在 **1994 年下半年** 终结；OpenBSD 项目于 **1995 年 10 月 18 日** 自 NetBSD 1.0 分叉（首个发行版 1.2 于 1996 年 7 月发布），经 NetBSD 1.0 间接继承 4.4BSD-Lite 新基线，386BSD 作为 OpenBSD 直接基线的地位更早在 **1994 年 10 月** NetBSD 1.0 rebase 时即被取代〔注：原“OpenBSD 1.0（1995.10.18 fork）”表述经核查报告核验改正——OpenBSD 无 1.0 发布版，1995 年 10 月系分叉时点；原稿两处悬空引导句「对照如下：」「时间线如下：」其后并无表格，已删〕
+- **1994 年 6 月** 4.4BSD-Lite 发布后，FreeBSD 2.0（**1994 年 11 月 22 日** 网络发布）与 NetBSD 1.0（**1994 年 10 月 26 日** release tag）均 rebase 至 4.4BSD-Lite，4.4BSD-Lite 取代 386BSD 成为 FreeBSD 与 NetBSD 的共同直接安全基线；FreeBSD 1.x（**1993-1995**）与 NetBSD 0.8/0.9（**1993**）先前直接基于 386BSD 0.1（**1992-07**）+ patch kit，其安全基线为 4.3BSD-Reno 安全机制在 80386 平台的移植——root/超级用户二元特权模型、文件权限 rwx、setuid/setgid、DES **crypt(3)** 密码散列、单文件 `/etc/passwd`、4.3BSD 网络栈远程漏洞面；4.4BSD-Lite rebase 后这一 386BSD 安全基线被 4.4BSD-Lite 的安全机制取代，386BSD 作为 FreeBSD 与 NetBSD 直接安全基线的历史地位在 **1994 年下半年** 终结；OpenBSD 项目于 **1995 年 10 月 18 日** 自 NetBSD 1.0 分叉（首个发行版 1.2 于 1996 年 7 月发布），经 NetBSD 1.0 间接继承 4.4BSD-Lite 新基线，386BSD 作为 OpenBSD 直接基线的地位更早在 **1994 年 10 月** NetBSD 1.0 rebase 时即被取代〔注：原“OpenBSD 1.0（1995.10.18 fork）”表述经核查报告核验改正——OpenBSD 无 1.0 发布版，1995 年 10 月系分叉时点；原稿两处悬空引导句“对照如下：”“时间线如下：”其后并无表格，已删〕
 
 ## 史料
 
-- 本章章级史料著录暂缺：原自动匹配的数据库锚点原因字段指向「folder 第68章」，与本章第 70→83 章重排不符，属匹配元数据错配〔存疑脚注：待重跑 chapter_matches 匹配逻辑后回填〕；章级史料清单待依 83.8-83.11 各节史料字段按 GB/T 7714 复核回填
+- 本章章级史料著录暂缺：原自动匹配的数据库锚点原因字段指向“folder 第68章”，与本章第 70→83 章重排不符，属匹配元数据错配〔存疑脚注：待重跑 chapter_matches 匹配逻辑后回填〕；章级史料清单待依 83.8-83.11 各节史料字段按 GB/T 7714 复核回填
 
 ## 史观
 
