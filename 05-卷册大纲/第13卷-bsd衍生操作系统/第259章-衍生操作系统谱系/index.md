@@ -33,7 +33,7 @@ volume: 第13卷-bsd衍生操作系统
 - BSD 许可与 GPL 的 “扩散哲学” 差异（最大化再使用 vs 最大化自由回馈）须客观论述，避免价值优劣判断；**freebsd.duckdb** 查询 L1.1.1 的 commit 量仅反映开发活跃度，须结合 commit 规模（additions/deletions）与 message 质量综合判断，且 GitHub 镜像仓库 commit 量可能滞后于主仓，衍生项目时间序列的 “分化” 判断须与各项目仓库时间序列及官方发布公告交叉验证〔2026-09-12 整改：句尾截断按批次 C113 建议收束〕
 - BSD 衍生谱系（JunOS/PlayStation/TrueNAS/pfSense 等嵌入式专有产品为主）与 Linux 衍生谱系（Android/Ubuntu/RHEL 等开源生态为主）在三维度存在根本差异——(1) 扩散机制：BSD 许可证允许闭源使用不要求回馈，厂商可基于 FreeBSD 构建专有产品而不公开改动（如 JunOS、PlayStation OS、NetScaler）；GPL 侧则以 copyleft 使衍生改动须随源码公开，扩散呈“回流强制”形态。（2）社区形态：BSD 衍生多由厂商主导、与上游社区弱绑定，Linux 衍生多依托上游社区发行版治理；（3）回馈路径：BSD 侧回馈依赖厂商自愿（部分项目有选择性回流），GPL 侧回馈为许可证义务〔2026-09-12 整改：句尾截断按批次 C113 建议补全 GPL 侧机制与维度（2）（3），补全内容须按 0 信任原则逐项核验后引用〕
 - stack protector 对栈缓冲区溢出有效但对堆溢出无效，须区分漏洞类型与缓解机制的对应关系；hardenedbsd-src 的 627 个去重 CVE 中绝大多数为继承自 FreeBSD 上游的修复 commit，HardenedBSD 本地特有的安全 commit 须通过 merge commit 与 parent_hashes 交叉验证，不可仅凭时间戳判定；hardened 编译标志的具体启用范围与缓解效果须以 HardenedBSD 官方文档与编译配置 commit 核验〔2026-09-12 整改：句尾截断收束〕
-- ASLR 对 Spectre 的 “有限缓解” 判断须以 HardenedBSD 官方安全公告或技术分析为据，不得仅凭理论推断；CVE-2017-5715 在 hardenedbsd-src 中的具体 commit hash 须从数据库提取文件中核实；Retpoline 在 HardenedBSD 中的引入时间须以编译配置 commit 为准［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］（2026-09-12 整改：本条尾部粘接的机器文献残段「参考文献全文数据库（4077 篇全文…）」移除留痕，其义由「## 文献」段承载）
+- ASLR 对 Spectre 的 “有限缓解” 判断须以 HardenedBSD 官方安全公告或技术分析为据，不得仅凭理论推断；CVE-2017-5715 在 hardenedbsd-src 中的具体 commit hash 须从数据库提取文件中核实；Retpoline 在 HardenedBSD 中的引入时间须以编译配置 commit 为准［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］（2026-09-12 整改：本条尾部粘接的机器文献残段“参考文献全文数据库（4077 篇全文…）”移除留痕，其义由“## 文献”段承载）
 
 <!-- PODCAST_REVIEW v20260829 -->
 <!-- 语义复核范围：BSD Now EP290、BSD Now EP52（共 2 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->

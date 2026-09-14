@@ -9,7 +9,7 @@ volume: 第17卷-政治制度与社区治理
 ## 要点
 
 - 两类基金会的 990 表数据比较须包括——收入规模、收入来源（捐赠/会员费/赞助/投资收益）、支出结构（项目支出/管理支出/筹款支出）、资产规模、董事会构成、员工规模、最高薪酬员工等；FreeBSD Foundation 与 Linux Foundation 的治理文件比较须包括——Articles of Incorporation、By-Laws、董事会选举程序、会员体系（如有）、项目托管协议；
-- 批评方认为 BSD 三大项目（FreeBSD、NetBSD、OpenBSD）的治理模式在三个方面存在结构性缺陷——其一，核心团队制缺乏民主性：FreeBSD Core Team 由 active committer 选举产生（2000 年章程规定每 2 年改选全部 9 席、由 9 名当选 committer 组成 Core，2026 年 5 月 27 日通过的新章程改为每年选举、7 名投票成员并设任期限制〔注：句尾原文截断，按本文件辨析行「任期限制/2028 年生效」语境收束，细节待新章程原文核对〕）
+- 批评方认为 BSD 三大项目（FreeBSD、NetBSD、OpenBSD）的治理模式在三个方面存在结构性缺陷——其一，核心团队制缺乏民主性：FreeBSD Core Team 由 active committer 选举产生（2000 年章程规定每 2 年改选全部 9 席、由 9 名当选 committer 组成 Core，2026 年 5 月 27 日通过的新章程改为每年选举、7 名投票成员并设任期限制〔注：句尾原文截断，按本文件辨析行“任期限制/2028 年生效”语境收束，细节待新章程原文核对〕）
 - 反批评方认为，BSD 项目的治理模式选择不是“现代化不足”而是有意识的工程哲学选择——其一，核心团队制的精英主义优势：FreeBSD Core Team 由 active committer 选举产生而非全体用户普选，是工程合理性而非民主缺陷——只有 commit bit 持有者才具备判断技术决策的工程深度，将选举权限制在 active committer 群体内保证了技术决策的工程导向而非政治导向
 - 再回应方指出，反批评的四个论点均存在结构性局限——其一，“精英主义优势”论证忽视了精英主义的代际传承危机：FreeBSD Core Team 的连任现象（参见 18.12.7“基金会-核心团队来回轮换”批评）显示精英主义在实践中可能退化为小圈子循环——Core.10（2018-2020）回顾显示 Hiroki Sato（佐藤広生）已任 7 届、John Baldwin（约翰·鲍德温）6 届、W〔原文截断，后续连任者名单待回 Core.10 回顾原文补全〕
 - 综合三层辩证，BSD 治理模式的批评、反批评与再回应揭示了治理选择的多维张力——其一，“核心团队制缺乏民主性”批评在选举权封闭维度成立（active committer 群体筛选使选举权具有精英性），但在工程合理性维度不成立（反批评层的“技术决策应由具备技术能力的人做出”论证成立）；然而“精英主义优势”在代际传承维度存在代价（再回应层的“代际传承危机”论证成立），2026 年 FreeBSD 新章程的任期限制即为此代价的制度回应
@@ -51,7 +51,7 @@ volume: 第17卷-政治制度与社区治理
 - FreeBSD Core Bylaws；NetBSD Foundation bylaws；OpenBSD Project Goals；Linux Foundation Bylaws ARTICLE III §3.1；FSF 官方许可证列表 [EB/OL]. <https://www.gnu.org/licenses/license-list.en.html>；参见 16.7.3 与 17.10a 子节史料〔旧结构节号，现行对应待结构映射核验〕 ［A］
 - FreeBSD Core Team Activity Reports；2026 年 FreeBSD 新章程；FreeBSD Foundation 年报；Linux Foundation 2023 年报；参见 17.10b 与 18.12b 子节史料〔旧结构节号，现行对应待结构映射核验〕 ［A］
 - 上述 16.7a-c 节辩证链所有文献综合；FreeBSD Core Bylaws；Linux Foundation Bylaws ARTICLE III §3.1；参见 16.7.1-16.7.4、17.10、18.12 子节史料〔旧结构节号，现行对应待结构映射核验〕 ［A］
-- 项目史观总纲第 13、19、21、23 条；IRC §501(c)(3) 与 §501(c)(6) 原文；FreeBSD Foundation IRS Determination Letter（2000-12-07）；FreeBSD Core Bylaws；Linux Foundation Bylaws ARTICLE III §3.1；OSDL 合并档案（2007-01-22）；FSF 官方许可证列表 [EB/OL]. <https://www.gnu.org/licenses/license-list.en.html>；freebsd-advocacy 邮件列表存档 [EB/OL]. <https://lists.freebsd.org/archives/freebsd-advocacy/>；第 16.7a-d 节辩证链补足〔旧结构节号，现行对应待结构映射核验〕；第 16.7.1-16.7.4、17.10、18.12 节史料〔旧结构节号，现行对应待结构映射核验〕；参见相关章节 BSD 治理改革与许可证哲学部分史料 ［A］〔注：行尾原有粘贴残片「---## 史料登记与辩证校准（2026-08-08 追加）> 本卷命题：24.1 少数与多数…### 史料文献」系模板残片（仅标题与指向 00-总览 的重复指针、无实质内容），已于 2026-09-12 整改清除〕
+- 项目史观总纲第 13、19、21、23 条；IRC §501(c)(3) 与 §501(c)(6) 原文；FreeBSD Foundation IRS Determination Letter（2000-12-07）；FreeBSD Core Bylaws；Linux Foundation Bylaws ARTICLE III §3.1；OSDL 合并档案（2007-01-22）；FSF 官方许可证列表 [EB/OL]. <https://www.gnu.org/licenses/license-list.en.html>；freebsd-advocacy 邮件列表存档 [EB/OL]. <https://lists.freebsd.org/archives/freebsd-advocacy/>；第 16.7a-d 节辩证链补足〔旧结构节号，现行对应待结构映射核验〕；第 16.7.1-16.7.4、17.10、18.12 节史料〔旧结构节号，现行对应待结构映射核验〕；参见相关章节 BSD 治理改革与许可证哲学部分史料 ［A］〔注：行尾原有粘贴残片“---## 史料登记与辩证校准（2026-08-08 追加）> 本卷命题：24.1 少数与多数…### 史料文献”系模板残片（仅标题与指向 00-总览 的重复指针、无实质内容），已于 2026-09-12 整改清除〕
 - 上述各子节文献综合；FreeBSD Foundation 年报；参见相关章节关于 FreeBSD Foundation 与 Linux Foundation 治理模式比较及公众认知的史料；项目史观总纲第 1、4、5、8、9、10、13、14、19、21、23 条（见 据原文第 25 章、据原文第 14 章 14.2 节、据原文第 21 章 21.1-21.2 节、据原文第 23 章 23.1 节） ［A］
 - 媒体报道档案；公众认知调查；用户文章 ［C］
 
