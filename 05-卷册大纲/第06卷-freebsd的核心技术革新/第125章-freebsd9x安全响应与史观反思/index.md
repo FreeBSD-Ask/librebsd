@@ -32,12 +32,12 @@ volume: 第06卷-freebsd的核心技术革新
 ## 辨析
 
 - **数据窗口辨析**：版本周期文件覆盖 2012.1-2014.1（开发与 9.0-9.2-RELEASE 维护期），但 9.3-RELEASE 支持至 2017.1.1——故 “9.x 周期” 在安全响应语境下有两个不同时间窗口：① 版本周期文件窗口（2012.1-2014.1，93 条 CVE commit）；② 全支持周期窗口（2012.1-2017.1，312 条 CVE commit）；
-- 按 0 信任原则考据。【查证来源】总纲第 13 条系经 Read 核实的项目统摄史观原文（**原材料/哲学/项目统摄史观/第 25 章.md** 第 17 行，“13. **法律与道德是利益分配**。任何道德问题本质上是利益问题，社区治理亦是形式主义的政治产物”，2026-07-23 一手核验），引用确证；项目史观总纲第 11 章 11.5 节 “任何道德问题本质上是利益问题” 系总纲第 13 条的章节级阐述，经 Read 核实（**原材料/哲学/项目统摄史观/第 11 章.md** 第 27 行）。
+- 按 0 信任原则考据。【查证来源】总纲第 13 条系经 Read 核实的项目统摄史观原文（**02-sacred源材料/sacred_sources.duckdb（第 25 章）** 第 17 行，“13. **法律与道德是利益分配**。任何道德问题本质上是利益问题，社区治理亦是形式主义的政治产物”，2026-07-23 一手核验），引用确证；项目史观总纲第 11 章 11.5 节 “任何道德问题本质上是利益问题” 系总纲第 13 条的章节级阐述，经 Read 核实（**02-sacred源材料/sacred_sources.duckdb（第 11 章）** 第 27 行）。
 
 ## 文献
 
 - FreeBSD Security Team. FreeBSD Security Advisories Archive [EB/OL]. (2012-2017)[2026-07-22]. <https://www.freebsd.org/security/advisories/>; FreeBSD Project. **freebsd.duckdb** — freebsd-src commits table [DB/OL]. 2026-07-22. SQL: `SELECT count(*) FROM commits WHERE repo_name = ‘freebsd-src’ AND author_da`〔存疑：著录原文中 SQL 语句于 `author_da` 处截断，完整查询条件与结果未能回源，待补〕
-- **原材料/哲学/项目统摄史观/第 25 章.md**（总纲第 13 条）；**原材料/哲学/项目统摄史观/第 11 章.md**（11.1、11.5 节）；Free Software Foundation. GNU General Public License Version 3 [Z]. 2007-06-29（§11）；Apache Software Foundation. Apache License, Version 2.0 [Z]. 2004-01（§3）. ［A］
+- **02-sacred源材料/sacred_sources.duckdb（第 25 章）**（总纲第 13 条）；**02-sacred源材料/sacred_sources.duckdb（第 11 章）**（11.1、11.5 节）；Free Software Foundation. GNU General Public License Version 3 [Z]. 2007-06-29（§11）；Apache Software Foundation. Apache License, Version 2.0 [Z]. 2004-01（§3）. ［A］
 
 ## 125.20.2 总纲第 15 条审视——文化即形式主义
 
