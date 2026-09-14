@@ -33,10 +33,10 @@ volume: 第11卷-dragonflybsd的历史
 ## 辨析
 
 - 部分引述的 Hsu 发言缺乏原始邮件 ID，正式撰写时须以 lists.dragonflybsd.org 邮件列表时间戳与 Message-ID 追溯完整讨论线程
-- 决议的完整文本是否已公开——freebsd.org/administration/ 公开 Core Team 决议摘要但未公开完整投票记录，Dillon 在 dragonfly.kernel 邮件列表称程序不透明；正式撰写时须以 freebsd-hackers 邮件列表原始公告与 Core Team 公开声明交叉核对 ［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］；lists.freebsd.org 邮件列表归档 [EB/OL]；marc.info 归档 [EB/OL]. marc.info/?l = freebsd-hackers ［A］
+- 决议的完整文本是否已公开——freebsd.org/administration/ 公开 Core Team 决议摘要但未公开完整投票记录，Dillon 在 dragonfly.kernel 邮件列表称程序不透明；正式撰写时须以 freebsd-hackers 邮件列表原始公告与 Core Team 公开声明交叉核对 ［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］；lists.freebsd.org 邮件列表归档 [EB/OL]；marc.info 归档 [EB/OL]. marc.info/?l = freebsd-hackers ［A］
 
 <!-- DB_REF:dragonfly.duckdb -->
-> **数据库引用（dragonfly.duckdb）**：本子节对应 dragonfly 代码仓库。> 2003-2026 年间：656,206 次提交。> 仓库总览：656,206 次提交，535 位贡献者，2003-06-17 至 2026-08-18。
+> **数据库引用（dragonfly.duckdb）**：本子节对应 dragonfly 代码仓库。> 2003-2026 年间：656,206 次提交。> 仓库总览：656,207 次提交，213 位贡献者，2003-06-17 至 2026-08-18。
 - freebsd-hackers 2003 年归档 [EB/OL]；FreeBSD Core Team. 公开声明 [EB/OL]. freebsd.org/administration/；dragonfly.duckdb dragonfly-src 仓库 commits 表（Dillon commit message） ［A］
 
 <!-- DB_REF:freebsd.duckdb -->
@@ -44,7 +44,7 @@ volume: 第11卷-dragonflybsd的历史
 - dragonfly.duckdb dragonfly-src 仓库 commit_files 表（sys/vfs/hammer/ 与 sys/vfs/hammer2/ 首引 commit）；DragonFly HAMMER 源码 [EB/OL]. github.com/DragonFlyBSD/DragonFlyBSD/tree/master/sys/vfs/hammer；Dillon M. HAMMER 设计文档 [EB/OL]. dragonflybsd.org/docs/hammer/ ［A］
 
 <!-- DB_REF:dragonfly.duckdb -->
-> **数据库引用（dragonfly.duckdb）**：本子节对应 dragonfly 代码仓库。> 2003-2026 年间：656,206 次提交。> 仓库总览：656,206 次提交，535 位贡献者，2003-06-17 至 2026-08-18。
+> **数据库引用（dragonfly.duckdb）**：本子节对应 dragonfly 代码仓库。> 2003-2026 年间：656,206 次提交。> 仓库总览：656,207 次提交，213 位贡献者，2003-06-17 至 2026-08-18。
 - DragonFly BSD. COPYRIGHT 原文 [EB/OL]. github.com/DragonFlyBSD/DragonFlyBSD/blob/master/COPYRIGHT；FreeBSD. COPYRIGHT 原文 [EB/OL]. github.com/freebsd/freebsd-src/blob/main/COPYRIGHT；dragonfly.duckdb dragonfly-src 仓库 commit_files 表（COPYRIGHT 文件首引与修订历史） ［A］
 
 <!-- DB_REF:freebsd.duckdb -->
@@ -52,11 +52,11 @@ volume: 第11卷-dragonflybsd的历史
 - Usenet comp.unix.bsd.* 归档 [EB/OL]. groups.google.com/forum/#! comp.unix.bsd；DragonFly BSD 邮件列表存档 [EB/OL]. lists.dragonflybsd.org；社区口述史记录（散见各 BSD 项目 wiki 与博客） ［A］FreeBSD 社区论文：[FP-2004-001] The Challenges of Dynamic Network Interfaces（Brooks Davis，2004）<https://papers.freebsd.org/2004/eurobsdcon/davis-challenges_of_dynamic_network_interfaces/>### 史观映射> 第 102 章承载项目统摄史观中 “技术选择即政治选择” 与 “分离与聚合” 在 DragonFly BSD 诞生中的运作——Dillon 从 FreeBSD 5.x 分叉的直接原因是 SMPng 细粒度锁路线与 LWKT 消息传递路线的哲学分歧，这一分歧是 “技术选择即政治选择” 的典型：选择锁还是消息传递不仅是技术问题，更是项目治理哲学的政治化表达；fork 本身是 “分离” 的行为，但分离后的 “聚合”（LWKT、HAMMER、vkernels 等创新）才是 DragonFly BSD 的创造性贡献；比萨饼隐喻作为社区传说则承载 “社区文化即技术资产”——传说虽非史实，但构成了 DragonFly BSD 社区身份认同的文化资产；Dillon 的单一决策核心模式与 FreeBSD Core Team 的集体治理形成对照，“组织结构塑造技术路径”——不同的治理结构直接塑造了不同的技术路线选择---
 
 <!-- DB_REF:dragonfly.duckdb -->
-> **数据库引用（dragonfly.duckdb）**：本子节对应 dragonfly 代码仓库。> 2003-2026 年间：656,206 次提交。> 仓库总览：656,206 次提交，535 位贡献者，2003-06-17 至 2026-08-18。
+> **数据库引用（dragonfly.duckdb）**：本子节对应 dragonfly 代码仓库。> 2003-2026 年间：656,206 次提交。> 仓库总览：656,207 次提交，213 位贡献者，2003-06-17 至 2026-08-18。
 - McKusick M K, Neville-Neil G. The Design and Implementation of the FreeBSD Operating System [M]. 2nd ed. Addison-Wesley, 2015；dragonfly.duckdb commits 表（BSD 家族 fork 首 commit 时间序列与 2003-2007 年代码流动）；衍生项目与跨项目对比分析.md §L7.1.1（数据缺口标注） ［B］
 
 <!-- DB_REF:dragonfly.duckdb -->
-> **数据库引用（dragonfly.duckdb）**：本子节对应 dragonfly 代码仓库。> 2003-2004 年间：4,373 次提交。> 仓库总览：656,206 次提交，535 位贡献者，2003-06-17 至 2026-08-18。
+> **数据库引用（dragonfly.duckdb）**：本子节对应 dragonfly 代码仓库。> 2003-2004 年间：4,373 次提交。> 仓库总览：656,207 次提交，213 位贡献者，2003-06-17 至 2026-08-18。
 - dragonfly.duckdb dragonfly-src 仓库 contributors 表（Dillon 合并 commit 10666 条，2003-06-17 至 2026-06-10）；统计分析报告：推断性统计.md Task 10 Bootstrap 重抽样 [R/OL]. 2026-07-27（dragonfly-src Gini 0.8972, 95% CI [0.8517, 0.9187]）；Dillon M. DragonFly BSD fork announcement [EB/OL]. <https://lists.freebsd.org/pipermail/freebsd-current/2003-July/006889.html>, 2003-07；DragonFly BSD Project. DragonFly BSD history [EB/OL]. <https://www.dragonflybsd.org/history/>, last edited 2019-01-17 ［A］
 
 <!-- DB_REF:freebsd.duckdb -->

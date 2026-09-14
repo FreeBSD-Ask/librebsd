@@ -21,7 +21,7 @@ volume: 第18卷-全球社区地区bsd史
 - 文献：2023.eurobsdcon.org/history.html 历
 - 总纲第 4 条——分离聚合是永恒规律（技术路线的分化与并行演化）
 - 辨析：三大会议的规模对比需统计；参会者重合度需分析
-- 文献：BSDCan/EuroBSDCon/AsiaBSDCon Archives［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
+- 文献：BSDCan/EuroBSDCon/AsiaBSDCon Archives［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］
 
 ## 328.1.4 EuroBSDCon 史料与
 
@@ -37,7 +37,7 @@ volume: 第18卷-全球社区地区bsd史
 - 文献：Watson et al. 2010 Capsicum Paper；FreeBSD 9.0 Release N
 - 总纲第 7 条——硬件与软件的辩证关系
 - 辨析：2015 DARPA/GCHQ 资助金额需考据；2019 集成至 FreeBSD 14.0 的具体内容需核实
-- 文献：CHERI Documentation；DARPA Funding Records；FreeBSD 14.0 Release Notes［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
+- 文献：CHERI Documentation；DARPA Funding Records；FreeBSD 14.0 Release Notes［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］
 
 ## 328.1.4 EuroBSDCon 史料与档案辨析
 
@@ -54,14 +54,14 @@ volume: 第18卷-全球社区地区bsd史
 ## 328.2.2 CHERI
 
 - 2015 DARPA/GCHQ 资助金额需考据；2019 集成至 FreeBSD 14.0 的具体内容需核实
-- 文献：CHERI Documentation；DARPA Funding Records；FreeBSD 14.0 Release Notes［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
+- 文献：CHERI Documentation；DARPA Funding Records；FreeBSD 14.0 Release Notes［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］
 
 ## 328.1.2 组织架构与社区效应演变
 
 - 要点：EuroBSDCon 组织架构由历届主席与组织委员会构成，社区影响从早期小规模到 2010s 后扩大
 - 史料：EuroBSDCon Foundation 章程、组织委员会名单、参会者统计 ［A］
 - 史观：总纲第 22 条—
-- BSDCan/EuroBSDCon/AsiaBSDCon Archives［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
+- BSDCan/EuroBSDCon/AsiaBSDCon Archives［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］
 
 ## 328.1.4 EuroBSDCon 史料与档案辨析
 
@@ -82,7 +82,7 @@ volume: 第18卷-全球社区地区bsd史
 ## 328.2.2 CHERI 能力硬件的工程演进
 
 - 要点：CHERI 2013 年起与 SRI International 合作，2015 年获 DARPA 与 UK GCHQ 联合资助，2019 年集成至 FreeBSD 14.0
-- CHERI Documentation；DARPA Funding Records；FreeBSD 14.0 Release Notes［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
+- CHERI Documentation；DARPA Funding Records；FreeBSD 14.0 Release Notes［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］
 
 ## 328.2.3 Capsicum 与其他沙箱方案比较
 
@@ -104,12 +104,12 @@ volume: 第18卷-全球社区地区bsd史
 - 史料：Varnish 工程文档、phkmalloc 设计文档、glibc malloc 历史 ［A］
 - 史观：总纲第 17 条——软件工程实践影响后续项目
 - 辨析：Varnish 的部署规模需统计；p
-- SURFnet/DFN/RENATER Annual Reports［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
+- SURFnet/DFN/RENATER Annual Reports［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］
 
 ## 328.4.2 学术机构部署的演变过程
 
 - 要点：欧洲学术机构从 1990s 主流部署 FreeBSD 到 2000s 后部分迁移至 Linux
-- 史料：学术机构 OS 部署统计、迁移案例、技术报告［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］，L1）
+- 史料：学术机构 OS 部署统计、迁移案例、技术报告［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］，L1）
 - FreeBSD 图形栈在 2018 年底已大体跟进上游：输入栈与 Mesa 已更新，libinput 补丁位于开发仓库，X server 本体则是最滞后的待移植与待推送部分。（BSD Now EP283，[600.70-674.48]，L1）
 - FreeBSD 图形团队规模极小：Johannes Lundberg 负责从 Linux 移植 DRM 驱动并更新 Linux KPI，另一名 Johannes Dietrich 维护 ports 中的图形驱动，Warner Losh 担任与 core 团队的联络，Matt Macy 尝试让 Linux KPI 在 PowerPC64 上运行。（BSD Now EP283，[676.78-944.60]，L1）
 - 受访者自 2012 年起维护 FreeBSD ports，长期以 Poudriere 教程作为新人参与入口，认为从维护小型 port 开始逐步深入是降低参与门槛的有效方式。（BSD Now EP283，[998.48-1210.88]，L1）

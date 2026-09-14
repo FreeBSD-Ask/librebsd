@@ -65,7 +65,7 @@ volume: 第06卷-freebsd的核心技术革新
 
 <!-- DB_REF:freebsd.duckdb -->
 > **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 2010-2020 年间：488,947 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
-- iXsystems. Introducing TrueNAS SCALE [EB/OL]. (2020)[2026-07-19]. <https://www.truenas.com/>; iXsystems. TrueNAS CORE Release Notes [EB/OL]. [2026-07-19]. <https://www.truenas.com/docs/core/>; Kennedy C. Why We're Moving TrueNAS from FreeBSD to Debian [EB/OL]. Blocks & Files, 2024-04-08 [2026-07-19]. [考据脚注：该文章标题本身存在误导——“Moving TrueNAS from FreeBSD” 暗示 TrueNAS 整体从 FreeBSD 迁移，但文章实际讨论的是 SCALE 版本的 Linux 选择，并非 CORE 版本放弃 FreeBSD。经核查，该 URL 当前返回 404，但文章标题在互联网多个转载中可确认。]; Moore K. On the TrueNAS CORE Deprecation [EB/OL]. iXsystems Blog, 2024-04 [2026-07-19]. ［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］.［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
+- iXsystems. Introducing TrueNAS SCALE [EB/OL]. (2020)[2026-07-19]. <https://www.truenas.com/>; iXsystems. TrueNAS CORE Release Notes [EB/OL]. [2026-07-19]. <https://www.truenas.com/docs/core/>; Kennedy C. Why We're Moving TrueNAS from FreeBSD to Debian [EB/OL]. Blocks & Files, 2024-04-08 [2026-07-19]. [考据脚注：该文章标题本身存在误导——“Moving TrueNAS from FreeBSD” 暗示 TrueNAS 整体从 FreeBSD 迁移，但文章实际讨论的是 SCALE 版本的 Linux 选择，并非 CORE 版本放弃 FreeBSD。经核查，该 URL 当前返回 404，但文章标题在互联网多个转载中可确认。]; Moore K. On the TrueNAS CORE Deprecation [EB/OL]. iXsystems Blog, 2024-04 [2026-07-19]. ［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］.［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］
 
 <!-- DB_REF:freebsd.duckdb -->
 > **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 2010-2020 年间：488,947 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。

@@ -29,14 +29,14 @@ volume: 第17卷-政治制度与社区治理
 ## 辨析
 
 - “Linux Foundation 对 BSD 文化溯源的工具主义态度”的判断须有具体证据；Tux 与 BSD daemon 的文化运作差异须基于具体案例比较
-  - 文献：Linux Foundation 营销档案；Tux 商业化记录；BSD daemon 版权条款［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］ FreeBSD-SA 713 条（1996-2026）经资料数据库.duckdb freebsd_sa 表直接 COUNT 验证；NVD CVE 各项目数量经 nvd_cve_metadata 表 bsd_projects 字段 GROUP BY 验证：FreeBSD 421、OpenBSD 143、NetBSD 82、DragonFly 32；原大纲 FreeBSD-
+  - 文献：Linux Foundation 营销档案；Tux 商业化记录；BSD daemon 版权条款［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］ FreeBSD-SA 713 条（1996-2026）经资料数据库.duckdb freebsd_sa 表直接 COUNT 验证；NVD CVE 各项目数量经 nvd_cve_metadata 表 bsd_projects 字段 GROUP BY 验证：FreeBSD 421、OpenBSD 143、NetBSD 82、DragonFly 32；原大纲 FreeBSD-
 - 本目遵循 0 信任原则，其“被动修复→代码审计革命→Proactive 工程”的三阶段划分须以 FreeBSD/OpenBSD 安全公告历史（1995-2024）一手核验——1996 OpenBSD 代码审计革命的起点、2010s-2020s Proactive 机制（CET/ASLR/KASAN/pledge）在各 BSD 的具体引入时点均须逐条对应安全公告或 commit 记录，不得凭二手“趋势”综述笼统断言；“未来：SBOM 标准化、供应链安全验证、AI 辅助漏洞检测”属预测性判断而非已发生史实，正式撰写时须与已确证史实分列（据 319.3 节完整版回源补全）。
 - 考据过程留痕——【查证来源】BSD Daemon 版权页面经 <https://www.freebsd.org/copyright/daemon/> 一手核验，确认版权由 Marshall Kirk McKusick 个人持有（1988 年版权注册），版权私有化是事实陈述；FreeBSD Core Bylaws 2000.8.28 版与 2026.5.27 新版经 <https://www.freebsd.org/internal/bylaws/> 核验。
 - 考据过程留痕——【查证来源】freebsd-advocacy 邮件列表存档经 <https://lists.freebsd.org/archives/freebsd-advocacy/> 一手核验，确认 2022-2024 年共 7 条消息（作为 BSD 阵营话语权争夺正式渠道近乎停滞的证据）；BSD daemon 版权页面经 <https://www.freebsd.org/copyright/daemon/> 核验。
 
 ## 文献
 
-- Linux Foundation 营销档案；Tux 商业化记录；BSD daemon 版权条款［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
+- Linux Foundation 营销档案；Tux 商业化记录；BSD daemon 版权条款［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］
 
 ## 自反性声明
 

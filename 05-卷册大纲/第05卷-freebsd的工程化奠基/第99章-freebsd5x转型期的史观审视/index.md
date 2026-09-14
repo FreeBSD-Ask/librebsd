@@ -40,10 +40,10 @@ volume: 第05卷-freebsd的工程化奠基
 - 原材料/哲学/项目统摄史观/第 25 章.md（总纲第 5、6、8 条）；freebsd.duckdb freebsd-src/dragonfly-src 仓库 commits 表；Matthew Dillon（马修·狄龙）. Annoucning DragonFly BSD! [EB/OL]. 2003-07-16. <https://lists.freebsd.org/pipermail/freebsd-current/2003-July/006889.html>；FreeBSD 5.0-RELEASE Release Notes；Bouron et al. The Battle of the Schedulers: FreeBSD ULE vs. Linux CFS [C]//USENIX ATC 2018.（2026-09-12 整改：著录尾部［A］残留清除——批次 C101 问题 5）
 - FreeBSD 5.0-RELEASE Announcement [EB/OL]. 2003-01-19. **<https://www.freebsd.org/releases/5.0R/announce/>** ；FreeBSD 5.3-RELEASE Announcement [EB/OL]. 2004-11-06. **<https://www.freebsd.org/releases/5.3R/announce/>** ；freebsd.duckdb freebsd-src 仓库 tags 表（`release/5.0.0`、`release/5.3.0`、`release/7.1.0`）；Matthew Dillon. Annoucning DragonFly BSD! [EB/OL]. 2003-07-16. **<https://lists.freebsd.org/pipermail/freebsd-current/2003-July/006889.html>** ；Roberson, J. ULE: A Modern Scheduler for FreeBSD [C]//BSDCon 2003；Bouron et al. The Battle of the Schedulers: FreeBSD ULE vs. Linux CFS [C]//USENIX ATC 2018；Phoronix FreeBSD 5.x 基准测试；freebsd-performance/freebsd-hackers 邮件列表 2003-2005 存档 ［A］
 - 原材料/哲学/项目统摄史观/第 25 章.md（总纲第 13、19、21 条）；FreeBSD 5.0-RELEASE Announcement [EB/OL]. 2003-01-19. **<https://www.freebsd.org/releases/5.0R/announce/>** ；FreeBSD 5.3-RELEASE Announcement [EB/OL]. 2004-11-06. **<https://www.freebsd.org/releases/5.3R/announce/>** ；freebsd.duckdb freebsd-src 仓库 tags 表；Matthew Dillon. Annoucning DragonFly BSD! [EB/OL]. 2003-07-16. **<https://lists.freebsd.org/pipermail/freebsd-current/2003-July/006889.html>** ；DragonFly BSD Project. History [EB/OL]. **<https://www.dragonflybsd.org/history/>** ；DragonFly BSD 2.0 Release Notes [Z]. 2008 ［A］
-- 各操作系统 Release Notes［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
-- 操作系统历史研究［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
-- 市场份额数据［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
-- 市场份额调查［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
-- 基准测试；Distrowatch［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
-- DragonFly 历史；决议［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
-- 决议；邮件［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
+- 各操作系统 Release Notes［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］
+- 操作系统历史研究［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］
+- 市场份额数据［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］
+- 市场份额调查［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］
+- 基准测试；Distrowatch［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］
+- DragonFly 历史；决议［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］
+- 决议；邮件［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］

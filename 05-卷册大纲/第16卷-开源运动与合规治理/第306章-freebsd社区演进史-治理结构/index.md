@@ -24,7 +24,7 @@ volume: 第16卷-开源运动与合规治理
 - 辨析：【双库核查 2026-08-15】邮件列表库 freebsd-hackers 2000-2002 年查询 ‘Jordan Hubbard’ 命中 5 条（Jordan Hubbard 本人 2000 年活跃参与），参考文献库 ‘Jordan Hubbard’ 命中 5 条（lisa08、bsdcan 2015/2016、coscup 2019
 - 总纲第 23 条——社区治理的共识模式效率局限
   - 辨析：Rice 演讲的具体原文需查 AsiaBSDCon proceedings；2008 年前讨论的具体提案需考据
-  - 文献：Benno Rice 2018 AsiaBSDCon“A Tale of Two Repositories”；LWN 2018 FreeBSD coverage［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
+  - 文献：Benno Rice 2018 AsiaBSDCon“A Tale of Two Repositories”；LWN 2018 FreeBSD coverage［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］
 
 ## 306.1.2 治理结构演变历程
 
@@ -34,13 +34,13 @@ volume: 第16卷-开源运动与合规治理
 ## 306.1.3 邮件列表与治理模式辨析
 
 - 要点：FreeBSD 邮件列表既是技术讨论场所也是治理决策的非正式平台，与 Linux LKML 的高流量补丁讨论
-- Hubbard 2001-06-25 Apple Announcement；Hubbard 2002-05-01 Resignation Letter；Linux.com 2002 Jordan Hubbard Resigns［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
+- Hubbard 2001-06-25 Apple Announcement；Hubbard 2002-05-01 Resignation Letter；Linux.com 2002 Jordan Hubbard Resigns［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］
 
 ## 306.10.2 离开对社区凝聚力的效应
 
 - 要点：Hubbard 离开削弱 FreeBSD 早期创始团队的凝聚力，象征“创始时代”终结
 - 史料：freebsd-hackers 2001-20
-- Benno Rice 2018 AsiaBSDCon“A Tale of Two Repositories”；LWN 2018 FreeBSD coverage［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
+- Benno Rice 2018 AsiaBSDCon“A Tale of Two Repositories”；LWN 2018 FreeBSD coverage［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］
 
 ## 306.11.2 CVS 到 SVN 到 Git 迁移迟缓
 
@@ -53,7 +53,7 @@ volume: 第16卷-开源运动与合规治理
 - 史料：Harper 个人博客与 Twitter、freebsd-hackers 关于 Harper 离开的讨论 ［A］
 - 史观：总纲第 25 条——延续与终结，关键人物离场
 - 辨析：Ha
-- FreeBSD CI Documentation；BSDCan 2017 CI talks［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
+- FreeBSD CI Documentation；BSDCan 2017 CI talks［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］
 
 ## 306.13.2 2017 年后测试建设过程
 

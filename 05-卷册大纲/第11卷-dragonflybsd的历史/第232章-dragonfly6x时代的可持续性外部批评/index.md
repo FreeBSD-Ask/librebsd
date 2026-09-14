@@ -39,7 +39,7 @@ volume: 第11卷-dragonflybsd的历史
 
 ## 辨析
 
-- 批评发言可能被断章取义——须结合完整上下文辨析；OSNews/Slashdot 等技术媒体报道须经 archive.org 核验原始 URL，避免链接腐烂导致引述失真；DragonFly users@ 邮件列表中用户担忧发言的具体内容 ［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］ 须以 **lists.dragonflybsd.org** 归档为准
+- 批评发言可能被断章取义——须结合完整上下文辨析；OSNews/Slashdot 等技术媒体报道须经 archive.org 核验原始 URL，避免链接腐烂导致引述失真；DragonFly users@ 邮件列表中用户担忧发言的具体内容 ［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］ 须以 **lists.dragonflybsd.org** 归档为准
 - commit 数量并非贡献唯一指标——**dragonfly.duckdb** 显示 Aaron LI 868 条 commit 多为 GPU 驱动回移与 HAMMER 2 维护性工作，Dillon 79 条 commit 多为重大架构决策的实现，单条 commit 影响力差异显著；贡献者邮箱合并须谨慎——**dragonfly.duckdb** 显示 Dillon 使用多个邮箱，统计时须按邮箱合并规则归并为同一贡献者，避免重复计数
 - 跨项目比较须结合项目目标——**dragonfly.duckdb** 显示 commit 量差距显著，但 DragonFly 与 OpenBSD 资源约束下专注减法，FreeBSD 与 NetBSD 资源充足下兼顾减法与加法；技术淘汰的节奏须结合具体项目辨析——DragonFly 6.x 的 vkernel 缺席（6.x 时期仅 13 条 commit）反映该子系统的维护优先级下调，属主体选择而非能力丧失
 - 市场份额数据须谨慎采用——BSD 项目通常无商业销售数据，须结合镜像下载量、邮件列表活跃度、第三方调查等多源数据交叉验证；**dragonfly.duckdb** commit 量比较须考虑 commit 粒度差异——部分项目 commit 粒度大、部分项目 commit 粒度小，单纯 commit 数量比较可能误导；DragonFly 2026 年 commit 回升至 906 条反映项目仍有维护能力，与 2024 年 277 条的低谷相比明显回升，但绝对量仍远低于 FreeBSD 主线

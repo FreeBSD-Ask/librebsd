@@ -39,8 +39,8 @@ volume: 第06卷-freebsd的核心技术革新
 
 ## 文献
 
-- FreeBSD Security Officer. Infrastructure Intrusion Incident Report [Z]. 2012-11-17（以及后续更新公告）.［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
-- FreeBSD Project. Post-incident security improvements summary [Z]. 2013.［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
+- FreeBSD Security Officer. Infrastructure Intrusion Incident Report [Z]. 2012-11-17（以及后续更新公告）.［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］
+- FreeBSD Project. Post-incident security improvements summary [Z]. 2013.［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］
 
 ## 127.10.3 Colin Percival 与 Security Team
 
@@ -53,7 +53,7 @@ volume: 第06卷-freebsd的核心技术革新
 
 - 要点：从旧 pkg_*迁移到* *pkg(8)* * 的过程在 10.x 早期（2014-2015）伴随大量兼容性问题与用户抱怨：pkg 1.10.1 等早期版本升级后出现 pkg 数据库损坏导致 “整个 pkg 环境无法使用” 的问题；从 pkg 1.x 早期版本升级到后续版本时出现
 - FreeBSD Handbook. Using pkg for Binary Package Management [Z]. docs.freebsd.org. ［B］
-- FreeBSD 10.0-RELEASE Announcement/Release Notes [Z]. 2014；NLnet Labs. Unbound Documentation [EB/OL]. unbound.net；Wijngaards W. Unbound Design [R]. NLnet Labs, 2008.［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
+- FreeBSD 10.0-RELEASE Announcement/Release Notes [Z]. 2014；NLnet Labs. Unbound Documentation [EB/OL]. unbound.net；Wijngaards W. Unbound Design [R]. NLnet Labs, 2008.［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］
 
 ## 127.7.2 sysinstall 退役与 bsdinstall 继任
 
@@ -63,7 +63,7 @@ volume: 第06卷-freebsd的核心技术革新
 ## 127.8.2 RCTL 资源控制与其他内核改进
 
 - 要点：RCTL（Resource Limits，**rctl(8)**）框架在 FreeBSD 9.0 已初步引入但在 10.x 时期持续完善。RCTL 允许细粒度控制进程/用户/jail/登录类的资
-- FreeBSD 10.1-RELEASE Announcement [Z]. 2014；FreeBSD Supported Platforms page [Z]. freebsd.org/platforms/.［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
+- FreeBSD 10.1-RELEASE Announcement [Z]. 2014；FreeBSD Supported Platforms page [Z]. freebsd.org/platforms/.［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］
 
 ## 127.9.2 arm64/AArch64 初导入
 

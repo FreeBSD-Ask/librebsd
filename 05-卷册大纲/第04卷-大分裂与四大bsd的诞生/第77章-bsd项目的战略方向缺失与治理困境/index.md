@@ -21,7 +21,7 @@ volume: 第04卷-大分裂与四大bsd的诞生
   - 辨析：考据过程留痕——【查证来源】项目史观总纲第 5 条原文经 据原文第 25 章 Read 一手核验（2026-07-23 复核），项目史观总纲第 5 章第 2 节“英雄人物的偶然性”原文经 据原文第 5 章 Read 一手核验（2026-07-23 复核）〔待核：原文截断，后文待回源〕
 - 组织结构塑造技术路径（专题语，不设总纲条号；原挂“总纲第 5 条——组织结构塑造技术路径”系伪标签，权威第 5 条为“没有必然性，只有偶然性”，依 2026-09-14 核查报告去条号留论旨）：路线图缺失反映 FreeBSD 治理结构的长期问题
 - 辨析：路线图缺失的具体影响在不同叙事中略有差异——需对照 FreeBSD Foundation 公告核实
-- 文献：FreeBSD Foundation Technology Roadmap 2021.9；Hubbard 2001 辞职信［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
+- 文献：FreeBSD Foundation Technology Roadmap 2021.9；Hubbard 2001 辞职信［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］
 
 ## 76.7.
 
@@ -34,22 +34,22 @@ volume: 第04卷-大分裂与四大bsd的诞生
 
 - 考据过程留痕——【查证来源】项目史观总纲第 5 条原文经 据原文第 25 章 Read 一手核验（2026-07-23 复核），项目史观总纲第 5 章第 2 节“英雄人物的偶然性”原文经 据原文第 5 章 Read 一手核验（2026-07-23 复核），“将英雄人物的出现必然化是一种机械的错误”原文确认存在；〔待核：原文截断，后文待回源〕
 - 路线图缺失的具体影响在不同叙事中略有差异——需对照 FreeBSD Foundation 公告核实
-- 文献：FreeBSD Foundation Technology Roadmap 2021.9；Hubbard 2001 辞职信［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
+- 文献：FreeBSD Foundation Technology Roadmap 2021.9；Hubbard 2001 辞职信［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］
 
 #
 
 - 分裂代价的程度在不同叙事中差异较大——需对照多方公开声明核实
-  - 文献：BSD 三项目发展史；BSD vs Linux 对比研究［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
+  - 文献：BSD 三项目发展史；BSD vs Linux 对比研究［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］
 
 ## 76.7.2 协同失败的批评
 
 - 要点：BSD 三项目协同失败被长期批评——代码共享减少、跨
 - 考据过程留痕——【查证来源】FreeBSD 官方关于页面、NetBSD 官方关于页面与历史页面、OpenBSD 官方 FAQ 与 goals 页面经 WebFetch 一手核验（2026-07-24 复核），三项目定位声明的关键表述（“features, speed, and stability”“portability”"correctness, security, standardizatio
-- 考据过程留痕——【查证来源】Linux 内核 subsystem maintainer 体系与 driver 子系统架构的官方文档经 WebSearch 检索，具体一手原文 URL 未取得，沿用既有公开技术资料 ［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］；OpenBSD `pf` 跨项目移植与 OpenSSH 跨项目采用的具体 release not
+- 考据过程留痕——【查证来源】Linux 内核 subsystem maintainer 体系与 driver 子系统架构的官方文档经 WebSearch 检索，具体一手原文 URL 未取得，沿用既有公开技术资料 ［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］；OpenBSD `pf` 跨项目移植与 OpenSSH 跨项目采用的具体 release not
 
 ## 文献
 
-- 本项目内部哲学文献《项目统摄史观》第 5 章“偶然性与必然性”、第 25 章总纲第 5 条（sacred 哲学源材料）；本章 30.1.1〔待核实节号〕 节 bsd_commits.duckdb 数据库证据；Jordan Hubbard 2001 辞职信［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］；LWN 2007 Corbet 报道 ［A］；jmmv 2013 EuroBSDCon 报道 ［A］
+- 本项目内部哲学文献《项目统摄史观》第 5 章“偶然性与必然性”、第 25 章总纲第 5 条（sacred 哲学源材料）；本章 30.1.1〔待核实节号〕 节 bsd_commits.duckdb 数据库证据；Jordan Hubbard 2001 辞职信［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］；LWN 2007 Corbet 报道 ［A］；jmmv 2013 EuroBSDCon 报道 ［A］
 
 
 <!-- dangan-20260908 消解回写 -->
@@ -58,12 +58,12 @@ volume: 第04卷-大分裂与四大bsd的诞生
 ## 76.10.2 总纲第 8 条审视：三项目本体论平等与“斩杀线”的资源分配
 
 - 要点：总纲
-- FreeBSD Foundation Technology Roadmap 2021.9；Hubbard 2001 辞职信［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
+- FreeBSD Foundation Technology Roadmap 2021.9；Hubbard 2001 辞职信［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］
 
 ## 76.6.2 NetBSD 与 OpenBSD 的无规划传统
 
 - 要点：NetBSD“无截止日期”发布模式（Pronchery 2014 论文“Carve your NetBSD”）——“it is done when considered ready”；NetBSD 无公开的功能路线图或战略文档；O
-- BSD 三项目发展史；BSD vs Linux 对比研究［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
+- BSD 三项目发展史；BSD vs Linux 对比研究［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］
 
 ## 76.7.2 协同失败的批评
 
@@ -71,7 +71,7 @@ volume: 第04卷-大分裂与四大bsd的诞生
 - 史料：三项目主线合并记录、跨项目 committer 名单统计、BSDCan/AsiaBSDCon 历年议题对比 ［A］
 - 史观：总纲第 4 条——分离聚合是永恒规律（原挂“总纲第 2 条——分离与聚合”系伪标签，权威第 2 条为“历史是形式主义化的非存在”；依 2026-09-14 核查报告改挂第 4 条）：协同
 - FreeBSD Project. About FreeBSD [EB/OL]. <https://www.freebsd.org/about/>（2026-07-24 复核）；NetBSD Project. About NetBSD [EB/OL]. <https://www.netbsd.org/about/>（2026-07-24 复核）；NetBSD Project. History of the NetBSD Project [EB/OL]. <https://www.netbsd.org/about/history.html>（2026-07-24 复核）；OpenBSD Proje
-- Linux 内核开发模式文档［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］；Linux 内核 eBPF、cgroups 等技术创新扩散案例 ［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］；OpenBSD `pf` 跨项目移植记录 ［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］；OpenSSH 跨项目采用记录 ［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］. <https://www.freebsd.org/about/>（2026-07-24 复核）；NetBSD Project. About NetBSD [EB/OL]. <https://www.netbsd.org/about/>（2026-07-24 复核）；NetBSD Pro
+- Linux 内核开发模式文档［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］；Linux 内核 eBPF、cgroups 等技术创新扩散案例 ［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］；OpenBSD `pf` 跨项目移植记录 ［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］；OpenSSH 跨项目采用记录 ［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］. <https://www.freebsd.org/about/>（2026-07-24 复核）；NetBSD Project. About NetBSD [EB/OL]. <https://www.netbsd.org/about/>（2026-07-24 复核）；NetBSD Pro
 - 本项目内部哲学文献《项目统摄史观》第 19 章“历史解释学与权力”、第 21 章“革命与改革：历史方法论”、第 25 章总纲第 13、19、21 条（sacred 哲学源材料）；本章 30.1 至 30.7 三足鼎立格局辩证链；本章 30.2 节 BSD 许可证条款对比；本章 30.9 节同期操作系统比较；FreeBSD Project. About FreeBSD [EB/OL]. <https://www.freebsd.org/about/>（2026-07-24 复核）；NetBSD Project. About NetBSD [EB/OL]. <<https://www.netbsd>.
 - BSDDN 跨项目 committer 名单；跨项目 committer 自述 ［A］
 

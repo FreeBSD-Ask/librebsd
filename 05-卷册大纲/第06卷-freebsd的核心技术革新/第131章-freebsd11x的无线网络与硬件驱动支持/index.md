@@ -40,15 +40,15 @@ volume: 第06卷-freebsd的核心技术革新
 
 ## 文献
 
-- FreeBSD vmx(4)/ena(4) Manual Pages [Z]；FreeBSD 11.1-RELEASE Announcement（Hyper-V Gen2）[Z]. 2017.［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
+- FreeBSD vmx(4)/ena(4) Manual Pages [Z]；FreeBSD 11.1-RELEASE Announcement（Hyper-V Gen2）[Z]. 2017.［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］
 
 <!-- DB_REF:freebsd.duckdb -->
 > **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 2010-2020 年间：488,947 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
-- FreeBSD 11.0-11.4 RELEASE Announcements [Z]. 2016-2020；FreeBSD Security Information page support timeline [Z].［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
+- FreeBSD 11.0-11.4 RELEASE Announcements [Z]. 2016-2020；FreeBSD Security Information page support timeline [Z].［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］
 
 <!-- DB_REF:freebsd.duckdb -->
 > **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 2010-2020 年间：488,947 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
-- FreeBSD 11.x RELEASE Announcements Acknowledgments/Dedication sections [Z]；FreeBSD Developer Information [EB/OL]. freebsd.org/doc/en_US.ISO8859-1/articles/contributors/.［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
+- FreeBSD 11.x RELEASE Announcements Acknowledgments/Dedication sections [Z]；FreeBSD Developer Information [EB/OL]. freebsd.org/doc/en_US.ISO8859-1/articles/contributors/.［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］
 
 <!-- DB_REF:freebsd.duckdb -->
 > **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 2010-2020 年间：488,947 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
@@ -56,11 +56,11 @@ volume: 第06卷-freebsd的核心技术革新
 
 <!-- DB_REF:freebsd.duckdb -->
 > **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 2010-2020 年间：488,947 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
-- FreeBSD 11.x Release Notes [Z]. 2016-2020［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］---
+- FreeBSD 11.x Release Notes [Z]. 2016-2020［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］---
 
 <!-- DB_REF:freebsd.duckdb -->
 > **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 2010-2020 年间：488,947 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
-- Lucas M W. Absolute FreeBSD [M]. 3rd ed. San Francisco: No Starch Press, 2018（基于 FreeBSD 11.x 体验）；FreeBSD 11.x RELEASE Announcements/Release Notes [Z]. 2016-2020；FreeBSD Foundation Annual Reports 2016-2020 [R].［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］---
+- Lucas M W. Absolute FreeBSD [M]. 3rd ed. San Francisco: No Starch Press, 2018（基于 FreeBSD 11.x 体验）；FreeBSD 11.x RELEASE Announcements/Release Notes [Z]. 2016-2020；FreeBSD Foundation Annual Reports 2016-2020 [R].［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］---
 
 <!-- DB_REF:freebsd.duckdb -->
 > **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 2010-2020 年间：488,947 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。

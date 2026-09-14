@@ -34,7 +34,7 @@ volume: 第05卷-freebsd的工程化奠基
 
 - ULE 是否真比 4BSD 优越，须以基准测试回答；6 年成熟期是否过长；7.0 与 7.1 对 ULE 状态的表述差异——经 bsd_commits.duckdb tags 表验证，7.0-RELEASE 的 tagger_date 为 2008-02-24T05:45:17Z（cvs2svn 创建 tag），7.1-RELEASE 的 tagger_date 则为 2008-12-31T22:57:14Z（Ken Smith），官方公告日期分别为 2008 年 2 月 27 日与 2009 年 1 月 4 日，叙事须区分 tag 创建与公告发布两个时点。
 - 测试方法是否公平，需查测试环境（硬件、内核配置）
-  - 文献：FreeBSD 7.0 SMP Performance Benchmarks (freebsd.org 2008)；Phoronix“FreeBSD 7.0 Performance” (2008.3)；Roberson (2003) BSDCon paper［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］ 〔L3 官方文档〕
+  - 文献：FreeBSD 7.0 SMP Performance Benchmarks (freebsd.org 2008)；Phoronix“FreeBSD 7.0 Performance” (2008.3)；Roberson (2003) BSDCon paper［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］ 〔L3 官方文档〕
 - 厂商赞助，需查利益关系
   - 文献：FreeBSD 7.0-RELEASE/7.1-RELEASE Release Notes；McKusick & Neville-Neil (2014)；The FreeBSD Foundation 2007-2009 Annual Reports；BSDCan 2007-2009 Conference Proceedings；Phoronix FreeBSD
 - 大页是否真提升性能，需查基准测试
@@ -43,7 +43,7 @@ volume: 第05卷-freebsd的工程化奠基
 ## 文献
 
 - Roberson, J. ULE: A Modern Scheduler For Threaded SMP Applications in FreeBSD[C]//Proceedings of BSDCon 2003 (USENIX, 2003)；McKusick, M. K. & Neville-Neil, G. V. The Design and Implementation of the FreeBSD Operating System, 2nd ed. (Addison-Wesley, 2014), Chapter 4；FreeBSD 7.0/7.1 Release Notes
-- FreeBSD 7.0 SMP Performance Benchmarks (freebsd.org 2008)；Phoronix“FreeBSD 7.0 Performance” (2008.3)；Roberson (2003) BSDCon paper［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
+- FreeBSD 7.0 SMP Performance Benchmarks (freebsd.org 2008)；Phoronix“FreeBSD 7.0 Performance” (2008.3)；Roberson (2003) BSDCon paper［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］
 
 ## 104.3 大页支持的工程实现（存目）
 

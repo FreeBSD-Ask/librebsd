@@ -80,7 +80,7 @@ volume: 第08卷-freebsd的范式转换
 [] FreeBSD Project. FreeBSD Hackers Mailing List Archive [EB/OL]. <https://lists.freebsd.org/pipermail/freebsd-hackers/>.
 [] OpenBSD Project. OpenBSD misc Mailing List [EB/OL]. <https://marc.info/?laccopenbsd-misc>.
 [] Apple Inc. Daemons and Services Programming Guide [EB/OL]. [2026-07-22]. <https://developer.apple.com/library/archive/documentation/MacOSX/Conceptual/BPSystemStartup/Chapters/Introduction.html>.
-[] Oracle Corporation. Solaris 10 Service Management Facility Documentation [EB/OL]. ［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］. <https://docs.oracle.com/cd/E19253-01/817-1985/6mhc1gblh/index.html>.
+[] Oracle Corporation. Solaris 10 Service Management Facility Documentation [EB/OL]. ［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］. <https://docs.oracle.com/cd/E19253-01/817-1985/6mhc1gblh/index.html>.
 [] Robbins D, Marples R, Hubbs W, et al. OpenRC HISTORY [EB/OL]. [2026-07-22]. <https://raw.githubusercontent.com/OpenRC/openrc/master/HISTORY.md>.
 [] Gentoo Wiki. OpenRC [EB/OL]. [2026-07-22]. <https://wiki.gentoo.org/wiki/OpenRC>.
 [] Pape G. runit [EB/OL]. [2026-07-22]. <https://smarden.org/runit/>.

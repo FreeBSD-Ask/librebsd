@@ -45,11 +45,11 @@ volume: 第06卷-freebsd的核心技术革新
 
 <!-- DB_REF:freebsd.duckdb -->
 > **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 2018-2018 年间：47,408 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
-- FreeBSD Foundation Annual Report 2018 [R]；FreeBSD **cpucontrol(8)** Manual Page [Z]；FreeBSD Quarterly Status Reports 2018 [R].［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
+- FreeBSD Foundation Annual Report 2018 [R]；FreeBSD **cpucontrol(8)** Manual Page [Z]；FreeBSD Quarterly Status Reports 2018 [R].［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］
 
 <!-- DB_REF:freebsd.duckdb -->
 > **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 2010-2020 年间：488,947 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
-- FreeBSD **netdump(4)**/**netmap(4)** Manual Pages [Z]；FreeBSD 12.0-RELEASE Release Notes Userland/Kernel sections [Z]. 2018.［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
+- FreeBSD **netdump(4)**/**netmap(4)** Manual Pages [Z]；FreeBSD 12.0-RELEASE Release Notes Userland/Kernel sections [Z]. 2018.［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］
 - FreeBSD Release Engineering Team. FreeBSD 12.4-RELEASE Announcement [Z]. 2022-12-05；FreeBSD 12.4-RELEASE Release Notes [Z]. 2022；FreeBSD Security Information Unsupported Releases page [EB/OL]. freebsd.org/security/unsupported/；FreeBSD Project. release/12.4.0. freebsd-src 仓库 tag [DB/OL]. 2022-12-05T14:35:22-05:00. tag: release/12.4.0; commit: f2877ac4fb03265070b1cf97a07eb0e265bcaff9 ［A］FreeBSD 12.x 系列 release tag 间隔与发布偏差数据库验证（基于 **freebsd.duckdb** `tags` 表）见下表。
 
 | 版本 | tag 日期 | 公告日期 | 偏差（日） | 间隔（日） | tagger | commit hash | 版本控制时代 |

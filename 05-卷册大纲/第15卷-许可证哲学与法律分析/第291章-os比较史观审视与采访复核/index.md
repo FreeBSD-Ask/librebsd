@@ -29,7 +29,7 @@ volume: 第15卷-许可证哲学与法律分析
 ## 辨析
 
 - Linux“生态规模”是否真大于 BSD 须量化对比；Linux 基金会托管项目是否真“Linux 内核影响”须辨析——这些项目多为独立运行于 Linux 但非内核衍生；GPL 与 BSD 影响模式的对比须避免简单化
-  - 文献：Linux 基金会项目列表；许可证对比研究［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］. **sacred_sources.duckdb**（项目统摄史观第 5 章）; q.md“道与术的辩证”[Z]. **sacred_sources.duckdb**（原始哲学）; FreeBSD Project. FreeBSD License [EB/OL]. <https://www.freebsd.org/copyright/freebsd-license/>.
+  - 文献：Linux 基金会项目列表；许可证对比研究［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］. **sacred_sources.duckdb**（项目统摄史观第 5 章）; q.md“道与术的辩证”[Z]. **sacred_sources.duckdb**（原始哲学）; FreeBSD Project. FreeBSD License [EB/OL]. <https://www.freebsd.org/copyright/freebsd-license/>.
 
 ##### 291.12.2 从项目史观总纲第六章审视：主体性与和解
 
@@ -39,7 +39,7 @@ volume: 第15卷-许可证哲学与法律分析
 
 ## 文献
 
-- Linux 基金会项目列表；许可证对比研究［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
+- Linux 基金会项目列表；许可证对比研究［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］
 
 
 <!-- dangan-20260908 消解回写 -->

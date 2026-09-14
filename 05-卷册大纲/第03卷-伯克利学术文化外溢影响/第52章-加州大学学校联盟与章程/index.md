@@ -34,7 +34,7 @@ volume: 第03卷-伯克利学术文化外溢影响
 
 ## 文献
 
-- UC Office of the President. <https://www.ucop.edu/> (accessed 2026-07-28)；UC Berkeley International Office. Official Website［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］；UC Berkeley Bancroft Library. CU-551 UC President's Office Records ［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］；UC Berkeley, Office of the Chancellor Records ［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］；UC Berkeley Bancroft Library. CU-551 CSRG Records, 1974-2005 ［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］；Joint Communique of the United States of America and the People's Republic of China (1972, 1979, 1982)；C9 League. Official Information (established 2009) ［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］> （2026-09-12 整改：原「### 史观映射」整块并入「## 文献」首条末尾（标题内嵌+--- 残留+多条以分号串并），已迁至「## 史观」并按需拆分——批次 C060 问题 4/6。）
+- UC Office of the President. <https://www.ucop.edu/> (accessed 2026-07-28)；UC Berkeley International Office. Official Website［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］；UC Berkeley Bancroft Library. CU-551 UC President's Office Records ［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］；UC Berkeley, Office of the Chancellor Records ［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］；UC Berkeley Bancroft Library. CU-551 CSRG Records, 1974-2005 ［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］；Joint Communique of the United States of America and the People's Republic of China (1972, 1979, 1982)；C9 League. Official Information (established 2009) ［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］> （2026-09-12 整改：原「### 史观映射」整块并入「## 文献」首条末尾（标题内嵌+--- 残留+多条以分号串并），已迁至「## 史观」并按需拆分——批次 C060 问题 4/6。）
 
 ---
 

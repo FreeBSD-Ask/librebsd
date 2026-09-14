@@ -23,7 +23,7 @@ volume: 第10卷-openbsd的历史
 ## 辨析
 
 - Release Notes 的完整性以 plus.html 页面为准——该页面仅记录“重要的和用户可见的变更”，部分内部代码重构（如 guenther 的 NOLOCK 标记）可能未在 Release Notes 中记录但可在 commit log 中定位；OpenBSD 仓库无 release tag（OpenBSD 使用 CVS 而非 git tag 标记 release），故 release
-- de Raadt 发言的语义以 marc.info 存档原始帖子为准——部分帖子被社区解读为“粗暴”，但原始语境中多为技术论证；邮件列表档案的完整性以 marc.info 与 OpenBSD 官方存档为准——早期档案（1995-2000）可能存在缺失 ［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］ 参考文献全文数据库（4077 篇全文，27138 条时间线事件）—— 对应 openbsd.duckdb
+- de Raadt 发言的语义以 marc.info 存档原始帖子为准——部分帖子被社区解读为“粗暴”，但原始语境中多为技术论证；邮件列表档案的完整性以 marc.info 与 OpenBSD 官方存档为准——早期档案（1995-2000）可能存在缺失 ［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］ 参考文献全文数据库（4077 篇全文，27138 条时间线事件）—— 对应 openbsd.duckdb
 
 <!-- PODCAST_REVIEW v20260829 -->
 <!-- 语义复核范围：BSD Now EP166、BSD Now EP86、BSD Now EP53、BSD Now EP52、BSD Now EP32、BSD Now EP18、BSD Now EP10、BSDTalk EP228（共 8 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->

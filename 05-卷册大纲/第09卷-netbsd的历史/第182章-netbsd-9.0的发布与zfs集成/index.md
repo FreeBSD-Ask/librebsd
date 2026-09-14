@@ -25,7 +25,7 @@ volume: 第09卷-netbsd的历史
 ## 辨析
 
 - NetBSD ZFS 与 FreeBSD OpenZFS 的关系存在叙事分歧——部分资料称 NetBSD 直接移植 FreeBSD OpenZFS，部分称通过 OpenZFS 仓库共享代码，需对照源码核验。经 netbsd.duckdb netbsd-src 仓库 commits 表验证：NetBSD ZFS 代码由 chs（Chuck Silvers）于 2018-05-28 从 FreeBSD SVN
-- 先前叙事中称“9.0 发布日期 2020.5”系误传——NetBSD 官方发布页面（netbsd.org/releases/formal-9/NetBSD-9.0.html）明确为 2020.2.14；9.0 发布周期实际约 1 年 7 个月而非 2.5 年；9.0 的实际功能完整性需对照 release tarball 核验 ［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
+- 先前叙事中称“9.0 发布日期 2020.5”系误传——NetBSD 官方发布页面（netbsd.org/releases/formal-9/NetBSD-9.0.html）明确为 2020.2.14；9.0 发布周期实际约 1 年 7 个月而非 2.5 年；9.0 的实际功能完整性需对照 release tarball 核验 ［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］
 
 <!-- DB_REF:netbsd.duckdb -->
 > **数据库引用（netbsd.duckdb）**：本子节对应 netbsd 代码仓库。> 2020-2020 年间：34,930 次提交。> 仓库总览：1,999,412 次提交，1,545 位贡献者（contributors 表行数，1992-07-13 至 2026-08-24）。

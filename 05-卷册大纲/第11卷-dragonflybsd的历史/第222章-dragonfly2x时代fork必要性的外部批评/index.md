@@ -35,7 +35,7 @@ volume: 第11卷-dragonflybsd的历史
 <!-- DB_REF:dragonfly.duckdb -->
 > **数据库引用（dragonfly.duckdb）**：本子节对应 dragonfly 代码仓库。
 > 2003-2026 年间：656,206 次提交。
-> 仓库总览：656,206 次提交，535 位贡献者，2003-06-17 至 2026-08-18。
+> 仓库总览：656,207 次提交，213 位贡献者，2003-06-17 至 2026-08-18。
 
 - DragonFly commit log；kernel@ 邮件列表档案；贡献者个人简历 ［A］
 
@@ -50,6 +50,6 @@ volume: 第11卷-dragonflybsd的历史
 <!-- DB_REF:dragonfly.duckdb -->
 > **数据库引用（dragonfly.duckdb）**：本子节对应 dragonfly 代码仓库。
 > 2003-2026 年间：656,206 次提交。
-> 仓库总览：656,206 次提交，535 位贡献者，2003-06-17 至 2026-08-18。
+> 仓库总览：656,207 次提交，213 位贡献者，2003-06-17 至 2026-08-18。
 
 ［存目·DEFERRED 登记：文末两枚 DB_REF:dragonfly.duckdb 块内容完全重复，系注入管线产物，登记 DEFERRED 待管线去重，块内数据未作任何改动。］

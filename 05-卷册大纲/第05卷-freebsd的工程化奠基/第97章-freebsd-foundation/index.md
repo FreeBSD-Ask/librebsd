@@ -56,7 +56,7 @@ volume: 第05卷-freebsd的工程化奠基
 
 <!-- DB_REF:freebsd.duckdb -->
 > **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 1996-2010 年间：482,545 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
-- 各基金会 990 表［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
+- 各基金会 990 表［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］
 
 <!-- DB_REF:freebsd.duckdb -->
 > **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 1996-2010 年间：482,545 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
@@ -64,7 +64,7 @@ volume: 第05卷-freebsd的工程化奠基
 
 <!-- DB_REF:freebsd.duckdb -->
 > **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 1996-2010 年间：482,545 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
-- Foundation 档案［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
+- Foundation 档案［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］
 FreeBSD 社区论文：[FP-2020-014] FreeBSD Around the World!（Deb Goodkin（德布·古德金），2020）<https://papers.freebsd.org/2020/fosdem/goodkin-freebsd_around_the_world/>
 FreeBSD 社区论文：[FP-2018-002] Flexible Disk Use in OpenZFS（Matt Ahrens，2018）<https://papers.freebsd.org/2018/bsdcan/ahrens-flexible_disk_use_in_openzfs/>
 FreeBSD 社区论文：[FP-2018-043] The FreeBSD Foundation and How We Are Changing the World（Deb Goodkin，2018）<https://papers.freebsd.org/2018/fosdem/deb-the_freebsd_foundation_and_how-we_are_changing_the_world/>
@@ -97,7 +97,7 @@ FreeBSD 社区论文：[FP-1998-002] Malloc(3) revisited（Poul-Henning Kamp，1
 - FreeBSD 相关记录（详情见存疑库；本条为自动抽取块，未经人工核验，引用前须逐条验证）。文献 (Code, 2024) 提及 Tetlow, Gordon〔存疑：原文记作“FreeBSD Foundation 执行董事”，与 97.11 报告（Goodkin 任执行总监）及 EP616 口述冲突，Gordon Tetlow 系开发者，职务归属待核〕，在基金会治理和项目战略规划中发挥关键作用。文献 (FreeBSD-Foundation-April-2016-Update, 2016) 提及 Neville-Neil, George，作为 FreeBSD Core Team 成员，在存储系统方面做出了重要贡献。文献 (FreeBSD-Foundation-August-2016-Update, 2016) 提及 Baldwin, John，作为 FreeBSD 核心开发者，在内核修复和架构支持方面做出了重要贡献。文献 (FreeBSD-Foundation-December-2016-Update, 2016) 提及 Watson, Robert N. M.，以基金会董事会成员身份在上海 BSD 聚会中发表了演讲。文献 (FreeBSD-Foundation-January-2018-Update, 2018) 提及 Percival, Colin，作为 Tarsnap 总裁，对 FreeBSD 安全更新基础设施做出了重要贡献。**新增技术**文献 (Code, 2024) 讨论 bhyve，该安全审计报告对 Capsicum 和 bhyve 子系统进行了全面的安全审查。文献 (Code, 2024) 讨论 FreeBSD，该报告由 FreeBSD Foundation 于 2024 年 11 月发布。文献 (FreeBSD-Foundation-April-2016-Update, 2016) 讨论 Ports Collection，FreeBSD 社区贡献者持续将改进和错误修复贡献回上游项目。文献 (FreeBSD-Foundation-December-2016-Update, 2016) 讨论 DTrace，社区成员对 Jails、DTrace 和 ZFS 等主题表现出浓厚兴趣。文献 (FreeBSD-Foundation-February-2018-Update, 2018) 讨论 lld，FreeBSD 工具链现代化项目将 LLVM 的 LLD 链接器引入基础系统。文献 (FreeBSD-Foundation-January-2018-Update, 2018) 讨论 clang，FreeBSD 在基础系统中采用 Clang 编译器作为默认编译器。**新增时间线事件**文献 (Code, 2024) 记录 2019：FreeBSD 安全公告涉及 CVE-2019-5607 漏洞。文献 (Code, 2024) 记录 2019：该安全公告涉及的漏洞模式分析。文献 (FreeBSD-Foundation-April-2016-Update, 2016) 记录 2012：FreeBSD 项目在 NYI 数据中心部署了东海岸镜像站点。文献 (FreeBSD-Foundation-April-2016-Update, 2016) 记录 2015：FreeBSD 测试集群在 2015 年底进行了重大升级。文献 (FreeBSD-Foundation-April-2018-Update, 2018) 记录 2018：FreeBSD 基金会参加了 Rootconf 2018 和 BSDCan 2018 等社区活动。文献 (FreeBSD-Foundation-April-2018-Update, 2018) 记录 2018：FreeBSD 基金会 2018 年 4 月更新，涵盖 Rootconf 2018 和 BSDCan 2018 
 <!-- DB_REF:freebsd.duckdb -->> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 2000-2000 年间：29,754 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
 
-- IRS EO Select Check；Foundation 历年 990 表［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
+- IRS EO Select Check；Foundation 历年 990 表［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］
 
 <!-- DB_REF:freebsd.duckdb -->
 > **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 1996-2010 年间：482,545 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。

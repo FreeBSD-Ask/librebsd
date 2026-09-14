@@ -18,7 +18,7 @@ volume: 第18卷-全球社区地区bsd史
 
 - 总纲第 20 条——历史地理塑造思想土壤，其硬件生态塑造了 BSD 的早期渗透路径
   - 辨析：Sony NEWS-OS 的 BSD 衍生程度需区分不同版本；IIJ 使用 FreeBSD 的具体规模需考据
-  - 文献：Sony NEWS Technical Reference；IIJ 1992-2000 技术报告；NEC EWS-4800 系统文档［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
+  - 文献：Sony NEWS Technical Reference；IIJ 1992-2000 技术报告；NEC EWS-4800 系统文档［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］
 
 ## 331.3.2 AsiaBSDCon（首届 2004 年于台北，2007 年届在东京）[考据完成：2
 
@@ -27,12 +27,12 @@ volume: 第18卷-全球社区地区bsd史
 ## 辨析
 
 - Sony NEWS-OS 的 BSD 衍生程度需区分不同版本；IIJ 使用 FreeBSD 的具体规模需考据
-  - 文献：Sony NEWS Technical Reference；IIJ 1992-2000 技术报告；NEC EWS-4800 系统文档［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
+  - 文献：Sony NEWS Technical Reference；IIJ 1992-2000 技术报告；NEC EWS-4800 系统文档［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］
 
 ## 331.10.2 TRON 项目与
 
 - KAME 项目 1998 年确切的发起日期需考据；CRL 资助的具体金额需分析
-  - 文献：KAME Project (1998-2006) Official Website Archive；WIDE Project Documentation［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
+  - 文献：KAME Project (1998-2006) Official Website Archive；WIDE Project Documentation［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］
 
 ## 331.3.2 AsiaBSDCon（首届 2004 年于台北，2007 年届在东京）[考据完成：2026-08-04 首届 AsiaBSDCon 为 2004-03-12~15 台北中央研究院，非
 
@@ -40,17 +40,17 @@ volume: 第18卷-全球社区地区bsd史
 
 ## 文献
 
-- Sony NEWS Technical Reference；IIJ 1992-2000 技术报告；NEC EWS-4800 系统文档［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
+- Sony NEWS Technical Reference；IIJ 1992-2000 技术报告；NEC EWS-4800 系统文档［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］
 
 ## 331.1.2 早稻田大学等高校 BSD 教育
 
 - 要点：早稻田大学、东京大学、东京工业大学、庆应义塾大学等高校在 1990 年代开设 BSD 相关课程，东京大学 1991 年出版《The Design and Implementation of the 4.3BSD UNIX Operat
-- 日本 Linux Users Group Archive；日本 Linux 内核贡献者统计［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
+- 日本 Linux Users Group Archive；日本 Linux 内核贡献者统计［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］
 
 ## 331.10.2 TRON 项目与 BSD 的关系
 
 - 要点：TRON 项目（The Real-time Operating system Nucleus）由坂村健（Ken Sakamura）1984 年于东京大学发起，是日本特有的嵌入式实时操作系统家族。TRON 与 BSD 在技术路线上未直接竞争（TRON 面向嵌入式、BSD 面
-- KAME Project (1998-2006) Official Website Archive；WIDE Project Documentation［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
+- KAME Project (1998-2006) Official Website Archive；WIDE Project Documentation［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］
 
 ## 331.2.2 IPv6 协议栈的 BSD 实现
 

@@ -38,7 +38,7 @@ volume: 第05卷-freebsd的工程化奠基
 
 ## 文献
 
-- Federal Register；法案全文［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
+- Federal Register；法案全文［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］
 - FreeBSD 5.0-RELEASE Release Notes (2003.1)；Kamp, P.-H. 2002 BSDCon “GEOM—Modular Disk Framework”；geom(4) 手册页；FreeBSD Handbook “GEOM” Chapter；release/5.0.0. freebsd-src 仓库 tag [DB/OL]. 2003-01-16T16:56:23Z. tag: release/5.0.0; commit: 47227ef0ef663b7abb81ab5a60a450da9a93d24b ［A］
 - FreeBSD 5.3-RELEASE Announcement [Z]. 2004-11-04；Hartmeier D. The Design and Implementation of the OpenBSD Packet Filter (PF)[C]//BSDCon 2002. San Francisco, 2002；OpenBSD 3.0 Release Notes [Z]. 2001-12-01；Max Laier. Import pf from OpenBSD 3.5 (OPENBSD_3_5_BASE). freebsd-src [DB/OL]. 2004-06-16T23:03 ［A］
 - freebsd.duckdb（freebsd-src contributors 表，窗口 2002–2005，检索 2026-07-21）［A］；FreeBSD 项目贡献者指南（<https://docs.freebsd.org/en/articles/contributing/>）［B］

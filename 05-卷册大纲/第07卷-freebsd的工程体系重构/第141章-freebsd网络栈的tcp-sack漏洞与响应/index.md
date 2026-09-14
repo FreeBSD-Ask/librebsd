@@ -48,7 +48,7 @@ volume: 第07卷-freebsd的工程体系重构
 
 ## 文献
 
-- Dillon, M. (2003-2014). *DragonFly Kernel Design Posts*. dragonflybsd.org; DragonFly Project. (2009-2014). *Release Notes* (MPSAFE sections). dragonflybsd.org; Sherrill, J. (2014). *DragonFly Networking Performance*. BSDCan '14.［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
+- Dillon, M. (2003-2014). *DragonFly Kernel Design Posts*. dragonflybsd.org; DragonFly Project. (2009-2014). *Release Notes* (MPSAFE sections). dragonflybsd.org; Sherrill, J. (2014). *DragonFly Networking Performance*. BSDCan '14.［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］
 
 
 <!-- dangan-20260908 消解回写 -->

@@ -36,27 +36,27 @@ volume: 第11卷-dragonflybsd的历史
 ## 辨析
 
 - release notes 与 commit log 偶有不一致——bsd_commits.duckdb 显示 v5.2.0 的 tagger_date（2018-04-08）与 target_commit_date（2018-04-03）相差 5 天，反映 tag 创建与最后 commit 提交的时间差；AMD64 与 NVMe 改进的具体 commit 须以 commit_files 表核验 ［考据完——原文截断，待补全］
-- commit log 可能不完整反映改进全貌——dragonfly.duckdb 关键词搜索仅基于 message_subject，部分 HAMMER 2 commit 可能未在 message_subject 中提及‘HAMMER2’；Dillon 2019 年 HAMMER 2 commit 占比须以 commit_files 表核验 ［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］. dragonflybsd.org/release/；kernel@ 邮件列表档案 ［A］
+- commit log 可能不完整反映改进全貌——dragonfly.duckdb 关键词搜索仅基于 message_subject，部分 HAMMER 2 commit 可能未在 message_subject 中提及‘HAMMER2’；Dillon 2019 年 HAMMER 2 commit 占比须以 commit_files 表核验 ［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］. dragonflybsd.org/release/；kernel@ 邮件列表档案 ［A］
 
 <!-- DB_REF:dragonfly.duckdb -->
-> **数据库引用（dragonfly.duckdb）**：本子节对应 dragonfly 代码仓库。> 2017-2020 年间：163,928 次提交。> 仓库总览：656,206 次提交，535 位贡献者，2003-06-17 至 2026-08-18。
+> **数据库引用（dragonfly.duckdb）**：本子节对应 dragonfly 代码仓库。> 2017-2020 年间：163,928 次提交。> 仓库总览：656,207 次提交，213 位贡献者，2003-06-17 至 2026-08-18。
 - dragonfly.duckdb dragonfly-src 仓库 commits 表（HAMMER2 关键词与 Dillon 按年统计）；kernel@ 邮件列表档案；HAMMER 2 性能 benchmark 报告 ［A］
 
 <!-- DB_REF:dragonfly.duckdb -->
-> **数据库引用（dragonfly.duckdb）**：本子节对应 dragonfly 代码仓库。> 2018-2019 年间：94,083 次提交。> 仓库总览：656,206 次提交，535 位贡献者，2003-06-17 至 2026-08-18。
+> **数据库引用（dragonfly.duckdb）**：本子节对应 dragonfly 代码仓库。> 2018-2019 年间：94,083 次提交。> 仓库总览：656,207 次提交，213 位贡献者，2003-06-17 至 2026-08-18。
 - dragonfly.duckdb dragonfly-src 仓库 tags 表（v5.8.0/v6.0.0 完整字段）；DragonFly 5.8/6.0 release notes [EB/OL]. dragonflybsd.org/release/；kernel@ 邮件列表档案 ［A］
 
 <!-- DB_REF:dragonfly.duckdb -->
-> **数据库引用（dragonfly.duckdb）**：本子节对应 dragonfly 代码仓库。> 2020-2021 年间：92,381 次提交。> 仓库总览：656,206 次提交，535 位贡献者，2003-06-17 至 2026-08-18。
+> **数据库引用（dragonfly.duckdb）**：本子节对应 dragonfly 代码仓库。> 2020-2021 年间：92,381 次提交。> 仓库总览：656,207 次提交，213 位贡献者，2003-06-17 至 2026-08-18。
 - lists.dragonflybsd.org 邮件列表归档；mail-index.netbsd.org 邮件列表归档；lists.freebsd.org 邮件列表归档；marc.info OpenBSD 邮件列表备份；dragonfly.duckdb commits 表（关键词统计） ［A］
 
 <!-- DB_REF:dragonfly.duckdb -->
-> **数据库引用（dragonfly.duckdb）**：本子节对应 dragonfly 代码仓库。> 2023-2026 年间：72,611 次提交。> 仓库总览：656,206 次提交，535 位贡献者，2003-06-17 至 2026-08-18。
+> **数据库引用（dragonfly.duckdb）**：本子节对应 dragonfly 代码仓库。> 2023-2026 年间：72,611 次提交。> 仓库总览：656,207 次提交，213 位贡献者，2003-06-17 至 2026-08-18。
 - dragonfly.duckdb dragonfly-src 仓库 contributors 表（first_commit_date 序列）；lists.dragonflybsd.org 邮件列表归档；Dillon 个人网站；DragonFly commit log ［A］
 
 <!-- DB_REF:dragonfly.duckdb -->
-> **数据库引用（dragonfly.duckdb）**：本子节对应 dragonfly 代码仓库。> 2017-2026 年间：348,708 次提交。> 仓库总览：656,206 次提交，535 位贡献者，2003-06-17 至 2026-08-18。
-- 各 BSD 项目 release notes；DragonFly BSD Digest 2019.7.30 与 2021.1.8；DragonFly 5.6/6.0 release notes［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
+> **数据库引用（dragonfly.duckdb）**：本子节对应 dragonfly 代码仓库。> 2017-2026 年间：348,708 次提交。> 仓库总览：656,207 次提交，213 位贡献者，2003-06-17 至 2026-08-18。
+- 各 BSD 项目 release notes；DragonFly BSD Digest 2019.7.30 与 2021.1.8；DragonFly 5.6/6.0 release notes［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］
 - FreeBSD 社区论文：[FP-2004-001] The Challenges of Dynamic Network Interfaces（Brooks Davis，2004）**<https://papers.freebsd.org/2004/eurobsdcon/davis-challenges_of_dynamic_network_interfaces/>**
 
 ### 史观映射
@@ -74,11 +74,11 @@ DragonFly 5.x 时代体现了项目统摄史观中“会者定离”与“在虚
 ---
 
 <!-- DB_REF:dragonfly.duckdb -->
-> **数据库引用（dragonfly.duckdb）**：本子节对应 dragonfly 代码仓库。> 2003-2026 年间：656,206 次提交。> 仓库总览：656,206 次提交，535 位贡献者，2003-06-17 至 2026-08-18。
+> **数据库引用（dragonfly.duckdb）**：本子节对应 dragonfly 代码仓库。> 2003-2026 年间：656,206 次提交。> 仓库总览：656,207 次提交，213 位贡献者，2003-06-17 至 2026-08-18。
 - dragonfly.duckdb dragonfly-src 仓库 commits 表（HAMMER2 关键词统计）；McKusick M K, Neville-Neil G. The Design and Implementation of the FreeBSD Operating System [M]. 2nd ed. Addison-Wesley, 2015；各系统 release notes ［A］
 
 <!-- DB_REF:dragonfly.duckdb -->
-> **数据库引用（dragonfly.duckdb）**：本子节对应 dragonfly 代码仓库。> 2003-2026 年间：656,206 次提交。> 仓库总览：656,206 次提交，535 位贡献者，2003-06-17 至 2026-08-18。
+> **数据库引用（dragonfly.duckdb）**：本子节对应 dragonfly 代码仓库。> 2003-2026 年间：656,206 次提交。> 仓库总览：656,207 次提交，213 位贡献者，2003-06-17 至 2026-08-18。
 
 <!-- PODCAST_REVIEW v20260829 -->
 <!-- 语义复核范围：BSD Now EP324（共 1 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->

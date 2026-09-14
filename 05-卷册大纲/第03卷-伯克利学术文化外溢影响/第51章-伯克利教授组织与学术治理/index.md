@@ -34,10 +34,10 @@ volume: 第03卷-伯克利学术文化外溢影响
 
 ## 辨析
 
-- McKusick 获 EECS 系教职的具体年份——EECS 系档案未能在 2026-07-25 直接核查，McKusick 获教职的具体年份需查阅 EECS 系教师任命档案核实，保留 ［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］；CSRG 成员在 Academic Senate 的实际参与度两库无法验证，保留存疑（2026-09-12 整改：截断收束转存疑——批次 C072 问题 2）
+- McKusick 获 EECS 系教职的具体年份——EECS 系档案未能在 2026-07-25 直接核查，McKusick 获教职的具体年份需查阅 EECS 系教师任命档案核实，保留 ［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］；CSRG 成员在 Academic Senate 的实际参与度两库无法验证，保留存疑（2026-09-12 整改：截断收束转存疑——批次 C072 问题 2）
 
 ## 文献
 
-- UC Berkeley Bancroft Library. CU-551 CSRG Records, 1974-2005［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］；UC Berkeley, Department of Electrical Engineering and Computer Sciences. Department Records ［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］；UC Berkeley Bancroft Library. Academic Senate Archives, CU-5, CU-50 ［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］；UC Berkeley Bancroft Library. Berkeley Division of the Academic Senate Archives ［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］；McKusick, M. K. (1999) Twenty Years of Berkeley Unix // Open Sources: Voices from the Open Source Revolution. O'Reilly Media；CSRG Members Oral History Project, Bancroft Library ［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］> （2026-09-12 整改：原「### 史观映射」整块内嵌于「## 文献」节末行文（三级标题内嵌+单行堆叠+裸---），已拆分迁至「## 史观」——批次 C072 问题 3。）
+- UC Berkeley Bancroft Library. CU-551 CSRG Records, 1974-2005［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］；UC Berkeley, Department of Electrical Engineering and Computer Sciences. Department Records ［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］；UC Berkeley Bancroft Library. Academic Senate Archives, CU-5, CU-50 ［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］；UC Berkeley Bancroft Library. Berkeley Division of the Academic Senate Archives ［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］；McKusick, M. K. (1999) Twenty Years of Berkeley Unix // Open Sources: Voices from the Open Source Revolution. O'Reilly Media；CSRG Members Oral History Project, Bancroft Library ［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］> （2026-09-12 整改：原「### 史观映射」整块内嵌于「## 文献」节末行文（三级标题内嵌+单行堆叠+裸---），已拆分迁至「## 史观」——批次 C072 问题 3。）
 
 ---

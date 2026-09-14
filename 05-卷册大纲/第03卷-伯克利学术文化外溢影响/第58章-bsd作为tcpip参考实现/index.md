@@ -45,9 +45,9 @@ volume: 第03卷-伯克利学术文化外溢影响
 ## 文献
 
 - RFC 1094（Sun Microsystems, 1989）NFS: Network File System Protocol Specification；RFC 1057（Sun, 1988）RPC: Remote Procedure Call Protocol Specification；RFC 1014（Sun, 1987）XDR: External Data Representation Standard；Sandberg, R., Goldberg, D., Kleiman, S., Walsh, D. & Lyon, B. (1985) “Design and Implementation of the Sun Network Filesystem” Proc. USENIX Summer Conference 1985, pp. 119-130；Stern, H. (1991) “Managing NFS and NIS” O'Reilly ISBN 0-937175-75-7 ［B］
-- Apache License 1.0/2.0 原文；BSD 许可证原文；开源许可证比较研究（如 Rosen, L. (2005) “Open Source Licensing”）［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
+- Apache License 1.0/2.0 原文；BSD 许可证原文；开源许可证比较研究（如 Rosen, L. (2005) “Open Source Licensing”）［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］
 - Apache 历史； Allman 1983 ［A］
-- 互联网与 BSD 关系批评文本；市场史方法论研究；BSD 历史语境研究［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］[^doubt-resolved-124]: 据 new-york-basic-books (Lessig, 1999) 消解
+- 互联网与 BSD 关系批评文本；市场史方法论研究；BSD 历史语境研究［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］[^doubt-resolved-124]: 据 new-york-basic-books (Lessig, 1999) 消解
 
 <!-- PODCAST_REVIEW v20260829 -->
 <!-- 语义复核范围：BSD Now EP190、BSD Now EP1（共 2 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->

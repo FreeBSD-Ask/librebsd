@@ -33,7 +33,7 @@ volume: 第10卷-openbsd的历史
 - Release Notes 的完整性以 plus.html 页面为准——该页面仅记录“重要的和用户可见的变更”，部分内部代码重构可能未记录；commit log 中的 xenocara/SMP/vmm 相关 commit 须通过文件路径（如 xenocara/、sys/kern/、sys/dev/pv/）筛选方可定位
 - M CFI 的可能整合）须重新展开；【0 信任原则·合图的非折中主义】合图不是“RETGUARD 在 OpenBSD 内合理、在高性能场景下不合理”的简单分类，而是揭示“安全加固”与“性能可用性”的张力——OpenBSD 以性能代价换取安全加固是结构性选择而非道德缺陷，但这一选择的生态代价（市场份额低）
 - 年报的完整性以 OpenBSD Foundation 官方网站为准——年报逐年发布，部分细节可能未公开；财务记录的审计情况以加拿大政府非营利组织报告为准
-- 非提交贡献者（文档、ports、翻译）的记录缺口以 OpenBSD 邮件列表与 hackathons 报告为补充来源 ［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
+- 非提交贡献者（文档、ports、翻译）的记录缺口以 OpenBSD 邮件列表与 hackathons 报告为补充来源 ［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］
 - RETGUARD 与 LLVM CFI、Microsoft CFG 的对比以各自设计文档为准——三者设计目标与覆盖范围不同，RETGUARD 以 per-function 随机 canary 防护返回地址，LLVM CFI 以控制流完整性图防护间接调用，Microsoft CFG 以目标地址验证防护间接调用；RETGUARD 的性能开销以 OpenBSD tech@ 邮件列表讨论为准 [考据完成：
 
 ## 文献
@@ -41,23 +41,23 @@ volume: 第10卷-openbsd的历史
 - OpenBSD Release Notes [EB/OL]. <https://www.openbsd.org/plus.html>；openbsd.duckdb openbsd-src 仓库；OpenBSD CVS 仓库 [EB/OL]. <https://cvsweb.openbsd.org/> ［B］
 
 <!-- DB_REF:openbsd.duckdb -->
-> **数据库引用（openbsd.duckdb）**：本子节对应 openbsd 代码仓库。> 2016-2019 年间：73,060 次提交。> 仓库总览：491,195 次提交，3,352 位贡献者，1995-10-18 至 2026-08-25。
+> **数据库引用（openbsd.duckdb）**：本子节对应 openbsd 代码仓库。> 2016-2019 年间：73,060 次提交。> 仓库总览：491,195 次提交，1,031 位贡献者（contributors 表实测），1995-10-18 至 2026-08-25。
 - RETGUARD 与 LLVM CFI/Microsoft CFG 综合对比研究；OpenBSD 6.4 Release Notes [EB/OL]. <https://www.openbsd.org/64.html>；openbsd.duckdb openbsd-src 仓库 RETGUARD 相关 commit；编译时安全机制演进史 ［A］
 
 <!-- DB_REF:openbsd.duckdb -->
-> **数据库引用（openbsd.duckdb）**：本子节对应 openbsd 代码仓库。> 2013-2026 年间：248,174 次提交。> 仓库总览：491,195 次提交，3,352 位贡献者，1995-10-18 至 2026-08-25。
+> **数据库引用（openbsd.duckdb）**：本子节对应 openbsd 代码仓库。> 2013-2026 年间：248,174 次提交。> 仓库总览：491,195 次提交，1,031 位贡献者（contributors 表实测），1995-10-18 至 2026-08-25。
 - OpenBSD Foundation 年报 [EB/OL]. <https://www.openbsdfoundation.org/>；加拿大政府报告；Foundation 官方文档 ［B］
 
 <!-- DB_REF:openbsd.duckdb -->
-> **数据库引用（openbsd.duckdb）**：本子节对应 openbsd 代码仓库。> 2013-2026 年间：248,174 次提交。> 仓库总览：491,195 次提交，3,352 位贡献者，1995-10-18 至 2026-08-25。
+> **数据库引用（openbsd.duckdb）**：本子节对应 openbsd 代码仓库。> 2013-2026 年间：248,174 次提交。> 仓库总览：491,195 次提交，1,031 位贡献者（contributors 表实测），1995-10-18 至 2026-08-25。
 - openbsd.duckdb openbsd-src 仓库；OpenBSD 提交/文档/ports 贡献记录；OpenBSD 邮件列表存档 [EB/OL]. <https://marc.info/?laccopenbsd-misc> ［A］
 
 <!-- DB_REF:openbsd.duckdb -->
-> **数据库引用（openbsd.duckdb）**：本子节对应 openbsd 代码仓库。> 1995-2026 年间：491,195 次提交。> 仓库总览：491,195 次提交，3,352 位贡献者，1995-10-18 至 2026-08-25。
+> **数据库引用（openbsd.duckdb）**：本子节对应 openbsd 代码仓库。> 1995-2026 年间：491,195 次提交。> 仓库总览：491,195 次提交，1,031 位贡献者（contributors 表实测），1995-10-18 至 2026-08-25。
 - openbsd.duckdb openbsd-src 仓库 commit e688c2b0648a；OpenBSD 6.4 Release Notes [EB/OL]. <https://www.openbsd.org/64.html>；Mortimer 邮件列表发言 [EB/OL]. <https://marc.info/?laccopenbsd-tech>；LLVM CFI 文档 [EB/OL]. <https://clang.llvm.org/docs/ControlFlowIntegrity.html>；Microsoft CFG 文档 [EB/OL]. <https://learn.microsoft.com/en-us/windows/win32/secbgctrl/control-flow-guard> ［A］---
 
 <!-- DB_REF:openbsd.duckdb -->
-> **数据库引用（openbsd.duckdb）**：本子节对应 openbsd 代码仓库。> 2016-2019 年间：73,060 次提交。> 仓库总览：491,195 次提交，3,352 位贡献者，1995-10-18 至 2026-08-25。
+> **数据库引用（openbsd.duckdb）**：本子节对应 openbsd 代码仓库。> 2016-2019 年间：73,060 次提交。> 仓库总览：491,195 次提交，1,031 位贡献者（contributors 表实测），1995-10-18 至 2026-08-25。
 
 <!-- PODCAST_REVIEW v20260829 -->
 <!-- 语义复核范围：BSD Now EP270（共 1 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->

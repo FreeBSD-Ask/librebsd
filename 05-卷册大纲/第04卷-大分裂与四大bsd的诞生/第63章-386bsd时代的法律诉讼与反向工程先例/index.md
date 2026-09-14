@@ -39,17 +39,17 @@ volume: 第04卷-大分裂与四大bsd的诞生
 ## 辨析
 
 - 判决先例的适用范围在不同司法管辖区（第九巡回 vs 其他）需对照后续判例核验
-- ［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］ “BSD 一方叙事” 与 “USL 后继方叙事” 的代表性作品需对照具体史学文献核验，避免稻草人化；2004 年协议公开后史学叙事的 “重塑” 程度需通过 2004 年前后史学作品的文本对照量化评估；保密条款残留约束的具体范围（哪些事实仍被法律约束）需法律专家持续跟踪
+- ［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］ “BSD 一方叙事” 与 “USL 后继方叙事” 的代表性作品需对照具体史学文献核验，避免稻草人化；2004 年协议公开后史学叙事的 “重塑” 程度需通过 2004 年前后史学作品的文本对照量化评估；保密条款残留约束的具体范围（哪些事实仍被法律约束）需法律专家持续跟踪
 - 386BSD 被 “淘汰” 为三大 fork 指 386BSD 单人维护模式主导地位退场，386BSD 代码本身部分被 FreeBSD 1.0 继承（基于 386BSD 0.1 + 4.4BSD-Lite），须区分 “维护模式退场” 与 “代码继承”；NetBSD 0.8（1993.4）与 FreeBSD 1.0（1993.11）的关系需核对——两者均基于 386BSD 但 NetBSD 更早脱离
 - 发行节奏快是否必然导致生态增长需谨慎归因，Linux 1.0 后的商业化支持也是关键因素
 - 386BSD 安全基线对 OpenBSD 的传承须区分 “直接继承” 与 “间接继承”——OpenBSD 1.0 通过 NetBSD 1.0 fork 间接继承 386BSD 安全基线，但 OpenBSD 1.0 的直接基线是 NetBSD 1.0（基于 4.4BSD-Lite），而非 386BSD 0.1；386BSD 作为直接安全基线的地位被 4.4BSD-Lite 取代的考据基于 FreeBSD 2.0（1994-11）与 NetBSD 1.0（1994）均 rebase 至 4.4BSD-Lite 的事实
 
 ## 文献
 
-- Sega v. Accolade 977 F.2d 1510；Sony v. Connectix 203 F.3d 596；Maureen O'Rourke “Drawing the Boundary Between Copyright and Contract”［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］<!-- NEWREF:2432 -->
+- Sega v. Accolade 977 F.2d 1510；Sony v. Connectix 203 F.3d 596；Maureen O'Rourke “Drawing the Boundary Between Copyright and Contract”［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］<!-- NEWREF:2432 -->
 - McKusick, M. K. (1999) “Twenty Years of Berkeley Unix”（in Open Sources, O'Reilly）；2004 年后 BSD 史学论文（如 Ceruzzi, Campell-Kelly 等修订版作品）；Groklaw 2004 年公开文件；BSD 史学评论文献 ［B］
 - 386BSD Release Notes；FreeBSD/NetBSD/OpenBSD/DragonFly BSD fork 公告；Jolitz 单人维护记录；FreeBSD/NetBSD/OpenBSD Core Team 档案；Rodney W. Grimes. Initial import, 0.1 + pk 0.2.4-B1. freebsd-src [DB/OL]. 1993-06-12T14:49:13Z. 9002c02abc587664acb357c6879d8ca08664dd0b；cgd. initial import of 386bsd-0.1 sources. netbsd-src [DB/OL]. 1993-03-21T09:45:37Z. 0d110d127c41d7aeb2b1bfdc71964c5a496eabf9；deraadt. initial import of NetBSD tree. openbsd-src [DB/OL]. 1995-10-18T08:37:01Z. df930be708d50e9715f173caa26ffe1b7599b157；Jordan K. Hubbard 在 freebsd-src 的首次 commit. freebsd-src [DB/OL]. 1993-06-18T04:22:21Z. （netbsd.duckdb contributors 表）；deraadt 在 netbsd-src 的末次 commit. netbsd-src [DB/OL]. 1994-12-17T23:12:41Z. 699d2a37b0e3c0c6ff29ea0d407c3feeba5642b4；本项目。netbsd.duckdb 数据分析报告：宏观趋势统计 [R/OL]. 2026. ［A］
-- 各项目 release notes；Eric S. Raymond “The Cathedral and the Bazaar” (1997)［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
+- 各项目 release notes；Eric S. Raymond “The Cathedral and the Bazaar” (1997)［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］
 - OpenBSD 1.0 Release Notes (1996.7)；NetBSD 1.0 Release Notes (1994.10)；4.4BSD-Lite Release Notes (1994.6)；4.4BSD SMM: 16《On the Security of UNIX》；McKusick M K, Bostic K, Karels M J, Quarterman J S. The Design and Implementation of the 4.4BSD Operating System [M]. Reading, MA: Addison-Wesley, 1996. ISBN 0-201-54979-4 ［A］[^doubt-resolved-264][^doubt-resolved-265]
 - Lotus Dev. Corp. v. Borland Int'l, Inc., 49 F.3d 807 (1st Cir. 1995) & 516 U.S. 233 (1996)；Oracle Am., Inc. v. Google Inc., 750 F.3d 1339 (Fed. Cir. 2014)；Google LLC v. Oracle America, Inc., 593 U.S. 1 (2021)；Sega Enterprises, Ltd. v. Accolade, Inc., 977 F.2d 1510 (9th Cir. 1992)；CSRG Net/2 重写工程记录 ［A］<!-- NEWREF:2362 --><!-- NEWREF:2363 --><!-- NEWREF:2364 --><!-- NEWREF:2365 --><!-- NEWREF:2366 --><!-- NEWREF:2367 --><!-- NEWREF:2368 --><!-- NEWREF:2369 -->
 - ORACLE USA, Inc. v. SAP AG, No. 4:07-cv-01658 (N.D. Cal.)[Z/OL]. 美国加州北区联邦地区法院，2007-2014. <https://www.courtlistener.com/docket/>；Oracle Corp. v. SAP AG, 2011 WL 3861945 (N.D. Cal. 2011)（Hamilton 法官减赔令）；Oracle America, Inc. v. SAP AG, 765 F.3d 1080 (9th Cir. 2014)（第九巡回 3.567 亿美元裁定） ［A］<!-- NEWREF:2389 --><!-- NEWREF:2390 --><!-- NEWREF:2391 --><!-- NEWREF:2437 -->

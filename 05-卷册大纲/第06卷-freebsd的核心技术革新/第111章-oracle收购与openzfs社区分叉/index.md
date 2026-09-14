@@ -34,7 +34,7 @@ volume: 第06卷-freebsd的核心技术革新
 
 - Oracle Corporation. (2009-04-20). *Oracle to Buy Sun Microsystems*. Press Release; SEC. *Oracle-Sun Merger Filings*. sec.gov; OpenSolaris Governing Board. (2010-08). *Meeting Minutes and Resignation Letter*. opensolaris.org (archived); LWN.net (2010-08-16). *What's Next for OpenSolaris*. lwn.net.[考据
 - OpenZFS Project. *Bylaws*. openzfs.org/wiki/Bylaws; Ahrens, M. (2013). *The OpenZFS Project*. LinuxCon North America 2013; OpenZFS Developer Summit 2013 Schedule. openzfs.org; Behlendorf B. zfs-0.4.1. openzfs-zfs 仓库 tag [DB/OL]. 2009-01-21T12:25:52-08:00. tag: zfs-0.4.1; commit: a66e5effd5c81f504fca
-- Behlendorf, B. (2008). *ZFS on Linux Launch*. zfsonlinux.org; ZFS on Linux Project. *SPL: Solaris Porting Layer*. github.com/openzfs/spl; Linux Kernel Project. *COPYING File* (module licensing note). kernel.org.［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
+- Behlendorf, B. (2008). *ZFS on Linux Launch*. zfsonlinux.org; ZFS on Linux Project. *SPL: Solaris Porting Layer*. github.com/openzfs/spl; Linux Kernel Project. *COPYING File* (module licensing note). kernel.org.［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］
     Fr
 
 ## 自反性声明

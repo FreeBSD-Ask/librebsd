@@ -33,7 +33,7 @@ volume: 第06卷-freebsd的核心技术革新
 
 ## 文献
 
-- Bonwick, J. (2005). *ZFS: The Last Word in File Systems*. Oracle Blogs; Ahrens, M., & Bonwick, J. (2013). *OpenZFS*. LinuxCon 2013; Prabhakaran, V. et al. (2005). *IRON File Systems*. SOSP '05; Bonwick, J. (2007). *ZFS End-to-End Data Integrity*.［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］，L2）
+- Bonwick, J. (2005). *ZFS: The Last Word in File Systems*. Oracle Blogs; Ahrens, M., & Bonwick, J. (2013). *OpenZFS*. LinuxCon 2013; Prabhakaran, V. et al. (2005). *IRON File Systems*. SOSP '05; Bonwick, J. (2007). *ZFS End-to-End Data Integrity*.［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］，L2）
 - 若将镜像设为只读，多个 vkernel 共享同一镜像且互不修改；对镜像的改动被保留在分离的变更层中。（BSD Now EP164，[226.9-239.82]，L2）
 - FreeBSD 在 Raspberry Pi 3 上的有限支持已提交 head，多数驱动可用上游，但 RNG 的 call-out 模式失效、SMP 尚未完成、VCHIQ 驱动存在仅对 ARM 成立的假设，且尚无 HDMI 支持。（BSD Now EP164，[328.18-412.58]，L2）
 - OpenBSD 自成立起一直使用 CVS，与 NetBSD 及早期 FreeBSD 相同；本期公布位于 github.com/openbsd 的官方只读镜像，含源码与 ports 等仓库。（BSD Now EP164，[3816.62-3848.04]，L2）

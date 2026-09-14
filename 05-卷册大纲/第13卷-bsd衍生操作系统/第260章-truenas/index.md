@@ -26,7 +26,7 @@ volume: 第13卷-bsd衍生操作系统
 ## 辨析
 
 - FreeNAS 各版本对应的 FreeBSD 基底版本须以 Release Notes 核实；openbsd.duckdb 查询 L7.6.1 的 ixsystems_contributors 字段仅基于邮箱域名（@ixsystems.com、@truenas.com）识别，员工可能用个人邮箱（如@gmail.com）提交，识别存在低估，须与 iXsystems 员工名册、commit message 中
-- SCALE 转向 Linux 反映存储软件栈（容器/K8s）的生态压力，须客观论述［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
+- SCALE 转向 Linux 反映存储软件栈（容器/K8s）的生态压力，须客观论述［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］
 
 <!-- DB_REF:freebsd.duckdb -->
 > **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 2005-2011 年间：250,940 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
@@ -35,7 +35,7 @@ volume: 第13卷-bsd衍生操作系统
 
 <!-- DB_REF:bsd_derivatives.duckdb -->
 > **数据库引用（bsd_derivatives.duckdb）**：本子节对应 bsd_derivatives 代码仓库。> 2011-2026 年间：573,325 次提交。> 仓库总览：963,557 次提交，9,744 位贡献者（contributors 表行数，1985-06-13 至 2026-08-24）。
-- 各存储厂商官方资料。［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
+- 各存储厂商官方资料。［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］
 
 <!-- DB_REF:bsd_derivatives.duckdb -->
 > **数据库引用（bsd_derivatives.duckdb）**：本子节对应 bsd_derivatives 代码仓库。> 1985-2026 年间：963,557 次提交。> 仓库总览：963,557 次提交，9,744 位贡献者（contributors 表行数，1985-06-13 至 2026-08-24）。

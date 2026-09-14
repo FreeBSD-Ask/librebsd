@@ -35,11 +35,11 @@ volume: 第10卷-openbsd的历史
 - OpenBSD Security Advisories [EB/OL]. <https://www.openbsd.org/security.html>；OpenBSD **security(8)** 手册页 [EB/OL]. <https://man.openbsd.org/security.8>；OpenBSD **afterboot(8)** 手册页 [EB/OL]. <https://man.openbsd.org/afterboot.8>；OpenBSD CVS 仓库 [EB/OL]. <https://cvsweb.openbsd.org/>；openbsd.duckdb 查询 L3.1.1.audit（来源：原材料/研究/bsd 仓库分析/数据分析/深层信息挖掘.md §L3.1.1，数据缺口） ［A］
 
 <!-- DB_REF:openbsd.duckdb -->
-> **数据库引用（openbsd.duckdb）**：本子节对应 openbsd 代码仓库。> 1995-2026 年间：491,195 次提交。> 仓库总览：491,195 次提交，3,352 位贡献者，1995-10-18 至 2026-08-25。
+> **数据库引用（openbsd.duckdb）**：本子节对应 openbsd 代码仓库。> 1995-2026 年间：491,195 次提交。> 仓库总览：491,195 次提交，1,031 位贡献者（contributors 表实测），1995-10-18 至 2026-08-25。
 - OpenBSD Release Notes [EB/OL]. <https://www.openbsd.org/plus.html>；OpenBSD **afterboot(8)** 手册页 [EB/OL]. <https://man.openbsd.org/afterboot.8>；OpenBSD commit 148b55c022b1 [G/OL]. <https://github.com/openbsd/src/commit/148b55c022b1>；OpenBSD misc@ 邮件列表存档 [EB/OL]. <https://marc.info/?laccopenbsd-misc> ［A］
 
 <!-- DB_REF:openbsd.duckdb -->
-> **数据库引用（openbsd.duckdb）**：本子节对应 openbsd 代码仓库。> 1995-2026 年间：491,195 次提交。> 仓库总览：491,195 次提交，3,352 位贡献者，1995-10-18 至 2026-08-25。
+> **数据库引用（openbsd.duckdb）**：本子节对应 openbsd 代码仓库。> 1995-2026 年间：491,195 次提交。> 仓库总览：491,195 次提交，1,031 位贡献者（contributors 表实测），1995-10-18 至 2026-08-25。
 - FreeBSD Security Advisories [EB/OL]. <https://www.freebsd.org/security/advisories/>；NetBSD Security Advisories [EB/OL]. <https://www.netbsd.org/support/security/>；OpenBSD **strlcpy(3)** 手册页 [EB/OL]. <https://man.openbsd.org/strlcpy.3>；OpenBSD commit 1dc0268a4106 [G/OL]. <https://github.com/openbsd/src/commit/1dc0268a4106>；Linux Security Audit Project [EB/OL]. <https://www.linux.org.au/lsec/> ［A］**OpenBSD 安全 API 扩散时间线**：
 
 | API | OpenBSD 引入时间 | commit hash | 采纳系统 |
@@ -58,7 +58,7 @@ volume: 第10卷-openbsd的历史
 - OpenBSD CVS 仓库 [EB/OL]. <https://cvsweb.openbsd.org/>；OpenBSD Security Advisories [EB/OL]. <https://www.openbsd.org/security.html>；BUGTRAQ 邮件列表存档 [EB/OL]. <https://seclists.org/bugtraq/>；外部基准报告：外部基准-StackOverflow-PackageEcosystem.md 第 3.2 节 [R/OL]. 2026-07-27. 文件路径：**03-原始史料库/01-代码仓库史料/01-数据库本体/统计分析/外部基准-StackOverflow-PackageEcosystem.md** ［A］FreeBSD 社区论文：[FP-2022-001] Refining FreeBSD's Kernel Crypto Framework（John Baldwin（约翰·鲍德温），2022）<https://papers.freebsd.org/2022/bsdcan/baldwin-refining_freebsds_kernel_crypto_framework/>FreeBSD 社区论文：[FP-2021-008] smart(8) Update: A Permissively-Licensed Alternative to smartctl(8)（Michael Dexter（迈克尔·德克斯特）; Chuck Tuffli，2021）<https://papers.freebsd.org/2021/eurobsdcon/dexter-tuffli-update_on_smart/>FreeBSD 社区论文：[FP-2019-076] FreeBSD at Work: Building Network and Storage Infrastructure with pfSense and FreeNAS（Conor Beh，2019）<https://papers.freebsd.org/2019/vbsdcon/beh-freebsd_at_work/>FreeBSD 社区论文：[FP-2019-002] BSD Unix Solutions in the Australian NFP/NGO Health Sector（Jason Tubnor，2019）<https://papers.freebsd.org/2019/asiabsdcon/tubnor-bsd_unix_solutions_in_the_australian_nfp_ngo_health_sector/>FreeBSD 社区论文：[FP-2019-014] LLVM and the state of sanitizers on BSD（David Carlier，2019）<https://papers.freebsd.org/2019/asiabsdcon/carlier-llvm_and_the_state_of_sanitizers_on_bsd/>FreeBSD 社区论文：[FP-2018-010] Preparing your home router(s) for the future: A journey through Homenet and interconnected objects（Massimiliano Stucchi，2018）<https://papers.freebsd.org/2018/bsdcan/stucchi-preparing_your_home_routers_for_the_future/>FreeBSD 社区论文：[FP-2017-014] Isolated BSD build environments using virtual and hardware machines（Michael Dexter，2017）<https://papers.freebsd.org/2017/vbsdcon/dexter-isolated_bsd_build_environments_using_virtual_and_hardware_machines/>FreeBSD 社区论文：[FP-2017-009] My BSD sucks less than yours（Baptiste Daroussin（巴蒂斯特·达鲁桑） Antoine Jacoutot（安托万·雅库托），2017）<https://papers.freebsd.org/2017/fosdem/bapt-my_bsd_suck_less_than_yours/>
 
 <!-- DB_REF:openbsd.duckdb -->
-> **数据库引用（openbsd.duckdb）**：本子节对应 openbsd 代码仓库。> 1995-2026 年间：491,195 次提交。> 仓库总览：491,195 次提交，3,352 位贡献者，1995-10-18 至 2026-08-25。
+> **数据库引用（openbsd.duckdb）**：本子节对应 openbsd 代码仓库。> 1995-2026 年间：491,195 次提交。> 仓库总览：491,195 次提交，1,031 位贡献者（contributors 表实测），1995-10-18 至 2026-08-25。
 
 <!-- PODCAST_REVIEW v20260829 -->
 <!-- 语义复核范围：BSD Now EP498、BSD Now EP428、BSD Now EP348、BSD Now EP330、BSDTalk EP29（共 5 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->

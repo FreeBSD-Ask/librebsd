@@ -14,7 +14,7 @@ volume: 第08卷-freebsd的范式转换
 
 ## 要点
 
-- FreeBSD 16.0-CURRENT 将采用［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］ 新版本的 Clang/LLVM 工具链；FreeBSD 15.0 已使用 LLVM 18.x ［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］，16.x 将跟进 LLVM 上游的最新稳定版本；FreeBSD 自 10.0（2014 年）将 Clang 作为默认编译器以来，持续紧密跟进 LLVM 上游发展，13.0 彻底移除 GCC 4.2.1 后 LLVM 成为 base system 唯一的编译器工具链；LLDB 作为 GDB 的替代持续改进（2026Q1 状态报告有专门条目记录 LLDB 改进项目）；Ports 中 GCC 仍作为可选编译器提供（ports/lang/gcc，2026Q1 状态报告有 GCC on FreeBSD 条目）
+- FreeBSD 16.0-CURRENT 将采用［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］ 新版本的 Clang/LLVM 工具链；FreeBSD 15.0 已使用 LLVM 18.x ［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］，16.x 将跟进 LLVM 上游的最新稳定版本；FreeBSD 自 10.0（2014 年）将 Clang 作为默认编译器以来，持续紧密跟进 LLVM 上游发展，13.0 彻底移除 GCC 4.2.1 后 LLVM 成为 base system 唯一的编译器工具链；LLDB 作为 GDB 的替代持续改进（2026Q1 状态报告有专门条目记录 LLDB 改进项目）；Ports 中 GCC 仍作为可选编译器提供（ports/lang/gcc，2026Q1 状态报告有 GCC on FreeBSD 条目）
 - FreeBSD 社区自 2024 年初开始讨论 Rust 编程语言进入 base system 的可能性，Alan Somers 等开发者发起相关讨论；截至 2026 年 7 月，Rust 主要通过 ports 提供（ports/lang/rust，2026Q1 版本为 1.94.0），是否以及何时进入 base system 仍在社区讨论和评估中，尚未有正式的合入时间表；讨论中的主要顾虑包括：构建时间显著增加（需编译 rustc 及相关组件）、Rust 快速发布周期与 FreeBSD base 系统稳定性要求的协调、Rust 对 LLVM 的依赖与现有 LLVM 工具链的集成等；Linux 内核已开始接受 Rust 编写的内核模块，这一趋势也影响着 FreeBSD 社区的讨论
 - FreeBSD 16.0-CURRENT 将包含更新版本的 OpenSSL 和 OpenZFS；FreeBSD 15.0 已包含 OpenZFS 2.3.x 系列，16.x 预计跟进 OpenZFS 2.4 或更新版本；ZFS block cloning（块克隆）功能在 15.x 周期已引入并持续稳定化；OpenSSL 版本持续跟进上游 LTS 版本，同时可能包含 FreeBSD 特定的安全加固和性能优化；pkgbase（将 base 系统拆分为 pkg 包）项目持续推进，2026Q1 状态报告有“More robust pkgbase conversion”专门条目
 - FreeBSD 在 13.x-15.x 周期已完成 64-bit time_t 在所有主要架构上的转换（Y2038 问题修复），16.x 周期将在此基础上继续完善；32 位架构支持持续调整——部分老旧 32 位架构可能进一步降级或废弃，以集中资源支持现代架构；RISC-V（riscv64）架构支持持续改进，drm-kmod 已在 16.0-CURRENT 的 ARM64 上构建和运行（2026Q1 状态报告条目），RISC-V 升 Tier 1 的计划截至 2026 年 7 月尚未有明确时间表；amd64 FRED（Flexible Return and Event Delivery）支持正在开发中（2026Q1 有专门条目）；Allwinner H616 等 ARM SoC 支持持续完善
@@ -41,10 +41,10 @@ volume: 第08卷-freebsd的范式转换
   - 文献：freebsd
 - OpenSSL 和 OpenZFS 在 16-CURRENT 中的具体版本号须以实际 RELEASE 时的版本为准；OpenZFS 2.4/2.5 的新特性（如更高效的块克隆、性能优化、新功能）在 16-CURRENT 中的合入状态须对照 git 提交记录核实；Bcachefs 等新文件系统的移植截至 2026 年 7 月主要是社区讨论或外部实验，尚未进入 base system 的明确计划
   
-- RISC-V 升 Tier 1 是社区期望但截至 2026 年 7 月尚未确定的事项，不得表述为“16.0 将 RISC-V 升为 Tier 1”［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
+- RISC-V 升 Tier 1 是社区期望但截至 2026 年 7 月尚未确定的事项，不得表述为“16.0 将 RISC-V 升为 Tier 1”［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］
 - freebsd-hackers mailing list. Rust in base system discussion（2024 年 1 月，lists.freebsd.org/archives/freebsd-hackers/2024-January/002823.html）；Ports Collection. 2026 Q1 Status Report（Rust 1.94.0）；The Register. FreeBSD developers consider Rust for base system（2024 年相关报道） ［A］
-- FreeBSD 15.x-RELEASE Release Notes；FreeBSD Foundation. 2026 Q1 Status Report（pkgbase 条目）；OpenZFS Official Documentation（openzfs.github.io）；OpenSSL Official Releases（openssl.org）［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
-- FreeBSD Foundation. 2026 Q1 Status Report（多个架构相关条目）；FreeBSD Supported Platforms（freebsd.org/platforms/）；FreeBSD 13.x-15.x-RELEASE Release Notes（time_t 转换）［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
+- FreeBSD 15.x-RELEASE Release Notes；FreeBSD Foundation. 2026 Q1 Status Report（pkgbase 条目）；OpenZFS Official Documentation（openzfs.github.io）；OpenSSL Official Releases（openssl.org）［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］
+- FreeBSD Foundation. 2026 Q1 Status Report（多个架构相关条目）；FreeBSD Supported Platforms（freebsd.org/platforms/）；FreeBSD 13.x-15.x-RELEASE Release Notes（time_t 转换）［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］
 - FreeBSD Foundation. 2026 Q1 Status Report（bhyve 相关条目）；FreeBSD Handbook. bhyve Virtual Machine Management（docs.freebsd.org/en/books/handbook/virtualization/）；FreeBSD bhyve man pages（bhyve(8), bhyvectl(8), vmrun(8) 等） ［B］
 - FreeBSD Foundation. 2026 Q1 Status Report（LinuxKPI 和 drm-kmod 条目）；FreeBSD Graphics Wiki（wiki.freebsd.org/Graphics）；freebsd-x11 mailing list 和 freebsd-current mailing list 相关讨论 ［A］
 - FreeBSD Foundation. 2026 Q1 Status Report（网络相关条目）；FreeBSD Handbook. Wireless Networking（docs.freebsd.org/en/books/handbook/network-wireless/）；Varankin V. FreeBSD brcmfmac: an AI-Assisted Driver Journey（2026 年 2 月） ［B］

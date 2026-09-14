@@ -59,10 +59,10 @@ Computer Knowledge and Technology电脑知识与技术
 - 三大 BSD 邮件列表存档；各项目官方文档；外部研究；比较文献 ［A］
 - 对三大 BSD 团队批评的反批评：各项目治理模式的历史合理性与适应性
   - 要点：反批评者认为，NetBSD Core Team 的“保守”保证了跨平台移植的稳定性——NetBSD 支持 50 余种硬件平台，保守的变更管理是跨平台兼容性的必要保障；OpenBSD 的 de Raadt“个人主导”模式虽强硬但保证了安全审计的一致性——OpenBSD 的安全声誉与 de Raadt 的强力领导密切相关，一次安全审计若由委员会主导可能无法达到同样的严格程度；DragonFly BSD 的 Dillon“单人主导”模式在小规模项目中具有效率优势——小团队不需要复杂的治理结构，单人决策减少了协调成本；各项目的治理模式是在其特定历史条件下形成的适应性选择——用统一的治理标准评判不同规模、不同目标的项目是不恰当的（据本章要点反批评条完整版回源补全）
-- CRS 科技政策报告；NSF Budget Requests 历年档案；DARPA 预算档案；Pew Research Center 政治极化报告；美国国会预算办公室（CBO）报告［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
+- CRS 科技政策报告；NSF Budget Requests 历年档案；DARPA 预算档案；Pew Research Center 政治极化报告；美国国会预算办公室（CBO）报告［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］
 - US Census Bureau Income Statistics；FreeBSD Core Team 历届名单；FreeBSD Foundation 多元化政策；GitHub Octoverse 报告；CRA Taulbee Survey ［A］
 - BEA 经济统计；企业财报与代码贡献记录；BSDi 商业化档案；FreeBSD Foundation 赞助名单；科技业整合研究文献 ［A］
-- California Master Plan (1960)；NCES Digest of Education Statistics；加州大学财务报告；UC Berkeley CS 系企业合作档案；CSRG 解散档案［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
+- California Master Plan (1960)；NCES Digest of Education Statistics；加州大学财务报告；UC Berkeley CS 系企业合作档案；CSRG 解散档案［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］
 
 ## 自反性声明
 

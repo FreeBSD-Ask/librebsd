@@ -36,7 +36,7 @@ volume: 第13卷-bsd衍生操作系统
 
 
 - BSD 与 Linux 邮件列表；外部贡献者声明；开源贡献者研究文献 ［A］
-- 开源治理研究文献；BSD/Linux 治理文档；用户文章［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
+- 开源治理研究文献；BSD/Linux 治理文档；用户文章［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］
 
 <!-- DB_REF:bsd_derivatives.duckdb -->
 > **数据库引用（bsd_derivatives.duckdb）**：本子节对应 bsd_derivatives 代码仓库。
@@ -45,13 +45,13 @@ volume: 第13卷-bsd衍生操作系统
 - LKML 存档；Torvalds 道歉声明；Linux CoC 文档；Sarah Sharp 声明 ［A］
 - Red Hat 年报；Linux MAINTAINERS 文件；systemd/cgroups/eBPF 档案 ［B］
 - Linux CoC 公告与争议存档；Torvalds 道歉声明；FreeBSD CoC 公告；OpenBSD 治理文档 ［A］
-- Linux/FreeBSD/OpenBSD 对比文档；用户文章［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
+- Linux/FreeBSD/OpenBSD 对比文档；用户文章［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］
 
 <!-- DB_REF:linux_kernel.duckdb -->
 > **数据库引用（linux_kernel.duckdb）**：本子节对应 linux_kernel 代码仓库。
 > 1991-2026 年间：1,474,340 次提交（口径注 2026-09-12：原「1985-2026」起算与「1,474,340 vs 1,474,341」差一为切片/总览两口径，非矛盾；「1970-01-01」系未解析 epoch 值，Linux 实际始于 1991）。
 > 仓库总览：1,474,341 次提交，39,865 位贡献者（contributors 表行数，1970-01-01〔epoch 未解析〕至 2026-08-24）。
 - LKML 存档；Linux 内核 ABI 文档；stable_api_nonsense.txt ［A］
-- FreeBSD Release Engineering 文档；FreeBSD 升级指南［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
-- OpenBSD 升级指南；OpenBSD ABI 文档；Theo de Raadt 邮件［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
-- NetBSD ABI 文档；DragonFly BSD 升级指南；HAMMER 迁移文档［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
+- FreeBSD Release Engineering 文档；FreeBSD 升级指南［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］
+- OpenBSD 升级指南；OpenBSD ABI 文档；Theo de Raadt 邮件［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］
+- NetBSD ABI 文档；DragonFly BSD 升级指南；HAMMER 迁移文档［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］

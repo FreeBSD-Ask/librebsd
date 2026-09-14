@@ -35,7 +35,7 @@ volume: 第16卷-开源运动与合规治理
 - 要点：操作系统教科书（如 Ta
 - 总纲第 16 条——经济周期与商业竞争驱动批评话语
   - 辨析：批评的具体时间点与传播范围需追溯；vendor 营销材料中是否直接点名 FreeBSD 需查证
-  - 文献：Red Hat Enterprise Linux Security White Paper；Oracle Solaris Security Features［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
+  - 文献：Red Hat Enterprise Linux Security White Paper；Oracle Solaris Security Features［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］
 
 ## 305.13.2 POSIX 兼容与 BSD 传统路线之争
 
@@ -48,7 +48,7 @@ volume: 第16卷-开源运动与合规治理
 
 - 要点：操作系统教科书（如 Tanenbaum、Silberschatz）对 BSD 合规的讨论简
 - 批评的具体时间点与传播范围需追溯；vendor 营销材料中是否直接点名 FreeBSD 需查证
-  - 文献：Red Hat Enterprise Linux Security White Paper；Oracle Solaris Security Features［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
+  - 文献：Red Hat Enterprise Linux Security White Paper；Oracle Solaris Security Features［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］
 
 
 <!-- dangan-20260908 消解回写 -->
@@ -65,13 +65,13 @@ volume: 第16卷-开源运动与合规治理
 ## 305.15.2 教科书与科普中的合规叙事
 
 - 要点：操作系统教科书（如 Tanenbaum、Silberschatz）对 BSD 合规的讨论简略，多数仅提及 UNIX 03 与 POSIX 概念
-- 史料：Tanenbaum“Modern Operating Systems”4th ed.、Silberschatz“Operating System Concepts”10th ed.［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
+- 史料：Tanenbaum“Modern Operating Systems”4th ed.、Silberschatz“Operating System Concepts”10th ed.［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］
 
 ## 305.16.2 POSIX 认证成本与 UNIX 03 争议
 
 - 要点：UNIX 03 认证成本与 The Open Group 商标政策长期受社区批评，Linux Foundation 主导 LSB 部分原因即规避 UNIX 03 费用
 - 史料：The Op
-- NIST NVLAP Laboratory Directory；Common Criteria Testing Laboratories［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
+- NIST NVLAP Laboratory Directory；Common Criteria Testing Laboratories［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］
 
 ## 305.17.2 HIPAA/SOC2 审计中的 FreeBSD 管理员
 

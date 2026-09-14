@@ -53,7 +53,7 @@ volume: 第02卷-伯克利的岁月
 
 - McKusick, K. (1999) “Twenty Years of Berkeley Unix”；Salus, P. (1994) “A Quarter Century of UNIX” ［B］
 - UNIX/32V 源代码（1978）；3BSD 内核源代码；3BSD Release Notes (1979.12)；Joy, W. (1979) “3BSD Kernel Changes”；McKusick, K. (1999) “Twenty Years of Berkeley Unix” ［A］
-- CDC (1984) “NOS/VE Reference Manual”；CDC Cyber 180 硬件文档；museumwaalsdorp.nl “NOS/VE operating system”（Cyber 170-835 TNO 1985.8 首次安装）；60bits.net “NOS/VE Operating System”（1985 NOS/VE not ready for prime time）［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
+- CDC (1984) “NOS/VE Reference Manual”；CDC Cyber 180 硬件文档；museumwaalsdorp.nl “NOS/VE operating system”（Cyber 170-835 TNO 1985.8 首次安装）；60bits.net “NOS/VE Operating System”（1985 NOS/VE not ready for prime time）［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］
 - McKusick, K. et al. (1996) “The Design and Implementation of the 4.4BSD Operating System” ［B］
 - DEC (1992) “VAX Product Strategy”；McKusick, K. (1999) “Twenty Years of Berkeley Unix” ［B］
 - DEC VAX Handbook; Babaoglu & Joy 1981 ［A］

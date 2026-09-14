@@ -39,9 +39,9 @@ volume: 第07卷-freebsd的工程体系重构
 
 <!-- DB_REF:freebsd.duckdb -->
 > **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 2020-2024 年间：291,070 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
-- FreeBSD Project. VuXML Homepage. vuxml.freebsd.org; FreeBSD Project. **pkg-audit(8)** Manual Page; FreeBSD Project. FreeBSD Ports Collection: security/vuxml/.［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
+- FreeBSD Project. VuXML Homepage. vuxml.freebsd.org; FreeBSD Project. **pkg-audit(8)** Manual Page; FreeBSD Project. FreeBSD Ports Collection: security/vuxml/.［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］
 
-- FreeBSD Project. Security Advisories Archives. security.freebsd.org; MITRE CVE Database. cve.mitre.org; LWN.net Security Coverage. lwn.net.［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
+- FreeBSD Project. Security Advisories Archives. security.freebsd.org; MITRE CVE Database. cve.mitre.org; LWN.net Security Coverage. lwn.net.［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］
 
 - Apple Inc. Apple Platform Security. support.apple.com/guide/security/; Apple Inc. XNU Source Code (opensource.apple.com); The Open Group. Common Criteria Portal. commoncriteriaportal.org; The Open Group. UNIX Certification Directory. opengroup.org. ［A］
 <!-- PODCAST_REVIEW v20260829 -->

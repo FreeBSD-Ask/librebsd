@@ -32,7 +32,7 @@ volume: 第07卷-freebsd的工程体系重构
 ## 文献
 
 - FreeBSD Project. *SMPng Project Documentation*. freebsd.org/smp; McKusick, M. K., Neville-Neil, G. V., & Watson, R. N. M. (2014). *The Design and Implementation of the FreeBSD Operating System* (2nd ed.), Chapter 4.［订正注：原条目尾部 "Oppermann, A. (2004-2006)……freebsd-ne" 句中截断无法回源补全，2026-09-14 按核查报告删除断尾］
-- Internet Archive. *FreeBSD SMPng Project Pages* (2003-2006 snapshots). web.archive.org; Lucas, M. W. (2007). *Absolute FreeBSD* (2nd ed.). No Starch Press; FreeBSD Project. *Release Notes for FreeBSD 5.0 through 7.0*. freebsd.org.［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
+- Internet Archive. *FreeBSD SMPng Project Pages* (2003-2006 snapshots). web.archive.org; Lucas, M. W. (2007). *Absolute FreeBSD* (2nd ed.). No Starch Press; FreeBSD Project. *Release Notes for FreeBSD 5.0 through 7.0*. freebsd.org.［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］
 - Linux Kernel Documentation. *Kernel TLS (kTLS)*. kernel.org; Watson, D. (2017). *Linux kTLS Patches*. lkml.org; Baldwin, J. (2019). *Cross-Platform KTLS Comparison*. freebsd-net@; Chelsio Communications. (2020-2026). *TLS Offload Documentation*. chelsio.com. ［A］
 - FreeBSD Project. *if_wg(4) Initial Commit*. cgit.freebsd.org (2020-11); Netgate Inc. (2020-2021). *WireGuard for FreeBSD Statements*. netgate.com; Donenfeld, J. A. (2020-12). *WireGuard for FreeBSD Review*. <freebsd-net@freebsd.org> mailing list. ［A］
 

@@ -39,13 +39,13 @@ volume: 第16卷-开源运动与合规治理
 
 ## 文献
 
-- NIST CMVP；Common Criteria Portal；The Open Group Registry；FedRAMP Marketplace［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］<!-- NEWREF:2638 --><!-- NEWREF:2639 --><!-- NEWREF:2640 --><!-- NEWREF:2641 --><!-- NEWREF:2642 --><!-- NEWREF:2643 --><!-- 2026-08-05 补：Schrems I/II（C-362/14、C-311/18）+ GDPR 全文 + DPC v. Facebook（IEHC 545）+ 2 CJEU 新闻稿 --><!-- NEWREF:2644 --><!-- NEWREF:2645 --><!-- 2026-08-05 补：CJEU 官方新闻稿 PR 117/15（Schrems I）、PR 91/20（Schrems II）作为第二渠道凭证 -->
+- NIST CMVP；Common Criteria Portal；The Open Group Registry；FedRAMP Marketplace［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］<!-- NEWREF:2638 --><!-- NEWREF:2639 --><!-- NEWREF:2640 --><!-- NEWREF:2641 --><!-- NEWREF:2642 --><!-- NEWREF:2643 --><!-- 2026-08-05 补：Schrems I/II（C-362/14、C-311/18）+ GDPR 全文 + DPC v. Facebook（IEHC 545）+ 2 CJEU 新闻稿 --><!-- NEWREF:2644 --><!-- NEWREF:2645 --><!-- 2026-08-05 补：CJEU 官方新闻稿 PR 117/15（Schrems I）、PR 91/20（Schrems II）作为第二渠道凭证 -->
 - 统计； 调查 ［A］
 
 <!-- DB_REF:freebsd.duckdb -->
 > **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 2003-2026 年间：1,102,265 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
 - 本项目 index.md 体例说明“多元群体贡献强制要求”；bsd_commits.db。 ［A］
-- 各社区治理文档 Archive［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
+- 各社区治理文档 Archive［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］
 - 项目史观总纲第 5、8、13、19 条；FreeBSD Core Team Election Results Core.13（同 140.27a）；FreeBSD Code of Conduct 官方页面（同 140.27a）；FreeBSD Core Team bylaws（同 140.27a）；FreeBSD Foundation 年报；freebsd.duckdb freebsd-src 仓库 committer 地理分布；第 140.27.1-140.27.4、140.27a、140.27b、140.27c 节辩证链补足；参见相关章节 Core Team 选举制度、committers 机制、商业公司与社区关系、社区多样性批评部分史料 ［A］
 
 <!-- DB_REF:freebsd.duckdb -->

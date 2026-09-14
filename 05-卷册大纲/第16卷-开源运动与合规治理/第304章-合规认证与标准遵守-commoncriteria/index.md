@@ -41,12 +41,12 @@ volume: 第16卷-开源运动与合规治理
 
 ## 文献
 
-- FDA 510(k) Database；FDA MAUDE Database［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
-- FreeBSD Foundation Case Studies（金融业条目）；LinkedIn BSD 技能招聘数据［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
-- Tencent Cloud Security White Paper；Nubank Engineering Blog［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
+- FDA 510(k) Database；FDA MAUDE Database［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］
+- FreeBSD Foundation Case Studies（金融业条目）；LinkedIn BSD 技能招聘数据［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］
+- Tencent Cloud Security White Paper；Nubank Engineering Blog［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］
 - DARPA 2001-2005 年度报告；Watson“TrustedBSD Final Report” ［B］
-- NIST SSP Repository；FreeBSD Foundation 2023-09 SSDF Statement［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
-- NIST SP 800-218 Appendix C；FedRAMP SSP Template［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
+- NIST SSP Repository；FreeBSD Foundation 2023-09 SSDF Statement［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］
+- NIST SP 800-218 Appendix C；FedRAMP SSP Template［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］
 
 <!-- PODCAST_REVIEW v20260829 -->
 <!-- 语义复核范围：BSD Now EP558（共 1 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->

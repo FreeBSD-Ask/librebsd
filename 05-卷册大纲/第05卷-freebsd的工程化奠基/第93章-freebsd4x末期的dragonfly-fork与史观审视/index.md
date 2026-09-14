@@ -18,7 +18,7 @@ volume: 第05卷-freebsd的工程化奠基
 
 - 专题语（不设条号）：Linux 2.4 成熟期与互联网泡沫后企业成本压力叠加，蚕食 FreeBSD 4.x 的企业市场份额（原挂“总纲第 16 条——经济周期”；基线第 16 条为“信仰是生存维系”，内容对不上基线，按 R2140 先例改不设条号专题语）
   - 辨析：蚕食的量化数据难以获取，需对照市场份额报告
-  - 文献：Linux 2.4 文档；市场份额报告；企业迁移案例［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
+  - 文献：Linux 2.4 文档；市场份额报告；企业迁移案例［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］
 - 总纲第 10 条——动手者创造历史：被忽视的 committer 是 4.x 稳定的基础设施（原标签“边缘者贡献”按 25 条权威表校正）
   - 辨析：被忽视的程度需统计 commit 量与社区认知
   - 文献：commit log；Core Team 名单；邮件列表 ［A］
@@ -26,7 +26,7 @@ volume: 第05卷-freebsd的工程化奠基
 ## 93.10.2 Windows 2000 的竞争
 
 - 要点：Windows 2000(2000.2) 在企业市场与 FreeBSD 竞争，Active Directory 与 IIS 5.0 吸引部分企业用户；但 FreeBSD 在 ISP 场景仍占优势
-- 史料：Windows 2000 文档、市场报告、企业采用案例［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
+- 史料：Windows 2000 文档、市场报告、企业采用案例［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］
 
 ## 93.11.2 边缘贡献者辨析
 
@@ -36,14 +36,14 @@ volume: 第05卷-freebsd的工程化奠基
 - 辨析：边缘贡献者的贡献难以量化；被忽视的程度需统计 commit 量与社区认知
 - 文献：PR 数据库；邮件列表；翻译团队记录；commit log；Core Team 名单 ［A］
 - 专题语（不设条号）：各操作系统在不同维度领先，比较维度需明确，不存在 “全面领先” 的操作系统（原挂“总纲第 6 条——技术路线分化”；基线第 6 条为“和解优于斗争”，内容对不上基线，改不设条号专题语）
-  - 文献：Linux 2.4 ChangeLog；Windows XP 文档；Solaris 9 文档；Mac OS X 文档［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
+  - 文献：Linux 2.4 ChangeLog；Windows XP 文档；Solaris 9 文档；Mac OS X 文档［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］
 
 ## 93.11.3 贡献者与版本的关系
 
 - 要点：4.x 系列〔原文截断，后文待回源〕
 - 专题语（不设条号）：ipfw1 → ipfw2 重写付出规则兼容性代价（旧 ipfw1 规则需重写），但获得状态检测与流量整形能力；防火墙规则语法作为 “形式” 改变 “内容”（网络管理员可用的策略表达能力）（原挂“总纲第 6 条——技术选择的代价”“总纲第 17 条——形式与内容”，均非基线条目名，按 R2140 先例改不设条号专题语）
   - 辨析：经 bsd_commits.duckdb commits 表验证，ipfw2 首次 commit 为 2002-07-09（4.6-RELEASE 2002.7.3 之后），MFC 至 -stable 为 2002-07-24，故 ipfw2 实际引入版本为 4.6/4.7 时期而非旧叙事所称的 4.0 或 4.1，存疑已解决；ipfw2 与 ipfw1 共存期约 2002.7-2003 年（4.6-4.7-RELEASE 期间〔注：句尾原文截断，按上下文收束〕）
-  - 文献：FreeBSD 4.6/4.7-RELEASE Release Notes；Luigi Rizzo "Dummynet: a simple approach to estimate and limit network bandwidth"（1998）；man **ipfw(8)** 历次版本；Luigi Rizzo. Change one variable to make it easier to switch between ipfw and ipfw2. freebsd-src 提交记录 [DB/OL]. 2002-07-09. c7ea6831353b20a8dac2dbcb6〔commit hash 截断待回源〕；Linux 2.4 ChangeLog；Windows XP 文档；Solaris 9 文档；Mac OS X 文档［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
+  - 文献：FreeBSD 4.6/4.7-RELEASE Release Notes；Luigi Rizzo "Dummynet: a simple approach to estimate and limit network bandwidth"（1998）；man **ipfw(8)** 历次版本；Luigi Rizzo. Change one variable to make it easier to switch between ipfw and ipfw2. freebsd-src 提交记录 [DB/OL]. 2002-07-09. c7ea6831353b20a8dac2dbcb6〔commit hash 截断待回源〕；Linux 2.4 ChangeLog；Windows XP 文档；Solaris 9 文档；Mac OS X 文档［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］
 
 ## 93.13.2 容器与事件通知领先性
 
@@ -61,7 +61,7 @@ volume: 第05卷-freebsd的工程化奠基
 
 ## 文献
 
-- Linux 2.4 文档；市场份额报告；企业迁移案例［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
+- Linux 2.4 文档；市场份额报告；企业迁移案例［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］
 
 ## 自反性声明
 

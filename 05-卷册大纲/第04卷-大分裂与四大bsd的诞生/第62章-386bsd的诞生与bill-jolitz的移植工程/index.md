@@ -51,9 +51,9 @@ volume: 第04卷-大分裂与四大bsd的诞生
 
 - DDJ 1992 年度报告；FreeBSD Project FAQ 历史；Marshall Kirk McKusick 个人回忆 ［B］
 - Jordan Hubbard freebsd-announce (1993.6.19)；NetBSD Project 历史；Marshall Kirk McKusick（马歇尔·柯克·麦库西克） 回忆录 ［A］
-- Chalmers, R. “The unknown hackers” Salon, 17 May 2000；386BSD 0.1 Release Notes (14 July 1992)［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
+- Chalmers, R. “The unknown hackers” Salon, 17 May 2000；386BSD 0.1 Release Notes (14 July 1992)［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］
 - Chalmers, R. “The unknown hackers” Salon, 17 May 2000；FreeBSD 邮件列表 2000 年讨论 ［A］
-- Torvalds, L. & Diamond, D. “Just for Fun” (2001)；Linux 1.0 Release Announcement (14 March 1994)；Linksvayer, M. Meta Magazine interview, late 1993［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
+- Torvalds, L. & Diamond, D. “Just for Fun” (2001)；Linux 1.0 Release Announcement (14 March 1994)；Linksvayer, M. Meta Magazine interview, late 1993［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］
 - Torvalds 1991; Jolitz 1991-1992 ［A］
 
 <!-- DB_REF:linux_kernel.duckdb -->
@@ -65,7 +65,7 @@ volume: 第04卷-大分裂与四大bsd的诞生
 
 <!-- 取数窗口“1991-1991 年间：0 次提交”与 linux_kernel 仓库 1991 年起始的表述矛盾，系库侧取数条件所致，2026-09-12 整改留痕，待库侧核正取数条件 -->
 
-- Chalmers, R. “The unknown hackers” Salon, 17 May 2000；FreeBSD Project “A Brief History of FreeBSD”［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
+- Chalmers, R. “The unknown hackers” Salon, 17 May 2000；FreeBSD Project “A Brief History of FreeBSD”［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］
 - Usenet 历史档案；FreeBSD 邮件列表档案 ［A］
 <!-- 原 [^doubt-resolved-257/258/259] 三条悬空脚注引用（文件内无定义、来源 slug 乱码、Amit Singh 条目重复）于 2026-09-12 整改移除 -->
 - Gödel, K. (1931); Jolitz & Jolitz DDJ (1991-1992); FreeBSD 1.0 Release Notes (1993); NetBSD 0.8 Release Notes (1993)

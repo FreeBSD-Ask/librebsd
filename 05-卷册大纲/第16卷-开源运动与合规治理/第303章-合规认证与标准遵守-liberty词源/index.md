@@ -35,9 +35,9 @@ volume: 第16卷-开源运动与合规治理
 
 - 严复译本；Mill《On Liberty》；汉语词汇史研究 ［C/A］
 - OSNews 2004-06-02“FreeBSD Gets POSIX License”；IEEE 1003.1 授权文本副本；FreeBSD Foundation 历年年报中的 standards 条目 ［B］
-- FreeBSD 10.0 Release Notes；FreeBSD 15.0 Release Notes；ISO/IEC 9899 历版本对照表［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
-- UNH-IOL IPv6 conformance test specifications；IETF RFC 4294 IPv6 Node Requirements［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
-- Linux Foundation LSB 认证档案；FreeBSD ports/misc/lsb-release［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
+- FreeBSD 10.0 Release Notes；FreeBSD 15.0 Release Notes；ISO/IEC 9899 历版本对照表［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］
+- UNH-IOL IPv6 conformance test specifications；IETF RFC 4294 IPv6 Node Requirements［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］
+- Linux Foundation LSB 认证档案；FreeBSD ports/misc/lsb-release［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］
 
 <!-- DB_REF:linux_kernel.duckdb -->
 > **数据库引用（linux_kernel.duckdb）**：本子节对应 linux_kernel 代码仓库。> 2003-2026 年间：1,474,325 次提交。> 仓库总览：1,474,341 次提交，39,865 位贡献者（contributors 表行数，1970-01-01 至 2026-08-24）。
@@ -45,7 +45,7 @@ volume: 第16卷-开源运动与合规治理
 
 <!-- DB_REF:freebsd.duckdb -->
 > **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 2003-2026 年间：1,102,265 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
-- NIST CMVP Active Modules 数据库；CCCS CSPN 数据库［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
+- NIST CMVP Active Modules 数据库；CCCS CSPN 数据库［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］
 
 <!-- dangan-20260908 消解回写 -->
 - Austin. Group 主页 [EB/OL]. (2026-07-23 访问). <https://www.opengroup.org/austin/>[EB/OL]. 2026. ［待核·needs_fix］［DKC-0564→fulltext:5555］

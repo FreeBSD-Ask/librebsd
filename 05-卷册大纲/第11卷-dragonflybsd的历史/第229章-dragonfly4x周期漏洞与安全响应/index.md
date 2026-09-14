@@ -28,12 +28,12 @@ volume: 第11卷-dragonflybsd的历史
 
 ## 辨析
 
-- HAMMER 2 去重的信息泄露风险是跨用户存储系统的共同问题——ZFS 的去重同样存在此风险，解决方案为加密后去重（让相同明文加密为不同密文从而避免去重）；HAMMER 2 在 4.x 周期无 CVE 可能因部署规模有限而非设计优越性 ［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］
+- HAMMER 2 去重的信息泄露风险是跨用户存储系统的共同问题——ZFS 的去重同样存在此风险，解决方案为加密后去重（让相同明文加密为不同密文从而避免去重）；HAMMER 2 在 4.x 周期无 CVE 可能因部署规模有限而非设计优越性 ［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］
 
 <!-- DB_REF:dragonfly.duckdb -->
 > **数据库引用（dragonfly.duckdb）**：本子节对应 dragonfly 代码仓库。
 > 2003-2026 年间：656,206 次提交。
-> 仓库总览：656,206 次提交，535 位贡献者，2003-06-17 至 2026-08-18。
+> 仓库总览：656,207 次提交，213 位贡献者，2003-06-17 至 2026-08-18。
 
 - dragonfly.duckdb dragonfly-src 仓库 tags 表（v4.0.0 tagger_date）；dragonfly.duckdb dragonfly-src 仓库 contributors 表（Tigeot 统计）；dragonfly.duckdb dragonfly-src 仓库 commit_files 表（sys/dev/drm/ 目录）；原材料/哲学/项目统摄史观/第 25 章.md（总纲第 5 条） ［A］
 - **dragonfly.duckdb** dragonfly-src 仓库 contributors 表（Tigeot 统计）；**dragonfly.duckdb** dragonfly-src 仓库 commits 表（DRM 关键词）；**freebsd.duckdb** freebsd-src 仓库 commits 表（DRM2 关键词）；Linux kernel git 仓库 DRM 子系统 commit [EB/OL]. <https://git.kernel.org/>；原材料/哲学/项目统摄史观/第 25 章.md（总纲第 8 条与第 6 条） ［A］
@@ -41,7 +41,7 @@ volume: 第11卷-dragonflybsd的历史
 
 - dragonfly.duckdb dragonfly-src 仓库 commits 表与 contributors 表（2014-2018 年活跃 committer 数与 Dillon/HAMMER2 统计）；dragonfly.duckdb commits 表（dragonfly-src 与 freebsd-src 对照）；dragonfly.duckdb dragonfly-src 仓库 tags 表（v4.6.0 tagger_date）；freebsd.duckdb freebsd-src 仓库 tags 表（release/11.0.0 tagger_date）；DragonFly 4.6 Release Notes [EB/OL]. **<https://www.dragonflybsd.org/release46/>**；DragonFly 4.8 Release Notes [EB/OL]. **<https://www.dragonflybsd.org/release48/>**；DragonFly BSD 官方历史页面 [EB/OL]. **<https://www.dragonflybsd.org/history/>**；FreeBSD 11.0 Release Notes [EB/OL]. freebsd.org/releases/；OpenBSD 5.9 Release Notes [EB/OL]. openbsd.org/59.html；OpenBSD 6.4 Release Notes [EB/OL]. openbsd.org/64.html；**dragonflybsd.org/foundation/** HTTP 404 ［A］
 - dragonfly.duckdb dragonfly-src 仓库 commits 表（TOP 5 与 HAMMER2 统计）；dragonfly.duckdb dragonfly-src 仓库 tags 表（v5.0.0 tagger_date）；DragonFly 4.6 Release Notes [EB/OL]. **<https://www.dragonflybsd.org/release46/>**；DragonFly 5.0 Release Notes [EB/OL]. **<https://www.dragonflybsd.org/release50/>**；Dillon 2017-02-24 users@ 邮件列表“Update on status of master - NUMA and cache-line locality” [EB/OL]. **lists.dragonflybsd.org/pipermail/users/2017-February/313242.html**；DragonFly BSD 官方历史页面 [EB/OL]. **<https://www.dragonflybsd.org/history/>** ［A］
-- dragonfly.duckdb dragonfly-src 仓库 commits 表与 contributors 表（TOP 5 集中度、Tigeot、HAMMER2、活跃 committer、NVMe 统计）；dragonfly.duckdb commits 表（dragonfly-src 与 freebsd-src 对照）；Dillon 2017-02-24 users@ 邮件列表“Update on status of master - NUMA and cache-line locality” [EB/OL]. **lists.dragonflybsd.org/pipermail/users/2017-February/313242.html**；DPorts 仓库［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］ ［A］
+- dragonfly.duckdb dragonfly-src 仓库 commits 表与 contributors 表（TOP 5 集中度、Tigeot、HAMMER2、活跃 committer、NVMe 统计）；dragonfly.duckdb commits 表（dragonfly-src 与 freebsd-src 对照）；Dillon 2017-02-24 users@ 邮件列表“Update on status of master - NUMA and cache-line locality” [EB/OL]. **lists.dragonflybsd.org/pipermail/users/2017-February/313242.html**；DPorts 仓库［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］ ［A］
 - dragonfly.duckdb commits 表（dragonfly-src 与 freebsd-src/openbsd-src 2014-2018 年对照）；dragonfly.duckdb dragonfly-src 仓库 commits 表（HAMMER2 关键词统计）；原材料/哲学/项目统摄史观/第 25 章.md（总纲第 6 条、第 8 条与第 19 条） ［A］
 - dragonfly.duckdb dragonfly-src 仓库 commits 表（HAMMER2 关键词 2014-2018 年统计）；dragonfly.duckdb dragonfly-src 仓库 tags 表（v5.0.0 tagger_date）；**dragonflybsd.org/foundation/** HTTP 404；FreeBSD Foundation [EB/OL]. **<https://freebsdfoundation.org/>**；OpenBSD Foundation [EB/OL]. **<https://www.openbsdfoundation.org/>**；原材料/哲学/项目统摄史观/第 25 章.md（总纲第 13 条、第 19 条、第 21 条） ［A］
 

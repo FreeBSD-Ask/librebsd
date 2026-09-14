@@ -36,7 +36,7 @@ volume: 第11卷-dragonflybsd的历史
 
 ## 辨析
 
-- **openbsd.duckdb** 显示 OpenBSD 移除 i386 的精确时间须以 openbsd-src 仓库 tag 核验 ［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］——**openbsd.duckdb** openbsd-src 仓库 tag 列表为空（可能因仓库镜像未抓取 tag），OpenBSD 5.7 release date 2015-05-01 须以 openbsd.org/57.html 核验
+- **openbsd.duckdb** 显示 OpenBSD 移除 i386 的精确时间须以 openbsd-src 仓库 tag 核验 ［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］——**openbsd.duckdb** openbsd-src 仓库 tag 列表为空（可能因仓库镜像未抓取 tag），OpenBSD 5.7 release date 2015-05-01 须以 openbsd.org/57.html 核验
 - 考据过程留痕——【查证来源】DragonFly BSD 4.0 Release Notes（**<https://www.dragonflybsd.org/release40/>**）经 WebFetch 一手核验，原文记载“DragonFly 4.0 now supports GPUs from the Haswell family, and OpenGL acceleration is now available out of the box”与“The drm/i915 driver is now mostly based on the Linux 3.8.13 implementation and is no longer similar to the FreeBSD driver”，确认 DragonFly 选择 Linux DRM 移植后获得了 Haswell GPU 支持与 OpenGL 加速
 - 考据过程留痕——【查证来源】**dragonfly.duckdb** dragonfly-src 仓库 contributors 表 Tigeot first = 2011-03-06 last = 2020-12-19 total = 1346 经数据库查询核验，末次 commit 2020-12-19 为“维护负担的双向性”再反驳提供代码级证据——Tigeot 停止贡献后 DragonFly 的 DRM 维护进入低活跃期
 - **dragonfly.duckdb** 显示 commit 量与项目实际影响力无简单线性关系——NetBSD 年均 commit 量最高（16669 条）但其市场份额未必高于 FreeBSD；**dragonfly.duckdb** 显示 DragonFly TOP 5 集中度 70.6% 反映巴士因子风险——若 TOP 5 贡献者中任何一人退出，DragonFly 维护能力将受严重影响；市场份额数据需谨慎采用——BSD 项目通常无商业销售数据，需结合镜像下载量、邮件列表活跃度、第三方调查等多源数据交叉验证
@@ -51,8 +51,8 @@ volume: 第11卷-dragonflybsd的历史
 <!-- DB_REF:dragonfly.duckdb -->
 > **数据库引用（dragonfly.duckdb）**：本子节对应 dragonfly 代码仓库。
 > 2003-2026 年间：656,206 次提交。
-> 仓库总览：656,206 次提交，535 位贡献者，2003-06-17 至 2026-08-18。
-- **dragonfly.duckdb** commits 表（四仓库 2011-2018 年对照与 DragonFly 活跃 committer 数）；**dragonfly.duckdb** dragonfly-src 仓库 commits 表（2014-2017 年 TOP 5）；各项目 release notes 与官网；BSD 相关市场调研报告［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］ ［A］
+> 仓库总览：656,207 次提交，213 位贡献者，2003-06-17 至 2026-08-18。
+- **dragonfly.duckdb** commits 表（四仓库 2011-2018 年对照与 DragonFly 活跃 committer 数）；**dragonfly.duckdb** dragonfly-src 仓库 commits 表（2014-2017 年 TOP 5）；各项目 release notes 与官网；BSD 相关市场调研报告［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］ ［A］
 
 <!-- DB_REF:netbsd.duckdb -->
 > **数据库引用（netbsd.duckdb）**：本子节对应 netbsd 代码仓库。

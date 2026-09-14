@@ -29,14 +29,14 @@ volume: 第11卷-dragonflybsd的历史
 
 ## 文献
 
-- **02-sacred源材料/dagang.md**（总纲第 13、19、21 条，见其第二部分 25 条总纲）；DragonFly BSD 官方页面（**dragonflybsd.org**，BSD 许可证）；OpenSolaris ZFS 设计文档（CDDL 1.0）；FreeBSD 8.x release notes（ZFS 集成许可证兼容性）；Phoronix、OSNews 等技术媒体存档（ZFS 与 HAMMER 报道频率对比）［考据注：2026-07-28 联网考据留痕，模板句式已按 0 信任原则精简（WO-004）；语义以正文与所引来源为准］ ［A］
+- **02-sacred源材料/dagang.md**（总纲第 13、19、21 条，见其第二部分 25 条总纲）；DragonFly BSD 官方页面（**dragonflybsd.org**，BSD 许可证）；OpenSolaris ZFS 设计文档（CDDL 1.0）；FreeBSD 8.x release notes（ZFS 集成许可证兼容性）；Phoronix、OSNews 等技术媒体存档（ZFS 与 HAMMER 报道频率对比）［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］ ［A］
 
 <!-- DB_REF:dragonfly.duckdb -->
-> **数据库引用（dragonfly.duckdb）**：本子节对应 dragonfly 代码仓库。> 2008-2022 年间：570,543 次提交。> 仓库总览：656,206 次提交，535 位贡献者，2003-06-17 至 2026-08-18。
+> **数据库引用（dragonfly.duckdb）**：本子节对应 dragonfly 代码仓库。> 2008-2022 年间：570,543 次提交。> 仓库总览：656,207 次提交，213 位贡献者，2003-06-17 至 2026-08-18。
 - DragonFly 2.4/2.6 release notes；DragonFly git 仓库；kernel@ 邮件列表档案 ［A］
 
 <!-- DB_REF:dragonfly.duckdb -->
-> **数据库引用（dragonfly.duckdb）**：本子节对应 dragonfly 代码仓库。> 2009-2010 年间：6,829 次提交。> 仓库总览：656,206 次提交，535 位贡献者，2003-06-17 至 2026-08-18。
+> **数据库引用（dragonfly.duckdb）**：本子节对应 dragonfly 代码仓库。> 2009-2010 年间：6,829 次提交。> 仓库总览：656,207 次提交，213 位贡献者，2003-06-17 至 2026-08-18。
 - DragonFly 邮件列表档案；DragonFly commit log；committer 个人邮件 ［A］
 
 ## 史料考据补充（2026-08-04 任务3 联网核验）
