@@ -57,7 +57,7 @@ volume: 第07卷-freebsd的工程体系重构
 
 ## 138.11 25 条总纲在本章的映射分布（原 137.11.2 存目残节）
 
-- 要点**：项目统摄史观 25 条总纲在本章的主要映射点：总纲第 1 条（项目统摄史观）
+- **要点**：项目统摄史观 25 条总纲在本章的主要映射点：总纲第 1 条（项目统摄史观）
 - FreeBSD Project. FreeBSD Documentation and Source Archives. freebsd.org; TrustedBSD Project. trustedbsd.org; USENIX Association. USENIX Security Symposium Proceedings (2000-2025). ［B］
 
 ## 138.12 二手文献与学术研究（原 137.12.2 存目残节）
