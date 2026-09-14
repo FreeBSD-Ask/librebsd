@@ -1,7 +1,11 @@
-# 81. l2md/kit 工具链、TAB 章程修改与 COVID 前瞻、MEP 迁 process 定案（ksd p133）
+# 81 【Linux社区】l2md工具链与TAB章程COVID前瞻
 
 > 来源：ksummit-discuss p133（50 封全读，2019-09/2020-03 l2md 与 kit 基座讨论+TAB 章程 absentee 投票之辩，夹杂 2014-05 档案信）
 > 判定：49 CAND / 1 NV。主题分布：Corbet数据库论 1、Sphinx扩展提案 1、l2md与kit基座 1、传输层之问 1、m文件机制 1、LKML倾倒场论 1、Corbet否认 1、HTML限定问 1、--fixes补丁 1、Kees质询 1、KS2014档案-tipbot 1、Geert实测通过 1、Perches答疑 1、Kees认错 1、Perches举例 1、procmail建议 1、位置之问 1、process定位 1、procmail版落地 1、Konstantin认可 1、KS2014档案-沙箱 1、Corbet催迁 1、Williams同意迁 1、TAB章程修改 1、塞票担忧 1、威胁模型论 1、信任与成文 1、选民池史 1、COVID前瞻重磅 1、kernelorg质疑 1、woT辩护 1、KS2014档案-QR 1、限制论 1、婴儿步 1、阶梯提案 1、透明之责 1、扩池论 1、疫情暗讽 1、firststep辩 1、渐进论 1、参选资格问 1、历史观察 1、KS2014档案-沙箱分立 1、程序披露 1、文档请求 1、章程请求 1、章程史 1、历史例外 1、利益攸关论 1。
+
+## 【Linux社区】零、体例说明
+
+本文件系 ksummit-discuss p133（实锚 pk 350856-350905）的逐封提取（49 CAND / 1 NV），全 49 块采用**单行摘要体例**（丙型）：每块由“## 81.x 【Linux社区】题名”与若干“- 【Linux社区】… ROW_MINE 来源坐标”条目构成，不逐块展开要点、史料、史观、辨析、文献五字段。取舍依据：本层为页面级逐封索引——叙述句承担“要点”职能、ROW_MINE 坐标承担“史料锚”职能（与 claim 库 source_ref 一致，可反查去重）；史观、辨析、文献三项不在本层给出，其著录须回 claim 库逐封核对后另行落盘，本层不重复、不臆补（00-总览 §一.2 的五字段标准适用于正式入卷块）。块内叙述仅为当事人原话的转述与节选，史家判断不在本层给出。
 
 ## 81.1 【Linux社区】Corbet数据库论
 

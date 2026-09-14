@@ -1,7 +1,11 @@
-# 87. linux-issues 列表创建、Adjusted-by 标签与 reporting-issues 转正（ksd p139）
+# 87 【Linux社区】linux-issues列表与reporting转正
 
 > 来源：ksummit-discuss p139（50 封全读，2020-12 折叠修复署名+2021-03 linux-issues 列表与 reporting-issues 文档转正，夹杂 2014 档案信）
 > 判定：47 CAND / 3 NV。主题分布：预生产驱动门控之争 1、折叠修复署名之争 1、署名标签堆叠之弊 1、lore透明日志归档提案 1、归档方案与notes取舍 1、折叠原则与Link足矣 1、补丁迭代与评审计量 1、反对固定署名规则 1、Adjusted-by标签提案 1、新标签命名与价值质疑 1、Fixes-from标签主张 1、Mason驳btrfs上游论 1、折叠场景Reported歧义 1、Postel定律宽放标签 1、折叠评论致谢标签 1、stable回移定署名标准 1、Reported-by现状辩护 1、linux-issues列表提案 1、issue定义之问 1、lore统一检索预告 1、在此即bug报告定位 1、Linus属意回归列表 1、staging拖慢开发论 1、s:Bug主题词检索 1、改主题不如CC列表 1、bugtracker转feed方案 1、回归列表覆盖之辩 1、issue范围圈定 1、结构化报告表提议 1、报告去向定位构想 1、kdevops公开基线 1、bugzilla首页引流提示 1、用户问题多为回归论 1、no-rebase修复分散论 1、虚拟回归列表构想 1、回归占比因人而异 1、reporting-issues宜转正 1、文档转正待办清单 1、拒绝过度承诺表态 1、lei标签与JMAP规划 1、文档转正RFC公告 1、转正文[1/5]TLDR 1、转正文[2/5]步骤指南 1、PM依赖IOMMU相机争锋 1、转正文[4/5]stable参考 1、转正文[5/5]附录释因 1、转正文[3a/5]参考主节 1。
+
+## 【Linux社区】零、体例说明
+
+本文件系 ksummit-discuss p139（实锚 pk 351156-351205）的逐封提取（47 CAND / 3 NV），全 47 块采用**单行摘要体例**（丙型）：每块由“## 87.x 【Linux社区】题名”与若干“- 【Linux社区】… ROW_MINE 来源坐标”条目构成，不逐块展开要点、史料、史观、辨析、文献五字段。取舍依据：本层为页面级逐封索引——叙述句承担“要点”职能、ROW_MINE 坐标承担“史料锚”职能（与 claim 库 source_ref 一致，可反查去重）；史观、辨析、文献三项不在本层给出，其著录须回 claim 库逐封核对后另行落盘，本层不重复、不臆补（00-总览 §一.2 的五字段标准适用于正式入卷块）。块内叙述仅为当事人原话的转述与节选，史家判断不在本层给出。
 
 ## 87.1 【Linux社区】预生产驱动门控之争
 

@@ -1,7 +1,11 @@
-# 88. reporting-issues 转正定案与 eBPF 边界论战（ksd p140）（ksd p140）
+# 88 【Linux社区】reporting-issues转正与eBPF边界之争
 
 > 来源：ksummit-discuss p140（50 封全读，2014-05-04 至 2022-06-17，reporting-issues.rst 转正收尾、ksummit 列表迁移与 lore 归档定论、2022 峰会 CFP、2022 eBPF 边界之争、2014 档案信）
 > 判定：44 CAND / 6 NV。主题分布：报告文档全文张贴 1、Greg认可分步指南 1、Greg认可文档转正 1、PM依赖机制之辩 1、TLDR重写张贴 1、Greg认可新TLDR 1、Corbet评审TLDR 1、stable报告地址定则 1、归档停滞报告 1、新归档地址澄清 1、LWN归档可回填 1、旧列表废弃定论 1、staging提速之辩 1、TAB选举催票公告 1、未初始化警告之失 1、Smatch排序提案 1、编译器分析局限论 1、cppcheck查泄漏 1、Coverity误报之弊 1、2022峰会CFP 1、eBPF边界提案 1、HID用户态之困 1、Kosina澄清立场 1、gatekeeper合并之问 1、eBPF钩子即API 1、MGLRU的BPF钩子 1、tracepoint前车之鉴 1、维护者角色提案 1、hidraw作者自省 1、taint大锤提案 1、eBPF二进制分发 1、HID eBPF视作UAPI 1、回归追踪议题书 1、rebase实践之辩 1、峰会补充场提案 1、嵌入式以修代报 1、eBPF即模块论 1、eBPF稳定性折中 1、上游bpf程序库 1、反专有模块策略 1、eBPF成稳定后门 1、eBPF树内托管 1、维护者学习负担 1、stable五线之弊 1。
+
+## 【Linux社区】零、体例说明
+
+本文件系 ksummit-discuss p140（实锚 pk 351206-351255）的逐封提取（44 CAND / 6 NV），全 44 块采用**单行摘要体例**（丙型）：每块由“## 88.x 题名”与若干“- 【Linux社区】… ROW_MINE 来源坐标”条目构成，不逐块展开要点、史料、史观、辨析、文献五字段。取舍依据：本层为页面级逐封索引——叙述句承担“要点”职能、ROW_MINE 坐标承担“史料锚”职能（与 claim 库 source_ref 一致，可反查去重）；史观、辨析、文献三项不在本层给出，其著录须回 claim 库逐封核对后另行落盘，本层不重复、不臆补（00-总览 §一.2 的五字段标准适用于正式入卷块）。块内叙述仅为当事人原话的转述与节选，史家判断不在本层给出。
 
 ## 88.1 报告文档全文张贴
 

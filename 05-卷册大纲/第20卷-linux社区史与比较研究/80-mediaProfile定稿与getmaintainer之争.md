@@ -1,7 +1,11 @@
-# 80. media Profile 定稿、get_maintainer 之争与 MAINTAINERS 拆分旧案（ksd p132）
+# 80 【Linux社区】mediaProfile定稿与getmaintainer之争
 
 > 来源：ksummit-discuss p132（50 封全读，2019-09-13/21 MEP 收束段+media profile v2 评审链+W=1 数据战，夹杂 2014-05 档案信）
 > 判定：49 CAND / 1 NV。主题分布：应用时静默修 1、W=1数据长文 1、MauroW=0主张 1、KS2014档案-列表上限 1、KS2014档案-EFI测试 1、2010提案自引 1、gcc9无差异 1、Petersen受众论 1、全系列到列表 1、Fixes标签局限 1、Jani文档累积批评 1、checkpatch配置化 1、gitnotes折中 1、供应商大系列 1、供应商不分树 1、KS2014档案-TODO 1、ViroMUA现实 1、DougMUA回应 1、Kees单目录提议 1、Mauro存储投票 1、Kees让步赞赏 1、不特别原则 1、MauroReST方案 1、Pinchart评审 1、Mauro修订 1、mediaProfilev2 1、KS2014档案-cgit 1、+++问 1、Pinchart二轮 1、KeesReST构建 1、awk方案 1、CC与自动化 1、Helgaas细问 1、getmaintainer至上 1、分散存储 1、fixes增强 1、dimfixes演示 1、KS2014档案-gatekeeper 1、dim局限 1、接受至上 1、dim源码公开 1、HerringCI细节 1、拆分旧案 1、Brown离线标签 1、Vetter拆分提议 1、LKMLdevnull 1、LKML可发现性 1、Jani流量数据 1、KS2014档案-cgit回应 1。
+
+## 【Linux社区】零、体例说明
+
+本文件系 ksummit-discuss p132（实锚 pk 350806-350855）的逐封提取（49 CAND / 1 NV），全 49 块采用**单行摘要体例**（丙型）：每块由“## 80.x 【Linux社区】题名”与若干“- 【Linux社区】… ROW_MINE 来源坐标”条目构成，不逐块展开要点、史料、史观、辨析、文献五字段。取舍依据：本层为页面级逐封索引——叙述句承担“要点”职能、ROW_MINE 坐标承担“史料锚”职能（与 claim 库 source_ref 一致，可反查去重）；史观、辨析、文献三项不在本层给出，其著录须回 claim 库逐封核对后另行落盘，本层不重复、不臆补（00-总览 §一.2 的五字段标准适用于正式入卷块）。块内叙述仅为当事人原话的转述与节选，史家判断不在本层给出。
 
 ## 80.1 【Linux社区】应用时静默修
 

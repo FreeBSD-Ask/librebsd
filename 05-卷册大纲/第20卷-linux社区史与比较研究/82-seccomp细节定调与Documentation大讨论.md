@@ -1,7 +1,11 @@
-# 82. seccomp 细节定调、DAMON/ExtSyscalls/Documentation 三议题与 TAB 缺席投票续（ksd p134）
+# 82 【Linux社区】seccomp细节定调与Documentation大讨论
 
 > 来源：ksummit-discuss p134（50 封全读，2020-05/06 seccomp 深水+KS2020 虚拟启动+Documentation 大讨论，夹杂 2014-05 档案信）
 > 判定：50 CAND / 0 NV。主题分布：Bird参选史 1、Rostedt2019先例 1、KS2020虚拟启动 1、seccomp四议题 1、KS2014档案-FB 1、ViroABI怒斥 1、Kees回击 1、Viro禁新增 1、Linus细节定调 1、Kees限深提议 1、Linus认可限深 1、Brauner不透明 1、文档化请求 1、补丁在途 1、AlexeicBPF Nack 1、KS2014档案-tinification 1、KS2014档案-livepatch 1、Williams回Rafael 1、Kees位掩码辩护 1、Alexei再战 1、Sarai二阶保留 1、Brauner驳strawman 1、Brauner更多例 1、DAMON议题 1、ExtSyscalls议题 1、CorbetDoc议题 1、Carpenter检索痛点 1、Vetterkerneldoc化 1、KS2014档案-CONFIG 1、Walleij全球TODO 1、Shuah新人调研 1、Perches反问 1、Shuah澄清 1、Pinchart优先级论 1、Rapoport学而写 1、Rapoport新旧之辨 1、Brown英语门槛 1、Shuah价值论 1、Shuah新眼论 1、KS2014档案-dynamicdebug 1、JuliaCoccinelle 1、Perches已有 1、Julia承认 1、Pinchart高门槛 1、Wilcox700警告 1、Rapoport训练效应 1、Jani-none 1、Ted提交提醒 1、Rapoportcheckpatch 1、Rapoport旧指南 1。
+
+## 【Linux社区】零、体例说明
+
+本文件系 ksummit-discuss p134（实锚 pk 350906-350955）的逐封提取（50 CAND / 0 NV），全 50 块采用**单行摘要体例**（丙型）：每块由“## 82.x 【Linux社区】题名”与若干“- 【Linux社区】… ROW_MINE 来源坐标”条目构成，不逐块展开要点、史料、史观、辨析、文献五字段。取舍依据：本层为页面级逐封索引——叙述句承担“要点”职能、ROW_MINE 坐标承担“史料锚”职能（与 claim 库 source_ref 一致，可反查去重）；史观、辨析、文献三项不在本层给出，其著录须回 claim 库逐封核对后另行落盘，本层不重复、不臆补（00-总览 §一.2 的五字段标准适用于正式入卷块）。块内叙述仅为当事人原话的转述与节选，史家判断不在本层给出。
 
 ## 82.1 【Linux社区】Bird参选史
 
