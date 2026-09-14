@@ -46,9 +46,3 @@ NetBSD 的工程哲学中，“clean code”（清洁代码）占据核心位置
 - 辨析：贡献者高度集中——Top 1 贡献者 wiz 占比 33.4%，需考量‘个人主导’与‘社区协作’的叙事张力
 - 文献：[DB:references_fulltext] 参考文献全文数据库（4,077 篇全文，27,138 条时间线事件）—— 对应 netbsd.duckdb 代码仓库数据
 
-
-<!-- DEEP_ANALYSIS: netbsd.duckdb.commits -->
-**数据库分析发现**（证据等级：L1，来源：`netbsd.duckdb.commits.netbsd`）
-
-netbsd 核心贡献者：wiz(222791), adam(71900), taca(66560), christos(58421), joerg(57785)
-

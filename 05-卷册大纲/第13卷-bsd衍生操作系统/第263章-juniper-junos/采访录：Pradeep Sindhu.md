@@ -47,16 +47,3 @@ Sindhu 在 CHM 口述史中回顾 Juniper Networks 自 1996 年创立的工程�
 
 本时期 Juniper 工程团队的口述史暂未发现公开采访来源，留待后续补充。完整检索过程见 [20260724_ch125-interview-survey.md](../../../原材料/研究/考据记录/20260724_ch125-interview-survey.md)。
 
-
-<!-- DEEP_ANALYSIS: bsd-derivatives.duckdb.commits -->
-**数据库分析发现**（证据等级：L1，来源：`bsd-derivatives.duckdb.commits.bsd-derivatives`）
-
-bsd-derivatives 代码仓库：从 1985 年到 2026 年，共 963557 次提交，9744 位贡献者参与。
-
-
-
-<!-- DEEP_ANALYSIS: bsd-derivatives.duckdb.commits -->
-**数据库分析发现**（证据等级：L1，来源：`bsd-derivatives.duckdb.commits.bsd-derivatives`）
-
-bsd-derivatives 核心贡献者：Lucas Holt(80498), Oliver Pinter +(39642), William Grzybowski(16279), Franco Fichtner(15390), John Baldwin(13668)
-

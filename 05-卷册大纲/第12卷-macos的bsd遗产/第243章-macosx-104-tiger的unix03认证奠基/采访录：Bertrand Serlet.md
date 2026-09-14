@@ -47,10 +47,3 @@ Avie Tevanian 于 2006 年从 Apple 离职，其在 Tiger 发布前后的公开�
 
 按“如有”判定原则，本时期 Tevanian 与 Federighi 的公开采访暂未发现　[存疑脚注] 三次复查（CHM oral-histories、USENIX ; login:、Apple Developer 录像）均未发现可直接引用的 Tiger 时期专门采访，后续如发现新存档再行补录。已尝试的检索路径与判定依据见 [20260724_ch111-interview-survey.md](../../../03-原始史料库/06-考据记录/20260724_ch111-interview-survey.md)　[存疑脚注] 该考据文件现未见于 03-原始史料库/06-考据记录/ 目录（现存 142 个文件，最早为 20260801），原“原材料/研究/考据记录/”路径已失效，链接目标落位待库方核实。
 
-
-<!-- DEEP_ANALYSIS: darwin.duckdb.commits -->
-**数据库分析发现**（证据等级：L1，来源：`darwin.duckdb.commits.darwin`）
-
-darwin 代码仓库：从 2001 年到 2026 年，共 2016 次提交，43 位贡献者参与。
-
-

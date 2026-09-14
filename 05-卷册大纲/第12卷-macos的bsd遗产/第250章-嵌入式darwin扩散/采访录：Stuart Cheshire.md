@@ -46,10 +46,3 @@ Apple 嵌入式 Darwin 内部团队（Maxime Bellengé、Jean-Daniel Dupuy 等�
 
 按“如有”判定原则，本时期嵌入式 Darwin 内部团队（Bellengé、Dupuy 等）的公开采访暂未发现，留待后续补充。已尝试的检索路径与判定依据见 [20260724_ch117-interview-survey.md](../../../原材料/研究/考据记录/20260724_ch117-interview-survey.md)。
 
-
-<!-- DEEP_ANALYSIS: darwin.duckdb.commits -->
-**数据库分析发现**（证据等级：L1，来源：`darwin.duckdb.commits.darwin`）
-
-darwin 代码仓库：从 2001 年到 2026 年，共 2016 次提交，43 位贡献者参与。
-
-
