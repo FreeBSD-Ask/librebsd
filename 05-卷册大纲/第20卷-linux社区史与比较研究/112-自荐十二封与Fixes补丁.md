@@ -1,6 +1,7 @@
-# 112. TAB 自荐十二封、Fixes 日期补丁与 xz 投毒路径（tbd p12）（tbd p12）
+# 112 【Linux社区】自荐十二封与Fixes补丁
 
 > 来源：tech-board-discuss p12（50 封全读，2007-08 至 2026-03，Williams/Greg/Shuah/Colomar/Wilk/Olof/Lutomirski/Sang/Abbott 等十二封自荐、Colomar Fixes 加日期完整补丁、xz CFLAGS 注入与 Make 插值投毒路径详列、TAB 扩容 at-large 提案、红黑树 left/right 主张、2009 银座选举流程）
+> 体例说明：本页 38 块采用**速览体例**——块下仅存单行摘记（主题陈述＋史料锚），要点、史观、辨析、文献四字段另立详表承载；五字段完整体例见 00-总览 §一.2。本页卷头未登记 claim 编号区间，文献著录与史观映射待详表单独立卷时补录。
 > 判定：43 CAND / 7 NV。主题分布：unwind 符号导出与树外 ABI 1、2009 TAB 选举通知 1、2022 TAB 自荐（Dan Williams） 1、TAB 自荐（Greg KH） 1、TAB 章程修改与远程投票 1、TAB 自荐（Shuah） 1、SPI 会员作投票基础之辩 1、2018 TAB 自荐（Pavel Machek） 1、CodingStyle 包容性术语 6、TAB 自荐（Alejandro Colomar） 1、2010 TAB 自荐（Konrad Rzeszutek Wilk） 1、2016 TAB 自荐（Olof Johansson） 1、2016 TAB 选举流程（草案 v2） 1、CoC 半年报反馈征集 1、2009 选举嵌入式代表动员 1、2008 选举流程补充 1、xz 事件与构建供应链 1、2015 TAB 自荐（Olof Johansson） 1、CIVS 投票 opt-in 通知 1、2020 提名截止提醒 1、2017 TAB 自荐（Greg KH） 1、Fixes 标签加日期之辩 1、2018 TAB 自荐（Andy Lutomirski） 1、unwind 符号导出之争 1、2007 选举程序批评 1、Fixes 标签加作者日期补丁 1、2016 候选人声明汇总 1、LLM 重写与 clean-room 1、2021 提名截止最后提醒 1、2018 TAB 自荐声明草稿 1、2014 TAB 自荐（hpa） 1、TAB 扩容提案 1、2020 TAB 自荐（Laura Abbott） 1、2019 提名流程状态说明 1、2017 TAB 自荐（Wolfram Sang） 1、SPI 会员作投票基础提案 1、TAB 扩容提案讨论 1、提名滥用与程序裁量 1。
 
 ## 112.1 unwind 符号导出与树外 ABI
