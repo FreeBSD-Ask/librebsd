@@ -34,7 +34,7 @@ volume: 第06卷-freebsd的核心技术革新
 - Debian Project. Debian Packages [EB/OL]. [2026-07-23]. <https://packages.debian.org/>; FreeBSD Project. Ports Collection [EB/OL]. [2026-07-23]. <https://www.freebsd.org/ports/>; FreeBSD 10.0-RELEASE Announcement [Z]. 2014-01-20.［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］
 
 - Apache Software Foundation. Apache License, Version 2.0 [Z]. 2004-01（§3）; Free Software Foundation. Various Licenses and Comments about Them: Apache 2.0 [EB/OL]. [2026-07-23]. <https://www.gnu.org/licenses/license-list.html#apache2>; LLVM Project. LLVM License Change to Apache 2.0 [EB/OL]. 2019; GCC Steering Committee. GCC Governance [EB/OL]. [2026-07-23]. <https://gcc.gnu.org/>; LLVM Foundation. Governance [EB/OL].［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］. ［A］
-- FreeBSD Project. freebsd.duckdb freebsd-src 仓库 commit 数据库 [DB/OL]. 2026-07-27. **03-原始史料库/01-代码仓库史料/01-数据库本体/freebsd.duckdb**; Hibsd Project. 推断性统计.md [R/OL]. 2026-07-27. **03-原始史料库/01-代码仓库史料/01-数据库本体/统计分析/推断性统计.md** Task 5; Hibsd Project. 卷章数据映射.md [R/OL]. 2026-07-27. **03-原始史料库/01-代码仓库史料/01-数据库本体/统计分析/卷章数据映射.md** 第五卷第 57 章映射。［A］
+- FreeBSD Project. freebsd.duckdb freebsd-src 仓库 commit 数据库 [DB/OL]. 2026-07-27. **03-原始史料库/01-代码仓库史料/01-数据库本体/freebsd.duckdb**; LibreBSD Project. 推断性统计.md [R/OL]. 2026-07-27. **03-原始史料库/01-代码仓库史料/01-数据库本体/统计分析/推断性统计.md** Task 5; LibreBSD Project. 卷章数据映射.md [R/OL]. 2026-07-27. **03-原始史料库/01-代码仓库史料/01-数据库本体/统计分析/卷章数据映射.md** 第五卷第 57 章映射。［A］
 
 <!-- DB_REF:freebsd.duckdb -->
 > **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。

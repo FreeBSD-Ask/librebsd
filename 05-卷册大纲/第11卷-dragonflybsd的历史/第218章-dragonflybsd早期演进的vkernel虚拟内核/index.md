@@ -27,7 +27,7 @@ volume: 第11卷-dragonflybsd的历史
 - UML 与 vkernel 的比较须考虑内核架构差异——Linux 内核代码量数倍于 DragonFly 内核，UML 维护难度高于 vkernel 是客观事实；vkernel 在 DragonFly 中“更实用”的判断须以具体使用场景为准（开发调试 vs 生产部署），不得简单优劣判断；vkernel 性能与真硬件的具体差距 ［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］. <https://kernelnewbies.org/LinuxVersions>；DragonFly vkernel 文档 [EB/OL]. <https://www.dragonflybsd.org/docs/>；UML 文档 [EB/OL]. <http://user-mode-linux.sourceforge.net/> ［A］
 
 <!-- DB_REF:dragonfly.duckdb -->
-> **数据库引用（dragonfly.duckdb）**：本子节对应 dragonfly 代码仓库。> 2003-2026 年间：656,206 次提交。> 仓库总览：656,207 次提交，213 位贡献者，2003-06-17 至 2026-08-18。
+> **数据库引用（dragonfly.duckdb）**：本子节对应 dragonfly 代码仓库。> 2003-2026 年间：656,207 次提交。> 仓库总览：656,207 次提交，213 位贡献者，2003-06-17 至 2026-08-18。
 - dragonfly.duckdb dragonfly-src/freebsd-src/openbsd-src 仓库 commit_files 表（userland 目录文件变更对照）；DragonFly BSD mailing lists [EB/OL]. <https://www.dragonflybsd.org/mailinglists/>；FreeBSD mailing lists [EB/OL]. <https://lists.freebsd.org/archives/> ［A］
 
 <!-- DB_REF:freebsd.duckdb -->
@@ -35,11 +35,11 @@ volume: 第11卷-dragonflybsd的历史
 - freebsd.duckdb dragonfly-src/freebsd-src/netbsd-src/openbsd-src 仓库 commits/contributors/tags 表（同口径统计对照）；Linux kernel repository [EB/OL]. <https://git.kernel.org/>；illumos repository [EB/OL]. <https://github.com/illumos/illumos-gate>；FreeBSD Foundation. Annual Reports [EB/OL]. <https://www.freebsdfoundation.org/our-donors/> ［A］
 
 <!-- DB_REF:dragonfly.duckdb -->
-> **数据库引用（dragonfly.duckdb）**：本子节对应 dragonfly 代码仓库。> 2003-2026 年间：656,206 次提交。> 仓库总览：656,207 次提交，213 位贡献者，2003-06-17 至 2026-08-18。
+> **数据库引用（dragonfly.duckdb）**：本子节对应 dragonfly 代码仓库。> 2003-2026 年间：656,207 次提交。> 仓库总览：656,207 次提交，213 位贡献者，2003-06-17 至 2026-08-18。
 - 原材料/哲学/项目统摄史观/第 25 章.md（总纲第 13、19、21 条原文）；dragonfly.duckdb commits/contributors/tags/commit_files 表；DragonFly BSD Project. DragonFly BSD history [EB/OL]. <https://www.dragonflybsd.org/history/>；Dillon M. Annoucning DragonFly BSD! [EB/OL]. 2003-07-16. lists.freebsd.org/pipermail/freebsd-current/2003-July/006889.html ［A］FreeBSD 社区论文：[FP-2004-001] The Challenges of Dynamic Network Interfaces（Brooks Davis，2004）<https://papers.freebsd.org/2004/eurobsdcon/davis-challenges_of_dynamic_network_interfaces/>### 史观映射> Dillon 的 fork 是分离聚合律的又一次上演——从 FreeBSD 的躯体中分裂出去，带着 4.x 的基因走上一条独立的演化道路；DragonFly 在技术上令人尊敬，却始终无法撼动 FreeBSD 主线的惯性，技术优秀并不足以逆转生态的向心力；而 DragonFly 沿用 BSD 许可证这一事实，与其说是哲学选择不如说是法律基础的惯性延续——分裂可以改变代码的走向，却改变不了许可证的形式主义约束---
 
 <!-- DB_REF:dragonfly.duckdb -->
-> **数据库引用（dragonfly.duckdb）**：本子节对应 dragonfly 代码仓库。> 2003-2026 年间：656,206 次提交。> 仓库总览：656,207 次提交，213 位贡献者，2003-06-17 至 2026-08-18。
+> **数据库引用（dragonfly.duckdb）**：本子节对应 dragonfly 代码仓库。> 2003-2026 年间：656,207 次提交。> 仓库总览：656,207 次提交，213 位贡献者，2003-06-17 至 2026-08-18。
 
 <!-- PODCAST_REVIEW v20260829 -->
 <!-- 语义复核范围：BSD Now EP93（共 1 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->

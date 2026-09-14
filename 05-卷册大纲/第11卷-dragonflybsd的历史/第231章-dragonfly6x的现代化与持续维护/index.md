@@ -51,7 +51,7 @@ volume: 第11卷-dragonflybsd的历史
 - dragonfly.duckdb — four repos annual commit count comparison [DB/OL]. 查询日期：2026-07-22. SQL: SELECT repo_name, strftime('%Y', author_date) AS year, count(*) FROM commits WHERE repo_name IN ('dragonfly-src','freebsd-src','openbsd-src','netbsd-src') AND author_date >='2024-01-01' AND author_date <'2026-07-22' GROUP BY repo_name, year ORDER BY repo_name, year; DragonFly BSD Project. Mailing Lists Archives [EB/OL]. [2026-07-22]. <https://www.dragonflybsd.org/mailinglists/>; FreeBSD Security Team. FreeBSD Security Advisories Archive [EB/OL]. [2026-07-22]. <https://www.freebsd.org/security/advisories/>; OpenBSD Project. OpenBSD Errata Patches [EB/OL]. [2026-07-22]. <https://www.openbsd.org/errata.html> ［A］
 
 <!-- DB_REF:dragonfly.duckdb -->
-> **数据库引用（dragonfly.duckdb）**：本子节对应 dragonfly 代码仓库。> 2003-2026 年间：656,206 次提交。> 仓库总览：656,207 次提交，213 位贡献者，2003-06-17 至 2026-08-18。
+> **数据库引用（dragonfly.duckdb）**：本子节对应 dragonfly 代码仓库。> 2003-2026 年间：656,207 次提交。> 仓库总览：656,207 次提交，213 位贡献者，2003-06-17 至 2026-08-18。
 
 <!-- PODCAST_REVIEW v20260829 -->
 <!-- 语义复核范围：BSD Now EP491（共 1 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->

@@ -50,7 +50,7 @@ volume: 第11卷-dragonflybsd的历史
 
 <!-- DB_REF:dragonfly.duckdb -->
 > **数据库引用（dragonfly.duckdb）**：本子节对应 dragonfly 代码仓库。
-> 2003-2026 年间：656,206 次提交。
+> 2003-2026 年间：656,207 次提交。
 > 仓库总览：656,207 次提交，213 位贡献者，2003-06-17 至 2026-08-18。
 - **dragonfly.duckdb** commits 表（四仓库 2011-2018 年对照与 DragonFly 活跃 committer 数）；**dragonfly.duckdb** dragonfly-src 仓库 commits 表（2014-2017 年 TOP 5）；各项目 release notes 与官网；BSD 相关市场调研报告［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］ ［A］
 
