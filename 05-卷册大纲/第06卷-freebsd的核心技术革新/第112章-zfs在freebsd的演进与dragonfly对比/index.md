@@ -22,7 +22,7 @@ volume: 第06卷-freebsd的核心技术革新
 
 ## 辨析
 
-- *统计局限性标注**——(1) 统计显著 ≠ 实际显著：Mann-Kendall 趋势检验 p < 0.001 表明 freebsd-src commit 量存在统计学显著上升趋势，但 Sen's slope =+1.40/月 的实际工程意义须结合 FreeBSD 版本周期与 commit 粒度变化综合判断；(2) 变点归因存疑：1999-08 变点距 2020-01 SVN-to-Git 迁移
+- **统计局限性标注**——(1) 统计显著 ≠ 实际显著：Mann-Kendall 趋势检验 p < 0.001 表明 freebsd-src commit 量存在统计学显著上升趋势，但 Sen's slope =+1.40/月 的实际工程意义须结合 FreeBSD 版本周期与 commit 粒度变化综合判断；(2) 变点归因存疑：1999-08 变点距 2020-01 SVN-to-Git 迁移
 - 纠正一个广泛传播的错误叙事：中文技术社区常称 “BSD 自研 HAMMER 是因为 CDDL 不兼容”——这是错的；经 CDDL 文本 §3.5 确认，CDDL 明确允许与其他许可（包括 BSD 和 GPL）的代码在更大作品中聚合，只是对 CDDL 代码本身的修改必须保持 CDDL；DragonFly 不移植 ZFS 是工程和哲学选择，非法律原因
 - 常见误读包括：（1）误称 Torvalds 说 “ZFS 是邪恶的”——他从未用 “evil” 一词，原话是 “buzzword” 和 “non-starter”；（2）误将此言论解读为 Linux 项目的官方立场——Torvalds 是以个人身份发表观点，但他作为 Linux 创始人的地位使该言论具有官方效果；（3）忽略言论的上下文（out-of-tree 模块兼容性讨论）；Greg Kroah
 

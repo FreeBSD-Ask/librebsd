@@ -32,7 +32,7 @@ volume: 第08卷-freebsd的范式转换
 
 ## 辨析
 
-- *统计局限性标注**——(1) 统计显著 ≠ 实际显著：Mann-Kendall 趋势检验 p < 0.001 表明 freebsd-src commit 量存在统计学显著上升趋势，但 BSD init 子系统演进的实际工程意义须结合 init 相关 commit 比例综合判断——init 子系统 commit 仅占 freebsd-src 总量的一小部分，整体趋势不能等同于子系统趋势；(2) 变〔存疑：原文截断，待回源补全〕
+- **统计局限性标注**——(1) 统计显著 ≠ 实际显著：Mann-Kendall 趋势检验 p < 0.001 表明 freebsd-src commit 量存在统计学显著上升趋势，但 BSD init 子系统演进的实际工程意义须结合 init 相关 commit 比例综合判断——init 子系统 commit 仅占 freebsd-src 总量的一小部分，整体趋势不能等同于子系统趋势；(2) 变〔存疑：原文截断，待回源补全〕
 - 数据库统计受 CVS-to-Git 迁移、镜像滞后等因素影响，commit 数量与贡献者统计存在系统性偏差，须结合一手史料交叉验证
 
 ## 文献
