@@ -14,6 +14,7 @@ volume: 第01卷-unix的起源
 - 1984 年 1 月 1 日《最终判决修正令》（MFJ）生效，AT&T 拆分为 7 个区域性贝尔运营公司；AT&T 保留 Bell Labs 与 Western Electric，并获软件商业化权利；UNIX 商业化开启，UNIX System V 许可费从约 200 美元介质费飙升至 10-20 万美元
 - 1873 年 UC 自奥克兰迁至伯克利现址，开学注册 167 男 + 222 女共 389 人；首批建筑为 South Hall 与 North Hall（North Hall 后拆除）；1873 年首批 12 名学生获 UC 文凭，史称 “Twelve Apostles”；South Hall 建于 1873 年，为 UC Berkeley 校园现存最古老建筑，自 1994 年起为 School
 
+- comp.sources.unix（1988-1990）为 Rich Salz 主持的源码发行新闻组，每帖带 Posting-number / Archive-name / Submitted-by 三段元数据，多段源码以 shar 分包；主持人明示放弃对合辑的隐含版权并鼓励再分发——是 Unix 传播链条中“源码如何抵达使用者”的环节（详见 7.10）
 ## 史料
 
 - [DB:references_fulltext:chapter_matches:chmatch_3634] 卷“第01卷-unix的起源”第 7 章，匹配置信度 curated，原因：curated token rule

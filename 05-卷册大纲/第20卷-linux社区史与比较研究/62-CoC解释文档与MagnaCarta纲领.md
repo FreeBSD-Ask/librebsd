@@ -61,7 +61,7 @@ NeilBrown 的权力结构分析与 Magna Carta 替代纲领：无力感作为伤
 - 【Linux社区】Viro 追问：“你提议什么？双头制？真分歧怎么办？Fork？Revert 战？”“CoC 现状已是很糟的主意极易滥用、但你的提议感觉更不连贯” `<!-- ROW_MINE: ksummit-discuss.messages.349950 -->`
 - 【Linux社区】Neil 团队维护者制：“我们已有团队维护者安排——顶层照做不难想象”；同结论不同说法——一个“该被脑叶切除”、另一个“我明白你想做什么但方案行不通”；坏日子里人们应有机会找另一位；“知道咆哮对象可以绕过你会促使许多人重新考虑行为（也许我乐观）” `<!-- ROW_MINE: ksummit-discuss.messages.349951 -->`
 - 【Linux社区】Viro 二问：“真分歧怎么办——‘交给 Linus 最终决定’在这里显然不管用；他们一致认为补丁无可救药时怎么办？”；BTW 何时有人建议过脑叶切除——NANAE 98 年 SGI sendmail 轶闻注 `<!-- ROW_MINE: ksummit-discuss.messages.349952 -->`
-- 【Linux社区】Dan Carpenter 两案自述：曾发 bugfix 被维护者羞辱式拒绝——只因主题不用祈使语气+“NULL dereference”少写 pointer；“十年前有个补丁被拒因为‘F*** you, 女人懂什么编程？’——现在无法想象但当时我也震惊” `<!-- ROW_MINE: ksummit-discuss.messages.349955 -->`
+- 【Linux社区】Dan Carpenter 两案自述：曾发 bugfix 被维护者羞辱式拒绝——只因主题不用祈使语气+“NULL dereference”少写 pointer；“十年前有个补丁被拒因为‘F*** you, 女人懂什么编程？’——现在无法想象但当时我也震惊” `<!-- ROW_MINE: ksummit-discuss.messages.349955 -->`**
 
 ## 62.5 【Linux社区】GIT PULL、冷却令与 Debian CoC 之议
 

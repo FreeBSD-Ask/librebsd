@@ -9,7 +9,7 @@ volume: 第15卷-许可证哲学与法律分析
 ## 要点
 
 - 2021 年 3 月，Xinuos（SCO Group 破产后于 2011 年收购 Unix 业务资产的后继者，当时名为 UnXis）对 IBM 和 Red Hat 重新提起版权与反垄断诉讼，主张 IBM 将 Project Monterey 代码非法贡献给 Linux 违反了 JDA 非排他许可条款。2024 年 4 月纽约南区联邦地区法院（Seibel 法官）驳回版权主张，2025 年 4 月
-- 2003 年 SCO v. IBM 提起诉讼后，SCO Group 2003 年 12 月向大批 UNIX 许可用户发出认证函（certification letters），要求其证明未将 UNIX 代码贡献给 Linux、未违反许可；2004 年 3 月 3 日 SCO 同日对两家企业提起诉讼，将诉讼战线从“起诉 IBM 供应方”扩展至“起诉用户方”：**SCO Group, Inc. v. A
+- 2003 年 SCO v. IBM 提起诉讼后，SCO Group 2003 年 12 月向大批 UNIX 许可用户发出认证函（certification letters），要求其证明未将 UNIX 代码贡献给 Linux、未违反许可；2004 年 3 月 3 日 SCO 同日对两家企业提起诉讼，将诉讼战线从“起诉 IBM 供应方”扩展至“起诉用户方”：**SCO Group, Inc. v. A**
 - 2026 年 8 月 10 日，第二巡回上诉法院驳回 Xinuos（SCO 后继者）对 IBM 的版权上诉，核心理由为诉讼时效已过。此裁决使 SCO 诉讼 saga 的所有延伸战线（AutoZone 和解、DaimlerChrysler 撤诉、Red Hat 中止、Xinuos 被驳回）全部终结。从 2003 年 SCO v. IBM 起至 2026 年 Xinuos 被驳回，23 年间 SCO
 
 ## 史观

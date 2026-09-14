@@ -10,6 +10,7 @@ volume: 第05卷-freebsd的工程化奠基
 
 - FreeBSD 代码仓库时间跨度（1993-06-12 至 2026-08-25），覆盖 2.x 至今 30 余年持续开发。　[存疑脚注] 仓库起点 1993-06-12 早于 FreeBSD 项目公开起点（1993 年 11 月前后），疑混入 386BSD 0.1 时点提交，以 freebsd.duckdb 首提交记录复核为准。
 
+- 1996 年自由 Unix 曾就“能否争夺桌面”爆发跨项目大辩论：John DiMarco 首倡 Historic Opportunity，Jordan K. Hubbard 长文回应并主张选 Motif，LessTif 的法律困境、Matrox 与 XFree86 的驱动文档之争、Lai/Baker 基准的方法论质疑同为其子题（详见 88.12）
 ## 史料
 
 - [DB:references_fulltext:chapter_matches:chmatch_3965] 卷“第05卷-freebsd的工程化奠基”第 88 章，匹配置信度 folder，原因：folder 第86章

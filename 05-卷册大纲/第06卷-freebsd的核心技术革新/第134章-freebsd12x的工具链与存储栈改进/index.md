@@ -44,7 +44,7 @@ volume: 第06卷-freebsd的核心技术革新
 ## 133.11.2 LLD 成为 amd64 默认链接器
 
 - 要点：FreeBSD 12.0-RELEASE 将 LLD（LLVM Linker）设为 amd64 架构的默认系统链接器，替代 GNU ld（来自 GNU binutils）。LLD 是 LLVM 项目的子项目，由 Rui Ueyama 等开发
-- FreeBSD 12.0-RELEASE Release Notes [Z]. 2018-12-11；FreeBSD 13.0-RELEASE Release Notes [Z]. 2021-04-13；Free Software Foundation. Various Licenses and Comments about Them [EB/OL]. gnu.org/licenses/license-list.html（#ModifiedBSD、#FreeBSD 条目，2026-07-22 核实）.［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］. 2007-06-29（§5c、§6、§11）；Apache Software Foundation. Apache License, Version 2.0 [Z]. 2004-01（§3）；Free Software Foundation. 各类许可证及其评论 [EB/OL]. **<<https://www.gnu.org/licenses/license-list.html>*
+- FreeBSD 12.0-RELEASE Release Notes [Z]. 2018-12-11；FreeBSD 13.0-RELEASE Release Notes [Z]. 2021-04-13；Free Software Foundation. Various Licenses and Comments about Them [EB/OL]. gnu.org/licenses/license-list.html（#ModifiedBSD、#FreeBSD 条目，2026-07-22 核实）.［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］. 2007-06-29（§5c、§6、§11）；Apache Software Foundation. Apache License, Version 2.0 [Z]. 2004-01（§3）；Free Software Foundation. 各类许可证及其评论 [EB/OL]. **<<https://www.gnu.org/licenses/license-list.html>***
 - FreeBSD **bectl(8)** Manual Page [Z]；FreeBSD 12.0-RELEASE Release Notes Userland section [Z]. 2018；commit r337663 [Z]. svn.freebsd.org. ［A］
 
 ## 133.6.2 **iflib(4)** 网络驱动框架与驱动迁移

@@ -14,6 +14,7 @@ volume: 第16卷-开源运动与合规治理
 - FreeBSD 邮件列表存档由 freebsd.org 官方与 The Mail Archive、Weren't archive 等第三方备份，部分早期邮件已遗失
 - Jordan Hubbard 2001 年 6 月 25 日宣布加入 Apple 担任 BSD Technologies Manager（Darwin 邮件列表公告），2002 年 5 月 1 日正式从 FreeBSD Core Team 辞职，辞职信提到 Core Team 凝聚力下降与“痛苦的经历”
 
+- Usenet 新闻组的设立、更名、重组投票与 rmgroup 构成开放社区的制度化治理：net.bugs.2bsd 更名 comp.bugs.2bsd（1986）、comp.unix.bsd 层级重组投票（1995，426 张有效票）、386BSD 相关的 rmgroup 提议（1997）与 Big-8 裁决程序；主持人是否发布某项 RFD 本身即为权力节点（详见 306.14）
 ## 史观
 
 - 总纲第 8 条——物理空间影响技术，邮件列表架构塑造了 FreeBSD 的去中心化协作模式

@@ -8,7 +8,7 @@ volume: 第13卷-bsd衍生操作系统
 
 ## 要点
 
-- 自 2000 年代起，以 FreeBSD/NetBSD/OpenBSD 为底座构建“开箱即用桌面 BSD”的尝试形成一条清晰的衍生发行版谱系——PC-BSD（**2005** 年由 **iXsystems** 推出，**2017** 年更名为 **TrueOS**，**2018** 年转向 TrueOS Core 后停摆）、DesktopBSD（**2006** 年由 **Peter Hofer*
+- 自 2000 年代起，以 FreeBSD/NetBSD/OpenBSD 为底座构建“开箱即用桌面 BSD”的尝试形成一条清晰的衍生发行版谱系——PC-BSD（**2005** 年由 **iXsystems** 推出，**2017** 年更名为 **TrueOS**，**2018** 年转向 TrueOS Core 后停摆）、DesktopBSD（**2006** 年由 **Peter Hofer***
 - 桌面 BSD 衍生发行版反复失败的工程原因主要有三：其一，硬件兼容性覆盖远落后于 Linux——Linux 内核拥有 Intel/AMD/NVIDIA/Realtek/Broadcom 等厂商的优先驱动支持，BSD 系统多依赖逆向工程或厂商偶发回馈，导致无线网卡、新显卡、新笔电平台在 BSD 上长期“装上不能用”；其二，图形栈滞后——X.org 与 Mesa 的主要开发围绕 Linux 进行，BS
 - PC-BSD 由 iXsystems 资助开发，iXsystems 的核心商业是 NAS 存储（TrueNAS）与服务器，桌面 BSD 与其商业主线不匹配——iXsystems 的客户为数据中心与企业，无需桌面 BSD；PC-BSD 的桌面投入长期“赔本赚吆喝”，2017 年 iXsystems 决定将 PC-BSD 更名为 TrueOS 并转向服务器/开发工作站定位，本质上是商业理性的回归；De
 - 桌面 BSD 衍生发行版的社区原因在于开发者基数过小与代际断层——BSD committer 总数远少于 Linux committer（FreeBSD 2024 年活跃 src committer 约 200-300 人，Linux 内核同期活跃开发者数以千计），桌面 BSD 衍生发行版的开发者更少（PC-BSD 全盛期核心开发者约 10 人，GhostBSD 长期由 Eric Turgeon
