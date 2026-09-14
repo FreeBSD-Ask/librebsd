@@ -46,23 +46,4 @@
 ---
 
 
-<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
-**史家判断**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-2-056`）
-
-USL 诉 BSDi 案文书汇编（1993）说明其公开动机源于当时 SCO 诉 IBM 诉讼引发的关注，遂公开 USL 诉 BSDi 更早案件的文书。
-
-
-
-<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
-**史家判断**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-2-057`）
-
-USL 诉 BSDi 案中，加州大学在诉讼开始后不久被追加为被告。
-
-## 文献
-
-- Salus P. A Quarter Century of UNIX [M]. Reading, MA: Addison-Wesley, 1994.（Ingres 项目经费支持 PDP-11/70 采购相关章节）
-- Stonebraker M., Wong E., Kreps P., Held G. The Design and Implementation of INGRES [J]. ACM Transactions on Database Systems, 1976, 1(3): 189-222.
-- ACM. Michael Stonebraker, A.M. Turing Award Winner [EB/OL]. <https://amturing.acm.org/award_winners/stonebraker_1175964.cfm>〔访问多次超时，可访问性存疑〕
-- Computer History Museum. Michael Stonebraker Profile [EB/OL]. <https://www.computerhistory.org/profile/michael-stonebraker/>.（未提及口述史编目）
-
 <!-- 整改留痕（2026-09-13）：上方两条 DEEP_ANALYSIS 史家判断（CL-2-056/CL-2-057，USL 诉 BSDi 案）与本章 Ingres/Postgres 数据库史主题错配（USL 诉讼属第 42 章谱系），属机器块内容按禁改铁律登记 DEFERRED，待库侧重锚定（快照 P2-7 专项归口）。 -->

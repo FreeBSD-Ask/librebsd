@@ -50,29 +50,3 @@
 
 
 
-
-<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
-**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-6-001`）
-
-ZFS 于 2001 年在 Sun Microsystems 开始开发，2005 年发布源代码，2008 年随 FreeBSD 7.0 正式发布。
-
-
-
-<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
-**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-6-004`）
-
-ZFS 2001 年在 Sun 开始开发，2005 年以 CDDL 许可证开源；2010 年 Oracle 收购 Sun 后闭源，illumos（Solaris 最后开源版本的分叉）成为 ZFS 的新上游，ZFS 于 2007 年移植到 FreeBSD、2008 年移植到 Linux，并成立 OpenZFS 项目跨平台协调。
-
-
-
-<!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
-**史家判断**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-6-009`）
-
-DTrace 由 Bryan M. Cantrill、Michael W. Shapiro 与 Adam H. Leventhal 在 Sun Microsystems 的 Solaris 内核开发团队提出。
-
-## 文献
-
-- Will Backman. bsdtalk Episode 018：采访 Kirk McKusick[EB/OL]. 2006. 互联网档案馆归档 **<https://archive.org/details/bsdtalk018>**.
-- Peter H. Salus. A Quarter Century of UNIX[M]. Boston: Addison-Wesley, 1994.
-- Marshall Kirk McKusick. Twenty Years of Berkeley Unix: From AT&T-Owned to Freely Redistributable[C]//Open Sources: Voices from the Open Source Revolution. Sebastopol: O’Reilly & Associates, 1999.
-
