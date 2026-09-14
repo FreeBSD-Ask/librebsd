@@ -1,7 +1,11 @@
-# 140. embargo 小灶之辩、Folios 僵局 BOF 与 AI 准则（ks p5）（ks p5）
+140 【Linux社区】embargo小灶与Folios僵局
 
 > 来源：ksummit 独有 p5（50 封全读，2021-04 至 2026-08，安全 embargo 流程（Android 全合入反对发行版小灶/security@ 独立集体）、Wither Folios BOF 提议请 Linus 裁决、AI 生成内容“无法解释就别提交”两度立场、eBPF 非用户 API 边界声明、Greg 承认举不出被忽略评审意见、fs/buffer.c 254→3152 行实测、lklfuse 全走内核 VFS 隔离、Link 标签 lore 格式更正）
 > 判定：46 CAND / 4 NV。主题分布：维护者倦怠与评审责任 1、安全embargo流程 3、峰会议题分诊 1、背光亮度用户空间API 1、trivial补丁政策 1、C语义与UB 1、静态分析错误约定 1、设备直通争议 1、Rust内核政策 4、eBPF边界 1、设备直通 1、内核malloc提案 1、内核文档 1、维护者峰会存废与next树 1、KTODO与引文过滤 1、回归防回退与Link标签 1、stable标签政策 1、AI补丁评审 1、变量声明位置规则 1、trivial补丁与信任体系 1、KTODO工具化 1、Rust for Linux 1、文档构建Python版本 1、Folios进程僵局 1、linux-next合并策略 1、Fixes标签语义 1、AI生成内容准则 3、C聚合传递与VLIW 1、文件系统维护信任 2、linus-next测试工具 1、C聚合传递与Rust别名模型 1、文件系统用户态化 1、Link标签价值 1、内核文档工具链 1、维护者支持小组 1、AI与LLM披露 1、bugzilla退役与AI工具 1、THE REST邮件列表迁移 1。
+
+## 【Linux社区】零、体例说明
+
+本文件系 ksummit-discuss p5 的逐封提取（2021-04 至 2026-08，46 CAND / 4 NV），全 38 块采用**精简块体例**（丙型）：每块一行，由【Linux社区】叙述句与 `<!-- ROW_MINE: … -->` 来源坐标构成，不逐块展开要点/史料/史观/辨析/文献五字段。取舍依据：本层为页面级逐封索引——叙述句承担“要点”职能、ROW_MINE 坐标承担“史料锚”职能（与 claim 库 `source_ref` 一致，可反查去重）；史观/辨析/文献三项不在本层给出，其著录须回 claim 库逐封核对后另行落盘，本层不重复、不臆补（00-总览 §一.2 的五字段标准适用于正式入卷块）。块内叙述仅为当事人原话的转述与节选，史家判断不在本层给出。
 
 ## 140.1 维护者倦怠与评审责任
 

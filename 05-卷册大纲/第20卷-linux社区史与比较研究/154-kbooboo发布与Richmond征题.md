@@ -1,7 +1,11 @@
-# 154. kbooboo 源码发布、2023 Richmond 征题与 UMN 实证（ks p18）（ks p18）
+154 【Linux社区】kbooboo发布与Richmond征题
 
 > 来源：ksummit 独有 p18（50 封全读，2021-04 至 2026-08，kbooboo 崩溃工具源码发布求托管、2023 Richmond 维护者峰会 30 人征题公告、Tower of Weakenings 与 std::ptr 文档推荐、UMN media sp8870 if(err) 缺陷实证、linux-distros 7/14 天与 PoC 公开政策分歧、trivial.git 无 UMN 补丁事实声明、checkpatch Fixes 警告已加、Sphinx 缓存与分级告警五策）
 > 判定：42 CAND / 8 NV。主题分布：工具讨论：bugzilla 退役 1、Rust 政策：C 聚合传参与别名模型 1、维护者峰会：自动审查机器人与倦怠 1、TAB 选举：候选人提名提醒 1、峰会议题：LLM 标签与新人洪流 1、trivial 补丁政策：UMN 实验危害确认 1、回归处理：深化维护者树质疑 1、静态分析：指针返回值语义标注 1、Rust 政策：UBSan 生产可用性反驳 1、峰会组织：混合会议与活动形式 1、MAINTAINERS 校验：CC 列表治理 1、Rust for Linux：寄存器映射 DSL 提问 1、Rust 政策：RefinedRust 与 Miri 关系澄清 1、安全披露：linux-distros 与 s@k.o 政策分歧 1、AI 代码标注：法律风险评估 1、加速器驱动：用户态接口层级争论 1、AI 代码标注：默认假设需文档化 1、设备直通：跨子系统 NAK 措辞纠正 1、AI 代码标注：算法常见度界线 1、文件系统维护：syzbot 与信任边界 1、峰会组织：疫情下线下与远程之辩 1、AI 代码标注：法律风险显性化 1、Rust for Linux：示例驱动选择之争 1、linux-next 反馈：临时提交检测工具 1、Rust 政策：Miri 能力与 LLVM 缺陷辨析 1、内核文档：构建提速与告警治理 1、峰会议题：LLM 标签信噪比与依赖风险 1、AI 与 LLM：测试代码审阅容量 1、Rust 政策：编译器标准与 C++ 路线 1、linus-next：合并前全量过 next 目标 1、维护者峰会：接口设计需弃版重来 1、Sashiko 审查模型：威胁模型文档对接 1、内核文档：SUSE 文档团队参与度 1、稳定分支标签：Fixes 强制推进 1、trivial 补丁政策：UMN media 补丁质量之辩 1、峰会组织：2023 维护者峰会征题 1、trivial 补丁政策：与 UMN 事件切割 1、Rust for Linux：引用计数编译期局限 1、峰会议题：LKML 语料微调专项模型 1、linus-next：工作流自辩与质疑 1、2021 峰会议题：UMN 议题承接 1、峰会议题：回归跟踪与修复现状 1。
+
+## 【Linux社区】零、体例说明
+
+本文件系 ksummit-discuss p18 的逐封提取（2021-04 至 2026-08，42 CAND / 8 NV），全 42 块采用**精简块体例**（丙型）：每块一行，由【Linux社区】叙述句与 `<!-- ROW_MINE: … -->` 来源坐标构成，不逐块展开要点/史料/史观/辨析/文献五字段。取舍依据：本层为页面级逐封索引——叙述句承担“要点”职能、ROW_MINE 坐标承担“史料锚”职能（与 claim 库 `source_ref` 一致，可反查去重）；史观/辨析/文献三项不在本层给出，其著录须回 claim 库逐封核对后另行落盘，本层不重复、不臆补（00-总览 §一.2 的五字段标准适用于正式入卷块）。块内叙述仅为当事人原话的转述与节选，史家判断不在本层给出。
 
 ## 154.1 工具讨论：bugzilla 退役
 
