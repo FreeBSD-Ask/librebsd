@@ -47,13 +47,6 @@ Jordan Hubbard 在此时期仍任 Apple Unix 技术总监，其 OS X 10.7-10.11 
 按“如有”判定原则，本时期 Hubbard 的独立采访暂未发现，留待后续补充。已尝试的检索路径与判定依据见 [20260724_ch114-interview-survey.md](../../../原材料/研究/考据记录/20260724_ch114-interview-survey.md)。
 
 
-<!-- DEEP_ANALYSIS: darwin.duckdb.commits -->
-**数据库分析发现**（证据等级：L1，来源：`darwin.duckdb.commits.darwin`）
-
-darwin 代码仓库：从 2001 年到 2026 年，共 2016 次提交，43 位贡献者参与。
-
-
-
 <!-- DEEP_ANALYSIS: historical_claims.duckdb.claim -->
 **史家判断**（证据等级：L2，来源：`historical_claims.duckdb.claim.CL-7-027`）
 

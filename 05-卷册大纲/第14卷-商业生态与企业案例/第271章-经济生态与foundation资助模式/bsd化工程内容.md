@@ -120,11 +120,3 @@
 **辨析**：本节辨析的核心张力在于“本节核心：68.17 **GCC → Clang/LLVM：最大的 BSD 化工程**——**GCC** 自 1987 年由 **Richard Stallma”所述内容的边界条件：其史料基础与史观立场须交叉验证，防止单一来源叙事预设（据本节要点整理）
 - 文献：[DB:historical_claims] 历史主张数据库（853 条主张，26,898 条证据）
 
-
-<!-- DEEP_ANALYSIS: bsd-derivatives.duckdb.commits -->
-**数据库分析发现**（证据等级：L1，来源：`bsd-derivatives.duckdb.commits.bsd-derivatives`）
-
-bsd-derivatives 代码仓库：从 1985 年到 2026 年，共 963557 次提交，9744 位贡献者参与。
-
-
-
