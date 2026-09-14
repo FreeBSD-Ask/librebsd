@@ -8,10 +8,10 @@ volume: 第08卷-freebsd的范式转换
 
 ## 史料
 
-- [DB:research_notes:blocks:2303] 关键词「技术瓶颈」命中：FreeBSD 技术瓶颈与现代挑战参考文献（ch91 考据）
+- [DB:research_notes:blocks:2303] 关键词“技术瓶颈”命中：FreeBSD 技术瓶颈与现代挑战参考文献（ch91 考据）
 …
-- [DB:research_notes:blocks:2304] 关键词「技术瓶颈」命中：本文件为原 参考文献/参考/（原 cankao.md）中“FreeBSD 技术瓶颈与现代挑战参考文献（ch91 考据）”…
-- [DB:research_notes:blocks:2305] 关键词「技术瓶颈」命中：FreeBSD 技术瓶颈与现代挑战参考文献（ch91 考据）
+- [DB:research_notes:blocks:2304] 关键词“技术瓶颈”命中：本文件为原 参考文献/参考/（原 cankao.md）中“FreeBSD 技术瓶颈与现代挑战参考文献（ch91 考据）”…
+- [DB:research_notes:blocks:2305] 关键词“技术瓶颈”命中：FreeBSD 技术瓶颈与现代挑战参考文献（ch91 考据）
 …
 
 ## 要点
