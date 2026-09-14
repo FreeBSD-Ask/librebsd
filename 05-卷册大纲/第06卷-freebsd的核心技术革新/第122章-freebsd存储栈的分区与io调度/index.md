@@ -28,7 +28,7 @@ volume: 第06卷-freebsd的核心技术革新
 - “FreeBSD 设备名混乱” 是一个常见批评——与 Linux sda/sdb 看似稳定的命名对比，FreeBSD 设备名确实随着架构整合变化过多次；但 Linux 从 hd?（IDE）到 sd?（libata 统一）也经历过类似变化，而且 Linux 的 sd? 命名同样依赖探测顺序，实际生产中也使用 UUID/LVM 标签引用设备而非 sd? 名称；两者只是走了不同的演进路径，最终都收敛到〔存疑：原文截断，待回源补全〕
 - FreeBSD 基础系统不包含 Ceph、Gluster 等分布式存储，这些都通过 ports/pkg 提供；这与 Linux 发行版将客户端/服务器全部打包入默认安装不同，体现了 FreeBSD “基础系统最小化、附加软件通过 ports” 的设计哲学；**ggate(8)** 是一个常被忽视但技术上很优雅的设计——它允许用户态进程实现 GEOM provider，这使得 HAST 等网络块设备〔存疑：原文截断，待回源补全〕
 - 需要准确引用 Aurora 的原话："soft updates are, simply put, too hard to understand, implement, and maintain to be part of the mainstream of file system development"——这句话有具体语境：Aurora 讨论的是为什么 Soft Updates 没有成为文件系统〔存疑：原文截断，待回源补全〕
-- *统计局限性标注**——(1) 统计显著 ≠ 实际显著：Mann-Kendall 趋势检验 p < 0.001 表明 freebsd-src commit 量存在统计学显著上升趋势，但存储栈实际演进须结合具体子系统（GEOM、CAM、GELI、UFS2）的版本化分析；(2) 非 ZFS 存储栈贡献率未量化：commit 量统计不区分存储栈相关 commit 与其他子系统 commit，非 ZFS〔存疑：原文截断，待回源补全〕
+- **统计局限性标注**——(1) 统计显著 ≠ 实际显著：Mann-Kendall 趋势检验 p < 0.001 表明 freebsd-src commit 量存在统计学显著上升趋势，但存储栈实际演进须结合具体子系统（GEOM、CAM、GELI、UFS2）的版本化分析；(2) 非 ZFS 存储栈贡献率未量化：commit 量统计不区分存储栈相关 commit 与其他子系统 commit，非 ZFS〔存疑：原文截断，待回源补全〕
 
 ## 文献
 
