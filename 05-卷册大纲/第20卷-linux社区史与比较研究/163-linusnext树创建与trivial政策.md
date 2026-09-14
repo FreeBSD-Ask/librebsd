@@ -1,7 +1,11 @@
-# 163. linus-next 树创建、trivial 补丁政策与 API 废弃原则（ks p27）
+# 163 【Linux社区】linusnext树创建与trivial政策
 
 > 来源：ksummit 独有 p27（50 封全读，2021-04 至 2026-08：Sasha Levin 宣布创建 linus-next 树只收发往 Linus 的 PR 连续树便于二分且 LKFT/KernelCI 已接入；Greg KH 一手叙述 security@ 改组成效与至少 6 个月专职资助到位及保密限制下只能用本地 LLM 起草补丁；Linus 阐述 API 废弃原则新 API 必须是旧 API 真超集且可自动化转换并举 VFS shared 迭代 2016 引入 2023 才删除；2025 LF TAB 选举行政细节 5 席改选 CIVS 投票 3/50 commit 门槛；trivial 补丁政策四封、设备直通争论三封、UMN 事件反思、UALink 上游路径）
 > 判定：47 CAND / 3 NV。主题分布：合并与拣选冲突 1、维护者支持组 1、Rust 补丁评审 1、设备直通争论 3、Bugzilla 报告渠道 1、Fixes 标签语义 2、linus-next 树 4、C 聚合传参 1、文档构建性能 1、trivial 补丁政策 4、Rust 内核政策 2、静态分析指针注解 1、TAB 选举 1、驱动资源生命周期 1、HIGHMEM 退场 1、清理宏政策 2、邮件引用礼仪 1、C 标准化参与 1、devm_kzalloc 危害 1、lei 工具 1、安全流程与AI 1、UMN 事件反思 1、UALink 上游路径 1、禁运代码质量 1、API 废弃强制 1、栈回溯行号 1、stable 邮件减量 1、kernel-doc 工具 1、Rust 驱动安全 1、补丁抄送范围 1、-Werror 争论 1、Bugzilla 退役 1、lore 回复技巧 1、Sashiko 审查 1、2021 峰会议题 1、pkeys ABI 1。
+
+## 【Linux社区】零、体例说明
+
+本文件系 ksummit-discuss p27 的逐封提取（2021-04 至 2026-08，47 CAND / 3 NV），全 36 块采用**精简块体例**（丙型）：每块一行，由【Linux社区】叙述句与 `<!-- ROW_MINE: … -->` 来源坐标构成，不逐块展开要点/史料/史观/辨析/文献五字段。取舍依据：本层为页面级逐封索引——叙述句承担“要点”职能、ROW_MINE 坐标承担“史料锚”职能（与 claim 库 `source_ref` 一致，可反查去重）；史观/辨析/文献三项不在本层给出，其著录须回 claim 库逐封核对后另行落盘，本层不重复、不臆补（00-总览 §一.2 的五字段标准适用于正式入卷块）。块内叙述仅为当事人原话的转述与节选，史家判断不在本层给出。
 
 ## 163.1 合并与拣选冲突
 
@@ -96,7 +100,7 @@
 
 ## 163.21 安全流程与AI
 
-- 【Linux社区】GregKH 称 security@ 改组后运转顺畅，将获至少 6 个月资助设专职联系人；因法律限制只能用本地 LLM 起草初版补丁，LLM 分诊无效，真问题是无响应报告者与中间商。 `<!-- ROW_MINE: ksummit.messages.4286 -->`
+- 【Linux社区】Greg KH 称 security@ 改组后运转顺畅，将获至少 6 个月资助设专职联系人；因法律限制只能用本地 LLM 起草初版补丁，LLM 分诊无效，真问题是无响应报告者与中间商。 `<!-- ROW_MINE: ksummit.messages.4286 -->`
 
 ## 163.22 UMN 事件反思
 

@@ -1,7 +1,11 @@
-# 169. reiserfs 弃用定调、回归追踪痛点清单与 AI 语料许可估计（ks p33）
+# 169 【Linux社区】reiserfs弃用定调与回归痛点
 
 > 来源：ksummit 独有 p33（50 封全读，2021-04 至 2026-07：Torvalds 一手定调 buffer_head 老不等于坏并直言 reiserfs 被弃用非因技术流程而是 Hans Reiser 杀妻；Leemhuis 系统列举回归追踪痛点清单含 -next 滞留 bugzilla 无人处理 Link 标签缺失与 CI 回归属；Chamberlain 给出 AI 训练语料许可比例估计约 60% 宽松 25% GPL 15% 不明与个人风险评估、McKenney 以 copyleft 追责先例正面交锋；Pinchart 剖析 Sashiko AI 评审 bot 对 DMA 字段误报 TOCTOU 高危根源系硬件不应预设恶意原则未进提示词；Link 标签规范之辩五封、Rust 与 C 语义之辩三封、设备直通之辩三封）
 > 判定：45 CAND / 5 NV。主题分布：回归追踪与regzbot 3、特性纳入与剔除之辩 2、隐藏提交与next滞后 2、Link标签规范之辩 5、旧内核构建Werror补丁 1、文件系统弃用之争 2、编译器警告与UB取舍 3、NVMe拷贝卸载议题 1、HIGHMEM淘汰之辩 1、SCSI栈用户态化之辩 1、内核文档构建优化 2、设备直通之辩 2、琐碎补丁政策之辩 2、内核malloc接口之争 1、diff审阅工具推荐 1、Rust与C语义之辩 3、邮件工具与工作流 3、驱动资源与生命周期 1、AI辅助代码标注 2、安全公告与stable基线 1、Rust驱动引入之辩 2、linus-next测试二分 1、AI评审bot误报 1、DAMON内存监测议题 1、stable标签政策矛盾 1。
+
+## 【Linux社区】零、体例说明
+
+本文件系 ksummit-discuss p33 的逐封提取（2021-04 至 2026-07，45 CAND / 5 NV），全 25 块采用**精简块体例**（丙型）：每块一行，由【Linux社区】叙述句与 `<!-- ROW_MINE: … -->` 来源坐标构成，不逐块展开要点/史料/史观/辨析/文献五字段。取舍依据：本层为页面级逐封索引——叙述句承担“要点”职能、ROW_MINE 坐标承担“史料锚”职能（与 claim 库 `source_ref` 一致，可反查去重）；史观/辨析/文献三项不在本层给出，其著录须回 claim 库逐封核对后另行落盘，本层不重复、不臆补（00-总览 §一.2 的五字段标准适用于正式入卷块）。块内叙述仅为当事人原话的转述与节选，史家判断不在本层给出。
 
 ## 169.1 回归追踪与regzbot
 
