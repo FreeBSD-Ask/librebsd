@@ -1,7 +1,11 @@
-# 76. mb2q 工具发布、Link: 定型与 TAB 测试投票（ksd p128）
+# 76 【Linux社区】mb2q工具与Link定型
 
 > 来源：ksummit-discuss p128（50 封全读，2019-08 Change-Id 辩论收束段，夹杂 2014-05 档案信）
 > 判定：47 CAND / 3 NV。主题分布：Change-Id 折中两步走 1、集成者立场与钩子流 1、钩子够用与否之争 1、git 原生 UUID 设想 1、重写系列断链论 1、退守工具路线 1、kernel.org 服务征集 1、系列反查示例 1、k.org 钩子承诺 1、可弃区 ID 存档方案 1、提案澄清与既有脚本 1、社区不可强制定性 1、维护者层强制 MsgID 1、Link 优于 ID 之问 1、quilt 工作流长文 1、ASoC 时钟依赖经验 1、applypatch-msg 配方 1、TAB 测试投票揭晓 1、无 Gerrit 链接澄清 1、自行其是预告 1、Linus 定罪 UUID 1、MsgID 即本地 UUID 1、Ted 求购 quilt 脚本 1、gregkh 实践与定论 1、承诺清理公开脚本 1、Doug 答辩 Linus 1、钩子发信可行性问 1、Joel 驳论与劝收尾 1、KS 日程草案 1、Link 语法之问 1、点破揉进 MsgID 1、mb2q 工具发布 1、patman 编码计划 1、勿手搓 msgid 1、gitk 链接补丁流转 1、有用性三分法 1、编码本意澄清 1、James 附议钩子之痛 1、Tglx 松口 msgid 方案 1、syzbot 标识困境 1、Link 即 UUID 1、LTS 标记与 patch-id 1、git note 应用流程 1、统一工具缺位质疑 1、patch-id 局限论 1、gregkh 自动加 Link 1、Roeck 模糊匹配之苦 1。
+
+## 【Linux社区】零、体例说明
+
+本文件系 ksummit-discuss p128 的逐封提取（47 CAND / 3 NV），全 47 块采用**单行摘要体例**（丙型）：每块由“## 76.x 【Linux社区】题名”与若干“- 【Linux社区】… ROW_MINE 来源坐标”条目构成，不逐块展开要点、史料、史观、辨析、文献五字段。取舍依据：本层为页面级逐封索引——叙述句承担“要点”职能、ROW_MINE 坐标承担“史料锚”职能（与 claim 库 source_ref 一致，可反查去重）；史观、辨析、文献三项不在本层给出，其著录须回 claim 库逐封核对后另行落盘，本层不重复、不臆补（00-总览 §一.2 的五字段标准适用于正式入卷块）。块内叙述仅为当事人原话的转述与节选，史家判断不在本层给出。
 
 ## 76.1 【Linux社区】Change-Id 折中两步走
 

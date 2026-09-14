@@ -1,7 +1,11 @@
-# 60. CoC 补丁 v2/v3 流转、revert 呼声与 MS 议程草案（ksd p112，pk 349806-349855）
+# 60 【Linux社区】CoC补丁v2v3流转与MS议程草案
 
 > 来源：ksummit-discuss p112（50 封全读，2018-10-10/16，夹杂 KS2014 档案信 2014-05-02/15）。
 > 判定：50 CAND / 0 NV。主题分布：coc 44、KS2014 6。
+
+## 【Linux社区】零、体例说明
+
+本文件系 ksummit-discuss p112（pk 349806-349855）的逐封提取（50 CAND / 0 NV），全 8 块采用**导语＋带锚条目体例**：每块由“## 60.x 【Linux社区】题名”＋导语段＋“- 【Linux社区】… ROW_MINE 来源坐标”条目构成，不逐块展开要点、史料、史观、辨析、文献五字段。取舍依据：本层为页面级逐封索引——导语段承担“要点”职能、带锚条目承担“史料”与“史料锚”职能（ROW_MINE 坐标与 claim 库 source_ref 一致，可反查去重）；史观、辨析、文献三项不在本层给出，其著录须回 claim 库逐封核对后另行落盘，本层不重复、不臆补（00-总览 §一.2 的五字段标准适用于正式入卷块）。块内叙述仅为当事人原话的转述与节选，史家判断不在本层给出。
 
 ## 60.1 【Linux社区】[PATCH v2/v3 0/3] 全文流转与 Acked 潮
 
@@ -90,5 +94,5 @@ Our Responsibilities 节的结构性批评：Biederman 三问题（git 不可编
 - 【Linux社区】Arnd 论 ACPI/DT 统一资源 API：IRQ/MMIO 已有可扩、两股人流需求迥异终局可能不同、点破 Olof 漏了自己的 ACPI 转 DT 提案（2014-05-03 档案信） `<!-- ROW_MINE: ksummit-discuss.messages.349812 -->`
 - 【Linux社区】Triplett 响应 printk softlockups：“内核默认话太多——默认输出只该有 what went wrong”；判据法则“出问题时还能否经用户态日志取到”（2014-05-15 档案信） `<!-- ROW_MINE: ksummit-discuss.messages.349813 -->`
 - 【Linux社区】Kosina printk NMI 加剧论：“NMI 上下文调用时彻底锁死机器不可调试——我们花了大量时间修”（2014-05-15 档案信） `<!-- ROW_MINE: ksummit-discuss.messages.349824 -->`
-- 【Linux社区】Howells 头文件重构八步纲领：UAPI 分离 Mostly done（__KERNEL__ 残留 97/CONFIG 残留 83）、sched.h/mm.h/fs.h/security.h/audit.h 拆分设想、三态防重入守卫、头文件单测与 DB 工具构想（2014-05-15 档案信） `<!-- ROW_MINE: ksummit-discuss.messages.349835 -->`
+- 【Linux社区】Howells 头文件重构八步纲领：UAPI 分离 Mostly done（__KERNEL__ 残留 97/CONFIG 残留 83）、**sched.h**/**mm.h**/**fs.h**/**security.h**/**audit.h** 拆分设想、三态防重入守卫、头文件单测与 DB 工具构想（2014-05-15 档案信） `<!-- ROW_MINE: ksummit-discuss.messages.349835 -->`
 - 【Linux社区】Pinchart PM dependencies 道歉信：“没 CC Rafael 是我的无心之过”（2014-05-15 档案信） `<!-- ROW_MINE: ksummit-discuss.messages.349846 -->`
