@@ -56,12 +56,31 @@ ng12_s6 读手被用户中断；ng35_s5 未开读。
   门禁 PASS / `_verify_outline_landing.py` PASS。
 - **ng35_s7（末段 314 头）读手被用户中断**，dump 已备、候选未产。list 35 仅余此段即可满读。
 
+## 2026-09-15 00:05–01:00（本线再收 2 段；自动化已被取消）
+
+| 段次 | 窗口 | 头数 | 候选 | 注册 | 块 | 宿主 | CL-RM | changelog | commit |
+|---|---|---|---|---|---|---|---|---|---|
+| ng35_s7 | 140388–140701 | 314 | 187 | 187 | 187（L4=48/L3=139） | 11 | 045083–045269 | id=1469 | `f0714a6ca` +955 |
+| ng13_s7 | 33075–33474 | 400 | 279 | 279 | 279（L4=166/L3=113） | 17 | 045283–045561 | id=1473 | `bb882f9bc` +1438 |
+
+- **list 35（std.unix，2714 头）七段读完，全组收官**。P0 仅余 list 13（s8–s13）与 list 34（s3–s5，digest 路径）。
+- 两段全部通过：check 0 不一致 / 反查 N/N / 四表 join N / 块二跑 0 / supplement 二跑 0 /
+  changelog 真幂等 / 门禁 PASS / `_verify_outline_landing.py` PASS。
+
+## 🚫 自动化已全部取消（重要）
+
+- 用户 00:05 对本会话说「批准自动化，按10分钟推进」；但并行会话于 **00:14 依用户指令「取消所有自动化任务」
+  清空了全部自动化**，含我新建的「D（错峰 :05）」。本会话复核 `automation_update list` 返回 **`[]`**。
+- **结论：不要再重建自动化**，改为会话内连续推进（与并行会话的现行做法一致）。
+- **10 分钟粒度不可实现**（实测）：调度器仅支持 DAILY/HOURLY/WEEKLY/MONTHLY/YEARLY，`FREQ=MINUTELY` 被拒；
+  `BYMINUTE` 被接受但**不生效**（nextRunAt = 创建时刻 +1 小时）。实际粒度由创建时刻的分钟决定。
+
 ## 下次执行
-1. **优先补 ng35_s7**（dump `_ng35_dump_s7_20260914.txt` 已备，140388–140701，314 头）——
-   读完即 list 35 满读，是最高性价比的一段。
-2. 先跑 `_coverage_by_segment.py` 并查 `evidence.anchor` 确认段次归属，避开并行会话在途段。
-   **注意：`_coverage_by_segment.py` 已因 plan.json 改版而失真**（依赖 `remaining` 字段），
-   现以 plan.json 的 `read_done` 求和为主口径，该脚本待同步。
+1. **优先 list 13 s8（33475–33874）**，其次 list 13 s9–s13；list 34 须走 digest 发行版级合并。
+2. 先查 `evidence.anchor` 与 dump 现状避开并行会话在途段。
+   **覆盖率主口径已改为 plan.json 的 `read_done` 求和**（并行会话已把 plan.json 升级为逐组精确台账）；
+   `_coverage_by_segment.py` 因依赖 `remaining` 字段而失真，待同步。
+3. register 撞 duckdb 文件锁须退避重试（间隔 8 秒），不可杀对方进程。
 2. ng12_s6 / ng35_s5 的 dump 已备，直接重派读手（模板见本会话）。
 3. 收口顺序：spec → `_fix_cand_chars.py` → gen → check → register → `_extract_claimmap.py`
    → `_mk_assign.py` → 分组子代理 → `_pipeline_blocks.py --write` → 二跑 → supplement → changelog
