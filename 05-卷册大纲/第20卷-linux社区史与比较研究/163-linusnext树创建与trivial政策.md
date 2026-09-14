@@ -21,7 +21,7 @@
 
 ## 163.4 设备直通争论
 
-- 【Linux社区】Leon 质疑 GregKH“网络维护者评审意见被忽视”的说法，要求举出被忽视的技术性评审意见，称自己与 LWN 深度文章均未见此类意见。 `<!-- ROW_MINE: ksummit.messages.4222 -->`
+- 【Linux社区】Leon 质疑 Greg KH“网络维护者评审意见被忽视”的说法，要求举出被忽视的技术性评审意见，称自己与 LWN 深度文章均未见此类意见。 `<!-- ROW_MINE: ksummit.messages.4222 -->`
 - 【Linux社区】Gunthorpe 解释 fwctl 分歧是哲学性而非政治性：内核应强制多少通用性无共识；配置 flash 与调试固件对开源社区价值甚微。 `<!-- ROW_MINE: ksummit.messages.4245 -->`
 - 【Linux社区】Bottomley 引 hidraw 与 FIDO 令牌为例：整类设备无内核驱动，靠 CTAP 规范统一浏览器与 libfido2 用户态实现，证明全新设备类型可免内核驱动。 `<!-- ROW_MINE: ksummit.messages.4268 -->`
 
