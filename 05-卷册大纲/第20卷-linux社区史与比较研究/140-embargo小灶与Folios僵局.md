@@ -1,4 +1,4 @@
-140 【Linux社区】embargo小灶与Folios僵局
+# 140 【Linux社区】embargo小灶与Folios僵局
 
 > 来源：ksummit 独有 p5（50 封全读，2021-04 至 2026-08，安全 embargo 流程（Android 全合入反对发行版小灶/security@ 独立集体）、Wither Folios BOF 提议请 Linus 裁决、AI 生成内容“无法解释就别提交”两度立场、eBPF 非用户 API 边界声明、Greg 承认举不出被忽略评审意见、fs/buffer.c 254→3152 行实测、lklfuse 全走内核 VFS 隔离、Link 标签 lore 格式更正）
 > 判定：46 CAND / 4 NV。主题分布：维护者倦怠与评审责任 1、安全embargo流程 3、峰会议题分诊 1、背光亮度用户空间API 1、trivial补丁政策 1、C语义与UB 1、静态分析错误约定 1、设备直通争议 1、Rust内核政策 4、eBPF边界 1、设备直通 1、内核malloc提案 1、内核文档 1、维护者峰会存废与next树 1、KTODO与引文过滤 1、回归防回退与Link标签 1、stable标签政策 1、AI补丁评审 1、变量声明位置规则 1、trivial补丁与信任体系 1、KTODO工具化 1、Rust for Linux 1、文档构建Python版本 1、Folios进程僵局 1、linux-next合并策略 1、Fixes标签语义 1、AI生成内容准则 3、C聚合传递与VLIW 1、文件系统维护信任 2、linus-next测试工具 1、C聚合传递与Rust别名模型 1、文件系统用户态化 1、Link标签价值 1、内核文档工具链 1、维护者支持小组 1、AI与LLM披露 1、bugzilla退役与AI工具 1、THE REST邮件列表迁移 1。

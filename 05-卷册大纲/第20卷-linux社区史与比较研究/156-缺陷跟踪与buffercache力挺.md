@@ -1,4 +1,4 @@
-156 【Linux社区】缺陷跟踪与buffercache力挺
+# 156 【Linux社区】缺陷跟踪与buffercache力挺
 
 > 来源：ksummit 独有 p20（50 封全读，2021-04 至 2026-08：MAINTAINERS B: 行 70 条分类统计与 bugzilla 三年无起色、Leemhuis regzbot 重启；Linus 力挺 buffer cache 引 Unix v6《Lions' Commentary on UNIX 6th Edition》渊源与 20 余旧文件系统清单；Linus 反汇编实证 cleanup.h DEFINE_FREE 省略 kfree(NULL) 并论可读性优先；Pinchart 披露大 SoC 厂因直通空白支票在最后关头放弃开放相机栈；fwctl ABI 边界、维护者倦怠与发布节奏、AI 使用政策与标注 DCO 冲突、Rust ftrace/所有权/GCC 后端、hfsplus 工具现状）
 > 判定：43 CAND / 7 NV。主题分布：AI使用政策 1、邮件列表投递工具 1、TAB选举 1、编码风格规则 1、cleanup.h优化 1、AI审阅自动化 1、Rust ftrace支持 1、发布节奏与倦怠 1、封面信Cc策略 1、协作文档工具 1、反对预生成文件 1、DRM运行时失败 1、THE REST迁移 1、kernel-doc性能 1、sashiko信任模型 1、维护者倦怠 2、Rust所有权模型 1、fwctl ABI边界 2、内核malloc讨论 1、Web of Trust工具 1、保密漏洞通报 1、CI门禁之辩 1、AUTOSEL与stable 1、Rust驱动测试 1、AI标注与DCO 1、缺陷跟踪工具 2、付费文档失败 1、缓冲缓存辩护 1、Rust对比C++ 1、旧文件系统维护 1、Android更新与CRA 1、Rust GCC后端 1、损坏文件系统判定 1、直通与闭源驱动 1、维护者培养路径 1、hfsplus工具现状 1、回归修复时限 1、C聚合传参 1、linus-next测试 1、linux-next合并策略 1。

@@ -1,6 +1,7 @@
-# 107. TAB 自荐系列、CoC 拒补丁争议与 Fixes 标签 NAK（tbd p10）（tbd p10）
+# 107 【Linux社区】TAB自荐系列与CoC拒补丁争议
 
 > 来源：tech-board-discuss p10（50 封全读，2006-08 至 2026-03，Kosina/Pieralisi/Kicinski/Lawall 等自荐声明系列、Greg 确认借 CoC 反制拒补丁非新现象、Steve Fixes 日期 NAK“为问题找方案”、LLM 重写=维护者大分叉之论、2007 git 配额选举批评、2013/2018 选举结果）
+> 体例说明：本页 37 块采用**速览体例**——块下仅存单行摘记（主题陈述＋史料锚），要点、史观、辨析、文献四字段另立详表承载；五字段完整体例见 00-总览 §一.2。本页卷头未登记 claim 编号区间，文献著录与史观映射待详表单独立卷时补录。
 > 判定：41 CAND / 9 NV。主题分布：TAB non-nomination 1、TAB 选举投票资格脚本 1、TAB 自荐（Julia Lawall） 1、CodingStyle 包容性术语 2、TAB 提名声明更新 1、TAB 自荐（Jiri Kosina） 1、TAB 自荐（Lorenzo Pieralisi） 1、xz 事件与供应链攻击 1、项目连续性文档 2、TAB 选举提名征集 1、TAB 自荐（Jakub Kicinski） 1、TAB 自荐与双重角色质询 1、贡献成熟度模型 1、2007 TAB 选举程序 1、CoC 委员会 2020 年 10 月报告 1、Fixes 标签加作者日期 2、2024 TAB 选举结果 1、LPC 2017 组办方征集 1、SCSI 文档与硬件需求 1、unwind 符号 GPL 导出 2、CodingStyle 包容性术语 v2 1、2007 TAB 选举代表性质 1、CoC 委员会 2024 下半年报告 v2 1、TAB 参选声明格式 1、CoC 报告与拒补丁争议 1、TAB 选举资格脚本 1、2013 TAB 选举结果 1、TAB 自荐（Ricardo Neri） 1、2018 TAB 选举结果 1、CoC 后续与 Linus 姿态 1、TAB 2016 连任自荐 1、2007 选举投票机制提案 1、2009 TAB 选举与提名 1、TAB 提名（Theodore Ts'o） 1、TAB 提名（Kent Overstreet） 1、CoC 更新过程说明 1、LLM 重写与许可证分叉 1。
 
 ## 107.1 TAB non-nomination

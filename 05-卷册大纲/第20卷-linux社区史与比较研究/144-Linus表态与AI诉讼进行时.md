@@ -1,4 +1,4 @@
-144 【Linux社区】Linus表态与AI诉讼进行时
+# 144 【Linux社区】Linus表态与AI诉讼进行时
 
 > 来源：ksummit 独有 p6（50 封全读，2021-04 至 2026-08，Linus 表态维护者峰会圈层化认同讨论存废与 cleanup.h 不加硬规则、mkfs.hfsplus 可用实测反驳不可测试说、AI 生成物法律地位多起诉讼进行时、GitLab reply+uuid 反馈回流机制、Rust 工具链一周一变致二分不可能之限、libmount 全局允许/拒绝列表提议、CREDITS 与 .get_maintainer.ignore 既有覆盖论）
 > 判定：42 CAND / 8 NV。主题分布：TAB 选举 CIVS 投票流程 1、stable 提交标记与 AUTOSEL 1、维护者峰会存废 1、trivial 补丁接收政策 1、内核文档方向 1、kernel.org 工具与 Bugzilla 去留 1、linus-next 功能测试 3、回归防止与 Message-id 哲学 1、Link: trailer 文档补丁 1、Rust for Linux 3、文件系统信任与维护 2、内核文档形态 1、Bugzilla 改革与 opt-out 1、AI 辅助代码标注 1、Link: trailer 替换方案 1、Bugzilla 改革与用户报告 1、GitLab 与邮件工作流整合 1、per-cgroup swap 议题归属 1、回归处理时限文档 1、MAINTAINERS 条目校验 1、峰会筹备与疫情讨论边界 1、C 聚合传参（Rust） 5、加速器驱动的用户态要求 1、设备直通之害与跨子系统 NAK 1、Rust 工具链要求 1、AI 补丁审查工具 1、cleanup.h 与变量声明位置 1、TAB 选举流程 1、Rust 内核策略与测试可用性 1、项目延续性文档 1、回归防止四提案 1、稳定树回归预防 1、静态分析想法 1。

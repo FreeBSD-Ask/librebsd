@@ -1,4 +1,4 @@
-145 【Linux社区】Linus裁定for声明与DAMON议题
+# 145 【Linux社区】Linus裁定for声明与DAMON议题
 
 > 来源：ksummit 独有 p10（50 封全读，2021-04 至 2026-08，Linus 裁定 for 内声明允许而中部不鼓励与语义按行为定义、DAMON KS 议题四点（ABI 稳定化/扩展/精度/调优）、AI 政策按生成比例分档提案、Ralf Jung 澄清别名规则未绑定 LLVM、HCH 力挺 UMN 研究反对学术制裁、Sasha 数据反驳规则将挡 1700+ 人、UALink 英特尔提案 misc/ual 起步、1902 位单提交作者统计）
 > 判定：47 CAND / 3 NV。主题分布：VLIW与乱序执行争论 1、UALink上游化议题提案 1、加速器驱动用户态要求 1、工具生成内容文档 4、b4工具链补丁 1、linus-next测试流程 1、稳定分支提交标签 1、Rust内核政策 1、std::string引用计数 1、Rust别名规则归属 1、AI补丁标注 2、Rust类型系统试探 1、Rust能否写全部驱动 1、C++替代路线争论 1、trivial补丁与UMN事件 1、设备直通与fwctl 1、AI评审提示词 1、trivial补丁政策 1、fwctl与netdev之争 1、AI回移补丁讨论 1、gccrs与FFI 1、工具生成内容文档v5 1、dt-bindings与ABI 1、加速器uAPI分层 1、Tree Borrows进展 1、sashiko提示词维护 1、AI线程摘要实验 1、稳定分支autosel 1、Posted/Reviewed标签 1、-next树治理 1、Bugzilla与回归文档 1、Link尾注记法 1、trivial补丁评审工具 1、变量声明位置规则 1、语言语义与优化 1、Message-ID改写之争 1、二分与警告错误 1、Link尾注机制 1、AI政策分档提案 1、Rust驱动争论 1、DAMON议题提案 1、pkeys ABI会议组织 1、bug报告礼节 1。

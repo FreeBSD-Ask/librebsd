@@ -1,7 +1,11 @@
-# 139. regzbot RFC 全文、conclave 补丁与 linus-next 分析工具（ks p3）（ks p3）
+# 139 【Linux社区】regzbot全文与conclave补丁
 
 > 来源：ksummit 独有 p3（50 封全读，2021-04 至 2026-08，regzbot #regzb 标签设计全文、conclave.rst 项目连续性补丁提交、linus-next next-analysis 与 pr-hist.sh 工具与 PR 停留时长统计、C 聚合传递 borrows 模型作者澄清与 Miri 论文之辩、Rust 与 ISO C 工作组对话、vger 迁 subspace 通报、bugzilla 网页表单邮件化提案）
 > 判定：44 CAND / 6 NV。主题分布：LLM相关话题：AI依赖 1、设备直通之害 3、Rust for Linux 3、Link尾注替换之争 1、Folios峰会议题 1、实现malloc 1、邮件列表文档补丁v2 1、Rust内核政策 3、AI补丁审查工具 2、linus-next测试改进 3、2021峰会筹备 2、管理预期 1、bugzilla退役讨论 1、AI代码审查的地位 1、-next反馈 1、bugzilla减负 1、功能纳入与剔除的形式化 1、回归须入最新stable的提案 1、DRM panel现代化 1、embargo安全议题处理 1、内核文档愿景 2、维护者支持小组 1、MAINTAINERS THE REST换列表 1、维护者峰会存废 1、C聚合传递（Rust政策） 3、工具生成内容准则补丁 1、回归四提案背景 1、项目连续性文档补丁 1、regzbot回归追踪bot RFC 1、电源时序子系统 1、-next中的隐藏提交 1。
+
+## 【Linux社区】零、体例说明
+
+本文件系 ksummit-discuss p3 的逐封提取（2021-04 至 2026-08，44 CAND / 6 NV），全 31 块采用**精简块体例**（丙型）：每块一行，由【Linux社区】叙述句与 `<!-- ROW_MINE: … -->` 来源坐标构成，不逐块展开要点/史料/史观/辨析/文献五字段。取舍依据：本层为页面级逐封索引——叙述句承担“要点”职能、ROW_MINE 坐标承担“史料锚”职能（与 claim 库 `source_ref` 一致，可反查去重）；史观/辨析/文献三项不在本层给出，其著录须回 claim 库逐封核对后另行落盘，本层不重复、不臆补（00-总览 §一.2 的五字段标准适用于正式入卷块）。块内叙述仅为当事人原话的转述与节选，史家判断不在本层给出。
 
 ## 139.1 LLM相关话题：AI依赖
 

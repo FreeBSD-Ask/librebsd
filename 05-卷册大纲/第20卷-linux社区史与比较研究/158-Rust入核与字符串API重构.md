@@ -1,4 +1,4 @@
-158 【Linux社区】Rust入核与字符串API重构
+# 158 【Linux社区】Rust入核与字符串API重构
 
 > 来源：ksummit 独有 p22（50 封全读，2021-07 至 2026-07：Wedson 详解 PL061 Rust 驱动注册/资源/一般状态三分法与自动撤销顺序；Linus 逐字节剖析 strlcpy 设计性缺陷与 strscpy 按字长拷贝语义差异含 dst[4] 溢出实例；Konstantin 一手披露 bugzilla.kernel.org 平台濒死开发停滞与紧急转 Postgres 及 bugmaster 无从设立困境；Laurent Pinchart 提出 cdev 驱动生命周期四步方案获 Greg KH 认可；设备直通之争三封、Rust 内核策略与入核早期讨论、AI 补丁政策、文件系统维护信任）
 > 判定：39 CAND / 11 NV。主题分布：内核文档工具链 2、加速器驱动用户态 1、Rust内核策略 4、Rust入核早期讨论 3、疫情与线下峰会 1、AI补丁政策 2、linux-next测试 2、LLM审查与语料 1、补丁接受政策 1、字符串API重构 2、设备直通之争 3、cdev生命周期设计 1、静态分析设想 1、C内存安全模式 1、LKML列表政策 1、补丁检查工具 1、API弃用执行 1、编码风格变量声明 1、文件系统维护信任 2、Link标签之争 2、维护者压力与CoC 1、Folio合入流程 1、HIGHMEM退役 1、Bugzilla去留 1、邮件礼仪自动化 1、拒补丁透明度 1。

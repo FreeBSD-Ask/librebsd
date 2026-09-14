@@ -1,4 +1,4 @@
-143 【Linux社区】UMN门槛与UALink直送
+# 143 【Linux社区】UMN门槛与UALink直送
 
 > 来源：ksummit 独有 p9（50 封全读，2021-04 至 2026-07，tglx“业界特性优先与底层无人出资”根因论、Kees 防寒蝉效应提高门槛论、jgg UALink 独立子系统直送 Linus 主张、Kees“雕鱼”喻长会话 LLM 难声明与 show-your-work 惯例、Lawall AI 做“注释质量的 0-day”提案、Ted 四档析 LLM 硬件成本并提议 LKML 存档微调开源模型、HIGHMEM 退场 HIGHPTE 先删与 64 位模拟提案、hch 以 Debian BTS 为正例）
 > 判定：48 CAND / 2 NV。主题分布：linux-next 隐藏提交 1、trivial 补丁接收政策（UMN） 2、linus-next 测试 2、2021 维护者峰会议题 1、文件系统维护（FUSE 方案） 1、Rust for Linux 1、kernel-doc Python 版本 1、trivial 补丁与 CC 过滤 1、设备直通（fwctl） 2、AI/LLM 在内核流程 3、bugzilla 退役与 LLM 分诊 1、UALink 驱动上游化 1、stable 邮件量 2、KTODO 与邮件引用 1、AI 辅助代码标注 1、文件系统维护困境 1、UMN 事件与内核开发根因 1、Rust 与设备生命周期管理 1、加速器用户空间要求 2、Rust 内核政策（V4L2 视角） 1、linux-next 与 0-day 之别 1、Sashiko AI 审阅 1、功能移除与 bcachefs 1、Link trailer 最佳实践 1、CONFIG_HIGHMEM 退场 1、Rust 编译器版本政策 1、工具生成内容指南 2、内核文档愿景 1、C aggregate passing（Rust） 2、Rust 与 devres 1、LLM 标签与新贡献者 1、bugzilla 退役 2、Bugzilla 分诊人力 1、Revocable 机制 1、设备直通 1、Bugzilla 与 Debian BTS 1、LLM 依赖与本地模型 1、kernel-doc 告警检查 1。
