@@ -18,9 +18,9 @@ volume: 第16卷-开源运动与合规治理
 
 ## 史料
 
-- [DB:research_notes:blocks:432] 关键词「开源运动」命中：参见 三、开源运动与许可证 下 ESR 相关条目。本次俚语考证（KISS、DRY、YAGNI 原则）〔待核：原文截断，后文待回源〕
-- [DB:research_notes:blocks:1227] 关键词「开源运动」〔待核：原文截断，后文待回源〕
-- [DB:research_notes:blocks:1595] 关键词「开源运动」命中：以下文献为第 64-71 章（FreeBSD 6.x 到 8.x 版本、jemalloc、PF 防火墙、CVS→SVN …
+- [DB:research_notes:blocks:432] 关键词“开源运动”命中：参见 三、开源运动与许可证 下 ESR 相关条目。本次俚语考证（KISS、DRY、YAGNI 原则）〔待核：原文截断，后文待回源〕
+- [DB:research_notes:blocks:1227] 关键词“开源运动”〔待核：原文截断，后文待回源〕
+- [DB:research_notes:blocks:1595] 关键词“开源运动”命中：以下文献为第 64-71 章（FreeBSD 6.x 到 8.x 版本、jemalloc、PF 防火墙、CVS→SVN …
 
 - [WEB:cnet.com IBM offers 500 patents] IBM 2005 年向开源社区开放 500 项软件专利（免版税，限 OSI 定义项目）；此前 2004 年获 3248 项美国专利连续 12 年第一；SCO 诉 IBM（2003-03-07）背景下的专利战略转折
 - [WEB:NBER w19394] Patent Commons, Thickets, and Open Source Software Entry（NBER 工作论文）：IBM 专利共享（The Commons）与 1999-2005 开源初创进入的实证研究；SCO 诉讼抬高开源法律风险感知——专利丛（patent thickets）对 BSD/Apache 许可证谱系的学术一手分析

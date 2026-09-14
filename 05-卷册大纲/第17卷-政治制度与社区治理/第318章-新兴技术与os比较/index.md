@@ -8,12 +8,12 @@ volume: 第17卷-政治制度与社区治理
 
 ## 史料
 
-- [DB:research_notes:blocks:16544] 关键词「新兴技术」命中：工程应用
+- [DB:research_notes:blocks:16544] 关键词“新兴技术”命中：工程应用
 本栏目责任编辑：梁  书
 Computer Knowledge and Technology电脑知识与技术
 第…
-- [DB:research_notes:blocks:451345] 关键词「新兴技术」命中：内史论/外史论：已应用（BSD daemon 词源考、BSD 名称溯源、BSD 认证教育宣传推广战略失败、FreeBSD…
-- [DB:research_notes:blocks:459932] 关键词「新兴技术」命中：章节号：第 156 章
+- [DB:research_notes:blocks:451345] 关键词“新兴技术”命中：内史论/外史论：已应用（BSD daemon 词源考、BSD 名称溯源、BSD 认证教育宣传推广战略失败、FreeBSD…
+- [DB:research_notes:blocks:459932] 关键词“新兴技术”命中：章节号：第 156 章
 章节名：BSD 的文化溯源与治理批评
 章节文件路径：大纲/第12卷-全球社区与合规治理/第156…
 

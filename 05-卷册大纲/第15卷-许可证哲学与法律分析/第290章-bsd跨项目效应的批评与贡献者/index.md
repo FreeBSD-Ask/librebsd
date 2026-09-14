@@ -8,13 +8,13 @@ volume: 第15卷-许可证哲学与法律分析
 
 ## 史料
 
-- [DB:research_notes:blocks:112095] 关键词「bsd跨项目效应」命中：编号：11aj
+- [DB:research_notes:blocks:112095] 关键词“bsd跨项目效应”命中：编号：11aj
 定位：第11卷-136.9.5 反批评层
 缺口类型：辨析充分性
 建议动作：补入 McKusick 或 d…
-- [DB:research_notes:blocks:8] 关键词「贡献者」命中：史实考据：CSRG 于 1994 年 6 月发布的 4.4BSD-Lite 官方 Release Notes，是 4.4…
-- [DB:research_notes:blocks:20] 关键词「贡献者」命中：史实考据：Mike Karels 于 1995 年 6 月发出的告别邮件，标题或正文包含“Berkeley CSRG i…
-- [DB:research_notes:blocks:354] 关键词「贡献者」〔待核：原文截断，后文待回源〕
+- [DB:research_notes:blocks:8] 关键词“贡献者”命中：史实考据：CSRG 于 1994 年 6 月发布的 4.4BSD-Lite 官方 Release Notes，是 4.4…
+- [DB:research_notes:blocks:20] 关键词“贡献者”命中：史实考据：Mike Karels 于 1995 年 6 月发出的告别邮件，标题或正文包含“Berkeley CSRG i…
+- [DB:research_notes:blocks:354] 关键词“贡献者”〔待核：原文截断，后文待回源〕
 
 ## 要点
 
