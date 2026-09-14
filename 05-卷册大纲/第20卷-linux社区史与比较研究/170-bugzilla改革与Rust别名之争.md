@@ -1,7 +1,11 @@
-# 170. Bugzilla 改革线程、Rust 别名之争与 LLM 解码 oops 交锋（ks p34）
+# 170 【Linux社区】bugzilla改革与Rust别名之争
 
 > 来源：ksummit 独有 p34（50 封全读，2025-08 至 2026-04：Pinchart 与 Bottomley 就用 LLM 解码 oops 堆栈正面交锋主张确定性解码服务并警告让用户运行网上下载的未签名内核；Greg KH 关键论断按数量计内核多数 bug 源于 C 的内存泄漏错误路径清理与返回值检查而这些在 Rust 中不存在；Dan Carpenter 与 Meta Chris Mason 商谈 AI 审查工具协作含 semcode 使 btrfs_search_slot 调用图从约 44.4 万 token 降至 2.5 万实测；UMN 事件当事方确认 media 被回退 29 补丁无恶意代码但 sp8870 确有 bug；bugzilla 改革六封、Rust 别名之争四封、新手洪流应对）
 > 判定：47 CAND / 3 NV。主题分布：bugzilla退役 1、UMN补丁风波 1、NVMe拷贝卸载 1、MAINTAINERS分流 2、Rust内核政策 3、linus-next测试树 3、LLM解码堆栈 1、红帽GitLab流程 1、AI生成内容规范 2、bugzilla改革 6、维护者互助组 1、stable邮件精简 1、AI审查工具 1、平凡补丁政策 1、Rust别名之争 4、Link标签改进 1、UALink驱动 1、Rust学习曲线 1、新手洪流应对 1、变量声明规范 2、禁运代码质量 1、闪存低功耗策略 1、回归处理优先级 1、Rust早期讨论 1、Rust构建环境 1、TAB选举 1、设备直通争论 1、folio与mm治理 1、内核malloc提案 1、文件系统维护 1、用户态配套政策 1、AI补丁标注 1。
+
+## 【Linux社区】零、体例说明
+
+本文件系 ksummit-discuss p34 的逐封提取（2025-08 至 2026-04，47 CAND / 3 NV），全 32 块采用**精简块体例**（丙型）：每块一行，由【Linux社区】叙述句与 `<!-- ROW_MINE: … -->` 来源坐标构成，不逐块展开要点/史料/史观/辨析/文献五字段。取舍依据：本层为页面级逐封索引——叙述句承担“要点”职能、ROW_MINE 坐标承担“史料锚”职能（与 claim 库 `source_ref` 一致，可反查去重）；史观/辨析/文献三项不在本层给出，其著录须回 claim 库逐封核对后另行落盘，本层不重复、不臆补（00-总览 §一.2 的五字段标准适用于正式入卷块）。块内叙述仅为当事人原话的转述与节选，史家判断不在本层给出。
 
 ## 170.1 bugzilla退役
 

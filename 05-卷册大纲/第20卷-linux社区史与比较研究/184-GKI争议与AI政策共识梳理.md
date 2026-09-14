@@ -1,7 +1,11 @@
-# 184. Android GKI 争议、维护者峰会 AI 政策共识梳理与 rcutorture 实测（ks p48）
+# 184 【Linux社区】GKI争议与AI政策共识梳理
 
 > 来源：ksummit 独有 p48（50 封全读，2021-06 至 2026-06：Sony 的 Tim Bird 以一手厂商视角批评 Android GKI 与 Google 合同式安排堪称违反 GPL 且 GKI 阻碍运营商认证整改致 Sony 被迫用怪异变通；Sasha Levin 为 2025 维护者峰会系统梳理 AI 政策共识五条分歧四条含一周期约 20% 提交是修复数据；Paul McKenney 披露 rcutorture 对 -next 实测上月一次压出近十个 bug 与 CPU 热插拔间隔 50ms 复现；Pinchart 回应 133 枚积压提交统计自曝漏察 DT 绑定并以 drm-misc 线性历史为反例；AI 补丁文档四封、linux-next 集成四封）
 > 判定：44 CAND / 6 NV。主题分布：MAINTAINERS工具 1、Bugzilla退役 1、Rust GPIO绑定 2、Rust内核政策 2、Rust试点驱动 1、静态分析注解 1、Rust部署范围 1、linux-next集成 4、文档工具链 1、Android GKI争议 1、AI补丁文档 4、代码风格之争 1、Rust语言谱系 1、设备直通安全 1、Bugzilla邮件之争 2、回归追踪困境 1、cleanup锁守卫 1、邮件认证方案 1、Rust推广动因 1、机器人审阅设计 1、Rust稳定回移 1、VSOCK性能 1、AI帮忙分诊 1、AI政策共识 1、kallsyms行号压缩 1、checkpatch误报 1、CoC争议 1、维护者所有权 1、MAINTAINERS抄送 1、AWS CVE分诊 1、面板驱动困境 1、栈回溯解码 1、引用与lore 1、C内存模型 1、文件系统维护 1。
+
+## 【Linux社区】零、体例说明
+
+本文件系 ksummit-discuss p48 的逐封提取（2021-06 至 2026-06，44 CAND / 6 NV），全 35 块采用**精简块体例**（丙型）：每块一行，由【Linux社区】叙述句与 `<!-- ROW_MINE: … -->` 来源坐标构成，不逐块展开要点/史料/史观/辨析/文献五字段。取舍依据：本层为页面级逐封索引——叙述句承担“要点”职能、ROW_MINE 坐标承担“史料锚”职能（与 claim 库 `source_ref` 一致，可反查去重）；史观/辨析/文献三项不在本层给出，其著录须回 claim 库逐封核对后另行落盘，本层不重复、不臆补（00-总览 §一.2 的五字段标准适用于正式入卷块）。块内叙述仅为当事人原话的转述与节选，史家判断不在本层给出。
 
 ## 184.1 MAINTAINERS工具
 
@@ -18,7 +22,7 @@
 
 ## 184.4 Rust内核政策
 
-- 【Linux社区】回应 hpa：C++ 存在“Safe C++”提案且已在 Circle 编译器实现，但似难被标准接纳；若采用则内核代码将脱离标准 C++，且几乎需重写整个内核。 `<!-- ROW_MINE: ksummit.messages.7473 -->`
+- 【Linux社区】Askar Safin 回应 hpa：C++ 存在“Safe C++”提案且已在 Circle 编译器实现，但似难被标准接纳；若采用则内核代码将脱离标准 C++，且几乎需重写整个内核。 `<!-- ROW_MINE: ksummit.messages.7473 -->`
 - 【Linux社区】Jarkko Sakkinen：Rust 难在运行环境而非语言，文档只讲 dnf/apt 未及 BuildRoot/Yocto/NixOS 交叉编译实战，BuildRoot 缺支持已令其无法贡献；写码仅占内核开发 5%，编辑-编译-运行占 95%。 `<!-- ROW_MINE: ksummit.messages.7584 -->`
 
 ## 184.5 Rust试点驱动

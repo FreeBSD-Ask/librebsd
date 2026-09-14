@@ -1,7 +1,11 @@
-# 183. Rust PR 构建责任界定、stable 回移逐 commit 对质与无主文件系统负担（ks p47）
+# 183 【Linux社区】Rust构建责任与回移对质
 
-> 来源：ksummit 独有 p47（50 封全读，2021-04 至 2026-08：Gunthorpe 对维护者发 PR 前须保证 CONFIG_RUST=y 构建通过给出最明确责任界定含 Andrew 扣补丁与 Andreas 修 block 绑定实例；Levin 与 Bottomley 就 stable 回移依据的具体 commit 37f1663c 与 Stable-dep-of 链条往返对质；Bottomley 从法律原理系统反驳 AI 文本与代码区别对待；Brauner 以 VFS 维护者身份详述 reiserfs 等无主文件系统维护负担与移除条件主张；bugzilla 整改四封、峰会遴选争议三封、回移与链接三封）
+> 来源：ksummit 独有 p47（50 封全读，2021-04 至 2026-08：Gunthorpe 对维护者发 PR 前须保证 CONFIG_RUST=y 构建通过给出最明确责任界定含 Andrew 扣补丁与 Andreas 修 block 绑定实例；Levin 与 Bottomley 就 stable 回移依据的具体 commit 37f1663c 与 Stable-dep-of 链条往返对质；Bottomley 从法律原理系统反驳 AI 文本与代码区别对待；Brauner 以 VFS 维护者身份详述 reiserfs 等无主文件系统维护负担与移除条件主张；bugzilla 整改二封、峰会遴选争议二封、回移与链接二封）
 > 判定：41 CAND / 9 NV。主题分布：峰会改线上 1、Rust PR 构建责任 1、AI 版权之争 1、回移与链接 2、峰会遴选争议 2、HID-eBPF 可逆性 1、Rust 绑定术语 1、Link 尾注价值 1、文档检查入 CI 2、AI 审查政策 1、GitLab 流程质疑 1、Rust 稳定性 2、GPIO API 弃用 1、AI 提交责任 1、Link 语义分歧 1、旧列表停用 1、AI 标签争议 1、无主文件系统 2、回归处理指引 1、THE REST 迁移 1、Intersphinx 评估 1、别名模型之争 2、Rust GPIO 选型 1、加速器用户态政策 1、静态分析溢出 1、bugzilla 整改 2、Link 替代提案 1、UALink 驱动路径 1、合并质量标准 1、LLM 提交洪流 1、AI 指南范围 1、文档构建耗时 1、设备直通专利 1、并行驱动政策 1。
+
+## 【Linux社区】零、体例说明
+
+本文件系 ksummit-discuss p47 的逐封提取（2021-04 至 2026-08，41 CAND / 9 NV），全 34 块采用**精简块体例**（丙型）：每块一行，由【Linux社区】叙述句与 `<!-- ROW_MINE: … -->` 来源坐标构成，不逐块展开要点/史料/史观/辨析/文献五字段。取舍依据：本层为页面级逐封索引——叙述句承担“要点”职能、ROW_MINE 坐标承担“史料锚”职能（与 claim 库 `source_ref` 一致，可反查去重）；史观/辨析/文献三项不在本层给出，其著录须回 claim 库逐封核对后另行落盘，本层不重复、不臆补（00-总览 §一.2 的五字段标准适用于正式入卷块）。块内叙述仅为当事人原话的转述与节选，史家判断不在本层给出。
 
 ## 183.1 峰会改线上
 

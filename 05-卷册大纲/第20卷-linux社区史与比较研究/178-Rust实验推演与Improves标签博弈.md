@@ -1,7 +1,11 @@
-# 178. Rust 实验三分结局推演、Improves 标签博弈与 2021 峰会议程全文（ks p42）
+# 178 【Linux社区】Rust实验推演与Improves标签博弈
 
 > 来源：ksummit 独有 p42（50 封全读，2021-07 至 2026-07：Pinchart 强烈反对 LLM 缺陷分诊却全文引录 Levin 的 LLM 分析实战自建 vmlinux 字节级核对定位 iptfs skb_put 崩溃及引入提交；Ts'o 公布 2021 维护者峰会候选议程全文含 UMN 复盘加速器门槛 folio 接受标准 Rust 与 29 人邀请名单；Mauro 对 Rust 实验三分结局推演失败留 C 安全化成果成功则 C 渐退评价分裂致碎片化；Levin 以逾 80% Fixes 补丁入 stable 数据提案 Improves 标签遭 Torvalds 当场拒绝；Rust 入内核争议六封、Sashiko 审码四封、AI 审码利弊三封）
 > 判定：48 CAND / 2 NV。主题分布：Rust入内核争议 6、Rust别名规则 3、Link标签流程 3、API弃用执行 1、trivial补丁政策 2、MAINTAINERS校验 1、设备直通之争 2、LLM缺陷处理 2、AI审码利弊 3、峰会议程拟定 1、Sashiko审码 4、linux-next流程 2、安全披露政策 1、补丁CC惯例 1、pkeys ABI讨论 1、用户态配套要求 2、密钥信任网改造 2、静态分析设想 1、HIGHMEM淘汰 1、stable邮件治理 1、Bugzilla存废 1、文档索引工具 1、编译器警告争论 1、stable标签提案 2、AI生成内容规范 2、malloc与GFP之争 1。
+
+## 【Linux社区】零、体例说明
+
+本文件系 ksummit-discuss p42 的逐封提取（2021-07 至 2026-07，48 CAND / 2 NV），全 26 块采用**精简块体例**（丙型）：每块一行，由【Linux社区】叙述句与 `<!-- ROW_MINE: … -->` 来源坐标构成，不逐块展开要点/史料/史观/辨析/文献五字段。取舍依据：本层为页面级逐封索引——叙述句承担“要点”职能、ROW_MINE 坐标承担“史料锚”职能（与 claim 库 `source_ref` 一致，可反查去重）；史观/辨析/文献三项不在本层给出，其著录须回 claim 库逐封核对后另行落盘，本层不重复、不臆补（00-总览 §一.2 的五字段标准适用于正式入卷块）。块内叙述仅为当事人原话的转述与节选，史家判断不在本层给出。
 
 ## 178.1 Rust入内核争议
 

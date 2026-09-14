@@ -1,7 +1,11 @@
-# 176. bugzilla 近死实录、维护者树囤积量化与 Linus 亲述 b4 工作流（ks p40）
+# 176 【Linux社区】bugzilla近死实录与b4工作流
 
-> 来源：ksummit 独有 p40（50 封全读，2021-04 至 2026-07：Ryabitsev 详述 bugzilla 平台近死开发停滞不兼容新 MySQL 转 Postgres 苦撑与 LF 基建立场、Greg KH 明确拒绝 GitLab；Kozlowski 用 git 统计 133 个被子维护者囤积数周才进 linux-next 的提交并点名 Intel i915 与 MediaTek 实例；Linus 亲自给出 prepare-commit-msg 钩子跑 b4 dig 替代无意识 Link 标记的具体方案披露本人 lore/b4 工作流用法；Bottomley 从版权法表达与思想框架分析 AI 补丁何时须在签收链记录；bugzilla 存废七封、峰会 2021 筹备四封、linus-next 测试四封、AI 补丁标注四封）
+> 来源：ksummit 独有 p40（50 封全读，2021-04 至 2026-07：Ryabitsev 详述 bugzilla 平台近死开发停滞不兼容新 MySQL 转 Postgres 苦撑与 LF 基建立场、Greg KH 明确拒绝 GitLab；Kozlowski 用 git 统计 133 个被子维护者囤积数周才进 linux-next 的提交并点名 Intel i915 与 MediaTek 实例；Linus 亲自给出 prepare-commit-msg 钩子跑 b4 dig 替代无意识 Link 标记的具体方案披露本人 lore/b4 工作流用法；Bottomley 从版权法表达与思想框架分析 AI 补丁何时须在签收链记录；bugzilla 存废六封、峰会 2021 筹备三封、linus-next 测试三封、AI 补丁标注三封）
 > 判定：41 CAND / 9 NV。主题分布：LPC议题投稿 1、linus-next测试 3、stable树邮件 1、C聚合传递之争 2、设备直通生态 1、trivial补丁废除 1、回归处理流程 2、工具生成内容规范 2、THE REST列表迁移 1、KTODO任务清单 1、VLIW与OoO之辩 1、bugzilla存废 6、Link标记之争 2、加速器用户态 2、维护者树隐匿 1、AI补丁标注 3、峰会2021筹备 3、Rust进内核之辩 3、TAB选举 2、栈回溯行号 1、补丁投递礼仪 1、内核文档工具链 1。
+
+## 【Linux社区】零、体例说明
+
+本文件系 ksummit-discuss p40 的逐封提取（2021-04 至 2026-07，41 CAND / 9 NV），全 22 块采用**精简块体例**（丙型）：每块一行，由【Linux社区】叙述句与 `<!-- ROW_MINE: … -->` 来源坐标构成，不逐块展开要点/史料/史观/辨析/文献五字段。取舍依据：本层为页面级逐封索引——叙述句承担“要点”职能、ROW_MINE 坐标承担“史料锚”职能（与 claim 库 `source_ref` 一致，可反查去重）；史观/辨析/文献三项不在本层给出，其著录须回 claim 库逐封核对后另行落盘，本层不重复、不臆补（00-总览 §一.2 的五字段标准适用于正式入卷块）。块内叙述仅为当事人原话的转述与节选，史家判断不在本层给出。
 
 ## 176.1 LPC议题投稿
 
