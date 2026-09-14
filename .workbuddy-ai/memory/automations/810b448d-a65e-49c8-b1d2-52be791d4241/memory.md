@@ -42,10 +42,72 @@ ng12_s6 读手被用户中断；ng35_s5 未开读。
 - `_verify_outline_landing.py <anchor>...`：入纲落地复验（块是否落地 / claim_id 是否一致 / 等级是否与库真值一致）。
 - `_coverage_by_segment.py` / `_coverage_baseline.py`：覆盖率基线重算（段次口径为准，max-pk 口径会高估）。
 
+## 2026-09-14 22:2x – 09-15 00:1x（主理人授权自行 commit + 加快频次，收口 4 段）
+
+| 段次 | 窗口 | 头数 | 候选 | 注册 | 块 | 宿主 | CL-RM | changelog | commit |
+|---|---|---|---|---|---|---|---|---|---|
+| ng12_s6 | 30287–30674 | 388 | 304 | 302 | 302（L4=112/L3=190） | 18 | 040691–040992 | id=1450 | `8ccd08944` +1517 |
+| ng35_s5 | 139588–139987 | 400 | 389 | 389 | 389（L4=105/L3=284） | 15 | 041371–041759 | id=1453 | `208a7fb4f` +2354 |
+| ng13_s5 | 32275–32674 | 400 | 264 | 264 | 264（L4=149/L3=115） | 20 | 042748–043011 | id=1456 | `61a20e110` +1328 |
+| ng35_s6 | 139988–140387 | 400 | 299 | 299 | 299（L4=37/L3=262） | 15 | 043952–044250 | id=1460 | 被并行会话「？」抢先提交 `79ad99ad3`（已复核在 HEAD） |
+
+- **list 12（comp.unix.admin）s6 收尾 → 全组满读**。
+- 四段全部：check 0 不一致 / 反查 N/N / 四表 join N / 块二跑 0 / supplement 二跑 0 / changelog 真幂等 /
+  门禁 PASS / `_verify_outline_landing.py` PASS。
+- **ng35_s7（末段 314 头）读手被用户中断**，dump 已备、候选未产。list 35 仅余此段即可满读。
+
 ## 下次执行
-1. 先跑 `_coverage_by_segment.py` 并查 `evidence.anchor` 确认段次归属，避开并行会话在途段
-   （当前在途：ng35_s4；悬空：ng21_s2）。
+1. **优先补 ng35_s7**（dump `_ng35_dump_s7_20260914.txt` 已备，140388–140701，314 头）——
+   读完即 list 35 满读，是最高性价比的一段。
+2. 先跑 `_coverage_by_segment.py` 并查 `evidence.anchor` 确认段次归属，避开并行会话在途段。
+   **注意：`_coverage_by_segment.py` 已因 plan.json 改版而失真**（依赖 `remaining` 字段），
+   现以 plan.json 的 `read_done` 求和为主口径，该脚本待同步。
 2. ng12_s6 / ng35_s5 的 dump 已备，直接重派读手（模板见本会话）。
 3. 收口顺序：spec → `_fix_cand_chars.py` → gen → check → register → `_extract_claimmap.py`
    → `_mk_assign.py` → 分组子代理 → `_pipeline_blocks.py --write` → 二跑 → supplement → changelog
    → 门禁 → git add → staging → 更新 `_LONGTERM_PLAN.md`。
+
+## 2026-09-14 23:26–09-15 00:1x（本会话：收口 3 段，全部硬性验收通过）
+
+**批次选取**：先查 `evidence.anchor` + `review_logs/` 在途产物，**避开并行会话在途段**
+（ng21_s7 于 23:26 出现 dump/forread/digest；ng35_s6 dump 在；ng44_s18 已 staging），
+取 P0→P1 的**干净未开段**：ng13_s6、ng34_s3（未做）、ng22_s2、ng38_s13。
+
+| 段次 | 窗口 | 头数 | 候选 | 注册 | 块 | 宿主 | CL-RM（实测） | changelog |
+|---|---|---|---|---|---|---|---|---|
+| ng13_s6 | 32675–33074 | 397 | 397（L4=169/L3=228） | 397 | 397 | 18 | 043012–043408 | id=1457 / eo=1448 |
+| ng22_s2 | 79049–79448 | 398 | 398（L4=131/L3=267） | 398 | 398 | 20 | **043554–043951** | id=1458 / eo=1449 |
+| ng38_s13 | 147514–147913 | 400 | 400（L4=107/L3=293） | 400 | 400 | 12 | 044251–044650 | id=1462 / eo=1453 |
+
+**验收（三段全绿）**：spec 20–80 字 0 违规；对齐核验 MISS=0；gen/check 0 不一致；
+register 反查 N/N 且四表 join N；块脚本 dry→write→**幂等二跑 0**；supplement 追加 N、**二跑 append 0**；
+changelog **真幂等**；门禁 `audit_evidence_level_labels.py` **PASS**；`_verify_outline_landing.py` **PASS**；
+git 仅路径限定 `add`（18/20/12 宿主），未 commit，暂存无 `SUMMARY.md`。
+
+## 本会话关键新发现（已写入技能）
+
+1. **U+FFFD 源库乱码**：`_pipeline_check.py` 报「异常字符」实为源存档缺陷（全库 dump 7,730 处），
+   ng38_s13 的 pk 147612 FROM 即含之。已把 `_pipeline_gen.py` / `_pipeline_check.py` 头字段消毒
+   扩展为「`|`→`/` + `U+FFFD`→`?`」（两侧各加 `_hdr()`，**必须同步改**）。
+   安全性依据：register 以源库 `from_name` 覆盖 FROM，**不入 DB**。已对 3 个旧段回归复检仍 0。
+2. **CL-RM 区间禁止推断**：ng22_s2 实测 `043554~043951`，而非按 ng13_s6 末号推断的 `043409~`——
+   并行会话在中间插了 145 条。staging 初稿曾写错，已修正。**必须从 MAPJSON 取 min/max**。
+3. **覆盖率口径改版**：`usenet_newsgroups_plan.json` 已升级为逐组精确台账（含散点旧批），
+   主口径＝`sum(read_done)`＝**94,769 / 234,573 = 40.40%**（含本会话 ng38_s13 的 400 头；
+   并行会话 23:57 重算得 94,369 / 40.23%，未含该段）；满读组 **22 / 43**。
+   **`_coverage_by_segment.py` 已失真**（依赖 plan.json 的 `remaining`，改版后漏判：实测 32.08% / 100% 组 28），待同步。
+
+## 本会话新增可复用脚本（`script/_db_row_mining/`）
+
+- `_mk_forread.py <lid> <lo> <hi> <anchor> [fr] [dg]`：一次产 forread（1200 字）+ digest（400 字），
+  内置 `sort(key=int(pk))` + 严格递增 assert + 越窗 assert。
+- `_align_check.py <dump> <cand>`：通用对齐核验器，**以 dump 全文为判据**，带泛词白名单，输出 MISS/WEAK。
+- 每段导 `_ngNN_sK_hosts.txt` 供 `git add -- $(cat ...)`。
+
+## 下次执行
+
+1. 先跑主口径基线（`sum(read_done)`，勿再用 `_coverage_by_segment.py` 的百分比）并查 `evidence.anchor`
+   避开并行会话在途段（当前在途：ng21_s7 轮3、ng35_s6/s7）。
+2. **P0 余**：ng35_s7（140388–140701，314 头，收官段）、ng34_s3–s5（**digest 发行版级合并，勿派普通读手**）、
+   ng13_s7–s13（7 段）。**P1 余**：ng38_s14+、ng22_s3+、ng41_s12、ng15_s1（未开工）。
+3. 三次子代理派发（读手/分组）本会话**全部一次成功无 429**，模板见技能「派发子代理的实测模板要点」。
