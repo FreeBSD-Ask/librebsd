@@ -1,13 +1,17 @@
-# 165. Bugzilla 存废、加速器用户态交锋与 Link 尾注治理批评（ks p29）
+# 165 【Linux社区】Bugzilla存废与加速器用户态交锋
 
 > 来源：ksummit 独有 p29（50 封全读，2021-04 至 2026-08：Johannes Berg 对 Linus 强推移除 Link 尾注的罕见直白批评直指仁君社会契约破裂与权力动态；Coly Li RichACL 重启提案附创业产品公测 13 个月装机超百万实测；Dave Airlie 与 Greg KH 就加速器驱动用户态政策正面交锋举一个听劝入社区的群体来与得益的是 Linux 基金会而非 Linux；2022 都柏林维护者峰会完整日程含 Linus 开心吗环节与 28 位顶级维护者名单；Bugzilla 缺陷跟踪六封、Rust 内核开发六封、AI 生成代码政策四封）
 > 判定：43 CAND / 7 NV。主题分布：内核文档工具链 3、加速器驱动用户态 3、AI生成代码政策 4、Link尾注争议 1、新开发者治理 2、Bugzilla缺陷跟踪 5、安全报告流程 1、RichACL提案 1、子系统树合并规范 1、静态分析议题 1、Rust内核开发 5、维护者峰会组织 2、fwctl设备直通 2、TAB选举与延续 1、别名与代码生成 1、kernel.org账号管理 1、文件系统用户态化 1、驱动probe失败处理 1、cleanup注解 1、AI辅助评审 1、trivial补丁政策 1、回归跟踪bot 1、维护者倦怠 1、cdev生命周期 1、KTODO任务清单 1。
+
+## 【Linux社区】零、体例说明
+
+本文件系 ksummit-discuss p29 的逐封提取（2021-04 至 2026-08，43 CAND / 7 NV），全 25 块采用**精简块体例**（丙型）：每块一行，由【Linux社区】叙述句与 `<!-- ROW_MINE: … -->` 来源坐标构成，不逐块展开要点/史料/史观/辨析/文献五字段。取舍依据：本层为页面级逐封索引——叙述句承担“要点”职能、ROW_MINE 坐标承担“史料锚”职能（与 claim 库 `source_ref` 一致，可反查去重）；史观/辨析/文献三项不在本层给出，其著录须回 claim 库逐封核对后另行落盘，本层不重复、不臆补（00-总览 §一.2 的五字段标准适用于正式入卷块）。块内叙述仅为当事人原话的转述与节选，史家判断不在本层给出。
 
 ## 165.1 内核文档工具链
 
 - 【Linux社区】Linus称内核历来视提交生成文件为痛苦，mkutf8data几无人重新生成，对flex/bison主张“直接写更好的代码”而非依赖生成器产物。 `<!-- ROW_MINE: ksummit.messages.4537 -->`
 - 【Linux社区】Corbet用字典替换Sphinx符号查找中的部分线性搜索，使Sphinx 5.0.2全量htmldocs构建提速约20%，称其符号查找代码复杂度“令人生畏”。 `<!-- ROW_MINE: ksummit.messages.4538 -->`
-- 【Linux社区】Pinchart反对盲改用户所选Python解释器，主张以提示代替；引Mauro数据称kernel-doc改用新解释器可提速55%至60%，OpenSuse Leap等需python311-sphinx。 `<!-- ROW_MINE: ksummit.messages.4643 -->`
+- 【Linux社区】Pinchart反对盲改用户所选Python解释器，主张以提示代替；引Mauro数据称kernel-doc改用新解释器可提速55%至60%，openSUSE Leap等需python311-sphinx。 `<!-- ROW_MINE: ksummit.messages.4643 -->`
 
 ## 165.2 加速器驱动用户态
 
