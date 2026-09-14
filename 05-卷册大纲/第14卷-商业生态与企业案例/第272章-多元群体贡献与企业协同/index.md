@@ -35,12 +35,10 @@ volume: 第14卷-商业生态与企业案例
 
 <!-- DB_REF:linux_kernel.duckdb -->
 > **数据库引用（linux_kernel.duckdb）**：本子节对应 linux_kernel 代码仓库。
-> 仓库总览：1,474,341 次提交，39,865 位贡献者（contributors 表行数，1970-01-01 至 2026-08-24）。
 - 社区调查； Foundation 项目 ［A］
 
 <!-- DB_REF:freebsd.duckdb -->
 > **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。
-> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
 - **02-sacred源材料/dagang.md**（第二部分：25 条总纲，总纲第 11、13、19、21 条）；BSD 许可证原文（**<https://opensource.org/licenses/BSD-3-Clause>**，访问日期 2026-07-24）；GPLv2 文本（**<https://opensource.org/licenses/GPL-2.0>**，访问日期 2026-07-24）；Apple/Sony/Netflix/Juniper/NetApp 官方文档；darwin.duckdb L3.2.1、L7.2.1 查询结果 [DB/OL] ［A］
 
 ### 史观映射

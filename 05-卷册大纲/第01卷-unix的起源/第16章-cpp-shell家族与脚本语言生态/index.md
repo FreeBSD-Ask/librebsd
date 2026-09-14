@@ -34,7 +34,6 @@ volume: 第01卷-unix的起源
 
 > 1995-1995 年间：9,812 次提交。
 
-> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
 
 - FreeBSD Porter's Handbook；FreeBSD Ports Tree；FreeBSD Documentation ［B］
 

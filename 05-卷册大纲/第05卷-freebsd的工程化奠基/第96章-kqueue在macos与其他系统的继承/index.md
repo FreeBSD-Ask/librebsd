@@ -56,34 +56,28 @@ volume: 第05卷-freebsd的工程化奠基
 <!-- DB_REF:freebsd.duckdb -->
 > **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。
 > 1996-2010 年间：482,545 次提交。
-> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
 - FreeBSD 内核文档；Conill 博客 ［C］
 
 <!-- DB_REF:freebsd.duckdb -->
 > **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。
 > 2021 年间：60,852 次提交。
-> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
 - Lemon J. 2001（kqueue 论文）；**kqueue(2)** 手册页［A］（2026-09-12 整改：手册页引用改原始体例、半角分号改中文——批次 C067 问题 10）
 
 <!-- DB_REF:freebsd.duckdb -->
 > **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。
 > 1996-2010 年间：482,545 次提交。
-> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
 - FreeBSD Foundation roadmap；freebsd-hackers 邮件 ［A］
 
 <!-- DB_REF:freebsd.duckdb -->
 > **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。
 > 1996-2010 年间：482,545 次提交。
-> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
 - Munro. PostgreSQL on FreeBSD: Some news, observations and speculation [C]//BSDCan 2020. Ottawa, 2020 ［A］
 
 <!-- DB_REF:freebsd.duckdb -->
 > **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。
 > 1996-2010 年间：482,545 次提交。
-> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
 - BSDCon 2000 proceedings；DANCES 2002 proceedings［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］
 
 <!-- DB_REF:freebsd.duckdb -->
 > **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。
 > 2000 年间：29,754 次提交。
-> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。

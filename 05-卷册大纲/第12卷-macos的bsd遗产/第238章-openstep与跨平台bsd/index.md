@@ -36,7 +36,6 @@ volume: 第12卷-macos的bsd遗产
 <!-- DB_REF:darwin.duckdb -->
 > **数据库引用（darwin.duckdb）**：本子节对应 darwin 代码仓库。
 > 1994-1995 年间：0 次提交。
-> 仓库总览：2,016 次提交，时间跨度 2001-04-10 至 2026-04-13；contributors 表 43 行（42 个镜像仓库 + 1 行 dependabot，全部经 Apple OSS Distributions 自动化账号导入）。
 
 <!-- /DB_REF -->
 
@@ -45,7 +44,6 @@ volume: 第12卷-macos的bsd遗产
 <!-- DB_REF:darwin.duckdb -->
 > **数据库引用（darwin.duckdb）**：本子节对应 darwin 代码仓库。
 > 1995-1997 年间：0 次提交。
-> 仓库总览：2,016 次提交，时间跨度 2001-04-10 至 2026-04-13；contributors 表 43 行（42 个镜像仓库 + 1 行 dependabot，全部经 Apple OSS Distributions 自动化账号导入）。
 
 <!-- /DB_REF -->
 
@@ -54,7 +52,6 @@ volume: 第12卷-macos的bsd遗产
 <!-- DB_REF:darwin.duckdb -->
 > **数据库引用（darwin.duckdb）**：本子节对应 darwin 代码仓库。
 > 1996-1996 年间：0 次提交。
-> 仓库总览：2,016 次提交，时间跨度 2001-04-10 至 2026-04-13；contributors 表 43 行（42 个镜像仓库 + 1 行 dependabot，全部经 Apple OSS Distributions 自动化账号导入）。
 
 <!-- /DB_REF -->
 
@@ -63,6 +60,5 @@ volume: 第12卷-macos的bsd遗产
 <!-- DB_REF:darwin.duckdb -->
 > **数据库引用（darwin.duckdb）**：本子节对应 darwin 代码仓库。
 > 2001-2026 年间：2,016 次提交。
-> 仓库总览：2,016 次提交，时间跨度 2001-04-10 至 2026-04-13；contributors 表 43 行（42 个镜像仓库 + 1 行 dependabot，全部经 Apple OSS Distributions 自动化账号导入）。
 
 <!-- /DB_REF -->

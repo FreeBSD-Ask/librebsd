@@ -40,7 +40,6 @@ volume: 第11卷-dragonflybsd的历史
 <!-- DB_REF:dragonfly.duckdb -->
 > **数据库引用（dragonfly.duckdb）**：本子节对应 dragonfly 代码仓库。
 > 2015-2016 年间：90,164 次提交。
-> 仓库总览：656,207 次提交，213 位贡献者，2003-06-17 至 2026-08-18。
 
 <!-- /DB_REF -->
 
@@ -49,7 +48,6 @@ volume: 第11卷-dragonflybsd的历史
 <!-- DB_REF:dragonfly.duckdb -->
 > **数据库引用（dragonfly.duckdb）**：本子节对应 dragonfly 代码仓库。
 > 2016-2017 年间：88,853 次提交。
-> 仓库总览：656,207 次提交，213 位贡献者，2003-06-17 至 2026-08-18。
 
 <!-- /DB_REF -->
 
@@ -58,7 +56,6 @@ volume: 第11卷-dragonflybsd的历史
 <!-- DB_REF:dragonfly.duckdb -->
 > **数据库引用（dragonfly.duckdb）**：本子节对应 dragonfly 代码仓库。
 > 2014-2017 年间：227,047 次提交。
-> 仓库总览：656,207 次提交，213 位贡献者，2003-06-17 至 2026-08-18。
 
 <!-- /DB_REF -->
 
@@ -67,7 +64,6 @@ volume: 第11卷-dragonflybsd的历史
 <!-- DB_REF:dragonfly.duckdb -->
 > **数据库引用（dragonfly.duckdb）**：本子节对应 dragonfly 代码仓库。
 > 2003-2026 年间：656,207 次提交。
-> 仓库总览：656,207 次提交，213 位贡献者，2003-06-17 至 2026-08-18。
 
 <!-- /DB_REF -->
 
@@ -76,6 +72,5 @@ volume: 第11卷-dragonflybsd的历史
 <!-- DB_REF:dragonfly.duckdb -->
 > **数据库引用（dragonfly.duckdb）**：本子节对应 dragonfly 代码仓库。
 > 2003-2026 年间：656,207 次提交。
-> 仓库总览：656,207 次提交，213 位贡献者，2003-06-17 至 2026-08-18。
 
 <!-- /DB_REF -->

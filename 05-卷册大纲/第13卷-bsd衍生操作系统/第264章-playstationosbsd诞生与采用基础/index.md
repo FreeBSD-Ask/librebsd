@@ -35,7 +35,6 @@ volume: 第13卷-bsd衍生操作系统
 <!-- DB_REF:freebsd.duckdb -->
 > **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。
 > 2006-2006 年间：40,461 次提交。
-> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
 
 - freebsd.duckdb 查询 L7.2.1（衍生项目贡献者在 freebsd-src 的回馈 commit，≥5 次，前 30 名）；**research_notes.duckdb** 衍生项目与跨项目对比分析记录 §L7.2（原“原材料/研究/bsd 仓库分析/数据分析/衍生项目与跨项目对比分析.md”路径已失效，2026-09-11 整改改指）；Sony 工程存档。［A］
 - 各主机厂商资料。［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］
@@ -43,7 +42,6 @@ volume: 第13卷-bsd衍生操作系统
 <!-- DB_REF:bsd-derivatives.duckdb -->
 > **数据库引用（bsd-derivatives.duckdb）**：本子节对应 bsd-derivatives 代码仓库。
 > 1985-2026 年间：963,557 次提交。
-> 仓库总览：963,557 次提交，9,744 位贡献者（contributors 表行数，1985-06-13 至 2026-08-24）。
 
 - PlayStation.Blog 2010.3.28 公告 ［EB/OL］. <https://blog.us.playstation.com/2010/03/28/ps3-firmware-v3-21-update/>；EU PlayStation.Blog 2010.3.29 公告 ［EB/OL］. <https://blog.eu.playstation.com/2010/03/29/ps3-firmware-3-21-coming-april-1st/>；Ars Technica 2010.4 报道“Linux on the console? Sony sued for removing PS3 support”［EB/OL］. <https://arstechnica.com/gaming/2010/04/ps3-linux-support-removal-begets-class-actin-lawsuit/>；Ars Technica 2016.6.22 David Kravets 报道"Sony agrees to pay millions to gamers to settle PS3 Linux debacle"［EB/OL］. <https://arstechnica.com/tech-policy/2016/06/if-you-used-to-run-linux-on-your-ps3-you-could-get-55-from-sony/>；Ventura v. Sony Computer Entertainment America Inc. 案件档案（case no. 4:10-cv-01811，N.D.C.A.）；Yellow Dog Linux 5.0 PS3 安装手册；美国空军研究实验室 PS3 Condor Cluster 公开报道；FreeBSD 9.0 release notes；FreeBSD PS3 移植邮件列表存档 ［A］
 - PlayStation Network User Agreement；Ars Technica 2016.6.22 报道；Ventura v. SCEA 案 2011 撤销裁定与 2014 上诉法院推翻裁定；Ars Technica 2017.2.2 报道“Game over for PS3 Linux settlement”［EB/OL］. <https://arstechnica.com/tech-policy/2017/02/game-over-for-ps3-linux-settlement-judge-concerned-gamers-wont-get-paid/>；Law360 2017.9.5 报道“Sony Asks For Approval Of Revised $3.75M PS3 Settlement”；Gearnuke 2018.11.14 报道“Sony sending \$10 settlement checks for PS3 Other OS lawsuit”；Hotz 2010.1 PS3 hypervisor 漏洞博客 ［EB/OL］. <https://geohotps3.blogspot.com/>；fail0verflow 27C3 演讲档案；Sony v. Hotz 案件档案；PS3 Slim 2009.9 发布新闻稿 ［A］
@@ -54,7 +52,6 @@ volume: 第13卷-bsd衍生操作系统
 <!-- DB_REF:bsd-derivatives.duckdb -->
 > **数据库引用（bsd-derivatives.duckdb）**：本子节对应 bsd-derivatives 代码仓库。
 > 2010-2018 年间：370,282 次提交。
-> 仓库总览：963,557 次提交，9,744 位贡献者（contributors 表行数，1985-06-13 至 2026-08-24）。
 
 - **sacred_sources.duckdb** 项目统摄史观相关章（原“原材料/哲学/项目统摄史观/第 25 章.md 总纲第 1、2、7、11、13、19、23、25 条”引证，条号集合未经逐一核验，2026-09-11 整改登记待核）；PlayStation.Blog 2010.3.28 公告 ［EB/OL］. <https://blog.us.playstation.com/2010/03/28/ps3-firmware-v3-21-update/>；Ventura v. SCEA 案法律档案（case no. 4:10-cv-01811，N.D.C.A.）；Hotz 2010.1 漏洞公布博客 ［EB/OL］. <https://geohotps3.blogspot.com/>；fail0verflow 27C3 演讲档案；Sony v. Hotz 案件档案（2011.1）；Ars Technica、Courthouse News Service、Law360、Gearnuke 媒体报道；第 6 卷 PlayStation OtherOS 诉讼相关节审视文本（原“126.5.1-126.5.3 节审视文本”旧章号引用，2026-09-11 整改改为不依赖节号表述）［A］
 

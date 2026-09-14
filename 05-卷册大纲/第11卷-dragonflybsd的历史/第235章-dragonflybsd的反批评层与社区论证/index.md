@@ -48,16 +48,13 @@ volume: 第11卷-dragonflybsd的历史
 <!-- DB_REF:dragonfly.duckdb -->
 > **数据库引用（dragonfly.duckdb）**：本子节对应 dragonfly 代码仓库。
 > 2003-2026 年间：656,207 次提交。
-> 仓库总览：656,207 次提交，213 位贡献者（contributors 表行数），2003-06-17 至 2026-08-18。
 - 综合原第 105 章全章文献；sacred_sources.duckdb 第 25 章（file_id=26，总纲第 6 条与第 8 条原文）；**dragonfly.duckdb** dragonfly-src 仓库 commits/contributors/tags/commit_files 表；DragonFly BSD Project. DragonFly BSD history [EB/OL]. <https://www.dragonflybsd.org/history/>；dragonflybsd.org/foundation/ 页面 404；FreeBSD Core Team bylaws [EB/OL]. <https://www.freebsd.org/internal/core-team/>；NetBSD Foundation bylaws [EB/OL]. <https://www.netbsd.org/foundation/>；OpenBSD Foundation [EB/OL]. <https://www.openbsdfoundation.org/> ［A］
 
 <!-- DB_REF:dragonfly.duckdb -->
 > **数据库引用（dragonfly.duckdb）**：本子节对应 dragonfly 代码仓库。
 > 2003-2026 年间：656,207 次提交。
-> 仓库总览：656,207 次提交，213 位贡献者（contributors 表行数），2003-06-17 至 2026-08-18。
 - 项目史观总纲第 19 条；Dillon M. DragonFly BSD fork announcement [EB/OL]. <https://lists.freebsd.org/pipermail/freebsd-current/2003-July/006889.html>；DragonFly BSD Project. DragonFly BSD history [EB/OL]. <https://www.dragonflybsd.org/history/>；DragonFly BSD Digest [EB/OL]. <https://www.dragonflydigest.com/>；dragonflybsd.org/foundation/ 页面 404；**dragonfly.duckdb** dragonfly-src 仓库 contributors 表；FreeBSD Core Team bylaws [EB/OL]. <https://www.freebsd.org/internal/core-team/> ［A］
 
 <!-- DB_REF:dragonfly.duckdb -->
 > **数据库引用（dragonfly.duckdb）**：本子节对应 dragonfly 代码仓库。
 > 2003-2026 年间：656,207 次提交。
-> 仓库总览：656,207 次提交，213 位贡献者（contributors 表行数），2003-06-17 至 2026-08-18。
