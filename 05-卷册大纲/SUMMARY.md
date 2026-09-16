@@ -190,6 +190,7 @@
     - [18.3 BUNCH 之外——Data General、Prime、Tandem、王安的兴衰](./第01卷-unix的起源/第18章-小型机的诞生与dec-pdp谱系/18.3-BUNCH-之外-Data-General-Prime-Tandem-王安的兴衰.md)
     - [18.4 HP、Sun 与 UNIX 工作站时代的小型机转型](./第01卷-unix的起源/第18章-小型机的诞生与dec-pdp谱系/18.4-HP-Sun-与-UNIX-工作站时代的小型机转型.md)
     - [18.5 关键词行级挖掘素材线索](./第01卷-unix的起源/第18章-小型机的诞生与dec-pdp谱系/18.5-关键词行级挖掘素材线索.md)
+    - [18.6 Ultrix：DEC 的 UNIX 实现与工作站生态](./第01卷-unix的起源/第18章-小型机的诞生与dec-pdp谱系/18.6-Ultrix-DEC-的UNIX实现与工作站生态.md)
     - [本章索引](./第01卷-unix的起源/第18章-小型机的诞生与dec-pdp谱系/index.md)
 
   - [第 19 章 RISC 战争与小型机的终结](./第01卷-unix的起源/第19章-risc战争与小型机的终结/概述.md)
