@@ -252,6 +252,8 @@ verify_results.py
 _consistency_check.py
 *.py
 *.mjs
+# 根目录临时工作文件（并发会话的路径清单等，不入版本库）
+/_*.txt
 # 目录页测试套件例外（2026-09-11 固化，须随 index.html 一起纳入版本管理）
 !08-核查报告与多轮复核/重构2026/tests/*.mjs
 !08-核查报告与多轮复核/重构2026/tests/README.md
