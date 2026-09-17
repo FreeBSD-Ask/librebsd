@@ -44,7 +44,7 @@ INDEX = REPO / "08-核查报告与多轮复核" / "重构2026" / "index.html"
 
 # 压缩数据块标记（2026-09-13 O-2 起；历史载体 var DATA 字面量已废弃）
 BLOB_RE = re.compile(
-    r'(<script type="application/gzip\+base64" id="opt-data-blob">\n)(.*?)(\n</script>)', re.S)
+    r'(<script type="application/gzip\+base64" id="opt-data-blob"[^>]*>\n)(.*?)(\n</script>)', re.S)
 
 
 def serialize_content(content):
