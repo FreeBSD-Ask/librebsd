@@ -9,7 +9,7 @@
 规则文件中引用的现存 Python 脚本副本（共 15 个 .py 副本，从 `script/` 目录复制，原文件保持不变；`backup_databases.py` 与 `sqlite2duckdb.py`、`podcast_db_final_sync.py`、`sync_refactor2026_baseline.py`、`sync_gitbook_summary.py` 为直接存放于本目录的固定脚本）。
 
 | 文件名 | 用途说明 | 规则引用位置 |
-| --- | --- | --- |
+| ------ | -------- | ------------ |
 | [auto_ingest_new_pdfs.py](auto_ingest_new_pdfs.py) | 新增 PDF/EPUB/CAJ 文献自动检测入库，含全量检测、`--dry-run` 仅检测、`--file <相对路径>` 单文件入库三种模式 | 流程规则.md “新增文献自动检测规则” → “自动检测触发条件”小节 |
 | [cleanup_duplicates_and_errors.py](cleanup_duplicates_and_errors.py) | 重复与错误文档清理脚本：扫描 `references` 表与文件系统，识别 SHA-256 精确重复、标题+作者+年份模糊重复、文件损坏、文件不存在、文件过小五类问题，生成待删除清单 `pending_deletion.jsonl`，含 `--execute` 执行删除、`--sample-only` 抽样复核两种模式 | 流程规则.md “重复与错误文档清理规则” → “清理流程”小节 |
 | [scan_all_gaps_v4.py](scan_all_gaps_v4.py) | 全书 12 卷拆分模式章节编号缺口扫描；规则登记此脚本存在两类 bug（浮点解析 bug、格式识别 bug），导致 2026-07-26 报告的“66 处 Type B 缺口”全部为误报 | 流程规则.md “编号缺口登记” → “2026-07-26 编号缺口全面核查结论”小节 |
@@ -27,10 +27,11 @@
 | [sqlite2duckdb.py](sqlite2duckdb.py) | SQLite → DuckDB 转换、优化与主存储层管理脚本：15 库（11 代码仓库库 + 4 邮件合并库）的 DuckDB 主库管理——转换（`--all`/`--db`，自动跳过 FTS5 虚拟表及影子表，行数三向校验）、优化（`--optimize`：CHECKPOINT 压实 + ART 索引（commits/commit_files 的 commit_hash、messages 的 message_id）+ ANALYZE 统计 + manifest 刷新）、校验（`--verify`：在档库比 SQLite 源、已归档库比 manifest）、状态（`--list`：在档最新/过期/已归档）；归档库转换须先自 `12-数据库备份/<name>/ARCHIVE_FINAL_*.db.gz` 恢复；同步日志 `script/_duckdb_sync_log.jsonl`；DuckDB 依赖：`pip install duckdb`（PoC 实测 dragonfly.db 856MB→131MB，聚合查询加速 6~180 倍） | 流程规则.md “DuckDB 分析层与主存储层规则” |
 | [podcast_db_final_sync.py](podcast_db_final_sync.py) | 播客两库 SQLite→DuckDB 收尾脚本（触发条件：转录进程退出）：对 `bsdnow_podcast`/`bsd_podcasts_external` 执行前置检查（integrity_check、无 -wal/-shm 伴生）→ 逐表增量同步至同目录 `.duckdb`（跳过 FTS5 虚拟表及影子表，全 VARCHAR 落库）→ 行数三向校验 → 全部一致后归档 `.db` 为 `ARCHIVE_FINAL_<ts>.db.gz`（SHA-256 清单 + CRC 回读）→ 删除工作区 `.db` 及伴生文件；支持 `--sync-only`（仅同步不归档）/`--check`（仅前置检查）；日志 `script/_podcast_final_sync_log.jsonl` | 流程规则.md “DuckDB 分析层与主存储层规则” → “播客库收尾流程”小节 |
 | [sync_gitbook_summary.py](sync_gitbook_summary.py) | **GitBook 总导航 `05-卷册大纲/SUMMARY.md` 生成/同步脚本（固定脚本，2026-09-15 重建，直接存放于本目录）**：原 `script/_sync_gitbook_summary.py` 已缺失，本器依 流程规则.md「GitBook 目录同步规则」重建。采用**结构同步**语义——结构（卷/章/条目集合与顺序）以 `05-卷册大纲/` 磁盘实况为唯一真值完全重算，标题对已在 SUMMARY 中的文件逐字沿用（零改写）、仅新增文件取节文件 H1；头部（`# Summary` + 引言引文）与尾部（`<!-- USER-EDIT:开始 -->`…`<!-- USER-EDIT:结束 -->`，含第20卷块与读者指引）逐字保留。章内条目顺序：`概述.md`(2 空格) → 节文件 `N.M[-K]-*.md`（数值序，4 空格）→ 其他非节 .md → `index.md`（本章索引，恒末）；卷根非章 .md（`V*-新增-*.md`）紧随卷链接列出。`--check`（默认）输出与现行文件的逐行 diff、`--write` 写盘；已实测**幂等**（复跑 0 差异）。**重要说明**：现行 SUMMARY 的节标题与磁盘节文件 H1 已**系统性失同步**（数百处，如 5.8 为 H1＋正文首段合并的长题、3.10 多出 `**`、27.9 缺节号前缀），整文件重生成会一次性改写这些标题——属**独立的一致性工程**，本器刻意以「结构同步」规避之；如需标题归一，须另立专项批准后以 `--regen-titles` 类模式执行 | 流程规则.md “GitBook 目录同步规则” → “同步执行方式”小节 |
-| [sync_refactor2026_baseline.py](sync_refactor2026_baseline.py) | 重构2026 大纲目录口径同步脚本（固定脚本，直接存放于本目录）：解析 `08-核查报告与多轮复核/重构2026/index.html` 页首 `doc-metrics` 块提取权威三元组（总卷数/总章数/总节数），扫描 `重构2026/*.md` 三维度——维度一口径三元组 `N卷M章K节`（marker-drift 标记块内过时 / present-stale 标记块外现在时态旧口径 / exempt 历史快照与数据基线）、维度二 ref-stale（指向已归档目录文件且无归档标注）、维度三 pending-stale（未消解 `| ⬜ |` 待填单元格且无取代声明）；`--check`（默认）输出漂移报告并以退出码表示是否存在未处置漂移、`--sync` 仅重写 `BEGIN/END 口径基准` 标记块内基准行并刷新日期戳（幂等，标记块外零改动）、`--list` 打印当前权威基准；维度二/三对头部含日期/已被取代等历史声明的文件整体豁免；可选 `--verbose` | 流程规则.md “重构大纲目录口径同步规则” |
-| [audit_data_integrity.py](audit_data_integrity.py) | 重构2026 目录页 DATA 数据完整性审计（固定脚本，直接存放于本目录）：解析 `重构2026/index.html` 内嵌 `var DATA = {...}`（persons 人名数组/refs 文献/revisions），对 persons[].n 数组审计四维——①JSON 残片（含 `"value"` 与 `}`/`]` 或以 `{` 开头）判错、②邮箱/账户形态条目（BSD committer 邮箱属有效身份史料，仅提示不判错不删除）、③内部标识串（`person_id_(legacy|new):`、`freebsd_account`、`openbsd_account`、`netbsd_account`、`dragonflybsd_account` 等前缀）判错、④整个人 n 数组清洗后无人类可读姓名判错；退出码 0/1；目录页修改 DATA 段后必须先跑本门禁 | 流程规则.md “重构大纲目录口径同步规则” → “DATA 数据完整性门禁”小节 |
+| [sync_refactor2026_baseline.py](sync_refactor2026_baseline.py) | 重构2026 大纲目录口径同步脚本（固定脚本，直接存放于本目录）：解析 `08-核查报告与多轮复核/重构2026/index.html` 页首 `doc-metrics` 块提取权威三元组（总卷数/总章数/总节数），扫描 `重构2026/*.md` 三维度——维度一口径三元组 `N卷M章K节`（marker-drift 标记块内过时 / present-stale 标记块外现在时态旧口径 / exempt 历史快照与数据基线）、维度二 ref-stale（指向已归档目录文件且无归档标注）、维度三 pending-stale（未消解 `\| ⬜ \|` 待填单元格且无取代声明）；`--check`（默认）输出漂移报告并以退出码表示是否存在未处置漂移、`--sync` 仅重写 `BEGIN/END 口径基准` 标记块内基准行并刷新日期戳（幂等，标记块外零改动）、`--list` 打印当前权威基准；维度二/三对头部含日期/已被取代等历史声明的文件整体豁免；可选 `--verbose` | 流程规则.md “重构大纲目录口径同步规则” |
+| [audit_data_integrity.py](audit_data_integrity.py) | 重构2026 目录页 DATA 数据完整性审计（固定脚本，直接存放于本目录）：解析 `重构2026/index.html` 内嵌 `var DATA = {...}`（persons 人名数组/refs 文献/revisions），对 persons[].n 数组审计四维——①JSON 残片（含 `"value"` 与 `}`/`]` 或以 `{` 开头）判错、②邮箱/账户形态条目（BSD committer 邮箱属有效身份史料，仅提示不判错不删除）、③内部标识串（`person_id_(legacy\|new):`、`freebsd_account`、`openbsd_account`、`netbsd_account`、`dragonflybsd_account` 等前缀）判错、④整个人 n 数组清洗后无人类可读姓名判错；退出码 0/1；目录页修改 DATA 段后必须先跑本门禁 | 流程规则.md “重构大纲目录口径同步规则” → “DATA 数据完整性门禁”小节 |
 | [font_subset_rebuild.py](font_subset_rebuild.py) | 重构2026 目录页字体子集重建与 cmap 审计（固定脚本，2026-09-12 起）：扫描 `重构2026/index.html` 全部可见字符（正文+src 注文+DATA 浮层文本），从字体源 tgz（`script/_font_embed_20260905/lxgw-wenkai-screen-webfont-1.7.0.tgz`）合并分片后按页面字符集子集化写回单片 woff2（**font-display:swap 固定**——主理人裁定「无论加载时间最终必须加载新字体」，swap 保证字体就绪后必切换；丢弃 GSUB/GPOS/GDEF 布局表与孤儿替换 glyph）；cmap 审计区分「源字体本无（系统 fallback，允许）」与「源有但重建丢失（回归，退出码 1 禁止写回）」；`--check` 仅审计不写回；大纲内容增改引入新汉字后必须重跑本脚本；依赖 fonttools+brotli（venv） | 流程规则.md “重构大纲目录口径同步规则”（待登记小节） |
 | [embed.py](embed.py) | 重构2026 目录页数据装配脚本（固定脚本，直接存放于本目录）：把 `重构2026/data/catalog.json`（语义数据中枢）序列化后重写 `index.html` 的 `var DATA = {...};` 行（发布态装配，单体 HTML 不变、DATA 行外零触碰、幂等、SHA-256 摘要输出）；`--check` 仅检测 catalog 与内嵌 DATA 内容字段漂移（`$schema`/`version` 为源元数据不参与比较）；catalog 修改后运行装配再跑四件门禁 | 流程规则.md “重构大纲目录口径同步规则” → “DATA 数据完整性门禁”小节 |
+| [audit_index_structure.py](audit_index_structure.py) | **重构2026 目录页结构自检门禁（固定脚本，2026-09-18 立，第七件改后必跑门禁）**：不依赖浏览器做九组静态自检——A 编码（无 BOM／CRLF／替换字符／直角引号）／B 卷锚点 1..N 连续唯一且卷题序数一致／C 卷内章号连续唯一、章题与锚点一致、章题全局唯一／D 章节号连续、节题非空（src 注不计入题文）／E 述评恒末（**若有**「本章书目述评」节须居章末；无述评的正章仅列参考，合 27 号文「有则设、无则不设」）／F 口径六处（doc-metrics／og／meta／footer／JSON-LD／实测）一致／G 标签平衡（section／ul／li／span／h3／h2／div／p）／H 锚点唯一与静态站内链接可达（排除 JS 拼接模板）／I doc-metrics 小字自洽（正章＋卷末述评章＝总章数）；`--path` 可指定文件（如备份件交叉验证）；0 异常 exit 0，否则 exit 1 | 流程规则.md “重构大纲目录口径同步规则” → “DATA 数据完整性门禁”小节（改后必跑七件之一）；CLAUDE.md 修改规范“目录页结构自检门禁（2026-09-18 新增，第七件）” |
 | [audit_evidence_level_labels.py](audit_evidence_level_labels.py) | **大纲注入块「证据等级」门禁（固定脚本，2026-09-14 立，第六件改后必跑门禁）**：审计 `05-卷册大纲/` 全部 md 中块头 `（证据等级：Lx，来源：`db.table.id`）` 是否与引用项真实等级一致——引用 `historical_claims.duckdb.claim` 者以 `claim.evidence_level` 为逐条真值严格核验（错标或悬空即 FAIL、退出码 1）；其余无逐条等级字段的来源库仅报告族内分布（族内单一值标 INFO，不作判定）。设立缘由：2026-09-14 核查发现全库 439 处块头等级错标（L3 被块脚本模板字面常量写死为 L4），波及 list12/16/18/19/23/38/40/41/44 共 69 个宿主文件；本门禁为该缺陷的常设阻断措施。凡向 `05-卷册大纲/` 写回带等级标注的注入块后必跑 | 流程规则.md “大纲注入块证据等级门禁”小节（待登记） |
 
 ## 程序命令
@@ -38,7 +39,7 @@
 规则文件中提到的外部程序调用规范，以独立 .md 文件形式存储。
 
 | 文件名 | 用途说明 | 规则引用位置 |
-| --- | --- | --- |
+| ------ | -------- | ------------ |
 | [autocorrect-mdpadding-markdownlint-清理工具.md](autocorrect-mdpadding-markdownlint-清理工具.md) | AutoCorrect、`md-padding@latest`、`markdownlint2` 三个自动清理工具的调用规范、参数说明、约束（禁批量接受、修改前后各复核一次、最后总复核一次） | 流程规则.md “AutoCorrect 调用规范”、“三轮完整执行规则”小节；写作规则.md “中文引号强制规则”、“行间代码与代码块不可篡改规则”小节；主题规则.md “仅 FreeBSD 内容跨 BSD/UNIX/macOS 扩展规则”小节 |
 | [tesseract-ocr-命令.md](tesseract-ocr-命令.md) | Tesseract OCR 命令 `tesseract <input.pdf> <output_basename> -l eng+chi_sim+fra+deu --psm 1` 调用规范、参数说明、OCR 校对规则、OCR 失败处理 | 流程规则.md “文献下载规则” → “OCR 后处理”小节 |
 | [pandoc-epub转换命令.md](pandoc-epub转换命令.md) | pandoc 命令 `pandoc <input.epub> -t markdown_strict -o <output.md>` 调用规范、参数说明、与 Tesseract 的关系、校对规则 | 流程规则.md “文献下载规则” → “OCR 后处理”小节 |
@@ -48,7 +49,7 @@
 规则文件中提到的所有数据库操作 SQL，含 changelog 去重查询与文献全文数据库多表操作。
 
 | 文件名 | 用途说明 | 规则引用位置 |
-| --- | --- | --- |
+| ------ | -------- | ------------ |
 | [changelog-去重查询.sql](changelog-去重查询.sql) | `changelog.duckdb` `entries` 表去重查询：疑似重复条目查找、时间顺序分组统计、条目数一致性复核、合并/删除冗余条目 | 流程规则.md “changelog 去重规则” → “去重操作规范（SQL 查询辅助）”、“去重后验证要求”小节 |
 | [references表操作.sql](references表操作.sql) | `references_fulltext.duckdb` `references` 表操作：SHA-256 精确去重查询、标题+作者+年份模糊去重查询、新增文献入库 INSERT、标记错误文件（`status='rejected'`）、标记已删除文件（`status='deleted'`，追加 `[DELETED YYYY-MM-DD]` 前缀） | 流程规则.md “新增文献自动检测规则” → “去重执行要求”、“元数据验证标准”小节；“重复与错误文档清理规则” → “错误文档判定标准”、“删除后验证”小节 |
 | [reference_duplicates表操作.sql](reference_duplicates表操作.sql) | `reference_duplicates` 表操作：写入 SHA-256 精确重复（`exact`）、模糊重复（`fuzzy`）、文件损坏（`corrupted`）、文件无效（`invalid`）四类重复关系；查询主副本优先级 | 流程规则.md “新增文献自动检测规则” → “去重执行要求”小节；“重复与错误文档清理规则” → “重复文档判定标准”、“清理流程”小节 |
@@ -62,7 +63,7 @@
 规则文件中以示例或调用形式提及，但 `script/` 目录中实际不存在的脚本。本目录不为这些脚本创建占位文件，仅作登记。
 
 | 脚本名 | 用途说明 | 规则引用位置 | 状态 |
-| --- | --- | --- | --- |
+| ------ | -------- | ------------ | ---- |
 | `renumber_subsections_120.py` | 第 120 章子节编号从 116.X 重排为 120.X | 流程规则.md “序号调整例外”小节示例 | 规则引用但未实现 |
 | `renumber_subsections_vol5.py` | 第五卷子节编号重排 | 流程规则.md “序号调整例外”小节示例 | 规则引用但未实现 |
 
@@ -75,7 +76,7 @@
 以下 8 个脚本完全缺失且无法恢复，经用户决策**已从规则文件删除引用**，相关验证改为人工执行（详见流程规则.md“大纲节号连续性规则”“Frontmatter 元数据一致性规则”“GitBook 目录同步规则”“结构性变更后验证清单”各节）。
 
 | 脚本名 | 原用途说明 | 原规则引用位置 | 现处理 |
-| --- | --- | --- | --- |
+| ------ | ---------- | -------------- | ------ |
 | `analyze_section_gaps.py` | 全书节号缺口扫描 | 流程规则.md “大纲节号连续性规则”→“检测命令”、“结构性变更后验证清单”第 3 项 | 已删除引用，改人工核查 |
 | `verify_summary_frontmatter.py` | frontmatter chapter/id/volume 一致性检测 | 流程规则.md “Frontmatter 元数据一致性规则”→“检测命令”、“结构性变更后验证清单”第 4 项 | 已删除引用，改人工核查 |
 | `verify_summary_renumber.py` | 章号连续性+链接存在性+磁盘↔SUMMARY 双向吻合检测 | 流程规则.md “结构性变更后验证清单”第 1、2、6、7 项 | 已删除引用，改人工核查 |
@@ -88,7 +89,7 @@
 ### B. 历史一次性脚本（约 20 个，2026-07 至 08 期间执行完毕，未留存副本）
 
 | 脚本名 | 用途说明 | 规则引用位置 |
-| --- | --- | --- |
+| ------ | -------- | ------------ |
 | `audit_research_gaps.py` | 审计全部 M.N 节文献/史料字段缺口 | 研究缺口.md 头部声明 |
 | `gen_research_gap_doc.py` | 生成/更新研究缺口清单 | 研究缺口.md 头部声明、5.3 复用脚本 |
 | `insert_literature.py` / `insert_literature2.py` | 文献入库（materials + references） | 研究缺口.md 5.3 复用脚本 |
