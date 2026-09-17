@@ -13,12 +13,14 @@
   2) 定位 index.html 的压缩数据块标记（正则锚定，标记外零触碰）；
   3) 以 `json.dumps(..., ensure_ascii=False, separators=(",", ":"))` 序列化，
      gzip -9 压缩（mtime=0 保证幂等）、base64 按 120 列折行；
-  4) 写回（UTF-8 无 BOM、LF）；
-  5) 输出 SHA-256 摘要供 changelog 审计。
+  4) **同步 data-integrity（SRI）**：对去空白后的 base64 文本取 SHA-256 写回开标签
+     （2026-09-18 修复：此前装配改写正文却不刷 SRI，页面装载器校验失败而降级）；
+  5) 写回（UTF-8 无 BOM、LF）；
+  6) 输出 SHA-256 摘要供 changelog 审计。
 
   历史（2026-09-13 O-2 前）：数据载体为 behavior-layer 内 `var DATA = {...};` 字面量。
   O-2（2026-09-13 批复施工）后改为压缩数据块 + 运行时 DecompressionStream 异步装配，
-  浏览器端装载器见 index.html 数据联动 IIFE 开头。
+  浏览器端装载器见 index.html 数据联动 IIFE 开头（对 base64 文本做 SHA-256 比对）。
 
 用法：
   python embed.py              # 装配（默认）
@@ -56,6 +58,21 @@ def encode_blob(serialized: str) -> str:
     gz = gzip.compress(serialized.encode("utf-8"), 9, mtime=0)
     b64 = base64.b64encode(gz).decode("ascii")
     return "\n".join(b64[i:i + 120] for i in range(0, len(b64), 120))
+
+
+def integrity_of(blob_body: str) -> str:
+    """数据块 SRI 哈希：与页面装载器同口径 —— 对去空白后的 base64 文本取 SHA-256。"""
+    b64 = re.sub(r"\s+", "", blob_body)
+    return "sha256-" + base64.b64encode(hashlib.sha256(b64.encode("utf-8")).digest()).decode("ascii")
+
+
+def sync_integrity(tag_attrs: str, blob_body: str) -> str:
+    """把 data-integrity 属性同步为当前数据块正文的 SRI 哈希（2026-09-18 修复：
+    装配改写正文后必须同刷 SRI，否则页面装载器校验失败而降级）。"""
+    want = integrity_of(blob_body)
+    if 'data-integrity="' in tag_attrs:
+        return re.sub(r'data-integrity="[^"]*"', f'data-integrity="{want}"', tag_attrs)
+    return tag_attrs + f' data-integrity="{want}"'
 
 
 def decode_blob(blob_body: str):
@@ -102,14 +119,36 @@ def sync_meta_triple(html: str) -> str:
     # 2) meta description（含书名前缀）
     html = re.sub(r'(<meta name="description" content="[^：]*：)\d+ 卷 \d+ 章 \d+ 节',
                   lambda mm: mm.group(1) + triple, html)
-    # 3) JSON-LD additionalProperty 三元组（2026-09-11 修复：键序允许 "name" 在 "@type" 之后，
-    #    两种序列化形态均匹配；此前只匹配 @type 先行的形态导致键序不同的 JSON-LD 漏同步）
-    html = re.sub(r'("name":"卷数","value":)\d+((?:,"@type":"PropertyValue")?"name":"章数","value":)\d+((?:,"@type":"PropertyValue")?"name":"节数","value":)\d+',
-                  lambda mm: f'{mm.group(1)}{m.group(1)}{mm.group(2)}{n.group(1)}{mm.group(3)}{s.group(1)}', html)
-    # 兼容键序「@type 先行」的旧形态
-    html = re.sub(r'("@type":"PropertyValue","name":"卷数","value":)\d+(,"@type":"PropertyValue","name":"章数","value":)\d+(,"@type":"PropertyValue","name":"节数","value":)\d+',
-                  lambda mm: f'{mm.group(1)}{m.group(1)}{mm.group(2)}{n.group(1)}{mm.group(3)}{s.group(1)}', html)
+    # 3) JSON-LD additionalProperty 三元组（2026-09-18 重写为逐字段替换：
+    #    旧版正则要求两键之间仅有 `,`，而现序列化形态为 `},{"@type":...`，
+    #    故旧版静默不命中 → 检测恒真、JSON-LD 长期停在旧口径）
+    def _fix_jsonld(mm):
+        blob = mm.group(2)
+        for name, val in (("卷数", m.group(1)), ("章数", n.group(1)), ("节数", s.group(1))):
+            blob = re.sub(
+                r'("name"\s*:\s*"%s"\s*,\s*"value"\s*:\s*)\d+' % name,
+                lambda x: x.group(1) + val, blob)
+        return mm.group(1) + blob + mm.group(3)
+
+    html = re.sub(r'(<script[^>]*application/ld\+json[^>]*>)(.*?)(</script>)',
+                  _fix_jsonld, html, flags=re.S)
     return html
+
+
+def jsonld_matches(html: str) -> bool:
+    """JSON-LD 的卷/章/节三元组是否与 doc-metrics 权威三元组一致（2026-09-18 新增）。"""
+    m = re.search(r"总卷数</span><strong[^>]*>\s*(\d+)\s*</strong>", html)
+    n = re.search(r"总章数</span><strong[^>]*>\s*(\d+)\s*</strong>", html)
+    s = re.search(r"总节数</span><strong[^>]*>\s*(\d+)\s*</strong>", html)
+    j = re.search(r"<script[^>]*application/ld\+json[^>]*>(.*?)</script>", html, re.S)
+    if not (m and n and s and j):
+        return False
+    blob = j.group(1)
+    for name, val in (("卷数", m.group(1)), ("章数", n.group(1)), ("节数", s.group(1))):
+        mm = re.search(r'"name"\s*:\s*"%s"\s*,\s*"value"\s*:\s*(\d+)' % name, blob)
+        if not mm or mm.group(1) != val:
+            return False
+    return True
 
 
 def cmd_check():
@@ -134,11 +173,14 @@ def cmd_check():
                 print(f"  漂移字段：{k}（内嵌 {len(content_embedded.get(k) or []) if isinstance(content_embedded.get(k), (list, dict)) else '?'} vs catalog {len(content_data[k]) if isinstance(content_data[k], (list, dict)) else '?'}）")
                 break
         print("  （运行 python embed.py 装配后重检）")
-    # 元数据口径漂移检测（2026-09-11）
+    # 元数据口径漂移检测（2026-09-11；2026-09-18 改为「内容比对」而非「可否再替换」）
     synced = sync_meta_triple(html)
-    meta_ok = synced == html
+    meta_ok = (synced == html) and jsonld_matches(html)
     print(f"og/meta/JSON-LD 口径同步：{'✅ 一致' if meta_ok else '❌ 漂移（embed 装配时自动修正）'}")
-    return 0 if (same and meta_ok) else 1
+    # 数据块 SRI 自洽检测（2026-09-18 新增）
+    sri_ok = (m.group(1)[:-2].find(f'data-integrity="{integrity_of(m.group(2))}"') != -1)
+    print(f"数据块 data-integrity 自洽：{'✅ 一致' if sri_ok else '❌ 漂移（embed 装配时自动修正）'}")
+    return 0 if (same and meta_ok and sri_ok) else 1
 
 
 def cmd_embed():
@@ -151,7 +193,9 @@ def cmd_embed():
         sys.exit("错误：index.html 未定位压缩数据块 opt-data-blob")
     serialized = serialize_content(content)
     body_new = encode_blob(serialized)
-    new_html = html[:m.start(2)] + body_new + html[m.end(2):]
+    tag = m.group(1)                      # '<script ...>\n'
+    head, tail = tag[:-2], tag[-2:]       # head = 开标签（不含 '>'），tail = '>\n'
+    new_html = html[:m.start(1)] + sync_integrity(head, body_new) + tail + body_new + html[m.end(2):]
     # 元数据口径同步（og/meta/JSON-LD）
     new_html = sync_meta_triple(new_html)
     if new_html == html:
