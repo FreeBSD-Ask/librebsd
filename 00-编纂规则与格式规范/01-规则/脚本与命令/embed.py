@@ -22,6 +22,13 @@
   O-2（2026-09-13 批复施工）后改为压缩数据块 + 运行时 DecompressionStream 异步装配，
   浏览器端装载器见 index.html 数据联动 IIFE 开头（对 base64 文本做 SHA-256 比对）。
 
+  **2026-09-18 起角色调整（四层解耦）**：`index.html` 转为**装配产物**，正式装配走
+  `assemble_index.py`（读内容/格式/现代化/行为/数据/页壳六类源，口径由内容源派生）。
+  本脚本保留为**数据层序列化模块 ＋ 门禁**——供装配器复用其
+  `encode_blob()`／`integrity_of()`／`serialize_content()`；`--check` 三项检测照旧。
+  直接运行本脚本（无参）仍可单独重装数据块，但随后须跑 `assemble_index.py --check`
+  确认无漂移（否则下次装配会覆盖）。
+
 用法：
   python embed.py              # 装配（默认）
   python embed.py --check      # 仅检测 catalog 与内嵌数据块是否一致（漂移检测）
