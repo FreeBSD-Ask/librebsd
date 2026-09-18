@@ -29,10 +29,10 @@
 ## 规则文件索引
 
 | 文件 | 内容 | 何时查阅 |
-| --- | --- | --- |
+| ---- | ---- | -------- |
 | [考据规则.md](考据规则.md) | 考据规则（含许可证考据规则：逐个考据/CC 定性/法哲学/判例案号防错/判决细节防错/联网复核/版权法体系考据；转载二手材料交叉复核认可与标记；禁引来源镜像与变体识别；文献分级 source_tier 与禁引来源清理） | 涉及史料考据、来源核查、交叉验证、许可证与判例考据、版权法体系、二手材料标记、禁引来源识别与清理时 |
 | [写作规则.md](写作规则.md) | 写作规则（含结构化大纲规则与积极使用表格原则） | 涉及文字、标点、格式、术语翻译时 |
-| [流程规则.md](流程规则.md) | 流程规则，changelog 去重规则、文献下载规则、根目录禁止生成新路径规则、网页参考与全量文件入库规则、新增文献自动检测规则、重复与错误文档清理规则、过时内容处理规则、规则引用脚本与命令独立存储规则、其他文件夹转数据库规则、批量过滤与删除型修复的安全规则、重构大纲目录书评挂靠与全文外迁规则、重构大纲目录口径同步规则 | 涉及工作流程、修改规范、复核流程、文献下载、新增 PDF 入库、重复与错误文档清理、过时内容与工作日志式日期标注处理、规则引用脚本与命令独立存储、其他文件夹转数据库、批量过滤/删除型修复、重构大纲目录口径同步时 |
+| [流程规则.md](流程规则.md) | 流程规则，changelog 去重规则、文献下载规则、根目录禁止生成新路径规则、网页参考与全量文件入库规则、新增文献自动检测规则、重复与错误文档清理规则、过时内容处理规则、规则引用脚本与命令独立存储规则、其他文件夹转数据库规则、批量过滤与删除型修复的安全规则、重构大纲目录书评挂靠与全文外迁规则、重构大纲目录口径同步规则、重构大纲目录四层解耦与装配规则、重构大纲目录页面资产层完整性门禁 | 涉及工作流程、修改规范、复核流程、文献下载、新增 PDF 入库、重复与错误文档清理、过时内容与工作日志式日期标注处理、规则引用脚本与命令独立存储、其他文件夹转数据库、批量过滤/删除型修复、重构大纲目录口径同步、目录页资产层完整性核验时 |
 | [主题规则.md](主题规则.md) | 主题规则 | 涉及合规认证、Linux 文化挪用、仅 FreeBSD 内容跨 BSD/UNIX/macOS 扩展等特定主题时 |
 | [释读规则.md](释读规则.md) | 释读规则 | 涉及一刻哲学引用、释读、映射时 |
 | [功能对比与数据库回写规则.md](功能对比与数据库回写规则.md) | 功能对比与数据库回写规则 | 涉及操作系统功能实现对比、技术演进时间线、分析结果回写代码仓库数据库（02-10）时 |
@@ -43,7 +43,7 @@
 
 规则文件中引用的所有脚本、程序、命令（含数据库规则操作）独立存储于 [脚本与命令/](脚本与命令/README.md) 子目录下，与规则 .md 文件形成“规则 + 可执行资源”的完整自洽单元。该子目录含 4 类资源：
 
-- **脚本文件**（14 个 .py 副本）：`auto_ingest_new_pdfs.py`、`cleanup_duplicates_and_errors.py`、`scan_all_gaps_v4.py`、`rename_volume_dirs_20260726.py`、`fix_remaining_volume_refs_20260726.py`、`build_folder_databases.py`、`dedup_folder_databases.py`、`resolve_cross_references.py`、`audit_folder_db_integrity.py`、`cleanup_duplicate_sources.py`、`dedup_databases_global.py`、`sync_cross_references_after_cleanup.py`、`optimize_folder_databases.py`、`backup_databases.py`（数据库常设备份与轮换）。注：其中 11 个副本的 `script/` 源文件已缺失（仅 `auto_ingest_new_pdfs.py`、`build_folder_databases.py` 源文件现存），缺失登记详见 [脚本与命令/README.md](脚本与命令/README.md) “缺失脚本登记”小节
+- **脚本文件**（**52 个 .py**）：分三类——①**固定脚本**（规则引用、长期频繁使用，含全部门禁与运维脚本：`audit_data_integrity.py`／`sync_refactor2026_baseline.py`／`audit_sequence_continuity.py`／`xref_audit.py`／`audit_evidence_level_labels.py`／`audit_index_structure.py`／`embed.py`／`assemble_index.py`／`audit_page_assets.py`／`wo007_idempotency.py`／`font_subset_rebuild.py`／`backup_databases.py`／`sqlite2duckdb.py`／`sync_gitbook_summary.py`／`podcast_db_final_sync.py` 等）；②**SQLite 时代工具脚本副本**（`build_folder_databases.py`／`dedup_folder_databases.py`／`resolve_cross_references.py`／`audit_folder_db_integrity.py`／`cleanup_duplicate_sources.py`／`dedup_databases_global.py`／`sync_cross_references_after_cleanup.py`／`optimize_folder_databases.py`／`cleanup_duplicates_and_errors.py`／`scan_all_gaps_v4.py`／`rename_volume_dirs_20260726.py`／`fix_remaining_volume_refs_20260726.py`／`auto_ingest_new_pdfs.py` 等，多数已随 DuckDB 升格失效，保留作历史规则书登记）；③历史一次性脚本。**🔴 2026-09-18 起本目录整体纳入版本控制**（`.gitignore` 定向例外 `!00-编纂规则与格式规范/01-规则/脚本与命令/*.py`）：原「整体不进版本库」的历史安排已废止——其代价已有实证（8 个规则引用的核心验证脚本因不可追溯而永久丢失，见 [脚本与命令/README.md](脚本与命令/README.md)「缺失脚本登记」）。现目录下 52 个 `.py` 中仅 3 个在 `script/` 有同名文件，本目录为**权威副本**
 - **程序命令**（3 个 .md）：AutoCorrect / `md-padding@latest` / `markdownlint2` 清理工具、Tesseract OCR、pandoc EPUB 转换的调用规范
 - **数据库操作 SQL**（7 个 .sql）：`changelog` 去重查询、`references` 表操作、`reference_duplicates` 表操作、`chapter_matches` 表操作、`chapter_reviews` 表操作、`folder_db_common_schema`（文件夹级数据库通用 Schema）、`folder_db_cross_references`（文件夹级数据库交叉引用查询）
 - **未实现脚本登记**：`renumber_subsections_120.py`、`renumber_subsections_vol5.py` 两个规则引用但未实现的脚本
@@ -78,6 +78,8 @@
 - **涉及重构2026 大纲目录书评挂靠、全文外迁与回写换算时**：查阅 规则/流程规则.md 的「重构大纲目录书评挂靠与全文外迁规则」小节，重点核对小节挂靠形态（编号节+src 标注、禁折叠体、目录页禁载全文）、卷末章升格条件与每卷至多一个、外迁目录与分卷文件体例、逐字保真与三轮复核要求、metrics/meta 计数同步等。
 - **涉及重构2026 大纲目录口径同步（index.html 结构/计数变动后各文件口径声明同步）时**：查阅 规则/流程规则.md 的「重构大纲目录口径同步规则」小节，重点核对唯一权威来源（index.html doc-metrics 三元组）、触发条件、同步脚本 `脚本与命令/sync_refactor2026_baseline.py`（--check/--sync/--list）三维度检测（口径三元组 marker-drift/present-stale/exempt、ref-stale 已归档文件引用、pending-stale 未消解 ⬜ 待填）、BEGIN/END 标记块约定与表格行豁免、文件级历史声明豁免原则、禁止手写不一致现行口径与批量改写等。
 - **涉及数据库格式统一（索引命名、schema_meta 键集合、table_count 统计、扩展表合并、引用查询加速索引、模块化分层设计、冗余文件清理、删除安全）时**：查阅 规则/流程规则.md 的“数据库格式统一规则”子小节，重点核对索引命名规范（`idx_cross_references_*` 前缀、`files` 表索引集合）、schema_meta 键集合规范（9 个标准键）、table_count 统计口径（不含 FTS5 影子表）、扩展表合并规范（5 组合并表含 record_type 字段）、引用查询加速索引规范（`idx_cross_references_reference_type`、`idx_cross_references_source_block_id`）、模块化分层设计规范（一库一文件夹）、冗余文件清理规范、删除安全规范（预览→备份→确认→执行→复核 5 步流程）等。
+
+- **涉及重构2026 目录页页面资产层（内嵌字体子集、品牌派生件、自包含性、测试夹具口径）时**：查阅 规则/流程规则.md 的「重构大纲目录页面资产层完整性门禁（2026-09-18 立）」小节，重点核对第九件门禁 `脚本与命令/audit_page_assets.py` 的四类不变量（A 装配源清单／B 内嵌字体子集覆盖度与源字体基准 `data/font-source-cmap.txt`／C 品牌派生件形制／D 自包含性与数据块 SRI／E 测试夹具口径）、**依赖 fontTools＋brotli 须用 venv 解释器运行**（`C:/Users/ykla/.workbuddy/binaries/python/envs/default/Scripts/python.exe`）、`--root`／`--refresh-source-cmap` 用法，以及「判据非空」纪律（新判据须以负向用例实测后方可采信）。
 
 ## 与 CLAUDE.md 协作指南的关系
 
