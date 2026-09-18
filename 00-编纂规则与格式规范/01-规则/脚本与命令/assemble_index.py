@@ -57,9 +57,12 @@ DOC_JS = BASE / "assets" / "doc.js"
 OUTLINE = BASE / "data" / "outline.txt"
 CATALOG = BASE / "data" / "catalog.json"
 SCHEMA = BASE / "data" / "schema.jsonld"
-# 品牌资源（项目级，置于仓库根）：主 logo 与收藏夹图标
-BRAND_LOGO = REPO / "logo.svg"
-BRAND_FAVICON = REPO / "favicon.ico"
+# 品牌资源：**页面资产层**承载页面用派生件（2026-09-18 第十六批）
+#   - 源：仓库根 logo.svg（1336px 光栅内嵌）／favicon.ico（单帧 256²）
+#   - 页面用：BASE/assets/logo.svg（真矢量，21,887 B）／assets/favicon.ico（16²／32²／48²，6,424 B）
+#   - 生成器：script/_r66/vectorize_logo.py（源文件不动，与字体子集同模式：源全量、页面用派生件）
+BRAND_LOGO = BASE / "assets" / "logo.svg"
+BRAND_FAVICON = BASE / "assets" / "favicon.ico"
 
 # 复用 embed.py 的数据层序列化／SRI 函数（同目录）
 _spec = importlib.util.spec_from_file_location("_embed", pathlib.Path(__file__).with_name("embed.py"))
