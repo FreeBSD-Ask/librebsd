@@ -239,6 +239,9 @@ def assemble():
     left = re.findall(r"\{\{[A-Z_]+\}\}", tpl)
     if left:
         sys.exit("模板存在未替换占位符：%s" % sorted(set(left)))
+    # 首尾规范化（2026-09-18 版式整治）：DOCTYPE 前不留空行；结尾恰一个换行
+    tpl = tpl.lstrip("\n")
+    tpl = tpl.rstrip("\n") + "\n"
     return tpl
 
 
