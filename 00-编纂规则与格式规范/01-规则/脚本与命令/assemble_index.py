@@ -36,6 +36,7 @@
   python assemble_index.py --check    # 漂移检测：重装到内存与磁盘逐字节比对，不一致即退出码 1
 """
 import argparse
+import base64
 import html
 import importlib.util
 import io
@@ -56,6 +57,9 @@ DOC_JS = BASE / "assets" / "doc.js"
 OUTLINE = BASE / "data" / "outline.txt"
 CATALOG = BASE / "data" / "catalog.json"
 SCHEMA = BASE / "data" / "schema.jsonld"
+# 品牌资源（项目级，置于仓库根）：主 logo 与收藏夹图标
+BRAND_LOGO = REPO / "logo.svg"
+BRAND_FAVICON = REPO / "favicon.ico"
 
 # 复用 embed.py 的数据层序列化／SRI 函数（同目录）
 _spec = importlib.util.spec_from_file_location("_embed", pathlib.Path(__file__).with_name("embed.py"))
@@ -194,6 +198,11 @@ def derive_metrics(vols):
 
 
 # ── 装配 ────────────────────────────────────────────────────────────────
+def data_uri(path, mime):
+    """品牌资源 → data URI（保持单文件交付物；CSP 允许 data:）。"""
+    return "data:%s;base64,%s" % (mime, base64.b64encode(path.read_bytes()).decode("ascii"))
+
+
 def assemble():
     tpl = read(TPL)
     vols = parse_outline(read(OUTLINE))
@@ -220,6 +229,8 @@ def assemble():
         "BLOB": blob_body,
         "SRI": sri,
         "JS_BEHAVIOR": read(DOC_JS).strip("\n"),
+        "LOGO": data_uri(BRAND_LOGO, "image/svg+xml"),
+        "FAVICON": data_uri(BRAND_FAVICON, "image/x-icon"),
     }
     for k, v in subs.items():
         if ("{{%s}}" % k) not in tpl:
