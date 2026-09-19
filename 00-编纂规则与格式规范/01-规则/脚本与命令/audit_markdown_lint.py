@@ -34,11 +34,18 @@
 一致值，但历史上 `npx --yes` 曾拉到新版产生漂移）。为保证可复现，本门禁钉定
 `markdownlint-cli2 0.22.1 / markdownlint 0.40.0`；升级须显式 `--allow-version`。
 
+防衰减护栏（2026-09-20 补）
+--------------------------
+①**闸面模式零匹配**即 FAIL——防止目录改名／模式失效后「闸面悄悄变成 0 文件」而假绿；
+②**号文带上限**：`重构2026/` 下出现编号 > `HAOWEN_MAX_COVERED`（79）的 .md 即 FAIL，
+强制把新号文补进 MANIFEST——否则 `7[0-9]-*.md` 这个模式会随号文增长**静默失效**。
+
 用法
 ----
     python audit_markdown_lint.py            # 跑闸面（0 问题 exit 0）
     python audit_markdown_lint.py --list     # 只打印闸面清单
     python audit_markdown_lint.py --all      # 全审计面（含豁免件）统计，仅供可见性
+    python audit_markdown_lint.py --selftest # 判据非空自检（8 条分支，临时目录夹具）
     python audit_markdown_lint.py --allow-version
 """
 import argparse
@@ -60,6 +67,15 @@ MANIFEST = [
     "08-核查报告与多轮复核/重构2026/tests/*.md",
     "08-核查报告与多轮复核/12-重构大纲书目述评/index.md",
 ]
+
+# 号文系列「防衰减」护栏（2026-09-20 补）
+# 闸面以 `7[0-9]-*.md` 覆盖现行号文带。**判据会随号文增长而静默失效**——
+# 一旦出现 80 号及以后的号文，该文件既不在闸面内、也无任何提示，护栏形同虚设。
+# 故立此护栏：`重构2026/` 下任何「编号 > 带上限」的 .md 一律判 FAIL，
+# 强制把新号文补进 MANIFEST 并同步 CLAUDE.md／流程规则.md 的闸面清单。
+HAOWEN_DIR = "08-核查报告与多轮复核/重构2026"
+HAOWEN_NUM_RE = re.compile(r"^(\d+)-.*\.md$")
+HAOWEN_MAX_COVERED = 79
 
 # 全审计面（--all 用，含豁免件）：口径同 2026-09-20 lint 债务审计
 AUDIT_SCOPE = [
@@ -118,12 +134,110 @@ def run_lint(exe, files):
     return (int(m.group(1)) if m else None), text
 
 
+# 自检夹具：与 MANIFEST 的 6 个模式一一对应（T0 断言覆盖，防夹具与闸面脱钩）
+SELFTEST_FIXTURE = [
+    "CLAUDE.md",
+    "00-编纂规则与格式规范/01-规则/README.md",
+    "00-编纂规则与格式规范/01-规则/脚本与命令/README.md",
+    "08-核查报告与多轮复核/重构2026/75-x.md",
+    "08-核查报告与多轮复核/重构2026/tests/README.md",
+    "08-核查报告与多轮复核/12-重构大纲书目述评/index.md",
+]
+
+
+def selftest():
+    """判据非空自检：在系统临时目录搭隔离夹具树，逐条实测**全部分支**。
+
+    不触碰工作树；覆盖正常／lint 命中／零匹配／新号文／版本不符／依赖缺失／
+    `--allow-version`／`--list` 八条路径。返回 0 全通过，1 有未通过项。
+    """
+    import os
+    import tempfile
+
+    tmp = Path(tempfile.mkdtemp(prefix="mdlint_gate_selftest_"))
+    gate = tmp / "a" / "b" / "c" / "audit_markdown_lint.py"
+    gate.parent.mkdir(parents=True)
+    shutil.copy2(Path(__file__).resolve(), gate)
+    shutil.copy2(ROOT / ".markdownlint.json", tmp / ".markdownlint.json")
+    for rel in SELFTEST_FIXTURE:
+        p = tmp / rel
+        p.parent.mkdir(parents=True, exist_ok=True)
+        p.write_text("# t\n", encoding="utf-8")
+
+    # T0：夹具须覆盖 MANIFEST 的每个模式（闸面扩容而夹具未同步时立即暴露）
+    t0 = all(any(True for _ in tmp.glob(pat)) for pat in MANIFEST)
+
+    fake = tmp / "_fakebin"
+    fake.mkdir()
+    real = find_bin()
+    if os.name == "nt":
+        (fake / "markdownlint-cli2.cmd").write_text(
+            "@echo off\r\nif not \"%~1\"==\"--version\" goto delegate\r\n"
+            "echo markdownlint-cli2 v0.99.9 (markdownlint v9.9.9)\r\n"
+            "exit /b 0\r\n:delegate\r\n"
+            f'call "{real}" %*\r\n', encoding="ascii", newline="")
+    else:
+        sh = fake / "markdownlint-cli2"
+        sh.write_text(
+            "#!/bin/sh\n"
+            "if [ \"$1\" = \"--version\" ]; then "
+            "echo 'markdownlint-cli2 v0.99.9 (markdownlint v9.9.9)'; exit 0; fi\n"
+            f'exec "{real}" "$@"\n', encoding="utf-8")
+        sh.chmod(0o755)
+
+    def run(args, path_prefix=None, isolate_path=False):
+        env = dict(os.environ)
+        if path_prefix is not None:
+            env["PATH"] = str(path_prefix) + os.pathsep + env.get("PATH", "")
+        if isolate_path:
+            env["PATH"] = str(tmp)  # 仅含夹具目录 → 查不到 markdownlint-cli2
+        out = subprocess.run([sys.executable, str(gate)] + args, env=env,
+                             capture_output=True, text=True,
+                             encoding="utf-8", errors="replace")
+        return out.returncode
+
+    cases = [("T0 夹具覆盖闸面全部模式", 0 if t0 else 1, 0)]
+    cases.append(("T1 正常（全模式命中、lint 干净）", run([]), 0))
+
+    newdoc = tmp / HAOWEN_DIR / "80-new.md"
+    newdoc.write_text("# t\n", encoding="utf-8")
+    cases.append(("T2 号文防衰减护栏（编号 > 上限）", run([]), 1))
+    newdoc.unlink()
+
+    rule_readme = tmp / "00-编纂规则与格式规范/01-规则/README.md"
+    kept = rule_readme.read_text(encoding="utf-8")
+    rule_readme.unlink()
+    cases.append(("T3 闸面模式零匹配 → FAIL", run([]), 1))
+    rule_readme.write_text(kept, encoding="utf-8")
+
+    cases.append(("T4a 版本不符 → exit 2", run([], path_prefix=fake), 2))
+    cases.append(("T4b --allow-version 放行", run(["--allow-version"], path_prefix=fake), 0))
+    cases.append(("T5 依赖缺失 → exit 2", run([], isolate_path=True), 2))
+    cases.append(("T6 --list", run(["--list"]), 0))
+
+    (tmp / "CLAUDE.md").write_text("# t\n| a|b |\n|---|---|\n", encoding="utf-8")
+    cases.append(("T7 闸面内注入缺陷 → exit 1", run([]), 1))
+
+    ok = True
+    for name, got, want in cases:
+        if got != want:
+            ok = False
+        print(f"{'PASS' if got == want else 'FAIL'} | {name} | 期望 exit {want}，实得 {got}")
+    shutil.rmtree(tmp, ignore_errors=True)
+    print("自检结论：" + ("全部通过" if ok else "有未通过项"))
+    return 0 if ok else 1
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--list", action="store_true", help="只打印闸面清单")
     ap.add_argument("--all", action="store_true", help="全审计面统计（仅可见性，恒 exit 0）")
     ap.add_argument("--allow-version", action="store_true", help="允许非钉定版本")
+    ap.add_argument("--selftest", action="store_true", help="判据非空自检（临时目录夹具，不触碰工作树）")
     args = ap.parse_args()
+
+    if args.selftest:
+        return selftest()
 
     if args.list:
         print("闸面清单（活动文件）：")
@@ -155,6 +269,22 @@ def main():
     if empty:
         print(f"[exit 1] 以下模式零匹配（闸面可能已失效）：{empty}", file=sys.stderr)
         return 1
+
+    # 号文系列防衰减护栏：编号超出闸面覆盖带者一律 FAIL（详见文件头注释）
+    over = []
+    for p in sorted((ROOT / HAOWEN_DIR).glob("*.md")):
+        m = HAOWEN_NUM_RE.match(p.name)
+        if m and int(m.group(1)) > HAOWEN_MAX_COVERED:
+            over.append(p.relative_to(ROOT).as_posix())
+    if over:
+        print(f"[exit 1] 新号文未入闸面（编号 > {HAOWEN_MAX_COVERED}）：{over}", file=sys.stderr)
+        print("         请把上述文件纳入 MANIFEST，并同步 CLAUDE.md／流程规则.md 的闸面清单"
+              f"（当前带：7[0-9]，上限 {HAOWEN_MAX_COVERED}）。", file=sys.stderr)
+        return 1
+    band = [p.name for p in (ROOT / HAOWEN_DIR).glob("*.md")
+            if (mm := HAOWEN_NUM_RE.match(p.name)) and int(mm.group(1)) <= HAOWEN_MAX_COVERED]
+    print(f"号文带覆盖：同目录 ≤{HAOWEN_MAX_COVERED} 号 .md 共 {len(band)} 个"
+          f"（70–{HAOWEN_MAX_COVERED} 在闸面内；≤69 属豁免历史件）")
 
     total, text = run_lint(exe, files)
     if total is None:
