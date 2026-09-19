@@ -88,7 +88,7 @@
 ## 5 相关脚本（script/，以 SFU 工程为范本）
 
 | 脚本 | 用途 |
-|------|------|
+| ---- | ---- |
 | `_sfu_dl_batch*.py` / `_sfu_dl_mert_full.py` | 镜像站批量下载（多 try 重试 + 间隔 + 幂等） |
 | `_sfu_ocr_parallel.py` | 8 进程并行 OCR 主流水线（pymupdf 渲染 + RapidOCR） |
 | `_sfu_ocr_fill*.py` / `_ocr_worker_fill.py` | 补漏 OCR + 单文件 worker（subprocess 隔离） |
