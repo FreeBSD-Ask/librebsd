@@ -12,7 +12,7 @@
   1) 校验 catalog 结构（必需字段 + persons 数量 > 0）；
   2) 定位 index.html 的压缩数据块标记（正则锚定，标记外零触碰）；
   3) 以 `json.dumps(..., ensure_ascii=False, separators=(",", ":"))` 序列化，
-     gzip -9 压缩（mtime=0 保证幂等）、base64 按 120 列折行；
+     gzip -9 压缩（mtime=0 保证幂等）、base64 按 BLOB_COLS 列折行（2026-09-19 由 120 改为 4000）；
   4) **同步 data-integrity（SRI）**：对去空白后的 base64 文本取 SHA-256 写回开标签
      （2026-09-18 修复：此前装配改写正文却不刷 SRI，页面装载器校验失败而降级）；
   5) 写回（UTF-8 无 BOM、LF）；
@@ -60,11 +60,21 @@ def serialize_content(content):
     return json.dumps(content, ensure_ascii=False, separators=(",", ":"))
 
 
+# 折行列宽（2026-09-19 由 120 改为 4000）：
+#   折行纯粹为可读性，**不改变字节数之外任何语义**——读取端三处均空白不敏感：
+#     · 页面装载器 `doc.js`：`el.textContent.replace(/\s+/g, "")`
+#     · 本模块 `integrity_of()` 与 `decode_blob()`：`re.sub(r"\s+", "", blob_body)`
+#     · 门禁 `audit_data_integrity.py` 的正则仅要求 blob 前后各 1 个换行
+#   故折宽可任意调整。120 列会把 338KB 的 base64 折成 2,796 行（占整页行数 28%），
+#   改 4000 列后约 86 行，整页行数由 9,931 降至约 7,221（−27%），而 SRI 与解码结果不变。
+BLOB_COLS = 4000
+
+
 def encode_blob(serialized: str) -> str:
-    """gzip -9（mtime=0 幂等）→ base64 → 120 列折行。"""
+    """gzip -9（mtime=0 幂等）→ base64 → BLOB_COLS 列折行。"""
     gz = gzip.compress(serialized.encode("utf-8"), 9, mtime=0)
     b64 = base64.b64encode(gz).decode("ascii")
-    return "\n".join(b64[i:i + 120] for i in range(0, len(b64), 120))
+    return "\n".join(b64[i:i + BLOB_COLS] for i in range(0, len(b64), BLOB_COLS))
 
 
 def integrity_of(blob_body: str) -> str:
