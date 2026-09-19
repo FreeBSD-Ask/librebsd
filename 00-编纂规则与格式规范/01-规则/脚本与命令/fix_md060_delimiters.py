@@ -31,6 +31,7 @@ from pathlib import Path
 
 DELIM_RE = re.compile(r"^[\s|:\-]+$")
 FENCE_RE = re.compile(r"^\s*(```|~~~)")
+BQ_RE = re.compile(r"^(\s*(?:>\s*)+)(.*)$")   # 引注前缀（blockquote）
 
 
 def disp_width(s: str) -> int:
@@ -81,18 +82,21 @@ def build_delim(header: str, old_delim: str):
         dc = dcells[idx].strip() if idx < len(dcells) else ""
         left = dc.startswith(":")
         right = dc.endswith(":") and len(dc) > 1
+        # 🔴 宽度不足时**放弃对齐冒号**（2026-09-20 修）：对齐冒号最小占 1 宽——
+        # 单侧冒号需 w>=4、双侧需 w>=5。若硬留冒号，该列会比表头多出 1 宽，
+        # 破坏「分隔行与表头逐列等宽」这一核心判据（曾致 长线任务总登记表 表头 `#` 列修不掉）。
+        if left and right and w < 5:
+            left = right = False
+        elif (left or right) and w < 4:
+            left = right = False
         if left and right:
-            n = max(w - 4, 1)
-            cell = " :" + "-" * n + ": "
+            cell = " :" + "-" * (w - 4) + ": "
         elif left:
-            n = max(w - 3, 1)
-            cell = " :" + "-" * n + " "
+            cell = " :" + "-" * (w - 3) + " "
         elif right:
-            n = max(w - 3, 1)
-            cell = " " + "-" * n + ": "
+            cell = " " + "-" * (w - 3) + ": "
         else:
-            n = max(w - 2, 1)
-            cell = " " + "-" * n + " "
+            cell = " " + "-" * max(w - 2, 1) + " "
         out.append(cell)
     s = "|".join(out)
     return ("|" if lead else "") + s + ("|" if trail else "")
@@ -103,23 +107,28 @@ def fix_file(path: Path, apply: bool):
     in_fence = False
     changed = []
     for i in range(1, len(lines)):
-        if FENCE_RE.match(lines[i]):
+        # 引注（blockquote）内的表格：剥去 `> ` 前缀后按同一规则处理（2026-09-20 补；
+        # 此前 `> |---|---|` 因行首为 `> ` 而不匹配分隔行正则 → 静默漏修）
+        mp = BQ_RE.match(lines[i])
+        prefix, body = (mp.group(1), mp.group(2)) if mp else ("", lines[i])
+        mq = BQ_RE.match(lines[i - 1])
+        prev_body = mq.group(2) if mq else lines[i - 1]
+        if FENCE_RE.match(body):
             in_fence = not in_fence
             continue
         if in_fence:
             continue
-        cur, prev = lines[i], lines[i - 1]
-        if not DELIM_RE.match(cur) or "-" not in cur or "|" not in cur:
+        if not DELIM_RE.match(body) or "-" not in body or "|" not in body:
             continue
-        if "|" not in prev:
+        if "|" not in prev_body:
             continue
         # 表头行不能本身是分隔行
-        if DELIM_RE.match(prev) and "-" in prev:
+        if DELIM_RE.match(prev_body) and "-" in prev_body:
             continue
-        new = build_delim(prev, cur)
-        if new != cur:
-            changed.append((i + 1, cur, new))
-            lines[i] = new
+        new = build_delim(prev_body, body)
+        if new != body:
+            changed.append((i + 1, prefix + body, prefix + new))
+            lines[i] = prefix + new
     if changed and apply:
         path.write_text("\n".join(lines), encoding="utf-8", newline="")
     return changed
