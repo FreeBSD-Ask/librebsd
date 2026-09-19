@@ -23,6 +23,8 @@
     marker-drift   标记块内声明 ≠ 权威基准（--sync 自动修复）
     present-stale  标记块外、现在时态现行口径声明（适用范围/现行大纲目录/本书全部…）≠ 权威基准（需人工）
     exempt         其余旧口径命中（带日期裁决/审计/映射数据基线等历史事实本体）——永不自动改写
+    维度四 INFO    present-stale-blind：语义为现在时态、但 PRESENT_RE 未覆盖的旧口径行（如「现行口径 <旧三元组>」）
+                   ——**只报不改判定**；升为 FAIL 须先扩 HIST_RE 豁免词表并经主理人裁定（2026-09-20 第四十一批立）
   维度二 ref-stale    指向已归档目录文件（大纲目录-12卷.md / S-me目录预览）且同行无归档标注、文件头无日期/历史声明（需人工补标注或确认历史件）
   维度三 pending-stale 未消解的 ⬜ 待填单元格（`| ⬜ |`）且文件未声明被取代（需人工补取代声明或消解）
   维度二/三的文件级豁免：头部 12 行含日期/复核日期/历史记录/已被取代/已清零/仅作历史等声明的，整体豁免（历史存档件不追改）。
@@ -59,6 +61,12 @@ END_RE = re.compile(r"^\s*<!--\s*END 口径基准（脚本自动维护）\s*-->\
 TRIPLE_RE = re.compile(r"(\d{1,3})\s*卷\s*(\d{1,4})\s*章(?:\s*([\d,]{2,7})\s*节)?")
 # 现在时态现行口径声明（标记块外仍出现即视为漂移，需人工）
 PRESENT_RE = re.compile(r"(适用范围|本书全部|全书全部|现行大纲目录|现行目录|当前大纲)")
+# 维度四（INFO 级，2026-09-20 第四十一批立）：PRESENT_RE 未覆盖、但语义上仍属「现在时态」的口径声明词。
+# 缘由：52 号文／CLAUDE.md／流程规则.md／55 号文的「现行口径 <旧三元组>」因不在 PRESENT_RE 内而落入 exempt，
+# 历批（第二十七至四十一批）均未察觉 —— 该盲区曾致核心规则文件的口径声明滞留「26 卷 240 章 1749 节」等旧值。
+# 本维度只报 INFO、不改判定：因另有约 15 行属合法历史件（时点口径／历史提案／批准前时点等），
+# 若升为 FAIL 须先扩充 HIST_RE 的豁免词表并经主理人裁定。
+PRESENT_EXTRA_RE = re.compile(r"(现行口径|现行基准|当前口径)")
 # 「另一套基准」前缀（磁盘实况/冻结基准/映射表数据基线）——同行并列出现时不属目录页口径，豁免。
 # 用于 CLAUDE.md 一行内并列 19卷355章（磁盘实况）＋12卷181章（冻结基准）＋23卷237章N节（现行目录）的情形。
 OTHER_BASE_RE = re.compile(r"(磁盘实况|冻结基准|数据基线|旧\s*\d+\s*卷|12\s*卷\s*181|19\s*卷\s*355|355\s*章口径)")
@@ -119,8 +127,9 @@ def fmt(v: tuple[int, int, int]) -> str:
 
 
 def scan(v: tuple[int, int, int]):
-    """返回 (marker_drift, present_stale, exempt, marker_ok, ref_stale, pending_stale)。"""
-    drift, stale, exempt, ok, ref_stale, pending_stale = [], [], [], [], [], []
+    """返回 (marker_drift, present_stale, exempt, marker_ok, ref_stale, pending_stale,
+    present_stale_blind)。最后一项为**维度四 INFO**：现在时态词未被 PRESENT_RE 覆盖的旧口径行。"""
+    drift, stale, exempt, ok, ref_stale, pending_stale, blind = [], [], [], [], [], [], []
     for fp in target_files():
         text = read_text(fp)
         lines = text.split("\n")
@@ -153,6 +162,9 @@ def scan(v: tuple[int, int, int]):
                     (ok if same else stale).append((fp, i, ln.strip(), declared))
                 else:
                     exempt.append((fp, i, ln.strip()[:120], declared))
+                    # 维度四（INFO）：语义为现在时态、但 PRESENT_RE 未覆盖者
+                    if (not same) and PRESENT_EXTRA_RE.search(ln) and not HIST_RE.search(ln):
+                        blind.append((fp, i, ln.strip()[:150], declared))
             # 维度二：指向已归档目录文件但同行无归档标注（带日期历史文件整体豁免）
             if ARCHIVED_REF_RE.search(ln) and not ARCHIVE_NOTED_RE.search(ln) and not hist_file:
                 ref_stale.append((fp, i, ln.strip()[:150]))
@@ -161,7 +173,7 @@ def scan(v: tuple[int, int, int]):
             plain = re.sub(r"`[^`]*`", "", ln)
             if re.search(r"\|\s*⬜\s*\|", plain) and not superseded:
                 pending_stale.append((fp, i, ln.strip()[:150]))
-    return drift, stale, exempt, ok, ref_stale, pending_stale
+    return drift, stale, exempt, ok, ref_stale, pending_stale, blind
 
 
 def cmd_list(v):
@@ -169,7 +181,7 @@ def cmd_list(v):
 
 
 def cmd_check(v, verbose: bool):
-    drift, stale, exempt, ok, ref_stale, pending_stale = scan(v)
+    drift, stale, exempt, ok, ref_stale, pending_stale, blind = scan(v)
     print(f"权威基准：{fmt(v)}")
     print(f"标记块内声明：一致 {len(ok)} 处")
     if drift:
@@ -193,6 +205,11 @@ def cmd_check(v, verbose: bool):
         if len(pending_stale) > 20:
             print(f"  ... +{len(pending_stale) - 20} more")
     print(f"豁免命中（历史快照/数据基线，不处置）：{len(exempt)} 处")
+    if blind:
+        print(f"⚠️ INFO｜present-stale-blind（语义为现在时态、但 PRESENT_RE 未覆盖的旧口径，{len(blind)} 处）"
+              f"——**不改判定，请人工核**：")
+        for fp, i, ln, d in blind:
+            print(f"  ~ {fp.name} L{i}: {ln[:130]}")
     if verbose:
         for fp, i, ln, d in exempt:
             print(f"  ~ {fp.name} L{i}: {ln}")
