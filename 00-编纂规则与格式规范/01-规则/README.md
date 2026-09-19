@@ -80,6 +80,7 @@
 - **涉及数据库格式统一（索引命名、schema_meta 键集合、table_count 统计、扩展表合并、引用查询加速索引、模块化分层设计、冗余文件清理、删除安全）时**：查阅 规则/流程规则.md 的“数据库格式统一规则”子小节，重点核对索引命名规范（`idx_cross_references_*` 前缀、`files` 表索引集合）、schema_meta 键集合规范（9 个标准键）、table_count 统计口径（不含 FTS5 影子表）、扩展表合并规范（5 组合并表含 record_type 字段）、引用查询加速索引规范（`idx_cross_references_reference_type`、`idx_cross_references_source_block_id`）、模块化分层设计规范（一库一文件夹）、冗余文件清理规范、删除安全规范（预览→备份→确认→执行→复核 5 步流程）等。
 
 - **涉及重构2026 目录页页面资产层（内嵌字体子集、品牌派生件、自包含性、测试夹具口径）时**：查阅 规则/流程规则.md 的「重构大纲目录页面资产层完整性门禁（2026-09-18 立）」小节，重点核对第九件门禁 `脚本与命令/audit_page_assets.py` 的四类不变量（A 装配源清单／B 内嵌字体子集覆盖度与源字体基准 `data/font-source-cmap.txt`／C 品牌派生件形制／D 自包含性与数据块 SRI／E 测试夹具口径）、**依赖 fontTools＋brotli 须用 venv 解释器运行**（`C:/Users/ykla/.workbuddy/binaries/python/envs/default/Scripts/python.exe`）、`--root`／`--refresh-source-cmap` 用法，以及「判据非空」纪律（新判据须以负向用例实测后方可采信）。
+- **涉及 `.md` 文档格式（markdownlint、表格列风格、活动文件闸面与豁免范围）时**：查阅 规则/流程规则.md 的「文档格式门禁（2026-09-20 立）」小节与 CLAUDE.md「Lint 配置」章节，重点核对闸面（活动文件显式清单）与**豁免范围**的划界（历史存档豁免是有意识的选择，非遗漏）、MD060 分隔行 dash 数量公式（**按表头显示宽度**：无冒号 W−2／单侧冒号 W−3／双侧冒号 W−4，2026-09-20 校正）、修复工具 `脚本与命令/fix_md060_delimiters.py` 与门禁 `脚本与命令/audit_markdown_lint.py` 的用法及版本钉定。
 
 ## 与 CLAUDE.md 协作指南的关系
 
