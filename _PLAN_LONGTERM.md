@@ -15,7 +15,7 @@
 |---|---|---|
 | **shenyue 复核** | A 类 **692/692 全闭环**（16 批）｜B 类 **550/748**（0027 已落账 seq 27）｜C 类 **0/1972** | `BATCH-0028`（B pos 551–600，O-2082 起） |
 | **mail2d H2** | `freebsd-bugs` **2000/192683**（b171＋b172/b173/b174）｜`-ports` **21000/191637**（b151–b157）｜`-net` **45000/73645**｜`-chat` **43869/43869 已整库闭环** | `fbug_b173`（327 条已 register CL-RM-154416–154742，4 叙述手在途）＋ `fbug_b174`（328 条已 register CL-RM-154743–155070，5 叙述手在途）＋ `fpo_b156`（627 条，39 超长压缩中）＋ `fpo_b157`（6 读手在途） |
-| **mail2d H3** | `freebsd-hackers` **42000/201463（20.85%）**（fhk_b021 已完全收口，255 块入纲 6 宿主，commit `54119d159`）；`-current`/`-doc`/`-stable` **0** | `fcu_b001` 读手 4 路**全部 token 配额耗尽失败**，已落 412 条候选（8/253/125/26）待续跑 → `fdoc_b001`／`fstb_b001` |
+| **mail2d H3** | `freebsd-hackers` **42000/201463（20.85%）**（fhk_b021 已完全收口，255 块入纲 6 宿主，commit `54119d159`）；`-current`/`-doc`/`-stable` **0** | `fhk_b022` 已预建＋4 读手在途（19:20 派，全批 2013 年、容器行 0）＋ `fcu_b001` 续读 3 路在途 → `fdoc_b001`／`fstb_b001` |
 | **mail2d H1** | `freebsd-questions` **76000/472235（16.10%）**；**37 批已提交**，b038 在途 | `fq_b038` 叙述 5 包 3 路在途（候选 145 已落库 CL-RM-153855–153999）→ `fq_b039` |
 
 **H1 真值**（`script/_db_row_mining/_H1_LONGTERM.md` 为入口，台账 `_h1_state.json` 为状态机）：
@@ -191,7 +191,8 @@ DDG 有 bot 校验、archive.org 间歇离线；URL 不得含省略号。
 | H2 下一批候选 | ⏸ `fbug_b175`（offset **139470**，按段跳到 161000 块尾）；`fpo_b158`（offset **21000**）；`fn_b172`（offset **48000**，fn_b171 收口后） | `_RESUME_H2.md` §三 |
 | `fdoc_b001`／`fstab_b001` | ⏸ 未预建（P1，待 P0 两库推进后再派） | — |
 | H3 `fhk_b021`（hackers offset 40000，pk 1312727–1314738） | ✅ **完全收口**：候选 **255 条**（原 256，剔除 1312976——from/subject/thread_refs 全空且 message_id 为合成号 `<no-id-...>`，库中 `status='rejected'`）→ 摘要对位订正 **20 改＋1 剔除**＋叙述改 **7 条** → outline **255 块入 6 宿主**（106.9 +237／124.17 +4／124.13 +2／164.8 +4／158.8 +4／106.7 +4）→ bookkeep 缺块 0／claim_id 不符 0／重复 0 → 等级门禁全库 **PASS**（3279 md／134282 抬头／0 错／0 悬空）→ commit `54119d159` → 台账 `freebsd-hackers` **42000** | `script/_db_row_mining/review_logs/fhk_b021_*`、`_fix_cand_fhk_b021_p2.py`、`_fix_narr_fhk_b021_pn.py`、`_outline_fhk_b021.py` |
-| H3 `fcu_b001`（current offset 0，pk 2462–1025423，容器行 301/2000） | 🔴 **4 读手全败（token 配额耗尽）**，已落 **412 条候选**：p1 8／p2 **253**／p3 125／p4 26（收率 10.6%／50.6%／25.0%／5.2%，分布极不均，读死于配额而非读完）→ **断点：各片为半截，须从失败处续读而非重读** → 新体例 §五.1 摘要归属铁律生效（本批归属质量良好，未现 fhk_b021 那种引文归属漂移）→ 续跑后 `_merge_parts.py fcu_b001 4` → `check` → 作者对位门禁 → `register` | `_READ_TASK_fcu_b001.md`、`review_logs/fcu_b001_candidates_part1..4.txt`、`fcu_b001_digest_part1..4.txt` |
+| H3 `fcu_b001`（current offset 0，pk 2462–1025423，容器行 301/2000） | 🔄 **续读 3 路已派（19:20）**：p1（剩 305 行，续 `pk>6324`）／p3（剩 100 行，续 `pk>1024811`）／p4（剩 400 行，续 `pk>1025023`），**p2 已读完**；追加写勿覆盖旧行（旧 8／253／125／26 条）。⚠ p1 大部分行落在容器行清单内，候选数不会高属正常。句柄见 `_DISPATCH_20260921_1920.json` | `_READ_TASK_fcu_b001.md`（§十 断点表）、`review_logs/fcu_b001_candidates_part1..4.txt` |
+| H3 `fhk_b022`（hackers offset 42000，pk 1314739–1316740） | 🔄 **已预建＋4 读手已派（19:20）**：spec `_batch_fhk_b022.json`（已补 `pk_range`／`line_date=2026-09-18`／`containers=0`）、dump 2000 行、digest 拆 4 份各 500 行、任务书 `_READ_TASK_fhk_b022.md`（含 §五.1 摘要归属铁律）。**本批全为 2013 年、容器行 0**（判据实测：0 行符合「≥3 处行首 `From `＋`From owner-`＋>20KB」；该判据已在 fcu_b001 上复算 301/301 完全吻合，可复用）。p1 1314739–1315238／p2 1315239–1315738／p3 1315739–1316240／p4 1316241–1316740 | `_DISPATCH_20260921_1920.json`、`review_logs/fhk_b022_digest_part1..4.txt` |
 
 **止损指令**：任一子代理 8 分钟无落盘即 `TaskStop` 并重派同一分件；全败则该分件转主代理直读。
 
