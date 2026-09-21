@@ -13,7 +13,8 @@
 
 | 线 | 游标（台账实测） | 下一批 |
 |---|---|---|
-| **shenyue 复核** | A 类 **692/692 全闭环**（16 批）｜B 类 **500/748**（0026 已落账 seq 26）｜C 类 **0/1972** | `BATCH-0027`（B pos 501–550，O-1891→O-2073） |
+| **shenyue 复核** | A 类 **692/692 全闭环**（16 批）｜B 类 **550/748**（0027 已落账 seq 27）｜C 类 **0/1972** | `BATCH-0028`（B pos 551–600，O-2082 起） |
+| **mail2d H2** | `freebsd-bugs` **1000/192683**（fbug_b171+b172）｜`-ports` **15000/191637**｜`-net` **45000/73645**｜`-chat` **43869/43869 已整库闭环** | `fbug_b173`（offset 138470，5 读手在途）＋ `fpo_b156`（offset 15000，6 读手在途） |
 | **mail2d H3** | `freebsd-hackers` **40000/201463（19.85%）**；`-current`/`-doc`/`-stable` **0** | `fhk_b021` 收口中（候选 256 已落库） |
 | **mail2d H1** | `freebsd-questions` **76000/472235（16.10%）**；**37 批已提交**，b038 在途 | `fq_b038` 叙述 5 包 3 路在途（候选 145 已落库 CL-RM-153855–153999）→ `fq_b039` |
 
@@ -33,8 +34,21 @@
 
 四库合计已判读 **40000／551317（7.26%）**，剩余 ≈256 批（÷2000）。
 
-**shenyue 台账真值**（`shenyue/review/_ledger.json`）：26 行、seen **1192**、verify **0 fails**、
-`next_batch_no` **27**、B 游标 pos 500（O-1890）。
+**H2 四库真值**（`script/_db_row_mining/_RESUME_H2.md` 为断点入口，台账 `_db_row_mining/mail2d_read_ledger.json`）：
+
+| 库 | 全库 | 已判读 | 剩余 | records（行序） |
+|---|---:|---:|---:|---|
+| `freebsd-ports` | 191637 | 15000 | 176637 | `[(0,15000)]` fpo_b151–b155 |
+| `freebsd-bugs` | 192683 | 1000 | 191683 | `[(0,500)]` b171 ＋ `[(137970,138470)]` b172 |
+| `freebsd-net` | 73645 | 45000 | 28645 | `[(0,45000)]` fn_b156–b170；queued `[(45000,48000)]` fn_b171 |
+| `freebsd-chat` | 43869 | 43869 | **0** | `[(0,43869)]` fch_b137–b150，**已整库闭环** |
+
+⚠️ `_HANDOFF_H2.md` §二 三处数据已过期（ports/net/chat 的「已读 0」皆非）——**以本表为准**，
+订正详情见 `_RESUME_H2.md` §一。freebsd-bugs 的 pk 空间年份同质，**下一批直接按 offset 138470 跳**，
+勿从 0/500 线性回退（见 `_HANDOFF_H2.md` §9.6）。
+
+**shenyue 台账真值**（`shenyue/review/_ledger.jsonl`）：**27 行**、verify **0 fails**、
+B 游标 pos **550**（O-2073，下一位 O-2082）、B 类剩余 **198 条（4 批）**。
 
 🔴 **本会话裁定（2026-09-21 18:00）**：会话模型适配 **1M 上下文 token**（GLM-5.2 xhigh）；
 **允许多个子代理**（沿用 §四 3–4 评审员／波，`run_in_background` + 8 分钟止损）。
@@ -161,7 +175,11 @@ DDG 有 bot 校验、archive.org 间歇离线；URL 不得含省略号。
 | `fcu_b001`（offset 0，pk 246–1025423） | ⏸ 已预建待派读手（**容器行 301/2000＝15.1%，读手一律不收**；年段 2008×1645／2010×53／2018×51／2002×47／2003×20／2017×1） | `_batch_fcu_b001.json`、`review_logs/fcu_b001_container_pks.txt` |
 | shenyue `BATCH-0025` | ✅ 已落账 seq 25、verify 0 fails | `shenyue/review/_ledger.json` |
 | shenyue `BATCH-0026` | ✅ 已落账 seq 26、verify 0 fails（门禁残留 67 项 C28+E32 体例漏项登记 _WEB_DEBT_REGISTER.md §八，只登记不追补） | `shenyue/review/_ledger.json` |
-| shenyue `BATCH-0027` | 🔄 **主代理已建 `URL_CORPUS.md`**（48 可达入口，含 Darwin/DragonFly/tuhs/freebsd 新增）；skeleton 50 条已切 4 片 seg-21..24（13/13/12/12）；**4 评审员待派**（B pos 501–550、O-1891→O-2073） | `shenyue/review/.runs/BATCH-0027/`、`_progress-BATCH-0027.json` |
+| shenyue `BATCH-0027` | ✅ **已落账 seq 27、门禁 PASS 零残留**（B pos 501–550、O-1891→O-2073，50 块、来源池 150 行）；四片 seg-21..24 全齐（13/13/12/12，0 占位符，counts 13/13/12/12）；0026 的 C/E 体例漏项教训已写死进派单，本批一次过 | `shenyue/review/逐条建议书-B-BATCH-0027.md`（1161 行）、`_sourcebank-B-0027.jsonl`（150 行）、`_ledger.jsonl` +1 |
+| shenyue `BATCH-0028` | ⏸ 未开工（B pos 551–600、O-2082 起；剩余 4 批 0028–0031，B 类尾批 0031 为 48 条） | `_a_order.json` 的 `order.B` |
+| `fbug_b173`（freebsd-bugs offset 138470，pk 1047164–1047666） | 🔄 **5 读手在途**（5 份×100 行）；spec 已补 `pk_range`；窗口内 **100%**（1994×1＋1995×499）；p2 已回 **79 条／收率 79%**（L4 52／L3 27） | `review_logs/fbug_b173_cand_p1..p5.txt`、`_READ_TASK_fbug_b173.md` |
+| `fpo_b156`（freebsd-ports offset 15000，pk 1567555–1570595） | 🔄 **6 读手在途**（6 份×500 行，2004-03~11，FreeBSD 5.2 期）；**单份 237 KB 须按 100–125 行分段读**；抽样确认实质内容密（用户实测＋维护者 HEADSUP 判断），INDEX/portscout/pkg-fallout 噪声须剔除 | `review_logs/fpo_b156_cand_p1..p6.txt`、`_READ_TASK_fpo_b156.md` |
+| H2 下一批候选 | ⏸ `fbug_b174`（offset **138970**，按段跳到 161000 块尾）；`fpo_b157`（offset **18000**）；`fn_b172`（offset **48000**，fn_b171 收口后） | `_RESUME_H2.md` §三 |
 | `fdoc_b001`／`fstab_b001` | ⏸ 未预建（P1，待 P0 两库推进后再派） | — |
 
 **止损指令**：任一子代理 8 分钟无落盘即 `TaskStop` 并重派同一分件；全败则该分件转主代理直读。
@@ -176,7 +194,10 @@ DDG 有 bot 校验、archive.org 间歇离线；URL 不得含省略号。
 | **P0** | H3 `freebsd-current` | 205027 封 | 2000/批 | ≈103（b001 已预建） |
 | **P1** | H3 `freebsd-doc` | 72663 封 | 2000/批 | ≈37 |
 | **P1** | H3 `freebsd-stable` | 72164 封 | 2000/批 | ≈37 |
-| **P2** | shenyue B 类 | 298 条 | 50/批 | **6**（0026–0031） |
+| **P2** | shenyue B 类 | **198 条**（748−550） | 50/批 | **4**（0028–0031，尾批 0031 为 48 条） |
+| **P2** | H2 `freebsd-bugs` | 191683 封 | 500/批 | ≈384（**须按 offset 段跳**：138470→138970→…→161000 块尾，勿线性回退，空密度区会空烧约 276 批） |
+| **P2** | H2 `freebsd-ports` | 176637 封 | 3000/批 | ≈59 |
+| **P3** | H2 `freebsd-net` | 28645 封 | 3000/批 | ≈10（fn_b171 已预建 queued，part1 已完稿 190 条） |
 | **P3** | shenyue C 类 | 1972 条 | 50/批 | **40**（0032–0071） |
 | **P4** | shenyue 联网证据债务 | 实测 **747 条**（旧估 595 作废） | — | **已裁定「只登记不追补」**，台账 `_WEB_DEBT_REGISTER.md`（`5597bb3d7`）；裁定只登记，不重派评审员 |
 
