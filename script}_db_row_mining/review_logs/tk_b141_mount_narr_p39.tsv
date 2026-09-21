@@ -1,0 +1,84 @@
+126525	1741	Wojtek Puchar 反驳以老旧 MicroVAX 硬件为由拒绝新特性 请对方读 netbsd.org 首页说明 强调写得好软件在 VAX 上跑得稳到 Pentium 更像火箭 否则就是写得烂
+126526	1731	Matt Thomas 指出 NetBSD 内核已通过 SCM_CREDS 向接收端传递发送方凭据 SO_PEERNAME 因此多余 他明确反对在 sosetopt 中为 UNIX 域套接字另起代码段 建议让 PostgreSQL 改用 SCM_CREDS
+126527	1731	William E Baxter 反驳 SO_PEERNAME 线程中 SCM_CREDS 主张 指凭据只在客户端发送数据时才送到服务端 匿名连接可耗尽 accept 队列形成拒绝服务 他自述曾写 getpeereid 系统调用补丁让服务端不依赖客户端发数据
+126528	1741	Jochen Kunz 指出 0.9 VUP 的 MicroVAX 配 9MB 内存和 67MB MFM 磁盘跑 4.3BSD 的时代过去十来年 今天为 IPv6 和 ACL 多付几字节磁盘与若干 CPU 周期是应得的 想体验纯正 BSD 应去 4.3BSD Tahoe
+126529	1731	jdolecek 说明 COMPAT_SUNOS 下 socreate 默认允许 UDP 广播而 NetBSD 原生程序须先 setsockopt SO_BROADCAST 才能用 模拟层必须保留该行为否则 SunOS 下用到广播的 UDP 程序会全部失效
+126530	1731	jdolecek 在 SO_PEERNAME 线程中追问 Emmanuel Dreyfus 所说 Linux 用 getsockopt SO_PEERNAME 取得对端身份究竟与 getpeername 是否一致 因他看 man 觉两者都在返回对端套接字名所以先想弄清语义差异
+126531	1731	Emmanuel Dreyfus 提出 Linux 用 getsockopt SO_PEERNAME 让服务端知道 UNIX 域套接字连接方身份 PostgreSQL 在 NetBSD 上因此不知谁在连冒充任意用户即可访问数据库 他建议只在 sosetopt 加 UNIX 域套接字代码处理该选项
+126532	1741	jdolecek 把 ACL 讨论移回 tech-kern 后补充说 QUOTA ktrace bpf 这类内核选项从来不是免费的 按需纳入才承担相应性能代价 不同人需要不同特性不需要的就别编进内核配置 也拒绝以去别的 OS 为由拒绝在 NetBSD 加特性
+126533	1731	Emmanuel Dreyfus 回应 jdolecek 追问说 getpeername 只返回对端套接字文件而不是打开它的进程 并转述 Matt Thomas 的意见认为凭据问题本来就该用 SCM_CREDS 而非新加 SO_PEERNAME 来解决
+126534	1731	William E Baxter 反驳 Martin Husemann 的 accept 超时建议 说该建议只能把匿名拒绝服务限制到超时期间局面并未根本改变 且许多服务器只需凭据本身工作不需要客户端再发数据 重申服务端应能拿到 connect 者凭据且不依赖客户端发数据
+126535	1731	Martin Husemann 认为 William Baxter 所述仅当协议很愚蠢或服务器实现很糟才会发生的拒绝服务 正常服务器都应对 accept() 设超时 超时内没有初始握手就断连即可 因此问题不严重无需为新系统调用开路
+126536	1731	Eric Haszlakiewicz 在 SO_PEERNAME 线程中澄清 getpeername(2) 返回的是对端连接地址而不是进程凭据 因此不能替代 SCM_CREDS 那类发送方身份传递 也谈不上与 Linux SO_PEERNAME 的语义相同
+126537	1731	Lord Isildur 说 ACL 议题此前已被讨论到穷尽之处许多人确实需要 ACL 它们本身并非坏东西 争点在于实现细节 他反对直接把 ACL 塞进 FFS 也反对以不向后兼容的方式实现 并呼吁复火者先去读旧帖
+126538	1731	Ken Cross 说明 FreeBSD 的 ACL 实现即已撤回的 POSIX 1003.1e 草案 虽未成为正式标准却已事实上通行被 FreeBSD Linux XFS Samba 等采用 概念上只是按个体或组赋予 rwx 权限 磁盘存储方式则依实现差异颇大
+126539	1731	gabriel rosenkoetter 认为在 tech-kern 上唯一值得辩论的就是 ACL 在磁盘上的存储方式 他称 FFS 没有空闲位存不下可扩展的元数据块 这类元数据本应放在 UFS 层以便其他文件系统也能用上
+126540	1731	Simon J Gerraty 请对方概述 FreeBSD 的 ACL 实现细节以便判断移植 NetBSD 是否值得 并说他比较欣赏 kre 提出的通用关联文件方案 附上那条邮件的 Message-ID 供参考
+126541	1731	Ken Cross 同意 ACL 磁盘存储方式是唯一悬而未决的议题 并说明 FreeBSD 现行实现把 ACL 存在文件系统根目录下各一个的独立文件中 inode 号作索引记录长度固定避免顺序搜索 文件本身的 inode 和磁盘结构保持原样
+126542	1731	der Mouse 除 Linux API 兼容考虑外认为 SO_PEERNAME 之名不佳 听起来像 getpeername 的别名 他建议把 unp_connect 微调成若监听套接字设 WANTCRED 就在 connect 时生成零长消息附上 SCM_CREDS 让服务端 accept 后即可取到凭据
+126543	1731	gabriel rosenkoetter 说明 FreeBSD 把 ACL 存在文件系统根目录下各一个的独立文件中 inode 号作索引 记录长度固定避免顺序搜索 缺点是每次访问文件要多读一次 大用户数据库会明显感到开销 不过这与配额做法一致
+126544	1731	Simon J Gerraty 澄清想要 FreeBSD ACL 实现细节 以便判断移植是否值得 Rick Kelly 已把他指引到源码 似乎把 ACL 实现成独立文件系统类型 ufs 而非 ffs 他重申喜欢 kre 的关联数据模型因为它通用不必每次新增文件系统类型
+126545	1731	Juergen Hannken-Illjes 说明他在可移动介质上使用 FFS 文件系统因此对非 ACL 感知内核正确读写带 ACL 文件系统有即刻需求 他问能否用固定 inode 承载 ACL 数据库
+126546	1731	Wojciech Puchar 就 kre 关联文件方案追问是否为每个正常文件配一个额外文件 也问访问速度会怎样 想先弄清这两点再判断该方案是否值得继续讨论
+126547	1731	Robert Elz 澄清关联文件方案并非每个正常文件配一个额外文件 而是每个 ACL 或每份需要关联数据的权限集配一个 若全目录共用同一通用权限集就只多出一个 数据可缓存且通常被多文件共享 无 ACL 时几乎无感
+126548	1731	gabriel rosenkoetter 提议可仿 Solaris 把 ACL 元数据挂在每个 inode 上或仿配额把整个文件系统的 ACL 元数据集中存于根目录一个文件中 支持 ACL 的版本会看见而不支持的不会 但这可能在非 ACL 感知系统上允许不当访问
+126549	1731	Wojciech Puchar 认为同一 ACL 定义在磁盘和内存都能共享一个文件 建议每个 inode 只再加一个机器字 不含 ACL 时置零 否则放 acl inode 号即可被多文件共享 这样即使编译了 ACL 支持未启用时也几乎不减速
+126550	1731	Wojciech Puchar 就 gabriel rosenkoetter 提议把 ACL 元数据集中于根目录一个文件的做法提出担忧 复杂情形下这个文件会变得极其庞大 他也补一句非 ACL 感知内核看不见 ACL 可能在非 ACL 感知系统上允许本不该有的文件访问
+126551	1731	Kevin P Neal 表示欣赏 kre 的关联数据模型认为它通用不必为每个新特性再引入新的文件系统类型 他顺便问能否用该模型承载 AFS 服务器所需的额外 inode 字段 并请人提供把 AFS 移植补丁发布到 OpenAFS 以便在 NetBSD 上跑客户端
+126552	1731	Ignatios Souvatzis 认为让不支持 ACL 的系统去读写挂载了 ACL 的文件系统并不妥当 即使不会破坏 ACL 也可能把本不该有的访问权放出去 他以 4.2BSD 系统读长 uid gid 文件系统为例 并追问 ACL 是否只会增加访问权限
+126553	1731	Robert Elz 回应说关联文件的内存副本就位于缓冲区缓存即 UBC 中 与目录数据一样按需提供 并说明只加一个机器字不够通用应为关联类型留两个额外字 磁盘 inode 格式正好有两处空闲字 非 ACL 内核挂载 ACL 文件系统最坏只是回写 in-core inode 时丢失该文件的 ACL
+126554	1731	Emmanuel Dreyfus 报告在做 Linux/Mips 模拟时遇险 Linux/MIPS 系统调用号自 4000 起而 makesyscalls.sh 期望第一个系统调用号位于 0 脚本报 syscall number out of sync at 0 并中断编译 他问除改 syscalls.master 外还有别的解法吗
+126555	1731	Rick Kelly 就 ACL 兼容性追问对方 引 Solaris 上 setfacl 手册页中的警示说明用 chmod 修改组权限时会同时改 ACL mask 一次误用的 chmod -R 就能把复杂 ACL 方案搞乱 Solaris 每 inode 允许 1024 条 ACL
+126556	1731	Ken Hornstein 回应 Kevin Neal 关于把 AFS 服务器跑在 NetBSD 上的追问 说除了移植服务端代码之外 NetBSD inode 空闲字段数量恰好够容纳 AFS 所需额外字段 前提别占用通常用于 NFS 生成号的字段 他称 OpenAFS 客户端移植还没人做完
+126557	1731	Wojciech Puchar 回复 kre 说每个 inode 只加两个机器字即可并认为关联类型比每文件一额外文件方案更通用 因为磁盘 inode 格式本就剩两个空闲字 只要不改动磁盘格式 非 ACL 感知内核挂载 ACL 文件系统最坏只是回写 in-core inode 时丢失 ACL
+126558	1731	Thor Lancelot Simon 报告在开启 NTP 并使用 ntp4 的多台机器上跨多种 SCSI 主机适配器高强度使用 st 驱动会出现两件事 磁带输出周期性停顿最长只能连续流写约 30 秒以及 ntpd 在磁带被占用期间周期性回拨时钟约 0.5 到 1.5 秒
+126559	1731	der Mouse 表示终于把 SO_PEERNAME 问题弄清楚了 已写出补丁允许在监听套接字上设 LOCAL_CREDS 使 connect 时就能传递凭据 另发现若要每次发送数据都带凭据现状没有办法 他补了 LOCAL_CREDS_STICKY 选项让 LOCAL_CREDS 在发送完成后不被清除
+126560	1731	jdolecek 建议在 syscalls.master 里把 Linux/MIPS 系统调用从 0 开始编号 然后在系统调用分派代码里把号减去 4000 与真正的 Linux/MIPS 号一致 并加注释说明分派代码会重映射 这样便不必改动 makesyscalls.sh
+126561	1731	Johan Danielsson 反问 Wojciech Puchar 关于 ACL 访问速度的追问 说既然自己根本不用 ACL 又何必关心它的访问速度如何 这一问直截了当让整段 ACL 实现细节讨论的取舍空间收窄
+126562	1731	der Mouse 讨论非 ACL 感知内核访问带 ACL 文件系统的损坏风险 认可损坏风险是正当论据 主张要么像根目录单文件做法那样从根上避免损坏要么明确让非 ACL 感知内核知道它对这个文件系统什么也做不了 但认为泄露权限的担忧可疑
+126563	1731	Hayakawa Koichi 就 Curt Sampson 关于 CardBus 中断路由的讨论回信 自述已为 ALi PCI ISA 桥写了配置 PCI 中断路由的设置代码 希望这能帮他解决 Libretto 上 CardBus 桥的 INTA 中断不被路由的问题
+126564	1731	Atul Pandit 询问如何在内核中添加带可变参数列表的系统调用 例如 mysyscall(int a, int b, ...) 这种形式 并问在函数体内应当如何访问这些参数 想弄明白变参系统调用在 NetBSD 上的实现路径
+126565	1731	Emmanuel Dreyfus 回应 jdolecek 从 0 编号再减 4000 的建议 提出自己在 struct emul 里加一个 first_syscall 字段作为更干净的方案 所有 emul 都取 0 Linux/Mips 取 4000 由系统调用分派统一处理 他随后又问有没有更简单的做法
+126566	1731	Andrew Doran 在 PCI hme MAC 地址线程里质疑 Izumi Tsutsui 关于 hme 卡上没有 MAC 地址的说法 说自己并不确定 因为可以指示 OpenBoot 让主机上所有接口使用唯一 MAC 地址 说明卡上很可能确实存有 MAC 信息只是驱动尚未正确取用
+126567	1731	Curt Sampson 自述即便加入 ALi 桥的中断路由代码 Libretto 仍须靠强制把中断设为 6 的 hack 才能挂接 cbb 而且插入卡之后 IRQ 6 上仍收不到中断 他附了 dmesg 输出供人排查问题所在
+126568	1731	Jason R Thorpe 在 hme MAC 地址线程中追问 hme 扩展卡上的 MAC 地址究竟存放何处 认为它必然存在于某处 而 Curt Sampson 的回复说明 Sparcstation 传统上所有网口共用同一以太网地址 想在同网段挂两网卡须手工设址
+126570	1731	Ignatios Souvatzis 就 der Mouse 关于非 ACL 感知内核挂载 ACL FFS 的讨论回应 表示可以把 ACL 作为 FFS 的一个新版本加入 类似长 uid gid 或可变长 cylinder group 元数据区域的做法 新内核能理解旧 FFS 旧内核却反向读不了新版
+126571	1731	Bill Studenmund 针对把 AFS 服务器跑在 NetBSD 上的追问提出方案 说在旁加一个平面文件存放 AFS 所需的额外字段就能搞定 访问也能做到很快 并说这正是他在 nasfs 里做过的做法相当简单
+126572	1731	Izumi Tsutsui 说明 hme 驱动本身不带 MAC 地址 当前驱动是从 sparc NVRAM 里读取的 他因此询问其他平台该如何处理该接口语义 附注 Augustss 已在 CVS 提交中把 hme 驱动注释掉因为它尚未完全 MI 化
+126573	1731	Curt Sampson 说明 Sparcstation 传统上所有网口共用同一以太网地址 想在同网段挂两网卡须手工设址 他考虑复用另一接口的 MAC 但若 hme 是主机上唯一网卡则无用 又提出以主机名为种子生成伪随机地址
+126574	1731	matthew green 自述花了不少时间在 PCI hme 卡上找以太网地址却始终找不到 说明这块卡上确实查不到本地 MAC 配置 因此他愿意代为测试他人写好的相关代码以协助推进该线程的讨论
+126575	1731	Bill Studenmund 回应 gabriel rosenkoetter 关于 FreeBSD 把 ACL 存在文件系统根目录的做法会拖慢访问的担忧 说 ACL 会随 inode 被读入内核内存 inode 常驻时 ACL 也就常驻 大数据库在启动时打开一次文件后续复用并不会感到额外开销
+126576	1731	Andrew Doran 就 hme 地址线程纠正 Curt Sampson 的说法 认为对方想表达的应该是逻辑网络如 VLAN 而不是物理网络 并展示了自己 SunOS 机器上多个网卡共用同一 MAC 的情况 附了 eeprom 输出中 local-mac-address?=false 以及 hme.h 里 hme_factaddr 与 hme_ouraddr 结构字段
+126577	1731	Ben Harris 就 Curt Sampson 关于以主机名为种子的伪随机 MAC 方案回应说自己也并不真懂 OFW 底层机制 推测可能需要执行卡上的 F-code 才能让它告诉主机 MAC 地址 并指出 NetBSD 内核里还没有 F-code 解释器
+126578	1731	Ignatios Souvatzis 对以主机名为种子的伪随机 MAC 方案不认同 主张正确做法是使用首字节第一位为 0 表示单播 次位为 1 表示本地管理的随机值 使卡上地址既不全局唯一也不冒用 IEEE 分配
+126579	1731	Izumi Tsutsui 承认自己并不确定 PCI hme 是否真的有 MAC 地址 他手上有一张 PCI HME 卡却没有基于 PCI 的 sparc 机器可参照 之所以先前说 hme 没有 MAC 是因为 sbus 网卡只共用一个 MAC 地址 若真的携带则只是缺少信息
+126580	1731	Curt Sampson 与 Andrew Doran 就网络地址术语调侃 承认自己当初应该更精确些 用单一层一地址冲突空间之类的表述更合适 但他认为多网卡各配不同 MAC 的场景并不傻 只要它们确实处在不同网络中
+126581	1731	Andrew Doran 回应 matthew green 转述的 Solaris hme 驱动 softc 字段 指出 hme_factaddr 与 hme_ouraddr 这对结构体字段对非 OFW 或 OBP 机器而言无助于实现 local-mac-address 语义 至多作为说明该字段存在的一点例证
+126582	1731	der Mouse 答复 Atul Pandit 关于变参系统调用的提问 说内核需要自己 copyin 参数指针 因为系统调用接口不能直接穿越 varargs 边界 也可以在 libc 层加一个包装来隐藏这些细节 并举 execl 是 libc shim 通过 execve 传递 argv 指针向量为例
+126583	1731	Valeriy E Ushakov 引 OFW 标准指出 device_type 属性值为 network 的标准包若关联设备具有预分配的 IEEE 802.3 风格 MAC 地址则必须实现 local-mac-address 属性 而 local-mac-address 查询开关控制该属性是否被采用
+126584	1731	Greg A Woods 就 matthew green 展示的 Solaris hme 驱动 softc 字段补充另一处旁证 指出同结构体里还有一个 hme_addrflags 地址标志字段 可能取值为 HME_FACTADDR_PRESENT 与 HME_FACTADDR_USE 又从 /kernel/drv/hme 二进制中列出相关字符串推测 local-mac-address 就是 OFW 变量名
+126585	1731	Robert Watson 回应 sjg 请他概述 FreeBSD ACL 实现 说 FreeBSD 把 ACL 分层的 EA 元数据服务建在 UFS/FFS 之上 表示愿意详谈 FreeBSD 上的实现以及当前正在做并在评估中的 Darwin 与 OpenBSD 移植工作 并建议参考去年 BSDCon 与今年 USENIX 的论文
+126586	1731	Thor Lancelot Simon 回应 matthew green 关于卡上以太网地址必然存在的乐观说法 说以太网地址在技术上属于节点地址而非接口地址 因此 Sun 在内的若干工作站厂商会在同一主机上各接口复用同一 MAC 地址 所以卡上并不必然携带独立 MAC
+126587	1731	matthew green 补充说明 hme.h 里的 hme_factaddr 与 hme_ouraddr 这两个 ether_addr 字段只是 Solaris hme 驱动 softc 等价物的一部分 对非 OFW 或 OBP 机器如何实现 local-mac-address 语义并无直接提示 他从 /kernel/drv/hme 中列出相关字符串作为旁证
+126588	1731	Dr R S Brooks 就 PCI hme MAC 地址线程给出 SunOS 4.1 X 上重排 rc 脚本时的旁证 当时机器主网卡是启动过晚的 FDDI 他记得 EEPROM 中存一份 MAC 而 le 与 nf 网卡也各自持有一份 OpenBoot 固件在初始化时会用前者覆盖后者
+126589	1731	Jaromir Dolecek 询问此前有传闻正在基于 FreeBSD 驱动编写 NetBSD SBLive 驱动的动议究竟进展到何种地步 表示若真有既存驱动他愿意协助测试也可以按需出一份力
+126590	1731	Jason R Thorpe 就 Greg A Woods 在 SunOS 5.8 的 /kernel/drv/hme 二进制里查到的相关字符串给出结论 说 Solaris 的 hme 驱动是把板载 FCODE 执行后通过 Openfirmware 的 get property 调用取得本地 MAC 相关信息的 所以 MAC 数据由固件上报而不是从卡上直接读出
+126591	1731	Jared D McNeill 回应 Jaromir Dolecek 关于 SBLive 驱动动议的追问 说自己如果收到有人送卡的话非常乐意就为它写一个 NetBSD 驱动 至于既有工作是否已经推进到什么地步他并未参与无从得知
+126592	1731	Lennart Augustsson 就 Jared D McNeill 在内核驱动里内嵌 GPL 微码的困境给出意见 说那些为了正确初始化声卡而必须访问的公共头文件里的那些数据结构只要自己重写一份使其相似但不完全相同即可 因为受版权保护的是代码本身而不是信息
+126593	1731	Andrew Gillham 给出另一条路子 建议先在驱动里分配一块空的对应数据结构再让一个 LKM 加载模块把 DSP 用的 GPL 代码下载进去 驱动随后再完成余下的板卡初始化工作 这样内核主体不必直接持有 GPL 派生数据
+126594	1731	Jared D McNeill 自述刚写完一个声卡驱动 该驱动要在声卡芯片开始工作前先把一段 GPL 微码烧入 DSP 他才想找一个办法让自有代码整合进 NetBSD 内核 而把那段 GPL 代码单独分离加载以避免许可麻烦 麻烦在于驱动要访问头文件里几个必须严格匹配的数据结构
+126595	1731	Bill Sommerfeld 就 GPL 微码难题给出绕开办法 建议写一个用户态小程序通过 ioctl 或其他方式把该数据喂给内核 这样驱动在内核里就不用直接持有 GPL 派生的二进制镜像 从而避免许可困扰
+126596	1731	Jared D McNeill 补充说明该 GPL 物是一整个烧入 DSP 的二进制核镜像 被存成一个十六进制数值数组 而不是简单的一组定义 并强调自己手上没有该卡 DSP 的编程规格文档可供参考
+126597	1731	Jared D McNeill 提供驱动 tar 包供人自行检查 说明相关数据结构位于 esadsp.h 而 esareg.h 也是 GPL 但有把握能自己重新生成一份从而绕开许可约束
+126598	1731	Bill Sommerfeld 拿到 tar 包后估算那段 DSP 微码镜像大约只有 2.5KB 并自陈对音频子系统近乎无知 不知道如何在 /dev/audio 的间接层之下给新驱动接入一个自定义 ioctl 请 Lennart 帮忙
+126599	1731	Ignatios Souvatzis 预告将为 amiga 平台的 repulse.c 音频驱动增加 24 位与 32 位 slinear 采样模式可能还附赠 ulinear 模拟 因此他打算放宽 audio.c 里 audio_check_params 在 2234 行附近的参数合理性检查 询问大家是否有反对
+126600	1731	Dieter Baron 在移植 sbcl Steel Bank Common Lisp 到 NetBSD 时发现 NetBSD 尚不支持 sigaction 的 SA_SIGINFO 标志 而 sbcl 靠它获取 SIGSEGV 处理程序里的出错地址 他因此询问 i386 上应当如何取得该地址 附注 sparc 平台似乎把出错地址放在 code 参数中
+126601	1731	Jared D McNeill 就 Andrew Gillham 提出的用 LKM 装载 DSP 微码进预留数据结构的方案表示无从下手 请对方给出参考代码或示例 因为他不熟 NetBSD LKM 机制 无法判断这个思路能否在自己那款需要烧入 GPL 微码的声卡驱动上走通
+126602	1731	Christos Zoulas 就 Emmanuel Dreyfus 与 jdolecek 关于 Linux/Mips 系统调用号偏移 4000 的争论给出建议 认为既然要做 Linux 模拟就得自己提供一个 linux_syscall.c 文件 在那里头把系统调用号减去 4000 只是简单的一行改动 没必要为这一个特例去泛化 struct emul
+126603	1731	Allen Briggs 重发约一个半月前提交的 ST16C1550 UART 与 16550 不完全兼容的报告与补丁 指出该 UART 在中断模式下会卡在接收中断循环因为唯一的中断条件只剩 TXRDY 并附上他与 Onno van der Linden 交换邮件时所建议的改法即在接收循环外引一个 txintronce 变量加一个 inline txintr 函数
+126604	1731	Simon Burge 就 Dieter Baron 关于 SIGSEGV 处理程序如何拿到出错地址的提问给出快速观察 说他在几个架构的 machine/signal.h 头文件里翻了一遍 sc_pc 似乎存在于所有架构 因此可以用来获取相关信息
+126605	1731	Valeriy E Ushakov 澄清 sc_pc 是保留用来在返回用户态时恢复程序计数器的值 而 sbcl 之类需要的其实是引发缺页的访问地址 并举了把一个指针指向 0xdeadbee0 再解引用赋值让处理程序拿到 bad 而不是 %pc 的例子 还补充在 sparc 上 sigcode 有个巧妙之处可以让信号发生时全部 CPU 寄存器都能从栈上回收取到
+126606	1731	Christos Zoulas 就 Dieter Baron 关于 i386 上如何取得 SIGSEGV 出错地址的提问回答 说目前 sigcontext 代码还是老样子 信号处理程序收到的第二个参数仍是 struct sigcontext 指针 sc_eip 就是 Dieter 想要的地址
+126608	1731	Emmanuel Dreyfus 追问 Christos Zoulas 既然 linux_syscalls.c 是脚本自动生成且只是普通数组 是不是意味着要在生成的数组里补 4000 个空项来对齐 Linux/MIPS 那侧从 4000 开始的系统调用号
+126609	1731	Jason R Thorpe 澄清 Christos 说的其实不是要往数组里塞 4000 个空项 而是要把数组从 0 开始编号 并需要在 sys/arch/mips/mips/linux_syscall.c 中先校验系统调用号大于等于 4000 再减去 4000 用于索引 并给出 sys/arch/i386/i386/linux_syscall.c 作为可参考实现
+126610	1731	Christos Zoulas 澄清与 Emmanuel Dreyfus 的误会 说他要改的是 mips/mips/linux_syscall.c 而不是那个由脚本自动生成的 linux_syscalls.c 数组文件 并贴出 linux_syscall_plain 函数里 code 等于 frame.tf_eax 减 4000 的示例代码段展示如何在该入口先把号减去 4000 再用 LINUX_SYS_NSYSENT 掩码索引
