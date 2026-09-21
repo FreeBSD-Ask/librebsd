@@ -1,19 +1,26 @@
 # 长线总账（Live）· 防会话中断唯一入口
 
-> **读这一份就够**：本文件是两线（shenyue 复核 / mail2d H3）的**唯一长期入口**，
+> **读这一份就够**：本文件是**三线**（shenyue 复核 / mail2d H3 / mail2d H1）的**唯一长期入口**，
 > 新会话读到本文件即可续接，无须任何先前对话记忆。
 > 细节归档（SOP 全文、裁定取证、坑速查完整版）在 `_PLAN_20260921.md`，本文件只留**活数据与命令**。
-> 上游分线规程：`shenyue/review/_LONGRUN_PLAN.md`（复核线）、`script/_db_row_mining/_H3_RESUME.md`（H3 断点续跑书）。
+> 上游分线规程：`shenyue/review/_LONGRUN_PLAN.md`（复核线）、`script/_db_row_mining/_H3_RESUME.md`（H3 断点续跑书）、
+> `script/_db_row_mining/_H1_LONGTERM.md`（H1 长线档案，含 H1 全套 SOP 与宿主分派口径）。
 > **冲突时以台账实测值为准，永不以本文档数字为准**（本文档是台账的副本，已实测漂移 3 次，见 §七）。
 
 ---
 
-## 〇、一句话现状（2026-09-21 17:40 实测）
+## 〇、一句话现状（2026-09-21 18:00 实测）
 
 | 线 | 游标（台账实测） | 下一批 |
 |---|---|---|
-| **shenyue 复核** | A 类 **692/692 全闭环**（16 批）｜B 类 **450/748**｜C 类 **0/1972** | `BATCH-0026`（B pos 451–500，O-1708→O-1890） |
+| **shenyue 复核** | A 类 **692/692 全闭环**（16 批）｜B 类 **500/748**（0026 已落账 seq 26）｜C 类 **0/1972** | `BATCH-0027`（B pos 501–550，O-1891→O-2073） |
 | **mail2d H3** | `freebsd-hackers` **40000/201463（19.85%）**；`-current`/`-doc`/`-stable` **0** | `fhk_b021` 收口中（候选 256 已落库） |
+| **mail2d H1** | `freebsd-questions` **76000/472235（16.10%）**；**37 批已提交**，b038 在途 | `fq_b038` 叙述 5 包 3 路在途（候选 145 已落库 CL-RM-153855–153999）→ `fq_b039` |
+
+**H1 真值**（`script/_db_row_mining/_H1_LONGTERM.md` 为入口，台账 `_h1_state.json` 为状态机）：
+`freebsd-questions` 全库 **472,235** 封，共 **237 批**（÷2000，末批 b237 为 n=235），
+**37 批 committed** + b038 `registered`（候选 145 条、正文 145/145）+ 199 批 pending；
+宿主 `921,10016,10017,923,924`；密度带 **3–8%**；下一批 offset **76000**。
 
 **H3 四库真值**（`script/_db_row_mining/mail2d_read_ledger.json`，mtime 09-21 14:32）：
 
@@ -26,8 +33,14 @@
 
 四库合计已判读 **40000／551317（7.26%）**，剩余 ≈256 批（÷2000）。
 
-**shenyue 台账真值**（`shenyue/review/_ledger.json`）：25 行、seen **1142**、verify **0 fails**、
-`next_batch_no` **26**、B 游标 pos 450（O-1703）。
+**shenyue 台账真值**（`shenyue/review/_ledger.json`）：26 行、seen **1192**、verify **0 fails**、
+`next_batch_no` **27**、B 游标 pos 500（O-1890）。
+
+🔴 **本会话裁定（2026-09-21 18:00）**：会话模型适配 **1M 上下文 token**（GLM-5.2 xhigh）；
+**允许多个子代理**（沿用 §四 3–4 评审员／波，`run_in_background` + 8 分钟止损）。
+1M 上下文下主代理可读 KB 级探针输出，但**仍不读** R 条目正文／23 MB jsonl（铁律不变）。
+BATCH-0027 已由主代理建 `URL_CORPUS.md`（48 条可达入口，含 Darwin／DragonFly／tuhs／freebsd 新增），
+4 评审员（seg-21..24）已派，断点 `_progress-BATCH-0027.json` status=IN_PROGRESS_4_REVIEWERS_DISPATCHED。
 
 ---
 
@@ -136,7 +149,7 @@ DDG 有 bot 校验、archive.org 间歇离线；URL 不得含省略号。
 
 ---
 
-## 五、在途表（2026-09-21 17:40）
+## 五、在途表（2026-09-21 18:00）
 
 | 项 | 状态 | 句柄／产物 |
 |---|---|---|
@@ -144,10 +157,11 @@ DDG 有 bot 校验、archive.org 间歇离线；URL 不得含省略号。
 | `fhk_b021` 作者对位 | ✅ 30 条命中 → **14 真缺陷已定点改写/剔除＋6 Wojtek 假阳不动** | `_fix_author_fhk_b021.py`、`review_logs/fhk_b021_fixdec_{a,b}.json` |
 | `fhk_b021` register | ✅ **COMMITTED 256**，claim seq **CL-RM-153599–153854**，反查 256/256，四表 join 256 | `_batch_fhk_b021.json` 的 `claim_map` |
 | `fhk_b021` body + 叙述拆件 | ✅ 正文 256/256（缺失 0），`narrpkg_p1..p4` 各 64 条 | `cands_body_p1..p4.txt`（年段 2012×216＋2013×40） |
-| `fhk_b021` 叙述手 | 🔄 **4 路在途**（17:35 派） | p1 `agent_b2af4248`／p2 `agent_dbb9ec9f`／p3 `agent_a8648ad6`／p4 `agent_f4bcf636`；产出 `mount_narr_p1..p4.tsv` |
+| `fhk_b021` 叙述手 | 🔄 **4 路**（p2✅64／p4✅64 已完稿；p1 58/64 推进中；p3 重派后待首落盘） | 首派 p1/p3 卡死（p1 写 39 行后停滞 18 分钟、p3 全程 20 分钟零落盘），17:55 止损并匿名重派（p1 `agent_6415cad4`／p3 `agent_a1e1f4d1`）；产出 `mount_narr_p1..p4.tsv` |
 | `fcu_b001`（offset 0，pk 246–1025423） | ⏸ 已预建待派读手（**容器行 301/2000＝15.1%，读手一律不收**；年段 2008×1645／2010×53／2018×51／2002×47／2003×20／2017×1） | `_batch_fcu_b001.json`、`review_logs/fcu_b001_container_pks.txt` |
 | shenyue `BATCH-0025` | ✅ 已落账 seq 25、verify 0 fails | `shenyue/review/_ledger.json` |
-| shenyue `BATCH-0026` | 🔄 prep 已备好（pos 451–500、O-1708→O-1890、next O-1891、8 段、wave_max 4）；**缺 URL_CORPUS.md，须主代理先建语料再派** | `shenyue/review/.runs/prep0026.json` |
+| shenyue `BATCH-0026` | ✅ 已落账 seq 26、verify 0 fails（门禁残留 67 项 C28+E32 体例漏项登记 _WEB_DEBT_REGISTER.md §八，只登记不追补） | `shenyue/review/_ledger.json` |
+| shenyue `BATCH-0027` | 🔄 **主代理已建 `URL_CORPUS.md`**（48 可达入口，含 Darwin/DragonFly/tuhs/freebsd 新增）；skeleton 50 条已切 4 片 seg-21..24（13/13/12/12）；**4 评审员待派**（B pos 501–550、O-1891→O-2073） | `shenyue/review/.runs/BATCH-0027/`、`_progress-BATCH-0027.json` |
 | `fdoc_b001`／`fstab_b001` | ⏸ 未预建（P1，待 P0 两库推进后再派） | — |
 
 **止损指令**：任一子代理 8 分钟无落盘即 `TaskStop` 并重派同一分件；全败则该分件转主代理直读。
