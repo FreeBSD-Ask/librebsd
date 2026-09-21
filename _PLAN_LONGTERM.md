@@ -9,12 +9,12 @@
 
 ---
 
-## 〇、一句话现状（2026-09-21 19:30 实测）
+## 〇、一句话现状（2026-09-21 19:48 实测）
 
 | 线 | 游标（台账实测） | 下一批 |
 |---|---|---|
 | **shenyue 复核** | A 类 **692/692 全闭环**（16 批）｜B 类 **550/748**（0027 已落账 seq 27）｜C 类 **0/1972** | `BATCH-0028`（B pos 551–600，O-2082 起） |
-| **mail2d H2** | `freebsd-bugs` **2000/192683**（b171＋b172/b173/b174）｜`-ports` **21000/191637**（b151–b157）｜`-net` **45000/73645**｜`-chat` **43869/43869 已整库闭环** | `fbug_b173`（327 条已 register CL-RM-154416–154742，4 叙述手在途）＋ `fbug_b174`（328 条已 register CL-RM-154743–155070，5 叙述手在途）＋ `fpo_b156`（627 条，39 超长压缩中）＋ `fpo_b157`（6 读手在途） |
+| **mail2d H2** | `freebsd-bugs` **2000/192683**（b171＋b172/b173/b174）｜`-ports` **21000/191637**（b151–b157）｜`-net` **45000/73645**｜`-chat` **43869/43869 已整库闭环** | `fbug_b173` ✅ 全链闭环 `cee1e72ec`（327 块 +1635 行）；`fbug_b174` 328 条已 register CL-RM-154743–155070，叙述 4/5 包已落 262 行违规 0、p1 重派中；`fpo_b156` **702 条已 register CL-RM-155072–155773**，9 叙述包 3 落盘＋4 在途＋2 重派；`fpo_b157` 五片已回、p1 重派在途 |
 | **mail2d H3** | `freebsd-hackers` **42000/201463（20.85%）**（fhk_b021 已完全收口，255 块入纲 6 宿主，commit `54119d159`）；`-current`/`-doc`/`-stable` **0** | `fhk_b022` 已预建＋4 读手在途（19:20 派，全批 2013 年、容器行 0）＋ `fcu_b001` 续读 3 路在途 → `fdoc_b001`／`fstb_b001` |
 | **mail2d H1** | `freebsd-questions` **76000/472235（16.10%）**；**37 批已提交**，b038 在途 | `fq_b038` 叙述 5 包 3 路在途（候选 145 已落库 CL-RM-153855–153999）→ `fq_b039` |
 
@@ -184,10 +184,10 @@ DDG 有 bot 校验、archive.org 间歇离线；URL 不得含省略号。
 | shenyue `BATCH-0026` | ✅ 已落账 seq 26、verify 0 fails（门禁残留 67 项 C28+E32 体例漏项登记 _WEB_DEBT_REGISTER.md §八，只登记不追补） | `shenyue/review/_ledger.json` |
 | shenyue `BATCH-0027` | ✅ **已落账 seq 27、门禁 PASS 零残留**（B pos 501–550、O-1891→O-2073，50 块、来源池 150 行）；四片 seg-21..24 全齐（13/13/12/12，0 占位符，counts 13/13/12/12）；0026 的 C/E 体例漏项教训已写死进派单，本批一次过 | `shenyue/review/逐条建议书-B-BATCH-0027.md`（1161 行）、`_sourcebank-B-0027.jsonl`（150 行）、`_ledger.jsonl` +1 |
 | shenyue `BATCH-0028` | ⏸ 未开工（B pos 551–600、O-2082 起；剩余 4 批 0028–0031，B 类尾批 0031 为 48 条） | `_a_order.json` 的 `order.B` |
-| `fbug_b173`（bugs offset 138470，pk 1047164–1047666） | 🔄 候选 **327 条**（L4 202／L3 125，51 条超长已联合压缩）→ `check` 违规 0 → **register COMMITTED 327**（`CL-RM-154416`–`154742`，反查 327/327，四表 join 327）→ `body` 327/327 → `_split_narr` 4 包（82/82/82/81，缺正文 0）→ **4 叙述手在途** → 收齐后 `_merge_narr.py fbug_b173 4 881,886,887` → outline/bookkeep/audit/commit；提交应 +**1635** 行（327×5） | `_NARR_TASK_fbug_b173.md`、`_RESUME_H2.md` §七 |
-| `fbug_b174`（bugs offset 138970，pk 1047668–1048166） | 🔄 五片齐 **328 条**（73/64/47/86/58）→ `_s62_merge_multi.py fbug_b174 5` 0 违规 → `check` PASS（L4 228／L3 100）→ **register COMMITTED 328**（`CL-RM-154743`–`155070`，反查 328/328，四表 join 328）→ `body` 328/328 → `_split_narr` 5 包（66/66/66/65/65）→ **5 叙述手在途**；提交应 +**1640** 行（328×5） | `_NARR_TASK_fbug_b174.md`、`_s62_merge_multi.py`（通用合并器，乱序归并＋跨片重复 assert） |
-| `fpo_b156`（ports offset 15000，pk 1567555–1570595，n=3000） | 🔄 六片齐 **627 条**（73/94/72/**232**/90/66）；p4 收率 46% 已抽验＝维护者一手讨论非噪声；合并自检出 **39 项超长／禁字**（p2 21／p3 17＋未升序／p6 1）→ **压缩员在途**（清单 `fpo_b156_overlong_full.txt`）→ 压完合并 → `check` → `register`；**宿主 7 键尚未实判**须据 dump 画像实定 | `review_logs/fpo_b156_cand_p1..p6.txt`、`fpo_b156_overlong_full.txt` |
-| `fpo_b157`（ports offset 18000，pk 1570596–1573653，n=3000） | 🔄 2004×1462＋2005×1538；**6 读手在途**（6 份×~240 KB，须 100–125 行分段读）。p6 ✅83 条（收率 16.6%，L4 56／L3 27，超长 0）、p2 ✅43 条（收率 8.6%，L4 34／L3 9）已回 | `review_logs/fpo_b157_cand_p*.txt`、`_READ_TASK_fpo_b157.md` |
+| `fbug_b173`（bugs offset 138470） | ✅ **全链闭环 `cee1e72ec`**：327 块入 88.1/88.6/88.7，+1635 行恰 = 327×5，0 删除；outline 幂等二跑 +0、bookkeep 三零 PASS、等级门禁 PASS | `_RESUME_H2.md` §二「fbug_b173 全链闭环记录」 |
+| `fbug_b174`（bugs offset 138970，pk 1047668–1048166） | 🔄 328 条 **register COMMITTED**（`CL-RM-154743`–`155070`，反查 328/328）→ body 328/328 → 5 叙述包。**p2/p3/p4/p5 已落 262 行、违规 0**（p3 由压缩员 158→139）；**p1 被双写抹成 1 字节，重派在途**。收齐后 `_merge_narr.py fbug_b174 5 881,886,887` → 收口，提交应 +**1640** 行。**16 条读手增量不进本批**，另开 tag | `_NARR_TASK_fbug_b174.md`、`fbug_b174_extra_cand.txt`、`fbug_b174_summary_changed.txt` |
+| `fpo_b156`（ports offset 15000，pk 1567555–1570595，n=3000） | 🔄 **702 条** → `_s62_merge_multi.py fpo_b156 6` **0 违规** → `check` PASS（L4 518／L3 184，摘要 25–80／avg 64.0）→ **register COMMITTED 702**（`CL-RM-155072`–`155773`，反查 702/702、四表 join 702）→ body 702/702（727 399 B）→ `_split_narr.py fpo_b156 9` 各 78。**宿主 6 键已实测校准**：891/892/894/906/907/909，**禁 883**（2004 期）。p3/p4/p5 ✅ 已落盘；p1/p2 静默死亡已重派；p6–p9 在途。收齐后 `_merge_narr.py fpo_b156 9 891,892,894,906,907,909` → 收口，提交应 +**3510** 行 | `_NARR_TASK_fpo_b156.md`、`review_logs/fpo_b156_cand_p*.txt` |
+| `fpo_b157`（ports offset 18000，pk 1570596–1573653，n=3000） | 🔄 **五片已回**：p2 ✅43／p3 ✅57／p4 ✅50／p5 ✅29／p6 ✅83；**p1 重派在途**。收齐后 `_s62_merge_multi.py fpo_b157 6` → check → register → body → `_split_narr` → 叙述（宿主同 b156 六键） | `review_logs/fpo_b157_cand_p*.txt`、`_READ_TASK_fpo_b157.md` |
 | H2 下一批候选 | ⏸ `fbug_b175`（offset **139470**，按段跳到 161000 块尾）；`fpo_b158`（offset **21000**）；`fn_b172`（offset **48000**，fn_b171 收口后） | `_RESUME_H2.md` §三 |
 | `fdoc_b001`／`fstab_b001` | ⏸ 未预建（P1，待 P0 两库推进后再派） | — |
 | H3 `fhk_b021`（hackers offset 40000，pk 1312727–1314738） | ✅ **完全收口**：候选 **255 条**（原 256，剔除 1312976——from/subject/thread_refs 全空且 message_id 为合成号 `<no-id-...>`，库中 `status='rejected'`）→ 摘要对位订正 **20 改＋1 剔除**＋叙述改 **7 条** → outline **255 块入 6 宿主**（106.9 +237／124.17 +4／124.13 +2／164.8 +4／158.8 +4／106.7 +4）→ bookkeep 缺块 0／claim_id 不符 0／重复 0 → 等级门禁全库 **PASS**（3279 md／134282 抬头／0 错／0 悬空）→ commit `54119d159` → 台账 `freebsd-hackers` **42000** | `script/_db_row_mining/review_logs/fhk_b021_*`、`_fix_cand_fhk_b021_p2.py`、`_fix_narr_fhk_b021_pn.py`、`_outline_fhk_b021.py` |
