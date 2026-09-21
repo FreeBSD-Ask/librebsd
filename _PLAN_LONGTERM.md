@@ -53,7 +53,7 @@ seg-33 评审员（37.8 分钟）。**失败发生在写盘之后**——磁盘�
 | `freebsd-chat` | 43869 | 43869 | **0** | `[(0,43869)]` fch_b137–b150，**已整库闭环** |
 
 ⚠️ `_HANDOFF_H2.md` §二 三处数据已过期（ports/net/chat 的「已读 0」皆非）——**以本表为准**，
-订正详情见 `_RESUME_H2.md` §一。freebsd-bugs 的 pk 空间年份同质，**下一批直接按 offset 138470 跳**，
+订正详情见 `_RESUME_H2.md` §一。freebsd-bugs 的 pk 空间年份同质，**下一批直接按 offset 139470 跳**，
 勿从 0/500 线性回退（见 `_HANDOFF_H2.md` §9.6）。
 
 **shenyue 台账真值**（`shenyue/review/_ledger.jsonl`）：**27 行**、verify **0 fails**、
