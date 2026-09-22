@@ -117,8 +117,8 @@ FreeBSD Capsicum (2008, Watson)                 FreeBSD pdfork (2008)
 
 | 分层 | precision | 样本 → 入纲 |
 |---|---|---|
-| linux-api BSD 承袭链（双层过滤） | 48.1% | 52 → 25 |
-| linux-api BSD 承袭链（主题去重口径） | 48.1% | 52 → 25 |
+| linux-api BSD 承袭链（主题+显式 BSD 双层过滤） | 48.1% | 52 → 25 |
+| linux-api BSD 承袭链（仅主题命中口径） | 0.99% | 2,521 → 25 |
 | freebsd-hackers GPL+BSD 许可 | 72.7% | 66 → 48 |
 | historical_claims 反向张力 | 68.4% | 19 → 13 |
 | BSD 发展列表硬过滤 | 61.7% | 128 → 79 |
