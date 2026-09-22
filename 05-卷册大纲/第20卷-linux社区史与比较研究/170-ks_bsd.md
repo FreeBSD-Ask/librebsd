@@ -1,0 +1,3141 @@
+# Linux 社区史与比较研究 · KSummit BSD 议题
+
+## BSD 相关章节锚点
+- 【Linux社区】Geert 反驳 bugzilla 拥趸：MAINTAINERS 文件才是权威指引，优先 B 条目否则退回 M/L 条目，邮件列表经 lore 存档可追溯而 IRC 等渠道无溯源。 `<!-- ROW_MINE: ksummit.messages.2 -->`
+- 【Linux社区】Dan Carpenter 称对细节不熟，但只要给出有 bug 的代码样例与期望告警输出，他就能写出对应静态检查，属具体承接承诺。 `<!-- ROW_MINE: ksummit.messages.27 -->`
+- 【Linux社区】Bartosz 反驳 Linus“全有或全无”立场：主张以提示告知旧 API 正被替代，支持愿意做重活的新开发者引导后续开发而不指责。 `<!-- ROW_MINE: ksummit.messages.28 -->`
+- 【Linux社区】Sandeen 反对把濒死文件系统改只读：反增开发与测试负担，syzbot 照样能打崩只读文件系统，建议按惯例用 Kconfig/printk 标注弃用。 `<!-- ROW_MINE: ksummit.messages.32 -->`
+- 【Linux社区】Ribalda 主张 ISP 数十万参数中仅需文档化运行时用到的数百个，以“可用开源相机栈”为底线；专利流氓风险使厂商不敢公开内部实现。 `<!-- ROW_MINE: ksummit.messages.40 -->`
+- 【Linux社区】Laura 公布投票与提名资格认定同用的 Kees identity-canonicalizer 脚本及 git log/awk 命令，属 2021 TAB 选举流程记录。 `<!-- ROW_MINE: ksummit.messages.45 -->`
+- 【Linux社区】Arnd 建议 SAMA7D65 这类 1GB 机型长期默认 VMSPLIT_3G_OPT 并关闭 highmem，指出小 highmem 区更易耗尽，并追问 AT91RM9200 实际用户量。 `<!-- ROW_MINE: ksummit.messages.48 -->`
+- 【Linux社区】Wilcox 强调文件系统开发者极怕吃掉用户数据，以 ext4 1KB 块 bug 一周内发现修复为例，对比 HFS+ 无测试套件时 bug 可能潜伏多年。 `<!-- ROW_MINE: ksummit.messages.50 -->`
+- 【Linux社区】Gunthorpe 反驳 JJB：DPDK 并非小众且承载大量互联网流量，部署改用 RDMA raw queue pairs 大幅降低负担，证明并非一切都该收进内核。 `<!-- ROW_MINE: ksummit.messages.51 -->`
+- 【Linux社区】Lee Jones 肯定 .get_maintainer.ignore 思路，追问能否表达“对我非维护者的文件不再 CC 我”，以摆脱历年改过文件的琐碎 review。 `<!-- ROW_MINE: ksummit.messages.52 -->`
+- 【Linux社区】JJB 判定该议题的 plumbing 部分更适合 LSF/MM 的 IO 轨道而非 Plumbers 的 kernel summit 轨道，属议题安排建议。 `<!-- ROW_MINE: ksummit.messages.77 -->`
+- 【Linux社区】Walleij 确认 rustc_codegen_gcc 证明可行，但认为部分因许可问题仍需为 GCC 从零编写 Rust 前端。 `<!-- ROW_MINE: ksummit.messages.92 -->`
+- 【Linux社区】Pinchart 以 std::string 移动语义示例论证按值传聚合有时更高效，并指出 return std::move 妨碍 NRVO 与 C++17 强制拷贝消除的关系。 `<!-- ROW_MINE: ksummit.messages.94 -->`
+- 【Linux社区】Tarreau 论证邮件可回应旧信并保留全部参与者而 issue 状态反藏信息，并指出 Artem 拒绝听取论点、建议停止争论。 `<!-- ROW_MINE: ksummit.messages.95 -->`
+- 【Linux社区】Greg KH 以封闭系统团队不把代码喂给公开模型、也不让公开模型产出进入闭源库为佐证，主张在法律问题明朗前认真对待风险。 `<!-- ROW_MINE: ksummit.messages.96 -->`
+- 【Linux社区】Konstantin 答复 Bugzilla Harmony 缺乏势头，kernel.org 方案是把数据库迁移到 Postgres 以绕开 MySQL 老旧问题。 `<!-- ROW_MINE: ksummit.messages.102 -->`
+- 【Linux社区】Dan Williams 提出以 git notes 作元数据存放处并设想 b4 dig 沿 Link 找源树、patch-id 匹配兜底，回应 Greg 的跨子系统检索难题。 `<!-- ROW_MINE: ksummit.messages.106 -->`
+- 【Linux社区】Pinchart 提议基于 lore 与 b4 做工具，让被漏 CC 者能快速取回整个补丁系列的完整上下文。 `<!-- ROW_MINE: ksummit.messages.107 -->`
+- 【Linux社区】Buczek 以研究院 456 用户、6PB、长任务难重启的环境自述，说明依赖 oss-security/linux-distros 公告做热修补，呼吁鼓励报送并可放宽期限。 `<!-- ROW_MINE: ksummit.messages.111 -->`
+- 【Linux社区】Brown 表态 base-commit 平时用不上但难应用时很有用、宜由工具提供；要求 cover letter 写前置系列的 lore 链接加标题便于直接阅读。 `<!-- ROW_MINE: ksummit.messages.112 -->`
+- 【Linux社区】Leon 提出两点反方论据：多语言妨碍跨子系统重构（如 DMA/SG 改动），编译与验证测试矩阵翻倍且成本高、不如投入覆盖率。 `<!-- ROW_MINE: ksummit.messages.117 -->`
+- 【Linux社区】Sasha 主张按 merits 而非工具审查补丁，认为维护者短缺是历届峰会老问题，应补工具与测试而非封堵使用 LLM 的开发者。 `<!-- ROW_MINE: ksummit.messages.121 -->`
+- 【Linux社区】Linus 拒绝讨论假设情形：俄罗斯事件式拒收国家支持者的补丁已有先例，未来情形无法预测，不值得争论。 `<!-- ROW_MINE: ksummit.messages.126 -->`
+- 【Linux社区】Sasha 提出峰会议题五问：security@ 拆分 AI 分诊与人工修复、stable 回移缺位、发行版联合 backport 列表、CVE 状态标注、AI 报告政策。 `<!-- ROW_MINE: ksummit.messages.127 -->`
+- 【Linux社区】Konstantin 反对 karma 系统：易被滥用与冒充（典型 From 伪造手法），主张仅限子维护者层级内使用，理想前提是密码学补丁证明。 `<!-- ROW_MINE: ksummit.messages.135 -->`
+- 【Linux社区】Brown 指出 -next 新增文档警告已有报告，建议把文档检查纳入 0day 等构建机器人以扩大覆盖面。 `<!-- ROW_MINE: ksummit.messages.139 -->`
+- 【Linux社区】Ted 质疑 JJB 的矛盾：保留现行拉取体系则决策自然归于上层维护者单人，要求澄清“多人决策”如何落地。 `<!-- ROW_MINE: ksummit.messages.140 -->`
+- 【Linux社区】Linus 强调谈的是普通无注解访问：内核被迫加大量 READ_ONCE 只为应付 UBSAN，属悲观代码生成并浪费人力，根子在坏 C 标准。 `<!-- ROW_MINE: ksummit.messages.150 -->`
+- 【Linux社区】Rostedt 响应分组主持设想：可由其他子系统志愿者主持，并自荐主持 GPU 分组且保持克制，属峰会组织讨论记录。 `<!-- ROW_MINE: ksummit.messages.151 -->`
+- 【Linux社区】Pinchart 核算 43 人约 2500 美元每人每天，并提议峰会为独立邀请制活动，可另择附近低成本场地办会。 `<!-- ROW_MINE: ksummit.messages.152 -->`
+- 【Linux社区】Pinchart 提出用前置系列 message-id 表达依赖，指出 prerequisite-message-id trailer 已有实例并追问 lore patch-id 检索可行性。 `<!-- ROW_MINE: ksummit.messages.154 -->`
+- 【Linux社区】Mauro 提案：由接受功能的子系统维护者宣布移除、知会范围扩至发行版与 TAB，并以多 SOB 的移除补丁作为文档载体。 `<!-- ROW_MINE: ksummit.messages.155 -->`
+- 【Linux社区】Greg KH 展示 get_maintainer.pl 默认给 USB 子系统补丁追加 LKML 的问题，支持改默认让工具不再自动指向 LKML。 `<!-- ROW_MINE: ksummit.messages.157 -->`
+- 【Linux社区】Luck 提议两条规则：禁止 AI 代理直接署名提交，From 行的人类须对补丁内容负全责、不得以“AI 写的”开脱。 `<!-- ROW_MINE: ksummit.messages.158 -->`
+- 【Linux社区】Iwai 支持 CC regressions@ 使回归集中可见，并追问 regzbot 能否引用发行版 bug tracker 的报告。 `<!-- ROW_MINE: ksummit.messages.160 -->`
+- 【Linux社区】Chinner 论证旧文件系统与 ia64 同理应可 EOL：零星用户不值维护开销、VM 跑旧发行版即可取数据，难题在 VFS/块层等接口债务而非仅 buffer cache。 `<!-- ROW_MINE: ksummit.messages.161 -->`
+- 【Linux社区】Dan Williams 建议将 UALink 议题同时提交 LPC 设备内存微会议，该房间有 CXL、HMM、NUMA 等相关经验人群。 `<!-- ROW_MINE: ksummit.messages.163 -->`
+- 【Linux社区】Leon 反问 Mauro：29 个 media 补丁多属有效时，是否该反思正确修法应在 pm_runtime_get_sync 层，直指评审盲点。 `<!-- ROW_MINE: ksummit.messages.164 -->`
+- 【Linux社区】Rostedt 补充旧内核难编译、旧 OS 难获取的现实约束，主张以只读为最低支持形态（如当年 NTFS）作为弃用中间站。 `<!-- ROW_MINE: ksummit.messages.168 -->`
+- 【Linux社区】Linus 表态不鼓励但不禁止自动类型：分配场景重复类型无价值、中部声明合理，helper 宏内最适合。 `<!-- ROW_MINE: ksummit.messages.172 -->`
+- 【Linux社区】Greg KH 解释 2.5 时代驱动模型设计意图：probe 与模块注册相互独立、probe 失败不应阻止加载，判定无需列为 tech topic。 `<!-- ROW_MINE: ksummit.messages.183 -->`
+- 【Linux社区】Pinchart 提出匿名反馈方法论：多源汇总、只报要点、过滤非建设性意见，但依赖足够大的样本池。 `<!-- ROW_MINE: ksummit.messages.194 -->`
+- 【Linux社区】Linus 长文批评 C 标准拥抱 UB：strict aliasing 与整数溢出对实际代码生成影响甚微却引入安全隐患，内核尽量关闭，VLIW 不会实用。 `<!-- ROW_MINE: ksummit.messages.198 -->`
+- 【Linux社区】JJB 论证 stable 兼具修复发布与回归发现双重角色，故 stable 零回归不可能，建议强化 stable 回归定位工具并讨论 -rc stable 扩容。 `<!-- ROW_MINE: ksummit.messages.199 -->`
+- 【Linux社区】指出过度引用致邮件被直接忽略、辩论中对方选择性删减不利引文的现象，属社区沟通规范论点。 `<!-- ROW_MINE: ksummit.messages.206 -->`
+- 【Linux社区】反驳“驱动开发者学Rust难”称其为短期问题，主张至少让Rust驱动易于支持。 `<!-- ROW_MINE: ksummit.messages.211 -->`
+- 【Linux社区】分析probe失败后驱动仍注册成defunct的问题，提出接口驱动未绑定时注销的方案及异步probe限制。 `<!-- ROW_MINE: ksummit.messages.216 -->`
+- 【Linux社区】讨论Rc<T>与内核多线程引用计数模型差异及UB，追问Rust Rc饱和保护如何衔接内核实现。 `<!-- ROW_MINE: ksummit.messages.218 -->`
+- 【Linux社区】质疑对方MIRI实验结果的可复现性并要求提供输出证据，属对数据主张的直接反驳。 `<!-- ROW_MINE: ksummit.messages.223 -->`
+- 【Linux社区】主张需更清晰的ATOMIC_RELAXED定义，并举memset后发布再WRITE_ONCE的隐患例。 `<!-- ROW_MINE: ksummit.messages.233 -->`
+- 【Linux社区】系统提出ures/uapires命名空间、运行时检查器、cdev_disconnect与ures分组等一揽子uapi资源设计想法。 `<!-- ROW_MINE: ksummit.messages.235 -->`
+- 【Linux社区】讨论AI审查中硬件默认可信与按子系统opt-in的取舍，称已统计到三个opt-out并借帖征集意见。 `<!-- ROW_MINE: ksummit.messages.236 -->`
+- 【Linux社区】提供自身不用固定LKML收件配置、靠get_maintainer.pl与public-inbox/lei读信的数据点。 `<!-- ROW_MINE: ksummit.messages.241 -->`
+- 【Linux社区】审阅意见：删去“impressive”“undoubtedly improve productivity”等宣传性表述，要求事实性语气。 `<!-- ROW_MINE: ksummit.messages.248 -->`
+- 【Linux社区】逐条分析Rust版PL061驱动的try_writeb与revocable资源开销，提出vet_offsetb思路并批评“为展示方案而造问题”。 `<!-- ROW_MINE: ksummit.messages.250 -->`
+- 【Linux社区】建议提前指定研讨环节主持人，强调主持与发言不可兼得，属峰会组织建议。 `<!-- ROW_MINE: ksummit.messages.257 -->`
+- 【Linux社区】论证LLM细微错误源于统计推断的必然性并反驳JBB，提议在峰会确定AI提交规则并警示媒体效应。 `<!-- ROW_MINE: ksummit.messages.260 -->`
+- 【Linux社区】深入比较time crate破坏与C/C++兼容性案例，实测驳斥对方C23 auto示例并批评Rust editions的语义变更。 `<!-- ROW_MINE: ksummit.messages.267 -->`
+- 【Linux社区】提交b4补丁系列为shazam增加--add-link-note，用git notes记录提交与邮件关联且不污染上游历史。 `<!-- ROW_MINE: ksummit.messages.268 -->`
+- 【Linux社区】系统辨析DCO含义、维护者责任边界、SCO先例与AI输出版权现状，主张善意接受与可追溯的AI标注。 `<!-- ROW_MINE: ksummit.messages.270 -->`
+- 【Linux社区】就Baikal补丁被拒提出议题：非技术原因拒绝时应给出详细理由以便社区协商共识。 `<!-- ROW_MINE: ksummit.messages.274 -->`
+- 【Linux社区】已向git提交ATOM_MESSAGEID格式补丁并给出lore链接，建议视结果未来切换以精简trailer。 `<!-- ROW_MINE: ksummit.messages.278 -->`
+- 【Linux社区】明确原则：迫使人类写不直观代码是错解，应改进工具而非迁就工具的垃圾告警。 `<!-- ROW_MINE: ksummit.messages.279 -->`
+- 【Linux社区】流程记录：确认提名截止、投票开放，并跟进CIVS激活邮件重发问题。 `<!-- ROW_MINE: ksummit.messages.281 -->`
+- 【Linux社区】澄清提案设计：不设邮件列表、公布志愿者名单、可附IRC联系方式。 `<!-- ROW_MINE: ksummit.messages.285 -->`
+- 【Linux社区】认为议题超越AI本身属归因与CoC后果问题，建议另立通用归因文档与整体AI政策。 `<!-- ROW_MINE: ksummit.messages.288 -->`
+- 【Linux社区】实测b4 dig在100个提交中约88%可解析，报告stderr调试输出与版本递增未上list等缺陷并附全量清单。 `<!-- ROW_MINE: ksummit.messages.291 -->`
+- 【Linux社区】与Linus论战unsafe语义，主张stacked/tree borrows补上C缺失的指针派生别名模型。 `<!-- ROW_MINE: ksummit.messages.292 -->`
+- 【Linux社区】提议将objects.inv清单文件预生成入库，类比flex/bison产物以免除双重构建。 `<!-- ROW_MINE: ksummit.messages.294 -->`
+- 【Linux社区】给出无Fixes和cc stable提交仍被backport的实例并追溯Stable-dep链至未打标提交，反驳Greg的解释。 `<!-- ROW_MINE: ksummit.messages.297 -->`
+- 【Linux社区】指出构建系统缺乏让子系统保持W=1/kernel-doc干净的支持，并以drm Makefile的hack为例。 `<!-- ROW_MINE: ksummit.messages.299 -->`
+- 【Linux社区】TAB协作的generated-content.rst第三版，纳入测试披露与措辞收敛等反馈并获多位维护者Reviewed-by。 `<!-- ROW_MINE: ksummit.messages.300 -->`
+- 【Linux社区】强烈反对未经同意做AI缺陷报告实验，斥syzbot为rogue actor并要求新实验机器人必须opt-in。 `<!-- ROW_MINE: ksummit.messages.301 -->`
+- 【Linux社区】给出Sphinx各版本性能数据，介绍venv安装法与sphinx-build-wrapper脚本方案。 `<!-- ROW_MINE: ksummit.messages.303 -->`
+- 【Linux社区】针对+44MiB开销提出压缩存储、按需解压的缓解思路。 `<!-- ROW_MINE: ksummit.messages.310 -->`
+- 【Linux社区】支持议题并提出以git log数据定位Rust最擅长问题的假设收集改写验证方法论，担忧实现语言碎片化。 `<!-- ROW_MINE: ksummit.messages.313 -->`
+- 【Linux社区】说明gcc-10+内联使Wmaybe-uninitialized近乎不可用，呼吁寻找替代的未初始化告警手段。 `<!-- ROW_MINE: ksummit.messages.314 -->`
+- 【Linux社区】要求拿出非标准PAGE_OFFSET配置下实际用户可见问题的证据，称缺实证难以推进淘汰进程。 `<!-- ROW_MINE: ksummit.messages.315 -->`
+- 【Linux社区】提出判据：专有栈可复现而开放栈不能复现的问题，其修复不会进内核。 `<!-- ROW_MINE: ksummit.messages.319 -->`
+- 【Linux社区】反驳对树进-next的顾虑，称其为标准做法且真正的风险是暴露潜在竞争等bug而非冲突。 `<!-- ROW_MINE: ksummit.messages.322 -->`
+- 【Linux社区】提议修复必须有Fixes:标签并解释bug来源以过滤垃圾修复，回应可被脚本刷标的质疑。 `<!-- ROW_MINE: ksummit.messages.330 -->`
+- 【Linux社区】澄清b4.linkmask默认值属b4项目配置而非全局默认，承诺文档定稿后修改全局默认。 `<!-- ROW_MINE: ksummit.messages.331 -->`
+- 【Linux社区】指出“仅用兼容许可训练”选项会带来保留版权声明等许可合规义务的连锁问题。 `<!-- ROW_MINE: ksummit.messages.334 -->`
+- 【Linux社区】解释#include排序规则源于减少补丁上下文合并冲突，patch与quilt不忽略include行差异。 `<!-- ROW_MINE: ksummit.messages.342 -->`
+- 【Linux社区】提交峰会演讲摘要，倡导将优先级化关机保护机制上游化以应对掉电损坏嵌入式存储。 `<!-- ROW_MINE: ksummit.messages.343 -->`
+- 【Linux社区】提出将Sashiko问题发布到KernelCI问题库并介绍新MCP服务器，邀Roman合作。 `<!-- ROW_MINE: ksummit.messages.345 -->`
+- 【Linux社区】提出峰会议题：以AI审查降低维护者负载，展示BPF CI接入、prompts仓库与semcode索引工具及token对比数据。 `<!-- ROW_MINE: ksummit.messages.350 -->`
+- 【Linux社区】解释弱引用升级失败语义与Option<Ref<T>>类型安全设计，类比锁的受控访问。 `<!-- ROW_MINE: ksummit.messages.351 -->`
+- 【Linux社区】提议仅回移标Stable的提交、bot提醒只发给未正确Cc stable的维护者，主张奖善罚恶。 `<!-- ROW_MINE: ksummit.messages.352 -->`
+- 【Linux社区】回应Ricardo：厂商应被邀请而非放任、明确规则属商业决策，并警惕niche用例坐大。 `<!-- ROW_MINE: ksummit.messages.353 -->`
+- 【Linux社区】以电力类比反驳Laurent对生成式AI依赖的担忧，称依赖无处不在且人们多不自知。 `<!-- ROW_MINE: ksummit.messages.355 -->`
+- 【Linux社区】要求Ricardo给出使用命令缓冲的ISP具体实例及固件层细节，主张以具体例子推进讨论。 `<!-- ROW_MINE: ksummit.messages.358 -->`
+- 【Linux社区】给出pl061 get_direction的C与Rust并排反汇编，解释revocable资源、跨语言LTO缺失与泛型内联导致难以逐行对应。 `<!-- ROW_MINE: ksummit.messages.363 -->`
+- 【Linux社区】反驳Rostedt，认为即使指向无讨论的单一补丁，Link:也能让人看出无讨论并在回归时据此发起讨论。 `<!-- ROW_MINE: ksummit.messages.365 -->`
+- 【Linux社区】赞同Ted对Folios合并分歧的判断，主张聚焦“匿名页是否应成为folio”这一MM核心争议并向前看。 `<!-- ROW_MINE: ksummit.messages.367 -->`
+- 【Linux社区】逐项分析HW TAGS KASAN、经典KASAN与poisoning/slab_debug/debug_pagealloc的适用场景，主张各工具并存、现阶段无可替代。 `<!-- ROW_MINE: ksummit.messages.368 -->`
+- 【Linux社区】通报vger迁移至mlmmj/subspace，更新过时链接、废除/r/子路径建议并新增Link尾注使用指南，源自ksummit讨论。 `<!-- ROW_MINE: ksummit.messages.370 -->`
+- 【Linux社区】不反对Rust，但补充C++社区已有contracts与profiles等安全提案，并质疑其能否迁移到C。 `<!-- ROW_MINE: ksummit.messages.382 -->`
+- 【Linux社区】详解netdev CI与patchwork对接方式：CI经API取补丁、结果以红绿灯回填，失败需人工判断，非公共CI且费用不由提交者承担。 `<!-- ROW_MINE: ksummit.messages.385 -->`
+- 【Linux社区】确认已测通过的fixes分支进linux-next是普遍做法，并称由此发现的问题很少但非零。 `<!-- ROW_MINE: ksummit.messages.389 -->`
+- 【Linux社区】提议让与会者用随身手机充当麦克风，改善远程参与收音难题。 `<!-- ROW_MINE: ksummit.messages.395 -->`
+- 【Linux社区】回应Dan Williams：厂商做“同类事”就需共享ABI，主张社区先自行争斗达成一致，提及机密计算跨厂商案例。 `<!-- ROW_MINE: ksummit.messages.396 -->`
+- 【Linux社区】公开next-analysis脚本，给出在-next停留天数直方图并找出未上lore的提交，邀请协作做bot或仪表盘。 `<!-- ROW_MINE: ksummit.messages.402 -->`
+- 【Linux社区】与ISO C工作组Uecker对话：澄清其指内核侧加固工作而非ISO C、无公司愿资助标准化，指内核已有类似字符串类型、欢迎GCC扩展补丁，并追问C“内存安全”含义。 `<!-- ROW_MINE: ksummit.messages.406 -->`
+- 【Linux社区】质疑Rust代码在-stable侧的复审可行性，称C代码复审已难、稳定版二次复审者将不存在。 `<!-- ROW_MINE: ksummit.messages.412 -->`
+- 【Linux社区】称libcap的bugzilla需求尚可，唯一要求是迁移时支持旧bug URL重定向到新系统。 `<!-- ROW_MINE: ksummit.messages.414 -->`
+- 【Linux社区】认可Rodrigo所述先让开发者处理AI发现再人工复审的流程，称这与无人工介入的体验截然不同且合理得多。 `<!-- ROW_MINE: ksummit.messages.421 -->`
+- 【Linux社区】对Sasha的AI合并冲突解决实验表态：不反对，但若无受益者不愿承担相关成本。 `<!-- ROW_MINE: ksummit.messages.424 -->`
+- 【Linux社区】提议网页表单以邮件格式投递结构化bug报告，并由自动应答提示缺失字段以训练用户。 `<!-- ROW_MINE: ksummit.messages.428 -->`
+- 【Linux社区】主张把“开发者应预先跑工具”的“应”改为“能”，承认部分人达不到、CI更省力，且AI常大错、公开列表可让人纠错。 `<!-- ROW_MINE: ksummit.messages.431 -->`
+- 【Linux社区】认同导师制想法但指出Brian Foster曾充当缓冲却因缺乏授权而失败，问题早已被预判、需要的是更好的缓解机制。 `<!-- ROW_MINE: ksummit.messages.438 -->`
+- 【Linux社区】反驳Greg：前提是驱动“能”用Rust写，引reiser4与kdbus为例，称纸面优势不等于现实可行。 `<!-- ROW_MINE: ksummit.messages.439 -->`
+- 【Linux社区】支持Laurent反对将回归修复设为维护者硬性义务，主张改进发现回归与定位起点的工具，并可作为新人的todo清单。 `<!-- ROW_MINE: ksummit.messages.445 -->`
+- 【Linux社区】附议Linus Walleij对面板IC厂商不公开文档的不满，建议以上游化厂商驱动为切入点，指ChromeOS偏eDP、Android GKI不利上游。 `<!-- ROW_MINE: ksummit.messages.451 -->`
+- 【Linux社区】论证“跟进stable”与“预披露通知”正交，区分研究者披露类漏洞与普通补丁，提出放宽linux-distros政策、修正文档、设引导人三条路径。 `<!-- ROW_MINE: ksummit.messages.452 -->`
+- 【Linux社区】发布pr-hist.sh脚本，可按git request-pull文件统计PR中提交在linux-next的停留时长。 `<!-- ROW_MINE: ksummit.messages.453 -->`
+- 【Linux社区】自荐参与kernel-doc python化，主张构建链与内核开发解耦、维护单一环境，并坦言正则解析无通用方案。 `<!-- ROW_MINE: ksummit.messages.454 -->`
+- 【Linux社区】拒绝公开点名的厂商案例，反驳市场自然逆向论，区分视觉处理器与相机ISP，重申直通放行会破坏与厂商合作的长期积累。 `<!-- ROW_MINE: ksummit.messages.455 -->`
+- 【Linux社区】分享倦怠风险清单资源，主张会前举办面向非受邀者的公开讨论，目标包括寻求专业帮助在内的多种方案。 `<!-- ROW_MINE: ksummit.messages.457 -->`
+- 【Linux社区】提议后端订阅全部内核邮件列表、仅导入补丁至public-inbox git归档，使patches@开箱即用。 `<!-- ROW_MINE: ksummit.messages.458 -->`
+- 【Linux社区】感谢Ted详解邀请流程，建议将流程写入Documentation/process/并给出CFP措辞的具体修改diff。 `<!-- ROW_MINE: ksummit.messages.459 -->`
+- 【Linux社区】与Ricardo长辩：界定“完全开放”标准、反驳ISP等同加速器与可编程ISP论据，指Synopsys EV7x是视觉处理器而非相机ISP。 `<!-- ROW_MINE: ksummit.messages.461 -->`
+- 【Linux社区】澄清gccrs是GCC内新前端而rustc_codegen_gcc是Rust项目内的后端，引官方博客说明两者在协作，并cc开发者求证。 `<!-- ROW_MINE: ksummit.messages.463 -->`
+- 【Linux社区】批评补丁措辞过软如“或许可以”，要求明确写出“我们不接受机器灌水”的强硬立场。 `<!-- ROW_MINE: ksummit.messages.464 -->`
+- 【Linux社区】实地核查Greg所称stable-queue与linux-stable-rc树，发现6.10.y分支直到6.10.1发布前才建立，质询“合并窗口期间持续更新”是否属实。 `<!-- ROW_MINE: ksummit.messages.465 -->`
+- 【Linux社区】提交conclave.rst：若Linus不能继续合并主线，72小时内由上届峰会组织者或TAB主席召集上届受邀者与TAB议定接替方案。 `<!-- ROW_MINE: ksummit.messages.466 -->`
+- 【Linux社区】以模型作者身份说明Stacked与Tree Borrows是正确性的候选定义、一经采纳即无真假阳性的定义问题，并解释Miri做测试而非验证、能捕获单次执行的全部UB。 `<!-- ROW_MINE: ksummit.messages.469 -->`
+- 【Linux社区】引Tree Borrows论文反驳“无假阳性”说法，质疑Miri作为sanitizer不能证明正确性，并指别名规则绑定LLVM后端将加大gccrs实现难度。 `<!-- ROW_MINE: ksummit.messages.470 -->`
+- 【Linux社区】完整提出regzbot设计：#regzb标签驱动、开发者零额外负担、网页状态页含休眠区、标签语法与限制、python实现及NGI资助。 `<!-- ROW_MINE: ksummit.messages.476 -->`
+- 【Linux社区】LPC24议题提交：以Qualcomm WCN/QCA为例说明封装内WLAN与BT模块互依赖，提出pwrseq提供者/消费者抽象与DT表示。 `<!-- ROW_MINE: ksummit.messages.478 -->`
+- 【Linux社区】澄清Rust无编译器魔法式引用计数，生命周期与借用和引用计数正交并给双可变引用示例，称dentry/inode集成可处理、建议同步改进C模型。 `<!-- ROW_MINE: ksummit.messages.482 -->`
+- 【Linux社区】回应疫苗话题管制，转向混合会议组织：强调主持人督促用麦、增设带A/V设备的分组讨论室。 `<!-- ROW_MINE: ksummit.messages.484 -->`
+- 【Linux社区】逐类拆解htmldocs噪音四大来源（交叉引用、ABI校验含2815个未文档化sysfs符号、kernel-doc、Sphinx），主张推行无警告构建政策并解释sphinx-pre-install的venv选择。 `<!-- ROW_MINE: ksummit.messages.486 -->`
+- 【Linux社区】回应Krzysztof议题：介绍其PR分析bot统计提交在-next停留时长，因未获Linus认可其价值而停发报告。 `<!-- ROW_MINE: ksummit.messages.487 -->`
+- 【Linux社区】认为部分维护者对子系统所有权过强、导致缺乏信任，共同责任制无从建立，回应评审激励讨论。 `<!-- ROW_MINE: ksummit.messages.623 -->`
+- 【Linux社区】说明security@k.o是独立“集体”不接受雇主指派人员，且其漏洞仅占实际修复的极小部分，敦促发行版解决不更新的根因。 `<!-- ROW_MINE: ksummit.messages.625 -->`
+- 【Linux社区】答复Coly Li：richACL属技术议题不适合维护者峰会，建议改投LPC技术track或明春LSFMM，属议题征集引导记录。 `<!-- ROW_MINE: ksummit.messages.627 -->`
+- 【Linux社区】主张背光子系统仿照thermal在内核内做策略编排（复合背光与环境光传感器），自认突破“策略留在用户空间”教条。 `<!-- ROW_MINE: ksummit.messages.631 -->`
+- 【Linux社区】反问可信静态检查器白名单如何扩充，指出新检查器补丁不会被采纳的死锁，属对提案的实质质疑。 `<!-- ROW_MINE: ksummit.messages.634 -->`
+- 【Linux社区】论证C标准不少未定义行为源于兼容奇特CPU（饱和运算、无算术右移、字寻址、NULL非全零），批评UB语义涵盖“抹盘”过宽。 `<!-- ROW_MINE: ksummit.messages.641 -->`
+- 【Linux社区】不认同NULL与ERR_PTR混用返回，主张统一用errno并配错误语义文档，属明确技术立场。 `<!-- ROW_MINE: ksummit.messages.642 -->`
+- 【Linux社区】面对Leon“请举出被忽略的技术评审意见”的质问，承认记不得具体内容，记录网络维护者反对直通的争议细节。 `<!-- ROW_MINE: ksummit.messages.645 -->`
+- 【Linux社区】指出cleanup.h的“类”与锁guard可处理比kfree更复杂的析构场景，反驳goto展开更易读的说法。 `<!-- ROW_MINE: ksummit.messages.653 -->`
+- 【Linux社区】主张eBPF不是用户空间API、不适用“不破坏用户空间”承诺：配置用途可支持，完整设备功能须严审，闭源BPF程序损坏概不负责。 `<!-- ROW_MINE: ksummit.messages.658 -->`
+- 【Linux社区】赞成采用_cleanup_注解并附cleanup.h链接，同时警告忘记调用no_free_ptr()会带来新一类错误。 `<!-- ROW_MINE: ksummit.messages.672 -->`
+- 【Linux社区】纠正“ISP最接近视频编解码”的说法：DRM支持多种编解码，靠命令提交设计把复杂格式解析留在用户空间，内核因此更稳。 `<!-- ROW_MINE: ksummit.messages.674 -->`
+- 【Linux社区】指出大量驱动安全修复从未报security@k.o且作者未必自知，并援引RH/Canonical安全队列积压3个月以上的实例反对“先报发行版”路径。 `<!-- ROW_MINE: ksummit.messages.675 -->`
+- 【Linux社区】修正提案焦点：真正主张是GFP标志糟糕、应重设计使绝大多数分配无需GFP，也担忧Rust被迫适配GFP，愿改写议题表述。 `<!-- ROW_MINE: ksummit.messages.676 -->`
+- 【Linux社区】主张文档若难以在源码树内定位就是设计出了问题，反对依赖构建系统HTML或特定网站查文档。 `<!-- ROW_MINE: ksummit.messages.678 -->`
+- 【Linux社区】与Airlie商定恢复cherry-pick加-x，并探讨用dim与rerere缓存为next构建合并fixes的分支、按pending-fixes方式分支出栈。 `<!-- ROW_MINE: ksummit.messages.680 -->`
+- 【Linux社区】对Linus“引文过多就退信”规则提出边界情况：为补抄送漏抄者需大量引文会被误伤，属对提案的实质追问。 `<!-- ROW_MINE: ksummit.messages.689 -->`
+- 【Linux社区】更正Link标签格式：整个message-id填入patch.msgid.link与lore链接，属流程规范记录。 `<!-- ROW_MINE: ksummit.messages.691 -->`
+- 【Linux社区】澄清文档化政策：Fixes:非可选、cc:stable仅适用选择加入stable流程的树，未打标的回移请求走stable列表并将改进自动化。 `<!-- ROW_MINE: ksummit.messages.696 -->`
+- 【Linux社区】主张把AI评审纳入贡献者工具（b4或构建目标）既保留中央管控又降低学习门槛，以“构建-反馈-修复”周期替代“提交-反馈-修复”循环。 `<!-- ROW_MINE: ksummit.messages.700 -->`
+- 【Linux社区】主张声明下推到首次初始化可隐式缩小变量作用域、捕捉严重错误，回应cleanup.h变量放置之争。 `<!-- ROW_MINE: ksummit.messages.704 -->`
+- 【Linux社区】主张karma在维护者层级内纵横皆有意义（资深子系统维护者跨子系统也更可信），并支持GPG签名补丁交叉签名方向。 `<!-- ROW_MINE: ksummit.messages.705 -->`
+- 【Linux社区】提议由bugbot把KTODO条目转成bugzilla工单（以社区共识为前提），属具体工具链提案。 `<!-- ROW_MINE: ksummit.messages.707 -->`
+- 【Linux社区】以PL061 Rust驱动为例连问try_writeb错误处理、resources失败语义与RAII析构时机等实质技术问题。 `<!-- ROW_MINE: ksummit.messages.733 -->`
+- 【Linux社区】反对迁就旧Python与多版本探测：只认python3与python3-sphinx、过旧就让它失败，减少移动部件。 `<!-- ROW_MINE: ksummit.messages.738 -->`
+- 【Linux社区】提议在维护者峰会时段安排“Wither Folios”LPC BOF并让维护者移场参与，请Linus到场裁决合并前提，属峰会组织提案。 `<!-- ROW_MINE: ksummit.messages.741 -->`
+- 【Linux社区】逐条反驳hpa：编译器基线收紧是成熟度问题、目标支持暂非阻塞、C++安全化路线已被拒属死路。 `<!-- ROW_MINE: ksummit.messages.746 -->`
+- 【Linux社区】重申Android等大批用户已正确合入全部修复，反对给少数发行版开“安全子集”小灶制造虚假安全感。 `<!-- ROW_MINE: ksummit.messages.750 -->`
+- 【Linux社区】支持子树成对两两合并的提议并建议把最易冲突的树归同组，反馈对linux-next做git bisect时merge base测试点偏多的观察。 `<!-- ROW_MINE: ksummit.messages.753 -->`
+- 【Linux社区】论证Fixes指向前驱补丁虽“不公平”但利于评审与回移依赖，无回归就不该打Fixes，回应iwai对git前修复标注的疑虑。 `<!-- ROW_MINE: ksummit.messages.761 -->`
+- 【Linux社区】附和Axboe“无法解释就别提交”，并指出提交者大概率会让AI代答，答辩式要求防不住这类提交。 `<!-- ROW_MINE: ksummit.messages.762 -->`
+- 【Linux社区】应Kent之请补充VLIW历史背景：Transmeta TM5x00以微码把x86转译为内部表示，解释VLIW效率论战由来。 `<!-- ROW_MINE: ksummit.messages.767 -->`
+- 【Linux社区】以fs/buffer.c从0.01时代254行增长到今日3152行的实测数据回应“它很小”论，属历史数据点。 `<!-- ROW_MINE: ksummit.messages.768 -->`
+- 【Linux社区】确认next-analysis直方图可用于回答“补丁在next停留多久”以决定撤出PR或向Linus说明，并追问脚本用法与自建DB之别。 `<!-- ROW_MINE: ksummit.messages.769 -->`
+- 【Linux社区】澄清Ventura Jack混用两种“false positives”含义，引Ralf Jung说明Rust无意绑定LLVM别名规则且reference尚非规范。 `<!-- ROW_MINE: ksummit.messages.771 -->`
+- 【Linux社区】澄清lklfuse完整重定向到内核VFS路径、近乎零改造即可隔离不可信文件系统镜像，反对每个文件系统各自维护FUSE移植。 `<!-- ROW_MINE: ksummit.messages.773 -->`
+- 【Linux社区】反驳Linus“Link浪费时间”：bisect后循链接可找到提交时还不存在的同类报告与修复，封面信应附讨论与前版链接。 `<!-- ROW_MINE: ksummit.messages.775 -->`
+- 【Linux社区】拒绝virtualenv要求：文档工具必须来自较新发行版软件包否则一票否决，理由是文档应面向最广泛贡献者。 `<!-- ROW_MINE: ksummit.messages.780 -->`
+- 【Linux社区】主张维护者本有按带宽拒绝系列的裁量权（无论是否AI生成），社区应允许其随形势调整并可诉诸ksummit。 `<!-- ROW_MINE: ksummit.messages.783 -->`
+- 【Linux社区】建议压力大的维护者或更愿用视频/IRC而非会被存档的邮件，点出隐私顾虑，属对支持小组方案的实质反馈。 `<!-- ROW_MINE: ksummit.messages.788 -->`
+- 【Linux社区】赞同Brown的“written by/translated by”措辞与工具中立表述，主张规则从简、务实、后续再完善。 `<!-- ROW_MINE: ksummit.messages.790 -->`
+- 【Linux社区】主张“无法解释就别提交”，明确零兴趣接收提交者自己不理解的代码，属准则立场表达。 `<!-- ROW_MINE: ksummit.messages.798 -->`
+- 【Linux社区】建议以树内Documentation/SubmittingRustPatches取代网站“政策”，并举DMA补丁零调用方、无测试负载应自动NAK为例。 `<!-- ROW_MINE: ksummit.messages.800 -->`
+- 【Linux社区】反驳“AI会错所以弃用”：人的猜测同样充满看似正确实则错误的推断，主张好猜测可取但须标注，批评“是AI就坏”论调。 `<!-- ROW_MINE: ksummit.messages.803 -->`
+- 【Linux社区】提供镜像public-inbox仓库的具体方法：每日用lore的manifest.js.gz检查新增仓库，配合l2md或自写脚本。 `<!-- ROW_MINE: ksummit.messages.805 -->`
+- 【Linux社区】解释buffer head保留per-bh b_size的原因在非iomap O_DIRECT路径，若该路径消失即可简化同folio块大小一致的假设。 `<!-- ROW_MINE: ksummit.messages.825 -->`
+- 【Linux社区】认同“能提前告知回归就告知”，并逐一回应推迟回传、紧急标记、按 Fixes: 延迟回传三方案的可行性 `<!-- ROW_MINE: ksummit.messages.491 -->`
+- 【Linux社区】主张按 git 历史抄送基本总是错的，并提出把 Makefile 集成进 Kconfig 的语法设想 `<!-- ROW_MINE: ksummit.messages.494 -->`
+- 【Linux社区】提议移除仅 ARM 部分系统使用的 kmap_high_get()，并问 HASHED_PAGE_VIRTUAL 能否一并去掉 `<!-- ROW_MINE: ksummit.messages.497 -->`
+- 【Linux社区】用 i386/ARM/x86_64/aarch64 汇编对比说明双字段结构体返回的 ABI 差异，补充 -freg-struct-return 线索 `<!-- ROW_MINE: ksummit.messages.498 -->`
+- 【Linux社区】反驳 James Bottomley 的和稀泥，坚持 Linus 的嘲讽不可接受、维护者须以更高标准示范，属治理立场 `<!-- ROW_MINE: ksummit.messages.500 -->`
+- 【Linux社区】讨论 kernel-doc 移植 Python 的复杂度，提出在源码 DOC: 标记内列符号清单以便内核文档自校验 `<!-- ROW_MINE: ksummit.messages.501 -->`
+- 【Linux社区】说明自己的 sed 脚本因大小写失配而漏替换，建议 Paolo 的 applypatch-msg 钩子改大小写不敏感匹配 `<!-- ROW_MINE: ksummit.messages.502 -->`
+- 【Linux社区】反驳 hch 的“不诚实”指控，重申 2022 峰会灵活性立场，承认证言样本有偏差并区分企业支持与企业施压 `<!-- ROW_MINE: ksummit.messages.503 -->`
+- 【Linux社区】反驳 Linus 和 James Bottomley，主张密钥应设过期时间，并给出 sq cert lint 检查 637 份证书中 SHA-1 问题的数据 `<!-- ROW_MINE: ksummit.messages.507 -->`
+- 【Linux社区】阐明 Fixes 标签与 stable 回传完全无关、静态警告清理不宜加 Fixes，讨论修复与新功能的模糊边界 `<!-- ROW_MINE: ksummit.messages.511 -->`
+- 【Linux社区】稳定团队称已有机制识别补丁是否属于系列，但实践中多数系列内部并无相互依赖 `<!-- ROW_MINE: ksummit.messages.516 -->`
+- 【Linux社区】反驳机器人不省力的说法并引 Greg 的 patch_bot 为例，认可把常见硬伤归为“一票否决项”分组处理 `<!-- ROW_MINE: ksummit.messages.518 -->`
+- 【Linux社区】提议只标记极端修剪案例而不过分苛刻，并建议把评审标签放在提交说明之后以便读者不必再往下翻 `<!-- ROW_MINE: ksummit.messages.523 -->`
+- 【Linux社区】报告因 Sphinx C domain 同名符号的长期 bug，wifi 子系统已放弃等待而直接改名符号 `<!-- ROW_MINE: ksummit.messages.525 -->`
+- 【Linux社区】指出 b4.linkmask 默认指向 msgid.link 而非补丁所述的 patch.msgid.link，建议更新 b4 默认值 `<!-- ROW_MINE: ksummit.messages.528 -->`
+- 【Linux社区】批评 v5 文档“必须能辩护一切”的表述像威胁，给出强调自查、透明测试与分批报 bug 的替代表述 `<!-- ROW_MINE: ksummit.messages.529 -->`
+- 【Linux社区】从语言设计层面批评 Rust：读并发全局标志竟需 unsafe，若编译器重 materialize 读操作则语言糟糕 `<!-- ROW_MINE: ksummit.messages.530 -->`
+- 【Linux社区】支持自动测试与 CI，但警告要求全部测试通过后人工才看一眼会严重挫伤贡献者积极性 `<!-- ROW_MINE: ksummit.messages.531 -->`
+- 【Linux社区】主张承认 drm_bridge 已不只是 bridge、让面板直接变 bridge，并类比 HID-BPF 提出用 eBPF 把面板 quirk 移到用户空间 `<!-- ROW_MINE: ksummit.messages.532 -->`
+- 【Linux社区】指出 -freg-struct-return 须封装成每函数可用的 __attribute__ 才不会破坏既有 ABI `<!-- ROW_MINE: ksummit.messages.533 -->`
+- 【Linux社区】说明坚持上 Maintainer Summit 的动机是跨子系统 NAK 的溯源与导航，LPC 场次可另行安排 `<!-- ROW_MINE: ksummit.messages.540 -->`
+- 【Linux社区】用 tracepoints 曾被用户态工具硬依赖而破坏的历史论证 eBPF 同理，与每位维护者相关 `<!-- ROW_MINE: ksummit.messages.541 -->`
+- 【Linux社区】建议组建感兴趣者小组分担 trivial 树审阅，并指出攒批合并会让补丁失去时效 `<!-- ROW_MINE: ksummit.messages.545 -->`
+- 【Linux社区】反对默认信任硬件/固件：实际难以区分 bug 与恶意，举 media 驱动数组越界与除零检查经验主张按处 opt-in `<!-- ROW_MINE: ksummit.messages.546 -->`
+- 【Linux社区】提议增设 Bug-fix-from: 标签记录审查中发现 bug 的人，借标签体系的游戏化激励良好行为 `<!-- ROW_MINE: ksummit.messages.547 -->`
+- 【Linux社区】重申反对 Message-ID 尾注：唯一可信论据是一键体验，其余论据信息量不如 b4 dig `<!-- ROW_MINE: ksummit.messages.549 -->`
+- 【Linux社区】介绍 trivial 树攒批发送现状，并分析“trivial 等于不紧急”假设的隐患与实际运作尚可的原因 `<!-- ROW_MINE: ksummit.messages.560 -->`
+- 【Linux社区】正式峰会议题提案：硅片复杂度攀升、Linux 首发系统角色下贡献者夹在项目管理与维护者怀疑之间，列三个讨论问题 `<!-- ROW_MINE: ksummit.messages.564 -->`
+- 【Linux社区】建议调高 --git-min-signatures、默认关闭 gitfallback，并追问 lei 在 Debian stable 的打包障碍 `<!-- ROW_MINE: ksummit.messages.565 -->`
+- 【Linux社区】剖析 folio 流程五大缺口（问题共识、ack 归属、剩余工作、分步计划、测试分工），建议用两页共享文档固定下来 `<!-- ROW_MINE: ksummit.messages.566 -->`
+- 【Linux社区】支持非正式导师制：现有维护者每两周约一小时离带新，指出时区是主要挑战 `<!-- ROW_MINE: ksummit.messages.568 -->`
+- 【Linux社区】回应 Al Viro 的 60 补丁系列假设：相关就该全抄送，无关则拆成多个系列 `<!-- ROW_MINE: ksummit.messages.569 -->`
+- 【Linux社区】主张负责的内核维护须了解生态走向、没把握就说 No，并批评厂商借发行版上游化后另起用户态项目求控制权 `<!-- ROW_MINE: ksummit.messages.572 -->`
+- 【Linux社区】澄清该文档定位是“为未来制定计划的计划”，不可能也不必穷举所有坏场景 `<!-- ROW_MINE: ksummit.messages.574 -->`
+- 【Linux社区】赞同改案并给出条件：只要能抄送某邮件列表存档讨论、Link: 标记照常工作即可 `<!-- ROW_MINE: ksummit.messages.576 -->`
+- 【Linux社区】反对 strncpy 改 strscpy：认为提升有限、helper 缺文档，此场景 snprintf 更合适 `<!-- ROW_MINE: ksummit.messages.588 -->`
+- 【Linux社区】与 Wedson 辩论 remove 路径的资源撤销 versus 阻塞调用模型，主张改进子系统与驱动间 API 才能整类消除问题 `<!-- ROW_MINE: ksummit.messages.589 -->`
+- 【Linux社区】介绍 kbooboo 工具与静态托管需求，同意数据生成交给 kernelci，前端放在易被报告者发现之处 `<!-- ROW_MINE: ksummit.messages.590 -->`
+- 【Linux社区】回应 Leon 的重构与测试矩阵担忧：Rust 是整段替换而非树内第二内核，承认双语言重构成本属实 `<!-- ROW_MINE: ksummit.messages.594 -->`
+- 【Linux社区】担心按子系统定制 Sashiko 提示词会让回复冗长，建议改用维护者档案文档承载子系统特定规则 `<!-- ROW_MINE: ksummit.messages.602 -->`
+- 【Linux社区】解释 MFD 场景：多个子系统驱动只因封装在一起而并立，彼此并无实质关联 `<!-- ROW_MINE: ksummit.messages.604 -->`
+- 【Linux社区】回答 Tim Bird：可用 lore 页面的 reply 链接，或下载 mbox 导入本地文件夹后回复 `<!-- ROW_MINE: ksummit.messages.606 -->`
+- 【Linux社区】解答 PL061 wake 计数与 irqdomain 映射竞争问题：irqchip 无状态无同步靠实践约定，直言该框架缺维护者 `<!-- ROW_MINE: ksummit.messages.608 -->`
+- 【Linux社区】介绍 regzbot 借 Link: 标签串联报告与补丁实现追踪，反驳“邮件无法跟踪状态”的论断 `<!-- ROW_MINE: ksummit.messages.614 -->`
+- 【Linux社区】反驳“正收敛”说：只是大家疲惫，补丁自合并窗口开启未变，类比 DAX 花多年才收敛 `<!-- ROW_MINE: ksummit.messages.617 -->`
+- 【Linux社区】举 v4l2 device_register 失败路径与 media controller 注册为例，说明 kobj release 错误清理难做对且部分无解 `<!-- ROW_MINE: ksummit.messages.621 -->`
+- 【Linux社区】回应 James Bottomley：追问是否 Linux 过大致不敢冒险，提出拆分子项目并配最低限度稳定 API 的设想 `<!-- ROW_MINE: ksummit.messages.622 -->`
+- 【Linux社区】主张老旧文件系统不能一删了之，指出QEMU已弃用i440fx故虚拟化非万能药；建议降低志愿者贡献门槛，并让云厂商分担syzbot报告分诊压力。 `<!-- ROW_MINE: ksummit.messages.993 -->`
+- 【Linux社区】决策记录：Corbet宣布该指南文档补丁已就绪并由其正式应用合入。 `<!-- ROW_MINE: ksummit.messages.995 -->`
+- 【Linux社区】赞同Sasha的汇总邮件方案，建议再把回移范围写进正文，便于一眼看出回移不到位之处。 `<!-- ROW_MINE: ksummit.messages.998 -->`
+- 【Linux社区】讨论显式作用域块可读性：变量作用域小于两侧代码才宜用块，若活到函数末返回则内部声明更合理，类比for循环初始化。 `<!-- ROW_MINE: ksummit.messages.1003 -->`
+- 【Linux社区】反驳Willy：核心问题是注意力，邮件在出差一周后即失效；邮件跟进需知References头且须先订阅列表，对多数人不可行。 `<!-- ROW_MINE: ksummit.messages.1004 -->`
+- 【Linux社区】单句反驳Linus“AI无需特殊对待”论：新意在于AI能从零批量生成代码，而非仅做机械转换。 `<!-- ROW_MINE: ksummit.messages.1007 -->`
+- 【Linux社区】详解C++按值传聚合需调用拷贝运算符与析构且有悬挂指针陷阱；指出聚合返回一律经隐藏指针，而u64/u128却可用寄存器对返回。 `<!-- ROW_MINE: ksummit.messages.1009 -->`
+- 【Linux社区】评审意见：更倾向用“origin”而非“provenance”，并确认v1给出的Ack与R-b继续有效。 `<!-- ROW_MINE: ksummit.messages.1013 -->`
+- 【Linux社区】反驳改GCC的提议：约30个Makefile打补丁即可解决，编译器不应替内核收拾自身问题；建议用CONFIG_WERROR或shell包装编译器。 `<!-- ROW_MINE: ksummit.messages.1014 -->`
+- 【Linux社区】维护者立场：应从一开始就按正式子系统drivers/ual提交，避免不必要的评审返工。 `<!-- ROW_MINE: ksummit.messages.1019 -->`
+- 【Linux社区】流程立场：Fedora式按版本自动关闭陈旧bug“烦人多于收益”，但若成社区共识愿意实现。 `<!-- ROW_MINE: ksummit.messages.1020 -->`
+- 【Linux社区】补丁本体：规定lore链接的方括号编号记法，何时用patch.msgid.link域标示补丁出处，供自动化工具识别原始提交。 `<!-- ROW_MINE: ksummit.messages.1022 -->`
+- 【Linux社区】反对匿名反馈：匿名评审只会招致负面评价并侵蚀信任，维护者无法向不知名的批评者解释和调整。 `<!-- ROW_MINE: ksummit.messages.1023 -->`
+- 【Linux社区】反对照搬1970年代malloc：内核各内存API各有碎片化/性能/失败属性须保留；KASAN开销过高，无法取代red zone等防护。 `<!-- ROW_MINE: ksummit.messages.1028 -->`
+- 【Linux社区】以ext4为例：过去靠24 VM小时fstests（每次约2美元谷歌VM时）兜底，Sashiko同理但均不能替代人类评审，警惕评审能力退化。 `<!-- ROW_MINE: ksummit.messages.1030 -->`
+- 【Linux社区】援引Bartz诉Anthropic、Kadrey诉Meta判例分析AI输出版权归属三选项，指出现行美国法下非人类创作无法持有版权。 `<!-- ROW_MINE: ksummit.messages.1031 -->`
+- 【Linux社区】回应44MiB开销质疑：崩溃路径刻意避免内存分配与磁盘IO，首版求简便于评审，存储效率后续可再优化。 `<!-- ROW_MINE: ksummit.messages.1033 -->`
+- 【Linux社区】流程承诺：优先完成清理使RFC骨架在12月前发出征求意见，并将改用正式SMTP配置发信。 `<!-- ROW_MINE: ksummit.messages.1037 -->`
+- 【Linux社区】以网络子系统为例反驳“AI是新问题”：无专长者投递早已有之，自己对疑似slop作者整批拒绝但留一封教其入门，LLM与checkpatch同类。 `<!-- ROW_MINE: ksummit.messages.1040 -->`
+- 【Linux社区】建议从第一天就建独立子系统drivers/ualink，初期可由Greg或DRM子维护者代管，如同drivers/accel的模式。 `<!-- ROW_MINE: ksummit.messages.1042 -->`
+- 【Linux社区】指出Miri已实现Tree Borrows等别名模型并可在playground检验代码，但涉及C FFI时不适用，并推动其进入Compiler Explorer。 `<!-- ROW_MINE: ksummit.messages.1046 -->`
+- 【Linux社区】回应Linus：初期RFC拟放drivers/misc轻量起步，认同UALink应像CXL一样自成子系统，长期归drivers/ual。 `<!-- ROW_MINE: ksummit.messages.1047 -->`
+- 【Linux社区】峰会提案总纲：详述修复在主线与stable暴露数周至两月以上的常见场景及评审、合入、PR时点等成因，统领后续四个提案。 `<!-- ROW_MINE: ksummit.messages.1048 -->`
+- 【Linux社区】主张开发者应在提交前自行运行AI评审工具，用AI投资提升PR质量，减少对维护者注意力的无谓占用。 `<!-- ROW_MINE: ksummit.messages.1049 -->`
+- 【Linux社区】单句论点：把编译器告警当作硬性约束即可获得C++26“错误行为”的等效效果。 `<!-- ROW_MINE: ksummit.messages.1052 -->`
+- 【Linux社区】区分政治与技术两面：产业界偏好DRM的许可要求、DRM缓冲机制更成熟；V4L2须逐项检查命令缓冲，libcamera可作开放实现基座。 `<!-- ROW_MINE: ksummit.messages.1053 -->`
+- 【Linux社区】反驳AMD/Intel规模论：高通同样有50-100人团队仍努力理解上游周期，指两家不愿适应只因无人问责。 `<!-- ROW_MINE: ksummit.messages.1055 -->`
+- 【Linux社区】区分设备故障与驱动bug致probe失败两情形，主张向接口驱动传播错误，避免留下带sysfs接口的僵死驱动，提出峰会讨论。 `<!-- ROW_MINE: ksummit.messages.1060 -->`
+- 【Linux社区】主张校准trivial定义：拼写修正可轻审，错误路径引用计数必须严查；要求对UMN研究组强力制裁并质疑IEEE论文伦理。 `<!-- ROW_MINE: ksummit.messages.1064 -->`
+- 【Linux社区】通报security@近况：流程改进后顺畅得多并将获约6个月全职人力资助；仅本地LLM合规可用，LLM分诊行不通，真正问题是报告者失联与中间商。 `<!-- ROW_MINE: ksummit.messages.1065 -->`
+- 【Linux社区】反驳hpa：Rust侧分配器早已正常处理GFP标志，追问现行方案到底缺什么。 `<!-- ROW_MINE: ksummit.messages.1066 -->`
+- 【Linux社区】解释Rust模型须满足LLVM noalias约束方能支撑优化，承认过拟合风险并列举gcc-rs面临的C与LLVM UB差异案例（悬空指针比较、零长memcpy等）。 `<!-- ROW_MINE: ksummit.messages.1070 -->`
+- 【Linux社区】讨论混合会场提问机制：害羞者可打字提问，主持人应留意欲发言者并留出停顿，英语口语障碍非新问题，属峰会组织讨论。 `<!-- ROW_MINE: ksummit.messages.1072 -->`
+- 【Linux社区】长文回应hch：网站文档仅为澄清与凝聚共识、子系统可自决不接Rust；提出由他人接管Rust相关工作等选项，承认safe抽象是另一类形态。 `<!-- ROW_MINE: ksummit.messages.1073 -->`
+- 【Linux社区】流程问询：追问v3文档补丁状态与应走哪棵树，同页Dave回应确认未弃置、将出后续版本。 `<!-- ROW_MINE: ksummit.messages.1081 -->`
+- 【Linux社区】反驳“Android占绝对多数故服务器端不重要”论：企业单台服务器失陷即危及上千用户数据，装机量之外更须看影响面。 `<!-- ROW_MINE: ksummit.messages.1088 -->`
+- 【Linux社区】提出不必强制base-commit的两点理由（系列天然可通用、依赖未合入补丁时无基可指），主张交由维护者酌定。 `<!-- ROW_MINE: ksummit.messages.1096 -->`
+- 【Linux社区】技术细节：[[]]可挂复合语句但强制加大括号，STDC FP_CONTRACT类pragma作用域到块末而GCC未实现，需实验定夺。 `<!-- ROW_MINE: ksummit.messages.1097 -->`
+- 【Linux社区】提议以只读为最低支持线：便于取回旧数据且无需新特性更新，回应Chinner“只读仍在ring 0解析不可信数据”的安全顾虑。 `<!-- ROW_MINE: ksummit.messages.1099 -->`
+- 【Linux社区】指出netdev CI已可作docker镜像本地运行，呼吁更多子系统开放CI工具，并把标准检查下沉到b4统一承担。 `<!-- ROW_MINE: ksummit.messages.1105 -->`
+- 【Linux社区】以自身经历佐证用户痛点：Dell XPS新机型摄像头无Linux支持致换机受阻，为放宽厂商支持主张提供用户影响实证。 `<!-- ROW_MINE: ksummit.messages.1106 -->`
+- 【Linux社区】质疑hpa的C++路线：引入新语言意在解决驱动复杂度与内存安全，inline与宏并非主要bug来源并索要实例。 `<!-- ROW_MINE: ksummit.messages.1107 -->`
+- 【Linux社区】说明用Rust重写子系统内部的可行性与限制：安全保证无法回馈C调用方，且尚无GCC代码生成路径，gccrs成熟约需两年。 `<!-- ROW_MINE: ksummit.messages.1117 -->`
+- 【Linux社区】反驳Linus“谁引入谁维护”论：GPIO遗留API数千处调用、转换非小事且系接手既成局面，呼吁支持全局重构而非推诿给API作者。 `<!-- ROW_MINE: ksummit.messages.1128 -->`
+- 【Linux社区】提案：可信子维护者的树应进 linux-next；给出测量方法与 133 个提交的统计，列隐藏提交的四大害处及两类成因 `<!-- ROW_MINE: ksummit.messages.1293 -->`
+- 【Linux社区】给出反例数据：commit 8e949363f017 引入 UAF，后由 31634bf5dcc4 修复；追问是否属“实验”补丁 `<!-- ROW_MINE: ksummit.messages.1295 -->`
+- 【Linux社区】回忆 Linus 在 ARM 峰会要求把 -next 失败 CC 给他并自省未做到；论证 Linus 不知道问题就无法拒绝拉取 `<!-- ROW_MINE: ksummit.messages.1297 -->`
+- 【Linux社区】把加速器议题拆为“驱动树位置与维护归属”“新用户空间 API 接收条件”两题，属峰会议题组织记录 `<!-- ROW_MINE: ksummit.messages.1298 -->`
+- 【Linux社区】质疑 Kent 的“文件系统跑用户空间/FUSE”设想：引 xkcd 1200 讽攻击面扩大，追问迁出内核后维护是否会更好 `<!-- ROW_MINE: ksummit.messages.1300 -->`
+- 【Linux社区】回答 Geert：忽略 Option 的写法无法通过编译并附 godbolt 链接，佐证 Rust 编译期强制 `<!-- ROW_MINE: ksummit.messages.1301 -->`
+- 【Linux社区】反驳 Mauro 的自动换新版 Python 方案：等同覆盖用户配置的 PATH，若做也须显式开关 `<!-- ROW_MINE: ksummit.messages.1302 -->`
+- 【Linux社区】主张最有价值的检查点是合并窗口首个 PR，其后多为修复、-next 浸泡价值低 `<!-- ROW_MINE: ksummit.messages.1307 -->`
+- 【Linux社区】指出对过滤收件人的补丁视而不见会造成“没有反对”的假象 `<!-- ROW_MINE: ksummit.messages.1309 -->`
+- 【Linux社区】反驳 Laurent：信任是双向的；大型子系统和复杂设备上维护者通晓全栈是一厢情愿 `<!-- ROW_MINE: ksummit.messages.1316 -->`
+- 【Linux社区】与 Lorenzo 论战：LLM 细微错误人难察觉、统计推断无动力学基础；反指训练可改进，主张先索要 AI 置信度 `<!-- ROW_MINE: ksummit.messages.1320 -->`
+- 【Linux社区】不愿让 LLM 生成补丁发给用户以免担责；报告量小成本可控；可先 grep “Call Trace” 筛出 oops 报告 `<!-- ROW_MINE: ksummit.messages.1321 -->`
+- 【Linux社区】UALink 是带交换与寻址的多主机网络 fabric，近 RDMA 而非 DRM；应建独立子系统直送 Linus，并先有树内用户驱动 `<!-- ROW_MINE: ksummit.messages.1322 -->`
+- 【Linux社区】autosel 误选补丁必须有知悉渠道；同意显式打标且顺利应用的提交不必通知 `<!-- ROW_MINE: ksummit.messages.1324 -->`
+- 【Linux社区】同意把 X-Stable 头写进 stable 流程文档并承诺不随意变更；或干脆只发 stable-commits 列表供 lore 存档 `<!-- ROW_MINE: ksummit.messages.1326 -->`
+- 【Linux社区】同意提高审阅门槛而非一刀切禁止，防 UMN 事件对合法琐碎改进产生寒蝉效应 `<!-- ROW_MINE: ksummit.messages.1327 -->`
+- 【Linux社区】过度裁剪引用与全文引用加文末 R-b 都妨碍讨论；区分删除无关内容与删除相关内容 `<!-- ROW_MINE: ksummit.messages.1328 -->`
+- 【Linux社区】长会话 LLM 协作难以在提交信息声明（以“从浮木雕鱼”作喻）；主张推广与工具无关的“展示过程”惯例 `<!-- ROW_MINE: ksummit.messages.1330 -->`
+- 【Linux社区】新 API 其实更易用，难在无人理解老实现；HFS 自 2011 无维护者；syzbot 自动骚扰加剧维护者倦怠 `<!-- ROW_MINE: ksummit.messages.1331 -->`
+- 【Linux社区】认同 UMN 未公开原始数据；根因是业界“特性优先”心态与底层基础无人出资，技术对策仅治标 `<!-- ROW_MINE: ksummit.messages.1334 -->`
+- 【Linux社区】提案在 C 中用简易精确 GC 或弱引用管理设备指针图，可借 sparse 辅助实现 `<!-- ROW_MINE: ksummit.messages.1336 -->`
+- 【Linux社区】主张进发行版软件包是质量门槛；指 HabanaLabs 曾绕过 netdev/RDMA 社区；反对任意设规阻止上游化 `<!-- ROW_MINE: ksummit.messages.1337 -->`
+- 【Linux社区】Rust 特殊在规模；V4L2 需先重写对象生命周期才谈 bindings；倦怠成常态是心理健康问题；协助修基础可重建 C 与 Rust 阵营互信 `<!-- ROW_MINE: ksummit.messages.1338 -->`
+- 【Linux社区】linux-next 的独特价值是暴露跨分支干扰；自建 build/boot 测试；fixes 分支曾被 Linus 直接拉取 `<!-- ROW_MINE: ksummit.messages.1347 -->`
+- 【Linux社区】硬件不可预设恶意，DMA TOCTOU 质疑不成立；审阅提示词应按子系统定制（USB/virtio 为例），可提 PR 补 drivers.md `<!-- ROW_MINE: ksummit.messages.1349 -->`
+- 【Linux社区】反驳 Mauro：“Kent 就是 bcachefs”，无团队可接手，接手者要面对 Kent、网络暴民与极复杂代码 `<!-- ROW_MINE: ksummit.messages.1351 -->`
+- 【Linux社区】v2 补丁：在 maintainer-tip.rst 写明 lore 与 patch.msgid.link 用法及方括号编号标注惯例 `<!-- ROW_MINE: ksummit.messages.1353 -->`
+- 【Linux社区】同意先删 HIGHPTE；__GFP 位只剩 6 个；忧高内存回归难测，提议 64 位模拟 highmem 及 start/end access 式 API 改名 `<!-- ROW_MINE: ksummit.messages.1355 -->`
+- 【Linux社区】指出 Rust 与 C/gcc 侧稳定性标准严重不对称，“两个 Debian stable”太短，忧核心子系统用 Rust 实现 `<!-- ROW_MINE: ksummit.messages.1356 -->`
+- 【Linux社区】给出 Reviewed-by，认可文档前提；提出改写两处表述并统一列表句点风格 `<!-- ROW_MINE: ksummit.messages.1357 -->`
+- 【Linux社区】主张先立整体结构骨架、留空白小节，以引导补齐缺失文档 `<!-- ROW_MINE: ksummit.messages.1359 -->`
+- 【Linux社区】纠正 RefinedRust 与 Miri 关系，引其仓库 README 自述复用 Miri 代码为证 `<!-- ROW_MINE: ksummit.messages.1363 -->`
+- 【Linux社区】提议把 devres 释放延迟到 module release，以修复中断处理程序悬空引用问题 `<!-- ROW_MINE: ksummit.messages.1366 -->`
+- 【Linux社区】主张 Assisted-by 保留工具名供日后审计，建议 [PATCH AI] 或移剪刀线下；以正确性与测试论 LLM 新人；判断 AI 工具仍在流程外围 `<!-- ROW_MINE: ksummit.messages.1367 -->`
+- 【Linux社区】提案把 decode_stacktrace.pl 与 get_maintainer.pl 串联，自动定位崩溃报告最合适的邮件列表并抄送 `<!-- ROW_MINE: ksummit.messages.1372 -->`
+- 【Linux社区】DRM/KMS 先交用户空间补丁并预核准架构的联锁模式可行；libcamera 正成相机事实标准；忧无标准栈的领域 `<!-- ROW_MINE: ksummit.messages.1374 -->`
+- 【Linux社区】自荐志愿做 bugzilla 报告分诊并与维护者 liaison，声明先表态非正式承诺 `<!-- ROW_MINE: ksummit.messages.1375 -->`
+- 【Linux社区】支持首页告知用户来错地方；建议内嵌 get_maintainer.pl 前端，粘路径即返回邮件地址 `<!-- ROW_MINE: ksummit.messages.1376 -->`
+- 【Linux社区】对照 GPIO 现有 RCU 置空方案，认为 revocable 的 SRCU 实现更优雅，GPIO 可轻易迁移 `<!-- ROW_MINE: ksummit.messages.1379 -->`
+- 【Linux社区】说明其措辞强调补丁覆盖一切工具、不单独针对 LLM，正朝共识收敛 `<!-- ROW_MINE: ksummit.messages.1383 -->`
+- 【Linux社区】Rust 只有极小的 soundness 修正；若内核受影响可预先修补并回移 stable；不用 stdlib 风险低 `<!-- ROW_MINE: ksummit.messages.1387 -->`
+- 【Linux社区】libcamera 即开源框架且多厂商协作；区分直接寄存器访问与用户空间组 blob 参数两类设计，后者已有 ack 先例 `<!-- ROW_MINE: ksummit.messages.1389 -->`
+- 【Linux社区】以 Debian BTS 为正例：邮件接口利落、reportbug 自动收集信息、无需注册账号 `<!-- ROW_MINE: ksummit.messages.1393 -->`
+- 【Linux社区】建议用 AI 扫描难察觉的常见问题与润色非母语注释，做“注释质量的 0-day” `<!-- ROW_MINE: ksummit.messages.1396 -->`
+- 【Linux社区】分四档梳理本地跑模型的硬件成本与带宽；量化损失精度；提议用 LKML 存档微调开源权重模型但受设备可得性限制 `<!-- ROW_MINE: ksummit.messages.1398 -->`
+- 【Linux社区】核心担忧生成与审阅的精力不对称；以带新人经验类比；信任 AI 帮自己调试代码甚于其写的代码 `<!-- ROW_MINE: ksummit.messages.1410 -->`
+- 【Linux社区】给出 :wall: 按标记设置、按子系统 CI 跑 -Wall、以及 dim 推送前检查等方案 `<!-- ROW_MINE: ksummit.messages.1412 -->`
+- 【Linux社区】断言 netdev 无被忽略的技术审阅意见，分歧是哲学性的；主张维护者可以无视哲学异议 `<!-- ROW_MINE: ksummit.messages.1415 -->`
+- 【Linux社区】反馈选举流程痛点：已 opt-in 但未察觉投票已开放，询问是否会再发投票提醒邮件，暴露 opt-in 与投票通知脱节问题。 `<!-- ROW_MINE: ksummit.messages.829 -->`
+- 【Linux社区】说明自己基本不再手工加 CC，因 AUTOSEL 拾取面更广；婉拒 Greg 将其子系统列入“免跑 AUTOSEL/Fixes”名单的提议，理由是 stable 整体已趋宽松。 `<!-- ROW_MINE: ksummit.messages.831 -->`
+- 【Linux社区】Linus 系统表态：早期峰会技术议题普适，如今讨论圈层化；维护者峰会保住了纯维护话题但年年同一批“圈内人”，感觉沉闷，认同把存废作为本届议题讨论。 `<!-- ROW_MINE: ksummit.messages.833 -->`
+- 【Linux社区】提出 treewide 补丁抄送难题的可行方案：cover letter 对个人 bcc、对列表 cc，并指出代价是个人回复只会进列表。 `<!-- ROW_MINE: ksummit.messages.841 -->`
+- 【Linux社区】主张按教程、操作、解释、参考四类组织文档，内核文档几乎全是参考型；指出无人专职做文档，LF 资助付费写文档的实验未成。 `<!-- ROW_MINE: ksummit.messages.844 -->`
+- 【Linux社区】反对轻率弃用 Bugzilla：PCI 子系统重度依赖其收 dmesg/lspci 并回传测试补丁；要求至少在 kernel.org 自有设施提供文件交换，历史条目须永久保留以维持 commit 中 Link: 可用。 `<!-- ROW_MINE: ksummit.messages.847 -->`
+- 【Linux社区】提供事实信息：0-day bot 仍在运行，配置在 github lkp-tests 可自查并 PR 更新；指出 notify_build_success_branch 仅一处设置，故部分分支构建成功不会通知。 `<!-- ROW_MINE: ksummit.messages.853 -->`
+- 【Linux社区】阐释优先 Message-id 而非 Link 的理由：Message-id 永久不变，lore 若消失仍可检索，而外部 Link 会失效。 `<!-- ROW_MINE: ksummit.messages.856 -->`
+- 【Linux社区】文档维护者询问系列争议焦点“# 注释写法”是否已有结论，并表态可先合入再继续打磨。 `<!-- ROW_MINE: ksummit.messages.859 -->`
+- 【Linux社区】区分场景：-rc1 后修复与合并窗口代码不同；自述发送前跑 8-13 小时测试套件；质疑单行修复也须先进 linux-next 的收益。 `<!-- ROW_MINE: ksummit.messages.860 -->`
+- 【Linux社区】针对 GPIO irqchip 提出两个具体竞态与清理问题：irq chip 移除时 irq_set_irq_wake 计数如何递减；irq_domain_remove 前如何防止新映射再被加入。 `<!-- ROW_MINE: ksummit.messages.867 -->`
+- 【Linux社区】报告 util-linux 已实现 X-mount.auto-fstypes 白名单；提议给 libmount 增加全局允许/拒绝列表，借用户空间逐步收敛发行版启用的文件系统集合。 `<!-- ROW_MINE: ksummit.messages.872 -->`
+- 【Linux社区】提议给代码注释加“设计文档”标记并抽入 Sphinx 文档，或从文档反向引用代码中的标记；理由是贴代码注释比 Documentation/ 下文档更易随设计更新。 `<!-- ROW_MINE: ksummit.messages.879 -->`
+- 【Linux社区】驳斥发件人：定位维护者应查 MAINTAINERS 文件；强烈抨击 opt-out 邮件模式不可接受，类比垃圾邮件与营销部门话术。 `<!-- ROW_MINE: ksummit.messages.885 -->`
+- 【Linux社区】立场：没有 Linus 在意就理不顺流程；质疑新树延迟未必优于 linux-next，解决不了根本问题。 `<!-- ROW_MINE: ksummit.messages.886 -->`
+- 【Linux社区】反驳“法律风险很小”：多起关于 AI 生成材料法律地位的诉讼正在进行。 `<!-- ROW_MINE: ksummit.messages.890 -->`
+- 【Linux社区】提出三步收尾计划：维持现状含 patch.msgid.link 自动链接；推动 git 在 commit 头部加入来源信息；峰会再议残余分歧。 `<!-- ROW_MINE: ksummit.messages.891 -->`
+- 【Linux社区】认为报告意愿取决于 bug 对报告者的影响程度：致命问题自然有人追，边缘问题沉没无妨；以自己提交显示控制器补丁、其余问题仅进维护者待办为例。 `<!-- ROW_MINE: ksummit.messages.893 -->`
+- 【Linux社区】澄清关注点不在验证邮件补丁而在反馈邮件如何回流 forge；介绍 GitLab reply+uuid 个人地址认证机制，愿配合 DKIM 方向解决未认证邮件进 forge 的问题。 `<!-- ROW_MINE: ksummit.messages.896 -->`
+- 【Linux社区】引用 Ted 的 Kernel Summit 主题征集规则，论证该 MM 提案按规则属 KS 范畴，反驳 Wilcox 应去 LPC/LSFMM 的意见，已补抄 linux-mm。 `<!-- ROW_MINE: ksummit.messages.898 -->`
+- 【Linux社区】回应 Jiri 反对强时限：文档刻意用“aim for”弱措辞；目标是把 Linus 帖子背后的规则与相互矛盾过时的文档统一成共识，而非消除拖延。 `<!-- ROW_MINE: ksummit.messages.900 -->`
+- 【Linux社区】指出既有机制即可覆盖提议：退休者归 CREDITS，免被打扰用 .get_maintainer.ignore，无需新建 RETIRED 文件。 `<!-- ROW_MINE: ksummit.messages.906 -->`
+- 【Linux社区】提请遵守 Konstantin 早先要求：本列表 COVID 讨论仅限对会议差旅的影响，药物争论请自开列表或 IRC。 `<!-- ROW_MINE: ksummit.messages.907 -->`
+- 【Linux社区】论证线程可见性应纳入语言“可观察”语义：重物化加载是 bug；指出 gcc 不重物化 mem 操作、C 标准已禁加宽存储，safe Rust 可因此更激进优化。 `<!-- ROW_MINE: ksummit.messages.910 -->`
+- 【Linux社区】主张考虑内核级政策：无开源用户态则不加内核接口；认为部分厂商不上游的代价可接受且利大于弊；指出“敷衍式开源项目”不算合格用户态。 `<!-- ROW_MINE: ksummit.messages.912 -->`
+- 【Linux社区】反驳 James 对 LF 产业教育的悲观：LF 持续资助其向各公司（含 James 现雇主）做开放性教育，只是低调；重问跨子系统 NAK 议题应有谁参与。 `<!-- ROW_MINE: ksummit.messages.917 -->`
+- 【Linux社区】以自身 C/Rust 混合项目为例：工具链一周一变使二分近乎不可能；建议明确“十年允许几次要求升级 rust 工具链”的硬性预期。 `<!-- ROW_MINE: ksummit.messages.918 -->`
+- 【Linux社区】立场：强制贡献者付费或运行专有工具不可接受，专有工具链须在维护者侧运行；警惕 AI 厂商短期赞助导致供应商锁定。 `<!-- ROW_MINE: ksummit.messages.921 -->`
+- 【Linux社区】回应 kref 问题：列举 kref_put_mutex、kref_put_lock、klist 与驱动核心持锁调用 kref_put 的实例，解释查找返回引用计数对象为何需外部锁。 `<!-- ROW_MINE: ksummit.messages.925 -->`
+- 【Linux社区】深化别名模型讨论：追问能否给出保守的部分规范（stacked/tree borrows 是否只含假阳或假阴），以 Java happens-before 简化模型类比，并对照 C restrict 的实践难度。 `<!-- ROW_MINE: ksummit.messages.926 -->`
+- 【Linux社区】用 hfsprogs 实测反驳 hfsplus 在 Linux 上无 mkfs 不可测试的说法：mkfs.hfsplus 可用；另指出 ntfs3 崩溃源自 commit a4f64a300a29。 `<!-- ROW_MINE: ksummit.messages.929 -->`
+- 【Linux社区】以 Stacked/Tree Borrows 监督人身份作答：C 侧 pnvi-ae-udi 模型难成标准；Rust strict provenance 无需后端改动；原始指针可整体退出别名约束；Miri 原理上可查全部 UB，内核代码入 Miri 是合作方向。 `<!-- ROW_MINE: ksummit.messages.935 -->`
+- 【Linux社区】表态：不加硬性规则但倾向在分配处声明 __free 变量；反对无脑批量转换，认可示例中下移声明确实更清晰，关键在 taste。 `<!-- ROW_MINE: ksummit.messages.938 -->`
+- 【Linux社区】说明选票 9 月 20 日 9:00 后发出；自曝 Google Apps 群发限额致部分通知可能丢失，明年拟自动化处理阈值判定与通知。 `<!-- ROW_MINE: ksummit.messages.950 -->`
+- 【Linux社区】质疑驱动先行战略：若收益不在该子系统本身而在试点，须把策略定位与可整体退出的机制讲明并形成共识。 `<!-- ROW_MINE: ksummit.messages.953 -->`
+- 【Linux社区】针对跨子系统系列无用户难评审问题，提出发补丁集并附 git 分支（含 QEMU 可模拟驱动等用户）的工作流建议。 `<!-- ROW_MINE: ksummit.messages.958 -->`
+- 【Linux社区】治理立场：不必穷尽所有坏场景，关键是白纸黑字写明“存在计划”，以破除 LF 藏有秘密遗嘱的猜疑。 `<!-- ROW_MINE: ksummit.messages.970 -->`
+- 【Linux社区】讨论测试与二分时滞：即便测试快，定位 commit 的二分也常超一天；-next 偶有 rebase 致测试成本高；主张说服 stable 用户群转测 .0 版本。 `<!-- ROW_MINE: ksummit.messages.974 -->`
+- 【Linux社区】提出工具化改进：git send-email 知道补丁属于某系列，应在系列内补丁间加交叉引用，便于 stable 识别带 Fixes: 的系列依赖补丁。 `<!-- ROW_MINE: ksummit.messages.975 -->`
+- 【Linux社区】归纳指针返回值四类注记（可空、错误指针、恒有效、编译期禁用时返回不透明 NULL），指出最后一类为内核特有且最易被误用，宜入静态检查器。 `<!-- ROW_MINE: ksummit.messages.982 -->`
+- 【Linux社区】反驳 Rust 社区敌视 gccrs 的说法：存在对语言分裂的合理担忧，gccrs 承诺不引入自造扩展以保持与 rustc 兼容，担忧已消解。 `<!-- ROW_MINE: ksummit.messages.985 -->`
+- 【Linux社区】澄清约束本质：不能丢的是无替代用例的 C 代码；Rust 抽象层可先行实现；新子系统纯 Rust 化会让缺工具链架构沦为二等公民，宜待 GCC 后端成熟。 `<!-- ROW_MINE: ksummit.messages.991 -->`
+- 【Linux社区】Linus 附议 hpa：VLIW 与 OoO 难以兼得，Itanium 是教训，VLIW 仅在 GPU 等可 JIT 的专用场景成立。 `<!-- ROW_MINE: ksummit.messages.1418 -->`
+- 【Linux社区】英特尔提案 UALink 驱动进内核：drivers/misc/ual 起步、内存语义（dma_buf/HMM/NUMA）、AUX 总线控制面、机密计算与渐进上游策略。 `<!-- ROW_MINE: ksummit.messages.1423 -->`
+- 【Linux社区】Rostedt 提议新内核接口一律须附文档与测试套件（哪怕冒烟测试）才可接受，selftests 应随接口更新。 `<!-- ROW_MINE: ksummit.messages.1424 -->`
+- 【Linux社区】Lorenzo 反对“LLM 只是另一种工具”：mm 无负面评审即合流易被灌水，主张维护者可凭疑似 AI slop 直接拒收并写明于文档。 `<!-- ROW_MINE: ksummit.messages.1426 -->`
+- 【Linux社区】Dan Williams 为“链接尾注存为 git notes”提交 b4 代码补丁（抽取 git_get_rev_diff 复用），属内核流程工具开发记录。 `<!-- ROW_MINE: ksummit.messages.1430 -->`
+- 【Linux社区】Rostedt 称自跑 13 小时测试套件，进 rc 后 next 中冲突多与 Linus 树无关，质疑 pull request 再泡 next 一两天的价值。 `<!-- ROW_MINE: ksummit.messages.1435 -->`
+- 【Linux社区】NeilBrown 区分“回归”与“bug”：新功能与文档不符即 bug，修正应打 Fixes，反驳 Carpenter 的“仅限回归”立场。 `<!-- ROW_MINE: ksummit.messages.1438 -->`
+- 【Linux社区】hpa 提三点异议：Rust 编译器版本要求远松于 C 的十年旧 gcc 标准、目标平台覆盖存疑，并提议评估以 C++14/17 编译整个内核。 `<!-- ROW_MINE: ksummit.messages.1444 -->`
+- 【Linux社区】Bart 引 LLM 解释并反驳 Laight：std::string 不用引用计数，C++11 已明禁 CoW，属事实纠正。 `<!-- ROW_MINE: ksummit.messages.1452 -->`
+- 【Linux社区】Ralf Jung（Rust 语言组）澄清别名规则并未官方绑定 LLVM，reference 链接只是占位，考虑删除以免显得更依赖 LLVM。 `<!-- ROW_MINE: ksummit.messages.1453 -->`
+- 【Linux社区】Mark Brown 支持标注所用的 AI 工具（循静态检查器惯例），便于识别有效工具与追踪同一工具的错误模式。 `<!-- ROW_MINE: ksummit.messages.1456 -->`
+- 【Linux社区】Geert 以代码追问“若无视 Option 直接 let Some(content) 会怎样”，检验 Rust 对解包检查的强制力，自认新手问题。 `<!-- ROW_MINE: ksummit.messages.1457 -->`
+- 【Linux社区】Felipe 以黑天鹅谬误反驳 Boqun：已有个别 Rust 驱动不等于全部驱动皆可，社区在未验证的假设下推进。 `<!-- ROW_MINE: ksummit.messages.1458 -->`
+- 【Linux社区】Dobriyan 主张 C 弱类型迫使开发者退用更弱的预处理器，模板等更强语言能力正是引入新语言的意义。 `<!-- ROW_MINE: ksummit.messages.1459 -->`
+- 【Linux社区】Lorenzo 主张把对工具生成代码的期望集中在单一文档强调，便于向人引用，分散他处易被漏读。 `<!-- ROW_MINE: ksummit.messages.1460 -->`
+- 【Linux社区】Hellwig 力挺 UMN 研究：恶意与无能几乎难辨，此“攻击”早该有人做并引发重要讨论，反对学术制裁。 `<!-- ROW_MINE: ksummit.messages.1461 -->`
+- 【Linux社区】Greg KH 强调控制面/慢路径正是内核执行安全与统一抽象之处，反对厂商绕过，网络子系统异议不可无视。 `<!-- ROW_MINE: ksummit.messages.1463 -->`
+- 【Linux社区】Hemminger 提问是否有人试过让 AI 读历史邮件列表评审来生成未来提示词，属方法试验设想。 `<!-- ROW_MINE: ksummit.messages.1465 -->`
+- 【Linux社区】Borntraeger 主张也应接受能清楚解释 bug 成因的修复，条件是经正经评审，不必苦等实际踩雷。 `<!-- ROW_MINE: ksummit.messages.1466 -->`
+- 【Linux社区】Gunthorpe 反驳：netdev 确在 NAK RDMA/DPDK 所需功能；开放代码非专有，fwctl 管理整设备，拒走 RDMA 后门。 `<!-- ROW_MINE: ksummit.messages.1470 -->`
+- 【Linux社区】Lorenzo 对 AI 做 stable 回移存疑，称是审查度与错误类别对时间收益的权衡，并邀 Sasha 峰会当面联合讨论。 `<!-- ROW_MINE: ksummit.messages.1473 -->`
+- 【Linux社区】Overstreet：若 gccrs 解决架构覆盖问题，Rust 在下的 FFI 更不易错；FFI 边界生命周期陷阱编译器无法告警。 `<!-- ROW_MINE: ksummit.messages.1476 -->`
+- 【Linux社区】Sasha 用数据反驳拟议规则：v6.12..v6.18 有 1902 位单提交作者（占三分之一）仅 177 人获过 Reviewed-by，规则将挡掉 1700+ 人。 `<!-- ROW_MINE: ksummit.messages.1477 -->`
+- 【Linux社区】Conor 明确：ack 前须有人完成 ABI 破坏的用户侧适配且不破坏 U-Boot 等 dt-rebasing 用户，解耦内核也不放宽。 `<!-- ROW_MINE: ksummit.messages.1479 -->`
+- 【Linux社区】Vetter 主张按编程模型设计 uAPI：MMIO 型走 drm/sched，嵌入式固定功能走 media 式接口，批评 misc 下 accel 驱动绕过两个子系统评审。 `<!-- ROW_MINE: ksummit.messages.1482 -->`
+- 【Linux社区】Overstreet 评 Tree Borrows 论文远超此前进展，关注是否已推进到 LLVM 兑现优化机会，想看生成代码，并追问 C 侧内存来源工作的下文。 `<!-- ROW_MINE: ksummit.messages.1483 -->`
+- 【Linux社区】Arnaldo 记录 review-prompts 与 sashiko 的提示词同步流程（有 sync 提交为证），并指出 sashiko 已有改动绕过前者。 `<!-- ROW_MINE: ksummit.messages.1492 -->`
+- 【Linux社区】Mauro 分享本地 ollama 摘要实验：提示词设计、线程分组与 VRAM 瓶颈，主张 AI 逐封摘要再以非 AI 方式聚类的混合路线。 `<!-- ROW_MINE: ksummit.messages.1496 -->`
+- 【Linux社区】Sasha 引旧统计反驳：autosel 补丁回归率低于带 cc:stable 者，autosel 已延迟三四周，并要求给出具体实例。 `<!-- ROW_MINE: ksummit.messages.1497 -->`
+- 【Linux社区】Carpenter 附议 b4 时代 message-id 有用，建议 patchwork 自动补加该链接。 `<!-- ROW_MINE: ksummit.messages.1499 -->`
+- 【Linux社区】Reding 提议把 linux-next 经验固化为 git 钩子/脚本（pre-push 自动检查）与文档，兜底请 Linus 合并时把关。 `<!-- ROW_MINE: ksummit.messages.1505 -->`
+- 【Linux社区】Leemhuis 支持做 bisect 包装器，并要求覆盖 localmodconfig、稳定树二分与浅克隆指引。 `<!-- ROW_MINE: ksummit.messages.1506 -->`
+- 【Linux社区】Kees 用 git log 统计反驳“# ”记法：1687 条带方括号链接中 1546 条无“# ”，仅 83 条采用。 `<!-- ROW_MINE: ksummit.messages.1507 -->`
+- 【Linux社区】Mauro 推荐用 wdiff 评审重命名类补丁，补 rename_rev.pl 之外的实用经验。 `<!-- ROW_MINE: ksummit.messages.1508 -->`
+- 【Linux社区】Linus 裁定 for 循环内声明已广泛使用（3k+ 处）应允许，中部声明原则上不鼓励，唯 cleanup 与 __auto_type 等场景例外。 `<!-- ROW_MINE: ksummit.messages.1511 -->`
+- 【Linux社区】Linus 主张语言语义应按“行为”而非“语法/类型”定义，痛陈 C 标准背离 volatile 传统，指内存访问重物化是安全与正确性大患。 `<!-- ROW_MINE: ksummit.messages.1512 -->`
+- 【Linux社区】Dooks 补充建议：标注还应说明 AI 的使用方式并考虑保留输入，便于事后追查。 `<!-- ROW_MINE: ksummit.messages.1514 -->`
+- 【Linux社区】Rostedt 解释立场：文档应对 checkpatch、sed 与 LLM 一视同仁，担心过度聚焦 AI 致脚本类提交者误以为不适用。 `<!-- ROW_MINE: ksummit.messages.1521 -->`
+- 【Linux社区】Linus 否决 Paolo 用 sed 钩子把 Message-ID 改写为 Link：应改用 git am -l 从源头修正，防脚本捏造不存在的链接。 `<!-- ROW_MINE: ksummit.messages.1525 -->`
+- 【Linux社区】Hansen 称唯一保留意见是该点前文已覆盖，若众人坚持重复强调也可接受。 `<!-- ROW_MINE: ksummit.messages.1531 -->`
+- 【Linux社区】Segher 以 KCFLAGS 纠正 Rostedt：二分旧内核加 -Wno-error 无需大改构建系统。 `<!-- ROW_MINE: ksummit.messages.1534 -->`
+- 【Linux社区】Bottomley 说明 --pretty=raw 加 grep 即可脚本化提取 message-id，主张机制改造与内容增补分开讨论。 `<!-- ROW_MINE: ksummit.messages.1536 -->`
+- 【Linux社区】Lorenzo 提案按 LLM 生成比例（90%/30%）分档加标签、MAINTAINERS 逐条 opt-in、豁免日常辅助用法，并警示勿借此批量灌补丁。 `<!-- ROW_MINE: ksummit.messages.1538 -->`
+- 【Linux社区】Airlie 反驳：称“并非所有驱动能用 C 写”同样荒谬，除非限定 100% safe Rust，而那并非目标。 `<!-- ROW_MINE: ksummit.messages.1540 -->`
+- 【Linux社区】SeongJae 提交 Kernel Summit 议题：DAMON ABI 稳定化、扩展用法、精度改进、内核/用户态调优策略等子题。 `<!-- ROW_MINE: ksummit.messages.1542 -->`
+- 【Linux社区】Bottomley 指导 pkeys 议题改投 BoF：提交入口轨道选择、两阶段录取与 A/V 安排，属会议组织记录。 `<!-- ROW_MINE: ksummit.messages.1551 -->`
+- 【Linux社区】Ted Ts'o 阐述 bug 跟踪礼节：分开立 bug、事实与猜想分离（有本事就交补丁）、网页表单用户缺乏经验过滤，狗堆式跟帖坑维护者。 `<!-- ROW_MINE: ksummit.messages.1555 -->`
+- 【Linux社区】反驳“所有驱动皆可用Rust重写”的默认假设，称举证责任在主张方，并质疑Rust编译器稳定性与“100%安全”承诺。 `<!-- ROW_MINE: ksummit.messages.1131 -->`
+- 【Linux社区】代表LPC程序委员会宣布2023-11-15 Kernel Summit增设Gloria Chance博士的心理安全与减压辅导场次，由Linux Foundation资助。 `<!-- ROW_MINE: ksummit.messages.1132 -->`
+- 【Linux社区】指出大量核心API非子系统专属也需Rust抽象，树级重构须拉上抽象维护者协作，而如今重构多由非维护者完成，难以规模化。 `<!-- ROW_MINE: ksummit.messages.1135 -->`
+- 【Linux社区】官方征文：2025-12-10东京举办、30人邀请制，9月10日前以[MAINTAINERS SUMMIT]或[TECH TOPIC]前缀投稿可获邀请考虑，并公布五人程序委员会。 `<!-- ROW_MINE: ksummit.messages.1138 -->`
+- 【Linux社区】澄清此前言论是归谬反讽，担忧Rust对编译器新特性的要求远低于C代码须兼容老旧gcc的稳定标准。 `<!-- ROW_MINE: ksummit.messages.1142 -->`
+- 【Linux社区】主张构建脚本直接调用python3并在过慢时打印提示，而不是自行从PATH挑选“最佳”Python版本。 `<!-- ROW_MINE: ksummit.messages.1149 -->`
+- 【Linux社区】以无人能找到system_state文档为例，指出写了却找不到的文档等于没用，git grep惯用法也非总能奏效。 `<!-- ROW_MINE: ksummit.messages.1154 -->`
+- 【Linux社区】评Konstantin的Link文档补丁，提议以“Link: URL # linux-trace-devel”注释保留补丁关注列表信息并征求意见。 `<!-- ROW_MINE: ksummit.messages.1156 -->`
+- 【Linux社区】认为“太难”不能作为漏标借口，主张早于git的漏洞写Fixes: 2.6.12毫无价值，只应显式cc:stable或留在新内核。 `<!-- ROW_MINE: ksummit.messages.1159 -->`
+- 【Linux社区】提案维护者峰会讨论-stable抄送邮件量过大且无人有效利用，建议为子系统提供退出或选择性加入机制。 `<!-- ROW_MINE: ksummit.messages.1160 -->`
+- 【Linux社区】解释Rust引用可视作restrict指针，UnsafeCell等机制按类型粒度豁免别名假设，RfL以Opaque包裹与C共享的结构。 `<!-- ROW_MINE: ksummit.messages.1166 -->`
+- 【Linux社区】支持整组取舍的回移策略，但主张若立新标签应直白命名如Submission:并统一用lore链接以便追溯上下文。 `<!-- ROW_MINE: ksummit.messages.1172 -->`
+- 【Linux社区】提议netdev pw-bot标记“changes-requested”的回复可作LLM负面训练素材，教模型识别不可接受的补丁。 `<!-- ROW_MINE: ksummit.messages.1173 -->`
+- 【Linux社区】阐明跨子系统Rust代码无法两全：完整系列太大无人评，无用户系列遭嫌弃，目前选择先发无完整用户的系列。 `<!-- ROW_MINE: ksummit.messages.1174 -->`
+- 【Linux社区】反驳Mauro：按序搜索PATH是定义良好的机制，nix构建正依赖它；环境损坏导致构建失败是应得的信号。 `<!-- ROW_MINE: ksummit.messages.1176 -->`
+- 【Linux社区】以类型理论背景重申无需新设计语言，C经注解加适度重构可达相近安全度，且存量C代码才是必须面对的问题。 `<!-- ROW_MINE: ksummit.messages.1179 -->`
+- 【Linux社区】告知Kernel Summit每节限45分钟而BOF时间充裕，并询问ChromeOS议题拟投哪个MC轨道。 `<!-- ROW_MINE: ksummit.messages.1182 -->`
+- 【Linux社区】依据律师与政府合作经验，闭门预公告名单在部分国家违法或将被迫纳入“主要用户”，故LF无法运营distros@k.o。 `<!-- ROW_MINE: ksummit.messages.1184 -->`
+- 【Linux社区】以Rice定理论证静态分析进步只能源于类型系统改进，称Rust是银弹、C打补丁式安全方案注定失败。 `<!-- ROW_MINE: ksummit.messages.1198 -->`
+- 【Linux社区】主张驱动goto错误路径易错且可演化为安全漏洞，devres覆盖有限，语言级RAII所有权可显著改善。 `<!-- ROW_MINE: ksummit.messages.1202 -->`
+- 【Linux社区】力挺保留现有Link:用法，讥讽“嫌烦就别点”，认为b4 dig靠启发式不如显式链接精确。 `<!-- ROW_MINE: ksummit.messages.1205 -->`
+- 【Linux社区】驳Linus的git钩子设想：要求所有他人改变工作流且复杂难推广，社区后续回应表明其并非可行解。 `<!-- ROW_MINE: ksummit.messages.1212 -->`
+- 【Linux社区】就std::string按值传递展开：仍是拷贝、可引用计数、零终止符阻碍分片字符串、vector基于realloc致反复扩容缓慢。 `<!-- ROW_MINE: ksummit.messages.1221 -->`
+- 【Linux社区】认同引入Rust不只是技术决定，更是要求多数开发者学Rust的流程决定，应宽视角框定其影响。 `<!-- ROW_MINE: ksummit.messages.1223 -->`
+- 【Linux社区】主张先以LKML文本微调小模型，分享qwen3-next实验并与Sashiko多轮前沿模型评审对比，附串行提示词示例。 `<!-- ROW_MINE: ksummit.messages.1224 -->`
+- 【Linux社区】介绍AI评审已接入BPF CI，semcode索引使btrfs_search_slot调用图查询从44万token降至2.5万，并正筹措API经费。 `<!-- ROW_MINE: ksummit.messages.1226 -->`
+- 【Linux社区】强硬表态绝不接受Message-ID式提交引用，要求vhost与KVM维护者改用可点击的有用链接，非公开msgid不该存在。 `<!-- ROW_MINE: ksummit.messages.1228 -->`
+- 【Linux社区】提议邀请Write the Docs社区及RH、SUSE文档团队提供外部视角，并主动提出可联络旧识牵线。 `<!-- ROW_MINE: ksummit.messages.1231 -->`
+- 【Linux社区】阐明devres与ures双向指针皆必需，热插拔靠清空与drm_dev_enter/exit区间保护，认同分类器但疑静态不可判。 `<!-- ROW_MINE: ksummit.messages.1233 -->`
+- 【Linux社区】提出关键疑问：每内核版仅支持单一rustc时，回移到旧内核的Rust补丁是否还需配套旧rustc。 `<!-- ROW_MINE: ksummit.messages.1240 -->`
+- 【Linux社区】分析手机作麦克风受回声消除与波束成形制约，高端机型表现出色但个体差异大，难以全员可靠。 `<!-- ROW_MINE: ksummit.messages.1243 -->`
+- 【Linux社区】已试交叉编译补丁版gcc，询问单一二进制能否覆盖5个gcc、27种架构、7个rustc版本的组合。 `<!-- ROW_MINE: ksummit.messages.1248 -->`
+- 【Linux社区】承认应表述为“当前”绑定而非永久绑定，引Rust参考手册原文佐证别名规则直接引用LLVM术语。 `<!-- ROW_MINE: ksummit.messages.1251 -->`
+- 【Linux社区】提供更明确文档措辞以防该域名被滥用，并提议Lore-Submission等专用标签但料难获Linus认可。 `<!-- ROW_MINE: ksummit.messages.1253 -->`
+- 【Linux社区】澄清内核最低要求1.78.0正式版、上游每个PR须构建内核、GCC后端曾启动内核，并比较C++ Profiles与Safe C++。 `<!-- ROW_MINE: ksummit.messages.1255 -->`
+- 【Linux社区】澄清接入linux-next无需额外工作，只需报分支名即可获冲突检查，自用for-next tag兼顾修复与合并窗口内容。 `<!-- ROW_MINE: ksummit.messages.1258 -->`
+- 【Linux社区】以“lore也是MUA”反诘：摘要邮件头是其职责，却不摘要引用内容，暗指Linus对引用过长的批评双标。 `<!-- ROW_MINE: ksummit.messages.1263 -->`
+- 【Linux社区】主张比自由文档更严：新uAPI须被Debian、Fedora、SUSE软件包实际使用，并可借包库检索评估API弃用与扩展。 `<!-- ROW_MINE: ksummit.messages.1271 -->`
+- 【Linux社区】官方征文：2026-10-08布拉格举办、30人邀请制，7月24日前提议题可入程序委员会遴选名单，附往届LWN链接。 `<!-- ROW_MINE: ksummit.messages.1282 -->`
+- 【Linux社区】公布近四届维护者峰会出席统计：全勤仅18.37%、仅出席一次者44.90%，据此反思“小圈子”感受并探讨放宽遴选。 `<!-- ROW_MINE: ksummit.messages.1283 -->`
+- 【Linux社区】分场景讨论训练数据与输出版权风险，引ChatGPT条款论证提交者自担IP泄露责任，结论无需新流程但将拒收AI代笔补丁。 `<!-- ROW_MINE: ksummit.messages.1286 -->`
+- 【Linux社区】提醒互换评审的前提是同等专业度，漏掉硬件冷门语义会酿成事故，真正课题是让社区集体具备同等知识。 `<!-- ROW_MINE: ksummit.messages.1288 -->`
+- 【Linux社区】判断邮件组讨论正趋于收敛且目标5.16无紧迫性，区分“剩余合并工作”与“流程改进”两问，现流程虽慢但可行。 `<!-- ROW_MINE: ksummit.messages.1291 -->`
+- 【Linux社区】主张LLM不改变问题只改变数量级；建议文档明示维护者可径直拒绝疑似slop并已提交增量diff `<!-- ROW_MINE: ksummit.messages.1556 -->`
+- 【Linux社区】建议以邮件头中stable版本前缀识别例外补丁；指出跨树应用检查受依赖与linux-next冲突制约 `<!-- ROW_MINE: ksummit.messages.1558 -->`
+- 【Linux社区】全文反驳“把近半年开发者默认订阅进bugzilla邮件”方案：未经同意只会被过滤进垃圾箱 `<!-- ROW_MINE: ksummit.messages.1564 -->`
+- 【Linux社区】反驳UBSan用于产线：Clang sanitizer不应在生产环境启用并附oss-security先例链接 `<!-- ROW_MINE: ksummit.messages.1565 -->`
+- 【Linux社区】报告经PR用Ollama本地量化模型跑Sashiko评审，并提及tiwai等小模型评审agent实测结论 `<!-- ROW_MINE: ksummit.messages.1566 -->`
+- 【Linux社区】就AI照片共享用例追问权限模型并提出中间目录方案；建议议题归Tech Topic而非维护者峰会 `<!-- ROW_MINE: ksummit.messages.1569 -->`
+- 【Linux社区】反驳Wilcox的例证：zlib本就由调用方传入分配函数，无需malloc式接口 `<!-- ROW_MINE: ksummit.messages.1571 -->`
+- 【Linux社区】说明PR被NACK即revert合并、lei自动化约八成、冲突处理与CI结果监控的分工设想 `<!-- ROW_MINE: ksummit.messages.1573 -->`
+- 【Linux社区】反驳“Hello World”类比：AI输出可含罕见受版权文本，平均值论据在法律层面不成立 `<!-- ROW_MINE: ksummit.messages.1575 -->`
+- 【Linux社区】提议对无列表抄送补丁设reply-to指向lkml便于讨论可见；半玩笑提出LLM摘要服务设想 `<!-- ROW_MINE: ksummit.messages.1577 -->`
+- 【Linux社区】反驳另设常年维护者列表的提议：workflows@列表本就为此目的存在 `<!-- ROW_MINE: ksummit.messages.1583 -->`
+- 【Linux社区】解释restrict/noalias下常量折叠成立的原因；Rust借用检查器禁止双重可变借用及soundness设计难点 `<!-- ROW_MINE: ksummit.messages.1591 -->`
+- 【Linux社区】提案重审RichACL：AI存储场景POSIX ACL不敷使用，用户态规则方案扩展性与性能差，宣称超百万装机 `<!-- ROW_MINE: ksummit.messages.1599 -->`
+- 【Linux社区】引现有文档指出“须回应评审”却未要求回应有意义；建议把SOB链反映真实路径的说明推广到全内核 `<!-- ROW_MINE: ksummit.messages.1610 -->`
+- 【Linux社区】决策记录：从第一天起建drivers/ualink迷你子系统、经DRM树流转、后续讨论抄送dri-devel `<!-- ROW_MINE: ksummit.messages.1612 -->`
+- 【Linux社区】强烈抨击两周内mainline修复的目标：对志愿者施压将致流失、拒加入或因怕罚而停滞 `<!-- ROW_MINE: ksummit.messages.1616 -->`
+- 【Linux社区】认为LKP/build警告长期有效；提出以sparse属性标记废弃API并对存量用户抑制警告 `<!-- ROW_MINE: ksummit.messages.1621 -->`
+- 【Linux社区】反驳“无回溯好过错误回溯”：栈上代码地址清单即可推断调用序列，最好附栈hexdump `<!-- ROW_MINE: ksummit.messages.1625 -->`
+- 【Linux社区】介绍BPF patchwork Checks实践：起VM跑selftests，让评审者投稿前即可见测试反馈 `<!-- ROW_MINE: ksummit.messages.1627 -->`
+- 【Linux社区】表态支持改进linux-next而非再造next类树；说明自己PR先入next三至七天以消除冲突 `<!-- ROW_MINE: ksummit.messages.1630 -->`
+- 【Linux社区】反对独立whitespace/风格补丁：损害git log -p与blame追溯代码演化能力，随bug系列则可 `<!-- ROW_MINE: ksummit.messages.1633 -->`
+- 【Linux社区】指出Sasha立场矛盾：既称无AI依赖之虞又称AI可催化维护者工具化改进 `<!-- ROW_MINE: ksummit.messages.1643 -->`
+- 【Linux社区】提议Konstantin跑bot对Linus推送做b4 dig建commit到邮件公开映射，兼审计无讨论来源的提交 `<!-- ROW_MINE: ksummit.messages.1648 -->`
+- 【Linux社区】辨析邮件协议与客户端职责并援引OEM邮件驱动集成测试先例；断言根因是维护者时间瓶颈 `<!-- ROW_MINE: ksummit.messages.1649 -->`
+- 【Linux社区】已修复几乎全部可修警告；分析usb_string重名警告根因是Sphinx单一符号命名空间且补丁未合并 `<!-- ROW_MINE: ksummit.messages.1650 -->`
+- 【Linux社区】倡议低成本收集冲突谈判等资源并列出书单；主张社区规模已大到应引入专业心理帮助 `<!-- ROW_MINE: ksummit.messages.1651 -->`
+- 【Linux社区】澄清Konstantin已在b4 tip实现commitish到lore链接查找，当前用启发式栈而非AI `<!-- ROW_MINE: ksummit.messages.1656 -->`
+- 【Linux社区】以stable回迁难度论证包装文件应从第一天放正确路径且永不移动，避免cherry-pick失效 `<!-- ROW_MINE: ksummit.messages.1657 -->`
+- 【Linux社区】质疑LLM取符号的必要性；盘点Debian/Fedora/Arch等debuginfo缺口，建议推动发行版改进 `<!-- ROW_MINE: ksummit.messages.1659 -->`
+- 【Linux社区】表态愿承担bug triage工作，并认为Bugzilla应被更合工作流的系统取代 `<!-- ROW_MINE: ksummit.messages.1662 -->`
+- 【Linux社区】质疑闭列表法律风险论据；探讨仅发修复提交清单是否算预公告及linux-distros的供应链定位 `<!-- ROW_MINE: ksummit.messages.1664 -->`
+- 【Linux社区】反驳“总有锁保护”前提：大量简单无锁算法存在，锁不应成为普遍假设 `<!-- ROW_MINE: ksummit.messages.1678 -->`
+- 【Linux社区】引QEMU弃用文档纠正James Bottomley：仅i440fx-1.4至1.7弃用，pc别名（8.x）未弃用 `<!-- ROW_MINE: ksummit.messages.1679 -->`
+- 【Linux社区】流程记录：对TAB的generated-content.rst v5给出Reviewed-by，含维护者可拒slop段落落地 `<!-- ROW_MINE: ksummit.messages.1682 -->`
+- 【Linux社区】区分特性流程/开发者除名/导师制三问题；详列社区现行ad hoc排斥机制并主张35年仅一例应慎立新规 `<!-- ROW_MINE: ksummit.messages.1686 -->`
+- 【Linux社区】支持Carpenter观点并阐述信任资本论：提出“能实质评审同复杂度贡献再期待社区认真对待”规则 `<!-- ROW_MINE: ksummit.messages.1695 -->`
+- 【Linux社区】提出以SoftISP为参照的可量化开放性验收标准；主张校准文件等同固件blob且当前缺乏谈判筹码 `<!-- ROW_MINE: ksummit.messages.1697 -->`
+- 【Linux社区】反对DT绑定移出内核：内核硬件覆盖最广且专家在此；指出现有devicetree-rebasing仓库并指引DT BoF `<!-- ROW_MINE: ksummit.messages.1699 -->`
+- 【Linux社区】决策记录：不属维护者峰会，应投Plumbers MM或LSFMM，并当场补抄送linux-mm `<!-- ROW_MINE: ksummit.messages.1700 -->`
+- 【Linux社区】要求定义“slop”的判定边界；指出与howto.rst既有要求重复并追问文档面向媒体的目的 `<!-- ROW_MINE: ksummit.messages.1705 -->`
+- 【Linux社区】反对使用“slop”一词：对部分维护者含义不明只能靠猜，主张表达明确化 `<!-- ROW_MINE: ksummit.messages.1709 -->`
+- 【Linux社区】以MIRI实测辨析&UnsafeCell<T>与C T*别名差异，明确raw pointer与引用的UB边界 `<!-- ROW_MINE: ksummit.messages.1712 -->`
+- 【Linux社区】论证DT绑定即ABI：任何破坏性变更都须为既有使用者规划无断档过渡路径 `<!-- ROW_MINE: ksummit.messages.1714 -->`
+- 【Linux社区】阐明optional getter返回NULL表示特性被禁用的语义、错误指针误用模式与上报建议 `<!-- ROW_MINE: ksummit.messages.1719 -->`
+- 【Linux社区】提议按kernel-doc标记设-Wall参数或经CI落实，回应drm Makefile局部hack的经验 `<!-- ROW_MINE: ksummit.messages.1736 -->`
+- 【Linux社区】技术议题提案，介绍内核 Rust 支持的编译模型、文档、测试、工具链与编码规范。 `<!-- ROW_MINE: ksummit.messages.1905 -->`
+- 【Linux社区】主张文档不足以把关，要求 API 进入主流发行版包，小众设备留在树外，门槛宁高勿低。 `<!-- ROW_MINE: ksummit.messages.1908 -->`
+- 【Linux社区】给出用 lei 查询 lore 追溯补丁讨论的具体工作流与命令示例。 `<!-- ROW_MINE: ksummit.messages.1911 -->`
+- 【Linux社区】澄清 b4 dig 需解码 Link 编码，URL 末段即转义 Message-ID。 `<!-- ROW_MINE: ksummit.messages.1914 -->`
+- 【Linux社区】指出 Linus 与 James 对 Fixes 语义理解分歧，此即其欲解决的问题。 `<!-- ROW_MINE: ksummit.messages.1921 -->`
+- 【Linux社区】认同 LLM 会产生难以察觉的错误，主张标注 LLM 参与程度便于维护者分配审查精力。 `<!-- ROW_MINE: ksummit.messages.1925 -->`
+- 【Linux社区】提议给 git log 加过滤旗标，可隐藏 Message-ID 或转换为 lore 链接。 `<!-- ROW_MINE: ksummit.messages.1929 -->`
+- 【Linux社区】提出新议题“如何让提交者活得更轻松”，维护者偏好不一令提交流程痛苦。 `<!-- ROW_MINE: ksummit.messages.1937 -->`
+- 【Linux社区】反驳 LKML 无用论，要求先提供可靠的 public-inbox 整库镜像方案。 `<!-- ROW_MINE: ksummit.messages.1951 -->`
+- 【Linux社区】指出 checkpatch 对 include/trace 应直接忽略并附此前提案的 lore 链接。 `<!-- ROW_MINE: ksummit.messages.1955 -->`
+- 【Linux社区】询问资格脚本输出与候选提名、投票资格的对应关系及是否适用于主席选举。 `<!-- ROW_MINE: ksummit.messages.1961 -->`
+- 【Linux社区】主张为固件接口划定跨子系统归属与访问控制准则，形成可指引厂商的文档。 `<!-- ROW_MINE: ksummit.messages.1964 -->`
+- 【Linux社区】分析 NPU 用户态碎片化，追问 TVM、TensorFlow、PyTorch 谁将成为标准栈。 `<!-- ROW_MINE: ksummit.messages.1966 -->`
+- 【Linux社区】澄清 eligible 与 ballots 两个集合的用途，确认该标准不适用于主席选举。 `<!-- ROW_MINE: ksummit.messages.1968 -->`
+- 【Linux社区】指出 linux-distros 已承担该协调职能但内核未将其纳入流程，附文档提交引用。 `<!-- ROW_MINE: ksummit.messages.1971 -->`
+- 【Linux社区】反驳强制入库 -next，指出上下层树失步会给 Stephen 造成冲突负担。 `<!-- ROW_MINE: ksummit.messages.1973 -->`
+- 【Linux社区】质疑训练数据只取被接受补丁，主张被拒补丁及其原因同样有训练价值。 `<!-- ROW_MINE: ksummit.messages.1983 -->`
+- 【Linux社区】讲述三个同名 Sphinx 项目造成的构建困惑，指帮助信息误导。 `<!-- ROW_MINE: ksummit.messages.1986 -->`
+- 【Linux社区】主张 Message-ID 用于被应用的补丁以便回复与追踪，Link 用于引发补丁的讨论。 `<!-- ROW_MINE: ksummit.messages.1992 -->`
+- 【Linux社区】提议在 THE REST 加 X: drivers/net/* 以减少数千封误投。 `<!-- ROW_MINE: ksummit.messages.1994 -->`
+- 【Linux社区】反驳批量批评，主张 Bugzilla 可搜索可追责、报告量低且分诊属另一议题。 `<!-- ROW_MINE: ksummit.messages.1996 -->`
+- 【Linux社区】引用 UMN 作者澄清页并追问该研究是否违反会议的漏洞披露时限要求。 `<!-- ROW_MINE: ksummit.messages.2002 -->`
+- 【Linux社区】提议用共享活文档记录设计要点、剩余工作与 ack/nack 干系人，消除邮件考古。 `<!-- ROW_MINE: ksummit.messages.2006 -->`
+- 【Linux社区】Linus 接受 hpa 补丁集提案，视其为改进并询问转换是否已获 ack。 `<!-- ROW_MINE: ksummit.messages.2008 -->`
+- 【Linux社区】澄清议题走向并指导向 LPC MM 微会提交注册的具体步骤。 `<!-- ROW_MINE: ksummit.messages.2016 -->`
+- 【Linux社区】提供设备存量数据，OpenBlocks A7 有设计缺陷，Kirkwood NAS 仍有人在维护。 `<!-- ROW_MINE: ksummit.messages.2017 -->`
+- 【Linux社区】介绍 systemd 以成套 cleanup 类型注解编码清理逻辑的实践经验。 `<!-- ROW_MINE: ksummit.messages.2024 -->`
+- 【Linux社区】论证唯一可行别名模型是“勿假设不别名”，基于来源的规则或可扩展但不可强制。 `<!-- ROW_MINE: ksummit.messages.2033 -->`
+- 【Linux社区】详述 sphinx-pre-install 版本切换逻辑并以 openSUSE 打包实测论证必要性。 `<!-- ROW_MINE: ksummit.messages.2034 -->`
+- 【Linux社区】追问 OpenSSF 资助项目需求与设计讨论为何未公开，批评 LF 延迟透明。 `<!-- ROW_MINE: ksummit.messages.2038 -->`
+- 【Linux社区】主张关键在工具使用方式而非工具本身，机械重命名属文档范围。 `<!-- ROW_MINE: ksummit.messages.2041 -->`
+- 【Linux社区】质疑整体回退 umn.edu 补丁的价值，指出其中多为真实修复且审查才是关键。 `<!-- ROW_MINE: ksummit.messages.2045 -->`
+- 【Linux社区】介绍 GPIO 双抽象与引用计数、设备“麻木”等生命周期处理实践。 `<!-- ROW_MINE: ksummit.messages.2053 -->`
+- 【Linux社区】主张对 AI 应设高于人类的标准，以计算器 1% 出错率类比不可接受。 `<!-- ROW_MINE: ksummit.messages.2056 -->`
+- 【Linux社区】主张为无特殊限制的代码提供统一分配接口，以 zlib 需临时内存为例。 `<!-- ROW_MINE: ksummit.messages.2057 -->`
+- 【Linux社区】反驳语气问题，指出真正的风险是测试噪音与无价值的 CI 邮件。 `<!-- ROW_MINE: ksummit.messages.2058 -->`
+- 【Linux社区】指出回移通知批次冗余令人困惑，请求伪短日志按作者排序。 `<!-- ROW_MINE: ksummit.messages.2059 -->`
+- 【Linux社区】指出标准允许编译器向内存位置先写无关值或改写为读检写，代码须自行假设。 `<!-- ROW_MINE: ksummit.messages.2062 -->`
+- 【Linux社区】补充总结缺失的伦理维度，GPL 代码作 LLM 输入可能违背其精神而非条文。 `<!-- ROW_MINE: ksummit.messages.2065 -->`
+- 【Linux社区】给出 Reviewed-by，主张机械变换工具明确在文档范围内应予披露。 `<!-- ROW_MINE: ksummit.messages.2068 -->`
+- 【Linux社区】探讨 Rice 定理与运行时检查的关系，分析 Rust 类型系统空洞与求解器缺陷。 `<!-- ROW_MINE: ksummit.messages.2069 -->`
+- 【Linux社区】指出 SCSI 大量合入琐碎补丁的现实，建议把警告降到 W=2/W=3，并直言多数驱动实际无人维护。 `<!-- ROW_MINE: ksummit.messages.2073 -->`
+- 【Linux社区】厂商以保留寄存器或调校细节藏功能是行业惯例；同意难防作弊，但明确流程与口径已是进步。 `<!-- ROW_MINE: ksummit.messages.1743 -->`
+- 【Linux社区】技术提案：在 kvmalloc 版 malloc 宏上加 might_sleep()，在不允许调度的上下文触发强警告。 `<!-- ROW_MINE: ksummit.messages.1745 -->`
+- 【Linux社区】回应 Bottomley：先文档化整体期望与流程，才谈 X-Stable 头等细节的规范化。 `<!-- ROW_MINE: ksummit.messages.1747 -->`
+- 【Linux社区】认同弃用 Message-ID；提议区分“指向讨论”与“补丁来源”两种 Link 标签并征求命名。 `<!-- ROW_MINE: ksummit.messages.1752 -->`
+- 【Linux社区】补 CC 重发，实质论点在引文：按席位统计 78.4% 为重复参会者、构成小圈子，提议 M: 条目维护者投票选议题。 `<!-- ROW_MINE: ksummit.messages.1754 -->`
+- 【Linux社区】技术分析：FIDO2 无法导入既有密钥、算法贫乏，主张不如沿用现有 gpg TPM2 支持。 `<!-- ROW_MINE: ksummit.messages.1762 -->`
+- 【Linux社区】强硬反驳“小众设备留在树外”论：上游化是数十年社区规则；为 HabanaLabs 辩护，反对设任意准入门槛。 `<!-- ROW_MINE: ksummit.messages.1765 -->`
+- 【Linux社区】2023 年 TAB 选举公告：候选人征集、投票资格（2022 年后 3 个带 tag 提交）、CIVS 电子投票，完整流程记录。 `<!-- ROW_MINE: ksummit.messages.1766 -->`
+- 【Linux社区】论基于作用域的清理易使锁滞留过久；设想编译器提示“可清理处”但注释复杂、难以落地。 `<!-- ROW_MINE: ksummit.messages.1771 -->`
+- 【Linux社区】论证 MM 相对 DRM（硬件五花八门、流程如放猫）属“小事”，请 Airlie 指正。 `<!-- ROW_MINE: ksummit.messages.1772 -->`
+- 【Linux社区】定位峰会为“Linus 的员工会议”；反对投票制，建议 mm 经 LSFMM 选派一两名代表，并主张常设维护者列表。 `<!-- ROW_MINE: ksummit.messages.1773 -->`
+- 【Linux社区】指出按 stable 头筛选修复对发行版是误导性保证；报 distro 先曾滞留 3 个月以上，环节越少越好。 `<!-- ROW_MINE: ksummit.messages.1777 -->`
+- 【Linux社区】人力是根本约束、开源无担保；反提议中间人分诊角色，追问由谁出力。 `<!-- ROW_MINE: ksummit.messages.1780 -->`
+- 【Linux社区】以全局变量重读示例区分代码语义与编译器优化，讨论 READ_ONCE 的必要边界与 volatile 之别。 `<!-- ROW_MINE: ksummit.messages.1785 -->`
+- 【Linux社区】以自身常犯的 size_t 与 ssize_t 混用为例，支持对无符号 x<0 给出警告的诉求。 `<!-- ROW_MINE: ksummit.messages.1786 -->`
+- 【Linux社区】详解 drm-intel 52 人提交权与 CI、隔离期理由，列改流程三风险，建议用 dim 生成 drm-for-next。 `<!-- ROW_MINE: ksummit.messages.1789 -->`
+- 【Linux社区】澄清并非设 Reviewed-by 门槛：始终存在无需作者信任即可接受的贡献，须保护新贡献者源头。 `<!-- ROW_MINE: ksummit.messages.1792 -->`
+- 【Linux社区】提议按版本范围把回移通知合并为单封而非每版本一封，以大幅降低邮件量。 `<!-- ROW_MINE: ksummit.messages.1795 -->`
+- 【Linux社区】与 Linus 论辩文档目的：防媒体误读引发 AI 提交潮、拒绝系列时可援引；自称对 AI 评审工具乐观。 `<!-- ROW_MINE: ksummit.messages.1800 -->`
+- 【Linux社区】称 fwctl 尚无未解决的技术反对意见；引 Azure 论文 70% RDMA 流量，主张网络维护责任需共享。 `<!-- ROW_MINE: ksummit.messages.1801 -->`
+- 【Linux社区】论 fwctl 无需更多安全层级、BMC 授权模型在内核之外，CXL 命令支持将分阶段推进。 `<!-- ROW_MINE: ksummit.messages.1809 -->`
+- 【Linux社区】断言 Rust 构建问题与 C 侧常态相当（i386 错误拖到 -rc3），劝抱怨者对镜自省，治理立场鲜明。 `<!-- ROW_MINE: ksummit.messages.1810 -->`
+- 【Linux社区】描述基于 folio 补丁的 rebase 被打乱的两难：去 folio 有冲突风险，保留则合并无期；请求给出指引。 `<!-- ROW_MINE: ksummit.messages.1811 -->`
+- 【Linux社区】说明仅 Cc-stable 用于可安全回移的新设备 quirk；重要且必须回移的修复才加 Fixes 指向。 `<!-- ROW_MINE: ksummit.messages.1814 -->`
+- 【Linux社区】详述 task_struct 生命周期、Send 与 Sync 约束、零成本引用计数与组领导访问示例；请推荐示范驱动。 `<!-- ROW_MINE: ksummit.messages.1815 -->`
+- 【Linux社区】澄清 rustc_codegen_gcc 不经 LLVM 而直译为 libgccjit 输入，另有 cranelift 后端，纠正编译器认知。 `<!-- ROW_MINE: ksummit.messages.1818 -->`
+- 【Linux社区】提议按业界 XLT 模式把峰会从约 34 人扩至 54 人，20 席留给新人以引入异见；戏提抽签赞助筹资。 `<!-- ROW_MINE: ksummit.messages.1820 -->`
+- 【Linux社区】直言把 fixes 树加入 linux-next：一次性设置、对自己无 downside，别让他人承受你的回归。 `<!-- ROW_MINE: ksummit.messages.1825 -->`
+- 【Linux社区】称文档化流程执行不力；展示 USB 子系统机器人提醒缺 cc:stable 的现成文本，并质疑推广意愿。 `<!-- ROW_MINE: ksummit.messages.1836 -->`
+- 【Linux社区】提出修订文本：按工具生成比例增加审查、提交者须能解释并捍卫全部内容，否则可不经详审拒绝。 `<!-- ROW_MINE: ksummit.messages.1838 -->`
+- 【Linux社区】系统阐述 UB 是程序员与编译器的可见行为契约、Rust 尽量少无谓 UB；问题在 C 模型太易无意违约。 `<!-- ROW_MINE: ksummit.messages.1843 -->`
+- 【Linux社区】建议该话题进 Plumbers 主会场而非局限于维护者峰会，以触达整个内核社区。 `<!-- ROW_MINE: ksummit.messages.1850 -->`
+- 【Linux社区】数据说明：256MB 窗口承载 vmlinux、模块、vmalloc、ioremap 等，比 arm32 传统布局更紧。 `<!-- ROW_MINE: ksummit.messages.1856 -->`
+- 【Linux社区】实测报告：CIVS 配置页无法列出进行中的投票，停用再激活流程也不显示，影响 opt-in 体验。 `<!-- ROW_MINE: ksummit.messages.1857 -->`
+- 【Linux社区】披露事件源头：本人曾误并全 AI 生成补丁；主张文档只写现行透明政策、不为未发生之事预设立场。 `<!-- ROW_MINE: ksummit.messages.1859 -->`
+- 【Linux社区】释读措辞：透明义务已由前句祈使句确立，“can”仅举可选做法；补丁已要求披露 LLM 使用与提示词。 `<!-- ROW_MINE: ksummit.messages.1861 -->`
+- 【Linux社区】补 CC 重发，实质论点在引文：LLM 细微错误源于统计推断且难被人类直觉察觉，媒体必渲染“Linux 接受 AI 补丁”。 `<!-- ROW_MINE: ksummit.messages.1869 -->`
+- 【Linux社区】观察 stable-rc 树多年无人测试；反对再推广一个“次稳定”树，以免与 stable 本身混淆。 `<!-- ROW_MINE: ksummit.messages.1872 -->`
+- 【Linux社区】分享 rename_rev.pl 脚本，用于审查整文件重排缩进时夹带偷改的工具型贡献。 `<!-- ROW_MINE: ksummit.messages.1876 -->`
+- 【Linux社区】主张旧文件系统因历史数据档案不可简单删除；提议提供辅助库帮志愿者维护旧 FS 并融入现代 VFS。 `<!-- ROW_MINE: ksummit.messages.1877 -->`
+- 【Linux社区】正式提议“维护者支持小组”：志愿者名单、公开准则与保密机制，作为 CoC 之外的预防性减压渠道。 `<!-- ROW_MINE: ksummit.messages.1878 -->`
+- 【Linux社区】认同改进 C 侧接口可使 C 与 Rust 双方受益，回顾合并前尽量不动 C 头文件的策略及其后来演变 `<!-- ROW_MINE: ksummit.messages.2075 -->`
+- 【Linux社区】提议在机器人提示文本中补充 stable+noautosel 及理由写法，并预判此类提醒邮件会随大家熟悉而减少 `<!-- ROW_MINE: ksummit.messages.2077 -->`
+- 【Linux社区】提交 Kernel Summit track 议题：panel API 缺原子支持与 DDIC 高级特性，致上下游碎片化与维护负担 `<!-- ROW_MINE: ksummit.messages.2078 -->`
+- 【Linux社区】细化 bug@kernel.org 机器人提案：以该地址为触发标记，LLM 解码栈回溯定位提交者并转发对应列表，认同回归标记 `<!-- ROW_MINE: ksummit.messages.2079 -->`
+- 【Linux社区】质疑 UMN 作者“补丁均出于善意”说法，列举学生与导师诚信的多种可能，指出涉事提交未公开撤回 `<!-- ROW_MINE: ksummit.messages.2081 -->`
+- 【Linux社区】主张 git 历史含完整补丁路径可供 LLM 用于回迁补丁，并谈 AI 助力测试覆盖及 selftests 各自为政问题 `<!-- ROW_MINE: ksummit.messages.2109 -->`
+- 【Linux社区】反驳“小众设备留在树外”说，重申上游优先是数十年的立场，发行版并非主要使用场景，habanalabs 非搭便车 `<!-- ROW_MINE: ksummit.messages.2114 -->`
+- 【Linux社区】提交技术议题：介绍 b4 review 与 b4 bugs 新特性如何助过载维护者保持去中心化开发 `<!-- ROW_MINE: ksummit.messages.2117 -->`
+- 【Linux社区】确认已按指引把议题提交从 Kernel Summit track 改投 LPC MM MC，属议题提交流程记录 `<!-- ROW_MINE: ksummit.messages.2118 -->`
+- 【Linux社区】表态其 next 分支仅在最后手段时 rebase，以免“补丁加修复”成对进入上游，顾全可二分性 `<!-- ROW_MINE: ksummit.messages.2129 -->`
+- 【Linux社区】提交技术议题：列出 kernel crate 拆分、外部 crate 依赖、工具链与 GCC 构建、CI 集成、rustdoc 等方向 `<!-- ROW_MINE: ksummit.messages.2145 -->`
+- 【Linux社区】指出 Link: 已成“大杂烩”，本质是命名空间问题，提议新增 Link-Origin 或 Origin 标签以明确语义 `<!-- ROW_MINE: ksummit.messages.2150 -->`
+- 【Linux社区】反对文档开头就“摆臭脸”，主张面向愿意守规的人应更友善，AI slop 肇事者本就不会去读文档 `<!-- ROW_MINE: ksummit.messages.2152 -->`
+- 【Linux社区】指出 X-mount.auto-fstypes 否定写法歧义，并提醒未来文件系统若以 no 开头命名会撞语义 `<!-- ROW_MINE: ksummit.messages.2154 -->`
+- 【Linux社区】说明脚本按 commit ID/patch-id/主题三键匹配以容忍 rebase 与改题，改动大则计时归零，反对 pending-fixes 因增延迟 `<!-- ROW_MINE: ksummit.messages.2156 -->`
+- 【Linux社区】澄清上游无线驱动并无闭源监管 blob，监管合规经 regulatory.db 或固件完成 `<!-- ROW_MINE: ksummit.messages.2157 -->`
+- 【Linux社区】主张没有更优替代品，Red Hat 与 OpenSuse 等有实力续命 bugzilla，或雇 patchwork 团队写“bugwork” `<!-- ROW_MINE: ksummit.messages.2159 -->`
+- 【Linux社区】以 git 统计修正论据：v5.18..v5.19 的 2531 个 Fixes 中仅约 2%（54 个）针对已发布版的既有缺陷 `<!-- ROW_MINE: ksummit.messages.2178 -->`
+- 【Linux社区】纠正 Doug 引错 Sasha 的 RFC 并给出正确链接，顺势示范按主题搜索会找错结果的问题 `<!-- ROW_MINE: ksummit.messages.2181 -->`
+- 【Linux社区】质疑 _cleanup_ 注解在无引用计数下有 use-after-free 与双重释放风险，宁忘 free 也不愿忘置 NULL `<!-- ROW_MINE: ksummit.messages.2187 -->`
+- 【Linux社区】提出关键技术疑问：Rust 是否支持 fentry/mcount，否则 ftrace 对所有 Rust 驱动形同全局 notrace `<!-- ROW_MINE: ksummit.messages.2188 -->`
+- 【Linux社区】回应 quilt 修复难度：并不难但需懂 bash 与 Perl，自述曾几乎修成而搁置 `<!-- ROW_MINE: ksummit.messages.2189 -->`
+- 【Linux社区】治理立场：政策必须放进内核树，网页形式按流程可被直接无视，并调侃 LF 与 korg 之别 `<!-- ROW_MINE: ksummit.messages.2193 -->`
+- 【Linux社区】报告已完成 opt-in 并输入确认码仍无处投票，暴露 TAB 选举流程故障，属流程记录 `<!-- ROW_MINE: ksummit.messages.2194 -->`
+- 【Linux社区】提议更聪明的欢迎机器人：检测空白损伤、不适用于上游等情形并给新贡献者针对性建设性提示，可并入 Sashiko `<!-- ROW_MINE: ksummit.messages.2200 -->`
+- 【Linux社区】提出补丁元数据光谱 No-Fixes 到 Fixes 到 Fixes&Stable，维护者尽责标注，fork 方据元数据自行决策 `<!-- ROW_MINE: ksummit.messages.2201 -->`
+- 【Linux社区】澄清升级调用可不 panic 而以 fallible 与 Option 表达失败，失败后的处理取决于调用方 `<!-- ROW_MINE: ksummit.messages.2202 -->`
+- 【Linux社区】实测 kernel-doc.py 在 python3.13/3.9/3.6 下分别约 31.7 秒、59 秒、76.5 秒，证明 Python 版本是慢因之一 `<!-- ROW_MINE: ksummit.messages.2205 -->`
+- 【Linux社区】主张必须维持兼容性并举 python-3 教训，认为 C 可把部分警告升级为错误但不能擅改位运算优先级 `<!-- ROW_MINE: ksummit.messages.2214 -->`
+- 【Linux社区】公布 960 名合格选民、267 张选票及当选五人名单，并致谢卸任主席 Chris Mason，属治理流程记录 `<!-- ROW_MINE: ksummit.messages.2221 -->`
+- 【Linux社区】逐节评论 TAB 补丁：忧媒体报道引发 AI 补丁洪流，主张先严后松，明确“专家在环”与整批拒绝权 `<!-- ROW_MINE: ksummit.messages.2229 -->`
+- 【Linux社区】质疑 CXL 多节点互通缺节点级授权的安全模型，主张 fwctl 尽量覆盖命令但受定义的安全模型约束 `<!-- ROW_MINE: ksummit.messages.2230 -->`
+- 【Linux社区】分享 soc-tools.git 维护者钩子工具集与安装脚本，称 Fixes 标签错误或缺 SoB 已无可借口 `<!-- ROW_MINE: ksummit.messages.2231 -->`
+- 【Linux社区】说明 gccrs 以 VaListImpl lang item 特判 LLVM 依赖代码，无需分叉标准库，并多路对比 rustc 行为保兼容 `<!-- ROW_MINE: ksummit.messages.2235 -->`
+- 【Linux社区】以 NVMe、binder、Puzzlefs、Apple AGX 等在树 Rust 驱动反驳“驱动未必写得成 Rust”的前提质疑 `<!-- ROW_MINE: ksummit.messages.2236 -->`
+- 【Linux社区】分享 16GB 显存下 Qwen-3.6 35B 等小模型可查出真实 bug 的实测结论及 kernel-review-agent 代码 `<!-- ROW_MINE: ksummit.messages.2239 -->`
+- 【Linux社区】建议把该议题并入 LPC Complex Camera MC 的 V4L2 与 DRM 讨论，称两者覆盖面高度重叠 `<!-- ROW_MINE: ksummit.messages.2241 -->`
+- 【Linux社区】反驳用户态化会更受维护，但认同系统级影响会减轻，提及 LSFMM 曾短议弃用文件系统转 FUSE `<!-- ROW_MINE: ksummit.messages.2243 -->`
+- 【Linux社区】支持鼓励 AI 预审以减 v1 往返，反对强制依赖专有或非本地工具，并以 bitkeeper 类比便利化陷阱 `<!-- ROW_MINE: ksummit.messages.2247 -->`
+- 【Linux社区】提交维护者峰会议题：描述弃用 API 仍被新增调用的困境，列举 checkpatch、构建机器人等四种方案 `<!-- ROW_MINE: ksummit.messages.2250 -->`
+- 【Linux社区】澄清 Mason 的 review-prompts 由 Sashiko 拉取故两边都提交，并问是否也存在反向同步 `<!-- ROW_MINE: ksummit.messages.2254 -->`
+- 【Linux社区】结合 Copilot 诉讼分析 AI 产出著作权认定未定，主张标注 AI 参与以便法律有变时可复查或移除 `<!-- ROW_MINE: ksummit.messages.2256 -->`
+- 【Linux社区】介绍 BPF CI 需专人值守的现状，指倦怠主因是补丁洪流，呼吁文化转型让活跃开发者兼做审查 `<!-- ROW_MINE: ksummit.messages.2258 -->`
+- 【Linux社区】提议实现 malloc()/calloc() 屏蔽 vmalloc/kmalloc/GFP 细节，讨论失败语义、越界与释放后使用检测，兼作 Rust std::alloc 基础 `<!-- ROW_MINE: ksummit.messages.2260 -->`
+- 【Linux社区】说明新列表服务器可拒收 HTML 邮件，但跨消息校验封面信抄送不可行，主张改进提交者工具而非服务端拦截 `<!-- ROW_MINE: ksummit.messages.2266 -->`
+- 【Linux社区】反驳确定性工具论：自编译内核无调试符号时无确定性方案可 retroactively 解码，承认语气不当但坚持质疑者应给出替代方案 `<!-- ROW_MINE: ksummit.messages.2267 -->`
+- 【Linux社区】记录其九月维护者峰会议题提案获得采纳并引发实际讨论，附 LWN 报道链接 `<!-- ROW_MINE: ksummit.messages.2270 -->`
+- 【Linux社区】以 tip 树多主题分支协同维护为例，说明热点树分摊合并负载的可行方向 `<!-- ROW_MINE: ksummit.messages.2272 -->`
+- 【Linux社区】因疫情与机场交叉暴露风险提议包机往来欧美较空闲机场，附按里程计价的初步成本考察 `<!-- ROW_MINE: ksummit.messages.2274 -->`
+- 【Linux社区】更正自身 grep 别名造成的统计误差，确认 v5.19..master 约 2928 个 Fixes 提交且误报不足百条，结论不变 `<!-- ROW_MINE: ksummit.messages.2275 -->`
+- 【Linux社区】质疑按 git 提交自动订阅开发者收 bug 邮件的方案在欧盟法律上可能不可行 `<!-- ROW_MINE: ksummit.messages.2280 -->`
+- 【Linux社区】阐述 AMD/Intel 数十人团队难以适配合并窗口、缺 CI、Fixes 标签与 cherry-pick 严重失准，导致开发回流公司内部 `<!-- ROW_MINE: ksummit.messages.2287 -->`
+- 【Linux社区】厘清可观察行为与线程可见性之别，指出 UB 被现代优化器利用的历史及 TS 6010 未入 C23 的原因 `<!-- ROW_MINE: ksummit.messages.2289 -->`
+- 【Linux社区】认可议题有价值并建议补充 drivers/platform/chrome 独立存在理由与 ACPI 固件 quirk 取舍经验两个讨论点 `<!-- ROW_MINE: ksummit.messages.2297 -->`
+- 【Linux社区】主张 AI 审查发现应像 syzkaller 一样进入公共看板持续跟踪，不阻塞提交者，便于委派他人修复 `<!-- ROW_MINE: ksummit.messages.2299 -->`
+- 【Linux社区】区分可观察行为与可见性，讨论加强数据竞争语义、编译器需识别锁保护对象，承诺与编译器开发者沟通 `<!-- ROW_MINE: ksummit.messages.2301 -->`
+- 【Linux社区】介绍自身实践：为 rtla 代传 pull、应 Linus 要求拆主题分支便于单项否决，建议维护者先分拆工作再谈层级化 `<!-- ROW_MINE: ksummit.messages.2303 -->`
+- 【Linux社区】说明 CIVS opt-in 必须使用收到原信的同一邮箱，输入确认码后才会出现投票链接，解决投票失败问题 `<!-- ROW_MINE: ksummit.messages.2307 -->`
+- 【Linux社区】引 LPC 报告主张以底层设计期望文档为语义过滤基础，分步降低 stable 邮件墙的审查负担 `<!-- ROW_MINE: ksummit.messages.2314 -->`
+- 【Linux社区】补充第五类返回值模式：有效指针、NULL 或错误指针皆可，如各 *get*_optional() 函数 `<!-- ROW_MINE: ksummit.messages.2317 -->`
+- 【Linux社区】主张模块生命周期必含设备生命周期，devm 内存可延至模块释放统一回收以消除中断处理器的释放后使用 `<!-- ROW_MINE: ksummit.messages.2319 -->`
+- 【Linux社区】肯定补丁有用并提出去掉 0x 前缀改十进制、去掉括号噪音的具体格式建议 `<!-- ROW_MINE: ksummit.messages.2321 -->`
+- 【Linux社区】以 Debian 邮件式缺陷跟踪少人用、Launchpad 更流行为例论证报障需网页界面，普通用户并非程序员 `<!-- ROW_MINE: ksummit.messages.2322 -->`
+- 【Linux社区】回应 UFS/Android 性能论：仅拟废弃过旧 SCSI 协议层，LKL 与 SG_IO 面向遗留设备支持场景 `<!-- ROW_MINE: ksummit.messages.2325 -->`
+- 【Linux社区】提供作者网页澄清声明与论文入选信息，分析道歉信：破坏了信任但未实际注入内核缺陷 `<!-- ROW_MINE: ksummit.messages.2327 -->`
+- 【Linux社区】指出 IB dma-buf 补丁经 dri-devel 与 rdma 大量专家长时间评审，批评绕过常规评审把烂摊子引入 drivers/misc 的维护者 `<!-- ROW_MINE: ksummit.messages.2333 -->`
+- 【Linux社区】提供具体进展：Nishimura 正大幅改进 Coccinelle 添加与匹配注记的能力，回应注记提案可行性 `<!-- ROW_MINE: ksummit.messages.2339 -->`
+- 【Linux社区】认同 Patchwork 应支持 Message-Id 标签，发现自身脚本误用 Link 标签并即时更正重拉补丁 `<!-- ROW_MINE: ksummit.messages.2340 -->`
+- 【Linux社区】提议在 scripts/ 下做内核专用 bisect 包装：自动保存 .config、每步重新配置并显示配置影响 `<!-- ROW_MINE: ksummit.messages.2343 -->`
+- 【Linux社区】以资深维护者身份要求 Enrico 停止宪法第二修正案言论并警告将被过滤，属峰会讨论线的行为治理 `<!-- ROW_MINE: ksummit.messages.2345 -->`
+- 【Linux社区】主张公开讨论而非回避，类比 BitKeeper 争议；分享 b4 摘要改用 ollama/gemma3 避免专有依赖的实践并建议 BoF `<!-- ROW_MINE: ksummit.messages.2346 -->`
+- 【Linux社区】以一线经验反驳 Airlie：Qualcomm 硬件发布前九个月公开提交、BSP 纯上游，并担忧维护者双重标准开恶例 `<!-- ROW_MINE: ksummit.messages.2349 -->`
+- 【Linux社区】认同指定负责人是难点，自省可否出任回归 bugmaster，支持先向 LF 争取设立职位再谈工具 `<!-- ROW_MINE: ksummit.messages.2350 -->`
+- 【Linux社区】分享驱动内部强制修复须带 Fixes 的经验，偶用 unknown 但会受维护者质疑，支持该方向 `<!-- ROW_MINE: ksummit.messages.2358 -->`
+- 【Linux社区】以代码与 MIRI 验证澄清 &UnsafeCell<T> 与 C 指针的等价条件及引用失效构成 UB 的具体情形 `<!-- ROW_MINE: ksummit.messages.2361 -->`
+- 【Linux社区】质疑 AI 补丁回移植：上下文假设易错非 LLM 所长；反对测试代码无关紧要的假设并指出 selftests 已被轻视 `<!-- ROW_MINE: ksummit.messages.2363 -->`
+- 【Linux社区】认同标准界回避真实硬件的倾向，给出内核路线：现行编码规范配合外部工具检查 dependency ordering，附文章链接 `<!-- ROW_MINE: ksummit.messages.2364 -->`
+- 【Linux社区】提出实质架构问题：能否用 Rust 重写子系统内部数据结构而让 C 驱动继续作为消费者 `<!-- ROW_MINE: ksummit.messages.2370 -->`
+- 【Linux社区】逐项对比线性与二叉合并模式的构建成本与 bisect 效果，结论二叉模式重建开销更高，开头另更正一处笔误 `<!-- ROW_MINE: ksummit.messages.2371 -->`
+- 【Linux社区】以 sysv/adfs/befs 五年补丁量论证无人爱的旧文件系统负担极小，分析用法决定风险，提出必要时可剥离 mmap 支持 `<!-- ROW_MINE: ksummit.messages.2376 -->`
+- 【Linux社区】完整议题征集：前后台进程分级 swap、percpu 集群与 NUMA 绑定问题、swap tier 方案及与 Chris Li 的争论，附议程与六条链接 `<!-- ROW_MINE: ksummit.messages.2378 -->`
+- 【Linux社区】阐明绑定即 ABI 的处理原则：旧平台文本绑定错乱时两者取其二，影响用户的既成错误需内核兼容并顾及下游再导出者 `<!-- ROW_MINE: ksummit.messages.2381 -->`
+- 【Linux社区】给出实时构建与启动测试失败数据（14 个失败构建、28 个失败 qemu 用例），质问分析失败该由谁承担 `<!-- ROW_MINE: ksummit.messages.2386 -->`
+- 【Linux社区】纠正 Linus 的稻草人论证：给出 iomap 化后 2.5GB/s 升至 7GB/s、CPU 降 70%、bufferhead 每块 56 字节等数据，主张核心难题是不可测代码的管理，并指其言行失当 `<!-- ROW_MINE: ksummit.messages.2389 -->`
+- 【Linux社区】明确反对 kernel-doc 自动改用更高 Python 版本的“魔法”，质疑覆盖用户搜索路径是否妥当 `<!-- ROW_MINE: ksummit.messages.2393 -->`
+- 【Linux社区】分享测试中常需扩展核心内核方能解决问题的经验，指出认证流程各阶段均有时间压力 `<!-- ROW_MINE: ksummit.messages.2400 -->`
+- 【Linux社区】引 needle-in-a-haystack 研究说明长上下文失针风险（GPT-4 仅有效利用约一成窗口），支持 AI 优先服务维护者，澄清 linuxtv 爬虫属类 DDoS 自动化 `<!-- ROW_MINE: ksummit.messages.2401 -->`
+- 【Linux社区】总结辩论并定调：打印提示可接受，手动挑选 Python 解释器覆盖 python3 符号链接不可接受 `<!-- ROW_MINE: ksummit.messages.2402 -->`
+- 【Linux社区】以发行版视角主张任何 bug 修复都应标 Fixes 而非依赖 Cc: stable，指出标注决策会迅速过时，下游可凭 Fixes 判断取舍 `<!-- ROW_MINE: ksummit.messages.2412 -->`
+- 【Linux社区】技术反驳 C++ 路线：g++ 要求 C99 初始化器按声明序且不支持 __seg_gs，采用会致代码质量倒退 `<!-- ROW_MINE: ksummit.messages.2417 -->`
+- 【Linux社区】实测 16GB 显卡上 Qwen-3.6 35B 等小模型可查出真实回移植缺陷，附审查 agent 与渲染工具仓库链接 `<!-- ROW_MINE: ksummit.messages.2419 -->`
+- 【Linux社区】说明 USB GPIO 扩展器热拔时并发 ioctl 可在 gpio_chip 置空前漏过的竞态场景 `<!-- ROW_MINE: ksummit.messages.2425 -->`
+- 【Linux社区】立场：opt-out 类通知形同垃圾邮件，tracker 或更便利用户但不可强制开发者使用 `<!-- ROW_MINE: ksummit.messages.2432 -->`
+- 【Linux社区】反驳“正常工作流”可以定义，支持 UAPI 暴露的一切须有开源对应实现的要求 `<!-- ROW_MINE: ksummit.messages.2433 -->`
+- 【Linux社区】完整 RFC 补丁：构建期从 DWARF 生成地址到 file:line 查找表，栈回溯直接带行号，实测镜像增 44MiB `<!-- ROW_MINE: ksummit.messages.2439 -->`
+- 【Linux社区】补充 C 标准语义论点：编译器可合法把写入替换为读-检查-写序列，呼应 WRITE_ONCE 讨论 `<!-- ROW_MINE: ksummit.messages.2440 -->`
+- 【Linux社区】论述 GPU merge criteria 以开源用户空间要求为大棒阻断厂商 dump-and-run，属集体性可持续机制 `<!-- ROW_MINE: ksummit.messages.2442 -->`
+- 【Linux社区】主张 bugzilla 应默认 opt-out，用邮件量数据对比驳斥对通知量的夸大担忧 `<!-- ROW_MINE: ksummit.messages.2447 -->`
+- 【Linux社区】提议以 virtio 设备作 Rust 驱动示范，阐述 TDX/SEV 等机密虚拟化防恶意设备的真实需求 `<!-- ROW_MINE: ksummit.messages.2455 -->`
+- 【Linux社区】提案 assisted-by 作为补丁脚注（同 base-commit 模式），承诺在 b4 落地并写入 AGENTS.md `<!-- ROW_MINE: ksummit.messages.2458 -->`
+- 【Linux社区】系统论证 bugzilla 在加入讨论、大附件、检索、定向回复上全面优于邮件线程 `<!-- ROW_MINE: ksummit.messages.2460 -->`
+- 【Linux社区】提案合并逐版本 stable 通知为摘要邮件，指出 AUTOSEL、排队、rc 测试多批冗余 `<!-- ROW_MINE: ksummit.messages.2461 -->`
+- 【Linux社区】审查记录：nit 指出句号缺失并给出正式 Reviewed-by 标签 `<!-- ROW_MINE: ksummit.messages.2463 -->`
+- 【Linux社区】主张疑似 AI slop 的补丁集应整体即刻拒收，核心要求是每补丁发出前必经人审 `<!-- ROW_MINE: ksummit.messages.2477 -->`
+- 【Linux社区】评价 PL061 Rust 驱动直观易维护，追问 gpio 类封装与 RAII guard、下划线惯用法细节 `<!-- ROW_MINE: ksummit.messages.2485 -->`
+- 【Linux社区】提出报告辅助应用、报告文档改进、内核测试者社区与社区经理等优先于联络员的路线 `<!-- ROW_MINE: ksummit.messages.2489 -->`
+- 【Linux社区】引韦氏词典 2025 年度词汇与主流媒体报道，论证“slop”一词广为人知可用 `<!-- ROW_MINE: ksummit.messages.2490 -->`
+- 【Linux社区】反驳 hpa：文档与代码同等需要严谨，AI 生成的隐晦错误文档同样有害 `<!-- ROW_MINE: ksummit.messages.2493 -->`
+- 【Linux社区】提出 regzbot 保持自治并作为 KCIDB 邮件提交接口的协作架构，避免工具重复建设 `<!-- ROW_MINE: ksummit.messages.2495 -->`
+- 【Linux社区】报告 GCC Rust 前端项目已启动并采用 LLVM 加 GCC 混合方案，m68k 等架构支持在途 `<!-- ROW_MINE: ksummit.messages.2502 -->`
+- 【Linux社区】主张默认信任子系统维护者把关，举证相机 ISP 厂商换子系统以逃避固件接口文档义务 `<!-- ROW_MINE: ksummit.messages.2504 -->`
+- 【Linux社区】交代 python 3.6 兼容补丁系列取舍，Leap15 与 RHEL8 受影响，决定权交 Corbet `<!-- ROW_MINE: ksummit.messages.2508 -->`
+- 【Linux社区】质疑 AI 输出属非人类创作不可版权的定论，指出其依赖人类作品训练不同于猴子自拍案 `<!-- ROW_MINE: ksummit.messages.2511 -->`
+- 【Linux社区】转述 Linus 在 OSS 峰会对 eBPF 的表态，论证 eBPF 非用户 API 及维护者被动担责的风险 `<!-- ROW_MINE: ksummit.messages.2519 -->`
+- 【Linux社区】单句事实反驳：Ted 提议的主动询问维护者正是 AUTOSEL 现行做法 `<!-- ROW_MINE: ksummit.messages.2522 -->`
+- 【Linux社区】论证社区须明确表态而非暧昧措辞，引 Phoronix 与 Register 报道说明立场的社会影响 `<!-- ROW_MINE: ksummit.messages.2528 -->`
+- 【Linux社区】长文论证 time crate 破坏源于 stdlib 而非语言、内核无递归依赖之痛，并以 C23 对比 editions `<!-- ROW_MINE: ksummit.messages.2529 -->`
+- 【Linux社区】治理流程记录：2022 TAB 选举提名截止、投票资格与 CIVS 投票方式通知 `<!-- ROW_MINE: ksummit.messages.2531 -->`
+- 【Linux社区】事实反驳：Linus 系因 bugzilla CC 邮件相助而非通过邮件列表，重申邮件模式难以为继 `<!-- ROW_MINE: ksummit.messages.2533 -->`
+- 【Linux社区】主题提案：盘点各架构遗留 highmem 用户并给出两年七步分阶段淘汰时间表 `<!-- ROW_MINE: ksummit.messages.2535 -->`
+- 【Linux社区】澄清与 Laurent 的“矛盾”质疑：AI 是工具非依赖，举证 CVE 流程基础设施大量由 AI 构建 `<!-- ROW_MINE: ksummit.messages.2540 -->`
+- 【Linux社区】提案以 lore URL 关联状态标记实现 bug 追踪与 patchwork 替代的轻量方案 `<!-- ROW_MINE: ksummit.messages.2543 -->`
+- 【Linux社区】反驳 AI 标注或反招讹诈式商业化，同时认可其提前审查与未来法律风险处置价值 `<!-- ROW_MINE: ksummit.messages.2545 -->`
+- 【Linux社区】指出 maintainer-tip.rst 已载明 patch.msgid.link 规范，建议提升为通用文档 `<!-- ROW_MINE: ksummit.messages.2549 -->`
+- 【Linux社区】反驳 LKML 无用论：自己日常浏览 LKML，否则须订阅数百个子系统列表 `<!-- ROW_MINE: ksummit.messages.2550 -->`
+- 【Linux社区】论证多数用户不会读 reporting-issues 文档，LKML 高音量必然淹没求助信息 `<!-- ROW_MINE: ksummit.messages.2552 -->`
+- 【Linux社区】说明双列表并行实践：LKML 保讨论可见性，子系统列表保证 patchwork 收录，附 MAINTAINERS 示例 `<!-- ROW_MINE: ksummit.messages.2554 -->`
+- 【Linux社区】提供历史佐证：x86 上 Wine 与 VMware 曾受 PAGE_OFFSET 非常规取值影响但早已修复 `<!-- ROW_MINE: ksummit.messages.2559 -->`
+- 【Linux社区】论证邮件核心缺陷在无法追踪状态，主张先建流程再谈工具，bugzilla 可作过渡载体 `<!-- ROW_MINE: ksummit.messages.2560 -->`
+- 【Linux社区】指向自己提交的 devm_ 改造补丁系列，作为“devm 不会永远隐带 GFP_KERNEL”的证据 `<!-- ROW_MINE: ksummit.messages.2563 -->`
+- 【Linux社区】答疑：dev_* 打印设施暂缺将补齐，CamelCase 遵循 Rust 官方命名指南且当前强制 `<!-- ROW_MINE: ksummit.messages.2564 -->`
+- 【Linux社区】论胡萝卜优于大棒：permissive 生态亦获回馈，市场力量自筛选值得逆向工程的设备 `<!-- ROW_MINE: ksummit.messages.2565 -->`
+- 【Linux社区】主题提案：7.2 达 565 名首次贡献者创纪录，提议迎新机器人或专职引导团队 `<!-- ROW_MINE: ksummit.messages.2566 -->`
+- 【Linux社区】限定 Kees 的“新代码用 Rust”为“新驱动”，强调 guard() 等 C 语言增强依旧重要 `<!-- ROW_MINE: ksummit.messages.2567 -->`
+- 【Linux社区】提议以 Message-ID 头替代 Link: 标签，raw 消息号 Patchwork 可直接获取，回应 rostedt 对 patchwork 可见性的需求 `<!-- ROW_MINE: ksummit.messages.2570 -->`
+- 【Linux社区】反对“API 必须一次设计对”前提，主张 fail fast 迭代重做、先求最小操作集、API 版本化，并可推荐复用既有接口 `<!-- ROW_MINE: ksummit.messages.2571 -->`
+- 【Linux社区】质疑 PR 后期测试时机与覆盖集中在周期末尾、连续树 bisection 利弊、坏补丁被 rebase 后的人工处理流程，另提议按稳定度再拆分 -next `<!-- ROW_MINE: ksummit.messages.2575 -->`
+- 【Linux社区】提出资源提供方可撤销访问的通用机制，已在 ChromeOS EC 驱动修复真实 UAF，附此前 LPC 演讲与补丁链接；自述漏交网站第二步提交 `<!-- ROW_MINE: ksummit.messages.2577 -->`
+- 【Linux社区】说明内核 -fwrapv 下有符号溢出已定义故只查无符号，提议 saturate_math 宏替代嵌套 size_add，解释 kmalloc 溢出致内存损坏场景 `<!-- ROW_MINE: ksummit.messages.2579 -->`
+- 【Linux社区】更正自己此前说法：合并窗口期间并无持续排入 stable 补丁的树，当时无暇处理，回应 leemhuis 的核查 `<!-- ROW_MINE: ksummit.messages.2581 -->`
+- 【Linux社区】指出“# 注释”写法与既有两种 trailer 注释机制不一致，主张 Link 等所有 trailer 统一采用其一 `<!-- ROW_MINE: ksummit.messages.2584 -->`
+- 【Linux社区】认为仅靠既有 trailer 不够，除非新增 Submission: 标签指向 lore 原始补丁，且需让开发者看到明确收益才会采用 `<!-- ROW_MINE: ksummit.messages.2590 -->`
+- 【Linux社区】主张变更经维护者且其需懂 Rust；树级重构者至少需基本 Rust 知识；希望第二语言尽量多人在一定时间内参与 `<!-- ROW_MINE: ksummit.messages.2596 -->`
+- 【Linux社区】质疑 addr 高于 _text 时偏移截断为 u32 的风险，追问是否被 __sprint_symbol 前置检查排除 `<!-- ROW_MINE: ksummit.messages.2600 -->`
+- 【Linux社区】峰会实为“Linus 的员工会议”，无技术内容亦无投票；否认小圈子观感但承认与 in-group 实质等同；反对按 M: 条目投票定议题 `<!-- ROW_MINE: ksummit.messages.2607 -->`
+- 【Linux社区】多数子系统接受基于 linux-next 的补丁；net/bpf 等例外需主题标注目标树；针对 LTS 分支提交违反 stable 规则 `<!-- ROW_MINE: ksummit.messages.2610 -->`
+- 【Linux社区】反驳“仅评审无法律问题”：版权不止覆盖代码，引在诉案件与 Napster 类比 `<!-- ROW_MINE: ksummit.messages.2615 -->`
+- 【Linux社区】认为工具上线后低质 v1 减少反而降低上游流量；维护者需信任明显错误已被过滤；回应工具应面向所有人而非仅维护者 `<!-- ROW_MINE: ksummit.messages.2618 -->`
+- 【Linux社区】以日均约四封报错流量质疑工具存续价值，建议直接停用或改为各子系统列表收件，且仍需人维护 `<!-- ROW_MINE: ksummit.messages.2621 -->`
+- 【Linux社区】认为只有自动化而非人工定位引入失败的树才可行，否则人力会耗尽；怀疑测试延迟使其不现实 `<!-- ROW_MINE: ksummit.messages.2623 -->`
+- 【Linux社区】解释升级即 refcount_inc_not_zero，成功表示强计数非零；失败表示对象已消亡但内存保留以免 UAF `<!-- ROW_MINE: ksummit.messages.2624 -->`
+- 【Linux社区】对比 DRM 自定义 IOCTL 命令缓冲与 V4L2 全寄存器文档化；称抵制致 99% 摄像头驱动在树外，主张混合模型并交社区统一标准 `<!-- ROW_MINE: ksummit.messages.2625 -->`
+- 【Linux社区】归纳编译器不得超出代码规定多读全局、代码多次读则可缓存；WRITE_ONCE 常用于防写撕裂 `<!-- ROW_MINE: ksummit.messages.2627 -->`
+- 【Linux社区】列四类原因：该标未标（如 syzbot）、事后才知是修复、加 PCI ID、依赖清理补丁先行，附实例链接 `<!-- ROW_MINE: ksummit.messages.2631 -->`
+- 【Linux社区】反驳“AI 如人阅读”论：AI 程序可能逐字复制受限内容，且无法像人那样被追问是否照抄并可信作答 `<!-- ROW_MINE: ksummit.messages.2632 -->`
+- 【Linux社区】syzbot 模糊测试不等于抗恶意输入，合法范围内的元数据篡改无法检测；无人维护文件系统建议循驱动惯例改 API 并标 CONFIG_BROKEN `<!-- ROW_MINE: ksummit.messages.2637 -->`
+- 【Linux社区】反驳零成本论：每日 5-10 分钟删垃圾还写了脚本；版本 5.1.1 并非陈旧；症结是无人愿做无聊工作而非工具 `<!-- ROW_MINE: ksummit.messages.2639 -->`
+- 【Linux社区】以大芯片公司与车企审计失败案例及 Google 两年数据证明全取 stable 修复可覆盖 90%+ 已知漏洞，主张企业内核旧发布模式错误 `<!-- ROW_MINE: ksummit.messages.2641 -->`
+- 【Linux社区】指出内核所谓“unwinding”在编译器界称“stack walking”，任务更简单，术语混淆或为 Rust 讨论分歧来源 `<!-- ROW_MINE: ksummit.messages.2648 -->`
+- 【Linux社区】别名规则并非官方绑定 LLVM，规范互相引用是常态；内核 Rust panic 不展开栈 `<!-- ROW_MINE: ksummit.messages.2654 -->`
+- 【Linux社区】质疑为何不立即提交补丁而等到十二月，提醒保密脚注须先移除才能发公共列表 `<!-- ROW_MINE: ksummit.messages.2655 -->`
+- 【Linux社区】目标不止找原始提交，而是挖掘补丁前后所有相关讨论线程；b4 dig 模糊匹配会搜错，AI 版更进一步 `<!-- ROW_MINE: ksummit.messages.2659 -->`
+- 【Linux社区】实测 Ryzen 9 7900 上 kernel-doc 约 32 秒，受 GIL 无法并行，Python 去 GIL 后可恢复并行补丁 `<!-- ROW_MINE: ksummit.messages.2660 -->`
+- 【Linux社区】反对“尽量低声明”硬规则：定义与赋值分离更可维护，RAII 变量例外合并；认可 include 按字母排序 `<!-- ROW_MINE: ksummit.messages.2661 -->`
+- 【Linux社区】赞同逆向工程由市场力量自筛选；小厂无力移植致设备在 Linux 上不可用，大市场份额厂商更有动力开源 `<!-- ROW_MINE: ksummit.messages.2667 -->`
+- 【Linux社区】实测 qwen3.6 36B（3B 激活）生成辅助脚本质量接近大模型；提出达前沿模型 80%-90% 质量即值得本地化，主张蒸馏小模型并试跑 Sashiko `<!-- ROW_MINE: ksummit.messages.2669 -->`
+- 【Linux社区】按 Linus 建议拆分主题分支避免一处被拒整体 rebase；更新多直接自 patchwork 拉入；tip 树以拉取而非 cherry-pick 合流 `<!-- ROW_MINE: ksummit.messages.2675 -->`
+- 【Linux社区】列出 rustc 平台支持与缺 stdlib 的架构；追问 rustc_codegen_gcc 版本与架构组合数及 libgccjit ABI 跨版本稳定性 `<!-- ROW_MINE: ksummit.messages.2682 -->`
+- 【Linux社区】自述 capable 桌面机约 3 分钟可完成 htmldocs，反推对方环境异常，建议升级 Sphinx 8 修复性能问题 `<!-- ROW_MINE: ksummit.messages.2684 -->`
+- 【Linux社区】认为对方措辞显“不悦”，提出替代表述：工具易犯与人类不同的错误，维护者可要求证明生成代码已验证 `<!-- ROW_MINE: ksummit.messages.2685 -->`
+- 【Linux社区】反对为 2005 年前引入的缺陷翻 history 树定位提交，称到那程度只是学术练习 `<!-- ROW_MINE: ksummit.messages.2687 -->`
+- 【Linux社区】查得 5.Posting.rst 示例无“# ”，为免文档互相矛盾主张该补丁不应合入除非一并修订 `<!-- ROW_MINE: ksummit.messages.2689 -->`
+- 【Linux社区】建议选无内核支持的 I2C/SPI 扩展器用 Rust 实现；提示 PL061 所在 ARMv4T 仅 GCC 支持会增加难度 `<!-- ROW_MINE: ksummit.messages.2692 -->`
+- 【Linux社区】反驳 Arnd 假设：1GB 内存的系统同样用 highmem，且 1GB 是 32 位后期主流配置 `<!-- ROW_MINE: ksummit.messages.2696 -->`
+- 【Linux社区】提交 8 行增量补丁：全自动生成系列应预期额外审查；维护者不容忍 slop，无法解释者可能被整系列拒收 `<!-- ROW_MINE: ksummit.messages.2705 -->`
+- 【Linux社区】反对强制 Fixes 加 CC stable：AUTOSEL 已多取、Fixes 标签灌水已成风气；质疑用户直接使用内核发布的普遍性 `<!-- ROW_MINE: ksummit.messages.2706 -->`
+- 【Linux社区】指出 Rust 官方保证也允许因类型推断变更破坏兼容（time crate 事件先例） `<!-- ROW_MINE: ksummit.messages.2715 -->`
+- 【Linux社区】区分 bot 扫出的 bug 清单与功能增强清单，以 ring buffer 一批 nice to have 小增强为例说明 KTODO 定位 `<!-- ROW_MINE: ksummit.messages.2722 -->`
+- 【Linux社区】列举 web 界面可结构化收集内核版本、是否回归、复现步骤、完整控制台日志等，邮件常需多轮往返 `<!-- ROW_MINE: ksummit.messages.2724 -->`
+- 【Linux社区】追问强制 base commit 是否会误导想应用于更早基线者；认为仅确需特定基线时才应作硬性要求 `<!-- ROW_MINE: ksummit.messages.2725 -->`
+- 【Linux社区】提议为缺陷跟踪做“bug 版 patchwork”系统，每条缺陷有独立状态页并汇集相关邮件，自述 trace-cmd/kernelshark 的缺陷积压长期未清理 `<!-- ROW_MINE: ksummit.messages.2729 -->`
+- 【Linux社区】认为对 Rust 未定义别名模型的担忧被夸大，提出“确定允许、确定 UB、尚未定夺”三分框架，并推荐 Tower of Weakenings 分层记忆模型与 std::ptr 文档作实用依据 `<!-- ROW_MINE: ksummit.messages.2734 -->`
+- 【Linux社区】反驳机器人只报告不评判即可减负的设想，指出审阅者仍需逐条处理机器人报告，担心提交者反复刷未准备好的补丁，提议设暂存列表承接 `<!-- ROW_MINE: ksummit.messages.2737 -->`
+- 【Linux社区】重发 TAB 选举提名征集全文并提醒 9 月 20 日硬截止，重列资格标准（2020-2021 年三枚带签章 tag 的主线/稳定提交）与本届任期将满的五人名单 `<!-- ROW_MINE: ksummit.messages.2738 -->`
+- 【Linux社区】主张 Assisted-by 标签不必列具体产品名仍有价值；警告 LLM 新人跨数十子系统大改而维护者承载力不足；重提对专有审查工具（Sashiko 类）撤资风险的担忧 `<!-- ROW_MINE: ksummit.messages.2740 -->`
+- 【Linux社区】确认所举 UMN 实验 patch（mlx5 缺失检查）确实引入 UAF 且问题在后续 commit 中才被修复，为 UMN 补丁的实际危害提供第一手事实 `<!-- ROW_MINE: ksummit.messages.2741 -->`
+- 【Linux社区】以自身经验反驳以更深维护者树缓解维护者压力的提案，认为层级间传递补丁本身即引入延迟，集体维护制只能缓解休假不能缓解稳定期 `<!-- ROW_MINE: ksummit.messages.2744 -->`
+- 【Linux社区】主张内核对 NULL 与 ERR_PTR 返回语义缺乏标准化是缺陷与痛点之源，即便无法全局统一，也应让开发者无需深挖调用栈即可查知各函数语义 `<!-- ROW_MINE: ksummit.messages.2748 -->`
+- 【Linux社区】引用 Clang 官方文档“存在适合生产环境的最小 UBSan runtime”反驳 sanitizer 不可用于生产的断言，并指对方批评未针对其原论点 `<!-- ROW_MINE: ksummit.messages.2749 -->`
+- 【Linux社区】就混合会议包容性给出在末页幻灯片列出会后讨论渠道（列表、IRC、Matrix、私人邮箱）的具体做法，主张会议与黑客松分开办、以更频繁的小型专题活动取代大型联合活动 `<!-- ROW_MINE: ksummit.messages.2755 -->`
+- 【Linux社区】认为“教育”不能解决 MAINTAINERS 条目失准，数千开发者无人能尽知其动向与动机；自述按人名手动删 CC，并指出 netdev 与 wireless 的划分最令人困惑 `<!-- ROW_MINE: ksummit.messages.2757 -->`
+- 【Linux社区】针对 memory_map! 宏示例追问能否表达与 CPU 无关的大端寄存器访问，指出 readl/writel 类宏的字节序交换需求是该 API 设计必须覆盖的场景 `<!-- ROW_MINE: ksummit.messages.2758 -->`
+- 【Linux社区】澄清 RefinedRust 核心基于其 RustBelt 博士论文的 Coq 形式化借检工作，并非复用 Miri 的 UB 检查与抽象机，至多共用 rustc MIR 提取逻辑或测试用例 `<!-- ROW_MINE: ksummit.messages.2763 -->`
+- 【Linux社区】梳理两处政策冲突（修复就绪后 7 天 vs 通知后 14 天强制披露、共享给列表的 PoC 是否须公开），提议在 oss-security 公开讨论，并纠正文档中 linux-distros 规则无助修复的误导措辞 `<!-- ROW_MINE: ksummit.messages.2765 -->`
+- 【Linux社区】给出 GitHub 训练语料约六成宽松许可、两成五 GPL、一成五不明的构成估计，认为 copyleft 项目采用 AI 风险低收益高，预测基础模型终将声明以宽松许可代码训练 `<!-- ROW_MINE: ksummit.messages.2767 -->`
+- 【Linux社区】归纳支持固定功能内核接口的两个理由（通用化使现有用户态开箱即用、厂商借闭源固件换取上游驱动），并以低成本嵌入式 SoC 场景反驳 AI 加速器必然走向完全共享编程模型的判断 `<!-- ROW_MINE: ksummit.messages.2769 -->`
+- 【Linux社区】主张需把“收到的补丁默认被作者与提交者真正理解”这一隐含假设明确文档化，因 LLM 使大规模无人理解的提交成为可能；引 maintainer-tip.rst 的 SOB 链条规则讨论是否推广到全内核 `<!-- ROW_MINE: ksummit.messages.2776 -->`
+- 【Linux社区】要求停用“跨子系统 NAK”提法以免误读为网络层阻止 RDMA/存储新功能，指问题实质是 nVidia 将专有网关包装为可进各子系统的 misc 驱动，受影响子系统应均有发言权 `<!-- ROW_MINE: ksummit.messages.2778 -->`
+- 【Linux社区】赞同“请 AI 代工成品交作己用属欺骗”的界线，补充以广见于教科书与 GPL 范例的常见算法（如快速排序）可接受，而最前沿新算法则成问题的区分标准 `<!-- ROW_MINE: ksummit.messages.2781 -->`
+- 【Linux社区】阐明实际共识假设是处理不可信输入的代码须能经受 syzbot 模糊测试而非通过即安全；指出 Linus 已 NACK 删除缺维护文件系统的做法，故将此程序性难题提交峰会正式讨论 `<!-- ROW_MINE: ksummit.messages.2787 -->`
+- 【Linux社区】主张只要线下价值更高即不应因出行恐惧者自我设限，反对把所有人压到最低公分母；指出远程亦非最优（亚非低带宽人群被排斥），提议以地理分散 meetup 试水重启社交面 `<!-- ROW_MINE: ksummit.messages.2791 -->`
+- 【Linux社区】提议以“Legal-risk-by”类显性标签替代 Assisted-by，使应用补丁与转发 pull request 者无法以不知情推脱法律风险，呼应诉讼未决期应谨慎的立场 `<!-- ROW_MINE: ksummit.messages.2822 -->`
+- 【Linux社区】反驳以 virtio 设备作 Rust 驱动展示的建议，质问多少内核维护者写过 virtio 驱动，坚持应选真实硬件驱动方能检验语言可行性 `<!-- ROW_MINE: ksummit.messages.2826 -->`
+- 【Linux社区】指出 soc 树已用 Krzysztof 的脚本与 git 钩子检测 ephemeral 提交、易推广复用但缺宣传，并评估以提交量计 linux-next 的错误率其实很低 `<!-- ROW_MINE: ksummit.messages.2828 -->`
+- 【Linux社区】以 LLVM issue 22099 辨析严格别名缺陷现状（原测试例已修复但换用分配内存或 void 指针可复现），接受 Miri 优于 sanitizer 但仅覆盖已测路径的限定，并追问 Rust 新类型系统与求解器的兼容计划 `<!-- ROW_MINE: ksummit.messages.2829 -->`
+- 【Linux社区】系统提出提速与减警方案：放宽 Sphinx 最低版本、按文档缓存 kernel-doc 解析结果、改用 rst 原生 field list、默认并行构建，以及 W=1 入常规构建、kernel-doc 分级告警等 `<!-- ROW_MINE: ksummit.messages.2833 -->`
+- 【Linux社区】澄清支持标签者意在提高警惕而非放松审查，记录“按使用方式而非模型名”的共识倾向；批评三类 LLM 用户造成的复审时间浪费并提出超限暂停受理的 nack 构想，认同对 Sashiko 类工具的依赖已影响吞吐 `<!-- ROW_MINE: ksummit.messages.2834 -->`
+- 【Linux社区】同意以测试数据生成为更安全的边界，提出审阅测试代码者是有限资源、LLM 引发的补丁潮会构成额外负担的现实约束 `<!-- ROW_MINE: ksummit.messages.2836 -->`
+- 【Linux社区】主张 Rust 被施以远低于 C 的兼容标准并反推 Rust-only 代码若同等对待应推迟到 2034 年，重申以 C++14/17（C 近超集、类型安全链接、机械转换可行）编译整个内核的替代路线 `<!-- ROW_MINE: ksummit.messages.2844 -->`
+- 【Linux社区】支持“-rc1 后所有 PR 均先经 linux-next 浸泡”为目标，以 scsi-fixes 也进 next 的实例反驳“紧急修复分支不影响他人”的假设，并提醒首发想到的修复未必是最佳修复 `<!-- ROW_MINE: ksummit.messages.2847 -->`
+- 【Linux社区】以 pin control 与 GPIO 字符设备首版均被推翻为例印证《人月神话》“总要扔掉一版”的规律，回顾 2012 ELC 白板式多厂商委员会设计出 v2 的经验，主张线下集中关键人物仍值得尝试 `<!-- ROW_MINE: ksummit.messages.2850 -->`
+- 【Linux社区】指出 Documentation/process/threat-model.rst 已大体包含所需内容但 Sashiko 未据此行动，追问 AI 审查工具的提示词应直接注入规则还是指引其阅读该文件 `<!-- ROW_MINE: ksummit.messages.2851 -->`
+- 【Linux社区】已将外部协助请求转发 SUSE 文档团队，并分析其被内部产品文档与翻译任务挤占、并非内核文档直接消费者的现状，指出开发者才是上游技术文档的初稿作者 `<!-- ROW_MINE: ksummit.messages.2852 -->`
+- 【Linux社区】反驳“太难”可作不加 Fixes 的借口（子系统专家最有条件判断），报告已加 checkpatch 警告并计划逐一向维护者索要 Fixes 标签（经 patch.msgid.link 供稳定工具拾取），主张 pre-git 补丁也应标 Fixes: 1da177e4c3f4 `<!-- ROW_MINE: ksummit.messages.2859 -->`
+- 【Linux社区】以 sp8870_readreg 返回值检查误用 if (err) 而非 if (err < 0) 的具体缺陷，反驳“media 侧 29 个 UMN 补丁无恶意且多有效”的总体评价，实证至少一个补丁引入真 bug `<!-- ROW_MINE: ksummit.messages.2866 -->`
+- 【Linux社区】正式发布 2023 年里士满维护者峰会征题公告：11 月 16 日举行、仅邀 30 人、以 [MAINTAINERS SUMMIT] 前缀发 ksummit 列表提议题即入计划委员会考量，列五人组委会与往届 LWN 纪要链接 `<!-- ROW_MINE: ksummit.messages.2867 -->`
+- 【Linux社区】以 trivial.git 事实维护者身份表态支持讨论受理政策但反对将其与 UMN 事件直接挂钩，并提供“无任何 umn.edu 补丁经 trivial 树合入”的关键事实 `<!-- ROW_MINE: ksummit.messages.2871 -->`
+- 【Linux社区】分析 Rust 的安全保证来自独占分配跟踪而引用计数场景保证大幅弱化，至多如 kasan 运行时检出 use-after-free；编译期跟踪需语义化编码生命周期规则，即便投入博士也恐复杂到不可用 `<!-- ROW_MINE: ksummit.messages.2877 -->`
+- 【Linux社区】回应开源权重模型微调设想：需大量调参且不可直接喂未过滤 LKML 存档（避免学到 2.6 时代风格），建议借 cregit 识别被接受补丁集反向构建语料子集，并预言 2025 年后补丁默认疑为 LLM 所写 `<!-- ROW_MINE: ksummit.messages.2879 -->`
+- 【Linux社区】详述自身全经邮件列表加 patchwork 的公开流程（修复后再以 for-next/for-linus 标签重发），反问将修复推入 linux-next 一两天能带来什么，并指出其所修 bug 恰是 next 阶段未测出者 `<!-- ROW_MINE: ksummit.messages.2880 -->`
+- 【Linux社区】对 Ted 提案预设“下次该做点不同”的措辞提出微讽后，同意在峰会就明尼苏达大学事件作非技术性综述并展开讨论，属议题征集过程中的承接记录 `<!-- ROW_MINE: ksummit.messages.2882 -->`
+- 【Linux社区】提出与内核峰会配套的维护者峰会续场议程：主线回归修复滞留 -next 数周、bugzilla 报告未转发维护者、CI 报告是否纳入 regzbot、回归跟踪工作方式是否需调整 `<!-- ROW_MINE: ksummit.messages.2885 -->`
+- 【Linux社区】指认现有方案即 pgpkeys.git 工具链，追问 OpenSSF 新框架的瓶颈、扩展性局限与方案进度 `<!-- ROW_MINE: ksummit.messages.2887 -->`
+- 【Linux社区】质疑手机麦加房间扬声器易产生啸叫回授，属峰会影音组织的具体技术顾虑 `<!-- ROW_MINE: ksummit.messages.2910 -->`
+- 【Linux社区】讲解 Rust 驱动的 C glue 注册路径、guard 离开作用域自动解锁与 RCU 释放、revocable 资源设计，并给出完整代码树 `<!-- ROW_MINE: ksummit.messages.2925 -->`
+- 【Linux社区】驳“市场自然筛选逆向工程”论：已有数十亿用户被排除在支持之外，主张厂商开放承诺的私下讨论应对核心维护者公开 `<!-- ROW_MINE: ksummit.messages.2926 -->`
+- 【Linux社区】发布 kbooboo datagen 源码并完善网页，询问是否托管于 kernel.org，拟购域名继续开发 `<!-- ROW_MINE: ksummit.messages.2928 -->`
+- 【Linux社区】澄清原意是“初次读取”而非全部 READ_ONCE，并给出编译器二次重载内存的代码示例 `<!-- ROW_MINE: ksummit.messages.2929 -->`
+- 【Linux社区】驳 Ventura：&UnsafeCell<T> 才等价 T*，&mut 别名需官方 hack，Opaque 并非智能指针，pinned-init 树内版本未用不稳定特性 `<!-- ROW_MINE: ksummit.messages.2930 -->`
+- 【Linux社区】主张阻止函数被调用难以覆盖 sysfs 等分散入口，吊销“整个设备”资源比仅吊销 I/O 内存更可行 `<!-- ROW_MINE: ksummit.messages.2931 -->`
+- 【Linux社区】提出 LLM 代码与 DCO 1.1 (a) 条款的冲突问题，追问是否列安全模型白名单、Generated-by 标签是否唯一拦截手段 `<!-- ROW_MINE: ksummit.messages.2935 -->`
+- 【Linux社区】驳 Leon 对逐补丁 CC 的指责：各补丁维护者不同、get_maintainers 输出不同、跨子系统、CC 过多会被列表服务器拒收，lore/b4 可取全系列 `<!-- ROW_MINE: ksummit.messages.2943 -->`
+- 【Linux社区】驳 JBottomley：-next 用于测试足够稳定，bisect 从 Linus 树基点即可，仅超一天的长测试受影响 `<!-- ROW_MINE: ksummit.messages.2949 -->`
+- 【Linux社区】表明个人惯例：无法深审时只给 Acked-by 表示 LGTM，回应 Reviewed-by 标准收紧提案 `<!-- ROW_MINE: ksummit.messages.2954 -->`
+- 【Linux社区】公布 1054 名注册选民、265 人投票及当选名单：Greg KH、Rostedt、Lawall、Hildenbrand、Ts'o `<!-- ROW_MINE: ksummit.messages.2957 -->`
+- 【Linux社区】玩笑之余给出论点：notmuch 2010 年起即支持折叠引用，开源 MUA 用户应自行改进工具而非要求他人改变引用习惯 `<!-- ROW_MINE: ksummit.messages.2963 -->`
+- 【Linux社区】提议对无名人士深入核心子系统的改动降优先级：以自身研究 VFS 花费数百小时论证社区参与度是天然过滤器 `<!-- ROW_MINE: ksummit.messages.2966 -->`
+- 【Linux社区】猜测 SAM9X7 受 28 根地址线限制，并提出可随 highmem 一并放弃 VIVT cache 支持，kmap 别名消失后更易理解 `<!-- ROW_MINE: ksummit.messages.2967 -->`
+- 【Linux社区】澄清抽象层与生成绑定的区别：C API 变更只需更新抽象层调用而非全部 Rust 模块，自动生成安全抽象是开放问题，AI 亦只能近似 `<!-- ROW_MINE: ksummit.messages.2970 -->`
+- 【Linux社区】反对全部 kernel-doc 进 HTML 构建（静态函数过多），转述 Willy 建议将 kernel-doc 检查常态化，并给出约 450 条警告的实测数据 `<!-- ROW_MINE: ksummit.messages.2979 -->`
+- 【Linux社区】提出具体后续补丁文案：在 submitting-patches.rst 顶部加指向 generated-content.rst 的指引，并征求 Corbet 偏好 `<!-- ROW_MINE: ksummit.messages.2983 -->`
+- 【Linux社区】说明 RFC 新版将解决用户态与 unbind 竞态但 cdev 生命周期问题仍在，主张竞态修复上移到 cdev 层 `<!-- ROW_MINE: ksummit.messages.2984 -->`
+- 【Linux社区】论证 cover letter 全量 CC 不可行：quilt 不支持、跨子系统系列按脚本需 221 个 CC 会被当垃圾邮件，并附实测清单 `<!-- ROW_MINE: ksummit.messages.2986 -->`
+- 【Linux社区】主张内核审查提示词应兼容多家 AI 系统（自述雇主要求用 Gemini），不应绑定单一 Claude 工具链 `<!-- ROW_MINE: ksummit.messages.2988 -->`
+- 【Linux社区】提议用 git notes 存放 Link 类元数据，既不进主线条目又可供子系统维护者使用，并已起草对应 b4 功能补丁 `<!-- ROW_MINE: ksummit.messages.2989 -->`
+- 【Linux社区】以 6.7.2 的 640 处改动、用户仅 4 天窗口及各月提交数统计（200/363/70/7）质疑合并窗口后火速回移植，并指出 bisect 指引文档已存在 `<!-- ROW_MINE: ksummit.messages.2992 -->`
+- 【Linux社区】驳“LLM 非普通工具”论：工具皆双刃，先按普通工具对待，若危害大于收益再弃用，并举 C++ 编译内核先例 `<!-- ROW_MINE: ksummit.messages.2994 -->`
+- 【Linux社区】提供事实：UMN 作者页面称实验未向 OSS 引入漏洞且获 IRB 豁免并附澄清 PDF，指出其将任下届会议程序委员 `<!-- ROW_MINE: ksummit.messages.2996 -->`
+- 【Linux社区】认为理论价值已被认可、争议在代价收益比，提议建 rust 支持渠道并强调初期快速响应的心理意义，认同个人长期承诺要求 `<!-- ROW_MINE: ksummit.messages.3000 -->`
+- 【Linux社区】转发投票启动公告：11 位候选人名单、CIVS 投票说明与 9 月 27 日截止时间 `<!-- ROW_MINE: ksummit.messages.3001 -->`
+- 【Linux社区】作为性能 MC 跑者同意该提案非传统性能议题、转入 ksummit track 45 分钟时段，属议程调整确认 `<!-- ROW_MINE: ksummit.messages.3003 -->`
+- 【Linux社区】驳 AMD/Intel 团队规模论：应探索限定 fixes 分支操作者、fixes 分支及时合并回开发分支、给 cherry-pick 打标以利 stable `<!-- ROW_MINE: ksummit.messages.3007 -->`
+- 【Linux社区】提议先删 HIGHPTE（x86 已删仅剩 ARM），元数据页缓存 highmem 可去除，但注意 kmap 基建或被复用于防 Spectre 类攻击 `<!-- ROW_MINE: ksummit.messages.3015 -->`
+- 【Linux社区】坚持“有人说”论据有效性，担忧对 LLVM/rustc 的深层隐性依赖，引 solver-woes 的 S-fear 议题，主张 gccrs 成功可缓解并质疑 Rust 定位 `<!-- ROW_MINE: ksummit.messages.3016 -->`
+- 【Linux社区】反对默认信任硬件与固件：举 UEFI RAS 字段在规范不同版本含义不一的缺陷为例，主张固件规范本身不可信 `<!-- ROW_MINE: ksummit.messages.3024 -->`
+- 【Linux社区】给出 __pm_runtime_resume 失败时递减 usage_count 的具体补丁，主张根治反复出现的引用计数泄漏模式 `<!-- ROW_MINE: ksummit.messages.3029 -->`
+- 【Linux社区】确认 Kirkwood 用户采用 2G/2G 分切无需 HIGHMEM，决定按 Jason 建议推进 ARMv5 去 HIGHMEM 补丁并待测试后提交 `<!-- ROW_MINE: ksummit.messages.3033 -->`
+- 【Linux社区】主张社区历来能推行礼仪规则：新增回复补丁勿全文引用的规则，并分享评审摘要置顶、删减无评注函数的实践 `<!-- ROW_MINE: ksummit.messages.3034 -->`
+- 【Linux社区】分析不标注的三类原因（无规则要求、不知规则、恶意）并判断当前善意开发者占绝对多数，暂无需担心恶意 `<!-- ROW_MINE: ksummit.messages.3042 -->`
+- 【Linux社区】指出 drm-misc 快进推送后仍会 cherry-pick 到 fixes 分支，树拓扑会让 Laurent 的树招致 sfr 的“同提交多树不同 ID”邮件 `<!-- ROW_MINE: ksummit.messages.3043 -->`
+- 【Linux社区】观察新人门槛升高导致评审冗长苛细、完美主义压倒可用性，呼应提交者与维护者关系恶化感受 `<!-- ROW_MINE: ksummit.messages.3046 -->`
+- 【Linux社区】Lorenzo支持用AI查找难察觉问题、整理代码并帮非英语母语者润色注释，反对一刀切“禁AI”，主张细粒度披露规则。 `<!-- ROW_MINE: ksummit.messages.3048 -->`
+- 【Linux社区】Kicinski向新人推荐lei订阅netdev子集，认为POP3拉取比SMTP订阅更稳，愿劝“永不打开的gmail文件夹”订阅者迁移。 `<!-- ROW_MINE: ksummit.messages.3064 -->`
+- 【Linux社区】2024年TAB选举11人获提名（含Dave Hansen、Kees Cook、Miguel Ojeda、Shuah Khan等），CIVS投票至9月27日。 `<!-- ROW_MINE: ksummit.messages.3069 -->`
+- 【Linux社区】Dobriyan称头文件排序规则无意义但无害、重复包含靠工具即可查，而初始化器排序影响代码生成、此类规则可能有害。 `<!-- ROW_MINE: ksummit.messages.3071 -->`
+- 【Linux社区】Linus反汇编证实编译器能省略kfree(NULL)，归功cleanup.h中DEFINE_FREE内联“if (_T)”写法（PeterZ等设计），强调首要目标是人类可读。 `<!-- ROW_MINE: ksummit.messages.3072 -->`
+- 【Linux社区】Mason赞同由0-day机器人统一跑checkpatch与AI测试建立基线，维护者获益明显；指出AI推理不免费，需云厂商捐赠算力。 `<!-- ROW_MINE: ksummit.messages.3074 -->`
+- 【Linux社区】Ojeda答复Rostedt：Rust已有mcount支持（PR 57220），fentry仍为开放issue（#55092）；基于LLVM，Clang能做的rustc亦可。 `<!-- ROW_MINE: ksummit.messages.3083 -->`
+- 【Linux社区】Kicinski为2023峰会提议议题：发布流程时机影响维护者安排离线休息的能力，指向倦怠问题。 `<!-- ROW_MINE: ksummit.messages.3084 -->`
+- 【Linux社区】Leon引Mauro实测：umn.edu撤销系列（190补丁）封面信自动生成221个Cc必被判垃圾邮件；并指RDMA撤销应Cc Gunthorpe与Ledford。 `<!-- ROW_MINE: ksummit.messages.3096 -->`
+- 【Linux社区】Bottomley主张用“活文档”记录folio设计目标、各方关切与补丁状态，ack仍由作者经公共列表收集，非文档代收。 `<!-- ROW_MINE: ksummit.messages.3100 -->`
+- 【Linux社区】Linus反对提交预生成flex/bison产物，称曾致版本地狱；引833e62245943、29c833061c1d（Kconfig）与e039139be8c2（dtc）为证。 `<!-- ROW_MINE: ksummit.messages.3101 -->`
+- 【Linux社区】Baryshkov峰会提议：DRM显示管线回调不应失败，而嵌入式多组件设备须调用clk/phy/pm_runtime等可失败设置，滋生易错代码，求不破API的方案。 `<!-- ROW_MINE: ksummit.messages.3102 -->`
+- 【Linux社区】Perches指若“THE REST”迁出LKML，MAINTAINERS中约80个标注linux-kernel@的小节多非核心、过半应一并移除（附grep清单）。 `<!-- ROW_MINE: ksummit.messages.3106 -->`
+- 【Linux社区】Brown实测kernel-doc . --none -Wall约需90秒，与Mauro机器python3.13的31.7秒形成跨环境对比。 `<!-- ROW_MINE: ksummit.messages.3107 -->`
+- 【Linux社区】Berg反对默认信任硬件：wifi“硬件”多为固件、多缺陷且可遭空中攻击，主张需信任设备的高性能场景改为显式opt-out。 `<!-- ROW_MINE: ksummit.messages.3108 -->`
+- 【Linux社区】Bacik称自动化仅解部分问题，主张汇聚经验形成最佳实践；指出维护已成主业，需可持续模式并降低新维护者上手门槛。 `<!-- ROW_MINE: ksummit.messages.3109 -->`
+- 【Linux社区】Bottomley峰会提案：请资深维护者分享应对压力的真实策略（公司压力、CVE与syzbot洪流），破除“独自硬扛”心理。 `<!-- ROW_MINE: ksummit.messages.3112 -->`
+- 【Linux社区】Ojeda向Greg澄清：kref与Ref<T>均无需锁，Rust价值在把Doc/kref.txt规则变成编译期强制；若Rust自管对象可绕开devm_*与自引用结构。 `<!-- ROW_MINE: ksummit.messages.3114 -->`
+- 【Linux社区】Gunthorpe称fwctl应接管内核与用户态可共享的操作（如重启生效的功能开关），不得劫持内核scrubber；单一全局擦除器动态控制是不佳匹配。 `<!-- ROW_MINE: ksummit.messages.3118 -->`
+- 【Linux社区】Brown指kzalloc(GFP_KERNEL)实际承担通用分配职责，多数调用并非深思熟虑的分配器选型，支持提供易用malloc的需求。 `<!-- ROW_MINE: ksummit.messages.3120 -->`
+- 【Linux社区】Ryabitsev解释kernel.org信任网工具：OpenSSF资助的安全开发者与他和Greg共同迭代，先满足关键用户需求再发0.1广泛征求意见。 `<!-- ROW_MINE: ksummit.messages.3123 -->`
+- 【Linux社区】Wilk代表Oracle表态愿出资雇佣专人承担向linux-distros通报已修复漏洞的“吃力不讨好”工作并协助安全修复。 `<!-- ROW_MINE: ksummit.messages.3130 -->`
+- 【Linux社区】Brown称CI须结果稳健、及时且可理解，主张提供结果供参考而非硬性门禁，全红时可不进入人工评审。 `<!-- ROW_MINE: ksummit.messages.3132 -->`
+- 【Linux社区】Torokhov仍为确需进stable的修复手工Cc，但认AUTOSEL选得过多，建议忽略Fixes早于约两年的提交的自动回移。 `<!-- ROW_MINE: ksummit.messages.3135 -->`
+- 【Linux社区】Cameron自述用qemu模拟spi/gpio测试IIO驱动，仿真代码一次性质量未上游化，开发周期快，愿分享ad7280a测试环境。 `<!-- ROW_MINE: ksummit.messages.3141 -->`
+- 【Linux社区】McKenney指AI辅助不同于coccinelle等工具，可能连编译都不做；并提醒依训练数据不同或难满足DCO 1.1(a)的许可权利声明。 `<!-- ROW_MINE: ksummit.messages.3151 -->`
+- 【Linux社区】Pinchart指邮件缺乏“跟踪”能力，public-inbox/b4/lei无法追踪bug状态；Patchwork之于补丁同理，梦想邮件支持结构化数据。 `<!-- ROW_MINE: ksummit.messages.3153 -->`
+- 【Linux社区】Corbet复盘LF出资付费文档实验失败：选题过难、写手连C基础都需讲解；根因是懂领域者写代码收入更高。 `<!-- ROW_MINE: ksummit.messages.3154 -->`
+- 【Linux社区】Linus力挺buffer cache：源自Unix v6（Lions书），简单自包含，服务ext2、fat、isofs等20余旧文件系统，对外影响近乎零，驳斥废除论。 `<!-- ROW_MINE: ksummit.messages.3156 -->`
+- 【Linux社区】Leemhuis统计MAINTAINERS的B:行70条（bugzilla 23、github 17、gitlab 11、mailto 12），称bugzilla三年无起色，质疑内核是否需统一缺陷跟踪；regzbot重启。 `<!-- ROW_MINE: ksummit.messages.3160 -->`
+- 【Linux社区】Ojeda举例C++20 std::span指向局部变量即UB且clang/gcc均不告警，称UB在C/C++依旧易犯，Rust可避免；有Rust则选C++意义不大。 `<!-- ROW_MINE: ksummit.messages.3164 -->`
+- 【Linux社区】Chinner回应Kent“用户态跑现有文件系统”设想：lklfuse（github.com/lkl/linux，基于6.1）已能把内核文件系统实现作FUSE运行。 `<!-- ROW_MINE: ksummit.messages.3166 -->`
+- 【Linux社区】Suchánek指Android安全难题在厂商不提供更新、用户困于旧系统；Greg称欧盟已立法要求移动设备多年更新，双方认为CRA或改善现状。 `<!-- ROW_MINE: ksummit.messages.3172 -->`
+- 【Linux社区】Cameron赞同fwctl目标但忧ABI：以CXL Patrol Scrub为例，EDAC RAS扩展提案在推，恐fwctl暴露与之冲突，列三种处置选项求明确政策。 `<!-- ROW_MINE: ksummit.messages.3175 -->`
+- 【Linux社区】Ojeda谈rustc_codegen_gcc尚早：每内核版只支持单一rustc、补丁GCC或仅支持最新版、libgccjit稳定性未知；并乐见Rust工具链上kernel.org。 `<!-- ROW_MINE: ksummit.messages.3180 -->`
+- 【Linux社区】Roeck实测ntfsv3建挂拷删循环数秒即损坏、卸载常崩溃，质询何种程度应标BROKEN。 `<!-- ROW_MINE: ksummit.messages.3182 -->`
+- 【Linux社区】Pinchart亲历某大SoC厂因可借直通“空白支票”换道合入而在最后关头放弃开放相机栈；称逆向愈发困难、市场力难覆盖小众设备；引DRM要求开源用户态先例。 `<!-- ROW_MINE: ksummit.messages.3183 -->`
+- 【Linux社区】Rostedt倡导师徒制培养维护者：已带Bristot、Hiramatsu，分享脚本、PR与linux-next流程及-rc期禁忌；指现行靠试错应制度化。 `<!-- ROW_MINE: ksummit.messages.3184 -->`
+- 【Linux社区】Hellwig更正前提：John Paul Adrian Glaubitz在停摆七年后复活hfsprogs包，hfsplus测试工具并非全无。 `<!-- ROW_MINE: ksummit.messages.3185 -->`
+- 【Linux社区】Leemhuis澄清“下周日前修复”非要求周末加班，而是配合Linus周日发-rc的节奏，宜周五前合入；建议措辞改为“本周内”。 `<!-- ROW_MINE: ksummit.messages.3186 -->`
+- 【Linux社区】Pinchart举std::string按值传递加move可省一次堆分配，聚合传值效率视用法而定；指出对成员std::move返回会阻止NRVO。 `<!-- ROW_MINE: ksummit.messages.3188 -->`
+- 【Linux社区】Baerts问询linus-next运作：Sasha称80%自动化（lei抓取PR邮件）、遭NACK即回滚合并，LKFT与KernelCI在测；Matt忧仪表盘缺“可拉取”总指示。 `<!-- ROW_MINE: ksummit.messages.3190 -->`
+- 【Linux社区】Kleine-König提议两两成对合并子系统树（先B+C再D+E）而非依次合并，便于在含B的中间树上测试；自认收益未必抵成本。 `<!-- ROW_MINE: ksummit.messages.3191 -->`
+- 【Linux社区】Greg KH称DRM在分支间cherry-pick造成的重复提交混乱已被其多次指出，追踪stable回移令其抓狂；引Krzysztof例证Intel提交对象97b67847在linux-next中缺失。 `<!-- ROW_MINE: ksummit.messages.3198 -->`
+- 【Linux社区】Rostedt主张工具生成内容指南面向诚实贡献者而非垃圾发送者，反对语气强硬化，称若恶化可另立专门的AI文档；并引Phoronix与Register对Linus AI slop表态的报道。 `<!-- ROW_MINE: ksummit.messages.3199 -->`
+- 【Linux社区】Petersen支持用lore等自动统计陌生贡献者历史以辅助判断，但反对把数字压成一维“信任等级”以免被刷分，并建议统计该人提交所获Fixes引用数量。 `<!-- ROW_MINE: ksummit.messages.3201 -->`
+- 【Linux社区】hpa反问Andreas：“SPARC32是4:4地址空间，还在用HIGHMEM？”，指其方案技术前提反常，为HIGHMEM淘汰争论中针锋相对的一手立场。 `<!-- ROW_MINE: ksummit.messages.3202 -->`
+- 【Linux社区】Tarreau用bug 204807数据反驳：255条评论拖2.5年、首个回复18个月后才来且核心讨论集中于3天；并举自己19年未进展的GCC bug 11873，称邮件列表未必更慢。 `<!-- ROW_MINE: ksummit.messages.3203 -->`
+- 【Linux社区】Torvalds回应Rapoport“AI能从零大规模生成代码”之说，称这只是程度变化而非根本变化，既有工具产出规则原样适用，是其AI政策的关键一手表态。 `<!-- ROW_MINE: ksummit.messages.3215 -->`
+- 【Linux社区】Ojeda反驳Bottomley“Rc引用计数下Rust不比C有优势”论：即便共享所有权，Rust仍阻止UB与数据竞争，例如防止把Rc误共享给其他线程。 `<!-- ROW_MINE: ksummit.messages.3217 -->`
+- 【Linux社区】Myklebust称最大问题不是补丁庞大，而是提交者不懂子系统并与AI一起夸大重要性，涌现大量夸大的“安全漏洞”抄送stable，侵占维护者日程并造成疲劳。 `<!-- ROW_MINE: ksummit.messages.3218 -->`
+- 【Linux社区】Roeck述实践：补丁先在-next停留数日再向Linus发PR以借外部测试；称linux-next问题太多无法全追、报告常被无视，Cc Linus响应更快，其fixes分支曾被Linus直接拉取。 `<!-- ROW_MINE: ksummit.messages.3224 -->`
+- 【Linux社区】hpa认可Bottomley的lore服务端dig链接或可在内核语境可行，但主张目标应是git通用工具，Message-ID本身所含信息不足以支撑。 `<!-- ROW_MINE: ksummit.messages.3231 -->`
+- 【Linux社区】Ojeda就Sashiko提出：LTS回移评审可定制prompt且噪声更低；建议邀第二家AI公司捐token以降低单一供应商风险；称prompt开发是黑箱，交互模式宜限Gitolite权限并限流。 `<!-- ROW_MINE: ksummit.messages.3235 -->`
+- 【Linux社区】Ojeda认为rustdoc转ReST嵌入内核文档会丧失Rust专属导航视图等优点，或可用Sphinx插件与Rust domain复刻，但对HTML输出而言未必值得。 `<!-- ROW_MINE: ksummit.messages.3237 -->`
+- 【Linux社区】Cook列出线上投票以来历年TAB投票率：2024年229/934为24.5%，2023年20.5%，2022年27.8%，2021年23.4%，2020年24.6%，2018年最后一年线下为95/95。 `<!-- ROW_MINE: ksummit.messages.3241 -->`
+- 【Linux社区】Levin写脚本核查PR补丁是否抄送列表及在-next的停留时长，首个样本即命中：KVM arm64提交afa9b48f327c从未上lore也未进-next，Linus仍照常拉取。 `<!-- ROW_MINE: ksummit.messages.3244 -->`
+- 【Linux社区】Walleij称GPIO子系统已有remove后阻止消费者调用API的机制，但由其本人用C实现，Miguel已指出其中存在缺陷，回应“应由子系统而非驱动负责”之争。 `<!-- ROW_MINE: ksummit.messages.3248 -->`
+- 【Linux社区】Levin提议要求常用禁运机制的组织提供可验证测试环境并设常设可信测试者组；Hansen称Intel内部已跑0-day但结果未并入合入材料、承诺改进；Levin指文档需律师解读。 `<!-- ROW_MINE: ksummit.messages.3253 -->`
+- 【Linux社区】Leemhuis提议为各-fixes树定“不rebase”政策并用脚本定期合并成树，可提前发现并解决冲突，但仅在合并窗口外有效，且Linus仍要求在PR时可见。 `<!-- ROW_MINE: ksummit.messages.3263 -->`
+- 【Linux社区】Mason向LF的Angela Brown求证：维护者峰会年成本约2.5万美元，LF无需结构调整即可继续支持；2024年仅一家赞助商、2025年无；称峰会是解决长期分歧的同步点。 `<!-- ROW_MINE: ksummit.messages.3264 -->`
+- 【Linux社区】Bottomley由Hans演讲发现维护者倦怠多靠雇主纾解而社区竟无可调用资源，提议建立志愿者邮件列表与wiki，或请LF提供定期辅导及一对一视频心理咨询。 `<!-- ROW_MINE: ksummit.messages.3270 -->`
+- 【Linux社区】Ailus主张ISP多为专用管线、最接近使用V4L2的视频编解码器，直连传感器带来时序约束，应改进V4L2/MC或另立UAPI而非转DRM；引Pinchart指厂商借道DRM规避文档义务。 `<!-- ROW_MINE: ksummit.messages.3271 -->`
+- 【Linux社区】Wedson逐条回应Arnd对Rust版PL061驱动之问：dev_级pr_debug未实现故暂失设备信息、锁用spinlock_t未覆盖PREEMPT_RT、CONFIG_PM经if cfg!包裹由编译器剔除死代码。 `<!-- ROW_MINE: ksummit.messages.3272 -->`
+- 【Linux社区】Levin为“Improves标签”提案辩护：超80%带Fixes的提交终入stable；约70%有stable无Fixes的提交修旧版问题，-rc中近85%提交针对合并窗口前问题；“事后发现”模式曾压垮流程。 `<!-- ROW_MINE: ksummit.messages.3274 -->`
+- 【Linux社区】Weinberger举实例：嵌入式2G/2G地址划分曾致JRE触及地址空间上限，改回3G/1G即恢复，正面回答Hansen对非标准PAGE_OFFSET实际用户问题的追问。 `<!-- ROW_MINE: ksummit.messages.3275 -->`
+- 【Linux社区】Bottomley反对Uwe提出的将PGP密钥有效期限制在3年内的建议，援引Linus对密钥有效期的既有批评，并称自己因此改用更长的有效期。 `<!-- ROW_MINE: ksummit.messages.3280 -->`
+- 【Linux社区】Chehab主张媒体子系统以完整文档化uAPI替代强制开源用户态，称EXPORT_SYMBOL_USERSPACE_GPL会波及普通应用；回顾OMAP3 ISP在MeeGo终止后凭公开文档合入，赞成IPU3出staging前须有libcamera支持。 `<!-- ROW_MINE: ksummit.messages.3281 -->`
+- 【Linux社区】Ryabitsev披露内核密钥环约600个密钥，新增常因签名缺失或离Linus信任链过远而反复沟通，扩至数千将不可维护；PGP仍为推荐签名证明机制，ssh/minisign是其他项目的高频需求。 `<!-- ROW_MINE: ksummit.messages.3282 -->`
+- 【Linux社区】Leitao提议维护者-next树保持稳定且只追加的历史，使linux-next用户与测试者可引用固定提交，避免history重写令已有commit消失。 `<!-- ROW_MINE: ksummit.messages.3287 -->`
+- 【Linux社区】Bergmann考据Microchip旧SoC续命：SAM9x60（2020）提频600MHz但内存上限128MB，SAM9X7（2023）加DDR3至256MB，并称32位DDR3总线本可支持1GB。 `<!-- ROW_MINE: ksummit.messages.3289 -->`
+- 【Linux社区】Raynal讨论将MAINTAINERS“THE REST”迁出LKML，指出众多无显式列表的条目并非核心子系统，建议get_maintainers.pl在无列表时回退到LKML。 `<!-- ROW_MINE: ksummit.messages.3295 -->`
+- 【Linux社区】Stoakes称维护者带宽本已吃紧，生成与评审能力呈不对称关系，无法承受不受控的涌入，主张赋权各子系统自行决定可接受的AI使用方式。 `<!-- ROW_MINE: ksummit.messages.3300 -->`
+- 【Linux社区】Bird提议以提交注记标明补丁经过哪些工具检查，设想未来缺少“Reviewed-by: checkpatch.pl与AI评审”即可要求先补机器审再进入人工评审。 `<!-- ROW_MINE: ksummit.messages.3306 -->`
+- 【Linux社区】Leemhuis重发Bugzilla整改计划全文：设“可能无人看”的catch-all产品、隐藏未承诺跟进的组件、首页明示多数报告应走邮件；称MAINTAINERS约2500条目仅约20条指向Bugzilla，ACPI/PM的Len Brown依赖它。 `<!-- ROW_MINE: ksummit.messages.3307 -->`
+- 【Linux社区】Brown权衡Sashiko威胁模型默认值：多数子系统设备焊死在SoC且无固件，信任硬件的代码多于不信任者，默认信任方向难有两全，回应Berg与Bottomley之争。 `<!-- ROW_MINE: ksummit.messages.3309 -->`
+- 【Linux社区】Levin介绍用LLM在服务端解码oops：据内核版本串推断发行版与包版本、拉取debuginfo后运行decode_stacktrace.sh；Pinchart斥其非确定性，Levin反问有何确定性替代方案。 `<!-- ROW_MINE: ksummit.messages.3316 -->`
+- 【Linux社区】Greg KH说明stable实践：仅cc:stable时尽力回移至当前stable/LTS，见“Fixes: 1da177e4c3f4 (Linux-2.6.12-rc2)”即知应更老并发FAILED邮件促成补修，故pre-git Fixes标签有价值。 `<!-- ROW_MINE: ksummit.messages.3321 -->`
+- 【Linux社区】Corbet指scripts/find-unused-docs.sh正是为发现未挂接kernel-doc标注而写，并重申拟将文档工具移入独立目录以提升可发现性。 `<!-- ROW_MINE: ksummit.messages.3323 -->`
+- 【Linux社区】Torvalds强硬回击Artem：Bugzilla不合内核工作流也不值得投入，若你在意就该自己去花时间，“请走开，照照镜子”，是Bugzilla之争的关键一手表态。 `<!-- ROW_MINE: ksummit.messages.3324 -->`
+- 【Linux社区】Corbet称希望尽量多开发者能自建文档，有老贡献者仍用Sphinx 1.8.5，收窄支持版本恐将人排除；承认kernel-doc正则无文档且大量重复，欢迎Heiser回归。 `<!-- ROW_MINE: ksummit.messages.3331 -->`
+- 【Linux社区】Zickus介绍Red Hat GitLab工作流：邮件桥统计显示极少数人用邮件、多数已迁CLI工具；已向GitLab反映无法在commit message上inline评论的短板；另有连接GitLab API的public-inbox原型。 `<!-- ROW_MINE: ksummit.messages.3333 -->`
+- 【Linux社区】Pinchart追问Rostedt：多个topic分支是否各自向Linus发PR、聚合10人系列时merge还是cherry-pick；Rostedt称跨分支依赖时apply到一支再merge并详注原因，Linus未表异议。 `<!-- ROW_MINE: ksummit.messages.3335 -->`
+- 【Linux社区】Uytterhoeven认同Jani观点：私有栈可复现而开放栈不能的缺陷不会获修，并将其归结为“先加测试用例再修bug”的老原则，即须在开放栈上增强复现能力。 `<!-- ROW_MINE: ksummit.messages.3342 -->`
+- 【Linux社区】Ojeda发布2025 LF TAB选举最后提醒：12月13至20日经CIVS投票，五席候选人七人为Colomar、Cong Wang、Hildenbrand、Greg KH、Kosina、Lawall、Rostedt。 `<!-- ROW_MINE: ksummit.messages.3346 -->`
+- 【Linux社区】Laurent Pinchart反对文档构建自动选用新版Python，主张构建“应直接失败”，只提示存在可用新版本，称自动选择不可取。 `<!-- ROW_MINE: ksummit.messages.3352 -->`
+- 【Linux社区】Jonathan Corbet澄清EXPORT_USERSPACE_GPL设想：使用该接口的驱动若无可用的自由用户态实现将不予合并，并非禁止专有用户态。 `<!-- ROW_MINE: ksummit.messages.3357 -->`
+- 【Linux社区】Kent Overstreet主张test_bit/set_bit类位标志可直接导出为Rust原子类型；认为显式内存序标注比smp_mb__after_atomic更不易因默认x86而漏屏障。 `<!-- ROW_MINE: ksummit.messages.3359 -->`
+- 【Linux社区】Laurent Pinchart称C++非好替代，Rust是候选但增益未必抵过开发流程扰动；转述C委员会正考虑defer与lambda，抱怨Rust语法偏离C。 `<!-- ROW_MINE: ksummit.messages.3366 -->`
+- 【Linux社区】Toke指出疫苗有效性仅33-93%，跨大西洋会议几乎必然有人暴露过病毒，且“空中桥梁”排斥低疫苗覆盖率地区，质疑社区国际性。 `<!-- ROW_MINE: ksummit.messages.3367 -->`
+- 【Linux社区】Jiri Kosina认为AI提交的法律责任依DCO条款(a)由提交者承担，接收侧维护者按(c)条款无需担忧，回应Sasha Levin的法律风险之问。 `<!-- ROW_MINE: ksummit.messages.3375 -->`
+- 【Linux社区】Steven Rostedt解释urgent/core分支工作流：曾将urgent推入linux-next但无收益；修复只入Linus树的bug无需再进next，因next从未发现过这些bug。 `<!-- ROW_MINE: ksummit.messages.3387 -->`
+- 【Linux社区】Ted Tso建议给LKML档案打“被拒/AI废稿/差评审人”标签做微调语料；称前沿模型靠全量抓取、小模型蒸馏后内核知识流失；审评论语比补丁更有价值。 `<!-- ROW_MINE: ksummit.messages.3395 -->`
+- 【Linux社区】Dave Airlie反驳“Rust应推迟到2034”：Rust先用于binder、驱动等非核心，未来数年新硬件生产驱动将依赖Rust，尚无核心代码用Rust的提案。 `<!-- ROW_MINE: ksummit.messages.3396 -->`
+- 【Linux社区】James Bottomley提议新邮件列表基建拒收HTML邮件，并考虑拒绝cover letter未正确抄送的系列补丁，用PATCH标签启发式识别。 `<!-- ROW_MINE: ksummit.messages.3404 -->`
+- 【Linux社区】H. Peter Anvin称标准流程强制写出含边角情形的真正接口契约，并溯源C别名规则源于与Fortran 77在HPC自动向量化上的竞争。 `<!-- ROW_MINE: ksummit.messages.3412 -->`
+- 【Linux社区】Linus详析strlcpy设计性缺陷与strscpy两处差异：无损坏返回值、按字长拷贝可能补多个NUL；给出strscpy因字长写溢出dst[4]的实例，警告盲转换改变语义。 `<!-- ROW_MINE: ksummit.messages.3417 -->`
+- 【Linux社区】Greg KH要求Rust展示“真实”驱动：需触碰硬件并自动加载绑定总线；指出此前nvme/i2c/gpio示例不足，binder在Android之外非真实用例。 `<!-- ROW_MINE: ksummit.messages.3424 -->`
+- 【Linux社区】Laurent Pinchart披露相机ISP厂商从V4L2跳到DRM以规避固件接口文档公开、搭载闭源二进制；主张以开源用户态实现替代文档，类比GPU驱动规则。 `<!-- ROW_MINE: ksummit.messages.3427 -->`
+- 【Linux社区】Laurent Pinchart系统提出cdev驱动生命周期方案：禁用devm_kzalloc分配驱动数据、引用计数、remove时置标志拒新调用、取消I/O并等待调用归零；Greg KH认可。 `<!-- ROW_MINE: ksummit.messages.3430 -->`
+- 【Linux社区】Ted Tso称已对fs-next分支跑xfstests自动化2-3个月覆盖ext4/xfs/f2fs/btrfs且稳定，举generic/564回归经回滚vfs溢出修复解决之例。 `<!-- ROW_MINE: ksummit.messages.3432 -->`
+- 【Linux社区】Ventura Jack承认Rust/C++等表达力语言利于抽象，但代价是编译器庞大：rustc是唯一成熟实现，gccrs未就绪；Rust以生命周期与借用检查器著称。 `<!-- ROW_MINE: ksummit.messages.3433 -->`
+- 【Linux社区】Linus讨论三态返回（真指针、NULL、错误指针）并以get_cached_acl为例；斥gcc nonnull属性“垃圾”，认为给sparse加__nonnull/__errptr不值铺开。 `<!-- ROW_MINE: ksummit.messages.3440 -->`
+- 【Linux社区】Martin Uecker透露正于GCC前端实验C内存安全模式：按区域开关、保证无UB，聚焦有符号溢出；提议C2Y加入饱和算术，邀请内核社区参与讨论。 `<!-- ROW_MINE: ksummit.messages.3445 -->`
+- 【Linux社区】Mauro给出kernel-doc在Python 3.6至3.13的实测：77.9秒降至31.8秒、提速59.2%；并提出低版本自动重跑、DOC_WARNINGS Kconfig等4项补丁计划。 `<!-- ROW_MINE: ksummit.messages.3446 -->`
+- 【Linux社区】Christoph Hellwig称自己一直读LKML并在其上发起讨论，反对限制新列表访问，反讽“若gmail坏就限制所有gmail地址”，回应LKML无讨论价值之说。 `<!-- ROW_MINE: ksummit.messages.3448 -->`
+- 【Linux社区】Rob Herring主张对每个补丁运行checkpatch，先只启用零误报且共识的检查项再逐子系统放开；指出仅扫源码发现不了Signed-off-by与提交信息缺失。 `<!-- ROW_MINE: ksummit.messages.3450 -->`
+- 【Linux社区】Ricardo Ribalda称ISP差异化在于算法本身，定义ISP参数即泄露算法与专利风险；专利流氓令厂商不敢冒险，力挺厂商直通模式。 `<!-- ROW_MINE: ksummit.messages.3461 -->`
+- 【Linux社区】Johannes Berg称弃用API转完即自然消亡，可在-next中删除以拦截新增调用；举PCI MSI弃用近十年却仍最常用为例，反对更多催促加重维护者负担。 `<!-- ROW_MINE: ksummit.messages.3462 -->`
+- 【Linux社区】Bart Van Assche以git grep统计“for (int ”在Documentation与tools之外已用1239处，主张编码规范应全局统一而非__free独例，回应cleanup.h变量声明之争。 `<!-- ROW_MINE: ksummit.messages.3464 -->`
+- 【Linux社区】Kent Overstreet称lklfuse没有VFS到fuse的层且会拖入整块层与调度器过重，bcachefs-tools用kthreads映射pthread、块层映射aio的更薄方案。 `<!-- ROW_MINE: ksummit.messages.3470 -->`
+- 【Linux社区】Doug Anderson提三条：改git默认隐藏Link标签、用AI帮补丁追踪器关联历史版本并摘要讨论、社区“干预”Linus接受Link标签，称支持者众多。 `<!-- ROW_MINE: ksummit.messages.3474 -->`
+- 【Linux社区】Shuah以CoC成员身份否认“CoC只针对维护者行为”，提出平衡公司战略与开发需求的“戴两顶帽”问题，建议合并各项维护者压力提案统筹讨论。 `<!-- ROW_MINE: ksummit.messages.3475 -->`
+- 【Linux社区】Chris Mason区分两问：合并folio还剩多少工作、如何让folio级改动的开发过程更可预期且有回报；讨论LPC BOF与BBB基础设施等替代LSF/MM的场地。 `<!-- ROW_MINE: ksummit.messages.3477 -->`
+- 【Linux社区】Christophe Leroy询问Richard所用PPC32型号（mpc85xx？）以考虑局部保留，并已提交在powerpc上完全移除CONFIG_HIGHMEM的补丁摸清影响面。 `<!-- ROW_MINE: ksummit.messages.3478 -->`
+- 【Linux社区】Doug Anderson澄清“b4 dig”乌龙：Google搜到的全是Sasha同名工具，Konstantin补丁未进b4 v0.14.3；称git patch-id精确匹配、主题匹配兜底约95%可用。 `<!-- ROW_MINE: ksummit.messages.3483 -->`
+- 【Linux社区】Linus在FAT文件系统讨论中承认mmap假设未达预期，提出cache不一致的MAP_PRIVATE mmap可行，但比维持现状工作量大得多。 `<!-- ROW_MINE: ksummit.messages.3486 -->`
+- 【Linux社区】Wedson详解PL061 Rust驱动设备状态三分法：Registrations、Resources、General，remove时先注销注册再撤销I/O内存资源，类型系统保证顺序。 `<!-- ROW_MINE: ksummit.messages.3498 -->`
+- 【Linux社区】Konstantin透露Bugzilla平台濒死：开发停滞、不兼容新版MySQL、perl5/mod_perl，IT正转Postgres以撑过2022；核心难题是bugmaster人选且极易倦怠。 `<!-- ROW_MINE: ksummit.messages.3499 -->`
+- 【Linux社区】Paul E. McKenney转述Tony Luck规则建议（From须为真人、人类为补丁负全责），并提出“仅用兼容许可证数据训练的AI”选项，称这将排除所有主流AI。 `<!-- ROW_MINE: ksummit.messages.3505 -->`
+- 【Linux社区】Laurent Pinchart主张内核须验证DMA类命令保安全；称防厂商作弊无法技术解决只能靠信任与后果（举明尼苏达大学封禁先例），要求ISP开放近100%功能。 `<!-- ROW_MINE: ksummit.messages.3507 -->`
+- 【Linux社区】Konstantin反对自动化“引用过多”警告，称无法区分正当长引用会误伤无辜；主张线下邮件指导并附tglx网络礼仪页，愿在subspace.kernel.org加礼仪页。 `<!-- ROW_MINE: ksummit.messages.3508 -->`
+- 【Linux社区】Wolfram Sang澄清诉求是写明拒收理由属个人还是法务，否则他无法判断自己子系统遇同类补丁时该如何处理，并非重议补丁该不该收。 `<!-- ROW_MINE: ksummit.messages.3511 -->`
+- 【Linux社区】Alexey Dobriyan批评链式调用因实参求值顺序未指定而致实现定义行为、调试器按行操作困难；引述Willy Tarreau长度优先字符串比较在-O3实测提速10倍。 `<!-- ROW_MINE: ksummit.messages.3514 -->`
+- 【Linux社区】Starovoitov称下一步把BPF AI评审以纯文本邮件融入正常开发流程；Chris Mason大幅降低误报，AI评审多次发现维护者未察觉的bug，个别案例AI把bug解释得比维护者更清楚。 `<!-- ROW_MINE: ksummit.messages.3522 -->`
+- 【Linux社区】与Miguel辨析“假阳性”歧义；引Ralf Jung澄清：Rust绝不绑定LLVM别名规则、参考文档非规范，拥有第二个主要编译器可防语言定义过拟合。 `<!-- ROW_MINE: ksummit.messages.3524 -->`
+- 【Linux社区】引Uecker数据：C23核心约87处UB，C2Y已删17处、另有12项提案在手；Masłowski反驳Rust安全源于类型设计防误用、所有权本质是资源安全，仅加注解达不到同等安全。 `<!-- ROW_MINE: ksummit.messages.3526 -->`
+- 【Linux社区】Mauro区分情形：译文保留原作者版权、AI做骨架代码等机械填充无版权问题；自述实验显示AI代码如初学者水平、错误雷同，训练权重趋向复现最常见的模式。 `<!-- ROW_MINE: ksummit.messages.3527 -->`
+- 【Linux社区】Jani Nikula提出判据：专有栈能复现而开放栈不能的bug，其修复不会进内核；追问仅把从专有栈简化出的复现器放入测试资产是否足够，Geert主张先加测试用例。 `<!-- ROW_MINE: ksummit.messages.3537 -->`
+- 【Linux社区】回应McKenney对提示被记录可遭法律调取的担忧：所指“本地服务”是无网络依赖的开源工具，担心者可用分叉或在隔离VM中运行，开源生态会淘汰带遥测的版本。 `<!-- ROW_MINE: ksummit.messages.3540 -->`
+- 【Linux社区】Greg KH反对用git notes承载Link元数据：发行版、stable与triage人员处理整棵树，须跨全部子系统翻找notes，除非合并为统一notes树否则不可行。 `<!-- ROW_MINE: ksummit.messages.3541 -->`
+- 【Linux社区】公布其cc脚本：封面信若抄送全部维护者使头部超512字符则只发邮件列表；并展示remove_undesirable_emails.sh用grep过滤Ingo Molnar地址。 `<!-- ROW_MINE: ksummit.messages.3545 -->`
+- 【Linux社区】回应Ellerman“Message-Id难点击”之抱怨：查看原始提交通常无用，仍推荐msgid.link链接；但真正的难题是可靠地把commit映射到补丁提交以支撑评审自动化。 `<!-- ROW_MINE: ksummit.messages.3551 -->`
+- 【Linux社区】Leemhuis提议将回归处理守则官方化并请Linus背书；细则含严重bug两三天内、一般三周内合入修复，称最大拖延是修复滞留子系统树数周，拟议[FASTTRACK]类标签。 `<!-- ROW_MINE: ksummit.messages.3553 -->`
+- 【Linux社区】依Kosina与Greg反馈修订摘要：revocable与devres分工在访问失效而非生命周期清理，devm_可建构其上如Rust版devm_*；已用于ChromeOS EC驱动修复真实UAF。 `<!-- ROW_MINE: ksummit.messages.3562 -->`
+- 【Linux社区】Gushchin披露正试验Sashiko依邮件中人工反馈自动生成评审提示词且初步见效；Mauro建议新提示生效前应向子系统维护者展示应用前后的评审差异并征得同意。 `<!-- ROW_MINE: ksummit.messages.3572 -->`
+- 【Linux社区】反驳Linus废止主张：过期日促使密钥更新扩散并作失联者开关；手工验证2014年签名gpg返回0而git显示红色，指系git显示缺陷；Sequoia已分离导入与信任，将推动内核钥匙环采用过期日。 `<!-- ROW_MINE: ksummit.messages.3576 -->`
+- 【Linux社区】反映2021年TAB选举投票资格混乱：Abbott向超50提交者寄发通知后，选民不确定自己是否在名单、是否须在自动寄发选票前主动申请。 `<!-- ROW_MINE: ksummit.messages.3581 -->`
+- 【Linux社区】Lunn主张AI评审工具应面向全体开发者、在提交前自查修复，维护者只需验证开发者已运行工具，质疑Mason把降低维护者负担设为长期目标的定位。 `<!-- ROW_MINE: ksummit.messages.3595 -->`
+- 【Linux社区】Linus指C标准把内存访问定为不可观测是错误的：源码单次读被编译成两次读会引入TOCTOU安全问题，单次写成两次写更是bug；要求编译器对UB告警或按朴素语义定义。 `<!-- ROW_MINE: ksummit.messages.3601 -->`
+- 【Linux社区】Carpenter自述精简抄送习惯：无线补丁不必抄netdev、amd gpu补丁不必抄drm，bug报告只抄一个lore列表；并知悉tracing经linux-trace-kernel进patchwork而讨论留在LKML。 `<!-- ROW_MINE: ksummit.messages.3605 -->`
+- 【Linux社区】回应Lunn关于Rust封装文件移动妨碍stable回溯移植的担忧：文件每个发布周期都在移动，对stable维护者不是大事，只要求无充分理由不移动。 `<!-- ROW_MINE: ksummit.messages.3607 -->`
+- 【Linux社区】不建议在patch.msgid.link链接中嵌列表名：列表会迁移或改名；整体趋势是弱化“发往哪个列表”的意义，已支持lei查询并将桥接forge提交接口。 `<!-- ROW_MINE: ksummit.messages.3609 -->`
+- 【Linux社区】Bottomley发起议题：Link trailer消失后工具链与分诊受冲击，Konstantin正开发补救工具，提议讨论让Link或替代标签成为人人可用的指针。 `<!-- ROW_MINE: ksummit.messages.3610 -->`
+- 【Linux社区】Armstrong称面板IC厂商极少公开数据手册、从无厂商直接提交内核补丁；DDIC高级特性命令无公开文档难建通用API；高通下游以超通用驱动加复杂DT支持面板，上游碎片化严重。 `<!-- ROW_MINE: ksummit.messages.3614 -->`
+- 【Linux社区】回应Mauro设想的开发者信任分脚本：警告会使新开发者处于劣势，须先想清楚再设准入门槛；背景为明尼苏达事件后关于平凡补丁审查的争论。 `<!-- ROW_MINE: ksummit.messages.3616 -->`
+- 【Linux社区】Wedson发布由C改写的可运行PL061 GPIO Rust驱动链接，并附C与Rust两版并排对照的HTML渲染，作为2021年Rust for Linux能力的实物演示。 `<!-- ROW_MINE: ksummit.messages.3617 -->`
+- 【Linux社区】Dan Williams反对在流程文档中写明可凭疑似AI slop直接拒稿：担心助长“猎杀slop”并在误指时伤害项目健康，认为“不信任提交者”等既有反馈比贴标签更可操作。 `<!-- ROW_MINE: ksummit.messages.3619 -->`
+- 【Linux社区】Kees Cook强烈反对内核实现malloc：此类API有缺陷，如同刚移除的strncpy；分配应基于类型而非字节数，尺寸是“需要放什么”的副产品，按字节分配会丢失编译器可用元数据。 `<!-- ROW_MINE: ksummit.messages.3624 -->`
+- 【Linux社区】转述Rob Herring立场：内核拥有全球最多硬件支持故绑定不迁出内核；devicetree-rebasing独立仓库已存在且U-Boot已采用；Dooley称将出席LPC的DT BoF。 `<!-- ROW_MINE: ksummit.messages.3628 -->`
+- 【Linux社区】Bottomley称测试信号到手时-next已变且存在rebase风险，故更常测mainline并主张引导测stable群体上移main；Brown认为-next测试尚可，bisect从Linus树基线起即可。 `<!-- ROW_MINE: ksummit.messages.3630 -->`
+- 【Linux社区】Dobriyan历数C89函数首部声明之弊：扩大作用域增加笔误、膨胀行数、阻碍加const、打断思路，还衍生按长度排序等子风格，主张彻底废弃该规则。 `<!-- ROW_MINE: ksummit.messages.3631 -->`
+- 【Linux社区】Linus列文档构建两症结：告警噪音过大使其无法用作校验手段，类比内核构建必须零告警；Fedora自带sphinx过旧、makefile给出错误的pip安装指引，正确做法是装python3-sphinx。 `<!-- ROW_MINE: ksummit.messages.3632 -->`
+- 【Linux社区】赞成逐步退役Bugzilla，主张LLM应在提交端辅助用户写出好报告并分流而非事后筛除；已参考Mason评审提示词着手原型，呼吁聚合散落各处的问题追踪器。 `<!-- ROW_MINE: ksummit.messages.3636 -->`
+- 【Linux社区】Carpenter以XKCD 927质疑再造分配API；主张承认小分配不会失败，在km/zalloc_obj加BUILD_BUG_ON限定小对象以删除错误处理；并问KASAN能否查kmem_cache与mempool的UAF。 `<!-- ROW_MINE: ksummit.messages.3638 -->`
+- 【Linux社区】回应发行版想要提前情报：认为与会的维护者无实权解决，峰会不邀请项目经理与VP；预测各国立法强制基于-stable后政府将替社区解决该问题。 `<!-- ROW_MINE: ksummit.messages.3641 -->`
+- 【Linux社区】Pinchart以亲身经历指“交换评审”在无商业利益领域失效：大厂贡献者只愿评审其参与驱动；建议资源充足的公司贡献者划出时间评审其专长但非商业利益内代码。 `<!-- ROW_MINE: ksummit.messages.3642 -->`
+- 【Linux社区】指Maintainer Entry Profile现仅7份、ext4即将新增；建议以符号链接把档案移入子系统目录提升可见度并激励更多子系统编写，因Sphinx不喜根外文档故用ln -rs方案。 `<!-- ROW_MINE: ksummit.messages.3649 -->`
+- 【Linux社区】Leemhuis的RFC补丁在5.Posting.rst补写Fixes:与Link:标签说明，并注明维护者常用b4或git钩子自动补Link指向最新公开评审帖。 `<!-- ROW_MINE: ksummit.messages.3659 -->`
+- 【Linux社区】就32位时代1GB内存机器给出数字：约896MB低端内存加约120MB高端内存，或用2G:2G划分；主张博物馆级旧机留在旧内核，不确信为其维护现代内核。 `<!-- ROW_MINE: ksummit.messages.3661 -->`
+- 【Linux社区】Corbet认可generated-content.rst第五版实质并愿合入，同时声明今后对该文件的修改将比照coding-style.rst处理，缺乏强社区共识不轻易应用。 `<!-- ROW_MINE: ksummit.messages.3669 -->`
+- 【Linux社区】引Rust 1.80破坏time crate、crater波及超5000个crate为例指Rust比C更愿破坏兼容；Jung澄清新trait solver部分用于1.84，AWS或有三百余Rust开发者。 `<!-- ROW_MINE: ksummit.messages.3672 -->`
+- 【Linux社区】Ojeda阐明leaf模块设计：C API经Rust抽象层供Rust模块消费，反向向C暴露子系统会损失类型系统与安全保证；曾向C委员会提[[safe]]属性未获接受，期望落地于Clang与GCC。 `<!-- ROW_MINE: ksummit.messages.3677 -->`
+- 【Linux社区】答Hellwig质疑：仅靠C头文件注解无法达成内存安全；即便实现safe C也解决不了不稳定API向Rust侧传播的问题，故C API安全只是附赠目标而非项目主旨。 `<!-- ROW_MINE: ksummit.messages.3678 -->`
+- 【Linux社区】Nossum给出实测：用PyPy跑Sphinx提速22%；自行剖析发现约40%耗时在resolve_xref的C域代码，GCC文档同病，建议提供conf.py开关禁用C域。 `<!-- ROW_MINE: ksummit.messages.3679 -->`
+- 【Linux社区】对conclave.rst逐条提修正：组织者72小时失联则上届峰会参与者可启动；反对TAB作后备因最坏情况可能无当选成员；15个月窗口最坏达23个月，需LF合法签署SoB。 `<!-- ROW_MINE: ksummit.messages.3680 -->`
+- 【Linux社区】主张面向普通用户的报告入口：按模块名与类别而非源文件，指mm有18个“MEMORY MANAGEMENT”开头条目易混淆，栈轨迹输入更佳；若无人短期实现网页界面应先更换Bugzilla欢迎页。 `<!-- ROW_MINE: ksummit.messages.3687 -->`
+- 【Linux社区】Brown同意rust/集中放共享抽象的设计，但主张建立机制确保子系统维护者能知晓其子系统正在进行的Rust工作，避免在角落里无可见性地推进。 `<!-- ROW_MINE: ksummit.messages.3690 -->`
+- 【Linux社区】Mauro说明kernel-doc受Python GIL限制无法并行，早期并行实验更慢而放弃；待Python去GIL后一年内可恢复，解析器按文件实例化本为并行设计；Sphinx HTML构建器去GIL收益更大。 `<!-- ROW_MINE: ksummit.messages.3691 -->`
+- 【Linux社区】Pinchart回应Miguel的C++对比：所有权转移应返回unique_ptr而非裸span，指此类示例属苹果比梨；赞成该线程勿变成C++与Rust之争。 `<!-- ROW_MINE: ksummit.messages.3692 -->`
+- 【Linux社区】Torvalds认可维护者以建议而非强制带动附加清理可奏效但需社交技巧；AI评审若既指出既有问题又附解决方案，人们观感会更好。 `<!-- ROW_MINE: ksummit.messages.3698 -->`
+- 【Linux社区】Anvin提出LF应统筹资助不可个别赞助之事：kernel.org、资深架构师fellowship、xz事件等紧急援助；透露sparse换许可窗口期求助LF法务未获回音。 `<!-- ROW_MINE: ksummit.messages.3699 -->`
+- 【Linux社区】Anvin回应Levin归纳的AI共识（人担责、须披露、子系统自治），主张AI生成代码应推定为抄袭、错误常隐蔽又公然，须与文档翻译类用途区别。 `<!-- ROW_MINE: ksummit.messages.3700 -->`
+- 【Linux社区】Pinchart澄清b4的base-commit只表示提交者所用基址而非维护者必须应用之处；依赖未合入时由prerequisite-patch-id表达，主张非强制记录基址。 `<!-- ROW_MINE: ksummit.messages.3701 -->`
+- 【Linux社区】Rostedt拒绝将fixes分支推入linux-next：修复针对Linus树已有代码，0day与自有测试已覆盖多数问题；rtla加CPU热插拔等用例-next覆盖不到。 `<!-- ROW_MINE: ksummit.messages.3703 -->`
+- 【Linux社区】Levin对Kosina的AI标注提案降温：假checkpatch修复与假syzbot修复早已泛滥，AI假修复只是症状之一，单治AI未触及根本问题。 `<!-- ROW_MINE: ksummit.messages.3705 -->`
+- 【Linux社区】McKenney为Hansen的工具生成内容准则v3补具名Reviewed-by，以保留可要求贡献者说明模型训练来源的条款化解版权顾虑；该文档系TAB集体成果。 `<!-- ROW_MINE: ksummit.messages.3706 -->`
+- 【Linux社区】Bottomley谈2021峰会筹备：承认相当比例旧与会者对出行心存恐惧，远程环节将成会议长期固定组成，但不能任其压倒愿意冒险线下相聚者。 `<!-- ROW_MINE: ksummit.messages.3707 -->`
+- 【Linux社区】Pinchart指devm_k*alloc被滥用成生命周期隐患：开节点后拔设备再关闭常致崩溃，probe首行即devm_kzalloc多为危险信号；提议评估gcc cleanup属性。 `<!-- ROW_MINE: ksummit.messages.3709 -->`
+- 【Linux社区】Bottomley引伯尔尼公约第10条：无碍引述须不冗长、不夺权利人实质版税、不无理损害既有版权；认为各国均有近似美式合理使用的概念。 `<!-- ROW_MINE: ksummit.messages.3715 -->`
+- 【Linux社区】Leemhuis自认reporting-issues文档冗长，期望借报告类应用隐藏污点判定、二分、栈回溯解码等复杂步骤，随时间把文档缩短。 `<!-- ROW_MINE: ksummit.messages.3719 -->`
+- 【Linux社区】Shuah以CoC委员身份澄清：多数报告源于对社区运作方式的误解且多在幕后化解；建议因解释混乱重审CoC文档与委员会职责。 `<!-- ROW_MINE: ksummit.messages.3726 -->`
+- 【Linux社区】Stoakes认可测试代码同样需要维护，但认为LLM生成测试场景的错误影响较小，或可限制LLM仅做测试数据生成。 `<!-- ROW_MINE: ksummit.messages.3727 -->`
+- 【Linux社区】Shuah就混合峰会提改进案：每场设一两名主持盯聊天与问答、安排远程与现场轮流发言；此前Rostedt断言远程参与者终归是二等公民。 `<!-- ROW_MINE: ksummit.messages.3728 -->`
+- 【Linux社区】Levin给出autosel数据：提交延迟约3-4周、v6.8首批autosel提交进v6.8.6；其回归率反低于带stable标签者，Bottomley举例实为依赖性回迁。 `<!-- ROW_MINE: ksummit.messages.3732 -->`
+- 【Linux社区】Brown实测-next重复挑选：drm树1739个非merge提交中111个重复、约6%，几乎制造全部冲突；nfc高达17/35，hyperv-fixes的8个提交全重复。 `<!-- ROW_MINE: ksummit.messages.3735 -->`
+- 【Linux社区】Geert以bugzilla每周报告量不足24条论证其无足轻重；告诫切勿私下报bug，除有金钱关系外务必抄送子系统邮件列表。 `<!-- ROW_MINE: ksummit.messages.3737 -->`
+- 【Linux社区】Brown自述合并窗口期照常评审、-rc1后统一入树并改用b4；建议DRM为cherry-pick打标记、推送预合并fixes分支，减轻下游负担。 `<!-- ROW_MINE: ksummit.messages.3743 -->`
+- 【Linux社区】NeilBrown指Fixes语义宽泛、可指注释笔误；处理regressions文档要求回归修复加Fixes；真正难点在修复多快落地与是否聚焦可回迁。 `<!-- ROW_MINE: ksummit.messages.3744 -->`
+- 【Linux社区】Ojeda说明内核只需core与alloc无需std；建议发行版为内核单独打包所用Rust工具链，并与Arnd商谈libgccjit补丁的ABI兼容路径。 `<!-- ROW_MINE: ksummit.messages.3747 -->`
+- 【Linux社区】Leemhuis界定bugzilla调整范围：不动trace-cmd、kernelshark等tools组件；转述Len Brown在峰会录影中称ACPI/PM依赖bugzilla、停用需替代。 `<!-- ROW_MINE: ksummit.messages.3753 -->`
+- 【Linux社区】Luck反驳加速器用户态直提交是空想之说：Intel ENQCMD指令可由用户态提交描述符，经MSR取PASID、由IOMMU按提交进程地址空间翻译。 `<!-- ROW_MINE: ksummit.messages.3756 -->`
+- 【Linux社区】Corbet应Torvalds之请担任维护者峰会预备意见收集人：收件去名后汇总转交Linus，已收到第一封，欢迎其余维护者来函。 `<!-- ROW_MINE: ksummit.messages.3768 -->`
+- 【Linux社区】Torvalds描述其bugzilla用法：条目配足信息邮件通知，邮件才是内核开发通用语；bugzilla邮件集成管理是恐怖秀、易沦为垃圾渠道。 `<!-- ROW_MINE: ksummit.messages.3776 -->`
+- 【Linux社区】Uecker指__attribute__绑定于特定语法结构、与_Pragma差别不大；追问-Wtype-limits告警在宏中是否有用，回应Linus对pragma的批判。 `<!-- ROW_MINE: ksummit.messages.3786 -->`
+- 【Linux社区】NeilBrown指sparse已解析__attribute__((safe))、含义近于nonnull仅需完善；并以checkpatch为例论证非编译器级工具同样有价值。 `<!-- ROW_MINE: ksummit.messages.3788 -->`
+- 【Linux社区】Brown指明冲突源头：仅AMD与Intel驱动栈惯常在开发与修复分支间互挑补丁，其余DRM树无此问题；跨树补丁责任分散、难觅合入者。 `<!-- ROW_MINE: ksummit.messages.3794 -->`
+- 【Linux社区】Vetter主张通用uapi如kms也须全开放实现，因其能暴露设计陷阱；硬件驱动八成以上逻辑在用户态，与核心API两类要求应分开讨论。 `<!-- ROW_MINE: ksummit.messages.3795 -->`
+- 【Linux社区】Levin以Linus 2020至2023年分别仅0、4、2、3个stable标签为例论证标签体系失灵，主张借助Fixes既有习惯替代而非新增标签。 `<!-- ROW_MINE: ksummit.messages.3797 -->`
+- 【Linux社区】Anvin披露其Message-ID尾注原始定义曾被Linus以不满足一键点击体验为由否决；并认同其余论据相较b4 dig只是减信息添噪音。 `<!-- ROW_MINE: ksummit.messages.3804 -->`
+- 【Linux社区】Mason称Claude需激进使用清单才保持专注，欢迎更好的工具；最感兴趣的是如何判定优劣并让评审能力被更广泛复用。 `<!-- ROW_MINE: ksummit.messages.3806 -->`
+- 【Linux社区】de Goede列/sys/class/backlight五缺陷：无面板映射、多接口并存、需root、亮度标度不明、0值语义不一；提案drm_connector属性新uAPI。 `<!-- ROW_MINE: ksummit.messages.3808 -->`
+- 【Linux社区】Nossum剖析评审激励失衡：评审不上git日志、属低回报活动；建议调整Reviewed-by标准、发布评审统计，使评审者获得记录与回报。 `<!-- ROW_MINE: ksummit.messages.3811 -->`
+- 【Linux社区】Brown反问不把修复推入-next有何益处：成本近零、可让缺乏同等自测条件者受益、加速修复到达-next测试者，亦为他人树立榜样。 `<!-- ROW_MINE: ksummit.messages.3817 -->`
+- 【Linux社区】Chamberlain展示实践：其31次、全内核49次使用Generated-by标签；kdevops以CLAUDE.md约40KiB上下文文件与PROMPTS.md管理全LLM开发。 `<!-- ROW_MINE: ksummit.messages.3823 -->`
+- 【Linux社区】Torvalds详析自制sparse补丁：追踪曾为有符号值的unsigned负值比较，揪出null_blk将blk_status_t强转int的真bug；但噪音多，仍斥-Wtype-limits。 `<!-- ROW_MINE: ksummit.messages.3826 -->`
+- 【Linux社区】Ryabitsev预告lore与b4主题演讲：自动取补丁序列、汇总评审trailer、DKIM与PGP认证、lore本地镜像、匿名IMAP、lei保存搜索等功能。 `<!-- ROW_MINE: ksummit.messages.3828 -->`
+- 【Linux社区】Mason自述提示词教训：令AI默认补丁有错会编造可信假问题、浪费排查时间；转向要求证明问题为真；看好Qualcomm PatchWise守门场景。 `<!-- ROW_MINE: ksummit.messages.3829 -->`
+- 【Linux社区】Rostedt复盘自身bug多为计数类而非内存安全类；指新驱动多为drive-by提交者所写、最易引bug，Rust新驱动确有助减少漏洞。 `<!-- ROW_MINE: ksummit.messages.3831 -->`
+- 【Linux社区】Williams认同git notes脆弱且不随回迁走；支持以public-inbox RFC-2822消息流作提交注解总线，本地notes仅存gitweb点击体验。 `<!-- ROW_MINE: ksummit.messages.3836 -->`
+- 【Linux社区】Geert指linus-next窗口太短且linux-next已提前数周解决实际问题；提议机器人对PR做健康检查：是否CC列表、-next停留时长直方图、CI失败。 `<!-- ROW_MINE: ksummit.messages.3838 -->`
+- 【Linux社区】Leemhuis支持fixes分支进-next：回归追踪只需查一处、可发现修复被误排入下一周期；-next也可能测到修复本身引入的问题。 `<!-- ROW_MINE: ksummit.messages.3841 -->`
+- 【Linux社区】Torvalds建议超量引用改由退信规则即时拦截而非事后巡查：容许15行引用致谢，超50行须触发新内容至少对半的提示，戏称Konstantin可承办。 `<!-- ROW_MINE: ksummit.messages.3842 -->`
+- 【Linux社区】Andreas Larsson 称 Gaisler 即将推出支持最高 16GiB DRAM 的新 SoC，LEON sparc32 配置用 36 位物理寻址，若移除 CONFIG_HIGHMEM 将成重大限制。 `<!-- ROW_MINE: ksummit.messages.3849 -->`
+- 【Linux社区】Lorenzo 认同 Airlie 把峰会定性为“Linus 的员工会议”，批评 CFP 宣传与实际不符，建议参会与议题征集分离，并另建全年维护者邮件列表。 `<!-- ROW_MINE: ksummit.messages.3852 -->`
+- 【Linux社区】Luis 称 AI 代码已大量合入且无法阻止，法律担忧难持久，预期基础模型终将声明只用宽松许可代码训练；他用 Generated-by 标签是为向维护者明示。 `<!-- ROW_MINE: ksummit.messages.3857 -->`
+- 【Linux社区】Greg KH 主张 probe 失败不应阻止驱动注册，单例设备的失败检查也不应写进驱动，module_init 应只调用子系统注册宏。 `<!-- ROW_MINE: ksummit.messages.3858 -->`
+- 【Linux社区】Leemhuis 发 RFC v2 补丁，提议新增 Reported: 与 Posted: 标签补充 Link:，区分 bug 报告、背景链接与补丁投稿，并改 git 钩子与提交文档。 `<!-- ROW_MINE: ksummit.messages.3859 -->`
+- 【Linux社区】Linus 回应 Rostedt：合并多次读是安全的（CPU 实际也如此），把一次读拆成多次则不安全；MMIO 例外，这正是 volatile 特殊之处。 `<!-- ROW_MINE: ksummit.messages.3866 -->`
+- 【Linux社区】Mauro 列出 htmldocs 四类报错来源，建议 CONFIG_WERROR 时在常规构建跑三个文档检查脚本，实测 i5 笔记本约 8 秒，可消掉 linux-next 约 100 条警告。 `<!-- ROW_MINE: ksummit.messages.3876 -->`
+- 【Linux社区】Jiri Kosina 反对用匿名调查收集子系统反馈，认为被拒稿者天然倾向给负面评价，即使拒得对，匿名结果也难反映真实。 `<!-- ROW_MINE: ksummit.messages.3878 -->`
+- 【Linux社区】Rostedt 区分两种写法：有锁时读两次无碍；无锁下 if(global>1000) 后再读 global 很可能是 bug，编译器可合法改写为先 READ_ONCE 存寄存器。 `<!-- ROW_MINE: ksummit.messages.3879 -->`
+- 【Linux社区】Bottomley 称 MM 须协调约 22 位架构维护者就内部抽象达成共识，且靠 LSF/MM 三天会与 Plumbers MC 疏解，反驳 Rostedt 的 MM“小土豆”说法。 `<!-- ROW_MINE: ksummit.messages.3880 -->`
+- 【Linux社区】Bottomley 指出 Sashiko 依赖的企业慷慨不是开源代码而是免费 token，一旦断供将“有代码却跑不起”，回应 Bart 关于支持多个 LLM 的说法。 `<!-- ROW_MINE: ksummit.messages.3884 -->`
+- 【Linux社区】Mauro 逐条回应 Sashiko 议题：赞成 LTS 评审但先从错误路径检查入手，建议 Coverity 式问题导航界面与开源模型本地化，另提议用 AI 清理 kernel-doc 警告以启用 -Wall。 `<!-- ROW_MINE: ksummit.messages.3886 -->`
+- 【Linux社区】Rostedt 展示个人实践：把说明补丁动机的 Link 放在标签区外供人读，标签区内的 Link 由工具自动指向投稿帖，以此区分两类链接。 `<!-- ROW_MINE: ksummit.messages.3889 -->`
+- 【Linux社区】Armstrong 称面板 IC 厂不出数据手册、驱动靠“一串不透明十六进制命令”，最先进的是他为 SM8550/SM8650 上游的 visionox-vtdr6130，需 SoC、面板、DDIC、整机全链配合。 `<!-- ROW_MINE: ksummit.messages.3895 -->`
+- 【Linux社区】Artem 主张保留 Bugzilla，列三项期望（可 CC 任何人、邮件接口、按组件分类），举 KDE/GCC/Wine 仍在用，自荐做专职 Bugzilla 维护者。 `<!-- ROW_MINE: ksummit.messages.3898 -->`
+- 【Linux社区】Arnd 赞同先删 HIGHPTE（x86 已删仅剩 ARM），提议按类别用 Kconfig 细分 highmem 用户并统计用量，__GFP 位已用 26/32，还关注 kmap 复用做 Spectre 防护的 ASI 工作。 `<!-- ROW_MINE: ksummit.messages.3902 -->`
+- 【Linux社区】Jan Kara 称 JFS 维护者 Shaggy 愿废弃且不知有用户；reiserfs 除凶案外还有技术原因：特殊行为易碎、无测试，公告废弃后仅有的两名用户均选择迁移。 `<!-- ROW_MINE: ksummit.messages.3908 -->`
+- 【Linux社区】Kent Overstreet 提出借 bcachefs 的 shim 层把约九成代码量的文件系统跑在用户态，目标是让老文件系统（如 reiserfs）以 FUSE 续命，摆脱内核重构破坏并缓解安全问题。 `<!-- ROW_MINE: ksummit.messages.3909 -->`
+- 【Linux社区】Hellwig 详述找 strscpy 文档失败的过程：lib/string.c 无 kerneldoc、Documentation 仅 deprecated.rst 提及，最终发现文档藏在 fortify-string.h，批评其晦涩。 `<!-- ROW_MINE: ksummit.messages.3911 -->`
+- 【Linux社区】Rostedt 为自动添加的 Link 辩护：全有或全无的自动化更实用，封面信逐版链接便于回溯；回应 Linus 对 syzbot Closes 标签的批评，称有些标签本就给机器读。 `<!-- ROW_MINE: ksummit.messages.3914 -->`
+- 【Linux社区】Paul McKenney 建议让 AI 读 tools/memory-model 与内存屏障文档以理解 .bell/.cat 文件，称 AI 需要大量背景知识；Mason 的审查提示词已被 BPF CI 采用。 `<!-- ROW_MINE: ksummit.messages.3916 -->`
+- 【Linux社区】Lorenzo 提出 LLM 造成提交者与维护者不对称：可批量生成貌似合理的补丁系列，维护者必须能成批拒绝，提交者必须理解补丁每一部分，“我们不收 slop”。 `<!-- ROW_MINE: ksummit.messages.3925 -->`
+- 【Linux社区】Dobriyan 反对 Wilcox 实现 malloc 的提案：返回 void* 而非 T*，且多用独立 kmemcache 更利于调试。 `<!-- ROW_MINE: ksummit.messages.3933 -->`
+- 【Linux社区】Bottomley 认为 Linux 决策瘫痪非因体量过大，用户空间 ABI 并非完全不可变，关键是管理变更保兼容，要给 ABI 演进通道而非压制创新。 `<!-- ROW_MINE: ksummit.messages.3934 -->`
+- 【Linux社区】Chinner 强调 syzbot 模糊测试不能证明文件系统能安全解析不可信镜像，自述 15 年前设计的元数据校验可击败随机位变异，拒绝让 XFS 承担该风险，并指内核缺功能 EOL 流程。 `<!-- ROW_MINE: ksummit.messages.3944 -->`
+- 【Linux社区】Corbet 支持把 kernel-doc 移植成带缓存的 Python Sphinx 扩展，自述对文档构建做性能分析，发现 C 域符号列表迭代器被调近 7 亿次，是构建慢的根源之一。 `<!-- ROW_MINE: ksummit.messages.3946 -->`
+- 【Linux社区】Bottomley 认为靠提交者自觉跑工具不现实，主张让 0day bot 抓取列表上的 [PATCH] 统一跑 checkpatch 与约定的 AI 审查，但指出推理算力终须有人买单。 `<!-- ROW_MINE: ksummit.messages.3948 -->`
+- 【Linux社区】Pinchart 解释 probe 失败只意味着某设备绑定出错而非驱动有错，不应阻止注册，否则一个故障设备会让多实例系统全体失效，此为预期行为。 `<!-- ROW_MINE: ksummit.messages.3950 -->`
+- 【Linux社区】Bottomley 力挺用 LLM 解码 oops 栈回溯并按内核版本拉取发行版 debuginfo，称 bug 分诊正是 AI 擅长替代的琐事，回击“非确定性”批评，主张先试再下结论。 `<!-- ROW_MINE: ksummit.messages.3951 -->`
+- 【Linux社区】Pinchart 主张 trailer 首先为解决问题提供数据，人类可读格式居次；赞成 Rostedt 恢复用链接，提议以 Pulled-from: 标记补丁来源、与讨论链接分开。 `<!-- ROW_MINE: ksummit.messages.3952 -->`
+- 【Linux社区】Kees Cook 提议用 git notes 保存 b4 am 来源 URL，在 commit-msg 钩子里跑 b4 dig 比对，不一致时自动补 Link 标签与 FIXME 说明差异原因。 `<!-- ROW_MINE: ksummit.messages.3963 -->`
+- 【Linux社区】Ojeda 回应 C 委员会的“区域禁 UB”方案：内核需要 Rust 式记忆安全与“安全抽象包裹不安全代码”的能力，这正是 Rust 成功之处，C++ 应学 Safe C++ 而非 Profiles。 `<!-- ROW_MINE: ksummit.messages.3966 -->`
+- 【Linux社区】Dave Hansen 反对把标签设计与政策文档绑定：标签类似 ABI，需生产者与消费者契约且难以撤回，仓促定标签若返工危害更大。 `<!-- ROW_MINE: ksummit.messages.3970 -->`
+- 【Linux社区】Bottomley 建议让 LLM 对定位到的提交构造 revert 或补丁请报告者验证，承认算力付费问题，并提出用 ksymoops 式确定性方法先筛 oops 再交 AI。 `<!-- ROW_MINE: ksummit.messages.3979 -->`
+- 【Linux社区】Bottomley 反对新增 Improves 标签，指其语义更模糊；提出三条规则：修复必带 Fixes、仅 cc:stable 自动回传、其余事后可申请，并提醒 -rc 合并窗回归例外。 `<!-- ROW_MINE: ksummit.messages.3983 -->`
+- 【Linux社区】Carpenter 展示 ret=frob(); if(!ret) return ret; 的反转条件 bug 模式，称每年仅数个但大型重构补丁无法在每个硬件上测试，此类检查仍有价值。 `<!-- ROW_MINE: ksummit.messages.3985 -->`
+- 【Linux社区】Mauro 实测 kernel-doc -Wall 全树约 33 秒、36965 条警告，allmodconfig 另有约 450 条；提议把现有警告存成基线文件，默认只报新增并按 WERROR 使构建失败。 `<!-- ROW_MINE: ksummit.messages.3990 -->`
+- 【Linux社区】Pinchart 质疑“新 ISP 有数十万参数”的说法，区分 ISP 处理块与控制算法，称专利论利好大厂，并认同“UAPI 暴露者须有开源对应实现”的要求。 `<!-- ROW_MINE: ksummit.messages.3997 -->`
+- 【Linux社区】Linus Walleij 自述 ARM32 4G/4G 分裂原型：把内核编进 VMALLOC 区、仅留 0xf0000000 起 256MB 映射，再借 LPAE 两条翻译表基址寄存器分离内核与用户映射，第二步尚未成功。 `<!-- ROW_MINE: ksummit.messages.3998 -->`
+- 【Linux社区】Brodsky 指出 pkeys ABI 对信号、rseq、io_uring worker 等异步内核交互严重欠定义且跨架构不一致，引 Gleixner“全坏了”之语，拟在 LPC 办 BoF 并倾向带 A/V 的正式场次。 `<!-- ROW_MINE: ksummit.messages.4002 -->`
+- 【Linux社区】Lorenzo 与 Hohndel 共识：LLM 使端到端提交无需专业门槛成为可能，社区 slop 明显增多，文档应明确“疑似 AI slop 可径行拒绝”，这是全新局面。 `<!-- ROW_MINE: ksummit.messages.4006 -->`
+- 【Linux社区】Pinchart 称文档对新人不友好，引 Corbet 的教程/操作/解释/参考四分类说现存多为参考型；LF 资助付费写文档的实验已失败，提议月度线上会、IRC 频道等社区建设并劝贡献者多催促。 `<!-- ROW_MINE: ksummit.messages.4007 -->`
+- 【Linux社区】Uecker 认同把数据竞争从 UB 改为“可见旧值或新值”的语义强化，称若编译器已如此行为则标准可改，但须有人提案，且难离 C++ 记忆模型另起炉灶，优化器历史包袱重。 `<!-- ROW_MINE: ksummit.messages.4013 -->`
+- 【Linux社区】Figa指V4L2有状态解码器接口可保内核API通用，问DRM为何编解码用命令提交而显示用固定KMS；警告固定功能API隐藏命令缓冲会阻碍ISP用例优化。 `<!-- ROW_MINE: ksummit.messages.4018 -->`
+- 【Linux社区】Walleij自述对Miguel与Wedson的Rust补丁初曾质疑“你能胜过50年的C”，细看后转而认可其价值；要求Rust维护者如Torvalds在Transmeta时期那样承担超越本职的长期投入，并引Kasan为侵入性技术可快速接纳的先例。 `<!-- ROW_MINE: ksummit.messages.4027 -->`
+- 【Linux社区】Levin展示按类别标签脚本生成主题化*-next分支的实验仓库，称初衷是评估AI合并冲突解决并与-next团队及Linus的人工成果对比，纯AI解决结果或可供CI与机器人使用。 `<!-- ROW_MINE: ksummit.messages.4031 -->`
+- 【Linux社区】引kallsyms行号方案实测：459万条目约44MiB，vmlinux自529MiB增至573MiB（增8.3%）；Babka否决做成可加载模块的提议，称罕见崩溃“要么常开、要么错失唯一机会”。 `<!-- ROW_MINE: ksummit.messages.4032 -->`
+- 【Linux社区】Chehab赞同新内核接口须附完整文档与自测套件（含冒烟测试），但指出新品硬件仅厂商持有，冒烟测试对审阅者意义有限，除非厂商向审阅者提供硬件。 `<!-- ROW_MINE: ksummit.messages.4033 -->`
+- 【Linux社区】与Arnd讨论指针返回值注解分类：合法指针、NULL、错误指针的组合共五类；Geert补充devm_clk_get_optional()属第五类，取决于DTB而非编译期，系可选硬件功能所致。 `<!-- ROW_MINE: ksummit.messages.4036 -->`
+- 【Linux社区】Hellwig支持像移除ia64那样淘汰无人维护的旧文件系统，但表态不欲顶着强烈反对硬移，只要有一名用户承诺做基本QA即可保留，并称net子系统移除策略更激进。 `<!-- ROW_MINE: ksummit.messages.4039 -->`
+- 【Linux社区】comex用GCC与Clang在Compiler Explorer实测：32位x86、ARM、MIPS、SPARC及32与64位POWER（power64le除外）默认将双寄存器结构经栈返回；32位x86靠-freg-struct-return规避，他架构无对应选项。 `<!-- ROW_MINE: ksummit.messages.4040 -->`
+- 【Linux社区】Herring称依赖提交者自觉抄送永不可靠，常遇DT补丁不抄DT列表；主张降低发送目标的重要性，转向lore更易用的过滤，并称该功能即将到来。 `<!-- ROW_MINE: ksummit.messages.4044 -->`
+- 【Linux社区】Chinner提出无主文件系统至少须有可用mkfs、fsck并纳入fstests，以fstype标志标注维护与弃用状态；详述XFS v4在2020弃用、2025默认关闭、2030全面移除的时间线及reiserfs先例。 `<!-- ROW_MINE: ksummit.messages.4049 -->`
+- 【Linux社区】Wilcox提议禁止听众直接提问，改由主持人从官方聊天平台遴选问题转呈讲者，称可改善秩序并让散场后的好问题惠及全体，回应该届峰会远程参与安排。 `<!-- ROW_MINE: ksummit.messages.4050 -->`
+- 【Linux社区】Tsirkin建议文档补充git am自动生成patch.msgid.link链接的配置，并给出applypatch-msg钩子的perl替换片段，将Message-Id转为Link尾注。 `<!-- ROW_MINE: ksummit.messages.4054 -->`
+- 【Linux社区】Luck指出AI与sed或coccinelle脚本本质不同：同一提示词得不到确定性输出，留存提示词有用但效用低于传统脚本，回应Linus要求披露工具与提示的提议。 `<!-- ROW_MINE: ksummit.messages.4059 -->`
+- 【Linux社区】Weinberger设计四类输入（子系统、源文件、模块名、内核报错）到邮件列表的查询方案：用DWARF5全模块构建建立模块到源文件映射，用nm建符号映射，sqlite库可由构建自动生成。 `<!-- ROW_MINE: ksummit.messages.4075 -->`
+- 【Linux社区】Chinner反驳“移用户态库”是安全表演，提出lklfuse在用户态沙箱运行内核文件系统解析实现特权分离，称信任模型完善后旧文件系统更可保留；并斥Linus“Waah”式嘲讽不可接受、领导层沉默更糟。 `<!-- ROW_MINE: ksummit.messages.4081 -->`
+- 【Linux社区】Carpenter指DRM在分支间cherry-pick产生重复提交哈希，致Fixes标签指向对象无法解析，反向回溯某提交的后续修复搜索同样被扰乱。 `<!-- ROW_MINE: ksummit.messages.4084 -->`
+- 【Linux社区】Pinchart称大量开发者以有害方式滥用devm_*分配器，并转述Kees拟将对象分配API扩展至devm_*，延续kzalloc_obj语义信息讨论。 `<!-- ROW_MINE: ksummit.messages.4093 -->`
+- 【Linux社区】Bottomley以Chinner回其提议的粗口拒绝为例，主张其与Linus嘲讽同等致压，称对己与对人的标准必须一致；Chinner坚称议题是机器人与第三方基础设施伤害社区时的伦理对策而非AI。 `<!-- ROW_MINE: ksummit.messages.4095 -->`
+- 【Linux社区】Carpenter让步认可Fixes应针对bug而非仅回归，称审过千余拼写修复无人要求加Fixes，多数维护者认为无害的静态检查修复不够格，Fixes多指向“新增某功能”提交。 `<!-- ROW_MINE: ksummit.messages.4109 -->`
+- 【Linux社区】Leemhuis引证Red Hat将在RHEL 9后迁往issues.redhat.com，Fedora负责人Miller主张三年内弃用Bugzilla且仅两人苦撑；其LWN评论主张先导引至求助论坛再提bug。 `<!-- ROW_MINE: ksummit.messages.4113 -->`
+- 【Linux社区】Chehab分析两种情形：开源语料训练的AI输出难含实质原始代码；闭源开发若未退出训练条款，向ChatGPT提交受保护代码者须担责，OpenAI条款默认授予可再许可的使用权。 `<!-- ROW_MINE: ksummit.messages.4114 -->`
+- 【Linux社区】Torvalds称不相信自动化信任系统，因其必被博弈而失却信任本义；真正的信任是对子维护者的人身信任，git签名与kernel.org密钥属身份证明，并提及Greg参与的“去中心化信任”项目。 `<!-- ROW_MINE: ksummit.messages.4118 -->`
+- 【Linux社区】Bottomley区分维护者依DCO(c)条无责与内核整体风险：若法院裁定AI代码属模型衍生作品，已合入代码或须大规模回退，需集体确定风险容忍度；其个人判断风险小到可接受。 `<!-- ROW_MINE: ksummit.messages.4125 -->`
+- 【Linux社区】Bergmann分析sparc32 LEON新SoC配16GiB内存：MMU有36位寻址但Linux未支持64位phys_addr_t，lowmem仅192MB，扩至2GB后高内存比仍7:1，并问NOEL-V rv64替代与2029年后生产需求。 `<!-- ROW_MINE: ksummit.messages.4133 -->`
+- 【Linux社区】Pinchart指Levin立场矛盾——既称不会依赖AI又力推AI工具；Levin称其重写脚本与CVE流程基建均由AI完成但随时可退回手工；Pinchart警告生成式AI日常化将加深依赖。 `<!-- ROW_MINE: ksummit.messages.4134 -->`
+- 【Linux社区】Rostedt自述经复查其收到的两处umn.edu琐碎修复均属正当，曾请Greg勿回退其一；主张真正的琐碎仅限注释与文档，无暇审查就别收补丁，仅对少数信任者免审。 `<!-- ROW_MINE: ksummit.messages.4135 -->`
+- 【Linux社区】Brodsky拟报LPC演讲：pkeys ABI对信号递送、rseq、io_uring工作线程等异步内核交互严重欠定义，各架构重置行为不一致，引Tglx语“全都坏了”，且不适合任何维护子组。 `<!-- ROW_MINE: ksummit.messages.4136 -->`
+- 【Linux社区】Kroah-Hartman澄清stable参与完全自愿、不强加负担，但愿参与者应按文档用Cc: stable以获失败通知；称当周有资深核心开发者仍混淆Fixes与Cc: stable，未标注者stable组只能猜测回移。 `<!-- ROW_MINE: ksummit.messages.4139 -->`
+- 【Linux社区】Ferre确认Microchip sam9x75支持DDR2、DDR3与DDR3L，sam9x60支持LPDDR1等，两款SoC内存上限均256MB，为ARM highmem去留评估提供关键事实。 `<!-- ROW_MINE: ksummit.messages.4156 -->`
+- 【Linux社区】Kroah-Hartman追问Rust如何处理kref需外加锁的引用计数及dentry、inode、kobject等多生命周期对象交互，称内核需有清晰生命周期规则的“基对象”，以v4l与input层为例。 `<!-- ROW_MINE: ksummit.messages.4160 -->`
+- 【Linux社区】Tashkinov反驳Geert以v5.19以来2928个Fixes提交推算日均46修的口径，坚称bugzilla每周仅约二十余份报告并给出七日新建bug查询链接，质疑对方统计有误。 `<!-- ROW_MINE: ksummit.messages.4167 -->`
+- 【Linux社区】Torvalds称内核确实按值传结构且生成更优代码，但仅限能装入两寄存器的结构，页表项为数十年的典型用例；并指C无法如Python那样多返回值解构，仅适合语义上“一件事”的类型。 `<!-- ROW_MINE: ksummit.messages.4169 -->`
+- 【Linux社区】Levin给出数据：逾80%带Fixes提交最终进入stable，约70%仅带stable标签的提交修旧版问题，-rc中近85%提交针对合并窗口前问题；引ext4无标签示例，与Bottomley提议对照v6.8核验。 `<!-- ROW_MINE: ksummit.messages.4177 -->`
+- 【Linux社区】Nikula建议回归修复时限以-rc或发布版本而非日历表述，Leemhuis说明“下个周日”只因Linus惯于周日发-rc，周五前合入可避免用户多忍受一周回归。 `<!-- ROW_MINE: ksummit.messages.4178 -->`
+- 【Linux社区】Suchánek反驳Android至上的论据：真问题是设备并非真开源、无厂商更新则无法升级，大量用户滞留旧版，与stable作为无关；并指云端时代手机数据多存于企业系统。 `<!-- ROW_MINE: ksummit.messages.4181 -->`
+- 【Linux社区】Ojeda答初始化与析构期免锁访问可用unsafe fn暴露，调用者须unsafe块并附SAFETY注释说明编译器无法验证的健全性理由，该要求为Rust for Linux强制规范。 `<!-- ROW_MINE: ksummit.messages.4182 -->`
+- 【Linux社区】Ojeda回应Arnd对可grep与文档化的担忧：绑定生成不改C名称，计划为rustdoc增加外部引用映射表，使Rust文档可写“类似C的spinlock_t”并经Sphinx生成指向C文档的链接。 `<!-- ROW_MINE: ksummit.messages.4184 -->`
+- 【Linux社区】Ryabitsev提出三步：get_maintainer.pl的THE REST兜底不再抄linux-kernel；public-inbox加新话题与热门话题RSS；在MAINTAINERS设ALWAYS CC条目指向patches@lists.linux.dev，拟提交维护者峰会。 `<!-- ROW_MINE: ksummit.messages.4187 -->`
+- 【Linux社区】Bottomley回应Kosina的stable抄送邮件洪峰提案，主张多年所求不过是邮件头标签X-Stable-Base与X-Stable，若在内核文档中规范化即可用procmail过滤，无需进退机制。 `<!-- ROW_MINE: ksummit.messages.4191 -->`
+- 【Linux社区】Tashkinov称邮件列表报告互不连通，bugzilla可集中检索去重；驳斥转发行版建议，称其Fedora内核报告多年无果；自荐任分诊联络人但LF无此职位。 `<!-- ROW_MINE: ksummit.messages.4199 -->`
+- 【Linux社区】Pinchart回应Leon的激进主张（API须被Debian、Fedora、SUSE包使用），建议补入Android AOSP，指Linux涵盖仅存于单一数据中心的设备等长尾市场，且GitHub项目作API使用证据最不可靠。 `<!-- ROW_MINE: ksummit.messages.4206 -->`
+- 【Linux社区】Hellwig称Linus已宣布任何破坏用户空间的BPF kfunc或辅助函数变更是禁区，反驳Kosina“HID-eBPF可随时弃用并转普通驱动”的论点。 `<!-- ROW_MINE: ksummit.messages.4370 -->`
+- 【Linux社区】Starovoitov引kfuncs.rst“kfunc永无硬稳定性保证”，并以git log与hid-bpf重构史纠正Hellwig对kfunc稳定性的事实错误。 `<!-- ROW_MINE: ksummit.messages.4372 -->`
+- 【Linux社区】Chris Mason目标是在峰会讨论用审阅自动化为维护者减负，拟收集典型bug建提示词自动化测试集，支持开放默认加可插API与提示词。 `<!-- ROW_MINE: ksummit.messages.4384 -->`
+- 【Linux社区】Carpenter主张早于git的修复也该标Fixes: 1da177e4c3f4；Bottomley建议用tglx/history.git，Carpenter指多数人无此树且会破坏脚本。 `<!-- ROW_MINE: ksummit.messages.4387 -->`
+- 【Linux社区】Ted Tso回顾峰会史：从约50人扩至150多人致2016年拆分，现为半天约30人无音视频；赞助靠“注意力经济”，提及“Rust实验的终结”与AI议题。 `<!-- ROW_MINE: ksummit.messages.4392 -->`
+- 【Linux社区】Ryabitsev主张勿用未过滤LKML归档训练模型，宜借cregit筛出被接受补丁集；被拒补丁需按v1至vN分组并给无回音系列特殊考量。 `<!-- ROW_MINE: ksummit.messages.4393 -->`
+- 【Linux社区】Bottomley列三大问题：Linus只出席MS；MS被当决策机构（如驱逐俄开发者）却无代表性；30人太少，需扩容或轮换邀请。 `<!-- ROW_MINE: ksummit.messages.4396 -->`
+- 【Linux社区】Gunthorpe称Carbon“机械化大规模迁移C++”路线比Rust实验更契合内核流程，可逐块把C转Carbon再手工补安全，惜其尚非v1.0。 `<!-- ROW_MINE: ksummit.messages.4397 -->`
+- 【Linux社区】Kicinski提议跨子系统10分钟短讲（流程、日常难题、演进），称已在TAB及向Linus与Ted多次提出；BPF用评分促评审收效甚微。 `<!-- ROW_MINE: ksummit.messages.4400 -->`
+- 【Linux社区】Google的Levin同意议题扩至90分钟，将讲SoC厂商上游化与固件挑战对内核部署的影响，并解释cros_ec驱动为何独立于既有子系统。 `<!-- ROW_MINE: ksummit.messages.4411 -->`
+- 【Linux社区】Ryabitsev澄清git-bug架构：bug存于子系统树refs/bugs，仅维护者可建bug，报告者经前端预分析提交，同步只在共同维护者间进行。 `<!-- ROW_MINE: ksummit.messages.4416 -->`
+- 【Linux社区】Sasha Levin主张AI调用不嵌入工具，改为脚本钩子收提示词出结果，可随换模型避免供应商锁定，并可建脚本库供自由选型。 `<!-- ROW_MINE: ksummit.messages.4418 -->`
+- 【Linux社区】Greg KH驳Bottomley“devm内存延至模块释放”建议：设备由总线创建（如USB）随插拔销毁而模块常驻，反复插拔将耗尽内存，直言拒绝。 `<!-- ROW_MINE: ksummit.messages.4420 -->`
+- 【Linux社区】Greg KH指devm误用根源在struct device与cdev两条对象生命周期混淆；期待Rust如何映射驱动模型引用计数对象，坦言尚无答案。 `<!-- ROW_MINE: ksummit.messages.4421 -->`
+- 【Linux社区】Gupta提四道可自动化验证门（复现、根因证据、补丁对比、回归自测）作队列优先级而非门槛；Greg KH认可网络子系统先行，强调安全报告不得发第三方设施。 `<!-- ROW_MINE: ksummit.messages.4424 -->`
+- 【Linux社区】Rostedt主张文档只陈述现行政策、不为假想AI洪流预设规则，引其TAB十年经验；提出“提交工具生成代码者须证明理解代码”的表述方案。 `<!-- ROW_MINE: ksummit.messages.4425 -->`
+- 【Linux社区】Bottomley纠偏：内核有三套unwinder，amd64已用ORC取代GUESS猜测式；编译器界称内核所需为“栈行走”，Rust只需够用的栈回溯。 `<!-- ROW_MINE: ksummit.messages.4428 -->`
+- 【Linux社区】Ojeda详解Rust内核条件编译机制：#[cfg(CONFIG_X)]支持y、m与未启用三态，可像C一样整体移除条目或作空实现。 `<!-- ROW_MINE: ksummit.messages.4432 -->`
+- 【Linux社区】Cameron指出CXL部分控制具破坏性（可移除他主机内存），fwctl需分层安全级与权限方案；Williams因厂商出树风险重审仅调试版策略。 `<!-- ROW_MINE: ksummit.messages.4441 -->`
+- 【Linux社区】Corbet提议峰会设文档议题：架构文档迁入Documentation/arch、文档结构整合、社区无全职文档人力、Sphinx基础设施改进。 `<!-- ROW_MINE: ksummit.messages.4448 -->`
+- 【Linux社区】Rostedt引static_call.h注释：函数指针换签名调用属C标准严格UB，依赖调用方清栈与返回寄存器全破坏的CDECL式ABI；C23已禁旧式func()声明。 `<!-- ROW_MINE: ksummit.messages.4449 -->`
+- 【Linux社区】Rostedt说明trace用linux-trace-kernel进patchwork、讨论留LKML；称调度追踪类改动影响全内核与DRM不同，请勿删抄送列表。 `<!-- ROW_MINE: ksummit.messages.4464 -->`
+- 【Linux社区】Kozlowski实测133个提交积压约一月才进next；Pinchart认同曾因此漏DT绑定集成问题，赞drm-misc线性历史即推即合，指rebase丢签名tag与测试基线。 `<!-- ROW_MINE: ksummit.messages.4471 -->`
+- 【Linux社区】Roeck称推送next可获跨树干扰提示并自跑构建启动测试；报告next问题常被无视或遭恶语，Cc加Linus才受重视，Linus曾直接拉其fixes分支。 `<!-- ROW_MINE: ksummit.messages.4475 -->`
+- 【Linux社区】FSF系统管理员Kelling反对限制gmail订阅：SMTP比web服务器更抗DDoS，凭lists.gnu.org经验认为问题可在少限制下缓解，愿提供技术协助。 `<!-- ROW_MINE: ksummit.messages.4477 -->`
+- 【Linux社区】Dobriyan对scoped_guard不买账，给出with_rcu、with_mutex块语法示例，指guard缩进只撑一两层后代码流就跑偏。 `<!-- ROW_MINE: ksummit.messages.4479 -->`
+- 【Linux社区】Mukherjee指正Brown“lei太新”之说：lei 1.8.0已入Debian稳定版与bullseye-backports，可用于过滤维护者收件。 `<!-- ROW_MINE: ksummit.messages.4481 -->`
+- 【Linux社区】Bottomley主张保留历史树Fixes格式“即使不强制所有人”，回应Rostedt“追溯2005年前只是学术练习”之说，称有人天然好奇。 `<!-- ROW_MINE: ksummit.messages.4484 -->`
+- 【Linux社区】Stoakes披露文档源于Rostedt的AI补丁未披露被其本人接受及Sasha的LLM配置文件补丁；忧“内核欢迎AI投稿”遭媒体炒作，指Linus立场已明。 `<!-- ROW_MINE: ksummit.messages.4485 -->`
+- 【Linux社区】Tashkinov列数据：Bugzilla周约24份报告约30封邮件，LKML日均百封；坚持默认订阅可退订，被Tarreau以集体协作论反驳后称“那就弃用bugzilla吧”。 `<!-- ROW_MINE: ksummit.messages.4486 -->`
+- 【Linux社区】Lameter问疫苗接种后能否恢复线下峰会，Greg KH答欧洲等地疫苗远不如美国充裕，2021年峰会被迫继续线上。 `<!-- ROW_MINE: ksummit.messages.4491 -->`
+- 【Linux社区】Chehab预期用非结构化文本微调蒸馏模型效果与Sashiko相近；因模型会对同库多次训练，建议可先从未过滤lore数据起步。 `<!-- ROW_MINE: ksummit.messages.4493 -->`
+- 【Linux社区】comex指Rust不容全局可变旗标，须不可变、原子或加锁；UnsafeCell绕过则并发写即UB；relaxed原子同指令但禁优化，望有更弱内存序与语法糖。 `<!-- ROW_MINE: ksummit.messages.4496 -->`
+- 【Linux社区】Leemhuis提议扩展“无回归”规则：上开发周期引入的回归修复必须进入最新stable系列，引Linus“12个月内回归须Cc stable”语，自知属大胆提案。 `<!-- ROW_MINE: ksummit.messages.4497 -->`
+- 【Linux社区】Brown称在意者自会推动工具执行、没人跑checkpatch是维护者不在乎；并纠正Bird“开源模型”应为“开放权重”。 `<!-- ROW_MINE: ksummit.messages.4501 -->`
+- 【Linux社区】Dobriyan列C++不可行因：g++强制C99初始化器按声明序、不支持__seg_gs；Greg KH附议称现转C++是倒退，荐读Carbon迁移方案。 `<!-- ROW_MINE: ksummit.messages.4505 -->`
+- 【Linux社区】Rostedt断言混合会议中远程者必是二等公民，建议设带激励的break-out、聊天提问与次日远程互动房间，反对为平等限制现场体验。 `<!-- ROW_MINE: ksummit.messages.4509 -->`
+- 【Linux社区】Rostedt指next树历史稳定问题曾在维护者峰会讨论（附LWN 1050027），自述常rebase加tag、极少删除彻底坏掉的提交。 `<!-- ROW_MINE: ksummit.messages.4512 -->`
+- 【Linux社区】Torvalds解释generic_file_mmap是缓冲缓存最复杂处：buffer head经b_this_page与页folio耦合、脏标记规则交织，古旧但稳定、难以绕开。 `<!-- ROW_MINE: ksummit.messages.4515 -->`
+- 【Linux社区】Howlett婉拒邀请称“发声只为推动流程改进”；语境涉及Stoakes主张mm由David Hildenbrand过渡接替Andrew Morton、其应获邀参会。 `<!-- ROW_MINE: ksummit.messages.4516 -->`
+- 【Linux社区】Hallyn惊讶多抄送会挨骂，认为有lei按文件检索后MAINTAINERS重要性下降；Carpenter自述手工删CC并困惑netdev与wireless划分。 `<!-- ROW_MINE: ksummit.messages.4518 -->`
+- 【Linux社区】署名henrychurchill者回应Linus“编译器界把C弄得更不安全”论：unsafe Rust的别名规则比C严格得多，动前需细读。 `<!-- ROW_MINE: ksummit.messages.4520 -->`
+- 【Linux社区】Pinchart忧专有技术锁定胜过单一厂商，建坝挡洪后若无FOSS闸门无法回头；主张先在维护者侧解决技术与自由问题，Bottomley预期AI泡沫破裂后开源崛起。 `<!-- ROW_MINE: ksummit.messages.4529 -->`
+- 【Linux社区】2024年TAB选举934人有资格、229人投票不足25%；Kees Cook、Dan Williams、Miguel Ojeda、Dave Hansen、Shuah Khan当选前五席。 `<!-- ROW_MINE: ksummit.messages.4532 -->`
+- 【Linux社区】Wysocki自述仅三种情形手Cc stable（限定回移范围、早于autosel、有依赖关系），附议Brown“Fixes标签泛滥与内部流程压力”之忧。 `<!-- ROW_MINE: ksummit.messages.4533 -->`
+- 【Linux社区】Brown实测：make -j56 htmldocs总耗时26分14秒且主现警告，而allmodconfig仅4.9秒，构成反对强制文档构建的具体论据。 `<!-- ROW_MINE: ksummit.messages.4534 -->`
+- 【Linux社区】Rostedt望Message-ID尾注能显示在git提交注释区；Bottomley指--pretty=raw加grep message-id可满足脚本，人类使用需新选项转可点击。 `<!-- ROW_MINE: ksummit.messages.4535 -->`
+- 【Linux社区】Overstreet主张认真VLIW须按微架构特化编译：非PGO无动态重编，把最后编译阶段挂入动态链接器并配磁盘缓存，兼容LLVM工具链。 `<!-- ROW_MINE: ksummit.messages.4536 -->`
+- 【Linux社区】Brown 批评 DRM 的 cherry-pick 流造成每周多次巨型冲突，是其见过最难跟进的合并区；建议 DRM 的 -next 分支预先合并各 -fixes 与 Linus 树，可用 dim 生成 drm-for-next。 `<!-- ROW_MINE: ksummit.messages.4213 -->`
+- 【Linux社区】Brauner 反对 Rostedt“像有吸毒成员的家庭”类比，称职业环境不宜情绪化比喻；主张支持组只能是 CoC 的补充，两者须明确分开。 `<!-- ROW_MINE: ksummit.messages.4214 -->`
+- 【Linux社区】针对 Rust DMA 补丁“无用户难评审”僵局，Geert 认可两步法：先按现状发系列，再给出含 QEMU 可模拟驱动等测试材料的 git 分支；Airlie 解释跨子系统系列先发无用户版本的无奈。 `<!-- ROW_MINE: ksummit.messages.4216 -->`
+- 【Linux社区】Leon 质疑 GregKH“网络维护者评审意见被忽视”的说法，要求举出被忽视的技术性评审意见，称自己与 LWN 深度文章均未见此类意见。 `<!-- ROW_MINE: ksummit.messages.4222 -->`
+- 【Linux社区】Slade 评 Bugzilla 改版争论：邮件适合讨论不适合报 bug，网页更易导航；任何系统都会有信息遗漏，目标不应是取悦所有人。 `<!-- ROW_MINE: ksummit.messages.4231 -->`
+- 【Linux社区】Bottomley 指 Fixes 标签按 5.Posting 与 stable 规则文档并非可选，但 Linus“随机改进不该引用旧提交”的解读与之冲突，出路或在澄清文档并强制执行。 `<!-- ROW_MINE: ksummit.messages.4244 -->`
+- 【Linux社区】Gunthorpe 解释 fwctl 分歧是哲学性而非政治性：内核应强制多少通用性无共识；配置 flash 与调试固件对开源社区价值甚微。 `<!-- ROW_MINE: ksummit.messages.4245 -->`
+- 【Linux社区】Levin 宣布创建 linus-next 树：只收发往 Linus 的 PR、连续树便于二分，LKFT 与 KernelCI 已接入测试；回应维护者峰会上 Linus 对拉取前测试质量的担忧。 `<!-- ROW_MINE: ksummit.messages.4248 -->`
+- 【Linux社区】Engelhardt 反驳 Laight 对 C++ 的批评：按值传聚合需深拷贝与析构故各语言都不用；std::move 可避免深拷贝，struct stat x={} 能初始化全部标量成员。 `<!-- ROW_MINE: ksummit.messages.4250 -->`
+- 【Linux社区】Brown 实测 make -j56 htmldocs 耗时 26 分 14 秒（Sphinx 5.3）；Corbet 称 Sphinx 8 修复性能问题后约 3 分钟，建议 venv 安装新版。 `<!-- ROW_MINE: ksummit.messages.4252 -->`
+- 【Linux社区】针对 UMN 事件与媒体子系统 29 补丁回滚，Leon 给出 __pm_runtime_resume 失败时自动递减 usage_count 的补丁，欲根治 57cc666d36ad 一类引用计数错误。 `<!-- ROW_MINE: ksummit.messages.4254 -->`
+- 【Linux社区】Ojeda 否认政策文件含“禁止并行代码”，引 Greg 2023 年“一设备一驱动、勿走回头路”邮件为据，说明其 Rust 参考驱动框架已用于 PHY。 `<!-- ROW_MINE: ksummit.messages.4255 -->`
+- 【Linux社区】Leemhuis 谢绝协助 auto-pending-fixes：自述回归追踪数月无薪、资金无着落；愿写“-fixes 分支永不 rebase”文档并游说维护者建立此类分支。 `<!-- ROW_MINE: ksummit.messages.4258 -->`
+- 【Linux社区】Shuah 表示 PR 必先在 linux-next 浸泡两三天，借其发现架构与配置破坏及合并冲突，反驳 Rostedt“在 next 放一两天无价值”论。 `<!-- ROW_MINE: ksummit.messages.4262 -->`
+- 【Linux社区】讨论指针返回五类注解（NULL 与 ERR_PTR 组合）；Geert 认同 ovl_lookup_inode 混用属编码错误，但坚持可选资源返回 NULL 能简化时钟、GPIO、复位等处理。 `<!-- ROW_MINE: ksummit.messages.4264 -->`
+- 【Linux社区】Ojeda 发布 2025 TAB 选举更新：改选 5 席，提名至 12 月 13 日，13 至 20 日用 CIVS 投票；2024 年后 3 commit 可投票、50 commit 自动获票，列到期成员名单。 `<!-- ROW_MINE: ksummit.messages.4267 -->`
+- 【Linux社区】Bottomley 引 hidraw 与 FIDO 令牌为例：整类设备无内核驱动，靠 CTAP 规范统一浏览器与 libfido2 用户态实现，证明全新设备类型可免内核驱动。 `<!-- ROW_MINE: ksummit.messages.4268 -->`
+- 【Linux社区】Golaszewski 澄清议题聚焦对象所有权与热拔插 use-after-free，将讲 C 自动指针加引用计数的编码模式；cleanup.h 不在本次讨论范围。 `<!-- ROW_MINE: ksummit.messages.4269 -->`
+- 【Linux社区】Brown 称 MFD 与新 SoC 上游常把核心驱动与看似无关的驱动补丁放同一系列，存在构建依赖但评审无重叠，不能一律要求拆分。 `<!-- ROW_MINE: ksummit.messages.4271 -->`
+- 【Linux社区】Arnd 记述老 Marvell NAS 因 DMA 地址限制低内存分配致数据损坏，树莓派靠 dma-ranges 加 SWIOTLB 加 GFP_DMA 变通；2G/2G 分割曾令 JRE 与浏览器出错。 `<!-- ROW_MINE: ksummit.messages.4273 -->`
+- 【Linux社区】Lunn 透露网络子系统现行政策只允许 scoped_guard，更“魔法”的 cleanup.h 构造被强烈劝阻，数年后视其他子系统成效再评估。 `<!-- ROW_MINE: ksummit.messages.4274 -->`
+- 【Linux社区】回应 Morton 的“引用超 95% 就发 nastygram 机器人”提案，NeilBrown 主张让 MUA 自动压缩引用乃至翻译语言，用工具而非训诫解决礼仪问题。 `<!-- ROW_MINE: ksummit.messages.4279 -->`
+- 【Linux社区】Uecker 指 ISO C 工作组现无内核开发者积极参与，自述业余修 GCC 无人理；McKenney 称须精挑战场，欢迎更多内核人参与标准工作。 `<!-- ROW_MINE: ksummit.messages.4281 -->`
+- 【Linux社区】Pinchart 峰会提案：devm_kzalloc 15 年来逾 6000 处调用，把资源寿命绑到设备绑定，字符设备私有数据会在 release 处理器运行前被释放，拟议技术与流程层对策。 `<!-- ROW_MINE: ksummit.messages.4284 -->`
+- 【Linux社区】Ryabitsev 透露计划在 kernel.org 端集中运行 lei 过滤，经只读邮箱向维护者提供预筛数据，绕过 Debian stable 无 lei 的问题。 `<!-- ROW_MINE: ksummit.messages.4285 -->`
+- 【Linux社区】GregKH 称 security@ 改组后运转顺畅，将获至少 6 个月资助设专职联系人；因法律限制只能用本地 LLM 起草初版补丁，LLM 分诊无效，真问题是无响应报告者与中间商。 `<!-- ROW_MINE: ksummit.messages.4286 -->`
+- 【Linux社区】Bottomley 把 UMN 后讨论拆为三题：信任如何生成、bug 修复须附 Fixes 与说明、恢复 trivial 树；认同 Shuah 对抬高新人门槛的担忧。 `<!-- ROW_MINE: ksummit.messages.4291 -->`
+- 【Linux社区】Pinchart 附议 Gleixner 对内核长期缺人、业界重功能轻正确性的批评，补充驱动层沦为 BSP 倾倒场的问题，主张借鉴 DRM/KMS 机制提高贡献激励。 `<!-- ROW_MINE: ksummit.messages.4295 -->`
+- 【Linux社区】Walleij 对 Intel UALink 驱动选址给出意见：试水走 staging，有专注团队则直接 drivers/accel/ual；Sinyuk 认同长期如 CXL 独立成 drivers/ual。 `<!-- ROW_MINE: ksummit.messages.4298 -->`
+- 【Linux社区】Tarreau 担心 cleanup 注解易致双重释放与 use-after-free；Bottomley 以 systemd 成功实践反驳，称注解可自动放引用与锁，不应预设失败。 `<!-- ROW_MINE: ksummit.messages.4302 -->`
+- 【Linux社区】Rostedt 统计 git 历史：指向 1da177e4c3f4（Linux-2.6.12-rc2）的 Fixes 标签达 528 次居首，支持 pre-git 补丁也标 Fixes。 `<!-- ROW_MINE: ksummit.messages.4304 -->`
+- 【Linux社区】Brown 补充 Sasha 提出的禁运代码准入测试清单：增加 QEMU 平台与固件启动、高质量 kselftest 及 Guenter 的测试，核心是至少冒烟测试。 `<!-- ROW_MINE: ksummit.messages.4310 -->`
+- 【Linux社区】Torvalds 主张新 API 必须是旧 API 的真超集且可自动化转换，否则“就是垃圾”；举例 VFS shared 迭代 2016 年引入、2023 年才删旧版历时七年多，称 GPIO 改动本可用 coccinelle。 `<!-- ROW_MINE: ksummit.messages.4318 -->`
+- 【Linux社区】Deller 实测 CONFIG_KALLSYMS_LINEINFO 在 parisc 架构工作良好，栈回溯可直接打印源文件行号，支持在内存优化后合入上游。 `<!-- ROW_MINE: ksummit.messages.4325 -->`
+- 【Linux社区】McKenney 表态测试优先级为 RCU、-next、主线；新增 linus-next 树要么无人测试，要么挤占 -next 与主线测试，直指新树的资源代价。 `<!-- ROW_MINE: ksummit.messages.4327 -->`
+- 【Linux社区】Levin 称当日已把 AUTOSEL 改为按版本范围合并的摘要邮件、主题标注适用树；赞成停发“已入 stable”通知，视其为纯垃圾邮件。 `<!-- ROW_MINE: ksummit.messages.4335 -->`
+- 【Linux社区】Mauro 演示 kernel-doc -Wall 列出 audit.c 十余处缺失返回值文档，建议把 Randy 的 kerndoc-export-search.pl 并入 Python 版 kernel-doc 复用解析数据。 `<!-- ROW_MINE: ksummit.messages.4336 -->`
+- 【Linux社区】Wedson 以 Rust 版 PL061 驱动解释 try_writeb 编译期越界检查、类型安全 drvdata 与可撤销资源加 RCU 守护，消除设备移除后的 use-after-free 竞态。 `<!-- ROW_MINE: ksummit.messages.4338 -->`
+- 【Linux社区】Romanovsky 反对“精心筛选收件人”的做法，主张 60 补丁系列即便仅 4 个属 arch 目录也应整系列抄送，以便看到全貌并统一反馈。 `<!-- ROW_MINE: ksummit.messages.4340 -->`
+- 【Linux社区】Rostedt 反驳 Segher“去改你的程序”：二分旧内核需数百处构建改动，一次二分至少 13 次迭代，只能全局压制 -Werror。 `<!-- ROW_MINE: ksummit.messages.4342 -->`
+- 【Linux社区】Brown 解释 runtime PM API 因合理原因难以用对，Kconfig 关闭会出意外，问题多年已知但在 API 层面不易修复，回应 Leon 对 29 个媒体补丁的质疑。 `<!-- ROW_MINE: ksummit.messages.4344 -->`
+- 【Linux社区】Ryabitsev 主张先定明确出路再弃用 bugzilla；LLM 预筛垃圾与发行版内核报告，报告进 lore 结构化 feed 替代 SMTP；难点是大附件的长期存储。 `<!-- ROW_MINE: ksummit.messages.4347 -->`
+- 【Linux社区】Berg 补充未订阅回复列表两法：lore 的 reply 链接可生成正确 In-Reply-To；或下载 raw 单邮 mbox 导入本地客户端后回复。 `<!-- ROW_MINE: ksummit.messages.4351 -->`
+- 【Linux社区】Roeck 指 Sashiko 将共享 DMA 内存 TOCTOU 列为高危，违背“硬件默认不恶意”原则；赞同按子系统定制提示词，指 sashiko 仓库 prompts 目录可提交修改。 `<!-- ROW_MINE: ksummit.messages.4352 -->`
+- 【Linux社区】回应 Ts'o 拟定的 2021 维护者峰会议题清单（UMN 复盘、加速器用户态要求、folio 与 ntfs3/ksmbd 接受标准、Rust），Pinchart 自荐分享 Linux 相机栈与 SoC 厂商沟通经验。 `<!-- ROW_MINE: ksummit.messages.4353 -->`
+- 【Linux社区】Ojeda 阐明初期只与愿意维护 Rust 抽象的子系统合作，API 变更只需改抽象层；透露 CONFIG_RUST 终将移除、GCC 构建属权宜，反驳 Leon 的成本论。 `<!-- ROW_MINE: ksummit.messages.4367 -->`
+- 【Linux社区】Brodsky 拟在 LPC 讲 pkeys ABI 在信号、rseq、io_uring 等异步内核交互下规格不一致，Gleixner 称“全是坏的”；Babka 建议改投 Kernel Summit 技术议题。 `<!-- ROW_MINE: ksummit.messages.4368 -->`
+- 【Linux社区】Linus称内核历来视提交生成文件为痛苦，mkutf8data几无人重新生成，对flex/bison主张“直接写更好的代码”而非依赖生成器产物。 `<!-- ROW_MINE: ksummit.messages.4537 -->`
+- 【Linux社区】Corbet用字典替换Sphinx符号查找中的部分线性搜索，使Sphinx 5.0.2全量htmldocs构建提速约20%，称其符号查找代码复杂度“令人生畏”。 `<!-- ROW_MINE: ksummit.messages.4538 -->`
+- 【Linux社区】Pinchart引GPLv2系统例外条款，认为禁止闭源用户态在许可上不可行且开危险先例；主张可拒绝合并只暴露未文档化厂商API的驱动，DMA-BUF互操作可作筛选判据。 `<!-- ROW_MINE: ksummit.messages.4541 -->`
+- 【Linux社区】McKenney主张现阶段将AI生成代码排除出内核，称多起诉讼进行中、法院走向未知；建议沿用DCO与SoB：“若不确定拥有提交权就不要提交”。 `<!-- ROW_MINE: ksummit.messages.4542 -->`
+- 【Linux社区】Berg直指Linus强推移除Link标签违背“仁君”社会契约、破坏信任，称这已成自我与权力之争而非技术问题，并提出可将message-id编码进git提交对象。 `<!-- ROW_MINE: ksummit.messages.4543 -->`
+- 【Linux社区】Ts'o为新人补丁bot细化规则：若补丁基于LTS分支且缺Upstream-commit:标签应告警；无法简单回移的LTS特殊修复属高级用法，bot可忽略。 `<!-- ROW_MINE: ksummit.messages.4546 -->`
+- 【Linux社区】用户Tashkinov列出最低诉求：集中收集、组件及时更新、可CC相关人；举例bug 204807两年255条评论附补丁，断言邮件无法承载此类协作。 `<!-- ROW_MINE: ksummit.messages.4548 -->`
+- 【Linux社区】Mauro认为AI带来的法律风险与现有开发无异甚至更低——大厂重金投入AI、不愿被诉，预计不会出现针对AI使用者的低成本高回报诉讼。 `<!-- ROW_MINE: ksummit.messages.4552 -->`
+- 【Linux社区】Stoakes批评工具生成内容指南草案回避要害：LLM可让无知识者端到端发补丁，维护者资源不对称前所未有，建议明文允许对“slop”系列直接拒收。 `<!-- ROW_MINE: ksummit.messages.4556 -->`
+- 【Linux社区】Pinchart指维护者也难定补丁基树，b4的base-commit与prerequisite-patch-id尾注有帮助但未普及，盼新人机制顺带强制补丁携带基线信息。 `<!-- ROW_MINE: ksummit.messages.4557 -->`
+- 【Linux社区】Ryabitsev警告security@kernel.org是单点故障，持0-day者可瘫痪kernel.org；提出security.txt多地址、直投地址、Signal备用通道与SecureDrop等冗余方案。 `<!-- ROW_MINE: ksummit.messages.4560 -->`
+- 【Linux社区】bcache维护者Coly Li称其AI存储创业产品公测13个月装机超百万，POSIX ACL无法承载AI任务访问控制，用户态方案性能不济，提议重启RichACL上游化讨论。 `<!-- ROW_MINE: ksummit.messages.4561 -->`
+- 【Linux社区】Triplett表态：不应强制接口的所有用户态皆开源，但要求“至少存在一个开源用户态实现”作为新增接口的前提。 `<!-- ROW_MINE: ksummit.messages.4564 -->`
+- 【Linux社区】Rostedt称合并提交应像普通提交一样说明目的；其多topic分支间偶以带详细说明的合并共享补丁，Linus未抱怨，佐证Linus重质量而非数量。 `<!-- ROW_MINE: ksummit.messages.4572 -->`
+- 【Linux社区】Lawall核查ovl_lookup_inode调用上下文，指出NULL与ERR_PTR并存在两处调用点行为各异，属“可选资源”模式而非单纯编码错误。 `<!-- ROW_MINE: ksummit.messages.4573 -->`
+- 【Linux社区】Kumar介绍Linaro Stratos用Rust编写hypervisor无关的vhost-user后端，处理I2C、GPIO、RPMB等guest请求；virtio GPIO规范推进中，Rust I2C后端已在rust-vmm评审。 `<!-- ROW_MINE: ksummit.messages.4574 -->`
+- 【Linux社区】Ts'o宣布2024维护者峰会9月17日维也纳举行、限30名受邀者，程序委员会为Brauner、Corbet、Greg KH、Levin、Ts'o、Wysocki六人，KS议题截止延至6月23日。 `<!-- ROW_MINE: ksummit.messages.4575 -->`
+- 【Linux社区】Ts'o称Launchpad上e2fsprogs报告多为浪费时间，Debian邮件式报告反而数据齐全可定位，质疑“流行百倍”意味着“噪音千倍”。 `<!-- ROW_MINE: ksummit.messages.4576 -->`
+- 【Linux社区】Gunthorpe预言GPU同样需要fwctl（固件调试追踪成难题），强调fwctl不得排他：固件接口必须可共享或被阻断，不能因此放弃功能性子系统接口。 `<!-- ROW_MINE: ksummit.messages.4578 -->`
+- 【Linux社区】Ojeda澄清TAB选举通常随KS或LPC举行但非硬性要求，若某年未办峰会或改期将照常选举，社区曾简略讨论调整此事。 `<!-- ROW_MINE: ksummit.messages.4579 -->`
+- 【Linux社区】Iwai指出bugzilla根本缺陷在缺初筛：报告只达组件指派人而非公共列表，既不扩展也难分流；并称内核无法判断设备是否正常，错误信息只能逐案处理。 `<!-- ROW_MINE: ksummit.messages.4581 -->`
+- 【Linux社区】Tarreau反驳：邮件列表是广播式集体努力，缺陷跟踪器却给报告者“正被处理”的错觉并对个别开发者施加定向压力，参与度模型上邮件更优。 `<!-- ROW_MINE: ksummit.messages.4582 -->`
+- 【Linux社区】Overstreet与Linus激辩：Kent主张Rust若解决别名可消除spill并使VLIW可行，Linus称别名极少要紧、OoO根本优于VLIW，并同批C未定义行为泛滥。 `<!-- ROW_MINE: ksummit.messages.4588 -->`
+- 【Linux社区】Stoakes提交增量补丁要求全自动系列受额外审视并写明“维护者不容忍slop”；Bottomley建议删该词，Stoakes称意在向媒体传达内核不接受AI垃圾的立场。 `<!-- ROW_MINE: ksummit.messages.4595 -->`
+- 【Linux社区】Ryabitsev说明kernel.org已有MIA处置机制：SSH密钥一年未用即自动停用，仅保留邮件别名，以此回应Uwe关于失联账号的质疑。 `<!-- ROW_MINE: ksummit.messages.4596 -->`
+- 【Linux社区】Lutomirski建议以virtio作Rust示范：virtio ring极不安全，!use_dma变体是历史错误，其设备内存用法本不该通过编译，应标注unsafe并注明“这确实是错的”。 `<!-- ROW_MINE: ksummit.messages.4599 -->`
+- 【Linux社区】Disseldorp详解lklfuse运行完整内核VFS到文件系统路径、LKL为non-mmu架构、仅依赖non-mmu xfs_buf一处下游改动，并问Chinner是否重审XFS non-mmu提案。 `<!-- ROW_MINE: ksummit.messages.4602 -->`
+- 【Linux社区】Pinchart辨析probe失败未必是驱动之过、可能设备故障致同型号多实例皆废；并称驱动并非defunct而是已加载未绑定，sysfs残留问题待解。 `<!-- ROW_MINE: ksummit.messages.4603 -->`
+- 【Linux社区】Rostedt证实tracing子系统已转向_cleanup_注解简化错误分支，给出两个lore系列链接，并计划将之加入自己的tracing库。 `<!-- ROW_MINE: ksummit.messages.4605 -->`
+- 【Linux社区】Brown举反例：有人一周末与Sashiko迭代15版简单quirk后仍被人评“方向不对”，对照Roeck的350行驱动9问题案例，主张需找中间道路。 `<!-- ROW_MINE: ksummit.messages.4606 -->`
+- 【Linux社区】Khan查证UMN补丁8e949363f017（mlx5 idr_find检查）绝非trivial；Kosina自认trivial.git荒废多年且umn.edu补丁无一经该树进入；结论唯靠评审。 `<!-- ROW_MINE: ksummit.messages.4611 -->`
+- 【Linux社区】Leemhuis详述regzbot构想：#regzb标签、初期靠人工补标、恳请把regressions@列入回复CC，长远每周rc前后向Linus与LKML发报告；Greg KH愿提供stable工具。 `<!-- ROW_MINE: ksummit.messages.4614 -->`
+- 【Linux社区】Elver强调安全抽象不等于无bug：Rust须集成KASAN、KCSAN、KMSAN（rustc -Zsanitizer）才能抓C与Rust边界错误，如C侧误释放与跨语言数据竞争。 `<!-- ROW_MINE: ksummit.messages.4622 -->`
+- 【Linux社区】Gunthorpe称fwctl历经三年会议讨论已成多方驱动维护者共识并在netdev会议报告；预判RDMA要开放共享固件接口、netdev要拒绝的分歧不会因再讨论而改变。 `<!-- ROW_MINE: ksummit.messages.4628 -->`
+- 【Linux社区】Pinchart称评审满负荷时效率骤降；互换评审对企业贡献者仅限业务相关，求评无关驱动即遭“没空”；建议大厂商按比例承担业务外评审义务。 `<!-- ROW_MINE: ksummit.messages.4633 -->`
+- 【Linux社区】Ojeda解析try_writeb运行期检查因offset非编译期常量，介绍以持有不变量的类型复用安全知识，盼Rust支持对静态范围循环变量取编译期值。 `<!-- ROW_MINE: ksummit.messages.4635 -->`
+- 【Linux社区】Ts'o公布2022都柏林维护者峰会日程：回归追踪（Leemhuis）、Rust下一步（Ojeda）、eBPF边界（Kosina）及“Linus开心吗”环节，附28位维护者参会名单。 `<!-- ROW_MINE: ksummit.messages.4637 -->`
+- 【Linux社区】Pinchart反对盲改用户所选Python解释器，主张以提示代替；引Mauro数据称kernel-doc改用新解释器可提速55%至60%，OpenSuse Leap等需python311-sphinx。 `<!-- ROW_MINE: ksummit.messages.4643 -->`
+- 【Linux社区】Airlie反驳Greg的niche设备论：“举一个听劝入社区的群体来”；称HabanaLabs入上游系RHEL、亚马逊等采购合同所迫，断言“得益的是Linux基金会而非Linux”。 `<!-- ROW_MINE: ksummit.messages.4645 -->`
+- 【Linux社区】Williams介绍CXL驱动做法：remove时把devm数据从cdev断开、ioctl全部失败直至用户态关闭；提出推广debugfs的FULL_PROXY_FUNC代理机制到驱动ioctl关停同步。 `<!-- ROW_MINE: ksummit.messages.4647 -->`
+- 【Linux社区】Ojeda梳理Rust分配器史：初用vendor的alloc crate，v6.10借Wedson方案传GFP标志（b6a006e21b82），v6.13由Danilo自建alloc模块与Allocator trait（b7a084ba4fbb）。 `<!-- ROW_MINE: ksummit.messages.4650 -->`
+- 【Linux社区】Tarreau详陈邮件列表优越：集体浏览、无人不可或缺；以“未回复以一周计、多为LKP报告”驳“大量石沉大海”说，并斥bugzilla强制订阅近于垃圾邮件逻辑。 `<!-- ROW_MINE: ksummit.messages.4654 -->`
+- 【Linux社区】Howlett建议KTODO工具在缺Closes:标签时反查受影响函数的潜在git提交以列出未决问题，类比stable补丁失败邮件的关联提示。 `<!-- ROW_MINE: ksummit.messages.4662 -->`
+- 【Linux社区】Park 提议2023峰会分享DAMON进展：某服务商以DAMOS方案降内存占用约16%，议题含ABI工具、DAMOS自调优、分层内存与内存超卖VM管理计划，自2019年历届峰会持续汇报。 `<!-- ROW_MINE: ksummit.messages.4664 -->`
+- 【Linux社区】Pinchart 披露某大型SoC厂商险些开放相机栈，听闻可借直通经其他子系统合入后临阵反悔；Bottomley 主张以商业利益“胡萝卜”而非仅靠GPL等强制手段促厂商开放。 `<!-- ROW_MINE: ksummit.messages.4666 -->`
+- 【Linux社区】Levin 示范用claude命令行审查tracing补丁，AI正确指出转用hashtable后丢失__read_mostly注解并给出修法，借此论证AI长于审查而非写作且无法律风险。 `<!-- ROW_MINE: ksummit.messages.4670 -->`
+- 【Linux社区】Kosina 评UMN假提交研究：证明“投入足够精力可暂混入恶意代码”属显而易见，是浪费时间的练习；真正值得研究的是漏洞多久未被察觉等课题。 `<!-- ROW_MINE: ksummit.messages.4672 -->`
+- 【Linux社区】Corbet公告2024年TAB选举9月20至27日投票，五席空缺，候选人七人含Amit Shah、Borkmann、Dave Hansen、Kicinski、Cook、Pieralisi、Shuah，LPC周五设TAB答疑会。 `<!-- ROW_MINE: ksummit.messages.4674 -->`
+- 【Linux社区】Stoakes 主张文档应明确对LLM“垃圾浪潮”可不加容忍地拒收，警告官方政策若显得“欢迎LLM”会被媒体放大，并称Linus“LLM只是工具”言论已被媒体引用。 `<!-- ROW_MINE: ksummit.messages.4676 -->`
+- 【Linux社区】Chehab 反驳AI逐字复制版权风险论：LLM训练来源海量只存高频重复模式，人类凭记忆写“Hello world”同样不知出处，逐字复制概率反低于人照搬教科书。 `<!-- ROW_MINE: ksummit.messages.4679 -->`
+- 【Linux社区】Ribalda 称现行策略致99%相机市场靠树外驱动、DRM混合模式更可行；Pinchart 要求举出“现代ISP皆命令缓冲”实例，指DRM与V4L2技术差异被夸大，核心在文档与开源用户态要求。 `<!-- ROW_MINE: ksummit.messages.4680 -->`
+- 【Linux社区】Berg 解释linux-next重复提交检测：同一补丁以不同commit ID进多树会被标记并通知，Pinchart 担忧media子系统cherry-pick其pull request的影响由此可消除。 `<!-- ROW_MINE: ksummit.messages.4681 -->`
+- 【Linux社区】Pinchart 归纳标注两大目的：助维护者按LLM来源调整审查重点，无需trailer、信任commit说明即可；GPL法律风险则需trailer便于批量列出受影响提交。 `<!-- ROW_MINE: ksummit.messages.4686 -->`
+- 【Linux社区】Walleij 指面板供应链为DDIC、面板厂、系统厂双层NDA结构，文档难求；提议以需完整gamma校正的Wacom等专业厂商为突破点，并抄送Wacom开发者征询意向。 `<!-- ROW_MINE: ksummit.messages.4689 -->`
+- 【Linux社区】Carpenter 建议修复linux-next破坏者应在报告后说明何时合入，因常有人静默修复或额外多测一两天，令测试者无从判断进度。 `<!-- ROW_MINE: ksummit.messages.4690 -->`
+- 【Linux社区】Bottomley 倡议git am自动把message-id写入commit头（拟新增ATOM_MESSAGEID），主张把争议拆为“自动化追踪”与“人工补充背景”两层，Link标签之争源于混担两职。 `<!-- ROW_MINE: ksummit.messages.4693 -->`
+- 【Linux社区】Corbet发布2022年TAB选举细节：9月12至14日CIVS投票，资格须2021年以来3个带tag提交、50个自动获票；届满者Abbott、Brauner、Cook、Mason、Williams，TAB一年工作含UMN善后。 `<!-- ROW_MINE: ksummit.messages.4700 -->`
+- 【Linux社区】Coly Li 探讨AI/LLM负载下的富ACL：指出do_unlinkat先调security_path_unlink、后于vfs_unlink内may_delete，父目录无写权限时安全规则放行删除也无法生效；其公司拟投工程师推上游。 `<!-- ROW_MINE: ksummit.messages.4703 -->`
+- 【Linux社区】Rostedt 对把MAINTAINERS“THE REST”从LKML改投patches@lists.linux.dev的RFC表态：可接受，但调度器、定时、追踪、中断等核心改动必须仍发LKML。 `<!-- ROW_MINE: ksummit.messages.4710 -->`
+- 【Linux社区】用户Artem列5.19.12上watchdog、ACPI、TPM等无法判断严重性的dmesg报错清单；Takashi归因BIOS缺陷，Geert认为内核多数无法自判，需进一步排查。 `<!-- ROW_MINE: ksummit.messages.4711 -->`
+- 【Linux社区】Gupta 提四道安全提交验证门（触发崩溃、根因证据、补丁前后对比、自测试），3道可全自动CI化；引netdevconf 0x1A共识“检测AI不可能也非目标，可验证证据才是关键”。 `<!-- ROW_MINE: ksummit.messages.4715 -->`
+- 【Linux社区】Cook 主张现阶段LLM参与时“宁可过度说明”，trailer标签承载不了，需在commit信息中详述过程，由社区随时间自行淘汰冗余内容。 `<!-- ROW_MINE: ksummit.messages.4716 -->`
+- 【Linux社区】Jung 向Linus解释Rust全局flag用AtomicBool实现，编译器不得二次载入，并发仅经原子操作，C++内存模型按访问理解即可兼顾优化与可靠并发、消除TOCTOU。 `<!-- ROW_MINE: ksummit.messages.4717 -->`
+- 【Linux社区】Carpenter 力挺Fixes: 1da177e4c3f4标签：审查无Fixes的回移须盲审，其五小时回移经历令其默认最坏情形；安全补丁尤需此标签，举Dumazet补丁为例。 `<!-- ROW_MINE: ksummit.messages.4718 -->`
+- 【Linux社区】Vivi 表态UALink驱动应自首日起设drivers/ualink独立子系统目录，合并流程可暂经DRM或Greg引导，类比drivers/accel管理模式。 `<!-- ROW_MINE: ksummit.messages.4719 -->`
+- 【Linux社区】Airlie 认可GPU流程长期有效但依仗庞大相邻社区，盼CI接入gitlab.freedesktop并试合并请求；Vetter建议以大会演讲加小会讨论形式介绍网络组分组维护经验。 `<!-- ROW_MINE: ksummit.messages.4720 -->`
+- 【Linux社区】Bottomley 澄清git格式机制：Link可由trailer改为commit头标签，git默认仅打印部分头信息（如AuthorDate），借此兼顾Linus诉求与自动化追踪。 `<!-- ROW_MINE: ksummit.messages.4728 -->`
+- 【Linux社区】Ellerman 支持Konstantin的patch.msgid.link域名方案：补丁链接置于行首易辨认、可grep，lore加“# patch”尾注在长message-id时会溢出屏幕。 `<!-- ROW_MINE: ksummit.messages.4732 -->`
+- 【Linux社区】Ryabitsev 披露ksummit列表消息残缺系mlmmj-1.4.0rc2缺陷所致，已回滚1.3.0，并称该RFC部分目的是借较大列表测试新版。 `<!-- ROW_MINE: ksummit.messages.4733 -->`
+- 【Linux社区】Kosina 提出AI标注峰会提案：需以补丁元数据表达“由哪个LLM辅助、谁真正理解代码”，质疑S-O-B链首位约定不够用，并引Pinchart“维护者心中信任分”论LLM放大失职问题。 `<!-- ROW_MINE: ksummit.messages.4737 -->`
+- 【Linux社区】Rostedt 指LKML日均约800封、无人通读（除Corbet与Morton），正确做法是同时抄送维护者与公开列表，使维护者知众目共睹。 `<!-- ROW_MINE: ksummit.messages.4739 -->`
+- 【Linux社区】Kosina 质疑全量stable补丁邮件流量价值：检索可走lore/lei；Takashi反驳cherry-pick带fuzz误打时须见原补丁方可核查，Kosina称那需主动校对。 `<!-- ROW_MINE: ksummit.messages.4742 -->`
+- 【Linux社区】Bottomley 起草驱动通用AI指令：硬件默认“可能有bug但不可假定恶意”，修硬件bug须声明具体设备并实测；统计144个子系统信任倾向，已得3个opt-out。 `<!-- ROW_MINE: ksummit.messages.4747 -->`
+- 【Linux社区】Hemminger 自述为网络类bugzilla默认接收人，只扫垃圾并转发netdev，盼其消亡并断言问题追踪不合社区流程；Leemhuis 引LWN称bugzilla三年无改善、曾近弃用。 `<!-- ROW_MINE: ksummit.messages.4759 -->`
+- 【Linux社区】comex 论证C无泛型故无法复制Rust类型安全：逐一对比Option、Result、Arc、Mutex与Clang注解方案，称“安全C”存在表达力鸿沟，bounds-safety仅护越界一隅。 `<!-- ROW_MINE: ksummit.messages.4762 -->`
+- 【Linux社区】Greg KH 定调stable树第一规则是不给不愿参与的维护者增加负担；多数子系统可opt-out autosel与Fixes自动回移，提交ignore_list即生效，反对惩罚式管理。 `<!-- ROW_MINE: ksummit.messages.4763 -->`
+- 【Linux社区】Ts'o 回应Bottomley：承认维护者峰会缺技术人力，Folios宜作LPC周五BoF，LSF/MM停办下可续用Plumbers BBB设施，凡利益相关方认可的场所皆可推进。 `<!-- ROW_MINE: ksummit.messages.4764 -->`
+- 【Linux社区】Brown 认为“DT即ABI”已广为传播，纠正不合规源文件与托管平台无关，此类分歧靠补文档难解，属人事问题。 `<!-- ROW_MINE: ksummit.messages.4766 -->`
+- 【Linux社区】2021维护者峰会拟题UMN复盘与加速器驱动用户态要求（含DMA-BUF准入与EXPORT_SYMBOL_USERSPACE_GPL设想）；Pinchart 愿介绍libcamera与SoC厂商多年桥接经验。 `<!-- ROW_MINE: ksummit.messages.4768 -->`
+- 【Linux社区】Romanovsky 反对匿名反馈方案：子系统贡献者名单稳定且少，维护者能凭内容猜出匿名者，匿名制反而侵蚀信任、无法化解个人恩怨。 `<!-- ROW_MINE: ksummit.messages.4769 -->`
+- 【Linux社区】Chehab 称media被回退29补丁均无恶意仅一无效；Romanovsky举证sp8870补丁把清IRQ读返回值误判为错致驱动破坏；Mauro建议弃av7110老旧驱动，Shuah问是否全删。 `<!-- ROW_MINE: ksummit.messages.4776 -->`
+- 【Linux社区】Overstreet 与Linus辩CPU功耗：RC电机5-10kW/kg仍须高效率否则熔毁，CPU受热与功耗墙约束、看重直线性能；Linus引VLIW数十年失败史与亲历反驳。 `<!-- ROW_MINE: ksummit.messages.4777 -->`
+- 【Linux社区】Pinchart 指说服传感器厂商的关键在证明开放文档符合其商业利益；Walleij出示nt35510 gamma曲线代码称无datasheet难推进；Armstrong述高通下游超通用面板驱动与碎片化。 `<!-- ROW_MINE: ksummit.messages.4779 -->`
+- 【Linux社区】Pinchart 主张财力雄厚者应分摊本职外代码评审；自述两顶帽子：核心维护者重API用法，驱动维护者对大众驱动偏保守，怕破坏且无法全靠自动化测试。 `<!-- ROW_MINE: ksummit.messages.4785 -->`
+- 【Linux社区】Viro 反驳Romanovsky对精挑收件人的批评：60补丁系列56个属fs、4个属arch头文件时，MIPS维护者不应被迫收全系列，为按目录筛选TO/CC辩护。 `<!-- ROW_MINE: ksummit.messages.4789 -->`
+- 【Linux社区】Airlie 断言NPU用户空间无标准化共识（TVM、TensorFlow、PyTorch、Glow、LLVM分支混战），厂商入内核后仍欲全控用户态；反对“只收驱动放手不管”，恐锁死接口难查死锁。 `<!-- ROW_MINE: ksummit.messages.4791 -->`
+- 【Linux社区】Wilcox 反驳“35年仅一例无需立规”：历数文件系统圈Hans Reiser、Merkey、Harrosh、Phillips等纠纷先例，警示复杂政策机制不宜轻立，Lustre等特例也不宜套用加表册。 `<!-- ROW_MINE: ksummit.messages.4795 -->`
+- 【Linux社区】Ryabitsev指出Bugzilla邮件Cc与网页评论不同步致回复遗漏，提议建立产品组件与MAINTAINERS的映射文件以自动化建组件并改进邮件桥。 `<!-- ROW_MINE: ksummit.messages.4953 -->`
+- 【Linux社区】Kees Cook阐明Rust目标是消除新驱动内存安全缺陷，引Android研究称漏洞随时间指数衰减，主张新代码用Rust而非重写旧代码。 `<!-- ROW_MINE: ksummit.messages.4954 -->`
+- 【Linux社区】Arnaldo展示Claude等LLM审阅补丁的合规评语实例，并指Link标签仅在有附加信息时才符合Linus新规，判断此点或需AI辅助。 `<!-- ROW_MINE: ksummit.messages.4955 -->`
+- 【Linux社区】Pinchart剖析Wedson设备状态三分法（注册、资源、一般），质疑自动注销顺序与“revoke”措辞，强调驱动清理次序须谨慎编排。 `<!-- ROW_MINE: ksummit.messages.4957 -->`
+- 【Linux社区】Bottomley要求把X-Stable等稳定版邮件头写入流程文档以便procmail过滤，抱怨头部约定常被随意更改且无人记录含义。 `<!-- ROW_MINE: ksummit.messages.4964 -->`
+- 【Linux社区】Marinas担忧向受制裁国家主机发安全预告的合规风险，透露Arm客户急需内核严重漏洞修复的官方预披露机制以争取部署时间。 `<!-- ROW_MINE: ksummit.messages.4974 -->`
+- 【Linux社区】Pinchart反对“下个周日前主线修复”的回归时限提案，认为对业余贡献者施压无益，应推动共同维护模式为过载维护者减负。 `<!-- ROW_MINE: ksummit.messages.4976 -->`
+- 【Linux社区】Mauro实测umn.edu撤销190补丁系列按规则需抄送221封邮件易被判垃圾邮件，Greg承认靠人工判断缩减抄送名单至可管理规模。 `<!-- ROW_MINE: ksummit.messages.4978 -->`
+- 【Linux社区】hpa确认#define auto __auto_type与C23及C++语义一致，主动提出在合并窗口向Linus提交该补丁集以上游化auto关键字。 `<!-- ROW_MINE: ksummit.messages.4980 -->`
+- 【Linux社区】Tim Bird提议以标签标注补丁已运行的检查工具（checkpatch与AI审阅），主张在提交端强制执行使AI推理成本由贡献者承担更易扩展。 `<!-- ROW_MINE: ksummit.messages.4981 -->`
+- 【Linux社区】Brown分析随手补丁作者因进入git历史而持续被抄送，且后续邮件抄送常复制自旧邮件，认为早期教育尚可缓解此抄送污染。 `<!-- ROW_MINE: ksummit.messages.4984 -->`
+- 【Linux社区】Uwe建议linux-next按成对逐级合并以保留含破坏提交的中间树，Brown指出脚本与可读性成本，并提及Sasha的主题子树设想与增量构建收益。 `<!-- ROW_MINE: ksummit.messages.5001 -->`
+- 【Linux社区】McKenney以风险管理权衡修复时机：影响面小的回归宜先过0day与-next验证，致半数系统变砖的重大修复则应即刻直送Linus。 `<!-- ROW_MINE: ksummit.messages.5003 -->`
+- 【Linux社区】Ryabitsev称内核密钥环约600个密钥且新钥审核常需反复沟通，Uwe建议仿Gentoo GLEP-0063强制密钥三年内到期并清理闲置密钥。 `<!-- ROW_MINE: ksummit.messages.5011 -->`
+- 【Linux社区】Bottomley回应git-log按字段开关难题：脚本可用--pretty=raw加grep提取message-id，人类用户则需按Linus意见提供可点击选项。 `<!-- ROW_MINE: ksummit.messages.5014 -->`
+- 【Linux社区】Lawall调查发现逾230个文件存在同时返回NULL与ERR_PTR的函数，以ovl_lookup_inode为例，最终认同统一返回错误指针的规范更好。 `<!-- ROW_MINE: ksummit.messages.5015 -->`
+- 【Linux社区】Ojeda列举C++20仍易产生UB的实例（unique_ptr可返回空、vector数据指针失效），强调Rust引入了其他系统语言没有的研究成果。 `<!-- ROW_MINE: ksummit.messages.5017 -->`
+- 【Linux社区】Levin演示LLM自动构建debuginfo并解码oops栈，定位xfrm_iptfs崩溃于skb_put非线性断言、肇事提交5f2b6a9095743，提议设bug@kernel.org由机器人分诊。 `<!-- ROW_MINE: ksummit.messages.5019 -->`
+- 【Linux社区】Pinchart担忧C API变更将波及Rust抽象层及全部上层Rust代码，且无Coccinelle等工具可用，跨子系统大型重构令人畏惧。 `<!-- ROW_MINE: ksummit.messages.5030 -->`
+- 【Linux社区】Kara认为促成认真审读的根源是共同体责任感，赞同Leon所言维护者过度掌控会破坏信任，使共同责任无从建立。 `<!-- ROW_MINE: ksummit.messages.5036 -->`
+- 【Linux社区】Pinchart与Wedson就.remove()后防护争论：一方主张子系统阻止调用进入并等待在途调用返回，另一方主张撤销I/O资源，分歧实为API建模之争。 `<!-- ROW_MINE: ksummit.messages.5038 -->`
+- 【Linux社区】Bottomley借bcachefs事件提议特性准入与驱逐的正式流程：考察期、导师制、Linus之外的决定机制，并自省当初反对bcachefs进入属误判。 `<!-- ROW_MINE: ksummit.messages.5043 -->`
+- 【Linux社区】Hellwig指出许多树在linux-next同时挂双分支，既不影响合并前测试又能提前暴露自冲突。 `<!-- ROW_MINE: ksummit.messages.5048 -->`
+- 【Linux社区】Bottomley主张AI政策应随模型进步保持弹性，只需参考AI已有的可信度指标供维护者裁量，并以人类同样会自信胡言反驳Stoakes。 `<!-- ROW_MINE: ksummit.messages.5049 -->`
+- 【Linux社区】Rostedt质疑DRM为何需在linux-next樱桃采摘而网络与ARM无需，Bottomley称MM须协调约22位架构维护者且享有LSF/MM专属协调会。 `<!-- ROW_MINE: ksummit.messages.5050 -->`
+- 【Linux社区】Kosina指去年峰会提出的合并树过平问题一年未改，大量变更仍直达Linus，提议议题含实测合并图数据与激励维护者下放层级子树。 `<!-- ROW_MINE: ksummit.messages.5055 -->`
+- 【Linux社区】NeilBrown自述已为smatch添加指针可空性注解功能，并支持Geert提议为返回错误码或错误指针的函数引入注解辅助分析。 `<!-- ROW_MINE: ksummit.messages.5059 -->`
+- 【Linux社区】Nossum披露StackRot CVE-2023-3269期间Linus强烈反对linux-distros的PoC披露要求，提议设由security@korg通知的封闭distros@kernel.org列表。 `<!-- ROW_MINE: ksummit.messages.5062 -->`
+- 【Linux社区】Carpenter自述2010年以来以Smatch贡献5568个修复与2587份缺陷报告，因Linaro质量项目结束公开寻求多家公司分摊资助以续命。 `<!-- ROW_MINE: ksummit.messages.5066 -->`
+- 【Linux社区】Bottomley界定Rust实验成败：至少一个子系统热忱采用且不拖累他人为成功，无人采用为失败，并预言内核将长期保持C/Rust双轨。 `<!-- ROW_MINE: ksummit.messages.5070 -->`
+- 【Linux社区】ÜNAL主张改绑定文档不应被强制做驱动开发，Conor坚持破坏ABI的绑定变更须先有用户迁移路径且不得破坏U-Boot所引用的dt-rebasing。 `<!-- ROW_MINE: ksummit.messages.5072 -->`
+- 【Linux社区】Pinchart以五年相机厂商沟通经验称该工作耗时且时有挫败，主张增派人手并协调口径，Greg注明LF至今仍在资助其厂商教育行程。 `<!-- ROW_MINE: ksummit.messages.5083 -->`
+- 【Linux社区】Wedson论证Rust驱动从构造上杜绝越界访存、遗漏中断确认与irq_desc竞态等漏洞，并透露此前在做的binder用户态接口正是攻击面Rust化。 `<!-- ROW_MINE: ksummit.messages.5084 -->`
+- 【Linux社区】Mauro改进get_abi.pl扫描/sys并与Documentation/ABI比对，可枚举未文档化的sysfs节点，附cpulistaffinity输出实例与分支仓库。 `<!-- ROW_MINE: ksummit.messages.5092 -->`
+- 【Linux社区】Tarreau以实测论证长度型字符串优势：常量令牌比较可被编译器构建为树，-O3下提速约10倍、-O2约5倍，双字结构可寄存器传递实现链式调用。 `<!-- ROW_MINE: ksummit.messages.5096 -->`
+- 【Linux社区】Ribalda主张以锐度、收敛时间等相机认证指标定义可接受的开放ISP实现，称校准文件发布周期与固件等同；Pinchart拒绝强制公开用户态算法。 `<!-- ROW_MINE: ksummit.messages.5098 -->`
+- 【Linux社区】Ryabitsev愿意为列表运行新人欢迎机器人，以确定性检查（base-commit、签名、可应用、非LTS基线）触发针对性纠错与欢迎邮件。 `<!-- ROW_MINE: ksummit.messages.5100 -->`
+- 【Linux社区】Walleij引述BPF补丁洪流与评审积分制收效有限，介绍DRM圈内互审互并的共治模式及对零散贡献者的失灵，分享以维护旧驱动偿还技术债减压。 `<!-- ROW_MINE: ksummit.messages.5101 -->`
+- 【Linux社区】Greg KH解释禁运补丁不能上共享测试系统因访问者不可控，期待硬件厂商提供私有KernelCI/LKFT实例及可自建的自由软件测试栈。 `<!-- ROW_MINE: ksummit.messages.5104 -->`
+- 【Linux社区】Stoakes指峰会沦为小圈子：重算Ted数据称102席中78.4%席位由重复与会者占据、一次与会者仅占21.6%，批评邀请标准含糊并与议题捆绑，提议由MAINTAINERS条目投票定议题。 `<!-- ROW_MINE: ksummit.messages.4796 -->`
+- 【Linux社区】Kosina澄清在SUSE，发行版内核分支是否纳入修复的决策权掌握在内核开发者与维护者手中，而非项目经理或副总裁，反驳“与会者无实权解决”的说法。 `<!-- ROW_MINE: ksummit.messages.4798 -->`
+- 【Linux社区】Rostedt详述其Link尾注用法：旧版存git分支，把lore链接改写为“Changes since v1”逐版串链以追溯演变与评论，称若需外部工具则不会坚持此习惯。 `<!-- ROW_MINE: ksummit.messages.4802 -->`
+- 【Linux社区】Ryabitsev发文档补丁：vger已由majordomo+zmailer迁至mlmmj并统一到subspace平台，弃用lore的/r/子路径建议，新增Link尾注最佳实践，源于ksummit讨论。 `<!-- ROW_MINE: ksummit.messages.4803 -->`
+- 【Linux社区】Ventura Jack称已对UnsafeCell示例逐行过MIRI验证：引用取值触发UB而裸指针安全，指MIRI虽优但不能尽查，局限类似C的消毒器。 `<!-- ROW_MINE: ksummit.messages.4805 -->`
+- 【Linux社区】Ventura Jack梳理C与Rust别名差异：内核默认关闭严格别名，Rust别名强制开启且模型未定（stacked/tree borrow研究），unsafe Rust难于C；并引Linus称别名对代码生成价值甚微、C标准过度拥抱UB。 `<!-- ROW_MINE: ksummit.messages.4806 -->`
+- 【Linux社区】Babka反驳Rostedt：修复代码可能落在-next重点压测路径，原bug未被-next测出不等于修复也无测试价值，不能据此否定linux-next。 `<!-- ROW_MINE: ksummit.messages.4813 -->`
+- 【Linux社区】Leemhuis提议公开分步退役Bugzilla：对开发者不参与的组件停收新bug、首页提示改走邮件流程，指其升级路径断裂、大量报告无人回应，并引akpm对MM bugzilla的抱怨。 `<!-- ROW_MINE: ksummit.messages.4814 -->`
+- 【Linux社区】Corbet逐条回应Vegard文档提案：架构文档迁移数月后并入6.7，维护者条目对跨子系统改动约束力有限，维护者配置档案仅7份推广缓慢，审查清单可用DOC块，不赞成拆分流程书。 `<!-- ROW_MINE: ksummit.messages.4818 -->`
+- 【Linux社区】Corbet剖析文档构建慢因：Sphinx C域符号表近7亿次迭代调用呈O(n²)，将列表搜索改为字典查找提速20%，加automarkup优化共提速27%且未破坏交叉引用。 `<!-- ROW_MINE: ksummit.messages.4821 -->`
+- 【Linux社区】Carpenter主张工具生成内容指南首段直书“AI Slop”：维护者须逐行审查，提交者应证明生成代码已验证，称宁可文档“暴躁”也好过暴躁的邮件。 `<!-- ROW_MINE: ksummit.messages.4828 -->`
+- 【Linux社区】Berg区分grep两用例：改API找用户可经绑定覆盖，但改锁等语义需穿透Rust抽象层间接检索，成本上升，并称netlink抽象早有此困扰。 `<!-- ROW_MINE: ksummit.messages.4833 -->`
+- 【Linux社区】Hansen预告2023年TAB选举：11月13至15日投票，Corbet、Greg KH、Levin、Rostedt、Ts'o任期届满，资格为2022年以来3个带tag提交、满50个自动获票，沿用CIVS。 `<!-- ROW_MINE: ksummit.messages.4835 -->`
+- 【Linux社区】Watkins请缨任缺陷联络员：向报告者收集信息、筛除不可复现问题、以简明方式转达开发者，认为联络员制可逐步改善bugzilla体验，响应Rostedt倡议。 `<!-- ROW_MINE: ksummit.messages.4837 -->`
+- 【Linux社区】Elder建议把抄送规则定为政策并实现进get_maintainer.pl以免人工判断，并观察到该脚本返回名单较早年变少，自己已照单全收。 `<!-- ROW_MINE: ksummit.messages.4838 -->`
+- 【Linux社区】Bird认同专有AI工具不得强加给贡献者、成本应由提交方承担；主张先弄清连checkpatch都推不动的障碍与激励结构再谈AI审查，并警惕云厂商赞助带来的锁定。 `<!-- ROW_MINE: ksummit.messages.4841 -->`
+- 【Linux社区】Vivi介绍i915做法：可信共同维护者轮值处理节奏化拉取请求，再设可信committer组分担合并事务，配合b4与patchwork，并倡讨论gitlab式流程接口。 `<!-- ROW_MINE: ksummit.messages.4842 -->`
+- 【Linux社区】引述Linus抨击C++“new”为命名空间违规、C++非好语言；Pinchart回应Bart可以自定义operator new绕开异常，称也可干脆禁用new()改用内核自有分配原语。 `<!-- ROW_MINE: ksummit.messages.4844 -->`
+- 【Linux社区】Rostedt提议为新任维护者设导师培养与准入审查，反问若Kent直发Linus树前须导师把关，冲突是否早被化解，呼应Bottomley要求对罢免设正式程序。 `<!-- ROW_MINE: ksummit.messages.4850 -->`
+- 【Linux社区】Kozlowski指审查标签礼节问题：置顶Rb后整贴引用、或整信引用末尾补Rb，令维护者难判是否还有正文意见，补充Morton的“引用垃圾”机器人构想。 `<!-- ROW_MINE: ksummit.messages.4853 -->`
+- 【Linux社区】Levin回应stable邮件过多之议，指已提交汇总邮件补丁归并各stable回搬通知，可标明补丁已回搬至哪些版本区间，凸显回搬不足之处。 `<!-- ROW_MINE: ksummit.messages.4866 -->`
+- 【Linux社区】Ojeda出示pl061的rust_helper_readb反汇编证其即arm64内联汇编，解释bindgen不能转换C宏故用辅助函数、跨语言LTO未就绪无法内联，比较代码生成时移除溢出检查求公平。 `<!-- ROW_MINE: ksummit.messages.4867 -->`
+- 【Linux社区】Baerts指netdev的nipa ml-agent已有新人欢迎信机器人可复用于其他树，主张做全局方案，并叹LF缺“内核基金会”让TAB快速拨款支持工具、CI与本地AI。 `<!-- ROW_MINE: ksummit.messages.4868 -->`
+- 【Linux社区】Williams谈fwctl：CXL命令效果日志可为不透明命令提供决策依据；提出跨子系统一A一N如何裁决之问，引发行商“宁出树外模块也恢复直通”的警告，称张力有益但收益递减。 `<!-- ROW_MINE: ksummit.messages.4875 -->`
+- 【Linux社区】Ojeda澄清维护者无需维护双份头文件：C绑定按需自动生成，可选维护的只是Rust抽象层，回应Bart对每子系统双语言负担的质疑。 `<!-- ROW_MINE: ksummit.messages.4882 -->`
+- 【Linux社区】Rostedt自述正写维护者与贡献者双向沟通文档、在TAB倡设维护者互助组；几乎忽略不可bisect的syzbot报告，并透露tip树顶层.tip目录藏有全部自动化工具。 `<!-- ROW_MINE: ksummit.messages.4886 -->`
+- 【Linux社区】McKenney转述kosina称峰会共识是加大-next测试投入不值，Linus坚决反对“须在linus-next停留X天”硬性要求，他建议公开记录哪些提交测试不足。 `<!-- ROW_MINE: ksummit.messages.4891 -->`
+- 【Linux社区】Pinchart驳ISP直通论据：区分ISP处理块与控制算法，称相机卖点在用户态算法而非硬件、专利论利于大厂、“正常工作流”无法定义，主张UAPI暴露处须有开源对应。 `<!-- ROW_MINE: ksummit.messages.4896 -->`
+- 【Linux社区】Bottomley指Rust虽有Rc引用计数，但其严格所有权模型与共享计数冲突易致泄漏，就驱动模型refcount对象而言Rust未必优于C。 `<!-- ROW_MINE: ksummit.messages.4900 -->`
+- 【Linux社区】Airlie解释AMD与Intel栈各50至100人、多团队汇入单驱动，无法人人熟稔上游周期，-next树常开且rc6至rc1间断开，修复专人按时段把关，曾在rc6/rc7拒收不当补丁。 `<!-- ROW_MINE: ksummit.messages.4904 -->`
+- 【Linux社区】Torvalds称修复应当公开，“鼓励恶行的坏政策是愚蠢的”，拒绝替“追救护车的安全研究者”代劳，指LLM降低复现成本也不改变原则。 `<!-- ROW_MINE: ksummit.messages.4909 -->`
+- 【Linux社区】Pinchart指“没时间review”在大型企业雇员中多为管理层施加时间压力的借口，建议仿大学评教以匿名聚合方式征集对子系统的真实反馈。 `<!-- ROW_MINE: ksummit.messages.4910 -->`
+- 【Linux社区】Bird支持TAB选举与LPC脱钩择期在线举行，指线下投票偏利到场者；并主张提名截止相对投票日提前，给选民至少一周研究候选人。 `<!-- ROW_MINE: ksummit.messages.4916 -->`
+- 【Linux社区】Ojeda宣布2025 TAB选举开票：九人获提名，含Greg KH、Kosina、Lawall、Wilcox、Rostedt、Ts'o等，投票至12月20日，经CIVS进行并提醒opt-in。 `<!-- ROW_MINE: ksummit.messages.4919 -->`
+- 【Linux社区】Rostedt以加ret变量示例回应cleanup.h作用域块内收尾return之议，称常以scoped_guard()明示守护对象，无意改既有代码。 `<!-- ROW_MINE: ksummit.messages.4921 -->`
+- 【Linux社区】Kroah-Hartman公开其“友好补丁机器人”全文模板，覆盖构建破坏、checkpatch告警、缺Signed-off-by、私信提交等常见错误，供各子系统复制以应对新手泛滥。 `<!-- ROW_MINE: ksummit.messages.4924 -->`
+- 【Linux社区】Nikula指Link尾注在DRM提交者模型中兼作审计痕迹，确证仅列表贴过的补丁入库，i915与xe更以对应补丁的CI通过作为合并前提。 `<!-- ROW_MINE: ksummit.messages.4926 -->`
+- 【Linux社区】Kroah-Hartman指revocable机制与devm_资源显著不同，devm_可构建其上、Rust版devm_已如此实现，建议Tzung-Bi在LPC摘要中先行说明区别。 `<!-- ROW_MINE: ksummit.messages.4928 -->`
+- 【Linux社区】Rostedt主张Linus若常去Plumbers与开发者当面交流，MS或将失去存在必要；忆都柏林printk分会Linus全程旁听并总结意见，成效胜过任何MS场次。 `<!-- ROW_MINE: ksummit.messages.4933 -->`
+- 【Linux社区】Uytterhoeven建议把列表名编入patch.msgid.link路径，形如/linux-trace-devel/msgid@here，回应Rostedt想在尾注附注焦点列表的想法。 `<!-- ROW_MINE: ksummit.messages.4935 -->`
+- 【Linux社区】Dobriyan力挺kallsyms栈回溯嵌入源码行号，称免于每次崩溃手跑decode_stacktrace.pl并绕开企业rpm转储，建议去掉0x前缀，远期可直出反汇编。 `<!-- ROW_MINE: ksummit.messages.4943 -->`
+- 【Linux社区】Kroah-Hartman认同Pinchart的cdev五步卸载生命周案，自认思索十余年未落笔，称Christoph已清理底层cdev、拟抽空动手并派实习生做全树改造。 `<!-- ROW_MINE: ksummit.messages.4948 -->`
+- 【Linux社区】Carpenter评Uecker内存安全C模式：内核安全漏洞多源于无符号溢出，Justin Stitt已做size_t溢出消毒器并配wrapping_ok豁免，进而提议饱和运算宏saturate_math。 `<!-- ROW_MINE: ksummit.messages.4949 -->`
+- 【Linux社区】Engelhardt解释C程序员避用结构体传值之因：C++以隐藏指针参数返回聚合体而C后端不做此转换，gcc-15实测两者代码生成差异，归因于ABI。 `<!-- ROW_MINE: ksummit.messages.4950 -->`
+- 【Linux社区】Bottomley解析git-bug架构：bug存于主仓refs/bugs/*、每个bug为独立断链提交树，b4已在用；bridge仅为可移植性（现只有jira）；bug拉取信任模型同代码PR，json风险可控。 `<!-- ROW_MINE: ksummit.messages.5272 -->`
+- 【Linux社区】Shuah证实Leon指出的sp8870补丁确有bug（应判err<0而非err），并确认media被回退的29个UMN补丁无恶意代码、多为有效修复。 `<!-- ROW_MINE: ksummit.messages.5275 -->`
+- 【Linux社区】三星Selva与Nitesh回应Bottomley：因疫情线下不确定、12月LSF/MM太远而改投LPC推进NVMe SCC拷贝卸载，提案含用户接口、bio链、XCOPY兼容等四问。 `<!-- ROW_MINE: ksummit.messages.5276 -->`
+- 【Linux社区】Rob Herring回应Kicinski：lei已支持IMAP注入收信，问题在由谁运维服务器；仍有人坚持SMTP直投邮箱，制约“THE REST”分流方案落地。 `<!-- ROW_MINE: ksummit.messages.5284 -->`
+- 【Linux社区】Sakkinen称Rust“不难学但难跑”，文档应讲BuildRoot/Yocto/NixOS而非dnf/apt-get；自述收到Rust补丁无法进QA流程，只能“NAK因为无法测试”。 `<!-- ROW_MINE: ksummit.messages.5291 -->`
+- 【Linux社区】Baerts欢迎linus-next树并追问：PR被Linus拒收后如何处理、抓取是否自动、LKFT与KernelCI结果由谁盯防、误报与flaky测试负担归谁。 `<!-- ROW_MINE: ksummit.messages.5296 -->`
+- 【Linux社区】Pinchart反驳用LLM解码oops：非确定性工具会产出貌似正确实则无用的回溯，主张与发行版共建确定性解码服务；警告让用户运行网上下载的未签名内核比curl管道sudo更危险。 `<!-- ROW_MINE: ksummit.messages.5299 -->`
+- 【Linux社区】Don Zickus议题（第89号提案）：RHEL流程由PatchWork迁至GitLab，集成CKI强制CI门禁，用webhook自动化并减少邮件、改用CLI工具，附演示。 `<!-- ROW_MINE: ksummit.messages.5302 -->`
+- 【Linux社区】Babka指linux-next已有pending-fixes分支专收维护者热修复，称峰会拟推广此用法；支持Rostedt的PR健康检查机器人设想。 `<!-- ROW_MINE: ksummit.messages.5303 -->`
+- 【Linux社区】Carpenter定义“slop”为量产补丁来不及自查即发出，类比clang-format整驱动重排无人细看；自曝其批量bug报告同样无人阅读。 `<!-- ROW_MINE: ksummit.messages.5304 -->`
+- 【Linux社区】Perches自述已退订LKML、几乎不参与讨论，改用lore关键词检索并手动下载线程，佐证“THE REST”改道的现实基础。 `<!-- ROW_MINE: ksummit.messages.5306 -->`
+- 【Linux社区】Leemhuis引Red Hat公告：RHEL 9后将仅用issues.redhat.com（Jira），借此反驳继续加大对上游已弃养Bugzilla投入的主张。 `<!-- ROW_MINE: ksummit.messages.5311 -->`
+- 【Linux社区】Levin展示next-analysis机器人输出：McKenney三个RCU提交在linux-next停留6天（直方图3笔），演示PR“烘焙时长”量化方法。 `<!-- ROW_MINE: ksummit.messages.5316 -->`
+- 【Linux社区】Rostedt与CoC委员Shuah商榷维护者支持组：不设新邮件列表而是志愿者名单、一对一私密沟通、TAB定准则，旨在防escalation到CoC；并忆CoC缘起与Linus休假。 `<!-- ROW_MINE: ksummit.messages.5318 -->`
+- 【Linux社区】Rostedt回Iwai：stable误应用罕见且自己从不复查，建议改摘要式通知，希望砍掉“已干净应用”邮件，佐证stable邮件量争议。 `<!-- ROW_MINE: ksummit.messages.5320 -->`
+- 【Linux社区】Carpenter与Mason商谈AI审查工具协作：重复报告是痛点，报Smatch警告前先搜lore；称Smatch跨函数库调用树最佳，semcode使btrfs_search_slot调用图从44万token降至2.5万。 `<!-- ROW_MINE: ksummit.messages.5322 -->`
+- 【Linux社区】Mauro论跨子系统kAPI改动应成组合并、各维护者只ack本域部分；并以UMN 190补丁回退系列为例，说明勿打扰无关子系统维护者。 `<!-- ROW_MINE: ksummit.messages.5323 -->`
+- 【Linux社区】Overstreet回应Torvalds的TOCTOU双读担忧：W^X引用下重新读取只在unsafe中可能出现，届时代码已错并有UB。 `<!-- ROW_MINE: ksummit.messages.5330 -->`
+- 【Linux社区】Leemhuis提议commit新增Posted:/Reported:标签以消除Link:歧义，服务其regzbot回归机器人；记录Konstantin的井号标注替代案与DRM误用References:等乱象。 `<!-- ROW_MINE: ksummit.messages.5331 -->`
+- 【Linux社区】Zohar要求UALink核心驱动从第一天就在各处布好LSM钩子以做完整性保障（如签名验证），回应Intel的drivers/misc/ual提案。 `<!-- ROW_MINE: ksummit.messages.5332 -->`
+- 【Linux社区】Bottomley论Rust的“反C偏见”（类型、调用、可变性皆刻意异于C）抬高学习曲线但可逾越，主张不必等更C-like的安全语言，先做Rust实验。 `<!-- ROW_MINE: ksummit.messages.5335 -->`
+- 【Linux社区】Shuah支持Ryabitsev把新手欢迎机器人做成全项目服务，认可纯确定性检查清单：base-commit、Signed-off-by、可应用、非LTS基线。 `<!-- ROW_MINE: ksummit.messages.5336 -->`
+- 【Linux社区】Laight详解C strict aliasing语义与内核no-strict-aliasing缘由，举int拷贝重排double写入、restrict内联失效、同值索引双静态数组等编译器行为实例。 `<!-- ROW_MINE: ksummit.messages.5337 -->`
+- 【Linux社区】Greg KH澄清立场：按数量计内核多数bug源于C的内存泄漏、错误路径清理、返回值检查等，Rust中不存在；并承认Rust将来会有自己的新坑。 `<!-- ROW_MINE: ksummit.messages.5338 -->`
+- 【Linux社区】Anvin与Torvalds敲定变量声明cleanup.h补丁集在合并窗口提交，Linus认可其为改进并接受，唯一非机械转换系维护者要求。 `<!-- ROW_MINE: ksummit.messages.5340 -->`
+- 【Linux社区】Hansen认同禁运代码开发如“绑着一只手”，披露Intel内部经0day测试但结果未入合并材料、承诺改进；指硬件安全团队文档已允许吸纳测试者。 `<!-- ROW_MINE: ksummit.messages.5342 -->`
+- 【Linux社区】Hansson议题：NVMe/UFS/eMMC/SD闪存设备能耗占比高，但各子系统低功耗策略不一（最深省电与全程供电并存），呼吁寻找共同政策。 `<!-- ROW_MINE: ksummit.messages.5346 -->`
+- 【Linux社区】Viro估LKML日流量远超800封，自己仅约1-2%不被未读即删；认为私密邮件仅适用于疑似广泛部署的安全洞，平时应Cc维护者加公开列表。 `<!-- ROW_MINE: ksummit.messages.5352 -->`
+- 【Linux社区】Pinchart斥责Tashkinov“讨论纯属浪费时间”之说侮辱义务维护者，称想推进就应亲自领做，折射Bugzilla用户期望与志愿投入的冲突。 `<!-- ROW_MINE: ksummit.messages.5355 -->`
+- 【Linux社区】Leemhuis解释“下个周日主线修复”目标源于Linus周日发-rc：修复合入宜在周中而非周一，以免Arch、openSUSE Tumbleweed等滚动发行版多带一周回归。 `<!-- ROW_MINE: ksummit.messages.5361 -->`
+- 【Linux社区】Lutomirski以C++实践主张用atomic<int>取代volatile表达共享数据意图，已批量迁移旧代码，并荐atomic_ref作类READ_ONCE原语。 `<!-- ROW_MINE: ksummit.messages.5365 -->`
+- 【Linux社区】Ojeda反驳Greg的kref需锁论：维护引用计数本身无需锁，可用顺序一致性原子变量构造（低效）反例，属2021年Rust for Linux峰会争论。 `<!-- ROW_MINE: ksummit.messages.5367 -->`
+- 【Linux社区】Sakkinen发布codeberg的linux-tpmdd-nixos环境，用nix-prefetch-git与podman-compose构建，拟扩展支持Rust内核，称内核文档中QA指引为零。 `<!-- ROW_MINE: ksummit.messages.5368 -->`
+- 【Linux社区】Anvin指宏中typeof(x)极易写错变量而危险，支持“更清晰或更安全才用类型推导”准则，呼应Torvalds拟以#define auto启用__auto_type。 `<!-- ROW_MINE: ksummit.messages.5369 -->`
+- 【Linux社区】Berg就TAB选举质询计票口径：提交数分散在多个邮箱者难以自判；Laura Abbott承认3-49票区间才申请纸质选票的说明易混淆并承诺改进。 `<!-- ROW_MINE: ksummit.messages.5370 -->`
+- 【Linux社区】Uecker辩护#pragma用于区域属性合理并质疑其影响sparse之因；认同UB“编译警告或运行时陷阱二选一”目标，但应容许static calls等有意利用UB，C23已废旧式声明。 `<!-- ROW_MINE: ksummit.messages.5372 -->`
+- 【Linux社区】Ryabitsev公布路线：先为bugzilla评论建public-inbox订阅源，再架双向桥替换原生邮件桥；自任前期铺路，后续另议。 `<!-- ROW_MINE: ksummit.messages.5377 -->`
+- 【Linux社区】Gunthorpe论CXL fabric manager“安全靠接线”不可靠，Linux获得物理硬件即应有权操作；以IB的umad容器类比，主张为fabric管理划清fwctl边界。 `<!-- ROW_MINE: ksummit.messages.5379 -->`
+- 【Linux社区】Leemhuis请愿报告者Cc regressions列表并多用Link:标签以减其lei扫描误报；提出仿Debian reportbug的引导式报告应用，并改进bisection与localmodconfig文档。 `<!-- ROW_MINE: ksummit.messages.5382 -->`
+- 【Linux社区】Geert逐条以“lore.kernel.org”回应Tashkinov对邮件式bug报告的质疑（加入、搜索、回复皆可解决），称缺的是产出好报告的技能。 `<!-- ROW_MINE: ksummit.messages.5383 -->`
+- 【Linux社区】Morton回应Ts'o：承认偶尔学Dave Miller强推补丁，但folio之争各方论据均属实质、尚未到强推地步，折射mm子系统宽松治理风格。 `<!-- ROW_MINE: ksummit.messages.5384 -->`
+- 【Linux社区】Anvin反对Wilcox“实现malloc”议题：写内核必须懂GFP标志与内存分配，称“内核先是内存管理器，其次才是调度器，其余皆注脚”。 `<!-- ROW_MINE: ksummit.messages.5387 -->`
+- 【Linux社区】Sanjaya称无人维护的文件系统处于悬置状态，追问是否为少数用户无限保留弃用API、如何把用户转化为开发者维护者、是否需akpm介入。 `<!-- ROW_MINE: ksummit.messages.5389 -->`
+- 【Linux社区】Ventura Jack引Rustonomicon指unsafe Rust别名模型（stacked/tree borrows）仍未定义、处于实验阶段，多来源称其比C更难推理，回应Gary Guo的“更易推”说。 `<!-- ROW_MINE: ksummit.messages.5390 -->`
+- 【Linux社区】Mauro论新内核API政策：若要求发行版先收用户态包将死锁（其身为Fedora维护者会拒绝未定API），支持Pinchart按子系统定多重准入标准，以CAN与ASIL为例。 `<!-- ROW_MINE: ksummit.messages.5394 -->`
+- 【Linux社区】Hansen赞同文档考虑Generated-by（其用于Coccinelle与kdevops多年以追踪AI占比）；评估git notes存prompt仍受amend/rebase丢notes之困。 `<!-- ROW_MINE: ksummit.messages.5399 -->`
+- 【Linux社区】Mauro与Rostedt辩AI代码版权：引Berne公约与fair use，指“The quick brown fox”约1885年已过保护期，K&R一代人重复书中代码模式实难主张侵权。 `<!-- ROW_MINE: ksummit.messages.5404 -->`
+- 【Linux社区】Leemhuis详述regzbot设计：#regzb邮件标签追踪人工回归报告，Link:标签自动闭环，与KernelCI及KCIDB分工避免重复，项目获NGI pointer资助一年 `<!-- ROW_MINE: ksummit.messages.5111 -->`
+- 【Linux社区】Chehab主张维护者离开不应立即剔除特性，宜给一两个周期等人接手、实验特性先进staging；赞同Rostedt建立维护者导师培训制 `<!-- ROW_MINE: ksummit.messages.5112 -->`
+- 【Linux社区】Kozlowski证实补丁滞留维护者树曾致其漏掉DT绑定集成问题，指rebase丢失签名标签信任链，引其统计约133个提交迟至近两周才入linux-next `<!-- ROW_MINE: ksummit.messages.5115 -->`
+- 【Linux社区】Ryabitsev宣布b4 0.14新增-i选项可插入Message-ID: trailer替代Link:，另可用gitconfig的linktrailermask沿用-l输出 `<!-- ROW_MINE: ksummit.messages.5120 -->`
+- 【Linux社区】Carpenter称新编译器拒建旧内核致Smatch无法分析古董内核，清理-Werror未果，拟GCC补丁以IGNORE_WERROR环境变量忽略-Werror `<!-- ROW_MINE: ksummit.messages.5123 -->`
+- 【Linux社区】Roeck举提交eb103a51640e（弃用reiserfs）为文件系统弃用流程的完美范例，反驳准废弃文件系统转只读无助于减轻维护负担 `<!-- ROW_MINE: ksummit.messages.5126 -->`
+- 【Linux社区】Uecker回应Carpenter：GCC可仿Smatch在宏内关闭unsigned比较警告且已有类似启发式，指瓶颈在沟通与资源投入而非技术障碍 `<!-- ROW_MINE: ksummit.messages.5140 -->`
+- 【Linux社区】Anderson发现b4 dig仍需Message-Id作输入且尚未落地，质疑弃用Link:标签的论证自相矛盾，引Sasha的RFC为证 `<!-- ROW_MINE: ksummit.messages.5146 -->`
+- 【Linux社区】Van Assche为NVMe SCC拷贝卸载议题补充关联的Storage: Copy Offload讨论与其GitHub实现笔记，议题涵盖ioctl、io_uring、copy_file_range接口选择 `<!-- ROW_MINE: ksummit.messages.5147 -->`
+- 【Linux社区】Torvalds称x86 1GB内存机型通常896MB低端内存加约120MB高端内存，可用2G:2G划分，老机器宜留旧内核；Anvin认同2:2分法合宜 `<!-- ROW_MINE: ksummit.messages.5149 -->`
+- 【Linux社区】Van Assche反驳将SCSI栈移入用户态：数十亿Android手机使用基于SCSI的UFS存储，已有30万IOPS设备，迁移将严重拖累Android性能 `<!-- ROW_MINE: ksummit.messages.5153 -->`
+- 【Linux社区】Chehab拆解文档构建三处Python依赖：sphinx-pre-install、Makefile内Sphinx逻辑在Python3.7以下失败、kernel-doc慢约60%，建议自动择优并提示所用版本 `<!-- ROW_MINE: ksummit.messages.5155 -->`
+- 【Linux社区】Ribalda称ISP渐成可编程设备，厂商因专利雷区与产品差异化拒公开用户态与ISP间算法交互，以此论证厂商受限直通的必要性 `<!-- ROW_MINE: ksummit.messages.5156 -->`
+- 【Linux社区】Bottomley针对不进-next子树的修复滞后，提议修复应视同bug修复快速上行，或需为此类树补充规则与鼓励条款 `<!-- ROW_MINE: ksummit.messages.5157 -->`
+- 【Linux社区】Chehab介绍媒体子系统惯例：争议特性先进staging（如有状态与无状态编解码器），并认同Ts'o反对以投票或核心团队裁决取代维护者层级判断 `<!-- ROW_MINE: ksummit.messages.5161 -->`
+- 【Linux社区】Brown回应Leon批评精挑收件人做法：全量抄送会使补丁系列迅速嘈杂，反而无人细读，属琐碎补丁政策讨论中的立场交锋 `<!-- ROW_MINE: ksummit.messages.5162 -->`
+- 【Linux社区】Torvalds强烈反对自动选GFP标志的“魔法malloc”：自旋锁内分配必须自知用GFP_ATOMIC，kzmalloc_obj只是类型安全便利而非掩盖内核分配规则 `<!-- ROW_MINE: ksummit.messages.5172 -->`
+- 【Linux社区】Belloni推荐delta分页器并给出git配置实现并排逐行diff高亮，辅助审阅重命名补丁，回应wdiff与diff-highlight讨论 `<!-- ROW_MINE: ksummit.messages.5175 -->`
+- 【Linux社区】Lossin论证对UnsafeCell取多个共享引用可同线程变更、语义等价C指针；Opaque借PhantomPinned变!Unpin以关闭noalias，树内pinned-init不依赖nightly `<!-- ROW_MINE: ksummit.messages.5178 -->`
+- 【Linux社区】Luck分享不订阅列表的回帖流程：b4 mbox按message-id下载整线程为mbox，再用mutt打开回复 `<!-- ROW_MINE: ksummit.messages.5180 -->`
+- 【Linux社区】Gunthorpe指kobj释放与错误回滚缺陷或可被root在模块加载时利用，批评v4l2把init与register合一模式固化进子系统，另提devm与工作队列时序问题 `<!-- ROW_MINE: ksummit.messages.5184 -->`
+- 【Linux社区】Williams提议约定子系统在拉取请求中更新notes，由pr-tracker-bot维护中央notes树向下游传递元数据，不改Linus工作流与主线提交 `<!-- ROW_MINE: ksummit.messages.5192 -->`
+- 【Linux社区】NeilBrown提议修复者在提交信息加入type system段落说明更强类型系统能否预防该bug，自动收集分析以实证Rust类型安全论点 `<!-- ROW_MINE: ksummit.messages.5202 -->`
+- 【Linux社区】Tarreau以gcc-2.95汇编对照证实-freg-struct-return在i386与ARM使小结构体经寄存器返回，省去内存往返，赞成做成按函数属性 `<!-- ROW_MINE: ksummit.messages.5207 -->`
+- 【Linux社区】Kosina主张将tip手册中SOB链与Co-developed-by规范推广为全内核要求，叠加LLM辅助标注即可基本解决AI代码标注问题 `<!-- ROW_MINE: ksummit.messages.5210 -->`
+- 【Linux社区】Chamberlain估算Github语料约60%宽松许可、25%GPL、15%不明，认为copyleft项目风险低值得拥抱AI；McKenney提醒已有追究copyleft先例且诉讼在审 `<!-- ROW_MINE: ksummit.messages.5211 -->`
+- 【Linux社区】Kosina回应Greg批评发行版非要预知具体修复，称愿把议题转为“如何让主流发行版基于-stable内核”，指出该题已被广泛讨论 `<!-- ROW_MINE: ksummit.messages.5212 -->`
+- 【Linux社区】Iwai向Torvalds解释：其git钩子本自动把Message-Id转为Link，迁移工作站后失效致近几次PR残留Message-Id，已在最近PR修复 `<!-- ROW_MINE: ksummit.messages.5213 -->`
+- 【Linux社区】Bottomley提议无Fixes:标签不收bug修复并要求说明缺陷来历以剔除伪修复，指出增进信任与改进缺陷流程是两条不同路径 `<!-- ROW_MINE: ksummit.messages.5214 -->`
+- 【Linux社区】Nossum实测约40%构建耗时在C域resolve_xref、PyPy提速22%；Corbet自述曾砍20%耗时，GCC文档同病，议以conf.py开关禁用C域 `<!-- ROW_MINE: ksummit.messages.5217 -->`
+- 【Linux社区】Rostedt解释内核禁用pragma因其令Sparse失效；静态调用依赖gcc未定义行为（void函数冒充带参调用）避开间接调用，运行期UB捕获需保留已知UB `<!-- ROW_MINE: ksummit.messages.5219 -->`
+- 【Linux社区】Van Assche反驳Torvalds拒C++论：其经历的项目均启用-fno-exceptions与-fno-rtti，operator new可自定义绕开异常依赖，并附示例代码 `<!-- ROW_MINE: ksummit.messages.5224 -->`
+- 【Linux社区】Perches自述已不订阅LKML也很少参与讨论，仅偶用lore关键词检索并手动下载线程消息，回应MAINTAINERS收件范围争论 `<!-- ROW_MINE: ksummit.messages.5225 -->`
+- 【Linux社区】Brown澄清其曾在帖中讲过mainline、pending-fixes与-next之间二分方法，认同应收入官方文档并承诺提交patch `<!-- ROW_MINE: ksummit.messages.5231 -->`
+- 【Linux社区】Gunthorpe称DPDK承载大量互联网与移动流量及ORAN实时射频处理，用户态与内核取舍应凭技术优劣而非教条，Mellanox双轨支持，非5-10倍提升勿用DPDK `<!-- ROW_MINE: ksummit.messages.5235 -->`
+- 【Linux社区】Leemhuis为峰会拟议题：简单回归修复在-next滞留数周、bugzilla大量报告无人处理、开发者漏加Link:标签、CI回归归属及低质量厂商内核报告等待议 `<!-- ROW_MINE: ksummit.messages.5246 -->`
+- 【Linux社区】Ojeda回应Leon质疑：Rust驱动经子系统抽象层调用而非直呼C代码，CONFIG_RUST当时仅影响vsprintf一处格式符，目标架构默认启用，Rust静态禁UB强于UBSan `<!-- ROW_MINE: ksummit.messages.5247 -->`
+- 【Linux社区】Torvalds称buffer_head虽老旧简陋但胜任遗留场景，“老不等于坏”；驳斥以reiserfs弃用为范例：无人愿碰只因Hans Reiser杀妻，绝非流程典范 `<!-- ROW_MINE: ksummit.messages.5250 -->`
+- 【Linux社区】Pinchart指Sashiko对SCSI补丁误报DMA字段TOCTOU高危：硬件不应预设恶意（仅虚拟化来宾与USB等例外），归因于评审提示词，拟向kernel/subsystems增drivers.md `<!-- ROW_MINE: ksummit.messages.5258 -->`
+- 【Linux社区】Romanovsky实测mutt加b4键绑三处障碍：Maildir迁移脚本半成、从讨论中段lore链接取全系列失败、b4只取补丁不取讨论回复 `<!-- ROW_MINE: ksummit.messages.5259 -->`
+- 【Linux社区】Park提议峰会演示十分钟用DAMON与DAMOS编写访问模式感知模块：70GB生产机每5ms全量扫描仅耗1%单核，三行scheme实现感知THP与主动回收，已入Amazon Linux `<!-- ROW_MINE: ksummit.messages.5262 -->`
+- 【Linux社区】Ventura Jack举安全Rust反更慢实例：运行期边界检查与get_unchecked取舍、rustc升级后自动向量化消失致性能回退，图像解码库仅追平Wuffs `<!-- ROW_MINE: ksummit.messages.5263 -->`
+- 【Linux社区】Corbet点破矛盾：Greg称stable参与完全自愿不增负担，Sasha却称文档明言stable标签必须添加并反复催促，追问内核实际政策为何 `<!-- ROW_MINE: ksummit.messages.5267 -->`
+- 【Linux社区】Leemhuis基于三年回归追踪经验提交LPC议题：剖析致回归高发与修复迟缓的工作流模式，解释各子系统快慢悬殊，并汇报regzbot实践与路线 `<!-- ROW_MINE: ksummit.messages.5268 -->`
+- 【Linux社区】Ellerman质疑散文脚注式链接套用Link:前缀的必要，举Arnd的TEE合并提交为例，主张标准markdown引用式链接即可，脚本无法解读此类链接 `<!-- ROW_MINE: ksummit.messages.5271 -->`
+- 【Linux社区】Mauro称若弃旧版兼容Sphinx最低需3.1.0，openSUSE Leap 15.4仅有2.3.1与4.2.0包，建议脚本优先推荐发行版原生包否则回退venv。 `<!-- ROW_MINE: ksummit.messages.5406 -->`
+- 【Linux社区】Ted称维护者峰会上Linus“buffer cache is trivial”言论被Dave Chinner公开指为CoC违规，认为此类边缘案例令开发者惧怕并抹黑CoC。 `<!-- ROW_MINE: ksummit.messages.5412 -->`
+- 【Linux社区】Greg称雇主极少允许维护者长期处理上游bug，LF仅托管bugzilla不负责内容，其本人是LF资助的少数者，改进需说服700+维护者且仅Thorsten在做。 `<!-- ROW_MINE: ksummit.messages.5413 -->`
+- 【Linux社区】Brown指stable测试者池小、响应周期紧限制测试类型，主张帮用户在stable内bisect，并关注无需重构基础设施即可构建运行的诉求。 `<!-- ROW_MINE: ksummit.messages.5414 -->`
+- 【Linux社区】Bottomley引GPLv2系统例外论：API一旦暴露给用户态即无法限制专有程序使用，修改例外不明智，唯一手段是对恶意用途不导出接口。 `<!-- ROW_MINE: ksummit.messages.5420 -->`
+- 【Linux社区】Linus驳版权论：内核已有数百万行AMD GPU生成头文件，AI只是另一工具，版权要求与其他代码无异，并讽AI炒作与巨额资金。 `<!-- ROW_MINE: ksummit.messages.5434 -->`
+- 【Linux社区】Bottomley以机密计算为例：厂商标准多止于实验室原型，上游化后共性浮现、不可行实现被修正，最终形成事实标准而非厂商标准。 `<!-- ROW_MINE: ksummit.messages.5444 -->`
+- 【Linux社区】Mauro警告UMN事件宣传会吸引黑客效仿需加防范；引Geert称190封被回退补丁许多是真修复，James Morris指无同意须审计其全部贡献。 `<!-- ROW_MINE: ksummit.messages.5455 -->`
+- 【Linux社区】Konstantin提醒Google Docs在中国被屏蔽、俄罗斯亦然，建议改用受限提交的git仓库使提交可归因，并用Link标签令邮件列表为事实源。 `<!-- ROW_MINE: ksummit.messages.5459 -->`
+- 【Linux社区】TAB选举官Laura确认多邮箱贡献者地址合并尝试引发CIVS投票与收票问题，承认是明年需修复的流程痛点。 `<!-- ROW_MINE: ksummit.messages.5460 -->`
+- 【Linux社区】Konstantin提三步：get_maintainer.pl默认不再抄LKML、public-inbox加RSS、设ALWAYS CC patches列表；Jason赞lore变革性，建议PR虚拟列表。 `<!-- ROW_MINE: ksummit.messages.5461 -->`
+- 【Linux社区】Hannes主张可返回错误指针的函数必须始终返回错误指针，回NULL属拙劣写法；Julia统计超230个文件存在NULL与ERR_PTR混返并举overlayfs为例。 `<!-- ROW_MINE: ksummit.messages.5465 -->`
+- 【Linux社区】Park提交DAMON 2024峰会提案：细粒度DAMOS、自动调优、分层内存、访问感知自动伸缩、写保护监测与热迁移等子题，附2019-2023历年场次链接。 `<!-- ROW_MINE: ksummit.messages.5466 -->`
+- 【Linux社区】Bottomley系统论证EXPORT_SYMBOL_USERSPACE_GPL无法律基础：GPLv2系统例外已放弃对用户态程序类型的控制，修改例外将危及其他专有软件。 `<!-- ROW_MINE: ksummit.messages.5468 -->`
+- 【Linux社区】Vetter列四类设备编程模型自MMIO独占到全抢占直提，Laurent补V4L2 M2M与ISP单进程限制；二人批评高通misc加速驱动绕过两子系统审查。 `<!-- ROW_MINE: ksummit.messages.5476 -->`
+- 【Linux社区】Bottomley举无Fixes与stable标记的strlcpy转换commit仍被回溯（因Stable-dep-of链），Greg承认此类依赖无法自动发现，请提交stable@排队。 `<!-- ROW_MINE: ksummit.messages.5492 -->`
+- 【Linux社区】Carpenter称内存安全pragma内核基本禁用、drm中用会关闭Sparse；静态严格检查有误报问题；运行时UB陷阱即UBSan、极有价值。 `<!-- ROW_MINE: ksummit.messages.5495 -->`
+- 【Linux社区】Babka将TAB起草的generated-content.rst全文转抄ksummit与workflows，要求披露工具提示词与影响范围、维护者可拒收，并指LKML无人读致其被忽视。 `<!-- ROW_MINE: ksummit.messages.5498 -->`
+- 【Linux社区】Overstreet批C标准未有用地定义UB且被编译器作者当挡箭牌，Rust进程以用户对话与实用性驱动，“无需标准机构也可有规范”。 `<!-- ROW_MINE: ksummit.messages.5500 -->`
+- 【Linux社区】Hellwig反对NVMe改用strscpy称其几乎无文档、不如snprintf；Kees主张strtomem与kmemdup_nul消除歧义；Stitt补fortify文档链接。 `<!-- ROW_MINE: ksummit.messages.5504 -->`
+- 【Linux社区】Pinchart称维护者也常不知系列应基于何树，b4的base-commit与prerequisite-patch-id很有用；Bottomley反对强制因系列可不变或依赖未合补丁。 `<!-- ROW_MINE: ksummit.messages.5506 -->`
+- 【Linux社区】Vetter称法律技术障碍作用边际，开放GPU栈九成MIT、GPL部分常年被无视；真正有效的是成功项目收益加DRM用户态开源要求文档这根“大棒”。 `<!-- ROW_MINE: ksummit.messages.5508 -->`
+- 【Linux社区】Linus驳功耗论：高性能必然低效是现实规律，ARM乱序已胜、连小核也OoO，VLIW是“CPU世界的蛇”，只宜留DSP与GPU特化场景。 `<!-- ROW_MINE: ksummit.messages.5509 -->`
+- 【Linux社区】Kara提用Message-Id标签经lore自动定位所属系列，stable应整系列取舍勿随机抽子集；称每年数次子集回溯致损，Amir上周刚拦下一次。 `<!-- ROW_MINE: ksummit.messages.5517 -->`
+- 【Linux社区】Belloni以反问施压Miguel：既然维护者需懂Rust才能动其代码，那么维护者不懂Rust时Rust代码是否就不应合入该子系统？ `<!-- ROW_MINE: ksummit.messages.5519 -->`
+- 【Linux社区】Ojeda说明健全unsafe下Rust无UB但泄漏非UB；抽象薄调devres还是自写是开放问题，红黑树即弃alloc的BTreeMap自写以贴近C API。 `<!-- ROW_MINE: ksummit.messages.5525 -->`
+- 【Linux社区】Wilcox建议先删HIGHPTE：x86已弃仅剩ARM，页错误路径复杂度可除；Walleij已发RFC补丁，现仅VT8500默认启用，待Russell King表态。 `<!-- ROW_MINE: ksummit.messages.5530 -->`
+- 【Linux社区】Brown指kselftest须控制依赖，BPF测试因依赖过重已默认禁用并曾干扰实际使用者；内核庞大不必万物归一，测试应服务实际使用者。 `<!-- ROW_MINE: ksummit.messages.5536 -->`
+- 【Linux社区】Zickus介绍RHEL自PatchWork迁GitLab：集成CI、CKI强制通过、webhook自动化、减邮件增CLI，已在DevConf与CentOS Dojo宣讲并愿讲Plumbers。 `<!-- ROW_MINE: ksummit.messages.5538 -->`
+- 【Linux社区】Pinchart称GPU/ISP接口是设备专属命令缓冲ioctl（举ipu3_uapi_params），接口级自测无意义，“要测GPU得把Mesa搬进内核”。 `<!-- ROW_MINE: ksummit.messages.5540 -->`
+- 【Linux社区】Ted引Linus“Linux是进化而非智能设计”与Greg 2006演讲，称USB与网络栈各重写三次，主张Folio有改进就该合入再演进，反对因不够彻底而NACK。 `<!-- ROW_MINE: ksummit.messages.5547 -->`
+- 【Linux社区】Toke与Willy介绍IETF jabberscribe与排队麦克风经验；Mauro为圆桌提两案：全员用笔记本摄像麦或每桌配独立摄像麦，配发言排队软件。 `<!-- ROW_MINE: ksummit.messages.5549 -->`
+- 【Linux社区】Maxime称只能提供基础设施无法强求面板厂贡献文档；Walleij的策略是在其行为令作为客户的大公司难堪时公开点名并附lore链接。 `<!-- ROW_MINE: ksummit.messages.5551 -->`
+- 【Linux社区】Kosina以tracepoint格式变更毁掉ubertrace类比BPF；Starovoitov反驳称tracepoint经cat/echo文件暴露API，追问BPF跟踪工具用了哪个暴露API。 `<!-- ROW_MINE: ksummit.messages.5555 -->`
+- 【Linux社区】Brown附和Greg并补音频例：硬件似v4l多设备混搭、经多个设备节点暴露为一个用户可见对象，多生命周期交互问题同样突出。 `<!-- ROW_MINE: ksummit.messages.5561 -->`
+- 【Linux社区】Kosina反对在内核文档写死回归修复时限：徒增维护者压力无实益，复杂度休假与疏漏皆致延迟，且给报告者不实预期。 `<!-- ROW_MINE: ksummit.messages.5566 -->`
+- 【Linux社区】Rostedt评kallsyms内嵌行号：保留0x与括号免歧义；定位为内核开发者自调试特性，发行版仍用decode_stacktrace.pl；会遇gdb内联函数同类问题。 `<!-- ROW_MINE: ksummit.messages.5571 -->`
+- 【Linux社区】Tarreau赞结构体值传递（寄存器对零开销，其ist字符串库用ptr,len可链式调用），但警告内核中赋值可能把未初始化的洞泄漏给用户态。 `<!-- ROW_MINE: ksummit.messages.5575 -->`
+- 【Linux社区】Kosina称数月前见ChatGPT全写的GPIO驱动功能正确可运行，但散见错误处理缺失，以此回应“AI只犯大错不犯细微错”之问。 `<!-- ROW_MINE: ksummit.messages.5576 -->`
+- 【Linux社区】Weinberger自述负责ARMv7与PPC32、最高2GiB内存通信设备，全球五位数部署，最老4.19 LTS、十年内继续支持，预期应用与FPGA驱动受影响。 `<!-- ROW_MINE: ksummit.messages.5577 -->`
+- 【Linux社区】Konstantin透露kernel.org约600把密钥、拟议三年强制过期将提交用户列表，b4前端将发布仅邮件回环验证的宽松钥匙环，服务器正迁RHEL10。 `<!-- ROW_MINE: ksummit.messages.5582 -->`
+- 【Linux社区】Brauner要求删除“令人印象深刻”“无疑提升生产力”等宣传措辞保持客观，Hansen同意改为“工具会增加贡献量”，强调维护者审查带宽稀缺。 `<!-- ROW_MINE: ksummit.messages.5584 -->`
+- 【Linux社区】Kees称LLM参与度跨度太大、标签暂无法准确刻画，先立“展示你的工作”文档；Rostedt赞同，把标签争论留到维护者峰会以免无尽bikeshed。 `<!-- ROW_MINE: ksummit.messages.5585 -->`
+- 【Linux社区】Kozlowski反对把内核编码规则复制进LLM专用提示词，主张先修好kerneldoc与子系统文档让LLM去读，并自述在devicetree列表沉淀“writing bindings”规则供人与AI共用。 `<!-- ROW_MINE: ksummit.messages.5586 -->`
+- 【Linux社区】Ted以LaTeX两遍编译类比intersphinx须两遍构建生成objects.inv，追问单本书单遍构建是否够编辑自查，并建议提供可下载的库存文件。 `<!-- ROW_MINE: ksummit.messages.5589 -->`
+- 【Linux社区】Walleij赞同Bottomley“惰性癌症”论，引帕金森定律“阻碍时代”之说，直言“Rust很好，合并试试”，并担心内核对年轻人失去吸引力、成包容性问题。 `<!-- ROW_MINE: ksummit.messages.5590 -->`
+- 【Linux社区】Pinchart主张内核须校验可引发DMA的命令，开放度最终靠信任与违约后果（援引明尼苏达封禁先例），要求厂商开放几乎全部ISP特性及调参文档。 `<!-- ROW_MINE: ksummit.messages.5591 -->`
+- 【Linux社区】hpa断言未经许可渗透测试不道德且常属违法；引文载Hellwig称UMN实验当获荣誉勋章、Figa主张应有社区监督，呈现制裁争论两极。 `<!-- ROW_MINE: ksummit.messages.5592 -->`
+- 【Linux社区】Stoakes指峰会“宣传为X实为Y”、议程征集形同虚设；引Airlie称其为“Linus的员工例会”并反对按MAINTAINERS条目投票定议题。 `<!-- ROW_MINE: ksummit.messages.5595 -->`
+- 【Linux社区】Arnd区分固定功能与可编程接口，主张GEMM或oneDNN类抽象可作内核固定功能入口，并指出这将把开源用户态问题转化为开源固件问题。 `<!-- ROW_MINE: ksummit.messages.5597 -->`
+- 【Linux社区】Dan Williams提案峰会讨论fwctl：细数/dev/mem、pci-sysfs、USB raw、NVMe直通史实，指CXL禁专属命令收效差，主张管控慢路径配置面。 `<!-- ROW_MINE: ksummit.messages.5606 -->`
+- 【Linux社区】用户Artem自述lore界面“令人恐惧”，连问开放议题、状态、指派如何查，扬言若删Bugzilla绝不用lore，呈现普通用户视角的真实阻力。 `<!-- ROW_MINE: ksummit.messages.5609 -->`
+- 【Linux社区】Corbet确认kernel.org文档站搜索框可按符号定位，指出system_state仅在编码风格文档出现一次，坦言未考察过无浏览器访问方式。 `<!-- ROW_MINE: ksummit.messages.5613 -->`
+- 【Linux社区】Brown指AI补丁之害在量大且非重复、缺模式匹配红利；引Trond称提交者夸大“安全漏洞”抄送stable逼人停下手头事务，致维护者疲劳。 `<!-- ROW_MINE: ksummit.messages.5615 -->`
+- 【Linux社区】引文载Uecker拟在GCC试验C内存安全子集、Stitt已建size_t溢出消毒器与wrapping_ok宏，Carpenter提saturate_math饱和宏；hpa称此类事C++易做而C需编译器扩展。 `<!-- ROW_MINE: ksummit.messages.5618 -->`
+- 【Linux社区】Van Assche反对复活trivial树，称不愿另盯一份列表核对块层与SCSI补丁的注释是否被改错，主张琐碎补丁留在各子系统列表。 `<!-- ROW_MINE: ksummit.messages.5626 -->`
+- 【Linux社区】Howlett以未与会者身份指人选集中于“老面孔”，提议按主题设临时席位、每子系统双代表、会前预备会与反馈环、代行人机制。 `<!-- ROW_MINE: ksummit.messages.5631 -->`
+- 【Linux社区】Kosina以“把U盘文档直接在LibreOffice打开必然用mmap”反驳Torvalds“FAT只作数据传输不需mmap”之说，维护完整文件系统实现标准。 `<!-- ROW_MINE: ksummit.messages.5638 -->`
+- 【Linux社区】Bottomley主张变量生存期小于代码块时可用显式作用域块承载__free变量，类比guard与scoped_guard之择，认可变量活到末尾返回时改用内部声明。 `<!-- ROW_MINE: ksummit.messages.5644 -->`
+- 【Linux社区】Viro列举dma_buf_fd八处调用约定互异且多处泄漏或UAF，主张替换API应在成败两途都吞引用，或定期全树排查并经porting.rst过渡后拔除。 `<!-- ROW_MINE: ksummit.messages.5646 -->`
+- 【Linux社区】Rostedt主张LTS用户应自费支持评审人力，盼可共享的开源内核评审模型，提议既有bug单独公开发而非发给补丁作者，并期待交互模式。 `<!-- ROW_MINE: ksummit.messages.5652 -->`
+- 【Linux社区】Torvalds断言C++仍非好语言：不解决C的安全问题反添设计缺陷，new关键字既违命名又依赖内核不可用的异常处理，不值得再费心兼容。 `<!-- ROW_MINE: ksummit.messages.5659 -->`
+- 【Linux社区】Torvalds赞成后端自动汇聚补丁成patches@lists.linux.dev，并提出按文件模式订阅的“虚拟列表”，使感兴趣者自动收到相关补丁。 `<!-- ROW_MINE: ksummit.messages.5665 -->`
+- 【Linux社区】Golaszewski自述接手GPIO时新旧API已并存，列出TODO条目、技术债演讲与多批descriptor转换补丁，说明无集中清单、进展散见各系列。 `<!-- ROW_MINE: ksummit.messages.5668 -->`
+- 【Linux社区】Rostedt提议把AI评审挂到patchwork由服务器侧运行、成本不落在提交者，并称锁定风险有限；引Pinchart坚持不得强迫提交者运行专有工具。 `<!-- ROW_MINE: ksummit.messages.5675 -->`
+- 【Linux社区】Torvalds称所论主要在unsafe与C互操作，Rust全局旗标语法若靠accessor遮掩不如继续写C，并讥C++内存序“标准混乱、代码难读”。 `<!-- ROW_MINE: ksummit.messages.5680 -->`
+- 【Linux社区】Geert在确认Rostedt流程完备后指出linux-next仍可捕获冷门架构与配置的编译失败，如间接包含头所致问题。 `<!-- ROW_MINE: ksummit.messages.5683 -->`
+- 【Linux社区】Bottomley称Gerrit之弊在改变工作流而非界面，建议为lore加Gerrit式前端做行内评论转换，称可用AI快速实现并交Ryabitsev部署。 `<!-- ROW_MINE: ksummit.messages.5684 -->`
+- 【Linux社区】Gunthorpe请求按周期统计各子系统新驱动中Rust机会与C行数，判断安全收益占比小，称服务器领域鲜有绿地驱动，须如binder般重写存量方能成立。 `<!-- ROW_MINE: ksummit.messages.5686 -->`
+- 【Linux社区】Leemhuis给出四项峰会提案链接，并称其回归追踪专用账号若少打扰某子系统，即说明该处流程无恙。 `<!-- ROW_MINE: ksummit.messages.5689 -->`
+- 【Linux社区】Nikula指出kernel-doc脚本对同一头文件重复解析四次，主张改写为带缓存的Sphinx扩展（如Hawkmoth），并链接Sphinx域命名空间修复。 `<!-- ROW_MINE: ksummit.messages.5701 -->`
+- 【Linux社区】Van Assche称终极目标为运行前证明代码正确，须形式化规约与硬件模型而超出Rust范围，举DMA误配、提权、log4shell为语言不设防之例。 `<!-- ROW_MINE: ksummit.messages.5702 -->`
+- 【Linux社区】Desnoyers剖析Link截记实为补丁多版本缺唯一标识的变通，对比Gerrit Change-Id语义，指出Linus不信其价值而工具派重视，期待Ryabitsev方案。 `<!-- ROW_MINE: ksummit.messages.5703 -->`
+- 【Linux社区】Rostedt主张内核内API用途由维护者定义，异于用户态“既发布即担责”原则，自述tracing头文件暴露内部结构并要求有权禁止滥用。 `<!-- ROW_MINE: ksummit.messages.5704 -->`
+- 【Linux社区】Iwai指出补丁偶因cherry-pick带模糊合入出错而须查验全文，建议摘要邮件列出无法无模糊应用的提交以便核验，回应lore/lei可替代论。 `<!-- ROW_MINE: ksummit.messages.5705 -->`
+- 【Linux社区】Rostedt释义Fixes不带Cc stable可仅示改进或风险大不回移，述user events修复被Linus以非回归为由拒收，分辨发行版与稳定性两种回移观。 `<!-- ROW_MINE: ksummit.messages.5706 -->`
+- 【Linux社区】转引Brown称devres应用极广、Bottomley提议延迟释放至模块卸载以解中断回调问题，Greg KH点破症结在模块与设备结构生存期被混淆。 `<!-- ROW_MINE: ksummit.messages.5708 -->`
+- 【Linux社区】转引Kosina称stable抄送邮件量大到无法有效利用、宜改可选订阅，Bottomley建议统一X-Stable头便于过滤，Levin追问是否已有无头之邮。 `<!-- ROW_MINE: ksummit.messages.5710 -->`
+- 【Linux社区】Pinchart质疑“必须进发行版包”标准是否适配存量极少的设备，举车载dewarp引擎无标准API，主张先收特定设备的开放实现、日后再成框架。 `<!-- ROW_MINE: ksummit.messages.5716 -->`
+- 【Linux社区】Chehab认可“一个开放用户态真实应用”即可作准入，承认厂商藏私技术无法根绝，主张以政策促整改乃至移除违规驱动并封禁厂商。 `<!-- ROW_MINE: ksummit.messages.5718 -->`
+- 【Linux社区】Williams主张提交说明应交代假设与取舍，视“不愿为补丁现状辩护”为信任警示；引Cook称“如何构造此方案”难以浓缩为trailer标签。 `<!-- ROW_MINE: ksummit.messages.5724 -->`
+- 【Linux社区】Pinchart回溯OMAP3公开数据手册、IPU3参数blob头文件不足以驱动、树莓派ISP开放用户态获赞，据libcamera两年半经验主张要求真实用例的开放实现。 `<!-- ROW_MINE: ksummit.messages.5727 -->`
+- 【Linux社区】Leemhuis拟成文回归处理规则并求Linus或核心维护者背书，指次级子系统维护者远离Linus不谙其规，转引Laurent提议办维护者培训。 `<!-- ROW_MINE: ksummit.messages.5730 -->`
+- 【Linux社区】Feng释疑WRITE_ONCE即relaxed原子写、内核原子操作并无编译器屏障，举smp_store_release发布后WRITE_ONCE例证r1可为0或1，驳Overstreet顾虑。 `<!-- ROW_MINE: ksummit.messages.5736 -->`
+- 【Linux社区】Airlie 称 cherry-pick 不加 -x 曾因引用尚未进入 Linus 树破坏脚本而遭抵制，将推动恢复 -x；并计划用 rerere 缓存构建合并 -fixes 的 next 树 `<!-- ROW_MINE: ksummit.messages.5878 -->`
+- 【Linux社区】Kosina 称自己总是维护多个 topic 分支汇入 for-next 供 linux-next 拉取，质疑经拉取请求收下的提交会错过 linux-next 这一前提 `<!-- ROW_MINE: ksummit.messages.5880 -->`
+- 【Linux社区】Geert 称自己没有也不想要 drm-misc 提交权，“有无 drm-misc 提交权”是询问补丁延误时的标准答案，无人说得清权限在谁手里 `<!-- ROW_MINE: ksummit.messages.5903 -->`
+- 【Linux社区】Arnd 主张 BLAS/GEMM 是 AI 加速器基础接口构件，PyTorch 等框架皆调 oneMKL/oneDNN；定死功能接口应禁厂商扩展与旁路；高通 misc 加速驱动定位错误 `<!-- ROW_MINE: ksummit.messages.5913 -->`
+- 【Linux社区】Glisse 质疑 Rust 弱引用：双向链表僵尸元素会卡死遍历形同死锁，链表外置损缓存性能，RCU 链表跳过死节点难表达 `<!-- ROW_MINE: ksummit.messages.5916 -->`
+- 【Linux社区】Brown 称 Link 主要用于二分定位提交对应邮件以报告测试失败，即补丁到邮件映射，对 message-ID 服务于补丁版本追踪的价值存疑 `<!-- ROW_MINE: ksummit.messages.5918 -->`
+- 【Linux社区】Viro 称 kzalloc 显式写 struct 类型利于代码审计找出全部分配点；抱怨缺可搜索的强制转换手段防指针乱转，结构体包装只解部分问题 `<!-- ROW_MINE: ksummit.messages.5920 -->`
+- 【Linux社区】Gunthorpe 阐明 fwctl 边界：不得妨碍日后内核化；持续擦洗与 EDAC 属设备核心使命不宜入 fwctl，调试性 ECC 评估合适，单实例资源被占用将阻碍共享 `<!-- ROW_MINE: ksummit.messages.5923 -->`
+- 【Linux社区】Airlie 将加速器编程模型分 a-d 四级，由 MMIO 大锁到全抢占；GEMM 级接口仅适用 a 类且该类设备将消亡，AI 加速器须追平 GPU 编程模型才具竞争力 `<!-- ROW_MINE: ksummit.messages.5926 -->`
+- 【Linux社区】Bottomley 借明尼苏达大学事件提案： SCSI“维护驱动不收 trivial 补丁”推至全内核；trivial 修复须附真实 bug 报告或可信静态检查器（0day、Coverity）背书 `<!-- ROW_MINE: ksummit.messages.5930 -->`
+- 【Linux社区】Pinchart 警告 Fixes: 标签若沦为负面评分工具，开发者会游说逃避被归咎，反而削弱 Fixes: 的价值 `<!-- ROW_MINE: ksummit.messages.5931 -->`
+- 【Linux社区】Corbet 提出峰会议题：何种情况要求自由用户空间、是否需 EXPORT_SYMBOL_USERSPACE_GPL()、何为合格实现，并指 Habana 正自行化解但根本问题未解 `<!-- ROW_MINE: ksummit.messages.5933 -->`
+- 【Linux社区】Nikula 观察到 const int foo = bar + 5 类非常量指针 const 局部变量明显增多，风格指南无规可循，此类 const 宜延后声明以获得初值 `<!-- ROW_MINE: ksummit.messages.5940 -->`
+- 【Linux社区】Park 记述 Sashiko 曾抓出他手工 stable 回移的错误，忧 LTS 审阅重复已知发现；支持既有 bug 数据库、提示词入 kernel.org、交互模式限签名树 `<!-- ROW_MINE: ksummit.messages.5941 -->`
+- 【Linux社区】Greg KH 评四道安全提交验证闸门：仅网络等可模拟子系统可行，DRM 依赖实硬件不适用；security@ 报告不得进第三方基础设施，只能各人自机运行 `<!-- ROW_MINE: ksummit.messages.5942 -->`
+- 【Linux社区】Pinchart 认为 2021 年恢复线下过早，提议分会场区域聚集加视频互联，强调参会者并非“怯懦/莽撞”两类所能划分 `<!-- ROW_MINE: ksummit.messages.5948 -->`
+- 【Linux社区】Wysocki 认同 AI 标注可作维护者提示，但质疑缺失标注能否可靠识别，若可疑改动本可被查出则强制标注多余 `<!-- ROW_MINE: ksummit.messages.5950 -->`
+- 【Linux社区】Brown 澄清 RFC 意图：并非 LKML 只留核心子系统，而是有更专属列表的条目不再叠加 LKML `<!-- ROW_MINE: ksummit.messages.5953 -->`
+- 【Linux社区】Ryabitsev 更正 LF“第一人称凭证”计划仅替换 gpg 信任网机制而非 gpg 本身，现有工作流不必改变 `<!-- ROW_MINE: ksummit.messages.5954 -->`
+- 【Linux社区】Pinchart 估算峰会 30 席加 7 赞助席人均日成本约 2500 美元，自述办 15-25 人单日会每人均 100 欧元场地午餐，指成本差距悬殊 `<!-- ROW_MINE: ksummit.messages.5956 -->`
+- 【Linux社区】Kleine-König 描述 pgpkeyring 现状为每周跑脚本查 diff 提交推送，质疑自主主权 DID 实为 PGP 翻版，不愿弃 git/邮件集成，志愿协护钥匙环 `<!-- ROW_MINE: ksummit.messages.5963 -->`
+- 【Linux社区】Ojeda 澄清 gccrs 是 GCC 前端而 rustc_codegen_gcc 属 Rust 项目后端且双方合作；Tree Borrows 模型经约 30k crate 67 万测试；内核仍将用 rustc，兼顾性能与代码复用 `<!-- ROW_MINE: ksummit.messages.5977 -->`
+- 【Linux社区】Hansen 给出修改后的文档条款：提交者须理解并能辩护所提交的一切，否则维护者可整系列拒收 `<!-- ROW_MINE: ksummit.messages.5978 -->`
+- 【Linux社区】Pinchart 披露某大型 SoC 厂商临近开放相机栈却因可经他子系统直通合入而作罢的一手见闻；逆向难度渐增，DRM 开放用户空间门槛证明规则可分情况设定 `<!-- ROW_MINE: ksummit.messages.5983 -->`
+- 【Linux社区】Levin 表明多数回归恰因进入 stable 才暴露因 -rc 测试少，延迟回移只是推迟发现；“紧急”无法定义，stable 标签不可靠因有人就是不标 `<!-- ROW_MINE: ksummit.messages.5984 -->`
+- 【Linux社区】Carpenter 举例链表迭代器在表尾返回错误码致调试刷屏，主张分配失败应返回错误指针而遍历到表尾返回 NULL `<!-- ROW_MINE: ksummit.messages.5987 -->`
+- 【Linux社区】Ojeda 驳 LLVM 隐性依赖之说为恐惧诉求，称 Rust 非研究语言；Rust for Linux 每个 PR 必须构建部分内核 Rust 代码，较 Crater 更严，Clang/GCC 均无此机制 `<!-- ROW_MINE: ksummit.messages.5994 -->`
+- 【Linux社区】Rostedt 接受每场设主持人转达远程与会者，认为此后将成常态，但走廊交流与晚间活动仍缺失，提议会末 breakout room 弥合 `<!-- ROW_MINE: ksummit.messages.5995 -->`
+- 【Linux社区】Bottomley 断言远程参会将成常态但仍应线下为主，反对以恐惧者绑架意愿者造成“最小公分母”式平等，引疫情前轮换欧洲办会先例 `<!-- ROW_MINE: ksummit.messages.5996 -->`
+- 【Linux社区】Levin 主张 AI 审阅强于写作且审阅不产出代码无法律风险，公开要求 McKenney 给出审阅用途涉诉实例 `<!-- ROW_MINE: ksummit.messages.5998 -->`
+- 【Linux社区】Bottomley 以 FIDO 令牌为旁路未酿灾的反例，指出内核 FIDO 驱动本可作加密密钥信任根用于加密设备树、模块签名等，旁路风潮使社区错失此方向 `<!-- ROW_MINE: ksummit.messages.5999 -->`
+- 【Linux社区】Mason 回应 Overstreet：避免地盘之争的关键是不必先让人对其子系统感到羞耻，各有优先级与妥协，对改进保持期待即可 `<!-- ROW_MINE: ksummit.messages.6003 -->`
+- 【Linux社区】Kosina 称测试辅助类 LLM 使用他不在乎，提交说明自由文本即可；但代码确由 AI 生成者须认真对待，兼涉维护者流程与法律 `<!-- ROW_MINE: ksummit.messages.6007 -->`
+- 【Linux社区】McKenney 称法律争议落定前不碰 AI 生成物，援引 DCO 1.1(a) 与版权执法风险；AI 提示与输出留痕可在诉讼中被调取，自述曾被律师复制全部设备 `<!-- ROW_MINE: ksummit.messages.6010 -->`
+- 【Linux社区】Overstreet 长文抨击内核缺乏先设计后动手文化，跨子系统重构陷地盘之争，MM 代码如 rmap 混乱；folios 实为 extent 不应受固定尺寸约束，bikeshedding 吓退深度重构 `<!-- ROW_MINE: ksummit.messages.6017 -->`
+- 【Linux社区】Pinchart 称文档先行假设高质量文档存在而开源实现常是更好文档；DRM 要求内核驱动须配主流图形栈（Mesa、AOSP 等）实现并经其维护者认可，以此保证质量 `<!-- ROW_MINE: ksummit.messages.6018 -->`
+- 【Linux社区】Ojeda 指出 Tree Borrows 别名模型论文已于 2024 年 11 月提交发表并附论文链接，回应 Overstreet 关于别名规则仍在研究的说法 `<!-- ROW_MINE: ksummit.messages.6021 -->`
+- 【Linux社区】Brown 指出 ACPI 平台惯例性抹除 DMI 信息致音频等子系统须持续打每机种 quirk，多数笔记本内置音频问题上报上游后易以 quirk 修复 `<!-- ROW_MINE: ksummit.messages.6027 -->`
+- 【Linux社区】Stoakes 明言不指望文档在 Linus 立场下落地，但坚持写明“slop”以宣示内核零容忍立场，接受 Bottomley 中性措辞妥协 `<!-- ROW_MINE: ksummit.messages.6030 -->`
+- 【Linux社区】Chinner 反对将失修文件系统砍成只读延寿：只读仍在内核解析不可信数据且无法自建测试镜像更难维护，数据恢复应移用户空间或 FUSE `<!-- ROW_MINE: ksummit.messages.6033 -->`
+- 【Linux社区】Mark Brown 称发件端无法根治收件人选择问题但可改善，lei 在 Debian stable 尚不可用，支持提高 get_maintainer 的 --git-min-signatures 并质疑其对新增文件是否有效。 `<!-- ROW_MINE: ksummit.messages.5740 -->`
+- 【Linux社区】Lee Jones 声明其 next 分支从不稳定且经常 rebase 删改提交，Rostedt 称仅偶尔移除完全损坏的提交，并援引 LWN 报道与维护者峰会既往讨论。 `<!-- ROW_MINE: ksummit.messages.5743 -->`
+- 【Linux社区】Hellwig 批评 strncpy 换 strscpy 式逐个替换可能引入比修复更多的 bug，主张改用 seq_buf 等计数式字符串，并指 Kent Overstreet 重复实现而非贡献上游。 `<!-- ROW_MINE: ksummit.messages.5745 -->`
+- 【Linux社区】Carpenter 称内核 2930 个 Makefile 部分硬编码 -Werror 致旧内核难用新 GCC 编译；Segher 坚持修内核约三十个补丁而非改编译器，Biener 建议用脚本附加 -Wno-error。 `<!-- ROW_MINE: ksummit.messages.5746 -->`
+- 【Linux社区】Mauro 建议内核文档构建在 python 过旧时自动选用系统已装的较新版本，列举 Fedora 与 openSUSE 多版本现状；Corbet 反对绕过用户 PATH，Mauro 接受加 --fastest-python 开关。 `<!-- ROW_MINE: ksummit.messages.5748 -->`
+- 【Linux社区】Dan Carpenter 称 Signed-off-by 规则易执行但无法识别 AI 所写补丁，现有 AI 标签仅覆盖极少数补丁，反驳“能标注大部分受影响代码”的设想。 `<!-- ROW_MINE: ksummit.messages.5753 -->`
+- 【Linux社区】Paul Moore 阐明 LSM 只能拒绝、不能授予 DAC 之外权限，拒绝更改以免安全回归；解释 do_unlinkat 安全检查先于 may_delete 的顺序，并举 Landlock 供非特权用户自设策略。 `<!-- ROW_MINE: ksummit.messages.5767 -->`
+- 【Linux社区】Ralf Jung 列举支持 unsafe 代码的 Rust 验证工具 Kani、VeriFast、Verus、Prusti、RefinedRust 等均非生产就绪，Miri 的抽象机模型是关键，RefinedRust 源自其 Coq 博士工作 RustBelt。 `<!-- ROW_MINE: ksummit.messages.5771 -->`
+- 【Linux社区】Rafael 反驳 Bottomley“纯 AI 代码无版权即公有领域”论：若不可获版权便无法按内核要求的 GPLv2 提交，点出 AI 代码授权悖论。 `<!-- ROW_MINE: ksummit.messages.5772 -->`
+- 【Linux社区】Dreier 主张严惩 UMN 研究组并质问 IEEE 为何接受该论文，称应遵循人类受试者研究伦理；同时转述 UMN 自称经 IRB 批准、无恶意补丁入库，批评 Greg 反应过度。 `<!-- ROW_MINE: ksummit.messages.5778 -->`
+- 【Linux社区】Linus 就 Baikal 电子补丁被拒表态：技术理由仅是最低要求，维护者须信任补丁来源及其后续支持承诺，此类非技术拒收历来正当且非灰色地带。 `<!-- ROW_MINE: ksummit.messages.5783 -->`
+- 【Linux社区】Rostedt 澄清内核所谓 unwinding 实为编译界的 stack walking，ORC 作者 Josh 与 GCC 方曾因此误会争论；驳斥 Kent 对 ORC 可靠性质疑，强调其为活内核补丁设计。 `<!-- ROW_MINE: ksummit.messages.5790 -->`
+- 【Linux社区】Rapoport 赞同该研究只证明开放项目可被注入恶意代码的常识，强调测试与 CI 才是防线；引用 Geert 指出 190 个待回退 UMN 补丁多为真实修复，质疑盲目回退。 `<!-- ROW_MINE: ksummit.messages.5792 -->`
+- 【Linux社区】转存 Linus 提案：列表对引用超 50 行的回信直接弹回，允许 Reviewed-by 引 15 行提交说明，须“新内容至少与引用相当”；Rostedt 戏言将波及 Paul。 `<!-- ROW_MINE: ksummit.messages.5793 -->`
+- 【Linux社区】Toke 介绍 IETF 混合会议机制：志愿 jabber scribe 将聊天区问题转述到现场话筒，远程虚拟发言队列由 session chairs 管理，回应 Rostedt“远程者注定二等公民”论。 `<!-- ROW_MINE: ksummit.messages.5794 -->`
+- 【Linux社区】Mauro 称 AI 之前就常收到不同开发者几乎雷同的补丁，源于共同教科书算法，AI 产出亦将约九成相似故无差别；McKenney 表明争议解决前自用项目避开 AI 产物。 `<!-- ROW_MINE: ksummit.messages.5797 -->`
+- 【Linux社区】Roeck 建议 Sashiko 增加每子系统提示与“是否报告存量问题”开关，称其范围内存量问题几乎全真，常借此请补丁作者顺手修复 20 余年老驱动的真实缺陷；认同 yak shaving 不应强制。 `<!-- ROW_MINE: ksummit.messages.5798 -->`
+- 【Linux社区】Greg 澄清 LF 仅托管 bugzilla 而不涉内容处理，维护者鲜有雇主许可持续处理上游 bug 报告；LF 资助的开发者相对每年 4000+ 贡献者只是零头。 `<!-- ROW_MINE: ksummit.messages.5800 -->`
+- 【Linux社区】Levin 给出实测：6.7.2 含 640 处变更、距合入 6.8-rc1 仅 4 天，其中 94 个带 stable 标签、630 个带 Fixes；6.9.3 同样不足四天，结论是短周期与大回移量不可兼得。 `<!-- ROW_MINE: ksummit.messages.5802 -->`
+- 【Linux社区】Levin 展示 next-analysis 机器人与 6.12-rc4..rc5 提交在 -next 停留时长直方图，110 个提交未经 -next 即被拉走，linus-next 拟在 Linus 拉取前补做构建与冒烟测试。 `<!-- ROW_MINE: ksummit.messages.5805 -->`
+- 【Linux社区】Rostedt 说明该文档源自 TAB、覆盖从 sed 脚本到 AI 的工具生成补丁透明披露，反对将其改造成 AI slop 专文，主张另立更严厉文档；Lorenzo 表态认同文明分歧并接受其增补。 `<!-- ROW_MINE: ksummit.messages.5806 -->`
+- 【Linux社区】Gunthorpe 向 Petkov 给出 fwctl 系列链接并划界：内存持续清洗与 EDAC 属设备主业不应经 fwctl，ECC 错误率评估采集适合；Jonathan Cameron 担忧清洗器固件 RPC 暴露。 `<!-- ROW_MINE: ksummit.messages.5807 -->`
+- 【Linux社区】Bottomley 发现 Sashiko 每子系统提示词仓库分叉：masoncl/review-prompts 疑被整体拷入而非模块引用，贡献者恐须双仓重复提交。 `<!-- ROW_MINE: ksummit.messages.5811 -->`
+- 【Linux社区】Ribalda 提出跨子系统直通政策：有标准领域驱动须在内核并走通用 syscall，无标准可部分用户态；合入须有完整开源栈，既有栈如 mesa、libcamera 必须基于之，厂商直通仅限小众与开发用途。 `<!-- ROW_MINE: ksummit.messages.5812 -->`
+- 【Linux社区】Brown 质疑用 LLM 做补丁回移，称回移需大量隐性上下文易触雷；Bottomley 称 git 历史补丁路径有限可训练、覆盖率可量化；Brown 指自测框架各自为政，推广是社会问题。 `<!-- ROW_MINE: ksummit.messages.5813 -->`
+- 【Linux社区】Laurent 指出驱动常以 devm_kzalloc 分配可经用户态触达的私有数据而忽视生命周期；Carpenter 承认社区普遍未理解该问题，建议以静态分析检测并请向 kernel-janitors 提炼启发式。 `<!-- ROW_MINE: ksummit.messages.5814 -->`
+- 【Linux社区】Geert 建议在 scripts/ 提供 git bisect 封装：自动保存 .config 为 bisect_defconfig、逐步重配并显示配置影响；Leemhuis 补充先跑 localmodconfig 提速并讨论稳定版区间二分的坑。 `<!-- ROW_MINE: ksummit.messages.5815 -->`
+- 【Linux社区】Carpenter 建议在 checkpatch 中对 patch.msgid.link 链接发出警告，因该域名链接应由 committer 而非补丁作者添加。 `<!-- ROW_MINE: ksummit.messages.5816 -->`
+- 【Linux社区】Airlie 主张形成“想被评审须先评审他人”的社区市场机制，指出提交计数是错误绩效指标；驳斥“没有硬件”借口，称评审只需内核接口素养，异常提交须资深维护者把关。 `<!-- ROW_MINE: ksummit.messages.5819 -->`
+- 【Linux社区】Ojeda 说明仅当所用不稳定特性变动才需联动回移 rustc，rust/kernel 与 rust/alloc 静态限制特性集且模块不得自行引入；寻求企业资助 rustc，Rust 支持标为实验性故可不承诺回移。 `<!-- ROW_MINE: ksummit.messages.5820 -->`
+- 【Linux社区】Geert 在 TAB 提名征集中指出会议纪要自 2020 年 10 月后未见更新，公开追问是缺失还是未开会，暴露 TAB 透明度问题。 `<!-- ROW_MINE: ksummit.messages.5821 -->`
+- 【Linux社区】Greg 说明合并窗口是 stable 团队最忙时段，带 Fixes 或 cc:stable 的补丁集中涌入但占比不大；树中无 fixes 标签的自动回移应只来自 autosel 的 stable-dep-of 或明确请求。 `<!-- ROW_MINE: ksummit.messages.5822 -->`
+- 【Linux社区】Leon 主张信任双向，单个维护者以不信任为由阻止他人不健康，大型子系统无法通晓全部用例；并定性与 Laurent 的分歧为哲学而非技术，故需维护者峰会裁决。 `<!-- ROW_MINE: ksummit.messages.5831 -->`
+- 【Linux社区】Bottomley 引美国版权局三卷报告与国会 CRS 摘要：纯 AI 生成代码不可获版权、实质公有领域，提交 DCO 无碍且未来立法不可溯及；人工改动部分仍有版权。 `<!-- ROW_MINE: ksummit.messages.5836 -->`
+- 【Linux社区】20 余年资历用户 Artem 以 bugzilla 216274 与 dmesg 含混报错为例，说明普通用户无从判断责任人与严重性、grep 命中多模块、发 LKML 无人回应的一手受挫叙述。 `<!-- ROW_MINE: ksummit.messages.5839 -->`
+- 【Linux社区】转存 Airlie 立场：加速器 uAPI 复杂非自测可覆盖、社区靠拒绝与教育构建、厂商仅因上游客户压力最低限度参与；其已起草通用开源用户态要求文档并拟结盟推进，Laurent 请纳入相机 ISP。 `<!-- ROW_MINE: ksummit.messages.5842 -->`
+- 【Linux社区】Bottomley 重申两点诉求：纳入与移除决定应由多人而非“最后坚持者”定夺、结果须明确记录；Ted 以人事问题类比反对纳入期设限，James 称已放弃禁入主张但应对可预见问题预作计划。 `<!-- ROW_MINE: ksummit.messages.5855 -->`
+- 【Linux社区】Bottomley 提议通用版维护者压力疏导会议，聚焦压力应对而非指责施压者，可设非评判倾听环节收集主要压力源，回应 CoC 委员 Shuah 对“CoC 只管维护者”说法的异议。 `<!-- ROW_MINE: ksummit.messages.5858 -->`
+- 【Linux社区】Feng 澄清 relaxed 原子写不含编译器屏障、WRITE_ONCE 即 relaxed；发布后混入普通写即成数据竞争结果任意；LKMM 竞争须含写访问，Rust 原生模型经 Ralf 的 PR 128778 修复。 `<!-- ROW_MINE: ksummit.messages.5861 -->`
+- 【Linux社区】Linus 断然否决以 __attribute__((deprecated)) 引入警告，内核必须保持零警告；唯一有效规则是改 API 者须修完所有现有用户，否则新旧两套 API 永久由其维护。 `<!-- ROW_MINE: ksummit.messages.5868 -->`
+- 【Linux社区】Ted 反对强制 AI 标注，预言 slop 洪流将挤压新贡献者并催生“老男孩俱乐部”指责；主张以声誉惩戒乃至整域封禁威慑，援引明尼苏达大学先例，类比法院惩处引用幻觉判例的律师。 `<!-- ROW_MINE: ksummit.messages.5871 -->`
+- 【Linux社区】转存 Bartosz 峰会提案摘要：接续 Laurent 在 LPC 2022 对 devres 副作用的批评与 Wolfram 在 EOSS 2023 的研究，拟分多年多阶段统一子系统驱动数据与对象所有权处理；Greg 与 Laurent 均表支持。 `<!-- ROW_MINE: ksummit.messages.5876 -->`
+- 【Linux社区】Mauro 反驳 Bottomley“C/Rust 长期共存”论，认为双语言维护负担将迫使子系统或转 Rust 或弃用；以 Clang 2010 年自举、约 2014-2017 年成熟为类比，界定 Rust 成败标准。 `<!-- ROW_MINE: ksummit.messages.6043 -->`
+- 【Linux社区】Tashkinov 回击 Viro 对 opt-out 的抨击，称 Bugzilla 从未滥发邮件，坚称“Bugzilla 主要为最终用户而存在”，凸显用户与内核开发者对报告渠道的立场冲突。 `<!-- ROW_MINE: ksummit.messages.6046 -->`
+- 【Linux社区】Lunn 介绍 netdev 的 NIPA CI 逐补丁统计 W=1 警告数、增加即失败并输出统一差异，代码开源可复用，回应 Nikula“如何只抓新增警告”之问，供文档构建借鉴。 `<!-- ROW_MINE: ksummit.messages.6051 -->`
+- 【Linux社区】Figa 引 Roeck 案例称 AI 评审对约 350 行驱动报 9 处问题须处理，Brown 则见提交者与 AI 迭代 15 版仍被人类评审否路；Figa 提议工具辅助核对跨版本意见是否落实。 `<!-- ROW_MINE: ksummit.messages.6052 -->`
+- 【Linux社区】Carpenter 在 staging 审新手补丁，被迫改写“如何发 v2”指南强调勿当日重发，否则形如结对编程；反映新手洪流下维护者的流程应对。 `<!-- ROW_MINE: ksummit.messages.6059 -->`
+- 【Linux社区】Rostedt 解释自建 linux-trace-kernel 列表使补丁进 patchwork、讨论留 LKML 的两全安排，并反问 Perches 是否订阅 MAINTAINERS 里所有列表，否则无法参与讨论。 `<!-- ROW_MINE: ksummit.messages.6066 -->`
+- 【Linux社区】NeilBrown 主张修十余款邮件客户端以正确折叠引用，胜过约束万千发件人，称此为 LWN 所述“平台问题”，并讽以 vger 拒稿强制引用规范形同排斥异己。 `<!-- ROW_MINE: ksummit.messages.6072 -->`
+- 【Linux社区】Pinchart 剖析对设备直通的恐惧源于封闭驱动历史创伤与厂商合作尚脆弱领域的倒退风险；以 hidraw、FIDO 令牌与 DRM 强制开源用户态为例，主张分情况立规。 `<!-- ROW_MINE: ksummit.messages.6075 -->`
+- 【Linux社区】Brown 指出 devres 存在的中断处理器存活过久、模块与设备寿命不一致、启动卸载次序等生命周期难题，非延后释放可解，回应 Bottomley 对 Rust 化改进的乐观。 `<!-- ROW_MINE: ksummit.messages.6079 -->`
+- 【Linux社区】Bottomley 剖析 Folio 之争的流程病灶：设计 ack 无惯例、单个 nack 即可叫停、子系统恐被他人树经 pull request 绕过而过度反应，主张明确 nack 权限与推翻条件。 `<!-- ROW_MINE: ksummit.messages.6080 -->`
+- 【Linux社区】Ventura Jack 引 rust 标准库 va_list.rs 源码注释证明其显式假设 LLVM 后端，质询 gccrs 维护者 Herron 如何处理标准库内嵌的编译器依赖。 `<!-- ROW_MINE: ksummit.messages.6082 -->`
+- 【Linux社区】Ts'o 公布 2023 维护者峰会完整议程：文件系统信任、Rust 下一步、60 分钟维护者倦怠、维护者互助组与“维护者快乐吗”环节；Corbet 义工代收匿名意见。 `<!-- ROW_MINE: ksummit.messages.6085 -->`
+- 【Linux社区】Gushchin 提出峰会 AI 评审议题五项：LTS 与发行版回传评审、依赖单一公司基础设施的长期保障、存量缺陷去重数据库、提示词入内核树的归属与测试、交互模式成本。 `<!-- ROW_MINE: ksummit.messages.6086 -->`
+- 【Linux社区】Greg KH 否决 LF 托管 distros 类名单，理由含制裁政治与各国政府图谋准入；Marinas 透露 Arm 因客户视公开披露为零日而求私有预通报，Greg 称数十年来一律拒绝。 `<!-- ROW_MINE: ksummit.messages.6088 -->`
+- 【Linux社区】Pinchart 阐明 cleanup 属性最佳用途是局部作用域守卫如互斥锁自动解锁；Tarreau 忧其诱发双重释放，引 systemd 数十个清理类型与 glib 所有权转移为参照。 `<!-- ROW_MINE: ksummit.messages.6090 -->`
+- 【Linux社区】Mauro 反对 Levin 新增 Improves 标签，称文档既定 cc:stable 为硬性要求；自述仅对低风险回传主动加标，新增 PCI/USB 设备 ID 补丁介于修复与维护之间难归类。 `<!-- ROW_MINE: ksummit.messages.6091 -->`
+- 【Linux社区】Coly Li 详述 AI 相册分类共享场景的权限难题：应用无法理解 LSM 拒绝、反查规则致权限展示缓慢、数据库规则难扩展，回应 Kara 的粘滞位加 LSM 方案。 `<!-- ROW_MINE: ksummit.messages.6093 -->`
+- 【Linux社区】Leemhuis 坚守“无回归”规则不被文件系统除废讨论侵蚀，称 reiserfs 移除在轨而 hfsplus 有用户不宜贸然删；Brauner 忧无人愿做文件系统 CI 测试套件的全职工程。 `<!-- ROW_MINE: ksummit.messages.6097 -->`
+- 【Linux社区】Walleij 支持电源时序子系统列入 LPC24 峰会议题，指其争议大难做对，并点名 2014 年为 MMC/SD 首创电源时序代码的 Hansson 等人应参与讨论。 `<!-- ROW_MINE: ksummit.messages.6099 -->`
+- 【Linux社区】trivial.git 维护者 Kosina 表态即使收集补丁也忽略纯空白改动，赞同 Van Assche 以 git blame 历史可读性反对独立空格补丁，界定琐碎树接收政策。 `<!-- ROW_MINE: ksummit.messages.6103 -->`
+- 【Linux社区】Geert 澄清内核并不显式传 -fwrapv，它由 -fno-strict-overflow 隐含启用，纠正静态分析整数溢出讨论中的编译选项误解。 `<!-- ROW_MINE: ksummit.messages.6104 -->`
+- 【Linux社区】Kosina 认为无法可靠识别漏标的 AI 代码，除成文要求外只能沿用“对提交者建立信任”这一惯常工具，并戏言用 LLM 侦测 LLM 代码。 `<!-- ROW_MINE: ksummit.messages.6108 -->`
+- 【Linux社区】Brown 认为推敲回归时限措辞属抠字眼无益，规则须兼顾易懂与不似微观管理，合并窗口本就特殊；Nikula 建议改按 -rc 期限表述。 `<!-- ROW_MINE: ksummit.messages.6111 -->`
+- 【Linux社区】Rostedt 主张仅当 AI 生成超出自动补全的非平凡代码才须在 changelog 披露，辅助理解、测试或 spatch 类工具发现无需强制说明。 `<!-- ROW_MINE: ksummit.messages.6115 -->`
+- 【Linux社区】Hemminger 提议每年向 MAINTAINERS 全体地址发探测邮件，自动回信为死者即发补丁修剪，承认查不出“幽灵”条目但可清除死地址。 `<!-- ROW_MINE: ksummit.messages.6118 -->`
+- 【Linux社区】Chinner 公开斥 Torvalds“哇哇哇”式嘲讽完全不可接受并质问领导层沉默；Bottomley 回护称其为泛指技术对象且后接技术论证，若事事援引行为准则将投诉成灾。 `<!-- ROW_MINE: ksummit.messages.6120 -->`
+- 【Linux社区】Pinchart 主张字符设备驱动弃 devm 存驱动数据、改引用计数加 .release 释放；Mauro 认同 V4L2/DRM 多 cdev 热插拔复杂，但称 regulator 等不可热插拔设备仍宜用 devm。 `<!-- ROW_MINE: ksummit.messages.6122 -->`
+- 【Linux社区】Ventura Jack 指出 C++26 将读未初始化变量由未定义行为改为“错误行为”，仍可逐例自愿保留旧 UB 换性能，回应 Uecker 对 C++ 语义混乱的不满。 `<!-- ROW_MINE: ksummit.messages.6123 -->`
+- 【Linux社区】Chamberlain 称 AI 代码恐已入大项目且难禁止、法律担忧难持久；McKenney 反问依据，指相关诉讼已在途、近期有利判决未必终局，对 Generated-by 标签持保留。 `<!-- ROW_MINE: ksummit.messages.6125 -->`
+- 【Linux社区】Bottomley 主张建立超越 Linus 的正式机制处理维护者除名，指 bcachefs 事件只剩他一人决策且无成文结论；Ts'o 区分特性收退、人员除名与导师制三题，引 35 年仅一例劝慎。 `<!-- ROW_MINE: ksummit.messages.6127 -->`
+- 【Linux社区】Pinchart 称邮件量大致 DRM 开发者不读 LKML、自己几乎不读任何列表；Rostedt 坚持调度追踪类全内核影响改动须抄送通用列表。 `<!-- ROW_MINE: ksummit.messages.6130 -->`
+- 【Linux社区】Ts'o 发布 2024 维护者峰会征题通知：9 月 17 日维也纳、限 30 名受邀者、Linus 供名单，程序委员会为 Brauner、Corbet、Greg KH、Levin、Ts'o、Wysocki 六人。 `<!-- ROW_MINE: ksummit.messages.6135 -->`
+- 【Linux社区】Uecker 报告 WG14 进展：C23 核心语言约 87 项 UB、C2Y 已删 17 项另备 12 项提案；提议 C 内存安全模式（N3211）与 counted_by 语法化，Greg 称 3000 万行 C 的加固不停步。 `<!-- ROW_MINE: ksummit.messages.6144 -->`
+- 【Linux社区】Wilcox 指出 kzmalloc_obj 已被广泛使用而使用者不自知其隐含 GFP 语境，直觉正确但实现须重做，反对调用者手传 GFP 标志的分配器 API。 `<!-- ROW_MINE: ksummit.messages.6150 -->`
+- 【Linux社区】借用模型作者 Jung 确认 stacked/tree borrows 拟作为程序正确性的定义基准，采纳后按定义无误报漏报；Miri 检查编译器全部 UB，静态验证工具在研。 `<!-- ROW_MINE: ksummit.messages.6154 -->`
+- 【Linux社区】Wedson 展示 QEMU 可运行的 PL061 Rust 驱动：probe 状态引用计数、硬件资源可撤销、remove 先撤销后释放并以 RCU 等待在用者完成，回应 Greg 的悬垂指针之疑。 `<!-- ROW_MINE: ksummit.messages.6163 -->`
+- 【Linux社区】Mauro 介绍自研抄送脚本基于 get_maintainers 加 git send-email：封面信 80 余项抄送触反垃圾拦截，试验仅发列表与仅发维护者两案，后者反馈更佳。 `<!-- ROW_MINE: ksummit.messages.6165 -->`
+- 【Linux社区】Rostedt 区分用 AI 辅助理解或测试无需披露，而“让机器人造鱼冒充己作”属欺骗；“LLM 协助”过于笼统，须披露的是索要快速排序例程一类成段生成。 `<!-- ROW_MINE: ksummit.messages.6167 -->`
+- 【Linux社区】Geert 指顺手改 Kconfig/Makefile 经 git 历史放大抄送噪音，建议 get_maintainer.pl 对此类文件忽略历史；忆 Zippel 曾计划将 Kconfig 项并入驱动源码。 `<!-- ROW_MINE: ksummit.messages.6169 -->`
+- 【Linux社区】Leemhuis 主张 LLM 应前置帮用户写好 bug 报告而非事后筛除，因常见漏报魔改发行版内核等关键细节；Pinchart 问是否仍接受无工具报告，Konstantin 亦忧提示注入。 `<!-- ROW_MINE: ksummit.messages.6185 -->`
+- 【Linux社区】Ojeda 澄清 Ref/Arc 仅做原子引用计数不添线程安全，跨线程变更须 Arc 加 Mutex 否则编译期报错；Pinchart 追问初始化与析构期免锁优化能否在 Rust 表达。 `<!-- ROW_MINE: ksummit.messages.6188 -->`
+- 【Linux社区】Levin 统计 v6.12..v6.18 有 1902 名单提交作者占三分之一、仅 177 人获 Reviewed-by，拟议审查能力门槛将挡 1700 余人；Bottomley 称 Rb 不等于理解，应以 changelog 论证。 `<!-- ROW_MINE: ksummit.messages.6192 -->`
+- 【Linux社区】Pinchart 反对强制贡献者运行专有 AI 评审工具，成本应由维护者侧承担；Mason 称当下竞争充分暂无锁定之虞，Pinchart 以蓄洪坝喻专有技术锁定的不可逆风险。 `<!-- ROW_MINE: ksummit.messages.6195 -->`
+- 【Linux社区】Uecker 评 GCC 对类型改变存储基本符合 C 标准、Clang 沿 C++ 模型不合规，两编译器 provenance 与整型指针往返皆有错；指 Miri 仅覆盖测试执行路径。 `<!-- ROW_MINE: ksummit.messages.6196 -->`
+- 【Linux社区】Lunn 详介 netdev CI 逐补丁构建统计警告数、增即失败，另对改动文件跑 kernel-doc 前后比对捕捉未文档化成员，建议 0-day 仿效并问文档可否增量构建。 `<!-- ROW_MINE: ksummit.messages.6200 -->`
+- 【Linux社区】Laurent Pinchart 主张在 checkpatch 加弃用 API 警告，低成本提醒不知情开发者，回应 Johannes Berg“再叨扰也无用”论。 `<!-- ROW_MINE: ksummit.messages.6346 -->`
+- 【Linux社区】2021 线下峰会筹备中 Enrico Weigelt 自述全家拒绝接种，称疫苗为“人体实验”并以 #faucigate 质疑疫情数据。 `<!-- ROW_MINE: ksummit.messages.6350 -->`
+- 【Linux社区】Jori Koolstra 澄清经 Paul McKenney 提醒才知峰会讨论列表公开，原以为仅委员会可见，提议公告应明示列表公开性。 `<!-- ROW_MINE: ksummit.messages.6351 -->`
+- 【Linux社区】James Bottomley 称维护者惯用 git/b4 am 忽略 base commit，反对用 prerequisite-patch-id，要求封面信直接给出前置系列的 lore 链接。 `<!-- ROW_MINE: ksummit.messages.6352 -->`
+- 【Linux社区】JFS 维护者 Dave Kleikamp 回应弃用讨论：称有用户希望保留 JFS，将把跟进频率从数周一次提高到每周。 `<!-- ROW_MINE: ksummit.messages.6354 -->`
+- 【Linux社区】Arınç ÜNAL 主张 DT 绑定修正不应被要求先改 Linux 驱动，做设备树无需会 C，绑定兼作硬件文档；与 Woodhouse 辩 ABI 变更迁移。 `<!-- ROW_MINE: ksummit.messages.6359 -->`
+- 【Linux社区】Linus Walleij 主张 Rust 应优先用于协议栈与用户态边界等易被攻击代码如 ksmbd、nfsd，而非仅驱动，并称 ksmbd 曾被情报机构利用。 `<!-- ROW_MINE: ksummit.messages.6367 -->`
+- 【Linux社区】Thorsten Leemhuis 说明 regzbot 初期不追踪 bug 跟踪器报告但预留扩展，并请回复回归报告时抄送 regressions@ 以集中可见。 `<!-- ROW_MINE: ksummit.messages.6373 -->`
+- 【Linux社区】Arnaldo Melo 用 Claude 把 AI 报的存量问题归档进 perf TODO 文件（TODO.hardening 达 106KB），并推荐 Mason 的 kres 审计工具及其 confirmed、invalid、unconfirmed 分级流程。 `<!-- ROW_MINE: ksummit.messages.6375 -->`
+- 【Linux社区】Steven Rostedt 称测试需 8-13 小时故先推 urgent 分支等 zero-day 机器人，但已收不到其通知，愿加入 linus-next 统一预合并测试。 `<!-- ROW_MINE: ksummit.messages.6379 -->`
+- 【Linux社区】Linus 回顾 2016-2017 年峰会曾有子系统介绍短会，2018 年 Daniel Vetter 称“不必再来”，网络组约 2020 年才开始集体维护，支持重开议题。 `<!-- ROW_MINE: ksummit.messages.6380 -->`
+- 【Linux社区】Dan Carpenter 说明仅需进 stable 的补丁流程：发 stable@ 并在提交信息说明为何无需上游，回应 Mimi Zohar 之问。 `<!-- ROW_MINE: ksummit.messages.6382 -->`
+- 【Linux社区】Theodore Tso 称维护者峰会至多 5 个赞助席位、近 3 年零赞助改由 LF 买单，企业更愿为 LSF/MM 技术讨论付费，AI 数据中心挤占会议预算。 `<!-- ROW_MINE: ksummit.messages.6385 -->`
+- 【Linux社区】Laurent Pinchart 力主用确定性方案解码栈回溯而非 LLM，提议建 debuginfo 数据库，并认可 Sasha 提出的 kallsyms 内嵌文件行号方案更佳。 `<!-- ROW_MINE: ksummit.messages.6386 -->`
+- 【Linux社区】Miguel Ojeda 纠正 Ventura Jack：混淆了“模型不允许所有 unsafe 模式”与“无法判定 UB”，称别名规则不绑定 LLVM，其他编译器可取更保守假设。 `<!-- ROW_MINE: ksummit.messages.6390 -->`
+- 【Linux社区】Arnd Bergmann 担心 Rust 绑定的 CamelCase 命名使 C 与 Rust 同名结构难以 grep 与文档化。 `<!-- ROW_MINE: ksummit.messages.6391 -->`
+- 【Linux社区】Vegard 实测 PyPy 提速 22%、约 40% 构建耗时在 Sphinx resolve_xref；Mauro 主张默认保留交叉引用，指出 C domain 无法区分同名不同类符号的长期缺陷。 `<!-- ROW_MINE: ksummit.messages.6392 -->`
+- 【Linux社区】Ventura Jack 长文反驳 Ralf Jung：举 Rust 1.80 破坏 time crate 波及 5000 余 crates，质疑对 LLVM 的隐藏依赖，引 trait solver 难题与 Perl 6、Scala 3 教训。 `<!-- ROW_MINE: ksummit.messages.6409 -->`
+- 【Linux社区】Corbet 称 LF 资助付费文档实验因选题过难、写手不称职而失败；Mauro 提出书籍组织、uAPI、ABI、kernel-doc、kAPI 五类任务并介绍 get_abi 工具与 sysfs 大量缺口。 `<!-- ROW_MINE: ksummit.messages.6414 -->`
+- 【Linux社区】Steven Rostedt 称不在意变更日志由人还是 AI 写，只求说清动机；自述多年替非母语者重写日志，且不再示范写法因对方会原样照抄。 `<!-- ROW_MINE: ksummit.messages.6416 -->`
+- 【Linux社区】Laurent Pinchart 指出 drm_atomic_helper.c 的 DOC: overview 块加 kernel-doc :doc: 即可把代码旁设计注释并入文档，回应 Rostedt 设计文档标记之问。 `<!-- ROW_MINE: ksummit.messages.6418 -->`
+- 【Linux社区】Kent Overstreet 指出内核 Rust panic 用 abort 不展开；若支持完整展开，“无 unsafe 加依赖白名单”的 Rust 或能以更易用方式取代 BPF。 `<!-- ROW_MINE: ksummit.messages.6421 -->`
+- 【Linux社区】Laura Abbott 发布 2021 TAB 选举提名公告：十席半数换届，Greg KH、Corbet、Levin、Rostedt、Ts'o 任期届满，资格为 2020-21 年三个标签 commit，9 月 20 日硬截止。 `<!-- ROW_MINE: ksummit.messages.6426 -->`
+- 【Linux社区】Laurent Pinchart 倡议为维护者办培训，以取代口口相传且互相矛盾的规则，称许多人不知有流程；并涉深层维护树减负与回归指南讨论。 `<!-- ROW_MINE: ksummit.messages.6430 -->`
+- 【Linux社区】Wacom 的 Ping Cheng 回应 Linus Walleij：公司重视 Linux 客户，但面板厂商不向其提供规格，现以 ddcutil 方案供 Linux 用户调节显示。 `<!-- ROW_MINE: ksummit.messages.6431 -->`
+- 【Linux社区】Steven Rostedt 同意把测试通过后的 fixes 分支加入 linux-next，urgent 分支保持私有，并改为每周批量发一次拉取请求。 `<!-- ROW_MINE: ksummit.messages.6438 -->`
+- 【Linux社区】Jani Nikula 称构建系统不支持子系统提前保持 W=1 与 kernel-doc 干净，DRM 用 Makefile 变通降低破损；Randy 实测全配置约 450 条警告。 `<!-- ROW_MINE: ksummit.messages.6439 -->`
+- 【Linux社区】Steven Rostedt 声明若被要求手删 Link 标签他将不再添加任何链接，因其脚本自动生成且徒增负担，呼应 Greg 对源码史料损失的担忧。 `<!-- ROW_MINE: ksummit.messages.6443 -->`
+- 【Linux社区】Bottomley 引美国版权局报告称纯 AI 代码无版权即公有领域、DCO 可接受；Mauro 实测 AI 生成单元测试五至六成首跑失败，称 AI 如高级实习生需人重塑。 `<!-- ROW_MINE: ksummit.messages.6445 -->`
+- 【Linux社区】Paul McKenney 与 David Laight 讨论 READ_ONCE：gcc 对 volatile 读生成多余寄存器搬运甚至拆分访问，期待 __atomic_load_n RELAXED 日后可用。 `<!-- ROW_MINE: ksummit.messages.6448 -->`
+- 【Linux社区】Andrew Lunn 澄清 netdev 流程：补丁入 patchwork 后 CI 跑测，结果以红黄绿与链接呈现，失败不自动改状态而由人工裁定，纠正 Rostedt 的自动化误解。 `<!-- ROW_MINE: ksummit.messages.6452 -->`
+- 【Linux社区】Mark Brown 称嵌入式驱动评审常无人真有硬件，故更看重子系统整合与维护成本的风险画像，建议识别并利用社区已具备集体知识的领域。 `<!-- ROW_MINE: ksummit.messages.6459 -->`
+- 【Linux社区】Geert 统计 v5.19 后主分支含 2928 个 Fixes 即日均 46 个修复；Joe Perches 指出其中多为 -rc 周期引入问题的修复，不能证明已发布版本的缺陷量。 `<!-- ROW_MINE: ksummit.messages.6462 -->`
+- 【Linux社区】Roland Dreier 称 devres 采用有限；Linus Walleij 反驳 devm_ 已有 26112 处使用，输入子系统甚至强制 remove 路径用 devm 动作，视之为巨大成功。 `<!-- ROW_MINE: ksummit.messages.6463 -->`
+- 【Linux社区】James Bottomley 解释 aic7xxx 预生成输出因工具在树内而人人一致，该工具已悄然朽坏仅存历史意义，回应 Linus 关于随树发布工具的问题。 `<!-- ROW_MINE: ksummit.messages.6466 -->`
+- 【Linux社区】Bottomley 与 Greg KH 争执 Rust 维护者辞职事件：前者称开发者退出致仅剩 Linus 独扛且不透明招致猜测，后者称 35 年仅一次、流程文档无济于事。 `<!-- ROW_MINE: ksummit.messages.6469 -->`
+- 【Linux社区】资深用户 Artem 叙述 20 余年 IT 经验仍不知 bug 该报给谁、抄送谁，质疑普通报告者可及性；Greg 示范 get_maintainer.pl 定位看门狗维护者。 `<!-- ROW_MINE: ksummit.messages.6475 -->`
+- 【Linux社区】Steven Rostedt 自述因用户 flex/bison 版本过旧无法构建，把生成的 C 文件提交进仓库后再无抱怨，与 Linus“永远现构建”主张形成对照。 `<!-- ROW_MINE: ksummit.messages.6479 -->`
+- 【Linux社区】Vlastimil Babka 指出新写法 kzalloc_obj(*x) 已隐含 GFP_KERNEL，回应 Wilcox 提议的“仅分配内存”简易分配器与 Brown 对 kzalloc 默认化的观察。 `<!-- ROW_MINE: ksummit.messages.6484 -->`
+- 【Linux社区】Hans de Goede 称 Red Hat 迁 Jira 仅限 RHEL 9 之后版本、Fedora 未定，且 RH 团队正把 Bugzilla 移植到 PostgreSQL 以摆脱停更的 MySQL 依赖。 `<!-- ROW_MINE: ksummit.messages.6487 -->`
+- 【Linux社区】Leon Romanovsky 主张新 uAPI 必须进入 Debian、Fedora、SuSE 软件包，GitHub 代码演示是最差凭证，自述 RDMA 面向企业与云，busybox 亦属发行版生态。 `<!-- ROW_MINE: ksummit.messages.6488 -->`
+- 【Linux社区】Jori Koolstra 披露内核导师计划无论对错一律拒收 AI 贡献，因导师投入旨在培养未来贡献者，须信任参与者不借 AI 刷名字；并引 Linus 的贡献信任模型。 `<!-- ROW_MINE: ksummit.messages.6490 -->`
+- 【Linux社区】Dan Carpenter 称 AI 生成的锁文档自信却模糊且常有错，生成快评审慢；Julia Lawall 期望专为此设计的注释理解工具而非零散 AI 生成。 `<!-- ROW_MINE: ksummit.messages.6496 -->`
+- 【Linux社区】Laurent Pinchart 担忧资源匮乏下 bug 追踪只能在“报告者爱用”与“维护者适用”间二选一，并戏言年轻一代或逼维护者改用视频评审。 `<!-- ROW_MINE: ksummit.messages.6500 -->`
+- 【Linux社区】Rostedt说明LPC微会议题15-30分钟偏讨论、不含Plumbers入场券，Track议题更长；指导YoungJun将已提交摘要改选“Kernel Memory Management MC”轨道。 `<!-- ROW_MINE: ksummit.messages.6201 -->`
+- 【Linux社区】Geert认为0-day对编译失败报告做得好、会通知作者与维护者，但维护者仍可无视报告；回应Linus要求自动化定位故障树、勿靠人肉的设想。 `<!-- ROW_MINE: ksummit.messages.6214 -->`
+- 【Linux社区】Levin称“已加入stable树”通知邮件纯属垃圾、想停发又怕有人依赖（早于lei/lore时代）；Ryabitsev建议改写入public-inbox源仅存档不投递。 `<!-- ROW_MINE: ksummit.messages.6219 -->`
+- 【Linux社区】Ojeda澄清内核Rust以abort模式编译panic：析构不运行、异常不可捕获、当前映射到BUG()，故无需考虑C++式异常安全，与回溯遍历是两回事。 `<!-- ROW_MINE: ksummit.messages.6225 -->`
+- 【Linux社区】Kosina以hidraw作者身份回忆：当年担心raw接口冲击HID驱动生态，结果未发生，hidraw只用于一次性设备方案，通用驱动仍在内核正常实现。 `<!-- ROW_MINE: ksummit.messages.6230 -->`
+- 【Linux社区】Kosina决定在5.13从Documentation与MAINTAINERS删除trivial补丁条目：补丁工具已改进，错别字补丁反制造无谓冲突，trivial列表已无价值。 `<!-- ROW_MINE: ksummit.messages.6231 -->`
+- 【Linux社区】Leemhuis承认无回归硬数据、regzbot难以获知DRM外部缺陷跟踪器中的报告；Howlett主张在Plumbers讨论工作流，因Maintainers峰会覆盖不了最需改进者。 `<!-- ROW_MINE: ksummit.messages.6233 -->`
+- 【Linux社区】Hansen讨论工具生成内容指南v5措辞，改为“即使工具使用超出范围也应考虑披露”；示例含checkpatch --fix、Coccinelle、AI生成变更日志等。 `<!-- ROW_MINE: ksummit.messages.6234 -->`
+- 【Linux社区】Herring比较lore回复链接的3种方式，指出有message-id时b4好用、要mbox检索用lei；回应Bottomley关于回复未订阅列表的工具之问。 `<!-- ROW_MINE: ksummit.messages.6236 -->`
+- 【Linux社区】Carpenter提议评审者用“KTODO:”行记录顺手发现的小任务，学生与janitor可用lei查询lore近半年KTODO找活，兼作新人任务入口。 `<!-- ROW_MINE: ksummit.messages.6237 -->`
+- 【Linux社区】Anvin反驳Overstreet：VLIW与OoO并非正交，OoO动态调度更强，VLIW是演化死路除非按代JIT；呼应Linus别名很少要紧、内核尽量关掉UB之论。 `<!-- ROW_MINE: ksummit.messages.6240 -->`
+- 【Linux社区】Rostedt主张学Debian reportbug做交互式缺陷报告工具、可自动回复已知问题；Leemhuis称回归联络人价值有限，优先做引导用户写好报告的工具。 `<!-- ROW_MINE: ksummit.messages.6244 -->`
+- 【Linux社区】Torvalds反对git notes（不可分发）与无意识Link标记，给出prepare-commit-msg钩子调用“b4 dig”把lore链接作注释插入提交说明的做法。 `<!-- ROW_MINE: ksummit.messages.6247 -->`
+- 【Linux社区】Herring称git-am已能把message-ID写入提交信息、可用pager配置转成lore链接，不必等git新增ATOM_MESSAGEID；Bottomley正起草该git特性补丁。 `<!-- ROW_MINE: ksummit.messages.6248 -->`
+- 【Linux社区】Greg KH称难以为加速器自定义ioctl划线、拒绝替行业定标准，视其如普通字符驱动；反驳HabanaLabs“搭便车”论，指AOSP等并不接收厂商用户态代码。 `<!-- ROW_MINE: ksummit.messages.6249 -->`
+- 【Linux社区】Leemhuis仍倾向改进pending-fixes而非新建linus-next树，指出无-fixes分支或迟入库的子系统破坏其回归追踪；Sasha解释query.db记录commit-id变更。 `<!-- ROW_MINE: ksummit.messages.6260 -->`
+- 【Linux社区】Kozlowski统计linux-next两周新增中133个提交早被子维护者囤积数周，列Intel i915、MediaTek等实例；指出缺bot覆盖、集成测试且部分树未录入MAINTAINERS。 `<!-- ROW_MINE: ksummit.messages.6261 -->`
+- 【Linux社区】Bottomley从版权法分析：AI仅给思路则无需记录，若AI产出的表达进入提交则须在签收链注明；举AI建议快排数周后自行实现即近于复制的灰色地带。 `<!-- ROW_MINE: ksummit.messages.6262 -->`
+- 【Linux社区】Pinchart与Bottomley争论疫情后线下会议：后者称远程参会将成常态但不因恐惧牺牲线下价值，Pinchart提出地理分布分会场并顾虑远程者沦为二等公民。 `<!-- ROW_MINE: ksummit.messages.6265 -->`
+- 【Linux社区】GPIO维护者Walleij欢迎Rust尝试并拉入Bartosz与Viresh，主张优先用于网络攻击面如Rust版ksmbd以吸取WannaCry教训，质疑从设备驱动起步的价值。 `<!-- ROW_MINE: ksummit.messages.6268 -->`
+- 【Linux社区】Corbet公告2024 TAB选举9月20-27举行，Brauner、Cook、Hansen、Kicinski、Williams届满；资格为2023年以来3个带签收tag提交，50个以上自动获票，沿用CIVS。 `<!-- ROW_MINE: ksummit.messages.6272 -->`
+- 【Linux社区】Belloni指出内核GPLv2系统调用例外使API一旦暴露给用户态即无法限制专有软件使用，Bottomley认为修改例外不明智、唯一手段是不导出接口。 `<!-- ROW_MINE: ksummit.messages.6276 -->`
+- 【Linux社区】Rostedt支持Morton设想在网页内嵌get_maintainer.pl前端，并讲述有人发现驱动缺陷却因不会报而放弃的实例，自嘲现行土办法是造随机补丁跑脚本。 `<!-- ROW_MINE: ksummit.messages.6277 -->`
+- 【Linux社区】Corbet公告2022 TAB选举9月12-14投票，Abbott、Brauner、Cook、Mason、Williams届满；总结TAB一年工作含UMN假提交事件后续、企业资助与CoC指引。 `<!-- ROW_MINE: ksummit.messages.6279 -->`
+- 【Linux社区】Greg KH借wdat_wdt加载失败实例示范用get_maintainer.pl定位看门狗维护者、指示发ACPI列表，回应“该CC谁”之问，展示现行求助路径。 `<!-- ROW_MINE: ksummit.messages.6280 -->`
+- 【Linux社区】Romanovsky反对Rust：跨子系统重构将因双语受阻，CONFIG_RUST=y/n双配置令老客户场景测试矩阵翻倍；Ojeda答Rust经抽象层调用C、默认开启仅影响一处。 `<!-- ROW_MINE: ksummit.messages.6281 -->`
+- 【Linux社区】Bottomley称Signed-off-by仅是法律陈述、外界无从验证，造假被识破才降信任；透露会议投稿评审中已用AI检测AI生成内容并有一定成效。 `<!-- ROW_MINE: ksummit.messages.6283 -->`
+- 【Linux社区】Ventura Jack引c2rust缺陷单反驳Gary Guo：关闭严格别名编译的C常无UB，转成unsafe Rust反有UB，因Rust别名约束更严，并引两篇技术博客佐证。 `<!-- ROW_MINE: ksummit.messages.6289 -->`
+- 【Linux社区】Bottomley介绍Plumbers多年积累的话筒礼仪协议：专人提醒对麦发言、备可抛掷软垫话筒盒；疫情酒店要求每次抛掷后消毒，反而阻碍线下办会。 `<!-- ROW_MINE: ksummit.messages.6292 -->`
+- 【Linux社区】Sasha的kallsyms行号表实测增44MiB、vmlinux增8.3%；Geert建议压缩存放，Bottomley提出崩溃时定长缓冲流式解压加线性扫描，避免内存分配与磁盘IO。 `<!-- ROW_MINE: ksummit.messages.6295 -->`
+- 【Linux社区】Hellwig认同Romanovsky对“精心筛选TO/CC”投递恶习的指摘：此类补丁完全不可审，视心情要求重发或直接无视，属维护者峰会流程议题。 `<!-- ROW_MINE: ksummit.messages.6300 -->`
+- 【Linux社区】Kosina问Kernel Summit是否跟随Linux基金会把2021 OSS从都柏林迁往西雅图的决定，折射疫情期间峰会选址的不确定性。 `<!-- ROW_MINE: ksummit.messages.6306 -->`
+- 【Linux社区】Walleij称最大威胁是有组织的远程root漏洞利用，主张把Rust“武器化”投向攻防前线而非仅防驱动崩溃，回应Ojeda“无需重写全内核”的质疑。 `<!-- ROW_MINE: ksummit.messages.6310 -->`
+- 【Linux社区】Rostedt支持Bottomley反对在工具生成内容指南用俚语“slop”，认为俚语会随时间失义（举rawdog、chad），文档措辞须长期稳定。 `<!-- ROW_MINE: ksummit.messages.6311 -->`
+- 【Linux社区】Bottomley观察带Fixes与cc:stable的修复在合并窗外平稳回移，问题主要出自无cc:stable的autosel批量回移；提议合并窗内推迟autosel并索要回归占比数据。 `<!-- ROW_MINE: ksummit.messages.6313 -->`
+- 【Linux社区】Ryabitsev驳gitlab.kernel.org方案：无人负责处理缺陷的问题换平台依旧，且集中单点易受国家级封锁与政治影响，GitLab商业开放核心模式亦有被收购风险。 `<!-- ROW_MINE: ksummit.messages.6315 -->`
+- 【Linux社区】Mauro称kernel-doc受Python GIL所限无法并行、并行化尝试反而更慢，待去GIL后重试；Corbet认为kernel-doc非瓶颈，更盼Sphinx HTML构建器多线程。 `<!-- ROW_MINE: ksummit.messages.6322 -->`
+- 【Linux社区】Rostedt自述用bugzilla.kernel.org管理trace-cmd/kernelshark等工具缺陷，工具类目未录入MAINTAINERS；并引Len Brown在峰会录像中称ACPI/PM依赖bugzilla。 `<!-- ROW_MINE: ksummit.messages.6330 -->`
+- 【Linux社区】Ryabitsev详述bugzilla近死：开发停滞、不兼容新MySQL、只能跑mod_perl，LF IT转Postgres苦撑；Greg KH明确拒绝迁GitLab，称缺bugmaster才是症结。 `<!-- ROW_MINE: ksummit.messages.6338 -->`
+- 【Linux社区】Brown认为-next实际测试者远多于stable rc，虽偶有rebase但多为小麻烦，测试超一天的树才困难；难以让stable测试群体整体转向mainline。 `<!-- ROW_MINE: ksummit.messages.6339 -->`
+- 【Linux社区】McKenney坚持开源项目暂不用AI生成产物直至争议解决，援引DCO第(a)款“有权按开源许可提交”的合规难题，并警告AI问答无隐私、版权风险或更糟。 `<!-- ROW_MINE: ksummit.messages.6343 -->`
+- 【Linux社区】Bottomley 认可内存安全为 Rust 主打优势，但指驱动绕不开 unsafe、编译器与 fuzzer 已能查错；并举跨子系统重构更难、测试矩阵翻倍、懂 Rust 者少致审稿弱化三点劣势。 `<!-- ROW_MINE: ksummit.messages.6503 -->`
+- 【Linux社区】Gary Guo 澄清：C 常被诟病的是基于类型的别名规则，Rust 并无类型别名限制，仅按可变性约束别名，且可在更细粒度上按需关闭。 `<!-- ROW_MINE: ksummit.messages.6504 -->`
+- 【Linux社区】Dan Williams 提交 b4 补丁，将 linktrailer 从 LoreSeries 内联逻辑重构为 LoreMessage 属性，为把 Link: 尾注写入 git notes 做准备。 `<!-- ROW_MINE: ksummit.messages.6506 -->`
+- 【Linux社区】Kosina 认同 Torvalds“改 API 就要修完所有现有用户，否则新旧 API 永久自担”的原则，但指出涉冷门驱动时几乎无法做有效功能测试，只能靠破坏后有人发声。 `<!-- ROW_MINE: ksummit.messages.6507 -->`
+- 【Linux社区】Mauro 核查：media 被 revert 的 29 个补丁无恶意代码；Leon 指 467a37fba93f 对 sp8870 的错误检查反而致损；Mauro 主张连同 1999 年的 av7110 一并移除。 `<!-- ROW_MINE: ksummit.messages.6510 -->`
+- 【Linux社区】Kosina 认为 UMN 事件与 trivial 政策并无直接关联：多数问题补丁属实质性功能改动，本就不符合 Documentation/process/submitting-patches.rst 的 trivial 定义。 `<!-- ROW_MINE: ksummit.messages.6511 -->`
+- 【Linux社区】Rob Herring 认为发件端教育无解，应靠收件端过滤与 lei；建议提交补丁调高 get_maintainer.pl 的 --git-min-percent 默认值并提高 --git-min-signatures。 `<!-- ROW_MINE: ksummit.messages.6515 -->`
+- 【Linux社区】Ribalda 力主 DRM 更适合复杂 ISP：厂商 IOCTL 加类 Mesa 方案；称社区抵制致 99% 以上市场依赖树外驱动，提议开源基座加厂商闭源差异的混合模型。 `<!-- ROW_MINE: ksummit.messages.6519 -->`
+- 【Linux社区】Bart Van Assche 质询：引入 Rust 驱动后，相关子系统维护者是否须为每个被 Rust 使用的头文件同时维护 C 与 Rust 两个版本。 `<!-- ROW_MINE: ksummit.messages.6520 -->`
+- 【Linux社区】Mauro 实测 LLM 直接产出补丁开箱不可用，宜提示生成代码、编译验证循环后再以 diff 出补丁；其 .po 翻译试验靠 from/to 表成功，但技术词条与大小写欠准。 `<!-- ROW_MINE: ksummit.messages.6525 -->`
+- 【Linux社区】Arnd 认可 Wedson 方案：dev_ 变体与 raw_spinlock 支持暂缺但无根本障碍；CONFIG_PM 相关代码拟用 cfg! 包裹移入核心库，交编译器裁剪。 `<!-- ROW_MINE: ksummit.messages.6526 -->`
+- 【Linux社区】Pinchart 论证 AI 预检后旧 v1 不再上列表、v2 起点即新 v1；并指可抱怨贡献者不跑 checkpatch，却不能强迫其使用专有 AI 工具。 `<!-- ROW_MINE: ksummit.messages.6533 -->`
+- 【Linux社区】Ts'o 公布 2021 维护者峰会候选议程：复盘 UMN 事件、加速器驱动用户态门槛、补丁接受标准（folio/ntfs3/ksmbd）、Rust 反馈、Linus 对流程满意度，并列 29 人邀请名单。 `<!-- ROW_MINE: ksummit.messages.6538 -->`
+- 【Linux社区】Overstreet 与 Torvalds 论定：基于来源的别名规则可行，生命周期标注即跨函数来源表达，treeborrow 已并入 Miri；类型别名与 restrict 则被证明不可行。 `<!-- ROW_MINE: ksummit.messages.6539 -->`
+- 【Linux社区】Bart 回应 Corbet 对企业资助终止的担忧：Sashiko 开源且支持多 LLM，但不确定是否支持开放权重模型，请 Roman 指正。 `<!-- ROW_MINE: ksummit.messages.6541 -->`
+- 【Linux社区】Tissoires 主张把 linus-next 定位为仅面向 Linus 的 pre-merge 门禁：测试不过的 PR 自动搁置、由维护者自理；赞同 Kees 设 bot 报告抄送、烘焙时长与测试失败。 `<!-- ROW_MINE: ksummit.messages.6544 -->`
+- 【Linux社区】Greg KH 指 Sashiko 对 mpt3sas 的 TOCTOU 高危告警有误：硬件不得假定恶意；根因在审稿提示词，拟按子系统补 drivers.md 并写入内核 threat model 文档。 `<!-- ROW_MINE: ksummit.messages.6549 -->`
+- 【Linux社区】Brown 纠正 Dreier：devres 在内核应用极广、新驱动应尽量用；但过度热心会致中断处理器存活超期访问已释放资源。 `<!-- ROW_MINE: ksummit.messages.6550 -->`
+- 【Linux社区】Desnoyers 提议新增 Link-Origin/Origin 标签，把命名空间从 URL 内隐语义提升到标签层；Geert 指 patch.msgid.link 与 lore 域名之分正为此设计。 `<!-- ROW_MINE: ksummit.messages.6554 -->`
+- 【Linux社区】Carpenter 观察到 AI 生成的锁文档自信却含糊略有错误，生成快而审稿慢；Lawall 设想“注释质量 0-day”督促内存屏障等必注处。 `<!-- ROW_MINE: ksummit.messages.6555 -->`
+- 【Linux社区】Williams 为 b4 shazam 新增 --add-link-note：按 patch-id 匹配新提交后以 git notes 记录 Link 尾注，遵循 b4.linkmask；注明初稿曾用 Claude Sonnet 4、提交行皆自撰。 `<!-- ROW_MINE: ksummit.messages.6556 -->`
+- 【Linux社区】Rostedt 追问仅向 distros 名单披露应取提交 SHA 是否可行；并载 Greg KH 立场：政府与公司多年索取 security@ 访问均被拒，开放只会提前泄露漏洞。 `<!-- ROW_MINE: ksummit.messages.6559 -->`
+- 【Linux社区】Pinchart 愿入 linux-next 但忧 media 子系统以 cherry-pick 而非合并其 PR；Berg 称双树不同 commit id 会触发告警邮件，Pinchart 认为不应成为常规做法。 `<!-- ROW_MINE: ksummit.messages.6569 -->`
+- 【Linux社区】Rapoport 称最难忍的是收到系列中段散件；主张至少向所有相关者发送 cover letter 以便了解全局，认为邮件流偏好因人而异。 `<!-- ROW_MINE: ksummit.messages.6571 -->`
+- 【Linux社区】Brodsky 拟报 LPC：pkeys ABI 对信号、rseq、io_uring 线程等异步内核交互欠规范且跨架构不一，Gleixner 断言“全坏了”；Bottomley 建议 BoF 或工作坊形式。 `<!-- ROW_MINE: ksummit.messages.6572 -->`
+- 【Linux社区】Pinchart 强烈反对 LLM 缺陷分诊：“错工具，请停”；但引 Levin 演示：LLM 自建 vmlinux 复现 iptfs skb_put 非线性崩溃，定位引入提交 5f2b6a9095743（Hopps）。 `<!-- ROW_MINE: ksummit.messages.6573 -->`
+- 【Linux社区】Pinchart 以媒体业反证 Gunthorpe：曾见 BSP 驱动把用户态物理地址未加过滤直交 DMA 引擎；质问闭源固件对直通命令副作用的文档能否信任。 `<!-- ROW_MINE: ksummit.messages.6575 -->`
+- 【Linux社区】Gushchin 赞同 Kozlowski：内核知识应写给开发者的文档而非 LLM 专用提示；并称正试验 Sashiko 依人工邮件反馈自动生成提示词，初步见效。 `<!-- ROW_MINE: ksummit.messages.6582 -->`
+- 【Linux社区】Berg 反对默认信任硬件：WiFi 固件可被空口攻击，漏报风险不对称；指 Bottomley 的默认信任方案本身即反向 opt-out 一例，后者称 144 个驱动子系统仅 3 家退出。 `<!-- ROW_MINE: ksummit.messages.6585 -->`
+- 【Linux社区】Pinchart 论证 GPU/ISP 无法靠 selftest 验证：其向用户态暴露大量命令缓冲式自定义 API，须有完整自由用户态栈方能有意义地测试驱动。 `<!-- ROW_MINE: ksummit.messages.6586 -->`
+- 【Linux社区】Romanovsky 提议过渡期放宽 Rust 代码“你弄坏你修”规则：外部重构可暂留破损交维护者善后，并引 staging/Lustre 时期先例。 `<!-- ROW_MINE: ksummit.messages.6590 -->`
+- 【Linux社区】Lunn 指维护者重跑测试只为确认开发者跑过、多看退出码；checkpatch/sparse/kdoc/Coccinelle 结果可复现，质询 AI 工具能否同样可复现。 `<!-- ROW_MINE: ksummit.messages.6592 -->`
+- 【Linux社区】Bottomley 批评 LF 联合 OpenSSF 闭门研发 WoT 替代方案违背开源惯例；自述用 DANE/DNSSEC 分发密钥，而 kernel.org 未启用 DNSSEC，忧方案罔顾此类路径。 `<!-- ROW_MINE: ksummit.messages.6593 -->`
+- 【Linux社区】Geert 与 Arnd 厘清 devm_*_get_optional 语义：返回合法指针、NULL 或错误指针且依 DTB 运行期而定；clk API 允许以 NULL 续调操作，struct clk 不透明防解引用。 `<!-- ROW_MINE: ksummit.messages.6599 -->`
+- 【Linux社区】Arnd 就 Gaisler 16GiB sparc32 新 SoC 算账：16GB 仅 mem_map[] 即占约 160MB lowmem；在产 LEON 最高 2GiB，结论 4GB 以上应改用 64 位内核。 `<!-- ROW_MINE: ksummit.messages.6603 -->`
+- 【Linux社区】Ryabitsev 建议把“已入 stable 树”通知改写入 public-inbox 供 lore 检索而不再经 SMTP 投递；Levin 自认该邮件纯属垃圾。 `<!-- ROW_MINE: ksummit.messages.6611 -->`
+- 【Linux社区】用户 Tashkinov 力挺 Bugzilla：引 Rostedt 语“LKML 日入 800 封无人读”；自述两次私邮 Linus 均获响应，指邮件列表作缺陷追踪须反复重述。 `<!-- ROW_MINE: ksummit.messages.6614 -->`
+- 【Linux社区】Mauro 系统推演：safe Rust 须先改造 mm/VFS/devm/PCI/USB 等核心 C 接口；实验结局三分——失败则 C 安全化成果留存、成功则 C 渐退、评价分裂恐致子系统碎片化。 `<!-- ROW_MINE: ksummit.messages.6617 -->`
+- 【Linux社区】Bottomley 认可 DRM/KMS 式互锁：新 KMS 属性须先提交 Weston/Xorg 等用法补丁并获架构认可；机密计算同样依赖 QEMU/edk2 联动，迟来异议按 bug 修复处理。 `<!-- ROW_MINE: ksummit.messages.6618 -->`
+- 【Linux社区】Mauro 发现 LFMS26 议程“First Person credentials”称将从 Linux 内核项目起步，追问改造何时波及自身职责；Greg 称二月会议后公开。 `<!-- ROW_MINE: ksummit.messages.6622 -->`
+- 【Linux社区】Dobriyan 批评 ctags 过时：“make tags”单线程且忽略正则持续膨胀；实测 QT Creator/clangd 需 allmodconfig 配置并把头文件声明为 C 方可用。 `<!-- ROW_MINE: ksummit.messages.6623 -->`
+- 【Linux社区】Ojeda 讲解 unsafe 不改变别名规则：&mut 等同 restrict/noalias，裸指针无别名约束；Rust 向 LLVM 传递大量别名信息，曾逼出须修的 LLVM bug。 `<!-- ROW_MINE: ksummit.messages.6629 -->`
+- 【Linux社区】Torvalds 痛斥 -Wtype-limits 对范围检查宏“绝不可告警”却两端皆误报；Overstreet 反驳：改写范围检查写法比模式匹配更容易。 `<!-- ROW_MINE: ksummit.messages.6633 -->`
+- 【Linux社区】Levin 提案：逾 80% Fixes 补丁终入 stable 致标签被省略滥用，故新增 Improves 标签、Fixes 改视同 Stable，逐步弃用 Cc: stable，保留 stable+noautosel。 `<!-- ROW_MINE: ksummit.messages.6634 -->`
+- 【Linux社区】Torvalds 拒绝 Improves 标签：“我不会用这种奇怪无谓的标签”；一切提交皆改进，真修复才引 Fixes，现实并非黑白，标签改变不了。 `<!-- ROW_MINE: ksummit.messages.6641 -->`
+- 【Linux社区】Stoakes 区分 LLM 与 checkpatch 垃圾：前者能产出全新难驳的系列；mm 等领域维护者资源与补丁流入失衡已临临界，再激增将成大患。 `<!-- ROW_MINE: ksummit.messages.6642 -->`
+- 【Linux社区】Bottomley 审 Lorenzo 增补：删“slop”一词（新近俚语且无可操作信息）；规范应适用于任何工具生成内容，不限于 AI。 `<!-- ROW_MINE: ksummit.messages.6649 -->`
+- 【Linux社区】Anvin 放话：若 Rust 连不同内存分配器都应付不了，“Rust 进 Linux 就是大错，趁早拔除”；上文 Wilcox 已改述提案为“GFP 标志该废”，Kees 力主按类型分配。 `<!-- ROW_MINE: ksummit.messages.6651 -->`
+- 【Linux社区】Mark Brown 盘点 -next 现状：新增 Rust 构建、KASAN 加持的 KUnit、kselftest 子集与每周状态摘要，曾因问题移除一个子树，并征询文档构建、重复提交报告等改进方向。 `<!-- ROW_MINE: ksummit.messages.6797 -->`
+- 【Linux社区】Pinchart 介绍 netdev 与 media 子系统 CI：补丁经 patchwork 接口取走测试，结果以红黄绿标示，失败不自动改状态而由人工裁决；checkpatch 误报多，靠自动邮件要求修正重交。 `<!-- ROW_MINE: ksummit.messages.6799 -->`
+- 【Linux社区】Sasha Levin 认为 AI 补丁与 checkpatch、syzbot 垃圾修复同属症状，根源是提交者不理解内容；Pinchart 主张把工具生成内容的政策一并写清，一石二鸟。 `<!-- ROW_MINE: ksummit.messages.6808 -->`
+- 【Linux社区】Luck 提议禁止 AI 代理直接发补丁、From 行人类负全责；Sasha 回应已有签署要求与提交清单 11 项检查常被无视，问题在规则被无视而非缺失。 `<!-- ROW_MINE: ksummit.messages.6814 -->`
+- 【Linux社区】Ted Ts'o 将 ChromeOS 议题从性能 MC 的 20 分钟档改排内核峰会轨道 45 分钟，理由是议题实为开发流程可扩展性而非硬件扩展性，另设周五 BOF 与不直播的黑客房。 `<!-- ROW_MINE: ksummit.messages.6816 -->`
+- 【Linux社区】Linus 认为 kmalloc_type() 宏若兼做 sizeof 与 __alignof__ 即可支撑 auto __free 简洁写法；特例应拆行或写包装分配函数，反对把复杂分配摊成三行。 `<!-- ROW_MINE: ksummit.messages.6826 -->`
+- 【Linux社区】Pinchart 归纳邮件流程真正价值：单客户端完成全部审查、可自由定制；设想一种人类可读、可被 mutt 与编辑器解析的类邮件结构化格式，作为渐进过渡路径。 `<!-- ROW_MINE: ksummit.messages.6827 -->`
+- 【Linux社区】Geert 列举每日点击 lore 链接的场景：报 bug 找线程、查新增 Rb 标签、追溯同补丁早期提交；反对以 patchwork URL 充当 Link:，称多一步跳转且担心 freedesktop 域名消失。 `<!-- ROW_MINE: ksummit.messages.6828 -->`
+- 【Linux社区】Borislav 澄清建议把新 RAS 接口并入 EDAC 只是复用既有设施而非另立新框架；Cameron 仍担忧 fwctl 内先落地的窄功能日后如何泛化。 `<!-- ROW_MINE: ksummit.messages.6829 -->`
+- 【Linux社区】Brown 补充 checkpatch.pl 在 include/trace 的复杂宏上几乎全军覆没，架构代码与内联汇编同样易触发误报，宏自成一体的语言不宜套用内核惯例。 `<!-- ROW_MINE: ksummit.messages.6832 -->`
+- 【Linux社区】Wilcox 实测 Debian 上 buffer_head 每块 104 字节；逐 BH 置位判定在数十个 BH 后不扩展，提出仿 iomap 用状态位图拆分 BH，但大量代码假设同 folio 内 b_size 一致。 `<!-- ROW_MINE: ksummit.messages.6837 -->`
+- 【Linux社区】Stoakes 给出工具生成内容文档修正案定稿：审查强度与生成比例成正比，作者须理解并能辩护全部提交，否则维护者可不经详审拒收；Rostedt 表示认可。 `<!-- ROW_MINE: ksummit.messages.6840 -->`
+- 【Linux社区】Bottomley 指社区几乎没有可调用的倦怠支持资源；Williams 分享请 Dr. Chance 跟进咨询、以线下协作减压；Shuah 计划 2026 导师系列纳入 Linux 职业导航并索取咨询使用数据。 `<!-- ROW_MINE: ksummit.messages.6843 -->`
+- 【Linux社区】Biederman 提议在头文件用专用宏隐藏旧 API，新调用须显式定义方可编译，grep 宏名或改宏全量重编即可清点残留使用者，为大规模迁移铺路。 `<!-- ROW_MINE: ksummit.messages.6844 -->`
+- 【Linux社区】Overstreet 以 bcachefs 文件系统选项对象为例：C 中各选项无依赖可无同步裸读，转 Rust 须经 UnsafeCell 包装的 getter 表达内部可变性，访问规则显式化必然引入访问器。 `<!-- ROW_MINE: ksummit.messages.6847 -->`
+- 【Linux社区】Kozlowski 强调跨子系统驱动与 DTS 协作中补丁须尽早进 -next，上游维护者 rc6-rc7 即收敛树；Sasha 的 PR 驻留时长统计机器人因未获 Linus 反馈信号而停发。 `<!-- ROW_MINE: ksummit.messages.6848 -->`
+- 【Linux社区】Sasha 披露 Fixes 回传与 AUTOSEL 由来：提交者不惯加 stable 标签，谷歌曾强制非新功能必带 Fixes；Linus 拒绝新增 Improves 标签，Sasha 问是否正式确立凡 Fixes 皆入 stable。 `<!-- ROW_MINE: ksummit.messages.6849 -->`
+- 【Linux社区】Greg KH 说明 probe 与驱动注册自 2.5 时代起即刻意解耦，probe 失败不应阻止模块加载，拒绝回到找不到设备即卸载的旧模型；Shuah 确认按设计去修 probe bug 即可。 `<!-- ROW_MINE: ksummit.messages.6853 -->`
+- 【Linux社区】Arnd 普查剩余 highmem 用户去留；Gunthorpe 提议移除仅 ARM 用的 kmap_high_get()；Geert 提醒 Microchip 会为新 DDR 重推旧 SoC，SAM9x7 的 256MB 上限未必恒定。 `<!-- ROW_MINE: ksummit.messages.6854 -->`
+- 【Linux社区】Bottomley 引 handling-regressions.rst 现行规则：Fixes 标注元凶、跨开发周期修复另加 Cc: stable；主张先统一执行既有文档，勿再发明给更大自由度的新流程。 `<!-- ROW_MINE: ksummit.messages.6855 -->`
+- 【Linux社区】Triplett 主张不强制全部用户态开源，但接口合入前须至少存在一个开源用户态使用者；Hansen 补充无开源用户态便无从有效测试调试，能提供自测是底线。 `<!-- ROW_MINE: ksummit.messages.6856 -->`
+- 【Linux社区】Chris Mason 澄清 BPF 现状：patchwork 触发的 CI 已运行 AI 审查提示词，kernel-patches/bpf 第 9962 号 PR 的评论全部来自 AI 审查产出。 `<!-- ROW_MINE: ksummit.messages.6857 -->`
+- 【Linux社区】Kees Cook 向 Mason 请教 AI 审查提示词实践：反馈循环让模型自更新提示文件、从既有 bug 提炼模式库、按阶段丢弃非关键上下文以省 token，并关注 semcode MCP 工具。 `<!-- ROW_MINE: ksummit.messages.6858 -->`
+- 【Linux社区】Geert 佐证文档工具链困境：Ubuntu 20.04 LTS 仍只带 Sphinx 1.8.5，升级 22.04 才得 4.3.2，老发行版用户难以本地构建内核文档。 `<!-- ROW_MINE: ksummit.messages.6859 -->`
+- 【Linux社区】Leemhuis 提议主线新引入回归须随最新 stable 修复；Berg 强烈反对把稳定版责任压给维护者，称用户不能既不逐版测试又要求每版出修复。 `<!-- ROW_MINE: ksummit.messages.6861 -->`
+- 【Linux社区】Ryabitsev 指导用 mutt 宏调用 b4 mbox 回填整线程，逐一澄清 maildir 自动识别、管道消息提取 message-id、mbox 与 am 命令区别，回应 Leon 的三个使用障碍。 `<!-- ROW_MINE: ksummit.messages.6862 -->`
+- 【Linux社区】Sakkinen 强调 Rust 内核政策必须写进内核树才具约束力，外部网页可被无视，并直言现行政策很糟糕。 `<!-- ROW_MINE: ksummit.messages.6863 -->`
+- 【Linux社区】Pinchart 指出 GitLab 无法对提交说明行内评论，恐拉低提交信息质量；询问 Red Hat 审查数据入口是否仅限网页，并重申以邮件列表为传输层、结构化服务订阅的两全构想。 `<!-- ROW_MINE: ksummit.messages.6870 -->`
+- 【Linux社区】Sasha 发起新议题：embargo 代码直送绕过常规审查测试，硬件漏洞使其常态化；建议要求惯用方自建测试环境、组建可信测试者小组、与 KernelCI 和 OpenSSF 搭小型私有 CI。 `<!-- ROW_MINE: ksummit.messages.6873 -->`
+- 【Linux社区】Kozlowski 反驳 NeilBrown 的反讽：其客户端与 lore、patchwork 均无法跳过大段引文，只能人工翻找；并指 Rb/Ack 摆放位置不当，令后续意见难以辨认。 `<!-- ROW_MINE: ksummit.messages.6874 -->`
+- 【Linux社区】Petersen 指内核已有 include/linux/cleanup.h，赞成清理属性用于部分错误处理，但需在 kfree 之外做更多时声明语法凌乱，反不如传统 goto 收尾可读。 `<!-- ROW_MINE: ksummit.messages.6888 -->`
+- 【Linux社区】Boessenkool 自 2014 年起以未发布 GCC 构建内核，反对给 GCC 加环境变量忽略 -Werror，建议命令行加 -Wno-error 或统一走 CONFIG_WERROR，并指出补丁缩进与早退位置问题。 `<!-- ROW_MINE: ksummit.messages.6890 -->`
+- 【Linux社区】Pinchart 称厂商可编程 ISP 多藏于固定管线固件之后，差异化在用户态算法，软件专利主要利好大厂；与 Leon 一致主张 UAPI 暴露的每项功能都应有开源对应实现。 `<!-- ROW_MINE: ksummit.messages.6891 -->`
+- 【Linux社区】Brown 说明有意双树造成的重复提交提示邮件仍需手工发送，计划 Stephen 休假期间改进脚本，或把此类树标记为预期重复以实现自动化。 `<!-- ROW_MINE: ksummit.messages.6892 -->`
+- 【Linux社区】Coly Li 详述 NAS 本地 AI 相册用例：用户凭人脸匹配可删公开目录中含本人影像的硬链接却无写权限，POSIX ACL 无法表达，现靠 eBPF 补丁硬凑，LSM 只能拒绝不能授权，故提峰会技术议题。 `<!-- ROW_MINE: ksummit.messages.6896 -->`
+- 【Linux社区】Lunn 确认 Song Liu 所指即 patchwork Checks：netdevbpf 补丁到达即自动测试并亮灯，评审者可先过滤不值得看的补丁，并给出示例链接。 `<!-- ROW_MINE: ksummit.messages.6905 -->`
+- 【Linux社区】Overstreet 披露 bcachefs 垫片层已让约九成代码按行数在用户态运行以支持 fsck，设想 vfs 到 FUSE 的通用垫片让 reiserfs 等老文件系统整支转 FUSE，难点或需把 buffer_head 一并搬出。 `<!-- ROW_MINE: ksummit.messages.6910 -->`
+- 【Linux社区】Ts'o 把 bcachefs 争议比作人事问题，宜私下调解不宜公开；反对当初拒收即可避免祸端的说法，认为人际崩坏不可预判，也反对投票或核心团队准入制，预计维护者将更审慎。 `<!-- ROW_MINE: ksummit.messages.6911 -->`
+- 【Linux社区】Sasha 主张对 AI 的门槛不应高于人类：LTS 树与 CVE 多为越界、UAF 等简单内存安全错误，恰是人类写 C 出错的活证据，AI 达到同等或更优水平即可接受。 `<!-- ROW_MINE: ksummit.messages.6912 -->`
+- 【Linux社区】Kosina 回溯 trivial@ 树初衷是替子系统维护者消化琐碎补丁，如今他久未照料，赞成从文档删除该列表；多数补丁只是注释或 printk 的拼写修正。 `<!-- ROW_MINE: ksummit.messages.6917 -->`
+- 【Linux社区】Chamberlain 论证 -next 价值：0-day 默认仅构建测试，-next 汇聚机器人与人工的运行时测试，覆盖罕见架构与配置，并能提前暴露合并冲突以便协调。 `<!-- ROW_MINE: ksummit.messages.6920 -->`
+- 【Linux社区】Greg KH 证实 kernel.org 正与 OpenSSF 合作替换自研 Web of Trust，2 月 LFMS 大会“第一人称维护者验证”场次已录视频，代码仓库链接待上传。 `<!-- ROW_MINE: ksummit.messages.6923 -->`
+- 【Linux社区】Ventura Jack 指出 Rust 尚无完整官方别名规范，stacked borrows 与 tree borrows 皆属实验模型，MIRI 无法全查且自认规则未定，rustc 独大经 LLVM 后端，gccrs 仍在开发。 `<!-- ROW_MINE: ksummit.messages.6930 -->`
+- 【Linux社区】Ojeda 以 PL061 为例说明 Rust 封装 readb 安全在于地址由方法内部计算而非用户拼算，regmap 靠运行时检查而 Rust 编译期即查，并展示 memory_map! 宏自动生成寄存器读写与换算。 `<!-- ROW_MINE: ksummit.messages.6936 -->`
+- 【Linux社区】Airlie反驳Kozlowski：AMD与Intel各有50-100人多团队上游化未上市GPU、速度优先，难要求人人吃透上游周期；Qualcomm经Android或ChromeOS交付、回归压力不同，不可类比。 `<!-- ROW_MINE: ksummit.messages.6653 -->`
+- 【Linux社区】Levin支持Mason的AI审查设想：AUTOSEL已是大规模AI审查流程且获Linus好评；正为b4扩展“b4 ai review”等本地工具；semcode使btrfs调用图查询token由44万降至2.5万。 `<!-- ROW_MINE: ksummit.messages.6655 -->`
+- 【Linux社区】Hellwig认为直通有用但协议未为此设计：SCSI与NVMe须屏蔽大量影响全局状态的命令，他并在NVMe技术工作组持续抵制会破坏既有访问控制的新命令。 `<!-- ROW_MINE: ksummit.messages.6657 -->`
+- 【Linux社区】Rostedt主张RFC补丁可免测试门槛，但修复类补丁若连自动测试都过不了，应由自动化拒绝、无需维护者介入，以此减轻维护负担。 `<!-- ROW_MINE: ksummit.messages.6659 -->`
+- 【Linux社区】Rostedt以K&R教材代码被广泛复用为例谈版权先例：作者鼓励使用、无从追责，但担心对AI过于宽松的人终会“被烧到”。 `<!-- ROW_MINE: ksummit.messages.6663 -->`
+- 【Linux社区】Pinchart指出将git log中开发者邮箱自动订阅bugzilla通知在欧盟或涉违法，若真采纳该方向须先经法务审查，当前亦无此共识。 `<!-- ROW_MINE: ksummit.messages.6667 -->`
+- 【Linux社区】NeilBrown剖析指针返回标注复杂性：归纳四类返回约定，另有低位复用自旋锁与fs_context字段随时序变化的隐含约束，主张默认不改、完全自愿加入的标注体系。 `<!-- ROW_MINE: ksummit.messages.6672 -->`
+- 【Linux社区】Bottomley称bcachefs问题早有预警，反对“凭一时兴起”的激烈处置，主张为特性引入与维护者除名建立正式程序；Rostedt自述曾指导Bristot与Hiramatsu等成为维护者。 `<!-- ROW_MINE: ksummit.messages.6675 -->`
+- 【Linux社区】Brown赞同三步方案：暂维持patch.msgid.link自动Link:标签、推动git把来源信息写入提交头、留待峰会再议；并预期Debian stable到2027年才用上新版git。 `<!-- ROW_MINE: ksummit.messages.6682 -->`
+- 【Linux社区】Bottomley观察所关注子系统的bug修复多在错误分支（kfree遗漏或过早释放），建议借GCC _cleanup_注解（systemd经验）简化错误处理，回应Rust安全优势论。 `<!-- ROW_MINE: ksummit.messages.6683 -->`
+- 【Linux社区】Rostedt支持Stoakes的修订案：工具生成内容（不限AI，含checkpatch与coccinelle）一律按生成比例从严审查；自述长期如此，文档只是记录现状。 `<!-- ROW_MINE: ksummit.messages.6686 -->`
+- 【Linux社区】Arnaldo表态信服AI审查：团队实测Mason审查提示反馈良好；BPF CI证明AI能发现维护者漏掉的bug、有时解释更清楚；下一步把审查以纯文本邮件融入开发流程。 `<!-- ROW_MINE: ksummit.messages.6690 -->`
+- 【Linux社区】Geert回忆gcc 4.2的未初始化警告每年能找出真实bug，忧心如今无人再开启；并提议为返回错误码或错误指针的函数加注解，辅助静态检查。 `<!-- ROW_MINE: ksummit.messages.6692 -->`
+- 【Linux社区】Mauro引美国版权局报告支持纯AI代码无版权、近乎公有领域，但提醒美国判例法可回溯适用且须顾及他国法域，并举巴西版权法中类似合理使用的解释。 `<!-- ROW_MINE: ksummit.messages.6701 -->`
+- 【Linux社区】Ralf Jung澄清Rust内核panic不做unwind但通常仍打印backtrace，用户态运行良好、内核状态他不确定；回应Bottomley对缺诊断信息的担忧。 `<!-- ROW_MINE: ksummit.messages.6704 -->`
+- 【Linux社区】Brown评估linux-next做功能测试：多数时候可用但会偶发灾难性崩溃，小众平台可能长期缺覆盖，不愿进-next的子树亦是障碍；广跨多树的场景反而省力。 `<!-- ROW_MINE: ksummit.messages.6705 -->`
+- 【Linux社区】Williams说明CXL吸取NVDIMM教训，移除全局状态机（如scrub）的直通能力，scrub改走EDAC而非fwctl；“立即配置变更”类命令至少需CAP_SYS_RAWIO、可能加taint。 `<!-- ROW_MINE: ksummit.messages.6708 -->`
+- 【Linux社区】Brown指出GNOME等终端会把含@字符串识别为邮箱、点击即唤起GUI邮件客户端，而按建议需频繁剪切粘贴message-ID，误触概率远高于一般trailer。 `<!-- ROW_MINE: ksummit.messages.6709 -->`
+- 【Linux社区】Overstreet称syzbot随机投递最伤效率，主张以覆盖率分析部分替代模糊测试、按文件集中补测试；长期出路是Rust重写；自述已从见bug就修转向让代码自己暴露问题。 `<!-- ROW_MINE: ksummit.messages.6714 -->`
+- 【Linux社区】Bottomley通报欧洲疫苗接种加速、德国年轻人已可接种，预计9月底好转，冀欧美互开旅行；西雅图场地酒店口罩与社交距离规定使微会议难协作。 `<!-- ROW_MINE: ksummit.messages.6718 -->`
+- 【Linux社区】Tashkinov力挺Bugzilla：公开可检索、汇聚注意力、不泄露邮箱；反驳Linus邮件通用语论，指gmx常被拦截、送达不可知、缺References易断链。 `<!-- ROW_MINE: ksummit.messages.6721 -->`
+- 【Linux社区】Bulwahn提议以lore归档核查维护者近一年有无发言来替代探测邮件，再甄别收发地址不同、无补丁可收、地址已死等情形；自述维护模式自检已两三年。 `<!-- ROW_MINE: ksummit.messages.6723 -->`
+- 【Linux社区】Leemhuis公布维护者峰会与LPC两场回归跟踪演讲的幻灯链接、regzbot入门与参考文档，以及handling-regressions.rst渲染版，供会后跟进。 `<!-- ROW_MINE: ksummit.messages.6730 -->`
+- 【Linux社区】Howlett认为LLM普及后Assisted-by标签信息量趋零，MM代码已被sashiko全量AI巡检、再加标注只是噪音；反问是否预期某AI日后被判侵权而需审计历史提交。 `<!-- ROW_MINE: ksummit.messages.6734 -->`
+- 【Linux社区】Ryabitsev澄清Artem的真实主张是为MAINTAINERS中人自动建bugzilla账号、便于人工分诊时CC，而非设为默认受理人，也不会显著推高邮件量。 `<!-- ROW_MINE: ksummit.messages.6736 -->`
+- 【Linux社区】Airlie详述开源用户态要求：加速器uAPI多线程多用户，文档与kselftest远不够；社区靠说“不”与跨厂商教育建立；厂商多受大厂驱动而最低限度参与；正起草通用文档组建维护者联盟。 `<!-- ROW_MINE: ksummit.messages.6745 -->`
+- 【Linux社区】Gallager支持IGNORE_WERROR环境变量设想：复杂构建系统中用户无从知晓-Werror从何插入，“改你的代码”对非开发者无意义，环境变量更可行。 `<!-- ROW_MINE: ksummit.messages.6750 -->`
+- 【Linux社区】Rostedt澄清：他用linux-trace-kernel@喂patchwork但希望讨论留在LKML，说明MAINTAINERS中L:条目需区分收补丁与讨论两种用途。 `<!-- ROW_MINE: ksummit.messages.6753 -->`
+- 【Linux社区】Vetter认为GPU迟早需要fwctl、固件调试追踪已是痛点；呼吁明确各能力应归edac、netdev/gpu等还是专用子系统；强调fwctl不得排挤功能接口，将去fwctl文档给出ack。 `<!-- ROW_MINE: ksummit.messages.6755 -->`
+- 【Linux社区】Shuah给出混合会议主持人清单：盯聊天与Q&A、举手管理、强制轮流发言、请讲者复述现场提问、探索实时转写并配纪要；拟先在一两个工作坊试点。 `<!-- ROW_MINE: ksummit.messages.6756 -->`
+- 【Linux社区】Mauro自述实验：AI产出如初学者代码、骨架需大量人工打磨，提示词与人工修改可主张版权；大训练集使权重重复多见模式，与检索写码无异。 `<!-- ROW_MINE: ksummit.messages.6765 -->`
+- 【Linux社区】Stoakes坚持文档须保留AI SLOP警示语气：确有“好心办坏事”且会认真读文档的人群，此前媒体失实报道也证明措辞不清有实际代价，反对稀释。 `<!-- ROW_MINE: ksummit.messages.6767 -->`
+- 【Linux社区】Rapoport指出症结在缺分诊人力而非工具：bugzilla邮箱库不会比MAINTAINERS更利于选CC，强迫开发者接收报告也不会让他们更愿意处理。 `<!-- ROW_MINE: ksummit.messages.6773 -->`
+- 【Linux社区】Mauro提交658行send-patches.pl：2015年起自用，调get_maintainer.pl自动生成CC，支持--avoid-resend跳过未变补丁、Tk编辑、清理Change-Id。 `<!-- ROW_MINE: ksummit.messages.6778 -->`
+- 【Linux社区】McKenney反驳Levin“AI审查没有法律问题”的说法，提醒去数一数当前在审的AI训练数据相关诉讼，暗示法律风险远未落定。 `<!-- ROW_MINE: ksummit.messages.6779 -->`
+- 【Linux社区】Mauro称核查过UMN事件投媒体子系统的补丁多可合并，主张议题应超trivial范畴：维护者内部信任评分互不共享，提议get_developer_trustee_status脚本输出贡献史与黑名单指标。 `<!-- ROW_MINE: ksummit.messages.6780 -->`
+- 【Linux社区】Ripard主张承认drm_bridge已覆盖面板场景、让面板成为bridge进而移除面板API；指出面板厂商点火即忘、无动力上游化；提议通用bridge驱动加eBPF钩子安置面板quirk。 `<!-- ROW_MINE: ksummit.messages.6782 -->`
+- 【Linux社区】Torvalds痛斥PGP密钥自动过期：无人按时续期、旧签名反显不可信（git log --show-signature查15年前即见expired），失效应撤销而非坐等过期，并称PGP是UX灾难。 `<!-- ROW_MINE: ksummit.messages.6784 -->`
+- 【Linux社区】Carpenter认为lore线程显式链接对静态检查者有用——可回原帖并CC正确的人；若存在多个Link:标签，取最后一个指向线程即可接受。 `<!-- ROW_MINE: ksummit.messages.6787 -->`
+- 【Linux社区】Hellwig支持全局文件系统白名单/黑名单但反对放util-linux维护：应在内核struct file_system_type加标志并经/proc/filesystems暴露，新挂载API配自动挂载标志。 `<!-- ROW_MINE: ksummit.messages.6791 -->`
+- 【Linux社区】Limonciello建议由LF建GitLab实例（如gitlab.kernel.org）按子系统设项目承接bugzilla议题，并为愿试PR/MR流程的子系统留门；Jani嫌GitLab免费版弱于Bugzilla、倾向Forgejo。 `<!-- ROW_MINE: ksummit.messages.6792 -->`
+- 【Linux社区】Leon Romanovsky 称大型子系统上层用户态栈庞杂，维护者不可能通晓全部用例，单一维护者否决即凌驾社区，信任须双向。 `<!-- ROW_MINE: ksummit.messages.7113 -->`
+- 【Linux社区】Miguel Ojeda 详述 C 标准 Annex J 列 200 余种未定义行为、靠人眼排查必败，Rust 安全子集可静态排除，Ref 类型复用 refcount_t 做饱和计数。 `<!-- ROW_MINE: ksummit.messages.7115 -->`
+- 【Linux社区】Linus 明言拒绝与 linux-distros 合作，因其强制披露政策会公开漏洞利用代码；主张修复与提交说明应公开，而 PoC 不应强制公开。 `<!-- ROW_MINE: ksummit.messages.7118 -->`
+- 【Linux社区】Jonathan Corbet 给出实测：关闭 automarkup 扩展可省约 25% 文档构建时间且不减少警告，可考虑做成构建选项。 `<!-- ROW_MINE: ksummit.messages.7120 -->`
+- 【Linux社区】Steven Rostedt 主张该指南只讲工具生成内容的透明性，不应被改成专治 AI slop 的文件，后者应另立文档；并回顾 TAB 起草缘起。 `<!-- ROW_MINE: ksummit.messages.7121 -->`
+- 【Linux社区】Mark Brown 列出需要补丁提交链接的两种场景：考叔回溯补丁所属系列、CI 发现问题时找通报对象，支持 Message-Id 可链接化。 `<!-- ROW_MINE: ksummit.messages.7125 -->`
+- 【Linux社区】Mauro Carvalho Chehab 计划年内文档构建全面 Python 化、次年以 sphinx-build-wrapper 精简 conf.py，并已写出探测失效交叉引用的 Sphinx 扩展。 `<!-- ROW_MINE: ksummit.messages.7127 -->`
+- 【Linux社区】Steven Rostedt 澄清 LLM 补丁失误在漏掉 __read_mostly 注解，强调 AI 错误比人工更隐蔽难查，错删对齐类必需标签后果难料。 `<!-- ROW_MINE: ksummit.messages.7139 -->`
+- 【Linux社区】Matthew Wilcox 连问旧文件系统改造：谁负责把依赖 bufferheads 的旧文件系统迁到 iomap、负责测试、并研判一年后的 syzbot 报告。 `<!-- ROW_MINE: ksummit.messages.7142 -->`
+- 【Linux社区】Paul McKenney 认可美国版权局立场：纯 AI 生成代码无人类作者不受版权保护故满足 DCO，但警告判例法可溯及既往且非仅美国法域。 `<!-- ROW_MINE: ksummit.messages.7143 -->`
+- 【Linux社区】Mark Brown 指出 GNOME 等终端会把含 @ 的 message-id 误识为邮箱并唤起邮件客户端，裸 message-id 方案与终端习惯冲突。 `<!-- ROW_MINE: ksummit.messages.7156 -->`
+- 【Linux社区】Dave Hansen 发布 v6 补丁新增 generated-content.rst：披露工具与提示词、按生成比例接受加严审查，获 Shuah、Kees、Greg 等 12 位维护者签署 Reviewed-by。 `<!-- ROW_MINE: ksummit.messages.7157 -->`
+- 【Linux社区】Artem Tashkinov 力主 bugzilla 按开发者默认订阅、一次退订，估算现状下 95% 用户放弃报告、仅 0.05% 获处理，愤而言宁可弃用。 `<!-- ROW_MINE: ksummit.messages.7161 -->`
+- 【Linux社区】Steven Rostedt 界定峰会为维护者化解分歧之处、Linus 是先倾听后裁决的法官，邀请重表达能力而非层级；并确认 mm 由 David Hildenbrand 过渡接任。 `<!-- ROW_MINE: ksummit.messages.7162 -->`
+- 【Linux社区】James Bottomley 反对“该统一返回 ERR_PTR”论：inode 与 dentry 代码中 NULL 表示“未找到”是正当语义，错误返回另有含义。 `<!-- ROW_MINE: ksummit.messages.7163 -->`
+- 【Linux社区】Linus Walleij 主张按“数值分析加速器”而非按用例思考 NPU 等硬件，以 BLAS GEMM 及整数、bfloat16 变体作硬件无关低层 API。 `<!-- ROW_MINE: ksummit.messages.7165 -->`
+- 【Linux社区】Thorsten Leemhuis 指出 6.8.12 于 2024-05-30 发布且夹带 384 个 6.10 合并窗口补丁、189 个四月才提交，提议仅 stable tag 快速回迁、Fixes 补丁过三个 rc。 `<!-- ROW_MINE: ksummit.messages.7166 -->`
+- 【Linux社区】H. Peter Anvin 指出 C 与 C++ 聚合返回 ABI 相同（隐藏指针），GCC C 后端差是 35 年无人优化的死循环，两字长内聚合本可走寄存器。 `<!-- ROW_MINE: ksummit.messages.7182 -->`
+- 【Linux社区】Laurent Pinchart 主张仿 DRM/KMS：用户态实现只需上游预审认可而非先合入 Mesa，可避免发行版打包死锁，并倡建分场景准则。 `<!-- ROW_MINE: ksummit.messages.7183 -->`
+- 【Linux社区】Jani Nikula 认为缺陷追踪器能量化维护者带宽、便于向管理层要人，代价是通知邮件更容易被理直气壮地忽略。 `<!-- ROW_MINE: ksummit.messages.7186 -->`
+- 【Linux社区】Mimi Zohar 引 Eric Biggers 意见提出真实场景：有补丁无需上游化却须进 stable，质疑“上游优先”新手 bot 规则存在流程缺口。 `<!-- ROW_MINE: ksummit.messages.7191 -->`
+- 【Linux社区】Dave Chinner 重估 lklfuse：以 LKL 复用内核代码即可满足 mkfs 与 fsck、fstests、避开 syzbot 三项门槛，反思 2015 年拒绝非 MMU 支持旧事。 `<!-- ROW_MINE: ksummit.messages.7194 -->`
+- 【Linux社区】Ventura Jack 引 Rust 官方文档反驳 Gary Guo：UnsafeCell 只解除共享引用不可变保证，&mut 别名仍是 UB，Opaque 依赖大量 nightly 特性。 `<!-- ROW_MINE: ksummit.messages.7204 -->`
+- 【Linux社区】Dave Airlie 想为跨树接口清理类补丁设免审 Ack 机制，Mark Brown 回忆 DRM 与 ASoC 围绕 HDMI 音频协作时缺 ack 致补丁掉坑。 `<!-- ROW_MINE: ksummit.messages.7208 -->`
+- 【Linux社区】Dan Carpenter 称内核有 2930 个 Makefile 散布 -Werror，部分还需环境变量才可关闭，编旧内核时 -Wno-error 亦无效，自认无完整解法。 `<!-- ROW_MINE: ksummit.messages.7212 -->`
+- 【Linux社区】Jason Gunthorpe 认同 fwctl 以信任加失信后果约束厂商，指出开放命令集占比难以量化优劣，并澄清 fwctl 不碰相机图像路径。 `<!-- ROW_MINE: ksummit.messages.7217 -->`
+- 【Linux社区】Thorsten Leemhuis 提议强化回归文档：已进正式版本的修复力争下个周日合入、周一二得知的当周解决，措辞从“期望”升为“全力”。 `<!-- ROW_MINE: ksummit.messages.7219 -->`
+- 【Linux社区】Dave Hansen 披露其 linux.intel.com 邮箱因 CIVS opt-in 问题未收到 TAB 选票，要求向应获票者直发操作指引，暴露 2021 年选举送达故障。 `<!-- ROW_MINE: ksummit.messages.7223 -->`
+- 【Linux社区】Mark Brown 回应 AI 工具可复现性质疑：checkpatch、DT 校验等传统工具同样存在版本与 schema 漂移，结果并非人人一致。 `<!-- ROW_MINE: ksummit.messages.7224 -->`
+- 【Linux社区】Steven Rostedt 质疑被无视的 bugzilla 报告多属一次性问题，认为有变通办法（如外接摄像头）即使妨碍新机使用也可暂缓处理。 `<!-- ROW_MINE: ksummit.messages.7227 -->`
+- 【Linux社区】Matthew Wilcox 设想 256kB 大 folio 只配四个按 extent 划分的 buffer_heads，将扫描对象从数十降到四，称不经 iomap 也有出路。 `<!-- ROW_MINE: ksummit.messages.7231 -->`
+- 【Linux社区】Steven Rostedt 提议改用 MAINTAINERS 文件邀请开发者注册 bugzilla，回避从 git 日志收集邮箱的法律顾虑。 `<!-- ROW_MINE: ksummit.messages.7240 -->`
+- 【Linux社区】Miguel Ojeda 解释 Ref 与 Arc 只提供线程安全计数不加锁，跨线程可变访问须 Arc 加 Mutex，误用会在编译期报错，回应 Greg 的 kref 疑问。 `<!-- ROW_MINE: ksummit.messages.7245 -->`
+- 【Linux社区】Christian Brauner 反对把“必须先有开源用户态”定为通用规则，称核心新 API 凭知名开源项目意向声明即可，硬件驱动才需更严门槛。 `<!-- ROW_MINE: ksummit.messages.7247 -->`
+- 【Linux社区】James Bottomley 介绍 Plumbers 掷接式麦克风箱惯例与 2021 年 BBB 混合方案：室内可用手机入会但需静音防啸叫，消毒要求一度阻碍线下办会。 `<!-- ROW_MINE: ksummit.messages.7248 -->`
+- 【Linux社区】Mario Limonciello 建议设 gitlab.kernel.org 按子系统承接缺陷追踪并开放 forge 工作流；PCI 与无线维护者陈情依赖 bugzilla，其升级 6.0 路径已断。 `<!-- ROW_MINE: ksummit.messages.7252 -->`
+- 【Linux社区】Jiri Kosina 展示 hid.git 为每个驱动设 topic 分支的多年实践，认可 rtla 经 Daniel Bristot 树中转、Masami 专司 probe 的分权路径。 `<!-- ROW_MINE: ksummit.messages.7253 -->`
+- 【Linux社区】Randy Dunlap 称 checkpatch 报长 URL 行问题变相逼人改用 Link: 标签，并主张此类报错可安全忽略。 `<!-- ROW_MINE: ksummit.messages.7255 -->`
+- 【Linux社区】Linus 断言对 x<0 的无符号警告主动制造错误、诱人写烂代码，列 signedness 随架构、typedef、位域、枚举而异，拒绝启用并称源码为人而写。 `<!-- ROW_MINE: ksummit.messages.7262 -->`
+- 【Linux社区】LSM 维护者 Paul Moore 自称不熟悉 RichACL，但确认 LSM 框架即为实现传统访问控制之外机制的途径，为该峰会议题定调。 `<!-- ROW_MINE: ksummit.messages.7266 -->`
+- 【Linux社区】Jonathan Corbet 解释 intersphinx 需两遍构建生成 objects.inv，缺失时显式引用大量告警，倾向显式脚本而非构建时联网取清单。 `<!-- ROW_MINE: ksummit.messages.7271 -->`
+- 【Linux社区】Laurent Pinchart 引 IPU3 文档不足教训，称 libcamera 软 ISP 与 IPU6 ISYS 已进主线，要求 Ricardo 拿出可编程 ISP 实例，批其 DRM 论证系借口。 `<!-- ROW_MINE: ksummit.messages.7272 -->`
+- 【Linux社区】Jiri Kosina 引 Mauro 实测：AI 生成单元测试五到六成初跑失败，判定提交者与维护者比例将失衡，坚持须在补丁元数据中加注。 `<!-- ROW_MINE: ksummit.messages.7273 -->`
+- 【Linux社区】Ted Tso 称挂载恶意损坏文件系统镜像不属威胁模型，syzbot 噪音花多年才压下，建议让 Sashiko 显式读 threat-model 并使其优先于训练数据。 `<!-- ROW_MINE: ksummit.messages.7278 -->`
+- 【Linux社区】David Laight 自述用 VHDL 在 FPGA 实现 62.5MHz 32 位 CPU，ALU 依赖链慢于取指、可无停顿跳转，并质疑 VLIW 按代 JIT 的可行性。 `<!-- ROW_MINE: ksummit.messages.7281 -->`
+- 【Linux社区】Dave Chinner 主张下线文件系统不等于断数据访问，VM 挂旧 ISO 即可取数；驳“只读保安全”论：内核仍在环 0 解析不可信数据。 `<!-- ROW_MINE: ksummit.messages.7285 -->`
+- 【Linux社区】Steven Rostedt 吐露改 Link 方案屈从一人偏好、无人叫好，屡遭“永不想当下层维护者”回绝，与 Masami 分工后仍不堪重负。 `<!-- ROW_MINE: ksummit.messages.7290 -->`
+- 【Linux社区】Roman Gushchin 披露 Sashiko 提示词源头混乱、Chris 仓库与主仓库并存，正试验以人工反馈自动生成提示词，更新须跑全量基准防回归。 `<!-- ROW_MINE: ksummit.messages.7291 -->`
+- 【Linux社区】David Laight 断言多数缺陷追踪系统沦为“只写”，管理层统计催生刷单与临时关闭博弈，bugzilla 通知邮件不开链接即无用。 `<!-- ROW_MINE: ksummit.messages.7292 -->`
+- 【Linux社区】Ts'o推测Rust别名模型未定义是对GCC后端等替代编译器敌意之根源，并指Rust未覆盖全部内核平台，关键抽象无法用Rust实现，除非用GCC后端Rust或剔除m68k、PA-RISC等平台。 `<!-- ROW_MINE: ksummit.messages.6943 -->`
+- 【Linux社区】Levin展示内核栈回溯内嵌源文件与行号的实测样例“dump_stack_lvl (lib/dump_stack.c:94)”，并婉拒Dobriyan去0x前缀、改十进制、去括号等格式建议。 `<!-- ROW_MINE: ksummit.messages.6949 -->`
+- 【Linux社区】Torvalds驳Hellwig：遭反对的PR未触碰DMA层，明确“维护者不控制谁可使用其代码”；拒绝Rust者对Rust侧无发言权，“保护墙”双向，不得否决Rust调用其接口。 `<!-- ROW_MINE: ksummit.messages.6953 -->`
+- 【Linux社区】Mauro提议在CONFIG_WERROR常规构建中运行文档交叉引用、ABI与kernel-doc三项检查，实测约8秒、可免linux-next百余条htmldocs警告；Howlett建议交由构建机器人执行。 `<!-- ROW_MINE: ksummit.messages.6955 -->`
+- 【Linux社区】Herman补充x86 1GB机型低内存约896MB、高端约120MB，晚期32位多用VMSPLIT_3G_OPT分区，提及已夭折的4G/4G补丁与TLB刷新代价，自荐在768MB内存Duron上测试。 `<!-- ROW_MINE: ksummit.messages.6968 -->`
+- 【Linux社区】Levin指逾八成带Fixes的提交终入stable；Torvalds反对新增提交标签，称历来新增标签提案皆劣，加标签徒增混淆，自己永不会用现有标签之外者。 `<!-- ROW_MINE: ksummit.messages.6978 -->`
+- 【Linux社区】Mason称其AI审查提示框架与具体AI无关、仅测过Claude，需用清单约束其专注；Van Assche因雇主要求用Gemini，盼兼容多家AI，Mason欢迎补丁适配。 `<!-- ROW_MINE: ksummit.messages.6979 -->`
+- 【Linux社区】Hocko分享cc-cmd脚本配合git send-email --compose，实现仅封面信抄送全体的工作流，回应Greg关于format-patch不支持此功能的疑问。 `<!-- ROW_MINE: ksummit.messages.6986 -->`
+- 【Linux社区】Bottomley主张纯AI生成代码不可版权化、属公有领域，可依DCO提交且能与GPL组合，许可仅约束增改部分；Wysocki质疑其无法以GPLv2提交。 `<!-- ROW_MINE: ksummit.messages.6987 -->`
+- 【Linux社区】Pinchart反驳“社区与商业二分不可避免”论，称内核已证明企业与社区可协作，引Corbet言领先者须自主创新，主张有人牵头重塑bug支持模式，并赞发行版开发者分诊质量。 `<!-- ROW_MINE: ksummit.messages.7001 -->`
+- 【Linux社区】Pinchart主张bug处理须引入新人而非压榨现有维护者，自陈困于补丁审查无力亲为，正是过载阻碍改进的实例；Rostedt提及志愿者Slade任分诊联络。 `<!-- ROW_MINE: ksummit.messages.7002 -->`
+- 【Linux社区】Kosina认同减压须靠共同维护而非加压，称已另提议“深化合并树、推广共同维护”议题，视之为维护者压力问题的唯一可行解。 `<!-- ROW_MINE: ksummit.messages.7004 -->`
+- 【Linux社区】Overstreet反驳Ts'o对Wedson VFS幻灯片的批评，称问题系Ts'o对不熟悉的Rust语法“脱轨”搅局，演讲本为展示Rust应对VFS核心接口，要求其自行预习并守礼仪。 `<!-- ROW_MINE: ksummit.messages.7010 -->`
+- 【Linux社区】Brown指社区发行版打包验证不构成有效约束，Android用户态在用户内核边界严重碎片化，非主流SoC厂商的代码极难进入AOSP。 `<!-- ROW_MINE: ksummit.messages.7013 -->`
+- 【Linux社区】Berg反对移除Link尾注，称其用于追踪提交的上游外内部版本（含移植性改动），b4 dig无法覆盖上游前历史，抱怨仅因Linus一人嫌噪便剥夺众人便利。 `<!-- ROW_MINE: ksummit.messages.7016 -->`
+- 【Linux社区】Ojeda阐明Rust价值在静态保证而非运行时检测，编译器无法穷尽内存错误；承认评审能力欠缺的顾虑，初期将与愿意提供Rust API的子系统合作，无人可评审则不写该子系统驱动。 `<!-- ROW_MINE: ksummit.messages.7019 -->`
+- 【Linux社区】Pinchart主张自动测试规则须灵活，新手未必知用RFC标记征求设计讨论；自动报告措辞应帮助而非挫伤提交者，胜过凌晨三点重复第五十次的疲劳评审。 `<!-- ROW_MINE: ksummit.messages.7020 -->`
+- 【Linux社区】Pinchart认为长期目标应让提交者先用工具自查以减轻维护者负担，举Rob Herring因大量补丁不过检而建设备树绑定机器人，追问如何促使提交者自觉执行。 `<!-- ROW_MINE: ksummit.messages.7023 -->`
+- 【Linux社区】Ryabitsev向Leon推荐即将推出的lei工具，可识别相关线程、投递本地或远程收件箱并随新信持续更新，契合手机读信、电脑回信的流程。 `<!-- ROW_MINE: ksummit.messages.7024 -->`
+- 【Linux社区】Cook质疑linus-next仅收临近合并的PR、窗口短且与linux-next重复，提议改为禁止未经-next的-rc1 PR，并设机器人报告抄送情况、-next滞留直方图与0day失败。 `<!-- ROW_MINE: ksummit.messages.7026 -->`
+- 【Linux社区】Iwai说明其仅标cc:stable者多为新设备小怪癖，可安全应用即取否则跳过；Greg对无Fixes的cc:stable作“尽力回移至5.15及更早”处理，Carpenter已加checkpatch警告。 `<!-- ROW_MINE: ksummit.messages.7035 -->`
+- 【Linux社区】Zickus介绍Red Hat邮件桥机器人将可信列表评论转贴forge、部分forge以reply-to内嵌个人令牌，RHEL偏重回移故工具聚焦“哪些补丁需我关注”，另有GitLab API加mutt原型。 `<!-- ROW_MINE: ksummit.messages.7036 -->`
+- 【Linux社区】Ryabitsev澄清Bugzilla仅支持MySQL 5.7或旧版MariaDB且无官方修复，因无人维护bugzilla项目，佐证其半废弃状态。 `<!-- ROW_MINE: ksummit.messages.7038 -->`
+- 【Linux社区】Ts'o解释mkutf8data所需的Unicode字符库过大未入库、unicode.org年更一两次多为emoji与古文字，内核仅关注大小写折叠表，strict模式将被迫追随每次更新。 `<!-- ROW_MINE: ksummit.messages.7042 -->`
+- 【Linux社区】Pinchart提出开放用户态、发行版打包、开放文档等准则供子系统自选，指DRM模型本要求开放用户态、Habanalabs走misc疑为规避，并称厂商或视Greg审查较松而趋之。 `<!-- ROW_MINE: ksummit.messages.7047 -->`
+- 【Linux社区】Bottomley驳sashiko机器人“恶意设备可篡改DMA内存”的高危评审：硬件不可预设恶意；拟在masoncl/review-prompts增设驱动总则再按子系统覆盖，Greg要求按USB、virtio分别定制。 `<!-- ROW_MINE: ksummit.messages.7052 -->`
+- 【Linux社区】Ojeda以代码演示Rust处理大小端：cfg(target_endian)条件编译、cfg!宏与i32::from_be等原语函数，回应Lunn对大端硬件寄存器访问的疑问。 `<!-- ROW_MINE: ksummit.messages.7053 -->`
+- 【Linux社区】Ryabitsev澄清commit尾注中patch.msgid.link与lore链接二选一即可，lore的/r/格式仍有效但久已非必需，且仅适用于被lore索引的列表。 `<!-- ROW_MINE: ksummit.messages.7058 -->`
+- 【Linux社区】NeilBrown指Linus“waah”式嘲讽因其身份而似授许可，技术论证亦不通；主张缓冲缓存可按需复制进难改造的文件系统，胜过“别删、无视之”式管理。 `<!-- ROW_MINE: ksummit.messages.7064 -->`
+- 【Linux社区】Tarreau自述十年前弃用procmail过滤，逐日速览LKML发现新话题，认为大量订阅者为此而来，反对将THE REST迁离，建议高频清队列让Gmail积压自愈。 `<!-- ROW_MINE: ksummit.messages.7068 -->`
+- 【Linux社区】Corbet公布2022年TAB选举：960名合格选民267人投票，Cook、Brauner、Kicinski、Williams、Hansen当选；Mason卸任多年TAB主持，Laura Abbott促成线上选举转型。 `<!-- ROW_MINE: ksummit.messages.7076 -->`
+- 【Linux社区】Mauro称kernel-doc受Python GIL所限无法并行、并行化反而更慢，待去GIL的Python普及后重试；Brown指发行版跟进滞后，若检查仅多数十秒且可自动比对则可行。 `<!-- ROW_MINE: ksummit.messages.7079 -->`
+- 【Linux社区】Levin统计v6.12至v6.18单提交作者1902人占全体三分之一，仅177人获Reviewed-by，质疑“实质评审能力”门槛将挡掉1700余人；Rostedt以信噪比论信任，新人宜以Reported-by衡量。 `<!-- ROW_MINE: ksummit.messages.7081 -->`
+- 【Linux社区】Ryabitsev预告lore“搜索式邮箱”即将上线，查询经git自管以便留史与回滚，先做POP3供Gmail原生导入收件箱，其本人已按此收git列表一个月。 `<!-- ROW_MINE: ksummit.messages.7082 -->`
+- 【Linux社区】Bergmann审阅Wedson的Rust版PL061驱动，追问pr_debug!是否保留设备实例信息、IrqDisableSpinLock是否碍PREEMPT_RT、CamelCase是否语言强制及power::Operations如何替代CONFIG_PM。 `<!-- ROW_MINE: ksummit.messages.7083 -->`
+- 【Linux社区】Pinchart以经验论证“顺带修旧账”可行但须非强制、量力而定，如15补丁系列的v2捎带一两个小修，并盼AI勿获取开发者个人生活信息；Linus则设想可信团队运营的AI trivial树。 `<!-- ROW_MINE: ksummit.messages.7088 -->`
+- 【Linux社区】Joshi提案演讲：NVMe新特性上栈慢，直通接口受困同步ioctl难用于快速路径，拟讲per-namespace字符接口、Axboe的uring_cmd与异步NVMe直通并给出性能对比。 `<!-- ROW_MINE: ksummit.messages.7089 -->`
+- 【Linux社区】Ryabitsev论证patch-id匹配不可靠，diff算法与上下文行数差异致漏配，建议以Message-Id尾注取代Link标注补丁出处，便于评审自动化与stable追踪系列；Lee Jones附议。 `<!-- ROW_MINE: ksummit.messages.7092 -->`
+- 【Linux社区】Wedson解释Rust弱引用升级等价refcount_inc_not_zero，失败即对象已亡而内存尚存以免UAF，C中误用零引用对象为Rust所禁，并举skbuff.c既有模式为证。 `<!-- ROW_MINE: ksummit.messages.7095 -->`
+- 【Linux社区】Bottomley反对“文本宽于代码”论：两者经同一神经网络生成，法律风险一致；以译文嵌入他人语句类比训练数据污染，并称代码更易援引独立创作抗辩，模式不属表达。 `<!-- ROW_MINE: ksummit.messages.7097 -->`
+- 【Linux社区】Anvin呼吁就AI训练数据与DCO合规寻求法律意见，警告否则将成乱局；Luck提议From须为人且对补丁负全责；McKenney称仅用兼容许可数据训练将排除所有流行AI。 `<!-- ROW_MINE: ksummit.messages.7099 -->`
+- 【Linux社区】Khan报probe失败仍注册成功并建sysfs的自2005年行为，错误被__driver_attach吞掉；Roeck反驳单驱动多设备时不应因一台失败而卸载，须区分设备探测与驱动加载。 `<!-- ROW_MINE: ksummit.messages.7107 -->`
+- 【Linux社区】Ojeda拒绝从Rust快速上手文档移除包管理器指令，称曾被告知明确添加且别处有用，主张Buildroot、Yocto等交叉环境的支持与文档应进上游项目而非内核。 `<!-- ROW_MINE: ksummit.messages.7109 -->`
+- 【Linux社区】Rostedt澄清尾注后方括号注记如“[ Fixed formatting ]”系记录自己对补丁的修改，与标签注释无关，反对Konstantin统一Link尾注注释格式的提案。 `<!-- ROW_MINE: ksummit.messages.7110 -->`
+- 【Linux社区】Tso 宣布 2021 维护者峰会与内核峰会随 LPC 全线上举行，不随 OSS 迁往西雅图，LPC 因美国场地防疫要求无法办线下微会议。 `<!-- ROW_MINE: ksummit.messages.7293 -->`
+- 【Linux社区】Gunthorpe 明确顶层维护者发 PR 前须保证 CONFIG_RUST=y x86-64 allmodconfig 构建通过，举 Andrew 扣下 Uros 六补丁、Andreas 为 block 修绑定为例，主张 Rust 不要求二分安全。 `<!-- ROW_MINE: ksummit.messages.7294 -->`
+- 【Linux社区】Bottomley 反驳“AI 生成文本不算侵权而代码算”，指两者法律地位相同；若输出构成训练数据衍生，译文同样有侵权风险。 `<!-- ROW_MINE: ksummit.messages.7296 -->`
+- 【Linux社区】Bonzini 接受 Torvalds 批评，在 applypatch-msg 钩子加 sed 把 Message-ID 转 lore 链接，并分享浏览器按 Message-ID 搜 lore 的插件技巧。 `<!-- ROW_MINE: ksummit.messages.7307 -->`
+- 【Linux社区】Corbet 称程序委员会一直有意引入首次与会者，建议可规定一定比例席位留给新人，但强调在座须有能处理议题的老手。 `<!-- ROW_MINE: ksummit.messages.7320 -->`
+- 【Linux社区】Kosina 反驳 Hellwig“绑定如癌症扩散”：HID-eBPF 只是少量钩子，不健康可整体弃掉并转回普通 HID 驱动，与难回退的核心绑定不同。 `<!-- ROW_MINE: ksummit.messages.7325 -->`
+- 【Linux社区】Ojeda 与 Bottomley 澄清“绑定”含抽象层与 bindgen 生成物；认同扩展 sparse 与 bindgen 从 C 注解生成绑定可降摩擦，C 侧注解本身亦有价值。 `<!-- ROW_MINE: ksummit.messages.7329 -->`
+- 【Linux社区】Tsai 强调 Link 尾注由 b4 自动添加近乎零成本，受益者是追查回归与回移植的开发者，认为 Torvalds 的 git hook 方案过繁不可行。 `<!-- ROW_MINE: ksummit.messages.7334 -->`
+- 【Linux社区】Brauner 支持把 kernel-doc 检查接入 build bot，自述为非平凡代码写 kernel-doc 但多版本迭代常出复制粘贴错误，曾靠 Andrew 指出。 `<!-- ROW_MINE: ksummit.messages.7341 -->`
+- 【Linux社区】Roeck 主张按子系统配置 Sashiko 而非提示词；举例 350 行驱动补丁被报 9 个问题，作者须处理新增问题，既有问题可豁免。 `<!-- ROW_MINE: ksummit.messages.7344 -->`
+- 【Linux社区】Pinchart 质疑 Red Hat GitLab 议题：若 GitLab 只是供 CLI 工具处理结构化数据的传输层，何不改用去中心化、非专有的传输机制。 `<!-- ROW_MINE: ksummit.messages.7347 -->`
+- 【Linux社区】Overstreet 认为如今打破兼容的代价低于 20 年前——开源与版本控制普及、可借 crates.io 评估影响，审慎演进即好事。 `<!-- ROW_MINE: ksummit.messages.7350 -->`
+- 【Linux社区】Golaszewski 说明全局 GPIO 编号转描述符涉及 providers、consumers 与固件节点，无法 coccinelle 自动化需功能测试，已耗时数年。 `<!-- ROW_MINE: ksummit.messages.7351 -->`
+- 【Linux社区】Rostedt 主张 Signed-off-by 即声明有权提交该代码，AI 生成内容若侵权由提交者担责，最终靠法院判例而非律师预判。 `<!-- ROW_MINE: ksummit.messages.7353 -->`
+- 【Linux社区】Kosina 指出 Link 尾注已混入 bugzilla、GitHub 等异质链接：维护者视为补丁源线程引用，提交者当作“另见”杂记，双方常鸡同鸭讲。 `<!-- ROW_MINE: ksummit.messages.7354 -->`
+- 【Linux社区】Ryabitsev 宣布旧 ksummit-discuss 列表停用：紧急 moderation、自动退信提示新址，讨论回填 lore.kernel.org/ksummit 归档。 `<!-- ROW_MINE: ksummit.messages.7356 -->`
+- 【Linux社区】Kozlowski 讽刺提议以“Legal-risk-by”等标签替代 Assisted-by，暗示 AI 生成补丁的专利版权风险应由添加 Signed-off-by 者自担。 `<!-- ROW_MINE: ksummit.messages.7358 -->`
+- 【Linux社区】Brauner 称 reiserfs bug 清单惊人且无维护者，主张讨论移除条件并更积极告知发行版，无主文件系统应作“僵尸”处理，未接入 xfstests 前挂载如赌博。 `<!-- ROW_MINE: ksummit.messages.7363 -->`
+- 【Linux社区】Leemhuis 认为更深维护者树拖慢补丁且远离 Linus 者不懂其回归要求，私下提醒不可扩展，主张成文回归指引并援引官方文档。 `<!-- ROW_MINE: ksummit.messages.7365 -->`
+- 【Linux社区】Perches 质疑补丁与讨论分列两表：get_maintainer 如何适配、讨论与补丁靠主题匹配或 Link 关联均难奏效。 `<!-- ROW_MINE: ksummit.messages.7369 -->`
+- 【Linux社区】Corbet 实测拆分文档用 intersphinx 需两次完整构建以生成 objects.inv，速度不划算，判定其不适合内核而不如 make SPHINXDIRS。 `<!-- ROW_MINE: ksummit.messages.7373 -->`
+- 【Linux社区】Uecker 指正 Jung：bug 21725 中 GCC 的 TBBA 比 LLVM 更正确、能处理类型变更存储；C 中读填充字节非 UB，未初始化仅限未取址自动变量。 `<!-- ROW_MINE: ksummit.messages.7376 -->`
+- 【Linux社区】Uytterhoeven 指出 QEMU 的 PL061 仿真不完整、连闪灯都做不到，建议选无驱动的 I2C/SPI 扩展器或 USB 接口 MCP2210 作 Rust GPIO 试点。 `<!-- ROW_MINE: ksummit.messages.7385 -->`
+- 【Linux社区】Pinchart 主张要求开源用户态实现不排斥厂商并行闭源优化，GPU 惯例即上游驱动须配基本全功能开源用户态，拟推广至相机 ISP 与 AI 加速器。 `<!-- ROW_MINE: ksummit.messages.7387 -->`
+- 【Linux社区】Luck 通报已催促 zero-day 机器人跟进文档检查，欢迎通过他或 Dave Hansen 提覆盖建议。 `<!-- ROW_MINE: ksummit.messages.7391 -->`
+- 【Linux社区】McKenney 表态无需无符号溢出检查；因内核依赖 fwrapv，全局有符号溢出检查会很嘈杂，仅符号整数或值得做。 `<!-- ROW_MINE: ksummit.messages.7396 -->`
+- 【Linux社区】Stoakes 批评 Tso 的与会说明含混：议题征集似 CFP 却与遴选脱节，质疑“最活跃”标准，认同 Airlie 峰会实为“Linus 的员工会议”之说。 `<!-- ROW_MINE: ksummit.messages.7400 -->`
+- 【Linux社区】Rostedt 提议把只读化作为移除无主文件系统前的过渡阶段：数年无人抱怨即视为无人使用，可手工改 #ifdef 恢复可写供测试。 `<!-- ROW_MINE: ksummit.messages.7406 -->`
+- 【Linux社区】Leemhuis 指出仅为维护者自动建号不够：二分回归常需抄送肇事补丁作者，要覆盖就得为所有贡献者建账户。 `<!-- ROW_MINE: ksummit.messages.7417 -->`
+- 【Linux社区】Bottomley 提议 git am 直接把 message-id 写入提交头，b4 生成提交自动携带，语义无争议且人人可用，免去 Link 尾注人为负担。 `<!-- ROW_MINE: ksummit.messages.7427 -->`
+- 【Linux社区】Walleij 建议 UALink 因需自建总线应设独立子系统，可放 drivers/accel/ual 或 drivers/ual，而非 drivers/misc/ual。 `<!-- ROW_MINE: ksummit.messages.7431 -->`
+- 【Linux社区】Brown 解释 Linus 介意的是合并质量而非数量：合并提交须有实质信息，自动化产生的默认信息合并才是问题。 `<!-- ROW_MINE: ksummit.messages.7434 -->`
+- 【Linux社区】Brown 认为 AI 提交与人类超载性质不同：行为不可预测难建信任、常规反压失效，并提工具自费成本与外部性治理问题。 `<!-- ROW_MINE: ksummit.messages.7436 -->`
+- 【Linux社区】Rostedt 回应 Gleixner：工具生成内容指南暂不定义新标签，待 submitting-patches 定案后再更新文档，属有意延后。 `<!-- ROW_MINE: ksummit.messages.7438 -->`
+- 【Linux社区】Dunlap 实测 16GB i7 笔记本 make -j8 htmldocs 约 6 分钟，对比 Brown 的 56 核 26 分钟，并比较两者 allmodconfig 耗时悬殊。 `<!-- ROW_MINE: ksummit.messages.7441 -->`
+- 【Linux社区】Jung 澄清 Rust time crate 大破坏属意外：流程曾预测重大生态破坏却因责任分散无人行动，常规小破坏机制运转良好。 `<!-- ROW_MINE: ksummit.messages.7443 -->`
+- 【Linux社区】Levin 追问 Bottomley 例证：37f1663c 回移因 Stable-dep-of c3408c4ae041，而后者所修的 527e9b704c3d 无 stable 标记也从未回移。 `<!-- ROW_MINE: ksummit.messages.7444 -->`
+- 【Linux社区】Bottomley 论证 OIN 专利护盾足以让贡献者无视多数专利顾虑，专利须公开技术故自持专利无碍开源，OIN 亦可应对专利流氓。 `<!-- ROW_MINE: ksummit.messages.7451 -->`
+- 【Linux社区】Guo 说明 Rust 无类型别名：union 与指针 transmute 合法且有 zerocopy 库，严格溯源 API 已稳定，别名规则同样约束 unsafe 代码。 `<!-- ROW_MINE: ksummit.messages.7452 -->`
+- 【Linux社区】Leemhuis 宣布推进 bugzilla 减痛方案：设 catch-all 产品、隐藏未承诺维护组件、首页注明多数报告应走邮件，核心开发者无异议。 `<!-- ROW_MINE: ksummit.messages.7453 -->`
+- 【Linux社区】Overstreet 主张比“一设备一驱动”更细的规则：大型 Rust 重写应并行发布数个周期再删旧码，如 nvme 原型与 blk-mq 渐进推广。 `<!-- ROW_MINE: ksummit.messages.7455 -->`
+- 【Linux社区】Lee Jones 拟改 get_maintainer.pl 默认 --git-min-percent 由 5 提至 75%，并采纳 Rob Herring 建议提高 --git-min-signatures，以减少陈年贡献者被误抄送。 `<!-- ROW_MINE: ksummit.messages.7461 -->`
+- 【Linux社区】Konstantin 提出以 git-bug/b4 bugs 替代 Bugzilla 并让 LLM 预筛报告；Laurent 质疑是否仍收无 LLM 工具的报告，指缺陷散落 lore、GitHub 等处难检索，并厘清与 regzbot、bugspray 分工。 `<!-- ROW_MINE: ksummit.messages.7462 -->`
+- 【Linux社区】Linus Walleij 审阅 Wedson 的 PL061 Rust 绑定：主张包装器散布各使用处而非集中 rust 目录（引 OF 教训）；指出用户态接口仍留 C，攻击面未减，Rust 须覆盖内核攻击面才有安全价值。 `<!-- ROW_MINE: ksummit.messages.7470 -->`
+- 【Linux社区】回应 hpa：C++ 存在“Safe C++”提案且已在 Circle 编译器实现，但似难被标准接纳；若采用则内核代码将脱离标准 C++，且几乎需重写整个内核。 `<!-- ROW_MINE: ksummit.messages.7473 -->`
+- 【Linux社区】Mark Brown 建议除 GPIO 外以 SPI 作 Rust 试点：qemu 已模拟部分 SPI 控制器便于测试，且框架并发场景更多。 `<!-- ROW_MINE: ksummit.messages.7476 -->`
+- 【Linux社区】与 Geert 讨论 optional 资源接口的返回值约定（有效指针、NULL、错误指针）：Arnd 认为运行期由 DTB 决定者无法用注解表达，幸而 struct clk 定义私有、调用方无法解引用。 `<!-- ROW_MINE: ksummit.messages.7477 -->`
+- 【Linux社区】Ted Tso 称直面攻击面须全内核重写 Rust；驱动因 fuzz 难覆盖、作者资历浅而更值得 Rust 化；ksmbd 改写需大量 unsafe 调 C，其方案是“坚决不用”，重安全者可用 Samba/Ganesha。 `<!-- ROW_MINE: ksummit.messages.7481 -->`
+- 【Linux社区】Michael Ellerman 力挺 linux-next：停留一两天可获数千项覆盖几乎全部架构的编译测试与数百次启动测试，#ifdef 中一个字符的笔误也会被拦下。 `<!-- ROW_MINE: ksummit.messages.7484 -->`
+- 【Linux社区】Mauro 提议 kernel-doc 在 Python<3.11 时自动改用 PATH 中更新版本：make htmldocs 需 ≥3.7 否则失败，OpenSUSE Leap 与 RHEL8 依赖 python311-sphinx；重跑近零成本，可提速 55%-60%。 `<!-- ROW_MINE: ksummit.messages.7492 -->`
+- 【Linux社区】Sony 的 Tim Bird 反对 GKI：与 Google 的合同式安排堪称违反 GPL；GKI 令索尼无法改内核代码应对运营商认证，致延期与怪异变通；Google 对非头部厂商冷淡，削弱开源可改源码的价值。 `<!-- ROW_MINE: ksummit.messages.7494 -->`
+- 【Linux社区】工具生成内容指南 v5 讨论：Dave Hansen 认为 Dan Carpenter 的温和措辞是泛泛建议、缺针对性，主张写明维护者可对工具生成内容要求额外测试，已纳入其 v6 草稿。 `<!-- ROW_MINE: ksummit.messages.7495 -->`
+- 【Linux社区】James Bottomley 反对把圣诞树变量排序等维护者个人癖好写入通用风格文档：众维护者连排序方向都无共识，不具普适性。 `<!-- ROW_MINE: ksummit.messages.7499 -->`
+- 【Linux社区】Linus Walleij 考据：1962 年 Atlas 系统以 ALGOL 方言实现，C 属 ALGOL 一脉；Rust 首个编译器以 OCaml 写就，语法融合工程师偏爱的 ALGOL 族与函数式族，mut 即折中。 `<!-- ROW_MINE: ksummit.messages.7500 -->`
+- 【Linux社区】Jason Gunthorpe 表态：企业今有内部安全激励，鲁莽部署会被研究者以 CVE 与“响亮命名网站”曝光；但内核须向厂商更清晰阐明 Linux 安全模型，因不少做设备侧者不懂基础。 `<!-- ROW_MINE: ksummit.messages.7504 -->`
+- 【Linux社区】Willy Tarreau：邮件列表靠数千人集体过滤，重要补丁终会被注意；缺陷跟踪器反给报告者“已受理”错觉；强制 opt-out 订阅必遭拉黑；Bugzilla 每周约 24 份报告，LKML 日均百封多为扫描。 `<!-- ROW_MINE: ksummit.messages.7512 -->`
+- 【Linux社区】Thorsten 承认无硬数据：大量回归他无从知晓，commit 无法判定是否修回归；DRM 用外部跟踪器致漏报，regzbot 刚可监控；峰会拟只表扬做得好的子系统，差评须先征得当事方同意。 `<!-- ROW_MINE: ksummit.messages.7513 -->`
+- 【Linux社区】Laurent 以 gpio_mockup 代码示例演示 scoped_guard 与 guard(mutex) 精确控制锁作用域，回应 Willy 对“返回时解锁”致锁持有时长失控的担忧。 `<!-- ROW_MINE: ksummit.messages.7514 -->`
+- 【Linux社区】Konstantin 提出以 DKIM 签名加高随机 Message-Id 加 References 校验让 forge 信任邮件补丁；其 patatt 端到端签名方案受限于普通邮件客户端（尤其网页端）难以采用。 `<!-- ROW_MINE: ksummit.messages.7515 -->`
+- 【Linux社区】Sasha Levin：维护者常提前一两周发下一周期 PR，6.13 的 PR 已入 linus-next，有人未过本地测试即推 -next；但 Linus 一贯拉取未曝光补丁且反对强制 linux-next，预检机器人难有实效。 `<!-- ROW_MINE: ksummit.messages.7516 -->`
+- 【Linux社区】Linus Walleij 阐释 Rust 支持者的隐含前提：新生开发者将更熟 Rust 而视 C 过时（据 StackOverflow“最受喜爱语言”调查），并称新技术推进本靠信念与热情，Unix、C、Linux 皆然。 `<!-- ROW_MINE: ksummit.messages.7519 -->`
+- 【Linux社区】Miguel Ojeda 设计审阅机器人：只客观报告问题而不评判是否值得复审，维护者凭报告长度与问题重要性分流；可设“一票否决”项（无 SoB、无许可证、提交说明缺失、格式与编译错误）令其直接要求改版。 `<!-- ROW_MINE: ksummit.messages.7522 -->`
+- 【Linux社区】Andrew Lunn 警告 Rust 文件在树内移动会破坏 -stable 的 cherry-pick 回移；不回移则安全修复无法单独提出，unsafe 代码中的漏洞将长期滞留，故文件位置须自始确定。 `<!-- ROW_MINE: ksummit.messages.7531 -->`
+- 【Linux社区】Dan Carpenter 自述曾质询提交者“你如何知道这是真的”，对方 v2 竟以引用 AI 幻觉出的规格说明作长篇答复；支持 Dave 的指南，但主张首段直书“勿发 AI 垃圾”。 `<!-- ROW_MINE: ksummit.messages.7532 -->`
+- 【Linux社区】Paul McKenney：Linus 曾在 ARM 峰会要求抄送 -next 失败但自动化只通知树主；rcutorture 压测 -next 平日通过，上月一次揪出近十个 bug 含两枚 heisenbug；一 RCU 主线 bug 需 CPU 热插拔间隔 50 毫秒复现。 `<!-- ROW_MINE: ksummit.messages.7535 -->`
+- 【Linux社区】LPC2023 议题摘要：VSOCK 新增数据报支持，与 virtio 上的 UDP 对比展示高吞吐点对点优势；集成 sockmap 使 eBPF 可动态管理 VSOCK 套接字。 `<!-- ROW_MINE: ksummit.messages.7537 -->`
+- 【Linux社区】James Bottomley：常有 AI 团队问他 AI 如何助 Linux，他首推缺陷报告分诊分类，对方皆以“太难”退缩、怕误分类遭开发者嘲笑；呼吁社区施压促成尝试。 `<!-- ROW_MINE: ksummit.messages.7542 -->`
+- 【Linux社区】Sasha Levin 为维护者峰会梳理 AI 政策：共识含 From 行须人类担责、须披露 AI 参与、子系统自定政策、语言润色不歧视；分歧含错误性质、门槛高低、DCO 法律风险与审阅不对称。 `<!-- ROW_MINE: ksummit.messages.7543 -->`
+- 【Linux社区】针对 kallsyms 内嵌行号表 +44MiB 开销，Jürgen Groß 提出压缩：按 1000 条分块、块首存起始地址、条目以 lsb128 编码相对偏移与行号，多数仅 1-2 字节，约省一半空间。 `<!-- ROW_MINE: ksummit.messages.7548 -->`
+- 【Linux社区】Tim Bird：checkpatch.pl 误报多且因维护者口味标准不一，难以强制；主张把无误报检查并入构建，让问题在编码时即暴露而非事后自动化处理返工；改进方案拟东京峰会讨论。 `<!-- ROW_MINE: ksummit.messages.7552 -->`
+- 【Linux社区】身为 CoC 委员的 Shuah：多数举报源于对社区讨论方式的误解，皆幕后化解；承认 Linus“buffer cache 很琐碎”言论被 Dave Chinner 公开指违 CoC 属边缘案例；认同借 CoC 压分歧无益。 `<!-- ROW_MINE: ksummit.messages.7558 -->`
+- 【Linux社区】Leon Romanovsky：部分维护者对子系统所有权感过强，致他人缺乏信任、共同责任无从建立；回应“教维护者放手权力”工作坊的玩笑，称须先厘清维护者对公司、社区、开发者各为何义。 `<!-- ROW_MINE: ksummit.messages.7560 -->`
+- 【Linux社区】Konstantin 就“THE REST”改指 patches@lists.linux.dev 的 RFC 表态：接受区分“THE REST”（仅无 L: 匹配时触发）与“ALWAYS CC”（全量追加）两种语义的方案。 `<!-- ROW_MINE: ksummit.messages.7562 -->`
+- 【Linux社区】AWS 提案 LPC2026 演讲：内核 2024 年 2 月成为 CNA 后定制内核组织面临 CVE 洪流，将分享两年仓库级分诊经验、NVD/CVSS 与内部评级相关性、回移致回归，及 LTS 补丁速度数据。 `<!-- ROW_MINE: ksummit.messages.7563 -->`
+- 【Linux社区】Miguel Ojeda 澄清 PL061 绑定中 try_writeb 的运行期检查仅因偏移参数非编译期常量；GPIOIE 等编译期已知处可改用非 try 版本，约三处可简化，体现 Rust API 安全检查取舍。 `<!-- ROW_MINE: ksummit.messages.7569 -->`
+- 【Linux社区】James Bottomley：让提交者声明假设与取舍是参与流程的必要条件，但不足以化解 AI 顾虑——历史上不乏一人接管他人补丁集并代为上游辩护的先例。 `<!-- ROW_MINE: ksummit.messages.7573 -->`
+- 【Linux社区】Jarkko Sakkinen：Rust 难在运行环境而非语言，文档只讲 dnf/apt 未及 BuildRoot/Yocto/NixOS 交叉编译实战，BuildRoot 缺支持已令其无法贡献；写码仅占内核开发 5%，编辑-编译-运行占 95%。 `<!-- ROW_MINE: ksummit.messages.7584 -->`
+- 【Linux社区】Linus Walleij：面板 IC 厂商（Novatek、Ilitek、三星面板部门等）不发数据手册或仅限 NDA，质疑是否有过其直接提交；其 nt35510 伽马驱动仅基于代码投放，无手册无法调曲线，并疑厂商树多为魔法十六进制堆砌。 `<!-- ROW_MINE: ksummit.messages.7585 -->`
+- 【Linux社区】Linus Torvalds：解析栈回溯无需新设施，debug-info 构建加 scripts/decode_stacktrace.sh 即可把 uart_write+0x1ec/0x240 译为源文件、行号与内联信息，并给出 caif 串口实例，惜知晓者少。 `<!-- ROW_MINE: ksummit.messages.7590 -->`
+- 【Linux社区】Linus Torvalds 主张给遗漏者补抄送时用不引用原文的干净回复并附 lore 链接补背景：lore 快而可靠，足以作上下文载体；认同 Andrew 所指“长篇多为引用”之风不可取。 `<!-- ROW_MINE: ksummit.messages.7596 -->`
+- 【Linux社区】回应 Kozlowski 的 133 枚积压提交统计：Laurent 承认曾因此漏察 DT 绑定集成问题；转述 Linus 不喜子系统树多合并之说，以 drm-misc 线性历史为反例；愿树入 next 但忧媒体子系统 cherry-pick 其 PR。 `<!-- ROW_MINE: ksummit.messages.7599 -->`
+- 【Linux社区】Kees Cook 反对现阶段引入 AI 参与度标签：LLM 介入深浅跨度极大，标签必致误导或不准；当前共识是“展示推演”写入提交说明，待实践沉淀出模式后再设标签。 `<!-- ROW_MINE: ksummit.messages.7601 -->`
+- 【Linux社区】Greg KH 反对自动订阅开发者收 Bugzilla 通知：必然招致愤怒与过滤拉黑；愿分诊者请自行出工，替他人“报名”绝不可行。 `<!-- ROW_MINE: ksummit.messages.7604 -->`
+- 【Linux社区】David Laight 补充 Torvalds 对 C 标准的批评：早期 READ_ONCE 确因生成代码问题而设；volatile 读常致额外寄存器搬运，屏障可阻止读重化；arm32 的 16 位访问偏移受限，恐被拆成两次字节写。 `<!-- ROW_MINE: ksummit.messages.7607 -->`
+- 【Linux社区】Christoph Hellwig 认同无主文件系统政策草案：至少须有可用 mkfs/fsck 并过 fstests，无 mkfs 则无从验证；此类 fs 无需 syzbot 覆盖；支持以 fstype 标志而非配置项标注支持与弃用状态，但承认为之更难。 `<!-- ROW_MINE: ksummit.messages.7609 -->`
+- 【Linux社区】主张新驱动须有开放用户态对应，引DRM/KMS先例（提交补丁并获维护者认可），指habanalabs曾绕过netdev与RDMA经drivers/misc进入，并详述树莓派相机经libcamera上游化历程。 `<!-- ROW_MINE: ksummit.messages.7610 -->`
+- 【Linux社区】附议Linus按路径模式订阅“虚拟列表”构想，提出改用IMAP直接注入收件箱以绕开SMTP速率限制，指出需交kernel.org密码或API密钥且可能破坏本地过滤。 `<!-- ROW_MINE: ksummit.messages.7617 -->`
+- 【Linux社区】认同fwctl短期限于CXL Feature等安全命令，但坚持BMC场景须能经同一接口放开高破坏性命令，隧道命令须核对目标设备命令效果日志，权限模型仍是缺口。 `<!-- ROW_MINE: ksummit.messages.7619 -->`
+- 【Linux社区】指sashiko机器人假定硬件恶意违背内核规范，DMA字段不应按TOCTOU防护；建议修复masoncl/review-prompts审查提示词，并愿为内核子系统补drivers.md说明。 `<!-- ROW_MINE: ksummit.messages.7621 -->`
+- 【Linux社区】与Shuah商定峰会设专职主持转达远程提问、强制现场使用麦克风，建议跨子系统征募主持志愿者，并提议把主持纳入演讲礼品致谢。 `<!-- ROW_MINE: ksummit.messages.7625 -->`
+- 【Linux社区】明确志愿者不会提供商业级支持，重大需求应付费给Red Hat、SUSE、Canonical或CIQ；LTS内核bug除非能在最新上游复现否则无兴趣，支持仅为尽力而为。 `<!-- ROW_MINE: ksummit.messages.7627 -->`
+- 【Linux社区】支持对屡次走涉密通道的组织强制建立可验证测试环境，主张扩大可信测试者圈子，并联合KernelCI与OpenSSF搭建涉密代码专用小型环境。 `<!-- ROW_MINE: ksummit.messages.7629 -->`
+- 【Linux社区】认同媒体设备BSP驱动曾把用户态物理地址直送DMA引擎的乱象，承认服务器与嵌入式消费级硬件安全文化差异大，对后者同等信任持保留态度。 `<!-- ROW_MINE: ksummit.messages.7631 -->`
+- 【Linux社区】承认Wedson指出的gpiochip_remove置空gdev->chip后存在竞态UAF风险，需补ENODEV检查；实际难复现，USB GPIO扩展坞拔插是最常见触发场景。 `<!-- ROW_MINE: ksummit.messages.7633 -->`
+- 【Linux社区】质疑stable团队判定补丁是否依赖系列内前序补丁的能力，指出此类判断常需子系统的深入知识，要求Sasha说明实际操作标准。 `<!-- ROW_MINE: ksummit.messages.7634 -->`
+- 【Linux社区】要求文档明言对明显AI生成的海量系列可径行拒绝，强调维护者与提交者资源不对称、媒体报道恐打开闸门；Dave说明文档源自TAB既定讨论。 `<!-- ROW_MINE: ksummit.messages.7644 -->`
+- 【Linux社区】与Rostedt激辩LLM非普通工具，称mm等默认合并流程难以抵挡AI系列涌入，主张提前立规拒绝AI slop，Rostedt以TAB十年经验主张只应对已发生问题。 `<!-- ROW_MINE: ksummit.messages.7649 -->`
+- 【Linux社区】展示C语言可实现Option泛型与带边界检查的vector示例并称可静态证明安全，同时指出Rust与C++单态化泛型在编译时间与代码体积上有实质代价。 `<!-- ROW_MINE: ksummit.messages.7657 -->`
+- 【Linux社区】揭示Link方案源流：原始提议被Linus以可点击性否决，折中为kernel.org域名编码message-id；主张负担置于发送端因读工具远多于写工具，建议Patchwork支持单独替换系列内patch。 `<!-- ROW_MINE: ksummit.messages.7659 -->`
+- 【Linux社区】提议让0-day机器人强制要求指向未发布内核补丁的Fixes标注not-stable标签，以邮件训练开发者，并归纳rc修复与已入-next两类无需stable的情形。 `<!-- ROW_MINE: ksummit.messages.7660 -->`
+- 【Linux社区】认为OEM、大客户与OS厂商合一（如谷歌云自造系统与芯片）令行业旧激励瓦解，Linux成为无工具的事实标准组织；PyTorch之下各硬件栈并行，机密计算UAPI出错将永久无法撤回。 `<!-- ROW_MINE: ksummit.messages.7674 -->`
+- 【Linux社区】同情Bottomley“纯AI生成代码不可版权、属公有领域”论但强调无保证，指出该论证预设人类特殊，追问是否有LF律师公开声明可供依赖，认可公有领域代码可并入GPLv2。 `<!-- ROW_MINE: ksummit.messages.7676 -->`
+- 【Linux社区】区分AI据作者输入生成变更日志或译文与AI生成代码，认为后者才可能剽窃他人代码，故支持hpa对文档类从宽的立场。 `<!-- ROW_MINE: ksummit.messages.7678 -->`
+- 【Linux社区】转录Paolo自曝git am多年默认附Message-ID，改用applypatch-msg钩子sed转换为lore链接，并补充Firefox智能书签与Chrome搜索捷径按message-id检索lore。 `<!-- ROW_MINE: ksummit.messages.7680 -->`
+- 【Linux社区】提出峰会议题：probe失败仍被注册，__driver_attach忽略错误返回成功并创建sysfs接口，行为自2005年如此，用户须rmmod清理僵尸驱动，寻求方案。 `<!-- ROW_MINE: ksummit.messages.7685 -->`
+- 【Linux社区】将争论拆为三题：跨子系统NAK权限属维护者峰会，厂商开放性教育曾靠LF现已乏力，开放驱动标准之辩宜由Plumbers承办。 `<!-- ROW_MINE: ksummit.messages.7687 -->`
+- 【Linux社区】澄清拟议的发行版安全回溯列表并非保密，指数百已知漏洞因缺回溯令用户暴露，批评security@过度聚焦个别问题而忽视大量漏洞，质疑涉密流程的形式主义。 `<!-- ROW_MINE: ksummit.messages.7689 -->`
+- 【Linux社区】补充某媒体驱动维护者曾对其他维护者发出人身乃至生命威胁的案例，认为此类个案难以成文规范，提议对维护者实施电子签名CLA；引Wilcox列举Reiser等前例。 `<!-- ROW_MINE: ksummit.messages.7694 -->`
+- 【Linux社区】主张以“政治”而非“哲学”定性直通分歧，背后是市场控制、竞争与厂商锁定议题，因而更难公开讨论；并追问Leon对维护者信任论的适用范围。 `<!-- ROW_MINE: ksummit.messages.7697 -->`
+- 【Linux社区】力主标注AI辅助补丁，称coccinelle等工具仍须人写码编译而AI可直接投递幻觉代码，已在Devicetree绑定看到GPL-4.0等幻觉许可证，需过滤。 `<!-- ROW_MINE: ksummit.messages.7700 -->`
+- 【Linux社区】记录红帽GitLab流程邮件桥使用者极少、多数已迁CLI工具，GitLab无法内联评论提交说明已反馈官方；Pinchart主张保留单一客户端与可定制工作流，结构化数据可经邮件传输。 `<!-- ROW_MINE: ksummit.messages.7702 -->`
+- 【Linux社区】提出AI产出版权归属三种选项（提示撰写者、模型公司、训练数据权利人），预测法院若须裁决将倒向资金最雄厚的一方即模型公司。 `<!-- ROW_MINE: ksummit.messages.7706 -->`
+- 【Linux社区】针对hpa的VLIW死路论，称按代际JIT编译在开源界可行且收益巨大，反指乱序执行功耗高且易泄漏信息。 `<!-- ROW_MINE: ksummit.messages.7708 -->`
+- 【Linux社区】以git log统计v5.19至master含Fixes共2928条、日均修复46个bug，反驳“邮件列表遗忘bug”论，指Bugzilla每周仅约24份报告。 `<!-- ROW_MINE: ksummit.messages.7710 -->`
+- 【Linux社区】转引Sasha的v6.12-rc4至rc5在-next滞留直方图（0天者89个），并指linux-next非自动发布、周五后提交的PR会错过，解释绕过-next合入的机制缺口。 `<!-- ROW_MINE: ksummit.messages.7714 -->`
+- 【Linux社区】认为不必等待NPU用户态标准尘埃落定，提出GEMM矩阵乘作硬件无关低层接口与模型blob提交两条路径，可依托crypto、media或drm乃至新chardev实现。 `<!-- ROW_MINE: ksummit.messages.7716 -->`
+- 【Linux社区】详述fnnas NAS场景下POSIX ACL无法承载AI/LLM共享的复杂访问控制，用户态规则存储与回查不可扩展，主张RichACL回归，其产品公开13个月已超百万活跃安装。 `<!-- ROW_MINE: ksummit.messages.7719 -->`
+- 【Linux社区】支持一视同仁规则，称“checkpatch抱怨非改动理由”对所有工具成立；Julia Lawall追问AI系列能否像checkpatch类那样凭经验识别。 `<!-- ROW_MINE: ksummit.messages.7720 -->`
+- 【Linux社区】自认按长度排序声明仅为美观，支持放宽C89顶部声明惯例，指严格规则可能诱发已报告的初始化顺序bug。 `<!-- ROW_MINE: ksummit.messages.7725 -->`
+- 【Linux社区】Sasha追问修改被Rust抽象的C API者是否须懂Rust以同步修复抽象层；Miguel澄清Rust并非替换C，而是复用C API并静态保证红黑树等不变量。 `<!-- ROW_MINE: ksummit.messages.7726 -->`
+- 【Linux社区】指Ricardo的相机营销功能例证误导，厂商可任意闭源用户态，关键在内核UAPI；两人一致认同UAPI功能须有开源对应实现。 `<!-- ROW_MINE: ksummit.messages.7727 -->`
+- 【Linux社区】主张长演讲录制后随时收听更佳，专家小组宜用直接通话，建议峰会先回到“参会者期望什么”再规划；另含美国疫情与佛州德州政治闲谈。 `<!-- ROW_MINE: ksummit.messages.7734 -->`
+- 【Linux社区】以自身经验论证树形结构与git机制影响甚小，信任与委派才是关键，经信任评审者过手的补丁几乎不占其时间，且这种差异在git历史中不可见。 `<!-- ROW_MINE: ksummit.messages.7738 -->`
+- 【Linux社区】表态变基是避免bug加修复对污染上游、维护可二分性的最后手段，主因是补标签；自述为新功能手录测试步骤以备回查，因文档难求。 `<!-- ROW_MINE: ksummit.messages.7745 -->`
+- 【Linux社区】作为旁观者将Linus的编译器重排顾虑提炼为“是否所有读写都应视作READ_ONCE与WRITE_ONCE”之问，点中TOCTOU争论核心。 `<!-- ROW_MINE: ksummit.messages.7747 -->`
+- 【Linux社区】驳Bottomley“圣诞树方向是维护者怪癖”说，称倒序圣诞树是网络等众多子系统标准，跨内核工作者宜默认遵守，多数人虽偏好但不强拒异序。 `<!-- ROW_MINE: ksummit.messages.7754 -->`
+- 【Linux社区】反驳Bottomley“社区过度恐惧”论，称Rust事关内核重写人人受影响；认同uAPI永久支持抑制创新，实验因维护者拒收单驱动API被迫出树，提议某种API staging。 `<!-- ROW_MINE: ksummit.messages.7760 -->`
+- 【Linux社区】支持年度探测失效地址并建议增设 RETIRED 文件，让退休维护者不再被 get_maintainer.pl 打扰。 `<!-- ROW_MINE: ksummit.messages.7761 -->`
+- 【Linux社区】Gaisler 新 SoC 在 LEON sparc32 下支持 16 GiB 内存，已有 36 位 phys_addr_t 补丁、VMSPLIT 开发中；现网生产最大 2 GiB，可在 LEON 与 rv64 NOEL-V 间引导选择。 `<!-- ROW_MINE: ksummit.messages.7762 -->`
+- 【Linux社区】针对字符设备移除竞态提出分步方案：弃用 devm 改引用计数、断开新调用、取消 IO 并等待完成、注销后调 release；批评 DRM 把 devres 绑在 drm_device 上的硬编码假设。 `<!-- ROW_MINE: ksummit.messages.7763 -->`
+- 【Linux社区】分享自家 patchview 脚本链接，并推荐 delta 并排 diff 配置，建议补上忽略空白选项。 `<!-- ROW_MINE: ksummit.messages.7764 -->`
+- 【Linux社区】批评草案中“无疑提升生产力”属广告式措辞应删去，并指出 Coccinelle 机械变换不应列为规范范围之外，文档须保持事实性表述。 `<!-- ROW_MINE: ksummit.messages.7766 -->`
+- 【Linux社区】要求为工具生成内容定义统一标签与格式，警告任由各处自由发挥会让 changelog 更加不可读。 `<!-- ROW_MINE: ksummit.messages.7773 -->`
+- 【Linux社区】提议 kernel.org 设补丁入口邮箱，自动跑 get_maintainer.pl 定收件人，账户级投递偏好，支持 git bundle 入口以规避企业邮件服务器对 git send-email 的破坏。 `<!-- ROW_MINE: ksummit.messages.7776 -->`
+- 【Linux社区】回应 Corbet：LLM 补丁应是质量而非工具问题，但真正挑战是机器生成不再受人力约束的提交量级，可能演成对评审的 DoS。 `<!-- ROW_MINE: ksummit.messages.7779 -->`
+- 【Linux社区】否决改用 C++：成员函数与更多强制转换只添痛苦且无新类型或运行时安全；而 Rust 至少真正修复部分 C 安全问题，两者论据不同。 `<!-- ROW_MINE: ksummit.messages.7784 -->`
+- 【Linux社区】承认漏标 cc:stable 是 ext4 方失误并感谢代收，建议 stable 团队主动告知维护者拟回传的未标记提交；将问题归为不关心、会失误、想延迟三类。 `<!-- ROW_MINE: ksummit.messages.7792 -->`
+- 【Linux社区】称“从未被回复”指标失真：大量报告无可复现步骤、对话中止、重复报告形成雷群效应；改进靠人辅导报告者，完美流程不可能达成。 `<!-- ROW_MINE: ksummit.messages.7794 -->`
+- 【Linux社区】质疑 histo.sh 如何处理 commit-id 变化、主题改写与整组替换补丁（蓝牙 -fixes、-mm 树），主张与其建新树不如提升 pending-fixes 地位。 `<!-- ROW_MINE: ksummit.messages.7795 -->`
+- 【Linux社区】以 SUSE 视角证实厂商常要求携带树外模块配置设备，SCSI 充斥厂商私有命令（刷 megaraid 变 mpt2sas 轶事）；支持受控接口但反对过于通用的设计。 `<!-- ROW_MINE: ksummit.messages.7797 -->`
+- 【Linux社区】Wolber、Paoloni、Stewart 联合提案：借鉴航空航天规格方法，把代码规格、实现与自测耦合，已在 TRACING 与 drivers/char/mem.c 试点，征集维护者反馈。 `<!-- ROW_MINE: ksummit.messages.7798 -->`
+- 【Linux社区】提出四问：Assisted-by 标签是否泛化、如何治理谎报、LLM 新人洪流（有人险些自立为 lib/ 维护者）、依赖专有工具的 2005 式翻车风险。 `<!-- ROW_MINE: ksummit.messages.7806 -->`
+- 【Linux社区】质疑 stable 队列邮件若人人过滤则流量毫无价值，认为查历史用 lore/lei 检索已够，追问这类邮件的实际使用场景。 `<!-- ROW_MINE: ksummit.messages.7812 -->`
+- 【Linux社区】转述 GCC 反馈：寄存器分配器确会重化加载；若数据竞争不设为 UB 将波及纯顺序代码优化，C++ 模型的目标是单线程不为线程机制付费。 `<!-- ROW_MINE: ksummit.messages.7815 -->`
+- 【Linux社区】支持在 C 头文件加注解供 bindgen 生成绑定（__opaque、__safe 等），但强调自动化不杜绝破坏，C API 须对调用方稳定，建议文档化前后置条件与不变量。 `<!-- ROW_MINE: ksummit.messages.7820 -->`
+- 【Linux社区】反对提高 W=2 警告级别，举 -Wshadow 误报 ffs、-Wunused-macros 修复只会催生无谓 ifdef 为例，主张把后者移出 W=2。 `<!-- ROW_MINE: ksummit.messages.7821 -->`
+- 【Linux社区】指出大公司员工“没时间评审”多为借口，真实原因涵盖时间不足到子系统氛围恶劣的谱系；难点是如何让受访者不惧日后难以合作说真话。 `<!-- ROW_MINE: ksummit.messages.7824 -->`
+- 【Linux社区】抱怨因早年动过的文件持续收到评审请求，指出 get_maintainer.pl 默认 --git-min-percent=5 过低，自己常改到 75% 以减少误抄送。 `<!-- ROW_MINE: ksummit.messages.7829 -->`
+- 【Linux社区】驳斥激励崩坏论：Android GKI 与 Todd Kjos、Red Hat 与 Jon Masters 推动上游化；举 Alyssa 开放驱动达成 OpenGL ES 3.1 一致性；主张先标记 broken 再删死 uAPI。 `<!-- ROW_MINE: ksummit.messages.7835 -->`
+- 【Linux社区】观察到林纳斯合并通常要求补丁先在 -next 孵化数日、鲜有例外，追问 Jiri 的不满究竟是孵化期太短还是子维护者应更早入树。 `<!-- ROW_MINE: ksummit.messages.7836 -->`
+- 【Linux社区】强调实验未经同意且范围不明，UMN 公告暂停研究后仍须审计其全部贡献，假 gmail 账号名单应由可信小组私下索取以免公开牵连维护者。 `<!-- ROW_MINE: ksummit.messages.7839 -->`
+- 【Linux社区】推出 auto-pending-fixes 分支并配脚本保持更新，提出尽量避免 rebase、确需时先给旧 HEAD 打 tag 再重建分支的运行模式。 `<!-- ROW_MINE: ksummit.messages.7840 -->`
+- 【Linux社区】认为向硬件协议设计者反馈内核调解需求是讨论最大收益；NVMe 过滤命令未被“魔法 LBA”绕开说明激励有效，主张以 Command Effects Log 建立信任。 `<!-- ROW_MINE: ksummit.messages.7841 -->`
+- 【Linux社区】汇总 Rust 1.80 time crate 破坏沟通缺失与多条 stable-to-stable 回归（编译挂起、actix 慢 350 倍），质疑 edition 语义变更趋多及内核百万行 Rust 升级路径。 `<!-- ROW_MINE: ksummit.messages.7842 -->`
+- 【Linux社区】提议建回传仪表盘：汇总 Fixes、cc:stable、显式请求与依赖回传，链接 LTS 提交与 CVE，可按子系统检索订阅，可寻求 LF 资助开发。 `<!-- ROW_MINE: ksummit.messages.7843 -->`
+- 【Linux社区】澄清 stable 队列邮件自 2023 年 8 月起已带 X-stable: commit 与 X-Patchwork-Hint: ignore 头，亦可用 stable-commits@vger.kernel.org 过滤。 `<!-- ROW_MINE: ksummit.messages.7845 -->`
+- 【Linux社区】注意到 Konstantin 宣布 THE REST 收件人变更却只发 ksummit 不抄 LKML，并自承同样做法，指出 ksummit 已成事实上的社区通用讨论列表。 `<!-- ROW_MINE: ksummit.messages.7849 -->`
+- 【Linux社区】实测 Richard 的 kcontact 原型，投入 arm/arm64 崩溃日志后结果可用；并提及 MAINTAINERS 中 mm 有 18 条“MEMORY MANAGEMENT - ”条目令人困惑。 `<!-- ROW_MINE: ksummit.messages.7850 -->`
+- 【Linux社区】2021 TAB 选举最终提醒：提名截止 9 月 20 日，届满者为 Kroah-Hartman、Corbet、Levin、Rostedt、Ts'o 五席，两年任期过半改选，资格与投票标准相同。 `<!-- ROW_MINE: ksummit.messages.7852 -->`
+- 【Linux社区】否定把全部读写当 READ_ONCE：CSE 与推测读无碍，但把一次读重化为两次读语义可见且是反优化；内核因标准放任而被迫滥用 READ_ONCE。 `<!-- ROW_MINE: ksummit.messages.7862 -->`
+- 【Linux社区】主张 -Wtype-limits 是彻底坏的设计，会对范围检查等谨慎代码报警；可行的是仅针对有符号转无符号又查符号且未做范围检查的智能警告。 `<!-- ROW_MINE: ksummit.messages.7864 -->`
+- 【Linux社区】阐明 volatile 为 MMIO 而设计、用于普通内存是灾难；内核 READ_ONCE 实为 READ_AT_MOST_ONCE，要求单一稳定值，并兼顾撕裂与原子类型检查。 `<!-- ROW_MINE: ksummit.messages.7867 -->`
+- 【Linux社区】承认 cleanup 属性可能诱发锁滞留问题，推荐改用 scoped_guard(mutex) 表达锁作用域，缩进让受保护代码更易评审。 `<!-- ROW_MINE: ksummit.messages.7869 -->`
+- 【Linux社区】指出 { .field = 7 } 式部分初始化可留填充与联合成员未初始化，gcc-15 依标准默认如此；内核以 -fzero-init-padding-bits=all 规避，批评标准委员会纵容。 `<!-- ROW_MINE: ksummit.messages.7877 -->`
+- 【Linux社区】Miguel 预告数月内将在 Kangrejos 与 Kernel Summit 展开多项 Rust 政策讨论，建议峰会借此定夺相关策略。 `<!-- ROW_MINE: ksummit.messages.7882 -->`
+- 【Linux社区】忧虑 cleanup 属性无引用计数时易致双重释放，宁漏 free 也不冒漏置 NULL 之险；经说明 glib 以所有权转移化解后部分接受该机制。 `<!-- ROW_MINE: ksummit.messages.7885 -->`
+- 【Linux社区】与 Konstantin 厘清 git-bug 方案：摄取前端预分析报告、仅维护者可建 tracked bug，追问是否需跨子系统公开检索“已知问题”并以 lore 邮件线程补充信息。 `<!-- ROW_MINE: ksummit.messages.7891 -->`
+- 【Linux社区】质疑“该位置全部写为原子则编译器不得凭空加写”的论断，提出更符合直觉的模型是原子写前后构成编译器屏障，屏障间非原子写可自由优化。 `<!-- ROW_MINE: ksummit.messages.7893 -->`
+- 【Linux社区】回应“可信静态检查器名单如何扩充”之问，主张把 James 的提案当指导原则，由维护者凭常识个案判断是否收补丁。 `<!-- ROW_MINE: ksummit.messages.7894 -->`
+- 【Linux社区】针对老文件系统（affs 等）遭 syzbot 骚扰，建议在挂载路径加 pr_warn 或引入 taint 标志，沿用当年忽略树外二进制驱动的做法。 `<!-- ROW_MINE: ksummit.messages.7914 -->`
+- 【Linux社区】Slade Watkins 提议在 Bugzilla 减痛改革中设“联络人”衔接终端用户与开发者并代为分流，自称已两次表态愿承担此职，询 Leemhuis 是否采纳。 `<!-- ROW_MINE: ksummit.messages.8070 -->`
+- 【Linux社区】Kozlowski 引明尼苏达大学计算机系 4 月 21 日官方声明，质疑其 IRB 审查有效性；指出 uwn.net 缺陷提交真伪不明，信任破坏后无法验证研究是否已停止。 `<!-- ROW_MINE: ksummit.messages.8074 -->`
+- 【Linux社区】Borislav Petkov 澄清对 CXL RAS 报告系列的意见：并非要求全新设计，而是建议直接复用既有 EDAC 子系统，反问为何要另起炉灶。 `<!-- ROW_MINE: ksummit.messages.8075 -->`
+- 【Linux社区】Daniel Vetter 认同 AI 计算本质受限于矩阵乘，但称 BLAS 接口对可编程设备过浅；小型 SoC NPU 可用固定接口，且不应允许厂商私有扩展或旁路上传编译产物。 `<!-- ROW_MINE: ksummit.messages.8089 -->`
+- 【Linux社区】Rafael Wysocki 提醒维护者峰会因 Documentation/process/conclave.rst 承担正式应急职能，若大幅改形式须同步修订该预案。 `<!-- ROW_MINE: ksummit.messages.8091 -->`
+- 【Linux社区】James Bottomley 主张 __free 变量不初始化置于块首，混排声明规则可放宽但须注释说明必要性；强调规则应统一适用，并支持以显式作用域块界定变量生命周期。 `<!-- ROW_MINE: ksummit.messages.8094 -->`
+- 【Linux社区】Dan Williams 反对为 bcachefs 事件过度制度化：非正式流程最终仍以项目健康为先，主张培养设定边界的成熟与勇气，引 Pat Gelsinger“少求对、多求效”。 `<!-- ROW_MINE: ksummit.messages.8100 -->`
+- 【Linux社区】Arınç ÜNAL 自述维护 MediaTek DSA 与若干 dt-binding，主张把 dt-bindings 与 DT 源文件移出 Linux 仓库，建 Linux、U-Boot、OpenWrt 共用统一硬件描述仓库，并请求出席峰会。 `<!-- ROW_MINE: ksummit.messages.8115 -->`
+- 【Linux社区】Rostedt 以环形缓冲代码为例，询问 __free 变量声明后紧接分配时能否把声明下移到普通声明之后，受 80 列换行影响可读性，请 Linus 定夺。 `<!-- ROW_MINE: ksummit.messages.8120 -->`
+- 【Linux社区】Greg KH 回应 Bottomley 批评：kernel.org 与 OpenSSF 合作的 Web of Trust 新方案将于 2 月会议公开，可评审时即发布；Bottomley 斥其违背“早发布、常发布”开源准则。 `<!-- ROW_MINE: ksummit.messages.8123 -->`
+- 【Linux社区】Dan Carpenter 澄清 KTODO 非代码注释，而是邮件列表中单行摘要式可检索标签，配合 Closes: 标记可写工具筛出未关闭项。 `<!-- ROW_MINE: ksummit.messages.8124 -->`
+- 【Linux社区】Konstantin Ryabitsev 提议把新缺陷与评论汇入 public-inbox 数据流，可经 lore.kernel.org 与 lei 查询；战略是用可镜像的查询式订阅避免单点故障，无需全员换工作流。 `<!-- ROW_MINE: ksummit.messages.8128 -->`
+- 【Linux社区】Rostedt 表明立场：AI 审查放 CI 即可，暂不必担心专有锁定，报告同时抄送提交者与维护者双方受益；认同先做维护者侧、勿转嫁贡献者的路线。 `<!-- ROW_MINE: ksummit.messages.8130 -->`
+- 【Linux社区】Dave Hansen 回应 Lorenzo：现有规则暂能抵挡 LLM 滥用但堤坝随时可能溃决；并以 checkpatch 输出可被直接拒收为例，质疑指南会鼓励维护者无理由拒稿之说。 `<!-- ROW_MINE: ksummit.messages.8131 -->`
+- 【Linux社区】Mauro 分享用 wdiff 审阅重命名补丁的经验，给出 diff-highlight 作 git pager 的配置；称 Fedora 33 需自改 perl 脚本，git 2.29 可用，因 RH bug 1952030 从 2.30 回退。 `<!-- ROW_MINE: ksummit.messages.8134 -->`
+- 【Linux社区】Ted 拟咨询法律顾问四问：DCO 是否须披露 LLM 生成、需何种细节、全盘生成与局部修改是否区别对待、提示词是否如 coccinelle 脚本般记入提交说明。 `<!-- ROW_MINE: ksummit.messages.8135 -->`
+- 【Linux社区】Martin Petersen 实证 SCSI 已在合并大量琐碎补丁：静态检查器与编译器日益严苛，拒不应用则同型修复每周重发；有人维护与无人维护的驱动已无差别，需更好流程与辅导。 `<!-- ROW_MINE: ksummit.messages.8145 -->`
+- 【Linux社区】Dan Carpenter 就 devres 与 uapi 资源混用给出三种检测思路：直接检查、按类型推断并建 kernel.ignore_devres_types 例外表、Sparse 手工注解，建议并行实现。 `<!-- ROW_MINE: ksummit.messages.8147 -->`
+- 【Linux社区】Jan Kara 认为该 AI 照片分类共享场景无需 richACL：用 AI 属主、带粘滞位的 rwxrwxrwt 目录即可实现可删己不可删人，创建限制用任意 LSM 即可施加。 `<!-- ROW_MINE: ksummit.messages.8154 -->`
+- 【Linux社区】Artem 确认其提案实质：仅为出现在 MAINTAINERS 中的维护者自动创建 bugzilla 账号以便人工分流时抄送，并非设为默认指派，不会带来垃圾邮件。 `<!-- ROW_MINE: ksummit.messages.8156 -->`
+- 【Linux社区】Hellwig 强烈反对 Rust 政策网页：内容失实，并披露 Linus 私下称将无视子系统维护者反对强并 Rust；警告绑定代码将如癌症蔓延，多语言无序化会迫使他抽身。 `<!-- ROW_MINE: ksummit.messages.8158 -->`
+- 【Linux社区】Dave Hansen 发布 TAB 集体起草的工具生成内容指南 v3 全文：新增 generated-content.rst 97 行，要求披露工具、提示词与测试方式，已获 Shuah、Kees、Greg、Miguel 等 8 人 Reviewed-by。 `<!-- ROW_MINE: ksummit.messages.8159 -->`
+- 【Linux社区】Jarkko Sakkinen 展示 NixOS 构建的 TPM 驱动测试环境：docker compose 构建镜像后 QEMU 启动，计划登记进 MAINTAINERS，与 Fiona 的 nix shell 路线不同。 `<!-- ROW_MINE: ksummit.messages.8160 -->`
+- 【Linux社区】Rostedt 回应 Linus 对峰会“小圈子”化的伤感：资深者主导属项目成熟常态，举 Miguel Ojeda 靠 Rust 进入核心为例；预计 5 年内 50 岁以上维护者交棒，Andrew Morton 已启动。 `<!-- ROW_MINE: ksummit.messages.8165 -->`
+- 【Linux社区】Andrew Morton 称尚未见 LLM 产出有用内核改动，但 AI 找缺陷已可用；以补丁形式出现的 AI 缺陷报告可删补丁自修，切勿制定任何妨碍接收 AI 缺陷报告的规则。 `<!-- ROW_MINE: ksummit.messages.8166 -->`
+- 【Linux社区】Jason Gunthorpe 反问：全开源的相机透传方案是否仅因透传形态就拒收？主张“因恐惧拒绝给用户有用的开源方案”不是 Linux 该做的事。 `<!-- ROW_MINE: ksummit.messages.8169 -->`
+- 【Linux社区】Martin Petersen 实测 __attribute__(__cleanup__) 与 defer 方案：清理逻辑稍复杂即伤可读性，转换大型代码库后多处回退经典 goto 展开，但并非反对两者。 `<!-- ROW_MINE: ksummit.messages.8172 -->`
+- 【Linux社区】Josh Poimboeuf 力挺 ORC：多年稳健、中断异常栈迹干净，唯一失效原因是无视 objtool 告警（即将默认升为编译错误）；x86-64 帧指针已实质弃用，考虑移除该 unwinder。 `<!-- ROW_MINE: ksummit.messages.8173 -->`
+- 【Linux社区】comex 考据 std::string CoW 史：C++11 未明文禁 CoW，但要求 operator[] 为 O(1) 实质封杀，迫使 libstdc++ 破坏 ABI 放弃引用计数实现。 `<!-- ROW_MINE: ksummit.messages.8176 -->`
+- 【Linux社区】Pavel Begunkov 提交峰会议题：io_uring 拟把部分提交与控制权交给 BPF，进一步减少上下文切换与系统调用，作为提交队列轮询的替代，征集用例与 API 意见。 `<!-- ROW_MINE: ksummit.messages.8178 -->`
+- 【Linux社区】Ted 说明峰会预讨论机制：ksummit 列表上的声音会实质影响场内议程；接班规划宜在 LSF/MM 等子系统场合谈，如今年 mm 接班与 FUSE 组织讨论即在 LSF/MM/BPF。 `<!-- ROW_MINE: ksummit.messages.8179 -->`
+- 【Linux社区】Richard Weinberger 报告受影响机型 MPC8343 与 QorIQ P1022：应用常假设内存布局，FPGA 树外驱动共享内核与用户态内存；Christophe 已发 powerpc 全量移除 HIGHMEM 补丁。 `<!-- ROW_MINE: ksummit.messages.8180 -->`
+- 【Linux社区】Ralf Jung 澄清 C++ 内存模型已按程序行为而非类型系统定义，原子对象只是类型系统薄层，Rust 即绕开它；并论证把数据竞争从 UB 改为确定可见值会损害顺序代码优化。 `<!-- ROW_MINE: ksummit.messages.8185 -->`
+- 【Linux社区】Mark Brown 认同 LLM 生成测试数据比测试代码安全，因后者约束更少；场景生成是否可行因运行成本而异，预示 AI 政策将更多靠“品味”而非硬规则。 `<!-- ROW_MINE: ksummit.messages.8189 -->`
+- 【Linux社区】Jiri Kosina 质询 stable 标记边界：既然 stable 只为修错，哪些非修错补丁应获 Cc: stable？点名硬件安全缓解、新设备 ID、quirk 一类，指 stable-kernel-rules 的定义早已不适用。 `<!-- ROW_MINE: ksummit.messages.8192 -->`
+- 【Linux社区】Vegard Nossum 系统提案：维护者条目档案加子系统评审清单并可由 kerneldoc 自动收集、HTML 侧栏按“书”重组、设“社区”卷、翻译加语言切换栏、跨架构文档按读者分流。 `<!-- ROW_MINE: ksummit.messages.8196 -->`
+- 【Linux社区】Artem 力主保留 Bugzilla：驳 GitLab 迁移（商业开源核被收购风险、单点可瘫痪），提议刷新组件、按近半年提交记录订阅开发者，或改 Discourse 八论坛；称 Linus 曾经 Bugzilla 解决其 LKML 无回应的问题。 `<!-- ROW_MINE: ksummit.messages.8198 -->`
+- 【Linux社区】Mauro 指出死锁：若新内核 API 须待发行版先收用户态实现则新 API 永难落地，他作为 Fedora 维护者即会拒绝；并以 CAN 总线与 ASIL 认证说明行业专用硬件不该挤占通用发行版。 `<!-- ROW_MINE: ksummit.messages.8200 -->`
+- 【Linux社区】Konstantin 澄清“THE REST”剥离方案是“预审”而非限权：订阅仍开放，只需说明收全部补丁的理由，高知名度维护者可订阅，并举 outlook.com 断服例证 Gmail 并非唯一故障源。 `<!-- ROW_MINE: ksummit.messages.8205 -->`
+- 【Linux社区】Mauro 解释 sphinx 检测脚本缘由：发行版 LaTeX 元包残缺致装而不能用，故脚本内置 *.sty 清单并用 kpsewhich 复核依赖；回应 openSUSE Leap 15.4 缺 tex-gyre 的问题。 `<!-- ROW_MINE: ksummit.messages.8209 -->`
+- 【Linux社区】Shuah Khan 要求公开 TAB 选举判定 3 至 49 提交档的脚本，并追问其是否也用于候选人资格核验；引选举规则：2020-21 年三项标签提交、CIVS 投票、超 50 提交自动获票。 `<!-- ROW_MINE: ksummit.messages.8219 -->`
+- 【Linux社区】Leon Romanovsky 澄清主张：用户态 API 只需“已用或将用”即有公开 PR 或新包申请即可；反对为覆盖所有设备类型定通用方案，建议聚焦企业与云 AI 设备 API 的主流发行版支持。 `<!-- ROW_MINE: ksummit.messages.8222 -->`
+- 【Linux社区】Linus 实测纠正 David Laight：x86 与 arm64 ABI 下两寄存器大小的结构体同样经寄存器返回（gcc 与 clang 均生成两条 movl 加 ret），超过两寄存器才走间接内存。 `<!-- ROW_MINE: ksummit.messages.8233 -->`
+- 【Linux社区】Guenter Roeck 等人自述 linux-next 分支从不承诺稳定，变基多为补加 tag、偶删彻底损坏提交，以免缺陷与修复成对涌入上游损害二分可定位性 `<!-- ROW_MINE: ksummit.messages.8518 -->`
+- 【Linux社区】Greg KH 质疑 Rust Ref 类型复用 refcount_t 却缺锁，指并发获取引用与释放最后引用需锁保护，认为其重复 struct kref 逻辑，要求说明锁在何处 `<!-- ROW_MINE: ksummit.messages.8527 -->`
+- 【Linux社区】Mark Brown 回应 Laurent 按专长摊派非业务利益评审的提案，指评审者缺背景知识会致迂腐评审，作为显性要求需在实效与负担间平衡 `<!-- ROW_MINE: ksummit.messages.8529 -->`
+- 【Linux社区】James Bottomley 主张部分回归只能在 stable 发现、零回归不可能，建议跟踪回归发现时延并回问 stable 独有回归能否在 mainline 发现，以校准回移植延迟，称 6.9 起合并窗口修复已延后 `<!-- ROW_MINE: ksummit.messages.8532 -->`
+- 【Linux社区】Kees Cook 确认 strlcpy 清理近尾声（Azeem Shaikh 推进），FORTIFY_SOURCE 编译期已能查缓冲尺寸不匹配，并认同 Linus 所言盲转 strscpy 会改变语义 `<!-- ROW_MINE: ksummit.messages.8535 -->`
+- 【Linux社区】Dan Carpenter 建议在 --- 线下加“Patch generated with AI”标注，自述 staging 曾收 AI 补丁抄自幻觉出的规格书，提交信息流畅自信致重读才识破全错 `<!-- ROW_MINE: ksummit.messages.8539 -->`
+- 【Linux社区】Konstantin 给出 gitconfig 配置 linktrailermask=Message-Id: <%s>，令 b4 am -l 仍输出消息号链接尾注，兼顾尾注消歧与稳定版系列追踪 `<!-- ROW_MINE: ksummit.messages.8542 -->`
+- 【Linux社区】Borislav Petkov 追问 fwctl 为何物，主张 RAS 的控制与评估应归 rasdaemon，质疑 fwctl 与内存设备 RAS 的关联 `<!-- ROW_MINE: ksummit.messages.8548 -->`
+- 【Linux社区】Richard Weinberger 介绍 kbooboo：纯静态 HTML/JS 前端加 Go 生成器，从内核构建产出 JSON 数据库、可随版本发布重建，愿适配 kernel.org 托管 `<!-- ROW_MINE: ksummit.messages.8549 -->`
+- 【Linux社区】James Bottomley 举证提交 37f1663c9193 无 Fixes 与 cc:stable 却被 AUTOSEL 回移植且带入 strlcpy 转 strscpy 缺陷；Sasha 称统计显示 autosel 回归更少、现已延迟约 3-4 周 `<!-- ROW_MINE: ksummit.messages.8551 -->`
+- 【Linux社区】Ted Ts'o 公布 2021 维护者峰会（都柏林 9 月 27-29，视疫情或转线上）与程序委员会五人名单，说明 30 人邀请制、议题双轨提交流程及 ksummit 列表迁至 lists.linux.dev `<!-- ROW_MINE: ksummit.messages.8554 -->`
+- 【Linux社区】Steven Rostedt 指出 checkpatch.pl 对 include/trace 下近乎自成语言的复杂宏基本失效，强行套用内核规范只会令代码更丑更难读 `<!-- ROW_MINE: ksummit.messages.8561 -->`
+- 【Linux社区】Konstantin 质疑 AI 标注免责逻辑：若提交者对 AI 生成代码不负法律责任，何妨粘贴专有版权代码再标 Generated-by 脱责，凸显标注制度存在漏洞 `<!-- ROW_MINE: ksummit.messages.8562 -->`
+- 【Linux社区】Miguel Ojeda 主张编译期检测远胜运行时检测，目标是最大化 safe 代码；每个 unsafe 块须书面论证健全性，纯 Rust 数据结构即刻可用 Miri，或可让 Rust 自管对象所有权以强化静态保证 `<!-- ROW_MINE: ksummit.messages.8564 -->`
+- 【Linux社区】Mauro 以 Hello World 溯源 BCPL、quick brown fox 为例，主张 AI 重复的只是海量通用模式、已成常识难言版权，人类亦然，回应 AI 标注的版权顾虑 `<!-- ROW_MINE: ksummit.messages.8566 -->`
+- 【Linux社区】Linus 断言 AI slop 制造者不会自我标注，文档只面向善意者，坚称内核开发文档不应作任何 AI 立场表态，只接受“只是工具”表述，斥纠缠 AI slop 为愚蠢 `<!-- ROW_MINE: ksummit.messages.8567 -->`
+- 【Linux社区】Miguel Ojeda 发布 2025 TAB 选举：12 月 13-20 投票，Corbet、Greg KH、Levin、Rostedt、Ts'o 五席届满，资格为 2024 年后 3 笔带 tag 提交、50 笔自动获票，续用 CIVS，并总结 TAB 一年工作 `<!-- ROW_MINE: ksummit.messages.8568 -->`
+- 【Linux社区】Andy Lutomirski 要求 Greg 举出内核树中 kref 需外置锁的具体用例，称先锁再 put 模式罕见，并质疑统一“基对象”模型难以覆盖 v4l、input 层等多生命周期交互对象 `<!-- ROW_MINE: ksummit.messages.8571 -->`
+- 【Linux社区】Greg KH 重申 stable 首条规则是不给不愿参与者添负担；Mark Brown 自述因 AUTOSEL 抓取更多而基本停用 cc:stable；Greg 提出可将其子系统列入禁跑 AUTOSEL 名单，kvm、mm、xfs 已如此 `<!-- ROW_MINE: ksummit.messages.8572 -->`
+- 【Linux社区】Andy Lutomirski 以 Weak 升级返回 Option 为例说明求和类型强制判空，主张其价值更胜借用检查，并举页表项 Empty、NextTable、Page 联合类型可杜绝误读大页 `<!-- ROW_MINE: ksummit.messages.8573 -->`
+- 【Linux社区】Jiri Kosina 指出明尼苏达大学事件中至少两笔提交（pci_slot_release 野解引用、set_fan_div 漏解锁）实际引入新的安全与稳定问题，驳“仅损信任未损内核”之说 `<!-- ROW_MINE: ksummit.messages.8574 -->`
+- 【Linux社区】Arınç ÜNAL 主张设备树定义与 Linux 开发分离、不得以驱动理由阻塞绑定修补，自述多年被要求先改驱动才收补丁；Rob 引文称内核硬件支持最广不宜迁出，独立库已供 U-Boot 使用 `<!-- ROW_MINE: ksummit.messages.8584 -->`
+- 【Linux社区】Ventura Jack 与 Ralf Jung 论战别名规则：Jung 指别名要求仅限引用、裸指针可全退出且 C 亦无形式化别名模型；VJ 反驳 Miri 似 sanitizer 只测运行时可达路径，实测慢 50 至 400 倍 `<!-- ROW_MINE: ksummit.messages.8585 -->`
+- 【Linux社区】Bart Van Assche 以 GCC cleanup 属性宏示例演示 C 语言亦可实现 RAII，回应对驱动 goto 错误路径难维护、Rust 可改进的论点 `<!-- ROW_MINE: ksummit.messages.8586 -->`
+- 【Linux社区】Linus 逐条驳斥弃用 affs 等老旧文件系统的理由：安全上不自动挂载即可、syzbot 报告可忽略、buffer cache 微不足道，斥“移到用户态”论调不实 `<!-- ROW_MINE: ksummit.messages.8589 -->`
+- 【Linux社区】Dan Carpenter 介绍 Smatch 锁检查思路：推断锁与成员配对、锁定释放点及 userfaultfd 时序攻击面，并提错误处理四条铁律，主张子系统可自选更严硬化规则 `<!-- ROW_MINE: ksummit.messages.8592 -->`
+- 【Linux社区】Jason Gunthorpe 论断客户、OEM、OS、芯片商分离协作格局瓦解，垄断巨头只剩压价动机，Linux 合入权沦为事实标准；称 uAPI 一入永难删，曾欲删无用 uAPI 遭阻，质问为何不删 drivers/accel `<!-- ROW_MINE: ksummit.messages.8593 -->`
+- 【Linux社区】Sasha Levin 称 linus-next 只为让 Linus 合并前确知 PR 可构建不搞坏机器，反对设停留天数门槛；Jiri 转述峰会共识：投入 -next 持续测试不值，不如 rc1 后处理 `<!-- ROW_MINE: ksummit.messages.8596 -->`
+- 【Linux社区】Rob Herring 驳回“先改绑定文档、后测驱动再修”方案：需两侧同步即已破坏 ABI，且补丁序不可二分；称即使绑定移出内核树也维持同样要求 `<!-- ROW_MINE: ksummit.messages.8598 -->`
+- 【Linux社区】Geert Uytterhoeven 指出 AMD、Intel 各有 50 至 100 人多团队，难全员掌握上游合并周期，建议发布前把 fixes 合入 next 并解冲突；自述 renesas 双周构建中 DRM 冲突最大 `<!-- ROW_MINE: ksummit.messages.8600 -->`
+- 【Linux社区】Mark Brown 解释 patch.msgid.link 域名用意：一眼可辨仅为原补丁链接且已广泛部署，回应 Mathieu Desnoyers 新设 Origin 标签消解 Link 尾注语义混杂的提议 `<!-- ROW_MINE: ksummit.messages.8607 -->`
+- 【Linux社区】Ralf Jung 阐明 unsafe 不改变语义、别名优化依赖全程序普适假设，局部豁免即整体失效；Linus 引证 GCC 不重物化载入、C 标准已禁加宽存储，Jung 认为多数基础工作已就绪 `<!-- ROW_MINE: ksummit.messages.8609 -->`
+- 【Linux社区】Dave Airlie 承认 DRM 对非 DRM 补丁无明确责任人，kernel-doc 修复也会石沉大海，询问可否设标签自动放行跨树接口改动，或发放 drm-misc 提交权 `<!-- ROW_MINE: ksummit.messages.8611 -->`
+- 【Linux社区】Dave Hansen 公布 2023 TAB 选举结果：992 名合格选民 203 人投票，Greg KH、Corbet、Rostedt、Ts'o、Levin 五人当选，任期两年 `<!-- ROW_MINE: ksummit.messages.8618 -->`
+- 【Linux社区】Tim Bird 提出按子系统维护者配置真阳性清单、构建期只查新提交或与 index 差异文件、或转 gcc 插件，并引 2017 年 Knut Omang 未获采纳的 kbuild 集成先例 `<!-- ROW_MINE: ksummit.messages.8623 -->`
+- 【Linux社区】Miguel Ojeda 强调须澄清 Rust 是对 C++ 的严格改进；自称非信徒，若 C 委员会开放 defer、lambda 等特性愿出力；认可 Laurent 保留“收益是否抵过成本”的质疑 `<!-- ROW_MINE: ksummit.messages.8626 -->`
+- 【Linux社区】Miguel Ojeda 提议初审 bot 只罗列问题、不评判补丁该否评审并跳过 RFC，以省评审时间并助新人理解要求；担忧刷补丁过检行为，建议设 staging 列表承接 `<!-- ROW_MINE: ksummit.messages.8630 -->`
+- 【Linux社区】Matthew Wilcox 称若 folio 化 write_begin 与 write_end 仅转 kdevops 可测文件系统、余者标 CONFIG_BROKEN，Linus 必拒收 PR，感叹未维护文件系统有热心用户却无维护能力、进退两难 `<!-- ROW_MINE: ksummit.messages.8632 -->`
+- 【Linux社区】Steven Rostedt 实测后改判：裸 Message-Id 需手动拼接不便，回归 msgid.link URL；建议 Link: 留给讨论链接，另设 Pulled-from 标注补丁来源 `<!-- ROW_MINE: ksummit.messages.8633 -->`
+- 【Linux社区】Mauro 响应 kernel.org 补丁统一入口构想（自动 get_maintainer 抄送、按账户偏好分发），指出回复地址须指向基础设施机器人并同步分发全部回复，方能保全邮件式评审流程 `<!-- ROW_MINE: ksummit.messages.8637 -->`
+- 【Linux社区】Sasha Levin 反对将扁平合并树改金字塔，称跨子系统层级化难行，应设共维护者组分担负载（如 x86 一组）；引 LWN 记录指 Linus 与与会者均未视扁平为问题 `<!-- ROW_MINE: ksummit.messages.8638 -->`
+- 【Linux社区】Dan Carpenter 讽刺 C 侧抗拒整数溢出检查却要求 Rust 侧守更强规则，举“先乘后判溢出”写法为例，称此类人应被永久禁止宣传 Rust `<!-- ROW_MINE: ksummit.messages.8639 -->`
+- 【Linux社区】Ralf Jung 界定写可见性规则：某位置全为原子写时编译器不得凭空增写，一旦出现非原子写即示无并发访问、可引入额外写，C、C++、Rust 规范皆然 `<!-- ROW_MINE: ksummit.messages.8641 -->`
+- 【Linux社区】Dave Chinner 主张改 API 时以 CONFIG_BROKEN 或挂载告警正式承认无人维护文件系统不可信，称继续维持“仍正常工作”是谎言，用户不应假定数据安全 `<!-- ROW_MINE: ksummit.messages.8653 -->`
+- 【Linux社区】Alex Levin 与 Jesse Barnes 提议峰会介绍 ChromeOS 内核：服务数百万用户、数百平台、多内核版本与 SoC 架构，议题含尽早测上游 RC、线上内核更新、控制技术债贴近上游、现场实验反哺上游 `<!-- ROW_MINE: ksummit.messages.8656 -->`
+- 【Linux社区】Greg KH批驳Airlie的DRM合并窗口说：开发者无需停工，只需分清新功能与修复入不同队列；并称DRM树模式致Fixes:标签全错、回归与CVE追踪尽坏，殃及稳定树回移。 `<!-- ROW_MINE: ksummit.messages.7917 -->`
+- 【Linux社区】Laura Abbott澄清TAB选举投票规则：超50提交者自动获寄选票，3至49提交者须主动申请，承认表述混乱并承诺次年改进流程。 `<!-- ROW_MINE: ksummit.messages.7921 -->`
+- 【Linux社区】Rostedt认同Rafael所指conclave.rst应急计划：维护者峰会已具正式地位，若大幅改格式须同步修订这份“制定计划的计划”。 `<!-- ROW_MINE: ksummit.messages.7924 -->`
+- 【Linux社区】Belloni审视Rust版PL061与C版反汇编对比，质疑示例关闭溢出检查、rust_helper_readb未内联成函数调用，并指简单驱动才代表多数待转换场景。 `<!-- ROW_MINE: ksummit.messages.7926 -->`
+- 【Linux社区】Gushchin谈Sashiko AI审查：可用自定义提示审查LTS回移，有主线基线噪音更小；多模型并行跑发现阶段1至7可互相协作提质；可查预存缺陷库避免重复上报。 `<!-- ROW_MINE: ksummit.messages.7931 -->`
+- 【Linux社区】Tony Luck指当前AI只会按提示在输出上贴“SPDX-License-Identifier: GPL-2.0-only”即自称成功，要确保许可兼容须付费用仅含GPL代码训练的专用模型。 `<!-- ROW_MINE: ksummit.messages.7933 -->`
+- 【Linux社区】Wedson详解Rust版PL061：编译期边界检查决定writeb与try_writeb取舍、drvdata类型安全免运行时代价、可撤销资源防设备移除后误用、RAII取代goto清理链。 `<!-- ROW_MINE: ksummit.messages.7939 -->`
+- 【Linux社区】Leemhuis提案区分紧急与非紧急回移：稳定树只回移主线存在约两周或到rc4后的修复，扩展Fixes:标签加延时注记，并指补丁系列依赖关系无从识别致回移出错。 `<!-- ROW_MINE: ksummit.messages.7941 -->`
+- 【Linux社区】Mauro强调PGP信任网仍用于签git标签请Linus合并，git 2.52.0前标签签名仅允许PGP；kernel.org密钥环约600个密钥，欢迎ssh推送但须有同等信任机制。 `<!-- ROW_MINE: ksummit.messages.7948 -->`
+- 【Linux社区】Bonzini质疑lore存档完整性：lkml下git仓库收不全补丁，也无从过滤非Linux项目的/all/1.git，影响“THE REST”迁出vger的可行性。 `<!-- ROW_MINE: ksummit.messages.7949 -->`
+- 【Linux社区】Bart Van Assche建议把blktests纳入linus-next的LKFT与KernelCI测试，称该套件报出的失败多数最终证明是内核缺陷而非测试自身问题。 `<!-- ROW_MINE: ksummit.messages.7951 -->`
+- 【Linux社区】Mark Brown支持子维护者树进linux-next：修复树缺席致-next坏一周会掩盖其他测试结果；多数人乐意入next只是遗忘或不了解，另有封面信附PR未经评审即藏提交的情形。 `<!-- ROW_MINE: ksummit.messages.7954 -->`
+- 【Linux社区】Howlett认同Weiner观点：LLM参与度是巨大光谱，二值标签信噪比差且已带污名，无法传递“谁在哪步思考”的真实分工，提交元数据难以承载这些细节。 `<!-- ROW_MINE: ksummit.messages.7958 -->`
+- 【Linux社区】Pinchart建议设备直通议题改到LPC开专场，因相关专家太多峰会房间装不下；但忧心演成公开争斗，且有些论据不便在开放场合陈述。 `<!-- ROW_MINE: ksummit.messages.7959 -->`
+- 【Linux社区】Rostedt质疑Kees提议的Debian式贡献者活动仪表盘：可被xz事件式手段刷分操纵，建立信任最终仍靠人与人之间的联系。 `<!-- ROW_MINE: ksummit.messages.7962 -->`
+- 【Linux社区】Stoakes主张文档明确：LLM使端到端无经验投稿成为可能，明显AI垃圾应可直接拒绝；Williams担心“猎巫”伤社区，Stoakes称只针对极端明显案例。 `<!-- ROW_MINE: ksummit.messages.7967 -->`
+- 【Linux社区】Boqun Feng称其评审中Rust补丁与C补丁同标准；政策文档讲“子系统如何引入Rust”等更高层内容；并指Jarkko的DMA补丁仅有函数定义级doc测试。 `<!-- ROW_MINE: ksummit.messages.7969 -->`
+- 【Linux社区】Mason澄清BPF的AI评审已在GitHub kernel-patches/bpf运行（如PR 9962即评审提示产物）；Rostedt提议把AI挂到patchwork由服务器侧付费运行而非转嫁提交者。 `<!-- ROW_MINE: ksummit.messages.7971 -->`
+- 【Linux社区】Mauro想换后量子算法主密钥加3至5年有效期可撤销子密钥，但gpg 2.4不支持、升2.5会生成不兼容LibrePGP密钥，远程重建信任网亦难，只能等新版本再动。 `<!-- ROW_MINE: ksummit.messages.7973 -->`
+- 【Linux社区】Jiri Kosina回忆当年维护者峰会结论：多数人认为持续投入资源加固linux-next测试不划算，不如在rc1后阶段集中处理失败。 `<!-- ROW_MINE: ksummit.messages.7979 -->`
+- 【Linux社区】Pinchart点破“屋里的大象”：不强制维护者处理Rust、不得nack Rust抽象、不得破坏Rust构建三条原则最多同时成立两条，质问社区准备先放弃哪条。 `<!-- ROW_MINE: ksummit.messages.7982 -->`
+- 【Linux社区】Weinberger发布kcontact原型：静态JS网站粘贴内核日志即分析栈回溯，查x86_64全模块预生成符号表映射到子系统L:条目并跳过前3帧入口代码，指引报告去向。 `<!-- ROW_MINE: ksummit.messages.7984 -->`
+- 【Linux社区】Kosina以hidraw与FIDO令牌反驳直通有害论：libfido2用户态驱动已普及用于kernel.org、Google等认证，生态未碎、无工作流被破坏。 `<!-- ROW_MINE: ksummit.messages.7985 -->`
+- 【Linux社区】Ventura Jack问询Rust验证工具现状：Prusti数月无提交，Gillian-Rust未用stacked或tree borrows，RefinedRust复用Miri代码，关注研究原型与实用的距离。 `<!-- ROW_MINE: ksummit.messages.7994 -->`
+- 【Linux社区】Carpenter实测Link:标签不可靠：抽查首例即v1链接配v3提交；按函数名在lore检索排第44、按作者排第113，感叹逐补丁溯源不可行。 `<!-- ROW_MINE: ksummit.messages.7996 -->`
+- 【Linux社区】Mauro披露media子系统29个被回退补丁无恶意代码，仅1个冗余其余有效，质疑盲目回退umn.edu补丁；引Morris称因不知实验范围须审计其全部贡献。 `<!-- ROW_MINE: ksummit.messages.7997 -->`
+- 【Linux社区】Bottomley谈__free变量放置：认同在分配处声明可免去空指针释放检查、便于新增早退；并提出以显式作用域块限定变量使用范围，配合scoped_guard处理锁与释放纠缠。 `<!-- ROW_MINE: ksummit.messages.8002 -->`
+- 【Linux社区】Leemhuis拟LPC回归专场：KernelCI与regzbot已合并运作，介绍回归追踪现状与计划，并讨论AI时代regzbot是否仍有用、要不要建pending与wip修复树。 `<!-- ROW_MINE: ksummit.messages.8003 -->`
+- 【Linux社区】Rostedt反对邮件列表强制封面信抄送校验：会破坏quilt工作流，自称、Peter Zijlstra与Andrew Morton皆用quilt；也不愿被稳定补丁封面信抄送。 `<!-- ROW_MINE: ksummit.messages.8006 -->`
+- 【Linux社区】Leon Romanovsky列第二语言两大代价：跨子系统grep替换式重构变难、CONFIG组合下编译与验证矩阵翻倍；经Walleij解释“整块替换而非第二内核”后表示可以接受。 `<!-- ROW_MINE: ksummit.messages.8008 -->`
+- 【Linux社区】Pinchart认为若目标只是RAII等特性C++勉强算替代但弊大于利，Rust是第二语言佳选；惟收益能否抵过开发流程扰动尚待观察，并希望Rust语法当初更贴近C。 `<!-- ROW_MINE: ksummit.messages.8013 -->`
+- 【Linux社区】Pinchart部分反驳Linus对C++的否定：析构函数、unique_ptr、类型安全模板对内核有用，但承认C++无真正类型与运行时安全，只盼纯C能拥有带析构的对象。 `<!-- ROW_MINE: ksummit.messages.8016 -->`
+- 【Linux社区】Hellwig反驳Linus：“别启用”不可行，老旧文件系统支持状态随内核版本变化须内核内标记，syzbot骚扰需统一停报机制；并澄清要去除的是buffer_head整文件I/O助手而非buffer cache。 `<!-- ROW_MINE: ksummit.messages.8017 -->`
+- 【Linux社区】2021年TAB选举结果：1012名有资格投票者中237人投票，Greg KH、Corbet、Rostedt、Ts'o、Levin当选两年任期，Hansen、Overstreet、Taht落选。 `<!-- ROW_MINE: ksummit.messages.8019 -->`
+- 【Linux社区】Takashi Iwai为stable抄送邮件辩护：个别补丁经带fuzz的cherry-pick会错打，须见原补丁才能核查，完全过滤将失去这一发现渠道。 `<!-- ROW_MINE: ksummit.messages.8023 -->`
+- 【Linux社区】Uecker提议仿GCC诊断pragma划区启用内存安全检查，含运行期陷阱的DYNAMIC模式；并展示UBSan插桩后仅当优化器未消除陷阱才告警，可借优化器证明无溢出，已有GCC补丁。 `<!-- ROW_MINE: ksummit.messages.8024 -->`
+- 【Linux社区】Airlie称AMD与Intel各50至100人跨多团队喂同一驱动，难要求全员理解上游周期；Geert指先合入next再发布有助减少冲突但破坏commit ID唯一性，殃及stable追踪与Fixes:标签。 `<!-- ROW_MINE: ksummit.messages.8025 -->`
+- 【Linux社区】Jung论证Miri独一无二：C侧仅Cerberus可执行规范但只跑微型示例，C标准歧义致编译器与程序员理解冲突；Rust追求规定性无歧义规范，1.84已悄然启用新trait solver。 `<!-- ROW_MINE: ksummit.messages.8029 -->`
+- 【Linux社区】Bottomley不认同AI审查的专有技术锁定担忧：先例有BitKeeper与Kubernetes的Slack；更可能是AI泡沫破裂投资退潮、开源AI上位；无论如何AI进CI优于压给贡献者。 `<!-- ROW_MINE: ksummit.messages.8032 -->`
+- 【Linux社区】Tarreau捍卫邮件为内核开发通用语：反驳“邮件在开会一周后失效”，称会议上人们屏幕只有代码、幻灯与邮件，bug报告随邮箱自然可见，bugzilla界面则无人看。 `<!-- ROW_MINE: ksummit.messages.8036 -->`
+- 【Linux社区】Figa澄清V4L2有无状态解码器接口，命令缓冲与固定功能两种界面在DRM与V4L2各有取舍；点名Intel IPU6及更新、Qualcomm、MediaTek的ISP原生用命令缓冲。 `<!-- ROW_MINE: ksummit.messages.8038 -->`
+- 【Linux社区】Greg KH披露security@近月已理顺并将获约6个月专人全职经费；LLM仅限本地模型因涉法律约束，AI接入过滤不可行，真正难题是不回应的报告者与横插一手的中间商。 `<!-- ROW_MINE: ksummit.messages.8044 -->`
+- 【Linux社区】Ojeda回应Levin“抽象成孤儿”论：此问题与语言无关且RFC已承认第二语言代价；过渡期由子系统维护者与Rust团队协助重构，长期仍需多数开发者掌握Rust。 `<!-- ROW_MINE: ksummit.messages.8055 -->`
+- 【Linux社区】Ryabitsev坚持自动化需可靠锚点：b4在作者微调8/10号补丁时十次错九次；列举From与Date被覆盖、误投列表等六种匹配失败场景，提议以patch.msgid.link域或“# patch”注记标示补丁来源。 `<!-- ROW_MINE: ksummit.messages.8060 -->`
+- 【Linux社区】Rostedt自述urgent与core双分支流程：修Linus树的紧急修复不进linux-next，经约8小时测试后直发PR；若-next反馈更好愿考虑纳入，并支持PR健康检查机器人报告抄送、bake时长与测试失败。 `<!-- ROW_MINE: ksummit.messages.8065 -->`
+- 【Linux社区】Stoakes反驳Carpenter软化草案：能理解并辩护所提交代码是内核评审基本要求；若文档要求“多人仔细审”500个工具生成补丁，等于放弃直接拒绝AI垃圾的立场。 `<!-- ROW_MINE: ksummit.messages.8067 -->`
+- 【Linux社区】Ted Ts'o批评Wedson FS幻灯的绑定对C程序员过于复杂，建议改造C侧抽象使Rust绑定易维护可自动生成、新手可更新、热路径少回归，并以“同时解决多问题”作为方向判据。 `<!-- ROW_MINE: ksummit.messages.8069 -->`
+- 【Linux社区】面板支持牵涉DDIC与玻璃厂商双重NDA，面板IC商无上游提交记录，高通以超通用驱动加复杂DT描述面板，举安卓vendor树为例。 `<!-- ROW_MINE: ksummit.messages.8246 -->`
+- 【Linux社区】Wedson为写Rust GPIO抽象读代码，指出gpiochip移除时“numbing”未同步，gpio_ioctl判空后下游lineinfo_get仍可能用空指针，存在UAF竞态。 `<!-- ROW_MINE: ksummit.messages.8248 -->`
+- 【Linux社区】Brauner比较“伪君子提交”与2003年uid=0木马提交，认为即便一条问题提交入树已令UMN研究伦理可疑，各子系统审查强度差异巨大。 `<!-- ROW_MINE: ksummit.messages.8250 -->`
+- 【Linux社区】Lorenzo反对弱化措辞，坚持全自动生成补丁须“接受额外审查”，提交者须能解释并捍卫每行代码，否则维护者可直接拒绝整个系列。 `<!-- ROW_MINE: ksummit.messages.8254 -->`
+- 【Linux社区】Chinner引buffer_head在Debian为104字节、iomap用摘要位图更可扩展，警告EU网络弹性法案与虚假CVE将迫使删除不可验证的旧文件系统。 `<!-- ROW_MINE: ksummit.messages.8256 -->`
+- 【Linux社区】Shuah报告2005年起probe失败仍注册驱动并留sysfs接口，Laurent指probe失败未必是驱动之过，如何区分驱动bug与设备故障尚无方案。 `<!-- ROW_MINE: ksummit.messages.8263 -->`
+- 【Linux社区】Arnaldo提议CI对补丁做测试、LLM与lint后加盖“合格章”并分类，让维护者早晨优先读“好补丁”，并盼perf构建与测试纳入自动化。 `<!-- ROW_MINE: ksummit.messages.8264 -->`
+- 【Linux社区】Bartosz告知Laurent其树可入linux-next，但媒体子系统cherry-pick其PR将致重复提交，Rothwell的机器人会自动发重复警告邮件。 `<!-- ROW_MINE: ksummit.messages.8267 -->`
+- 【Linux社区】Mauro称AI出现前就常收到雷同补丁、通用算法本就高度相似，本地ollama可保隐私；Paul坚持AI问答非私密且版权法风险不容忽视。 `<!-- ROW_MINE: ksummit.messages.8270 -->`
+- 【Linux社区】Sasha指用LLM可从修复提交快速生成可用exploit，security@k.o修复公开加syzkaller面板与vulns.git CVE库实为庞大公开漏洞库。 `<!-- ROW_MINE: ksummit.messages.8272 -->`
+- 【Linux社区】Mason用约300个带已知bug的Fixes补丁迭代Claude审查提示词：漏报就让AI改提示，误报则追问成因并增补假阳性指南。 `<!-- ROW_MINE: ksummit.messages.8273 -->`
+- 【Linux社区】Artem回应Linus怒斥，称从未指点他人工作方式，只求bugzilla允许CC愿意参与的开发者，并称曾借bugzilla解决严重bug。 `<!-- ROW_MINE: ksummit.messages.8274 -->`
+- 【Linux社区】Linus主张C的安全与不安全标注应像属性一样绑定具体代码块并随块作用域嵌套，反对_Pragma式safe on与off全局开关模型。 `<!-- ROW_MINE: ksummit.messages.8279 -->`
+- 【Linux社区】Arnd逐平台核查kmap_high_get去留：ARMv7与多数ARMv6缓存不混叠可关，AST2500仅512MB，ARMv5 VIVT仍依赖，新型SAM9x7限256MB。 `<!-- ROW_MINE: ksummit.messages.8280 -->`
+- 【Linux社区】Gustavo指linux-next每周Coverity扫描项目可认领审计任务，并附其在Kernel Recipes 2017至2019修复Coverity议题的演讲稿与视频。 `<!-- ROW_MINE: ksummit.messages.8283 -->`
+- 【Linux社区】Geert指v6.18-rc1提交944df7a31452删除tip文档中patch.msgid.link的Link:指引，改用不可点击的Message-ID:标签，质疑其通用性。 `<!-- ROW_MINE: ksummit.messages.8286 -->`
+- 【Linux社区】Bottomley批评kernel.org与OpenSSF的新信任网方案拖延公开，违背“尽早发布”开源规范，并称这削弱其在企业内推动开源倡导的立场。 `<!-- ROW_MINE: ksummit.messages.8287 -->`
+- 【Linux社区】Ted详述峰会邀请机制：Linus点名约10至12人、脚本筛年度活跃者、程序委员会按5至1打分取均值划线，30人上限难兼顾各方平衡。 `<!-- ROW_MINE: ksummit.messages.8291 -->`
+- 【Linux社区】Lorenzo提议峰会确立AI提交基本规则与选择加入或退出机制，警告媒体一旦渲染“Linux接受AI补丁”将引发提交激增，并提按子系统红绿灯分级。 `<!-- ROW_MINE: ksummit.messages.8292 -->`
+- 【Linux社区】Jiri分享自身实践：维护for-N+1/topic与for-N/fixes分支并自动合并为for-next供Stephen拉取，不必另开紧急修复分支。 `<!-- ROW_MINE: ksummit.messages.8293 -->`
+- 【Linux社区】Linus称开源最大问题是贡献信任：熟人或凭补丁本身取信，陌生人侵入式补丁默认难被接受，AI既是威胁也可经Sashiko类工具增信。 `<!-- ROW_MINE: ksummit.messages.8299 -->`
+- 【Linux社区】Bottomley类比signed-off-by源于SCO诉讼溯源，引美国版权局对生成式AI的立场，主张AI使用与否影响补丁版权状态，标签须留存。 `<!-- ROW_MINE: ksummit.messages.8307 -->`
+- 【Linux社区】Joe Perches自称THE REST条目的责任人之一，表态支持Konstantin提案，将F:*默认收件由LKML改为patches@lists.linux.dev。 `<!-- ROW_MINE: ksummit.messages.8308 -->`
+- 【Linux社区】Packett指面板多模式切换需经DCS写配置寄存器，而现行API无法按模式定义prepare序列，其让prepare访问CRTC的补丁陷入空指针困境。 `<!-- ROW_MINE: ksummit.messages.8311 -->`
+- 【Linux社区】Linus反对自动拦截越界改动：ABI变更必然波及全树、向每个维护者索要ack不现实，且误报会让人习惯性忽视真正该在意的警告。 `<!-- ROW_MINE: ksummit.messages.8321 -->`
+- 【Linux社区】Jiri双帽表态：开发者角度看CVE处理是灾难；发行版角度看linux-distros仍是SUSE安全团队首轮筛出安全修复的关键渠道，不宜全弃。 `<!-- ROW_MINE: ksummit.messages.8322 -->`
+- 【Linux社区】Pinchart指开发者群体缺乏处理心理问题的技能，社区规模足以引入专业帮助，定向培训亦比要求所有维护者修学位更现实。 `<!-- ROW_MINE: ksummit.messages.8330 -->`
+- 【Linux社区】Lunn介绍netdev CI强制跑checkpatch并公开失败，脏补丁直接拒审，长期促使提交者自跑工具；维护者也需运行工具，大子系统已自动化。 `<!-- ROW_MINE: ksummit.messages.8336 -->`
+- 【Linux社区】David反驳“接种即可线下办会”：德国许多人9月前难接种首针，峰会安排必须顾及当年无法出行的维护者，不能只满足已接种者。 `<!-- ROW_MINE: ksummit.messages.8343 -->`
+- 【Linux社区】Wong说明public-inbox-clone与public-inbox-fetch可镜像单个收件箱，开发中的2.0版可借grokmirror清单一次镜像多个inbox。 `<!-- ROW_MINE: ksummit.messages.8351 -->`
+- 【Linux社区】Konstantin提出git-bug加b4 bugs方案：邮件讨论可转为bug条目持续同步、cgit在线查看，新报告经LLM预筛垃圾与发行版内核后分流。 `<!-- ROW_MINE: ksummit.messages.8355 -->`
+- 【Linux社区】Miguel提议“Rust参考驱动”：允许维护者选择加入，在树内为范式C驱动写等价Rust实现，以破“无重复驱动”与抽象无用户的死结并量化评估。 `<!-- ROW_MINE: ksummit.messages.8357 -->`
+- 【Linux社区】Weinberger构想网页界面：输入源文件、模块名甚至Oops即可获得应发列表与报告内容、纯文本格式等建议，辅助新人正确上报。 `<!-- ROW_MINE: ksummit.messages.8361 -->`
+- 【Linux社区】Sasha说明上游会在合并窗口后继续维护旧内核数周，用户可在Y-1版本驻留，故新内核X.Y实际约有五周暴露期供用户发现回归。 `<!-- ROW_MINE: ksummit.messages.8362 -->`
+- 【Linux社区】Leon称新驱动开发以复制粘贴为主流模式，C驱动基数远大于Rust故更易抄，Rust化将使“路过式”开发者更难产出可用驱动。 `<!-- ROW_MINE: ksummit.messages.8371 -->`
+- 【Linux社区】Geert晒十年仅收到3封bugzilla邮件且均低质，而邮件渠道修复的bug报告多出数个数量级，主张MAINTAINERS文件才是权威指引。 `<!-- ROW_MINE: ksummit.messages.8373 -->`
+- 【Linux社区】Desnoyers指Link:已成无所不装的万能袋，主张将补丁来源从URL域名隐含语义升为显式标签如Link-Origin或Origin，使语义人人可辨。 `<!-- ROW_MINE: ksummit.messages.8374 -->`
+- 【Linux社区】Behrens称其Nix开发壳PR已可用clang构建内核并跑kunit，呼应Jarkko“Rust难在运行环”、内核文档缺BuildRoot与Yocto指引的观点。 `<!-- ROW_MINE: ksummit.messages.8375 -->`
+- 【Linux社区】Wedson向Greg论证Ref<T>无需锁：借用不得长于被借内存，编译期保证引用计数只从n增至n+1、永无0到1，并举E0597生命周期错误为例。 `<!-- ROW_MINE: ksummit.messages.8379 -->`
+- 【Linux社区】Ryabitsev 叫停峰会筹备线程中的防疫药物争论，警告将在其可控基础设施上启用过滤屏蔽，体现新版 ksummit 列表早期的版面整顿立场。 `<!-- ROW_MINE: ksummit.messages.9186 -->`
+- 【Linux社区】Linus 评 Wilcox 设想：缓冲缓存理论上可为 256kB 大 folio 建非均匀 buffer_head，但从未实现与测试，也缺少相应 helper 函数。 `<!-- ROW_MINE: ksummit.messages.9190 -->`
+- 【Linux社区】Bonzini 质疑把“THE REST”改投 patches@ 的效果：大量 LKML 流量实为 git-send-email 默认配置所致，patches@ 现仅稳定队列在用。 `<!-- ROW_MINE: ksummit.messages.9191 -->`
+- 【Linux社区】Linus 强硬主张内核必须禁用“无符号小于 0”警告：该警告催生错误强转与删检查等真 bug，并非安全网，称此立场不可谈判。 `<!-- ROW_MINE: ksummit.messages.9193 -->`
+- 【Linux社区】Dobriyan 以实测否定 C++ 路线：g++ 要求 C99 初始化器按声明顺序且不支持 x86 的 __seg_gs；又指与 C 不源码兼容者（含 Rust）均非选项。 `<!-- ROW_MINE: ksummit.messages.9194 -->`
+- 【Linux社区】Ojeda 回击 hpa“剔除 Rust”威胁：Rust 已支持可插拔分配器，实现 malloc 类接口无障碍，是 Rust 政策之争中的事实澄清。 `<!-- ROW_MINE: ksummit.messages.9196 -->`
+- 【Linux社区】Brown 赞同 Linus 对 AI 审查报告摩擦的担忧，但主张将 AI 发现集中建库，类比 Coverity 模式，并提议挖掘重复报告模式而非散落各评审。 `<!-- ROW_MINE: ksummit.messages.9198 -->`
+- 【Linux社区】Overstreet 提出以 shim 层把旧文件系统整体搬入用户态 FUSE 运行，bcachefs 已实现约九成代码量用户态化，可免内核重构破坏并收窄安全面。 `<!-- ROW_MINE: ksummit.messages.9205 -->`
+- 【Linux社区】Mauro 介绍 kernel-doc 已可全树解析，实测 make mandocs 约 44 秒、报数千警告，支持 Nikula 提议的 --lint-rst 检查，媒体 CI 以 W=1 零警告为目标。 `<!-- ROW_MINE: ksummit.messages.9212 -->`
+- 【Linux社区】Biederman 主张以 libguestfs 为起点运行旧文件系统：其已带 FUSE 支持并随主流发行版发布，可在 qemu 中跑内核挂载，关键在做到零摩擦可用。 `<!-- ROW_MINE: ksummit.messages.9213 -->`
+- 【Linux社区】Ventura Jack 引 Rust 2024 版文档指出全局可变 static 引用即使在 unsafe 中也被强烈劝阻，回应 Linus“读全局标志还要 unsafe”的批评。 `<!-- ROW_MINE: ksummit.messages.9217 -->`
+- 【Linux社区】Leemhuis 澄清改革后的报告路径为按子系统邮件维护者，承认缺一级支持组并有意日后组建，但当前优先级较低。 `<!-- ROW_MINE: ksummit.messages.9220 -->`
+- 【Linux社区】Brown 指出子树修复若未进 -next，bug 会持续暴露至 PR 合入为止，子树孵化期与 PR 处理延迟都直接拉长问题在 -next 的可见时间。 `<!-- ROW_MINE: ksummit.messages.9225 -->`
+- 【Linux社区】Carpenter 复盘 CVE 审读实例：有人 grep FIXME 后令 AI 实现即冒充溢出修复，AI 模糊测试发现安全补丁不完整，呼吁提交说明写明 AI 用法与流程。 `<!-- ROW_MINE: ksummit.messages.9230 -->`
+- 【Linux社区】Uecker 指出 C 安全化投入被低估：他业余修 GCC 无人跟进、内核未参与 ISO C 标准化，认为 C 有大量低成本安全改进空间且可建内存安全子集。 `<!-- ROW_MINE: ksummit.messages.9235 -->`
+- 【Linux社区】Ojeda 以代码示例向 Geert 解释 Weak::upgrade 返回 Option：对象不存在时调用方根本无从访问成员，展示 Rust 所有权模型的安全保证。 `<!-- ROW_MINE: ksummit.messages.9238 -->`
+- 【Linux社区】Figa 赞同 Hellwig 对明尼苏达大学实验的评价，称评审量不足是多年顽疾，UMN 本应引入社区监督并负责事后清理，其否认态度更令人担忧。 `<!-- ROW_MINE: ksummit.messages.9249 -->`
+- 【Linux社区】Linus 表示将绕过文档树亲自直接提交 Dan Williams 的“项目延续”流程文档，后续修订再走常规途径，属治理事件的当事人表态。 `<!-- ROW_MINE: ksummit.messages.9267 -->`
+- 【Linux社区】Bottomley 反对集中 git notes 树承载子系统元数据：notes 设计上不适共享、需过滤且易污染本地用途，主张全局重要信息应写入提交树。 `<!-- ROW_MINE: ksummit.messages.9269 -->`
+- 【Linux社区】Ojeda 回应 Lunn 关于文件搬移影响稳定树回移的顾虑：可先定好路径不再搬，或宣布 Rust 支持前两三个版本不回移，给树内成熟留时间。 `<!-- ROW_MINE: ksummit.messages.9274 -->`
+- 【Linux社区】Bottomley 与 Ojeda 辨析自动 bindings 与手工抽象层之别，后者在 C API 变更时需人手维护；提出扩展 sparse 校验注记、bindgen 生成抽象以降摩擦。 `<!-- ROW_MINE: ksummit.messages.9278 -->`
+- 【Linux社区】Levin 为 embargo 代码提议硬性测试清单：多版本 GCC 与 Clang、x86 与 arm64 等平台、allmodconfig 等配置及近月 LTP，未过不得悄悄合入。 `<!-- ROW_MINE: ksummit.messages.9281 -->`
+- 【Linux社区】Bottomley 披露峰会经费困境：2024 年一家赞助、2025 年零赞助、2026 年仍无，LF 自付与会礼品；Pinchart 估算约 43 人、人均约 2500 美元。 `<!-- ROW_MINE: ksummit.messages.9282 -->`
+- 【Linux社区】Corbet 解释 TAB 章程把投票绑在内核峰会即 LPC 期间，Babka 因会期漏看 CIVS 邮件错过投票，Corbet 称可修章程把选举移至年内平静时段。 `<!-- ROW_MINE: ksummit.messages.9287 -->`
+- 【Linux社区】Linus 请 Rust 社区避免 C 式 UB 优化模型：要么朴素代码生成要么明确警告，举 WG14 N3203 收紧未定义行为为例，称潜在优化不值得代价。 `<!-- ROW_MINE: ksummit.messages.9288 -->`
+- 【Linux社区】Airlie 坦言 Rust DMA 补丁两难：跨子系统完整系列无人肯审、无用户系列遭拒，故先走后者；Sakkinen 接受以含测试的 git 分支自行验证。 `<!-- ROW_MINE: ksummit.messages.9302 -->`
+- 【Linux社区】Kosina 反驳以用户数论 Android 主导：证交所、空管、NASA 等企业级部署经由 Red Hat、SUSE 等供养内核开发，且 Fedora 与 openSUSE 并不用 LTS 基线。 `<!-- ROW_MINE: ksummit.messages.9303 -->`
+- 【Linux社区】Ribalda 力主 ISP 归 DRM：指 V4L2 路线致九成以上摄像头市场依赖树外驱动、用户仅剩 Android；Pinchart 坚持开放用户态覆盖要求，双方激辩命令缓冲与文档义务。 `<!-- ROW_MINE: ksummit.messages.9304 -->`
+- 【Linux社区】Wilcox 澄清提案是实现 1970 年代标准接口而非立新标准，未来或删 kvmalloc；指出 kzalloc_obj 配 GFP_NOWAIT 时小分配仍会失败的张力。 `<!-- ROW_MINE: ksummit.messages.9311 -->`
+- 【Linux社区】Greg 证实 kernel.org 正与 OpenSSF 合作替换自研 PGP 信任网：旧方案有瓶颈与扩展性局限，新框架预计二月会议公布，工作仍在进行。 `<!-- ROW_MINE: ksummit.messages.9320 -->`
+- 【Linux社区】Overstreet 评 folios 争论走偏：Willy 阐述不力、部分 MM 反对无理，澄清 folios 面向文件系统页而非 slab，与 Johannes 讨论出拆分 struct page 思路并等其撤 NACK。 `<!-- ROW_MINE: ksummit.messages.9321 -->`
+- 【Linux社区】Yokosawa 实测发现 openSUSE Leap 15.4 的 Sphinx LaTeX 包缺 Sphinx 4.0 起必需的 tex-gyre 字体，Fedora 36 与 RHEL 9 均覆盖，拟向 openSUSE 报 bug。 `<!-- ROW_MINE: ksummit.messages.9322 -->`
+- 【Linux社区】Intel 的 Sinyuk 确定 UALink 驱动落位：先入 drivers/accel/ual 而非 misc，长期独立为 drivers/ual；Greg 说明 staging 不适合有活跃社区的新子系统。 `<!-- ROW_MINE: ksummit.messages.9328 -->`
+- 【Linux社区】ÜNAL 主张设备树绑定文档修改不必连带驱动改动，Herring 反驳需同改两侧即已破坏 ABI 且顺序不可二分；ÜNAL 转而接受先修驱动的次序。 `<!-- ROW_MINE: ksummit.messages.9329 -->`
+- 【Linux社区】Howlett 赞同 Assisted-by 标签改记 AI 使用方式而非模型名，认为随使用普及原标签价值趋零，知名开发者更该用 RFC 标签请求重点审查。 `<!-- ROW_MINE: ksummit.messages.9339 -->`
+- 【Linux社区】Corbet 剖析 Sphinx C 域符号树约七亿次迭代调用的 O(n²) 行为，改字典查找使 htmldocs 提速约 20%，叠加 automarkup 优化合计约 27%。 `<!-- ROW_MINE: ksummit.messages.9342 -->`
+- 【Linux社区】Roeck 指出 linux-next 及其 pending-fixes 分支的构建与测试失败基本无人理会，质疑以其作为 PR 健康信号的实际价值。 `<!-- ROW_MINE: ksummit.messages.9345 -->`
+- 【Linux社区】Linus 阐明 unsafe 的本义是让源码有意绕过规则而非授权编译器重排访问，以分配器指针运算为例，要求编译器不能证明不别名就不要假设。 `<!-- ROW_MINE: ksummit.messages.9363 -->`
+- 【Linux社区】Airlie 阐述 DRM 开源用户态要求：加速器 uAPI 复杂多线程绝非小测试程序可覆盖，社区靠拒绝与教育建成，正起草跨子系统通用文档分支。 `<!-- ROW_MINE: ksummit.messages.9364 -->`
+- 【Linux社区】Stoakes 点出 AI 生成与人工审查成本严重不对称是核心矛盾，故主张 AI 辅助补丁必须自愿加入，并赋权各维护者自行决定取舍。 `<!-- ROW_MINE: ksummit.messages.9367 -->`
+- 【Linux社区】Ts'o 详述 ext4 拟弃用 buffer_heads 三因：元数据缓存控制、写回失败无回调、内存开销；folio 改动破坏 bh_offset 被测试抓获属正常，全树改动还阻碍 LTS 回移。 `<!-- ROW_MINE: ksummit.messages.9370 -->`
+- 【Linux社区】Leemhuis 申请在维护者峰会作约五分钟回归追踪现状报告，含优秀子系统经验与 regzbot 进展，并讨论 bugzilla+bugbot+bugspray 下 regzbot 的去留。 `<!-- ROW_MINE: ksummit.messages.9375 -->`
+- 【Linux社区】Kara 回应 Nossum 的评审激励错位分析：根本动力是共同责任感，避免劣质代码进入自己所在子系统；激励与互审只是辅助，公地悲剧需靠认同化解。 `<!-- ROW_MINE: ksummit.messages.9381 -->`
+- 【Linux社区】Bottomley 以史立论：Oracle 曾索要 SCSI 裸设备终被 direct I/O 化解，SPDK/DPDK 仍属小众，USB 令牌统一为 CTAP；够大的用例终被内核吸收，fwctl 宜定位慢速配置面。 `<!-- ROW_MINE: ksummit.messages.9383 -->`
+- 【Linux社区】Glass 介绍 patman 可为每版补丁维护变更日志并一键发送、欢迎功能补丁；Romanovsky 自述另有包装 git format-patch 按目标树自动设收件人的脚本。 `<!-- ROW_MINE: ksummit.messages.9385 -->`
+- 【Linux社区】Carpenter 谈 Smatch 在宏内静默告警、过滤惯用溢出以消假阳性，称“文化争论而非技术问题”，举 DPMCP_MIN_VER_MINOR 与 set_iter_tags 例。 `<!-- ROW_MINE: ksummit.messages.9007 -->`
+- 【Linux社区】fwctl 僵局讨论：Gunthorpe 称三年会议已形成多维护者共识，Williams 引 MGLRU 在 LSF/MM 2022 面对面破冰先例，Bottomley 提供 Plumbers BoF 场地。 `<!-- ROW_MINE: ksummit.messages.9008 -->`
+- 【Linux社区】Brown 赞同 Rostedt 的“维护者支持小组”预防性提议，强调提交者也会受挫且更易一走了之，机制须同样覆盖提交者。 `<!-- ROW_MINE: ksummit.messages.9011 -->`
+- 【Linux社区】Bottomley 称 DPDK 是“蜜罐”，项目替换内核功能后需重写全套而烂尾；Gunthorpe 称大量互联网流量与 ORAN 已规模化依赖 DPDK。 `<!-- ROW_MINE: ksummit.messages.9028 -->`
+- 【Linux社区】Pinchart 主张 V4L2 与 DRM 规则应相近：命令缓冲可传但须充分文档或开源实现；称 IPU3 文档不足是未执行规则的教训。 `<!-- ROW_MINE: ksummit.messages.9040 -->`
+- 【Linux社区】Greg KH 反对闭门预公告列表：稳定树修复 99% 已知安全问题（谷歌两年数据）、Android 为最大用户、硬件 embargo 各方皆怨、CRA 立法施压。 `<!-- ROW_MINE: ksummit.messages.9045 -->`
+- 【Linux社区】Greg KH 解释无 Fixes/cc:stable 提交被回溯系因 “Stable-dep-of” 标签，并指该 SCSI strlcpy 转换回溯疑似引入 bug。 `<!-- ROW_MINE: ksummit.messages.9050 -->`
+- 【Linux社区】Al Viro 质疑全面禁收 trivial 补丁提案：若维护者已核实“显然的修复”真实且正确，该政策下应如何处置？ `<!-- ROW_MINE: ksummit.messages.9054 -->`
+- 【Linux社区】实测 make htmldocs：Brown -j56 需 26 分 14 秒，Dunlap -j8 笔记本 6 分 05 秒，量化文档构建过慢问题。 `<!-- ROW_MINE: ksummit.messages.9065 -->`
+- 【Linux社区】Bottomley 反对在 AI 内容指南使用 “slop” 一词，主张历时稳定的通用表述，举 rawdog、chad 等年度词渐失语义为例。 `<!-- ROW_MINE: ksummit.messages.9066 -->`
+- 【Linux社区】Carpenter 澄清：Sparse 忽略 pragma；amdgpu 实因 #pragma pack() 致 1KB 静态断言失败而中断 Sparse 检查。 `<!-- ROW_MINE: ksummit.messages.9067 -->`
+- 【Linux社区】Sudip 建议设独立 trivial 树、配专门审阅者在 GregKH 指导下运作；引 Mauro 称明尼苏达发往媒体子系统的补丁多可合入。 `<!-- ROW_MINE: ksummit.messages.9069 -->`
+- 【Linux社区】Ted Tso 剖析 git-bug 架构安全疑虑：git pull 绕过反垃圾、桥接与数据格式攻击面、类比 Jia Tan 式供应链攻击，称极为不安。 `<!-- ROW_MINE: ksummit.messages.9072 -->`
+- 【Linux社区】Lyude Paul 详述 Rust 上游困境：说服维护者耗散精力、倦怠语气被常态化、Asahi 的 Rust 代码几乎零 bug，呼吁给 Rust 证明机会。 `<!-- ROW_MINE: ksummit.messages.9080 -->`
+- 【Linux社区】Bart Van Assche 持保留立场：C 比 Rust 易学，“过路式”驱动开发者未必具备学习 Rust 的技能。 `<!-- ROW_MINE: ksummit.messages.9084 -->`
+- 【Linux社区】Rostedt 认为若 Leemhuis 有硬数据证明工作流致回归，议题应升格维护者峰会，并鼓励以数据推动流程改变。 `<!-- ROW_MINE: ksummit.messages.9090 -->`
+- 【Linux社区】Tarreau 介绍 IETF 混合会议经验：jabber scribe 转达聊天提问、虚拟排队、现场排队用麦，兼顾本地与远程平衡。 `<!-- ROW_MINE: ksummit.messages.9093 -->`
+- 【Linux社区】Ojeda 澄清 2022 年现状：Documentation/rust 已用 ReST，rustdoc 仅输出 HTML，并表达对 Markdown 支持的期待。 `<!-- ROW_MINE: ksummit.messages.9094 -->`
+- 【Linux社区】Bottomley 称 folio 属技术议题不宜维护者峰会，LSF/MM 停办后提议以 Plumbers BBB 基础设施办 MM 聚会。 `<!-- ROW_MINE: ksummit.messages.9095 -->`
+- 【Linux社区】Bottomley 驳短有效期主张：内核密钥主要用于标签签名、分发机制已足；称 GnuPG trustdb 可独立操作，指 Sequoia 说法为宣传。 `<!-- ROW_MINE: ksummit.messages.9096 -->`
+- 【Linux社区】Kosina 主张须能知悉补丁出自 AI 以便知情决策或直接拒收：AI 代码背后可能无人理解其逻辑可供人讨论。 `<!-- ROW_MINE: ksummit.messages.9101 -->`
+- 【Linux社区】Zickus 详解红帽 RHEL 内核 GitLab 流程：评审数据结构化、经 API 聚合补丁讨论、审批与 CI 状态，可抽象移植到其他传输机制。 `<!-- ROW_MINE: ksummit.messages.9103 -->`
+- 【Linux社区】Pinchart 要求举出使用命令缓冲的 ISP 实例以推进讨论；引 V4L2 有状态解码接口证明通用低层接口路线可行。 `<!-- ROW_MINE: ksummit.messages.9104 -->`
+- 【Linux社区】Corbet 反对 sphinx-pre-install 自动寻替代解释器：脚本应按预期行为运行；指 RHEL8 建文档者极少且 Leap 15 将被取代。 `<!-- ROW_MINE: ksummit.messages.9109 -->`
+- 【Linux社区】Brown 谈 linux-next 实践：bisect 沿线性历史定位引入分支、ccache 因 KernelCI 平庸体验被 Stephen 关闭、按序抽样构建以控时长。 `<!-- ROW_MINE: ksummit.messages.9113 -->`
+- 【Linux社区】McKenney 称 SoB 对 AI 产出的规则尚未明确，需与混沌中的法律诉讼进程对齐，现阶段指望 AI 输出安全是愚蠢的。 `<!-- ROW_MINE: ksummit.messages.9115 -->`
+- 【Linux社区】hpa 强调标准化进程价值在于写出含边角情形的正式契约；引 Alice 观点：Rust 别名模型担忧被夸大，可只留在确定合法子集内。 `<!-- ROW_MINE: ksummit.messages.9118 -->`
+- 【Linux社区】kallsyms 行号表实测：459 万条目、.rodata 增约 44MiB（vmlinux +8.3%）；Figa 建议移入可加载模块，崩溃后自动加载二次报告。 `<!-- ROW_MINE: ksummit.messages.9120 -->`
+- 【Linux社区】Uwe 力主设 PGP 有效期：引 Gentoo GLEP 63、Sequoia 默认 3 年、letsencrypt 将限 45 天，称安全是移动目标，应改进 keyring 维护。 `<!-- ROW_MINE: ksummit.messages.9122 -->`
+- 【Linux社区】Feng 与 Contreras 争论“驱动皆可写成 Rust”：Feng 以黑天鹅谬误质疑全部驱动可用 Rust 的假设，Feng 要求对方澄清逻辑。 `<!-- ROW_MINE: ksummit.messages.9125 -->`
+- 【Linux社区】Leon 指资深开发者也犯的恶习：精心筛选 TO/CC 致补丁脱离上下文、反馈割裂成“孤岛”无法对照，附 rdma 系列实例链接。 `<!-- ROW_MINE: ksummit.messages.9139 -->`
+- 【Linux社区】Konstantin 详述规划：按子系统建 git-bug 仓库、bugs.kernel.org 重定向器统一寻址、上报经前端预分析、讨论留 lore、同步可选。 `<!-- ROW_MINE: ksummit.messages.9145 -->`
+- 【Linux社区】Shuah 披露 CoC 多数报告系对社区运作的误解、幕后化解；就 Linus buffer cache 言论被 Chinner 指违 CoC 一案表态，认为有 CoC 更好。 `<!-- ROW_MINE: ksummit.messages.9149 -->`
+- 【Linux社区】Corbet 提交 2025 峰会文档议题：过去一年文档构建基础设施大量改进，回顾近况并讨论未来两三年文档演进方向。 `<!-- ROW_MINE: ksummit.messages.9151 -->`
+- 【Linux社区】Ralf Jung 说明 Miri 默认按 Stacked Borrows 检查（比 Tree Borrows 更严）、playground 不支持自定义旗标，盼 Miri 进入 Compiler Explorer。 `<!-- ROW_MINE: ksummit.messages.9157 -->`
+- 【Linux社区】Arnd 考证 ARMv5 highmem 仅剩 OpenBlocks A7（内存须受限）等少数机器：Debian armel 已出末版、mv78xx0 平台可整体移除。 `<!-- ROW_MINE: ksummit.messages.9159 -->`
+- 【Linux社区】Greg KH 反对以 staging 引入 UALink：迁出 staging 成本高于树外先清理再合入，同意首日即用 drivers/accel/ual 建子系统。 `<!-- ROW_MINE: ksummit.messages.9160 -->`
+- 【Linux社区】Artem 坚持按 git 提交自动订阅、一键 opt-out 即可；Greg KH 驳称强加订阅必招反感，开发者无义务分诊 bug。 `<!-- ROW_MINE: ksummit.messages.9161 -->`
+- 【Linux社区】tglx 主张接口门槛是文档须足以实现开源用户态，而非当下是否已存在；已存在也不保证功能完备。 `<!-- ROW_MINE: ksummit.messages.9163 -->`
+- 【Linux社区】Nikula 主张 Sphinx 构建重质不重量：先清零 kernel-doc 与 rst 告警（i915/xe 已有本地检查、扩展至 drm 失败），不宜全量收录。 `<!-- ROW_MINE: ksummit.messages.9171 -->`
+- 【Linux社区】Leon 明言立场：不知 Rust 能解决哪些 C 难解的真实内核问题，故不认同“Rust 收益大于成本”论。 `<!-- ROW_MINE: ksummit.messages.9172 -->`
+- 【Linux社区】Greg KH 谈 embargo 代码测试：Intel 内部 0day 结果未随补丁披露、需私密测试实例防泄露、建议由硬件厂商提供、改文档措辞需律师同意。 `<!-- ROW_MINE: ksummit.messages.9173 -->`
+- 【Linux社区】Howlett 批评维护者峰会核心圈固化，提议专题临时席位与代表制；追问 MM 即将更换首席维护者时程序委员会如何考虑其影响。 `<!-- ROW_MINE: ksummit.messages.9174 -->`
+- 【Linux社区】Arnaldo 赞同 Lunn 主张审查自动化工具应面向全体开发者而非仅维护者，称竞争性工具多点使用更能在维护者介入前拦截问题，b4 预检可省去维护者步骤。 `<!-- ROW_MINE: ksummit.messages.8380 -->`
+- 【Linux社区】Gushchin 考虑建预存缺陷库使问题仅报一次并支持误报标记；Gunthorpe 想要 syzkaller 式看板与催办邮件；提示词入库受合并窗口节奏掣肘、需 Linus 支持，并拟依人工反馈半自动改进。 `<!-- ROW_MINE: ksummit.messages.8389 -->`
+- 【Linux社区】明尼苏达事件后 trivial 补丁政策讨论中，Romanovsky 批评精心筛选 To/Cc 使反馈割裂成孤岛，Chehab 辩称收件人差异源于 get_maintainer.pl，Leon 回应 b4 重构线程仍解不了孤岛问题。 `<!-- ROW_MINE: ksummit.messages.8393 -->`
+- 【Linux社区】Iwai 回应 dmesg 密语式报错之惑：内核无法判定缺陷最终影响是两难根源，ACPI 日志过吵、部分 err 可降级，主张为 KERN_ERR 级别制定更清晰准则。 `<!-- ROW_MINE: ksummit.messages.8395 -->`
+- 【Linux社区】Pinchart 指出 Mesa 与 libcamera 对所支持设备已有成套测试，就其能否及如何与内核 selftests 集成提出疑问，坦言尚无成熟做法。 `<!-- ROW_MINE: ksummit.messages.8396 -->`
+- 【Linux社区】Koolstra 汇总 AI 助手文档争议供峰会讨论：Layton 提议废除 Assisted-by 而 Greg KH 反对，Hildenbrand 建议标注 LLM 具体用途，Stoakes 质疑新人疑似 LLM 深度改动可否降级处理。 `<!-- ROW_MINE: ksummit.messages.8398 -->`
+- 【Linux社区】Corbet 公告 2024 年 TAB 选举：9 月 20 至 27 日经 CIVS 改选 5 席，Brauner、Cook、Hansen、Kicinski、Williams 任期届满；资格为 2023 年起 3 个带 tag 提交，满 50 个自动寄票。 `<!-- ROW_MINE: ksummit.messages.8401 -->`
+- 【Linux社区】Levin 详述其 LLM 堆栈分析：读源码、翻 git 历史定位肇事提交、搜 lore 找旧报告并自动抄送相关开发者，主张与确定性工具并用；Pinchart 忧虑非确定方法产出貌似合理的错误结果。 `<!-- ROW_MINE: ksummit.messages.8406 -->`
+- 【Linux社区】Kozlowski 支持 Mason 的 AI 审查提示词已接入 BPF CI，介绍 Qualcomm 开源 PatchWise 并在内部对全部补丁发前预审，称可插拔多引擎缓解雇主要求顾虑，亦利新手学习提交规范。 `<!-- ROW_MINE: ksummit.messages.8407 -->`
+- 【Linux社区】Carpenter 反驳 Wilcox 对 GFP 参数的批评，指如今多数开发者已改用 kzmalloc_obj() 无需再传 GFP_KERNEL，佐证语义化分配接口已被广泛采用。 `<!-- ROW_MINE: ksummit.messages.8411 -->`
+- 【Linux社区】Deller 实测 CONFIG_KALLSYMS_LINEINFO 在 parisc 架构正常工作并望合入，Levin 随即提交加入模块支持与他人建议内存优化的正式补丁系列。 `<!-- ROW_MINE: ksummit.messages.8412 -->`
+- 【Linux社区】Tarreau 支持指针加长度字符串，实测把 strcmp 链改为 isteq 后 -O3 提速约 10 倍、-O2 约 5 倍，长度已知可免去中间检查，赞同 Hellwig 推崇的 seq_buf 路线。 `<!-- ROW_MINE: ksummit.messages.8413 -->`
+- 【Linux社区】Kozlowski 提议以 Legal-risk-by 类标签明示 AI 补丁的法律风险，McKenney 建议带此类标签的补丁干脆不要合入，因多起 AI 训练版权诉讼未决、各国立法走向难料。 `<!-- ROW_MINE: ksummit.messages.8414 -->`
+- 【Linux社区】Tashkinov 力主保留 bugzilla：多数开发者从未注册致报告无人看，提议组件与 Kconfig 同步、amdgpu/i915 等自动转投自有追踪器、默认加入可退订，并批评邮件列表同样失灵。 `<!-- ROW_MINE: ksummit.messages.8418 -->`
+- 【Linux社区】Hellwig 反对以只读保留无人维护的文件系统，称现有测试设施对只读完全失效，还需测试框架、公开共享镜像或镜像生成工具，成本相当可观。 `<!-- ROW_MINE: ksummit.messages.8420 -->`
+- 【Linux社区】前 git 时代 Fixes 标注之争：Bottomley 主张引 tglx history 树哈希，Carpenter 称会令众人困惑，Greg KH 附和说此类哈希使其回溯脚本报错跳过，殃及 stable 回移植判断。 `<!-- ROW_MINE: ksummit.messages.8429 -->`
+- 【Linux社区】Bottomley 以版权溯源立论：Signed-off-by 本为防 SCO 式指控而设，美国版权局对生成式 AI 的立场使 AI 使用影响补丁版权状态，git 树须留永久记录，且只需标 AI 写码而非 AI 审查。 `<!-- ROW_MINE: ksummit.messages.8430 -->`
+- 【Linux社区】Jack 担忧 Rust 别名规则官方绑定 LLVM、缺独立规范，恐妨碍 gccrs 实现一致行为；并引文档指出原子操作沿袭 C++20 内存模型、panic 底层近乎 C++ 异常，加大 unsafe 难度。 `<!-- ROW_MINE: ksummit.messages.8433 -->`
+- 【Linux社区】Ryabitsev 透露 bugzilla 平台近死：开发停滞、不兼容新 MySQL、靠迁 Postgres 勉强撑过 2022，LF 非开发机构且 bugmaster 易倦怠；Tashkinov 提议 git.kernel.org 等合并为 gitlab.kernel.org。 `<!-- ROW_MINE: ksummit.messages.8434 -->`
+- 【Linux社区】Sakkinen 指 Rust DMA 补丁无测试载荷应自动 NAK，Feng 核实其仅有一个不会执行的函数定义式 doc test，说明 Rust 代码本可用 kunit 跑 doctest，同意必须补测试。 `<!-- ROW_MINE: ksummit.messages.8436 -->`
+- 【Linux社区】Torokhov 支持预存缺陷库，并建议审查报告分两节：一节严格限于补丁本体（含 all clear），另一节冠以“分析中发现的预存问题、随意处理”集中列出，减少维护者噪音。 `<!-- ROW_MINE: ksummit.messages.8437 -->`
+- 【Linux社区】Levin 公布 v6.12-rc4 至 rc5 提交在 linux-next 停留直方图：89 个 0 天、21 个不足 1 天，即 110 个提交未经 -next 直入 Linus 树，主张 linus-next 补上绕过测试的漏洞。 `<!-- ROW_MINE: ksummit.messages.8439 -->`
+- 【Linux社区】Ryabitsev 答复 Lawall：lkml.kernel.org/r/<msgid> 仅重定向至 lore.kernel.org/all/ 聚合检索，THE REST 改投新列表不影响按 message_id 或主题追溯补丁讨论。 `<!-- ROW_MINE: ksummit.messages.8441 -->`
+- 【Linux社区】Anvin 拆分四议题：Rust 与 C 成熟度差距拖累 C 维护者、政策文件“无并行代码”说法需引证；主张用 C++ 等成熟工具立即改进 3500 万行既有代码，并赌 2050 年内核仍有大量 C。 `<!-- ROW_MINE: ksummit.messages.8442 -->`
+- 【Linux社区】Rostedt 以 rtla 为例：让 Bristot 自管分支并直接写 pull request，自己只审总体思路、快进合并后转发 Linus，以此反驳 Kosina “不减少上层工作量”之说。 `<!-- ROW_MINE: ksummit.messages.8443 -->`
+- 【Linux社区】Belloni 反驳以奖惩促开发者标 Cc: stable：多数贡献者与维护者根本不关心 stable，行为无关好坏，惩罚框架不成立。 `<!-- ROW_MINE: ksummit.messages.8444 -->`
+- 【Linux社区】指针返回值注记讨论：Bergmann 归纳四类返回约定，Geert 补 optional 第五类；Lawall 质疑“调用者之错”论，统计逾 230 个文件存在同返 NULL 与 ERR_PTR 的函数并举例 ovl_lookup_inode。 `<!-- ROW_MINE: ksummit.messages.8450 -->`
+- 【Linux社区】Bottomley 与 Stoakes 就 slop 措辞妥协，改写为“结果可能有误，提交者须理解并能为其辩护，否则维护者可整包拒绝”；Stoakes 承认该文档因 Linus 立场恐难合入。 `<!-- ROW_MINE: ksummit.messages.8451 -->`
+- 【Linux社区】Bottomley 主张把 Link 之争拆成自动化追踪与人工背景两层；Rostedt 说明自己用脚本把链接放 tags 区供工具用，人类语境链接放 tags 外，且仅当补丁源自另一场讨论时才添加。 `<!-- ROW_MINE: ksummit.messages.8452 -->`
+- 【Linux社区】Roeck 给出 ntfs3 可靠损坏复现：qemu 快照内 64M 镜像反复 cp、rm 序列，rm 报目录非空、umount 触发回溯或崩溃；镜像 md5 校验、只读保存以排除干扰，回应 Sanjaya 质疑。 `<!-- ROW_MINE: ksummit.messages.8453 -->`
+- 【Linux社区】Laight 声援 Torvalds：编译器对必然成立仍被要求检查的范围判断照样告警，疑对编译期即死的短路条件也告警，且 _Generic 各分支均须编译，无法规避类型相关误报。 `<!-- ROW_MINE: ksummit.messages.8454 -->`
+- 【Linux社区】Selva 提出 LPC 技术议题：NVMe 简单拷贝命令 SCC 的上游实现，待议用户接口取 ioctl、io_uring 操作码还是 copy_file_range，块层用空 bio 链还是带载荷，及 SCSI XCOPY 兼容性。 `<!-- ROW_MINE: ksummit.messages.8455 -->`
+- 【Linux社区】Kara 认为 richACLs 属技术议题宜投 LSFMM；Rostedt 引 Ted 规则说明 ksummit track 须同时发 [TECH TOPIC] 邮件并在 LPC 网站立项，截止 2025-09-10，CfP 周三关闭。 `<!-- ROW_MINE: ksummit.messages.8456 -->`
+- 【Linux社区】Torvalds 详述拒收实情：构建失败九成九在提交方（未进 linux-next 或无视已报问题），bindgen 仅意外一次；运行期问题常是测试场没有的 GPU、无线硬件；最常见拒绝理由是内容根本不喜欢。 `<!-- ROW_MINE: ksummit.messages.8460 -->`
+- 【Linux社区】Gunthorpe 以 mlx5 为例：1.2 万行 mlx5_ifc.h、公开编程手册、内核内实现与 DPDK 等开源栈覆盖绝大多数用例，反问为堵一成假想专有用例而在内核加校验、损害技术方案是否值得。 `<!-- ROW_MINE: ksummit.messages.8464 -->`
+- 【Linux社区】Walleij 以 GPIO 维护者身份表态愿意尝试 Rust 驱动并引荐搭档 Bartosz，Ojeda 请其挑选带 QEMU 支持或测试套件的型号以便验证，是 Rust 驱动落地最早的维护者互动之一。 `<!-- ROW_MINE: ksummit.messages.8465 -->`
+- 【Linux社区】Greg KH 称内核多数低级错误源自 C 角落案例而在 Rust 中消失；Anvin 主张宏化 alloc、memcpy 的显式尺寸（如其 nasm_new），并多用 C90 起合法的结构体赋值以减少此类错误。 `<!-- ROW_MINE: ksummit.messages.8469 -->`
+- 【Linux社区】Rostedt 概括规则：编译器不得超出代码字面多读全局变量，但可缓存既有的多次读；Laight 补充标准允许编译器先向该内存写无关值（如寄存器溢出）再写预期值，gcc 尚未这么做。 `<!-- ROW_MINE: ksummit.messages.8473 -->`
+- 【Linux社区】Chehab 与 Berg 论文档构建 Python 依赖：openSUSE Leap 的 python3-Sphinx 仅配 Python 3.6、Sphinx 2.3 过旧，RHEL8 同病；Berg 主张只用 python3、过旧即失败，最终交 Corbet 裁决。 `<!-- ROW_MINE: ksummit.messages.8476 -->`
+- 【Linux社区】Overstreet 以 Rice 定理解释借用检查器之必然，称消除安全代码 UB 是超越 C 的根本前提，并以 fuse 模块 UAF 迫使 bcachefs fsck 扩展性测试中断一周为例，凸显 C 难复现缺陷的隐性成本。 `<!-- ROW_MINE: ksummit.messages.8486 -->`
+- 【Linux社区】Howlett 分 LLM 用户为三类并称 Assisted-by 信噪比趋零，冒用 LLM 者反复重发使他想设超时禁投规则；预言工具由圈地转向变现时社区生产力下滑；Corbet 提及有新人几乎当上 lib/ 维护者。 `<!-- ROW_MINE: ksummit.messages.8488 -->`
+- 【Linux社区】Ojeda 提交 LPC 2023 议题：Rust 支持已随 v6.1 入树，汇报 pinned-init、KUnit doctest 集成、klint 编译期锁规则检查等进展，及稳定版不健全处理与 Rust 版本升级政策，征询维护者接受之道。 `<!-- ROW_MINE: ksummit.messages.8489 -->`
+- 【Linux社区】Laight 反对头文件按字母排序，主张系统、子系统、本地分组，变量声明以易读为先；Bird 指出排序规则本为减少 patch、quilt 应用补丁时的上下文冲突。 `<!-- ROW_MINE: ksummit.messages.8492 -->`
+- 【Linux社区】Brodsky 指 pkeys ABI 对信号送达、rseq、io_uring 工作线程等异步内核交互严重欠规范、各架构处理不一，引 Gleixner “全都坏了”之评，拟借 LPC Refereed BoF 汇总现状并探求解法。 `<!-- ROW_MINE: ksummit.messages.8498 -->`
+- 【Linux社区】Luck 提议两条规则：禁止 AI 代理直接提交、From 必须为真人且对内容负全责；McKenney 指若要求训练集许可兼容则现有主流 AI 无一合格；Anvin 认为须寻求正式法律意见。 `<!-- ROW_MINE: ksummit.messages.8499 -->`
+- 【Linux社区】Kosina 称曾见 ChatGPT 全写的 GPIO 驱动功能正常却缺错误处理；Reinecke 指内核代码即训练素材、LLM 同样轻视错误处理，九成合格的产物仍须人审，而审查人力本已不足。 `<!-- ROW_MINE: ksummit.messages.8508 -->`
+- 【Linux社区】Lawall 称维护者凭经验即可识别 checkpatch、Coccinelle、smatch 驱动的补丁并据既往工具经验调整审查，质疑对 AI 生成补丁是否同样奏效。 `<!-- ROW_MINE: ksummit.messages.8510 -->`
+- 【Linux社区】Alexandre Belloni指静态检查器生成的修补常无意义，如永不触发的返回值检查；建议贡献者明示用工具发现问题并生成补丁，便于维护者直接忽略。 `<!-- ROW_MINE: ksummit.messages.8658 -->`
+- 【Linux社区】Al Viro指出UMN团队实验结束后至今未公布所涉补丁的SHA1清单，缺乏原始数据即“记者会式科学”，以此回应宽恕与严惩之争。 `<!-- ROW_MINE: ksummit.messages.8660 -->`
+- 【Linux社区】Mark Brown判断LKML流量主要源于get_maintainer.pl自动抄送lkml，而非用户显式配置git-send-email，故THE REST分流收效有限。 `<!-- ROW_MINE: ksummit.messages.8661 -->`
+- 【Linux社区】Martin Uecker指出GCC已有-Wtype-limits（-Wextra激活）可警告size_t接收负值的写法，回应Rostedt对无符号比较警告的需求。 `<!-- ROW_MINE: ksummit.messages.8670 -->`
+- 【Linux社区】Miguel Ojeda澄清Rust for Linux并非替换C代码，而是把C API抽象为Rust API以静态保证不变式，红黑树等复用C API，Rust仅是C API又一消费者。 `<!-- ROW_MINE: ksummit.messages.8675 -->`
+- 【Linux社区】Steven Rostedt质疑AI代写代码时签署人是否有权加Signed-off-by，尤其不知训练数据来源；若AI用了专利算法，签署者是否担法律风险。 `<!-- ROW_MINE: ksummit.messages.8680 -->`
+- 【Linux社区】Mark Brown反对废除Link标记：常见动机是他人从git回溯邮件列表，如二分出故障后报告并查重；dig工具靠启发式且需另装。 `<!-- ROW_MINE: ksummit.messages.8682 -->`
+- 【Linux社区】Al Viro称AI幻觉式提交者应视同骗子，一旦抓到即按封禁处理，问题化为识别其马甲；反问是否要让此类人接近代码库。 `<!-- ROW_MINE: ksummit.messages.8683 -->`
+- 【Linux社区】Christoph Hellwig赞同Kees的PR健康检查机器人方案：报告补丁是否抄送列表、在next停留时长直方图、0day测试失败；称前两项易实现。 `<!-- ROW_MINE: ksummit.messages.8685 -->`
+- 【Linux社区】Steven Rostedt反对仅为声明而设显式作用域块，尤其变量用到函数末尾时在块内return，使函数主体错位、可读性差。 `<!-- ROW_MINE: ksummit.messages.8686 -->`
+- 【Linux社区】Miguel Ojeda认为工具生成内容指南已够清晰：要求理解整个提交并回应评审，维护者可酌情直接拒绝无法解释的补丁系列。 `<!-- ROW_MINE: ksummit.messages.8687 -->`
+- 【Linux社区】Greg KH澄清内核Rust panic不展开栈，直接走BUG()路径，回溯信息与其他BUG()调用一致，回应Bottomley对诊断能力的疑问。 `<!-- ROW_MINE: ksummit.messages.8691 -->`
+- 【Linux社区】Thomas Gleixner主张彻底废除trivial@列表，称其不解决任何问题，新变体亦将同样衰亡，回应复兴trivial树的提议。 `<!-- ROW_MINE: ksummit.messages.8692 -->`
+- 【Linux社区】Bart Van Assche引Google C++风格指南：仅在更清晰或更安全时用类型推导，质疑该原则是否适用于内核C与auto宏提议。 `<!-- ROW_MINE: ksummit.messages.8693 -->`
+- 【Linux社区】Ted Tso剖析Bugzilla困境：组件自动抄送靠手工魔改且上游零支持，无专人维护则库迅速失效；开发者普遍不跟进报告，原因存争议。 `<!-- ROW_MINE: ksummit.messages.8695 -->`
+- 【Linux社区】Steven Rostedt支持sashiko报告opt-in：误报可事后退出，漏报则安全问题无人察觉直至被利用，宁可忍受假阳性。 `<!-- ROW_MINE: ksummit.messages.8699 -->`
+- 【Linux社区】Ventura Jack引AWS正式验证Rust标准库的众包项目与CVE-2024-27308，论证unsafe Rust实际很难；并称ADT与模式匹配是可加入C的低垂果实。 `<!-- ROW_MINE: ksummit.messages.8701 -->`
+- 【Linux社区】James Bottomley以逆向驾驶比喻反驳NeilBrown，主张全引文本等问题应靠全局邮件礼仪解决，而非依赖个人能力兜底。 `<!-- ROW_MINE: ksummit.messages.8706 -->`
+- 【Linux社区】Miguel Ojeda指base-commit尾标在补丁无法干净应用时非常有用，git format-patch --base也可生成该标与prerequisite-patch-id。 `<!-- ROW_MINE: ksummit.messages.8710 -->`
+- 【Linux社区】Kent Overstreet主张以沟通代替NACK规则，梳理Folio两路线（仅页缓存或兼含匿名页），称Willy拆解struct page的路线合理，匿名页Folio化仍存疑。 `<!-- ROW_MINE: ksummit.messages.8713 -->`
+- 【Linux社区】Konstantin Ryabitsev认同收件应由工具决定，计划改造工具不再对所有补丁抄送linux-kernel@vger，仅无其他列表匹配时才加。 `<!-- ROW_MINE: ksummit.messages.8715 -->`
+- 【Linux社区】Sasha Levin以v6.15..v6.16约20%提交（2734/14639）为修复的事实，反驳对AI设高于人类的质量门槛，称内核自身bug率已超1%。 `<!-- ROW_MINE: ksummit.messages.8721 -->`
+- 【Linux社区】Jason Gunthorpe补充成功开源驱动项目需客户拉动力：若市场不同向推动开放，仅靠规则与厂商意愿参与则成功概率大降。 `<!-- ROW_MINE: ksummit.messages.8723 -->`
+- 【Linux社区】Thorsten Leemhuis统计7.1周期39起回归：中位20天修复，远超Linus“一周内”经验法则；修复多已就绪而卡在评审提交，并列出高效子系统做法与具体commit。 `<!-- ROW_MINE: ksummit.messages.8728 -->`
+- 【Linux社区】Sasha Levin强烈反对Ojeda：存在Rust抽象只说明曾有人做过，作者离开后即成孤儿抽象；反问改驱动API难道要Greg KH代写代码。 `<!-- ROW_MINE: ksummit.messages.8729 -->`
+- 【Linux社区】James Bottomley披露多起AI补丁工具借sashiko提示向linux-scsi群发恶意硬件修复，他疲于答复“不在我威胁模型”，故提议从源头整治。 `<!-- ROW_MINE: ksummit.messages.8731 -->`
+- 【Linux社区】Vegard Nossum自述文档重构补丁搁置致弃坑，建议更积极合并文档补丁加增量修正，并倡议月度例会与docs路线图，指无专职文档岗位、LF资助实验失败。 `<!-- ROW_MINE: ksummit.messages.8733 -->`
+- 【Linux社区】Shuah以CoC委员身份反驳“只管维护者行为”论：多数报告属社区误解且幕后化解；认同维护者也是人，但质疑支持小组与CoC职责重叠。 `<!-- ROW_MINE: ksummit.messages.8742 -->`
+- 【Linux社区】Greg KH指stable-queue与linux-stable-rc树多年来持续收录稳定补丁，回应Rostedt关于合并窗口期连续稳定分支的提问。 `<!-- ROW_MINE: ksummit.messages.8755 -->`
+- 【Linux社区】Jonathan Corbet应用Konstantin文档补丁：vger已从majordomo+zmailer迁移至mlmmj并统一为subspace平台，弃用lore的/r/子路径建议。 `<!-- ROW_MINE: ksummit.messages.8762 -->`
+- 【Linux社区】Paul McKenney称在版权诉讼落定前不对开源项目用AI生成物，引DCO“有权提交”条款，指在途诉讼或使AI代码构成侵权，误收只能剔除并净室重写。 `<!-- ROW_MINE: ksummit.messages.8766 -->`
+- 【Linux社区】Al Viro称其见过的ksmbd漏洞均与内存安全无关，即使全用Rust重写也会原样出现，反驳以ksmbd论证Rust必要性的说法。 `<!-- ROW_MINE: ksummit.messages.8770 -->`
+- 【Linux社区】Kees Cook解释改用Link:标是因checkpatch对长URL行报警；建议正式化时可考虑markdown脚注风格，只求内核统一一种写法。 `<!-- ROW_MINE: ksummit.messages.8777 -->`
+- 【Linux社区】Johannes Weiner指二进制LLM标签信噪比差：AI参与度从起草到全代理、人工审查程度差异巨大，且标签已带污名，难以在提交元数据刻画分工。 `<!-- ROW_MINE: ksummit.messages.8779 -->`
+- 【Linux社区】Laurent Pinchart主张以对象生命周期为中心，remove后由子系统阻止整类API调用，而非Rust逐次运行时检查IO内存撤销，称后者是在解决不应存在的问题。 `<!-- ROW_MINE: ksummit.messages.8780 -->`
+- 【Linux社区】Jonathan Cameron自述IIO评审触底时向大厂求助奏效，CXL等新领域仍缺评审人；称推动公司投入非本业务评审很难，华为内部亦在摸索。 `<!-- ROW_MINE: ksummit.messages.8783 -->`
+- 【Linux社区】Ralf Jung举例本月rustc对内核aarch64禁FP方式发出可靠性警告，内核在警告进稳定版前已备好补丁并回移；内核用nightly特性故有CI特别照顾，目标降至零。 `<!-- ROW_MINE: ksummit.messages.8791 -->`
+- 【Linux社区】Kees Cook反驳消毒器不能上生产的旧论：内核UBSan与HW-KASan已在Android、ChromeOS生产环境运行近五年，Ubuntu与Fedora默认开启边界消毒。 `<!-- ROW_MINE: ksummit.messages.8792 -->`
+- 【Linux社区】Mauro Carvalho Chehab解释LTS发行版Sphinx过旧是默认推荐venv的主因；RHEL9、SUSE 15 SP4、Ubuntu 22.04达标后可改荐发行版包，Debian bullseye仍2.5.0。 `<!-- ROW_MINE: ksummit.messages.8793 -->`
+- 【Linux社区】Steven Rostedt解释因Linus要求改用主题分支致0day成功通知失效，并质疑推linux-next相比等0day机器人的收益，直指linus-next价值。 `<!-- ROW_MINE: ksummit.messages.8803 -->`
+- 【Linux社区】Randy Dunlap 指出 Link: 尾注以“#”分隔注释是多年惯例，Thorsten 引 process/5.Posting.rst 示例无“#”，主张一致；此一字之差成为 Link 文档补丁主要分歧。 `<!-- ROW_MINE: ksummit.messages.9539 -->`
+- 【Linux社区】Sasha Levin 实测各发行版内核调试符号可得性：Debian 安全仓缺符号、Fedora 仅最新版、Arch 不提供、Tumbleweed 仅存30天、Ubuntu/Rocky 常缺，支持在栈回溯内嵌源码行号。 `<!-- ROW_MINE: ksummit.messages.9542 -->`
+- 【Linux社区】Jason Gunthorpe 呼吁为 Sashiko 所报存量问题建 syzkaller 式仪表盘与催办汇总邮件，赞成提示词入内核树，建议导出完整上下文供本地 LLM 追问。 `<!-- ROW_MINE: ksummit.messages.9543 -->`
+- 【Linux社区】H. Peter Anvin 认为 Message-ID 缺 List-ID 几乎无用，维护者直接收补丁时看不到 List-ID 须手工补，反对以裸 Message-ID 取代 Link:。 `<!-- ROW_MINE: ksummit.messages.9553 -->`
+- 【Linux社区】Mark Brown 实测 kernel-doc --none -Wall 全库检查约 90 秒，Mauro 称本机快约 3 倍并追问 Python 版本与磁盘缓存差异，属文档检查性能实测数据。 `<!-- ROW_MINE: ksummit.messages.9555 -->`
+- 【Linux社区】Thorsten Leemhuis 发布回归处理准则修订稿：严重回归两三个工作日修复、近三月入用户内核者限两三个周日、一年内者三周，急修可请 Linus 直接自列表取补，stable 标签措辞已软化。 `<!-- ROW_MINE: ksummit.messages.9559 -->`
+- 【Linux社区】Konstantin Ryabitsev 追问如何建立对提交者的信任：已有端到端 attestation 但仍靠知名度，试探建立“接受过多少补丁”的自动 karma 统计系统。 `<!-- ROW_MINE: ksummit.messages.9565 -->`
+- 【Linux社区】Josef Bacik 提案维护者倦怠议题：以审换审、自动化测试增信、勿被 syzbot 报告压垮、维护小组替代单人、btrfs 建 GitHub CI 让开发者自驱测试，盼终至自动化合并。 `<!-- ROW_MINE: ksummit.messages.9572 -->`
+- 【Linux社区】Arınç ÜNAL 提议把 dt-bindings 与 DT 源文件移出内核树建统一仓库供 U-Boot/OpenWrt 共用；Rob Herring 反对，称内核硬件支持最多、已有生成式独立仓库且 U-Boot 已用。 `<!-- ROW_MINE: ksummit.messages.9575 -->`
+- 【Linux社区】Jarkko Sakkinen 称 Rust“不难学但难跑”，内核开发几乎不做宿主对宿主编译，文档应改讲 BuildRoot/Yocto/NixOS 而非 dnf/apt-get，QA 才是真门槛。 `<!-- ROW_MINE: ksummit.messages.9577 -->`
+- 【Linux社区】Steven Rostedt 附议 Andrew Morton 勿阻碍 AI 生成的缺陷报告：AI 是远优于代码生成者的找 bug 工具，宁容忍劣质修复也不放弃有价值的报告。 `<!-- ROW_MINE: ksummit.messages.9581 -->`
+- 【Linux社区】Richard Weinberger 提议建网页界面，粘贴 dmesg 栈回溯即自动匹配最合适的上报邮件列表；引 Linus 介绍 decode_stacktrace.sh 可还原源码行号与内联信息。 `<!-- ROW_MINE: ksummit.messages.9583 -->`
+- 【Linux社区】Kees Cook 指内核 C 代码两大缺陷类为缓冲溢出与释放后使用，Rust 借用检查可消除；主张默认 trap-on-overflow；点明无线驱动长期是缓冲溢出重灾区，正改造 memcpy() 用法。 `<!-- ROW_MINE: ksummit.messages.9584 -->`
+- 【Linux社区】Martin K. Petersen 表示显式标注 stable 且顺利合入时不希望收到通知，但愿被抄送回移植失败通报；关键补丁进展直接查 git 而非依赖邮件。 `<!-- ROW_MINE: ksummit.messages.9591 -->`
+- 【Linux社区】Joe Perches 直言“checkpatch 很蠢，几乎没有零误报的检查”，建议按目录向上查找 .checkpatch.conf 实现子系统级配置；Rob Herring 主张先只启用零误报检查再逐步扩充。 `<!-- ROW_MINE: ksummit.messages.9594 -->`
+- 【Linux社区】Ralf Jung 更正把别名优化 bug 误归 GCC：实为 LLVM #21725，GCC #57359 已修；对比 Miri 能捕获编译器所知全部 UB，指出 clang 因 SROA 与 noundef 将 padding 视作 poison 的合规疑问。 `<!-- ROW_MINE: ksummit.messages.9598 -->`
+- 【Linux社区】Steven Rostedt 自述推入 linux-next 后避免重基底：两个主题分支共需同一改动时以合并代替；通常 rc4 前后推送，本轮拖到 rc5-rc6，解释“隐藏提交”的由来。 `<!-- ROW_MINE: ksummit.messages.9599 -->`
+- 【Linux社区】Alexei Starovoitov 建议写入 submitting-patches.rst：贡献者应先证明能实质审阅同等复杂度补丁；bpf/netdev 公布开发者审阅统计排名，参审可换更快合入并建立维护者信任。 `<!-- ROW_MINE: ksummit.messages.9600 -->`
+- 【Linux社区】Wedson 以 Rust 版 PL061 驱动与 Laurent 论战设备移除语义：资源撤销方案令 .remove() 只需等 RCU，Laurent 主张阻塞在途调用；Wedson 承认 C 侧靠开发者纪律，Rust 靠编译器强制。 `<!-- ROW_MINE: ksummit.messages.9610 -->`
+- 【Linux社区】Laurent Pinchart 警告 cleanup.h 式自动清理易致释放后使用与双重释放，返回派生指针须 glib g_steal_pointer 式置空，且多返回点让状态修复更难，权衡后仍偏好显式释放。 `<!-- ROW_MINE: ksummit.messages.9612 -->`
+- 【Linux社区】Mark Brown 纠正 Dan Carpenter：多数子系统对 Linus 树或本树修复分支取补再向上合并，常需按树选基打补丁的仅 net、bpf 及部分 Intel 网卡驱动等少数。 `<!-- ROW_MINE: ksummit.messages.9615 -->`
+- 【Linux社区】SeongJae Park 提交 2024 峰会 DAMON 议题：细粒度 DAMOS 控制、自动调参、分层内存、访问与连续性感知自动扩缩、只写监控与热迁移，并列 2019-2023 历届峰会 DAMON 会话链接。 `<!-- ROW_MINE: ksummit.messages.9619 -->`
+- 【Linux社区】Greg KH 确认 kernel.org 正与 OpenSSF 重构 Web of Trust 以替换自建方案，2 月会议将公开“第一人称凭证”计划，目标是等价替换现有 gpg 用法而不改变维护者流程。 `<!-- ROW_MINE: ksummit.messages.9622 -->`
+- 【Linux社区】Christian Brauner 承认 TAB 会议纪要仓库自 2020 年 10 月起未更新，承诺催促补齐；引 Laura Abbott 概述 TAB 一年工作：工作流改进、监督 LPC、审查明尼苏达大学补丁。 `<!-- ROW_MINE: ksummit.messages.9628 -->`
+- 【Linux社区】Laurent Pinchart 主张字符设备驱动弃用 devm_kzalloc 管理内部数据，改引用计数并实现 .release 回调；devm_ioremap 系安全，sysfs unbind 与热拔等价，稳压器等核心资源也可能随设备拔除。 `<!-- ROW_MINE: ksummit.messages.9629 -->`
+- 【Linux社区】Laura Abbott 重申 2021 TAB 选举规则：2020-21 年主/稳定内核 3 枚含 Signed-off-by 等标签提交即有资格，50 枚以上自动收票，用 CIVS Condorcet 投票，9 月 20 日后发选票。 `<!-- ROW_MINE: ksummit.messages.9630 -->`
+- 【Linux社区】Laurent Pinchart 发现“b4 dig”本身以 Message-Id 为参数，质疑弃用 Link 标签的提案自相矛盾，公开追问该方案究竟要解决什么问题。 `<!-- ROW_MINE: ksummit.messages.9632 -->`
+- 【Linux社区】Mauro Carvalho Chehab 说明媒体子系统被回退的 29 个 UMN 补丁无恶意代码、多为有效修复；引用 pm_runtime_resume_and_get 系 Zhang Qilong 2020 年 11 月新增，该批补丁先于其存在。 `<!-- ROW_MINE: ksummit.messages.9636 -->`
+- 【Linux社区】Roman Gushchin 披露 Sashiko 对 SCSI 补丁报出 DMA 共享内存 TOCTOU 高危；James Bottomley 指硬件不应假定恶意，Roman 采纳将内核安全威胁模型文档注入 review-prompts 提示词。 `<!-- ROW_MINE: ksummit.messages.9639 -->`
+- 【Linux社区】Artem S. Tashkinov 以 Bugzilla 每周约 20 份报告的数据反驳“维护者将被淹没”，坚持 opt-out 自动订阅；与 Konstantin“维护者要补丁不要报告”的立场正面对撞。 `<!-- ROW_MINE: ksummit.messages.9640 -->`
+- 【Linux社区】Ralf Jung 详述 Miri 之独特：Cerberus 仅跑极小程序、CompCert 语义偏窄；Rust 规范须规约式而非描述式，rustc/LLVM 不是规范，1.84 已启用新 trait solver，CI 对每次变更验证 Rust-for-Linux。 `<!-- ROW_MINE: ksummit.messages.9644 -->`
+- 【Linux社区】Linus Torvalds 在峰会筹备线程怒斥 Enrico Weigelt 反疫苗言论“技术错误”，科普 mRNA 半衰节数小时不改基因序列，称疫苗拯救数千万人，要求此类言论勿上内核讨论列表。 `<!-- ROW_MINE: ksummit.messages.9648 -->`
+- 【Linux社区】James Bottomley 反对 EXPORT_USERSPACE_GPL 构想：无系统调用例外修改便无法律依据，合并后无法禁止专有用户态；驱动与固件个案评估，难立通则。 `<!-- ROW_MINE: ksummit.messages.9649 -->`
+- 【Linux社区】Arnaldo 与 Laurent 辩论 AI 审阅对补丁流量的影响：Laurent 认为可减少含明显错误的 v1，Arnaldo 称省下时间将产出更多好补丁，并强调维护者不能指望贡献者自觉跑测试或 linter。 `<!-- ROW_MINE: ksummit.messages.9653 -->`
+- 【Linux社区】Tim Bird 称 GKI 阻碍索尼应对运营商认证、Google 对非一线厂商响应迟缓；Google 员工 Bart Van Assche 索要实例，称直送 Google 的 Android 内核补丁质量常低劣，质疑认证是否需改核心内核。 `<!-- ROW_MINE: ksummit.messages.9654 -->`
+- 【Linux社区】Stephen Rothwell 更正 Mauro：Debian stable Bullseye 的 python3-sphinx 实为 3.4.3 而非 2.5.0，影响内核文档是否推荐发行版 Sphinx 包的基线判断。 `<!-- ROW_MINE: ksummit.messages.9663 -->`
+- 【Linux社区】Lorenzo Stoakes 反驳“LLM 只是另一种工具”：其负面冲击肉眼可见，现有规范“为勺子设计”不宜套用于链锯；James Bottomley 以链锯类比回应，主张先按普通工具对待，弊大于利再弃用。 `<!-- ROW_MINE: ksummit.messages.9680 -->`
+- 【Linux社区】Mauro Carvalho Chehab 称 Assisted-by 标签无益审查、只便利盲目拒补丁；提醒曾有 LLM 新人差点当上 lib/ 维护者，警惕依赖 Sashiko 等专有工具遭 rugpull，主张用平价 GPU 可运行的开源模型。 `<!-- ROW_MINE: ksummit.messages.9685 -->`
+- 【Linux社区】Greg KH 概括 Linus 方案为“直接应用且未改动则不加 Link、改动才补加”，抱怨加重维护者负担且 git hook 需联网，要求“设好即忘”方案；称网络与 DRM 是最大提交来源。 `<!-- ROW_MINE: ksummit.messages.9690 -->`
+- 【Linux社区】Konstantin Ryabitsev 提议以 Message-Id: 尾注取代 Link: 表补丁来源：patch-id 因 diff 算法与上下文行数差异而匹配不可靠；新法可消歧 Link、供 b4 与 patchwork 自动化、助 stable 追踪系列归属。 `<!-- ROW_MINE: ksummit.messages.9696 -->`
+- 【Linux社区】Geert 指出 Link 指南已在 v6.18-rc1 提交 944df7a31452f75b 移除、改用不可点击的 Message-ID 标签；Rafael 建议以通用形式恢复，并把 patch.msgid.link 域名定为强制。 `<!-- ROW_MINE: ksummit.messages.9701 -->`
+- 【Linux社区】Jan Kara 指出 Rust 引用模型缺口：多线程经共享结构查找对象时，结构无法持有引用又要检测“仅结构指向即回收”的情形，当时无法用 Rust refs 表达该惯用法。 `<!-- ROW_MINE: ksummit.messages.9702 -->`
+- 【Linux社区】Ralf Jung 介绍 Rust 验证工具谱系：Kani 做有界模型检查，Gillian-Rust、VeriFast、Verus、Prusti、RefinedRust 支持 unsafe 代码但均未生产就绪；Miri 的抽象机模型是关键基础。 `<!-- ROW_MINE: ksummit.messages.9703 -->`
+- 【Linux社区】Ted Ts'o 公布 2024 维护者峰会维也纳日程：回归跟踪与 regzbot 评估、直通设备 fwctl 之争、“是否准备好投入 Rust”、开发工具链与 FIDO2、OFAC 与维护者，附各场预读问题。 `<!-- ROW_MINE: ksummit.messages.9704 -->`
+- 【Linux社区】Mauro 担忧 Web of Trust 新凭证如何开设：希望无需亲赴 gpg 式密钥派对，若能沿用现有 gpg 密钥或基础设施完成置换，迁移成本才低。 `<!-- ROW_MINE: ksummit.messages.9715 -->`
+- 【Linux社区】Kevin Brodsky 拟提 LPC 议题：pkeys ABI 对信号递送、rseq、io_uring 工作线程等异步内核交互严重欠规范且各架构不一，Thomas Gleixner 称“全都坏了”；Vlastimil 建议改报 Kernel Summit 技术议题。 `<!-- ROW_MINE: ksummit.messages.9718 -->`
+- 【Linux社区】Tashkinov称其讥讽被误解，为Bugzilla辩护：邮件无跟踪能力，反对者却提不出可行替代方案，与Pinchart就“侮辱开发者”互斥。 `<!-- ROW_MINE: ksummit.messages.9719 -->`
+- 【Linux社区】Pinchart引LWN 904776反驳Rostedt：以“买外接摄像头”回避内置摄像头故障的变通曾令用户极度不满，被忽视的报告未必无关紧要。 `<!-- ROW_MINE: ksummit.messages.9723 -->`
+- 【Linux社区】Chamberlain细述自动化抗倦怠的前提：Samsung共享裸机与Oracle OCI等硬件资源、Song Liu的eBPF patchwork即时测试、kdevops整合与“要求测试”之辩。 `<!-- ROW_MINE: ksummit.messages.9726 -->`
+- 【Linux社区】Overstreet指Rust不安全层别名规则（tree/stacked borrows）仍未定型，若固化成功可减少spill与reload，令VLIW架构重获实用价值。 `<!-- ROW_MINE: ksummit.messages.9727 -->`
+- 【Linux社区】Sakkinen称用Rust测试文档编译DMA补丁却陷入“无测试不放行”境地，指出DMA的doc测试仅为函数定义无法运行，自荐以内核QA为参与第一步。 `<!-- ROW_MINE: ksummit.messages.9733 -->`
+- 【Linux社区】Bird提议为KTODO标记建仪表盘量化技术债存量，自述FIXTHIS前缀经验，并质疑任务完成后KTODO注释应随提交删除以免误导。 `<!-- ROW_MINE: ksummit.messages.9734 -->`
+- 【Linux社区】Williams为fwctl辩护：区分FPGA比特流式配置面与CXL厂商调试日志命令，承认网络维护者异议不能忽视，邮件信任赤字难解故提议面对面调解。 `<!-- ROW_MINE: ksummit.messages.9735 -->`
+- 【Linux社区】Romanovsky主张API须进入发行版软件栈方能扩展，斥HabanaLabs绕过RDMA社区为搭便车；Greg KH反驳厂商都该上游、发行版仅是少数场景，反问门槛何在。 `<!-- ROW_MINE: ksummit.messages.9737 -->`
+- 【Linux社区】Bottomley重申把Link标签之争一分为二：工具自动化追踪用message-id即可，维护者手写背景注释另立，Link兼两职正是争议根源。 `<!-- ROW_MINE: ksummit.messages.9743 -->`
+- 【Linux社区】Overstreet称bcachefs已有btree核心API的Rust绑定，拟先在debugfs试点；反驳“2034年才可用”说，称数年内新硬件驱动将需要Rust。 `<!-- ROW_MINE: ksummit.messages.9749 -->`
+- 【Linux社区】Verkuil说明媒体29个被回退补丁早于pm_runtime_resume_and_get()问世；引Leon方案在__pm_runtime_resume失败时自动递减usage_count，Brown称runtime PM API本就难用。 `<!-- ROW_MINE: ksummit.messages.9753 -->`
+- 【Linux社区】Overstreet回应Linus：Rust的W^X引用保证独占写，仅UnsafeCell边界禁止store加宽；多线程环形缓冲区头尾指针须用原子类型标注。 `<!-- ROW_MINE: ksummit.messages.9755 -->`
+- 【Linux社区】Rostedt剖析SoB链版权责任：AI注入侵权代码时提交者与维护者何者担责不明，律师澄清前维护者难免顾虑，透明标注或反成把柄。 `<!-- ROW_MINE: ksummit.messages.9756 -->`
+- 【Linux社区】Rostedt追问Uecker：若编译器如LTO般可见全程序，能否自行判定跨线程可见性并据此优化，点出全程序优化与内存模型语义的张力。 `<!-- ROW_MINE: ksummit.messages.9768 -->`
+- 【Linux社区】Nikula指kernel-doc脚本对头文件重复解析四次，主张改造为可缓存的Python Sphinx扩展，反对预处理RST，忆旧DocBook败于各阶段阻抗失配。 `<!-- ROW_MINE: ksummit.messages.9772 -->`
+- 【Linux社区】Laight抨击Rust读取非0/1的bool即属UB，称语言须如调用约定般精确定义行为，断言bool非硬件类型、实现成本高，不如用int表真假。 `<!-- ROW_MINE: ksummit.messages.9773 -->`
+- 【Linux社区】Hemminger针对驱动错误路径RAII需求，示范直接以GCC cleanup属性定义_cleanup_free_，认为比Van Assche的错误易发宏方案更简洁。 `<!-- ROW_MINE: ksummit.messages.9776 -->`
+- 【Linux社区】Rostedt质疑依内核内部信息编写的eBPF程序会形成事实稳定API：多年后维护者改动代码将触发“破坏用户态”条款而被要求回退。 `<!-- ROW_MINE: ksummit.messages.9785 -->`
+- 【Linux社区】Pinchart指邮件缺缺陷跟踪能力；Leemhuis介绍regzbot借Link标签串联报告与补丁追踪回归，Pinchart称其依赖启发式、盼邮件支持结构化数据。 `<!-- ROW_MINE: ksummit.messages.9790 -->`
+- 【Linux社区】Ryabitsev以系统管理者立场主张脚本行为可预期：python3脚本应遵循系统默认解释器，自动改选其他版本令人困扰。 `<!-- ROW_MINE: ksummit.messages.9795 -->`
+- 【Linux社区】Ryabitsev年度报告：b4普及与AI集成失败教训、AI爬虫冲击、SMTP恶化、lore渐成分布式消息总线、local lore维护者容器、拟废Bugzilla、与OpenSSF重构信任网。 `<!-- ROW_MINE: ksummit.messages.9796 -->`
+- 【Linux社区】Torvalds主张AI工具应优先服务维护者而非普通开发者，举安全列表AI垃圾报告与Jens Axboe因AI爬虫放弃自建git服务器为例。 `<!-- ROW_MINE: ksummit.messages.9798 -->`
+- 【Linux社区】Anvin披露Link标签来历：其原始方案直接放Message-ID被Linus以不可点击否决，折中为kernel.org域名下编码msgid的URL，兼作URN防档案失效。 `<!-- ROW_MINE: ksummit.messages.9799 -->`
+- 【Linux社区】Wedson以强弱双计数与弱引用升级方案回应引用计数之问；Greg KH追问Rust如何对接dentry/inode/kobject等内核自管计数，称需先见真实驱动。 `<!-- ROW_MINE: ksummit.messages.9800 -->`
+- 【Linux社区】Ojeda的LPC 2024提案：概述Rust安全抽象与构建系统进展、kernel crate拆分、多版本编译器支持使发行版开箱可用、Linux列入Rust 2024h2目标并进预合并CI。 `<!-- ROW_MINE: ksummit.messages.9803 -->`
+- 【Linux社区】Levin实测kallsyms嵌入源码行号开销：459万条目令.rodata增约44MiB，vmlinux由529MiB至573MiB（+8.3%）；对Babka模块化之议称首次崩溃即可用decode_stacktrace.sh在用户态解码。 `<!-- ROW_MINE: ksummit.messages.9805 -->`
+- 【Linux社区】Pinchart提议为函数加注解标明返回错误码或错误指针，助静态分析识别“if (!ret) return ret;”类反转bug，忆gcc 4.2未初始化告警时代每版皆获真bug。 `<!-- ROW_MINE: ksummit.messages.9814 -->`
+- 【Linux社区】Anderson推荐源自U-Boot的patman：逐补丁get_maintainer加CC、封面信全员抄送、自动整理版本历史，并转述Olof批评其令大型系列过易发送。 `<!-- ROW_MINE: ksummit.messages.9819 -->`
+- 【Linux社区】Pinchart主张混合峰会设专人看聊天区转述远程提问；指出工作坊远程参与最大障碍是现场者不用麦克风，须强制执行并增配话筒。 `<!-- ROW_MINE: ksummit.messages.9822 -->`
+- 【Linux社区】Jung阐释原子写禁止编译器凭空新增写，指LKMM依赖机制与GVN/CSE等基础优化根本冲突，为优化型语言找到匹配LKMM效率的并发原语仍是未解难题。 `<!-- ROW_MINE: ksummit.messages.9823 -->`
+- 【Linux社区】Stoakes坚持指南须开宗明义拒绝AI slop，举Carpenter遇提交者以AI幻觉规格搪塞质询为例，引Postgres的Freund帖警示，并指Linus立场被外界误传。 `<!-- ROW_MINE: ksummit.messages.9828 -->`
+- 【Linux社区】Levin估计约八至九成回迁失败仅是上下文冲突或缺依赖，属初级工程师可解、AI能胜任；其余一至两成因子系统大重构，现有AI尚不可托付。 `<!-- ROW_MINE: ksummit.messages.9832 -->`
+- 【Linux社区】Brown举linus-next脚本首例即绊倒：KVM arm64提交afa9b48f327c未见于lore亦未进-next而Linus照拉，惟其曾埋在邮件列表回复中。 `<!-- ROW_MINE: ksummit.messages.9839 -->`
+- 【Linux社区】Levin披露Assisted-by详注工具名意在日后审计工具实效，主张按提交质量而非工具论英雄，提AGENTS.md改进合规，并质疑对专有AI工具的真实依赖度。 `<!-- ROW_MINE: ksummit.messages.9842 -->`
+- 【Linux社区】Nikula透露媒体子系统CI已做到W=1零告警构建，询问如何滤除非媒体告警，盼统一要求贡献者修复全部编译警告而非学会忽略。 `<!-- ROW_MINE: ksummit.messages.9848 -->`
+- 【Linux社区】Mauro判断AI生成代码大抵源于公开许可代码（企业禁用公共AI处理私有码），视SoB为授权保证，只要人类把关质量便不介意是否用AI。 `<!-- ROW_MINE: ksummit.messages.9849 -->`
+- 【Linux社区】Uecker（ISO C工作组委员）称C23核心尚有87处UB、C2Y已除17处另有12项提案，正于GCC前端试验可分区域启用的内存安全模式，呼吁内核社区参与标准化。 `<!-- ROW_MINE: ksummit.messages.9854 -->`
+- 【Linux社区】Perches自述已不订阅LKML、极少参与讨论，仅偶以关键词检索lore并手动下载线程，为“THE REST”迁离vger之议提供资深维护者工作流佐证。 `<!-- ROW_MINE: ksummit.messages.9858 -->`
+- 【Linux社区】Torvalds界定所需为Guenter式每_rc跨多架构实机启动的功能测试，每个合并窗口总能揪出数个问题，类比linux-next多架构构建测试的价值。 `<!-- ROW_MINE: ksummit.messages.9862 -->`
+- 【Linux社区】McKenney质疑linus-next激励效应：更多测试者既可能倒逼快速修复、也可能令人避之不及，戏言除非Linus拒绝“停留过短”的拉取请求。 `<!-- ROW_MINE: ksummit.messages.9863 -->`
+- 【Linux社区】Golaszewski提案梳理驱动对象生命周期乱象脉络（Pinchart LPC 2022、其FOSDEM 2023、Sang EOSS 2023），计划分多年多阶段统一子系统对驱动数据的处理。 `<!-- ROW_MINE: ksummit.messages.9872 -->`
+- 【Linux社区】Coly Li转达应用团队评估：现以BPF做规则控制、规则持久化繁琐；举AI相册硬链接隐私场景与父目录无写权删除之困，Moore重申LSM只能拒不能授、系有意设计。 `<!-- ROW_MINE: ksummit.messages.9878 -->`
+- 【Linux社区】Brown 担忧 Android GKI 限制共享 API 更新，迫使厂商把框架不支持的功能全塞进驱动，反而拖累上游化意愿。 `<!-- ROW_MINE: ksummit.messages.8816 -->`
+- 【Linux社区】Chehab 建议将 Sashiko 审查上下文制成训练集，发布 GGUF 格式开源补丁审查模型，可经 ollama 本地运行不同规格。 `<!-- ROW_MINE: ksummit.messages.8825 -->`
+- 【Linux社区】Bottomley 称对专有固件的恐惧部分是心态问题，举 openstack、docker 等自愿开放生态及 Nvidia 受 AI 云压力转向开源驱动为例。 `<!-- ROW_MINE: ksummit.messages.8830 -->`
+- 【Linux社区】Bottomley 指 cleanup.h 建议混排声明并强制初始化 __free 变量，与既有 K&R 规则冲突，应在 coding-style 文档全局统一修订。 `<!-- ROW_MINE: ksummit.messages.8831 -->`
+- 【Linux社区】Wilcox 引疫苗对变异株有效率 33%-93% 的数据，反对 2021 年以宽松防疫线下办会，认为跨大西洋参会者几乎必然带毒。 `<!-- ROW_MINE: ksummit.messages.8835 -->`
+- 【Linux社区】Dobriyan 回应 Torvalds 对 C++ 的批评，论证 new 缺省链接即失败、可用 -fcheck-new 兜底，placement new 亦可禁用。 `<!-- ROW_MINE: ksummit.messages.8837 -->`
+- 【Linux社区】Ralf Jung 指出 C 别名规则连 GCC 实现都偏离共识且无对应 sanitizer；Miri 覆盖编译器认定的全部 UB，但仅限所测路径且极慢。 `<!-- ROW_MINE: ksummit.messages.8839 -->`
+- 【Linux社区】Levin 说明许多子系统仍以 patchbomb 投递而非 pull request，补丁同属一个系列并不代表存在依赖，不能据系列成员判断回溯风险。 `<!-- ROW_MINE: ksummit.messages.8841 -->`
+- 【Linux社区】Tarreau 指将 amdgpu/i915 报告导向各自追踪器割裂了报告入口，恰是其抱怨邮件列表的问题；邮件线程无“已关闭”状态更利检索。 `<!-- ROW_MINE: ksummit.messages.8849 -->`
+- 【Linux社区】Ojeda 探讨把子系统准则文件（如 threat-model.rst）注入 AI 审查提示的机制，主张内核与提示仓库各子系统间保持一致。 `<!-- ROW_MINE: ksummit.messages.8850 -->`
+- 【Linux社区】Bottomley 主张借美国疫苗形势办混合式峰会，并坦言远程参会者必然处于劣势，公开征求改进混合会议的方案。 `<!-- ROW_MINE: ksummit.messages.8851 -->`
+- 【Linux社区】Howlett 指新树名与 linux-next 仅差一符易混淆，质疑迟交的 pull request 会使前置测试失效，询问有无测试截止时间。 `<!-- ROW_MINE: ksummit.messages.8854 -->`
+- 【Linux社区】Pinchart 逐例评 OMAP3、RK3399、IPU3 与树莓派 ISP 驱动，主张以真实用例的开源用户态实现作为合并前提，公开数据手册可作替代。 `<!-- ROW_MINE: ksummit.messages.8867 -->`
+- 【Linux社区】Chinner 提出社区维护文件系统最低门槛：可用 mkfs 与 fsck、纳入 fstests，并以 fstype 标志标注支持与废弃状态，建立合并与移除的生命周期政策。 `<!-- ROW_MINE: ksummit.messages.8868 -->`
+- 【Linux社区】Sang 披露 Andi Shyti 接手 I2C 控制器补丁、处理 patchwork 与拉取请求，释放其回归核心开发；称部分领域人手决定了层级无法重构。 `<!-- ROW_MINE: ksummit.messages.8870 -->`
+- 【Linux社区】Ribalda 称内核只触达极小部分用户、传统友好厂商也难以上游，呼吁尝试新法；Pinchart 透露某大 SoC 厂商因直通空白支票临阵放弃开源相机栈。 `<!-- ROW_MINE: ksummit.messages.8871 -->`
+- 【Linux社区】Cook 借鉴 Debian 维护者 “recency” 活动报告，提议为贡献者建立可一览近期活动的仪表盘，辅助建立对提交者的信任。 `<!-- ROW_MINE: ksummit.messages.8874 -->`
+- 【Linux社区】Gunthorpe 称已有多位资深提交者无爆炸无声地离场，社区缺泄压阀、担心抱怨遭报复，自述参与体验在变差并担忧自己领域同样如此。 `<!-- ROW_MINE: ksummit.messages.8877 -->`
+- 【Linux社区】Tissoires 转述 Linus 在 OSS 峰会称 eBPF 无定义 API 但破坏普通用户态工具仍须修复，并论证 TRACING 只读、kfunc 需显式导出，举 hidraw 触控板示例示警。 `<!-- ROW_MINE: ksummit.messages.8878 -->`
+- 【Linux社区】Anvin 视 Gaisler LEON sparc32 配 16GiB 新 SoC 的 highmem 需求为自找问题，建议尽早把客户迁往 RISC-V RV64。 `<!-- ROW_MINE: ksummit.messages.8887 -->`
+- 【Linux社区】Stoakes 举 LLM 坚称 MAINTAINERS 存在不存在的小节等实例，主张统计推断必有缺口、错误可极隐蔽，建议让维护者自行决定接受政策。 `<!-- ROW_MINE: ksummit.messages.8890 -->`
+- 【Linux社区】Geert 澄清“私 CC”应指未抄送任何公开渠道而非仅用个人邮箱，并回击以侮辱方式论战无助于说服。 `<!-- ROW_MINE: ksummit.messages.8891 -->`
+- 【Linux社区】Pinchart 指提交文档“默认抄送 LKML”的表述自相矛盾，披露 patchew 依赖 public-inbox 导入 LKML，而 patches 列表除稳定队列外几无流量。 `<!-- ROW_MINE: ksummit.messages.8898 -->`
+- 【Linux社区】Khan 认为现行小规模峰会更聚焦维护者议题，旧大格式便于旁观学习决策，建议将部分议题扩展为 kernel summit track 以应顶层维护者淡出。 `<!-- ROW_MINE: ksummit.messages.8903 -->`
+- 【Linux社区】Ojeda 表态“维护者不懂 Rust 则该子系统暂不合并 Rust 代码”在起步阶段是合理做法，具体政策交由 Greg 与 Linus 定夺。 `<!-- ROW_MINE: ksummit.messages.8910 -->`
+- 【Linux社区】McKenney 与 Uecker 辨析 C 的 observable 与 visibility 概念，称 LTO 是全程序优化的一小步，反对复制原子读的论据是其破坏基本算术。 `<!-- ROW_MINE: ksummit.messages.8912 -->`
+- 【Linux社区】Stoakes 提议今年邀请 David Hildenbrand 与会，因其正从 Andrew Morton 手中过渡接手 mm，Linus 将与其大量互动。 `<!-- ROW_MINE: ksummit.messages.8916 -->`
+- 【Linux社区】Hemminger 赞同 Dobriyan 对 C89 声明置顶抬高 bug 率、膨胀行数、妨碍 const 的批判，但要求勿提交纯重排声明的 churn 补丁。 `<!-- ROW_MINE: ksummit.messages.8931 -->`
+- 【Linux社区】Chamberlain 建议文档推广 Generated-by 标签（其用于 Coccinelle 与 kdevops 多年），并提议以 git notes 存储提示词以助微调。 `<!-- ROW_MINE: ksummit.messages.8941 -->`
+- 【Linux社区】Tashkinov 力陈邮件难以跟踪缺陷状态、Bugzilla 曾支撑数十人协作解决关键问题，并引 Konstantin 称维护者只想要网页表单、bugmaster 岗位极易倦怠。 `<!-- ROW_MINE: ksummit.messages.8943 -->`
+- 【Linux社区】Khan 提议拒收未抄送维护者的补丁并自述曾代为寻找；Rostedt 指出该要求破坏 quilt 工作流，其本人、Zijlstra 与 Morton 均受影响。 `<!-- ROW_MINE: ksummit.messages.8944 -->`
+- 【Linux社区】Chehab 按手机到 H100 服务器分档讨论算力成本，建议以 36B 参数 3-4B 激活的开源模型承担内核审查，实测 qwen 3.6 在 16GB 显卡上出结果尚可。 `<!-- ROW_MINE: ksummit.messages.8949 -->`
+- 【Linux社区】Carpenter 介绍 Smatch 聚焦查缺陷，已积累近两千条用户可触发整数溢出告警，并逐行剖析 dfl-fme-pr.c 的 ALIGN 溢出与 vmalloc 零长返回 NULL 行为。 `<!-- ROW_MINE: ksummit.messages.8950 -->`
+- 【Linux社区】Ferre 披露 Microchip SAMA7D65 为 Cortex-A7、1GB 内存、无 IOMMU、依赖大块 CMA，已在 sama7_defconfig 启用 CONFIG_HIGHMEM，承诺逐年更新内核。 `<!-- ROW_MINE: ksummit.messages.8958 -->`
+- 【Linux社区】Zohar 自述倾向只回溯明确标注 Stable 的提交，但 Fixes 标签越多越易忘抄送稳定组，建议机器人只向未守规的维护者发提醒以减少噪音。 `<!-- ROW_MINE: ksummit.messages.8963 -->`
+- 【Linux社区】KH 确认 LF 与企业出资支持 Kees、Gustavo 等人的 C 代码硬化，内核开发者亦参与 ISO C 标准委员会并定期通报，并询问还有何提案值得支持。 `<!-- ROW_MINE: ksummit.messages.8970 -->`
+- 【Linux社区】Abbott 通告 2021 TAB 选举：9 月 20-23 日投票，2020-2021 年有 3 个含 SOB/Tested 等标签提交即可投票，超 50 个自动获票，采用 CIVS Condorcet 制。 `<!-- ROW_MINE: ksummit.messages.8977 -->`
+- 【Linux社区】KH 评 regzbot 设计：多数用户无力定位引入提交，询问 #regzb 标签容错与人工代录安排，并主动提供稳定回溯工具，肯定方案价值。 `<!-- ROW_MINE: ksummit.messages.8985 -->`
+- 【Linux社区】Melo 质疑 Assisted-by 式披露不含模型与工具版本，主张披露仅助理解补丁来历，不能取代维护者的独立判断与附加工具核验。 `<!-- ROW_MINE: ksummit.messages.8992 -->`
+- 【Linux社区】Torvalds 明言关心 linux-next 失败但收不到自动化通知，欢迎“此树存在这些问题”类报告，称峰会关于 linux-next 可测性的反馈毁誉参半。 `<!-- ROW_MINE: ksummit.messages.8993 -->`
+- 【Linux社区】Jung 驳斥“Rust 编译器升级频毁代码”系道听途说，承认 time crate 事件处理失当并已内部检讨，披露新 trait solver 已随 Rust 1.84 部分启用。 `<!-- ROW_MINE: ksummit.messages.8996 -->`
+- 【Linux社区】TI 的 Shah 提交 LPC Europe 2026 议题：从 cpio 解包追踪到 /init，覆盖无 udev 的设备发现、switch_root 与 pivot_root 误用陷阱及 U-Boot FIT 内嵌。 `<!-- ROW_MINE: ksummit.messages.8997 -->`
+- 【Linux社区】Kosina 引 openwall 2023 年公告纠正 Linus：linux-distros 已将漏洞利用代码的强制披露改为可自行延迟或保留 1-30 天，如 Exim 与 StackRot 案例。 `<!-- ROW_MINE: ksummit.messages.8999 -->`
+- 【Linux社区】Anvin 指出 Linux 的 fopen/stdio 曾无条件以 mmap 实现，输入侧 mmap 与 stdio 契合，故在 USB 盘 FAT 上直接打开文档即用 mmap，反驳其无关紧要论。 `<!-- ROW_MINE: ksummit.messages.9004 -->`
+- 【Linux社区】Konstantin 解释 Link 尾注中“#”之后内容仅是注释约定，格式为“Trailer 名: 正文 # 注释”，回应 Kees 对文档新增“# [1]”写法的疑问。 `<!-- ROW_MINE: ksummit.messages.9387 -->`
+- 【Linux社区】Chehab 对 kernel.org Web of Trust 新方案表态：须保持可选加入、可随时吊销换钥并保留 GPG 密钥链与密钥聚会作后备；指出并行维护新旧两套体系将加重基础设施负担。 `<!-- ROW_MINE: ksummit.messages.9392 -->`
+- 【Linux社区】Brown 澄清分流提案不影响 MAINTAINERS 中显式列出子列表的子系统（如 linux-trace-kernel），问题仅在“THE REST”通配项让 LKML 自动出现在一切补丁抄送中。 `<!-- ROW_MINE: ksummit.messages.9396 -->`
+- 【Linux社区】Bottomley 将直通争议拆为三题：跨子系统 NAK 裁决、厂商开源教育（称 LF 协助已中断，Greg 反驳其本人仍受 LF 资助做此事）、开放驱动标准；fwctl 宜留待 Plumbers 讨论。 `<!-- ROW_MINE: ksummit.messages.9401 -->`
+- 【Linux社区】Greg KH 反对以 b4 查询取代 Link 尾注：增加维护者负担、离线无法应用补丁、用户不会装 b4；预言多数人会漏加，称这一行是“保险税”，曾在稳定分支工作省下大量时间。 `<!-- ROW_MINE: ksummit.messages.9404 -->`
+- 【Linux社区】Kees 赞同复杂拼接用 seq_buf（兼具长度计数与 NUL 终止），但认为剩余 strncpy 用例由 strscpy、strtomem、kmemdup_nul、memcpy 覆盖更省开销，回应 Hellwig“替换助手引入更多 bug”之虑。 `<!-- ROW_MINE: ksummit.messages.9407 -->`
+- 【Linux社区】Ojeda 驳斥 Anvin“Rust 独占代码推迟至 2034”论：引 Clang 起步仅支持单一版本后逐步放宽的先例（2020 Plumbers 表决），Android 与 Asahi 已可用，约束在“删 C”而非“加 Rust”。 `<!-- ROW_MINE: ksummit.messages.9408 -->`
+- 【Linux社区】Pinchart 支持提醒补丁标注 Fixes 与 Cc:stable，但反对把回移 stable 设为维护者强制义务，理由是维护者倦怠已重；主张先查清修复未及时进入 stable 的原因并以工具降负。 `<!-- ROW_MINE: ksummit.messages.9410 -->`
+- 【Linux社区】Levin 披露已用 AI 审查发往 stable 的回移植补丁，拦下多起本会混入 LTS 的问题；尚缺判断 cherry-pick 到旧树是否正确，正缓慢扩展 Sashiko 工具并给出示例站点。 `<!-- ROW_MINE: ksummit.messages.9413 -->`
+- 【Linux社区】Konstantin 提议把 MAINTAINERS“THE REST”改指 patches@lists.linux.dev：LKML 占 vger 流量约七成、月帖 3.3 万、日均投递约 310 万封，Gmail 配额致 5 万至 20 万封积压；新列表仅预审机器人订阅。 `<!-- ROW_MINE: ksummit.messages.9415 -->`
+- 【Linux社区】Hemminger 以自用 AI 补写测试的体会支持 Bottomley 的判断：AI 代码错误并不隐蔽，多因缺乏上下文而完全不可用，跨环境移植尤甚；引文并含 AI 置信度评分提议与微软三成代码由 AI 编写的报道。 `<!-- ROW_MINE: ksummit.messages.9423 -->`
+- 【Linux社区】Leemhuis 赞同 Kees“改进 linux-next 而非另立 linus-next”，披露 CI 人员希望 regzbot 监控发往 Linus 的 PR 并自动通报未修复回归，他认可但优先级不高，另拟补 -next 二分指南。 `<!-- ROW_MINE: ksummit.messages.9430 -->`
+- 【Linux社区】Overstreet 回应 Torvalds“避免 unsafe UB”请求：unsafe 本用于编译器无法检查处，禁用别名优化将拖累 vec、链表等底层结构；认为 tree borrows 提供可行模型，FFI 边界默认关闭别名优化。 `<!-- ROW_MINE: ksummit.messages.9432 -->`
+- 【Linux社区】Greg KH 证实 nVidia 专有网关驱动经 misc 树时他作为维护者明确邀请网络子系统复审，并非“顺手 NAK”；支持 Kicinski 指争议实质是 nVidia 把专有网关做成可供各子系统调用的 misc 驱动。 `<!-- ROW_MINE: ksummit.messages.9436 -->`
+- 【Linux社区】Hansen 提交 TAB 集体起草的 generated-content.rst v5：要求透明披露所用工具与提示词，提交者须能捍卫全部内容，维护者可不经详审拒绝；v4 增补 Lorenzo 的“AI slop”条款，获多位维护者签署。 `<!-- ROW_MINE: ksummit.messages.9447 -->`
+- 【Linux社区】Leemhuis 给出实测：6.7.2 含 640 项变更而用户仅约 4 天测试窗（94 个带 stable 标签、630 个带 Fixes:），6.9.3 的 427 项同样不足 4 天；称 6.9 起已延后回移但执行不齐。 `<!-- ROW_MINE: ksummit.messages.9454 -->`
+- 【Linux社区】Van Assche 指出 Hemminger 的 GCC cleanup 属性示例有误——传给 free 的是局部变量指针而非其值，必然崩溃；并主张引入 C++：RAII、lambda、std::span 与类型安全回调是 C 宏无法实现的。 `<!-- ROW_MINE: ksummit.messages.9457 -->`
+- 【Linux社区】Brown 就回归机器人设计提醒：自动化系统捕捉的问题常因上报流程竞态被重复报告，去重可能成为麻烦，部分或可自动化；系对 Leemhuis regzbot 方案的早期反馈。 `<!-- ROW_MINE: ksummit.messages.9458 -->`
+- 【Linux社区】Overstreet 以自用经验称 ORC 展开器仍不可靠，需可靠调试时须把测试环境与用户切回帧指针；引文中 Rostedt 澄清内核所谓“展开”即编译器界的栈回溯。 `<!-- ROW_MINE: ksummit.messages.9465 -->`
+- 【Linux社区】Gunthorpe 阐明 fwctl 非排他原则：固件接口须可共享或对 fwctl 阻断，以 mlx5 多用户固件为基线；fwctl 可与 EDAC 并发读计数器，但不得清零计数或独占全局清洗单元。 `<!-- ROW_MINE: ksummit.messages.9466 -->`
+- 【Linux社区】Chehab 反对强制驱动配开源用户态：媒体子系统若如此将阻碍 Linux 视频会议软件，许多编解码硬件仅存于本已依赖专有软件的嵌入式设备；媒体以完整文档化 uAPI 加合规工具取代强制开源。 `<!-- ROW_MINE: ksummit.messages.9467 -->`
+- 【Linux社区】Overstreet 向 C 标准委员会的 Uecker 解释饱和运算用例：引用计数溢出时应饱和并保持，因不知正确值时永不释放对象最安全；回应 C23 已纳入检查算术、C2Y 或增饱和运算的讨论。 `<!-- ROW_MINE: ksummit.messages.9468 -->`
+- 【Linux社区】Leemhuis 追问 Bugzilla 改革结论：Konstantin 反案含统一入口产品、MAINTAINERS 映射、分诊团队与“triaged”标记、后端机器人汇总通知并联动 lore；担心两案僵持致 Bugzilla 再荒废 11 个月。 `<!-- ROW_MINE: ksummit.messages.9469 -->`
+- 【Linux社区】Romanovsky 质疑“用户只关心常规工作流”论：高价购买小众硬件的用户难道就不配在自由软件中使用？挑战 Ribalda 对自由软件社区范围的界定，属直通辩论中的用户权利立场。 `<!-- ROW_MINE: ksummit.messages.9471 -->`
+- 【Linux社区】Romanovsky 以 sp8870 补丁 467a37fba93f 为证反驳“被回退的 29 个 media 补丁多有效”：err 检查写成 if(err) 而应为 if(err<0)，破坏寄存器读取；主张逐个检出 umn 补丁引入时点核查。 `<!-- ROW_MINE: ksummit.messages.9474 -->`
+- 【Linux社区】McKenney 表态个人开发将持续回避 AI 生成产物，直至 DCO 1.1 条款 a“有权按开源许可提交”对特定模型训练来源的争议澄清；对 Generated-by 标签是否可取尚无把握。 `<!-- ROW_MINE: ksummit.messages.9480 -->`
+- 【Linux社区】实际关闭者 Tashkinov 披露：每周仅约 24 份报告，其中 amdgpu 与 i915 类（各有独立追踪器）被他半自动关闭致总量近乎减半；称撰写合格报告需要经验，赞成转向邮件列表。 `<!-- ROW_MINE: ksummit.messages.9482 -->`
+- 【Linux社区】Pinchart 指文档有机生长致概念先用后释、新手阅读困难，主张面向不熟读者的文档采用线性叙事；认为兼具兴趣与时间的新人重构文档可能比资深开发者更合适。 `<!-- ROW_MINE: ksummit.messages.9484 -->`
+- 【Linux社区】Walleij 回忆老 Marvell NAS 的 HIGHMEM 故障疑因 DMA 地址限制——lowmem 分配超硬件上限即数据损坏；又指 Kirkwood MMC 驱动在 !DMA 下手工遍历 sglist 而非 sg_miter()，安全性存疑。 `<!-- ROW_MINE: ksummit.messages.9500 -->`
+- 【Linux社区】Ryhl 认为对 Rust 未定别名模型的担忧夸大：unsafe 别名操作仅三类——确定允许、确定 UB、尚未决定；完整模型只是消除第三类，实践守住第一类即可，回应 Ventura Jack 的质疑。 `<!-- ROW_MINE: ksummit.messages.9503 -->`
+- 【Linux社区】Shuah 称维护工作意味着情绪劳动、是倦怠风险因素，支持以 Bottomley 提案为起点，主张峰会前先开公开会议征求未获邀请者（含自己）意见，并认可 TAB 起草沟通风格文档。 `<!-- ROW_MINE: ksummit.messages.9504 -->`
+- 【Linux社区】Rostedt 响应 Torvalds 对 __free 变量顶部声明后远处赋值的批评：承认自己惯用此式并愿改为在分配处声明，猜测后者可让提前退出免于对 NULL 调用 __free、优化更好。 `<!-- ROW_MINE: ksummit.messages.9505 -->`
+- 【Linux社区】Pinchart 认为 Rust 顾虑多为建设性反馈而非“惰性”：建议设支持渠道由 rust-in-linux 维护者协助受全树重构影响者，既回应关切又展示能力；认同 Rust 有助吸引不同背景开发者。 `<!-- ROW_MINE: ksummit.messages.9507 -->`
+- 【Linux社区】Pinchart 举证某大型 SoC 厂商本拟开放相机栈主体，闻可经其他子系统以直通“空白支票”合入后临阵放弃；说明 V4L2 ISP 驱动允许用户态经数据缓冲传参，硬件功能须人人可用。 `<!-- ROW_MINE: ksummit.messages.9510 -->`
+- 【Linux社区】Rostedt 支持 Wilcox 提议演讲环节由主持人从官方聊天平台遴选提问，认为不适用于 BoF 与微会议，并建议为未带设备者设公共笔记本提交问题，属 2021 峰会形式讨论。 `<!-- ROW_MINE: ksummit.messages.9511 -->`
+- 【Linux社区】Tashkinov 主张企业雇员维护者应处理 bug 报告；Greg 答维护者难获管理层批准、LF 仅托管不涉内容且只赞助少数开发者；Artem 指组件十余年未更新、报告常落 Other/Other 无人知晓。 `<!-- ROW_MINE: ksummit.messages.9514 -->`
+- 【Linux社区】Pinchart 支持 Stoakes 的强硬措辞：AI 垃圾补丁已被多人目击且不会自行消失；文档价值在约束善意者并为维护者撑腰，另观察到维护者担心被强制或架空，疑为信任侵蚀。 `<!-- ROW_MINE: ksummit.messages.9518 -->`
+- 【Linux社区】Cameron 说明 CXL 命令可“意外移除”他机内存，破坏性控制面应由唯一实体 fabric manager 掌控、安全靠布线；同意用户态可经 VFIO 获同等权限，期望 fwctl 基础设施同样支持破坏性操作。 `<!-- ROW_MINE: ksummit.messages.9519 -->`
+- 【Linux社区】Ts'o 以非律师身份分析：维护者一贯依赖 Signed-off-by 与善意假定提交者有权提交，AI 前后皆然；个人相信责任在提交者，且从责任角度宁不知是否用 LLM。 `<!-- ROW_MINE: ksummit.messages.9520 -->`
+- 【Linux社区】Abbott 解释 TAB 选举 CIVS 投票问题：曾向全体投票人名单补发说明，Hansen 未收选票或因垃圾邮件过滤或 Gmail 限流所致，记录 TAB 选举送达故障与补救。 `<!-- ROW_MINE: ksummit.messages.9521 -->`
+- 【Linux社区】Torvalds 断言编译器内存序支持几乎必有 bug；内核可在包装器中修正遗漏，编译器出错时仍将依赖包装器，回应依赖显式屏障还是编译器原子语义之争。 `<!-- ROW_MINE: ksummit.messages.9525 -->`
+- 【Linux社区】Morton 倡议机器人自动提醒过度引用邮件：因拒收会误伤合法邮件而选择“提醒发件人”并附礼节链接；自述厌倦逐封私下劝导，请 Konstantin 在 subspace.kernel.org 增设礼节页。 `<!-- ROW_MINE: ksummit.messages.9530 -->`
+- 【Linux社区】Bottomley 说明 SCSI 出现 Sashiko AI 审查后因无专列而抄送 ksummit 征集驱动维护者反馈，愿保留 workflows 抄送但担心其覆盖面不足。 `<!-- ROW_MINE: ksummit.messages.9533 -->`
+- 【Linux社区】Jiri Kosina 赞同 Linus 反对 linux-distros 强制共享 PoC；支持闭列表 distros@kernel.org 提案，愿征询 SUSE 安全团队意见，坚持发行版必须进入内核安全修复流程。 `<!-- ROW_MINE: ksummit.messages.10565 -->`
+- 【Linux社区】Artem 以数据反驳“骚扰”论：Bugzilla 每周约 20 份报告、单人最坏每周不足 5 封；举 bug 204807 两年半 255 条评论为例，称邮件模式无法承载此类协作。 `<!-- ROW_MINE: ksummit.messages.10569 -->`
+- 【Linux社区】Daniel Vetter 称网络子系统约 2020 年才改群体维护、值得向峰会介绍；GPU 流程自 2018 年未变，gitlab.freedesktop.org 的内核 CI 整合有望本合并窗口落地。 `<!-- ROW_MINE: ksummit.messages.10575 -->`
+- 【Linux社区】Laurent Pinchart 称 V4L2/DRM 对象生命周期 API 坏到“无法安全使用”，Rust 绑定须先彻底重写底层却被斥“过度刨毛”；主张 C/Rust 两阵营合作还 API 债以换维护者支持。 `<!-- ROW_MINE: ksummit.messages.10577 -->`
+- 【Linux社区】Rust 设计团队成员 Ralf Jung 阐明 union 语义：允许任意字节重解释、无“活跃变体”，但 bool 须为 0/1 否则 UB；反驳“语言须定义 bool 非法值行为”的指责。 `<!-- ROW_MINE: ksummit.messages.10582 -->`
+- 【Linux社区】Randy Dunlap 指 Bugzilla 大量组件无负责人、“我们主动让报告被忽视”；引 Stephen 称网络报告只能转 netdev、乐见其亡；Leemhuis 称三年无改善并附 LWN 链接。 `<!-- ROW_MINE: ksummit.messages.10583 -->`
+- 【Linux社区】Steven Rostedt 称社区只为生存行动，Meltdown/Spectre 才迫使 -rc 末期大改；肯定发行版开发者代为分诊质量高，志愿者 Slade 可任 Bugzilla 与维护者间联络人。 `<!-- ROW_MINE: ksummit.messages.10584 -->`
+- 【Linux社区】Linus 为峰会“Linus 环节”征集预备考题：请 Corbet 匿名代收维护流程痛点、只转交个人意见勿公开讨论；自称“大声者”，建议加强主持以免少数人垄断发言。 `<!-- ROW_MINE: ksummit.messages.10587 -->`
+- 【Linux社区】James Bottomley 反对新增 not-stable 标签：Fixes 回答补丁来源、是否回传属事后可能推翻的判断，可另走 stable 通道兜底；该标签实为阻止非修复提交混入 stable。 `<!-- ROW_MINE: ksummit.messages.10589 -->`
+- 【Linux社区】Ricardo Ribalda 引 linuxtv.org 声明：V4L2 不接受含未公开闭源特性的驱动，故“厂商获得 vendor 访问”无从谈起；否认有人提议向用户态开放 PCI 寄存器。 `<!-- ROW_MINE: ksummit.messages.10591 -->`
+- 【Linux社区】Dave Chinner 提社区维护文件系统最低门槛：须有可用 mkfs/fsck 并入 fstests；建议以 fstype 标志而非配置项标记受支持、弃用、待移除状态；老盘数据可靠 VM 启动旧发行版读取。 `<!-- ROW_MINE: ksummit.messages.10593 -->`
+- 【Linux社区】Paul McKenney 讨论纯 AI 代码版权：美国版权局认定非人类作者无版权、纯 AI 代码近乎公有领域；但他强调美国是判例法域、解释可回溯变更，且内核须顾及美国以外法域。 `<!-- ROW_MINE: ksummit.messages.10597 -->`
+- 【Linux社区】Miguel Ojeda 澄清 Rust 最低编译器版本政策为跟随 Debian Stable，系维护者峰会公开决定；辩称等待上游分配器无果后才转向，本可更早行动。 `<!-- ROW_MINE: ksummit.messages.10600 -->`
+- 【Linux社区】Dan Williams 称 fwctl 历经三年会议已成多方共识，RDMA 与 netdev 的跨子系统 NAK 缺的是信任而非技术；引 MGLRU 在 LSF/MM 2022 面对面破冰为例，主张再试调解。 `<!-- ROW_MINE: ksummit.messages.10601 -->`
+- 【Linux社区】Konstantin Ryabitsev 直言“维护者要的是补丁，不是 bug 报告”，让资深工程师做一线 QA 必致双方皆怨；警告强制订阅只会令 Bugzilla 被全员拉黑。 `<!-- ROW_MINE: ksummit.messages.10603 -->`
+- 【Linux社区】Dave Airlie 主张培育跨厂商专家社区：habanalabs 编译器后端是 LLVM 分叉应上游化；“只有本公司懂自家硬件”是保留控制权的借口；倡议共享运行库仓库与上游优先流程。 `<!-- ROW_MINE: ksummit.messages.10610 -->`
+- 【Linux社区】Mike Rapoport 指核心 API 一旦有 Rust 抽象，全树重构者即须懂 Rust 并协调抽象维护者；而大型重构多由非维护者完成，维护者未必有空协助，扩展性堪忧。 `<!-- ROW_MINE: ksummit.messages.10612 -->`
+- 【Linux社区】Ted Ts'o 实测列举 27 个支持 generic_file_mmap 的简单文件系统（fat、hfsplus、ntfs3、exfat 等），反驳“文档场景会回退 read/write”的假设，佐证 mmap 攻击面广。 `<!-- ROW_MINE: ksummit.messages.10613 -->`
+- 【Linux社区】HUANG Zhaobin 以 godbolt 实测反驳“C++ 才有隐藏指针”论：C 与 C++ 均传隐藏指针，gcc 在 C 侧多一次拷贝、C++ 走 NRVO，clang 两语言代码相同。 `<!-- ROW_MINE: ksummit.messages.10622 -->`
+- 【Linux社区】Linus 表态并行 API 并存完全正常，devm_xyz 与 xyz 将永远共存；反对“弃用”话术与指责旧接口用户：“懒得不转换全部用户者，无权要求他人代劳”。 `<!-- ROW_MINE: ksummit.messages.10623 -->`
+- 【Linux社区】Ted Ts'o 论威胁模型：存储设备属可信计算基，损坏镜像不算安全漏洞；syzbot 计数互不可比、系“黑暗模式”操纵；云端本假定攻击者有 root，真险在 GNOME 自动挂载，e2fsprogs 将加 udev 规则缓解。 `<!-- ROW_MINE: ksummit.messages.10625 -->`
+- 【Linux社区】Steven Rostedt 主张只抄送触及自身代码的单个补丁而非 20 封整系列，整系列反而易漏审；lore.kernel.org/r/<message-id> 可一键取回全线程，lore 已化解“信息孤岛”。 `<!-- ROW_MINE: ksummit.messages.10627 -->`
+- 【Linux社区】Dan Williams 详述倦怠支援：自述参加 LPC 圆桌后 Dr. Chance 一对一随访；支持设志愿名单，认为子系统例会、聊天频道与非正式聚会可减压；追问 LF 赞助咨询实际使用率。 `<!-- ROW_MINE: ksummit.messages.10634 -->`
+- 【Linux社区】Greg KH 披露 kernel.org 正与 OpenSSF 合作设计分布式信任框架以替代自研 Web of Trust，二月会议公布；确认需“重建”信任网，理想是对现有 gpg 用法透明替换。 `<!-- ROW_MINE: ksummit.messages.10638 -->`
+- 【Linux社区】Mark Brown 提议以“written by / translated by”区分 AI 撰写与翻译润色，主张统一谈“工具”而非仅针对 LLM，避免纠缠工具实现细节的规则博弈。 `<!-- ROW_MINE: ksummit.messages.10644 -->`
+- 【Linux社区】Richard Weinberger 举证 PAGE_OFFSET 影响：客户设备 2G/2G 分割令 JRE 地址空间受限，改回 3G/1G 解决；自称顾问仍时遇 Java 工作负载。 `<!-- ROW_MINE: ksummit.messages.10647 -->`
+- 【Linux社区】Laurent Pinchart 回应专利论：OIN 保护伞理论有效，但专利恐慌多系大型 SoC 厂商自造，某公司“工程由律师管理”；不能既造专利乱局又以专利为由拒公开。 `<!-- ROW_MINE: ksummit.messages.10649 -->`
+- 【Linux社区】Mauro 建议 pre-git 修复以 Link 指向 tglx history 树（Bitkeeper 史前库）URL，而非 Fixes 引用其哈希，以免校验和冲突与异树误读；保留 Fixes: 1da177e4c3f4。 `<!-- ROW_MINE: ksummit.messages.10652 -->`
+- 【Linux社区】Sasha Levin 反对将 stable 义务强加主线开发者：重申 stable 首条规则是不给未参与者增负，拒当执法者并反问“违规者是否要禁止上游提交”。 `<!-- ROW_MINE: ksummit.messages.10663 -->`
+- 【Linux社区】Morton 拒绝单设 trivial 树，称琐碎补丁宁可经己手；坦言“谁发的”是审查力度关键，不信任的名字会逐字细查，恶意补丁最易借伪造发件人混入。 `<!-- ROW_MINE: ksummit.messages.10391 -->`
+- 【Linux社区】Brown 反对把新警告降到 W=2/3 息事宁人，指 Arnd 已按编译器版本管理警告分级，许多新警告合理、应修复并更广泛启用。 `<!-- ROW_MINE: ksummit.messages.10392 -->`
+- 【Linux社区】McKenney 指出 AI 厂商爬取网页可能吸入受限版权训练数据并影响输出，内核“想要”与各国法律实际给出的保障之间并无必然关系。 `<!-- ROW_MINE: ksummit.messages.10398 -->`
+- 【Linux社区】Roeck 称一封约350行驱动补丁被 AI 审查工具 Sashiko 报9个问题，要求作者处理或解释；Brown 举反例：15版迭代后人工复审仍否路线。 `<!-- ROW_MINE: ksummit.messages.10399 -->`
+- 【Linux社区】Ryabitsev 给出 mutt 宏示例，一键调用 b4 mbox 抓取完整补丁线程入 maildir 并可同步 IMAP，展示 lore 时代取线程工作流。 `<!-- ROW_MINE: ksummit.messages.10405 -->`
+- 【Linux社区】Pinchart 指厂商常走最低成本路径偷塞驱动而不愿先行协商，drivers/accel 即厂商欲少披露闭源与社区坚持全开放冲突的例证。 `<!-- ROW_MINE: ksummit.messages.10406 -->`
+- 【Linux社区】Brauner 披露 util-linux 已实现 X-mount.auto-fstypes 白名单挂载选项，并提议 libmount 增加全局文件系统允许或拒绝列表（issue 2478）。 `<!-- ROW_MINE: ksummit.messages.10411 -->`
+- 【Linux社区】Carpenter 称多数派认为 Fixes 仅用于 bug，其审过逾千个拼写修正无人要求加 Fixes；反驳 Bottomley“连空白拼写也应标”之说。 `<!-- ROW_MINE: ksummit.messages.10412 -->`
+- 【Linux社区】Bottomley 指出 tglx 的 history.git 基于 BitKeeper 可追溯至 git 之前，早于 2.6.12-rc2 的 bug 也可用 history 树 SHA 标 Fixes。 `<!-- ROW_MINE: ksummit.messages.10415 -->`
+- 【Linux社区】Bottomley 设想用 Claude 引导新手收集信息发缺陷报告：截图转文本、定位内核代码、向正确列表写信，可指向 review-prompts 仓库部署。 `<!-- ROW_MINE: ksummit.messages.10426 -->`
+- 【Linux社区】McKenney 表态靠 -next 测试大部分即将合入代码虽偶有挫败但值得；赞同 Brown 关于覆盖波动、小众平台长期失测与子树缺席的分析。 `<!-- ROW_MINE: ksummit.messages.10427 -->`
+- 【Linux社区】Torvalds 否决 Rostedt 的多行 __free 写法，称太复杂应拆分；支持“auto 类型加辅助宏”如 kmalloc_type() 让常见分配简洁易读。 `<!-- ROW_MINE: ksummit.messages.10434 -->`
+- 【Linux社区】Anvin 主张 AI 更宜用于发现难察觉的常见问题与整理代码（类 Coccinelle 加强版），并帮非英语母语者润色补丁注释与文档。 `<!-- ROW_MINE: ksummit.messages.10436 -->`
+- 【Linux社区】Corbet 称文档警告清理已大头完成（Mauro 出力最多），但文档改动不过 docs 树难以强制零警告；同意构建噪音与速度是检查的最大障碍。 `<!-- ROW_MINE: ksummit.messages.10437 -->`
+- 【Linux社区】Gunthorpe 索要数据：每周期新驱动合入量与子系统分布；断言“仅新驱动用 Rust”不可持续，担心随意“用 Rust 重写 X”抬高贡献门槛。 `<!-- ROW_MINE: ksummit.messages.10440 -->`
+- 【Linux社区】Carpenter 估计在 linux-next 待两天即可获得人们八成测试量，如今一般可启动并跑过 LTP，但不建议在真实系统上运行。 `<!-- ROW_MINE: ksummit.messages.10452 -->`
+- 【Linux社区】Jung 说明 Rust 与 C 共享并发内存时 Rust 侧访问须显式标记原子，指针应为 &AtomicBool 而非 *mut bool，内核已有相应 API。 `<!-- ROW_MINE: ksummit.messages.10462 -->`
+- 【Linux社区】Leemhuis 自任“无回归”规则辩护人：改 API 须迁移全部用户或标记 broken 并承担回归后果；建议为无维护文件系统建 CI 测试套件作合入门槛。 `<!-- ROW_MINE: ksummit.messages.10465 -->`
+- 【Linux社区】Bottomley 提折中方案：lore 服务端提供 lore.kernel.org/dig/<msgid> 链接，以 msgid 为输入产出可点击且信息更丰富的视图，兼容工具链。 `<!-- ROW_MINE: ksummit.messages.10468 -->`
+- 【Linux社区】Rostedt 主张与会者须是对决议负责者，举 linux-next 议题因 Airlie 在场才未误伤 DRM 重基线实践，反对峰会沦为虚荣集会。 `<!-- ROW_MINE: ksummit.messages.10473 -->`
+- 【Linux社区】Bottomley 将 hch 不满归纳为 C API 契约硬编码进 Rust 绑定致 API 变更易暗中弄断 Rust；提议注释 C 头文件，由增强 bindgen 与 sparse 类工具校验生成绑定。 `<!-- ROW_MINE: ksummit.messages.10475 -->`
+- 【Linux社区】Kozlowski 指重复提交致 Fixes 与 SHA 引用错树，举 Intel 向 DRM 的 rc 请求中 cherry-pick 提交在 linux-next 里报 bad object 无从溯源。 `<!-- ROW_MINE: ksummit.messages.10491 -->`
+- 【Linux社区】面对 Linus“AI 只是程度变化”的质疑，Anvin 一句话回应“主要是版权原因”，为其主张区别对待工具生成内容给出理由。 `<!-- ROW_MINE: ksummit.messages.10495 -->`
+- 【Linux社区】Rostedt 对 stable 抄送邮件爱恨参半：已标 stable 再通知属冗余，但补丁打不上时想知道；支持把 autoselect 汇总为摘要邮件。 `<!-- ROW_MINE: ksummit.messages.10496 -->`
+- 【Linux社区】Corbet 披露 Sphinx 2.4 构建耗时约为 5.x 一半，曾魔改 Sphinx 砍掉约20%耗时，C domain 建复杂数据结构后弃用；认同构建速度是贡献痛点。 `<!-- ROW_MINE: ksummit.messages.10508 -->`
+- 【Linux社区】Kosina 强烈反对把“无回归”延伸为须保证修复进入最新 stable，称维护者从不对 stable 树负责，只求主线及时高质量合入，此路反致倦怠。 `<!-- ROW_MINE: ksummit.messages.10509 -->`
+- 【Linux社区】Bottomley 担忧 Rust panic 不展开栈时简单回溯（挑地址印符号）易误导诊断，主张需真正 unwinder 精确还原调用链。 `<!-- ROW_MINE: ksummit.messages.10514 -->`
+- 【Linux社区】Freebox 的 Schichan 确认其 Kirkwood 平台不用 HIGHMEM，采用 2G/2G 地址划分，愿测试 Arnd 在 VMSPLIT_3G_OPT 下的去 HIGHMEM 补丁。 `<!-- ROW_MINE: ksummit.messages.10516 -->`
+- 【Linux社区】Chehab 披露 Sashiko 已合入其 Ollama 支持补丁；16GB 显存 AMD rDNA4 上思考模型审一两个补丁约10-20分钟，JSON 输出易错且受上下文上限制约。 `<!-- ROW_MINE: ksummit.messages.10520 -->`
+- 【Linux社区】Hellwig 提出峰会议题：区分可信与不可信文件系统以减少 syzbot 报无效 bug 的张力；大量驱动无维护（hfsplus 缺 mkfs/fsck）致 API 演进受阻。 `<!-- ROW_MINE: ksummit.messages.10524 -->`
+- 【Linux社区】Ryabitsev 指 pad.kernel.org 已有，但主张用 git 仓库存协作文档：可克隆可验证、端到端签名防篡改；并引 China 与俄罗斯屏蔽 Google 文档之说。 `<!-- ROW_MINE: ksummit.messages.10528 -->`
+- 【Linux社区】Greg KH 称安卓安全“不可能问题”已半胜，死结在厂商不供更新；各国政府正立法强制，欧盟刚对移动设备立法，预期他国跟进。 `<!-- ROW_MINE: ksummit.messages.10533 -->`
+- 【Linux社区】Cameron 提出 MCTP over PCC（ACPI 邮箱）提案使固件可直控且暴露用户态；并论 CXL 破坏性命令需权限分级，fwctl 或需安全层级，遥测之外仍有大洞。 `<!-- ROW_MINE: ksummit.messages.10534 -->`
+- 【Linux社区】2024年TAB选举934名有投票权者中229人投票，前五席为 Cook、Williams、Ojeda、Hansen、Khan，并公布11人完整得票排名。 `<!-- ROW_MINE: ksummit.messages.10539 -->`
+- 【Linux社区】Pinchart 强调自由软件许可订立时未预见 LLM 训练，copyleft 作者未必认可闭源模型用其代码训练，合法性之外须直面伦理并让决策者担责。 `<!-- ROW_MINE: ksummit.messages.10540 -->`
+- 【Linux社区】围绕文档构建是否在 PATH 外搜寻 python3：Berg 陈述 nix-shell 锁定构建环境用例，Chehab 称 PATH 被改者自有更大麻烦，正解是包装调用保存恢复环境。 `<!-- ROW_MINE: ksummit.messages.10541 -->`
+- 【Linux社区】Tashkinov 以204807号 bug 两百余条评论为例力挺 Bugzilla：隐藏邮箱保隐私；自述曾私发两事引 Linus 亲自相助而 LKML 石沉大海。 `<!-- ROW_MINE: ksummit.messages.10544 -->`
+- 【Linux社区】Kosina 转述峰会共识：持续投入 -next 测试性价比低于在 rc1+ 阶段收拾残局；McKenney 追问此逻辑为何不同样适用于新建 linus-next 树。 `<!-- ROW_MINE: ksummit.messages.10545 -->`
+- 【Linux社区】Rostedt 回顾 Jiri 的 trivial 树因工作量被弃成死路：需有声望者却都无暇；旧流程由维护者标记 Cc trivial 即收，免入其13小时测试套件。 `<!-- ROW_MINE: ksummit.messages.10547 -->`
+- 【Linux社区】Lawall 问可否建集中清单列待处理 API 并附提示与范例提交；引 Golaszewski 述 GPIO 旧 API 数千调用点迁移经年、系继承现状而非其引入。 `<!-- ROW_MINE: ksummit.messages.10552 -->`
+- 【Linux社区】Dunlap 称连 kernel-doc 小补丁在 DRM 也会石沉大海；Airlie 愿给跨树接口改动免审 Ack，Dunlap 婉拒 drm-misc 权限，建议此类补丁交 Corbet 或 Morton 收。 `<!-- ROW_MINE: ksummit.messages.10553 -->`
+- 【Linux社区】Chehab 披露 kernel-doc 受 Python GIL 所限无法并行，尝试反更慢，待 GIL 移除一年内或可恢复并行补丁；建议 kernel-doc --none -Wall 绕开 Sphinx 慢速。 `<!-- ROW_MINE: ksummit.messages.10555 -->`
+- 【Linux社区】Greg KH 指出 stable-queue 与 linux-stable-rc 树多年前即持续收录待入 stable 补丁；Rostedt 建议多加宣传鼓励大家测试 linux-stable-rc。 `<!-- ROW_MINE: ksummit.messages.10557 -->`
+- 【Linux社区】Rostedt 坚持新增 AI 标签属新规则、应另立补丁，工具生成内容文档只澄清既有行为；Gleixner 与 Wysocki 主张在本补丁语境下一并定夺。 `<!-- ROW_MINE: ksummit.messages.10562 -->`
+- 【Linux社区】Bottomley 指出 conclave.rst 应急预案已覆盖峰会停办情形：TAB 主席转任 $ORGANIZER，由 TAB 遴选继任会议与会者，无需新流程即可应对。 `<!-- ROW_MINE: ksummit.messages.9879 -->`
+- 【Linux社区】Ventura Jack 引 time crate 破坏致 NixOS 大量协调成本及 GitHub 56 个差评，指出同一 RwLock 代码在 2021 与 2024 版下语义不同，质疑其“向后兼容承诺”。 `<!-- ROW_MINE: ksummit.messages.9880 -->`
+- 【Linux社区】Viro 反驳“不喜欢就退订”论：linux-fsdevel 等列表作为收件方根本无从退订 bugzilla 邮件，指其结构性缺陷，该答复是死路。 `<!-- ROW_MINE: ksummit.messages.9884 -->`
+- 【Linux社区】Leon Romanovsky 称“信任是双向的”，在大型子系统与复杂设备上“信任维护者”是空想；Pinchart 追问其论断范围，双方就跨子系统 NAK 信任交锋。 `<!-- ROW_MINE: ksummit.messages.9885 -->`
+- 【Linux社区】Rafael 认同 base-commit 语义为“系列开发所基于的树”，可作 Sashiko 等机器人参考点；讨论 b4 基址 trailer 对自动回迁机器人的价值。 `<!-- ROW_MINE: ksummit.messages.9886 -->`
+- 【Linux社区】Bart Van Assche 称用 30-40 行提示词让 ChatGPT/Gemini 扮演资深内核开发者即可产出补丁评审，同事的提示词因版权许可不明无法分享。 `<!-- ROW_MINE: ksummit.messages.9887 -->`
+- 【Linux社区】Greg KH 重申 stable 发布的第一原则是不给任何维护者增加额外工作，反对 Leemhuis 要求主线上游跟进稳定版修复的提案。 `<!-- ROW_MINE: ksummit.messages.9890 -->`
+- 【Linux社区】Mauro 列出 make htmldocs 报错的 4 个来源，发出修复系列后交叉引用警告降至 3 条，指出未合入文档导致悬空引用的跨子系统合并问题。 `<!-- ROW_MINE: ksummit.messages.9892 -->`
+- 【Linux社区】Geert 主张提交记录为众多读者而非单个作者优化，批 patchwork 链接多一跳；Jani 称超 99% 的 freedesktop patchwork Link 标签含 Message-ID。 `<!-- ROW_MINE: ksummit.messages.9896 -->`
+- 【Linux社区】Carpenter 的 Smatch 已积累近 2 千条用户可触发整数溢出警告，主张按子系统加严规则；Paul 指出内核依赖 fwrapv，全核有符号溢出检查噪声大。 `<!-- ROW_MINE: ksummit.messages.9907 -->`
+- 【Linux社区】Geert 介绍让全系列收件人都收到 cover letter 的做法：手工在 format-patch 输出加 Cc 行，或借 format.thread 生成最终 Message-ID 并附 lore 链接。 `<!-- ROW_MINE: ksummit.messages.9916 -->`
+- 【Linux社区】Linus 痛斥对“x<0 且 x≥10”双边界检查告警危险且错误，称符号可见性受架构、typedef、位域影响，绝不启用；Uecker 澄清并非他提议该警告。 `<!-- ROW_MINE: ksummit.messages.9921 -->`
+- 【Linux社区】Hans 重发 LPC 背光 uAPI 提案：/sys/class/backlight 无法映射面板、多设备并存、需 root、刻度与 0 值语义不明，并认可 Jani 指出的无法在同一 KMS atomic 提交中调 gamma 与亮度。 `<!-- ROW_MINE: ksummit.messages.9922 -->`
+- 【Linux社区】Hansen 透露 Intel 对涉密补丁跑内部 0day 但结果未随代码提交，承诺改进；与 Levin 讨论修订 embargoed-hardware 文档以便纳入测试者而无需律师。 `<!-- ROW_MINE: ksummit.messages.9923 -->`
+- 【Linux社区】Brauner 认为推动高质量审查靠共同责任感，但非技术阻挠指控使此事如赫拉克勒斯之任；需要安全环境与共享所有权模型，各子系统皆有欠缺。 `<!-- ROW_MINE: ksummit.messages.9931 -->`
+- 【Linux社区】McKenney 举例 x=1 可被优化为 if(x!=1) x=1，读检查写可能重排到 smp_wmb 之前，讨论 C 标准允许但对并发代码意外的写变换。 `<!-- ROW_MINE: ksummit.messages.9932 -->`
+- 【Linux社区】Pinchart 质疑直通议题在维护者峰会闭门决策的正当性，主张相关子系统维护者与推动者等利益相关方应到场；自称观点偏摄像头领域。 `<!-- ROW_MINE: ksummit.messages.9933 -->`
+- 【Linux社区】Brown 支持把各稳定版回迁汇总为单封摘要（“补丁 A 已回迁至 X-Y”），更易发现回迁深度不足；现需翻六个线程逐一核对每封补丁。 `<!-- ROW_MINE: ksummit.messages.9937 -->`
+- 【Linux社区】Armstrong 称 panel API 缺原子接口致上下游碎片化，面板厂商 fire-and-forget 无上游动力；Ripard 提“面板即 bridge”及仿 HID-BPF 用 eBPF 承载怪癖。 `<!-- ROW_MINE: ksummit.messages.9940 -->`
+- 【Linux社区】Torokhov 结论：异步探针、热插拔与 sysfs new_id 场景下接口驱动无法可靠注销，单例平台设备的探测失败处理只能由驱动自身负责。 `<!-- ROW_MINE: ksummit.messages.9941 -->`
+- 【Linux社区】Mauro 实测 next-20220627 有 32 条交叉引用、4 个重复 ABI 符号、60 条 kernel-doc 警告，三系列后仅剩 3 条；建议 CONFIG_WERROR 并入常规构建，脚本约 8 秒。 `<!-- ROW_MINE: ksummit.messages.9942 -->`
+- 【Linux社区】Brown 建议以自由软件为基础提供可选的私有测试系统或脚本作基线，仅列要求清单易被误用；提及 Linaro lkft 曾有私有实例但基础设施未开源。 `<!-- ROW_MINE: ksummit.messages.9944 -->`
+- 【Linux社区】Hellwig 指政策文档“不强制任何子系统”已被 Linus 私下越过维护者合并 Rust 证伪，斥其沟通不诚实；警告绑定蔓延终将波及所有非叶子系统。 `<!-- ROW_MINE: ksummit.messages.9945 -->`
+- 【Linux社区】Williams 为 b4 shazam 新增 --add-link-note 选项，用 git notes 本地记录提交的 Link: trailer 而不污染上游；注明初稿由 Claude Sonnet 4 协助。 `<!-- ROW_MINE: ksummit.messages.9952 -->`
+- 【Linux社区】Levin 展示自建 stable 回迁仪表盘原型 sashalevin.github.io，称 AI 使其无需 LF 资助即得九成价值，已吸收 Tso 的子系统过滤、CVE 与日期筛选建议，拟在 LPC 展示。 `<!-- ROW_MINE: ksummit.messages.9956 -->`
+- 【Linux社区】Ryabitsev 指出 patch-id 匹配不可靠（差分算法与上下文行数不同即失配），建议以 Message-Id: trailer 取代 Link: 标注来源；Jones 展示 git am --message-id 脚本。 `<!-- ROW_MINE: ksummit.messages.9957 -->`
+- 【Linux社区】Rostedt 记 GNU Cauldron 教训：编译器社区的 unwinding 指完整展开，内核所指实为 stack walking，与 ORC 作者 Josh 同 GCC 争论后遂解；Kent 称 ORC 曾无法生成回溯而改用帧指针。 `<!-- ROW_MINE: ksummit.messages.9967 -->`
+- 【Linux社区】Brown 列举 MFD 与新 SoC 系列中存在构建依赖但评审无重叠的正当合并场景；Leon 称 netdev、RDMA、PCI、MM 仍需整系列送达。 `<!-- ROW_MINE: ksummit.messages.9968 -->`
+- 【Linux社区】Babka 披露 2022 TAB 选举 960 名合格选民仅 267 投票，Kees Cook、Brauner、Kicinski、Williams、Hansen 当选；因 CIVS 邀请邮件淹没于 LPC 期间，建议投票提前一周。 `<!-- ROW_MINE: ksummit.messages.9980 -->`
+- 【Linux社区】Tashkinov 总结困局：部分内核组件无对应邮件列表、群体邀约订阅难推行、收集 git log 公开邮箱或涉欧盟违法，称遭全员反对而放弃提案。 `<!-- ROW_MINE: ksummit.messages.9981 -->`
+- 【Linux社区】Rafael 回应 Kara 疑问：全树同类清理型系列各补丁间无依赖，可借此判断 Fixes 补丁是否依赖系列内前序补丁。 `<!-- ROW_MINE: ksummit.messages.9986 -->`
+- 【Linux社区】Rostedt 详述支持小组设计：不设邮件列表以保护倾诉者选择可见对象，志愿者保密承诺不覆盖暴力威胁等非法内容，允许上报而不违约。 `<!-- ROW_MINE: ksummit.messages.9987 -->`
+- 【Linux社区】Wedson 解释 Rust weak 指针惯用法：强/弱双计数，析构同时自链表摘除即可双双归零，可零成本抽象避免 0 到 1 竞态，回应 Kara 对引用回收建模的疑问。 `<!-- ROW_MINE: ksummit.messages.9994 -->`
+- 【Linux社区】Rostedt 估 AI 议题或成峰会赞助亮点，警告移赞助至 Plumbers 将现 10 万美元预算缺口，并入现有会议或恢复旧式 kernel summit 均为选项，关键在 Linus 取舍。 `<!-- ROW_MINE: ksummit.messages.9999 -->`
+- 【Linux社区】Babka 问能否以两主题分支共享基座替代合并；Rostedt 述其做法：补丁先入一支再带详细说明合入另一支，Linus 未表异议。 `<!-- ROW_MINE: ksummit.messages.10003 -->`
+- 【Linux社区】Levin 提“Improves”标签并引数据：仅 stable 标签提交约 70% 修复旧版问题，-rc 提交近 85% 处理合并窗口前问题；Bottomley 反对，主张 Fixes 语义更清晰并以 regzbot 式自动化处理事后回迁。 `<!-- ROW_MINE: ksummit.messages.10004 -->`
+- 【Linux社区】Greg KH 反对为功能纳退立法化：此类事件 35 年仅一见且各具情境，无流程文档结果亦同；称澄清网络猜测非其职，私下已有决定。 `<!-- ROW_MINE: ksummit.messages.10006 -->`
+- 【Linux社区】Ryabitsev 剖析 kernel.org 信任网瓶颈：密钥更新均经其手工校验，扩展至数千开发者不可持续且仅限 PGP；正试验自助 DID 方案，条件是可选、不强制重签、无中央服务。 `<!-- ROW_MINE: ksummit.messages.10011 -->`
+- 【Linux社区】Babka 追问回迁异常：37f1663c919 以 Stable-dep-of c3408c4ae041 被回迁，而该依赖本身无 cc:stable 且未回迁，涉 strlcpy 转 strscpy 系列。 `<!-- ROW_MINE: ksummit.messages.10017 -->`
+- 【Linux社区】Linus 主张列表上过度引用应如 HTML 般一票否决：其 MUA 隐藏冗余引用后，lore 上数百行补丁引用令翻阅线程举步维艰。 `<!-- ROW_MINE: ksummit.messages.10018 -->`
+- 【Linux社区】Abbott 公布 2021 TAB 选举新规：投票资格与 kernel summit 脱钩，改绑 2020-21 年 3 枚主/稳定线提交标签，合格人群扩至 4000 余人，50+ 提交者自动收选票。 `<!-- ROW_MINE: ksummit.messages.10020 -->`
+- 【Linux社区】Wedson 逐行回应 Greg 对 Ref<T> 的质疑：drop 时引用数必非零系类型不变式，kref 的 release 回调编译期即知无需经 C；无需加锁，弱引用因额外开销暂未纳入。 `<!-- ROW_MINE: ksummit.messages.10043 -->`
+- 【Linux社区】Greg KH 以 15 年经手几乎所有 bugfix 与 CVE 的经验断言多数缺陷源于 C 错误路径、漏检返回值与 UAF，Rust 可消之；支持新驱动用 Rust，并称绑定倒逼 API 清理惠及 C 用户。 `<!-- ROW_MINE: ksummit.messages.10044 -->`
+- 【Linux社区】Ojeda 解释 rust/ 目录集中存放全内核共享抽象：可用 C 绑定与不稳特性而普通模块受限；crate 编译模型异于 C 无头文件；不排除按子系统拆分 gpio crate。 `<!-- ROW_MINE: ksummit.messages.10049 -->`
+- 【Linux社区】Ribalda 主张勿为 1% 高级用法牺牲 99% 标准流程，以 AMD 官方栈加 amdgpu-pro 私有用户态并存为例，呼吁共同定义“正常工作流”并给出厂商直通的通用准则。 `<!-- ROW_MINE: ksummit.messages.10050 -->`
+- 【Linux社区】Levin 说明 linus-next 不自建测试，交由 LKFT、KernelCI 等既有 CI 执行，并称 KernelCI 正在接入 blktests。 `<!-- ROW_MINE: ksummit.messages.10051 -->`
+- 【Linux社区】Mason 赞同 Laurent：不得强制贡献者付费或运行专有 AI 工具，审查须在维护者侧运行；但认为供应商锁定现阶段非问题，提示词只是通用 AI 上的英文文本。 `<!-- ROW_MINE: ksummit.messages.10053 -->`
+- 【Linux社区】Jani Nikula称GitLab免费版issue功能不及Bugzilla、好功能都进付费层，倾向社区驱动的Forgejo；Mario Limonciello建议自建gitlab.kernel.org按子系统建项目跟踪issue。 `<!-- ROW_MINE: ksummit.messages.10203 -->`
+- 【Linux社区】James Bottomley提议在C头文件加注解、由增强bindgen生成Rust绑定并配类sparse校验工具；强调目标非稳定C API，而是让API变更更易传导到Rust侧，Miguel Ojeda认同信息就地保存。 `<!-- ROW_MINE: ksummit.messages.10211 -->`
+- 【Linux社区】Michael Tsirkin赞成“提交者须能理解并自证一切工具生成内容”的守则适用于一切工具而非仅AI，称见过太多“修checkpatch警告”式垃圾补丁，AI生成并无本质不同。 `<!-- ROW_MINE: ksummit.messages.10212 -->`
+- 【Linux社区】Linus Torvalds同意对不可信文件系统做内核级标记，建议利用未被充分利用的/proc/filesystems或在挂载选项中加“提示”，按文件系统拒绝以不信任方式挂载介质，回应Hellwig。 `<!-- ROW_MINE: ksummit.messages.10219 -->`
+- 【Linux社区】Arnd Bergmann归纳指针返回值四类注解（有效指针与NULL/错误指针的组合），Geert Uytterhoeven补充*_optional类第五种；Arnd称optional函数应编译期二选一，返回NULL属接口bug。 `<!-- ROW_MINE: ksummit.messages.10225 -->`
+- 【Linux社区】Greg KH称LF内核实习生预算已全部用完、还有大量无薪实习生，无法资助bug分诊人力；Konstantin Ryabitsev强调此类工作需不可挪用的专项拨款。 `<!-- ROW_MINE: ksummit.messages.10226 -->`
+- 【Linux社区】James Bottomley主张Fixes:适用于任何改动先前提交之处（含空白与拼写），使回移无需辩论且易验证；cc:stable才用于回归等值得回移的修复，反驳Dan Carpenter“非回归不加Fixes”。 `<!-- ROW_MINE: ksummit.messages.10227 -->`
+- 【Linux社区】Michael Tsirkin质疑Konstantin的Link尾注文档未讲清lore.kernel.org与patch.msgid.link两域名各用于何处，并抱怨git am需怪异脚本，无法再靠messageid=true自动生成链接。 `<!-- ROW_MINE: ksummit.messages.10228 -->`
+- 【Linux社区】Sasha Levin援引其Assisted-by:（如Claude加checkpatch）披露提案，主张由各子系统自定政策并自动化工作流；Tim Bird建议用标签标注补丁经何种工具审查，缺标签可要求先补。 `<!-- ROW_MINE: ksummit.messages.10231 -->`
+- 【Linux社区】Al Viro反驳Hellwig为UMN研究者请功：对方既未公开原始数据也未公开实验协议，仅给聚合统计，论文问题远超伦理层面，无法检验提交与时间线。 `<!-- ROW_MINE: ksummit.messages.10245 -->`
+- 【Linux社区】Leon Romanovsky称信任是双向的、单一维护者否决跨子系统设备功能不健康且不可能懂一切；Laurent Pinchart澄清所指的是对维护者与核心开发者集体判断的信任。 `<!-- ROW_MINE: ksummit.messages.10255 -->`
+- 【Linux社区】Alexandre Belloni称Coverity会因他处检查返回值而制造无用检查、徒增内核膨胀，0day与coccinelle也引发大量无谓重构，不赞成为任何静态检查器官方背书。 `<!-- ROW_MINE: ksummit.messages.10257 -->`
+- 【Linux社区】Steven Rostedt认为版权侵权与复制量有关（类比音乐采样），“Hello world”或不足受版权保护，并指出K&R书虽有保留所有权利条款却找不到授权读者使用示例。 `<!-- ROW_MINE: ksummit.messages.10260 -->`
+- 【Linux社区】Mark Brown称scsi-fixes进linux-next偶能拦下跨架构构建破坏，pending-fixes源于修复曾依赖仅存在于-next的改动；其CI与KernelCI覆盖urgent分支还可减少bisect步数。 `<!-- ROW_MINE: ksummit.messages.10269 -->`
+- 【Linux社区】Willy Tarreau用汇编实证x86-64与aarch64将双字结构体经寄存器对返回，而i386与32位ARM仍用隐藏指针写回，并给出宏打包为u64的等价方案，称32位不值得再优化。 `<!-- ROW_MINE: ksummit.messages.10270 -->`
+- 【Linux社区】Jiri Kosina指出security@kernel.org与linux-distros@流程迥异，文档已劝阻向后者报内核漏洞（提交4fee0915e649b）；SUSE等依赖linux-distros建立CVE与修复对应，且不以stable为主基线。 `<!-- ROW_MINE: ksummit.messages.10272 -->`
+- 【Linux社区】Sasha Levin演示LLM把oops报告定位到xfrm_iptfs.c:905的skb_put并找出元凶提交5f2b6a9095743，提议bug@kernel.org机器人分诊；James Bottomley建议代理扫描全部列表、回复结果并标记回归。 `<!-- ROW_MINE: ksummit.messages.10275 -->`
+- 【Linux社区】Geert Uytterhoeven追问Rust引用升级失败后调用方仍照常访问成员会发生什么；Miguel Ojeda说明升级可设计为可失败返回Option而非panic，折射2021年峰会对Rust运行期失败的疑虑。 `<!-- ROW_MINE: ksummit.messages.10284 -->`
+- 【Linux社区】Kent Overstreet与Boqun Feng争论RELAXED原子是否隐含编译器屏障、非原子写会否提示编译器插入额外写；Boqun以smp_store_release发布示例说明并发读者可读到0或1。 `<!-- ROW_MINE: ksummit.messages.10289 -->`
+- 【Linux社区】H. Peter Anvin称VLIW与乱序执行同题竞争、是演进死路除非逐代JIT；Kent Overstreet主张开源逐代JIT可行且收益大，并追问Transmeta经验与指针别名问题的实测数据。 `<!-- ROW_MINE: ksummit.messages.10290 -->`
+- 【Linux社区】Christoph Hellwig批评strscpy是无文档的助手、不如snprintf；Kees Cook指出strscpy有kern-doc并渲染于内核API文档页，其余strncpy场景应改用strtomem、kmemdup_nul、memcpy。 `<!-- ROW_MINE: ksummit.messages.10297 -->`
+- 【Linux社区】Artem Tashkinov列举固件缺失、省电未启用、硬件将坏等七类被含糊dmesg报错掩盖的真实问题，主张错误应可判断严重性与归属方，例如明确提示存储设备可能需返修。 `<!-- ROW_MINE: ksummit.messages.10298 -->`
+- 【Linux社区】Rodrigo Vivi赞同Guenter Roeck要求作者先处理Sashiko报出的9处问题再人工审，但Mark Brown举出周末迭代15版后被人工否定的反例；Rodrigo援引Sage“想法-架构-打磨”三层审查框架寻折中。 `<!-- ROW_MINE: ksummit.messages.10301 -->`
+- 【Linux社区】Ricardo Ribalda与Laurent Pinchart激辩ISP入DRM或V4L2：Ricardo称现行路线致99%相机市场依赖树外驱动，举Synopsys可编程ISP为例；Laurent坚持开放用户态要求并质疑命令缓冲论。 `<!-- ROW_MINE: ksummit.messages.10303 -->`
+- 【Linux社区】Steven Rostedt引DCO条款论证加SoB即代表“知情”：若AI引入不可提交的代码即违反(a)(b)并自负法律责任，不了解来源就不应提交，回应AI标签或在审诉讼中不利之忧。 `<!-- ROW_MINE: ksummit.messages.10305 -->`
+- 【Linux社区】Randy Dunlap发布自研Perl脚本kerndoc-export-search.pl v0.9，可同时查出缺kernel-doc与缺EXPORT符号，实测audit.c报3处缺文档、12处缺导出，欢迎并入kdoc Python系统。 `<!-- ROW_MINE: ksummit.messages.10307 -->`
+- 【Linux社区】Linus Torvalds长文阐明Link:必须是公开可点的真实链接以杜绝内部bug ID，斥b4 am来源链接与syzbot魔数Reported-by为噪音，宁用Link不用Closes，自述常按作者加日期在lore挖多年前的讨论。 `<!-- ROW_MINE: ksummit.messages.10312 -->`
+- 【Linux社区】James Bottomley澄清Link仅回链提交的原始邮件、工具只需最后一轮迭代即可用，Konstantin的b4 dig基于patch-id模糊匹配；否认需要Gerrit式Change-Id跨版本追踪提交。 `<!-- ROW_MINE: ksummit.messages.10314 -->`
+- 【Linux社区】Miguel Ojeda指出内核Rust panic不展开栈；James Bottomley认为回溯是诊断用户bug报告的关键能力，担忧其缺失影响排障，追问是否有人在解决。 `<!-- ROW_MINE: ksummit.messages.10318 -->`
+- 【Linux社区】Miguel Ojeda回应Sasha Levin对-stable侧Rust审查人力匮乏之忧：寄望Rust知识随时间普及，复杂补丁可交抽象层维护者复审，与复杂C变更面临的困境同理。 `<!-- ROW_MINE: ksummit.messages.10319 -->`
+- 【Linux社区】Ventura Jack质疑“&UnsafeCell<T>等价C的T*”的说法，主张Rust引用仍受别名规则约束；Benno Lossin说明Opaque靠官方“hack”禁用&mut唯一性，树内pinned-init未用nightly特性。 `<!-- ROW_MINE: ksummit.messages.10322 -->`
+- 【Linux社区】Linus Torvalds指“顺手修预存问题”的摩擦早于AI、建数据库难解压力与摩擦，提议由可信团队运营的AI建“trivial tree”承接高置信修复，强调信任的是运营者而非AI本身。 `<!-- ROW_MINE: ksummit.messages.10325 -->`
+- 【Linux社区】Arınç ÜNAL主张DT绑定与源文件维护独立于内核开发，维护者不得以先修内核为接受DT补丁的条件；Conor Dooley称老平台文本绑定常以DTS与内核为准、长期错误需内核兼容。 `<!-- ROW_MINE: ksummit.messages.10330 -->`
+- 【Linux社区】Dan Carpenter自述Smatch筹资失败，感谢grsecurity的Spengler资助意向；零日机器人无跨函数分析且只跑低误报检查，正漏掉缓冲溢出、差一错误与fork缺错误码等，寻求多家公司分摊薪资。 `<!-- ROW_MINE: ksummit.messages.10333 -->`
+- 【Linux社区】Mauro Carvalho Chehab演示send-patches.pl整合format-patch、send-email与get_maintainer，封面信Cc逾80会被反垃圾拦截；Joe Perches用512字符阈值决定只Cc邮件列表。 `<!-- ROW_MINE: ksummit.messages.10336 -->`
+- 【Linux社区】Jani Nikula以数据反驳Geert对patchwork.freedesktop.org链接的批评：指向该域的Link:标签逾99%的URL内含Message-ID，可直达原始邮件。 `<!-- ROW_MINE: ksummit.messages.10338 -->`
+- 【Linux社区】Jani Nikula指出MAINTAINERS已有B:字段记录bug提交URI（网页或mailto），支持Morton提议做网页前端：粘贴路径即返回维护者邮箱，补bugzilla退位后的报告入口。 `<!-- ROW_MINE: ksummit.messages.10340 -->`
+- 【Linux社区】Johannes Berg主张Sashiko默认纳入、可事后退出，以免未发声者漏报而被利用，Rostedt附和宁愿多收报告；Bottomley称AI驱动补丁者借提示滥发“恶意硬件修复”，欲从源头退出。 `<!-- ROW_MINE: ksummit.messages.10342 -->`
+- 【Linux社区】Mike Rapoport称最烦收到系列中间几片，至少应给所有收件人发封面信以便了解全局并请求重发；回应Leon对精选收件人导致反馈孤岛化的批评。 `<!-- ROW_MINE: ksummit.messages.10347 -->`
+- 【Linux社区】Laurent Pinchart以三年libcamera经验自省：按设计思路写的测试程序难发现API设计缺陷，主张加速器驱动须有完全开放的用户态实现，因其80%以上驱动逻辑本就在用户态。 `<!-- ROW_MINE: ksummit.messages.10348 -->`
+- 【Linux社区】Philip Herron说明gccrs以rustc为模板、须遵循libcore的lang items等编译器假设，暂不接受opt-out别名补丁以免添乱；称获Open Source Security与Embecosm资助，各Rust编译器项目关系友好。 `<!-- ROW_MINE: ksummit.messages.10349 -->`
+- 【Linux社区】Thomas Gleixner回顾trivial树初衷是省维护者精力，自承已久未打理，断言“trivial该死”：连改typo也制造无谓冲突，支持从文档删除trivial@。 `<!-- ROW_MINE: ksummit.messages.10356 -->`
+- 【Linux社区】Konstantin Ryabitsev指git notes单ref百万文件难扩展且多写者冲突，主张用public-inbox的RFC-2822消息流记录提交注解（X-For-Commit-ID头），把lore当作面向自动化代理的“消息总线”。 `<!-- ROW_MINE: ksummit.messages.10359 -->`
+- 【Linux社区】Tim Bird自述把LKML倒进Gmail、极少回应的用法，询问b4、lei、lore能否回复未订阅列表的邮件，回应Konstantin将MAINTAINERS“THE REST”改指patches@lists.linux.dev的提案。 `<!-- ROW_MINE: ksummit.messages.10379 -->`
+- 【Linux社区】Andrew Morton提议写机器人对引用文本超95%的邮件发警告，称此现象因Gmail折叠引用而明显增多，并自嘲这办法不会讨人喜欢。 `<!-- ROW_MINE: ksummit.messages.10385 -->`
+- 【Linux社区】Steven Rostedt披露TAB正起草“沟通风格”文档规范提交者与维护者互相对话方式，称维护者支持组构想已与同侪酝酿许久，主张本届峰会必须讨论此议题。 `<!-- ROW_MINE: ksummit.messages.10389 -->`
+- 【Linux社区】Carpenter 认为Pinchart对devres生命周期问题的描述尚不足以写成Smatch检查规则，需要具体补丁才能针对该代码编写检查器。 `<!-- ROW_MINE: ksummit.messages.10054 -->`
+- 【Linux社区】Berg 反对文档构建绕过用户PATH强选新版Python，以nix-shell锁定构建环境求可重现为例，称“请永远别这么做”。 `<!-- ROW_MINE: ksummit.messages.10055 -->`
+- 【Linux社区】Brown 指出子树不在-next时，修复须待pull走完才消失于-next，子树孵化与假期延迟都会拉长bug暴露时间，故直接纳入-next更简单。 `<!-- ROW_MINE: ksummit.messages.10062 -->`
+- 【Linux社区】Mauro 指出Sphinx自3.1起缺per-C-type域致同名符号交叉引用失效，kernel-doc重复解析头文件四次；提议扩充DOC:标签列symbols并可校验，评估移植Python的回归与性能风险。 `<!-- ROW_MINE: ksummit.messages.10063 -->`
+- 【Linux社区】Ojeda 回应hpa对Rust工具链稳定性不对称的长期担忧，称核心子系统若不能可选，只能等待、改变内核政策或推动发行版回移工具链，并称此议题与分配器无关。 `<!-- ROW_MINE: ksummit.messages.10066 -->`
+- 【Linux社区】Rostedt 称头文件排序规则纯为美观、利于审阅，仍偏好倒挂圣诞树式变量声明，但承认有初始化时正确性优先，初始化顺序影响代码生成的规则可能有害。 `<!-- ROW_MINE: ksummit.messages.10067 -->`
+- 【Linux社区】Krummrich 欢迎Linus澄清维护者无权控制代码使用对象，但坚持对API被滥用（非个人偏好）应保留否决权，并称该问题不限于Rust。 `<!-- ROW_MINE: ksummit.messages.10071 -->`
+- 【Linux社区】Levin 说明linus-next由cron脚本自动抓取发往Linus的PR并送测，不强制政策；晚到PR风险与命名混淆问题由其本人与Linus权衡，回应Howlett。 `<!-- ROW_MINE: ksummit.messages.10072 -->`
+- 【Linux社区】Bottomley 反驳hpa称Message-ID需配List-ID才有用，指出lore归档无需知道列表即可解析消息，搜索引擎数日后也能索引。 `<!-- ROW_MINE: ksummit.messages.10073 -->`
+- 【Linux社区】Kosina 解释提交者不跑checkpatch的动因：警告琐碎，维护者常顺手改后合入省去重交流程，故无改进激励；0day机器人自动反馈才是有效路径。 `<!-- ROW_MINE: ksummit.messages.10075 -->`
+- 【Linux社区】Bottomley 称版权局认定AI生成代码无版权，故DCO可覆盖AI贡献；反对为AI改动DCO以免动摇十年行业共识，主张按项目惯例标注AI生成并保留标签供日后利用。 `<!-- ROW_MINE: ksummit.messages.10084 -->`
+- 【Linux社区】Rostedt 区分互助小组与CoC：前者无权施加任何后果，如戒瘾互助而非执法，可让担心留下邮件痕迹的人（如Bart）放心求助。 `<!-- ROW_MINE: ksummit.messages.10091 -->`
+- 【Linux社区】Herring 称DT旧API只标“勿新增用户”且因PPC/Sparc无人修或永不删除；Golaszewski称GPIO全局编号转描述符须功能测试、无法自动化，历时数年。 `<!-- ROW_MINE: ksummit.messages.10093 -->`
+- 【Linux社区】Pinchart 称DRM在营造安全友善环境上成效较好，建议请Dave与Daniel分享多提交者模型在人际层面的经验，但涉及虐待行为个案，公开讨论有难度。 `<!-- ROW_MINE: ksummit.messages.10095 -->`
+- 【Linux社区】Stoakes 反驳Levin“AI只需与人相当”论，指LLM基于统计推断、会在无据时自信幻觉，错误性质与人类不同且后果重大，主张先就LLM内容定政策。 `<!-- ROW_MINE: ksummit.messages.10103 -->`
+- 【Linux社区】转载Hans的LPC提案：sysfs背光无法映射到面板、x86多固件接口重复注册、需root权限、亮度标度与0值语义不明、gamma与亮度无法同帧原子提交，拟改用drm_connector新属性。 `<!-- ROW_MINE: ksummit.messages.10105 -->`
+- 【Linux社区】Pinchart 反对用LLM解码oops回溯，主张与发行版协作、服务端凭版本号下载debuginfo做确定性解码；要求Levin收敛侮辱并拒绝稻草人论证。 `<!-- ROW_MINE: ksummit.messages.10106 -->`
+- 【Linux社区】Machek 引述LKML月3.3万帖、日投递310万、Gmail队列5万至20万滞留的数据，反对把THE REST改投patches@列表，称无明确归属的补丁仍应广播。 `<!-- ROW_MINE: ksummit.messages.10107 -->`
+- 【Linux社区】Kroah-Hartman 连环追问Ref<T>的drop与并发取引用间锁在何处、多CPU下生命周期由谁保证；Wedson以类型不变量与编译期drop取代kref的release回调作答。 `<!-- ROW_MINE: ksummit.messages.10111 -->`
+- 【Linux社区】Torvalds 主张AI补丁不作特殊化，一律按工具辅助补丁处理：提交说明所用工具并附脚本或prompt，举sed -i与提交96b451d53ae9为例。 `<!-- ROW_MINE: ksummit.messages.10115 -->`
+- 【Linux社区】Rostedt 披露其bugzilla文件夹70天积78109封、日均1114封并归因于stable更新日均多300封；认为恶性安全漏洞可私下处理并抄送security@。 `<!-- ROW_MINE: ksummit.messages.10116 -->`
+- 【Linux社区】Bergmann 给出HIGHMEM依赖!CPU_CACHE_VIVT原型补丁，diffstat为10文件增27删230行；Kirkwood平台1GB内存用户需测试，计划6.19移除并由6.18 LTS兜底。 `<!-- ROW_MINE: ksummit.messages.10124 -->`
+- 【Linux社区】McKenney 认为AI分析代码比生成代码安全，自测RCU问答“不完美但不算差”；引Mason的AI审查提示已接入BPF CI，界面红色即AI发现的bug。 `<!-- ROW_MINE: ksummit.messages.10126 -->`
+- 【Linux社区】Johnson 披露无线子系统同样依赖bugzilla，ath11k/ath12k有wiki报告指引；PCI用其收集dmesg与lspci输出，要求替代品支持文件交换且历史Link:永久可解析。 `<!-- ROW_MINE: ksummit.messages.10127 -->`
+- 【Linux社区】Carpenter 介绍惯例：修复补丁应把原提交作者放入To行，因其最适审查且反感为他人bug背责；支持强制Fixes:标签以过滤伪修复。 `<!-- ROW_MINE: ksummit.messages.10132 -->`
+- 【Linux社区】Corbet 提出GPL之外的伦理问题：LLM爬取加重kernel.org运行成本、数据中心能耗损害气候、BitKeeper教训警示勿让流程依赖专有系统。 `<!-- ROW_MINE: ksummit.messages.10142 -->`
+- 【Linux社区】Brown 与Bottomley讨论-next测试价值：定位提交的二分常超一天，-next测试人群广于stable rc，主张引导stable用户改测.0版本，并提及自带外树补丁者的障碍。 `<!-- ROW_MINE: ksummit.messages.10146 -->`
+- 【Linux社区】回应Chinner对Linus嘲讽“waah waah”违反CoC的抗议：Rostedt自认因习以为常而漏看，以TAB成员身份正式表态该言论不当，呼吁Linus回归技术讨论。 `<!-- ROW_MINE: ksummit.messages.10149 -->`
+- 【Linux社区】Ts'o 以ext4单行改动为例论证维护者不得以ACK作筹码，举David Miller无视无理NACK、Andrew Morton对mm管理宽松，称ACK僵局是峰会应处理的流程议题。 `<!-- ROW_MINE: ksummit.messages.10154 -->`
+- 【Linux社区】Feng 澄清relaxed原子写无需编译器屏障，内核原子操作与WRITE_ONCE即属此类；回应Overstreet关于非原子写允许编译器插入额外写入的规则问题。 `<!-- ROW_MINE: ksummit.messages.10159 -->`
+- 【Linux社区】Ojeda 表明设有Rust抽象的子系统改C API须同步更新Rust侧，重型重构应由维护者承担或协助不懂Rust的改动者，回应Levin的技能门槛疑问。 `<!-- ROW_MINE: ksummit.messages.10160 -->`
+- 【Linux社区】Ellerman 列举每日使用提交链接场景：回帖报bug、查新增RB标签、推送前核对最新提交、发现三年前补丁曾被报bug，故坚持要可单击的URL链接。 `<!-- ROW_MINE: ksummit.messages.10161 -->`
+- 【Linux社区】Rostedt 坚持维护者邮箱进bugzilla应opt-in而非opt-out，指“可随时退订”说法冒犯维护者；称分诊中介最难物色，并提及Slade自愿出力。 `<!-- ROW_MINE: ksummit.messages.10166 -->`
+- 【Linux社区】Levin 公布next-analysis工具及v6.12-rc4至rc5提交在-next停留直方图：0天89个、2天45个、14天以上15个；Granados确认histo.sh可直接查询。 `<!-- ROW_MINE: ksummit.messages.10169 -->`
+- 【Linux社区】Hansen 主张指南措辞为“工具自动化程度越高，所受维护者审查越多”，拒绝划定“整系列全自动才加审”的明确界线，以免被断章规避。 `<!-- ROW_MINE: ksummit.messages.10170 -->`
+- 【Linux社区】Uytterhoeven 指出现行惯例已区分patch.msgid.link指原补丁邮件与lore链接指设计讨论，回应Desnoyers增设Origin:标签的提议，称问题本质是命名空间。 `<!-- ROW_MINE: ksummit.messages.10171 -->`
+- 【Linux社区】Ryabitsev 论证patch-id不可靠：diff算法与上下文行数不同即失配，建议改用git已文档化的Message-Id:标签；Ellerman嫌其不能单击打开，改用msgid.link直链。 `<!-- ROW_MINE: ksummit.messages.10187 -->`
+- 【Linux社区】Vetter 称BLAS对加速器过于高层，以Intel level0为底层用户态范例，指出AI/NN缺跨厂商底层接口，关键在专家社区与跨厂商用户态项目而非接口本身。 `<!-- ROW_MINE: ksummit.messages.10188 -->`
+- 【Linux社区】Chehab 反对给AI回复逐子系统加prompt，称浪费token且易被模型遗漏或改错；提议经sashiko.dev邮件策略在信头加正文前缀，并给出其PR第364号。 `<!-- ROW_MINE: ksummit.messages.10189 -->`
+- 【Linux社区】Bottomley 称未见AI犯细微错误、只见大错，建议提交附AI置信度分数；认为经C语料训练的模型才可能写安全C代码，并透露已收到AI生成的bug报告。 `<!-- ROW_MINE: ksummit.messages.10195 -->`
+- 【Linux社区】Bottomley 披露MS赞助商2024年仅1家、2025与2026年皆无，LF年亏逾10万美元；回顾2001年USENIX创办至2016年按Linus意见改为一日峰会的沿革，提出并入Plumbers或LSF/MM等选项。 `<!-- ROW_MINE: ksummit.messages.10197 -->`
+- 【Linux社区】社区治理议题。James Bottomley 回应补丁合并后讨论记录流失的担忧,主张邮件与归档检索足以弥补: "As long as you're used to search interfaces it's usually easy to find." 属维护者流程与社区记忆治理范畴。 `<!-- ROW_MINE: ksummit.messages.11 -->`
+- 【Linux社区】治理议题。Geert 谈评审标签激励:多轮修改后常只剩沉默,"no Acked-by or Reviewed-By. Just silence.",并指出强制 Reviewed-by 若无真实激励可能反受其害: "may turn out to make matters worse". 属评审文化与人才招募治理。 `<!-- ROW_MINE: ksummit.messages.21 -->`
+- 【Linux社区】社区治理议题。James Bottomley 建议将议题改写为 "Patches without Email - Possible?",并引用其他开源社区拒绝邮件协作的摩擦经验,提出评审机制选型与评审者赋权问题: "it could finally be the way we give proper credit to reviewers". `<!-- ROW_MINE: ksummit.messages.64 -->`
+- 【Linux社区】治理议题。Dave Airlie 把维护者峰会描述为 Linus 的 "Linus's staff meeting",Theodore Tso 说明其为约 30 人的半天流程议题会议;Geert 追问赞助席位如何安插: "Forgive my ignorance, how do the sponsored attendees fit into this picture?" 属会议治理与代表性问题。 `<!-- ROW_MINE: ksummit.messages.76 -->`
+- 【Linux社区】治理议题。讨论维护者峰会名单构成:Linus 希望顶级维护者提名 submaintainer;Alexandre Belloni 代表 ARM 补充设备树与 CLK 人选,理由是这类维护者天然与多数子系统打交道: "I would like to see some of the people that I interact with". `<!-- ROW_MINE: ksummit.messages.167 -->`
+- 【Linux社区】治理议题。Laura Abbott 代表 Linux Foundation TAB 宣布 2019 年选举改用电子投票,注册内核峰会与 Plumbers 者均有资格,采用 "Condorcet Internet Voting Service",并公布候选人平台与 FAQ。属基金会治理与选举制度。 `<!-- ROW_MINE: ksummit.messages.177 -->`
+- 【Linux社区】治理与许可证议题。Dave Airlie 讨论行为准则的归属与修订权,直接发问: "Good question, do we have a CoC maintainer? Is Linus it, Greg, TAB?",并比照内核对 GPL 例外文本的处理方式。属治理权分配问题。 `<!-- ROW_MINE: ksummit.messages.193 -->`
+- 【Linux社区】治理议题。围绕 AI 辅助代码的标注,Jiri Kosina 认为法务层面可由基金会与 DCO 承接,核心是要说明谁真正理解代码: "if I need to talk to a human that actually does understand the patch deeply",属提交元数据与责任归属治理。 `<!-- ROW_MINE: ksummit.messages.203 -->`
+- 【Linux社区】治理议题。围绕安全漏洞披露的 NDA 框架争论,James Bottomley 主张推动业界改变,Andy Lutomirski 提出折中方案: "have a policy, get lawyers to agree to it, and make it barely be an NDA". 属对外沟通与法律治理边界。 `<!-- ROW_MINE: ksummit.messages.226 -->`
+- 【Linux社区】许可证议题。Greg KH 与 Bradley Kuhn 正面交锋。Kuhn 称违规企业公然表示 "you think that we have to follow the GPL? Ok, then take us to Court.",Greg 回以 "I call bullshit on this.",主张既有非诉讼协商路径更有效。 `<!-- ROW_MINE: ksummit.messages.283 -->`
+- 【Linux社区】许可证与治理议题。Harald Welte 谈及德国 GPL 诉讼,称 Telefonica 案败于程序问题;并批评 Patrick McHardy 拒不解释导致谣言蔓延,同时提到 SFC 推动的 "principles of community-oriented enforcement". 属执行机制治理。 `<!-- ROW_MINE: ksummit.messages.321 -->`
+- 【Linux社区】治理议题。Andy Lutomirski 回应维护者峰会邀请,自陈 "I only sort-of maintain anything",表示若能聚焦维护议题则可暂避,但愿意讨论安全与架构问题。属参会资格与议题范围治理。 `<!-- ROW_MINE: ksummit.messages.327 -->`
+- 【Linux社区】治理议题。Linux Foundation TAB 宣布 2019 年选举转电子投票,注册参会者均有资格,使用 "Condorcet Internet Voting Service",并给出投票时间窗口、候选人平台与开放答疑。属基金会治理与选举程序。 `<!-- ROW_MINE: ksummit.messages.332 -->`
+- 【Linux社区】治理议题。围绕权力继承,Olof Johansson 主张多人共治以平衡产业背景与外部观感,回忆 arm-soc 有意避免让人以为 "companies had to join Linaro to get attention";Linus 则坚持组内互信优先。属治理结构代表性。 `<!-- ROW_MINE: ksummit.messages.357 -->`
+- 【Linux社区】治理议题。围绕安全漏洞 NDA,Linus 明确表态 "I don't sign NDA's. I just don't do it.",并称与厂商仅存君子协定;Lutomirski 希望改由 Linux Foundation 建立替代安排,反映社区与商业法律框架的治理冲突。 `<!-- ROW_MINE: ksummit.messages.364 -->`
+- 【Linux社区】治理议题。Rainer Fiebig 批评行为准则的引入时机与政治色彩,认为其已 "begin to divide the wider community",质疑 Linux 是否因此被视为背书特定议程。属社区治理与行为准则争议。 `<!-- ROW_MINE: ksummit.messages.433 -->`
+- 【Linux社区】许可证议题。Greg KH 反对 Bradley Kuhn 把诉讼当作唯一出路: "If you don't defend the GPL in courts, we need to give up on it",并援引 BusyBox 诉讼催生 Toybox、LLVM 因规避 FSF 与 GPLv3 而生的案例,称无意开战。 `<!-- ROW_MINE: ksummit.messages.440 -->`
+- 【Linux社区】BSD 谱系议题。Andrew Turner 从 FreeBSD 立场主张共用设备树仓库: "From the FreeBSD perspective I'd like it if there was a common repo for all devicetree consumers to share",并称已与 NetBSD、OpenBSD 开发者交流,五项目共用可简化同步。 `<!-- ROW_MINE: ksummit.messages.444 -->`
+- 【Linux社区】治理议题。讨论维护者峰会议题与协作模式,Linus 强调 "So I don't think we can force some workflows";Laurent Pinchart 指出各类客户端篡改邮件使自动提取困难,并对比 Gerrit 对邮件工作流的冲击。属协作模式治理。 `<!-- ROW_MINE: ksummit.messages.493 -->`
+- 【Linux社区】治理议题。Eric Biederman 质疑新行为准则的合并过程,称 "I am concerned that we just merged a bad patch",指出无变更动机说明且升级路径未变;并辨析 kernel.org 与 Linux Foundation 都不是内核项目本身。 `<!-- ROW_MINE: ksummit.messages.514 -->`
+- 【Linux社区】治理议题。Jiri Kosina 在维护者峰会邀请讨论中补充人选: "I think that having RHEL kernel maintainer(s) present would be beneficial as well",因其与稳定版发布密切相关,并说明 SUSE 内部并行维护多个分支。属代表制治理。 `<!-- ROW_MINE: ksummit.messages.539 -->`
+- 【Linux社区】治理议题。James Bottomley 为 Linus 的措辞辩护,称 "it's a pretty low level taunt and it wasn't aimed at you",并警告若任何色彩化用语都触发行为准则将不堪其重。属准则适用边界治理。 `<!-- ROW_MINE: ksummit.messages.591 -->`
+- 【Linux社区】BSD 与许可证议题。Jeremy Allison 指出持相同看法者 "lots of them work on FreeBSD not Linux";Greg KH 顺势追问 SFC 的代表资格:谁把版权交予 SFC、是否为永久授权。属许可证执行治理与 BSD 社区态度对照。 `<!-- ROW_MINE: ksummit.messages.659 -->`
+- 【Linux社区】治理议题。讨论权力继承安排,Linus 打趣道趁他离开温哥华选举继任者最佳: "what better opportunity for a palace coup than when the old dictator is off gallivanting?";Bottomley 以反讽回应,认为需本人到场加冕继任者。 `<!-- ROW_MINE: ksummit.messages.670 -->`
+- 【Linux社区】治理议题。Jiri Kosina 回应 Linus 对发行版维护者人选的猜测,列出 SUSE 四位内部分支维护者,并解释分工原因: "We're maintaining quite a few codestreams in parallel". 属参与治理的名单与代表性确认。 `<!-- ROW_MINE: ksummit.messages.695 -->`
+- 【Linux社区】许可证议题。Luis Rodriguez 回应 Linus 关于社区不应诉诸法律的观点,强调 SFC 有公开原则与参与邀请,并以 SCO 案为例说明 "that was not mainly about some GPL test case or license clarification",但 GPL 与社区均因此受益。 `<!-- ROW_MINE: ksummit.messages.718 -->`
+- 【Linux社区】治理议题。围绕新行为准则与 Brendan Eich 先例,Laurent Pinchart 提醒该案例 "a probability of generating heated discussions no lower than 100%",并主张提前规划应对而非事后补救。属治理预案讨论。 `<!-- ROW_MINE: ksummit.messages.727 -->`
+- 【Linux社区】许可证议题。Matthew Garrett 以真实情境回应 Linus 要求给出具体案件:50 万台联网设备、厂商停产且拒发源码,并问 "Is it acceptable to engage in litigation in order to ensure that owners of these devices can receive a security update". `<!-- ROW_MINE: ksummit.messages.755 -->`
+- 【Linux社区】治理议题。讨论是否转向 web 式协作,Geert 追问 "Do we trust the branch to contain the exact same commits as the patches reviewed on the mailing list?",并指出对 patchwork 的信任前提是无人工介入。属协作模式与信任边界治理。 `<!-- ROW_MINE: ksummit.messages.764 -->`
+- 【Linux社区】许可证议题。Greg KH 追问 SFC 的代表资格,Jeremy Allison 澄清 Samba 项目中 "NO devlopers have assigned any copyrights to the SFC",仅授权其作为执行代理;Greg 反问这究竟构成何种法律代表关系。 `<!-- ROW_MINE: ksummit.messages.843 -->`
+- 【Linux社区】许可证与治理议题。Theodore Ts'o 质疑 Conservancy 的代理权限边界,设想单个开发者自行推动诉讼破坏战略性关系的情形,并援引 Linus 立场称 "the term rogue agent very much applies". 属执行权授权治理。 `<!-- ROW_MINE: ksummit.messages.845 -->`
+- 【Linux社区】治理议题。Greg KH 为长期支持内核辩护,反驳 Jani Nikula 的批评,并说明其对外建议: "I tell people to pick the latest LTS for their product, and use that",属发布策略治理与发行版影响力。 `<!-- ROW_MINE: ksummit.messages.851 -->`
+- 【Linux社区】治理议题。讨论峰会是否应容纳开发者代表:Laurent Pinchart 指出流程冲突时开发者缺席,James Bottomley 设想 "a bitch at maintainers session where developers get to vent frustration",Linus 认同需求但表示难以选定合适人选。 `<!-- ROW_MINE: ksummit.messages.887 -->`
+- 【Linux社区】BSD 谱系议题。设备树工作坊延续 FreeBSD 的共用仓库主张,Rob Herring 估算使用方远超五个: "linux, 3x BSD, u-boot, barebox, zephyr",并提及 ARM 可信固件与 UEFI,STmicro 亦提出同类需求。 `<!-- ROW_MINE: ksummit.messages.892 -->`
+- 【Linux社区】许可证议题。Wolfram Sang 反对 Linus 称企业是社区现状的唯一原因: "the only reason we are where we are today",强调贡献动机多元;Greg KH 承认措辞欠佳,并以大规模 SMP 支持为例说明企业自利贡献的价值。 `<!-- ROW_MINE: ksummit.messages.942 -->`
+- 【Linux社区】治理议题。James Bottomley 就安全披露归纳两条路线,倾向第二条: "Force industry to adopt new norms that actually work well with open source",并主张公开检讨 spectre 与 meltdown 的处置以形成对外说辞。 `<!-- ROW_MINE: ksummit.messages.952 -->`
+- 【Linux社区】BSD 与许可证议题。Jeremy Allison 再次指出持异议者 "lots of them work on FreeBSD not Linux";Ted Ts'o 主张按下红色按钮的决策权应属 Linus 而非少数执行组织,并类比不授权军官擅自开战;Greg KH 追问 SFC 的版权代表资格。 `<!-- ROW_MINE: ksummit.messages.976 -->`
+- 【Linux社区】治理议题。Dan Williams 提交项目连续性文档,注明其为维护者峰会后续成果: "a follow-up from Maintainer Summit",内容是对影响 torvalds/linux.git 正常推进的事件预案,并获多位核心维护者 Reviewed-by。属治理文档化。 `<!-- ROW_MINE: ksummit.messages.980 -->`
+- 【Linux社区】许可证议题。Bradley Kuhn 回应 Linus 对其论点的简化转述,主张以正式政策与行动评判公共人物: "The way to judge a public figure is by their official policies, their actions",并援引布什语录书作类比。属 GPL 执行立场的治理辩论。 `<!-- ROW_MINE: ksummit.messages.996 -->`
+- 【Linux社区】治理议题。Greg KH 在维护者峰会邀请讨论中推荐 Ben Hutchings: "I'd recommend Ben Hutchings for the help and work he does with stable kernel releases",因其贡献不出现在 Linus 的提交统计中却支撑着稳定树。属代表性治理。 `<!-- ROW_MINE: ksummit.messages.1018 -->`
+- 【Linux社区】治理议题。社区健康讨论,Alexandre Belloni 指出 rtc 子系统贡献高度集中于维护者本人,属不可持续结构: "That kind of skewed contribution statistics is indeed not sustainable";Guenter Roeck 以 watchdog 与 hwmon 统计作对照回应。 `<!-- ROW_MINE: ksummit.messages.1039 -->`
+- 【Linux社区】治理议题。Jani Nikula 与 Greg KH 讨论长期支持内核的政策张力,认为维护 LTS 与劝用户跟进相互矛盾,属 "a double edged sword";Greg 解释 "we are now only adding 1 new LTS kernel a year",以抑制此前的泛滥。 `<!-- ROW_MINE: ksummit.messages.1071 -->`
+- 【Linux社区】许可证议题。Matthew Garrett 反驳 Linus 关于 Linksys WRT54GL 的正面叙事,指出其 2008 年仍在违规并遭起诉和解,是在 FSF 静默协商两年半后才合规,反问 "Which part of this was inappropriate? What should have been done instead?". `<!-- ROW_MINE: ksummit.messages.1115 -->`
+- 【Linux社区】BSD 谱系议题。设备树工作坊继续讨论跨项目共用,Rob Herring 估算使用方远超五个并列出 "linux, 3x BSD, u-boot, barebox, zephyr" 以及 ARM 可信固件与 UEFI;STmicro 提出同类诉求。属跨项目标准化与 BSD 参与。 `<!-- ROW_MINE: ksummit.messages.1185 -->`
+- 【Linux社区】BSD 与治理议题。Daniel Phillips 批评内核缺少大型设计议题的流程,以逻辑卷支持为例对照 BSD 水平: "what BSD has, that approach is demonstrably a perennial failure",并追问 Linux 为何没有设计流程。 `<!-- ROW_MINE: ksummit.messages.1193 -->`
+- 【Linux社区】BSD 谱系议题。John Stultz 提出 2038 问题方案,直接援引 BSD 先例: "NetBSD and OpenBSD have recently broken their ABI, converted their time_t to long long",作为 Linux 在 32 位架构上应对时间戳上限的参照。 `<!-- ROW_MINE: ksummit.messages.1220 -->`
+- 【Linux社区】治理议题。Thomas Gleixner 请求加入维护者峰会名单,理由是其身份与工作性质: "As RT (and upstream) maintainer I'm pretty involved in large scale overhauls",而大规模重构常属流程问题。属参与资格与议题归属治理。 `<!-- ROW_MINE: ksummit.messages.1245 -->`
+- 【Linux社区】治理议题。Geert 支持并认可移除行为准则执行段落的补丁,理由是该条款的责任范围引发担忧,需在 4.19 发布前 "strip the enforcement clauses to give the community time to consider and debate how this should be handled". `<!-- ROW_MINE: ksummit.messages.1406 -->`
+- 【Linux社区】治理议题。讨论小组维护实践的经验分享方式,Daniel Vetter 建议避免泛泛综述,应 "talk about the actual tools you use" 并聚焦新尝试中的具体成败细节,认为旧案例复述没有学习价值。 `<!-- ROW_MINE: ksummit.messages.1434 -->`
+- 【Linux社区】许可证议题。Jiri Kosina 回应 Greg KH 对诉讼风险的顾虑,主张自愿者可在认同时参与作证: "What if a person actually wouldn't mind to participate",并认为版权转让与雇佣合同约束应由个人及雇主自行判断。 `<!-- ROW_MINE: ksummit.messages.1441 -->`
+- 【Linux社区】治理议题。Geert 剖析新行为准则的执行机制,指出准则实际约束的是维护者,而对违规者 "The only repercussion for violators (not considering existing legal frameworks) is being banned",且公开邮件列表无法删除内容、封禁还须管理员协助。 `<!-- ROW_MINE: ksummit.messages.1471 -->`
+- 【Linux社区】许可证议题。James Bottomley 提议讨论开发者如何保有自身版权,给出三条路径: "Invention Disclosure Exceptions"、单独的版权归属协议,以及 "Modifications to the employment agreement itself",并解释选择内核峰会闭门日的原因。 `<!-- ROW_MINE: ksummit.messages.1474 -->`
+- 【Linux社区】许可证与治理议题。Bradley Kuhn 说明 Conservancy 的行动代表联盟而非个人意志: "Conservancy's actions are on behalf of our coalition, at their behest",并主张专有软件并非邪恶,应审查联盟的实际行为而非个人言论。 `<!-- ROW_MINE: ksummit.messages.1494 -->`
+- 【Linux社区】2024 年 maintainers summit 讨论 commit log 中 lore.kernel.org 链接规范。Geert Uytterhoeven 质疑文档配置项与现行工具的实际兼容性，反映 stable workflow 的治理讨论。引语："Care to update docs.kernel.org/maintainer/configure-git.html?" `<!-- ROW_MINE: ksummit.messages.1562 -->`
+- 【Linux社区】2018 年 9 月关于继承规划与单一领导 vs 集体维护治理之争。James Bottomley 明确对比 BSD 集体维护模式，将其与 Linux 单一领导制对照，触及 Linux 治理模型中 BSD 谱系的参照意义。引语："I like the single leader model because it doesn't lead to the cabal cult like the group maintainer model does in BSD" `<!-- ROW_MINE: ksummit.messages.1592 -->`
+- 【Linux社区】2020 年 12 月讨论补丁合并(folded)时归属标注缺失问题。Vlastimil Babka 指出折叠补丁会丢失原始作者、Reported-by 等元数据，提议建立统一的 attribution 规范并写入 maintainer 文档，属开发者治理与署名规范议题。引语："This is a loss of metadata/attribution just due to folding" `<!-- ROW_MINE: ksummit.messages.1620 -->`
+- 【Linux社区】2016 年 GPL 防御议题，讨论链接与衍生作品的法律边界。David Woodhouse 纠正 Linus 对 GPL 条款的简化表述，指出 GPL 第 2 条明确使用 derivative or collective works 措辞，涉及 BSD/GPL 许可体系下法律语义与许可证适用性。引语："The licence specifically talks about derivative or collective works" `<!-- ROW_MINE: ksummit.messages.1666 -->`
+- 【Linux社区】2016 年 GPL 防御议题，Jeremy Allison 与 Linus Torvalds 就 Software Freedom Conservancy 的诉讼立场交换观点。Jeremy 反驳 Linus 认为 SFC 律师 Bradley 议程偏离项目利益的判断，主张应评估工作而非公开形象，涉及 BSD 许可证体系中项目治理与法律代表的合法性问题。引语："his publicly stated motivation for license compliance isn't for the good of the kernel" `<!-- ROW_MINE: ksummit.messages.1693 -->`
+- 【Linux社区】2016 年 8 月 Karen Sandler 就 Linux Foundation Conservancy 版权执法立场在 KS 讨论。她声明 Conservancy 采取协调与克制态度，与联盟逐次重估，提议将话题扩散到六个月的多个场地，直接呈现 BSD 许可证体系下开源项目的版权治理与执法原则。引语："Conservancy spearheads a coordinated and downright timid approach" `<!-- ROW_MINE: ksummit.messages.1696 -->`
+- 【Linux社区】2018 年 9 月 Daniel Vetter 就 fd.o 与 DRM 从自建服务迁往 GitLab 提出治理讨论，涉及子系统治理模式与访问权限管理。Linus 就不同子系统采用不同规则的合理性展开辩论，直接对应 BSD 谱系下 Linux 治理结构的核心议题。引语："the random and relaxed model is enjoyable" `<!-- ROW_MINE: ksummit.messages.1698 -->`
+- 【Linux社区】2017 年 4 月 Linus Torvalds 提议精简 maintainer summit 名单至 35 人以内，并邀请 Android/Fedora/SUSE/Ubuntu 的下流发行版技术负责人参与，以解决下游集成痛点。这是 Linux 治理机制中邀请资格与参与结构的直接设计讨论。引语："the users of the kernel. Notably I'd really like to have kernel leads from the main distros" `<!-- ROW_MINE: ksummit.messages.1735 -->`
+- 【Linux社区】2015 年 David Woodhouse 在 KS 讨论 GPL 执法，指出法律立场存在从严格执行到基本按 BSD 许可处理的多光谱，希望邀请 SF Conservancy 与 LF TAB 双方来谈合规。该对话直接对照 GPL 与 BSD 许可证的差异化执法立场。引语："to basically wanting to act as if it's a BSD licence" `<!-- ROW_MINE: ksummit.messages.1756 -->`
+- 【Linux社区】2018 年 9 月 Jiri Kosina 回复 Linus 关于 trivial tree 的讨论，Linus 提出用 GitHub 随机非内核贡献者提交流程来实验新模型，而 Jiri 承认已一年无暇维护该树，开放修改建议。涉及 Linux 治理中的贡献流与树维护机制。引语："I have had absolutely zero time to maintain that tree for past ~1 year" `<!-- ROW_MINE: ksummit.messages.1769 -->`
+- 【Linux社区】2018 年 9 月 Sasha Levin 提议 stable 版本抓取与测试自动化，Dan Rue 补充构建测试覆盖成本。Linus 建议建立自动队列在 stable 抓取前先做集成测试，涉及 Linux 内核稳定版工作流与发布治理。引语："a special automated stable-next testing thing" `<!-- ROW_MINE: ksummit.messages.1788 -->`
+- 【Linux社区】2014 年 8 月 John Stultz 讨论 2038 问题解决方案，在正文中引用 NetBSD 处理 64 位 time_t 的经验，作为大文件迁移方案的对照，是 BSD 谱系内核在 ABI 演进中的直接技术参照。引语："NetBSD has a way of doing this" `<!-- ROW_MINE: ksummit.messages.1793 -->`
+- 【Linux社区】2016 年 8 月 Jeremy Allison 反驳 Theodore Ts'o 关于 shiny red button 的治理哲学，认为法律决策需要 top-town 集中权力与个人自利原则无法共存，是 BSD 许可证体系下 GPL 执行决策机制的治理辩论。引语："You can't have it both ways" `<!-- ROW_MINE: ksummit.messages.1854 -->`
+- 【Linux社区】2018 年 10 月 Theodore Ts'o 公布 maintainer summit 议程，Daniel Vetter 批评 CoC 议题在议程上却没有 DRM 子系统（唯一具有实际操作经验）在场。议程包括 EXPORT_SYMBOL_GPL、稳定版、API 弃用等治理议题，直接呈现 Linux 项目治理会议的组成结构。引语："the one subsystem with actual operational experience with the exact same CoC is not present" `<!-- ROW_MINE: ksummit.messages.1860 -->`
+- 【Linux社区】2017 年 4 月 maintainer summit 邀请讨论中，Geert 回应 Justin Forbes 关于 stable 策略的痛点，指出修 bug 与防止回归之间需取得平衡，即便有禁止策略仍偶有回归补丁进入 stable。涉及 Linux 治理中稳定版发布策略与下游协作机制。引语："finding a good balance between fixing bugs, and making sure the fixes don't cause regressions" `<!-- ROW_MINE: ksummit.messages.1882 -->`
+- 【Linux社区】2018 年 11 月 Dan Williams 提交 Subsystem Profile RFC，Geert 评审并致谢。该文档为各子系统维护者提供统一的策略模板，包括 review tag 要求、测试套件、时区/办公时间、可信评审人等，直接规范 Linux 项目治理机制。引语："The goal of the Subsystem Profile is to set expectations for contributors and interim or replacement maintainers" `<!-- ROW_MINE: ksummit.messages.1896 -->`
+- 【Linux社区】2016 年 8 月 Matthew Garrett 回应 Linus 关于商业用户对 GPL 态度的讨论，主张开源应关注培养年轻开发者而非担心大公司，认为下一代宿舍房里 19 岁的黑客才是 Linux 现状的真正根基。触及 BSD 许可证体系下开源运动的社区参与与商业关系。引语："a bunch of teenagers who grow up hacking this stuff because it's what powers every device they own" `<!-- ROW_MINE: ksummit.messages.1903 -->`
+- 【Linux社区】2017 年 6 月 Leon Romanovsky 讨论驱动版本补丁统一策略，Linus 声明版本号不存在也不应更新，认为版本化从根本上错误，使驱动作者误以为可以借此破坏接口。属于 Linux 治理中提交策略与 API 兼容性的核心规则讨论。引语："version codes do not matter, do not exist, and do not get updated" `<!-- ROW_MINE: ksummit.messages.1906 -->`
+- 【Linux社区】2018 年 10 月 Greg KH 提交代码行为准则解释文档补丁，将空 URL 修到 kernel.org/code-of-conduct.html。Geert 指出该 URL 只指向 CoC 而非 TAB 成员名单，涉及 Linux 治理机构（Technical Advisory Board）成员公开与治理透明度问题。引语："This seems to be the wrong URL? It just points to the CoC, not to the TAB members" `<!-- ROW_MINE: ksummit.messages.1938 -->`
+- 【Linux社区】2015 年 7 月 James Bottomley 与 David Woodhouse 深入讨论 GPL 第 2 条中衍生作品与集合作品的法律语义，针对固件签名是否算衍生作品展开文本解读。属于 BSD 许可证体系下 GPL 法律条款的精细化分析，直接影响 BSD/GPL 边界划分。引语："the extent of the license attachment is limited to derivation" `<!-- ROW_MINE: ksummit.messages.1991 -->`
+- 【Linux社区】2018 年 9 月继承规划讨论中，James Bottomley 明确对比 BSD 集体维护模式，认为单一领导制能避免 BSD 那种小团体化倾向；Geert 则回应 Arm-soc 采用三人轮值发布模式作为成功示例。是 BSD 治理模型与 Linux 单头制的直接对照。引语："I like the single leader model because it doesn't lead to the cabal cult like the group maintainer model does in BSD" `<!-- ROW_MINE: ksummit.messages.2020 -->`
+- 【Linux社区】2016 年 8 月 David Woodhouse 批评现状缺乏一致执行，Greg KH 反驳公司一直'违反'各类许可证但不影响合法性，并指出 LF 常年提供获取公司非开源代码的机会，从未失败。涉及 BSD 许可证体系下 GPL 执行与商业用户的实际互动。引语："It's almost as if they'd rather the kernel was under a BSD licence" `<!-- ROW_MINE: ksummit.messages.2029 -->`
+- 【Linux社区】2017 年 6 月 Theodore Ts'o 公布 2017 Maintainer/Kernel Summit 计划，明确 30 人小范围 invite-only 名单由 mini-program committee 决定，与公开 Kernel Summit 并列。涉及 Linux 治理中 summit 组织结构、邀请资格与议题筛选的具体机制。引语："the mini-program committee composed of James Bottomley, Shuah Kahn, Greg KH, and myself" `<!-- ROW_MINE: ksummit.messages.2067 -->`
+- 【Linux社区】2016 年 8 月 Luis Rodriguez 回应 James Bottomley 关于 GPL 商业推广的实操经验，指出将 GPL 引入企业客户难度高且过去经验难以复制，因公司已知可以向内核做宽松贡献，旧商业模式的适应意愿下降。触及 BSD 许可证体系下开源法律与商业模式的实际关系。引语："This is a very hard job and only a few are both apt, and have enough patience to deal with" `<!-- ROW_MINE: ksummit.messages.2070 -->`
+- 【Linux社区】2017 年 4 月 Justin Forbes 讨论 Fedora 与 RHEL 下游痛点，指出 Fedora 简单模型隐藏实现问题，RHEL 与 Fedora 痛点差异大；同时指出 stable 政策要求 head 先合入导致简单修复滞留下一合并窗口。涉及 Linux 治理与下游发行版协作机制。引语："stable has been a great success over the years, the policy is no fixes in stable until they are in head" `<!-- ROW_MINE: ksummit.messages.2099 -->`
+- 【Linux社区】2018 年 9 月 James Bottomley 提议在 Maintainer Summit 中通过 plebiscite 决定 Linus 的继承计划，John W. Linville 以无线维护交接耗时数月作为经验参照。涉及 Linux 治理的核心继承机制与 TAB chair 选举先例。引语："we could still have a plebiscite in Vancouver; we have the room and the time still reserved" `<!-- ROW_MINE: ksummit.messages.2116 -->`
+- 【Linux社区】2016 年 8 月 Luis Rodriguez 就 SFC 成员公开声明讨论，引用 Jeremy Allison 提到很多持相同意见者工作在 FreeBSD 而非 Linux，Greg 询问 SFC 究竟代表谁。涉及 BSD 许可证体系下 SFC 联盟合法性与代表权的核心治理问题。引语："many of them work on FreeBSD not Linux" `<!-- ROW_MINE: ksummit.messages.2165 -->`
+- 【Linux社区】2016 年 8 月 James Bottomley 回应 Steven Rostedt 关于版权归属的个人立场，指出公司可能破产或被收购，Red Hat 虽稳但其它实体未必如此，今天信任的版权持有者明天可能不再是同一实体。触及 BSD 许可证体系下版权持有连续性与治理风险。引语："the entity they trust to hold the kernel copyrights today may not be the same entity tomorrow" `<!-- ROW_MINE: ksummit.messages.2180 -->`
+- 【Linux社区】2014 年 6 月 Daniel Phillips 批评 Linux 长期无法解决 logical volume 支持问题，与 BSD 有明显代差；Greg KH 反驳称 Linux 有演化式流程，只是缺乏企业赞助。对话将 Linux 与 BSD 的存储栈设计哲学进行直接对比。引语："what BSD has, that approach is demonstrably a perennial failure" `<!-- ROW_MINE: ksummit.messages.2185 -->`
+- 【Linux社区】2016 年 8 月 James Bottomley 回应 Bradley Kuhn 关于法律威慑与协商方法的讨论，回忆 2012 年 San Diego 机场首次与 Kuhn 谈 VMware 违规时的策略担忧，认为法律背景威胁会改变谈判动态。涉及 BSD 许可证体系下 GPL 执行联盟的策略治理。引语："Knowing there's a threat of legal action lurking in the background produces far different conversations" `<!-- ROW_MINE: ksummit.messages.2234 -->`
+- 【Linux社区】2021 年 3 月 Thorsten Leemhuis 提议将 reporting-issues.rst 转为正式文档，替换 reporting-bugs.rst。文中说明自愿贡献者的可及性与问题优先级治理，涉及 Linux 治理中问题报告流程与开发者行为预期。引语："only 'issues of high priority' (regressions, security issues, severe problems) are definitely going to get resolved" `<!-- ROW_MINE: ksummit.messages.2351 -->`
+- 【Linux社区】2018 年 10 月 Theodore Ts'o 公布 maintainer summit 议程与会者名单，议题含 CoC、稳定版发布、API 弃用、EXPORT_SYMBOL_GPL、旧硬件移除等治理议题，与会者覆盖核心维护者。直接呈现 Linux 治理会议的议题设置与参与者结构。引语："Guidelines for EXPORT_SYMBOL_GPL" `<!-- ROW_MINE: ksummit.messages.2352 -->`
+- 【Linux社区】2018 年 9 月 Guenter Roeck 建议利用自动化测试作为 stable 发布决策依据而非发送噪音邮件，纠正 Sasha 提出的 stable-next 分支自动测试方案的经验教训。涉及 Linux 治理中 stable 工作流与自动化决策治理。引语："just don't send result e-mails but use the result as decision criteria if the patch should be included in stable" `<!-- ROW_MINE: ksummit.messages.2395 -->`
+- 【Linux社区】2015 年 7 月 James Bottomley 反驳 David Woodhouse 关于 GPL 第 2 条聚合条款模糊性的判断，指出法律测试明确为 not based on the work，涵盖 shareware CD 等情形。属于 BSD 许可证体系下 GPL 法律条款精确语义的辨析。引语："The exact legal test for applying this paragraph to a component is 'not based on the work'" `<!-- ROW_MINE: ksummit.messages.2407 -->`
+- 【Linux社区】2016 年 8 月 Matthew Garrett 在 GPL 防御讨论中提出安全更新场景，讨论是否可通过诉讼迫使厂商公开代码以保障用户接收安全补丁；Linus 反驳要求先公开羞耻并穷尽其它选项。触及 BSD 许可证体系下 GPL 执行与安全责任的治理边界。引语："Is it acceptable to engage in litigation in order to ensure that owners of these devices can receive a security update" `<!-- ROW_MINE: ksummit.messages.2437 -->`
+- 【Linux社区】2016 年 8 月 Matthew Garrett 追问 Linus 关于源码可用性与 GPL 项目利益的关系，提出设备所有者应有权获取 Linux 源码即便厂商不参与上游。属 BSD 许可证体系下 GPL 执行目标与用户权利的治理讨论。引语："source availability for owners of devices that run Linux" `<!-- ROW_MINE: ksummit.messages.2445 -->`
+- 【Linux社区】2017 年 4 月 James Bottomley 在 maintainer summit 邀请讨论中提出 maintainer 脚本自动化与'优雅 rebase'两个治理议题，提议统一邮件格式字段与在 kernel.org 提供受认可脚本。触及 Linux 治理中脚本标准与 rebase 流程规范。引语："we did a script show and tell at the last kernel summit" `<!-- ROW_MINE: ksummit.messages.2467 -->`
+- 【Linux社区】2018 年 9 月 Daniel Vetter 就 fd.o 从自建服务迁往 GitLab 提出讨论，指出动机是让维护更简单、提供 2FA 并降低管理负担。Linus 讨论小项目与内核严格规则的差异。涉及 Linux 治理中基础设施迁移与权限管理。引语："the kernel is different. We're not a small project with five developers" `<!-- ROW_MINE: ksummit.messages.2479 -->`
+- 【Linux社区】2018 年 10 月 Geert 评审 James Bottomley 修复 CoC 邮箱地址歧义补丁，指出当前 CoC 将电子邮件地址列为私人信息不妥，因 Linux 内核在补丁流程中天然收集邮箱。涉及 BSD 许可证体系下 Linux 项目治理文件的具体修订。引语："add an exception clause for email addresses ordinarily collected by the project to correct this ambiguity" `<!-- ROW_MINE: ksummit.messages.2500 -->`
+- 【Linux社区】2016 年 8 月 Luis Rodriguez 讨论 Conservancy 是否在 KS 讨论合规议题，建议'合规最佳实践'与问答会作为中立做法，主张 Karen 已提议 Q&A 会议。涉及 BSD 许可证体系下 GPL 执行与 KS 治理讨论的边界问题。引语："letting folks ask questions sounds like another nice opportunity for folks to get information about SFC does" `<!-- ROW_MINE: ksummit.messages.2515 -->`
+- 【Linux社区】2018 年 10 月 Mark Brown 就 CoC 歧视因素列表争议引用 Debian 经验，指出 Debian 故意省略显式列表以避免规则律师化；Josh Triplett 反驳列表本就为显式指导。涉及 BSD 许可证体系下 Linux 项目治理文件的跨社区借鉴与制度设计。引语："due to a real fear that people involved in and adjacent to the project would try to rules lawyer an explicit list" `<!-- ROW_MINE: ksummit.messages.2555 -->`
+- 【Linux社区】2018 年 9 月 Theodore Ts'o 反驳 Rik van Riel 关于 XFS/JFS/RCU 仅在 GPL 下发布的说法，指出公司有能力自己起诉竞争对手，合规努力并非企业捐赠代码的必要条件。涉及 BSD 许可证体系下 GPL 与 BSD 许可在企业决策中作用的辨析。引语："Companies like IBM and SGI started participating in Linux because they knew no competitor would run off with their code" `<!-- ROW_MINE: ksummit.messages.2617 -->`
+- 【Linux社区】2018 年 9 月 Mauro 回应 Linus 提议的'Live without email'议题，分享 GitHub 使用经验，包括轻量级 bugtrack、PR 线程评论与自动 fork 展示等治理相关特性。触及 Linux 治理中基础设施迁移与协作模式。引语："Live without email - possible?" `<!-- ROW_MINE: ksummit.messages.2644 -->`
+- 【Linux社区】2016 年 8 月 Jeremy Allison 反驳 Linus 关于 Linux 公司作为 GPL 卫士的观点，认为 IBM 诉 SCO 是反诉性质且公司只为自身利益行动，SFC 才是真正代表社区利益的组织。涉及 BSD 许可证体系下 GPL 执行代表权的核心治理问题。引语："Linux companies, like all companies, look after their own interests. Nothing bad about that, just good business" `<!-- ROW_MINE: ksummit.messages.2663 -->`
+- 【Linux社区】2018 年 10 月 Theodore Ts'o 回应 NeilBrown 关于 CoC 的质疑，指出 CoC 主要作用是缓和新加入者对 Linux 声誉的恐惧，而非改变社区实质行为；maintainer summit 与会者对 Linus 行为未表达不满。触及 BSD 许可证体系下 CoC 治理的社区心理效应。引语："the mere existence of a CoC has caused some newcomers to say that they have 'already noticed a difference'" `<!-- ROW_MINE: ksummit.messages.2677 -->`
+- 【Linux社区】2019 年 9 月 Konstantin Ryabitsev 提议开发 public-inbox 客户端工具作为 Patchwork 替代，引用 Eric Wong 的 long chat 成果，主张本地 patchwork 加 mutt 界面实现维护者工作流。触及 Linux 治理中维护者工具链与社区基础设施演进。引语："what we envision can be described as 'local patchwork with a mutt-like interface'" `<!-- ROW_MINE: ksummit.messages.2694 -->`
+- 【Linux社区】2018 年 11 月 Geert 追问 TAB non-nomination 讨论中 CoC 更新的社区输入是否仅首版，Ted 回应曾向 200 位贡献者征求签核意见并跟踪追踪 gab.ai 上的非社区 troll。涉及 BSD 许可证体系下 Linux 治理机构 TAB 与 CoC 的社区参与与决策透明度。引语："a proposed set of changes was sent out to the top 200 or so contributors to the kernel" `<!-- ROW_MINE: ksummit.messages.2720 -->`
+- 【Linux社区】2016 年 8 月 Dave Airlie 在 GPL 防御议题中列出 Josh Triplett 的四个具体问题：执行的正确方式、'错误'方式的应对、开发流程对执行的影响、可否纳入开发流程的改进。触及 BSD 许可证体系下 GPL 执行的治理框架设计。引语："What's the right way to handle enforcement?" `<!-- ROW_MINE: ksummit.messages.2742 -->`
+- 【Linux社区】2019 年 7 月 Matthew Wilcox 就 TAB 选举流程改为 Condorcet Internet Voting Service (CIVS) 表态支持，指出新系统让无法到会的开发者也可投票，提升 TAB 合法性。原文提到 CIVS 源代码以 BSD-like 研究许可证发布，涉及 BSD 许可证体系与 Linux 治理机构 TAB 选举。引语："Condorcet is a superior system and allowing people who can't make it to the conference to vote is beneficial" `<!-- ROW_MINE: ksummit.messages.2797 -->`
+- 【Linux社区】2016 年 8 月 Jeremy Allison 回应 Theodore Ts'o 关于 Conservancy 是否代表所有版权持有者的质疑，指出该机制仅适用于已加入 SFC GPL 合规项目的个人开发者，类似工会而非企业决策。触及 BSD 许可证体系下 GPL 执行联盟的会员代表性与治理边界。引语："Even closer to my analogy of a union than I originally thought" `<!-- ROW_MINE: ksummit.messages.2798 -->`
+- 【Linux社区】2016 年 GPL 执法之争。Jeremy Allison 称许多持相同反对意见的开发者其实为 FreeBSD 工作而非 Linux,James Bottomley 以治理视角回应:少数版权人依法即可发起 GPL 行动,而项目维系靠的是治理而非法律原则。引语: "lots of them work on FreeBSD not Linux" `<!-- ROW_MINE: ksummit.messages.4817 -->`
+- 【Linux社区】2015 年 GPL 执法议题讨论。David Woodhouse 指出各方诉求分歧极大:一端主张按 GPL 能论证的最大范围严格要求合规,另一端则近乎以 BSD 许可证对待 Linux,以避免吓退商业用户并滋生恐惧言论。引语: "to basically wanting to act as if it's a BSD licence" `<!-- ROW_MINE: ksummit.messages.4871 -->`
+- 【Linux社区】2020 年 TAB 选举投票程序跟进帖,说明 kernel summit 线下纸质投票改为电子投票以扩大选民池,并附往届虚拟投票常见问题。terms_hit 显示全文含 BSD 许可证引用(摘录已截断),涉及与 BSD 许可证相关的投票工具软件许可比较。引语: "give more members of our community a say in the membership of the TAB" `<!-- ROW_MINE: ksummit.messages.5145 -->`
+- 【Linux社区】2019 年 TAB 选举改用电子投票,选用的 CIVS 系统源代码以近似 BSD 的研究许可证发布。TAB 因自身开发与维护能力不足,2019 年采用托管版本,并欢迎今后获得支持自建。引语: "source code is available under a BSD-like research license" `<!-- ROW_MINE: ksummit.messages.5160 -->`
+- 【Linux社区】2015 年固件签名议题中的 GPL 边界讨论。David Woodhouse 主张应听取一线合规与执法方的事实汇报,并认为应澄清 Linux 基金会对版权持有者意愿的实际立场,而非空谈推测。线程内含 BSD 许可证立场参照。引语: "it is interesting to note James's and Greg's opinions" `<!-- ROW_MINE: ksummit.messages.5209 -->`
+- 【Linux社区】2019 年 TAB 选举改用电子投票,选用的 CIVS 以近似 BSD 的研究许可证发布。发帖人转述公告正文并致谢,Laura Abbott 说明 kernel summit 线下投票门槛过高。引语: "source code is available under a BSD-like research license" `<!-- ROW_MINE: ksummit.messages.5301 -->`
+- 【Linux社区】2016 年 GPL 执法之争。Luis R. Rodriguez 反对把 SFC 联盟成员类比为一群愤怒的将军,认为这与把反对现代负责任 GPL 执法者等同于企业游说者一样愚蠢。原话提及许多持相同意见的开发者其实为 FreeBSD 工作。引语: "lots of them work on FreeBSD not Linux" `<!-- ROW_MINE: ksummit.messages.5427 -->`
+- 【Linux社区】2016 年 GPL 执法之争。Rik van Riel 指出应记住 XFS、JFS 与 RCU 之所以只以 GPL 而非例如 BSD 许可证提供,因 Linux 得益于 GPL 对改进回馈社区的要求;IBM 与 SGI 正因确信竞品不会拿代码跑路才加入 Linux。引语: "Look at the BSDs for an example of this, they don't have access to RCU, and they can't scale" `<!-- ROW_MINE: ksummit.messages.5463 -->`
+- 【Linux社区】2016 年版权归属讨论。Steven Rostedt 设问若 Red Hat 破产其持有的版权由谁捍卫,认为代码仍以 GPLv2 提供,最坏情形仅被当作 BSD 式许可代码使用;但由于代码与其他人代码交织,任何此类使用都需全体版权人许可。引语: "the worse that can happen is that they simply let others use it like BSD licensed code" `<!-- ROW_MINE: ksummit.messages.5475 -->`
+- 【Linux社区】2016 年 GPL 执法之争。Linus Torvalds 认为侵权诉讼把人从 busybox 乃至 GPL 本身驱离,并未实际增加有用的源代码;并称 OpenWRT 成功与诉讼无关,真正起作用的是开源运动相对 FSF 强硬立场的胜利。其论述含 BSDs 参照。引语: "the general success of open source (over the FSF hardliner GPL stance)" `<!-- ROW_MINE: ksummit.messages.5559 -->`
+- 【Linux社区】2016 年 GPL 执法之争。Matthew Garrett 指出路由器厂商经多年协商才在起诉后合规,认为若把 GPL 仅视为社会性期待而非硬性要求,GPL 与 BSD 式许可证之间的区分即告消失,这正是 Bradley 所谓放弃 GPL 的含义。引语: "the distinction between the GPL and a BSD-style license vanishes" `<!-- ROW_MINE: ksummit.messages.5672 -->`
+- 【Linux社区】2018 年关于继任机制的讨论。James Bottomley 明确偏好单一领导模型,理由是它不会像 BSD 中的集体维护模型那样演变成门阀式小圈子。他同时指出集体维护似乎只在 DRM 中奏效,其他子系统仍是单一层级维护。引语: "doesn't lead to the cabal cult like the group maintainer model does in BSD" `<!-- ROW_MINE: ksummit.messages.5886 -->`
+- 【Linux社区】2016-08-30 GPL enforcement CORE TOPIC thread. Luis R. Rodriguez responds to Greg KH, defending Conservancy's enforcement posture and making a direct licensing-ideology comparison: "when it comes to the kernel actions actually speak more loudly towards advocating permissive licenses than the GPL". Terms hit bsd and gpl+copyright. Verdict: BSD谱系 plus 许可证 plus 治理三重叠合, strong CAND. `<!-- ROW_MINE: ksummit.messages.5906 -->`
+- 【Linux社区】2016-08-26 GPL enforcement CORE TOPIC thread. Theodore Ts'o writes "At the end of the day this is really a governance question", laying out the full stakeholder map of copyright owners and salary payers, then adding an MIT student AFS-port disclosure. Terms hit gpl+copyright. Verdict: 治理加许可证议题明确, CAND. `<!-- ROW_MINE: ksummit.messages.5927 -->`
+- 【Linux社区】2017-06-25 MAINTAINERS SUMMIT policy thread. Linus Torvalds tells Leon Romanovsky that MODULE_VERSION and DRIVER_VERSION usage "just haven't caused problems elsewhere" and are only hundreds, not thousands, so the existing policy stands. Leon accepts the ruling. Terms hit gov+b1. Verdict: 提交政策裁决属治理, CAND. `<!-- ROW_MINE: ksummit.messages.6050 -->`
+- 【Linux社区】2018-09-06 MAINTAINERS SUMMIT thread on API replacement and deprecation. Kees Cook proposes fast and slow deprecation approaches citing strscpy and VLA removal; Geert Uytterhoeven replies "I didn't know VLAs were a kernel API". Terms hit gov+b1. Verdict: 涉及内核对外接口废弃流程治理, CAND. `<!-- ROW_MINE: ksummit.messages.6063 -->`
+- 【Linux社区】2017-08-14 MAINTAINER TOPIC on ABI feature gates. Linus Torvalds states "the regression has always been about actual breakage" and "But the kernel cares about regressions", insisting that anyone unwilling to fix the bugs they introduce should not work on the kernel. Terms hit gov+b1. Verdict: 项目回归红线属治理, CAND. `<!-- ROW_MINE: ksummit.messages.6077 -->`
+- 【Linux社区】2016-08-30 GPL enforcement CORE TOPIC thread. Jeremy Allison quotes developers who hold the same view, noting "lots of them work on FreeBSD not Linux", then says Linus seems to imagine a case for "that shiny red button". Luis R. Rodriguez defends SFC against the "random pissed off officers" comparison. Terms hit freebsd and gpl+appropriat. Verdict: FreeBSD 人物与 GPL 治理争议直接相关, CAND. `<!-- ROW_MINE: ksummit.messages.6107 -->`
+- 【Linux社区】2025-08-22 MAINTAINERS SUMMIT thread on annotating AI-assisted code. The discussion turns on whether AI players scraping the web pull in "training data from web pages having a restrictive copyright", and whether AI output could copy something exactly as is, where copyright does matter. Geert Uytterhoeven argues neurons only store patterns with many repetitions. Terms hit gov+b1. Verdict: 版权与许可证议题, CAND. `<!-- ROW_MINE: ksummit.messages.6266 -->`
+- 【Linux社区】2016-08-29 CORE TOPIC thread on owning your own copyrights in Linux. Jiri Kosina contrasts common-law and civil-law regimes, saying "it's usually legally impossible to assign the moral rights away from the actual person creating the work", while the employer usually owns a licence to economic rights. Terms hit gpl+copyright. Verdict: 版权与法域差异属许可证, CAND. `<!-- ROW_MINE: ksummit.messages.6288 -->`
+- 【Linux社区】2018-09-10 MAINTAINER SUMMIT thread on community management and subsystem governance. James Bottomley suggests rewording the topic from "Live without email" to "Patches without Email", while keeping pull requests arriving as email, and argues email is often the best medium. Sasha Levin engages on subsystem governance structure. Terms hit gov+b1. Verdict: 明确的子系统治理议题, CAND. `<!-- ROW_MINE: ksummit.messages.6325 -->`
+- 【Linux社区】2021-09-20 Tech-board-discuss thread on CIVS opt-in for Technical Advisory Board voting. Laura Abbott and Mark Brown report that re-activating an already-activated address makes CIVS report "This email address is already activated" with no link back to existing polls. Geert Uytterhoeven replies. Terms hit linus torvalds. Verdict: 技术顾问委员会投票基础设施属治理, CAND. `<!-- ROW_MINE: ksummit.messages.6336 -->`
+- 【Linux社区】2017-06-26 MAINTAINERS SUMMIT thread on driver and module versions. Greg KH continues Linus Torvalds's ruling that MODULE_VERSION and DRIVER_VERSION changes "haven't caused problems elsewhere" and that counts are hundreds rather than thousands, so the existing policy suffices. Terms hit gov+b1. Verdict: 与 pk 6050 同一政策线程, 治理, CAND. `<!-- ROW_MINE: ksummit.messages.6387 -->`
+- 【Linux社区】2017-04-19 thread on the Maintainer summit invitation list. Doug Ledford responds to Linus Torvalds asking who tech leads are, and says "There really is no pain point for Fedora", explaining that Fedora takes a very simple approach to backporting. Terms hit gov+b1. Verdict: 下游发行版代表参与治理, CAND. `<!-- ROW_MINE: ksummit.messages.6400 -->`
+- 【Linux社区】2016-08-28 GPL enforcement CORE TOPIC thread. Theodore Ts'o replies to Jeremy Allison's remark that many developers holding the same view "work on FreeBSD not Linux", and offers the record that he does believe "there can be a case for the shiny red button", wanting Linus rather than the SFC to decide when to push it. Terms hit freebsd and gpl+appropriat. Verdict: FreeBSD 立场加 GPL 治理争议, CAND. `<!-- ROW_MINE: ksummit.messages.6424 -->`
+- 【Linux社区】2017-04-18 thread on the Maintainer summit invitation list. Takashi Iwai notes that in the sound area "majority of commits come from Mark Brown's ASoC tree nowadays, and he should be included". Laura Abbott adds her input on the distro side. Terms hit gov+b1. Verdict: 谁应进入治理核心圈属治理, CAND. `<!-- ROW_MINE: ksummit.messages.6434 -->`
+- 【Linux社区】2016-08-29 CORE TOPIC thread on owning your own copyrights in Linux. Johannes Berg responds to Jiri Kosina's common-law versus civil-law contrast, adding that "it's usually legally impossible to assign the moral rights away from the actual person creating the work", since the employer usually owns a licence only to the economic rights. Terms hit gpl+copyright. Verdict: 版权与许可证议题, CAND. `<!-- ROW_MINE: ksummit.messages.6470 -->`
+- 【Linux社区】2018-09-18 MAINTAINER SUMMIT thread on community management and subsystem governance. Nicolas Ferre and Dave Airlie hold that "drive-by contributors should be allowed to send e-mails without needing to subscribe", and that nobody should be blocked from sending, whatever the maintainer does with the patches. Terms hit gov+b1. Verdict: 参与门槛与治理流程, CAND. `<!-- ROW_MINE: ksummit.messages.6505 -->`
+- 【Linux社区】2018-09-11 MAINTAINER SUMMIT thread on community management and subsystem governance. Daniel Vetter argues that gitlab, or anything with a concept like pull requests, "makes the 90% so much easier", and that it takes no more work for contributors if the setup is right, since it is just a git push instead of a git send-email. Terms hit gov+b1. Verdict: 协作模式与治理机制, CAND. `<!-- ROW_MINE: ksummit.messages.6553 -->`
+- 【Linux社区】2019-09-19 thread on adding a media subsystem profile documentation. Mauro Carvalho Chehab describes his use of get_maintainer.pl together with the author of the Fixes-tagged commit; Jani Nikula and Geert Uytterhoeven discuss the resulting CC noise. Terms hit gov+b1. Verdict: 子系统维护者档案与评审流程, CAND. `<!-- ROW_MINE: ksummit.messages.6565 -->`
+- 【Linux社区】2018-11-04 thread calling to action on a Code of Conduct wording patch. NeilBrown writes that he calls on Greg to abandon this divisive attempt to impose a Code of Conduct, to revert 8a104f8b5867c68, and to return to "your core competence of building a great team around a great kernel". Josh Triplett and Geert Uytterhoeven engage. Terms hit gov+b1. Verdict: 社区治理文件争议, CAND. `<!-- ROW_MINE: ksummit.messages.6567 -->`
+- 【Linux社区】2016-08-25 GPL enforcement CORE TOPIC thread. Bradley M. Kuhn responds to Greg KH's reluctance, writing "I've been involved with copyleft enforcement and policy for almost copyleft's entire existence", and observes that the last ten years brought something new. Terms hit gpl+copyright. Verdict: SFC 执法治理核心人物发言, CAND. `<!-- ROW_MINE: ksummit.messages.6605 -->`
+- 【Linux社区】2015-07-31 Christoph Lameter asks for clarification on relicensing of in-kernel code, reporting that there were a couple of license changes recently from GPL to a GPL-or-BSD choice in the infiniband stack, and asking "What exactly qualifies to be a copyright holder?". Terms hit bsd and gpl+copyright. Verdict: BSD 与 GPL 双许可直接证据, CAND. `<!-- ROW_MINE: ksummit.messages.6621 -->`
+- 【Linux社区】2017-10-19 Devicetree Workshop thread at the Kernel Summit in Prague. Chen-Yu Tsai proposes covering non-Linux projects; a contributor writes "From the FreeBSD perspective I’d like it if there was a common repo for all devicetree consumers to share", noting that they are trying to avoid FreeBSD-specific properties because they caused problems with FreeBSD-specific dts files. Terms hit freebsd. Verdict: FreeBSD 设备树复用实践, CAND. `<!-- ROW_MINE: ksummit.messages.6628 -->`
+- 【Linux社区】2014-08-13 Andy Lutomirski replies in the resent 2038 Kernel Summit discussion, taking up the focus on providing a 2038 solution for existing interfaces and applications without modifying application source code, while avoiding new-interface discussions. Terms hit netbsd. Verdict: 2038 跨内核时间问题讨论, CAND. `<!-- ROW_MINE: ksummit.messages.6637 -->`
+- 【Linux社区】2017-04-20 thread on the Maintainer summit invitation discussion. Jani Nikula observes that kernel.org lists "1 stable, 8 longterm, and 1 eol'd longterm kernels", with the oldest longterm based on a five year old release, and argues that the multitude of longterm kernels sends a message that it is perfectly fine to stay behind. Terms hit gov+b1. Verdict: LTS 政策与社区信号属治理, CAND. `<!-- ROW_MINE: ksummit.messages.6681 -->`
+- 【Linux社区】2017-08-15 MAINTAINER TOPIC on ABI feature gates. Andy Lutomirski asks Linus Torvalds whether there is a way to enable a new feature for testing in a way that it "can't get used by real programs that expect stability", and Linus replies that he cannot think of a case where that would actually have been needed. Terms hit gov+b1. Verdict: 用户空间 ABI 治理, CAND. `<!-- ROW_MINE: ksummit.messages.6698 -->`
+- 【Linux社区】2017-10-20 Devicetree Workshop thread at the Kernel Summit in Prague. David Gibson carries forward the FreeBSD position that "FreeBSD specific dts files" caused issues in the past and that they are trying to remove those as drivers move to the common bindings, and adds that he has "spoken with some NetBSD and OpenBSD developers", who both use devicetree. Terms hit freebsd. Verdict: 三大 BSD 发行版设备树复用, 强 CAND. `<!-- ROW_MINE: ksummit.messages.6713 -->`
+- 【Linux社区】2016-08-25 GPL enforcement CORE TOPIC thread. Josh Triplett responds to Bradley M. Kuhn's account of working for an organization holding Linux copyrights, and that Conservancy coordinates "a coalition of developers who signed agreements asking us to enforce their copyrights", along with embedded device users writing weekly for Linux sources. Terms hit gpl+copyright. Verdict: 版权集体委托执法治理, CAND. `<!-- ROW_MINE: ksummit.messages.6743 -->`
+- 【Linux社区】2017-04-18 thread on the Maintainer summit invitation discussion. Jiri Kosina reports that for SUSE, "3 out of 4 people who are actual internal branch maintainers", covering both enterprise and openSUSE products, are already included in Linus Torvalds's list. Terms hit gov+b1. Verdict: 下游发行版维护者代表覆盖, CAND. `<!-- ROW_MINE: ksummit.messages.6749 -->`
+- 【Linux社区】2016-08-26 GPL enforcement CORE TOPIC thread. Theodore Ts'o responds to Jeremy Allison's point that "Bradley isn't the one making the decisions here. It's the developers - ALWAYS the developers", writing that Conservancy can give advice but does nothing "without a direct mandate from the copyright holders", so it acts only when developers ask them to. Terms hit gpl+copyright. Verdict: 版权授权链与治理授权, CAND. `<!-- ROW_MINE: ksummit.messages.6759 -->`
+- 【Linux社区】2017-09-20 thread on the Maintainer summit invitation discussion. Doug Ledford quotes Linus Torvalds's wish for "the maintainership summit list to be fairly small", not even 50 people, maybe 30, so the group can sit in a room and talk to each other about issues rather than being talked to, about process issues rather than any particular technical one. Terms hit gov+b1. Verdict: 治理会议规模与代表性, CAND. `<!-- ROW_MINE: ksummit.messages.6760 -->`
+- 【Linux社区】2014-06-13 CORE TOPIC thread on redesigning the memory management layer and more core subsystems. John W. Linville writes that "AF_PACKET provides some level of hardware abstraction without a lot of overhead" for apps prepared to deal with raw frames. Stephen Hemminger replies. Terms hit netmap. Verdict: netmap 源自 BSD, 与 AF_PACKET 对比属 BSD 谱系, CAND. `<!-- ROW_MINE: ksummit.messages.6768 -->`
+- 【Linux社区】2017-04-19 thread on the Maintainer summit invitation discussion. Laurent Pinchart writes that for a maintainer summit to be useful "we need to have multiple sides present", and that gathering core maintainers with key representatives of downstream communities is great, but they would be missing one category whose opinion is equally important. Terms hit gov+b1. Verdict: 治理多方代表性, CAND. `<!-- ROW_MINE: ksummit.messages.6770 -->`
+- 【Linux社区】2017-04-18 thread on the Maintainer summit invitation discussion. Linus Torvalds notes that "Some driver subsystems may be huge", for example media and sound, and asks Mauro and Takashi Iwai whether they have issues, then proposes asking top maintainers to suggest submaintainer names. Terms hit gov+b1. Verdict: 维护者代表范围治理, CAND. `<!-- ROW_MINE: ksummit.messages.6794 -->`
+- 【Linux社区】2018-09-17 MAINTAINER SUMMIT thread on community management and subsystem governance. Christoph Hellwig responds to Mauro Carvalho Chehab's point that "The major problem with github" is that people tend to omit context, assuming the maintainer sees the code or previous messages they see in the web interface, which the maintainer does not. Terms hit gov+b1. Verdict: 代码托管与评审上下文, CAND. `<!-- ROW_MINE: ksummit.messages.6795 -->`
+- 【Linux社区】2016-08-31 GPL enforcement CORE TOPIC thread. Theodore Ts'o challenges Luis R. Rodriguez's defense, writing "So please stop equating Bradley's own sentiments to that of the alliance's", and probes the undisclosed mechanics, asking "Do you guys vote? Is it weighted based on the amount of code", or is it just one head one vote. Terms hit freebsd and gpl+copyright. Verdict: 执法联盟治理机制质疑, CAND. `<!-- ROW_MINE: ksummit.messages.6835 -->`
+- 【Linux社区】2017-04-21 thread on the Maintainer summit invitation discussion. Rafael J. Wysocki responds to Linus Torvalds's plan to split the list by maintenance area, proposing a breakdown covering architectures with pretty much coverage from x86, arm, and powerpc, and asking which architecture should talk about who within the group would attend. Terms hit gov+b1. Verdict: 治理分组方式, CAND. `<!-- ROW_MINE: ksummit.messages.6842 -->`
+- 【Linux社区】2016-08-26 GPL enforcement CORE TOPIC thread. Jeremy Allison pushes back on Linus Torvalds's point that even successful lawsuits have not helped the project involved, writing "The Samba project has never sued anyone over GPL-violations", that they rely on Conservancy doing back-room negotiation, and that "Lawsuits are a last-ditch nuclear option". Terms hit linus torvalds. Verdict: GPL 执法与 BSD 阵营人物, CAND. `<!-- ROW_MINE: ksummit.messages.6846 -->`
+- 【Linux社区】2016-08-27 Jeremy Allison replies in the GPL enforcement CORE TOPIC thread to Greg KH's point that lawyers mean you have lost, and contrasts enforcement attitudes, adding that the licenses embodying the no-consequence attitude are "the BSD or MIT licenses of course", while noting there are popular alternative kernels under those licenses, but the kernel uses the GPL. Terms hit bsd. Verdict: BSD 与 GPL 许可理念对比, 强 CAND. `<!-- ROW_MINE: ksummit.messages.6903 -->`
+- 【Linux社区】2016-08-30 GPL enforcement CORE TOPIC thread. Jeremy Allison responds to Greg KH's question about who exactly the SFC represents, and whether developers signed over copyrights in a permanent way, writing "Ah, this could be a big part of the misapprehensions in this thread", and clarifying that copyright revocation is far from simple. Terms hit gpl+copyright. Verdict: 版权让渡可撤销性与治理, CAND. `<!-- ROW_MINE: ksummit.messages.6916 -->`
+- 【Linux社区】2017-08-14 MAINTAINER TOPIC on ABI feature gates. Andy Lutomirski replies to Linus Torvalds's ruling that anyone worried about ABI stability who is not willing to support that ABI forever should not send the patch, engaging on whether the regression rule is about actual breakage. Terms hit gov+b1. Verdict: 用户空间 ABI 治理, CAND. `<!-- ROW_MINE: ksummit.messages.6924 -->`
+- 【Linux社区】2016-08-26 GPL enforcement CORE TOPIC thread. Bradley M. Kuhn responds to Linus Torvalds's Patrick McHardy anecdote by linking the joint statement at sfconservancy.org, and Linus replies "So excuse me for not finding Bradley Kuhn very trustworthy on this issue", noting that one need not trust him, since Conservancy actions are transparent. Terms hit gpl+appropriat. Verdict: 执法透明度与治理信任, CAND. `<!-- ROW_MINE: ksummit.messages.6934 -->`
+- 【Linux社区】2017-04-20 thread on the Maintainer summit invitation discussion. Daniel Vetter responds to Arnd Bergmann on Linus Torvalds's wish that top maintainers suggest "submaintainer" names, particularly from Davem, since he does not tend to want to come to the kernel summit, and being at the top of the list that is a kind of big gaping hole. Terms hit gov+b1. Verdict: 关键维护者治理覆盖, CAND. `<!-- ROW_MINE: ksummit.messages.6954 -->`
+- 【Linux社区】2018-09-10 MAINTAINERS SUMMIT thread on bug-introducing patches. Steven Rostedt replies to Sasha Levin on Linus Torvalds's argument that the more critical a patch is, the more likely it is pushed aggressively, which makes it statistically much more likely to appear during the latter part of the development cycle. Terms hit gov+b1. Verdict: 评审流程统计规律, CAND. `<!-- ROW_MINE: ksummit.messages.6958 -->`
+- 【Linux社区】2015-07-30 Heiko Stubner replies in the TECH TOPIC thread on firmware signing. David Woodhouse quotes a license statement contradicting its own explicit intention to "control the distribution of derivative OR COLLECTIVE WORKS", and James Bottomley notes that the quote looks off. Terms hit gpl+copyright. Verdict: 许可证条款解释争议, CAND. `<!-- ROW_MINE: ksummit.messages.6961 -->`
+- 【Linux社区】2016-08-24 GPL enforcement CORE TOPIC thread. Bradley M. Kuhn responds to Greg KH's standing offer, writing that he is glad to hear the Linux Foundation's "ask for our help to find the compliance officer at a violator company" program has helped in a few cases among the many hundreds of active Linux GPL violations. Terms hit gpl+copyright. Verdict: GPL 合规执法治理, CAND. `<!-- ROW_MINE: ksummit.messages.6999 -->`
+- 【Linux社区】2017-08-15 MAINTAINER TOPIC on ABI feature gates. Julia Lawall responds to Linus Torvalds in the thread where Greg KH proposed searching linux-next for new additions of sysfs files and complaining that there are no matching Documentation/ABI updates. Steven Rostedt is quoted. Terms hit gov+b1. Verdict: 用户空间 ABI 文档治理, CAND. `<!-- ROW_MINE: ksummit.messages.7000 -->`
+- 【Linux社区】2017-04-18 thread on the Maintainer summit invitation discussion. Mauro Carvalho Chehab replies to Linus Torvalds's note asking about media and sound, writing that on the media side he converts all pull requests he receives into a quilt tree and reviews them there, addressing whether his workflow fits the summit's scope. Terms hit gov+b1. Verdict: 子系统维护者工作流代表性, CAND. `<!-- ROW_MINE: ksummit.messages.7043 -->`
+- 【Linux社区】2017-06-30 Darren Hart replies in the MAINTAINERS SUMMIT thread on driver and module versions. Linus Torvalds responds to Leon Romanovsky's steady flow of version bumps, saying the unified policy is pretty much that "version codes do not matter", while conceding that rdma is crazy. Terms hit gov+b1. Verdict: 版本号提交政策, CAND. `<!-- ROW_MINE: ksummit.messages.7054 -->`
+- 【Linux社区】2018-09-12 MAINTAINER SUMMIT thread on community management and subsystem governance. Daniel Vetter splits up sub-topics and lists what he called "Specific topics I'm interested in", including "New experiments in group maintainership", replying to Darren Hart on the same thread. Terms hit gov+b1. Verdict: 群组维护制实验属治理, CAND. `<!-- ROW_MINE: ksummit.messages.7062 -->`
+- 【Linux社区】2016-08-26 Matthew Garrett replies in the GPL enforcement CORE TOPIC thread. Linus Torvalds answers his comment about corporate support by writing "What I care about is getting code contributions back. That's kind of the whole point of the GPLv2. Not the legalese", framing contribution flow as the license's purpose. Terms hit gpl+copyright and gov+b1. Verdict: GPL 立法目的与贡献治理, CAND. `<!-- ROW_MINE: ksummit.messages.7093 -->`
+- 【Linux社区】2018-05-02 Geert Uytterhoeven replies to Sasha Levin in the bug-introducing patches thread. Levin writes that working on AUTOSEL made it obvious "how difficult it is for a patch to get a proper review", and that reviewing additional stable patches put even more load on maintainers, so Geert categorizes rc commits into plain, same-cycle bugfix, and previous-release bugfix classes. Terms hit gov+b1. Verdict: 评审负担与流程治理, CAND. `<!-- ROW_MINE: ksummit.messages.7101 -->`
+- 【Linux社区】2016-08-24 Greg KH replies in the GPL enforcement CORE TOPIC thread. Bradley M. Kuhn corrects his claim that the standing offer has never failed, saying it "has sometimes failed" and that he has used the Linux Foundation service with a 0-for-2 result, while Greg adds that many companies who get it did not before, and that no one is proposing to sue them. Terms hit gpl+copyright. Verdict: GPL 执法实效与治理, CAND. `<!-- ROW_MINE: ksummit.messages.7112 -->`
+- 【Linux社区】2017-10-18 Thomas Petazzoni replies in the Devicetree Workshop thread at the Kernel Summit in Prague. Ian Lepore writes "I've run into the same thing in FreeBSD", explaining that they use bindings and dts files "exacted periodically from the linux tree and imported into ours" for all modern arm boards, and that he has created drivers for i2c RTC chips unsupported by Linux. Terms hit freebsd. Verdict: FreeBSD 从 Linux 抽取设备树绑定的直接证据, 强 CAND. `<!-- ROW_MINE: ksummit.messages.7138 -->`
+- 【Linux社区】Geert Uytterhoeven 就 CoC 删改辩论援引 GPL FAQ 对照论证行为准则 FAQ 不属于内核正式行为准则文本，应直接修正行为准则本身，构成开源许可证治理惯例的跨项目类比。 "The CoC FAQ is not part of the CoC, and not part of the Linux kernel" `<!-- ROW_MINE: ksummit.messages.7201 -->`
+- 【Linux社区】Jeremy Allison 在 GPL 防御议题中直言持相同立场者多为 FreeBSD 而非 Linux 开发者，把 GPL 执法争议直接定位为 BSD 谱系社区与 Linux 社区的分歧。 "lots of them work on FreeBSD not Linux" `<!-- ROW_MINE: ksummit.messages.7288 -->`
+- 【Linux社区】Josh Triplett 在 2038 议题中援引 NetBSD 与 OpenBSD 已破坏 ABI 将 time_t 转为 long long 的先例作为 Linux 应对 2038 的参照，构成 BSD 谱系在 32 位 ABI 演进上的对照样本。 "NetBSD and OpenBSD have recently broken their ABI, converted their time_t to long long" `<!-- ROW_MINE: ksummit.messages.7360 -->`
+- 【Linux社区】FreeBSD 开发者 Ian Lepore 参加 Kernel Summit 布拉格 Devicetree 工作坊并就跨项目设备树绑定归属提出议题，构成 BSD 谱系开发者参与 Linux 内核治理议程的实例。 "Ian Lepore <ian@freebsd.org> wrote" `<!-- ROW_MINE: ksummit.messages.7521 -->`
+- 【Linux社区】Devicetree 工作坊讨论中 Andrew Turner 援引 FreeBSD 去除自专用属性并已与 NetBSD、OpenBSD 开发者接洽，主张五个项目共用一套 dts 与绑定文档，Rob Herring 将消费方列举为 linux 与三个 BSD 加 u-boot、barebox、zephyr。 "Having all 5 projects using a common set of dts files and binding would simplify keeping them in sync" `<!-- ROW_MINE: ksummit.messages.7568 -->`
+- 【Linux社区】Andrew Turner 在 Devicetree 工作坊征询中代表 FreeBSD 立场主张设立跨所有设备树消费方的公共仓库，并说明 FreeBSD 正在移除因过去遗留 FreeBSD 专用属性所致的自有 dts 文件，直接涉及 BSD 谱系与 Linux 设备树绑定的共建。 "From the FreeBSD perspective I'd like it if there was a common repo for all devicetree consumers to share" `<!-- ROW_MINE: ksummit.messages.7682 -->`
+- 【Linux社区】James Bottomley 在块设备 API 议题中转述 Greg KH 的观点，把当前逻辑卷支持现状与应有状态对比 BSD 的既有实现并断言该路线多年失败，涉及 BSD 谱系在内核块层设计上的对照评价。 "or what BSD has, that approach is demonstrably a perennial failure" `<!-- ROW_MINE: ksummit.messages.7740 -->`
+- 【Linux社区】David Woodhouse 在 GPL 执法议题中把各方诉求刻画为从按最严格解释主张 GPL 到基本照 BSD 许可证行事的两极，说明 BSD 式宽松许可主张确实构成内核治理议程上的一个真实立场。 "to basically wanting to act as if it's a BSD licence, in order to avoid scaring commercial users away" `<!-- ROW_MINE: ksummit.messages.7861 -->`
+- 【Linux社区】Guenter Roeck 在 GPL 防御议题中援引此前雇主经历，指多数新项目改用 BSD 或 Apache 许可证以规避 GPL 隐患，构成 BSD 许可证对 GPL 形成迁移替代的实证陈述。 "most new projects ended up using BSD or Apache licenses to avoid the pitfalls of GPL" `<!-- ROW_MINE: ksummit.messages.8007 -->`
+- 【Linux社区】Christoph Lameter 在 GPL 执法议题中质疑 InfiniBand 协议栈近期把许可证从 GPL 改为 GPL 与 BSD 二选一的可行性，James Bottomley 以版权法独创性标准回应版权持有人归属问题，涉及 BSD 许可证进入内核代码的重许可实践。 "There were a couple of license changes recently from GPL to pick one GPL or BSD in the infiniband stack" `<!-- ROW_MINE: ksummit.messages.8073 -->`
+- 【Linux社区】FreeBSD 开发者 Ian Lepore 参加 Kernel Summit 布拉格 Devicetree 工作坊并提问当某绑定最初由非 Linux 项目记录时应如何处理，其 FreeBSD 邮箱标识表明该议题带 BSD 谱系跨项目协作属性。 "What happens when the DT bindings is not documented in Linux but in an another project" `<!-- ROW_MINE: ksummit.messages.8703 -->`
+- 【Linux社区】2017年Takashi Iwai就Ted Ts'o提交的Maintainer Summit议程草案进行反馈,建议把bug reporting与regression tracking合并议题,并主张把Developing across multiple areas of the kernel和ABI feature gates两项填入空档。原文引述: "I think this one (bug reporting) can be combined with regression tracking session." `<!-- ROW_MINE: ksummit.messages.8909 -->`
+- 【Linux社区】2019年Geert Uytterhoeven在Maintainer Summit讨论中回应Thomas Gleixner关于commit log中Cc: tag与patch version变更的处理,指出git-am本身并不会自动根据Cc:头添加Cc: tag,澄清了bot与本地脚本的行为差异。原文引述: "At least the version of git-am I'm using does not add Cc: tags based on Cc: headers." `<!-- ROW_MINE: ksummit.messages.8960 -->`
+- 【Linux社区】2016年James Bottomley提出让开发者保留自有版权的实用方案,包括发明披露例外与单独版权协议等,认为这些技术因商业保密原因难以在公开场合讨论,愿意在kernel summit的闭门日详谈。原文引述: "I'd like to propose a practical topic on how individual developers can achieve this." `<!-- ROW_MINE: ksummit.messages.9010 -->`
+- 【Linux社区】2018年Ted Ts'o回应Eric S. Raymond关于反CoC分子撤销许可证授予的论点,驳斥所谓法律救济,指出提出此类争议者实际上在kernel中并无版权,是在制造FUD。原文引述: "The vast majority of the anti-CoC dissidents ... have, as near as I can tell, little or no copyright ownership in the kernel." `<!-- ROW_MINE: ksummit.messages.9021 -->`
+- 【Linux社区】2018年Geert Uytterhoeven在Code of Conduct修订讨论中提出移除明确歧视因素清单以避免歧义,与Josh Triplett关于显式指引的必要性、Laurent Pinchart关于讨论场所的诉求交锋,涉及CoC文本的起草与审议流程。原文引述: "Providing an explicit list of discrimination factors may give the false impression that discrimination based on other unlisted factors would be allowed." `<!-- ROW_MINE: ksummit.messages.9060 -->`
+- 【Linux社区】2014年John Stultz在2038问题讨论中主张Linux可遵循BSD路径,通过引入以long long定义time_t的新ABI来兼容旧32位架构,并借用人格/兼容层保留向后兼容。原文引述: "This follows in the path that the BSDs have gone, which allows us to leverage their work, where they have already ensured applications they package are fixed." `<!-- ROW_MINE: ksummit.messages.9073 -->`
+- 【Linux社区】2016年Linus Torvalds就GPL防御议题阐明其立场,主张社区法律行动不应是常态,以IBM对SCO的诉讼为典范的防御性诉讼才是理想模式,反对进攻性核选项,并强调GPL执行本质上是公司协作而非个人对抗公司。原文引述: "It was also a very good example of how companies really can help us." `<!-- ROW_MINE: ksummit.messages.9075 -->`
+- 【Linux社区】2016年Matthew Garrett反驳Linus对BusyBox诉讼的负面评价,指出诉讼使OpenWRT和多家Android厂商获得了源代码访问权,并促成大量衍生商业产品诞生,认为这是GPL执行的正向价值。原文引述: "It resulted in a huge number of people getting access to the source code they were entitled to." `<!-- ROW_MINE: ksummit.messages.9133 -->`
+- 【Linux社区】2018年Linus Torvalds在Maintainer Summit议题设置中把Live without email改为Patches without Email,认为patch-bomb模式已经让维护者不堪重负,而pull request作为邮件的处理体验明显更优。原文引述: "I'm so much happier doing pull requests than handling patches." `<!-- ROW_MINE: ksummit.messages.9156 -->`
+- 【Linux社区】2016年David Woodhouse批评Greg KH关于GPL执行沉默不行的立场,指出违规者实际上希望kernel被视为BSD许可证,允许其不必履行GPL义务。原文引述: "It's almost as if they'd rather the kernel was under a BSD licence, so that such usage was permitted." `<!-- ROW_MINE: ksummit.messages.9169 -->`
+- 【Linux社区】2016年Rik van Riel在GPL防御讨论中回应Linus关于违规公司无实质价值的论断,主张下游用户自由度与上游社区同等重要,因为下游自由能够催生新的开源项目与新社区。原文引述: "What matters is that the users downstream from them have the freedom to modify the code on their devices." `<!-- ROW_MINE: ksummit.messages.9211 -->`
+- 【Linux社区】2017年Laurent Pinchart在Maintainer Summit邀请讨论中主张除维护者与下游代表外,还应为kernel开发者保留席位,因为流程冲突恰恰发生在维护者与开发者之间,单纯维护者视角无法覆盖全部关切。原文引述: "I think we would be missing one category whose opinion is equally important: kernel developers." `<!-- ROW_MINE: ksummit.messages.9214 -->`
+- 【Linux社区】2014年John Stultz在2038议题的Kernel Summit讨论材料中总结NetBSD与OpenBSD的先行经验,指出NetBSD于2012年改用64位time_t并提供兼容层,OpenBSD于2013年将32位系统time_t改为long long,并以OpenBSD文档作为参考案例。原文引述: "NetBSD switched to 64bit time_t in 2012, providing a compatibility layer for old applications." `<!-- ROW_MINE: ksummit.messages.9228 -->`
+- 【Linux社区】2017年Josh Triplett在Maintainer Summit邀请讨论中围绕Linus提出的让开发者有机会抱怨维护者的bitch at maintainers设想给出回应,与Laurent Pinchart共同讨论如何为developer voice找到有效席位而不显著扩大人数。原文引述: "I'm not sure how to handle that." `<!-- ROW_MINE: ksummit.messages.9242 -->`
+- 【Linux社区】2019年Leon Romanovsky回应Maintainer Summit关于patch version change与commit log中变更追踪的讨论,参与讨论git log里"Changes since"类型信息的保留价值,涉及Git元数据在维护流程中的规范化方向。原文引述: "I see the value in including the information." `<!-- ROW_MINE: ksummit.messages.9280 -->`
+- 【Linux社区】2018年Jiri Kosina在Maintainer Summit关于embargoed security issue处理的讨论中,建议向stable下游明确标注哪些安全修复不会回移,以避免下游厂商在不知情的情况下承担合规风险,并强调不能因grsecurity立场而混淆。原文引述: "turns out it might be even illegal in some countries to release software with known security issue for which the fix exists." `<!-- ROW_MINE: ksummit.messages.9368 -->`
+- 【Linux社区】2026年Shuah Khan为Dan Williams起草的Project Continuity文档给出Reviewed-by批准,该文档定义了当torvalds/linux.git正典仓库面临中断事件时的应对程序,作为Maintainer Summit的后续成果进入Documentation/process/conclave.rst。原文引述: "Document project continuity procedures. This is a plan for a plan for navigating events that affect the forward progress of the canonical Linux repository." `<!-- ROW_MINE: ksummit.messages.9412 -->`
+- 【Linux社区】2016年Linus Torvalds在GPL防御讨论中回应Matthew Garrett关于Linksys诉讼案例的追述,指出律师介入应被视为最后手段而非威胁工具,GPL有效性争议已被时间淘汰,法律部门普遍承认其可执行性。原文引述: "It is not something we should be belligerent about, and something you use as a threat." `<!-- ROW_MINE: ksummit.messages.9427 -->`
+- 【Linux社区】2026年Julia Lawall为Dan Williams起草的Project Continuity文档给出Reviewed-by批准,该文档定义了当torvalds/linux.git正典仓库面临中断事件时的应对程序,作为Maintainer Summit的后续成果进入Documentation/process/conclave.rst。原文引述: "Reviewed-by: Julia Lawall." `<!-- ROW_MINE: ksummit.messages.9450 -->`
+- 【Linux社区】2017年Daniel Vetter在Maintainer Summit邀请讨论中向Linus提议邀请Sean Paul和Jani Nikula作为drm-misc的联合维护者,同时指出Android方面邀请Rom Lemarchand能带来不同的产业视角,并补充了CI建设方面的建议。原文引述: "For Android I think it'd be great to have Rom Lemarchand invited" `<!-- ROW_MINE: ksummit.messages.9529 -->`
+- 【Linux社区】2018年Geert Uytterhoeven在Maintainer Summit关于社区管理与子系统治理的讨论中回应Daniel Vetter对ARM patch system的疑问,指出该机制事实上要求维护者使用特定工具而非git-send-email,并附带了ARM补丁系统的官方链接。原文引述: "Which unfortunately cannot be said about the ARM patch system..." `<!-- ROW_MINE: ksummit.messages.9532 -->`
+- 【Linux社区】2017年James Bottomley在Maintainer Summit邀请讨论中提出把厂商技术演讲安排到半天独立时段,让不感兴趣的维护者可以下午外出观光,同时保证技术内容有质量,避免沦为营销。原文引述: "I'm happy to try to wrangle interesting and highly technical vendor talks." `<!-- ROW_MINE: ksummit.messages.9541 -->`
+- 【Linux社区】2017年Doug Ledford在Maintainer Summit邀请讨论中回应Linus关于纳入Android与Fedora等发行版技术领导的建议,详细阐述Fedora的简单内核引入策略并说明其在rawhide阶段拉取最新git与在正式版使用稳定分支的做法。原文引述: "There really is no pain point for Fedora. They take a very simple approach." `<!-- ROW_MINE: ksummit.messages.9574 -->`
+- 【Linux社区】2016年David Woodhouse反驳Greg KH关于GPL执行的温和立场,指出当存在闭源解决方案时,GPL违规者实际上在与守规企业竞争,并将GPL与BSD许可证进行直接对比,论证强制执行的必要性。原文引述: "a world where nobody was ever actually held to the terms of the licence, and everyone got away with just treating it as if it were BSD" `<!-- ROW_MINE: ksummit.messages.9588 -->`
+- 【Linux社区】2019年Geert Uytterhooven在Maintainer Summit关于Pull网络与补丁接受一致性的讨论中,回应Tim Bird提出的构建系统内新警告与二进制变更检测建议,推荐自己使用的linux-log-diff工具作为基线比较方案。原文引述: "That's what I use for Build regressions/improvements in v5.2-rc5" `<!-- ROW_MINE: ksummit.messages.9606 -->`
+- 【Linux社区】2018年NeilBrown在Code of Conduct补丁讨论中质疑Ted Ts'o对Linus行为的宽泛描述,主张Linus的声誉与行为表现需要长期一致修正,并引用非公开列表邮件指出问题不只是Linus对核心维护者的态度。原文引述: "if it was Linus who was behaving inappropriately, where did you go then" `<!-- ROW_MINE: ksummit.messages.9621 -->`
+- 【Linux社区】2014年NeilBrown在更丰富的块设备API议题讨论中直接对比Linux与BSD的现状,批评当前Linux设计在dm与md分离、缺失可用快照块设备、文件系统与卷管理器之间缺乏互动等方面不如BSD。原文引述: "what we should have, or what BSD has, that approach is demonstrably a perennial failure" `<!-- ROW_MINE: ksummit.messages.9643 -->`
+- 【Linux社区】2019年Geert Uytterhoeven在Maintainer Summit议题讨论中回应Konstantin Ryabitsev关于是否信任kernel.org分支的观点,提出补丁审核到git-am之间的薄弱环节问题,并列举了补丁多版本被篡改与patchwork被入侵的风险路径。原文引述: "We already use cryptographic attestations for the later operations." `<!-- ROW_MINE: ksummit.messages.9761 -->`
+- 【Linux社区】2019年Geert Uytterhoeven在Maintainer Summit关于patch version change的讨论中,围绕Ted Ts'o提出的通过git-am与applypatch-msg脚本自动生成Link trailer的工作流方案,回应Laurent Pinchart关于PR作者工作流的疑问,提出维护者从邮件列表提取补丁的可行路径。原文引述: "If we really want to use the Link: header, we should be able to do this without requiring any changes to git." `<!-- ROW_MINE: ksummit.messages.9770 -->`
+- 【Linux社区】2015年Greg KH在GPL执行议题讨论中回应David Woodhouse关于律师与执行的观点,指出不同主体对GPL的理解差异巨大,有人认为应严格合规,有人却愿意把它当作BSD许可证对待以避免吓退商业用户。原文引述: "basically wanting to act as if it's a BSD licence, in order to avoid scaring commercial users away" `<!-- ROW_MINE: ksummit.messages.9860 -->`
+- 【Linux社区】2016年Steven Rostedt在GPL防御讨论中引用Jeremy Allison的论点,直接对比GPL与BSD/MIT许可证的差异,指出BSD与MIT是最典型体现"无合规后果"态度的许可证,并把GPL的强制执行问题置于这个对照之下讨论。原文引述: "There are licenses that embody the no consequence for non compliance attitude, the most popular being the BSD or MIT licenses of course." `<!-- ROW_MINE: ksummit.messages.9913 -->`
+- 【Linux社区】2018年John W. Linville在Maintainer Summit关于Linus继任规划的讨论中,以自己在无线子系统维护者岗位上的撤换经验为例,指出有序的权力交接需要数月协调,反对仓促推进政变式更替。原文引述: "it took me months to coordinate an orderly withdraw just from the wireless maintainership." `<!-- ROW_MINE: ksummit.messages.10002 -->`
+- 【Linux社区】2016年Linus Torvalds在GPL防御议题开篇讨论中明确表态,主张律师应仅以开发者身份参与而不应代表Software Freedom Conservancy出现,批评Bradley Kuhn将诉讼作为强制手段,并引用Greg的言论表达赞同,把GPL执法作为内核开发者内部议题处理。原文引述: "absolutely not the Software Freedom Conservancy" `<!-- ROW_MINE: ksummit.messages.10005 -->`
+- 【Linux社区】2018年Daniel Vetter在Maintainer Summit关于社区管理与子系统治理的讨论中回应Olof Johansson的建议,主张聚焦真实案例而非泛泛概览,并详细回顾ARM团队如何在时区与工作流层面协调交接的具体经验。原文引述: "Not the visionary keynote, but the this is the everyday flow." `<!-- ROW_MINE: ksummit.messages.10007 -->`
+- 【Linux社区】2018年Laurent Pinchart在Maintainer Summit关于社区管理与子系统治理的讨论中详细阐述DRM团队考虑从freedesktop基础设施迁移到GitLab的动机,指出fd.o管理员希望简化自有服务维护、强化2FA并卸载权限管理负担,以及迁移仍在早期规划阶段。原文引述: "the underlying reason for the migration is that fd.o admins want to shut down their home-grown collage of services" `<!-- ROW_MINE: ksummit.messages.10027 -->`
+- 【Linux社区】Ian Lepore 以 ian@freebsd.org 身份介入 Linux DT 工作组议题, 引发 Linux 是否应独占 devicetree binding 归属的讨论。引文: "DT bindings is not documented in Linux but in an another project because this project was the first to use it" FreeBSD 工程师深度参与 Linux 上游基础设施治理, 是 BSD 与 Linux 交叉治理的直接物证。 `<!-- ROW_MINE: ksummit.messages.10261 -->`
+- 【Linux社区】Theodore Ts'o 与 Jeremy Allison 就 GPLv2 强制的权力归属辩论。引文: "how about "Linus as the benevolent dictator"?  He makes a point of gathering input from multiple stakeholders, and delegating authority" 这是 Linux 与 BSD 版权许可哲学分立的治理标本, SFC 强制机制与 BSD 松散版权实践形成制度对照。 `<!-- ROW_MINE: ksummit.messages.10277 -->`
+- 【Linux社区】Bottomley 与 Jeremy Allison 就 GPL 强制合规分歧辩论, 并首次将 Apache-2 作为 GPLv2 的替代选择摆上台面。引文: "Google isn't such a great exemplar given that it's currently doing its new kernel under apache-2" 宽松许可替代 GPLv2 的路线之争直接牵涉 BSD 许可哲学的存续空间。 `<!-- ROW_MINE: ksummit.messages.10317 -->`
+- 【Linux社区】Tony Luck 追问 SFC 若起诉, 版权持有者名单是否在发现程序中公开。引文: "If SFC does at some point sue, and that action ends up in court, would the names become public?" BSD 式版权持有者主导的强制机制由此暴露, 是 BSD 许可治理透明度争议的现场。 `<!-- ROW_MINE: ksummit.messages.10360 -->`
+- 【Linux社区】Geert Uytterhoeven 谈内核 no rebase 规则如何重塑补丁历史。引文: "due to "no rebase" rules and other regulations" 保留完整补丁历史与作者可追溯性, 与 FreeBSD 等 BSD 项目重视补丁审阅链的治理传统一脉相承。 `<!-- ROW_MINE: ksummit.messages.10365 -->`
+- 【Linux社区】Luis Rodriguez 反驳 Ted 对 SFC 诉讼议题的排斥立场。引文: "who are GPL maximalists and who believe that kernel modules are always infected by the GPLv2" GPL 强制与 BSD 类宽松许可的边界争议在此浮现, 是两派许可哲学的正面碰撞。 `<!-- ROW_MINE: ksummit.messages.10422 -->`
+- 【Linux社区】Bradley Kuhn 反驳 Linus 对 WRT54G 事件的定性, 强调强制行动的社区引导作用。引文: "the WRT54G enforcement action bootstrapped that community" SFC 强制联盟运用 BSD 式版权许可实践运作, 是 BSD 版权许可哲学与 GPL 强制路线分歧的直接对话物证。 `<!-- ROW_MINE: ksummit.messages.10633 -->`
