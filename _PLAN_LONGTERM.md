@@ -38,7 +38,33 @@
 四库合计已判读 **74000／551317（13.42%）**，剩余 477317 封 ≈ **239 批**（÷2000）。
 
 🔴 **台账是 `status_source: spec-only` 口径**：游标随 `_batch_*.json` spec 预建即推进，**不等于 outline 已提交**——本次 b003 四批 spec 已标 `queued: true`，`_build_read_ledger.py` 据此**不计入** records，故建批不会虚增游标。
-**四库已判读区间（hackers 0–48000／current 0–6000／doc 0–6000／stable 0–6000）已全部 outline 入纲并 committed**，此刻无「已落库未入纲」的悬挂批（b003 四批 spec 已由 `queued: true` 转为 register＋bookkeep 落账，游标由 58000 推进到 66000）。
+**四库已判读区间已全部 outline 入纲并 committed**，此刻无「已落库未入纲」的悬挂批。（旧注记「hackers 0–48000／current 0–6000／doc 0–6000／stable 0–6000」与游标「58000→66000」均为 **2026-09-22 14:5x 快照**，已被 §〇.1 取代。）
+
+### 〇.1 增量（2026-09-22 16:3x 实测）
+
+| 库 | 全库 | 已判读 | 已判读区间 | 已入纲闭环批次 | 在途 |
+|---|---:|---:|---|---|---|
+| `freebsd-hackers` | 201463 | **50000** | 0–50000 | fhk_b001–b025（25 批） | 无 |
+| `freebsd-current` | 205027 | **8000** | 0–8000 | fcu_b001–b003（3 批） | **fcu_b004** 24/24 叙述落盘（526 行） |
+| `freebsd-doc` | 72663 | **8000** | 0–8000 | fdoc_b001–b004（4 批） | 无 |
+| `freebsd-stable` | 72164 | **8000** | 0–8000 | fstb_b001–b003（3 批） | **fstb_b004** 24/24 叙述落盘（617 行） |
+
+- **`fdoc_b004` 全链闭环**（292 块／4 宿主：100.18 +223／98.6 +54／101.10 +12／106.9 +3），
+  outline 幂等二跑 **+0**、bookkeep **缺块0／claim_id不符0／重复0 PASS**、等级门禁 **PASS**、
+  **1067 时代型 24/24 零用**、D2 专名 **10 命中→8 改写＋2 保留**。明细见 `_H3_PROGRESS.md` §7.18。
+- **🔴 台账口径订正（推翻上一行末句与第 40 行）**：`read_judged` 只取
+  `_batch_*.json`（`lib`＋`offset`＋`n`）**且 `review_logs/<tag>_claim_map.json` 存在**的区间，
+  `queued: true` **本身不阻断计入**——阻断条件是「queued 且 claim_map 尚不存在」。
+  故 `read_judged` 随 **register** 推进，**与 outline 是否入纲无关**。
+  fdoc_b004 的 2000 行早在 register（09-22 14:10）就已计入，**H3 四库真值仍是 74000/551317（13.42%）**。
+  **不要把「入纲闭环」当台账推进点，否则会误报进度。**
+- **🔴 pathspec 提交被并行会话卷走**：fdoc_b004 的 4 个宿主 md 进 `4c7f499a5`（信息 `……`）、
+  台账进 `3d6fd0ae8`（信息 `！`）。**内容无损**（4 文件 +1460 行 = 292×5，
+  292/292 pk 经全 05 卷 238 个 md 的 `ROW_MINE: freebsd-doc.messages.<pk>` 交叉核验命中），
+  按既定口径不 amend，改在 `_H3_PROGRESS.md` §7.18 补勘误注。
+- 下一动作＝fcu_b004 / fstb_b004 各 24 份叙述齐 → 超长压缩收尾（fcu 11 行＋fstb 18 行在途）
+  → `cp _narr_pK _mount_narr_pK` → `_merge_narr` → `_chk_narr_b004 --all`
+  → 逐份 triage → solo D2 → outline → bookkeep → 等级门禁 → pathspec commit。
 
 🔴 **token 配额硬停（2026-09-21 18:38–18:50 实测，本会话 5 路子代理全部 `token plan
 entitlement exhausted` 失败）**：fcu_b001 读手 4 路（21–25 分钟各死一次）＋ shenyue
