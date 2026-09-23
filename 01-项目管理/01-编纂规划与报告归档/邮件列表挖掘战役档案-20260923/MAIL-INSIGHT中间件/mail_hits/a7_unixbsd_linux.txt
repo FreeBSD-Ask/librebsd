@@ -1,0 +1,3020 @@
+total 80
+[1992-03-14T05:02:54+00:00] [ajayshah@alhena.usc.edu (Ajay Shah)] [We are seeing a very nice flowering of the free Unixes available
+(obviously in source).  Linux is now in v.95 and BSD v0.0 have arrived
+(both for the 386).  BSD might become available for SPARC, and GNU is
+said to be aiming for 386 and SPARC.
+
+My question is: to what extent do these projects care for and ensure
+binary compatibility of applications?
+
+I can imagine several directions from which this could be useful.
+First, if any of these is to have a ghost of a chance in the
+commercial world, they have to adhere to ABIs.  Both the 386 and SPARC
+hvae a well-defined ABI.
+
+Apart from the commercial market, I see binary compatibility as being
+quite useful "for us" as well.  E.g., many (if not most) hackers would
+want a working TeX.  It seems suboptimal for each of us to have to
+open up the TeX source distribution and make it from scratch.  Look at
+how convenient (e.g.) EmTeX is: you simply unpack the archives and
+setup environmental variables and you have a working TeX.
+
+It takes a lot of programs to make up a "comfortable Unix working
+environment".  Binary compatibility and the availability of programs
+in binary form would reduce the setup cost of getting there.
+-- 
+
+Ajay Shah, (213)749-8133, ajayshah@usc.edu
+
+
+]
+MID: ks327uINNdug@alhena.usc.edu
+SUBJ: Curious about free Unixes and ABI (BSD, Linux, GNU)
+BODY: We are seeing a very nice flowering of the free Unixes available | (obviously in source).  Linux is now in v.95 and BSD v0.0 have arrived | (both for the 386).  BSD might become available for SPARC, and GNU is | said to be aiming for 386 and SPARC. |  | My question is: to what extent do these projects care for and ensure | binary compatibility of applications? |  | I can imagine several directions from which this could be useful. | First, if any of these is to have a ghost of a chance in the | commercial world, they have to adhere to ABIs.  Both the 386 and SPARC | hvae a well-defined ABI. |  | Apart from the commercia
+------------------------------------------------------------
+[1992-03-14T16:23:15+00:00] [meggin@epas.utoronto.ca (David Megginson)] [I remember that the hurd documentation claimed it would be binary
+compatible with BSD on at least some machines. Definitely a worth aim,
+but don't tell them to do it so that retailers can sell programs
+without source code, or they will _definitely_ change their minds ;-)
+
+
+David
+--
+#################################################################
+David Megginson                  meggin@epas.utoronto.ca
+Centre for Medieval Studies      david@doe.utoronto.ca
+University of Toronto            39 Queen's Park Cr. E.
+#################################################################
+
+
+]
+MID: MEGGIN.92Mar14162315@epas.utoronto.ca
+SUBJ: Re: Curious about free Unixes and ABI (BSD, Linux, GNU)
+BODY: I remember that the hurd documentation claimed it would be binary | compatible with BSD on at least some machines. Definitely a worth aim, | but don't tell them to do it so that retailers can sell programs | without source code, or they will _definitely_ change their minds ;-) |  |  | David | -- | ################################################################# | David Megginson                  meggin@epas.utoronto.ca | Centre for Medieval Studies      david@doe.utoronto.ca | University of Toronto            39 Queen's Park Cr. E. | ################################################################# |  |  | 
+------------------------------------------------------------
+[1992-03-16T03:43:26+00:00] [dws@engr.uark.edu (David W. Summers)] [ajayshah@alhena.usc.edu (Ajay Shah) writes:
+
+>We are seeing a very nice flowering of the free Unixes available
+>(obviously in source).  Linux is now in v.95 and BSD v0.0 have arrived
+>(both for the 386).  BSD might become available for SPARC, and GNU is
+>said to be aiming for 386 and SPARC.
+>
+>My question is: to what extent do these projects care for and ensure
+>binary compatibility of applications?
+>
+>I can imagine several directions from which this could be useful.
+>First, if any of these is to have a ghost of a chance in the
+>commercial world, they have to adhere to ABIs.  Both the 386 and SPARC
+>hvae a well-defined ABI.
+>
+>Apart from the commercial market, I see binary compatibility as being
+>quite useful "for us" as well.  E.g., many (if not most) hackers would
+>want a working TeX.  It seems suboptimal for each of us to have to
+>open up the TeX source distribution and make it from scratch.  Look at
+>how convenient (e.g.) EmTeX is: you simply unpack the archives and
+>setup environmental variables and you have a working TeX.
+>
+>It takes a lot of programs to make up a "comfortable Unix working
+>environment".  Binary compatibility and the availability of programs
+>in binary form would reduce the setup cost of getting there.
+>-- 
+>
+>Ajay Shah, (213)749-8133, ajayshah@usc.edu
+
+
+Hooray for the free Unixes!
+
+One (about the only) problem I see with just distributing binaries is the
+following question:
+
+   Given the prevalence (sp?) of viruses and such in the PC (binary mostly)
+world, would you trust your computer to some strange binary that someone
+else has compiled?
+
+
+   - David Summers
+
+-- 
+                         "Never under-estimate the bandwidth of a station-wagon
+David Summers             full of tapes, hurtling down the highway."
+dws@engr.uark.edu         - Tanenbaum, "Computer Networks"
+
+
+]
+MID: 1992Mar16.034326.8884@engr.uark.edu
+SUBJ: Re: Curious about free Unixes and ABI (BSD, Linux, GNU)
+BODY: ajayshah@alhena.usc.edu (Ajay Shah) writes: |  | >We are seeing a very nice flowering of the free Unixes available | >(obviously in source).  Linux is now in v.95 and BSD v0.0 have arrived | >(both for the 386).  BSD might become available for SPARC, and GNU is | >said to be aiming for 386 and SPARC. | > | >My question is: to what extent do these projects care for and ensure | >binary compatibility of applications? | > | >I can imagine several directions from which this could be useful. | >First, if any of these is to have a ghost of a chance in the | >commercial world, they have to adhere to ABIs.  Both the 386 and 
+------------------------------------------------------------
+[1992-03-16T06:22:31+00:00] [srodawa@vela.acs.oakland.edu (Ron Srodawa)] [In article <1992Mar16.034326.8884@engr.uark.edu> dws@engr.uark.edu (David W. Summers) writes:
+>ajayshah@alhena.usc.edu (Ajay Shah) writes:
+>>My question is: to what extent do these projects care for and ensure
+>>binary compatibility of applications?
+>>
+>>It takes a lot of programs to make up a "comfortable Unix working
+>>environment".  Binary compatibility and the availability of programs
+>>in binary form would reduce the setup cost of getting there.
+>
+>One (about the only) problem I see with just distributing binaries is the
+>following question:
+>
+>   Given the prevalence (sp?) of viruses and such in the PC (binary mostly)
+>world, would you trust your computer to some strange binary that someone
+>else has compiled?
+
+Viruses (otherwise known as trojan horses) are not as severe a problem in
+systems with protection facilities so long as the sysadmin is smart enough
+to never run them from a privileged account.
+
+Still, the best prevention is to receive your source and objects only from
+trusted sites.  The Simtel-20 collection of MS-DOS software contains many
+binary-only files.  In each case the binary is checked with a virus scanner
+and it is accepted only from a trusted source, generally the original author.
+
+I run an archive of binaries for SCO Xenix systems.  I get several THOUSAND
+file transfers per month.  Again, sources and binaries come from reliable
+sources.  Most frequently, I have compiled the source myself.  Part of the
+large demand is due to the high cost of the unbindled development system
+for SCO Xenix.
+
+Yes, there definitely is a need for a binary archive, once 386 BSD becomes
+stable enough for productive work.
+Ron
+-- 
+| Ronald J. Srodawa               | Internet: srodawa@vela.oakland.edu      |
+| School of Engineering and CS    | UUCP:     srodawa@vela.UUCP             |
+| Oakland University              | Voice:    (313) 370-2247                |
+| Rochester, Michigan  48309-4401 |                                         |
+
+
+]
+MID: 14146@vela.acs.oakland.edu
+SUBJ: Re: Curious about free Unixes and ABI (BSD, Linux, GNU)
+BODY: In article <1992Mar16.034326.8884@engr.uark.edu> dws@engr.uark.edu (David W. Summers) writes: | >ajayshah@alhena.usc.edu (Ajay Shah) writes: | >>My question is: to what extent do these projects care for and ensure | >>binary compatibility of applications? | >> | >>It takes a lot of programs to make up a "comfortable Unix working | >>environment".  Binary compatibility and the availability of programs | >>in binary form would reduce the setup cost of getting there. | > | >One (about the only) problem I see with just distributing binaries is the | >following question: | > | >   Given the prevalence (sp?) of viruses and
+------------------------------------------------------------
+[1992-03-17T06:21:30+00:00] [pgd@compuram.bbt.se (Per Lindqvist)] [ajayshah@alhena.usc.edu (Ajay Shah) writes:
+: I can imagine several directions from which this could be useful.
+: First, if any of these is to have a ghost of a chance in the
+: commercial world, they have to adhere to ABIs.  Both the 386 and SPARC
+: hvae a well-defined ABI.
+Where can one get the specifications for the 386 ABI?
+-- 
+Per Lindqvist
+
+Internet: pgd@compuram.bbt.se   Fidonet: Per Lindqvist @ 2:201/332
+
+
+]
+MID: 1992Mar17.062130.29614@compuram.bbt.se
+SUBJ: Re: Curious about free Unixes and ABI (BSD, Linux, GNU)
+BODY: ajayshah@alhena.usc.edu (Ajay Shah) writes: | : I can imagine several directions from which this could be useful. | : First, if any of these is to have a ghost of a chance in the | : commercial world, they have to adhere to ABIs.  Both the 386 and SPARC | : hvae a well-defined ABI. | Where can one get the specifications for the 386 ABI? | --  | Per Lindqvist |  | Internet: pgd@compuram.bbt.se   Fidonet: Per Lindqvist @ 2:201/332 |  |  | 
+------------------------------------------------------------
+[1992-03-19T04:19:31+00:00] [max@underg.UUCP (Max Cray)] [ajayshah@alhena.usc.edu (Ajay Shah) writes:
+
+> We are seeing a very nice flowering of the free Unixes available
+> (obviously in source).  Linux is now in v.95 and BSD v0.0 have arrived
+> (both for the 386).  BSD might become available for SPARC, and GNU is
+> said to be aiming for 386 and SPARC.
+
+This is all great news. Things are really looking up in the free software 
+world. Having several choices is good, I guess, but I can't help but wonder 
+if everyone would work on different parts of the same project things would 
+go faster, instead of everyone re-creating the wheel. On the other hand, if 
+everyone who is working on a free unix, or unix like os worked together 
+amybe it would be slower, decideing how it should be done, etc.
+    Ignore this post. I am just thinking outloud.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                            -= Max Cray =-
+ Net:     underg%max@uunet.uu.net                         Support
+ UUCP:    ...!uunet!underg!max                            Free
+ Data:    The Underground Computing Foundation BBS        Software
+          401-847-2603 -=- 9600 baud (v.32)               (w/src)
+ CI$:     76334,2203
+
+
+]
+MID: 9i9uHB6w164w@underg.UUCP
+SUBJ: Re: Curious about free Unixes and ABI (BSD, Linux, GNU)
+BODY: ajayshah@alhena.usc.edu (Ajay Shah) writes: |  | > We are seeing a very nice flowering of the free Unixes available | > (obviously in source).  Linux is now in v.95 and BSD v0.0 have arrived | > (both for the 386).  BSD might become available for SPARC, and GNU is | > said to be aiming for 386 and SPARC. |  | This is all great news. Things are really looking up in the free software  | world. Having several choices is good, I guess, but I can't help but wonder  | if everyone would work on different parts of the same project things would  | go faster, instead of everyone re-creating the wheel. On the other hand, if
+------------------------------------------------------------
+[1992-03-19T04:24:06+00:00] [max@underg.UUCP (Max Cray)] [srodawa@vela.acs.oakland.edu (Ron Srodawa) writes:
+
+> Viruses (otherwise known as trojan horses) are not as severe a problem in
+> systems with protection facilities so long as the sysadmin is smart enough
+> to never run them from a privileged account.
+> 
+> Still, the best prevention is to receive your source and objects only from
+> trusted sites.  The Simtel-20 collection of MS-DOS software contains many
+> binary-only files.  In each case the binary is checked with a virus scanner
+> and it is accepted only from a trusted source, generally the original author.
+
+Viruses and trojan horses are not the same thing. Viruses spread by 
+infecting other programs. Trojan horses are programs that claim to do one 
+thing, but do something else, or something else in addition to what is 
+claimed, like play a game while deleting your system files for example. 
+Virus scanners only detect the older more common viruses. They are not as 
+good at detecting new (or variant) viruses, or the new mutating viruses.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                            -= Max Cray =-
+ Net:     underg%max@uunet.uu.net                         Support
+ UUCP:    ...!uunet!underg!max                            Free
+ Data:    The Underground Computing Foundation BBS        Software
+          401-847-2603 -=- 9600 baud (v.32)               (w/src)
+ CI$:     76334,2203
+
+
+]
+MID: Vq9uHB7w164w@underg.UUCP
+SUBJ: Re: Curious about free Unixes and ABI (BSD, Linux, GNU)
+BODY: srodawa@vela.acs.oakland.edu (Ron Srodawa) writes: |  | > Viruses (otherwise known as trojan horses) are not as severe a problem in | > systems with protection facilities so long as the sysadmin is smart enough | > to never run them from a privileged account. | >  | > Still, the best prevention is to receive your source and objects only from | > trusted sites.  The Simtel-20 collection of MS-DOS software contains many | > binary-only files.  In each case the binary is checked with a virus scanner | > and it is accepted only from a trusted source, generally the original author. |  | Viruses and trojan horses are not
+------------------------------------------------------------
+[1992-03-19T14:50:16+00:00] [preece@urbana.mcd.mot.com (Scott E. Preece)] [In article <1992Mar17.062130.29614@compuram.bbt.se> pgd@compuram.bbt.se (Per Lindqvist) writes:
+
+|   Where can one get the specifications for the 386 ABI?
+|   -- 
+|   Per Lindqvist
+|
+|   Internet: pgd@compuram.bbt.se   Fidonet: Per Lindqvist @ 2:201/332
+---
+In the US, at least, at any good technical bookstore.  You would need
+two books:
+
+	System V Application Binary Interface
+		ISBN 0-13-877598-2
+		Prentice Hall
+
+	System V Application Binary Interface
+	Intel386 Processor Supplement
+		ISBN 0-13-877679-X
+		Prentice Hall
+
+The copyright page gives 201-767-5937 as access point for single copies.
+
+These books specify binary interfaces only and assume that you have
+the System V Interface Definition, Third Edition, to supply the details
+of the semantics of the interfaces to specific functions.  SVID3 is
+published by Addison-Wesley
+--
+scott preece
+motorola/mcg urbana design center	1101 e. university, urbana, il   61801
+uucp:	uunet!uiucuxc!udc!preece,	 arpa:	preece@urbana.mcd.mot.com
+phone:	217-384-8589			  fax:	217-384-8550
+
+
+]
+MID: PREECE.92Mar19085001@neptune.urbana.mcd.mot.com
+SUBJ: Re: Curious about free Unixes and ABI (BSD, Linux, GNU)
+BODY: In article <1992Mar17.062130.29614@compuram.bbt.se> pgd@compuram.bbt.se (Per Lindqvist) writes: |  | |   Where can one get the specifications for the 386 ABI? | |   --  | |   Per Lindqvist | | | |   Internet: pgd@compuram.bbt.se   Fidonet: Per Lindqvist @ 2:201/332 | --- | In the US, at least, at any good technical bookstore.  You would need | two books: |  | 	System V Application Binary Interface | 		ISBN 0-13-877598-2 | 		Prentice Hall |  | 	System V Application Binary Interface | 	Intel386 Processor Supplement | 		ISBN 0-13-877679-X | 		Prentice Hall |  | The copyright page gives 201-767-5937 as access point for single copies. |  | T
+------------------------------------------------------------
+[1992-03-20T08:31:45+00:00] [mrs@netcom.com (Morgan Schweers)] [Some time ago max@underg.UUCP (Max Cray) happily mumbled: 
+>ajayshah@alhena.usc.edu (Ajay Shah) writes:
+>
+>> We are seeing a very nice flowering of the free Unixes available
+>> (obviously in source).  Linux is now in v.95 and BSD v0.0 have arrived
+>> (both for the 386).  BSD might become available for SPARC, and GNU is
+>> said to be aiming for 386 and SPARC.
+>
+>This is all great news. Things are really looking up in the free software 
+>world. Having several choices is good, I guess, but I can't help but wonder 
+>if everyone would work on different parts of the same project things would 
+>go faster, instead of everyone re-creating the wheel. On the other hand, if 
+>everyone who is working on a free unix, or unix like os worked together 
+>amybe it would be slower, decideing how it should be done, etc.
+
+Greetings,
+    Truth be told, I'm working on one free OS (Linux) while listening
+to expert folks talk about two others.  (BSD and Hurd.)  I'm not
+kernel-experienced, so I wouldn't have the faintest idea what a bug
+looked like in a scheduler code block, or what a memory management
+race condition tastes like.  I'm delving into the depths of Linux
+because it's small and I might be able to learn it.  I'm also
+listening carefully to the smart people on the hurd-folks mailing list
+so I can get an idea of how the small ideas I'm grasping are applied
+on a large-system basis.  I'm toying with the idea of setting up a
+386BSD system so I can get a feel for the later stages of bugs in a
+large OS!  *gr'yn*
+
+    This is why I'm glad there are a couple of projects going on.  Not
+all of us have the requisite skills to wade in up to our elbows in the
+black magic of 386BSD, and prefer a relatively simpler system such as
+Linux.
+
+    Right now, the projects I'm aware of are 386BSD (whose outlet
+seems to be this group right here, happily), Linux (the
+linux-activists mailing list and the comp.os.linux group), and the GNU
+Hurd (hurd-folks mailing list).  If anyone knows of any others, please
+tell me!
+
+    One of the things I'm watching avidly, is to see who of Linux
+and BSD will have a working X first!  *gr'yn*  (GNU is still out of
+the race, since they don't have a bootable OS yet...  *sigh*)  I know
+there are BSD folks making X work with 386BSD, and I know that there
+are Linux folks making X work with Linux...  STAY TUNED!
+
+                                                --  Morgan Schweers
+
+P.S.  Does this make any sense:  Using Linux to compile a 386BSD
+   system to use to do development for the GNU Hurd project...*heh heh*
+-- 
+Hacker, Furry, SF reader, gamer, art collector, writer.  24 hours isn't enough.
+mrs@netcom.com   | I'm a practicing furry!  Some day I hope all the practice
+Freela @ Furry   | will pay off, and I'll grow fur!  --  me
+K_Balore @ Furry |___________________ CLEAN C:\USR\SPOOL\*.* [SigVir] /SUB
+Hi! I'm a .signature virus!  Add me to your .signature and join in the fun!
+
+
+]
+MID: 2z!jxqfmrs@netcom.com
+SUBJ: Re: Curious about free Unixes and ABI (BSD, Linux, GNU)
+BODY: Some time ago max@underg.UUCP (Max Cray) happily mumbled:  | >ajayshah@alhena.usc.edu (Ajay Shah) writes: | > | >> We are seeing a very nice flowering of the free Unixes available | >> (obviously in source).  Linux is now in v.95 and BSD v0.0 have arrived | >> (both for the 386).  BSD might become available for SPARC, and GNU is | >> said to be aiming for 386 and SPARC. | > | >This is all great news. Things are really looking up in the free software  | >world. Having several choices is good, I guess, but I can't help but wonder  | >if everyone would work on different parts of the same project things would  | >go fa
+------------------------------------------------------------
+[1992-03-20T22:22:49+00:00] [schemers@jessica.stanford.edu (Roland Schemers)] [In article <Vq9uHB7w164w@underg.UUCP> max@underg.UUCP (Max Cray) writes:
+>Viruses and trojan horses are not the same thing. Viruses spread by 
+>infecting other programs. Trojan horses are programs that claim to do one 
+>thing, but do something else, or something else in addition to what is 
+>claimed, like play a game while deleting your system files for example. 
+
+Many viruses are spread by Trojan horses though. For example, you pick
+up a PD program which claims to be a game. You play the game and behind
+your back it installs a virus. 
+
+Its a Trojan horse because (from your words):
+
+   "Trojan horses are programs that claim to do one 
+        thing, but do something else, or something else in addition to what..."
+
+    In this case the thing the trojan horse did was installed a virus.
+
+Its a virus because (from your words):
+
+     "Viruses spread by infecting other programs"
+
+You could say that the Trojan horse is the "transport" for the virus. I
+believe that is exactly what Dr. Srodawa was refering to. I don't think
+anyone "intentionally" puts a virus on their own system, they are spread
+by  trojan horse methods.
+
+
+
+Roland J. Schemers III              |            Networking Systems
+Systems Programmer                  |            168 Pine Hall   (415)-723-6740
+Distributed Computing Group         |            Stanford, CA 94305-4122
+Stanford University                 |            schemers@jessica.Stanford.EDU
+
+
+]
+MID: 1992Mar20.222249.18458@leland.Stanford.EDU
+SUBJ: Re: Curious about free Unixes and ABI (BSD, Linux, GNU)
+BODY: In article <Vq9uHB7w164w@underg.UUCP> max@underg.UUCP (Max Cray) writes: | >Viruses and trojan horses are not the same thing. Viruses spread by  | >infecting other programs. Trojan horses are programs that claim to do one  | >thing, but do something else, or something else in addition to what is  | >claimed, like play a game while deleting your system files for example.  |  | Many viruses are spread by Trojan horses though. For example, you pick | up a PD program which claims to be a game. You play the game and behind | your back it installs a virus.  |  | Its a Trojan horse because (from your words): |  |    "Trojan
+------------------------------------------------------------
+[1992-03-22T18:13:29+00:00] [pgd@compuram.bbt.se (Per Lindqvist)] [mrs@netcom.com (Morgan Schweers) writes:
+:     One of the things I'm watching avidly, is to see who of Linux
+: and BSD will have a working X first!  *gr'yn*  (GNU is still out of
+: the race, since they don't have a bootable OS yet...  *sigh*)  I know
+: there are BSD folks making X work with 386BSD, and I know that there
+: are Linux folks making X work with Linux...  STAY TUNED!
+Maybe I am slightly sceptical, since many system services are missing
+in 386BSD to be able to run X. In particular, a new console/keyboard
+driver is necessary. Of course, it might be possible to make a
+super-kludge on top of the current one, but.... And without ptrace(),
+how could you ever debug it? 
+
+386BSD is missing many far more important things than X.
+-- 
+Per Lindqvist
+
+Internet: pgd@compuram.bbt.se   Fidonet: Per Lindqvist @ 2:201/332
+
+
+]
+MID: 1992Mar22.181329.15370@compuram.bbt.se
+SUBJ: Re: Curious about free Unixes and ABI (BSD, Linux, GNU)
+BODY: mrs@netcom.com (Morgan Schweers) writes: | :     One of the things I'm watching avidly, is to see who of Linux | : and BSD will have a working X first!  *gr'yn*  (GNU is still out of | : the race, since they don't have a bootable OS yet...  *sigh*)  I know | : there are BSD folks making X work with 386BSD, and I know that there | : are Linux folks making X work with Linux...  STAY TUNED! | Maybe I am slightly sceptical, since many system services are missing | in 386BSD to be able to run X. In particular, a new console/keyboard | driver is necessary. Of course, it might be possible to make a | super-kludge on t
+------------------------------------------------------------
+[1992-03-25T02:15:05+00:00] [pinkas@caraway.intel.com (Israel Pinkas)] [preece@urbana.mcd.mot.com (Scott E. Preece) writes:
+
+> pgd@compuram.bbt.se (Per Lindqvist) writes:
+>
+> |   Where can one get the specifications for the 386 ABI?
+>
+> In the US, at least, at any good technical bookstore.  You would need
+> two books:
+
+Intel has had a long standing practice of working with software vendors to
+maintain an ABI.  Most OS vendors prefer the existence of an ABI, as it
+increases the chances that a vendor will port to that OS.  To my knowledge,
+there are two Unix ABIs in use today: SysV (COFF) and SVR4 (ELF).  The SVR4
+ABI specifies an optional backwards compatibility.
+
+Some Unix vendors have not fully committed to the Intel ABI.  Let the buyer
+beware.
+
+I have heard rumors that Solaris will use ELF binaries but that the
+debugging information will be STABS based.  (STABS is the COFF format.
+SunOS for the Sun386i used COFF.)
+
+I do not believe that NeXTstep conforms to the Intel ABI.  If anyone needs
+this confirmed, please send me mail.
+
+Some SysV vendors are not out there with SVR4 yet.
+
+I do not know if Mt. Xinu and BSD conform to the ABI.
+
+Last I heard, the FSF planned on using a.out, which does not conform to the
+ABI.  Intel is negotiating this one.
+
+-Israel
+--
+Disclaimer: The above are my personal opinions, and in no way represent
+the opinions of Intel Corporation.  In no way should the above be taken
+to be a statement of Intel.
+
+
+]
+MID: PINKAS.92Mar24181505@caraway.intel.com
+SUBJ: Re: Curious about free Unixes and ABI (BSD, Linux, GNU)
+BODY: preece@urbana.mcd.mot.com (Scott E. Preece) writes: |  | > pgd@compuram.bbt.se (Per Lindqvist) writes: | > | > |   Where can one get the specifications for the 386 ABI? | > | > In the US, at least, at any good technical bookstore.  You would need | > two books: |  | Intel has had a long standing practice of working with software vendors to | maintain an ABI.  Most OS vendors prefer the existence of an ABI, as it | increases the chances that a vendor will port to that OS.  To my knowledge, | there are two Unix ABIs in use today: SysV (COFF) and SVR4 (ELF).  The SVR4 | ABI specifies an optional backwards compatibility. |  | 
+------------------------------------------------------------
+[1992-03-25T11:21:36+00:00] [meissner@osf.org (Michael Meissner)] [In article <PINKAS.92Mar24181505@caraway.intel.com>
+pinkas@caraway.intel.com (Israel Pinkas) writes:
+
+| I have heard rumors that Solaris will use ELF binaries but that the
+| debugging information will be STABS based.  (STABS is the COFF format.
+| SunOS for the Sun386i used COFF.)
+
+STABS is the BSD debug format, not COFF.  STABS encodes the debug
+information using the name field as a string that the debugger has to
+parse, a type field and two integer fields, one of which can be
+relocated (line numbers are the only stab that uses the second field).
+STABS are intermixed with other entries in the symbol table.  Anything
+that the compiler and debugger can agree upon can be passed through.
+Since there is no central stabs authority, you can have problems when
+the compiler and debugger disagree.
+
+COFF uses a binary encoding in it's own section in the object format,
+based on the data structures in the original Ritchie C compiler, which
+compresses the basic type information into 16 bits (4 bit basic type,
+6 fields of 2 bits each to represent pointer/array/function), with
+extra words following to provide things like array sizes.  COFF is
+extermely crippling when it comes to describe non-C languages.
+
+DWARF is also a binary encoding used by most of the systems using the
+ELF object file format (except for MIPS systems which use the ECOFF
+debug format).  It is much more flexible than COFF in the languages it
+can support.  The USL programming language SIG is putting the revised
+format out for public review soon (maybe it's already out on the
+streets).
+--
+Michael Meissner	email: meissner@osf.org		phone: 617-621-8861
+Open Software Foundation, 11 Cambridge Center, Cambridge, MA, 02142
+
+You are in a twisty little passage of standards, all conflicting.
+
+
+]
+MID: MEISSNER.92Mar25112136@tiktok.osf.org
+SUBJ: Re: Curious about free Unixes and ABI (BSD, Linux, GNU)
+BODY: In article <PINKAS.92Mar24181505@caraway.intel.com> | pinkas@caraway.intel.com (Israel Pinkas) writes: |  | | I have heard rumors that Solaris will use ELF binaries but that the | | debugging information will be STABS based.  (STABS is the COFF format. | | SunOS for the Sun386i used COFF.) |  | STABS is the BSD debug format, not COFF.  STABS encodes the debug | information using the name field as a string that the debugger has to | parse, a type field and two integer fields, one of which can be | relocated (line numbers are the only stab that uses the second field). | STABS are intermixed with other entries in the 
+------------------------------------------------------------
+[1992-03-27T02:20:30+00:00] [allbery@NCoast.ORG (Brandon S. Allbery KF8NH)] [As quoted from <PINKAS.92Mar24181505@caraway.intel.com> by pinkas@caraway.intel.com (Israel Pinkas):
++---------------
+| I have heard rumors that Solaris will use ELF binaries but that the
+| debugging information will be STABS based.  (STABS is the COFF format.
+| SunOS for the Sun386i used COFF.)
++---------------
+
+STABs are BSD debugging information.  COFF uses syments and auxents, with no
+special name assigned to them as a group that I know of.  ELF uses DWARF.  (I
+don't want to think about that one :-)
+
++---------------
+| Some SysV vendors are not out there with SVR4 yet.
++---------------
+
+ONE SysV vendor is not using SVR4 yet.  Of course, it's the one that thinks it
+owns the UNIX universe.
+
++---------------
+| I do not know if Mt. Xinu and BSD conform to the ABI.
++---------------
+
+They don't, and they don't particularly want to.  The used the BSD a.out
+format.
+
++---------------
+| Last I heard, the FSF planned on using a.out, which does not conform to the
+| ABI.  Intel is negotiating this one.
++---------------
+
+Fat chance, for the same reason as for Mt. Xinu and BSDI:  they just plain
+aren't interested.  Someone may add COFF and/or ELF compatibility and the
+Intel ABI to any of the OSes mentioned, and those additions may make it into
+future distributions, but they probably won't be officially supported.
+
+++Brandon
+-- 
+Brandon S. Allbery, KF8NH [44.70.4.88]        allbery@NCoast.ORG
+Senior Programmer, Telotech, Inc. (if I may call myself that...)
+
+
+]
+MID: 1992Mar27.022030.21037@NCoast.ORG
+SUBJ: Re: Curious about free Unixes and ABI (BSD, Linux, GNU)
+BODY: As quoted from <PINKAS.92Mar24181505@caraway.intel.com> by pinkas@caraway.intel.com (Israel Pinkas): | +--------------- | | I have heard rumors that Solaris will use ELF binaries but that the | | debugging information will be STABS based.  (STABS is the COFF format. | | SunOS for the Sun386i used COFF.) | +--------------- |  | STABs are BSD debugging information.  COFF uses syments and auxents, with no | special name assigned to them as a group that I know of.  ELF uses DWARF.  (I | don't want to think about that one :-) |  | +--------------- | | Some SysV vendors are not out there with SVR4 yet. | +--------------- |  | ON
+------------------------------------------------------------
+[1992-03-27T10:11:05+00:00] [sef@kithrup.COM (Sean Eric Fagan)] [In article <4518@umriscc.iic.umr.edu> chamil@mcs213i.cs.umr.edu (Charles M. Hamilton) writes:
+>I personally plan on sticking with linux and NOT going to the
+>free release of 386BSD.  Why?  Well, my machine now only
+>has 4 megs of RAM, which seems to be fine for linux, but I
+>suspect would crowd BSD.  
+
+Why would you think that?  According to Jolitz a year or two ago, the then
+386bsd could run in 640k of RAM (although it would "take gcc five minutes to
+compile a null program").  I suspect it would be extremely happy in 4MBytes
+(BSDinc says 4MBytes RAM is minimum, unless you want to use X, in which case
+you should have 8, which makes sense).
+
+>I also currently only have 80 megs of disk space
+
+Ah.  Now *that* is probably a limitation.  I believe you'd want to dedicate
+that 80MBytes to 386bsd, if you chose to run it, even though you get the
+added advantage (supposedly; I'm not sure it works yet) of having NFS, which
+Linux doesn't have (yet!).
+
+-- 
+Sean Eric Fagan  | "One form to rule them all, one form to find them, one
+sef@kithrup.COM  |  form to bring them all and in the darkness rewrite the
+-----------------+  hell out of them" -- sendmail ruleset 3 comment from DEC.
+Any opinions expressed are my own, and generally unpopular with others.
+
+
+]
+MID: 1992Mar27.101105.15363@kithrup.COM
+SUBJ: Re: Free BSD release: future of Minix/Linux?
+BODY: In article <4518@umriscc.iic.umr.edu> chamil@mcs213i.cs.umr.edu (Charles M. Hamilton) writes: | >I personally plan on sticking with linux and NOT going to the | >free release of 386BSD.  Why?  Well, my machine now only | >has 4 megs of RAM, which seems to be fine for linux, but I | >suspect would crowd BSD.   |  | Why would you think that?  According to Jolitz a year or two ago, the then | 386bsd could run in 640k of RAM (although it would "take gcc five minutes to | compile a null program").  I suspect it would be extremely happy in 4MBytes | (BSDinc says 4MBytes RAM is minimum, unless you want to use X, in wh
+------------------------------------------------------------
+[1992-03-27T13:48:54+00:00] [news@pegasus.com (Usenet News)] [>Open Software Foundation, 11 Cambridge Center, Cambridge, MA, 02142
+>
+>You are in a twisty little passage of standards, all conflicting.
+
+
+]
+MID: 1992Mar27.134854.26289@pegasus.com
+SUBJ: Re: Curious about free Unixes and ABI (BSD, Linux, GNU)
+BODY: >Open Software Foundation, 11 Cambridge Center, Cambridge, MA, 02142 | > | >You are in a twisty little passage of standards, all conflicting. |  |  | 
+------------------------------------------------------------
+[1992-03-27T19:50:05+00:00] [mike@socrates.umd.edu (Mike Santangelo (UNIX/VMS Sysmgr))] [Some general questions on Linux (latest version, what to expect
+in the future):
+  -Based on BSD 4.x, x=?  Kernel is BSD or <what>?
+  -How complete is the library support (libc, libcurses, etc...)?
+  -TCP/IP support?
+  -Any NFS for it?
+  -What hardware support for SPU?
+   -Disk interfaces? (ST506/MFM,IDE,SCSI-which ones?,ESDI?)
+   -Ethernet adapters
+   -VGA adapters
+  -Require a math corprocessor or has built-in float emuluation library?
+  -How do you install?  How do you gen a boot-floppy?
+ 
+  -Compatibility with off-the-net software written for other UNIXs,
+   cane you just use (usually) "make" with switch for some compatible
+   UNIX (BSD?) or do you need to tweak alot of things? --experiences
+
+  -General experiences
+
+Thanks!
+-- 
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+Michael F. Santangelo                 + Inet: mike@uc780.umd.edu
+VMS / UNIX Systems                    +       mike@socrates.umd.edu
+Academic Computing UMUC               + Bnet: MIKE@UC780
+
+
+]
+MID: 1992Mar27.195005.15343@socrates.umd.edu
+SUBJ: Features/experiences of/with Linux?
+BODY: Some general questions on Linux (latest version, what to expect | in the future): |   -Based on BSD 4.x, x=?  Kernel is BSD or <what>? |   -How complete is the library support (libc, libcurses, etc...)? |   -TCP/IP support? |   -Any NFS for it? |   -What hardware support for SPU? |    -Disk interfaces? (ST506/MFM,IDE,SCSI-which ones?,ESDI?) |    -Ethernet adapters |    -VGA adapters |   -Require a math corprocessor or has built-in float emuluation library? |   -How do you install?  How do you gen a boot-floppy? |   |   -Compatibility with off-the-net software written for other UNIXs, |    cane you just use (usually) "mak
+------------------------------------------------------------
+[1992-03-28T08:01:10+00:00] [mrs@netcom.com (Morgan Schweers)] [Some time ago mike@socrates.umd.edu (Mike Santangelo (UNIX/VMS Sysmgr)) happily mumbled: 
+>Some general questions on Linux (latest version, what to expect
+>in the future):
+>  -Based on BSD 4.x, x=?  Kernel is BSD or <what>?
+
+     *grin*  Kernel is homebrew!  From what I heard he started writing it
+a little less than a year ago...  The main goal was posix compliancy, and
+speed.  I.e.  it's 100% unencumbered...
+
+>  -How complete is the library support (libc, libcurses, etc...)?
+
+     Hmm...  Don't really know how 'complete'.  Libc works nicely,
+libcurses has been used to happily compile rogue and nethack (I
+think).  (Maybe Omega too, but I don't recall.)
+
+>  -TCP/IP support?
+
+     Not yet, as I recall some dozen folks were working on this.
+
+>  -Any NFS for it?
+
+     Not likely...  I think VFS was just implemented though!  (*grin*)
+
+>  -What hardware support for SPU?
+
+     SPU?  Whassat?  (I'll feel REAL stupid when you answer, but the brain
+isn't online with that yet.)
+
+>   -Disk interfaces? (ST506/MFM,IDE,SCSI-which ones?,ESDI?)
+
+     MFM, IDE, SCSI-(Adaptec 1542 I believe), and I MAY have heard a
+success story with ESDI, but I don't recall.
+
+>   -Ethernet adapters
+
+     Prolly not yet.  Being coded as we speak, though!
+
+>   -VGA adapters
+
+     Yupyup, lots.
+
+>  -Require a math corprocessor or has built-in float emuluation library?
+
+     As I recall, no.  'Course I'm running on a 486, so any such requirement
+might never have impinged itself on my brain.
+
+>  -How do you install?  How do you gen a boot-floppy?
+
+     FTP TSX-11.MIT.EDU, <Anonymouse, etc.>, cd pub/linux/install, and
+look around.  (Also check the README in pub/linux)
+
+> 
+>  -Compatibility with off-the-net software written for other UNIXs,
+>   cane you just use (usually) "make" with switch for some compatible
+>   UNIX (BSD?) or do you need to tweak alot of things? --experiences
+
+      Majority of stuff (not big, mostly) that I ported worked straight
+out of the tar.  A nice happy Make worked wonders.  Of course things got
+a wee bit weird when I compiled one program -DSYSV and another -DBSD, but
+I got used to it...
+
+>  -General experiences
+
+     LOTS of fun to recompile the kernel!  (First time I did it, I
+discovered that the distributed version is *NOT* the straight-compiled
+kernel...  I had to figure out how my keys were mapped to the finnish
+keyboard, so I could EMACS the kernel and #define up US keyboard support...)
+
+     In general, it's still a hackers OS.  It's pretty damned powerful,
+though.  People (Andy Tandy for one) complain occasionally about it not
+being a 'aesthetically designed' kernel, but it works!  (And *WELL*!)
+
+     Check out comp.os.linux and alt.os.linux for more info.  (YAY!
+WE'VE GOT OUR OWN MAINSTREAM GROUP!)
+
+>Thanks!
+
+     Don't mind me...  I'm just up a FEW hours too late, and I'm high
+from playing with Linux and other free OS's.  I'll remember these days
+to my kids, when they ask me whether I fought in the OS wars of the
+mid 90s... (*grin*)
+
+                                                 --  Morgan Schweers
+-- 
+Hacker, Furry, SF reader, gamer, art collector, writer.  24 hours isn't enough.
+mrs@netcom.com   | I'm a practicing furry!  Some day I hope all the practice
+Freela @ Furry   | will pay off, and I'll grow fur!  --  me
+K_Balore @ Furry |___________________ CLEAN C:\USR\SPOOL\*.* [SigVir] /SUB
+Hi! I'm a .signature virus!  Add me to your .signature and join in the fun!
+
+
+]
+MID: =ycjhxcmrs@netcom.com
+SUBJ: Re: Features/experiences of/with Linux?
+BODY: Some time ago mike@socrates.umd.edu (Mike Santangelo (UNIX/VMS Sysmgr)) happily mumbled:  | >Some general questions on Linux (latest version, what to expect | >in the future): | >  -Based on BSD 4.x, x=?  Kernel is BSD or <what>? |  |      *grin*  Kernel is homebrew!  From what I heard he started writing it | a little less than a year ago...  The main goal was posix compliancy, and | speed.  I.e.  it's 100% unencumbered... |  | >  -How complete is the library support (libc, libcurses, etc...)? |  |      Hmm...  Don't really know how 'complete'.  Libc works nicely, | libcurses has been used to happily compile rogue an
+------------------------------------------------------------
+[1992-03-29T01:05:21+00:00] [drew@cs.colorado.edu (Drew Eckhardt)] [In article <1992Mar27.195005.15343@socrates.umd.edu> mike@socrates.umd.edu (Mike Santangelo (UNIX/VMS Sysmgr)) writes:
+>Some general questions on Linux (latest version, what to expect
+>in the future):
+>  -Based on BSD 4.x, x=?  Kernel is BSD or <what>?
+
+Mostly POSIX, with hints of SYSV here and there.  
+The kernel was written entirely from scratch.  
+
+>  -How complete is the library support (libc, libcurses, etc...)?
+
+Depends on which version of the libraries you pick up.  
+There is a full ansi libc.a, libtermcap.a, libcurses.a, 
+libufc.a, libsdbm.a, and hard / soft libm.a's.  Also, gcc2.x will use libg++2.0.  
+
+>  -TCP/IP support?
+
+If ka9q with built in telnet and ftp, with slip, cslip, and ppp support
+counts, yes.  Otherwise no,
+
+>  -Any NFS for it?
+
+Nope.
+
+>  -What hardware support for SPU?
+>   -Disk interfaces? (ST506/MFM,IDE,SCSI-which ones?,ESDI?)
+
+ST506 MFM/RLL, IDE, ESDI, SCSI support is available now for Seagate and 
+Ultrastor
+host adapters, with adaptec support "RSN", CSC under testing, 
+Always, DTC, and Future domain in some stage of development.
+
+>   -Ethernet adapters
+
+Nope.
+
+>   -VGA adapters
+
+Virtual consoles using enhanced VGA text modes are possible on MOST 
+VGA cards.  Supported are 
+
+ATI, Ahead, C&T, Cirrus, Exerex, Genoa, Paradise, Trident chips.
+
+
+>  -Require a math corprocessor or has built-in float emuluation library?
+
+Enough kernel emulation is there to use GCC output for hardware FP,
+provided that the math library handles transcendental functions.
+
+>  -How do you install?  How do you gen a boot-floppy?
+
+Write out the 200K kernel to floppy disk; it can be written to 
+either a 1.44 or 1.2M disk, and will decide what size it is on
+when it loads.  Boot.  Stick in distribution root floppy that 
+you wrote in the same way.  login, mkfs on a spare partition 
+(You can non-destructively repartition with some careful manipulation 
+of the DOS partition BPB and partition table) - note that this means 
+Linux coexists - and set up some swap space.
+
+>  -Compatibility with off-the-net software written for other UNIXs,
+>   cane you just use (usually) "make" with switch for some compatible
+>   UNIX (BSD?) or do you need to tweak alot of things? --experiences
+
+Very good.  It's POSIX, leaning towards SYSV in some places with 
+some BSD syscalls.  Usually, a make, or make with a -DPOSIX or -DUSG
+will do it.
+
+>  -General experiences
+
+Linux is fairly stable and very useable.  Features include 
+1,  Virtual consoles, at any supported SVGA text mode resolution.
+	 This is in the kernel, so there is no way to have a single
+	hung job on one virtual console crash the whole thing.  As 
+	long as you have atleast one good shell - you're fine.
+
+2.  Console drive emulates a vt200, in color, at whatever 
+	resolution you have selected (Typical supported resolutions
+	vary according to the graphics card, but 80x25, 80x30, 80x50,  
+	80x60, 132x25, 132x30, 132x60 are available for most
+	SVGA configurations - this is selectable at boot time)
+
+3.  Demand paging, shared binary and library text among all copies
+	of a program loaded.  This drastically reduces memory useage.
+	Shared libraries are supported.
+
+4.  It swaps to a file or a swap partition.
+
+5.  We don't have core dumps, but we do have ptrace(2), and 
+	can run GDB.
+
+
+]
+MID: 1992Mar29.010521.9345@colorado.edu
+SUBJ: Re: Features/experiences of/with Linux?
+BODY: In article <1992Mar27.195005.15343@socrates.umd.edu> mike@socrates.umd.edu (Mike Santangelo (UNIX/VMS Sysmgr)) writes: | >Some general questions on Linux (latest version, what to expect | >in the future): | >  -Based on BSD 4.x, x=?  Kernel is BSD or <what>? |  | Mostly POSIX, with hints of SYSV here and there.   | The kernel was written entirely from scratch.   |  | >  -How complete is the library support (libc, libcurses, etc...)? |  | Depends on which version of the libraries you pick up.   | There is a full ansi libc.a, libtermcap.a, libcurses.a,  | libufc.a, libsdbm.a, and hard / soft libm.a's.  Also, gcc2.x wil
+------------------------------------------------------------
+[1992-03-29T08:14:59+00:00] [dharris@svcs1.UUCP (David Harris)] [
+	Linux and 386BSD, Talk and Software Party!
+	------------------------------------------
+
+At PC UNIX SIG on Wednesday, April 1, 7pm, in Cupertino.
+
+The age of free Unix for 386 machines has arrived, and the biggest
+question is which one to pick!  A rewrite of Unix called Linux started
+the excitement a few months ago, and the March meeting of SVNet made
+bigger news by making a bootable 386 version of Berkeley Unix available.
+Both are pre-releases that people around the world are helping debug.
+
+Frank Schulz, our recently converted Minix expert, has been working with
+both Linux and 386BSD, and will give an overview of the 2 systems.  He
+will explain the differences between them and help you decide which one
+is better for your environment.  He will also talk about gcc 2.0, the
+GNU C compiler, which is part of both systems.
+
+We are hoping to see some of the other people in the area who are
+working on these systems, especially those brave enough to use the 0.0
+release of 386BSD.
+
+"Software Reproduction Party":
+
+Bring your own computer or formatted disks.  Frank will have the latest
+Linux version and John Sokol, who is helping Bill Jolitz, will have the
+latest 386BSD version.
+
+
+General Meeting Information:
+
+	Date:	Wednesday, April 1, 7:00pm to 9:00pm -- no fooling!
+
+	Place:	Cupertino Library		(Still looking for a
+		10400 Torre Ave.		 place to call home.)
+
+		Take 280 to the Cupertino exit South; turn left on
+		Stevens Creek; turn right on Torre; the library is
+		past the city hall on the left.
+
+	Info:	Dan Kionka,  408-944-7941, dkionka@cadence.com
+		Bill Miller, 408-253-3175, {uunet,mips}!svcs1!slix
+
+
+Upcoming meetings:
+
+	May 13:  Bill Jolitz on 386BSD (Combined meeting with SVNet)
+
+
+The PC UNIX SIG is a group that meets monthly to learn about UNIX and
+discuss the popular UNIX versions for the IBM PC family.  The format is
+technical discussions or product presentations.  We also have a club
+computer with Usenet access.
+
+The meetings are free and open to the public, but members are encouraged
+to join the parent group, Silicon Valley Computer Society, an IBM PC
+users group.  For more information on SVCS call 408-286-1271.
+
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+DETAILS ON THE 386BSD TO BE DISTRIBUTED:
+
+   This will be the SAME CODE NOW AVAILABLE ON THE INTERNET, but available 
+on 1.2 MB 5.25" disks and 1.44 MB 3.5" disks for those people who want 
+it now but can't get it from the net.
+
+   William F. Jolitz, the author of the 386 port of BSD UNIX (now free of 
+AT&T code) began releasing "386BSD" to the public about 4 weeks ago.  
+This is the result of the major porting effort described in Jolitz's 
+DR. DOBB'S JOURNAL series on 386 BSD.  
+
+   This version of 386 BSD is an "alpha" release and is recommended for
+skilled experimenters only.  You want "kernel experience" for your
+resume?  This is your chance.  While the source and binaries are 
+copyrighted by Bill Jolitz, he authorizes redistribution without required 
+charge (donations needed, but voluntary) for this and future releases.  
+He also plans to write a book about 386BSD, for educational use.
+
+   This version is said to run on 386/486 SX/DX ISA (AT bus), with
+traditional hard and floppy controller (IDE, ESDI, MFM types), and common
+displays (MDA/CGA/VGA/Hercules).  Ethernet controllers supported include
+Western Digital 8003EB, 8003EBT, 8003S, WD8003SBT, 8013EBT and Novell
+NE2000.  Clones also appear to work quite well.  Tape drive support is
+available for QIC-02 controllers as well, allowing use of 3M cartridges of
+QIC-60 through QIC-150 format.  
+
+   As configured on the binary distribution, the system REQUIRES a floating 
+point coprocessor (387 or compatible), 2 MB of memory (will run on 1 MB
+using paging).   4 MB of memory and a 200 MB hard disk is comfortable.
+
+   This early version is not reliable, and has trouble booting on some
+systems. There are known serious bugs, and missing utilities.  Even
+booting this version MIGHT cause a write to your hard disk, potentially
+clobbering whateve is there.  Please do a full backup first!  But this is 
+based on the Berkeley UNIX that vast numbers of students learned and used 
+--- now available FREE.  One would expect this software to be widely used 
+for education and as an introduction to UNIX.  There is an active group of 
+contributors worldwide improving and enhancing this code.  Their effort 
+is coordinated mainly by messages in the Usenet newsgroup called 
+"comp.unix.bsd".
+
+ *********************************************************************** 
+ * If you want to be SURE to get a copy of 386BSD, bring a COMPUTER capable 
+ * of doing a DOS copy to your high density  disks.  If needed, we will 
+ * organize "trees" of people to copy for each other, if people can't make 
+ * copies at the meeting due to limited time and few machines.
+ *  
+ * People who want a copy of the 386BSD system should bring either:
+ *    (A) for 3-1/4 1.44 Meg disks bring
+ *        Source = 8 Disks
+ *        Binaries = 6 Disks + 1 Boot disk = 7 Disks total
+ *          For everything = 7 + 8 =   15 Disks Total !!!!
+ * or (B) for 5-1/2 1.2 Meg disks bring
+ *        Sources = 10 Disks
+ *        Binaries = 8 Disks + 1 Boot Disk = 9 Disks Total
+ *          For Everything = 10 + 9 = 19 Disks Total !!!!!
+
+ * There is a chance that the system has grown since the first version, so
+ * it would be wise to bring a few extra disks!
+ * 
+ * NOTE:  The disks must be error free DOS formatted ahead of time!  We 
+ * don't want to wait while a computer formats floppies at the meeting.
+ *********************************************************************** 
+-- 
+David C. Harris: ...!sun!ys2!medint!dharris , in Palo Alto, California.
+
+
+]
+MID: 587@svcs1.UUCP
+SUBJ: 386BSD and Linux (talk and software)
+BODY:  | 	Linux and 386BSD, Talk and Software Party! | 	------------------------------------------ |  | At PC UNIX SIG on Wednesday, April 1, 7pm, in Cupertino. |  | The age of free Unix for 386 machines has arrived, and the biggest | question is which one to pick!  A rewrite of Unix called Linux started | the excitement a few months ago, and the March meeting of SVNet made | bigger news by making a bootable 386 version of Berkeley Unix available. | Both are pre-releases that people around the world are helping debug. |  | Frank Schulz, our recently converted Minix expert, has been working with | both Linux and 386BSD, and w
+------------------------------------------------------------
+[1992-03-30T01:19:38+00:00] [joel@wam.umd.edu (Joel M. Hoffman)] [In article <587@svcs1.UUCP> dharris@svcs1.UUCP (David Harris) writes:
+>
+>	Linux and 386BSD, Talk and Software Party!
+>	------------------------------------------
+>
+>At PC UNIX SIG on Wednesday, April 1, 7pm, in Cupertino.
+
+That would be in California?  Is there any way to restrict postings
+of this sort to the sites to which they might apply?  Or at least let
+people know what region of the country is being discussed?  (I suppose
+people >might< want to fly in....)
+
+-Joel
+(joel@wam.umd.edu)
+
+
+
+]
+MID: 1992Mar30.011938.19557@wam.umd.edu
+SUBJ: Re: 386BSD and Linux (talk and software)
+BODY: In article <587@svcs1.UUCP> dharris@svcs1.UUCP (David Harris) writes: | > | >	Linux and 386BSD, Talk and Software Party! | >	------------------------------------------ | > | >At PC UNIX SIG on Wednesday, April 1, 7pm, in Cupertino. |  | That would be in California?  Is there any way to restrict postings | of this sort to the sites to which they might apply?  Or at least let | people know what region of the country is being discussed?  (I suppose | people >might< want to fly in....) |  | -Joel | (joel@wam.umd.edu) |  |  |  | 
+------------------------------------------------------------
+[1992-03-30T11:19:51+00:00] [choke@wet.UUCP (Sean Gallaty)] [In article <587@svcs1.UUCP> dharris@svcs1.UUCP (David Harris) writes:
+|>
+|>	Linux and 386BSD, Talk and Software Party!
+|>	------------------------------------------
+|>
+|>At PC UNIX SIG on Wednesday, April 1, 7pm, in Cupertino.
+
+[...]
+|>
+|>Bring your own computer or formatted disks.  Frank will have the latest
+|>Linux version and John Sokol, who is helping Bill Jolitz, will have the
+|>latest 386BSD version.
+|>
+|>
+|>General Meeting Information:
+|>
+|>	Date:	Wednesday, April 1, 7:00pm to 9:00pm -- no fooling!
+|>
+|>	Place:	Cupertino Library		(Still looking for a
+|>		10400 Torre Ave.		 place to call home.)
+|>
+|>		Take 280 to the Cupertino exit South; turn left on
+|>		Stevens Creek; turn right on Torre; the library is
+|>		past the city hall on the left.
+|>
+|>	Info:	Dan Kionka,  408-944-7941, dkionka@cadence.com
+|>		Bill Miller, 408-253-3175, {uunet,mips}!svcs1!slix
+|>
+[...]
+
+Please, if anyone is going to this from San Francisco and has
+room in their vehicle for one person, some diskettes, a small flashlight
+and documentation please write me so we may arrange to carpool.
+
+
+
+-- 
+--
+Sean Patrick Gallaty    choke@wet.net.netcom.com   (unix games administrator)
+
+Must there be a meaning to life?
+
+
+]
+MID: 3713@wet.UUCP
+SUBJ: Re: 386BSD and Linux (talk and software)
+BODY: In article <587@svcs1.UUCP> dharris@svcs1.UUCP (David Harris) writes: | |> | |>	Linux and 386BSD, Talk and Software Party! | |>	------------------------------------------ | |> | |>At PC UNIX SIG on Wednesday, April 1, 7pm, in Cupertino. |  | [...] | |> | |>Bring your own computer or formatted disks.  Frank will have the latest | |>Linux version and John Sokol, who is helping Bill Jolitz, will have the | |>latest 386BSD version. | |> | |> | |>General Meeting Information: | |> | |>	Date:	Wednesday, April 1, 7:00pm to 9:00pm -- no fooling! | |> | |>	Place:	Cupertino Library		(Still looking for a | |>		10400 Torre Ave.		 place to call
+------------------------------------------------------------
+[1992-03-31T17:02:18+00:00] [nickel@cs.tu-berlin.de (Juergen Nickelsen)] [In article <1992Mar30.011938.19557@wam.umd.edu> joel@wam.umd.edu (Joel
+M. Hoffman) writes:
+
+- In article <587@svcs1.UUCP> dharris@svcs1.UUCP (David Harris) writes:
+- >
+- >	Linux and 386BSD, Talk and Software Party!
+- >	------------------------------------------
+- >
+- >At PC UNIX SIG on Wednesday, April 1, 7pm, in Cupertino.
+- 
+- That would be in California?  Is there any way to restrict postings
+- of this sort to the sites to which they might apply?
+
+Well, there *was* a "Distribution: ba" line in the header, but this
+doesn't seem to work any more.
+
+--
+Juergen Nickelsen
+
+
+]
+MID: NICKEL.92Mar31180218@desaster.cs.tu-berlin.de
+SUBJ: Re: 386BSD and Linux (talk and software)
+BODY: In article <1992Mar30.011938.19557@wam.umd.edu> joel@wam.umd.edu (Joel | M. Hoffman) writes: |  | - In article <587@svcs1.UUCP> dharris@svcs1.UUCP (David Harris) writes: | - > | - >	Linux and 386BSD, Talk and Software Party! | - >	------------------------------------------ | - > | - >At PC UNIX SIG on Wednesday, April 1, 7pm, in Cupertino. | -  | - That would be in California?  Is there any way to restrict postings | - of this sort to the sites to which they might apply? |  | Well, there *was* a "Distribution: ba" line in the header, but this | doesn't seem to work any more. |  | -- | Juergen Nickelsen |  |  | 
+------------------------------------------------------------
+[1992-04-02T04:58:49+00:00] [bambi@bu.oz.au (David J. Hughes)] [I have added a complete mirror of the Linux distribution from
+nic.funet.fi to the archive on kirk.bu.oz.au.  To keep a logical
+structure for the archive, the mirror of the 386BSD distribution has
+been moved.  The location of the mirrors are :-
+
+
+	Hostname	: kirk.bu.oz.au
+	IP Address	: 131.244.1.1
+	Contact		: bambi@bu.oz.au
+	386BSD Path	: /pub/OS/386BSD    <<---- (** New location **)
+	Linux Path	: /pub/OS/Linux
+
+
+Please remember that this machine is in ** AUSTRALIA ** and as such is
+for users on AARNet (the Australian Network).  Users from countries
+other than Australia should use a more local site.
+
+
+bambi
+   ___                                 David J. Hughes     bambi@bu.oz.au
+  /   \                /  /    /        
+ /  __/ __   __   ____/  /    / __          Senior Network Programmer
+/    \ /  \ /  \ /   /  /    / /  \  /    Comms Development & Operation
+\____/ \__//   / \__/   \___/ /   / /       AUSTRALIA  (+61 75 951450)
+
+
+]
+MID: 1992Apr2.045849.19526@kirk.bu.oz.au
+SUBJ: 386BSD & Linux Mirrored on kirk.bu.oz.au
+BODY: I have added a complete mirror of the Linux distribution from | nic.funet.fi to the archive on kirk.bu.oz.au.  To keep a logical | structure for the archive, the mirror of the 386BSD distribution has | been moved.  The location of the mirrors are :- |  |  | 	Hostname	: kirk.bu.oz.au | 	IP Address	: 131.244.1.1 | 	Contact		: bambi@bu.oz.au | 	386BSD Path	: /pub/OS/386BSD    <<---- (** New location **) | 	Linux Path	: /pub/OS/Linux |  |  | Please remember that this machine is in ** AUSTRALIA ** and as such is | for users on AARNet (the Australian Network).  Users from countries | other than Australia should use a more local 
+------------------------------------------------------------
+[1992-07-03T15:30:18+00:00] [kobler@informatik.tu-muenchen.de (Daniel Kobler)] [hi,
+
+I just started reading this newsgroup and the Linux one too. I wonder
+if anyone could tell me he differeneces between these two systems
+since I *really* don't like DOS any longer. I have a 386/387 with
+33MHz and 8MByte RAM and two 100MB IDE-drives. Will that be sufficient
+to run either 386BSD/Linux? Is it possible to have a DOS partition
+at the same time (:-)?
+
+If there is a FAQ please tell me.
+
+Thanks in advance,
+
+-Daniel
+--
+Daniel Kobler                        kobler@kiss.informatik.tu-muenchen.de
+ TU  Muenchen, Arcisstr.21,          "Once upon a time I had a good girl,
+ 8000 Muenchen 2, Germany             once upon a girl I had a good time."
+
+
+
+]
+MID: 1992Jul3.153018.19208@Informatik.TU-Muenchen.DE
+SUBJ: 386BSD or Linux?
+BODY: hi, |  | I just started reading this newsgroup and the Linux one too. I wonder | if anyone could tell me he differeneces between these two systems | since I *really* don't like DOS any longer. I have a 386/387 with | 33MHz and 8MByte RAM and two 100MB IDE-drives. Will that be sufficient | to run either 386BSD/Linux? Is it possible to have a DOS partition | at the same time (:-)? |  | If there is a FAQ please tell me. |  | Thanks in advance, |  | -Daniel | -- | Daniel Kobler                        kobler@kiss.informatik.tu-muenchen.de |  TU  Muenchen, Arcisstr.21,          "Once upon a time I had a good girl, |  8000 Muenchen 2
+------------------------------------------------------------
+[1992-07-07T18:59:32+00:00] [bet@cyclone.sbi.com (Bennett E. Todd)] [In article <1992Jul3.153018.19208@Informatik.TU-Muenchen.DE> kobler@informatik.tu-muenchen.de (Daniel Kobler) writes:
+>                                      [...] I have a 386/387 with
+>33MHz and 8MByte RAM and two 100MB IDE-drives. Will that be sufficient
+>to run either 386BSD/Linux? Is it possible to have a DOS partition
+>at the same time (:-)?
+
+Yes, and yes. 386-33/8M/2x100M is generous for either (or both) of these
+OSes. Linux currently cooperates with standard PC/DOS partitioning, and
+386BSD has been convinced to do so (or so I've read).
+
+Linux is more mature, and I'd say it's more stable --- but that will have to
+be reevaluated when 386BSD 0.1 is released. As for which you want to run,
+I'd recommend trying both (again, after 386BSD 0.1 is released). Linux is
+more mature. It may well have a more complete collection of the standard
+Unix tools in place, though that probably won't last long. Linux is simpler.
+I expect it will be smaller and faster. 386BSD is far more full-featured. It
+includes the full BSD networking suite; Linux currently has no kernel
+support for IP et all, and so it can only network using the (user mode)
+KA9Q. Linux currently uses the Minix filesystem (very similar to the V7 Unix
+filesystem); another filesystem is currently under test that supports
+partitions larger than 64M and filenames larger than 14 characters. As far
+as I know it still doesn't have cylinder groups or a bitmap allocator.
+
+I like Linux --- but then that simplicity is worth a lot to me.
+
+-Bennett
+bet@sbi.com
+
+
+]
+MID: 692@cyclone.sbi.com
+SUBJ: Re: 386BSD or Linux?
+BODY: In article <1992Jul3.153018.19208@Informatik.TU-Muenchen.DE> kobler@informatik.tu-muenchen.de (Daniel Kobler) writes: | >                                      [...] I have a 386/387 with | >33MHz and 8MByte RAM and two 100MB IDE-drives. Will that be sufficient | >to run either 386BSD/Linux? Is it possible to have a DOS partition | >at the same time (:-)? |  | Yes, and yes. 386-33/8M/2x100M is generous for either (or both) of these | OSes. Linux currently cooperates with standard PC/DOS partitioning, and | 386BSD has been convinced to do so (or so I've read). |  | Linux is more mature, and I'd say it's more stable
+------------------------------------------------------------
+[1992-07-20T17:31:31+00:00] [STDN%MARIST@VM.MARIST.EDU (Dan Newcombe)] [I have a few question now that 0.1 is here and I can run it on my
+no387 computer.
+
+ 1) Does BSD support multiple logins at once.  Linux allows you to
+switch between 4 terminals using Alt F1-F4.  Can I still do this
+in BSD?
+
+ 2) How do BSD and Linux compare in general?
+
+  Thanks.
+
+    -Dan
+STDN@VM.MARIST.EDU
+
+
+]
+MID: 9207201731.AA03509@cs.utexas.edu
+SUBJ: 386BSD questions, as compared to Linux
+BODY: I have a few question now that 0.1 is here and I can run it on my | no387 computer. |  |  1) Does BSD support multiple logins at once.  Linux allows you to | switch between 4 terminals using Alt F1-F4.  Can I still do this | in BSD? |  |  2) How do BSD and Linux compare in general? |  |   Thanks. |  |     -Dan | STDN@VM.MARIST.EDU |  |  | 
+------------------------------------------------------------
+[1992-07-20T20:27:26+00:00] [cflatter@nrao.edu (Chris Flatters)] [In article AA03509@cs.utexas.edu, STDN%MARIST@VM.MARIST.EDU (Dan Newcombe) writes:
+>I have a few question now that 0.1 is here and I can run it on my
+>no387 computer.
+>
+> 1) Does BSD support multiple logins at once.  Linux allows you to
+>switch between 4 terminals using Alt F1-F4.  Can I still do this
+>in BSD?
+
+I'm pretty sure that you can't.  You can probably get the functionality
+you want from by getting hold of the screen-2.1c package from prep.ai.mit.edu
+and compiling it for 386BSD (I think that it should go with minimal effort
+but, on the other hand, I haven't tried it).
+
+>
+> 2) How do BSD and Linux compare in general?
+
+Having just put a new disk in my PC, I brought 386BSD 0.1 up on the
+weekend.  It is a more complete OS than linux and appears rather more
+polished.  On the other hand it is a lot bigger (partly because there
+is a lot more to it and partly because 386BSD doesn't support sharable
+libraries) and system administration is more complex (386BSD is a full-
+scale BSD UNIX system).
+
+I'm going to give 386BSD a whirl for a month or so.  Unless I find real
+problems I don't think that I will be switching back to Linux.
+
+	Chris Flatters
+	cflatter@nrao.edu
+
+
+
+]
+MID: 1992Jul20.202726.2245@nrao.edu
+SUBJ: Re: 386BSD questions, as compared to Linux
+BODY: In article AA03509@cs.utexas.edu, STDN%MARIST@VM.MARIST.EDU (Dan Newcombe) writes: | >I have a few question now that 0.1 is here and I can run it on my | >no387 computer. | > | > 1) Does BSD support multiple logins at once.  Linux allows you to | >switch between 4 terminals using Alt F1-F4.  Can I still do this | >in BSD? |  | I'm pretty sure that you can't.  You can probably get the functionality | you want from by getting hold of the screen-2.1c package from prep.ai.mit.edu | and compiling it for 386BSD (I think that it should go with minimal effort | but, on the other hand, I haven't tried it). |  | > | > 2) How do BS
+------------------------------------------------------------
+[1992-07-21T00:05:16+00:00] [randy@ms.uky.edu (Randy Appleton)] [I'm curious how the performance of BSD and Linux compare.  I already
+know that Linux is very small compared to BSD, and maybe that makes it
+faster.  On the other hand, maybe Linux is missing some performance
+tricks.  
+
+Also, any other comment comparing the two would be helpful.
+
+-Thanks
+-Randy
+
+-- 
+==============================================================================
+Operation Rescue has suggested that its members get their children arrested,
+and not themselves.  The bail is cheaper.  -- National Public Radio 6/26/92
+============================================Randy@ms.uky.edu==================
+
+
+]
+MID: 1992Jul20.200516.7695@ms.uky.edu
+SUBJ: Performance of Linux and BSD
+BODY: I'm curious how the performance of BSD and Linux compare.  I already | know that Linux is very small compared to BSD, and maybe that makes it | faster.  On the other hand, maybe Linux is missing some performance | tricks.   |  | Also, any other comment comparing the two would be helpful. |  | -Thanks | -Randy |  | --  | ============================================================================== | Operation Rescue has suggested that its members get their children arrested, | and not themselves.  The bail is cheaper.  -- National Public Radio 6/26/92 | ============================================Randy@ms.uky.edu========
+------------------------------------------------------------
+[1992-07-21T00:42:36+00:00] [rich@Rice.edu (Richard Murphey)] [In article <1992Jul20.202726.2245@nrao.edu> cflatter@nrao.edu (Chris Flatters) writes:
+   In article AA03509@cs.utexas.edu, STDN%MARIST@VM.MARIST.EDU (Dan Newcombe) writes:
+   >I have a few question now that 0.1 is here and I can run it on my
+   >no387 computer.
+   >
+   > 1) Does BSD support multiple logins at once.  Linux allows you to
+   >switch between 4 terminals using Alt F1-F4.  Can I still do this
+   >in BSD?
+
+   I'm pretty sure that you can't.  You can probably get the functionality
+   you want from by getting hold of the screen-2.1c package from prep.ai.mit.edu
+   and compiling it for 386BSD (I think that it should go with minimal effort
+   but, on the other hand, I haven't tried it).
+
+screen sources and executable are included in the etcdist part of the
+0.1 distribution.  Rich
+--
+
+
+]
+MID: RICH.92Jul20184236@kappa.Rice.edu
+SUBJ: Re: 386BSD questions, as compared to Linux
+BODY: In article <1992Jul20.202726.2245@nrao.edu> cflatter@nrao.edu (Chris Flatters) writes: |    In article AA03509@cs.utexas.edu, STDN%MARIST@VM.MARIST.EDU (Dan Newcombe) writes: |    >I have a few question now that 0.1 is here and I can run it on my |    >no387 computer. |    > |    > 1) Does BSD support multiple logins at once.  Linux allows you to |    >switch between 4 terminals using Alt F1-F4.  Can I still do this |    >in BSD? |  |    I'm pretty sure that you can't.  You can probably get the functionality |    you want from by getting hold of the screen-2.1c package from prep.ai.mit.edu |    and compiling it for
+------------------------------------------------------------
+[1992-07-21T03:54:07+00:00] [oreillym@tartarus.uwa.edu.au (Michael O'Reilly)] [randy@ms.uky.edu (Randy Appleton) writes:
+: I'm curious how the performance of BSD and Linux compare.  I already
+: know that Linux is very small compared to BSD, and maybe that makes it
+: faster.  On the other hand, maybe Linux is missing some performance
+: tricks.  
+
+Grin. Other way around. Maybe BSD is midding some performance tricks...
+:)
+
+BSD doesn't have shared lib's yet (as far as I know). This kinda kills
+program startup time. Does it do demand pageing?? On the other hand, it
+does have a much faster file system (which I am currently porting to
+linux)
+
+: Also, any other comment comparing the two would be helpful.
+: 
+: -Thanks
+: -Randy
+
+Michael
+
+
+]
+MID: 1992Jul21.035407.29554@uniwa.uwa.edu.au
+SUBJ: Re: Performance of Linux and BSD
+BODY: randy@ms.uky.edu (Randy Appleton) writes: | : I'm curious how the performance of BSD and Linux compare.  I already | : know that Linux is very small compared to BSD, and maybe that makes it | : faster.  On the other hand, maybe Linux is missing some performance | : tricks.   |  | Grin. Other way around. Maybe BSD is midding some performance tricks... | :) |  | BSD doesn't have shared lib's yet (as far as I know). This kinda kills | program startup time. Does it do demand pageing?? On the other hand, it | does have a much faster file system (which I am currently porting to | linux) |  | : Also, any other comment comparing
+------------------------------------------------------------
+[1992-07-24T12:17:43+00:00] [kuku@acds.physik.rwth-aachen.de (Christoph Kukulies)] [
+Paah! Linux! Come on and stay here. Go 386BSD, it's the *right* way.
+
+--Chris
+-----------------------------------------------------------------
+kuku@acds.physik.rwth-aachen.de
+*** Error code 1
+ 
+Stop.
+
+
+
+]
+MID: 1992Jul24.121743.8027@Urmel.Informatik.RWTH-Aachen.DE
+SUBJ: Re: S: Contact to LINUX-Users in GERMANY
+BODY:  | Paah! Linux! Come on and stay here. Go 386BSD, it's the *right* way. |  | --Chris | ----------------------------------------------------------------- | kuku@acds.physik.rwth-aachen.de | *** Error code 1 |   | Stop. |  |  |  | 
+------------------------------------------------------------
+[1992-07-29T22:57:47+00:00] [gilgalad@sparky.eecs.umich.edu (Ralph Seguin)] [
+Ok.  With the info that I've garnered so far, I've come to a decent conclusion
+as to what sort of system I'm going to get.  I still have a couple more
+questions to ask.
+
+Here's the rough system I'm planning on getting:
+
+ISA 486DX33, 1.2 gig SCSI drive, Adaptec 1542B SCSI controller, Exabyte 8500
+(eveuntally), SCSI (external) CDROM, 16 megs, SVGA hicolor RAMDAC card,
+NI monitor.
+
+What SVGA cards are supported by X386 (X11R5 pl12)?  I've heard that the
+ATI Ultra is based on the ET4000 and is 3 to 5 times as fast as the Tseng.
+
+Are there any cards that support 1280x1024@256 (NI) or 1280x1024@24 bits (NI)?
+How fast are they?  Does X386 support them?  BSD 386?  Linux?  OS/2?  Windows?
+
+I suppose that going with Local Bus is a bad idea right now.
+
+Any comments?  Does the ATI work with X386?
+
+What resolutions and colors does X386 support?  1024x768@256?  1280x1024@16?
+1280x1024@24 bits? 1024x768@24 bits?
+
+I'm planning on using an external SCSI CD-ROM becuase I'd like to be able
+to use it on my Amiga.  Any recommendations as far as drives?
+
+Does BSD386 and the Adaptec support Exabytes?
+
+Too many questions? :)
+
+PS- I have received a decent amount of information, which I will condense
+and repost to the net.
+
+
+
+]
+MID: 1992Jul29.225747.4429@zip.eecs.umich.edu
+SUBJ: WANTED: Help with BSD 386, Linux, SVGA and X (X386)
+BODY:  | Ok.  With the info that I've garnered so far, I've come to a decent conclusion | as to what sort of system I'm going to get.  I still have a couple more | questions to ask. |  | Here's the rough system I'm planning on getting: |  | ISA 486DX33, 1.2 gig SCSI drive, Adaptec 1542B SCSI controller, Exabyte 8500 | (eveuntally), SCSI (external) CDROM, 16 megs, SVGA hicolor RAMDAC card, | NI monitor. |  | What SVGA cards are supported by X386 (X11R5 pl12)?  I've heard that the | ATI Ultra is based on the ET4000 and is 3 to 5 times as fast as the Tseng. |  | Are there any cards that support 1280x1024@256 (NI) or 1280x1024@24 
+------------------------------------------------------------
+[1992-08-17T00:35:58+00:00] [hedrick@athos.rutgers.edu (Charles Hedrick)] [terry@cs.weber.edu (A Wizard of Earth C) writes:
+
+>	Or, put another way:  It's hard to contribute code to Linux and
+>Berkeley (or anything else) at the same time.
+
+This seems to be wrong.  It's attributing a far greater degree
+of coordination to Linux than actually exists.
+
+Linus himself sort of uses the GPL.  The kernel code simply says (C)
+1991 Linus Torvalds.  He has asserted separately that it may be
+redistributed under the terms of the GPL.  But I believe other terms
+could be negotiated as well.  Linus has no objections to commercial
+distributions of Linux.  He is certainly not the extremist that rms
+is.  There has never been a requirement that all Linux code must be
+covered by the GPL.  Pieces of code from authors other than Linus
+carry whatever terms the authors choose, although I think it's assumed
+by everyone that code will be freely redistriutable.  There is
+certainly Berkeley code used with Linux, though not in the kernel.
+(This may change with TCP/IP support in the kernel -- I don't know
+what they are doing, but I have assumed it would be based on some
+version of Berkeley's TCP/IP.)
+
+What is true is that code contributed to the Linux kernel will end up
+with Linus' copyright being added to it, and rewritten to fit his
+coding style and his views of the way the kernel should work.  That
+does not affect your ability to continue redistributing the original.
+It also assumes that the code is integrated by Linus.  It's perfectly
+acceptable to supply additional code that users will have to install
+for themselves.
+
+There are no constraints on things outside the kernel.  Outside the
+kernel Linux is a typical network hackers' product: There's no central
+authority, and no official distributions.  There are people who put
+together root disks roughly in sync with the kernel, but those people
+are not under Linus' control, and as far as I can tell they take the
+best software they can find without any particular requirements on
+copyright aside from being redistributable.  Somebody else coordinates
+the libraries and GCC.  Since they are based on glibc and gcc,
+obviously most of this is covered by the GPL.  A few portions of the
+library are taken from BSD.  Those particular modules continue to be
+governed by the BSD copyright.  The nearest equivalent to the full
+386BSD release is something done by the Manchester Computing
+Consortium.  It's a packaged release which seems to have a good
+reputation.  But they have no official status, and there are a couple
+of other people trying to do their own releases.
+
+
+]
+MID: Aug.16.20.35.57.1992.15736@athos.rutgers.edu
+SUBJ: Re: Restrictions on 'free' UNIX / 386BSD (Linux licensing)
+BODY: terry@cs.weber.edu (A Wizard of Earth C) writes: |  | >	Or, put another way:  It's hard to contribute code to Linux and | >Berkeley (or anything else) at the same time. |  | This seems to be wrong.  It's attributing a far greater degree | of coordination to Linux than actually exists. |  | Linus himself sort of uses the GPL.  The kernel code simply says (C) | 1991 Linus Torvalds.  He has asserted separately that it may be | redistributed under the terms of the GPL.  But I believe other terms | could be negotiated as well.  Linus has no objections to commercial | distributions of Linux.  He is certainly not the extrem
+------------------------------------------------------------
+[1992-09-08T19:00:14+00:00] [muts@fysap.fys.ruu.nl (Peter Mutsaers)] [
+Did anyone do benchmark comparisons on 386BSD and Linux?
+Also is really so much more hardware supported by Linux?
+How about porting of 'standard' unix software, which one is better for
+that?
+
+Thanks,
+--
+_________________________________________________________________________
+Peter Mutsaers.         |================================================ 
+muts@fys.ruu.nl         |        Quod licet bovi, non licet Jovi
+
+
+]
+MID: MUTS.92Sep8210006@ruunfs.fys.ruu.nl
+SUBJ: BSD vs. LINUX (was Re: What's LINUX? And other misc questions....)
+BODY:  | Did anyone do benchmark comparisons on 386BSD and Linux? | Also is really so much more hardware supported by Linux? | How about porting of 'standard' unix software, which one is better for | that? |  | Thanks, | -- | _________________________________________________________________________ | Peter Mutsaers.         |================================================  | muts@fys.ruu.nl         |        Quod licet bovi, non licet Jovi |  |  | 
+------------------------------------------------------------
+[1992-09-19T17:46:09+00:00] [hlu@yoda.eecs.wsu.edu (H.J. Lu)] [In article <BALASUB.92Sep19035200@organ.cis.ohio-state.edu> balasub@organ.cis.ohio-state.edu (Krishna Balasubramanian) writes:
+>
+>Perhaps what is needed is an XFree86 group that
+>handles the new X386/XFree86 users from the
+>various groups ... comp.os.linux, comp.unix.bsd,
+>comp.os.mach and comp.unix.sysv386. 
+>comp.windows.xfree86?
+>
+>The present linux X11 port for example is very close
+>to being standard xfree86.
+>
+>So far none of the other proposed splits appeal
+>to me.
+>
+>krishna
+
+I second this one.
+
+H.J.
+
+
+]
+MID: 1992Sep19.174609.11615@serval.net.wsu.edu
+SUBJ: Re: RFD: comp.os.linux split
+BODY: In article <BALASUB.92Sep19035200@organ.cis.ohio-state.edu> balasub@organ.cis.ohio-state.edu (Krishna Balasubramanian) writes: | > | >Perhaps what is needed is an XFree86 group that | >handles the new X386/XFree86 users from the | >various groups ... comp.os.linux, comp.unix.bsd, | >comp.os.mach and comp.unix.sysv386.  | >comp.windows.xfree86? | > | >The present linux X11 port for example is very close | >to being standard xfree86. | > | >So far none of the other proposed splits appeal | >to me. | > | >krishna |  | I second this one. |  | H.J. |  |  | 
+------------------------------------------------------------
+[1992-09-21T05:02:40+00:00] [newsman@milton.u.washington.edu (Chris Ricci)] [Here we go, I appreciate all the advice I have recieved about installing 
+Linux on my machine.  Here is my current setup and tonite I will make my
+first attempt at installing the sucker.
+
+I have two hard drives in the machine a 20Meg and a 40Meg.  I know it's 
+not much but it's a start.  I have them partitioned as such, let me know
+if you think there will be a problem(I hope to pick up a new HD in a month 
+or so..)
+ C drive 5 megs, this is where I store DOS and a few system files I use a
+                lot.
+ D drive 35 megs, this is where I plan to put Linux, X windows(tight I know)
+ E drive 20 megs, this is where I plan on reinstalling a minimized windows
+                and word 2.0, etc.  The basics.
+
+I have FTP'd the pub/linux/packages/SLS 15 disk set and also the Xega386.Z.
+
+I have a generic OAK 512K VGA card and a monochrome VGA monitor.  Will I 
+need the Xega... program and have most the bugs been worked out?
+
+Does anyone see a potential problem?  Do I need a swap file partition?  How
+big?
+
+Thanks alot, I should be a tenderfoot here soon, not a newbie....
+
+Chris
+
+
+]
+MID: 1992Sep21.050240.23690@u.washington.edu
+SUBJ: Linux Newbie
+BODY: Here we go, I appreciate all the advice I have recieved about installing  | Linux on my machine.  Here is my current setup and tonite I will make my | first attempt at installing the sucker. |  | I have two hard drives in the machine a 20Meg and a 40Meg.  I know it's  | not much but it's a start.  I have them partitioned as such, let me know | if you think there will be a problem(I hope to pick up a new HD in a month  | or so..) |  C drive 5 megs, this is where I store DOS and a few system files I use a |                 lot. |  D drive 35 megs, this is where I plan to put Linux, X windows(tight I know) |  E drive 
+------------------------------------------------------------
+[1992-09-21T23:45:54+00:00] [sasctw@duckhead.unx.sas.com (Charles Wilson)] [I also am against the split.  Intelligent use of your newsreader's
+capabilities will enable you to filter most/all of undesired posts.
+And, as mentioned earlier, I don't think it would fair to the mail/
+fidonet folks.
+
+Tom
+-- 
+-------------------------------------------------------------------------
+|  Tom Wilson                    |  Duct tape is like the force:  it    |
+|  SAS Institute, Inc.           |  has a light side, a dark side, and  |
+|  sasctw@duckhead.unx.sas.com   |  and it holds the universe together. |
+-------------------------------------------------------------------------
+
+
+]
+MID: BuyCoI.Bpz@unx.sas.com
+SUBJ: Re: RFD: comp.os.linux split
+BODY: I also am against the split.  Intelligent use of your newsreader's | capabilities will enable you to filter most/all of undesired posts. | And, as mentioned earlier, I don't think it would fair to the mail/ | fidonet folks. |  | Tom | --  | ------------------------------------------------------------------------- | |  Tom Wilson                    |  Duct tape is like the force:  it    | | |  SAS Institute, Inc.           |  has a light side, a dark side, and  | | |  sasctw@duckhead.unx.sas.com   |  and it holds the universe together. | | ------------------------------------------------------------------------- |  |  | 
+------------------------------------------------------------
+[1992-09-22T06:30:43+00:00] [stewart@wimsey.bc.ca (Jim Stewart)] [Another no vote.  For all of the good reasons already mentioned.
+
+js  who_gets_mail_but_not_hews_at_work
+
+
+
+]
+MID: BuyvF8.GC6@wimsey.bc.ca
+SUBJ: Re: RFD: comp.os.linux split
+BODY: Another no vote.  For all of the good reasons already mentioned. |  | js  who_gets_mail_but_not_hews_at_work |  |  |  | 
+------------------------------------------------------------
+[1992-09-25T06:49:22+00:00] [pauls@css.itd.umich.edu (Paul Southworth)] [
+Not in any way specifically replying to the previous poster, but I
+would like this thread to end now please.  It is a pure waste of
+time and bandwidth, with no productive energy coming out of it.
+
+Just drop it.
+
+
+
+]
+MID: 1992Sep25.064922.3194@terminator.cc.umich.edu
+SUBJ: Re: bsd386 vs linux
+BODY:  | Not in any way specifically replying to the previous poster, but I | would like this thread to end now please.  It is a pure waste of | time and bandwidth, with no productive energy coming out of it. |  | Just drop it. |  |  |  | 
+------------------------------------------------------------
+[1992-09-26T14:46:52+00:00] [pat@sleepy.UUCP (Pat Eyler   )] [I am including an interesting challenge that was made to the linux community.
+It seems to map rather well to 386BSD.  I'm certainly not the one to address 
+this, but I'd sure like to see an article on both OSes.
+
+------begin included stuff------
+ Linus and you Gentlemen:
+ 
+ I have recently read an article in the Oct. issue of UnixWorld with the
+ title of "The PC Unix Explosion".  Somewhat troubled by  the neglect of
+ non-commercial  packages  such  as  linux in  that  article and  by  the
+ implication that such packages might be inferior to commercial packages,
+ I sent a letter to the editor.
+ 
+ Rik Farrow's response to my letter is enclosed in the following.
+ 
+ He practically challenges me and other linux afficionados to put forward
+ an article presenting linux, its installation, etc. As I am just a user,
+ I prefer to let the real authors and contributors speak.
+ 
+ In my opinion, it could be a real opportunity to present linux in a very
+ popular magazine and give it the exposure it deserves. Anyone to take up
+ the challenge?? 
+ 
+ 
+ Marius Hancu (hancu@crim.ca)
+ 
+ P. S. Rik's answer follows.
+ 
+ =======================================================================
+ Marius:
+ 
+ -----
+ 	Your letter seemed to beg an immediate response.  My responsees
+ are indented one tab.
+ 
+ -----
+ It really seems that you have a crass industry bias. 
+ -----
+ 	Actually, we chose a commerical bias.  Not everybody wants source.
+ 	I am currently attempting to determine what percentage of our
+ 	readership has EVER built public domain software.  I hoping a
+ 	large percentage does, but I have no proof.
+ 
+ In the PC Unix Explosion, you failed to really make a  fair presentation
+ of the linux and 386BSD, the  best free Unixes.   I have installed linux
+ on a  386PC and found this  is the best choice for  a  person who is not
+ willing  to pay  the 120O$ of SCO. It  offers  all the  features and the
+ advantage  of having an  enthusiatic creation/support team all over  the
+ world.  It definitely  has the best compilers  and  tools from the  Free
+ Software Foundation  (gcc, g++, bison, gmake, etc.),  X windows  (with a
+ reconfigurable window  manager able to emulate  twm, olwm and mwm), etc.
+ All the  code  (including source   code), manuals, are    obtainable  by
+ anonymous ftp for free.  You are also wrong in terms of price figures: a
+ fully functional Unix PC can be obtained for something in  the  range of
+ 1000US$, should  the  user be  clever enough to  use   an 386 PC  from a
+ no-name manufacturer and linux.
+ -----
+ 	Well, on the cost issue, you could get a pretty decent starter
+ 	system, with UNIX installed, for $2519.90 US from Dell.  This
+ 	comes with 486 running at 25 Mhz, Super VGA, 120 MB disk and
+ 	8 MB memory (and a mouse).  Now I don't think that *you* would
+ 	want this system, but for someone with little or NO UNIX experience,
+ 	this might be a LOT better than a source system.  And how do you
+ 	think someone with no UNIX experience is going to get a network
+ 	connection, know how to use ftp, and build their own UNIX system?
+ 
+ One only really needs some DOS experience to install it.
+ -----
+ 	Having no DOS experience, I have managed to install UNIX on DOS
+ 	boxes with only a little hair pulling, around fdisk partitioning
+ 	and telling the PC PROM about my hardware.  But unless you get
+ 	a pre-installed UNIX system, you always have to do that.
+ 
+ 
+ You should provide  a  fair service to your  readers  by indicating  the
+ appropriate newsgroup about  linux, comp.os.linux, and one  of the  main
+ ftp locations,  tsx-11.mit.edu,  directory pub/linux,    on which     an
+ anonymous ftp can be performed to get all the code.
+ 
+ I would really like you to correct this major omission by including asap
+ a full article  on the free Unixes,  including  a feature interview with
+ its author, Linus Torvalds from Finland (torvalds@kruuna.helsinki.fi). A
+ large segment of your readership wants  to install Unix at home  and you
+ simply do not provide the best choice and information. It's a mistake as
+ big as neglecting the Mac  market in  favor of  PCs. Thousands of people
+ all over the world are already using linux.
+ 
+ -----
+ 	I would like to invite you to put your words into action.  I
+ 	suggest that you submit a proposal for a tutorial on obtaining,
+ 	building, and installing linux or 386BSD.  If you are not interest-
+ 	ed, perhaps you can find someone else that can do this.  Remember
+ 	that you are limited to 3000 words of text and 200 lines of examples.
+ 	The proposal should be done first, essentially as an outline of
+ 	the proposed article.  Published authors receive a $250 US 
+ 	honorarium and recognition from their peers for being able to
+ 	write about an important topic.
+ 
+ 	I am quite serious about this.  I simply drew the line arbitrarily
+ 	at commercially available PC UNIX versions with a least some
+ 	support available, and no special features (such as realtime,
+ 	or only supported by Macs, like Mach10). 
+ 
+ Rik Farrow
+ Technical Editor
+ UNIXWorld Magazine
+ 
+ Reply-to: rik@uworld.com
+ 
+ 
+
+
+]
+MID: 353@sleepy.UUCP
+SUBJ: linux, 386BSD, and free UN*X systems
+BODY: I am including an interesting challenge that was made to the linux community. | It seems to map rather well to 386BSD.  I'm certainly not the one to address  | this, but I'd sure like to see an article on both OSes. |  | ------begin included stuff------ |  Linus and you Gentlemen: |   |  I have recently read an article in the Oct. issue of UnixWorld with the |  title of "The PC Unix Explosion".  Somewhat troubled by  the neglect of |  non-commercial  packages  such  as  linux in  that  article and  by  the |  implication that such packages might be inferior to commercial packages, |  I sent a letter to the editor. | 
+------------------------------------------------------------
+[1992-10-01T04:45:04+00:00] [Bill.Viggers@comp.vuw.ac.nz (Bill Viggers)] [
+
+	Okay, somewhere out there, I take it there is a nice
+	comparasion between Linux and 386BSD.
+
+	In paticular I'm interested in the space requiriments,
+	and the tape drives that they support.
+	Also the space taken up by an Xinterface, and which
+	video cards are supported by the various X's.
+	And of course anything else that people may have to 
+	add about the virtues of their choice :-)
+
+Bill
+
+
+]
+MID: BvFEJ4.I67@comp.vuw.ac.nz
+SUBJ: 386BSD vs Linux
+BODY:  |  | 	Okay, somewhere out there, I take it there is a nice | 	comparasion between Linux and 386BSD. |  | 	In paticular I'm interested in the space requiriments, | 	and the tape drives that they support. | 	Also the space taken up by an Xinterface, and which | 	video cards are supported by the various X's. | 	And of course anything else that people may have to  | 	add about the virtues of their choice :-) |  | Bill |  |  | 
+------------------------------------------------------------
+[1992-10-02T22:41:18+00:00] [peter@ferranti.com (peter da silva)] [Do 386BSD or Linux support SCSI devices with multiple units? I am looking at
+a cheap drive array consisting of 4 ESDI disk drives (Miniscribe 9380E or
+equivalent) on a single SCSI-bus ESDI controller. The drives are, so far
+as I can tell, unit 0 through unit 4. I would like to use these from a SCSI
+controller.
+-- 
+Peter da Silva                                          `-_-'
+Ferranti Intl. Ctls. Corp.                               'U` 
+Sugar Land, TX  77487-5012
++1 713 274 5180                           Heb jij vandaag je wolf al geaaid ?
+
+
+]
+MID: id.JHRT.WP6@ferranti.com
+SUBJ: 386BSD and Linux SCSI device drivers.
+BODY: Do 386BSD or Linux support SCSI devices with multiple units? I am looking at | a cheap drive array consisting of 4 ESDI disk drives (Miniscribe 9380E or | equivalent) on a single SCSI-bus ESDI controller. The drives are, so far | as I can tell, unit 0 through unit 4. I would like to use these from a SCSI | controller. | --  | Peter da Silva                                          `-_-' | Ferranti Intl. Ctls. Corp.                               'U`  | Sugar Land, TX  77487-5012 | +1 713 274 5180                           Heb jij vandaag je wolf al geaaid ? |  |  | 
+------------------------------------------------------------
+[1992-10-03T05:04:56+00:00] [julian@tfs.com (Julian Elischer)] [In article <id.JHRT.WP6@ferranti.com> peter@ferranti.com (peter da silva) writes:
+>Do 386BSD or Linux support SCSI devices with multiple units? I am looking at
+>a cheap drive array consisting of 4 ESDI disk drives (Miniscribe 9380E or
+>equivalent) on a single SCSI-bus ESDI controller. The drives are, so far
+>as I can tell, unit 0 through unit 4. I would like to use these from a SCSI
+>controller.
+>-- 
+The new scsi system I just released the beta3 set for does allow multiple lu
+disks
+e.g an aha4000 with 2 scsi disks.
+
+I have not tested this on disks of course because I don't HAVE one
+but it should work. I have tested it on a few devices
+we have here that DO have multiple lu's and it works fine.
+
+(it does assume that the first lu (lu0) has a device on it
+otherwise it will just skip on to the next target without checking the 
+other LUs. (I just added that bit to speed things up in probe.. it USED to 
+check all LUs on ALL targets.)
+
+e.g.
+sd0 could be aha0: target 1: lu 0
+sd1 could be aha0: target 1: lu 1
+sd2 could be aha1: target 2: lu 0
+sd3 could be bt0: target 3: lu 0
+sd5 could be ahb0: target 1: lu 0
+
+aha = aha1542x
+bt = bustek 742a (or 747 I think)
+ahb = aha1742
+
+
+
+
++----------------------------------+       ______ _  __
+|   __--_|\  Julian Elischer       |       \     U \/ / On assignment
+|  /       \ julian@tfs.com        +------>x   USA    \ in a very strange
+| (   OZ    ) 2118 Milvia st. Berkeley CA. \___   ___ | country !
++- X_.---._/  USA+(510) 704-3137(wk)           \_/   \\            
+          v
+
+
+
+]
+MID: 1992Oct3.050456.15329@tfs.com
+SUBJ: Re: 386BSD and Linux SCSI device drivers.
+BODY: In article <id.JHRT.WP6@ferranti.com> peter@ferranti.com (peter da silva) writes: | >Do 386BSD or Linux support SCSI devices with multiple units? I am looking at | >a cheap drive array consisting of 4 ESDI disk drives (Miniscribe 9380E or | >equivalent) on a single SCSI-bus ESDI controller. The drives are, so far | >as I can tell, unit 0 through unit 4. I would like to use these from a SCSI | >controller. | >--  | The new scsi system I just released the beta3 set for does allow multiple lu | disks | e.g an aha4000 with 2 scsi disks. |  | I have not tested this on disks of course because I don't HAVE one | but it shou
+------------------------------------------------------------
+[1992-10-07T16:44:02+00:00] [fink@et.msc.edu (Paul Fink)] [
+I think it might be more appropriate for linux distribution to be done
+by a user group rather than a for profit company.
+
+The only user group I belonged to was a Mac group back when Macs were new.
+and part of its function was distribution of PD software on floppies.
+
+If we could get a Linux user group going in a community with sufficient
+resources they could handle making a set of master floppies and
+arranging for bulk copying.
+
+I have not heard of any Linux groups but I would be glad to help organize
+one.
+
+Paul
+
+
+]
+MID: 1992Oct7.164402.29427@uc.msc.edu
+SUBJ: distributing linux on floppies
+BODY:  | I think it might be more appropriate for linux distribution to be done | by a user group rather than a for profit company. |  | The only user group I belonged to was a Mac group back when Macs were new. | and part of its function was distribution of PD software on floppies. |  | If we could get a Linux user group going in a community with sufficient | resources they could handle making a set of master floppies and | arranging for bulk copying. |  | I have not heard of any Linux groups but I would be glad to help organize | one. |  | Paul |  |  | 
+------------------------------------------------------------
+[1992-10-08T10:00:55+00:00] [adrian@ibmpcug.co.uk (Superuser)] [In article <1992Oct7.164402.29427@uc.msc.edu> fink@et.msc.edu (Paul Fink) writes:
+>
+>I think it might be more appropriate for linux distribution to be done
+>by a user group rather than a for profit company.
+>
+
+Well, being the systems manager of the IBM PC User Group in Britain,
+I guess I could do it. Could some kind soul out there tell me what
+they would expect from such a distribution. (i.e. number of disks,
+where I can get the images from, etc.)
+
+This User Group charges 4 UKP per disk normally. Add on top of that
+VAT (so we dont have to muck around with export charges) at 17.5% and
+postage and packing (i.e. if you are abroad, call for a price first),
+
+There is a special offer for 386BSD (since it arrives on 40 3.5" disks!)
+of 50 pounds + VAT + postage.
+
+Postage is free within the Uk.
+
+Adrian
+-- 
+--------------------------------------------------------------------------
+Adrian Hall					Connect Systems Manager
+A.Hall@ibmpcug.co.uk				The IBM PC User Group
+Tel: +44 81 863 1191				Harrow, London, UK
+
+
+]
+MID: Bvsrtq.8z7@ibmpcug.co.uk
+SUBJ: Re: distributing linux on floppies
+BODY: In article <1992Oct7.164402.29427@uc.msc.edu> fink@et.msc.edu (Paul Fink) writes: | > | >I think it might be more appropriate for linux distribution to be done | >by a user group rather than a for profit company. | > |  | Well, being the systems manager of the IBM PC User Group in Britain, | I guess I could do it. Could some kind soul out there tell me what | they would expect from such a distribution. (i.e. number of disks, | where I can get the images from, etc.) |  | This User Group charges 4 UKP per disk normally. Add on top of that | VAT (so we dont have to muck around with export charges) at 17.5% and | postage a
+------------------------------------------------------------
+[1992-10-09T01:02:52+00:00] [gsh7w@fermi.clas.Virginia.EDU (Greg Hennessy)] [terry@cs.weber.edu writes:
+#*Not* the sale; *only* the distribution, and *only* for a single markup
+#from origin (Ie: use of a multimarkup distribution channel is *not*
+#allowed, in that it involves more than one fee).
+
+The GPL no-where says that different people cannot impose their own
+fees. 
+
+#The *only* way to sell software you don't hold title to is to mark it up
+#or add value... GPL eliminates the middleman, or at least the profit
+#motive which causes a middleman to be involved.  The result is no access
+#to existing distribution channels.
+
+The GPL does not forbid you from making a profit on "selling" GNU
+code. Middlemen can make as much profit as they want.
+
+You seem to be spreading FUD (fear, uncertainty, doubt). Are you doing
+it intentionally?
+
+--
+-Greg Hennessy, University of Virginia
+ USPS Mail:     Astronomy Department, Charlottesville, VA 22903-2475 USA
+ Internet:      gsh7w@virginia.edu  
+ UUCP:		...!uunet!virginia!gsh7w
+
+
+]
+MID: 1992Oct9.010252.8133@murdoch.acc.Virginia.EDU
+SUBJ: Re: distributing linux on floppies
+BODY: terry@cs.weber.edu writes: | #*Not* the sale; *only* the distribution, and *only* for a single markup | #from origin (Ie: use of a multimarkup distribution channel is *not* | #allowed, in that it involves more than one fee). |  | The GPL no-where says that different people cannot impose their own | fees.  |  | #The *only* way to sell software you don't hold title to is to mark it up | #or add value... GPL eliminates the middleman, or at least the profit | #motive which causes a middleman to be involved.  The result is no access | #to existing distribution channels. |  | The GPL does not forbid you from making a profit 
+------------------------------------------------------------
+[1992-10-09T02:31:37+00:00] [eric@tantalus.nrl.navy.mil (Eric Youngdale)] [In article <1992Oct9.001607.7471@fcom.cc.utah.edu> terry@cs.weber.edu (A Wizard of Earth C) writes:
+>In article <1b27slINNj2f@usenet.INS.CWRU.Edu> edguer@ces.cwru.edu (Aydin Edguer) writes:
+>>In article <1992Oct8.200527.1567@fcom.cc.utah.edu> terry@icarus.weber.edu writes:
+>>>In particular, the last sentence, "You may charge a fee for the physical
+>>>act of transferring a copy" prevents centralized distribution; this is
+>>>because only the distributor may make money; no money may be made from
+>>>at the retail outlet, unless the retail outlet provides direct support
+>>>or copy production facilities.  The only other alternative is that the
+>>>company producing the copies pays the retailer per copy sold.  This is
+>>>illegal in the US, and, I suspect, elsewhere (it's called a "kickback").
+>>
+>>Excuse me, but where do you get your interpretation from?
+>
+>By choosing a  definition of "transfer" which does not equate to a change
+>in posession or ownership.  The interpretation is too subjective.  In
+>addition, there is a difference between one fee and several fees.
+>
+>>When the distributer sells a copy of software covered by the GPL to a
+>>retailer, they are transferring a copy.  When the retailer sells a copy
+>>of software covered by the GPL to a customer, they are transferring a
+>>copy.  Money can be made from the sale and distribution of software
+>>covered by the GPL.
+>
+>*Not* the sale; *only* the distribution, and *only* for a single markup
+>from origin (Ie: use of a multimarkup distribution channel is *not*
+>allowed, in that it involves more than one fee).
+
+	I do not see how you reach this conclusion.  Could you please explain
+where it says that a multimarkup distribution channel is not allowed?
+
+	If this were the case, then I could not load GPL software on a BBS that
+had a charge for connect time if the software had come from a tape that I had
+purchased, but it would be permissible if I had downloaded it via ftp (provided
+that I did not have to pay for the ftp connection).
+
+	Also, I think you are still missing the distinction between
+distributing binaries and distributing source code.  There is no language in
+section 3 that limits the markup or profit for binary distributions.  You just
+have to make the source code available for a nominal distribution fee.
+
+	Also, I see no reason that the retailer needs to worry about the source
+code distribution, since the person who puts together the binaries should be
+the responsible party.
+
+>Which requires an escrow arrangement, because many dealers can not guarantee
+>they will be in business or under the same management in 3 years.  A dealer
+>is pretty stupid if he buys into this, for obvious reasons.
+
+	If I were a dealer, I would take a more pragmatic approach.  I would
+figure that if I went out of business, the users would be screwed, and there
+would not be a heck of a lot that anyone could do about it.  What is the worst
+that could happen?  Someone could sue a bankrupt company??
+
+>Barring the fact that I hold a copyright on the "3d glasses" and related
+>materials, and that they can *only* distribute the software itself, this
+>is yet another reason a dealer and distributor wouldn't carry GPL'ed
+>software: No margin after a user group member buys the first copy.  What
+
+	The very same thing happens with copyrighted software.  I have seen
+estimates that only 20% of software is actually paid for, and the rest is
+pirate copies.  Everyone knows that it goes on, and nearly everyone does it.
+For example, have you noticed how many Lotus books there are in bookstores?
+Why would anyone who bought Lotus need an additional book?
+
+	The other thing is that a nice manual will make it worth it for someone
+to buy the package even after they have the binaries, and this is something
+that you *do* have a copyright on.
+
+>is a distributor or dealers incentive for carring a product he's going
+>to sell one copy of, and that will compete with products the dealer and
+>distributor will make a reasonable margin on?  Again, GPL software is
+>cut off from normal distribution channels.
+
+	I think the main thing that cuts the GPL software out of normal
+channels is the fact that most distributors are unfamiliar with GPL types
+of licenses, and there are a lot of misconceptions about what GPL means, and
+what is allowed under GPL.
+
+-Eric
+-- 
+Eric Youngdale
+
+
+]
+MID: 3933@ra.nrl.navy.mil
+SUBJ: Re: distributing linux on floppies
+BODY: In article <1992Oct9.001607.7471@fcom.cc.utah.edu> terry@cs.weber.edu (A Wizard of Earth C) writes: | >In article <1b27slINNj2f@usenet.INS.CWRU.Edu> edguer@ces.cwru.edu (Aydin Edguer) writes: | >>In article <1992Oct8.200527.1567@fcom.cc.utah.edu> terry@icarus.weber.edu writes: | >>>In particular, the last sentence, "You may charge a fee for the physical | >>>act of transferring a copy" prevents centralized distribution; this is | >>>because only the distributor may make money; no money may be made from | >>>at the retail outlet, unless the retail outlet provides direct support | >>>or copy production facili
+------------------------------------------------------------
+[1992-10-09T06:44:18+00:00] [terry@cs.weber.edu (A Wizard of Earth C)] [Look, I don't want to deal with the religious war any more, so I won't.
+
+1)	Someone asked why people weren't selling 386BSD and Linux for $50.
+
+2)	I did a simple risk-assessment and materials/labor costing.
+
+3)	One tiny element of risk was deemed to be the wording of GPL with
+	regard to the putative publisher using the standard software
+	distribution channels.
+
+4)	This was condemnded as an attack on FSF, one of many organizations
+	distributing under GPL, and by no means the only one.
+
+5)	This was also condemned this as an attack on the GPL concept.
+
+6)	Individuals demanded I justify why I assigned a risk to GPL distributed
+	software.
+
+7)	I justified the assesment based on the somewhat unclear wording of
+	several sections of the GPL, and suggested a possible replacement,
+	and went on to clarify what a real lawyer (as opposed to a net lawyer)
+	found lacking from the perspective of potential distributor.  At no
+	time did I attack the spirit of the GPL, only the wording.
+
+8)	No doubt the software authors would agree to the wording changes if
+	contacted personally for distribution priviledges, since they apply
+	to clarification of the spirit of the GPL rather than to a change in
+	it.
+
+I believe I correctly identified the price range the materials and manufacturing
+would fall in.
+
+I also believe I identified the majority of risks to be considered from a
+*business perspective*, even the very small one of misinterpretation of the
+GPL; as I have stated before, this risk is eliminated by componenting the
+software and not charging for it at all, or by strengthening the wording of
+the GPL to better reflect it's spirit, leaving no room for any adverse
+interpretations.  Since the original authors still own code under GPL, there
+is nothing preventing a seperate negotiation for distribution rights.
+
+Obviously, the reason companies aren't selling 386BSD right now is the
+greatest risk facing a potential distributor, which we all agree is AT&T.  None
+of us wants to be in BSDI's shoes.  BSDI has bravely accepted this risk and
+the attentive lawsuit as part of the risk of their doing business, and they
+have no doubt priced accordingly.
+
+The idea that GPL licensing on an easily isolated component is preventing the
+sale of 386BSD is laughable, as is whether the end price is of the product on
+CD's is +/- $20, given that the majority of sales wouldn't even be on CD ROM
+if 386BSD follows the Interactive/SCO distribution model, and this cost is
+still below that of a floppy distribution by at least $30.
+
+I personally dislike the GPL, but *not* on the basis of anything I see as an
+unmanageble risk.  Everyone is entitled to their religion; mine simply does not
+include the concept of "copyleft".  I don't believe that this has been brought
+into the discussion when stating what I believe to be a business perspective.
+I have a not inconsiderable amount of experience with day to day operations in
+a small software company, and would probably be taking the same risks BSDI has
+taken if I had their backing and staff.
+
+It's time to stop muddying the real issues with religion and get back on track.
+
+
+					Terry Lambert
+					terry@icarus.weber.edu
+					terry_lambert@novell.com
+---
+Any opinions in this posting are my own and not those of my present
+or previous employers.
+
+
+]
+MID: 1992Oct9.064418.18514@fcom.cc.utah.edu
+SUBJ: Re: distributing linux on floppies
+BODY: Look, I don't want to deal with the religious war any more, so I won't. |  | 1)	Someone asked why people weren't selling 386BSD and Linux for $50. |  | 2)	I did a simple risk-assessment and materials/labor costing. |  | 3)	One tiny element of risk was deemed to be the wording of GPL with | 	regard to the putative publisher using the standard software | 	distribution channels. |  | 4)	This was condemnded as an attack on FSF, one of many organizations | 	distributing under GPL, and by no means the only one. |  | 5)	This was also condemned this as an attack on the GPL concept. |  | 6)	Individuals demanded I justify why I assi
+------------------------------------------------------------
+[1992-10-09T15:50:56+00:00] [jhelberg@nl.oracle.com (Joost Helberg)] [
+adrian@ibmpcug.co.uk (Superuser) writes:
+: In article <1992Oct7.164402.29427@uc.msc.edu> fink@et.msc.edu (Paul Fink) writes:
+: >
+: >I think it might be more appropriate for linux distribution to be done
+: >by a user group rather than a for profit company.
+: >
+: 
+: Well, being the systems manager of the IBM PC User Group in Britain,
+: I guess I could do it. Could some kind soul out there tell me what
+: they would expect from such a distribution. (i.e. number of disks,
+: where I can get the images from, etc.)
+: 
+: This User Group charges 4 UKP per disk normally. Add on top of that
+
+Oops, that is making money, are you a commerial organization?
+
+: VAT (so we dont have to muck around with export charges) at 17.5% and
+: postage and packing (i.e. if you are abroad, call for a price first),
+: 
+: There is a special offer for 386BSD (since it arrives on 40 3.5" disks!)
+: of 50 pounds + VAT + postage.
+: 
+
+We (Hobby Unix Users group) in The Netherlands do the same.
+We charge f1,50 per floppy for members, f2,50 for non-members.
+
+It is very popular (the price is under the normal shop price of a floppy).
+
+And we have a lot of Linux users. We always supply people with a
+version 2 or 3 days behind the releases of Linus.
+
+--  
+   Joost Helberg                                Rijnzathe 6
+   jhelberg@oracle.nl                           NL-3454 PV De Meern
+   jhelberg@nl.oracle.com                       The Netherlands
+
+   Oracle Europe BV                             Product Line Development	
+   Phone: +31 3406 94211                        Fax:   +31 3406 65609
+
+
+]
+MID: 2933@nlsun1.oracle.nl
+SUBJ: Re: distributing linux on floppies
+BODY:  | adrian@ibmpcug.co.uk (Superuser) writes: | : In article <1992Oct7.164402.29427@uc.msc.edu> fink@et.msc.edu (Paul Fink) writes: | : > | : >I think it might be more appropriate for linux distribution to be done | : >by a user group rather than a for profit company. | : > | :  | : Well, being the systems manager of the IBM PC User Group in Britain, | : I guess I could do it. Could some kind soul out there tell me what | : they would expect from such a distribution. (i.e. number of disks, | : where I can get the images from, etc.) | :  | : This User Group charges 4 UKP per disk normally. Add on top of that |  | Oops, that i
+------------------------------------------------------------
+[1992-10-10T08:47:17+00:00] [hpa@casbah.acns.nwu.edu (H. Peter Anvin N9ITP)] [In article <1b27slINNj2f@usenet.INS.CWRU.Edu> of comp.os.linux,
+  edguer@ces.cwru.edu (Aydin Edguer) writes:
+> 
+> When the distributer sells a copy of software covered by the GPL to a
+> retailer, they are transferring a copy.  When the retailer sells a copy
+> of software covered by the GPL to a customer, they are transferring a
+> copy.  Money can be made from the sale and distribution of software
+> covered by the GPL.
+> 
+> The important thing a distributor and retailer must keep in mind is that
+> they must distribute the source code, or provide a method of obtaining
+> the source code for up to three years, and that they cannot limit the
+> redistribution of the software.  If a local user group wants to purchase
+> a copy of the distribution and sell duplicates for less than the retailer
+> or distributor, the retailer or distributor may not stop them from
+> competing.
+> 
+
+M-x armchair-lawyer-mode
+
+]
+MID: 1992Oct10.084717.8243@news.acns.nwu.edu
+SUBJ: Re: distributing linux on floppies
+BODY: In article <1b27slINNj2f@usenet.INS.CWRU.Edu> of comp.os.linux, |   edguer@ces.cwru.edu (Aydin Edguer) writes: | >  | > When the distributer sells a copy of software covered by the GPL to a | > retailer, they are transferring a copy.  When the retailer sells a copy | > of software covered by the GPL to a customer, they are transferring a | > copy.  Money can be made from the sale and distribution of software | > covered by the GPL. | >  | > The important thing a distributor and retailer must keep in mind is that | > they must distribute the source code, or provide a method of obtaining | > the source code for up to
+------------------------------------------------------------
+[1992-10-12T15:29:13+00:00] [lwv26@cas.org (Larry W. Virden)] [
+
+>	The very same thing happens with copyrighted software.  I have seen
+>estimates that only 20% of software is actually paid for, and the rest is
+>pirate copies.  Everyone knows that it goes on, and nearly everyone does it.
+>For example, have you noticed how many Lotus books there are in bookstores?
+>Why would anyone who bought Lotus need an additional book?
+
+Perhaps this is true in some markets - I certainly am not familar with
+many of the micro environments.  But certainly in the Sun workstation 
+environment, we purchase site license agreements which permit the company
+to have any n of m number of employees use a package.  But of course, to
+buy m copies of the doc is outrageous.  So a limited (perhaps n, perhaps
+more) number of doc are purchased and users who want more doc go to the
+book store and buy a book.  I know as well that when I am unhappy with the
+limited doc available for similar packages on my home micro, I have gone
+out and purchased auxilary documentation.
+-- 
+Larry W. Virden                 UUCP: osu-cis!chemabs!lvirden
+Same Mbox: BITNET: lvirden@cas  INET: lvirden@cas.org
+Personal: 674 Falls Place,   Reynoldsburg, OH 43068-1614
+America Online: lvirden@aol.com
+
+
+]
+MID: 1992Oct12.153230.1659@cas.org
+SUBJ: Why buy a Lotus book (Was: Re: distributing linux on floppies)
+BODY:  |  | >	The very same thing happens with copyrighted software.  I have seen | >estimates that only 20% of software is actually paid for, and the rest is | >pirate copies.  Everyone knows that it goes on, and nearly everyone does it. | >For example, have you noticed how many Lotus books there are in bookstores? | >Why would anyone who bought Lotus need an additional book? |  | Perhaps this is true in some markets - I certainly am not familar with | many of the micro environments.  But certainly in the Sun workstation  | environment, we purchase site license agreements which permit the company | to have any n of m nu
+------------------------------------------------------------
+[1992-10-12T17:35:33+00:00] [peter@ferranti.com (peter da silva)] [In article <1992Oct9.001607.7471@fcom.cc.utah.edu> terry@cs.weber.edu (A Wizard of Earth C) writes:
+> is yet another reason a dealer and distributor wouldn't carry GPL'ed
+> software: No margin after a user group member buys the first copy.  What
+> is a distributor or dealers incentive for carring a product he's going
+> to sell one copy of, and that will compete with products the dealer and
+> distributor will make a reasonable margin on?  Again, GPL software is
+> cut off from normal distribution channels.
+
+*THIS* is a valid reason for not carrying the GPL software, though it's
+pretty short-sighted: after all, the user group can get their single copy
+from somewhere else and you lose just as many sales, *plus* the one you
+would have made to the user group.
+
+I know quite a few retail stores, by the way, that will sell you a floppy
+full of freeware for some moderate charge ($5 or so), and I've seen RACKS
+of this stuff at checkout counters.
+-- 
+Peter da Silva                                         `-_-'
+Ferranti Intl. Ctls. Corp.                              'U` 
+Sugar Land, TX  77487-5012           "Heeft u vandaag al uw wolf geknuffeld?"
++1 713 274 5180                       "Tjener, denne ret er stadig levende."
+
+
+]
+MID: id.GS0U.D7F@ferranti.com
+SUBJ: Re: distributing linux on floppies
+BODY: In article <1992Oct9.001607.7471@fcom.cc.utah.edu> terry@cs.weber.edu (A Wizard of Earth C) writes: | > is yet another reason a dealer and distributor wouldn't carry GPL'ed | > software: No margin after a user group member buys the first copy.  What | > is a distributor or dealers incentive for carring a product he's going | > to sell one copy of, and that will compete with products the dealer and | > distributor will make a reasonable margin on?  Again, GPL software is | > cut off from normal distribution channels. |  | *THIS* is a valid reason for not carrying the GPL software, though it's | pretty short-sigh
+------------------------------------------------------------
+[1992-10-14T06:51:06+00:00] [pete@q106fm.uucp (pete cervasio)] [root@fns.gold.sub.org (Peter Bechtold) writes:
+
+> I'm planning to install 386BSD and/or Linux on my 386 system.
+> 
+> All I need is a tape drive for that.
+> 
+> Since I have 2 IDE drives, I would like to by either a
+> QIC-02 drive or a 1542 SCSI controller plus SCSI tape drive.
+> 
+> What would you recommend ?
+> 
+> I need a tape drive with 150 meg's capacity,
+> 250 or 525 wouldn't hurt though :-)
+
+Well, I use Linux and have installed the beta tape driver patches so I
+could use my Wangtek 5150EN drive (QIC36?) and it's working very well.
+I've got my entire Linux filesystem backed up to tape.  With DC6250 tapes,
+it'll do 250 megs just fine!
+
+I am not familiar with the tape support under 386BSD, since I don't have
+the space to run both right now.  :-(
+
+Pete C.
+
++----------------------------------------------------------------------+
+| Pete Cervasio                | pete%q106fm.uucp@wupost.wustl.edu     |
+| I fish, therefore I am.      | pete.cervasio@f1.n2250.z1.fidonet.org |
++----------------------------------------------------------------------+
+|  If you think of C as a preprocessor for your assembler, it makes    |
+|                   just as little sense as before.   (me)             |
++----------------------------------------------------------------------+
+
+
+]
+MID: VVgmsB1w164w@q106fm.uucp
+SUBJ: Re: Which Tape to use with 386BSD and/or Linux ?
+BODY: root@fns.gold.sub.org (Peter Bechtold) writes: |  | > I'm planning to install 386BSD and/or Linux on my 386 system. | >  | > All I need is a tape drive for that. | >  | > Since I have 2 IDE drives, I would like to by either a | > QIC-02 drive or a 1542 SCSI controller plus SCSI tape drive. | >  | > What would you recommend ? | >  | > I need a tape drive with 150 meg's capacity, | > 250 or 525 wouldn't hurt though :-) |  | Well, I use Linux and have installed the beta tape driver patches so I | could use my Wangtek 5150EN drive (QIC36?) and it's working very well. | I've got my entire Linux filesystem backed up to tape.  With
+------------------------------------------------------------
+[1992-10-23T21:57:31+00:00] [paoletti@cps.msu.edu (David R. Paoletti)] [I retrieved the Xlinux.8514 driver hoping to use it under
+386BSD, but the file command does not recognize the server
+program as a valid executable.  Are 386BSD & Linux binaries
+compatible?
+
+Alternately, has anyone worked on getting Kevin Martin's
+Linux 8514 driver compiled under 386BSD?  I'm trying to
+avoid instlling the entire X distribution just to try thus
+out.  If anyone's interested, the driver lives at:
+
+  ftp.cs.unc.edu: /pub/martin
+
+Thanks!
+  Dave Paoletti :)
+
+
+]
+MID: 1992Oct23.215731.13825@msuinfo.cl.msu.edu
+SUBJ: 386BSD <-> Linux binary compatability? (ie: X8514)
+BODY: I retrieved the Xlinux.8514 driver hoping to use it under | 386BSD, but the file command does not recognize the server | program as a valid executable.  Are 386BSD & Linux binaries | compatible? |  | Alternately, has anyone worked on getting Kevin Martin's | Linux 8514 driver compiled under 386BSD?  I'm trying to | avoid instlling the entire X distribution just to try thus | out.  If anyone's interested, the driver lives at: |  |   ftp.cs.unc.edu: /pub/martin |  | Thanks! |   Dave Paoletti :) |  |  | 
+------------------------------------------------------------
+[1992-10-24T03:09:04+00:00] [hasty@netcom.com (Amancio Hasty Jr)] [In article <1992Oct23.215731.13825@msuinfo.cl.msu.edu> paoletti@cps.msu.edu (David R. Paoletti) writes:
+>I retrieved the Xlinux.8514 driver hoping to use it under
+>386BSD, but the file command does not recognize the server
+>program as a valid executable.  Are 386BSD & Linux binaries
+>compatible?
+>
+>Alternately, has anyone worked on getting Kevin Martin's
+>Linux 8514 driver compiled under 386BSD?  I'm trying to
+>avoid instlling the entire X distribution just to try thus
+>out.  If anyone's interested, the driver lives at:
+>
+>  Dave Paoletti :)
+
+I can have your 8514 server ready first thing in the
+morning. Just let me know where I can drop it off.
+And I don't have an 8514/A card so if you are still 
+interested let know . My XS3 server is based upon
+Martin's code.
+
+
+Amancio Hasty
+
+
+]
+MID: 1992Oct24.030904.11007@netcom.com
+SUBJ: Re: 386BSD <-> Linux binary compatability? (ie: X8514)
+BODY: In article <1992Oct23.215731.13825@msuinfo.cl.msu.edu> paoletti@cps.msu.edu (David R. Paoletti) writes: | >I retrieved the Xlinux.8514 driver hoping to use it under | >386BSD, but the file command does not recognize the server | >program as a valid executable.  Are 386BSD & Linux binaries | >compatible? | > | >Alternately, has anyone worked on getting Kevin Martin's | >Linux 8514 driver compiled under 386BSD?  I'm trying to | >avoid instlling the entire X distribution just to try thus | >out.  If anyone's interested, the driver lives at: | > | >  Dave Paoletti :) |  | I can have your 8514 server ready first thing in th
+------------------------------------------------------------
+[1992-10-27T03:34:13+00:00] [lam836@cucs18.cs.cuhk.hk (Lam Lai Yin Savio)] [Can anyone please give me some comments about these two unix? I am going
+to install a unix on my 386DX-33 and don't know which of the two to
+choose? Which is better for beginners like me? Which one gives more
+support to DOS (e.g. DOS emulation, ...)
+Any suggestions appreciated.
+
+	Thanks in advance.
+
+Regards,
+Savio Lam.
+email: lam836@cucs18.cs.cuhk.hk
+
+
+]
+MID: 1992Oct27.033413.2872@cucs5.cs.cuhk.hk
+SUBJ: 386BSD and Linux, which one to choose?
+BODY: Can anyone please give me some comments about these two unix? I am going | to install a unix on my 386DX-33 and don't know which of the two to | choose? Which is better for beginners like me? Which one gives more | support to DOS (e.g. DOS emulation, ...) | Any suggestions appreciated. |  | 	Thanks in advance. |  | Regards, | Savio Lam. | email: lam836@cucs18.cs.cuhk.hk |  |  | 
+------------------------------------------------------------
+[1992-10-28T00:25:58+00:00] [jdb@bitcave.in-berlin.de (Joern D. Busch)] [
+>mpdillon@uuisis.isis.org (Michael Dillon) wrote:
+>>There was some positive response to my recent post about a CD-ROM
+>>containing Linux. Most people agreed about the need for a reasonably
+>>stable version 1.0 and a reliable set of CD-ROM drivers.
+
+Just an idea: did you ever think about contacting some 386bsd activists
+and putting together a CD-ROM containing both Linux and 386bsd ?
+
+Maybe this is a religious issue, but at least there should be no financial
+interests in the way  :-)
+
+cheers,
+	Joern.
+
+
+]
+MID: 1992Oct28.002558.1890@bitcave.in-berlin.de
+SUBJ: Re: Linux on a CD-ROM, joined effort w/386bsd?
+BODY:  | >mpdillon@uuisis.isis.org (Michael Dillon) wrote: | >>There was some positive response to my recent post about a CD-ROM | >>containing Linux. Most people agreed about the need for a reasonably | >>stable version 1.0 and a reliable set of CD-ROM drivers. |  | Just an idea: did you ever think about contacting some 386bsd activists | and putting together a CD-ROM containing both Linux and 386bsd ? |  | Maybe this is a religious issue, but at least there should be no financial | interests in the way  :-) |  | cheers, | 	Joern. |  |  | 
+------------------------------------------------------------
+[1992-10-28T17:31:07+00:00] [eric@tantalus.nrl.navy.mil (Eric Youngdale)] [In article <1992Oct28.002558.1890@bitcave.in-berlin.de> jdb@bitcave.in-berlin.de (Joern D. Busch) writes:
+>
+>>mpdillon@uuisis.isis.org (Michael Dillon) wrote:
+>>>There was some positive response to my recent post about a CD-ROM
+>>>containing Linux. Most people agreed about the need for a reasonably
+>>>stable version 1.0 and a reliable set of CD-ROM drivers.
+>
+>Just an idea: did you ever think about contacting some 386bsd activists
+>and putting together a CD-ROM containing both Linux and 386bsd ?
+
+	Walnut Creek CDROM has expressed an interest in doing just that.  I do
+not know where they are with it right now, however.
+
+-Eric
+-- 
+Eric Youngdale
+
+
+]
+MID: BwuDzv.B04@ra.nrl.navy.mil
+SUBJ: Re: Linux on a CD-ROM, joined effort w/386bsd?
+BODY: In article <1992Oct28.002558.1890@bitcave.in-berlin.de> jdb@bitcave.in-berlin.de (Joern D. Busch) writes: | > | >>mpdillon@uuisis.isis.org (Michael Dillon) wrote: | >>>There was some positive response to my recent post about a CD-ROM | >>>containing Linux. Most people agreed about the need for a reasonably | >>>stable version 1.0 and a reliable set of CD-ROM drivers. | > | >Just an idea: did you ever think about contacting some 386bsd activists | >and putting together a CD-ROM containing both Linux and 386bsd ? |  | 	Walnut Creek CDROM has expressed an interest in doing just that.  I do | not know where they are wi
+------------------------------------------------------------
+[1992-10-29T16:21:36+00:00] [nerd@percival.rain.com (Michael Galassi)] [jdb@bitcave.in-berlin.de (Joern D. Busch) writes:
+
+>Just an idea: did you ever think about contacting some 386bsd activists
+>and putting together a CD-ROM containing both Linux and 386bsd ?
+
+>Maybe this is a religious issue, but at least there should be no financial
+>interests in the way  :-)
+
+Watch it, the pigs at USL (AT&T) will come along and claim they own linux
+if you do that.
+
+-michael
+-- 
+On a scale of 1 to 10 I'd say...  Oh, somewhere in there.
+
+Michael Galassi -- nerd@percival.rain.com
+
+
+]
+MID: Bww5G0.DAB@percy.rain.com
+SUBJ: Re: Linux on a CD-ROM, joined effort w/386bsd?
+BODY: jdb@bitcave.in-berlin.de (Joern D. Busch) writes: |  | >Just an idea: did you ever think about contacting some 386bsd activists | >and putting together a CD-ROM containing both Linux and 386bsd ? |  | >Maybe this is a religious issue, but at least there should be no financial | >interests in the way  :-) |  | Watch it, the pigs at USL (AT&T) will come along and claim they own linux | if you do that. |  | -michael | --  | On a scale of 1 to 10 I'd say...  Oh, somewhere in there. |  | Michael Galassi -- nerd@percival.rain.com |  |  | 
+------------------------------------------------------------
+[1992-10-29T19:11:48+00:00] [hpa@casbah.acns.nwu.edu (H. Peter Anvin N9ITP)] [In article <BwuDzv.B04@ra.nrl.navy.mil> of comp.os.linux,
+  eric@tantalus.nrl.navy.mil (Eric Youngdale) writes:
+> 
+> 	Walnut Creek CDROM has expressed an interest in doing just that.  I do
+> not know where they are with it right now, however.
+> 
+
+I think the consensus was to wait for 1.0 before the CD-ROM is made.  It
+would contain Linux, 386BSD and X11R5 in source and binary form.
+
+	/hpa
+-- 
+INTERNET:  hpa@nwu.edu   TALK:      hpa@casbah.acns.nwu.edu
+BITNET:    HPA@NUACC     IBMNET:    16331@IBMX400
+HAM RADIO: N9ITP         NeXTMAIL:  hpa@lenny.acns.nwu.edu
+"Kissing a smoker is like licking an ashtray."  -- R. Heinlein
+
+
+]
+MID: 1992Oct29.191148.9963@news.acns.nwu.edu
+SUBJ: Re: Linux on a CD-ROM, joined effort w/386bsd?
+BODY: In article <BwuDzv.B04@ra.nrl.navy.mil> of comp.os.linux, |   eric@tantalus.nrl.navy.mil (Eric Youngdale) writes: | >  | > 	Walnut Creek CDROM has expressed an interest in doing just that.  I do | > not know where they are with it right now, however. | >  |  | I think the consensus was to wait for 1.0 before the CD-ROM is made.  It | would contain Linux, 386BSD and X11R5 in source and binary form. |  | 	/hpa | --  | INTERNET:  hpa@nwu.edu   TALK:      hpa@casbah.acns.nwu.edu | BITNET:    HPA@NUACC     IBMNET:    16331@IBMX400 | HAM RADIO: N9ITP         NeXTMAIL:  hpa@lenny.acns.nwu.edu | "Kissing a smoker is like licking a
+------------------------------------------------------------
+[1992-10-30T03:07:23+00:00] [eoahmad@ntuix.ntu.ac.sg (Othman Ahmad)] [H. Peter Anvin N9ITP (hpa@casbah.acns.nwu.edu) wrote:
+: In article <BwuDzv.B04@ra.nrl.navy.mil> of comp.os.linux,
+:   eric@tantalus.nrl.navy.mil (Eric Youngdale) writes:
+: > 
+: > 	Walnut Creek CDROM has expressed an interest in doing just that.  I do
+: > not know where they are with it right now, however.
+: > 
+: 
+: I think the consensus was to wait for 1.0 before the CD-ROM is made.  It
+: would contain Linux, 386BSD and X11R5 in source and binary form.
+: 
+that would be nice if they all can fit into 500 Megabyte. Since the X11 and
+Gnu can only fit onto one CDROM, but these include Sparc binaries as well.
+
+I'm afraid we have to decide which one. 
+I would prefer that the X11 and GNU sources and binaries be included, rather
+than having linux and 386bsd, together and miss some other utilities.
+
+
+
+]
+MID: 1992Oct30.030723.2208@ntuix.ntu.ac.sg
+SUBJ: Re: Linux on a CD-ROM, joined effort w/386bsd?
+BODY: H. Peter Anvin N9ITP (hpa@casbah.acns.nwu.edu) wrote: | : In article <BwuDzv.B04@ra.nrl.navy.mil> of comp.os.linux, | :   eric@tantalus.nrl.navy.mil (Eric Youngdale) writes: | : >  | : > 	Walnut Creek CDROM has expressed an interest in doing just that.  I do | : > not know where they are with it right now, however. | : >  | :  | : I think the consensus was to wait for 1.0 before the CD-ROM is made.  It | : would contain Linux, 386BSD and X11R5 in source and binary form. | :  | that would be nice if they all can fit into 500 Megabyte. Since the X11 and | Gnu can only fit onto one CDROM, but these include Sparc binarie
+------------------------------------------------------------
+[1992-10-31T00:01:17+00:00] [jdb@bitcave.in-berlin.de (Joern D. Busch)] [hpa@casbah.acns.nwu.edu (H. Peter Anvin N9ITP) writes:
+
+>In article <BwuDzv.B04@ra.nrl.navy.mil> of comp.os.linux,
+>  eric@tantalus.nrl.navy.mil (Eric Youngdale) writes:
+>> 
+>> 	Walnut Creek CDROM has expressed an interest in doing just that.  I do
+>> not know where they are with it right now, however.
+>> 
+
+>I think the consensus was to wait for 1.0 before the CD-ROM is made.  It
+>would contain Linux, 386BSD and X11R5 in source and binary form.
+
+How I'd like to see that!  Hopefully it will be in a way that both an
+install from the CD-ROM and a mount for download access will be practical.
+
+And while I'm making suggestions, how about a small donation to the Jolitz
+and Linus, covered by the CD-ROM price?  <soap box..>
+
+cheers,
+	Joern.
+
+
+]
+MID: 1992Oct31.000117.10083@bitcave.in-berlin.de
+SUBJ: Re: Linux on a CD-ROM, joined effort w/386bsd?
+BODY: hpa@casbah.acns.nwu.edu (H. Peter Anvin N9ITP) writes: |  | >In article <BwuDzv.B04@ra.nrl.navy.mil> of comp.os.linux, | >  eric@tantalus.nrl.navy.mil (Eric Youngdale) writes: | >>  | >> 	Walnut Creek CDROM has expressed an interest in doing just that.  I do | >> not know where they are with it right now, however. | >>  |  | >I think the consensus was to wait for 1.0 before the CD-ROM is made.  It | >would contain Linux, 386BSD and X11R5 in source and binary form. |  | How I'd like to see that!  Hopefully it will be in a way that both an | install from the CD-ROM and a mount for download access will be practical. |  | And 
+------------------------------------------------------------
+[1992-10-31T08:43:31+00:00] [raz@socs.uts.edu.au (The Inimitable Raz)] [eoahmad@ntuix.ntu.ac.sg (Othman Ahmad) writes:
+
+>H. Peter Anvin N9ITP (hpa@casbah.acns.nwu.edu) wrote:
+>: In article <BwuDzv.B04@ra.nrl.navy.mil> of comp.os.linux,
+>:   eric@tantalus.nrl.navy.mil (Eric Youngdale) writes:
+>: > 
+>: > 	Walnut Creek CDROM has expressed an interest in doing just that.  I do
+>: > not know where they are with it right now, however.
+>: > 
+>: 
+>: I think the consensus was to wait for 1.0 before the CD-ROM is made.  It
+>: would contain Linux, 386BSD and X11R5 in source and binary form.
+>: 
+>that would be nice if they all can fit into 500 Megabyte. Since the X11 and
+>Gnu can only fit onto one CDROM, but these include Sparc binaries as well.
+
+>I'm afraid we have to decide which one. 
+>I would prefer that the X11 and GNU sources and binaries be included, rather
+>than having linux and 386bsd, together and miss some other utilities.
+
+Pardon my stupidity - but just how large are these ditributions?
+Surely they could ALL be fitted into 500M with room to spare?
+
+
+--
+Bye for now.
+         - Raz           
+
+raz@socs.uts.edu.au   (Roland Turner)   (OH) 61 2 906 4681
+
+
+]
+MID: raz.720521011@syzygy
+SUBJ: Re: Linux on a CD-ROM, joined effort w/386bsd?
+BODY: eoahmad@ntuix.ntu.ac.sg (Othman Ahmad) writes: |  | >H. Peter Anvin N9ITP (hpa@casbah.acns.nwu.edu) wrote: | >: In article <BwuDzv.B04@ra.nrl.navy.mil> of comp.os.linux, | >:   eric@tantalus.nrl.navy.mil (Eric Youngdale) writes: | >: >  | >: > 	Walnut Creek CDROM has expressed an interest in doing just that.  I do | >: > not know where they are with it right now, however. | >: >  | >:  | >: I think the consensus was to wait for 1.0 before the CD-ROM is made.  It | >: would contain Linux, 386BSD and X11R5 in source and binary form. | >:  | >that would be nice if they all can fit into 500 Megabyte. Since the X11 and | >Gnu
+------------------------------------------------------------
+[1992-11-03T01:33:38+00:00] [glenw@remus.rutgers.edu (Glenn Wasserman)] [As the subject heading says, which is it? Which is the better,more
+supported operating system (I know I'm going to get a lot on this
+one!)
+
+I have Linux running on my machine now, and I'm just wondering if this 
+is the right choice. Is 386BSD more stable? Is there any reason to 
+switch?
+
+Just wonderin'.
+
+-Glenn
+
+-- 
+*	Glenn Wasserman - Rutgers University - Computer Science  	*
+*************************************************************************
+*	glenw@remus.rutgers.edu	*	glenw@gandalf.rutgers.edu	*
+*************************************************************************
+
+
+]
+MID: Nov.2.20.33.38.1992.18690@remus.rutgers.edu
+SUBJ: 386BSD or LINUX?
+BODY: As the subject heading says, which is it? Which is the better,more | supported operating system (I know I'm going to get a lot on this | one!) |  | I have Linux running on my machine now, and I'm just wondering if this  | is the right choice. Is 386BSD more stable? Is there any reason to  | switch? |  | Just wonderin'. |  | -Glenn |  | --  | *	Glenn Wasserman - Rutgers University - Computer Science  	* | ************************************************************************* | *	glenw@remus.rutgers.edu	*	glenw@gandalf.rutgers.edu	* | ************************************************************************* |  |  | 
+------------------------------------------------------------
+[1992-11-03T17:28:46+00:00] [dsc3pzp@nmrdc1.nmrdc.nnmc.navy.mil (Philip Perucci)] [In article <Nov.2.20.33.38.1992.18690@remus.rutgers.edu> glenw@remus.rutgers.edu (Glenn Wasserman) writes:
+>As the subject heading says, which is it? Which is the better,more
+>supported operating system (I know I'm going to get a lot on this
+>one!)
+>
+>I have Linux running on my machine now, and I'm just wondering if this 
+>is the right choice. Is 386BSD more stable? Is there any reason to 
+>switch?
+>
+
+I too would like feedback re: Linux vs. 386BSD.  
+
+Having used Linux for a couple of weeks, and 386BSD for about 2 days clearly
+does not make me an expert, but 386BSD seems cleaner than Linux for 1.  Of
+course the Linux FAQ mentioned something about 386BSD 0.0's nasty tendancy
+to trash hard-disks...
+
+The reason I am moving to 386BSD (assuming I can run w/3Mb & 40Mb HD - don't
+laugh) is the my PERCEIVED view of the kernel designs.  386BSD seems, at 
+first glance to be a micro-kernel OS, whereas Linux is more "monolithic".
+It would seem compiling the kernel is more frequently needed to configure
+Linux.  I would especially appreciate any feedback regarding this point!
+While my toy PC can't do much now, I do anticipate upgrade, and I would
+like to minimize administration/configuration issues.  I happily noted this
+design goal in the Installation Notes for 386BSD!!!
+
+Please respond via USENET.  I keep switching hosts, our domain is about
+to change, ...
+
+--
+phil perucci
+dsc3pzp@nmdsc40.med.navy.mil
+#include <std.disclaimer>
+
+
+]
+MID: 1992Nov3.172846.23739@nmrdc1.nmrdc.nnmc.navy.mil
+SUBJ: Re: 386BSD or LINUX?
+BODY: In article <Nov.2.20.33.38.1992.18690@remus.rutgers.edu> glenw@remus.rutgers.edu (Glenn Wasserman) writes: | >As the subject heading says, which is it? Which is the better,more | >supported operating system (I know I'm going to get a lot on this | >one!) | > | >I have Linux running on my machine now, and I'm just wondering if this  | >is the right choice. Is 386BSD more stable? Is there any reason to  | >switch? | > |  | I too would like feedback re: Linux vs. 386BSD.   |  | Having used Linux for a couple of weeks, and 386BSD for about 2 days clearly | does not make me an expert, but 386BSD seems cleaner than Linux for
+------------------------------------------------------------
+[1992-11-04T05:21:06+00:00] [wjin@cs.uh.edu (W. Woody Jin)] [In article <Nov.2.20.33.38.1992.18690@remus.rutgers.edu> glenw@remus.rutgers.edu (Glenn Wasserman) writes:
+>As the subject heading says, which is it? Which is the better,more
+>supported operating system (I know I'm going to get a lot on this
+>one!)
+>
+>I have Linux running on my machine now, and I'm just wondering if this 
+>is the right choice. Is 386BSD more stable? 
+
+Version numbers say it : Linux 0.98  <--> 386BSD 0.1 p58.
+
+I have 386BSD 0.1p58 running (not properly). Still, 'ps -aux' does not
+work properly (reports 'nlist ... so so..' and all the CPU usages are
+0 % ).  Booting takes forever loop, fsck reporting some error messages
+(So, I had to type ^C and did fsck manually - this was a new problem
+after I did patches).  I still cannot do 'mwrite' nor downloading or
+uploading using modem (tip, rz, and sz as described in INSTALL.NOTES).  
+It just simply does not work (using given binaries, source codes, and 
+58 patchkits -  I think I have to ask around how other people are doing).
+
+Installing DOS and 386BSD in a single IDE drive is an extreme headache,
+which I don't want to suggest you to try unless you have lots of free time 
+or nothing to do.  I could finally do it after spending a whole day.
+But there is something mysterious.  Whenever I format C: drive (in DOS)
+it says "Trying to recover allocation unit xxxxx".
+
+>Is there any reason to switch?
+
+Not now, unless you are extremely intrigued (like me).
+I would not recommend current 386BSD to an average UNIX user who is busy
+doing his regular jobs.
+But when you hear 386bsd is stable,  I am sure that 386bsd will be THE unix
+system on 386/486.  And I am eagerly waiting for 386BSD 0.2.
+
+
+-- 
+____   ____  ____ ____________________________________ (___) _________________
+|  |   |  |  |  |  W. Woody Jin (wjin@cs.uh.edu)       (o o)      Moo.... 
+|  |   |  |__|  |  PhD Student. Research Asst.  o=======\ /  I'm  a Cow Lover.
+|  |   |        |  Dept. of Computer Science   / |     ||O   My wife  was born
+\  |---|  |--|  |  University of Houston      `  ||'---||    in Cow year. Mooo
+ \____/|__|  |__| _______________________________^^    ^^_____________________
+
+
+
+]
+MID: 1992Nov4.052106.29266@menudo.uh.edu
+SUBJ: Re: 386BSD or LINUX?
+BODY: In article <Nov.2.20.33.38.1992.18690@remus.rutgers.edu> glenw@remus.rutgers.edu (Glenn Wasserman) writes: | >As the subject heading says, which is it? Which is the better,more | >supported operating system (I know I'm going to get a lot on this | >one!) | > | >I have Linux running on my machine now, and I'm just wondering if this  | >is the right choice. Is 386BSD more stable?  |  | Version numbers say it : Linux 0.98  <--> 386BSD 0.1 p58. |  | I have 386BSD 0.1p58 running (not properly). Still, 'ps -aux' does not | work properly (reports 'nlist ... so so..' and all the CPU usages are | 0 % ).  Booting takes forever
+------------------------------------------------------------
+[1992-11-04T10:03:17+00:00] [eoahmad@ntuix.ntu.ac.sg (Othman Ahmad)] [W. Woody Jin (wjin@cs.uh.edu) wrote:
+: 
+: Version numbers say it : Linux 0.98  <--> 386BSD 0.1 p58.
+
+I do not know about this. I'm using terry's collection of patches, which
+is arranged in a very convenient way of applying patches. 
+	You can reverse your patch. You can install selected patches. Linux
+should take a look at this package but terry has not made the source codes
+freely available.
+
+: 
+: I have 386BSD 0.1p58 running (not properly). Still, 'ps -aux' does not
+: work properly (reports 'nlist ... so so..' and all the CPU usages are
+: 0 % ).  Booting takes forever loop, fsck reporting some error messages
+: (So, I had to type ^C and did fsck manually - this was a new problem
+: after I did patches).  I still cannot do 'mwrite' nor downloading or
+: uploading using modem (tip, rz, and sz as described in INSTALL.NOTES).  
+: It just simply does not work (using given binaries, source codes, and 
+: 58 patchkits -  I think I have to ask around how other people are doing).
+I believe there are patches for all those problems. One of them is to use
+the tip from tiny bsd diskete.
+
+: 
+: Installing DOS and 386BSD in a single IDE drive is an extreme headache,
+: which I don't want to suggest you to try unless you have lots of free time 
+I don't think it is true any more. It is just a matter of doing it the 
+right way. 386bsd has not got a partition editor for itself unlike minix
+fdisk, so must use norton utilites.
+	The installation procedur had been posted. A new software also
+written running on dos, called ide_conf which can tell the native geometry
+of an IDE hard-disk so that the BIOS can be programmed with that geometry
+readings.
+
+: Not now, unless you are extremely intrigued (like me).
+: I would not recommend current 386BSD to an average UNIX user who is busy
+: doing his regular jobs.
+
+I have installed a lot of 386bsd systems with little problem. I've just got
+into problem with a new machine with 5Mbyte of RAM, but this machine fails to
+run even under DOS from Hard-disk(running himem), with parity check enabled.
+	The cache is only for 4 Mbyte RAM. Surprisingly the same chipset
+OPTI 486 can run 386bsd with little problem.
+
+: But when you hear 386bsd is stable,  I am sure that 386bsd will be THE unix
+: system on 386/486.  And I am eagerly waiting for 386BSD 0.2.
+
+--
+Othman bin Ahmad, School of EEE,
+Nanyang Technological University, Singapore 2263.
+Internet Email: eoahmad@ntuix.ntu.ac.sg
+Bitnet Email: eoahmad@ntuvax.bitnet
+
+
+
+]
+MID: 1992Nov4.100317.25447@ntuix.ntu.ac.sg
+SUBJ: Re: 386BSD or LINUX?
+BODY: W. Woody Jin (wjin@cs.uh.edu) wrote: | :  | : Version numbers say it : Linux 0.98  <--> 386BSD 0.1 p58. |  | I do not know about this. I'm using terry's collection of patches, which | is arranged in a very convenient way of applying patches.  | 	You can reverse your patch. You can install selected patches. Linux | should take a look at this package but terry has not made the source codes | freely available. |  | :  | : I have 386BSD 0.1p58 running (not properly). Still, 'ps -aux' does not | : work properly (reports 'nlist ... so so..' and all the CPU usages are | : 0 % ).  Booting takes forever loop, fsck reporting som
+------------------------------------------------------------
+[1992-11-04T11:17:32+00:00] [torvalds@klaava.Helsinki.FI (Linus Torvalds)] [In article <1992Nov4.021453.22896@citec.oz.au> sgccseh@citec.oz.au (Steve Hocking) writes:
+>
+>	Looking at the latest Linux release and user comments on it, it
+>appears that a new math emulator has been written which is more complete and
+>accurate, plus about 2x faster. Does anybody have plans to port this to
+>386bsd (since we got the original emulator from Linux anyway)?
+
+The problem is the copyright: it's copylefted code by Bill Metzenthen,
+so you cannot distribute it under the 386bsd copyright.  The original
+emulator I wrote was also originally copylefted, but I gave Bill and
+Lynne the right to use it under 386bsd (the copyright was changed to
+something like "freely usable for the 386bsd and linux projects"). 
+You'd have to ask permission from Metzenthen - his email address can be
+found in the sources.
+
+		Linus
+
+
+]
+MID: 1992Nov4.111732.9703@klaava.Helsinki.FI
+SUBJ: Re: Port of new Linux math emulator to 386bsd?
+BODY: In article <1992Nov4.021453.22896@citec.oz.au> sgccseh@citec.oz.au (Steve Hocking) writes: | > | >	Looking at the latest Linux release and user comments on it, it | >appears that a new math emulator has been written which is more complete and | >accurate, plus about 2x faster. Does anybody have plans to port this to | >386bsd (since we got the original emulator from Linux anyway)? |  | The problem is the copyright: it's copylefted code by Bill Metzenthen, | so you cannot distribute it under the 386bsd copyright.  The original | emulator I wrote was also originally copylefted, but I gave Bill and | Lynne the right
+------------------------------------------------------------
+[1992-11-04T13:15:41+00:00] [kapela@prism.poly.edu (Theodore S. Kapela)] [In article <1992Nov4.052106.29266@menudo.uh.edu> wjin@cs.uh.edu (W. Woody Jin) writes:
+>In article <Nov.2.20.33.38.1992.18690@remus.rutgers.edu> glenw@remus.rutgers.edu (Glenn Wasserman) writes:
+>>As the subject heading says, which is it? Which is the better,more
+>>supported operating system (I know I'm going to get a lot on this
+>>one!)
+>>
+>I have 386BSD 0.1p58 running (not properly). Still, 'ps -aux' does not
+>work properly (reports 'nlist ... so so..' and all the CPU usages are
+>0 % ).  Booting takes forever loop, fsck reporting some error messages
+
+Have you recompiled the kernel yet?  The kernel on the dist.fs and fixit.fs
+floppies is stripped, so there is no symbol information for utilities
+like ps, w, etc. . .
+
+>(So, I had to type ^C and did fsck manually - this was a new problem
+>after I did patches).  I still cannot do 'mwrite' nor downloading or
+
+Yes.  I had the problem with the fsck also.  It looks like fsck exits
+before the system is rebooted (after fsck modifies the root fs).  This
+allows the rc scripts to continue, and a sync ends up being done. This flushes
+the bad buffers back to disk, writing over the fixes made by fsck (using the
+raw partition).  I haven't really had a chance to check this out yet.
+
+>uploading using modem (tip, rz, and sz as described in INSTALL.NOTES).  
+>It just simply does not work (using given binaries, source codes, and 
+>58 patchkits -  I think I have to ask around how other people are doing).
+
+I have had no problems, and I have been successfully using SLIP.  I do need
+to use the cgd com drivers, though.
+
+
+-- 
+..............................................................................
+ Theodore S. Kapela				kapela@poly.edu
+ Center for Applied Large-Scale Computing	
+ Polytechnic University
+
+
+]
+MID: 1992Nov4.131541.15661@prism.poly.edu
+SUBJ: Re: 386BSD or LINUX?
+BODY: In article <1992Nov4.052106.29266@menudo.uh.edu> wjin@cs.uh.edu (W. Woody Jin) writes: | >In article <Nov.2.20.33.38.1992.18690@remus.rutgers.edu> glenw@remus.rutgers.edu (Glenn Wasserman) writes: | >>As the subject heading says, which is it? Which is the better,more | >>supported operating system (I know I'm going to get a lot on this | >>one!) | >> | >I have 386BSD 0.1p58 running (not properly). Still, 'ps -aux' does not | >work properly (reports 'nlist ... so so..' and all the CPU usages are | >0 % ).  Booting takes forever loop, fsck reporting some error messages |  | Have you recompiled the kernel yet?  The 
+------------------------------------------------------------
+[1992-11-04T13:35:38+00:00] [gt@prosun.first.gmd.de (Gerd Truschinski)] [In article <1992Nov4.052106.29266@menudo.uh.edu>, wjin@cs.uh.edu (W. Woody Jin) writes:
+|> In article <Nov.2.20.33.38.1992.18690@remus.rutgers.edu> glenw@remus.rutgers.edu (Glenn Wasserman) writes:
+|> >As the subject heading says, which is it? Which is the better,more
+|> >supported operating system (I know I'm going to get a lot on this
+|> >one!)
+|> >
+|> >I have Linux running on my machine now, and I'm just wondering if this 
+|> >is the right choice. Is 386BSD more stable? 
+|> 
+|> Version numbers say it : Linux 0.98  <--> 386BSD 0.1 p58.
+|> 
+                                  ^^^^               ^^^^^^^
+
+Hey, its  --> 4.3 <--- 386BSD isn't it :-)
+
+/gT/
+
+
+
+|>[stuff deleted]
+ 
+But, may be that your disk is brocken?
+ 
+|> 
+|> -- 
+|> ____   ____  ____ ____________________________________ (___) _________________
+|> |  |   |  |  |  |  W. Woody Jin (wjin@cs.uh.edu)       (o o)      Moo.... 
+|> |  |   |  |__|  |  PhD Student. Research Asst.  o=======\ /  I'm  a Cow Lover.
+|> |  |   |        |  Dept. of Computer Science   / |     ||O   My wife  was born
+|> \  |---|  |--|  |  University of Houston      `  ||'---||    in Cow year. Mooo
+|>  \____/|__|  |__| _______________________________^^    ^^_____________________
+
+
+--
+Gerd Truschinski         | INTERNET:    gt@first.gmd.de
+c/o GMD-First  Berlin    | 
+O-1199 Berlin-Adlershof  | TEL:         +49 30 6704 2662
+Rudower Chausee 5 (13.7) | FAX:         +49 30 6704 5088
+
+
+]
+MID: 2582@bigfoot.first.gmd.de
+SUBJ: Re: 386BSD or LINUX?
+BODY: In article <1992Nov4.052106.29266@menudo.uh.edu>, wjin@cs.uh.edu (W. Woody Jin) writes: | |> In article <Nov.2.20.33.38.1992.18690@remus.rutgers.edu> glenw@remus.rutgers.edu (Glenn Wasserman) writes: | |> >As the subject heading says, which is it? Which is the better,more | |> >supported operating system (I know I'm going to get a lot on this | |> >one!) | |> > | |> >I have Linux running on my machine now, and I'm just wondering if this  | |> >is the right choice. Is 386BSD more stable?  | |>  | |> Version numbers say it : Linux 0.98  <--> 386BSD 0.1 p58. | |>  |                                   ^^^^              
+------------------------------------------------------------
+[1992-11-04T16:04:17+00:00] [torvalds@klaava.Helsinki.FI (Linus Torvalds)] [In article <2582@bigfoot.first.gmd.de> gt@prosun.first.gmd.de (Gerd Truschinski) writes:
+>In article <1992Nov4.052106.29266@menudo.uh.edu>, wjin@cs.uh.edu (W. Woody Jin) writes:
+>|> In article <Nov.2.20.33.38.1992.18690@remus.rutgers.edu> glenw@remus.rutgers.edu (Glenn Wasserman) writes:
+>|> >
+>|> >I have Linux running on my machine now, and I'm just wondering if this 
+>|> >is the right choice. Is 386BSD more stable? 
+>|> 
+>|> Version numbers say it : Linux 0.98  <--> 386BSD 0.1 p58.
+>                                  ^^^^               ^^^^^^^
+>Hey, its  --> 4.3 <--- 386BSD isn't it :-)
+
+Yes, yes, yes.  I promised myself that I wouldn't bother with this
+thread, but so what.  Anyway, the only good way to tell which is better
+for your needs is to actually try them both out.  Version numbers don't
+tell you much: different people give different version-numbers, and the
+different design policies between the setups also change the way the
+numbers grow: linux has "real-time" developement, ie most of the time
+people can use a version that is at most a week or two away from my
+current one, so linux numbers automatically grow differently. 
+
+386bsd was started before linux was (judging by the DDJ articles), but
+due to various problems (disagreement about the first version as well as
+just the porting problems) linux has actually been available for a
+longer time.  So in some respects linux may be more stable, especially
+when it comes to the 386-specific things.  But yes, 386bsd has many
+years of developement behind it, so not surprisingly it probably is more
+stable in other areas (networking..  you can still easily crash linux
+with heavy ftp'ing it seems)
+
+As to other arguments I've seen: neither 386bsd or linux are
+microkernels, and I cannot really say anything about speed.  There has
+been some talk about linux seeming more responsive: that may be
+partially true due to (a) scheduler implementation and (b) less memory
+usage due to shared libs (especially under X).  On the other hand, I
+assume 386bsd handles swapping more gracefully: the linux paging deamon
+(actually implemented in the kernel) isn't exactly clever.  It's gotten
+a lot better since 0.95, but it's still simplistic. 
+
+And yes, both kernels seem to have problems with some hardware: not
+surprising when you consider the amount of different hardware available
+for the IBM PC/AT.  I have reports of linux running for 50 days (under
+actual load - not just sitting there) without a reboot (and even then
+due to upgrading the kernel), but I also have some reports of linux not
+even booting, although the hardware "in theory" should fit.  I'd assume
+the same holds for 386bsd. 
+
+One major difference between the systems is the way they grow: linux has
+grown openly with many smaller patches and releases and with different
+people handling different aspects of the system (I only handle actual
+kernel source: others do gcc/X11/rootdisk etc).  This has it's good
+sides: the system has grown pretty fast, and people who want to keep up
+can do so.  The more centralized (and judging by myself probably better
+administered) 386bsd releases mean people don't have to worry about
+where to get things, when to upgrade etc. 
+
+The linux realtime releases have had their share of problems: it means
+end-users can be bitten by bugs more easily (but it also means they can
+be found/fixed more easily).  It also means many have gotten the idea
+that you have to recompile the kernel every week just to keep it
+working, as well as resulting in that there has often been different
+versions of the same binary that may use features that aren't available
+in all kernels.  But if you are a kernel hacker, the linux way is
+probably preferable. 
+
+So the result of the above is: read both c.o.linux and c.u.bsd, try them
+both out, keep an open mind, and select the one that fits you (or keep
+running both: variatio delectat).  Linux is more of a hackers kernel:
+both the kernel and tools are updated all the time (gcc has generally
+been available for alpha-testing under linux even before it's been
+released - hlu has made images from the snapshots GNU puts out.  And so
+on).  And while linux now does have networking and NFS support, 386bsd
+is still probably the choice if you really need networking as opposed to
+"just want to play around with it". 
+
+		Linus
+
+PS.  No, I don't follow my own advice: I haven't got the diskspace to
+try out 386bsd.  That has never hindered anybody else on usenet from
+giving good advice.  And besides, I'm biased.  Just a teeny-weeny bit. 
+
+
+]
+MID: 1992Nov4.160417.25258@klaava.Helsinki.FI
+SUBJ: Re: 386BSD or LINUX?
+BODY: In article <2582@bigfoot.first.gmd.de> gt@prosun.first.gmd.de (Gerd Truschinski) writes: | >In article <1992Nov4.052106.29266@menudo.uh.edu>, wjin@cs.uh.edu (W. Woody Jin) writes: | >|> In article <Nov.2.20.33.38.1992.18690@remus.rutgers.edu> glenw@remus.rutgers.edu (Glenn Wasserman) writes: | >|> > | >|> >I have Linux running on my machine now, and I'm just wondering if this  | >|> >is the right choice. Is 386BSD more stable?  | >|>  | >|> Version numbers say it : Linux 0.98  <--> 386BSD 0.1 p58. | >                                  ^^^^               ^^^^^^^ | >Hey, its  --> 4.3 <--- 386BSD isn't it :-) |  | Yes,
+------------------------------------------------------------
+[1992-11-04T20:17:21+00:00] [elmar@gulasch.hanse.de (Elmar Folba)] [In article <Nov.2.20.33.38.1992.18690@remus.rutgers.edu> glenw@remus.rutgers.edu (Glenn Wasserman) writes:
+>As the subject heading says, which is it? Which is the better,more
+>supported operating system (I know I'm going to get a lot on this
+>one!)
+>...
+Not necessarily. Who, do you think, has significant and comparable experience
+with both systems?
+And: what is 'better'? Better suited to which purpose?
+
+
+-- 
+Kind regards,			Elmar Folba
+				Hamburg, Germany
+				elmar@gulasch.hanse.de
+
+
+]
+MID: 1992Nov4.201721.1036@gulasch.hanse.de
+SUBJ: Re: 386BSD or LINUX?
+BODY: In article <Nov.2.20.33.38.1992.18690@remus.rutgers.edu> glenw@remus.rutgers.edu (Glenn Wasserman) writes: | >As the subject heading says, which is it? Which is the better,more | >supported operating system (I know I'm going to get a lot on this | >one!) | >... | Not necessarily. Who, do you think, has significant and comparable experience | with both systems? | And: what is 'better'? Better suited to which purpose? |  |  | --  | Kind regards,			Elmar Folba | 				Hamburg, Germany | 				elmar@gulasch.hanse.de |  |  | 
+------------------------------------------------------------
+[1992-11-04T20:56:20+00:00] [drew@kinglear.cs.colorado.edu (Drew Eckhardt)] [In article <Nov.2.20.33.38.1992.18690@remus.rutgers.edu> glenw@remus.rutgers.edu (Glenn Wasserman) writes:
+>As the subject heading says, which is it? Which is the better,more
+>supported operating system (I know I'm going to get a lot on this
+>one!)
+
+I'd say that Linux and 386BSD are "different", but that neither is 
+"better".  I personally use Linux, since at this point, networking
+is not important to me, and disk space is at a premium. If I had 
+more space, more memory, and needed networking, I would probably
+lean towards BSD.
+
+Linux +'s : 
+
+Shared libraries.  This results in a significant disk space savings,
+especially in the case of 'X' applications that can shrink by 
+an order of magnitude when compiled with shared libraries.  
+
+Modern VM, with a unified buffer cache and user memory pool.  
+This improves performance for very memory intensive or very I/O
+instensive tasks as the balanace between the two can shift 
+dynamically.  
+
+Many kernel structures, such as pty's, are dynamically allocated.  This
+increases the amount of pageable memory that is available.
+
+More "odd" hardware is supported in the stock distribution.  For 
+instance, SCSI support is there for Seagate, WD7000, Future Domain, 
+Ultrastor 14f, and Adaptec boards.
+
+There are more WhizzyFeatures (tm), such as /proc.
+
+Linux supports the MSDOS file system, and can run vm86 tasks such
+as the DOS emulator, if you consider these +'s.
+
+Linux -'s :
+
+NFS is not yet stable. 
+SUNRPC is not yet stable. 
+It's not BSD.
+
+BSD +'s :
+
+The networking code is BSD, and quite stable. This means SLIP, NFS,
+RPC, etc all work fine.
+
+It's BSD.
+
+BSD -'s :
+
+No shared libraries means you can't fit as many toys onto a small
+system.  
+
+A larger kernel means that you have less space for user programs.
+
+>I have Linux running on my machine now, and I'm just wondering if this 
+>is the right choice. 
+
+
+Maybe.  
+
+>Is 386BSD more stable? 
+
+That depends on what you define as "Linux" and what you define as "386BSD".
+
+If you compare Linux alpha code, such as the NFS implemention, Sun RPC, 
+Xenix fs, etc, chances are that you'll find BSD more stable.
+
+If you only look at beta code, one user posted a "success story" to the
+mailing list detailing how they'd run a patient tracking system on a 
+network of Linux and Xenix machines, and that a Linux system hadn't 
+crashed after 40 days of being up and running with a real load.
+
+>Is there any reason to 
+>switch?
+
+I'd say that if you want BSD, because it's BSD, or if you want 
+stable NFS NOW, and not in two weeks,  that it might be worthwhile.  
+
+-- 
+Microsoft is responsible for propogating the evils it calls DOS and Windows, 
+IBM for AIX (appropriately called Aches by those having to administer it), but 
+marketing's sins don't come close to those of legal departments.
+Boycott AT&T for their absurd anti-BSDI lawsuit.
+
+
+]
+MID: 1992Nov4.205620.8184@colorado.edu
+SUBJ: Re: 386BSD or LINUX?
+BODY: In article <Nov.2.20.33.38.1992.18690@remus.rutgers.edu> glenw@remus.rutgers.edu (Glenn Wasserman) writes: | >As the subject heading says, which is it? Which is the better,more | >supported operating system (I know I'm going to get a lot on this | >one!) |  | I'd say that Linux and 386BSD are "different", but that neither is  | "better".  I personally use Linux, since at this point, networking | is not important to me, and disk space is at a premium. If I had  | more space, more memory, and needed networking, I would probably | lean towards BSD. |  | Linux +'s :  |  | Shared libraries.  This results in a significant di
+------------------------------------------------------------
+[1992-11-04T21:20:17+00:00] [drew@kinglear.cs.colorado.edu (Drew Eckhardt)] [In article <1992Nov3.172846.23739@nmrdc1.nmrdc.nnmc.navy.mil> dsc3pzp@nmrdc1.nmrdc.nnmc.navy.mil (Philip Perucci) writes:
+>In article <Nov.2.20.33.38.1992.18690@remus.rutgers.edu> glenw@remus.rutgers.edu (Glenn Wasserman) writes:
+>>As the subject heading says, which is it? Which is the better,more
+>>supported operating system (I know I'm going to get a lot on this
+>>one!)
+>>
+>>I have Linux running on my machine now, and I'm just wondering if this 
+>>is the right choice. Is 386BSD more stable? Is there any reason to 
+>>switch?
+>>
+>
+>I too would like feedback re: Linux vs. 386BSD.  
+>
+>Having used Linux for a couple of weeks, and 386BSD for about 2 days clearly
+>does not make me an expert, but 386BSD seems cleaner than Linux for 1.  Of
+>course the Linux FAQ mentioned something about 386BSD 0.0's nasty tendancy
+>to trash hard-disks...
+>
+>The reason I am moving to 386BSD (assuming I can run w/3Mb & 40Mb HD - don't
+>laugh) is the my PERCEIVED view of the kernel designs.  386BSD seems, at 
+>first glance to be a micro-kernel OS, whereas Linux is more "monolithic".
+
+Both are macro kernels.  However, the separation between the different
+parts of BSD fairly clean, where as there are incestuous relationships
+between the different parts of Linux (like special case code in the 
+block device read/write code for hard disks, etc).
+
+>It would seem compiling the kernel is more frequently needed to configure
+>Linux.  I would especially appreciate any feedback regarding this point!
+
+I don't agree with this point.  For the most part, Linux device drivers
+auto-configure.  We'll autodetect the IRQ, memory address, and I/O address
+of serial boards, most SCSI boards, etc. 
+
+Virtually all Linux kernel structures are dynamically allocated.  Add 
+another disk, and the same Linux kernel will see it.
+
+-- 
+Microsoft is responsible for propogating the evils it calls DOS and Windows, 
+IBM for AIX (appropriately called Aches by those having to administer it), but 
+marketing's sins don't come close to those of legal departments.
+Boycott AT&T for their absurd anti-BSDI lawsuit.
+
+
+]
+MID: 1992Nov4.212017.8957@colorado.edu
+SUBJ: Re: 386BSD or LINUX?
+BODY: In article <1992Nov3.172846.23739@nmrdc1.nmrdc.nnmc.navy.mil> dsc3pzp@nmrdc1.nmrdc.nnmc.navy.mil (Philip Perucci) writes: | >In article <Nov.2.20.33.38.1992.18690@remus.rutgers.edu> glenw@remus.rutgers.edu (Glenn Wasserman) writes: | >>As the subject heading says, which is it? Which is the better,more | >>supported operating system (I know I'm going to get a lot on this | >>one!) | >> | >>I have Linux running on my machine now, and I'm just wondering if this  | >>is the right choice. Is 386BSD more stable? Is there any reason to  | >>switch? | >> | > | >I too would like feedback re: Linux vs. 386BSD.   | > | >Having us
+------------------------------------------------------------
+[1992-11-04T22:09:49+00:00] [lcd@ais.org (Leon Dent)] [In article <1992Nov4.160417.25258@klaava.Helsinki.FI> torvalds@klaava.Helsinki.FI (Linus Torvalds) writes:
+>for the IBM PC/AT.  I have reports of linux running for 50 days (under
+>actual load - not just sitting there) without a reboot (and even then
+>due to upgrading the kernel), but I also have some reports of linux not
+
+This is 50 days in a commercial operation (in a hospital I believe) with
+multiple Linux boxes.  The main complaint is that they don't do token ring.
+
+Leon Dent
+lcd@ais.org
+
+
+
+
+]
+MID: Bx7pKF.Aw2@ais.org
+SUBJ: Re: 386BSD or LINUX?
+BODY: In article <1992Nov4.160417.25258@klaava.Helsinki.FI> torvalds@klaava.Helsinki.FI (Linus Torvalds) writes: | >for the IBM PC/AT.  I have reports of linux running for 50 days (under | >actual load - not just sitting there) without a reboot (and even then | >due to upgrading the kernel), but I also have some reports of linux not |  | This is 50 days in a commercial operation (in a hospital I believe) with | multiple Linux boxes.  The main complaint is that they don't do token ring. |  | Leon Dent | lcd@ais.org |  |  |  |  | 
+------------------------------------------------------------
+[1992-11-05T00:02:27+00:00] [gab10@griffincd.amdahl.com (Gary A Browning)] [In article <1992Nov3.172846.23739@nmrdc1.nmrdc.nnmc.navy.mil>,
+dsc3pzp@nmrdc1.nmrdc.nnmc.navy.mil (Philip Perucci) writes:
+> I too would like feedback re: Linux vs. 386BSD.  
+> 
+> Having used Linux for a couple of weeks, and 386BSD for about 2 days
+> clearly
+> does not make me an expert, but 386BSD seems cleaner than Linux for 1.
+> Of
+> course the Linux FAQ mentioned something about 386BSD 0.0's nasty
+> tendancy
+> to trash hard-disks...
+
+Version 0.0 is very old and I am not sure it is even available anymore.
+The newest one, Ver 1.0 pl 58, does not have this problem.
+
+> The reason I am moving to 386BSD (assuming I can run w/3Mb & 40Mb HD - don't
+> laugh) is the my PERCEIVED view of the kernel designs.  386BSD seems, at 
+> first glance to be a micro-kernel OS, whereas Linux is more "monolithic".
+
+I do not think 386BSD is of micro kernel design.
+
+
+Another limitation of 386BSD that was not mentioned earlier is that it
+currently has no support for shared libraries.
+
+-- 
+Gary Browning        | Exhilaration is that feeling you get just after a
+		     | great idea hits you, and just before you realize
+                     | what is wrong with it.
+
+
+]
+MID: f5wu02Uv29Rg01@JUTS.ccc.amdahl.com
+SUBJ: Re: 386BSD or LINUX?
+BODY: In article <1992Nov3.172846.23739@nmrdc1.nmrdc.nnmc.navy.mil>, | dsc3pzp@nmrdc1.nmrdc.nnmc.navy.mil (Philip Perucci) writes: | > I too would like feedback re: Linux vs. 386BSD.   | >  | > Having used Linux for a couple of weeks, and 386BSD for about 2 days | > clearly | > does not make me an expert, but 386BSD seems cleaner than Linux for 1. | > Of | > course the Linux FAQ mentioned something about 386BSD 0.0's nasty | > tendancy | > to trash hard-disks... |  | Version 0.0 is very old and I am not sure it is even available anymore. | The newest one, Ver 1.0 pl 58, does not have this problem. |  | > The reason I am moving t
+------------------------------------------------------------
+[1992-11-05T00:22:16+00:00] [peter@ferranti.com (peter da silva)] [I'm considering buying a used Compaq Deskpro 386/25. I'll be using a Maxtor
+XT4380E or Miniscribe 9380E with an as yet undetermined ESDI controller. Has
+anyone run Linux or 386BSD on a similar platform? What sort of controller
+would work best in this environment (don't say SCSI, I have a good deal on
+the drive)? What sort of things should I be watching out for?
+-- 
+% Peter da Silva % 77487-5012 % +1 713 274 5180 % Har du kramat din varg idag?
+(<<VV$@\\$'&O 9$O%'$LT$&$"V6"$&$<4$?'&$ #I&&?$=$444@)24 24 scale newpath/P true
+def 3 21 moveto{dup 36 eq{pop/P P not def}{dup 7 and 4 sub exch 56 and 8 div 4
+sub P{rlineto}{rmoveto}ifelse}ifelse}forall stroke showpage %          `-_-'
+
+
+]
+MID: id.L9PU.XI2@ferranti.com
+SUBJ: Linux/386BSD on Compaq Deskpro 386/25
+BODY: I'm considering buying a used Compaq Deskpro 386/25. I'll be using a Maxtor | XT4380E or Miniscribe 9380E with an as yet undetermined ESDI controller. Has | anyone run Linux or 386BSD on a similar platform? What sort of controller | would work best in this environment (don't say SCSI, I have a good deal on | the drive)? What sort of things should I be watching out for? | --  | % Peter da Silva % 77487-5012 % +1 713 274 5180 % Har du kramat din varg idag? | (<<VV$@\\$'&O 9$O%'$LT$&$"V6"$&$<4$?'&$ #I&&?$=$444@)24 24 scale newpath/P true | def 3 21 moveto{dup 36 eq{pop/P P not def}{dup 7 and 4 sub exch 56 and 8 
+------------------------------------------------------------
+[1992-11-05T02:47:52+00:00] [terry@cs.weber.edu (A Wizard of Earth C)] [In article <1992Nov4.100317.25447@ntuix.ntu.ac.sg>, eoahmad@ntuix.ntu.ac.sg (Othman Ahmad) writes:
+|> W. Woody Jin (wjin@cs.uh.edu) wrote:
+|> : 
+|> : Version numbers say it : Linux 0.98  <--> 386BSD 0.1 p58.
+|> 
+|> I do not know about this. I'm using terry's collection of patches, which
+|> is arranged in a very convenient way of applying patches. 
+|> 	You can reverse your patch. You can install selected patches. Linux
+|> should take a look at this package but terry has not made the source codes
+|> freely available.
+
+Not true!  It's under BSD-style copyright (free redistribution for *both*
+commercial and non-commercial use)... This is one better than Linux, since
+you can incorporate it in other products without passing out sources (oh,
+all right -- shell scripts are always sources.  8-)).
+
+The only thing I have restricted distribution on is the patch creation
+software.  This was done because ordering of patches and management of
+patch layering required funneling the order of creation for the patches
+through a "patch number assignment" mechanism.  For instance, if 12 people
+made a patch "59", it would be bad.
+
+This software is available to management of other projects, assuming a
+centralized funneling of *386BSD* patches in patchkit format through Nate
+(he keeps the unofficial bug list) or myself.  This is an onus we would
+gladly hand off to Bill and Lynne.  We *don't* want to give it out and have
+patches basically created at random (the same situation we had before).
+
+
+|> : Installing DOS and 386BSD in a single IDE drive is an extreme headache,
+|> : which I don't want to suggest you to try unless you have lots of free time 
+|> I don't think it is true any more. It is just a matter of doing it the 
+|> right way. 386bsd has not got a partition editor for itself unlike minix
+|> fdisk, so must use norton utilites.
+|> 	The installation procedur had been posted. A new software also
+|> written running on dos, called ide_conf which can tell the native geometry
+|> of an IDE hard-disk so that the BIOS can be programmed with that geometry
+|> readings.
+
+I personally think this is still a headache, and am trying to do something
+about it; for most situations, however, a procedure *does* exist.
+
+|> : Not now, unless you are extremely intrigued (like me).
+|> : I would not recommend current 386BSD to an average UNIX user who is busy
+|> : doing his regular jobs.
+
+This argument is wrong; I wouldn't recommend a free system to anyone for any
+kind of "regular job" unless you buy support from a third party.
+
+
+					Terry Lambert
+					terry@icarus.weber.edu
+					terry_lambert@novell.com
+---
+Any opinions in this posting are my own and not those of my present
+or previous employers.
+-- 
+-------------------------------------------------------------------------------
+                                        "I have an 8 user poetic license" - me
+ Get the 386bsd FAQ from agate.berkeley.edu:/pub/386BSD/386bsd-0.1/unofficial
+-------------------------------------------------------------------------------
+
+
+]
+MID: 1992Nov5.024752.17974@fcom.cc.utah.edu
+SUBJ: Re: 386BSD or LINUX?
+BODY: In article <1992Nov4.100317.25447@ntuix.ntu.ac.sg>, eoahmad@ntuix.ntu.ac.sg (Othman Ahmad) writes: | |> W. Woody Jin (wjin@cs.uh.edu) wrote: | |> :  | |> : Version numbers say it : Linux 0.98  <--> 386BSD 0.1 p58. | |>  | |> I do not know about this. I'm using terry's collection of patches, which | |> is arranged in a very convenient way of applying patches.  | |> 	You can reverse your patch. You can install selected patches. Linux | |> should take a look at this package but terry has not made the source codes | |> freely available. |  | Not true!  It's under BSD-style copyright (free redistribution for *both* | comm
+------------------------------------------------------------
+[1992-11-05T03:25:19+00:00] [nelson@crynwr.com (Russell Nelson)] [In article <Nov.2.20.33.38.1992.18690@remus.rutgers.edu> glenw@remus.rutgers.edu writes:
+
+   As the subject heading says, which is it? Which is the better,more
+   supported operating system (I know I'm going to get a lot on this
+   one!)
+
+Well, Linux's standard copyright is the Free Software Foundation's
+GPL, whereas the 386bsd's standard copyright basically says "you
+cannot remove this copyright".  In the long run, the GPL is a better
+copyright, because it prevents people from making proprietary
+improvements.  IMHO, of course.
+
+-russ <nelson@crynwr.com> What canst *thou* say?
+Crynwr Software           Crynwr Software sells packet driver support.
+11 Grant St.              315-268-1925 Voice  |  LPF member - ask me about
+Potsdam, NY 13676         315-268-9201 FAX    |  the harm software patents do.
+
+
+]
+MID: 720933919snx@crynwr.com
+SUBJ: 386BSD or LINUX?
+BODY: In article <Nov.2.20.33.38.1992.18690@remus.rutgers.edu> glenw@remus.rutgers.edu writes: |  |    As the subject heading says, which is it? Which is the better,more |    supported operating system (I know I'm going to get a lot on this |    one!) |  | Well, Linux's standard copyright is the Free Software Foundation's | GPL, whereas the 386bsd's standard copyright basically says "you | cannot remove this copyright".  In the long run, the GPL is a better | copyright, because it prevents people from making proprietary | improvements.  IMHO, of course. |  | -russ <nelson@crynwr.com> What canst *thou* say? | Crynwr Software 
+------------------------------------------------------------

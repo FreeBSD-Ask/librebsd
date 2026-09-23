@@ -1,0 +1,2095 @@
+total 40
+[1994-02-08T17:18:24+00:00] [dschieb@muse.cv.nrao.edu (Darrell Schiebel)] [In article <dfishmanCKuz3w.Ar5@netcom.com> dfishman@netcom.com (Dan Fishman) writes:
+In-reply-to: dfishman@netcom.com's message of Mon, 7 Feb 1994 14:33:31 GMT
+Newsgroups: comp.unix.bsd,misc.int-property
+Subject: Re: USL vs. BSDI Lawsuit Settled
+References: <2j45fl$2jb@BSDI.COM> <dfishmanCKuz3w.Ar5@netcom.com>
+Distribution: 
+--text follows this line--
+In article <dfishmanCKuz3w.Ar5@netcom.com> dfishman@netcom.com (Dan Fishman) writes:
+> Congrads to both sides.  Just a reminder to many who posted over the past year
+> or so.  At one time discussion of this lawsuit was the hottest topic for
+> many a flame war.  Several were pointing to this suit as THE PRIME example
+> of why law and software don't mix.  The sky was going to fall.  No programmer
+> who knew how to spell UNIX would ever be able to find employment again!
+>
+> I'm glad to see this one settled for all parties.  But let's remember next
+> time... you should read the claims on patents, you should NOT read the
+> allegations and prayers for relief in a complaint unless you have a
+> strong stomach, thick skin, and an understanding that in law as in many
+> negotiating scenarios... you ask for more than you expect to get, then
+> settle for something reasonable.
+
+
+	I find all of this quite interesting:
+
+		``Ray Noorda, Chairman of Novell, Inc., which
+		recently acquired USL, called the settlement an "excellent
+		example of what can be accomplished by cooperation between
+		the business and academic communities."  Mr. Noorda stated
+		that "the settlement permits the University to accomplish
+		its goals but preserves USL's legitimate interest in
+		protecting its intellectual property.''
+
+	Intellectual property protection? It didn't seem like it to me.
+	Here are a few quotes from the "Supplemental Amicus Brief By 
+	Defendants The Regents Of The University Of California Re 
+	Plaintiff's Motion For Preliminary Injunction" (quoted from
+	"http://www.bsdi.com/info/lawsuit/930119.sup-amicus"):
+
++		        Date:  1-22-93
++		        Time: 10:00 a.m.
++		        Court: Honorable Dickinson R. Debevoise
+
+		[...]
+
++	A painstaking review of the Net2 source code files has uncovered 
++	only 14 files (out of the total 4,176 Net2 source files) which 
++	contain any 32V code in them. As explained in the Second McKusick 
++	Declaration, those files collectively contain only 186 lines of 
++	common code (out of the 1.5 million lines of source code in Net2). 
++	Id.at 1 2. In the kernel -- which USL concedes is the core of the 
++	system -- only 56 lines of source code from Net2 (which has 
++	230,995 lines of source code in the kernel)match lines from the 
++	14,293 lines of source code in the 32V kernel. Id. at Para 1.
++
++	After spending hundreds of hours searching for textual matches, 
++	USL's paid expert could only find and report on two source files in 
++	Net2 that actually contain 32V code which he considered significant. 
++	The first, Net2's "ufs_disksubr.c" file contained 14 lines of code (out
++	of 358 total lines) that also appeared in 32V. Id. at Para. 2.1.1.
++
++	The second example belatedly cited by Dr. Carson in his Reply 
++	Affidavit, is the "cpio.c" file: this file was included in Net2 by the 
++	University at the specific request of AT&T. See Second Joint Decl., 
++	at 1 6.2. But even if it were not estopped to complain about "cpio.c," 
++	the inclusion of that file and the 14 lines from "ufs_disk.subr.c" -- 
++	out of the total 1.5 million lines of source code in Net2 -- hardly 
++	amounts to either copyright infringement or a material breach of the 
++	agreement not to distribute the University-owned enhancements 
++	that "contained" 32V code.
+
+	This doesn't seem like a case of a company simply trying to 
+	protect its intellectual property. I seriously doubt whether the
+	solvency of Novell depended on these 186 lines of source code.
+	But, I guess, this is all just history now...
+
+	On a happier note, how does one acquire BSD4.4 Lite?!!? Oh, and...
+	congratulations and thanks to the folks at UCB and BSDI.
+
+						Darrell Schiebel
+						speaking for myself...
+
+
+]
+MID: DSCHIEB.94Feb8121824@muse.cv.nrao.edu
+SUBJ: Re: USL vs. BSDI Lawsuit Settled
+BODY: In article <dfishmanCKuz3w.Ar5@netcom.com> dfishman@netcom.com (Dan Fishman) writes: | In-reply-to: dfishman@netcom.com's message of Mon, 7 Feb 1994 14:33:31 GMT | Newsgroups: comp.unix.bsd,misc.int-property | Subject: Re: USL vs. BSDI Lawsuit Settled | References: <2j45fl$2jb@BSDI.COM> <dfishmanCKuz3w.Ar5@netcom.com> | Distribution:  | --text follows this line-- | In article <dfishmanCKuz3w.Ar5@netcom.com> dfishman@netcom.com (Dan Fishman) writes: | > Congrads to both sides.  Just a reminder to many who posted over the past year | > or so.  At one time discussion of this lawsuit was the hottest topic for | > man
+------------------------------------------------------------
+[1994-03-10T13:11:00+00:00] [staferne@risc.uni-linz.ac.at (Stefan Taferner)] [Oh no. Not again. YAFW.
+(yet another flame war)
+
+-- 
+Stefan Taferner, RISC Linz, Austria  | Hardware, n.: The parts of a computer
+email: staferne@risc.uni-linz.ac.at  |             system that can be kicked
+
+
+]
+MID: CMG9yC.Kx4@risc.uni-linz.ac.at
+SUBJ: Re: BSD vs. Linux
+BODY: Oh no. Not again. YAFW. | (yet another flame war) |  | --  | Stefan Taferner, RISC Linz, Austria  | Hardware, n.: The parts of a computer | email: staferne@risc.uni-linz.ac.at  |             system that can be kicked |  |  | 
+------------------------------------------------------------
+[1994-05-08T22:24:00+00:00] [John Dyson <dysonj@delphi.com>] [Michael L. VanLoon <michaelv@iastate.edu> writes:
+ 
+>>I would like to port NetBSD or FreeBSD to the Sun386i.  Any 
+>>one have any suggestions or advice?
+>
+>FreeBSD is not architecture-neutral -- it's for i386 only.  NetBSD is
+>layed out in such a way as to lend itself to porting to any
+>architecture.
+ 
+Ahww, come on now...  The machine independant portions of FreeBSD
+are just as architecture neutral as NetBSD.  There have been some I386
+specific enhancements (many of which are applicable to other machines.)
+We have been making improvements to the base architecture *before* doing
+ports and getting all balled up trying to track them all.  We are about
+ready and give us just alittle time.  When we made some mods, say to the
+VM system -- there are some minor machine dependencies, but we can either
+ifdef them out or move say, portions of vm_glue to where they should be.
+ 
+The only gross machine dependency that I know of in the VM code right now
+is that some of the enhancements depend on a real reference bit.  That
+can be removed (very quickly.)  Anyone that wants to do a port to another
+machine or architecture -- get involved with is on FreeBSD -- in about 3-4
+weeks I think that our code base will be fully ready with its high performance
+etc...
+ 
+FreeBSD IS NOT FOR I386's ONLY!!!!  It is correct to say though, that the
+only current port is for the 386/486/Pentium.
+ 
+This is not to start a flame war --  but incorrect statements about other
+people's work should be avoided...
+ 
+John
+dyson@implode.root.com
+
+
+]
+MID: ho4MM7o.dysonj@delphi.com
+SUBJ: Re: BSD for the Sun386i
+BODY: Michael L. VanLoon <michaelv@iastate.edu> writes: |   | >>I would like to port NetBSD or FreeBSD to the Sun386i.  Any  | >>one have any suggestions or advice? | > | >FreeBSD is not architecture-neutral -- it's for i386 only.  NetBSD is | >layed out in such a way as to lend itself to porting to any | >architecture. |   | Ahww, come on now...  The machine independant portions of FreeBSD | are just as architecture neutral as NetBSD.  There have been some I386 | specific enhancements (many of which are applicable to other machines.) | We have been making improvements to the base architecture *before* doing | ports and gett
+------------------------------------------------------------
+[1994-07-22T20:40:47+00:00] [mmh@doc.ic.ac.uk (Mirza Manar Hussain)] [
+
+In article <30oloq$7k7@quagga.ru.ac.za>, csgr@cs.ru.ac.za (Geoff Rehmet) writes:
+
+|> Seeing I was not trying to make use of any sort of scare tactic
+|> (contrary to your unfounded accusation), I find it interesting that
+|> you are acting in a way which *MIGHT* suggest that you are worried
+|> about what I am saying.  If you weren't worried about what I said you
+|> would have just replied informatively to my query, and not developed
+|> some sort of complex.
+
+Geoff, I would imagine that Charles "jumped" at you was because he's beginning
+to get a bit peeved at the repeated mistatement (as he sees it) that he has to
+continually refute. I'm sure we've all been there at some point - and it can
+be very annoying. I'm sure Charles is perfectly capable of speaking for himself,
+I only mention this because to someone sufficiently wound up about something,
+your post could contribute to prolong/generate a flame war...
+
+Just my 2cents
+
+|>  Geoff Rehmet
+
+Manar
+-- 
+Manar Hussain - 127d Holland Road, London. W14 8AS.  (071) 602 6324
+
+An Internet site coming your way soon from Internet Vision Ltd.
+We're always looking for new ideas/people - and customers too ;-).
+
+
+]
+MID: 30pasf$7s0@oak6.doc.ic.ac.uk
+SUBJ: Re: 4.4-lite?
+BODY:  |  | In article <30oloq$7k7@quagga.ru.ac.za>, csgr@cs.ru.ac.za (Geoff Rehmet) writes: |  | |> Seeing I was not trying to make use of any sort of scare tactic | |> (contrary to your unfounded accusation), I find it interesting that | |> you are acting in a way which *MIGHT* suggest that you are worried | |> about what I am saying.  If you weren't worried about what I said you | |> would have just replied informatively to my query, and not developed | |> some sort of complex. |  | Geoff, I would imagine that Charles "jumped" at you was because he's beginning | to get a bit peeved at the repeated mistatement (as he see
+------------------------------------------------------------
+[1994-07-24T22:59:50+00:00] [mycroft@duality.gnu.ai.mit.edu (Charles M. Hannum)] [
+In article <30oloq$7k7@quagga.ru.ac.za> csgr@cs.ru.ac.za (Geoff
+Rehmet) writes:
+
+   The net is a valid place to ask questions.  I was asking a question
+   which is relevant to the problems relating to USL's claims about
+   certain files - [...]
+
+Nonsense.  It wasn't even a valid question, since you had no way of
+knowing, before I said so, that our agreement with USL required adding
+USL copyright notices to any files.
+
+Furthermore, you very well know that most of the NetBSD group only
+read Usenet sparingly.  (Actually, I only do when someone tells me
+there's a flame war raging and some actual facts are needed.)
+Frankly, legal matters, in general, should *not* be discussed in
+public.  Hell, CSRG wouldn't tell you the result of their settlement
+last I knew, and yet you're apparently willing to believe that code is
+free.
+
+   I don't need to go scrounging through the whole NetBSD source tree
+   to check for myself - I was assuming that I could get an honest
+   answer on the net.
+
+And you did get an honest answer.  I said our tree is USL-free, and it
+is.  That's as much answer as anyone should need, unless you believe
+that I am lying or have no clue.  In fact, we're actually complying
+with what we see as the `worst case' interpretation of agreement,
+since there are a couple of (minor) points that are not entirely
+clear.
+
+   Charles - I post a query, you get your balls tied in a knot!
+
+It's hard for me to believe that your posting was so innocent, given
+the past content of this thread.
+
+
+In fact, I quote from a prior article of yours:
+
+   As I understand it NetBSD is still using a source tree which is
+   derived from the Net/2 tape, and not the 4.4Lite tape (correct me
+   if I am wrong), so I don't think that NetBSD-1.0 can claim to be
+   4.4BSD-based.
+
+The fact is, our kernel, and parts of user-land (mostly related to
+file systems), *are* based on 4.4-Lite.  This has been stated
+repeatedly, and yet you continued to refute it without evidence.  It
+is *not* necessary to throw away our entire code history to accomplish
+that goal, and I personally would find it highly irresponsible of us
+to do so.
+
+I consider your statements inflammatory.  You posted as if what were
+saying was fact, when in truth it was wrong, and you just hadn't
+bothered to check or even listen at all.  This is standard Usenet
+technique, and one of the primary reasons I can't stand reading
+Usenet.
+
+Questions are okay; statements of false `facts' are *not*.
+
+--
+- Charles Hannum
+  NetBSD group
+  Working ports: i386, hp300, amiga, sun4c, mac68k, pc532, da30.
+  In progress: sun3, pmax, vax, sun4m.
+
+
+]
+MID: MYCROFT.94Jul24185950@duality.gnu.ai.mit.edu
+SUBJ: Re: 4.4-lite?
+BODY:  | In article <30oloq$7k7@quagga.ru.ac.za> csgr@cs.ru.ac.za (Geoff | Rehmet) writes: |  |    The net is a valid place to ask questions.  I was asking a question |    which is relevant to the problems relating to USL's claims about |    certain files - [...] |  | Nonsense.  It wasn't even a valid question, since you had no way of | knowing, before I said so, that our agreement with USL required adding | USL copyright notices to any files. |  | Furthermore, you very well know that most of the NetBSD group only | read Usenet sparingly.  (Actually, I only do when someone tells me | there's a flame war raging and some actual 
+------------------------------------------------------------
+[1994-07-25T14:46:53+00:00] [jaitken@csugrad.cs.vt.edu (Jeff Aitken)] [Charles M. Hannum (mycroft@duality.gnu.ai.mit.edu) wrote:
+
+: Thus, as you can infer for yourself, NetBSD 1.0 is not encumbered by
+: USL.
+
+: (Now, I'd like to request that all of the people who had the nerve to
+: publicly rant about how `unclean' NetBSD is, GO AWAY.  
+
+: And I mean this
+: in the nicest way I can, considering how much of my time has been
+: wasted in this absolutely stupid and useless thread, and considering
+: how rude and insulting the statements and insinuations about us have
+: been.)
+
+You know, as a freely-available-BSD newbie, I have just sat back and
+enjoyed the fireworks.  But, enough is enough.  In the immortal
+words of Butthead:  "Chill, Beavis"
+
+The only reason your time has been wasted is because you are bound and
+determined to have the last word.  If you were concerned about time
+being wasted, you wouldn't be reading USENET in the first place.
+
+Why is it so goddam difficult to comprehend that the FreeBSD core-team
+members had one helluva time dealing with USL, and don't want to go
+through it again?  All Nate and the others have said is that IF USL
+WANTS TO PLAY DIRTY, YOU COULD GET SCREWED BECAUSE THERE WILL BE LAWYERS
+INVOLVED!!!  No one from the FreeBSD team (to my knowledge) said
+NetBSD-1.0 was tainted.  They simply stated that USL might try to say
+it is, and this could cause problems.  I can't understand why this is
+causing such a flame war!!  If you're complying with the agreement
+you've reached with USL, great!  I hope everything works out well for
+you.  But don't infer things that weren't intended.  
+
+I am heartily thankful for all the hard work that the *BSD folks have
+put in.  I appreciate being able to run a very nice OS on my PC for
+free.  I think free software is wonderful.  But haven't you people got
+more important things to do than flame each other every few weeks about
+something as stupid as what *might* happen down the road, and *if*
+so-and-so decides to do something, etc etc ad nauseum?!
+
+I'll go back to watching the fireworks now, as this will probably have
+no effect on anyone ;)
+
+Jeff
+-- 
+Jeff Aitken						 jaitken@vt.edu
+
+   A witty saying proves nothing, but saying something stupid gets
+                          peoples' attention
+
+
+]
+MID: 310j8t$gl4@csugrad.cs.vt.edu
+SUBJ: Re: Legal status of NetBSD
+BODY: Charles M. Hannum (mycroft@duality.gnu.ai.mit.edu) wrote: |  | : Thus, as you can infer for yourself, NetBSD 1.0 is not encumbered by | : USL. |  | : (Now, I'd like to request that all of the people who had the nerve to | : publicly rant about how `unclean' NetBSD is, GO AWAY.   |  | : And I mean this | : in the nicest way I can, considering how much of my time has been | : wasted in this absolutely stupid and useless thread, and considering | : how rude and insulting the statements and insinuations about us have | : been.) |  | You know, as a freely-available-BSD newbie, I have just sat back and | enjoyed the fireworks.  
+------------------------------------------------------------
+[1994-07-25T17:50:15+00:00] [bogstad@rhombus.cs.jhu.edu (Bill Bogstad)] [In article <310j8t$gl4@csugrad.cs.vt.edu>, Jeff Aitken <jaitken@vt.edu> wrote:
+>...
+>Why is it so goddam difficult to comprehend that the FreeBSD core-team
+>members had one helluva time dealing with USL, and don't want to go
+>through it again?  All Nate and the others have said is that IF USL
+>WANTS TO PLAY DIRTY, YOU COULD GET SCREWED BECAUSE THERE WILL BE LAWYERS
+>INVOLVED!!!  No one from the FreeBSD team (to my knowledge) said
+>NetBSD-1.0 was tainted.  They simply stated that USL might try to say
+>it is, and this could cause problems.  I can't understand why this is
+>causing such a flame war!!  If you're complying with the agreement
+>you've reached with USL, great!  I hope everything works out well for
+>you.  But don't infer things that weren't intended.  
+
+	As far as I can tell, in the USA the legal system allows any entity
+to sue any other entity for practically any reason with practically no cause.
+Given that both NetBSD and FreeBSD were both based on a release in which USL
+now claims proprietary rights; I'm sure they could come up with some vague
+claims which would at least allow them to reach a trial.  I believe that the
+case between BSD and USL (or BSDI and USL) were never actually tried so there
+is no legal precedent here.  It's not even clear to me if the final legal
+agreements reached are even available to the public.  Given that neither
+NetBSD nor FreeBSD appear to have the financial resources to deal with even
+the preliminaries of a trial; this might be cause of concern.  On the other
+hand, it appears the primary participants in the NetBSD group have a signed
+statment from USL which they claim to be following and which removes any
+concern about USL contamination.  FreeBSD appears to have taken a different
+tact.  They threw all of their old code out and started with the BSD release
+which USL had declared clean of contamination.  My laymens opinion is that
+you are probably 'safe' using either method.  If this isn't sufficient to
+alleviate your fears, consult your own lawyer or use Linux.  Now can we go
+back to flameing about whether *BSD or Linux are better operating systems?
+:-)
+
+				A happy Linux user,
+				Bill Bogstad
+				bogstad@cs.jhu.edu
+
+
+]
+MID: 310u0n$krt@rhombus.cs.jhu.edu
+SUBJ: Re: Legal status of NetBSD
+BODY: In article <310j8t$gl4@csugrad.cs.vt.edu>, Jeff Aitken <jaitken@vt.edu> wrote: | >... | >Why is it so goddam difficult to comprehend that the FreeBSD core-team | >members had one helluva time dealing with USL, and don't want to go | >through it again?  All Nate and the others have said is that IF USL | >WANTS TO PLAY DIRTY, YOU COULD GET SCREWED BECAUSE THERE WILL BE LAWYERS | >INVOLVED!!!  No one from the FreeBSD team (to my knowledge) said | >NetBSD-1.0 was tainted.  They simply stated that USL might try to say | >it is, and this could cause problems.  I can't understand why this is | >causing such a flame wa
+------------------------------------------------------------
+[1994-07-29T16:25:02+00:00] [jkh@violet.berkeley.edu (Jordan K. Hubbard)] [To paraphrase Goering just a little bit.. :-)
+
+I've been staying out of news for the last few weeks in an effort
+to get some work done instead (FreeBSD 2.0's due date looming as it is)
+and came back to see one royal flame war over FreeBSD and NetBSD's
+legal status.  Jesus, get a grip, guys!  I mean, I'm glad to see
+that the flames have died down a bit now but I have to say that I'm
+a bit ashamed at the way some of the folks on "my side" behaved
+throughout this.  NetBSD did what they felt to be adequate in order
+to escape USL's wrath and every indication I've had is that this
+is going to be Just Fine!  In any case, it's NONE OF OUR BUSINESS
+whether they get sued or not.  As others have pointed out, USL
+could decide to sue us because they don't like the color of our
+underwear and it wouldn't matter a tinker's damn what we did or
+didn't do to the code - in the good 'ol U.S. of A it's permissible
+to sue someone for looking at you cross-eyed and causing you
+mental distress and suffering, so no one is ever truly safe anyway.
+We've taken our own route and only time will tell whether our
+decision was better or worse that NetBSDs - in the long run, I
+strongly suspect that it WON'T MATTER.  What will distinguish
+the two camps are the amount of effort they put into the usability
+and reliability of the bits, not how much "Net/2 taint" they sanded
+off.  I've personally talked quite a bit with USL's senior council
+in connection with this whole mess and can truthfully say that
+it's not USL's desire to sue anybody at this point - the lawsuit
+was started by someone they acquired, and their own interests now
+lie in marketing their own product effectively, not wasting time
+and generating bad PR by suing a bunch of non-entity little BSD
+piss-ants!  It would take something pretty blatant to attract their
+ire, and even then I think the most it'd earn would be a nasty
+letter.  Most people completely forget that NetBSD and FreeBSD
+are not incorporated entities with any real legal standing,
+and would be rather difficult to sue.  If push came to shove
+everyone would just put on a bewildered expression, say "It's not *me*!
+I just work here!" and fade into the woodwork!
+
+In any case, I seriously doubt it's going to happen and I think
+that some of our members, whether they intended it or not,
+WERE coming across as simply firing cheap scare-tactic shots at
+NetBSD.  I must regrettably find myself in agreement with Charles! :-)
+
+Enough.  Let's simply prove our virility, if such is our intention,
+by releasing better NetBSD 1.0 / FreeBSD 2.0 releases and those
+that follow.  By NetBSD 1.5 and FreeBSD 2.5 I suspect all this will
+have been forgotten and people will be focusing more on FEATURES
+rather than some nebulous concept of "unencumbered status".
+
+Thank you..
+
+					Jordan
+
+
+
+]
+MID: 31bagu$15s@agate.berkeley.edu
+SUBJ: Wenn Ich das Word "BSD" hoere, entsicher Ich meine Waffe!
+BODY: To paraphrase Goering just a little bit.. :-) |  | I've been staying out of news for the last few weeks in an effort | to get some work done instead (FreeBSD 2.0's due date looming as it is) | and came back to see one royal flame war over FreeBSD and NetBSD's | legal status.  Jesus, get a grip, guys!  I mean, I'm glad to see | that the flames have died down a bit now but I have to say that I'm | a bit ashamed at the way some of the folks on "my side" behaved | throughout this.  NetBSD did what they felt to be adequate in order | to escape USL's wrath and every indication I've had is that this | is going to be Jus
+------------------------------------------------------------
+[1994-10-15T03:55:08+00:00] [jmonroy@netcom.com (Jesus Monroy Jr)] [	Sorry this did not get posted to the correct news groups
+	the first time.
+
+Jesus Monroy Jr (jmonroy@netcom.com) wrote:
+: 	This is a weekly question.
+: 	More often than not, we get into a flame war
+: 	on this.  Let's stop this silliness!!!
+
+: 	Can we get together and write a single FAQ on this?
+
+: 	The distraction is overwhelming and we need a solution.
+
+: 	
+: 	I propose a single FAQ to answer the question:
+
+: 	Which is better Linux or *BSD?
+
+: 	It would have standard update procedures and 
+: 	should be carried by the appropriate *.announce.
+
+: 	Do I get a Yeah on this?
+
+
+: -- 
+: Jesus Monroy Jr                                          jmonroy@netcom.com
+: Zebra Research
+: /386BSD/device-drivers /fd /qic /clock /documentation
+: ___________________________________________________________________________
+-- 
+Jesus Monroy Jr                                          jmonroy@netcom.com
+Zebra Research
+/386BSD/device-drivers /fd /qic /clock /documentation
+___________________________________________________________________________
+
+
+]
+MID: jmonroyCxp47w.IoC@netcom.com
+SUBJ: Re: We a FAQ: Linux vs. *BSD!!!
+BODY: 	Sorry this did not get posted to the correct news groups | 	the first time. |  | Jesus Monroy Jr (jmonroy@netcom.com) wrote: | : 	This is a weekly question. | : 	More often than not, we get into a flame war | : 	on this.  Let's stop this silliness!!! |  | : 	Can we get together and write a single FAQ on this? |  | : 	The distraction is overwhelming and we need a solution. |  | : 	 | : 	I propose a single FAQ to answer the question: |  | : 	Which is better Linux or *BSD? |  | : 	It would have standard update procedures and  | : 	should be carried by the appropriate *.announce. |  | : 	Do I get a Yeah on this? |  |  | : --  | : Jesus Monroy 
+------------------------------------------------------------
+[1994-10-15T20:58:49+00:00] [jmonroy@netcom.com (Jesus Monroy Jr)] [Ken Hughes (hughes@napa.eng.uop.edu) wrote:
+: Jordan K. Hubbard (jkh@freefall.cdrom.com) wrote:
+: : In article <jmonroyCxLro2.IF6@netcom.com> jmonroy@netcom.com (Jesus Monroy Jr) writes:
+
+: : 	   This is a weekly question.
+: : 	   More often than not, we get into a flame war
+: : 	   on this.  Let's stop this silliness!!!
+
+: : The only way we're going to stop this silliness is to simply start
+: : ignoring the querants.  If someone asks "Which is better?  Which is
+: : better?", jumping up and down all the while, and everybody just flat
+: : out _ignores_ the question and goes about their business as if nothing
+: : happened, folks will eventually get the point and stop asking.
+
+: : Consider carefully: It's not the questions that start the bloody flame
+: : wars, it's everyone's pathetic attempts to answer!  "Well, xxx is
+: : better because of yyy.."  "No it's not!"  "Yes it is, you moron!  Just
+: : look at blah blah blah!"  "Well, you're a complete idiot who obviously
+: : wouldn't know an operating system if it bit you - yyy is _obviously_
+: : better because bleh bleh bleh!".  And so downhill it goes from there.
+:
+:	:: [deleted counter arguement] ::
+:
+: 386BSD-1.0", so please don't start THAT thread again either).  IMHO, the
+: only chance for resolving this issue would be for someone to sit down and
+: compile a list of features that shows which OS has what and which doesn't.
+:
+	This is another good idea.
+	A list of features.. is always asked for.
+
+: However, there's little hope of keeping this list up to date give the state
+: of change of each OS, unless someone is willing to form a team for this
+: purpose.  
+:
+	I disagree, Dave Burgess did a great job on the 
+	"NET/2 *BSD" FAQ, so I believe an appropriate person
+	should be nearby.   I'm not saying Dave should do it
+	(he's to busy), but I can bet there such a person 
+	available.... a neutral to alll parties.
+
+: I wonder how the Windows-DOS-OS/2 people react to these questions?  Does
+: anyone ever ask over in those groups?  Or is everyone there resigned to the 
+: fact that OS/2 is best or Windows is best or Chicago/Windows 95 will be best
+: or that they're all SOL?  :-)
+:
+	Good point.
+	Should we extend the discussion to the other groups?
+	
+	Do I hear a Yeah on this call?
+
+-- 
+Jesus Monroy Jr                                          jmonroy@netcom.com
+Zebra Research
+/386BSD/device-drivers /fd /qic /clock /documentation
+___________________________________________________________________________
+
+
+]
+MID: jmonroyCxqFM2.Gsu@netcom.com
+SUBJ: Re: We a FAQ: Linux vs. *BSD!!!
+BODY: Ken Hughes (hughes@napa.eng.uop.edu) wrote: | : Jordan K. Hubbard (jkh@freefall.cdrom.com) wrote: | : : In article <jmonroyCxLro2.IF6@netcom.com> jmonroy@netcom.com (Jesus Monroy Jr) writes: |  | : : 	   This is a weekly question. | : : 	   More often than not, we get into a flame war | : : 	   on this.  Let's stop this silliness!!! |  | : : The only way we're going to stop this silliness is to simply start | : : ignoring the querants.  If someone asks "Which is better?  Which is | : : better?", jumping up and down all the while, and everybody just flat | : : out _ignores_ the question and goes about their business
+------------------------------------------------------------
+[1994-11-15T17:07:40+00:00] [mbarkah@slate.mines.colorado.edu (Ade Barkah)] [Hola people,
+
+I posted the original question and I didn't mean to cause
+a flame war. As part of my job I try to evaluate viable
+operating systems available to me to do development on,
+and thus I wanted to play around with a BSD system and
+look into the kernel and see for myself (I'm a SVR4
+type of guy currently.)
+
+So... I got NetBSD. Multi-platform obviously gets a brownie
+point for my purpose. Then I found out it wouldn't do
+> 16mb on the ISA bus due to lack of bounce buffering,
+which FreeBSD has.
+
+Is bounce buffering a "hack" ? Dunno. DOS/Windows can do it,
+Windows NT works with it, Microport SVR4 likes it fine,
+Novell UW 1.1.2 (SVR4.2) has it, Solaris 2.x for x.86
+doesn't mind it, and Linux probably has it too.
+
+Does that mean NetBSD is a "worse" than any of the above ?
+I don't think so. Does that mean that all the other systems
+are "bad" because they use a "hack" ? Not in my opinion,
+anyhow.
+
+Conclusion to my ordeals ? Well, the 64mb DECpc EISA machine
+has an ISA SCSI card due to the stupidity of the boss (as always,
+that's me). I put FreeBSD ALPHA-2.0 on it and it's doing fine,
+with generous help from a couple people here on the net to
+get me used to the Berkeley-isms (when are we going to get
+rid of them A:-H: labeling ?).
+
+I decided to put unix on my home system, a P90 (Intel Plato)
+with 32mb, but the brain-dead owner (yours truly) was broke
+after buying the motherboard and stuck a cannibalized (oh, no) ISA
+1542CF scsi card in there. =) So, again, NetBSD is not an
+option. I was going to put in Microport's SVR4 but I'll
+probably put in Linux.
+
+What did I learn from all this ? Two things: 1) There are nice
+people on the net who actually write this stuff and don't mind
+putting up with my bsd-newbie-questions, and 2) You bsd types
+sure like to flame each other (I thought my svr4 vs. bsd flames
+we're bad, boy, I was wrong.)
+
+If I had a clue on how to write bounce bufferings (and bsd internals)
+I'd write one for netbsd. But since I don't, maybe I'll write
+a cool utility for you folks as a payback for this free stuff, huh ?
+
+-Ade Barkah, stupid enough to put an ISA DMA board on an EISA 
+_and_ a PCI machine. =)
+
+ps. if you want to talk about "bad design" (hack), check out my
+new P90 Intel Plato board. They put this big fan on top of the
+P90, right behind the PCI slots, so full-length PCI boards can't
+fit in the board. =) Also, they put two of the 72-pin simm slots
+right behind the ISA slots, so, yes, full length ISA boards wont
+fit either! =) Now the hack: they angled those two simm slots so 
+the simms form a "V" shape to each other, and hope the board can 
+fit in between. =)
+--
+Head of Development -- Renaissance Knowledge Systems, Englewood, Colorado
+System Administrator - PRIMER Public Unix Access Site - UNIX SVR4.0 4.2.1
+
+
+]
+MID: 1994Nov15.170740.33741@slate.mines.colorado.edu
+SUBJ: Re: HELP: installing netbsd+64mb RAM+adaptec
+BODY: Hola people, |  | I posted the original question and I didn't mean to cause | a flame war. As part of my job I try to evaluate viable | operating systems available to me to do development on, | and thus I wanted to play around with a BSD system and | look into the kernel and see for myself (I'm a SVR4 | type of guy currently.) |  | So... I got NetBSD. Multi-platform obviously gets a brownie | point for my purpose. Then I found out it wouldn't do | > 16mb on the ISA bus due to lack of bounce buffering, | which FreeBSD has. |  | Is bounce buffering a "hack" ? Dunno. DOS/Windows can do it, | Windows NT works with it, Micropor
+------------------------------------------------------------
+[1994-12-12T16:03:50+00:00] [kirk@brains.GUN.de (Thomas Weyergraf)] [Darren R. Davis (darrend@bikini.USG.Sandy.Novell.COM) wrote:
+: [....stuff deleted ...]
+: Remember Novell acquired USL.  USL had been delivering MP software to NCR,
+: ICL, Olivetti, list goes on and on, for YEARS!  Do you want to argue this
+: point?  This has included threads as well.  The jury is still out on
+
+
+Is the MP code available with Unixware ? This is a real question, since I 
+don't know. Does it support the Intel Yellow book specs ?
+
+: You are right, this is a list I would like to see as well.  My whole point
+: was that I wanted an objective list.  Not these blanket statments such as
+: my X is better than your X.  We need facts!
+[ ... again, stuff deleted ...]
+: Why doubt Novell's commitment to developer tools?  This is an area I am
+: intimately familiar with, and we are examining various options to
+: improve our offerings.  We have C and C++ for a collective price of about
+: $175.00 (Assuming some discount on the SDK).  I am curious though what
+: developers would like.  Give me your ideas and I will bring them to the
+: meetings I participate in.  Is anybody shipping all of CDE yet?  We are
+: working on it just like the rest.
+
+Well, again, I can't tell for Unixware. But I can give a few points, I like
+about the Solaris, the SDK and the DDK.
+
+The SDK comes with an interface builder, that can generate code in C/C++ for
+various toolkits, like Xview, Olit, Tooltalk and - in 2.4 - for Motif and
+UIL. That is INCLUDED in the SDK. I have not seen anything similar at a
+similar price.
+About the DDK, I like a lot, that it is well documented, includes samples,
+parsers that check sources against standards. I very much like the Solaris
+interfaces, like the VISUAL for X. I can write drivers for graphics cards
+for Openwindows, without purchasing a $$$ source-code license.
+The VISUAL interface lets me write the DDX code, that is dynamically loaded
+by the generic X server from SunSoft. And the VISUAL Interface is complete
+too. It supports X, DPS, Sun's XGL and the XIL.
+If I want XGL, I put the stubs in my server.
+
+Also SunSoft's documentation is superior to what I have seen elsewhere. The
+Answerbook stuff is brilliant, you have any information you need handy. The
+docs are precise and explain a lot. The answerbook browser is comfortable for
+handling the docs. It also includes a lot of technical white-papers, that
+give you a fairly good introduction to the fundamentals of new things in 
+Solaris. 
+
+For serious development work, that adresses a commercial market, Solaris is
+perfectly suited. With the standard UNIX environment, we all loved for
+a long time, you cannot earn money anymore. No one really wants to have
+a curses-based application as a commercial product. An interface-builder
+belongs in every development environment, to my opinion. And the SunSoft 
+stuff is available, good and cheap.
+
+I really don't know, what Unixware is delivering on that side, but I sure
+would like to hear about it.
+
+The MP stuff in Solaris is quite good, and in 2.4 it is even very stable and
+efficient ( running on a 4-CPU SS10, in my setup ). I use Apogee's compilers,
+along with the Kuck&Associates preprocessors, that are source-to-source
+translators, which create threaded code out of scalar code. And they do quite
+a good job. Is there anything similar for Unixware ?
+If you do not want to spend $$$ for a commercial compiler, you have GNU. Who
+cares about SunSoft or anybody else not shipping compilers anymore ?
+
+Ok, all the above comes not quite free, but I make my money with it, so who
+cares ? I need to get my job done, and so far, Solaris helped me a lot in
+that.
+
+I reallt do not want to trade Solaris against anything else, on that side of
+my life.
+
+When it comes to standard UNIX tasks, such as mail&news hosts, internet
+access sites, firewalls, normal C development, NFS sites and the like,
+I would really have a serious look on the freely available OSes, like
+the *BSD or Linux. I also run a PC with NetBSD for quite some time.
+Please note, that NetBSD is only MY PERSONAL TASTE. I do not say, that
+FreeBSD or Linux or whatever is worse than NetBSD. The reason, I picked
+NetBSD, is because it also runs on SPARCS, and I like BSD.
+I has proven to be fast and stable, and I assume, Linux and FreeBSD aren't any 
+worse than NetBSD.
+But they CANNOT compete with Solaris on features and why should they really ?
+I do not expect anything from something, that comes free and with that 
+expectation, you will be very very pleased with what you see. The free
+OSes are complete and very well done. And with the sources handy, you can
+do whatever you always wanted to do.
+
+Heck, if I would have had a free platform like that say about ten years ago ?
+
+With several free OSes handy, I can choose what suites me best. I like it
+that way. Who cares if Linux is better then BSD or vice-versa. YOU choose
+what YOU like.
+For a commercial platform, the choice is much more limited. You always have
+to take into account, what your customer wants. If he likes Unixware, you
+go Unixware, if he likes Solaris, you go Solaris. The customer pays. Period.
+
+Within the limits of your freedom of choice, you cannot go wrong with
+Solaris. It's not BSD, but who cares ? If you, as a programmer, cannot
+make the transition from BSD to SYSVR4, you really missed your job.
+Along with that, Solaris NOW runs on PC's and SPARCs, so it servers quite
+a big market today. And I need money today, not an announcement of
+potential income next year.
+
+I really don't understand what this constant InterNet flame war on my-UNIX-
+versus-your-UNIX is all about. I am very pleased by the fact, that every-
+body has the chance to runs HIS/HER private UNIX today on a low budget.
+I wish, I would have had that choice, when I started  17 years ago.
+About 8 to 10 years ago, a license for PC-UNIX was $$$. And, compared to
+what you have today FOR NOTHING, it was really not worth the money.
+
+There is really no reason, to fight each other about what OS is better.
+Pick, what suites you best, and run it.
+
+At this point, I also would like to express my deep appreciation and 
+thank-you's for all the people, who put free OSes and the associated software
+to existance. I hope, I will do my small contribution soon.
+
+Sincerely,
+Thomas Weyergraf
+-- 
+---
+kirk@brains.GUN.de                                             Thomas Weyergraf
+                           NT = NinTendo ???
+
+
+]
+MID: 1994Dec12.160350.5262@brains.GUN.de
+SUBJ: Re: Unix for PC
+BODY: Darren R. Davis (darrend@bikini.USG.Sandy.Novell.COM) wrote: | : [....stuff deleted ...] | : Remember Novell acquired USL.  USL had been delivering MP software to NCR, | : ICL, Olivetti, list goes on and on, for YEARS!  Do you want to argue this | : point?  This has included threads as well.  The jury is still out on |  |  | Is the MP code available with Unixware ? This is a real question, since I  | don't know. Does it support the Intel Yellow book specs ? |  | : You are right, this is a list I would like to see as well.  My whole point | : was that I wanted an objective list.  Not these blanket statments such as | 
+------------------------------------------------------------
+[1995-01-01T00:00:00+00:00] [fzshenau@boris.ucdavis.edu (Gregory Shenaut)] [J Wunsch (j@interface-business.de) wrote:
+: This is in no way to start a flame war: but arguing it as the
+: *cheapest* entirely ignores NetBSD/FreeBSD.  Both are known that you
+: are able to setup an Internet gateway as well with them.
+
+I think that there are other expenses beyond the purchase price of the OS
+to consider, especially when the purchase price is fairly low.  Since
+in most cases you have to purchase a US$35 or so CDROM to get NetBSD/FreeBSD,
+then it would be cheaper still to write your own OS.
+
+--
+Greg Shenaut -- gkshenaut@ucdavis.edu
+
+
+
+]
+MID: 47dg73$1j4@mark.ucdavis.edu>#1/1
+SUBJ: Re: Advice on Internet gateway.
+BODY: J Wunsch (j@interface-business.de) wrote: | : This is in no way to start a flame war: but arguing it as the | : *cheapest* entirely ignores NetBSD/FreeBSD.  Both are known that you | : are able to setup an Internet gateway as well with them. |  | I think that there are other expenses beyond the purchase price of the OS | to consider, especially when the purchase price is fairly low.  Since | in most cases you have to purchase a US$35 or so CDROM to get NetBSD/FreeBSD, | then it would be cheaper still to write your own OS. |  | -- | Greg Shenaut -- gkshenaut@ucdavis.edu |  |  |  | 
+------------------------------------------------------------
+[1995-01-01T00:00:00+00:00] [j@interface-business.de (J Wunsch)] [Lisa Collars <lisac@poi.net> wrote:
+
+>>        I have been asked to set up an internet gateway, and to evaluate 
+>BSDI 
+>>for the job. Basically all I need to know is:
+>>1. Are there any other contenders worth considering as well as BSDI?
+>>2. Is it fairly painless to set up?
+
+>BSD/OS is certainly the easiest to get going - as well as cheapest. 
+
+This is in no way to start a flame war: but arguing it as the
+*cheapest* entirely ignores NetBSD/FreeBSD.  Both are known that you
+are able to setup an Internet gateway as well with them.
+
+(I *know* about the advantages and disadvantages of a commercial
+system, i'm only telling you that *cheapest* is a misnomer, since its
+a superlative.)
+-- 
+J"org Wunsch					       Unix support engineer
+joerg_wunsch@interface-business.de
+					[private: http://www.sax.de/~joerg/]
+
+
+
+]
+MID: 47co37$ke5@ida.interface-business.de>#1/1
+SUBJ: Re: Advice on Internet gateway.
+BODY: Lisa Collars <lisac@poi.net> wrote: |  | >>        I have been asked to set up an internet gateway, and to evaluate  | >BSDI  | >>for the job. Basically all I need to know is: | >>1. Are there any other contenders worth considering as well as BSDI? | >>2. Is it fairly painless to set up? |  | >BSD/OS is certainly the easiest to get going - as well as cheapest.  |  | This is in no way to start a flame war: but arguing it as the | *cheapest* entirely ignores NetBSD/FreeBSD.  Both are known that you | are able to setup an Internet gateway as well with them. |  | (I *know* about the advantages and disadvantages of a commerci
+------------------------------------------------------------
+[1995-02-09T18:40:05+00:00] [pefo@enea.se (Per Fogelstrom)] [Igor Chudov (ichudov@wiltel.com) wrote:
+: Dear Friends,
+
+: Sorry if it is not for this newsgroup, but I did not find anything in the
+: FAQs or news. Please let me know if this post is not appropriate for this
+: newsgroup.
+
+: You know, it is too hard to live without Unix at home, so now I am trying
+: to make a major choice for my home PC based system. Do you have any
+: arguments about Linux vs. 386BSD?
+
+IMO there is only one answer: Try both and chose the one that feels ok for
+you. Point is that all shit these kind of questions generate is completly
+a waste of time and the only conclusion one can make from all responses
+(that eventaly end up in a flame war) is that different people thinks
+different :-) Nuff said...
+
+
+]
+MID: 3hdni5$7un@gordon.enea.se
+SUBJ: Re: Linux vs. BSD?!
+BODY: Igor Chudov (ichudov@wiltel.com) wrote: | : Dear Friends, |  | : Sorry if it is not for this newsgroup, but I did not find anything in the | : FAQs or news. Please let me know if this post is not appropriate for this | : newsgroup. |  | : You know, it is too hard to live without Unix at home, so now I am trying | : to make a major choice for my home PC based system. Do you have any | : arguments about Linux vs. 386BSD? |  | IMO there is only one answer: Try both and chose the one that feels ok for | you. Point is that all shit these kind of questions generate is completly | a waste of time and the only conclusion one c
+------------------------------------------------------------
+[1995-02-16T21:01:15+00:00] [jcargill@grilled.cs.wisc.edu (Jon Cargille)] [In article <kaleb.792964220@exalt>, Kaleb KEITHLEY <kaleb@x.org> wrote:
+>Terry Lambert <terry@cs.weber.edu> writes:
+>
+>>3)	One new item that has come to light in this process that
+>>	was not clear to me before (and perhaps this is my own
+>>	fault) is that you effectively stated that you were
+>>	personally bullied into the choice of names by a shadow
+>>	organization you call "The Usenet Cabal".  For this to
+>>	be true there must have been a significant abuse of
+>>	process, perhaps including abuse of the position of news
+>>	group moderator.
+>
+>>	Personally, I have a hard time buying this, and others I
+>>	have talked to in person and in email also have a hard
+>>	time buying this.  Not only that such a group could exist
+>>	and wield the power you claim, but that as adamantly as
+>>	you have held on to this thread, it is highly unlikely
+>>	that you would have humbly submitted to their ruling.
+>
+>Good for you. I personnally have a hard time believing that you
+>and Peter Da Silva can't accept what I have said as a statement of
+>fact. Funny how you would presume to know better than I what the
+>Usenet group-advice-gurus said to me.
+>
+
+I'm sort of amazed that this is even an issue in this flame war; this
+complaint is certainly nothing new.
+
+For anyone who has read news.groups over the last few years, there is
+a consistent pattern of people complaining about this very thing; if
+group-advice disagrees with the position in the hierarchy of the
+groups that an RFD proposes, it doesn't get posted by Tale.
+
+If this were the first complaint of this type that I had see, I would
+be skeptical as well; considering that I've seen half a dozen or a
+dozen identical complaints by different people, I think it's a fairly
+well established pattern.
+
+I offer no comment on the rest of the flamewar other than to agree
+with Jordan: why doesn't everyone get back to useful work instead...  ;-)
+
+Just my $.02,
+
+Jon
+-- 
+-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.
+Jon Cargille		jcargill@cs.wisc.edu
+Want your .sig compressed?  Reasonable rates
+and fast turnaround. Call today!
+
+
+]
+MID: 3i0eer$13n@spool.cs.wisc.edu
+SUBJ: Re: Put the Cannons Away: Vote YES on newsgroup reformation.
+BODY: In article <kaleb.792964220@exalt>, Kaleb KEITHLEY <kaleb@x.org> wrote: | >Terry Lambert <terry@cs.weber.edu> writes: | > | >>3)	One new item that has come to light in this process that | >>	was not clear to me before (and perhaps this is my own | >>	fault) is that you effectively stated that you were | >>	personally bullied into the choice of names by a shadow | >>	organization you call "The Usenet Cabal".  For this to | >>	be true there must have been a significant abuse of | >>	process, perhaps including abuse of the position of news | >>	group moderator. | > | >>	Personally, I have a hard time buying this, and ot
+------------------------------------------------------------
+[1995-02-17T12:35:53+00:00] [kaleb@fedora.x.org (Kaleb KEITHLEY)] [jcargill@grilled.cs.wisc.edu (Jon Cargille) writes:
+
+>I offer no comment on the rest of the flamewar other than to agree
+>with Jordan: why doesn't everyone get back to useful work instead...  ;-)
+
+I could not agree more; except, and not to be argumentative, but
+I don't consider it to have been a flame war. An extended discussion
+yes, a flame war no. It would have had to have gotten a lot nastier
+to have been a flame war. People are so quick to put the "flame" label
+on anything even slightly over the bar of everyday "conversation." I
+suppose that's what comes from having articles about flames in magazines 
+like Time and The New Yorker -- everyone who has ever read about a
+flame or a flame war wants to see one. If you want to see real flames, 
+read alt.flame!
+
+The voting period ended yesterday, and soon we'll know the results, and 
+no matter what the outcome is I'm done with it. If it lost, c'est la vie;
+someone else go do battle with Usenet, David Lawrence, and the Group
+Advice Guru gaggle in six months time.
+
+--
+
+Kaleb KEITHLEY
+
+
+
+]
+MID: kaleb.793024553@fedora.x.org
+SUBJ: Re: Put the Cannons Away: Vote YES on newsgroup reformation.
+BODY: jcargill@grilled.cs.wisc.edu (Jon Cargille) writes: |  | >I offer no comment on the rest of the flamewar other than to agree | >with Jordan: why doesn't everyone get back to useful work instead...  ;-) |  | I could not agree more; except, and not to be argumentative, but | I don't consider it to have been a flame war. An extended discussion | yes, a flame war no. It would have had to have gotten a lot nastier | to have been a flame war. People are so quick to put the "flame" label | on anything even slightly over the bar of everyday "conversation." I | suppose that's what comes from having articles about flames i
+------------------------------------------------------------
+[1995-02-17T17:48:08+00:00] [Terry Lambert <terry@cs.weber.edu>] [kaleb@fedora.x.org (Kaleb KEITHLEY) wrote:
+] jcargill@grilled.cs.wisc.edu (Jon Cargille) writes:
+] >I offer no comment on the rest of the flamewar other than to agree
+] >with Jordan: why doesn't everyone get back to useful work instead...  ;-)
+] 
+] I could not agree more; except, and not to be argumentative, but
+] I don't consider it to have been a flame war. An extended discussion
+] yes, a flame war no. It would have had to have gotten a lot nastier
+] to have been a flame war. People are so quick to put the "flame" label
+] on anything even slightly over the bar of everyday "conversation." I
+] suppose that's what comes from having articles about flames in magazines 
+] like Time and The New Yorker -- everyone who has ever read about a
+] flame or a flame war wants to see one. If you want to see real flames, 
+] read alt.flame!
+
+I definitely agree with Kaleb on this.  It was only a discussion.
+Neither one of us resorted to "so's your mama!".
+
+As far as what Kaleb said in his previous post, and me calling him a
+foe, this only applies to "The Cabal".
+
+I still think that it is uttery intolerable to allow such a thing
+as a Usenet Cabal to exist, and would still like evidence to shove
+down it's throat (if one did) to #$%!&! choke it to death.
+
+And I'm still willing to use trademark infringement to beat it to
+death with an already bloody crowbar belonging to someone elses
+lawyers, if that's my only option.
+
+It is terrifically frustrating to me that *anyone* could *conceive*
+of allowing such an abomination to exist.  That's why it's so hard
+for me to accept its existance without direct evidence.  Maybe I
+just don't read the right groups...
+
+
+					Cheers,
+                                        Terry Lambert
+                                        terry@cs.weber.edu
+---
+Any opinions in this posting are my own and not those of my present
+or previous employers.
+
+
+]
+MID: 3i2ngo$fsk@park.uvsc.edu
+SUBJ: Re: Put the Cannons Away: Vote YES on newsgroup reformation.
+BODY: kaleb@fedora.x.org (Kaleb KEITHLEY) wrote: | ] jcargill@grilled.cs.wisc.edu (Jon Cargille) writes: | ] >I offer no comment on the rest of the flamewar other than to agree | ] >with Jordan: why doesn't everyone get back to useful work instead...  ;-) | ]  | ] I could not agree more; except, and not to be argumentative, but | ] I don't consider it to have been a flame war. An extended discussion | ] yes, a flame war no. It would have had to have gotten a lot nastier | ] to have been a flame war. People are so quick to put the "flame" label | ] on anything even slightly over the bar of everyday "conversation." I | ]
+------------------------------------------------------------
+[1995-03-10T22:07:48+00:00] [dbmark@aol.com (DBMARK)] [A flame war is underway in the comp.sys.hp.mpe newsgroup.  There is a lone
+advocate of UNIX getting gang up on.  The gang members are grossly
+uninformed.  This is your chance to defend your UNIX os and educate these
+people!
+
+
+]
+MID: 3jqijk$laf@newsbf02.news.aol.com
+SUBJ: Send in the Cavalry
+BODY: A flame war is underway in the comp.sys.hp.mpe newsgroup.  There is a lone | advocate of UNIX getting gang up on.  The gang members are grossly | uninformed.  This is your chance to defend your UNIX os and educate these | people! |  |  | 
+------------------------------------------------------------
+[1995-03-12T04:52:29+00:00] [vandys@cisco.com (Andrew Valencia)] [In <3jqijk$laf@newsbf02.news.aol.com> dbmark@aol.com (DBMARK) writes:
+
+>A flame war is underway in the comp.sys.hp.mpe newsgroup.  There is a lone
+>advocate of UNIX getting gang up on.  The gang members are grossly
+>uninformed.  This is your chance to defend your UNIX os and educate these
+>people!
+
+I just dropped over, and the MPE'ers seem like a relatively informed group
+of folks who have a realistic view of MPE in the larger world of computing.
+I've used both MPE and UN*X, and while I personally prefer UN*X, I can see
+why MPE has its place under the sun.
+
+Relax.  It's good that there are "other" operating systems, and that these
+OS's have their advocates.
+
+						IMHO,
+						Andy Valencia
+
+
+]
+MID: vandys.794983949@cisco.com
+SUBJ: Re: Send in the Cavalry
+BODY: In <3jqijk$laf@newsbf02.news.aol.com> dbmark@aol.com (DBMARK) writes: |  | >A flame war is underway in the comp.sys.hp.mpe newsgroup.  There is a lone | >advocate of UNIX getting gang up on.  The gang members are grossly | >uninformed.  This is your chance to defend your UNIX os and educate these | >people! |  | I just dropped over, and the MPE'ers seem like a relatively informed group | of folks who have a realistic view of MPE in the larger world of computing. | I've used both MPE and UN*X, and while I personally prefer UN*X, I can see | why MPE has its place under the sun. |  | Relax.  It's good that there are "ot
+------------------------------------------------------------
+[1996-01-01T00:00:00+00:00] [john_warwick@mindlink.bc.c] [
+
+
+ In article <31939930.5F8C@netcom.ca>, Aristophanes <scribe@netcom.ca> wrote:
+ 
+ > Andrew Milleville wrote:
+ >  
+ > > : 2) Win95 hasn't even been around for a year and it already has five
+ > > : times the software of Mac.
+ > > 
+ > > Show me an application (except a game) than you can get on a pc that I
+ > > can't find the equilivalent of for mac.
+ > 
+ > Visual Basic.
+ > 
+ > Apple itself has said it needs something like this, so i went 
+ > gangbusters after Denali as a cross-platform thing called Denali, now 
+ > delayed.
+ > 
+ > And if you answer AppleScript and HyperCard, I'll pre-respond by saying 
+ > they're not PowerMac native and not up to the task of filling this void.
+ 
+ HyperCard 2.3.3 is PPC native. If you need a visual basic stand-in(and
+ more!), you should check out AppWare. The product has been bought from
+ Novell by Network Multimedia, and is a great example of object oriented
+ programming for non-programmers. In most cases, I find  Appware, FaceSpan
+ or HyperCard in combination with AppleScript can fill in for Visual Basic.
+ JW
+ 
+ -- 
+ John Warwick
+ john_warwick@mindlink.bc.ca
+
+
+
+
+
+]
+MID: NEWTNews.831965536.4545.dons@dons.avana.net>#1/1
+SUBJ: Re: The PC Mac Holy war
+BODY:  |  |  |  In article <31939930.5F8C@netcom.ca>, Aristophanes <scribe@netcom.ca> wrote: |   |  > Andrew Milleville wrote: |  >   |  > > : 2) Win95 hasn't even been around for a year and it already has five |  > > : times the software of Mac. |  > >  |  > > Show me an application (except a game) than you can get on a pc that I |  > > can't find the equilivalent of for mac. |  >  |  > Visual Basic. |  >  |  > Apple itself has said it needs something like this, so i went  |  > gangbusters after Denali as a cross-platform thing called Denali, now  |  > delayed. |  >  |  > And if you answer AppleScript and HyperCard, I'll pre-respond by
+------------------------------------------------------------
+[1996-01-01T00:00:00+00:00] [joelga@rossinc.com (Joel Garry)] [
+In article <32bea3a3.0@cfanews.harvard.edu> oly@head-cfa.harvard.edu (Oliver Oberdorf) writes:
+>In article <slrn5bml5e.hjr.jgoerzen@complete.org>, jgoerzen@complete.org (John Goerzen) writes:
+>[...]
+>|> Well, all I can say on this is that awhile back, when I posted to one of the
+>|> OpenBSD mailing lists (as I was in the process of choosing a Unix OS to
+>|> install on a computer), I received nothing but insults from Deraadt.  Theo
+>|> also couldn't seem to keep from bashing NetBSD and FreeBSD at every
+>|> opportunity, and later spammed me in e-mail.  I am all for spreading the
+>|> word about open Unices such as FreeBSD, NetBSD, OpenBSD, and Linux, and
+>|> think that this would be a good way to do it.  But I think that you have the
+>|> wrong person listed as moderator.
+>[...]
+>
+>I've been following the OpenBSD newsgroups since not too long after their
+>creation.  The lists I follow have been very polite and appropriate - far
+>better than one might expect.  There was a brief flame war resulting from
+>a Free/Open cross-post.  In this case, both Open and Free contrtibutors
+>behaved less than perfect.  In fact, the worst offenders (IMHO) were a
+>FreeBSD core member and a FreeBSD developer.
+>
+>My point is we're all jerks sometimes.  I didn't stop using FreeBSD and I
+>didn't stop looking at OpenBSD.
+>
+>The content of the OpenBSD mailing lists has generally been better than
+>the norm for USENET and I don't see it as evidence that the newsgroup
+>would have problems.
+>
+>
+>|> I think that the creation of an OpenBSD group with him as moderator would
+>|> harm OpenBSD and the image of free Unices in general, rather than help it.
+>
+>I get the impression he (Theo) is only co-moderator.
+>
+>
+>|> (please CC a copy of your message to me via e-mail as I do not read
+>|> news.groups)
+>
+>Which leads to the obvious question: why do you have an opinion?  If you
+>don't read newsgroups, why do you care about the existance of an OpenBSD
+>specific group?
+
+Perhaps he would read newsgroups if they met his perception of what a 
+newsgroup should be.
+
+>
+>(this message not CC:'d)
+>
+>-Oly
+>
+
+
+-- 
+Joel Garry               joelga@rossinc.com               Compuserve 70661,1534
+These are my opinions, not necessarily those of Ross Systems, Inc.   <> <>
+%DCL-W-SOFTONEDGEDONTPUSH, Software On Edge - Don't Push.            \ V /
+panic: ifree: freeing free inodes...                                   O
+
+
+
+]
+MID: 1996Dec24.140913.12447@rossinc.com>#1/1
+SUBJ: Re: RFD: comp.unix.bsd.openbsd.announce and comp.unix.bsd.openbsd.misc
+BODY:  | In article <32bea3a3.0@cfanews.harvard.edu> oly@head-cfa.harvard.edu (Oliver Oberdorf) writes: | >In article <slrn5bml5e.hjr.jgoerzen@complete.org>, jgoerzen@complete.org (John Goerzen) writes: | >[...] | >|> Well, all I can say on this is that awhile back, when I posted to one of the | >|> OpenBSD mailing lists (as I was in the process of choosing a Unix OS to | >|> install on a computer), I received nothing but insults from Deraadt.  Theo | >|> also couldn't seem to keep from bashing NetBSD and FreeBSD at every | >|> opportunity, and later spammed me in e-mail.  I am all for spreading the | >|> word about 
+------------------------------------------------------------
+[1996-01-01T00:00:00+00:00] [ken@direct.ca (Ken Clark)] [Hi.  The recent discussions on UNIX history got me to thinking about the
+"Good Old Days," and was wondering if the flames have settled enough for
+people who know to give an account of what happened circa 1993 with *BSD.
+I have read Jordan Hubbard's FreeBSD history, but it seems to duck the
+details of what happened to Bill Jolitz and why FreeBSD and NetBSD went their
+seperate paths.  I am honestly not trying to incite a flame war here, and
+hope that enough time has passed that there may be some "clear heads" accounts
+of what happened exactly.  Here are a number of specific questions I am
+curious about, but if you have more to vent/add, please do.
+
+What happened to Jolitz?  What happened that so radically changed his
+position on 386BSD?  (If you read the old release notes, there were very
+grandiose plans).  What happened that caused him not to make any releases
+after 0.1?  Why did he not support the patchkits?  The FreeBSD history 
+says that Jolitz "withdrew his support" for the BSD interim (later FreeBSD)
+project.  Why?  Does anyone have any old posts from the era explaining this?
+Wasn't there to be a 386BSD 1.0 from Jolitz alone to be released
+on CDROM?  Did this happen? I seem to recall people saying Jolitz 
+was writing a book on BSD.  Did he?  What does he do now?  I am sure 
+there are more details here that would be interesting.  
+
+Next, why exactly did *BSD fracture into FreeBSD and NetBSD?
+I think I might have trouble getting an answer to this
+one, but certainly wanting multiplatform support is not a good enough reason
+for two independent 4.4 Lite ports.  Not passing any judgement here, just
+interested to know the factors that caused the split.  More recently, and
+even harder for someone not in the know to understand, why OpenBSD?  What
+caused this, especially so late in the game?
+
+Something else you also don't hear much about:  What became of the "encumbered"
+4.4BSD?  Are there people/institutions that have a UNIX license and use the
+"real" 4.4BSD, or has it been wiped out by free efforts?  With hindsight,
+what effect did the USL/Novell/BSDI/UCB have on *BSD other than causing
+certain kernel files to be re-written?  Did Novell "win" anything in the
+final analysis?  Where any lessons learned?
+
+Finally, and I know I am going to get it for this one, what happened to
+Jesus Monroe Jr?  I am actually more serious about this question than
+you might suspect -- he was a household name to anyone who was on USENET 
+in 1993 and deserves a page in history.  Did he eventually make it 
+into everyone's kill file and go away?  Got committed maybe?  Did 
+he ever release his famous QIC-40 tape driver?
+
+
+Thanks for any thoughts.  I hope that this will stir some nostalgia about
+that period.
+
+- Ken
+
+
+
+]
+MID: 4k1nue$lm8@orb.direct.ca>#1/1
+SUBJ: Curious about *BSD History
+BODY: Hi.  The recent discussions on UNIX history got me to thinking about the | "Good Old Days," and was wondering if the flames have settled enough for | people who know to give an account of what happened circa 1993 with *BSD. | I have read Jordan Hubbard's FreeBSD history, but it seems to duck the | details of what happened to Bill Jolitz and why FreeBSD and NetBSD went their | seperate paths.  I am honestly not trying to incite a flame war here, and | hope that enough time has passed that there may be some "clear heads" accounts | of what happened exactly.  Here are a number of specific questions I am | curiou
+------------------------------------------------------------
+[1996-01-01T00:00:00+00:00] [oly@head-cfa.harvard.edu (Oliver Oberdorf)] [
+In article <slrn5bml5e.hjr.jgoerzen@complete.org>, jgoerzen@complete.org (John Goerzen) writes:
+[...]
+|> Well, all I can say on this is that awhile back, when I posted to one of the
+|> OpenBSD mailing lists (as I was in the process of choosing a Unix OS to
+|> install on a computer), I received nothing but insults from Deraadt.  Theo
+|> also couldn't seem to keep from bashing NetBSD and FreeBSD at every
+|> opportunity, and later spammed me in e-mail.  I am all for spreading the
+|> word about open Unices such as FreeBSD, NetBSD, OpenBSD, and Linux, and
+|> think that this would be a good way to do it.  But I think that you have the
+|> wrong person listed as moderator.
+[...]
+
+I've been following the OpenBSD newsgroups since not too long after their
+creation.  The lists I follow have been very polite and appropriate - far
+better than one might expect.  There was a brief flame war resulting from
+a Free/Open cross-post.  In this case, both Open and Free contrtibutors
+behaved less than perfect.  In fact, the worst offenders (IMHO) were a
+FreeBSD core member and a FreeBSD developer.
+
+My point is we're all jerks sometimes.  I didn't stop using FreeBSD and I
+didn't stop looking at OpenBSD.
+
+The content of the OpenBSD mailing lists has generally been better than
+the norm for USENET and I don't see it as evidence that the newsgroup
+would have problems.
+
+
+|> I think that the creation of an OpenBSD group with him as moderator would
+|> harm OpenBSD and the image of free Unices in general, rather than help it.
+
+I get the impression he (Theo) is only co-moderator.
+
+
+|> (please CC a copy of your message to me via e-mail as I do not read
+|> news.groups)
+
+Which leads to the obvious question: why do you have an opinion?  If you
+don't read newsgroups, why do you care about the existance of an OpenBSD
+specific group?
+
+(this message not CC:'d)
+
+-Oly
+
+
+
+
+]
+MID: 32bea3a3.0@cfanews.harvard.edu>#1/1
+SUBJ: Re: RFD: comp.unix.bsd.openbsd.announce and comp.unix.bsd.openbsd.misc
+BODY:  | In article <slrn5bml5e.hjr.jgoerzen@complete.org>, jgoerzen@complete.org (John Goerzen) writes: | [...] | |> Well, all I can say on this is that awhile back, when I posted to one of the | |> OpenBSD mailing lists (as I was in the process of choosing a Unix OS to | |> install on a computer), I received nothing but insults from Deraadt.  Theo | |> also couldn't seem to keep from bashing NetBSD and FreeBSD at every | |> opportunity, and later spammed me in e-mail.  I am all for spreading the | |> word about open Unices such as FreeBSD, NetBSD, OpenBSD, and Linux, and | |> think that this would be a good way to 
+------------------------------------------------------------
+[1996-01-01T00:00:00+00:00] [kpneal@eos.ncsu.edu (Kevin P. Neal)] [John M Dow (alba@easynet.co.uk) wrote:
+
+: Would it be possible for someone whose running BSD and has run Linux to 
+: drop me a line letting me know how they compare?
+
+Yes, it would be possible.  It's a wonderful world, with endlessly numerous 
+possibilities.
+
+(Hold on tight, cause here comes another holy war!)
+
+-- 
+XCOMM --------------------------------------------------------
+XCOMM Kevin P. Neal, Sophomore CSC/CPE     kpneal@eos.ncsu.edu 
+XCOMM North Carolina State University      kevinneal@bix.com
+XCOMM --------------------------------------------------------
+
+
+
+]
+MID: 4iicn5$ejc@taco.cc.ncsu.edu>#1/1
+SUBJ: Re: Linux and FreeBSD
+BODY: John M Dow (alba@easynet.co.uk) wrote: |  | : Would it be possible for someone whose running BSD and has run Linux to  | : drop me a line letting me know how they compare? |  | Yes, it would be possible.  It's a wonderful world, with endlessly numerous  | possibilities. |  | (Hold on tight, cause here comes another holy war!) |  | --  | XCOMM -------------------------------------------------------- | XCOMM Kevin P. Neal, Sophomore CSC/CPE     kpneal@eos.ncsu.edu  | XCOMM North Carolina State University      kevinneal@bix.com | XCOMM -------------------------------------------------------- |  |  |  | 
+------------------------------------------------------------
+[1996-01-01T00:00:00+00:00] [bryan@panix.com (Bryan Althaus)] [DON'T ADD TO THIS THREAD!!!  Folooup-s to alt.religion.computers...
+
+Ace (digab@best.com) wrote:
+: In article <31685e02.5498255@news.earthlink.net>, hybridv, hybridv wrote:
+
+:   Oh, goodie, another flame war. It's Easter and I feel good, so let's
+: jump into the battle!
+
+: > ok so native FPU mode is faster on a MAC! who gives a shit.. no
+: > program fully utlizees it !... i use 7200,8500... blah blah at work
+: > with p-133 and a p-100.... the pcs are 2x-6x faster on every
+: > application for both machines... 
+
+:   Tell that to the guys from Computer World who concluded after some
+: serious series of tests that a 132/9500 is faster in any given app. than a
+: 150Mghz Gateway PC running Windoze 1895.
+:   Zowie, man. I don't know where you get all those statistics, but if
+: you'd actually read (you know, like in R-E-A-D) some computer newspapers
+: you'd see they have a total different oppinion. 
+:   
+: the all have 64 mb ram...and my p-100
+: > is consinstanly faster then the mac132 in all aps... let that be
+: > photoshop, premiere, pagemaker,, blah blah blah.... not to mention
+: > macs are a PAIN in the ass to fix when a software crash happens
+
+:   Oh yeah. I forgot, it is a pain for you to spell 1800-Appl-SOS on a
+: phone. How about PC's, eh? The so notorious Windoze 1895 which is supposed
+: to run without DOS, but has to be configured in it?
+:   Jeesh, PC users started teaching MAC users about friendly
+: interface/easyness to handle. Damn. This is getting nowhere, folks.
+
+: > theres no real fucking way to figure out what goes on... a sloppy,
+: > slow gui floods the screen with minamle configureation... the standard
+: > 4x cd that comes with it wont read dual session cds,,, it sucks
+: > printing to a ethernetwork... and its SLOW!!!!! 
+
+:   Oh yeah? Why, I'm perfectly content with my Mac, and because of that I
+: will NOT buy ANY kind of IBM-compatible, for any reason in the world.
+: Better yet, I won't buy one of them because there is NO reason. 
+
+: the pcs rip in all the
+: > shitty mac areas.... only one good reason to have a mac and that is
+: > for publishing any shit every place that does pro. output uses macs...
+: > so i need them to be compatable.... dont even start with soft
+: > windows...   the older monitors arnt even compatable with the new pci
+: > video boards.... blah blah blah ... 
+
+:   Indeed. Blah, blah, blah. I said it before, I'm going to say it again:
+: before posting some funky flame on a MAC newsgroup get in touch with your
+: local library and spend some hours learning some damned sentence syntax
+: and grammar. And let's not mention spelling; you'd probably have spend
+: some time with a 2nd grade teacher.
+
+: > out there that cant understand at least 25% of how a computer works...
+: > i had a mac freak come up to me once at my work and said "i heard SCSI
+: > is faster then PCI" >?????????? what the fuck does that mean.. kinda
+: > like my "fireplace is better then your rosegarden?" whatever.. and it
+: > happens that 85% of mac uses have this mentality about computers...
+: > ignorent... ignorent...
+
+:   That's i-g-n-o-r-a-n-t, Mr. Wise PC User. Ignorant. Talk about it, but
+: doesn't know how to spell it. Man!
+
+:  since when is it bad to acutally know how a
+: > computer works to use it... would we say it was bad if a surgen said "
+: > i know how to cut with a scaple so i am a brain sergan? whatever.."
+
+:   Ace actually amazed and amorsely articulates an artistic alambique. See?
+: I can talk so I won't fall asleep, too. Kindda "If I know how to spell I'm
+: not a PC user..."
+:   Sorry, I'm convinced that there are PC users as intelligent as any Mac
+: user outhere, but right now, I'm sure I'm not addressing to one of them.
+
+: > well im tierd of being bitchy...
+
+:   That's tired, and I think your full-day job is being bitchy. 
+
+: > is the pre-empitive multitasking OS for mac? ... please let me know
+
+:   My pleasure, Copland will be out in September 96, from what I know. I
+: might be wrong here, so any corrections are welcomed. And, oh yeah, it
+: seems it'll have Windoze 1895 for lunch for speed, interface, system
+: requirements and number of crashes.
+
+:                                        Ace
+
+:   PS: This message was replyed to from csmg.binaries, a Mac newsgroup. I
+: appologize to everyone who read this post in an unappropiate newsgroup,
+: but it is my right to respond to that stupid, and so unelegant flame. I
+: already elimined the c.s.advocacy... newsgroups from the header. Sorry
+: again.
+
+: -- Windoze 95... Hmm. Windoze 1895 comes much more closer.   
+:   "Semper fi... Mac!"
+
+
+
+]
+MID: 4kbcra$bj9@panix.com
+SUBJ: Re: Reply to: Five reasons PC's are better than Macs.
+BODY: DON'T ADD TO THIS THREAD!!!  Folooup-s to alt.religion.computers... |  | Ace (digab@best.com) wrote: | : In article <31685e02.5498255@news.earthlink.net>, hybridv, hybridv wrote: |  | :   Oh, goodie, another flame war. It's Easter and I feel good, so let's | : jump into the battle! |  | : > ok so native FPU mode is faster on a MAC! who gives a shit.. no | : > program fully utlizees it !... i use 7200,8500... blah blah at work | : > with p-133 and a p-100.... the pcs are 2x-6x faster on every | : > application for both machines...  |  | :   Tell that to the guys from Computer World who concluded after some | : serious ser
+------------------------------------------------------------
+[1996-01-01T00:00:00+00:00] [Terry Lambert <terry@lambert.org>] [Bob Nelson wrote:
+
+[ ... a free commodity OS ... ]
+
+] Wouldn't such a plan really only serve to ultimately destroy unix? Is
+] not one of its primary strengths predicated upon the notion that unix
+] is indeed not _meant_ to appeal to "most users"? The use of Windows and
+] other Microsoft platforms by some should be of no concern to the unix
+] community.
+
+I wouldn't put it like that.
+
+I would put it as "design decisions are intended to be on the basis
+of technical merit, not increased marketability".
+
+This is an "if you build it, they will come" mentality, and is rarely
+justified in reality -- what happens instead is that that the lack
+of "them" beating down your door is intentionally misinterpreted as
+"they are clueless, we are better off without them".
+
+
+Marketability is an issue, or there wouldn't be cross posted OS
+comparison flame wars.
+
+Unlike computer geeks, marketing geeks rarely "hack" on their day
+off.
+
+
+There is some merit to the idea of a free commodity desktop OS,
+but there are a lot of technical issues in the approach the free
+OS's take in problem solving and administration that would have
+to be resolved before it could happen.
+
+
+I question whether it's possible, in an environment where the
+work is done "because it is fun", to easily include work that
+isn't fun, even if it increases marketability.  To do so would
+probably requie arranging participation requirements to put the
+"less fun" work in as a requirement for doing the "more fun"
+work in the first place.  This is certainly possible, but it
+is inarguable that it would decrease casual participation.
+
+
+                                        Terry Lambert
+                                        terry@lambert.org
+---
+Any opinions in this posting are my own and not those of my present
+or previous employers.
+
+
+
+]
+MID: 31700D20.6BB4FBF1@lambert.org>#1/1
+SUBJ: Re: Historic Opportunity facing Free Unix (was Re: The Lai/Baker paper, benchmarks, and the world of free UNIX)
+BODY: Bob Nelson wrote: |  | [ ... a free commodity OS ... ] |  | ] Wouldn't such a plan really only serve to ultimately destroy unix? Is | ] not one of its primary strengths predicated upon the notion that unix | ] is indeed not _meant_ to appeal to "most users"? The use of Windows and | ] other Microsoft platforms by some should be of no concern to the unix | ] community. |  | I wouldn't put it like that. |  | I would put it as "design decisions are intended to be on the basis | of technical merit, not increased marketability". |  | This is an "if you build it, they will come" mentality, and is rarely | justified in reality -- w
+------------------------------------------------------------
+[1996-01-01T00:00:00+00:00] [Birger Wathne <Birger.Wathne@nho.hydro.com>] [
+I don't want to start a flame war, just comment on a few things.
+
+Peter da Silva wrote:
+> (1) It's a very large and complex system.
+>         (but it doesn't do much more than simpler systems)
+It seems very complex, at least when you come from the Solaris 1.x
+(or SunOS 4.x) world, as I once did. But after a while you start to
+see and understand the logic, and after a few years, you mostly
+see the same kind of beauty that you see in the older Sys V OS'es.
+I have used Solaris since 2.0 beta, so I have had some time to
+adjust.
+
+> (2) It doesn't provide good System V administrative semantics.
+>         (but it uses System V commands and files)
+What do you mean here? It usually adheres to System V rel 4 semantics,
+but some of the SVR4 things are terrible. Especially printing.
+I have never used older System V's, but I have used some other
+SVR4 based operating systems, and Solaris doesn't stand out more
+than the other ones.
+
+> (3) It doesn't provide good BSD administrative semantics.
+>         (but it does use some BSD stuff as well)
+Administration should be SVR4'ish.
+
+> (4) It's harder to port System V software to Solaris than to other
+>     System V boxes.
+>         (that's UHC, Intel UNIX, Unixware, and Xenix software)
+I've never had to port from older System V. I have compiled
+many PD packages, and in the 2.0 - 2.2 days I had to modify some
+code to get things to compile. Not too hard for the things I compiled.
+Compiling for the Sys V environment on Domain/OS is *much* worse.
+As you note, most packages are rewritten to support Solaris these days.
+And mostly, that means rewriting to SVR4. It shouldn't be neccesary
+to have special tricks for Solaris.
+
+> (5) BSD software ports pretty well, but you have to make sure to set
+>     your paths right to make sure you don't get the System V environment.
+>         (Watch out for /usr/ccs/bin)
+Never had any problems here, but if any piece of software supports
+SVR4, I use that when compiling. I seldom have to use BSD compatibility
+these days.
+
+> (6) On the same hardware, it doesn't perform as well as SunOS.
+>         (Of course SunOS doesn't perform at all on the new hardware. Sigh)
+Hmmmm. When did you last try Solaris 2?
+
+> Now, some of these have apparently been fixed in 2.4 and 2.5, and of course
+Oh. Thanks for answering that question.
+Solaris 2.3 was the first stable production release,
+but it was very slow. If you haven't tried Solaris since 2.3, you
+should take 2.5.1 for a spin. 2.4 and 2.5 have been mostly
+bug fix and tuning releases. 2.6 will be a major 'new stuff'
+release again. A few old platforms may go slower, I don't know.
+But with enough memory, most systems should go faster with
+Solaris 2.x than with Solaris 1.x. My personal recommendation
+is 32MB for a workstation that runs X. Even my old IPC was
+faster with 2.x than 1.x.
+
+
+> </peter>
+
+-- 
+Birger Wathne
+Birger.Wathne@nho.hydro.com           |  These addresses may *not* be
+Birger.Wathne@sdata.no                |  used for unsolicited mailing
+
+
+
+]
+MID: 32B04040.68FD@nho.hydro.com>#1/1
+SUBJ: Re: Solaris 2.6
+BODY:  | I don't want to start a flame war, just comment on a few things. |  | Peter da Silva wrote: | > (1) It's a very large and complex system. | >         (but it doesn't do much more than simpler systems) | It seems very complex, at least when you come from the Solaris 1.x | (or SunOS 4.x) world, as I once did. But after a while you start to | see and understand the logic, and after a few years, you mostly | see the same kind of beauty that you see in the older Sys V OS'es. | I have used Solaris since 2.0 beta, so I have had some time to | adjust. |  | > (2) It doesn't provide good System V administrative semantics. | >  
+------------------------------------------------------------
+[1996-01-01T00:00:00+00:00] [Ho Sing Ning <h9316676@eee.hku.hk>] [
+Hey guys - please stop your OPEN arguement.  Make it on your own accounts
+only, unless you have real and concrete evidence!  I feel this... I feel
+that...
+
+I will be pleased to hear more about PC and MAC; but I do NOT want to see
+anyone insulting others.  Your are not sales of PC and MAC, neither are
+you enemies. 
+
+
+If I agree with any one of you, will you buy me a PC or a MAC?
+
+Will I suddenly become a fool or talent if I still use a PC? 
+
+Will I suddenly become a fool or talent if I changed to use a MAC? 
+
+If the answer are negative, please shut up!
+
+
+
+REMEMBER:
+
+It is NOT your environment(PC or MAC) that you should be proud of - it is
+you yourself and your own capability. 
+
+
+
+
+
+
+]
+MID: Pine.GSO.3.93.960511152446.11194.1285@ss508>#1/1
+SUBJ: Holy War...
+BODY:  | Hey guys - please stop your OPEN arguement.  Make it on your own accounts | only, unless you have real and concrete evidence!  I feel this... I feel | that... |  | I will be pleased to hear more about PC and MAC; but I do NOT want to see | anyone insulting others.  Your are not sales of PC and MAC, neither are | you enemies.  |  |  | If I agree with any one of you, will you buy me a PC or a MAC? |  | Will I suddenly become a fool or talent if I still use a PC?  |  | Will I suddenly become a fool or talent if I changed to use a MAC?  |  | If the answer are negative, please shut up! |  |  |  | REMEMBER: |  | It is NOT your environment(
+------------------------------------------------------------
+[1996-01-01T00:00:00+00:00] [digab@best.com (Ace)] [In article <31685e02.5498255@news.earthlink.net>, hybridv, hybridv wrote:
+
+  Oh, goodie, another flame war. It's Easter and I feel good, so let's
+jump into the battle!
+
+> ok so native FPU mode is faster on a MAC! who gives a shit.. no
+> program fully utlizees it !... i use 7200,8500... blah blah at work
+> with p-133 and a p-100.... the pcs are 2x-6x faster on every
+> application for both machines... 
+
+  Tell that to the guys from Computer World who concluded after some
+serious series of tests that a 132/9500 is faster in any given app. than a
+150Mghz Gateway PC running Windoze 1895.
+  Zowie, man. I don't know where you get all those statistics, but if
+you'd actually read (you know, like in R-E-A-D) some computer newspapers
+you'd see they have a total different oppinion. 
+  
+the all have 64 mb ram...and my p-100
+> is consinstanly faster then the mac132 in all aps... let that be
+> photoshop, premiere, pagemaker,, blah blah blah.... not to mention
+> macs are a PAIN in the ass to fix when a software crash happens
+
+  Oh yeah. I forgot, it is a pain for you to spell 1800-Appl-SOS on a
+phone. How about PC's, eh? The so notorious Windoze 1895 which is supposed
+to run without DOS, but has to be configured in it?
+  Jeesh, PC users started teaching MAC users about friendly
+interface/easyness to handle. Damn. This is getting nowhere, folks.
+
+> theres no real fucking way to figure out what goes on... a sloppy,
+> slow gui floods the screen with minamle configureation... the standard
+> 4x cd that comes with it wont read dual session cds,,, it sucks
+> printing to a ethernetwork... and its SLOW!!!!! 
+
+  Oh yeah? Why, I'm perfectly content with my Mac, and because of that I
+will NOT buy ANY kind of IBM-compatible, for any reason in the world.
+Better yet, I won't buy one of them because there is NO reason. 
+
+the pcs rip in all the
+> shitty mac areas.... only one good reason to have a mac and that is
+> for publishing any shit every place that does pro. output uses macs...
+> so i need them to be compatable.... dont even start with soft
+> windows...   the older monitors arnt even compatable with the new pci
+> video boards.... blah blah blah ... 
+
+  Indeed. Blah, blah, blah. I said it before, I'm going to say it again:
+before posting some funky flame on a MAC newsgroup get in touch with your
+local library and spend some hours learning some damned sentence syntax
+and grammar. And let's not mention spelling; you'd probably have spend
+some time with a 2nd grade teacher.
+
+> out there that cant understand at least 25% of how a computer works...
+> i had a mac freak come up to me once at my work and said "i heard SCSI
+> is faster then PCI" >?????????? what the fuck does that mean.. kinda
+> like my "fireplace is better then your rosegarden?" whatever.. and it
+> happens that 85% of mac uses have this mentality about computers...
+> ignorent... ignorent...
+
+  That's i-g-n-o-r-a-n-t, Mr. Wise PC User. Ignorant. Talk about it, but
+doesn't know how to spell it. Man!
+
+ since when is it bad to acutally know how a
+> computer works to use it... would we say it was bad if a surgen said "
+> i know how to cut with a scaple so i am a brain sergan? whatever.."
+
+  Ace actually amazed and amorsely articulates an artistic alambique. See?
+I can talk so I won't fall asleep, too. Kindda "If I know how to spell I'm
+not a PC user..."
+  Sorry, I'm convinced that there are PC users as intelligent as any Mac
+user outhere, but right now, I'm sure I'm not addressing to one of them.
+
+> well im tierd of being bitchy...
+
+  That's tired, and I think your full-day job is being bitchy. 
+
+> is the pre-empitive multitasking OS for mac? ... please let me know
+
+  My pleasure, Copland will be out in September 96, from what I know. I
+might be wrong here, so any corrections are welcomed. And, oh yeah, it
+seems it'll have Windoze 1895 for lunch for speed, interface, system
+requirements and number of crashes.
+
+                                       Ace
+
+  PS: This message was replyed to from csmg.binaries, a Mac newsgroup. I
+appologize to everyone who read this post in an unappropiate newsgroup,
+but it is my right to respond to that stupid, and so unelegant flame. I
+already elimined the c.s.advocacy... newsgroups from the header. Sorry
+again.
+
+-- Windoze 95... Hmm. Windoze 1895 comes much more closer.   
+  "Semper fi... Mac!"
+
+
+
+]
+MID: digab-0704961235350001@digab.vip.best.com
+SUBJ: Reply to: Five reasons PC's are better than Macs.
+BODY: In article <31685e02.5498255@news.earthlink.net>, hybridv, hybridv wrote: |  |   Oh, goodie, another flame war. It's Easter and I feel good, so let's | jump into the battle! |  | > ok so native FPU mode is faster on a MAC! who gives a shit.. no | > program fully utlizees it !... i use 7200,8500... blah blah at work | > with p-133 and a p-100.... the pcs are 2x-6x faster on every | > application for both machines...  |  |   Tell that to the guys from Computer World who concluded after some | serious series of tests that a 132/9500 is faster in any given app. than a | 150Mghz Gateway PC running Windoze 1895. |   Zowie, m
+------------------------------------------------------------
+[1996-01-01T00:00:00+00:00] [dr_kno@earthlink.net (Dr. Kno)] [
+In article <Pine.GSO.3.93.960511152446.11194.1285@ss508>, Ho Sing Ning
+<h9316676@eee.hku.hk> wrote:
+
+> Hey guys - please stop your OPEN arguement.  Make it on your own accounts
+> only, unless you have real and concrete evidence!  I feel this... I feel
+> that...
+> 
+> I will be pleased to hear more about PC and MAC; but I do NOT want to see
+> anyone insulting others.  Your are not sales of PC and MAC, neither are
+> you enemies. 
+> 
+> 
+> If I agree with any one of you, will you buy me a PC or a MAC?
+> 
+> Will I suddenly become a fool or talent if I still use a PC? 
+> 
+> Will I suddenly become a fool or talent if I changed to use a MAC? 
+> 
+> If the answer are negative, please shut up!
+> 
+> 
+> 
+> REMEMBER:
+> 
+> It is NOT your environment(PC or MAC) that you should be proud of - it is
+> you yourself and your own capability.
+
+VERY well said.
+
+-- 
+0000   0000         00 00  00  00   0000       
+00 00  00 00        00 00  000 00  00  00        
+00 00  0000         0000   00 000  00  00        
+00 00  00 00   00   00 00  00  00  00  00          
+0000   00 00   00   00 00  00  00   0000          
+
+
+
+]
+MID: dr_kno-1105961025590001@news.earthlink.net>#1/1
+SUBJ: Re: Holy War...
+BODY:  | In article <Pine.GSO.3.93.960511152446.11194.1285@ss508>, Ho Sing Ning | <h9316676@eee.hku.hk> wrote: |  | > Hey guys - please stop your OPEN arguement.  Make it on your own accounts | > only, unless you have real and concrete evidence!  I feel this... I feel | > that... | >  | > I will be pleased to hear more about PC and MAC; but I do NOT want to see | > anyone insulting others.  Your are not sales of PC and MAC, neither are | > you enemies.  | >  | >  | > If I agree with any one of you, will you buy me a PC or a MAC? | >  | > Will I suddenly become a fool or talent if I still use a PC?  | >  | > Will I suddenly become a 
+------------------------------------------------------------
+[1996-01-01T00:00:00+00:00] [Terry Lambert <terry@lambert.org>] [Bob Nelson wrote:
+
+[ ... a free commodity OS ... ]
+
+] Wouldn't such a plan really only serve to ultimately destroy unix? Is
+] not one of its primary strengths predicated upon the notion that unix
+] is indeed not _meant_ to appeal to "most users"? The use of Windows and
+] other Microsoft platforms by some should be of no concern to the unix
+] community.
+
+I wouldn't put it like that.
+
+I would put it as "design decisions are intended to be on the basis
+of technical merit, not increased marketability".
+
+This is an "if you build it, they will come" mentality, and is rarely
+justified in reality -- what happens instead is that that the lack
+of "them" beating down your door is intentionally misinterpreted as
+"they are clueless, we are better off without them".
+
+
+Marketability is an issue, or there wouldn't be cross posted OS
+comparison flame wars.
+
+Unlike computer geeks, marketing geeks rarely "hack" on their day
+off.
+
+
+There is some merit to the idea of a free commodity desktop OS,
+but there are a lot of technical issues in the approach the free
+OS's take in problem solving and administration that would have
+to be resolved before it could happen.
+
+
+I question whether it's possible, in an environment where the
+work is done "because it is fun", to easily include work that
+isn't fun, even if it increases marketability.  To do so would
+probably requie arranging participation requirements to put the
+"less fun" work in as a requirement for doing the "more fun"
+work in the first place.  This is certainly possible, but it
+is inarguable that it would decrease casual participation.
+
+
+                                        Terry Lambert
+                                        terry@lambert.org
+---
+Any opinions in this posting are my own and not those of my present
+or previous employers.
+
+
+
+]
+MID: 31700D20.6BB4FBF1@lambert.org>#1/1
+SUBJ: Re: Historic Opportunity facing Free Unix (was Re: The Lai/Baker paper, benchmarks, and the world of free UNIX)
+BODY: Bob Nelson wrote: |  | [ ... a free commodity OS ... ] |  | ] Wouldn't such a plan really only serve to ultimately destroy unix? Is | ] not one of its primary strengths predicated upon the notion that unix | ] is indeed not _meant_ to appeal to "most users"? The use of Windows and | ] other Microsoft platforms by some should be of no concern to the unix | ] community. |  | I wouldn't put it like that. |  | I would put it as "design decisions are intended to be on the basis | of technical merit, not increased marketability". |  | This is an "if you build it, they will come" mentality, and is rarely | justified in reality -- w
+------------------------------------------------------------
+[1997-01-01T00:00:00+00:00] [Madman <dhall@wlc.com>] [
+Brian Knotts wrote:
+> 
+> In <5fsihd$oa7@bignews.shef.ac.uk>, kusogari@shef.ac.uk (Earl H. Kinmonth) writes:
+> >Robb Shecter (rshecter@faculty.ed.umuc.edu) wrote:
+> >: In article <5ef5c8$rgs@arktur.rz.uni-ulm.de>,
+> >: Stephan Pfab <pfab@mathematik.uni-ulm.de> wrote:
+> >: >edward@islandnet.com wrote:
+> >
+> >: There's something being missed here, though:  Ancient programs like vi
+> >: and emacs that require the user to memorize a million keystrokes are just
+> >: too hard to use.
+> >
+> >Million?
+> >
+> >More like a couple of dozen max.  Either that, or your version(s)
+> >of vi are more capable than mine.  (MKS Toolkit for OS/2, SCO
+> >UNIX 5.0.2, SunOS, etc.)
+> 
+> Plus, running in X, emacs has menus, and Xemacs has keyboard
+> equivalents listed on the menus!
+> 
+> Now, it is fair to point out that there is no Xemacs "Make a New
+> Macro Wizard."
+> 
+> :-)
+> 
+> >: After all, these editors are the means, not the end.  They should be
+> >: blindingly easy to use, like a Windows program.
+> >
+> >Since when are Windows programmes blindingly easy to use?
+> 
+> Plus, you don't know when a Windows program, or "control panel,"
+> or "wizard" will actually behave as intended, or when it simply
+> will refuse to carry out its assigned task.
+> 
+> _____________________________________________________________________
+> Brian Knotts                           http://www.europa.com/~bknotts
+> bknotts@removethistoemailme.europa.com       End the war on the West!
+
+HTML editors too.  I spend hours trying to get Microsloth Frontpage (tm)
+to run properly (it NEEDED to be connected to the net) before giving up
+doing it in text.
+I found that I got it done faster, and much cleaner.  If you need to
+look at more than one text page, thats why we have virtual terminals. 
+GUI's have their place, but can't beat the command line.  
+
+( I would like to point out that Microsoft actualy made their text-mode
+EDIT much nicer.  it's probably the most imperssive improvement in
+Win95)  
+
+PS: Please don't turn this into an OS flame war.  Linux is MY choice,
+for MY needs in an OS. 
+
+-- 
+Inexperience can be overcome.   |  Madman: n.  
+Ignorance can be enlightened.   |    1) Intelectually independant
+But Prejudice will destroy you. |    2) dhall@wlc.com
+                                |    3) The one who wrote this message
+
+
+
+]
+MID: 33233CDE.5C5BEF60@wlc.com>#1/1
+SUBJ: Re: Betting on Unix (text editors, & dead horse flogging)
+BODY:  | Brian Knotts wrote: | >  | > In <5fsihd$oa7@bignews.shef.ac.uk>, kusogari@shef.ac.uk (Earl H. Kinmonth) writes: | > >Robb Shecter (rshecter@faculty.ed.umuc.edu) wrote: | > >: In article <5ef5c8$rgs@arktur.rz.uni-ulm.de>, | > >: Stephan Pfab <pfab@mathematik.uni-ulm.de> wrote: | > >: >edward@islandnet.com wrote: | > > | > >: There's something being missed here, though:  Ancient programs like vi | > >: and emacs that require the user to memorize a million keystrokes are just | > >: too hard to use. | > > | > >Million? | > > | > >More like a couple of dozen max.  Either that, or your version(s) | > >of vi are more capable th
+------------------------------------------------------------
+[1997-01-01T00:00:00+00:00] [DPete@why.net (Dan Petersen)] [
+In article <5hplcv$6lf@fido.asd.sgi.com>,
+   sca@refugee.engr.sgi.com (Steve Alexander) wrote:
+}
+}	  With that in mind, it seems like the *BSD folks would be pretty
+}	  motivated about showing off their performance advantages.  I don't
+}	  care personally; I only pay attention to SGI and its competitors,
+}	  since SGI pays my rent.
+}	  
+}	  So, why not show that FreeBSD can crush Linux on things like
+}	  performance, if that's the case.  If not, what other compelling
+}	  advantages do you offer?  Since I can't run FreeBSD, NetBSD, and
+}	  BSDI at the same time, I hope that they're all in one particular
+}	  variant...
+}
+}NOSTRADAMUS=1 export NOSTRADAMUS
+}
+}	- If the *BSD folks don't converge, they will definitely become
+}	  irrelevant at some point.  I don't understand why the infighting
+}	  goes on.  Hang together, or hang separately, as the saying goes.  It
+}	  doesn't matter to me, but it seems like it should matter to y'all.
+}
+}unset NOSTRADAMUS
+}
+
+First let me say that I am a total newbie in the Unix-derived OS area.
+I have been (unsuccesfully) trying to install FreeBSD on my PC for a
+little over a week now, and am considering just giving up and trying
+Linux. But, if I do, WHICH linux?
+
+Being new here, I may not yet fully understand. But from what I have
+picked up cruising news groups and web sites, this is how I see it:
+
+-- *BSD is a group of slightly divergent Unix-like operating systems,
+   FreeBSD, OpenBSD and NetBSD, derived from BSD4.4 Lite. All are
+   freely available and freely distributable. FreeBSD and NetBSD are
+   so close that they should be combined -- the differences seem to
+   be political rather than functional. OpenBSD is based in Canada,
+   so has fewer problems distributing encryption software.
+
+-- Linux is a kernel written by Linus Torvald. There is no Linux OS.
+   The kernel(s) is freely available and distributable under the GPL.
+   This has encouraged several different for-profit and a couple of
+   non-profit distributions of the Linux kernel(s).
+
+-- Linux distributions are the OS's. So far I have discovered Debian,
+   Red Hat, Ygdrasil, SlackWare, Caldera, Linux-FT, a flame war over
+   whether all Linux distributions should be called GNU/Linux (since
+   they mostly use GNU software at the system administration and
+   user application level) and, finally (?), the GNU HURD.
+
+]
+MID: 5htaev$fv7$1@moon>#1/1
+SUBJ: Re: no such thing as a "general user community"
+BODY:  | In article <5hplcv$6lf@fido.asd.sgi.com>, |    sca@refugee.engr.sgi.com (Steve Alexander) wrote: | } | }	  With that in mind, it seems like the *BSD folks would be pretty | }	  motivated about showing off their performance advantages.  I don't | }	  care personally; I only pay attention to SGI and its competitors, | }	  since SGI pays my rent. | }	   | }	  So, why not show that FreeBSD can crush Linux on things like | }	  performance, if that's the case.  If not, what other compelling | }	  advantages do you offer?  Since I can't run FreeBSD, NetBSD, and | }	  BSDI at the same time, I hope that they're all in one 
+------------------------------------------------------------
+[1997-01-01T00:00:00+00:00] [kpneal@pobox.com (Kevin P. Neal)] [
+Pim van der Eijk <pvde@nedernet.nl> wrote:
+
+>As for OpenBSD, NetBSD, FreeBSD, the same argument holds expect for the
+>fact that the user base of these systems seems (?) to be much smaller
+>than Linux's,  although I've heard some UNIX specialists in a company
+>I've worked for praise NetBSD over the commercial UNIX this company was
+>selling.  Also,  I don't understand why there have to be three competing
+>*BSD projects,  the Linux gang seems better at keeping proselytes and 
+>dissidents involved in the main stream ..
+
+Oh hell.
+
+Here we go again: a Linux vs BSD post crossposted to ten-bazillion
+newsgroups, with statements that cause holy wars.
+
+Stop with the holy wars, already! 
+
+And PLEASE be aware of the statements that start these holy wars. 
+
+
+--
+XCOMM Kevin P. Neal, Junior, Comp. Sci.     -   House of Retrocomputing
+XCOMM  mailto:kpneal@pobox.com              -   http://www.pobox.com/~kpn/
+XCOMM  kpneal@eos.ncsu.edu              Spoken by Keir Finlow-Bates:
+XCOMM "Good grief, I've just noticed I've typed in a rant. Sorry chaps!"
+
+
+
+
+]
+MID: 5kbp32$8m0@camel3.mindspring.com>#1/1
+SUBJ: Re: FS: Dec Alphastation 500/500 Must sell
+BODY:  | Pim van der Eijk <pvde@nedernet.nl> wrote: |  | >As for OpenBSD, NetBSD, FreeBSD, the same argument holds expect for the | >fact that the user base of these systems seems (?) to be much smaller | >than Linux's,  although I've heard some UNIX specialists in a company | >I've worked for praise NetBSD over the commercial UNIX this company was | >selling.  Also,  I don't understand why there have to be three competing | >*BSD projects,  the Linux gang seems better at keeping proselytes and  | >dissidents involved in the main stream .. |  | Oh hell. |  | Here we go again: a Linux vs BSD post crossposted to ten-bazillion | 
+------------------------------------------------------------
+[1997-01-01T00:00:00+00:00] ["Jordan K. Hubbard" <jkh@FreeBSD.org>] [
+Thomas H. Ptacek wrote:
+> I still feel that FreeBSD, Inc. is not sufficiently open and forthcoming
+> with security issues that come to their attention. Representatives of
+> FreeBSD, Inc. have explicitly stated, in public, that notifying their
+> users of security issues discovered by FreeBSD proponents (as opposed to
+> security issues discovered by criminals) amounts to "airing their dirty
+> laundry". Evidently, FreeBSD, Inc. would like their thousands of users
+
+I really don't know how you got this impression, and I myself have
+certainly *never* come out in a public forum and said claimed that
+raising legitimate security issues is tantamount to airing our dirty
+laundry.  I really do think you must have gotten something confused our
+out of context as I don't know anyone on the FreeBSD core team who feels
+this way.  People not connected with the project are wont to say all
+kinds of things, naturally, but there's very little that I can do about
+that.
+
+Suffice it to say, we take do security seriously and we have spent many,
+many hours working on security issues.  To somehow imply that FreeBSD
+just doesn't care about security (but OpenBSD, champion of the weak and
+the downtrodden, does) is to do a grave disservice to the many
+volunteers who have put significant effort into it.
+
+You also have it entirely wrong that FreeBSD, Inc. somehow discourages
+disclosure of security issues.  First off, FreeBSD, Inc. as a company
+actually rarely holds much of an opinion on anything - it's little more
+than a paper-tiger holding company for the trademark and a collection
+point for project funding.  We don't have massive board meetings where
+General Secretary Hubbard hammers the table with his shoe and calls for
+the heads of all those who would dare to even mention the word
+"security" without a special double secret clearance.
+
+The FreeBSD Project, a far more substantial organization (though,
+ironically, of lesser legal substance) also has *nothing* against the
+disclosure of security issues and *never has*.  The whole 2.1.6 flapp
+with Karl Denninger leading a personal witch-hunt against us was
+*claimed* to be an incident of the project/core/lunarians/Hitler trying
+to cover things up when that was, in fact, a complete and total
+fabrication and not even remote close to the truth.  At no point was a
+"cover up" ever discussed or even contemplated, and what slowed things
+up so much in the process of verifying, fixing and circulating an
+advisory for this problem were the stupid *flame wars* about the bug
+which ate up 99% of our time for the first 3 days.  Let me make an
+analogy:
+
+You're a fireman and you get called to a small house fire.  You arrive
+at the location with your truck and your 4 buddies, and before you can
+even get the hoses uncoiled you're attacked by a fat, raving maniac in a
+smelly tank-top swinging an axe at you and screaming "My HOUSE is on
+FIRE!  MY HOUSE IS ON FIRE!!! SAVE MY HOUSE RIGHT NOW!!!" 
+
+As several attempt to restrain him while others hook the hose to a
+nearby hydrant, he charges and, with the first wild swing of his axe,
+severs the hose and causes the free end to whip around wildly, spraying
+maniac and firemen alike with water and causing everyone to crawl around
+frantically, avoiding hose and axe alike as the deranged home-owner
+staggers around the lawn, swinging his axe and screaming at anyone
+within range.  Meanwhile, unattended, the fire quietly consumes the
+house.  Of course afterwards, it's claimed by the home owner (now
+dressed in a suit and tie for the cameras) that the firemen never wanted
+to put out the fire at all and spent the whole time having a bar-b-que
+while watching his house burn.  Laughed about it.  Yep.  Just another
+damn cover-up on the part of those lazy and inept city workers!
+
+That was our first 3 days of the whole broo-ha-ha, and frankly it's
+amazing that we managed to get anything out at all during that time,
+much less a full CERT advisory and the mechanisms for a new 2.1.7 point
+release jump-started on what was supposed to be a dead branch.
+
+
+> Of course, FreeBSD and I have two very different perspectives on this
+> situation. FreeBSD, Inc. operates from the perspective of experienced
+
+No, the FreeBSD Project operates from many different perspectives.  We
+are a more diverse group than you might think.  Please, half of these
+little flare-ups occur because one person in a project says something
+which incenses someone else and, before you know it, it's "the project
+this" and "the project that", his or her personal opinions now somehow
+transformed to a statement of fact about the collective will of the
+entire project.  Why do you think I resigned as president of the FreeBSD
+Project?  It was even easier, far too easy, to do that in my case and
+that whole type of categorization is just bogus.  You can't take a
+diverse project like any of the *BSDs and reduce its collective opinion
+down to a sound bite.
+
+> familiarity with the workings of the computer underground. Unlike the
+> FreeBSD Project, I work under the assumption that any security problem
+> found in FreeBSD's code has been discovered previously by someone else
+> with the ability and willingness to exploit it. Therefore, from my
+> perspective, there's no point in not fully disclosing issues as their
+> existance becomes apparent.
+
+Again, you base much on an initially false premise and so come to a
+seriously flawed conclusion at the end.  No, not unlike the FreeBSD
+Project.  "Like the FreeBSD Project, you work under the assumption that
+any security problem found ..."  We make exactly the same assumptions
+you do, and if you've drawn the conclusion that we deem disclosure evil
+then you should refer to the 3rd paragraph of this reply.
+
+> clear that, in most cases, I'm taking my cues from the OpenBSD project,
+> who, I feel, have put far more effort into securing 4.4BSD than FreeBSD.
+
+I think that OpenBSD has done a lot, yes, but I also know that security
+isn't just a one-off effort.  It's a constant thing, and it takes a lot
+of resources to both be and STAY secure in the long run.  A system which
+is secure against today's attacks may be insecure against tomorrow's
+(and vice-versa) so your overall "rating" in the long term is going to
+be determined more by your degree of organization and comittment to
+security as a serious concern than any short-term exertion of effort, no
+matter how heroic.  Things change.
+
+The FreeBSD Project has, admittedly, fallen down in the past where
+security is concerned, and no one knows this more clearly than we do
+after all the sleep lost and the hour spent answering many thousands of
+emails on the topic.  However, as Nietzche said, that which does not
+kill us makes us stronger, and you can bet that all of us have a *much*
+stronger interest in security than we did before. :)
+
+-- 
+- Jordan Hubbard
+  FreeBSD core team / Walnut Creek CDROM.
+
+
+
+]
+MID: 3304EE2D.41C67EA6@FreeBSD.org
+SUBJ: Re: Linux vs BSD
+BODY:  | Thomas H. Ptacek wrote: | > I still feel that FreeBSD, Inc. is not sufficiently open and forthcoming | > with security issues that come to their attention. Representatives of | > FreeBSD, Inc. have explicitly stated, in public, that notifying their | > users of security issues discovered by FreeBSD proponents (as opposed to | > security issues discovered by criminals) amounts to "airing their dirty | > laundry". Evidently, FreeBSD, Inc. would like their thousands of users |  | I really don't know how you got this impression, and I myself have | certainly *never* come out in a public forum and said claimed that
+------------------------------------------------------------
+[1997-01-01T00:00:00+00:00] ["John S. Dyson" <dyson@indy.celebration.net>] [
+James Youngman wrote:
+> 
+> In article <32F73973.167EB0E7@freebsd.org>, dyson@freebsd.org says...
+> 
+> >The only reason for a FreeBSD emulator that I know of is if someone would
+> >*for some reason* downgrade to Linux.
+> 
+> Such contentious phraseology is not useful to anybody.  All it will do is start
+> a flame war.  That doesn't sound like fun to me.
+> 
+Perhaps, I was a little overly enthusiastic :-).  There are reasons to
+change from FreeBSD to Linux, I am sure though.
+
+John
+
+
+
+]
+MID: 32F8EEB5.3B32@indy.celebration.net>#1/1
+SUBJ: Re: Linux vs BSD
+BODY:  | James Youngman wrote: | >  | > In article <32F73973.167EB0E7@freebsd.org>, dyson@freebsd.org says... | >  | > >The only reason for a FreeBSD emulator that I know of is if someone would | > >*for some reason* downgrade to Linux. | >  | > Such contentious phraseology is not useful to anybody.  All it will do is start | > a flame war.  That doesn't sound like fun to me. | >  | Perhaps, I was a little overly enthusiastic :-).  There are reasons to | change from FreeBSD to Linux, I am sure though. |  | John |  |  |  | 
+------------------------------------------------------------
+[1997-01-01T00:00:00+00:00] [wjin@cs.uh.edu (Woody Jin)] [
+In article <333EE9E9.2F1CF0FB@FreeBSD.org>, "Jordan K. Hubbard" 
+<jkh@FreeBSD.org> wrote:
+>Woody Jin wrote:
+>> I think that this is what many developers of free software
+>> should realize in these fast-pace days.  It is the "time, effort", and
+>> "compatibilty" that matters,  not the price.
+>
+>So how would you propose that the free software people have their
+>products evaluated?
+
+Commercial software is evaluated in various magazines and
+users depend on their evaluations when they purchase software.
+Much free software (esp Winsock related software)  is evaluated 
+on the net and I simply use the evaluation to install, and I never
+bother to install all of them, evaluate them by myself and choose
+them.  I simply don't have such time.  I don't know anyone around
+me who has such time.
+
+>You rightly identify a problem but give no practical solutions for a
+>part of the community which cannot afford full-page color advertisements
+>in BYTE or television spots during the superbowl which show people
+>throwing hammers at things in the name of improved user interface.  *All
+>we can do* is get users to pass the news by word of mouth, and for them
+>to do that they have to have at least tried the software and liked it
+>enough to get evangelical about it.
+
+Yes, exactly.  And that is what the new users need.  Unfortunately,
+they often don't find such experienced users around them and ask on
+the net.  I fully understand  comparing X, Y, and Z  arguments 
+tend to lead to flame wars.  But if you are in the situation of having to
+choose one of them (but don't have enough knowledge of any of them),
+that information of comparison is exactly what you need.
+There will be always new users.  And the number is  growing.
+The number of users who are far from system administrator and would
+like to install  FreeBSD, OpenBSD, NetBSD, or Linux will be growing
+(IMHO). 
+Would you tell them to install all the OSs and compare them by themselves
+and choose the one they like ?  Or would you leave them to choose
+by some prejudices or uninformed rumors ?
+I am not suggesting any good solution, because I know that I am not
+the qualified person to do so.  But many other smart people on the net
+will probably post good ideas.
+
+>Again, if we're not allowed to ask people to make objective comparisons,
+>what then would you suggest we do?
+
+What I meant was that at least the novice users who would ask,
+"There are so many things around, could you tell me which one I
+  should use ?",  will not probably be the ones who can make objective
+comparisons, or have time to do so, 
+
+
+--
+Woody Jin
+
+
+
+]
+MID: 5hn7g6$5gh@Masala.CC.UH.EDU>#1/1
+SUBJ: Re: Stronghold and other binaries for OpenBSD 2.0
+BODY:  | In article <333EE9E9.2F1CF0FB@FreeBSD.org>, "Jordan K. Hubbard"  | <jkh@FreeBSD.org> wrote: | >Woody Jin wrote: | >> I think that this is what many developers of free software | >> should realize in these fast-pace days.  It is the "time, effort", and | >> "compatibilty" that matters,  not the price. | > | >So how would you propose that the free software people have their | >products evaluated? |  | Commercial software is evaluated in various magazines and | users depend on their evaluations when they purchase software. | Much free software (esp Winsock related software)  is evaluated  | on the net and I simply use th
+------------------------------------------------------------
+[1997-01-01T00:00:00+00:00] [mandtbac@news.abo.fi (Mats Andtbacka)] [
+Curt Sampson, in <5dg6qg$fkr@cynic.portal.ca>:
+>In article <5deu64$8tk@josie.abo.fi>, Mats Andtbacka <mandtbac@abo.fi> wrote:
+
+>>>You'll note that when I refer to `Linux' I am referring to the
+>>>Linux kernel, which is not a complete OS. When I refer to `GNU/Linux,'
+>>>I am referring to a complete OS.
+
+>>that would be using your and Stallman's definition of what comprises
+>>an OS. i disagree with it, and will not use it.
+
+>So in other words, you don't then recommend an `OS' to people, but
+>an `OS with an associated package of utilities.'
+
+i don't recommend anything even that simple. the conventional wisdom
+has been, and remains, that one state clearly what one wants to
+accomplish - what work one wishes to do - with the to-be-acquired
+computer system, then get the software/system software/hardware to
+perform that task.
+
+i might talk about operating environments or somesuch if i need to; if
+i use the term "OS" to refer to something like that, i'm misstating
+myself. do feel free to correct me on those occasions.
+
+>Or do you recommend that people run Linux without such handy
+>utilities such as init and ls?
+
+no. if they can manage without init, they're probably doing something
+like an embedded application, in which case Linux (the OS) is very
+likely overkill.
+
+>At any rate, the argument is simply enough resolved. Every time
+>you see me say `OS,' just translate that into `OS with an associated
+>package of utilities.'
+
+no. because this is a holy war; and because you're the one using the
+Wrong Definition(tm). when did you ever see a definitional jihad
+resolved through agreeing to disagree?
+-- 
+        "...it's all wrong
+         but it's alright..."          -- Clapton
+
+
+
+]
+MID: 5dncoa$op@josie.abo.fi>#1/1
+SUBJ: Re: Linux vs BSD
+BODY:  | Curt Sampson, in <5dg6qg$fkr@cynic.portal.ca>: | >In article <5deu64$8tk@josie.abo.fi>, Mats Andtbacka <mandtbac@abo.fi> wrote: |  | >>>You'll note that when I refer to `Linux' I am referring to the | >>>Linux kernel, which is not a complete OS. When I refer to `GNU/Linux,' | >>>I am referring to a complete OS. |  | >>that would be using your and Stallman's definition of what comprises | >>an OS. i disagree with it, and will not use it. |  | >So in other words, you don't then recommend an `OS' to people, but | >an `OS with an associated package of utilities.' |  | i don't recommend anything even that simple. the conve
+------------------------------------------------------------
+[1997-01-01T00:00:00+00:00] [JYoungman@vggas.com (James Youngman)] [
+In article <32F73973.167EB0E7@freebsd.org>, dyson@freebsd.org says...
+
+>The only reason for a FreeBSD emulator that I know of is if someone would
+>*for some reason* downgrade to Linux. 
+ 
+Such contentious phraseology is not useful to anybody.  All it will do is start 
+a flame war.  That doesn't sound like fun to me.
+
+-- 
+James Youngman       VG Gas Analysis Systems |The trouble with the rat-race 
+ Before sending advertising material, read   |is, even if you win, you're 
+http://www.law.cornell.edu/uscode/47/227.html|still a rat.
+
+
+
+
+]
+MID: 5d9oki$j23@halon.vggas.com>#1/1
+SUBJ: Re: Linux vs BSD
+BODY:  | In article <32F73973.167EB0E7@freebsd.org>, dyson@freebsd.org says... |  | >The only reason for a FreeBSD emulator that I know of is if someone would | >*for some reason* downgrade to Linux.  |   | Such contentious phraseology is not useful to anybody.  All it will do is start  | a flame war.  That doesn't sound like fun to me. |  | --  | James Youngman       VG Gas Analysis Systems |The trouble with the rat-race  |  Before sending advertising material, read   |is, even if you win, you're  | http://www.law.cornell.edu/uscode/47/227.html|still a rat. |  |  |  |  | 
+------------------------------------------------------------

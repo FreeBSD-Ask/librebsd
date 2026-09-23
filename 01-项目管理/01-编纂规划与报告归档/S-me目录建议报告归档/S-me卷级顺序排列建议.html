@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>S-me 卷级顺序排列建议（含跨卷章/节移动）</title>
+<style>
+  :root { --ink:#1a1a1a; --muted:#5a5a5a; --accent:#1f4e79; --accent-2:#b23a2f; --rule:#c9c9c9; --soft:#f5f5f5; }
+  * { box-sizing:border-box; }
+  html,body { margin:0; padding:0; background:#fff; color:var(--ink);
+    font-family:"Songti SC","Noto Serif CJK SC","SimSun","STSong",serif; font-size:9.5pt; line-height:1.6; }
+  .report { max-width:840px; margin:0 auto; padding:26px 38px; }
+  h1,h2,h3 { font-family:"Microsoft YaHei","PingFang SC","Noto Sans CJK SC",sans-serif; color:var(--accent); font-weight:700; }
+  h1 { font-size:18pt; text-align:center; letter-spacing:1px; margin:0 0 4px; }
+  .subtitle { text-align:center; color:var(--muted); font-size:10pt; margin:0 0 3px; }
+  .meta { text-align:center; color:var(--muted); font-size:8.5pt; margin-bottom:14px; }
+  h2 { font-size:13pt; margin:22px 0 8px; padding-bottom:5px; border-bottom:2px solid var(--accent); }
+  h3 { font-size:11pt; margin:14px 0 5px; color:#24537f; }
+  p { margin:6px 0; text-align:justify; }
+  code { font-family:"Consolas","Menlo",monospace; font-size:8.5pt; background:var(--soft); padding:0 3px; border-radius:3px; }
+  .abstract { background:var(--soft); border-left:4px solid var(--accent); padding:10px 14px; margin:12px 0; font-size:9.5pt; }
+  .abstract .label { font-weight:700; color:var(--accent); }
+  .callout { background:#fbf4f2; border-left:4px solid var(--accent-2); padding:8px 12px; margin:8px 0; font-size:9.5pt; }
+  table.grid { width:100%; border-collapse:collapse; margin:6px 0 12px; font-size:8.5pt; }
+  thead { display:table-header-group; }
+  tr { break-inside:avoid; page-break-inside:avoid; }
+  table.grid td, table.grid th { border:1px solid var(--rule); padding:4px 7px; vertical-align:top; text-align:left; }
+  table.grid th { background:var(--soft); color:var(--accent); font-weight:700; }
+  .seg { white-space:nowrap; width:48px; font-weight:700; color:#24537f; }
+  .rng { white-space:nowrap; width:120px; color:#24537f; font-size:8pt; }
+  .op { white-space:nowrap; width:110px; font-weight:700; font-size:8pt; color:#24537f; }
+  .num { text-align:center; width:30px; }
+  .vol { white-space:nowrap; width:70px; }
+  tr.moved td { background:#fdf3e7; }
+  tr.moved td.vol { color:#b25a00; font-weight:700; }
+  ul { margin:4px 0 10px; padding-left:20px; }
+  li { margin:3px 0; }
+  .footnote { font-size:8pt; color:var(--muted); border-top:1px solid var(--rule); margin-top:18px; padding-top:6px; }
+  @page { size:A4; margin:14mm 12mm 14mm 12mm; }
+  @media print { .report { max-width:none; padding:0; } a { color:inherit; text-decoration:none; } }
+</style>
+</head>
+<body>
+<div class="report">
+  <h1>S-me 卷级顺序排列建议</h1>
+  <p class="subtitle">《给我自由——一部 BSD 史》导航文件——含跨卷章/节移动</p>
+  <p class="meta">对象：<code>S-me.md</code> 20 卷　|　2026-08-31</p>
+
+  <div class="abstract">
+    <span class="label">说明</span>
+    <p>本建议在「卷内时间重排」「节级拆分与合并」基础上，进一步上探到<strong>卷与卷之间</strong>的顺序，并允许<strong>跨卷移动章、节</strong>。核心结论：卷级框架整体合理（编年史 → 谱系史 → 主题史 → 总结），仅需一处卷序微调（macOS 后移）与若干跨卷章/节归并。</p>
+  </div>
+<h2>一、卷级四段框架总评</h2>
+<table class='grid'><thead><tr><th class='seg'>分段</th><th class='rng'>卷范围</th><th>评价</th></tr></thead><tbody><tr><td class='seg'>编年史</td><td class='rng'>第一卷 ~ 第八卷</td><td>从图灵机/UNIX 前史 → BSD 创建 → CSRG 技术演进 → 诉讼 → 386BSD 大分裂，严格按时间推进，结构正确，无需调整。</td></tr><tr><td class='seg'>谱系史</td><td class='rng'>第九卷 ~ 第十三卷</td><td>FreeBSD、macOS、NetBSD、OpenBSD、DragonFly 五个谱系并行展开。存在问题：macOS（第十卷）插在 FreeBSD 与 NetBSD 之间，打断四大开源 BSD 的连续性。</td></tr><tr><td class='seg'>主题史</td><td class='rng'>第十四卷 ~ 第十八卷</td><td>全球社区 → 许可证法律 → 自由软件运动 → 文化挪用批判 → 沉默基石，逻辑递进，结构合理；但第十六、十七卷在 GNU/Stallman 主题上跨卷重叠。</td></tr><tr><td class='seg'>总结</td><td class='rng'>第十九卷 ~ 第二十卷</td><td>分离聚合六十年分期总结 + 记忆史收束，殿后位置正确，无需调整。</td></tr></tbody></table>
+<h2>二、卷级顺序调整建议</h2>
+<table class='grid'><thead><tr><th class='op'>建议</th><th class='rng'>对象</th><th class='rng'>去向</th><th>理由</th></tr></thead><tbody><tr><td class='op'>第十卷 macOS 后移</td><td class='rng'>第十卷</td><td class='rng'>移至第十三卷 DragonFly 之后</td><td>macOS 是「经过认证的 UNIX 发行版」，属商业闭源第五谱系，与四大开源 BSD（第九、十一、十二、十三卷）性质不同。现位置打断四大 BSD 编年连续性，应后移至 DragonFly 之后，作为第五谱系殿后，紧接第十四卷全球社区。</td></tr></tbody></table>
+<h2>三、跨卷章移动</h2>
+<table class='grid'><thead><tr><th class='op'>移动方向</th><th class='rng'>定位</th><th>章/节对象</th><th>建议</th></tr></thead><tbody><tr><td class='op'>第十六卷 → 第十七卷</td><td class='rng'>第 4 章 4.4、4.5 节</td><td>4.4「GNU/Linux 命名已被实践淘汰」、4.5「Linux 等价物：Illumos 比较与范畴错误」</td><td>两节属「Linux 范畴辨析/文化挪用批判」，与第十六卷「OSI 成立与 Apache 谱系」主题偏离，应整体移入第十七卷（文化挪用与代码谱系），可并入第 2 章「Linux 谱系上限」或单列「Linux 范畴与等价物辨析」章。</td></tr></tbody></table>
+<h2>四、跨卷节协调（合并/分工/删一留一）</h2>
+<table class='grid'><thead><tr><th class='op'>跨卷对应</th><th class='rng'>操作</th><th>重叠对象</th><th>建议</th></tr></thead><tbody><tr><td class='op'>第十六卷 1.1 ↔ 第十七卷 第 5 章</td><td class='rng'>合并·分工</td><td>「Richard Stallman 与 GNU 项目起源（旨在重写 BSD UNIX）」与第十七卷「GNU 项目（5.1-5.4）」重叠</td><td>GNU 项目的技术史（重写目标、Hurd 未完成、时间先后）归第十七卷；第十六卷仅保留「自由软件运动兴起」的组织视角，避免同一史实两处重复举证。</td></tr><tr><td class='op'>第十六卷 第 2 章 ↔ 第十七卷 4.4</td><td class='rng'>合并</td><td>「GNU 工具链与 BSD 的相互依赖」与第十七卷 4.4「GNU 工具链与 BSD 代码的相互依赖」重叠</td><td>两节同题，合并为一处（建议归第十七卷谱系考据侧），第十六卷以引用替代重述。</td></tr><tr><td class='op'>第九卷 1.6 ↔ 第十八卷 第 11 章</td><td class='rng'>分工</td><td>「被遗忘的驱动维护者」与第十八卷「被忽略的 BSD 贡献者与驱动维护者」重叠</td><td>第九卷保留 FreeBSD 2.x 具体个案；第十八卷做跨项目群像综述，两处分工而非重复。</td></tr><tr><td class='op'>第二十卷 9.2 ↔ 第十卷 7.2</td><td class='rng'>删一留一</td><td>「用户量作为影响证据的合法性与局限」逐字重复</td><td>保留第十卷 7.2（谱系考察处），删除第二十卷 9.2 或改为交叉引用。</td></tr></tbody></table>
+<h2>五、调整后的卷级顺序（20 卷）</h2>
+<table class='grid'><thead><tr><th class='num'>序</th><th class='vol'>卷号</th><th>卷名</th></tr></thead><tbody><tr><td class='num'>1</td><td class='vol'>第一卷</td><td>自由与必然：从图灵机到 UNIX</td></tr><tr><td class='num'>2</td><td class='vol'>第二卷</td><td>UNIX 文化与物质基础</td></tr><tr><td class='num'>3</td><td class='vol'>第三卷</td><td>通往西部的帝国之路：从贝克莱到伯克利</td></tr><tr><td class='num'>4</td><td class='vol'>第四卷</td><td>从补丁集到操作系统：BSD 的创建</td></tr><tr><td class='num'>5</td><td class='vol'>第五卷</td><td>DARPA 赞助与 CSRG 的成立</td></tr><tr><td class='num'>6</td><td class='vol'>第六卷</td><td>BSD 的技术演进</td></tr><tr><td class='num'>7</td><td class='vol'>第七卷</td><td>诉讼、和解与延宕</td></tr><tr><td class='num'>8</td><td class='vol'>第八卷</td><td>386BSD 与大分裂：三大 BSD 的诞生</td></tr><tr><td class='num'>9</td><td class='vol'>第九卷</td><td>FreeBSD 的历史（1993-2026）</td></tr><tr><td class='num'>10</td><td class='vol'>第十一卷</td><td>NetBSD 的历史（1993-2026）【原第十一】</td></tr><tr><td class='num'>11</td><td class='vol'>第十二卷</td><td>OpenBSD 的历史（1995-2026）【原第十二】</td></tr><tr><td class='num'>12</td><td class='vol'>第十三卷</td><td>DragonFly BSD 的历史（2003-2026）【原第十三】</td></tr><tr class='moved'><td class='num'>13</td><td class='vol'>第十卷</td><td>macOS 历史：经过认证的 UNIX 发行版【原第十，后移】</td></tr><tr><td class='num'>14</td><td class='vol'>第十四卷</td><td>开源社区的世界化与世界化的开源社区</td></tr><tr><td class='num'>15</td><td class='vol'>第十五卷</td><td>开源、许可证、利益与法律</td></tr><tr><td class='num'>16</td><td class='vol'>第十六卷</td><td>自由软件运动、GNU 项目、开源软件运动与开源基金会</td></tr><tr><td class='num'>17</td><td class='vol'>第十七卷</td><td>文化挪用与代码谱系</td></tr><tr><td class='num'>18</td><td class='vol'>第十八卷</td><td>沉默的基石</td></tr><tr><td class='num'>19</td><td class='vol'>第十九卷</td><td>BSD 分离聚合的六十年</td></tr><tr><td class='num'>20</td><td class='vol'>第二十卷</td><td>记忆、长生与不死</td></tr></tbody></table>
+  <h2>六、复核说明</h2>
+  <ul>
+    <li><strong>框架判断依据</strong>：20 卷按内容性质分为四段——编年史（1-8 卷，UNIX 前史→大分裂）、谱系史（9-13 卷，五大 BSD 谱系）、主题史（14-18 卷，社区/法律/运动/批判/影响）、总结（19-20 卷，分期与记忆），四段递进关系成立。</li>
+    <li><strong>macOS 后移</strong>：第十卷（macOS）与第九、十一、十二、十三卷（四大开源 BSD）性质不同，现位置打断四大 BSD 连续性，后移为第五谱系殿后。</li>
+    <li><strong>跨卷重叠核验</strong>：GNU/Stallman 主题在第十六、十七卷重复出现（1.1/2 章 vs 5 章/4.4 节）；「用户量作为影响证据」在第十卷 7.2 与第二十卷 9.2 逐字重复；驱动维护者在第九卷 1.6 与第十八卷 11 章重复——均已在表中给出归并/分工建议。</li>
+    <li><strong>与既有结论衔接</strong>：本建议的跨卷章/节移动，与「节级拆分与合并建议」中的「移出偏离」「跨卷协调」条目一一对应，无新增冲突。</li>
+    <li><strong>原则</strong>：所有移动仅调整组织归属与顺序，不改变史实内容；编年史与总结段不动，仅谱系史与主题史做微调。</li>
+  </ul>
+
+  <p class="footnote">本建议由《给我自由——一部 BSD 史》编纂项目辅助生成，仅作目录卷级组织调整之用，不构成对正文内容的学术结论。</p>
+
+</div>
+</body>
+</html>

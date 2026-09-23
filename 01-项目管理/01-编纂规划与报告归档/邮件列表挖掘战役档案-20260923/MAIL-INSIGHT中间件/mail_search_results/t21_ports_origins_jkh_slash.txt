@@ -1,0 +1,397 @@
+==========================================================================================
+DB: freebsd-hackers.duckdb  hits=14
+==========================================================================================
+--------------------------------------------------------------------------------
+MID: <199504020759.XAA01112@gndrsh.aac.dev.com>
+DATE: 1995-04-02T07:59:34+00:00  FROM: Rodney W. Grimes <rgrimes@gndrsh.aac.dev.com>
+SUBJ: Re: why not 2+ freebsd partitions per disk?
+BODY:
+
+Until just recently this was not possible due to the way that the
+disklabels worked.  Since the slice code has gone in we
+now have support for more than 1 BSD disk label on a disk.  This
+means each slice (we call DOS partitions slices to try and minimize
+the confusion with BSD partitions) of a disk can now have a BSD disk label.
+
+I do not know how well this has been tested, but you should be
+able to have 4 BSD slices on one physical disk.
+
+You will need to be running -current to do this.
+
+
+
+-- 
+Rod Grimes                                      rgrimes@gndrsh.aac.dev.com
+Accurate Automation Company                   Custom computers for FreeBSD
+
+From owner-freebsd-hackers  Sun Apr  2 00:20:12 1995
+Return-Path: hackers-owner
+Received: (from majordom@localhost) by freefall.cdrom.com (8.6.10/8.6.6) id AAA26397 for hackers-outgoing; Sun, 2 Apr 1995 00:20:12 -0800
+Received: from netcom23.netcom.com (bakul@netcom23.netcom.com [192.100.81.137]) by freefall.cdrom.com (8.6.10/8.6.6) with ESMTP id AAA26389 for <hackers@freebsd.org>; Sun, 2 Apr 1995 00:20:11 -0800
+Received: from localhost by netcom23.netcom.com (8.6.11/Netcom)
+	id AAA05418; Sun, 2 Apr 1995 00:17:20 -0800
+Message-Id: <1995040208
+
+--------------------------------------------------------------------------------
+MID: 199412191613.IAA01010@time.cdrom.com
+DATE: 1994-12-19T16:13:52+00:00  FROM: "Jordan K. Hubbard" <jkh@time.cdrom.com> <None>
+SUBJ: Freefall status.
+BODY:
+freefall's 3rd drive, misbehaving for ages, finally got too sick to live
+last night and so Poul and I powered it down and bagged our plans for
+2.0.5.  I think the portents were simply too significantly against it.
+
+Since freefall seemed to want to be down anyway, I took the opportunity
+for some long delayed and put-off things like the 2.0 upgrade, a general
+reshuffle of our disk space resources and some other tweaks that I've been
+meaning to get to for a long time.  I also tossed the old /usr/ports and
+/usr/src (they're on tape and the old cvs tree - fear not) and replaced
+them with the current sources.  That and the ncvs -> cvs change, which
+I'll save for another day, should go a long way towards getting outselves
+out of the 1.x legal swamp.
+
+freefall is upgrading itself to -current right now as there are some
+embarassing bugs in 2.0 that we wouldn't want on freefall, and it
+should be ready for a return to service sometime early Tuesday morning.
+
+					Jordan
+
+
+
+--------------------------------------------------------------------------------
+MID: 199412210335.TAA13868@freefall.cdrom.com
+DATE: 1994-12-21T03:35:44+00:00  FROM: "Jordan K. Hubbard" <jkh> <None>
+SUBJ: sup customers take heed!
+BODY:
+The 2.0 sources and ports are now in /usr/src and /usr/ports, respectively.
+
+If you're supping, you will almost certainly have to change your supfile
+to not look in /new/...  It's all in the default locations now..
+
+					Jordan
+
+
+
+--------------------------------------------------------------------------------
+MID: 2070.789117491@time.cdrom.com
+DATE: 1995-01-03T07:18:11+00:00  FROM: "Jordan K. Hubbard" <jkh@time.cdrom.com> <None>
+SUBJ: Re: perl 5? 
+BODY:
+
+5.0 certainly won't be in FreeBSD by default for some time.  No
+schedule yet, but we certainly won't even consider putting it in until
+conventional wisdom whispers it's ready.
+
+
+A port is indeed how I envisioned it being done in the interim.
+/usr/ports/lang/perl5 perhaps?  Go for it!
+
+					Jordan
+
+
+
+--------------------------------------------------------------------------------
+MID: 11517.790080183@time.cdrom.com
+DATE: 1995-01-14T10:43:03+00:00  FROM: "Jordan K. Hubbard" <jkh@time.cdrom.com> <None>
+SUBJ: Re: xmcd-1.3 port to FreeBSD 
+BODY:
+
+Hi, thanks for the offer, but this unfortunately isn't really
+a `port'.  Please read /usr/ports/GUIDELINES - thanks!
+
+					Jordan
+
+
+
+--------------------------------------------------------------------------------
+MID: 15652.790623395@freefall.cdrom.com
+DATE: 1995-01-20T17:36:35+00:00  FROM: "Jordan K. Hubbard" <jkh@freefall.cdrom.com> <None>
+SUBJ: Re: News USENET 
+BODY:
+
+mkdir -p /usr/ports /cdrom
+mount /dev/cd0a /cdrom
+cd /usr/ports
+lndir /cdrom/ports .
+cd news/cnews
+make all install
+
+					Jordan
+
+
+
+--------------------------------------------------------------------------------
+MID: 24352.796086769@freefall.cdrom.com
+DATE: 1995-03-24T23:12:49+00:00  FROM: "Jordan K. Hubbard" <jkh@freefall.cdrom.com> <None>
+SUBJ: Re: httpd as part of the system. 
+BODY:
+
+Ok, point well taken.  I guess it's more of an ass-saving issue then
+though since we can always enjoin users who haven't loaded some
+component that they should do so when or if they complain about
+missing functionality.  For some reason, the ports collection is still
+preceived by many as not "plug and play" enough and people don't react
+well to suggestions that they failed to load some port or another in
+response to a complaint.
+
+For example, I've had tons of complaints about gmake or bash not being
+"part of the system", even though both are trivially available as both
+ports and packages.  Conversely, I've not received *one* complaint
+from someone who's man command didn't work because they failed to load
+the mandist.  It may be a minor line in the sand from a technical
+viewpoint, but it seems to be a pretty major one to the users.
+
+Perhaps once the ports and packages are more obviously pointed out
+in the installation process, this problem will become less manifest,
+but I hesitate to rely on it.
+
+						Jordan
+
+
+
+--------------------------------------------------------------------------------
+MID: 25886.796149920@freefall.cdrom.com
+DATE: 1995-03-25T16:45:20+00:00  FROM: "Jordan K. Hubbard" <jkh@freefall.cdrom.com> <None>
+SUBJ: Re: httpd as part of the system. 
+BODY:
+We could retain the "catagory" information from the /usr/ports hierarchy
+somehow; that already groups ports pretty well..
+
+Hey, Marc, speaking of which:  You ever going to send me an update to
+pkg_manage? :-)
+
+						Jordan
+
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 3451.796972854@freefall.cdrom.com
+DATE: 1995-04-04T05:20:54+00:00  FROM: "Jordan K. Hubbard" <jkh@freefall.cdrom.com> <None>
+SUBJ: Re: Package / Port Descriptions ... 
+BODY:
+
+The ports collection gets an INDEX file, though you still need your own
+awk script to read it if you don't have /usr/ports/Makefile.  Not ideal
+yet.  It's meant to be front-ended by a viewer!
+
+The packages collection also generally gets an INDEX file built up of
+the ONELINE fields.  It's pretty easy to do..  I'll look to see if the
+last one is up-to-date, though admittedly it's pretty ugly and should
+ALSO probably be read through a browser (or at least smoked glass).
+
+All of this stuff is practically screaming:  "FRAMEWORK!  WHERE'S THE
+SYSTEM ADMINISTRATION PACKAGE??" at me, so I have to go now.. :-)
+
+					Jordan
+
+
+
+--------------------------------------------------------------------------------
+MID: 199504122313.QAA21883@time.cdrom.com
+DATE: 1995-04-12T23:13:17+00:00  FROM: "Jordan K. Hubbard" <jkh@FreeBSD.org> <None>
+SUBJ: Critically short of space on wcarchive!
+BODY:
+ftp://ftp.freebsd.org/pub/FreeBSD has overflowed its allotment of 640MB.
+I am working to get us more space, but until then we have to make some
+hard decisions:
+
+1. Any and all 1.x stuff has to go someplace else.  Any archive sites willing
+   to take the ports, packages and dists for 1.x over completely and totally?
+   If so, simply signal your assent by letting us know if you need more time
+   to copy the bits so that you're not left stranded when we finally blow the
+   1.x stuff off of wcarchive.  You will also want to adjust your mirror
+   scripts as well, naturally.. :-)  We will give 24 hours notice before
+   finally removing the 1.x bits so that mirrors have a chance to update their
+   mirror files if they wish to keep the 1.x stuff.
+
+2. incoming needs a serious spring-cleaning.  I'm loath to delete stuff like
+   Andrew and Postgres if it has no other home, and there's no ports collection
+   to take its place, but it's HUGE!  I'd really much rather have both of these,
+   and some of their similarly bloated cousins in incoming, to become real
+   packages/ports and move to permanant homes rather than lurking forever
+   in incoming.
+
+Anything you can do to clean up on wcarchive i
+
+--------------------------------------------------------------------------------
+MID: 20363.806200231@time.cdrom.com
+DATE: 1995-07-20T00:30:31+00:00  FROM: "Jordan K. Hubbard" <jkh@time.cdrom.com> <None>
+SUBJ: Re: Strange entries in /usr/src/Makefile 
+BODY:
+
+These were done on behalf of Julian Stacey, who wanted some sort of
+tighter integration in his "really build the world" makes.  Myself,
+I think it's cruft and it should go.  If you want to build the world,
+a small shell script does fine:
+
+% cat > beat_my_system
+#!/bin/sh
+date
+cd /usr/src
+echo "** Making the world in less than 7 days"
+make world
+echo "** Done with the world, resting.."
+sleep 1
+echo "Ok, that's enough.  Moving on to ports."
+cd /usr/ports
+make -k clean all install
+echo "My god!  We're still here!"
+exit 0
+^D
+% chmod +x beat_my_system
+% ./beat_my_system >& /var/log/beating.log &
+
+					Jordan
+
+
+
+--------------------------------------------------------------------------------
+MID: 3470.809160851@time.cdrom.com
+DATE: 1995-08-23T06:54:11+00:00  FROM: "Jordan K. Hubbard" <jkh@time.cdrom.com> <None>
+SUBJ: Re: Samba 
+BODY:
+
+Sahib!  /usr/ports/INDEX is your friend!  :-)
+
+jkh@time-> grep samba /usr/ports/INDEX 
+samba-1.9.13|/usr/ports/net/samba/samba-1.9.13|/usr/local|A LanManager(R)-compatible server suite for Unix|/usr/ports/net/samba/pkg/DESCR|gpalmer@FreeBSD.ORG|networking|networking
+
+					Jordan
+
+
+
+--------------------------------------------------------------------------------
+MID: 3584.816821326@time.cdrom.com
+DATE: 1995-11-19T22:48:46+00:00  FROM: "Jordan K. Hubbard" <jkh@time.cdrom.com> <None>
+SUBJ: 2.1.0-RELEASE now available!
+BODY:
+Could it be?  Could the long-awaited release of FreeBSD 2.1 truly have
+arrived?
+
+It gives me great pleasure to answer those questions with a "yes!"
+
+FreeBSD 2.1.0-RELEASE is now available on ftp.freebsd.org and various
+FTP mirror sites throughout the world.  It can also be ordered on CD
+from Walnut Creek CDROM, from where it will be shipping shortly.
+
+FreeBSD 2.1 represents the culmination of 6 months worth of work on
+the 2.1-STABLE branch of FreeBSD since the previous release (FreeBSD
+2.0.5).
+
+The STABLE branch was conceived out of the need to allow FreeBSD to
+grow and support long-term development projects like devfs, NFSv3,
+IPX, PCCARD, etc. while at the same time not jeopardizing the
+stability of its existing user base.  Experimental or high-impact
+changes are allowed into FreeBSD-current, which represents a sort of
+shared group development tree, and only well tested or obvious fixes
+are allowed into STABLE.  In a few rare cases, where some bit of
+functionality was entirely missing before, we've supplied an ALPHA
+test quality version in STABLE on the premise that some functionality
+is better than none at all (a good example being the IDE CDROM
+driver).
+
+For more information on 
+
+--------------------------------------------------------------------------------
+MID: 13439.817428047@time.cdrom.com
+DATE: 1995-11-26T23:20:47+00:00  FROM: "Jordan K. Hubbard" <jkh@time.cdrom.com> <None>
+SUBJ: Re: interesting tidbit from 2.1.0-RELEASE make world 
+BODY:
+Actually, a *lot* of stuff will fall over if you try to link -static.
+
+I noticed this recently in the ports collection (trying to build
+stand-alone versions of some ports) and was not pleased at what it
+implied, namely that we've lost the ability to transition from -static
+to dynamic without stuff falling over.  I would expect something
+that used dl*() calls to die when linked static, but that's about
+it!
+
+					Jordan
+
+
+lpd lpd.o printjob.o recvjob.o displayq.o rmjob.o startdaemon.o lpdchar.o commo
+n.o  
+
+
+
+
+==========================================================================================
+DB: freebsd-chat.duckdb  hits=0
+==========================================================================================
+==========================================================================================
+DB: freebsd-current.duckdb  hits=2
+==========================================================================================
+--------------------------------------------------------------------------------
+MID: <199507020729.AAA15969@gndrsh.aac.dev.com>
+DATE: 1995-07-02T07:29:18+00:00  FROM: Rodney W. Grimes <rgrimes@gndrsh.aac.dev.com>
+SUBJ: Re: getopt(1)
+BODY:
+
+It was missing in FreeBSD 1.x and people winned that they didn't want
+to convert.  It went missing again when we went to 4.4BSD lite, and
+this time it should probably stay missing folks have had 2 years to
+convert there scripts and if we don't break them once and for all
+they will never get converted.
+
+getopt was not part of the tainted code.
+
+
+-- 
+Rod Grimes                                      rgrimes@gndrsh.aac.dev.com
+Accurate Automation Company                 Reliable computers for FreeBSD
+
+From owner-freebsd-current  Sun Jul  2 00:36:38 1995
+Return-Path: current-owner
+Received: (from majordom@localhost)
+          by freefall.cdrom.com (8.6.10/8.6.6) id AAA20018
+          for current-outgoing; Sun, 2 Jul 1995 00:36:38 -0700
+Received: from irz301.inf.tu-dresden.de (irz301.inf.tu-dresden.de [141.76.1.11])
+          by freefall.cdrom.com (8.6.10/8.6.6) with SMTP id AAA20011
+          for <freebsd-current@freefall.cdrom.com>; Sun, 2 Jul 1995 00:36:32 -0700
+Received: from sax.sax.de by irz301.inf.tu-dresden.de with SMTP
+	(5.67b+/DEC-Ultrix/4.3) id AA20997; Sun, 2 Jul 1995 09:36:30 +0200
+Received: by sax.sax.de (8.6.12/8.6.12-s1) with UUCP
+	id JAA09906; Sun, 2 Jul 1995 09:36:29 +0
+
+--------------------------------------------------------------------------------
+MID: <199508060718.AAA26575@time.cdrom.com>
+DATE: 1995-08-06T07:18:41+00:00  FROM: Jordan K. Hubbard <jkh@time.cdrom.com>
+SUBJ: Republic of Palau considered harmful?
+BODY:
+The following build failure:
+
+===> usr.sbin/tzsetup  
+cc -O2 -m486 -pipe -I. -I/b/src/usr.sbin/tzsetup   -c menus.c
+menus.c:1190: parse error before `.'
+menus.c:1193: parse error before `.'
+menus.c:1196: parse error before `.'
+menus.c:2149: `Rep' undeclared here (not in a function)
+menus.c:2149: initializer element for `menu_Pacific[15]' is not constant
+
+Is caused by an extra `.' in the Palau entry in the
+/usr/src/share/zoneinfo/australasia file.
+
+Changing:
+
+# ZONE-DESCR Pacific Palau Rep._of_Palau Palau  
+
+To:
+
+# ZONE-DESCR Pacific Palau Rep_of_Palau Palau
+
+Makes everything happy again.  Since I don't even know where the
+Republic of Palau IS (well, OK, I'm lying - I looked it up and
+it's a chain of islands in Western Micronesia, but that's beside
+the point! :) I'm going to leave this possible change to you..
+
+					Jordan
+
+From owner-freebsd-current  Sun Aug  6 00:55:16 1995
+Return-Path: current-owner
+Received: (from majordom@localhost)
+          by freefall.cdrom.com (8.6.11/8.6.6) id AAA29477
+          for current-outgoing; Sun, 6 Aug 1995 00:55:16 -0700
+Received: from irz301.inf.tu-dresden.de (irz301.inf.tu-dresden.de [141.76.1.11])
+          by freefall.cdrom.com (8.6.11/8.6.6)

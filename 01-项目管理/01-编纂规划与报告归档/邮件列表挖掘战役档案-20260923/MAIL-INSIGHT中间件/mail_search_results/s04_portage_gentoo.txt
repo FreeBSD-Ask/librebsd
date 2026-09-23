@@ -1,0 +1,667 @@
+==========================================================================================
+DB: freebsd-hackers.duckdb  hits=0
+==========================================================================================
+DB: freebsd-chat.duckdb  hits=3
+--------------------------------------------------------------------------------
+MID: <20030407053556.0000182b.are-harald.brenne@econ.uib.no>
+DATE: 2003-04-07T03:35:56+00:00  FROM: Are-Harald Brenne <are-harald.brenne@econ.uib.no>
+SUBJ: Idea: Easy-to-make Gentoo-like install-iso
+BODY:
+I just got an idea.
+
+A Gentoo-like way of installing FreeBSD.
+
+Start with a live cd booting Freebsd specially made for this. This should be fairly easy to make based on the work done by the guys behind FreeSBIE, see for example http://www.freesbie.org/?section=doc-en . X is not important and can be dropped.
+
+On this cd there is a script that does the following:
+
+- Ask for options expert or newbie. If newbie, ask as few questions as possible in the rest of the script.
+- Prompt for country and based on this set up time, keyboard, charset and ftp mirror site. 
+- Partition a hard drive to install on. Newbie-mode-alternatives: Use whole harddrive or use free space - Swap + / only. 
+- Install the FreeBSD boot manager
+- Get online. This will be demanding to implement.
+- Prompt for cpu-type.
+- cvsup ports and src
+- Do a vipw-like kernconf-edit in expert mode. For newbies, use GENERIC.
+- In expert mode, do a vipw-like edit of a list of ports to be installed. For newbies, use a nice predefined l
+
+--------------------------------------------------------------------------------
+MID: 20030407053556.0000182b.are-harald.brenne@econ.uib.no
+DATE: 2003-04-06T20:36:07+00:00  FROM: are-harald.brenne at econ.uib.no (Are-Harald Brenne) <None>
+SUBJ: Idea: Easy-to-make Gentoo-like install-iso
+BODY:
+
+I just got an idea.
+
+A Gentoo-like way of installing FreeBSD.
+
+Start with a live cd booting Freebsd specially made for this. This should be fairly easy to make based on the work done by the guys behind FreeSBIE, see for example http://www.freesbie.org/?section=doc-en . X is not important and can be dropped.
+
+On this cd there is a script that does the following:
+
+- Ask for options expert or newbie. If newbie, ask as few questions as possible in the rest of the script.
+- Prompt for country and based on this set up time, keyboard, charset and ftp mirror site. 
+- Partition a hard drive to install on. Newbie-mode-alternatives: Use whole harddrive or use free space - Swap + / only. 
+- Install the FreeBSD boot manager
+- Get online. This will be demanding to implement.
+- Prompt for cpu-type.
+- cvsup ports and src
+- Do a vipw-like kernconf-edit in expert mode. For newbies, use GENERIC.
+- In expert mode, do a vipw-like edit of a list of ports to be installed. For newbies, use a nice predefined 
+
+--------------------------------------------------------------------------------
+MID: a05210649bab71c44374f@[10.0.1.2]
+DATE: 2003-04-07T05:31:08+00:00  FROM: brad.knowles at skynet.be (Brad Knowles) <None>
+SUBJ: Idea: Easy-to-make Gentoo-like install-iso
+BODY:
+At 5:35 AM +0200 2003/04/07, Are-Harald Brenne wrote:
+
+
+	Perhaps as a default that can be changed, this might be okay. 
+Otherwise, ensure that English/QWERTY is available and selectable in 
+all country definitions.  Don't just force me to use either French or 
+Dutch with an AZERTY keyboard layout, just because I live in Belgium.
+
+	Also, if you're going to go this route, make damn sure you cover 
+all possible languages in the respective country, not just the main 
+languages -- 5% of the population of this country speak only German, 
+and would probably not know what to do with an OS that insisted that 
+they could only speak either French or Dutch, just because they live 
+in Belgium.
+
+
+	Moreover, keep in mind that in many countries, you're closer to 
+large parts of other countries than you might be to other parts of 
+your own country.  For example, in Belgium, depending on your ISP, 
+you may be closer to sites elsewhere in Europe or even in the US, 
+than you are to other parts of Belgium.
+
+==========================================================================================
+DB: freebsd-ports.duckdb  hits=22
+--------------------------------------------------------------------------------
+MID: 63905.216.17.55.163.1103284139.squirrel@webmail.usinternet.com
+DATE: 2004-12-17T03:49:05+00:00  FROM: vmalloc at usinternet.com (Kyle Drake) <None>
+SUBJ: Gentoo File Manager (strange "mount" bug with fix)
+BODY:
+Hi there, I noticed a strange behavior with the default configuration of gentoo on FreeBSD
+5.3-RELEASE.
+
+For some reason, if you try to access certain directories (for possible theories sake,
+directories that have fairly long character length, though are well below the system
+character limit).
+
+For example, if I were to double click my way to
+/usr/home/vmalloc/GNUstep/WindowMaker/Library/Backgrounds, it would "crash" with the
+following message:
+
+Gdk-ERROR **: X connection to :0.0 broken (explicit kill or server shutdown).
+
+I tried both the FreeBSD port, FreeBSD package, and the source code from the web site, all
+of which had the same behavior.
+
+After a little poking at the configuration, I found that going to the configuration menu,
+clicking on Mounting, and then changing "Mount When?" to "Never", it seems to have
+eliminated that problem. I'm not going to pretend to know why, but it does fix it.
+
+I just thought I'd let you know. Perhaps it is a good idea to disable that option by
+defau
+
+--------------------------------------------------------------------------------
+MID: 40337619.1050504@veldy.net
+DATE: 2004-02-18T13:35:46+00:00  FROM: veldy at veldy.net (Thomas T. Veldhouse) <None>
+SUBJ: [Fwd: [gentoo-announce] [ GLSA 200402-07 ] Clamav 0.65 DoS
+	vulnerability]
+BODY:
+Attached is a security alert from Gentoo pertaining to clam antivirus. 
+It seems that as of this morning, FreeBSD's ports still contain the 
+affected version.
+
+Thank in advance,
+
+Tom Veldhouse
+-------------- next part --------------
+An embedded message was scrubbed...
+From: Tim Yamin <plasmaroo@gentoo.org>
+Subject: [gentoo-announce] [ GLSA 200402-07 ] Clamav 0.65 DoS vulnerability
+Date: Wed, 18 Feb 2004 13:16:29 +0000
+Size: 5619
+Url: http://lists.freebsd.org/pipermail/freebsd-ports/attachments/20040218/d5c504dc/gentoo-announceGLSA200402-07Clamav0.mht
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: signature.asc
+Type: application/pgp-signature
+Size: 254 bytes
+Desc: OpenPGP digital signature
+Url : http://lists.freebsd.org/pipermail/freebsd-ports/attachments/20040218/d5c504dc/signature.bin
+
+
+--------------------------------------------------------------------------------
+MID: 20040218215950.GD47727@madman.celabo.org
+DATE: 2004-02-18T16:09:52+00:00  FROM: nectar at FreeBSD.org (Jacques A. Vidrine) <None>
+SUBJ: [Fwd: [gentoo-announce] [ GLSA 200402-07 ] Clamav 0.65 DoS
+	vulnerability]
+BODY:
+On Wed, Feb 18, 2004 at 08:26:33AM -0600, Thomas T. Veldhouse wrote:
+
+Oliver (the discoverer of the vulnerability) is a FreeBSD developer and
+fixed the port some time ago.
+
+See also
+<URL:http://www.vuxml.org/freebsd/74a9541d-5d6c-11d8-80e3-0020ed76ef5a.html>.
+
+Cheers,
+-- 
+Jacques Vidrine / nectar@celabo.org / jvidrine@verio.net / nectar@freebsd.org
+
+
+--------------------------------------------------------------------------------
+MID: 40340D3F.8060805@fillmore-labs.com
+DATE: 2004-02-18T20:15:09+00:00  FROM: eikemeier at fillmore-labs.com (Oliver Eikemeier) <None>
+SUBJ: [Fwd: [gentoo-announce] [ GLSA 200402-07 ] Clamav 0.65 DoS
+	vulnerability]
+BODY:
+Jacques A. Vidrine wrote:
+
+
+Btw, it is almost unbearable smart that they include the sequence that triggers
+the bug in their mail, assuring that users that *have* the vulnerable clamd
+installed never see the advisory.
+
+It *had* a reason that I prefixed the lines with 'X'. Congratulations.
+
+-Oliver
+
+
+
+--------------------------------------------------------------------------------
+MID: 20040218222911.A28073@odysseus.silby.com
+DATE: 2004-02-18T22:35:37+00:00  FROM: silby at silby.com (Mike Silbersack) <None>
+SUBJ: [Fwd: [gentoo-announce] [ GLSA 200402-07 ] Clamav 0.65 DoS
+ vulnerability]
+BODY:
+
+On Thu, 19 Feb 2004, Oliver Eikemeier wrote:
+
+
+When that pine header-parsing bug came out two years ago, the jerk threw
+the bad header in his post to bugtraq.
+
+I did not enjoy that. :(
+
+Mike "Silby" Silbersack
+
+
+--------------------------------------------------------------------------------
+MID: 9DCF7A9E7AD27A4F962A37F7E78607B142C360@ukhokho.ct.schoolnet.org.za
+DATE: 2004-02-19T02:15:35+00:00  FROM: david at wcsn.wcape.school.za (David Peall) <None>
+SUBJ: [Fwd: [gentoo-announce] [ GLSA 200402-07 ] Clamav 0.65
+	DoSvulnerability]
+BODY:
+Hi 
+
+The FreeBSD port has been updated for the DoS vulnerability but the
+version is still 
+the same.
+
+See:
+http://www.freebsd.org/cgi/cvsweb.cgi/ports/security/clamav/ 
+
+
+David Peall
+Systems Administrator
+Western Cape Schools' Network
+http://www.wcsn.org.za/
+PO Box 44460, Claremont 7735, Cape Town
+Fax +27 (021) 683-6766, Helpdesk +27 (021) 674-9140
+
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 20040219102628.GE725@straylight.m.ringlet.net
+DATE: 2004-02-19T05:18:49+00:00  FROM: roam at ringlet.net (Peter Pentchev) <None>
+SUBJ: [Fwd: [gentoo-announce] [ GLSA 200402-07 ] Clamav 0.65
+	DoSvulnerability]
+BODY:
+On Thu, Feb 19, 2004 at 08:38:50AM +0200, David Peall wrote:
+
+Err.. strictly speaking, the port's version is not the same: it is
+now 0.65_7, it was 0.65_6 before.  The 'port revision' number was
+introduced for precisely this purpose: to provide an indicator that
+something important has changed in the FreeBSD port even when
+the mainstream version of the ported software remains the same.
+
+G'luck,
+Peter
+
+-- 
+Peter Pentchev	roam@ringlet.net    roam@sbnd.net    roam@FreeBSD.org
+PGP key:	http://people.FreeBSD.org/~roam/roam.key.asc
+Key fingerprint	FDBA FD79 C26F 3C51 C95E  DF9E ED18 B68D 1619 4553
+If I were you, who would be reading this sentence?
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: not available
+Type: application/pgp-signature
+Size: 187 bytes
+Desc: not available
+Url : http://lists.freebsd.org/pipermail/freebsd-ports/attachments/20040219/07a9b68a/attachment-0001.bin
+
+
+--------------------------------------------------------------------------------
+MID: 1117873348.31967.1.camel@circle.camisa.org
+DATE: 2005-06-04T01:22:36+00:00  FROM: ask at chriscamisa.com (Ask Camisa!) <None>
+SUBJ: FreeBSD Port: linux_base-gentoo-stage1-2004.3
+BODY:
+Hello!
+
+     Does the emulator/ Gentoo Stage - 1 installer for release 5.0 have
+fans...?  I see the 4.3 release is broken... so now instead I'm
+installing emulator/linux_base-8...
+
+Should I be writing to you about this port?
+
+
+Yours Truly,
+
+
+Christopher J. Camisa
+
+
+
+--------------------------------------------------------------------------------
+MID: 4335C38C.3060508@pobox.sk
+DATE: 2005-09-24T14:22:26+00:00  FROM: martinkov at pobox.sk (martinko) <None>
+SUBJ: FreeBSD Port: x11-fm/gentoo
+BODY:
+hello,
+
+there should be '/sbin/mount' and '/sbin/umount' in default .gentoorc 
+instead of '/bin/mount' and '/bin/umount' which makes gentoo crash if 
+automounting is set on and one (a regular user) tries to change into 
+e.g. /cdrom directory.
+
+martin
+
+
+--------------------------------------------------------------------------------
+MID: 1127597173.78936.17.camel@ikaros.oook.cz
+DATE: 2005-09-24T14:26:20+00:00  FROM: pav at FreeBSD.org (Pav Lucistnik) <None>
+SUBJ: FreeBSD Port: x11-fm/gentoo
+BODY:
+martinko p??e v so 24. 09. 2005 v 23:22 +0200:
+
+Care to provide a patch?
+
+-- 
+Pav Lucistnik <pav@oook.cz>
+              <pav@FreeBSD.org>
+
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: not available
+Type: application/pgp-signature
+Size: 187 bytes
+Desc: This is a digitally signed message part
+Url : http://lists.freebsd.org/pipermail/freebsd-ports/attachments/20050924/879f2b0d/attachment.bin
+
+
+--------------------------------------------------------------------------------
+MID: 20020501183410.EEED65A544@nemesis.informatik.unibw-muenchen.de
+DATE: 2002-05-01T18:34:10+00:00  FROM: Oliver Braun <obraun@informatik.unibw-muenchen.de> <None>
+SUBJ: ports/37637: [MAINTAINER UPDATE] x11-fm/gentoo update to 0.11.24
+BODY:
+
+System: FreeBSD nemesis.informatik.unibw-muenchen.de 4.5-STABLE FreeBSD 4.5-STABLE #3: Thu Apr 18 16:20:45 CEST 2002 root@nemesis.informatik.unibw-muenchen.de:/usr/obj/usr/src/sys/NEMESIS_OB i386
+
+
+
+Update x11-fm/gentoo from 0.11.23 to 0.11.24
+
+Regards,
+         Olli
+
+
+diff -ruN gentoo/Makefile gentoo.old/Makefile
+--- gentoo/Makefile	Wed May  1 10:00:51 2002
++++ gentoo.old/Makefile	Mon Apr  1 19:38:44 2002
+@@ -6,7 +6,7 @@
+ #
+ 
+ PORTNAME=	gentoo
+-PORTVERSION=	0.11.24
++PORTVERSION=	0.11.23
+ CATEGORIES=	x11-fm
+ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE}
+ MASTER_SITE_SUBDIR=	${PORTNAME}
+diff -ruN gentoo/distinfo gentoo.old/distinfo
+--- gentoo/distinfo	Wed May  1 10:01:16 2002
++++ gentoo.old/distinfo	Mon Apr  1 19:38:44 2002
+@@ -1 +1 @@
+-MD5 (gentoo-0.11.24.tar.gz) = 56e9a5c97de7e517e14b133342eafa54
++MD5 (gentoo-0.11.23.tar.gz) = c9e3012e08f21a798011e3b4e58aea51
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-ports" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 200205012107.g41L7Gk80934@freefall.freebsd.org
+DATE: 2002-05-01T21:07:16+00:00  FROM: <pat@FreeBSD.org> <None>
+SUBJ: Re: ports/37637: [MAINTAINER UPDATE] x11-fm/gentoo update to 0.11.24
+BODY:
+Synopsis: [MAINTAINER UPDATE] x11-fm/gentoo update to 0.11.24
+
+State-Changed-From-To: open->closed
+State-Changed-By: pat
+State-Changed-When: Wed May 1 14:07:06 PDT 2002
+State-Changed-Why: 
+Committed, Thanks!
+
+http://www.freebsd.org/cgi/query-pr.cgi?pr=37637
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-ports" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 20020604082128.D8E435A547@nemesis.informatik.unibw-muenchen.de
+DATE: 2002-06-04T08:21:28+00:00  FROM: Oliver Braun <obraun@informatik.unibw-muenchen.de> <None>
+SUBJ: ports/38887: [MAINTAINER UPDATE] Update port: x11-fm/gentoo -> 0.11.25
+BODY:
+
+System: FreeBSD nemesis.informatik.unibw-muenchen.de 4.6-PRERELEASE FreeBSD 4.6-PRERELEASE #0: Thu May 2 11:59:09 CEST 2002 root@nemesis.informatik.unibw-muenchen.de:/usr/obj/usr/src/sys/NEMESIS_OB i386
+
+
+
+This PR supersedes PR ports/38614. The upstream maintainer has incorporated my
+patches (see PR ports/38614) into this release. So, there is no need to add
+them to the port.
+
+Update x11-fm/gentoo from 0.11.24 to 0.11.25.
+
+Regards,
+         Olli
+
+
+Index: Makefile
+===================================================================
+RCS file: /home/ncvs/ports/x11-fm/gentoo/Makefile,v
+retrieving revision 1.10
+diff -u -r1.10 Makefile
+--- Makefile	1 May 2002 21:07:04 -0000	1.10
++++ Makefile	4 Jun 2002 08:16:26 -0000
+@@ -6,7 +6,7 @@
+ #
+ 
+ PORTNAME=	gentoo
+-PORTVERSION=	0.11.24
++PORTVERSION=	0.11.25
+ CATEGORIES=	x11-fm
+ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE}
+ MASTER_SITE_SUBDIR=	${PORTNAME}
+Index: distinfo
+===================================================================
+RCS file: /home/n
+
+--------------------------------------------------------------------------------
+MID: 200206040850.g548o4M60497@freefall.freebsd.org
+DATE: 2002-06-04T08:50:04+00:00  FROM: Oliver Braun <obraun@informatik.unibw-muenchen.de> <None>
+SUBJ: Re: ports/38614: [MAITAINER UPDATE] Fix x11-fm/gentoo on -current --- bento error
+BODY:
+The following reply was made to PR ports/38614; it has been noted by GNATS.
+
+From: Oliver Braun <obraun@informatik.unibw-muenchen.de>
+To: FreeBSD-gnats-submit@FreeBSD.ORG
+Cc:  
+Subject: Re: ports/38614: [MAITAINER UPDATE] Fix x11-fm/gentoo on -current --- bento error
+Date: Tue, 4 Jun 2002 10:40:16 +0200
+
+ Please close this, since it is obsoleted by PR ports/38887.
+ 
+ Both patches have been incorporated into the new release.
+ 
+ Regards,
+          Olli
+ -- 
+ IST & IIS _ INF _ UniBwM ___________ http://ist.unibw-muenchen.de/People/obraun/
+ Tele-Consulting GmbH _______________ http://www.tele-consulting.com/ ___ obraun@
+ FreeBSD: The Power To Serve ________ http://www.freebsd.org/ ___________________
+ GnuPG: 0xEF25B1BA Fingerprint: 6A3B 042A 732E 17E4 B6E7 3EAF C0B1 6B7D EF25 B1BA
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-ports" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 200206041544.g54FikB43403@freefall.freebsd.org
+DATE: 2002-06-04T15:44:46+00:00  FROM: <ijliao@FreeBSD.org> <None>
+SUBJ: Re: ports/38614: [MAITAINER UPDATE] Fix x11-fm/gentoo on -current --- bento error
+BODY:
+Synopsis: [MAITAINER UPDATE] Fix x11-fm/gentoo on -current --- bento error
+
+State-Changed-From-To: open->closed
+State-Changed-By: ijliao
+State-Changed-When: Tue Jun 4 08:44:29 PDT 2002
+State-Changed-Why: 
+superceded by pr/38887
+
+http://www.freebsd.org/cgi/query-pr.cgi?pr=38614
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-ports" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 200206062052.g56KqPB28100@freefall.freebsd.org
+DATE: 2002-06-06T20:52:25+00:00  FROM: <pat@FreeBSD.org> <None>
+SUBJ: Re: ports/38887: [MAINTAINER UPDATE] Update port: x11-fm/gentoo -> 0.11.25
+BODY:
+Synopsis: [MAINTAINER UPDATE] Update port: x11-fm/gentoo -> 0.11.25
+
+State-Changed-From-To: open->closed
+State-Changed-By: pat
+State-Changed-When: Thu Jun 6 13:52:12 PDT 2002
+State-Changed-Why: 
+Committed, Thanks!
+
+http://www.freebsd.org/cgi/query-pr.cgi?pr=38887
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-ports" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 20020611083733.8FD4E5A546@nemesis.informatik.unibw-muenchen.de
+DATE: 2002-06-11T08:37:33+00:00  FROM: Oliver Braun <obraun@informatik.unibw-muenchen.de> <None>
+SUBJ: ports/39143: [MAINTAINER UPDATE] Update port: x11-fm/gentoo -> 0.11.26
+BODY:
+
+System: FreeBSD nemesis.informatik.unibw-muenchen.de 4.6-PRERELEASE FreeBSD 4.6-PRERELEASE #0: Thu May 2 11:59:09 CEST 2002 root@nemesis.informatik.unibw-muenchen.de:/usr/obj/usr/src/sys/NEMESIS_OB i386
+
+
+
+Update x11-fm/gentoo from 0.11.25 to 0.11.26.
+
+Regards,
+         Olli
+
+Index: Makefile
+===================================================================
+RCS file: /home/ncvs/ports/x11-fm/gentoo/Makefile,v
+retrieving revision 1.11
+diff -u -r1.11 Makefile
+--- Makefile	6 Jun 2002 20:52:09 -0000	1.11
++++ Makefile	11 Jun 2002 08:34:19 -0000
+@@ -6,7 +6,7 @@
+ #
+ 
+ PORTNAME=	gentoo
+-PORTVERSION=	0.11.25
++PORTVERSION=	0.11.26
+ CATEGORIES=	x11-fm
+ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE}
+ MASTER_SITE_SUBDIR=	${PORTNAME}
+Index: distinfo
+===================================================================
+RCS file: /home/ncvs/ports/x11-fm/gentoo/distinfo,v
+retrieving revision 1.9
+diff -u -r1.9 distinfo
+--- distinfo	6 Jun 2002 20:52:09 -0000	1.9
++++ distinfo	11 Jun 2002 08:34:19 -0000
+@@ -1 +1 
+
+--------------------------------------------------------------------------------
+MID: 200206111616.g5BGGh656652@freefall.freebsd.org
+DATE: 2002-06-11T16:16:43+00:00  FROM: <pat@FreeBSD.org> <None>
+SUBJ: Re: ports/39143: [MAINTAINER UPDATE] Update port: x11-fm/gentoo -> 0.11.26
+BODY:
+Synopsis: [MAINTAINER UPDATE] Update port: x11-fm/gentoo -> 0.11.26
+
+State-Changed-From-To: open->closed
+State-Changed-By: pat
+State-Changed-When: Tue Jun 11 09:16:31 PDT 2002
+State-Changed-Why: 
+Committed, Thanks!
+
+http://www.freebsd.org/cgi/query-pr.cgi?pr=39143
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-ports" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 20020613213328.67F9043E@unsane.de
+DATE: 2002-06-13T21:33:28+00:00  FROM: Oliver Braun <obraun@informatik.unibw-muenchen.de> <None>
+SUBJ: ports/39249: [MAINTAINER UPDATE] Update port: x11-fm/gentoo ${PERL} -> ${REINPLACE_CMD}
+BODY:
+
+System: FreeBSD galore.unsane.de 4.6-RC FreeBSD 4.6-RC #0: Thu Jun 6 21:00:07 CEST 2002 root@galore.unsane.de:/usr/obj/usr/src/sys/GALORE_OB i386
+
+
+
+Replace ${PERL} with ${REINPLACE_CMD}.
+
+Regards,
+         Olli
+
+Index: Makefile
+===================================================================
+RCS file: /home/ncvs/ports/x11-fm/gentoo/Makefile,v
+retrieving revision 1.11
+diff -u -r1.11 Makefile
+--- Makefile	2002/06/06 20:52:09	1.11
++++ Makefile	2002/06/13 21:20:43
+@@ -22,7 +22,7 @@
+ 		README.gtkrc TODO
+ 
+ post-patch:
+-	@${PERL} -pi -e 's|icons|${DATADIR}/icons|g' ${WRKSRC}/gentoorc.in
++	@${REINPLACE_CMD} -e 's|icons|${DATADIR}/icons|g' ${WRKSRC}/gentoorc.in
+ 
+ post-install:
+ 	${INSTALL_MAN} ${WRKSRC}/docs/gentoo.1x ${MANPREFIX}/man/man1/gentoo.1
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-ports" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 200206140722.g5E7MAR00575@freefall.freebsd.org
+DATE: 2002-06-14T07:22:10+00:00  FROM: <ijliao@FreeBSD.org> <None>
+SUBJ: Re: ports/39249: [MAINTAINER UPDATE] Update port: x11-fm/gentoo ${PERL} -> ${REINPLACE_CMD}
+BODY:
+Synopsis: [MAINTAINER UPDATE] Update port: x11-fm/gentoo ${PERL} -> ${REINPLACE_CMD}
+
+State-Changed-From-To: open->closed
+State-Changed-By: ijliao
+State-Changed-When: Fri Jun 14 00:22:03 PDT 2002
+State-Changed-Why: 
+committed, thanks
+
+http://www.freebsd.org/cgi/query-pr.cgi?pr=39249
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-ports" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 20020721074451.BEFB91F7@unsane.de
+DATE: 2002-07-21T07:44:51+00:00  FROM: Oliver Braun <obraun@informatik.unibw-muenchen.de> <None>
+SUBJ: ports/40823: [MAINTAINER UPDATE] Update port: x11-fm/gentoo -> 0.11.30
+BODY:
+
+System: FreeBSD galore.unsane.de 4.6-STABLE FreeBSD 4.6-STABLE #0: Thu Jul 11 15:55:17 CEST 2002 root@galore.unsane.de:/usr/obj/usr/src/sys/GALORE_OB i386
+
+
+
+Update x11-fm/gentoo from 0.11.28 to 0.11.30.
+
+Regards,
+         Olli
+
+Index: Makefile
+===================================================================
+RCS file: /home/ncvs/ports/x11-fm/gentoo/Makefile,v
+retrieving revision 1.16
+diff -u -r1.16 Makefile
+--- Makefile	2002/07/17 23:49:32	1.16
++++ Makefile	2002/07/21 07:42:32
+@@ -6,7 +6,7 @@
+ #
+ 
+ PORTNAME=	gentoo
+-PORTVERSION=	0.11.28
++PORTVERSION=	0.11.30
+ CATEGORIES=	x11-fm
+ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE}
+ MASTER_SITE_SUBDIR=	${PORTNAME}
+Index: distinfo
+===================================================================
+RCS file: /home/ncvs/ports/x11-fm/gentoo/distinfo,v
+retrieving revision 1.12
+diff -u -r1.12 distinfo
+--- distinfo	2002/07/17 23:49:32	1.12
++++ distinfo	2002/07/21 07:42:32
+@@ -1 +1 @@
+-MD5 (gentoo-0.11.28.tar.gz) = f3e01ffdb678a2a1de5dc568d82bce59
++MD5
+
+--------------------------------------------------------------------------------
+MID: 200207220240.g6M2edYL094063@freefall.freebsd.org
+DATE: 2002-07-22T02:40:39+00:00  FROM: Patrick Li <pat@FreeBSD.org> <None>
+SUBJ: Re: ports/40823: [MAINTAINER UPDATE] Update port: x11-fm/gentoo -> 0.11.30
+BODY:
+Synopsis: [MAINTAINER UPDATE] Update port: x11-fm/gentoo -> 0.11.30
+
+State-Changed-From-To: open->closed
+State-Changed-By: pat
+State-Changed-When: Sun Jul 21 19:40:30 PDT 2002
+State-Changed-Why: 
+Committed, Thanks!
+
+http://www.freebsd.org/cgi/query-pr.cgi?pr=40823
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-ports" in the body of the message
+
+
+

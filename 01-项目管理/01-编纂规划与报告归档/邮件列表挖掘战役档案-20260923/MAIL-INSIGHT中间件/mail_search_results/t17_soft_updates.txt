@@ -1,0 +1,2381 @@
+==========================================================================================
+DB: freebsd-hackers.duckdb  hits=20
+==========================================================================================
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-f8c722857beb581c>
+DATE: 1998-01-07T07:34:03+00:00  FROM: Julian Elischer <julian () whistle ! com> <None>
+SUBJ: Re: Soft updates available for OpenBSD
+BODY:
+It's a non-commercial licence.
+I know.. I asked him..
+As in.. if you give away source you can use it.
+(plus a few extra restrictions) It's an optional module.
+I'm looking at it at the moment.
+
+julian
+
+On Wed, 7 Jan 1998, Michael Hancock wrote:
+
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-4879af159592e143>
+DATE: 1998-03-07T12:24:41+00:00  FROM: Ollivier Robert <roberto () keltia ! freenix ! fr> <None>
+SUBJ: Re: Soft updates inconsistencies...
+BODY:
+According to freebsd@isvara.net:
+
+It has to be enable through tunefs(8) for the moment.
+
+usage: tunefs tuneup-options special-device
+where tuneup-options are:
+	-a maximum contiguous blocks
+	-d rotational delay between contiguous blocks
+	-e maximum blocks per file in a cylinder group
+	-m minimum percentage of free space
+	-n soft updates (`enable' or `disable')
+	-o optimization preference (`space' or `time')
+	-p no change - just prints current tuneable settings
+
+-- 
+Ollivier ROBERT -=- FreeBSD: The Power to Serve! -=- roberto@keltia.freenix.fr
+FreeBSD keltia.freenix.fr 3.0-CURRENT #0: Sun Mar  1 18:50:39 CET 1998
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-fbd6f14978929fd4>
+DATE: 1998-06-16T23:02:31+00:00  FROM: Luoqi Chen <luoqi () watermarkgroup ! com> <None>
+SUBJ: Re:  where is the paper of soft updates?
+BODY:
+
+http://www.ece.cmu.edu/~ganger/papers/CSE-TR-254-95
+
+-lq
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-61adbaa0ed265659>
+DATE: 1998-10-28T13:06:24+00:00  FROM: Eivind Eklund <eivind () yes ! no> <None>
+SUBJ: Re: Soft Updates
+BODY:
+On Wed, Oct 28, 1998 at 09:04:45PM +1100, Peter Jeremy wrote:
+
+Not officially, at least, and I consider it unlikely there is an
+unofficial port.
+
+
+Softupdates are usually a little better.
+
+Eivind.
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: 19980106233005.35928@keltia.freenix.fr
+DATE: 1998-01-06T22:30:05+00:00  FROM: Ollivier Robert <roberto@keltia.freenix.fr> <None>
+SUBJ: Soft updates available for OpenBSD
+BODY:
+Has anyone looked at the soft updates package for OpenBSD ?
+
+<http://www.OpenBSD.org/softupdate.html>
+
+It would be very nice to have it too :-)
+-- 
+Ollivier ROBERT -=- FreeBSD: The Power to Serve! -=- roberto@keltia.freenix.fr
+FreeBSD keltia.freenix.fr 3.0-CURRENT #27: Tue Jan  6 22:25:44 CET 1998
+
+
+
+--------------------------------------------------------------------------------
+MID: Pine.GSO.3.95.980106232735.26754w-100000@tor-adm1
+DATE: 1998-01-07T04:27:54+00:00  FROM: Brian Tao <taob@nbc.netcom.ca> <None>
+SUBJ: Re: Soft updates available for OpenBSD
+BODY:
+On Tue, 6 Jan 1998, Ollivier Robert wrote:
+
+    How does the speed compare to async mounts?
+-- 
+Brian Tao (BT300, taob@netcom.ca)
+"Though this be madness, yet there is method in't"
+
+
+
+
+--------------------------------------------------------------------------------
+MID: Pine.SV4.3.95.980107142746.23146B-100000@parkplace.cet.co.jp
+DATE: 1998-01-07T05:29:44+00:00  FROM: Michael Hancock <michaelh@cet.co.jp> <None>
+SUBJ: Re: Soft updates available for OpenBSD
+BODY:
+What kind of license did Kirk put on that?  I wonder if it has anything to
+do with BSDI.
+
+Mike
+
+
+
+
+--------------------------------------------------------------------------------
+MID: Pine.BSF.3.95.980106233233.2456F-100000@current1.whistle.com
+DATE: 1998-01-07T07:34:03+00:00  FROM: Julian Elischer <julian@whistle.com> <None>
+SUBJ: Re: Soft updates available for OpenBSD
+BODY:
+It's a non-commercial licence.
+I know.. I asked him..
+As in.. if you give away source you can use it.
+(plus a few extra restrictions) It's an optional module.
+I'm looking at it at the moment.
+
+julian
+
+On Wed, 7 Jan 1998, Michael Hancock wrote:
+
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 19980107082958.05193@keltia.freenix.fr
+DATE: 1998-01-07T07:29:58+00:00  FROM: Ollivier Robert <roberto@keltia.freenix.fr> <None>
+SUBJ: Re: Soft updates available for OpenBSD
+BODY:
+According to Brian Tao:
+
+The paper doesn't speak of async mounts but it is supposed to give you
+async speed without the risks. Reading the paper definitely show a nice
+improvement...
+-- 
+Ollivier ROBERT -=- FreeBSD: The Power to Serve! -=- roberto@keltia.freenix.fr
+FreeBSD keltia.freenix.fr 3.0-CURRENT #27: Tue Jan  6 22:25:44 CET 1998
+
+
+
+--------------------------------------------------------------------------------
+MID: 19980107083136.35694@keltia.freenix.fr
+DATE: 1998-01-07T07:31:36+00:00  FROM: Ollivier Robert <roberto@keltia.freenix.fr> <None>
+SUBJ: Re: Soft updates available for OpenBSD
+BODY:
+According to Michael Hancock:
+
+Nothing. Here is the copyright.
+
+/*
+ * Copyright 1997 Marshall Kirk McKusick. All Rights Reserved.
+ *
+ * The soft updates code is derived from the appendix of a University
+ * of Michigan technical report (Gregory R. Ganger and Yale N. Patt,
+ * "Soft Updates: A Solution to the Metadata Update Problem in File
+ * Systems", CSE-TR-254-95, August 1995).
+ *
+ * The following are the copyrights and redistribution conditions that
+ * apply to this copy of the soft update software. For a license
+ * to use, redistribute or sell the soft update software under
+ * conditions other than those described here, please contact the
+ * author at one of the following addresses:
+ *
+ *  Marshall Kirk McKusick      mckusick@mckusick.com
+ *  1614 Oxford Street      +1-510-843-9542
+ *  Berkeley, CA 94709-1608
+ *  USA
+ *
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions
+ * are met:
+ *
+ * 1. Redistributions of source code must retain the above copyright
+ *    notice, this list of conditions and the following disclaimer.
+ * 2. Redistributions in binary form must reproduce the above copyright
+ 
+
+--------------------------------------------------------------------------------
+MID: 199803070607.AAA00423@friley585.res.iastate.edu
+DATE: 1998-03-07T06:07:54+00:00  FROM: Chris Csanady <ccsanady@friley585.res.iastate.edu> <None>
+SUBJ: Soft updates inconsistencies...
+BODY:
+I recently built a new kernel with the latest soft updates code, and
+rebooted.  When I went to rm -rf /usr/obj/usr, It spontaneously
+rebooted (after a while.)  It came up, fsck fixed it (after 1000's
+of lines of fixes,) and then booted.  The thing is.. this happens
+when you try to cd to the /usr/obj/usr:
+
+friley585:/usr/obj/usr# ls
+ls: src: Bad file descriptor
+
+So.. I unmounted /usr, and fsck'd it, with the following errors.  They
+are somewhat disturbing imho.. especially since fsck didn't fix them
+the first time. :\
+
+This is with a kernel built today, with SMP..
+
+Chris
+
+** Phase 1 - Check Blocks and Sizes
+** Phase 2 - Check Pathnames
+/lost+found IS AN EXTRANEOUS HARD LINK TO DIRECTORY /lost+found/#14897
+
+REMOVE? [yn] y
+
+[ 3 more like this ]
+
+** Phase 3 - Check Connectivity
+UNREF DIR  I=22272  OWNER=root MODE=40755
+SIZE=512 MTIME=Mar  6 23:25 1998 
+RECONNECT? [yn] y
+
+** Phase 4 - Check Reference Counts
+LINK COUNT DIR I=58  OWNER=root MODE=40755
+SIZE=512 MTIME=Mar  6 23:26 1998  COUNT -11 SHOULD BE 2
+LINK COUNT INCREASING
+UNEXPECTED SOFTDEP INCONSISTENCY
+
+[lots and lots like this...]
+
+--Chris Csanady
+
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-ha
+
+--------------------------------------------------------------------------------
+MID: 199803070733.CAA00475@dyson.iquest.net
+DATE: 1998-03-07T07:33:31+00:00  FROM: "John S. Dyson" <toor@dyson.iquest.net> <None>
+SUBJ: Re: Soft updates inconsistencies...
+BODY:
+Chris Csanady said:
+The soft-updates guys are about ready to commit the code.  Also, it
+will still likely be unstable (only when enabled) for about 2wks more
+or so.  It will also need some testing/regression testing for more bug
+feedback.  The stuff is complex, but will be pretty cool when ready for
+production!!!
+
+My guesstimate is that by about the 1st of April softupdates will be
+really great.
+
+-- 
+John                  | Never try to teach a pig to sing,
+dyson@freebsd.org     | it just makes you look stupid,
+jdyson@nc.com         | and it irritates the pig.
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: 199803070747.XAA07332@rah.star-gate.com
+DATE: 1998-03-07T07:47:00+00:00  FROM: Amancio Hasty <hasty@rah.star-gate.com> <None>
+SUBJ: Re: Soft updates inconsistencies... 
+BODY:
+
+You meant April 2 or March 31 , right ? 8)
+
+	Cheers,
+	Amancio
+
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: 350110FB.F5DF850E@challenge.isvara.net
+DATE: 1998-03-07T09:18:51+00:00  FROM: freebsd@isvara.net <None>
+SUBJ: Re: Soft updates inconsistencies...
+BODY:
+John S. Dyson wrote:
+
+
+When it is comitted, do we enable it in the /etc/fstab file?
+
+Thanks,
+    Dan
+
+_____________________________________
+Daniel J Blueman
+BSc Computation, UMIST, Manchester
+Email: blue@challenge.isvara.net
+Web: http://www.challenge.isvara.net/
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: 19980307132441.A25761@keltia.freenix.fr
+DATE: 1998-03-07T12:24:41+00:00  FROM: Ollivier Robert <roberto@keltia.freenix.fr> <None>
+SUBJ: Re: Soft updates inconsistencies...
+BODY:
+According to freebsd@isvara.net:
+
+It has to be enable through tunefs(8) for the moment.
+
+usage: tunefs tuneup-options special-device
+where tuneup-options are:
+	-a maximum contiguous blocks
+	-d rotational delay between contiguous blocks
+	-e maximum blocks per file in a cylinder group
+	-m minimum percentage of free space
+	-n soft updates (`enable' or `disable')
+	-o optimization preference (`space' or `time')
+	-p no change - just prints current tuneable settings
+
+-- 
+Ollivier ROBERT -=- FreeBSD: The Power to Serve! -=- roberto@keltia.freenix.fr
+FreeBSD keltia.freenix.fr 3.0-CURRENT #0: Sun Mar  1 18:50:39 CET 1998
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: Pine.SOL.L3.93.980616160115.11086B-100000@bingsun1
+DATE: 1998-06-16T20:02:36+00:00  FROM: zhihuizhang <bf20761@binghamton.edu> <None>
+SUBJ: where is the paper of soft updates?
+BODY:
+
+Can anybody tell me where I can find the paper on soft updates by
+Ganger/Patt?  Thanks a lot.
+
+-------------------------------------------------
+
+Zhihui Zhang
+
+Department of Computer Science
+State University of New York at Binghamton
+
+Web Site: http://cs.binghamton.edu/~zzhang
+
+-------------------------------------------------
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: Pine.BSF.3.95.980616185323.25254A-100000@orion.webspan.net
+DATE: 1998-06-16T22:54:22+00:00  FROM: Open Systems Networking <opsys@mail.webspan.net> <None>
+SUBJ: Re: where is the paper of soft updates?
+BODY:
+On Tue, 16 Jun 1998, zhihuizhang wrote:
+
+
+http://www.ece.cmu.edu/~ganger/papers/
+
+
+
+--
+"Linux... The choice of a GNUtered generation."
+
+===================================| Open Systems Networking And Consulting.
+  FreeBSD 2.2.6 is available now!  | Phone: 316-326-6800
+-----------------------------------| 1402 N. Washington, Wellington, KS-67152
+   FreeBSD: The power to serve!    | E-Mail: opsys@open-systems.net
+      http://www.freebsd.org       | Consulting-Network Engineering-Security
+===================================| http://open-systems.net 
+
+-----BEGIN PGP PUBLIC KEY BLOCK-----
+Version: 2.6.2
+
+mQENAzPemUsAAAEH/06iF0BU8pMtdLJrxp/lLk3vg9QJCHajsd25gYtR8X1Px1Te
+gWU0C4EwMh4seDIgK9bzFmjjlZOEgS9zEgia28xDgeluQjuuMyUFJ58MzRlC2ONC
+foYIZsFyIqdjEOCBdfhH5bmgB5/+L5bjDK6lNdqD8OAhtC4Xnc1UxAKq3oUgVD/Z
+d5UJXU2xm+f08WwGZIUcbGcaonRC/6Z/5o8YpLVBpcFeLtKW5WwGhEMxl9WDZ3Kb
+NZH6bx15WiB2Q/gZQib3ZXhe1xEgRP+p6BnvF364I/To9kMduHpJKU97PH3dU7Mv
+CXk2NG3rtOgLTEwLyvtBPqLnbx35E0JnZc0k5YkABRO0JU9wZW4gU3lzdGVtcyA8
+b3BzeXNAb3Blbi1zeXN0ZW1zLm5ldD4=
+=BBjp
+-----END PGP PUBLIC KEY BLOCK-----
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: 199806162302.TAA00774@lor.watermarkgroup.com
+DATE: 1998-06-16T23:02:31+00:00  FROM: Luoqi Chen <luoqi@watermarkgroup.com> <None>
+SUBJ: Re:  where is the paper of soft updates?
+BODY:
+
+http://www.ece.cmu.edu/~ganger/papers/CSE-TR-254-95
+
+-lq
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: 98Oct28.210415est.40334@border.alcanet.com.au
+DATE: 1998-10-28T10:04:45+00:00  FROM: Peter Jeremy <peter.jeremy@auss2.alcatel.com.au> <None>
+SUBJ: Soft Updates
+BODY:
+Has anyone ported Kirk's softupdate code to 2.2?  The code in 
+/usr/src/contrib/sys/softupdates applies to 3.0 only AFAIK.
+
+Also, how does the performance on the softupdate code compare
+with asynchronous mounts?
+
+Peter
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: 19981028140624.48345@follo.net
+DATE: 1998-10-28T13:06:24+00:00  FROM: Eivind Eklund <eivind@yes.no> <None>
+SUBJ: Re: Soft Updates
+BODY:
+On Wed, Oct 28, 1998 at 09:04:45PM +1100, Peter Jeremy wrote:
+
+Not officially, at least, and I consider it unlikely there is an
+unofficial port.
+
+
+Softupdates are usually a little better.
+
+Eivind.
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+==========================================================================================
+DB: freebsd-current.duckdb  hits=60
+==========================================================================================
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-current-77bda2d66f620c70>
+DATE: 1998-09-15T22:21:58+00:00  FROM: Julian Elischer <julian () whistle ! com> <None>
+SUBJ: Re: soft updates panic
+BODY:
+
+already done
+
+On Tue, 15 Sep 1998, Brian Feldman wrote:
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-current-2fafca70ad1c7fbe>
+DATE: 1998-09-17T17:08:44+00:00  FROM: Tamiji Homma <thomma () BayNetworks ! COM> <None>
+SUBJ: Re: soft updates panic once more; downgrading
+BODY:
+
+
+Just a data point.  9/16/1998 8pm PDT cvsup'ed.
+
+SMP(440FX, dual PPros, 128MB), SOFTUPDATES, SCSI_CAM(Single 4.3G 9ES), ELF
+
+  make -j4 buildworld  1:20:39  successful
+  make -j8 buildworld           the same panic as above
+
+This is off topic but everytime I got panic and fsck with softupdate 
+doesn't fix the file system correctly.  I always have to turn 
+softupdates off, and tunefs -n enable again after fsck.  I remember
+that fsck is(must be?) softupdates aware so that it knows how to fix
+the file system inconsistency for softupdates enabled file system 
+in case of crash.  However, fsck appears to be not doing the job.
+
+Am I misunderstood about this?
+
+Tammy
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-current-a3f565fd56b0a28d>
+DATE: 1998-09-22T01:31:37+00:00  FROM: Brian Feldman <green () zone ! syracuse ! net> <None>
+SUBJ: Re: system hangs with soft updates
+BODY:
+Wow, I sure hope that noone read your message and ecided to follow it
+word-by-word. Ctrl-alt-del is the reboot key sequence (albeit
+disableable), ctrl-alt-ESC is the DDB break-in sequence.
+
+Cheers,
+Brian
+
+On Mon, 21 Sep 1998, Julian Elischer wrote:
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-current-0ca5288804cdff16>
+DATE: 1998-10-14T04:08:16+00:00  FROM: Snob Art Genre <benedict () echonyc ! com> <None>
+SUBJ: finally caught my (soft updates?) bug
+BODY:
+Sometime in the last few days, kernel core dumps started working for me
+again, so today I was finally able to get a backtrace on the bug that's
+been crashing my make -j24 world's for so long.
+
+Reader's digest version: ufs_dirbad: bad dir.  Ufs_dirbad is called from
+ufs_lookup.  For more details, see kern/8312.
+
+
+ Ben
+
+"You have your mind on computers, it seems." 
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-current-7f57ecf8f82258da>
+DATE: 1999-01-13T06:36:10+00:00  FROM: Adrian Wontroba <aw1 () stade ! co ! uk> <None>
+SUBJ: Re: soft updates, ccd, old drives
+BODY:
+On Mon, Jul 13, 1998 at 07:16:09AM +0100, Adrian Wontroba wrote:
+
+Six months later (my, doesn't time fly) I tried again, with a reduced
+value of MAXUSERS (=100) - softupdates now works fine for me ....
+
+/dev/da0s2a on / (local, soft-updates, writes: sync 3 async 25945)
+/dev/da0s2e on /usr (local, soft-updates, writes: sync 6760 async 53354)
+procfs on /proc (local)
+/dev/da0s3e on /p1 (local, soft-updates, writes: sync 414 async 185516)
+mfs:28 on /tmp (asynchronous, local, writes: sync 1203 async 12959)
+/dev/da2c on /usr/local/newsspool (local, soft-updates, writes: sync 21 async 6138)
+/dev/da0s1 on /dos (local, noexec, nosuid)
+/dev/da1s1 on /dosd (local, noexec, nosuid)
+/dev/da3e on /d3p1 (local, soft-updates, writes: sync 2 async 2017)
+/dev/da3f on /d3p2 (local, soft-updates, writes: sync 3980 async 310368)
+/dev/da3g on /d3p3 (local, soft-updates, writes: sync 2 async 2)
+/dev/da3h on /d3p4 (local, soft-updates, writes: sync 2 async 46)
+
+... and cut my make buildworld time by 25%.
+
+-- 
+Adrian Wontroba, Stade Computers Limited.       phone:  (+44) 121 681 6677
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: 199802150425.WAA00407@friley585.res.iastate.edu
+DATE: 1998-02-15T04:25:53+00:00  FROM: Chris Csanady <ccsanady@friley585.res.iastate.edu> <None>
+SUBJ: Soft Updates/CCD's don't work together--larger problems perhaps
+BODY:
+As I have mentioned before, using Soft Updates and CCD's together cause
+a panic in softdep_disk_io_initiation().  The problems seem to be
+related to the ordering of the bioops.io_start() calls in
+kern/vfs_cluster.c--it is possible to call this function with B_READ,
+which will immediately causes the panic.
+
+A couple thoughts..  Would it be ok to move around the flag assignment
+as follows?  Also, does there really need to be a call to bioops.io_start()
+from cluster_rbuild?  I noticed that OpenBSD has rearranged things so
+that the flags are set before the call to bioops.io_start(), to avoid
+just this problem.  Also, they do not call it from cluster_rbuild either..
+
+Could someone who knows more about the VFS code have a look at how the
+Soft Updates code is integrated here?
+
+Thanks,
+Chris
+
+*** vfs_cluster.c.old      Sat Feb 14 22:16:20 1998
+--- vfs_cluster.c       Sat Feb 14 21:36:45 1998
+***************
+*** 722,727 ****
+--- 722,729 ----
+                                tbp->b_flags &= ~B_DONE;
+                                splx(s);
+                        }
++                       tbp->b_flags &= ~(B_READ | B_DONE | B_ERROR | 
+B_DELWRI);
++                       tbp->b_flags |= B_ASYNC
+
+--------------------------------------------------------------------------------
+MID: 199802150827.AAA15203@rah.star-gate.com
+DATE: 1998-02-15T08:27:28+00:00  FROM: Amancio Hasty <hasty@rah.star-gate.com> <None>
+SUBJ: soft updates , panic
+BODY:
+
+(kgdb) print *bp
+$1 = {b_hash = {le_next = 0xf2ef063c, le_prev = 0xf2ee9e70}, b_vnbufs = {
+    le_next = 0x0, le_prev = 0xf2ed8828}, b_freelist = {tqe_next = 0xf2eccd10, 
+    tqe_prev = 0xf2eedc18}, b_act = {tqe_next = 0x0, tqe_prev = 0xf02288f0}, 
+  b_proc = 0x0, b_flags = 536870960, b_qindex = 0, b_usecount = 24 '\030', 
+  b_error = 0, b_bufsize = 8192, b_bcount = 8192, b_resid = 0, 
+  b_dev = 4294967295, b_data = 0xf3674000 "\220\217'", 
+  b_kvabase = 0xf3674000 "\220\217'", b_kvasize = 8192, b_lblkno = -12, 
+  b_blkno = -12, b_iodone = 0, b_iodone_chain = 0x0, b_vp = 0xf4e0a200, 
+  b_dirtyoff = 0, b_dirtyend = 0, b_generation = 109, b_rcred = 0x0, 
+  b_wcred = 0x0, b_validoff = 0, b_validend = 0, b_pblkno = 1448576, 
+  b_saveaddr = 0x0, b_savekva = 0x0, b_driver1 = 0x0, b_driver2 = 0x0, 
+  b_spc = 0x0, b_cluster = {cluster_head = {tqh_first = 0x0, 
+      tqh_last = 0xf2ed866c}, cluster_entry = {tqe_next = 0x0, 
+      tqe_prev = 0xf2ed866c}}, b_pages = {0xf0c5f304, 0xf0c7ba38, 
+    0x0 <repeats 30 times>}, b_npages = 2, b_dep = {lh_first = 0x0}}
+(kgdb) where 
+#0  boot (howto=260) at ../../kern/kern_shutdown.c:296
+#1  0xf011790f in panic (fmt=0xf01013f8 "from debugger")
+    at .
+
+--------------------------------------------------------------------------------
+MID: 199802152341.QAA08289@usr01.primenet.com
+DATE: 1998-02-15T23:41:43+00:00  FROM: Terry Lambert <tlambert@primenet.com> <None>
+SUBJ: Soft updates: OPTIONS Vs. TUNABLES, and a plan...
+BODY:
+
+It's a tunable.  The reason is that any existing writes that are
+outstanding are dependencies.
+
+The update mount to read-only does a lot of work to make sure the
+dependencies are synchronized out for the read-only case (and then
+it still manages to write the superblock on mount).
+
+
+Discussion: I don't necessarily agree with the rationale here, but
+the reasoning was that the FS should not be mounted at the time of
+the change because of the additional gross hacks that the R/O update
+causes.
+
+Not doing the hack is problematic; one wonders how a root FS can ever
+be tuned after the system has been booted.
+
+Mounting read-only is *not* sufficient.  This is because there exist
+read dependencies for read-before-write operations.  You can probably
+get away with it, but you are flying by the seat of your pants if
+you do so.
+
+My preferred approach is to get rid of the VFS_MOUNTROOT code path
+seperation in VFS_MOUNT (my patches to get rid of the physically
+seperate VFS_MOUNTROOT went in some time ago).  The logically seperate
+code path also needs to go.
+
+The steps are:
+
+1)	Change the way mountpoint covering works.  Instead of
+	mounting something covered, mount it into an anonymous
+	mountpoint 
+
+--------------------------------------------------------------------------------
+MID: 199802161041.CAA24030@rah.star-gate.com
+DATE: 1998-02-16T10:41:31+00:00  FROM: Amancio Hasty <hasty@rah.star-gate.com> <None>
+SUBJ: soft update, panic...
+BODY:
+
+Noticed, that every that I get a panic the bp->b_blkno = -12 and I am not
+sure if thats a good value or not.
+
+(kgdb) print *bp
+$1 = {b_hash = {le_next = 0x0, le_prev = 0xf0214c58}, b_vnbufs = {
+    le_next = 0x0, le_prev = 0xf2ee7d64}, b_freelist = {tqe_next = 0xf2eeae68, 
+    tqe_prev = 0xf2ee37d8}, b_act = {tqe_next = 0x0, tqe_prev = 0xf022992c}, 
+  b_proc = 0x0, b_flags = 536870960, b_qindex = 0, b_usecount = 14 '\016', 
+  b_error = 0, b_bufsize = 8192, b_bcount = 8192, b_resid = 0, 
+  b_dev = 4294967295, b_data = 0xf35e6000 "", b_kvabase = 0xf35e6000 "", 
+  b_kvasize = 8192, b_lblkno = -12, b_blkno = -12, b_iodone = 0, 
+  b_iodone_chain = 0x0, b_vp = 0xf4dcf820, b_dirtyoff = 0, b_dirtyend = 0, 
+  b_generation = 157, b_rcred = 0x0, b_wcred = 0x0, b_validoff = 0, 
+  b_validend = 0, b_pblkno = 6312288, b_saveaddr = 0x0, b_savekva = 0x0, 
+  b_driver1 = 0x0, b_driver2 = 0x0, b_spc = 0x0, b_cluster = {cluster_head = {
+      tqh_first = 0x0, tqh_last = 0xf2eeeb70}, cluster_entry = {
+      tqe_next = 0x0, tqe_prev = 0xf2eeeb70}}, b_pages = {0xf0c70404, 
+    0xf0c6a938, 0x0 <repeats 30 times>}, b_npages = 2, b_dep = {
+    lh_first = 0x0}}
+
+#13 0xf01d6217 in large_i586_bcopy_loop ()
+#14
+
+--------------------------------------------------------------------------------
+MID: 199802161411.HAA08937@usr01.primenet.com
+DATE: 1998-02-16T14:11:18+00:00  FROM: Terry Lambert <tlambert@primenet.com> <None>
+SUBJ: Re: Soft updates: OPTIONS Vs. TUNABLES, and a plan...
+BODY:
+
+Ugh.
+
+OK, here are "seat-of-your-pants" instructions:
+
+1)	Boot single user, with root mounted read-only
+2)	Tunefs soft updates on
+3)	*immediately* run the "reboot" program.
+
+
+					Terry Lambert
+					terry@lambert.org
+---
+Any opinions in this posting are my own and not those of my present
+or previous employers.
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: 199802161735.JAA25943@implode.root.com
+DATE: 1998-02-16T17:35:21+00:00  FROM: David Greenman <dg@root.com> <None>
+SUBJ: Re: soft update, panic... 
+BODY:
+
+   It's a good value. Negative blok numbers are used to indicate indirect
+blocks (blocks that contain pointers to other blocks of a file).
+
+-DG
+
+David Greenman
+Core-team/Principal Architect, The FreeBSD Project
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: 685.887650620@critter.freebsd.dk
+DATE: 1998-02-16T17:37:00+00:00  FROM: Poul-Henning Kamp <phk@critter.freebsd.dk> <None>
+SUBJ: Re: soft update, panic... 
+BODY:
+In message <199802161735.JAA25943@implode.root.com>, David Greenman writes:
+
+... so -12 means that it is pretty darn big file, right ?
+
+is that worth anything as a clue ?
+
+--
+Poul-Henning Kamp             FreeBSD coreteam member
+phk@FreeBSD.ORG               "Real hackers run -current on their laptop."
+"Drink MONO-tonic, it goes down but it will NEVER come back up!"
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: 34F378E8.2781E494@whistle.com
+DATE: 1998-02-25T01:50:32+00:00  FROM: Julian Elischer <julian@whistle.com> <None>
+SUBJ: DEVFS/SLICE and SOFT UPDATE patches.
+BODY:
+The patches for both the DEVFS/SLICE integrations into FreeBSD-current
+can both be found from now on at:
+
+http://www.freebsd.org/~julian
+
+both sets of patches were compiled successfully today.
+
+I hope this forum will be easier for people to examine these 
+projects and test them.
+
+julian
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: 199802250252.TAA10749@usr04.primenet.com
+DATE: 1998-02-25T02:52:23+00:00  FROM: Terry Lambert <tlambert@primenet.com> <None>
+SUBJ: Re: DEVFS/SLICE and SOFT UPDATE patches.
+BODY:
+
+Use http://www.freebsd.org/~julian/ if you are using a brain-damaged
+browser.  For some reason, the trailing "/" is important to the WWW
+server on FreeeBSD.org...
+
+This is a job for... Variant Symbolic Links! <Dut Dut Da!>
+
+
+					Terry Lambert
+					terry@lambert.org
+---
+Any opinions in this posting are my own and not those of my present
+or previous employers.
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: 14962.888385596@time.cdrom.com
+DATE: 1998-02-25T05:46:36+00:00  FROM: "Jordan K. Hubbard" <jkh@time.cdrom.com> <None>
+SUBJ: Re: DEVFS/SLICE and SOFT UPDATE patches. 
+BODY:
+
+Shhhh!  They're not ready for this yet, Doctor! :)
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: 199802250630.XAA11219@usr05.primenet.com
+DATE: 1998-02-25T06:30:05+00:00  FROM: Terry Lambert <tlambert@primenet.com> <None>
+SUBJ: Re: DEVFS/SLICE and SOFT UPDATE patches.
+BODY:
+
+Meanwhile, Aunt Martha lies at the edge of town, in a ditch...
+
+(And yes, I know that moving the environment to system calls off the
+proc structure plays hell with the POSIX mandated execve()...).
+
+
+					Terry Lambert
+					terry@lambert.org
+---
+Any opinions in this posting are my own and not those of my present
+or previous employers.
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: 19980225102152.50924@iii.co.uk
+DATE: 1998-02-25T10:21:53+00:00  FROM: nik@iii.co.uk <None>
+SUBJ: Re: DEVFS/SLICE and SOFT UPDATE patches.
+BODY:
+On Wed, Feb 25, 1998 at 02:52:23AM +0000, Terry Lambert wrote:
+
+Uh, no it isn't. It's a job for people to start writing URLs properly.
+
+If you're referring to a directory (as the URL above is) then you must 
+include the trailing slash. Otherwise, the webserver thinks you're trying
+to retrieve a file of that name instead.
+
+When the web server realises that the file is not there, it will either
+
+  a) Return the appropriate "File not found" code to the browser
+
+or
+
+  b) Speculatively put a '/' on the end and try again.
+
+I don't think any web servers currently do (b), but I wouldn't stake my
+life on it.
+
+When a server responds with (a) the browser may or may not speculatively
+put a '/' on the end and resubmit the request. Most browsers do indeed do
+this. Some obviously don't, and I presume these are the 'brain damaged ones'
+referred to above.
+
+The overall effect is to contribute to the general slow down of the 'net,
+since your browser is submitting two requests to the server. Network
+traffic increases, browser logs are artificially inflated, servers that
+speculatively spawn multiple children to handle 'n' requests will kill
+those children earlier when they've done less useful work, and
+
+--------------------------------------------------------------------------------
+MID: Pine.BSF.3.96.980225092351.14331J-100000@sasami.jurai.net
+DATE: 1998-02-25T14:24:52+00:00  FROM: "Matthew N. Dodd" <winter@jurai.net> <None>
+SUBJ: Re: DEVFS/SLICE and SOFT UPDATE patches.
+BODY:
+On Wed, 25 Feb 1998, Terry Lambert wrote:
+
+I'd settle for having just a few kernel variables expanded...
+
+I still want remote links. :)
+
+/* 
+   Matthew N. Dodd		| A memory retaining a love you had for life	
+   winter@jurai.net		| As cruel as it seems nothing ever seems to
+   http://www.jurai.net/~winter | go right - FLA M 3.1:53	
+*/
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: 199802251549.KAA01357@bitter.zeus.leitch.com
+DATE: 1998-02-25T15:49:03+00:00  FROM: Tony Holmes <tholmes@zeus.leitch.com> <None>
+SUBJ: Re: DEVFS/SLICE and SOFT UPDATE patches.
+BODY:
+
+Since the FreeBSD group wisely chose Apache, and if they are using a newer
+version (or even a slightly older one), there is a nice way to cover over
+the "brain-damaged" browsers ignorance and make things happily work using
+the rewrite module.
+
+The following two lines in the configuration file (after turning on the
+rewrite engine, etc.) will check to see if the request is a directory and
+append a trailing / if it is.  You would need to check if the trailing / is
+missing in the first place as a precondition (this is ripped outta my
+config and I'm too tired to think through that part of the solution atm)
+
+RewriteCond %{REQUEST_FILENAME}         -d
+RewriteRule ^(.*)$              $1/ [L]
+
+
+						Tony
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: 199802252155.OAA28967@usr01.primenet.com
+DATE: 1998-02-25T21:55:34+00:00  FROM: Terry Lambert <tlambert@primenet.com> <None>
+SUBJ: Re: DEVFS/SLICE and SOFT UPDATE patches.
+BODY:
+
+The difference is actually that the server is speculatively adding
+an index.html in the trailing / case, and not adding it in the non-/
+case.
+
+A variant symbolic link would allow the colocation of a "username"
+to point to "~username/public_html/index.html".
+
+Other than a variant symbolic link (without which "username" can
+only point, as it does, to "~username/public_html"), the only other
+real option is hard links.  The problem here is that (1) directory
+hard links are not allowed because they screw with inheritance, and
+(2) You have a problem relatvely rooting documentes, unless the
+index.html is not implied, but instead explicitly specified.
+
+
+					Terry Lambert
+					terry@lambert.org
+---
+Any opinions in this posting are my own and not those of my present
+or previous employers.
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: 535.888517435@gjp.erols.com
+DATE: 1998-02-26T18:23:55+00:00  FROM: "Gary Palmer" <gpalmer@FreeBSD.ORG> <None>
+SUBJ: Re: DEVFS/SLICE and SOFT UPDATE patches. 
+BODY:
+nik@iii.co.uk wrote in message ID
+<19980225102152.50924@iii.co.uk>:
+
+GET /~gpalmer HTTP/1.0
+
+HTTP/1.1 301 Moved Permanently
+Date: Thu, 26 Feb 1998 18:23:00 GMT
+Server: Apache/1.2.5
+Location: http://www.freebsd.org/~gpalmer/
+Connection: close
+Content-Type: text/html
+
+<HTML><HEAD>
+<TITLE>301 Moved Permanently</TITLE>
+</HEAD><BODY>
+<H1>Moved Permanently</H1>
+The document has moved <A HREF="http://www.freebsd.org/~gpalmer/">here</A>.<P>
+</BODY></HTML>
+
+Seems that the WWW server does understand what to do, maybe some browsers 
+don't though ...
+
+Gary
+--
+Gary Palmer                                          FreeBSD Core Team Member
+FreeBSD: Turning PC's into workstations. See http://www.FreeBSD.ORG/ for info
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: Pine.BSF.3.95.980304224507.24021A-100000@alive.znep.com
+DATE: 1998-03-05T05:50:40+00:00  FROM: Marc Slemko <marcs@znep.com> <None>
+SUBJ: Re: DEVFS/SLICE and SOFT UPDATE patches.
+BODY:
+On Wed, 25 Feb 1998 nik@iii.co.uk wrote:
+
+
+Erm... no.  
+
+If the request doesn't have a trailing '/', then it is asking for a file
+in the directory above the desired directory.  A web server is free to
+give them the correct answer that it doesn't exist. 
+
+However, nearly all web servers (including Apache) will decide to be nice
+to the user and send a redirect to the client refering them to the URL
+with the trailing '/'. 
+
+The client does not, should not, and must not dumbly try adding trailing
+'/'s.
+
+The normal cause for the case where a URL without a trailing '/' breaks
+but one with it works is because the server is configured incorrectly so
+what it thinks of as its server name and reality are different, so the
+client can't connect to the server name sent in the redirection.  This
+does not depend on the client in any way, shape, or form, unless they are
+so dumb they both can't handle redirects automatically and don't properly
+display the message body when they can't handle them.
+
+"Variant Symbolic Links" are irrelevant and can not fix the problem for
+the same reason that the server can't just send the document instead of
+sending a redirect: then the client's concept of a relative U
+
+--------------------------------------------------------------------------------
+MID: Pine.NEB.3.96.980308175333.24706B-100000@shadow.worldbank.org
+DATE: 1998-03-08T22:54:12+00:00  FROM: "Alok K. Dhir" <adhir@worldbank.org> <None>
+SUBJ: Soft updates
+BODY:
+
+Question:  Can softupdates be used on a ccd striped partition?
+
+Thanks!
+
+-------------------------------------------------------------------- \||/_
+Alok K. Dhir				     Phone: +1.202.473.2446   oo \
+R7-003, ITSMC			         Email:  adhir@worldbank.org  L_
+The World Bank Group			               Washington, DC  \/
+------------------------------------------------------------------------|
+"Unix _is_ user friendly - it just chooses friends selectively..."
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: 199803082325.RAA04184@friley585.res.iastate.edu
+DATE: 1998-03-08T23:25:36+00:00  FROM: Chris Csanady <ccsanady@friley585.res.iastate.edu> <None>
+SUBJ: Re: Soft updates 
+BODY:
+
+
+Yes, there should no longer be any problems with them.  Although this doesn't
+effect things, it seems that the b_dep list is still not being initialized
+in the ccdbuf.  Was this going to be added?
+
+Chris
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: Pine.BSF.3.95.980308170726.17718F-100000@current1.whistle.com
+DATE: 1998-03-09T01:07:49+00:00  FROM: Julian Elischer <julian@whistle.com> <None>
+SUBJ: Re: Soft updates 
+BODY:
+yes I will add that patch.
+
+julian
+
+
+On Sun, 8 Mar 1998, Chris Csanady wrote:
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: Pine.BSF.3.91.980319165504.6492A-100000@bmccane.maxbaud.net
+DATE: 1998-03-19T22:55:51+00:00  FROM: Wm Brian McCane <root@bmccane.maxbaud.net> <None>
+SUBJ: soft updates
+BODY:
+I missed this.  I pulled the softupdates7.tar file from incoming.  Is 
+this the latest version or is there somewhere else I need to go?
+
+	brian
+
++-----------------------------------+------------------------------------------+
+He rides a cycle of mighty days, and \ Wm Brian and Lori McCane
+represents the last great schizm among\ McCane Consulting
+the gods. Evil though he obviously is, \ root@bmccane.cavtech.com
+he is a mighty figure, this father of   \ http://bmccane.cavtech.com/
+my spirit, and I respect him as the sons \ http://bmccane.cavtech.com/~pictures/
+of old did the fathers of their bodies.   \ http://bmccane.cavtech.com/~bmccane/
+    Roger Zelazny - "Lord of Light"        \
++-------------------------------------------+----------------------------------+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: 199803192330.SAA10013@dyson.iquest.net
+DATE: 1998-03-19T23:30:54+00:00  FROM: "John S. Dyson" <dyson@FreeBSD.ORG> <None>
+SUBJ: Re: soft updates
+BODY:
+Wm Brian McCane said:
+The stubs are now in -current (but better not use -current newer than
+12 Mar 98.)  You'll still need the encumbered softupdates parts.
+
+-- 
+John                  | Never try to teach a pig to sing,
+dyson@freebsd.org     | it just makes you look stupid,
+jdyson@nc.com         | and it irritates the pig.
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: Pine.BSF.3.91.980319175452.7712E-100000@bmccane.maxbaud.net
+DATE: 1998-03-19T23:56:37+00:00  FROM: Wm Brian McCane <root@bmccane.maxbaud.net> <None>
+SUBJ: Re: soft updates
+BODY:
+On Thu, 19 Mar 1998, John S. Dyson wrote:
+
+Yah!  I have seen all of the various warnings (and noticed that some 
+people still didn't get the hint ;).  I am downloading the CVS trees as 
+I type so I can do a 
+
+	cvs update -D"03/12/98" sys
+
+	brian
+
+Think anyone noticed it that time 8).
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: 199803200026.QAA02957@rah.star-gate.com
+DATE: 1998-03-20T00:26:43+00:00  FROM: Amancio Hasty <hasty@rah.star-gate.com> <None>
+SUBJ: Re: soft updates 
+BODY:
+And softupdates is not ready for prime time.
+
+	Amancio
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: Pine.SV4.3.95.980320101552.18686C-100000@parkplace.cet.co.jp
+DATE: 1998-03-20T01:17:25+00:00  FROM: Michael Hancock <michaelh@cet.co.jp> <None>
+SUBJ: Re: soft updates 
+BODY:
+On Thu, 19 Mar 1998, Amancio Hasty wrote:
+
+
+Unless you are an experienced enough fs developer/tester, then we would be
+happy to have your input. 
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: 354E9212.500F9F30@whistle.com
+DATE: 1998-05-05T04:14:10+00:00  FROM: Julian Elischer <julian@whistle.com> <None>
+SUBJ: Soft update code looking very stable
+BODY:
+After a lot of heavy testing in the last five days, And the discovery 
+of a mis-commit in the -current tree, It appears that the 
+soft-update code is stable enough for wider testing.
+
+This is not to say that it is ABSOLUTLY correct,
+but it is faster than the  current FS in SYNC mode and SAFER than
+it as well. The resolution of the current hickups will just make
+it MUCH safer.
+
+to test it you need a very current (read TODAY) snapshot of 
+-current and the files from:
+
+http://www.freebsd.org/~julian
+
+I have also been runing it today in testing together with the
+DEVFS/SLICE options, and the we seem to have removed the 
+incompatibility between those two options as well.
+
+:-)
+
+julian
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: 199805051707.TAA24830@zibbi.mikom.csir.co.za
+DATE: 1998-05-05T17:07:28+00:00  FROM: John Hay <jhay@mikom.csir.co.za> <None>
+SUBJ: Re: Soft update code looking very stable
+BODY:
+
+Is it suppose to work on SMP also? I got a panic when I tried it during
+make buildworld. Once when it tried to install make and the other time
+a little further on. The message was:
+
+panic: softdep_fsync: pending ops
+mp_lock = 0000001 cpuid = 0 lapic.id = 01000000
+
+John
+-- 
+John Hay -- John.Hay@mikom.csir.co.za
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: Pine.BSF.3.95.980505103708.27895D-100000@current1.whistle.com
+DATE: 1998-05-05T17:37:31+00:00  FROM: Julian Elischer <julian@whistle.com> <None>
+SUBJ: Re: Soft update code looking very stable
+BODY:
+I guess it may not be MP safe yet..
+john (D) was looking at that.
+
+julian
+
+
+On Tue, 5 May 1998, John Hay wrote:
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: 19980507211750.A3064@keltia.freenix.fr
+DATE: 1998-05-07T19:17:50+00:00  FROM: Ollivier Robert <roberto@keltia.freenix.fr> <None>
+SUBJ: Re: Soft update code looking very stable
+BODY:
+According to Julian Elischer:
+
+I got two freezes (without dumps :-( ) today with sources supped yesterday.
+This was both times during a "make world" with /usr/src and /usr/obj
+mounted with softupdates.
+-- 
+Ollivier ROBERT -=- FreeBSD: The Power to Serve! -=- roberto@keltia.freenix.fr
+FreeBSD keltia.freenix.fr 3.0-CURRENT #8: Tue Apr 21 02:45:53 CEST 1998
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: Pine.BSF.3.95.980508100053.980A-100000@current1.whistle.com
+DATE: 1998-05-08T17:02:52+00:00  FROM: Julian Elischer <julian@whistle.com> <None>
+SUBJ: Re: Soft update code looking very stable
+BODY:
+damn!
+
+My machine has been doing "make world -j8" continuously for 6 days now..
+and at teh same time it has been doing
+tar -xzvf X11R6.tgz; rm -rf X11R6
+in two other directories.
+
+all soft-update mounted..
+can you snd me your kerel config file..
+if I make you  a kernel, can you run it for a while?
+
+julian
+
+
+On Thu, 7 May 1998, Ollivier Robert wrote:
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: Pine.GSO.3.96.980508214713.9873B-100000@solaris
+DATE: 1998-05-08T18:56:04+00:00  FROM: Vallo Kallaste <vallo@matti.ee> <None>
+SUBJ: Re: Soft update code looking very stable
+BODY:
+
+
+On Fri, 8 May 1998, Julian Elischer wrote:
+
+
+***
+
+I do something similar, run make world -j4 continously and bonnie -s 600
+on the separated slices, also run two mkhybrid programs which builds iso
+images from slackware mirror ( approximately 600 MB ). Mkhybrid causes
+immediate hang before fixes, but now all this mix of workloads runs fine.
+All slices are softupdate mounted, including root slice.
+
+
+Vallo Kallaste
+vallo@matti.ee
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: 199805081842.VAA05061@grape.carrier.kiev.ua
+DATE: 1998-05-08T18:42:01+00:00  FROM: Alexander Litvin <archer@lucky.net> <None>
+SUBJ: Re: Soft update code looking very stable
+BODY:
+In article <Pine.BSF.3.95.980508100053.980A-100000@current1.whistle.com> you wrote:
+
+
+
+
+Julian, I have, as far as I can judge, the very basic system:
+just P-120, 32M ram, IDE HDD -- that's all. I inserted my kernel
+config at the bottom. Only /usr/obj is mounted with softupdates.
+I managed to crash my system with 'make -j32 buildworld'. The only
+thing I was doing at the same time was small shell script which
+created ~30 empty dirs, end in each of them another ~30 empty dirs
+(just for benchmarking -- the same squid does, and it takes quite
+a lot of time on ufs).
+
+The same system survived 'make buildworld' just before (without any -j#).
+
+I've sent you a backtrace (pending ops), though I may repeat if it was
+lost somehow. It _was_ with the latest softdep.h/ffs_softdep.c from
+http://www.freebsd.org/~julian/.
+
+My kernel config:
+-----------------
+
+machine		"i386"
+cpu		"I486_CPU"
+cpu		"I586_CPU"
+ident		GRAPE
+maxusers	32
+options		INET			#InterNETworking
+options         IPFIREWALL              #firewall
+options         IPFIREWALL_VERBOSE      #print information about
+					# dropped packets
+options		"IPFIREWALL_VERBOSE_LIMIT=100" #limit verbosity
+options		FFS			#Berkeley Fast Filesystem
+optio
+
+--------------------------------------------------------------------------------
+MID: xzpyawc1o2h.fsf@hrotti.ifi.uio.no
+DATE: 1998-05-08T20:53:58+00:00  FROM: dag-erli@ifi.uio.no (Dag-Erling Coidan Smørgrav ) <None>
+SUBJ: Re: Soft update code looking very stable
+BODY:
+Julian Elischer <julian@whistle.com> writes:
+
+That thar's croolty against them com-pewters, 's what it is!
+
+-- 
+Noone else has a .sig like this one.
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: Pine.BSF.3.95.980508184123.8585B-100000@orion.webspan.net
+DATE: 1998-05-08T22:44:20+00:00  FROM: Open Systems Networking <opsys@mail.webspan.net> <None>
+SUBJ: Re: Soft update code looking very stable
+BODY:
+On Fri, 8 May 1998, Alexander Litvin wrote:
+
+
+
+To be fair to julian and softupdates, you can over abuse the -j option :)
+I ran on my SMP -current box a make -j50 to compile a kernel and when the
+load hit about 21 in top it wedged my box. It didnt like that. I can get
+away with -j24 so far havent tried to do any higher but it did NOT like
+-j50 :) Didnt run out of swap or anything, just hit a load avg of 21 and
+wedged. And I wasnt running softupdates. So I still think there may be a
+slight problem or two with the -j option. I just wanted to make sure you
+didn't blame the -j problem on softupdates.
+
+Chris
+
+--
+"I don't do favors, I accumulate debts"
+
+===================================| Open Systems Networking And Consulting.
+  FreeBSD 2.2.6 is available now!  | Phone: 316-326-6800
+-----------------------------------| 1402 N. Washington, Wellington, KS-67152
+   FreeBSD: The power to serve!    | E-Mail: opsys@open-systems.net
+      http://www.freebsd.org       | Consulting-Network Engineering-Security
+===================================| http://open-systems.net 
+
+-----BEGIN PGP PUBLIC KEY BLOCK-----
+Version: 2.6.2
+
+mQENAzPemUsAAAEH/06iF0BU8pMtdLJrxp/lLk3vg9QJCHajsd25gYtR8X1Px1Te
+gWU0C4E
+
+--------------------------------------------------------------------------------
+MID: Pine.SV4.3.95.980509100203.12801A-100000@parkplace.cet.co.jp
+DATE: 1998-05-09T01:04:49+00:00  FROM: Michael Hancock <michaelh@cet.co.jp> <None>
+SUBJ: Re: Soft update code looking very stable
+BODY:
+On Fri, 8 May 1998, Julian Elischer wrote:
+
+
+Umm.  The Hasty load.  I'll have to incorporate this into my test suite as
+well.
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: 19980509115659K.ken@ns1.tydfam.machida.tokyo.jp
+DATE: 1998-05-09T02:56:59+00:00  FROM: Takeshi Yamada <ken@tydfam.machida.tokyo.jp> <None>
+SUBJ: Re: Soft update code looking very stable
+BODY:
+  I experienced the same problem without any j options -
+lock up and no response during "make buildworld".  (Mine is
+May 8th -current source with 2 source codes from ~julian.
+P6@200Mhz 128MBDRAM, ASUSP6NP5 MB)
+
+  I thought that -j option might solve the problem first, but it
+did not.  And I feel that it is nothing to do with -j option.
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: 199805090321.UAA04145@rah.star-gate.com
+DATE: 1998-05-09T03:21:37+00:00  FROM: Amancio Hasty <hasty@rah.star-gate.com> <None>
+SUBJ: Re: Soft update code looking very stable 
+BODY:
+
+Tnks Michael .
+
+Current version does not need the "Hasty Load" which I stumble by accident
+besides the obvious panic a side effect of such test is that soft updates
+used to go hog-wild with memory -- Kirk devised a clever way to prevent
+soft updates from eating up all your memory during a "Hasty Load".
+
+At any rate, the latest soft update fails during a plain old boring 
+make world and I have informed Julian of my panic -- he also
+enjoys a test account of my box to examine panics to his heart
+content.
+
+	Cheers,
+	Amancio
+
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: Pine.BSF.3.95.980509012057.2025D-100000@current1.whistle.com
+DATE: 1998-05-09T08:22:41+00:00  FROM: Julian Elischer <julian@whistle.com> <None>
+SUBJ: Re: Soft update code looking very stable
+BODY:
+send me your conf file and I'll build you a kernel
+If you cannot crash that then we need to find source differences.
+if you can, then we need to understand what is different with you machine
+and mine..
+
+
+On Sat, 9 May 1998, Takeshi Yamada wrote:
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: Pine.BSF.3.95.980509011746.2025C-100000@current1.whistle.com
+DATE: 1998-05-09T08:18:12+00:00  FROM: Julian Elischer <julian@whistle.com> <None>
+SUBJ: Re: Soft update code looking very stable
+BODY:
+does your machine survice make -j 32 WITHOUT softupdates?
+
+
+On Fri, 8 May 1998, Alexander Litvin wrote:
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: Pine.BSF.3.95.980509025951.2151E-100000@current1.whistle.com
+DATE: 1998-05-09T10:00:31+00:00  FROM: Julian Elischer <julian@whistle.com> <None>
+SUBJ: Re: Soft update code looking very stable
+BODY:
+try:
+ftp://ftp.whistle.com/private/julian/kernel.alex
+
+
+
+On Fri, 8 May 1998, Alexander Litvin wrote:
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: 199805091040.LAA00699@awfulhak.org
+DATE: 1998-05-09T10:40:46+00:00  FROM: Brian Somers <brian@Awfulhak.org> <None>
+SUBJ: Re: Soft update code looking very stable 
+BODY:
+
+FWIW, my machine's dying every night now (w/ your latest softdep 
+stuff & DEVFS):
+
+panic: softdep_fsync: pending ops
+syncing disks... panic: softdep_lock: locking against myself
+Automatic reboot in 15 seconds - press a key on the console to abort
+Rebooting...
+Copyright (c) 1992-1998 FreeBSD Inc.
+Copyright (c) 1982, 1986, 1989, 1991, 1993
+        The Regents of the University of California. All rights reserved.
+FreeBSD 3.0-CURRENT #9: Wed May  6 01:40:19 BST 1998
+    brian@dev.lan.awfulhak.org:/usr/src/sys/compile/DEV
+Timecounter "i8254"  frequency 1193182 Hz  cost 3542 ns
+Timecounter "TSC"  frequency 199432837 Hz  cost 288 ns
+CPU: Pentium Pro (199.43-MHz 686-class CPU)
+  Origin = "GenuineIntel"  Id = 0x617  Stepping=7
+  Features=0xf9ff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,SEP,MTRR,PGE,MCA,CMOV>
+real memory  = 83886080 (81920K bytes)
+avail memory = 78225408 (76392K bytes)
+DEVFS: ready for devices
+Probing for devices on PCI bus 0:
+Correcting Natoma config for non-SMP
+chip0: <Intel 82440FX (Natoma) PCI and memory controller> rev 0x02 on pci0.0.0
+chip1: <Intel 82371SB PCI to ISA bridge> rev 0x01 on pci0.7.0
+ide_pci0: <Intel PIIX3 Bus-master IDE controller> rev 0x00 on pci0.7.1
+vga0: <S3
+
+--------------------------------------------------------------------------------
+MID: 19980509142227.37880@carrier.kiev.ua
+DATE: 1998-05-09T11:22:27+00:00  FROM: Alexander Litvin <archer@lucky.net> <None>
+SUBJ: Re: Soft update code looking very stable
+BODY:
+On Sat, May 09, 1998 at 01:18:12AM -0700, Julian Elischer wrote:
+
+As far as it is possible -- buildworld bombed out due to some
+errors in currnet tree -- my system without softupdates survived
+at least a part of 'make -j64 buildworld'. LA reached about 22.
+
+Now I'm trying to build world without any '-j#' to find out
+where it fails -- it is difficult to say when building
+with '-j64'.
+
+
+--- 
+Sattinger's Law:
+        It works better if you plug it in.
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: Pine.BSF.3.96.980509112508.5379A-100000@bmccane
+DATE: 1998-05-09T16:25:53+00:00  FROM: Wm Brian McCane <root@bmccane.maxbaud.net> <None>
+SUBJ: Soft Updates
+BODY:
+Forgive this silly question, but what option do I need to use in
+/etc/fstab to mount a FS with soft updates.
+
+	brian
+
++-----------------------------------+------------------------------------------+
+He rides a cycle of mighty days, and \ Wm Brian and Lori McCane
+represents the last great schizm among\ McCane Consulting
+the gods. Evil though he obviously is, \ root@bmccane.cavtech.com
+he is a mighty figure, this father of   \ http://bmccane.cavtech.com/
+my spirit, and I respect him as the sons \ http://bmccane.cavtech.com/~pictures/
+of old did the fathers of their bodies.   \ http://bmccane.cavtech.com/~bmccane/
+    Roger Zelazny - "Lord of Light"        \
++-------------------------------------------+----------------------------------+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: 199805091650.SAA17222@zibbi.mikom.csir.co.za
+DATE: 1998-05-09T16:50:48+00:00  FROM: Paul Allenby <pallenby@zibbi.mikom.csir.co.za> <None>
+SUBJ: Re: Soft Updates
+BODY:
+"Wm Brian McCane wrote:"
+
+None. You need to "tunefs -n enable /dev/yourrawdevice" and then mount it.
+
+
+Paul
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: Pine.BSF.3.95.980509100041.5106D-100000@current1.whistle.com
+DATE: 1998-05-09T17:01:33+00:00  FROM: Julian Elischer <julian@whistle.com> <None>
+SUBJ: Re: Soft Updates
+BODY:
+you need to use the -n option of tunefs on an unmounted filesystem
+it's not a mount option..
+
+
+On Sat, 9 May 1998, Wm Brian McCane wrote:
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: 19980509211133.34894@carrier.kiev.ua
+DATE: 1998-05-09T18:11:33+00:00  FROM: Alexander Litvin <archer@lucky.net> <None>
+SUBJ: Re: Soft update code looking very stable
+BODY:
+On Sat, May 09, 1998 at 03:00:31AM -0700, Julian Elischer wrote:
+
+I managed to crash it with the second run of 'make -j64 buildworld'.
+Unfortunately, I accidentially aborted dumping manually. I'm trying
+to make it crash again to have a crashdump. The panic message was:
+
+panic: softdep_fsync: pending ops
+
+syncing disks... panic: softdep_disk_write_complete: lock is held
+
+
+--- 
+Love is an ideal thing, marriage a real thing; a confusion of the real
+with the ideal never goes unpunished.
+                -- Goethe
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: 19980509214252.44100@carrier.kiev.ua
+DATE: 1998-05-09T18:42:52+00:00  FROM: Alexander Litvin <archer@lucky.net> <None>
+SUBJ: Re: Soft update code looking very stable
+BODY:
+On Sat, May 09, 1998 at 03:00:31AM -0700, Julian Elischer wrote:
+
+Well, here backtrace goes (after 'make -j64 buildworld', 
+symbol info from my latest kernel):
+
+IdlePTD 217000
+initial pcb at 1c8cf0
+panicstr: softdep_fsync: pending ops
+panic messages:
+---
+panic: softdep_fsync: pending ops
+
+syncing disks... panic: softdep_lock: locking against myself
+
+dumping to dev 20001, offset 196608
+dump 31 30 29 28 27 26 25 24 23 22 21 20 19 18 17 16 15 14 13 12 11 10 9 8 7 6 5
+ 4 3 2 1
+---
+#0  boot (howto=260) at ../../kern/kern_shutdown.c:296
+296                                     savectx(&dumppcb);
+(kgdb) bt
+#0  boot (howto=260) at ../../kern/kern_shutdown.c:296
+#1  0xf0114787 in panic (fmt=0xf01714c1 "softdep_lock: locking against myself")
+    at ../../kern/kern_shutdown.c:436
+#2  0xf0171529 in acquire_lock (lk=0xf01c0dec)
+    at ../../ufs/ffs/ffs_softdep.c:263
+#3  0xf0174e63 in initiate_write_inodeblock (inodedep=0xf08a1a00,
+    bp=0xf13d56f8) at ../../ufs/ffs/ffs_softdep.c:2792
+#4  0xf01749c7 in softdep_disk_io_initiation (bp=0xf13d56f8)
+    at ../../ufs/ffs/ffs_softdep.c:2626
+#5  0xf013fd74 in spec_strategy (ap=0xf35798b8)
+    at ../../miscfs/specfs/spec_vnops.c:555
+#6  0xf013f479 in spe
+
+--------------------------------------------------------------------------------
+MID: Pine.BSF.3.96.980509170153.5379B-100000@bmccane
+DATE: 1998-05-09T22:04:24+00:00  FROM: Wm Brian McCane <root@bmccane.maxbaud.net> <None>
+SUBJ: Re: Soft Updates
+BODY:
+Aha!
+
+	I looked all through the various mount sources and couldn't find
+it.  Now I understand.  I assume that I can later do a
+	tunefs -n disable /dev/rfoo
+
+if I don't like it? 8).  I was thinking about enabling this on my news
+fs.  Has anyone done this, and were they impressed?
+
+	brian
+
+On Sat, 9 May 1998, Julian Elischer wrote:
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: 19980510004603.A16999@keltia.freenix.fr
+DATE: 1998-05-09T22:46:03+00:00  FROM: Ollivier Robert <roberto@keltia.freenix.fr> <None>
+SUBJ: Re: Soft Updates
+BODY:
+According to Julian Elischer:
+
+Why not BTW ? async/noasync are mount options so one could expect
+softupdates to be the same. Is there an reason for the current scheme (not
+that I mind but it would make switch it on/off easier, especially for /).
+-- 
+Ollivier ROBERT -=- FreeBSD: The Power to Serve! -=- roberto@keltia.freenix.fr
+FreeBSD keltia.freenix.fr 3.0-CURRENT #8: Tue Apr 21 02:45:53 CEST 1998
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: 19980510015306.A17896@keltia.freenix.fr
+DATE: 1998-05-09T23:53:06+00:00  FROM: Ollivier Robert <roberto@keltia.freenix.fr> <None>
+SUBJ: Re: Soft Updates
+BODY:
+According to Wm Brian McCane:
+
+Yes, it works.
+
+
+I don't have a big enough server to have signifiant results...
+
+/dev/sd2s4e on /news (local, soft-updates, writes: sync 297 async 615082))
+-- 
+Ollivier ROBERT -=- FreeBSD: The Power to Serve! -=- roberto@keltia.freenix.fr
+FreeBSD keltia.freenix.fr 3.0-CURRENT #8: Tue Apr 21 02:45:53 CEST 1998
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: Pine.BSF.3.95.980509170859.5333F-100000@current1.whistle.com
+DATE: 1998-05-10T00:10:41+00:00  FROM: Julian Elischer <julian@whistle.com> <None>
+SUBJ: Re: Soft Updates
+BODY:
+Kirk had some very good arguments but I forget what they were..
+
+
+On Sun, 10 May 1998, Ollivier Robert wrote:
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: Pine.SV4.3.95.980510092911.16845D-100000@parkplace.cet.co.jp
+DATE: 1998-05-10T00:33:11+00:00  FROM: Michael Hancock <michaelh@cet.co.jp> <None>
+SUBJ: Re: Soft update code looking very stable 
+BODY:
+On Fri, 8 May 1998, Amancio Hasty wrote:
+
+
+The code had a backoff mechanism before, I'll have to do a diff to see
+what changed.
+
+Regards,
+
+
+Mike
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: 9805100336.AA06453@watermarkgroup.com
+DATE: 1998-05-10T03:36:02+00:00  FROM: luoqi@watermarkgroup.com (Luoqi Chen) <None>
+SUBJ: Re: Soft Updates
+BODY:
+Julian Elischer wrote:
+Maybe fsck needs some special processing for softupdates after a crash?
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: Pine.BSF.3.95.980509204058.5804A-100000@current1.whistle.com
+DATE: 1998-05-10T03:46:22+00:00  FROM: Julian Elischer <julian@whistle.com> <None>
+SUBJ: Re: Soft Updates
+BODY:
+well that's PART of it,
+there was also that a Filesystem needs to be in softupdates mode
+always or never, and a lot of flags in mount can be changed on the fly.
+(e.g. async, noatime)
+
+theoretically corect code in the kernel could use mount flags and do the
+same trick that changing from readwrite to readonly does (maybe turning
+softupdates onand off would rewuire moving through read-only) but possibly
+the answer is to simply 'latch' the bit the way you want and not let it
+change unless it's an initial mount or unmount.
+
+
+julian
+
+
+On Sat, 9 May 1998, Luoqi Chen wrote:
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: 19980510172836R.ken@ns1.tydfam.machida.tokyo.jp
+DATE: 1998-05-10T08:28:36+00:00  FROM: Takeshi Yamada <ken@tydfam.machida.tokyo.jp> <None>
+SUBJ: Re: Soft update code looking very stable
+BODY:
+  Following is my dump list.
+  I hope that it would help understandings of the cause.
+
+
+IdlePTD 287000
+initial pcb at 25656c
+panicstr: softdep_fsync: pending ops
+panic messages:
+---
+panic: softdep_fsync: pending ops
+
+syncing disks... panic: softdep_disk_write_complete: lock is held
+
+dumping to dev 401, offset 147456
+dump 128 127 126 125 124 123 122 121 120 119 118 117 116 115 114 113 112 111 110 109 108 107 106 105 104 103 102 101 100 99 98 97 96 95 94 93 92 91 90 89 88 87 86 85 84 83 82 81 80 79 78 77 76 75 74 73 72 71 70 69 68 67 66 65 64 63 62 61 60 59 58 57 56 55 54 53 52 51 50 49 48 47 46 45 44 43 42 41 40 39 38 37 36 35 34 33 32 31 30 29 28 27 26 25 24 23 22 21 20 19 18 17 16 15 14 13 12 11 10 9 8 7 6 5 4 3 2 1 
+---
+#0  boot (howto=260) at ../../kern/kern_shutdown.c:297
+297                                     dumppcb.pcb_cr3 = rcr3();
+(kgdb) bt
+#0  boot (howto=260) at ../../kern/kern_shutdown.c:297
+#1  0xf0115daa in panic (
+    fmt=0xf01d523f "softdep_disk_write_complete: lock is held")
+    at ../../kern/kern_shutdown.c:441
+#2  0xf01d52ff in softdep_disk_write_complete (bp=0xf32e78b8)
+    at ../../ufs/ffs/ffs_softdep.c:2902
+#3  0xf01324a6 in biodone (bp=0xf32e78b8) at ../../k
+
+==========================================================================================
+DB: freebsd-fs.duckdb  hits=16
+==========================================================================================
+--------------------------------------------------------------------------------
+MID: 9802098870.AA887071056@meridian-data.com
+DATE: 1998-02-10T00:43:15+00:00  FROM: roark_hilomen_at_meridian@meridian-data.com <None>
+SUBJ: Soft update usage
+BODY:
+
+Does anyone know if "Soft Updates" has been in use in the industry or is OpenBSD
+and now FreeBSD the first to implement it?
+
+How extensively has it been tested (outside the current FreeBSD flurry)?  And
+for that matter, is anyone testing it on a large multi-client system?
+
+Has anyone tried crashing it and seeing if FSCK works well and as advertised
+with Soft Updates?
+
+I'm trying to see how cutting edge this technology is.
+
+Thanks,
+Roark
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-fs" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: 199802100829.BAA21865@usr05.primenet.com
+DATE: 1998-02-10T08:29:23+00:00  FROM: Terry Lambert <tlambert@primenet.com> <None>
+SUBJ: Re: Soft update usage
+BODY:
+
+BSDI has them.  The original Ganger/Patt work was done in SVR4
+(if you are familiar with SVR4 internals, this is obvious from
+looking at the published Appendix A code).
+
+
+Kirk would be a better person to answer that.
+
+
+I don't know; they should.
+
+
+That's Kirk's testbed.  He uses a SCSI drive and two machines; he halts
+the one from the other, randomly, and fsck's (among other tests).  He
+claims many, many months of reliable operation.
+
+
+It's "medium".  It's a good leap past current implementations, but the
+paper was published several years ago, and it does not support general
+updates between layered FS's.  Effectively, Ganger and Patt did this:
+
+1)	Determine all operations that could be done on SVR4 UFS
+
+2)	Determine the events that would result from these operations,
+	as small DAG fragments (directed acylic graphs).
+
+3)	Invent a structure called a "dependency" that defined relationships
+	between these DAG's.
+
+4)	Invent a mechanism for ensuring ordering of operations in
+	dependency order (this mechanism is superior to DOW -- delayed
+	ordered writes -- a USL patent-pending technology, because
+	there is, in effect, write gathering and meta-data ordering
+	without flush -- unlike DOW).
+
+--------------------------------------------------------------------------------
+MID: 199802101447.JAA00821@hull.ele.uri.edu
+DATE: 1998-02-10T14:47:14+00:00  FROM: Yiming Hu <hu@ele.uri.edu> <None>
+SUBJ: Re: Soft update usage
+BODY:
+Hi,
+
+Can anyone tell me where can I find more information (such as 
+published papers or web sites) about DOW (Delayed Ordered Writes)?
+
+Thanks!
+
+-Yiming Hu
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-fs" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: Pine.BSF.3.95.980210093601.6400A-100000@Jupiter.Mcs.Net
+DATE: 1998-02-10T15:37:30+00:00  FROM: Alex Nash <nash@Mcs.Net> <None>
+SUBJ: Re: Soft update usage
+BODY:
+On Tue, 10 Feb 1998, Yiming Hu wrote:
+
+
+http://www.ece.cmu.edu/~ganger/papers/
+
+Alex
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-fs" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: 19980210095216.25074@right.PCS
+DATE: 1998-02-10T15:52:16+00:00  FROM: Jonathan Lemon <jlemon@americantv.com> <None>
+SUBJ: Re: Soft update usage
+BODY:
+On Feb 02, 1998 at 09:47:14AM -0500, Yiming Hu wrote:
+
+G.R.Ganger, Y.N.Patt.  Metadata Update Performance in File Systems.
+    Operating Systems Design and Implementation, pp 49-60, November 1994.  
+    http://www.ece.cmu.edu/~ganger/papers/osdi94.ps
+
+G.R.Ganger, Y.N.Patt.  Soft Updates: A Solution to the Metadata Update
+    Problem in File Systems.  University of Michigan Technical Report
+    CSE-TR-254-95, August 1995.
+    http://www.ece.cmu.edu/~ganger/papers/CSE-TR-254-95/
+--
+Jonathan
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-fs" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: 199802102110.OAA04484@usr06.primenet.com
+DATE: 1998-02-10T21:10:57+00:00  FROM: Terry Lambert <tlambert@primenet.com> <None>
+SUBJ: Re: Soft update usage
+BODY:
+
+That's Soft Updates.
+
+You really don't want DOW, but I believe there is a research report
+out of the University of Kentucky "Choices" projects, which was
+supported by USL.  All of the documents I saw were internal USL
+documents, so I can't disclose anything that wasn't obvious from
+the header files.
+
+
+					Terry Lambert
+					terry@lambert.org
+---
+Any opinions in this posting are my own and not those of my present
+or previous employers.
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-fs" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: 832565B0.006B2375.00@papagaio.voga.com.br
+DATE: 1998-02-19T19:32:18+00:00  FROM: daniel_sobral@voga.com.br <None>
+SUBJ: Soft updates
+BODY:
+
+Can anyone give me a reference about soft updates? I'm designing an
+application which has nothing to do with filesystems but I'm starting to
+face the same problems... Mathematical heavy references are fine.
+
+--
+Daniel C. Sobral                      (8-DCS)
+Daniel_Sobral@voga.com.br
+
+
+Tagline:
+   * FreeBSD. Earth.
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-fs" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: wusope1lvq.fsf@bg.sics.se
+DATE: 1998-02-20T12:50:01+00:00  FROM: Bjoern Groenvall <bg@sics.se> <None>
+SUBJ: Re: Soft updates
+BODY:
+daniel_sobral@voga.com.br writes:
+
+
+you may start with
+
+http://www.ece.cmu.edu/~ganger/papers/index.html
+
+Metadata Update Performance in File Systems
+
+ and
+
+Soft Updates: A Solution to the Metadata Update Problem in File Systems
+
+Cheers,
+Bj�rn
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-fs" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 31B3F0BF1C40D11192A700805FD48BF90177660F@STLABCEXG011
+DATE: 1998-07-15T16:30:16+00:00  FROM: "Alton, Matthew" <Matthew.Alton@anheuser-busch.com> <None>
+SUBJ: LFS & soft updates
+BODY:
+Just for fun - are lfs and Kirk McKusick's Ganger-Patt soft update
+scheme necessarily mutually exclusive?  I don't know anything
+about soft updates yet.  Just wondered if I should look at the 
+GP papers before designing LFS v.2.
+
+Matthew Alton
+Computer Services - UNIX Systems Administration
+(314)632-6644   matthew.alton@anheuser-busch.com
+                alton@plantnet.com
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-fs" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: 199807152109.OAA19937@usr08.primenet.com
+DATE: 1998-07-15T21:09:54+00:00  FROM: Terry Lambert <tlambert@primenet.com> <None>
+SUBJ: Re: LFS & soft updates
+BODY:
+
+Note: Doing this work would be a good Master's Thesis project;
+solving the general problem such that you could stack FS layers
+arbitrarily using the same underlying graph code would probably be
+worth a PhD Dissertation.
+
+
+LFS and soft updates are not mutually exclusive, but in order to
+optimize the representational geometry (how the structures are laid
+out, what they imply, precalculation instead of postcalculation of
+some dependency related issues, etc., etc.), the FFS soft dependency
+code as implemented is very depndent on the FFS architecture
+itself.
+
+It is possible to take a non-traditional view of an FS, and look
+at it as a series of events and actors.  Each event/actor relationship
+is what the soft updates code represents, and the ordering of the
+actors operations as a result of the events is what a dependency
+models.
+
+Effectively, the code embodies the result of a Warshall's Algorithm
+run on the dependency graph generated from looking at the FS as
+events: transitive closure over the dependency graph.
+
+
+The work Julian, Kirk, and anyone else who has submitted patches
+have been engaged in is removing redundant OpenBSD and/or BSDI
+dependency nodes, and adding FreeBSD/unified V
+
+--------------------------------------------------------------------------------
+MID: 31B3F0BF1C40D11192A700805FD48BF901776611@STLABCEXG011
+DATE: 1998-07-15T21:44:29+00:00  FROM: "Alton, Matthew" <Matthew.Alton@anheuser-busch.com> <None>
+SUBJ: RE: LFS & soft updates
+BODY:
+
+
+	[snip]
+	 
+	[snip]
+
+	To a first approximation, I'm parsing: "Well, it would be a real
+	fine piece of academic calisthenics but I don't think you'll get
+	much mileage out of it in the real world." ;-)  Jeez, I do rem-
+	ember "studying" this stuff one weekend and getting good and
+	swamped in graph theory and thinking that I had come up with
+	a better model but then realizing that it was only better for
+the
+	special class of objects that I was obsessed with at the time.
+As
+	a practical expedient I'm going to see if my "generalized seg-
+	ment bubble sort" fever dream is valid and useful for the
+special
+	case of append-only operations.  It takes advantage of a small
+	predictive capability to switch the positions of consecutive
+seg-
+	ments should this be deemed a win by the algorithm.  If the
+	thing requires a prohibitively far-sighted prediction or if it
+winds
+	up simply restating everything I've learned so far on the
+subject
+	in the general case, well, then... back to the drawing board.
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-fs" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: Pine.SV4.3.95.980718004828.10475B-100000@parkplace.cet.co.jp
+DATE: 1998-07-17T15:51:05+00:00  FROM: Michael Hancock <michaelh@cet.co.jp> <None>
+SUBJ: RE: LFS & soft updates
+BODY:
+After you've implemented softupdates in LFS and NTFS you'll probably have
+learned enough to tackle a general solution as Terry suggests.  ;-)
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-fs" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: 31B3F0BF1C40D11192A700805FD48BF901776616@STLABCEXG011
+DATE: 1998-07-17T22:19:57+00:00  FROM: "Alton, Matthew" <Matthew.Alton@anheuser-busch.com> <None>
+SUBJ: LFS & soft updates
+BODY:
+What is the status of the McKusick soft-update work?
+Specifically, I need to know if it is usable under 2.2.6 and
+if I have access to the code.
+
+Bear with me folks, this is just the manic phase.  Good
+Things will come of all this mail traffic in the productive
+frenzy phase when I do all the coding.  Then comes the
+quiescent phase where I mainly read philosophy and
+sleep.
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-fs" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: Pine.SV4.3.95.980718152940.13506A-100000@parkplace.cet.co.jp
+DATE: 1998-07-18T06:36:11+00:00  FROM: Michael Hancock <michaelh@cet.co.jp> <None>
+SUBJ: Re: LFS & soft updates
+BODY:
+On Fri, 17 Jul 1998, Alton, Matthew wrote:
+
+
+It's only for current.  If you don't have current then have a
+look at http://www.freebsd.org/~julian.
+ 
+
+;-)  Ok, don't keep us in the dark when you decide where
+you're going.
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-fs" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: 199807180935.CAA03733@usr07.primenet.com
+DATE: 1998-07-18T09:35:59+00:00  FROM: Terry Lambert <tlambert@primenet.com> <None>
+SUBJ: Re: LFS & soft updates
+BODY:
+
+See my recent postings.
+
+The soft updates code is intrinsically tied to the buffer cache
+implementation because of what constitutes a dependency.  Because
+2.2.6 and -current have different implementations, the code will
+not port over easily.
+
+The implementations are similar, of course, but the code depends
+on a brute-force soloution to a graph problem.
+
+To do the port, you would effectively have to do what I suggested
+was necessary for an LFS port.
+
+One interesting thing to note is that there may, in fact, be more
+dependencies being queued than is strictly necessary; doing the
+documentation of the events/actors might be a good thing for the
+-current code, as well, since it might lead to simplifications of
+the existing code.
+
+
+					Terry Lambert
+					terry@lambert.org
+---
+Any opinions in this posting are my own and not those of my present
+or previous employers.
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-fs" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: 200001100012.QAA13394@flamingo.McKusick.COM
+DATE: 2000-01-10T00:12:48+00:00  FROM: Kirk McKusick <mckusick@flamingo.McKusick.COM> <None>
+SUBJ: Soft Update Checkin
+BODY:
+I have completed the checkin of the performance changes in the state
+that you have been testing. They should show up on your next system 
+update. I enclose the log summary below.
+
+	~Kirk
+
+=-=-=-=-=-=
+
+SCCS/s.ffs_softdep.c:
+
+D 9.46	00/01/09 14:58:20	mckusick	86	85	00245/00103/04371
+Several performance improvements for soft updates have been added:
+1) Fastpath deletions. When a file is being deleted, check to see if it
+   was so recently created that its inode has not yet been written to
+   disk. If so, the delete can proceed to immediately free the inode.
+2) Background writes: No file or block allocations can be done while the
+   bitmap is being written to disk. To avoid these stalls, the bitmap is
+   copied to another buffer which is written thus leaving the original
+   available for futher allocations.
+3) Link count tracking. Constantly track the difference in i_effnlink and
+   i_nlink so that inodes that have had no change other than i_effnlink
+   need not be written.
+4) Identify buffers with rollback dependencies so that the buffer flushing
+   daemon can choose to skip over them.
+
+D 9.45	00/01/09 14:40:48	mckusick	85	84	00023/00021/04451
+Keep tighter control of removal dependenc

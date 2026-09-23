@@ -1,0 +1,101 @@
+total 20
+[1985-05-28T00:13:18+00:00] [wedgingt at udenva.UUCP (Will Edgington/Ejeo)] [comp.unix.wizards]
+MID: 697@udenva.UUCP
+SUBJ: 'munhash' panic
+BODY: In article <> george at weitek.UUCP (George White) writes: | > | >We have recently installed a VAX780 which every once in a while | >crashes with a 'munhash' panic message.  I have determined that | >this occurs only while someone is using dbx.  I suspect a | >hardware problem since the same dbx works on a VAX750 and the | >occurance of the panic is frequent but not always deterministic. | >It would be useful to have more info on what dbx does that could | >cause this problem so that I can point the DEC repairman in the  | >right direction (their first reaction will be 'I can't run the  | >diags without VMS').  Any help or insight into problem would be  | >greatly appreciated. | > | >				Thanks | > | >				George White | >	
+------------------------------------------------------------
+[1985-06-11T23:33:26+00:00] [joes at sbcs.UUCP (Joseph Simonetti)] [comp.unix.wizards]
+MID: 319@sbcs.UUCP
+SUBJ: Source Code for the System Call Trace Facility
+BODY:  | 	In response to the postings I made to net.unix and | net.unix-wizards concerning my System Call Trace Facility, I have | received an overwhelming number of requests for my source code. | I have therefore decided to post it to net.sources and net.unix-wizards. |  | 	Anyone interested in the technical report which describes | this package may obtain a copy by sending mail to (...!sbcs!kathy). | Ask for TR # 85/13 and be sure to include your U.S. mailing address. |  | 	For those of yo who sent me specific questions and comments, I | hope to respond to each of you individually, please be patient. |  | #--------CUT---------CUT---------CUT---------CUT--------# | ######################################################### | #
+------------------------------------------------------------
+[1985-06-11T23:47:10+00:00] [joes at sbcs.UUCP (Joseph Simonetti)] [comp.unix.wizards]
+MID: 321@sbcs.UUCP
+SUBJ: Source Code for the System Call Trace Facility
+BODY:  | 	In response to the postings I made to net.unix and | net.unix-wizards concerning my System Call Trace Facility, I have | received an overwhelming number of requests for my source code. | I have therefore decided to post it to net.sources and net.unix-wizards. |  | 	Anyone interested in the technical report which describes | this package may obtain a copy by sending mail to (...!sbcs!kathy). | Ask for TR # 85/13 and be sure to include your U.S. mailing address. |  | 	For those of yo who sent me specific questions and comments, I | hope to respond to each of you individually, please be patient. |  | #--------CUT---------CUT---------CUT---------CUT--------# | ######################################################### | #
+------------------------------------------------------------
+[1990-02-05T20:30:30+00:00] [mbr at aoa.UUCP (Mark Rosenthal)] [comp.unix.wizards]
+MID: 1148@aoa.UUCP
+SUBJ: How do I use /dev/trace?
+BODY: We have been running Ultrix 3.0 on our 8650 for close to a year.  Three times | in the past two weeks, we have found permissions on /tmp changed.  Naturally, | when that happens, half the programs in the known universe stop functioning. |  | I'd like to enable the SYS_TRACE option in the kernel, and write a daemon to | watch for chmod's on /tmp and report whatever information is available about | the process.  I've looked at the man page trace(5) and the include file | /usr/sys/h/systrace.h for clues as to how to use the trace device driver. | The information available is sketchy, to say the least.  Does anyone out there | have better documentation on how to use this?  Any examples? |  | My specific questions so 
+------------------------------------------------------------
+[1990-02-05T20:30:30+00:00] [mbr at aoa.UUCP (Mark Rosenthal)] [comp.unix.ultrix]
+MID: 1148@aoa.UUCP
+SUBJ: How do I use /dev/trace?
+BODY: We have been running Ultrix 3.0 on our 8650 for close to a year.  Three times | in the past two weeks, we have found permissions on /tmp changed.  Naturally, | when that happens, half the programs in the known universe stop functioning. |  | I'd like to enable the SYS_TRACE option in the kernel, and write a daemon to | watch for chmod's on /tmp and report whatever information is available about | the process.  I've looked at the man page trace(5) and the include file | /usr/sys/h/systrace.h for clues as to how to use the trace device driver. | The information available is sketchy, to say the least.  Does anyone out there | have better documentation on how to use this?  Any examples? |  | My specific questions so 
+------------------------------------------------------------
+[1990-02-07T18:40:16+00:00] [maj at cl.cam.ac.uk (Martyn Johnson)] [comp.unix.ultrix]
+MID: 1754@gannet.cl.cam.ac.uk
+SUBJ: How do I use /dev/trace?
+BODY: My understanding (possibly incorrect) is: |  | >1) What ioctl's do I call, in what order, to indicate that I'm interested | >   in chmod() sys calls? |  | IOTR_SET... the things you are interested in, and then just read. |  | >2) Do I pass a "trace" structure (as defined in systrace.h) as the third arg | >   to ioctl()?  If not, what do I pass?  If so, that structure has positions | >   for 16 pids, 16 uids, 16 syscalls, and 16 pgrps, but no places to store | >   counts of the number of slots in use for each type of slot.  How does the | >   driver know which slots contain data I'm interested in?  Is it based on | >   the value in the slot?  If so, what value should I use to fill in the slots | >   I'm not using? |  | No
+------------------------------------------------------------
+[1991-02-06T13:11:58+00:00] [rol at grasp2.univ-lyon1.fr (Paul Rolland)] [comp.unix.questions]
+MID: 25856@adm.brl.mil
+SUBJ: Unix System V R3.2
+BODY: Hello, |  | 	I've an Unisys U6000 running system V R3.2. I'd like to turn on | the equivalent of syslogd on the other systems (like AIX). Unfortunately, | there's no syslogd. I've found that all the daemons started by inetd are | using the file /etc/log/socket to write a lire-record containing their | name and the date (+time). But I don't have the name of the user, the | machine the call comes from and so on. In fact, only ftpd as a logging | option (-l) and only telnetd and ftpd have debugging options (-d). | But the debugging infos aren't stored in /etc/log/socket (I don't | know where they are stored), and talkd, rlogind, rshd and rexecd have none. |  | 	Could any one tell me what I have to do to gain access to
+------------------------------------------------------------
+[1992-04-15T20:27:40+00:00] [pk@cs.few.eur.nl (Paul Kranenburg)] [unix.bsd]
+MID: 1992Apr15.202740.10911@cs.few.eur.nl
+SUBJ: ptrace
+BODY: Here is an implementation of the ptrace(2) system call for 386BSD. | If you are only interested in the stock ptrace operations (as currently | defined in <sys/ptrace.h>) the only files that modifications are |  `kern/sys_process.c' and 'kern_execve.c'. |  | The rest of the diffs attached below contain some changes necessary to | let a debugger attach-to/detach-from a running process, do system call | tracing and trace flags inheritance by debuggee's child processes | (experimental). The files affected are: |  | 	- kern/kern_sig.c | 	- kern/kern_exit.c | 	- kern/kern_fork.c | 	- i386/i386/trap.c | 	- sys/proc.h | 	- sys/ptrace.h | 	- sys/user.h	(!) |  | (!) Unfortunately, I had to bring back a number of fields to user area |  to 
+------------------------------------------------------------
+[1992-04-19T02:30:48+00:00] [overby@next210.NoDak.edu (Glen Overby)] [unix.bsd]
+MID: 16919@plains.NoDak.edu
+SUBJ: Re: 386BSD: How to help
+BODY: I said I'd do it, and here it is.  Heed the cautionary note: I'm getting this | out the door fast so I haven't tested it.  Glen/B |  | File: ADM/Info |  |                      386BSD Patch Collection |                             Release A |  |        Organized by Glen Overby <overby@plains.nodak.edu> |      $Id: Info,v 1.1 1992/04/19 02:20:22 overby Exp overby $ |  |  | WARNING: To expedite this release, I have NOT compiled and tested it. |  |  | This is release A of my 386BSD ("Jolix") patch collection.  I  am | releasing  it  to  the  net in an attempt to provide an organized | base of changes to William Jolitz's 386BSD Release 0.0. |  | This collection is mantained under the control of CVS.  My source | tree  started with the 
+------------------------------------------------------------
+[1992-09-18T22:08:43+00:00] [witr@rwwa.COM (Robert Withrow)] [unix.bsd]
+MID: 1992Sep18.220843.8467@rwwa.COM
+SUBJ: Re: /386bsd: reject 65340
+BODY: In article <1992Sep18.085534@IASTATE.EDU>, jzelle@IASTATE.EDU (James A Zelle) writes: | | I'm having a similar problem with a Western Digital Ethernet card, except I | | think the error says "reject655341" in my case.  |  | Ooooo...   |  | I was working on a (streams [SVR4]) driver yesterday, and so I strace | running and I was periodically getting strlog messages about  | ``FIN not suppressed'' with numbers like that...  and this is SVR4  | but with the *same* card. |  | A coincidence? |  | --  |  Robert Withrow, Tel: +1 617 598 4480, Fax: +1 617 598 4430, Net: witr@rwwa.COM |  R.W. Withrow Associates, 21 Railroad Ave, Swampscott MA 01907-1821 USA |  |  | 
+------------------------------------------------------------
+[1993-04-11T04:48:00+00:00] [besp@ellis.uchicago.edu (Anna Pluzhnikov)] [unix.bsd]
+MID: 1993Apr11.044800.6582@midway.uchicago.edu
+SUBJ: Re: Peculiar behavior of pclose() -- mistery solved (long)
+BODY: In article <PRZEMEK.93Mar28212112@rrdstrad.nist.gov> przemek@rrdstrad.nist.gov (Przemek Klosowski) writes: | > | >I came across a peculiar behavior of pclose(); when only one file is | >popen()'ed, everything works as the man page and Stevens' book  | >claim: pclose() closes the pipe and kills the child process. |  | pclose() doesn't kill the child, it just closes pipe to the child, so | the child gets EOF and exits by itself. |  | > | >However, if two filehandles are popen()'ed, the subsequent pclose()  | >never returns (on Ultrix it sits forever in wait()). | > | >Does anyone have an idea what causes it and how to get around it? | >  | >This behavior has been checked on ConvexOS and Ultrix 4.3. I enclose a | >short progr
+------------------------------------------------------------
+[1994-07-29T03:38:53+00:00] [johnsonm@calypso-2.oit.unc.edu (Michael K. Johnson)] [unix.bsd]
+MID: JOHNSONM.94Jul28233853@calypso-2.oit.unc.edu
+SUBJ: Re: APC UPS owners or potential buyers, trying to show user base
+BODY:  | In article <317k55$kq3@news.halcyon.com> mpdillon@coho.halcyon.com (Michael Dillon) writes: |  |    In article <316bjc$hlh@thor.tjhsst.edu>, |    Craig Metz <cmetz@thor.tjhsst.edu> wrote: |    >	I had a talk today with Debbie Gray (sp?) of American Power Conversion |    >regarding trying to get information on how to communicate with their Smart |    >UPS products' onboard controllers in order to write a Linux driver. APC is |    >one of the *many* manufacturers that plays the old NDA game, i.e., ``we |    >consider that to be proprietary information that we have to protect''. H |  |    Really now! Those boxes use an RS-232 interface, right? What do they tell  |    the computer? If they only communicate one thing
+------------------------------------------------------------
+[1997-01-01T00:00:00+00:00] [raf@sunraf.eng.sun.com (Roger A. Faulkner)] [unix.bsd.misc]
+MID: 5o1u75$ocn$1@engnews2.Eng.Sun.COM>#1/1
+SUBJ: Re: unix acronyms -collecting a list?
+BODY:  | For your edification, this is the geneaology of the name "truss", | taken from some mail sent by one of Ron Gomes (my cohort wrt /proc | in SVR4) or me, dated Sep 26, 1988): | ----------------------------------------------------------------- |  | We considered, and discarded, several alternative names for truss(1), | including "trace", before settling on "truss".  The objection to | "trace" is that it's too generic a term and shouldn't be co-opted | for a specific use like this; there are lots of other things that | one might trace.  Among the alternate names we considered were: | "ptrace"  (but this incorrectly implies a connection with ptrace(2)), | "strace"  (but this is already used for some streams tracing 
+------------------------------------------------------------
+[1997-01-01T00:00:00+00:00] [v2ctgrc <v2ctgrc@btv.ibm.com>] [unix.bsd.misc]
+MID: 33E09E6B.794BDF32@btv.ibm.com>#1/1
+SUBJ: Re: unix acronyms -collecting a list?
+BODY:  | don't forget for remote commands use stuff like rtelnet rftp exec. | amongothers you will find in a bin directory |  |       | chie          gPinit        mkgPcon       rpcinfo       uuencode | chiin         gPq           mkgroup       rsh           uulog | chkbd         gPterm        mkkbd         rsh.afs       uuname | chkey         gPtutor       mknamsv       runcat        uupick | chkeymap      gencat        mknotify      rup           uupoll | chlang        genkex        mkprtsv       ruptime       uuq | chlicense     genkld        mkque         ruser         uusend | chmod         genld         mkquedev      rusers        uusnap | chnamsv       genxlt        mkserver      rwho          uustat | chnumvt       g
+------------------------------------------------------------
+[1998-01-01T00:00:00+00:00] [Christopher  Park <cp210@columbia.edu>] [unix.bsd.bsdi.misc]
+MID: Pine.GSO.3.95L.980204130640.25108A-100000@ciao.cc.columbia.edu>#1/1
+SUBJ: Do System calls exist in BSD?
+BODY:  |  | hi everybody, |  | 	I need to get the system calls and signals in my BSDI BSD/OS 2.1 | system.  However, I cannot seem to find any commands that do that.   | (The equivalent would be 'truss' or 'strace' in SunOs)  Does anybody know | of an equivalent command or where I can get such a command and compile it | on my server?   |  | 	ARRRRRGHHH!!!! |  | christopher  |  |  |  |  | 
+------------------------------------------------------------
+[1998-01-01T00:00:00+00:00] [James Youngman <JYoungman@vggas.com>] [unix.bsd.bsdi.misc]
+MID: u1hg5wribd.fsf@noisy.vggas.com>#1/1
+SUBJ: Re: Malcious User
+BODY:  | >>>>> "MT" == Mikhail Teterin <mi@rtfm.ziplink.net> writes: |  |  |   MT> What about -delete predicate for find? (Not available |   MT> everywhere, but available on FreeBSD): |  |   MT> 	find bad_directory -depth -delete |  |   MT> my quick and _inaccurate_ glimpse into find's source suggests |   MT> that find will call rmdir with relative path. Mm, actually, I do |   MT> not know -- try it :) It should anyway. |  | I guess "strace" (or equivalent) will tell you if it uses absolute or | relative paths, and if it changes directory. |  |  |  | 
+------------------------------------------------------------
+[1998-01-01T00:00:00+00:00] [Marc Slemko <marcs@znep.com>] [unix.bsd.bsdi.misc]
+MID: 6badsi$2j7$1@scanner.worldgate.com>#1/1
+SUBJ: Re: Do System calls exist in BSD?
+BODY:  | In <Pine.GSO.3.95L.980204130640.25108A-100000@ciao.cc.columbia.edu> Christopher  Park <cp210@columbia.edu> writes: |  |  | >hi everybody, |  | >	I need to get the system calls and signals in my BSDI BSD/OS 2.1 | >system.  However, I cannot seem to find any commands that do that.   | >(The equivalent would be 'truss' or 'strace' in SunOs)  Does anybody know | >of an equivalent command or where I can get such a command and compile it | >on my server?   |  | ktrace. |  |  |  | 
+------------------------------------------------------------
+[1999-01-01T00:00:00+00:00] [Bruno Rohee <rohee@essi.fr>] [unix.bsd.openbsd.misc]
+MID: 3738773A.E7266AF5@essi.fr>#1/1
+SUBJ: Re: Sam's qmail-uce patch and OpenBSD
+BODY: James J. Lippard wrote: |  | > Is there an OpenBSD equivalent or port of strace or truss? |  | ktrace and then kdump |  |  |  | 
+------------------------------------------------------------
+[1999-01-01T00:00:00+00:00] [lippard@discord.org (James J. Lippard)] [unix.bsd.openbsd.misc]
+MID: slrn7jc9m3.aul.lippard@leviathan.discord.org>#1/1
+SUBJ: Sam's qmail-uce patch and OpenBSD
+BODY: Has anybody successfully set up qmail with Sam's qmail-uce patch | (http://www.geocities.com/SiliconValley/Peaks/5799/qmail-uce.html) | using his maildrop as the local delivery agent?  I've gotten it | very close to working, but it fails for all "MAIL FROM" commands | with "Service unavailable."  It seems that qmail-smtpd.c thinks it | is getting a non-zero error code (but no error message) back when | it finishes looking at /usr/lib/mailfilter/fromfilter, even though | that filter ends with an explicit "ERRORCODE=0". |  | Is there an OpenBSD equivalent or port of strace or truss? |  | --  | Jim Lippard       lippard@discord.org       http://www.discord.org/ | Unsolicited bulk email charge:   $500/message.   Don't se
+------------------------------------------------------------
+[2001-08-27T19:09:38+00:00] [djb@cr.yp.to (D. J. Bernstein)] [unix.bsd.openbsd.misc]
+MID: 2001Aug2719.09.38.8634@cr.yp.to
+SUBJ: Re: DNS question
+BODY: Splud  <crispy@burnttoast.com> wrote: | > Is there an equivalent of traceroute for DNS, whereby I can see the  | > route taken for a name resolution? |  | http://cr.yp.to/djbdns/tools.html#dnstrace |  | ---Dan |  |  | 
+------------------------------------------------------------

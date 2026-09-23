@@ -1,0 +1,36 @@
+total 7
+[1995-01-01T00:00:00+00:00] [jhenders@vanbc.wimsey.com (John Henders)] [unix.bsd.bsdi.misc]
+MID: 48ahqm$ovj@vanbc.wimsey.com>#1/1
+SUBJ: Anyone ported lsof to bsdi 2
+BODY:  | As the subject says, has anyone ported the newest lsof 3.5 to BSDI? I | tried both the freebsd and netbsd configurations, but neither is | compatable with bsdi for this program. I've tried fixing the obvious | include file differences but it's still not compiling. I can give a more | detailed description of where it's failing if anyone's interested. |  | --  |                John Henders  BOFH  Wimsey Information Systems.  |                Vancouver's original internet service provider. |                          http://www.wimsey.com |  |  |  |  | 
+------------------------------------------------------------
+[1995-01-01T00:00:00+00:00] [vixie@vix.com (Paul A Vixie)] [unix.bsd.bsdi.misc]
+MID: VIXIE.95Oct5232151@wisdom.vix.com>#1/1
+SUBJ: Re: lsof for 2.0 ?
+BODY: >Anyone have a version of lsof for BSD/OS 2.0?  The version at | >Purdue stopped supporting BSDI at 3.21 and an older 3.0 source | >release that I have is for BSDI 1.1, not 2.0.  I also tried | >ftp.bsdi.com and couldn't find anything there. |  | There's not a lot of demand for the real lsof on BSD/OS | since the (supported) "fstat" command was based on lsof | and has most of the same features. | --  | Paul Vixie | La Honda, CA			"Illegitimi non carborundum." | <paul@vix.com> | pacbell!vixie!paul		(dont let the bastards grind you down) |  |  |  | 
+------------------------------------------------------------
+[1995-01-01T00:00:00+00:00] [Michael Hancock <michaelh@cet.co.jp>] [unix.bsd.bsdi.misc]
+MID: Pine.SV4.3.91.951007145226.5727A-100000-100000@parkplace>#1/1
+SUBJ: Re: lsof for 2.0 ?
+BODY: On 4 Oct 1995, W. Richard Stevens wrote: |  | > Anyone have a version of lsof for BSD/OS 2.0?  The version at | > Purdue stopped supporting BSDI at 3.21 and an older 3.0 source | > release that I have is for BSDI 1.1, not 2.0.  I also tried | > ftp.bsdi.com and couldn't find anything there. | >  | > 	Rich Stevens  (rstevens@noao.edu) | >  |  | People have been asking for it from time to time.  I guess with the  | changes in the kernel from 1.1 to 2.0 it's not a trivial port. |  | -- | michaelh@cet.co.jp |  |  |  |  | 
+------------------------------------------------------------
+[1995-01-01T00:00:00+00:00] [Terry Lambert <terry@cs.weber.edu>] [unix.bsd.bsdi.misc]
+MID: 45hbac$qaa@park.uvsc.edu>#1/1
+SUBJ: Re: lsof for 2.0 ?
+BODY: rstevens@noao.edu (W. Richard Stevens) wrote: | ] | ] Anyone have a version of lsof for BSD/OS 2.0?  The version at | ] Purdue stopped supporting BSDI at 3.21 and an older 3.0 source | ] release that I have is for BSDI 1.1, not 2.0.  I also tried | ] ftp.bsdi.com and couldn't find anything there. |  | Hey, fellow Tucsonan!  8-). |  | I believe BSDI 2.0 did what AIX and UnixWare 2.0 did that caused | identd to break as well: moved the system open file table to be | dynamically allocated. |  | To get around it, you would have to rewrite the system open file | table traversal code to consider only valid open files from the | read from /dev/kmem. |  | On AIX and UnixWare 2.0, I hacked this for identd by examining | all active proc
+------------------------------------------------------------
+[1995-01-01T00:00:00+00:00] [Michael Hancock <michaelh@cet.co.jp>] [unix.bsd.bsdi.misc]
+MID: 41r93a$kbe@diablo.cet.co.jp>#1/1
+SUBJ: Re: lsof?
+BODY: peterb@pile.lm.com (Peter Berger) wrote: | >Has anyone ported "lsof" to BSDI 2.0?  We got it working under 1.1, but | >haven't moved it over yet... |  | There was talk about this a little while ago.  The kernel structures have  | changed somewhat so it will take a while to port.  I don't think anyone  | has done it yet. |  | --  | Michael Hancock | michaelh@cet.co.jp |  |  |  |  | 
+------------------------------------------------------------
+[1995-01-01T00:00:00+00:00] [peterb@pile.lm.com (Peter Berger)] [unix.bsd.bsdi.misc]
+MID: 40qf0s$5eb@pile.lm.com>#1/1
+SUBJ: lsof?
+BODY: Has anyone ported "lsof" to BSDI 2.0?  We got it working under 1.1, but | haven't moved it over yet... |  |  | --  | "Actually, you just think that's a telephone.  Really, it's the alarm | that rings whenever I get out of my chair."  		-- E.S. | Peter Berger. System Administrator, Telerama Public Access Internet | http://www.lm.com/~peterb	    Serving Pittsburgh since 1991. |  |  |  | 
+------------------------------------------------------------
+[1995-01-01T00:00:00+00:00] [djm@va.pubnix.com (David J. MacKenzie)] [unix.bsd.bsdi.misc]
+MID: DJM.95Aug15192040@catapult.va.pubnix.com>#1/1
+SUBJ: Re: lsof?
+BODY: On 15 Aug 1995 11:38:04 -0400, peterb@pile.lm.com (Peter Berger) said: | In article <40qf0s$5eb@pile.lm.com> peterb@pile.lm.com (Peter Berger) writes: |  | > Has anyone ported "lsof" to BSDI 2.0?  We got it working under 1.1, but | > haven't moved it over yet... |  | Why not just use "fstat", which comes with BSDI/OS? |  |  |  | 
+------------------------------------------------------------

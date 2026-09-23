@@ -1,0 +1,887 @@
+total 23
+[1995-01-01T00:00:00+00:00] [pjm@veenet.value.net (Patrick Miller)] [    I am using FreeBSD 2.0.5 Release and BSD/OS 2.0. When a user disconnects 
+ by dropping there connection the parent dies but the children remain, some
+ in fast loops ( tin is a good example ). 
+
+   I know this went around once before but I never heard if a solution was
+  found.
+
+ Thanks
+ Patrick Miller
+
+
+
+
+]
+MID: 41son8$mav@veenet.value.net>#1/1
+SUBJ: Child processes not dying when parent dies from a SIGHUP.
+BODY:     I am using FreeBSD 2.0.5 Release and BSD/OS 2.0. When a user disconnects  |  by dropping there connection the parent dies but the children remain, some |  in fast loops ( tin is a good example ).  |  |    I know this went around once before but I never heard if a solution was |   found. |  |  Thanks |  Patrick Miller |  |  |  |  | 
+------------------------------------------------------------
+[1999-01-01T00:00:00+00:00] [Ferdinand Goldmann <ferdl@oeh.uni-linz.ac.at>] [Greetings.
+
+I am using an old SparcStation 1+ with plain OpenBSD 2.5 as loghost for
+several other machines.  The problem however is that from time to time,
+syslogd simply stops recording any log messages. I need to stop/restart
+the thing. Is this some known problem?
+
+TIA,
+/ferdl
+-- 
+<< In Real Life:  Goldmann Ferdinand                    -= MUM =-          >>
+<< eMail       :  ferdl@oeh.uni-linz.ac.at      Muehlviertler UNIX Militia >>
+<<------------------------------------------------------------------------->>
+<< "Agree with you, the council does. Your apprentice, Skywalker will be." >>
+
+
+
+]
+MID: 37f37d8c.0@alijku02.edvz.uni-linz.ac.at>#1/1
+SUBJ: syslogd -u dying on Sparc
+BODY: Greetings. |  | I am using an old SparcStation 1+ with plain OpenBSD 2.5 as loghost for | several other machines.  The problem however is that from time to time, | syslogd simply stops recording any log messages. I need to stop/restart | the thing. Is this some known problem? |  | TIA, | /ferdl | --  | << In Real Life:  Goldmann Ferdinand                    -= MUM =-          >> | << eMail       :  ferdl@oeh.uni-linz.ac.at      Muehlviertler UNIX Militia >> | <<------------------------------------------------------------------------->> | << "Agree with you, the council does. Your apprentice, Skywalker will be." >> |  |  |  | 
+------------------------------------------------------------
+[2003-04-29T16:17:14+00:00] ["Ali Moulay" <godsghost@yahoo.ca>] [Hi,
+
+We are using Exceed to open sessions (xterm) on our Unix machines.
+The user(s) default shell is tcsh. The same profile is used to log on
+all Unix boxes.
+For a particular Unix box I want to run bash instead of tcsh (I don't
+want to change /etc/passwrd because bash is only installed on one
+particular station).
+
+In .tcshrc there is a line that will execute bash if we are on machine
+X.
+
+if (`hostname` == "xxxxx") then
+    /usr/local/bin/bash
+endif
+
+I have noticed that if I simply do that my xterm dies after around 5
+seconds (see case 2).
+If I change the line by adding exec (exec /usr/local/bin/bash)
+everything is OK (see case 3), same goes if the line (#
+/usr/local/bin/bash) is not executed (see case 1).
+
+I took some snaps with ps and would like to understand why the xterm
+session is dying (what is the difference between executing bash with and
+without exec from a system point of view ?) after a while in Case 2 (is
+it related to session or process group managment ?, where can I fing
+more info on the topic ?).
+
+Case 1:
+# Vesrion with empty .tcshrc 
+Early stage :
+ F S      UID   PID  PPID  PGID   SID  TTY    CMD
+ 8 S     root   196     1   196   196  ?      /usr/sbin/inetd -s
+ 8 S     root 25295   196 25295 25295  ?      in.rlogind
+ 8 S   user33 25299 25295 25299 25299  pts/8  -tcsh
+ 8 S   user33 25313 25299 25313 25299  pts/8  xterm -display xxx
+ 8 S   user33 25314 25313 25314 25314  pts/7  tcsh
+
+After a while :
+ 8 S   user33 25313     1 25313 25299  ?        0:00 xterm -display xxx
+ 8 S   user33 25314 25313 25314 25314  pts/7    0:00 tcsh
+
+
+Case 2:
+# Version with bash started from .tcshrc (without exec)
+Early stage :
+ F S      UID   PID  PPID  PGID   SID  TTY     CMD
+ 8 S     root   196     1   196   196  ?       /usr/sbin/inetd -s
+ 8 S     root 25469   196 25469 25469  ?       in.rlogind
+ 8 S   user33 25474 25469 25474 25474  pts/8   -tcsh
+ 8 S   user33 25486 25474 25486 25474  pts/8   /usr/local/bin/bash
+ 8 S   user33 25487 25486 25487 25474  pts/8   xterm -display xxxx
+ 8 S   user33 25488 25487 25488 25488  pts/7   tcsh
+ 8 S   user33 25498 25488 25498 25488  pts/7   /usr/local/bin/bash
+
+After a while :
+Nothing (the xterm has been killed).
+
+Case 3:
+# Version with bash started from .tcshrc (exec)
+Early stage:
+ F S      UID   PID  PPID  PGID   SID  TTY     CMD
+ 8 S     root   196     1   196   196  ?       /usr/sbin/inetd -s
+ 8 S     root 25521   196 25521 25521  ?       in.rlogind
+ 8 S   user33 25525 25521 25525 25525  pts/8   /usr/local/bin/bash
+ 8 S   user33 25538 25525 25538 25525  pts/8   xterm -display xxxxx
+ 8 S   user33 25539 25538 25539 25539  pts/7   /usr/local/bin/bash
+
+After a while:
+ 8 S   user33 25538     1 25538 25525  ?       xterm -display xxxxx
+ 8 S   user33 25539 25538 25539 25539  pts/7   /usr/local/bin/bash
+
+Thanks.
+ 
+
+
+-- 
+Posted via Mailgate.ORG Server - http://www.Mailgate.ORG
+
+
+]
+MID: 09dd16d9f9cc7ed784c33222e99dbf6e.125662@mygate.mailgate.org
+SUBJ: Exceed (xterm) session is dying
+BODY: Hi, |  | We are using Exceed to open sessions (xterm) on our Unix machines. | The user(s) default shell is tcsh. The same profile is used to log on | all Unix boxes. | For a particular Unix box I want to run bash instead of tcsh (I don't | want to change /etc/passwrd because bash is only installed on one | particular station). |  | In .tcshrc there is a line that will execute bash if we are on machine | X. |  | if (`hostname` == "xxxxx") then |     /usr/local/bin/bash | endif |  | I have noticed that if I simply do that my xterm dies after around 5 | seconds (see case 2). | If I change the line by adding exec (exec /usr/local/bi
+------------------------------------------------------------
+[2003-06-29T18:44:13+00:00] [dj_farid@hotmail.com (DJ_Farid)] [Hi,
+I have an OpenBSD 3.2 box. It's an AMD K5 150Mhz, 21Mb RAM with a
+D-Link DFE-530TX NIC. I run a FTP on it.
+It can run smothly for months, until there is a lot of traffic on it.
+The network just dies when that happens. The machine seems tu run
+normal, but no traffic can go in or out. I can't even access with SSH.
+But when I log in locally on the machine and reboot the thing, it
+works again until the next time the networktraffic-load gets very
+high.
+Does anyone know what causes this? I don't even know how to
+troubleshoot this problem. Where do I begin? Does anyone know how to
+fix this?
+
+Any suggestions are welcome.
+
+
+]
+MID: 88343fd0.0306291044.65c4bfe4@posting.google.com
+SUBJ: Network connection dying...why?
+BODY: Hi, | I have an OpenBSD 3.2 box. It's an AMD K5 150Mhz, 21Mb RAM with a | D-Link DFE-530TX NIC. I run a FTP on it. | It can run smothly for months, until there is a lot of traffic on it. | The network just dies when that happens. The machine seems tu run | normal, but no traffic can go in or out. I can't even access with SSH. | But when I log in locally on the machine and reboot the thing, it | works again until the next time the networktraffic-load gets very | high. | Does anyone know what causes this? I don't even know how to | troubleshoot this problem. Where do I begin? Does anyone know how to | fix this? |  | Any 
+------------------------------------------------------------
+[2003-06-29T18:56:20+00:00] [erik <erik@geenspam.vanwesten.net>] [DJ_Farid wrote:
+
+> Hi,
+> I have an OpenBSD 3.2 box. It's an AMD K5 150Mhz, 21Mb RAM with a
+> D-Link DFE-530TX NIC. I run a FTP on it.
+> It can run smothly for months, until there is a lot of traffic on it.
+> The network just dies when that happens. The machine seems tu run
+> normal, but no traffic can go in or out. I can't even access with SSH.
+> But when I log in locally on the machine and reboot the thing, it
+> works again until the next time the networktraffic-load gets very
+> high.
+> Does anyone know what causes this? I don't even know how to
+> troubleshoot this problem. Where do I begin? Does anyone know how to
+> fix this?
+> 
+> Any suggestions are welcome.
+
+Is the system overclocked? Does the processor fan work properly? I've
+seen similar faults on a system where the processor fan did not work
+anymore.
+
+EJ
+-- 
+Remove the obvious part (including the dot) for my email address
+
+
+
+]
+MID: 3eff3654$0$49112$e4fe514c@news.xs4all.nl
+SUBJ: Re: Network connection dying...why?
+BODY: DJ_Farid wrote: |  | > Hi, | > I have an OpenBSD 3.2 box. It's an AMD K5 150Mhz, 21Mb RAM with a | > D-Link DFE-530TX NIC. I run a FTP on it. | > It can run smothly for months, until there is a lot of traffic on it. | > The network just dies when that happens. The machine seems tu run | > normal, but no traffic can go in or out. I can't even access with SSH. | > But when I log in locally on the machine and reboot the thing, it | > works again until the next time the networktraffic-load gets very | > high. | > Does anyone know what causes this? I don't even know how to | > troubleshoot this problem. Where do I begin? 
+------------------------------------------------------------
+[2003-07-03T18:46:24+00:00] [dj_farid@hotmail.com (DJ_Farid)] [erik <erik@geenspam.vanwesten.net> wrote in message news:<3eff3654$0$49112$e4fe514c@news.xs4all.nl>...
+> DJ_Farid wrote:
+> 
+> > Hi,
+> > I have an OpenBSD 3.2 box. It's an AMD K5 150Mhz, 21Mb RAM with a
+> > D-Link DFE-530TX NIC. I run a FTP on it.
+> > It can run smothly for months, until there is a lot of traffic on it.
+> > The network just dies when that happens. The machine seems tu run
+> > normal, but no traffic can go in or out. I can't even access with SSH.
+> > But when I log in locally on the machine and reboot the thing, it
+> > works again until the next time the networktraffic-load gets very
+> > high.
+> > Does anyone know what causes this? I don't even know how to
+> > troubleshoot this problem. Where do I begin? Does anyone know how to
+> > fix this?
+> > 
+> > Any suggestions are welcome.
+> 
+> Is the system overclocked? Does the processor fan work properly? I've
+> seen similar faults on a system where the processor fan did not work
+> anymore.
+> 
+> EJ
+
+The system is not overclocked. The fan works properly.
+Could it be a heat related problem? The machine is not hot, but it
+could be colder though...
+
+
+]
+MID: 88343fd0.0307031046.2d1fa38a@posting.google.com
+SUBJ: Re: Network connection dying...why?
+BODY: erik <erik@geenspam.vanwesten.net> wrote in message news:<3eff3654$0$49112$e4fe514c@news.xs4all.nl>... | > DJ_Farid wrote: | >  | > > Hi, | > > I have an OpenBSD 3.2 box. It's an AMD K5 150Mhz, 21Mb RAM with a | > > D-Link DFE-530TX NIC. I run a FTP on it. | > > It can run smothly for months, until there is a lot of traffic on it. | > > The network just dies when that happens. The machine seems tu run | > > normal, but no traffic can go in or out. I can't even access with SSH. | > > But when I log in locally on the machine and reboot the thing, it | > > works again until the next time the networktraffic-load gets
+------------------------------------------------------------
+[2003-07-05T11:49:12+00:00] [erik <erik@geenspam.vanwesten.net>] [DJ_Farid wrote:
+
+> erik <erik@geenspam.vanwesten.net> wrote in message
+> news:<3eff3654$0$49112$e4fe514c@news.xs4all.nl>...
+>> DJ_Farid wrote:
+>> 
+>> > Hi,
+>> > I have an OpenBSD 3.2 box. It's an AMD K5 150Mhz, 21Mb RAM with a
+>> > D-Link DFE-530TX NIC. I run a FTP on it.
+>> > It can run smothly for months, until there is a lot of traffic on
+>> > it. The network just dies when that happens. The machine seems tu
+>> > run normal, but no traffic can go in or out. I can't even access
+>> > with SSH. But when I log in locally on the machine and reboot the
+>> > thing, it works again until the next time the networktraffic-load
+>> > gets very high.
+>> > Does anyone know what causes this? I don't even know how to
+>> > troubleshoot this problem. Where do I begin? Does anyone know how
+>> > to fix this?
+>> > 
+>> > Any suggestions are welcome.
+>> 
+>> Is the system overclocked? Does the processor fan work properly? I've
+>> seen similar faults on a system where the processor fan did not work
+>> anymore.
+>> 
+>> EJ
+> 
+> The system is not overclocked. The fan works properly.
+> Could it be a heat related problem? The machine is not hot, but it
+> could be colder though...
+
+Could be. Start measuring temperatures. Check the ram, maybe you have a
+faulty ram somewhere.
+
+EJ
+-- 
+Remove the obvious part (including the dot) for my email address
+
+
+
+]
+MID: 3f06bb38$0$49104$e4fe514c@news.xs4all.nl
+SUBJ: Re: Network connection dying...why?
+BODY: DJ_Farid wrote: |  | > erik <erik@geenspam.vanwesten.net> wrote in message | > news:<3eff3654$0$49112$e4fe514c@news.xs4all.nl>... | >> DJ_Farid wrote: | >>  | >> > Hi, | >> > I have an OpenBSD 3.2 box. It's an AMD K5 150Mhz, 21Mb RAM with a | >> > D-Link DFE-530TX NIC. I run a FTP on it. | >> > It can run smothly for months, until there is a lot of traffic on | >> > it. The network just dies when that happens. The machine seems tu | >> > run normal, but no traffic can go in or out. I can't even access | >> > with SSH. But when I log in locally on the machine and reboot the | >> > thing, it works again until the next ti
+------------------------------------------------------------
+[2003-07-07T08:11:57+00:00] [Richard Haakma <richard@ricks2.kc.net.nz>] [On Sat, 05 Jul 2003 23:49:12 +1200, erik wrote:
+
+> DJ_Farid wrote:
+> 
+>> erik <erik@geenspam.vanwesten.net> wrote in message
+>> news:<3eff3654$0$49112$e4fe514c@news.xs4all.nl>...
+>>> DJ_Farid wrote:
+>>> 
+>>> > Hi,
+>>> > I have an OpenBSD 3.2 box. It's an AMD K5 150Mhz, 21Mb RAM with a
+>>> > D-Link DFE-530TX NIC. I run a FTP on it. It can run smothly for
+>>> > months, until there is a lot of traffic on it. The network just dies
+>>> > when that happens. The machine seems tu run normal, but no traffic
+>>> > can go in or out. I can't even access with SSH. But when I log in
+>>> > locally on the machine and reboot the thing, it works again until
+>>> > the next time the networktraffic-load gets very high. Does anyone
+>>> > know what causes this? I don't even know how to troubleshoot this
+>>> > problem. Where do I begin? Does anyone know how to fix this?
+>>> > 
+>>> > Any suggestions are welcome.
+
+OpenBSD allocates a fixed number of network buffers and
+it is my experience that once that number is exceeded the
+whole network stack stops working.  FreeBSD is basically
+the same.  Look for errors in /var/log/messages.  It would
+be better behaviour if the kernel would drop packets while
+there are no spare buffers and later recover when some
+become available.  You can help by increasing the number
+of network buffers either by setting the option and recompiling
+the kernel or by using the config utility.  See the FAQ
+chapter 11.
+
+RH.
+
+
+]
+MID: pan.2003.07.07.20.11.57.286609.1772@ricks2.kc.net.nz
+SUBJ: Re: Network connection dying...why?
+BODY: On Sat, 05 Jul 2003 23:49:12 +1200, erik wrote: |  | > DJ_Farid wrote: | >  | >> erik <erik@geenspam.vanwesten.net> wrote in message | >> news:<3eff3654$0$49112$e4fe514c@news.xs4all.nl>... | >>> DJ_Farid wrote: | >>>  | >>> > Hi, | >>> > I have an OpenBSD 3.2 box. It's an AMD K5 150Mhz, 21Mb RAM with a | >>> > D-Link DFE-530TX NIC. I run a FTP on it. It can run smothly for | >>> > months, until there is a lot of traffic on it. The network just dies | >>> > when that happens. The machine seems tu run normal, but no traffic | >>> > can go in or out. I can't even access with SSH. But when I log in | >>> > locally on the mac
+------------------------------------------------------------
+[2003-07-07T19:37:24+00:00] [dj_farid@hotmail.com (DJ_Farid)] [Richard Haakma <richard@ricks2.kc.net.nz> wrote in message news:<pan.2003.07.07.20.11.57.286609.1772@ricks2.kc.net.nz>...
+> On Sat, 05 Jul 2003 23:49:12 +1200, erik wrote:
+> 
+> > DJ_Farid wrote:
+> > 
+> >> erik <erik@geenspam.vanwesten.net> wrote in message
+> >> news:<3eff3654$0$49112$e4fe514c@news.xs4all.nl>...
+> >>> DJ_Farid wrote:
+> >>> 
+> >>> > Hi,
+> >>> > I have an OpenBSD 3.2 box. It's an AMD K5 150Mhz, 21Mb RAM with a
+> >>> > D-Link DFE-530TX NIC. I run a FTP on it. It can run smothly for
+> >>> > months, until there is a lot of traffic on it. The network just dies
+> >>> > when that happens. The machine seems tu run normal, but no traffic
+> >>> > can go in or out. I can't even access with SSH. But when I log in
+> >>> > locally on the machine and reboot the thing, it works again until
+> >>> > the next time the networktraffic-load gets very high. Does anyone
+> >>> > know what causes this? I don't even know how to troubleshoot this
+> >>> > problem. Where do I begin? Does anyone know how to fix this?
+> >>> > 
+> >>> > Any suggestions are welcome.
+> 
+> OpenBSD allocates a fixed number of network buffers and
+> it is my experience that once that number is exceeded the
+> whole network stack stops working.  FreeBSD is basically
+> the same.  Look for errors in /var/log/messages.  It would
+> be better behaviour if the kernel would drop packets while
+> there are no spare buffers and later recover when some
+> become available.  You can help by increasing the number
+> of network buffers either by setting the option and recompiling
+> the kernel or by using the config utility.  See the FAQ
+> chapter 11.
+> 
+> RH.
+
+I checked /var/log/messages... I know the exact point in time when it
+happened the last time. So it was not a big deal to trace it in the
+file.
+There is nothing there. It only says something about something that
+happened 6 hours before. Then the next thing is that I rebooted the
+server (after the problem). So it should be inbetween these two
+happenings.
+
+If OpenBSD runs out of network-buffers, is it recorded somewhere?
+Should I just increase the buffers and hope for it not to happen
+anymore?
+
+Thanks.
+
+
+]
+MID: 88343fd0.0307071137.261c185b@posting.google.com
+SUBJ: Re: Network connection dying...why?
+BODY: Richard Haakma <richard@ricks2.kc.net.nz> wrote in message news:<pan.2003.07.07.20.11.57.286609.1772@ricks2.kc.net.nz>... | > On Sat, 05 Jul 2003 23:49:12 +1200, erik wrote: | >  | > > DJ_Farid wrote: | > >  | > >> erik <erik@geenspam.vanwesten.net> wrote in message | > >> news:<3eff3654$0$49112$e4fe514c@news.xs4all.nl>... | > >>> DJ_Farid wrote: | > >>>  | > >>> > Hi, | > >>> > I have an OpenBSD 3.2 box. It's an AMD K5 150Mhz, 21Mb RAM with a | > >>> > D-Link DFE-530TX NIC. I run a FTP on it. It can run smothly for | > >>> > months, until there is a lot of traffic on it. The network just dies | > >>> > when that happe
+------------------------------------------------------------
+[2003-07-10T16:44:17+00:00] ["Ferran Oriol" <varios@barnamail.com>] [I have the same problem, and my compaq pentium 200 mmx is very cold and is
+the standard pc. If i don't work with this in 10 or 15 minutes, the ping to
+the ip adress is imposible, i touch the keyboard and restart automaticaly
+the network.
+
+Some ideas. Tx.
+
+Ferran
+
+
+"DJ_Farid" <dj_farid@hotmail.com> escribi� en el mensaje
+news:88343fd0.0307031046.2d1fa38a@posting.google.com...
+> erik <erik@geenspam.vanwesten.net> wrote in message
+news:<3eff3654$0$49112$e4fe514c@news.xs4all.nl>...
+> > DJ_Farid wrote:
+> >
+> > > Hi,
+> > > I have an OpenBSD 3.2 box. It's an AMD K5 150Mhz, 21Mb RAM with a
+> > > D-Link DFE-530TX NIC. I run a FTP on it.
+> > > It can run smothly for months, until there is a lot of traffic on it.
+> > > The network just dies when that happens. The machine seems tu run
+> > > normal, but no traffic can go in or out. I can't even access with SSH.
+> > > But when I log in locally on the machine and reboot the thing, it
+> > > works again until the next time the networktraffic-load gets very
+> > > high.
+> > > Does anyone know what causes this? I don't even know how to
+> > > troubleshoot this problem. Where do I begin? Does anyone know how to
+> > > fix this?
+> > >
+> > > Any suggestions are welcome.
+> >
+> > Is the system overclocked? Does the processor fan work properly? I've
+> > seen similar faults on a system where the processor fan did not work
+> > anymore.
+> >
+> > EJ
+>
+> The system is not overclocked. The fan works properly.
+> Could it be a heat related problem? The machine is not hot, but it
+> could be colder though...
+
+
+
+
+]
+MID: 3f0d9919$1@news.cablecat.com
+SUBJ: Re: Network connection dying...why?
+BODY: I have the same problem, and my compaq pentium 200 mmx is very cold and is | the standard pc. If i don't work with this in 10 or 15 minutes, the ping to | the ip adress is imposible, i touch the keyboard and restart automaticaly | the network. |  | Some ideas. Tx. |  | Ferran |  |  | "DJ_Farid" <dj_farid@hotmail.com> escribi� en el mensaje | news:88343fd0.0307031046.2d1fa38a@posting.google.com... | > erik <erik@geenspam.vanwesten.net> wrote in message | news:<3eff3654$0$49112$e4fe514c@news.xs4all.nl>... | > > DJ_Farid wrote: | > > | > > > Hi, | > > > I have an OpenBSD 3.2 box. It's an AMD K5 150Mhz, 21Mb RAM with a | > > > D-Lin
+------------------------------------------------------------
+[2003-07-10T18:12:55+00:00] [Christian <evilninja@gmx.net>] [Ferran Oriol wrote:
+> I have the same problem, and my compaq pentium 200 mmx is very cold 
+
+cold? old? hm, both should be ok :-)
+
+> the standard pc. If i don't work with this in 10 or 15 minutes, the ping to
+> the ip adress is imposible, i touch the keyboard and restart automaticaly
+> the network.
+
+some weird APM setup? can you disable it at all in the BIOS?
+anything else but the NIC is working? does it then react on ifconfig 
+commands still?
+
+Christian.
+
+-- 
+BOFH excuse #277:
+
+Your Flux Capacitor has gone bad.
+
+
+
+]
+MID: ibakeb.lfj.ln@news.housecafe.de
+SUBJ: Re: Network connection dying...why?
+BODY: Ferran Oriol wrote: | > I have the same problem, and my compaq pentium 200 mmx is very cold  |  | cold? old? hm, both should be ok :-) |  | > the standard pc. If i don't work with this in 10 or 15 minutes, the ping to | > the ip adress is imposible, i touch the keyboard and restart automaticaly | > the network. |  | some weird APM setup? can you disable it at all in the BIOS? | anything else but the NIC is working? does it then react on ifconfig  | commands still? |  | Christian. |  | --  | BOFH excuse #277: |  | Your Flux Capacitor has gone bad. |  |  |  | 
+------------------------------------------------------------
+[2003-07-11T04:11:31+00:00] ["./ToZ" <ToZ@ToZ.com>] [On Thu, 10 Jul 2003 18:44:17 +0200, Ferran Oriol <varios@barnamail.com> spat:
+> I have the same problem, and my compaq pentium 200 mmx is very cold and is
+> the standard pc. If i don't work with this in 10 or 15 minutes, the ping to
+> the ip adress is imposible, i touch the keyboard and restart automaticaly
+> the network.
+> 
+> Some ideas. Tx.
+> 
+> Ferran
+
+My Compaq does the same. You need to disable apm. Do the following:
+
+config -e -o /bsd /bsd
+> disable apm
+> quit
+
+Now reboot the box.
+./ToZ
+
+
+
+]
+MID: slrnbgse6n.1om.ToZ@openbsd.paulic.home
+SUBJ: Re: Network connection dying...why?
+BODY: On Thu, 10 Jul 2003 18:44:17 +0200, Ferran Oriol <varios@barnamail.com> spat: | > I have the same problem, and my compaq pentium 200 mmx is very cold and is | > the standard pc. If i don't work with this in 10 or 15 minutes, the ping to | > the ip adress is imposible, i touch the keyboard and restart automaticaly | > the network. | >  | > Some ideas. Tx. | >  | > Ferran |  | My Compaq does the same. You need to disable apm. Do the following: |  | config -e -o /bsd /bsd | > disable apm | > quit |  | Now reboot the box. | ./ToZ |  |  |  | 
+------------------------------------------------------------
+[2003-07-11T08:14:23+00:00] [jallen@pobox.com] [DJ_Farid <dj_farid@hotmail.com> wrote:
+
+> Does anyone know what causes this? I don't even know how to
+> troubleshoot this problem. Where do I begin? Does anyone know how to
+> fix this?
+> 
+> Any suggestions are welcome.
+
+Look for IRQ sharing with the NIC ??
+
+
+Cheers,
+Jason
+
+
+
+]
+MID: 3f0e71df$0$31275$afc38c87@news.optusnet.com.au
+SUBJ: Re: Network connection dying...why?
+BODY: DJ_Farid <dj_farid@hotmail.com> wrote: |  | > Does anyone know what causes this? I don't even know how to | > troubleshoot this problem. Where do I begin? Does anyone know how to | > fix this? | >  | > Any suggestions are welcome. |  | Look for IRQ sharing with the NIC ?? |  |  | Cheers, | Jason |  |  |  | 
+------------------------------------------------------------
+[2003-07-16T10:57:23+00:00] ["Ferran Oriol" <varios@barnamail.com>] [Thanks for your answer.
+
+I see the irq 11 is the same for 3com and VIA VT83C572 USB.
+
+I change this and probe.
+
+Tx.
+
+Ferran Oriol
+
+
+Show of dmesg | grep irq
+
+xl0 at pci0 dev 4 function 0 "3Com 3c905C 100Base-TX" rev 0x30: irq 11
+address 00:04:75:7f:4e:92
+uhci0 at pci0 dev 7 function 2 "VIA VT83C572 USB" rev 0x02: irq 11
+pckbc0: using irq 1 for kbd slot
+pckbc0: using irq 12 for aux slot
+lpt0 at isa0 port 0x378/4 irq 7
+pccom0 at isa0 port 0x3f8/8 irq 4: ns16550a, 16 byte fifo
+fdc0 at isa0 port 0x3f0/6 irq 6 drq 2
+
+Complete dmesg:
+
+OpenBSD 3.3 (GENERIC) #44: Sat Mar 29 13:22:05 MST 2003
+    deraadt@i386.openbsd.org:/usr/src/sys/arch/i386/compile/GENERIC
+RTC BIOS diagnostic error 2
+cpu0: F00F bug workaround installed
+cpu0: Intel Pentium/MMX ("GenuineIntel" 586-class) 200 MHz
+cpu0: FPU,V86,DE,PSE,TSC,MSR,MCE,CX8,MMX
+real mem  = 66695168 (65132K)
+avail mem = 56250368 (54932K)
+using 839 buffers containing 3436544 bytes (3356K) of memory
+RTC BIOS diagnostic error 2
+mainbus0 (root)
+bios0 at mainbus0: AT/286+(ff) BIOS, date 11/18/97, BIOS32 rev. 0 @ 0xf1800
+apm0 at bios0: Power Management spec V1.2
+apm0: AC on, battery charge unknown
+pcibios0 at bios0: rev. 2.1 @ 0xf1800/0x2100
+pcibios0: PCI IRQ Routing Table rev. 1.0 @ 0xf1db0/112 (5 entries)
+pcibios0: PCI IRQ Routing Table rev. 1.0 @ 0xf7440/112 (5 entries)
+pcibios0: PCI Interrupt Router at 000:07:0 ("VIA VT82C586 PCI-ISA" rev 0x00)
+pcibios0: PCI bus #0 is the last bus
+bios0: ROM list: 0xc0000/0x8000 0xc8000/0x800
+pci0 at mainbus0 bus 0: configuration mode 1 (bios)
+pchb0 at pci0 dev 0 function 0 "VIA VT82C1595 Host-PCI" rev 0x06
+xl0 at pci0 dev 4 function 0 "3Com 3c905C 100Base-TX" rev 0x30: irq 11
+address 00:04:75:7f:4e:92
+ukphy0 at xl0 phy 24: Generic IEEE 802.3u media interface
+ukphy0: OUI 0x00601d, model 0x0035, rev. 0
+pcib0 at pci0 dev 7 function 0 "VIA VT82C586 PCI-ISA" rev 0x41
+pciide0 at pci0 dev 7 function 1 "VIA VT82C571 IDE" rev 0x06: ATA33, channel
+0 configured to compatibility, channel 1 configured to compatibility
+wd0 at pciide0 channel 0 drive 0: <WDC AC22100H>
+wd0: 16-sector PIO, LBA, 2014MB, 4092 cyl, 16 head, 63 sec, 4124736 sectors
+wd0(pciide0:0:0): using PIO mode 4, DMA mode 2
+pciide0: channel 1 disabled (no drives)
+uhci0 at pci0 dev 7 function 2 "VIA VT83C572 USB" rev 0x02: irq 11
+usb0 at uhci0: USB revision 1.0
+uhub0 at usb0
+uhub0: vendor 0x0000 UHCI root hub, class 9/0, rev 1.00/1.00, addr 1
+uhub0: 2 ports with 2 removable, self powered
+"VIA VT82C586 Power Mgmt" rev 0x10 at pci0 dev 7 function 3 not configured
+vga1 at pci0 dev 15 function 0 "S3 Trio64V2/DX" rev 0x16
+wsdisplay0 at vga1: console (80x25, vt100 emulation)
+wsdisplay0: screen 1-5 added (80x25, vt100 emulation)
+isa0 at pcib0
+isadma0 at isa0
+pckbc0 at isa0 port 0x60/5
+pckbd0 at pckbc0 (kbd slot)
+pckbc0: using irq 1 for kbd slot
+wskbd0 at pckbd0: console keyboard, using wsdisplay0
+pmsi0 at pckbc0 (aux slot)
+pckbc0: using irq 12 for aux slot
+wsmouse0 at pmsi0 mux 0
+pcppi0 at isa0 port 0x61
+midi0 at pcppi0: <PC speaker>
+sysbeep0 at pcppi0
+lpt0 at isa0 port 0x378/4 irq 7
+npx0 at isa0 port 0xf0/16: using exception 16
+pccom0 at isa0 port 0x3f8/8 irq 4: ns16550a, 16 byte fifo
+fdc0 at isa0 port 0x3f0/6 irq 6 drq 2
+fd0 at fdc0 drive 0: 1.44MB 80 cyl, 2 head, 18 sec
+biomask 4840 netmask 4840 ttymask 58c2
+pctr: 586-class performance counters and user-level cycle counter enabled
+dkcsum: wd0 matched BIOS disk 80
+root on wd0a
+rootdev=0x0 rrootdev=0x300 rawdev=0x302
+
+<jallen@pobox.com> escribi� en el mensaje
+news:3f0e71df$0$31275$afc38c87@news.optusnet.com.au...
+> DJ_Farid <dj_farid@hotmail.com> wrote:
+>
+> > Does anyone know what causes this? I don't even know how to
+> > troubleshoot this problem. Where do I begin? Does anyone know how to
+> > fix this?
+> >
+> > Any suggestions are welcome.
+>
+> Look for IRQ sharing with the NIC ??
+>
+>
+> Cheers,
+> Jason
+>
+
+
+
+
+]
+MID: 3f15315a@news.cablecat.com
+SUBJ: Re: Network connection dying...why?
+BODY: Thanks for your answer. |  | I see the irq 11 is the same for 3com and VIA VT83C572 USB. |  | I change this and probe. |  | Tx. |  | Ferran Oriol |  |  | Show of dmesg | grep irq |  | xl0 at pci0 dev 4 function 0 "3Com 3c905C 100Base-TX" rev 0x30: irq 11 | address 00:04:75:7f:4e:92 | uhci0 at pci0 dev 7 function 2 "VIA VT83C572 USB" rev 0x02: irq 11 | pckbc0: using irq 1 for kbd slot | pckbc0: using irq 12 for aux slot | lpt0 at isa0 port 0x378/4 irq 7 | pccom0 at isa0 port 0x3f8/8 irq 4: ns16550a, 16 byte fifo | fdc0 at isa0 port 0x3f0/6 irq 6 drq 2 |  | Complete dmesg: |  | OpenBSD 3.3 (GENERIC) #44: Sat Mar 29 13:22:05 MST 2003 |     deraa
+------------------------------------------------------------
+[2004-01-15T16:55:52+00:00] ["Jim Lambert" <jaylamb_ert@futrx.com>] [Hi All:
+
+I have an OpenBSD 3.3 system that I am experiencing some problems with.
+When I am editing a file using vi, sometimes it dies and dumps me back to
+the command prompt.  No warning is given, no message in the log file is
+written, I just end up back at the command prompt.
+
+I initially noticed this when using "vi" to view the /var/log/messages file
+and thought it was just me getting kicked out because the OS needed to write
+to the file.  Then today when editing a source program, I kept getting
+kicked out of it as well.  It doesn't always happen and if I reboot it stops
+happening for awhile.
+
+Any ideas?
+
+Thanks,
+
+Jim
+
+
+
+
+]
+MID: PCzNb.12$p07.1162@eagle.america.net
+SUBJ: vi dying
+BODY: Hi All: |  | I have an OpenBSD 3.3 system that I am experiencing some problems with. | When I am editing a file using vi, sometimes it dies and dumps me back to | the command prompt.  No warning is given, no message in the log file is | written, I just end up back at the command prompt. |  | I initially noticed this when using "vi" to view the /var/log/messages file | and thought it was just me getting kicked out because the OS needed to write | to the file.  Then today when editing a source program, I kept getting | kicked out of it as well.  It doesn't always happen and if I reboot it stops | happening for awhile
+------------------------------------------------------------
+[2004-11-14T07:54:13+00:00] [robertks@hotmail.com (Robert K S)] [Sometime in the last three or four hours, I started getting this error
+message when starting up emacs:
+
+Warning: arch-dependent data dir
+(/usr/local/libexec/emacs/21.1/i386-unknown-openbsd3.1/) does not
+exist.
+
+I used "locate" to search for this directory (and I have not updated
+the "locate" database in a little while) and sure enough, that
+directory *used* to exist, if it doesn't now, with some dozen files in
+it.  Changing directories to /usr/local/libexec, I tried listing the
+contents of the directory, but got an error message:
+
+bash-2.05a$ cd /usr/local/libexec
+bash-2.05a$ ls -FAls
+ls: emacs: Bad file descriptor
+total 4434
+4432 -r-xr-xr-x  1 root  bin   2256896 Dec 22  2002 mysqld*
+   2 drwxr-xr-x  2 root  wsrc      512 Oct  2  2002 postfix/
+
+Bad file descriptor!  Does that mean that the data on the drive is
+corrupted, without hope of recovery or legal recourse?  Does anybody
+know what's going on, and if it's fixable?
+
+All the best,
+Robert K S
+
+
+]
+MID: a03d2f41.0411132354.6096f495@posting.google.com
+SUBJ: Is my server's hard drive dying?  Or worse?  (Bad file descriptor)
+BODY: Sometime in the last three or four hours, I started getting this error | message when starting up emacs: |  | Warning: arch-dependent data dir | (/usr/local/libexec/emacs/21.1/i386-unknown-openbsd3.1/) does not | exist. |  | I used "locate" to search for this directory (and I have not updated | the "locate" database in a little while) and sure enough, that | directory *used* to exist, if it doesn't now, with some dozen files in | it.  Changing directories to /usr/local/libexec, I tried listing the | contents of the directory, but got an error message: |  | bash-2.05a$ cd /usr/local/libexec | bash-2.05a$ ls -FAls | ls: emac
+------------------------------------------------------------
+[2004-11-14T13:19:55+00:00] [Rene van der Kraats <r.vanderkraatREMOVETHIS@chello.nl>] [Robert K S wrote:
+> Sometime in the last three or four hours, I started getting this error
+> message when starting up emacs:
+> 
+> Warning: arch-dependent data dir
+> (/usr/local/libexec/emacs/21.1/i386-unknown-openbsd3.1/) does not
+> exist.
+> 
+> I used "locate" to search for this directory (and I have not updated
+> the "locate" database in a little while) and sure enough, that
+> directory *used* to exist, if it doesn't now, with some dozen files in
+> it.  Changing directories to /usr/local/libexec, I tried listing the
+> contents of the directory, but got an error message:
+> 
+> bash-2.05a$ cd /usr/local/libexec
+> bash-2.05a$ ls -FAls
+> ls: emacs: Bad file descriptor
+> total 4434
+> 4432 -r-xr-xr-x  1 root  bin   2256896 Dec 22  2002 mysqld*
+>    2 drwxr-xr-x  2 root  wsrc      512 Oct  2  2002 postfix/
+> 
+> Bad file descriptor!  Does that mean that the data on the drive is
+> corrupted, without hope of recovery or legal recourse?  Does anybody
+> know what's going on, and if it's fixable?
+> 
+> All the best,
+> Robert K S
+
+Hi Robert,
+
+I'm pretty sure you're disk is going to a beautiful place somewhere is 
+he near future...my old 4,5GB started reporting the same errors, and it 
+  quickly became worse over time before quitting altogether.
+Safest bet is to replace it soon.
+
+Rene
+
+
+]
+MID: %XIld.6728$HZ5.3691@amsnews05.chello.com
+SUBJ: Re: Is my server's hard drive dying?  Or worse?  (Bad file descriptor)
+BODY: Robert K S wrote: | > Sometime in the last three or four hours, I started getting this error | > message when starting up emacs: | >  | > Warning: arch-dependent data dir | > (/usr/local/libexec/emacs/21.1/i386-unknown-openbsd3.1/) does not | > exist. | >  | > I used "locate" to search for this directory (and I have not updated | > the "locate" database in a little while) and sure enough, that | > directory *used* to exist, if it doesn't now, with some dozen files in | > it.  Changing directories to /usr/local/libexec, I tried listing the | > contents of the directory, but got an error message: | >  | > bash-2.05a$ cd /u
+------------------------------------------------------------
+[2004-11-14T18:38:51+00:00] [robertks@hotmail.com (Robert K S)] [Update to the "Bad file descriptor" problem:
+
+I tried running fsck (as root) and it did find problems with that
+particular directory (/usr/local/libexec/emacs/) as well as many
+others, but rather than prompting me to answer any of the CLEAR,
+REMOVE, FIX, or SALVAGE questions, it automatically answers "no" to
+all of them, even when I run fsck -y.  What am I doing wrong?
+
+All the best,
+Robert K S
+
+
+]
+MID: a03d2f41.0411141038.6d07760e@posting.google.com
+SUBJ: Re: Is my server's hard drive dying?  Or worse?  (Bad file descriptor)
+BODY: Update to the "Bad file descriptor" problem: |  | I tried running fsck (as root) and it did find problems with that | particular directory (/usr/local/libexec/emacs/) as well as many | others, but rather than prompting me to answer any of the CLEAR, | REMOVE, FIX, or SALVAGE questions, it automatically answers "no" to | all of them, even when I run fsck -y.  What am I doing wrong? |  | All the best, | Robert K S |  |  | 
+------------------------------------------------------------
+[2004-11-14T20:22:33+00:00] [robertks@hotmail.com (Robert K S)] [> Hi Robert,
+> 
+> I'm pretty sure you're disk is going to a beautiful place somewhere is 
+> he near future...my old 4,5GB started reporting the same errors, and it 
+>   quickly became worse over time before quitting altogether.
+> Safest bet is to replace it soon.
+> 
+> Rene
+
+The system did get shutdown improperly one or two days ago, so this
+may have been the source of the problem.  I'd like to run a disk
+repair before blaming it on a faulty hard drive, it's just that I
+haven't been able to successfully  run fsck, even using fsck -y.
+
+Any other suggestions?
+
+All the best,
+Robert K S
+
+
+]
+MID: a03d2f41.0411141222.512aa43b@posting.google.com
+SUBJ: Re: Is my server's hard drive dying?  Or worse?  (Bad file descriptor)
+BODY: > Hi Robert, | >  | > I'm pretty sure you're disk is going to a beautiful place somewhere is  | > he near future...my old 4,5GB started reporting the same errors, and it  | >   quickly became worse over time before quitting altogether. | > Safest bet is to replace it soon. | >  | > Rene |  | The system did get shutdown improperly one or two days ago, so this | may have been the source of the problem.  I'd like to run a disk | repair before blaming it on a faulty hard drive, it's just that I | haven't been able to successfully  run fsck, even using fsck -y. |  | Any other suggestions? |  | All the best, | Robert K S |  |  | 
+------------------------------------------------------------
+[2004-11-14T21:32:59+00:00] [dnichols@d-and-d.com (DoN. Nichols)] [In article <a03d2f41.0411141038.6d07760e@posting.google.com>,
+Robert K S <robertks@hotmail.com> wrote:
+>Update to the "Bad file descriptor" problem:
+>
+>I tried running fsck (as root) and it did find problems with that
+>particular directory (/usr/local/libexec/emacs/) as well as many
+>others, but rather than prompting me to answer any of the CLEAR,
+>REMOVE, FIX, or SALVAGE questions, it automatically answers "no" to
+>all of them, even when I run fsck -y.  What am I doing wrong?
+
+	Is the filesystem mounted?  I would umount it (I'm presuming
+that you have a separate partition for /usr/local), and run the fsck on
+the  unmounted filesystem.
+
+	The alternative is to boot to single-user mode and run the fsck
+as root while in single-user mode.
+
+	If it recovers the directory (or the files which should be in
+the directory) they are likely to wind up in that partitions's
+"lost+found" directory, with cryptic names "#" followed by the inode
+number, as the filenames have been lost with the corrupted directory.  I
+suspect that the problem is a bad sector in the actual directory, which
+can lose a bunch of files like that.  The real trick is figuring out
+which file used to have which name. :-( If it is any help, here are the
+contents of the directory from an OpenBSD 3.5 system on an intel box:
+
+
+ ======================================================================
+-r-xr-xr-x  1 root  bin     4628 Mar 24  2004 cvtmail*
+-r-xr-xr-x  1 root  bin     3508 Mar 24  2004 digest-doc*
+-r-xr-xr-x  1 root  bin     7156 Mar 24  2004 emacsserver*
+-r-xr-xr-x  1 root  bin     2532 Mar 24  2004 fakemail*
+-r--r--r--  1 root  bin    54092 Mar 24  2004 fns-21.3.1.el
+-r-xr-xr-x  1 root  bin     5172 Mar 24  2004 hexl*
+-r-xr-xr-x  1 root  bin    19476 Mar 24  2004 movemail*
+-r-xr-xr-x  1 root  bin     3252 Mar 24  2004 profile*
+-r-xr-xr-x  1 root  bin    19177 Mar 24  2004 rcs2log*
+-r-xr-xr-x  1 root  bin     5812 Mar 24  2004 sorted-doc*
+-r-xr-xr-x  1 root  bin     2136 Mar 24  2004 vcdiff*
+-r-xr-xr-x  1 root  bin     4884 Mar 24  2004 yow*
+ ======================================================================
+
+	And here is the same thing from an OpenBSD 3.4 on a Sun SS-5:
+
+ ======================================================================
+-r-xr-xr-x  1 root  bin   4768 Sep  7  2003 cvtmail*
+-r-xr-xr-x  1 root  bin   3616 Sep  7  2003 digest-doc*
+-r-xr-xr-x  1 root  bin   6848 Sep  7  2003 emacsserver*
+-r-xr-xr-x  1 root  bin   2636 Sep  7  2003 fakemail*
+-r--r--r--  1 root  bin  54092 Sep  7  2003 fns-21.3.1.el
+-r-xr-xr-x  1 root  bin   5600 Sep  7  2003 hexl*
+-r-xr-xr-x  1 root  bin  20048 Sep  7  2003 movemail*
+-r-xr-xr-x  1 root  bin   3408 Sep  7  2003 profile*
+-r-xr-xr-x  1 root  bin  19177 Sep  7  2003 rcs2log*
+-r-xr-xr-x  1 root  bin   5880 Sep  7  2003 sorted-doc*
+-r-xr-xr-x  1 root  bin   2136 Sep  7  2003 vcdiff*
+-r-xr-xr-x  1 root  bin   5008 Sep  7  2003 yow*
+ ======================================================================
+
+so -- the file sizes may be some help.
+
+	Since it is on /usr/local, there is a good chance that you can
+recover the needed information by reloading emacs from the packages.
+
+	I would suggest that you also run a disk check for bad sectors
+(on Sun systems, it is one of the sub-menus in the format command.  I'm
+not sure in OpenBSD.  Not the "disklabel" program, at least.
+
+	If it is a corruption from an unplanned shutdown, you are
+otherwise probably OK.  If it is a disk going south, you can expect an
+increasing number of problems -- at least until you replace the disk.
+
+	Good Luck,
+		DoN.
+-- 
+ Email:   <dnichols@d-and-d.com>   | Voice (all times): (703) 938-4564
+	(too) near Washington D.C. | http://www.d-and-d.com/dnichols/DoN.html
+           --- Black Holes are where God is dividing by zero ---
+
+
+]
+MID: cn8iub$rq2$1@fuego.d-and-d.com
+SUBJ: Re: Is my server's hard drive dying?  Or worse?  (Bad file descriptor)
+BODY: In article <a03d2f41.0411141038.6d07760e@posting.google.com>, | Robert K S <robertks@hotmail.com> wrote: | >Update to the "Bad file descriptor" problem: | > | >I tried running fsck (as root) and it did find problems with that | >particular directory (/usr/local/libexec/emacs/) as well as many | >others, but rather than prompting me to answer any of the CLEAR, | >REMOVE, FIX, or SALVAGE questions, it automatically answers "no" to | >all of them, even when I run fsck -y.  What am I doing wrong? |  | 	Is the filesystem mounted?  I would umount it (I'm presuming | that you have a separate partition for /usr/local), and
+------------------------------------------------------------
+[2004-11-14T22:57:13+00:00] [Marco S Hyman <marc@snafu.org>] [robertks@hotmail.com (Robert K S) writes:
+
+> The system did get shutdown improperly one or two days ago, so this
+> may have been the source of the problem.  I'd like to run a disk
+> repair before blaming it on a faulty hard drive, it's just that I
+> haven't been able to successfully  run fsck, even using fsck -y.
+
+fsck's meaning of "repair" and yours may be different.   Make sure
+the file system is unmounted then run "fsck -p /dev/xxxx" on the
+raw device for the filesystem in question.   fsck will "repair"
+the fs for use.  That does NOT mean it will restore your files.
+That's what backups are for.   You *do* have a backup, don't you?
+
+If not, and if the only lost files are emacs related, then all you
+need to do is delete and re-install emacs.   See pkg_delete(1) and
+pkg_add(1).
+
+// marc
+
+
+]
+MID: x7actk9gza.fsf@neko.snafu.org
+SUBJ: Re: Is my server's hard drive dying?  Or worse?  (Bad file descriptor)
+BODY: robertks@hotmail.com (Robert K S) writes: |  | > The system did get shutdown improperly one or two days ago, so this | > may have been the source of the problem.  I'd like to run a disk | > repair before blaming it on a faulty hard drive, it's just that I | > haven't been able to successfully  run fsck, even using fsck -y. |  | fsck's meaning of "repair" and yours may be different.   Make sure | the file system is unmounted then run "fsck -p /dev/xxxx" on the | raw device for the filesystem in question.   fsck will "repair" | the fs for use.  That does NOT mean it will restore your files. | That's what backups are 
+------------------------------------------------------------
+[2004-11-15T03:22:28+00:00] [jpd <read_the_sig@do.not.spam.it.invalid>] [Begin  <x7actk9gza.fsf@neko.snafu.org>
+On 2004-11-14, Marco S Hyman <marc@snafu.org> wrote:
+[snip]
+>
+> If not, and if the only lost files are emacs related, then all you
+> need to do is delete and re-install emacs.   See pkg_delete(1) and
+> pkg_add(1).
+
+But! But! That will reinstall the complete operating system!!1
+
+(Sorry, coulnd't resist.)
+
+
+-- 
+  j p d (at) d s b (dot) t u d e l f t (dot) n l .
+
+
+]
+MID: 2vqlnkF2ontu9U1@uni-berlin.de
+SUBJ: Re: Is my server's hard drive dying?  Or worse?  (Bad file descriptor)
+BODY: Begin  <x7actk9gza.fsf@neko.snafu.org> | On 2004-11-14, Marco S Hyman <marc@snafu.org> wrote: | [snip] | > | > If not, and if the only lost files are emacs related, then all you | > need to do is delete and re-install emacs.   See pkg_delete(1) and | > pkg_add(1). |  | But! But! That will reinstall the complete operating system!!1 |  | (Sorry, coulnd't resist.) |  |  | --  |   j p d (at) d s b (dot) t u d e l f t (dot) n l . |  |  | 
+------------------------------------------------------------
+[2004-11-16T08:09:25+00:00] [robertks@hotmail.com (Robert K S)] [While for some reason that I don't fully understand fsck would only
+run with NOWRITE messages when I tried to run it remotely, I logged in
+from the actual machine and fsck cleared up the problem.
+
+I then did need to reinstall emacs (and will probably ultimately have
+to reinstall a few other things that were corrupted--and then deleted
+by fsck--as well).
+
+Anyway, I learned my lesson and I'll make sure I never allow myself to
+improperly power down the server.
+
+All the best,
+Robert K S
+
+
+]
+MID: a03d2f41.0411160009.3eb35f34@posting.google.com
+SUBJ: Re: Is my server's hard drive dying?  Or worse?  (Bad file descriptor)
+BODY: While for some reason that I don't fully understand fsck would only | run with NOWRITE messages when I tried to run it remotely, I logged in | from the actual machine and fsck cleared up the problem. |  | I then did need to reinstall emacs (and will probably ultimately have | to reinstall a few other things that were corrupted--and then deleted | by fsck--as well). |  | Anyway, I learned my lesson and I'll make sure I never allow myself to | improperly power down the server. |  | All the best, | Robert K S |  |  | 
+------------------------------------------------------------

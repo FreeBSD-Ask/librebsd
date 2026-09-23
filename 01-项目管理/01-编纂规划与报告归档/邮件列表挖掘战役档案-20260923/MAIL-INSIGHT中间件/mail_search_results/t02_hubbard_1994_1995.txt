@@ -1,0 +1,3983 @@
+==========================================================================================
+DB: freebsd-hackers.duckdb  hits=80
+==========================================================================================
+--------------------------------------------------------------------------------
+MID: <7587.819188683@time.cdrom.com>
+DATE: 1995-12-17T08:24:43+00:00  FROM: Jordan K. Hubbard <jkh@time.cdrom.com>
+SUBJ: Re: rusers(3) & rnusers(3)
+BODY:
+
+Cool!  Anybody going to pick this one up?  Should I?
+
+					Jordan
+
+From owner-freebsd-hackers  Sun Dec 17 00:38:37 1995
+Return-Path: owner-hackers
+Received: (from root@localhost)
+          by freefall.freebsd.org (8.7.3/8.7.3) id AAA06683
+          for hackers-outgoing; Sun, 17 Dec 1995 00:38:37 -0800 (PST)
+Received: from news1.gtn.com (news1.gtn.com [192.109.159.3])
+          by freefall.freebsd.org (8.7.3/8.7.3) with ESMTP id AAA06678
+          Sun, 17 Dec 1995 00:38:32 -0800 (PST)
+Received: (from uucp@localhost) by news1.gtn.com (8.7.2/8.7.2) id JAA15769; Sun, 17 Dec 1995 09:30:06 +0100 (MET)
+Received: from knobel.gun.de (localhost [127.0.0.1]) by knobel.gun.de (8.6.12/8.6.12) with SMTP id JAA00787; Sun, 17 Dec 1995 09:22:15 +0100
+Date: Sun, 17 Dec 1995 09:22:15 +0100 (MET)
+From: Andreas Klemm <andreas@knobel.gun.de>
+To: current@FreeBSD.org, hackers@FreeBSD.org
+cc: cracauer@wavehh.hanse.de, jkh@FreeBSD.org
+Subject: FreeBSD-current-stable ???
+Message-ID: <Pine.BSF.3.91.951217083228.405C-100000@knobel.gun.de>
+MIME-Version: 1.0
+Content-Type: TEXT/PLAIN; charset=US-ASCII
+Sender: owner-hackers@FreeBSD.org
+Precedence: bulk
+
+Hi FreeBSD core team !
+
+[ Possibly I'm speaking for many oth
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-1f805522b90101f6>
+DATE: 1995-01-24T05:13:14+00:00  FROM: jkh () violet ! berkeley ! edu (Jordan K !  Hubbard) <None>
+SUBJ: Let these people know how you feel!
+BODY:
+Path: agate!howland.reston.ans.net!ix.netcom.com!netnews
+From: puzzle@ix.netcom.com (James Leslie)
+Newsgroups: comp.unix.bsd
+Subject: BSD/Novell Integration
+Date: 24 Jan 1995 03:29:17 GMT
+Organization: Netcom
+Lines: 28
+Distribution: world
+Message-ID: <3g1s6d$779@ixnews2.ix.netcom.com>
+NNTP-Posting-Host: ix-sj14-27.ix.netcom.com
+
+BSD Folks:
+
+We're thinking about doing a port of our SoftNet Utilities software to 
+the BSD (on Intel) environment and we need some honest, quality 
+feedback. 
+
+Basically, our SoftNet Utilities software allows a BSD UNIX system to 
+ALSO function as a Novell 3.12 compatible server. It would be for anyone 
+trying to integrate BSD platforms into existing Novell networks. 
+Currently the software has been ported to 8 other UNIX enviroments and 
+we're starting to get inquiries from BSD users too. 
+
+We want to take this issue to the BSD community for input. Do you think 
+that a port would be helpful? If so, why? (a Yes or No with a short 
+explanation would be appreciated.)
+
+Please address your comments to:
+
+email: info@puzzle.com
+
+or
+
+Puzzle Systems Corporation
+Attn: Product Marketing
+16360 Monterey Rd., Ste. 250
+Morgan Hill, CA 95037 U.S.A.
+(408) 779-9909
+(408) 7
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-8decb20a99cbb66b>
+DATE: 1995-01-31T08:09:20+00:00  FROM: "Jordan K. Hubbard" <jkh () FreeBSD ! org> <None>
+SUBJ: Re: iij PPP on demand
+BODY:
+Hey, no problem!  Monday is fine for me too! :-)  Real glad to see this
+going in!  Now we just need to have Terry translate all the Japanese
+are we're completely set! :-)
+
+					Jordan
+
+jp
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-12d64a385b265fa5>
+DATE: 1995-02-03T02:33:43+00:00  FROM: "Jordan K. Hubbard" <jkh () freefall ! cdrom ! com> <None>
+SUBJ: At last!  February 2nd snapshot now available from ftp.freebsd.org
+BODY:
+ftp://ftp.freebsd.org/pub/FreeBSD/2.0-950202-SNAP/
+
+and
+
+ftp://freefall.cdrom.com/pub/FreeBSD/2.0-950202-SNAP/
+
+
+What's new?  Lots!
+
+o Merged VM/Buffer cache much improved!  General stability
+  now approaching 2.1 quality levels.
+o Lots more bug fixes
+o Syscons now supports scrollback - use scroll lock and arrow/travel
+  keys to move around in your scroll-back buffer.
+o NIS (YP) support for FreeBSD as server and client.
+o First cut at on-demand ppp dialing.  Docs still in Japanese, but
+  we're working on that! ;-)  See /usr/bin/ppp for more details.
+o IP Firewall code much improved
+o AHA294x controller support now added
+o Sony CDU33a CDROM drive support added
+o Source distribution now split into logical pieces
+o Install much improved - still not what will be in 2.1, but a lot
+  easier to use nonetheless.
+
+Also, if anyone could also give the repacked XFree86 3.1 a whirl (in
+the 950202 snapshot directory) and tell me how it worked I'd
+appreciate it!  I cloned the work I'd done for the new 3.1.1 XFree86
+install back into 3.1.  It's in:
+
+	ftp://ftp.freebsd.org/pub/FreeBSD/2.0-950202-SNAP/XFree86-3.1/
+
+Thanks!  And please let me know how it goes for you with this snapshot!
+
+					Jordan
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-d33c31e93eb38846>
+DATE: 1995-02-03T03:33:25+00:00  FROM: "Jordan K. Hubbard" <jkh () FreeBSD ! org> <None>
+SUBJ: Re: pty's
+BODY:
+I would like to explain but that would take time I don't currently
+have, so instead I'll just point you at some code Michael and I wrote
+a few years back:
+
+	ftp://ftp.freebsd.org/pub/FreeBSD/ports/x11/emu
+
+It needs to do much the kind of thing you're trying to do, and the way
+I wrote the tty/pty handling code was maybe almost sort of generic in
+design and thus should be maybe almost sort of easy to read.
+
+					Jordan
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-f6f0edeee5df0137>
+DATE: 1995-02-18T00:05:42+00:00  FROM: "Jordan K. Hubbard" <jkh () freefall ! cdrom ! com> <None>
+SUBJ: Re: tcpdump 3.0?
+BODY:
+I think that at this point all of this should be coordinated by Mr. Olah.
+He has commit privileges and he's collecting all this stuff together for
+tcpdump, so talk to him and make sure that all 4,031 people who are
+apparently hacking on tcpdump simultaneously simply coordinate their patches
+through him! :-)
+
+						Jordan
+
+
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-08ae12f338e63cb3>
+DATE: 1995-02-18T09:23:09+00:00  FROM: "Jordan K. Hubbard" <jkh> <None>
+SUBJ: query-pr.  please!
+BODY:
+Hey Paul [and everyone else, since this is of general interest],
+
+When we last talked about this, you said that query-pr wasn't going to be
+trivial due to the fact that it involved pulling in most of the rest of
+GNATS. Can you please elaborate on this?  If that truly is the price,
+then I would like to argue that we need to seriously consider paying
+it.  The inability for outsiders to get bug report information is really
+making the whole bug report loop much more difficult than it has to be,
+and we could eliminate a lot of duplicated bug reports if people could
+only look first (easily) and see if their problem had already been reported.
+A lot of our "customers" would also sleep much better knowing what was
+broken and what wasn't.
+
+Naturally, security related bug reports might be screened (we could switch
+off a keyword) to all but those in a certain permission group, but we can
+add filters like that when and if they become necessary.
+
+Actually, while we're on the subject, let me just be confrontational and
+say that send-pr sucks and I wish somebody would jump up and down on it
+with nob-nailed boots.  How does it suck?  Let me count the ways: 
+
+1. It doesn't lend itself well to being 
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-e1b1f07e7af3afa5>
+DATE: 1995-02-18T15:02:54+00:00  FROM: "Jordan K. Hubbard" <jkh> <None>
+SUBJ: This week in passing..
+BODY:
+Transfers from wcarchive of the various FreeBSD subcatagories
+of interest:
+
+Day             Category                Total xfers     Total Size
+---             --------                -----------     ----------
+Feb 11          2.0R                     1711 files      490 MB
+Feb 12          2.0R                     3328 files      959 MB
+Feb 13          2.0R                     2565 files      955 MB
+Feb 14          2.0R                     3247 files     1123 MB
+Feb 15          2.0R                     2656 files      774 MB
+Feb 16          2.0R                     2215 files      712 MB
+Feb 17          2.0R                     4577 files     1596 MB
+Feb 18          2.0R                      793 files      236 MB
+
+Feb 11          2.0C-ports               1769 files      198 MB
+Feb 12          2.0C-ports               3936 files      258 MB
+Feb 13          2.0C-ports               2713 files      100 MB
+Feb 14          2.0C-ports               2788 files       73 MB
+Feb 15          2.0C-ports               1920 files       44 MB
+Feb 16          2.0C-ports               2712 files      167 MB
+Feb 17          2.0C-ports               1125 files      311 MB
+Feb 18          2.0C-ports   
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-65492a349c6217fa>
+DATE: 1995-02-20T01:31:37+00:00  FROM: "Jordan K. Hubbard" <jkh> <None>
+SUBJ: Resend:  problems on freefall
+BODY:
+Earlier today I said on freefall:
+
+
+I guess I should admit that it was me who had the criminal stupids
+(god don't you just hate it when you complain about something and it's
+*you* who are the problem??), or at least a bad case of criminal negligence!
+
+It was all caused by a bad combination of factors:  One that I didn't think
+twice about the possible consequences of having AMD mount things in /tmp/amd_mnt
+(/tmp has been "safe" again for too long, I guess) and two that I had
+the old /etc/* files on time, the /etc/daily containing the search and
+destroy in /tmp that we later disabled.
+
+When I went to amd on time (mother didn't have the problem, being a new
+installation) the next time /etc/daily ran it whacked us good.  AMD
+mounts *everything* that a system exports when you first go to /host/<foo>
+and so when I got my freefall home dir on time exported to me, along
+came all of /a, /b and /c as well.
+
+This was just really bad luck and some bad system admin on my part.
+I feel really, really, really stupid.
+
+A lot of people had their home dirs on one if these drives, and anything
+you didn't touch in 3 days or more is likely gone!  I managed to stop
+the find running once I figured out wha
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-7d595433a354543b>
+DATE: 1995-02-21T10:40:33+00:00  FROM: jkh () violet ! berkeley ! edu (Jordan K !  Hubbard) <None>
+SUBJ: Re: Linux vs. BSD?!
+BODY:
+In article <3iakqv$aj5@fido.asd.sgi.com>,
+Larry McVoy <lm@slovax.engr.sgi.com> wrote:
+
+Sorry, I really didn't intend it as such.  In fact, the Linux comments
+were an afterthought and probably should have been left out as they
+only distracted from the real thrust of my argument.  Oh well, we move on..
+
+
+Ah yes, well, I really only talking about the current batch of free OS
+alternatives.  BSDI never set out to create a free OS as Linux, FreeBSD
+and NetBSD did, so it's sort of apples and oranges to cite them as examples
+of "what happens when the good go commercial."  In fact, I've always regarded
+BSDI's principle contribution as support and a committment to stability.
+Nothing that the GPL or BSD copyrights have much effect over, really, and
+actually a very good example of how the technology can be almost entirely
+removed as the principle commercial component.  BSDI's customers aren't
+paying for the most advanced, cutting edge technology money can buy, they're
+paying for simple, mundane "do the job day after day" technology and all the
+support and documentation that actually makes it USABLE to them.
+
+So unless the FSF becomes the "Free Support Foundation", I can't see them
+as having th
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-2cb00d374197a9f5>
+DATE: 1995-02-23T16:41:09+00:00  FROM: "Jordan K. Hubbard" <jkh () freefall ! cdrom ! com> <None>
+SUBJ: Re: ConfigIt again...
+BODY:
+
+Do you mean make a port out of it?
+
+
+As far as I'm concerned, if this is really good it should go into
+/usr/src/usr.sbin.  I was planning on making an impassioned plea for a
+utility like this before and am very pleased to see this.
+
+
+I think it's a *terrific* idea!
+
+					Jordan
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-97f656a8b6295082>
+DATE: 1995-02-24T01:18:28+00:00  FROM: "Jordan K. Hubbard" <jkh> <None>
+SUBJ: SMC 18xx series??
+BODY:
+I've gotten a few requests lately from folks wanting to know if we supported
+the new SMC 18xx series controller (I think I have the designation correct!).
+I know that we support the 950s and such, but unless these are backwards
+compatible (and that I doubt - why bother with compatability?  This is PC
+hardware we're talking about here! :-) then I don't think we currently
+offer it.
+
+Anybody know how hard these are going to be to support?  Anyone got one of
+these babies?
+
+Thanks!
+
+					Jordan
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-05e5639bd284f706>
+DATE: 1995-03-30T21:25:35+00:00  FROM: "Jordan K. Hubbard" <jkh () freefall ! cdrom ! com> <None>
+SUBJ: Re: Any support for IDE CDROM (ATAPI ?)
+BODY:
+
+Soren is currently working on it.
+
+					Jordan
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-328f7767b2da1d65>
+DATE: 1995-03-31T06:53:31+00:00  FROM: "Jordan K. Hubbard" <jkh () freefall ! cdrom ! com> <None>
+SUBJ: Re: New daemon pictures (Re: "Commissioning" some artwork..)
+BODY:
+
+Imported!
+
+					Jordan
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-2a30e3d99a6502f2>
+DATE: 1995-04-06T13:04:23+00:00  FROM: "Jordan K. Hubbard" <jkh () FreeBSD ! org> <None>
+SUBJ: Please welcome Satoshi Asami to the FreeBSD core team!
+BODY:
+Satoshi joins us as "Head of Ports" - he will effectively be
+the liason between the rest of the core team and the greater ports
+group, much as Rich Murphey does for the XFree86 Project.
+
+So if it's a ports infrastructure issue you've got, Satoshi's yer
+only man! (pardon my Irish.. :-).
+
+I'll still be lurking around in the corners, of course, ready to
+offer the occasional pithy comment or two, but I'm already wearing
+too many hats as it is - somebody else needed to "own" Ports
+and Satoshi graciously accepted when we offered it to him.
+
+Thank you, Satoshi!  Welcome!
+
+					Jordan
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-929b70d04c4f683f>
+DATE: 1995-04-10T00:53:54+00:00  FROM: "Jordan K. Hubbard" <jkh () freefall ! cdrom ! com> <None>
+SUBJ: Re: should su retain ${DISPLAY}
+BODY:
+sh
+ike
+
+Actually, yes, we have had it.. :-) Barry Morris (bsm@freebsd.org) did
+indeed hack it into su back in the 1.x days..
+
+					Jordan
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-65c1aa0145ef1357>
+DATE: 1995-04-11T06:07:32+00:00  FROM: "Jordan K. Hubbard" <jkh () freefall ! cdrom ! com> <None>
+SUBJ: A clarification of "freefall.cdrom.com" vs "freebsd.cdrom.com"
+BODY:
+I was actually surprised to see a few early bug reports for
+2.0-950408-SNAP - the snap-that-wasn't.  Surprised because the
+snapshot never made it onto freebsd.cdrom.com, and I didn't expect
+that people would consider *anything* on freefall to be release
+material.  Well, just to make that plain, anything you find on
+freefall.cdrom.com is a complete jumble of random body parts and at no
+time anything guaranteed to resemble an actual "release".  If you see
+snapshots there sometimes it's because I'm testing them and nothing
+more.
+
+I don't actually announce snapshots officially until they're copied to
+freebsd.cdrom.com, alias wcarchive.cdrom.com, alias ftp.freebsd.org. *grin*
+The arrival of a new snapshot or release is also typically heralded by
+an announcement in your mailbox ("Hi all!  A new snapshot is born,
+here are its features, blah blah.." - we all know the drill :-).
+
+So though some of you may have seen "2.0-950408-SNAP", it never really
+lived and would not have been declared legally alive until it hit
+ftp.freebsd.org.  I'm not so anal that I'm going to do all my work
+behind closed doors just for the hell of it, and if some of you
+intrepid explorers are bold enough to dash in an
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-fa0c9eb3ee4948aa>
+DATE: 1995-04-15T04:50:11+00:00  FROM: "Jordan K. Hubbard" <jkh () freefall ! cdrom ! com> <None>
+SUBJ: Re: Fujitsu MB86960/965 Ethernet driver
+BODY:
+
+I think it's always sort of fallen into zones of responsibility.
+Somebody has a VM fix, David or John grab it.  Someone plays with the
+networking code, Garrett grabs it.  Somebody changes ports, Satoshi
+grabs it (or prods somebody in ports to do so).
+
+Unfortunately, nobody really owns device drivers.. :-(
+
+I'm open to suggestions.  I'm too sleepy at the moment to cogitate too
+successfully on this topic..
+
+					Jordan
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-a4f91945c00c411b>
+DATE: 1995-04-21T08:25:12+00:00  FROM: "Jordan K. Hubbard" <jkh () freefall ! cdrom ! com> <None>
+SUBJ: Re: Help! Pinnacle Micro Recordable CD!
+BODY:
+c
+
+cd /your/tree
+mkisofs -i -T -r -p -z -q -m -w -l -Z -o <some filename>
+dd if=<some filename> of=/dev/<your_burner>
+
+Assuming, of course, that FreeBSD supports talking to your_burner at a
+constant minimum data rate (the hard part, and something Peter Dufault
+has been working on).  Myself, I take the image that mkisofs spits out
+and simply ftp it to the burner machine, which runs DOS and a TCP/IP stack.
+
+						Jordan
+
+P.S.  All the mkisofs options except -o are bogus - I'm just making
+fun of its strange and arcane *required* optional arguments! :-)
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-2c1d2d0da935f96f>
+DATE: 1995-04-24T23:51:00+00:00  FROM: jkh () violet ! berkeley ! edu (Jordan K !  Hubbard) <None>
+SUBJ: fyi - Im
+BODY:
+Path: agate!biosci!internet!biosci!not-for-mail
+From: zibi@NMSU.EDU (Zbigniew Perlinski)
+Newsgroups: comp.windows.x.announce
+Subject: ANNOUNCE: BETA IXI Visual Tcl 1.0
+Date: 24 Apr 1995 08:59:32 -0700
+Organization: IXI Limited
+Lines: 73
+Sender: daemon@net.bio.net
+Approved: usenet@net.bio.net
+Distribution: inet
+Message-ID: <9504241429.AA14751@alex.x.org>
+NNTP-Posting-Host: net.bio.net
+
+IXI Visual Tcl 1.0 technology for OSF/Motif development on SunOs and 
+Solaris RISC Sparc stations is now freely available via anonymous ftp 
+from IXI and SCO.
+
+An extension of the popular Tcl scripting language, IXI Visual Tcl 
+supports rapid, easy-to-learn development of OSF/Motif tools and 
+applications.  IXI Visual Tcl is ideal for system administrators and
+software developers striving to provide their customers with 
+a comprehensive graphical environment.
+
+IXI Visual Tcl is a multiplatform port of "SCO Visual Tcl 1.0" developed by
+The Santa Cruz Operation to provide a graphical user interface-building 
+scripting environment for the new generation of SCO OpenServer systems 
+management tools.  SCO and IXI are making the Visual Tcl 1.0 technology
+freely-available via anonymous ftp described below.
+
+I
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-f1c6e6842b8a7b29>
+DATE: 1995-05-01T18:51:48+00:00  FROM: jkh () violet ! berkeley ! edu (Jordan K !  Hubbard) <None>
+SUBJ: fyi..
+BODY:
+Newsgroups: info.bsdi.users,comp.unix.bsd.bsdi.announce
+Path: agate!howland.reston.ans.net!news.moneng.mei.com!hookup!noc.tor.hookup.net!metrics.com!tomh
+From: alan@lscruz.scf.lmsc.lockheed.com (Alan Strassberg)
+Subject: ANNOUNCE: New bootpd and DHCP patches (was: arptnew messages)
+Approved: tomh@metrics.com
+Keywords: bootpd DHCP arp
+Message-ID: <D7wMBq.8zA@metrics.com>
+Sender: tomh@metrics.com (Tom Haapanen)
+Organization: Lockheed M & S Co., Santa Cruz, California
+Date: Sun, 30 Apr 1995 16:41:38 GMT
+Followup-To: info.bsdi.users,comp.unix.bsd.bsdi.misc
+Lines: 26
+Xref: agate info.bsdi.users:11602 comp.unix.bsd.bsdi.announce:4
+
+
+Trevor Nancarrow <Trevor.Nancarrow@durham.ac.uk> wrote:
+
+	This has been fixed in the latest release of bootpd.
+	Patches to support DHCP are also available.
+
+	The latest bootpd is available from:
+
+ 	ftp://firewall.mc.com/pub/bootp-2.4.3.tar.Z
+
+	And the patches to add DHCP are found:
+
+	ftp://nimbus.anu.edu.au/pub/tridge/samba/contributed/DHCP.patch
+
+					alan
+-- 
+-------------
+Alan Strassberg   alan@lmsc.lockheed.com     (408) 425-6139
+Lockheed Martin - home-pageless in Santa Cruz, California.
+
+-- 
+[ /tom haapanen -- tomh@metrics.com -- software metrics inc -- 
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-e5cd2d511da9af32>
+DATE: 1995-05-31T05:14:48+00:00  FROM: "Jordan K. Hubbard" <jkh () freefall ! cdrom ! com> <None>
+SUBJ: Re: [On the new Install]
+BODY:
+
+Hmmm.
+
+
+Huh?  It doesn't assume anything of the kind!  It simply lets you edit
+all three fields as one string.  And hey, I ain't changin' it so
+there's not much point in arguing over it anyway! :-) If you feel like
+working something up that you think is better suited then I'm not at
+all adverse to looking over/adopting your code, it's just not
+important enough to me to do anything about it personally!
+
+
+Well, I _am_ constrained somewhat by the objects that libdialog gives
+me!  In this particular case, I have no other way of knowing when the
+user wants to leave the menu!  When you're selecting an item and
+hitting return, what you're REALLY doing is selecting the OK button
+(you'll notice that the cursor stays over it after the arrow keys have
+brought you to some item of choice).  If I want to leave, rather than
+make a choice, then I have to use Cancel.  Sorry, but again - if you
+want to see some other behavior, you'll have to make the (reliable!)
+hacks to libdialog yourself and submit them.  I have zero interest in
+making changes of that sort at this late stage!
+
+
+See above.
+
+
+I'm also seeing it as a person who knows what's easily _possible_, so
+kindly try to take a little of that i
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-6698a960f6232cd2>
+DATE: 1995-05-31T21:53:07+00:00  FROM: "Jordan K. Hubbard" <jkh () freefall ! cdrom ! com> <None>
+SUBJ: Re: 2.0.5-ALPHA installation hangs
+BODY:
+
+Could you let me know?  It's actually pretty important! :-(
+
+
+This is a bug I just fixed - if you don't assign a mountpoint to a DOS
+partition, it does this.  Assign a mountpoint and all is well!
+
+					Jordan
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-28451a65684b6827>
+DATE: 1995-05-31T22:28:43+00:00  FROM: "Jordan K. Hubbard" <jkh () freefall ! cdrom ! com> <None>
+SUBJ: Re: Japanese documents for 2.0.5?
+BODY:
+
+That's fine, and a good idea! :-)
+
+
+I'm afraid not..  I need a font and a screen map, like we have for
+Cyrillic.  I would like very much to have this, so if you need
+information on font formats you can talk to Soren Schmidt
+<sos@freebsd.org>
+
+						Jordan
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-276a54b4d4626c34>
+DATE: 1995-05-31T20:06:07+00:00  FROM: "Jordan K. Hubbard" <jkh () freefall ! cdrom ! com> <None>
+SUBJ: Re: Smooth upgrade to 2.0.5 from latest SNAP - HOW ?
+BODY:
+
+Erm..  No. :-(
+
+
+It will work, but you will get warnings spewed at you every time you
+boot up.  We went to a new "Slices" paradigm (where's that slice.doc,
+Poul & Bruce?? :-) which has made laying down your partitions again
+a pretty good idea!
+
+
+Backups! :-)
+
+						Jordan
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-5859d30f66bcf601>
+DATE: 1995-06-21T18:31:35+00:00  FROM: "Jordan K. Hubbard" <jkh () freebsd ! org> <None>
+SUBJ: Re: Ep drive (mcast with 3c509)
+BODY:
+
+I don't know..   Help spread the word! :-)
+
+					Jordan
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-012c3ec0379c5aa0>
+DATE: 1995-06-26T14:06:13+00:00  FROM: "Jordan K. Hubbard" <jkh () freebsd ! org> <None>
+SUBJ: Re: Need driver for unsupported (?) ethernet card.
+BODY:
+
+Indeed.  I've asked Ilya here to contact the company and get full tech
+specs (and possibly some eval cards) since it's simply impossible to
+get any further with this without such information.
+
+						Jordan
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-d492addd79fe8dc8>
+DATE: 1995-07-07T19:53:27+00:00  FROM: "Jordan K. Hubbard" <jkh () freebsd ! org> <None>
+SUBJ: Re: cvs commit: ports/editors/xemacs/pkg COMMENT PLIST
+BODY:
+
+Eh?  Maybe we're having email drop-outs, because I didn't get anything.
+
+My not getting a reply is what finally led me to just do it myself, in
+fact, as I surmised (incorrectly) that you were simply busy..
+
+
+Well, I removed them both and can always rescue one from the Attic.
+Are you sure the patch is still required?  I've been running the
+XEmacs I build from this for awhile now..
+
+
+Erm.  Yeah, sorry!  I forgot about that and will add it.
+
+
+Also true..  Shucks.
+
+
+Hmm...  It looks like I'm batting about .100 on this one.  Would you
+like to simply pick it up again?  Sorry for standing on your feet,
+and I'll jump off with hastily mumbled apologies and go back to doing
+something else now if you wish!
+
+						Jordan
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-6153ea512118adaa>
+DATE: 1995-07-08T00:39:45+00:00  FROM: "Jordan K. Hubbard" <jkh () freebsd ! org> <None>
+SUBJ: PPP prioritized packet queueing..
+BODY:
+Heikki's recent fix to if_ppp.c for properly supporting IPTOS_LOWDELAY
+connections got me thinking - does ijppp, which uses the tunneling
+driver, do something similar?
+
+I've long thought that it would be _really nice_ if I could continue
+to use my interactive telnet/rlogin sessions while running an ftp or
+sup in the background and not have them become unusably unresponsive,
+which is what happens now.  In an ideal world, you'd continue to type
+away with almost no perception that anything else was happening and
+anything from an ftp to a long WWW transfer could be going on in the
+background simultaneously.
+
+This is especially important for households where one machine is
+serving as the PPP gateway with a 28.8K modem or something and several
+machines are on an internal network to it.  User A is trying to read
+his email and commit something important on freefall and meanwhile
+users B and C, who are actually down the hall and locked in their
+bedrooms, are surfing the web and seeing how many porno GIFs they can
+download before user A comes stomping down the hall yelling "WOULD YOU
+GUYS KINDLY STOP SPAMMING THE %*&#$@!! LINK WHILE I'M TRYING TO USE IT
+FOR INTERACTIVE WORK?!!"
+
+Or something
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-ff24b791b0f35a50>
+DATE: 1995-07-10T21:56:42+00:00  FROM: "Jordan K. Hubbard" <jkh () time ! cdrom ! com> <None>
+SUBJ: Peter MacLeod: Re: Future Domain SCSI
+BODY:
+Any takers?  I've got the specs from FD which I'll be happy to send,
+but the time to write such a driver I currently do NOT have (the
+requisite skills themselves notwithstanding).
+
+					Jordan
+------- Forwarded Message
+
+Return-Path: macleod@godzilla.adoc.xerox.com
+Received: from freefall.cdrom.com (freefall.cdrom.com [192.216.222.4]) by time.cdrom.com (8.6.11/8.6.9) with ESMTP id LAA01176 for <jkh@time.cdrom.com>; Mon, 10 Jul 1995 11:59:57 -0700
+Received: from violet.berkeley.edu (violet.Berkeley.EDU [128.32.155.22])
+          by freefall.cdrom.com (8.6.10/8.6.6) with ESMTP id MAA18589
+          for <jkh@freefall.cdrom.com>; Mon, 10 Jul 1995 12:00:05 -0700
+Received: from alpha.xerox.com by violet.berkeley.edu (8.6.10/1.33r)
+	id MAA13937; Mon, 10 Jul 1995 12:00:03 -0700
+Received: from dunvegan.ADOC.xerox.com ([13.242.128.126]) by alpha.xerox.com with SMTP id <14613(4)>; Mon, 10 Jul 1995 11:59:43 PDT
+Received: by dunvegan.ADOC.xerox.com id <16376>; Mon, 10 Jul 1995 11:59:33 -0700
+From: Peter MacLeod <macleod@adoc.xerox.com>
+To: jkh@violet.berkeley.edu (Jordan K. Hubbard)
+Subject: Re: Future Domain SCSI
+Newsgroups: comp.unix.bsd.freebsd.misc
+Organization: Xerox Desktop Document System
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-add6dd42a9ec980b>
+DATE: 1995-07-21T13:18:48+00:00  FROM: "Jordan K. Hubbard" <jkh () time ! cdrom ! com> <None>
+SUBJ: Re: FreeBSD in MCA
+BODY:
+No, we currently do not support MCA.  Sorry!
+
+					Jordan
+
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-7ae7e73d3562a130>
+DATE: 1995-08-26T19:01:53+00:00  FROM: "Jordan K. Hubbard" <jkh () time ! cdrom ! com> <None>
+SUBJ: Re: [ANNOUNCE] kernel builder
+BODY:
+
+I didn't mean to get the impression that we didn't like your stuff,
+far from it.  I was simply trying to make it clear that the "BSD"
+copyright represents our ideal as far as copyrights are concerned,
+and we see no reason to put "no commercial use" limitations on anything.
+
+Sure, I understand your own motivation for doing so but we're also not
+particularly worried about "CDROM sellers who don't respect our
+stuff."  We would, of course, ALWAYS prefer that they respect our work
+but to try to legally enforce it just ends you up with lots of code
+with overly-restrictive copyrights on it! :-(
+
+Your own little script is actually quite an inspiration, and I hope
+that we can do an even fancier version that lets you "zoom" on
+different devices when you want to edit their port/irq/drq settings
+rather than just accepting the defaults.  It would also be nice if it
+inherited the defaults from your previous kernel config file!
+
+All of those features can be added to a more complex kernel-config
+tool, and I'm sure that they will be, but you've at least shown that a
+pretty credible job can be done the simple way too!  I was actually
+fairly impressed with your little shell script..
+
+					Jordan
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-865bef78264576c6>
+DATE: 1995-08-28T18:50:33+00:00  FROM: "Jordan K. Hubbard" <jkh () time ! cdrom ! com> <None>
+SUBJ: Re: joining
+BODY:
+
+Aha! You already did.  Didn't you read the note on -hackers saying
+"posting to this group constitutes an acceptance of the terms" :-)
+
+What sorts of things do you WANT to do?
+
+					Jordan
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-40da1f50cb23e6cd>
+DATE: 1995-08-31T20:13:04+00:00  FROM: "Jordan K. Hubbard" <jkh () time ! cdrom ! com> <None>
+SUBJ: Re: /etc/disktab and stuff
+BODY:
+
+Argh.  Previous message got swallowed by this stupid DOS box.
+
+Anyway, what I wanted to say was that to really be an effective
+release engineering engine, you have to have tracks pointing to where
+you want to go and how you go about getting there on a day-to-day
+basis.  Saying what NOT to do is important, but it's only a very small
+component of the problem.  People do not thrive in an environment where
+their only guidance is negative reinforcement for their "mistakes".
+
+
+Hmmm.
+
+						Jordan
+
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-f13c958b209d4add>
+DATE: 1995-09-15T22:30:14+00:00  FROM: "Jordan K. Hubbard" <jkh () time ! cdrom ! com> <None>
+SUBJ: Re: Are xdr_float and xdr_double supported now?
+BODY:
+Yes, they are.
+
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-962db08edef95fa7>
+DATE: 1995-09-16T01:11:49+00:00  FROM: "Jordan K. Hubbard" <jkh () time ! cdrom ! com> <None>
+SUBJ: iostat and lp0
+BODY:
+Shouldn't iostat report parallel port I/O?  It's kind of hard otherwise
+to measure performance and load with the lp0 network device..
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-f3674cf359e5cd6a>
+DATE: 1995-09-27T01:30:09+00:00  FROM: "Jordan K. Hubbard" <jkh> <None>
+SUBJ: 2.1.0-950922-SNAP available for testing on freefall.freebsd.org
+BODY:
+Once I hear a couple of "victory!" calls, I'll transfer it to wcarchive
+(e.g. ftp.freebsd.org) when it will then be "official".
+
+Thanks - reports to me please!
+
+				Jordan
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-6f9ed1745b730814>
+DATE: 1995-09-27T15:14:09+00:00  FROM: "Jordan K. Hubbard" <jkh () time ! cdrom ! com> <None>
+SUBJ: What the competition'' is up to - just FYI.
+BODY:
+Path: reason.cdrom.com!nntp-ucb.barrnet.net!agate!howland.reston.ans.net!news.sprintlink.net!sunic!sunic.sunet.se!news.funet.fi!news.helsinki.fi!usenet
+From: Red Hat Software <redhat@redhat.com>
+Newsgroups: comp.os.linux.announce
+Subject: COMMERCIAL: Red Hat Linux 2.0 available via FTP!  100% ELF!
+Followup-To: comp.os.linux.misc
+Date: Wed, 20 Sep 95 12:21:40 GMT
+Organization: ?
+Lines: 173
+Approved: linux-announce@news.ornl.gov (Lars Wirzenius)
+Message-ID: <cola-liw-811599700-22761-1@oravannahka.helsinki.fi>
+NNTP-Posting-Host: kruuna.helsinki.fi
+Mime-Version: 1.0
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: 8bit
+
+Red Hat Software is pleased to announce the availability of
+
+                 Red Hat Commercial Linux 2.0
+
+the latest and greatest from the zany folks at Red Hat Software.  Come
+see us at UNIX Expo September 19th through 21st.  We will be demoing
+all our latest stuff.  We will also be showing various Red Hat tools
+running on an Alpha!
+
+1. Introduction				Red Hat Software
+2. Features				(800) 454-5502
+3. RPM Packaging System			(203) 454-5500
+4. FTP Availability			info@redhat.com
+5. Support and Mailing List		http://www.redhat.com
+6. CD-ROMs
+
+
+*** I
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-de9e0948cc7308d1>
+DATE: 1995-09-30T01:40:39+00:00  FROM: "Jordan K. Hubbard" <jkh () time ! cdrom ! com> <None>
+SUBJ: Re: 2.1.0-950928-SNAP now available for testing
+BODY:
+Damn.  Looks like taking the SYSV* options out of the boot kernel
+didn't make it small enough.
+
+Time to look at this again.
+
+Thanks for the bug report!
+
+				Jordan
+
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-d6cfd3efff2ae03f>
+DATE: 1995-10-22T13:59:28+00:00  FROM: "Jordan K. Hubbard" <jkh () time ! cdrom ! com> <None>
+SUBJ: User groups update?
+BODY:
+Hi all..
+
+About 6 months ago, there was a lot of hoopla about forming FreeBSD
+user groups and such, and a few of this list's more intrepid members
+even went so far as to establish a few in different parts of the U.S.
+
+A successful "international conference" was also held in Aachen, and
+great congradulations are due Christoph Kukulies for pulling off what
+was apparently a very entertaining and successful event - sorry I
+couldn't make it!.
+
+Anyway, I just want to make sure that we're not losing steam in what
+is a very worth-while endevour: The formation of user groups for
+discussing and supporting FreeBSD.
+
+Look at it this way: We don't have a book, and as much as we'd like to
+we're just not going to have one for awhile.  This therefore leaves
+email, word of mouth and user groups as the only ways of disseminating
+information.  User groups have the added benefit of giving us hacker
+types something social to do occasionally, and you often learn far
+more from an evening of discussion with other hackers than you could
+in a week of reading email.  For the more commercially inclined, user
+groups are also a great way of making potentially valuable contacts
+and are very worth-while indeed!
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-3402bad0284dd29f>
+DATE: 1995-10-27T18:21:32+00:00  FROM: "Jordan K. Hubbard" <jkh () time ! cdrom ! com> <None>
+SUBJ: I forgot to mention (re: 2.1.0-951026-SNAP).
+BODY:
+This snapshot also tries again to address the IDE CDROM and 4MB issues
+(the features that wouldn't die! :).
+
+Please send me ANY success/fail reports you may have with either
+4MB configurations or the atapi.flp boot image with IDE CDROM drives.
+
+Thank you!
+
+					Jordan
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-7a5e226536213ff7>
+DATE: 1995-10-30T02:54:59+00:00  FROM: "Jordan K. Hubbard" <jkh () time ! cdrom ! com> <None>
+SUBJ: Re: 2.1.0-951026-SNAP fails on IDE CDROM
+BODY:
+
+I'd appreciate that, thanks!  This is my biggest area of suspicion..
+
+					Jordan
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-0c4f8942db8e3495>
+DATE: 1995-10-30T20:46:00+00:00  FROM: "Jordan K. Hubbard" <jkh () time ! cdrom ! com> <None>
+SUBJ: ** Spang! **  951026-SNAP updated.
+BODY:
+This is just a short announcement to note that I've just overlayed the
+most recent snapshot distribution, 951026-SNAP, with a new release
+from today.  Mirrors should "refresh" themselves accordingly in the
+next day or so.
+
+This is NOT A NEW SNAPSHOT.  This simply corrects a couple of annoying
+bugs that were preventing people from making full use of the snapshot
+in certain situations.  This will not require new testing and previous
+snapshot folk need not worry - if they've already managed to install
+from the SNAP then they probably didn't suffer from the problems that
+I just fixed anyway!  :-)
+
+Bugs fixed:
+
+	o Atapi boot floppy now assumes it's alone by itself on the second
+	  IDE controller - this seems to work a lot better for most folks
+	  who were provided with dedicated controllers when they purchased
+	  their IDE CDROMS.  People with IDE disks on multiple IDE
+	  controllers should NOT use this floppy image.  Stick with boot.flp
+	  and build a custom kernel or something.
+
+	o The apache WEB server installation makes fewer assumptions about
+	  where you'll be putting things.
+
+	o Installing the secure dist no longer requires that you also
+	  install Kerberos in order to get things
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-f2f9aff2a03acb97>
+DATE: 1995-10-31T06:40:04+00:00  FROM: "Jordan K. Hubbard" <jkh () time ! cdrom ! com> <None>
+SUBJ: Re: ** Spang! ** 951026-SNAP updated.
+BODY:
+
+Huh..  Nope!  Here are exactly the relevant config lines I used:
+
+controller      wdc0    at isa? port "IO_WD1" bio irq 14 vector wdintr
+disk            wd0     at wdc0 drive 0
+disk            wd1     at wdc0 drive 1
+
+controller      wdc1    at isa? port "IO_WD2" bio irq 15 vector wdintr
+#disk           wd2     at wdc1 drive 0
+#disk           wd3     at wdc1 drive 1
+
+options         ATAPI   #Enable ATAPI support for IDE bus
+device          wcd0    #IDE CD-ROM
+
+Which is basically exactly what you suggested I do.  So much for that
+idea, eh? :-)
+
+					Jordan
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-acfd631c006e7dd9>
+DATE: 1995-11-08T10:32:26+00:00  FROM: "Jordan K. Hubbard" <jkh () time ! cdrom ! com> <None>
+SUBJ: How are you guys getting abuse to work?!
+BODY:
+I get:
+
+jkh@time-> abuse.x11R6 
+abuse.x11R6: using incompatible library '/lib/libm.so.4'
+        Desire minor version >= 6 and found 5
+abuse.x11R6: using incompatible library '/lib/libc.so.4'
+        Desire minor version >= 6 and found 5
+ Abuse (Engine Version 1.10)
+LINUX: 'ioctl' fd=4, typ=0x450(P), num=0xa not implemented
+LINUX: 'ioctl' fd=4, typ=0x450(P), num=0x5 not implemented
+SNDDRV : Sample size 8 failed, sound effects disabled
+sound effects driver returned failure, sound effects disabled
+Added himem block (4000000 bytes)
+undrv: using incompatible library '/lib/libc.so.4'
+        Desire minor version >= 6 and found 5
+Net driver : unable to make fifo in /tmp: Operation not permitted
+dieing
+net driver : cleaning up
+
+I've loaded the new linux_lib port and everything.  Doing it as root
+(I'm a brave man) simply changed the last message to:
+
+Net driver : unable to make fifo in /tmp: Invalid argument
+
+Ideas?
+
+					Jordan
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-3c99c3ef8baf2d4f>
+DATE: 1995-11-13T05:36:37+00:00  FROM: "Jordan K. Hubbard" <jkh () time ! cdrom ! com> <None>
+SUBJ: Please welcome Peter Wemm to the core team!
+BODY:
+The FreeBSD core team has gained another member today:  Peter Wemm.
+
+Peter has long been an active contributor to FreeBSD, is our current
+CVS repository manager and all around importer-of-new-bits.  I'm sure
+you've seen his many messages to the hackers and committers lists, so
+no further introduction should be necessary.
+
+All of us on the core team feel that Peter bring fresh enthusiasm and
+drive to the project and will be a valuable member of the team.
+
+Welcome, Peter!
+
+					Jordan
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-23d2678ea5677a6c>
+DATE: 1995-11-13T08:44:12+00:00  FROM: "Jordan K. Hubbard" <jkh () time ! cdrom ! com> <None>
+SUBJ: mrouted equivalent for Solaris 5.3?
+BODY:
+I've read through the MBONE FAQ and it claims that multicast routing
+is supported in Solaris, but darned if I can figure out how to enable
+it (or where they stuck `traceroute', but that's another story).
+
+I've got to go into work, leaving my little FreeBSD box behind (sniff)
+and sitting behind an SS5, and I don't want to miss the NASA video and
+audio currently being broadcast.
+
+Anyone ever put a solaris box on the MBONE who'd care to share some
+tips?
+
+Thanks!
+
+						Jordan
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-8f2fab95de5c220c>
+DATE: 1995-11-15T10:46:01+00:00  FROM: "Jordan K. Hubbard" <jkh () FreeBSD ! org> <None>
+SUBJ: [Fwd: Re: 3com 3c590 PCI Ethernet drivers....]
+BODY:
+This is a multi-part message in MIME format.
+
+-----------------------------16344997403924306071736312174
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+
+Comments?
+-- 
+						Jordan
+
+-----------------------------16344997403924306071736312174
+Content-Type: message/rfc822
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
+
+Newsgroups: comp.unix.bsd.freebsd.misc
+Path: reason.cdrom.com!nntp-ucb.barrnet.net!agate!howland.reston.ans.net!newsfeed.internetmci.com!chi-news.cic.net!uwm.edu!math.ohio-state.edu!deshaw.com!christos
+From: christos@deshaw.com (Christos Zoulas)
+Subject: Re: 3com 3c590 PCI Ethernet drivers....
+Message-ID: <DI1Grr.2zG@deshaw.com>
+Sender: usenet@deshaw.com
+Nntp-Posting-Host: es2
+Organization: D. E. Shaw & Co.
+References: <30A7A9F7.41C67EA6@maui.com>
+Date: Tue, 14 Nov 1995 15:09:26 GMT
+Lines: 20
+
+In article <30A7A9F7.41C67EA6@maui.com> Richard Puga <puga@maui.com> writes:
+
+I think that there is a bug in that driver. In the pci attach routine
+there is an out instruction that tries to reset the card but does an
+out at the wrong absolute address; just remove it.
+
+I know because I borrowed the knowledge from the driver to port it
+to NetB
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-d313c737a00b7ba3>
+DATE: 1995-11-25T17:51:10+00:00  FROM: "Jordan K. Hubbard" <jkh () time ! cdrom ! com> <None>
+SUBJ: /c is totally fully again on freefall! :-(
+BODY:
+8837    phk
+14316   jkh
+16813   jmb
+34840   davidg
+49473   maillogs
+66175   rich
+70456   freefall.local
+110308  local
+110712  NetBSD
+124987  src
+193023  4.4BSD-Lite2
+316445  ports
+403724  www
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-b313fa20ddb76a15>
+DATE: 1995-11-29T18:33:06+00:00  FROM: "Jordan K. Hubbard" <jkh () time ! cdrom ! com> <None>
+SUBJ: Anyone having 2.1 install trouble with funky IDE hardware?
+BODY:
+I've received two reports now of wdc installation malfuntion with
+hardware that used to work under 2.0.5.  This is disturbing.  In both
+cases, the hardware was some old and funky 386/25 with IDE controller
+and disk hardware of similar vintage.  Have any folks out there
+installed 2.1 on old-n-mouldy 386 equipment without incident?  I have
+no such hardware here myself to test.
+
+					Jordan
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-1328609ee311642e>
+DATE: 1995-12-01T20:33:40+00:00  FROM: "Jordan K. Hubbard" <jkh () time ! cdrom ! com> <None>
+SUBJ: Re: Bootable ATAPI CDROM
+BODY:
+If I can do it in a fairly unobtrusive way then I certainly might
+consider it, but I'd have to know the nitty-gritty details behind
+genning a bootable CD image! :-(
+
+						Jordan
+
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-ab7b14ac4b0ba126>
+DATE: 1995-12-03T22:33:03+00:00  FROM: "Jordan K. Hubbard" <jkh () time ! cdrom ! com> <None>
+SUBJ: Re: Inodes for news server
+BODY:
+I'll probably start doing snaps of 2.2 in another month or two.  I'm
+waiting for some devfs stuff to settle.
+
+
+						Jordan
+
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-53f39931722b4cb7>
+DATE: 1995-12-06T12:55:20+00:00  FROM: "Jordan K. Hubbard" <jkh () time ! cdrom ! com> <None>
+SUBJ: Second appeal for sup, CTM, mail and www servers.  Please help!
+BODY:
+First the good news:
+
+We've decided, after much internal debate, to re-open general read
+access to the CVS repository.  Yes, you heard that correctly - no more
+access lists for getting at the CVS bits, we're opening the doors.
+
+Not only will we open the doors, in fact, but we will also probably
+deploy a few extra services for getting at this information in various
+interesting ways, including the clever little "check out over anon
+FTP" feature that OpenBSD is using and probably a few other WWW based
+search/diff tools as well (contributions welcome here, BTW).
+
+
+Now the bad news:
+
+We don't have the resources to actually deploy any of these services
+from freefall.freebsd.org.
+
+We're truly maxed out here folks.  Not only is our poor machine
+handling almost hallucinogenic amounts of mail these days, but it is
+also dealing with the load of many thousands of web hits, 10 sup
+clients pounding it almost continuously and a CTM delta generation job
+from hell that causes the lights in the machine room to dim noticeably
+whenever it runs.
+
+Now if this machine were just sitting in a corner beating its brains
+out, nobody would actually even care.  Unfortunately, it's instead
+supposed to be our mai
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-5a9dacf6071ee17b>
+DATE: 1995-12-09T21:43:33+00:00  FROM: "Jordan K. Hubbard" <jkh () time ! cdrom ! com> <None>
+SUBJ: Setting up a FTP/WWW/SUP/DNS server for freebsd.org
+BODY:
+
+[I'm cc'ing this to hackers since there are actually some important general
+points to be made here, and your comments above could actually be anybody's
+since the kind of confusion you're having is kind of generic]
+
+I was wrong. :-)
+
+Seriously, this isn't something I can do with just an account, I would
+need both an account and the root password to set up sup (or CTM, for
+that matter) properly.
+
+I was also being more than a bit optimistic when I made my offer to do
+the setup for folks.  As I actually think about this a little more, it
+isn't really something that's a one-off task, it needs fairly active
+and ongoing administration to make sure it's working.  Much of the
+time it's hands-free, that is true, but when these services break they
+really do require someone who knows the ropes to get them back online.
+
+I therefore would like to modify my original proposal: I won't do the
+actual setup myself since this is something best done by the person
+who'll be actually maintaining it and, for obvious reasons, this can't
+be me (one or two, maybe, but all of them would be insane).  Going
+through the setup process, as annoying an extra duty as it might be,
+will leave the administrator a lot 
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-78cfd0407781644b>
+DATE: 1995-12-11T01:12:48+00:00  FROM: "Jordan K. Hubbard" <jkh () time ! cdrom ! com> <None>
+SUBJ: Re: why the hell did sup remove many of my ports directories ?
+BODY:
+
+Maybe because you have an old sup file?  You don't read announce? :-)
+
+					Jordan
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-cb3a19d2e354df86>
+DATE: 1995-12-12T05:09:20+00:00  FROM: "Jordan K. Hubbard" <jkh () time ! cdrom ! com> <None>
+SUBJ: Re: /stand/sysinstall can't access DOS
+BODY:
+It sounds like a variation on the same problem I fixed with CDROMs (though
+the fix won't actually be on the CDROM version :-( ) - I'll look into
+it, thanks.
+
+					Jordan
+
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-f417c1e4c7eb85ad>
+DATE: 1995-12-15T18:12:25+00:00  FROM: "Jordan K. Hubbard" <jkh () time ! cdrom ! com> <None>
+SUBJ: Re: Running Spry WebServer for BSDi under 2.1.0
+BODY:
+
+Is this a BSD/OS 1.x or BSD/OS 2.0 binary?
+
+If it's the latter, then the changes necessary to get it to run were
+only recently brought into FreeBSD-current.  Unfortunately, -current
+is also fairly unstable right now so I'd have to recommend waiting
+until we figure out a way of bringing it back into 2.1 (yes, I support
+bringing this into 2.1 as I actually feel it to be pretty darn
+important that we be able to run BSD/OS 2.0 binaries in our mainstream
+releases!).
+
+					Jordan
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-a1e884be148d8bd4>
+DATE: 1995-12-15T18:29:27+00:00  FROM: "Jordan K. Hubbard" <jkh () time ! cdrom ! com> <None>
+SUBJ: Hmmmm.  Are all the sup servers now online?
+BODY:
+So far we have:
+
+	sup.freebsd.org		-> freefall (soon to be somewhat more limited
+				   in the number of connections supported)
+
+	sup2.freebsd.org	-> insecurity.shockwave.com (between
+				   10 and 20 connections allowed, I think)
+
+	sup3.freebsd.org	-> lucus.fsl.orst.edu (between
+				   10 and 20 connections allowed, I think)
+
+I also believe that nic.funet.fi provides sup access, but we haven't
+had anyone volunteer to be a DNS secondary for Finland yet so it's not
+yet registered under sup.fi.freebsd.org, as it eventually should be.
+
+I've also been thinking about this a little and wondering if we
+shouldn't *also* map servers into freebsd.org regardless of location?
+That we could rank them also by degrees of connectivity, e.g.:
+
+	sup.freebsd.org		(as shown)
+	sup2.freebsd.org	(as shown)
+	sup3.freebsd.org	(as shown)
+	sup4.freebsd.org	(TBA)
+	sup5.freebsd.org	(TBA)
+	sup6.freebsd.org	(TBA)
+	sup7.freebsd.org	-> sup.fi.freebsd.org	(these
+	sup8.freebsd.org	-> sup.de.freebsd.org	don't
+	sup9.freebsd.org	-> sup.uk.freebsd.org	exist
+	sup10.freebsd.org	-> sup2.uk.freebsd.org	yet)
+
+And so on..  The same would hold true for `ftp' and `www', of course.
+
+My major objective here is to make it as dead-
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-4f7d2e11eea3b73f>
+DATE: 1995-12-16T16:53:14+00:00  FROM: "Jordan K. Hubbard" <jkh () time ! cdrom ! com> <None>
+SUBJ: Re: Does the man page for sio need updating for Cyclades?
+BODY:
+
+Whoops!  So much for giving people the right information!  Gary, I guess
+we'd better get back on IRC and straighten that guy out! ;-(
+
+Apologies for the confusion..
+
+						Jordan
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-24b4605dbdb51c29>
+DATE: 1995-12-29T18:49:35+00:00  FROM: "Jordan K. Hubbard" <jkh () time ! cdrom ! com> <None>
+SUBJ: Re: Lowend support!
+BODY:
+
+If you guys have this sort of hardware, you can help us figure out a
+way of getting BIOS information preserved so that the installation
+utilities (and, in particular, /usr/src/release/libdisk) can get at
+them.
+
+You can also greatly help us out by agreeing to do timely BETA testing for
+the next releases - if you have the kind of hardware there that causes
+frequent problems, then you're good test cases for finding and fixing
+those problems.
+
+Finally, anyone at all wishing to look into the 4MB installation
+problem BEFORE we're ready to do the next release would find their
+efforts well appreciated! :-)
+
+					Jordan
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-34afbd086a925515>
+DATE: 1995-12-29T19:48:04+00:00  FROM: "Jordan K. Hubbard" <jkh () time ! cdrom ! com> <None>
+SUBJ: Re: 2.1 release probs
+BODY:
+
+Works just great for me on a stock 2.1 system.  Something must
+have gone wrong for you during your upgrade?
+
+						Jordan
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-2e982be22dca163b>
+DATE: 1995-12-29T23:34:36+00:00  FROM: "Jordan K. Hubbard" <jkh () time ! cdrom ! com> <None>
+SUBJ: Re: FreeBSD on Thinkpad 365
+BODY:
+
+Yay!  I love to hear IDE CDROM success reports.
+
+
+Yes, but feign ignorance of the problem anyway.  It's your only
+workable defense, trust me. :-)
+
+					Jordan
+
+
+
+--------------------------------------------------------------------------------
+MID: 8237.787691876@time.cdrom.com
+DATE: 1994-12-17T19:17:56+00:00  FROM: "Jordan K. Hubbard" <jkh@time.cdrom.com> <None>
+SUBJ: Don't scream..
+BODY:
+Let me tell you the story of a little CDROM company who could never
+quite manage to do a FreeBSD release without *something* going wrong.
+1.0 begat 1.0.2, then 1.1 begat another 1.1 without mastering errors,
+and then finally 2.0, out of the woods technically speaking with me at
+the helm, fell prey to the art department.  All the CDs say "January
+1994" on them, which would be a neat trick indeed.  Since I wasn't
+here when the artwork came back, I only noticed it the day I arrived.
+
+Since the error is only typographic in nature, CDs continue to go out
+the door, but it still rankles us here and so we have decided to do
+another reprinting of the covers, CDs and other misprinted material
+associated with it.  While we were reprinting the CDs, I inquired as
+to whether or not another _master_ image might be sent for
+duplication, and I was informed that yes, this was quite possible.
+
+I therefore put it to you, the members of -hackers and -current,
+whether or not you'd care to see (wait for it)..
+
+		FreeBSD 2.0.5!
+
+[Aiieee!!]
+
+I've talked to both Poul-Henning Kamp and David Greenman about this,
+and we all think that a snap-shot of FreeBSD-current under the
+brand-name (and version) of 2.0.5 i
+
+--------------------------------------------------------------------------------
+MID: 18712.787761816@time.cdrom.com
+DATE: 1994-12-18T14:43:36+00:00  FROM: "Jordan K. Hubbard" <jkh@time.cdrom.com> <None>
+SUBJ: Re: Don't scream.. 
+BODY:
+Does this still occur when you roll-back Garrett's changes?
+This is our likely course of action for 2.0.5.
+
+					Jordan
+
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 199412191613.IAA01010@time.cdrom.com
+DATE: 1994-12-19T16:13:52+00:00  FROM: "Jordan K. Hubbard" <jkh@time.cdrom.com> <None>
+SUBJ: Freefall status.
+BODY:
+freefall's 3rd drive, misbehaving for ages, finally got too sick to live
+last night and so Poul and I powered it down and bagged our plans for
+2.0.5.  I think the portents were simply too significantly against it.
+
+Since freefall seemed to want to be down anyway, I took the opportunity
+for some long delayed and put-off things like the 2.0 upgrade, a general
+reshuffle of our disk space resources and some other tweaks that I've been
+meaning to get to for a long time.  I also tossed the old /usr/ports and
+/usr/src (they're on tape and the old cvs tree - fear not) and replaced
+them with the current sources.  That and the ncvs -> cvs change, which
+I'll save for another day, should go a long way towards getting outselves
+out of the 1.x legal swamp.
+
+freefall is upgrading itself to -current right now as there are some
+embarassing bugs in 2.0 that we wouldn't want on freefall, and it
+should be ready for a return to service sometime early Tuesday morning.
+
+					Jordan
+
+
+
+--------------------------------------------------------------------------------
+MID: 830.787975490@time.cdrom.com
+DATE: 1994-12-21T02:04:50+00:00  FROM: "Jordan K. Hubbard" <jkh@time.cdrom.com> <None>
+SUBJ: Re: OpenStep for FreeBSD? 
+BODY:
+
+I wouldn't count on that.  How are these MIT people swinging the deal?
+
+					Jordan
+
+
+
+--------------------------------------------------------------------------------
+MID: 199412210335.TAA13868@freefall.cdrom.com
+DATE: 1994-12-21T03:35:44+00:00  FROM: "Jordan K. Hubbard" <jkh> <None>
+SUBJ: sup customers take heed!
+BODY:
+The 2.0 sources and ports are now in /usr/src and /usr/ports, respectively.
+
+If you're supping, you will almost certainly have to change your supfile
+to not look in /new/...  It's all in the default locations now..
+
+					Jordan
+
+
+
+--------------------------------------------------------------------------------
+MID: 199412210342.TAA16887@freefall.cdrom.com
+DATE: 1994-12-21T03:42:50+00:00  FROM: "Jordan K. Hubbard" <jkh> <None>
+SUBJ: freefall hardware status
+BODY:
+Again, just to note for the record:
+
+Freefall's sd2, long suffering and causing us problems for about 2 months
+now, finally got too flakey to live the day before yesterday and I took the
+opportunity for some much needed maintainance on freefall.  Here's
+what's been done:
+
+o	Freefall's OS is upgraded to 2.0-current
+
+o	Disk space reorganized and most old 1.x stuff eliminated.
+	We now have multiple gigabytes free.
+
+o	Memory increased from 32MB to 48MB
+
+o	Quantum Prodrive 1800 upgraded to Quantum Empire 2100.  This should
+	make system disk access a fair bit faster.
+
+o	Machine upgraded from 486/DX2 66 to Pentium P5-90 PCI.
+	Disk controller also upgraded from AHA1742 to Bt946c
+
+Now before you Pentium haters out there start screaming "fdiv bug!
+fdiv bug!" just let me say that I know about the problems with the
+Pentium, thank you, and I have 5 of them here providing very good
+service, one of which is ftp.cdrom.com.  We don't intend to do
+ray tracing or pipe stress calculations on freefall, we intend
+to process one hell of a lot of mail (as usual) and do lots of
+CVS ops.  For this purpose, the Pentium will suit us admirably.
+
+If you really must run some mathematical application that would
+b
+
+--------------------------------------------------------------------------------
+MID: 8914.788035856@time.cdrom.com
+DATE: 1994-12-21T18:50:56+00:00  FROM: "Jordan K. Hubbard" <jkh@time.cdrom.com> <None>
+SUBJ: Re: Linux commercial softwarew 
+BODY:
+
+Thanks!  Every little bit like this helps.
+
+For an even more sobering look, just pick up a copy of The Linux Journal
+and see all the commercial advertising in it!
+
+And if you know of a company who provides a product you'd like to see
+for FreeBSD, let me know.  With my vendor relations hat on, I do a lot
+of such begging and pleading..
+
+						Jordan
+
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 8865.788035365@time.cdrom.com
+DATE: 1994-12-21T18:42:45+00:00  FROM: "Jordan K. Hubbard" <jkh@time.cdrom.com> <None>
+SUBJ: Re: tar man page 
+BODY:
+
+I've already talked with the editor of the Linux Journal about a
+possible sister publication, and have been meaning to call him back at
+some point after the hols and resume our discussions.  It would help
+me GREATLY if I could get some preliminary estimates on the size of
+the potential subscriber base, however.  Would one of you be willing
+to collect this information from -hackers and/or the newsgroups?  I'd
+do it myself, but my poor mailbox already runneth over and I'm not
+posessed of any free time at the moment, so I've no time to find or
+hack together a statistics gathering robot and stick it up on
+freefall.
+
+I'm not sure we have the numbers either, but why not see if we can't
+use this computer thing here to collect some harder data? :-)
+
+					Jordan
+
+
+
+--------------------------------------------------------------------------------
+MID: 26496.788122767@time.cdrom.com
+DATE: 1994-12-22T18:59:27+00:00  FROM: "Jordan K. Hubbard" <jkh@time.cdrom.com> <None>
+SUBJ: Re: Linux commercial softwarew 
+BODY:
+
+It's on indefinite hold.  Warner can say more if he wishes, so I'll
+defer to him.  And as far as being available for Linux is concerned,
+what's available there is _old_.
+
+					Jordan
+
+
+
+--------------------------------------------------------------------------------
+MID: 15884.788158020@time.cdrom.com
+DATE: 1994-12-23T04:47:00+00:00  FROM: "Jordan K. Hubbard" <jkh@time.cdrom.com> <None>
+SUBJ: Time for a weird experiment..
+BODY:
+As part of an ongoing effort to improve the overall release process
+BEFORE a release actually slips out the door with problems that make
+folks mad, I'm going to start rolling fairly regular binary snapshots.
+
+These snapshots will be very similar to full releases, except that
+they'll be somewhat more minimal.  I won't, for example, roll new
+XFree86 distributions or worry overmuch about the tools directory,
+unless either of those two things are affected by the changes I'm
+trying to test.  Where it makes sense, I'll simply link distributions
+or files that are unchanged across snapshots to the previous snapshot
+or major release.
+
+I also won't be changing the major release number for each snapshot,
+and will *only* be tweaking the announced version in the boot floppies
+so that you know when the snapshot was made (the release string will
+be of the form: FreeBSD-2.0-YYMMDD-SNAP).  These are NOT releases,
+these are *snapshots*, and it's important that this distinction be
+preserved.  People can and will, of course, refer to snapshots by date
+in mail or netnews, I just don't want them to start thinking that
+Christmas came early and 2.1 is already out! :-)
+
+Finally, I probably won't go out of 
+
+--------------------------------------------------------------------------------
+MID: 19939.788218545@time.cdrom.com
+DATE: 1994-12-23T21:35:45+00:00  FROM: "Jordan K. Hubbard" <jkh@time.cdrom.com> <None>
+SUBJ: Re: How much of a schlepp... 
+BODY:
+If someone wants to package up sup in a more user-friendly package,
+I won't argue, I just don't have time right now myself.  Ideally,
+there should be a `sup starter kit' that asks you where you want
+to put src, ports, which collections you want, and then generates
+a supfile for you.  Now that'd be a concept! :-)
+
+			Jordan
+
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 20143.788220071@time.cdrom.com
+DATE: 1994-12-23T22:01:11+00:00  FROM: "Jordan K. Hubbard" <jkh@time.cdrom.com> <None>
+SUBJ: Re: A lighter sup -v? 
+BODY:
+
+No, actually not.  It means "I checked the file and the dates didn't
+match, even if the contents did, so I'm stamping it again and
+recording the fact in my sup logs."  In most stable situations, you
+shouldn't even see that most of the time!
+
+				Jordan
+
+
+
+--------------------------------------------------------------------------------
+MID: 16603.788473577@time.cdrom.com
+DATE: 1994-12-26T20:26:17+00:00  FROM: "Jordan K. Hubbard" <jkh@time.cdrom.com> <None>
+SUBJ: Re: Linux commercial softwarew 
+BODY:
+
+Tanglible returns on investments are always so nebulous though.  I know
+I'm preaching to the choir when I tell YOU this, but I'm just hoping that
+you'll pass some of these questions discretely onto management when
+and if possible.
+
+1.	How much `investment' can there be in a FreeBSD or Linux version
+	when all the work has already been done and will be done by one
+	of your people working more or less for free on it?
+
+2.	Have you guys ever heard of advertising?  That's investment that
+	goes out in hopes that more sales will come in as a result.
+	_Properly handled_ this time, a free port could be really good
+	advertising for a fraction of what it would cost to advertise in
+	all the various journals that programmers and other people of
+	potential interest hang out.  Free UN*X is not just a cute thing,
+	it's becoming all the rage, like the Internet did.  Do they want to
+	catch the wave now, or do they want to do it later?
+
+Some might find it hubris to claim that Free UN*X is a big thing, but
+I've been going to these conferences lately and I'm seeing a BIG
+impact that's only getting bigger every day.  Maybe your management
+should _attend_ one of these symposiums sometime! :-)
+
+[Yeah, Jor
+
+--------------------------------------------------------------------------------
+MID: 7685.788562321@time.cdrom.com
+DATE: 1994-12-27T21:05:21+00:00  FROM: "Jordan K. Hubbard" <jkh@time.cdrom.com> <None>
+SUBJ: Re: file systems supported... 
+BODY:
+I'm afraid that Linux and FreeBSD don't really share any filesystem types
+in common, unless you could Linux's FFS project..  I really don't know
+the status of that.
+
+You can mount DOS filesystems, but not HPFS..
+
+					Jordan
+
+as
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 3844.788832194@time.cdrom.com
+DATE: 1994-12-31T00:03:14+00:00  FROM: "Jordan K. Hubbard" <jkh@time.cdrom.com> <None>
+SUBJ: Re: ypserv for FreeBSD? 
+BODY:
+
+I could live with that.  I could really use a complete yp* set so that
+I could just create users on freefall and have thud mirror this.  Right
+now, it's just an admin pain!
+
+					Jordan
+
+
+
+--------------------------------------------------------------------------------
+MID: 4564.788848338@time.cdrom.com
+DATE: 1994-12-31T04:32:18+00:00  FROM: "Jordan K. Hubbard" <jkh@time.cdrom.com> <None>
+SUBJ: Re: WD-7000 SCSI-driver for FreeBSD 
+BODY:
+
+This is great!  We'd definitely be interested in seeing your code once
+you're ready to release something..
+
+					Jordan
+
+
+
+--------------------------------------------------------------------------------
+MID: 26651.788893180@time.cdrom.com
+DATE: 1994-12-31T16:59:40+00:00  FROM: "Jordan K. Hubbard" <jkh@time.cdrom.com> <None>
+SUBJ: Re: sed bugs 
+BODY:
+
+Well, then by all means campaign for them and try to get them adopted!
+
+
+Assuming that this is dealt with somehow.. :-)
+
+					Jordan
+
+
+
+--------------------------------------------------------------------------------
+MID: 2070.789117491@time.cdrom.com
+DATE: 1995-01-03T07:18:11+00:00  FROM: "Jordan K. Hubbard" <jkh@time.cdrom.com> <None>
+SUBJ: Re: perl 5? 
+BODY:
+
+5.0 certainly won't be in FreeBSD by default for some time.  No
+schedule yet, but we certainly won't even consider putting it in until
+conventional wisdom whispers it's ready.
+
+
+A port is indeed how I envisioned it being done in the interim.
+/usr/ports/lang/perl5 perhaps?  Go for it!
+
+					Jordan
+
+
+
+==========================================================================================
+DB: freebsd-announce.duckdb  hits=8
+==========================================================================================
+--------------------------------------------------------------------------------
+MID: <199504231010.DAA20312@freefall.cdrom.com>
+DATE: 1995-04-23T10:10:57+00:00  FROM: Jordan K. Hubbard <jkh>
+SUBJ: Demo version of SimCity Classic now available for FreeBSD 2.x.
+BODY:
+The award winning computer game SimCity is an animated simulation
+game, providing a set of rules and tools for planning and building a
+complex dynamic simulated city.
+
+ The player can zone land use, hook up the power grid, build roads,
+bridges, parks and stadiums, raise taxes, and even summon disasters,
+causing the city to grow and thrive or crumble and die.
+
+ SimCity features multiple city views and maps with overlays for
+graphically displaying your own city or one of the existing cities in
+the library included.  With the multi-player version of SimCity
+Classic players can simultaneously interact on screen, having to vote
+on many of the more critical decisions.
+
+SimCity Classic for FreeBSD is available for $49.95 for the single
+player version and $69.95 for the multi-player player version directly
+from M&W Consulting, Ltd., (713) 627-9229, FAX (713) 626-7566 or Email
+ronniew252@aol.com.
+
+You may also download a fully functional free demo of SimCity via FTP
+on the internet at ftp.dfw.net (198.175.15.10) in the "pub/SimCity"
+directory, using the filename "scl_bsd_3.6b.tar.Z", or as the
+FreeBSD package "SimCity-3.6b.tgz" from the central FreeBSD commercial
+products repository:
+
+	ftp:
+
+--------------------------------------------------------------------------------
+MID: <199505220514.WAA24700@violet.berkeley.edu>
+DATE: 1995-05-22T05:14:45+00:00  FROM: Jordan K. Hubbard <jkh@violet.berkeley.edu>
+SUBJ: Buslogic PCI controllers _no longer recommended_ by FreeBSD team
+BODY:
+In the past, I've publically endorsed Buslogic's products highly in these
+newsgroups and have had only the best things to say about their
+tech support.  They were always more than cooperative in their support
+for free operating systems, providing technical details on their products
+when requested and always being quick to send PROM upgrades to customers
+with a simple phone call.
+
+Well, it greatly saddens me to say that things have clearly taken
+a turn for the worse at Buslogic.  Not only have they introduced
+a number of serious bugs in their latest firmware for the Bt946,
+but their tech support has become essentially non-existent.  Multiple phone
+calls from numerous FreeBSD users (including several on the core team)
+have gone unanswered, and hold times of up to an hour are not uncommon
+(after which we've always hung up, so it's uncertain as to whether they'd
+have simply left us there all day :-).  This is not just an anomaly
+in their phone system, as multiple messages left with tech support
+and the central operator have also gone completely unreturned.
+
+It is therefore incumbent upon me to withdraw my previous endorsement
+of Buslogic and recommend instead that users rely on the Ada
+
+--------------------------------------------------------------------------------
+MID: <199505300844.BAA08337@freefall.cdrom.com>
+DATE: 1995-05-30T08:44:26+00:00  FROM: Jordan K. Hubbard <jkh>
+SUBJ: Announcing FreeBSD 2.0.5 ALPHA!
+BODY:
+It gives me great pleasure to announce the release of FreeBSD 2.0.5-ALPHA!
+
+2.0.5A represents a significant improvement over FreeBSD 2.0R and is our
+release-candidate for 2.0.5R later on this week.  We're doing a short ALPHA
+release in order to shake out any glaring bugs before rolling 2.0.5R and
+moving on to 2.1R, which is the bigger goal.  If you're looking for 2.1R,
+then THIS ISN'T IT.  It's an interim release aimed at people who want
+something newer and better than 2.0R to run and don't feel like waiting
+for late July, which is when 2.1R is scheduled to go into BETA test.
+
+That said, I think most people will enjoy 2.0.5 quite a bit, and while
+it's not up to the "full release quality" we hope to have for 2.1R, it's
+certainly more stable and generally nicer to use than 2.0R!
+
+2.0.5A is currently available on the following sites:
+
+	Primary:	ftp://ftp.freebsd.org/pub/FreeBSD/2.0.5-ALPHA
+
+	Secondary:	ftp://freefall.cdrom.com/pub/FreeBSD/2.0.5-ALPHA
+
+And should be up on the following MIRROR sites shortly:
+
+Australia       ftp://ftp.physics.usyd.edu.au/FreeBSD
+                <dawes@xfree86.org>
+
+Finland         ftp://nic.funet.fi/pub/unix/FreeBSD
+                <ftp@nic.funet.fi>
+
+F
+
+--------------------------------------------------------------------------------
+MID: <28643.805060890@freefall.cdrom.com>
+DATE: 1995-07-06T20:01:30+00:00  FROM: Jordan K. Hubbard <jkh@freefall.cdrom.com>
+SUBJ: FreeBSD 2.0.5 CD from Walnut Creek CDROM now shipping.
+BODY:
+Walnut Creek CDROM, in cooperation with the FreeBSD Project, is
+proud to announce that FreeBSD 2.0.5R is now available on a 2 CD set
+(at no extra charge) and shipping now.
+
+  The first CD contains all packed distribution information necessary
+for installing all components of the system, from FreeBSD binaries and
+sources to XFree86 3.1.1u1.
+
+  The second CD contains a "live filesystem" which has all packages
+and distribution information unpacked into a filesystem that you can
+mount.  Subsequent releases will probably see this gain additional
+usefulness with full "run from the CD" functionality (it can actually
+be done now with an MFS boot floppy containing symlinks, but this
+still remains an "experts only" feature).
+
+This CD also features Christian Gusenbauer's "dosboot" feature which
+allows you to boot into the installation directly from the CD running
+under DOS, allowing you to eliminate boot floppies entirely with a
+supported CDROM drive.
+
+This CD comes with an unconditional money-back guarantee and may
+be ordered from:
+
+    Walnut Creek CDROM
+    Suite D-899
+    4041 Pike Lane
+    Concord  CA  94520
+    USA
+
+     1 800 786-9907 (Toll Free Sales)
+     1 800 731-7177 (Toll Free Te
+
+--------------------------------------------------------------------------------
+MID: <199510220904.CAA06656@time.cdrom.com>
+DATE: 1995-10-22T09:04:39+00:00  FROM: Jordan K. Hubbard <jkh@time.cdrom.com>
+SUBJ: New installation floppies available.
+BODY:
+Reply-To: hackers@freebsd.org
+
+In my haste to fix the ppp installation problems, I rushed in
+some other fixes that broke the root floppy extract.  I backed
+out my previous floppy image update because of this, but that
+left the ppp installation broken.  I've now fixed (I hope!) both
+problems and put new images up on ftp.freebsd.org.  The dates
+are Oct 22 02:04 (FYI).
+
+Thanks!
+
+					Jordan
+
+From owner-freebsd-announce  Sun Oct 22 05:00:43 1995
+Return-Path: owner-announce
+Received: (from root@localhost)
+          by freefall.freebsd.org (8.6.12/8.6.6) id FAA04539
+          for announce-outgoing; Sun, 22 Oct 1995 05:00:43 -0700
+Received: from time.cdrom.com (time.cdrom.com [192.216.222.226])
+          by freefall.freebsd.org (8.6.12/8.6.6) with ESMTP id FAA04521
+          ; Sun, 22 Oct 1995 05:00:38 -0700
+Received: (from jkh@localhost) by time.cdrom.com (8.6.12/8.6.9) id FAA22012; Sun, 22 Oct 1995 05:00:22 -0700
+Date: Sun, 22 Oct 1995 05:00:22 -0700
+From: "Jordan K. Hubbard" <jkh@time.cdrom.com>
+Message-Id: <199510221200.FAA22012@time.cdrom.com>
+To: announce@freebsd.org
+Subject: package installer menu in new sysinstall
+Cc: hackers@freebsd.org
+Sender: owner-announce@freebsd.org
+Preceden
+
+--------------------------------------------------------------------------------
+MID: <23627.815085960@time.cdrom.com>
+DATE: 1995-10-30T20:46:00+00:00  FROM: Jordan K. Hubbard <jkh@time.cdrom.com>
+SUBJ: ** Spang! **  951026-SNAP updated.
+BODY:
+This is just a short announcement to note that I've just overlayed the
+most recent snapshot distribution, 951026-SNAP, with a new release
+from today.  Mirrors should "refresh" themselves accordingly in the
+next day or so.
+
+This is NOT A NEW SNAPSHOT.  This simply corrects a couple of annoying
+bugs that were preventing people from making full use of the snapshot
+in certain situations.  This will not require new testing and previous
+snapshot folk need not worry - if they've already managed to install
+from the SNAP then they probably didn't suffer from the problems that
+I just fixed anyway!  :-)
+
+Bugs fixed:
+
+	o Atapi boot floppy now assumes it's alone by itself on the second
+	  IDE controller - this seems to work a lot better for most folks
+	  who were provided with dedicated controllers when they purchased
+	  their IDE CDROMS.  People with IDE disks on multiple IDE
+	  controllers should NOT use this floppy image.  Stick with boot.flp
+	  and build a custom kernel or something.
+
+	o The apache WEB server installation makes fewer assumptions about
+	  where you'll be putting things.
+
+	o Installing the secure dist no longer requires that you also
+	  install Kerberos in order to get things
+
+--------------------------------------------------------------------------------
+MID: <18463.816240997@time.cdrom.com>
+DATE: 1995-11-13T05:36:37+00:00  FROM: Jordan K. Hubbard <jkh@time.cdrom.com>
+SUBJ: Please welcome Peter Wemm to the core team!
+BODY:
+The FreeBSD core team has gained another member today:  Peter Wemm.
+
+Peter has long been an active contributor to FreeBSD, is our current
+CVS repository manager and all around importer-of-new-bits.  I'm sure
+you've seen his many messages to the hackers and committers lists, so
+no further introduction should be necessary.
+
+All of us on the core team feel that Peter bring fresh enthusiasm and
+drive to the project and will be a valuable member of the team.
+
+Welcome, Peter!
+
+					Jordan
+
+From owner-freebsd-announce  Wed Nov 15 06:38:45 1995
+Return-Path: owner-announce
+Received: (from root@localhost)
+          by freefall.freebsd.org (8.6.12/8.6.6) id GAA06220
+          for announce-outgoing; Wed, 15 Nov 1995 06:38:45 -0800
+Received: (from gclarkii@localhost)
+          by freefall.freebsd.org (8.6.12/8.6.6) id GAA06183
+          ; Wed, 15 Nov 1995 06:38:33 -0800
+From: Gary Clark II <gclarkii>
+Message-Id: <199511151438.GAA06183@freefall.freebsd.org>
+Subject: The Handbook!
+To: freebsd-doc
+Date: Wed, 15 Nov 1995 06:38:33 -0800 (PST)
+Cc: freebsd-announce
+X-Mailer: ELM [version 2.4 PL24]
+Content-Type: text
+Content-Length: 1121      
+Sender: owner-announce@FreeBSD.ORG
+Precedence: bulk
+
+Hello,
+
+--------------------------------------------------------------------------------
+MID: <19165.818254520@time.cdrom.com>
+DATE: 1995-12-06T12:55:20+00:00  FROM: Jordan K. Hubbard <jkh@time.cdrom.com>
+SUBJ: Second appeal for sup, CTM, mail and www servers.  Please help!
+BODY:
+First the good news:
+
+We've decided, after much internal debate, to re-open general read
+access to the CVS repository.  Yes, you heard that correctly - no more
+access lists for getting at the CVS bits, we're opening the doors.
+
+Not only will we open the doors, in fact, but we will also probably
+deploy a few extra services for getting at this information in various
+interesting ways, including the clever little "check out over anon
+FTP" feature that OpenBSD is using and probably a few other WWW based
+search/diff tools as well (contributions welcome here, BTW).
+
+
+Now the bad news:
+
+We don't have the resources to actually deploy any of these services
+from freefall.freebsd.org.
+
+We're truly maxed out here folks.  Not only is our poor machine
+handling almost hallucinogenic amounts of mail these days, but it is
+also dealing with the load of many thousands of web hits, 10 sup
+clients pounding it almost continuously and a CTM delta generation job
+from hell that causes the lights in the machine room to dim noticeably
+whenever it runs.
+
+Now if this machine were just sitting in a corner beating its brains
+out, nobody would actually even care.  Unfortunately, it's instead
+supposed to be our mai
+
+==========================================================================================
+DB: freebsd-current.duckdb  hits=80
+==========================================================================================
+--------------------------------------------------------------------------------
+MID: <199508060718.AAA26575@time.cdrom.com>
+DATE: 1995-08-06T07:18:41+00:00  FROM: Jordan K. Hubbard <jkh@time.cdrom.com>
+SUBJ: Republic of Palau considered harmful?
+BODY:
+The following build failure:
+
+===> usr.sbin/tzsetup  
+cc -O2 -m486 -pipe -I. -I/b/src/usr.sbin/tzsetup   -c menus.c
+menus.c:1190: parse error before `.'
+menus.c:1193: parse error before `.'
+menus.c:1196: parse error before `.'
+menus.c:2149: `Rep' undeclared here (not in a function)
+menus.c:2149: initializer element for `menu_Pacific[15]' is not constant
+
+Is caused by an extra `.' in the Palau entry in the
+/usr/src/share/zoneinfo/australasia file.
+
+Changing:
+
+# ZONE-DESCR Pacific Palau Rep._of_Palau Palau  
+
+To:
+
+# ZONE-DESCR Pacific Palau Rep_of_Palau Palau
+
+Makes everything happy again.  Since I don't even know where the
+Republic of Palau IS (well, OK, I'm lying - I looked it up and
+it's a chain of islands in Western Micronesia, but that's beside
+the point! :) I'm going to leave this possible change to you..
+
+					Jordan
+
+From owner-freebsd-current  Sun Aug  6 00:55:16 1995
+Return-Path: current-owner
+Received: (from majordom@localhost)
+          by freefall.cdrom.com (8.6.11/8.6.6) id AAA29477
+          for current-outgoing; Sun, 6 Aug 1995 00:55:16 -0700
+Received: from irz301.inf.tu-dresden.de (irz301.inf.tu-dresden.de [141.76.1.11])
+          by freefall.cdrom.com (8.6.11/8.6.6)
+
+--------------------------------------------------------------------------------
+MID: 12690.793461732@freefall.cdrom.com
+DATE: 1995-02-22T14:02:12+00:00  FROM: "Jordan K. Hubbard" <jkh@freefall.cdrom.com> <None>
+SUBJ: Re: mountd changes 
+BODY:
+
+Does it actually work though? :-)
+
+
+-alldirs?
+
+My biggest bug-a-boo is that it lets you mount the same filesystem
+more than once! :)
+
+					Jordan
+
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 199502221534.HAA17757@freefall.cdrom.com
+DATE: 1995-02-22T15:34:07+00:00  FROM: "Jordan K. Hubbard" <jkh> <None>
+SUBJ: TRUE and FALSE
+BODY:
+These have always been traditionally defined in <stdio.h>, yet I see
+that we don't do it there.  Are these now in violation of POSIX namespace
+or something?  Should I be including something else to get them?
+
+So far, I see definitions in:
+
+<curses.h>
+<dialog.h>
+<ncurses.h>
+<netccitt/hdlc.h>
+<netiso/tp_param.h>
+<nfs/nfs_node.c>
+<nfs/nfs_nqlease.c>
+<nfs/nfs_socket.c>
+<nfs/nfs_srvcache.c>
+<nfs/nfs_subs.c>
+<nfs/nfs_syscalls.c>
+<nfs/nfs_vfsops.c>
+<nfs/nfs_vnops.c>
+<rpc/types.h>
+
+And that seems a little silly (so is exporting the entire NFS tree into
+/usr/include, while we're talking about silly, but that's another diatribe
+entirely).
+
+Comments?
+
+					Jordan
+
+
+
+--------------------------------------------------------------------------------
+MID: 5415.793490429@freefall.cdrom.com
+DATE: 1995-02-22T22:00:29+00:00  FROM: "Jordan K. Hubbard" <jkh@freefall.cdrom.com> <None>
+SUBJ: Re: TRUE and FALSE 
+BODY:
+
+Thank you, Garrett.  However, you complelely and utterly missed my point.
+
+When I said "exported" I meant exactly that: One way or another we
+have now /usr/include/nfs/* containing the full NFS sources rather
+than just the relevant header files.  If you're any kind of purist at
+all, this is immediately obvious as being rather evil.  If I wanted to
+move my header files from one place to another I could easily be
+forgiven for wanting to simply tar up the contents of /usr/include and
+get ONLY the header files (rather than a pastiche' of links, files,
+sources and god-only-knows-what).
+
+To put it another way, the /usr/include directory follows NO
+consistent paradigm - some things are links, others are copies of
+stuff, still others are just pointers into the sources.  If you make
+with SHARED=copies then this unifies some of it by copying stuff
+across, but it could then be argued that the "non-copies" case should
+see /usr/include as *only* a link farm, with no actual files in there.
+
+Am I the only one who sees this as somewhat inconsistent?
+
+					Jordan
+
+
+
+--------------------------------------------------------------------------------
+MID: 199503050321.TAA23812@freefall.cdrom.com
+DATE: 1995-03-05T03:21:35+00:00  FROM: "Jordan K. Hubbard" <jkh> <None>
+SUBJ: Current sound driver broken - will crash your system!
+BODY:
+Ok, as those of you who read cvs-* probably already know, I've committed
+Sujal's update to the Voxware 3.0 drivers and this has caused some problems.
+More specifically, devices that were formerly found (snd1, for example)
+are not found and talking to /dev/audio with an SB16 generally sounds like
+hell then crashes your system.
+
+I'm sorry for momentarily breaking audio in -current, though this at least
+can hopefully be classified under "non fatal error" long enough for us
+to figure out what is going on and fix it.  If no fix is found in the next
+48 hours, I will revert the import and we'll go back to square one on
+the voxware upgrade.
+
+					Jordan
+
+
+
+--------------------------------------------------------------------------------
+MID: 199503060557.VAA00476@time.cdrom.com
+DATE: 1995-03-06T05:57:18+00:00  FROM: "Jordan K. Hubbard" <jkh@FreeBSD.org> <None>
+SUBJ: "Sparse" files?
+BODY:
+Do we have any support for the likes of Linux's sparse files?  Patrick
+here says it saves around 25% for executables alone when run-length
+compression is done for zero'd blocks.
+
+					Jordan
+
+
+
+--------------------------------------------------------------------------------
+MID: 24592.794473975@freefall.cdrom.com
+DATE: 1995-03-06T07:12:55+00:00  FROM: "Jordan K. Hubbard" <jkh@freefall.cdrom.com> <None>
+SUBJ: Re: "Sparse" files? 
+BODY:
+
+I don't think it does it on-the-fly, no.  Bruce pretty much clinched
+it when he pointed out that GNU cp, which linux uses by default,
+automatically creates the holes and so their executables "compress" as
+they're installed (or moved elsewhere).  GNU tar also has support for
+this and they probably leave the flag on (--sparse) by default.
+
+But as Bruce also points out, our block size of 8K also makes this
+kind of compression scheme much less likely to be effective.
+
+					Jordan
+
+
+
+--------------------------------------------------------------------------------
+MID: 20507.794599912@freefall.cdrom.com
+DATE: 1995-03-07T18:11:52+00:00  FROM: "Jordan K. Hubbard" <jkh@freefall.cdrom.com> <None>
+SUBJ: Re: FreeBSD Sound 
+BODY:
+Also, after just talking with David, I have to say that I support Garrett's
+suggestion - make 'em device names, stop screwing around! :-)
+
+It's easy.  Go into /sys/i386/conf/files.i386 and change all the stupid
+snd entries into the names Garrett suggested - gus, midi, ad1848, etc.
+
+Then go through the code and change the EXCLUDES into
+
+#if N_GUS < 1
+...
+#endif
+
+N_<device> > 1 becomes your equivalent to "AUDIO_<blah>", and when it's 0 you
+have an effective EXCLUDE_BLAH.
+
+Boy, wouldn't that clean things up!
+
+					Jordan
+
+
+
+--------------------------------------------------------------------------------
+MID: 8291.795889321@freefall.cdrom.com
+DATE: 1995-03-22T16:22:01+00:00  FROM: "Jordan K. Hubbard" <jkh@freefall.cdrom.com> <None>
+SUBJ: Re: ANy one useing ft driver under 2.0 current??? 
+BODY:
+
+This still goes in a direction I'd rather not see any more effort put.
+/dev/ft0 should be a kernel driver, large and dynamically loaded if
+necessary (we are moving in that direction, after all), but offering
+the same kind of device interface as is offered by the other tape
+drivers.  The floppy tape stuff has always been a lone wolf, and a
+perennial irritation to those who'd like a consistent doc picture.
+
+We've always known how useful it is to its adherants too, but as Rod's
+panic example shows, support for it in -current has also been spotty
+at best.  All told, it's one of those parts of our system that I'd
+quality as a "trouble spot" - something that needs to be ripped out
+screaming by the roots and essentially reimplemented (or at least
+rengineered).
+
+It does appear as if this work is now underway (the device driver
+conversion) and I support the work in that direction.  I'd hate to see
+the current system limp along much longer - it'd be far more merciful
+to shoot it.
+
+					Jordan
+
+
+
+--------------------------------------------------------------------------------
+MID: 4904.796283278@freefall.cdrom.com
+DATE: 1995-03-27T05:47:58+00:00  FROM: "Jordan K. Hubbard" <jkh@freefall.cdrom.com> <None>
+SUBJ: Re: Problem with newfs. 
+BODY:
+
+&^*()%$#@*!!
+
+This is the second such report.  Thank you for reporting it.  I am
+beginning to get the feeling that something is not altogether kosher
+in the wd driver now! :-(
+
+					Jordan
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 1002.796434508@freefall.cdrom.com
+DATE: 1995-03-28T23:48:28+00:00  FROM: "Jordan K. Hubbard" <jkh@freefall.cdrom.com> <None>
+SUBJ: NCR support broken in 950322-SNAP?
+BODY:
+I can get the exact text of the message if necessary, but just trying
+to install 950322-SNAP on an NCR machine just caused an assertion failure
+in ncr.c followed by general failure.  Unfortunately, it cleared the
+screen shortly thereafter before I could copy it down, but I can reproduce
+it as necessary.
+
+I'm not sure it's necessary in any case as I just saw a very similar
+(well, identical) failure report from someone else (WITH the text :),
+so I'm getting the feeling that the NCR driver is simply broken in -current.
+
+Anyone care to try and verify this?
+
+Thanks!
+
+					Jordan
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 199503310826.AAA03683@time.cdrom.com
+DATE: 1995-03-31T08:26:03+00:00  FROM: "Jordan K. Hubbard" <jkh@FreeBSD.org> <None>
+SUBJ: Compiling LINT
+BODY:
+Error 1:
+
+128 -DKERNEL -Di386 -DLOAD_ADDRESS=0xF0100000  ../../net/if_fddisubr.c
+../../net/if_fddisubr.c: In function `fddi_input':
+../../net/if_fddisubr.c:486: `ac' undeclared (first use this function)
+../../net/if_fddisubr.c:486: (Each undeclared identifier is reported only once
+../../net/if_fddisubr.c:486: for each function it appears in.)
+../../net/if_fddisubr.c:487: `eh' undeclared (first use this function)
+
+Error 2:
+
+../../i386/isa/cx.c: In function `cxrinta':
+../../i386/isa/cx.c:788: `RISA_OVERRUN' undeclared (first use this function)
+../../i386/isa/cx.c:788: (Each undeclared identifier is reported only once
+../../i386/isa/cx.c:788: for each function it appears in.)
+
+
+Errors in make all:
+
+ent -Wredundant-decls -DPSEUDO_LKM -c /usr/src/lkm/if_sl/../../sys/net/if_sl.c
+/usr/src/lkm/if_sl/../../sys/net/if_sl.c: In function `sl_outfill':
+/usr/src/lkm/if_sl/../../sys/net/if_sl.c:979: structure has no member named `t_out'
+
+Foo.
+
+				Jordan
+
+
+
+--------------------------------------------------------------------------------
+MID: 24787.797034810@freefall.cdrom.com
+DATE: 1995-04-04T22:33:30+00:00  FROM: "Jordan K. Hubbard" <jkh@freefall.cdrom.com> <None>
+SUBJ: Re: LINT settings 
+BODY:
+
+I think it was set this way to avoid SCSI controller clash..  Hmmmmmm.
+Suggestions?
+
+						Jordan
+
+
+
+--------------------------------------------------------------------------------
+MID: 1947.797054651@freefall.cdrom.com
+DATE: 1995-04-05T04:04:11+00:00  FROM: "Jordan K. Hubbard" <jkh@freefall.cdrom.com> <None>
+SUBJ: Re: NOTICE: If you care, speak now! 
+BODY:
+
+Let me pick a general bone with you about this, Richard.
+
+For the last few months, you've talked in very grand and sweeping
+terms about the structure you've evolved, but no one else has really
+had a chance to truly react to any of the SPECIFICS of it because you
+don't actually have it RUNNING anywhere!  So you send instead out
+these long missive and everyone goes "Hmmm.  Sounds interesting.
+Sounds complex.  I'd have to see it in action!" and then they put it
+aside.
+
+You get get frustrated at the total lack of feedback, everyone is
+frustrated with you for hearing a lot of fairly good sounding ideas
+but having no MEAT to chew on, and so it goes!
+
+If you're really serious about this, then before you commit *anything*
+you need to bring it up on a machine completely and totally so that
+others can run test builds with it and make comments.  I'm sorry, but
+until I actually *KNOW* and can *SEE* your changes doing everything
+they're supposed to do on a real live box then I can't support them
+and I doubt that many others will step forward and do so either.
+
+If it's just the question of a box to work on, I think thud could be more than
+happily "sacrificed" to the cause.  Nobody sups its /usr
+
+--------------------------------------------------------------------------------
+MID: 6663.797065109@freefall.cdrom.com
+DATE: 1995-04-05T06:58:29+00:00  FROM: "Jordan K. Hubbard" <jkh@freefall.cdrom.com> <None>
+SUBJ: Re: NOTICE: If you care, speak now! 
+BODY:
+
+Hmmmmm.  I begin to see the problem.
+
+I'll put it as directly as I can:  We don't work that way.
+
+That's not to say that we don't work that way in other situations, or
+that some of us wouldn't be perfectly happy to see a FreeBSD
+organization so complete and dedicated to that kind of focused
+"discuss-design-discuss-develop" R&D strategy that such things
+were possible.
+
+But many months of learning, often the hard way, that free software
+development moves my somewhat different rules has made us wary.  So
+many people have yelled "fire!" in the crowded theatre that nobody
+wants to really leave their seats until they're SURE there's a fire.
+
+There's also the small problem of TIME.  There is never enough of it,
+and even sending email in these kinds of exchanges takes up oh so much
+of it!  We're not all blessed with the kind of surplus time required
+to truly go through the full process you describe, no matter how much
+sense it might make.  You can forget it!  Nobody is going to agree
+unanimously, nobody is going to agree to put much time into it when
+they've already got massively full plates, nobody is even going to
+WANT to read long missives about boring makefile variables and obscure
+ar
+
+--------------------------------------------------------------------------------
+MID: 15076.797078123@freefall.cdrom.com
+DATE: 1995-04-05T10:35:23+00:00  FROM: "Jordan K. Hubbard" <jkh@freefall.cdrom.com> <None>
+SUBJ: "Cookbook" for security.
+BODY:
+Poul and I were talking about the whole immutable flag issue, and
+since cpio, tar, pax and friends don't support the notion of
+extracting these extra flags ANYWAY, we might as well make a virtue of
+a vice and go "cookbook" style on it, where some central well-known
+file contains information that can be used to apply the flags in
+question after the system is installed.  For that matter, the file can
+also contain MD5 checksums so that you can verify that all the
+"important" files have not been changed from the release copies.
+Needless to say, the "cookbook" file should be highly immutable itself
+in these cases :-).
+
+It seems to me that this would serve as a very valuable security aid
+and of use in creating the overall security tool from hell that I'd
+like to see on FreeBSD someday! :-)
+
+					Jordan
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 9774.797139762@freefall.cdrom.com
+DATE: 1995-04-06T03:42:42+00:00  FROM: "Jordan K. Hubbard" <jkh@freefall.cdrom.com> <None>
+SUBJ: Re: Strange kernel printf... 
+BODY:
+
+Hmmmmm.  Would it be useful to have config changed to:
+
+1. Generate arrays of allocated addresses, IRQs (are there any devices
+   made that more than one?), DMA channels, etc. where it currently holds
+   only a single value.
+
+2. Accept a somewhat altered config file specification:
+
+device <foo> at <bus>[#|?] port <port>[,<port> ..] irq <irq>[,<irq> ..] drq <drq>[, <drq> ..]
+	[conflict_ok <conflict_type>[, <conflict-type> ..]]
+
+Where "conflict_ok" would take arguments like "iomem, irq, drq, etc."
+to enable bits in an "allowed conflicts" mask.  This would eliminate
+the ALLOW_CONFLICT_* horrors I inflicted upon the code many months ago.
+
+I resisted the impulse to also add some sort of probe priority flag,
+but if someone can really think of a serious use not already catered
+to by natural config file ordering (which also kinda bites, now that I
+think about it - very counter-intuitive!).
+
+Seriously, we always talk about how evil config is but no one really
+does anything about it.  Sort of like our attitude towards government,
+but I digress.  How hard would it REALLY be to finally fix config
+properly?
+
+						Jordan
+
+
+
+--------------------------------------------------------------------------------
+MID: 13777.797419380@freefall.cdrom.com
+DATE: 1995-04-09T09:23:00+00:00  FROM: "Jordan K. Hubbard" <jkh@freefall.cdrom.com> <None>
+SUBJ: Re: should su retain ${DISPLAY} 
+BODY:
+
+Hmmmm.  Therein lies a mystery!
+
+I believe we lost this in the 1.x transition! :-(
+
+					Jordan
+
+
+
+--------------------------------------------------------------------------------
+MID: 22517.797474998@freefall.cdrom.com
+DATE: 1995-04-10T00:49:58+00:00  FROM: "Jordan K. Hubbard" <jkh@freefall.cdrom.com> <None>
+SUBJ: Re: 950322-SNAP hurrays and problems 
+BODY:
+
+I think you'll find 950408-SNAP much improved in this area.
+
+
+Someone who actually uses info!  Wow! :-) Thanks.  I'll look into your
+reported info problems (this one plus the missing amd files and bug in
+comerr) myself..
+
+
+That's..  Interesting..  It would have never even occured to me to cd
+to /usr/sbin and do a `man *'.  I'll have to try that myself! :)
+
+../.. -I../../sys -I../../../include -DKNOBEL -DI486_CPU -DXSERVER -DTUNE_1542 
+
+Known bug with the last snap.  Cd to /usr/src and do a `make includes'.
+Should be fixed in the current snap!
+
+					Jordan
+
+
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 15117.797584426@freefall.cdrom.com
+DATE: 1995-04-11T07:13:46+00:00  FROM: "Jordan K. Hubbard" <jkh@freefall.cdrom.com> <None>
+SUBJ: Re: "Birthday snap" cancelled.. 
+BODY:
+
+I rather like that!  It's just one of several "daemon in various
+poses" pictures that would really grace our web pages if we could just
+get someone to do the art (and you know who you are :-)..  I can
+see this shoelaces picture (humorously done) being a wonderful
+icon for the "Bug report / tracking" page.. :-)
+
+					Jordan
+
+
+
+--------------------------------------------------------------------------------
+MID: 6665.797680379@freefall.cdrom.com
+DATE: 1995-04-12T09:52:59+00:00  FROM: "Jordan K. Hubbard" <jkh@freefall.cdrom.com> <None>
+SUBJ: Re: ASUS www mirror 
+BODY:
+
+1. You're not limited to same CO in terms of basic service.  But for
+   Pacific Bell at least, and your own regional service may indeed
+   differ, there's a per-minute charge for the line 9am-5pm
+   Monday-Friday.  This is aimed at night and weekend users who then
+   get their connect time for free, but this sucks for dedicated service
+   and so what PacBell ALSO has is something they call "business ISDN"
+   which means, essentially, unmetered 24-hour connections for one low
+   price (around $69/month, as I remember).  Since WC is my service
+   provider, I pay no fees on top of that!
+
+3. Actually, I don't think the load will be that objectionable.
+   Only empirical evidence will truly satisfy, naturally, but I would
+   still not be at all surprised to find that a good ISDN modem
+   and nice FIFO'd serial card combo do extremely reasonable jobs for
+   the amount of load imposed.
+					Jordan
+
+
+
+--------------------------------------------------------------------------------
+MID: 25183.797879309@freefall.cdrom.com
+DATE: 1995-04-14T17:08:29+00:00  FROM: "Jordan K. Hubbard" <jkh@freefall.cdrom.com> <None>
+SUBJ: Re: Small *oops* in README... 
+BODY:
+Fixed it already last night, thanks!
+
+						Jordan
+
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 26637.797921411@freefall.cdrom.com
+DATE: 1995-04-15T04:50:11+00:00  FROM: "Jordan K. Hubbard" <jkh@freefall.cdrom.com> <None>
+SUBJ: Re: Fujitsu MB86960/965 Ethernet driver 
+BODY:
+
+I think it's always sort of fallen into zones of responsibility.
+Somebody has a VM fix, David or John grab it.  Someone plays with the
+networking code, Garrett grabs it.  Somebody changes ports, Satoshi
+grabs it (or prods somebody in ports to do so).
+
+Unfortunately, nobody really owns device drivers.. :-(
+
+I'm open to suggestions.  I'm too sleepy at the moment to cogitate too
+successfully on this topic..
+
+					Jordan
+
+
+
+--------------------------------------------------------------------------------
+MID: 199504181255.FAA02773@freefall.cdrom.com
+DATE: 1995-04-18T12:55:59+00:00  FROM: "Jordan K. Hubbard" <jkh> <None>
+SUBJ: Using current ports..
+BODY:
+If you're going to start using any of the ports in
+ftp://freebsd.org/pub/FreeBSD/packages, let me just first warn you:
+	Update your pkg_install tools.
+
+If you're running pre 0412-SNAP level pkg_install binaries, you won't
+get the dependency handling in pkg_add and your life will generally suck.. :-)
+
+						Jordan
+
+
+
+--------------------------------------------------------------------------------
+MID: 29684.798445456@freefall.cdrom.com
+DATE: 1995-04-21T06:24:16+00:00  FROM: "Jordan K. Hubbard" <jkh@freefall.cdrom.com> <None>
+SUBJ: Re: wcarchive down 
+BODY:
+
+Yes, you did offer that and I'm still grateful for the offer.  I
+haven't taken you up on that offer yet due to the twin reasons of
+severe time pressure (we haven't been thinking much about it lately,
+though it's always somewhere in the back of my mind) and basically my
+disenchantment with the whole idea of adding an entire extra machine
+to do this.  Where this arrangement with wcarchive and BARRNET is
+concerned, the simpler the solution the better!  I don't want another
+machine to manage and worry about if I can help it, and the solution
+we've come up with is rather more simplistic.
+
+What I'm going to do is get a cheap cellular phone and a basic rate
+service with a local provider (I've verified good reception at that
+location with my own cell phone) and hook it to a ready-built DTMF
+decoder of the type various HAM enthusiasts use to control remote
+repeaters (in fact, I count on buying it at the local HAM shack), and
+we're going to reset that baby by calling it up and punching numbers
+at it.
+
+It's cheap, it's simple, it can be literally bolted to the side of the
+existing system (we'll work out something creative - there's even room
+inside some of the disk cases; we could run a wire
+
+--------------------------------------------------------------------------------
+MID: 24265.798506089@freefall.cdrom.com
+DATE: 1995-04-21T23:14:49+00:00  FROM: "Jordan K. Hubbard" <jkh@freefall.cdrom.com> <None>
+SUBJ: Re: A Scenario for FreeBSD Commercial Support 
+BODY:
+
+I don't much like this idea.  It would essentially require the users
+to upgrade whether they liked it or not every 4 months if they wished
+to remain on the tech support rolls.  What happens to the corporate
+shop who runs 2.3 for 7 months and likes it just fine, then they one
+day have a problem they can't solve with their own techs and they call
+us.  "Sorry, you're out of date.  You need to upgrade your entire shop
+and fix what isn't broken before we'll help you with your problem."
+
+The rule doesn't mean anything if you don't generally enforce it, and
+in this case you're depriving a good customer of one silly question
+just because their release of 2.3 worked _too well_ up to now!
+
+If someone is going to pay for tech support, I'd rather it be the
+FreeBSD Project, Inc.  Then it could be done on a much more standard
+"U want it, U pay for it." kind of support contract basis.  It's like
+insurance - most people don't mind paying for first level support if
+it only costs a few hundred bucks a year whether they use it actively
+or not.  They know it's always there.
+
+I'm not sure WC itself is in the market for selling tech support, even
+though it's been talked about.  "We make CDROMS" is what
+
+--------------------------------------------------------------------------------
+MID: 20260.799317541@time.cdrom.com
+DATE: 1995-05-01T08:39:01+00:00  FROM: "Jordan K. Hubbard" <jkh@time.cdrom.com> <None>
+SUBJ: Re: new dynamic libraries from ports 
+BODY:
+
+This has come up before.  ldconfig needs two things:
+
+1. An option for "refreshing" its internal path.
+2. An option for adding a directory to that path.
+
+In conversations with Satoshi, I've recommended that a new `-a' flag
+be added.  If you give it no directories as args, it does the
+`refresh' action.  Both options handled with one flag.  Adding a
+directory that's already in the search list should also be handled
+gracefully (essentially, "refresh this directory").  This would
+allow people to put stuff like:
+
+	@exec ldconfig -a ${PREFIX}/lib
+
+In their packing lists or install rules.
+
+The only problem is, I have no time to do this now.  Any takers?
+
+						Jordan
+
+
+
+--------------------------------------------------------------------------------
+MID: 7098.800999589@freefall.cdrom.com
+DATE: 1995-05-20T19:53:09+00:00  FROM: "Jordan K. Hubbard" <jkh@freefall.cdrom.com> <None>
+SUBJ: Re: help 
+BODY:
+
+It does.
+
+
+% cd /usr
+% ftp ftp.freebsd.org
+ftp> binary
+ftp> cd pub/FreeBSD/FreeBSD-current
+ftp> get src.tar.gz "|tar xvf -"
+ftp> get ports.tar.gz "|tar xvf -"
+ftp> quit
+% cd src
+% make world >& make.out &
+% tail -f make.out
+<wait a long time>
+
+					Jordan
+
+
+
+--------------------------------------------------------------------------------
+MID: 21940.801632539@freefall.cdrom.com
+DATE: 1995-05-28T03:42:19+00:00  FROM: "Jordan K. Hubbard" <jkh@freefall.cdrom.com> <None>
+SUBJ: I still need a compat20 distribution!
+BODY:
+It can be a single gzip'd tarball for all I care, but I really need
+somebody to make a `compat20dist' that extracts relative to /.
+
+I'd do it myself, but I don't have the time to go chasing down all the
+2.0 compatability bits right now, so if you want to see support for
+2.0 binaries "out of the box" in 2.0.5, please consider stepping
+forward and making this distribution for me!
+
+Thanks!
+
+						Jordan
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 15269.802223279@freefall.cdrom.com
+DATE: 1995-06-03T23:47:59+00:00  FROM: "Jordan K. Hubbard" <jkh@freefall.cdrom.com> <None>
+SUBJ: Re: Todays disk set problems 
+BODY:
+
+No, that's actually fine - it should look for the .tgz first then go
+on to pick up the piece files only if it can't find a complete one
+(you can speed things up a fair bit by caching local copies of the
+pieces already concatenated together in one .tgz file).
+
+
+Hmmm!  This didn't happen to us.. :-(  I'll try to reproduce this!
+
+					Jordan
+
+
+
+--------------------------------------------------------------------------------
+MID: 4206.802507904@freefall.cdrom.com
+DATE: 1995-06-07T06:51:44+00:00  FROM: "Jordan K. Hubbard" <jkh@freefall.cdrom.com> <None>
+SUBJ: Re: FTP userpass checkbox not staying checked 
+BODY:
+
+I fixed that!
+
+I also ask you for the user/pass again IF you've specified it to
+begin with and the "ftp reselect" is on, switching you to another
+site.
+
+
+I originally didn't do this because I didn't want to make that
+a check menu, but I may change my mind!
+
+						Jordan
+
+
+
+--------------------------------------------------------------------------------
+MID: 322.803036830@whisker.internet-eireann.ie
+DATE: 1995-06-13T09:47:10+00:00  FROM: "Jordan K. Hubbard" <jkh@FreeBSD.ORG> <None>
+SUBJ: Re: GENERIC kernel & some basic UNIX pointers 
+BODY:
+
+I'm sort of inclined to say that the user-mode ppp is really the way
+to go, and any attempts to improve ppp support in general would
+probably be better directed there.  Having something that works
+seamlessly for dial-on-demand, generates proper debugging information,
+do proper integrated dialing and supports advanced features like
+predictor-1 compression is so far superior to what's provided by
+pppd that I can't see any reason to use anything else now.
+
+					Jordan
+
+
+
+--------------------------------------------------------------------------------
+MID: 6420.804237100@whisker.internet-eireann.ie
+DATE: 1995-06-27T07:11:40+00:00  FROM: "Jordan K. Hubbard" <jkh@freebsd.org> <None>
+SUBJ: Re: Crypt code summary(2). 
+BODY:
+
+That's not what your little summary of all the groups's "motivation"
+(or lack thereof) implied to me, but we can skip it.  It's not worth
+arguing over, truly.
+
+
+I'm glad of that because I'd argue that point as well.. :-)
+
+I said it many times, both during and after those proceedings: If
+there was any way for the parties to work together without tearing
+BOTH groups apart through internal strife and an inherent inability to
+even like each other, much less work together, then we'd have done it.
+Everyone on the outside was, in turn, pushing like some sort of
+demented Hedda Gabbler style match-maker who just couldn't believe
+that her pairing up of the Grand Dragon of the Klu-Klux-Klan and
+Whitney Houston wasn't going to work out.  "But with his
+organizational abilities and her voice, it would be a match made in
+heaven!" she continued to gush.  "What's a little difference in
+politics got to do with anything?"
+
+Arrogance really didn't enter into it, and it's really overly
+simplistic of you to think that it did.  These are volunteers here
+Terry, in case you've forgotten.  You can't get the Moose Lodge to
+meet every saturday for drinks and socialization if they all hate one
+another's guts.
+
+--------------------------------------------------------------------------------
+MID: 1355.806175696@time.cdrom.com
+DATE: 1995-07-19T17:41:36+00:00  FROM: "Jordan K. Hubbard" <jkh@time.cdrom.com> <None>
+SUBJ: Re: multilingual cal(1) 
+BODY:
+
+Work on this is underway.
+
+					Jordan
+
+
+
+--------------------------------------------------------------------------------
+MID: 17290.806251694@time.cdrom.com
+DATE: 1995-07-20T14:48:14+00:00  FROM: "Jordan K. Hubbard" <jkh@time.cdrom.com> <None>
+SUBJ: Re: Hmmmm! New error encountered with cpio while building root.flp 
+BODY:
+
+I can easily do this, but it still concerns me that the *default*
+method for cpio is now essentially broken.  This will generate tech
+support problems for us and should be fixed.  A bug is a bug!
+Thanks..
+
+					Jordan
+
+
+
+--------------------------------------------------------------------------------
+MID: 27079.806330799@time.cdrom.com
+DATE: 1995-07-21T12:46:39+00:00  FROM: "Jordan K. Hubbard" <jkh@time.cdrom.com> <None>
+SUBJ: Re: SUP target for -STABLE, and setup for SUP info? 
+BODY:
+
+Well, perhaps we were overly optimistic with the naming; I think
+"stabilizing" is a better description since we're obviously not
+really going to be happy with its stability until we've reached
+the point where 2.1 can be released, and that's still a month or
+two away.  A lot can happen in that time.
+
+
+We needed to shake this out in -current a little longer before bringing
+it across.  I'll ask Justin what his plans for this code are.
+
+
+I understand.  Please do also understand that we are doing everything
+we can to work with you on this and don't have many people who are
+actually paid to do this kind of work.  Progress is therefore
+constrained by whatever free time the members have to devote to it.
+
+If do we manage to get these problems worked out for you before you
+pull the ejection handle, perhaps it's time to think about moving
+FreeBSD Inc's support-for-money plans forward.  If I could afford to
+hire just ONE serious systems hacker to look into problems like this
+full-time, it would be a significant help.  We just need to figure out
+how willing the various commercial users like yourself are to to
+underwrite such an effort.
+
+This also isn't an attempt on my part to put the screws t
+
+--------------------------------------------------------------------------------
+MID: 21238.806373207@time.cdrom.com
+DATE: 1995-07-22T00:33:27+00:00  FROM: "Jordan K. Hubbard" <jkh@time.cdrom.com> <None>
+SUBJ: Re: SUP target for -STABLE, and setup for SUP info? 
+BODY:
+
+Sorry if I suggested that you'd be expected to pay for a full-time
+staffer.  Such a staffer would not only be too expensive for a single
+company to support ($40K/yr for a support contract would be a little
+excessive, to say the least :-) but it also wouldn't make much sense.
+You don't NEED somebody on the job for MCSNet full-time, you need
+someone available for bursts of activity when problems are encountered
+and then, most likely, you don't need anyone at all for awhile.
+
+So it's not very useful to debate whether or not the work of said
+staffer would be "owned" by a single firm - I'm not talking about that
+kind of money or that kind of easy accountability for the individual
+(or, more likely, individuals) in question.  It's more likely that the
+support team will be working multiple problems at once and the fixes
+they generate may cover multiple overlapping areas of concern for more
+companies than just your own.
+
+
+Of course.  Such a support contract will only work for you and any
+other companies participating if fixes are made promptly and
+competently.  When the support team isn't working on problems, I'd
+expect it to also work on generally improving the system and enhancing
+it in 
+
+--------------------------------------------------------------------------------
+MID: 1130.806461818@time.cdrom.com
+DATE: 1995-07-23T01:10:18+00:00  FROM: "Jordan K. Hubbard" <jkh@time.cdrom.com> <None>
+SUBJ: Re: SUP target for -STABLE, and setup for SUP info? 
+BODY:
+
+I had about $600 in mind, but we won't quibble about the $100.. :-)
+
+And now the next (and obvious) question - what would you consider to
+be a reasonable turn-around time? :)
+
+					Jordan
+
+
+
+--------------------------------------------------------------------------------
+MID: 199507240605.XAA00457@throck.cdrom.com
+DATE: 1995-07-24T06:05:51+00:00  FROM: "Jordan K. Hubbard" <jkh@freebsd.org> <None>
+SUBJ: Interesting NFS problem with -current
+BODY:
+Scenario:  Several hosts with cross-mount privs managed by AMD.  Host foo
+exports its cdrom drive to host bar, which can see it in /host/foo/cdrom.
+So far, so good.  Now say that foo unmounts the CD in the drive and mounts
+a new one.  Host bar now sees:
+
+	<some command>: /host/foo/cdrom: Stale NFS file handle
+
+In response to any access to the newly mounted CD.  At the
+same time as the access, host foo prints:
+
+fhtovp: file start miss 60 vs 20
+
+On its system console.
+
+I figure this is something to do with NFS v3, but perhaps the data
+is of use to someone working in that area.
+
+				Jordan
+
+
+
+--------------------------------------------------------------------------------
+MID: 2781.806636239@time.cdrom.com
+DATE: 1995-07-25T01:37:19+00:00  FROM: "Jordan K. Hubbard" <jkh@time.cdrom.com> <None>
+SUBJ: Knobs in /etc/sysconfig
+BODY:
+I don't know if Rod is still working on this stuff, but given the
+amount of time that's elapsed I'd say that the statute of limitations
+any developer gets for "locking" things in -current has run out, so
+it's open season again in /usr/src/etc/etc.i386! :-)
+
+Persuant to that, I'd like to add knobs in /etc/sysconfig and
+/etc/<somefile> for turning on such extra services as SNMP, a web
+server, PCNFS, Samba, etc.  This may seem superfluous to some, but
+believe me - I won't be able to make FreeBSD truly plug-n-pray for
+many important tasks without such instrumentation and I think that
+it's pretty important to achieve that at some point.
+
+For example (from my own setup):
+
+/etc/sysconfig:
+
+# set to NO if you don't want CMU SNMP services
+snmp_flags="public ro"
+
+/etc/netstart:
+
+if [ "x$snmp_flags" != "xNO" -a -x /usr/local/libexec/snmpd ]; then
+        echo 'snmp daemon: ' /usr/local/libexec/snmpd $snmp_flags &
+fi      
+
+And so forth.  Rather than seeing this bloom out of control, I tend to
+suspect more that this will plateau out at around 10-15 additional
+services max and give us easy instrumentation of a whole range of
+important services.  Activation than then be reduced to a simple
+pkg_a
+
+--------------------------------------------------------------------------------
+MID: 3089.806642464@time.cdrom.com
+DATE: 1995-07-25T03:21:04+00:00  FROM: "Jordan K. Hubbard" <jkh@time.cdrom.com> <None>
+SUBJ: Re: Knobs in /etc/sysconfig 
+BODY:
+
+OK, well, the last time this came up I thought you had asserted some
+control in that area by flaming someone for making a change.  Glad to
+know I was wrong.
+
+
+This is a silly thing to say.  Everyone here knows exactly why I did
+what I did in /etc and "having fun" was hardly at the top of my list
+of goals, nor is it something that I'll have to do again since I
+accomplished my objective, whcih was breaking free the long-standing
+log jam of multiple intertwined crusty files in /etc, and at this
+point all I need to do is refine it.  I make no apologies whatsoever
+for my previous dive into /etc and if you hadn't gone ballistic and
+jumped in there immediately then I or someone else would have and we'd
+still have something far better than what we had before.
+
+
+I do understand this, and I also understand that two objectives are
+NOT obtainable on the first face of any change to the sysconfig knobs:
+
+	1. Everyone being happy in all possible scenarios.
+	2. Us even knowing all possible scenarios.
+
+So this means that any change is going to have to settle for making a
+_reasonable_ number of people happy (the set of which may or may not
+include yourself, but that's irrelevant if it's still a rea
+
+--------------------------------------------------------------------------------
+MID: 29101.806726032@time.cdrom.com
+DATE: 1995-07-26T02:33:52+00:00  FROM: "Jordan K. Hubbard" <jkh@time.cdrom.com> <None>
+SUBJ: Re: Knobs in /etc/sysconfig 
+BODY:
+
+I can live with that..  I read Satoshi's "all singing, all dancing"
+proposal and have to say that this mechanism looks more reasonable,
+albeit less flexible.  I'm usually all for flexibility, but it's
+possible to take it too far (like I did with bsd.port.mk :-).
+
+
+I can live with this too.  Unless I hear some significant argument
+to the contrary, I will "make it so" in a day or so..
+
+					Jordan
+
+
+
+--------------------------------------------------------------------------------
+MID: 16513.806727932@time.cdrom.com
+DATE: 1995-07-26T03:05:32+00:00  FROM: "Jordan K. Hubbard" <jkh@time.cdrom.com> <None>
+SUBJ: Never mind! :-}
+BODY:
+I just looked again and see that any kind of type flag with -dump is
+probably silly since it's just doing a tree copy..
+
+Hmmmmmm.  Still, things are very broken still in
+/usr/src/release/Makefile as a result of the cpio change and I may
+STILL back it out to get moving again (since having it refuse to dump
+ANY files due to this change is an error in my book for sure) but
+please ignore my previous bug report as erroneous..
+
+					Jordan
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 20172.806783578@time.cdrom.com
+DATE: 1995-07-26T18:32:58+00:00  FROM: "Jordan K. Hubbard" <jkh@time.cdrom.com> <None>
+SUBJ: Re: Knobs in /etc/sysconfig 
+BODY:
+
+Well, it's also different in that a port will be required to add itself
+to the appropriate category startup rather than creating its own file.
+
+I'm not sure what happens if the startup file isn't there yet - maybe
+it gets created and added to the list in sysconfig?  Hmmmm.  Bleah..
+I think I would prefer a fixed number of categories and some prototype
+files that essentially do nothing out of the box.  That would at least
+narrow the number of things needing to be changed to one file.
+
+						Jordan
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 199508020009.RAA00966@time.cdrom.com
+DATE: 1995-08-02T00:09:14+00:00  FROM: "Jordan K. Hubbard" <jkh@time.cdrom.com> <None>
+SUBJ: current make world falls over.
+BODY:
+ENVIRON -DENV_HACK -I/usr/src/secure/libexec/telnetd/../../lib -DAUTHENTICATION
+-DENCRYPTION    -o telnetd authenc.o global.o slc.o state.o sys_term.o telnetd.o
+ termstat.o utility.o  -lutil -ltermcap -ltelnet -ldescrypt
+state.o: Undefined symbol `_auth_request' referenced from text segment
+state.o: Undefined symbol `_encrypt_send_support' referenced from text segment
+state.o: Undefined symbol `_auth_request' referenced from text segment
+state.o: Undefined symbol `_encrypt_send_support' referenced from text segment
+state.o: Undefined symbol `_auth_finished' referenced from text segment
+state.o: Undefined symbol `_auth_finished' referenced from text segment
+...
+
+
+
+--------------------------------------------------------------------------------
+MID: 951.808338901@time.cdrom.com
+DATE: 1995-08-13T18:35:01+00:00  FROM: "Jordan K. Hubbard" <jkh@time.cdrom.com> <None>
+SUBJ: /sys/compat?
+BODY:
+We need a place to bring the new iBCS2 stuff from Steven Wallace (he
+as succeeded in porting the NetBSD emulation code to FreeBSD and is
+now able to run applications such as WordPerfect and FoxPro;
+congradulations and kudos to Steven!).  He suggests /sys/compat, which
+sounds like as good a place as any.
+
+Any objections or suggestions as to a better place for this stuff?
+
+					Jordan
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 199508131840.LAA00987@time.cdrom.com
+DATE: 1995-08-13T18:40:36+00:00  FROM: "Jordan K. Hubbard" <jkh@time.cdrom.com> <None>
+SUBJ: Addendum to previous message concerning ibcs2
+BODY:
+I forgot to mention two things:
+
+1. /sys/compat/ibcs2 is where NetBSD has stuck things, and I don't see
+   much reason for gratuitous incompatibility, especially as this code
+   is ported from their source tree.
+
+2. It would replace the current /sys/i386/ibcs2, which is pretty green
+   and doesn't show much sign of improving (sorry Soren, but I KNOW you
+   have way too much to do for this to change anytime soon and why reinvent
+   the wheel anyway? :).
+
+I'm testing the integration now on my own box and will commit it to
+-current in the next day or so barring any reasoned objections.
+
+					Jordan
+
+
+
+--------------------------------------------------------------------------------
+MID: 199508171335.GAA20286@time.cdrom.com
+DATE: 1995-08-17T13:35:57+00:00  FROM: "Jordan K. Hubbard" <jkh@time.cdrom.com> <None>
+SUBJ: pppd
+BODY:
+I notice that pppd has now gone to revision 2.2 beta3, dated July 3rd
+1995.  Our own pppd is revision 2.1 dated the 9th of June 1994, over
+a year earlier..
+
+The biggest difference I can see is that 2.2 supports some sort of
+compression called "BSD-compress", whatever the heck that is..  There
+may of course also be some bug fixes..  You figure in a year they might
+have fixed a few things! :-)
+
+Any reason why we shouldn't fold this in from the NetBSD-current sources?
+
+					Jordan
+
+
+
+--------------------------------------------------------------------------------
+MID: 4650.808829464@time.cdrom.com
+DATE: 1995-08-19T10:51:04+00:00  FROM: "Jordan K. Hubbard" <jkh@time.cdrom.com> <None>
+SUBJ: Re: Broken find?? 
+BODY:
+
+Oh yuck.  That's mutant!  OK, I withdraw my "bug report".  Thanks!
+
+
+Hey! I'd get upset about that, but it's too much work.. :-)
+
+						Jordan
+
+
+
+--------------------------------------------------------------------------------
+MID: 22246.809061857@time.cdrom.com
+DATE: 1995-08-22T03:24:17+00:00  FROM: "Jordan K. Hubbard" <jkh@time.cdrom.com> <None>
+SUBJ: Of slices and boot code..
+BODY:
+Would it be reasonable to assume that our current boot code will never
+have a chance of dealing with the root partition via a "slice?"
+
+It's kind of a pity since I've gotten a lot of tech support emails
+from people who were very confused that / showed up on `sd0a' while
+everything else was on a slice.  It makes a somewhat confusing model
+(to the uninitiated) even more confusing since just when they think
+they're understanding it (and, in fact, ARE) that comes along to trip
+them up.  Sigh.
+
+					Jordan
+
+
+
+--------------------------------------------------------------------------------
+MID: 426.809069544@time.cdrom.com
+DATE: 1995-08-22T05:32:24+00:00  FROM: "Jordan K. Hubbard" <jkh@time.cdrom.com> <None>
+SUBJ: Re: Of slices and boot code.. 
+BODY:
+
+And just to follow up on THAT, let me say that I'm not just raving
+here for the sake of being a pedant.  I had to turn some real
+handsprings in sysinstall to deal with the compat-slice being
+mandatory for just root and I'd like to see that band-aid go away.
+
+I'm also receiving the aformentioned tech support for it as well, just
+to make things worse.
+
+That's my perspective on this.
+
+						Jordan
+
+
+
+--------------------------------------------------------------------------------
+MID: 4710.809174124@time.cdrom.com
+DATE: 1995-08-23T10:35:24+00:00  FROM: "Jordan K. Hubbard" <jkh@time.cdrom.com> <None>
+SUBJ: Re: Of slices and boot code.. 
+BODY:
+
+Well, you must admit that this example is a little contrived and if
+such insane nesting were required because the user was trying to
+shoe-horn FreeBSD into a system already so dedicated to DOS and Linux,
+well, then so be it.  I'm trying to keep the most common scenarios as
+simple and clean as possible and, truth be told, if someone REALLY
+wanted to install FreeBSD in such a convoluted environment then I'd
+say that the naming would be the least of their worries!
+
+More to the point, I have yet to get a single tech-support query from
+someone with all 4 MBR slots filled.  It just doesn't seem to happen
+that way.  I think that my proposal still has merit.
+
+
+Hmm.  Well, I wasn't exactly suggesting that FreeBSD filesystems had
+to ONLY go into a partition - I can see putting one straight into a
+slice, as you suggest, but I still think that it should be called a
+slice.
+
+
+So.  Um.  You're saying that this is planned/done/on the way?  I'm
+still a little unclear on that.. :-)
+
+					Jordan
+
+
+
+--------------------------------------------------------------------------------
+MID: 3969.809616183@time.cdrom.com
+DATE: 1995-08-28T13:23:03+00:00  FROM: "Jordan K. Hubbard" <jkh@time.cdrom.com> <None>
+SUBJ: Re: wd0 detect fails 
+BODY:
+
+So, did this work?  Should we bring it into -current?  It was just
+this type of potentially fatal WDC interaction that the code was
+committed to test!
+
+					Jordan
+
+
+
+--------------------------------------------------------------------------------
+MID: 9828.809875091@time.cdrom.com
+DATE: 1995-08-31T13:18:11+00:00  FROM: "Jordan K. Hubbard" <jkh@time.cdrom.com> <None>
+SUBJ: Re: gencat bloat [Re: /usr/src/usr.bin/ee] 
+BODY:
+
+1. I didn't see you complaining about this back in 2.0.5, why now?
+   There was all KINDS of I18N bloat in that boot floppy, so much so
+   that I eventually ran out of room for all the docs.
+
+2. 2.1 is taking a different (but not radically so) approach in simply
+   making one boot floppy per language.  If you want a german floppy,
+   then you BOOT a german floppy.  If you don't, then you just choose the
+   standard english one and forget about it.  I don't see the problem.
+
+3. A lot of people do want natural language support.  The whole world
+   does not speak english, as much as we americans would sometimes like
+   it to.. :-)
+
+						Jordan
+
+
+
+--------------------------------------------------------------------------------
+MID: 10926.810137971@time.cdrom.com
+DATE: 1995-09-03T14:19:31+00:00  FROM: "Jordan K. Hubbard" <jkh@time.cdrom.com> <None>
+SUBJ: Re: Making a release problem : bootfd 
+BODY:
+
+You need to have the `vn' device in your kernel to make releases.
+Stick this line somewhere near the end of your kernel config file:
+
+pseudo-device vn  1
+
+					Jordan
+
+
+
+--------------------------------------------------------------------------------
+MID: 4140.810175428@time.cdrom.com
+DATE: 1995-09-04T00:43:48+00:00  FROM: "Jordan K. Hubbard" <jkh@time.cdrom.com> <None>
+SUBJ: devinfo - Houston, we have a small crisis here..
+BODY:
+Background:
+
+In the 2.0.5 sysinstall, I find out which devices the user has by
+rather evil means: I rush around trying to open everything I can and,
+if I'm successful, I declare that device "found."  For network
+devices, I walk the ifc_req chain.
+
+This has some serious drawbacks, the most notable being that only
+devices which can be "opened" may be probed this way (e.g. if you have
+a tape drive, this only works if there's a tape in it).  It's also not
+a good method to use once the system is up, so it prevents you from
+really being able to use sysinstall afterwards - something that many
+people have asked for.
+
+I'd always intended to change this to grab the device list more the
+way lsdev(1) does it, but my hoped-for salvation there now appears to
+be imperiled by the fact that many important devices (like de0 and all
+CDs, SCSI disks and tapes, as I've so far found) just don't register
+the appropriate information.  HELP!  This is really going to screw me
+up!  Finding devices by opening them is really insufficient and doing
+them this way was always my future hope - I just made the mistake of
+thinking that it would be trivial when the time came.  If we have less
+than 100% coverage of dev
+
+--------------------------------------------------------------------------------
+MID: 478.810201276@time.cdrom.com
+DATE: 1995-09-04T07:54:36+00:00  FROM: "Jordan K. Hubbard" <jkh@time.cdrom.com> <None>
+SUBJ: Re: devinfo - Houston, we have a small crisis here.. 
+BODY:
+
+Really?  When I do this:
+
+jkh@time-> lsdev -c -t disk
+# This listing automatically generated by lsdev(1)
+fd0 at fdc0 drive 0
+
+I only get the floppy.  I'd expect to see sd0 and sd1, too?  I need
+to be able to tell which devices one can install to, after all..
+
+
+Argh!  I need that for SLIP/PPP, too..  This is looking bleak.
+
+						Jordan
+
+
+
+--------------------------------------------------------------------------------
+MID: 9949.810780619@time.cdrom.com
+DATE: 1995-09-11T00:50:19+00:00  FROM: "Jordan K. Hubbard" <jkh@time.cdrom.com> <None>
+SUBJ: Re: sig 11 
+BODY:
+
+And this kind of work is appreciated, believe me!  We can't find bugs
+unless somebody is occasionally willing to "bleed" a little like this
+and help the developers track down problems with configurations they
+(the developers) don't have ready access to themselves.
+
+					Jordan
+
+
+
+--------------------------------------------------------------------------------
+MID: 382.810868205@time.cdrom.com
+DATE: 1995-09-12T01:10:05+00:00  FROM: "Jordan K. Hubbard" <jkh@time.cdrom.com> <None>
+SUBJ: Re: dset & userconfig 
+BODY:
+
+This was hardly unknown at the start, and I was the one who told
+Michael to feel free in assuming ANSI as a minimum price of entry.
+However, it was perhaps the wrong decision to make this interface the
+*only* one and I am talking now with Michael about making the entire
+visual interface a command available from the wretched, inferior, ugly
+CLI interface we have now.  I may even go a few steps towards
+improving that CLI, like adding wildcarding to `disable' and other
+such creature comforts.
+
+Would that make you happ(y|ier)?
+
+					Jordan
+
+
+
+--------------------------------------------------------------------------------
+MID: 3344.810910708@time.cdrom.com
+DATE: 1995-09-12T12:58:28+00:00  FROM: "Jordan K. Hubbard" <jkh@time.cdrom.com> <None>
+SUBJ: Re: libforms - thumbs up or down? 
+BODY:
+
+Well, most everyone said `in' and my position is that I'm still
+waiting for your bmake port.. :-)
+
+					Jordan
+
+
+
+--------------------------------------------------------------------------------
+MID: 890.811485057@time.cdrom.com
+DATE: 1995-09-19T04:30:57+00:00  FROM: "Jordan K. Hubbard" <jkh@time.cdrom.com> <None>
+SUBJ: Re: Which SUP files are available and where ? 
+BODY:
+
+I think we (the project) are perhaps getting back into the grey zone
+we were in for awhile when Karl Denninger was having all those
+problems with FreeBSD and had our guys running in circles trying to
+fix them.  When you're small, you can afford to blur the lines of
+distinction a little and treat all users alike.  As we become more
+successful, I think that a commercial enterprise will become
+inevitable.  Why?  Several reasons:
+
+	1. You can't expect volunteers to hop for you, and hopping is sometimes
+	   required (the CERT advisories are a good example).
+
+	2. The FreeBSD project has a duty to the free software world first
+	   and the commercial world second.  Since it's not being supported
+	   by the commercial world, that simply stands to reason and a lot of
+	   people are only in it for the joy of it anyway.  This means that
+	   if a lot of our time is subverted into doing support, we're doing
+	   a disservice to all the other users - 10% of the users end up
+	   taking 90% of the resources.
+
+	3. The commercial interests *want* someone to be accountable for the
+	   software.  Your own success at building and supporting systems
+	   is prima facie evidence of this.
+
+I'm not sure when
+
+--------------------------------------------------------------------------------
+MID: 25084.812168503@time.cdrom.com
+DATE: 1995-09-27T02:21:43+00:00  FROM: "Jordan K. Hubbard" <jkh@time.cdrom.com> <None>
+SUBJ: Re: kernel versions and config's rm -rf 
+BODY:
+
+That's a gross oversimplification.  There are yet others who have no
+*personal* problem with futzing the compile directory directly or
+otherwise doing any number of wizardly "old timer's" tricks but simply
+don't want to deal with the *tech support* problem of other folks not
+knowing enough.  When I patched config it wasn't just to prevent from
+shooting myself in the foot, though it occasionally helped at that when
+I was sleepy, it was to safe the feet of all those users who regularly
+wrote to us with "problems" that were the direct and obvious result of
+in-place builds that slowly went out of sync and rotted.
+
+					JOrdan
+
+
+
+--------------------------------------------------------------------------------
+MID: 21546.812844220@time.cdrom.com
+DATE: 1995-10-04T22:03:40+00:00  FROM: "Jordan K. Hubbard" <jkh@time.cdrom.com> <None>
+SUBJ: Re: Patch for ``cx'' driver and cxconfig utility 
+BODY:
+OK, I'm doing this right now.
+
+					Jordan
+
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 16102.813235340@time.cdrom.com
+DATE: 1995-10-09T10:42:20+00:00  FROM: "Jordan K. Hubbard" <jkh@time.cdrom.com> <None>
+SUBJ: Re: Atapi.flp boots but doesn't recognize.. 
+BODY:
+I'd appreciate even *one* success report, folks!  As it stands now,
+without more feedback I'm just going to drop the idea.  I haven't
+heard *one* successful probe report, not one! :(
+
+					Jordan
+
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 30889CCC.794BDF32@FreeBSD.org
+DATE: 1995-10-21T07:10:04+00:00  FROM: "Jordan K. Hubbard" <jkh@FreeBSD.org> <None>
+SUBJ: Re: Need to run BSDI2.0 stuff
+BODY:
+Not that I know of, no.
+
+That said, most accounts list it as something that wouldn't be too hard
+to add support for.  Do I hear the sound of a man interested enough to
+perhaps be willing to work with a group of people in making such support
+happen? :-)
+-- 
+						Jordan
+
+
+
+--------------------------------------------------------------------------------
+MID: 14486.816158986@time.cdrom.com
+DATE: 1995-11-12T06:49:46+00:00  FROM: "Jordan K. Hubbard" <jkh@time.cdrom.com> <None>
+SUBJ: Re: ISP state their FreeBSD concerns 
+BODY:
+First off, I really have to wonder why Frank Durda went to what was
+obviously a considerable effort to be anonymous.  The message had no
+signature and has been sent with a "From" of -current.  C'mon Frank,
+we don't bite!  Valid criticism always has a place in these lists and
+going out of your way to mask its origin only calls its validity into
+question unnecessarily.  If I didn't know you were the only poster
+we've ever had from fw.ast.com, I might have thought this was
+something with a deeper political agenda from one of the other *BSD
+advocates and ignored it.
+
+That said, on to the points raised.
+
+
+Well, I'll certainly do my best to address these points, as I'm sure
+will others, but it does beg the question: How do we get the
+information back to them?  If you're willing to act as a conduit,
+great, otherwise it'll be something of a wasted effort..
+
+
+This one really needs some additional context.  Suffice it to say that
+I've not experienced such behavior myself, and that's about all one
+can say with a fairly subjective report like this.  That's not to say
+that it's totally lacking in validity, but consider what you yourself
+would do with a user report that "the system seemed slow."
+
+--------------------------------------------------------------------------------
+MID: 26521.816336697@time.cdrom.com
+DATE: 1995-11-14T08:11:37+00:00  FROM: "Jordan K. Hubbard" <jkh@time.cdrom.com> <None>
+SUBJ: Re: ISP state their FreeBSD concerns 
+BODY:
+
+I agree.
+
+
+I don't actually see where a commercially based BSD is bad, just so
+long as it remains friendly to the project that spawned it and has a
+liberal number of feet solidly planted in both camps.  I also think
+that once any organization starts doing *serious* support for
+customers who won't take "it's broken" for an answer, the question of
+separate source trees isn't even a topic of discussion.  *Of course*
+you'll have separate source trees, the ability to be "accountable" to
+your customers being otherwise lost.  Is that such a bad thing?  Not
+actually, no.  If you look at it emotionally, it seems like you've
+split the project somehow.  If you look at it pragmatically, you see
+that it's simply the cost of doing business and what you'll get in
+return will be the large donations of *tested* bug fixes and whatnot
+back from the support org that you just couldn't do yourself without a
+similar number of paid programmers (e.g. not at all).  In the final
+analysis, who cares which source tree the bug fix came from, just so
+long as it comes from somewhere.
+
+I'd still like to set something like this up sometoday, but I won't if
+it'll simply make me the target for more flames from peopl
+
+--------------------------------------------------------------------------------
+MID: 28635.816370724@time.cdrom.com
+DATE: 1995-11-14T17:38:44+00:00  FROM: "Jordan K. Hubbard" <jkh@time.cdrom.com> <None>
+SUBJ: Re: ISP state their FreeBSD concerns 
+BODY:
+
+No.  I wasn't aware that BSDI ever actively supported CSRG - they
+merely profited most heavily from its dissolution.  Perhaps you were
+merely being facetious, but that's not what I was talking about at
+all.
+
+
+No, I don't think so.
+
+
+I never said that it did.  I simply said that having commercial
+responsibilities could and probably would necessitate a certain degree
+of autonomy.  How great that autonomy would be is something that I
+doubt one could make hard and fast rules about, it would be something
+you'd have to set on a case by case basis and hence not something that
+endless discussion could "predetermine."  I'm more than aware of the
+desirability of constructing general frameworks to work within, but
+there's also no substitute for a healthy dose of pragmatism in
+evolving such frameworks.
+
+
+That might be one way.  I don't think there is only one, however.
+
+
+No, Linus avoids the problem because Linus only concerns himself with
+a very small piece of the puzzle.  He doesn't worry about user land
+and he doesn't concern himself with releases or support at all. With
+such a reduced mandate, the possibilies for conflict are significantly
+reduced.  I think if he'd tried to take the whole
+
+--------------------------------------------------------------------------------
+MID: 25298.816488085@time.cdrom.com
+DATE: 1995-11-16T02:14:45+00:00  FROM: "Jordan K. Hubbard" <jkh@time.cdrom.com> <None>
+SUBJ: Re: startslip 
+BODY:
+
+Just tried it.  No difference - the start script cycles over and over
+and over, as usual.  Bleh.
+
+Maybe someone can spot a bogon.
+
+First, I have the following in /etc/start_if.sl0
+
+#!/bin/sh
+slattach -c -h -r /etc/ppp/slip-dial -s 115200 cuaa1
+
+And /etc/ppp/slip-dial is as follows:
+
+#!/bin/sh
+# Slip dialer (that doesn't work)
+
+PHONE=#1740
+USER=jkh-slip
+PASSWORD=haha,asifIwouldleavethathere
+DEVICE=cuaa1
+
+# Wait just a little for the line to settle down
+sleep 10
+
+(if chat -v ABORT "NO CARRIER" ABORT BUSY "" ATH OK ATD$PHONE CONNECT "" ogin: $
+USER ssword: \\q$PASSWORD
+then
+    exit 0
+else
+    exit 1
+fi
+) < /dev/$DEVICE > /dev/$DEVICE
+
+That's it.  Any ideas?
+
+					Jordan
+
+P.S.  Yes, the phone number is correct..  That's what a centrex ISDN
+phone number looks like.. :)
+
+
+
+--------------------------------------------------------------------------------
+MID: 2748.817605372@time.cdrom.com
+DATE: 1995-11-29T00:36:12+00:00  FROM: "Jordan K. Hubbard" <jkh@time.cdrom.com> <None>
+SUBJ: Re: schg flag on make world in -CURRENT 
+BODY:
+Yeah, and you don't need a note from your mother either.  I would
+therefore like to join Terry in demanding that su be disabled until
+the requisite scanner support (with authentication) be added directly
+into the kernel.
+
+						Jordan
+
+
+).
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 2942.817677091@time.cdrom.com
+DATE: 1995-11-29T20:31:31+00:00  FROM: "Jordan K. Hubbard" <jkh@time.cdrom.com> <None>
+SUBJ: Re: Problem of screen saver 
+BODY:
+You need to update your /etc/rc.i386 file - take a look at the new
+version in /usr/src/etc/etc.i386
+
+					Jordan
+
+e
+   4
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 22797.818328903@time.cdrom.com
+DATE: 1995-12-07T09:35:03+00:00  FROM: "Jordan K. Hubbard" <jkh@time.cdrom.com> <None>
+SUBJ: Re: Serial ISDN device 
+BODY:
+I have an ADTRAN product (which is more featureful than the Bitsurfer
+but costs the same :-) doing this just fine.  Shouldn't be much
+different than the Bitsurfer to set up.  What kind of problems are
+you having?
+
+						Jordan
+
+ 
+ 
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 199512191246.EAA17333@time.cdrom.com
+DATE: 1995-12-19T12:46:00+00:00  FROM: "Jordan K. Hubbard" <jkh@time.cdrom.com> <None>
+SUBJ: pcnfsd..
+BODY:
+Is freely redistributable software, right?  At least that's what the
+man page says, anyway..  I'm wondering if this isn't something that
+*should* move out of ports and into the main tree?  It currently represents
+something of an imperfect match, at best, as simply reading the man page
+or doing the two-step configuration process for it will readily attest.
+
+						Jordan
+
+
+
+--------------------------------------------------------------------------------
+MID: 2152.819404273@time.cdrom.com
+DATE: 1995-12-19T20:17:53+00:00  FROM: "Jordan K. Hubbard" <jkh@time.cdrom.com> <None>
+SUBJ: Re: Museum pieces... 
+BODY:
+These ancient fossils definitely should go.
+
+Removal of xroach and xneko to ports?  Fine by me!
+
+					Jordan
+
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 585.819461208@time.cdrom.com
+DATE: 1995-12-20T12:06:48+00:00  FROM: "Jordan K. Hubbard" <jkh@time.cdrom.com> <None>
+SUBJ: Re: pcnfsd.. 
+BODY:
+It makes enabling it in /etc/sysconfig a one step operation.  I can
+live with it being a two-stepper, but I can't always count on access
+to the package collection.. :-(
+
+					Jordan
+
+8)
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 1140.819470541@time.cdrom.com
+DATE: 1995-12-20T14:42:21+00:00  FROM: "Jordan K. Hubbard" <jkh@time.cdrom.com> <None>
+SUBJ: Re: conf.c and USL copyright at top 
+BODY:
+OK, so it was a mistake to add code to encumbered files.  No argument
+from anybody on that point, I'm pretty sure.  However, do we just
+throw up our hands in defeat?  I surely hope not!  Your analysis below
+would certainly suggest to me that removing the USL copyright is now
+an option we can realistically entertain.  It's not even remotely
+"derived" from now.  In our CVS tree, we're no worse off than before.
+In our exported tree, it's one less encumbered file, right?
+
+					Jordan
+
+
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 1393.819472472@time.cdrom.com
+DATE: 1995-12-20T15:14:32+00:00  FROM: "Jordan K. Hubbard" <jkh@time.cdrom.com> <None>
+SUBJ: Re: conf.c and USL copyright at top 
+BODY:
+Are you sure it's genuinely _going away_ or is it just going to become
+a repository for miscellaneous stub declarations?
+
+						Jordan
+
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 19594.819554372@time.cdrom.com
+DATE: 1995-12-21T13:59:32+00:00  FROM: "Jordan K. Hubbard" <jkh@time.cdrom.com> <None>
+SUBJ: Major changes to libdialog planned.
+BODY:
+Just a heads-up in case you (or anybody else) are doing any work in
+there?  I'd like to bring in some fundamental changes that will be
+entirely backwards compatible with old client code but definitely not
+internally.
+
+With my next commit, the libdialog API will support an additional
+calling syntax which allows individual menu items to support "check"
+and "fire" actions.  In radio/multi-choice menus, the check action can
+manipulate internal variables to control mutual exclusion and such
+(sysinstall can *definitely* use this feature!).  Individual fire
+actions do away with having to parse that evil `result' string when
+you're just using libdialog from an application.
+
+While I was at it, I also gave you the ability to change the labels in
+the "OK and Cancel" buttons as well as wire callbacks to them for
+special case handling.
+
+After I finish up this commit, I have plans to go into
+print_autowrap() and add character attributes and colors.  It's the
+first step to being able to write a decent HTML display text box so we
+can shake our reliance on lynx (though that's quite a bit farther into
+the future, so we'll see!) and of immediate use in sparking up the
+documentation a bit.
+
+Then maybe
+
+--------------------------------------------------------------------------------
+MID: 2783.819634085@time.cdrom.com
+DATE: 1995-12-22T12:08:05+00:00  FROM: "Jordan K. Hubbard" <jkh@time.cdrom.com> <None>
+SUBJ: Re: pcnfsd.. 
+BODY:
+
+Well, there are ways around that, certainly.  Consider for a moment
+the fact that nobody seemed to be all that keen to continue extending
+sysconfig or the other /etc files, either, and we're quickly running
+out of possible options to *debate* here!  It's not like there are
+that many different approaches available to us - either we code
+implicit knowledge of our ports tree into our system startup files
+(current approach) or we enhance the "rendevous" mechanism enough that
+we don't have to.  Are the X ports your only concern?  We could take
+Paul's suggestion and enhance it a little bit, e.g. rather than being a
+directory it could now be a list of directories:
+
+	local_startup=/usr/local/etc/rc.d /usr/X11R6/etc/rc.d
+
+OK?
+
+					Jordan
+
+
+
+--------------------------------------------------------------------------------
+MID: 4353.820134530@time.cdrom.com
+DATE: 1995-12-28T07:08:50+00:00  FROM: "Jordan K. Hubbard" <jkh@time.cdrom.com> <None>
+SUBJ: Re: pcnfsd.. 
+BODY:
+
+Sigh.  It's really annoying that we can't just bundle gated.
+
+And what do you say about pcnfsd, which perturbs the starting of
+mountd?  Should we bring it in and keep our exposure down to one
+port?
+
+					Jordan
+
+
+
+==========================================================================================
+DB: freebsd-chat.duckdb  hits=4
+==========================================================================================
+--------------------------------------------------------------------------------
+MID: 9797.808070928@freefall.FreeBSD.org
+DATE: 1995-08-10T16:08:48+00:00  FROM: "Jordan K. Hubbard" <jkh@freefall.FreeBSD.org> <None>
+SUBJ: Re: Promoting FreeBSD Web servers 
+BODY:
+
+This may go very well with my next set of enhancements to sysinstall..
+
+I noticed when installing BSD/OS (I finally decided to take a good
+look at 2.0!) that they offer you the chance to configure a web
+server, which is actually nothing more than 3 prompts asking you
+for your company name, email address and general info - all of
+which gets stuck into a default home page for the new server.
+Very simple, but it gives instant gratification to the hopeful
+server installer and BSDI took this opportunity to put a clever
+little "Powered by BSD/OS 2.0" with the BSDI logo at the bottom
+of the page.  Most likely, your average customer will think that's
+cool and leave it in (or not even know how to remove it :-).
+
+That's good advertising.  I want it and the feature for automated
+server configuration (for which I'm always willing to entertain
+suggestions) WILL be going into 2.1... :-)
+
+					Jordan
+
+
+
+--------------------------------------------------------------------------------
+MID: 12795.809917430@time.cdrom.com
+DATE: 1995-09-01T01:03:50+00:00  FROM: "Jordan K. Hubbard" <jkh@time.cdrom.com> <None>
+SUBJ: Re: gencat bloat [Re: /usr/src/usr.bin/ee] 
+BODY:
+
+Na, echt?  Ach, du Scheisse!  Was mach' ich dann jetzt? :-)
+
+					Jordan
+
+
+
+--------------------------------------------------------------------------------
+MID: 11285.811031159@time.cdrom.com
+DATE: 1995-09-13T22:25:59+00:00  FROM: "Jordan K. Hubbard" <jkh@time.cdrom.com> <None>
+SUBJ: Re: New Caldera & why we should get Linux compat working 100% 
+BODY:
+
+It's also wrong.  UNIX has LOST the desktop race!  Lost lost lost!
+It's gone, over, kaput, too late, write your mother and say you're 
+coming home in defeat! :-)
+
+Bringing word perfect and Excel to Linux will mean that those Linux
+users who have a need for such tools won't have to run Windows, and
+that is fine, but it won't attract NEW users who have a need for those
+tools alone.  I mean let's face it - Windows is effectively "free"
+since anybody can buy the "OEM version" in a computer store for about
+$30 (even less now that '95 is out and all those millions of copies of
+3.1 are next to worthless - 3.1 is just fine for running Word and
+excel, remember!), so if all you want to run are those apps and
+perhaps the occasional copy of "access" or "NOTES" then Windows
+remains, hands down, your best bet.  Why sweat through the pain of
+learning Linux administration when all you want is to be able to write
+your reports in Word?
+
+I think the caldera folks have misjudged the market.  Oh sure, they'll
+be a "success" because the Linux market is big enough now that lots of
+folks will jump in just for the sake of it, but they won't be keeping
+Bill Gates up at night at all.
+
+						Jordan
+
+
+
+--------------------------------------------------------------------------------
+MID: 1068.816076638@time.cdrom.com
+DATE: 1995-11-11T07:57:18+00:00  FROM: "Jordan K. Hubbard" <jkh@time.cdrom.com> <None>
+SUBJ: Re: Here's why you should post about *BEER* 
+BODY:
+
+Heh..  You make some unfounded assumptions there..  It is true that I
+do not touch beer or any other form of alcohol and have not for over 7
+years now (I stopped drinking on July 31st, 1988).
+
+Before that, well..  Let's just say that stories are still sometimes
+told in hushed tones around campfires.  The 90MPH races across Golden
+Gate Bridge on a motorcycle with my eyes shut, just to see if I could
+do it by feel.  The standing edict at U.C. Berkeley's EECS department
+to never, EVER go drinking with Jordan if you wanted to finish the
+evening standing up, not to mention the next day.  The saying: "Beer -
+It's not just for breakfast anymore." that remains a standard
+expression at U.C.  The infamous 3 day imported beer parties at my
+house where cases of beer not sold in the U.S. were shipped in
+air-freight for the occasion, cost no object (the result of many
+fact-finding trips to Europe where I collected beer bottles and
+brewery telephone numbers in great quantities).  The long, though not
+entirely unfriendly association with the S.F Police Dept. that we'll
+not elaborate on here (along with many other stories of a somewhat
+darker nature).
+
+Yes, one could say I've had a few beers in my

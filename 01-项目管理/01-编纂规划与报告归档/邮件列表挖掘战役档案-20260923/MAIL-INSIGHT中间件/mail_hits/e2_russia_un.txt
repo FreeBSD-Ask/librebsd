@@ -1,0 +1,4363 @@
+total 40
+[1992-01-01T00:00:00+00:00] [] [Any one with half a brain knows that cat can be used to display files, that
+the default output of cat is to fd 1 (stdout), and that by the phrasing
+`you "cat" two files` you implied with "you" that I would do it
+personally rather than as part of a script.  Further, stdout in an
+interactive environment is attached to a device driver for a tty or a pty
+-- a display device.  You, of all people, are exactly qualified to know
+this.
+
+>>Obviously what you are asking is "how do I make two monolingual/bilingual/
+>>multilingual files of different language attribution into a single bilingual/
+>>multilingual file using cat" -- not the question as you have phrased it, nor
+>>as I have answered it, but in the context of the discussion, clearly the
+>>intended tack.
+>
+>"How to "cat" files with different attributes" is the classic question
+>to piss off attribute-lovers, which all UNIX lovers know.
+
+It didn't piss me off; I answered it in good faith, and provided a workable
+soloution that you could even call "cat" if you wanted.
+
+Yes, it introduced a case where multiple output streamss combined to
+produce its input failed; but it worked in all other cases.  We can
+name it "cat" instead of "combine" if we choose to say that this is a
+case where the beahaviour is undefined.  This is exactly analogous to
+the ANSI C standard changing expected behaviour to undefined behaviour
+for things like memcpy() to overlapping areas, or similar changes to
+the action of system calls under Posix.  I do not see you claiming
+that ANSI C is not C or that a Posix compliant UNIX is not UNIX.  My
+redefinition of "cat" stands as a potential soloution to your attribute
+problems.
+
+If there is not a default attribution of files and a default attribution
+of all files below a mount point where the mount goes remote via NFS to
+an older system, how do you propose to deal with use of non-international
+files on an internationalized system?  You may cop out for 7 bit US ASCII,
+but whatever your answer, it damn well doesn't hold for existing file
+from 8-bit clean internationalizations in Western Europe, Russia, and
+elsewhere where small glyph-set character sets are currently in use --
+or would you have us all update all our systems and all our software
+simultaneously?
+
+The reverse case of a non-internationalized system mounting an exported
+file system from an internationalized system applies here as well.  How
+do you propose to solve this problem with a character set containing
+nonintersecting (non-unified) national character sets?
+
+Obviously, you will make a snide comment about me, rather than answering the
+questions, unless you chose to take that tack that there are bound to
+be incompatabilities with existing software *the same answer you berate
+me for here).
+
+>Of course, there are several other reasons why not to use file attributes,
+>which yuu don't know. But, I'm tired.
+>
+>>Rather than pretending I don't know what you are getting at,
+>
+>Then, don't post anymore.
+
+I should have pretended that I didn't know you were attempting to disguise
+the '"cat" of attributed files' problem and let you work up to it over
+the period of a week?  Seems like sour grapes on your part.
+
+>>The answer is "you don't use 'cat'".  The "cat" command does not deal with
+>
+>OK, say it in comp.unix.misc and see what happens.
+
+If I don't delete the context from this (as you did) and state that the
+"cat" command can be replaced with the "combine" command, and that the
+"combine" command can be renamed to "cat" as long as you don't construct
+wildly pessimistic code, an example of which I pointed out -- I am well
+aware of drawbacks in suggestions I make, and, unlike you, I not only
+admit them, but point them out.  Did it occur to you that criticism is
+necessary only to draw attention to a flaw, and if the originator of
+the flaw admits it, perhaps they are looking for suggestions rather
+than someone parroting their own words back to them?
+
+>>What this means is that all files which are multilingual in nature require
+>>a compound document architecture.
+>
+>No thank you. I do want to grep my multilingual files.
+
+Grep for "macro".  It's a Latin word used in many, many western languages;
+tell me: how will this match "macro" in Latin, German, and English when
+the character sets are not unified?  Is your "grep " going to unify
+internally?  How does your suggestion (which does not have a standard
+codified for it) resolve this issue?
+
+>>What this means is that a utility to combine documents (let's call it
+>>"combine") must have the ability to either generate language attributed
+>>files (if the source files are all of a single language attribution) or
+>>our default compound document format (TBD).
+>
+>You are making simple problem unsolvable.
+
+You are taking information from my posting out of context to make it seem
+as if this were the case.  This is not a technique in rational discourse,
+it is a sales job.  Salesman.
+
+>>The correct approach is to note that since Unicode does not provide a
+>>mechanism directly for language attribution, and that file attribution
+>>is only a partial soloution,
+>
+>So, the correct aproach is not to use Unicode as it is.
+
+No, the correct approach is to use a full soloution; one potential full
+soloution is in my previous posting (following the comma in the
+"mysteriously" truncated half line above.
+
+>>What this means is that a utility to combine documents (let's call it
+>>"combine")
+>
+>Wow!
+
+"Wow" indeed, as you "cleverly" omit the fact that "combine" may be renamed
+to "cat" if we omit a single contrived and pessimistic use from the set
+of defined behaviours for "cat"... as I stated in my previous posting.
+
+>>Does this answer your "cat" question sufficiently?  
+>
+>Conglaturations! You are now prepared to accept the second question.
+>
+>Under internationalized environment, we often create a file with Japanese
+>name. At the same time,
+>
+>	1) we might have a file having Chinese name in the same directory.
+>	2) we might have a file having Chinese name in the different directory.
+>	3) the Japanses file's full pathname might contain Chinese at its
+>	   intermediate directory name.
+>
+>Could you design a replacement of "ls" for such a situation?
+
+Yes, no problem, since the name space information is not considered to
+be multilingual text in common usage, but rather it is considered to be
+name space information.
+
+Each name in a file is already tagged in the inode as to the nature of
+the language to be used within the inode (for monolingual documents).
+For documents which are *not* monolingual, the file name must have been
+entered in the context of a particualar language-dependant input mechanism
+for the file to exist within the file system name space at all.  Thus the
+language tagging of the file name itself is also derivable at creation time.
+
+This is only untrue if you are proposing the maintenance of multiple name
+spaces, one per language used on the machine.  This is both at odds with
+your stated intent of minimizing the currently loaded font sets, a natural
+requirement of your expansion of the combined font size -- an unworkable
+soloution in both Unicode and your suggested environment.  This also has
+the ramification of mapping files into other than their creation name space
+at creation time, or to save space taken up by directories, on first
+reference within a particular name space.  Unless you have personally
+solved the machine translation problem, there are attributes which do
+not move from language to language in the file system name space itself,
+such as file names denoting ownership ("bobs.file") or the contents of the
+file ("QuartlySales.Q3.1991").  Thus there is nothing added in doing this
+which is unresolovable, unless it is also unresolvable in your suggested
+mechanism as well.
+
+The only possible argument is collating sequence, and we both know your
+proposed soloution breaks down in languages with multiple possible
+collation sequences (ie: German dictionary vs. phone book order).  It
+requires an exception.  There is no reason not to make the exception the
+rule, and provide routines for alpha sort and locale-specific tables
+for all languages, instead of just the exceptions.  This soloution is
+one that has been proposed for a Unicode-based environment as well.
+
+>Then, the third:
+>
+>>Attribution of output and clever construction of out output device drivers
+>>would even allow us to switch fonts as dictated by the compound document
+>>architecture controls embedded in the file and/or the attribution of the
+>>file descriptor (the absence of such attribution being an indicator of a
+>>compund document).
+>
+>Given the above situation for "ls", I'm afraid that "argv" to any command
+>be the compound document. Am I correct? Is it still have a type "char"?
+>Do you think the entire OS still UNIX?
+
+In order:
+No.
+
+No, unless you don't mean "byte" by "char",
+
+Yes, if POSIX and ANSI C haven't "unUNIXed UNIX" by their specification of
+previously non-existant exception cases, No, if you mean SVID -- but
+then again, your proposal (or any multibyte proposal) fails this test,
+as does 386BSD itself, the OS to which we will be applying the work.
+
+>>The problem seemed to
+>>be that there was not a means around the problem from your point of view.
+>
+>Just include language information in character code, and the problem
+>disappears.
+
+Unfortuantely (or fortunately, since it means I am not culpable and do
+not owe you nor anyone else an explanation on the matter), I am not a
+member of the responsible standards committee, or I might have done what
+you suggest.  If you could suggest a standard that did what you are
+suggesting, allowed X11 to operate on 16 bit fonts (since X is our
+only possible common user interface at this time and most servers do
+not support 32 bit fonts), and allowed language specific compaction by
+character set choice as an optimization for monolingual documents (or
+did not disallow it!), then I would adopt your approach.  Even a draft
+standard which was under serious consideration by a standards committee
+would be acceptable.
+
+One can not build a palace of bricks when one has only straw; but with
+straw, one may build bricks.
+
+Unicode is straw.
+
+The work on 386BSD is widely distributed, and it is not possible to use
+an approach which has not been formally documented when the developers
+are so widely seperated geographically.  It is not possible to use a
+"standard" where a reference takes the form of "ask Ohta; it's his
+standard" (if you had a car accident, we would all be screwed).  It is
+useless to use a standard which has no hope of becoming codified by
+a respected standards committee... thus it must be a draft standard
+under consideration or an actual standard.
+
+
+					Terry Lambert
+					terry@icarus.weber.edu
+					terry_lambert@novell.com
+---
+Any opinions in this posting are my own and not those of my present
+or previous employers.
+-- 
+-------------------------------------------------------------------------------
+                                        "I have an 8 user poetic license" - me
+ Get the 386bsd FAQ from agate.berkeley.edu:/pub/386BSD/386bsd-0.1/unofficial
+-------------------------------------------------------------------------------
+
+
+]
+MID: <no-id-unix.bsd-b7de6feeff5a364e>
+SUBJ: 
+BODY: Any one with half a brain knows that cat can be used to display files, that | the default output of cat is to fd 1 (stdout), and that by the phrasing | `you "cat" two files` you implied with "you" that I would do it | personally rather than as part of a script.  Further, stdout in an | interactive environment is attached to a device driver for a tty or a pty | -- a display device.  You, of all people, are exactly qualified to know | this. |  | >>Obviously what you are asking is "how do I make two monolingual/bilingual/ | >>multilingual files of different language attribution into a single bilingual/ | >>multiling
+------------------------------------------------------------
+[1992-04-28T09:49:38+00:00] [cgd@agate.berkeley.edu (Chris G. Demetriou)] [In article <1992Apr27.210806.18225@lgc.com> danson@lgc.com (Doug Anson) writes:
+>Wise thought... however the $64k question is:
+>	when will 4.4 be distributed?
+
+last i heard, they were 'planning' on around q1 93.  You've have to ask
+them tho... (Keith, are you reading this?)
+
+>An afterthought -- will 4.4 be freely available as net2 is now?
+
+Da. (or for those who don't grok russian:  yes)
+
+cgd
+
+ps:  (to sef) i didn't realize that Domain/OS had virtual consoles...
+	However, i wouldn't compare a real unix to Domain/OS...
+	After all, it's JLRU -- NOT! -- and it works so well, too...
+
+
+]
+MID: tj73iINNsm9@agate.berkeley.edu
+SUBJ: Re: all of this virtual console commotion...
+BODY: In article <1992Apr27.210806.18225@lgc.com> danson@lgc.com (Doug Anson) writes: | >Wise thought... however the $64k question is: | >	when will 4.4 be distributed? |  | last i heard, they were 'planning' on around q1 93.  You've have to ask | them tho... (Keith, are you reading this?) |  | >An afterthought -- will 4.4 be freely available as net2 is now? |  | Da. (or for those who don't grok russian:  yes) |  | cgd |  | ps:  (to sef) i didn't realize that Domain/OS had virtual consoles... | 	However, i wouldn't compare a real unix to Domain/OS... | 	After all, it's JLRU -- NOT! -- and it works so well, too... |  |  | 
+------------------------------------------------------------
+[1992-07-30T15:08:08+00:00] ["Andrew A. Chernov, canton Uri's citizen" <ache@astral.msk.su>] [How I can  choose BSDI/DOS at boot time and integrate DOS partition
+into BSDI scheme?
+Please tell me if any solutions exists.
+			       Thanx in advance.
+-- 
+In-This-Life:  Andrew A. Chernov    |  "Hay mas dicha, mas contento
+Internet:      ache@astral.msk.su   |  "Que adorar una hermosura
+Organizations: The RELCOM, Demos/+, |  "Brujuleada entre los lejos
+               Moscow, Russia       |  "De lo imposible?!"  (Calderon)
+
+
+]
+MID: ache.712508888@cpuv1
+SUBJ: BSDI & DOS on same disk, HOW?
+BODY: How I can  choose BSDI/DOS at boot time and integrate DOS partition | into BSDI scheme? | Please tell me if any solutions exists. | 			       Thanx in advance. | --  | In-This-Life:  Andrew A. Chernov    |  "Hay mas dicha, mas contento  | Internet:      ache@astral.msk.su   |  "Que adorar una hermosura  | Organizations: The RELCOM, Demos/+, |  "Brujuleada entre los lejos  |                Moscow, Russia       |  "De lo imposible?!"  (Calderon)  |  |  | 
+------------------------------------------------------------
+[1992-08-26T14:51:57+00:00] ["Andrew A. Chernov, Black Mage" <ache@astral.msk.su>] [Hi, 386bsd hackers!
+I have some strange troubles with this system:
+
+Problem description:
+Can't install 386BSD into 0xa5 partition, but installation on whole
+disk is sucessfull.
+This bug is independent of partition size and order.
+
+'install' diagnostics:
+"High level... disk storage:"
+Disk parameters and partition size are correct.
+After "super-block backups ..." and its numbers 'install' says:
+newfs: ioctl (WDINFO): No such process
+newfs: /dev/rwd0a: can't rewrite disk label
+
+Hardware:
+ST-1239A (IDE) with _real_ CMOS configuration, i.e. 1272 x 9 x 36
+
+Thanx in advance for any helps and hints.
+-- 
+In-This-Life:  Andrew A. Chernov    |  "Hay mas dicha, mas contento
+Internet:      ache@astral.msk.su   |  "Que adorar una hermosura
+Organization:  The RELCOM Corp.,    |  "Brujuleada entre los lejos
+	       Moscow, Russia       |  "De lo imposible?!"  (Calderon)
+
+
+]
+MID: ache.714840717@cpuv1
+SUBJ: HELP: Can't install 386bsd-0.1 into own partition!
+BODY: Hi, 386bsd hackers! | I have some strange troubles with this system: |  | Problem description: | Can't install 386BSD into 0xa5 partition, but installation on whole | disk is sucessfull. | This bug is independent of partition size and order. |  | 'install' diagnostics: | "High level... disk storage:" | Disk parameters and partition size are correct. | After "super-block backups ..." and its numbers 'install' says: | newfs: ioctl (WDINFO): No such process | newfs: /dev/rwd0a: can't rewrite disk label |  | Hardware: | ST-1239A (IDE) with _real_ CMOS configuration, i.e. 1272 x 9 x 36 |  | Thanx in advance for any helps and hints. | -
+------------------------------------------------------------
+[1992-08-27T12:08:10+00:00] ["Andrew A. Chernov, Black Mage" <ache@astral.msk.su>] [In <ache.714840717@cpuv1> I writes:
+
+>Problem description:
+>Can't install 386BSD into 0xa5 partition, but installation on whole
+>disk is sucessfull.
+>This bug is independent of partition size and order.
+
+>'install' diagnostics:
+>"High level... disk storage:"
+>Disk parameters and partition size are correct.
+>After "super-block backups ..." and its numbers 'install' says:
+>newfs: ioctl (WDINFO): No such process
+>newfs: /dev/rwd0a: can't rewrite disk label
+
+I found some solution of this problem, but not a _real_ solution:
+
+You must allow 'install' to _create_ BSD partition, don't create this
+partion by hand or by "diskmanager" or by something else.
+'install' can't work only when BSD partition already exist, but can
+create it himself!
+
+Very strange...
+
+-- 
+In-This-Life:  Andrew A. Chernov    |  "Hay mas dicha, mas contento
+Internet:      ache@astral.msk.su   |  "Que adorar una hermosura
+Organization:  The RELCOM Corp.,    |  "Brujuleada entre los lejos
+	       Moscow, Russia       |  "De lo imposible?!"  (Calderon)
+
+
+]
+MID: ache.714917290@cpuv1
+SUBJ: Re: HELP: Can't install 386bsd-0.1 into own partition!
+BODY: In <ache.714840717@cpuv1> I writes: |  | >Problem description: | >Can't install 386BSD into 0xa5 partition, but installation on whole | >disk is sucessfull. | >This bug is independent of partition size and order. |  | >'install' diagnostics: | >"High level... disk storage:" | >Disk parameters and partition size are correct. | >After "super-block backups ..." and its numbers 'install' says: | >newfs: ioctl (WDINFO): No such process | >newfs: /dev/rwd0a: can't rewrite disk label |  | I found some solution of this problem, but not a _real_ solution: |  | You must allow 'install' to _create_ BSD partition, don't create this | part
+------------------------------------------------------------
+[1992-08-27T20:19:50+00:00] [gt@prosun.first.gmd.de (Gerd Truschinski)] [In article <ache.714917290@cpuv1>, ache@astral.msk.su (Andrew A. Chernov, Black Mage) writes:
+|> In <ache.714840717@cpuv1> I writes:
+|> 
+|> >Problem description:
+|> >Can't install 386BSD into 0xa5 partition, but installation on whole
+|> >disk is sucessfull.
+|> >This bug is independent of partition size and order.
+|> 
+|> >'install' diagnostics:
+|> >"High level... disk storage:"
+|> >Disk parameters and partition size are correct.
+|> >After "super-block backups ..." and its numbers 'install' says:
+|> >newfs: ioctl (WDINFO): No such process
+|> >newfs: /dev/rwd0a: can't rewrite disk label
+|> 
+|> I found some solution of this problem, but not a _real_ solution:
+|> 
+|> You must allow 'install' to _create_ BSD partition, don't create this
+|> partion by hand or by "diskmanager" or by something else.
+|> 'install' can't work only when BSD partition already exist, but can
+|> create it himself!
+
+Hey, are there anywhere the sources of 'install', did I miss an artikel?:-)
+I have had the same and other problems and I'm ending with one big 
+BSD partition without DOS.
+
+
+|> 
+|> Very strange...
+|>
+Thats what I'm saying, but thank you for system as it is working now. 
+|> -- 
+|> In-This-Life:  Andrew A. Chernov    |  "Hay mas dicha, mas contento
+|> Internet:      ache@astral.msk.su   |  "Que adorar una hermosura
+|> Organization:  The RELCOM Corp.,    |  "Brujuleada entre los lejos
+|> 	       Moscow, Russia       |  "De lo imposible?!"  (Calderon)
+
+
+/gT/
+
+
+]
+MID: 2252@bigfoot.first.gmd.de
+SUBJ: Re: HELP: Can't install 386bsd-0.1 into own partition!
+BODY: In article <ache.714917290@cpuv1>, ache@astral.msk.su (Andrew A. Chernov, Black Mage) writes: | |> In <ache.714840717@cpuv1> I writes: | |>  | |> >Problem description: | |> >Can't install 386BSD into 0xa5 partition, but installation on whole | |> >disk is sucessfull. | |> >This bug is independent of partition size and order. | |>  | |> >'install' diagnostics: | |> >"High level... disk storage:" | |> >Disk parameters and partition size are correct. | |> >After "super-block backups ..." and its numbers 'install' says: | |> >newfs: ioctl (WDINFO): No such process | |> >newfs: /dev/rwd0a: can't rewrite disk label | |>  | |> I 
+------------------------------------------------------------
+[1992-09-14T19:48:48+00:00] [volker@sfb256.iam.uni-bonn.de ( Volker A. Brandt )] [In article <1992Sep11.123540.19263@constellation.ecn.uoknor.edu> greg@gallifrey.ucs.uoknor.edu (Greg Trotter) writes:
+[...]
+>someone else used the name Asprin. Bayer sued, and *lost* because they
+>had not taken appropriate steps to express Asprin as a brand name instead
+>of just a plain ol' noun.
+
+This is not true.  After world war II, the US occupational administration 
+seized all patents and trademarks, declared them forfeit for German companies,
+and offered them to US companies for nominal license fees (payable to the 
+US government, of course).
+
+So, while the Soviet dragged off watches and toilet bowls, the US got hold of
+a lot of the *real* good stuff :-/  In most other countries, the name Aspirin
+(sic) is still a protected trademark.
+
+-- Volker
+
+
+-- 
+----------------------------------------------------------------------------
+Bitnet:   UNM409@DBNRHRZ1                              Volker A. Brandt
+UUCP:     ...!unido!DBNRHRZ1.bitnet!unm409             Angewandte Mathematik
+Internet: volker@sfb256.iam.uni-bonn.de                (Bonn, Germany)
+
+
+]
+MID: 1992Sep14.194848.2106@olymp.informatik.uni-bonn.de
+SUBJ: Re: Are you sure UNIX is a trade mark?
+BODY: In article <1992Sep11.123540.19263@constellation.ecn.uoknor.edu> greg@gallifrey.ucs.uoknor.edu (Greg Trotter) writes: | [...] | >someone else used the name Asprin. Bayer sued, and *lost* because they | >had not taken appropriate steps to express Asprin as a brand name instead | >of just a plain ol' noun. |  | This is not true.  After world war II, the US occupational administration  | seized all patents and trademarks, declared them forfeit for German companies, | and offered them to US companies for nominal license fees (payable to the  | US government, of course). |  | So, while the Soviet dragged off watches and
+------------------------------------------------------------
+[1992-10-15T01:46:38+00:00] [bross@splatter.nas.nasa.gov (Bill Ross)] [I'm leaving for Russia tomorrow Thu Oct 15 (need to be at airport at 
+2pm) and my plan for getting a 5.25" release together for some Russian
+friends just fell thru: does anyone sell floppy versions (hopefully
+w/ all fixes..) of 386bsd?
+
+Bill Ross
+415/552-0892
+
+
+]
+MID: 1992Oct15.014638.9644@nas.nasa.gov
+SUBJ: looking for floppies
+BODY: I'm leaving for Russia tomorrow Thu Oct 15 (need to be at airport at  | 2pm) and my plan for getting a 5.25" release together for some Russian | friends just fell thru: does anyone sell floppy versions (hopefully | w/ all fixes..) of 386bsd? |  | Bill Ross | 415/552-0892 |  |  | 
+------------------------------------------------------------
+[1992-11-08T07:05:10+00:00] [berryh@huey.udel.edu (John Berryhill, Ph.D.)] [In article <BxA4K4.3qM@NeoSoft.com> gclarkii@NeoSoft.com (Gary Clark II) writes:
+
+>to PKE?  Also what type of publishing is classified as prior art?  Does
+>fiction count?
+
+In order to qualify as prior art, the publication must show the invention
+including every limitation of at least one of the claims.  A publication
+may be combined with another publication in order to show that at least
+one of the claims would have been obvious to one of ordinary skill in
+the art to which the invention most closely pertains.
+
+The publication must be a printed description that is publicly
+accessible.  There is case law which has established that an academic
+thesis, in Russian, in a university library, in the Soviet Union was
+a publicly accessible document inasmuch as it was properly indexed
+in the card catalog according to the name of the author.
+
+I have been told that if it is known in a particular art that there
+is a guru, on an icy mountaintop in Tibet, accessible only by scaling
+a mile-high wall of ice, and the guru has a stone tablet on which there
+is a disclosure of an invention, written in a language that only he can
+read, and that if you go to Tibet, climb the mountain, and pay the guru
+the sum of five million dollars for him to read the tablets -- then
+that would probably be held to be available as prior art.
+
+On the other hand, if a detailed description of the invention was
+taught orally and memorized by every schoolchild in Canada for the
+last 100 years, and it has been common in Canada for every person
+to discuss the invention with every person they meet every day, and
+if they stand together along the entire border shouting about the
+invention, but they never wrote or recorded a single word -- then
+that would probably not be available as prior art.
+
+Simple, no?
+-- 
+                                                John Berryhill, Ph.D.
+
+
+]
+MID: 1992Nov8.070510.28246@udel.edu
+SUBJ: Re: Patents: What they are. What they aren't. Other factors.
+BODY: In article <BxA4K4.3qM@NeoSoft.com> gclarkii@NeoSoft.com (Gary Clark II) writes: |  | >to PKE?  Also what type of publishing is classified as prior art?  Does | >fiction count? |  | In order to qualify as prior art, the publication must show the invention | including every limitation of at least one of the claims.  A publication | may be combined with another publication in order to show that at least | one of the claims would have been obvious to one of ordinary skill in | the art to which the invention most closely pertains. |  | The publication must be a printed description that is publicly | accessible.  There is
+------------------------------------------------------------
+[1992-11-25T08:17:28+00:00] ["Andrew A. Chernov, Black Mage" <ache@astral.msk.su>] [Hi, I found this bug when I try pcfs.
+wd.c driver don't compute partition offset correctly (it lost sectors).
+wd.c assumed, that any partition start only with cylinder boundary,
+but for MSDOS it is wrong.
+I looking for this bug in as.c driver, but everything is OK there.
+
+Fix are very simple and follows:
+
+*** wd.c.was	Sun Nov 22 02:50:57 1992
+--- wd.c	Wed Nov 25 10:02:30 1992
+***************
+*** 397,408 ****
+  	lp = &du->dk_dd;
+  	secpertrk = lp->d_nsectors;
+  	secpercyl = lp->d_secpercyl;
+  	cylin = blknum / secpercyl;
+  	head = (blknum % secpercyl) / secpertrk;
+  	sector = blknum % secpertrk;
+- 	if ((du->dk_flags & DKFL_BSDLABEL) != 0 && wdpart(bp->b_dev) != WDRAW)
+- 		cylin += lp->d_partitions[wdpart(bp->b_dev)].p_offset
+- 				/ secpercyl;
+  
+  	/* 
+  	 * See if the current block is in the bad block list.
+--- 397,407 ----
+  	lp = &du->dk_dd;
+  	secpertrk = lp->d_nsectors;
+  	secpercyl = lp->d_secpercyl;
++ 	if ((du->dk_flags & DKFL_BSDLABEL) != 0 && wdpart(bp->b_dev) != WDRAW)
++ 		blknum += lp->d_partitions[wdpart(bp->b_dev)].p_offset;
+  	cylin = blknum / secpercyl;
+  	head = (blknum % secpercyl) / secpertrk;
+  	sector = blknum % secpertrk;
+  
+  	/* 
+  	 * See if the current block is in the bad block list.
+-- 
+In-This-Life:  Andrew A. Chernov    |  "Hay mas dicha, mas contento
+Internet:      ache@astral.msk.su   |  "Que adorar una hermosura
+Organization:  The RELCOM Corp.,    |  "Brujuleada entre los lejos
+               Moscow, Russia       |  "De lo imposible?!"  (Calderon)
+
+
+
+]
+MID: aEOQp4hiD0@astral.msk.su
+SUBJ: Patch for wd.c (partition offset, pcfs)
+BODY: Hi, I found this bug when I try pcfs. | wd.c driver don't compute partition offset correctly (it lost sectors). | wd.c assumed, that any partition start only with cylinder boundary, | but for MSDOS it is wrong. | I looking for this bug in as.c driver, but everything is OK there. |  | Fix are very simple and follows: |  | *** wd.c.was	Sun Nov 22 02:50:57 1992 | --- wd.c	Wed Nov 25 10:02:30 1992 | *************** | *** 397,408 **** |   	lp = &du->dk_dd; |   	secpertrk = lp->d_nsectors; |   	secpercyl = lp->d_secpercyl; |   	cylin = blknum / secpercyl; |   	head = (blknum % secpercyl) / secpertrk; |   	sector = blknum % secpertrk
+------------------------------------------------------------
+[1992-11-26T20:36:23+00:00] ["Andrew A. Chernov, Black Mage" <ache@astral.msk.su>] [Hi,
+I found small bug in standard com.c driver, t_flags field
+NEVER contain CRTSCTS, but t_cflag filed does.
+Fix help me to minimize "silo overflow".
+
+
+*** com.c.was	Sun Nov 22 02:52:48 1992
+--- com.c	Thu Nov 26 23:10:43 1992
+***************
+*** 400,406 ****
+  			outb(com+com_mcr,
+  				inb(com+com_mcr) & ~(MCR_DTR | MCR_RTS) | MCR_IENABLE);
+  	} else if ((stat & MSR_DCTS) && (tp->t_state & TS_ISOPEN) &&
+! 		   (tp->t_flags & CRTSCTS)) {
+  		/* the line is up and we want to do rts/cts flow control */
+  		if (stat & MSR_CTS) {
+  			tp->t_state &=~ TS_TTSTOP;
+--- 400,406 ----
+  			outb(com+com_mcr,
+  				inb(com+com_mcr) & ~(MCR_DTR | MCR_RTS) | MCR_IENABLE);
+  	} else if ((stat & MSR_DCTS) && (tp->t_state & TS_ISOPEN) &&
+! 		   (tp->t_cflag & CRTSCTS)) {
+  		/* the line is up and we want to do rts/cts flow control */
+  		if (stat & MSR_CTS) {
+  			tp->t_state &=~ TS_TTSTOP;
+-- 
+In-This-Life:  Andrew A. Chernov    |  "Hay mas dicha, mas contento
+Internet:      ache@astral.msk.su   |  "Que adorar una hermosura
+Organization:  The RELCOM Corp.,    |  "Brujuleada entre los lejos
+               Moscow, Russia       |  "De lo imposible?!"  (Calderon)
+
+
+
+]
+MID: cF7LJ5hW40@astral.msk.su
+SUBJ: Patch com.c for correct RTSCTS handle (silo overflow)
+BODY: Hi, | I found small bug in standard com.c driver, t_flags field | NEVER contain CRTSCTS, but t_cflag filed does. | Fix help me to minimize "silo overflow". |  |  | *** com.c.was	Sun Nov 22 02:52:48 1992 | --- com.c	Thu Nov 26 23:10:43 1992 | *************** | *** 400,406 **** |   			outb(com+com_mcr, |   				inb(com+com_mcr) & ~(MCR_DTR | MCR_RTS) | MCR_IENABLE); |   	} else if ((stat & MSR_DCTS) && (tp->t_state & TS_ISOPEN) && | ! 		   (tp->t_flags & CRTSCTS)) { |   		/* the line is up and we want to do rts/cts flow control */ |   		if (stat & MSR_CTS) { |   			tp->t_state &=~ TS_TTSTOP; | --- 400,406 ---- |   			outb(com+com_m
+------------------------------------------------------------
+[1992-11-26T21:33:59+00:00] ["Andrew A. Chernov, Black Mage" <ache@astral.msk.su>] [Hi,
+I found this bug in following situation:
+my current tty modes: -parity cs8 -istrip
+When I call any program that use CBREAK (COMPAT_43) mode,
+tty modes resets to: cs7 parenb istrip,
+so, I lost my 8-bit characters.
+
+I produce this patch to fix this and some more situations.
+I made COMPAT_43 modes and POSIX modes as close as
+possible.
+
+*** tty_compat.c.was	Wed Dec 25 01:24:09 1991
+--- tty_compat.c	Thu Nov 26 22:38:06 1992
+***************
+*** 119,125 ****
+  			term.c_ospeed = compatspcodes[speed];
+  		term.c_cc[VERASE] = sg->sg_erase;
+  		term.c_cc[VKILL] = sg->sg_kill;
+! 		tp->t_flags = tp->t_flags&0xffff0000 | sg->sg_flags&0xffff;
+  		ttcompatsetflags(tp, &term);
+  		return (ttioctl(tp, com == TIOCSETP ? TIOCSETAF : TIOCSETA, 
+  			&term, flag));
+--- 119,125 ----
+  			term.c_ospeed = compatspcodes[speed];
+  		term.c_cc[VERASE] = sg->sg_erase;
+  		term.c_cc[VKILL] = sg->sg_kill;
+! 		tp->t_flags = ttcompatgetflags(tp)&0xffff0000 | sg->sg_flags&0xffff;
+  		ttcompatsetflags(tp, &term);
+  		return (ttioctl(tp, com == TIOCSETP ? TIOCSETAF : TIOCSETA, 
+  			&term, flag));
+***************
+*** 182,191 ****
+  
+  		term = tp->t_termios;
+  		if (com == TIOCLSET)
+! 			tp->t_flags = (tp->t_flags&0xffff) | *(int *)data<<16;
+  		else {
+! 			tp->t_flags = 
+! 			 (ttcompatgetflags(tp)&0xffff0000)|(tp->t_flags&0xffff);
+  			if (com == TIOCLBIS)
+  				tp->t_flags |= *(int *)data<<16;
+  			else
+--- 182,190 ----
+  
+  		term = tp->t_termios;
+  		if (com == TIOCLSET)
+! 			tp->t_flags = (ttcompatgetflags(tp)&0xffff) | *(int *)data<<16;
+  		else {
+! 			tp->t_flags = ttcompatgetflags(tp);
+  			if (com == TIOCLBIS)
+  				tp->t_flags |= *(int *)data<<16;
+  			else
+***************
+*** 242,257 ****
+  				flags |= EVENP;
+  		} else
+  			flags |= EVENP | ODDP;
+- 	} else {
+- 		if ((tp->t_flags&LITOUT) && !(oflag&OPOST))
+- 			flags |= LITOUT;
+- 		if (tp->t_flags&PASS8)
+- 			flags |= PASS8;
+  	}
+  	
+  	if ((lflag&ICANON) == 0) {	
+  		/* fudge */
+! 		if (iflag&IXON || lflag&ISIG || lflag&IEXTEN || cflag&PARENB)
+  			flags |= CBREAK;
+  		else
+  			flags |= RAW;
+--- 241,255 ----
+  				flags |= EVENP;
+  		} else
+  			flags |= EVENP | ODDP;
+  	}
++ 	if (!(oflag&OPOST) && (!(cflag&PARENB) || (cflag&CSIZE) == CS8))
++ 		flags |= LITOUT;
++ 	if ((cflag&CSIZE) == CS8 && !(iflag&ISTRIP))
++ 		flags |= PASS8;
+  	
+  	if ((lflag&ICANON) == 0) {	
+  		/* fudge */
+! 		if (oflag&OPOST || iflag&ISTRIP || iflag&IXON || lflag&ISIG || lflag&IEXTEN || (cflag&PARENB) && (cflag&CSIZE) != CS8)
+  			flags |= CBREAK;
+  		else
+  			flags |= RAW;
+***************
+*** 322,328 ****
+  			iflag &= ~ISTRIP;
+  	} else {
+  		cflag &= ~CSIZE;
+! 		cflag |= CS7|PARENB;
+  		iflag |= ISTRIP;
+  	}
+  	if ((flags&(EVENP|ODDP)) == EVENP) {
+--- 320,328 ----
+  			iflag &= ~ISTRIP;
+  	} else {
+  		cflag &= ~CSIZE;
+! 		cflag |= CS7;
+! 		if (flags&(ODDP|EVENP))
+! 			cflag |= PARENB;
+  		iflag |= ISTRIP;
+  	}
+  	if ((flags&(EVENP|ODDP)) == EVENP) {
+***************
+*** 387,393 ****
+  			iflag |= ISTRIP;
+  	} else if ((flags&RAW) == 0) {
+  		cflag &= ~CSIZE;
+! 		cflag |= CS7|PARENB;
+  		oflag |= OPOST;
+  	}
+  	t->c_iflag = iflag;
+--- 387,395 ----
+  			iflag |= ISTRIP;
+  	} else if ((flags&RAW) == 0) {
+  		cflag &= ~CSIZE;
+! 		cflag |= CS7;
+! 		if (flags&(ODDP|EVENP))
+! 			cflag |= PARENB;
+  		oflag |= OPOST;
+  	}
+  	t->c_iflag = iflag;
+*** tty_tb.c.was	Thu Nov 26 21:21:46 1992
+--- tty_tb.c	Thu Nov 26 21:29:48 1992
+***************
+*** 117,123 ****
+  	tp->t_inbuf = 0;
+  	bzero((caddr_t)&tbp->rets, sizeof (tbp->rets));
+  	tp->T_LINEP = (caddr_t)tbp;
+! 	tp->t_flags |= LITOUT;
+  	return (0);
+  }
+  
+--- 117,127 ----
+  	tp->t_inbuf = 0;
+  	bzero((caddr_t)&tbp->rets, sizeof (tbp->rets));
+  	tp->T_LINEP = (caddr_t)tbp;
+! 	tp->t_flags = ttcompatgetflags(tp);
+! 	if (!(tp->t_flags&(LITOUT|RAW))) {
+! 		tp->t_flags |= LITOUT;
+! 		ttcompatsetlflags(tp, &(tp->t_termios));
+! 	}
+  	return (0);
+  }
+  
+-- 
+In-This-Life:  Andrew A. Chernov    |  "Hay mas dicha, mas contento
+Internet:      ache@astral.msk.su   |  "Que adorar una hermosura
+Organization:  The RELCOM Corp.,    |  "Brujuleada entre los lejos
+               Moscow, Russia       |  "De lo imposible?!"  (Calderon)
+
+
+
+]
+MID: hF7BK5hiH1@astral.msk.su
+SUBJ: Patch tty driver for correct handle COMPAT_43 tty modes
+BODY: Hi, | I found this bug in following situation: | my current tty modes: -parity cs8 -istrip | When I call any program that use CBREAK (COMPAT_43) mode, | tty modes resets to: cs7 parenb istrip, | so, I lost my 8-bit characters. |  | I produce this patch to fix this and some more situations. | I made COMPAT_43 modes and POSIX modes as close as | possible. |  | *** tty_compat.c.was	Wed Dec 25 01:24:09 1991 | --- tty_compat.c	Thu Nov 26 22:38:06 1992 | *************** | *** 119,125 **** |   			term.c_ospeed = compatspcodes[speed]; |   		term.c_cc[VERASE] = sg->sg_erase; |   		term.c_cc[VKILL] = sg->sg_kill; | ! 		tp->t_flags = tp->t
+------------------------------------------------------------
+[1992-12-02T20:22:35+00:00] ["Andrew A. Chernov, Black Mage" <ache@astral.msk.su>] [In comp.unix.bsd article <hF7BK5hiH1@astral.msk.su> Andrew A. Chernov
+    writes:
+
+>Hi,
+>I found this bug in following situation:
+>my current tty modes: -parity cs8 -istrip
+>When I call any program that use CBREAK (COMPAT_43) mode,
+>tty modes resets to: cs7 parenb istrip,
+>so, I lost my 8-bit characters.
+>
+>I produce this patch to fix this and some more situations.
+>I made COMPAT_43 modes and POSIX modes as close as
+>possible.
+
+[first patch skipped]
+
+I found another bug after my first patch:
+if anybody set and clear RAW mode, OPOST & IXANY modes stuck.
+Here is small patch (thanx to pasha@kiae.su) to correct this situation.
+REMEMBER: it is SECOND patch, apply my first patch before.
+
+*** tty_compat.c.was1	Thu Nov 26 22:38:06 1992
+--- tty_compat.c	Wed Dec  2 23:05:17 1992
+***************
+*** 242,249 ****
+  		} else
+  			flags |= EVENP | ODDP;
+  	}
+- 	if (!(oflag&OPOST) && (!(cflag&PARENB) || (cflag&CSIZE) == CS8))
+- 		flags |= LITOUT;
+  	if ((cflag&CSIZE) == CS8 && !(iflag&ISTRIP))
+  		flags |= PASS8;
+  	
+--- 242,247 ----
+***************
+*** 254,259 ****
+--- 252,259 ----
+  		else
+  			flags |= RAW;
+  	}
++ 	if (!(flags&RAW) && !(oflag&OPOST) && (!(cflag&PARENB) || (cflag&CSIZE) == CS8))
++ 		flags |= LITOUT;
+  	if (oflag&OXTABS)
+  		flags |= XTABS;
+  	if (lflag&ECHOE)
+***************
+*** 283,289 ****
+  	register long cflag = t->c_cflag;
+  
+  	if (flags & RAW) {
+! 		iflag &= IXOFF;
+  		oflag &= ~OPOST;
+  		lflag &= ~(ECHOCTL|ISIG|ICANON|IEXTEN);
+  	} else {
+--- 283,289 ----
+  	register long cflag = t->c_cflag;
+  
+  	if (flags & RAW) {
+! 		iflag &= (IXOFF|IXANY);
+  		oflag &= ~OPOST;
+  		lflag &= ~(ECHOCTL|ISIG|ICANON|IEXTEN);
+  	} else {
+-- 
+In-This-Life:  Andrew A. Chernov    |  "Hay mas dicha, mas contento
+Internet:      ache@astral.msk.su   |  "Que adorar una hermosura
+Organization:  The RELCOM Corp.,    |  "Brujuleada entre los lejos
+               Moscow, Russia       |  "De lo imposible?!"  (Calderon)
+
+
+
+]
+MID: qCBiH7hi40@astral.msk.su
+SUBJ: Re: Patch tty driver for correct handle COMPAT_43 tty modes (SECOND patch)
+BODY: In comp.unix.bsd article <hF7BK5hiH1@astral.msk.su> Andrew A. Chernov |     writes: |  | >Hi, | >I found this bug in following situation: | >my current tty modes: -parity cs8 -istrip | >When I call any program that use CBREAK (COMPAT_43) mode, | >tty modes resets to: cs7 parenb istrip, | >so, I lost my 8-bit characters. | > | >I produce this patch to fix this and some more situations. | >I made COMPAT_43 modes and POSIX modes as close as | >possible. |  | [first patch skipped] |  | I found another bug after my first patch: | if anybody set and clear RAW mode, OPOST & IXANY modes stuck. | Here is small patch (thanx to pasha@kiae.
+------------------------------------------------------------
+[1992-12-03T14:20:27+00:00] ["Andrew A. Chernov, Black Mage" <ache@astral.msk.su>] [Hi, Chris.
+Very many programs (f.e. stty) test modes in this form:
+(flags & mode)
+Now CRTSCRS is complex mode, and this expression becomes:
+(flags & mode1 | mode2)
+whitch is always true.
+This minor patch add brackets to CRTSCTS definition to correct this
+expression:
+(flags & (mode1 | mode2))
+
+*** termios.h.was	Thu Dec  3 06:24:50 1992
+--- termios.h	Thu Dec  3 17:06:32 1992
+***************
+*** 135,141 ****
+  #ifndef _POSIX_SOURCE
+  #define CCTS_OFLOW	0x00010000	/* CTS flow control of output */
+  #define CRTS_IFLOW	0x00020000	/* RTS flow control of input */
+! #define CRTSCTS		CCTS_OFLOW|CRTS_IFLOW	/* ??? */
+  #define	MDMBUF		0x00100000	/* flow control output via Carrier */
+  #endif
+  
+--- 135,141 ----
+  #ifndef _POSIX_SOURCE
+  #define CCTS_OFLOW	0x00010000	/* CTS flow control of output */
+  #define CRTS_IFLOW	0x00020000	/* RTS flow control of input */
+! #define CRTSCTS         (CCTS_OFLOW|CRTS_IFLOW)   /* ??? */
+  #define	MDMBUF		0x00100000	/* flow control output via Carrier */
+  #endif
+  
+-- 
+In-This-Life:  Andrew A. Chernov    |  "Hay mas dicha, mas contento
+Internet:      ache@astral.msk.su   |  "Que adorar una hermosura
+Organization:  The RELCOM Corp.,    |  "Brujuleada entre los lejos
+               Moscow, Russia       |  "De lo imposible?!"  (Calderon)
+
+
+
+]
+MID: BGhUX7h4F0@astral.msk.su
+SUBJ: [386BSD] Patch cgd's multiport driver for CRTSCTS definition
+BODY: Hi, Chris. | Very many programs (f.e. stty) test modes in this form: | (flags & mode) | Now CRTSCRS is complex mode, and this expression becomes: | (flags & mode1 | mode2) | whitch is always true. | This minor patch add brackets to CRTSCTS definition to correct this | expression: | (flags & (mode1 | mode2)) |  | *** termios.h.was	Thu Dec  3 06:24:50 1992 | --- termios.h	Thu Dec  3 17:06:32 1992 | *************** | *** 135,141 **** |   #ifndef _POSIX_SOURCE |   #define CCTS_OFLOW	0x00010000	/* CTS flow control of output */ |   #define CRTS_IFLOW	0x00020000	/* RTS flow control of input */ | ! #define CRTSCTS		CCTS_OFLOW|CRTS_IFL
+------------------------------------------------------------
+[1992-12-03T18:11:38+00:00] ["Andrew A. Chernov, Black Mage" <ache@astral.msk.su>] [When glob() call errfunc, it doesn't convert extended char*
+(u_short *) to char*, so errfunc print only first pathbuf letter
+(second char from u_short is '\0').
+When I test it, I uncomment DEBUG define and got compilation error.
+This patch fix both bugs:
+
+*** glob.c.was	Mon Jun 24 18:35:42 1991
+--- glob.c	Mon Nov 30 03:54:27 1992
+***************
+*** 332,341 ****
+  	    
+  	if (!(dirp = g_opendir(pathbuf)))
+  		/* TODO: don't call for ENOENT or ENOTDIR? */
+! 		if (pglob->gl_errfunc &&
+! 		    (*pglob->gl_errfunc)(pathbuf, errno) ||
+! 		    (pglob->gl_flags & GLOB_ERR))
+  			return(GLOB_ABEND);
+  		else
+  			return(0);
+  
+--- 332,347 ----
+  	    
+  	if (!(dirp = g_opendir(pathbuf)))
+  		/* TODO: don't call for ENOENT or ENOTDIR? */
+! 		if (pglob->gl_errfunc) {
+! 		    char buf[MAXPATHLEN];
+! 
+! 		    g_Ctoc(pathbuf, buf);
+! 		    if ((*pglob->gl_errfunc)(buf, errno) ||
+! 			(pglob->gl_flags & GLOB_ERR))
+  			return(GLOB_ABEND);
++ 		    else
++ 			return(0);
++ 		}
+  		else
+  			return(0);
+  
+***************
+*** 544,556 ****
+  	register Char *p;
+  
+  	for (p = s; *p; p++)
+! 		(void)printf("%c", *p & 0xff);
+  	(void)printf("\n");
+  	for (p = s; *p; p++)
+  		(void)printf("%c", *p & M_PROTECT ? '"' : ' ');
+  	(void)printf("\n");
+  	for (p = s; *p; p++)
+! 		(void)printf("%c", *p & M_META ? '_' : ' ');
+  	(void)printf("\n");
+  }
+  #endif
+--- 550,562 ----
+  	register Char *p;
+  
+  	for (p = s; *p; p++)
+! 		(void)printf("%c", CHAR(*p));
+  	(void)printf("\n");
+  	for (p = s; *p; p++)
+  		(void)printf("%c", *p & M_PROTECT ? '"' : ' ');
+  	(void)printf("\n");
+  	for (p = s; *p; p++)
+! 		(void)printf("%c", ismeta(*p) ? '_' : ' ');
+  	(void)printf("\n");
+  }
+  #endif
+-- 
+In-This-Life:  Andrew A. Chernov    |  "Hay mas dicha, mas contento
+Internet:      ache@astral.msk.su   |  "Que adorar una hermosura
+Organization:  The RELCOM Corp.,    |  "Brujuleada entre los lejos
+               Moscow, Russia       |  "De lo imposible?!"  (Calderon)
+
+
+
+]
+MID: AGQta7hGh2@astral.msk.su
+SUBJ: [386bsd] Patch glob() from libc, error function
+BODY: When glob() call errfunc, it doesn't convert extended char* | (u_short *) to char*, so errfunc print only first pathbuf letter | (second char from u_short is '\0'). | When I test it, I uncomment DEBUG define and got compilation error. | This patch fix both bugs: |  | *** glob.c.was	Mon Jun 24 18:35:42 1991 | --- glob.c	Mon Nov 30 03:54:27 1992 | *************** | *** 332,341 **** |   	     |   	if (!(dirp = g_opendir(pathbuf))) |   		/* TODO: don't call for ENOENT or ENOTDIR? */ | ! 		if (pglob->gl_errfunc && | ! 		    (*pglob->gl_errfunc)(pathbuf, errno) || | ! 		    (pglob->gl_flags & GLOB_ERR)) |   			return(GLOB_ABEND); | 
+------------------------------------------------------------
+[1992-12-03T22:22:39+00:00] ["Andrew A. Chernov, Black Mage" <ache@astral.msk.su>] [Hi, I just correct very unpleasant bug, here is example,
+that dumps core:
+
+#include <stdio.h>
+
+main()
+{
+	setvbuf(stdout, NULL, _IOFBF, 10240);
+	putchar('a');
+}
+
+Manuals says, that NULL argument cause to malloc required buffer
+in the first read or write operation, but _really_ it don't
+malloc at all!
+
+I look in stdio code and decide to malloc required buffer
+immediately in setvbuf function instead of first read/write
+operation, because of very complex code and very many places need
+to change in this case.
+Here is a patch:
+
+*** setvbuf.c.was	Tue May  7 23:44:09 1991
+--- setvbuf.c	Fri Dec  4 00:50:20 1992
+***************
+*** 52,57 ****
+--- 52,58 ----
+  	register int mode;
+  	register size_t size;
+  {
++ 	int retcode;
+  
+  	/*
+  	 * Verify arguments.  The `int' limit on `size' is due to this
+***************
+*** 74,79 ****
+--- 75,89 ----
+  		free((void *)fp->_bf._base);
+  	fp->_flags &= ~(__SLBF|__SNBF|__SMBF);
+  
++ 	retcode = 0;
++ 	if (buf == NULL && (mode == _IOLBF || mode == _IOFBF)) {
++ 		if ((buf = malloc(size)) == NULL) {
++ 			mode = _IONBF;
++ 			retcode = EOF;
++ 		}
++ 		else
++ 			fp->_flags |= __SMBF;
++ 	}
+  	/*
+  	 * Now put back whichever flag is needed, and fix _lbfsize
+  	 * if line buffered.  Ensure output flush on exit if the
+***************
+*** 106,110 ****
+  	if (fp->_flags & __SWR)
+  		fp->_w = fp->_flags & (__SLBF|__SNBF) ? 0 : size;
+  
+! 	return (0);
+  }
+--- 116,120 ----
+  	if (fp->_flags & __SWR)
+  		fp->_w = fp->_flags & (__SLBF|__SNBF) ? 0 : size;
+  
+! 	return retcode;
+  }
+-- 
+In-This-Life:  Andrew A. Chernov    |  "Hay mas dicha, mas contento
+Internet:      ache@astral.msk.su   |  "Que adorar una hermosura
+Organization:  The RELCOM Corp.,    |  "Brujuleada entre los lejos
+               Moscow, Russia       |  "De lo imposible?!"  (Calderon)
+
+
+
+]
+MID: AGlYe7h00K@astral.msk.su
+SUBJ: [386bsd] Patch setvbuf() to avoid core dump
+BODY: Hi, I just correct very unpleasant bug, here is example, | that dumps core: |  | #include <stdio.h> |  | main() | { | 	setvbuf(stdout, NULL, _IOFBF, 10240); | 	putchar('a'); | } |  | Manuals says, that NULL argument cause to malloc required buffer | in the first read or write operation, but _really_ it don't | malloc at all! |  | I look in stdio code and decide to malloc required buffer | immediately in setvbuf function instead of first read/write | operation, because of very complex code and very many places need | to change in this case. | Here is a patch: |  | *** setvbuf.c.was	Tue May  7 23:44:09 1991 | --- setvbuf.c	Fri Dec  4 00:5
+------------------------------------------------------------
+[1992-12-06T20:58:15+00:00] ["Andrew A. Chernov, Black Mage" <ache@astral.msk.su>] [Hi, it is a really bug, man programs do something like:
+
+#include <ctype.h>
+...
+	for (s = string; *s; s++)
+		*s = tolower(*s);
+
+and got very strange results on non-alpha characters.
+I saw fix for library functions, but didn't saw it for macros,
+here it is:
+
+*** /usr/include/ctype.h.was Sat Feb 29 03:13:14 1992
+--- /usr/include/ctype.h     Sun Dec  6 23:49:03 1992
+***************
+*** 59,66 ****
+  #define	isgraph(c)	((_ctype_ + 1)[c] & (_P|_U|_L|_N))
+  #define	iscntrl(c)	((_ctype_ + 1)[c] & _C)
+  #define	isascii(c)	((unsigned)(c) <= 0177)
+! #define	toupper(c)	((c) - 'a' + 'A')
+! #define	tolower(c)	((c) - 'A' + 'a')
+  #define	toascii(c)	((c) & 0177)
+  
+  #endif /* !_CTYPE_H_ */
+--- 59,68 ----
+  #define	isgraph(c)	((_ctype_ + 1)[c] & (_P|_U|_L|_N))
+  #define	iscntrl(c)	((_ctype_ + 1)[c] & _C)
+  #define	isascii(c)	((unsigned)(c) <= 0177)
+! #define _toupper(c)     ((c) - 'a' + 'A')
+! #define _tolower(c)     ((c) - 'A' + 'a')
+! #define toupper(c)      (islower(c) ? _toupper(c) : (c))
+! #define tolower(c)      (isupper(c) ? _tolower(c) : (c))
+  #define	toascii(c)	((c) & 0177)
+  
+  #endif /* !_CTYPE_H_ */
+-- 
+In-This-Life:  Andrew A. Chernov    |  "Hay mas dicha, mas contento
+Internet:      ache@astral.msk.su   |  "Que adorar una hermosura
+Organization:  The RELCOM Corp.,    |  "Brujuleada entre los lejos
+               Moscow, Russia       |  "De lo imposible?!"  (Calderon)
+
+
+
+]
+MID: HGdbc8hesR@astral.msk.su
+SUBJ: [386BSD] patch: ctype.h non-ANSI behaviour
+BODY: Hi, it is a really bug, man programs do something like: |  | #include <ctype.h> | ... | 	for (s = string; *s; s++) | 		*s = tolower(*s); |  | and got very strange results on non-alpha characters. | I saw fix for library functions, but didn't saw it for macros, | here it is: |  | *** /usr/include/ctype.h.was Sat Feb 29 03:13:14 1992 | --- /usr/include/ctype.h     Sun Dec  6 23:49:03 1992 | *************** | *** 59,66 **** |   #define	isgraph(c)	((_ctype_ + 1)[c] & (_P|_U|_L|_N)) |   #define	iscntrl(c)	((_ctype_ + 1)[c] & _C) |   #define	isascii(c)	((unsigned)(c) <= 0177) | ! #define	toupper(c)	((c) - 'a' + 'A') | ! #define	tolower(
+------------------------------------------------------------
+[1992-12-06T21:44:55+00:00] ["Andrew A. Chernov, Black Mage" <ache@astral.msk.su>] [Hi.
+Recently I see in news some patch for pgp port to 386bsd.
+I check it and shure that it is only partial and non-elegant solution.
+Main problem are that 386bsd's ctype.h incorrect define tolower
+and toupper. This is not for pgp only but for other programs too,
+so we need to correct ctype.h instead of pgp in this case.
+
+This patch touch:
+	/usr/include/ctype.h (386bsd bug fix)
+	fileio.c
+	makefile.unx
+Last two file fixes also different with previously posted patch.
+
+*** /usr/include/ctype.h.was	Sat Feb 29 03:13:14 1992
+--- /usr/include/ctype.h	Sun Dec  6 23:49:03 1992
+***************
+*** 59,66 ****
+  #define	isgraph(c)	((_ctype_ + 1)[c] & (_P|_U|_L|_N))
+  #define	iscntrl(c)	((_ctype_ + 1)[c] & _C)
+  #define	isascii(c)	((unsigned)(c) <= 0177)
+! #define	toupper(c)	((c) - 'a' + 'A')
+! #define	tolower(c)	((c) - 'A' + 'a')
+  #define	toascii(c)	((c) & 0177)
+  
+  #endif /* !_CTYPE_H_ */
+--- 59,68 ----
+  #define	isgraph(c)	((_ctype_ + 1)[c] & (_P|_U|_L|_N))
+  #define	iscntrl(c)	((_ctype_ + 1)[c] & _C)
+  #define	isascii(c)	((unsigned)(c) <= 0177)
+! #define _toupper(c)     ((c) - 'a' + 'A')
+! #define _tolower(c)     ((c) - 'A' + 'a')
+! #define toupper(c)      (islower(c) ? _toupper(c) : (c))
+! #define tolower(c)      (isupper(c) ? _tolower(c) : (c))
+  #define	toascii(c)	((c) & 0177)
+  
+  #endif /* !_CTYPE_H_ */
+*** fileio.c.was	Mon Aug 31 05:02:46 1992
+--- fileio.c	Sun Dec  6 23:59:49 1992
+***************
+*** 250,257 ****
+--- 250,261 ----
+  #ifndef MAX_NAMELEN
+  #if defined(AMIGA) || defined(NeXT)
+  #define	MAX_NAMELEN	255
++ #else
++ #ifdef FILENAME_MAX
++ #define MAX_NAMELEN     FILENAME_MAX
+  #endif
+  #endif
++ #endif
+  
+  void truncate_name(char *path, int ext_len)
+  {	/* truncate the filename so that an extension can be tacked on. */
+***************
+*** 260,266 ****
+  	int namemax;
+  
+  #ifdef MAX_NAMELEN	/* overrides the use of pathconf() */
+! 	namemax = MAX_NAMELEN
+  #else
+  #ifdef _PC_NAME_MAX
+  	strcpy(dir, path);
+--- 264,270 ----
+  	int namemax;
+  
+  #ifdef MAX_NAMELEN	/* overrides the use of pathconf() */
+! 	namemax = MAX_NAMELEN;
+  #else
+  #ifdef _PC_NAME_MAX
+  	strcpy(dir, path);
+*** makefile.unx.was	Thu Sep  3 00:27:00 1992
+--- makefile.unx	Mon Dec  7 00:01:52 1992
+***************
+*** 60,65 ****
+--- 60,66 ----
+  	@echo "  \"make sysv_386\" for SVR4 386 with asm primitives"
+  	@echo "  \"make x286\"     for XENIX/286 with asm primitives and unproto"
+  	@echo "  \"make ultrix\"   for DEC 4.2BSD Ultrix"
++ 	@echo "  \"make 386bsd\"   for Public Domain 386bsd"
+  	@echo "  \"make rs6000\"   for RS6000 AIX"
+  
+  
+***************
+*** 93,98 ****
+--- 94,103 ----
+  linux:
+  	$(MAKE) all CC=gcc LD=gcc OBJS_EXT=80386.o \
+  	CFLAGS="-O -DUNIX -DUNIT32"
++ 
++ 386bsd:
++ 	$(MAKE) all LDFLAGS=-s OBJS_EXT=80386.o \
++ 	CFLAGS="-pipe -fstrength-reduce -O -DUNIX -DUSE_SELECT -DUNIT32"
+  
+  sunspc:
+  	$(MAKE) all CC="ccspc -B/1.8.6/sun4 -ansi -w -I/usr/include" \
+-- 
+In-This-Life:  Andrew A. Chernov    |  "Hay mas dicha, mas contento
+Internet:      ache@astral.msk.su   |  "Que adorar una hermosura
+Organization:  The RELCOM Corp.,    |  "Brujuleada entre los lejos
+               Moscow, Russia       |  "De lo imposible?!"  (Calderon)
+
+
+
+]
+MID: LHNHd8h0MT@astral.msk.su
+SUBJ: [386bsd] right patch for pgp port
+BODY: Hi. | Recently I see in news some patch for pgp port to 386bsd. | I check it and shure that it is only partial and non-elegant solution. | Main problem are that 386bsd's ctype.h incorrect define tolower | and toupper. This is not for pgp only but for other programs too, | so we need to correct ctype.h instead of pgp in this case. |  | This patch touch: | 	/usr/include/ctype.h (386bsd bug fix) | 	fileio.c | 	makefile.unx | Last two file fixes also different with previously posted patch. |  | *** /usr/include/ctype.h.was	Sat Feb 29 03:13:14 1992 | --- /usr/include/ctype.h	Sun Dec  6 23:49:03 1992 | *************** | *** 59,66 
+------------------------------------------------------------
+[1992-12-07T18:21:03+00:00] [sir@rdrel.relcom.msk.su (Sergey I.Ryzhkov)] [Gentelmens!
+
+Are anybody attempted to make true POSIX-style localisation of
+386BSD for some language? I find only "C-language frames" for "setlocale"
+ans "strcoll" function in c-lib sources and noothing about localisation
+in docs. I plans to do the complete implementation of this feature
+for Russian language but, it seems to me that somebody in the world
+must do something analogous (for some other language, may be)
+I could not find something about except of description of function call
+in POSIX which is do not complete as my minds (may be I do not have all the
+discription) and I well be glad to get the an example of their
+implementation or to contact with some person who can explain me how
+they must be implemented.
+
+
+]
+MID: 1992Dec7.182103.1799@rdrel.relcom.msk.su
+SUBJ: [386BSD] What about localisation?
+BODY: Gentelmens! |  | Are anybody attempted to make true POSIX-style localisation of | 386BSD for some language? I find only "C-language frames" for "setlocale" | ans "strcoll" function in c-lib sources and noothing about localisation | in docs. I plans to do the complete implementation of this feature | for Russian language but, it seems to me that somebody in the world | must do something analogous (for some other language, may be) | I could not find something about except of description of function call | in POSIX which is do not complete as my minds (may be I do not have all the | discription) and I well be glad t
+------------------------------------------------------------
+[1992-12-07T23:07:18+00:00] ["Andrew A. Chernov, Black Mage" <ache@astral.msk.su>] [Hi, folks.
+I'v got  very strange effect: reboot after connect() sys call
+in telnet/rlogin/rsh programs, all other socket stuff works right.
+My machine don't have ethernet at all, I try to test rlogin
+on my own machine.
+May be, incorrect tcp configuration? But why reboot?
+Please, tell me, if you have any ideas.
+
+			Thanx in advance.
+-- 
+In-This-Life:  Andrew A. Chernov    |  "Hay mas dicha, mas contento
+Internet:      ache@astral.msk.su   |  "Que adorar una hermosura
+Organization:  The RELCOM Corp.,    |  "Brujuleada entre los lejos
+               Moscow, Russia       |  "De lo imposible?!"  (Calderon)
+
+
+]
+MID: ache.723769638@cpuv1
+SUBJ: [386bsd] troubles with connect() sys call...
+BODY: Hi, folks. | I'v got  very strange effect: reboot after connect() sys call | in telnet/rlogin/rsh programs, all other socket stuff works right. | My machine don't have ethernet at all, I try to test rlogin | on my own machine. | May be, incorrect tcp configuration? But why reboot? | Please, tell me, if you have any ideas. |  | 			Thanx in advance. | --  | In-This-Life:  Andrew A. Chernov    |  "Hay mas dicha, mas contento | Internet:      ache@astral.msk.su   |  "Que adorar una hermosura | Organization:  The RELCOM Corp.,    |  "Brujuleada entre los lejos |                Moscow, Russia       |  "De lo imposible?!"  (C
+------------------------------------------------------------
+[1992-12-08T21:42:15+00:00] [terry@cs.weber.edu (A Wizard of Earth C)] [In article <1992Dec7.182103.1799@rdrel.relcom.msk.su> sir@rdrel.relcom.msk.su (Sergey I.Ryzhkov) writes:
+>Gentelmens!
+>
+>Are anybody attempted to make true POSIX-style localisation of
+>386BSD for some language? I find only "C-language frames" for "setlocale"
+>ans "strcoll" function in c-lib sources and noothing about localisation
+>in docs. I plans to do the complete implementation of this feature
+>for Russian language but, it seems to me that somebody in the world
+>must do something analogous (for some other language, may be)
+>I could not find something about except of description of function call
+>in POSIX which is do not complete as my minds (may be I do not have all the
+>discription) and I well be glad to get the an example of their
+>implementation or to contact with some person who can explain me how
+>they must be implemented.
+
+Internationalization has been discussed in some detail; the languages I'm
+unterested in are Spanish and German (handled by ISO Latin-1) and Greek
+and Japaneese (definitely requiring better localization than that provided
+by XPG3.
+
+The last discuussion on it ended with a pretty much unanimus agreement
+that Unicode was the way to go, but not on storage mechanism or in program
+versus in system overhead.  Thus a discussion of Runes (multibyte encoding)
+that pretty much insures non-ASCII characters will take multiple bytes, and
+that 16 bit Unicode characters will take 8-24 bits to encode (a poor trade
+off for anyone using a majority of non-ASCII characters, and rather centered
+on internationalization for Western Europe/North and South America).
+
+Last message was:
+
+>
+> From: keld@login.dkuug.dk (Keld J|rn Simonsen)
+> Subject: Re: multibyte character representations and Unicode
+> Message-ID: <keld.722285494@login.dkuug.dk>
+>
+> The Plan 9 encoding of ISO 10646 is planned for inclusion
+> in POSIX .2b standard, and is thus on a standards track.
+
+In any case, I would prefer any Unicode standard, however badly implemented,
+to XPG3, which would fail to deal with anything but Western Europe and
+North and South America, in my opinion.
+
+Another thing which requires consideration is a set of standardized
+messages translated into all supported languages through whatever
+localization mechanism we will use for messages in the shell, programs,
+and etc. for perror and family.  This will tend to go a long way towards
+usability in an international forum -- and probably constitutes our best
+bet for high return on the effort we invest, guaranteeing at least base
+functionality in supported languages.
+
+I think that this eventually assumes an X environment and a full Unicode
+"fixed" font; this is ~250K for a 5x8, <1M for a 10x20 (non-default).
+Does such a font already exist?
+
+The other fundamental assumption is multibyte data stream to the tty, and
+appropriate localization by the tty itself.  This is an easy mod for
+xterm, but requires spanning sets within a given non-PC-ASCII driver
+for (for instance) a downloaded Cyrillic font in a VGA/EGS card.  This
+would be, fundamentally, a 16-bit to 8-bit "mapchan".
+
+I suggest we attack it in this order:
+
+1)	Pick a standard for encoding (I vote Unicode).
+2)	Pick a standard for storage (I vote character set attributed files
+	to avoid stream encoding while maintaining the benefits of 8-bit
+	storage for most languages).
+3)	Create an X environment capable of supporting all languages by
+	default (Again, I vote Unicode).
+4)	Build some tools for running two character sets simultaneously
+	(requires combination of Anglicized/Localized encoding and
+	adat entry mechanisms).
+5)	Provide basic error message and prompting translations (requires
+	fluently bilingual volunteers).
+6)	Perform a code integration (probably at the 0.2 level, although
+	this may drag on until 0.3).
+
+Anything else that needs to be handled?
+
+Unlike most OS products (with a possible exception for NT, which is Unicode
+aware), we have a chance to do this right before the product is too
+mature to let us do things "the right way".  We should take the opportunity
+while it still presents itself.
+
+
+					Terry Lambert
+					terry@icarus.weber.edu
+					terry_lambert@novell.com
+---
+Any opinions in this posting are my own and not those of my present
+or previous employers.
+-- 
+-------------------------------------------------------------------------------
+                                        "I have an 8 user poetic license" - me
+ Get the 386bsd FAQ from agate.berkeley.edu:/pub/386BSD/386bsd-0.1/unofficial
+-------------------------------------------------------------------------------
+
+
+]
+MID: 1992Dec8.214215.24804@fcom.cc.utah.edu
+SUBJ: Re: [386BSD] What about localisation?
+BODY: In article <1992Dec7.182103.1799@rdrel.relcom.msk.su> sir@rdrel.relcom.msk.su (Sergey I.Ryzhkov) writes: | >Gentelmens! | > | >Are anybody attempted to make true POSIX-style localisation of | >386BSD for some language? I find only "C-language frames" for "setlocale" | >ans "strcoll" function in c-lib sources and noothing about localisation | >in docs. I plans to do the complete implementation of this feature | >for Russian language but, it seems to me that somebody in the world | >must do something analogous (for some other language, may be) | >I could not find something about except of description of function 
+------------------------------------------------------------
+[1992-12-09T20:11:17+00:00] ["Andrew A. Chernov, Black Mage" <ache@astral.msk.su>] [Hi, folks.
+Main problem are, that in switching to RAW or CBREAK modes and
+back tty driver lost some flags and some flags are incorrect.
+The most significant bug is lost CS8 character size.
+
+I produce two patches to fix it, but problem are deeper.
+In 3rd patch I decide return back to original driver concept,
+use tp->t_flag field and completely rewrite old patches.
+Now, if program call gtty, modes stored into tp->t_flag,
+for later stty call.
+
+Advantages:
+1) Can preserve CS8 mode
+2) Can preserve ISTRIP mode in CS8 mode
+3) Can preserve parity modes in CS7 mode
+4) LITOUT mode doesn't stuck.
+5) Can preserve IXANY mode
+
+Disadvantages:
+1) Using POSIX tty ioctls mixed with old-style ioctl
+cause wrong results (present in original driver).
+2) Can't handle output parity without corresponding input
+parity, if even or odd parity set (impossible in old-style ioctls).
+3) Using TIOCLGET after stty and may produce wrong results.
+IMHO, it doesn't matter, because all programs I seen first get all
+modes, then set.
+In original driver using TIOCLGET before gtty may produce wrong results.
+
+WARNING: apply this patch ONLY if two previous my patches installed.
+Because my patches goes so far I just produce united (1-3) patch
+in separate message.
+
+*** tty_compat.c.was2	Wed Dec  2 23:05:17 1992
+--- tty_compat.c	Wed Dec  9 05:45:34 1992
+***************
+*** 98,104 ****
+  		}
+  		sg->sg_erase = cc[VERASE];
+  		sg->sg_kill = cc[VKILL];
+! 		sg->sg_flags = ttcompatgetflags(tp);
+  		break;
+  	}
+  
+--- 98,104 ----
+  		}
+  		sg->sg_erase = cc[VERASE];
+  		sg->sg_kill = cc[VKILL];
+! 		sg->sg_flags = tp->t_flags = ttcompatgetflags(tp);
+  		break;
+  	}
+  
+***************
+*** 119,125 ****
+  			term.c_ospeed = compatspcodes[speed];
+  		term.c_cc[VERASE] = sg->sg_erase;
+  		term.c_cc[VKILL] = sg->sg_kill;
+! 		tp->t_flags = ttcompatgetflags(tp)&0xffff0000 | sg->sg_flags&0xffff;
+  		ttcompatsetflags(tp, &term);
+  		return (ttioctl(tp, com == TIOCSETP ? TIOCSETAF : TIOCSETA, 
+  			&term, flag));
+--- 119,125 ----
+  			term.c_ospeed = compatspcodes[speed];
+  		term.c_cc[VERASE] = sg->sg_erase;
+  		term.c_cc[VKILL] = sg->sg_kill;
+! 		tp->t_flags = tp->t_flags&0xffff0000 | sg->sg_flags&0xffff;
+  		ttcompatsetflags(tp, &term);
+  		return (ttioctl(tp, com == TIOCSETP ? TIOCSETAF : TIOCSETA, 
+  			&term, flag));
+***************
+*** 182,190 ****
+  
+  		term = tp->t_termios;
+  		if (com == TIOCLSET)
+! 			tp->t_flags = (ttcompatgetflags(tp)&0xffff) | *(int *)data<<16;
+  		else {
+! 			tp->t_flags = ttcompatgetflags(tp);
+  			if (com == TIOCLBIS)
+  				tp->t_flags |= *(int *)data<<16;
+  			else
+--- 182,191 ----
+  
+  		term = tp->t_termios;
+  		if (com == TIOCLSET)
+! 			tp->t_flags = (tp->t_flags&0xffff) | *(int *)data<<16;
+  		else {
+! 			tp->t_flags = 
+! 			 (ttcompatgetflags(tp)&0xffff0000)|(tp->t_flags&0xffff);
+  			if (com == TIOCLBIS)
+  				tp->t_flags |= *(int *)data<<16;
+  			else
+***************
+*** 194,200 ****
+  		return (ttioctl(tp, TIOCSETA, &term, flag));
+  	}
+  	case TIOCLGET:
+! 		*(int *)data = ttcompatgetflags(tp)>>16;
+  		if (ttydebug)
+  			printf("CLGET: returning %x\n", *(int *)data);
+  		break;
+--- 195,203 ----
+  		return (ttioctl(tp, TIOCSETA, &term, flag));
+  	}
+  	case TIOCLGET:
+! 		tp->t_flags =
+! 		 (ttcompatgetflags(tp)&0xffff0000)|(tp->t_flags&0xffff);
+! 		*(int *)data = tp->t_flags>>16;
+  		if (ttydebug)
+  			printf("CLGET: returning %x\n", *(int *)data);
+  		break;
+***************
+*** 233,253 ****
+  		flags |= TANDEM;
+  	if (iflag&ICRNL || oflag&ONLCR)
+  		flags |= CRMOD;
+! 	if (cflag&PARENB) {
+! 		if (iflag&INPCK) {
+  			if (cflag&PARODD)
+  				flags |= ODDP;
+  			else
+  				flags |= EVENP;
+- 		} else
+- 			flags |= EVENP | ODDP;
+  	}
+- 	if ((cflag&CSIZE) == CS8 && !(iflag&ISTRIP))
+- 		flags |= PASS8;
+  	
+  	if ((lflag&ICANON) == 0) {	
+  		/* fudge */
+! 		if (oflag&OPOST || iflag&ISTRIP || iflag&IXON || lflag&ISIG || lflag&IEXTEN || (cflag&PARENB) && (cflag&CSIZE) != CS8)
+  			flags |= CBREAK;
+  		else
+  			flags |= RAW;
+--- 236,256 ----
+  		flags |= TANDEM;
+  	if (iflag&ICRNL || oflag&ONLCR)
+  		flags |= CRMOD;
+! 	if ((cflag&CSIZE) == CS8) {
+! 		flags |= PASS8;
+! 		if (iflag&ISTRIP)
+! 			flags |= ANYP;
+! 	}
+! 	else if (iflag&INPCK || cflag&PARENB) {
+  		if (cflag&PARODD)
+  			flags |= ODDP;
+  		else
+  			flags |= EVENP;
+  	}
+  	
+  	if ((lflag&ICANON) == 0) {	
+  		/* fudge */
+! 		if (oflag&OPOST || iflag&ISTRIP || iflag&IXON || lflag&ISIG || lflag&IEXTEN || cflag&PARENB || iflag&INPCK || (cflag&CSIZE) != CS8)
+  			flags |= CBREAK;
+  		else
+  			flags |= RAW;
+***************
+*** 311,327 ****
+  	else
+  		lflag &= ~ECHO;
+  		
+- 	if (flags&(RAW|LITOUT|PASS8)) {
+  		cflag &= ~(CSIZE|PARENB);
+  		cflag |= CS8;
+! 		if ((flags&(RAW|PASS8)) == 0)
+  			iflag |= ISTRIP;
+  		else
+  			iflag &= ~ISTRIP;
+  	} else {
+- 		cflag &= ~CSIZE;
+  		cflag |= CS7;
+! 		if (flags&(ODDP|EVENP))
+  			cflag |= PARENB;
+  		iflag |= ISTRIP;
+  	}
+--- 314,329 ----
+  	else
+  		lflag &= ~ECHO;
+  		
+  	cflag &= ~(CSIZE|PARENB);
++ 	if (flags&(RAW|LITOUT|PASS8)) {
+  		cflag |= CS8;
+! 		if (!(flags&(RAW|PASS8)) || (flags&(RAW|PASS8|ANYP)) == (PASS8|ANYP))
+  			iflag |= ISTRIP;
+  		else
+  			iflag &= ~ISTRIP;
+  	} else {
+  		cflag |= CS7;
+! 		if ((flags&(EVENP|ODDP)) && (flags&ANYP) != ANYP)
+  			cflag |= PARENB;
+  		iflag |= ISTRIP;
+  	}
+***************
+*** 377,396 ****
+  		lflag &= ~IXANY;
+  	lflag &= ~(MDMBUF|TOSTOP|FLUSHO|NOHANG|PENDIN|NOFLSH);
+  	lflag |= flags&(MDMBUF|TOSTOP|FLUSHO|NOHANG|PENDIN|NOFLSH);
+- 	if (flags&(LITOUT|PASS8)) {
+- 		iflag &= ~ISTRIP;
+  		cflag &= ~(CSIZE|PARENB);
+  		cflag |= CS8;
+! 		if (flags&LITOUT)
+  			oflag &= ~OPOST;
+! 		if ((flags&(PASS8|RAW)) == 0)
+  			iflag |= ISTRIP;
+  	} else if ((flags&RAW) == 0) {
+- 		cflag &= ~CSIZE;
+  		cflag |= CS7;
+! 		if (flags&(ODDP|EVENP))
+  			cflag |= PARENB;
+! 		oflag |= OPOST;
+  	}
+  	t->c_iflag = iflag;
+  	t->c_oflag = oflag;
+--- 379,400 ----
+  		lflag &= ~IXANY;
+  	lflag &= ~(MDMBUF|TOSTOP|FLUSHO|NOHANG|PENDIN|NOFLSH);
+  	lflag |= flags&(MDMBUF|TOSTOP|FLUSHO|NOHANG|PENDIN|NOFLSH);
+  	cflag &= ~(CSIZE|PARENB);
++ 	if (flags&(LITOUT|PASS8)) {
+  		cflag |= CS8;
+! 		if (flags&(LITOUT|RAW))
+  			oflag &= ~OPOST;
+! 		else
+! 			oflag |= OPOST;
+! 		if (!(flags&(RAW|PASS8)) || (flags&(RAW|PASS8|ANYP)) == (PASS8|ANYP))
+  			iflag |= ISTRIP;
++ 		else
++ 			iflag &= ~ISTRIP;
+  	} else if ((flags&RAW) == 0) {
+  		cflag |= CS7;
+! 		if ((flags&(EVENP|ODDP)) && (flags&ANYP) != ANYP)
+  			cflag |= PARENB;
+! 		oflag |= ISTRIP|OPOST;
+  	}
+  	t->c_iflag = iflag;
+  	t->c_oflag = oflag;
+-- 
+In-This-Life:  Andrew A. Chernov    |  "Hay mas dicha, mas contento
+Internet:      ache@astral.msk.su   |  "Que adorar una hermosura
+Organization:  The RELCOM Corp.,    |  "Brujuleada entre los lejos
+               Moscow, Russia       |  "De lo imposible?!"  (Calderon)
+
+
+
+
+
+]
+MID: RHbBb9hSE0@astral.msk.su
+SUBJ: [386bsd] 3rd patch for tty COMPAT_43 modes (great win!)
+BODY: Hi, folks. | Main problem are, that in switching to RAW or CBREAK modes and | back tty driver lost some flags and some flags are incorrect. | The most significant bug is lost CS8 character size. |  | I produce two patches to fix it, but problem are deeper. | In 3rd patch I decide return back to original driver concept, | use tp->t_flag field and completely rewrite old patches. | Now, if program call gtty, modes stored into tp->t_flag, | for later stty call. |  | Advantages: | 1) Can preserve CS8 mode | 2) Can preserve ISTRIP mode in CS8 mode | 3) Can preserve parity modes in CS7 mode | 4) LITOUT mode doesn't stuck. | 5) Can 
+------------------------------------------------------------
+[1992-12-09T20:18:00+00:00] ["Andrew A. Chernov, Black Mage" <ache@astral.msk.su>] [In comp.unix.bsd article <RHbBb9hSE0@astral.msk.su> I write:
+
+>Hi, folks.
+>Main problem are, that in switching to RAW or CBREAK modes and
+>back tty driver lost some flags and some flags are incorrect.
+>The most significant bug is lost CS8 character size.
+>
+>I produce two patches to fix it, but problem are deeper.
+>In 3rd patch I decide return back to original driver concept,
+>use tp->t_flag field and completely rewrite old patches.
+>Now, if program call gtty, modes stored into tp->t_flag,
+>for later stty call.
+>
+>Advantages:
+>1) Can preserve CS8 mode
+>2) Can preserve ISTRIP mode in CS8 mode
+>3) Can preserve parity modes in CS7 mode
+>4) LITOUT mode doesn't stuck.
+>5) Can preserve IXANY mode
+>
+>Disadvantages:
+>1) Using POSIX tty ioctls mixed with old-style ioctl
+>cause wrong results (present in original driver).
+>2) Can't handle output parity without corresponding input
+>parity, if even or odd parity set (impossible in old-style ioctls).
+>3) Using TIOCLGET after stty and may produce wrong results.
+>IMHO, it doesn't matter, because all programs I seen first get all
+>modes, then set.
+>In original driver using TIOCLGET before gtty may produce wrong results.
+
+WARNING: Because my patches goes so far, this is united (1-3) patch.
+Apply it to ORIGINAL unmodified tty_compat.c ONLY.
+3rd level patch sent in separate message to whom, who applied
+previous two my patches.
+
+*** tty_compat.c.was	Wed Dec 25 00:24:09 1991
+--- tty_compat.c	Wed Dec  9 05:45:34 1992
+***************
+*** 98,104 ****
+  		}
+  		sg->sg_erase = cc[VERASE];
+  		sg->sg_kill = cc[VKILL];
+! 		sg->sg_flags = ttcompatgetflags(tp);
+  		break;
+  	}
+  
+--- 98,104 ----
+  		}
+  		sg->sg_erase = cc[VERASE];
+  		sg->sg_kill = cc[VKILL];
+! 		sg->sg_flags = tp->t_flags = ttcompatgetflags(tp);
+  		break;
+  	}
+  
+***************
+*** 195,201 ****
+  		return (ttioctl(tp, TIOCSETA, &term, flag));
+  	}
+  	case TIOCLGET:
+! 		*(int *)data = ttcompatgetflags(tp)>>16;
+  		if (ttydebug)
+  			printf("CLGET: returning %x\n", *(int *)data);
+  		break;
+--- 195,203 ----
+  		return (ttioctl(tp, TIOCSETA, &term, flag));
+  	}
+  	case TIOCLGET:
+! 		tp->t_flags =
+! 		 (ttcompatgetflags(tp)&0xffff0000)|(tp->t_flags&0xffff);
+! 		*(int *)data = tp->t_flags>>16;
+  		if (ttydebug)
+  			printf("CLGET: returning %x\n", *(int *)data);
+  		break;
+***************
+*** 234,261 ****
+  		flags |= TANDEM;
+  	if (iflag&ICRNL || oflag&ONLCR)
+  		flags |= CRMOD;
+! 	if (cflag&PARENB) {
+! 		if (iflag&INPCK) {
+  			if (cflag&PARODD)
+  				flags |= ODDP;
+  			else
+  				flags |= EVENP;
+- 		} else
+- 			flags |= EVENP | ODDP;
+- 	} else {
+- 		if ((tp->t_flags&LITOUT) && !(oflag&OPOST))
+- 			flags |= LITOUT;
+- 		if (tp->t_flags&PASS8)
+- 			flags |= PASS8;
+  	}
+  	
+  	if ((lflag&ICANON) == 0) {	
+  		/* fudge */
+! 		if (iflag&IXON || lflag&ISIG || lflag&IEXTEN || cflag&PARENB)
+  			flags |= CBREAK;
+  		else
+  			flags |= RAW;
+  	}
+  	if (oflag&OXTABS)
+  		flags |= XTABS;
+  	if (lflag&ECHOE)
+--- 236,262 ----
+  		flags |= TANDEM;
+  	if (iflag&ICRNL || oflag&ONLCR)
+  		flags |= CRMOD;
+! 	if ((cflag&CSIZE) == CS8) {
+! 		flags |= PASS8;
+! 		if (iflag&ISTRIP)
+! 			flags |= ANYP;
+! 	}
+! 	else if (iflag&INPCK || cflag&PARENB) {
+  		if (cflag&PARODD)
+  			flags |= ODDP;
+  		else
+  			flags |= EVENP;
+  	}
+  	
+  	if ((lflag&ICANON) == 0) {	
+  		/* fudge */
+! 		if (oflag&OPOST || iflag&ISTRIP || iflag&IXON || lflag&ISIG || lflag&IEXTEN || cflag&PARENB || iflag&INPCK || (cflag&CSIZE) != CS8)
+  			flags |= CBREAK;
+  		else
+  			flags |= RAW;
+  	}
++ 	if (!(flags&RAW) && !(oflag&OPOST) && (!(cflag&PARENB) || (cflag&CSIZE) == CS8))
++ 		flags |= LITOUT;
+  	if (oflag&OXTABS)
+  		flags |= XTABS;
+  	if (lflag&ECHOE)
+***************
+*** 285,291 ****
+  	register long cflag = t->c_cflag;
+  
+  	if (flags & RAW) {
+! 		iflag &= IXOFF;
+  		oflag &= ~OPOST;
+  		lflag &= ~(ECHOCTL|ISIG|ICANON|IEXTEN);
+  	} else {
+--- 286,292 ----
+  	register long cflag = t->c_cflag;
+  
+  	if (flags & RAW) {
+! 		iflag &= (IXOFF|IXANY);
+  		oflag &= ~OPOST;
+  		lflag &= ~(ECHOCTL|ISIG|ICANON|IEXTEN);
+  	} else {
+***************
+*** 313,328 ****
+  	else
+  		lflag &= ~ECHO;
+  		
+- 	if (flags&(RAW|LITOUT|PASS8)) {
+  		cflag &= ~(CSIZE|PARENB);
+  		cflag |= CS8;
+! 		if ((flags&(RAW|PASS8)) == 0)
+  			iflag |= ISTRIP;
+  		else
+  			iflag &= ~ISTRIP;
+  	} else {
+! 		cflag &= ~CSIZE;
+! 		cflag |= CS7|PARENB;
+  		iflag |= ISTRIP;
+  	}
+  	if ((flags&(EVENP|ODDP)) == EVENP) {
+--- 314,330 ----
+  	else
+  		lflag &= ~ECHO;
+  		
+  	cflag &= ~(CSIZE|PARENB);
++ 	if (flags&(RAW|LITOUT|PASS8)) {
+  		cflag |= CS8;
+! 		if (!(flags&(RAW|PASS8)) || (flags&(RAW|PASS8|ANYP)) == (PASS8|ANYP))
+  			iflag |= ISTRIP;
+  		else
+  			iflag &= ~ISTRIP;
+  	} else {
+! 		cflag |= CS7;
+! 		if ((flags&(EVENP|ODDP)) && (flags&ANYP) != ANYP)
+! 			cflag |= PARENB;
+  		iflag |= ISTRIP;
+  	}
+  	if ((flags&(EVENP|ODDP)) == EVENP) {
+***************
+*** 377,394 ****
+  		lflag &= ~IXANY;
+  	lflag &= ~(MDMBUF|TOSTOP|FLUSHO|NOHANG|PENDIN|NOFLSH);
+  	lflag |= flags&(MDMBUF|TOSTOP|FLUSHO|NOHANG|PENDIN|NOFLSH);
+- 	if (flags&(LITOUT|PASS8)) {
+- 		iflag &= ~ISTRIP;
+  		cflag &= ~(CSIZE|PARENB);
+  		cflag |= CS8;
+! 		if (flags&LITOUT)
+  			oflag &= ~OPOST;
+! 		if ((flags&(PASS8|RAW)) == 0)
+  			iflag |= ISTRIP;
+  	} else if ((flags&RAW) == 0) {
+! 		cflag &= ~CSIZE;
+! 		cflag |= CS7|PARENB;
+! 		oflag |= OPOST;
+  	}
+  	t->c_iflag = iflag;
+  	t->c_oflag = oflag;
+--- 379,400 ----
+  		lflag &= ~IXANY;
+  	lflag &= ~(MDMBUF|TOSTOP|FLUSHO|NOHANG|PENDIN|NOFLSH);
+  	lflag |= flags&(MDMBUF|TOSTOP|FLUSHO|NOHANG|PENDIN|NOFLSH);
+  	cflag &= ~(CSIZE|PARENB);
++ 	if (flags&(LITOUT|PASS8)) {
+  		cflag |= CS8;
+! 		if (flags&(LITOUT|RAW))
+  			oflag &= ~OPOST;
+! 		else
+! 			oflag |= OPOST;
+! 		if (!(flags&(RAW|PASS8)) || (flags&(RAW|PASS8|ANYP)) == (PASS8|ANYP))
+  			iflag |= ISTRIP;
++ 		else
++ 			iflag &= ~ISTRIP;
+  	} else if ((flags&RAW) == 0) {
+! 		cflag |= CS7;
+! 		if ((flags&(EVENP|ODDP)) && (flags&ANYP) != ANYP)
+! 			cflag |= PARENB;
+! 		oflag |= ISTRIP|OPOST;
+  	}
+  	t->c_iflag = iflag;
+  	t->c_oflag = oflag;
+-- 
+In-This-Life:  Andrew A. Chernov    |  "Hay mas dicha, mas contento
+Internet:      ache@astral.msk.su   |  "Que adorar una hermosura
+Organization:  The RELCOM Corp.,    |  "Brujuleada entre los lejos
+               Moscow, Russia       |  "De lo imposible?!"  (Calderon)
+
+
+
+
+]
+MID: HAuHb9hKI1@astral.msk.su
+SUBJ: [386bsd] United (1-3) patch for tty COMPAT_43 modes (great win!)
+BODY: In comp.unix.bsd article <RHbBb9hSE0@astral.msk.su> I write: |  | >Hi, folks. | >Main problem are, that in switching to RAW or CBREAK modes and | >back tty driver lost some flags and some flags are incorrect. | >The most significant bug is lost CS8 character size. | > | >I produce two patches to fix it, but problem are deeper. | >In 3rd patch I decide return back to original driver concept, | >use tp->t_flag field and completely rewrite old patches. | >Now, if program call gtty, modes stored into tp->t_flag, | >for later stty call. | > | >Advantages: | >1) Can preserve CS8 mode | >2) Can preserve ISTRIP mode in CS8 mode | >3
+------------------------------------------------------------
+[1992-12-14T19:35:47+00:00] ["Andrew A. Chernov, Black Mage" <ache@astral.msk.su>] [TIOCSTI produce nulls instead of 8-bit chars, here simple fix:
+
+*** tty.c.was	Thu Dec  3 06:25:38 1992
+--- tty.c	Mon Dec 14 22:23:52 1992
+***************
+*** 434,440 ****
+  			return (EPERM);
+  		if (p->p_ucred->cr_uid && !isctty(p, tp))
+  			return (EACCES);
+! 		(*linesw[tp->t_line].l_rint)(*(char *)data, tp);
+  		break;
+  
+  	case TIOCGETA: {
+--- 434,440 ----
+  			return (EPERM);
+  		if (p->p_ucred->cr_uid && !isctty(p, tp))
+  			return (EACCES);
+! 		(*linesw[tp->t_line].l_rint)(*(unsigned char *)data, tp);
+  		break;
+  
+  	case TIOCGETA: {
+-- 
+In-This-Life:  Andrew A. Chernov    |  "Hay mas dicha, mas contento
+Internet:      ache@astral.msk.su   |  "Que adorar una hermosura
+Organization:  The RELCOM Corp.,    |  "Brujuleada entre los lejos
+               Moscow, Russia       |  "De lo imposible?!"  (Calderon)
+
+
+
+]
+MID: EDJ8EBhW50@astral.msk.su
+SUBJ: [386bsd] Patch tty.c to fix TIOCSTI simulate 8-bit chars
+BODY: TIOCSTI produce nulls instead of 8-bit chars, here simple fix: |  | *** tty.c.was	Thu Dec  3 06:25:38 1992 | --- tty.c	Mon Dec 14 22:23:52 1992 | *************** | *** 434,440 **** |   			return (EPERM); |   		if (p->p_ucred->cr_uid && !isctty(p, tp)) |   			return (EACCES); | ! 		(*linesw[tp->t_line].l_rint)(*(char *)data, tp); |   		break; |    |   	case TIOCGETA: { | --- 434,440 ---- |   			return (EPERM); |   		if (p->p_ucred->cr_uid && !isctty(p, tp)) |   			return (EACCES); | ! 		(*linesw[tp->t_line].l_rint)(*(unsigned char *)data, tp); |   		break; |    |   	case TIOCGETA: { | --  | In-This-Life:  Andrew A. Chernov    |  "Hay mas
+------------------------------------------------------------
+[1992-12-15T18:20:50+00:00] ["Andrew A. Chernov, Black Mage" <ache@astral.msk.su>] [Hi, folks.
+Does anybody have code to make time change really written to CMOS?
+Current settimeofday() function don't touch CMOS clock :-(
+-- 
+In-This-Life:  Andrew A. Chernov    |  "Hay mas dicha, mas contento
+Internet:      ache@astral.msk.su   |  "Que adorar una hermosura
+Organization:  The RELCOM Corp.,    |  "Brujuleada entre los lejos
+               Moscow, Russia       |  "De lo imposible?!"  (Calderon)
+
+
+
+]
+MID: GD28YBhaV1@astral.msk.su
+SUBJ: [386bsd] Time change in CMOS
+BODY: Hi, folks. | Does anybody have code to make time change really written to CMOS? | Current settimeofday() function don't touch CMOS clock :-( | --  | In-This-Life:  Andrew A. Chernov    |  "Hay mas dicha, mas contento | Internet:      ache@astral.msk.su   |  "Que adorar una hermosura | Organization:  The RELCOM Corp.,    |  "Brujuleada entre los lejos |                Moscow, Russia       |  "De lo imposible?!"  (Calderon) |  |  |  | 
+------------------------------------------------------------
+[1992-12-16T07:26:19+00:00] [awb@ed.ac.uk (Alan W Black)] [In article <1992Dec14.185028.9757@fcom.cc.utah.edu> terry@cs.weber.edu (A Wizard of Earth C) writes:
+
+>   I know a lot of the Japaneese 386BSD community can not email out of Japan,
+>   so this is an open letter to them, and to Atsushi MURAI and other people
+>   there who are active in this newsgroup.
+>
+>   What kind of internationalization would best enable you to use 386BSD?
+>
+>	   o	Kanji support?
+>	   o	Kana (Katakan/Hirugana) support?
+
+I have a keen interest (and moderate capability) in the Japanese 
+language.  Since getting 386bsd 0.1 up and running I have been
+running MULE (Multi-language Emacs) on my machine (as
+well as on our departmental machines). Mule is distributed as a set of
+patches to emacs-18.58 and is, of course, GNU Copylefted.  It offers
+a multilanguage environment under X (fonts are available) or under
+terminals which support those languages.
+
+Mule supports Japanese (output and input).  Input is through Wnn
+a kana/kanji convertor (which accepts romaji or kana input).  It
+the input method is (I am told) compatible with ATOK which is
+used on a large number of word processors.  Mule also has support 
+for Chinese (with a large variety of input methods) offering
+both Mandarin and Taiwanese fonts.  Also there is good support for
+Korean.  Other languages that are supported in Mule are all
+the major European languages, including Greek, and Russian.  There
+is also alpha support for Vietnamese, Hebrew and Thai.
+
+Mule is developed mainly by Kenichi Handa (handa@etl.go.jp) of ETL
+Laboratories and there is an active mail-list (though its mainly in
+Japanese).  Mule is still in beta test but version 0.9.6 (which is
+quite stable) is available by anonymous ftp from
+   
+   etlport.etl.go.jp [192.31.197.99]:/pub/mule
+   sh.wide.ad.jp [133.4.11.11]:/JAPAN/mule
+
+Mule does not use unicode for fonts but does use international
+standards for its character representation and tries to use
+standard input methods (and representations) for the languages
+it supports.
+
+On another tract there is TeX support or Chinese and Japanese
+freely available for ftp.
+
+>
+>   What is currently used on PCs (with their limited character sets) in Japan?
+>
+
+Well the important thing to know about the Japanese PC market is 
+that there is not really an IBM PC clone market.  The most popular 
+computer series is the NEC 98 series, it is not IBM PC compatiable though
+it is a very similar machine.  It runs Japanese MSDOS which is essentially
+the same but low-level registers etc are slightly different.  I don't
+know if 386bsd has been ported to the 98 series yet but as I'm
+moving to Japan next year I would be interested if anyone could
+tell me its status.
+
+On NEC 98 the most popular Wordprocessor is Ichi-Taro but most people
+use a dedicated word-processor rather than a general PC.  Input is
+done through a kana-kanji convertor allowing the user to type in
+kana or romaji (roman alphabet).  In spite of me taking some time to
+learn the kana layout, I now use romaji for input, as it seems most
+Japanese people do.  This is probably because some computers do not
+have kana markings on the keyboard.
+
+In summary I think that there is little required to extend 386bsd
+for internationalization, or at least only as much as any other
+Unix.  If unicode is going to be standard then we do need
+more tools, but currently with Mule (or the older Nemacs), kterm,
+kinput, JTeX etc there is already reasonable support.  There are other
+tools which may be useful (e.g. grep, sort etc) but these are
+little to do with 386bsd but the wider Unix community.  
+
+Japanese filenames I suppose may be useful but I'm not sure they are 
+worth the trouble, though others may disagree.
+
+Alan
+
+Alan W Black                          2 Buccleuch Place, Edinburgh, UK
+Centre for Cognitive Science          tel: (+44) -31 650 4627
+University of Edinburgh               email: awb@ed.ac.uk
+
+
+]
+MID: AWB.92Dec16072619@otter.uk.ac.ed.aisb
+SUBJ: Re: INTERNATIONALIZATION: JAPAN, FAR EAST
+BODY: In article <1992Dec14.185028.9757@fcom.cc.utah.edu> terry@cs.weber.edu (A Wizard of Earth C) writes: |  | >   I know a lot of the Japaneese 386BSD community can not email out of Japan, | >   so this is an open letter to them, and to Atsushi MURAI and other people | >   there who are active in this newsgroup. | > | >   What kind of internationalization would best enable you to use 386BSD? | > | >	   o	Kanji support? | >	   o	Kana (Katakan/Hirugana) support? |  | I have a keen interest (and moderate capability) in the Japanese  | language.  Since getting 386bsd 0.1 up and running I have been | running MULE (Multi-languag
+------------------------------------------------------------
+[1992-12-16T10:25:24+00:00] [wcn@cs.brown.edu (Wen-Chun Ni)] [In article <AWB.92Dec16072619@otter.uk.ac.ed.aisb> awb@ed.ac.uk (Alan W Black) writes:
+   <stuff deleted>
+>
+>Mule supports Japanese (output and input).  Input is through Wnn
+>a kana/kanji convertor (which accepts romaji or kana input).  It
+>the input method is (I am told) compatible with ATOK which is
+>used on a large number of word processors.  Mule also has support 
+>for Chinese (with a large variety of input methods) offering
+>both Mandarin and Taiwanese fonts.  Also there is good support for
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>Korean.  Other languages that are supported in Mule are all
+>the major European languages, including Greek, and Russian.  There
+>is also alpha support for Vietnamese, Hebrew and Thai.
+
+
+Just for clarification. There is no such thing like Mandarin or
+Taiwanese font. The official characters used in People's Replublic of
+China are basically "reduced" and simplified characters of the
+conventional ones. Taiwan as well as Hong Kong are still using the
+conventional characters.  Thanx!
+
+
+
+
+
+]
+MID: 1992Dec16.102524.17193@cs.brown.edu
+SUBJ: Re: INTERNATIONALIZATION: JAPAN, FAR EAST
+BODY: In article <AWB.92Dec16072619@otter.uk.ac.ed.aisb> awb@ed.ac.uk (Alan W Black) writes: |    <stuff deleted> | > | >Mule supports Japanese (output and input).  Input is through Wnn | >a kana/kanji convertor (which accepts romaji or kana input).  It | >the input method is (I am told) compatible with ATOK which is | >used on a large number of word processors.  Mule also has support  | >for Chinese (with a large variety of input methods) offering | >both Mandarin and Taiwanese fonts.  Also there is good support for |       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ | >Korean.  Other languages that are supported in Mule are all | >t
+------------------------------------------------------------
+[1992-12-18T23:33:42+00:00] [mathias@stacken.kth.se (Mathias Bage)] [In <1992Dec18.043033.14254@midway.uchicago.edu> goer@kimbark.uchicago.edu (Richard L. Goerwitz) writes:
+
+>One of the big criticism leveled at US Engineers is that they are either
+>too dumb or lazy to build into their software support for non-Western
+>scripts.  Given that Linux originates in Europe, can we look forward to
+>better support for Unicode and ISO10646?  At least for "long" charac-
+>ter definitions?
+
+  I hope Linus Torvalds (author of Linux) will follow this thread.
+
+>Incidentally, although it's true that US Engineers often have really
+>terrible language skills, this is due more to geographical isolation
+>than to organic stupidity.  There's just no need for multilingualism
+>here in the states, the way there is in Europe, esp. in the low coun-
+>tries and Scandinavia.
+
+  I've never said that US Engineers are stupid.  I am just too often
+disappointed when I FTP some appearently nice shareware/PD package
+(w/o src), and find that it is not 8-bit clean.  Sigh.  And not to
+mention bash (Bourne Again Shell).  Deep sigh.  And emacs w/o 8-bit
+patches (my name will then be B\345ge in Latin1).  Deeper sigh.
+
+  Please don't flame me!  I know that many of these problems are being
+solved (or have been).  But I'm convinced that the same mistake will
+be repeated -- by others -- again, and again, and again.  The question
+is, *HOW* do we learn (mostly US) software engineers to write software
+systems that are easily localizable?  Standards alone won't be enough.
+Many IBM PC shareware/PD developers seem to be unaware that some of
+the 128 characters above DEL -- placed there for use in applications
+by IBM -- are sometimes needed in the *data* processed by the
+application, and not only used to draw boxes and write fancy greek
+characters with.  (One can question the qualities of this extended
+ASCII, though).
+
+  Broad language skills should not be needed to write software systems
+that are easily localizable, just some *basic knowledge* of how other
+languages' scripts look like, and how they are represented (hopefully
+Unicode/ISO10646/Plan9-whatever).
+
+  RE multilingualism in the US: Spanish is getting big in California,
+to my knowledge.  And Spanish has diacritics.  You have a large
+Chinese community, too.  They are effectively hindered to use standard
+off-the-shelf American software if they want to use Chinese.  And I
+guess this can be said of other ethnic communities in your country.
+Even English uses diacritics, occasionally.
+
+  In Sweden, we have the Lapps (our alphabet + some extra, NON-Latin1
+stuff), the Finns (quite a few live in Sweden too, and all use our
+alphabet, with exceptions), and a growing number of immigrants, many
+of them using non-latin scripts, most notably Iranians.  In our
+vicinity, we have the Baltic states.  They have a host of diacritics,
+e.g. comma-like things under letters etc.  We (Stacken Computer
+Society of the Royal Institute of Technology in Stockholm, Sweden,
+famous for our big collection of old DEC hardware) just shipped some
+old vaxen and sun 3/50s and more to Riga, Latvia (truckload on the
+ferry), and TeX won't do forever.  And then there's Polish, Czech,
+Slovak, Sorbian, Byelorussian, Ukrainian, Russian, German, Dutch,
+French, Italian, Spanish, Portuguese, Rhaeto-Romanic, Basque, Catalan,
+and more ad infinitum (Latin has no diacritics!?), at least in Europe,
+and, of course, the rest of the world (Euro-centric? who? me? 8-).
+And we're all tired of dealing with the hazzles of localizing US-made
+software.
+
+			(no offence intended)
+
+--Mathias
+
+>-- 
+
+>   -Richard L. Goerwitz              goer%midway@uchicago.bitnet
+>   goer@midway.uchicago.edu          rutgers!oddjob!ellis!goer
+
+         .        <= it's actually a ring over the a
+Mathias Bage		mathias@stacken.kth.se
+-- 
+         .        <= it's actually a ring over the a
+Mathias Bage		mathias@stacken.kth.se
+
+
+]
+MID: mathias.724721622@sune.stacken.kth.se
+SUBJ: Re: Dumb Americans (was INTERNATIONALIZATION: JAPAN, FAR EAST)
+BODY: In <1992Dec18.043033.14254@midway.uchicago.edu> goer@kimbark.uchicago.edu (Richard L. Goerwitz) writes: |  | >One of the big criticism leveled at US Engineers is that they are either | >too dumb or lazy to build into their software support for non-Western | >scripts.  Given that Linux originates in Europe, can we look forward to | >better support for Unicode and ISO10646?  At least for "long" charac- | >ter definitions? |  |   I hope Linus Torvalds (author of Linux) will follow this thread. |  | >Incidentally, although it's true that US Engineers often have really | >terrible language skills, this is due more to ge
+------------------------------------------------------------
+[1992-12-20T00:57:58+00:00] [henry@zoo.toronto.edu (Henry Spencer)] [In article <wilko.724689346@spoetnix.idca.tds.philips.nl> wilko@russia.idca.tds.philips.nl (Wilko Bulte) writes:
+>Yuck. All this makes me feel infected: I've seen AT&T and SCO source. Will
+>this make me forever a no-go for GNU-ish software?
+
+Nope.  I've seen source distributions you've never even heard of :-), and
+I still write redistributable software.
+
+There are a couple of touchy areas -- notably the kernel -- where, if I
+were writing such a thing for redistribution, I'd probably deliberately
+use a very different basic approach than the one used in code I've seen.
+If you end up producing something very similar to proprietary code, it's
+best to be able to document the process by which you arrived at it without
+making use of forbidden knowledge.  That can get tricky; it's easier to
+avoid the similarities in the first place.
+-- 
+"God willing... we shall return."       | Henry Spencer @ U of Toronto Zoology
+       -Gene Cernan, the Moon, Dec 1972 |  henry@zoo.toronto.edu  utzoo!henry
+
+
+]
+MID: BzJ9Cn.8IB@zoo.toronto.edu
+SUBJ: Re: AT&T/USL CD-ROM Review Process
+BODY: In article <wilko.724689346@spoetnix.idca.tds.philips.nl> wilko@russia.idca.tds.philips.nl (Wilko Bulte) writes: | >Yuck. All this makes me feel infected: I've seen AT&T and SCO source. Will | >this make me forever a no-go for GNU-ish software? |  | Nope.  I've seen source distributions you've never even heard of :-), and | I still write redistributable software. |  | There are a couple of touchy areas -- notably the kernel -- where, if I | were writing such a thing for redistribution, I'd probably deliberately | use a very different basic approach than the one used in code I've seen. | If you end up producing so
+------------------------------------------------------------
+[1992-12-20T05:39:21+00:00] [bzs@world.std.com (Barry Shein)] [
+From: henry@zoo.toronto.edu (Henry Spencer)
+>Nope.  I've seen source distributions you've never even heard of :-), and
+>I still write redistributable software.
+>
+>There are a couple of touchy areas -- notably the kernel -- where, if I
+>were writing such a thing for redistribution, I'd probably deliberately
+>use a very different basic approach than the one used in code I've seen.
+>If you end up producing something very similar to proprietary code, it's
+>best to be able to document the process by which you arrived at it without
+>making use of forbidden knowledge.  That can get tricky; it's easier to
+>avoid the similarities in the first place.
+
+That's all very rational Henry, but it's not at all clear that we're
+dealing with rationality here, there are lawyers involved!
+
+The problem is whether some software product employer out there is
+going to start asking prospective hires whether or not they have seen
+internals, and if so avoid hiring that person "just to avoid trouble
+down the road." You may not even hear the reason to argue the point,
+"Thank you for your interest...".
+
+Worse, I don't know that it's illegal for AT&T to make available to
+employers a list of names of people who they believe have had more
+than passing acquaintance with Unix kernel sources. Such a list could
+be generated from various sources (like comp.unix.wizards archives.)
+
+Insane? So was Joe McCarthy, and look at all the trouble that
+mentality caused (P.S. Alger Hiss was just cleared by the KGB as never
+having done any spying for the Soviet Union, he's now in his 80's and
+his name is almost synonymous among a lot of people with "commie spy",
+very sad, wonder if Richard Nixon, the prosecuting attorney, is going
+to apologize or even acknowledge this?)
+
+This is bad voodoo.
+
+What's worse is that AT&T/USL just have nothing to say about it all,
+so we are free to assume the worst, it's the only safe option at this
+point. These guys want some sort of monopoly back, and that's that.
+
+
+-- 
+        -Barry Shein
+
+Software Tool & Die    | bzs@world.std.com          | uunet!world!bzs
+Purveyors to the Trade | Voice: 617-739-0202        | Login: 617-739-WRLD
+
+
+]
+MID: BZS.92Dec20003921@world.std.com
+SUBJ: Re: AT&T/USL CD-ROM Review Process
+BODY:  | From: henry@zoo.toronto.edu (Henry Spencer) | >Nope.  I've seen source distributions you've never even heard of :-), and | >I still write redistributable software. | > | >There are a couple of touchy areas -- notably the kernel -- where, if I | >were writing such a thing for redistribution, I'd probably deliberately | >use a very different basic approach than the one used in code I've seen. | >If you end up producing something very similar to proprietary code, it's | >best to be able to document the process by which you arrived at it without | >making use of forbidden knowledge.  That can get tricky; it's easi
+------------------------------------------------------------
+[1992-12-22T14:03:45+00:00] [davidsen@ariel.crd.GE.COM (william E Davidsen)] [In article <wilko.724689346@spoetnix.idca.tds.philips.nl>, wilko@russia.idca.tds.philips.nl (Wilko Bulte) writes:
+| Yuck. All this makes me feel infected: I've seen AT&T and SCO source. Will
+| this make me forever a no-go for GNU-ish software?
+
+  Didn't they tell you that after you see the source they have to kill you?
+-- 
+bill davidsen, GE Corp. R&D Center; Box 8; Schenectady NY 12345
+    Keyboard controller has been disabled, press F1 to continue.
+
+
+]
+MID: 1992Dec22.140345.545@crd.ge.com
+SUBJ: Re: AT&T/USL CD-ROM Review Process
+BODY: In article <wilko.724689346@spoetnix.idca.tds.philips.nl>, wilko@russia.idca.tds.philips.nl (Wilko Bulte) writes: | | Yuck. All this makes me feel infected: I've seen AT&T and SCO source. Will | | this make me forever a no-go for GNU-ish software? |  |   Didn't they tell you that after you see the source they have to kill you? | --  | bill davidsen, GE Corp. R&D Center; Box 8; Schenectady NY 12345 |     Keyboard controller has been disabled, press F1 to continue. |  |  | 
+------------------------------------------------------------
+[1992-12-23T08:01:49+00:00] [ache@astral.msk.su (Andrew A. Chernov, Black Mage)] [I just found this bug, maybe, it present in standard com driver too...
+I don't use it and can't check.
+
+BUG DESCRIPTION:
+select() call don't work at all.
+
+WHY:
+ttselect() kernel routine used for coms too, its code say:
+	register struct tty *tp = &cdevsw[major(dev)].d_ttys[minor(dev)];
+but for cgd's multiport com driver it must be:
+	register struct tty *tp = &com_tty[UNIT(dev)];
+
+FIX:
+Simple, duplicate ttselect() code into comselect() code
+with replacing above. Modify conf.c ttselect()-->comselect()
+
+
+*** /sys/i386/isa/com.c.cgd.was       Thu Dec 10 01:07:29 1992
+--- /sys/i386/isa/com.c       Wed Dec 23 10:11:01 1992
+***************
+*** 932,934 ****
+--- 932,973 ----
+  	return 0;
+  }
+  #endif
++ 
++ int
++ comselect(dev, rw, p)
++ 	dev_t dev;
++ 	int rw;
++ 	struct proc *p;
++ {
++ 	register struct tty *tp = &com_tty[UNIT(dev)];
++ 	int nread;
++ 	int s = spltty();
++ 
++ 	switch (rw) {
++ 
++ 	case FREAD:
++ 		nread = ttnread(tp);
++ 		if (nread > 0 || 
++ 		   ((tp->t_cflag&CLOCAL) == 0 && (tp->t_state&TS_CARR_ON) == 0))
++ 			goto win;
++ 		if (tp->t_rsel && tp->t_rsel->p_wchan == (caddr_t)&selwait)
++ 			tp->t_state |= TS_RCOLL;
++ 		else
++ 			tp->t_rsel = p;
++ 		break;
++ 
++ 	case FWRITE:
++ 		if (RB_LEN(&tp->t_out) <= tp->t_lowat)
++ 			goto win;
++ 		if (tp->t_wsel && tp->t_wsel->p_wchan == (caddr_t)&selwait)
++ 			tp->t_state |= TS_WCOLL;
++ 		else
++ 			tp->t_wsel = p;
++ 		break;
++ 	}
++ 	splx(s);
++ 	return (0);
++ win:
++ 	splx(s);
++ 	return (1);
++ }
+*** /sys/i386/i386/conf.c.cgd.was      Mon Nov 23 08:00:07 1992
+--- /sys/i386/i386/conf.c      Wed Dec 23 10:13:12 1992
+***************
+*** 152,158 ****
+  
+  #include "com.h"
+  #if NCOM > 0
+! int	comopen(),comclose(),comread(),comwrite(),comioctl();
+  #define comreset	enxio
+  extern	struct tty com_tty[];
+  #else
+--- 152,158 ----
+  
+  #include "com.h"
+  #if NCOM > 0
+! int     comopen(),comclose(),comread(),comwrite(),comioctl(),comselect();
+  #define comreset	enxio
+  extern	struct tty com_tty[];
+  #else
+***************
+*** 162,167 ****
+--- 162,168 ----
+  #define comwrite	enxio
+  #define comioctl	enxio
+  #define comreset	enxio
++ #define comselect       enxio
+  #define	com_tty		NULL
+  #endif
+  
+***************
+*** 220,226 ****
+  	  logselect,	enodev,		NULL },
+  	{ comopen,	comclose,	comread,	comwrite,	/*8*/
+  	  comioctl,	enodev,		comreset,	com_tty,
+! 	  ttselect,	enodev,		NULL },
+  	{ Fdopen,	fdclose,	rawread,	rawwrite,	/*9*/
+  	  fdioctl,	enodev,		nullop,		NULL,
+  	  seltrue,	enodev,		fdstrategy },
+--- 221,227 ----
+  	  logselect,	enodev,		NULL },
+  	{ comopen,	comclose,	comread,	comwrite,	/*8*/
+  	  comioctl,	enodev,		comreset,	com_tty,
+! 	  comselect,    enodev,         NULL },
+  	{ Fdopen,	fdclose,	rawread,	rawwrite,	/*9*/
+  	  fdioctl,	enodev,		nullop,		NULL,
+  	  seltrue,	enodev,		fdstrategy },
+-- 
+In-This-Life:  Andrew A. Chernov    |  "Hay mas dicha, mas contento
+Internet:      ache@astral.msk.su   |  "Que adorar una hermosura
+Organization:  The RELCOM Corp.,    |  "Brujuleada entre los lejos
+               Moscow, Russia       |  "De lo imposible?!"  (Calderon)
+
+
+]
+MID: lFjp1EhiA0@astral.msk.su
+SUBJ: [386bsd] patch for cgd's multiport com driver, select() bug fix
+BODY: I just found this bug, maybe, it present in standard com driver too... | I don't use it and can't check. |  | BUG DESCRIPTION: | select() call don't work at all. |  | WHY: | ttselect() kernel routine used for coms too, its code say: | 	register struct tty *tp = &cdevsw[major(dev)].d_ttys[minor(dev)]; | but for cgd's multiport com driver it must be: | 	register struct tty *tp = &com_tty[UNIT(dev)]; |  | FIX: | Simple, duplicate ttselect() code into comselect() code | with replacing above. Modify conf.c ttselect()-->comselect() |  |  | *** /sys/i386/isa/com.c.cgd.was       Thu Dec 10 01:07:29 1992 | --- /sys/i386/isa/com.c       W
+------------------------------------------------------------
+[1992-12-23T14:10:20+00:00] [witr@rwwa.COM (Robert Withrow)] [In article <1992Dec22.140345.545@crd.ge.com>, davidsen@ariel.crd.GE.COM (william E Davidsen) writes:
+| In article <wilko.724689346@spoetnix.idca.tds.philips.nl>, wilko@russia.idca.tds.philips.nl (Wilko Bulte) writes:
+| | Yuck. All this makes me feel infected: I've seen AT&T and SCO source. Will
+| | this make me forever a no-go for GNU-ish software?
+| 
+|   Didn't they tell you that after you see the source they have to kill you?
+
+Of course, seeing GNU code will forever infect you so that you can never write
+for-profit code.  
+
+What we need is a sanatarium for infected programmers.  They also need to be
+re-trained, say to become telephone disinfectors or IRS inspectors.  Perhaps 
+this will be part of Billy's new health and economics plans?
+
+-- 
+ Robert Withrow, Tel: +1 617 598 4480, Fax: +1 617 598 4430, Net: witr@rwwa.COM
+ R.W. Withrow Associates, 21 Railroad Ave, Swampscott MA 01907-1821 USA
+
+
+]
+MID: 1992Dec23.141020.27004@rwwa.COM
+SUBJ: Re: AT&T/USL CD-ROM Review Process
+BODY: In article <1992Dec22.140345.545@crd.ge.com>, davidsen@ariel.crd.GE.COM (william E Davidsen) writes: | | In article <wilko.724689346@spoetnix.idca.tds.philips.nl>, wilko@russia.idca.tds.philips.nl (Wilko Bulte) writes: | | | Yuck. All this makes me feel infected: I've seen AT&T and SCO source. Will | | | this make me forever a no-go for GNU-ish software? | |  | |   Didn't they tell you that after you see the source they have to kill you? |  | Of course, seeing GNU code will forever infect you so that you can never write | for-profit code.   |  | What we need is a sanatarium for infected programmers.  They also ne
+------------------------------------------------------------
+[1992-12-30T22:48:04+00:00] [avg@rodan.UU.NET (Vadim Antonov)] [In article <1992Dec30.061759.8690@fcom.cc.utah.edu> terry@cs.weber.edu (A Wizard of Earth C) writes:
+>The "ugly thing Unicode does with asiatic languages" is exactly what it
+>does with all other languages:  There is a single lexical assignment for
+>for each possible glyph.
+>....
+>ADMITTED DRAWBACKS IN UNICODE:
+>
+>The fact that lexical order is not maintained for all existing character
+>sets (NOTE: NO CURRENT OR PROPOSED STANDARD SUPPORTS THIS IDEA!) means that
+>a direct arithmatic translation is not possible for...
+
+It means that:
+
+1) "mechanistic" conversion between upper and lower case
+   is impossible (as well as case-insensitive comparisons)
+
+   Example:     Latin  T -> t
+		Cyrillic T -> m
+		Greek T -> ?
+
+   This property alone renders Unicode useless for any business
+   applications.
+
+2) there is no trivial way to sort anything.
+   An elementary sort program will require access to enormous
+   tables for all possible languages.
+
+   English: A B C D E ... T ...
+   Russian: A .. B ... E ... C T ...
+
+3) there is no reasonable way to do hyphenation.
+   Since there is no way to tell language from the text there
+   is no way to do any reasonable attempts to hyphenate.
+   [OX - which language this word is from]?
+
+   Good-bye wordprocessors and formatters?
+
+4) "the similar gliphs" in Unicode are often SLIGHTLY different
+   typographical gliphs -- everybody who ever dealt with international
+   publishing knows that fonts are designed as a WHOLE and every
+   letter is designed with all others in mind -- i.e. X in Cyrillic
+   is NOT the same X as Latin even if the fonts are variations of
+   the same style. I'd wish you to see how ugly the Russian
+   texts prited on American desktop publishing systems with
+   "few characters added" are.
+
+   In reality it means that Unicode is not a solution for
+   typesetting.
+
+Having unique glyphs works ONLY WITHIN a group of languages
+which are based on variations of a single alphabet with
+non-conflicting alphabetical ordering and sets of
+vowels. You can do that for European languages.
+An attempt to do it for different groups (like Cyrillic and Latin)
+is disastrous at best -- we already tried is and finally came to
+the encodings with two absolutely separate alphabets.
+
+I think that there is no many such groups, though, and it is possible
+to identify several "meta-alpahbets". The meta-alphabets have no
+defined rules for cross-sorting (unlike latters WITHIN one
+meta-alphabet; you CAN sort English and German words together
+and it still will make sense; sorting Russian and English together
+is at best useless). It increases the number of codes but not
+as drastically as codifying languages; there are hundreds of
+languages based on a dozen of meta-alphabets.
+
+>The fact that all character sets do not occur in their local lexical order
+>means that a particular character can not be identified as to language by
+>its ordinal value.  This is a small penalty to pay for the vast reduction
+>in storage requirements between a 32-bit and a 16-bit character set that
+>contains all required glyphs.
+
+Not true. First of all nothing forces to use 32-bit representation
+where only 10 bits are necessary.
+
+So, as you see the Unicode is more a problem than a solution.
+The fundamental idea is simply wrong -- it is inadequate for
+anything except for Latin-based languages. No wonder we're
+hearing that Unicode is US-centric.
+
+Unfortunately Unicode looks like a cool solution for people who
+never did any real localization work and i fear that this
+particular mistake will be promoted as standard presenting
+us a new round of headache. It does not remove necessity to
+carry off-text information (like "X-Language: english") and
+it makes it not better than existing ISO 8-bit encodings
+(if i know the language i already know its alphabet --
+all extra bits are simply wasted; and programs handling Unicode
+text have to know the laguage for reasons stated before).
+
+UNICODE IS A *BIG* MISTAKE.
+
+(Don't get me wrong -- i'm for the universal encoding; it's
+just that particular idea of unique glyphs that i strongly
+oppose).
+
+--vadim
+
+
+]
+MID: 1ht8v4INNj7i@rodan.UU.NET
+SUBJ: Re: Dumb Americans (was INTERNATIONALIZATION: JAPAN, FAR EAST)
+BODY: In article <1992Dec30.061759.8690@fcom.cc.utah.edu> terry@cs.weber.edu (A Wizard of Earth C) writes: | >The "ugly thing Unicode does with asiatic languages" is exactly what it | >does with all other languages:  There is a single lexical assignment for | >for each possible glyph. | >.... | >ADMITTED DRAWBACKS IN UNICODE: | > | >The fact that lexical order is not maintained for all existing character | >sets (NOTE: NO CURRENT OR PROPOSED STANDARD SUPPORTS THIS IDEA!) means that | >a direct arithmatic translation is not possible for... |  | It means that: |  | 1) "mechanistic" conversion between upper and lower case |    is
+------------------------------------------------------------
+[1993-01-01T00:00:00+00:00] [] [people from all over the world have retrieved the code, but only few 
+persons have already replied and contributed their own preferred map.
+
+I have plenty maps for German, Finish, Swedish, Russian keyboards, but 
+would like to have response from the following countries (but not restricted
+to):
+	Canada (French part)
+	Czech republic (with font)
+	Denmark
+	France
+	Greece (with font)
+	India (preferably with a bdf font)
+	Israel (font)
+	Italy
+	Norway
+	Poland (with font)
+	Portugal
+	Spain
+	Switzerland (several maps)
+	United Kingdom
+	other not here mentioned countries whose keyboard differs from the US one.
+
+Please try to adapt to a common and generally accepted standard 
+(ISO-LATIN-[123456789] for instance, if it is used), rather than DOS special
+features (code pages) and proprietary encoding schemes.
+
+There are probably differently mapped keyboards out there. I know this at least
+for UK, Italy, France and Switzerland.
+Also, several national keyboards have the common C characters {[\|]}^~
+in uncomfortable places (there are national characters instead). If you wrote a
+better mapping for your keyboard which is not too strange, I am interested in this,
+too.
+Furthermore, there are keyboards with 84/101/102 (or another number) which slighty
+differ. If you think you have an uncommon keyboard of this kind, send me your
+map as well.
+
+Finally, if there are key semantics that cannot be generated by codrv yet, but
+are necessary for your keyboard (such like a special capslock key for the 
+function keys only, for instance), I also want to know.
+
+Please don't think that another one has already sent a suitable map which is same
+to yours. It is better for me to get 100 french maps than none at all.
+
+Please don't post keymaps here, send them to one of the following addresses:
+Holger.Veit@gmd.de
+veit@borneo.gmd.de
+veit@du9ds3.fb9dv.uni-duisburg.de
+
+
+
+Holger
+
+-- 
+         Dr. Holger Veit                   | INTERNET: Holger.Veit@gmd.de
+|  |   / GMD-SET German National Research  | Phone: (+49) 2241 14 2448
+|__|  /  Center for Computer Science       | Fax:   (+49) 2241 14 2342
+|  | /   P.O. Box 13 16                    |    Three lines Signature space
+|  |/    Schloss Birlinghoven              |    available for rent. Nearly
+         DW-5205 St. Augustin, Germany     |    unused, good conditions
+
+
+]
+MID: <no-id-os.386bsd.development-e4e53438135e001f>
+SUBJ: 
+BODY: people from all over the world have retrieved the code, but only few  | persons have already replied and contributed their own preferred map. |  | I have plenty maps for German, Finish, Swedish, Russian keyboards, but  | would like to have response from the following countries (but not restricted | to): | 	Canada (French part) | 	Czech republic (with font) | 	Denmark | 	France | 	Greece (with font) | 	India (preferably with a bdf font) | 	Israel (font) | 	Italy | 	Norway | 	Poland (with font) | 	Portugal | 	Spain | 	Switzerland (several maps) | 	United Kingdom | 	other not here mentioned countries whose keyboard differs from the US 
+------------------------------------------------------------
+[1993-01-01T09:28:37+00:00] ["Andrew A. Chernov, Black Mage" <ache@astral.msk.su>] [Hi,
+I look today at my computer and see, that still 92 year now active :-(
+Here is a patch to fix it (I was mathematician and remember,
+that (y % 4) operation need whole year instead of (y - 1970),
+moreover (y % 4) determinition of leap year is wrong,
+see #define isleap() below for correct implementation).
+This patch fix another small problem too, old code add 9x additional
+seconds in any case: (sec += ytos(sec) instead of sec = ytos(sec))
+
+P.S.: Happy New Year!
+
+*** clock.c.was	Sun Nov 22 02:52:30 1992
+--- clock.c	Fri Jan  1 12:17:04 1993
+***************
+*** 58,63 ****
+--- 58,65 ----
+  #define DAYST 119
+  #define DAYEN 303
+  
++ #define isleap(y) (((y) % 4) == 0 && ((y) % 100) != 0 || ((y) % 400) == 0)
++ 
+  startrtclock() {
+  	int s;
+  
+***************
+*** 94,102 ****
+  	int i;
+  	unsigned long ret;
+  
+! 	ret = 0; y = y - 70;
+! 	for(i=0;i<y;i++) {
+! 		if (i % 4) ret += 365*24*60*60;
+  		else ret += 366*24*60*60;
+  	}
+  	return ret;
+--- 96,104 ----
+  	int i;
+  	unsigned long ret;
+  
+! 	ret = 0;
+! 	for(i=1970;i<y;i++) {
+! 		if (!isleap(i)) ret += 365*24*60*60;
+  		else ret += 366*24*60*60;
+  	}
+  	return ret;
+***************
+*** 145,152 ****
+  	while ((sa&RTCSA_TUP) == RTCSA_TUP)
+  		sa = rtcin(RTC_STATUSA);
+  
+! 	sec = bcd(rtcin(RTC_YEAR));
+! 	leap = !(sec % 4); sec += ytos(sec); /* year    */
+  	yd = mtos(bcd(rtcin(RTC_MONTH)),leap); sec += yd;	/* month   */
+  	t = (bcd(rtcin(RTC_DAY))-1) * 24*60*60; sec += t; yd += t; /* date    */
+  	day_week = rtcin(RTC_WDAY);				/* day     */
+--- 147,154 ----
+  	while ((sa&RTCSA_TUP) == RTCSA_TUP)
+  		sa = rtcin(RTC_STATUSA);
+  
+! 	t = bcd(rtcin(RTC_YEAR)) + 1900;
+! 	leap = isleap(t); sec = ytos(t); /* year    */
+  	yd = mtos(bcd(rtcin(RTC_MONTH)),leap); sec += yd;	/* month   */
+  	t = (bcd(rtcin(RTC_DAY))-1) * 24*60*60; sec += t; yd += t; /* date    */
+  	day_week = rtcin(RTC_WDAY);				/* day     */
+***************
+*** 153,159 ****
+  	sec += bcd(rtcin(RTC_HRS)) * 60*60;			/* hour    */
+  	sec += bcd(rtcin(RTC_MIN)) * 60;			/* minutes */
+  	sec += bcd(rtcin(RTC_SEC));				/* seconds */
+- 	sec -= 24*60*60; /* XXX why ??? */
+  
+  	/* XXX off by one? Need to calculate DST on SUNDAY */
+  	/* Perhaps we should have the RTC hold GMT time to save */
+--- 155,160 ----
+-- 
+In-This-Life:  Andrew A. Chernov    |  "Hay mas dicha, mas contento
+Internet:      ache@astral.msk.su   |  "Que adorar una hermosura
+Organization:  The RELCOM Corp.,    |  "Brujuleada entre los lejos
+               Moscow, Russia       |  "De lo imposible?!"  (Calderon)
+
+
+
+]
+MID: DG5x0Hha50@astral.msk.su
+SUBJ: [386bsd] New Year patch for CMOS clock, was still 92 year
+BODY: Hi, | I look today at my computer and see, that still 92 year now active :-( | Here is a patch to fix it (I was mathematician and remember, | that (y % 4) operation need whole year instead of (y - 1970), | moreover (y % 4) determinition of leap year is wrong, | see #define isleap() below for correct implementation). | This patch fix another small problem too, old code add 9x additional | seconds in any case: (sec += ytos(sec) instead of sec = ytos(sec)) |  | P.S.: Happy New Year! |  | *** clock.c.was	Sun Nov 22 02:52:30 1992 | --- clock.c	Fri Jan  1 12:17:04 1993 | *************** | *** 58,63 **** | --- 58,65 ---- |   #defin
+------------------------------------------------------------
+[1993-01-01T09:47:59+00:00] [terry@cs.weber.edu (A Wizard of Earth C)] [In article <1ht8v4INNj7i@rodan.UU.NET> avg@rodan.UU.NET (Vadim Antonov) writes:
+>In article <1992Dec30.061759.8690@fcom.cc.utah.edu> terry@cs.weber.edu (A Wizard of Earth C) writes:
+>>The "ugly thing Unicode does with asiatic languages" is exactly what it
+>>does with all other languages:  There is a single lexical assignment for
+>>for each possible glyph.
+>>....
+>>ADMITTED DRAWBACKS IN UNICODE:
+>>
+>>The fact that lexical order is not maintained for all existing character
+>>sets (NOTE: NO CURRENT OR PROPOSED STANDARD SUPPORTS THIS IDEA!) means that
+>>a direct arithmatic translation is not possible for...
+>
+>It means that:
+>
+>1) "mechanistic" conversion between upper and lower case
+>   is impossible (as well as case-insensitive comparisons)
+>
+>   Example:     Latin  T -> t
+>		Cyrillic T -> m
+>		Greek T -> ?
+>
+>   This property alone renders Unicode useless for any business
+>   applications.
+
+This is simply untrue.  Because a subtractive/additive conversion is
+impossible in *some* cases does not mean a *mechanistic* conversion is
+also impossible.  In particular, a tabular conversion is an obvious
+approach which has already been used with success, with a minimal
+(multiply plus dereference) overhead.
+
+The Lexical ordering of the Latin-1 character set is not in question;
+case conversion is done by an arithmetic offset of decimal 32.
+
+The Cyrillic characters within the Unicode standard (U+0400 -> U+04FF)
+are based on the ECMA registry under ISO-2375 for use with ISO-2022.  It
+contains several Cyrillic subsets.  The most recent and most widely
+accepted of these is ISO-8859-5.  Unicode uses the same relative
+positions as in ISO-8859-5.  Are you also adverse to ISO-8859-5?
+
+There are a number of Cyrillic letters not defined in ISO-8859-5 (both
+historical and extended) which exist in the Unicode standard; it is true
+that the case conversion is not based on an offset of decimal 32 for the
+extended characters not covered by the 8859-5 standard; however, the
+historic letters (such as those used in Ukranian and Belorussian) are
+dialectic in nater, and thus are regarded as a font change.  Bearing this
+in mind, case conversion can be done in the context of the dialectic
+table used for local representation of the characters for device I/O
+using the decimal 32 offset *through the lookup table*.  I fail to follow
+your T -> m conversion argument; could you please identify the letters
+in question with regard to their ordinal values in ISO-8859-5?
+
+
+The argument for case conversion within the Greek is equally flawed,
+unless you are also taking issue with the ISO-8859-7 character set,
+per ECMA registry ISO-2375 for use with ISO-2022.  Taking issue with
+this particular standard would be difficult to support on your part,
+as the ISO-8859-7 standard is based on the Greek national standard
+ELOT-928 and also ECMA-118, the origin of which is Greece.
+
+Again, historical forms are not in a lexically correct order for decimal
+32 conversion of case; however, these are also dialectical variants and
+the difficults inherent in these variants are resolvable under the same
+mechanisms as those discussed for Cyrillic.
+
+As to business suitability, it is unlikely that one would use something
+like Polytonic (re: classical and Byzantine ancient Greek) for a business
+application.
+
+
+The main "disording" of character sets is with regard to the Japanese
+JIS standard.   The minutes of the 20 Apr 90 UNICODE meeting (as reported
+by Ken Whistler, Metaphor Computer Systems justify this as follows:
+
+] Han Unification Issues:
+] 
+] The compromise WG2 position advocated Han unification, but it seemed
+] to imply that the unified set would start off with codes in JIS order.
+] There was some discussion of whether the compromise proposal really
+] did or did not state (or imply) that.  Then the group reviewed the
+] Japanese objections to a Han unification that does not incorporate
+] JIS ordering.
+] 
+] The consensus was that a JIS-first ordering in a unified Han encoding
+] is unacceptable for at least 3 reasons:
+]         1. It is morally unacceptable to favor the Japanese standard
+]                 this way in an international encoding, at the expense
+]                 of the Chinese and Korean standards.
+]         2. The proposal attempts to solve a technical problem (namely
+]                 the actual work of unifying the characters) with a
+]                 political solution.
+]         3. Preservation of the JIS order, so as to attempt to
+]                 encapsulate that as a default sort order, makes no
+]                 sense outside of a JIS-oriented application.  The
+]                 Han unification should present a more generally
+]                 recognizable default sort order (i.e. one which
+]                 can also be used by the Chinese and the Koreans,
+]                 and which applies to the characters beyond JIS 1 & 2).
+] 
+] Examination of the cost/benefits of unified Han character encoding
+] should lead to the following conclusions:  If an application is
+] Japanese only, then simply use JIS.  If an application is truly
+] multilingual, then a JIS-first encoding doesn't make particular
+] sense.  Hence, the Unicode consensus is that an alternative and
+] universal ordering principle should be applied to the unified
+] Han set.  (The consensus is still that radical/stroke order, with
+] or without level distinctions, is the right way to go.)
+
+Of these, some argument can be made against only the final paragraph,
+since it vies internationalization as a tool for multinationalization
+rather than localization.  I feel that a strong argument can be held
+out for internationalization as a means of providing fully data driven
+localizations of software.  As such, the argument of monolingual vs.
+multilingual is not supported.  However, lexical sort order can be
+enforced in the access rather than the storage mechanism, making this
+a null point.
+
+
+>2) there is no trivial way to sort anything.
+>   An elementary sort program will require access to enormous
+>   tables for all possible languages.
+>
+>   English: A B C D E ... T ...
+>   Russian: A .. B ... E ... C T ...
+
+I believe this is addressed adequately in the ISO standards; however,
+the lexical order argument is one of the sticking points against the
+Japanese acceptance of Unicode, and is a valid argument in that arena.
+The fact of the matter is that Unicode is not an information manipulation
+standard, but (for the purposes of it's use in internationalization) a
+storage and an I/O standard.  View this way, the lexical ordering argument
+is nonapplicable.
+
+
+>3) there is no reasonable way to do hyphenation.
+>   Since there is no way to tell language from the text there
+>   is no way to do any reasonable attempts to hyphenate.
+>   [OX - which language this word is from]?
+>
+>   Good-bye wordprocessors and formatters?
+
+By this, you are obviously not referring to idegrahic languages, such as
+Han, since hyphenation is meaningless for such languages.  Setting aside
+the argument that if you don't know how to hyphenate in a language, you
+have no business generating situations requiring hyphenation by virtue
+of the fact that you are basically illeterate in taht language... ;-).
+
+Hyphenation as a process is language dependent, and, in particular,
+dependent on the rendering mechanism (rendereing mechanisms are *not*
+the subject under discussion; storage mechanisms *are*).  Bluntly
+speaking, why does one need word processing software at all if this
+type of thing is codified?  Hyphenation, like sorting, is manipulation
+of the information in a native language specific way.
+
+Find another standard to tell you how to write a word processor.
+
+
+>4) "the similar gliphs" in Unicode are often SLIGHTLY different
+>   typographical gliphs -- everybody who ever dealt with international
+>   publishing knows that fonts are designed as a WHOLE and every
+>   letter is designed with all others in mind -- i.e. X in Cyrillic
+>   is NOT the same X as Latin even if the fonts are variations of
+>   the same style. I'd wish you to see how ugly the Russian
+>   texts prited on American desktop publishing systems with
+>   "few characters added" are.
+>
+>   In reality it means that Unicode is not a solution for
+>   typesetting.
+
+No, you're right; neither is it a standard for the production of
+pipefittings or the design of urban transportation systems.  Your
+complaint is one of the representation of multilingual text using the
+same characters (as a result of unification) in the same document.
+
+>Having unique glyphs works ONLY WITHIN a group of languages
+>which are based on variations of a single alphabet with
+>non-conflicting alphabetical ordering and sets of
+>vowels. You can do that for European languages.
+>An attempt to do it for different groups (like Cyrillic and Latin)
+>is disastrous at best -- we already tried is and finally came to
+>the encodings with two absolutely separate alphabets.
+>
+>I think that there is no many such groups, though, and it is possible
+>to identify several "meta-alpahbets". The meta-alphabets have no
+>defined rules for cross-sorting (unlike latters WITHIN one
+>meta-alphabet; you CAN sort English and German words together
+>and it still will make sense; sorting Russian and English together
+>is at best useless). It increases the number of codes but not
+>as drastically as codifying languages; there are hundreds of
+>languages based on a dozen of meta-alphabets.
+
+Forgetting for the moment that worrying about the output mechanism for
+such a document before worrying about the input mechanism whereby such
+a document can be created, The Unicode 1.0 standard (in section 2.1)
+clearly makes a distinction between "Plain" and "Fancy" text:
+
+] Plain and Fancy Text
+]
+] Plain text is a pure sequence of character codes; plain Unicode text
+] is a sequence of Unicode character codes.  Fancy text is any text
+] representation consisting of plain text pluss added information such
+] as font size, color, and so on.  For example, a multifont text as
+] formated by a desktop publishing system is fancy text.
+
+Clearly, then, the applications you are describing are *not* Unicode
+applications, but "Fancy text" apllications which could potentially
+make use of Unicode for character storage.
+
+This is, incidently, the resoloution of the Chinese/Japanese/Korean
+unification arguments.
+
+>>The fact that all character sets do not occur in their local lexical order
+>>means that a particular character can not be identified as to language by
+>>its ordinal value.  This is a small penalty to pay for the vast reduction
+>>in storage requirements between a 32-bit and a 16-bit character set that
+>>contains all required glyphs.
+>
+>Not true. First of all nothing forces to use 32-bit representation
+>where only 10 bits are necessary.
+
+This would be Runic encoding, right?  I can post the Plan-9 and Metis
+mechanisms for doing this, if you want.  Both are, in my opinion,
+vastly inferior to other available mechanisms.  In particular, the
+requirement of using up to 6 characters to represent a single 31 bit
+value is particularly repulsive, especially for glyphs in excess of
+hex 04000000 (6 character encoding mandatory).  Far eastern users
+already have the penalty of effectively half the disk space per glyph
+for storage of texts using raw (16 bit) Unicode.  Admittedly, this
+has more to do with their use of pictographic rather than phonetic
+writing, but asking them to sacrifice yet more disk spac for Western
+convenience is ludicrous.
+
+sunce the 386BSD file system works on byte boundries, I can't believe
+were suggesting direct 10-bit encoding of characters, right?
+
+
+>So, as you see the Unicode is more a problem than a solution.
+>The fundamental idea is simply wrong -- it is inadequate for
+>anything except for Latin-based languages. No wonder we're
+>hearing that Unicode is US-centric.
+>
+>Unfortunately Unicode looks like a cool solution for people who
+>never did any real localization work and i fear that this
+>particular mistake will be promoted as standard presenting
+>us a new round of headache. It does not remove necessity to
+>carry off-text information (like "X-Language: english") and
+>it makes it not better than existing ISO 8-bit encodings
+>(if i know the language i already know its alphabet --
+>all extra bits are simply wasted; and programs handling Unicode
+>text have to know the laguage for reasons stated before).
+
+I don't see many multinational applications or standards coming out
+of Zambia or elsewhere (to point out the fact that they have to come
+from somewhere, and the US is as good as any place else).  The fact
+that much of Unicode is based on ISO standards, and ISO-10646 encompasses
+all of Unicode, means that there is more than US support and input on
+the standard.
+
+>UNICODE IS A *BIG* MISTAKE.
+>
+>(Don't get me wrong -- i'm for the universal encoding; it's
+>just that particular idea of unique glyphs that i strongly
+>oppose).
+
+I am willing to listen to arguments for any accepted or draft standards
+you care to put forward.
+
+Arguments *against* proposals are well and good, as long as the constructive
+criticism is accompanied by constructive suggestions.
+
+
+					Terry Lambert
+					terry@icarus.weber.edu
+					terry_lambert@novell.com
+---
+Any opinions in this posting are my own and not those of my present
+or previous employers.
+-- 
+-------------------------------------------------------------------------------
+                                        "I have an 8 user poetic license" - me
+ Get the 386bsd FAQ from agate.berkeley.edu:/pub/386BSD/386bsd-0.1/unofficial
+-------------------------------------------------------------------------------
+
+
+]
+MID: 1993Jan1.094759.8021@fcom.cc.utah.edu
+SUBJ: Re: Dumb Americans (was INTERNATIONALIZATION: JAPAN, FAR EAST)
+BODY: In article <1ht8v4INNj7i@rodan.UU.NET> avg@rodan.UU.NET (Vadim Antonov) writes: | >In article <1992Dec30.061759.8690@fcom.cc.utah.edu> terry@cs.weber.edu (A Wizard of Earth C) writes: | >>The "ugly thing Unicode does with asiatic languages" is exactly what it | >>does with all other languages:  There is a single lexical assignment for | >>for each possible glyph. | >>.... | >>ADMITTED DRAWBACKS IN UNICODE: | >> | >>The fact that lexical order is not maintained for all existing character | >>sets (NOTE: NO CURRENT OR PROPOSED STANDARD SUPPORTS THIS IDEA!) means that | >>a direct arithmatic translation is not possi
+------------------------------------------------------------
+[1993-01-01T23:27:05+00:00] [avg@rodan.UU.NET (Vadim Antonov)] [In article <1993Jan1.094759.8021@fcom.cc.utah.edu> terry@cs.weber.edu (A Wizard of Earth C) writes:
+>In article <1ht8v4INNj7i@rodan.UU.NET> avg@rodan.UU.NET (Vadim Antonov) writes:
+>>In article <1992Dec30.061759.8690@fcom.cc.utah.edu> terry@cs.weber.edu (A Wizard of Earth C) writes:
+>>1) "mechanistic" conversion between upper and lower case
+>>   is impossible (as well as case-insensitive comparisons)
+>>
+>>   Example:     Latin  T -> t
+>>		Cyrillic T -> m
+>>		Greek T -> ?
+>>
+>>   This property alone renders Unicode useless for any business
+>>   applications.
+>
+>This is simply untrue.  Because a subtractive/additive conversion is
+>impossible in *some* cases does not mean a *mechanistic* conversion is
+>also impossible.  In particular, a tabular conversion is an obvious
+>approach which has already been used with success, with a minimal
+>(multiply plus dereference) overhead.
+
+You omitted one small "detail" -- you need to know the language of the word
+the letter belongs to to make a conversion. Since Unicode does not
+provide for specifying the language it is obvious that is should be
+obtained from user or kept somewhere off the text. In both cases
+as our program ALREADY knows the language from the environment it knows
+the particular (small) alphabet -- no need to use multibyte encodings!
+See how Unicode renders itself useless?
+
+I wonder why programmers aren't taught mathematical logic. I'm somehow
+an exception because i'm a mathematican by education and i use to look
+for holes in "logical" statements.
+
+>The Cyrillic characters within the Unicode standard (U+0400 -> U+04FF)
+>are based on the ECMA registry under ISO-2375 for use with ISO-2022.  It
+>contains several Cyrillic subsets.  The most recent and most widely
+>accepted of these is ISO-8859-5.  Unicode uses the same relative
+>positions as in ISO-8859-5.  Are you also adverse to ISO-8859-5?
+
+ISO-8859-5 is ok, though it is a dead code. Nobody uses it in Russia,
+mind you. The most wide-spread codes are KOI-8 (de-facto Unix and
+networking standard) and the so-called "alternative" code which is
+popular between MS-DOS users.
+
+[lots of information about the dead code is omitted]
+
+>The main "disording" of character sets is with regard to the Japanese
+>JIS standard.   The minutes of the 20 Apr 90 UNICODE meeting (as reported
+>by Ken Whistler, Metaphor Computer Systems justify this as follows:
+
+Unfortunately i'm not competent to discuss Japanese and Chinese.
+
+>Of these, some argument can be made against only the final paragraph,
+>since it vies internationalization as a tool for multinationalization
+>rather than localization.  I feel that a strong argument can be held
+>out for internationalization as a means of providing fully data driven
+>localizations of software.  As such, the argument of monolingual vs.
+>multilingual is not supported.  However, lexical sort order can be
+>enforced in the access rather than the storage mechanism, making this
+>a null point.
+
+Nay, you missed the same point again. You need information about
+laguage case-conversion and sorting rules and you can obtain it from
+the encoding (making user programs simple) or from user programs
+(forcing them to ask user at every step or to keep track of the language).
+What would you choose for your program?
+Besides, as i already argued asking or keeping off-text inforamtion
+makes the whole enterprise useless.
+
+>>2) there is no trivial way to sort anything.
+>>   An elementary sort program will require access to enormous
+>>   tables for all possible languages.
+>>
+>>   English: A B C D E ... T ...
+>>   Russian: A .. B ... E ... C T ...
+>
+>I believe this is addressed adequately in the ISO standards; however,
+
+Your belief is wrong for it is not considered adequate by real users.
+
+>the lexical order argument is one of the sticking points against the
+>Japanese acceptance of Unicode, and is a valid argument in that arena.
+>The fact of the matter is that Unicode is not an information manipulation
+>standard, but (for the purposes of it's use in internationalization) a
+>storage and an I/O standard.  View this way, the lexical ordering argument
+>is nonapplicable.
+
+It'd be sticking point about Slavic languages as well, you may be sure.
+Knowing ex-Soviet standard-making routine i think the official fishy-eyed
+representatives will silentlly vote pro to get some more time for raving
+in Western stores and nobody will use it since then.  The "working" standards
+in Russia aren't made by commitees.
+
+>>3) there is no reasonable way to do hyphenation.
+>>   Since there is no way to tell language from the text there
+>>   is no way to do any reasonable attempts to hyphenate.
+>>   [OX - which language this word is from]?
+>>
+>>   Good-bye wordprocessors and formatters?
+>
+>By this, you are obviously not referring to idegrahic languages, such as
+>Han, since hyphenation is meaningless for such languages.  Setting aside
+>the argument that if you don't know how to hyphenate in a language, you
+>have no business generating situations requiring hyphenation by virtue
+>of the fact that you are basically illeterate in taht language... ;-).
+
+The reason may be as simple as reformatting spreadsheet containing
+(particularly) addresses of companies in the language i don't comprehend
+(though i can write it on the envelope).
+
+>Hyphenation as a process is language dependent, and, in particular,
+>dependent on the rendering mechanism (rendereing mechanisms are *not*
+>the subject under discussion; storage mechanisms *are*).  Bluntly
+>speaking, why does one need word processing software at all if this
+>type of thing is codified?  Hyphenation, like sorting, is manipulation
+>of the information in a native language specific way.
+
+Exactly. But there is a lot of "legal" ways to do hyphenation -- and
+there are algorithms which do reasonably well knowing nothing about
+the language except which letters are vowels. It's quite enough
+for printing address labels. If i'm formatting a book i can specify the
+language myself.
+
+>Find another standard to tell you how to write a word processor.
+
+Is there any? :-)
+
+
+>>4) "the similar gliphs" in Unicode are often SLIGHTLY different
+>>   typographical gliphs -- everybody who ever dealt with international
+>>   publishing knows that fonts are designed as a WHOLE and every
+>>   letter is designed with all others in mind -- i.e. X in Cyrillic
+>>   is NOT the same X as Latin even if the fonts are variations of
+>>   the same style. I'd wish you to see how ugly the Russian
+>>   texts prited on American desktop publishing systems with
+>>   "few characters added" are.
+>>
+>>   In reality it means that Unicode is not a solution for
+>>   typesetting.
+>
+>No, you're right; neither is it a standard for the production of
+>pipefittings or the design of urban transportation systems. 
+
+You somehow forgot that increasing number of texts get printed with
+typographical quality with all the stuff which follows.
+Ever saw a laser printer?
+
+>Forgetting for the moment that worrying about the output mechanism for
+>such a document before worrying about the input mechanism whereby such
+>a document can be created, The Unicode 1.0 standard (in section 2.1)
+>clearly makes a distinction between "Plain" and "Fancy" text:
+
+I see no reasons why we should treat the regular expression matching
+as "fancy" feature.
+
+>Clearly, then, the applications you are describing are *not* Unicode
+>applications, but "Fancy text" apllications which could potentially
+>make use of Unicode for character storage.
+
+Don't you think the ANY text is going to be fancy because Unicode
+as it is does not provide adequate means for the trivial operations?
+
+>This is, incidently, the resoloution of the Chinese/Japanese/Korean
+>unification arguments.
+
+As well i can provide every text with a font file. It is not a solution
+at all.
+
+>This would be Runic encoding, right?
+
+Exactly.
+
+>I can post the Plan-9 and Metis
+>mechanisms for doing this, if you want.
+
+Thank you, i already expressed my opinion on Plan 9 UTF in comp.os.research.
+I also do not think it's exciting. There are much more efficient runic
+encodings (my toy OS uses 7bit per byte and 8th bit as a continuation
+indicator).
+
+>sunce the 386BSD file system works on byte boundries, I can't believe
+>were suggesting direct 10-bit encoding of characters, right?
+
+10 bits are nothing more than example.
+
+>I don't see many multinational applications or standards coming out
+>of Zambia or elsewhere (to point out the fact that they have to come
+>from somewhere, and the US is as good as any place else).  The fact
+>that much of Unicode is based on ISO standards, and ISO-10646 encompasses
+>all of Unicode, means that there is more than US support and input on
+>the standard.
+
+Pretty soon it will be a dead standard because of the logical problems
+in the design. Voting is inadequate replacement for logic, you know.
+I'd better stick to a good standard from Zambia than to the brain-dead
+creature of ISO even if every petty bureaucrat voted for it.
+
+>I am willing to listen to arguments for any accepted or draft standards
+>you care to put forward.
+>
+>Arguments *against* proposals are well and good, as long as the constructive
+>criticism is accompanied by constructive suggestions.
+
+I expressed my point of view (and proposed some kind of solution) in
+comp.std.internat, where the discussion should belong. I'd like you to
+see the problem not as an excercise in wrestling consensus from an
+international body but as a mathematical problem. From the logistical
+point of view the solution is simply incorrect and no standard commitee
+can vote out that small fact. The fundamental assumption Unicode is
+based upon (i.e. one glyph - one code) makes the whole construction
+illogical and it, unfortunately, cannot be mended without serious
+redesign of the whole thing.
+
+Try to understand the argument about the redundance of encoding with
+external restrictions provided i used earlier in this letter. The
+Unicode commitee really get caught in a logical trap and it's a pity
+few people realize that.
+
+--vadim
+
+
+]
+MID: 1i2k09INN4hl@rodan.UU.NET
+SUBJ: Re: Dumb Americans (was INTERNATIONALIZATION: JAPAN, FAR EAST)
+BODY: In article <1993Jan1.094759.8021@fcom.cc.utah.edu> terry@cs.weber.edu (A Wizard of Earth C) writes: | >In article <1ht8v4INNj7i@rodan.UU.NET> avg@rodan.UU.NET (Vadim Antonov) writes: | >>In article <1992Dec30.061759.8690@fcom.cc.utah.edu> terry@cs.weber.edu (A Wizard of Earth C) writes: | >>1) "mechanistic" conversion between upper and lower case | >>   is impossible (as well as case-insensitive comparisons) | >> | >>   Example:     Latin  T -> t | >>		Cyrillic T -> m | >>		Greek T -> ? | >> | >>   This property alone renders Unicode useless for any business | >>   applications. | > | >This is simply untrue.  Because a
+------------------------------------------------------------
+[1993-01-02T08:37:34+00:00] [terry@cs.weber.edu (A Wizard of Earth C)] [A discussion between Vadim Antonov (V) and myself (T):
+
+V: 1) "mechanistic" conversion between upper and lower case
+V:    is impossible (as well as case-insensitive comparisons)
+V: 
+V:    Example:     Latin  T -> t
+V: 		Cyrillic T -> m
+V: 		Greek T -> ?
+V: 
+V:    This property alone renders Unicode useless for any business
+V:    applications.
+
+T: This is simply untrue.  Because a subtractive/additive conversion is
+T: impossible in *some* cases does not mean a *mechanistic* conversion is
+T: also impossible.  In particular, a tabular conversion is an obvious
+T: approach which has already been used with success, with a minimal
+T: (multiply plus dereference) overhead.
+
+V: You omitted one small "detail" -- you need to know the language of the word
+V: the letter belongs to to make a conversion. Since Unicode does not
+V: provide for specifying the language it is obvious that is should be
+V: obtained from user or kept somewhere off the text. In both cases
+V: as our program ALREADY knows the language from the environment it knows
+V: the particular (small) alphabet -- no need to use multibyte encodings!
+V: See how Unicode renders itself useless?
+
+Correct.  You need to know the language, because the information you are
+storing is which glyph to display rather than the language and the glyph.
+
+There are several problems with a unique ordinal value per glyph, where
+a particular glyph is not unique within the set of glyphs.  In particular,
+programs which process text as data (like C compilers require the ability
+to distinguish characters.  If one looks at the JIS standard, one sees that
+in include an English alphabet.  Without unification between this and the
+ISO-Latin-1 font, for instance, a great deal of additional code is required
+to allow the compiler to recognize characters (basically, do it's own
+unificiation.  You can't tell if the characters in the string "printf" were
+input in a JIS or the Latin-1 font just by looking at them, but the
+compiler can certainly tell that they are unique.
+
+In order to provide "natural" operations on words (such as hyphenation,
+case conversion, and, in particular, abbreviation (All of which are
+potentially desirable in our hypothetical program which also alphabetizes),
+you also require information about the language.  Hyphenation and
+abbreviation, in particular, require a detailed knowledge of the idea of
+sequences of glyphs (ie: words).  This information will not be available
+regardless of your glyph encoding standard.
+
+Other word processing operations (such as dictionary and thesaurus use
+within the program) require knowledge of which language to use.
+
+The idea of sort order should be (and is in Unicode) divorced from the
+idea of information storage.  The fact that one will have text files,
+data files, and text files which act as data files on the same machine
+*requires* some type of promiscuous [out of data band] method of
+determining the format of the data within a file.  This method, whether
+it be language tagging of the files in the inode, or language tagging
+of the user during the login process is imperitive.  To do otherwise
+means that your localization data coexists with system data rather
+than system data being localized as well.
+
+The operations you wish to perform are the province of applications running
+on the system, not the system itself.  Regardless of whether this is done
+by an application programmer (as a per application localization) or by the
+creator of a library used by applications (as part of developement system
+localization), THE CODE BELONGS IN USER SPACE.
+
+
+V: I wonder why programmers aren't taught mathematical logic. I'm somehow
+V: an exception because i'm a mathematican by education and i use to look
+V: for holes in "logical" statements.
+
+Most American programmers are, if they attempt to get a degree at an
+institute of higher learning in the US.  Most are also forcibly taught
+how to bowl or shoot a bow and arrow as part of their graduation
+requirements.
+
+A point of contention: a logician is, by disipline, a philosopher, not a
+mathematician.  Being the latter does not qualify one as the former.
+
+The point of having to know what language a particular document is written
+in in order to manipulate it was *not* omitted; it was taken as an *axiom*.
+
+T: The Cyrillic characters within the Unicode standard (U+0400 -> U+04FF)
+T: are based on the ECMA registry under ISO-2375 for use with ISO-2022.  It
+T: contains several Cyrillic subsets.  The most recent and most widely
+T: accepted of these is ISO-8859-5.  Unicode uses the same relative
+T: positions as in ISO-8859-5.  Are you also adverse to ISO-8859-5?
+
+V: ISO-8859-5 is ok, though it is a dead code. Nobody uses it in Russia,
+V: mind you. The most wide-spread codes are KOI-8 (de-facto Unix and
+V: networking standard) and the so-called "alternative" code which is
+V: popular between MS-DOS users.
+
+With all due respect, the ISO-8859-5 is an international standard to
+which engineering outside of Russia is done for use in Russia.  Barring
+another published standard for external use, this is probably what
+Russian users are going to be stuck with for code originating outside
+of Russia.  I suggest that if this concerns you, you should have the
+"defacto standard" codified for use by external agencies.
+
+One wonders at the ECMA registration of a supposed "non-standard" by Russian
+nationals if the standard is not used in Russia.
+
+T: Of these, some argument can be made against only the final paragraph,
+T: since it vies internationalization as a tool for multinationalization
+T: rather than localization.  I feel that a strong argument can be held
+T: out for internationalization as a means of providing fully data driven
+T: localizations of software.  As such, the argument of monolingual vs.
+T: multilingual is not supported.  However, lexical sort order can be
+T: enforced in the access rather than the storage mechanism, making this
+T: a null point.
+
+V: Nay, you missed the same point again. You need information about
+V: laguage case-conversion and sorting rules and you can obtain it from
+V: the encoding (making user programs simple) or from user programs
+V: (forcing them to ask user at every step or to keep track of the language).
+V: What would you choose for your program?
+
+The process of "asking the user" is near 0 cost regardless of whether the
+implementation is some means of file attribution per language or some
+method of user attribution (ala proc struct, password file, or environment).
+
+It becomes more complicate if you are attemting a multinational document;
+the point here is to enable localization with user supplied data seta
+rather than providing a tool for linguistic scholars or multilingual
+word processors.  It is possible to do both of these things within the
+confines of Unicode, penalizing only the authors of the applications.
+
+>Besides, as i already argued asking or keeping off-text inforamtion
+>makes the whole enterprise useless.
+
+This is perhaps true if the goal is multinationalization rather than
+internationalization or localization.  Consider a document in Japanese,
+Tamil, and Devanagari (Sanskrit).  How does one resolve the issues of
+input mechanism for these languages?  JIS encoding does not cut it.
+Basically, for a multinational document, there must be multiple instances
+if input mechanisms, or a switch between input mechanisms during the
+input process.  A switch between mechanisms is sufficient indicator of a
+switch between languages, since each input mechanism will be more or
+less language specific in any case because of the N->M keyboard mapping
+issues if nothing else.
+
+I believe that multinational documented will be the exception, not the
+rule.  I further believe that in the specific case of multinational
+documents, the use of a particular in-band storage mechanism (such as
+"Fancy Text" from the Unicode 1.0 standard) is not an unacceptable
+penalty for exceptional use.
+
+I believe the goal is *NOT* multinationalization, but internationalization.
+In this context, internationalization refers not to the ability to provide
+perfect access to all supported languages (by way of glyph preference), but
+refers instead to an enabling technology to allow better operating system
+support for localization.
+
+Multinational use is out of the question until modifications are made to
+the file system in terms of supporting multiple nation name spaces for the
+files.
+
+Localization in terms of multinationalization requires other considerations
+not directly possible, in particular, the concept of "well known file system
+objects" must be adjusted.  Consider, if you will, the fact that such a
+localization of the existing UNIX infrastructure is currently impossible
+in this framework.  I am thinking in particular renaming the /etc directory
+or the /etc/passwd file to localized non-English equivalents.  The idea
+of multinationalization falls under its own weight.  Considr a system used
+by users of several languages (ie: a multinational environment).  Providing
+each use with their own language's view of file requires a minimum of the
+number of well known file names times the number of languages (bearing in
+mind that translation may effect name length) for directory information
+alone.  Now consider that each of these users will want their names and
+passwords to be in their own language in a single password file.
+
+Multinationalization is possible, but of questionalble utility and merit
+in current computing systems.  We ned only worry about providing the
+mechanisms for concurrency of use for the translators.
+
+
+Consider now the goal of data-driven localization (a single translation
+for all system application programs and switching of language environments
+without application recompilation.
+
+Does this goal require internationalization of applications?  The answer is
+no.  The only thing it requires is internationalization of the underlying
+system to allow data-driving of localization.  Applications themselves need
+only be localized through their use of the underlying system.
+
+Rather than rewriting all applications which use text as data (cf: the C
+compiler example), unification of the glyph sets makes more sense.
+
+The only goal I am esposing here is enabling for localization.  For this
+task, Unicode is far from useless.
+
+T: I believe this is addressed adequately in the ISO standards; however,
+
+V: Your belief is wrong for it is not considered adequate by real users.
+
+Then "real users" can supply a codified alternative in short order or lump it.
+
+T: the lexical order argument is one of the sticking points against the
+T: Japanese acceptance of Unicode, and is a valid argument in that arena.
+T: The fact of the matter is that Unicode is not an information manipulation
+T: standard, but (for the purposes of it's use in internationalization) a
+T: storage and an I/O standard.  View this way, the lexical ordering argument
+T: is nonapplicable.
+
+V: It'd be sticking point about Slavic languages as well, you may be sure.
+V: Knowing ex-Soviet standard-making routine i think the official fishy-eyed
+V: representatives will silentlly vote pro to get some more time for raving
+V: in Western stores and nobody will use it since then.  The "working" standards
+V: in Russia aren't made by commitees.
+
+Then this will have to change, or the Russian users will pay the price.
+Those of us external to Russia are in no position to involve ourselves in
+this process.  Any changes will have to originate in Russia.
+
+I haven't seen you come right out and say the Cyrillic lexical order in
+the Unicode standard (characters U+0400->U+04FF) and in the ISO-8859-5 sets
+are "wrong".  Neither have I seen an alternative lexical order (with an
+accompanying rationale) put forth.
+
+V: 3) there is no reasonable way to do hyphenation.
+V:    Since there is no way to tell language from the text there
+V:    is no way to do any reasonable attempts to hyphenate.
+V:    [OX - which language this word is from]?
+V: 
+V:    Good-bye wordprocessors and formatters?
+
+T: By this, you are obviously not referring to idegrahic languages, such as
+T: Han, since hyphenation is meaningless for such languages.  Setting aside
+T: the argument that if you don't know how to hyphenate in a language, you
+T: have no business generating situations requiring hyphenation by virtue
+T: of the fact that you are basically illeterate in taht language... ;-).
+
+V: The reason may be as simple as reformatting spreadsheet containing
+V: (particularly) addresses of companies in the language i don't comprehend
+V: (though i can write it on the envelope).
+
+T: Hyphenation as a process is language dependent, and, in particular,
+T: dependent on the rendering mechanism (rendereing mechanisms are *not*
+T: the subject under discussion; storage mechanisms *are*).  Bluntly
+T: speaking, why does one need word processing software at all if this
+T: type of thing is codified?  Hyphenation, like sorting, is manipulation
+T: of the information in a native language specific way.
+
+V: Exactly. But there is a lot of "legal" ways to do hyphenation -- and
+V: there are algorithms which do reasonably well knowing nothing about
+V: the language except which letters are vowels. It's quite enough
+V: for printing address labels. If i'm formatting a book i can specify the
+V: language myself.
+
+Address information can not be hyphenated, at least in US and other Western
+mail of which I am personally aware.  This is a non-issue.  This is also
+something that is not the responsibility of the operating system or the
+storage mechanism therein... unless you are arguing that UFS knows to store
+documents without hyphenation, and that the "cat" and "more" programs will
+hyphenate for you.  If you are talking about ANY OTHER APPICATION, THE
+HYPHENATION IS THE APPLICATIONS RESPONSIBILITY.  PERIOD.  The fact that you
+will have to maintain vowel/consonent tables on a per language basis is
+an obvious outcome of the processing of multinational information.  It makes
+little difference to the application user how these tables are keyed.
+
+T: Find another standard to tell you how to write a word processor.
+
+V: Is there any? :-)
+
+No, there isn't; that was the point.  It is not the intent of the Unicode
+standard to provide a means of performing the operations normally
+associated with word processing.  That is the job of the word processor, and
+is the reason people who write word processors are paid money by an employer
+rather than starving to death.
+
+
+V: 4) "the similar gliphs" in Unicode are often SLIGHTLY different
+V:    typographical gliphs -- everybody who ever dealt with international
+V:    publishing knows that fonts are designed as a WHOLE and every
+V:    letter is designed with all others in mind -- i.e. X in Cyrillic
+V:    is NOT the same X as Latin even if the fonts are variations of
+V:    the same style. I'd wish you to see how ugly the Russian
+V:    texts prited on American desktop publishing systems with
+V:    "few characters added" are.
+V: 
+V:    In reality it means that Unicode is not a solution for
+V:    typesetting.
+
+T: No, you're right; neither is it a standard for the production of
+T: pipefittings or the design of urban transportation systems. 
+
+V: You somehow forgot that increasing number of texts get printed with
+V: typographical quality with all the stuff which follows.
+V: Ever saw a laser printer?
+
+Printing is simply another user-mode application program which can take
+advantage of the language indicators (whether on the file or in a document)
+for printing the prettiest, most lovely font of your choice.  You think
+there are not font-selection mechanisms within Postscript for doing this?
+
+Again, font *changes* only become a problem if one attempts to print a
+*multinational* document.  Since we aren't interested in multinationalization,
+it's unlikely that a Unicode font containing all Unicode glyphs will be
+used for that purpose.
+
+In all likelyhood, use will be in a localized environmentn *NOT* a
+multinational one.  Since this is the case, it follows that the sum total of
+the Unicode font implemented in the US will be the ISO Latin-1 set.
+Similarly, if you are printing a Cyrillic document, you will be using a
+Cyrillic font; the "X" character you are concerned about will be *localized*
+to the Cyrillic "X", *NOT* the Latin "X".
+
+
+V: I see no reasons why we should treat the regular expression matching
+V: as "fancy" feature.
+
+Because globbing characters are language dependant.  The easiest example
+of this is the distingtion made between "localized" UNIX SVR4 for English
+vs. Spanish.  The fact is, the character set used for Spanish replaces
+several characters in the English set with other characters particular to
+Spanish (DOS is the foremost example of this, with it's reference to code
+pages and the fact that DOS file names fall within a very narrow set of
+characters).  The globbing ("regular expression pattern match") characters
+DO change for any patterns more complicated than "*".
+
+T: Clearly, then, the applications you are describing are *not* Unicode
+T: applications, but "Fancy text" apllications which could potentially
+T: make use of Unicode for character storage.
+
+V: Don't you think the ANY text is going to be fancy because Unicode
+V: as it is does not provide adequate means for the trivial operations?
+
+Perhaps any multinational text, yes; for normal text, processing will be
+done using the localized form, not the Unicode form; therefore the issue
+will never come up, unless the application requires embedded attributes
+(like a desktop publishing package.  Since multinational processing is
+the exception rather than the rule, let the multinational users pay the
+proce in terms of "Fancy text".
+
+V: As well i can provide every text with a font file. It is not a solution
+V: at all.
+
+Quite right; but doing so would be redundant unless you were using a output
+device, such as a CRT or a printer.  It is the responsibility of the output
+device to present the data in a suitable format.  For the most part, except
+for printing, which is difficult enough currently, this will be done by
+using localized fonts containing only a part of the full Unicode set (that
+part necessary for the localization language in use for that session/user/file)
+and thus will be coherently defined within the context of it's localization.
+
+Again, multinational software is not being addressed; however, were we to
+address the issue, I suspect that it would, in all cases, be implementation
+dependant upon the multinational application.
+
+V: Thank you, i already expressed my opinion on Plan 9 UTF in comp.os.research.
+V: I also do not think it's exciting. There are much more efficient runic
+V: encodings (my toy OS uses 7bit per byte and 8th bit as a continuation
+V: indicator).
+
+I don't know how stridently I can express this: runic encoding destroys
+information (such as file size = character count) and makes file system
+processing re character substituion totally unacceptable... consider the
+case of a substitution of a character requiring 3 bytes to encode for on
+that takes 1 byte (or 4 bytes) currently.  Say further that it is the
+first character in a 2M file.  You are talking about either shifting the
+contents of the entire file, or, MUCH WORSE, going to record oriented files
+for text.  If there is defacto attribution of text vs. other files (shifting
+the data is unacceptable.  period.), there is no reason to avoid making
+that attribution as meaningful as possible.
+
+V: Pretty soon it will be a dead standard because of the logical problems
+V: in the design. Voting is inadequate replacement for logic, you know.
+V: I'd better stick to a good standard from Zambia than to the brain-dead
+V: creature of ISO even if every petty bureaucrat voted for it.
+
+I agree; however, the peope involved were slightly more knowledgable about
+the subject than your average "petty bureaucrat".  And there has not been
+a suggested alternative, only rantings of "not Unicode".
+
+V: I expressed my point of view (and proposed some kind of solution) in
+V: comp.std.internat, where the discussion should belong. I'd like you to
+V: see the problem not as an excercise in wrestling consensus from an
+V: international body but as a mathematical problem. From the logistical
+V: point of view the solution is simply incorrect and no standard commitee
+V: can vote out that small fact. The fundamental assumption Unicode is
+V: based upon (i.e. one glyph - one code) makes the whole construction
+V: illogical and it, unfortunately, cannot be mended without serious
+V: redesign of the whole thing.
+
+Wrong, wrong, wrong.
+
+1)	We are not discussiong the embodiment of a standard, but the
+	applicability of existing standards to a particular problem.
+	Basically, we could care less about anything other than the
+	existing or draft standards and their suitability to the task
+	at hand, the international enabling of 386BSD.
+
+2)	We are not interested in "arriving" at a new standard or defending
+	existing or draft standards, except as regards their suitability
+	to our goal of enabling.
+
+3)	The proposal of new soloutions (new standards) is neither useful
+	nor interesting, in light of our need being "now" and the adoption
+	of a new soloution or standard being "at some future date".
+
+4)	Barring a suggestion of a more suitable standard, I and others
+	will begin coding to the Unicode standard.
+
+5)	Since we are discussing adoption of a standard for enabling of
+	localization of 386BSD, and are neither intent on a general defense
+	of any existing standard, nor the proposal of changes to an
+	existing standard or the emobodiment of a new standard, this
+	discussion doe *NOT* belong in comp.std.internat, since the
+	subscribers of comp.unix.bsd are infinitely more qualified to
+	determine which existing or draft standard they wish to use
+	without a discussion of multinationalization (something only
+	potentially useful to a limited audience, and then only at some
+	future date when multinational processing on 386BSD becomes a
+	generally desirable feature.
+
+
+V: Try to understand the argument about the redundance of encoding with
+V: external restrictions provided i used earlier in this letter. The
+V: Unicode commitee really get caught in a logical trap and it's a pity
+V: few people realize that.
+
+I *understand* the argument; I simply *disagree* with it's applicability
+to anything other than enabling multinationalization as opposed to
+enabling localization, which is the goal.
+
+
+					Terry Lambert
+					terry@icarus.weber.edu
+					terry_lambert@novell.com
+---
+Any opinions in this posting are my own and not those of my present
+or previous employers.
+-- 
+-------------------------------------------------------------------------------
+                                        "I have an 8 user poetic license" - me
+ Get the 386bsd FAQ from agate.berkeley.edu:/pub/386BSD/386bsd-0.1/unofficial
+-------------------------------------------------------------------------------
+
+
+]
+MID: 1993Jan2.083734.22776@fcom.cc.utah.edu
+SUBJ: INTERNATIONALIZATION: IN GENERAL
+BODY: A discussion between Vadim Antonov (V) and myself (T): |  | V: 1) "mechanistic" conversion between upper and lower case | V:    is impossible (as well as case-insensitive comparisons) | V:  | V:    Example:     Latin  T -> t | V: 		Cyrillic T -> m | V: 		Greek T -> ? | V:  | V:    This property alone renders Unicode useless for any business | V:    applications. |  | T: This is simply untrue.  Because a subtractive/additive conversion is | T: impossible in *some* cases does not mean a *mechanistic* conversion is | T: also impossible.  In particular, a tabular conversion is an obvious | T: approach which has already been us
+------------------------------------------------------------
+[1993-01-08T15:06:29+00:00] ["Andrew A. Chernov, Black Mage" <ache@astral.msk.su>] [Standard curses library use eight bit for standout mode, so
+8-bit characters displays like highlighted 7-bit characters.
+
+This patch produce library which is fully compatible with all curses
+programs and add 8-bit chars to all input/display functions.
+
+*** addbytes.c.was	Sun Apr 21 00:13:50 1991
+--- addbytes.c	Fri Jan  8 15:46:02 1993
+***************
+*** 37,49 ****
+  
+  # include	"curses.ext"
+  
+  /*
+   *	This routine adds the character to the current position
+   *
+   */
+! waddbytes(win, bytes, count)
+  reg WINDOW	*win;
+! reg char	*bytes;
+  reg int		count;
+  {
+  #define	SYNCH_OUT()	{win->_cury = y; win->_curx = x;}
+--- 37,65 ----
+  
+  # include	"curses.ext"
+  
++ waddbytes(win, bytes, count)
++ reg WINDOW	*win;
++ reg char        *bytes;
++ int         count;
++ {
++ 	chtype c;
++ 	reg int i;
++ 
++ 	for (i = 0; i < count; i++) {
++ 		c = (unsigned char) *bytes++;
++ 		if (_waddbytes(win, &c, 1) == ERR)
++ 			return ERR;
++ 	}
++ 	return OK;
++ }
++ 
+  /*
+   *	This routine adds the character to the current position
+   *
+   */
+! _waddbytes(win, bytes, count)
+  reg WINDOW	*win;
+! reg chtype      *bytes;
+  reg int		count;
+  {
+  #define	SYNCH_OUT()	{win->_cury = y; win->_curx = x;}
+***************
+*** 52,69 ****
+  	reg int		newx;
+  
+  	SYNCH_IN();
+- # ifdef FULLDEBUG
+- 	fprintf(outf, "ADDBYTES('%c') at (%d, %d)\n", c, y, x);
+- # endif
+  	while (count--) {
+! 	    register int c;
+! 	    static char blanks[] = "        ";
+  
+  	    c = *bytes++;
+  	    switch (c) {
+  	      case '\t':
+  		    SYNCH_IN();
+! 		    if (waddbytes(win, blanks, 8-(x%8)) == ERR) {
+  			return ERR;
+  		    }
+  		    SYNCH_OUT();
+--- 68,82 ----
+  	reg int		newx;
+  
+  	SYNCH_IN();
+  	while (count--) {
+! 	    register chtype c;
+! 	    static chtype blanks[] = {' ',' ',' ',' ',' ',' ',' ',' '};
+  
+  	    c = *bytes++;
+  	    switch (c) {
+  	      case '\t':
+  		    SYNCH_IN();
+! 		    if (_waddbytes(win, blanks, 8-(x%8)) == ERR) {
+  			return ERR;
+  		    }
+  		    SYNCH_OUT();
+*** addch.c.was	Sun Apr 21 00:13:50 1991
+--- addch.c	Fri Jan  8 15:40:46 1993
+***************
+*** 43,49 ****
+   */
+  waddch(win, c)
+  WINDOW	*win;
+! char		c;
+  {
+!     return waddbytes(win, &c, 1);
+  }
+--- 43,49 ----
+   */
+  waddch(win, c)
+  WINDOW	*win;
+! chtype c;
+  {
+!     return _waddbytes(win, &c, 1);
+  }
+*** addstr.c.was	Sun Apr 21 00:13:50 1991
+--- addstr.c	Fri Jan  8 17:22:38 1993
+***************
+*** 43,52 ****
+   */
+  waddstr(win,str)
+  reg WINDOW	*win; 
+! reg char	*str;
+  {
+  # ifdef DEBUG
+  	fprintf(outf, "WADDSTR(\"%s\")\n", str);
+  # endif
+! 	return waddbytes(win, str, strlen(str));
+  }
+--- 43,59 ----
+   */
+  waddstr(win,str)
+  reg WINDOW	*win; 
+! char        *str;
+  {
++ 	chtype c;
++ 	reg char *s;
+  # ifdef DEBUG
+  	fprintf(outf, "WADDSTR(\"%s\")\n", str);
+  # endif
+! 	for (s = str; *s;) {
+! 		c = (unsigned char) *s++;
+! 		if (_waddbytes(win, &c, 1) == ERR)
+! 			return ERR;
+! 	}
+! 	return OK;
+  }
+*** box.c.was	Sun Apr 21 00:13:50 1991
+--- box.c	Fri Jan  8 17:00:54 1993
+***************
+*** 44,54 ****
+   */
+  box(win, vert, hor)
+  reg WINDOW	*win;
+! char		vert, hor; {
+  
+  	reg int		i;
+  	reg int		endy, endx;
+! 	reg char	*fp, *lp;
+  
+  	endx = win->_maxx;
+  	endy = win->_maxy - 1;
+--- 44,54 ----
+   */
+  box(win, vert, hor)
+  reg WINDOW	*win;
+! chtype vert, hor; {
+  
+  	reg int		i;
+  	reg int		endy, endx;
+! 	reg chtype      *fp, *lp;
+  
+  	endx = win->_maxx;
+  	endy = win->_maxy - 1;
+*** clrtobot.c.was	Sun Apr 21 00:13:51 1991
+--- clrtobot.c	Fri Jan  8 15:51:42 1993
+***************
+*** 45,51 ****
+  reg WINDOW	*win; {
+  
+  	reg int		y;
+! 	reg char	*sp, *end, *maxx;
+  	reg int		startx, minx;
+  
+  	startx = win->_curx;
+--- 45,51 ----
+  reg WINDOW	*win; {
+  
+  	reg int		y;
+! 	reg chtype      *sp, *end, *maxx;
+  	reg int		startx, minx;
+  
+  	startx = win->_curx;
+*** clrtoeol.c.was	Sun Apr 21 00:13:51 1991
+--- clrtoeol.c	Fri Jan  8 15:53:06 1993
+***************
+*** 44,52 ****
+  wclrtoeol(win)
+  reg WINDOW	*win; {
+  
+! 	reg char	*sp, *end;
+  	reg int		y, x;
+! 	reg char	*maxx;
+  	reg int		minx;
+  
+  	y = win->_cury;
+--- 44,52 ----
+  wclrtoeol(win)
+  reg WINDOW	*win; {
+  
+! 	reg chtype      *sp, *end;
+  	reg int		y, x;
+! 	reg chtype      *maxx;
+  	reg int		minx;
+  
+  	y = win->_cury;
+*** cr_put.c.was	Sun Apr 21 00:13:51 1991
+--- cr_put.c	Fri Jan  8 16:46:36 1993
+***************
+*** 180,185 ****
+--- 180,186 ----
+  {
+  	register int i, j, k;
+  	register int soutcol, soutline;
++ 	chtype ch;
+  
+  	plodcnt = plodflg = cnt;
+  	soutcol = outcol;
+***************
+*** 373,381 ****
+  			if (plodflg)	/* avoid a complex calculation */
+  				plodcnt--;
+  			else {
+! 				i = curscr->_y[outline][outcol];
+! 				if ((i&_STANDOUT) == (curscr->_flags&_STANDOUT))
+! 					_putchar(i & 0177);
+  				else
+  					goto nondes;
+  			}
+--- 374,382 ----
+  			if (plodflg)	/* avoid a complex calculation */
+  				plodcnt--;
+  			else {
+! 				ch = curscr->_y[outline][outcol];
+! 				if ((ch&_STANDOUT) == (curscr->_flags&_STANDOUT))
+! 					_putchar(ch);
+  				else
+  					goto nondes;
+  			}
+*** curses.h.was	Sun Apr 21 00:13:52 1991
+--- curses.h	Fri Jan  8 17:03:22 1993
+***************
+*** 44,49 ****
+--- 44,51 ----
+  #define	bool	char
+  #define	reg	register
+  
++ typedef unsigned short chtype;
++ 
+  #define	TRUE	(1)
+  #define	FALSE	(0)
+  #define	ERR	(0)
+***************
+*** 55,61 ****
+  #define	_FLUSH		010
+  #define	_FULLLINE	020
+  #define	_IDLINE		040
+! #define	_STANDOUT	0200
+  #define	_NOCHANGE	-1
+  
+  #define	_puts(s)	tputs(s, 0, _putchar)
+--- 57,63 ----
+  #define	_FLUSH		010
+  #define	_FULLLINE	020
+  #define	_IDLINE		040
+! #define _STANDOUT       0400
+  #define	_NOCHANGE	-1
+  
+  #define	_puts(s)	tputs(s, 0, _putchar)
+***************
+*** 92,98 ****
+  	bool		_clear;
+  	bool		_leave;
+  	bool		_scroll;
+! 	char		**_y;
+  	short		*_firstch;
+  	short		*_lastch;
+  	struct _win_st	*_nextp, *_orig;
+--- 94,100 ----
+  	bool		_clear;
+  	bool		_leave;
+  	bool		_scroll;
+! 	chtype          **_y;
+  	short		*_firstch;
+  	short		*_lastch;
+  	struct _win_st	*_nextp, *_orig;
+***************
+*** 127,133 ****
+  #define	addch(ch)	VOID(waddch(stdscr, ch))
+  #define	getch()		VOID(wgetch(stdscr))
+  #define	addbytes(da,co)	VOID(waddbytes(stdscr, da,co))
+! #define	addstr(str)	VOID(waddbytes(stdscr, str, strlen(str)))
+  #define	getstr(str)	VOID(wgetstr(stdscr, str))
+  #define	move(y, x)	VOID(wmove(stdscr, y, x))
+  #define	clear()		VOID(wclear(stdscr))
+--- 129,135 ----
+  #define	addch(ch)	VOID(waddch(stdscr, ch))
+  #define	getch()		VOID(wgetch(stdscr))
+  #define	addbytes(da,co)	VOID(waddbytes(stdscr, da,co))
+! #define addstr(str)     VOID(waddstr(stdscr, str))
+  #define	getstr(str)	VOID(wgetstr(stdscr, str))
+  #define	move(y, x)	VOID(wmove(stdscr, y, x))
+  #define	clear()		VOID(wclear(stdscr))
+***************
+*** 151,157 ****
+  #define	mvwaddbytes(win,y,x,da,co) \
+  		VOID(wmove(win,y,x)==ERR?ERR:waddbytes(win,da,co))
+  #define	mvwaddstr(win,y,x,str) \
+! 		VOID(wmove(win,y,x)==ERR?ERR:waddbytes(win,str,strlen(str)))
+  #define mvwgetstr(win,y,x,str)  VOID(wmove(win,y,x)==ERR?ERR:wgetstr(win,str))
+  #define	mvwinch(win,y,x)	VOID(wmove(win,y,x) == ERR ? ERR : winch(win))
+  #define	mvwdelch(win,y,x)	VOID(wmove(win,y,x) == ERR ? ERR : wdelch(win))
+--- 153,159 ----
+  #define	mvwaddbytes(win,y,x,da,co) \
+  		VOID(wmove(win,y,x)==ERR?ERR:waddbytes(win,da,co))
+  #define	mvwaddstr(win,y,x,str) \
+! 		VOID(wmove(win,y,x)==ERR?ERR:waddstr(win,str))
+  #define mvwgetstr(win,y,x,str)  VOID(wmove(win,y,x)==ERR?ERR:wgetstr(win,str))
+  #define	mvwinch(win,y,x)	VOID(wmove(win,y,x) == ERR ? ERR : winch(win))
+  #define	mvwdelch(win,y,x)	VOID(wmove(win,y,x) == ERR ? ERR : wdelch(win))
+***************
+*** 174,180 ****
+  #define	scrollok(win,bf) (win->_scroll = bf)
+  #define flushok(win,bf)	 (bf ? (win->_flags |= _FLUSH):(win->_flags &= ~_FLUSH))
+  #define	getyx(win,y,x)	 y = win->_cury, x = win->_curx
+! #define	winch(win)	 (win->_y[win->_cury][win->_curx] & 0177)
+  
+  #define raw()	 (_tty.sg_flags|=RAW, _pfast=_rawmode=TRUE, \
+  	ioctl(_tty_ch, TIOCSETP, &_tty))
+--- 176,182 ----
+  #define	scrollok(win,bf) (win->_scroll = bf)
+  #define flushok(win,bf)	 (bf ? (win->_flags |= _FLUSH):(win->_flags &= ~_FLUSH))
+  #define	getyx(win,y,x)	 y = win->_cury, x = win->_curx
+! #define winch(win)       (win->_y[win->_cury][win->_curx] & 0xFF)
+  
+  #define raw()	 (_tty.sg_flags|=RAW, _pfast=_rawmode=TRUE, \
+  	ioctl(_tty_ch, TIOCSETP, &_tty))
+*** delch.c.was	Sun Apr 21 00:13:52 1991
+--- delch.c	Fri Jan  8 15:56:16 1993
+***************
+*** 45,53 ****
+  wdelch(win)
+  reg WINDOW	*win; {
+  
+! 	reg char	*temp1, *temp2;
+! 	reg char	*end;
+! 	reg int		lch;
+  
+  	end = &win->_y[win->_cury][win->_maxx - 1];
+  	temp1 = &win->_y[win->_cury][win->_curx];
+--- 45,52 ----
+  wdelch(win)
+  reg WINDOW	*win; {
+  
+! 	reg chtype      *temp1, *temp2;
+! 	reg chtype      *end;
+  
+  	end = &win->_y[win->_cury][win->_maxx - 1];
+  	temp1 = &win->_y[win->_cury][win->_curx];
+*** deleteln.c.was	Sun Apr 21 00:13:52 1991
+--- deleteln.c	Fri Jan  8 16:00:59 1993
+***************
+*** 45,53 ****
+  wdeleteln(win)
+  reg WINDOW	*win;
+  {
+! 	reg char	*temp;
+  	reg int		y;
+! 	reg char	*end;
+  	reg int		x;
+  
+  # ifdef DEBUG
+--- 45,53 ----
+  wdeleteln(win)
+  reg WINDOW	*win;
+  {
+! 	reg chtype      *temp;
+  	reg int		y;
+! 	reg chtype      *end;
+  	reg int		x;
+  
+  # ifdef DEBUG
+***************
+*** 58,64 ****
+  		if (win->_orig == NULL)
+  			win->_y[y] = win->_y[y + 1];
+  		else
+! 			bcopy(win->_y[y + 1], win->_y[y], win->_maxx);
+  		touchline(win, y, 0, win->_maxx - 1);
+  	}
+  	if (win->_orig == NULL)
+--- 58,64 ----
+  		if (win->_orig == NULL)
+  			win->_y[y] = win->_y[y + 1];
+  		else
+! 			bcopy(win->_y[y + 1], win->_y[y], win->_maxx * sizeof(chtype));
+  		touchline(win, y, 0, win->_maxx - 1);
+  	}
+  	if (win->_orig == NULL)
+*** erase.c.was	Sun Apr 21 00:13:53 1991
+--- erase.c	Fri Jan  8 16:03:21 1993
+***************
+*** 45,51 ****
+  reg WINDOW	*win; {
+  
+  	reg int		y;
+! 	reg char	*sp, *end, *start, *maxx;
+  	reg int		minx;
+  
+  # ifdef DEBUG
+--- 45,51 ----
+  reg WINDOW	*win; {
+  
+  	reg int		y;
+! 	reg chtype      *sp, *end, *start, *maxx;
+  	reg int		minx;
+  
+  # ifdef DEBUG
+*** getch.c.was	Sun Apr 21 00:13:53 1991
+--- getch.c	Fri Jan  8 16:06:46 1993
+***************
+*** 45,51 ****
+  reg WINDOW	*win; {
+  
+  	reg bool	weset = FALSE;
+! 	reg char	inp;
+  
+  	if (!win->_scroll && (win->_flags&_FULLWIN)
+  	    && win->_curx == win->_maxx - 1 && win->_cury == win->_maxy - 1)
+--- 45,51 ----
+  reg WINDOW	*win; {
+  
+  	reg bool	weset = FALSE;
+! 	reg int         inp;
+  
+  	if (!win->_scroll && (win->_flags&_FULLWIN)
+  	    && win->_curx == win->_maxx - 1 && win->_cury == win->_maxy - 1)
+***************
+*** 58,70 ****
+  		weset++;
+  	}
+  	inp = getchar();
+  # ifdef DEBUG
+  	fprintf(outf,"WGETCH got '%s'\n",unctrl(inp));
+  # endif
+  	if (_echoit) {
+  		mvwaddch(curscr, win->_cury + win->_begy,
+! 			win->_curx + win->_begx, inp);
+! 		waddch(win, inp);
+  	}
+  	if (weset)
+  		nocbreak();
+--- 58,72 ----
+  		weset++;
+  	}
+  	inp = getchar();
++ 	if (inp != EOF) {
+  # ifdef DEBUG
+  		fprintf(outf,"WGETCH got '%s'\n",unctrl(inp));
+  # endif
+  		if (_echoit) {
+  			mvwaddch(curscr, win->_cury + win->_begy,
+! 				win->_curx + win->_begx, (unsigned char) inp);
+! 			waddch(win, (unsigned char) inp);
+! 		}
+  	}
+  	if (weset)
+  		nocbreak();
+*** getstr.c.was	Sun Apr 21 00:13:54 1991
+--- getstr.c	Fri Jan  8 16:09:33 1993
+***************
+*** 44,56 ****
+  wgetstr(win,str)
+  reg WINDOW	*win; 
+  reg char	*str; {
+  
+! 	while ((*str = wgetch(win)) != ERR && *str != '\n')
+! 		str++;
+! 	if (*str == ERR) {
+  		*str = '\0';
+  		return ERR;
+- 	}
+- 	*str = '\0';
+  	return OK;
+  }
+--- 44,55 ----
+  wgetstr(win,str)
+  reg WINDOW	*win; 
+  reg char	*str; {
++ 	int c;
+  
+! 	while ((c = wgetch(win)) != ERR && c != EOF && c != '\n')
+! 		*str++ = c;
+  	*str = '\0';
++ 	if (c == ERR)
+  		return ERR;
+  	return OK;
+  }
+*** insch.c.was	Sun Apr 21 00:13:54 1991
+--- insch.c	Fri Jan  8 16:11:22 1993
+***************
+*** 44,53 ****
+   */
+  winsch(win, c)
+  reg WINDOW	*win;
+! char		c; {
+  
+! 	reg char	*temp1, *temp2;
+! 	reg char	*end;
+  
+  	end = &win->_y[win->_cury][win->_curx];
+  	temp1 = &win->_y[win->_cury][win->_maxx - 1];
+--- 44,53 ----
+   */
+  winsch(win, c)
+  reg WINDOW	*win;
+! chtype          c; {
+  
+! 	reg chtype      *temp1, *temp2;
+! 	reg chtype      *end;
+  
+  	end = &win->_y[win->_cury][win->_curx];
+  	temp1 = &win->_y[win->_cury][win->_maxx - 1];
+*** insertln.c.was	Sun Apr 21 00:13:55 1991
+--- insertln.c	Fri Jan  8 16:00:59 1993
+***************
+*** 45,53 ****
+  winsertln(win)
+  reg WINDOW	*win; {
+  
+! 	reg char	*temp;
+  	reg int		y;
+! 	reg char	*end;
+  	reg int		x;
+  
+  #ifdef	DEBUG
+--- 45,53 ----
+  winsertln(win)
+  reg WINDOW	*win; {
+  
+! 	reg chtype      *temp;
+  	reg int		y;
+! 	reg chtype      *end;
+  	reg int		x;
+  
+  #ifdef	DEBUG
+***************
+*** 59,65 ****
+  		if (win->_orig == NULL)
+  			win->_y[y] = win->_y[y - 1];
+  		else
+! 			bcopy(win->_y[y - 1], win->_y[y], win->_maxx);
+  		touchline(win, y, 0, win->_maxx - 1);
+  	}
+  	if (win->_orig == NULL)
+--- 59,65 ----
+  		if (win->_orig == NULL)
+  			win->_y[y] = win->_y[y - 1];
+  		else
+! 			bcopy(win->_y[y - 1], win->_y[y], win->_maxx * sizeof(chtype));
+  		touchline(win, y, 0, win->_maxx - 1);
+  	}
+  	if (win->_orig == NULL)
+*** newwin.c.was	Sun Apr 21 00:13:56 1991
+--- newwin.c	Fri Jan  8 16:18:59 1993
+***************
+*** 55,61 ****
+  int	num_lines, num_cols, begy, begx;
+  {
+  	reg WINDOW	*win;
+! 	reg char	*sp;
+  	reg int		i, by, bx, nl, nc;
+  	reg int		j;
+  
+--- 55,61 ----
+  int	num_lines, num_cols, begy, begx;
+  {
+  	reg WINDOW	*win;
+! 	reg chtype      *sp;
+  	reg int		i, by, bx, nl, nc;
+  	reg int		j;
+  
+***************
+*** 87,93 ****
+  		win->_lastch[i] = _NOCHANGE;
+  	}
+  	for (i = 0; i < nl; i++)
+! 		if ((win->_y[i] = malloc(nc * sizeof win->_y[0])) == NULL) {
+  			for (j = 0; j < i; j++)
+  				free(win->_y[j]);
+  			free(win->_firstch);
+--- 87,93 ----
+  		win->_lastch[i] = _NOCHANGE;
+  	}
+  	for (i = 0; i < nl; i++)
+! 		if ((win->_y[i] = (chtype *) malloc(nc * sizeof(chtype))) == NULL) {
+  			for (j = 0; j < i; j++)
+  				free(win->_y[j]);
+  			free(win->_firstch);
+***************
+*** 188,194 ****
+  # ifdef DEBUG
+  	fprintf(outf, "MAKENEW: nl = %d\n", nl);
+  # endif
+! 	if ((win->_y = (char **) malloc(nl * sizeof win->_y[0])) == NULL) {
+  		free(win);
+  		return NULL;
+  	}
+--- 188,194 ----
+  # ifdef DEBUG
+  	fprintf(outf, "MAKENEW: nl = %d\n", nl);
+  # endif
+! 	if ((win->_y = (chtype **) malloc(nl * sizeof(chtype *))) == NULL) {
+  		free(win);
+  		return NULL;
+  	}
+*** overlay.c.was	Sun Apr 21 00:13:56 1991
+--- overlay.c	Fri Jan  8 16:21:04 1993
+***************
+*** 36,42 ****
+  #endif /* not lint */
+  
+  # include	"curses.ext"
+- # include	<ctype.h>
+  
+  # define	min(a,b)	(a < b ? a : b)
+  # define	max(a,b)	(a > b ? a : b)
+--- 36,41 ----
+***************
+*** 48,54 ****
+  overlay(win1, win2)
+  reg WINDOW	*win1, *win2; {
+  
+! 	reg char	*sp, *end;
+  	reg int		x, y, endy, endx, starty, startx;
+  	reg int 	y1,y2;
+  
+--- 47,53 ----
+  overlay(win1, win2)
+  reg WINDOW	*win1, *win2; {
+  
+! 	reg chtype      *sp, *end;
+  	reg int		x, y, endy, endx, starty, startx;
+  	reg int 	y1,y2;
+  
+***************
+*** 70,76 ****
+  		end = &win1->_y[y1][endx - win1->_begx];
+  		x = startx - win2->_begx;
+  		for (sp = &win1->_y[y1][startx - win1->_begx]; sp < end; sp++) {
+! 			if (!isspace(*sp))
+  				mvwaddch(win2, y2, x, *sp);
+  			x++;
+  		}
+--- 69,75 ----
+  		end = &win1->_y[y1][endx - win1->_begx];
+  		x = startx - win2->_begx;
+  		for (sp = &win1->_y[y1][startx - win1->_begx]; sp < end; sp++) {
+! 			if (*sp != ' ')
+  				mvwaddch(win2, y2, x, *sp);
+  			x++;
+  		}
+*** overwrite.c.was	Sun Apr 21 00:13:56 1991
+--- overwrite.c	Fri Jan  8 16:00:59 1993
+***************
+*** 48,54 ****
+  overwrite(win1, win2)
+  reg WINDOW	*win1, *win2; {
+  
+- 	reg char	*sp, *end;
+  	reg int		x, y, endy, endx, starty, startx;
+  
+  # ifdef DEBUG
+--- 48,53 ----
+***************
+*** 66,72 ****
+  	x = endx - startx;
+  	for (y = starty; y < endy; y++) {
+  		bcopy(&win1->_y[y - win1->_begy][startx - win1->_begx],
+! 		      &win2->_y[y - win2->_begy][startx - win2->_begx], x);
+  		touchline(win2, y, startx - win2->_begx, endx - win2->_begx);
+  	}
+  }
+--- 65,71 ----
+  	x = endx - startx;
+  	for (y = starty; y < endy; y++) {
+  		bcopy(&win1->_y[y - win1->_begy][startx - win1->_begx],
+! 		      &win2->_y[y - win2->_begy][startx - win2->_begx], x * sizeof(chtype));
+  		touchline(win2, y, startx - win2->_begx, endx - win2->_begx);
+  	}
+  }
+*** printw.c.was	Sun Apr 21 00:13:56 1991
+--- printw.c	Fri Jan  8 16:23:10 1993
+***************
+*** 111,117 ****
+  	register int c = n;
+  
+  	while (--c >= 0) {
+! 		if (waddch(win, *buf++) == ERR)
+  			return (-1);
+  	}
+  	return n;
+--- 111,117 ----
+  	register int c = n;
+  
+  	while (--c >= 0) {
+! 		if (waddch(win, (unsigned char) *buf++) == ERR)
+  			return (-1);
+  	}
+  	return n;
+*** refresh.c.was	Sun Apr 21 00:13:57 1991
+--- refresh.c	Fri Jan  8 16:36:09 1993
+***************
+*** 169,177 ****
+  reg WINDOW	*win;
+  short		wy;
+  {
+! 	reg char	*nsp, *csp, *ce;
+  	reg short	wx, lch, y;
+  	reg int		nlsp, clsp;	/* last space in lines		*/
+  
+  	wx = win->_firstch[wy] - win->_ch_off;
+  	if (wx >= win->_maxx)
+--- 169,179 ----
+  reg WINDOW	*win;
+  short		wy;
+  {
+! 	reg chtype      *nsp, *csp, *ce;
+  	reg short	wx, lch, y;
+  	reg int		nlsp, clsp;	/* last space in lines		*/
++ 	char *ce_tcap;
++ 	static chtype blank[] = {' ','\0'};
+  
+  	wx = win->_firstch[wy] - win->_ch_off;
+  	if (wx >= win->_maxx)
+***************
+*** 186,192 ****
+  	y = wy + win->_begy;
+  
+  	if (curwin)
+! 		csp = " ";
+  	else
+  		csp = &curscr->_y[wy + win->_begy][wx + win->_begx];
+  
+--- 188,194 ----
+  	y = wy + win->_begy;
+  
+  	if (curwin)
+! 		csp = blank;
+  	else
+  		csp = &curscr->_y[wy + win->_begy][wx + win->_begx];
+  
+***************
+*** 199,207 ****
+  	}
+  
+  	if (!curwin)
+! 		ce = CE;
+  	else
+! 		ce = NULL;
+  
+  	while (wx <= lch) {
+  		if (*nsp != *csp) {
+--- 201,209 ----
+  	}
+  
+  	if (!curwin)
+! 		ce_tcap = CE;
+  	else
+! 		ce_tcap = NULL;
+  
+  	while (wx <= lch) {
+  		if (*nsp != *csp) {
+***************
+*** 212,218 ****
+  			ly = y;
+  			lx = wx + win->_begx;
+  			while (*nsp != *csp && wx <= lch) {
+! 				if (ce != NULL && wx >= nlsp && *nsp == ' ') {
+  					/*
+  					 * check for clear to end-of-line
+  					 */
+--- 214,220 ----
+  			ly = y;
+  			lx = wx + win->_begx;
+  			while (*nsp != *csp && wx <= lch) {
+! 				if (ce_tcap != NULL && wx >= nlsp && *nsp == ' ') {
+  					/*
+  					 * check for clear to end-of-line
+  					 */
+***************
+*** 235,241 ****
+  							*csp++ = ' ';
+  						return OK;
+  					}
+! 					ce = NULL;
+  				}
+  				/*
+  				 * enter/exit standout mode as appropriate
+--- 237,243 ----
+  							*csp++ = ' ';
+  						return OK;
+  					}
+! 					ce_tcap = NULL;
+  				}
+  				/*
+  				 * enter/exit standout mode as appropriate
+***************
+*** 260,268 ****
+  							curscr->_flags &= ~_STANDOUT;
+  						    }
+  					    if (!curwin)
+! 						_putchar((*csp = *nsp) & 0177);
+  					    else
+! 						_putchar(*nsp & 0177);
+  					    if (win->_flags&_FULLWIN && !curwin)
+  						scroll(curscr);
+  					    ly = win->_begy+win->_cury;
+--- 262,270 ----
+  							curscr->_flags &= ~_STANDOUT;
+  						    }
+  					    if (!curwin)
+! 						_putchar((*csp = *nsp));
+  					    else
+! 						_putchar(*nsp);
+  					    if (win->_flags&_FULLWIN && !curwin)
+  						scroll(curscr);
+  					    ly = win->_begy+win->_cury;
+***************
+*** 274,285 ****
+  					    return ERR;
+  					}
+  				if (!curwin)
+! 					_putchar((*csp++ = *nsp) & 0177);
+  				else
+! 					_putchar(*nsp & 0177);
+  # ifdef FULLDEBUG
+  				fprintf(outf,
+! 					"MAKECH:putchar(%c)\n", *nsp & 0177);
+  # endif
+  				if (UC && (*nsp & _STANDOUT)) {
+  					_putchar('\b');
+--- 276,287 ----
+  					    return ERR;
+  					}
+  				if (!curwin)
+! 					_putchar((*csp++ = *nsp));
+  				else
+! 					_putchar(*nsp);
+  # ifdef FULLDEBUG
+  				fprintf(outf,
+! 					"MAKECH:putchar(%c)\n", *nsp);
+  # endif
+  				if (UC && (*nsp & _STANDOUT)) {
+  					_putchar('\b');
+-- 
+In-This-Life:  Andrew A. Chernov    |  "Hay mas dicha, mas contento
+Internet:      ache@astral.msk.su   |  "Que adorar una hermosura
+Organization:  The RELCOM Corp.,    |  "Brujuleada entre los lejos
+               Moscow, Russia       |  "De lo imposible?!"  (Calderon)
+
+
+
+]
+MID: WHrXPJh8b6@astral.msk.su
+SUBJ: [386bsd] Patch for curses library, make it clean 8-bit
+BODY: Standard curses library use eight bit for standout mode, so | 8-bit characters displays like highlighted 7-bit characters. |  | This patch produce library which is fully compatible with all curses | programs and add 8-bit chars to all input/display functions. |  | *** addbytes.c.was	Sun Apr 21 00:13:50 1991 | --- addbytes.c	Fri Jan  8 15:46:02 1993 | *************** | *** 37,49 **** |    |   # include	"curses.ext" |    |   /* |    *	This routine adds the character to the current position |    * |    */ | ! waddbytes(win, bytes, count) |   reg WINDOW	*win; | ! reg char	*bytes; |   reg int		count; |   { |   #define	SYNCH_OUT()	{win->_cury
+------------------------------------------------------------

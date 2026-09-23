@@ -1,0 +1,227 @@
+
+##############################################################################
+id=133564 | subj=Re: Could the BSD 4.4 Lite be a new beginning?
+msgid=MYCROFT.94Feb17180243@duality.gnu.ai.mit.edu | from=mycroft@duality.gnu.ai.mit.edu (Charles Hannum) | date=1994-02-17T23:02:43+00:00 | list=os.386bsd.development
+--------------------------------------
+
+Well, I guess today is a good day for advertising...
+
+I am a founding member of the NetBSD group.  We have done a lot to
+make NetBSD more stable, and to move it toward existing `standards'
+(POSIX.1 and .2, and 4.4BSD).  Several very broken parts of the kernel
+have been completely replaced, and others have been extensively
+modified; the details are too much for me to repeat, and are available
+elsewhere.  NetBSD runs on a wide range of hardware, including (some)
+Pentiums (depends on the bus; we don't do PCI yet), many models of
+Amigas and Mac IIs, the HP300 series, some models of SPARC, and PC532
+machines.  We are close to, but not quite, POSIX.1 compliant.  (Some
+other systems incorrectly claim that they already are.)  We've added
+IP multicast and the full range of System V IPC (shared memory,
+message queues, and semaphores).  NetBSD-current has several things
+that were previously missing from Net/2-derived systems, including
+shared libraries (for the i386 port, all the m68k ports, and the sparc
+port), some old utilities such as at(1), quot(8), units(1) and others,
+the AMD automounter, a full process file system done more like System
+V, a loopback file system, etc.
+
+There are a few features you will not find in NetBSD-current, however:
+
+* We do not supply our own console driver w
+
+##############################################################################
+id=163112 | subj=Re: Encryption of passwords
+msgid=1992Dec15.040516.21701@fcom.cc.utah.edu | from=terry@cs.weber.edu (A Wizard of Earth C) | date=1992-12-15T04:05:16+00:00 | list=unix.bsd
+--------------------------------------
+In article <1992Dec14.220949.26824@newshost.lanl.gov>, rgt@beta.lanl.gov (Richard Thomsen) writes:
+|> I was told that there is a patch to 386bsd to allow the passwords to be
+|> encrypted, but I have not found this in unofficial.  Where do I get the
+|> patches to do this?  Or what files in unofficial are they in?
+
+DES software is on the munitions list, and therefore not distributable from
+the US to other countries, even if it came from outside the US in the first
+place:
+
+	"DES Hotel -- DES checks in, but it doesn't check out"
+
+There are pointers in the installation notes to the sites (outside the US)
+that DES can be ftp'ed from, as well as in the source area for the fake
+"libcrypt".  There are sites in the US where it can be gotten (such as
+gatekeeper.dec.com); installation is pretty straight forward.
+
+As long as you don't let out your root password, the shadow file will keep
+your machine secure (and if you let out your root password, DES won't keep
+your machine secure).
+
+
+					Terry Lambert
+					terry@icarus.weber.edu
+					terry_lambert@novell.com
+---
+Any opinions in this posting are my own and not those of my present
+or previous employers.
+-------------------------------------------------------------------------------
+                                        "I have an 8 user poe
+
+##############################################################################
+id=162067 | subj=BSDI/USL Lawsuit -- More Bad News for Human Beings...
+msgid=BZS.93Jan14203519@world.std.com | from=bzs@world.std.com (Barry Shein) | date=1993-01-15T01:35:19+00:00 | list=unix.bsd
+--------------------------------------
+
+There has been some speculation as to whether or not USL would try to
+extend this suit to control individuals who have ever had access to
+the Unix sources.
+
+I think the following quote from their latest legal filing leaves
+little doubt that the worst fears have now been confirmed...
+
+	(4) preliminarily enjoining and restraining BSDI, its
+	officers, agents, employees, servants, and all persons
+	in active concert or participation with them, from
+	employing, authorizing or otherwise allowing any person
+	who has had access to UNIX operating system source code
+	or any works, notes, memoranda, or other records,
+	copied from, based upon, or derived from such software,
+	disclosed to such person or his employer in confidence,
+	to participate on behalf of BSDI in the development of
+	source code for a multi-user computer operating system,
+	during the pendency of this action;
+
+If anyone thinks USL winning that point would only apply to BSDI
+you're, well, deceiving yourself. They could use it against any
+software company they like who doesn't have a Unix source license, the
+claims on concepts don't even have to be limited to operating systems.
+
+Worse, consider for a moment the climate of fear this would create and
+how long before employers will shun anyone who is thought to have had
+access t
+
+##############################################################################
+[6048 Tannenbaum consent decree context]
+hich doesn't specialize in dolls:
+Lately Coleco (Connecticut Leather Company)
+has been concentrating on the Adam computer and
+Colecovision home video games.
+
+Of course, UNIX is the product of another big toy company, AT&T.
+
+.LG
+WHAT TOOK SO LONG?
+.NL
+
+You might wonder what happened forces have tugged at UNIX during the
+almost 15 years since UNIX was conceived.
+
+Until recently, UNIX was never an AT&T OS product in the sense that VMS
+was a DEC OS product.  UNIX was always, AT&T would claim, a
+telecommunications support tool, only because AT&T was a restricted
+monopoly and it was forced by legal consent decree to stay out of the
+computer business.
+
+This important idea here is that AT&T wasn't allowed to compete in the
+computer marketplace, they weren't allowed to sell a product which
+would compete with IBM or DEC or any of your companies.  This caused
+UNIX to grow up in unusual circumstances, with some benefits and some
+disadvantages.
+
+In the case of most computer products, a computer company sees that the
+marketplace yearns for a certain product or service, and then it
+struggles to create that product or service before someone else does,
+so that it might make a killing before the rest of the market produces
+clones.  This wasn't the case in the early days of UNIX, though it is
+certainly the case today.
+
+When UNIX left the caring hands of Thompson and Ritchie, it was soon
+handed off to an entity called the UNIX Support Group (USG).  The
+people who controlled the progress of USG controlled the future
+direction of UNIX through the 1970's.
+
+.LG
+HOW DID BELL USE UNIX?
+.NL
+
+Within AT&T, remember that UNIX was a tool, used by the Bell System
+projects which dealt with research and development of different parts
+of the telephone network - like switching, network planning, service
+o
+
+[2001 MS-DOJ id=215522 kw=USL hit=False]
+
+[2001 MS-DOJ id=215522 kw=BSD hit=False]
+
+[2001 MS-DOJ id=215522 kw=AT&T hit=False]
+
+[2001 MS-DOJ id=215522 kw=antitrust hit=True]
+subj=Re: MS-DOJ: Analysis of a Sell-Out msgid=9t2j5c$rr$1@joe.rice.edu from=leslie@clio.rice.edu (Jerry Leslie) date=2001-11-16T08:35:56+00:00 list=unix.bsd.openbsd.misc
+Sundial Services (info_NS1@sundialservices.com) wrote:
+: I think that this proposed "settlement" is a mockery to the years of
+: effort and tens of millions of taxpayer dollars that have been spent on
+: it.  If adopted by the court, it would be in my opinion a virtual legal
+: permission-slip for any other company in the country to "go and do
+: likewise."  Or, "after all is said and done, well, you can just go ahead
+: and do it."
+
+[ snip ]
+
+: The policy set by Microsoft, and now apparently *sanctioned* by the DOJ,
+: will create what a monopoly always becomes:  top-heavy, self-centered,
+: and .. toppled and broken.  This is not Standard Oil.  Anyone in the
+: world can compete in the software industry and can "spin code out of
+: thin air" like anyone else does.  But American companies find themselves
+: stuck under Microsoft's thumb (e.g. restrictive license "agreements"
+: imposed on hardware manufacturers) .. enriching only Microsoft, and
+: giving away competitive advantage to companies outside the U.S. borders.
+
+Hopefully the judge has seen some of the criticisms in the media, or
+someone will file some "amicus curiae" to provide her some clues...
+
+   http://www.siliconvalley.com/docs/news/tech/009960.htm
+   Justice Department tells judge that Microsoft settlement 
+   is tough on company
+
+  "WASHINGTON (AP) -- The Justice Department sought Thursday to convince
+   the judge in the Microsoft Corp. antitrust case that its landmark
+   settlement with the software giant will help cons
+
+[1996 Caldera id=149305 kw=Caldera hit=True]
+
+[1996 Caldera id=149305 kw=Microsoft hit=False]
+
+[1996 Caldera id=149305 kw=DR-DOS hit=False]
+
+[1996 Caldera id=149305 kw=USL hit=False]
+
+[1996 Caldera id=149305 kw=BSD hit=True]
+subj=Re: Historic Opportunity facing Free Unix (was Re: The Lai/Baker paper, benchmarks, and the world of free UNIX) msgid=4kntvi$hmm@agate.berkeley.edu>#1/1 from=set@ucsee.EECS.Berkeley.EDU (Sam E. Trenholme) date=1996-01-01T00:00:00+00:00 list=unix.bsd.bsdi.misc
+>You assume again that every-one wants the same thing, and that is definatly
+>the wrong approach. 
+
+I do not think that Jordan is assuming that **everyone** wants a user 
+interface that is controlled by the operating system.  
+
+I am sure a technically competent power user, such as yourself, greatly 
+appreciates the extensibility of X.  With a choice of window managers, 
+GUI libraries (will it be Motif, Open Look, or Interviews today?), and 
+so on, X lets you configure a workspace that best suits your needs.
+
+However, I have done some informal usability studies with X windows and a
+novice user (my roomate).  Even after setting up an .xsession to run Xfm,
+I found there were some usability issues.  For example, the pull-down
+menus in Xfm are 'spring loaded' menus, but the menus in the window
+manager we were using (fvwm) were not spring loaded.  Although a seasoned
+X user is used to this minor inconsisty, my roomate was confused by this. 
+
+Seasoned X users are used to the power of the flexibility of X.  Novice 
+users have a hard time with the inconsistancy of the user interface.
+
+One common misconception among Linux advocates is that your average
+computer user has the ability to administer a Unix system.  Unfortunately,
+in the real world, only a small percent of the people out there can do
+this with Unix in it's present state.  This is one of many reasons why
+Windows dominates-- it is technologically inferior to Unix in almost every
+aspect, but the tools for installing and administrating it are much easier
+for the novice user to use. 
+
+This is not to say that Unix is as hard to learn as those ignorant to Unix
+make it our to be.  At work, we are able to successfully teach people to
+use tools like 'tvtwm' and 'vi' within a couple of weeks-- and the power
+of Unix, unparalelled

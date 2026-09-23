@@ -1,0 +1,6 @@
+total 1
+[2003-04-29T16:17:14+00:00] ["Ali Moulay" <godsghost@yahoo.ca>] [unix.bsd.misc]
+MID: 09dd16d9f9cc7ed784c33222e99dbf6e.125662@mygate.mailgate.org
+SUBJ: Exceed (xterm) session is dying
+BODY: Hi, |  | We are using Exceed to open sessions (xterm) on our Unix machines. | The user(s) default shell is tcsh. The same profile is used to log on | all Unix boxes. | For a particular Unix box I want to run bash instead of tcsh (I don't | want to change /etc/passwrd because bash is only installed on one | particular station). |  | In .tcshrc there is a line that will execute bash if we are on machine | X. |  | if (`hostname` == "xxxxx") then |     /usr/local/bin/bash | endif |  | I have noticed that if I simply do that my xterm dies after around 5 | seconds (see case 2). | If I change the line by adding exec (exec /usr/local/bin/bash) | everything is OK (see case 3), same goes if the line (# | /usr/local/bin/bash) is not executed
+------------------------------------------------------------

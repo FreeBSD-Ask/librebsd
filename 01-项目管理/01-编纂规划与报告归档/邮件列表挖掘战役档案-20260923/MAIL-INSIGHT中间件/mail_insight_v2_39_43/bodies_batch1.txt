@@ -1,0 +1,816 @@
+
+##############################################################################
+id=170185 | subj=AT&T sues BSDI
+msgid=1992Jul20.211811.3152@algor2.algorists.com | from=jeffrey@algor2.algorists.com (Jeffrey Kegler) | date=1992-07-20T21:18:11+00:00 | list=unix.bsd
+--------------------------------------
+According to today's _ComputerWorld_ (July 20, 1992, page 16) AT&T's
+USL has sued Berkeley Software Design, Inc. in U.S. District Court in
+NJ.  Copyright and patent infringement are apparently *not* involved,
+the grounds being specified as "trademark infringement, false
+advertizing and unfair competition."
+
+The article is very short, and I have nothing more on this.  Its
+relevance to this group is marginal if no copyright, patent or trade
+secret issue is involved, but that itself may be interesting -- like
+the curious matter in one of Sherlock's Holmes stories about what the
+dog did in the night.  (For Holmes non-fans, the dog did nothing, in
+particular did not bark, suggesting that the parties involved were
+familiar to him.)  That AT&T does not sue BSDI on intellectual
+property rights in software might suggest it believes it has none that
+are worth suing over.  Then again ...
+
+-- 
+
+Jeffrey Kegler, Independent UNIX Consultant, Algorists, Inc.
+jeffrey@algor2.ALGORISTS.COM or uunet!algor
+
+##############################################################################
+id=169926 | subj=Best Reaction to AT&T Suit == Join LPF
+msgid=1992Jul24.013957.10852@algor2.algorists.com | from=jeffrey@algor2.algorists.com (Jeffrey Kegler) | date=1992-07-24T01:39:57+00:00 | list=unix.bsd
+--------------------------------------
+I should add IMHO to the above, but I like to keep subject lines
+short.  :-) You can contact the League for Programming Freedom as
+shown below.  I believe the LPF is the best instrument for reacting to
+these situations.  I am proud to be a member.  Joining the LPF now
+would 1) send a message; 2) not commit us prematurely to anything; 3)
+strengthen us against future similar threats.
+
+I have down-loaded the legal docs from uunet and the matter looks
+complex.  Some have suggested we rush out and boycott AT&T.  I would
+suggest the following considerations.
+
+1) AT&T's hints of wide ranging legal action are so far just that --
+strong hints.  Perhaps our response should be proportional.
+
+2) Issues central to AT&T v. BSDI are not so central to our concerns.
+For example, the question of whether an 800-ITS-UNIX number violates
+AT&T's trademark is one which, if the suit were limited to it, I would
+be glad to leave up to the courts.  Therefore:
+
+3) Before engaging in a boycott or any other action,
+
+##############################################################################
+id=169776 | subj=Re: AT&T vs. BSDI --> 4.3BSD-NET2 distribution requires AT&T license!!!
+msgid=1992Jul24.201744.20071@cs.sfu.ca | from=bremner@cs.sfu.ca (David Bremner) | date=1992-07-24T20:17:44+00:00 | list=unix.bsd
+--------------------------------------
+In article <7009@skye.ed.ac.uk> jeff@aiai.ed.ac.uk (Jeff Dalton) writes:
+
+>(NB -- my statements about AT&T's case are based entriely on
+>what I've read in this newsgroup.  I could easily be wrong.)
+>
+>-- jd
+
+
+I was going to suggest that people ftp the legalize  from ftp.uu.net,  
+but to forstall the requests for mailed  copies, I will append the documents
+from the directory vendor/bsdi/usl.  After all, compared to alt.binaries.*
+this is only a minor waste of bandwidth :-)
+
+Have a nice day...
+or else.
+
+David
+
+::::::::::::::
+/home/csgrads/bremner/920420.complaint
+::::::::::::::
+                                                                      
+Michael D. Loprete (MDL1695)
+CRUMMY, DEL DEO, DOLAN,
+  GRIFFINGER & VECCHIONE, P.C.
+One Riverfront Plaza
+Newark, New Jersey 07102
+(201) 596-4500
+
+George L. Graff
+James W. Kennedy
+Charles B. Ortner
+MILGRIM THOMAJAN & LEE P.C.
+New York, New York 10005-2815
+(212) 858-5300
+
+Sanford Tannebaum
+Executive Vice President and General Counsel
+UNIX System 
+
+##############################################################################
+id=163530 | subj=Update on the USL Lawsuit
+msgid=62619@mimsy.umd.edu | from=jds@cs.umd.edu (James da Silva) | date=1992-12-06T17:44:17+00:00 | list=unix.bsd
+--------------------------------------
+Well, those friendly "journalists" at Unigram have been at it again.
+Remember them?  They're the ones who this summer characterised the BSD
+community as a "drug-happy, hippy-freak Unix culture" and the net uproar
+over the lawsuit as "naive tech weenies ready to form a lynch mob".
+
+Following is a BSDI statement that responds to a recent Unigram article and
+gives an update on recent events on the legal front.  Disclaimer: I am not
+affiliated with BSDI in any way, I'm just posting this because I think it
+is important to get real information out rather than FUD rumors.
+
+The above opinions are mine, the BSDI statement is below.
+Jaime
+............................................................................
+: Stand on my shoulders, : jds@cs.umd.edu  :                  James da Silva
+: not on my toes.        : uunet!mimsy!jds : Systems Design & Analysis Group
+
+
+
+-------- Forwarded Message
+
+Date:    Fri, 4 Dec 92 22:27:09 MST
+From:    kolstad@BSDI.COM (Rob Kolstad)
+Subject: A note about the
+
+##############################################################################
+id=160221 | subj=BSDI: 1   USL: 0
+msgid=64956@mimsy.umd.edu | from=jds@cs.umd.edu (James da Silva) | date=1993-03-10T15:43:44+00:00 | list=unix.bsd
+--------------------------------------
+Congratulations to BSDI!
+
+Anyone have any word on whether Berkeley will be able to release 4.4-Lite
+now, or will their lawyers still have them wait til the whole thing is
+finally over?
+
+I'm one happy naive hippy-freak Unix tech-weenie today!  Hmm, I wonder how
+UNIGRAM-X is going to report this? :-)
+
+Jaime
+............................................................................
+: Stand on my shoulders, : jds@cs.umd.edu  :                  James da Silva
+: not on my toes.        : uunet!mimsy!jds : Systems Design & Analysis Group
+
+
+------- Forwarded Message
+
+Date: Tue, 9 Mar 93 19:15:21 MST
+From: kolstad@BSDI.COM (Rob Kolstad)
+Message-Id: <9303100215.AA01258@ace.BSDI.COM>
+To: bsdi-users@bsdi.com
+Subject: BSDI: 1   USL: 0
+
+
+Greetings from Washington, D.C. and Interop.
+
+Good news today in the legal arena; here's our press release:
+
+----------------------------------------------------------------------
+
+USL Motion Against BSDI Dismissed.
+
+Unix System Laboratories, a majority-owned subsi
+
+##############################################################################
+id=158431 | subj=USL vs. BSDI Lawsuit Settled
+msgid=2j45sm$39l@BSDI.COM | from=kolstad@BSDI.COM (Rob Kolstad) | date=1994-02-07T01:35:18+00:00 | list=unix.bsd
+--------------------------------------
+We are delighted to announce that the USL vs. BSDI lawsuit was settled on
+Friday, February 4, 1994.  The text of the joint press release reads:
+
+    UNIX System Laboratories, Inc./Novell Corporation ("Novell") and
+    Berkeley Software Design, Inc. ("BSDI") announce the settlement of
+    litigation based upon BSDI's distribution of its computer software
+    product known as BSD/386.
+
+    BSDI has agreed to substitute a port of the University of
+    California's forthcoming new release to be known as 4.4 BSD(Lite)
+    for BSD/386.  For a limited period of time, BSDI may continue to
+    distribute its BSD/386 product, although certain portions of the
+    code may be distributed in binary form.
+
+    All other terms of the settlement are confidential.
+
+All legal disagreements, suits, and countersuits have been resolved.
+
+The announcement of UCB's settlement with USL enables us to begin the
+integration of 4.4(Lite) immediately.  Additionally, engineers will be
+completing the SCO binary emul
+
+##############################################################################
+id=158432 | subj=USL vs. BSDI Lawsuit Settled
+msgid=2j45fl$2jb@BSDI.COM | from=kolstad@BSDI.COM (Rob Kolstad) | date=1994-02-07T01:51:58+00:00 | list=unix.bsd
+--------------------------------------
+We are delighted to announce that the USL vs. BSDI lawsuit was settled on
+Friday, February 4, 1994.  The text of the joint press release reads:
+
+    UNIX System Laboratories, Inc./Novell Corporation ("Novell") and
+    Berkeley Software Design, Inc. ("BSDI") announce the settlement of
+    litigation based upon BSDI's distribution of its computer software
+    product known as BSD/386.
+
+    BSDI has agreed to substitute a port of the University of
+    California's forthcoming new release to be known as 4.4 BSD(Lite)
+    for BSD/386.  For a limited period of time, BSDI may continue to
+    distribute its BSD/386 product, although certain portions of the
+    code may be distributed in binary form.
+
+    All other terms of the settlement are confidential.
+
+All legal disagreements, suits, and countersuits have been resolved.
+
+The announcement of UCB's settlement with USL enables us to begin the
+integration of 4.4(Lite) immediately.  Additionally, engineers will be
+completing the SCO binary emul
+
+##############################################################################
+id=170122 | subj=AT&T or USL, and extrapolation
+msgid=1992Jul23.064028@eklektix.com | from=rcd@raven.eklektix.com (Dick Dunn) | date=1992-07-23T06:40:28+00:00 | list=unix.bsd
+--------------------------------------
+The discussion about the BSDI lawsuit seems to be focusing on AT&T.  These
+days, it's really USL which is responsible for the development (such as it
+is) and the licensing of UNIX systems.  Now, my understanding is that USL
+isn't exactly a piece of AT&T but isn't exactly separate either.  Can any-
+one explain the real nature of this neither-fishy-nor-foul relationship? 
+It bears on things such as whether it means anything at all to protest by
+changing your long-distance service.  Could any information actually
+trickle down/across to USL?  (I doubt that it has much effect in the best
+case, but I'm wondering if it has any at all.)
+_ _ _ _ _
+
+Next...There's been a lot of extrapolation from what is known about the
+lawsuit to what it might mean.  People are off guessing how AT&T must think
+that nobody who's seen the inside of UNIX can do OS work without revealing
+trade secret and nobody's going to be able to work in the field any more...
+Let's hold on.  The best we can say is that, to the t
+
+##############################################################################
+id=169942 | subj=Re: AT&T sues BSDI & Our Retaliation
+msgid=1992Jul24.075238.12570@apt.bungi.com | from=brian@apt.bungi.com (Brian Litzinger) | date=1992-07-24T07:52:38+00:00 | list=unix.bsd
+--------------------------------------
+In article <9207231306.AA06854@GRANNY.CS.NYU.EDU> m-jk8594@GRANNY.CS.NYU.EDU (James Kyriannis) writes:
+>I don't believe simply disconnecting your AT&T service, destroying your AT&T
+>calling/credit cards, or boycotting System V is going to make AT&T notice
+>your disgust in their policies.
+>
+>Simply telling a 'phone rep.' that you want your long distance service
+>disconnected because AT&T sucks isn't enough -- your telephone conversation
+>with the 'rep' is not going to be recorded and played back to his/her 
+>manager.  People of higher authority have to hear your statement if you
+>want to make any sort of impact.
+
+I called my local AT&T sales droid and told them that I was upset
+over this USL (AT&T) vs BSDI lawsuit and that I would disconnect
+my long distance service with AT&T if AT&T didn't drop that suit.
+
+I expected, of course, sort of a yawn from the sales droid.  Instead
+the sales droid was very interested and wanted to write down the
+details of my complaint, and said that she was g
+
+##############################################################################
+id=169968 | subj=Re: AT&T sues BSDI & Our Retaliation
+msgid=JTW.92Jul24131420@pmws.lcs.mit.edu | from=jtw@lcs.mit.edu (John Wroclawski) | date=1992-07-24T18:14:20+00:00 | list=unix.bsd
+--------------------------------------
+
+In article <1992Jul24.075238.12570@apt.bungi.com> brian@apt.bungi.com (Brian Litzinger) writes:
+
+   I called my local AT&T sales droid and told them that I was upset
+   over this USL (AT&T) vs BSDI lawsuit...
+
+   I expected, of course, sort of a yawn from the sales droid.  Instead
+   the sales droid was very interested and wanted to write down the
+   details of my complaint, and said that she was going to forward them
+   to some big-wig somewhere.
+
+They are specifically trained to respond this way to any customer
+complaint about AT&T policies.
+
+I don't know, though, whether they are then supposed to actually pass
+the complaint on or throw it away. Perhaps someone else can fill us in.
+
+				-john
+John Wroclawski
+jtw@lcs.mit.edu
+
+
+
+
+##############################################################################
+id=159177 | subj=Re: Legalities
+msgid=1993Sep9.015247.1@spcvxb.spc.edu | from=terry@spcvxb.spc.edu (Terry Kennedy, Operations Mgr.) | date=1993-09-09T05:52:47+00:00 | list=unix.bsd
+--------------------------------------
+In article <1993Sep8.140654.12593@neb>, bbs@neb (BBS System 801-572-4969) writes:
+> Just yesterday I was talking to a systems consultant about
+> free versions of Unix and he told me that BSDI is under
+> suit from AT&T for releasing NetBSD and 386BSD, and that
+> anyone who uses these programs is also liable.  I have read
+> a couple of documents about the standoff between the two
+> companies, but the latest was dated March 1993, and it seemed
+> to show the ruling so far in BSDI's favor.  What has changed
+> since then?  (I'd really like to get a 4.3BSD compatible
+> system, if not 4.3/4.4BSD itself.)
+
+  USL felt that the release of Net-2 code to the general public (without 
+requiring a USL source license) violated USL's agreement with UC Berkeley.
+However, they didn't do anything about it until BSDI started shipping a
+complete system based on that code (with many enhancements, missing parts
+written, etc.). BSDI made a mistake in using a phone number of 800-ITS-UNIX,
+which was an infringeme
+
+##############################################################################
+id=159705 | subj=freely redistributable /sbin/init for BSD
+msgid=1vj3mc$4r3@BSDI.COM | from=donn@BSDI.COM (Donn Seeley) | date=1993-06-15T00:04:28+00:00 | list=unix.bsd
+--------------------------------------
+[Check the README file for details...  -- Donn]
+
+#! /bin/sh
+# This is a shell archive.  Remove anything before this line, then unpack
+# it by saving it into a file and typing "sh file".  To overwrite existing
+# files, type "sh file -c".  You can also feed this as standard input via
+# unshar, or by typing "sh <file", e.g..  If this archive is complete, you
+# will see the following message at the end:
+#		"End of shell archive."
+# Contents:  init/README init/Makefile init/init.c init/init.8
+# Wrapped by donn@callao.bsdi.com on Mon Jun 14 17:49:08 1993
+PATH=/bin:/usr/bin:/usr/ucb ; export PATH
+if test -f 'init/README' -a "${1}" != "-c" ; then 
+  echo shar: Will not clobber existing file \"'init/README'\"
+else
+echo shar: Extracting \"'init/README'\" \(1945 characters\)
+sed "s/^X//" >'init/README' <<'END_OF_FILE'
+XThis is the source for a version of /sbin/init that runs on 4.4
+XBSD and BSD/386 1.0 systems.  I wrote it for BSDI about two years
+Xago and BSDI donated the source to UC Berkeley C
+
+##############################################################################
+id=128983 | subj=V1.95 (BSD Networking Software, Release #2)
+msgid=9107032314.AA06592@okeeffe.Berkeley.EDU | from=bostic@OKEEFFE.BERKELEY.EDU (Keith Bostic) | date=1991-07-03T23:14:59+00:00 | list=bugs.4bsd.ucb-fixes
+--------------------------------------
+We are happy to announce the availability of the second release of the
+BSD networking software.  The distribution includes approximately 75% of
+the utilities distributed as part of 4.3BSD-Reno and the C library (along
+with manual pages and some related documentation), and much of the kernel.
+We wish to *strongly* emphasize, however, that significant portions of
+the kernel are missing and that no binary support is supplied for any
+architecture.  Please note also that this software has only been tested
+for compilation and operation on 4.3BSD-Reno.
+
+This release is intended for system developers and others who wish to
+preview or experiment with the most recent Berkeley system.  It may also
+be useful as an update to earlier BSD or BSD-derived systems, although
+substantial work will be required to integrate portions of this release
+into older systems.  This distribution is *not* intended to be used on
+production systems, nor is it intended for sites without the expertise
+to find and fix pro
+
+##############################################################################
+id=39251 | subj=(very) preliminary 386 release
+msgid=84504@uunet.UU.NET | from=bostic at uunet.UU.NET (Keith Bostic) | date=1990-04-14T20:33:00+00:00 | list=comp.unix.i386
+--------------------------------------
+As part of the 4.4BSD development effort, Bill Jolitz has just completed
+a preliminary port of the current 4.3BSD system to the Intel 386 architecture.
+The only supported configuration is:
+
+        ISA bus
+        ST 506 disk controller (e.g. WD1003 and compatibles)
+        at least 1 Mb RAM
+        at least 40 Mb disk
+        Ethernets using the National 8390 chip (e.g. NE1000, WD boards)
+
+We are interested in finding sites willing to add functionality to the system.
+At this time we are ONLY interested in sites that can not only fix their own
+problems but are interested in adding support for new peripherals.
+
+Currently, a 4.3BSD or 4.3BSD-tahoe Berkeley license is required for the
+system.
+
+For further information, please contact Keith Bostic, preferably by email,
+at (415-642-4948, uunet!bostic, or bostic at okeeffe.berkeley.edu).
+
+
+
+
+##############################################################################
+id=128978 | subj=V1.91 (4.3BSD-Reno contributors)
+msgid=9007060810.AA05021@okeeffe.Berkeley.EDU | from=bostic@OKEEFFE.BERKELEY.EDU (Keith Bostic) | date=1990-07-06T08:10:32+00:00 | list=bugs.4bsd.ucb-fixes
+--------------------------------------
+Subject: 4.3BSD-Reno contributors
+
+	Much of the software in the Berkeley Software Distribution is
+contributed by people and organizations in the user community.  We
+gratefully acknowledge these contributions; without their support this
+distribution would not be possible.
+
+	As part of the 4.3BSD-Reno distribution, we have continued to
+identify portions of the distribution which are freely redistributable
+to and by anyone, except as restricted by law.  (As a note to anyone
+interested in international redistribution, we have recently obtained
+a General License GTDA from the Commerce Department covering the BSD
+Networking Release #1.) Source code with the following copyright
+notice may be freely redistributed, under the specified conditions,
+without further license.
+ 
+    Redistribution and use in source and binary forms are permitted
+    provided that: (1) source distributions retain this entire copyright
+    notice and comment, and (2) distributions including binaries display
+    the fol
+
+##############################################################################
+id=3987 | subj=V1.81 (Shadow passwords)
+msgid=8905091915.AA18887@okeeffe.Berkeley.EDU | from=bostic at OKEEFFE.BERKELEY.EDU (Keith Bostic) | date=1989-05-09T19:15:04+00:00 | list=comp.bugs.4bsd
+--------------------------------------
+Subject: Shadow passwords
+Index: lib 4.3BSD-tahoe
+
+Description:
+	     A shadow  password implementation is now available from
+	Berkeley,  and  will  be  a  standard  part of the next 4BSD
+	distribution.  The following describes the package  in  more
+	detail.  To get copies of the package, send electronic  mail
+	to  ucb-fixes-request at ucbvax.berkeley.edu,  or  call the BSD
+	distribution office at 415-642-7780.
+	     In the current BSD  system, there  are  three  password
+	files:  /etc/passwd,  /etc/passwd.pag,  and /etc/passwd.dir.
+	The first is the password file as  described  in  passwd(5);
+	the  others  are  files  containing  an ndbm(3) style hashed
+	database version of /etc/passwd.
+	     In the new  system,  there  are  four  password  files:
+	/etc/passwd,    /etc/master.passwd,   /etc/passwd.pag,   and
+	/etc/passwd.dir.  The first is exactly as it has always been
+	with  the  exception  that  the encrypted password field has
+	been replaced with a single asterisk.  The next three 
+
+##############################################################################
+id=170787 | subj=Re: Sigh - now it'll *never* be free
+msgid=1992Jun17.001544.4017@pasteur.Berkeley.EDU | from=bostic@hermes.Berkeley.EDU (Keith Bostic) | date=1992-06-17T00:15:44+00:00 | list=unix.bsd
+--------------------------------------
+A couple of comments:
+
+In article <1992Jun15.202726.21177@colorado.edu> drew@ophelia.cs.colorado.edu (D
+rew Eckhardt) writes:
+> Technically, this is correct too.  There will be a 4.4bsd, requiring
+> at least a 32V license, as well as a 4.4bsd lite,
+> or a net3 if you will - in the same state as net2 as
+> far as detoxification.  The CSRG folk's opinion they gave
+> at the BSD BOF was that allthough the Jolitz, etc work
+> isn't there, and can't be because of political considerations,
+> anyone can get it off the net and can fill in missing pieces.
+
+4.4BSD-Lite does have some new, freely redistributable software, including
+C library modules, include files and utilities, among them dd, init and
+join.  It may have an implementation of ex/vi, but the odds are currently
+against that happening.
+
+> There are seven files missing, for which should be able to get the Jolitz
+> stuff to work.  This is not on the standard distribution because
+> Berkeley requires all contributors to sign a release, and 
+
+##############################################################################
+id=170807 | subj=Re: Sigh - now it'll *never* be free -- and ex/vi
+msgid=1992Jun18.164531.10222@pasteur.Berkeley.EDU | from=bostic@hermes.Berkeley.EDU (Keith Bostic) | date=1992-06-18T16:45:31+00:00 | list=unix.bsd
+--------------------------------------
+In article <1992Jun17.121039.19472@wes.on.ca> tomh@wes.on.ca (Tom Haapanen) writes:
+>bostic@hermes.Berkeley.EDU (Keith Bostic) writes:
+>> 4.4BSD-Lite does have some new, freely redistributable software, including
+>> C library modules, include files and utilities, among them dd, init and
+>> join.  It may have an implementation of ex/vi, but the odds are currently
+>> against that happening.
+>
+>Never having looked at the source for ex/vi (while I had BSD source access),
+>I'm not really on firm ground here, but would it be foolish to assume that
+>some (most?) of the source modules for ex/vi would by now be free of AT&T
+>copyrights?  And, if so, couldn't the free source modules be distributed
+>in the manner of NET/2, so that net.volunteers could complete a "real" free
+>vi (just like the 386BSD and Linux projects are being done)?  
+
+Yes, most of the sources for ex/vi are freely redistributable, but the
+original file buffering code is clearly derived from ed(1).  A couple
+of other things are 
+
+##############################################################################
+id=172473 | subj=Re: 386BSD 0.0 Release Notes
+msgid=1992Mar13.091433.19796@pasteur.Berkeley.EDU | from=bostic@hermes.Berkeley.EDU (Keith Bostic) | date=1992-03-13T09:14:33+00:00 | list=unix.bsd
+--------------------------------------
+In article <1992Mar12.224517.6018@franz.com> jdi@franz.com (John D. Irwin) writes:
+> Here are the release notes for the 386BSD 0.0 distribution.
+
+I would like to comment on one portion of the 386 Release Notes recently
+posted in this newsgroup, as I think that it could possibly be misunderstood.
+The sentences that caught my attention were:
+
+	Also, new subsystems created after the NET/2 tape and contributed
+	to Berkeley have not been added back in, because we did not want
+	to blur the distinctions of what is required to make NET/2
+	operational, and because CSRG will not allow us access to this
+	contributed work, although other groups have been allowed access.
+
+While it is true that some people have access to software contributed to
+Berkeley before it is officially released by the University, this access
+is in the form of an account on one of the CSRG's development machines.
+These accounts have the explicit restriction that source may not be copied
+from the machine without written or ele
+
+##############################################################################
+id=166443 | subj=Re: Catch What They're Saying About Us...
+msgid=1adfhfINNm0a@agate.berkeley.edu | from=bostic@toe.CS.Berkeley.EDU (Keith Bostic) | date=1992-10-01T00:08:15+00:00 | list=unix.bsd
+--------------------------------------
+There are statements concerning the CSRG in the recent posting by Lynne
+Jolitz that are not true.  Specific comments follow.
+
+	> The [386BSD] system was ready for users in 1989,
+	> but it's release was consistently put-off by CSRG.
+
+The contribution letter from Jolitz to the CSRG for the 386 architecture
+support is dated December 31, 1990.  Regardless of its "readiness for
+users", the CSRG had no permission to redistribute it until that time.
+The CSRG at no time made any agreement to distribute the 386 support at
+any specific time, other than "as part of the next release", which was
+done in June of 1991.  A copy of this contribution letter is available
+from me by providing me a stamped, self-addressed envelope.
+
+	> They [BSDI] have received many changes from CSRG
+	> (one and the same with BSDi), but are not distributing them.
+
+As we have publicly said before, the CSRG does not make software available
+to any vendor that is not available to all other vendors and/or
+individuals.  Period. 
+
+##############################################################################
+id=169195 | subj=Re: UNIGRAM's article on the USL-BSDI suit
+msgid=MELLON.92Aug4172834@pepper.ncd.com | from=mellon@ncd.com (Ted Lemon) | date=1992-08-05T00:28:34+00:00 | list=unix.bsd
+--------------------------------------
+
+>That does not give me a whole lot of incentive for further investment
+>in the development of products for open licensing.  The BSDI people
+>chant the litany of how they are the champions of open systems, but
+>they are the ones spoiling open systems for everyone.
+
+Good.   By all means, keep your vile "open licensing" away from my
+computers.   Have you ever read the OSF/1 source license agreement?
+How about the OSF/Motif license agreement?   Let me clue you in -
+they're even more closed than AT&T's license agreements.   This isn't
+really OSF/s fault - most of their code is licensed from foundation
+members, which means that they don't have control over the actual
+language in the license.
+
+I understand that you might feel motivated to make a buck in this
+marketplace, but the copyright laws don't allow you to make a buck by
+copyrighting ideas; only by copyrighting specific expressions of
+ideas.   Allowing AT&T and USL to use the copyright laws to enforce
+the ownership of the ideas inheren
+
+##############################################################################
+id=171197 | subj=GNU Hurd details (was Re: full proc table)
+msgid=4264@airs.com | from=andrew@airs.com (Andrew Evans) | date=1992-05-18T19:27:51+00:00 | list=unix.bsd
+--------------------------------------
+peter@taronga.com (Peter da Silva) writes:
+
+>Will someone up in Massechussetts (however you spell it) grab this annoying
+>person and coerce him into giving us some details on what GNU (running on
+>Mach) *will* do? I mean, it's getting on 10 years now that GNU has been in
+>the pipe, and we're getting antsy waiting for it. Some real details would be
+>appreciated.
+
+Massachusetts.  I'm not interested in details until it's available.
+And I certainly don't want that discussion to take place in this
+newsgroup, which up until a few weeks ago had been unbastardized by
+threads about racism and whether MACH is really UNIX or not.
+
+
+
+
+##############################################################################
+id=172137 | subj=Re: Free BSD release: future of Minix/Linux?
+msgid=1992Mar27.101105.15363@kithrup.COM | from=sef@kithrup.COM (Sean Eric Fagan) | date=1992-03-27T10:11:05+00:00 | list=unix.bsd
+--------------------------------------
+In article <4518@umriscc.iic.umr.edu> chamil@mcs213i.cs.umr.edu (Charles M. Hamilton) writes:
+>I personally plan on sticking with linux and NOT going to the
+>free release of 386BSD.  Why?  Well, my machine now only
+>has 4 megs of RAM, which seems to be fine for linux, but I
+>suspect would crowd BSD.  
+
+Why would you think that?  According to Jolitz a year or two ago, the then
+386bsd could run in 640k of RAM (although it would "take gcc five minutes to
+compile a null program").  I suspect it would be extremely happy in 4MBytes
+(BSDinc says 4MBytes RAM is minimum, unless you want to use X, in which case
+you should have 8, which makes sense).
+
+>I also currently only have 80 megs of disk space
+
+Ah.  Now *that* is probably a limitation.  I believe you'd want to dedicate
+that 80MBytes to 386bsd, if you chose to run it, even though you get the
+added advantage (supposedly; I'm not sure it works yet) of having NFS, which
+Linux doesn't have (yet!).
+
+-- 
+Sean Eric Fagan  | "One form to rule them 
+
+##############################################################################
+id=161959 | subj=Re: BSDI/USL Lawsuit -- More Bad News for Human Beings...
+msgid=1jdibnINN52u@usenet.pa.dec.com | from=ed@weir.pa.dec.com (Ed Gould) | date=1993-01-18T06:22:47+00:00 | list=unix.bsd
+--------------------------------------
+[Houghton]
+> I'd find it hard to believe that copyright bugs weren't
+> apparent in every element of the packaging and installed
+> files of 32V when the license for it was signed; if they
+> weren't then AT&T's lawyers probably have some excruciating
+> explaining to do to the shareholders.
+
+[Shein]
+>> or perhaps because they purposely did not copyright
+>> it for other strategic reasons (which perhaps now they regret)?
+
+The copyright notices were *removed* from a previous version (I no
+longer remember just which, but I expect it was 5th Edition) before it
+was released outside AT&T.  This removal was at the explicit direction
+of the lawyers, who, at the time, believed that under then-current
+copyrught law they could not claim both copyright protection *and*
+trade secret protection for the work.  At the time, they wanted to
+protect UNIX as their trade secret.
+
+Whether the 32/V release is protected by copyright is one of the
+primary issues in the case.  As I understand things, it hinges on t
+
+##############################################################################
+id=157896 | subj=UCB and USL/NOVELL settlement
+msgid=cproto.765983338@marsh | from=cproto@cs.curtin.edu.au (Computer Protocol) | date=1994-04-10T13:08:58+00:00 | list=unix.bsd
+--------------------------------------
+tgm@netcom.com (Thomas G. McWilliams) writes:
+
+>Amancio Hasty Jr (hasty@netcom.com) wrote:
+
+>: Hi,
+>: I saw a couple of postings on comp.os.386bsd.questions that USL wants
+>: distributors of 386bsd derivatives to stop distribution!
+>: Has anyone of the NetBSD team been contacted?
+>: Does anyone knows what is going on from the USL side?
+>: I find the current situation a bit odd because USL vs BSDI & UCB lawsuits
+>: are over...
+
+>Actually the outcome of the lawsuit was to encumber the Net/2
+>sources.  The primary copyright holders, Univ. of California and
+>Novell, *both* have requested the halt of distributions of Net/2
+>derivatives. The 4.4BSD/lite distribution was suggested as the
+>substitution. The statement released be the University of
+>California asked that free distributions be based solely on the
+>unencumbered 4.4/lite. Part of the reason is that UCB has relinquished
+>copyright claim to portions of the Net/2 tree. These portions
+
+Why did UCB do this ??? Bloody traitors.
+
+>now mus
+
+##############################################################################
+id=172370 | subj=Re: Jolitz: The Road Not Taken
+msgid=1992Mar20.234444.20892@pasteur.Berkeley.EDU | from=bostic@hermes.Berkeley.EDU (Keith Bostic) | date=1992-03-20T23:44:44+00:00 | list=unix.bsd
+--------------------------------------
+It has become necessary for the UC Berkeley Computer Systems Research
+Group (CSRG) to reply to William Jolitz's allegations since they have
+been made public in this newsgroup.  Some of his statements, and more
+importantly, his implications, concerning the CSRG are not true.  We
+do not intend to debate each individual allegation which he has made.
+There are, however, significant issues that must be clarified.
+
+For those unfamiliar with the 4BSD distributions, the University policy
+is as follows.  The 4BSD system is distributed for reproduction costs.
+Each recipient is granted a non-exclusive license to use, modify and
+redistribute the system as long as obligations to USL (previously AT&T)
+regarding proprietary source code are met.  As the NET/1 and NET/2
+distributions contained no source code proprietary to USL, they may be
+used, modified, and redistributed freely.
+
+Every line of code that Jolitz had contributed to the University at the
+time of the NET/2 release was part of that release
+
+##############################################################################
+id=164686 | subj=Wanted: Info on USL/BSDI suit & Net/2 history
+msgid=1992Nov6.043657.21607@sserve.cc.adfa.oz.au | from=wkt@csadfa.cs.adfa.oz.au (Warren Toomey) | date=1992-11-06T04:36:57+00:00 | list=unix.bsd
+--------------------------------------
+I've been asked to present a seminar locally on the USL/BSDI lawsuit, and I'm
+after more information about the current progress of the case, and the
+history of the Net/2 tape. If anybody can help with the following, I'd be
+very much obliged.
+
+	+ Current state of the lawsuit.
+
+	+ Any blurb/propaganda disseminated by USL/BSDI/BSD Regents.
+
+	+ Release dates of Net/1 and Net/2 (esp. if you have Usenet
+	  announcements), and what each tape contains wrt 4.3-Tahoe
+	  and 4.3-Reno.
+
+	+ Anything else that you think might be of interest.
+
+I already have
+
+	+ The last 3-4 months of comp.unix.bsd postings :-)
+
+	+ The few files describing the suit from
+	  (??) wuarchive:vendors/bsdi	(something like that).
+
+Please email anything to wkt@csadfa.cs.adfa.oz.au. I'll summarise to the
+net, and will also make my seminar available when I've written it.
+
+Many thanks in advance!!!
+
+	Warren
+
+
+
+
+
+
+##############################################################################
+id=158232 | subj=4.4BSD-Lite (Was: BSD vs. Linux)
+msgid=1994Mar15.231819.6874@alw.nih.gov | from=jwa@yog-sothoth.dcrt.nih.gov (James W. Adams) | date=1994-03-15T23:18:19+00:00 | list=unix.bsd
+--------------------------------------
+In article <2m2kem$f29@mhaau.inhouse.compuserve.com> dneedham@csi.compuserve.com (Douglas Wade Needham) writes:
+>[...]
+>Now all I am really waiting (re: drooling) for is for it to be moved over
+>to BSD4.4 now that the suit is settled. 8)  Just MHO.
+
+All this hoopla over 4.4BSD-Lite has me a bit confused.  According to
+the release announcement letter for 4.4BSD-Alpha, 4.4 Lite was to be
+essentially Net-2 with bug fixes, some enhancements and support for
+additional architectures, with no new kernel files and only a few
+additional programs.  Most of the real improvements in 4.4BSD were in
+the kernel interfaces and filesystems, code which the letter distinctly
+implied would *not* be in 4.4 Lite.
+
+Since the so-called "settlement" doesn't permit distribution of
+4.4BSD-Encumbered without the customary USL source license, it seems to
+me that most of this work will end up benefiting only those whose
+pockets are deep enough to have a USL UNIX source license.
+
+Has this situation changed, or am I 
+
+##############################################################################
+id=157191 | subj=Re: 4.4-lite?
+msgid=1994Jul23.135545.2277@cm.cf.ac.uk | from=paul@isl-gate.elsy.cf.ac.uk (Paul) | date=1994-07-23T13:55:44+00:00 | list=unix.bsd
+--------------------------------------
+In article <MYCROFT.94Jul20171702@duality.gnu.ai.mit.edu>,
+Charles M. Hannum <mycroft@duality.gnu.ai.mit.edu> wrote:
+>
+>In article <30h9jl$fg4@pdq.coe.montana.edu> nate@bsd.coe.montana.edu
+>(Nate Williams) writes:
+>
+>      As far as the implication that somehow NetBSD 1.0 is tainted,
+>      and I doubt this implication is an accident due to it's
+>      recurrance in FreeBSD postings, I would like to see proof
+>      backing up this claim.
+>
+>   If you are sued, you'll have to prove that it isn't.
+>
+>This is a very cheap scare tactic, Nate.  I am disgusted.
+
+Charles, I've posted in the 386bsd groups a very specific case of how
+NetBSD 1.0 will be tainted. This is not scaremongering on the part of 
+myself or any other FreeBSD members. The simple fact of the matter is that
+Net/2 was declared tainted in its entirety, You can't go keeping bits of it
+and then claim a totally unencumbered source tree.
+
+If I have misunderstood the ramifications of the BSD/USL settlement then I
+will agree to pos
+
+##############################################################################
+id=157201 | subj=Re: 4.4-lite?
+msgid=MYCROFT.94Jul24185950@duality.gnu.ai.mit.edu | from=mycroft@duality.gnu.ai.mit.edu (Charles M. Hannum) | date=1994-07-24T22:59:50+00:00 | list=unix.bsd
+--------------------------------------
+
+In article <30oloq$7k7@quagga.ru.ac.za> csgr@cs.ru.ac.za (Geoff
+Rehmet) writes:
+
+   The net is a valid place to ask questions.  I was asking a question
+   which is relevant to the problems relating to USL's claims about
+   certain files - [...]
+
+Nonsense.  It wasn't even a valid question, since you had no way of
+knowing, before I said so, that our agreement with USL required adding
+USL copyright notices to any files.
+
+Furthermore, you very well know that most of the NetBSD group only
+read Usenet sparingly.  (Actually, I only do when someone tells me
+there's a flame war raging and some actual facts are needed.)
+Frankly, legal matters, in general, should *not* be discussed in
+public.  Hell, CSRG wouldn't tell you the result of their settlement
+last I knew, and yet you're apparently willing to believe that code is
+free.
+
+   I don't need to go scrounging through the whole NetBSD source tree
+   to check for myself - I was assuming that I could get an honest
+   answer on the net.
+
+And you d
+
+##############################################################################
+id=170788 | subj=Re: Time for a BSD Consortium
+msgid=MELLON.92Jun16154618@pepper.ncd.com | from=mellon@ncd.com (Ted Lemon) | date=1992-06-16T22:46:18+00:00 | list=unix.bsd
+--------------------------------------
+
+>There would be ``tiers'' of membership, with the top tier being
+>large organizations (such as DEC, HP, IBM, BULL, GE, USA, etc.) 
+>representing the major providers and users of the BSD system, 
+>a middle tier for universitys, standards organizations, companies
+>like BSDI, and the like, and (I hope) a lower tier for tiny
+>organizations such as mine.
+
+Good god, no!!!   The last thing we need is to have DEC, IBM, HP, AT&T
+and [name your favourite corporate leviathan] taking 4.4BSD and fucking
+it up the way they've fucked up OSF/1, System V and 4.3BSD.   The
+whole idea of a free BSD was that it would belong to *us*, not to
+*them*, and that its feature set would be controlled by *our* desires
+rather than the desires of some giant corporation who would prefer us
+to wear nice comfy straitjackets locking us in to their "open" product
+lines.
+
+If a consortium is formed on those terms, it will just be another OSF
+or Unix International, and we've already got two of them.  Neither one
+has (in my 

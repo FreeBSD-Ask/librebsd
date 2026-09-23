@@ -1,0 +1,134 @@
+==========================================================================================
+DB: freebsd-current.duckdb  hits=0
+==========================================================================================
+==========================================================================================
+DB: freebsd-chat.duckdb  hits=0
+==========================================================================================
+==========================================================================================
+DB: freebsd-hackers.duckdb  hits=3
+==========================================================================================
+--------------------------------------------------------------------------------
+MID: <200301120909.h0C99inM068048@apollo.backplane.com>
+DATE: 2003-01-12T09:09:44+00:00  FROM: Matthew Dillon <dillon@apollo.backplane.com>
+SUBJ: Re: vmapbuf/vunmapbuf consolidation  -- need alpha/ia64 review.
+BODY:
+Ok, here is another rev of the patch.  In the actual commit the 
+    #if 0's and the code they enclosed will be removed.  I have tested
+    this on i386 under -current.  It would be nice if it could be tested
+    on a sparc station just to make sure everything is working as expected.
+
+						-Matt
+
+Index: alpha/alpha/vm_machdep.c
+===================================================================
+RCS file: /home/ncvs/src/sys/alpha/alpha/vm_machdep.c,v
+retrieving revision 1.77
+diff -u -r1.77 vm_machdep.c
+--- alpha/alpha/vm_machdep.c	10 Dec 2002 02:33:43 -0000	1.77
++++ alpha/alpha/vm_machdep.c	11 Jan 2003 20:39:48 -0000
+@@ -337,6 +337,8 @@
+ {
+ }
+ 
++#if 0
++
+ /*
+  * Map an IO request into kernel virtual address space.
+  *
+@@ -405,6 +407,8 @@
+ 
+ 	bp->b_data = bp->b_saveaddr;
+ }
++
++#endif
+ 
+ /*
+  * Reset back to firmware.
+Index: i386/i386/vm_machdep.c
+===================================================================
+RCS file: /home/ncvs/src/sys/i386/i386/vm_machdep.c,v
+retrieving revision 1.196
+diff -u -r1.196 vm_machdep.c
+--- i386/i386/vm_machdep.c	10 Dec 2002 02:33:43 -0000	1.196
++++ i386/i386/vm_machdep.c	11 Jan 2003 20:40:23 -0000
+@@ -435,6 +435,8 @@
+ 	return((int)va);
+ }
+ 
++#if 0
++
+
+--------------------------------------------------------------------------------
+MID: <20030209141323.AE86A3FE8@sitemail.everyone.net>
+DATE: 2003-02-09T14:13:23+00:00  FROM: Matthew Dillon <dillon@heavynoize.net>
+SUBJ: subscribe
+BODY:
+
+
+--------------------------------------------------------------------------------
+MID: <200310260709.h9Q79LEq034660@apollo.backplane.com>
+DATE: 2003-10-26T07:09:21+00:00  FROM: Matthew Dillon <dillon@apollo.backplane.com>
+SUBJ: Re: Synchronization philosophy (was: Re: FreeBSD mail list
+	etiquette)
+BODY:
+:...
+:Moving towards message passing helps to structure the code to avoid
+:sharing of this sort, although it's not the only way to motivate that sort
+:of change.  I'm a big fan of the change in -CURRENT to use td->td_cred as
+:a read-only thread-local credential reference and avoid synchronization on
+:the credential reference--it nicely addresses the requirements for
+:consistency in the referenced data for the read-only cases (which are the
+:vast majority of uses of a credential).
+
+    I saw td->td_cred in -current, but while figuring out what to do in
+    DragonFly I realized that there was something fundamentally wrong
+    with pulling a ucred out of a proc *OR* a thread.  What's wrong is
+    that the ucred associated with the current process, or current thread,
+    or passed process, or passed thread may not be the correct ucred for
+    a particular operation, especially in DragonFly where I/O operations
+    are going to be messages and may be aggregated into a single thread
+    for a particular target, filesystem, or protocol in the case of the
+    network.
+
+    There is also the potential of writing buggy code... if the programmer
+    has a thread based ucred handy he might use
+
+==========================================================================================
+DB: freebsd-arch.duckdb  hits=1
+==========================================================================================
+--------------------------------------------------------------------------------
+MID: <200306081902.h58J2OGW040939@apollo.backplane.com>
+DATE: 2003-06-08T19:02:24+00:00  FROM: Matthew Dillon <dillon@apollo.backplane.com>
+SUBJ: Re: Way forward with BIND 8
+BODY:
+:Well, rndc can be configured for remote control too. Since by default it's
+:configured locally though, I decided that the easiest way to deal with it
+:would just be to copy the sample file. However, based on your feedback
+:here, I just added a pkg-message that gives some information about this
+:topic.
+:
+:>     Additionally, the rndc-confgen program does not even appear to work,
+:>     at least not on my system.  If I run 'rndc-confgen -a' it just stays
+:>     stuck in a select() somewhere and does nothing.
+:
+:http://people.freebsd.org/~dougb/randomness.html  :)
+:
+:Thanks for the feedback,
+:
+:Doug
+
+    Oh great, that makes /dev/random rather un-useful if manual intervention
+    is required to get it going on 4.x.  Another thing to add to the list,
+    I guess.
+
+					-Matt
+					Matthew Dillon 
+					<dillon@backplane.com>
+
+From owner-freebsd-arch@FreeBSD.ORG  Sun Jun  8 16:38:43 2003
+Return-Path: <owner-freebsd-arch@FreeBSD.ORG>
+Delivered-To: freebsd-arch@freebsd.org
+Received: from mx1.FreeBSD.org (mx1.freebsd.org [216.136.204.125])
+	by hub.freebsd.org (Postfix) with ESMTP id 92D6437B401
+	for <arch@freebsd.org>; Sun,  8 Jun 2003 16:38:43 -0700 (PDT)
+Received: from rwcrmhc11.attbi.com

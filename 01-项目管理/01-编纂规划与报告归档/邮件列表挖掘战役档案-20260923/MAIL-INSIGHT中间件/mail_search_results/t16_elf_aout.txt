@@ -1,0 +1,4181 @@
+==========================================================================================
+DB: freebsd-hackers.duckdb  hits=80
+==========================================================================================
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-d84999b34ad26e52>
+DATE: 1998-01-04T01:23:46+00:00  FROM: Ollivier Robert <roberto () keltia ! freenix ! fr> <None>
+SUBJ: Re: FreeBSD ELF status?
+BODY:
+According to Curt Sampson:
+
+That's what I called the Mythical 3-stage Boot Program[tm] :-)
+
+Nonetheless, it is good to know NetBSD already went this way.
+-- 
+Ollivier ROBERT -=- FreeBSD: The Power to Serve! -=- roberto@keltia.freenix.fr
+Usenet Canal Historique
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-597e087523ff362b>
+DATE: 1998-01-26T01:20:39+00:00  FROM: John Polstra <jdp () polstra ! com> <None>
+SUBJ: Re: gdb which supports elf?
+BODY:
+In article <199801182249.OAA20045@rah.star-gate.com>,
+Amancio Hasty  <hasty@rah.star-gate.com> wrote:
+
+You shouldn't delete the assert.  It means something is wrong with
+the way you built the dynamic linker or with the tools you used to
+build it.  There should _not_ be any text relocations in the
+dynamic linker.
+--
+   John Polstra                                       jdp@polstra.com
+   John D. Polstra & Co., Inc.                Seattle, Washington USA
+   "Self-knowledge is always bad news."                 -- John Barth
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-1c14b6edcc578ca9>
+DATE: 1998-01-26T01:28:27+00:00  FROM: John Polstra <jdp () polstra ! com> <None>
+SUBJ: Re: elf and -current
+BODY:
+In article <Pine.BSF.3.96.980121195050.1789F-100000@zippy.dyn.ml.org>,
+Alex  <garbanzo@hooked.net> wrote:
+
+
+Not broken really, but what we need to do is change our "lorder"
+utility so that it works with either output format from nm.
+--
+   John Polstra                                       jdp@polstra.com
+   John D. Polstra & Co., Inc.                Seattle, Washington USA
+   "Self-knowledge is always bad news."                 -- John Barth
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-a239aedac86a166f>
+DATE: 1998-01-29T17:18:49+00:00  FROM: Tom <tom () sdf ! com> <None>
+SUBJ: Re: Static Linux ELF stuff not running
+BODY:
+  This message is in MIME format.  The first part should be readable text,
+  while the remaining parts are likely unreadable without MIME-aware tools.
+  Send mail to mime@docserver.cac.washington.edu for more info.
+
+--0-1556945670-886094329=:8413
+Content-Type: TEXT/PLAIN; CHARSET=iso-8859-1
+Content-Transfer-Encoding: QUOTED-PRINTABLE
+Content-ID: <Pine.BSF.3.95q.980129091639.8413D@misery.sdf.com>
+
+
+On Thu, 29 Jan 1998, Michael Bielicki wrote:
+
+
+  You need to use brandelf to tell the loader what type of binary it.  You
+need to brand them as type "Linux", so the loader can tell they are Linux
+elf, not FreeBSD elf.
+
+  BTW, Solid RDBMS is quite a bit faster than Abadas D, and has a native
+FreeBSD version.
+
+Tom
+
+--0-1556945670-886094329=:8413
+Content-Type: APPLICATION/PGP-SIGNATURE
+Content-ID: <Pine.BSF.3.95q.980129091639.8413E@misery.sdf.com>
+Content-Description: 
+
+-----BEGIN PGP SIGNATURE-----
+Version: 2.6.3ia
+Comment: Requires PGP version 2.6 or later.
+
+iQCVAwUBNNBlL8neSpf+YTVhAQG35AP+LUzBG1xAPgdq7ATxVjeWVNRQaACDvirG
+fMUUVoHMvJ+0zoAu4fiT/BDL/avxXng4f7f8stKyQ9Du8cVv4sk6F1ZFds5wwv0D
+K+Vl/OXgwxmrHP7micR21++17gzvA2KzBvYFf58MXcXZliGbKg4x9q2Gh7vKXqj7
+B+rHKo9KrmQ=
+=vW/o
+-----END PGP SIGNATUR
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-be9895d034e2159f>
+DATE: 1998-01-29T22:16:28+00:00  FROM: Amancio Hasty <hasty () rah ! star-gate ! com> <None>
+SUBJ: Re: Question about ELF support?
+BODY:
+So where is the package or elf-kit port ? 8)
+
+	Cheers,
+	Amancio
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-eba07ffcc443aba5>
+DATE: 1998-03-03T02:53:40+00:00  FROM: "Daniel O'Connor" <doconnor () gsoft ! com ! au> <None>
+SUBJ: Argh! Why the heck is this making ELF object files?!
+BODY:
+I am trying to port a game called craft.. I hacked up a make file to get it 
+working, but now its making ELF object files!?!
+
+[holly 1:00pm] /usr/ports/games/craft/work> gmake PREFIX=/usr/local/ building.o
+hcc/hcc -compiler /usr/bin/gcc -O2 -I/usr/X11/include -Dpic_cata_name=\\\"/usr/local//share/craft/pic_cata_new\\\" -Dpic_names=\\\"/usr/local//share/craft/pic\\\" -Dinfo_name=\\\"/usr/local//share/craft/infos\\\" -c building
+[holly 1:00pm] /usr/ports/games/craft/work> file building.o
+building.o: ELF 32-bit LSB relocatable, Intel 80386, version 1, not stripped
+[holly 1:00pm] /usr/ports/games/craft/work> /usr/bin/gcc -O2 -I/usr/X11/include -Dpic_cata_name=\"/usr/local/share/craft/pic_cata_new\\" -Dpic_names=\"/usr/local/share/craft/pic\" -Dinfo_name=\"/usr/local/share/craft/infos\" -c building.cc
+[holly 1:00pm] /usr/ports/games/craft/work> file building.o
+building.o: NetBSD/i386 object file not stripped
+
+Now you may think 'ahh, its that hcc thing!' but that is basically a glorified 
+preprocessor, if I do -
+hcc/hcc -compiler cat building
+
+It outputs a C++ source file.
+Anyone want to tell me what the heck is going on here?
+I am running -current (FreeBSD holly.dons.net.au 3.0-CURRENT
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-de78eb63672b3b07>
+DATE: 1998-03-12T01:15:08+00:00  FROM: Mike Smith <mike () smith ! net ! au> <None>
+SUBJ: Re: userconfig data -> linker set -> ELF segment
+BODY:
+
+Please look at the NetBSD bootstrap before leaping into this.  8)
+
+
+Good luck.  8)
+
+-- 
+\\  Sometimes you're ahead,       \\  Mike Smith
+\\  sometimes you're behind.      \\  mike@smith.net.au
+\\  The race is long, and in the  \\  msmith@freebsd.org
+\\  end it's only with yourself.  \\  msmith@cdrom.com
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-5eff12f2cbd8be28>
+DATE: 1998-04-18T19:16:00+00:00  FROM: John Polstra <jdp () polstra ! com> <None>
+SUBJ: Re: Converting ELF shared libs into a.out shared libs
+BODY:
+
+Yes, especially if it's statically linked.  Things get hairier
+when symbols, relocations, and shared library linkages have to be
+converted.
+
+John
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-50b1757efe2496ad>
+DATE: 1998-06-13T21:28:37+00:00  FROM: Vladimir Kushnir <kushn () mail ! kar ! net> <None>
+SUBJ: Re: FreeBSD ELF status?
+BODY:
+
+
+On Sat, 13 Jun 1998, Ollivier Robert wrote:
+
+A pity :-( Well, I can't have them all.
+Thanks anyway.
+
+Regards,
+Vladimir
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-bd1eefee756bcc8a>
+DATE: 1998-09-24T13:34:09+00:00  FROM: "Larry S. Lile" <lile () stdio ! com> <None>
+SUBJ: elf conversion questions
+BODY:
+
+I cvsup'd about 10:00p on the 22nd and did an aout build/install world, 
+upgraded etc and dev, then I copied GENERIC and customized and config'd
+a new kernel and got this message:
+
+../../i386/i386/genassym.c:61: warning: `KERNEL' redefined
+*Initialization*:1: warning: this is the location of the previous
+definition
+
+I assumed this would go away when I went elf, after my elf conversion
+it it still there.  Is something wrong?
+
+Second during the aout-to-elf the makefile checks "uname -r" to see if
+you are 3.0-CURRENT but it should also allow 3.0-BETA I think.
+
+Other than those the conversion seemed to go without a hitch, other than
+a bunch of aborts (-lperl problem I think) during the perl build.
+Thanks guys great job! :)
+
+Larry Lile
+lile@stdio.com
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-ab69420082ce9269>
+DATE: 1998-09-30T19:38:59+00:00  FROM: Robert Nordier <rnordier () nordier ! com> <None>
+SUBJ: Re: ELF kernel questions
+BODY:
+Larry S. Lile wrote:
+
+Depending on the options defined, it may build straight off, or may
+need a tweak (such as including <machine/asnames.h> when last I
+checked).
+
+I believe the latest version of the new i386 loader is now functional
+and can probably be expected to be loading ELF kernels any day now.
+
+In the meantime, you could use
+
+    http://www.freebsd.org/~rnordier/btxboot-0.8.1.tar.gz
+
+which will boot kernels in either format.
+
+I believe there was also some modified-for-ELF standard boot code
+posted to the lists around a month ago.
+
+-- 
+Robert Nordier
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-2475e63f64f63186>
+DATE: 1998-10-02T04:38:46+00:00  FROM: hjl () lucon ! org (H ! J !  Lu) <None>
+SUBJ: Re: ELF shared library "revision" numbers
+BODY:
+
+No. The binary compatibility is backward, not forward. It is true
+bewteen glibc 2.0 and glibc 2.1. And it is the case for Solaris 2.5.1
+and 2.6. That is one reason why we, the company I work for, have to
+compile our Solaris binaries on Solaris 2.5.1 machines.
+
+
+That is why SONAME and filename should be different. On glibc 2.0 machine,
+
+# cd /lib
+# ls -l
+-rwxr-xr-x   1 root     root      2493455 Sep  2 14:44 libc-2.0.7.so
+lrwxrwxrwx   1 root     root           13 Sep  2 18:50 libc.so.6 -> libc-2.0.7.so
+
+On glibc 2.1,
+
+# cd /lib
+# ls -l
+-rwxr-xr-x   1 root     root      3876819 Sep 11 10:01 libc-2.0.96.so
+lrwxrwxrwx   1 root     root           14 Sep 11 08:25 libc.so.6 -> libc-2.0.96.so
+
+We change the version number. But we don't change the SONAME.
+It is up to developer to make sure the right library is used
+to link binaries. That is why the glibc 2.0 binaries I distributed
+are always compiled in glibc 2.0 machines.
+
+
+-- 
+H.J. Lu (hjl@gnu.org)
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-ac258f963412ec15>
+DATE: 1998-10-05T21:31:10+00:00  FROM: Edwin de Graaf <graaf () cirdan ! iae ! nl> <None>
+SUBJ: libraries in ports and ELF (3.0)
+BODY:
+I have just compiled the TkRat port (in ports/mail/tkrat) on
+3.0-19981003-BETA. This took some doing because one of the libraries
+Tkrat depends on is installed as libc-client.so.2.1. The ELF ld does
+not recognize a library name like that, so the port would not link.
+
+I have gotten it to compile by manually moving the library to
+libc-client.so.2 and creating a symbolic link to it called
+libc-client.so. Oh, and I also changed the dependancy in the TkRat
+Makefile to read c-client.2 instead of c-client.2.1.
+
+I thought I would mention this in case others have the same problem. If
+everyone already knew this just ignore me, and I will go away ;-).
+
+Best regards,
+Edwin de Graaf
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-2aa2f9b242873291>
+DATE: 1998-10-11T20:39:52+00:00  FROM: Martin Cracauer <cracauer () cons ! org> <None>
+SUBJ: Re: Any chance of a dynamically linked jdk-1.1.6 (a.out version)
+BODY:
+In <199810101752.BAA10216@ariadne.tensor.pgs.com>, Stephen Hocking-Senior Programmer PGS Tensor Perth wrote: 
+
+The binary has been replaced a few days ago. Do you still have
+problems with the newest one?
+
+Martin
+-- 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Martin Cracauer <cracauer@cons.org> http://www.cons.org/cracauer
+BSD User Group Hamburg, Germany     http://www.bsdhh.org/
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-f7f8682023b4d40c>
+DATE: 1998-10-13T15:43:36+00:00  FROM: dag-erli () ifi ! uio ! no (Dag-Erling C !  Smørgrav ) <None>
+SUBJ: Re: [Fwd: 3.0-BETA (aout) and ports and X11R6]
+BODY:
+"James E. Housley" <housley@frenchknot.ne.mediaone.net> writes:
+
+You should just leave it alone. OBJFORMAT defaults to aout.
+
+DES
+-- 
+Dag-Erling Sm�rgrav - dag-erli@ifi.uio.no
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-4032251f198b05e4>
+DATE: 1998-10-16T20:23:13+00:00  FROM: Terry Lambert <tlambert () primenet ! com> <None>
+SUBJ: Re: ELF object file aggregation
+BODY:
+
+The way dlopen works is by way of calling routines in ld.so.
+
+The way ld.so works is by way of symbol offsets known to the code
+stubs in crt0.o.
+
+
+Probably the correct thing to do with ELF is to put ld.so in /sbin
+or /libexec, or even in a kernel module (i.e., .ko).
+
+The ELF binary format includes an intentional hole for ld.so between
+the end of the first page and the first address in memory (I believe
+this hole is technically both for ld.so AND for a shared libc).
+
+The execution class loader is supposed to default process memory
+mappings from a template memory map.  In that template, the ld.so
+is mapped into the process address space by the execution class
+loader, and *NOT* through the actions of an ld.so.
+
+
+In other words, on an ELF system, it is *expected* that the ld.so
+(and, I believe, the libc.so) will always be present in the process
+address space, with a jump table at a known offest in the mapping.
+
+
+Basically, this means that dlopen and libc functions are *always*
+available, and that fixups aren't required to be implemented in
+the crt0.0 code.
+
+
+For SVR4 systems, the mapping is actually after the page after
+the first page, to allow the first page to be mapped zero filled
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-610224cf9371c4e1>
+DATE: 1998-10-17T17:10:22+00:00  FROM: Roger Hardiman <roger () cs ! strath ! ac ! uk> <None>
+SUBJ: a.out format and MMX instructions on 3.0-release
+BODY:
+Hi,
+
+On 3.0-RELEASE, when GAS is called to assemble a.out code, is it using
+gas 2.9.1 or does it link
+back to the old a.out toolchain assembler.
+
+On my 3.0-current test machine 6 months ago, I upgraded gas with GAS
+2.9.1. from GNU's binutils
+by building a local copy of GAS for the i386-unknown-bsd-aout target.
+I could happily build a.out binaries which included inline MMX assembler
+code in my C files.
+
+Unfer 3.0-RELEASE, if I rebuild my project with gcc -aout, it Rejects
+the MMX instructions,
+indicating it is not using gas 2.9.1 in aout mode but switching back to
+old toolchain code.
+
+Any comments on this.
+I run a mix of 2.2.5 and 3.0 systems so I wanted to keep a.out for now.
+
+Bye
+Roger Hardiman
+Strathclyde Uni Telepresence Group
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-50d3bdcbb1c27bc9>
+DATE: 1998-10-17T17:15:02+00:00  FROM: Roger Hardiman <roger () cs ! strath ! ac ! uk> <None>
+SUBJ: Re: a.out and MMX instructions
+BODY:
+Ok, I solved my own problem
+
+On 3.0-RELEASE
+
+as -v       gives me GNU Assembler 2.9.1
+as -aout -v gives me GNU Assembler 1.92.3
+So aout mode does drop back to the old toolchain. That is a pitty.
+
+So in order to make a.out binaries with MMX inline code, I need to make
+a new
+copy of gas 2.9.1 in a.out format. (which is not a problem. I have done
+it before)
+
+BTW, I use the MMX instructions in my image processing work. I got a 40%
+speedup in my code.
+For once, you can believe Intels hype.
+
+
+Cheers
+Roger Hardiman
+Strathclyde Uni
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-ac47c1c873e6b49f>
+DATE: 1998-10-29T23:56:53+00:00  FROM: Drew Baxter <netmonger () genesis ! ispace ! com> <None>
+SUBJ: Re: FreeBSD 3.0 AOUT
+BODY:
+At 03:55 PM 10/29/98 -0800, Mike Smith wrote:
+
+Hmm.. what needs to be changed there?  I was thinking OBJFORMAT=... but I
+thought that was in a different file..
+
+
+---
+Drew "Droobie" Baxter
+Network Admin/Professional Computer Nerd(TM)
+OneEX: The OneNetwork Exchange 207-942-0275
+http://www.droo.orland.me.us
+My Latest Kernel: FreeBSD 3.0-CURRENT (ONEEX) #14: Mon Oct 19 22:36:58 EDT 1998
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-d28df4010d012725>
+DATE: 1998-11-07T15:54:27+00:00  FROM: vanmaren () fast ! cs ! utah ! edu (Kevin Van Maren) <None>
+SUBJ: reading crashdumps in 3.0-ELF
+BODY:
+Has anyone been able to read a crashdump in 3.0-ELF?
+I'm experiencing the same behavior as in PR gnu/8425
+(Even the same problems with a 2.2.X gdb).  Do I just
+need to find/build a 3.0-aout GDB?
+
+Thanks,
+Kevin
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-04f6c6751c404b30>
+DATE: 1998-11-07T17:59:02+00:00  FROM: John Polstra <jdp () polstra ! com> <None>
+SUBJ: Re: reading crashdumps in 3.0-ELF
+BODY:
+In article <199811071554.IAA11756@fast.cs.utah.edu>,
+Kevin Van Maren <vanmaren@fast.cs.utah.edu> wrote:
+
+Yes, it's awkward, but that's what you need to do in the current
+state of the world.
+
+    cd /usr/src/gnu/usr.bin/gdb
+    make clean cleandepend
+    env OBJFORMAT=aout make obj depend
+    env OBJFORMAT=aout make all install clean cleandepend
+
+If your -current is recent enough, the new gdb will be installed into
+/usr/libexec/aout.  You can then run it with "gdb -aout ...". Your ELF
+gdb will also still be available.
+
+John
+--
+  John Polstra                                               jdp@polstra.com
+  John D. Polstra & Co., Inc.                        Seattle, Washington USA
+  "Nobody ever went broke underestimating the taste of the American public."
+                                                            -- H. L. Mencken
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-fe098d3c27df0c0f>
+DATE: 1998-11-09T20:10:18+00:00  FROM: Kurt Olsen <kurto () bootp ! sls ! usu ! edu> <None>
+SUBJ: Re: X display 'laps' itself.
+BODY:
+It sounds like you might be trying to use too high of a refresh rate.  I
+didn't see it in your message, but if the left and right sides are switched
+and there is a gap in the middle then that is probably the case.  Of course
+unless you are running xdm or something you might not be able to tell if
+the sides are switched or not.  You also might want to try a couple
+of generic video modes (640x480x8 or 640x480x16) to make sure that it
+is using the proper "driver" for your card.
+
+Kurt Olsen
+kurto@bootp.sls.usu.edu
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-bd39bd6ebce0cb79>
+DATE: 1998-11-24T19:47:52+00:00  FROM: John Polstra <jdp () polstra ! com> <None>
+SUBJ: Re: ELF Global Constructors
+BODY:
+In article <Pine.NXT.4.05.9811190119410.973-100000@swamp>,
+Jonathan Gapen  <jagapen@whitewater.chem.wisc.edu> wrote:
+
+Check out the gcc info pages, in the section "Function Attributes".
+Here's the section of interest:
+
+    `constructor'
+    `destructor'
+	 The `constructor' attribute causes the function to be called
+	 automatically before execution enters `main ()'.  Similarly, the
+	 `destructor' attribute causes the function to be called
+	 automatically after `main ()' has completed or `exit ()' has been
+	 called.  Functions with these attributes are useful for
+	 initializing data that will be used implicitly during the
+	 execution of the program.
+
+It does go on to say this, though, so you'll have to use C:
+
+	 These attributes are not currently implemented for Objective C.
+
+Anyway, it should work for C if you add "__attribute__ ((constructor))"
+at the end of the function declaration.
+
+John
+-- 
+  John Polstra                                               jdp@polstra.com
+  John D. Polstra & Co., Inc.                        Seattle, Washington USA
+  "Nobody ever went broke underestimating the taste of the American public."
+                                                            --
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-f4bebdaf56fd8b82>
+DATE: 1998-11-30T00:14:10+00:00  FROM: "Jordan K. Hubbard" <jkh () zippy ! cdrom ! com> <None>
+SUBJ: Re: crt1.o [ELF] is broken in 3.0-release?
+BODY:
+
+Hey, that's my name! :-)
+
+- Jordan
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-39d014c1b4dc579c>
+DATE: 1998-12-09T08:03:45+00:00  FROM: Lars Köller <Lars.Koeller () post ! uni-bielefeld ! de> <None>
+SUBJ: Syslog with ELF problem
+BODY:
+--------
+
+Hi!
+
+I have a program which runs since several month on 2.2.7-RELEASE and 
+also on 3.0-RELEASE AOUT.
+
+Now I switch to an ELF system, and notice, that the syslog messages 
+
+ syslog(LOG_NOTICE, "dattape: Using tapedevice %s\n", bandgeraet);
+
+don't appear anymore!
+
+The prog is compiled statically. When I terminate the prog, compile it 
+with as an aout (cc -aout) and start it again, it works!!!!
+
+System is an fresch install on 3.0-RELEASE!
+
+Any ideas?
+
+Thanks
+
+Lars
+-- 
+E-Mail:                                 \  Lars K�ller (Unix Sysadmin)
+  Lars.Koeller@Uni-Bielefeld.DE           \  Computing Center
+  lkoeller@cc.FH-Lippe.DE                   \  University of Bielefeld
+PGP-key:                                      \  Germany
+  http://www.nic.surfnet.nl/pgp/pks-toplev.html \  Tel: +49 521 106 4964
+----------- FreeBSD, what else? ---- http://www.freebsd.org -------------
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-d4b07456baca9166>
+DATE: 1998-12-21T22:31:59+00:00  FROM: Ruslan Shevchenko <Ruslan () Shevchenko ! Kiev ! UA> <None>
+SUBJ: Re: Binary conversion ELF/COFF -> a.out
+BODY:
+Larry Lile wrote:
+
+
+look at ports/7150  in PR database.
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-a5edba5445d599cf>
+DATE: 1998-12-27T18:13:30+00:00  FROM: Ian Lance Taylor <ian () cygnus ! com> <None>
+SUBJ: Re: ld (bfd): wrong function names for ELF shared library DT_{INIT,FINI}
+BODY:
+   Date: Sun, 27 Dec 1998 11:15:21 -0500
+   From: "Kaleb S. KEITHLEY" <kaleb@ics.com>
+
+   The ELF specification says that the names of the DT_{INIT,FINI}
+   functions in shared libraries are named .init() and .fini(), not _init()
+   and _fini().
+
+No, it discusses section names, not symbol names.  The ELF spec does
+not say how the DT_INIT and DT_FINI tags should be set.  In general,
+the ELF spec describes how to execute an ELF object, not how to create
+one.  That is, it specifies kernel behaviour, not linker behaviour.
+
+The original SVR4 linker automatically used _init and _fini for
+DT_INIT and DT_FINI.  The GNU linker is compatible.  Other ELF based
+linkers, such as the Irix 6 linker, act differently.
+
+   See the print editions of the System V ABI (where ELF is defined) or 
+   http://www.sco.com/developer/gabi/ch4.sheader.html#special_sections for
+   more information.
+
+Read it again.  It's talking about section names.
+
+The symbol names _init and _fini conventionally appear in crti.o on
+SVR4 systems, and serve to indicate the start of the .init and .fini
+sections.
+
+Ian
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-0e4b8787f1eb8494>
+DATE: 1998-12-27T21:33:06+00:00  FROM: Doug Rabson <dfr () nlsystems ! com> <None>
+SUBJ: Re: [Fwd: Re: ld (bfd): wrong function names for ELF shared
+BODY:
+On Sun, 27 Dec 1998, Kaleb S. KEITHLEY wrote:
+
+
+On 3.0-RELEASE, these sections are created by the various C startup
+pieces, crt1.o, crti.o, crtbegin.o, crtend.o and crtn.o.  I have no idea
+if ld(1) was supposed to create the sections but if you use the stock gcc
+compiler in the release to link the program or shared library, then the
+various pieces are threaded together in the correct sequence.
+
+For linking 'by hand' on i386, you need something like:
+
+	crt1.o crti.o crtbegin.o myfile.o crtend.o crtn.o
+
+for programs and:
+
+	crti.o crtbeginS.o myfile crtendS.o crtn.o
+
+for shared libs.
+
+The sequence is different for alpha (remove crti.o and crtn.o).
+
+--
+Doug Rabson				Mail:  dfr@nlsystems.com
+Nonlinear Systems Ltd.			Phone: +44 181 442 9037
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-dbf64769a64fda03>
+DATE: 1998-12-28T17:57:03+00:00  FROM: John Polstra <jdp () polstra ! com> <None>
+SUBJ: Re: ld (bfd): wrong function names for ELF shared library  DT_{INIT,FINI}
+BODY:
+
+You are not supposed to write your own _init() and _fini() functions
+directly, nor do you need to (see below).  Those symbols are reserved
+to the implementation.  Look up "reserved identifiers" in the C
+standard if you want the gory details.
+
+
+Yes they do.  Look at "src/lib/csu/i386-elf/crtn.S".
+
+This whole thread is pretty frustrating.  You have been jumping to
+conclusions and throwing misinformation onto the mailing lists.
+How about slowing down and understanding the code first?  Or at
+least phrase your conjectures as questions, so as not to confuse the
+innocent bystanders.
+
+
+No, there are several ways to do it.  Read about "function attributes"
+in the gcc info pages.  Probably the easiest way to get what you want
+is like this:
+
+    void myinit(void) __attribute__ ((constructor));
+    void myfini(void) __attribute__ ((destructor));
+
+    void
+    myinit(void)
+    {
+	/* My initialization code. */
+    }
+
+    void
+    myfini(void)
+    {
+	/* My finalization code. */
+    }
+
+
+More misinformation.  The spec does _not_ say that .init and .fini
+point to executable code.  It says this:
+
+    .init	This section holds executable instructions that
+		contribute to the process initialization cod
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-f08d4a4734103ee9>
+DATE: 1998-12-30T12:20:09+00:00  FROM: Howard Goldstein <hgoldste () bbs ! mpcs ! com> <None>
+SUBJ: ELF interpreter /usr/lib/libc.so.1 not found (on 3.0-CURRENT 12/20/98)
+BODY:
+
+My own program seems to be calling for a shared library I didn't link
+it against, at runtime.  I don't recall having this happen when
+running everything through cc, but alas I don't have that option since
+one of the modules had to be ported from masm to nasm, so here I am....
+
+
+slice:~/src/develop$ ./v2show
+ELF interpreter /usr/lib/libc.so.1 not found
+Abort trap
+slice:~/src/develop$
+
+For good reason it isn't found, libc.so.3 lives at that path (so.1
+lives in compat).
+
+But why is it calling for so.1?  Here's my ld invocation.
+
+ld  -output ../bin/v2show v2show.ob2   bit7to8.ob2 [mumble]
+/usr/lib/crt1.o -lc -lm -Map ../v2show.map
+
+which completes without warning.  How do I coerce the loader to use
+libc.so.3?
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-176ccd4a2d2c14e1>
+DATE: 1999-01-02T14:34:50+00:00  FROM: Robert Withrow <witr () rwwa ! com> <None>
+SUBJ: Re: ld (bfd): wrong function names for ELF shared library
+BODY:
+
+jdp@polstra.com said:
+:- You are not supposed to write your own _init() and _fini() functions
+:- directly, nor do you need to (see below).  Those symbols are reserved
+:- to the implementation.
+
+And by "implementation" you mean the CCS?
+
+Also, dlopen(3) says:
+
+ When an object is first loaded into the address space in this way, its
+ function _init(), if any, is called by the dynamic linker. 
+
+It doesn't make any mention of this being restricted to the implementation,
+and I've always assumed I could use the init/fini functions for library
+specific load-time initting and fining (the need for which is damn
+rare, btw).
+
+jdp@polstra.com said:
+:- Look up "reserved identifiers" in the C standard if you want the gory
+:- details.
+
+The C standard doesn't have anything to say about dynamic linking.  It
+could have been that the choice of "_" as the first character in these
+names could have been a mistake WRT the C standard.  I wouldn't jump to
+the conclusion that this mechanism was intended to be restricted to the
+CCS based on the choice of the names, at least without some more
+authoratative document (concerning dynamic linking) explicitly saying
+so.
+--------------------------------------------
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-3127da0008e3db60>
+DATE: 1999-01-19T23:10:20+00:00  FROM: "Daniel C. Sobral" <dcs () newsguy ! com> <None>
+SUBJ: Re: What are the advantages of ELF kernels?
+BODY:
+Wes Peters wrote:
+
+*REAL* real programmers use Forth, so FreeBSD is covered now. :-)
+
+Besides, Ada is for munchkins. :-)
+
+--
+Daniel C. Sobral			(8-DCS)
+dcs@newsguy.com
+
+	If you sell your soul to the Devil and all you get is an MCSE from
+it, you haven't gotten market rate.
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-8a58c88b1547d21e>
+DATE: 1999-01-22T19:14:46+00:00  FROM: John Polstra <jdp () polstra ! com> <None>
+SUBJ: Re: ELF cross compiling on 2.2.X
+BODY:
+In article <199901210702.XAA12368@hokkshideh.jetcafe.org>,
+Dave Hayes  <dave@jetcafe.org> wrote:
+
+Give up, it's long gone.  It was for FreeBSD-2.1.0, anyway, and is
+now totally obsolete.  I deleted it from my FTP site not long ago.
+
+
+That's really your best bet.
+
+
+Binutils-2.9.1 has an "i386-unknown-freebsdelf" target that's
+closer.  But there are still some additional patches that need to be
+made.  You're best off just using FreeBSD-3.x.
+
+Note, you also need an ELF version of gcc.  Again, that's in
+FreeBSD-3.x.
+
+And, you need the startup files, and probably some other stuff.  All
+in FreeBSD-3.x. :-)
+
+John
+-- 
+  John Polstra                                               jdp@polstra.com
+  John D. Polstra & Co., Inc.                        Seattle, Washington USA
+  "Nobody ever went broke underestimating the taste of the American public."
+                                                            -- H. L. Mencken
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-a4bca04d03736e56>
+DATE: 1999-01-23T22:31:19+00:00  FROM: Robert Nordier <rnordier () nordier ! com> <None>
+SUBJ: Re: 3.0-Release /boot/loader for ELF kernel
+BODY:
+Matthew Hagerty wrote:
+
+
+Yes, you should.  The default 3.0R bootstrap was capable of handling
+only kernels in a.out format.  For information about updating your
+boot blocks see
+
+    http://www.freebsd.org/~rnordier/boot.txt
+
+and there's information about a transition to ELF-format kernels at
+
+    http://www.freebsd.org/~peter/elfday.html
+
+-- 
+Robert Nordier
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-abad5e7a1d185cbe>
+DATE: 1999-01-23T23:07:04+00:00  FROM: Matthew Hagerty <matthew () wolfepub ! com> <None>
+SUBJ: Thank you (was Re: 3.0-Release /boot/loader for ELF kernel)
+BODY:
+Thank you for the information, I am now securely running 3.0-Stable ELF
+with the new bootblocks. :)
+
+Thanks,
+Matthew
+
+
+At 12:31 AM 1/24/99 +0200, Robert Nordier wrote:
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-c21512ded73647d6>
+DATE: 1999-01-24T22:02:29+00:00  FROM: Peter Wemm <peter () netplex ! com ! au> <None>
+SUBJ: Re: How to strip an ELF kernel ?
+BODY:
+Andreas Klemm wrote:
+
+In theory, you can just 'strip' the kernel entirely and get rid of all 
+debugging symbols.  However, the libkvm doesn't know how to look up the 
+symbols from the kernel linker yet, so it still depends on kvm_mkdb 
+unfortunately.  This is on the todo list.
+
+I believe strip -g is what you want.
+
+
+Cheers,
+-Peter
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-d058d46e43dfa482>
+DATE: 1999-01-28T07:32:53+00:00  FROM: Ruslan Ermilov <ru () ucb ! crimea ! ua> <None>
+SUBJ: Re: ALERT: New Jordan's a.out->ELF upgrade is broken!!!
+BODY:
+On Thu, Jan 28, 1999 at 01:38:16PM +0900, Daniel C. Sobral wrote:
+
+I know 3.0-ELF world will run with 3.0-aout kernel.
+But I asked: will 3.0-ELF tools (config, make, cc, as, etc.) build
+3.0-ELF kernel on a running 2.2.8-aout kernel?
+
+-- 
+Ruslan Ermilov		Sysadmin and DBA of the
+ru@ucb.crimea.ua	United Commercial Bank
++380.652.247.647	Simferopol, Ukraine
+
+http://www.FreeBSD.org	The Power To Serve
+http://www.oracle.com	Enabling The Information Age
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-7e73cc63b08d8fd4>
+DATE: 1999-01-29T03:28:52+00:00  FROM: Terry Lambert <tlambert () primenet ! com> <None>
+SUBJ: Re: a.out/ELF differences:  C++ static constructor ordering
+BODY:
+
+
+Sounds like you are compiling ACAP.
+
+A correct program is not permitted to rely on order of construction
+of static constructors.
+
+Jeremy Allison patched our version of ACAP to ensure program
+order matched expeced construction order.
+
+
+					Terry Lambert
+					terry@lambert.org
+---
+Any opinions in this posting are my own and not those of my present
+or previous employers.
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-6ca13c258faa1a8f>
+DATE: 1999-01-29T14:19:30+00:00  FROM: Thomas David Rivers <rivers () dignus ! com> <None>
+SUBJ: Re: a.out compatibility "going away?"
+BODY:
+
+ That seems completely reasonable...
+
+ Thanks for clarifying it!
+
+	- Dave Rivers -
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-7aedc049a73ccc5b>
+DATE: 1999-01-29T17:25:48+00:00  FROM: Ruslan Ermilov <ru () ucb ! crimea ! ua> <None>
+SUBJ: Patches for 2.2-3.0 upgrade process [Was: ALERT: New Jordan's a.out->ELF upgrade is broken!!!]
+BODY:
+
+--7JfCtLOvnd9MIVvH
+Content-Type: text/plain; charset=us-ascii
+
+On Wed, Jan 27, 1999 at 10:28:05AM -0800, Jordan K. Hubbard wrote:
+
+OK, here is the first problem and a patch for it.
+Several people have already reported it.
+
+Suppose, you have an *EMPTY* /usr/local/lib.
+
+(This is the usual thing, if you have installed at least
+one port, and you have no ports with libraries in /usr/local/lib).
+
+During the second phase of upgrade process (aout-to-elf-install),
+the `move_aout_libs.sh' script won't create /usr/local/lib/aout
+for it, because this directory has no aout libraries at all, and
+then Makefile.upgrade will fail on line 155 (rev 1.9.2.6),
+that `ldconfig could not find /usr/local/lib/aout'.
+
+Patch is attached (in two variants).
+
+Best regards,
+-- 
+Ruslan Ermilov		Sysadmin and DBA of the
+ru@ucb.crimea.ua	United Commercial Bank
++380.652.247.647	Simferopol, Ukraine
+
+http://www.FreeBSD.org	The Power To Serve
+http://www.oracle.com	Enabling The Information Age
+
+--7JfCtLOvnd9MIVvH
+Content-Type: text/plain; charset=us-ascii
+Content-Disposition: attachment; filename="move_aout_libs.sh.patch"
+
+Index: move_aout_libs.sh
+===================================================================
+RCS fi
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-9abc8e046982dda4>
+DATE: 1999-01-31T16:31:25+00:00  FROM: Drew Baxter <netmonger () genesis ! ispace ! com> <None>
+SUBJ: Re: Aout-To-Elf
+BODY:
+Someone fix the makefile.upgrade? :-)
+
+Trying to migrate from aout-to-elf right now I guess.  I thought I was
+running ELF but I've been doing this from 3.0-SNAP, so maybe not.
+Something (yacc) quibbled at me earlier about not having
+/usr/libexec/ld-elf.so.1.. Also make buildworld flips out at yywrap in
+error_table.c.
+
+Anyone else seen this issue? I guess I could define YY_SKIP_YYWRAP to skip
+it altogether, but I don't think that's how I really want to go about it.
+
+
+---
+Drew "Droobie" Baxter
+Network Admin/Professional Computer Nerd(TM)
+OneEX: The OneNetwork Exchange, Bangor Maine USA
+http://www.droo.orland.me.us
+
+PGP ID: 409A1F7D
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-6ff5527757b6fece>
+DATE: 1999-02-05T07:24:20+00:00  FROM: Lutz Albers <lutz () muc ! de> <None>
+SUBJ: Re: /var/db/pkg problem after aout->elf
+BODY:
+Jon Hamilton wrote:
+
+I did that updating (updating from 2.2.* to 3.0) myself a few weeks ago.
+I just did a pgk_delete -f to force the removing of the package, leaving
+the old a.out libs in their compat directories. I wouldn't dare to
+remove them, as I have quite a lot of self-compiled software that might
+use them.
+
+ciao
+  lutz
+--
+Lutz Albers, lutz@muc.de, pgp key available from <http://www.pgp.net>
+Do not take life too seriously, you will never get out of it alive.
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-4903a1e2451ca55f>
+DATE: 1999-02-07T23:32:00+00:00  FROM: Wes Peters <wes () softweyr ! com> <None>
+SUBJ: Re: elf ld problem
+BODY:
+
+You're much more likely to get responses if you send actual email,
+instead of HTML.
+
+
+Nope.  Maybe someone else can answer, now that they can read your
+message. ;^)
+
+-- 
+       "Where am I, and what am I doing in this handbasket?"
+
+Wes Peters                                                 Softweyr LLC
+http://www.softweyr.com/~softweyr                      wes@softweyr.com
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-ad5e4a1b6a264b91>
+DATE: 1999-02-11T02:34:41+00:00  FROM: Terry Gilpin <terryg () prologic ! com> <None>
+SUBJ: elf ld problems
+BODY:
+Hi,
+   Sorry to bother you, but I am having a problem. I am trying to experimentally build a Unify application on FreeBSD-3.0 that
+requires solaris elf libraries. The following error occurs. (uld is a unify script front ent to ld).
+
+
+/usr/libexec/elf/ld: uld.29208: Not enough room for program headers (allocated 5
+, need 6)
+/usr/libexec/elf/ld: final link failed: Bad value
+
+   I have NO idea why this happens. Has anyone seen this?
+
+Jim
+
+I am not a member of this list, so please respond directly.
+
+bodkins@prologic.com
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-cdec05b6b23715d8>
+DATE: 1999-02-13T00:31:18+00:00  FROM: Terry Lambert <tlambert () primenet ! com> <None>
+SUBJ: Re: dlopen and ELF v. a.out
+BODY:
+
+
+Use ld -r to make a single object per module.
+
+See also -x and -X, if you are willing to edit symbol names.
+
+You may also look at -s, in combination with either -defsym or --wrap,
+though I'm not sure about precedence.
+
+
+You could also modify your test program:
+
+
+[ ... ]
+
+      dlclose( h);
+
+This is probably not an option for you, I'm betting, if the code is
+that promiscuous.
+
+The resoloution order is not specific; a.out's dlopen (apparently) puts
+newer symbols first, so FreeBSD's behaviour in that case is not really
+incorrect.
+
+
+One final alternative would be to correct the namespace pollution,
+and submit the changes back.
+
+
+					Terry Lambert
+					terry@lambert.org
+---
+Any opinions in this posting are my own and not those of my present
+or previous employers.
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-5279d89e4e5984cb>
+DATE: 1999-02-24T01:52:27+00:00  FROM: Terry Lambert <tlambert () primenet ! com> <None>
+SUBJ: Re: ELF default format vs. a.out default binary name
+BODY:
+
+a.out = assembler output
+
+Perhaps because you are still using an assembler from the compiler?
+
+8-).
+
+
+					Terry Lambert
+					terry@lambert.org
+---
+Any opinions in this posting are my own and not those of my present
+or previous employers.
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-85bbbdc92cb257cc>
+DATE: 1999-02-27T19:05:56+00:00  FROM: John Polstra <jdp () polstra ! com> <None>
+SUBJ: Re: ELF, System V and multiple ABIs
+BODY:
+In article <199902171844.SAA24903@stephens.ml.org>,
+Thomas Stephens  <tas@stephens.org> wrote:
+
+
+Thanks very much for pointing this out!  I wasn't aware of it.
+
+I think it would be great to adopt this, and it looks like we could do
+it without breaking backward compatibility for our current "branding"
+scheme.
+
+Today I have written to a contact at SCO to try to get an OS/ABI code
+assigned to FreeBSD.  Hopefully that will bear some fruit and we can
+move on to this scheme.
+
+Again, thanks!
+
+John
+-- 
+  John Polstra                                               jdp@polstra.com
+  John D. Polstra & Co., Inc.                        Seattle, Washington USA
+  "Nobody ever went broke underestimating the taste of the American public."
+                                                            -- H. L. Mencken
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-fa68b0cff3fcff10>
+DATE: 1999-03-02T23:31:15+00:00  FROM: Thomas Stephens <tas () stephens ! org> <None>
+SUBJ: Re: ELF, System V and multiple ABIs
+BODY:
+John Polstra wrote:
+
+Glad to be of help!
+
+
+Ah, that's good.  I had noticed there was some overlap with EI_BRAND,
+but am new to FreeBSD and hadn't really looked at `branding' in depth.
+
+
+That sounds great!  If the other BSDs, Linux, Sun, etc. can be persuaded
+to adopt the new ELF spec as well, this whole problem of competing ABIs
+might finally be resolved.
+
+Thomas Stephens
+tas@stephens.org
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-86a9252d97fd9033>
+DATE: 1999-03-06T00:29:36+00:00  FROM: Mike Smith <mike () smith ! net ! au> <None>
+SUBJ: Re: brandelf (necessary?)
+BODY:
+
+Unless the binaries are statically linked, this will always work.
+
+-- 
+\\  Sometimes you're ahead,       \\  Mike Smith
+\\  sometimes you're behind.      \\  mike@smith.net.au
+\\  The race is long, and in the  \\  msmith@freebsd.org
+\\  end it's only with yourself.  \\  msmith@cdrom.com
+
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-7f87fb25869b7281>
+DATE: 1999-03-18T04:16:54+00:00  FROM: Joe McGuckin <joe () monk ! via ! net> <None>
+SUBJ: Repeated 'lockmgr: locking against myself' panics on 3.1-RELEASE (fwd)
+BODY:
+
+
+
+3.1, Users set to 500, 512M ram. Approx 5 to 7 minutes after rebooting, 
+the system will panic. Sorry, I don't have anymore info.
+
+Turning USERS down to 400 seems to have fixed the problem.
+
+Has anyone else seen this problem?
+
+Thanks, 
+
+Joe
+
+
+
+Joe McGuckin
+
+ViaNet Communications
+1235 Pear Ave, Suite 107
+Mountain View, CA 90403
+
+Phone: 650-969-2203
+Cell:  415-710-4894
+Fax:   650-969-2124
+
+
+
+Joe McGuckin
+
+ViaNet Communications
+1235 Pear Ave, Suite 107
+Mountain View, CA 90403
+
+Phone: 650-969-2203
+Cell:  415-710-4894
+Fax:   650-969-2124
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-832906a785cd9e9f>
+DATE: 1999-03-18T05:39:02+00:00  FROM: Alfred Perlstein <bright () rush ! net> <None>
+SUBJ: Re: Repeated 'lockmgr: locking against myself' panics on 3.1-RELEASE (fwd)
+BODY:
+On Wed, 17 Mar 1999, Joe McGuckin wrote:
+
+
+Yes, everyone, it really isn't a problem though, check the mailing
+lists for more verbose advice, but for a safe bet, keep MAXUSERS 
+less than 128.
+
+-Alfred
+
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-475a65fb6566dd9a>
+DATE: 1999-03-20T14:41:34+00:00  FROM: Dag-Erling Smorgrav <des () flood ! ping ! uio ! no> <None>
+SUBJ: Re: 3.1: Link with static a.out lib?
+BODY:
+Charles Randall <crandall@matchlogic.com> writes:
+
+Yes.
+
+
+What you wrote above should be enough. Are you sure your system wasn't
+built with -DNOAOUT?
+
+DES
+-- 
+Dag-Erling Smorgrav - des@flood.ping.uio.no
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-44f540fc08bd3ad8>
+DATE: 1999-04-05T23:40:03+00:00  FROM: Mike Smith <mike () smith ! net ! au> <None>
+SUBJ: Re: "elf_loadexec: archsw.readin failed" on recent 3.1-stable
+BODY:
+
+Check that you don't have any sticky tags attached to any part of the 
+loader (sys/boot/*).  It was updated a while back to deal with a kernel 
+change.
+
+-- 
+\\  Sometimes you're ahead,       \\  Mike Smith
+\\  sometimes you're behind.      \\  mike@smith.net.au
+\\  The race is long, and in the  \\  msmith@freebsd.org
+\\  end it's only with yourself.  \\  msmith@cdrom.com
+
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-cc80f3ac92af6156>
+DATE: 1999-04-14T18:57:27+00:00  FROM: John Polstra <jdp () polstra ! com> <None>
+SUBJ: RE: [jip@tibco.com: elf (man, lib, and header files)]
+BODY:
+
+We don't have a "libelf" for applications at this time.  Maybe some
+day we'll have one.
+
+John
+---
+  John Polstra                                               jdp@polstra.com
+  John D. Polstra & Co., Inc.                        Seattle, Washington USA
+  "Self-interest is the aphrodisiac of belief."           -- James V. DeLong
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-08266f11a6193def>
+DATE: 1999-04-20T01:32:40+00:00  FROM: Max Gotlib <max () cca ! usart ! ru> <None>
+SUBJ: -current and aout kernels ?
+BODY:
+Hi!
+
+I've got a question for hackers sosiety ...
+Is it possible to compile a bootable (it does not
+metter how: via rawboot, netboot, ...) the _AOUT_
+kernel, based on the -current kernel sources
+withing the -current system environment (I mean
+egcs) ? I've got 19990412 snapshot, by the way ...
+
+Best regards,
+Max.
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-172fc3ce65225a09>
+DATE: 1999-05-11T02:06:15+00:00  FROM: John Baldwin <jobaldwi () vt ! edu> <None>
+SUBJ: RE: 3.1 cc -aout - No go?
+BODY:
+I've seen this same problem.  The compat22 distribution only includes aout
+libs, it doesn't include support for compiling aout applications, you have to
+make the world or run make in some other directory to generate the aout linking
+"glue".   Might it be possible to include this stuff in compat22 or some other
+compat patckage?  (compataout?)
+
+On 11-May-99 Josh2 Lists wrote:
+
+---
+
+John Baldwin <jobaldwi@vt.edu> -- http://members.freedomnet.com/~jbaldwin/
+PGP Key: http://members.freedomnet.com/~jbaldwin/pgpkey.asc
+"Power Users Use the Power to Serve!"  -  http://www.freebsd.org
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-34fbd1292c572c80>
+DATE: 1999-05-12T12:07:26+00:00  FROM: Sheldon Hearn <sheldonh () uunet ! co ! za> <None>
+SUBJ: Re: 3.1 cc -aout - No go? AGAIN after make world
+BODY:
+
+
+On Wed, 12 May 1999 07:24:55 -0400, John Baldwin wrote:
+
+
+Ah, gotcha. Seems like crt0.o and its buddies would find a good home in
+the compat22 directory as well, then. :-)
+
+Ciao,
+Sheldon.
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-876d0c8477955132>
+DATE: 1999-05-18T22:06:05+00:00  FROM: John Birrell <jb () cimlogic ! com ! au> <None>
+SUBJ: Re: a.out lib placment (was: 3.2-RELEASE and netscape problem.)
+BODY:
+David O'Brien wrote:
+
+So you are just installing it in the wrong place then.
+
+[ I haven't installed 3.2, so I haven't seen the problem. I'm responding
+  to things people have _said_. ]
+
+-- 
+John Birrell - jb@cimlogic.com.au; jb@freebsd.org http://www.cimlogic.com.au/
+CIMlogic Pty Ltd, GPO Box 117A, Melbourne Vic 3001, Australia +61 418 353 137
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-2fd665d1532b0027>
+DATE: 1999-05-24T07:37:48+00:00  FROM: Stephen Hocking-Senior Programmer PGS Tensor Perth <shocking () prth ! pgs ! com> <None>
+SUBJ: Munging ELF binaries and libraries.
+BODY:
+
+Has anyone written any tools that allow one to
+
+a) Change the names of external symbols referenced by a library or exported 
+out of a library.
+
+b) Add to the list of shared objects that this library needs in order to run, 
+so that a runtime linker will drag them in as well when a binary linked with 
+this shared library is run.
+
+The reason for the above is that I'm planning on tweaking various linux-only 
+ELF libs so that when they're linked into a FreeBSD binary, a shim library 
+will be automagically dragged in as well. This will allow FreeBSD users to 
+happily create binaries that use 3dfx's glide library, for instance. Can you 
+say hardware accelerated OpenGL?
+
+
+	Stephen
+-- 
+  The views expressed above are not those of PGS Tensor.
+
+    "We've heard that a million monkeys at a million keyboards could produce
+     the Complete Works of Shakespeare; now, thanks to the Internet, we know
+     this is not true."            Robert Wilensky, University of California
+
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-0031560e4633be71>
+DATE: 1999-05-25T17:31:47+00:00  FROM: Sebastien Maraux <smaraux () cpc ! westminster ! ac ! uk> <None>
+SUBJ: How to compile a 3.1 kernel with a.out lib
+BODY:
+How can I do to compile a 3.1 kernel only based on a.out libraries?
+(I need it to be bootable with netboot.)
+Thanks.
+Bye
+
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-80fcad45d73e0a76>
+DATE: 1999-05-26T08:11:21+00:00  FROM: "David O'Brien" <obrien () NUXI ! com> <None>
+SUBJ: Re: [ALERT] a.out support is broken in 3.2-STABLE and 4.0-CURRENT
+BODY:
+
+Nope.  The errata commit I made was that the compat20 and compat21
+distributions unpack into the wrong place.  A mostly independent issue
+from the lack of ld.so in the 1st rolling of 3.2-RELEASE.
+
+-- 
+-- David    (obrien@NUXI.com  -or-  obrien@FreeBSD.org)
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-0388a4e59f8551cb>
+DATE: 1999-05-31T16:30:26+00:00  FROM: "David E. Cross" <crossd () cs ! rpi ! edu> <None>
+SUBJ: lockmgr: locking against myself (again)
+BODY:
+Well, I have a debuging kernel compiled with DEBUG_LOCKS turned on, below is
+the result.  This was cvsup-ed and built about May 27, 14:00 EDT.
+
+gdb -k /usr/src/sys/compile/STAGGER/kernel.debug vmcore.10 (yes, that's right, #10 in a little over one week)
+GNU gdb 4.18
+Copyright 1998 Free Software Foundation, Inc.
+GDB is free software, covered by the GNU General Public License, and you are
+welcome to change it and/or distribute copies of it under certain conditions.
+Type "show copying" to see the conditions.
+There is absolutely no warranty for GDB.  Type "show warranty" for details.
+This GDB was configured as "i386-unknown-freebsd"...
+IdlePTD 2990080
+initial pcb at 2663b8
+panicstr: lockmgr: locking against myself
+panic messages:
+---
+panic: lockmgr: locking against myself
+
+syncing disks... 26 19 11 3 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 giving up
+
+dumping to dev 20001, offset 303392
+dump 95 94 93 92 91 90 89 88 87 86 85 84 83 82 81 80 79 78 77 76 75 74 73 72 71 70 69 68 67 66 65 64 63 62 61 60 59 58 57 56 55 54 53 52 51 50 49 48 47 46 45 44 43 42 41 40 39 38 37 36 35 34 33 32 31 30 29 28 27 26 25 24 23 22 21 20 19 18 17 16 15 14 13 12 11 10 9 8 7 6 5 4 3 2 1 
+---
+#0  boot (howto=256) at ../
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-6d1c518a4a947956>
+DATE: 1999-06-02T21:04:20+00:00  FROM: Doug Rabson <dfr () nlsystems ! com> <None>
+SUBJ: Re: aout gdb in an elf system
+BODY:
+On Wed, 2 Jun 1999, Julian Elischer wrote:
+
+
+Not easily. The old gdb-4.16 could be built this way by not defining
+FREEBSD_ELF but its a lot of hassle since you need a.out bfd etc. You
+possibly pick an a.out gdb binary out of an old release and try that.
+
+--
+Doug Rabson				Mail:  dfr@nlsystems.com
+Nonlinear Systems Ltd.			Phone: +44 181 442 9037
+
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-bddb026295e501c7>
+DATE: 1999-06-06T19:25:04+00:00  FROM: Marc Slemko <marcs () znep ! com> <None>
+SUBJ: Re: a.out behavior
+BODY:
+On Sun, 6 Jun 1999, Marc Tardif wrote:
+
+
+Nope.  There is no requirement that code segfault.  C does not make any
+promises that accessing memory that you have not allocated will do
+anything.
+
+
+Try renaming a.out to file.  You will probably find it is due to the
+length of the filename, since ARGV[0] is used by syslog.  
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-0e6a2515c6e43fbd>
+DATE: 1999-06-21T00:48:26+00:00  FROM: Juergen Lock <nox () jelal ! kn-bremen ! de> <None>
+SUBJ: problem fixed itself -- more FreeBSD MIDI patches and one rosegarden bugfix (was: Rosegarden 2.1-bet
+BODY:
+[Cc'd to -hackers because of the MIDI sound driver patches, i'm running
+this on FreeBSD 3.2-stable with Seigo TANIMURA's midi driver for serial
+ports and with an old Atari MSTe as serial<->midi interface...]
+
+On Wed, Jun 16, 1999 at 09:05:29PM +0200, I wrote:
+
+First, this was actually 020 ie 16...
+
+ anyway, problem fixed itself:  rebuilt mapper/src/Mapper.o with -g and
+found out Mapper_NewDeviceList() turned Device.Data.Midi.device from 0
+into 16.  Looked at the source and thought `strange'...  Rebuilt
+mapper/src/Device.o with -g and suddenly Mapper_NewDeviceList()
+stopped doing that and everything worked again!  Rebuilt Mapper.o
+and Device.o without -g and everything still worked.  *hmmm*.
+Any insight how that could have happened very much appreciated...
+
+ As for _BREEZE.MID, i guess that still segfaults (haven't tried).
+
+ Okay so playback works again, now recording:  it played back nothing
+from the existing tracks until i hit a note, then it played a few notes
+and stopped until i hit another note, and so on.  Also the stop button
+didn't visibly react until i hit another note.  Well so that must be a
+real difference between linux' sound system and FreeBSD's...  this patch
+fixed it
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-ff707df4fc44077d>
+DATE: 1999-07-31T22:48:38+00:00  FROM: Jeroen Ruigrok/Asmodai <asmodai () wxs ! nl> <None>
+SUBJ: Re: No elf(5) man page (docs/7914)
+BODY:
+* Sheldon Hearn (sheldonh@uunet.co.za) [990801 00:35]:
+
+Now, that gives me a good feeling =P
+
+I already started work on it...
+
+-- 
+Jeroen Ruigrok van der Werven                          asmodai(at)wxs.nl
+The BSD Programmer's Documentation Project <http://home.wxs.nl/~asmodai>
+Network/Security Specialist        BSD: Technical excellence at its best
+Cum angelis et pueris, fideles inveniamur. Quis est iste Rex gloriae...?
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-c8f83be71a5455d2>
+DATE: 1999-09-01T08:10:07+00:00  FROM: John Birrell <jb () cimlogic ! com ! au> <None>
+SUBJ: Re: make aout-to-elf-build Failing
+BODY:
+On Tue, Aug 31, 1999 at 10:12:27PM -0500, David Scheidt wrote:
+
+I think there have been problems reported with 2.2.X to -current
+upgrades. If you're willing to try it, send me private mail (to avoid
+using too much bandwidth) with the errors when it barfs.
+
+-- 
+John Birrell - jb@cimlogic.com.au; jb@freebsd.org http://www.cimlogic.com.au/
+CIMlogic Pty Ltd, GPO Box 117A, Melbourne Vic 3001, Australia +61 418 353 137
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-d1dc0a6a6a7ac07a>
+DATE: 1999-11-05T00:55:50+00:00  FROM: Barrett Richardson <barrett () phoenix ! aye ! net> <None>
+SUBJ: Re: Compiling elf gcc 2.7.2.3 on FreeBSD 3.3-R?
+BODY:
+
+
+
+On Thu, 4 Nov 1999, Charles Randall wrote:
+
+
+
+The culprit is STARTFILE_SPEC in config/i386/freebsd.h. In 3.2 replacing
+it with /usr/src/contrib/gcc/config/i386/freebsd.h took careof it (been
+putting off getting stackguard up and going on 3.3).
+
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-2906715984360fc1>
+DATE: 1999-12-08T15:59:05+00:00  FROM: "Jonathan M. Bresler" <jmb () hub ! freebsd ! org> <None>
+SUBJ: Re: ELF & putting inode at the front of a file
+BODY:
+
+      Author: Gregory R. Ganger 
+      Author: M. Frans Kaashoek
+       Title: Embedded Inodes and Explicit Grouping: Exploiting Disk
+Bandwidth for Small Files
+       Pages: 1-17
+   Publisher: USENIX
+ Proceedings: 1997 Annual Technical Conference
+        Date: January 6-10, 1997 
+    Location: Anaheim, CA 
+ Institution: MIT
+
+	available to usenix members in the online lirary at
+https://www.usenix.org//publications/publications.html.
+
+jmb
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-4edf40c6bfdab422>
+DATE: 1999-12-19T10:44:28+00:00  FROM: Doug Rabson <dfr () nlsystems ! com> <None>
+SUBJ: Re: aout gdb in 3.x
+BODY:
+On Sun, 19 Dec 1999, Greg Lehey wrote:
+
+
+I think that most of gdb can cope with both a.out and elf. The main
+problem is the shared library support which has ifdefs all over it to cope
+with the differences between SunOS and SVR4 shared libs.
+
+--
+Doug Rabson				Mail:  dfr@nlsystems.com
+Nonlinear Systems Ltd.			Phone: +44 181 442 9037
+
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-ad5640709e9a4106>
+DATE: 1999-03-14T14:33:11+00:00  FROM: "Donald J . Maddox" <dmaddox () conterra ! com> <None>
+SUBJ: Re: Stripping a.out binaries
+BODY:
+You can use 'strip -aout <fname>' to strip it.  As far as I know, there
+is currently no way to specify the executable format to 'install -s'.
+I haven't tried it, but you might be able to use the OBJFORMAT or
+OBJECT_FORMAT (not sure which form is correct) environment variable to
+make install DTRT for aout.
+
+On Sun, Mar 14, 1999 at 10:48:24PM +0930, Kris Kennaway wrote:
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: 19980101164804.30732@keltia.freenix.fr
+DATE: 1998-01-01T15:48:04+00:00  FROM: Ollivier Robert <roberto@keltia.freenix.fr> <None>
+SUBJ: Re: FreeBSD ELF status?
+BODY:
+According to John Polstra:
+
+After giving some thoughts on the subject, here is what I got:
+
+- we must put into the source various tools such as binutils & gcc
+  (preferably egcs or pgcc IMO) before. That is a very big increase of the
+  tree size.
+
+- after that, we must decide if we want to converted system to be able to
+  generate a.out binaries or not. 
+
+  That's the main issue I guess. The former is much more difficult to
+  handle because that would mean keeping two versions of too many things in
+  the tree and it is probably a nightmare.
+
+  The latter greatly simplify (:-)) the process because I see the
+  bootstrapping as an added phase before making the world.
+
+  make bootstrap would compile the libs new gcc/binutils as crosscompiling
+  tools generating i386-unknown-freebsdelf files and installing them inside
+  /usr/obj/.../tmp.
+
+  make world then takes theses tools and compile the world the usual way,
+  recompiling the new tools as normal ELF binaries.
+
+  We'd need to generate a compat-a.out.tgz tree with the "old" tools
+  (ld.so, all libs and so on) to let people runing old binaries (CURRENT is
+  less of an issue here). /usr/lib/aout ? /usr/lib/i386-unknown-freebsd ?
+
+  Consi
+
+--------------------------------------------------------------------------------
+MID: 199801011718.SAA24583@sos.freebsd.dk
+DATE: 1998-01-01T17:18:25+00:00  FROM: S�ren Schmidt <sos@FreeBSD.dk> <None>
+SUBJ: Re: FreeBSD ELF status?
+BODY:
+In reply to Ollivier Robert who wrote:
+
+We don't need a new compiler, the gcc in the tree allready has all it needs
+to make ELF bins. Binutils is needed for the assembler, linker and misc
+utils.
+
+
+Hmm, the way I have had it working here, is that you set an environment
+var to tell the compilersystem & utils what bin type you want, ELF being
+the default.
+
+
+No not really, its only binutils that gets pulled in (and only parts of it
+is really needed. Since the GNU shi^H^Htuff is kept in its own part of
+the tree no real probelms arise from that.
+
+
+Hold your horses :), its not completely that easy, but a special target
+could do the transition one and for all.
+
+
+/usr/lib/aout for the libs, or jump the major# to signify a new format...
+/usr/libexec/aout for the old aout utils still needed, if any at all...
+
+
+Well, its not much we can get rid off (strip, nm, ranlib and stuff), the
+compiler is the same (No I dont think we should switch to a new compiler
+just now, and especially not when doing this kind of "workout"), we still
+need the old rtld, to run older bins etc, and some might want then around
+just in case...
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+
+--------------------------------------------------------------------------------
+MID: Pine.BSF.3.95q.980102101318.19134B-100000@herring.nlsystems.com
+DATE: 1998-01-02T10:14:56+00:00  FROM: Doug Rabson <dfr@nlsystems.com> <None>
+SUBJ: Re: FreeBSD ELF status?
+BODY:
+On Wed, 31 Dec 1997, John Polstra wrote:
+
+
+I think that a big help in migration would be a runtime linker which could
+load both a.out and elf shared libs.  You would also need a tweak to ld to
+allow you to link and ELF program to an a.out lib but that shouldn't be
+too hard.
+
+--
+Doug Rabson				Mail:  dfr@nlsystems.com
+Nonlinear Systems Ltd.			Phone: +44 181 951 1891
+					Fax:   +44 181 381 1039
+
+
+
+
+--------------------------------------------------------------------------------
+MID: Pine.NEB.3.96.980103132351.14790K-100000@critic.cynic.net
+DATE: 1998-01-03T21:26:09+00:00  FROM: Curt Sampson <cjs@portal.ca> <None>
+SUBJ: Re: FreeBSD ELF status?
+BODY:
+On Thu, 1 Jan 1998, Ollivier Robert wrote:
+
+
+Actually, the easiest solution to this sort of thing is to follow
+what many other systems (sun, alpha, etc.) do and have your basic
+boot blocks load in a file containing the second-stage bootstrap
+from the root filesystem. (Usually you have a utility called
+"installboot" which programs the block numbers of this file into
+the first-stage bootstrap.) Then you can have a boot program that's
+essentially as long and complex as you need.
+
+(NetBSD/i386 recently changed to doing things this way.)
+
+cjs
+
+Curt Sampson    cjs@portal.ca	   Info at http://www.portal.ca/
+Internet Portal Services, Inc.	   Through infinite mist, software reverberates
+Vancouver, BC  (604) 257-9400	   In code possess'd of invisible folly.
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 19980104022346.05846@keltia.freenix.fr
+DATE: 1998-01-04T01:23:46+00:00  FROM: Ollivier Robert <roberto@keltia.freenix.fr> <None>
+SUBJ: Re: FreeBSD ELF status?
+BODY:
+According to Curt Sampson:
+
+That's what I called the Mythical 3-stage Boot Program[tm] :-)
+
+Nonetheless, it is good to know NetBSD already went this way.
+-- 
+Ollivier ROBERT -=- FreeBSD: The Power to Serve! -=- roberto@keltia.freenix.fr
+Usenet Canal Historique
+
+
+
+--------------------------------------------------------------------------------
+MID: 199801172243.OAA06576@rah.star-gate.com
+DATE: 1998-01-17T22:43:43+00:00  FROM: Amancio Hasty <hasty@rah.star-gate.com> <None>
+SUBJ: elf and -current
+BODY:
+
+Hi,
+
+I am trying to build the elf tool chain in 3.0 -current on my test box.
+3.0 -current is the October 6 Snapshot.
+
+Also has anyone managed to build the elf tool-chain with gcc-2.8?
+with gcc-2.8 the dynamic loader bombs out 
+
+I sprinkle some prints in rtld.c :
+
+ ~hasty/elfkit/tests/hello
+a 
+ee 
+digest dynamic tag  16 
+digest dynamic tag  15 
+digest dynamic tag  4 
+digest dynamic tag  5 
+digest dynamic tag  6 
+digest dynamic tag  10 
+digest dynamic tag  11 
+digest dynamic tag  17 
+digest dynamic tag  18 
+digest dynamic tag  19 
+digest dynamic tag  22 
+text rel 
+c 
+e 
+oops: 825
+Segmentation fault (core dumped)
+
+ digest_dynamic(&obj_rtld);
+    xprintf("c \n");
+    assert(obj_rtld.needed == NULL);
+    xprintf("e \n");
+    assert(!obj_rtld.textrel);   <<< this is where it dies
+    xprintf("elast \n");
+    
+
+---- 
+
+Attempt to build native elf cc....
+
+
+# setenv BINFORMAT elf
+# make
+===> cc_tools
+echo '#include "i386/freebsd-elf.h"' > tm.h
+echo '#include "i386/xm-freebsd.h"'  > config.h
+echo '#include "i386/xm-freebsd.h"'  > hconfig.h
+echo '#include "i386/xm-freebsd.h"'  > tconfig.h
+echo '#include "cp/lang-options.h"'  > options.h
+echo '#include "cp/lang-specs.h"'    > specs.h
+echo '#in
+
+--------------------------------------------------------------------------------
+MID: 199801182249.OAA20045@rah.star-gate.com
+DATE: 1998-01-18T22:49:35+00:00  FROM: Amancio Hasty <hasty@rah.star-gate.com> <None>
+SUBJ: gdb which supports elf?
+BODY:
+
+Howdy, 
+I dowloaded John's elfkit and it seems to work rather nicely.
+Made a minor mod to rtld.c, got rid of this:
+
+   assert(!obj_rtld.textrel); 
+
+When loading a shared binary the assert was being triggered
+and from the looks of it obj_rtld.textrel was set to 1 meaning
+that the text region is relocatable.
+
+
+Next, I try to compile gdb 4.16 however it needs modifications to support
+elf shared objects. So does anyone have mods for gdb to support elf?
+If no one has mods for gdb 4.16 , I will be happy to work on it.
+
+	Tnks,
+	Amancio
+
+
+
+
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 199801190829.JAA24199@sos.freebsd.dk
+DATE: 1998-01-19T08:29:31+00:00  FROM: S�ren Schmidt <sos@FreeBSD.ORG> <None>
+SUBJ: Re: elf and -current
+BODY:
+In reply to Amancio Hasty who wrote:
+
+Why on earth would you want to use gcc-2.8 ??
+Getting tha system ELF'ified is errorprone enough, you dont need extra
+"help" from a new (potentially) buggy compiler....
+
+
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+S�ren Schmidt               (sos@FreeBSD.org)               FreeBSD Core Team
+                Even more code to hack -- will it ever end
+..
+
+
+
+--------------------------------------------------------------------------------
+MID: 199801190838.AAA22588@rah.star-gate.com
+DATE: 1998-01-19T08:38:06+00:00  FROM: Amancio Hasty <hasty@rah.star-gate.com> <None>
+SUBJ: Re: elf and -current 
+BODY:
+
+Hi, 
+
+I managed to build the tool chain and gcc-2.8 appears to work.
+
+For instance , I compiled a speech recognition C++ library
+which was bombing out with the stock gcc.
+
+Now my most pressing problem is compiling gdb to support elf .
+
+
+	Tnks,
+	Amancio
+
+
+
+
+
+
+==========================================================================================
+DB: freebsd-current.duckdb  hits=80
+==========================================================================================
+--------------------------------------------------------------------------------
+MID: <Pine.BSF.4.01.9808160827050.2114-100000@herring.nlsystems.com>
+DATE: 1998-08-16T07:27:18+00:00  FROM: Doug Rabson <dfr@nlsystems.com>
+SUBJ: Re: ELF problems to occur
+BODY:
+On Sat, 15 Aug 1998, Terry Lambert wrote:
+
+
+FreeBSD of course!
+
+--
+Doug Rabson				Mail:  dfr@nlsystems.com
+Nonlinear Systems Ltd.			Phone: +44 181 951 1891
+					Fax:   +44 181 381 1039
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+From owner-freebsd-current  Sun Aug 16 01:20:20 1998
+Return-Path: <owner-freebsd-current@FreeBSD.ORG>
+Received: (from majordom@localhost)
+          by hub.freebsd.org (8.8.8/8.8.8) id BAA12821
+          for freebsd-current-outgoing; Sun, 16 Aug 1998 01:20:20 -0700 (PDT)
+          (envelope-from owner-freebsd-current@FreeBSD.ORG)
+Received: from caladan.tdx.co.uk (caladan.tdx.co.uk [195.188.177.4])
+          by hub.freebsd.org (8.8.8/8.8.8) with ESMTP id BAA12780;
+          Sun, 16 Aug 1998 01:20:01 -0700 (PDT)
+          (envelope-from kpielorz@tdx.co.uk)
+Received: from tdx.co.uk (lorca-tx.tdx.co.uk [195.188.177.242])
+	by caladan.tdx.co.uk (8.9.1/8.9.1) with ESMTP id JAA23247;
+	Sun, 16 Aug 1998 09:19:29 +0100 (BST)
+Message-ID: <35D69611.A45E9EBE@tdx.co.uk>
+Date: Sun, 16 Aug 1998 09:19:29 +0100
+From: Karl Pielorz <kpielorz@tdx.co.uk>
+Organization: TDX - The Digital eXchange
+X-Mailer: Mozil
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-current-7227dc3966a5522a>
+DATE: 1998-07-28T19:49:12+00:00  FROM: "Russell L. Carter" <rcarter () pinyon ! org> <None>
+SUBJ: elf in 3.0-release?
+BODY:
+It's not clear from Jordan's announcement, what's up with
+ELF (and CAM and DEVFS)?   Are they going to be in the
+October release?
+
+Thanks,
+Russell
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-current-1a9c46a44f076547>
+DATE: 1998-07-29T13:34:59+00:00  FROM: Holm Tiffe <freebsd () magnet ! geophysik ! tu-freiberg ! de> <None>
+SUBJ: Re: Answering myself, was: URGENT! ASUS P2B/LS supported ?
+BODY:
+[..]
+
+avail memory = 259104768 (253032K bytes)
+Probing for devices on PCI bus 0:
+chip0: <Intel 82443BX host to PCI bridge> rev 0x02 on pci0.0.0
+chip1: <Intel 82443BX host to AGP bridge> rev 0x02 on pci0.1.0
+chip2: <Intel 82371AB PCI to ISA bridge> rev 0x02 on pci0.4.0
+chip3: <Intel 82371AB USB host controller> rev 0x01 int d irq 255 on pci0.4.2
+chip4: <Intel 82371AB Power management controller> rev 0x02 on pci0.4.3
+ahc0: <Adaptec aic7890/91 Ultra2 SCSI adapter> rev 0x00 int a irq 15 on pci0.6.0
+ahc0: aic7890/91 Wide Channel A, SCSI Id=7, 32/255 SCBs
+fxp0: <Intel EtherExpress Pro 10/100B Ethernet> rev 0x05 int a irq 10 on pci0.7.0
+fxp0: Ethernet address 00:e0:18:90:2b:8f
+
+This is from my dmesg output. You are sure, that you have used the cam-drivers?
+[yeah, I know, a stupid question] (I've never tryed to use the old drivers)
+Have we the same revision of the host to pci bridge ?
+
+Holm
+-- 
+*******************************************************************************
+* Holm Tiffe                        holm@geophysik.tu-freiberg.de             *
+* Freiberger Strasse 24                                                       *
+* 09600 Kleinschirma, Germany           Microsoft is not the
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-current-31844faf3ccff748>
+DATE: 1998-07-31T04:29:04+00:00  FROM: John Polstra <jdp () polstra ! com> <None>
+SUBJ: Re: /usr/lib/aout
+BODY:
+In article <Pine.BSF.4.00.9807250943280.2646-100000@picnic.mat.net>,
+Chuck Robey  <chuckr@glue.umd.edu> wrote:
+
+
+I've never seen this.  I just now built the ssh port on a -current
+system from July 24, without any problems at all.  There is nothing in
+/usr/lib except the "aout" and "compat" subdirectories.
+--
+   John Polstra                                       jdp@polstra.com
+   John D. Polstra & Co., Inc.                Seattle, Washington USA
+   "Self-knowledge is always bad news."                 -- John Barth
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-current-122d8e8df9e0b701>
+DATE: 1998-08-01T16:27:20+00:00  FROM: Chuck Robey <chuckr () glue ! umd ! edu> <None>
+SUBJ: Re: /usr/lib/aout
+BODY:
+
+On Thu, 30 Jul 1998, John Polstra wrote:
+
+
+I wasn't suggesting it's a bug (I didn't track it down well enough when
+I experienced it), I was saying that trying to solve it by bogusly
+copying libs around would mean that you'd be more likely to get bitten
+by the still-existing problem on your system, when we moved to elf.
+That'd be because the libs in /usr/lib would then be elf, and ssh would
+still be trying to use the aout libs (unless you freshly recompiled it).
+
+The fix would be really making it look at /usr/lib/aout for libc (which
+mine does), not copying the up to date libc from /usr/lib/aout to
+/usr/lib.
+
+In other words, find the real problem, don't mask it.
+
+
+----------------------------+-----------------------------------------------
+Chuck Robey                 | Interests include any kind of voice or data 
+chuckr@glue.umd.edu         | communications topic, C programming, and Unix.
+213 Lakeside Drive Apt T-1  |
+Greenbelt, MD 20770         | I run Journey2 and picnic (FreeBSD-current)
+(301) 220-2114              | and jaunt (NetBSD).
+----------------------------+-----------------------------------------------
+
+
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsub
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-current-544ab541b8b1c5d5>
+DATE: 1998-08-03T02:29:04+00:00  FROM: "Kent S. Gordon" <kgor () ksg ! com> <None>
+SUBJ: Building kernel and lkm under -current elf?
+BODY:
+I recently changed my system to use elf binaries, but have not been
+able to successfully build the linux lkm or a kernel.  It seems that
+any aout binary I create core dump normally with floating point
+exception.  Are other people having this problem?  What aout libraries
+and objects are needed?  Can they be compiled on the elf system?  I
+lost my boot disk recently and rebuilt the boot disk starting from a
+2.2.6 CDROM, so I have plenty of places to make a mistake.
+
+-- 
+Kent S. Gordon 
+KSG  --  Unix, Network, Database Consulting
+Postal: 76 Corral Drive North, Keller, Texas 76248
+e-mail: kgor@ksg.com Phone:(817)431-8775 Resume: http://www.ksg.com/resume.html
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-current-bfd643e14b118e65>
+DATE: 1998-08-14T06:02:23+00:00  FROM: John Birrell  <jb () cimlogic ! com ! au> <None>
+SUBJ: Re: 3.0 Schedule, ELF and CAM
+BODY:
+Alex wrote:
+
+We need to be sure that people aren't going to hose themselves by moving
+to elf. I'm working on the build end of the aout to elf transition. Testing
+this requires lots of big builds, and in my case, reinstalling 2.2.6
+before each one to ensure that the procedure works from a system which
+doesn't know about elf tools.
+
+So far it is looking like a `make aout_to_elf' will be all that is
+required to make the switch. You can expect this to be available by
+about September 1st allowing 6 weeks before 3.0 is shipped.
+
+-- 
+John Birrell - jb@cimlogic.com.au; jb@freebsd.org http://www.cimlogic.com.au/
+CIMlogic Pty Ltd, GPO Box 117A, Melbourne Vic 3001, Australia +61 418 353 137
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-current-95a19e93c3c55b7b>
+DATE: 1998-08-15T04:49:15+00:00  FROM: John Polstra <jdp () polstra ! com> <None>
+SUBJ: Re: Is 3.0 going to be a.out?
+BODY:
+In article <199808110116.UAA03006@soccer.ksg.com>,
+Kent S. Gordon <kgor@ksg.com> wrote:
+
+Yes. ;-)
+
+Sorry, I couldn't resist.  We are doing our best to make it happen
+before the release.
+--
+   John Polstra                                       jdp@polstra.com
+   John D. Polstra & Co., Inc.                Seattle, Washington USA
+   "Self-knowledge is always bad news."                 -- John Barth
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-current-fdc016cb690fbf38>
+DATE: 1998-08-17T03:57:09+00:00  FROM: John Birrell  <jb () cimlogic ! com ! au> <None>
+SUBJ: Re: ELF problems to occur
+BODY:
+John Polstra wrote:
+
+... and Doug has kern/link_elf.c that he hasn't committed yet.
+
+-- 
+John Birrell - jb@cimlogic.com.au; jb@freebsd.org http://www.cimlogic.com.au/
+CIMlogic Pty Ltd, GPO Box 117A, Melbourne Vic 3001, Australia +61 418 353 137
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-current-8bd5f6d778a5ccdd>
+DATE: 1998-08-31T12:35:28+00:00  FROM: Werner Griessl <croot () btp1da ! phy ! uni-bayreuth ! de> <None>
+SUBJ: Re: buildworld aout current problem
+BODY:
+
+On 31-Aug-98 Jordan K. Hubbard wrote:
+
+----------------------------------
+E-Mail: Werner Griessl <croot@btp1da.phy.uni-bayreuth.de>
+Date: 31-Aug-98
+Time: 14:34:57
+
+This message was sent by XFMail
+----------------------------------
+
+Thanks, it's working now .
+Werner
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-current-6043bb3015a67c0f>
+DATE: 1998-08-31T20:05:58+00:00  FROM: John Polstra <jdp () polstra ! com> <None>
+SUBJ: Re: elf and kerberos..
+BODY:
+In article <199808311815.UAA18842@gratis.grondar.za>,
+Mark Murray  <mark@grondar.za> wrote:
+
+I don't think that's the problem.  It was caused by an asm statement
+in src/crypto/kerberosIV/lib/krb/et_list.c.  I just committed the fix
+a few moments ago.
+
+As a general rule, any time you see an undefined external that starts
+with "_" under ELF, you should suspect assembly language code.
+
+John
+--
+   John Polstra                                       jdp@polstra.com
+   John D. Polstra & Co., Inc.                Seattle, Washington USA
+   "Self-knowledge is always bad news."                 -- John Barth
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-current-85e4b2be590402d5>
+DATE: 1998-08-31T20:54:26+00:00  FROM: "William S. Duncanson" <caesar () starkreality ! com> <None>
+SUBJ: Error building aout-to-elf-build
+BODY:
+I cvsup'd as of about 3:30 EDT today, and I'm getting the following error
+trying to `make aout-to-elf-build`:
+
+yacc -d /home/src/gnu/usr.bin/cc/cc1/../../../../contrib/gcc/c-parse.y
+yacc: e - line 30 of
+"/home/src/gnu/usr.bin/cc/cc1/../../../../contrib/gcc/c-parse.y", syntax
+error
+%expect 34
+
+This is happening during the "Doing an aout buildworld to get an up to date
+set of tools."
+
+Any ideas?  I'm grabbing -current.
+-- 
+William S. Duncanson                        caesar@starkreality.com
+"The driving force behind the NC is the belief that the companies
+who brought us things like Unix, relational databases, and Windows
+can make an appliance that is inexpensive and easy to use if they
+choose to do that." -- Scott Adams
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-current-14bb86e161ec7799>
+DATE: 1998-08-31T23:54:48+00:00  FROM: John Birrell  <jb () cimlogic ! com ! au> <None>
+SUBJ: Re: More problems post-ELF
+BODY:
+John Polstra wrote:
+
+I committed the wrong bsd.own.mk yesterday. It was still using
+/etc/objectformat. Should be fixed now.
+
+-- 
+John Birrell - jb@cimlogic.com.au; jb@freebsd.org http://www.cimlogic.com.au/
+CIMlogic Pty Ltd, GPO Box 117A, Melbourne Vic 3001, Australia +61 418 353 137
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-current-d1efc3fe4e04b8b8>
+DATE: 1998-08-31T23:23:11+00:00  FROM: Tugrul Galatali <galatalt () stuy ! edu> <None>
+SUBJ: Re: XFree86 and ELF
+BODY:
+
+
+On Mon, 31 Aug 1998, Doug Rabson wrote:
+
+	The patches do fix one of the two parts of the problems I had.
+Most of the programs in xc/programs now actually link and have binaries,
+and all the libraries in xc/lib seem ok. But it completely barfs when
+linking XF86_SVGA. I'll send several pages of undefined symbols if anyone
+wants. I just wanted to write that the patches work, and now I'll busy
+myself with this directory, xc/programs/Xserver, until I work it out or
+somebody else is nice enough to offer even more patches ;)
+
+	I'd like to congratuate the team for making it this smooth ;)
+
+	Tugrul Galatali
+
+ps. hm, I must also note that perl5 fails on elf compile too... now if I
+could only figure out what changes elf really makes... I would think its
+the same data stored a little differently, but the errors seem to
+contradict that. This is of little concern compared to X tho ;)
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-current-ef3617eb66b2121f>
+DATE: 1998-09-01T00:10:01+00:00  FROM: John Birrell  <jb () cimlogic ! com ! au> <None>
+SUBJ: Re: Error building aout-to-elf-build
+BODY:
+William S. Duncanson wrote:
+
+Are you using an old version of current?
+When was the last time you did a `make world'?
+
+-- 
+John Birrell - jb@cimlogic.com.au; jb@freebsd.org http://www.cimlogic.com.au/
+CIMlogic Pty Ltd, GPO Box 117A, Melbourne Vic 3001, Australia +61 418 353 137
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-current-e9249fa8a78df4f9>
+DATE: 1998-08-31T23:50:11+00:00  FROM: John Birrell  <jb () cimlogic ! com ! au> <None>
+SUBJ: ELF amnesia after an upgrade
+BODY:
+This should fix the problem people (at least Jordan) have seen which
+causes a newly converted elf system to think that it should still be aout.
+
+If you've upgraded already, please `mv /etc/objectformat /etc/objformat'
+
+
+----- Forwarded message from John Birrell -----
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-current-0417d66787720990>
+DATE: 1998-09-01T01:43:29+00:00  FROM: John Polstra <jdp () polstra ! com> <None>
+SUBJ: Re: elf and kerberos..
+BODY:
+
+Right.  It turns out that I did fix the bug (an assembler bug) in
+April, 1997.  So the fix I committed to et_list.c today was simply to
+delete the section of code in question here.
+
+John
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-current-f25cacd6804736aa>
+DATE: 1998-09-01T06:25:44+00:00  FROM: John Birrell  <jb () cimlogic ! com ! au> <None>
+SUBJ: Re: New problem with ELF
+BODY:
+Manfred Antar wrote:
+
+No. ldconfig should only look in /usr/lib/aout. My elf make world built
+past the point where yours stopped.
+
+-- 
+John Birrell - jb@cimlogic.com.au; jb@freebsd.org http://www.cimlogic.com.au/
+CIMlogic Pty Ltd, GPO Box 117A, Melbourne Vic 3001, Australia +61 418 353 137
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-current-835c2ff550cdb3da>
+DATE: 1998-09-01T16:07:45+00:00  FROM: John Polstra <jdp () polstra ! com> <None>
+SUBJ: Re: More problems post-ELF
+BODY:
+
+Ick.  OK. :-(  I should be able to add them some time today.
+
+John
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-current-76e9dc8bc0d01b12>
+DATE: 1998-09-01T17:29:49+00:00  FROM: John Polstra <jdp () polstra ! com> <None>
+SUBJ: Re: Problems after aout-to-elf
+BODY:
+In article <XFMail.980902000415.chaos@oz.org>,
+Simon Coggins  <chaos@oz.org> wrote:
+
+It means you have a.out X11 libraries, but are trying to link them
+using the ELF linker.  Until you rebuild your X11 libraries as ELF,
+you need to build your X11 programs as a.out.  Do that by putting
+OBJFORMAT=aout in the environment before typing "make".
+--
+   John Polstra                                       jdp@polstra.com
+   John D. Polstra & Co., Inc.                Seattle, Washington USA
+   "Self-knowledge is always bad news."                 -- John Barth
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-current-a3c84e4e0ac92b2f>
+DATE: 1998-09-01T21:53:53+00:00  FROM: John Polstra <jdp () polstra ! com> <None>
+SUBJ: Re: Generating profiled binaries under ELF: where is gcrt1.o?
+BODY:
+In article <Pine.BSF.4.00.9809012310320.9226-100000@kushnir.kiev.ua>,
+Vladimir Kushnir  <kushn@mail.kar.net> wrote:
+
+
+I have a strong suspicion that it doesn't work yet.  I'll add it to
+my list.
+
+John
+--
+   John Polstra                                       jdp@polstra.com
+   John D. Polstra & Co., Inc.                Seattle, Washington USA
+   "Self-knowledge is always bad news."                 -- John Barth
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-current-0c926c8622e53f2c>
+DATE: 1998-09-01T23:18:49+00:00  FROM: Enkhyl <enkhyl () hayseed ! net> <None>
+SUBJ: aout-to-elf-build problems
+BODY:
+I've tried twice to convert my 3.0-current system with the same results.
+Below is the error. Am I missing something obvious?
+
+/usr/obj/elf/usr/src/kerberosIV/usr.bin/kauth/../../lib/libkrb/libkrb.a(str2key.o)(.text+0xaa):
+undefined reference to `crypt'
+*** Error code 1
+
+Stop.
+
+--
+Christopher Nielsen
+Scient: The Art and Science of Electronic Business
+cnielsen@scient.com
+<http://www.scient.com>
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-current-7e3d119681f48a28>
+DATE: 1998-09-02T04:02:15+00:00  FROM: Joel Ray Holveck <joelh () gnu ! org> <None>
+SUBJ: Re: Excellent Elf and others
+BODY:
+
+Not to mention, I'd also be keen to know a little bit about the
+testing methodology used.  IIRC, bytebench is designed to be as
+portable as possible, which means that may be wall time instead of
+process time used.
+
+Best,
+joelh
+
+-- 
+Joel Ray Holveck - joelh@gnu.org - http://www.wp.com/piquan
+   Fourth law of programming:
+   Anything that can go wrong wi
+sendmail: segmentation violation - core dumped
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-current-1fda09df74619a91>
+DATE: 1998-09-02T04:54:54+00:00  FROM: John Birrell  <jb () cimlogic ! com ! au> <None>
+SUBJ: Re: Minor ELF util nit
+BODY:
+Scott Michel wrote:
+
+It's on the list of things to do/fix.
+
+-- 
+John Birrell - jb@cimlogic.com.au; jb@freebsd.org http://www.cimlogic.com.au/
+CIMlogic Pty Ltd, GPO Box 117A, Melbourne Vic 3001, Australia +61 418 353 137
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-current-9a1a6183e2b2b544>
+DATE: 1998-09-02T06:14:44+00:00  FROM: John Birrell  <jb () cimlogic ! com ! au> <None>
+SUBJ: Re: Build problem with make aout-to-elf
+BODY:
+Stephen Hocking-Senior Programmer PGS Tensor Perth wrote:
+
+Looks like elf wants -lcrypt added.
+
+-- 
+John Birrell - jb@cimlogic.com.au; jb@freebsd.org http://www.cimlogic.com.au/
+CIMlogic Pty Ltd, GPO Box 117A, Melbourne Vic 3001, Australia +61 418 353 137
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-current-b7ece6da27c35118>
+DATE: 1998-09-02T19:01:39+00:00  FROM: Chuck Robey <chuckr () glue ! umd ! edu> <None>
+SUBJ: Re: aout-to-elf switch
+BODY:
+
+On Wed, 2 Sep 1998, Tamiji Homma wrote:
+
+
+I have a Tyan running 2 processors.  I didn't use -j in doing the switch
+(chicken!) and it worked just fine.  I WAS using both processors during
+the build.  Cvsup, update, and try it again.
+
+
+----------------------------+-----------------------------------------------
+Chuck Robey                 | Interests include any kind of voice or data 
+chuckr@glue.umd.edu         | communications topic, C programming, and Unix.
+213 Lakeside Drive Apt T-1  |
+Greenbelt, MD 20770         | I run Journey2 and picnic (FreeBSD-current)
+(301) 220-2114              | and jaunt (NetBSD).
+----------------------------+-----------------------------------------------
+
+
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-current-37ca42e05e9ee12b>
+DATE: 1998-09-02T22:03:07+00:00  FROM: Ollivier Robert <roberto () keltia ! freenix ! fr> <None>
+SUBJ: Re: ELF perl?  And others?
+BODY:
+According to Alok K. Dhir:
+
+Bad. Use "cc" as linker with "-shared". See my other mail.
+-- 
+Ollivier ROBERT -=- FreeBSD: The Power to Serve! -=- roberto@keltia.freenix.fr
+FreeBSD keltia.freenix.fr 3.0-CURRENT #62: Mon Jul 27 20:47:08 CEST 1998
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-current-eeaa15d497021d06>
+DATE: 1998-09-03T05:28:27+00:00  FROM: Stephen Hocking-Senior Programmer PGS Tensor Perth <shocking () prth ! pgs ! com> <None>
+SUBJ: Re: More missing -lcrypt's when doing aout-to-elf-build
+BODY:
+This was my experience also. I did wonder how come so many people were 
+reporting success with the aout-to-elf target when my builds were falling 
+over. Guess there's only a few of us who are building the Kerberos stuff 
+(which also explains the differences I've seen between my build times and 
+others).
+
+
+	Stephen
+
+
+-- 
+  The views expressed above are not those of PGS Tensor.
+
+    "We've heard that a million monkeys at a million keyboards could produce
+     the Complete Works of Shakespeare; now, thanks to the Internet, we know
+     this is not true."            Robert Wilensky, University of California
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-current-20b4f96a684b4400>
+DATE: 1998-09-03T15:46:34+00:00  FROM: John Polstra <jdp () polstra ! com> <None>
+SUBJ: Re: E-day problems: rtld-elf dlsym() broken?
+BODY:
+
+For what it's worth, you can easily make a shared library to link in
+that uses minimal disk space (smaller than a fragment):
+
+blake$ > tiny.c
+blake$ cc -fpic -O -c -o tiny.so tiny.c
+blake$ cc -shared -nostdlib -o libtiny.so.1 -Wl,-soname,libtiny.so.1 tiny.so
+blake$ ls -l libtiny.so.1
+-rwxr-xr-x  1 jdp  jdp  1585 Sep  3 08:43 libtiny.so.1
+blake$ file libtiny.so.1
+libtiny.so.1: ELF 32-bit LSB shared object, Intel 80386, version 1 (FreeBSD), not stripped
+
+John
+--
+   John Polstra                                       jdp@polstra.com
+   John D. Polstra & Co., Inc.                Seattle, Washington USA
+   "Self-knowledge is always bad news."                 -- John Barth
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-current-0b9695821b32f94d>
+DATE: 1998-09-03T15:49:35+00:00  FROM: John Polstra <jdp () polstra ! com> <None>
+SUBJ: Re: Why no ldconfig for ELF?
+BODY:
+
+Oh dear.  I hope there's no connection between those two events. ;-)
+
+
+You can do "strip -aout -d kernel".  All of the relevant tools now
+accept "-elf" or "-aout" arguments.
+
+John
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-current-bd10a499b6db98ce>
+DATE: 1998-09-03T06:51:46+00:00  FROM: Ollivier Robert <roberto () keltia ! freenix ! fr> <None>
+SUBJ: Re: B CURRENT Build environment (Was: Re: Why no ldconfig for ELF?)
+BODY:
+According to Mark Murray:
+
+But miniperl doesn't need any modules, nor does it reference one...
+-- 
+Ollivier ROBERT -=- FreeBSD: The Power to Serve! -=- roberto@keltia.freenix.fr
+FreeBSD keltia.freenix.fr 3.0-CURRENT #62: Mon Jul 27 20:47:08 CEST 1998
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-current-3e061f6034a46f56>
+DATE: 1998-09-03T20:50:40+00:00  FROM: Zach Heilig <zach () gaffaneys ! com> <None>
+SUBJ: Possible ELF wrinkle.
+BODY:
+I did the aout-to-elf upgrade today, but with DESTDIR=/mnt.  objformat went
+into /etc, rather than /mnt/etc (I suspected it might, so this got checked
+before doing anything else).  I haven't checked anything else for misplacing
+installed items yet.
+
+-- 
+Zach Heilig -- zach@gaffaneys.com
+Anyone who is capable of getting themselves made President should on no
+account be allowed to do the job.
+                -- Douglas Adams, "The Hitchhiker's Guide to the Galaxy"
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-current-23ddfa514e2c9aba>
+DATE: 1998-09-03T21:49:21+00:00  FROM: Ollivier Robert <roberto () keltia ! freenix ! fr> <None>
+SUBJ: Re: Problems with ELF and UMich LDAP
+BODY:
+According to Brian Cully:
+
+Add "#include <arpa/inet.h>" in the file.
+
+(and possibly <sys/types.h>, <sys/socket.h> and <netinet/in.h>"). cf
+inet_addr(3):
+
+INET(3)                FreeBSD Library Functions Manual                INET(3)
+
+NAME
+     inet_aton, inet_addr, inet_network, inet_ntoa, inet_makeaddr, inet_lnaof,
+     inet_netof - Internet address manipulation routines
+
+SYNOPSIS
+     #include <sys/types.h>
+     #include <sys/socket.h>
+     #include <netinet/in.h>
+     #include <arpa/inet.h>
+
+-- 
+Ollivier ROBERT -=- FreeBSD: The Power to Serve! -=- roberto@keltia.freenix.fr
+FreeBSD keltia.freenix.fr 3.0-CURRENT #62: Mon Jul 27 20:47:08 CEST 1998
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-current-615e80f6087d75c8>
+DATE: 1998-09-03T22:48:59+00:00  FROM: John Birrell  <jb () cimlogic ! com ! au> <None>
+SUBJ: Re: step to update aout to elf
+BODY:
+c5666305 wrote:
+
+If you aren't following -current closely enough to have seen the details
+posted to this list and are unsure of why you would want to upgrade anyway,
+please wait until we've completed _all_ the work required for the release
+of 3.0.
+
+-- 
+John Birrell - jb@cimlogic.com.au; jb@freebsd.org http://www.cimlogic.com.au/
+CIMlogic Pty Ltd, GPO Box 117A, Melbourne Vic 3001, Australia +61 418 353 137
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-current-f1ee675d60341aba>
+DATE: 1998-09-04T08:01:03+00:00  FROM: David Dawes <dawes () rf900 ! physics ! usyd ! edu ! au> <None>
+SUBJ: Re: XFree86 and ELF
+BODY:
+On Thu, Sep 03, 1998 at 09:29:36PM +0100, Doug Rabson wrote:
+
+I plan on including the inet_addr() changes in the XFree86 devel source
+anyway since it is clearly a bug.
+
+
+Yes, that'll require a bit more work :-).  The main thing will be
+providing the equivalent bits that Linux/Alpha provides in the XFree86
+os-support layer.  A non-FreeBSD specific issue is then getting more of
+the servers/drivers 64-bit clean and Alpha friendly (only a fairly small
+subset are currently supported on Linux/Alpha).
+
+David
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-current-f9a5c2fce8d17d23>
+DATE: 1998-09-04T08:32:10+00:00  FROM: John Birrell  <jb () cimlogic ! com ! au> <None>
+SUBJ: Re: aout-to-elf worked but 'make install' still confused
+BODY:
+Wayne Scott wrote:
+
+Did you do this with a clean object tree?
+
+When you use the commands quoted above, you won't be using the same obj
+directory that `make world' uses because it is the top-level makefiles
+that direct the object tree into /usr/obj/elf and /usr/obj/aout
+to aboid mixing things in different formats. When you just cd to a
+directory, you will get /usr/obj as the root of your object tree if
+you do a `make obj'.
+
+-- 
+John Birrell - jb@cimlogic.com.au; jb@freebsd.org http://www.cimlogic.com.au/
+CIMlogic Pty Ltd, GPO Box 117A, Melbourne Vic 3001, Australia +61 418 353 137
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-current-6e4c7115b4a63f78>
+DATE: 1998-09-04T08:41:36+00:00  FROM: Andrzej Bialecki <abial () nask ! pl> <None>
+SUBJ: Re: Expect more breakage (Re: ELF broke crunchgen/crunchide)
+BODY:
+On Thu, 3 Sep 1998, Mike Smith wrote:
+
+
+Hmm... I need to take a closer look at the new bootloader, then. I
+remember you were saying that it doesn't work yet with HDDs, right? (or
+were they floppies..)
+
+
+Then we probably want to keep it, because there is already problem with
+space on the boot.flp. However, this also probably means that the
+installation floppies will stay a.out, which also means running an a.out
+kernel. Am I right?
+
+
+And this I've done for the time being.
+
+Andrzej Bialecki
+
+--------------------   ++-------++  -------------------------------------
+ <abial@nask.pl>       ||PicoBSD||   FreeBSD in your pocket? Go and see:
+ Research & Academic   |+-------+|       "Small & Embedded FreeBSD"
+ Network in Poland     | |TT~~~| |    http://www.freebsd.org/~picobsd/
+--------------------   ~-+==---+-+  -------------------------------------
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-current-36ff7112e21174a1>
+DATE: 1998-09-04T12:08:13+00:00  FROM: Sakari Jalovaara <sja () tekla ! fi> <None>
+SUBJ: Re: ELF binaries size
+BODY:
+
+Mmmm...  Is it?  If every process has an average of half a page of
+unnecessarily COWed text in memory, the kB's add up.  (Every process
+is pretty much guaranteed to COW the first data page, if the
+__progname variable indeed tends to end up there.)
+
+If every exec() does an average of 2kB unnecessary bcopy() and every
+process uses an extra 2kB memory (hopefully no extra cache?!), is that
+measurable?
+
+How's this for a test:
+
+1) "time make world" for a baseline.
+
+2) Hack the ELF linker to pad the text segment up to a full page boundary.
+
+3) "time make world".
+
+4) "time make world" - this time the text segments of make/cc/sh/etc
+   doing the compilation are padded.
+
+If (1) and (4) show a difference, add a flag to ld to control padding
+(save disk vs. save memory.)  Could also try a lighter benchmark than
+"make world" to test a different number-of-exec()s / process-runtime
+ratio.
+									++sja
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-current-c6ad2c2623c73eae>
+DATE: 1998-09-04T15:40:11+00:00  FROM: Tamiji Homma <thomma () BayNetworks ! COM> <None>
+SUBJ: Re: Problem with ELF make -j4 buildworld
+BODY:
+The same here.  After I converted to elf and make -j8 buildworld on SMP
+failed. Without -j8, it completes buildworld.  The place where my 
+buildworld failed is different from yours, though.  I haven't tried 
+non-SMP with -jN yet.
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-current-3ba4ac15f7fd9185>
+DATE: 1998-09-04T08:55:39+00:00  FROM: Mike Smith <mike () smith ! net ! au> <None>
+SUBJ: kzip in the brave new ELF
+BODY:
+
+I've explicitly left out the major/minor calculation for harddisks 
+until the extender is ready (a few days), so at the moment it's not 
+"ready" as such.
+
+
+Right now, the kernel is a.out; it's not clear if we're going to be 
+ready for an ELF kernel or not.  (Personally I think it'd be a good 
+thing, but we need some more items first.)  The kzip strategy can be 
+made to work with both a.out and ELF, but the latter will need some 
+assistance from someone that has an interest in making it work.
+
+If we go for an ELF kernel, but don't get kzip sorted in time, then the 
+installation floppy kernel will have to be a.out.  That will probably 
+suck just as much if not more.
+
+-- 
+\\  Sometimes you're ahead,       \\  Mike Smith
+\\  sometimes you're behind.      \\  mike@smith.net.au
+\\  The race is long, and in the  \\  msmith@freebsd.org
+\\  end it's only with yourself.  \\  msmith@cdrom.com
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-current-e2d63f5f6d9137e6>
+DATE: 1998-09-04T18:21:26+00:00  FROM: "David E. Cross" <crossd () cs ! rpi ! edu> <None>
+SUBJ: -current (ELF) problems.
+BODY:
+First, I would like to say way to go on an almost flawless ELF conversion
+:)
+
+I only have 2 problems (I searched the -CURRENT archives and did not see
+mention to these particular problems ;)
+
+1) With 'MAKE_KERBEROS4' defined 'YES' in /etc/make.conf in a -CURRENT
+system freshly CVSUP-ed a few hours ago today (19980904) I receive the
+following errors durring a 'make world' [note, I also have
+USA_RESIDENT/COMPAT1x/20/22 enabled]:
+
+/usr/obj/elf/usr/src/kerberosIV/usr.sbin/ksrvutil/../../lib/libkrb/libkrb.a(str2key.o)(.text+0xaa):
+undefined reference to `crypt'
+
+
+2) XFree86 build is failing for me, with link errors being unable to find
+"GlynnisIO..." and "vgaSetReadWrite"... after some digging through the
+XFree86 source I discovered that those functions did exist in either
+libvga.a or libvga256.a, but had an '_' prepended to the name (whereas
+other functions in the same library did not, and the original names in the
+source code was without the '_').
+
+Any suggestions?
+
+--
+David
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-current-2b478f9b5d5024f2>
+DATE: 1998-09-04T21:53:46+00:00  FROM: John Polstra <jdp () polstra ! com> <None>
+SUBJ: Re: Converting a.out shared libs to ELF shared libs.
+BODY:
+In article <199809040118.JAA18041@ariadne.tensor.pgs.com>,
+Stephen Hocking-Senior Programmer PGS Tensor Perth  <shocking@prth.pgs.com> wrote:
+
+I made quite a bit of progress on it this week, but it's not done
+yet.  Don't worry, when it's finished I don't plan to keep it a
+secret. :-)
+
+
+There's almost no chance that libraries (a.out or ELF) from a
+different system will work together with our libraries.  They were
+built using entirely different include files, and therefore
+different data structure layouts.
+--
+   John Polstra                                       jdp@polstra.com
+   John D. Polstra & Co., Inc.                Seattle, Washington USA
+   "Self-knowledge is always bad news."                 -- John Barth
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-current-f139cf04aad3c697>
+DATE: 1998-09-04T22:28:33+00:00  FROM: Joel Ray Holveck <joelh () gnu ! org> <None>
+SUBJ: Re: ELF broke crunchgen/crunchide
+BODY:
+
+Intel has them online, and I will write that man page I promised if
+it's useful (although an info file may be better).
+
+Happy hacking,
+joelh
+
+-- 
+Joel Ray Holveck - joelh@gnu.org - http://www.wp.com/piquan
+   Fourth law of programming:
+   Anything that can go wrong wi
+sendmail: segmentation violation - core dumped
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-current-68aec97f2d3febb7>
+DATE: 1998-09-05T00:13:40+00:00  FROM: asami () FreeBSD ! ORG (Satoshi Asami) <None>
+SUBJ: Re: ELF perl? And others?
+BODY:
+ * But only for ELF please (if possible).
+
+These breakages were due to perl upgrade, not elf.
+
+Satoshi
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-current-ac123cf841a3c836>
+DATE: 1998-09-05T01:41:29+00:00  FROM: Simon Coggins <chaos () oz ! org> <None>
+SUBJ: Changing from elf to aout?
+BODY:
+
+If I change /etc/objformat to aout and do a make world will it change my system
+back to aout?
+
+Regards
+Simon
+
+      +---------------------------------------------------------------+
+      |  Email: chaos@ultra.net.au, chaos@oz.org, simon@bofh.com.au   |
+      |   http://www.ultra.net.au/~chaos   Simon.Coggins@jcu.edu.au.  |
+      |       Chaos on IRC,    IRC Operator for the OzORG Network     |
+      +---------------------------------------------------------------+
+---
+Whatever became of eternal truth?
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-current-d28dea95ca4fa369>
+DATE: 1998-09-05T09:28:11+00:00  FROM: John Birrell  <jb () cimlogic ! com ! au> <None>
+SUBJ: Re: make buildworld (elf) fails with ...
+BODY:
+Gianmarco Giovannelli wrote:
+
+This looks like phase two of the upgrade, where elf things are built with
+aout tools. The fact that ld.so is looking at libraries in the elf
+WORLDTMP indicates that the ld.so.hints file contains that path after
+executing ldconfig. Have you updated src/Makefile.inc1 since I made
+the change to only run ldconfig if building aout?
+
+You might need to build a new ld.so.hints file.
+
+-- 
+John Birrell - jb@cimlogic.com.au; jb@freebsd.org http://www.cimlogic.com.au/
+CIMlogic Pty Ltd, GPO Box 117A, Melbourne Vic 3001, Australia +61 418 353 137
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-current-2a8c3089575c2611>
+DATE: 1998-09-06T03:31:20+00:00  FROM: John Polstra <jdp () polstra ! com> <None>
+SUBJ: Re: ELF Build....
+BODY:
+In article <XFMail.980905185845.wwoods@cybcon.com>,
+William Woods  <wwoods@cybcon.com> wrote:
+
+Just add "-aout" to the ldconfig command in /etc/rc, as is the case
+in the latest version in src/etc.
+--
+   John Polstra                                       jdp@polstra.com
+   John D. Polstra & Co., Inc.                Seattle, Washington USA
+   "Self-knowledge is always bad news."                 -- John Barth
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-current-20263cbe5eec9f18>
+DATE: 1998-09-06T07:35:48+00:00  FROM: Mark Murray <mark () grondar ! za> <None>
+SUBJ: Re: ELF build problems with perl5
+BODY:
+John Birrell wrote:
+
+These ways are present - they are just messy. If you are doing a cross-
+compile, they are _really_ messy.
+
+
+I hope to have this problem solved by the end of today.
+
+M
+--
+Mark Murray
+Join the anti-SPAM movement: http://www.cauce.org
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-current-6f447b077470afcd>
+DATE: 1998-09-06T06:50:39+00:00  FROM: Alex <garbanzo () hooked ! net> <None>
+SUBJ: Re: editing elf library search paths?
+BODY:
+On Sat, 5 Sep 1998, John Polstra wrote:
+
+
+Now now.  Just give it time.  I'm sure someone will hack up something to
+do this.  I mean if I've got a half finished (and surely quite broken)
+little applet laying around that starts to decipher an ELF object and put
+the info in a QListView, it's only a matter of time before someone
+finshes something to do this.
+
+(Hint: The Intel docs are a good start for dechiphering ELF shared libs
+and programs)
+
+- alex
+
+| "Contrary to popular belief, penguins are not the salvation of modern  |
+| technology.  Neither do they throw parties for the urban proletariat." |
+| Powered by FreeBSD                            http://www.freebsd.org/  |
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-current-a8aeadba0a182d07>
+DATE: 1998-09-06T16:39:16+00:00  FROM: Alex <garbanzo () hooked ! net> <None>
+SUBJ: Re: ELF -current users: HEADS UP
+BODY:
+On 6 Sep 1998, Dag-Erling Coidan [iso-8859-1] Sm�rgrav wrote:
+
+
+What I actually did was:
+
+/usr/lib/aout
+/usr/lib/aout/X11
+/usr/lib/aout/local
+
+But I don't see as it makes a huge difference where they're put, if you're
+not going to building any more a.out libs.
+
+- alex
+
+| "Contrary to popular belief, penguins are not the salvation of modern  |
+| technology.  Neither do they throw parties for the urban proletariat." |
+| Powered by FreeBSD                            http://www.freebsd.org/  |
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-current-ab6d4e72a0d0dcbc>
+DATE: 1998-09-06T21:11:28+00:00  FROM: John Birrell  <jb () cimlogic ! com ! au> <None>
+SUBJ: Re: ELF
+BODY:
+Don Croyle wrote:
+
+And mails this are not helping the cause.
+
+You _can't_ convert everything right now, so don't waste effort trying.
+
+-- 
+John Birrell - jb@cimlogic.com.au; jb@freebsd.org http://www.cimlogic.com.au/
+CIMlogic Pty Ltd, GPO Box 117A, Melbourne Vic 3001, Australia +61 418 353 137
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-current-01086f01a53224a1>
+DATE: 1998-09-06T21:16:48+00:00  FROM: Ted Spradley <tsprad () spradley ! tmi ! net> <None>
+SUBJ: Re: (belated :-) make aout-to-elf success story
+BODY:
+
+
+Ah!  Thanks for the clue.  I guess I quit paying close attention quite a 
+few releases ago.  It's just been altogether too easy.
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-current-ea082bf406a79fb9>
+DATE: 1998-09-07T06:03:06+00:00  FROM: William Woods <wwoods () cybcon ! com> <None>
+SUBJ: RE: ELF world and MFS ?
+BODY:
+I missed the answer to this problem as I am haveing it too....I had to turn off
+MFS untill I van get it fixed, has a fix been committed yet or should I leave
+MFS off for now.
+
+ On 06-Sep-98 Vanessa N. Voysey wrote:
+
+---------------------
+William Woods <wwoods@cybcon.com> 
+Date: 06-Sep-98 / Time: 23:01:38
+goto to: http//www.freebsd.org. 
+--> FreeBSD 3.0 CURRENT <--
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-current-2d183ca1219e6fa0>
+DATE: 1998-09-07T06:40:09+00:00  FROM: Poul-Henning Kamp <phk () critter ! freebsd ! dk> <None>
+SUBJ: Re: pseudo-device gzip and ELF
+BODY:
+In message <Pine.BSF.4.02.9809061959090.22212-100000@europa.novastar.com>, Tugr
+ul Galatali writes:
+
+You know where the source is...
+
+--
+Poul-Henning Kamp             FreeBSD coreteam member
+phk@FreeBSD.ORG               "Real hackers run -current on their laptop."
+"ttyv0" -- What UNIX calls a $20K state-of-the-art, 3D, hi-res color terminal
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-current-c485f92f63d4d97a>
+DATE: 1998-09-07T19:46:57+00:00  FROM: William Woods <wwoods () cybcon ! com> <None>
+SUBJ: Re: Make world in ELF
+BODY:
+Thank you, I assume that is why it died on me then....
+
+On 07-Sep-98 Mark Murray wrote:
+
+
+---------------------
+William Woods <wwoods@cybcon.com> 
+Date: 07-Sep-98 / Time: 12:46:18
+goto to: http//www.freebsd.org. 
+--> FreeBSD 3.0 CURRENT ELF <--
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-current-574a5d082e3de9c9>
+DATE: 1998-09-08T16:21:41+00:00  FROM: Masafumi NAKANE/中根雅文 <max () wide ! ad ! jp> <None>
+SUBJ: any working elf snapshot available?
+BODY:
+Hi,
+
+I've been struggling with aout-to-elf upgrade.  At the beginning, it
+seemed to be running ok, but as I updated my box to -current as of
+about 12 hours ago, it looks miserable.  Actually, -current from about
+80 hours ago acted oddly, but not much as it is now.  So, I'm looking
+for snapshot of ELF system that is known to be work without problem.
+
+Here's my situation in case anyone is interested in, or hopefully can
+help me out.
+
+The -current as of three days ago had problem with kernel that has
+firewall support configured in.  Once I removed it and started using
+LKM for that functionality, it worked fine, though.
+
+Now, the -current as of 12 hours ago doesn't even boot.  Well, it
+does, but it doesn't stay up even for a minute.  I cannot remember
+what exactly the panic was, but it was something like, dereferencing
+page that are in use.  This was a case with the GENERIC kernel and it
+happend to me when I started vi in the single user mode.
+
+When I used mu custom kernel, which I've been using more than a few
+months, it didn't even get to the single user mode.  I will take note
+what exactly all those messages are if I'm still suffering from this
+tomorrow.
+
+     Cheers,
+Max
+
+To Unsubs
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-current-319ad6a5da891c90>
+DATE: 1998-09-08T19:02:56+00:00  FROM: Terry Lambert <tlambert () primenet ! com> <None>
+SUBJ: Re: Standardizing a BSD/ELF ABI...
+BODY:
+
+I did say "technically"...
+
+
+The old libtermcap used to require exactly this for lines, columns,
+and I-forget-what-character-array.
+
+The use of sys_errlist directly (allowed unde POSIX) instead of using
+strerror(3) falls into this category, and counts as a break between
+versions of RedHat releases, as do a number of libvga accesses.
+
+
+
+It wasn't, and in any case, the dynamic linker would have to examine
+the difference, since it would be between shared library revisions.
+
+
+
+You are assuming that the people writing this code are professional
+programmers (who are paid to due grunt work), as opposed to students.
+
+
+					Terry Lambert
+					terry@lambert.org
+---
+Any opinions in this posting are my own and not those of my present
+or previous employers.
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-current-ed8bac15fcc61b58>
+DATE: 1998-09-08T20:32:26+00:00  FROM: John Polstra <jdp () polstra ! com> <None>
+SUBJ: Re: ELF: No values for section flags defined
+BODY:
+In article <199809081806.UAA20067@ceia.nordier.com>,
+Robert Nordier  <rnordier@nordier.com> wrote:
+
+Nope, that's a bug.  Thanks for the report!  I'll add those flags in
+right away.
+
+John
+--
+   John Polstra                                       jdp@polstra.com
+   John D. Polstra & Co., Inc.                Seattle, Washington USA
+   "Self-knowledge is always bad news."                 -- John Barth
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-current-6f82bd48d9b14ef9>
+DATE: 1998-09-09T05:40:24+00:00  FROM: Mark Murray <mark () grondar ! za> <None>
+SUBJ: Re: Make Release under ELF
+BODY:
+Simon Shapiro wrote:
+
+Please wait for the new BMaked Perl5.
+
+M
+--
+Mark Murray
+Join the anti-SPAM movement: http://www.cauce.org
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-current-754edb8575626872>
+DATE: 1998-09-09T20:14:44+00:00  FROM: John Polstra <jdp () polstra ! com> <None>
+SUBJ: Re: /var/run/ld-elf.so.hints
+BODY:
+In article <98090920205200.00755@gmarco.eclipse.org>,
+Gianmarco Giovannelli  <gmarco@giovannelli.it> wrote:
+
+Yes, it's correct.  The ELF hints file contains only the list of
+directories to search.  It doesn't list the individual files like the
+a.out hints file does.  Because of the way ELF shared libraries are
+found, it doesn't need that extra information.  (I.e., it wouldn't
+make it any faster.)
+--
+   John Polstra                                       jdp@polstra.com
+   John D. Polstra & Co., Inc.                Seattle, Washington USA
+   "Self-knowledge is always bad news."                 -- John Barth
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-current-d4e7e82564131ebd>
+DATE: 1998-09-09T21:53:41+00:00  FROM: John Birrell  <jb () cimlogic ! com ! au> <None>
+SUBJ: Re: /usr/obj/elf/usr/src/tmp/usr/lib/libm.so.2
+BODY:
+Gianmarco Giovannelli wrote:
+
+I can't explain why the aout rtld would be looking at the elf libs. Since
+the first that this occurs is immediately after ldconfig rescans for
+libs, I guess it might be related to that. You've already said that
+/etc/rc has _LDC pointing to /usr/lib/aout. Immediately after the build
+fails, try running `ldconfig -aout -r' and check the paths reported.
+If there are no tmp components of these paths, then maybe the problem
+is things set in your environment. Are you setting LD_LIBRARY_PATH?
+
+-- 
+John Birrell - jb@cimlogic.com.au; jb@freebsd.org http://www.cimlogic.com.au/
+CIMlogic Pty Ltd, GPO Box 117A, Melbourne Vic 3001, Australia +61 418 353 137
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-current-83a0fa3f17f2d744>
+DATE: 1998-09-09T22:03:42+00:00  FROM: William Woods <wwoods () cybcon ! com> <None>
+SUBJ: Re: ELF worldstone numbers?
+BODY:
+Am I correct in assuming that I can set NOAOUT in make.conf safely if I am elf.
+I still have aout bins (obviousely) but see no need to re-make them every time.
+
+On 09-Sep-98 John Birrell wrote:
+
+
+---------------------
+William Woods <wwoods@cybcon.com> 
+Date: 09-Sep-98 / Time: 15:02:16
+goto to: http//www.freebsd.org. 
+--> FreeBSD 3.0 CURRENT ELF <--
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-current-3de9788ff43a1a82>
+DATE: 1998-09-09T22:17:46+00:00  FROM: John Birrell  <jb () cimlogic ! com ! au> <None>
+SUBJ: NOAOUT (Was: Re: ELF worldstone numbers?)
+BODY:
+William Woods wrote:
+
+Setting NOAOUT in your /etc/make.conf or environment will prevent a `make
+world' from building the legacy aout bits (libs, rtld, lkms, boot blocks).
+
+I was tempted to say that now is a safe time to do this, however with
+C-day approaching, bear in mind that it is important to have a consistent
+user-land with your kernel. If you continue to run aout bins that rely
+on an aout shared libc, you _should_ rebuild that when you make things
+after C-day "just in case".
+
+Let's not create a bunch of support questions simply because you want to
+save time building world. The best way to save time building world is
+to not build world. Wait for R-day (release of 3.0) and build then.
+
+-- 
+John Birrell - jb@cimlogic.com.au; jb@freebsd.org http://www.cimlogic.com.au/
+CIMlogic Pty Ltd, GPO Box 117A, Melbourne Vic 3001, Australia +61 418 353 137
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-current-38b106c1edd7655b>
+DATE: 1998-09-10T02:36:41+00:00  FROM: Don Lewis <Don.Lewis () tsc ! tdk ! com> <None>
+SUBJ: aout-to-elf-build dies when building perl
+BODY:
+
+I installed 3.0-19980804-SNAP, then loaded todays's /usr/src using cvsup.
+Things blew up in "make aout-to-elf-build" when it was building perl.
+
+===> gnu/usr.bin/perl/utils/c2ph
+miniperl c2ph.PL
+Can't locate Config.pm in @INC (@INC contains: /usr/libdata/perl/5.00502/mach /u
+sr/libdata/perl/5.00502 /usr/local/lib/perl/5.00502/i386-freebsd /usr/local/lib/
+perl/5.00502 .) at c2ph.PL line 3.
+BEGIN failed--compilation aborted at c2ph.PL line 3.
+*** Error code 2
+
+Config.pm is present, but not where perl is looking.
+
+% find /usr/obj -name Config.pm -print
+/usr/obj/aout/usr/src/gnu/usr.bin/perl/perl/lib/Config.pm
+/usr/obj/aout/usr/src/gnu/usr.bin/perl/perl/Config.pm
+/usr/obj/aout/usr/src/gnu/usr.bin/perl/suidperl/lib/Config.pm
+/usr/obj/aout/usr/src/gnu/usr.bin/perl/suidperl/Config.pm
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-current-4ba2a83197324ca3>
+DATE: 1998-09-10T05:09:58+00:00  FROM: John Birrell  <jb () cimlogic ! com ! au> <None>
+SUBJ: Re: elf hitch (my fault)
+BODY:
+Henry Miller wrote:
+
+That's not going to be easy. It depends on where you got up to before
+running out of space and how your file systems are arranged.
+
+If you managed to get the aout-to-elf-build to complete, but ran out
+of space in /usr during the install and if your obj trees are taking space
+from /usr too, then delete /usr/obj/elf to get more space. Then edit
+src/Makefile.upgrade and remove everything in the aout-to-elf-install
+target after the aout install. Then do another `make aout-to-elf' and
+you're back to aout. 8-)
+
+There are a few other alternatives which leave you in an elf state instead
+of aout.
+
+-- 
+John Birrell - jb@cimlogic.com.au; jb@freebsd.org http://www.cimlogic.com.au/
+CIMlogic Pty Ltd, GPO Box 117A, Melbourne Vic 3001, Australia +61 418 353 137
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-current-4cf891b9050e2836>
+DATE: 1998-09-10T05:29:45+00:00  FROM: John Polstra <jdp () polstra ! com> <None>
+SUBJ: Re: XFree86 and ELF (beating a dead horse)
+BODY:
+In article <Pine.OSF.4.02.9809092011260.12979-100000@fly.HiWAAY.net>,
+Steve Price  <sprice@hiwaay.net> wrote:
+
+That's because with a.out, a C variable "foo" is called "_foo" in
+assembler.  But with ELF, it is called just plain "foo".  So when you
+reference a C symbol from assembly language, it has to be handled
+differently depending on the object file format.
+
+This needs to be solved using either the CNAME/HIDENAME macros from
+<machine/asmacros.h>, or using #defines as in <machine/asnames.h>.
+
+John
+--
+   John Polstra                                       jdp@polstra.com
+   John D. Polstra & Co., Inc.                Seattle, Washington USA
+   "Self-knowledge is always bad news."                 -- John Barth
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-current-4531715e8f6f8fad>
+DATE: 1998-09-10T05:40:33+00:00  FROM: John Polstra <jdp () polstra ! com> <None>
+SUBJ: Re: ld -R for ELF
+BODY:
+In article <19980909202340.A13012@nuxi.com>,
+David O'Brien <obrien@NUXI.com> wrote:
+
+The other poster was wrong. "ld -R" works as expected for ELF.  See
+the output of "ld --help" for details.
+
+John
+--
+   John Polstra                                       jdp@polstra.com
+   John D. Polstra & Co., Inc.                Seattle, Washington USA
+   "Self-knowledge is always bad news."                 -- John Barth
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-current-9b9b0202627f8078>
+DATE: 1998-09-10T07:38:58+00:00  FROM: Alfred Perlstein <bright () hotjobs ! com> <None>
+SUBJ: bad aout-elf-install
+BODY:
+===> include/rpcsvc
+install -C -o bin -g bin -m 444  /usr/src/include/rpcsvc/yp_prot.h
+/usr/src/incl
+ude/rpcsvc/ypclnt.h /usr/src/include/rpcsvc/nis_db.h
+/usr/src/include/rpcsvc/nis
+_tags.h /usr/src/include/rpcsvc/nislib.h
+/usr/src/include/rpcsvc/bootparam_prot
+.x /usr/src/include/rpcsvc/key_prot.x /usr/src/include/rpcsvc/klm_prot.x
+/usr/sr
+c/include/rpcsvc/mount.x /usr/src/include/rpcsvc/nfs_prot.x
+/usr/src/include/rpc
+svc/nlm_prot.x /usr/src/include/rpcsvc/rex.x
+/usr/src/include/rpcsvc/rnusers.x /
+usr/src/include/rpcsvc/rquota.x /usr/src/include/rpcsvc/rstat.x
+/usr/src/include
+/rpcsvc/rwall.x /usr/src/include/rpcsvc/sm_inter.x
+/usr/src/include/rpcsvc/spray
+.x /usr/src/include/rpcsvc/yppasswd.x /usr/src/include/rpcsvc/yp.x
+/usr/src/incl
+ude/rpcsvc/ypxfrd.x /usr/src/include/rpcsvc/ypupdate_prot.x
+/usr/src/include/rpc
+svc/nis.x /usr/src/include/rpcsvc/nis_cache.x
+/usr/src/include/rpcsvc/nis_object
+.x /usr/src/include/rpcsvc/nis_callback.x /usr/src/include/rpcsvc/crypt.x
+key_p
+rot.h klm_prot.h mount.h nfs_prot.h nlm_prot.h rex.h rnusers.h  rquota.h
+rstat.h
+ rwall.h sm_inter.h spray.h yppasswd.h yp.h  ypxfrd.h ypupdate_prot.h
+nis.h nis_
+cache.h nis_callback.h  bootparam_prot.h crypt.h
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-current-ed2ea4fd1a9fb1e5>
+DATE: 1998-09-10T19:26:04+00:00  FROM: S��ren Schmidt <sos () FreeBSD ! ORG> <None>
+SUBJ: Re: ELF worldstone (etc.)
+BODY:
+In reply to David Greenman who wrote:
+
+I still see the PII/Xeon/todaysbuzzword as an MMX enhanced P6 with
+a fast clock rate. So basically it scales upwards with the frequency.
+This is also only possible because the memory system is faster, or
+it would die from memory starvation.
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+S�ren Schmidt               (sos@FreeBSD.org)               FreeBSD Core Team
+                Even more code to hack -- will it ever end?
+..
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-current-95deff698b154920>
+DATE: 1998-09-10T21:08:43+00:00  FROM: John Birrell  <jb () cimlogic ! com ! au> <None>
+SUBJ: Re: /usr/libexec/ld-elf.so.1: File format not recognized
+BODY:
+Gilad Rom wrote:
+
+Have you got any symbolic links in /usr/lib with single version numbers
+(e.g. /usr/lib/libc.so.3) to aout libraries?
+
+What libraries are left in /usr/lib?
+
+-- 
+John Birrell - jb@cimlogic.com.au; jb@freebsd.org http://www.cimlogic.com.au/
+CIMlogic Pty Ltd, GPO Box 117A, Melbourne Vic 3001, Australia +61 418 353 137
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-current-27f58a6b29276534>
+DATE: 1998-09-11T01:12:56+00:00  FROM: Don Lewis <Don.Lewis () tsc ! tdk ! com> <None>
+SUBJ: Re: Moving aout libs (part of aout->elf upgrade)
+BODY:
+On Sep 11,  2:07am, Dag-Erling =?iso-8859-1?Q?Co=EFdan?=  =?iso-8859-1 wrote:
+} Subject: Re: Moving aout libs (part of aout->elf upgrade)
+} John Birrell  <jb@cimlogic.com.au> writes:
+} > OK. All I can say is that people really are brave just trusting a process
+} > like this!
+} 
+} Why? It worked flawlessly for me.
+
+It barfed for me because I don't have /usr/X11R6, let alone /usr/X11R6/lib,
+therefore /usr/X11R6/lib/aout wasn't created.  Apparently ldconfig isn't
+happy if you specify a non-existent directory.  Makefile.upgrade probably
+shouldn't include non-existent directories in LIBDIRS.
+
+Creating the missing directories allowed me to successfully make
+aout-to-elf-install.
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-current-05f7015cbef47569>
+DATE: 1998-09-11T02:22:18+00:00  FROM: Kevin Street <street () iname ! com> <None>
+SUBJ: Re: /usr/lib/compat/aout build
+BODY:
+Enkhyl writes:
+
+Well, there wouldn't have been much point in John adding the
+move-aout-libs target in the makefile then.  It creates and populates
+/usr/lib/compat/aout as well as /usr/X11R6/lib/aout and
+/usr/local/lib/aout.
+
+-- 
+Kevin Street
+street@iName.com
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-current-c8eb8d4ad755f3e7>
+DATE: 1998-09-11T06:16:35+00:00  FROM: Mark Murray <mark () grondar ! za> <None>
+SUBJ: Re: aout-to-elf-install problem -- ELF interpreter /usr/libexec/ld-elf.so.1 not found
+BODY:
+Resup.
+
+M
+
+Don Lewis wrote:
+pm > /usr/share/perl/man/man3/B::Showlex.tmp
+m > /usr/share/perl/man/man3/B::Bblock.tmp
+--
+Mark Murray
+Join the anti-SPAM movement: http://www.cauce.org
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-current-dc5e00b41a3f9ab0>
+DATE: 1998-09-11T09:49:18+00:00  FROM: Thomas Seidmann <tseidmann () simultan ! ch> <None>
+SUBJ: Re: make reinstall (elf) to an aout box
+BODY:
+John Birrell wrote:
+
+I can confirm that it works.
+
+Regards, Thomas
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-current-8f373d9e9051e43b>
+DATE: 1998-09-11T13:52:44+00:00  FROM: "Viren R. Shah" <viren () rstcorp ! com> <None>
+SUBJ: problem in make aout-to-elf-build
+BODY:
+
+
+This is on a 2.2.7-stable box, when doing a 'make aout-to-elf-build'
+on -current  source cvsupped today morning. Any ideas?
+
+
+rm -rf /usr/obj/elf/home/FreeBSD/current-src/src/gnu/usr.bin/perl/perl/lib/auto/DynaLoader/DynaLoader.a
+ar cr /usr/obj/elf/home/FreeBSD/current-src/src/gnu/usr.bin/perl/perl/lib/auto/DynaLoader/DynaLoader.a DynaLoader.o && /usr/bin/ranlib /usr/obj/elf/home/FreeBSD/current-src/src/gnu/usr.bin/perl/perl/lib/auto/DynaLoader/DynaLoader.a
+chmod 755 /usr/obj/elf/home/FreeBSD/current-src/src/gnu/usr.bin/perl/perl/lib/auto/DynaLoader/DynaLoader.a
+cc -O -pipe -I/home/FreeBSD/current-src/src/gnu/usr.bin/perl/perl/../../../../contrib/perl5 -I/usr/obj/elf/home/FreeBSD/current-src/src/gnu/usr.bin/perl/perl   -I/usr/obj/elf/usr/src/tmp/usr/include  -o perl perlmain.o  lib/auto/DynaLoader/DynaLoader.a -lperl -lm -lcrypt
+perlmain.o: In function `xs_init':
+perlmain.o(.text+0x9d): undefined reference to `boot_DynaLoader'
+*** Error code 1
+
+
+
+
+Viren
+-- 
+Viren R. Shah, {viren @ rstcorp . com}
+"The one thing you can't trade for your heart's desire is your heart."
+     -- Miles Vorkosigan (Lois McMaster Bujold, Memory)
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "un
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-current-468acce05eb962db>
+DATE: 1998-09-11T23:53:58+00:00  FROM: Alex <garbanzo () hooked ! net> <None>
+SUBJ: Re: ELF world and MFS / groff issues
+BODY:
+On Fri, 11 Sep 1998, Mike Smith wrote:
+[...]
+
+Disable optimization (in the texinfo docs).
+
+- alex
+
+| "Contrary to popular belief, penguins are not the salvation of modern  |
+| technology.  Neither do they throw parties for the urban proletariat." |
+| Powered by FreeBSD                            http://www.freebsd.org/  |
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-current-62c65ed629069c6d>
+DATE: 1998-09-14T08:36:31+00:00  FROM: John Birrell  <jb () cimlogic ! com ! au> <None>
+SUBJ: Re: Small glitch in aout-to-elf-install
+BODY:
+Andrzej Bialecki wrote:
+
+Are you sure?! It does for me.
+
+-- 
+John Birrell - jb@cimlogic.com.au; jb@freebsd.org http://www.cimlogic.com.au/
+CIMlogic Pty Ltd, GPO Box 117A, Melbourne Vic 3001, Australia +61 418 353 137
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-current-feb6501c26c123e5>
+DATE: 1998-09-14T20:20:02+00:00  FROM: Vladimir Kushnir <kushn () mail ! kar ! net> <None>
+SUBJ: Re: kernel build error under ELF
+BODY:
+Hello, 
+several days ago there were some messages 'bout kernel not wanting to
+build under ELF with error from /usr/libexec/aout/ld:
+"/usr/libexec/aout/ld: /usr/lib/libgcc.a(): bad magic" 
+
+I've got this very error today (make world & kernel as of
+ctm-src-cur.3537). And the reason is very simple: somehow a.out libgcc.a
+isn't installed by installworld and is to be installed by hand. Obviously,
+for a.out linker elf libgcc.a doesn't work.
+
+Regards, 
+Vladimir
+
+===========================|=======================
+ Vladimir Kushnir   	   |	
+ kushn@mail.kar.net, 	   |	Powered by FreeBSD
+ kushnir@ap3.bitp.kiev.ua  |
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-current-6eaaa8d6fd0ff434>
+DATE: 1998-09-14T22:09:31+00:00  FROM: Tamiji Homma <thomma () BayNetworks ! COM> <None>
+SUBJ: Re: Elf kernel (was Re: make world with -j4 opion.... )
+BODY:
+
+
+K6 machine crash is without Loqui's patch(ffs_inode.c).  
+Dual PPro machine crash is with his patch.
+
+Tammy
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-current-6045affca7b798a2>
+DATE: 1998-09-15T09:48:32+00:00  FROM: Don Lewis <Don.Lewis () tsc ! tdk ! com> <None>
+SUBJ: Re: Possible problem with perl in aout-to-elf-install
+BODY:
+On Sep 15,  9:44am, Niall Smart wrote:
+} Subject: Possible problem with perl in aout-to-elf-install
+} Hi,
+} 
+} While performing an aout-to-elf-install I noticed the following:
+} 
+} Compressing /usr/share/perl/man/man3/Net::protoent.3
+}   miniperl -I lib ../../pod/pod2man/pod2man --section=3 --official
+} Net/servent.pm > /usr/share/perl/man/man3/Net::servent.tmp
+} ELF interpreter /usr/libexec/ld-elf.so.1 not found
+} Abort trap
+} Compressing /usr/share/perl/man/man3/Net::servent.3
+}   miniperl -I lib ../../pod/pod2man/pod2man --section=3 --official
+} Pod/Html.pm > /usr/share/perl/man/man3/Pod::Html.tmp
+} ELF interpreter /usr/libexec/ld-elf.so.1 not found
+} Abort trap
+} Compressing /usr/share/perl/man/man3/Pod::Html.3
+}   miniperl -I lib ../../pod/pod2man/pod2man --section=3 --official
+} Pod/Text.pm > /usr/share/perl/man/man3/Pod::Text.tmp
+} ELF interpreter /usr/libexec/ld-elf.so.1 not found
+} Abort trap
+} 
+} I don't know if this is a problem or not but it looks like one.
+} Apart from that, it's going fine, thanks to everyone involved
+} in the ELF migration!
+
+It happened to me as well a few days ago.  Strangely enough
+/usr/libexec/ld-elf.so.1 is present.  It seems to be some sort of
+q

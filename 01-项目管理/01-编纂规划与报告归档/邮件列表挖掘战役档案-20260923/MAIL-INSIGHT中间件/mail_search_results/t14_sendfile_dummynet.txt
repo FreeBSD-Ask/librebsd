@@ -1,0 +1,1872 @@
+==========================================================================================
+DB: freebsd-hackers.duckdb  hits=37
+==========================================================================================
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-cbf3a3d8167d0bba>
+DATE: 1998-05-11T10:07:08+00:00  FROM: Luigi Rizzo <luigi () labinfo ! iet ! unipi ! it> <None>
+SUBJ: dummynet is working (more or less)
+BODY:
+The updated code for dummynet is available at
+
+    http://www.iet.unipi.it/~luigi/ip_dummynet/
+
+i have it mostly working here on 2.2.6 -- differences with -current
+should be not significant.
+
+In order to make it work you need IPFW and IPDIVERT options in your
+kernel.
+
+There is one problem with the code, which I i am not sure how to fix
+now:
+
+in the call to ip_output, the caller passes a few parameters, including
+a pointer to a "struct route" . The pointer is saved together with the
+mbuf containing the packet, and used some time later when the packet is
+extracted from the queue/delay line and passed to the interface. By
+that time, the original data structure might have been deallocated :(
+resulting in a panic or other weird behaviours.
+
+I am not sure if the correct way to keep this info alive is to increase
+reference count to this structure (to be cleared at a later time, but
+the exact time might be tricky to find out, since i don't really want
+to modify all low level drivers) or what else.
+
+Suggestions welcome.
+
+	cheers
+	luigi
+-----------------------------+--------------------------------------
+Luigi Rizzo                  |  Dip. di Ingegneria dell'Informazione
+email: luigi@iet.un
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-abd4982ca68c6456>
+DATE: 1998-09-01T15:35:32+00:00  FROM: Luigi Rizzo <luigi () labinfo ! iet ! unipi ! it> <None>
+SUBJ: Announce: BRIDGE/IPFW/DUMMYNET PicoBSD stuff...
+BODY:
+Well, lot of stuff to announce... (Bcc to -hackers and -committers...)
+
+My dear committers: is there anyone out there who is willing to revise the
+code and import it into -current and/or -stable ???
+
+  http://www.iet.unipi.it/~luigi/ip_dummynet/bridge.html
+
+      i have mostly finished and tested the bridging patches
+      for FreeBSD, a diff file for 2.2.x (and might even work
+      on -current if someone wants to try...) is available.
+
+  http://www.iet.unipi.it/~luigi/ip_dummynet/
+
+      I have also cleaned up dummynet for 2.2.7 (lots of people
+      asking...) removing the last few bugs (now it works with natd,
+      thanks to Philippe Regnauld who tested it extensively).
+      This code includes a significant performance improvement in
+      SKIPTO instructions. Patches and docs available at the above URL.
+
+  http://www.iet.unipi.it/~luigi/ip_dummynet/bridge.html
+
+      And since i was at it... i decided to build a PicoBSD floppy
+      with BRIDGING, IPFW, and DUMMYNET on it... on 2.2.6
+      At the above URL you can find both the diffs to make PicoBSD
+      compile on 2.2.6/2.2.7 (small enough) and a floppy image with the
+      above.
+
+Want to know more ? Check the URLs...
+
+	c
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-d374dd437615d788>
+DATE: 1998-09-09T16:22:02+00:00  FROM: Luigi Rizzo <luigi () labinfo ! iet ! unipi ! it> <None>
+SUBJ: dummynet now down to the bridging layer...
+BODY:
+I just finished the integration of dummynet and the bridging code,
+and now you can do bandwidth limitation at the bridging level (this
+means that you can put a dummynet-enabled bridge in the middle of
+an ethernet cable without having to reconfigure routes etc.)
+
+For those interested to try it, a floppy image is at
+
+    http://www.iet.unipi.it/~luigi/ip_dummynet/picobsd980909.bin
+
+It comes up with userconfig, has pnp support, and drivers for
+the following cards:
+
+	ed, de, fxp, vx, lnc
+
+the fxp code is untested, so if someone wants to try it out... i don't
+have such a card at the moment.
+
+Before you ask: since the packet filter is ipfw, at the moment you can
+only control IPv4 traffic -- other passes unchanged. I am considering
+ipfw extensions to select other traffic basing at least on the ethernet
+type field.
+
+(source code will be available in a few days)
+
+	cheers
+	luigi
+-----------------------------+--------------------------------------
+Luigi Rizzo                  |  Dip. di Ingegneria dell'Informazione
+email: luigi@iet.unipi.it    |  Universita' di Pisa
+tel: +39-50-568533           |  via Diotisalvi 2, 56126 PISA (Italy)
+fax: +39-50-568522           |  http://www.iet.unipi.it/~lu
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-2f8b80ba5c11ca64>
+DATE: 1998-10-07T20:11:54+00:00  FROM: Warner Losh <imp () village ! org> <None>
+SUBJ: Re: Dummynet
+BODY:
+In message <199810071738.SAA08935@labinfo.iet.unipi.it> Luigi Rizzo writes:
+: > : actually i don't remember well how i implemented this in ipfw, but i
+: > : think KB is for kilobyte and K or Kb is for kilobit
+: > : 
+: > : (with K=1000, not 1024)
+: > 
+: > kb/s == 1000 bits per second.
+: > Kb/s == 1024 bits per second
+: > kB/s == 1000 bytes per second
+: > KB/s == 1024 bytes per second.
+: > 
+: > In the SI units, as expanded for computer folks, b == bits, B ==
+: > bytes, k == 1000 and K == 1024.  M == 1000000 or 2^20 (or sometimes
+: > 1024 * 1000).
+: 
+: there's nothing worse than imprecise definitions! the b/B differentiation
+: is widespread, but k/K are often used interchangeably.
+: 
+: What i know for sure is that network bandwidths are seldom measured
+: with powers of 2, i.e. 64k means 64.000 not 65536, ethernet is 10Mbit=
+: 10.000.000, etc.
+: 
+: disk capacities... there K and M were used for 2^10 and 2^20
+: respectively, but now it is more and more common to use them for 10^3
+: and 10^6, and i hope the unit will not shrink as it happened to the
+: "monitor inch" !
+
+Yes.  But you'll notice that people tend to be careful about k vs K
+(eg 64k is 64,000), but less careful about M vs M :-
+
+--------------------------------------------------------------------------------
+MID: 199805111007.MAA17553@labinfo.iet.unipi.it
+DATE: 1998-05-11T10:07:08+00:00  FROM: Luigi Rizzo <luigi@labinfo.iet.unipi.it> <None>
+SUBJ: dummynet is working (more or less)
+BODY:
+The updated code for dummynet is available at
+
+    http://www.iet.unipi.it/~luigi/ip_dummynet/
+
+i have it mostly working here on 2.2.6 -- differences with -current
+should be not significant.
+
+In order to make it work you need IPFW and IPDIVERT options in your
+kernel.
+
+There is one problem with the code, which I i am not sure how to fix
+now:
+
+in the call to ip_output, the caller passes a few parameters, including
+a pointer to a "struct route" . The pointer is saved together with the
+mbuf containing the packet, and used some time later when the packet is
+extracted from the queue/delay line and passed to the interface. By
+that time, the original data structure might have been deallocated :(
+resulting in a panic or other weird behaviours.
+
+I am not sure if the correct way to keep this info alive is to increase
+reference count to this structure (to be cleared at a later time, but
+the exact time might be tricky to find out, since i don't really want
+to modify all low level drivers) or what else.
+
+Suggestions welcome.
+
+	cheers
+	luigi
+-----------------------------+--------------------------------------
+Luigi Rizzo                  |  Dip. di Ingegneria dell'Informazione
+email: luigi@iet.un
+
+--------------------------------------------------------------------------------
+MID: 35D7292D.7FBBA95@pipeline.ch
+DATE: 1998-08-16T18:47:09+00:00  FROM: Andre Oppermann <oppermann@pipeline.ch> <None>
+SUBJ: sendfile() API?
+BODY:
+I'm currently evaluating the Zeus 3.1 Webserver (it finally available
+for FreeBSD: www.zeus.co.uk) and in the tuning document they talk about
+an sendfile() API which is currently only supportet on HP/UX 11.00:
+ http://support.zeus.co.uk/tuning.htm
+
+I'm now wondering what exactly that is and if someone has more details
+or documents on that.
+
+They state sendfile() gives excellent Webserver performace, isn't that
+somthing for FreeBSD?
+
+TIA
+-- 
+Andre
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: Pine.GSO.4.00.9808161228020.7948-100000@redfish
+DATE: 1998-08-16T19:35:36+00:00  FROM: Marc Slemko <marcs@znep.com> <None>
+SUBJ: Re: sendfile() API?
+BODY:
+On Sun, 16 Aug 1998, Andre Oppermann wrote:
+
+
+It is a system call that allows you to pass in a file descriptor and a
+network socket and some other stuff.  The kernel can then figure out how
+it can best shove the file to the network without having to copy into
+userspace.  It still may or may not have to copy in the kernel, depending
+on implementation.
+
+There is a man page for the HPUX sendfile() at:
+
+http://docs.hp.com:80/dynaweb/hpux11/hpuxen1a/rvl3en1a/@Generic__BookTextView/59894;td=3
+
+Note that the HPUX implementation does have some problems with the
+semantics, you really need an async sendfile() to do things right without
+wasting threads, you really need to be able to pass multiple headers and
+trailers in to do things right, etc.
+
+
+sendfile() gives pretty good performance when combined with a file
+descriptor cache (ie. the web server doesn't do anything silly like cache
+data, it just keeps a bunch of descriptors open to sendfile() on), but the
+implementation has to be right and it is really an interm solution.  The
+more general concept is any descriptor to any descriptor, and the future
+for web server performance could involve a small, in-kernel HTTP engine
+(eg. IBM's AFPA) bac
+
+--------------------------------------------------------------------------------
+MID: Pine.BSF.3.95.980816130634.7671A-100000@current1.whistle.com
+DATE: 1998-08-16T20:08:12+00:00  FROM: Julian Elischer <julian@whistle.com> <None>
+SUBJ: Re: sendfile() API?
+BODY:
+
+I've been having a quick discussion with linus re: the sendfile()
+API that he is puting in linux..
+I will be implementing an identical API on freebsd for
+SAMBA to use.
+warning: he has decided to not use an API identical to HPUX
+but it will give similar (expanded) functionality.
+
+julian
+
+
+On Sun, 16 Aug 1998, Andre Oppermann wrote:
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: 26941.903302184@time.cdrom.com
+DATE: 1998-08-16T21:16:24+00:00  FROM: "Jordan K. Hubbard" <jkh@time.cdrom.com> <None>
+SUBJ: Re: sendfile() API? 
+BODY:
+
+Predicated on two things, both of which I raised at the Apache core
+developers meeting recently:
+
+1. A reasonable (e.g. not HP/UX's) API is established by those who're
+   going to use it so that we know just what precisely it is we're supposed
+   to implement.
+
+2. Some sort of benchmark suite is developed to show when and where
+   this *actually helps* so that we can justify the addition of
+   sendfile() to FreeBSD (or any other OS, for that matter).
+
+I'm still waiting for either of those things to happen, and until then
+it's a reasonable assumption that demand is just not that significant
+yet.
+
+- Jordan
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: 199808170356.LAA16257@ariadne.tensor.pgs.com
+DATE: 1998-08-17T03:56:50+00:00  FROM: Stephen Hocking-Senior Programmer PGS Tensor Perth <shocking@prth.pgs.com> <None>
+SUBJ: Re: sendfile() API? 
+BODY:
+There was a discussion a while ago about how sendfile (as implemented on NT) 
+was a BadThing(tm). One guy came up with what can only be described as an I/O 
+interpreter, where the kernel provides a facility such that you can load up a 
+description of what you want done with the data. His first name was Chuck, and 
+he came up with quite an interesting thesis, implementing his code under 
+NetBSD. The problem is that sendfile is unsufficiently general, and probably 
+wont cope with things like network type changes, et cetera.
+
+
+	Stephen
+-- 
+  The views expressed above are not those of PGS Tensor.
+
+    "We've heard that a million monkeys at a million keyboards could produce
+     the Complete Works of Shakespeare; now, thanks to the Internet, we know
+     this is not true."            Robert Wilensky, University of California
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: Pine.BSF.3.95.980816222612.8085A-100000@current1.whistle.com
+DATE: 1998-08-17T05:26:36+00:00  FROM: Julian Elischer <julian@whistle.com> <None>
+SUBJ: Re: sendfile() API? 
+BODY:
+any closerr references on this would be greatly appreciated..
+
+
+On Mon, 17 Aug 1998, Stephen Hocking-Senior Programmer PGS Tensor Perth wrote:
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: 199808170555.WAA20672@usr09.primenet.com
+DATE: 1998-08-17T05:55:13+00:00  FROM: Terry Lambert <tlambert@primenet.com> <None>
+SUBJ: Re: sendfile() API?
+BODY:
+
+My main problem with sendfile(), as it is generally used, I
+presume, being ripped directly from the sample POP3 implementation
+on the NT SDK CDROM, is data interpretation.
+
+In order to make sendfile useful, it is necessary to store the
+file with CRLF line delimiters and the "." character pre-bytestuffed
+if it occors on a line by itself.  Like the one that follows:
+
+.
+
+The problem here is that no processing of file contents is allowed.
+
+This greatly limits the utility of such an interface.
+
+The any-fd-to-any-fd suggestion is actually rather bogus; it is
+only useful on cached data; that is, recieving or sending a file
+would be useful, but going from one network connection to another
+would be merely an extra two copies, when a sperate optimization
+to turn inbound mbuf's into outbound mbuf's would  save all but
+the copies to and from controller memory.
+
+Storing files with wire format contents is OK, even for mail files,
+until you try to use bot a POP3 and an IMAP and a local application
+client on the mail file.  Then it breaks down horrendously.
+
+I would also hate to have to edit CRLF into all of my WWW pages,
+which would be required.  8-(.
+
+
+					Terry Lambert
+					terry@lambert.org
+
+
+--------------------------------------------------------------------------------
+MID: 199808170557.NAA16819@ariadne.tensor.pgs.com
+DATE: 1998-08-17T05:57:28+00:00  FROM: Stephen Hocking-Senior Programmer PGS Tensor Perth <shocking@prth.pgs.com> <None>
+SUBJ: Re: sendfile() API? 
+BODY:
+
+His name was Chuck Cranor - can't think of anything else at this point.
+
+
+	Stephen
+-- 
+  The views expressed above are not those of PGS Tensor.
+
+    "We've heard that a million monkeys at a million keyboards could produce
+     the Complete Works of Shakespeare; now, thanks to the Internet, we know
+     this is not true."            Robert Wilensky, University of California
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: Pine.GSO.4.02A.9808162329430.26956-100000@redfish
+DATE: 1998-08-17T06:31:55+00:00  FROM: Marc Slemko <marcs@znep.com> <None>
+SUBJ: Re: sendfile() API?
+BODY:
+On Mon, 17 Aug 1998, Terry Lambert wrote:
+
+
+You seem to think that web servers do line ending transformation while
+they are sending.  They (speaking in general for every server I have used)
+don't.
+
+If you have to perform arbitrary data translations, I am doubtful that
+there is much room for an improved API.  However, in a lot of cases you
+don't.
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: Pine.GSO.4.02A.9808170036300.26956-100000@redfish
+DATE: 1998-08-17T07:46:05+00:00  FROM: Marc Slemko <marcs@znep.com> <None>
+SUBJ: Re: sendfile() API? 
+BODY:
+On Mon, 17 Aug 1998, Stephen Hocking-Senior Programmer PGS Tensor Perth wrote:
+
+
+http://www.ccrc.wustl.edu/pub/chuck/
+
+Don't see anything there that really deals with this though.  
+
+sendfile() certainly isn't a final answer to anything, but that doesn't
+mean it isn't useful.  Larry McVoy's (formerly of SGI) spice stuff
+(ftp://ftp.bitmover.com/pub/splice.ps.gz) is also interesting.
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: 199808170844.QAA17484@ariadne.tensor.pgs.com
+DATE: 1998-08-17T08:44:51+00:00  FROM: Stephen Hocking-Senior Programmer PGS Tensor Perth <shocking@prth.pgs.com> <None>
+SUBJ: Re: sendfile() API? 
+BODY:
+
+Yup, what triggered that recollection was a discussion that sendfile was too specific, and we needed a far more generalisable interfaces for these sorts of I/O routing requirements. The spectre of multiple warty special-purpose system calls scares me.
+
+
+	Stephen
+-- 
+  The views expressed above are not those of PGS Tensor.
+
+    "We've heard that a million monkeys at a million keyboards could produce
+     the Complete Works of Shakespeare; now, thanks to the Internet, we know
+     this is not true."            Robert Wilensky, University of California
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: 35D85D39.8ED6BD8E@pipeline.ch
+DATE: 1998-08-17T16:41:29+00:00  FROM: Andre Oppermann <oppermann@pipeline.ch> <None>
+SUBJ: Re: sendfile() API?
+BODY:
+Stephen Hocking-Senior Programmer PGS Tensor Perth wrote:
+
+Yea, I can remember somthing on c.u.b.f.m about that. But it was more
+about webserver performance in general.
+
+
+The benefit of something like sendfile() is (according to Marc and my
+understanding) to save the time something needs to get read from an
+FS and write to the network (very common in webserver and fileserver
+applications) via userland (actually the process that does the handling
+of the serving).
+
+IMO the best thing would be some sort of an LKM that does this, maybe
+with different API's. I don't know if it is possible for an LKM to
+offer such an API to userland processes. Someone knows?
+
+-- 
+Andre Oppermann
+
+CEO / Geschaeftsfuehrer
+Internet Business Solutions Ltd. (AG)
+Hardstrasse 235, 8005 Zurich, Switzerland
+Fon +41 1 277 75 75 / Fax +41 1 277 75 77
+http://www.pipeline.ch    ibs@pipeline.ch
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: 35D85F99.5304B24D@pipeline.ch
+DATE: 1998-08-17T16:51:37+00:00  FROM: Andre Oppermann <oppermann@pipeline.ch> <None>
+SUBJ: Re: sendfile() API?
+BODY:
+Julian Elischer wrote:
+
+I don't know if you mean exactly this, but it's an start:
+
+http://www.dejanews.com/dnquery.xp?search=thread&recnum=%3c6pqg14$emi$1
+@scanner.worldgate.com%3e%231/1&svcclass=dnserver (on one line)
+
+Thread in c.u.b.f.m called "PRO-Microsoft sentiment?" started on
+1998/07/20 by our best friend Fewtch...
+
+Matt, Marc and Terry are discussing the implentation of webservers.
+
+-- 
+Andre Oppermann
+
+CEO / Geschaeftsfuehrer
+Internet Business Solutions Ltd. (AG)
+Hardstrasse 235, 8005 Zurich, Switzerland
+Fon +41 1 277 75 75 / Fax +41 1 277 75 77
+http://www.pipeline.ch    ibs@pipeline.ch
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: Pine.BSF.4.02.9808171320350.5813-100000@sasami.jurai.net
+DATE: 1998-08-17T17:21:46+00:00  FROM: "Matthew N. Dodd" <winter@jurai.net> <None>
+SUBJ: Re: sendfile() API? 
+BODY:
+
+Apache 1.3 uses MMAP to send static content.
+
+I assume this is what sendfile() would do.
+
+The fact that Apache already has this feature, without the abstracting API
+would indicate that such a thing would be worth it no?
+
+On Sun, 16 Aug 1998, Jordan K. Hubbard wrote:
+
+
+-- 
+| Matthew N. Dodd  |This space | '78 Datsun 280Z | FreeBSD/NetBSD/Sprite/VMS |
+| winter@jurai.net |is for rent| '84 Volvo 245DL | ix86,sparc,m68k,pmax,vax  |
+| http://www.jurai.net/~winter | Are you k-rad elite enough for my webpage?  |
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: 199808171817.LAA06770@usr08.primenet.com
+DATE: 1998-08-17T18:17:34+00:00  FROM: Terry Lambert <tlambert@primenet.com> <None>
+SUBJ: Re: sendfile() API?
+BODY:
+
+I have no doubt that it would be useful for static pages; I am just not
+convinced that pushing the data over a call boundary is the real overhead
+here.  For an mmap'ed file, the only overhead is the copy from the VM
+buffer to the mbuf.  The only way such a call could eliminated this
+overhead is by passing the VM buffers down as mbuf contents.  This can
+be done (I did the code for it on the VMS NetWare server), but it's
+a lot of work.
+
+I have found that running a cgi that invokes "team" or "ddd" to overlap
+I/O does a much better job of pushing content, especially images, fast.
+The bottleneck is the network I/O capacity, not the read-from-disk
+capacity.
+
+
+					Terry Lambert
+					terry@lambert.org
+---
+Any opinions in this posting are my own and not those of my present
+or previous employers.
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: 199808172047.NAA06478@usr06.primenet.com
+DATE: 1998-08-17T20:47:37+00:00  FROM: Terry Lambert <tlambert@primenet.com> <None>
+SUBJ: Re: sendfile() API?
+BODY:
+
+
+OK, here we go again...
+
+On a non-unified VM and buffer cache OS, a write requires a bmap operation
+to map the user's buffer into the kernel virtual address sapce.
+
+On a Unified VM and buffer cache, this is not necessary.
+
+To establish an mmap mapping of a file into a process address space
+on a non-unified VM and buffer cache machine, seperate VM pages are
+needed, and these shadow buffer cache contents, requiring a copy of
+the buffer cache contents into VM to instantiate the mapping and make
+it visible to the process.
+
+On a unified VM and buffer cache system, a buffer is a VM mapping,
+and no copy is necessary.
+
+So if you mmap the file on FreeBSD, and then write a memory range in
+the file to a socket, then the only triggered copy is from a kernel
+space VM buffer to a kernel space anonymous VM mapping (an mbuf).
+
+There are two unavoidable copies here: (1), the copy from the disk
+controller to the VM buffer for the page demand, and (2) the copy
+from the mbuf to the ethernet controller.
+
+Technically, you could argue that you should be able to give a VM
+object to the networking stack, and save the triggered copy.  The
+problem with this is the page size on the system.  True, you could
+
+
+--------------------------------------------------------------------------------
+MID: 199808162027.UAA00964@dingo.cdrom.com
+DATE: 1998-08-16T20:25:07+00:00  FROM: Mike Smith <mike@smith.net.au> <None>
+SUBJ: Re: sendfile() API? 
+BODY:
+
+Is this the API that the apache folks discussed, ie. pre-send iovec, 
+fd, post-send iovec, etc.?
+
+I understand we were waiting for them to quantify their "it would be
+faster" claims. There's a lot of hype about how sendfile() would be "so
+cool", but no actual proof that it would improve anything.
+
+8)
+-- 
+\\  Sometimes you're ahead,       \\  Mike Smith
+\\  sometimes you're behind.      \\  mike@smith.net.au
+\\  The race is long, and in the  \\  msmith@freebsd.org
+\\  end it's only with yourself.  \\  msmith@cdrom.com
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: 877m05byej.fsf@couatl.uchicago.edu
+DATE: 1998-08-19T00:36:36+00:00  FROM: stephen farrell <stephen@farrell.org> <None>
+SUBJ: Re: sendfile() API?
+BODY:
+"Matthew N. Dodd" <winter@jurai.net> writes:
+
+
+The argument (in linux kernel) was something like that mmap has a lot
+of overhead, and that a specific sendfile could be better optimized...
+
+http://linux.ucs.indiana.edu/hypermail/linux/kernel/9806.3/0171.html
+
+worth looking at:
+
+http://linux.ucs.indiana.edu/hypermail/linux/kernel/9806.3/0305.html
+
+The discussion is roughly hereish -- need to search around for thread
+implementations and sendfile:
+
+http://linux.ucs.indiana.edu/hypermail/linux/kernel/9806.3/index.html
+
+(not that i've been reading linux-kernel or anything ;-)
+
+--
+
+Steve Farrell
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: 19980819111809.A22887@caramba.cs.tu-berlin.de
+DATE: 1998-08-19T09:18:09+00:00  FROM: Wolfram Schneider <wosch@cs.tu-berlin.de> <None>
+SUBJ: Re: sendfile() API?
+BODY:
+On 1998-08-17 18:17:34 +0000, Terry Lambert wrote:
+
+Who cares about data copy overhead? If the kernel spend 5% of the CPU
+time in copying, there are still 95% free CPU cycles.
+
+Freefall.freebsd.org transfers 20KB/s with a CPU load less
+than 0.01. 
+
+http://www.freebsd.org/server-status
+
+Server uptime: 5 days 20 hours 26 minutes 44 seconds
+Total accesses: 1096361 - Total Traffic: 9.9 GB
+CPU Usage: u.859375 s.828125 cu1.96094 cs.304688 - .000782% CPU load
+2.17 requests/sec - 20.6 kB/second - 9.5 kB/request
+
+-- 
+Wolfram Schneider <wosch@freebsd.org> http://freebsd.org/~w/ 
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: 24718.903524087@verdi.nethelp.no
+DATE: 1998-08-19T10:54:47+00:00  FROM: sthaug@nethelp.no <None>
+SUBJ: Re: sendfile() API?
+BODY:
+
+Quite a few people care about copy overhead, actually. Read Larry McVoy's 
+splice paper to see why:
+
+	http://www.bitmover.com/lm/papers/splice.ps.gz
+
+Steinar Haug, Nethelp consulting, sthaug@nethelp.no
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: Pine.SUN.3.91.980819100916.11227E-100000@terra
+DATE: 1998-08-19T14:10:01+00:00  FROM: "Ron G. Minnich" <rminnich@Sarnoff.COM> <None>
+SUBJ: Re: sendfile() API? 
+BODY:
+chuck cranor, see the netbsd vm subsystem, since chuck wrote it. 
+sendfile() is a cover for bad vm/os design. I hope to see someone outrun 
+sendfile with a netbsd running chuck's vm and generic system calls. 
+
+ron
+
+Ron Minnich                |"Using Windows NT, which is known to have some 
+rminnich@sarnoff.com       | failure modes, on a warship is similar to hoping 
+(609)-734-3120             | that luck will be in our favor"- A. Digiorgio
+ftp://ftp.sarnoff.com/pub/mnfs/www/docs/cluster.html 
+
+   
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: Pine.SUN.3.91.980819101028.11227F-100000@terra
+DATE: 1998-08-19T14:10:48+00:00  FROM: "Ron G. Minnich" <rminnich@Sarnoff.COM> <None>
+SUBJ: Re: sendfile() API? 
+BODY:
+read between thelines on chuck's thesis and you'll see why it deals 
+with the sendfile() question.
+ron
+
+Ron Minnich                |"Using Windows NT, which is known to have some 
+rminnich@sarnoff.com       | failure modes, on a warship is similar to hoping 
+(609)-734-3120             | that luck will be in our favor"- A. Digiorgio
+ftp://ftp.sarnoff.com/pub/mnfs/www/docs/cluster.html 
+
+   
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: Pine.GSO.4.02A.9808190942480.13979-100000@redfish
+DATE: 1998-08-19T16:49:43+00:00  FROM: Marc Slemko <marcs@znep.com> <None>
+SUBJ: Re: sendfile() API?
+BODY:
+On Wed, 19 Aug 1998, Wolfram Schneider wrote:
+
+
+Lots of people do and should care about it.
+
+freefall has such a tiny amount of web traffic that you could add an extra
+dozen copies to the path without it mattering.
+
+However, as you scale upwards by a few orders of magnitude, a bottleneck
+clearly appears on most current systems where you have excessive copying.
+Not all of this can be reflected in the CPU use of the process.
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: 199809011535.RAA09416@labinfo.iet.unipi.it
+DATE: 1998-09-01T15:35:32+00:00  FROM: Luigi Rizzo <luigi@labinfo.iet.unipi.it> <None>
+SUBJ: Announce: BRIDGE/IPFW/DUMMYNET PicoBSD stuff...
+BODY:
+Well, lot of stuff to announce... (Bcc to -hackers and -committers...)
+
+My dear committers: is there anyone out there who is willing to revise the
+code and import it into -current and/or -stable ???
+
+  http://www.iet.unipi.it/~luigi/ip_dummynet/bridge.html
+
+      i have mostly finished and tested the bridging patches
+      for FreeBSD, a diff file for 2.2.x (and might even work
+      on -current if someone wants to try...) is available.
+
+  http://www.iet.unipi.it/~luigi/ip_dummynet/
+
+      I have also cleaned up dummynet for 2.2.7 (lots of people
+      asking...) removing the last few bugs (now it works with natd,
+      thanks to Philippe Regnauld who tested it extensively).
+      This code includes a significant performance improvement in
+      SKIPTO instructions. Patches and docs available at the above URL.
+
+  http://www.iet.unipi.it/~luigi/ip_dummynet/bridge.html
+
+      And since i was at it... i decided to build a PicoBSD floppy
+      with BRIDGING, IPFW, and DUMMYNET on it... on 2.2.6
+      At the above URL you can find both the diffs to make PicoBSD
+      compile on 2.2.6/2.2.7 (small enough) and a floppy image with the
+      above.
+
+Want to know more ? Check the URLs...
+
+	c
+
+--------------------------------------------------------------------------------
+MID: 199809091622.SAA18286@labinfo.iet.unipi.it
+DATE: 1998-09-09T16:22:02+00:00  FROM: Luigi Rizzo <luigi@labinfo.iet.unipi.it> <None>
+SUBJ: dummynet now down to the bridging layer...
+BODY:
+I just finished the integration of dummynet and the bridging code,
+and now you can do bandwidth limitation at the bridging level (this
+means that you can put a dummynet-enabled bridge in the middle of
+an ethernet cable without having to reconfigure routes etc.)
+
+For those interested to try it, a floppy image is at
+
+    http://www.iet.unipi.it/~luigi/ip_dummynet/picobsd980909.bin
+
+It comes up with userconfig, has pnp support, and drivers for
+the following cards:
+
+	ed, de, fxp, vx, lnc
+
+the fxp code is untested, so if someone wants to try it out... i don't
+have such a card at the moment.
+
+Before you ask: since the packet filter is ipfw, at the moment you can
+only control IPv4 traffic -- other passes unchanged. I am considering
+ipfw extensions to select other traffic basing at least on the ethernet
+type field.
+
+(source code will be available in a few days)
+
+	cheers
+	luigi
+-----------------------------+--------------------------------------
+Luigi Rizzo                  |  Dip. di Ingegneria dell'Informazione
+email: luigi@iet.unipi.it    |  Universita' di Pisa
+tel: +39-50-568533           |  via Diotisalvi 2, 56126 PISA (Italy)
+fax: +39-50-568522           |  http://www.iet.unipi.it/~lu
+
+--------------------------------------------------------------------------------
+MID: XFMail.981005212559.vev@michvhf.com
+DATE: 1998-10-06T01:25:59+00:00  FROM: Vince Vielhaber <vev@michvhf.com> <None>
+SUBJ: Dummynet
+BODY:
+
+Two dummynet questions.
+
+1)  If I have example.com limited to 50KB/s and 10 hosts from example.com
+connect, are each of the 10 limited to 50KB/s or is it a total number?
+
+2)  What's the difference between 50K/s and 50k/s?  Note the lower case K.
+It seems to make a difference.  (I admit I didn't go thru the source for
+this one).
+
+Vince.
+-- 
+==========================================================================
+Vince Vielhaber -- KA8CSH   email: vev@michvhf.com   flame-mail: /dev/null
+       # include <std/disclaimers.h>                   TEAM-OS2
+   Online Searchable Campground Listings    http://www.camping-usa.com
+       "There is no outfit less entitled to lecture me about bloat
+               than the federal government"  -- Tony Snow
+==========================================================================
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: 199810060258.DAA05330@labinfo.iet.unipi.it
+DATE: 1998-10-06T02:58:06+00:00  FROM: Luigi Rizzo <luigi@labinfo.iet.unipi.it> <None>
+SUBJ: Re: Dummynet
+BODY:
+
+total.
+
+
+i'd have to lookup the source myself, but K should definitely work as
+a *1000 multiplier and k maybe not. Whether we should also accept
+lowercase letters and/or use 1024 instead of 1000, that's another story,
+but in networking i have always seen K for 1000 and M for 1000000
+
+	cheers
+	luigi
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: 199810060520.OAA07654@at.dotat.com
+DATE: 1998-10-06T05:20:14+00:00  FROM: Leigh Hart <hart@dotat.com> <None>
+SUBJ: Re: Dummynet 
+BODY:
+Hi Vince,
+
+Followups set to freebsd-net ...
+
+Vince Vielhaber <vev@michvhf.com> wrote:
+
+if example.com in your ipfw rule is a net/mask and each of the
+10 hosts from example.com match that net/mask then yes, I imagine
+all will be limited to 50KB/s collectively.
+
+That is my understanding, anyway :)
+
+
+At a guess, K/s is kilobytes/second and k/s is kilobits/second
+
+That's the popular convention I'm used to anyway.
+
+Cheers
+
+Leigh
+-- 
+| "By the time they had diminished | Leigh Hart, <hart@dotat.com> |
+|  from 50 to 8, the other dwarves | Dotat Communications Pty Ltd |
+|  began to suspect 'Hungry' ..."  | GPO Box 487 Adelaide SA 5001 |
+|   -- Gary Larson, "The Far Side" |  http://www.dotat.com/hart/  |
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: 199810060703.IAA05689@labinfo.iet.unipi.it
+DATE: 1998-10-06T07:03:41+00:00  FROM: Luigi Rizzo <luigi@labinfo.iet.unipi.it> <None>
+SUBJ: Re: Dummynet
+BODY:
+
+actually i don't remember well how i implemented this in ipfw, but i
+think KB is for kilobyte and K or Kb is for kilobit
+
+(with K=1000, not 1024)
+
+	cheers
+	luigi
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: 199810071752.LAA17076@harmony.village.org
+DATE: 1998-10-07T17:52:12+00:00  FROM: Warner Losh <imp@village.org> <None>
+SUBJ: Re: Dummynet 
+BODY:
+In message <199810060703.IAA05689@labinfo.iet.unipi.it> Luigi Rizzo writes:
+: > At a guess, K/s is kilobytes/second and k/s is kilobits/second
+: 
+: actually i don't remember well how i implemented this in ipfw, but i
+: think KB is for kilobyte and K or Kb is for kilobit
+: 
+: (with K=1000, not 1024)
+
+kb/s == 1000 bits per second.
+Kb/s == 1024 bits per second
+kB/s == 1000 bytes per second
+KB/s == 1024 bytes per second.
+
+In the SI units, as expanded for computer folks, b == bits, B ==
+bytes, k == 1000 and K == 1024.  M == 1000000 or 2^20 (or sometimes
+1024 * 1000).
+
+Warner
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: 199810071738.SAA08935@labinfo.iet.unipi.it
+DATE: 1998-10-07T17:38:51+00:00  FROM: Luigi Rizzo <luigi@labinfo.iet.unipi.it> <None>
+SUBJ: Re: Dummynet
+BODY:
+
+there's nothing worse than imprecise definitions! the b/B differentiation
+is widespread, but k/K are often used interchangeably.
+
+What i know for sure is that network bandwidths are seldom measured
+with powers of 2, i.e. 64k means 64.000 not 65536, ethernet is 10Mbit=
+10.000.000, etc.
+
+disk capacities... there K and M were used for 2^10 and 2^20
+respectively, but now it is more and more common to use them for 10^3
+and 10^6, and i hope the unit will not shrink as it happened to the
+"monitor inch" !
+
+	cheers
+	luigi
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: 199810072011.OAA18112@harmony.village.org
+DATE: 1998-10-07T20:11:54+00:00  FROM: Warner Losh <imp@village.org> <None>
+SUBJ: Re: Dummynet 
+BODY:
+In message <199810071738.SAA08935@labinfo.iet.unipi.it> Luigi Rizzo writes:
+: > : actually i don't remember well how i implemented this in ipfw, but i
+: > : think KB is for kilobyte and K or Kb is for kilobit
+: > : 
+: > : (with K=1000, not 1024)
+: > 
+: > kb/s == 1000 bits per second.
+: > Kb/s == 1024 bits per second
+: > kB/s == 1000 bytes per second
+: > KB/s == 1024 bytes per second.
+: > 
+: > In the SI units, as expanded for computer folks, b == bits, B ==
+: > bytes, k == 1000 and K == 1024.  M == 1000000 or 2^20 (or sometimes
+: > 1024 * 1000).
+: 
+: there's nothing worse than imprecise definitions! the b/B differentiation
+: is widespread, but k/K are often used interchangeably.
+: 
+: What i know for sure is that network bandwidths are seldom measured
+: with powers of 2, i.e. 64k means 64.000 not 65536, ethernet is 10Mbit=
+: 10.000.000, etc.
+: 
+: disk capacities... there K and M were used for 2^10 and 2^20
+: respectively, but now it is more and more common to use them for 10^3
+: and 10^6, and i hope the unit will not shrink as it happened to the
+: "monitor inch" !
+
+Yes.  But you'll notice that people tend to be careful about k vs K
+(eg 64k is 64,000), but less careful about M vs M :-
+
+==========================================================================================
+DB: freebsd-current.duckdb  hits=33
+==========================================================================================
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-current-9390627832f5e453>
+DATE: 1998-10-03T11:14:42+00:00  FROM: Mark Huizer <freebsd () xaa ! iae ! nl> <None>
+SUBJ: Re: dummynet for 3.0 available
+BODY:
+On Thu, Oct 01, 1998 at 07:43:26PM +0100, Luigi Rizzo wrote:
+
+It doesn't seem to be too keen on changing configs on a pipe. I had a
+pipe, at 3Kbit/s, changed it to 400, changed it to 10, etc, but after
+the second change I always got full speed, no limitations anymore.
+
+Mark
+-- 
+Nice testing in little China...
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-current-bb16f1cc73d61496>
+DATE: 1998-10-15T19:17:45+00:00  FROM: Edwin Culp <eculp () webwizard ! org ! mx> <None>
+SUBJ: Re: dummynet for 3.0 (fixed)
+BODY:
+Luigi Rizzo wrote:
+
+
+Hopefully, sooner:-) It's a kernel option, shouldn't be a problem.  I understand the
+ipfw changes have been tested and retested.
+
+Thanks a lot,
+
+ed
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-current-fb9577db8cc4413e>
+DATE: 1998-10-26T21:17:11+00:00  FROM: Edwin Culp <eculp () webwizard ! org ! mx> <None>
+SUBJ: dummynet - mpath
+BODY:
+I just saw yet another post on isp, asking about load balancing and
+bandwidth limiting over two connections and
+I remembered that dummynet was going to be integrated in current, after
+the smoke settled.  I also recall that there was mention of mpath doing
+the same.
+
+Does anyone know if and when either or both will form part of 3.0?
+
+Thanks
+
+ed
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-current-2b6a126c0936e99f>
+DATE: 1998-11-07T00:20:11+00:00  FROM: Phil Regnauld <regnauld () EU ! org> <None>
+SUBJ: Re: Problem with dummynet on RELEASE
+BODY:
+Alexander B. Povolotsky writes:
+
+	Yes, the stuff included in the xperimnt is missing a patch
+	to /sys/conf/files and/or /sys/conf/options (have to check) 
+	to create those two files.
+
+	Luigi  will be releasing a new version soon.
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-current-1f57bdd690c97284>
+DATE: 1998-12-05T00:38:04+00:00  FROM: Luigi Rizzo <luigi () labinfo ! iet ! unipi ! it> <None>
+SUBJ: Re: Dummynet for 3.0?
+BODY:
+
+yes it is, i promise will tackle the problem asap.
+
+	luigi
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-current-907fcb519d8aaa34>
+DATE: 1998-12-08T16:18:29+00:00  FROM: Luigi Rizzo <luigi () labinfo ! iet ! unipi ! it> <None>
+SUBJ: Re: dummynet + freebsd 3.0
+BODY:
+
+i think you forgot something (e.g. update the files in
+/usr/include/netinet)
+
+	luigi
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-current-4444fd72d025cdbf>
+DATE: 1998-12-14T16:38:35+00:00  FROM: Luigi Rizzo <luigi () labinfo ! iet ! unipi ! it> <None>
+SUBJ: dummynet almost in -current
+BODY:
+excuse the crosspost, but as the subject says, i think i have
+committed all the relevant pieces to have dummynet in -current.
+While i look for the manpages (I could swear i had committed them
+to -stable, but i cannot find them!) can people have a try ?
+
+It should work by simply putting
+
+	options DUMMYNET
+	options BRIDGE
+
+in your kernel config file. Remember you need IPFIREWALL. More info at
+the usual place http://www.iet.unipi.it/~luigi/ip_dummynet/
+
+dummynet should also work on alpha architecture (I cannot test it)
+whereas bridging will not because some macros are missing in bridge.h i
+think.
+
+if there is some obvious mistake (my 3.0 disk is a bit outdated) feel
+free to fix things. Also, if someone wants to compile a LINT kernel
+with both options that would make me feel safer in adding those options
+uncommented in LINT.
+
+	thanks
+	luigi
+-----------------------------+--------------------------------------
+Luigi Rizzo                  |  Dip. di Ingegneria dell'Informazione
+email: luigi@iet.unipi.it    |  Universita' di Pisa
+tel: +39-50-568533           |  via Diotisalvi 2, 56126 PISA (Italy)
+fax: +39-50-568522           |  http://www.iet.unipi.it/~luigi/
+____________________________
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-current-6dd5cd242f1009be>
+DATE: 1998-12-17T11:56:13+00:00  FROM: "Jay Nordwick" <nordwick () scam ! XCF ! Berkeley ! EDU> <None>
+SUBJ: Re: sendfile()
+BODY:
+man sendfile turns up:
+
+HISTORY
+     sendfile() first appeared in FreeBSD 3.0.1.
+
+AUTHORS
+sendfile() and this manual page were written by David Greenman
+<dg@root.com>.
+
+BSD                            November 5, 1998                              2
+
+
+Also, in the rumor mill, I head that CDROM started using it and the
+load dropped way down.
+
+-jay
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: 199805111007.MAA17553@labinfo.iet.unipi.it
+DATE: 1998-05-11T10:07:08+00:00  FROM: Luigi Rizzo <luigi@labinfo.iet.unipi.it> <None>
+SUBJ: dummynet is working (more or less)
+BODY:
+The updated code for dummynet is available at
+
+    http://www.iet.unipi.it/~luigi/ip_dummynet/
+
+i have it mostly working here on 2.2.6 -- differences with -current
+should be not significant.
+
+In order to make it work you need IPFW and IPDIVERT options in your
+kernel.
+
+There is one problem with the code, which I i am not sure how to fix
+now:
+
+in the call to ip_output, the caller passes a few parameters, including
+a pointer to a "struct route" . The pointer is saved together with the
+mbuf containing the packet, and used some time later when the packet is
+extracted from the queue/delay line and passed to the interface. By
+that time, the original data structure might have been deallocated :(
+resulting in a panic or other weird behaviours.
+
+I am not sure if the correct way to keep this info alive is to increase
+reference count to this structure (to be cleared at a later time, but
+the exact time might be tricky to find out, since i don't really want
+to modify all low level drivers) or what else.
+
+Suggestions welcome.
+
+	cheers
+	luigi
+-----------------------------+--------------------------------------
+Luigi Rizzo                  |  Dip. di Ingegneria dell'Informazione
+email: luigi@iet.un
+
+--------------------------------------------------------------------------------
+MID: 199805181541.RAA07408@labinfo.iet.unipi.it
+DATE: 1998-05-18T15:41:27+00:00  FROM: Luigi Rizzo <luigi@labinfo.iet.unipi.it> <None>
+SUBJ: dummynet 980518 available
+BODY:
+this version of dummynet has:
+ * some stability patches;
+ * a preliminary implementation of the SKIPTO rule optimization that 
+   was discussed yesterday by Julian (this is an indipendent
+   implementation, and not fully tested yet, but just to give the idea)
+ * the introduction of a net.inet.tcp.no_local_slowstart variable
+   to control the FreeBSD optimization of slowstart on local nets.
+
+more comments, and the actual patches for 2.2.6 , at the usual address
+
+    http://www.iet.unipi.it/~luigi/ip_dummynet/
+
+	cheers
+	luigi
+-----------------------------+--------------------------------------
+Luigi Rizzo                  |  Dip. di Ingegneria dell'Informazione
+email: luigi@iet.unipi.it    |  Universita' di Pisa
+tel: +39-50-568533           |  via Diotisalvi 2, 56126 PISA (Italy)
+fax: +39-50-568522           |  http://www.iet.unipi.it/~luigi/
+_____________________________|______________________________________
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: 199810011843.TAA11715@labinfo.iet.unipi.it
+DATE: 1998-10-01T18:43:26+00:00  FROM: Luigi Rizzo <luigi@labinfo.iet.unipi.it> <None>
+SUBJ: dummynet for 3.0 available
+BODY:
+I have what i think is a working version of my dummynet code and
+associated stuff for 3.0. Diffs against 3.0-980925 are at
+
+    http://www.iet.unipi.it/~luigi/ip_dummynet/dn-3.0-981001.diffs 
+
+testers welcome, but i don't think this will go on the 3.0-RELEASE CD
+other than as an "experimental"  patchfile (still, it will be nice to
+have bugs sorted out!)
+
+	luigi
+-----------------------------+--------------------------------------
+Luigi Rizzo                  |  Dip. di Ingegneria dell'Informazione
+email: luigi@iet.unipi.it    |  Universita' di Pisa
+tel: +39-50-568533           |  via Diotisalvi 2, 56126 PISA (Italy)
+fax: +39-50-568522           |  http://www.iet.unipi.it/~luigi/
+_____________________________|______________________________________
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: 19981002173610.29646@deepo.prosa.dk
+DATE: 1998-10-02T15:36:10+00:00  FROM: Philippe Regnauld <regnauld@deepo.prosa.dk> <None>
+SUBJ: Re: dummynet for 3.0 available
+BODY:
+Luigi Rizzo writes:
+
+	I think the code was beat hard enough that, if successful (will try
+	it tonight), it might be included for 3.0 ?  It's a kernel option
+	and doesn't break anything if not invoked...
+
+-- 
+ -[ Philippe Regnauld / sysadmin / regnauld@deepo.prosa.dk / +55.4N +11.3E ]-
+
+               The Internet is busy.  Please try again later.
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: 199810021414.PAA13453@labinfo.iet.unipi.it
+DATE: 1998-10-02T14:14:30+00:00  FROM: Luigi Rizzo <luigi@labinfo.iet.unipi.it> <None>
+SUBJ: Re: dummynet for 3.0 available
+BODY:
+
+in -stable though... i had only 6 people downloading this code for
+-current.
+
+
+i'll leave the decision to -core. This code rearranges some small
+segments in ip_input() and ip_output(), and the bridging code also
+touches a few things in device drivers.  We have rules after all,
+and 3.0 is less targeted to ISPs and network providers than -stable,
+i think.
+
+	cheers
+	luigi
+-----------------------------+--------------------------------------
+Luigi Rizzo                  |  Dip. di Ingegneria dell'Informazione
+email: luigi@iet.unipi.it    |  Universita' di Pisa
+tel: +39-50-568533           |  via Diotisalvi 2, 56126 PISA (Italy)
+fax: +39-50-568522           |  http://www.iet.unipi.it/~luigi/
+_____________________________|______________________________________
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: 19981002145744.A5151@Alameda.net
+DATE: 1998-10-02T21:57:44+00:00  FROM: Ulf Zimmermann <ulf@Alameda.net> <None>
+SUBJ: Re: dummynet for 3.0 available
+BODY:
+On Fri, Oct 02, 1998 at 05:36:10PM +0200, Philippe Regnauld wrote:
+
+Just as a side note. I used Dummynet VERY successfull at ISPcon to
+demonstrate things. We had up to 8 clients behind a K6-200 machine
+and limit bandwidth to 28.8K/56K 150ms/500ms.
+
+
+-- 
+Regards, Ulf.
+
+---------------------------------------------------------------------
+Ulf Zimmermann, 1525 Pacific Ave., Alameda, CA-94501, #: 510-769-2936
+Alameda Networks, Inc. | http://www.Alameda.net  | Fax#: 510-521-5073
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: 19981003131442.A289@xaa.iae.nl
+DATE: 1998-10-03T11:14:42+00:00  FROM: Mark Huizer <freebsd@xaa.iae.nl> <None>
+SUBJ: Re: dummynet for 3.0 available
+BODY:
+On Thu, Oct 01, 1998 at 07:43:26PM +0100, Luigi Rizzo wrote:
+
+It doesn't seem to be too keen on changing configs on a pipe. I had a
+pipe, at 3Kbit/s, changed it to 400, changed it to 10, etc, but after
+the second change I always got full speed, no limitations anymore.
+
+Mark
+-- 
+Nice testing in little China...
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: 199810030940.KAA00774@labinfo.iet.unipi.it
+DATE: 1998-10-03T09:40:59+00:00  FROM: Luigi Rizzo <luigi@labinfo.iet.unipi.it> <None>
+SUBJ: Re: dummynet for 3.0 available
+BODY:
+
+thanks, will try to reproduce the problem here.
+
+	luigi
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: 199810151314.OAA28254@labinfo.iet.unipi.it
+DATE: 1998-10-15T13:14:14+00:00  FROM: Luigi Rizzo <luigi@labinfo.iet.unipi.it> <None>
+SUBJ: dummynet for 3.0 (fixed)
+BODY:
+Thanks to Philippe Regnauld i have removed the hopefully last bugs from
+the 3.0 port of dummynet+bridge. Patches for a very -current system are
+at http://www.iet.unipi.it/~luigi/ip_dummynet/
+
+This stuff will be (hopefully) on the 3.0 CD in the xperimnt/ area
+whatever it is called there. Will commit patches after the release,
+at which point it would be interesting (for me) if someone can try
+these things on Alpha machines.
+
+	cheers
+	luigi
+-----------------------------+--------------------------------------
+Luigi Rizzo                  |  Dip. di Ingegneria dell'Informazione
+email: luigi@iet.unipi.it    |  Universita' di Pisa
+tel: +39-50-568533           |  via Diotisalvi 2, 56126 PISA (Italy)
+fax: +39-50-568522           |  http://www.iet.unipi.it/~luigi/
+_____________________________|______________________________________
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: 19981015203604.15745@deepo.prosa.dk
+DATE: 1998-10-15T18:36:04+00:00  FROM: Philippe Regnauld <regnauld@deepo.prosa.dk> <None>
+SUBJ: Re: dummynet for 3.0 (fixed)
+BODY:
+Luigi Rizzo writes:
+
+	Yes, works like a charm!  Doesn't break anything!(*)  Heals your
+	dog!  Tames your users!  Should be in LINT! :-P
+
+	(didn't break anything on my sysyem with IPFIREWALL, IPDIVERT, natd,
+	SOFTUPDATES, VESA, VM86).  
+
+
+	I really hope so.  It's really worth trying out!
+
+	With a nice shell script in xperimnt for patching ? :-P
+
+-- 
+ -[ Philippe Regnauld / sysadmin / regnauld@deepo.prosa.dk / +55.4N +11.3E ]-
+
+               The Internet is busy.  Please try again later.
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: 199810151630.RAA28639@labinfo.iet.unipi.it
+DATE: 1998-10-15T16:30:14+00:00  FROM: Luigi Rizzo <luigi@labinfo.iet.unipi.it> <None>
+SUBJ: Re: dummynet for 3.0 (fixed)
+BODY:
+
+this is your job. you are the shell script expert...
+
+	cheers
+	luigi
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: 362641EE.D064078B@webwizard.org.mx
+DATE: 1998-10-15T18:41:51+00:00  FROM: Edwin Culp <eculp@webwizard.org.mx> <None>
+SUBJ: Re: dummynet for 3.0 (fixed)
+BODY:
+Philippe Regnauld wrote:
+
+
+I am downloading it now.  I plan to apply it tomorrow morning early, after some
+of the release smoke clears:-)  I assume that it must be reapplied after each
+cvsup or am I hopefully wrong?
+
+Thanks
+
+ed
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: 199810151652.RAA28708@labinfo.iet.unipi.it
+DATE: 1998-10-15T16:52:43+00:00  FROM: Luigi Rizzo <luigi@labinfo.iet.unipi.it> <None>
+SUBJ: Re: dummynet for 3.0 (fixed)
+BODY:
+
+it will go into the std. sources after the release is done. couple of
+weeks perhaps ?
+
+	luigi
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: 36264A59.C352D4C1@webwizard.org.mx
+DATE: 1998-10-15T19:17:45+00:00  FROM: Edwin Culp <eculp@webwizard.org.mx> <None>
+SUBJ: Re: dummynet for 3.0 (fixed)
+BODY:
+Luigi Rizzo wrote:
+
+
+Hopefully, sooner:-) It's a kernel option, shouldn't be a problem.  I understand the
+ipfw changes have been tested and retested.
+
+Thanks a lot,
+
+ed
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: 3634E6D6.6F1A8863@webwizard.org.mx
+DATE: 1998-10-26T21:17:11+00:00  FROM: Edwin Culp <eculp@webwizard.org.mx> <None>
+SUBJ: dummynet - mpath
+BODY:
+I just saw yet another post on isp, asking about load balancing and
+bandwidth limiting over two connections and
+I remembered that dummynet was going to be integrated in current, after
+the smoke settled.  I also recall that there was mention of mpath doing
+the same.
+
+Does anyone know if and when either or both will form part of 3.0?
+
+Thanks
+
+ed
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: 199811061901.WAA01279@enterprise.sl.ru
+DATE: 1998-11-06T19:01:46+00:00  FROM: "Alexander B. Povolotsky" <tarkhil@synchroline.ru> <None>
+SUBJ: Problem with dummynet on RELEASE
+BODY:
+Hello!
+
+dummynet patch added references to two include files, opt_bdg.h and
+opt_ipdn.h. Where should I find them?...
+
+Alex.
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: 19981107012011.41885@stimpy.prosa.dk
+DATE: 1998-11-07T00:20:11+00:00  FROM: Phil Regnauld <regnauld@EU.org> <None>
+SUBJ: Re: Problem with dummynet on RELEASE
+BODY:
+Alexander B. Povolotsky writes:
+
+	Yes, the stuff included in the xperimnt is missing a patch
+	to /sys/conf/files and/or /sys/conf/options (have to check) 
+	to create those two files.
+
+	Luigi  will be releasing a new version soon.
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: 19981205005136.D817@ariel.xaa.iae.nl
+DATE: 1998-12-04T23:51:37+00:00  FROM: Mark Huizer <xaa@xaa.iae.nl> <None>
+SUBJ: Dummynet for 3.0?
+BODY:
+
+Ordinarily good and proper sentiments, but this issue came up after
+code freeze and this option was not open to Luigi.
+
+Is the option to add dummynet to 3.0 open now?
+
+Mark
+-- 
+ Mark Huizer    -   xaa@xaa.iae.nl   -   markh@win.tue.nl
+
+ Always borrow money from a pessimist; he doesn't expect to be		
+ paid back.								
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: 199812050038.BAA10091@labinfo.iet.unipi.it
+DATE: 1998-12-05T00:38:04+00:00  FROM: Luigi Rizzo <luigi@labinfo.iet.unipi.it> <None>
+SUBJ: Re: Dummynet for 3.0?
+BODY:
+
+yes it is, i promise will tackle the problem asap.
+
+	luigi
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: Pine.BSF.4.02.9812080952310.10655-100000@speed.matrix.com.br
+DATE: 1998-12-08T11:56:38+00:00  FROM: Rodrigo Campos <camposr@MATRIX.COM.BR> <None>
+SUBJ: dummynet + freebsd 3.0
+BODY:
+I've applied the dn-3.0-981001.diffs patch to freebsd 3.0 release in order
+to use dummynet. Ipfw and the kernel compiled just fine but when i try to
+configure a pipe the following problem occured:
+
+# ipfw pipe 1 config bw 200kbit/s
+ipfw: setsockopt(IP_DUMMYNET_CONFIGURE): Protocol not available
+
+any clues ?
+
+cheers,
+
+--
+________________________
+Rodrigo Albani de Campos                           [join.the.silicon.trip]
+Matrix Internet - NOC  
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: 199812081618.RAA17170@labinfo.iet.unipi.it
+DATE: 1998-12-08T16:18:29+00:00  FROM: Luigi Rizzo <luigi@labinfo.iet.unipi.it> <None>
+SUBJ: Re: dummynet + freebsd 3.0
+BODY:
+
+i think you forgot something (e.g. update the files in
+/usr/include/netinet)
+
+	luigi
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: 199812141638.RAA05342@labinfo.iet.unipi.it
+DATE: 1998-12-14T16:38:35+00:00  FROM: Luigi Rizzo <luigi@labinfo.iet.unipi.it> <None>
+SUBJ: dummynet almost in -current
+BODY:
+excuse the crosspost, but as the subject says, i think i have
+committed all the relevant pieces to have dummynet in -current.
+While i look for the manpages (I could swear i had committed them
+to -stable, but i cannot find them!) can people have a try ?
+
+It should work by simply putting
+
+	options DUMMYNET
+	options BRIDGE
+
+in your kernel config file. Remember you need IPFIREWALL. More info at
+the usual place http://www.iet.unipi.it/~luigi/ip_dummynet/
+
+dummynet should also work on alpha architecture (I cannot test it)
+whereas bridging will not because some macros are missing in bridge.h i
+think.
+
+if there is some obvious mistake (my 3.0 disk is a bit outdated) feel
+free to fix things. Also, if someone wants to compile a LINT kernel
+with both options that would make me feel safer in adding those options
+uncommented in LINT.
+
+	thanks
+	luigi
+-----------------------------+--------------------------------------
+Luigi Rizzo                  |  Dip. di Ingegneria dell'Informazione
+email: luigi@iet.unipi.it    |  Universita' di Pisa
+tel: +39-50-568533           |  via Diotisalvi 2, 56126 PISA (Italy)
+fax: +39-50-568522           |  http://www.iet.unipi.it/~luigi/
+____________________________
+
+--------------------------------------------------------------------------------
+MID: 199812170518.AAA22593@highwind.com
+DATE: 1998-12-17T05:18:05+00:00  FROM: HighWind Software Information <info@highwind.com> <None>
+SUBJ: sendfile()
+BODY:
+
+Heard some talk of sendfile() in 3.0
+
+Where is that interface? man page? Header file?
+
+Is it in a very new kernel or just a rumor?
+
+-Rob
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: 199812170559.VAA87886@apollo.backplane.com
+DATE: 1998-12-17T05:59:42+00:00  FROM: Matthew Dillon <dillon@apollo.backplane.com> <None>
+SUBJ: Re: sendfile()
+BODY:
+:Heard some talk of sendfile() in 3.0
+:
+:Where is that interface? man page? Header file?
+:
+:Is it in a very new kernel or just a rumor?
+:
+:-Rob
+:
+:To Unsubscribe: send mail to majordomo@FreeBSD.org
+:with "unsubscribe freebsd-current" in the body of the message
+
+    Yes, it's been in -current for about a month and a half.  Works great!
+    You'll have to download a recent -current and make world.
+
+    Essentially:
+
+     int sendfile(int fd, int s, off_t offset, size_t nbytes,
+		   struct sf_hdtr *hdtr, off_t *sbytes, int flags)
+
+    Where sf_hdtr allows headers and trailers to be merged into the
+    stream. 
+
+    If you are thinking of using sendfile with HighWind's news software 
+    and you already store the articles in wire format, it should work great! 
+    I don't use it in Diablo because I store articles in their binary 
+    format :-(.
+
+    Linux has a similar system call, but I think not quite as sophisticated
+    as DG's FreeBSD implementation.
+
+					-Matt
+
+    Matthew Dillon  Engineering, HiWay Technologies, Inc. & BEST Internet 
+                    Communications & God knows what else.
+    <dillon@backplane.com> (Please include original email in any response)    
+
+To Unsu
+
+--------------------------------------------------------------------------------
+MID: 199812171155.DAA12975@hub.freebsd.org
+DATE: 1998-12-17T11:56:13+00:00  FROM: "Jay Nordwick" <nordwick@scam.XCF.Berkeley.EDU> <None>
+SUBJ: Re: sendfile() 
+BODY:
+man sendfile turns up:
+
+HISTORY
+     sendfile() first appeared in FreeBSD 3.0.1.
+
+AUTHORS
+sendfile() and this manual page were written by David Greenman
+<dg@root.com>.
+
+BSD                            November 5, 1998                              2
+
+
+Also, in the rumor mill, I head that CDROM started using it and the
+load dropped way down.
+
+-jay
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+

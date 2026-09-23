@@ -1,0 +1,1625 @@
+total 40
+[1992-10-28T14:39:33+00:00] [jdoyle@phy.umassd.edu (Jim Doyle)] [
+I realize that forsale postings are frowned upon in this group ; however, I am
+offering to sell compatible hardware to i386/486 users of Mach and BSD386.
+
+I have SIX (6) 3COM 501 Ethernet cards for the ISA bus to sell - as a cheap
+and reliable solution to people wanting network capability. Details follow:
+
+
+Hardware:	 Thin (10base2) and AUI support
+		 Takes an 8-bit slot - works with any ISA based PC Clone
+		 Onboard frame buffer with DMA transfer <-> host
+		 Fully strappable for DMA 0-3, INT 2-7, I/O and MEM address
+	      ** Can be run at elevated ISA bus speeds, if your motherboard
+		 supports it! We run ours on an ISA bus clocked at 16 MHz
+		 rather than the 'standard' 8 MHz. It's fast!
+
+Compatibility:	 i386 Mach 2.5 (MSD2.6) and Mach 3.0 from CMU,Mt. Xinu
+		 BSD386 Compatible
+		 Very compatible with DOS/Windows based software:
+			Sun PC/NFS v3.5
+			Latest version of FTP Software's PC/TCP
+			Clarkson Packet Driver support for WinQVT/SOS/etc.
+
+All of the cards are TESTED on a running Mach 3.0 based i486/ISA machine.
+
+I will ship them at my cost C.O.D. for $50.00/each ; I can provide
+references as to my trustworthiness on sales over the net.
+
+
+.............. Jim Doyle
+-------------------------------------------------------------------------------
+Jim Doyle	jdoyle@mdphya.phy.umassd.edu , jdoyle@titan.ucc.umass.edu
+		91 Blackberry Lane, Amherst MA 01002-1516
+		413.549.1409 ; 413.549.7535
+
+
+
+]
+MID: Bwu61z.2Dw@umassd.edu
+SUBJ: For Sale: Cheap Ethernet solution for i386/486 BSD hackers...
+BODY:  | I realize that forsale postings are frowned upon in this group ; however, I am | offering to sell compatible hardware to i386/486 users of Mach and BSD386. |  | I have SIX (6) 3COM 501 Ethernet cards for the ISA bus to sell - as a cheap | and reliable solution to people wanting network capability. Details follow: |  |  | Hardware:	 Thin (10base2) and AUI support | 		 Takes an 8-bit slot - works with any ISA based PC Clone | 		 Onboard frame buffer with DMA transfer <-> host | 		 Fully strappable for DMA 0-3, INT 2-7, I/O and MEM address | 	      ** Can be run at elevated ISA bus speeds, if your motherboard | 		 supp
+------------------------------------------------------------
+[1992-12-31T16:44:42+00:00] [jburnes@csisun.uucp (Jim Burnes)] [I have a couple of questions about 386bsd since I have been of
+then net for about 4 months [serious withdrawl] and need to
+know where it stands...
+
+1.  I have the 0.1 distribution sitting next to me on a bunch
+    of microdisks.  Has a newer version come out?  Any rumours?
+    Who is the keeper of the lastest patched version/patches?
+   
+2.  Has anyone come up with a hack on 'bootany' or 'shoelace'
+    to let you boot either MSDOS/BSD or whatever?
+
+3.  I'm interested in getting x386 to run on top of 386bsd.
+    I've read a lot lately about graphics accelerators and
+    everytime I read it seems like 2 months from now better/faster
+    accelerators will be out.  Right now it seems like a 
+    battle between the Actix Grphicsengine 32/VLbus or
+    the ATI Ultra Pro with a strong showing of support
+    for the S3 chips.  In the coming months it looks like
+    the S3/928 chipset or the new Matrox chip may be the
+    way to go.  Matrox apparently is building in (get this)
+    Goroud shading.
+
+4   BTW: What are peoples favorite window managers for X386?
+    I would think 'tvtwm' is pretty popular.  Is it possible
+    to buy Motif from OSF and just compile it down for x386?
+    Several advantages for MOTIF here...namely the HP Motif
+    Interface builder "winterp" can be used on it.  I heard
+    somewhere that Motif was $100 from OSF.
+
+4.  I'm planning upgrades now for installing 386bsd.  I think
+    a 15 or 17 inch MAG monitor would be great.  For a hard
+    drive either a 213 or a 340 would seem my most affordable
+    price point.  Anyone have any idea on the best performance/
+    value on these critters?  Seems like Maxtor and WD are
+    the way to go.
+
+5.  At the current prices it seems like the AMD 386/40 VLbus
+    motherboards are still a better deal than the 486's.
+    My own pet theory is that a 386/40 is faster than most
+    people realize.  Combined with a decent graphics accelerator
+    such a system should really fly.  Even with the additional
+    cost of a Cyrix 387/40 its still cheaper than 486's.  Are
+    there large additional benefits of a 486 on 386BSD?  My
+    guess would be that the large on-chip cache would visibly
+    speed things up if the kernel stays in it most of the time.
+
+6.  What about SCSI/tape backup support?  Serial ports, parallel
+    printer drivers etc etc.
+
+Thanks for taking the time.....
+
+Many thanks to the Jolitzs for a serious act of philanthropy.
+
+Support the hacker ethic!
+
+Jim Burnes
+
+   ` 
+ 
+
+
+]
+MID: C04uIJ.18D@csisun.uucp
+SUBJ: [386BSD] Latest Update
+BODY: I have a couple of questions about 386bsd since I have been of | then net for about 4 months [serious withdrawl] and need to | know where it stands... |  | 1.  I have the 0.1 distribution sitting next to me on a bunch |     of microdisks.  Has a newer version come out?  Any rumours? |     Who is the keeper of the lastest patched version/patches? |     | 2.  Has anyone come up with a hack on 'bootany' or 'shoelace' |     to let you boot either MSDOS/BSD or whatever? |  | 3.  I'm interested in getting x386 to run on top of 386bsd. |     I've read a lot lately about graphics accelerators and |     everytime I read it seem
+------------------------------------------------------------
+[1993-02-20T13:38:27+00:00] [jmonroy@netcom.com (Jesus Monroy Jr)] [ 
+ 
+             To all codewriters/patchers for FDC & QIC-40/80
+             -----------------------------------------------
+ 
+                In the SVNET meeting, here in silicon valley, on
+        feb. 17,1993, William Jolitz requested that all code
+        patchers/writers start to send in any regression tests done,
+        for their "code/fixes".
+        "This is only the professional thing to do."
+ 
+ 
+                I will also be requesting the same from all
+        who's assistance I have.
+ 
+
+
+
+]
+MID: 1993Feb20.133827.29622@netcom.com
+SUBJ: To codewriters/hackers/patchers
+BODY:   |   |              To all codewriters/patchers for FDC & QIC-40/80 |              ----------------------------------------------- |   |                 In the SVNET meeting, here in silicon valley, on |         feb. 17,1993, William Jolitz requested that all code |         patchers/writers start to send in any regression tests done, |         for their "code/fixes". |         "This is only the professional thing to do." |   |   |                 I will also be requesting the same from all |         who's assistance I have. |   |  |  |  | 
+------------------------------------------------------------
+[1993-03-09T18:58:27+00:00] [cgd@eden.CS.Berkeley.EDU (Chris G. Demetriou)] [In article <JKH.93Mar9214944@whisker.lotus.ie> jkh@whisker.lotus.ie (Jordan K. Hubbard) writes:
+[ the idea ... ]
+
+YES, that would be wonderful.  it's the one thing about apollos that
+i *loved*...  thank god you didn't ask for `node_data... 8-)
+
+>The question is, is anyone out there game to see what it would take to
+>do this in 386bsd?  I think you'll find getting at the current process
+>environment from namei() somewhat tricky..
+
+possibly impossible, w/o mods to the rest of the kernel, esp.
+if processes decide to mangle their args buf...
+
+namei takes a struct proc * of the process in question, it's just a matter
+of finding the environment variables, and i can' think of
+a reliable way to do that, w/o hacking exec slightly...
+
+
+
+chris
+--
+Chris G. Demetriou                                    cgd@cs.berkeley.edu
+
+                 MENTALLY CONTAMINATED and proud of it!
+
+
+]
+MID: CGD.93Mar9185827@eden.CS.Berkeley.EDU
+SUBJ: Re: A challenge to all true kernel hackers - conditional symlinks.
+BODY: In article <JKH.93Mar9214944@whisker.lotus.ie> jkh@whisker.lotus.ie (Jordan K. Hubbard) writes: | [ the idea ... ] |  | YES, that would be wonderful.  it's the one thing about apollos that | i *loved*...  thank god you didn't ask for `node_data... 8-) |  | >The question is, is anyone out there game to see what it would take to | >do this in 386bsd?  I think you'll find getting at the current process | >environment from namei() somewhat tricky.. |  | possibly impossible, w/o mods to the rest of the kernel, esp. | if processes decide to mangle their args buf... |  | namei takes a struct proc * of the process in question,
+------------------------------------------------------------
+[1993-03-09T21:49:44+00:00] [jkh@whisker.lotus.ie (Jordan K. Hubbard)] [The Apollo OS (Domain/IX) had a lot of truly interesting features, many
+of which may never make it to Unix (pity), but one in particular has stuck
+with me for a long time.
+
+On pyramid's version of Unix, you had "conditional symbolic links"
+which was their fancy term for "complete kludge" :-).  You could have
+a symlink which pointed at one of two places (att or bsd), depending
+on the settings of a user's "universe" pointer.  So you had /usr/lib
+as a conditional symlink pointing to either /usr/lib.att or
+/usr/lib.ucb (something like that, anyway, this is all from ancient
+memory).
+
+Then you have HP's current "file contexts" where you have a file that's
+really a directory containing several versions of that file, one of which
+is selected based on a process's "context" settings.  Potentially useful
+for different situations, but my first reaction was (and is still) Barf!
+
+Finally (this is leading somewhere, honest) you had Apollo's
+beautifully simple, yet very powerful, mechanism for doing symlinks,
+which was to allow environment variables to be imbeded anywhere within
+a link name.  I.E.:
+
+	ln -s /usr/doc /usr/src/documents/$(LANG)
+
+Depending on the setting of the user's environment variable "LANG", /usr/doc
+might then point to /usr/src/documents/german, /usr/src/documents/french,
+etc.
+
+Naturally, this would also switch very nicely off of environment
+variables like TERM, MACHINE, ARCH, USER, etc.  It made creative
+system administration a lot easier!
+
+The question is, is anyone out there game to see what it would take to
+do this in 386bsd?  I think you'll find getting at the current process
+environment from namei() somewhat tricky..
+
+Comments?
+
+					Jordan
+--
+Jordan Hubbard          Lotus Development Ireland       jkh@whisker.lotus.ie
+386bsd Patchkit Coordinator                             All-around nice dude.
+I do not speak for Lotus as that's not in my job description.
+
+
+]
+MID: JKH.93Mar9214944@whisker.lotus.ie
+SUBJ: A challenge to all true kernel hackers - conditional symlinks.
+BODY: The Apollo OS (Domain/IX) had a lot of truly interesting features, many | of which may never make it to Unix (pity), but one in particular has stuck | with me for a long time. |  | On pyramid's version of Unix, you had "conditional symbolic links" | which was their fancy term for "complete kludge" :-).  You could have | a symlink which pointed at one of two places (att or bsd), depending | on the settings of a user's "universe" pointer.  So you had /usr/lib | as a conditional symlink pointing to either /usr/lib.att or | /usr/lib.ucb (something like that, anyway, this is all from ancient | memory). |  | Then you have 
+------------------------------------------------------------
+[1993-03-10T10:50:14+00:00] [grefen@convex.com (Stefan Grefen)] [In article <CGD.93Mar9185827@eden.CS.Berkeley.EDU> cgd@eden.CS.Berkeley.EDU (Chris G. Demetriou) writes:
+>In article <JKH.93Mar9214944@whisker.lotus.ie> jkh@whisker.lotus.ie (Jordan K. Hubbard) writes:
+>[ the idea ... ]
+>
+>YES, that would be wonderful.  it's the one thing about apollos that
+>i *loved*...  thank god you didn't ask for `node_data... 8-)
+>
+I would love it too ,but ..
+>>The question is, is anyone out there game to see what it would take to
+>>do this in 386bsd?  I think you'll find getting at the current process
+>>environment from namei() somewhat tricky..
+>
+Where is the problem ?? I think Apollo did it by hacking the library function
+open. First do a lstat , if it's a symlink get it , replace all the env
+variables endif , than open the file. 
+Every Systemcall that uses filenames must be fixed too.
+And you have to relink all applications against the new library.
+Regards
+	Stefan
+P.S.
+I would prefer a genrelized version of the universe concept.
+
+
+-- 
+Stefan Grefen                          Convex Computer GmbH, Frankfurt, Germany
+grefen@convex.com		       Phone: +49-69-665270
+
+
+
+]
+MID: 1993Mar10.105014.25665@convex.com
+SUBJ: Re: A challenge to all true kernel hackers - conditional symlinks.
+BODY: In article <CGD.93Mar9185827@eden.CS.Berkeley.EDU> cgd@eden.CS.Berkeley.EDU (Chris G. Demetriou) writes: | >In article <JKH.93Mar9214944@whisker.lotus.ie> jkh@whisker.lotus.ie (Jordan K. Hubbard) writes: | >[ the idea ... ] | > | >YES, that would be wonderful.  it's the one thing about apollos that | >i *loved*...  thank god you didn't ask for `node_data... 8-) | > | I would love it too ,but .. | >>The question is, is anyone out there game to see what it would take to | >>do this in 386bsd?  I think you'll find getting at the current process | >>environment from namei() somewhat tricky.. | > | Where is the problem ??
+------------------------------------------------------------
+[1993-03-10T10:56:52+00:00] [grefen@convex.com (Stefan Grefen)] [In article <CGD.93Mar9185827@eden.CS.Berkeley.EDU> cgd@eden.CS.Berkeley.EDU (Chris G. Demetriou) writes:
+>In article <JKH.93Mar9214944@whisker.lotus.ie> jkh@whisker.lotus.ie (Jordan K. Hubbard) writes:
+>[ the idea ... ]
+>
+>YES, that would be wonderful.  it's the one thing about apollos that
+>i *loved*...  thank god you didn't ask for `node_data... 8-)
+>
+I would love it too ,but ..
+>>The question is, is anyone out there game to see what it would take to
+>>do this in 386bsd?  I think you'll find getting at the current process
+>>environment from namei() somewhat tricky..
+>
+Where is the problem ?? I think Apollo did it by hacking the library function
+open. First do a lstat , if it's a symlink get it , replace all the env
+variables endif , than open the file. 
+Every Systemcall that uses filenames must be fixed too.
+And you have to relink all applications against the new library.
+Regards
+	Stefan
+P.S.
+I would prefer a generalized version of the universe concept.
+
+
+-- 
+Stefan Grefen                          Convex Computer GmbH, Frankfurt, Germany
+grefen@convex.com		       Phone: +49-69-665270
+
+
+
+]
+MID: 1993Mar10.105652.25929@convex.com
+SUBJ: Re: A challenge to all true kernel hackers - conditional symlinks.
+BODY: In article <CGD.93Mar9185827@eden.CS.Berkeley.EDU> cgd@eden.CS.Berkeley.EDU (Chris G. Demetriou) writes: | >In article <JKH.93Mar9214944@whisker.lotus.ie> jkh@whisker.lotus.ie (Jordan K. Hubbard) writes: | >[ the idea ... ] | > | >YES, that would be wonderful.  it's the one thing about apollos that | >i *loved*...  thank god you didn't ask for `node_data... 8-) | > | I would love it too ,but .. | >>The question is, is anyone out there game to see what it would take to | >>do this in 386bsd?  I think you'll find getting at the current process | >>environment from namei() somewhat tricky.. | > | Where is the problem ??
+------------------------------------------------------------
+[1993-03-10T13:28:27+00:00] [avalon@coombs.anu.edu.au (Darren Reed)] [cgd@eden.CS.Berkeley.EDU (Chris G. Demetriou) writes:
+
+>In article <JKH.93Mar9214944@whisker.lotus.ie> jkh@whisker.lotus.ie (Jordan K. Hubbard) writes:
+>[ the idea ... ]
+
+>YES, that would be wonderful.  it's the one thing about apollos that
+>i *loved*...  thank god you didn't ask for `node_data... 8-)
+
+>>The question is, is anyone out there game to see what it would take to
+>>do this in 386bsd?  I think you'll find getting at the current process
+>>environment from namei() somewhat tricky..
+
+>possibly impossible, w/o mods to the rest of the kernel, esp.
+>if processes decide to mangle their args buf...
+
+>namei takes a struct proc * of the process in question, it's just a matter
+>of finding the environment variables, and i can' think of
+>a reliable way to do that, w/o hacking exec slightly...
+
+I didn't read the original post, but some background, Pyramind have
+conditional symlinks available on OSx.  The use for this was in having
+links which were different depending on which universe (att or ucb)
+you were working in (back when there was SVR3 and 4.3BSD).  Changing
+universe was a system call, however.
+
+If conditional links were to be done properly it would idealy be a new
+flag/mode added to S_IFMT.  What then to decide the "condition" on is a
+good question :)  I don't like the idea of using just environment vars.
+Maybe something like:
+$VAR - env var name holding actual value
+#!path - execute this to get name
+name - ordinary link
+as the filename...maybe even something which works on gid/uid (but I think
+this is too featuristic).
+
+darren
+
+
+]
+MID: avalon.731770107@coombs
+SUBJ: Re: A challenge to all true kernel hackers - conditional symlinks.
+BODY: cgd@eden.CS.Berkeley.EDU (Chris G. Demetriou) writes: |  | >In article <JKH.93Mar9214944@whisker.lotus.ie> jkh@whisker.lotus.ie (Jordan K. Hubbard) writes: | >[ the idea ... ] |  | >YES, that would be wonderful.  it's the one thing about apollos that | >i *loved*...  thank god you didn't ask for `node_data... 8-) |  | >>The question is, is anyone out there game to see what it would take to | >>do this in 386bsd?  I think you'll find getting at the current process | >>environment from namei() somewhat tricky.. |  | >possibly impossible, w/o mods to the rest of the kernel, esp. | >if processes decide to mangle their args
+------------------------------------------------------------
+[1993-03-10T16:52:08+00:00] [mycroft@hal.gnu.ai.mit.edu (Charles Hannum)] [
+In article <avalon.731770107@coombs> avalon@coombs.anu.edu.au (Darren
+Reed) writes:
+>
+> $VAR - env var name holding actual value
+> #!path - execute this to get name
+> name - ordinary link
+
+s/#!path/$(path)/
+
+It is probably better (read: easier in terms of parsing, and less
+likely to break Emacs) to use the psh syntax for process substitution.
+
+-- 
+ \  /   Charles Hannum, mycroft@ai.mit.edu
+ /\ \   PGP public key available on request.  MIME, AMS, NextMail accepted.
+Scheme  White heterosexual atheist male (WHAM) pride!
+
+
+]
+MID: 1nl6boINNbpu@life.ai.mit.edu
+SUBJ: Re: A challenge to all true kernel hackers - conditional symlinks.
+BODY:  | In article <avalon.731770107@coombs> avalon@coombs.anu.edu.au (Darren | Reed) writes: | > | > $VAR - env var name holding actual value | > #!path - execute this to get name | > name - ordinary link |  | s/#!path/$(path)/ |  | It is probably better (read: easier in terms of parsing, and less | likely to break Emacs) to use the psh syntax for process substitution. |  | --  |  \  /   Charles Hannum, mycroft@ai.mit.edu |  /\ \   PGP public key available on request.  MIME, AMS, NextMail accepted. | Scheme  White heterosexual atheist male (WHAM) pride! |  |  | 
+------------------------------------------------------------
+[1993-03-10T20:12:16+00:00] [bvs@BitBlocks.com (Bakul Shah)] [jkh@whisker.lotus.ie (Jordan K. Hubbard) writes:
+
+>Finally (this is leading somewhere, honest) you had Apollo's
+>beautifully simple, yet very powerful, mechanism for doing symlinks,
+>which was to allow environment variables to be imbeded anywhere within
+>a link name.  I.E.:
+
+>	ln -s /usr/doc /usr/src/documents/$(LANG)
+
+>Depending on the setting of the user's environment variable "LANG", /usr/doc
+>might then point to /usr/src/documents/german, /usr/src/documents/french,
+>etc.
+
+Currently $, ( and ) are ordinary filename characters.  I
+wouldn't want any special meaning ascribed to these three chars
+and some other way of gaining the same functionality would be
+preferable.
+
+Though, the basic idea has merit (i.e. I like it!) and can be
+done without further bloating the kernel.  A variant of open()
+will allow you to do this and more.  Here is a sketch of this
+idea.
+
+- Create a new system call open1() that takes a file-descriptor
+  of a directory and a path. Change things so that each process gets
+  file-descriptors for `/' and the current directory (perhaps as
+  `well-known' constants).
+
+- open1(fd, path, path_size, flags, mode) will resolve the path
+  relative to the directory `fd'.  If the entire path can be
+  resolved, it returns a file-descriptor of the opened file and a
+  null path.
+
+- If only part of the path can be resolved, open1() returns the
+  fd of the last component that could be mapped to a directory
+  and the unresolved portion of the path.  Now the caller
+  (typically a library routine) can do what it wants with the
+  rest of the path.  If you want to implement conditional
+  symlinks as above, it can look up the environment, replace the
+  env. var with its value and call open1 again with the new path
+  and fd.  If you want to splice in result of a command in the
+  path, you can do that too.
+
+Given open1(), our old friend open() can be safely removed from
+the kernel.  It can be implemented as a library routine with
+something like
+
+open(char * path, int flags, int mode) {
+	char buffer[LOTSASPACE];
+	char buffer1[LOTSASPACE];
+	int fd = CWD;
+	extern int errno;
+	char save;
+	
+	for (;;) { 
+		int dd;
+		/* Figure out where to start the search */
+		if (path[0] == '/') {
+			while (path[0] == '/')
+				path++;
+			dd = ROOT;
+		} else
+			dd = fd;
+		strcpy(buffer, path);
+
+		fd = open1(dd, buffer, sizeof buffer, flags, mode);
+
+		if (fd < 0)			/* error? */
+			return -1;
+
+		if (strlen(buffer) == 0)	/* are we done? */
+			return fd;
+
+		if (buffer[0] == '$') {		/* env. variable? */
+			/* splice in the var value before remaining path */
+			char * var = ++buffer;
+			while (*buffer && *buffer != '/')
+				buffer++;
+			save = *buffer;
+			*buffer = '\0';
+			var = getenv(var);
+			if (!var)
+				break;
+			*buffer = save;
+			sprintf(buffer1, "%s%s", var, buffer);
+		} else if (buffer[0] == '`') {	/* command? */
+			/* splice in the command result before remaining path */
+			FILE * stream;
+			char * command = ++buffer;
+
+			while (*buffer && *buffer != '/')
+				buffer++;
+			save = *buffer;
+			stream = popen(command);
+			if (!stream)
+				break;
+			fread(buffer1, sizeof buffer1, 1, stream);
+			/* XXX check we got the entire path */
+			pclose(stream);
+			strcat(buffer1, buffer);
+		} else
+			break;
+		/* the newly doctored path is what we will work with now */
+		path = buffer1;
+	}
+	/* here in case of an error */
+	if (fd != CWD)
+		close(fd);
+	errno = ENOENT;
+	return -1;
+}
+
+Like I said, this is merely a sketch; a real design will have to
+take care of all sorts of details.  Implementing open1()
+shouldn't be that hard though.  I would prefer a file mode for
+such things instead of usurping $ etc. as normal chars.  In this
+case you'd check the mode of returned fd instead of prefix of
+returned path.  Also note that with this scheme even code for
+following symlinks can be removed from the kernel.  On the negative
+side you make a few more system calls.
+
+Comments? 
+
+Bakul Shah <bvs@BitBlocks.com>
+
+
+]
+MID: C3ow4H.FID@BitBlocks.com
+SUBJ: Re: A challenge to all true kernel hackers - conditional symlinks.
+BODY: jkh@whisker.lotus.ie (Jordan K. Hubbard) writes: |  | >Finally (this is leading somewhere, honest) you had Apollo's | >beautifully simple, yet very powerful, mechanism for doing symlinks, | >which was to allow environment variables to be imbeded anywhere within | >a link name.  I.E.: |  | >	ln -s /usr/doc /usr/src/documents/$(LANG) |  | >Depending on the setting of the user's environment variable "LANG", /usr/doc | >might then point to /usr/src/documents/german, /usr/src/documents/french, | >etc. |  | Currently $, ( and ) are ordinary filename characters.  I | wouldn't want any special meaning ascribed to these three cha
+------------------------------------------------------------
+[1993-03-10T21:56:39+00:00] [jkh@whisker.lotus.ie (Jordan K. Hubbard)] [The only problem with replacing open() is that you still need to deal
+with things like stat() and any other system call that deals with
+filenames (and follows links) directly.  Note that I wasn't talking about
+usurping the $, (, and ) characters in filenames altogether, only in
+symbolic links.  I don't think that this would be any great hardship.
+
+					Jordan
+
+--
+Jordan Hubbard          Lotus Development Ireland       jkh@whisker.lotus.ie
+386bsd Patchkit Coordinator                             All-around nice dude.
+I do not speak for Lotus as that's not in my job description.
+
+
+]
+MID: JKH.93Mar10215639@whisker.lotus.ie
+SUBJ: Re: A challenge to all true kernel hackers - conditional symlinks.
+BODY: The only problem with replacing open() is that you still need to deal | with things like stat() and any other system call that deals with | filenames (and follows links) directly.  Note that I wasn't talking about | usurping the $, (, and ) characters in filenames altogether, only in | symbolic links.  I don't think that this would be any great hardship. |  | 					Jordan |  | -- | Jordan Hubbard          Lotus Development Ireland       jkh@whisker.lotus.ie | 386bsd Patchkit Coordinator                             All-around nice dude. | I do not speak for Lotus as that's not in my job description. |  |  | 
+------------------------------------------------------------
+[1993-03-11T00:19:29+00:00] [terry@cs.weber.edu (A Wizard of Earth C)] [In article <CGD.93Mar9185827@eden.CS.Berkeley.EDU> cgd@eden.CS.Berkeley.EDU (Chris G. Demetriou) writes:
+>In article <JKH.93Mar9214944@whisker.lotus.ie> jkh@whisker.lotus.ie (Jordan K. Hubbard) writes:
+>[ the idea ... ]
+>
+>YES, that would be wonderful.  it's the one thing about apollos that
+>i *loved*...  thank god you didn't ask for `node_data... 8-)
+>
+>>The question is, is anyone out there game to see what it would take to
+>>do this in 386bsd?  I think you'll find getting at the current process
+>>environment from namei() somewhat tricky..
+>
+>possibly impossible, w/o mods to the rest of the kernel, esp.
+>if processes decide to mangle their args buf...
+>
+>namei takes a struct proc * of the process in question, it's just a matter
+>of finding the environment variables, and i can' think of
+>a reliable way to do that, w/o hacking exec slightly...
+
+	This is a simple mod of /sys/kern/vfs_lookup.c, but it introduces
+a number of *bad* security holes (look at the CERT advisories on NeXT
+machines if you don't believe me).  The exec hack is not strictly necessary,
+although if done that way requires mods to the user struct and the proc
+struct.  The easy way is to look at the crt0.o code that passes arguments
+to main(); you are interested in the envp.  Just reference the memory the
+same way from the kernel (you may have to fault stuff in -- this is the
+problematic part).
+
+The mod should be done to lookup(), not namei(), and the contents of the
+symbolic link will have to be the same so ls -l of the link gives the
+link data rather than a listing of the link target.  This gets more
+complicated, in that it blows any possibility of concurrency under SMP
+until the secondary lookup has completed.  Basically, the lookup of
+symbolic links is done twice, once without "follow-links" to read the
+link data, and once to lookup th substituted link data.  This has to be
+done in case the lookup invokes another "conditional" symbolic link as
+it's terminal object.
+
+Either way, it's handled outside of the scope of a particular file system
+type (above the VFS layer).
+
+Basically, this results in what would be called "logical names" if we were
+all VMS users.
+
+I would vote *against* making this mod until we have a generic installation
+system, since wide-scale use of such a feature before then could put us all
+through hell later on (at least those of us interested in cleaning up the
+install process).
+
+
+					Terry Lambert
+					terry@icarus.weber.edu
+---
+Any opinions in this posting are my own and not those of my present
+or previous employers.
+-- 
+-------------------------------------------------------------------------------
+                                        "I have an 8 user poetic license" - me
+ Get the 386bsd FAQ from agate.berkeley.edu:/pub/386BSD/386bsd-0.1/unofficial
+-------------------------------------------------------------------------------
+
+
+]
+MID: 1993Mar11.001929.5652@fcom.cc.utah.edu
+SUBJ: Re: A challenge to all true kernel hackers - conditional symlinks.
+BODY: In article <CGD.93Mar9185827@eden.CS.Berkeley.EDU> cgd@eden.CS.Berkeley.EDU (Chris G. Demetriou) writes: | >In article <JKH.93Mar9214944@whisker.lotus.ie> jkh@whisker.lotus.ie (Jordan K. Hubbard) writes: | >[ the idea ... ] | > | >YES, that would be wonderful.  it's the one thing about apollos that | >i *loved*...  thank god you didn't ask for `node_data... 8-) | > | >>The question is, is anyone out there game to see what it would take to | >>do this in 386bsd?  I think you'll find getting at the current process | >>environment from namei() somewhat tricky.. | > | >possibly impossible, w/o mods to the rest of the k
+------------------------------------------------------------
+[1993-03-11T01:14:58+00:00] [peter@NeoSoft.com (Peter da Silva)] [In article <JKH.93Mar9214944@whisker.lotus.ie> jkh@whisker.lotus.ie (Jordan K. Hubbard) writes:
+> Finally (this is leading somewhere, honest) you had Apollo's
+> beautifully simple, yet very powerful, mechanism for doing symlinks,
+> which was to allow environment variables to be imbeded anywhere within
+> a link name.
+
+As you mention, it'd be hard to get at the real environment. What would
+be nice would be to have some way of exporting this stuff into the kernel.
+
+On intel's OpenNET system, namei does a preparatory lookup on the file
+name in a couple of tables, one per UID and one global (only root can
+diddle with the global one). So you can do:
+
+	rdr @tmp /usr1/tmp
+
+Then when any process owned by you accessed "@tmp" it got "/usr/tmp".
+
+This is how the network supports the "supperroot". "//xds13" gets handled
+by this mechanism and the rest of the filename is passed to the remote system
+intact.
+
+In a symbolic link world this is less useful, and the latest OpenNET doesn't
+have it. But you can see how part of the idea would be useful: the per-uid
+and (new) a per-pid namespace that namei can look at. It'd be *this* name
+space that symlinks would expand:
+
+	assign LANG english
+	ln -s /usr/i18n/$(LANG)/docs /usr/docs
+
+Or:
+
+	assign -uid LANG english
+
+Or:
+
+	assign -world LANG english
+
+This gives you a default mechanism to handle the case where LANG isn't set.
+-- 
+Peter da Silva.  <peter@sugar.neosoft.com>.
+ `-_-'   Oletko halannut suttasi t�n��n?
+  'U`    
+Tarjoilija, t�m� ateria el�� viel�.
+
+
+]
+MID: C3pA4z.7CG@sugar.neosoft.com
+SUBJ: Re: A challenge to all true kernel hackers - conditional symlinks.
+BODY: In article <JKH.93Mar9214944@whisker.lotus.ie> jkh@whisker.lotus.ie (Jordan K. Hubbard) writes: | > Finally (this is leading somewhere, honest) you had Apollo's | > beautifully simple, yet very powerful, mechanism for doing symlinks, | > which was to allow environment variables to be imbeded anywhere within | > a link name. |  | As you mention, it'd be hard to get at the real environment. What would | be nice would be to have some way of exporting this stuff into the kernel. |  | On intel's OpenNET system, namei does a preparatory lookup on the file | name in a couple of tables, one per UID and one global (only r
+------------------------------------------------------------
+[1993-03-11T16:43:02+00:00] [bvs@BitBlocks.com (Bakul Shah)] [jkh@whisker.lotus.ie (Jordan K. Hubbard) writes:
+
+>The only problem with replacing open() is that you still need to deal
+>with things like stat() and any other system call that deals with
+>filenames (and follows links) directly.  
+
+Good point!  Yes, such a change would affect more than just open().
+I would do this in one of two ways:
+
+a) change all calls that take a filename to take three arguments:
+   a filedescriptor for the starting dir, filename, sizeof
+   filename buffer.  Here only rename() and link() requires a
+   slightly more complicated scheme.
+
+b) make the mapping of a filename to a handle a separate syscall.
+   The handle is a small integer just like a file descriptor.
+   Having a handle does not mean the file is `open' but with it
+   you can perform operations for which you currently give a
+   filename.  Here again link() and rename() would require a
+   careful design.  In general, associating a new filename with a
+   filesystem object gets a bit tricky.
+
+My preference would be b).
+
+I just feel that the kernel has become far too big and while one
+can always add more code for new functions, a better idea is to
+gain new functionality by restructuring and simplifying the
+kernel and in the process removing restrictions.  I think we can
+do this without introducing new security holes, and without
+breaking existing programs (well, except that you will have to
+relink them).  The fact that there are pairs of syscalls with
+very similar function (except that one takes a file name, the
+other a file descriptor) has pointed to such a simplification for
+a long time.
+
+>					  Note that I wasn't talking about
+>usurping the $, (, and ) characters in filenames altogether, only in
+>symbolic links.  I don't think that this would be any great hardship.
+
+It is not a question of hardship, it is that the type of a file
+should not depend on its name; they are independent concepts.
+And, in my humble opinion, this (i.e. conditional symlinks) is
+not a compelling enough reason to make such an exception.
+
+Bakul Shah <bvs@BitBlocks.com>
+
+
+]
+MID: C3qH3r.I7n@BitBlocks.com
+SUBJ: Re: A challenge to all true kernel hackers - conditional symlinks.
+BODY: jkh@whisker.lotus.ie (Jordan K. Hubbard) writes: |  | >The only problem with replacing open() is that you still need to deal | >with things like stat() and any other system call that deals with | >filenames (and follows links) directly.   |  | Good point!  Yes, such a change would affect more than just open(). | I would do this in one of two ways: |  | a) change all calls that take a filename to take three arguments: |    a filedescriptor for the starting dir, filename, sizeof |    filename buffer.  Here only rename() and link() requires a |    slightly more complicated scheme. |  | b) make the mapping of a filename to a
+------------------------------------------------------------
+[1993-03-11T16:56:40+00:00] [wollman@sadye.emba.uvm.edu (Garrett Wollman)] [In article <1993Mar11.001929.5652@fcom.cc.utah.edu> terry@cs.weber.edu (A Wizard of Earth C) writes:
+>	This is a simple mod of /sys/kern/vfs_lookup.c, but it introduces
+>a number of *bad* security holes (look at the CERT advisories on NeXT
+>machines if you don't believe me).
+
+This is indeed a problem.  However, IBM has provided some similar
+functionality (with a radically different implementation) in their
+system, and NeXT did get one thing right.
+
+The thing that NeXT got right (and they got it from CMU; it's a
+standard part of AFS) is `@sys' and brethren.  These are interpreted
+on a system-wide basis, set up as a part of conifguration, and
+interpreted only during symlink expansion.  For the work that I'm
+doing, it would be *really* nice to be able to doing things with
+`/386bsd' and know that it is *guaranteed* to point to whatever the
+current running kernel is, regardless of what it was called when
+loaded.
+
+The thing that IBM got right is that it is possible to mount
+practically anything over practically anything else of the same type.
+This means that, for example, it is possible to mount one *file* over
+another, obscuring the old file in the process.  The IBMs also seem to
+be a lot less touchy about multiple mounts/exports pointing towards
+the same physical file system; e.g., it is legal to mount
+`/usr/share/lib/terminfo' from another system which exports
+`/usr/share' to most users.  This is a somewhat useful feature.
+
+-GAWollman
+
+-- 
+Garrett A. Wollman   | Shashish is simple, it's discreet, it's brief. ... 
+wollman@emba.uvm.edu | Shashish is the bonding of hearts in spite of distance.
+uvm-gen!wollman      | It is a bond more powerful than absence.  We like people
+UVM disagrees.       | who like Shashish.  - Claude McKenzie + Florent Vollant
+
+
+]
+MID: 1993Mar11.165640.21096@uvm.edu
+SUBJ: Re: A challenge to all true kernel hackers - conditional symlinks.
+BODY: In article <1993Mar11.001929.5652@fcom.cc.utah.edu> terry@cs.weber.edu (A Wizard of Earth C) writes: | >	This is a simple mod of /sys/kern/vfs_lookup.c, but it introduces | >a number of *bad* security holes (look at the CERT advisories on NeXT | >machines if you don't believe me). |  | This is indeed a problem.  However, IBM has provided some similar | functionality (with a radically different implementation) in their | system, and NeXT did get one thing right. |  | The thing that NeXT got right (and they got it from CMU; it's a | standard part of AFS) is `@sys' and brethren.  These are interpreted | on a system-wi
+------------------------------------------------------------
+[1993-03-11T23:19:30+00:00] [peter@NeoSoft.com (Peter da Silva)] [In article <C3ow4H.FID@BitBlocks.com> bvs@BitBlocks.com (Bakul Shah) writes:
+> Currently $, ( and ) are ordinary filename characters.
+
+How about using "//" within a symlink to indicate that the next component
+is a name?
+
+	ln -s /usr/i18n//lang/docs /usr/docs
+
+> - Create a new system call open1() that takes a file-descriptor
+>   of a directory and a path. Change things so that each process gets
+>   file-descriptors for `/' and the current directory (perhaps as
+>   `well-known' constants).
+
+I've written about a very slight variant of this idea before. It goes a bit
+further: make this the basic open call, and have open simply call this with
+the appropriate arguments. Make all calls based on these file descriptor
+based variants. Programs that had to grovel around directory trees would be
+able to use dup() to save their original home directory, which would much
+simplify them. You'd get rid of 90% of the calls to getcwd().
+
+I'd still rather have namei() in the kernel, so you could have it do smarter
+things than it does now. For example, when it gets to a mount point it should
+just ditch the whole rest of the path to the remote system to resolve. You
+could also mount programs and get them to handle fancy stuff like
+
+	/dev/com1/9600,n,8,1
+
+> On the negative side you make a few more system calls.
+
+	A *lot* more.
+-- 
+Peter da Silva.  <peter@sugar.neosoft.com>.
+ `-_-'   Oletko halannut suttasi t�n��n?
+  'U`    
+Tarjoilija, t�m� ateria el�� viel�.
+
+
+]
+MID: C3qzGI.38q@sugar.neosoft.com
+SUBJ: Re: A challenge to all true kernel hackers - conditional symlinks.
+BODY: In article <C3ow4H.FID@BitBlocks.com> bvs@BitBlocks.com (Bakul Shah) writes: | > Currently $, ( and ) are ordinary filename characters. |  | How about using "//" within a symlink to indicate that the next component | is a name? |  | 	ln -s /usr/i18n//lang/docs /usr/docs |  | > - Create a new system call open1() that takes a file-descriptor | >   of a directory and a path. Change things so that each process gets | >   file-descriptors for `/' and the current directory (perhaps as | >   `well-known' constants). |  | I've written about a very slight variant of this idea before. It goes a bit | further: make this the basic o
+------------------------------------------------------------
+[1993-03-11T23:28:20+00:00] [dmp3592@bcstec.ca.boeing.com (Dean M. Phillips)] [In article <JKH.93Mar10215639@whisker.lotus.ie> jkh@whisker.lotus.ie (Jordan K. Hubbard) writes:
+>The only problem with replacing open() is that you still need to deal
+>with things like stat() and any other system call that deals with
+>filenames (and follows links) directly.  Note that I wasn't talking about
+>usurping the $, (, and ) characters in filenames altogether, only in
+>symbolic links.  I don't think that this would be any great hardship.
+>
+I could create an ambiguity:  How do you create a soft link to a real file
+named $(LANG) for example?  Of course I have to admit that I have never
+seen a real file with a name of that form.
+-- 
+-------------------------------------------------------------------------------
+Dean M. Phillips                                    206-294-1024
+Boeing Commercial Airplane Group:                   dmp3592@icdfs.ca.boeing.com
+Home:                                               dean@deanstoy.wa.com
+
+
+]
+MID: C3qzvC.2ps@bcstec.ca.boeing.com
+SUBJ: Re: A challenge to all true kernel hackers - conditional symlinks.
+BODY: In article <JKH.93Mar10215639@whisker.lotus.ie> jkh@whisker.lotus.ie (Jordan K. Hubbard) writes: | >The only problem with replacing open() is that you still need to deal | >with things like stat() and any other system call that deals with | >filenames (and follows links) directly.  Note that I wasn't talking about | >usurping the $, (, and ) characters in filenames altogether, only in | >symbolic links.  I don't think that this would be any great hardship. | > | I could create an ambiguity:  How do you create a soft link to a real file | named $(LANG) for example?  Of course I have to admit that I have never | 
+------------------------------------------------------------
+[1993-03-12T02:07:48+00:00] [peter@NeoSoft.com (Peter da Silva)] [In article <C3qH3r.I7n@BitBlocks.com> bvs@BitBlocks.com (Bakul Shah) writes:
+> b) make the mapping of a filename to a handle a separate syscall.
+
+Use open/open1:
+	fd = open(name, O_TOKEN);
+	fd = open1(dirfd, name, namelen, O_TOKEN);
+-- 
+Peter da Silva.  <peter@sugar.neosoft.com>.
+ `-_-'   Oletko halannut suttasi t�n��n?
+  'U`    
+Tarjoilija, t�m� ateria el�� viel�.
+
+
+]
+MID: C3r791.6sB@sugar.neosoft.com
+SUBJ: Re: A challenge to all true kernel hackers - conditional symlinks.
+BODY: In article <C3qH3r.I7n@BitBlocks.com> bvs@BitBlocks.com (Bakul Shah) writes: | > b) make the mapping of a filename to a handle a separate syscall. |  | Use open/open1: | 	fd = open(name, O_TOKEN); | 	fd = open1(dirfd, name, namelen, O_TOKEN); | --  | Peter da Silva.  <peter@sugar.neosoft.com>. |  `-_-'   Oletko halannut suttasi t�n��n? |   'U`     | Tarjoilija, t�m� ateria el�� viel�. |  |  | 
+------------------------------------------------------------
+[1993-03-12T02:10:57+00:00] [mycroft@hal.gnu.ai.mit.edu (Charles Hannum)] [
+In article <C3pA4z.7CG@sugar.neosoft.com> peter@NeoSoft.com (Peter da
+Silva) writes:
+>
+> On intel's OpenNET system, namei does a preparatory lookup on the
+> file name in a couple of tables, one per UID and one global (only
+> root can diddle with the global one). So you can do:
+>
+>	rdr @tmp /usr1/tmp
+>
+> Then when any process owned by you accessed "@tmp" it got "/usr/tmp".
+
+Sounds like Plan 9, eh?
+
+-- 
+ \  /   Charles Hannum, mycroft@ai.mit.edu
+ /\ \   PGP public key available on request.  MIME, AMS, NextMail accepted.
+Scheme  White heterosexual atheist male (WHAM) pride!
+
+
+]
+MID: 1norfhINNq5o@life.ai.mit.edu
+SUBJ: Re: A challenge to all true kernel hackers - conditional symlinks.
+BODY:  | In article <C3pA4z.7CG@sugar.neosoft.com> peter@NeoSoft.com (Peter da | Silva) writes: | > | > On intel's OpenNET system, namei does a preparatory lookup on the | > file name in a couple of tables, one per UID and one global (only | > root can diddle with the global one). So you can do: | > | >	rdr @tmp /usr1/tmp | > | > Then when any process owned by you accessed "@tmp" it got "/usr/tmp". |  | Sounds like Plan 9, eh? |  | --  |  \  /   Charles Hannum, mycroft@ai.mit.edu |  /\ \   PGP public key available on request.  MIME, AMS, NextMail accepted. | Scheme  White heterosexual atheist male (WHAM) pride! |  |  | 
+------------------------------------------------------------
+[1993-03-12T11:25:29+00:00] [peter@NeoSoft.com (Peter da Silva)] [In article <1norfhINNq5o@life.ai.mit.edu> mycroft@hal.gnu.ai.mit.edu (Charles Hannum) writes:
+> In article <C3pA4z.7CG@sugar.neosoft.com> peter@NeoSoft.com (Peter da
+> Silva) writes:
+> > On intel's OpenNET system, namei does a preparatory lookup on the
+> > file name in a couple of tables, one per UID and one global (only
+> > root can diddle with the global one). So you can do:
+
+> >	rdr @tmp /usr1/tmp
+
+> > Then when any process owned by you accessed "@tmp" it got "/usr/tmp".
+
+> Sounds like Plan 9, eh?
+
+There is nothing new under the sun, right? This predates Plan 9 by quite a
+few years, and is a lot more limited (and also a lot easier to implement).
+-- 
+Peter da Silva.  <peter@sugar.neosoft.com>.
+ `-_-'   Oletko halannut suttasi t�n��n?
+  'U`    
+Tarjoilija, t�m� ateria el�� viel�.
+
+
+]
+MID: C3rx2H.Cu9@sugar.neosoft.com
+SUBJ: Re: A challenge to all true kernel hackers - conditional symlinks.
+BODY: In article <1norfhINNq5o@life.ai.mit.edu> mycroft@hal.gnu.ai.mit.edu (Charles Hannum) writes: | > In article <C3pA4z.7CG@sugar.neosoft.com> peter@NeoSoft.com (Peter da | > Silva) writes: | > > On intel's OpenNET system, namei does a preparatory lookup on the | > > file name in a couple of tables, one per UID and one global (only | > > root can diddle with the global one). So you can do: |  | > >	rdr @tmp /usr1/tmp |  | > > Then when any process owned by you accessed "@tmp" it got "/usr/tmp". |  | > Sounds like Plan 9, eh? |  | There is nothing new under the sun, right? This predates Plan 9 by quite a | few years, and is 
+------------------------------------------------------------
+[1993-03-12T16:27:25+00:00] [cgd@eden.CS.Berkeley.EDU (Chris G. Demetriou)] [In article <1nqnchINNerd@life.ai.mit.edu> mycroft@hal.gnu.ai.mit.edu (Charles Hannum) writes:
+>This would be ugly, confuse Emacs, and break current programs.
+
+emacs gets plenty confused on my system when i specify files in
+"/usr/src/../foo" or whatever, because /usr/src is a symlink to
+someplace else (w/ a longer name... 8-).
+
+
+don't avoid doing things because it breaks emacs; emacs is plenty
+broken, in certain ways, regardless...
+
+
+
+chris
+--
+Chris G. Demetriou                                    cgd@cs.berkeley.edu
+
+                 MENTALLY CONTAMINATED and proud of it!
+
+
+]
+MID: CGD.93Mar12162725@eden.CS.Berkeley.EDU
+SUBJ: Re: A challenge to all true kernel hackers - conditional symlinks.
+BODY: In article <1nqnchINNerd@life.ai.mit.edu> mycroft@hal.gnu.ai.mit.edu (Charles Hannum) writes: | >This would be ugly, confuse Emacs, and break current programs. |  | emacs gets plenty confused on my system when i specify files in | "/usr/src/../foo" or whatever, because /usr/src is a symlink to | someplace else (w/ a longer name... 8-). |  |  | don't avoid doing things because it breaks emacs; emacs is plenty | broken, in certain ways, regardless... |  |  |  | chris | -- | Chris G. Demetriou                                    cgd@cs.berkeley.edu |  |                  MENTALLY CONTAMINATED and proud of it! |  |  | 
+------------------------------------------------------------
+[1993-03-12T19:13:21+00:00] [mycroft@hal.gnu.ai.mit.edu (Charles Hannum)] [
+In article <C3qzGI.38q@sugar.neosoft.com> peter@NeoSoft.com (Peter da
+Silva) writes:
+>
+> How about using "//" within a symlink to indicate that the next
+> component is a name?
+>
+>	  ln -s /usr/i18n//lang/docs /usr/docs
+
+This would be ugly, confuse Emacs, and break current programs.
+
+-- 
+ \  /   Charles Hannum, mycroft@ai.mit.edu
+ /\ \   PGP public key available on request.  MIME, AMS, NextMail accepted.
+Scheme  White heterosexual atheist male (WHAM) pride!
+
+
+]
+MID: 1nqnchINNerd@life.ai.mit.edu
+SUBJ: Re: A challenge to all true kernel hackers - conditional symlinks.
+BODY:  | In article <C3qzGI.38q@sugar.neosoft.com> peter@NeoSoft.com (Peter da | Silva) writes: | > | > How about using "//" within a symlink to indicate that the next | > component is a name? | > | >	  ln -s /usr/i18n//lang/docs /usr/docs |  | This would be ugly, confuse Emacs, and break current programs. |  | --  |  \  /   Charles Hannum, mycroft@ai.mit.edu |  /\ \   PGP public key available on request.  MIME, AMS, NextMail accepted. | Scheme  White heterosexual atheist male (WHAM) pride! |  |  | 
+------------------------------------------------------------
+[1993-03-13T23:33:19+00:00] [cgd@eden.CS.Berkeley.EDU (Chris G. Demetriou)] [In article <1993Mar14.070820.17710@netcom.com> thinman@netcom.com (Technically Sweet) writes:
+>Symbolic links are GOTOs for file systems.
+
+i think "#define"s are the better analogy...
+
+but symlinks can recurse...
+
+
+chris
+--
+Chris G. Demetriou                                    cgd@cs.berkeley.edu
+
+                 MENTALLY CONTAMINATED and proud of it!
+
+
+]
+MID: CGD.93Mar13233319@eden.CS.Berkeley.EDU
+SUBJ: Re: A challenge to all true kernel hackers - conditional symlinks.
+BODY: In article <1993Mar14.070820.17710@netcom.com> thinman@netcom.com (Technically Sweet) writes: | >Symbolic links are GOTOs for file systems. |  | i think "#define"s are the better analogy... |  | but symlinks can recurse... |  |  | chris | -- | Chris G. Demetriou                                    cgd@cs.berkeley.edu |  |                  MENTALLY CONTAMINATED and proud of it! |  |  | 
+------------------------------------------------------------
+[1993-03-14T05:01:24+00:00] [peter@NeoSoft.com (Peter da Silva)] [In article <1nqnchINNerd@life.ai.mit.edu> mycroft@hal.gnu.ai.mit.edu (Charles Hannum) writes:
+> In article <C3qzGI.38q@sugar.neosoft.com> peter@NeoSoft.com (Peter da
+> Silva) writes:
+> > How about using "//" within a symlink to indicate that the next
+> > component is a name?
+
+> >	  ln -s /usr/i18n//lang/docs /usr/docs
+
+> This would be ugly,
+
+So would any hack you can come up with that hides logicals in the namespace.
+
+> confuse Emacs, and break current programs.
+
+Why? These file names are *only* in symbolic links, which programs should
+treat as textual substitutions. They're not legal file names (see POSIX
+1003.1) so there's no conflict.
+-- 
+Peter da Silva.  <peter@sugar.neosoft.com>.
+ `-_-'   Oletko halannut suttasi t�n��n?
+  'U`    
+Tarjoilija, t�m� ateria el�� viel�.
+
+
+]
+MID: C3v4MD.LFE@sugar.neosoft.com
+SUBJ: Re: A challenge to all true kernel hackers - conditional symlinks.
+BODY: In article <1nqnchINNerd@life.ai.mit.edu> mycroft@hal.gnu.ai.mit.edu (Charles Hannum) writes: | > In article <C3qzGI.38q@sugar.neosoft.com> peter@NeoSoft.com (Peter da | > Silva) writes: | > > How about using "//" within a symlink to indicate that the next | > > component is a name? |  | > >	  ln -s /usr/i18n//lang/docs /usr/docs |  | > This would be ugly, |  | So would any hack you can come up with that hides logicals in the namespace. |  | > confuse Emacs, and break current programs. |  | Why? These file names are *only* in symbolic links, which programs should | treat as textual substitutions. They're not legal file nam
+------------------------------------------------------------
+[1993-03-14T07:08:20+00:00] [thinman@netcom.com (Technically Sweet)] [Symbolic links are GOTOs for file systems.
+
+I hate them in my programs, and I hate them on my machine.
+
+NFS and symbolic links especially don't mix:
+think about a GOTO from one program into another!
+
+-- 
+
+Lance Norskog
+thinman@netcom.com
+Data is not information is not knowledge is not wisdom.
+
+
+]
+MID: 1993Mar14.070820.17710@netcom.com
+SUBJ: Re: A challenge to all true kernel hackers - conditional symlinks.
+BODY: Symbolic links are GOTOs for file systems. |  | I hate them in my programs, and I hate them on my machine. |  | NFS and symbolic links especially don't mix: | think about a GOTO from one program into another! |  | --  |  | Lance Norskog | thinman@netcom.com | Data is not information is not knowledge is not wisdom. |  |  | 
+------------------------------------------------------------
+[1993-03-14T18:29:33+00:00] [peter@NeoSoft.com (Peter da Silva)] [In article <1993Mar14.070820.17710@netcom.com> thinman@netcom.com (Technically Sweet) writes:
+> NFS and symbolic links especially don't mix:
+
+NFS is brain dead. Given my druthers, I'd dump NFS. It's fundamentally broke
+in so many ways it's not funny.
+
+OK, OK, NFS is sure better than the client-server stuff you get on DOS
+platforms, but it's long past time to replace *it*, and the low-level
+interfaces that support it, with something more UNIX-like.
+-- 
+Peter da Silva.  <peter@sugar.neosoft.com>.
+ `-_-'   Oletko halannut suttasi t�n��n?
+  'U`    
+Tarjoilija, t�m� ateria el�� viel�.
+
+
+]
+MID: C3w61A.8wI@sugar.neosoft.com
+SUBJ: Re: A challenge to all true kernel hackers - conditional symlinks.
+BODY: In article <1993Mar14.070820.17710@netcom.com> thinman@netcom.com (Technically Sweet) writes: | > NFS and symbolic links especially don't mix: |  | NFS is brain dead. Given my druthers, I'd dump NFS. It's fundamentally broke | in so many ways it's not funny. |  | OK, OK, NFS is sure better than the client-server stuff you get on DOS | platforms, but it's long past time to replace *it*, and the low-level | interfaces that support it, with something more UNIX-like. | --  | Peter da Silva.  <peter@sugar.neosoft.com>. |  `-_-'   Oletko halannut suttasi t�n��n? |   'U`     | Tarjoilija, t�m� ateria el�� viel�. |  |  | 
+------------------------------------------------------------
+[1993-03-14T22:45:08+00:00] [sef@Kithrup.COM (Sean Eric Fagan)] [In article <C3v4MD.LFE@sugar.neosoft.com> peter@NeoSoft.com (Peter da Silva) writes:
+>> >	  ln -s /usr/i18n//lang/docs /usr/docs
+>Why? These file names are *only* in symbolic links, which programs should
+>treat as textual substitutions. They're not legal file names (see POSIX
+>1003.1) so there's no conflict.
+
+1003.1 says that, with the exception of the initial slash, any set of
+two or more slashes is to be treated as a single slash.  For the initial
+slash, three or more are to be treated as a single slash, and two initial
+slashes is allowed to be "special" -- but it must be implementation defined,
+if so.
+
+"/usr/i18n//lang/docs" is a perfectly valid POSIX filename.
+
+
+
+]
+MID: 1o0chkINN1s5@ftp.UU.NET
+SUBJ: Re: A challenge to all true kernel hackers - conditional symlinks.
+BODY: In article <C3v4MD.LFE@sugar.neosoft.com> peter@NeoSoft.com (Peter da Silva) writes: | >> >	  ln -s /usr/i18n//lang/docs /usr/docs | >Why? These file names are *only* in symbolic links, which programs should | >treat as textual substitutions. They're not legal file names (see POSIX | >1003.1) so there's no conflict. |  | 1003.1 says that, with the exception of the initial slash, any set of | two or more slashes is to be treated as a single slash.  For the initial | slash, three or more are to be treated as a single slash, and two initial | slashes is allowed to be "special" -- but it must be implementation defi
+------------------------------------------------------------
+[1993-03-15T01:01:49+00:00] [vjs@rhyolite.wpd.sgi.com (Vernon Schryver)] [In article <C3w61A.8wI@sugar.neosoft.com>, peter@NeoSoft.com (Peter da Silva) writes:
+> In article <1993Mar14.070820.17710@netcom.com> thinman@netcom.com (Technically Sweet) writes:
+> > NFS and symbolic links especially don't mix:
+> 
+> NFS is brain dead. Given my druthers, I'd dump NFS. It's fundamentally broke
+> in so many ways it's not funny.
+> 
+> OK, OK, NFS is sure better than the client-server stuff you get on DOS
+> platforms, but it's long past time to replace *it*, and the low-level
+> interfaces that support it, with something more UNIX-like.
+
+
+So stop whining and replace it already!
+
+Just don't make the mistakes of others like Transarc.
+
+And do the things right that B.Lyon & co. did:
+    -know what problem you're trying to solve, and solve that problem
+	reasonably well.
+    -ignore all of the other problems you are not solving.
+    -(practially) give away the source.
+
+Transarc seems to be bent on violating all of those rules, as well as
+more obvious ones like "keep it small and simple enough for 2 or 3
+people (at most) to write the whole thing."  3 MByte of kernel binary
+text and 30 MByte of user library binaries, indeed!
+
+
+Vernon Schryver,  vjs@sgi.com
+
+
+]
+MID: gl9nv8a@rhyolite.wpd.sgi.com
+SUBJ: Re: A challenge to all true kernel hackers - conditional symlinks.
+BODY: In article <C3w61A.8wI@sugar.neosoft.com>, peter@NeoSoft.com (Peter da Silva) writes: | > In article <1993Mar14.070820.17710@netcom.com> thinman@netcom.com (Technically Sweet) writes: | > > NFS and symbolic links especially don't mix: | >  | > NFS is brain dead. Given my druthers, I'd dump NFS. It's fundamentally broke | > in so many ways it's not funny. | >  | > OK, OK, NFS is sure better than the client-server stuff you get on DOS | > platforms, but it's long past time to replace *it*, and the low-level | > interfaces that support it, with something more UNIX-like. |  |  | So stop whining and replace it already! |  | J
+------------------------------------------------------------
+[1993-03-15T02:27:57+00:00] [danh@quantum.qnx.com (Dan Hildebrand)] [In article <1norfhINNq5o@life.ai.mit.edu> mycroft@hal.gnu.ai.mit.edu (Charles Hannum) writes:
+>
+>In article <C3pA4z.7CG@sugar.neosoft.com> peter@NeoSoft.com (Peter da
+>Silva) writes:
+>>
+>> On intel's OpenNET system, namei does a preparatory lookup on the
+>> file name in a couple of tables, one per UID and one global (only
+>> root can diddle with the global one). So you can do:
+>>
+>>	rdr @tmp /usr1/tmp
+>>
+>> Then when any process owned by you accessed "@tmp" it got "/usr/tmp".
+>
+>Sounds like Plan 9, eh?
+
+Sounds like QNX too, eh ?  ( Takes a Canadian to put the right inflection 
+on that :-).
+
+QNX has the concept of a prefix table that maps portions of your namespace 
+to the individial processes that implement that resource ( the Dev process 
+maps /dev, the Fsys process maps /, etc ). There are no "wired in" 
+resources, since the file system itself is optional. The GNU Hurd is said 
+to be working towards a similar facility, as well.
+
+With this mechanism, you can make virtually any resource in the system 
+visible in the pathnme space. The whole system works on what could be 
+called "domains of authority", where a process that chooses to can send a 
+message to the process manager indicating what they want to control. At 
+startup there isn't even a '/' until you start a local fsys process or put 
+a prefix in place to direct your local '/' to Fsys on some other node. The 
+dev process takes /dev, etc. There are then some rules that govern how 
+messages are directed based on longest match. For example, an open of '/' 
+or '/dev/hd0' would go to fsys, but just '/dev' would go to the dev task. 
+As shipped, QNX makes the conventional things visible, but its only a 
+matter of a couple hours work, using the standard library, to write a 
+process that will adopt some portion of the namespace, and get all the 
+I/O messages for it ( open, close, read, write, seek, etc ). Once you start 
+your process, the extension to the namespace you've implemented appears 
+under the root where you programmed it to be ( you could accept a command 
+line option to make this configurable ). It becomes indistinguishable from 
+anything else in the pathname space.
+
+For example, you could code up a resource manager to adopt /proc, and then 
+do whatever you want with the I/O messages that end up going to /proc as 
+the system runs. You could issue a kill on an unlink(), read the memory of 
+the process on a read(), provide the process names when the /proc directory 
+is read, etc. Its entirely up to your imagination, and the system doesn't 
+get in the way of letting you implement anything you want. This is network 
+transparent, and any process anywhere on the network can use the services 
+added. The resource manager added can be started and stopped from the 
+command line like any user process. On remote execution, processes inherit 
+the local prefix tree as part of the inherited environment any child 
+process would get, so that both local and network remote processes have the 
+same view of network resources.
+
+DFS ( the DOS file system manager ) works by adoptiong /dos and /dos/a, 
+/dos/b, etc. for the DOS drives and partitions that exist. The DFS process 
+then uses the raw block I/O services of Fsys to map the requests sent to 
+DFS into the equivalent operations on the raw DOS partition ( probably 
+/dev/hd0t4 as hard drive zero, partition type 4 ). As a result, the DOS 
+partition looks exactly like any other piece of the file system, with 
+certain limitations, like 8.3 filenames, etc. This way, you can write a 
+process that takes whatever resource in the system you want, and present it 
+to the user as some entity in the filename space. At this point the shell, 
+or standard utilities, etc. will work on this namespace without caring what 
+it really is. Alternative file systems for CD or WORM drives, or file 
+systems tuned for particular applications, like voice record / playback, 
+are easy to add to the system.
+
+Throughout all of this, the POSIX semantics are preserved and everything 
+works as POSIX specifies that it should.
+
+-- 
+Dan Hildebrand                     email: danh@qnx.com
+Quantum Software Systems, Ltd.     QUICS: danh  (613) 591-0934 (data)
+(613) 591-0931 x204 (voice)        mail:  175 Terrence Matthews          
+(613) 591-3579      (fax)                 Kanata, Ontario, Canada K2M 1W8
+
+
+]
+MID: gpntc0k@quantum.qnx.com
+SUBJ: Re: A challenge to all true kernel hackers - conditional symlinks.
+BODY: In article <1norfhINNq5o@life.ai.mit.edu> mycroft@hal.gnu.ai.mit.edu (Charles Hannum) writes: | > | >In article <C3pA4z.7CG@sugar.neosoft.com> peter@NeoSoft.com (Peter da | >Silva) writes: | >> | >> On intel's OpenNET system, namei does a preparatory lookup on the | >> file name in a couple of tables, one per UID and one global (only | >> root can diddle with the global one). So you can do: | >> | >>	rdr @tmp /usr1/tmp | >> | >> Then when any process owned by you accessed "@tmp" it got "/usr/tmp". | > | >Sounds like Plan 9, eh? |  | Sounds like QNX too, eh ?  ( Takes a Canadian to put the right inflection  | on that :-). |  | QN
+------------------------------------------------------------
+[1993-03-15T04:18:37+00:00] [rgrimes@agora.rain.com (Rodney Grimes)] [thinman@netcom.com (Technically Sweet) writes:
+
+>Symbolic links are GOTOs for file systems.
+
+Like chris said, more like #define's, and do you know that every conditonal
+you use in your programs creates a JMP instruction in assembler! Think about
+it!
+
+>I hate them in my programs, and I hate them on my machine.
+
+>NFS and symbolic links especially don't mix:
+>think about a GOTO from one program into another!
+
+NFS and symlinks can be a real godsend if you know what you are doing
+and the addition of varian symlinks makes it even better!!  Then you
+NFS symlinks can be host dependent.  Think about it, it is VERY powerful!
+
+>-- 
+
+>Lance Norskog
+>thinman@netcom.com
+>Data is not information is not knowledge is not wisdom.
+-- 
+Rod Grimes						rgrimes@agora.rain.com
+Accurate Automation Company          All opinions belong to me and my company!
+Get your free copy of  386bsd  from  agate.berkeley.edu:/pub/386BSD  via  ftp!
+An out of work contractor... You need unix work done.... Send me your project!
+
+
+]
+MID: C3wxB2.GAB@agora.rain.com
+SUBJ: Re: A challenge to all true kernel hackers - conditional symlinks.
+BODY: thinman@netcom.com (Technically Sweet) writes: |  | >Symbolic links are GOTOs for file systems. |  | Like chris said, more like #define's, and do you know that every conditonal | you use in your programs creates a JMP instruction in assembler! Think about | it! |  | >I hate them in my programs, and I hate them on my machine. |  | >NFS and symbolic links especially don't mix: | >think about a GOTO from one program into another! |  | NFS and symlinks can be a real godsend if you know what you are doing | and the addition of varian symlinks makes it even better!!  Then you | NFS symlinks can be host dependent.  Think about it
+------------------------------------------------------------
+[1993-03-15T08:26:55+00:00] [bvs@BitBlocks.com (Bakul Shah)] [thinman@netcom.com (Technically Sweet) writes:
+>Symbolic links are GOTOs for file systems.
+...
+>NFS and symbolic links especially don't mix:
+
+peter@NeoSoft.com (Peter da Silva) writes:
+>NFS is brain dead. Given my druthers, I'd dump NFS. It's fundamentally broke
+>in so many ways it's not funny.
+
+This sort of stuff gets real tiring real fast.  If you must knock
+something, at least (try to) substantiate your claims and try to
+be fair in your assessment.  Tell us *why* NFS & symlinks don't
+mix. Tell us *how* NFS is `fundamentally broke' or point to where
+such arguments can be found.  Try to convince us with reasoned
+arguments, not emotive words or appeal to authority (such as `NFS
+is bad because Dennis Ritchie (or whoever) says so').
+
+Then tell us how *you* can do better things that NFS does badly,
+botches or not at all.  Then implement such a system and share it
+with us!
+
+Symlinks are *NOT* like GOTOs; almost every control structure at
+its heart uses GOTOs, while you can make do without symlinks in
+a filesystem just fine.  If Lance means they are *bad* like
+GOTOs, that too will be hard to prove.  Unlike GOTOs you can
+never `jump' to a wild `location' using symlinks; if the target
+does not exist the system will return with an error.
+
+My experience is that NFS and symlinks mix very well.  Go see how
+effectively they are used together in large installations of
+multiple machines, possibly of different types, to provide a
+relatively similar view of the filesystem from any machine.
+
+NFS is far from perfect and there are other file systems that are
+undoubtedly better in some ways but NFS is certainly not
+braindead.  People who must use NFS right now would be dumb to
+dump it unless a new solution can be shown to do everything that
+NFS does right.
+
+For the record, I use NFS everyday but I am not thrilled with it
+and would love to see something better.  NFS is slow on reads and
+even slower on writes (or you lose any guarantee that writes
+succeeded), its statelessness causes problems, it is too chatty
+on the wire, it broke the atomicity of writes with respect to
+reads, etc.  etc.  But for all of its problems it has succeeded
+in the marketplace and some of these problems are because of
+design decisions that must have allowed SUN to get it out the
+door fast.  Having once implemented a stateless version as well
+as about 95% of a stateful version of similar networked
+filesystems[1] I appreciate and (I think) understand the issues
+involved quite well and I can tell you that getting it right is
+100,000% more difficult than criticising someone else's design.
+
+Bakul Shah <bvs@BitBlocks.com>
+
+[1] If you used Valid Logic's SCALDstations runnign 4.2BSD (in
+'84, '85 or so) you may remember Extended File Systsm, or `EFS',
+that provided a unified, network wide view of all VALID file
+systems.  EFS was stateless.  The stateful version was never
+finished.  I had spent majority of my time on getting the state
+stuff right in presence of client/server/network crashes.  I
+*think* I had finally figured it all out but didn't get a chance
+to finish it.
+
+
+]
+MID: C3x8sw.5Hs@BitBlocks.com
+SUBJ: Re: A challenge to all true kernel hackers - conditional symlinks.
+BODY: thinman@netcom.com (Technically Sweet) writes: | >Symbolic links are GOTOs for file systems. | ... | >NFS and symbolic links especially don't mix: |  | peter@NeoSoft.com (Peter da Silva) writes: | >NFS is brain dead. Given my druthers, I'd dump NFS. It's fundamentally broke | >in so many ways it's not funny. |  | This sort of stuff gets real tiring real fast.  If you must knock | something, at least (try to) substantiate your claims and try to | be fair in your assessment.  Tell us *why* NFS & symlinks don't | mix. Tell us *how* NFS is `fundamentally broke' or point to where | such arguments can be found.  Try to convi
+------------------------------------------------------------
+[1993-03-15T09:48:18+00:00] [weingart@inf.ethz.ch (Tobias Weingartner)] [In article <C3w61A.8wI@sugar.neosoft.com>, peter@NeoSoft.com (Peter da Silva) writes:
+> 
+> NFS is brain dead. Given my druthers, I'd dump NFS. It's fundamentally broke
+> in so many ways it's not funny.
+> 
+> OK, OK, NFS is sure better than the client-server stuff you get on DOS
+> platforms, but it's long past time to replace *it*, and the low-level
+> interfaces that support it, with something more UNIX-like.
+
+Ok, lets go to the domain (DDS) system.  Was pretty cool, and even had
+decent performance.  ;-)
+
+
+--Toby.
+
+
+]
+MID: 1993Mar15.094818.29152@neptune.inf.ethz.ch
+SUBJ: Re: A challenge to all true kernel hackers - conditional symlinks.
+BODY: In article <C3w61A.8wI@sugar.neosoft.com>, peter@NeoSoft.com (Peter da Silva) writes: | >  | > NFS is brain dead. Given my druthers, I'd dump NFS. It's fundamentally broke | > in so many ways it's not funny. | >  | > OK, OK, NFS is sure better than the client-server stuff you get on DOS | > platforms, but it's long past time to replace *it*, and the low-level | > interfaces that support it, with something more UNIX-like. |  | Ok, lets go to the domain (DDS) system.  Was pretty cool, and even had | decent performance.  ;-) |  |  | --Toby. |  |  | 
+------------------------------------------------------------
+[1993-03-15T10:34:57+00:00] [peter@NeoSoft.com (Peter da Silva)] [In article <gl9nv8a@rhyolite.wpd.sgi.com> vjs@rhyolite.wpd.sgi.com (Vernon Schryver) writes:
+> So stop whining and replace it already!
+
+I'm already using a replacement that provides all the facilities I'd like
+from NFS, with the exception of being widely available. It's called OpenNET,
+and it's an Intel product.
+
+>     -(practially) give away the source.
+
+That's the problem, all right.
+-- 
+Peter da Silva.  <peter@sugar.neosoft.com>.
+ `-_-'   Oletko halannut suttasi t�n��n?
+  'U`    
+Tarjoilija, t�m� ateria el�� viel�.
+
+
+]
+MID: C3xEqA.LIy@sugar.neosoft.com
+SUBJ: Re: A challenge to all true kernel hackers - conditional symlinks.
+BODY: In article <gl9nv8a@rhyolite.wpd.sgi.com> vjs@rhyolite.wpd.sgi.com (Vernon Schryver) writes: | > So stop whining and replace it already! |  | I'm already using a replacement that provides all the facilities I'd like | from NFS, with the exception of being widely available. It's called OpenNET, | and it's an Intel product. |  | >     -(practially) give away the source. |  | That's the problem, all right. | --  | Peter da Silva.  <peter@sugar.neosoft.com>. |  `-_-'   Oletko halannut suttasi t�n��n? |   'U`     | Tarjoilija, t�m� ateria el�� viel�. |  |  | 
+------------------------------------------------------------
+[1993-03-15T17:57:27+00:00] [jkh@whisker.lotus.ie (Jordan K. Hubbard)] [I guess I should have expected this..
+
+When I issued my "challenge", I didn't mean it as a generic "let's
+make the entire filesystem more generic" challenge, I meant it as
+"Let's add conditional symbolic links to the existing system with a
+minimum of fuss!" sort of challenge.
+
+This is NOT to say that I think the current filesystem code isn't in
+urgent need of repair, or that NFS is really great (I'll probably spend
+3 years in purgatory simply for mentioning "NFS" and "really great" in
+the same sentence), simply that it's not worth doing that much work
+to the existing mechanism.
+
+The reason I say this is obvious to anyone who's been following the
+0.2 discussions.  0.2 already has a plan-9ish "portal" scheme in mind
+for handing things like custom filesystem types (want a compressing
+filesystem driver in user mode?  No problem), and there will be a lot
+more genericity(?) in the way filenames will be mapped in general.
+
+What this means is that something like conditional symbolic links
+would be implemented in a radically different way come 0.2, but a lot
+of good research on how and why to use them could be done quite
+effectively in 0.1, so the effort wouldn't necesarily be wasted (think
+of it more as a proof-of-concept implementation).  It also means that
+it should be done in a low-overhead fashion, since any significant
+work in reimplementing filesystem handling WOULD be wasted.
+
+In short, don't chuck anything (like NFS) out, just see what's required
+to put conditional symbolic links in.  If it's too messy, forget about it.
+
+				Jordan
+
+
+
+--
+Jordan Hubbard          Lotus Development Ireland       jkh@whisker.lotus.ie
+386bsd Patchkit Coordinator                             All-around nice dude.
+I do not speak for Lotus as that's not in my job description.
+
+
+]
+MID: JKH.93Mar15175727@whisker.lotus.ie
+SUBJ: "A challenge to all true kernel hackers" - STOP, start over!
+BODY: I guess I should have expected this.. |  | When I issued my "challenge", I didn't mean it as a generic "let's | make the entire filesystem more generic" challenge, I meant it as | "Let's add conditional symbolic links to the existing system with a | minimum of fuss!" sort of challenge. |  | This is NOT to say that I think the current filesystem code isn't in | urgent need of repair, or that NFS is really great (I'll probably spend | 3 years in purgatory simply for mentioning "NFS" and "really great" in | the same sentence), simply that it's not worth doing that much work | to the existing mechanism. |  | The reason I s
+------------------------------------------------------------
+[1993-03-16T02:11:51+00:00] [peter@NeoSoft.com (Peter da Silva)] [In article <C3x8sw.5Hs@BitBlocks.com> bvs@BitBlocks.com (Bakul Shah) writes:
+> Tell us *how* NFS is `fundamentally broke' or point to where
+> such arguments can be found.
+
+Statelesness. This creates an illusion that a network is as reliable as
+a local disk, and prevents the use of normal UNIX semantics for non-file
+file-system components (devices, pipes, etc...).
+
+A network *isn't* as reliable as a local disk, and the things that happen
+when the network gets flakey under NFS can get pretty scary... to the point
+you need to tunnel another protocol on top of rsh to get the job done.
+
+And the UNIX file system semantics that make all sorts of environment
+transparency possible are important enough that it requires a bigger
+win than some failsoft behaviour to justify it. If you have to let
+server crashes show through to end-users, to get the system out the door,
+then do it. You'll get a more useful system than NFS.
+
+> Then tell us how *you* can do better things that NFS does badly,
+> botches or not at all.
+
+I can't, not yet. Intel can, and has. I use NFS right now out of
+economic necessity, but if I can urge people to look in other directions
+to resolve the same problems I will.
+-- 
+Peter da Silva.  <peter@sugar.neosoft.com>.
+ `-_-'   Oletko halannut suttasi t�n��n?
+  'U`    
+Tarjoilija, t�m� ateria el�� viel�.
+
+
+]
+MID: C3yM3s.E2y@sugar.neosoft.com
+SUBJ: Re: A challenge to all true kernel hackers - conditional symlinks.
+BODY: In article <C3x8sw.5Hs@BitBlocks.com> bvs@BitBlocks.com (Bakul Shah) writes: | > Tell us *how* NFS is `fundamentally broke' or point to where | > such arguments can be found. |  | Statelesness. This creates an illusion that a network is as reliable as | a local disk, and prevents the use of normal UNIX semantics for non-file | file-system components (devices, pipes, etc...). |  | A network *isn't* as reliable as a local disk, and the things that happen | when the network gets flakey under NFS can get pretty scary... to the point | you need to tunnel another protocol on top of rsh to get the job done. |  | And the UNI
+------------------------------------------------------------
+[1993-03-17T00:07:17+00:00] [terry@cs.weber.edu (A Wizard of Earth C)] [In article <C3qzvC.2ps@bcstec.ca.boeing.com> dmp3592@bcstec.ca.boeing.com (Dean M. Phillips) writes:
+>In article <JKH.93Mar10215639@whisker.lotus.ie> jkh@whisker.lotus.ie (Jordan K. Hubbard) writes:
+>>The only problem with replacing open() is that you still need to deal
+>>with things like stat() and any other system call that deals with
+>>filenames (and follows links) directly.  Note that I wasn't talking about
+>>usurping the $, (, and ) characters in filenames altogether, only in
+>>symbolic links.  I don't think that this would be any great hardship.
+>>
+>I could create an ambiguity:  How do you create a soft link to a real file
+>named $(LANG) for example?  Of course I have to admit that I have never
+>seen a real file with a name of that form.
+
+The $(LANG) is part of the symbolic link *target*, not part of the name
+of the symbolic link itself.
+
+This resolves the "name space pollution" problem everybody is going on
+about without any hassles with any other type of file within the file
+system.  If necessary, a "variant link creation" syntax (like "ln -v")
+can be defined.  I vote against this, and for pollution of the symbolic
+link target name space, to ensure cross-fs compatability.  Otherwise,
+it would require additional flagging of the inode type, and really
+require a modification below the VFS layer to implement.
+
+The other fact, that the name space is only polluted for names beginning
+with "$(" means that collisoin is unlikely anyway, so the pollution is
+not disenfranchising "$", "(", and ")" as filename characters, but is
+instead diasallowing "$(" file names only.
+
+It's a simple, simple hack that introduces many security issues unless
+things like access are forces to always follow symbolic links to determin
+permissions rather than looking at the link inode itself.
+
+As for the "orphan issue" of symlinking to a non-existant file, that
+problem already exists.  It is perfectly acceptable to symlink to a
+non existant file with "invariant" sym links.  Try:
+
+	mkdir tmp
+	cd tmp
+	ln -s foo fee
+	cat foo
+	cat fee
+	cat > fee
+	This is a test.
+	^D
+	cat foo
+	rm foo fee
+	cd ..
+	rmdir tmp
+
+to demonstrate this.
+
+
+					Terry Lambert
+					terry@icarus.weber.edu
+					terry_lambert@novell.com
+---
+Any opinions in this posting are my own and not those of my present
+or previous employers.
+-- 
+-------------------------------------------------------------------------------
+                                        "I have an 8 user poetic license" - me
+ Get the 386bsd FAQ from agate.berkeley.edu:/pub/386BSD/386bsd-0.1/unofficial
+-------------------------------------------------------------------------------
+
+
+]
+MID: 1993Mar17.000717.12690@fcom.cc.utah.edu
+SUBJ: Re: A challenge to all true kernel hackers - conditional symlinks.
+BODY: In article <C3qzvC.2ps@bcstec.ca.boeing.com> dmp3592@bcstec.ca.boeing.com (Dean M. Phillips) writes: | >In article <JKH.93Mar10215639@whisker.lotus.ie> jkh@whisker.lotus.ie (Jordan K. Hubbard) writes: | >>The only problem with replacing open() is that you still need to deal | >>with things like stat() and any other system call that deals with | >>filenames (and follows links) directly.  Note that I wasn't talking about | >>usurping the $, (, and ) characters in filenames altogether, only in | >>symbolic links.  I don't think that this would be any great hardship. | >> | >I could create an ambiguity:  How do y
+------------------------------------------------------------
+[1993-03-17T02:20:03+00:00] [paik@mlo.dec.com (Samuel S. Paik)] [In article <1993Mar17.000717.12690@fcom.cc.utah.edu> terry@cs.weber.edu (A Wizard of Earth C) writes:
+>The other fact, that the name space is only polluted for names beginning
+>with "$(" means that collisoin is unlikely anyway, so the pollution is
+>not disenfranchising "$", "(", and ")" as filename characters, but is
+>instead diasallowing "$(" file names only.
+
+Why would you want to restrict variables to only start at the
+beginning of a file name, besides reducing name space pollution?
+
+I'm virtually positive I had things like
+
+  /usr/local/bin --> /usr/local/bin.$(ARCH)
+
+back when I was on Domain.  (Apollo had two CPU architectures, the
+m68k and PRISM).  Then again, you can just as easily have
+
+  /usr/local/bin --> /usr/local/$(ARCH)/bin
+
+as well (and in fact, nowadays I do this in my PATH variable...)
+
+Sam Paik
+Device Dependent Graphics
+Alpha Personal Systems Software Group
+Digital Equipment Corporation
+
+
+]
+MID: 1993Mar17.022003.12845@peavax.mlo.dec.com
+SUBJ: Re: A challenge to all true kernel hackers - conditional symlinks.
+BODY: In article <1993Mar17.000717.12690@fcom.cc.utah.edu> terry@cs.weber.edu (A Wizard of Earth C) writes: | >The other fact, that the name space is only polluted for names beginning | >with "$(" means that collisoin is unlikely anyway, so the pollution is | >not disenfranchising "$", "(", and ")" as filename characters, but is | >instead diasallowing "$(" file names only. |  | Why would you want to restrict variables to only start at the | beginning of a file name, besides reducing name space pollution? |  | I'm virtually positive I had things like |  |   /usr/local/bin --> /usr/local/bin.$(ARCH) |  | back when I was on Do
+------------------------------------------------------------
+[1993-03-17T07:39:39+00:00] [rgrimes@agora.rain.com (Rodney Grimes)] [terry@cs.weber.edu (A Wizard of Earth C) writes:
+
+>In article <C3qzvC.2ps@bcstec.ca.boeing.com> dmp3592@bcstec.ca.boeing.com (Dean M. Phillips) writes:
+>>In article <JKH.93Mar10215639@whisker.lotus.ie> jkh@whisker.lotus.ie (Jordan K. Hubbard) writes:
+>>>The only problem with replacing open() is that you still need to deal
+>>>with things like stat() and any other system call that deals with
+>>>filenames (and follows links) directly.  Note that I wasn't talking about
+>>>usurping the $, (, and ) characters in filenames altogether, only in
+>>>symbolic links.  I don't think that this would be any great hardship.
+>>>
+>>I could create an ambiguity:  How do you create a soft link to a real file
+>>named $(LANG) for example?  Of course I have to admit that I have never
+>>seen a real file with a name of that form.
+
+>The $(LANG) is part of the symbolic link *target*, not part of the name
+>of the symbolic link itself.
+
+>This resolves the "name space pollution" problem everybody is going on
+>about without any hassles with any other type of file within the file
+>system.  If necessary, a "variant link creation" syntax (like "ln -v")
+>can be defined.  I vote against this, and for pollution of the symbolic
+>link target name space, to ensure cross-fs compatability.  Otherwise,
+>it would require additional flagging of the inode type, and really
+>require a modification below the VFS layer to implement.
+
+>The other fact, that the name space is only polluted for names beginning
+>with "$(" means that collisoin is unlikely anyway, so the pollution is
+>not disenfranchising "$", "(", and ")" as filename characters, but is
+>instead diasallowing "$(" file names only.
+
+Not quite the whole story, if I remeber correctly from my apollo days,
+if a variant link portion ie NAME in $(NAME) does not corresponde
+to a valid environment variable it is left untranslated.  So in
+fact you can have a link foo -> $(BAR) that well get to file $(BAR)
+as long as no environment variabled named BAR is defined.
+
+I well again make the point, would some one dig up the apollo manuals
+and get the details on the way that all of this workes under aegis,
+I think most of what is being touched on here was clearly and
+consisely layed out by apollo way back when.
+
+>It's a simple, simple hack that introduces many security issues unless
+>things like access are forces to always follow symbolic links to determin
+>permissions rather than looking at the link inode itself.
+
+>As for the "orphan issue" of symlinking to a non-existant file, that
+>problem already exists.  It is perfectly acceptable to symlink to a
+>non existant file with "invariant" sym links.  Try:
+
+>	mkdir tmp
+>	cd tmp
+>	ln -s foo fee
+>	cat foo
+>	cat fee
+>	cat > fee
+>	This is a test.
+>	^D
+>	cat foo
+>	rm foo fee
+>	cd ..
+>	rmdir tmp
+
+>to demonstrate this.
+
+
+>					Terry Lambert
+>					terry@icarus.weber.edu
+>					terry_lambert@novell.com
+>---
+>Any opinions in this posting are my own and not those of my present
+>or previous employers.
+>-- 
+>-------------------------------------------------------------------------------
+>                                        "I have an 8 user poetic license" - me
+> Get the 386bsd FAQ from agate.berkeley.edu:/pub/386BSD/386bsd-0.1/unofficial
+>-------------------------------------------------------------------------------
+-- 
+Rod Grimes						rgrimes@agora.rain.com
+Accurate Automation Company          All opinions belong to me and my company!
+Get your free copy of  386bsd  from  agate.berkeley.edu:/pub/386BSD  via  ftp!
+An out of work contractor... You need unix work done.... Send me your project!
+
+
+]
+MID: C40vy4.2D0@agora.rain.com
+SUBJ: Re: A challenge to all true kernel hackers - conditional symlinks.
+BODY: terry@cs.weber.edu (A Wizard of Earth C) writes: |  | >In article <C3qzvC.2ps@bcstec.ca.boeing.com> dmp3592@bcstec.ca.boeing.com (Dean M. Phillips) writes: | >>In article <JKH.93Mar10215639@whisker.lotus.ie> jkh@whisker.lotus.ie (Jordan K. Hubbard) writes: | >>>The only problem with replacing open() is that you still need to deal | >>>with things like stat() and any other system call that deals with | >>>filenames (and follows links) directly.  Note that I wasn't talking about | >>>usurping the $, (, and ) characters in filenames altogether, only in | >>>symbolic links.  I don't think that this would be any g
+------------------------------------------------------------
+[1993-03-17T20:30:45+00:00] [terry@cs.weber.edu (A Wizard of Earth C)] [In article <1993Mar17.022003.12845@peavax.mlo.dec.com> paik@mlo.dec.com (Samuel S. Paik) writes:
+>In article <1993Mar17.000717.12690@fcom.cc.utah.edu> terry@cs.weber.edu (A Wizard of Earth C) writes:
+>>The other fact, that the name space is only polluted for names beginning
+>>with "$(" means that collisoin is unlikely anyway, so the pollution is
+>>not disenfranchising "$", "(", and ")" as filename characters, but is
+>>instead diasallowing "$(" file names only.
+>
+>Why would you want to restrict variables to only start at the
+>beginning of a file name, besides reducing name space pollution?
+>
+>I'm virtually positive I had things like
+>
+>  /usr/local/bin --> /usr/local/bin.$(ARCH)
+>
+>back when I was on Domain.  (Apollo had two CPU architectures, the
+>m68k and PRISM).  Then again, you can just as easily have
+>
+>  /usr/local/bin --> /usr/local/$(ARCH)/bin
+>
+>as well (and in fact, nowadays I do this in my PATH variable...)
+
+While the second would definitely be preferred, in my opinion, I think
+maybe `diasallowing "$(" file names` is too ambiguous.  What I meant
+was `diasallowing "$(" in file names`.  I can see how it could have
+been taken to mean "at the start of" instead of "in".
+
+
+					Terry Lambert
+					terry@icarus.weber.edu
+					terry_lambert@novell.com
+---
+Any opinions in this posting are my own and not those of my present
+or previous employers.
+-- 
+-------------------------------------------------------------------------------
+                                        "I have an 8 user poetic license" - me
+ Get the 386bsd FAQ from agate.berkeley.edu:/pub/386BSD/386bsd-0.1/unofficial
+-------------------------------------------------------------------------------
+
+
+]
+MID: 1993Mar17.203045.5353@fcom.cc.utah.edu
+SUBJ: Re: A challenge to all true kernel hackers - conditional symlinks.
+BODY: In article <1993Mar17.022003.12845@peavax.mlo.dec.com> paik@mlo.dec.com (Samuel S. Paik) writes: | >In article <1993Mar17.000717.12690@fcom.cc.utah.edu> terry@cs.weber.edu (A Wizard of Earth C) writes: | >>The other fact, that the name space is only polluted for names beginning | >>with "$(" means that collisoin is unlikely anyway, so the pollution is | >>not disenfranchising "$", "(", and ")" as filename characters, but is | >>instead diasallowing "$(" file names only. | > | >Why would you want to restrict variables to only start at the | >beginning of a file name, besides reducing name space pollution? | > | >I
+------------------------------------------------------------
+[1993-03-17T20:53:08+00:00] [terry@cs.weber.edu (A Wizard of Earth C)] [In article <C40vy4.2D0@agora.rain.com> rgrimes@agora.rain.com (Rodney Grimes) writes:
+>terry@cs.weber.edu (A Wizard of Earth C) writes:
+>>The other fact, that the name space is only polluted for names beginning
+>>with "$(" means that collisoin is unlikely anyway, so the pollution is
+>>not disenfranchising "$", "(", and ")" as filename characters, but is
+>>instead diasallowing "$(" file names only.
+>
+>Not quite the whole story, if I remeber correctly from my apollo days,
+>if a variant link portion ie NAME in $(NAME) does not corresponde
+>to a valid environment variable it is left untranslated.  So in
+>fact you can have a link foo -> $(BAR) that well get to file $(BAR)
+>as long as no environment variabled named BAR is defined.
+
+My take on this would be to translate it to nothing.  This is what both
+the shell and make do with undefined environment variables that are
+used in an expansion.
+
+The idea is not necessarily to mimic the Apollo (if mimicry were called
+for, I'd pick the NeXT), but to provide something that promotes ease of
+use in a distributed environment.  Host, OS, and language dependencies
+coded into symbolic links are one tack to achieve this goal... perhaps
+not optimal, but something fun to play with.
+
+Has anyone heard from Martin Renters about the hard drive less boot
+disk he was working on lately?
+
+
+					Terry Lambert
+					terry@icarus.weber.edu
+					terry_lambert@novell.com
+---
+Any opinions in this posting are my own and not those of my present
+or previous employers.
+-- 
+-------------------------------------------------------------------------------
+                                        "I have an 8 user poetic license" - me
+ Get the 386bsd FAQ from agate.berkeley.edu:/pub/386BSD/386bsd-0.1/unofficial
+-------------------------------------------------------------------------------
+
+
+]
+MID: 1993Mar17.205308.5672@fcom.cc.utah.edu
+SUBJ: Re: A challenge to all true kernel hackers - conditional symlinks.
+BODY: In article <C40vy4.2D0@agora.rain.com> rgrimes@agora.rain.com (Rodney Grimes) writes: | >terry@cs.weber.edu (A Wizard of Earth C) writes: | >>The other fact, that the name space is only polluted for names beginning | >>with "$(" means that collisoin is unlikely anyway, so the pollution is | >>not disenfranchising "$", "(", and ")" as filename characters, but is | >>instead diasallowing "$(" file names only. | > | >Not quite the whole story, if I remeber correctly from my apollo days, | >if a variant link portion ie NAME in $(NAME) does not corresponde | >to a valid environment variable it is left untranslated. 
+------------------------------------------------------------

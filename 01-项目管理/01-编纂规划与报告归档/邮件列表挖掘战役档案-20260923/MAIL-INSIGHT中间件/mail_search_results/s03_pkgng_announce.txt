@@ -1,0 +1,2017 @@
+==========================================================================================
+DB: freebsd-hackers.duckdb  hits=35
+--------------------------------------------------------------------------------
+MID: 20110325101111.GA36840@azathoth.lan
+DATE: 2011-03-25T10:41:04+00:00  FROM: bapt at FreeBSD.org (Baptiste Daroussin) <None>
+SUBJ: [ECFT] pkgng 0.1-alpha1: a replacement for pkg_install
+BODY:
+Hi all,
+
+miwi@ launched the new thing called Experimental Call For Testing,
+it's our turn :)
+
+Julien Laffaye (jlaffaye@) and I, helped by Philippe Pepiot (huge
+contributor) have been working since the end of the last GSoC on a
+rewrite of pkg_install.
+
+pkgng is a binary package manager written from scratch for FreeBSD.
+
+After a long period of technology testing, (json, tinycdb, bdb, etc)
+and we now have achieved to implement the basic functionnality. We
+would greatly approciate to have some feedback, wider testing,
+patching, documenting etc, before implementing the higher level
+features.
+
+pkgng is built on top of a new libpkg, which allow to deal with the database of
+installed packages, to deal with remote repositories, manage packages:
+creation, installation gathering informations, registering new ports.
+
+features supported are or will be :
+
+- smooth integration with bsd.port.mk (including bsd.pkg.mk line 2486)
+which allow  to have a bsd.port.mk which deal with both pkg_install
+and pkg
+
+--------------------------------------------------------------------------------
+MID: AANLkTikxi+jgnLrFg57o1N-Qzip9juaqXGzK2eYLkpFr@mail.gmail.com
+DATE: 2011-03-25T14:16:01+00:00  FROM: bapt at freebsd.org (Baptiste Daroussin) <None>
+SUBJ: [ECFT] pkgng 0.1-alpha1: a replacement for pkg_install
+BODY:
+2011/3/25 Alexander Leidinger <Alexander@leidinger.net>:
+
+this isn't activated by default, and if activated is only intended to
+work on freebsd elf files.
+This is done to workaround some bugguy ports not to be used in
+production, pkg register shows in warning in that case so that
+user/maintainers are warned they have something to fix.
+
+
+No clue for that at the moment but we are open to suggestions.
+
+
+Nothing is done about DB corruption/loss, I am not sure we need to do something.
+Maybe.
+Currently a filesystem corruption/loss on /var/db/pkg would do the same.
+
+but it is sqlite so we can perhaps provide a way to get compressed
+dump so user can periodically backup their database.
+
+regards,
+Bapt
+
+
+--------------------------------------------------------------------------------
+MID: AANLkTimZ5B4bYp1_wNLHbB_jSwcnzKvf7dpO35W1k1+2@mail.gmail.com
+DATE: 2011-03-25T15:30:03+00:00  FROM: jlaffaye at freebsd.org (Julien Laffaye) <None>
+SUBJ: [ECFT] pkgng 0.1-alpha1: a replacement for pkg_install
+BODY:
+On Fri, Mar 25, 2011 at 2:38 PM, Alexander Leidinger
+<Alexander@leidinger.net> wrote:
+
+That looks reasonable and easy to implement.
+
+
+If sqlite is properly used with transactions, it is very hard to
+corrupt the database. But if hardware lies to us and say that the data
+is on disk whereas it isnt... what can we do?
+Another potential problem is fsync(), but if it is broken on FreeBSD
+we want to fix it!
+
+BTW, the goal is to only have the database and not the flat files.
+If you are paranoid about power outage, use something like zfs snapshots...
+
+
+With sqlite we have atomicity! And locks!
+
+
+Regards,
+Julien
+
+
+--------------------------------------------------------------------------------
+MID: 20110325153520.GB23861@gahrfit.gahr.ch
+DATE: 2011-03-25T15:35:30+00:00  FROM: gahr at freebsd.org (Pietro Cerutti) <None>
+SUBJ: [ECFT] pkgng 0.1-alpha1: a replacement for pkg_install
+BODY:
+On 2011-Mar-25, 15:03, Julien Laffaye wrote:
+
+No need to look for strange scenarios, I'm surely going to sudo rm -f the file
+more sooner than later, so... maybe just save a copy?
+
+-- 
+Pietro Cerutti
+The FreeBSD Project
+gahr@FreeBSD.org
+
+PGP Public Key:
+http://gahr.ch/pgp
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: not available
+Type: application/pgp-signature
+Size: 196 bytes
+Desc: not available
+Url : http://lists.freebsd.org/pipermail/freebsd-hackers/attachments/20110325/af253ca5/attachment.pgp
+
+
+--------------------------------------------------------------------------------
+MID: AANLkTim-H2=cJG24Cg7DyfdnASSfRpu15TVCBOXqk=2X@mail.gmail.com
+DATE: 2011-03-25T15:42:08+00:00  FROM: bapt at freebsd.org (Baptiste Daroussin) <None>
+SUBJ: [ECFT] pkgng 0.1-alpha1: a replacement for pkg_install
+BODY:
+2011/3/25 Pietro Cerutti <gahr@freebsd.org>:
+
+I think we can provide a periodic script activable by users (I let
+other decide if it has to be activated by default or not) that does a
+pkg backup /path/to/file/backup
+and xz it.
+
+because copying can be a huge.
+
+40Mo for the database here, corresponding to 70Mo in the old format
+and to 600 packages. the dump xzed is only 3Mo
+
+regards,
+Bapt
+
+
+--------------------------------------------------------------------------------
+MID: 20110325150653.21132ej6abxmjpgk@webmail.leidinger.net
+DATE: 2011-03-25T15:48:09+00:00  FROM: Alexander at Leidinger.net (Alexander Leidinger) <None>
+SUBJ: [ECFT] pkgng 0.1-alpha1: a replacement for pkg_install
+BODY:
+Quoting Baptiste Daroussin <bapt@FreeBSD.org> (from Fri, 25 Mar 2011  
+11:11:11 +0100):
+
+
+I didn't had a look at it, just some comments about some parts you explained.
+
+
+
+This will probably fail if LD_LIBRARY_PATH is used, or if we are  
+installing linuxulator ports.
+
+
+What if a package is able to install on a subset, e.g. the linuxulator  
+ports are for amd64 and i386?
+
+
+What about DB corruption/loss? Do you keep the  
+/var/db/pkg/<package>/xxx files even with pkgng and only use the DB as  
+a way to speed up some work (so the DB corruption just requires to run  
+pkg2ng), or are you lost of the DB is lost?
+
+Bye,
+Alexander.
+
+-- 
+Real computer scientists don't comment their code.  The identifiers are
+so long they can't afford the disk space.
+
+http://www.Leidinger.net    Alexander @ Leidinger.net: PGP ID = B0063FE7
+http://www.FreeBSD.org       netchild @ FreeBSD.org  : PGP ID = 72077137
+
+
+--------------------------------------------------------------------------------
+MID: 20110325153814.20287h1594npcu80@webmail.leidinger.net
+DATE: 2011-03-25T15:54:21+00:00  FROM: Alexander at Leidinger.net (Alexander Leidinger) <None>
+SUBJ: [ECFT] pkgng 0.1-alpha1: a replacement for pkg_install
+BODY:
+Quoting Baptiste Daroussin <bapt@freebsd.org> (from Fri, 25 Mar 2011  
+15:14:52 +0100):
+
+
+
+The suggestion is easy, allow a way to specify a set of valid architectures.
+
+
+I would say "for sure". Info: In Solaris 10 sqlite is used for the  
+service managenemt framework (SMF). It is possible that the DB is  
+corrupt in some bad situations. In this case you have to rebuild the  
+DB (script provided, been there, had to use it).
+
+
+Put a corruption of /var/db/pkg/xyz-1/+REQUIRED_BY would only affect a  
+small part, and this part could be even recovered from (pkgdb from  
+portupgrade is able to do it).
+
+
+It needs to be automated. Maybe periodic daily... but maybe this is  
+not often enough after a day of a lot of changes (think about it this  
+way: do you want to lose a day of changes?). The current FS based DB  
+is very robust, partly because there is redundant data, pertly because  
+losing a file just means that the very limited subset of information  
+is lost (and a reinstall of one port wi
+
+--------------------------------------------------------------------------------
+MID: 4D8CC468.2000904@freebsd.org
+DATE: 2011-03-25T16:36:12+00:00  FROM: avg at freebsd.org (Andriy Gapon) <None>
+SUBJ: [ECFT] pkgng 0.1-alpha1: a replacement for pkg_install
+BODY:
+on 25/03/2011 17:35 Pietro Cerutti said the following:
+
+I even can rm -rf / by accident.
+What's your solution to this? :)
+
+P.S. one solution would be a subcase of the other
+-- 
+Andriy Gapon
+
+
+--------------------------------------------------------------------------------
+MID: AANLkTi=mx1YbPWY7W0wF3fXu6QafqQC=pYafdXj9Z5_N@mail.gmail.com
+DATE: 2011-03-25T17:23:05+00:00  FROM: lists at eitanadler.com (Eitan Adler) <None>
+SUBJ: [ECFT] pkgng 0.1-alpha1: a replacement for pkg_install
+BODY:
+On Fri, Mar 25, 2011 at 11:35 AM, Andriy Gapon <avg@freebsd.org> wrote:
+
+rm -rf /
+rm: "/" may not be removed
+
+
+-- 
+Eitan Adler
+
+
+--------------------------------------------------------------------------------
+MID: 20110325193239.GA8697@saltmine.radix.net
+DATE: 2011-03-25T20:00:40+00:00  FROM: dickey at radix.net (Thomas Dickey) <None>
+SUBJ: [ECFT] pkgng 0.1-alpha1: a replacement for pkg_install
+BODY:
+On Fri, Mar 25, 2011 at 11:54:35AM -0500, Eitan Adler wrote:
+
+referring to the CVS, this should improve the approach.
+
+	cd /tmp
+	rm -rf ../*
+
+ymmv
+
+-- 
+Thomas E. Dickey
+http://invisible-island.net
+ftp://invisible-island.net
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: not available
+Type: application/pgp-signature
+Size: 228 bytes
+Desc: not available
+Url : http://lists.freebsd.org/pipermail/freebsd-hackers/attachments/20110325/73a481ec/attachment.pgp
+
+
+--------------------------------------------------------------------------------
+MID: 20110325211439.00004dda@unknown
+DATE: 2011-03-25T20:33:54+00:00  FROM: Alexander at Leidinger.net (Alexander Leidinger) <None>
+SUBJ: [ECFT] pkgng 0.1-alpha1: a replacement for pkg_install
+BODY:
+On Fri, 25 Mar 2011 16:35:21 +0100 Pietro Cerutti <gahr@freebsd.org>
+wrote:
+
+
+
+And as I told above, I even had such a case (more than once), and the
+hardware was not buggy. What do you want to tell in this case, "life
+sucks, reinstall everything"?
+
+
+Sometimes you have to stay with broken hardware.
+
+
+There are more FS than only ZFS (personally I use ZFS, and I have
+snapshots, but this is not a good solution for this problem).
+
+As I told already, if it isn't automatic, nearly nobody will use it.
+And the package management stuff has to be automatic, no freshman will
+think about setting up a snapshot script when he starts to use
+packages/ports.
+
+
+A copy or two would be enough, but it has to be done automatically, and
+once a day is not enough. A copy after each X modifications maybe
+(for suitable definitions of X and 'modifications').
+
+Bye,
+Alexander.
+
+
+--------------------------------------------------------------------------------
+MID: AANLkTi=eZOe1jLQ9CKSTKisSD2TOXsCSFTb+o_FeB_CZ@mail.gmail.com
+DATE: 2011-03-25T20:47:17+00:00  FROM: jos at catnook.com (Jos Backus) <None>
+SUBJ: [ECFT] pkgng 0.1-alpha1: a replacement for pkg_install
+BODY:
+As far as package managers go, yum, which is used widely, uses SQLite.
+
+-- 
+Peace cannot be achieved through violence, it can only be attained through
+understanding.
+
+
+--------------------------------------------------------------------------------
+MID: AANLkTinvEUG4+ueMPUUTnEoCqCVvosnub76GVRQ7fS+z@mail.gmail.com
+DATE: 2011-03-25T21:13:18+00:00  FROM: yanegomi at gmail.com (Garrett Cooper) <None>
+SUBJ: [ECFT] pkgng 0.1-alpha1: a replacement for pkg_install
+BODY:
+On Fri, Mar 25, 2011 at 1:14 PM, Alexander Leidinger
+<Alexander@leidinger.net> wrote:
+
+If you use binary packages, pulling down everything should be trivial,
+fast, and easy to install. If you're using ports, well then things are
+going to be slow as expected.
+
+
+Sometimes you have to go buy new parts?
+
+Playing with broken hardware is like playing with fire -- sometimes
+you'll get burned if it goes out of commission during critical
+operations. I would be more concerned about overall system operation
+than having a packaging system that can handle all error conditions
+that should be rightfully handled by various kernel subsystems. If the
+kernel's doing it's job, then the packaging manager can do its job as
+well.
+
+
+A lot of filesystems feature snapshot'ing, including UFS. If you
+aren't smart enough to back up your data you're toast if the data is
+gone.
+
+I would be more concerned about the program getting killed, not
+getting properly cleaned up, etc as this is something that the package
+manag
+
+--------------------------------------------------------------------------------
+MID: AANLkTikfjZzbJdGvGa+uNgKHS6f+Lo13DYNun2y5RvQX@mail.gmail.com
+DATE: 2011-03-25T21:38:31+00:00  FROM: bapt at freebsd.org (Baptiste Daroussin) <None>
+SUBJ: [ECFT] pkgng 0.1-alpha1: a replacement for pkg_install
+BODY:
+2011/3/25 Yuri <yuri@rawbw.com>:
+
+both have to be adapted, portupgrade throught maybe some ruby bindings
+to libpkg, portmaster by patching it to use pkg frontend instead of
+pkg_* tools (as I did for the ports (see ports/bsd.pkgng.mk in the git
+tree)
+
+regards,
+Bapt
+
+
+--------------------------------------------------------------------------------
+MID: 4D8D09C2.2050500@rawbw.com
+DATE: 2011-03-25T21:53:31+00:00  FROM: yuri at rawbw.com (Yuri) <None>
+SUBJ: [ECFT] pkgng 0.1-alpha1: a replacement for pkg_install
+BODY:
+On 03/25/2011 03:11, Baptiste Daroussin wrote:
+
+How does it relate to portmaster and portupgrade packages, which both 
+have (or include) supposedly the same functionality?
+
+Yuri
+
+
+--------------------------------------------------------------------------------
+MID: 20110325225244.00002d0b@unknown
+DATE: 2011-03-25T22:24:35+00:00  FROM: Alexander at Leidinger.net (Alexander Leidinger) <None>
+SUBJ: [ECFT] pkgng 0.1-alpha1: a replacement for pkg_install
+BODY:
+On Fri, 25 Mar 2011 13:47:13 -0700 Garrett Cooper <yanegomi@gmail.com>
+wrote:
+
+
+And if there is a fast way to cut down the slow part... why not?
+
+
+Yes, but if we talk e.g. about aging hardware, having the luck to get
+hit directly in the parts which hurt is not nice. You want to have the
+time to find a suitable replacement.
+
+
+You know that the world is not an ideal one. Shit happens and Murphy
+visits you.
+
+
+So... why do we have /var/backups/master.passwd.bak then? To make life
+easy.
+
+
+I agree.
+
+
+AFAIK it can.
+
+
+- It does not need to be done with every change.
+- You do not know if it is a performance hit or not, we do not have
+  numbers.
+- If making an automatic export after X modifications is not expensive,
+  I say: why not? It would make more easy in case of fire.
+
+
+Backups are not for architectural mistakes, they are for situations
+where something went wrong. Something may go wrong even without
+architectural mistakes. Safety nets are good. They are even better if
+they do not cost anyt
+
+--------------------------------------------------------------------------------
+MID: 20110325201743.20885f22@bhuda.mired.org
+DATE: 2011-03-26T00:42:50+00:00  FROM: mwm at mired.org (Mike Meyer) <None>
+SUBJ: [ECFT] pkgng 0.1-alpha1: a replacement for pkg_install
+BODY:
+On Fri, 25 Mar 2011 15:14:52 +0100
+Baptiste Daroussin <bapt@freebsd.org> wrote:
+
+How about dealing with 32-bit x86 packages on an amd64 install?
+
+    <mike
+-- 
+Mike Meyer <mwm@mired.org>		http://www.mired.org/consulting.html
+Independent Software developer/SCM consultant, email for more information.
+
+O< ascii ribbon campaign - stop html mail - www.asciiribbon.org
+
+
+--------------------------------------------------------------------------------
+MID: AANLkTi=J+o0q+f4FmXvfj9++MbQW_Oxjd+pKOE_judGH@mail.gmail.com
+DATE: 2011-03-26T10:51:30+00:00  FROM: bapt at freebsd.org (Baptiste Daroussin) <None>
+SUBJ: [ECFT] pkgng 0.1-alpha1: a replacement for pkg_install
+BODY:
+2011/3/26 Mike Meyer <mwm@mired.org>:
+
+32bits x86 packages on amd64 simply are ignored by the elf
+introspection (currently)
+
+
+--------------------------------------------------------------------------------
+MID: AANLkTi=s+d1Gd0ZE8PZHcJdia-8k+C9mM=MXxoOAmZuN@mail.gmail.com
+DATE: 2011-03-26T13:04:55+00:00  FROM: dnaeon at gmail.com (Marin Atanasov Nikolov) <None>
+SUBJ: [ECFT] pkgng 0.1-alpha1: a replacement for pkg_install
+BODY:
+On Fri, Mar 25, 2011 at 12:11 PM, Baptiste Daroussin <bapt@freebsd.org> wrote:
+
+Hi,
+
+Great news!
+
+I'll try to contribute with what I can for this project!
+
+I've mirrored the pkgng Git repo here as well:
+
+ - http://git.unix-heaven.org/cgit.cgi/pkgng/
+
+And attached is my first patch :)
+
+Could you please review and if possible, apply it?
+
+Regards,
+Marin
+
+-- 
+Marin Atanasov Nikolov
+
+dnaeon AT gmail DOT com
+daemon AT unix-heaven DOT org
+http://www.unix-heaven.org/
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: 0001-Clarify-a-bit-more-the-GOALS-and-some-other-minor-ch.patch
+Type: text/x-patch
+Size: 10108 bytes
+Desc: not available
+Url : http://lists.freebsd.org/pipermail/freebsd-hackers/attachments/20110326/f55342ee/0001-Clarify-a-bit-more-the-GOALS-and-some-other-minor-ch.bin
+
+
+--------------------------------------------------------------------------------
+MID: AANLkTikZDW9jpUAJPoxuFoe5HmB1T5GRUW5ncKQ4Ktsu@mail.gmail.com
+DATE: 2011-03-26T23:02:26+00:00  FROM: jlaffaye at freebsd.org (Julien Laffaye) <None>
+SUBJ: [ECFT] pkgng 0.1-alpha1: a replacement for pkg_install
+BODY:
+On Fri, Mar 25, 2011 at 10:11 AM, Baptiste Daroussin <bapt@freebsd.org> wrote:
+
+FYI, we moved to github[1] in order to have a bug tracker, pull
+request and code review.
+Also, I recommend to build from the HEAD of the git repository, to not
+report fixed compilation warnings/bugs.
+
+[1]: https://github.com/pkgng/pkgng
+
+
+--------------------------------------------------------------------------------
+MID: 4D90C8EA.2000901@freebsd.org
+DATE: 2011-03-28T17:44:23+00:00  FROM: avg at freebsd.org (Andriy Gapon) <None>
+SUBJ: [ECFT] pkgng 0.1-alpha1: a replacement for pkg_install
+BODY:
+on 25/03/2011 12:11 Baptiste Daroussin said the following:
+
+Perhaps I am too impatient :) but I would like to inquire about the following
+features:
+
+I. A provides/requires interface for packages.
+Each package specified a list of files (and perhaps other entities) that it
+provides and requires.  At the initial stage, without ports modifications, these
+could be: (1) a list of all files installed by package for provides; (2) for
+requires - an auto-generated list of dependencies based on required shared
+libraries plus dependency specifications in ports.
+I think that this kind of interface should help with using alternatives that
+provide the same interface (e.g. like gamin vs fam).
+
+II. Package signing.
+
+III. Package naming that includes architecture, major OS version (for API/ABI),
+maybe more.
+
+IV. "Convenient" support for i386 packages on amd64.
+Distinct installation directories, proper installation conflict
+detection/avoidance between i386 and amd64 packages, proper library paths, etc.
+
+
+
+--------------------------------------------------------------------------------
+MID: AANLkTinaz9Y6kgjQvdS1Pu+kay50DUs6FubcbCxcc3W2@mail.gmail.com
+DATE: 2011-03-28T18:00:22+00:00  FROM: gcooper at FreeBSD.org (Garrett Cooper) <None>
+SUBJ: [ECFT] pkgng 0.1-alpha1: a replacement for pkg_install
+BODY:
+On Mon, Mar 28, 2011 at 10:44 AM, Andriy Gapon <avg@freebsd.org> wrote:
+
+That would be really nice.
+
+
+This could be provided in the manifest. Doing it in the filename sort
+of turns into a mess, as I've discovered working at Cisco :).
+
+
+There are other architectures that would benefit from this as well,
+like powerpc 32-bit on 64-bit, MIPs 32-bit on n32, etc.
+
+This involves more work than pkgng could provide IIRC as build
+infrastructure would need to be fixed to look at and link against
+usr/lib32 instead of usr/lib, unless you mean to rewrite the linker
+stuff at install-time.
+
+
+It would be nice. That's a request in the same general area that
+Gentoo portage's overlay goes into, but I think that would require
+rewriting certain bits of ports infrastructure to be extensible, not
+extend pkgng in this area.
+
+Thanks,
+-Garrett
+
+
+--------------------------------------------------------------------------------
+MID: AANLkTi=uPaaxUVUDL3CPWByOeOZ2TjziUbrY7pJLQyAa@mail.gmail.com
+DATE: 2011-03-28T18:22:59+00:00  FROM: jlaffaye at freebsd.org (Julien Laffaye) <None>
+SUBJ: [ECFT] pkgng 0.1-alpha1: a replacement for pkg_install
+BODY:
+On Mon, Mar 28, 2011 at 6:59 PM, Garrett Cooper <gcooper@freebsd.org> wrote:
+
+Adding require/provide support in pkgng is kind of trivial. But ports
+have to support it first.
+
+
+Right know we only planned to sign the repo database, so we can trust
+the sah256 of the packages stored in the database. Then if the package
+has the same sha256 as the one in the repo database it is considered
+trusted.
+If we want a per-package signing, we would have a tarball in a tarball.
+
+
+Actually, it *is* in the +MANIFEST of pkgng packages archives :-)
+
+
+I dont think we are going that way right now...
+
+
+Well, I think we are doing the basics first. We will see later.
+BTW, the +MANIFEST file contains the options a package was built with.
+
+
+
+--------------------------------------------------------------------------------
+MID: AANLkTikyFFSdiFYtdmRboMcayk1VaeiVqG82LNAFstbM@mail.gmail.com
+DATE: 2011-03-28T19:28:57+00:00  FROM: superbisquit at gmail.com (Super Bisquit) <None>
+SUBJ: [ECFT] pkgng 0.1-alpha1: a replacement for pkg_install
+BODY:
+Go through the mailing lists. You can only boot 64bit on 64bit and 32bit on
+32bit for FreeBSD. Debian needs to boot a 64bit kernel for 64bit machines.
+
+I made the reply because that is similar to the BTX bootloader.
+Let Baptiste get a powerpc machine and try using that bootloader, it won't
+work.
+It won't work on sparc (64/ultra), and it won't work on arm.
+
+
+On Mon, Mar 28, 2011 at 3:01 PM, Garrett Cooper <gcooper@freebsd.org> wrote:
+
+
+
+--------------------------------------------------------------------------------
+MID: alpine.GSO.1.10.1103282328340.19944@multics.mit.edu
+DATE: 2011-03-29T03:46:16+00:00  FROM: kaduk at MIT.EDU (Benjamin Kaduk) <None>
+SUBJ: [ECFT] pkgng 0.1-alpha1: a replacement for pkg_install
+BODY:
+On Mon, 28 Mar 2011, Julien Laffaye wrote:
+
+
+I really expected this to have been mentioned already, but this approach 
+(tarball in a tarball) is taken by Debian packages, and I don't remember 
+hearing of any issues related to it.  I don't think it's worth discounting 
+from the start without giving some considerationg, but I will defer to the 
+people actually doing the work.
+
+-Ben Kaduk
+
+
+--------------------------------------------------------------------------------
+MID: DF9D9589-56C3-40DF-992F-9F62A2FC1173@freebsd.org
+DATE: 2011-03-29T04:15:58+00:00  FROM: kientzle at freebsd.org (Tim Kientzle) <None>
+SUBJ: [ECFT] pkgng 0.1-alpha1: a replacement for pkg_install
+BODY:
+
+If you use libarchive-style streaming, it's even
+pretty straightforward to read and extract such
+things without having to create a bunch of
+temporary files.
+
+You just need to be careful about compression.
+
+Tim
+
+
+
+--------------------------------------------------------------------------------
+MID: AANLkTinxOYx0zBAti4uqmc7_Adx9Ucnovy9Zf1J=ogPP@mail.gmail.com
+DATE: 2011-03-29T05:51:14+00:00  FROM: bapt at freebsd.org (Baptiste Daroussin) <None>
+SUBJ: [ECFT] pkgng 0.1-alpha1: a replacement for pkg_install
+BODY:
+2011/3/29 Tim Kientzle <kientzle@freebsd.org>:
+
+ok but what is the problem with signing only the repository then rely on digest?
+
+I am not sure we need more that this.
+
+second question howto sign? pgp? ssl?
+
+First would be the easiest way to go but we don't have in base
+anything to check signatures (maybe we should in that case
+investigating to import netpgp), ssl why not? but which algorithm?
+what security officer would prefer?
+
+We are ok to investigate that part, but we need more information about
+what is expected.
+
+regards,
+Bapt
+
+
+--------------------------------------------------------------------------------
+MID: AANLkTimDdtkSa03KeO8RYHWVJAgUvQPQxwH4FpVypZhV@mail.gmail.com
+DATE: 2011-03-29T12:11:51+00:00  FROM: jlaffaye at freebsd.org (Julien Laffaye) <None>
+SUBJ: [ECFT] pkgng 0.1-alpha1: a replacement for pkg_install
+BODY:
+On Tue, Mar 29, 2011 at 5:15 AM, Tim Kientzle <kientzle@freebsd.org> wrote:
+
+Agreed, if we dont want to verify the signature, we can extract the
+tarball in the tarball efficiently.
+
+But to verify the signature, we have to read the tarball in the
+tarball twice: the first time to compute the digest and verify the
+signature, the second time to do the real extraction.
+So I guess that the tarball containing the real package archive and
+the signature should be uncompressed. The real package archive would
+be compressed, though.
+
+
+--------------------------------------------------------------------------------
+MID: AANLkTi=Uvhgp5m_Sk82-NMz_G5_c7Ra_bgVtDC+-iHxW@mail.gmail.com
+DATE: 2011-03-29T14:50:39+00:00  FROM: superbisquit at gmail.com (Super Bisquit) <None>
+SUBJ: [ECFT] pkgng 0.1-alpha1: a replacement for pkg_install
+BODY:
+I'm just going to clarify a statement I made earlier on this thread in order
+to remove some possible misconceptions. One can only boot 32bit PPC on a
+32bit PPC machines and have it work properly. The same applies for 64bit ppc
+machines.
+
+
+
+On Tue, Mar 29, 2011 at 8:11 AM, Julien Laffaye <jlaffaye@freebsd.org>wrote:
+
+
+
+--------------------------------------------------------------------------------
+MID: 4D9218DF.8060305@freebsd.org
+DATE: 2011-03-29T17:37:51+00:00  FROM: avg at freebsd.org (Andriy Gapon) <None>
+SUBJ: [ECFT] pkgng 0.1-alpha1: a replacement for pkg_install
+BODY:
+on 28/03/2011 21:22 Julien Laffaye said the following:
+
+Well, by the package name I meant not only a package file name.
+Let's imagine that we do support installing i386 packages on amd64 in parallel to
+amd64 packages.  And for some reason I want to have both 32-bit and 64-bit
+versions of, say, firefox; e.g. for benchmarking.  If the packages would have the
+same name, then that would be impossible.
+
+I think that having some thing in package name in addition to package metadata
+could have certain benefits.
+
+-- 
+Andriy Gapon
+
+
+--------------------------------------------------------------------------------
+MID: AANLkTi==hy7L3arOONozRmmMmHRniH6ch8iot7tFyf0R@mail.gmail.com
+DATE: 2011-03-29T18:28:16+00:00  FROM: bapt at freebsd.org (Baptiste Daroussin) <None>
+SUBJ: [ECFT] pkgng 0.1-alpha1: a replacement for pkg_install
+BODY:
+2011/3/29 Andriy Gapon <avg@freebsd.org>:
+
+I understand but I think pkgng is already quite radical changement.
+More change is taking the risk that it would be rejected in the end,
+we still do not have any reply from portmgr, there is no insurance
+pkgng will in the end replace pkg_install. Currently pkgng requires
+only very few changes from the ports infrastruture, I don't know the
+cost of changing the name scheme.
+
+If I'm not clear enough, supporting both 32bits and 64bits packages at
+the same time on amd64 or arches that could support this kind of
+installation, is a large change we don't want to take the
+responsability of :) and implementing this in pkgng would significate
+we already choose how it should work.
+
+regards,
+Bapt
+
+
+--------------------------------------------------------------------------------
+MID: AANLkTinibaaEHznTQfLQD_GfOKkj2BynaWRCKEsWBh=3@mail.gmail.com
+DATE: 2011-03-29T20:30:07+00:00  FROM: bapt at freebsd.org (Baptiste Daroussin) <None>
+SUBJ: [ECFT] pkgng 0.1-alpha1: a replacement for pkg_install
+BODY:
+2011/3/29 Baptiste Daroussin <bapt@freebsd.org>:
+
+seems it was not clear :)
+
+ok let's try to say it simpler :) the main goal is to keep it simple
+for now, simple and rock solid, so that we can replace pkg_install and
+do some cleanup in the ports tree, add the "must have" features while
+doing that. And only when we will be ready for that and that portmgr
+have decided that it is mature enough to replace pkg_install, only
+after that we will start improving with new features and new changes.
+
+I thinks changing the package name scheme is not a "must have"
+feature, it for sure is and intresting feature, but what about pushing
+to after the first stable release? managing architecture as we plan to
+do it is enough imho.
+
+But I can be wrong.
+
+regards,
+Bapt
+
+
+--------------------------------------------------------------------------------
+MID: 4D94959F.3090507@FreeBSD.org
+DATE: 2011-03-31T14:55:33+00:00  FROM: avg at FreeBSD.org (Andriy Gapon) <None>
+SUBJ: [ECFT] pkgng 0.1-alpha1: a replacement for pkg_install
+BODY:
+on 29/03/2011 23:29 Baptiste Daroussin said the following:
+
+Oh, yes, I realize all this and totally agree with it.
+Given how huge and how visible our ports and packages systems are, it's better to
+be slow and cautious.
+All the ideas that I suggested were more for the "next step" than for now.
+
+Thank you for the work!
+-- 
+Andriy Gapon
+
+
+--------------------------------------------------------------------------------
+MID: AANLkTin0q_XMdNVN6bjcAZsd20Zc9_9jx4f3q4Zf7Jb5@mail.gmail.com
+DATE: 2011-03-31T15:02:20+00:00  FROM: bapt at freebsd.org (Baptiste Daroussin) <None>
+SUBJ: [ECFT] pkgng 0.1-alpha1: a replacement for pkg_install
+BODY:
+2011/3/31 Andriy Gapon <avg@freebsd.org>:
+
+And noted in my personnal TODO list :)
+
+
+
+--------------------------------------------------------------------------------
+MID: 4ED692D2.5060407@FreeBSD.org
+DATE: 2011-11-30T21:02:16+00:00  FROM: jlaffaye at FreeBSD.org (Julien Laffaye) <None>
+SUBJ: [CFT] pkgng alpha2
+BODY:
+Hi all,
+
+We are releasing pkgng (the next pkg_install) alpha2 to the world and we 
+want you to test it!
+There is no "good" method to test it: use it as you would in the real
+world. Of course, you are encouraged to backup your data or test it in some
+kind of virtualized environment.
+After using it for some time, you will certainly find bugs. You can 
+report them
+on the issues tracker [1]. If you find missing features, that is things 
+you can't do
+with pkgng but can with pkg_install, you can also report
+them. New features are not the expected outcome of this call, as we want to
+release a final version ASAP.
+FYI, an alpha3 should follow shortly to fix issues in alpha3 and test
+additional features. After that, there will be a feature freeze with beta1.
+
+Getting started:
+You can download or git clone the source code of pkgng on the github 
+page [2].
+Then, a boring `make' followed by `make install' will do it.
+If you have some packages installed by pkg_add, you can convert the old
+database t
+
+==========================================================================================
+DB: freebsd-current.duckdb  hits=50
+--------------------------------------------------------------------------------
+MID: 4EE78889.10500@FreeBSD.org
+DATE: 2011-12-13T17:17:08+00:00  FROM: avg at FreeBSD.org (Andriy Gapon) <None>
+SUBJ: [CFT] pkgng alpha2
+BODY:
+on 30/11/2011 22:32 Julien Laffaye said the following:
+
+Couple of questions/suggestions:
+
+1. Do you plan to have a pkgng port to issue the preview releases pkgng?
+Current pkgng installation/bootstrap procedure is really easy, but the port would
+be even more convenient for prospective testers.
+
+2. Is there a public pre-built package repository with pkgng-format packages that
+could be used for testing and getting a taste of a packages-only pkgng-managed system?
+
+Thank you.
+-- 
+Andriy Gapon
+
+
+--------------------------------------------------------------------------------
+MID: 4EE789E6.5020303@freebsd.org
+DATE: 2011-12-13T17:23:41+00:00  FROM: jlaffaye at freebsd.org (Julien Laffaye) <None>
+SUBJ: [CFT] pkgng alpha2
+BODY:
+On 12/13/2011 06:16 PM, Andriy Gapon wrote:
+Yes, this is planned. The ports will bootstrap pkgng.
+Unfortunately, no.
+I think I now have the resources to do that  for the next CFT. But it 
+will only be 9.0 amd64 I am afraid.
+We cant build packages for the entire matrix.
+
+
+
+--------------------------------------------------------------------------------
+MID: 4EE791B5.6070808@FreeBSD.org
+DATE: 2011-12-13T17:56:16+00:00  FROM: avg at FreeBSD.org (Andriy Gapon) <None>
+SUBJ: [CFT] pkgng alpha2
+BODY:
+on 13/12/2011 19:22 Julien Laffaye said the following:
+
+Great!
+
+
+I understand.  Those would take an immense amount of compilation time and storage
+space.
+
+-- 
+Andriy Gapon
+
+
+--------------------------------------------------------------------------------
+MID: 20111215020900.5a4f6dd1@it.buh.tecnik93.com
+DATE: 2011-12-15T00:25:12+00:00  FROM: itetcu at FreeBSD.org (Ion-Mihai Tetcu) <None>
+SUBJ: [CFT] pkgng alpha2
+BODY:
+On Tue, 13 Dec 2011 19:56:05 +0200
+Andriy Gapon <avg@FreeBSD.org> wrote:
+
+
+The current idea is to have everything in ports so that we don't depend
+on the base OS for any kind of changes; we'll only have a bootstrap in
+base. One more step forward to decoupling ports from src releases.
+
+
+Storage and especially storage / propagation to mirrors are the biggest
+problems.
+After pkgNG goes in, we plan to switch HEAD to it and provide only
+pkgNG packages for it; then probably the same for 9-STABLE and further
+9 releases, but we'll probably need to provide current style of
+pacakges during 9.x life time :(
+
+-- 
+IOnut - Un^d^dregistered ;) FreeBSD "user"
+  "Intellectual Property" is   nowhere near as valuable   as "Intellect"
+FreeBSD committer -> itetcu@FreeBSD.org, PGP Key ID 057E9F8B493A297B
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: signature.asc
+Type: application/pgp-signature
+Size: 196 bytes
+Desc: not available
+Url : http://lists.freebsd.org/pipermail
+
+--------------------------------------------------------------------------------
+MID: 20110325101111.GA36840@azathoth.lan
+DATE: 2011-03-25T10:41:11+00:00  FROM: bapt at FreeBSD.org (Baptiste Daroussin) <None>
+SUBJ: [ECFT] pkgng 0.1-alpha1: a replacement for pkg_install
+BODY:
+Hi all,
+
+miwi@ launched the new thing called Experimental Call For Testing,
+it's our turn :)
+
+Julien Laffaye (jlaffaye@) and I, helped by Philippe Pepiot (huge
+contributor) have been working since the end of the last GSoC on a
+rewrite of pkg_install.
+
+pkgng is a binary package manager written from scratch for FreeBSD.
+
+After a long period of technology testing, (json, tinycdb, bdb, etc)
+and we now have achieved to implement the basic functionnality. We
+would greatly approciate to have some feedback, wider testing,
+patching, documenting etc, before implementing the higher level
+features.
+
+pkgng is built on top of a new libpkg, which allow to deal with the database of
+installed packages, to deal with remote repositories, manage packages:
+creation, installation gathering informations, registering new ports.
+
+features supported are or will be :
+
+- smooth integration with bsd.port.mk (including bsd.pkg.mk line 2486)
+which allow  to have a bsd.port.mk which deal with both pkg_install
+and pkg
+
+--------------------------------------------------------------------------------
+MID: imhvm9$hms$1@dough.gmane.org
+DATE: 2011-03-25T11:53:05+00:00  FROM: ivoras at freebsd.org (Ivan Voras) <None>
+SUBJ: [ECFT] pkgng 0.1-alpha1: a replacement for pkg_install
+BODY:
+On 25/03/2011 11:11, Baptiste Daroussin wrote:
+
+
+I'm very glad you went with sqlite3! I've looked at pkgng source a bit 
+and it looks like you use transactions and foreign keys which is a huge 
+benefit for the whole effort.
+
+At this time I'd just like to suggest you add the use of WAL journal 
+(http://www.sqlite.org/pragma.html#pragma_journal_mode) on database 
+creation so you get the benefits of multiple-readers-single-writer 
+concurrency model.
+
+
+Could you change the filename of the database to have the ".sqlite" 
+extension? It's not important but it indicates what it is used by and 
+newer software is moving to ".sqlite".
+
+
+Maybe I'm misunderstanding but won't that mean that the ports system 
+without pkgng will continue to maintain their data in the current format?
+
+
+"""
+	  the database will be a sqlite file compressed with the xz format.
+	  the database will be signed so we can trust the sha256 of the
+	  packages, so if a package has the expected hash, it is considered
+	  trusted.
+"
+
+--------------------------------------------------------------------------------
+MID: AANLkTinV_3571iaa6c=5uCxYvHg-7+UOWQb=fGig3jVJ@mail.gmail.com
+DATE: 2011-03-25T12:57:23+00:00  FROM: jlaffaye at FreeBSD.org (Julien Laffaye) <None>
+SUBJ: [ECFT] pkgng 0.1-alpha1: a replacement for pkg_install
+BODY:
+On Fri, Mar 25, 2011 at 11:52 AM, Ivan Voras <ivoras@freebsd.org> wrote:
+
+It sounds like a good idea. I'll add WAL support and if no problem
+arise from that we should keep it.
+
+
+Sure. Maybe rename pkg.db to local.sqlite so it will consistent with
+the repo.sqlite (both in /var/db/pkg)
+
+If pkgng is not installed, the first thing the port system will do is
+to install it.
+
+
+It is the database describing the remote repository. It is interesting
+to compress it because it will be downloaded.
+
+
+We thought that signing the repo.sqlite file would be simpler.
+If we want to sign each package individually, we must have a tarball
+which contains the real tarball plus the signature.
+
+Regards,
+Julien
+
+
+--------------------------------------------------------------------------------
+MID: AANLkTikxi+jgnLrFg57o1N-Qzip9juaqXGzK2eYLkpFr@mail.gmail.com
+DATE: 2011-03-25T14:15:56+00:00  FROM: bapt at freebsd.org (Baptiste Daroussin) <None>
+SUBJ: [ECFT] pkgng 0.1-alpha1: a replacement for pkg_install
+BODY:
+2011/3/25 Alexander Leidinger <Alexander@leidinger.net>:
+
+this isn't activated by default, and if activated is only intended to
+work on freebsd elf files.
+This is done to workaround some bugguy ports not to be used in
+production, pkg register shows in warning in that case so that
+user/maintainers are warned they have something to fix.
+
+
+No clue for that at the moment but we are open to suggestions.
+
+
+Nothing is done about DB corruption/loss, I am not sure we need to do something.
+Maybe.
+Currently a filesystem corruption/loss on /var/db/pkg would do the same.
+
+but it is sqlite so we can perhaps provide a way to get compressed
+dump so user can periodically backup their database.
+
+regards,
+Bapt
+
+
+--------------------------------------------------------------------------------
+MID: 20110325150653.21132ej6abxmjpgk@webmail.leidinger.net
+DATE: 2011-03-25T14:27:07+00:00  FROM: Alexander at Leidinger.net (Alexander Leidinger) <None>
+SUBJ: [ECFT] pkgng 0.1-alpha1: a replacement for pkg_install
+BODY:
+Quoting Baptiste Daroussin <bapt@FreeBSD.org> (from Fri, 25 Mar 2011  
+11:11:11 +0100):
+
+
+I didn't had a look at it, just some comments about some parts you explained.
+
+
+
+This will probably fail if LD_LIBRARY_PATH is used, or if we are  
+installing linuxulator ports.
+
+
+What if a package is able to install on a subset, e.g. the linuxulator  
+ports are for amd64 and i386?
+
+
+What about DB corruption/loss? Do you keep the  
+/var/db/pkg/<package>/xxx files even with pkgng and only use the DB as  
+a way to speed up some work (so the DB corruption just requires to run  
+pkg2ng), or are you lost of the DB is lost?
+
+Bye,
+Alexander.
+
+-- 
+Real computer scientists don't comment their code.  The identifiers are
+so long they can't afford the disk space.
+
+http://www.Leidinger.net    Alexander @ Leidinger.net: PGP ID = B0063FE7
+http://www.FreeBSD.org       netchild @ FreeBSD.org  : PGP ID = 72077137
+
+
+--------------------------------------------------------------------------------
+MID: 20110325153814.20287h1594npcu80@webmail.leidinger.net
+DATE: 2011-03-25T14:38:38+00:00  FROM: Alexander at Leidinger.net (Alexander Leidinger) <None>
+SUBJ: [ECFT] pkgng 0.1-alpha1: a replacement for pkg_install
+BODY:
+Quoting Baptiste Daroussin <bapt@freebsd.org> (from Fri, 25 Mar 2011  
+15:14:52 +0100):
+
+
+
+The suggestion is easy, allow a way to specify a set of valid architectures.
+
+
+I would say "for sure". Info: In Solaris 10 sqlite is used for the  
+service managenemt framework (SMF). It is possible that the DB is  
+corrupt in some bad situations. In this case you have to rebuild the  
+DB (script provided, been there, had to use it).
+
+
+Put a corruption of /var/db/pkg/xyz-1/+REQUIRED_BY would only affect a  
+small part, and this part could be even recovered from (pkgdb from  
+portupgrade is able to do it).
+
+
+It needs to be automated. Maybe periodic daily... but maybe this is  
+not often enough after a day of a lot of changes (think about it this  
+way: do you want to lose a day of changes?). The current FS based DB  
+is very robust, partly because there is redundant data, pertly because  
+losing a file just means that the very limited subset of information  
+is lost (and a reinstall of one port wi
+
+--------------------------------------------------------------------------------
+MID: AANLkTimZ5B4bYp1_wNLHbB_jSwcnzKvf7dpO35W1k1+2@mail.gmail.com
+DATE: 2011-03-25T15:30:08+00:00  FROM: jlaffaye at freebsd.org (Julien Laffaye) <None>
+SUBJ: [ECFT] pkgng 0.1-alpha1: a replacement for pkg_install
+BODY:
+On Fri, Mar 25, 2011 at 2:38 PM, Alexander Leidinger
+<Alexander@leidinger.net> wrote:
+
+That looks reasonable and easy to implement.
+
+
+If sqlite is properly used with transactions, it is very hard to
+corrupt the database. But if hardware lies to us and say that the data
+is on disk whereas it isnt... what can we do?
+Another potential problem is fsync(), but if it is broken on FreeBSD
+we want to fix it!
+
+BTW, the goal is to only have the database and not the flat files.
+If you are paranoid about power outage, use something like zfs snapshots...
+
+
+With sqlite we have atomicity! And locks!
+
+
+Regards,
+Julien
+
+
+--------------------------------------------------------------------------------
+MID: 20110325153520.GB23861@gahrfit.gahr.ch
+DATE: 2011-03-25T15:35:35+00:00  FROM: gahr at freebsd.org (Pietro Cerutti) <None>
+SUBJ: [ECFT] pkgng 0.1-alpha1: a replacement for pkg_install
+BODY:
+On 2011-Mar-25, 15:03, Julien Laffaye wrote:
+
+No need to look for strange scenarios, I'm surely going to sudo rm -f the file
+more sooner than later, so... maybe just save a copy?
+
+-- 
+Pietro Cerutti
+The FreeBSD Project
+gahr@FreeBSD.org
+
+PGP Public Key:
+http://gahr.ch/pgp
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: not available
+Type: application/pgp-signature
+Size: 196 bytes
+Desc: not available
+Url : http://lists.freebsd.org/pipermail/freebsd-current/attachments/20110325/af253ca5/attachment.pgp
+
+
+--------------------------------------------------------------------------------
+MID: AANLkTim-H2=cJG24Cg7DyfdnASSfRpu15TVCBOXqk=2X@mail.gmail.com
+DATE: 2011-03-25T15:42:02+00:00  FROM: bapt at freebsd.org (Baptiste Daroussin) <None>
+SUBJ: [ECFT] pkgng 0.1-alpha1: a replacement for pkg_install
+BODY:
+2011/3/25 Pietro Cerutti <gahr@freebsd.org>:
+
+I think we can provide a periodic script activable by users (I let
+other decide if it has to be activated by default or not) that does a
+pkg backup /path/to/file/backup
+and xz it.
+
+because copying can be a huge.
+
+40Mo for the database here, corresponding to 70Mo in the old format
+and to 600 packages. the dump xzed is only 3Mo
+
+regards,
+Bapt
+
+
+--------------------------------------------------------------------------------
+MID: AANLkTimpz3M+aZOs=Wx38ZnJC4x9ao4uK7afC7v8m_C6@mail.gmail.com
+DATE: 2011-03-25T16:04:33+00:00  FROM: bapt at freebsd.org (Baptiste Daroussin) <None>
+SUBJ: [ECFT] pkgng 0.1-alpha1: a replacement for pkg_install
+BODY:
+2011/3/25 Julien Laffaye <jlaffaye@freebsd.org>:
+
+if you are going to test on current please notice that make install
+will overwrite /usr/lib/libpkg so pkg_* tools won't work anymore.
+
+We will workaround that later by renaming our lib libpkgng for the test phase.
+
+But I won't be able to do that before monday.
+
+regards,
+Bapt
+
+
+--------------------------------------------------------------------------------
+MID: 20110325161416.GC23861@gahrfit.gahr.ch
+DATE: 2011-03-25T16:14:47+00:00  FROM: gahr at freebsd.org (Pietro Cerutti) <None>
+SUBJ: [ECFT] pkgng 0.1-alpha1: a replacement for pkg_install
+BODY:
+On 2011-Mar-25, 17:04, Baptiste Daroussin wrote:
+
+I was: http://people.freebsd.org/~gahr/pkgng-0.1-alpha1.diff
+
+-- 
+Pietro Cerutti
+The FreeBSD Project
+gahr@FreeBSD.org
+
+PGP Public Key:
+http://gahr.ch/pgp
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: not available
+Type: application/pgp-signature
+Size: 196 bytes
+Desc: not available
+Url : http://lists.freebsd.org/pipermail/freebsd-current/attachments/20110325/ca5e18be/attachment.pgp
+
+
+--------------------------------------------------------------------------------
+MID: 4D8CC468.2000904@freebsd.org
+DATE: 2011-03-25T16:36:07+00:00  FROM: avg at freebsd.org (Andriy Gapon) <None>
+SUBJ: [ECFT] pkgng 0.1-alpha1: a replacement for pkg_install
+BODY:
+on 25/03/2011 17:35 Pietro Cerutti said the following:
+
+I even can rm -rf / by accident.
+What's your solution to this? :)
+
+P.S. one solution would be a subcase of the other
+-- 
+Andriy Gapon
+
+
+--------------------------------------------------------------------------------
+MID: AANLkTinX3vfoT0v3jQAiR_Q_hEYbfnNnJqDLO2n21UuT@mail.gmail.com
+DATE: 2011-03-25T16:44:45+00:00  FROM: jlaffaye at freebsd.org (Julien Laffaye) <None>
+SUBJ: [ECFT] pkgng 0.1-alpha1: a replacement for pkg_install
+BODY:
+On Fri, Mar 25, 2011 at 4:14 PM, Pietro Cerutti <gahr@freebsd.org> wrote:
+
+Commited! Thanks!
+
+
+--------------------------------------------------------------------------------
+MID: AANLkTi=mx1YbPWY7W0wF3fXu6QafqQC=pYafdXj9Z5_N@mail.gmail.com
+DATE: 2011-03-25T17:23:11+00:00  FROM: lists at eitanadler.com (Eitan Adler) <None>
+SUBJ: [ECFT] pkgng 0.1-alpha1: a replacement for pkg_install
+BODY:
+On Fri, Mar 25, 2011 at 11:35 AM, Andriy Gapon <avg@freebsd.org> wrote:
+
+rm -rf /
+rm: "/" may not be removed
+
+
+-- 
+Eitan Adler
+
+
+--------------------------------------------------------------------------------
+MID: AANLkTiky69OETdyv46LuB=sJV1MNOf-refZPG1R9JAcE@mail.gmail.com
+DATE: 2011-03-25T19:13:35+00:00  FROM: bapt at freebsd.org (Baptiste Daroussin) <None>
+SUBJ: [ECFT] pkgng 0.1-alpha1: a replacement for pkg_install
+BODY:
+2011/3/25 Jason Helfman <jhelfman@e-e.com>:
+
+Hope I have correctly understood the question :). but I you are able
+to build packages (from tinderbox for example) with pkgng you are able
+to build a repository usable (custom one) just pkg repo
+./the_path_to_the_repo and you are done.
+
+regards,
+Bapt
+
+
+--------------------------------------------------------------------------------
+MID: 20110325185549.GD39447@eggman.experts-exchange.com
+DATE: 2011-03-25T19:19:18+00:00  FROM: jhelfman at e-e.com (Jason Helfman) <None>
+SUBJ: [ECFT] pkgng 0.1-alpha1: a replacement for pkg_install
+BODY:
+On Fri, Mar 25, 2011 at 04:18:24PM +0000, Julien Laffaye thus spake:
+
+It would be great to be able to have a repo and all of the functionality of
+this tool against an internal portstree/INDEX supported, as well.
+
+We have an internal portstree that we don't update on a daily basis, however
+we do have a local category as part of the standard portstree. We are able
+to build an INDEX off of this combination and support Tinderbox package
+building and updating from this INDEX that has the entire tree.
+
+ From what I read, it appears that support is already present, but not
+absolutely certain.
+
+Looking forward to testing :)
+-jgh
+
+
+
+--------------------------------------------------------------------------------
+MID: 20110325193239.GA8697@saltmine.radix.net
+DATE: 2011-03-25T19:49:09+00:00  FROM: dickey at radix.net (Thomas Dickey) <None>
+SUBJ: [ECFT] pkgng 0.1-alpha1: a replacement for pkg_install
+BODY:
+On Fri, Mar 25, 2011 at 11:54:35AM -0500, Eitan Adler wrote:
+
+referring to the CVS, this should improve the approach.
+
+	cd /tmp
+	rm -rf ../*
+
+ymmv
+
+-- 
+Thomas E. Dickey
+http://invisible-island.net
+ftp://invisible-island.net
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: not available
+Type: application/pgp-signature
+Size: 228 bytes
+Desc: not available
+Url : http://lists.freebsd.org/pipermail/freebsd-current/attachments/20110325/73a481ec/attachment.pgp
+
+
+--------------------------------------------------------------------------------
+MID: 20110325211439.00004dda@unknown
+DATE: 2011-03-25T20:14:59+00:00  FROM: Alexander at Leidinger.net (Alexander Leidinger) <None>
+SUBJ: [ECFT] pkgng 0.1-alpha1: a replacement for pkg_install
+BODY:
+On Fri, 25 Mar 2011 16:35:21 +0100 Pietro Cerutti <gahr@freebsd.org>
+wrote:
+
+
+
+And as I told above, I even had such a case (more than once), and the
+hardware was not buggy. What do you want to tell in this case, "life
+sucks, reinstall everything"?
+
+
+Sometimes you have to stay with broken hardware.
+
+
+There are more FS than only ZFS (personally I use ZFS, and I have
+snapshots, but this is not a good solution for this problem).
+
+As I told already, if it isn't automatic, nearly nobody will use it.
+And the package management stuff has to be automatic, no freshman will
+think about setting up a snapshot script when he starts to use
+packages/ports.
+
+
+A copy or two would be enough, but it has to be done automatically, and
+once a day is not enough. A copy after each X modifications maybe
+(for suitable definitions of X and 'modifications').
+
+Bye,
+Alexander.
+
+
+--------------------------------------------------------------------------------
+MID: AANLkTi=eZOe1jLQ9CKSTKisSD2TOXsCSFTb+o_FeB_CZ@mail.gmail.com
+DATE: 2011-03-25T20:47:11+00:00  FROM: jos at catnook.com (Jos Backus) <None>
+SUBJ: [ECFT] pkgng 0.1-alpha1: a replacement for pkg_install
+BODY:
+As far as package managers go, yum, which is used widely, uses SQLite.
+
+-- 
+Peace cannot be achieved through violence, it can only be attained through
+understanding.
+
+
+--------------------------------------------------------------------------------
+MID: AANLkTinvEUG4+ueMPUUTnEoCqCVvosnub76GVRQ7fS+z@mail.gmail.com
+DATE: 2011-03-25T20:47:35+00:00  FROM: yanegomi at gmail.com (Garrett Cooper) <None>
+SUBJ: [ECFT] pkgng 0.1-alpha1: a replacement for pkg_install
+BODY:
+On Fri, Mar 25, 2011 at 1:14 PM, Alexander Leidinger
+<Alexander@leidinger.net> wrote:
+
+If you use binary packages, pulling down everything should be trivial,
+fast, and easy to install. If you're using ports, well then things are
+going to be slow as expected.
+
+
+Sometimes you have to go buy new parts?
+
+Playing with broken hardware is like playing with fire -- sometimes
+you'll get burned if it goes out of commission during critical
+operations. I would be more concerned about overall system operation
+than having a packaging system that can handle all error conditions
+that should be rightfully handled by various kernel subsystems. If the
+kernel's doing it's job, then the packaging manager can do its job as
+well.
+
+
+A lot of filesystems feature snapshot'ing, including UFS. If you
+aren't smart enough to back up your data you're toast if the data is
+gone.
+
+I would be more concerned about the program getting killed, not
+getting properly cleaned up, etc as this is something that the package
+manag
+
+--------------------------------------------------------------------------------
+MID: AANLkTikfjZzbJdGvGa+uNgKHS6f+Lo13DYNun2y5RvQX@mail.gmail.com
+DATE: 2011-03-25T21:38:26+00:00  FROM: bapt at freebsd.org (Baptiste Daroussin) <None>
+SUBJ: [ECFT] pkgng 0.1-alpha1: a replacement for pkg_install
+BODY:
+2011/3/25 Yuri <yuri@rawbw.com>:
+
+both have to be adapted, portupgrade throught maybe some ruby bindings
+to libpkg, portmaster by patching it to use pkg frontend instead of
+pkg_* tools (as I did for the ports (see ports/bsd.pkgng.mk in the git
+tree)
+
+regards,
+Bapt
+
+
+--------------------------------------------------------------------------------
+MID: 20110325225244.00002d0b@unknown
+DATE: 2011-03-25T21:53:01+00:00  FROM: Alexander at Leidinger.net (Alexander Leidinger) <None>
+SUBJ: [ECFT] pkgng 0.1-alpha1: a replacement for pkg_install
+BODY:
+On Fri, 25 Mar 2011 13:47:13 -0700 Garrett Cooper <yanegomi@gmail.com>
+wrote:
+
+
+And if there is a fast way to cut down the slow part... why not?
+
+
+Yes, but if we talk e.g. about aging hardware, having the luck to get
+hit directly in the parts which hurt is not nice. You want to have the
+time to find a suitable replacement.
+
+
+You know that the world is not an ideal one. Shit happens and Murphy
+visits you.
+
+
+So... why do we have /var/backups/master.passwd.bak then? To make life
+easy.
+
+
+I agree.
+
+
+AFAIK it can.
+
+
+- It does not need to be done with every change.
+- You do not know if it is a performance hit or not, we do not have
+  numbers.
+- If making an automatic export after X modifications is not expensive,
+  I say: why not? It would make more easy in case of fire.
+
+
+Backups are not for architectural mistakes, they are for situations
+where something went wrong. Something may go wrong even without
+architectural mistakes. Safety nets are good. They are even better if
+they do not cost anyt
+
+--------------------------------------------------------------------------------
+MID: 4D8D09C2.2050500@rawbw.com
+DATE: 2011-03-25T22:08:24+00:00  FROM: yuri at rawbw.com (Yuri) <None>
+SUBJ: [ECFT] pkgng 0.1-alpha1: a replacement for pkg_install
+BODY:
+On 03/25/2011 03:11, Baptiste Daroussin wrote:
+
+How does it relate to portmaster and portupgrade packages, which both 
+have (or include) supposedly the same functionality?
+
+Yuri
+
+
+--------------------------------------------------------------------------------
+MID: AANLkTikH0VdONcAvZkuUCGzrCa3ha_KweXAdynpPU2aa@mail.gmail.com
+DATE: 2011-03-26T11:16:07+00:00  FROM: jlaffaye at freebsd.org (Julien Laffaye) <None>
+SUBJ: [ECFT] pkgng 0.1-alpha1: a replacement for pkg_install
+BODY:
+On Fri, Mar 25, 2011 at 12:33 PM, Julien Laffaye <jlaffaye@freebsd.org> wrote:
+
+Despite the fact that WAL allows cool things, one disadvantage is that
+the process require write privileges on the database file even if it
+is only reading.
+Thus, pkg info and things like that would need to be run as root...
+
+Regards,
+Julien
+
+
+--------------------------------------------------------------------------------
+MID: BANLkTinQC6yc2fPNpE8BnrYHtmMsnCaWyg@mail.gmail.com
+DATE: 2011-03-26T19:35:50+00:00  FROM: ivoras at freebsd.org (Ivan Voras) <None>
+SUBJ: [ECFT] pkgng 0.1-alpha1: a replacement for pkg_install
+BODY:
+On 26 March 2011 12:15, Julien Laffaye <jlaffaye@freebsd.org> wrote:
+
+You are right, I never tried it as read-only :(
+
+It looks like sqlite with WAL always needs write privileges at least
+to the directory in which the database is located. I think the
+workarounds are not worth the trouble.
+
+
+--------------------------------------------------------------------------------
+MID: AANLkTikZDW9jpUAJPoxuFoe5HmB1T5GRUW5ncKQ4Ktsu@mail.gmail.com
+DATE: 2011-03-26T23:02:20+00:00  FROM: jlaffaye at freebsd.org (Julien Laffaye) <None>
+SUBJ: [ECFT] pkgng 0.1-alpha1: a replacement for pkg_install
+BODY:
+On Fri, Mar 25, 2011 at 10:11 AM, Baptiste Daroussin <bapt@freebsd.org> wrote:
+
+FYI, we moved to github[1] in order to have a bug tracker, pull
+request and code review.
+Also, I recommend to build from the HEAD of the git repository, to not
+report fixed compilation warnings/bugs.
+
+[1]: https://github.com/pkgng/pkgng
+
+
+--------------------------------------------------------------------------------
+MID: AANLkTinxOYx0zBAti4uqmc7_Adx9Ucnovy9Zf1J=ogPP@mail.gmail.com
+DATE: 2011-03-29T05:51:09+00:00  FROM: bapt at freebsd.org (Baptiste Daroussin) <None>
+SUBJ: [ECFT] pkgng 0.1-alpha1: a replacement for pkg_install
+BODY:
+2011/3/29 Tim Kientzle <kientzle@freebsd.org>:
+
+ok but what is the problem with signing only the repository then rely on digest?
+
+I am not sure we need more that this.
+
+second question howto sign? pgp? ssl?
+
+First would be the easiest way to go but we don't have in base
+anything to check signatures (maybe we should in that case
+investigating to import netpgp), ssl why not? but which algorithm?
+what security officer would prefer?
+
+We are ok to investigate that part, but we need more information about
+what is expected.
+
+regards,
+Bapt
+
+
+--------------------------------------------------------------------------------
+MID: AANLkTi==hy7L3arOONozRmmMmHRniH6ch8iot7tFyf0R@mail.gmail.com
+DATE: 2011-03-29T18:28:05+00:00  FROM: bapt at freebsd.org (Baptiste Daroussin) <None>
+SUBJ: [ECFT] pkgng 0.1-alpha1: a replacement for pkg_install
+BODY:
+2011/3/29 Andriy Gapon <avg@freebsd.org>:
+
+I understand but I think pkgng is already quite radical changement.
+More change is taking the risk that it would be rejected in the end,
+we still do not have any reply from portmgr, there is no insurance
+pkgng will in the end replace pkg_install. Currently pkgng requires
+only very few changes from the ports infrastruture, I don't know the
+cost of changing the name scheme.
+
+If I'm not clear enough, supporting both 32bits and 64bits packages at
+the same time on amd64 or arches that could support this kind of
+installation, is a large change we don't want to take the
+responsability of :) and implementing this in pkgng would significate
+we already choose how it should work.
+
+regards,
+Bapt
+
+
+--------------------------------------------------------------------------------
+MID: AANLkTinibaaEHznTQfLQD_GfOKkj2BynaWRCKEsWBh=3@mail.gmail.com
+DATE: 2011-03-29T20:30:13+00:00  FROM: bapt at freebsd.org (Baptiste Daroussin) <None>
+SUBJ: [ECFT] pkgng 0.1-alpha1: a replacement for pkg_install
+BODY:
+2011/3/29 Baptiste Daroussin <bapt@freebsd.org>:
+
+seems it was not clear :)
+
+ok let's try to say it simpler :) the main goal is to keep it simple
+for now, simple and rock solid, so that we can replace pkg_install and
+do some cleanup in the ports tree, add the "must have" features while
+doing that. And only when we will be ready for that and that portmgr
+have decided that it is mature enough to replace pkg_install, only
+after that we will start improving with new features and new changes.
+
+I thinks changing the package name scheme is not a "must have"
+feature, it for sure is and intresting feature, but what about pushing
+to after the first stable release? managing architecture as we plan to
+do it is enough imho.
+
+But I can be wrong.
+
+regards,
+Bapt
+
+
+--------------------------------------------------------------------------------
+MID: 4D94959F.3090507@FreeBSD.org
+DATE: 2011-03-31T14:55:28+00:00  FROM: avg at FreeBSD.org (Andriy Gapon) <None>
+SUBJ: [ECFT] pkgng 0.1-alpha1: a replacement for pkg_install
+BODY:
+on 29/03/2011 23:29 Baptiste Daroussin said the following:
+
+Oh, yes, I realize all this and totally agree with it.
+Given how huge and how visible our ports and packages systems are, it's better to
+be slow and cautious.
+All the ideas that I suggested were more for the "next step" than for now.
+
+Thank you for the work!
+-- 
+Andriy Gapon
+
+
+--------------------------------------------------------------------------------
+MID: AANLkTin0q_XMdNVN6bjcAZsd20Zc9_9jx4f3q4Zf7Jb5@mail.gmail.com
+DATE: 2011-03-31T15:02:15+00:00  FROM: bapt at freebsd.org (Baptiste Daroussin) <None>
+SUBJ: [ECFT] pkgng 0.1-alpha1: a replacement for pkg_install
+BODY:
+2011/3/31 Andriy Gapon <avg@freebsd.org>:
+
+And noted in my personnal TODO list :)
+
+
+
+--------------------------------------------------------------------------------
+MID: 4ED692D2.5060407@FreeBSD.org
+DATE: 2011-11-30T21:02:10+00:00  FROM: jlaffaye at FreeBSD.org (Julien Laffaye) <None>
+SUBJ: [CFT] pkgng alpha2
+BODY:
+Hi all,
+
+We are releasing pkgng (the next pkg_install) alpha2 to the world and we 
+want you to test it!
+There is no "good" method to test it: use it as you would in the real
+world. Of course, you are encouraged to backup your data or test it in some
+kind of virtualized environment.
+After using it for some time, you will certainly find bugs. You can 
+report them
+on the issues tracker [1]. If you find missing features, that is things 
+you can't do
+with pkgng but can with pkg_install, you can also report
+them. New features are not the expected outcome of this call, as we want to
+release a final version ASAP.
+FYI, an alpha3 should follow shortly to fix issues in alpha3 and test
+additional features. After that, there will be a feature freeze with beta1.
+
+Getting started:
+You can download or git clone the source code of pkgng on the github 
+page [2].
+Then, a boring `make' followed by `make install' will do it.
+If you have some packages installed by pkg_add, you can convert the old
+database t
+
+--------------------------------------------------------------------------------
+MID: 20120820194313.GC23607@ithaqua.etoilebsd.net
+DATE: 2012-08-20T19:43:24+00:00  FROM: bapt at FreeBSD.org (Baptiste Daroussin) <None>
+SUBJ: pkgng 1.0 release schedule, and HEAD switch to pkgng by default
+ schedule
+BODY:
+Hi all,
+
+Since 1.0-rc6 release, everything looks ready for a final release of 1.0, I'll
+give more details on the release commit bit :) this is planned for 30th august
+2012.
+
+Current was supposed to switch to pkgng by default today, it has been delayed
+until the nvidia-driver is fixed with pkgng. Thanksfully kwm@ and danfe@ has
+been working on this, and the situation should be fixed pretty soon.
+
+Please continue testing pkgng and reporting bugs, if you are new comers do not
+hesitate to ask question about pkgng so that we can improve documentation:
+
+The usual links about pkgng:
+  - http://wiki.freebsd.org/pkgng
+  - http://wiki.freebsd.org/PkgPrimer
+  - https://github.com/pkgng/pkgng/blob/master/FAQ.md
+  - http://people.freebsd.org/~bapt/pres-pkgng-bsdcan.pdf
+  - http://www.youtube.com/watch?v=4Hxq7AHZ27I
+
+regards,
+Bapt
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: not available
+Type: application/pgp-signature
+Size: 196 bytes
+Desc: not available
+Url :
+
+--------------------------------------------------------------------------------
+MID: k0vk9c$pt1$1@ger.gmane.org
+DATE: 2012-08-21T09:27:31+00:00  FROM: ivoras at freebsd.org (Ivan Voras) <None>
+SUBJ: pkgng 1.0 release schedule, and HEAD switch to pkgng by default
+ schedule
+BODY:
+On 20/08/2012 21:43, Baptiste Daroussin wrote:
+
+Congratulations, it's great! :)
+
+
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: signature.asc
+Type: application/pgp-signature
+Size: 260 bytes
+Desc: OpenPGP digital signature
+Url : http://lists.freebsd.org/pipermail/freebsd-current/attachments/20120821/69c00cea/signature.pgp
+
+
+--------------------------------------------------------------------------------
+MID: 20120821132643.GE37262@felucia.tataz.chchile.org
+DATE: 2012-08-21T13:27:02+00:00  FROM: jlh at FreeBSD.org (Jeremie Le Hen) <None>
+SUBJ: pkgng 1.0 release schedule, and HEAD switch to pkgng by default
+ schedule
+BODY:
+Hi Baptise,
+
+On Mon, Aug 20, 2012 at 09:43:13PM +0200, Baptiste Daroussin wrote:
+
+First thank you and all who have worked to make this first release of
+pkgng.  This is a great milestone in FreeBSD history.
+
+Supposedly, pkgng will stay opt-in for RELENG_9 and will be the default
+(opt-out?) on RELENG_10.  During the upgrade from the old branch to the
+new one, how do we ensure users will perform the required step
+(basically, run pkg2ng) to switch their pkg database to pkgng?  Will it
+be a note in src/UPDATING and as well in the release notes?
+
+-- 
+Jeremie Le Hen
+
+Scientists say the world is made up of Protons, Neutrons and Electrons.
+They forgot to mention Morons.
+
+
+--------------------------------------------------------------------------------
+MID: 20120821134623.GH5044@ithaqua.etoilebsd.net
+DATE: 2012-08-21T13:46:33+00:00  FROM: bapt at FreeBSD.org (Baptiste Daroussin) <None>
+SUBJ: pkgng 1.0 release schedule, and HEAD switch to pkgng by default
+ schedule
+BODY:
+On Tue, Aug 21, 2012 at 03:26:43PM +0200, Jeremie Le Hen wrote:
+
+Yes there will be a note in UPDATING, I'm also pondering modifying pkg_* tools
+to that they show up an advetisement about pkg_install being deprecated.
+
+I would also like to just remove pkg_* tools from RELENG_10 if that fits the
+schedule.
+
+regards,
+Bapt
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: not available
+Type: application/pgp-signature
+Size: 196 bytes
+Desc: not available
+Url : http://lists.freebsd.org/pipermail/freebsd-current/attachments/20120821/2de0b4ff/attachment.pgp
+
+
+--------------------------------------------------------------------------------
+MID: 5033D0C0.4030805@FreeBSD.org
+DATE: 2012-08-21T18:17:55+00:00  FROM: dougb at FreeBSD.org (Doug Barton) <None>
+SUBJ: pkgng 1.0 release schedule, and HEAD switch to pkgng by default
+ schedule
+BODY:
+On 8/21/2012 6:46 AM, Baptiste Daroussin wrote:
+
+Um, no?
+
+Until pkg becomes mandatory (which can't happen for several years) the
+pkg_* tools can't be removed altogether.
+
+What _would_ be useful is what should have been done many years ago when
+it was first suggested: Move the pkg_* tools to ports.
+
+It's too late for 9.1 already, but if you made that change today in
+HEAD, and after 9.1 (but before 8.4) you MFC it to stable/[89], then you
+could theoretically make pkg mandatory after 9.1 EOLs.
+
+To make my point more clear, the ports tree has to support the last
+release to ship with pkg_* tools in the base throughout its lifetime. To
+do anything else would be be a massive POLA violation.
+
+Doug
+
+-- 
+
+    I am only one, but I am one.  I cannot do everything, but I can do
+    something.  And I will not let what I cannot do interfere with what
+    I can do.
+			-- Edward Everett Hale, (1822 - 1909)
+
+
+--------------------------------------------------------------------------------
+MID: 20120821183132.GJ5044@ithaqua.etoilebsd.net
+DATE: 2012-08-21T18:31:42+00:00  FROM: bapt at FreeBSD.org (Baptiste Daroussin) <None>
+SUBJ: pkgng 1.0 release schedule, and HEAD switch to pkgng by default
+ schedule
+BODY:
+On Tue, Aug 21, 2012 at 11:17:36AM -0700, Doug Barton wrote:
+
+that is what I meant of course, sorry if I badly said it at first
+
+Bapt
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: not available
+Type: application/pgp-signature
+Size: 196 bytes
+Desc: not available
+Url : http://lists.freebsd.org/pipermail/freebsd-current/attachments/20120821/4af7d0b5/attachment.pgp
+
+
+--------------------------------------------------------------------------------
+MID: CAGH67wS3jGTh-=b4X+to9B67=_wpfHVqTNVYK-WZ-yVNz7gepQ@mail.gmail.com
+DATE: 2012-08-21T18:47:45+00:00  FROM: yanegomi at gmail.com (Garrett Cooper) <None>
+SUBJ: pkgng 1.0 release schedule,
+	and HEAD switch to pkgng by default schedule
+BODY:
+On Tue, Aug 21, 2012 at 11:17 AM, Doug Barton <dougb@freebsd.org> wrote:
+
+...
+
+
+It already exists -- it's just out of date / crufty:
+
+$ make describe
+pkg_install-20090902|/usr/ports/ports-mgmt/pkg_install|/usr/local|FreeBSD
+-STABLE version of the package
+tools|/usr/ports/ports-mgmt/pkg_install/pkg-descr|portmgr@FreeBSD.org|ports-mgmt||||||http://www.freebsd.org/cgi/cvsweb.cgi/src/usr.sbin/pkg_install/
+
+
+Agreed.
+Thanks,
+-Garrett
+
+
+--------------------------------------------------------------------------------
+MID: 5033DAAA.20403@FreeBSD.org
+DATE: 2012-08-21T19:00:05+00:00  FROM: dougb at FreeBSD.org (Doug Barton) <None>
+SUBJ: pkgng 1.0 release schedule, and HEAD switch to pkgng by default
+ schedule
+BODY:
+On 8/21/2012 11:47 AM, Garrett Cooper wrote:
+
+Right ... I was using "move" as shorthand for several different ideas,
+including but not limited to the latest version of the code itself,
+robust support for the code going forward, the primary supported way of
+using pkg_*, etc. All of these ideas have been discussed in the past, so
+I was hoping to avoid having to re-discuss them. :)
+
+
+Great (and I saw Baptiste's response on this as well). Glad to hear that
+we're on the same page about something at least. :)
+
+
+-- 
+
+    I am only one, but I am one.  I cannot do everything, but I can do
+    something.  And I will not let what I cannot do interfere with what
+    I can do.
+			-- Edward Everett Hale, (1822 - 1909)
+
+
+--------------------------------------------------------------------------------
+MID: 20120821190500.GA46595@ithaqua.etoilebsd.net
+DATE: 2012-08-21T19:05:20+00:00  FROM: bapt at freebsd.org (Baptiste Daroussin) <None>
+SUBJ: pkgng 1.0 release schedule, and HEAD switch to pkgng by default
+ schedule
+BODY:
+On Tue, Aug 21, 2012 at 11:47:36AM -0700, Garrett Cooper wrote:
+
+Let's rephrase the plan:
+
+1/ if it fits the schedule: get rid of pkg_* tools in current to be able to have
+a fully pkgng only 10-RELEASE
+2/ switch 9.2 (the ports tree) to pkgng (but keep pkg_* tools maybe drop them,
+but that is to be discussed to avoid POLA
+3/ do the same for 8
+
+once all of our supported release are fully pkgng aware and all the pkg_*
+release are EOLed, drop support for pkg_* tools from the ports tree.
+
+regards,
+Bapt
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: not available
+Type: application/pgp-signature
+Size: 196 bytes
+Desc: not available
+Url : http://lists.freebsd.org/pipermail/freebsd-current/attachments/20120821/f760c66b/attachment.pgp
+
+
+--------------------------------------------------------------------------------
+MID: 5033E39C.3060700@FreeBSD.org
+DATE: 2012-08-21T19:38:15+00:00  FROM: dougb at FreeBSD.org (Doug Barton) <None>
+SUBJ: pkgng 1.0 release schedule, and HEAD switch to pkgng by default
+ schedule
+BODY:
+On 8/21/2012 12:05 PM, Baptiste Daroussin wrote:
+
+I think it would fit better with historic precedents to make pkg
+optional (but default on) in 10, and mandatory in 11. As stated
+before, I'm fine with removing pkg_* tools from 10 if there is robust
+support for them in the ports tree.
+
+I know you're excited about this project, but let's not lose sight of
+how big a change this is, and how important ports are to the project.
+
+Doug
+
+-- 
+
+    I am only one, but I am one.  I cannot do everything, but I can do
+    something.  And I will not let what I cannot do interfere with what
+    I can do.
+			-- Edward Everett Hale, (1822 - 1909)
+
+
+--------------------------------------------------------------------------------
+MID: 20120821194208.GC46595@ithaqua.etoilebsd.net
+DATE: 2012-08-21T19:42:18+00:00  FROM: bapt at freebsd.org (Baptiste Daroussin) <None>
+SUBJ: pkgng 1.0 release schedule, and HEAD switch to pkgng by default
+ schedule
+BODY:
+On Tue, Aug 21, 2012 at 12:38:04PM -0700, Doug Barton wrote:
+That was what "if it fits the schedule" was about.
+
+regards,
+Bapt
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: not available
+Type: application/pgp-signature
+Size: 196 bytes
+Desc: not available
+Url : http://lists.freebsd.org/pipermail/freebsd-current/attachments/20120821/8a870fe7/attachment.pgp
+
+
+--------------------------------------------------------------------------------
+MID: 5033E6BA.8080309@FreeBSD.org
+DATE: 2012-08-21T19:51:29+00:00  FROM: dougb at FreeBSD.org (Doug Barton) <None>
+SUBJ: pkgng 1.0 release schedule, and HEAD switch to pkgng by default
+ schedule
+BODY:
+On 8/21/2012 12:42 PM, Baptiste Daroussin wrote:
+
+I think what I'm trying to say, ever so politely, is that what you're
+suggesting isn't even an option, so it shouldn't be discussed.
+
+
+-- 
+
+    I am only one, but I am one.  I cannot do everything, but I can do
+    something.  And I will not let what I cannot do interfere with what
+    I can do.
+			-- Edward Everett Hale, (1822 - 1909)
+
+
+--------------------------------------------------------------------------------
+MID: BEB6B05A-2D96-488C-AD78-3E0DD561E485@bsdimp.com
+DATE: 2012-08-21T20:08:23+00:00  FROM: imp at bsdimp.com (Warner Losh) <None>
+SUBJ: pkgng 1.0 release schedule,
+	and HEAD switch to pkgng by default schedule
+BODY:
+
+On Aug 21, 2012, at 1:51 PM, Doug Barton wrote:
+
+
+If you are fine with removing them if there's robust support, how can you also be suggesting that it is impossible and shouldn't be talked about?
+
+Personally, I think we should handle this the same way that other replacement tools have been done, which is close to what Baptiste has proposed.  If the new tools are totally awesome, we have replaced old tools.  If the new tools are good, but don't cover the older users, we develop along size.  If they are lame, but somehow get committed anyway, we take 18 years to replace them with bsdinstall.
+
+Warner
+
+
+
+--------------------------------------------------------------------------------
+MID: 5033EC58.3000801@FreeBSD.org
+DATE: 2012-08-21T20:15:31+00:00  FROM: dougb at FreeBSD.org (Doug Barton) <None>
+SUBJ: pkgng 1.0 release schedule, and HEAD switch to pkgng by default
+ schedule
+BODY:
+On 8/21/2012 1:08 PM, Warner Losh wrote:
+
+Those address different parts of the problem. Making pkg mandatory in 10
+is different from where the old pkg_* tools end up. The command line
+tools are just the tip of the iceberg, there are a lot of interactions
+behind the scenes.
+
+
+I don't think we have ever done a complete replacement of major
+infrastructure in one release. The traditional model has been to
+deprecate in one release, remove in the next.
+
+And in this case, it doesn't matter how awesome the new tools are, they
+are a MAJOR paradigm shift for how users interact with ports, and we are
+going to have a lot of users who take years to transition their
+installed base. No matter how much we may want to move fast on this, it
+just isn't going to be possible.
+
+
+Yes, this is precisely what I'm saying. Sorry if I wasn't clear.
+
+-- 
+
+    I am only one, but I am one.  I cannot do everything, but I can do
+    something.  And I will not let what I cannot do interfere with what
+    I can do.
+			-

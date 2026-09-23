@@ -1,0 +1,4410 @@
+==========================================================================================
+DB: freebsd-hackers.duckdb  hits=80
+==========================================================================================
+--------------------------------------------------------------------------------
+MID: <9501011308.AA07183@blaise.ibp.fr>
+DATE: 1995-01-01T13:08:55+00:00  FROM: Ollivier ROBERT <roberto@blaise.ibp.fr>
+SUBJ: Problem with sio ...
+BODY:
+I just upgraded my main machine (keltia) to 2.1-current and each time I send
+something by UUCP (taylor, "i" protocol, bidirectionnal) I get that in
+/var/log/messages :
+
+Dec 31 21:35:45 keltia kernel: sio0: 304 more tty-level buffer overflows (total 1738)
+Dec 31 21:35:48 keltia kernel: sio0: 570 more tty-level buffer overflows (total 2308)
+Dec 31 21:35:50 keltia kernel: sio0: 506 more tty-level buffer overflows (total 2814)
+Dec 31 22:50:53 keltia login: login on tty00 as renux
+Dec 31 22:51:02 keltia kernel: sio0: 2143 more tty-level buffer overflows (total 4957)
+Dec 31 23:07:04 keltia login: login on tty00 as fasterix
+Jan  1 03:35:12 keltia login: login on tty00 as renux
+Jan  1 12:40:39 keltia kernel: sio0: 688 more tty-level buffer overflows (total 5645)
+
+I have that in /etc/rc.serial :
+
+        /bin/stty -f /dev/cuaia0 38400 crtscts
+        /bin/stty -f /dev/cuala0 38400 crtscts
+        /bin/stty -f /dev/ttyi00 38400 crtscts hupcl
+        /bin/stty -f /dev/ttyl00 38400 crtscts hupcl
+
+How can I avoid the messages ?
+-- 
+Ollivier ROBERT   -=- FreeBSD: the daemon is FREE! -=-   roberto@FreeBSD.ORG
+      FreeBSD keltia 2.1.0-Development #2: Thu Dec 29 20:28:18  1994
+             robert
+
+--------------------------------------------------------------------------------
+MID: <8A3628D.000100EABF.uuout@galactica.it>
+DATE: 1995-02-12T09:53:00+00:00  FROM: DAVIDE TOME' <davide.tome'@galactica.it>
+SUBJ: Makefile for Mosaic
+BODY:
+Hi,
+
+
+
+Where can i find the right Makefile to compile Mosaic package in my
+FreeBSD 2.0 Unix ????
+
+
+Ciao
+
+
+                                               Davide
+
+    Dott. Davide Tome'
+    -------------------------------------------------
+    Internet .....: davide.tome'@galactica.it
+    Fido..........: 2:331/358 davide tome'
+    Galactica BBS.: +39-2-29006058 (24H 24 lines r.a)
+    Voce..........: +39-2-29006150
+    Fax...........: +39-2-29006153
+    -------------------------------------------------
+
+From owner-freebsd-hackers  Sun Feb 12 04:47:56 1995
+Return-Path: hackers-owner
+Received: (from root@localhost) by freefall.cdrom.com (8.6.9/8.6.6) id EAA09605 for hackers-outgoing; Sun, 12 Feb 1995 04:47:56 -0800
+Received: from mail.rwth-aachen.de (mail.RWTH-Aachen.DE [137.226.144.9]) by freefall.cdrom.com (8.6.9/8.6.6) with ESMTP id EAA09597 for <freebsd-hackers@freefall.cdrom.com>; Sun, 12 Feb 1995 04:47:54 -0800
+Received: from gilberto.physik.rwth-aachen.de by mail.rwth-aachen.de
+ (PMDF V4.3-10 #7297) id <01HMYPXL65NK000DJT@mail.rwth-aachen.de>; Sun,
+ 12 Feb 1995 13:48:53 +0100
+Received: by gilberto.physik.rwth-aachen.de (NAA04047); Sun,
+ 12 Feb 1995 13:55:07 +0100
+Date: Sun, 12 Fe
+
+--------------------------------------------------------------------------------
+MID: <Pine.BSF.3.91.950409011603.6316B-100000@lyria.stanford.edu>
+DATE: 1995-04-09T08:16:37+00:00  FROM: Terry Lee <teren@lyria.stanford.edu>
+SUBJ: Re: Happy Happy Birthday snap-0408 [was: Happy Happy snap-0322]
+BODY:
+
+Happy Birthday Jordan!
+
+All the best,
+
+Terry
+
+
+I N T E R N E T        Terry Lee, Technical Director
+D E S I G N            745 Stanford Avenue, Palo Alto, California 94306
+G R O U P              415 424 0747 voice    415 424-0751 fax
+http://www.mall.net    terryl@cs.stanford.edu    http://www.mall.net/terry
+
+
+From owner-freebsd-hackers  Sun Apr  9 01:45:28 1995
+Return-Path: hackers-owner
+Received: (from majordom@localhost)
+          by freefall.cdrom.com (8.6.10/8.6.6) id BAA12204
+          for hackers-outgoing; Sun, 9 Apr 1995 01:45:28 -0700
+Received: from dns.netvision.net.il (root@dns.NetVision.net.il [194.90.1.5])
+          by freefall.cdrom.com (8.6.10/8.6.6) with ESMTP id BAA12185
+          for <hackers@FreeBSD.ORG>; Sun, 9 Apr 1995 01:45:15 -0700
+Received: from Burka.NetVision.net.il (root@Burka.NetVision.net.il [194.90.1.15]) by dns.netvision.net.il (8.6.10/8.6.9) with ESMTP id LAA11635; Sun, 9 Apr 1995 11:43:52 +0300
+Received: from localhost (gena@localhost [127.0.0.1]) by Burka.NetVision.net.il (8.6.10/8.6.6) with SMTP id LAA06375; Sun, 9 Apr 1995 11:51:02 +0300
+Message-Id: <199504090851.LAA06375@Burka.NetVision.net.il>
+X-Authentication-Warning: Burka.NetVision.net.il: H
+
+--------------------------------------------------------------------------------
+MID: <199504230644.QAA11076@orion.devetir.qld.gov.au>
+DATE: 1995-04-23T06:44:39+00:00  FROM: Stephen McKay <syssgm@devetir.qld.gov.au>
+SUBJ: Re: Release stability (fwd)
+BODY:
+"Jordan K. Hubbard" <jkh@freefall.cdrom.com> wrote:
+
+I had to join in just to clear up a minor point for some of us who treat
+version numbers as something other than arbitrary (hopefully unique*) tags.
+
+Are you implying that 3.0 will roll out simply because 2.n used up its
+number range, or will 3.0 have to be, say, the first SMP edition, or
+the first multi-platform edition?
+
+It seems much more logical to me for the system to be:
+
+	<rel>.<sub>.<polish>.<snap>
+
+Thus, <rel> corresponds to truly large changes such as switching from
+net/2 to 4.4 (or the others I mentioned above), which you expect to offer
+great future gains, but short-term instability.  <sub> corresponds to
+adding new but not world-shaking features, ie normal developmental
+progress.  <polish> is fixing and polishing of the more recent features,
+hopefully without introducing any more features.  <snap> is available for
+alpha, beta, gamma testing, or the existing snap system, whichever makes more
+sense to everyone.
+
+The major drama with this proposal is the requirement to branch the
+source tree when some people want to add major goodies while the rest
+are still polishing.  Other posts implied that this was difficult, and
+t
+
+--------------------------------------------------------------------------------
+MID: <199507160719.JAA16298@uriah.heep.sax.de>
+DATE: 1995-07-16T07:19:37+00:00  FROM: J Wunsch <j@uriah.heep.sax.de>
+SUBJ: Re: HEYELP!  (486DL fails to boot 2.0.5R-CD floppy image)
+BODY:
+As John Lind wrote:
+
+Terry Lambert's hint #1: turn off the caches (just for installation).
+
+-- 
+cheers, J"org
+
+joerg_wunsch@uriah.heep.sax.de -- http://www.sax.de/~joerg/
+Never trust an operating system you don't have sources for. ;-)
+
+From owner-freebsd-hackers  Sun Jul 16 03:01:37 1995
+Return-Path: hackers-owner
+Received: (from majordom@localhost)
+          by freefall.cdrom.com (8.6.10/8.6.6) id DAA16943
+          for hackers-outgoing; Sun, 16 Jul 1995 03:01:37 -0700
+Received: from irz301.inf.tu-dresden.de (irz301.inf.tu-dresden.de [141.76.1.11])
+          by freefall.cdrom.com (8.6.10/8.6.6) with SMTP id DAA16896
+          for <freebsd-hackers@freefall.cdrom.com>; Sun, 16 Jul 1995 03:01:31 -0700
+Received: from sax.sax.de by irz301.inf.tu-dresden.de with SMTP
+	(5.67b+/DEC-Ultrix/4.3) id AA23563; Sun, 16 Jul 1995 12:01:28 +0200
+Received: by sax.sax.de (8.6.12/8.6.12-s1) with UUCP
+	id MAA00601 for freebsd-hackers@freefall.cdrom.com; Sun, 16 Jul 1995 12:01:27 +0200
+Received: (from j@localhost) by uriah.heep.sax.de (8.6.11/8.6.9) id JAA16348 for freebsd-hackers@freefall.cdrom.com; Sun, 16 Jul 1995 09:21:26 +0200
+From: J Wunsch <j@uriah.heep.sax.de>
+Message-Id: <199507160721.JAA16348
+
+--------------------------------------------------------------------------------
+MID: <199507230740.AAA16460@lightlink.satcom.net>
+DATE: 1995-07-23T07:40:32+00:00  FROM: Imperial Irrigation District <iidpwr@lightlink.satcom.net>
+SUBJ: Re: What people are doing with FBSD
+BODY:
+It seems to me that FreeBSD needs a sysconfig program to generate the
+/etc/sysconfig file.
+
+
+From owner-freebsd-hackers  Sun Jul 23 00:40:33 1995
+Return-Path: hackers-owner
+Received: (from majordom@localhost)
+          by freefall.cdrom.com (8.6.11/8.6.6) id AAA23581
+          for hackers-outgoing; Sun, 23 Jul 1995 00:40:33 -0700
+Received: from lightlink.satcom.net (lightlink.satcom.net [204.33.174.10])
+          by freefall.cdrom.com (8.6.11/8.6.6) with ESMTP id AAA23572
+          for <hackers@freebsd.org>; Sun, 23 Jul 1995 00:40:30 -0700
+Received: (from iidpwr@localhost) by lightlink.satcom.net (8.6.12/8.6.9) id AAA16481; Sun, 23 Jul 1995 00:47:30 -0700
+Date: Sun, 23 Jul 1995 00:47:30 -0700
+From: Imperial Irrigation District <iidpwr@lightlink.satcom.net>
+Message-Id: <199507230747.AAA16481@lightlink.satcom.net>
+To: gurney_j@efn.org, msmith@atrad.adelaide.edu.au
+Subject: Re: What people are doing with FBSD
+Cc: hackers@freebsd.org
+Sender: hackers-owner@freebsd.org
+Precedence: bulk
+
+
+I experienced the same problem. My FreeBSD 2.0 couldn't start pcnfsd by inetd.
+Anybody know why?
+
+
+From owner-freebsd-hackers  Sun Jul 23 00:47:01 1995
+Return-Path: hackers-owner
+Received: (from majordom
+
+--------------------------------------------------------------------------------
+MID: <199509170801.KAA20603@studs2.sci.kun.nl>
+DATE: 1995-09-17T08:01:19+00:00  FROM: William Wanders <wwanders@sci.kun.nl>
+SUBJ: Re: postgres95-beta0.03 .
+BODY:
+From: "Rashid Karimov." <rashid@haven.ios.com>
+   Date: Fri, 15 Sep 1995 13:41:40 -0400 (EDT)
+   X-Mailer: ELM [version 2.4 PL24]
+   MIME-Version: 1.0
+   Content-Type: text/plain; charset=US-ASCII
+   Content-Transfer-Encoding: 7bit
+   Content-Length:        333
+   Sender: owner-hackers@freebsd.org
+   Precedence: bulk
+
+		   Hi there folx,
+
+
+	   Does any1 here use the beast ? How fast /reliable/SQL conformant
+	   it is ?
+
+I use it and find it quite usable. It supports an extensive subset of
+SQL but not all SQL features are implemented. Therefore it has almost
+all nice features that Postgres 4.2 has.
+
+For speed i can only say: It is much faster than Postgres 4.2 :)
+I did not run any benchmarks.
+
+
+	   I'm stuck on the compilation phase ;( - there are some problems
+	   with yy_flush** fucntions ,as well as few headers are obviously
+	   missing. I didn't try to dig it assuming that someone here pro-
+	   bably has invented the wheel ...
+
+A well kown problem with all ports that use flex.
+Try using a newer flex (>2.5.2).
+
+	   Rashid
+
+William
+
+From owner-freebsd-hackers  Sun Sep 17 03:14:47 1995
+Return-Path: owner-hackers
+Received: (from root@localhost)
+          by freefall.freebsd.org (8.6
+
+--------------------------------------------------------------------------------
+MID: <Pine.SOL.3.91.951015170014.19078A-100000@student.canberra.edu.au>
+DATE: 1995-10-15T07:09:22+00:00  FROM: Gasparovski / Daniel (ISE) <u923168@student.canberra.edu.au>
+SUBJ: Re: IPX now available
+BODY:
+
+Why can't this be done in the shell?
+
+eg: have the shell fork off the process, give it a pty as controlling 
+terminal which will be handled by the shell, and by default show it's 
+output on the user's tty.  Then, if a "bg >& make.out" is given, have the 
+shell open make.out and start writing the output there instead of the tty.
+
+It's not the most ideal solution, for example "ls" won't do the right 
+thing, but it's good enough for most, if not all, situations.
+
+Your best bet would be to make such a suggestion to the zsh mailing list, 
+since zsh is a wonderfully rich shell which can already handly things like
+
+echo spam > file1 > file2
+
+(which also needs shell intervention), and it's still actively being 
+developed by a very talented pool of programmers.
+
+
+Dan ...
+[                   Danny Gasparovski | Mortified by the lack of conscience    ]
+[     u923168@student.canberra.edu.au | Our sanctity bears no relevance        ]
+[   University of Canberra, Australia | Insignificant is our existence         ]
+[ Bolt Thrower, "The IVth Crusade" -> | Hear the litany of life's persistence  ]
+
+
+From owner-freebsd-hackers  Sun Oct 15 01:14:04 1995
+Return-Path: owner-hackers
+Received: (from root
+
+--------------------------------------------------------------------------------
+MID: <199512030835.TAA16906@godzilla.zeta.org.au>
+DATE: 1995-12-03T08:35:44+00:00  FROM: Bruce Evans <bde@zeta.org.au>
+SUBJ: Re: Strange Multi-port SIO behaviour
+BODY:
+
+
+At last, an adequate bug report!  (I made verbose probing the default
+but someone reversed the flag.  The idea was that you turn the flag off
+for nonexistent devices and leave it set for all real devices to get
+useful error messages.  This was before the device enable flag and the
+-c boot flag existed so it was hard to turn flags off.  Now verbose
+error messages should always be printed for all enabled devices and
+there is no need for the special sio flag.)
+
+
+
+
+
+It depends.  In this case the problem seems to be that some ports
+inherit pending interrupts from before the crash.  This stops shared
+interrupts from working until all the other ports sharing an interrupt
+have been probed.  This explains why the last port on each of your
+boards is probed successfully.  The second last port is probed
+successfully iff the last port doesn't have a pending interrupt...
+
+If this is the problem, then each board is left in a weird state until
+after all probes and attaches on it have completed.  Then its state
+becomes OK.
+
+Board 1:
+
+Board 2:
+
+Board 3:
+
+This problems should be fixed as a side effect of another fix in -current.
+
+Bruce
+
+----------------------------
+revision 1.123
+date: 1995/11/29 1
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-c5a9ac474cd08cbe>
+DATE: 1995-01-19T03:22:54+00:00  FROM: "Andrew A. Chernov, Black Mage" <ache () astral ! msk ! su> <None>
+SUBJ: Re: Groff Makefile in tmac
+BODY:
+In message <199501182013.VAA04723@keltia.frmug.fr.net> Ollivier Robert
+    writes:
+
+
+
+Wrong way, I already fix mtree in usr, mtree it and not make by
+Makefile.
+-- 
+Andrew A. Chernov        : And I rest so composedly,  /Now, in my bed,
+ache@astral.msk.su       : That any beholder  /Might fancy me dead -
+FidoNet: 2:5020/230.3    : Might start at beholding me,  /Thinking me dead.
+RELCOM Team,FreeBSD Team :         E.A.Poe         From "For Annie" 1849
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-7fd337ecef12f9af>
+DATE: 1995-02-13T09:38:15+00:00  FROM: terry () cs ! weber ! edu (Terry Lambert) <None>
+SUBJ: Re: Makefile for Mosaic
+BODY:
+
+They should be created by you running imake on the Imakefile at the
+top level of the Motif build tree.  This is how most X things work.
+
+Because it is a toolkit, I suspect you will have to unpack the Motif
+into an existing build tree for X11.
+
+You will probably find some revision incompatabilities between X and
+Motif if you use the X11R6 build tree instead of X11R5.
+
+Oh, and FreeBSD 2.0 does not have rights to the UNIX trademark.
+
+
+					Terry Lambert
+					terry@cs.weber.edu
+---
+Any opinions in this posting are my own and not those of my present
+or previous employers.
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-3d186f778938367c>
+DATE: 1995-02-21T06:57:55+00:00  FROM: Warner Losh <imp () village ! org> <None>
+SUBJ: Re: cvs commit: src/usr.sbin/rmt Makefile
+BODY:
+: If it's only tar that has problems with rmt, can't we fix that
+: instead?
+
+I've had to make the sym link when backup up using rdump.  The problem
+is in the SunOS rdump code for which I have no source...
+
+Warner
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-70abade23efcb767>
+DATE: 1995-04-09T10:07:18+00:00  FROM: asami () cs ! berkeley ! edu (Satoshi Asami | 浅 =?ISO-2022 <None>
+SUBJ: Ports hackers wanted!
+BODY:
+(Note: I've CC:ed this to "hackers" too for wider audience...if you are 
+ following up, please send it to "ports" only...thanks)
+
+I'm now working on a bunch of projects aimed at "a better, friendlier
+ports scheme" (how nice! :).  However, I'm severely short-handed and
+at the rate things are going, most of my (brilliant!) ideas are not
+going to make it into 2.1.  This is sad!
+
+So, I need help.  If you are interested in one or more of the projects 
+listed in FreeBSD-current/src/TODO-2.1/asami, please contact me.  In
+particular, I need immediate help in the following areas:
+
+-*-
+
+Update: Thu Apr  6 08:24:02 PDT 1995
+Due:	Hopefully before 2.1
+Prio:	High
+Task:	Enhance pkg_install
+
+Again a couple of ideas here:
+
+(1) Make pkg_create or pkg_add able to "register" a package from the
+    ports directory by looking into pkg/PLIST.  We can then call this
+    from the "install" rule in bsd.port.mk so that the user can
+    pkg_delete it later.
+
+(2) Add some way to include the dependency information (usually
+    LIB_DEPENDS, maybe EXEC_DEPENDS too but this one is harder 'cause
+    it may be required only for compilation) into the package so that
+    pkg_add will check for the existences and print
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-f8cccee408c03773>
+DATE: 1995-04-11T20:07:04+00:00  FROM: asami () cs ! berkeley ! edu (Satoshi Asami | 浅 =?ISO-2022 <None>
+SUBJ: Re: make parallelism
+BODY:
+ * As I understand it, our make is derived from pmake, which was capable of
+ * firing off subprocesses in parallel.  How did we lose this capability?
+
+I don't know where pmake got lost, but the /usr/share/mk/*.mk files
+aren't written for pmake, as there are many assumptions about
+left-to-right order of dependency tree traversal.  At least I'm sure
+about bsd.port.mk.
+
+If we are going to have pmake soon, remind me to fix bsd.port.mk and
+bsd.port.subdir.mk.
+
+Satoshi
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-7b61a613a79cb2cb>
+DATE: 1995-04-23T11:16:25+00:00  FROM: asami () cs ! berkeley ! edu (Satoshi Asami | 浅 =?ISO-2022 <None>
+SUBJ: strange behavior with sh and dangling symlinks
+BODY:
+The below is on a 0416-snap system Rod put together for me.  (It
+happens on older systems too.)
+
+=====
+$ ls
+$ mkdir a 
+$ ln -s ../b a
+$ echo */b
+*/b
+$ touch b
+$ echo */b
+a/b
+$ /bin/rm b
+$ echo */b
+*/b
+$ echo a/*
+a/b
+$ ls -lL a
+total 0
+lrwxr-xr-x  1 asami  grad  4 Apr 23 04:11 b -> ../b
+$
+=====
+
+In short, "*/filename" doesn't expand properly when the target of the
+symlink doesn't exist.  "dirname/*" does expand, so this is
+inconsistent, to say the least.
+
+This happens only in sh.  tcsh and bash expands everything fine.
+
+(I found this trying to track down why bsd.port.mk was behaving
+ funnily when I removed the "real" package in .packages/ before
+ removing the symlinks in other subdirs....)
+
+Satoshi
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-60c84da4abb581ec>
+DATE: 1995-04-24T18:45:53+00:00  FROM: Julian Howard Stacey <Julian.H.Stacey () regent ! e-technik ! tu-muenchen ! de> <None>
+SUBJ: Kernel makefile changes to allow builds in different trees
+BODY:
+
+
+
+Mike, sounds like we're possibly working in the same area,
+I have an extensive sys/Makefiles thing in freefall:~jhs/fixes
+I'll get back to it after Ive finished hylafax,
+hopefully we can get our work to mesh
+Till later
+Julian S.
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-cc729cf9dc665b94>
+DATE: 1995-05-16T06:23:12+00:00  FROM: Bruce Evans <bde () zeta ! org ! au> <None>
+SUBJ: Re: Some makefile patches to stop the !#^%!& include files being touched
+BODY:
+							     ^^^^all
+
+This can be avoided by setting RANTOUCH to `${ECHO} foo' in
+/etc/make.conf.  Then you would probably have to install the
+libraries without changing their timestamp to avoid getting
+warnings about the symbol table being out of date.  There are
+some hacked versions of `install' around that will do this.
+I use one and never noticed the missing `cmp -s'.
+
+Libraries often change anyway because the dates of files in
+them change.  This shouldn't cause a relink, but it does because
+most programs depend on the static libraries although they are
+linked against the shared libraries.  Linking is fast, but after
+relinking you have to reinstall in case something really changed.
+Loop.
+
+Bruce
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-1dd0bbf9e04c39e6>
+DATE: 1995-06-24T08:59:41+00:00  FROM: "Christoph P. Kukulies" <kuku () gilberto ! physik ! rwth-aachen ! de> <None>
+SUBJ: kernel Makefile mechanism (Q)
+BODY:
+Could someone explain to me the wizardry that is responsible for writing
+the /sys/compile/KERNEL/Makefile, especially which mechanism is
+responsible for adding the -I../../something lines into the makefile.
+
+I'm building a kernel from sound.v30.5. soundcard.h should be copied into 
+/sys/i386/include but this path is not searched by the $INCLUDE rules.
+Is it done by config and files.i386 or what?
+
+--Chris Christoph P. U. Kukulies kuku@gil.physik.rwth-aachen.de
+FreeBSD blues.physik.rwth-aachen.de 2.0-BUILT-19950619 FreeBSD 2.0-BUILT-1995
+0619 #1: Mon Jun 19 19:54:08 MET DST 1995     kuku@blues.physik.rwth-aachen.d
+e:/usr/src/sys/compile/BLUESGUS  i386
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-b9c84f2263c05332>
+DATE: 1995-07-26T02:20:38+00:00  FROM: "Rodney W. Grimes" <rgrimes () gndrsh ! aac ! dev ! com> <None>
+SUBJ: Re: Strange entries in /usr/src/Makefile
+BODY:
+
+It's all become academic at this point, in one of my recent converstaions
+with Justin, freefall is now in the amanda backup sequence, and all disks
+are getting dumped every night.
+
+End of problems and worries :-)
+
+
+-- 
+Rod Grimes                                      rgrimes@gndrsh.aac.dev.com
+Accurate Automation Company                 Reliable computers for FreeBSD
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-c921f3bb9779e5e3>
+DATE: 1995-09-23T11:31:06+00:00  FROM: asami () cs ! berkeley ! edu (Satoshi Asami) <None>
+SUBJ: Re: [2.1-stable] No def. of GZIPCMD in .../share/doc/usd/1[02].*/Makefile
+BODY:
+Just wanted to let you all know, there IS a freebsd-stable list, aimed
+exactly for purposes like this one.  Let's use it, it's kinda lonely
+there! :)
+
+Satoshi
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-f4259e8a4118c3d9>
+DATE: 1995-09-24T20:43:14+00:00  FROM: "Jordan K. Hubbard" <jkh () time ! cdrom ! com> <None>
+SUBJ: Re: /usr/src/Makefile targets
+BODY:
+
+I recommend anyone truly interested in customizable setups to jump
+on-board with me now in the new "setup" effort.  Things have been
+slow there the last week due to other committments and a USENIX 
+conference in the middle, but I expect the fur to be flying there again
+next week.
+
+					Jordan
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-219f209bbb3495f4>
+DATE: 1995-12-05T17:39:43+00:00  FROM: Andreas Klemm <andreas () knobel ! gun ! de> <None>
+SUBJ: New Makefile for andrew (AUIS63) port
+BODY:
+# New ports collection makefile for:	auis
+# Version required:     6.3
+# Date created:         Sat Nov 18 15:23:47 MET 1995
+# Whom:                 Andreas Klemm <andreas@knobel.gun.de>
+#
+#
+
+DISTNAME=	auis-6.3
+PKGNAME=	auis-6.3
+CATEGORIES+=	x11
+MASTER_SITES+=ftp://ftp.andrew.cmu.edu/pub/AUIS/dist-6.3/
+MASTER_SITES+=ftp://ftp.cs.umn.edu/packages/X11/contrib/libraries/andrew/
+MASTER_SITES+=ftp://ftp.oleane.net/pub/.disks/.2/X11/contrib/libraries/andrew/
+MASTER_SITES+=ftp://nic.switch.ch/mirror/X11/contrib/libraries/andrew/
+MASTER_SITES+=ftp://von-neum.uni-muenster.de/pub/X11R5/contrib/libraries/andrew/
+MASTER_SITES+=ftp://wrzx02.rz.uni-wuerzburg.de/pub/X11/contrib/libraries/andrew/
+MASTER_SITES+=ftp://ftp.denet.dk/mirror2/X11/contrib/libraries/andrew/
+MASTER_SITES+=ftp://ftp.luth.se/pub/X11/R6contrib/libraries/andrew/
+MASTER_SITES+=ftp://ftp.sunet.se/pub/X11/AUIS/dist-6.3/
+MASTER_SITES+=ftp://ftp.icm.edu.pl/pub4/X11/contrib/libraries/andrew/
+MASTER_SITES+=ftp://theta.iis.u-tokyo.ac.jp/pub1/X/contrib/libraries/andrew/
+MASTER_SITES+=ftp://ftp.iij.ad.jp/pub/X/contrib/libraries/andrew/
+MASTER_SITES+=ftp://plaza.aarnet.edu.au/X11/contrib/libraries/andrew/
+
+IS_INTERACTIVE=	no
+
+DISTDIR=	${PO
+
+--------------------------------------------------------------------------------
+MID: 9412292142.AA02489@blaise.ibp.fr
+DATE: 1994-12-29T21:42:39+00:00  FROM: roberto@blaise.ibp.fr (Ollivier ROBERT) <None>
+SUBJ: usr.sbin Makefile [and a patch]
+BODY:
+kbdcontrol is two times in the usr.sbin Makefile. First in the list of
+common directories (wrong!) and second in a .ifdef (good).
+
+Here is a patch :
+
+Index: Makefile
+===================================================================
+RCS file: /spare/FreeBSD-current/src/usr.sbin/Makefile,v
+retrieving revision 1.44
+diff -u -r1.44 Makefile
+--- 1.44	1994/12/28 14:00:11
++++ Makefile	1994/12/29 21:54:09
+@@ -4,7 +4,7 @@
+ # XXX MISSING SOURCES:	quot
+ # XXX TEMP. BROKEN:	iostat
+ SUBDIR= ac accton adduser amd arp chown chroot cron crunch dbsym dev_mkdb \
+-	diskpart edquota inetd kbdcontrol kgmon kvm_mkdb lpr lsdev manctl \
++	diskpart edquota inetd kgmon kvm_mkdb lpr lsdev manctl \
+ 	mtree mrouted named nslookup pkg_install portmap pppd pppstats \
+ 	pstat pwd_mkdb quotaon repquota routed rmt rwhod sa \
+ 	sendmail sliplogin slstat sysctl syslogd tcpdump timed traceroute \
+-- 
+Ollivier ROBERT   -=- FreeBSD: the daemon is FREE! -=-   roberto@FreeBSD.ORG
+      FreeBSD keltia 2.1.0-Development #1: Sat Dec 24 17:41:36  1994
+             roberto@keltia:/usr/src/sys/compile/KELTIA ctm#229
+
+
+
+--------------------------------------------------------------------------------
+MID: 9412292147.AA02512@blaise.ibp.fr
+DATE: 1994-12-29T21:47:42+00:00  FROM: roberto@blaise.ibp.fr (Ollivier ROBERT) <None>
+SUBJ: Pb with adduser's Makefile
+BODY:
+
+333 [21:56] root@keltia:src/usr.sbin# cd adduser
+334 [21:56] root@keltia:usr.sbin/adduser# make
+make: don't know how to make adduser.c. Stop
+335 [21:56] root@keltia:usr.sbin/adduser# 
+
+cat adduser/Makefile
+STRIP=   
+PROG= adduser
+
+cleandir:
+clean:
+obj:
+
+.include <bsd.prog.mk>
+
+-- 
+Ollivier ROBERT   -=- FreeBSD: the daemon is FREE! -=-   roberto@FreeBSD.ORG
+      FreeBSD keltia 2.1.0-Development #1: Sat Dec 24 17:41:36  1994
+             roberto@keltia:/usr/src/sys/compile/KELTIA ctm#229
+
+
+
+--------------------------------------------------------------------------------
+MID: 199412300514.QAA31064@godzilla.zeta.org.au
+DATE: 1994-12-30T05:14:03+00:00  FROM: Bruce Evans <bde@zeta.org.au> <None>
+SUBJ: Re: Pb with adduser's Makefile
+BODY:
+
+
+
+
+Writing small Makefiles for standard FreeBSD utilities is not as simple
+as it should be.  You have to know a little bit about bmake and a lot
+about the defaults provided by bsd.prog.mk.  bsd.prog.mk doesn't provide
+much support for installing shell scripts.  I usually look at the
+Makefiles for shell scripts, copy the best one and change some names.
+The best one for shell scripts that don't require any substitutions and
+have a man page is lorder.sh.  This has one bug: ${DESTDIR}/{${BINDIR}
+should be ${DESTDIR}${BINDIR} because it expands to something starting
+with // for the default ${DESTDIR}.  Pathnames starting with // are
+special and other system Makefiles are careful to avoid them.
+
+I use the above approach to obtain the following Makefile for adduser:
+---
+MAN1=	adduser.1
+
+beforeinstall:
+	install -c -o ${BINOWN} -g ${BINGRP} -m ${BINMODE} \
+	    ${.CURDIR}/adduser ${DESTDIR}${BINDIR}/adduser
+
+.include <bsd.prog.mk>
+---
+
+There are still (at least :-) 2 bugs: adduser.1 should be adduser.8
+(a few other programs in /usr/src/usr.sbin have the same bug); adduser
+should be named adduser.sh for consistency and to allow automating the
+beforeinstall rule.
+
+The original Makefile had t
+
+--------------------------------------------------------------------------------
+MID: 199501042018.VAA04924@keltia.frmug.fr.net
+DATE: 1995-01-04T20:18:53+00:00  FROM: Ollivier Robert <roberto@blaise.ibp.fr> <None>
+SUBJ: Typos in bsd.port.mk
+BODY:
+Index: bsd.port.mk
+===================================================================
+RCS file: /spare/FreeBSD-current/src/share/mk/bsd.port.mk,v
+retrieving revision 1.94
+diff -c -2 -r1.94 bsd.port.mk
+*** 1.94	1995/01/04 09:58:39
+--- bsd.port.mk	1995/01/04 20:16:22
+***************
+*** 49,54 ****
+  # PATCHDIR 		- A directory containing any required patches
+  #				  (default: ${.CURDIR}/patches)
+! # SCRIPTDIR 	- A directory containing any auxilliary scripts
+! #				  (default: ${.CURDIR}/scripes)
+  # FILESDIR 		- A directory containing any miscellaneous additional files.
+  #				  (default: ${.CURDIR}/files)
+--- 49,54 ----
+  # PATCHDIR 		- A directory containing any required patches
+  #				  (default: ${.CURDIR}/patches)
+! # SCRIPTDIR 	- A directory containing any auxiliary scripts
+! #				  (default: ${.CURDIR}/scripts)
+  # FILESDIR 		- A directory containing any miscellaneous additional files.
+  #				  (default: ${.CURDIR}/files)
+
+-- 
+Ollivier ROBERT    -=- The daemon is FREE! -=-    roberto@keltia.frmug.fr.net
+      FreeBSD keltia 2.1.0-Development #5: Mon Jan  2 20:26:02 MET 1995
+           roberto@keltia:/spare/usr/src/sys/compile/KELTIA ctm#250
+
+
+
+--------------------------------------------------------------------------------
+MID: 199501132113.WAA15468@ares.ibp.fr
+DATE: 1995-01-13T21:13:26+00:00  FROM: Remy.Card@masi.ibp.fr (Remy CARD) <None>
+SUBJ: Patch for sbin/sysinstall/Makefile
+BODY:
+
+	Hi,
+
+	The Makefile in sbin/sysinstall is broken.  Make fails if the
+source tree is not stored in /usr/src.
+
+	Can someone please commit this patch?
+
+	Thanks
+
+		Remy
+
+*** sbin/sysinstall/Makefile.orig	Fri Jan 13 21:47:42 1995
+--- sbin/sysinstall/Makefile	Fri Jan 13 21:47:51 1995
+***************
+*** 2,8 ****
+  MANEXT = 1
+  NOMAN= yet
+  
+! .PATH: /usr/src/sbin/disklabel
+  
+  SRCS =	exec.c dkcksum.c label.c main.c mbr.c \
+  	stage0.c stage1.c stage2.c stage3.c stage4.c stage5.c \
+--- 2,8 ----
+  MANEXT = 1
+  NOMAN= yet
+  
+! .PATH: ${.CURDIR}/../disklabel
+  
+  SRCS =	exec.c dkcksum.c label.c main.c mbr.c \
+  	stage0.c stage1.c stage2.c stage3.c stage4.c stage5.c \
+
+
+
+--------------------------------------------------------------------------------
+MID: 307.790050057@time.cdrom.com
+DATE: 1995-01-14T02:20:57+00:00  FROM: "Jordan K. Hubbard" <jkh@time.cdrom.com> <None>
+SUBJ: Re: Patch for sbin/sysinstall/Makefile 
+BODY:
+
+Fixed, thanks!
+
+					Jordan
+
+
+
+--------------------------------------------------------------------------------
+MID: 199501141929.UAA18899@ares.ibp.fr
+DATE: 1995-01-14T19:29:02+00:00  FROM: Remy.Card@masi.ibp.fr (Remy CARD) <None>
+SUBJ: Patch for doc Makefiles
+BODY:
+
+	Hi,
+
+	The enclosed patch fixes the Makefile contained in
+share/doc/usd/{30.rogue,31.trek}: make fails if the games source
+tree is not present (see the mail that I have sent yesterday).
+
+	This patch makes the Makefiles test if the games source
+tree is present.  If it is not present, the Makefiles default to
+no operation.
+
+		Remy
+
+*** share/doc/usd/30.rogue/Makefile.orig	Sat Jan 14 19:33:27 1995
+--- share/doc/usd/30.rogue/Makefile	Sat Jan 14 19:43:39 1995
+***************
+*** 1,6 ****
+--- 1,7 ----
+  #	From: @(#)Makefile	8.1 (Berkeley) 6/8/93
+  #	$Id: Makefile,v 1.1 1995/01/11 03:24:21 wollman Exp $
+  
++ .if exists(${.CURDIR}/../../../../games)
+  DIR=	usd/30.rogue
+  SRCS=	rogue.me
+  MACROS=	-me
+***************
+*** 8,10 ****
+--- 9,25 ----
+  USE_TBL=	yes
+  
+  .include <bsd.doc.mk>
++ .else
++ depend:
++ 
++ obj:
++ 
++ all:
++ 
++ install:
++ 
++ clean:
++ 
++ cleandir:
++ 
++ .endif
+*** share/doc/usd/31.trek/Makefile.orig	Sat Jan 14 19:41:43 1995
+--- share/doc/usd/31.trek/Makefile	Sat Jan 14 19:43:13 1995
+***************
+*** 1,6 ****
+--- 1,7 ----
+  #	From: @(#)Makefile	8.1 (Berkeley) 6/8/93
+  #	$Id: Makefile,v 1.1 1995/01/11 03:24:22 wollman Exp $
+  
++ .if exists(${.CURDIR}/../../../../games)
+  VOL
+
+--------------------------------------------------------------------------------
+MID: 199501150219.DAA19913@ares.ibp.fr
+DATE: 1995-01-15T02:19:20+00:00  FROM: Remy.Card@masi.ibp.fr (Remy CARD) <None>
+SUBJ: Another broken path in a Makefile
+BODY:
+
+	Hi,
+
+	The Makefile contained in usr.bin/tconv contains a bogus
+reference to the absolute path /usr/src/lib/libmytinfo.  The enclosed
+patch fixes this.
+
+	Can someone please commit it?
+
+	Thanks
+
+		Remy
+
+*** usr.bin/tconv/Makefile.orig	Sun Jan 15 01:16:02 1995
+--- usr.bin/tconv/Makefile	Sun Jan 15 01:16:30 1995
+***************
+*** 5,11 ****
+  SRCS=   tconv.c quit.c
+  MLINKS= tconv.1 tic.1  tconv.1 captoinfo.1
+  LINKS=  ${BINDIR}/tconv ${BINDIR}/tic  ${BINDIR}/tconv ${BINDIR}/captoinfo
+! CFLAGS+= -I/usr/src/lib/libmytinfo -Wall
+  DPADD= $(LIBMYTINFO)
+  LDADD= -lmytinfo
+  
+--- 5,11 ----
+  SRCS=   tconv.c quit.c
+  MLINKS= tconv.1 tic.1  tconv.1 captoinfo.1
+  LINKS=  ${BINDIR}/tconv ${BINDIR}/tic  ${BINDIR}/tconv ${BINDIR}/captoinfo
+! CFLAGS+= -I${.CURDIR}/../../lib/libmytinfo -Wall
+  DPADD= $(LIBMYTINFO)
+  LDADD= -lmytinfo
+  
+
+
+
+--------------------------------------------------------------------------------
+MID: 199501151751.SAA21932@ares.ibp.fr
+DATE: 1995-01-15T17:51:31+00:00  FROM: Remy.Card@masi.ibp.fr (Remy CARD) <None>
+SUBJ: Yet another bogus path in a Makefile
+BODY:
+
+	Hi,
+
+	The Makefile in usr.sbin/xten incorrectly uses an absolute patch
+to reference /usr/src/libexec/xtend.  The enclosed patch fixes the problem.
+
+	Can someone please commit it?
+
+	Thanks
+
+		Remy
+
+*** usr.sbin/xten/Makefile.orig	Sun Jan 15 17:55:35 1995
+--- usr.sbin/xten/Makefile	Sun Jan 15 17:56:00 1995
+***************
+*** 2,8 ****
+  
+  PROG=	xten
+  SRCS=	xten.c
+! CFLAGS+=-I. -I/usr/src/libexec/xtend
+  
+  MAN1=	xten.1
+  
+--- 2,8 ----
+  
+  PROG=	xten
+  SRCS=	xten.c
+! CFLAGS+=-I. -I${.CURDIR}/../../libexec/xtend
+  
+  MAN1=	xten.1
+  
+
+
+
+--------------------------------------------------------------------------------
+MID: 199501182013.VAA04723@keltia.frmug.fr.net
+DATE: 1995-01-18T20:13:57+00:00  FROM: Ollivier Robert <roberto@blaise.ibp.fr> <None>
+SUBJ: Groff Makefile in tmac
+BODY:
+Please  ignore my previous patch for  the tmac/Makefile in ngroff... It was
+not the best way to do it and the mail went out before I could correct it.
+
+We must test  and create /usr/share/tmac/mdoc  only once, not in the middle
+of the loop of course...
+
+Index: Makefile
+===================================================================
+RCS file: /spare/FreeBSD-current/src/gnu/usr.bin/ngroff/tmac/Makefile,v
+retrieving revision 1.4
+diff -u -r1.4 Makefile
+--- 1.4	1995/01/17 19:05:12
++++ Makefile	1995/01/18 20:10:39
+@@ -34,6 +34,9 @@
+ 		install -c -o ${TMACOWN} -g ${TMACGRP} -m ${TMACMODE} \
+ 			temp ${DESTDIR}${TMACDIR}/$$f; \
+ 	done
++	if [ ! -d ${DESTDIR}${MDOCDIR} ]; then \
++		mkdir ${DESTDIR}${MDOCDIR}; \
++	fi
+ 	for f in ${MDOCFILES}; do \
+ 		rm -f temp; \
+ 		sed -f ${.CURDIR}/strip.sed ${.CURDIR}/$$f >temp; \
+
+-- 
+Ollivier ROBERT    -=- The daemon is FREE! -=-    roberto@keltia.frmug.fr.net
+      FreeBSD keltia 2.1.0-Development #9: Tue Jan 17 21:12:14 MET 1995
+
+
+
+--------------------------------------------------------------------------------
+MID: 199501182035.MAA06745@gndrsh.aac.dev.com
+DATE: 1995-01-18T20:35:00+00:00  FROM: "Rodney W. Grimes" <rgrimes@gndrsh.aac.dev.com> <None>
+SUBJ: Re: Groff Makefile in tmac
+BODY:
+
+Makefile's in the /usr/src area should *NOT* being doing mkdir's, this is
+the job of mtree and the files in src/etc/mtree.
+
+DO NOT COMMIT THIS PATCH.
+
+
+
+-- 
+Rod Grimes                                      rgrimes@gndrsh.aac.dev.com
+Accurate Automation Company                   Custom computers for FreeBSD
+
+
+
+--------------------------------------------------------------------------------
+MID: 9501182228.AA15885@blaise.ibp.fr
+DATE: 1995-01-18T22:28:18+00:00  FROM: roberto@blaise.ibp.fr (Ollivier ROBERT) <None>
+SUBJ: Re: Groff Makefile in tmac
+BODY:
+
+OK. Remy and you are right. Sorry.
+-- 
+Ollivier ROBERT     -=- The daemon is FREE! -=-     roberto@FreeBSD.ORG
+   FreeBSD keltia 2.1.0-Development #9: Tue Jan 17 21:12:14 MET 1995
+
+
+
+--------------------------------------------------------------------------------
+MID: dBEiT7lKW2@astral.msk.su
+DATE: 1995-01-19T03:22:54+00:00  FROM: "Andrew A. Chernov, Black Mage" <ache@astral.msk.su> <None>
+SUBJ: Re: Groff Makefile in tmac
+BODY:
+In message <199501182013.VAA04723@keltia.frmug.fr.net> Ollivier Robert
+    writes:
+
+
+
+Wrong way, I already fix mtree in usr, mtree it and not make by
+Makefile.
+-- 
+Andrew A. Chernov        : And I rest so composedly,  /Now, in my bed,
+ache@astral.msk.su       : That any beholder  /Might fancy me dead -
+FidoNet: 2:5020/230.3    : Might start at beholding me,  /Thinking me dead.
+RELCOM Team,FreeBSD Team :         E.A.Poe         From "For Annie" 1849
+
+
+
+--------------------------------------------------------------------------------
+MID: 8A3628D.000100EABF.uuout@galactica.it
+DATE: 1995-02-12T09:53:00+00:00  FROM: davide.tome'@galactica.it (DAVIDE TOME') <None>
+SUBJ: Makefile for Mosaic
+BODY:
+Hi,
+
+
+
+Where can i find the right Makefile to compile Mosaic package in my
+FreeBSD 2.0 Unix ????
+
+
+Ciao
+
+
+                                               Davide
+
+    Dott. Davide Tome'
+    -------------------------------------------------
+    Internet .....: davide.tome'@galactica.it
+    Fido..........: 2:331/358 davide tome'
+    Galactica BBS.: +39-2-29006058 (24H 24 lines r.a)
+    Voce..........: +39-2-29006150
+    Fax...........: +39-2-29006153
+    -------------------------------------------------
+
+
+
+--------------------------------------------------------------------------------
+MID: Pine.SUN.3.91.950212110905.18864A-100000@mocha.eng.umd.edu
+DATE: 1995-02-12T16:11:41+00:00  FROM: Chuck Robey <chuckr@Glue.umd.edu> <None>
+SUBJ: Re: Makefile for Mosaic
+BODY:
+On Sun, 12 Feb 1995, DAVIDE TOME' wrote:
+
+
+I haven't tried making Mosaic because the compiled versions in incoming 
+worked fine for me, but are you aware that Mosaic requires the Motif 
+libraries be installed on your machine?  The Motif libraries are not 
+included with FreeBSD, and they are not free, you'll have to go out and 
+buy them.
+
+----------------------------+-----------------------------------------------
+Chuck Robey                 | Interests include any kind of voice or data 
+chuckr@eng.umd.edu          | communications topic, C programming, and Unix.
+7608 Topton St.             |
+New Carrollton, MD 20784    | I run Journey2 (Freebsd 2.0) and n3lxx
+(301) 459-2316              | (FreeBSD 1.1.5.1) and am I happy!
+----------------------------+-----------------------------------------------
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 9502131638.AA13037@cs.weber.edu
+DATE: 1995-02-13T16:38:15+00:00  FROM: terry@cs.weber.edu (Terry Lambert) <None>
+SUBJ: Re: Makefile for Mosaic
+BODY:
+
+They should be created by you running imake on the Imakefile at the
+top level of the Motif build tree.  This is how most X things work.
+
+Because it is a toolkit, I suspect you will have to unpack the Motif
+into an existing build tree for X11.
+
+You will probably find some revision incompatabilities between X and
+Motif if you use the X11R6 build tree instead of X11R5.
+
+Oh, and FreeBSD 2.0 does not have rights to the UNIX trademark.
+
+
+					Terry Lambert
+					terry@cs.weber.edu
+---
+Any opinions in this posting are my own and not those of my present
+or previous employers.
+
+
+
+--------------------------------------------------------------------------------
+MID: 199502162341.PAA24979@silvia.HIP.Berkeley.EDU
+DATE: 1995-02-16T23:41:25+00:00  FROM: asami@cs.berkeley.edu (Satoshi Asami/浅見 賢) <None>
+SUBJ: Re: cvs commit: src/usr.sbin/rmt Makefile
+BODY:
+ * jkh         95/02/16 04:34:36
+ * 
+ *   Modified:    usr.sbin/rmt Makefile
+ *   Log:
+ *   Make a link to /etc/rmt when we're installed.
+
+I don't like this.  I'm sure I'm not the only one who likes being able
+to do grep * in /etc with the executables moved out to /sbin and
+/usr/sbin....  (Ok there are db files but these can't go anywhere
+else.)
+
+If it's only tar that has problems with rmt, can't we fix that
+instead?
+
+Satoshi
+
+
+
+--------------------------------------------------------------------------------
+MID: 12904.792992609@freefall.cdrom.com
+DATE: 1995-02-17T03:43:29+00:00  FROM: "Jordan K. Hubbard" <jkh@freefall.cdrom.com> <None>
+SUBJ: Re: cvs commit: src/usr.sbin/rmt Makefile 
+BODY:
+
+And termcap, and..  This dependency on /etc isn't going to go away,
+and I suggest you simply get used to having your greps spit out what
+they're currently spitting out! :-)
+
+
+I don't think you understand the problem..
+
+					Jordan
+
+
+
+--------------------------------------------------------------------------------
+MID: 9502170941.AA06435@blaise.ibp.fr
+DATE: 1995-02-17T09:41:26+00:00  FROM: roberto@blaise.ibp.fr (Ollivier ROBERT) <None>
+SUBJ: Re: cvs commit: src/usr.sbin/rmt Makefile
+BODY:
+
+You cannot fix every tar down here. It is unfortunately part of the rmt
+protocol if I remember well.
+-- 
+Ollivier ROBERT     -=- The daemon is FREE! -=-     roberto@FreeBSD.ORG
+   FreeBSD keltia 2.1.0-Development #18: Thu Jan 26 22:22:16 MET 1995
+
+
+
+--------------------------------------------------------------------------------
+MID: 199502170944.BAA26705@silvia.HIP.Berkeley.EDU
+DATE: 1995-02-17T09:44:24+00:00  FROM: asami@cs.berkeley.edu (Satoshi Asami/浅見 賢) <None>
+SUBJ: Re: cvs commit: src/usr.sbin/rmt Makefile
+BODY:
+ * > If it's only tar that has problems with rmt, can't we fix that
+ * > instead?
+ * 
+ * You cannot fix every tar down here. It is unfortunately part of the rmt
+ * protocol if I remember well.
+
+Oh, I see.  Thanks!
+
+Satoshi
+
+
+
+--------------------------------------------------------------------------------
+MID: 199502210657.XAA00570@rover.village.org
+DATE: 1995-02-21T06:57:55+00:00  FROM: Warner Losh <imp@village.org> <None>
+SUBJ: Re: cvs commit: src/usr.sbin/rmt Makefile 
+BODY:
+: If it's only tar that has problems with rmt, can't we fix that
+: instead?
+
+I've had to make the sym link when backup up using rdump.  The problem
+is in the SunOS rdump code for which I have no source...
+
+Warner
+
+
+
+--------------------------------------------------------------------------------
+MID: 199503150217.SAA09430@forgery.CS.Berkeley.EDU
+DATE: 1995-03-15T02:17:37+00:00  FROM: asami@cs.berkeley.edu (Satoshi Asami/浅見 賢) <None>
+SUBJ: Re: cvs commit: src/lib/libss Makefile
+BODY:
+ * From: Bill Paul <wpaul@freefall.cdrom.com>
+
+ *   Repeat after me kids: "I will not try to install files into a directory
+ *   when I'm not sure whether or not that directory exists."
+
+I've been bitten by this several times.  Maybe we can make a new flag
+to cp/install that says "the destination should be a directory...if
+not, report an error".
+
+Then we can put this flag to the master Makefile or /etc/make.conf and
+be all happy (or at least know it as soon as it fails).
+
+Satoshi (just throwing some ideas around)
+
+
+
+--------------------------------------------------------------------------------
+MID: 199503150229.SAA05413@ref.tfs.com
+DATE: 1995-03-15T02:29:59+00:00  FROM: Poul-Henning Kamp <phk@ref.tfs.com> <None>
+SUBJ: Re: cvs commit: src/lib/libss Makefile
+BODY:
+
+Would 
+
+	install ..... ${DESTDIR}/usr/foo/.
+
+do it ?
+
+-- 
+Poul-Henning Kamp <phk@login.dknet.dk> -- TRW Financial Systems, Inc.
+'All relevant people are pertinent' && 'All rude people are impertinent'
+=> 'no rude people are relevant'
+
+
+
+--------------------------------------------------------------------------------
+MID: 199503150247.MAA29436@godzilla.zeta.org.au
+DATE: 1995-03-15T02:47:21+00:00  FROM: Bruce Evans <bde@zeta.org.au> <None>
+SUBJ: Re: cvs commit: src/lib/libss Makefile
+BODY:
+
+
+
+Just use a slash after the directory name:
+
+	install -c /etc/passwd /tmp/nonesuch/
+
+Bruce
+
+
+
+--------------------------------------------------------------------------------
+MID: 199503150323.VAA16282@bonkers.taronga.com
+DATE: 1995-03-15T03:22:28+00:00  FROM: Peter da Silva <peter@bonkers.taronga.com> <None>
+SUBJ: Re: cvs commit: src/lib/libss Makefile 
+BODY:
+
+Append "/." to the directory name.
+
+
+
+
+--------------------------------------------------------------------------------
+MID: Pine.NEB.3.91.950402224212.3882A-100000@w8hd.w8hd.org
+DATE: 1995-04-03T02:54:07+00:00  FROM: Kim Culhan <kimc@w8hd.w8hd.org> <None>
+SUBJ: Re: supfiles [was] ports/games Makefile
+BODY:
+On Sun, 2 Apr 1995, Satoshi Asami/=?ISO-2022-JP?B?GyRCQHUbKEI=?= =?ISO-2022-JP?B?GyRCOCsbKEIgGyRCOC0bKEI=?= wrote:
+
+
+Thanks for the shot, I must not have been reading -hackers when the change
+was made.
+The sup I was using is on freefall:/pub/sup  3297 Oct 25 13:49 supfile
+
+I added ports-graphics to this and snarfed the required stuff, now I wonder
+if anyone who uses SUP regularly knows of a location where a more recent
+supfile is kept?
+
+kim
+
+--
+kimc@w8hd.org
+
+
+
+
+--------------------------------------------------------------------------------
+MID: v02120b00aba58b6c19d2@[199.183.109.242]
+DATE: 1995-04-03T12:04:54+00:00  FROM: rkw@dataplex.net (Richard Wackerbarth) <None>
+SUBJ: Re: cvs commit: src/sys/i386/conf Makefile.i386
+BODY:
+Rod Grimes <rgrimes@gndrsh.aac.dev.com> writes :
+
+I concur. This change is, IMHO, BAD. I will AGAIN suggest that we go the
+opposite direction.
+
+I've thought a lot about this structure and have implemented much of it on
+my own system. There are more details that I have omitted here, but this is
+the jist of my proposal. Responses welcome ...
+
+The source tree should be fully self contained and ALL references MUST be
+relative to the root of that tree. Further, the "obj" links are removed
+from the source tree and replaced by a parallel object tree that grows from
+the root.
+
+This allows us ALL of the following:
+1) The compilation of a system does not "trash" the current operating system.
+2) The source tree (and much of the object tree) can be read-only.
+3) One system can support multiple DIFFERENT versions of the tree at the
+same time.
+4) "Make world" reduces to little more than a simple "make all" at the top
+of the tree. Redundant remakes of the libraries are eliminated.
+5) Cross compilation for other platforms becomes possible.
+
+The COST? Each compilation environment MUST have a variable designating the
+ROOT of that environment. (Unless you want the default root "/usr")
+
+Now, the quest
+
+--------------------------------------------------------------------------------
+MID: 199504071841.NAA19489@mpp.com
+DATE: 1995-04-07T18:41:33+00:00  FROM: Mike Pritchard <pritc003@maroon.tc.umn.edu> <None>
+SUBJ: Kernel makefile changes to allow builds in different trees
+BODY:
+Here are some changes to the kernel makefile and related programs that will 
+allow you to build kernels somewhere other than /usr/src/sys/compile/xxx.  
+This will allow you to have local copies of source files and work on
+them without having to worry about someone else/sup/whatever trashing
+them and without having to copy the entire /usr/src/sys tree.  These changes 
+should also let you compile off a read-only source tree (e.g. A CD-ROM), 
+but I don't have any way to test that myself right now.  
+
+The location of the sources is keyed off the "SRCROOT" environment
+variable.  This defaults to "/usr/src" if SRCROOT is undefined.  If this 
+variable is defined, then the kernel makefile will use that directory for 
+the source files if they are not present relative to the current build 
+directory.  
+
+An example of how to config a kernel that you want to build somewhere
+other than /usr/src/sys:
+
+# cd /usr/src/i386/conf
+# mkdir -p /usr/src/tmp/sys/compile/XXX
+# ln -s /usr/src/tmp/sys compile/XXX ../../compile/XXX
+# config -n XXX
+# cd /usr/src/tmp/sys/compile/XXX
+# mkdir ../../scsi
+# cp /usr/src/sys/scsi/sd.c ../../scsi
+# vi ../../scsi/sd.c
+ [make your local changes to sd.c]
+# make depend
+# 
+
+--------------------------------------------------------------------------------
+MID: 199504091007.DAA05993@silvia.HIP.Berkeley.EDU
+DATE: 1995-04-09T10:07:18+00:00  FROM: asami@cs.berkeley.edu (Satoshi Asami | 浅見 賢) <None>
+SUBJ: Ports hackers wanted!
+BODY:
+(Note: I've CC:ed this to "hackers" too for wider audience...if you are 
+ following up, please send it to "ports" only...thanks)
+
+I'm now working on a bunch of projects aimed at "a better, friendlier
+ports scheme" (how nice! :).  However, I'm severely short-handed and
+at the rate things are going, most of my (brilliant!) ideas are not
+going to make it into 2.1.  This is sad!
+
+So, I need help.  If you are interested in one or more of the projects 
+listed in FreeBSD-current/src/TODO-2.1/asami, please contact me.  In
+particular, I need immediate help in the following areas:
+
+-*-
+
+Update: Thu Apr  6 08:24:02 PDT 1995
+Due:	Hopefully before 2.1
+Prio:	High
+Task:	Enhance pkg_install
+
+Again a couple of ideas here:
+
+(1) Make pkg_create or pkg_add able to "register" a package from the
+    ports directory by looking into pkg/PLIST.  We can then call this
+    from the "install" rule in bsd.port.mk so that the user can
+    pkg_delete it later.
+
+(2) Add some way to include the dependency information (usually
+    LIB_DEPENDS, maybe EXEC_DEPENDS too but this one is harder 'cause
+    it may be required only for compilation) into the package so that
+    pkg_add will check for the existences and print
+
+--------------------------------------------------------------------------------
+MID: 199504112007.NAA13913@forgery.CS.Berkeley.EDU
+DATE: 1995-04-11T20:07:04+00:00  FROM: asami@cs.berkeley.edu (Satoshi Asami | 浅見 賢) <None>
+SUBJ: Re: make parallelism
+BODY:
+ * As I understand it, our make is derived from pmake, which was capable of
+ * firing off subprocesses in parallel.  How did we lose this capability?
+
+I don't know where pmake got lost, but the /usr/share/mk/*.mk files
+aren't written for pmake, as there are many assumptions about
+left-to-right order of dependency tree traversal.  At least I'm sure
+about bsd.port.mk.
+
+If we are going to have pmake soon, remind me to fix bsd.port.mk and
+bsd.port.subdir.mk.
+
+Satoshi
+
+
+
+--------------------------------------------------------------------------------
+MID: 199504231116.EAA27389@silvia.HIP.Berkeley.EDU
+DATE: 1995-04-23T11:16:25+00:00  FROM: asami@cs.berkeley.edu (Satoshi Asami | 浅見 賢) <None>
+SUBJ: strange behavior with sh and dangling symlinks
+BODY:
+The below is on a 0416-snap system Rod put together for me.  (It
+happens on older systems too.)
+
+=====
+$ ls
+$ mkdir a 
+$ ln -s ../b a
+$ echo */b
+*/b
+$ touch b
+$ echo */b
+a/b
+$ /bin/rm b
+$ echo */b
+*/b
+$ echo a/*
+a/b
+$ ls -lL a
+total 0
+lrwxr-xr-x  1 asami  grad  4 Apr 23 04:11 b -> ../b
+$
+=====
+
+In short, "*/filename" doesn't expand properly when the target of the
+symlink doesn't exist.  "dirname/*" does expand, so this is
+inconsistent, to say the least.
+
+This happens only in sh.  tcsh and bash expands everything fine.
+
+(I found this trying to track down why bsd.port.mk was behaving
+ funnily when I removed the "real" package in .packages/ before
+ removing the symlinks in other subdirs....)
+
+Satoshi
+
+
+
+--------------------------------------------------------------------------------
+MID: 199504241845.UAA03521@vector.eikon.e-technik.tu-muenchen.de
+DATE: 1995-04-24T18:45:53+00:00  FROM: Julian Howard Stacey <Julian.H.Stacey@regent.e-technik.tu-muenchen.de> <None>
+SUBJ: Kernel makefile changes to allow builds in different trees
+BODY:
+
+
+
+Mike, sounds like we're possibly working in the same area,
+I have an extensive sys/Makefiles thing in freefall:~jhs/fixes
+I'll get back to it after Ive finished hylafax,
+hopefully we can get our work to mesh
+Till later
+Julian S.
+
+
+
+--------------------------------------------------------------------------------
+MID: Pine.SV4.3.91.950516054705.16341B-100000@haywire.DIALix.COM
+DATE: 1995-05-15T21:54:21+00:00  FROM: Peter Wemm <peter@haywire.dialix.com> <None>
+SUBJ: Some makefile patches to stop the !#^%!& include files being touched
+BODY:
+These were done from a very recent -current..  I got sick of the include 
+files being touched, causing make to rebuild the entire system again.
+
+Most of the makefiles were fixed, but these two slipped through:
+
+src/lib/csu/i386/Makefile:  (stops <dlfcn.h> being touched)
+
+*** Makefile.dist	Thu May 11 20:06:38 1995
+--- Makefile	Thu May 11 20:12:23 1995
+***************
+*** 26,33 ****
+  install: maninstall
+  	install ${COPY} -o ${BINOWN} -g ${BINGRP} -m 444 ${OBJS} \
+  	    ${DESTDIR}/usr/lib
+! 	install ${COPY} -o ${BINOWN} -g ${BINGRP} -m 444 ${.CURDIR}/dlfcn.h \
+! 	    ${DESTDIR}/usr/include
+  
+  depend lint tags:
+  
+--- 26,35 ----
+  install: maninstall
+  	install ${COPY} -o ${BINOWN} -g ${BINGRP} -m 444 ${OBJS} \
+  	    ${DESTDIR}/usr/lib
+! 	@${ECHO} Installing dlfcn.h header...
+! 	@cmp -s ${.CURDIR}/dlfcn.h ${DESTDIR}/usr/include/dlfcn.h || \
+! 	    install ${COPY} -o ${BINOWN} -g ${BINGRP} -m 444 \
+! 	    ${.CURDIR}/dlfcn.h ${DESTDIR}/usr/include
+  
+  depend lint tags:
+  
+
+And this one stops the rpc stuff being touched, causing the getpw* 
+routines in libc to be rebuilt, hence causing just about everything to be 
+rebuilt.
+
+src/include/rpcsvc:
+*** Makefile.dist	Thu May 11 19:57:25 
+
+--------------------------------------------------------------------------------
+MID: 199505152215.PAA07740@gndrsh.aac.dev.com
+DATE: 1995-05-15T22:15:22+00:00  FROM: "Rodney W. Grimes" <rgrimes@gndrsh.aac.dev.com> <None>
+SUBJ: Re: Some makefile patches to stop the !#^%!& include files being touched
+BODY:
+
+This is a very small band aid for a much larger problem which I will start
+in on fixing as soon as 2.0.5 is out the door.
+
+
+-- 
+Rod Grimes                                      rgrimes@gndrsh.aac.dev.com
+Accurate Automation Company                   Custom computers for FreeBSD
+
+
+
+--------------------------------------------------------------------------------
+MID: Pine.SV4.3.91.950516061736.16341D-100000@haywire.DIALix.COM
+DATE: 1995-05-15T22:23:35+00:00  FROM: Peter Wemm <peter@haywire.dialix.com> <None>
+SUBJ: Re: Some makefile patches to stop the !#^%!& include files being touched
+BODY:
+On Mon, 15 May 1995, Rodney W. Grimes wrote:
+
+You are not wrong there..  Reinstalling the static libs causes a relink 
+in /bin and /sbin (among others).  I dont mind a relink anywhere as much 
+as a recompile-the-entire-system because I forgot to reapply the patches 
+after sup kindly "repaired" them for me.
+
+Damn.  What a problem! :-)  Having recently come from a binary-only 
+system, the last thing I should be griping about is recompiling the 
+source... :-)  :-)
+
+Seriously though..  I suspect that a "cmp -s" will fail for many 
+static libs, merely because of the "ranlib" or "ranlib -t" after the 
+install.. even though they are otherwise identical.
+
+Cheers,
+-Peter
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 199505152232.PAA07805@gndrsh.aac.dev.com
+DATE: 1995-05-15T22:32:32+00:00  FROM: "Rodney W. Grimes" <rgrimes@gndrsh.aac.dev.com> <None>
+SUBJ: Re: Some makefile patches to stop the !#^%!& include files being touched
+BODY:
+
+I am not wrong here, there is the huge problem that we have no consitent
+and correct way to handle the installation of header files for the whole
+of the source tree (or atleast, not one commited.  I have prototype here
+that does 10 times the job these little hacks of cmp -s do.
+
+Any small hack to add more cmp -s's will just get in the way of the proper
+fix that is coming.  I am not talking about rewrite all of .mk, just pulling
+over my fixes for header file installation (new file bsd.file.mk) that
+does a pretty damn sweat jobs of handling lots of things, can you say
+/usr/include is a symlink farm to the source tree with only files symlinked,
+can you say /usr/include if it is a SHARED=copies type only has files
+installed into it for the *whole* source tree if the file has changed.
+
+Trust me, I've been working on and building *BSD sources for a long time,
+your little patch is but a drop in the bucket of what needs fixing.
+
+
+:-), right :-)
+
+
+I am not talking about libs, I did not even mention them.  I am talking
+about /usr/include files only.
+
+
+-- 
+Rod Grimes                                      rgrimes@gndrsh.aac.dev.com
+Accurate Automation Company                   Custom computers
+
+--------------------------------------------------------------------------------
+MID: 199505152234.PAA07815@gndrsh.aac.dev.com
+DATE: 1995-05-15T22:34:05+00:00  FROM: "Rodney W. Grimes" <rgrimes@gndrsh.aac.dev.com> <None>
+SUBJ: Re: Some makefile patches to stop the !#^%!& include files being touched
+BODY:
+         ^^^^^
+
+Ignore my previous message, or it least a the fragment about me being right,
+I missed the ``not'' in this sentence, reading to damn fast and to much
+coffee today.
+
+I am going away for a few hours now to bury my head in the sand (good
+excuse to go to the beach!).
+
+
+
+-- 
+Rod Grimes                                      rgrimes@gndrsh.aac.dev.com
+Accurate Automation Company                   Custom computers for FreeBSD
+
+
+
+--------------------------------------------------------------------------------
+MID: 199505160623.QAA24054@godzilla.zeta.org.au
+DATE: 1995-05-16T06:23:12+00:00  FROM: Bruce Evans <bde@zeta.org.au> <None>
+SUBJ: Re: Some makefile patches to stop the !#^%!& include files being touched
+BODY:
+							     ^^^^all
+
+This can be avoided by setting RANTOUCH to `${ECHO} foo' in
+/etc/make.conf.  Then you would probably have to install the
+libraries without changing their timestamp to avoid getting
+warnings about the symbol table being out of date.  There are
+some hacked versions of `install' around that will do this.
+I use one and never noticed the missing `cmp -s'.
+
+Libraries often change anyway because the dates of files in
+them change.  This shouldn't cause a relink, but it does because
+most programs depend on the static libraries although they are
+linked against the shared libraries.  Linking is fast, but after
+relinking you have to reinstall in case something really changed.
+Loop.
+
+Bruce
+
+
+
+--------------------------------------------------------------------------------
+MID: 199506240859.KAA25902@gilberto.physik.rwth-aachen.de
+DATE: 1995-06-24T08:59:41+00:00  FROM: "Christoph P. Kukulies" <kuku@gilberto.physik.rwth-aachen.de> <None>
+SUBJ: kernel Makefile mechanism (Q)
+BODY:
+Could someone explain to me the wizardry that is responsible for writing
+the /sys/compile/KERNEL/Makefile, especially which mechanism is
+responsible for adding the -I../../something lines into the makefile.
+
+I'm building a kernel from sound.v30.5. soundcard.h should be copied into 
+/sys/i386/include but this path is not searched by the $INCLUDE rules.
+Is it done by config and files.i386 or what?
+
+--Chris Christoph P. U. Kukulies kuku@gil.physik.rwth-aachen.de
+FreeBSD blues.physik.rwth-aachen.de 2.0-BUILT-19950619 FreeBSD 2.0-BUILT-1995
+0619 #1: Mon Jun 19 19:54:08 MET DST 1995     kuku@blues.physik.rwth-aachen.d
+e:/usr/src/sys/compile/BLUESGUS  i386
+
+
+
+--------------------------------------------------------------------------------
+MID: 199507192345.QAA01914@forgery.CS.Berkeley.EDU
+DATE: 1995-07-19T23:45:17+00:00  FROM: asami@cs.berkeley.edu (Satoshi Asami) <None>
+SUBJ: Strange entries in /usr/src/Makefile
+BODY:
+It was pointed out to me that there are some strange-looking lines in
+/usr/src/Makefile:
+
+=====
+# These are last, since it is nice to at least get the base system
+# rebuilt before you do them.
+.if defined(MAKE_LOCAL) & exists(local) & exists(local/Makefile)
+SUBDIR+= local
+.endif
+.if defined(MAKE_PORTS) & exists(ports) & exists(ports/Makefile)
+SUBDIR+= ports
+.endif
+=====
+
+What are these?  I am not aware of /usr/src/local or /usr/src/ports
+ever existing on our system.  The ports stuff should be in /usr/ports,
+and has never been intended to be built as part of "make world".  The
+"local" stuff are, well, up to the site administrator, but /usr/local
+is typically populated by third-party software (including many from
+the ports tree), so I don't know why it's here either.
+
+Will the world be obliterated in a violent volcanic eruption if I
+delete these lines?
+
+Satoshi
+
+
+
+--------------------------------------------------------------------------------
+MID: 20363.806200231@time.cdrom.com
+DATE: 1995-07-20T00:30:31+00:00  FROM: "Jordan K. Hubbard" <jkh@time.cdrom.com> <None>
+SUBJ: Re: Strange entries in /usr/src/Makefile 
+BODY:
+
+These were done on behalf of Julian Stacey, who wanted some sort of
+tighter integration in his "really build the world" makes.  Myself,
+I think it's cruft and it should go.  If you want to build the world,
+a small shell script does fine:
+
+% cat > beat_my_system
+#!/bin/sh
+date
+cd /usr/src
+echo "** Making the world in less than 7 days"
+make world
+echo "** Done with the world, resting.."
+sleep 1
+echo "Ok, that's enough.  Moving on to ports."
+cd /usr/ports
+make -k clean all install
+echo "My god!  We're still here!"
+exit 0
+^D
+% chmod +x beat_my_system
+% ./beat_my_system >& /var/log/beating.log &
+
+					Jordan
+
+
+
+--------------------------------------------------------------------------------
+MID: 199507200043.RAA01960@forgery.CS.Berkeley.EDU
+DATE: 1995-07-20T00:43:29+00:00  FROM: asami@cs.berkeley.edu (Satoshi Asami) <None>
+SUBJ: Re: Strange entries in /usr/src/Makefile
+BODY:
+ * These were done on behalf of Julian Stacey, who wanted some sort of
+ * tighter integration in his "really build the world" makes.  Myself,
+ * I think it's cruft and it should go.  If you want to build the world,
+ * a small shell script does fine:
+
+I agree with you, this is just confusing.  (I received a question
+"should I put the ports lndir in /usr/src/ports?" from a user who took
+a long hard look into /usr/src/Makefile.)  More importantly, it
+directly conflicts with bsd.port.mk, which has the ports in /usr/ports
+by default.
+
+A funny shell script like yours or a command line with a "cd" in it
+(don't tell me you don't know how to do that, Julian :) should do just
+fine.
+
+Satoshi
+
+
+
+--------------------------------------------------------------------------------
+MID: 199507200158.SAA08286@gndrsh.aac.dev.com
+DATE: 1995-07-20T01:58:27+00:00  FROM: "Rodney W. Grimes" <rgrimes@gndrsh.aac.dev.com> <None>
+SUBJ: Re: Strange entries in /usr/src/Makefile
+BODY:
+
+/usr/src/Makefile is in error, here is the diff to correct this bug:
+[Now, was that so hard to fix???? :-) :-)]
+
+Index: Makefile
+===================================================================
+RCS file: /home/ncvs/src/Makefile,v
+retrieving revision 1.57
+diff -c -r1.57 Makefile
+*** 1.57	1995/05/29 23:50:55
+--- Makefile	1995/07/20 01:11:30
+***************
+*** 4,10 ****
+  # Make command line options:
+  #	-DCLOBBER will remove /usr/include and MOST of /usr/lib
+  #	-DMAKE_LOCAL to add ./local to the SUBDIR list
+! #	-DMAKE_PORTS to add ./ports to the SUBDIR list
+  #	-DMAKE_EBONES to build eBones (KerberosIV)
+  #
+  #	-DNOCLEANDIR run ${MAKE} clean, instead of ${MAKE} cleandir
+--- 4,10 ----
+  # Make command line options:
+  #	-DCLOBBER will remove /usr/include and MOST of /usr/lib
+  #	-DMAKE_LOCAL to add ./local to the SUBDIR list
+! #	-DMAKE_PORTS to add ../ports to the SUBDIR list
+  #	-DMAKE_EBONES to build eBones (KerberosIV)
+  #
+  #	-DNOCLEANDIR run ${MAKE} clean, instead of ${MAKE} cleandir
+***************
+*** 76,83 ****
+  .if defined(MAKE_LOCAL) & exists(local) & exists(local/Makefile)
+  SUBDIR+= local
+  .endif
+! .if defined(MAKE_PORTS) & exists(ports) & exists(ports/Makefile)
+! S
+
+--------------------------------------------------------------------------------
+MID: 199507201716.TAA12981@vector.eikon.e-technik.tu-muenchen.de
+DATE: 1995-07-20T17:16:06+00:00  FROM: "Julian Stacey <jhs@freebsd.org>" <jhs@vector.eikon.e-technik.tu-muenchen.de> <None>
+SUBJ: Re: Strange entries in /usr/src/Makefile 
+BODY:
+
+
+I seem to be getting this thread in random order.
+I guess you're talking about src/Makefile:
+	.if defined(MAKE_PORTS) & exists(ports) & exists(ports/Makefile)
+	SUBDIR+= ports
+	.endif
+
+The idea was one would have a /usr/src/ports --> /usr/ports
+(& that would point to /usr57/ports or whatever/wherever)
+
+If you need to zap it Satoshi, go ahead :-)
+
+Julian S
+
+
+
+--------------------------------------------------------------------------------
+MID: 199507201719.TAA13031@vector.eikon.e-technik.tu-muenchen.de
+DATE: 1995-07-20T17:19:42+00:00  FROM: "Julian Stacey <jhs@freebsd.org>" <jhs@vector.eikon.e-technik.tu-muenchen.de> <None>
+SUBJ: Re: Strange entries in /usr/src/Makefile 
+BODY:
+
+
+Well done :-)
+Julian S
+
+
+
+--------------------------------------------------------------------------------
+MID: 199507202028.NAA09723@gndrsh.aac.dev.com
+DATE: 1995-07-20T20:28:33+00:00  FROM: "Rodney W. Grimes" <rgrimes@gndrsh.aac.dev.com> <None>
+SUBJ: Re: Strange entries in /usr/src/Makefile
+BODY:
+
+Actually it has a bug too, it assumes src and ports are sitting
+side by side.  I caught this when you pointed on the symlink
+from /usr/src/ports -> /usr/ports or where ever it may be.
+
+DO NOT apply my patch, it is not a general solution to the
+problem :-(.  And infact for anyone who has symlinked /usr/src
+off some place will probably be the wrong solution :-(.
+
+Need more time to think about this to see if I can come up with
+a real solution.  Any ideas???
+
+
+-- 
+Rod Grimes                                      rgrimes@gndrsh.aac.dev.com
+Accurate Automation Company                 Reliable computers for FreeBSD
+
+
+
+--------------------------------------------------------------------------------
+MID: 199507202037.NAA02882@forgery.CS.Berkeley.EDU
+DATE: 1995-07-20T20:37:18+00:00  FROM: asami@cs.berkeley.edu (Satoshi Asami) <None>
+SUBJ: Re: Strange entries in /usr/src/Makefile
+BODY:
+ * Actually it has a bug too, it assumes src and ports are sitting
+ * side by side.  I caught this when you pointed on the symlink
+ * from /usr/src/ports -> /usr/ports or where ever it may be.
+ * 
+ * DO NOT apply my patch, it is not a general solution to the
+ * problem :-(.  And infact for anyone who has symlinked /usr/src
+ * off some place will probably be the wrong solution :-(.
+ * 
+ * Need more time to think about this to see if I can come up with
+ * a real solution.  Any ideas???
+
+That's right, many people have /usr/src -> /a/src and /usr/ports ->
+/b/ports kinds of setups.
+
+The only way to "solve" this is to use the full pathname "/usr/ports"
+in there, but then it will screw up people who have src and ports side 
+by side on a separate location.
+
+I'd prefer it nuked, it just doesn't belong here.
+
+Satoshi
+
+
+
+--------------------------------------------------------------------------------
+MID: 199507202103.OAA09826@gndrsh.aac.dev.com
+DATE: 1995-07-20T21:03:37+00:00  FROM: "Rodney W. Grimes" <rgrimes@gndrsh.aac.dev.com> <None>
+SUBJ: Re: Strange entries in /usr/src/Makefile
+BODY:
+
+Then neither does the assumption in bsd.ports.mk that /usr/ports is
+the root of the ports tree :-(.  That is after all what started this
+whole thread, that bsd.port.mk and /usr/src/Makefile where in disagreement
+about locations.
+
+
+-- 
+Rod Grimes                                      rgrimes@gndrsh.aac.dev.com
+Accurate Automation Company                 Reliable computers for FreeBSD
+
+
+
+--------------------------------------------------------------------------------
+MID: 199507202114.OAA02916@forgery.CS.Berkeley.EDU
+DATE: 1995-07-20T21:14:17+00:00  FROM: asami@cs.berkeley.edu (Satoshi Asami) <None>
+SUBJ: Re: Strange entries in /usr/src/Makefile
+BODY:
+ * > I'd prefer it nuked, it just doesn't belong here.
+ * 
+ * Then neither does the assumption in bsd.ports.mk that /usr/ports is
+ * the root of the ports tree :-(.  That is after all what started this
+ * whole thread, that bsd.port.mk and /usr/src/Makefile where in disagreement
+ * about locations.
+
+bsd.ports.mk does not assume that the ports tree is located at
+/usr/ports, it is just the default and can be changed by PORTSDIR.
+(Or, more precisely, PORTSDIR is set to /usr/ports in bsd.ports.mk if
+not defined by the user, and that's the root of the ports tree.)
+
+If we read bsd.port.mk from /usr/src/Makefile *before* the lines in
+question, we can use PORTSDIR to build the ports as part of make
+world.  But we don't.
+
+Can I nuke them please?  The main source tree and the ports tree are
+two different beasts, it just doesn't make much sense to assume
+anything about where they should be on a user's machine.  Especially
+if the "problem" can be solved by a 2-line shell script or a shell
+command with three semicolons.
+
+Satoshi
+
+
+
+--------------------------------------------------------------------------------
+MID: 199507202132.OAA09908@gndrsh.aac.dev.com
+DATE: 1995-07-20T21:32:31+00:00  FROM: "Rodney W. Grimes" <rgrimes@gndrsh.aac.dev.com> <None>
+SUBJ: Re: Strange entries in /usr/src/Makefile
+BODY:
+  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+I can not go with nuking them, some sites have become acustom to
+what we have.  Perhaps the default value of
+PORTSDIR should move to a more visible location.
+
+Your missing a lot of the context and everything that went into
+the initial work to put that stuff in there, this was not just
+some half cocked lets go off and add this.  It was discussed and
+reviewed, changed and envolved for about a 2 week period before
+it ever got added.
+
+That is why those lines are
+.if defined(MAKE_PORTS) & exists(../ports) & exists(../ports/Makefile)
+and not something much simpler but more error prone.
+
+[Oopppss.. my patched version of the file above :-)]
+
+Now, the new ports stuff has changed the picture a little and we
+need to deal with it, not just go nuke it!
+
+The argument that that /usr/src should know nothing about /usr/ports
+is a strawman, as bsd.port.mk lives there along with several other
+bits.  Ideally, sure it would be nice if it didn't know a thing about
+it.  Practical view point, next to imposible to achive the ideal.
+
+And as Joerg pointed out /usr/src/ports -> whereever makes the
+current code just do the right thing, and that was more or less
+the original 
+
+--------------------------------------------------------------------------------
+MID: 199507210123.SAA03025@forgery.CS.Berkeley.EDU
+DATE: 1995-07-21T01:23:14+00:00  FROM: asami@cs.berkeley.edu (Satoshi Asami) <None>
+SUBJ: Re: Strange entries in /usr/src/Makefile
+BODY:
+ * I can not go with nuking them, some sites have become acustom to
+ * what we have.
+
+That's true, but we need to try to clean up our source tree once in a
+while, and /usr/src/Makefile is already 300+ lines long.  If it isn't
+used that much and this can be changed without much pain (how many
+sites are actually using them?), I think we should nuke it.  Browsing
+through /usr/src/Makefile is already enough pain without this. ;)
+
+ * 		  Perhaps the default value of
+ * PORTSDIR should move to a more visible location.
+
+That's an idea, we can put it in /etc/make.conf 'cause then anything
+can pick it up.  If it's really necessary, that is.
+
+ * Your missing a lot of the context and everything that went into
+ * the initial work to put that stuff in there, this was not just
+ * some half cocked lets go off and add this.  It was discussed and
+ * reviewed, changed and envolved for about a 2 week period before
+ * it ever got added.
+
+I did look at the cvs log even before I sent out the original
+message.  I couldn't find anything there, so I assume it went in
+before the 4.4 switch, is this correct?
+
+ * Now, the new ports stuff has changed the picture a little and we
+ * need to deal with it, not jus
+
+--------------------------------------------------------------------------------
+MID: 199507210223.TAA10403@gndrsh.aac.dev.com
+DATE: 1995-07-21T02:23:10+00:00  FROM: "Rodney W. Grimes" <rgrimes@gndrsh.aac.dev.com> <None>
+SUBJ: Re: Strange entries in /usr/src/Makefile
+BODY:
+
+If you think /usr/src/Makefile is complicated, go read release/Makefile
+for some enjoyment...
+
+Or how about this for a comparitive, the length of bsd.port.mk is
+almost as long as the sum of all the other .mk files combined :-)
+
+File length is a pretty meaningless metric.  Building the src
+tree is a complicated process.  Removing 6 lines in 300 is insignificant.
+
+
+/etc/make.conf would probably be the right place, it is a per site
+type of value.  
+
+
+Yes, it did, here is some of the rcs log that effected the change:
+----------------------------
+revision 1.33
+date: 1994/01/26 03:50:15;  author: rgrimes;  state: Exp;  lines: +9 -1
+I cleaned this up and applied it.
+
+Subject: patch for src/Makefile as find obj on local & ports failed
+Date: Mon, 24 Jan 1994 17:20:10 +0100
+
+Here's a patch for src/Makefile as find obj on local & ports failed
+in the case that src/local or src/ports was a sym link
+----------------------------
+revision 1.32
+date: 1994/01/11 08:06:49;  author: rgrimes;  state: Exp;  lines: +11 -1
+Added the following so that people can have these built
+automatically if they like:
+# This is for people who want to have src/ports, src/local built
+# automatically.
+.if defined(MAKE_L
+
+--------------------------------------------------------------------------------
+MID: 199507240757.AAA20449@silvia.HIP.Berkeley.EDU
+DATE: 1995-07-24T07:57:14+00:00  FROM: asami@cs.berkeley.edu (Satoshi Asami) <None>
+SUBJ: Re: Strange entries in /usr/src/Makefile
+BODY:
+Rod, it doesn't seem like we are going to reach any sort of agreement,
+but here it goes another one....
+
+ * If you think /usr/src/Makefile is complicated, go read release/Makefile
+ * for some enjoyment...
+
+The release tree is not for general consumption. ;)
+
+ * Or how about this for a comparitive, the length of bsd.port.mk is
+ * almost as long as the sum of all the other .mk files combined :-)
+
+I know, and believe me, I'm going to clean this thing up.  It's long
+because there is lots of code duplication, because I didn't know how
+to use macros. :p
+
+ * Yes, it did, here is some of the rcs log that effected the change:
+
+Thanks.  Is there somewhere I can check the old commit logs?
+
+ * No, that is not ``an argument for the sake of an argument''.  It is
+ * a statement of reality.  Your point that it is in /usr/share means that
+ * the ports mechanism has contaiminted a standard part of the system,
+ * only makeing the case stronger that the ideal can not be achived.
+
+But that doesn't mean we should try to keep them separated as much as
+possible.
+
+ * Because ``make world'' is shorter, and the actual sequence of events
+ * will be slightly different for you 2 sets of commands.  If you really
+
+--------------------------------------------------------------------------------
+MID: 199507240911.CAA18082@gndrsh.aac.dev.com
+DATE: 1995-07-24T09:11:39+00:00  FROM: "Rodney W. Grimes" <rgrimes@gndrsh.aac.dev.com> <None>
+SUBJ: Re: Strange entries in /usr/src/Makefile
+BODY:
+
+Go nuke it, but you have to respond to any site that complains about
+lost functionality if there was some one using it.  I don't really
+care about the lines, I just know it took 2 weeks to convince me
+to add them, so I am not so happy to see this suddenly reversed with
+out as much convincing.
+
+Maybe I should have been more stuborn about adding them in the
+first place :-).
+
+
+/usr/src is for general consumption, everything, including src/release.
+You might not be interested in it, but others are.
+
+
+:-).  I suggest you read the pmake tutorial in the 4.4BSD man set,
+also as /usr/share/doc/psd/12.make/* on your FreeBSD 2.x system.
+It doesn't cover .mk files per se, but it does cover a lot of
+ground.
+
+
+You need a 1.x cvs tree, we can't have a 1.x cvs tree on Freefall legally,
+and I am not suppose to have one here myself :-(.
+
+
+That may not mean it, but I am pretty sure the standing idea here is
+that ports should not contaminate /usr/src with port specific changes.
+ 
+
+/home/mail/archive on freefall.
+
+
+:-(.  
+
+
+Julians reply was before I patched it, which was before I remeber the
+idea was that it would be a symlink to the location of ports.  If
+Julian and Jordan say nuke it still, then go
+
+--------------------------------------------------------------------------------
+MID: 199507241012.DAA29019@silvia.HIP.Berkeley.EDU
+DATE: 1995-07-24T10:12:06+00:00  FROM: asami@cs.berkeley.edu (Satoshi Asami) <None>
+SUBJ: Re: Strange entries in /usr/src/Makefile
+BODY:
+ * Maybe I should have been more stuborn about adding them in the
+ * first place :-).
+
+I wish you were. :)
+
+ * :-).  I suggest you read the pmake tutorial in the 4.4BSD man set,
+ * also as /usr/share/doc/psd/12.make/* on your FreeBSD 2.x system.
+ * It doesn't cover .mk files per se, but it does cover a lot of
+ * ground.
+
+Thanks.  Well, I managed to "merge" all the skeleton targets into one,
+the result is now sitting on thud and will go out to the "ports" list
+for testing shortly.  This change reduced 100 lines from bsd.port.mk.
+(Yeah I know, not much but it's a start. ;)
+
+ * You need a 1.x cvs tree, we can't have a 1.x cvs tree on Freefall legally,
+ * and I am not suppose to have one here myself :-(.
+
+Oh, is that so?  I thought the agreement was to stop distributing the
+source, I didn't know that it included just having them....
+
+ * > But that doesn't mean we should try to keep them separated as much as
+ * > possible.
+ * 
+ * That may not mean it, but I am pretty sure the standing idea here is
+ * that ports should not contaminate /usr/src with port specific changes.
+
+Ayyyyy sorry, I meant to type "that does't mean we shouldn't try".  We
+are in agreement here. ;)                     
+
+--------------------------------------------------------------------------------
+MID: 199507241519.IAA18512@gndrsh.aac.dev.com
+DATE: 1995-07-24T15:19:34+00:00  FROM: "Rodney W. Grimes" <rgrimes@gndrsh.aac.dev.com> <None>
+SUBJ: Re: Strange entries in /usr/src/Makefile
+BODY:
+
+100 lines is 100 lines!!  Thats almost 9% by my count!
+
+
+First parties to the agreement agreed to ``Stop all use of'' Net/2 derived
+code.   Reading it is a ``use''.  This does not effect 2nd parties like
+you, but since freefall does sit on WC property it is probably best that
+the bits are not on there any longer.
+
+
+:-)  Mean what you say, argghhh.. I mean, say what you mean :-):-)
+
+
+Did you look at the list.`date`.gz files??  I see dates on the compressed
+versions going back into 1994 for the commit logs, but your right, the
+hackers list only goes back 1 archive.  Did someone trash the mail???
+
+
+
+-- 
+Rod Grimes                                      rgrimes@gndrsh.aac.dev.com
+Accurate Automation Company                 Reliable computers for FreeBSD
+
+
+
+--------------------------------------------------------------------------------
+MID: 199507241602.MAA03246@grendel.csc.smith.edu
+DATE: 1995-07-24T16:02:33+00:00  FROM: jfieber@grendel.csc.smith.edu (John Fieber) <None>
+SUBJ: Re: Strange entries in /usr/src/Makefile
+BODY:
+Rodney W. Grimes writes:
+
+I believe that a lot was lost some time ago in the auto-mounting
+incident on freefall.  However, for the www interface to them
+(http://www.freebsd.org/How/mail-archive.html) I had (and still
+have) a duplicate copy tucked away elsewhere which was spared.
+It goes back to May 1994.  You can either use the www interface
+or go directly to /usr/local/www/database/text.
+
+-john
+
+=== jfieber@cs.smith.edu ========== Come up and be a kite!  --K. Bush ===
+
+
+
+--------------------------------------------------------------------------------
+MID: 1308.806604687@palmer.demon.co.uk
+DATE: 1995-07-24T16:51:27+00:00  FROM: Gary Palmer <gary@palmer.demon.co.uk> <None>
+SUBJ: Re: Strange entries in /usr/src/Makefile 
+BODY:
+In message <199507241519.IAA18512@gndrsh.aac.dev.com>, "Rodney W. Grimes" write
+s:
+
+Err - remember that slight accident Jordan had with AMD and freefall's
+disks...? It cleaned out most of the non-commit archives, although why
+the commit archives remained is a mystery to me...
+
+Gary
+
+
+
+
+==========================================================================================
+DB: freebsd-current.duckdb  hits=80
+==========================================================================================
+--------------------------------------------------------------------------------
+MID: <199503190808.CAA05981@news.iadfw.net>
+DATE: 1995-03-19T08:08:03+00:00  FROM: Jim Bryant <jbryant@news.iadfw.net>
+SUBJ: Re: Minor problems installing 2.0-950210-SNAP
+BODY:
+In reply:
+
+i ran into this on a new install recently.  apparently rebooting, then 
+assigning the partitions works fine...
+
+Jim
+-- 
+All opinions expressed are mine, if you   | "I will not be pushed, stamped,
+think otherwise, then go jump into turbid | briefed, debriefed, indexed, or
+radioactive waters and yell WAHOO !!!     | numbered!" - #1, "The Prisoner"
+     jbryant@server.iadfw.net, System administrator, Internet America
+
+From owner-freebsd-current  Sun Mar 19 01:52:24 1995
+Return-Path: current-owner
+Received: (from majordom@localhost) by freefall.cdrom.com (8.6.10/8.6.6) id BAA00889 for current-outgoing; Sun, 19 Mar 1995 01:52:24 -0800
+Received: from irz301.inf.tu-dresden.de (irz301.inf.tu-dresden.de [141.76.1.11]) by freefall.cdrom.com (8.6.10/8.6.6) with SMTP id BAA00875 for <freebsd-current@freefall.cdrom.com>; Sun, 19 Mar 1995 01:52:16 -0800
+Received: from sax.sax.de by irz301.inf.tu-dresden.de with SMTP
+	(5.67b+/DEC-Ultrix/4.3) id AA27252; Sun, 19 Mar 1995 10:23:06 +0100
+Received: by sax.sax.de (8.6.9/8.6.9-s1) with UUCP
+	id KAA15150; Sun, 19 Mar 1995 10:23:05 +0100
+Received: (from j@localhost) by uriah.heep.sax.de (8.6.11/8.6.9) id JAA08045; Sun, 19 Mar 1995 09:59:14 +01
+
+--------------------------------------------------------------------------------
+MID: <199504300643.IAA03589@uriah.heep.sax.de>
+DATE: 1995-04-30T06:43:10+00:00  FROM: J Wunsch <j@uriah.heep.sax.de>
+SUBJ: Re: NCR assertion fails?
+BODY:
+As Bill Fenner wrote:
+...
+
+Your sd1 should be way faster since it's put into synch mode by
+default.  Try forcing the synch mode for sd0 with the ncrcontrol
+command.
+
+-- 
+cheers, J"org
+
+joerg_wunsch@uriah.heep.sax.de -- http://www.sax.de/~joerg/
+Never trust an operating system you don't have sources for. ;-)
+
+From owner-freebsd-current  Sun Apr 30 00:15:47 1995
+Return-Path: current-owner
+Received: (from majordom@localhost)
+          by freefall.cdrom.com (8.6.10/8.6.6) id AAA11153
+          for current-outgoing; Sun, 30 Apr 1995 00:15:47 -0700
+Received: from localhost (localhost [127.0.0.1])
+          by freefall.cdrom.com (8.6.10/8.6.6) with SMTP id AAA11146
+          ; Sun, 30 Apr 1995 00:15:46 -0700
+X-Authentication-Warning: freefall.cdrom.com: Host localhost didn't use HELO protocol
+To: davidg@Root.COM
+cc: current@freefall.cdrom.com
+Subject: Re: if_fddisubr.c 
+In-reply-to: Your message of "Sat, 29 Apr 95 22:19:01 PDT."
+             <199504300519.WAA03214@corbin.Root.COM> 
+Date: Sun, 30 Apr 1995 00:15:45 -0700
+Message-ID: <11145.799226145@freefall.cdrom.com>
+From: Gary Palmer (FreeBSD/ARM Team) <gpalmer@freefall.cdrom.com>
+Sender: current-owner@FreeBSD.org
+Precedence: bulk
+
+In me
+
+--------------------------------------------------------------------------------
+MID: <199505070910.LAA00363@grumble.grondar.za>
+DATE: 1995-05-07T09:10:19+00:00  FROM: Mark Murray <mark@grondar.za>
+SUBJ: NIS/Kerberos has some strange behaviour...
+BODY:
+Hi (Bill & Garrett) and the rest
+
+I have been messing around with Kerberos and NIS for a while now trying
+to get them to behave, and I have got them 90% co-operating. I have just
+one problem:
+
+When a pleb user tries to log in on a machine that is both a Kerberos
+client and a NIS client, that user cannot log in using their NIS password.
+Strangely, the Kerberos password works! Most other NIS functions (ypcat,
+ypwhich, ypmatch etc) work, but passwd -y does not. On the Kerberos/NIS
+server, all is well. Kerberos behaves well on both machines.
+
+On the client, ypbind -s is run.
+
+On the server I run ypserv -dns, yppasswdd -s -f(I prefer to use 
+/etc/master.passwd) and ypserv -s.
+
+Any ideas?
+
+M
+-- 
+Mark Murray
+46 Harvey Rd, Claremont, Cape Town 7700, South Africa
++27 21 61-3768 GMT+0200
+
+From owner-freebsd-current  Sun May  7 02:46:22 1995
+Return-Path: current-owner
+Received: (from majordom@localhost)
+          by freefall.cdrom.com (8.6.10/8.6.6) id CAA13191
+          for current-outgoing; Sun, 7 May 1995 02:46:22 -0700
+Received: from asstdc.scgt.oz.au (root@asstdc.scgt.oz.au [202.14.234.65])
+          by freefall.cdrom.com (8.6.10/8.6.6) with ESMTP id CAA13115
+          for <current@FreeB
+
+--------------------------------------------------------------------------------
+MID: <m0sZz3L-0001ItC@vistec.com>
+DATE: 1995-07-23T05:18:00+00:00  FROM: Marcus John <n6156@vistec.com>
+SUBJ: Boot problems with WD 8003
+BODY:
+Hi,
+
+I often get "ed0 device timeout"-errors directly after booting up my 2.0
+or 2.0.5 release. My machine is eqipped with a WD 8003 compatible :-).
+
+Surprisingly after I load a Packet-driver in DOS mode the problem
+disappears. Unfortuately I have no source for this rather old driver.
+
+Perhaps there is already  fix for this problem (I joined this maillist on July 
+�95)
+
+marcus.john@wiesbaden.netsurf.de
+
+From owner-freebsd-current  Sun Jul 23 12:55:06 1995
+Return-Path: current-owner
+Received: (from majordom@localhost)
+          by freefall.cdrom.com (8.6.11/8.6.6) id MAA11239
+          for current-outgoing; Sun, 23 Jul 1995 12:55:06 -0700
+Received: from sovcom.kiae.su (sovcom.kiae.su [144.206.136.1])
+          by freefall.cdrom.com (8.6.11/8.6.6) with SMTP id MAA11230
+          for <current@freebsd.org>; Sun, 23 Jul 1995 12:55:00 -0700
+Received: by sovcom.kiae.su id AA01605
+  (5.65.kiae-1  for current@freebsd.org); Sun, 23 Jul 1995 22:52:28 +0300
+Received: by sovcom.KIAE.su (UUMAIL/2.0); Sun, 23 Jul 95 22:52:28 +0300
+Received: (from ache@localhost) by astral.msk.su (8.6.8/8.6.6) id XAA00564 for current@freebsd.org; Sun, 23 Jul 1995 23:48:49 +0400
+To: current@freebsd.org
+Message-Id: 
+
+--------------------------------------------------------------------------------
+MID: <199507300740.JAA17283@zibbi.mikom.csir.co.za>
+DATE: 1995-07-30T07:40:50+00:00  FROM: John Hay <jhay@mikom.csir.co.za>
+SUBJ: Problem with Makefile in src/share/doc/usd/10.exref
+BODY:
+Hi,
+
+It seems as if there is a typo in the Makefile. It use ${GZIP} which is not
+defined. I think it should be GZIPCMD which is defined in bsd.doc.mk
+
+-- 
+John Hay -- jhay@mikom.csir.co.za
+
+
+*** src/share/doc/usd/10.exref/Makefile.org	Wed Jul 26 18:31:43 1995
+--- src/share/doc/usd/10.exref/Makefile	Sat Jul 29 21:18:25 1995
+***************
+*** 19,25 ****
+  all:	${DFILE} ${SFILE}
+  
+  ${SFILE}: ex.summary
+! 	(cd ${SRCDIR}; ${ROFF} ${.ALLSRC}) | ${GZIP} > ${.TARGET}
+  
+  afterinstall:
+  	${INSTALL} ${COPY} -o ${BINOWN} -g ${BINGRP} -m ${BINMODE} \
+--- 19,25 ----
+  all:	${DFILE} ${SFILE}
+  
+  ${SFILE}: ex.summary
+! 	(cd ${SRCDIR}; ${ROFF} ${.ALLSRC}) | ${GZIPCMD} > ${.TARGET}
+  
+  afterinstall:
+  	${INSTALL} ${COPY} -o ${BINOWN} -g ${BINGRP} -m ${BINMODE} \
+
+
+From owner-freebsd-current  Sun Jul 30 01:07:47 1995
+Return-Path: current-owner
+Received: (from majordom@localhost)
+          by freefall.cdrom.com (8.6.11/8.6.6) id BAA26929
+          for current-outgoing; Sun, 30 Jul 1995 01:07:47 -0700
+Received: from godzilla.zeta.org.au (godzilla.zeta.org.au [203.2.228.34])
+          by freefall.cdrom.com (8.6.11/8.6.6) with ESMTP id BAA26908
+          for <freebsd-current@FreeBSD.ORG>; Sun, 3
+
+--------------------------------------------------------------------------------
+MID: <MHGgUYmqS1@ache.dialup.demos.ru>
+DATE: 1995-10-22T06:54:08+00:00  FROM: Андрей Чернов  (aka Andrey A. Chernov, Black Mage) <ache@astral.msk.su>
+SUBJ: WARNING: Locale links changed, build instructions here...
+BODY:
+To upgrade locales in -current you need after SUP:
+1) Setenv MAKE_LOCAL (needed for next step only)
+2) Run "make distrib-dirs" into /usr/src/etc
+3) Re-build/install usr.bin/{mklocale,colldef} and share/timedef
+This way make locales 2.0.5-compatible among other things.
+-- 
+Andrey A. Chernov        : And I rest so composedly,  /Now, in my bed,
+ache@astral.msk.su       : That any beholder  /Might fancy me dead -
+http://dt.demos.su/~ache : Might start at beholding me,  /Thinking me dead.
+RELCOM Team,FreeBSD Team :         E.A.Poe         From "For Annie" 1849
+
+From owner-freebsd-current  Sun Oct 22 00:53:22 1995
+Return-Path: owner-current
+Received: (from root@localhost)
+          by freefall.freebsd.org (8.6.12/8.6.6) id AAA28353
+          for current-outgoing; Sun, 22 Oct 1995 00:53:22 -0700
+Received: from godzilla.zeta.org.au (godzilla.zeta.org.au [203.2.228.19])
+          by freefall.freebsd.org (8.6.12/8.6.6) with ESMTP id AAA28348
+          for <current@freebsd.org>; Sun, 22 Oct 1995 00:53:17 -0700
+Received: (from bde@localhost) by godzilla.zeta.org.au (8.6.9/8.6.9) id RAA26210; Sun, 22 Oct 1995 17:48:44 +1000
+Date: Sun, 22 Oct 1995 17:48:44 +1000
+From: Bruce Evans <bde@zeta.org.a
+
+--------------------------------------------------------------------------------
+MID: <199511120932.LAA24354@grumble.grondar.za>
+DATE: 1995-11-12T09:32:47+00:00  FROM: Mark Murray <mark@grondar.za>
+SUBJ: /dev/random permissions etc
+BODY:
+Hi
+
+A couple of weeks ago I agreed that the right permissions for /dev/*random
+were 660 and owned by root.kmem.
+
+I have discussed this with the original author, and am now quite firmly
+of the opinion that this is bad.
+
+Here are my reasons:
+
+The original idea was that protecting these devices would help prevent
+denial-of-service attacks. I believe that this is not really valid given
+that easier amd harsher attacks are possible (fork bombs, disk fillers
+etc). It is easy to find a job that has gone crazy reading all the
+entropy.
+
+By making the device non-world-readable, forces programs like PGP to
+be at least setgid. MAJOR LOSE! An attacker can now read /dev/kmem
+using pgp! It also makes the device difficult to use, as the secure
+writing of set[gu]id programs is nortoriously unsafe ;-)
+
+The original author's idea was that /dev/urandom would be "sufficiently
+random", while /dev/random would be "as random as possible", so the latter
+device only gives as many bits of randomness at it believes it has. This
+does not mean that /dev/urandom has lousy numbers. On the contrary, it
+has very good numbers which only extremelely powerful adversaries with
+hefty computing power have a chance of brea
+
+--------------------------------------------------------------------------------
+MID: <Pine.BSF.3.91.951126030428.1306A-100000@hub.org>
+DATE: 1995-11-26T08:08:57+00:00  FROM: Marc G. Fournier <scrappy@hub.org>
+SUBJ: Makefile change...
+BODY:
+Hi...
+
+	Since I don't quite think of this as a send-pr problem 
+report (yes, I've sent one in that way, sorry...), and I don't really
+know of any better place to send it, could someone who "has the power"
+sutff this into *-current's /usr/src/gnu/usr.bin?
+
+	Its a modified Makefile that actually checks to see if part
+of the source tree is even installed before trying to make it.  for
+instance, I don't have awk, since I don't want make world to install
+over the one I already have.  Same as tar and cc.
+
+	None of the Makefiles, except for /usr/src/Makefile, does
+any checking on this.  
+
+	Also...is there a better place to send this so that it doesn't
+go out to the list as a whole?
+
+Thanks...
+
+
+Marc G. Fournier | POP Mail  Telnet Acct  DNS Hosting
+scrappy@hub.org  |  WWW Services   Database Services  | Knowledge, 
+ soon to be:     |                                    | Information and
+scrappy@ki.net   |      WWW: http://hub.org           | Communications, Inc
+
+
+-----[ /usr/src/gnu/usr.bin/Makefile ]----
+
+
+#	$Id: Makefile,v 1.27 1995/04/11 17:28:26 nate Exp $
+
+SUBDIR= 
+
+.if exists(as)
+   SUBDIR+= as
+.endif
+
+.if exists(awk)
+   SUBDIR+= awk
+.endif
+
+.if exists(bc)
+   SUBDIR+= bc
+.endif
+
+.if e
+
+--------------------------------------------------------------------------------
+MID: <Pine.BSF.3.91.951217083228.405C-100000@knobel.gun.de>
+DATE: 1995-12-17T08:22:15+00:00  FROM: Andreas Klemm <andreas@knobel.gun.de>
+SUBJ: FreeBSD-current-stable ???
+BODY:
+Hi FreeBSD core team !
+
+[ Possibly I'm speaking for many other people here ]
+
+Generally I would be interested to help testing and debugging new
+FreeBSD-current features. But when reading the -current mailing list, 
+FreeBSD-current, so to say FreeBSD-2.2 in it's early days, seems to be
+an instability nightmare. Perhaps this expression is a bit oversized,
+but please understand my point of view.
+
+I read in -current very often messages like, can't boot, can't compile,
+unreferenced symbols, ... and so on ...
+
+Nothing on which you would want to run your home system
+(news, mail, www).
+
+Since I only have one PC and one harddisk, as many other people,
+it's not possible for me to switch to -current, because I need
+a certain level of stability.
+
+When speaking with people like Martin Cracauer, then I get
+the impression, that possibly more people would be interested
+to help in FreeBSD developement. Perhaps developing additional
+features, too. But they only have one machine, which shouldn't
+get into a very unstable state. 
+
+So how could one attract more people, to work on the bleeding
+edge, without loosing stability too much ??!!
+
+Could FreeBSD-current developement be made more attractive
+to mor
+
+--------------------------------------------------------------------------------
+MID: 199502231905.VAA07383@dolphin.mikom.csir.co.za
+DATE: 1995-02-23T19:05:46+00:00  FROM: John Hay <jhay@mikom.csir.co.za> <None>
+SUBJ: src/usr.sbin/rmt/Makefile breaking
+BODY:
+Hi,
+
+There were some talking about "make install" breaking in "usr.sbin/rmt" when it
+do the link to ${DESTDIR}/etc/rmt, but it seems nothing happened about it.
+
+Now I can see that if you have a clean DESTDIR it will always work, but if
+you don't, make will break there. Isn't it possible to change it please?
+
+-- 
+John Hay -- jhay@mikom.csir.co.za
+
+
+
+--------------------------------------------------------------------------------
+MID: 199502231922.LAA10050@ref.tfs.com
+DATE: 1995-02-23T19:22:53+00:00  FROM: Poul-Henning Kamp <phk@ref.tfs.com> <None>
+SUBJ: Re: src/usr.sbin/rmt/Makefile breaking
+BODY:
+
+John, send us a patch :-)
+
+-- 
+Poul-Henning Kamp <phk@login.dknet.dk>
+TRW Financial Systems, Inc.
+I am Pentium Of Borg. Division is Futile. You WILL be approximated.
+
+
+
+--------------------------------------------------------------------------------
+MID: 199502231938.VAA07461@dolphin.mikom.csir.co.za
+DATE: 1995-02-23T19:38:22+00:00  FROM: John Hay <jhay@mikom.csir.co.za> <None>
+SUBJ: Re: src/usr.sbin/rmt/Makefile breaking
+BODY:
+Ok, here is a patch that will do it.
+
+Now I know that there was talk of moving it to the release/Makefile or the
+etc/Makefile, but I don't think it was ever decided where.
+
+-- 
+John Hay -- jhay@mikom.csir.co.za
+
+*** src/usr.sbin/rmt/Makefile.org	Thu Feb 16 20:24:59 1995
+--- src/usr.sbin/rmt/Makefile	Thu Feb 23 21:28:14 1995
+***************
+*** 4,9 ****
+  MAN8=	rmt.8
+  
+  beforeinstall:
+! 	ln -s ${BINDIR}/rmt ${DESTDIR}/etc/rmt
+  
+  .include <bsd.prog.mk>
+--- 4,9 ----
+  MAN8=	rmt.8
+  
+  beforeinstall:
+! 	ln -fs ${BINDIR}/rmt ${DESTDIR}/etc/rmt
+  
+  .include <bsd.prog.mk>
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 199502232019.HAA05138@godzilla.zeta.org.au
+DATE: 1995-02-23T20:19:14+00:00  FROM: Bruce Evans <bde@zeta.org.au> <None>
+SUBJ: Re: src/usr.sbin/rmt/Makefile breaking
+BODY:
+
+
+Others have sent patches :-).
+
+I think the best one for now is to put a `-' in front of the ln.  `ln -sf'
+would be wrong because it clobbers the existing file or link which may have
+been customized.  Installing from src/etc depends on rmt having been built.
+
+Bruce
+
+
+
+--------------------------------------------------------------------------------
+MID: 199502240410.GAA08516@dolphin.mikom.csir.co.za
+DATE: 1995-02-24T04:10:02+00:00  FROM: John Hay <jhay@mikom.csir.co.za> <None>
+SUBJ: Re: src/usr.sbin/rmt/Makefile breaking
+BODY:
+Now I also think that "-ln -s" is better.
+
+-- 
+John Hay -- jhay@mikom.csir.co.za
+
+
+
+--------------------------------------------------------------------------------
+MID: 199502240416.UAA12287@ref.tfs.com
+DATE: 1995-02-24T04:16:14+00:00  FROM: Poul-Henning Kamp <phk@ref.tfs.com> <None>
+SUBJ: Re: src/usr.sbin/rmt/Makefile breaking
+BODY:
+done
+
+-- 
+Poul-Henning Kamp <phk@login.dknet.dk>
+TRW Financial Systems, Inc.
+I am Pentium Of Borg. Division is Futile. You WILL be approximated.
+
+
+
+--------------------------------------------------------------------------------
+MID: 199503010737.JAA00266@zibbi.mikom.csir.co.za
+DATE: 1995-03-01T07:37:52+00:00  FROM: John Hay <jhay@mikom.csir.co.za> <None>
+SUBJ: broken bootparamd makefiles
+BODY:
+Hi,
+
+The current bootparamd makefiles break if you do a make obj first. It does
+work if you don't have the obj link. Here is a patch for it. It will still
+work if you don't have an obj link:)
+
+-- 
+John Hay -- jhay@mikom.csir.co.za
+
+*** src/usr.sbin/bootparamd/bootparamd/Makefile.org	Mon Feb 27 01:40:52 1995
+--- src/usr.sbin/bootparamd/bootparamd/Makefile	Wed Mar  1 09:36:25 1995
+***************
+*** 4,29 ****
+  PROG=	bootparamd
+  SRCS=	bootparam_prot_xdr.c bootparam_prot_svc.c bootparamd.c main.c
+  MAN8=	bootparamd.8
+! CFLAGS+= -DTFTP_DIR=\"/tftpboot\"
+  CLEANFILES= bootparam_prot_svc.c bootparam_prot_xdr.c  \
+  	    bootparam_prot.h bootparam_prot.x
+  
+  bootparam_prot_svc.c: bootparam_prot.h
+! 	rm -f ${.CURDIR}/bootparam_prot.x
+! 	cp /usr/include/rpcsvc/bootparam_prot.x ${.CURDIR}
+! 	rpcgen  -m -o ${.CURDIR}/bootparam_prot_svc.c \
+! 		${.CURDIR}/bootparam_prot.x
+  
+  bootparam_prot_xdr.c: bootparam_prot.h
+! 	rm -f ${.CURDIR}/bootparam_prot.x
+! 	cp /usr/include/rpcsvc/bootparam_prot.x ${.CURDIR}
+! 	rpcgen  -c -o ${.CURDIR}/bootparam_prot_xdr.c \
+! 		${.CURDIR}/bootparam_prot.x
+  
+  bootparam_prot.h: 
+! 	rm -f ${.CURDIR}/bootparam_prot.x
+! 	cp /usr/include/rpcsvc/bootparam_prot.x ${
+
+--------------------------------------------------------------------------------
+MID: 199503011057.MAA02619@zibbi.mikom.csir.co.za
+DATE: 1995-03-01T10:57:35+00:00  FROM: John Hay <jhay@mikom.csir.co.za> <None>
+SUBJ: bootparamd makefile still broken
+BODY:
+Hi,
+
+My patch this morning was not complete. I never tested make install - stupidly
+thinking that it would work :( The install program never get a destination
+directory. Here is another patch that should also be added. I think this 
+should be the last one for these makefiles :)
+
+-- 
+John Hay -- jhay@mikom.csir.co.za
+
+*** src/usr.sbin/bootparamd/bootparamd/Makefile.org	Wed Mar  1 12:45:47 1995
+--- src/usr.sbin/bootparamd/bootparamd/Makefile	Wed Mar  1 12:47:04 1995
+***************
+*** 23,26 ****
+--- 23,27 ----
+  	cp ${DESTDIR}/usr/include/rpcsvc/bootparam_prot.x .
+  	rpcgen  -h -o bootparam_prot.h bootparam_prot.x
+  
++ .include "../../Makefile.inc"
+  .include <bsd.prog.mk>
+*** src/usr.sbin/bootparamd/callbootd/Makefile.org	Wed Mar  1 12:45:50 1995
+--- src/usr.sbin/bootparamd/callbootd/Makefile	Wed Mar  1 12:47:38 1995
+***************
+*** 23,26 ****
+--- 23,27 ----
+  	cp ${DESTDIR}/usr/include/rpcsvc/bootparam_prot.x .
+  	rpcgen  -h -o bootparam_prot.h bootparam_prot.x
+  
++ .include "../../Makefile.inc"
+  .include <bsd.prog.mk>
+
+
+
+--------------------------------------------------------------------------------
+MID: 199503011207.XAA30402@godzilla.zeta.org.au
+DATE: 1995-03-01T12:07:36+00:00  FROM: Bruce Evans <bde@zeta.org.au> <None>
+SUBJ: Re: bootparamd makefile still broken
+BODY:
+
+I can think of futher improvements :-).
+
+
+- the path should be to the rpcsvc source directory, ${RPCSVC}.
+- someone should fix cp -f so that the rm and cp commands can be merged.
+- the removing and copying can be avoided using
+    cd ${RPCSVC}; rpcgen -h -o ${.OBJDIR}/bootparam_prot.h} bootparam_prot.x
+  The cd seems to be necessary to stop rpcgen from screwing up the #includes.
+- there should a dependency on $PRPCSVC}/bootparam_prot.x
+
+Bruce
+
+
+
+--------------------------------------------------------------------------------
+MID: 199503051442.PAA01446@uriah.heep.sax.de
+DATE: 1995-03-05T14:42:45+00:00  FROM: J Wunsch <j@uriah.heep.sax.de> <None>
+SUBJ: -nostdinc in Makefile.i386 breaks stand-alone compiles
+BODY:
+Bruce's change to have the kernel compiled with -nostdinc breaks
+`stand-alone' kernel builds, i.e. i cannot do
+
+	cvs co sys
+	cd sys/i386/conf
+	config GENERIC
+	cd ../../compile/GENERIC
+	make
+
+which did it previously.
+
+I'm just removing the -stdinc from my private Makefile by now, but i
+don't have an idea on how to solve the problem globally.
+-- 
+cheers, J"org
+
+joerg_wunsch@uriah.heep.sax.de -- http://www.sax.de/~joerg/
+Never trust an operating system you don't have sources for. ;-)
+
+
+
+--------------------------------------------------------------------------------
+MID: 199503060234.MAA10599@godzilla.zeta.org.au
+DATE: 1995-03-06T02:34:50+00:00  FROM: Bruce Evans <bde@zeta.org.au> <None>
+SUBJ: Re: -nostdinc in Makefile.i386 breaks stand-alone compiles
+BODY:
+
+
+
+
+Lots of other things already require a fairly complete tree.  E.g.,
+src/sbin/fsck requires ../../sys/ufs/ffs.  I don't like this either.
+
+Bruce
+
+
+
+--------------------------------------------------------------------------------
+MID: 199503060735.IAA03815@uriah.heep.sax.de
+DATE: 1995-03-06T07:35:38+00:00  FROM: J Wunsch <j@uriah.heep.sax.de> <None>
+SUBJ: Re: -nostdinc in Makefile.i386 breaks stand-alone compiles
+BODY:
+As Bruce Evans wrote:
+...
+
+Yes.  No.  Dunno.  I always thought it's a nice feature that at least
+a kernel could be compiled ``out of place''.
+
+Is the ``-nostdinc'' plain sanity only (to catch misbehaving modules
+that don't have the `right' dot-dottation)?  So it would be safe to
+remove it from the Makefile temporarily.
+
+-- 
+cheers, J"org
+
+joerg_wunsch@uriah.heep.sax.de -- http://www.sax.de/~joerg/
+Never trust an operating system you don't have sources for. ;-)
+
+
+
+--------------------------------------------------------------------------------
+MID: 199503060849.SAA17769@godzilla.zeta.org.au
+DATE: 1995-03-06T08:49:27+00:00  FROM: Bruce Evans <bde@zeta.org.au> <None>
+SUBJ: Re: -nostdinc in Makefile.i386 breaks stand-alone compiles
+BODY:
+
+It's mostly to prevent future misbehaviour.  `-I-' finds too much
+misbehaviour (mostly in imported and unmaintained modules) for -I
+be used yet.
+
+Bruce
+
+
+
+--------------------------------------------------------------------------------
+MID: 9785.794750105@utis156.cs.utwente.nl
+DATE: 1995-03-09T11:55:05+00:00  FROM: Andras Olah <olah@cs.utwente.nl> <None>
+SUBJ: Re: cvs commit: src/usr.sbin/tcpdump/tcpslice tcpslice.h util.c Makefile gwtm2secs.c search.c tcpslice.1 tcpslice.c 
+BODY:
+The new tcpdump version I committed yesterday fails to compile, I'm
+really sorry for this.  I need some advice on what is the cause of
+the problem.
+
+tcpslice fails to compile because of the lack of version.h. 
+version.h should be automatically generated from ../tcpdump/VERSION.
+This problem only exists when there's an obj tree (thus obj ->
+/usr/obj/usr.sbin/tcpdump/tcpslice).  If the obj link is missing
+then make depend generates the necessary dependency for version.h
+and everything works OK.
+
+So, what did I screw up?
+
+Andras
+
+FYI, here is the Makefile for tcpslice
+
+#       @(#)Makefile    0.1 (RWGrimes) 3/24/93
+
+PROG=   tcpslice
+CFLAGS+=-Wall
+MAN1=   tcpslice.1
+SRCS=   version.c tcpslice.c gwtm2secs.c search.c util.c
+CLEANFILES+=    version.c version.h
+DPADD+= ${LIBPCAP}
+LDADD+= -lpcap
+
+version.c version.h: $(.CURDIR)/../tcpdump/VERSION
+        rm -f version.c ; \
+        sed 's/.*/char version[] = "&";/' $(.CURDIR)/../tcpdump/VERSION > versio
+n.c
+        set `sed 's/\([0-9]*\)\.\([0-9]*\).*/\1 \2/' $(.CURDIR)/../tcpdump/VERSI
+ON` ; \
+                { echo '#define VERSION_MAJOR' $$1 ; \
+                  echo '#define VERSION_MINOR' $$2 ; } > version.h
+
+.include <bsd.prog.mk>
+
+
+
+--------------------------------------------------------------------------------
+MID: 9503092004.AA12528@halloran-eldar.lcs.mit.edu
+DATE: 1995-03-09T20:04:29+00:00  FROM: Garrett Wollman <wollman@halloran-eldar.lcs.mit.edu> <None>
+SUBJ: Re: cvs commit: src/usr.sbin/tcpdump/tcpslice tcpslice.h util.c Makefile gwtm2secs.c search.c tcpslice.1 tcpslice.c 
+BODY:
+<<On Thu, 09 Mar 1995 12:55:05 +0100, Andras Olah <olah@cs.utwente.nl> said:
+
+
+
+Looking at your Makefile, I think you have found Yet Another bug in
+either bsd.*.mk or the pmake program itself.  (It's one that I think
+I've run into in the past.)  The short-term fix is just to add:
+
+beforedepend:	version.h
+
+and maybe to add version.h to the SRCS as well.  (Actually, one one of
+these should be necessary but I don't remember which one it is right
+now.)
+
+-GAWollman
+
+--
+Garrett A. Wollman   | Shashish is simple, it's discreet, it's brief. ... 
+wollman@lcs.mit.edu  | Shashish is the bonding of hearts in spite of distance.
+Opinions not those of| It is a bond more powerful than absence.  We like people
+MIT, LCS, ANA, or NSA| who like Shashish.  - Claude McKenzie + Florent Vollant
+
+
+
+--------------------------------------------------------------------------------
+MID: 95Mar14.170144met.43045@eikon.regent.e-technik.tu-muenchen.de
+DATE: 1995-03-14T16:01:36+00:00  FROM: Julian H Stacey <Julian.H.Stacey@regent.e-technik.tu-muenchen.de> <None>
+SUBJ: Testers needed - sys/Makefile that supports CD-ROM and NFS multi hosts
+BODY:
+I have revised my /sys/Makefile, & am looking for alpha testers
+
+So .. big deal .. tiddly little make file Eh ? .... We...ll not exactly
+ 19377 Mar 13 18:24 Makefile    (Yup, considerable comment in, as still in test)
+  2052 Mar 13 14:50 Makefile_sub.c
+Plus I have associated diffs to apply to Makefile.i386 etc ...
+
+Why did I bother & Why should you ? ...
+# FEATURES:
+#       - Kernel configuration & make, defaulting to a kernel config name
+#         automatically selected on a host name basis; (also does subdir make).
+#       - Supports optional obj tree.
+#       - Supports compilation from cd-rom.
+#       - Supports NFS multiple host parallel simultaneous use of
+#         shared /usr/src.
+#       - Config automatically called if configuration name changes.
+#       - Depend done automatically.
+#       - Overide of default config name by either "make CONFIG=whatever"
+#         or by editing default file.
+#       - Config Selection precedence order & examples:
+#               PRIORITY        METHOD
+#               High:           make CONFIG=GENERICAH
+#               Medium:         echo "GENERICAH" > ${DEFAULT_CONFIG}
+#               Low:            Makefile internally does CONFIG=`h
+
+--------------------------------------------------------------------------------
+MID: 95Mar15.143621met.43045@eikon.regent.e-technik.tu-muenchen.de
+DATE: 1995-03-15T13:36:08+00:00  FROM: Julian H Stacey <Julian.H.Stacey@regent.e-technik.tu-muenchen.de> <None>
+SUBJ: sys/Makefile diffs now available
+BODY:
+I have managed to upload my current diff tree to freefall,
+included in the tree are the diffs I use to support multiple host
+simultaneous make of /usr/src/sys using multi host accesible common src,
+& unique host /usr/obj trees
+
+The broken out tree is viewable in:
+	freefall.cdrom.com:/a/stacey/src/bsd/fixes/FreeBSD/src/generic
+a tar file exists:
+	freefall.cdrom.com:~jhs/fixes.generic.tgz
+
+My apologies that I have not seperated out the diffs needed into a seperate kit
+(maybe later, maybe not), but the tree reflects the src tree, so its easy to
+see which subdirs are of interest: src/sys, src/sys/i386/conf, src/share/mk
+
+I have also copied the 54K fixes.generic.tgz to freefall:~ftp/incoming/fixes.jhs.tgz
+
+I hope one or two people try them, my two machines are running kernels
+generated by the kit ... & I'm still alive :-)
+
+Julian Stacey	jhs@freebsd.org
+
+
+
+--------------------------------------------------------------------------------
+MID: 199503152057.WAA20647@grunt.grondar.za
+DATE: 1995-03-15T20:57:58+00:00  FROM: Mark Murray <mark@grondar.za> <None>
+SUBJ: Make install trashes /var/yp/Makefile
+BODY:
+Hi
+
+The subject line says it all. I don't like make install to mess
+with my hard :-) work, and it did here. How about installing the
+Makefile.yp to /var/yp/Makefile.sample? (UUCP does a similar thing
+with its config files.)
+
+By The Way (tm), while we are about it, what are the feelings for-or-
+against installing rc, rc.serial and rc.local (along with other oft-
+improved files) to <file>.sample as a reminder that they have been
+messed with?
+
+M
+
+-- 
+Mark Murray
+46 Harvey Rd, Claremont, Cape Town 7700, South Africa
++27 21 61-3768 GMT+0200
+
+
+
+--------------------------------------------------------------------------------
+MID: Pine.3.89.9503191553.A19866-0100000@kryten.atinc.com
+DATE: 1995-03-19T20:53:05+00:00  FROM: "Jonathan M. Bresler" <jmb@kryten.Atinc.COM> <None>
+SUBJ: xpaint require libtiff
+BODY:
+
+	the xpaint port in /pub/FreeBSD/ports/graphics requires tiff to 
+complete its make but does not ftp it when libtiff is missing.
+
+	the Makefile uses:
+	LIB_DEPENDS=    jpeg\\.5\\.:${PORTSDIR}/graphics/jpeg \
+        	        tiff\\.3\\.:${PORTSDIR}/graphics/tiff \
+                	Xpm\\.4\\.:${PORTSDIR}/graphics/xpm
+
+	XTeXShell depends upon tclX and ftp's if needed.  it Makefile uses
+
+	DEPENDS=        ${PORTSDIR}/lang/tclX
+
+	the version of bsd.port.mk that i am using is:
+		bsd.port.mk,v 1.73 1994/11/21 10:30:37 ats Exp
+
+	if this has been fixed, please ignore.  
+
+	hmmm.....the bsd.port.mk does not have a LIB_DEPENDS, must need a 
+newer version ;-)
+
+Jonathan M. Bresler  jmb@kryten.atinc.com	| Analysis & Technology, Inc.  
+						| 2341 Jeff Davis Hwy
+play go.					| Arlington, VA 22202
+ride bike. hack FreeBSD.--ah the good life	| 703-418-2800 x346
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 199503212250.XAA08539@vector.eikon.e-technik.tu-muenchen.de
+DATE: 1995-03-21T22:50:14+00:00  FROM: Julian Howard Stacey <jhs@regent.e-technik.tu-muenchen.de> <None>
+SUBJ: sys/Makefiles
+BODY:
+Gratifying to see that everyone has so much faith in my sys/Makefile*
+& i386/conf/Makefile.i386 (etc) stuff, that no one feels the need to
+test it ;-) ... After all, I announced it all worked OK, so I just guess
+you all trust & believe me implicitly right ? ;-)
+
+Thanks for the confidence, I guess I'll just go toss it all in src/ now OK ? ;-)
+... What ? Someone does want to test it after all ?
+
+Well, Great :-) it works for me, supports NFS & seperate obj tree etc,
+(+ cd-rom, last time i tried, some while ago), & walks on water ;-)
+
+It's all lying in: freefall:~jhs & is readable, a complete tree of diffs,
+  (admittedly there's a few extra diffs there for other unassociated 
+   generic improvements (all my strictly weird personal diffs not fit for
+   general consumption are in another tree, not on freefall))
+the main stuff you'll want is sys/Makefile*, sys/i386/conf/*.diff,
+& maybe src/share/mk/<one or two>.diffs
+
+I also left a .tgz file in ~jhs & in ~incoming, though I can't find my
+copy of the announcement to quote exact names, & all lines are busy on my
+IP site (as usual) as I type this.
+
+Rod, Nate, & Piero may find this stuff particularly interesting
+(Rod & Piero were interested b
+
+--------------------------------------------------------------------------------
+MID: 199503221037.CAA08662@gndrsh.aac.dev.com
+DATE: 1995-03-22T10:37:09+00:00  FROM: "Rodney W. Grimes" <rgrimes@gndrsh.aac.dev.com> <None>
+SUBJ: Re: sys/Makefiles
+BODY:
+
+Sorry.. I am so buried in machine builds right now I don't have any
+time at all for doing much with this.  I know Nate is real busy too.
+
+Since the only thing that sys/Makefile currently does is to go
+down into libkern and build libkern for us I don't see a problem
+with you committing at least that part of it.
+
+I am always leary of changes to sys/i386/conf area, and to the .mk
+files as it is easy to perturb builds when this stuff is changed.
+
+
+I took a quick look at it, most of it is okay, there are some things
+that I think need some more work, and some things I need to take a
+much closer look at before I can say much about it.
+
+
+PLEASE, some other folks out there grab this stuff and play with it.
+I think this is very much headed in the right direction but it needs
+to be pounded on before it goes in the tree.
+
+
+
+-- 
+Rod Grimes                                      rgrimes@gndrsh.aac.dev.com
+Accurate Automation Company                   Custom computers for FreeBSD
+
+
+
+--------------------------------------------------------------------------------
+MID: m0rsA57-0005fFC@dude.pcs.dec.com
+DATE: 1995-03-24T15:11:00+00:00  FROM: jhs@dude.pcs.dec.com (Julian Stacey) <None>
+SUBJ: sys/Makefile 
+BODY:
+
+Piero, Rod, (cc current)
+Rod, thanks for your comments :-)
+Piero, sorry I didnt quote exact pathname in my last mail,
+my slip connection was so bad i couldnt get out to check the pathname
+on freefall.
+Because I have been doing other work too, I decided to bundle all diffs
+in case I missed any necessary for the sys/Makefiles work
+thus all my diffs are in freefall.cdrom.com:~jhs/fixes.generic.tgz
+this file is of size 54888 bytes
+it is readable to all, as is ~
+btw ~jhs=/a/stacey, thus freefall.cdrom.com:/a/stacey/fixes.generic.tgz
+I also put a copy of this file in ~ftp/incoming, & announced the name,
+but I don't have the mail archives here to check on the name,
+for those few people who have read permission on that dir. the name
+could be seen with ls | grep jhs | grep fixes
+
+If you just want to initially vi the files live on freefall.
+they're in :
+	/a/stacey/src/bsd/fixes/FreeBSD/src/generic/sys/Makefile
+	src/bsd/fixes/FreeBSD/src/generic/sys/Makefile_sub.c
+	/a/stacey/src/bsd/fixes/FreeBSD/src/generic/sys/i386/conf/Makefile.sys_obj.diff
+possibly may need:
+	/a/stacey/src/bsd/fixes/FreeBSD/src/generic/share/mk/sys.mk.kernel_name.diff
+		(not sure, can\'t look right now)
+also need:
+	/a/s
+
+--------------------------------------------------------------------------------
+MID: 199503241746.MAA00829@magic.winnet.net
+DATE: 1995-03-24T17:46:34+00:00  FROM: Piero Serini <piero@magic.winnet.net> <None>
+SUBJ: Re: sys/Makefile
+BODY:
+Hello.
+
+^^^^^^^^
+Is this me ? If so, I never read that mail. I moved to the USA on
+Mar 15th, and strider is offline in Milan. I asked my provider to
+redirect all my mail to piero@winnet.net (my address here in Mia-
+mi) but I haven't seen a single mail yet (I'll bug them again to-
+day).
+
+Everybody:  if  you  didn't  get  an answer to a previous e-mail,
+please send it again to: piero@winnet.net.
+
+Bye,
+	Piero Serini
+	(No signature)
+
+
+
+--------------------------------------------------------------------------------
+MID: 199503310810.BAA28573@rocky.sri.MT.net
+DATE: 1995-03-31T08:10:02+00:00  FROM: Nate Williams <nate@sneezy.sri.com> <None>
+SUBJ: Announce: New Version of CVS ( was Re: cvs commit: src/gnu/usr.bin Makefile)
+BODY:
+
+Rod asked me to disable the build of CVS until we test the bits a bit
+more, but it does compile and my testing have been positive.  If you
+want to risk it go ahead and build/install it.
+
+However, since CVS is critical to many folks, he felt it would be unsafe
+to have folks use the new binary until it was beat on a bit more.
+
+On that note, J.T. Conklin has done alot of work in making this version
+of CVS *much* faster on 4.4BSD derived systems.  Also, he has made some
+additional speedups that I will be putting in CVS after 2.1 which speed
+it up even more.  Since CVS is such a big bottleneck for all of our
+operations, I felt getting a faster version of CVS certainly couldn't
+hurt.
+
+If you can, please test this out on your machines.  I don't forsee any
+problems whatsoever, but it's better to be safe than sorry.  I'd like to
+see freefall get updated binaries in the next couple weeks.
+
+
+Nate
+
+
+
+--------------------------------------------------------------------------------
+MID: 9503310935.AA19006@blaise.ibp.fr
+DATE: 1995-03-31T09:35:31+00:00  FROM: roberto@blaise.ibp.fr (Ollivier Robert) <None>
+SUBJ: Re: Announce: New Version of CVS ( was Re: cvs commit: src/gnu/usr.bin Makefile)
+BODY:
+
+I'm using it on my machine for at least one month and I' didn't have any
+problem with it. Seems faster even without J.T. Conklin improvements I
+saw on the cvs list.
+
+-- 
+Ollivier ROBERT     -=- The daemon is FREE! -=-     roberto@FreeBSD.ORG
+    FreeBSD keltia 2.1.0-Development #7: Thu Mar 23 00:28:31 MET 1995
+
+
+
+--------------------------------------------------------------------------------
+MID: 199503311544.IAA19413@trout.sri.MT.net
+DATE: 1995-03-31T15:44:52+00:00  FROM: nate@sneezy.sri.com (Nate Williams) <None>
+SUBJ: Re: Announce: New Version of CVS ( was Re: cvs commit: src/gnu/usr.bin Makefile)
+BODY:
+
+Write, but alot of the CVS speedups are in the stock code.  J.T. made
+some FS speedups that are dependant on 4.4 systems which make the stat's
+an order of magnitude faster.  Those are already in 1.4A, and are aside
+from the other speedups posted.
+
+
+Nate
+
+
+
+--------------------------------------------------------------------------------
+MID: m0rvhNn-000K0iC@pelican.com
+DATE: 1995-04-03T01:21:00+00:00  FROM: pete@pelican.com (Pete Carah) <None>
+SUBJ: Re: cvs commit: ports/games Makefile
+BODY:
+In article <199504030109.SAA08610@silvia.HIP.Berkeley.EDU> Satoshi writes:
+
+
+Given this, what is the current list of sup packages, both system and
+ports?  It is hard to keep up with...  I just added ports-graphics...
+
+-- Pete
+
+
+
+--------------------------------------------------------------------------------
+MID: v02120b00aba58b6c19d2@[199.183.109.242]
+DATE: 1995-04-03T12:04:54+00:00  FROM: rkw@dataplex.net (Richard Wackerbarth) <None>
+SUBJ: Re: cvs commit: src/sys/i386/conf Makefile.i386
+BODY:
+Rod Grimes <rgrimes@gndrsh.aac.dev.com> writes :
+
+I concur. This change is, IMHO, BAD. I will AGAIN suggest that we go the
+opposite direction.
+
+I've thought a lot about this structure and have implemented much of it on
+my own system. There are more details that I have omitted here, but this is
+the jist of my proposal. Responses welcome ...
+
+The source tree should be fully self contained and ALL references MUST be
+relative to the root of that tree. Further, the "obj" links are removed
+from the source tree and replaced by a parallel object tree that grows from
+the root.
+
+This allows us ALL of the following:
+1) The compilation of a system does not "trash" the current operating system.
+2) The source tree (and much of the object tree) can be read-only.
+3) One system can support multiple DIFFERENT versions of the tree at the
+same time.
+4) "Make world" reduces to little more than a simple "make all" at the top
+of the tree. Redundant remakes of the libraries are eliminated.
+5) Cross compilation for other platforms becomes possible.
+
+The COST? Each compilation environment MUST have a variable designating the
+ROOT of that environment. (Unless you want the default root "/usr")
+
+Now, the quest
+
+--------------------------------------------------------------------------------
+MID: 874.796924101@palmer.demon.co.uk
+DATE: 1995-04-03T15:48:21+00:00  FROM: Gary Palmer <gary@palmer.demon.co.uk> <None>
+SUBJ: Re: cvs commit: ports/games Makefile 
+BODY:
+In message <m0rvhNn-000K0iC@pelican.com>, Pete Carah writes:
+
+ftp://ftp.freebsd.org/pub/FreeBSD/FreeBSD-current/src/share/FAQ/extras/*
+are the files that you want.
+
+Gary
+
+
+
+--------------------------------------------------------------------------------
+MID: 9504032012.AA22783@halloran-eldar.lcs.mit.edu
+DATE: 1995-04-03T20:12:08+00:00  FROM: Garrett Wollman <wollman@halloran-eldar.lcs.mit.edu> <None>
+SUBJ: Re: cvs commit: src/sys/i386/conf Makefile.i386
+BODY:
+<<On Mon, 3 Apr 1995 07:04:54 -0500, rkw@dataplex.net (Richard Wackerbarth) said:
+
+
+I VERY VERY VERY VERY much DISlike this.
+
+-GAWollman
+
+--
+Garrett A. Wollman   | Shashish is simple, it's discreet, it's brief. ... 
+wollman@lcs.mit.edu  | Shashish is the bonding of hearts in spite of distance.
+Opinions not those of| It is a bond more powerful than absence.  We like people
+MIT, LCS, ANA, or NSA| who like Shashish.  - Claude McKenzie + Florent Vollant
+
+
+
+--------------------------------------------------------------------------------
+MID: 199504032022.OAA03089@trout.sri.MT.net
+DATE: 1995-04-03T20:22:25+00:00  FROM: Nate Williams <nate@trout.sri.MT.net> <None>
+SUBJ: Re: cvs commit: src/sys/i386/conf Makefile.i386
+BODY:
+
+*Jordan mode on*
+C'mon now Garrett.  Don't hold back.  Tell us what you really think.
+
+
+Nate
+
+
+
+--------------------------------------------------------------------------------
+MID: 199504031935.MAA04965@gndrsh.aac.dev.com
+DATE: 1995-04-03T19:35:31+00:00  FROM: "Rodney W. Grimes" <rgrimes@gndrsh.aac.dev.com> <None>
+SUBJ: Re: cvs commit: src/sys/i386/conf Makefile.i386
+BODY:
+
+I agree with Garrett on this one, it makes it a pain to go look at
+the obj directory when you are in one of the src directories.
+
+But from other postings by Richard this is one of many options on how
+obj can be handled, and one of those options is the current symlink
+to the obj dir.
+
+
+
+-- 
+Rod Grimes                                      rgrimes@gndrsh.aac.dev.com
+Accurate Automation Company                   Custom computers for FreeBSD
+
+
+
+--------------------------------------------------------------------------------
+MID: v02120b01aba616ef0d10@[199.183.109.242]
+DATE: 1995-04-03T21:33:00+00:00  FROM: rkw@dataplex.net (Richard Wackerbarth) <None>
+SUBJ: Re: cvs commit: src/sys/i386/conf Makefile.i386
+BODY:
+
+OK Garrett and Rod -- Address MY concerns while retaining the current obj links.
+
+1) The bulk of the source will be on CDROM.
+2) I am compiling on a production machine that is shared by other users.
+I'll install the result on another machine via NFS.
+3) I need to maintain multiple versions of the world. In particular, I have
+a 2-Snap, my modifications to that "release", a -current, and the version
+that I am actually trying to test. Although I do have more disk space than
+most users, I cannot afford to keep duplicate trees of everything.
+4) I have no idea what "Joe" is doing with the source, but he is also
+"using" it. We cannot get in each other's way.
+
+
+At least you gave a reason. :)
+
+
+True. It can also work that way, but I would not make it the default.
+
+----
+Richard Wackerbarth
+rkw@dataplex.net
+
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 199504041121.VAA18870@godzilla.zeta.org.au
+DATE: 1995-04-04T11:21:22+00:00  FROM: Bruce Evans <bde@zeta.org.au> <None>
+SUBJ: Re: cvs commit: src/sys/i386/conf Makefile.i386
+BODY:
+
+
+What about a parallel object tree that is union mounted over the source?
+Assume that union mounts have no bugs.
+
+I think this would be nice for development but bad for portability.
+
+Bruce
+
+
+
+--------------------------------------------------------------------------------
+MID: v02120b00aba7327cab20@[199.183.109.242]
+DATE: 1995-04-04T17:33:58+00:00  FROM: rkw@dataplex.net (Richard Wackerbarth) <None>
+SUBJ: Re: cvs commit: src/sys/i386/conf Makefile.i386
+BODY:
+
+I think that this is bogus behavior.
+
+If a file is missing from /usr/src/include, I don't want it to be
+"magically" found. Under your scheme, I will never be able to test a
+distribution tree for completeness on my production system.
+
+Further, a user who does not have the entire source distribution could
+"create" the includes by either copying or linking in /usr/include.
+
+Therefore, I think that your change MUST be retracted.
+
+----
+Richard Wackerbarth
+rkw@dataplex.net
+
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 199504041758.LAA06600@trout.sri.MT.net
+DATE: 1995-04-04T17:58:51+00:00  FROM: Nate Williams <nate@trout.sri.MT.net> <None>
+SUBJ: Re: cvs commit: src/sys/i386/conf Makefile.i386
+BODY:
+
+First of all, there are only two include files that are used that aren't
+in /usr/src/sys (for the genassym program and for one source file), so
+it's not a critical problem, and second of all if you don't want to
+worry about /usr/include stuff being picked up, do a 'mv /usr/include
+/usr/include.old' before building your kernel.
+
+This is more work for you, but penalizing you (minority) is much better
+than penalizing most folks who want to download the kernel sources and
+built custom kernels.
+
+
+Okay, show me a better solution which doesn't *require* that people have
+/usr/src/include exist and that doesn't require a lot of work for the
+release engineer.
+
+
+*BLECH*  BSD systems have *never* (and should *never*) require that you
+have the complete source tree installed just to build a kernel.  Making
+them go through alot of trouble to build a kernel is a waste of their
+time.  Many, many more people build kernels w/out src trees than people
+who build kernels w/src trees.  We are trying to make the system
+*easier* to use for the avg. user w/out penalizing the developer.
+
+Show me a solution that does that and it'll get into the tree.  If it
+doesn't provide both, then it's not a complete solu
+
+--------------------------------------------------------------------------------
+MID: 199504041733.KAA07885@gndrsh.aac.dev.com
+DATE: 1995-04-04T17:33:05+00:00  FROM: "Rodney W. Grimes" <rgrimes@gndrsh.aac.dev.com> <None>
+SUBJ: Re: cvs commit: src/sys/i386/conf Makefile.i386
+BODY:
+
+The rule for genassym's should be changed such that it always uses
+/usr/include/stdio.h, that is the correct file to use, period, as
+it is going to be linked and run against /usr/lib/libc.a at the time
+the kernel is compiled.  This will be extreamly important for cross
+compilation in the future.
+
+...
+
+For now I am willing to live with what Nate did do the impact it has
+on our standard user base to do otherwise.  We do need to look at
+better ways for fixing this, but as Nate said, until then this is a
+reasonable way to solve the problem.
+
+-- 
+Rod Grimes                                      rgrimes@gndrsh.aac.dev.com
+Accurate Automation Company                   Custom computers for FreeBSD
+
+
+
+--------------------------------------------------------------------------------
+MID: v02120b03aba74bad9606@[199.183.109.242]
+DATE: 1995-04-04T19:28:06+00:00  FROM: rkw@dataplex.net (Richard Wackerbarth) <None>
+SUBJ: Re: cvs commit: src/sys/i386/conf Makefile.i386
+BODY:
+
+But I totally support the ENVIRONMENT variable. That is THE ONLY WAY you
+can have your cake and ....
+
+For those who want the "simple" approach, the defaults can pick up /usr/include.
+
+Actually, the general case is a more complex.
+You are doing two different things and they each need to be self contained.
+
+1) You are building "tools" with which you will later build a system, and
+2) You are building a system that will then be installed (on another machine)
+
+In case 1) the includes are those appropriate for the current
+system/libraries, and in case 2) the includes belong to the target system.
+In general, they are NOT the same.
+
+----
+Richard Wackerbarth
+rkw@dataplex.net
+
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 199504041953.NAA07051@trout.sri.MT.net
+DATE: 1995-04-04T19:53:56+00:00  FROM: Nate Williams <nate@trout.sri.MT.net> <None>
+SUBJ: Re: cvs commit: src/sys/i386/conf Makefile.i386
+BODY:
+
+In defense of why it wasn't done, I think we have too many 'Environment'
+variable as it is.  As has been stated so many times, our documentation
+stinks and adding yet-another kernel-Environ. variable makes things more
+confused.
+
+
+
+Find a way for everything to work AND that is agreeable to the core
+folks and I'll commit it.
+
+
+Nate
+
+
+
+--------------------------------------------------------------------------------
+MID: 9504042045.AA18525@cs.weber.edu
+DATE: 1995-04-04T20:45:55+00:00  FROM: terry@cs.weber.edu (Terry Lambert) <None>
+SUBJ: Re: cvs commit: src/sys/i386/conf Makefile.i386
+BODY:
+
+I'm glad you said this.
+
+When will the binary link kit be available?
+
+I've often thought that it should be possible to configure devices
+in and out of the kernel without regenerating more than a single
+object file containing the device switches.
+
+The really nice thing about this, of course, is that multiport
+board drivers and Adaptec drivers using Adaptec code, and (potentially)
+the Intel supplied-for-MACH binary math coprocesser emulator could
+all be supplied without sources in full conformance to the non
+disclosure agreements required to obtain them.
+
+To make the nay-sayers happy, putting the source in escrow with the
+condition that a non-disclosure be signed to obtain it should be
+sufficient to not vest too much in a driver writer as a single point
+of failure.
+
+That's just a legal niceity, however, and the main point, that it be
+*possible*, is the important thing.
+
+Actually, sufficient reliance on a devfs, loadable modules, and
+soft autoconfiguration with a "save" for "/kernel -c" boot should
+make it totally unnecessary to have a link kit to get a new kernel
+configuration anyway.
+
+
+					Terry Lambert
+					terry@cs.weber.edu
+---
+Any opinions in this posting are my own and not th
+
+--------------------------------------------------------------------------------
+MID: v02120b04aba764b0764d@[199.183.109.242]
+DATE: 1995-04-04T21:13:28+00:00  FROM: rkw@dataplex.net (Richard Wackerbarth) <None>
+SUBJ: Re: cvs commit: src/sys/i386/conf Makefile.i386
+BODY:
+
+Actually, cross compilation is why it is WRONG!.
+
+There are two genassym's. One will be run on "this" machine to generate a
+kernel for "that" machine and the other is a version which will be in the
+distribution which is installed on "that" machine and used to rebuild the
+kernel.
+
+Since the two versions are linked against different libraries, it is
+important that thare is NO ABSOLUTE reference to any file. All references
+MUST be RELATIVE to the environment in which the code will be executed.
+
+----
+Richard Wackerbarth
+rkw@dataplex.net
+
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 199504042127.PAA07392@trout.sri.MT.net
+DATE: 1995-04-04T21:27:44+00:00  FROM: Nate Williams <nate@trout.sri.MT.net> <None>
+SUBJ: Re: cvs commit: src/sys/i386/conf Makefile.i386
+BODY:
+
+What does the binary link bit by the avg. user that downloading the
+source tree doesn't?  Most of the sources have conditional code in them
+which makes a binary link kit less useful than a source-code kernel kit.
+
+And, it also is less sexy to get .o files when users can get sources. :)
+
+
+This can still be done.  Read the docs on config on how to provide
+binary-only modules.  It's fairly easy to setup, and it's how Ultrix is
+distributed currently.
+
+But, the issue of binary modules is a political one not a technical one.
+I'll let you deal with the bigger problem rather than attacking straw
+men.
+
+
+
+Nate
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 199504042140.PAA07441@trout.sri.MT.net
+DATE: 1995-04-04T21:40:34+00:00  FROM: Nate Williams <nate@trout.sri.MT.net> <None>
+SUBJ: Re: cvs commit: src/sys/i386/conf Makefile.i386
+BODY:
+
+No, there is *one* genassym.
+
+
+But only one is created per kernel build.  You aren't going to get a
+cross-compilation environment to work if leave everything in the same
+directory.  Genassym is used *once* during a kernel compile to build a
+program 'on the host machine' which generates kernel files 'for the
+target machine' kernel.
+
+Where genassym is built is a moot point?
+
+
+One version is built on the cross. machine, and another version is built
+on the host machine.  Genassym won't run on the cross machine if it's
+compiled and linked with include files and libraries that exist for the
+target machine, and vice-versa.
+
+
+
+Nate
+
+
+
+--------------------------------------------------------------------------------
+MID: v02120b05aba76e56bb05@[199.183.109.242]
+DATE: 1995-04-04T22:25:25+00:00  FROM: rkw@dataplex.net (Richard Wackerbarth) <None>
+SUBJ: Re: cvs commit: src/sys/i386/conf Makefile.i386
+BODY:
+Nate Williams <nate@trout.sri.MT.net> writes:
+
+
+Not necessarily. I should be able to build Genassym on th host machine,
+later to be run on the cross machine.  There is no portion of the systen
+that I should not be able to pre-compile and then install. That way, a
+future "make" does not need to un-necessarily recompile those things that
+have not changed.
+
+Genassym is logically no different that say gcc. It is a tool that I will
+need to compile a new kernel.
+
+
+
+Precisely why I insist that there are two contexts in which the code be
+able to be compiled. In fact, this applies to ALL of the "tools", and that
+includes much of the system.
+
+Therefore, I conclude that ALL sources need to be "evaluated" in the
+context of an environment, as described by an environment variable.
+
+That variable would describe not only which sources, but also which
+includes to use. It would also describe the appropriate libraries to be
+linked and the "tools" to use in the creation.
+
+What I would propose is that we establish a variable TREE (I am open to
+other names) which designates a directory that contains everything needed.
+
+It would have a directory of tools (bin), headers (inc[lude]), sources
+(src), objects
+
+--------------------------------------------------------------------------------
+MID: 199504042143.OAA08472@gndrsh.aac.dev.com
+DATE: 1995-04-04T21:43:59+00:00  FROM: "Rodney W. Grimes" <rgrimes@gndrsh.aac.dev.com> <None>
+SUBJ: Re: cvs commit: src/sys/i386/conf Makefile.i386
+BODY:
+
+You had better go understand genassym a bit more before you start in
+on this....
+
+
+Your never going to be able to put a genassym in the distribution that
+will last longer than a day with our kernel sources, and it would
+not work for all the possible kernel config options that a kernel
+can have.
+
+
+Drop this issue for now, until you have actually made what you are
+saying work.
+
+-- 
+Rod Grimes                                      rgrimes@gndrsh.aac.dev.com
+Accurate Automation Company                   Custom computers for FreeBSD
+
+
+
+--------------------------------------------------------------------------------
+MID: v02120b07aba77a8296d9@[199.183.109.242]
+DATE: 1995-04-04T22:49:56+00:00  FROM: rkw@dataplex.net (Richard Wackerbarth) <None>
+SUBJ: Re: cvs commit: src/sys/i386/conf Makefile.i386
+BODY:
+Rodney Grimes writes:
+
+
+But the same could be said about any "tool" used to make a kernel.
+
+I see absolutely no reason why you should treat the correct production of a
+genassym that ends up on the target machine any differently from say gcc. I
+should be able to precompile EVERYTHING and then recompile ONLY those
+elements that depend on something that has changed. So maybe that means
+that genassym gets recompiled almost anytime I change the kernel. Maybe it
+doesn't. "Make" should properly take care of it in either case. There
+should not be a special case for this one tool.
+
+----
+Richard Wackerbarth
+rkw@dataplex.net
+
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 199504042254.QAA07754@trout.sri.MT.net
+DATE: 1995-04-04T22:54:41+00:00  FROM: Nate Williams <nate@trout.sri.MT.net> <None>
+SUBJ: Re: cvs commit: src/sys/i386/conf Makefile.i386
+BODY:
+
+Huh?  If you can build it on the host machine, then do it there.  Doing
+part of the kernel compile on the cross machine and part of it on the
+target machine is just silly.
+
+
+'genassym' is a temporary program used in the kernel compile process.  It
+exists solely for kernel compiles.  It can be called a 'tool', but it's
+a very poor definition since it's only used once.
+
+
+But genassym is not built separately.  It is built as *part* of the
+kernel compile process.
+
+I'm goint to shutup now since the point of the arguement is lost.  I
+have *much* better things to do than argue about what tools should
+be built by the cross compiler and what should be built native.
+
+We are both arguing about something which is such a trivial bug in the
+system which affects < .01% of the users, when there are bugs that affect
+90-100% of the users.
+
+You want to completely throw away the entire build process as it is now.
+That's *NOT* going to happen anytime soon.
+
+
+1) Is really any better than what we have for the majority of the users.  There
+   are much bigger fish to fry, but you are welcome to go off and do
+   this yourself.
+
+2) Is it feasible?
+
+3) Will you do all the work required to make it work right
+
+
+--------------------------------------------------------------------------------
+MID: 199504042331.SAA01357@mpp.com
+DATE: 1995-04-04T23:31:52+00:00  FROM: Mike Pritchard <pritc003@maroon.tc.umn.edu> <None>
+SUBJ: Re: cvs commit: src/sys/i386/conf Makefile.i386
+BODY:
+
+Ok, how about conditionally adding /usr/include to the -I list.
+E.g. in the kernel makefile do:
+
+.if !exist /usr/src/include
+CFLAGS +=-I/usr/include
+.endif
+
+(or whatever the correct makefile syntax is)
+
+If I have /usr/src/include installed then my kernel build uses the include
+files from my source tree.  If I simply downloaded just the kernel sources,
+then it will pick up the include files from /usr/include.
+-- 
+Mike Pritchard
+pritc003@maroon.tc.umn.edu
+"Go that way.  Really fast.  If something gets in your way, turn"
+
+
+
+--------------------------------------------------------------------------------
+MID: 199504042349.RAA08194@trout.sri.MT.net
+DATE: 1995-04-04T23:49:08+00:00  FROM: Nate Williams <nate@trout.sri.MT.net> <None>
+SUBJ: Re: cvs commit: src/sys/i386/conf Makefile.i386
+BODY:
+
+Hmm, a spruced up variant on that would do the trick.  What do other
+folks think?
+
+
+Ahh, skiing. :-)
+
+
+Nate
+
+
+
+--------------------------------------------------------------------------------
+MID: 9504050109.AA24717@cs.weber.edu
+DATE: 1995-04-05T01:09:28+00:00  FROM: terry@cs.weber.edu (Terry Lambert) <None>
+SUBJ: Re: cvs commit: src/sys/i386/conf Makefile.i386
+BODY:
+
+One source tree worth of disk space.  8-).
+
+The need to install 'ld' but not 'cc' if it's done right. 8-)
+
+
+Well, yeah... there is that. }B-).
+
+
+Yeah; the problem is that it isn't really as "drop-in" as System V at
+this point.  It ought to bea able to beat up System V.  8-).  Basically,
+there's no place to just drop your binary files in.
+
+This is kinda out of it until the device and device driver writer
+kernel exported interfaces are cleaned up to the point that no one
+will screw with them for long enough that a binary driver could live
+through a couple of releases without changes.  The main problem is
+one of synchronizing developement efforts between multiple object
+sources when any *BSD is an "also ran" that doesn't get a commercial
+driver until the write happens to hit a lull in their tech support
+calls to let them work on it.  8-(.
+
+
+
+Sigh. 8-(.  You are right that it is political; I tried to abate that
+somewhat with the "escrow" argument for people who would like to make
+the code available but can't because of the non-disclosure.
+
+Given a choice between code that runs my hardware with no sources and
+no code to run my hardware, I know which I'd choose, politically incorrect
+th
+
+--------------------------------------------------------------------------------
+MID: 199504050224.TAA09355@gndrsh.aac.dev.com
+DATE: 1995-04-05T02:24:10+00:00  FROM: "Rodney W. Grimes" <rgrimes@gndrsh.aac.dev.com> <None>
+SUBJ: Re: cvs commit: src/sys/i386/conf Makefile.i386
+BODY:
+
+Reasonable for now, until the all singing all dancing cross platform
+build stuff hits us.  Probably a little cleaner than what we have
+in there now.
+
+
+No, ``YaHOoooo... skydiving...'' just don't try to turn when the ground comes,
+then it is time to pull.
+
+
+-- 
+Rod Grimes                                      rgrimes@gndrsh.aac.dev.com
+Accurate Automation Company                   Custom computers for FreeBSD
+
+
+
+--------------------------------------------------------------------------------
+MID: 199504050418.WAA09370@trout.sri.MT.net
+DATE: 1995-04-05T04:18:09+00:00  FROM: Nate Williams <nate@trout.sri.MT.net> <None>
+SUBJ: Re: cvs commit: src/sys/i386/conf Makefile.i386
+BODY:
+
+Thanks Mike.  I used your ideas to cleanup the tree, which should now
+cause all nay-sayers to agree that given the current constraints, it
+*should* do the right thing.
+
+Basically, this allows folks who don't have the srcdist installed
+(basically the src/include directory) to pick up any necessary includes
+from /usr/include.  However, if src/includes exists, then it will be
+used and /usr/include will never enter the picture.
+
+This means if you have an incomplete src/include tree you're hosed, but I
+guess if it's incomplete you're hosed anyway.
+
+Richard, is this an 'acceptable' solution?  (I know it's not the best
+solution, but we don't have that yet)
+
+
+Nate
+
+
+
+
+--------------------------------------------------------------------------------
+MID: v02120b18aba7d2fa5ff7@[199.183.109.242]
+DATE: 1995-04-05T05:19:45+00:00  FROM: rkw@dataplex.net (Richard Wackerbarth) <None>
+SUBJ: Re: cvs commit: src/sys/i386/conf Makefile.i386
+BODY:
+
+Actually, I can live with either solution as a temporary measure.
+
+The recognition that it is "stopgap" rather than "correct" is the important
+feature to me. What I don't want to see is the propogation of a wrong
+philosophy.
+
+My whole point is that none of the code is written for a single static
+environment. We need to make sure that we are moving in the direction of
+environment based references.
+
+When you want to make a "tool" to use now, the execution environment is the
+HOST system. When you make that same tool to be included in a release, the
+execution environment is that of the TARGET. However, the source code for
+that tool is exactly the same. Only the libraries and, by extension, the
+include files that define their interface are changed. "Make"ing in these
+different environments will in general produce different results -- results
+that should end up in different places.
+
+
+----
+Richard Wackerbarth
+rkw@dataplex.net
+
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 199504051014.GAA03887@hda.com
+DATE: 1995-04-05T10:14:11+00:00  FROM: Peter Dufault <dufault@hda.com> <None>
+SUBJ: Re: cvs commit: src/sys/i386/conf Makefile.i386
+BODY:
+Terry Lambert writes:
+
+Wait a minute, who was that Terry Lambert giving me such grief about
+this last week?   I thought we had to redesign the configuration, power
+management, and make the kernel multithreaded (no, that last
+one was a different issuse, never mind) at the same time.
+
+At the moment you can almost do this for isa drivers except for
+the assignment of interrupts in isa/isa.c.  I just steal
+unused interrupts to get around the problem.
+
+
+I agree with this completely.  Fundamental changes to company policy on
+intellectual property are best left to the Linux camp.
+
+
+I don't know about this.  You'll have to be very careful about who these
+sources go to.  One slip and FreeBSD has a black eye and a lawsuit.
+
+
+Yes, this is a good design rule and with a little attention to
+detail it won't even be much work.
+
+-- 
+Peter Dufault               Real Time Machine Control and Simulation
+HD Associates, Inc.         Voice: 508 433 6936
+dufault@hda.com             Fax:   508 433 5267
+
+
+
+--------------------------------------------------------------------------------
+MID: 9504051512.AA25822@halloran-eldar.lcs.mit.edu
+DATE: 1995-04-05T15:12:37+00:00  FROM: Garrett Wollman <wollman@halloran-eldar.lcs.mit.edu> <None>
+SUBJ: Re: cvs commit: src/sys/i386/conf Makefile.i386
+BODY:
+<<On Tue, 4 Apr 1995 21:21:22 +1000, Bruce Evans <bde@zeta.org.au> said:
+
+
+I assume you mean `unionfs' (which should be called `translucentfs'
+but isn't); `union mount' means something different entirely.  This
+might be workable, although I wouldn't want to depend on it seriously.
+
+-GAWollman
+
+--
+Garrett A. Wollman   | Shashish is simple, it's discreet, it's brief. ... 
+wollman@lcs.mit.edu  | Shashish is the bonding of hearts in spite of distance.
+Opinions not those of| It is a bond more powerful than absence.  We like people
+MIT, LCS, ANA, or NSA| who like Shashish.  - Claude McKenzie + Florent Vollant
+
+
+
+--------------------------------------------------------------------------------
+MID: 9504051534.AA25847@halloran-eldar.lcs.mit.edu
+DATE: 1995-04-05T15:34:38+00:00  FROM: Garrett Wollman <wollman@halloran-eldar.lcs.mit.edu> <None>
+SUBJ: Re: cvs commit: src/sys/i386/conf Makefile.i386
+BODY:
+<<On Tue, 4 Apr 95 14:45:55 MDT, terry@cs.weber.edu (Terry Lambert) said:
+
+
+When somebody cares enough to make one.  (hint, hint.)
+
+-GAWollman
+
+--
+Garrett A. Wollman   | Shashish is simple, it's discreet, it's brief. ... 
+wollman@lcs.mit.edu  | Shashish is the bonding of hearts in spite of distance.
+Opinions not those of| It is a bond more powerful than absence.  We like people
+MIT, LCS, ANA, or NSA| who like Shashish.  - Claude McKenzie + Florent Vollant
+
+
+
+--------------------------------------------------------------------------------
+MID: 9504051536.AA25850@halloran-eldar.lcs.mit.edu
+DATE: 1995-04-05T15:36:24+00:00  FROM: Garrett Wollman <wollman@halloran-eldar.lcs.mit.edu> <None>
+SUBJ: Re: cvs commit: src/sys/i386/conf Makefile.i386
+BODY:
+<<On Tue, 4 Apr 95 14:45:55 MDT, terry@cs.weber.edu (Terry Lambert) said:
+
+[first:]
+
+[and later:]
+
+These two are completely unrelated.  You can do the second NOW if
+you want to; just add `foo.o' to files.i386.  (If this breaks, it's a
+bug in config; you're supposed to be able to do this.)
+
+-GAWollman
+
+--
+Garrett A. Wollman   | Shashish is simple, it's discreet, it's brief. ... 
+wollman@lcs.mit.edu  | Shashish is the bonding of hearts in spite of distance.
+Opinions not those of| It is a bond more powerful than absence.  We like people
+MIT, LCS, ANA, or NSA| who like Shashish.  - Claude McKenzie + Florent Vollant
+
+
+
+--------------------------------------------------------------------------------
+MID: 199504210934.LAA18527@vector.eikon.e-technik.tu-muenchen.de
+DATE: 1995-04-21T09:34:18+00:00  FROM: Julian Howard Stacey <jhs@regent.e-technik.tu-muenchen.de> <None>
+SUBJ: Suggest src/Makefile all: copy /usr/src/.ctm_status to /usr/obj/usr/src
+BODY:
+I suggest we consider src/Makefile all: copying
+	/usr/src/.ctm_status to /usr/obj/usr/src/
+this would help ctm users when filing bug reports.
+I for instance run a single nfs mounted src, with multiple obj/ trees,
+the src/ was rebuilt a few days back, but the system for which I want to 
+provide background environment info for a `ports' bug report runs from an obj
+at earlier patch level (& I cant remember which)
+
+I realise we don't all use ctm, I'd think we could do the same for a .mirror,
+& whatever for sup, & even some extract log stamp for few
+who do a local cvs extract, as their means of gen'ing src/
+
+Julian S
+
+
+
+--------------------------------------------------------------------------------
+MID: 199504270637.IAA27490@zibbi.mikom.csir.co.za
+DATE: 1995-04-27T06:37:29+00:00  FROM: John Hay <jhay@mikom.csir.co.za> <None>
+SUBJ: src/Makefile includes target incomplete
+BODY:
+With the ctm I received this morning, pkg_install won't compile anymore.
+On inspection I found that "Make includes" in /usr/src does not go into
+libftp. So I were compiling with an old FtpLibrary.h. Here is a patch for
+that.
+
+-- 
+John Hay -- jhay@mikom.csir.co.za
+
+*** src/Makefile.org	Tue Mar 28 20:14:17 1995
+--- src/Makefile	Thu Apr 27 08:30:57 1995
+***************
+*** 226,231 ****
+--- 226,232 ----
+  	cd ${.CURDIR}/lib/libss &&		${MAKE} beforeinstall
+  	cd ${.CURDIR}/lib/libforms &&		${MAKE}	beforeinstall
+  	cd ${.CURDIR}/lib/libscsi &&		${MAKE}	beforeinstall
++ 	cd ${.CURDIR}/lib/libftp &&		${MAKE}	beforeinstall
+  
+  lib-tools:
+  	@echo "--------------------------------------------------------------"
+
+
+
+--------------------------------------------------------------------------------
+MID: 199504301121.EAA21800@silvia.HIP.Berkeley.EDU
+DATE: 1995-04-30T11:21:12+00:00  FROM: asami@cs.berkeley.edu (Satoshi Asami | 浅見 賢) <None>
+SUBJ: Re: pkg_manage has a problem?
+BODY:
+ * I suspect this is work-in-progress, so I am not filing it as a bug report,
+ * rather mentioning it in case it has slipped by??
+ * 
+ * pkg_manage looks like a SUPERB tool, just what I always wanted, thank you,
+ * only; when it starts, it seems to want to find all the info on my installed
+ * packages in tarballs in the /var/db/pkg/.. area. This fails 'cos I build all
+ * my packages myself, and bypass the tarball phase. OTOH, is this a blatant
+ * bug? should it not be looking directly at the 3 +<foo> files in the
+ * package directories?
+
+If you've picked up the bsd.port.mk and pkg_install from -current,
+"make install" in a port should have registered the package (just like 
+you did "pkg_add") for you.
+
+Satoshi
+
+
+
+--------------------------------------------------------------------------------
+MID: 199505092332.BAA13453@keltia.frmug.fr.net
+DATE: 1995-05-09T23:32:16+00:00  FROM: Ollivier Robert <Ollivier.Robert@keltia.frmug.fr.net> <None>
+SUBJ: Pkg_info and friends
+BODY:
+Jordan, could you please explain what's going on with all the pkg_*
+programs ? Why do they have to use tar for ?
+
+245 [1:29] root@keltia:compile/KELTIA# setenv PKG_PATH /var/db/pkg
+246 [1:29] root@keltia:compile/KELTIA# pkg_info -a
+tar: unknown option 
+tar: Unknown option.  Use 'tar --help' for a complete list of options.
+Tar extract of  failed!
+Error during unpacking, no info for 'mpeg_lib-1.1' available.
+tar: unknown option 
+tar: Unknown option.  Use 'tar --help' for a complete list of options.
+Tar extract of  failed!
+Error during unpacking, no info for 'xcdplayer-2.2' available.
+tar: unknown option 
+tar: Unknown option.  Use 'tar --help' for a complete list of options.
+Tar extract of  failed!
+Error during unpacking, no info for 'xview32_bin' available.
+
+Three of my installed  packages come from  old binary packages and the rest
+has been installed by the bsd.port.mk when I "make install" a port.
+
+-- 
+Ollivier ROBERT    -=- The daemon is FREE! -=-    roberto@keltia.frmug.fr.net
+   FreeBSD keltia 2.0-BUILT-19950506 #4: Sat May  6 10:23:04 MET DST 1995
+
+
+
+--------------------------------------------------------------------------------
+MID: 199506032015.WAA13762@keltia.frmug.fr.net
+DATE: 1995-06-03T20:15:48+00:00  FROM: Ollivier Robert <Ollivier.Robert@keltia.frmug.fr.net> <None>
+SUBJ: Some Makefiles incorrectly set LDADD
+BODY:
+Some programs incorrectly set LDADD with "="  and not "+=" in the Makefile.
+I found this when attempting to replace BSD malloc by Doug Lea's malloc.
+
+Examples:
+
+date/Makefile:LDADD=    -lutil
+mv/Makefile:LDADD=      -lutil
+ps/Makefile:LDADD=      -lm -lkvm
+rcp/Makefile:LDADD=     -lkrb -ldes
+sh/Makefile:LDADD=  -ll -ledit -ltermcap
+
+Why is there no "+=" ? Is this intentional ?
+
+BTW I've done a port that generate libdlmalloc.so.2.5 and libdlmalloc.a.
+There is no man.
+
+Asami, do you want now or do you prefer to wait for code freeze's lift ?
+-- 
+Ollivier ROBERT    -=- The daemon is FREE! -=-    roberto@keltia.frmug.fr.net
+   FreeBSD keltia 2.0-BUILT-19950602 #1: Fri Jun  2 21:01:56 MET DST 1995
+
+
+
+--------------------------------------------------------------------------------
+MID: 199506032026.NAA16847@gndrsh.aac.dev.com
+DATE: 1995-06-03T20:26:25+00:00  FROM: "Rodney W. Grimes" <rgrimes@gndrsh.aac.dev.com> <None>
+SUBJ: Re: Some Makefiles incorrectly set LDADD
+BODY:
+                ^^^
+LDADD should not be set with a += in a Makefile unless that Makefile
+has mutliple LDADD lines with in it.
+
+gndrsh# cd /usr/src
+gndrsh# vi `kfind -l LDADD+=`
+
+Look at a bunch of them a notice that we seem to be very inconsistent
+here, but the ones I look at may have LDADD's in ../Makefile.inc that
+I did not check for.
+
+
+
+-- 
+Rod Grimes                                      rgrimes@gndrsh.aac.dev.com
+Accurate Automation Company                   Custom computers for FreeBSD
+
+
+
+--------------------------------------------------------------------------------
+MID: 199506032148.XAA15301@keltia.frmug.fr.net
+DATE: 1995-06-03T21:48:33+00:00  FROM: Ollivier Robert <Ollivier.Robert@keltia.frmug.fr.net> <None>
+SUBJ: Re: Some Makefiles incorrectly set LDADD
+BODY:
+It seems that Rodney W. Grimes said:
+
+Yeah,  you're right. I  should  have  think  about  it first... I  was just
+looking for a way to add a "-ldlmalloc" for every program in /etc/make.conf
+with the LDADD variable and some programs just ignored the variable.
+
+My  goal  is to replace  BSD malloc   with DL'malloc  with minimal patching
+(i.e. without patching libc).
+
+Anyway, I just made a port for libdlmalloc.
+-- 
+Ollivier ROBERT    -=- The daemon is FREE! -=-    roberto@keltia.frmug.fr.net
+   FreeBSD keltia 2.0-BUILT-19950602 #1: Fri Jun  2 21:01:56 MET DST 1995
+
+
+
+--------------------------------------------------------------------------------
+MID: 199506040004.KAA32034@godzilla.zeta.org.au
+DATE: 1995-06-04T00:04:47+00:00  FROM: Bruce Evans <bde@zeta.org.au> <None>
+SUBJ: Re: Some Makefiles incorrectly set LDADD
+BODY:
+
+
+
+In /usr/src/*bin/*/Makefile, there are 75 LDADD's, 3 correct LDADD+='s
+(after an LDADD= in the same file) and 12 bogus LDADD+='s, almost all
+of which are not in 4.4lite.
+
+LDADD+= is bogus because any definition of LDADD in a central header is
+bogus.  Defining LDADD in a central header would be bogus because the
+everything would be linked to the libraries in it and there would be no
+way to override these libraries (+= usually adds to the wrong end of the
+list for libraries).
+
+Bruce
+
+
+
+--------------------------------------------------------------------------------
+MID: 199506040206.TAA14701@ref.tfs.com
+DATE: 1995-06-04T02:06:25+00:00  FROM: Poul-Henning Kamp <phk@ref.tfs.com> <None>
+SUBJ: Re: Some Makefiles incorrectly set LDADD
+BODY:
+
+Well, then we will have no easy way to do for instance what the original
+message said, recompile everything with a particular library :-(
+
+
+-- 
+Poul-Henning Kamp <phk@login.dknet.dk> -- TRW Financial Systems, Inc.
+'All relevant people are pertinent' && 'All rude people are impertinent'
+=> 'no rude people are relevant'
+
+
+
+--------------------------------------------------------------------------------
+MID: 199506040412.VAA18199@gndrsh.aac.dev.com
+DATE: 1995-06-04T04:12:32+00:00  FROM: "Rodney W. Grimes" <rgrimes@gndrsh.aac.dev.com> <None>
+SUBJ: Re: Some Makefiles incorrectly set LDADD
+BODY:
+
+It is very easy to override a specific library, the problem here is that
+the malloc code is burried in libc.  You could build a new libc with
+the new malloc code and do this:
+MAKE LIBC= /usr/lib/mylibc.a
+
+See bsd.prog.mk, the ${LIB*} strings are all define with ?= to be
+overrided easily.
+
+Don't drive a square peg into a round hole :-) :-)
+
+
+-- 
+Rod Grimes                                      rgrimes@gndrsh.aac.dev.com
+Accurate Automation Company                   Custom computers for FreeBSD
+
+
+
+--------------------------------------------------------------------------------
+MID: 199506141448.KAA18579@ns1.win.net
+DATE: 1995-06-14T14:48:35+00:00  FROM: Mark Hittinger <bugs@ns1.win.net> <None>
+SUBJ: usr.sbin/Makefile "meouted"
+BODY:
+
+Should it be "mrouted"?   today's sup.
+
+FYI
+
+
+
+--------------------------------------------------------------------------------
+MID: 199506241153.NAA08874@caramba.cs.tu-berlin.de
+DATE: 1995-06-24T11:53:04+00:00  FROM: Wolfram Schneider <wosch@cs.tu-berlin.de> <None>
+SUBJ: FreeBSD-current/src/usr.sbin/Makefile - kbdmap
+BODY:
+
+Why is kbdmap not in Makefile?
+
+Wolfram
+
+
+
+--------------------------------------------------------------------------------
+MID: 199507091410.QAA00823@keltia.frmug.fr.net
+DATE: 1995-07-09T14:10:49+00:00  FROM: Ollivier Robert <roberto@keltia.frmug.fr.net> <None>
+SUBJ: gnu/usr.bin/texinfo/Makefile.inc
+BODY:
+J�rg, why are you forcing -O2 in this file for all of texinfo's utilities ? 
+
+207 [16:08] root@keltia:~# ( cd /usr/src/gnu/usr.bin/texinfo/ ; cvs diff -u -r 1.2  Makefile.inc )
+Index: Makefile.inc
+===================================================================
+RCS file: /spare/FreeBSD-current/src/gnu/usr.bin/texinfo/Makefile.inc,v
+retrieving revision 1.2
+diff -u -r1.2 Makefile.inc
+--- 1.2 1994/09/15 12:09:36
++++ Makefile.inc        1995/07/09 14:06:54
+@@ -1,5 +1,6 @@
+ # Texinfo defaults.
+-# $Id: Makefile.inc,v 1.2 1994/09/15 12:09:36 jkh Exp $
++# $Id: Makefile.inc,v 1.3 1995/07/08 16:45:49 joerg Exp $
+ 
+ INFODIR?= /usr/share/info
+ 
++CFLAGS+= -O2 -pipe
+
+-- 
+Ollivier ROBERT    -=- The daemon is FREE! -=-    roberto@keltia.frmug.fr.net
+   FreeBSD keltia 2.0-BUILT-19950708 #7: Sat Jul  8 01:30:06 MET DST 1995
+
+
+
+--------------------------------------------------------------------------------
+MID: 199507091850.LAA09546@gndrsh.aac.dev.com
+DATE: 1995-07-09T18:50:50+00:00  FROM: "Rodney W. Grimes" <rgrimes@gndrsh.aac.dev.com> <None>
+SUBJ: Re: gnu/usr.bin/texinfo/Makefile.inc
+BODY:
+
+You confused the heck out of me with this one, this is a modification on
+some machine some place, this modification is part of a recent commit,
+which I did not have pulled out in my source tree.
+
+cvs diff -u -r1.2 -r1.3 showed me it was added recently.  This should
+not be there unless there is a VERY good reason for it.  Either way
+the -pipe must die, that really kills small machines compiling.
+
+
+-- 
+Rod Grimes                                      rgrimes@gndrsh.aac.dev.com
+Accurate Automation Company                 Reliable computers for FreeBSD
+
+
+
+==========================================================================================
+DB: freebsd-chat.duckdb  hits=2
+==========================================================================================
+--------------------------------------------------------------------------------
+MID: <199511190823.JAA29238@uriah.heep.sax.de>
+DATE: 1995-11-19T08:23:43+00:00  FROM: J Wunsch <j@uriah.heep.sax.de>
+SUBJ: Re: cvs commit: src/share/zoneinfo Makefile
+BODY:
+As Peter Wemm wrote:
+
+
+That's quite possible.  An easy way to find about a /dev/null
+congestion could be to measure its throughput every now and then.
+Mine doesn't seem too bad, it shuffles 33 MB/s:
+
+j@uriah 397% dd if=/dev/zero of=/dev/null bs=1m count=100
+100+0 records in
+100+0 records out
+104857600 bytes transferred in 3 secs (34952533 bytes/sec)
+
+Does anybody know what happens to the data bits crap inside /dev/null?
+Are they simply burnt?  Or are they melted down and converted to null
+bytes for /dev/zero?
+
+-- 
+cheers, J"org
+
+joerg_wunsch@uriah.heep.sax.de -- http://www.sax.de/~joerg/ -- NIC: JW11-RIPE
+Never trust an operating system you don't have sources for. ;-)
+
+From owner-freebsd-chat  Sun Nov 19 00:50:59 1995
+Return-Path: owner-chat
+Received: (from root@localhost)
+          by freefall.freebsd.org (8.6.12/8.6.6) id AAA19418
+          for chat-outgoing; Sun, 19 Nov 1995 00:50:59 -0800
+Received: from irz301.inf.tu-dresden.de (irz301.inf.tu-dresden.de [141.76.1.11])
+          by freefall.freebsd.org (8.6.12/8.6.6) with ESMTP id AAA19398
+          for <FreeBSD-chat@freebsd.org>; Sun, 19 Nov 1995 00:50:54 -0800
+Received: from sax.sax.de by irz301.inf.tu-dresden.de (8.6.12/8.6.1
+
+--------------------------------------------------------------------------------
+MID: 199511190823.JAA29238@uriah.heep.sax.de
+DATE: 1995-11-19T08:23:43+00:00  FROM: J Wunsch <j@uriah.heep.sax.de> <None>
+SUBJ: Re: cvs commit: src/share/zoneinfo Makefile
+BODY:
+As Peter Wemm wrote:
+
+
+That's quite possible.  An easy way to find about a /dev/null
+congestion could be to measure its throughput every now and then.
+Mine doesn't seem too bad, it shuffles 33 MB/s:
+
+j@uriah 397% dd if=/dev/zero of=/dev/null bs=1m count=100
+100+0 records in
+100+0 records out
+104857600 bytes transferred in 3 secs (34952533 bytes/sec)
+
+Does anybody know what happens to the data bits crap inside /dev/null?
+Are they simply burnt?  Or are they melted down and converted to null
+bytes for /dev/zero?
+
+-- 
+cheers, J"org
+
+joerg_wunsch@uriah.heep.sax.de -- http://www.sax.de/~joerg/ -- NIC: JW11-RIPE
+Never trust an operating system you don't have sources for. ;-)
+
+

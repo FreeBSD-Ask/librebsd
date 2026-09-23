@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>S-me 目录悬空节优化建议报告</title>
+<style>
+  :root{--ink:#1a1a1a;--muted:#6b7280;--accent:#1f4e79;--red:#b23a2f;--soft:#f4f6f8;--line:#e5e7eb;}
+  *{box-sizing:border-box;}
+  body{margin:0;background:#fafafa;color:var(--ink);font-family:"Songti SC","Noto Serif CJK SC","SimSun",serif;font-size:14px;line-height:1.75;}
+  .wrap{max-width:860px;margin:0 auto;padding:40px 24px;}
+  h1{font-family:"Microsoft YaHei","PingFang SC",sans-serif;font-size:24px;color:var(--accent);margin:0 0 4px;}
+  .sub{color:var(--muted);font-size:13px;margin:0 0 26px;}
+  h2{font-family:"Microsoft YaHei","PingFang SC",sans-serif;font-size:17px;color:var(--accent);margin:26px 0 10px;padding-left:10px;border-left:4px solid var(--accent);}
+  p{margin:8px 0;}
+  .card{background:#fff;border:1px solid var(--line);border-radius:10px;padding:18px 20px;margin:12px 0;}
+  table{border-collapse:collapse;width:100%;margin:10px 0;font-size:13px;}
+  th,td{border:1px solid var(--line);padding:7px 10px;text-align:left;}
+  th{background:var(--soft);font-family:"Microsoft YaHei",sans-serif;}
+  .num{color:var(--red);font-weight:700;font-family:"Microsoft YaHei",sans-serif;}
+  .ok{color:#1a7f4b;font-weight:700;}
+  ul{margin:6px 0 6px 20px;padding:0;}
+  li{margin:3px 0;}
+  .tag{display:inline-block;background:#eef2f7;color:var(--accent);font-size:12px;padding:1px 8px;border-radius:8px;margin:1px 3px 1px 0;font-family:"Microsoft YaHei",sans-serif;}
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>S-me 目录悬空节优化建议报告</h1>
+<p class="sub">对照既有大纲 SUMMARY 的诊断与优化方案（2026-09-01）</p>
+
+<h2>一、悬空定义</h2>
+<p>「悬空节」指四大 BSD 版本章中<strong>由模板生成、无 SUMMARY 既有素材支撑的占位节</strong>（如「重要贡献者与边缘者：×× 时期的贡献者谱系与 committer 变动」「×× 的跨 BSD/UNIX/macOS 代码外溢与工具扩散」）。这类节名是程式化占位，而非可追溯的历史素材。</p>
+
+<h2>二、悬空根源（三个）</h2>
+<div class="card">
+<p><strong>根源 1：版本章映射遗漏 62 个主题章。</strong>bsd_seven_sections.json 含 149 个 SUMMARY 章，但原版本映射仅用 89 个，遗漏了 Ports、Jails、kqueue、ZFS、DTrace、Capsicum、bhyve、安全模型、网络栈、Clang/LLVM、systemd 等 62 个主题章——它们的贡献者/批评者/OS 比较素材最丰富却未纳入。</p>
+<p><strong>根源 2：诞生/起源章遗漏 SUMMARY 第四卷。</strong>FreeBSD 1.x、NetBSD 诞生、OpenBSD 起源的素材在第四卷「大分裂」（章号 62-87），不在 bsd_seven_sections.json（仅覆盖 88-236），导致取不到。</p>
+<p><strong>根源 3：九节模板强行套用。</strong>九类中 extend（跨 BSD 扩展）SUMMARY 仅 2 章有素材、publish 30 章、shiguan 38 章，其余为空白，模板仍强行占位。</p>
+</div>
+
+<h2>三、优化措施（四项）</h2>
+<div class="card">
+<p><strong>1. 补全 62 个主题章映射</strong>——按历史时间归入对应版本章（Ports→2.x、jail/kqueue→4.x、ZFS/DTrace→8.x、Capsicum→9.x、bhyve/Clang/systemd→10.x、Git→12.x、CHERI→13.x 等）。</p>
+<p><strong>2. 补全诞生章第四卷映射</strong>——NetBSD 诞生并入章 67/68、OpenBSD 起源并入章 69/71/72；并新增分类回退逻辑（62-87 章号从 summary_all.json 按九类关键词分类提取）。</p>
+<p><strong>3. 非必设节（6 类）无素材则删除</strong>——发布、特性、淘汰、安全、史观、扩展六类，SUMMARY 无素材即不列节，消除 109 处占位。</p>
+<p><strong>4. 必设节（③④⑤）无素材则标注补写</strong>——贡献者、批评者、OS 比较三类为必设（用户要求保留/重写），SUMMARY 无素材处标注「据一手史料补写」。</p>
+</div>
+
+<h2>四、优化结果</h2>
+<table>
+<tr><th>指标</th><th>优化前</th><th>优化后</th></tr>
+<tr><td>悬空节总数</td><td class="num">156</td><td class="ok">32</td></tr>
+<tr><td>其中非必设占位（已删除）</td><td>109</td><td class="ok">0</td></tr>
+<tr><td>其中必设补写（已标注）</td><td>47</td><td>32</td></tr>
+<tr><td>总节数</td><td>951</td><td>856</td></tr>
+<tr><td>卷 / 章</td><td colspan="2">18 卷 / 178 章（不变）</td></tr>
+</table>
+
+<h2>五、剩余 32 处补写节（SUMMARY 确无素材）</h2>
+<div class="card">
+<p>剩余 32 处集中在「中间版本章」，根因是 SUMMARY 采用<strong>时期归集</strong>写法——贡献者/批评者素材集中在代表章（如 NetBSD 早期核心团队在 1.x、4.x-5.x 核心团队在 5.0、6.x-10.x 核心团队在 10.0），中间版本章未单独写③④⑤。分布如下：</p>
+<table>
+<tr><th>卷</th><th>处数</th><th>涉及版本章</th></tr>
+<tr><td>第九卷 FreeBSD</td><td class="num">7</td><td><span class="tag">FreeBSD 9.x ④批评者</span><span class="tag">11.x ④⑤</span><span class="tag">12.x ④</span><span class="tag">14.x ④⑤</span></td></tr><tr><td>第十卷 NetBSD</td><td class="num">16</td><td><span class="tag">2.0/3.0 ③④⑤</span><span class="tag">4.0 ③④</span><span class="tag">6.0/7.0/8.0/9.0 ③④</span></td></tr><tr><td>第十一卷 OpenBSD</td><td class="num">2</td><td><span class="tag">4.x ④批评者</span><span class="tag">6.x ④批评者</span></td></tr><tr><td>第十二卷 DragonFly</td><td class="num">7</td><td><span class="tag">诞生④</span><span class="tag">1.x/3.x/5.x ③④</span></td></tr>
+</table>
+<p>处理建议：这 32 处不虚构、不挪用，明确标注「据一手史料补写」，正文撰写时按该版本的一手史料（committer 名单、邮件列表、同期 OS 对照）落实；若采用与 SUMMARY 一致的「时期归集」原则，也可将中间版本章贡献者并入相邻代表章，进一步消除重复。</p>
+</div>
+
+<h2>六、结论</h2>
+<p>本次优化使悬空占位节从 156 处降至 32 处（-79%），且剩余 32 处均为用户要求必设的③④⑤，已由「模板占位」转为「明确补写标注」，不再是无内容的悬空。全书 18 卷 178 章 856 节，编号连续、无重复、无空章、无「新节点」残留。</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,235 @@
+
+##############################################################################
+id=105842 | subj=AT&T/Sun merged UNIX
+msgid=23103@ucbvax.BERKELEY.EDU | from=bostic at ucbvax.BERKELEY.EDU (Keith Bostic) | date=1988-02-23T22:25:30+00:00 | list=comp.unix.wizards
+--------------------------------------
+In article <1684 at ssc-vax.UUCP> benoni at ssc-vax.UUCP (Charles L Ditzel) writes:
+
+> > Like DEC and Apollo...(Funny DEC and Apollo didn't complain when Mr. Joy
+> > gave them BSD 4.[23]... :^)
+
+In article <1645 at winchester.mips.COM>, mash at mips.COM (John Mashey) writes:
+
+> Some of this might be rewriting history: I was under the impression that
+> a number of people had contributed to 4.X BSD, and in fact, had included some
+> people who at the time worked for DEC.  I also thought DEC contributed in
+> other ways; could somebody closer to this clarify that impression?
+
+Bill Joy had a great deal to do with 4.2BSD, my understanding (worth what
+you're paying for it, I wasn't there) is that much of the design was his,
+and the implementation was done with Sam Leffler.  He had little, if any,
+direct input into 4.3BSD.
+
+DEC has contributed the full-time services of four people, at various times,
+to the BSD effort; both DEC and SUN have made significant contributions to
+BSD software.
+
+--keith
+
+
+
+
+##############################################################################
+id=6048 | subj=Political History of UNIX
+msgid=194@masscomp.UUCP | from=trb at masscomp.UUCP (Andy Tannenbaum) | date=1984-02-25T23:45:05+00:00 | list=comp.org.usenix
+--------------------------------------
+Below is a copy of the notes from my talk at this past USENIX in
+Washington.  It's in nroff -ms format, 304 lines.
+
+	Andy Tannenbaum   Masscomp Inc  Westford MA   (617) 692-6200 x274
+==========================================================================
+.RP 
+.TL
+.LG
+Political History of UNIX
+.NL
+.AU 
+Andrew Tannenbaum
+.AI
+MASSCOMP
+.br
+Westford, MA 01886
+.AB no
+.AE
+.LP
+.LG
+INTRO
+.NL
+
+This isn't a talk about how Ken Thompson and Dennis Ritchie hacked
+their beloved and renowned PDP-7 to pieces in a tower on high.
+
+I will not mention the extraordinary Bell Labs research environment -
+crafty computer science gurus who took precious time off from
+their highly important research efforts to help beat UNIX into shape.
+
+I'm going to talk about some of the more earthly factors that
+contributed to the UNIX that we know and love today.  Perhaps after
+hearing my story of how we got here, you'll be more able to follow in
+their footsteps, bringing your own products similar fame and glory, or
+at least you'll be better prepared to understand the results of UNIX's
+unusual upbringing.
+
+There is an incredible number of people riding on the UNIX bandwagon,
+the size of the UNIFORUM audiences is testament to that fact.
+
+.LG
+THE CABBAGE PATCH OPERATING SYSTEM
+.NL
+
+I sometimes think of UNIX as the Cabbage Patch Operating System.
+
+UNIX wasn't a completely new idea, it was an amalgam of good ideas.
+
+I
+
+##############################################################################
+id=157893 | subj=Re: USL vs. 386bsd derivatives
+msgid=Co05D8.8Ax@kithrup.com | from=sef@kithrup.com (Sean Eric Fagan) | date=1994-04-09T17:17:17+00:00 | list=unix.bsd
+--------------------------------------
+In article <hastyCo01t4.3K3@netcom.com> hasty@netcom.com (Amancio Hasty Jr) writes:
+"comp.unix.bsd" is an invalid distribution.  Setting 'Distribution: ' to
+'comp.unix.bsd' has guaranteed that a growing number of sites around the
+world either drop or will not forward your article.
+
+>I find the current situation a bit odd because USL vs BSDI & UCB lawsuits
+>are over...
+
+The (public parts of the) settlement allow BSDi, and BSDi *alone*, to
+distribute most of Net/2, although there are a handful of files they may
+only distribute in binary form.  Because of the settlement, UCB no longer
+has the ability to defend anyone who continues to distribute Net/2.
+(In fact, UCB is currently in violation of the settlement for continuing
+to distribute Net/2-derived systems.)
+
+Anyone who continues to distribute Net/2 or Net/2-derived code (any part
+of it, mind you) runs the risk of having to deal with USL.  And because
+UCB can no longer defend the tape, anyone who does so had either better have
+very deep pockets, or be willing to have a temporary or permanent restraining
+order thrown against them.
+
+With any luck, 4.4BSD-Lite will come out any day now.  The person doing it
+is probably sick and tired of the whole thing by now, and probably wants it
+out as much as anyone else, if not more.
+
+For the free BSD's, after it comes out, there is then the decision of whether
+to completely rewrite the files 
+
+##############################################################################
+id=172476 | subj=386BSD release 0.0 available for anon ftp
+msgid=pqfi1INNkoi@agate.berkeley.edu | from=cgd@agate.berkeley.edu (Chris Demetriou) | date=1992-03-13T14:51:45+00:00 | list=unix.bsd
+--------------------------------------
+386BSD release 0.0 is available for anon ftp from
+
+agate.berkeley.edu
+128.32.136.1
+
+in the directory
+
+pub/386BSD
+
+
+
+If you don't know what 386BSD is:
+
+386BSD is BSD UNIX for the 386 and 486 IBMs and clones.
+
+It was done by William Jolitz, and based on the BSD Net2 release.
+(Bill Jolitz is the person who wrote most of the 386/486 code that will
+be in BSD 4.4).
+
+This is currently release 0.0 -- it's an early alpha, but it's unix --
+BSD UNIX  -- nonetheless.
+
+It is completely free of AT&T code, and is available in source and
+binary forms, as well as diffs from Net2.
+
+***THIS IS A BOOTABLE SYSTEM***
+
+see the READMEs in the distribution for more information.
+
+
+
+Feel free to distribute this notice as widely as possible.
+Also, if there are other sites which would like to become distribution
+points, please contact me.  I've a feeling there's going to be a large
+demand for this, in the time to come... 8-)
+
+Chris Demetriou
+cgd@agate.berkeley.edu
+386BSD ftp archive maintainer, and someone who really wants to see this 'work'
+
+
+
+
+##############################################################################
+id=172502 | subj=Curious about free Unixes and ABI (BSD, Linux, GNU)
+msgid=ks327uINNdug@alhena.usc.edu | from=ajayshah@alhena.usc.edu (Ajay Shah) | date=1992-03-14T05:02:54+00:00 | list=unix.bsd
+--------------------------------------
+We are seeing a very nice flowering of the free Unixes available
+(obviously in source).  Linux is now in v.95 and BSD v0.0 have arrived
+(both for the 386).  BSD might become available for SPARC, and GNU is
+said to be aiming for 386 and SPARC.
+
+My question is: to what extent do these projects care for and ensure
+binary compatibility of applications?
+
+I can imagine several directions from which this could be useful.
+First, if any of these is to have a ghost of a chance in the
+commercial world, they have to adhere to ABIs.  Both the 386 and SPARC
+hvae a well-defined ABI.
+
+Apart from the commercial market, I see binary compatibility as being
+quite useful "for us" as well.  E.g., many (if not most) hackers would
+want a working TeX.  It seems suboptimal for each of us to have to
+open up the TeX source distribution and make it from scratch.  Look at
+how convenient (e.g.) EmTeX is: you simply unpack the archives and
+setup environmental variables and you have a working TeX.
+
+It takes a lot of programs to make up a "comfortable Unix working
+environment".  Binary compatibility and the availability of programs
+in binary form would reduce the setup cost of getting there.
+-- 
+
+Ajay Shah, (213)749-8133, ajayshah@usc.edu
+
+
+
+
+##############################################################################
+id=172434 | subj=Re: Curious about free Unixes and ABI (BSD, Linux, GNU)
+msgid=1992Mar16.034326.8884@engr.uark.edu | from=dws@engr.uark.edu (David W. Summers) | date=1992-03-16T03:43:26+00:00 | list=unix.bsd
+--------------------------------------
+ajayshah@alhena.usc.edu (Ajay Shah) writes:
+
+>We are seeing a very nice flowering of the free Unixes available
+>(obviously in source).  Linux is now in v.95 and BSD v0.0 have arrived
+>(both for the 386).  BSD might become available for SPARC, and GNU is
+>said to be aiming for 386 and SPARC.
+>
+>My question is: to what extent do these projects care for and ensure
+>binary compatibility of applications?
+>
+>I can imagine several directions from which this could be useful.
+>First, if any of these is to have a ghost of a chance in the
+>commercial world, they have to adhere to ABIs.  Both the 386 and SPARC
+>hvae a well-defined ABI.
+>
+>Apart from the commercial market, I see binary compatibility as being
+>quite useful "for us" as well.  E.g., many (if not most) hackers would
+>want a working TeX.  It seems suboptimal for each of us to have to
+>open up the TeX source distribution and make it from scratch.  Look at
+>how convenient (e.g.) EmTeX is: you simply unpack the archives and
+>setup environmental variables and you have a working TeX.
+>
+>It takes a lot of programs to make up a "comfortable Unix working
+>environment".  Binary compatibility and the availability of programs
+>in binary form would reduce the setup cost of getting there.
+>-- 
+>
+>Ajay Shah, (213)749-8133, ajayshah@usc.edu
+
+
+Hooray for the free Unixes!
+
+One (about the only) problem I see with just distributing binaries is the

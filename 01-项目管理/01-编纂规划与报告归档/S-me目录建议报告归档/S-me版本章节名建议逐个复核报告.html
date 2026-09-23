@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>版本章九节节名建议——逐个复核报告</title>
+<style>
+  :root { --ink:#1a1a1a; --muted:#5a5a5a; --accent:#1f4e79; --accent-2:#b23a2f; --rule:#c9c9c9; --soft:#f5f5f5; --ok:#2a6b4a; }
+  * { box-sizing:border-box; }
+  html,body { margin:0; padding:0; background:#fff; color:var(--ink);
+    font-family:"Songti SC","Noto Serif CJK SC","SimSun","STSong",serif; font-size:9.5pt; line-height:1.6; }
+  .report { max-width:860px; margin:0 auto; padding:26px 38px; }
+  h1,h2,h3 { font-family:"Microsoft YaHei","PingFang SC","Noto Sans CJK SC",sans-serif; color:var(--accent); font-weight:700; }
+  h1 { font-size:18pt; text-align:center; letter-spacing:1px; margin:0 0 4px; }
+  .subtitle { text-align:center; color:var(--muted); font-size:10pt; margin:0 0 3px; }
+  .meta { text-align:center; color:var(--muted); font-size:8.5pt; margin-bottom:14px; }
+  h2 { font-size:13pt; margin:22px 0 8px; padding-bottom:5px; border-bottom:2px solid var(--accent); }
+  h3 { font-size:11pt; margin:16px 0 5px; color:#24537f; }
+  p { margin:6px 0; text-align:justify; }
+  code { font-family:"Consolas","Menlo",monospace; font-size:8.5pt; background:var(--soft); padding:0 3px; border-radius:3px; }
+  .abstract { background:var(--soft); border-left:4px solid var(--accent); padding:10px 14px; margin:12px 0; font-size:9.5pt; }
+  .abstract .label { font-weight:700; color:var(--accent); }
+  .callout { background:#fbf4f2; border-left:4px solid var(--accent-2); padding:8px 12px; margin:8px 0; font-size:9.5pt; }
+  .callout.ok { background:#f0f7f2; border-left-color:var(--ok); }
+  table.grid { width:100%; border-collapse:collapse; margin:6px 0 12px; font-size:8.5pt; }
+  thead { display:table-header-group; }
+  tr { break-inside:avoid; page-break-inside:avoid; }
+  table.grid td, table.grid th { border:1px solid var(--rule); padding:4px 7px; vertical-align:top; text-align:left; }
+  table.grid th { background:var(--soft); color:var(--accent); font-weight:700; }
+  .ver { white-space:nowrap; width:120px; color:#24537f; font-weight:700; font-size:8pt; }
+  .era { white-space:nowrap; width:76px; color:#666; font-size:8pt; }
+  .map { font-size:8pt; color:#444; }
+  .have { white-space:nowrap; width:44px; text-align:center; color:#666; font-size:8pt; }
+  .st { white-space:nowrap; width:40px; text-align:center; font-weight:700; }
+  .st.ok { color:var(--ok); }
+  .st.bad { color:var(--accent-2); }
+  ul { margin:4px 0 10px; padding-left:20px; }
+  li { margin:3px 0; }
+  .footnote { font-size:8pt; color:var(--muted); border-top:1px solid var(--rule); margin-top:18px; padding-top:6px; }
+  @page { size:A4; margin:14mm 12mm 14mm 12mm; }
+  @media print { .report { max-width:none; padding:0; } a { color:inherit; text-decoration:none; } }
+</style>
+</head>
+<body>
+<div class="report">
+  <h1>版本章九节节名建议——逐个复核报告</h1>
+  <p class="subtitle">《给我自由——一部 BSD 史》四大 BSD 卷 41 版本章逐项核验</p>
+  <p class="meta">对象：第九至十二卷 41 版本章 × 9 节　|　2026-08-31</p>
+
+  <div class="abstract">
+    <span class="label">复核结论</span>
+    <p>对 41 个版本章的 <strong>87 条 SUMMARY 章号映射</strong>逐项核验：<strong>domain 一致性、title 前缀匹配、时间锚点年份</strong>三项全部通过，<strong>实质问题 0 处</strong>。节级素材：41 章 369 节中，<strong>222 节有 SUMMARY 素材、147 节待补</strong>（与《待补节建议节名清单》一致）。</p>
+  </div>
+
+  <div class="callout ok">
+    <b>已澄清的 7 处疑似问题</b>：初核时 FreeBSD 5.x/10.x/11.x/12.x/13.x/14.x/15.x 七章报「title 前缀不匹配」，经查系<strong>系列名「X.x」与 SUMMARY 首章标题「X.0」的正常差异</strong>（如「FreeBSD 10.x」系列首章为「FreeBSD 10.0 的发布」），映射本身正确，修正匹配口径后全部通过。
+  </div>
+<h2>一、逐章映射核验</h2>
+<h3>FreeBSD 卷（第九卷）15 版本章</h3><table class='grid'><thead><tr><th class='ver'>版本章</th><th class='era'>时间锚点</th><th class='map'>映射 SUMMARY 章（章号·标题）</th><th class='have'>素材</th><th class='st'>结论</th></tr></thead><tbody><tr><td class='ver'>FreeBSD 2.x</td><td class='era'>1994–1998</td><td class='map'>88·FreeBSD 2.x：站稳脚跟</td><td class='have'>7/9</td><td class='st ok'>✓</td></tr><tr><td class='ver'>FreeBSD 3.x</td><td class='era'>1998–2000</td><td class='map'>91·FreeBSD 3.x：SMP 时代</td><td class='have'>7/9</td><td class='st ok'>✓</td></tr><tr><td class='ver'>FreeBSD 4.x</td><td class='era'>2000–2004</td><td class='map'>92·FreeBSD 4.x 的 Jail；93·FreeBSD 4.x 末期的 Dr</td><td class='have'>8/9</td><td class='st ok'>✓</td></tr><tr><td class='ver'>FreeBSD 5.x</td><td class='era'>2003–2005</td><td class='map'>98·FreeBSD 5.0 的开发挑战与；99·FreeBSD 5.x 转型期的史观；100·FreeBSD 5.x 的时代语境与</td><td class='have'>8/9</td><td class='st ok'>✓</td></tr><tr><td class='ver'>FreeBSD 6.x</td><td class='era'>2005–2008</td><td class='map'>101·FreeBSD 6.x：回归稳定</td><td class='have'>7/9</td><td class='st ok'>✓</td></tr><tr><td class='ver'>FreeBSD 7.x</td><td class='era'>2008–2010</td><td class='map'>104·FreeBSD 7.x 的 ULE ；105·FreeBSD 7.x 同期的 Dr</td><td class='have'>7/9</td><td class='st ok'>✓</td></tr><tr><td class='ver'>FreeBSD 8.x</td><td class='era'>2009–2012</td><td class='map'>106·FreeBSD 8.x 的虚拟化与网；107·FreeBSD 8.x 与同期操作系</td><td class='have'>7/9</td><td class='st ok'>✓</td></tr><tr><td class='ver'>FreeBSD 9.x</td><td class='era'>2012–2014</td><td class='map'>123·FreeBSD 9.x：版本基础与内；124·FreeBSD 9.x：图形架构与社；125·FreeBSD 9.x：安全响应与史；126·FreeBSD 9.x：pkgng </td><td class='have'>6/9</td><td class='st ok'>✓</td></tr><tr><td class='ver'>FreeBSD 10.x</td><td class='era'>2014–2016</td><td class='map'>127·FreeBSD 10.0 的发布与大；128·FreeBSD 10.x 的 pkg；129·FreeBSD 10.x 的贡献者管</td><td class='have'>4/9</td><td class='st ok'>✓</td></tr><tr><td class='ver'>FreeBSD 11.x</td><td class='era'>2016–2018</td><td class='map'>130·FreeBSD 11.0 的发布与 ；131·FreeBSD 11.x 的无线网络；132·FreeBSD 11.x 的安全响应</td><td class='have'>4/9</td><td class='st ok'>✓</td></tr><tr><td class='ver'>FreeBSD 12.x</td><td class='era'>2018–2021</td><td class='map'>133·FreeBSD 12.0 的发布与基；134·FreeBSD 12.x 的工具链与；135·FreeBSD 12.x 的贡献者多</td><td class='have'>6/9</td><td class='st ok'>✓</td></tr><tr><td class='ver'>FreeBSD 13.x</td><td class='era'>2021–2023</td><td class='map'>148·FreeBSD 13.0 发布与核心；149·FreeBSD 13.x 社区治理与；150·FreeBSD 13.x 第三方软件</td><td class='have'>6/9</td><td class='st ok'>✓</td></tr><tr><td class='ver'>FreeBSD 14.x</td><td class='era'>2023–2025</td><td class='map'>151·FreeBSD 14.0 发布与核心；152·FreeBSD 14.x 网络栈与虚；153·FreeBSD 14.x 维护版本与；154·FreeBSD 14.x 技术淘汰与；155·FreeBSD 14.x 第三方软件</td><td class='have'>6/9</td><td class='st ok'>✓</td></tr><tr><td class='ver'>FreeBSD 15.x</td><td class='era'>2025–2026</td><td class='map'>162·FreeBSD 15.0 发布与技术；163·FreeBSD 15.x 的 Rus；164·FreeBSD 15.x 贡献者与社；165·FreeBSD 15.x 第三方软件</td><td class='have'>6/9</td><td class='st ok'>✓</td></tr><tr><td class='ver'>FreeBSD 16.x</td><td class='era'>2026+</td><td class='map'>166·FreeBSD 16.x CURRE；167·FreeBSD 16.x 工具链与内；168·FreeBSD 16.x 贡献者多样</td><td class='have'>4/9</td><td class='st ok'>✓</td></tr></tbody></table>
+<h3>NetBSD 卷（第十卷）11 版本章</h3><table class='grid'><thead><tr><th class='ver'>版本章</th><th class='era'>时间锚点</th><th class='map'>映射 SUMMARY 章（章号·标题）</th><th class='have'>素材</th><th class='st'>结论</th></tr></thead><tbody><tr><td class='ver'>NetBSD 诞生</td><td class='era'>1993–1994</td><td class='map'>172·NetBSD 的诞生与早期版本</td><td class='have'>1/9</td><td class='st ok'>✓</td></tr><tr><td class='ver'>NetBSD 1.x</td><td class='era'>1994–2002</td><td class='map'>173·NetBSD 1.x 的成熟期与 p；174·NetBSD 1.x 的争议与路线分；175·NetBSD 1.x 与同时期操作系</td><td class='have'>6/9</td><td class='st ok'>✓</td></tr><tr><td class='ver'>NetBSD 2.0</td><td class='era'>2004–2005</td><td class='map'>183·NetBSD 2.0 的 SMP 与</td><td class='have'>1/9</td><td class='st ok'>✓</td></tr><tr><td class='ver'>NetBSD 3.0</td><td class='era'>2005–2007</td><td class='map'>184·NetBSD 3.0 的发布与多平台</td><td class='have'>1/9</td><td class='st ok'>✓</td></tr><tr><td class='ver'>NetBSD 4.0</td><td class='era'>2007–2009</td><td class='map'>178·NetBSD 4.0 的发布与嵌入式</td><td class='have'>4/9</td><td class='st ok'>✓</td></tr><tr><td class='ver'>NetBSD 5.0</td><td class='era'>2009–2012</td><td class='map'>179·NetBSD 5.0 架构重构与社区</td><td class='have'>6/9</td><td class='st ok'>✓</td></tr><tr><td class='ver'>NetBSD 6.0</td><td class='era'>2012–2015</td><td class='map'>180·NetBSD 6.0 的发布与多核改</td><td class='have'>4/9</td><td class='st ok'>✓</td></tr><tr><td class='ver'>NetBSD 7.0</td><td class='era'>2015–2018</td><td class='map'>188·NetBSD 7.0 与 ARM 生</td><td class='have'>4/9</td><td class='st ok'>✓</td></tr><tr><td class='ver'>NetBSD 8.0</td><td class='era'>2018–2020</td><td class='map'>181·NetBSD 8.0 与 64 位 </td><td class='have'>4/9</td><td class='st ok'>✓</td></tr><tr><td class='ver'>NetBSD 9.0</td><td class='era'>2020–2024</td><td class='map'>182·NetBSD 9.0 的发布与 ZF</td><td class='have'>4/9</td><td class='st ok'>✓</td></tr><tr><td class='ver'>NetBSD 10.0</td><td class='era'>2024+</td><td class='map'>189·NetBSD 10.0 的现代硬件支；190·NetBSD 10.0 的 OS 比</td><td class='have'>6/9</td><td class='st ok'>✓</td></tr></tbody></table>
+<h3>OpenBSD 卷（第十一卷）7 版本章</h3><table class='grid'><thead><tr><th class='ver'>版本章</th><th class='era'>时间锚点</th><th class='map'>映射 SUMMARY 章（章号·标题）</th><th class='have'>素材</th><th class='st'>结论</th></tr></thead><tbody><tr><td class='ver'>OpenBSD 起源</td><td class='era'>1995–1996</td><td class='map'>204·OpenBSD 的起源：从 NetB</td><td class='have'>5/9</td><td class='st ok'>✓</td></tr><tr><td class='ver'>OpenBSD 2.x</td><td class='era'>1996–2001</td><td class='map'>193·OpenBSD 2.x 的 fork；194·OpenBSD 2.x 的安全机制早</td><td class='have'>7/9</td><td class='st ok'>✓</td></tr><tr><td class='ver'>OpenBSD 3.x</td><td class='era'>2001–2004</td><td class='map'>195·OpenBSD 3.x 的 pf 防；196·OpenBSD 3.x 的持续安全改</td><td class='have'>7/9</td><td class='st ok'>✓</td></tr><tr><td class='ver'>OpenBSD 4.x</td><td class='era'>2006–2008</td><td class='map'>191·OpenBSD 4.x 的安全工程与；192·OpenBSD 4.x 的技术淘汰与</td><td class='have'>6/9</td><td class='st ok'>✓</td></tr><tr><td class='ver'>OpenBSD 5.x</td><td class='era'>2011–2014</td><td class='map'>197·OpenBSD 5.x 的发布周期文；198·OpenBSD 5.x 的安全机制演</td><td class='have'>7/9</td><td class='st ok'>✓</td></tr><tr><td class='ver'>OpenBSD 6.x</td><td class='era'>2016–2020</td><td class='map'>199·OpenBSD 6.x 的 pled；200·OpenBSD 6.x 的 unve；201·OpenBSD 6.x 的安全机制综</td><td class='have'>6/9</td><td class='st ok'>✓</td></tr><tr><td class='ver'>OpenBSD 7.x</td><td class='era'>2020–2026</td><td class='map'>202·OpenBSD 7.x 的现代化进程；203·OpenBSD 7.x 的 AI 代</td><td class='have'>6/9</td><td class='st ok'>✓</td></tr></tbody></table>
+<h3>DragonFly 卷（第十二卷）8 版本章</h3><table class='grid'><thead><tr><th class='ver'>版本章</th><th class='era'>时间锚点</th><th class='map'>映射 SUMMARY 章（章号·标题）</th><th class='have'>素材</th><th class='st'>结论</th></tr></thead><tbody><tr><td class='ver'>DragonFly 诞生</td><td class='era'>2003</td><td class='map'>214·DragonFly BSD 的诞生：；215·DragonFly BSD 的诞生：</td><td class='have'>5/9</td><td class='st ok'>✓</td></tr><tr><td class='ver'>DragonFly 早期演进</td><td class='era'>2003–2004</td><td class='map'>216·DragonFly BSD 早期演进；217·DragonFly BSD 早期演进；218·DragonFly BSD 早期演进</td><td class='have'>5/9</td><td class='st ok'>✓</td></tr><tr><td class='ver'>DragonFly 1.x</td><td class='era'>2004–2007</td><td class='map'>219·DragonFly 1.x 的 1.；220·DragonFly 1.x 时代与同</td><td class='have'>6/9</td><td class='st ok'>✓</td></tr><tr><td class='ver'>DragonFly 2.x</td><td class='era'>2008–2010</td><td class='map'>221·DragonFly 2.x 的 HA；222·DragonFly 2.x 时代 f；223·DragonFly 2.x 时代与同</td><td class='have'>7/9</td><td class='st ok'>✓</td></tr><tr><td class='ver'>DragonFly 3.x</td><td class='era'>2011–2014</td><td class='map'>224·DragonFly 3.x 的 HA；225·DragonFly 3.x 时代的治；226·DragonFly 3.x-4.x </td><td class='have'>5/9</td><td class='st ok'>✓</td></tr><tr><td class='ver'>DragonFly 4.x</td><td class='era'>2015–2017</td><td class='map'>227·DragonFly 4.x 的持续改；228·DragonFly 4.x 时期的架；229·DragonFly 4.x 周期漏洞</td><td class='have'>7/9</td><td class='st ok'>✓</td></tr><tr><td class='ver'>DragonFly 5.x</td><td class='era'>2017–2020</td><td class='map'>230·DragonFly 5.x 的现代化</td><td class='have'>3/9</td><td class='st ok'>✓</td></tr><tr><td class='ver'>DragonFly 6.x</td><td class='era'>2021–2026</td><td class='map'>231·DragonFly 6.x 的现代化；232·DragonFly 6.x 时代的可</td><td class='have'>6/9</td><td class='st ok'>✓</td></tr></tbody></table>
+  <h2>二、复核口径说明</h2>
+  <ul>
+    <li><strong>domain 校验</strong>：每条 SUMMARY 章的 domain 字段须与版本章所属 BSD（FreeBSD/NetBSD/OpenBSD/DragonFly）一致，全部通过。</li>
+    <li><strong>title 前缀校验</strong>：版本章主版本号（如「10.x」→「10」）须出现在 SUMMARY 章标题中（如「FreeBSD 10.0 的发布」），全部通过。</li>
+    <li><strong>时间锚点校验</strong>：版本章年份须与 SUMMARY 章标题内嵌年份差值 ≤2（NetBSD 2.0「2004–2005」vs「2003-2006」、NetBSD 7.0「2015–2018」vs「2013-2015」属「发布年 vs 开发期」口径差异，在容差内）。</li>
+    <li><strong>素材统计</strong>：每版本章 9 节中「有素材」指该节能从 SUMMARY 对应章取到真实节名；「待补」节由《建议节名》统一规则生成方向性节名。</li>
+    <li><strong>待补节分布</strong>：147 处待补节中，③贡献者、④批评者、⑤OS 比较为必设三类缺口最大；⑧史观审视、⑨跨 BSD 扩展为新增节，SUMMARY 多未单列，几乎全待补。</li>
+  </ul>
+
+  <p class="footnote">本报告由《给我自由——一部 BSD 史》编纂项目辅助生成，为节名建议的逐项核验记录，不构成对正文内容的学术结论。</p>
+
+</div>
+</body>
+</html>
