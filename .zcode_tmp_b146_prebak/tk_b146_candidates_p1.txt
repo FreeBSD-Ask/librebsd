@@ -1,0 +1,111 @@
+164729|L3|Christos Zoulas 就 posix_fallocate 内核实现方案回帖，正文几乎全为引用块
+164730|L3|Lourival Vieira Neto 就 lua_Number 定宽之争回帖，正文几乎全为引用块，未见作者论述
+164731|L3|Christos Zoulas 就 lua_Number 定宽之争回帖，正文几乎全为引用块，未见作者论述
+164732|L3|Christos Zoulas 就 lua_Number 定宽之争回帖，正文几乎全为引用块，未见作者论述
+164733|L3|Lourival Vieira Neto 就 lua_Number 定宽之争回帖，正文几乎全为引用块，未见作者论述
+164734|L3|Justin Cormack 就 lua_Number 定宽之争回帖，正文几乎全为引用块，未见作者论述
+164735|L3|Lourival Vieira Neto 就 lua_Number 定宽之争回帖，正文几乎全为引用块，未见作者论述
+164736|L3|Lourival Vieira Neto 就 lua_Number 定宽之争回帖，正文几乎全为引用块，未见作者论述
+164737|L3|David Holland 质疑所谓 keep the length 标志，称所指 URL 未见该标志且属 Linux 原生 fallocate 私有扩展
+164738|L3|David Holland 就 Lua 结构体转换库入树之争回帖，正文几乎全为引用块，仅余一句未成句文字
+164739|L3|David Holland 附议 Mouse，称跨 EOF 分配数据块在语义上无意义且会迫使重构 fsck
+164740|L3|Mouse 就 RLIMIT_FSIZE 与 SIGXFSZ 语义之争回帖，正文几乎全为引用块，未见作者论述
+164741|L4|Mouse 主张 posix_fallocate 须走读写循环，因待分配区间可能已有数据且不得改动，此乃入内核之理由
+164742|L3|David Holland 就 posix_fallocate 用户进程资源可观测性一议回帖，正文几乎全为引用块
+164743|L3|Lourival Vieira Neto 就 Lua 结构体转换库入树之争回帖，正文几乎全为引用块
+164744|L3|Christos Zoulas 就 lua_Number 定宽之争回帖，正文几乎全为引用块，未见作者本人论述
+164745|L3|Justin Cormack 就 lua_Number 定宽之争回帖，正文几乎全为引用块，未见作者本人论述
+164746|L3|Justin Cormack 就 lua_Number 定宽之争回帖，正文几乎全为引用块，未见作者本人论述
+164747|L3|Lourival Vieira Neto 就 lua_Number 定宽之争回帖，正文几乎全为引用块，未见作者本人论述
+164748|L3|Christos Zoulas 就 lua_Number 定宽之争回帖，正文几乎全为引用块，未见作者本人论述
+164749|L3|Terry Moore 就 lua_Number 定宽与 Lua 字节码安全性讨论回帖，正文几乎全为引用块
+164750|L3|Lourival Vieira Neto 就 lua_Number 定宽之争回帖，正文几乎全为引用块，未见作者本人论述
+164751|L3|Marc Balmer 就 Lua 结构体转换库入树之争回帖，正文几乎全为引用块，未见作者本人论述
+164752|L3|Marc Balmer 就 Lua 结构体转换库入树之争回帖，正文几乎全为引用块，未见作者本人论述
+164753|L3|Robert Elz 就 posix_fallocate 性能收益之争回帖，正文几乎全为引用块，未见作者本人论述
+164754|L3|Rhialto 就 posix_fallocate 一议反问是否存在查找文件空洞的既有或拟议接口，正文以引用块为主
+164755|L3|Terry Moore 就 Lua 字节码安全性讨论回帖，正文几乎全为引用块，未见作者本人论述
+164756|L3|Robert Elz 转述离线交流称 SEEK_HOLE 与 SEEK_DATA 可让程序逐段定位文件空洞
+164757|L3|Marc Balmer 就 lua_Number 定宽与 Lua 字节码安全性讨论回帖，正文几乎全为引用块
+164758|L3|Mouse 就 Lua 字节码安全性一议主张恶意性无法仅凭代码片段本身判定，需借助授权上下文
+164759|L3|John Nemeth 就 Lua 结构体转换库入树之争回帖，正文几乎全为引用块，未见作者本人论述
+164760|L3|matthew green 就 posix_fallocate 一议反驳称随机填充稀疏大文件会致严重碎片并使读取慢十倍
+164761|L3|David Holland 答 pkgsrc 模块问题，称已有若干模块且部分为新式模块而非旧式 lkm
+164762|L3|Marc Balmer 就 Lua 结构体转换库入树之争回帖，正文几乎全为引用块，未见作者本人论述
+164763|L4|J. Hannken-Illjes 提交补丁以 VI_CHANGING 取代 VI_INACTNOW 与 VI_INACTREDO，保护 vclean
+164764|L3|Lourival Vieira Neto 就 Lua 结构体转换库入树之争回帖，正文几乎全为引用块
+164765|L3|Christoph Badura 转见 Greg Troxel 的 ucom pps 支持补丁提案，建议直接提交称其想法不错
+164766|L3|Mouse 就 posix_fallocate 内核与用户态实现之争回帖，正文几乎全为引用块，未见作者本人论述
+164767|L3|Christoph Badura 就 posix_fallocate 碎片化一议提出另一选项，由文件系统负责放置稀疏区
+164768|L4|Lars Heidieker 提案改用 pool 管理 vmem 边界标签以消除重复代码并使标签页可释放
+164769|L3|Eduardo Horvath 就 posix_fallocate 碎片化一议回帖，正文几乎全为引用块，未见作者本人论述
+164770|L3|matthew green 警告改用 pool 会新增 vmem 与 pool 相互循环的路径并引用自己旧帖
+164771|L4|Christoph Badura 报告升级 6.99.24 至 6.99.27 后加速加密吞吐下降三至八个百分点
+164773|L3|Lourival Vieira Neto 问内核为何不定义 ptrdiff_t，建议置于 sys/cdefs.h 或允许 stddef.h
+164774|L4|Jan Danielsson 报告 NetBSD 6 amd64 在 Soekris net6501 上意外重启，附 uvm_fault 与致命页错误日志
+164775|L3|Matt Thomas 澄清 ptrdiff_t 经 machine/ansi.h 与 sys/types.h 在内核可用，但 stddef.h 不允许入内核
+164776|L3|Marc Balmer 转述 Illumos 开发者拟在内核加入 Lua 以支持 ZFS Channel Programs，附视频链接
+164777|L3|David Holland 就 Soekris 意外重启排查回帖，正文几乎全为引用块，未见作者本人论述
+164778|L3|Jan Danielsson 就 Soekris 意外重启排查回帖，正文几乎全为引用块，未见作者本人论述
+164780|L3|Emmanuel Dreyfus 就 Soekris 意外重启排查回帖，正文几乎全为引用块，未见作者本人论述
+164783|L3|Lars Heidieker 就 pool uvm vmem 循环致低内存挂死一议回帖，正文几乎全为引用块
+164784|L3|David Laight 反驳以 NFS 为多 worker 之例，称 NFS 恰是不佳例子且宜采用单服务器
+164785|L3|Lars Heidieker 就 pool uvm vmem 循环致低内存挂死一议回帖，正文几乎全为引用块
+164786|L3|Paul Koning 就 POSIX 消息队列与多接收者一议回帖，正文几乎全为引用块，未见作者本人论述
+164787|L3|David Laight 就 CIRCLEQ 与严格别名规则一议回帖，正文几乎全为引用块，未见作者本人论述
+164788|L4|Lourival Vieira Neto 提交补丁把 ptrdiff_t 引入内核并新建 sys/stddef.h 头文件
+164789|L3|Lourival Vieira Neto 纠正 Matt Thomas，称机器头文件仅定义 _BSD_PTRDIFF_T_，类型只在 stddef.h
+164791|L3|Matt Thomas 就 ptrdiff_t 与 stddef.h 在内核可用性一议回帖，正文几乎全为引用块
+164792|L3|Michael van Elst 反驳磁盘调度器饥饿说，称 NetBSD NFS 客户端用 TCP 不会超时重发请求
+164793|L4|Lourival Vieira Neto 补丁把 lua_Number 改为 intmax_t，Lua 5.3 的整数类型即 long long
+164794|L4|Christoph Badura 将加密吞吐回退定位到 pcu 与 fpu 的改动，称该改动前一版内核无此损失
+164795|L3|Sandro Millien 就 Lua 入内核一议回帖，正文几乎全为引用块，仅余一句未成句文字
+164796|L3|Lourival Vieira Neto 回复 Mindaugas，主张 ptrdiff_t 留在 sys/types.h 以免与 stddef.h 重复定义
+164797|L3|Lourival Vieira Neto 就 ptrdiff_t 定义位置一议回帖，正文几乎全为引用块，未见作者本人论述
+164798|L3|Joerg Sonnenberger 就 ptrdiff_t 入内核与新建 sys/stddef.h 补丁回帖，正文几乎全为引用块
+164799|L3|Lourival Vieira Neto 就 ptrdiff_t 入内核与新建 sys/stddef.h 补丁回帖，正文几乎全为引用块
+164800|L3|David Young 就 ptrdiff_t 与 stddef.h 在内核可用性一议回帖，正文几乎全为引用块
+164801|L3|Mindaugas Rasiukevicius 质疑为何新建 sys/stddef.h，要求把 ptrdiff_t 留在 sys/types.h
+164802|L3|Lourival Vieira Neto 就 ptrdiff_t 与 stddef.h 在内核可用性一议回帖，正文几乎全为引用块
+164803|L3|Christoph Badura 就加密吞吐性能回退排查回帖，正文几乎全为引用块，未见作者本人论述
+164804|L3|David Young 就 ptrdiff_t 与 stddef.h 在内核可用性一议回帖，正文几乎全为引用块
+164806|L3|Lourival Vieira Neto 就 ptrdiff_t 入内核与新建 sys/stddef.h 补丁回帖，正文几乎全为引用块
+164807|L3|Michael van Elst 分析类型统一方案，称多数位置需同时包含 stdbool stddef 与 sys/types 头文件
+164808|L3|Matt Thomas 就 ptrdiff_t 入内核与新建 sys/stddef.h 补丁回帖，正文几乎全为引用块
+164810|L4|Emmanuel Dreyfus 报告 netbsd-6 i386 开启 PAE 后负载升高即随机重启，current 不受影响
+164811|L3|David Brownlee 就 POSIX 消息队列与多接收者一议回帖，正文几乎全为引用块，未见作者本人论述
+164812|L3|Emmanuel Dreyfus 称自己同样遇到本地域套接字语义变更所致问题，问是否宜予回退
+164813|L3|matthew green 反对把 nfsd 默认改为单线程，称单线程时他反而见过多客户端变慢
+164814|L3|matthew green 就 netbsd-6 i386 PAE 随机重启一议回帖，正文几乎全为引用块，未见作者本人论述
+164815|L4|Emmanuel Dreyfus 附上补丁修复本地域套接字末零字节问题，验证 Dovecot 恢复且 kdump 不再转储
+164816|L3|Mindaugas Rasiukevicius 建议以 DEBUG 与 DIAGNOSTIC 与 LOCKDEBUG 选项编译内核复现该重启
+164817|L3|Emmanuel Dreyfus 回应称加开 LOCKDEBUG 等选项后仍然无 panic 直接重启
+164818|L3|Emmanuel Dreyfus 就 netbsd-6 i386 PAE 随机重启补丁回帖，正文几乎全为引用块
+164820|L3|Emmanuel Dreyfus 就 netbsd-6 i386 PAE 随机重启一议回帖，正文几乎全为引用块，未见作者本人论述
+164821|L3|Emmanuel Dreyfus 就 netbsd-6 i386 PAE 随机重启一议回帖，正文几乎全为引用块，未见作者本人论述
+164822|L3|Mouse 就 netbsd-6 i386 PAE 随机重启一议回帖，正文几乎全为引用块，未见作者本人论述
+164824|L3|Emmanuel Dreyfus 主张不为求正确而牺牲向后兼容，称平滑升级是 NetBSD 的主要卖点
+164825|L3|Emmanuel Dreyfus 同意破坏二进制兼容不可接受，表示将提出补丁使本地域套接字路径重新以空字符结尾
+164826|L3|Mouse 就 AF_UNIX 末零字节之争认为兼容性主张只适用于 COMPAT 兼容代码而非非兼容程序
+164828|L3|David Holland 就加密吞吐性能回退排查回帖，正文几乎全为引用块，未见作者本人论述
+164829|L3|Mouse 引 1.4T 的 unix(4) 手册称结尾空字符不属于地址且 4.0.1 手册亦强调此点，并自问 AF_UNIX 何时创立
+164830|L3|Emmanuel Dreyfus 说明 m_len 包含结尾空字符并附第三版补丁称在其机器上工作正常
+164831|L3|Emmanuel Dreyfus 报告静默重启数十次后出现一次 panic 为 blkfree 释放空闲块，疑与文件系统损坏有关
+164835|L3|David Laight 认同 NFS 多 worker 饥饿说不成立，称多客户端并发 I/O 致单一服务器饥饿之说无道理
+164836|L3|Aleksej Saushev 报告升级 current 后部分进程卡在 layerfs 等待通道上，附 ps 输出且升级后仍未解决
+164837|L3|J. Hannken-Illjes 就 layerfs 进程卡住一议回帖，正文几乎全为引用块，未见作者本人论述
+164838|L3|David Holland 指出 NFS 服务器端电梯算法致写请求等待属缺陷，NFS 本应保持顺序性
+164840|L4|David Holland 提交 qsort_r 补丁实现可重入的 qsort_r 与 mergesort_r 与 heapsort_r 以兼容 GNU
+164841|L3|David Holland 就 qsort_r 补丁比较函数 thunk 方案回帖，正文几乎全为引用块
+164842|L3|David Laight 就 qsort_r 补丁方案回帖，正文几乎全为引用块，未见作者本人论述
+164843|L3|Joerg Sonnenberger 就 qsort_r 补丁方案回帖，正文几乎全为引用块，未见作者本人论述
+164844|L3|Mouse 主张嵌套函数支持对编译器属必备，因其可一次性解决向 qsort 传递上下文参数的问题
+164845|L3|David Laight 就 qsort_r 补丁方案回帖，正文几乎全为引用块，未见作者本人论述
+164846|L3|Christos Zoulas 就 qsort_r 补丁方案回帖，正文几乎全为引用块，未见作者本人论述
+164847|L3|David Laight 就 POSIX 消息队列与多接收者一议回帖，正文几乎全为引用块，未见作者本人论述
+164848|L4|Lourival Vieira Neto 提交补丁把 luacore 模块改名为 luasystm，称该名与 Lua 官方用词冲突
+164849|L3|Joerg Sonnenberger 就 qsort_r 与嵌套函数之争回帖，正文几乎全为引用块，未见作者本人论述
+164850|L4|Lourival Vieira Neto 提交补丁改让 luapmf 模块调用 luaL_register 而非自行重复实现
+164851|L3|David Holland 就 qsort_r 与嵌套函数之争回帖，正文几乎全为引用块，未见作者本人论述
+164852|L3|Mouse 就 qsort_r 一议反驳函数指针强制转换在 C 中安全之说，称调用错误类型指针即脱离标准保护
+164853|L3|Mouse 澄清自己并未说 GCC 式嵌套函数支持即好，并提议该线程或宜移入 tech-toolchain

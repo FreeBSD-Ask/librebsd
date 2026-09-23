@@ -1,0 +1,107 @@
+167604|L4|Jukka Marin 在 SAS 控制器选型线程回应 Edgar，指出 NetBSD 支持的 RAID 设备与市场在售型号的交集几乎为空，并询问具体型号
+167605|L3|Kengo NAKAHARA 就 intrctl 中断路由 RFC 回帖，正文以引用自己旧帖与补丁链接为主
+167606|L3|Christos Zoulas 回复 Kengo 的 MSI 与 MSI-X 接口统一 RFC，正文以引用 Kengo 的补丁说明为主
+167607|L4|David Holland 针对 PUFFS 文件系统无响应时强制卸载失败，主张让 vnode 锁可被中断打断，而非仅调试 puffs
+167608|L4|Emmanuel Dreyfus 报告强制卸载另一种失败场景：PUFFS 根 vnode 持锁卡死，调用链卡在 VOP_LOCK 而无法卸载
+167609|L4|Emmanuel 回应 David 的锁可中断方案，提出可用 LK_NOWAIT 轮询 VOP_LOCK 直至放弃，以解决强制卸载
+167611|L4|John Nemeth 在 SAS 控制器线程追问 Areca 控制器具体型号，指出为 arcsmd 添加 PCI 器件号或为 trivial
+167612|L3|Mindaugas Rasiukevicius 回应 Kengo 称 IRQ affinity RFC 已无人反对约十个月，正文以引用为主
+167613|L3|Kengo 回应 Christos 的 MSI 接口 RFC 评论，正文以引用旧帖与补丁链接为主
+167614|L4|Christos 指出 pci_intr_alloc 第四参数必须是 MSI-X、MSI 或 INTX 之一，致其 if_wm 示例有误并更新
+167615|L3|Kengo 重发更正邮件，说明数小时前所发内容有误，正文以引用为主
+167616|L4|Taylor R Campbell 分析 LOCKDEBUG 中 Last locked 字段含义，说明其指示最后获取锁的 rw_enter 返回地址
+167617|L4|Emmanuel 报告用 LOCKDEBUG 排查强制卸载故障时得到 panic，位置在 mi_userret 内的 LOCKDEBUG_BARRIER
+167618|L3|Taylor R Campbell 回应 LOCKDEBUG panic 报告，正文以引用为主
+167619|L3|David Holland 回应 LOCKDEBUG panic 讨论，正文以引用他人分析为主
+167620|L4|Emmanuel 回应 Taylor，指出相关代码无法在未释放 vp->v_interlock 时退出，并推测 vdead_check 走 vwait 路径
+167621|L4|Taylor 判断该 panic 几乎肯定是 vnode 加了锁却没解锁，并指出 lockdebug 不提供完整栈回溯
+167622|L4|David Holland 同意在 vn_lock 与 vn_unlock 中加入额外 lockdebug 检查，称早已打算引入对称的 vn_unlock
+167623|L4|Emmanuel 反驳 David 的锁泄漏判断，称所用为未作任何修改的 netbsd-7 PUFFS
+167625|L4|Emmanuel 说明根因：用 netbsd-7 检出却在某时清空 puffs 并从 current 检出，形成混合内核
+167626|L3|David Holland 在强制卸载失败线程回应，正文以引用他人讨论为主
+167627|L4|Emmanuel 就 lockdebug 缺少完整栈回溯追问，希望至少能获取系统调用号以便定位
+167628|L4|Don Lee 在强制卸载线程提出自己更宁可看到 panic 也不愿系统挂死
+167629|L3|Emmanuel 简短回复 Don Lee，说明启用 LOCKDEBUG 后即可得到 panic
+167630|L4|Kengo 感谢各位就 IRQ affinity RFC 提出的意见，准备提交该实现
+167631|L4|David Young 在 CloudABI 引入线程中评价 Capsicum 更像面向开发者而非用户，认为改造源码门槛过高
+167632|L4|Ed Schouten 回应 David，认为面向开发者是刻意权衡，并说明 CloudABI 与 Capsicum 的设计取舍
+167633|L4|Maxime Villard 指出 if_ieee1394subr 存在内存泄漏缺陷并给出疑似正确修复代码
+167634|L4|matthew green 报告 linux DRM 相关锁定自身 panic 现象并分享调试补丁，调用点在 linux_ww_mutex
+167635|L4|matthew green 在自己笔记本上运行该调试补丁，但尚未重度使用，同时提到在另一系统上发现该补丁的问题
+167636|L4|Taylor R Campbell 回应 DRM 互斥锁自锁 panic，就调试补丁的有效性给出评价
+167637|L3|Ignatios Souvatzis 审核 if_ieee1394 内存泄漏修复补丁，简短表示看起来没问题
+167638|L4|Timo Buhrmester 反馈在该补丁与 LOCKDEBUG 组合下仍得到同样的互斥锁自锁 panic，提供实测
+167639|L4|Maxime Villard 询问内核重复调用 splx 或遗漏调用时会造成何种后果
+167640|L4|Maxime Villard 报告 sys_pset_assign 存在严重调度缺陷，自绑定 CPU 时 l_affinity 释放不当
+167641|L4|Greg Troxel 解答 splx 问题：重复传入同一次保存值问题不大，但漏调会让内核线程长时间保持高优先级
+167642|L3|Maxime Villard 回应 splx 讨论，正文以引用他人分析为主
+167643|L4|Taylor R Campbell 解释 splx 后果：内核线程持续运行于高中断优先级，导致对中断无响应
+167644|L3|Taylor 回应 Maxime，指出 splx 漏调与 mutex_exit 漏调属同类缺陷，正文以引用为主
+167645|L4|Mindaugas 提交补丁，在 sys_pset_assign 返回 EPERM 之前补上 lwp_unlock 以修复锁泄漏
+167646|L3|Maxime Villard 回应 sys_pset 补丁讨论，正文以引用补丁为主
+167647|L4|Maxime Villard 提议在 kmem_guard_free 中对两个 atomic_swap_ptr 做原子交换以同时登记 va 与 size
+167648|L4|Taylor 回答没有现成的双指针原子交换函数，并指出原子操作本就昂贵，多一次差异有限
+167649|L4|Taylor 说明双原子方案可行：i386 用 cmpxchg8b、amd64 用 cmpxchg16b、ll_sc 平台用 ll_sc
+167650|L4|Dennis 说明 x86 与 IBM mainframe 已有双指针 CAS 指令，其出现只为解决单指针 CAS 的 ABA 问题
+167651|L4|Maxime Villard 追加提问 kern_idle 中 create_idle_lwp 是否在持有 lwp 锁时才设置 l_cpu
+167652|L4|Matthias-Christian Ott 询问 queue.h 中 LIST_HEAD_INITIALIZER 初始化宏与 LIST_INIT 宏各自的用途
+167653|L3|Matt Thomas 回复双指针原子交换讨论，正文以引用为主
+167654|L4|Taylor 指出用 cmpxchg16b 会无法运行于部分旧机器，包括某些 Core 2 主板
+167655|L3|Dennis 回复 cmpxchg16b 兼容性讨论，正文以引用与链接为主
+167656|L4|Etomi 比较 AlphaStation DS15 与 DS25，两者同 CPU 而 B 缓存大小不同，讨论缓存着色对性能的影响
+167658|L4|Maxime Villard 重发 PaX 补丁，由 ELF 加载器把标志注册进 exec 包并在启动进程前设置
+167659|L3|Maxime Villard 感谢回复，表示将 per CPU 队列方案加入自己的待办列表
+167660|L3|Michael 回复 NFS 写入损坏报告，称 MIPS 上长期存在且原因不明，正文以引用为主
+167662|L4|Martin Husemann 在无盘 evbearm v5 ARM 机器上未见 NFS 写入损坏，认为不能排除 awge 的问题
+167663|L3|David Holland 回复 NFS 写入损坏讨论，正文以引用他人实测结论为主
+167664|L4|Ryota Ozaki 提议在网络子系统用 time_uptime 替代 time_second，以免缓存过期等计时受时间跳变影响
+167665|L3|Robert Swindells 回复 NFS 写入损坏讨论，正文以引用为主
+167666|L3|Taylor R Campbell 回复 time_uptime 替换补丁，正文以引用补丁为主
+167668|L3|Ryota Ozaki 回复 time_uptime 替换讨论，正文以引用为主
+167669|L4|Taylor 指出时间换算宏存在溢出风险，建议先减 time_uptime 或改为静态内联函数
+167670|L4|Masanobu SAITOH 提议把 pci_msi_count 与 pci_msix_count 的参数改为 chipset_tag 与 pcitag
+167671|L3|Christos Zoulas 回复 pci_msi_count 参数改动提议，表示同意但担心与现有语义产生差异
+167672|L4|Joerg 补充说明 cmpxchg8b 实质等价于 Pentium 以上，并指出确实存在 486 级的多处理器系统
+167673|L3|Joerg 回复 queue.h 宏讨论，正文以引用为主
+167674|L4|Joerg 解释头初始化宏让全局队列无需运行时初始化即可直接使用，这正是两类宏存在的原因
+167675|L4|Maxime Villard 更新 PaX 补丁，改动 exec_elf 中 elf_placedynexec 以处理 PaX 标志
+167676|L4|Thor Lancelot Simon 表示还有 386 级的多处理器系统，其中部分曾运行开源操作系统
+167677|L3|David Holland 回复旧平台多处理器讨论，正文以引用为主
+167678|L3|Joerg Sonnenberger 回复 386 级 SMP 讨论，正文以引用为主
+167680|L3|Thor Lancelot Simon 回复 SMP 硬件讨论，正文以引用为主
+167681|L4|Matt Thomas 指出香蕉派同样使用 awge 却不复现损坏，认为缓存刷新差异指向 awge 驱动层
+167682|L3|Kengo NAKAHARA 在 IRQ affinity RFC 线程重发补丁，正文以引用为主
+167683|L4|Jeff Rizzo 报告启用 WAPBL 与 TRIM 后 odroid-c1 上出现内核崩溃，提交 bug 供排查
+167684|L3|Masanobu SAITOH 回复 Christos，就 pci_msi_count 参数改动继续讨论，正文以引用为主
+167686|L4|Jeff Rizzo 报告启用 WAPBL 与 discard 后出现内核崩溃，断言失败点为 rw_lock_held 的检查
+167687|L3|Christos Zoulas 回复 pci_msi_count 参数讨论，正文以引用为主
+167688|L4|David Young 说明原 pci 九手册接口并不这样传参，是为新增成员才改为传结构体本身
+167689|L4|matthew green 说明原设计只在自动配置期调用且结构体可用，故当时选择直接传递结构体
+167691|L3|Kengo NAKAHARA 回复 pci_msi_count 参数讨论，正文以引用为主
+167692|L4|Masanobu SAITOH 自述已提交变更使 ixv 恢复可编译，因其仅支持 MSI-X，现求熟悉者用 current 实测
+167694|L4|Bert Kiers 表示愿为 ixv 驱动测试，说明自己有 Linux KVM 与 VMware 等虚拟环境可用
+167695|L4|Bert Kiers 说明其宿主机是 X540-AT2，但 VM 内网卡显示为 Red Hat 设备，测试条件受限
+167696|L3|SAITOH Masanobu 回复 ixv 测试环境讨论，正文以引用为主
+167697|L4|Thor Lancelot Simon 说明 ixv 需 MSI-X 与 SR-IOV，而 NetBSD 尚不能访问 PCIe 扩展配置空间
+167698|L3|SAITOH Masanobu 回复 ixv 测试讨论，正文以引用为主
+167699|L3|Kengo NAKAHARA 在 IRQ affinity RFC 线程回复，正文以引用为主
+167700|L4|Ryota Ozaki 提交新补丁重构 ARP 缓存以服务多核安全网络栈，用 lltable 取代旧 llinfo
+167701|L4|Bert Kiers 反馈 ixv 测试进展：Linux 侧可用，旧版 NetBSD 识别 0x8086 器件却未配置成功
+167702|L3|Bert Kiers 回复 ixv 测试请求，因忙于 Debian 升级与 systemd 尚未开始测试
+167703|L4|Martin Husemann 提示可关 vfs.wapbl.flush_disk_cache，并称自己常在笔记本与配有 UPS 的机器上开启
+167705|L4|Michael van Elst 分析 WAPBL 在 SD 卡上偏慢，因 SD 卡小数据块写入很慢，顺序日志被切碎写入
+167706|L4|Bert Kiers 附上 uname 与 dmesg 输出，报告 ixv 在 NetBSD 7.99.21 下的驱动初始化情况
+167707|L3|Ryota Ozaki 回复 ARP 缓存重构补丁讨论，正文以引用为主
+167708|L3|David Holland 回复 SD 卡性能讨论，正文以引用为主
+167712|L3|J. Hannken-Illjes 回复 SD 卡性能讨论，正文以引用为主
+167713|L3|Christos Zoulas 回复 ARP 缓存重构补丁，正文以引用为主
+167714|L4|Bert Kiers 附上 ixv dmesg 输出，显示清除 prefetchable 位并使用 MSIX 中断
+167719|L4|Bert Kiers 转述 SAITOH 的怀疑即 MAC 与链路状态经 PF 与 VF 通信已断，追问故障出在哪个环节
+167721|L3|Joerg Sonnenberger 回复 memcmp 性能讨论，正文以引用与往年链接为主
+167722|L3|Joerg Sonnenberger 询问 memcmp 很慢的说法有什么实质证据支撑
+167723|L4|Taylor R Campbell 建议用函数边界追踪器验证，说明需在内核配置加 KDTRACE_HOOKS 并设 MKDTRACE
+167724|L3|J. Hannken-Illjes 回复 Joerg 的质疑，引用去年邮件索引并给出讨论链接
+167725|L3|Michael van Elst 转述 Stephan 在带 aac raid 控制器的 amd64 服务器上的批量 touch 耗时实测
+167726|L3|David Holland 回复 SD 卡性能讨论，正文以引用为主
+167727|L4|Thor Lancelot Simon 主张发行版应默认启用 DIRHASH，以改善大量文件的目录操作性能
+167728|L3|Joerg Sonnenberger 反问对方是否改主意而把 DIRHASH 关掉了

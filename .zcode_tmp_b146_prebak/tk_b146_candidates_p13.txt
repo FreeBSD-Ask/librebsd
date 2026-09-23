@@ -1,0 +1,96 @@
+166229|L3|Justin Cormack 回复 detect valid fd 线程，要求提供 ktrace 输出与该现象出现过的其他版本
+166230|L4|Patrick Welche 用程序枚举 fd 3 至 15 做 F_GETFD，发现 close-on-exec 后 fd 依然存活
+166231|L3|Matt Thomas 回复 detect valid fd 线程，建议查看 ktrace 输出与问题出现的版本信息
+166232|L3|Patrick Welche 回复 detect valid fd 线程，说明自己在 NetBSD 7.99.1 amd64 上也遇到 fd 有效性判断异常
+166233|L3|Christos Julliard 回复 detect valid fd 线程，认为 ktrace 输出是定位问题所需的关键证据
+166234|L4|mrg 发现 xsm 与 VeraSeBd.ttf 的 fd 在 close-on-exec 后仍存活，怀疑 X 工具存在该缺陷
+166235|L4|Martin Husemann 指出 cpufreq(9) 存单一全局 cookie 假设所有 CPU 频率相同，建议 sparc64 按 CPU 保存软描述符
+166236|L3|matthew green 回复 cpufreq(9) 按 CPU 化线程，正文以引用为主
+166237|L4|Manuel Bouyer 自述在 beaglebone black 设计 TDA19988 HDMI 传输器驱动，需从外接显示器读取 EDID
+166238|L4|Kamil Rytarowski 回复日期时间宏统一讨论，跨平台对比 FreeBSD、OpenBSD、Linux 与 Tru64 的 clock.h 提供方式
+166239|L3|Patrick Welche 回复 detect valid fd 线程，正文以引用为主
+166241|L3|Manuel Bouyer 回复 Jared McNeill 关于设备树挂载的建议，继续讨论 i2c 控制器是否需出现在设备树
+166242|L3|Ryo ONODERA 回复 xHCI 非根集线器议题，正文以引用为主
+166245|L4|Manuel Bouyer 讨论 HDMI 传输器在内核配置中如何声明驱动，并追问 beaglebone cape 布线差异下板型识别方案
+166249|L4|Manuel Bouyer 继续讨论 HDMI 传输器对其他板型的可复用性，以及是否支持不同 VGA 视频驱动接入
+166250|L4|Kamil Rytarowski 自述移植 Tru64 AdvFS 到 NetBSD 时计划以外部 msfs 名纳入并完成重新许可协调，仍有数千行内核编译错误
+166251|L4|Kamil Rytarowski 发布 Tru64 AdvFS 移植第一份状态报告，列出 sbin 与 usr.sbin 入库及新增构建变量 MKADVFS
+166252|L3|Matt Thomas 回复 Tru64 AdvFS 移植状态邮件，正文以引用为主
+166253|L4|Greg Troxel 回复新手 Nick 关于文件系统项目询问，建议 tmpfs 内存使用策略与 tmpfs 快照项目作为切入点
+166254|L4|Michael 说明 G4 有内置时钟控制且 SMP 硬件已在使用，但 ACPI 全局语义仍是 cpufreq(9) 按 CPU 化的限制
+166255|L4|Michael 自述在 macppc 上 valkyriefb 通过 videopll at iic 挂载，由 fb 驱动按名字查找时钟发生器
+166256|L3|Manuel Bouyer 回复 HDMI 传输器挂载议题，正文以引用为主
+166258|L4|Scott Burns 建议先升级两块 mfi 卡固件作为初步排查，列出 mfi0 与 mfi1 的最新版本号
+166259|L4|mrg 指出 Christos 已提交多个修复应能解决 xsm 与字体打开文件问题，建议更新 libc 与 libXfont 后重跑测试
+166260|L4|Mark Davies 报告 Dell PERC H810 外接阵列在 Dell PowerEdge R610 上运行数分钟后整机冻死的硬件稳定性问题
+166263|L3|David Holland 回复 Maxime Villard 的 Brainy 潜在缺陷报告，正文以引用为主
+166265|L4|Maxime Villard 报告通过代码扫描器发现的 33 处 NetBSD 内核潜在缺陷，仅提供报告 URL 待修复
+166266|L3|Jochen Kunz 回复 Tru64 AdvFS 移植状态邮件，表示自己在 Tru64 时代就非常喜欢 AdvFS，称移植完成是梦想成真
+166267|L3|bycn82 提出 build kernel from source 求助，正文以引用为主
+166269|L3|Mindaugas Rasiukevicius 回复 build kernel from source 求助，正文以编译错误引用为主
+166270|L3|David Holland 回复 PUFFS EDQUOT 处理讨论，正文以引用为主
+166271|L4|Emmanuel Dreyfus 报告 PUFFS 配额写入致进程冻在 DE+，根因是 EDQUOT 在 VOP_STRATEGY 路径被忽略
+166274|L3|David Holland 回复时钟宏统一讨论，正文以引用为主
+166275|L3|David Holland 回复 NFS getdents 状态问题，正文以引用为主
+166276|L3|David Holland 回复压缩缓存讨论，正文以引用为主
+166277|L3|David Holland 回复 kernfs 与 procfs 议题，正文以引用为主
+166278|L4|Emmanuel Dreyfus 回复 David Holland 指出目录遍历可靠实现是公认难题，xfs 等文件系统为此付出大量努力
+166279|L4|Antti Kantee 建议在 puffs 支持 genfs_ops 以便块分配前咨询文件服务器，Emmanuel 追问是否即 gop_alloc
+166280|L3|Robert Elz 回复日期时间宏统一讨论，正文以引用为主
+166281|L3|David Holland 回复 tmpfs 项目讨论，正文以引用为主
+166284|L3|Christos Julliard 回复时钟宏统一讨论，正文以引用为主
+166285|L4|Manuel Bouyer 报告 TDA19988 驱动进展，在 beaglebone black 上挂载 i2c 总线，需与 eeprom 及电源芯片共存
+166286|L3|Robert Swindells 回复 TDA19988 HDMI 传输器接口设计，正文以引用为主
+166287|L3|Robert Swindells 继续回复 HDMI 传输器接口讨论，正文以引用为主
+166290|L4|Kamil Rytarowski 同意减少 (U)L 修饰并直接使用 86400，此前已就该问题提交 bug 报告补丁
+166291|L3|Manuel Bouyer 回复 HDMI 传输器接口讨论，正文以引用为主
+166292|L4|Jared McNeill 建议为 EDID 1.3 扩展块预留容量，询问 TDA19988 驱动中需要多大的数组空间
+166293|L4|Taylor R Campbell 认为生成 GPLv2 内核模块技术上可行但对类似 beaglebone 不实用，追问为何 boot loader 无法加载
+166294|L4|Martin Husemann 认为原则可行但树内代码实际不可行，改进这一现状是值得追求的方向
+166295|L4|Taylor R Campbell 澄清通用 drmkms 代码是平台无关的，Intel 图形驱动限 x86 只因 Intel 图形本身限 x86
+166296|L4|Martin Husemann 再次回应关于 GPLv2 内核模块可行性，认为对 beaglebone 类平台并不实用
+166297|L4|Christoph Egger 反驳 Matt Thomas 关于 GPL 代码的观点，指出 FreeBSD 已经提供了相关支持
+166298|L3|Matt Thomas 回复 HDMI 传输器接口讨论，正文以引用为主
+166299|L3|Matt Thomas 回复 HDMI 传输器接口讨论，正文以引用为主
+166300|L3|Manuel Bouyer 回复 HDMI 传输器接口讨论，正文以引用为主
+166301|L4|mrg 说明 DRM 代码采用 BSD 与 GPL 混合许可，核心与主流 GPU 驱动为 BSD，近期 SoC 驱动多为 GPL，建议向 TI 索取双许可
+166302|L3|Christoph Egger 回复 HDMI 传输器接口讨论，正文以引用为主
+166303|L4|Martin Husemann 指出 FreeBSD 有支持但模块化方案对从 u-boot 启动 NetBSD 内核无用，需要单体内核可用方案
+166304|L3|Emmanuel Dreyfus 追问 GOP_ALLOC 与 VOP_FALLOCATE 是否存在实质差异，只多 flag 与 cred 参数
+166307|L4|Emmanuel Dreyfus 通过复制 sys/pread.c 并替换字符串解决系统调用与 libc 同名冲突问题
+166308|L4|Chuck Silvers 澄清 VOP 调用是文件系统与内核其他部分的接口，GOP 系列调用则属于 genfs 分页 IO 层
+166309|L4|Emmanuel Dreyfus 提交 FFS fallocate 补丁，发现 libc stub 参数损坏，改用 int 原型后正常
+166310|L4|Emmanuel Dreyfus 提交更新版 FFS fallocate 补丁，加入 uvm_vnp_setsize() 调用以避免 panic
+166311|L3|Emmanuel Dreyfus 回复 Martin Husemann 关于 syscall stub 的建议，追问该 syscall 是否首次发布
+166312|L4|Martin Husemann 建议参考 mknodat.c 与 posix_fadvise.c 的非版本化与版本化变体解决同名冲突
+166313|L4|Chuck Silvers 指出 GOP_ALLOC 不初始化已分配块，而 fallocate 需要表示未初始化以从对应偏移返回零
+166314|L3|Emmanuel Dreyfus 提出 syscall stub 问题，询问系统调用名与 libc 函数同名时的处理方式
+166315|L4|Emmanuel Dreyfus 复现 fallocate 缺陷，ls -ls 文件块数不变而 df 显示文件系统增长，怀疑泄漏块
+166316|L4|Emmanuel Dreyfus 建议 puffs_vnop_write 调用 GOP_ALLOC，以应对 EDQUOT 场景
+166318|L4|Emmanuel Dreyfus 提交 PUFFS GOP_ALLOC 与 fallocate 补丁，解决 EDQUOT 下缓存无法刷新致卸载需强制的问题
+166319|L3|Emmanuel Dreyfus 回复 Chuck Silvers 关于 GOP_ALLOC 实现仍遗漏部分的问题
+166321|L4|Emmanuel Dreyfus 指出 puffs_gop_alloc 实现仍有遗漏，需处理 mutex 保护下的 pn_sizemtx
+166322|L3|David Holland 建议尝试 fsck 处理文件块泄漏
+166323|L3|Emmanuel Dreyfus 回复 PUFFS GOP_ALLOC 与 fallocate 补丁讨论，正文以引用为主
+166324|L3|Emmanuel Dreyfus 回复 PUFFS GOP_ALLOC 与 fallocate 补丁讨论，正文以引用为主
+166325|L4|David Laight 纠正 ixg(4) 线程对 2.5Gbps 带宽的误读，说明 PCIe 按事务计数且事务层与链路层各有字节开销
+166326|L4|J. Hannken-Illjes 指出 GOP_ALLOC 从 VOP_GETPAGES 调用，VOP_PUTPAGES 对未映射区为空操作，客户端须自行调用
+166327|L4|Emmanuel Dreyfus 说明 GOP_ALLOC 有 fallocate 时直调否则写零，puffs_vnop_write 拆为两版
+166328|L3|Emmanuel Dreyfus 追问缓存写操作下最终由哪个 vnode 操作调用 GOP_ALLOC
+166330|L3|J. Hannken-Illjes 回复 PUFFS GOP_ALLOC 与 fallocate 补丁讨论，正文以引用为主
+166331|L3|J. Hannken-Illjes 回复 PUFFS GOP_ALLOC 与 fallocate 补丁讨论，正文以引用为主
+166333|L4|Emmanuel Dreyfus 提交 PUFFS 最新补丁，无 fallocate 时需对整个 vnode 调 VOP_PUTPAGES
+166334|L4|Justin Cormack 提议补全无符号 32 位与无符号 64 位 CTLTYPE_UINT 以匹配 CTLTYPE_INT 与 CTLTYPE_QUAD
+166335|L4|Emmanuel Dreyfus 提交 PUFFS GOP_ALLOC 与 fallocate 的更新补丁，说明整体方案仍有数项不满足之处
+166338|L3|Manuel Bouyer 回复交叉编译咨询，建议将邮件转发至 tech-kern 以获取更多帮助
+166340|L4|Ryota Ozaki 回复恢复 bpf MPSAFE 线程，说明自己因忙碌延迟并回归处理积压邮件
+166342|L4|Justin Cormack 回复 CTLTYPE_UINT 讨论，讨论类型别名与兼容问题
+166343|L4|matthew green 认为提供显式类型名作为基定义并提供别名是正确做法，支持 fbsd 与 dfbsd 名称作为兼容别名
+166344|L4|Ryota Ozaki 回复 Darren Reed 关于 pserialize 经验与 ifnet 工作的关联
+166345|L3|Ryota Ozaki 回复 rmind 关于 bpf MPSAFE 工作进展，正文以引用为主
+166346|L4|Kamil Rytarowski 指出 sys/clock.h 相关已有补丁可参考
+166347|L4|Kamil Rytarowski 发布 Tru64 AdvFS 移植第二份状态，代码迁至 external/gpl2/msfs 加 dyn_hashtable
+166348|L3|Thor Lancelot Simon 回复 Kamil 关于调试追踪系统的设计说明，正文以引用为主
+166350|L4|Kamil Rytarowski 认为内部性能追踪与锁追踪属于设计缺陷且移植性差，计划改用 Linux 下 librump 工具调试
+166351|L3|Justin Cormack 回复 Tru64 AdvFS 移植第二份状态报告，正文以引用为主
+166352|L4|Ilia Zykov 提交 ptyfs 与 ptm 驱动补丁，修正错误注释与小内存泄漏，适用于 netbsd-7 与 current
