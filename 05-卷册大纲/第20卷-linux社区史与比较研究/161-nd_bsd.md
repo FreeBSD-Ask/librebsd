@@ -73,7 +73,6 @@
 - 【Linux社区】Jeff Garzik 回帖中有人抱怨 Linux 在无线芯片逆向工程上远落后于 openbsd,后者已成功逆向众多无线芯片,引发对做法是否合法的争议,原文称 "we're already falling far behind openbsd"。 `<!-- ROW_MINE: netdev.messages.8038093 -->`
 - 【Linux社区】Daniel Lezcano 在网络容器分层讨论收尾时说明,自己提及 bsdjail 仅属背景信息,不构成其方案的依据,原文称 "The bsdjail was just for information ..."。 `<!-- ROW_MINE: netdev.messages.8038101 -->`
 - 【Linux社区】Hannes Frederic Sowa 找到 FreeBSD 的 syncookies 时间戳改动片段,提议连同 tcp_ipv6.c 一并整理入 net-next,原文称 "timestamps not needed any more (freebsd)"。 `<!-- ROW_MINE: netdev.messages.8038165 -->`
-- 【Linux社区】skge 驱动注释的拼写修正补丁把 Freebsd 改成 FreeBSD,同时该注释披露驱动源自 sk98lin、e100 与 FreeBSD 的 if_sk 驱动,原文称 "FreeBSD if_sk drivers"。 `<!-- ROW_MINE: netdev.messages.8039072 -->`
 - 【Linux社区】kevent API 讨论中 Evgeniy Polyakov 反驳重写方案,称 BSD 版本里有 unsigned long 就推倒重来的做法不可取,应只修那一位,原文称 "unsigned long in bsd version, lets rewrite it from scratch"。 `<!-- ROW_MINE: netdev.messages.8039675 -->`
 - 【Linux社区】LibOS 提案讨论中 Antti Kantee 称自己在 NetBSD 主线做了近八年的类似工作,因而能给出经过现实检验的见解,原文称 "I've been working on something similar in mainline NetBSD for almost 8 years now"。 `<!-- ROW_MINE: netdev.messages.8039874 -->`
 - 【Linux社区】_skb_destructor 权限讨论末尾,Jarek Poplawski 回忆 BSDs 曾被推荐用于邮件等特定任务,但总体上 Linux 更合用,而做防火墙时 BSD 并非选项,原文称 "BSDs were sometimes recommended for specific jobs like mail etc."。 `<!-- ROW_MINE: netdev.messages.8039917 -->`
@@ -1473,7 +1472,6 @@ BSD 与 GPL 可组合性在 Broadcom 文本上被具体检验。 `<!-- ROW_MINE:
 - 【Linux社区】rtl8211e PHY rx/tx 延时配置的讨论引用 FreeBSD 评审 D13591 作为寄存器位域语义的权威佐证，体现 BSD 社区知识回流 Linux。原句: There is also a freebsd-folks discussion regarding this register: https://reviews.freebsd.org/D13591 `<!-- ROW_MINE: netdev.messages.8669616 -->`
 - 【Linux社区】Marek Vasut 在 PHY reset 问题中批评设备树把硬件行为写死成 Linux 专属约定，主张固件应描述硬件以便 FreeBSD 等 OS 复用。原句: Linux just so happens to support that, but so could FreeBSD or any OS for that matter. `<!-- ROW_MINE: netdev.messages.8670604 -->`
 - 【Linux社区】TLS 设备侧 zerocopy sendpage 讨论中 David Miller 直接对比 FreeBSD 把无拷贝作为默认值的设计选择，BSD 网络实现成为 Linux 争议中的价值标杆。原句: If we can't make this the default (as it is in FreeBSD) `<!-- ROW_MINE: netdev.messages.8671840 -->`
-- 【Linux社区】libbpf 头文件为纳入 libbpf 公共 API 而采用 LGPL-2.1 OR BSD-2-Clause 双许可，引发为何选 BSD-2-Clause 而非 Apache-2.0 的许可证策略争论。原句: we need them to be dual-licensed as LGPL-2.1 OR BSD-2-Clause. `<!-- ROW_MINE: netdev.messages.8672355 -->`
 - 【Linux社区】tools/lib/bpf/btf 的许可证从 GPL 改为 LGPL 的讨论，属 Linux 内核周边工具链 BSD 兼容性议题的组成部分，涉及工具链许可证分层设计。原句: Change tools/lib/bpf/btf to LGPL which is inline with libbpf also. `<!-- ROW_MINE: netdev.messages.8673016 -->`
 - 【Linux社区】同一 libbpf 双许可争论中，Borkmann 等追问 BSD-2-Clause 相对 Apache-2.0 的选择理由，触及内核许可证兼容性与 SPDX 治理。原句: I just want to understand, why BSD-2-Clause and not Apache-2.0 ? `<!-- ROW_MINE: netdev.messages.8673244 -->`
 - 【Linux社区】bpftool 许可证混乱清理补丁出现 GPL-2.0-only OR BSD-2-Clause 与 GPL 全文样板并存的冲突，是工具链 BSD 化过程中的许可证治理实例。原句: SPDX-License-Identifier: (GPL-2.0-only OR BSD-2-Clause and `<!-- ROW_MINE: netdev.messages.8673313 -->`

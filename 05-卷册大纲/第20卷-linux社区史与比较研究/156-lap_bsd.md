@@ -40,7 +40,6 @@
 - 【Linux社区】Aleksa Sarai 提交 openat2(2) 系统调用补丁系列 v15，说明该系列参考 FreeBSD 设计以克服 openat 长期缺乏对未知标志检查带来的扩展困难，并在 LOOKUP_IN_ROOT 处理上采纳 Linus Torvalds 的反馈 `<!-- ROW_MINE: linux-api.messages.40695 -->`
 - 【Linux社区】Florian Weimer 在 wait4 与 waitid 系统调用扩展讨论中建议引入覆盖 FreeBSD 的 wait6 功能的接口，即能够统计子进程自身子进程的资源使用，构成 BSD 谱系 API 向 Linux 移植的直接提议 `<!-- ROW_MINE: linux-api.messages.41097 -->`
 - 【Linux社区】Mickaël Salaün 发布 Landlock LSM 补丁系列 v30，明确将其安全沙箱设计定位为受 XNU Sandbox、FreeBSD Capsicum 及 OpenBSD Pledge/Unveil 启发，属 BSD 谱系安全机制在 Linux 内核中的移植 `<!-- ROW_MINE: linux-api.messages.41213 -->`
-- 【Linux社区】Dr. David Alan Gilbert 在 userfaultfd 补丁系列跨列表讨论中援引 FreeBSD 的 pdfork 相关实现，指出尝试读取该文件描述符将返回 EOPNOTSUPP 而非产生可读数据，用于论证兼容语义设计 `<!-- ROW_MINE: linux-api.messages.41435 -->`
 - 【Linux社区】David Drysdale 提交 FreeBSD Capsicum 安全框架补丁系列 RFC 第 1 部分，介绍 FreeBSD 9.x 与 10.x 引入的 Capsicum 框架及其在 OpenSSH 6.5 之后的沙箱应用，并将该框架移植至 Linux 内核 `<!-- ROW_MINE: linux-api.messages.41650 -->`
 - 【Linux社区】John Ericson 在 spawn templates RFC 讨论中援引自己的 FreeBSD 补丁经验，指出 FreeBSD 已存在进程处于 exec 中间状态的状态标识，可复用于尚未开始运行的胚胎进程设计 `<!-- ROW_MINE: linux-api.messages.41754 -->`
 - 【Linux社区】Eric Biederman 在 execveat 补丁 v4 讨论中回应 David Drysdale 关于 FreeBSD Capsicum 背景，确认该补丁是实现 Capsicum 的小部分，并指出 Capsicum 自 FreeBSD 9.0 起存在且基于对象能力安全概念 `<!-- ROW_MINE: linux-api.messages.42355 -->`
