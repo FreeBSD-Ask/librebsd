@@ -1,0 +1,25 @@
+SUBJECT: BSD 4.2 style TCP keepalives
+FROM: David Miller
+DATE: 2010-01-06 00:39:11
+MSGID: <20100105.163911.10233438.davem@davemloft.net>
+
+BODY:
+
+To make a long story short, there are still some Windows 2000
+machines out there emitting BSD 4.2 style keepalives (one garbage
+byte instead of an empty out-of-window probe frame).
+
+We don't ACK these because of how tcp_sequence() sees ->end_seq
+as being equal to ->rcv_wup
+
+But we can't change tcp_sequence() to reject these frames, because if
+we do then we end up mishandling connection attempts (SYN, SYN+ACK)
+and retransmits of such.
+
+Neil has shown me a patch that does a by-hand special case of this
+one-garbage-byte keepalive inside of tcp_rcv_established().
+
+Anyone have suggestions for an alternative and perhaps cleaner
+implementation of a fix?
+
+Thanks!
