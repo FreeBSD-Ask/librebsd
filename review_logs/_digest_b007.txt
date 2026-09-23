@@ -1,0 +1,611 @@
+### PK 1035861 ### 摘要: 自述把 run 驱动移植到 CURRENT 完成，代码仅放在 FreeBSD 论坛请求众人试用
+### PK 1035861 ###
+===== 序 12297 | PK 1035861 =====
+DATE: 2009-11-08
+FROM: moonlightakkiy at yahoo.ca (PseudoCylon) <None>
+SUBJ: finished run driver for CURRENT
+
+Hello everyone,
+
+I finished porting run driver to CURRENT (sort of). I posted it at freebsd fourums
+http://forums.freebsd.org/showpost.php?s=a3756a43cb6eca54dea97673ac8424e7&p=47936&postcount=28
+Anyone interested in please try it out.
+
+
+      __________________________________________________________________
+Be smarter than spam. See how smart SpamGuard is at giving junk email the boot with the All-new Yahoo! Mail.  Click on Options in Mail and switch to New Mail today or register for free at http://mail.yahoo.ca
+
+
+
+
+
+
+### PK 1035864 ### 摘要: 指出中断丢失检查可能不正确，因为新 job 会在中断后立即入队，此时判定 job 数是否为零不可靠
+### PK 1035864 ###
+===== 序 12300 | PK 1035864 =====
+DATE: 2009-11-08
+FROM: hselasky at c2i.net (Hans Petter Selasky) <None>
+SUBJ: umass problem.
+
+On Sunday 08 November 2009 14:24:39 Alexander Nedotsukov wrote:
+> Just curious, is there is no way to detect lost interrupt in new usb  
+> stack quickly or check in the old one was not correct anyway?
+
+Hi,
+
+The check might not be correct, because new jobs can be queued immediately 
+after the interrupt, and in that case it is not correct to check of the number 
+of jobs is zero.
+
+--HPS
+
+
+
+
+
+
+### PK 1035871 ### 摘要: 实测 r199050 并未解决该问题，先前提交的补丁仍需被合并
+### PK 1035871 ###
+===== 序 12307 | PK 1035871 =====
+DATE: 2009-11-08
+FROM: alexbestms at math.uni-muenster.de (Alexander Best) <None>
+SUBJ: [patch] prevent burncd from failing when device is busy while
+ trying to eject
+
+i tested r199050 and the changes do NOT solve this problem. so the patches i
+posted still need to get committed.
+
+alex
+
+
+
+
+
+
+### PK 1035918 ### 摘要: 已复现 igb 故障并给出修复思路，随后附上补丁请求试用
+### PK 1035918 ###
+===== 序 12354 | PK 1035918 =====
+DATE: 2009-11-10
+FROM: jfvogel at gmail.com (Jack Vogel) <None>
+SUBJ: page fault in igb driver on 8.0-RC2
+
+I have repro'd this failure this morning and think I have a fix for it, I am
+testing that soon.
+
+Stay tuned,
+
+Jack
+
+
+On Mon, Nov 9, 2009 at 6:28 PM, Mike Tancsa <mike@sentex.net> wrote:
+
+> At 07:33 PM 11/9/2009, Jack Vogel wrote:
+>
+>> Some reason you aren't using amd64? I will have a system installed that
+>> way
+>> and see if I can repro it then, thanks.
+>>
+>
+>
+> I had found in the past i386 was faster for firewall and routing
+> applications.   Perhaps thats different now, I will give it a try again to
+> see if there is any difference.
+>
+> pciconf and dmesg attached.
+>
+>        ---Mike
+>
+>
+>
+>  Jack
+>>
+>>
+>>
+>> On Mon, Nov 9, 2009 at 4:22 PM, Mike Tancsa <<mailto:mike@sentex.net>
+>> mike@sentex.net> wrote:
+>> At 05:59 PM 11/9/2009, Jack Vogel wrote:
+>> Are you using standard MTU or jumbo? That get_buf error is ENOMEM, looks
+>> like
+>> that happens when in the bus_dma stuff reserve_bounce_pages() fails.
+>>
+>> Are you maybe using a 32 bit kernel? I have not seen this failure here.
+>>
+>>
+>> Hi Jack,
+>>       Standard MTU and i386
+>>
+>>       ---Mike
+>>
+>>
+>>
+>> --------------------------------------------------------------------
+>> Mike Tancsa,                                      tel +1 519 651 3400
+>> Sentex Communications, <mailto:mike@sent
+...[正文已截断，共 1981 字符]
+
+
+
+
+### PK 1035954 ### 摘要: 指出未给 iostat 数据，怀疑网络停顿与 IO 峰值同期，应关联 ifstat 与 iostat 输出
+### PK 1035954 ###
+===== 序 12390 | PK 1035954 =====
+DATE: 2009-11-11
+FROM: ivoras at freebsd.org (Ivan Voras) <None>
+SUBJ: Help ZFS FreeBSD 8.0 RC2 Write performance issue
+
+Sam Fourman Jr. wrote:
+> Hello list,
+> 
+> I am running FreeBSD 8.0RC2 and I dont understand why my ZFS/NFS is
+> acting weird on writes.
+> I get ~150mbit writes idk if this is good or not? but it paused for a
+> few seconds every once and awhile.
+
+You didn't give any "iostat" statistics - I suspect that if you 
+correlate ifstat and iostat output that you will see that network 
+"pauses" happen during spikes in IO. You should check for this and post 
+your results.
+
+
+
+
+
+
+
+### PK 1036402 ### 摘要: 开发者回应 newbus sxlock 很快就会回来，希望一个月内完成
+### PK 1036402 ###
+===== 序 12838 | PK 1036402 =====
+DATE: 2009-11-25
+FROM: attilio at freebsd.org (Attilio Rao) <None>
+SUBJ: newbus locking?
+
+2009/11/25 Jason Harmening <jason.harmening@gmail.com>:
+> The newbus sxlock showed up briefly back in August (yay! no more
+> giant!), then went away for 8.0-RELEASE.  Will it be coming back to
+> HEAD sometime soon?
+> I have a driver that needs to lock the device tree and uses
+> __FreeBSD_version to determine whether to use the sxlock or Giant.
+
+Yes, I expect it to be happening very soon (I hope in maximum one month).
+
+Attilio
+
+
+-- 
+Peace can only be achieved by understanding - A. Einstein
+
+
+
+
+
+
+### PK 1036778 ### 摘要: sgk 称 gdb 7.0 于 10 月 6 日发布，与 PIE 配合工作正常，但可能不会进入 FreeBSD
+### PK 1036778 ###
+===== 序 13214 | PK 1036778 =====
+DATE: 2009-10-08
+FROM: sgk at troutmask.apl.washington.edu (Steve Kargl) <None>
+SUBJ: PIE support
+
+On Thu, Oct 08, 2009 at 05:59:00PM +0300, Kostik Belousov wrote:
+> 
+> gdb does not work for PIE binaries, I believe this is a gdb shortcoming.
+> 
+
+gdb 7.0 was released on Oct 6th.  It appears to work fine with PIE.
+(Yes, I know that gdb 7.0 is unlikely to appear in FreeBSD.)
+
+-- 
+Steve
+
+
+
+
+
+
+### PK 1036790 ### 摘要: Akiyama 称已移植 run 网卡驱动并贴在论坛，因新手身份请开发者评审代码
+### PK 1036790 ###
+===== 序 13226 | PK 1036790 =====
+DATE: 2009-10-09
+FROM: moonlightakkiy at yahoo.ca (Tango) <None>
+SUBJ: ported run driver
+
+Hello,
+
+I have ported run (ru'N' not ru'M') driver and posted on freebsd forum.
+http://forums.freebsd.org/showthread.php?s=91e5d3d58be54728b80686a77c8428cd&t=7562
+Then, one member suggested to email you so some developers can review the code.
+
+Also, one of mailing list subscribers recommended to port to current, so I'm planing to do that.
+
+I'm new to freebsd. Any comments/suggestions would be appreciated.
+
+Thank you.
+Akinori
+
+
+      __________________________________________________________________
+Be smarter than spam. See how smart SpamGuard is at giving junk email the boot with the All-new Yahoo! Mail.  Click on Options in Mail and switch to New Mail today or register for free at http://mail.yahoo.ca
+
+
+
+
+
+
+### PK 1036793 ### 摘要: Tom Judge 说该 ALIX 复位按钮工具对自己当前项目也有用，并手上有几块 2d3 板子
+### PK 1036793 ###
+===== 序 13229 | PK 1036793 =====
+DATE: 2009-10-09
+FROM: tom at tomjudge.com (Tom Judge) <None>
+SUBJ: Support for PC Engines ALIX2 reset pushbutton.
+
+Hi Sylwester,
+
+This is interesting, what boards should be supported? (I have a couple 
+of 2d3's)
+
+I will be needing something like this for my current project as well.
+
+Thanks
+
+TJ
+Sylwester Sosnowski wrote:
+> Hello,
+>
+> I've just written an user-space utility for handling the PC Enginges ALIX'
+> reset-pushbutton. It's a quick-and-dirty prototype and does the same what
+> "shutdown -h now" does. I'll do a clean rewrite later.
+>
+> Any comments or suggestions appreciated.
+>
+>
+> Here is the prototype:
+>
+> ----- BEGIN -----
+>
+> /*
+>  * User-space reset-button support for PC Engines ALIX boards.
+>  * This is a prototype.
+>  *
+>  * Usage:
+>  * Use from rc(8).
+>  */
+>
+> #include <stdio.h>
+> #include <sys/types.h>
+> #include <sys/cdefs.h>
+> #include <stdlib.h>
+> #include <string.h>
+> #include <fcntl.h>
+> #include <machine/cpufunc.h>
+> #include <unistd.h>
+> #include <signal.h>
+> #include <sys/time.h>
+> #include <paths.h>
+> #include <syslog.h>
+>
+> // MY_NAME is the process name used in syslog.
+> #define MY_NAME "resetguard"
+>
+> // GPIO_RESET
+> u_int32_t switchAddr = 0x61b0;
+> int switchBit = 8;
+>
+> // GPIO_LED3
+> u_int32_t ledAddr = 0x6180;
+> int ledBit = 11;
+>
+>
+> // Blink GPIO_LED3.
+> void blinkLed(int times)
+> {
+> 	int i;
+>
+> 	for (i=0; i<t
+...[正文已截断，共 3385 字符]
+
+
+
+
+### PK 1036827 ### 摘要: rwatson 解释 Giant 在长期睡眠里会被内核自动放下并在唤醒时重拿，故此处持有它其实是允许的
+### PK 1036827 ###
+===== 序 13263 | PK 1036827 =====
+DATE: 2009-10-11
+FROM: rwatson at FreeBSD.org (Robert Watson) <None>
+SUBJ: Page fault in IFNET_WLOCK_ASSERT [if.c and pccbb.c]
+
+
+On Sun, 11 Oct 2009, Harsha Srinath wrote:
+
+> I'm running an updated HEAD kernel and got a page fault in 
+> ifindex_alloc_locked() in if.c. I figured that the problem was caused by the 
+> (pluggable) network card of my laptop and found that during the 
+> initialization of the interface, cb_event_thread() takes the giant lock and 
+> up the call chain in if_alloc(), we call IFNET_WLOCK() and assert on the RW 
+> locks in ifindex_alloc_locked(). It is in the asset macro 
+> IFNET_WLOCK_ASSERT() I see the page fault.
+>
+> I looked up some recent related changes and noticed the following comment in 
+> one of the check-ins in- 
+> http://svn.freebsd.org/viewvc/base/head/sys/net/if.c
+>
+> "Break out allocation of new ifindex values from if_alloc() and if_vmove(), 
+> and centralize in a single function ifindex_alloc(). Assert the IFNET_WLOCK, 
+> and add missing IFNET_WLOCK in if_alloc(). This does not close all known 
+> races in this code."
+>
+> So I think I have hit one of those fault conditions.
+>
+> Apparently the giant lock code was removed and added back recently - 
+> http://svn.freebsd.org/viewvc/base/head/sys/dev/pccbb/pccbb.c
+>
+> I believe that the root cause is that ifnet_rw is a non sleepable exclusive 
+> RW lock and we hav
+...[正文已截断，共 3017 字符]
+
+
+
+
+### PK 1036831 ### 摘要: attilio 请 ler 对该负载生成 schedgraph 输出并询问他是否知道如何配置这项采集
+### PK 1036831 ###
+===== 序 13267 | PK 1036831 =====
+DATE: 2009-10-11
+FROM: attilio at freebsd.org (Attilio Rao) <None>
+SUBJ: Scheduler weirdness
+
+2009/10/12 Larry Rosenman <ler@lerctr.org>:
+>
+> Ok, running RELENG_8 from Friday (10/9/2009).
+>
+> If I have 4 Folding-at-home processes running (they nice themselves) the
+> system is slow as a dog.
+>
+> If I stop them, it's speedy.
+>
+> This is running SCHED_ULE
+>
+> is this expected?
+>
+> What can I do to help?
+
+Can you please produce the schedgraph output for this workload?
+Do you know how to setup it?
+
+Attilio
+
+
+-- 
+Peace can only be achieved by understanding - A. Einstein
+
+
+
+
+
+
+### PK 1036836 ### 摘要: sgk 问 ler 系统有多少 CPU，并指出 N 个 CPU 跑 N 加 1 个数值计算进程属于过度提交
+### PK 1036836 ###
+===== 序 13272 | PK 1036836 =====
+DATE: 2009-10-12
+FROM: sgk at troutmask.apl.washington.edu (Steve Kargl) <None>
+SUBJ: Scheduler weirdness
+
+On Sun, Oct 11, 2009 at 05:59:52PM -0500, Larry Rosenman wrote:
+> 
+> Ok, running RELENG_8 from Friday (10/9/2009).
+> 
+> If I have 4 Folding-at-home processes running (they nice themselves) the
+> system is slow as a dog.
+> 
+> If I stop them, it's speedy.
+> 
+> This is running SCHED_ULE
+> 
+> is this expected?
+> 
+> What can I do to help?
+> 
+
+How many cpus are available on your system?  If you're in an
+over-commit situation with numerical intensive applications,
+you may find 4BSD to be a better option.
+
+-- 
+Steve
+
+
+
+
+
+
+### PK 1036862 ### 摘要: stas 说 8.0 周期已很后期，bge 这类敏感驱动的改动风险很大因此不宜再动
+### PK 1036862 ###
+===== 序 13298 | PK 1036862 =====
+DATE: 2009-10-12
+FROM: stas at deglitch.com (Stanislav Sedov) <None>
+SUBJ: FYI: "8.0TODO" wiki page updated
+
+On Mon, 12 Oct 2009 14:44:03 +0100
+"Robert N. M. Watson" <rwatson@freebsd.org> mentioned:
+
+> Hi Gonzalo--
+> 
+> I'm not aware of the status of this bug, but have CC'd Stanislav  
+> Sedov, who has recently been working on other known if_bge issues for  
+> 8.0. At this point things are pretty late in the cycle, and device  
+> driver modifications (especially for sensitive drivers such as bge)  
+> represent a significant risk, so things may not change; however,  
+> perhaps he has some thoughts along these lines?
+> 
+
+Hi, Gonzalo!
+
+I've not looked into this issue yet, but I'll do it in the near future.
+Unfortunatly, I believe it is too late to expect the fix to be present
+in 8.x, but I'll look what I can do wrt. this issue.
+
+-- 
+Stanislav Sedov
+ST4096-RIPE
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: not available
+Type: application/pgp-signature
+Size: 801 bytes
+Desc: not available
+Url : http://lists.freebsd.org/pipermail/freebsd-current/attachments/20091012/de58d77c/attachment.pgp
+
+
+
+
+
+
+### PK 2586685 ### 摘要: 针对 2.0.5 版 /stand 是否保留的疑问，答直接删掉
+### PK 2586685 ###
+===== 序 12019 | PK 2586685 =====
+DATE: 1997-03-14
+FROM: "Jordan K. Hubbard" <jkh@time.cdrom.com> <None>
+SUBJ: Re: 2.1.7 Installation Comments/Problems
+
+> What's it's purpose in life?  Should I keep it updated, or just
+> delete it?
+
+In your case, with a 2.1.0 vintage /stand, kill it.
+
+					Jordan
+
+
+
+
+
+
+
+### PK 2586690 ### 摘要: XEmacs 装上但找不到 libjpeg.so.7.0，称非安装也非打包问题，只需再装 jpeg 包
+### PK 2586690 ###
+===== 序 12024 | PK 2586690 =====
+DATE: 1997-03-15
+FROM: "Jordan K. Hubbard" <jkh@time.cdrom.com> <None>
+SUBJ: Re: 2.1.7 Installation Comments/Problems
+
+> I updated the source for pkg_add (and ONLY pkg_add) and recompiled.  Now 
+> XEmacs does install completely but does not run - can't find the library 
+> libjpeg.so.7.0.  Couldn't find it on my system so its not just a path 
+> problem.  Is this an install problem or a packaging problem?  Or do I 
+> have to update more directories under pkg_manage?
+
+Neither.  You just need to install the jpeg package too. :)
+
+					Jordan
+
+
+
+
+
+
+
+### PK 2586791 ### 摘要: 称 sup 服务器是 spatter 崩溃时自己 shut down，讽刺 Jordan 还要预测硬盘故障
+### PK 2586791 ###
+===== 序 12125 | PK 2586791 =====
+DATE: 1997-03-26
+FROM: "Jordan K. Hubbard" <jkh@time.cdrom.com> <None>
+SUBJ: Re: SUP
+
+> I agree that a little more explicit notice would have been appreciated.
+> "It's going away someday" doesn't carry the same imperative as "we're
+> shutting it down next week."
+
+Like I said, it "shut itself down" when spatter crashed.  Now I'm
+supposed to predict hard disk failure, on top of all my other jobs? :-)
+
+					Jordan
+
+
+
+
+
+
+
+### PK 2587134 ### 摘要: Michael Smith 给出对策：先运行 make includes 即可越过该错误
+### PK 2587134 ###
+===== 序 12468 | PK 2587134 =====
+DATE: 1997-07-01
+FROM: Michael Smith <msmith@atrad.adelaide.edu.au> <None>
+SUBJ: Re: make world failed at #330
+
+`make includes` will get you past this one.
+
+
+
+Philipp Reichmuth stands accused of saying:
+> After ctm'ming #330, make world failed today with the following msg:
+> (problem may have occurred earlier, my last was 314 I think)
+> 
+> ======================[begin]=======================================
+> cd /usr/src-2.2.stable/usr.bin/xinstall && make depend &&  make -DNOINFO
+> -DNOMAN -DNOPROFILE all install cleandir obj
+> rm -f .depend
+> mkdep -f .depend -a   
+> /usr/src-2.2.stable/usr.bin/xinstall/../../bin/ls/stat_flags.c
+> /usr/src-2.2.stable/usr.bin/xinstall/xinstall.c
+> cc -O2 -m486 -pipe   -c
+> /usr/src-2.2.stable/usr.bin/xinstall/../../bin/ls/stat_flags.c
+> /usr/src-2.2.stable/usr.bin/xinstall/../../bin/ls/stat_flags.c: In
+> function `flags_to_string':
+> /usr/src-2.2.stable/usr.bin/xinstall/../../bin/ls/stat_flags.c:72:
+> `UF_NOUNLINK' undeclared (first use this function)
+> /usr/src-2.2.stable/usr.bin/xinstall/../../bin/ls/stat_flags.c:72: (Each
+> undeclared identifier is reported only once
+> /usr/src-2.2.stable/usr.bin/xinstall/../../bin/ls/stat_flags.c:72: for
+> each function it appears in.)
+> /usr/src-2.2.stable/usr.bin/xinstall/../../bin/ls/stat_flags.c:82:
+> `SF_NOUNLINK' undeclared (first use this function)
+> /usr/src-2.2.sta
+...[正文已截断，共 2292 字符]
+
+
+
+
+### PK 2588511 ### 摘要: 同见 de0 bad crc,且 cvsup 到 2.2.5-STABLE 后大量出现 Out of mbuf clusters 提示
+### PK 2588511 ###
+===== 序 13843 | PK 2588511 =====
+DATE: 1997-11-02
+FROM: Robert Luce <rwl@gymnet.com> <None>
+SUBJ: Re: SMC EtherPower card + CRC errors
+
+I'm seeing very similar problems, also with an SMC card (de0).
+
+Nov  2 11:12:08 flex /kernel: de0: receive: 00:a0:24:80:09:33: bad crc
+
+I'm also seeing many more of the following since cvsupping FreeBSD
+2.2.5-STABLE:
+
+Nov  2 11:24:25 flex /kernel: Out of mbuf clusters - increase maxusers!
+
+> I recently upgraded one of my server machines from FreeBSD 2.2.1 (with a
+> 2.2.2 kernel and a few other patches.)  The card holds an SMC EtherPower
+> card described by dmesg as the following:
+
+> FreeBSD 2.2.5-STABLE #0: Sat Nov  1 14:32:43 EST 1997
+>     robert@cyrus.watson.org:/usr/src/sys/compile/FLEDGE
+> CPU: Pentium (119.75-MHz 586-class CPU)
+>   Origin = "GenuineIntel"  Id = 0x525  Stepping=5
+>   Features=0x1bf<FPU,VME,DE,PSE,TSC,MSR,MCE,CX8>
+> real memory  = 100663296 (98304K bytes)
+> ...
+> de0 <Digital 21041 Ethernet> rev 33 int a irq 9 on pci0:14
+> de0: SMC 21041 [10Mb/s] pass 2.1
+> de0: address 00:e0:29:0e:b6:dd
+> de0: enabling 10baseT port
+
+> Since the upgrade, we've been getting a fair number of the following
+> message:
+
+> de0: receive: ff:ff:ff:ff:ff:ff: bad crc
+> de0: receive: ff:ff:ff:ff:ff:ff: bad crc
+> de0: receive: ff:ff:ff:ff:ff:ff: bad crc
+> de0: receive: ff:ff:ff:ff:ff:ff: bad crc
+> de0: receive: ff:ff:ff:ff:ff:ff: bad crc
+> de0: receive
+...[正文已截断，共 2427 字符]
+
+
+
+

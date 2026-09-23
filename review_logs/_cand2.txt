@@ -1,0 +1,19 @@
+powerpc64 上 tc_get_timecount 返回 tbr 低 32 位，tbr 33 MHz 每 128 秒回绕，问 Bruce Evans 的 TSC-low 移位至少 1 是否掩盖跨 socket 不准确性，否则多 socket 出现 bintime 反向计数
+已传 root-path 但 loader.efi 未读取，再在 sanity_check_currdev 里 stat /boot/defaults/loader.conf 与 /boot/kernel/kernel 因缺 root 失败，设 rootdev 亦无效
+John Baldwin /boot/loader 自 FreeBSD 3.x 起随 installworld 安装且影响启动能力，早期 loader 与内核握手需版本匹配，主张 ESP 文件应像其他 boot block 处理而 installworld 装最新到 /boot
+Mark Millard 用 truss 跟随 poudriere 的 amd64 到 armv7 交叉编译，Ctrl-C 停掉后 truss 触发断言 LIST_NEXT(info->curthread, entries) == NULL，Abort trap
+Kyle Evans 用 reptyr -T 把长任务重父进 tmux，忽略 SIGHUP，waitpid 卡住，PT_ATTACH 后第二次 waitpid 见 SIGCONT，第三次期望 PL_FLAG_SCE 却因 sleep-inhibited 停在 pause wchan
+David Cross 用 uefisign 签出的 boot1 也无法启动，windows signtool verify 返回 0x80096010 The digital signature of the object did not verify，疑 uefisign 坏
+Craig Leres 11.3-RELEASE-p4 Supermicro X9SRi-F 配双冗余电源，公共安全隐患断电后单电源失电，sysctl dev.cpu.0.freq 降到 1200，powerd 启动太晚，问 loader.conf 有 sysctl 可关掉降频
+theron.tarigo 把 stable 的 sys/dev/nvme 与 resume 补丁复制到 12.0-RELEASE，suspend 与 resume 完全工作，stable 仍有 resume 问题，建议补丁贴到 bugzilla 240340 试
+11.2 自编译 PCIe 卡驱动，kldload 报 unexpected relocation type 4 与 link_elf_obj symbol pmap_qremove undefined、Unsupported file type，11.1 升起来同驱动可加载
+用 rc.conf 启用 netdump 客户端失败，dumpon 先于 netif 运行，报 Unable to configure netdump because the interface's link is down，建议拆 netdump_client rc.d 脚本
+Mark Millard 在 ThreadRipper 1950X 两内存域跑 head r352341，cpuset -n prefer 在 -l 0-15 与 -l 16-31 表现异常，HINT 基准 FreeBSD 13 怪而 Fedora 30 正常，问 NUMA 是否已验证
+Neel Chauhan 提交两个 ipfw 补丁，rgrimes 接受但仍未提交，D24403 让 fill_ip6 对 me 与 me6 用单条语句，D24427 用 SLIST_REMOVE_HEAD 与 SLIST_REMOVE_AFTER，求 committer 提交
+Emmanuel Vadot 问 linuxkpi 用 sx 实现 Linux struct mutex，Documentation/locking/mutex-design.rst 说 mutex 与 mtx 近 1:1，linux spinlock 用 MTX_DEF 也不太像
+32 位 powerpc head 从 r359427 升 r360311 后多处 signal 11，mountd 与 rpcbind 两例都涉 rendezvous_request 与 svc_getreq_common，附 jemalloc atomic_load_u 回溯
+Stephen Hocking Odroid H2+ Free 12.1 无板载网卡驱动，Stefan Esser 建议改 net/realtek_re_kmod 端口，AMD B550 RTL8125 在用，正合 RealTek 特性进 sys/dev/re/if_re.c
+Ottavio Caruso 以 qemu -vga none 启动 FreeBSD 12.1，dmesg 里 VGA 报出疑为假阳性，pciconf -vl 见 hostb0 与 virtio 设备，追问 ttyu0 与 ttyv0 关系及能否注释 /etc/ttys 的 ttyv0
+Eugene Grosbein 说 /etc/ttys 只管多用户阶段，console 与 comconsole_port 需写进 /boot/loader.conf，如 console=comconsole 与 comconsole_port=0x3f8
+Mark Millard 在 aarch64 上 gcc9 配系统 libc++ 编 c++17 而 gcc10 不行，需 -I/usr/include/c++/v1 与 -Wl,-rpath=/usr/local/lib/gcc9，powerpc 与 amd64 无 rpath
+Gordon Bergling 为 raspberry pi 4 USB vendor IDs，sys/dev/usb/usbdevs 加 VIALABS2 0x1106、VL805USB30 0x3483，重编 0x2109 USB2.0 Hub 与 XHCI HUB 无变化
