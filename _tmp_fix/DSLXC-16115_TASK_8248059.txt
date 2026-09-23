@@ -1,0 +1,50 @@
+On Tue, Sep 30, 2014 at 01:17:48AM +0200, Florian Westphal wrote:
+> Eric Dumazet <eric.dumazet@gmail.com> wrote:
+> > On Mon, 2014-09-29 at 14:39 +0200, Pablo Neira Ayuso wrote:
+> > > Jesper reported that br_netfilter always registers the hooks since
+> > > this is part of the bridge core. This harms performance for people that
+> > > don't need this.
+> > > 
+> > > This patch modularizes br_netfilter so it can be rmmod'ed, thus,
+> > > the hooks can be unregistered. I think the bridge netfilter should have
+> > > been a separated module since the beginning, Patrick agreed on that.
+> > > 
+> > > Note that this is breaking compatibility for users that expect that
+> > > bridge netfilter is going to be available after explicitly 'modprobe
+> > > bridge' or via automatic load through brctl.
+> > > 
+> > > However, the damage can be easily undone by modprobing br_netfilter.
+> > > The bridge core also spots a message to provide a clue to people that
+> > > didn't notice that this has been deprecated.
+> > > 
+> > > On top of that, the plan is that nftables will not rely on this software
+> > > layer, but integrate the connection tracking into the bridge layer to
+> > > enable stateful filtering and NAT, which is was bridge netfilter users
+> > > seem to require.
+> > > 
+> > > This patch still keeps the fake_dst_ops in the bridge core, since this
+> > > is required by when the bridge port is initialized. So we can safely
+> > > modprobe/rmmod br_netfilter anytime.
+> > > 
+> > > Signed-off-by: Pablo Neira Ayuso <pablo@netfilter.org>
+> > > Acked-by: Florian Westphal <fw@strlen.de>
+> > > ---
+> > 
+> > Hmm... What am I missing here ?
+> > # CONFIG_BRIDGE_NETFILTER is not set
+> 
+> Nothing.  Our fault.  br_nf_core.o should not be built in this case.
+> 
+> > $ make net/bridge/br_nf_core.o
+> [..]
+> >   CC [M]  net/bridge/br_nf_core.o
+> > net/bridge/br_nf_core.c:77:1: error: expected identifier or ‘(’ before ‘{’ token
+> > net/bridge/br_nf_core.c:88:12: error: redefinition of ‘br_nf_core_init’
+> 
+> This patch seems to fix it for me.  Pablo, can you double-check?
+
+Thanks Florian, I'll pass this patch to David asap.
+--
+To unsubscribe from this list: send the line "unsubscribe netfilter-devel" in
+the body of a message to majordomo@vger.kernel.org
+More majordomo info at  http://vger.kernel.org/majordomo-info.html

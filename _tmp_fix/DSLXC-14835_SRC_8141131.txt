@@ -1,0 +1,34 @@
+David Miller wrote:
+> From: Rick Jones <rick.jones2@hp.com>
+> Date: Tue, 06 Mar 2007 10:54:00 -0800
+> 
+>>> So we're not "disallowing" a backlog argument of zero to
+>>> listen().  We'll accept that just fine, the only thing that
+>>> happens is that you'll get what you ask for, that being
+>>> no connections :-)
+>> I'm not sure where HP-UX inherited the 0 = 1 bit - perhaps from BSD, nor 
+>> am I sure there is official chapter and verse, but:
+>>
+>> <excerpt>
+>> backlog is limited to the range of 0 to SOMAXCONN, which is 	defined in 
+>> <sys/socket.h>.  SOMAXCONN is currently set to 4096.  If any other 
+>> value is specified, the system automatically assigns the closest value 
+>>      within the range.  A backlog of 0 specifies only 1 pending 
+>> connection      is allowed at any given time.
+>> </excerpt>
+>>
+>> I don't have a Solaris, BSD or AIX manpage for listen handy to check 
+>> them but would not be surprised to see they are similar.
+> 
+> Ok, that seals the deal for me, I'll revert the change :)
+
+Ahh, crap.  Even Posix wiesel-words around this issue:
+
+> A backlog argument of 0 may allow the socket to accept connections, in which case
+> the length of the listen queue may be set to an implementation-defined minimum value.
+
+(from http://www.opengroup.org/onlinepubs/009695399/functions/listen.html)
+
+No, to go and fix the SCTP spec....
+
+-vlad
