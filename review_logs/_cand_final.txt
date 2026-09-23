@@ -1,0 +1,36 @@
+Mark 说明睡眠代码依赖 sbinuptime 返回值比较，64 位结果高 32 位为秒、低 32 位是 1sec 除以 2 的 64 次方的乘法因子，观察到后调用的 sbinuptime 有时反而更小，使超时检查出错
+powerpc64 上 tc_get_timecount 返回 tbr 低 32 位，tbr 33 MHz 每 128 秒回绕，问 Bruce Evans 的 TSC-low 移位至少 1 是否掩盖跨 socket 不准确性，否则多 socket 出现 bintime 反向计数
+UEFI 下从 NFS netboot，iPXE 加载 boot/loader.efi 失败停在 Setting currdev to net0 与 can't load kernel，读 stand/efi/loader/main.c 未见传 NFS root 的入口
+已传 root-path 但 loader.efi 未读取，再在 sanity_check_currdev 里 stat /boot/defaults/loader.conf 与 /boot/kernel/kernel 因缺 root 失败，设 rootdev 亦无效
+efi-update-loader 不应只更新 ESP 的 /efi/freebsd/loader.efi，ARM 上 EFI 变量不持久须靠 /efi/boot/bootxxxx.efi，QueryVariableInfo 返回 EFI_UNSUPPORTED 可判断
+John Baldwin 称 /boot/loader FreeBSD 3.x 起随 installworld 安装且影响启动能力，早期 loader 与内核握手需版本匹配，主张 ESP 文件应像其他 boot block 处理，installworld 装最新到 /boot
+driesm.michiels 把 hint.jedec_dimm 的 at 从 smbus0 改成 ichsmb0 后一切正常且无需重启，ichsmb0 at pci0:0:31:4 为 Intel 100 Series Chipset SMBus，愿意补 man page
+George Mitchell 说 FreeBSD-SA-19:25.mcepsc 对 CVE-2018-12207 引的 SVN 修订号有误，应为 r354654 而非 r354653，纳入 UPDATING 修复与 newvers.sh 的 p 级别修正
+Mark Millard 用 truss 跟随 poudriere 的 amd64 到 armv7 交叉编译，Ctrl-C 停掉后 truss 触发断言 LIST_NEXT(info->curthread, entries) == NULL，Abort trap
+Dewayne Geraghty 用 clang 8.0.1 与 gcc 9.2.0 各编译同一 qdate.c，均带 -O2 -march=haswell -flto，目标文件 3896 与 5256 字节，可执行文件反而 16360 对 8736
+Kyle Evans 用 reptyr -T 把长任务重父进 tmux，忽略 SIGHUP，waitpid 卡住，PT_ATTACH 后第二次 waitpid 见 SIGCONT，第三次期望 PL_FLAG_SCE 因 sleep-inhibited 停在 pause wchan
+David Cross 用自写工具设好 uefi PK、KEK 与 db 后用 uefisign 签 loader 失败，返回 section points inside the headers 并卡在 pipe-read，boot1 能签但不处理 GELI 密钥
+David Cross 用 uefisign 签出的 boot1 也无法启动，windows signtool verify 返回 0x80096010 The digital signature of the object did not verify，疑 uefisign 坏
+Bruce Evans 反驳读两次并非多余的说法，i8254 timecounter 在特定配置下会微秒级回绕，pcaudio 以 16 kHz 跑时它每 74 或 75 周期回绕一次，第一次读返回垃圾且留下垃圾内部状态会更新 i8254_lastcount，第二次读才正常工作
+Cy Schubert 用 setrlimit 把 RLIMIT_STACK 设为 50 页即 50 乘 4096，把 kern.elf64.aslr.enable 由 0 改 1 后程序段错误并 core dumped
+Craig Leres 11.3-RELEASE-p4 Supermicro X9SRi-F 配双冗余电源，公共安全隐患断电后单电源失电，sysctl dev.cpu.0.freq 降到 1200，powerd 启动太晚，问 loader.conf 有 sysctl 可关掉降频
+合并所有 UIDs 与 GIDs 进主机环境仍遇同一 uid 出现在多个 jail，dewayne.geraghty 建议改用 ps -o jid,pid,command，指 /var/audit 日志缺 jail id 字段并在 auditreduce.c 加了输出
+theron.tarigo 把 stable 的 sys/dev/nvme 与 resume 补丁复制到 12.0-RELEASE，suspend 与 resume 完全工作，stable 仍有 resume 问题，建议补丁贴到 bugzilla 240340 试
+Sebastian Huber 修 nvmecontrol 的 shortopts 分配，在 sbin/nvmecontrol/comnd.c 里把 malloc 长度从 n + 3 改成 2n + 2，把 short options 串里可能出现的冒号计入长度
+11.2 自编译 PCIe 卡驱动，kldload 报 unexpected relocation type 4 与 link_elf_obj symbol pmap_qremove undefined、Unsupported file type，11.1 升起来同驱动可加载
+用 rc.conf 启用 netdump 客户端失败，dumpon 先于 netif 运行，报 Unable to configure netdump because the interface's link is down，建议拆 netdump_client rc.d 脚本
+Sebastian Huber 移植 NVMe 支持到 RTEMS，INTEL SSDPE21D280GA 能发 admin 与 FLUSH，WRITE 报 DATA TRANSFER ERROR 00/04，READ 报 UNRECOVERED READ ERROR 02/81
+Yoshihiro Ota 从 swp_pager_putpages 抓换出页统计数据，用 VM_PAGE_TO_PHYS 访问用户页触发 vm_fault_hold fault on nofault entry addr 0 页错 panic，问如何安全读取换出中的用户数据
+Mark Millard ThreadRipper 1950X 两内存域跑 head r352341，cpuset -n prefer 在 -l 0-15 与 -l 16-31 表现异常，HINT FreeBSD 13 怪而 Fedora 30 正常，问 NUMA 是否已验证
+Wojciech Puchar 报 arp -s 对只 ifconfig up 未插网线的接口返回 cannot allocate memory，Eugene Grosbein 推测接口经 DHCP 取得 IP，没网线就配置不上，arp 无法靠 IP 反查接口名
+Mark Millard 在 aarch64 head r359427 用 poudriere-devel 建 armv7 端口报 ARM64TODO fill_fpregs32，问 armv7 二进制支持是否尚未完全到位
+Neel Chauhan 提交两个 ipfw 补丁，rgrimes 接受但仍未提交，D24403 让 fill_ip6 对 me 与 me6 用单条语句，D24427 用 SLIST_REMOVE_HEAD 与 SLIST_REMOVE_AFTER，求 committer 提交
+Antranig Vartanian 评审 D24570，jail.conf 支持 /etc/jail.d/{jailname}.conf 目录配置，理由是机器上 jail 很多时 /etc 下 /etc/jail.{jailname}.conf 难维护，请人评审与测试找异常
+Emmanuel Vadot 问 linuxkpi 用 sx 实现 Linux struct mutex，Documentation/locking/mutex-design.rst mutex 与 mtx 近 1:1，linux spinlock 用 MTX_DEF 不太像
+32 位 powerpc head 从 r359427 升 r360311 后多处 signal 11，mountd 与 rpcbind 两例都涉 rendezvous_request 与 svc_getreq_common，附 jemalloc atomic_load_u 回溯
+Stephen Hocking Odroid H2+ Free 12.1 无板载网卡驱动，Stefan Esser 建议改 net/realtek_re_kmod 端口，AMD B550 RTL8125 在用，正合 RealTek 特性进 sys/dev/re/if_re.c
+Fernando Apesteguía 更新 current 后 make installworld 失败，ld-elf.so.1 报 legacy/usr/sbin/make 的 Undefined symbol regcomp at FBSD_1.6，r363784
+Ottavio Caruso 以 qemu -vga none 启动 FreeBSD 12.1，dmesg VGA 疑假阳性，pciconf -vl 见 hostb0 与 virtio 设备，追问 ttyu0 与 ttyv0 关系及能否注释 /etc/ttys 的 ttyv0
+Eugene Grosbein 说 /etc/ttys 只管多用户阶段，console 与 comconsole_port 需写进 /boot/loader.conf，如 console=comconsole 与 comconsole_port=0x3f8
+Mark Millard 在 aarch64 上 gcc9 配系统 libc++ 编 c++17 而 gcc10 不行，需 -I/usr/include/c++/v1 与 -Wl,-rpath=/usr/local/lib/gcc9，powerpc 与 amd64 无 rpath
+Gordon Bergling 为 raspberry pi 4 补 USB vendor IDs，sys/dev/usb/usbdevs 加 VIALABS2 0x1106、VL805USB30 0x3483，重编 0x2109 USB2.0 Hub 与 XHCI 无变化

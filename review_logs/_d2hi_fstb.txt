@@ -1,0 +1,70 @@
+=== fstb_b007 pk=2586687 host=L4 摘要=2.1.7 安装时 X 配置选 SVGA VGA16 MA64 后界面毫无反应，问为何提供配置项却不起作用
+    叙述: 2.1.7 安装时 X 配置选 SVGA VGA16 MA64 后界面毫无反应，问为何提供配置项却不起作用
+    臆造token: ['Developer', 'MA64', 'SVGA', 'VGA16'] | bodylen=2831
+=== fstb_b007 pk=2586696 host=L4 摘要=XDeveloper 选 bin cfg doc lib man prog set，SVGA VGA16 MA64，未被提示安装 compatXX
+    叙述: XDeveloper 选 bin cfg doc lib man prog set，SVGA VGA16 MA64，未被提示安装 compatXX
+    臆造token: ['REQUIRED_BY', 'XEmacs-19.14', 'delta', 'pkg_add', 'stand/sysinstall'] | bodylen=1132
+=== fstb_b007 pk=2586696 host=L4 摘要=XDeveloper 选 bin cfg doc lib man prog set，SVGA VGA16 MA64，未被提示安装 compatXX
+    叙述: XDeveloper 选 bin cfg doc lib man prog set，SVGA VGA16 MA64，未被提示安装 compatXX
+    臆造token: ['REQUIRED_BY', 'XEmacs-19.14', 'delta', 'pkg_add', 'stand/sysinstall'] | bodylen=1132
+=== fstb_b007 pk=2586696 host=L4 摘要=XDeveloper 选 bin cfg doc lib man prog set，SVGA VGA16 MA64，未被提示安装 compatXX
+    叙述: XDeveloper 选 bin cfg doc lib man prog set，SVGA VGA16 MA64，未被提示安装 compatXX
+    臆造token: ['REQUIRED_BY', 'XEmacs-19.14', 'delta', 'pkg_add', 'stand/sysinstall'] | bodylen=1132
+=== fstb_b007 pk=2586696 host=L4 摘要=XDeveloper 选 bin cfg doc lib man prog set，SVGA VGA16 MA64，未被提示安装 compatXX
+    叙述: XDeveloper 选 bin cfg doc lib man prog set，SVGA VGA16 MA64，未被提示安装 compatXX
+    臆造token: ['REQUIRED_BY', 'XEmacs-19.14', 'delta', 'pkg_add', 'stand/sysinstall'] | bodylen=1132
+=== fstb_b007 pk=2586696 host=L4 摘要=XDeveloper 选 bin cfg doc lib man prog set，SVGA VGA16 MA64，未被提示安装 compatXX
+    叙述: XDeveloper 选 bin cfg doc lib man prog set，SVGA VGA16 MA64，未被提示安装 compatXX
+    臆造token: ['REQUIRED_BY', 'XEmacs-19.14', 'delta', 'pkg_add', 'stand/sysinstall'] | bodylen=1132
+=== fstb_b007 pk=2586894 host=L4 摘要=当天 2.2-stable 两次触发 panic ffs_valloc dup alloc 分别在输入 tcplist 与 make world 过程中
+    叙述: 当天 2.2-stable 两次触发 panic ffs_valloc dup alloc 分别在输入 tcplist 与 make world 过程中
+    臆造token: ['ffs_valoc'] | bodylen=650
+=== fstb_b007 pk=2586943 host=L4 摘要=CTM 区已有 src-2.2.0260.gz 但缺 src-2.2.0259.gz 是否会造成更新问题
+    叙述: CTM 区已有 src-2.2.0260.gz 但缺 src-2.2.0259.gz 是否会造成更新问题
+    臆造token: ['delta'] | bodylen=130
+=== fstb_b007 pk=2587034 host=L4 摘要=cvsup 到 2.2-STABLE 后 make world 触发 ncr 读盘 MEDIUM ERROR，随后 cp failed 于 pci/ncr.c
+    叙述: cvsup 到 2.2-STABLE 后 make world 触发 ncr 读盘 MEDIUM ERROR，随后 cp failed 于 pci/ncr.c
+    臆造token: ['RELENG_2_2'] | bodylen=2664
+=== fstb_b007 pk=2587073 host=L4 摘要=RELENG_2_2 重建树后 sys/cdefs.h 等头文件缺失，make.h 依赖链编译中断
+    叙述: RELENG_2_2 重建树后 sys/cdefs.h 等头文件缺失，make.h 依赖链编译中断
+    臆造token: ['locate'] | bodylen=1171
+=== fstb_b007 pk=2587190 host=L4 摘要=cvsup RELENG_2_2 后 make includes 与 world 时 libstdc++ 编译报错
+    叙述: cvsup RELENG_2_2 后 make includes 与 world 时 libstdc++ 编译报错
+    臆造token: ['stable'] | bodylen=1375
+=== fstb_b007 pk=2587203 host=L3 摘要=David Greenman 转述 -hardware 列表上有讨论称 K6 使用数周后出现可靠性下降
+    叙述: David Greenman 转述 -hardware 列表上有讨论称 K6 使用数周后出现可靠性下降
+    臆造token: ['Philipp'] | bodylen=530
+=== fstb_b007 pk=2587449 host=L4 摘要=Bruce Evans 说它应该能工作，但存在 lseek 偏移计算常见的溢出 bug
+    叙述: Bruce Evans 说它应该能工作，但存在 lseek 偏移计算常见的溢出 bug
+    臆造token: ['Gig'] | bodylen=370
+=== fstb_b007 pk=2587574 host=L3 摘要=称并非软盘损坏，fdformat 时同样出错，已试 fd0.1440 与 raw 参数
+    叙述: 称并非软盘损坏，fdformat 时同样出错，已试 fd0.1440 与 raw 参数
+    臆造token: ['Jamil'] | bodylen=783
+=== fstb_b007 pk=2587621 host=L4 摘要=ReLEG_2_2 上 Squid 1.1.15 在 7000 连接每小时时 cvsup 升级后即崩，无法读完缓存
+    叙述: ReLEG_2_2 上 Squid 1.1.15 在 7000 连接每小时时 cvsup 升级后即崩，无法读完缓存
+    臆造token: ['RELENG_2_2'] | bodylen=397
+=== fstb_b007 pk=2588391 host=L4 摘要=PnP 最近改动在 -current 上已出问题，代码远未达生产系统要求，合入 2.2-STABLE 不明智
+    叙述: PnP 最近改动在 -current 上已出问题，代码远未达生产系统要求，合入 2.2-STABLE 不明智
+    臆造token: ['brokenness'] | bodylen=3120
+=== fstb_b007 pk=2588484 host=L4 摘要=ctm-2.1.0325 后 make world 停在 rpcgen,报 don't know how to make rpc_svcout.c
+    叙述: ctm-2.1.0325 后 make world 停在 rpcgen,报 don't know how to make rpc_svcout.c
+    臆造token: ['stm-2.1.0325.tgz'] | bodylen=1321
+=== fstb_b007 pk=2588503 host=L4 摘要=cvs up 2.2.5-RELEASE 源码并 make world 后,rm -r /usr/obj 却拒绝删除 /usr/obj/tmp 下部分库文件
+    叙述: cvs up 2.2.5-RELEASE 源码并 make world 后,rm -r /usr/obj 却拒绝删除 /usr/obj/tmp 下部分库文件
+    臆造token: ['libexec/ld.so'] | bodylen=1091
+=== fstb_b007 pk=2588526 host=L3 摘要=请对方说明该 bug 特征,自述仍在追查 some things use 3x swap 的问题
+    叙述: 请对方说明该 bug 特征,自述仍在追查 some things use 3x swap 的问题
+    臆造token: ['Dyson'] | bodylen=443
+=== fstb_b007 pk=2588578 host=L3 摘要=称自己多年从 /etc/ttys 启动 xdm 未见过任何不良现象
+    叙述: 称自己多年从 /etc/ttys 启动 xdm 未见过任何不良现象
+    臆造token: ['APMIO_DISPLAY', 'apm.c', 'undeclared'] | bodylen=261
+=== fstb_b007 pk=2588578 host=L3 摘要=称自己多年从 /etc/ttys 启动 xdm 未见过任何不良现象
+    叙述: 称自己多年从 /etc/ttys 启动 xdm 未见过任何不良现象
+    臆造token: ['APMIO_DISPLAY', 'apm.c', 'undeclared'] | bodylen=261
+=== fstb_b007 pk=2588578 host=L3 摘要=称自己多年从 /etc/ttys 启动 xdm 未见过任何不良现象
+    叙述: 称自己多年从 /etc/ttys 启动 xdm 未见过任何不良现象
+    臆造token: ['APMIO_DISPLAY', 'apm.c', 'undeclared'] | bodylen=261
+=== fstb_b007 pk=2588636 host=L3 摘要=反驳称 RELDATE 粒度太粗,人们不太可能去更新它
+    叙述: 反驳称 RELDATE 粒度太粗,人们不太可能去更新它
+    臆造token: ['asami'] | bodylen=484
+# 已排除(正文/摘要命中)=26 | 高危臆造候选=23

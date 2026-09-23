@@ -1,0 +1,103 @@
+=== fcu_b007 pk=1035564 host=L4 摘要=igmp_v3_dispatch_general_query 在 version 2 触发 panic 称本周 MLDv2 已修过同类问题
+    叙述: igmp_v3_dispatch_general_query 在 version 2 触发 panic 称本周 MLDv2 已修过同类问题
+    臆造token: ['querier'] | bodylen=2021
+=== fcu_b007 pk=1035638 host=L4 摘要=Kip Macy 回指 svn.freebsd.org changeset base 192360 作为对该 zio 分配变更的回应
+    叙述: Kip Macy 回指 svn.freebsd.org changeset base 192360 作为对该 zio 分配变更的回应
+    臆造token: ['CVS'] | bodylen=1795
+=== fcu_b007 pk=1035794 host=L4 摘要=升到 r198831 后笔记本不再与两个 AP 关联，回退 sys/net80211 到 r198443 即可修复
+    叙述: 升到 r198831 后笔记本不再与两个 AP 关联，回退 sys/net80211 到 r198443 即可修复
+    臆造token: ['uname'] | bodylen=1442
+=== fcu_b007 pk=1035818 host=L4 摘要=补丁整体可用但指出新 callout 缺少 callout_drain 调用，应参照 pcd timer 的现有写法
+    叙述: 补丁整体可用但指出新 callout 缺少 callout_drain 调用，应参照 pcd timer 的现有写法
+    臆造token: ['ehci-lostintr.patch'] | bodylen=411
+=== fcu_b007 pk=1035999 host=L4 摘要=Dell Inspiron 1520 上 r199067 后启动挂起，r199066 正常，为 amd64 generic 内核
+    叙述: Dell Inspiron 1520 上 r199067 后启动挂起，r199066 正常，为 amd64 generic 内核
+    臆造token: ['Core2'] | bodylen=1317
+=== fcu_b007 pk=1036139 host=L3 摘要=wpa_supplicant 在 r199019 升级到 r199291 后无法锁定，疑因 net80211 相关提交
+    叙述: wpa_supplicant 在 r199019 升级到 r199291 后无法锁定，疑因 net80211 相关提交
+    臆造token: ['r199186', 'r199187'] | bodylen=485
+=== fcu_b007 pk=1036142 host=L3 摘要=uname 显示 8.0-RC3 但 dmesg 显示 7.2-RELEASE-p4 的版本不一致现象
+    叙述: uname 显示 8.0-RC3 但 dmesg 显示 7.2-RELEASE-p4 的版本不一致现象
+    臆造token: ['Core'] | bodylen=1072
+=== fcu_b007 pk=1036167 host=L4 摘要=应用 Noland 与 Reimer 的补丁后问题依旧，改用 -CURRENT svn 198420 的文件
+    叙述: 应用 Noland 与 Reimer 的补丁后问题依旧，改用 -CURRENT svn 198420 的文件
+    臆造token: ['zfs.c', 'zfsboot.c'] | bodylen=1386
+=== fcu_b007 pk=1036330 host=L4 摘要=arp 输出不再按 IP 地址排序，怀疑是 RELENG_8 中 arp 改动的 fallout
+    叙述: arp 输出不再按 IP 地址排序，怀疑是 RELENG_8 中 arp 改动的 fallout
+    臆造token: ['Qing', 'REL_8', 'arp', 'sort'] | bodylen=2542
+=== fcu_b007 pk=1036330 host=L4 摘要=arp 输出不再按 IP 地址排序，怀疑是 RELENG_8 中 arp 改动的 fallout
+    叙述: arp 输出不再按 IP 地址排序，怀疑是 RELENG_8 中 arp 改动的 fallout
+    臆造token: ['Qing', 'REL_8', 'arp', 'sort'] | bodylen=2542
+=== fcu_b007 pk=1036330 host=L4 摘要=arp 输出不再按 IP 地址排序，怀疑是 RELENG_8 中 arp 改动的 fallout
+    叙述: arp 输出不再按 IP 地址排序，怀疑是 RELENG_8 中 arp 改动的 fallout
+    臆造token: ['Qing', 'REL_8', 'arp', 'sort'] | bodylen=2542
+=== fcu_b007 pk=1036392 host=L4 摘要=报告 7.x 到 8.0 因 CLFLUSH 相关改动使内核在 Xen 完全虚拟化下无法启动，很早处崩溃且无变通，kern/138863
+    叙述: 报告 7.x 到 8.0 因 CLFLUSH 相关改动使内核在 Xen 完全虚拟化下无法启动，很早处崩溃且无变通，kern/138863
+    臆造token: ['RC3'] | bodylen=670
+=== fcu_b007 pk=1036399 host=L3 摘要=自述新装 ASRock AOD790GX 机器 shutdown -p 正常，并追问是否现代主机的 ACPI 特性尚未被支持
+    叙述: 自述新装 ASRock AOD790GX 机器 shutdown -p 正常，并追问是否现代主机的 ACPI 特性尚未被支持
+    臆造token: ['halt'] | bodylen=620
+=== fcu_b007 pk=1036459 host=L4 摘要=转发 run 驱动针对 8.0 release 与 current 的修复，自述修掉部分丢包与内存泄漏并提升性能，新增 40 个厂商设备 ID
+    叙述: 转发 run 驱动针对 8.0 release 与 current 的修复，自述修掉部分丢包与内存泄漏并提升性能，新增 40 个厂商设备 ID
+    臆造token: ['vendor/device'] | bodylen=720
+=== fcu_b007 pk=1036509 host=L3 摘要=报告观察到主机不再接收任何数据包，仅在脚本所在会话超时前做过少量重传
+    叙述: 报告观察到主机不再接收任何数据包，仅在脚本所在会话超时前做过少量重传
+    臆造token: ['verby'] | bodylen=138
+=== fcu_b007 pk=1036534 host=L4 摘要=ia64 下 bsdstats-5.5 间歇 mutex 错误，unix/socket.c 断言 pthread_mutex_destroy 失败
+    叙述: ia64 下 bsdstats-5.5 间歇 mutex 错误，unix/socket.c 断言 pthread_mutex_destroy 失败
+    臆造token: ['core', 'dump'] | bodylen=814
+=== fcu_b007 pk=1036534 host=L4 摘要=ia64 下 bsdstats-5.5 间歇 mutex 错误，unix/socket.c 断言 pthread_mutex_destroy 失败
+    叙述: ia64 下 bsdstats-5.5 间歇 mutex 错误，unix/socket.c 断言 pthread_mutex_destroy 失败
+    臆造token: ['core', 'dump'] | bodylen=814
+=== fcu_b007 pk=1036541 host=L4 摘要=报告 -current 上 pmcstat 读 hwpmc 采集文件崩溃于 pmclog_read，断言 ps_len 为 0 失败并 core dump
+    叙述: 报告 -current 上 pmcstat 读 hwpmc 采集文件崩溃于 pmclog_read，断言 ps_len 为 0 失败并 core dump
+    臆造token: ['dmesg'] | bodylen=1209
+=== fcu_b007 pk=1036589 host=L4 摘要=Goran Gajic 贴出 umass-sim 反复 lost device 的 dmesg，挂 msdosfs 报 Invalid argument
+    叙述: Goran Gajic 贴出 umass-sim 反复 lost device 的 dmesg，挂 msdosfs 报 Invalid argument
+    臆造token: ['Broadcom', 'dmesg'] | bodylen=1028
+=== fcu_b007 pk=1036604 host=L4 摘要=kama 报告 8.0-RC1 上配置 bge(4) inet 地址时系统挂起，禁用 hw.bge.allow_asf 可解除
+    叙述: kama 报告 8.0-RC1 上配置 bge(4) inet 地址时系统挂起，禁用 hw.bge.allow_asf 可解除
+    臆造token: ['dmesg'] | bodylen=1276
+=== fcu_b007 pk=1036719 host=L3 摘要=Dag-Erling Smørgrav 说明未配置任何 ipv6 变量时 IPv6 会连同链路本地通信一起禁用
+    叙述: Dag-Erling Smørgrav 说明未配置任何 ipv6 变量时 IPv6 会连同链路本地通信一起禁用
+    臆造token: ['r197526'] | bodylen=814
+=== fcu_b007 pk=1036739 host=L4 摘要=Rick Macklem 判断全局变量未被使用导致 libgssapi 中定义它的 .o 未被加载
+    叙述: Rick Macklem 判断全局变量未被使用导致 libgssapi 中定义它的 .o 未被加载
+    臆造token: ['libgssapi-spengo'] | bodylen=657
+=== fcu_b007 pk=1036765 host=L4 摘要=Kamigishi ZFS panic _sx_xlock_hard recursed on non-recursive sx，Gleb 疑因 nullfs
+    叙述: Kamigishi ZFS panic _sx_xlock_hard recursed on non-recursive sx，Gleb 疑因 nullfs
+    臆造token: ['ezjail', 'jail'] | bodylen=833
+=== fcu_b007 pk=1036765 host=L4 摘要=Kamigishi ZFS panic _sx_xlock_hard recursed on non-recursive sx，Gleb 疑因 nullfs
+    叙述: Kamigishi ZFS panic _sx_xlock_hard recursed on non-recursive sx，Gleb 疑因 nullfs
+    臆造token: ['ezjail', 'jail'] | bodylen=833
+=== fcu_b007 pk=1036800 host=L3 摘要=Ganbold 说他有一块 Planex GW-USMicroN 小 USB 网卡，本想移植 openbsd 的 if_run 却没能抽出时间
+    叙述: Ganbold 说他有一块 Planex GW-USMicroN 小 USB 网卡，本想移植 openbsd 的 if_run 却没能抽出时间
+    臆造token: ['Akiyama'] | bodylen=1441
+=== fcu_b007 pk=1037027 host=L4 摘要=Ed Schouten 定位控制台回归根因为收缩 TTY 缓冲区并未直接释放内存，而是延迟到数据流过才回收，修复版本 198223
+    叙述: Ed Schouten 定位控制台回归根因为收缩 TTY 缓冲区并未直接释放内存，而是延迟到数据流过才回收，修复版本 198223
+    臆造token: ['r198223'] | bodylen=1284
+=== fcu_b007 pk=1037034 host=L3 摘要=Robert Watson 回应 softclock swi 未绑 cpu 的观察，认同这样设计是有意为之
+    叙述: Robert Watson 回应 softclock swi 未绑 cpu 的观察，认同这样设计是有意为之
+    臆造token: ['YAMAMOUNT'] | bodylen=845
+=== fcu_b007 pk=1037284 host=L4 摘要=Stefan Bethke 的旧 Elsa MicroLink 56k USB 调制解调器不被新 USB 栈识别，疑设备 ID 转换时遗失
+    叙述: Stefan Bethke 的旧 Elsa MicroLink 56k USB 调制解调器不被新 USB 栈识别，疑设备 ID 转换时遗失
+    臆造token: ['set_config', 'umodem0'] | bodylen=1208
+=== fcu_b007 pk=1037284 host=L4 摘要=Stefan Bethke 的旧 Elsa MicroLink 56k USB 调制解调器不被新 USB 栈识别，疑设备 ID 转换时遗失
+    叙述: Stefan Bethke 的旧 Elsa MicroLink 56k USB 调制解调器不被新 USB 栈识别，疑设备 ID 转换时遗失
+    臆造token: ['set_config', 'umodem0'] | bodylen=1208
+=== fcu_b007 pk=1037394 host=L4 摘要=Dillon 引用 DFly ATA 驱动判断非 SATA 芯片 ATAPI 命令 DMA 规格上仅运行 16 字节倍数
+    叙述: Dillon 引用 DFly ATA 驱动判断非 SATA 芯片 ATAPI 命令 DMA 规格上仅运行 16 字节倍数
+    臆造token: ['padding'] | bodylen=1214
+=== fcu_b007 pk=1037464 host=L4 摘要=soekris 4511 运行 8.0-BETA2 出站正常入站连接被静默丢弃 tcpdump 抓取显示 DNS 请求无响应
+    叙述: soekris 4511 运行 8.0-BETA2 出站正常入站连接被静默丢弃 tcpdump 抓取显示 DNS 请求无响应
+    臆造token: ['SYN'] | bodylen=2247
+=== fcu_b007 pk=1037490 host=L4 摘要=8.0-BETA4 amd64 在 zvol 上建 UFS 卷后 touch 文件触发 panic ffs_sync rofs mod zpool 为镜像
+    叙述: 8.0-BETA4 amd64 在 zvol 上建 UFS 卷后 touch 文件触发 panic ffs_sync rofs mod zpool 为镜像
+    臆造token: ['ad4p3', 'ad6p3'] | bodylen=6984
+=== fcu_b007 pk=1037490 host=L4 摘要=8.0-BETA4 amd64 在 zvol 上建 UFS 卷后 touch 文件触发 panic ffs_sync rofs mod zpool 为镜像
+    叙述: 8.0-BETA4 amd64 在 zvol 上建 UFS 卷后 touch 文件触发 panic ffs_sync rofs mod zpool 为镜像
+    臆造token: ['ad4p3', 'ad6p3'] | bodylen=6984
+=== fcu_b007 pk=1037519 host=L4 摘要=8.0-BETA4 报 uma_zalloc_arg zone 64 持非可睡眠锁 exclusive sleep mutex jail mutex
+    叙述: 8.0-BETA4 报 uma_zalloc_arg zone 64 持非可睡眠锁 exclusive sleep mutex jail mutex
+    臆造token: ['Core2'] | bodylen=17507
+# 已排除(正文/摘要命中)=40 | 高危臆造候选=34

@@ -1,0 +1,136 @@
+=== fcu_b007 p1 叙述专名保真核验 ===
+叙述条数: 42 | 可疑(叙述含专名而正文无): 2
+  [1035564] 未见于正文: ['querier']
+        叙述: Bruce Simpson 报 panic igmp_v3_dispatch_general_query 在 version 2 触发，称本周 MLDv2 已修过同类问题，SSM 旧 querier 
+  [1035638] 未见于正文: ['CVS']
+        叙述: Kip Macy 回指 svn.freebsd.org changeset base 192360 作为对 zio 大内存分配变更的回应，rmtodd 追问该回滚在 CVS 与 cvsup 站点均不可
+=== fcu_b007 p2 叙述专名保真核验 ===
+叙述条数: 41 | 可疑(叙述含专名而正文无): 4
+  [1035759] 未见于正文: ['Rev.', 'r198868']
+        叙述: des 提示可能与 attilio 在 r198868 的提交有关 该提交针对 AMD Opteron Rev. E 仅打印警告并非真正修复 并请求 Kai Gallasch 提供 CPUID
+  [1035794] 未见于正文: ['uname']
+        叙述: 作者升级到 r198831 后笔记本不再与两个 AP 关联 回退 sys/net80211 到 r198443 即可修复 不可用系统 uname 显示 8.0-RC2 r198931 两个 AP 均 
+  [1035813] 未见于正文: ['nfsd']
+        叙述: Freddie Cash 解释 ZFS sharenfs 属性语法与 /etc/exports 相同 属性内容被复制进私有 exports 文件供 nfsd 使用 showmount -e 可列出 并
+  [1035818] 未见于正文: ['ehci-lostintr.patch']
+        叙述: Hans Petter Selasky 评 Alexander Nedotsukov 的补丁 称整体可用 但指出新 callout 缺少 callout_drain() 调用 应参照 pcd time
+=== fcu_b007 p3 叙述专名保真核验 ===
+叙述条数: 41 | 可疑(叙述含专名而正文无): 3
+  [1035854] 未见于正文: ['SIGSEGV']
+        叙述: 补丁修 kdump 处理 linuxulator ktrace.out 时 SIGSEGV 把 while (narg) 改为 while (narg > 0) 补丁在 HEAD 已躺近 2 年对应 
+  [1035930] 未见于正文: ['r199157']
+        叙述: ZFS replay 代码重要缺陷 非正常关机且 ZIL 内含与权限无关的 setattr 日志会把文件 mode 设为 07777 并带上 setuid 位 修复为 r199157
+  [1035933] 未见于正文: ['PseudoRAID', 'loaded']
+        叙述: 怀疑启动卡在 ATA PseudoRAID loaded 与 r199067 有关 kuriyama 已发来待测补丁 本人尚未腾出时间测试 并附 svn-src-head 邮件链接
+=== fcu_b007 p4 叙述专名保真核验 ===
+叙述条数: 41 | 可疑(叙述含专名而正文无): 2
+  [1035999] 未见于正文: ['Core2']
+        叙述: Dell Inspiron 1520 上 r199067 之后启动挂起而 199066 正常，amd64 generic 内核无 loader.conf 项，CPU 为 Core2 Duo T7500
+  [1036068] 未见于正文: ['PCIe']
+        叙述: 自己用 LSI1068 8 口卡很满意，AOC-USAS-L8i 虽为 PCIe 卡但挡板方向相反元件在错误侧须弯折，另称 AHCI 驱动对 X25-M 小文件约优于 mpt 一成
+=== fcu_b007 p5 叙述专名保真核验 ===
+叙述条数: 41 | 可疑(叙述含专名而正文无): 5
+  [1036128] 未见于正文: ['CXXFLAGS']
+        叙述: amdmi3 自查发现 RELENG_8_0 世界的 -Werror 报错根源是本地 make.conf 里 C,CXXFLAGS 加了 -Wall，源于旧实验配置而非代码变更
+  [1036139] 未见于正文: ['r199186', 'r199187']
+        叙述: Doug Barton 把 -current 从 r199019 升到 r199291 后 wpa_supplicant 运行却不再锁定，仅 r199186 与 r199187 这两笔 sys/net
+  [1036142] 未见于正文: ['Core']
+        叙述: 升级 FreeBSD 8.0-RC3 后 uname 显示 8.0-RC3 而 dmesg 首行仍是 FreeBSD 7.2-RELEASE-p4，机器为 Pentium Dual Core E214
+  [1036167] 未见于正文: ['zfs.c', 'zfsboot.c']
+        叙述: Robert Noland 指出 Matt Reimer 的补丁只影响 raidz 卷，且切换 gptzfsboot 需重新分区故不可行，Emil Smolenski 于是从 -CURRENT svn
+  [1036286] 未见于正文: ['camcontrol', 'identify']
+        叙述: Norikatsu Shigemura 把 Intel 64GB SSD X25-E 与 WD10EADS 同挂 ahci(4)，结果只有 WD10EADS 启用了 NCQ，X25-E 未启用，附 c
+=== fcu_b007 p6 叙述专名保真核验 ===
+叙述条数: 41 | 可疑(叙述含专名而正文无): 5
+  [1036330] 未见于正文: ['Qing', 'REL_8', 'arp', 'sort']
+        叙述: 用户问 arp -na 输出为何不再按 IP 排序，Qing Li 答 8 之前与 REL_8 的 ARP 表后端实现完全不同，属已知问题且优先级低，临时可 arp -an 接 sort 变通
+  [1036392] 未见于正文: ['RC3']
+        叙述: 报 7.x 到 8.0 因 CLFLUSH 相关改动使内核在 Xen 完全虚拟化模式下无法启动，很早处崩溃且无变通，kern/138863，8.0-RC3 在 XenServer 5.5.0 上仍有此
+  [1036399] 未见于正文: ['halt']
+        叙述: Robert Huff 自述新装 ASRock AOD790GX 机器 shutdown -p 正常，但 shutdown -r 只 halt 不 reboot，并追问现代主机的 ACPI 特性是否尚
+  [1036424] 未见于正文: ['code']
+        叙述: Doug Barton 报当日 -current 另有一处构建失败，构建 cddl/usr.bin/ctfdump 时静态链接 -static 下 libc.a(err.o) 的 vwarn 报错，以
+  [1036459] 未见于正文: ['vendor/device']
+        叙述: run 驱动针对 8.0 release 与 current 的修复补丁，Akinori 称修掉部分丢包与内存泄漏并提升性能，新增 40 个 vendor/device ID，RELEASE_NOTE
+=== fcu_b007 p7 叙述专名保真核验 ===
+叙述条数: 41 | 可疑(叙述含专名而正文无): 6
+  [1036509] 未见于正文: ['verby']
+        叙述: Eirik Øverby 补充观察：主机已不再接收任何数据包，仅在脚本运行会话超时前做过少量重传，作为 FreeBSD 8.0 网络栈崩溃一例的现场细节供开发者排查
+  [1036534] 未见于正文: ['core', 'dump']
+        叙述: Anton Shterenlikht 报告 ia64 下 bsdstats-5.5 间歇 mutex 错误，unix/socket.c 第 1966 行 RUNTIME_CHECK pthread_m
+  [1036541] 未见于正文: ['dmesg']
+        叙述: Bruce Cran 报告 -current 上 pmcstat 读取 hwpmc 采集文件时崩溃于 pmclog_read，ps->ps_len 为 0 断言失败并 core dump，附 Inte
+  [1036589] 未见于正文: ['Broadcom', 'dmesg']
+        叙述: Goran Gajic 贴出 8.0RC1 上 umass-sim 反复 lost device 的 dmesg，随后 mount -t msdosfs /dev/da0 报 Invalid argu
+  [1036597] 未见于正文: ['MS-DOS']
+        叙述: Boris Samorodov 建议直接挂 /dev/da0s1，因 MS-DOS 一般用分区 s1，给出 mount -t msdosfs /dev/da0s1 /mnt 命令，回应 8.0RC1 
+  [1036604] 未见于正文: ['dmesg']
+        叙述: kama 确认 8.0-RC1 上配置 bge(4) inet 地址时系统挂起或瞬时重启，在 DL385 Opteron i386 上重现，设置 hw.bge.allow_asf 为 0 可让其启动，
+=== fcu_b007 p8 叙述专名保真核验 ===
+叙述条数: 41 | 可疑(叙述含专名而正文无): 4
+  [1036607] 未见于正文: ['stable/6', 'stable/7']
+        叙述: jhell 就 r197221 以 MFC r197218 移除 ZFS 实验性警告一事认为此举并无不便，仍询问是否也计划回移 stable/6 与 stable/7
+  [1036631] 未见于正文: ['mountroot']
+        叙述: Hans Petter Selasky 附上允许无限等待根设备方案的轮廓 diff，称既有 mountroot 功能均保留，唯一差别是无根盘时系统要到 3 分钟后才 panic
+  [1036636] 未见于正文: ['mountroot']
+        叙述: Hans Petter Selasky 给出支持无限等待根设备的 CH 169183 补丁供试，但注明 gets 与 cncheckc 都取不到字符，mountroot 时原本可用的功能似有 bug
+  [1036669] 未见于正文: ['CPU_VENDOR_AMD']
+        叙述: Michio Jinbo 回应 r197744 在 stable/8 落地后仍用 8.0-RC1 安装盘复测，Citrix Xen Server 与 Hyper-V 下 AMD 机型 panic 依旧
+=== fcu_b007 p9 叙述专名保真核验 ===
+叙述条数: 41 | 可疑(叙述含专名而正文无): 3
+  [1036719] 未见于正文: ['r197526']
+        叙述: Dag-Erling Smørgrav 表示接受 r197526 后的默认行为,rc.conf 中不放任何 ipv6 变量即可禁用 IPv6 含链路本地通信,并建议单列网络配置 man page
+  [1036739] 未见于正文: ['libgssapi-spengo']
+        叙述: Rick Macklem 判断 libgssapi 中定义全局变量如 GSS_C_HOST_BASED_NAME 的 .o 因未被应用实际引用而不被加载,导致 libgssapi-spengo 无法解
+  [1036765] 未见于正文: ['ezjail', 'jail']
+        叙述: Kamigishi 确认自己在 zfs 上使用 ezjail 套件,其通过 nullfs 把 jail 子目录链到基础结构上,Gleb 曾见类似 panic 源于 zfs 到 getnewvnode 
+=== fcu_b007 p10 叙述专名保真核验 ===
+叙述条数: 41 | 可疑(叙述含专名而正文无): 5
+  [1036790] 未见于正文: ['Akiyama']
+        叙述: Akiyama 称已移植 run 网卡驱动，是 ru'N' 不是 ru'M'，并贴在 FreeBSD 论坛请开发者评审，另计划移植到 current，自述为 FreeBSD 新手
+  [1036797] 未见于正文: ['Ctrl-Z', 'usr/bin/make']
+        叙述: Kris 报告用 Ctrl-Z 挂起再 fg 恢复 /usr/bin/make 构建后输出严重错乱，源码与宏选项交错打印并出现 couldn't resume mac_pipe.o: No such 
+  [1036800] 未见于正文: ['Akiyama']
+        叙述: Ganbold 说他有一块 Planex GW-USMicroN 小 USB 网卡，本想移植 openbsd 的 if_run 却没能抽出时间，会测试 Akiyama 的移植但先要更新机器上很旧的 C
+  [1036822] 未见于正文: ['r197691']
+        叙述: Stefan 发现 portaudit 脚本有 typo，在 /bin/sh 的 r197691 改动后才发作并附补丁修复，去掉 PKGNAME 赋值上多出的反引号
+  [1036876] 未见于正文: ['flag']
+        叙述: rwatson 判断 marcus 手上已有 crashdump，请他把相关变量尤其 sb flag 的 dump 贴进邮件，提示可取各栈帧的 so inp tp 等指针
+=== fcu_b007 p11 叙述专名保真核验 ===
+叙述条数: 41 | 可疑(叙述含专名而正文无): 3
+  [1037027] 未见于正文: ['r198223']
+        叙述: Ed Schouten 定位根因：改波特率需收缩 TTY 缓冲区，未直接释放内存而延迟到数据流过才回收，水印因此用错缓冲区尺寸可能落在缓冲区外使进程永不唤醒，修复版本 r198223
+  [1037034] 未见于正文: ['YAMAMOUNT']
+        叙述: Watson 回应 Taku YAMAMOUNT 关于 softclock swi 未硬绑 CPU 的观察，认同这是有意设计，对 lapic 计时器所在 CPU 有软亲和力而非硬绑定，允许必要时迁移
+  [1037056] 未见于正文: ['flowtable_route_flush']
+        叙述: Qing Li 回应 Ryan Stone，确认 flowtable_route_flush 相关代码块应加 #ifdef SMP 条件，并表示正在照此修改，相关提交为 r198306
+=== fcu_b007 p12 叙述专名保真核验 ===
+叙述条数: 41 | 可疑(叙述含专名而正文无): 1
+  [1037107] 未见于正文: ['netoptions']
+        叙述: Hiroki Sato 称 netoptions 里用单引号导致 tcp_drop_synfin=YES 未参数展开、dmesg 仍显示字面 ${tcp_drop_synfin} 的问题他刚已修正
+=== fcu_b007 p13 叙述专名保真核验 ===
+叙述条数: 41 | 可疑(叙述含专名而正文无): 1
+  [1037284] 未见于正文: ['set_config', 'umodem0']
+        叙述: Stefan Bethke 的 Elsa MicroLink 56k USB 调制解调器不被新 USB 栈识别，疑设备 ID 在转换时遗失，7-stable 下 ucom0 可识别，usbconfig
+=== fcu_b007 p14 叙述专名保真核验 ===
+叙述条数: 41 | 可疑(叙述含专名而正文无): 10
+  [1037394] 未见于正文: ['padding']
+        叙述: Matthew Dillon 把 DFly ATA 驱动做法引到讨论 非 SATA 老芯片集上 ATAPI 命令 DMA 按规格只能以 16 字节倍数运行 len 不满足则不置 ATA_R_DMA 因
+  [1037400] 未见于正文: ['lo0']
+        叙述: qing.li 回帖请测试者套用补丁 qing-ipv6-patch-9-5-1100.diff 修 lo0 上 IPv6 地址不可用 自己随后继续加测 未声称已验证可用
+  [1037406] 未见于正文: ['lo0', 'qing.li']
+        叙述: ben wilber 回帖确认 qing.li 的补丁 Applied to r196870 后 lo0 上 IPv6 地址问题 problem gone
+  [1037409] 未见于正文: ['hselasky']
+        叙述: Stefan Bethke 在 hselasky 请用户补 usb_quirk.c 补丁以便提交之后回帖 贴出修 ELSA MicroLink 56k USB 不被 umodem 识别的补丁 新增 U
+  [1037427] 未见于正文: ['ProbeRequest', 'net80211', 'scan_ssid', 'wpa_supplicant.conf']
+        叙述: Sam Leffler 给出诊断 认为 wpa_supplicant.conf 里禁用了 scan_ssid 致扫描时不带 ssid 使 net80211 不发定向 ProbeRequest 帧 建议
+  [1037431] 未见于正文: ['BETA1', 'BETA4']
+        叙述: Mustabasic Reuf 报 iMac 9 上 FreeBSD 8.0-BETA1 至 BETA4 全部启动挂起 7.2 工作正常 并称可提供 ACPI debug 输出与 dmesg 供进一步
+  [1037464] 未见于正文: ['SYN']
+        叙述: Ruben de Groot 报 soekris 4511 上 8.0-BETA2 出站正常而入站连接被静默丢弃 tcpdump 显示出站 DNS 收到 NXDomain 与 PTR 应答 入站 ss
+  [1037490] 未见于正文: ['ad4p3', 'ad6p3']
+        叙述: Jeff Blank 报 8.0-BETA4 amd64 在 zvol 上 newfs 出 UFS 后 touch 即 panic ffs_sync: rofs mod 止于 ffs_sync+0x5
+  [1037498] 未见于正文: ['rev.1.114']
+        叙述: Luigi Rizzo 报 RELENG_8 amd64 上 callout_reset 比 RELENG_7 晚一个 tick 执行 致 dummynet 抖动由 1 tick 变 2 tick 怀
+  [1037519] 未见于正文: ['Core2']
+        叙述: Norbert Koch 先问是否有合适的邮件列表贴 Freebsd-8-BETA4 的内核栈回溯 若合适则附输出 正文含开启 WITNESS 的 8.0-BETA4 启动信息 机型为 Intel C

@@ -1,0 +1,108 @@
+=== fstb_b007 p1 叙述专名保真核验 ===
+叙述条数: 44 | 可疑(叙述含专名而正文无): 2
+  [2586687] 未见于正文: ['Developer', 'MA64', 'SVGA', 'VGA16']
+        叙述: 2.1.7 安装选 X Developer 与 SVGA VGA16 MA64 进图形模式，调试屏幕报 ldconfig /usr/lib/compat 不存在与 _X11TransSocketUNI
+  [2586696] 未见于正文: ['REQUIRED_BY', 'XEmacs-19.14', 'delta', 'pkg_add', 'stand/sysinstall']
+        叙述: 2.1.7 加 delta 291 后选 X Developer 与 X Basic 集，用 /stand/sysinstall 与 pkg_add 装 XEmacs-19.14 都不成，pkg_ad
+=== fstb_b007 p2 叙述专名保真核验 ===
+叙述条数: 44 | 可疑(叙述含专名而正文无): 5
+  [2586828] 未见于正文: ['mbps']
+        叙述: Tom Samplonius 评价 FreeBSD 的 3C509 驱动并不出色,因 3COM 给的硬件资料有限且不同硬件修订表现不一,而 de0 驱动在 10mbps 以太网卡上相当稳健
+  [2586883] 未见于正文: ['timeout']
+        叙述: Jochen Knuth 报升 2.2-Stable 后 ahc 驱动向 hp dat 大文件系统 dump 频繁 timeout 甚至整机重启,且重启时磁盘几何变为 2millions/1/1,改换
+  [2586894] 未见于正文: ['ffs_valoc']
+        叙述: Satoshi Asami 报当天 2.2-stable 接连两次触发 panic ffs_valoc: dup alloc,一次在键入 tcplist 时,另一次在 make world 期间,并附
+  [2586908] 未见于正文: ['David']
+        叙述: Justin T. Gibbs 猜用了 rewind device 使回绕耗时超过 st 驱动允许的约 5 分钟而引发首个 timeout,随后恢复码处理不当是第二个 bug,并附补丁请 David 
+  [2586916] 未见于正文: ['Unix']
+        叙述: Peter Jeremy 指部分 BSD/386 派生 Unix 的 VM 子系统存在泄漏:系统 paging 期间 fork 出的子进程所占 swap 直到父进程 exit 才释放,主要坑的是 cr
+=== fstb_b007 p3 叙述专名保真核验 ===
+叙述条数: 44 | 可疑(叙述含专名而正文无): 5
+  [2586943] 未见于正文: ['delta']
+        叙述: 注意到 CTM 区已有 src-2.2.0260.gz 但缺 src-2.2.0259.gz，问缺号 delta 会不会造成更新问题
+  [2586945] 未见于正文: ['delta']
+        叙述: 答 260 及以后的 delta 会 queue up，但直到 259 可用前不会应用，根因是 FreeBSD mail system 出过问题，已手动强制重传 src-2.2.0259.gz
+  [2586971] 未见于正文: ['breakdown']
+        叙述: 答两天后跑 vmstat -m 会给出 kernel 中内存分配的 breakdown，可从中找到 kmem_map too small 反复 panic 的线索
+  [2587031] 未见于正文: ['delta']
+        叙述: 答本地有此文件，提供 ftp.masternet.it/pub/FreeBSD/FreeBSD-2.2/ctm 供补 CTM 缺号 delta
+  [2587034] 未见于正文: ['RELENG_2_2']
+        叙述: cvsup RELENG_2_2 后 make world 立刻出现 ncr 读盘 MEDIUM ERROR，随后 cp failed 于 ../../pci/ncr.c line 5542，X se
+=== fstb_b007 p4 叙述专名保真核验 ===
+叙述条数: 44 | 可疑(叙述含专名而正文无): 4
+  [2587043] 未见于正文: ['mtime']
+        叙述: John Polstra 答复先经 T1 线路 FTP 整树再以 ZIP 盘带回家运行 CVSup 可行，建议尽量保留文件 mtime 以加快首次 CVSup，非必需
+  [2587073] 未见于正文: ['locate']
+        叙述: RELENG_2_2 上编译 lstSucc.c 报 sys/cdefs.h sys/types.h sys/param.h No such file or directory，locate cdef
+  [2587097] 未见于正文: ['Error', 'code', 'compile', 'failed']
+        叙述: ctm 第 203 号输出中 make world 至 Rebuilding bootstrap tools 阶段失败，mkdep 编译 usr.bin/make/lst.lib 下一批源文件后 co
+  [2587106] 未见于正文: ['panic']
+        叙述: NEC 6030X 装 FreeBSD 2.2.2 后装上 CD 抽屉则硬盘变 wd1 而 CD 作 wd0，把 fstab 从 wd1 改成 wd0 不装 CD 抽屉后内核探查完设备即 panic，
+=== fstb_b007 p5 叙述专名保真核验 ===
+叙述条数: 43 | 可疑(叙述含专名而正文无): 2
+  [2587190] 未见于正文: ['stable']
+        叙述: Uenami Ken'ichi cvsup 取 RELENG_2_2 得 2.2.2-stable 后跑 make includes world，构建 libstdc++ 报错，c++ 命令编译 co
+  [2587203] 未见于正文: ['Philipp']
+        叙述: David Greenman 指 -hardware 列表上正有讨论称 K6 能正常跑几周后逐渐出现可靠性问题，与 Philipp 所见一致，他自己手头一台也如此，并已和至少半打遭遇同样问题的人互换邮
+=== fstb_b007 p6 叙述专名保真核验 ===
+叙述条数: 43 | 可疑(叙述含专名而正文无): 1
+  [2587264] 未见于正文: ['bug']
+        叙述: Michael Smith 推测是 sysinstall 出了 bug 才会把注释堆到 /etc/rc.conf 行尾形成长行，并反问对方是否常用 sysinstall 改 /etc/rc.conf
+=== fstb_b007 p7 叙述专名保真核验 ===
+叙述条数: 43 | 可疑(叙述含专名而正文无): 2
+  [2587449] 未见于正文: ['Gig']
+        叙述: Evans 回应 3Gig IDE 硬盘在 2048 MByte 处 bad144 失败一事，称它应该能工作，并非不支持这么大的文件系统，而是存在 lseek 偏移计算中常见的溢出 bug
+  [2587513] 未见于正文: ['workaround']
+        叙述: Losh 回复称自己以为真是 csh 的问题，并追问 Hubbard 的修法是采用 getuid() 与 geteuid() 比对这类 workaround，还是干脆整体撤掉该补丁
+=== fstb_b007 p8 叙述专名保真核验 ===
+叙述条数: 43 | 可疑(叙述含专名而正文无): 2
+  [2587529] 未见于正文: ['current']
+        叙述: 称自己在 -current 而非 2.2，pciconf.c 上次改动在三月且无法复现，怀疑对方本地源码树有问题，反问 /usr/obj/usr/src/tmp/usr/include 下是否有 pc
+  [2587574] 未见于正文: ['Jamil']
+        叙述: Jamil 反驳 Greg Lehey 说磁盘损坏的判断，称 fdformat 时对任何软盘同样出错，并自述 fd0.1440 与 raw 参数均已试过
+=== fstb_b007 p9 叙述专名保真核验 ===
+叙述条数: 43 | 可疑(叙述含专名而正文无): 1
+  [2587621] 未见于正文: ['RELENG_2_2']
+        叙述: Edwin Culp 报 RELENG_2_2 上 Squid 1.1.15 在 2.2.2 时 3500 连接每小时都正常,cvsup 升级后到 7000 连接每小时就崩,还没读完缓存就死
+=== fstb_b007 p10 叙述专名保真核验 ===
+叙述条数: 43 | 可疑(叙述含专名而正文无): 1
+  [2587888] 未见于正文: ['promiscous']
+        叙述: David Greenman 指出网卡本不需要 promiscous mode 该操作的副作用才是重置芯片 只需 ifconfig fxp0 up 即可 该 bug 属 82557 errata 只在
+=== fstb_b007 p11 叙述专名保真核验 ===
+叙述条数: 43 | 可疑(叙述含专名而正文无): 1
+  [2587962] 未见于正文: ['checkout']
+        叙述: Justin T. Gibbs 表示无法复现，自己 checkout 出一份 2.2-stable 的 sys 树，assembler 正常构建并顺利汇编了 sequencer 代码
+=== fstb_b007 p12 叙述专名保真核验 ===
+叙述条数: 43 | 可疑(叙述含专名而正文无): 0
+=== fstb_b007 p13 叙述专名保真核验 ===
+叙述条数: 43 | 可疑(叙述含专名而正文无): 0
+=== fstb_b007 p14 叙述专名保真核验 ===
+叙述条数: 43 | 可疑(叙述含专名而正文无): 2
+  [2588376] 未见于正文: ['cvsupfile']
+        叙述: jkh指出问题在cvsupfile里default tag设为句号的那一行，删掉该行即可，并说对方显然没认真读手册，语气略带讥讽但定位准确
+  [2588391] 未见于正文: ['brokenness']
+        叙述: 被引用者称PnP最近改动在-current上已出问题且远未达生产级系统要求故合入2.2-STABLE不智，Luigi反问所指何种brokenness并说明其PnP本意只是ISA-PnP卡手工配置工具
+=== fstb_b007 p15 叙述专名保真核验 ===
+叙述条数: 43 | 可疑(叙述含专名而正文无): 4
+  [2588412] 未见于正文: ['xntpd']
+        叙述: Joseph Stein 自写程序轮询 kern.boottime 并向 pager 发短信告警，连续五次取值显示 System Booted at 从 877407594 递减到 877407585
+  [2588482] 未见于正文: ['SCSI-2']
+        叙述: Bill Trost 报 Adaptec 1515 探测为 aic0 于 0x340-0x35f IRQ 11，配 SCSI-2 磁带机多数操作正常，但 dd bs=8k of=/dev/nrst0 
+  [2588484] 未见于正文: ['stm-2.1.0325.tgz']
+        叙述: Yury Yaroshevsky 下载 stm-2.1.0325.tgz 后 make world 停在 rpcgen，报 don't know how to make /usr/src/usr.bi
+  [2588503] 未见于正文: ['libexec/ld.so']
+        叙述: cvsup 2.2.5-RELEASE 并 make world 后，rm -r /usr/obj 拒绝删除 /usr/obj/tmp/lib 下 libc.so.3.0 与 libexec/ld.s
+=== fstb_b007 p16 叙述专名保真核验 ===
+叙述条数: 43 | 可疑(叙述含专名而正文无): 2
+  [2588526] 未见于正文: ['Dyson']
+        叙述: Mike Smith 请 Dyson 说明该 bug 的特征,称自己仍在追查 some things use 3x swap 的问题,远端许多机器都在等验证结果,若无关便省下一番操心
+  [2588578] 未见于正文: ['APMIO_DISPLAY', 'apm.c', 'undeclared']
+        叙述: Nate Williams 答 apm.c 报 APMIO_DISPLAY undeclared 是因为没更新头文件,除非更新否则修不好,给出 cd /usr/src/include 后依次执行 ma
+=== fstb_b007 p17 叙述专名保真核验 ===
+叙述条数: 43 | 可疑(叙述含专名而正文无): 3
+  [2588595] 未见于正文: ['Doug']
+        叙述: Doug 用 make world 升到 11/10 snap,带 ipfw 的内核重启即死机,默认 deny all from any to any 载入为规则 00000 而非 65535 锁死网
+  [2588616] 未见于正文: ['deny']
+        叙述: Alex Nash 引述 Robert N Watson 说从 2.2.2 切到 stable 时撞到同样问题,存在 deny 全部报文的规则 00000,ipfw delete 调用失效只报 int
+  [2588636] 未见于正文: ['asami']
+        叙述: Nate 反驳 asami 先加 RELDATE 的建议,称其粒度太粗,人们不太可能去更新它,因此远不如自动化的方案有效

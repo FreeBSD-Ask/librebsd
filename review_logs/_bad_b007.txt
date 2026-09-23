@@ -1,0 +1,51 @@
+fcu_b007	3	1035861	1067	47	UN47	自述把 run 驱动移植到 CURRENT 完成 代码仅放在 FreeBSD 论坛请求众人试用
+fcu_b007	3	1035864	1067	49	UN49	指出中断丢失检查可能不正确 因为新 job 会在中断后立即入队 此时判定 job 数是否为零不可靠
+fcu_b007	3	1035871	1067	31	UN31	实测 r199050 并未解决该问题 先前提交的补丁仍需被合并
+fcu_b007	3	1035892	1067	97	BAN	ee 用 NULL 初始化字符指针并在初始化前访问 按 ctrl+c 再输入 0 即复现段错误 补丁把 char *direction = NULL 改为 d 并求 HEAD 提交后尽快 mfc
+fcu_b007	3	1035918	1067	28	UN28	已复现 igb 故障并给出修复思路 随后附上补丁请求试用
+fcu_b007	3	1035954	1067	58	UN58	指出未给 iostat 数据 怀疑网络停顿与 IO 峰值同期 应关联 ifstat 与 iostat 输出并回贴结果
+fcu_b007	6	1036306	1069	195	OV195	插入 PCCARD 即刻产生中断使 FreeBSD 9-current 内核 panic，回溯 pccard_intr 与 cbb_func_intr 至 intr_event_execute_handlers，Hans Petter Selasky 在 sys/dev/pccard/pccard.c 的 pccard_intr 中加 pf 与 pf->intr_handler 判空补丁
+fcu_b007	6	1036365	1069	142	OV142	Hans Petter Selasky 答 ukbd_set_leds_callback:700: error=USB_ERR_STALLED 表示键盘 LED 状态更新失败，请试 NUM-lock 是否正常，可用 sysctl hw.usb.ukbd.no_leds=1 关闭该特性
+fcu_b007	6	1036377	1069	156	OV156	John Marshall 确认为 dedicated 模式分区，Johan Hendriks 建议 dd if=/dev/zero of=/dev/ad1 oseek=1 bs=512 count=1 后 GEOM_LABEL 重新分配标签即恢复正常，另引 Handbook 18.3.2.2 该模式章节待关注
+fcu_b007	6	1036402	1067	45	UN45	Attilio Rao 答 newbus sxlock 很快就会回来，希望最多一个月内完成
+fcu_b007	6	1036422	1067	151	OV151	当日 -current 构建 libexec/rpc.rstatd 失败，libdevstat.a(devstat.o) 在 readkmem 与 readkmem_nl 处报 undefined reference to kvm_read 与 kvm_geterr，以 Error code 1 中止
+fcu_b007	6	1036460	1067	144	OV144	Gary Jennejohn 重装 world 与内核后 cvsup 反复 core dump，signal 4 Illegal instruction，栈顶在 /lib/libz.so.5 与 libc.so.7 的 gmtime_r，经 _once 进入 timeoff，怀疑与其相关
+fcu_b007	6	1036471	1067	151	OV151	8.0-RC3 网络性能回归的补充，Elliot Finley 在 netserver 端调 kern.ipc.maxsockbuf 与 net.inet.tcp.recvbuf_max 至 16777216 后 netperf 达 932Mbps，同设置加到 netperf 端又回落 420Mbps
+fcu_b007	6	1036480	1067	138	BAN	Ulrich Spörlein 定位 RELENG_8_0 构建被 OpenLDAP 干扰的根源是 /etc/make.conf 定义了 WITH_OPENLDAP，建议用 .if ${.CURDIR:M*/usr/ports*} 包裹以免 ports 变量影响 src 构建
+fcu_b007	6	1036485	1067	147	OV147	7-STABLE 升到 8.0-RELEASE 后 dummynet 报错，messages 反复刷 dummynet: OUCH! pipe should have been idle，last message repeated 高达 8162 次，traffic shaping 也不再限速
+fcu_b007	9	1036778	1067	55	UN55	sgk 称 gdb 7.0 于 10 月 6 日发布,与 PIE 配合工作正常,但可能不会进入 FreeBSD
+fcu_b007	10	1036788	1067	148	OV148	dimitry 指出补丁集缺 rc.conf 新变量的缺省值，会在每次开机打印等号未定义的警告，例如 /etc/rc 报 $ipv6_enable is obsolete.  Use $ipv6_prefer instead.  并说该告警被打印两次而 ipv6_router 相关变量他从未动过
+fcu_b007	10	1036790	1069	57	UN57	Akiyama 称已移植 run 网卡驱动并贴在论坛，因新手身份请开发者评审代码，也计划移植到 current 树
+fcu_b007	10	1036793	1069	48	UN48	Tom Judge 说该 ALIX 复位按钮工具对自己当前项目也有用，并手上有几块 2d3 板子
+fcu_b007	10	1036817	1069	94	BAN	hselasky 说在 FreeBSD 上编译 KDE4 时会选中已装的 libv4l2，需打补丁且仅支持 USB 摄像头，并在 libv4l*.pc 里手工加 -lv4lxdrivers
+fcu_b007	10	1036820	1069	105	BAN	uqs 的 Dell Inspiron 8600c 装最新 BIOS A14，插电池或在带电池时开机都触发 \\_SB_.BAT0._BIF 缓冲区转字符串警告，出自 20090903/nsrepair-215
+fcu_b007	10	1036827	1067	51	UN51	rwatson 解释 Giant 在长期睡眠里会被内核自动放下并在唤醒时重拿，故此处持有它其实是允许的
+fcu_b007	10	1036831	1067	50	UN50	attilio 请 ler 对该负载生成 schedgraph 输出并询问他是否知道如何配置这项采集
+fcu_b007	10	1036836	1067	45	UN45	sgk 问 ler 系统有多少 CPU，并指出数值密集型应用过度提交时 4BSD 可能更好
+fcu_b007	10	1036862	1067	58	UN58	stas 说 8.0 周期已很后期，bge 这类敏感驱动的改动风险很大因此不宜再动，会近期查看但不期望修进入 8.x
+fcu_b007	10	1036876	1067	84	BAN	rwatson 判断 marcus 手上已有 crashdump，请他把相关变量尤其 sb flag 的 dump 贴进邮件，提示可取各栈帧的 *so *inp *tp
+fcu_b007	13	pk	宿主键	2	UN2	叙述
+fstb_b007	1	2586671	885	147	OV147	2.1.7-RELEASE 上 cvsup 取到新的 aic7xxx.c，Id 1.29.2.32 日期 1997/02/25，问是否有意加入 2.1.7-STABLE；2.1.5 升 2.1.7 后 Adaptec 2940UW 加多块 Quantum Atlas 出现 idle 超时与冻结
+fstb_b007	1	2586685	885	32	UN32	针对 2.0.5 时期 /stand 是否保留的疑问，让直接删掉
+fstb_b007	1	2586690	885	52	UN52	libjpeg.so.7.0 缺失非安装问题也非打包问题，Jordan 说只需另外安装 jpeg 包即可
+fstb_b007	1	2586696	885	199	OV199	2.1.7 加 delta 291 后选 X Developer 与 X Basic 的 bin cfg doc html lib man prog set 及 X Server 的 SVGA VGA16 MA64，用 /stand/sysinstall 与 pkg_add 装 XEmacs-19.14 都不成，pkg_add 报 +REQUIRED_BY 打不开与依赖注册不完整，怀疑版本不匹配
+fstb_b007	1	2586698	885	168	OV168	2.1.7 加 delta 291 重建 kernel 并 make world 后，/stand/sysinstall 装 Emacs 停在 Located INDEX 读包数据，数分钟无任何磁盘与 CD 活动，直接用 pkg_add -v /cdrom/packages/editors/emacs-19.34b.tgz 才装好可用
+fstb_b007	1	2586736	885	164	OV164	David Hawkins 问 /etc/nologin 是否对 root/console 特殊，Warner 引 12 月 5 日 NetBSD login 源码，if 判断有效账户名取 pw_passwd 否则 salt 为 xx，若 rootlogin 为真则跳过 checknologin，推测 FreeBSD 应无差异
+fstb_b007	1	2586791	885	58	UN58	Jordan 说 sup 服务器在 spatter 崩溃时自己 shut down，随后反问如今还要他预测硬盘故障吗
+fstb_b007	1	2586818	885	162	OV162	Matt 在 RELENG_2_2 上 make 失败同样报 dumpfs.c 第 150 行结构体无 fs_headswitch 与 fs_trkseek，supfile 取 tag RELENG_2_2、host releng22.FreeBSD.org、prefix /usr、src-all 与 cvs-crypto
+fstb_b007	1	2586819	885	153	OV153	Mark W. Krentel 的朋友周四 cvsup 到 RELENG_2_2 遇同一问题，查 CVs 仓库见周三夜 /usr/src/sys/ufs/ffs/fs.h 变更，条目 1.7.2.1 相对 1.7 删去 fs_headswitch 与 fs_trkseek，改用 fs_id 数组占据该位置
+fstb_b007	4	2587049	885	160	OV160	编译 ether_addr.c 时 /usr/include/net/if.h:69 报 field ifi_lastchange has incomplete type，netinet/if_ether.h:90 报 ac_if incomplete type，Simon Shapiro 用当天 RELENG_2_2
+fstb_b007	4	2587054	885	160	OV160	Chandrabose ARAVINDAN 用 WC CDROM 装好含 des 的 2.2.1 全源码，按 src-2.2-CTM-README 取 CTM delta 200 至 296 追 2.2-STABLE，报 release/sysinstall/help/hardware.hlp md5 mismatch
+fstb_b007	4	2587055	885	155	OV155	C. Aravindan 两天前发帖未解，再发 CTM fwd 求助：首个 delta src-2.2.0217.gz 被 CTM 拒绝，声称与 release/sysinstall/help/hardware.hlp md5 mismatch，问是否有用 CTM 升级过 WC CDROM 2.2.1 源码者
+fstb_b007	4	2587056	885	158	OV158,BAN	Andrew Wilson 拒绝重装，每周 cvsup 后 make world，上周正常本周报 mkdir: /usr/include/ufs/ffs: No such file or directory，ls /usr/include/u* 只见 unctrl.h utime.h unistd.h utmp.h
+fstb_b007	4	2587073	885	170	OV170	重建到 RELENG_2_2 后编译 lstSucc.c 经 make.h 与 lstInt.h 报 sys/cdefs.h sys/types.h sys/unistd.h sys/param.h No such file or directory，locate 找到 cdefs.h 在 /usr/src/sys/sys/cdefs.h
+fstb_b007	4	2587083	1069	161	OV161	升级到 2.2-STABLE 后向 Archive Python 4mm 磁带备份偶发整机锁死，报 SCB 0x2 timed out while idle 后 Issued Channel A Bus Reset 1 SCBs aborted，ahc 驱动的 Adaptec SCSI 卡，2.1.5 跑 9 个月未发生
+fstb_b007	4	2587084	885	165	OV165	ctm 第 305 号后编译 usr.bin/make/arch.c 失败，报 sys/types.h sys/stat.h sys/time.h sys/param.h 缺失，runetype.h 与 stdio.h 还报 sys/cdefs.h machine/ansi.h No such file or directory
+fstb_b007	4	2587089	1069	160	OV160	每周做 make world 时 ahc 驱动再次锁死且这次无法恢复，syslog 显示 sd0(ahc0:0:0) SCB 0x3 timed out in dataout phase SCSISIGI 0x4 后多个 SCB timedout while recovery in progress，平时偶尔一两条超时
+fstb_b007	4	2587092	885	165	OV165	Peter Svaar cvsup 更新 2.2-STABLE 后 make world，inetd fork 守护进程时报 /usr/libexec/ld.so: Undefined symbol _login_getpwclass，telnetd ftpd fingerd 连不上 httpd 直启正常，删 obj 重做也无效
+fstb_b007	4	2587103	885	148	OV148	Gianmarco Giovannelli 读出报错为 /usr/include/stdio.h:44 sys/types.h 与 47 sys/cdefs.h 49 machine/ansi.h 缺失，但 locate cdefs.h 显示确在 /usr/src/sys/sys/cdefs.h
+fstb_b007	4	2587120	885	148	OV148	Mike Tancsa 建议把 /usr/src/etc/login.conf 复制一份放到 /etc 以解决 login_getclass unknown class root，另一条 imported path contains relative components 则像 PATH 里含点
+fstb_b007	4	2587128	885	148	OV148	6 月 30 日 make world 失败于 bin/ls/stat_flags.c，flags_to_string 中 UF_NOUNLINK 与 SF_NOUNLINK undeclared，string_to_flags 处 141 与 150 行同样未声明，报 Error code 1
+fstb_b007	4	2587133	885	141	OV141	ctm 第 330 号后 make world 失败于 usr.bin/xinstall 编译 bin/ls/stat_flags.c，flags_to_string 中 UF_NOUNLINK 与 SF_NOUNLINK undeclared，自己估计问题可能 314 号就出现了
+fstb_b007	4	2587134	885	54	UN54	Michael Smith 给出对策，先运行 make includes 即可越过这个错误，正文极短只此一句
+fstb_b007	16	2588511	885	102	TAIL	Robert Luce 同为 SMC de0 卡见 bad crc,cvsup 到 2.2.5-STABLE 后大量出现 Out of mbuf clusters - increase maxusers!

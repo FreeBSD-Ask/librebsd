@@ -1,0 +1,5 @@
+Kyle Evans 用 reptyr -T 把长任务重父进 tmux，忽略 SIGHUP，waitpid 卡住，PT_ATTACH 后第二次 waitpid 见 SIGCONT，第三次期望 PL_FLAG_SCE 因 sleep-inhibited 停在 pause wchan
+Mark Millard ThreadRipper 1950X 两内存域跑 head r352341，cpuset -n prefer 在 -l 0-15 与 -l 16-31 表现异常，HINT FreeBSD 13 怪而 Fedora 30 正常，问 NUMA 是否已验证
+Emmanuel Vadot 问 linuxkpi 用 sx 实现 Linux struct mutex，Documentation/locking/mutex-design.rst mutex 与 mtx 近 1:1，linux spinlock 用 MTX_DEF 不太像
+Ottavio Caruso 以 qemu -vga none 启动 FreeBSD 12.1，dmesg VGA 疑假阳性，pciconf -vl 见 hostb0 与 virtio 设备，追问 ttyu0 与 ttyv0 关系及能否注释 /etc/ttys 的 ttyv0
+Gordon Bergling 为 raspberry pi 4 补 USB vendor IDs，sys/dev/usb/usbdevs 加 VIALABS2 0x1106、VL805USB30 0x3483，重编 0x2109 USB2.0 Hub 与 XHCI 无变化
