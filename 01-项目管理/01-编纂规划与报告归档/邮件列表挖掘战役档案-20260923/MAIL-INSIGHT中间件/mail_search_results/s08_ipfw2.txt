@@ -1,0 +1,3117 @@
+==========================================================================================
+DB: freebsd-hackers.duckdb  hits=40
+--------------------------------------------------------------------------------
+MID: 20030430114317.V2090-100000@foem
+DATE: 2003-04-30T02:50:47+00:00  FROM: dirkx at webweaving.org (Dirk-Willem van Gulik) <None>
+SUBJ: ipfw2 interface / examples
+BODY:
+
+I am recoding some firewall management code which acts on data on the
+application layer (to open ports etc) from ipfw to the new ipfw2. And am
+struggling a bit understanding what exactly to pass.
+
+-	Needless to say - a bug in your rule gives one
+	a 'Adding rule: Invalid argument' errno; is there
+	any way/tool to decode how the IP_FW_ADD struct is
+	passed and get some more insight ?
+
+-	Is there a simpler example than ipfw2.c, or an raw docs
+	for the getsockopt() api which helps me understand this better.
+	In particular the from/to 'O_IN/(!O_IN)' versus the ability
+	of ipfw.c to set both IP_FW_F_IN and IP_FW_F_OUT to make
+	the rule symetrical around from/to.
+
+Thanks.
+
+Dw
+
+
+
+--------------------------------------------------------------------------------
+MID: LIEAKECJDNPINKLJPFODIEPGDHAA.u.klann@t-online.de
+DATE: 2003-09-22T11:15:14+00:00  FROM: u.klann at t-online.de (Uwe Klann) <None>
+SUBJ: IPFW2
+BODY:
+Hi All,
+
+"Sep 22 00:24:13 muc /kernel: ipfw: 3300 Accept TCP 217.10.213.30:4418
+217.9.121.209:21 in via fxp0"
+
+How can I extend on FreeBSD 4.8 (ipfw2) the log contens to see the tranfered
+data File and the amount of bytes went out? Thank you in advance for your
+help.
+Cheers,
+
+Uwe
+
+Uwe Klann
+Isensteinstr. 3
+80634 Munich
+Germany
+Mail: u.klann@t-online.de
+
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 20030922134531.A44366@xorpc.icir.org
+DATE: 2003-09-22T13:47:02+00:00  FROM: rizzo at icir.org (Luigi Rizzo) <None>
+SUBJ: IPFW2
+BODY:
+On Mon, Sep 22, 2003 at 08:07:13PM +0200, Uwe Klann wrote:
+
+you can count the traffic with dynamic rules (but this does not go
+to the logfile), not sure what you mean by 'see the transfered data file'
+
+	luigi
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 20030923122509.S87821@localhost
+DATE: 2003-09-23T09:29:04+00:00  FROM: mdg at secureworks.net (Matthew George) <None>
+SUBJ: IPFW2
+BODY:
+On Mon, 22 Sep 2003, Luigi Rizzo wrote:
+
+
+from ipf(5):
+
+LOGGING
+       When a packet is logged, with either the  log  action  or  option, the
+       headers  of  the  packet  are written to the ipl packet logging psuedo-
+       device. Immediately following the log keyword, the following qualifiers
+       may be used (in order):
+
+       body   indicates  that  the first 128 bytes of the packet contents will
+              be logged after the headers.
+
+I don't believe there is a comparable ipfw option ...
+
+
+-- 
+Matthew George
+SecureWorks Technical Operations
+
+
+
+--------------------------------------------------------------------------------
+MID: 3F707FDB.4060600@acm.org
+DATE: 2003-09-23T10:16:45+00:00  FROM: kientzle at acm.org (Tim Kientzle) <None>
+SUBJ: IPFW2
+BODY:
+
+tcpdump can be used to capture the full contents of particular packets.
+Use -w to write captured packets to a file, -r to read that
+file and examine the captured packets.  Design your tcpdump
+capture expression carefully unless you have a lot of disk space.
+
+Port 21 is FTP, so I presume you're trying to monitor FTP
+activity.  If you're using FreeBSD's ftpd, look at
+the -l and -S options (which provide fairly detailed
+logging of FTP activity).  In particular, specifying
+-l twice claims to provide detailed logging of each
+transfer.
+
+Tim Kientzle
+
+
+
+--------------------------------------------------------------------------------
+MID: 20030923113126.A24717@xorpc.icir.org
+DATE: 2003-09-23T11:33:53+00:00  FROM: rizzo at icir.org (Luigi Rizzo) <None>
+SUBJ: IPFW2
+BODY:
+On Tue, Sep 23, 2003 at 12:28:07PM -0400, Matthew George wrote:
+...
+
+no, there isn't. However the attached patch lets you run any bpf-based
+application on the packets which match an ipfw rule with 'log'
+specifier when net.inet.ip.fw.verbose=0, thus achieving a very similar
+if not a lot more powerful effect. Just use
+
+	sysctl net.inet.ip.fw.verbose=0
+	ipfw add count log ...
+
+	tcpdump -i ipfw0 ...
+
+cheers
+luigi
+
+Index: sys/netinet/ip_fw2.c
+===================================================================
+RCS file: /home/ncvs/src/sys/netinet/ip_fw2.c,v
+retrieving revision 1.6.2.16
+diff -u -r1.6.2.16 ip_fw2.c
+--- sys/netinet/ip_fw2.c	17 Jul 2003 06:03:39 -0000	1.6.2.16
++++ sys/netinet/ip_fw2.c	22 Sep 2003 22:21:38 -0000
+@@ -51,10 +51,12 @@
+ #include <sys/proc.h>
+ #include <sys/socket.h>
+ #include <sys/socketvar.h>
++#include <sys/sockio.h>		/* for SIOC* */
+ #include <sys/sysctl.h>
+ #include <sys/syslog.h>
+ #include <sys/ucred.h>
+ #include <net/if.h>
++#include <net/bpf.h>	/* for BPF */
+ #i
+
+--------------------------------------------------------------------------------
+MID: 012901c38772$8288c9d0$e04e70ca@lkatschool
+DATE: 2003-09-30T09:52:04+00:00  FROM: liukang at bjpu.edu.cn (Kang Liu) <None>
+SUBJ: kern/50216: kernel panic on 5.0-current when use ipfw2 with
+	dynamic rules
+BODY:
+I reproduced it on the latest 5.1current.
+
+Here is the backtrace:
+#####
+GNU gdb 5.2.1 (FreeBSD)
+Copyright 2002 Free Software Foundation, Inc.
+GDB is free software, covered by the GNU General Public License, and you are
+welcome to change it and/or distribute copies of it under certain conditions.
+Type "show copying" to see the conditions.
+There is absolutely no warranty for GDB.  Type "show warranty" for details.
+This GDB was configured as "i386-undermydesk-freebsd"...
+panic: Most recently used by cred
+
+panic messages:
+---
+panic: Most recently used by cred
+
+Stack backtrace:
+
+syncing disks, buffers remaining... 628 628 628 628 628 628 628 628 628 628 628 628 628 628 628 628 628 628 628 628 
+giving up on 520 buffers
+Uptime: 16m0s
+Dumping 255 MB
+ 16 32 48 64 80 96 112 128 144 160 176 192 208 224 240
+---
+Reading symbols from /usr/obj/usr/src/sys/IPFW/modules/usr/src/sys/modules/acpi/acpi.ko.debug...done.
+Loaded symbols for /usr/obj/usr/src/sys/IPFW/modules/usr/src/sys/modules/acpi/acpi.ko.d
+
+--------------------------------------------------------------------------------
+MID: 200202152309.SAA00831@manor.msen.com
+DATE: 2002-02-15T23:09:51+00:00  FROM: "Michael R. Wayne" <wayne@staff.msen.com> <None>
+SUBJ: Odd ipfw behaviour
+BODY:
+
+ipfw seems to be confused about where to forward packets if no
+interface is specifically mentioned.  Before I file a PR
+on it, I'd like someone who is more familiar with how ipfw 
+operates to quickly look over my findings.
+
+Test setup, showing 2 ethernets with 2 FreeBSD boxes and another
+machine running netscape
+
++-------Netscape		BROWSERbox
++-------squid			SQUIDbox
++-------4.5 Release------+	ProxyFirewall
+            router-------+
+	      |
+	    internet
+
+The internal net on ProxyFirewall is fxp1, external net is fxp0.
+All devices have real IP addresses and correct netmasks NAT is not
+involved.
+
+Using this ipfw rule on ProxyFirewall:
+   fwd $(squid-box) log tcp from $(windows-box) to any 80 
+and checking the logs on ProxyFirewall, I see this horrible mess:
+
+ipfw: 11005 Forward to SQUIDbox TCP BROWSERbox:1631 216.136.204.21:80 in via fxp1
+ipfw: 11005 Forward to SQUIDbox TCP BROWSERbox:1631 216.136.204.21:80 out via fxp0	<---!!!
+ipfw: 11005 Forward to SQUIDbox TCP BROWSERbox:1631 216.1
+
+--------------------------------------------------------------------------------
+MID: 20020216004721.B36782@blossom.cjclark.org
+DATE: 2002-02-16T08:47:21+00:00  FROM: "Crist J. Clark" <cjc@FreeBSD.ORG> <None>
+SUBJ: Re: Odd ipfw behaviour
+BODY:
+On Fri, Feb 15, 2002 at 06:09:51PM -0500, Michael R. Wayne wrote:
+[snip]
+
+
+I believe you are misinterpretting the logs. Each of those log entries
+is saying,
+
+  "At rule 11005 I am forwarding this packet to SQUIDbox. The packet
+that triggered this rule was TCP BROWSERbox:1631 216.136.204.21:80
+that came (out of|into) to the firewall via interface (fxp0|fxp1)"
+
+That is, the 'via fxp?' at the end is telling you about the packet
+that _triggered_ the rule, not where the packet was actually forwared
+to. If you sniffed the connection, I expect that you would have seen
+four packets go from the firewall to SQUIDbox.
+-- 
+Crist J. Clark                     |     cjclark@alum.mit.edu
+                                   |     cjclark@jhu.edu
+http://people.freebsd.org/~cjc/    |     cjc@freebsd.org
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 20020218034112.D96593@staff.msen.com
+DATE: 2002-02-18T08:41:12+00:00  FROM: "Michael R. Wayne" <wayne@staff.msen.com> <None>
+SUBJ: Re: Odd ipfw behaviour
+BODY:
+On Sat, Feb 16, 2002 at 12:47:21AM -0800, Crist J. Clark wrote:
+
+OK, it's possible that I was imprecise initially. But:
+
+1) It is the case that the rule w/o the interface causes terrible
+   performance for squid and adding the "via fxp1" corrects it.
+
+2) Since SQUIDbox is on the same net as fxp1, can you please explain
+   the second log rule?  How can fxp0 be involved at all?  Supposedly,
+   the packet went OUT on fxp0, triggering the rule.  This is wrong.
+
+3) Note the 33 ICMP errors that are going on.  Something is really borked.
+   Again, adding the "via fxp1" corrects this too.
+
+
+This is a good point.  I'll fire up the packet sniffers and capture
+what is going on.  But, that second line and the ICMP errors still
+have me concerned.  And, as I mentioned, w/o the "via fxp1", the
+performance is terrible (takes about 10 seconds to bring up a page
+that is just across the link).  I have to believe that other people
+have attempted to use ipfw & squid and given up when they saw the
+poor perf
+
+--------------------------------------------------------------------------------
+MID: 20020218054946.W48401@blossom.cjclark.org
+DATE: 2002-02-18T13:49:46+00:00  FROM: "Crist J. Clark" <crist.clark@attbi.com> <None>
+SUBJ: Re: Odd ipfw behaviour
+BODY:
+What precise version of FreeBSD are you running, BTW?
+-- 
+Crist J. Clark                     |     cjclark@alum.mit.edu
+                                   |     cjclark@jhu.edu
+http://people.freebsd.org/~cjc/    |     cjc@freebsd.org
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 20020218120117.E96593@staff.msen.com
+DATE: 2002-02-18T17:01:17+00:00  FROM: "Michael R. Wayne" <wayne@staff.msen.com> <None>
+SUBJ: Re: Odd ipfw behaviour
+BODY:
+On Mon, Feb 18, 2002 at 05:49:46AM -0800, Crist J. Clark wrote:
+
+4.5 RELEASE, as stated in original message.
+
+/\/\ \/\/
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 20020218093113.H48401@blossom.cjclark.org
+DATE: 2002-02-18T17:31:13+00:00  FROM: "Crist J. Clark" <crist.clark@attbi.com> <None>
+SUBJ: Re: Odd ipfw behaviour
+BODY:
+On Mon, Feb 18, 2002 at 12:01:17PM -0500, Michael R. Wayne wrote:
+
+Do these patches help?
+
+Index: ip_input.c
+===================================================================
+RCS file: /export/ncvs/src/sys/netinet/ip_input.c,v
+retrieving revision 1.130.2.33
+diff -u -r1.130.2.33 ip_input.c
+--- ip_input.c	14 Feb 2002 11:19:57 -0000	1.130.2.33
++++ ip_input.c	18 Feb 2002 17:19:24 -0000
+@@ -1618,21 +1618,29 @@
+ 	int error, type = 0, code = 0;
+ 	struct mbuf *mcopy;
+ 	n_long dest;
++	struct in_addr pkt_dst;
+ 	struct ifnet *destifp;
+ #ifdef IPSEC
+ 	struct ifnet dummyifp;
+ #endif
+ 
+ 	dest = 0;
++	/*
++	 * Cache the destination address of the packet; this may be
++	 * changed by use of 'ipfw fwd'.
++	 */
++	pkt_dst = ip_fw_fwd_addr == NULL ?
++	    ip->ip_dst : ip_fw_fwd_addr->sin_addr;
++
+ #ifdef DIAGNOSTIC
+ 	if (ipprintfs)
+ 		printf("forward: src %lx dst %lx ttl %x\n",
+-		    (u_long)ip->ip_src.s_addr, (u_long)ip->ip_dst.s_addr,
++		    (u_long)ip->ip_src.s_addr, (u_long)pkt_dst.s_addr,
+ 		    ip->ip
+
+--------------------------------------------------------------------------------
+MID: 20020218093852.B20152@iguana.icir.org
+DATE: 2002-02-18T17:38:52+00:00  FROM: Luigi Rizzo <rizzo@icir.org> <None>
+SUBJ: Re: Odd ipfw behaviour
+BODY:
+On Mon, Feb 18, 2002 at 09:31:13AM -0800, Crist J. Clark wrote:
+
+can you please summarise the problem and what the fix is trying to
+achieve ?
+
+	luigi
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 20020218100458.K48401@blossom.cjclark.org
+DATE: 2002-02-18T18:04:58+00:00  FROM: "Crist J. Clark" <crist.clark@attbi.com> <None>
+SUBJ: Re: Odd ipfw behaviour
+BODY:
+On Mon, Feb 18, 2002 at 09:38:52AM -0800, Luigi Rizzo wrote:
+
+I don't really understand what the problem might be, and the issue is
+further confused since I am not sure where to trust the ipfw(8) 'fwd'
+documentation and where not to. In -STABLE, it still says that only
+outgoing packets are 'fwd'ed, but that's not what the submitter's logs
+seem to indicate. The -CURRENT documentation does not make the
+distinction. I vaguely recall this "recent" change, but have not found
+anything all that recent in the commit logs. Back in the fall there
+was that merge from -STABLE to -CURRENT, and I wonder if the change
+was hidden in there. I have not been inspired enough to dig through
+ip_{{in,out}put,fw}.c to see just what is really going on. But with
+the ease I made that patch, I don't think there is as much divergence
+on the 'fwd' issue between -CURRENT and -STABLE as the documentation
+seems to imply. But I could easily be wrong.
+-- 
+Crist J. Clark                     |     cjclark@alum.mit.edu
+   
+
+--------------------------------------------------------------------------------
+MID: 20020218100928.D20152@iguana.icir.org
+DATE: 2002-02-18T18:09:28+00:00  FROM: Luigi Rizzo <rizzo@icir.org> <None>
+SUBJ: Re: Odd ipfw behaviour
+BODY:
+On Mon, Feb 18, 2002 at 10:04:58AM -0800, Crist J. Clark wrote:
+
+Precisely for this reason, what is that your patch is actually
+trying to fix/achieve ? Without a goal, how can even test that
+your code does what it supposed to do!
+
+	cheers
+	luigi
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 20020218101758.L48401@blossom.cjclark.org
+DATE: 2002-02-18T18:17:58+00:00  FROM: "Crist J. Clark" <crist.clark@attbi.com> <None>
+SUBJ: Re: Odd ipfw behaviour
+BODY:
+On Mon, Feb 18, 2002 at 10:09:28AM -0800, Luigi Rizzo wrote:
+
+I was trusting what the commit log said,
+
+----------------------------
+revision 1.187
+date: 2001/12/28 21:21:57;  author: julian;  state: Exp;  lines: +13 -5
+Fix ipfw fwd so that it acts as the docs say
+when forwarding an incoming packet to another machine.
+
+Obtained from:  Vicor Production tree
+MFC after: 3 weeks
+----------------------------
+
+-- 
+Crist J. Clark                     |     cjclark@alum.mit.edu
+                                   |     cjclark@jhu.edu
+http://people.freebsd.org/~cjc/    |     cjc@freebsd.org
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: Pine.BSF.4.21.0202181105550.52663-100000@InterJet.elischer.org
+DATE: 2002-02-18T19:08:02+00:00  FROM: Julian Elischer <julian@elischer.org> <None>
+SUBJ: Re: Odd ipfw behaviour
+BODY:
+that patch is an MFC of a fix that went into -current.
+it allows teh 'fwd' ing of packets from the 'input' filter to
+external machines..
+
+i.e.
+this doesn't work without this patch:
+
+ipfw add 100 fwd 1.2.3.4 tcp from any to 1.2.3.5 80 in recv fxp0
+
+
+On Mon, 18 Feb 2002, Luigi Rizzo wrote:
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 20020218115042.N48401@blossom.cjclark.org
+DATE: 2002-02-18T19:50:42+00:00  FROM: "Crist J. Clark" <crist.clark@attbi.com> <None>
+SUBJ: Re: Odd ipfw behaviour
+BODY:
+On Mon, Feb 18, 2002 at 11:08:02AM -0800, Julian Elischer wrote:
+
+Right. What I thought was happening was that the submitter did not
+understand that ipfw(8) 'fwd' was only supposed to work on packets
+leaving the system. At least that's what the documentation in -STABLE
+claims. However, his logs seemed to indicate that packets were getting
+'fwd'ed coming in. That's what's confusing me. So I gave him what
+looked like a fix in -CURRENT that tries to get the incoming 'fwd's
+correct.
+
+My guess is that there is presently broken 'fwd'ing for incoming
+packets in -STABLE. But as I have been saying, I haven't had the
+chance/motivation to dig through the code or run the tests, so I can't
+say that with too much certainty. Thought the submitter could do some
+testing for us.
+-- 
+Crist J. Clark                     |     cjclark@alum.mit.edu
+                                   |     cjclark@jhu.edu
+http://people.freebsd.org/~cjc/    |     cjc@freebsd.org
+
+To Unsubscribe: send mail to majordomo@FreeBSD.
+
+--------------------------------------------------------------------------------
+MID: 20020219042126.H96593@staff.msen.com
+DATE: 2002-02-19T09:21:26+00:00  FROM: "Michael R. Wayne" <wayne@staff.msen.com> <None>
+SUBJ: Re: Odd ipfw behaviour
+BODY:
+On Mon, Feb 18, 2002 at 09:31:13AM -0800, Crist J. Clark wrote:
+
+Unfortunately, I was called out of town and will not be able to
+get back to work with my test setup until next week.  Will post
+update then.
+
+/\/\ \/\/
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 200204151653.g3FGr1Wb051955@server1.office.bezpeka.net
+DATE: 2002-04-15T16:53:01+00:00  FROM: apache@ukr.net <None>
+SUBJ: ipfw fwd to named
+BODY:
+Hi.
+
+I have network interface rl0
+
+rl0: flags=8843<UP,BROADCAST,RUNNING,SIMPLEX,MULTICAST> mtu 1500
+        inet 192.168.10.22 netmask 0xffffff00 broadcast 192.168.10.255
+        inet 192.168.10.26 netmask 0xffffffff broadcast 192.168.10.26
+        ether 00:60:52:0b:a3:0a
+        media: Ethernet autoselect (100baseTX <full-duplex>)
+        status: active
+
+In named.conf
+
+        listen-on port 2053 {
+                192.168.10.26;
+        };
+
+Named works fine in JAIL
+        dig -p 2053 @192.168.10.26 test.domain
+
+I want to forward all 192.168.10.22:53 queries to the jailed named.
+
+        ifpw add 300 fwd 192.168.10.26,2053 udp from any to 192.168.10.22 53
+        ifpw add 310 fwd 192.168.10.26,2053 tcp from any to 192.168.10.22 53
+
+When i launch dig without port options to the server 192.168.10.22 it says
+that connection refused.
+
+        I did same this sshd (put it in jail and forward its port) and
+        it works fine.
+
+What's wrong?
+
+--
+e-mail: apache@ukr.net
+
+To Unsubscribe: sen
+
+--------------------------------------------------------------------------------
+MID: Pine.BSF.4.21.0204151349270.74157-100000@InterJet.elischer.org
+DATE: 2002-04-15T20:50:15+00:00  FROM: Julian Elischer <julian@elischer.org> <None>
+SUBJ: Re: ipfw fwd to named
+BODY:
+I'm not sure the the forwarding code works for udp..
+(In fact I'm pretty sure it is not fully implemented)
+
+
+On Mon, 15 Apr 2002 apache@ukr.net wrote:
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: Pine.SOL.4.43.0204152304510.14896-100000@ikarus.sil.at
+DATE: 2002-04-15T21:06:16+00:00  FROM: Ingo Flaschberger <if@sil.at> <None>
+SUBJ: Re: ipfw fwd to named
+BODY:
+Hi
+
+On Mon, 15 Apr 2002, Julian Elischer wrote:
+
+
+do you have a loopback route at the host environment like:
+192.168.10.26      127.0.0.1          UGHS        3     4497    lo0
+
+at my side that was the problem (and this route is never mentioned at the
+jail-man page...( )
+
+bye, Ingo
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: Pine.SOL.4.43.0204152348490.15183-100000@ikarus.sil.at
+DATE: 2002-04-15T21:50:08+00:00  FROM: Ingo Flaschberger <if@sil.at> <None>
+SUBJ: Re: ipfw fwd to named (fwd)
+BODY:
+
+
+
+sorry,... wrong ip... i meant the ip of the jailed host 192.168.10.22
+should go to the loopback.
+
+bye, Ingo
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 200204160753.g3G7rY0u014467@server1.office.bezpeka.net
+DATE: 2002-04-16T07:53:34+00:00  FROM: apache@ukr.net <None>
+SUBJ: Re: ipfw fwd to named
+BODY:
+
+	it didn't help. As i've told, i can ``dig -p 2053 ...'',
+but without port option forwarding doesn't work.
+
+
+-- 
+e-mail:	apache@ukr.net
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 200204160800.g3G80d1d015227@server1.office.bezpeka.net
+DATE: 2002-04-16T08:00:39+00:00  FROM: apache@ukr.net <None>
+SUBJ: Re: ipfw fwd to named (fwd)
+BODY:
+
+	192.168.10.26 is a jailed ip. But anyway its alias.
+
+-- 
+e-mail:	apache@ukr.net
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 20020416223918.B59924@blossom.cjclark.org
+DATE: 2002-04-17T05:39:18+00:00  FROM: "Crist J. Clark" <cjc@FreeBSD.ORG> <None>
+SUBJ: Re: ipfw fwd to named
+BODY:
+On Mon, Apr 15, 2002 at 07:53:01PM +0300, apache@ukr.net wrote:
+
+Have you done a tcpdump(1) on the loopback to see what is going on?
+
+  # tcpdump -ni lo0
+
+-- 
+Crist J. Clark                     |     cjclark@alum.mit.edu
+                                   |     cjclark@jhu.edu
+http://people.freebsd.org/~cjc/    |     cjc@freebsd.org
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 000801c21f1c$029cefe0$0201a8c0@Ken
+DATE: 2002-06-29T03:21:07+00:00  FROM: "Ken Ebling" <kebling@us-it.net> <None>
+SUBJ: ipfw/dummynet suggestion
+BODY:
+I know this isn't performed at the ip level, but I think a useful addition to ipfw would be to allow filtering by mac addresses.  I think a lot of people would find it useful, and a lot of linux users I try and ``convert'' to FreeBSD say they require this feature too. 
+
+Ken Ebling
+
+
+--------------------------------------------------------------------------------
+MID: Pine.BSF.4.21.0206282022150.76608-100000@InterJet.elischer.org
+DATE: 2002-06-29T03:24:41+00:00  FROM: Julian Elischer <julian@elischer.org> <None>
+SUBJ: Re: ipfw/dummynet suggestion
+BODY:
+there is a hack to allow MAC filtering somewhere.
+Possibly connected with luigi's Bridging code.
+
+
+thre is also an ipfw node for netgraph floating around somewhere.
+
+
+On Fri, 28 Jun 2002, Ken Ebling wrote:
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 20020628220905.A64985@iguana.icir.org
+DATE: 2002-06-29T05:09:05+00:00  FROM: Luigi Rizzo <rizzo@icir.org> <None>
+SUBJ: Re: ipfw/dummynet suggestion
+BODY:
+On Fri, Jun 28, 2002 at 11:21:07PM -0400, Ken Ebling wrote:
+
+the new code in -current (and there is a version for -stable as
+well) already does this.
+
+	cheers
+	luigi
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 3D1D4EB3.9410011@mindspring.com
+DATE: 2002-06-29T06:07:47+00:00  FROM: Terry Lambert <tlambert2@mindspring.com> <None>
+SUBJ: Re: ipfw/dummynet suggestion
+BODY:
+Ken Ebling wrote:
+
+| I know this isn't performed at the ip level, but I think a useful =
+| addition to ipfw would be to allow filtering by mac addresses.  I think =
+| a lot of people would find it useful, and a lot of linux users I try and =
+| ``convert'' to FreeBSD say they require this feature too.
+
+Local or remote MAC addresses?
+
+The remote MAC address is always going to be a peer on the local
+wire; usually, this is your router.
+
+The local MAC address is a 1:N correspondance with IP addresses,
+so you can always do whatever you were planning on doing there
+using the local IP addresses that are associated with the MAC
+in question.
+
+What is it you are trying to do that is apparently not very
+obvious?
+
+-- Terry
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 20020629170251.65DDB43E13@mx1.FreeBSD.org
+DATE: 2002-06-29T17:02:51+00:00  FROM: "Nielsen" <nielsen@memberwebs.com> <None>
+SUBJ: Re: ipfw/dummynet suggestion
+BODY:
+Usually remote MAC address. It's used for restricting users on a subnet. I
+have an ugly hack that does this at present and am looking forward to the
+MAC address support. Yes, I know users can conceivably change their MAC
+addresses but most would never know how. They change their IP addresses to
+get around security restrictions all the time.
+
+Nate
+
+=
+=
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 20020629110237.A73787@iguana.icir.org
+DATE: 2002-06-29T18:02:37+00:00  FROM: Luigi Rizzo <rizzo@icir.org> <None>
+SUBJ: Re: ipfw/dummynet suggestion
+BODY:
+On Sat, Jun 29, 2002 at 10:02:51AM -0700, Nielsen wrote:
+
+THERE IS MAC SUPPORT IN THE NEW IPFW!!!
+
+
+several viruses do change the MAC address. The only real
+security is to have one user per port and filter the ports.
+Next step (but not as safe) is to wire down the arp table and only accept
+things that are in there (will be easy to implement in the
+new ipfw)
+
+	cheers
+	luigi
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 001f01c21f99$3c363cc0$1e6eb0c8@pchome
+DATE: 2002-06-29T18:17:24+00:00  FROM: "Joao Carlos" <jcrr@ieee.org> <None>
+SUBJ: Re: ipfw/dummynet suggestion
+BODY:
+
+I think it would be easier to deny all mac address in the ipfw rules except
+by those that you know, right?
+
+---
+Joao Carlos
+jcrr@ieee.org
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 20020629112023.C73787@iguana.icir.org
+DATE: 2002-06-29T18:20:23+00:00  FROM: Luigi Rizzo <rizzo@icir.org> <None>
+SUBJ: Re: ipfw/dummynet suggestion
+BODY:
+On Sat, Jun 29, 2002 at 03:17:24PM -0300, Joao Carlos wrote:
+
+which must be recorded somewhere, and static entries in the
+arp table are a nice place to look at.
+
+	cheers
+	luigi
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 3D1E2B38.A70658EA@mindspring.com
+DATE: 2002-06-29T21:48:40+00:00  FROM: Terry Lambert <tlambert2@mindspring.com> <None>
+SUBJ: Re: ipfw/dummynet suggestion
+BODY:
+Joao Carlos wrote:
+
+Particularly, you should limit access to the antivirus server
+this way, so that if anyone does get a virus that does this,
+they are screwed for all time.  NOT.
+
+Seriously, I'm wondering what "security restrictions" are so
+onerous that users are willing to change their IP addresses to
+get around them, and why they are there in the first place?
+
+I'm also wishing I had your posting in time to wave in the face
+of someone who once forced the implementation of a stupid access
+control model that required network identification of particular
+users, on the theory that users wouldn't do exactly what your
+users appear to be doing.
+
+Finally, I'll suggest that if you truly want to implement this
+thing, that the "correct" way to do it is probably to use the
+per machine NT Domain Controller information via hacking up the
+code from the SAMBA project, so that you can *ask* the NT domain
+controller for the credentials associated with an IP address,
+since this access control model is 
+
+--------------------------------------------------------------------------------
+MID: 20020629225348.F2DAD43E06@mx1.FreeBSD.org
+DATE: 2002-06-29T22:53:48+00:00  FROM: "Nielsen" <nielsen@memberwebs.com> <None>
+SUBJ: Re: ipfw/dummynet suggestion
+BODY:
+
+Well in certain cases it's company policy that certain machines (ie: users)
+can't browse the web during certain hours. I didn't make the rules, just
+asked to implement them.
+
+
+True, but often the simplest, semi-reliable solution wins out, so it came
+down to machines and MAC addresses.
+
+Nate
+
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 3D1E3EA7.6F7CFC2E@mindspring.com
+DATE: 2002-06-29T23:11:35+00:00  FROM: Terry Lambert <tlambert2@mindspring.com> <None>
+SUBJ: Re: ipfw/dummynet suggestion
+BODY:
+Nielsen wrote:
+
+Yes, this is the same restriction that we were asked to implement
+in the InterJet, even though it meant the proxy software had to be
+non-transparent in order to grab credentials, and made life very
+complicated for all the engineers.
+
+I rather expect that you will find people fighting to step on the
+MAC address of any middle and upper management machine that spends
+any time at all in the "off" or "undocked" state.
+
+If your users want, I can give them some pointers to sites on how
+they can do this under Windows.  8-).
+
+Luigi is right: the only place you can really do this at this
+level is under Windows.
+
+The other alternative is to run a socks proxy, and make them use
+that to get out to the Internet, giveing internal users a non-routable
+IP address and/or simply blocking the entire netblock, minus a couple
+of static IP addresses (e.g. the gateway server/socks server).
+
+Unless you are in a country that charges for the sending of packets
+(like Japan), then you probably shou
+
+--------------------------------------------------------------------------------
+MID: 3D1E3FB7.9F8B260F@mindspring.com
+DATE: 2002-06-29T23:16:07+00:00  FROM: Terry Lambert <tlambert2@mindspring.com> <None>
+SUBJ: Re: ipfw/dummynet suggestion
+BODY:
+Terry Lambert wrote:
+
+Don't know what the heck happened here... it's supposed to read
+"on a per switch port basis".  I think I lost part of a paragraph...
+
+-- Terry
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: Pine.BSF.4.10.10209191054220.82837-100000@ady.warpnet.ro
+DATE: 2002-09-19T08:07:07+00:00  FROM: Adrian Penisoara <ady@freebsd.ady.ro> <None>
+SUBJ: Desired feature: ipfw pass for routed IPs
+BODY:
+Hi,
+
+  When building anti-spoofing firewall rules on a routing server it
+would be very helpfull to have a way to tell ipfw (or other firewalling
+mechanisms) to pass all pachets that the source or destination IP has a
+valid (static/daemon) routing entry in the kernel.
+
+  Something maybe like:
+
+    ipfw add allow ip from any to any routed static via xl0
+    ipfw add deny ip from any to any via xl0
+
+  The 'routed' keyword should accept route associated flags (like those
+listed in route(8)). That would be a desired feature too, because some
+routing daemons mark their routes in a different way (for example Zebra
+brings up the RTF_PROTO1 flag on its routes).
+
+  It's been said that iproute2 in the recent Linux kernels alreay
+support this, but I haven't checked out closely.
+
+  How hard would that be to implement ?
+
+ Thank you,
+ Adrian Penisoara
+ Ady (@freebsd.ady.ro)
+____________________________________________________________________
+| An age is called Dark not because the light fails to shin
+
+==========================================================================================
+DB: freebsd-current.duckdb  hits=40
+--------------------------------------------------------------------------------
+MID: 20020608201909.A41807@iguana.icir.org
+DATE: 2002-06-09T03:19:09+00:00  FROM: Luigi Rizzo <rizzo@icir.org> <None>
+SUBJ: New ipfw code available
+BODY:
+[Bcc to -current because it is relevant there as well -- sorry for the
+crosspost]
+
+
+Hi,
+over the past 2-3 weeks I have done an extensive rewrite of the
+ipfw code (userland + kernel) in an attempt to make it faster and
+more flexible.
+
+The idea (which I discussed a few times on the mailing lists) was
+to replace the current ipfw rules (macroinstructions) with a set
+of microinstructions, each of them performing a single operation
+such as matching an address, or a port range, or a protocol flag,
+etc.  -- much in the spirit of BPF and derivatives -- and to let
+the userland front-end compile ipfw(8) commands into an appropriate
+set of microinstructions.
+
+There are several advantages in using this technique: first of all,
+instructions are typically shorter and faster, because the former
+code had to check for the presence of all the possible options in
+a rule, whereas the new one can simply do just the things that are
+required --  e.g. an instruction like
+
+	allow ip from 1.2.3.0/24 to any
+
+tran
+
+--------------------------------------------------------------------------------
+MID: 1023698860.576.29.camel@vbook.express.ru
+DATE: 2002-06-10T08:47:40+00:00  FROM: "Vladimir B. " Grebenschikov <vova@sw.ru> <None>
+SUBJ: Re: New ipfw code available
+BODY:
+� Sun, 09.06.2002, � 07:19, Luigi Rizzo �������:
+
+Hi
+
+
+Really COOL! 
+
+And what about radix-tree-based ip-list matching ?
+
+like this:
+
+ 	ipfw add 1 allow ip from {1.2.3.0/24,1.3.5.0/24,17.2.3.4/45,11.2.3.4/30}
+or
+	cat mylist | ipfw list add mylist -
+	ipfw add 1 allow ip from @mylist
+
+or something like 
+
+If you deal with large access-lists ipfw becomes not best tool due to
+linear comparison.
+
+-- 
+Vladimir B. Grebenschikov
+vova@sw.ru, SWsoft, Inc.
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 20020610024726.A54631@iguana.icir.org
+DATE: 2002-06-10T09:47:26+00:00  FROM: Luigi Rizzo <rizzo@icir.org> <None>
+SUBJ: Re: New ipfw code available
+BODY:
+On Mon, Jun 10, 2002 at 12:47:40PM +0400, Vladimir B.  Grebenschikov wrote:
+...
+
+yes, it is planned.
+
+	cheers
+	luigi
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 20020610160123.B450-100000@femme.listmistress.org
+DATE: 2002-06-10T20:06:53+00:00  FROM: Trish Lynch <trish@bsdunix.net> <None>
+SUBJ: Re: New ipfw code available
+BODY:
+On Mon, 10 Jun 2002, Luigi Rizzo wrote:
+
+
+Luigi, gave this a try, and dummynet and my current rulesets except for
+one worked fine...
+
+I tried to add a divert rule, and it kept telling me it was an invalid
+port for divert/tee.
+
+I went back to the original code... just because I happen to be using natd
+:)
+
+After this is fixed, I'll install again and play with the new features :)
+
+-Trish
+
+
+--
+Trish Lynch					trish@bsdunix.net
+FreeBSD						The Power to Serve
+Ecartis Core Team				trish@listmistress.org
+                   http://www.freebsd.org
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 1025683152.782.12.camel@hunter.muc.macsch.com
+DATE: 2002-07-03T07:59:12+00:00  FROM: "Georg-W. Koltermann" <Georg.Koltermann@mscsoftware.com> <None>
+SUBJ: ipfw divert not accepted
+BODY:
+
+    hunter#	ipfw add 50 divert natd all from any to any via fxp0
+    ipfw: getsockopt(IP_FW_ADD): Invalid argument
+    hunter#	ipfw list
+    00100 allow ip from any to any via lo0
+    00200 deny ip from any to 127.0.0.0/8
+    00300 deny ip from 127.0.0.0/8 to any
+    65000 allow ip from any to any
+    65535 deny ip from any to any
+    hunter#	ifconfig fxp0
+    fxp0: flags=8843<UP,BROADCAST,RUNNING,SIMPLEX,MULTICAST> mtu 1500
+    	inet6 fe80::2c0:9fff:fe05:9a1f%fxp0 prefixlen 64 scopeid 0x1 
+    	inet 172.17.22.32 netmask 0xffffff00 broadcast 172.17.22.255
+    	ether 00:c0:9f:05:9a:1f
+    	media: Ethernet autoselect (100baseTX <full-duplex>)
+    	status: active
+    hunter#	ps ax | grep nat
+      188  ??  Is     0:00,00 /sbin/natd -t 255.255.255.255 -n fxp0
+     1059  p1  RV     0:00,00 grep nat (csh)
+    hunter#	
+    
+    
+
+This is with a -current of date=2002.06.27.22.00.00.
+
+--
+Regards,
+Georg.
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in
+
+--------------------------------------------------------------------------------
+MID: 3D22BA52.EACB32D3@FreeBSD.org
+DATE: 2002-07-03T08:48:18+00:00  FROM: Maxim Sobolev <sobomax@FreeBSD.org> <None>
+SUBJ: Re: ipfw divert not accepted
+BODY:
+"Georg-W. Koltermann" wrote:
+
+Add "option	IPFIREWALL_FORWARD" into your kernel config.
+
+-Maxim
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 1025688438.777.6.camel@hunter.muc.macsch.com
+DATE: 2002-07-03T09:27:17+00:00  FROM: "Georg-W. Koltermann" <Georg.Koltermann@mscsoftware.com> <None>
+SUBJ: Re: ipfw divert not accepted
+BODY:
+Operator error, sorry for the false alarm.
+
+I had removed all of my IPFIREWALL options from my config in an attempt
+to find the cause of instability. I'm surprised that ipfw(8) did
+anything useful at all with that kernel.
+
+--
+Thanks a lot,
+Georg.
+
+Am Mi, 2002-07-03 um 10.48 schrieb Maxim Sobolev:
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 20020704133324.A633-100000@alpha.yumyumyum.org
+DATE: 2002-07-04T17:35:07+00:00  FROM: Kenneth Culver <culverk@yumyumyum.org> <None>
+SUBJ: ipfw rule changes?
+BODY:
+Hi, I just updated this morning to the latest -CURRENT, and just to let
+everyone know, the new KSE stuff seems to be working fine... however, my
+ipfw rules for dummynet no longer work:
+
+ipfw add queue 1 tcp from any to a.b.c.d 25 in via fxp0
+ipfw pipe 1 config bw 28Kbit/s queue 2
+ipfw queue 1 config pipe 1 mask dst-ip 0xffffffff
+
+Am I doing something wrong here? This worked fine before I rebuilt world
+(and I'm assuming rebuilt the ipfw program)...
+
+Ken
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 20020704133517.R633-100000@alpha.yumyumyum.org
+DATE: 2002-07-04T17:38:12+00:00  FROM: Kenneth Culver <culverk@yumyumyum.org> <None>
+SUBJ: Re: ipfw rule changes?
+BODY:
+Oh yeah, this is the error message:
+
+alpha:~:# ipfw queue 1 config pipe 1 mask dst-ip 0xffffffff
+ipfw: unrecognised option ``1''
+
+Ken
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 20020705071933.GB739@blarf.homeip.net
+DATE: 2002-07-05T07:19:33+00:00  FROM: Alex Zepeda <zipzippy@sonic.net> <None>
+SUBJ: Re: ipfw rule changes?
+BODY:
+On Thu, Jul 04, 2002 at 01:38:12PM -0400, Kenneth Culver wrote:
+
+
+Similarly:
+
+blarf:~#ipfw /etc/ipv4.firewall
+ipfw: unrecognised option [-1] icmptype
+
+Or if I change it to icmptypes (as it seems to be listed in the man page) 
+I get:
+
+ipfw: unrecognised option [41] icmptypes
+
+Hmm.
+
+- alex
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 20020707213546.GA743@fonix.adamsfamily.xx
+DATE: 2002-07-07T21:35:46+00:00  FROM: Szilveszter Adam <sziszi@bsd.hu> <None>
+SUBJ: problems with natd, ipfw
+BODY:
+Hello everybody,
+
+I upgraded to yesterday's -CURRENT and have made a few observations:
+
+1) The natd does not work. This is known, but I have tracked it to its
+interaction with libalias, which means that any program that uses
+libalias functions is also affected (and indeed, ppp(8)'s -nat option
+does not work either). If I downgrade the file src/sys/netinet/ip_fw.h
+to the version from June 27, and recompile libalias and natd, things
+will work.
+
+2) and much more alarmingly: Although the new ipfw really seems to
+process the ruleset faster, some rules appear to do nothing! I
+have a "default-to-deny" setup, so theoretically this should mean that I
+should be cut off from the net if the allow rules do not work. And
+indeed, flushing all rules gives the expected behaviour. But as soon as
+I load the ruleset file (which is the same as previously and then it
+worked as expected) the fw becomes wide-open, the only rules that appear
+to work are the divert for natd, and the allow rules. But the deny ru
+
+--------------------------------------------------------------------------------
+MID: 20020707164552.P3283@seaman.org
+DATE: 2002-07-07T21:45:52+00:00  FROM: "Richard Seaman, Jr." <dick@seaman.org> <None>
+SUBJ: Re: problems with natd, ipfw
+BODY:
+On Sun, Jul 07, 2002 at 11:35:46PM +0200, Szilveszter Adam wrote:
+
+
+Don't know.  But, I do know that logging seemed to be messed up.  My old
+ruleset only logged a few rules, and after upgrading I seemed to get a
+log entry for every packet.  It was so overwhelming that I didn't even
+try to analyze it.  Since I needed natd on the machine in question,
+I just reverted all the new ipfw code, and haven't spent much time at it.
+
+
+Yes, I saw this.  However, 'ipfw l' doesn't include a 00000 rule, and
+the rule list appears correct.
+
+-- 
+Richard Seaman, Jr.        email:    dick@seaman.org
+5182 N. Maple Lane         phone:    262-367-5450
+Nashotah WI 53058            fax:    262-367-5852
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 20020707170226.Q3283@seaman.org
+DATE: 2002-07-07T22:02:26+00:00  FROM: "Richard Seaman, Jr." <dick@seaman.org> <None>
+SUBJ: Re: problems with natd, ipfw
+BODY:
+On Sun, Jul 07, 2002 at 04:45:52PM -0500, Richard Seaman, Jr. wrote:
+
+I just went back to the old log files, and based on a spot check, the log
+files do indeed record as "accepted" packets that should have been
+denied by the ruleset (and which are currently denied without logging using
+the same ruleset and the "old" ipfw).
+
+-- 
+Richard Seaman, Jr.        email:    dick@seaman.org
+5182 N. Maple Lane         phone:    262-367-5450
+Nashotah WI 53058            fax:    262-367-5852
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 20020713003829.A64412@espresso.q9media.com
+DATE: 2002-07-13T04:38:29+00:00  FROM: Mike Barcroft <mike@FreeBSD.org> <None>
+SUBJ: New ipfw isn't 64-bit clean
+BODY:
+In struct ip_fw, the member timespace becomes padded with 32-bits
+because a pointer follows it.  This causes the RULESIZE() macro to
+miscalculate the size of the rule by 4 bytes.  Resulting in EINVAL
+and kernel warnings:
+
+%%%
+bowie# ipfw add allow all from me to 192.168.3.1
+00000 allow ip from me to 192.168.3.1
+ipfw: size mismatch (have 64 want 68)
+ipfw: getsockopt(IP_FW_ADD): Invalid argument
+%%%
+
+(Shouldn't 00000 be 00100?)
+
+I worked around the breakage by moving next_rule to the second
+position in the struct.  I imagine the real solution involves not
+jamming kernel pointers into public interfaces.
+
+Also, ipfw(8) has lots of warnings as a result of printf()s with
+deprecated quad_t's.  This should be easily fixed by using intmax_t's.
+
+Best regards,
+Mike Barcroft
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 20020713013509.B59424@iguana.icir.org
+DATE: 2002-07-13T08:35:09+00:00  FROM: Luigi Rizzo <luigi@FreeBSD.org> <None>
+SUBJ: Re: New ipfw isn't 64-bit clean
+BODY:
+Seems to me that the problem is not in ipfw2.c but rather in
+different structure padding when compiling the kernel and
+userland.
+ipfw2.c uses sizeof() to determine the size of the structure so
+it does not make any assumptions on operand sizes etc.
+
+Re. the printf problems could you submit a patch ? I
+basically copied the code in the old ipfw for all printf()
+so the problems must have been there as well.
+
+	cheers
+	luigi
+
+On Sat, Jul 13, 2002 at 12:38:29AM -0400, Mike Barcroft wrote:
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 20020801081103.GA1779@nagual.pp.ru
+DATE: 2002-08-01T08:11:05+00:00  FROM: "Andrey A. Chernov" <ache@nagual.pp.ru> <None>
+SUBJ: IPFW2 may cause incoming connections to hang
+BODY:
+I notice reproductible effect on my recent -current remote machine, after
+5-7 hours of normal work, I can't connect to this machine via
+ssh,telnet,pop3 or ftp, but smtp and http continue to work normally.
+
+When I turn ipfw2 off, this effect is gone. It was never happened for old
+ipfw with the same settings.
+
+I have simple "open" firewall type with one "deny" rule for specific tcp
+port. Since this is remote machine, I can't login and see what actually
+happens during this effect. I also notice that if current connection stays
+across beginning of effect, it continue to work, but new ones hangs.
+
+-- 
+Andrey A. Chernov
+http://ache.pp.ru/
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 20020801012241.A72759@iguana.icir.org
+DATE: 2002-08-01T08:22:41+00:00  FROM: Luigi Rizzo <luigi@freebsd.org> <None>
+SUBJ: Re: IPFW2 may cause incoming connections to hang
+BODY:
+On Thu, Aug 01, 2002 at 12:11:05PM +0400, Andrey A. Chernov wrote:
+
+could you send me your exact ruleset ? Also, does this happen
+at specific times (e.g. after some cron task) or not ?
+
+	cheers
+	luigi
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 20020902124032.D94253@espresso.q9media.com
+DATE: 2002-09-02T16:40:32+00:00  FROM: Mike Barcroft <mike@FreeBSD.org> <None>
+SUBJ: Fatal warnings breaks ipfw on LP64
+BODY:
+
+cc1: warnings being treated as errors
+/usr/src/sys/netinet/ip_fw2.c: In function `ipfw_ctl':
+/usr/src/sys/netinet/ip_fw2.c:2508: warning: cast from pointer to integer of different size
+/usr/src/sys/netinet/ip_fw2.c:2521: warning: cast from pointer to integer of different size
+
+Some of the code in question looks questionable:
+                        /*
+                         * abuse 'next_rule' to store the set_disable word
+                         */
+                        (u_int32_t)(((struct ip_fw *)bp)->next_rule) =
+                                set_disable;
+
+The rvalue is being cast in an assignment to make a pointer store an
+integer?  Surely this can be written better.
+
+Best regards,
+Mike Barcroft
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 20021002190955.D90848@espresso.q9media.com
+DATE: 2002-10-02T23:09:55+00:00  FROM: Mike Barcroft <mike@FreeBSD.org> <None>
+SUBJ: Re: Fatal warnings breaks ipfw on LP64
+BODY:
+It's been one month, have you made any progress on this?
+
+Mike Barcroft <mike@FreeBSD.org> writes:
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 20021020233345.GA26605@elvis.mu.org
+DATE: 2002-10-20T23:33:45+00:00  FROM: Maxime Henrion <mux@freebsd.org> <None>
+SUBJ: Patch to make ipfw2 work on sparc64
+BODY:
+	Hello all,
+
+
+I got ipfw2 apparently working on my sparc64 box.  I simply added
+new fields in the structure of the rules to avoid the evil casting.
+Of course, it breaks the ABI, so ipfw(8) must be rebuilt.  Also,
+this may be considered bloat since I didn't use unions or anything,
+but I think it would be nice to have ipfw2 working first and then
+have the code which exports the rules to userland reworked.  It
+should probably use two versions of the structures, one for userland
+and one for the kernel like ucred/xucred, etc... Patches for both
+kernel and userland attached.
+
+Comments appreciated.
+
+Cheers,
+Maxime
+
+
+--------------------------------------------------------------------------------
+MID: 200210262133.00028.msch@snafu.de
+DATE: 2002-10-26T19:33:00+00:00  FROM: Matthias Schuendehuette <msch@snafu.de> <None>
+SUBJ: Actual probs with 'ipfw'
+BODY:
+Hi,
+
+I updated my kernel now just like told in the last HEADSUP and hesitate 
+to do a 'make installworld' as also mentioned there...
+
+Now, during boot 'ipfw' complaines:
+
+ipfw: size mismatch (have 64 want 1064)
+ipfw: size mismatch (have 52 want 40)
+ipfw: size mismatch (have 52 want 40)
+
+This happens every time I run 'sh /etc/rc.firewall open'. Not to 
+mention, that the firewall is closed perfectly :-/.
+
+I didn't run 'mergemaster' because of no installworld. Is that the 
+problem?
+-- 
+Ciao/BSD - Matthias
+
+Matthias Schuendehuette	<msch [at] snafu.de>, Berlin (Germany)
+Powered by FreeBSD 5.0-CURRENT
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 20021026194847.GU26605@elvis.mu.org
+DATE: 2002-10-26T19:48:47+00:00  FROM: Maxime Henrion <mux@freebsd.org> <None>
+SUBJ: Re: Actual probs with 'ipfw'
+BODY:
+Matthias Schuendehuette wrote:
+
+No, the problem is that you need to installworld to have an updated
+ipfw(8) binary.
+
+Cheers,
+Maxime
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 200210262204.44225.msch@snafu.de
+DATE: 2002-10-26T20:04:44+00:00  FROM: Matthias Schuendehuette <msch@snafu.de> <None>
+SUBJ: Re: Actual probs with 'ipfw'
+BODY:
+On Saturday 26 October 2002 21:48, you wrote:
+
+
+Confirmed! Thanks a lot!
+
+PS: So the HEADSUP-strategy has its limitations... ;-)
+-- 
+Ciao/BSD - Matthias
+
+Matthias Schuendehuette	<msch [at] snafu.de>, Berlin (Germany)
+Powered by FreeBSD 4.7-STABLE
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 20021026201729.GL592@cicely8.cicely.de
+DATE: 2002-10-26T20:17:30+00:00  FROM: Bernd Walter <ticso@cicely8.cicely.de> <None>
+SUBJ: Re: Actual probs with 'ipfw'
+BODY:
+On Sat, Oct 26, 2002 at 10:04:44PM +0200, Matthias Schuendehuette wrote:
+
+You did not reboot to single user mode to installworld.
+No need to run ipfw with the new kernel before installworld.
+-current readers are expected to know that.
+
+-- 
+B.Walter              COSMO-Project         http://www.cosmo-project.de
+ticso@cicely.de         Usergroup           info@cosmo-project.de
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 200210262236.44894.msch@snafu.de
+DATE: 2002-10-26T20:37:26+00:00  FROM: Matthias Schuendehuette <msch@snafu.de> <None>
+SUBJ: Re: Actual probs with 'ipfw'
+BODY:
+On Saturday 26 October 2002 22:17, you wrote:
+
+Right!
+
+What I meant was:
+"For this reason, you probably want to delay an installworld until you 
+are comfortable that your newer kernel builds are satisfactory."
+from: Message-ID:  <20021025192535.EF82F2A88D@canning.wemm.org>
+
+But my new kernel build *is* satisfactory now :-)
+-- 
+Ciao/BSD - Matthias
+
+Matthias Schuendehuette	<msch [at] snafu.de>, Berlin (Germany)
+Powered by FreeBSD 4.7-STABLE
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 20021026155327.A64994@FreeBSD.org
+DATE: 2002-10-26T22:53:27+00:00  FROM: Juli Mallett <jmallett@FreeBSD.org> <None>
+SUBJ: Re: Actual probs with 'ipfw'
+BODY:
+* De: Matthias Schuendehuette <msch@snafu.de> [ Data: 2002-10-26 ]
+	[ Subjecte: Re: Actual probs with 'ipfw' ]
+
+I think he was referring to a kernel built with dateof(his-patches)-1
+sources, rather than much older ones.  There are more obvious version/ABI
+skew issues once one updates from so long ago.
+
+juli.
+-- 
+Juli Mallett <jmallett@FreeBSD.org>       | FreeBSD: The Power To Serve
+Will break world for fulltime employment. | finger jmallett@FreeBSD.org
+http://people.FreeBSD.org/~jmallett/      | Support my FreeBSD hacking!
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 20021110173443.A5529@mail.evip.pl
+DATE: 2002-11-10T16:34:43+00:00  FROM: Wiktor Niesiobedzki <kaczor@mail.evip.pl> <None>
+SUBJ: IPFW2 skipto + logging
+BODY:
+Hi,
+
+Rule of the format:
+ipfw add 100 skipto 400 log logamount 0 ip from 192.168.0.0/24 to 192.168.0.0/24
+Will give this strange result:
+Nov 10 17:01:05 portal kernel: ipfw: 100 SkipTo 400 TCP 192.168.0.1:139 192.168.0.2:1170 out via ed0
+Nov 10 17:01:05 portal kernel: ipfw: 310 Pipe 2 TCP 192.168.0.1:139 192.168.0.2:1170 out via ed0
+Nov 10 17:01:05 portal kernel: ipfw: 320 Pipe 2 TCP 192.168.0.1:139 192.168.0.2:1170 out via ed0
+Nov 10 17:01:05 portal kernel: ipfw: 340 Pipe 3 TCP 192.168.0.1:139 192.168.0.2:1170 out via ed0
+Nov 10 17:01:05 portal kernel: ipfw: 340 Pipe 4 TCP 192.168.0.1:139 192.168.0.2:1170 out via ed0
+Nov 10 17:01:05 portal kernel: ipfw: 360 Pipe 4 TCP 192.168.0.1:139 192.168.0.2:1170 out via ed0
+Nov 10 17:01:05 portal kernel: ipfw: 380 Pipe 4 TCP 192.168.0.1:139 192.168.0.2:1170 out via ed0
+Nov 10 17:01:05 portal kernel: ipfw: 800 Accept TCP 192.168.0.1:139 192.168.0.2:1170 out via ed0
+
+So, clearly saying - will not work, the rule:
+ipfw add 100 skipto 400 ip from 192.
+
+--------------------------------------------------------------------------------
+MID: 20021207015619.GA23658@gromit.dlib.vt.edu
+DATE: 2002-12-07T01:56:19+00:00  FROM: Paul Mather <paul@gromit.dlib.vt.edu> <None>
+SUBJ: IPFW2 keepalive?
+BODY:
+Please forgive me if this is an elementary question or mistake on my
+part.  I'm most familiar with ipfilter, and am a relative newcomer
+to ipfw.
+
+That said, the problem I am having is that IPFW2 stateful rules do not
+seem to persist via keepalives, as the man page suggests they should.
+Does anyone else have this problem?  (Is this a bug in the
+implementation, or in my application of it?)
+
+I can see a dynamic rule created, but it will vanish if idle for more
+than 300 seconds.  For example, I can slogin to another machine and
+then that remote login idle.  Meanwhile, in another terminal, I can
+use "ipfw -d show" to see the idle timer on the rule for that remote
+login count down to zero and eventually expire the rule.  If I then
+type something into the remote SSH session, I get "Write failed:
+Permission denied."  I've also noticed this kind of thing happen, for
+example, when reading mail via IMAP using mutt.  If I spend too long
+reading a message (e.g., a long digest), I will get a message
+
+--------------------------------------------------------------------------------
+MID: 200212142038.gBEKcDVv029924@apollo.backplane.com
+DATE: 2002-12-14T20:38:13+00:00  FROM: Matthew Dillon <dillon@apollo.backplane.com> <None>
+SUBJ: ipfw userland breaks again.
+BODY:
+    !@#$Q@#$@#$@#$
+
+    This is about the 90th time my -current box has become unusable.
+    First it won't let me installworld because of some signal snafu with
+    the kernel being too old, then, as usual, IPFW with the new kernel and
+    old world fails utterly and now the fragging machine can't access the
+    network which means I can't installworld.  So now I have to boot the
+    old kernel, install the new ipfw, then reboot so I can install the new
+    world.
+
+    I am really getting sick and tired of the ipfw userland breaking every
+    other week.  It makes the system unusable when IPFIREWALL_DEFAULT_TO_ACCEPT
+    is not specified in the kernel config.
+
+    I am going to add an ioctl() that unbreaks the firewall for these cases.
+    ipfw -unbreak or something like that, which doesn't fail whenever someone
+    changes the ipfw kernel interface.
+
+					    -Matt
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 20021214204426.GA62058@dragon.nuxi.com
+DATE: 2002-12-14T20:44:26+00:00  FROM: "David O'Brien" <obrien@freebsd.org> <None>
+SUBJ: Re: ipfw userland breaks again.
+BODY:
+On Sat, Dec 14, 2002 at 12:38:13PM -0800, Matthew Dillon wrote:
+
+Hear hear!!  I am >< tempted to have /sbin/ipfw moved to src/sys.
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 200212142209.gBEM9D8p002479@apollo.backplane.com
+DATE: 2002-12-14T22:09:13+00:00  FROM: Matthew Dillon <dillon@apollo.backplane.com> <None>
+SUBJ: Re: ipfw userland breaks again.
+BODY:
+
+:
+:On Sat, Dec 14, 2002 at 12:38:13PM -0800, Matthew Dillon wrote:
+:>     then, as usual, IPFW with the new kernel and
+:>     old world fails utterly and now the fragging machine can't access the
+:
+:Hear hear!!  I am >< tempted to have /sbin/ipfw moved to src/sys.
+
+    How about something like this (patch enclosed).  If there are no
+    objections I will commit it along with a documentation update, and
+    maybe also add some RC code give the sysad a chance to ipfw unbreak if
+    ipfw otherwise fails during the boot sequence.
+
+					-Matt
+					Matthew Dillon 
+					<dillon@backplane.com>
+
+
+Index: sbin/ipfw/ipfw2.c
+===================================================================
+RCS file: /home/ncvs/src/sbin/ipfw/ipfw2.c,v
+retrieving revision 1.18
+diff -u -r1.18 ipfw2.c
+--- sbin/ipfw/ipfw2.c	26 Nov 2002 22:53:14 -0000	1.18
++++ sbin/ipfw/ipfw2.c	14 Dec 2002 22:08:11 -0000
+@@ -3307,6 +3307,30 @@
+ 		printf("Flushed all %s.\n", do_pipe ? "pipes" : "rules");
+ }
+ 
++static void
++unbreak()
++{
+
+--------------------------------------------------------------------------------
+MID: 20021214221252.GF27086@elvis.mu.org
+DATE: 2002-12-14T22:12:52+00:00  FROM: Maxime Henrion <mux@freebsd.org> <None>
+SUBJ: Re: ipfw userland breaks again.
+BODY:
+Matthew Dillon wrote:
+
+I have a patch here which makes the IPFIREWALL_DEFAULT_TO_ACCEPT tunable
+at module load time using a kernel environment variable.  Looks to me
+that it would do what you want.
+
+Maxime
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 200212142222.gBEMMqcn002571@apollo.backplane.com
+DATE: 2002-12-14T22:22:52+00:00  FROM: Matthew Dillon <dillon@apollo.backplane.com> <None>
+SUBJ: Re: ipfw userland breaks again.
+BODY:
+
+:
+:I have a patch here which makes the IPFIREWALL_DEFAULT_TO_ACCEPT tunable
+:at module load time using a kernel environment variable.  Looks to me
+:that it would do what you want.
+:
+:Maxime
+
+    No, this isn't what I want.  I want something that can be articulated
+    without having to reboot the whole system.  The last time this happened
+    to me, which was today, I had to reboot the system FIVE times before I
+    got the network working again.  For example, I tried rebooting into
+    an old kernel and the fragging boot code tried to load the new kernel's
+    ACPI module (actually it tried to load BOTH the old and new kernel's
+    ACPI modules), and it panic'd of course.  It took five attempts before I
+    managed to get something that worked with the network up and then I
+    had to reboot *AGAIN* to do the installworld with the new kernel.
+
+    It's beginning to feel like a windows install!
+
+    When you are sitting at a boot prompt and have no access to manual
+    pages and such,
+
+--------------------------------------------------------------------------------
+MID: 20021214224524.GG27086@elvis.mu.org
+DATE: 2002-12-14T22:45:24+00:00  FROM: Maxime Henrion <mux@freebsd.org> <None>
+SUBJ: Re: ipfw userland breaks again.
+BODY:
+Matthew Dillon wrote:
+
+You don't need to reboot with this patch.  As I already said it, it's a
+*module load time* tunable.  So if you use ipfw as a module, it will do
+what you want.  If you don't, it's of course useless.
+
+Now I would really dislike seeing your patch in the tree, since I
+consider it's a rather crude hack to circumvent the ABI problems of
+ipfw.  As I've already said to luigi in private e-mail (I would be
+surprised if this hasn't been already discussed in the lists as well), 
+the proper way to fix this problem is to separate the kernel and
+userland structures of ipfw, and add versioning to the struct.
+
+This can be done without even breaking the ABI again, since several
+pointers in the kernel structures are useless to userland (like the next
+field) and can be reused to implement structure versioning.
+
+Cheers,
+Maxime
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 200212142351.gBENpBVH002931@apollo.backplane.com
+DATE: 2002-12-14T23:51:11+00:00  FROM: Matthew Dillon <dillon@apollo.backplane.com> <None>
+SUBJ: Re: ipfw userland breaks again.
+BODY:
+
+:Now I would really dislike seeing your patch in the tree, since I
+:consider it's a rather crude hack to circumvent the ABI problems of
+:ipfw.  As I've already said to luigi in private e-mail (I would be
+:surprised if this hasn't been already discussed in the lists as well), 
+:the proper way to fix this problem is to separate the kernel and
+:userland structures of ipfw, and add versioning to the struct.
+:
+:This can be done without even breaking the ABI again, since several
+:pointers in the kernel structures are useless to userland (like the next
+:field) and can be reused to implement structure versioning.
+:
+:Cheers,
+:Maxime
+
+    If/when Luigi fixes the ABI problems with IPFW, we can remove
+    this 'hack'.  Until then, I do not consider the hackiness nature
+    of the patch sufficient reason to not put it in.  I've been bitten
+    by this problem dozens of times, and wasted many hours simply because
+    I couldn't get the damn network working, and so have others.
+
+						-Matt
+
+
+To Uns
+
+--------------------------------------------------------------------------------
+MID: 23f401c2a3ce$2a6e7e30$52557f42@errno.com
+DATE: 2002-12-15T00:08:58+00:00  FROM: "Sam Leffler" <sam@errno.com> <None>
+SUBJ: Re: ipfw userland breaks again.
+BODY:
+
+I disagree with committing this hack; keep it as a local mod if you must.
+
+As to the problem; don't wait for Luigi to "fix the ABI problems", do it
+yourself.  Good things happen when folks are PO'd and won't settle for the
+status quo.
+
+    Sam
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 200212150015.gBF0FlbS066547@apollo.backplane.com
+DATE: 2002-12-15T00:15:47+00:00  FROM: Matthew Dillon <dillon@apollo.backplane.com> <None>
+SUBJ: Re: ipfw userland breaks again.
+BODY:
+:I disagree with committing this hack; keep it as a local mod if you must.
+:
+:As to the problem; don't wait for Luigi to "fix the ABI problems", do it
+:yourself.  Good things happen when folks are PO'd and won't settle for the
+:status quo.
+:
+:    Sam
+
+    I'm sorry you disagree, but it doesn't change my position.  I am not
+    in the business of rewriting other people's APIs.  If it means so much
+    to you, YOU go and fix it.  No?  Then don't complain about my fix.  It's
+    no skin off your nose and it will prevent a lot of future headaches,
+    especially if the RC system makes it nice and friendly.
+
+						-Matt
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 20021215.111441.05985858.imp@bsdimp.com
+DATE: 2002-12-15T18:14:41+00:00  FROM: "M. Warner Losh" <imp@bsdimp.com> <None>
+SUBJ: Re: ipfw userland breaks again.
+BODY:
+In message: <200212150015.gBF0FlbS066547@apollo.backplane.com>
+            Matthew Dillon <dillon@apollo.backplane.com> writes:
+
+: :I disagree with committing this hack; keep it as a local mod if you must.
+: :
+: :As to the problem; don't wait for Luigi to "fix the ABI problems", do it
+: :yourself.  Good things happen when folks are PO'd and won't settle for the
+: :status quo.
+: :
+: :    Sam
+: 
+:     I'm sorry you disagree, but it doesn't change my position.  I am not
+:     in the business of rewriting other people's APIs.  If it means so much
+:     to you, YOU go and fix it.  No?  Then don't complain about my fix.  It's
+:     no skin off your nose and it will prevent a lot of future headaches,
+:     especially if the RC system makes it nice and friendly.
+
+I don't like the patch from a security standpoint.  It makes it to
+easy to turn off a firewall.  If you want to be that stupid about
+security, you should just make the default be 'accept all' and be done
+with it.  I'm opposed to this 
+
+--------------------------------------------------------------------------------
+MID: 200212151826.gBFIQMpo081407@apollo.backplane.com
+DATE: 2002-12-15T18:26:22+00:00  FROM: Matthew Dillon <dillon@apollo.backplane.com> <None>
+SUBJ: Re: ipfw userland breaks again.
+BODY:
+:I don't like the patch from a security standpoint.  It makes it to
+:easy to turn off a firewall.  If you want to be that stupid about
+:security, you should just make the default be 'accept all' and be done
+:with it.  I'm opposed to this patch unless you can get the security
+:officer to sign off on it.  The defaults are there for a reason so
+:that we fail 'safe' from a security point of view.
+:
+:The real fix is to fix the abi problems.
+:
+:Warner
+
+    This is complete BULLSHIT, Warner.  This patch exists precisely so
+    the firewall can be turned on in secure mode.  It does not make it
+    any easier to turn off then adding a rule:
+
+    ipfw add 2 allow all from any to any
+
+    So don't give me this bullshit about the patch being a security issue.
+    YOU KNOW IT ISN'T.
+
+    Now you are forcing me to go to core.  It's absolutely ridiculous and
+    you know it.  Goddamn it, next time I won't even bother posting if all
+    I get is this sort of crap.
+
+						-Matt
+
+
+
+To Unsubscribe: send 
+
+--------------------------------------------------------------------------------
+MID: 200212151828.gBFISANx081428@apollo.backplane.com
+DATE: 2002-12-15T18:28:10+00:00  FROM: Matthew Dillon <dillon@apollo.backplane.com> <None>
+SUBJ: Re: ipfw userland breaks again.
+BODY:
+:
+:The real fix is to fix the abi problems.
+:
+:Warner
+
+    Doh!!    Thanks for volunteering to fix the ABI problems.  No?  You
+    don't want to do it?  Gee, I saw that one coming a mile away!
+    THEN DON'T COMPLAIN.
+
+    This is not a fucking security issue.  This is a patch that solves 
+    a major irritation, nothing more, nothing less, except some people 
+    can't stand an 8-line fix to the problem apparently.
+	
+						-Matt
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+
+==========================================================================================
+DB: freebsd-net.duckdb  hits=40
+--------------------------------------------------------------------------------
+MID: 20030802203114.J4501@net-ninja.dyndns.org
+DATE: 2003-08-02T17:31:46+00:00  FROM: mwade at bluehighway.net (Mike Wade) <None>
+SUBJ: ipfw2 mac address matching weirdness?
+BODY:
+I'm running FreeBSD 4.8 RELEASE w/ IPFW2 support enabled.  I'm running
+into some weirdness with the mac address matching feature or perhaps it's
+my lack of understanding how it interacts with other rules. :)
+
+My goal is to transparently redirect everything except a few select MAC
+addresses but it doesn't appear to work properly.  For example:
+
+net-ninja# ipfw list
+00001 skipto 65535 ip from any to any MAC any any in via sis0
+00002 fwd 127.0.0.1,8080 tcp from any to any dst-port 80 in via sis0
+65535 allow ip from any to any
+
+This should allow every MAC address to bypass the transparent redirect but
+it doesn't.  If I change rule #1 to:
+
+00001 skipto 65535 ip from any to any in via sis0
+
+Things work as advertised.  Any ideas?
+
+---
+Mike Wade (mwade@bluehighway.net)
+Blue Highway Labs, LLC.
+
+
+--------------------------------------------------------------------------------
+MID: 20030803020257.GA79533@vega.evo6.net
+DATE: 2003-08-02T19:03:04+00:00  FROM: andy at evo6.org (Andy Gilligan) <None>
+SUBJ: ipfw2 mac address matching weirdness?
+BODY:
+On Sun, Aug 03, 2003 at 01:31:23AM BST, Mike Wade wrote:
+
+Try:
+
+sysctl net.link.ether.ipfw=1
+
+Regards,
+-Andy
+
+
+--------------------------------------------------------------------------------
+MID: 20030802223846.V4501@net-ninja.dyndns.org
+DATE: 2003-08-02T19:47:04+00:00  FROM: mwade at bluehighway.net (Mike Wade) <None>
+SUBJ: ipfw2 mac address matching weirdness?
+BODY:
+On Sun, 3 Aug 2003, Andy Gilligan wrote:
+
+
+Hmm, it was already set:
+
+net-ninja# sysctl net.link.ether.ipfw
+net.link.ether.ipfw: 1
+
+---
+Mike Wade (mwade@bluehighway.net)
+Blue Highway Labs, LLC.
+
+
+--------------------------------------------------------------------------------
+MID: 20030803044519.GA32629@vega.evo6.net
+DATE: 2003-08-02T21:45:28+00:00  FROM: andy at evo6.org (Andy Gilligan) <None>
+SUBJ: ipfw2 mac address matching weirdness?
+BODY:
+On Sun, Aug 03, 2003 at 03:39:24AM BST, Mike Wade wrote:
+
+The best advice I can give at the moment is to read the "PACKET FLOW"
+section in ipfw(8).
+
+A brief read over it suggests that it *may* not be possible to do what
+you ask, due to the rules being parsed twice. (in your case)
+
+The first pass is done from ether_demux(), and this will only match the
+first rule - it won't match tcp or dst-port 80, etc.
+
+The second pass will come from ip_input(), which will only match the
+second rule, as it doesn't know anything about MAC addresses.
+
+I could be missing something (it is 4am), so hopefully somebody will
+step in and tell me I'm wrong :)
+
+Sorry I couldn't be of more help.
+
+Best regards,
+-Andy
+
+
+--------------------------------------------------------------------------------
+MID: 1071747199.736.3.camel@localhost
+DATE: 2003-12-18T03:34:27+00:00  FROM: vova at sw.ru (Vladimir B. Grebenschikov) <None>
+SUBJ: ipfw2 state synchronization
+BODY:
+
+Hi 
+
+http://www.greyhats.org/openbsd/openbsd.html#pfsyncd
+
+Have anybody plans to implement such functionality for freebsd ?
+It will require to extend interface for ipfw2 (report state changes,
+like route changes on route socket, and ability to install keep-state
+information)
+
+-- 
+Vladimir B. Grebenschikov <vova@sw.ru>
+SWsoft Inc.
+
+
+
+--------------------------------------------------------------------------------
+MID: 20031230054214.8C30044B31@sumykhimprom.org.ua
+DATE: 2003-12-30T05:08:10+00:00  FROM: vanyushenkov at nettmail.de ("al vanyushenkov" ) <None>
+SUBJ: gray network and ipfw2
+BODY:
+hi all
+i have freebsd 4.8 installed and i use ipfw2 with the rules
+
+#!/bin/sh
+fwcmd=/sbin/ipfw
+${fwcmd} -f flush
+
+#!/bin/sh
+ipfw='/sbin/ipfw'
+$ipfw -f flush
+
+$ipfw add divert natd all from any to any via ppp0
+$ipfw add allow log all from any to any
+
+my local ethernet card has 192.168.133.7 ip address
+and my ppp0 interface has 217.15.x.x ip address.
+
+when i tried to connect to 195.54.192.44:21 from my local box i got the lines
+
+Accept TCP 172.16.202.106:4802 195.54.192.44:21 out via ppp0
+Accept TCP 195.54.192.44:21 172.16.202.106:4802 in via ppp0
+and so on.
+
+as i know 172.16.0.0 are gray addresses and i haven't got any 172.16.x.x networks
+in my environment.
+Could anybody tell me what 172.16.202.106:4802 does in my log file.
+
+Thanks
+vanyushenkov al
+_______________________________________________
+freebsd-ipfw@freebsd.org mailing list
+http://lists.freebsd.org/mailman/listinfo/freebsd-ipfw
+To unsubscribe, send any mail to "freebsd-ipfw-unsubscribe@freebsd.org"
+
+
+
+--------------------------------------------------------------------------------
+MID: 002501c3522f$67e4e320$68c311cc@fortiva
+DATE: 2003-07-24T15:21:59+00:00  FROM: ericx at vineyard.net (Eric W. Bates) <None>
+SUBJ: Profiling ipfw2 performance
+BODY:
+Can someone please point me to a method for measuring the packet lag between interfaces when using ipfw and/or ipfw2?
+
+Thanks.
+
+Eric W. Bates
+ericx@vineyard.net
+
+
+--------------------------------------------------------------------------------
+MID: 20030724155748.B35706@xorpc.icir.org
+DATE: 2003-07-24T15:59:19+00:00  FROM: rizzo at icir.org (Luigi Rizzo) <None>
+SUBJ: Profiling ipfw2 performance
+BODY:
+On Thu, Jul 24, 2003 at 06:03:25PM -0400, Eric W. Bates wrote:
+
+in RELENG_4, i386 kernels you can add the option
+
+	options	KERN_TIMESTAMP
+
+which then allows you to use the TSTMP() macros (defined and
+documented in /sys/i386/include/param.h) to record timestamps
+using the TSC register, and export the readings to userland
+using a sysctl.
+This way you can get some reasonable numbers in a non-intrusive way.
+
+	cheers
+	luigi
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 200306191331.40421.ari.suutari@syncrontech.com
+DATE: 2003-06-19T03:33:23+00:00  FROM: ari.suutari at syncrontech.com (Ari Suutari) <None>
+SUBJ: patches for ipsec packet filtering support  in ipfw2
+BODY:
+Hi,
+
+Here are two small patches (done on 5.1-RELEASE, but should
+be ok for -current also) which add new "ipsec" flag to ipfw2.
+Rules with this flag match only packets that have
+ipsec history (ie. came from ipsec processing). Rules with
+"not ipsec" match only non-ipsec packets. Without
+the new keyword, both types of packets match (as before).
+
+To try these out, apply the patches, and compile
+kernel with 
+
+options  IPFIREWALL
+options IPSEC
+options IPSEC_ESP
+options IPSEC_FILTERGIF
+
+Also, recompile /usr/src/sbin/ipfw and install it.
+
+With the new flag it is possible easily to
+stop spoofing from RFC1918 networks, but
+allow traffic from those nets if it is coming
+from IPsec:
+
+ipfw add deny all from 192.168.0.0/16 to any via ${oif} not ipsec
+ipfw add pass tcp from 192.168.x.y/24 to a.b.c.d 23 ipsec setup
+
+This example drops spoofed packets, but allows
+telnet connection *if* the packet comes via ipsec.
+
+My testing has been done on 5.1-RELEASE machine.
+It seems to work, and it didn't crash any
+
+--------------------------------------------------------------------------------
+MID: 000901c33691$4d4bd8c0$0235a8c0@raisa
+DATE: 2003-06-19T11:30:54+00:00  FROM: ari at suutari.iki.fi (Ari Suutari) <None>
+SUBJ: patches for ipsec packet filtering support  in ipfw2
+BODY:
+Hi,
+
+
+    Does the mailing list strip attachments ?
+    Here they are one for /sys/netinet and other for /usr/src/sbin/ipfw:
+
+This is for /sys/netinet:
+
+
+Index: ip_fw.h
+===================================================================
+RCS file: /net/pommac/scratch/freebsd-cvs/src/sys/netinet/ip_fw.h,v
+retrieving revision 1.76.2.1
+diff -u -r1.76.2.1 ip_fw.h
+--- ip_fw.h 4 Jun 2003 02:19:36 -0000 1.76.2.1
++++ ip_fw.h 19 Jun 2003 08:17:44 -0000
+@@ -119,6 +119,7 @@
+  O_TEE,   /* arg1=port number  */
+  O_FORWARD_IP,  /* fwd sockaddr   */
+  O_FORWARD_MAC,  /* fwd mac   */
++ O_IPSEC,  /* has ipsec history  */
+  O_LAST_OPCODE  /* not an opcode!  */
+ };
+ 
+Index: ip_fw2.c
+===================================================================
+RCS file: /net/pommac/scratch/freebsd-cvs/src/sys/netinet/ip_fw2.c,v
+retrieving revision 1.28.2.1
+diff -u -r1.28.2.1 ip_fw2.c
+--- ip_fw2.c 4 Jun 2003 02:19:36 -0000 1.28.2.1
++++ ip_fw2.c 19 Jun 2003 18:24:40 -0000
+@@ -1787,6 +1787,14 @@
+          (TH_RST | TH_
+
+--------------------------------------------------------------------------------
+MID: 20030619185654.GA408@nitro.dk
+DATE: 2003-06-19T11:58:35+00:00  FROM: simon at nitro.dk (Simon L. Nielsen) <None>
+SUBJ: patches for ipsec packet filtering support  in ipfw2
+BODY:
+On 2003.06.19 21:33:33 +0300, Ari Suutari wrote:
+
+Yes, and it has in fact recently been documented :-).
+
+http://www.freebsd.org/doc/en/books/handbook/eresources.html#ERESOURCES-MAILFILTERING
+
+Your code looks interesting, but since I don't have IPsec set up (yet) I
+can't really test it.
+
+If no committer picks it up right away, I would suggest submitting it as
+a PR to make sure it isn't forgotten.  Then hopefolly one of the ipfw
+guru's will have look at it at some point.
+
+-- 
+Simon L. Nielsen
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: not available
+Type: application/pgp-signature
+Size: 187 bytes
+Desc: not available
+Url : http://lists.freebsd.org/pipermail/freebsd-net/attachments/20030619/e984564d/attachment.bin
+
+
+--------------------------------------------------------------------------------
+MID: 20030507203714.E41411-100000@snaps.home
+DATE: 2003-05-07T11:41:43+00:00  FROM: nisse at hubsch.org (nisse@hubsch.org) <None>
+SUBJ: ipfw2: Detecting packets without incoming interface
+BODY:
+
+In ipfw1 I could use "recv any" to indicate that a packet originated on a
+remote host. To for example prevent tcp traffic from being forwarded
+trough the host but still allow traffic to/from the host on all interfaces
+it was possible to say
+
+ipfw add deny tcp from any to any out recv any
+ipfw add allow tcp from any to any
+
+How do I do this with ipfw2?
+I want to detect locally generated packets.
+
+netinet/ip_fw2.c does't seem to handle the "any" case and ipfw2.c has the
+following code:
+
+  /* Parse the interface or address */
+   if (!strcmp(arg, "any"))
+         cmd->o.len = 0;         /* effectively ignore this command */
+
+--
+ Mikael Hubsch
+
+
+
+--------------------------------------------------------------------------------
+MID: 20030517195354.GF13501@zot.electricrain.com
+DATE: 2003-05-17T12:53:57+00:00  FROM: greg at electricrain.com (Gregory P. Smith) <None>
+SUBJ: matching a range of iplens with ipfw2?
+BODY:
+Is there a way to match a range of iplen values in an ipfw2 rule?
+(say i wanted a rule to match all tcp packets <= 64 bytes).
+
+Entering 24 rules for iplen 40 thru 64 seems highly inefficient but
+i don't see any mention of how to look for a range of iplens in the
+man pages.
+
+tia -
+Greg
+
+
+
+--------------------------------------------------------------------------------
+MID: 20030518002328.GJ399@nitro.dk
+DATE: 2003-05-17T17:26:27+00:00  FROM: simon at nitro.dk (Simon L. Nielsen) <None>
+SUBJ: matching a range of iplens with ipfw2?
+BODY:
+On 2003.05.17 12:53:54 -0700, Gregory P. Smith wrote:
+
+At the moment no.  I implemented a simple version of it some time ago
+but since it was not "the right way" (not flexible enough.. try
+searching the archives for FreeBSD-ipfw for more details) I didn't
+proceed any further with my patch but it should work just fine.  My
+patch can be found at
+http://simon.nitro.dk/freebsd/files/ipfw2-iplen.patch if you want to try
+it out.
+
+Somebody (sorry can't remeber who) was looking into implemented iplen
+ranges "the right way" as sugested by Luigi Rizzo, but I don' know the
+progress of that work.
+
+-- 
+Simon L. Nielsen
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: not available
+Type: application/pgp-signature
+Size: 187 bytes
+Desc: not available
+Url : http://lists.freebsd.org/pipermail/freebsd-net/attachments/20030518/3408134a/attachment.bin
+
+
+--------------------------------------------------------------------------------
+MID: 20030521080400.GB21522@zot.electricrain.com
+DATE: 2003-05-21T01:09:33+00:00  FROM: greg at electricrain.com (Gregory P. Smith) <None>
+SUBJ: CFR: patch to ipfw2 iplen to match a range of lengths
+BODY:
+Here's a patch (attached) to make RELENG_5_0's ipfw2 iplen match a range
+of values rather than a single length.
+
+IMHO its much more useful than the current method of only matching
+an exact length.  How often do you need to match only an exact packet
+length rather than "all packets less than 128 bytes" or "all packets
+over 500 bytes"?
+
+The ipfw command syntax doesn't change for those using the existing
+iplen rule.  It adds the ability to say things like "iplen 28-128"
+
+any comments?
+
+Greg
+
+-------------- next part --------------
+--- sbin/ipfw/ipfw.8.saved	Mon May 19 23:01:38 2003
++++ sbin/ipfw/ipfw.8	Wed May 21 00:25:07 2003
+@@ -885,10 +885,13 @@
+ .Cm ip_id
+ field has value
+ .Ar id .
+-.It Cm iplen Ar len
++.It Cm iplen Ar len | minlen-maxlen
+ Matches IP packets whose total length, including header and data, is
+ .Ar len
+-bytes.
++bytes or, if a range is given, is >=
++.Ar minlen
++and <=
++.Ar maxlen.
+ .It Cm ipoptions Ar spec
+ Matches packets whose IP header contains the comma separated list
+
+--------------------------------------------------------------------------------
+MID: 1066044014.3f8a8a6e0dcca@mail.afribone.net.gn
+DATE: 2003-10-13T04:41:52+00:00  FROM: traore at afribone.net.gn (traore@afribone.net.gn) <None>
+SUBJ: ipfw2 on freebsd4.7-release
+BODY:
+
+
+I want to use ipfw2 on freebsd4.7-release version. But when i compiled kernel, 
+libalias and ipfw with ipfw2 options, this is not work. When i try to add rule, 
+ i accured an error message.
+
+Regards!
+
+
+
+--------------------------------------------------------------------------------
+MID: 20031015080700.GB53102@rot13.obsecurity.org
+DATE: 2003-10-15T01:10:32+00:00  FROM: kris at obsecurity.org (Kris Kennaway) <None>
+SUBJ: ipfw2 on freebsd4.7-release
+BODY:
+On Mon, Oct 13, 2003 at 11:20:14AM +0000, traore@afribone.net.gn wrote:
+
+Provide more details, like the commands you tried and the errors you
+got in return.
+
+Kris
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: not available
+Type: application/pgp-signature
+Size: 187 bytes
+Desc: not available
+Url : http://lists.freebsd.org/pipermail/freebsd-net/attachments/20031015/8375eaed/attachment.bin
+
+
+--------------------------------------------------------------------------------
+MID: 20020112224940.GA12199@titan.klemm.gtn.com
+DATE: 2002-01-12T22:49:40+00:00  FROM: Andreas Klemm <andreas@freebsd.org> <None>
+SUBJ: 4.4-stable from 11.01.2002: nat doesn't run with ipfw profile "simple"
+BODY:
+Hi !
+
+I can't give you all details, since currently I don't have root
+access to the machine, only user via ssh (forgot to install su2
+or to put me into the right group, *argh* ;-) ... will last up
+to monday, but maybe you can answer me, if perhaps there is a
+problem with nat or my basic config.
+
+People usually use squid for http and ftp. But they want have
+access to internet radio, upload files to remote webservers via
+ftp and such ... And this currently (surprisingly) doesn't work.
+One iMAC uses in Netscape direct connection to internet, the
+other uses squid. Squid works, direct access to internet not.
+Default gateway is o.k., set to internal fxp0 interface.
+FreeBSD is also a caching DNS server ... there no problem.
+
+Traffic originating from FreeBSD machine doesn't have problems.
+Traffic (for example web, port 80) originating from internal
+net to external net without going over squid doesn't work ...
+Although FreeBSD already offers nice firewall rules for a
+firewall with 2 interfaces 
+
+--------------------------------------------------------------------------------
+MID: 009301c1a5bd$616efc30$13c92c0a@intra.selectbourse.net
+DATE: 2002-01-25T16:28:38+00:00  FROM: "Sebastien Petit" <spe@selectbourse.net> <None>
+SUBJ: Timeouts on dynamic ipfw rules
+BODY:
+Hi,
+
+Is there a way to set per keep-state rule timeout ?
+I want to have a little ack timeout for connection to mysql  database tcp 3306 but a long ack timeout for other rules.
+if not perhaps this syntax can be implemented on ipfw code, for example:
+ipfw add ... keepstate setup timeout-ack 3600
+or
+ipfw add ... keepstate setup timeout-syn 50
+
+Perhaps I can do this stuff if there are no objections ?
+
+Sebastien.
+-- 
+spe@bsdfr.org
+
+
+
+--------------------------------------------------------------------------------
+MID: 20020125113929.B80956@iguana.icir.org
+DATE: 2002-01-25T19:39:29+00:00  FROM: Luigi Rizzo <rizzo@icir.org> <None>
+SUBJ: Re: Timeouts on dynamic ipfw rules
+BODY:
+there were patches floating around for something similar.
+
+	cheers
+	luigi
+
+On Fri, Jan 25, 2002 at 05:28:38PM +0100, Sebastien Petit wrote:
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-net" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 20020125175340.C14394@blossom.cjclark.org
+DATE: 2002-01-26T01:53:40+00:00  FROM: "Crist J. Clark" <cjc@FreeBSD.ORG> <None>
+SUBJ: Re: Timeouts on dynamic ipfw rules
+BODY:
+On Fri, Jan 25, 2002 at 11:39:29AM -0800, Luigi Rizzo wrote:
+
+I've got CURRENT patches to do this at the site in the .sig. My STABLE
+ones bitrotted (the CURRENT ones might be pass the sell-by date
+too). But I could redo them if there is interest.
+-- 
+Crist J. Clark                     |     cjclark@alum.mit.edu
+                                   |     cjclark@jhu.edu
+http://people.freebsd.org/~cjc/    |     cjc@freebsd.org
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-net" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 20020126122855.A227@crypton.intra.bsdshell.net
+DATE: 2002-01-26T11:28:55+00:00  FROM: spe <spe@bsdfr.org> <None>
+SUBJ: Re: Timeouts on dynamic ipfw rules
+BODY:
+I found your patches for 5.0-CURRENT, I will update it for 4.4 and 4.5, 
+thank you Crist.
+Will this patch be commited in 5.0-RELEASE or perhaps 4.6 ? I think 
+this is a good functionnality imho.
+
+--
+Sebastien Petit
+spe@bsdfr.org
+The HUT Project
+http://www.bsdshell.net/
+
+On 2002.01.26 02:53 Crist J. Clark wrote:
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-net" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 20020201052753.E078B20F8F@ns1.infowest.com
+DATE: 2002-02-01T05:27:50+00:00  FROM: "Aaron D. Gifford" <agifford@infowest.com> <None>
+SUBJ: Re: Timeouts on dynamic ipfw rules 
+BODY:
+Sebastien Petit (spe@bsdfr.org) was heard to say:
+
+I wrote an ipfw patch set available for 4.4-RELEASE through 4.5-STABLE, and 
+even a very few versions of -CURRENT that addes a "lifetime <number>" feature 
+to ipfw.  By default, it overrides the dyn_ack_lifetime timeout for TCP 
+rules, the dyn_udp_lifetime for UDP rules, and dyn_short_lifetime for all 
+other IP rules that use it (keepstate rules, that is).  The patch set 
+includes a man page patch explaining the addition.  The latest versions of 
+the set are available at:
+
+  http://www.aarongifford.com/computers/ipfwpatch.html
+
+I have used this functionality on MANY of the FreeBSD systems I admin. since 
+June of 2000 when I first created the patches and posted them (see the 
+freebsd-net archive for the archaic versions thereof).  The above web page 
+has versions of the patch set for 4.4-RELEASE, 4.5-RELEASE, several different 
+4.X-STABLE versions, and even 1 or 2 -CURRENT versions (though those are 
+getting old).
+
+There are two open PR
+
+--------------------------------------------------------------------------------
+MID: 20020201085740.A60B12151E@ns1.infowest.com
+DATE: 2002-02-01T08:57:36+00:00  FROM: "Aaron D. Gifford" <agifford@infowest.com> <None>
+SUBJ: Re: Timeouts on dynamic ipfw rules
+BODY:
+I recently was heard to elocute:
+
+Oops.
+
+s/unsigned short/unsigned long/g;
+
+Scratch that "unsigned short" and make it an "unsigned long" (or 
+"u_int32_t") instead in the above paragraph.
+
+Aaron out.
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-net" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 044f01c1ba94$7a5fa820$11cad5c8@mshome.net
+DATE: 2002-02-21T04:59:01+00:00  FROM: "Ivan Coimbra" <ivan@sunline.com.br> <None>
+SUBJ: IPFW serious problems
+BODY:
+I am having serious problems with the ipfw of FreeBSD. I am trying to use
+the forward of packages, and I am having the following problem: the ipfw
+doesn't make forward for non-local addresses! The options in the kernel are
+active (IPFIREWALL, IPFIREWALL_FORWARD, etc) and the option of forward of
+FreeBSD (gateway_enable = "YES") in /etc/rc.conf is active too!
+With local adresses (local machine) ipfw fwd work!
+
+Please, can you help me? ?
+
+Thanks,
+Ivan Coimbra
+S�o Paulo / Brasil
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-net" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 20020222100004.V2533-100000@localhost
+DATE: 2002-02-22T09:01:13+00:00  FROM: Michele Possamai <tnt@tnt.yi.org> <None>
+SUBJ: Re: IPFW serious problems
+BODY:
+I don't know what you exactly want to do..
+but if you are using natd with ipfw try the options in natd..
+they work a lot easier then ipfw..
+
+On Thu, 21 Feb 2002, Ivan Coimbra wrote:
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-net" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 20020228102830.GA73010@elvis.mu.org
+DATE: 2002-02-28T10:28:30+00:00  FROM: Alfred Perlstein <bright@mu.org> <None>
+SUBJ: ipfw+nfs kills both client and server
+BODY:
+If anyone is interested, take this scenario:
+
+NFS client and server set up
+
+client is doing this:
+  tar cf - /path/to/nfs/mount | tar -xvf - 
+
+idiot sysadmin (me) does this on client:
+  kldload ipfw
+
+Now since the default ruleset is to deny everything, the client
+locks up spewing 'nfsd send error 13'.
+
+Now give it two or three shots and you may get the server
+to lock up as well!  (seems to run out of mbufs)
+
+-- 
+-Alfred Perlstein [alfred@freebsd.org]
+'Instead of asking why a piece of software is using "1970s technology,"
+ start asking why software is ignoring 30 years of accumulated wisdom.'
+Tax deductible donations for FreeBSD: http://www.freebsdfoundation.org/
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-net" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 200202281111.aa87624@salmon.maths.tcd.ie
+DATE: 2002-02-28T11:11:06+00:00  FROM: Ian Dowse <iedowse@maths.tcd.ie> <None>
+SUBJ: Re: ipfw+nfs kills both client and server 
+BODY:
+In message <20020228102830.GA73010@elvis.mu.org>, Alfred Perlstein writes:
+
+I must have forgotten to commit the fix for this - Garrett noticed
+the problem a few years ago, and I came across it while testing
+exactly this scenario more recently (for more details, search for
+the message ID <200110151653.aa00863@salmon.maths.tcd.ie> on this
+list).
+
+The uio != NULL check that this removes was added in CSRG revision
+7.31 (Nov 1991) to support Rick Macklem's NFS work, but I'm fairly
+sure that it is not needed now. If it was there for performance
+reasons it should have increased the socket limit, and not removed
+it alltogether.
+
+The patch is below; I'll commit this shortly.
+
+Ian
+
+Index: uipc_socket.c
+===================================================================
+RCS file: /dump/FreeBSD-CVS/src/sys/kern/uipc_socket.c,v
+retrieving revision 1.109
+diff -u -r1.109 uipc_socket.c
+--- uipc_socket.c	5 Feb 2002 02:00:53 -0000	1.109
++++ uipc_socket.c	9 Feb 2002 12:52:45 -0000
+@@ -549,7 +549,7 @@
+ 		
+
+--------------------------------------------------------------------------------
+MID: 20020228174358.JHLU29423.mta06.onebox.com@onebox.com
+DATE: 2002-02-28T17:43:57+00:00  FROM: "Hamilton Hoover" <hamilton.hoover@onebox.com> <None>
+SUBJ: natd & ipfw config with 5 NICS
+BODY:
+Hi all,
+
+I'm setting up a site that I'd like to have four separate networks connected
+
+through a single gateway/firewall with five network interfaces.
+
+Two Public (real IPs) interfaces on the same network with different IPs
+realIP1
+realIP2
+
+Three Private (fake IPS) interfaces on three separate networks
+192.168.1
+192.168.2
+192.168.3
+
+I want to break it down in to two groups
+
+site1
+realIP1 --> 192.168.1
+
+This is the only one I currently have running and works fine. I basicly
+allow 
+ftp, http, https. I am using redirect_port for the protocols I want to
+allow 
+in. I will change to redirect_address when I add site 2.
+
+site2
+realIP2 --> 192.168.2
+realIP2 --> 192.168.3
+
+On this site I want to allow traffic for web to the DMZ 192.168.2 and
+
+dns to 192.168.3. I also want to allow certain traffic from 192.168.3
+--> 
+192.168.2. I am unsure if I can have multiple nat devices and will a
+second 
+nat'ed device conflict with the one from site1?
+
+There are no outbound restrications and I'm using ipfw f
+
+--------------------------------------------------------------------------------
+MID: 20020228113425.L66092@blossom.cjclark.org
+DATE: 2002-02-28T19:34:25+00:00  FROM: "Crist J. Clark" <cjc@FreeBSD.ORG> <None>
+SUBJ: Re: natd & ipfw config with 5 NICS
+BODY:
+On Thu, Feb 28, 2002 at 11:43:57AM -0600, Hamilton Hoover wrote:
+
+You will need to run an individual instance of natd(8) for each
+external physical interface.
+-- 
+Crist J. Clark                     |     cjclark@alum.mit.edu
+                                   |     cjclark@jhu.edu
+http://people.freebsd.org/~cjc/    |     cjc@freebsd.org
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-net" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 200203122010.g2CKAoL17005@monk.cancom.ca
+DATE: 2002-03-12T20:10:50+00:00  FROM: "Douglas Berry" <doug@cnd.dundas.on.ca> <None>
+SUBJ: ipfw 'iplen' keyword in STABLE?
+BODY:
+Over on -questions, i asked ...
+
+
+Dan Nelson was kind enough to suggest...
+
+
+i can't find this documented, Dan says he's using CURRENT.
+
+Will this make it to 4.6-RELEASE?
+
+doug
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-net" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 20020312234845.GF803@elvis.mu.org
+DATE: 2002-03-12T23:48:45+00:00  FROM: Bill Fumerola <billf@mu.org> <None>
+SUBJ: Re: ipfw 'iplen' keyword in STABLE?
+BODY:
+On Tue, Mar 12, 2002 at 03:10:50PM -0500, Douglas Berry wrote:
+
+
+yes.
+
+-- 
+- bill fumerola / fumerola@yahoo-inc.com / billf@FreeBSD.org / billf@mu.org
+- my anger management counselor can beat up your self-affirmation therapist
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-net" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 20020403205923.27d35e11.c.prevotaux@hexanet.fr
+DATE: 2002-04-03T18:59:23+00:00  FROM: Christophe Prévotaux <c.prevotaux@hexanet.fr> <None>
+SUBJ: IPFW Max Rule Discrete Number Limit
+BODY:
+Hi
+
+I have reached the 655 firewalling rules limit (with discrete values)
+in ipfw and I was wondering why ipfw will not let the user select
+the incremental step value in rules numbering ? also it should be
+possible to renumber these rules on the fly 
+(though, i agree this is not this useful)
+
+--
+===============================================================
+Christophe Prevotaux        Email: c.prevotaux@hexanet.fr
+HEXANET SARL                URL: http://www.hexanet.fr/
+Z.A.C Les Charmilles        Tel: +33 (0)3 26 79 30 05 
+3 All�e Thierry Sabine      Direct: +33 (0)3 26 79 08 02 
+BP202                       Fax: +33 (0)3 26 79 30 06
+51686 Reims Cedex 2 		                   
+FRANCE                   HEXANET Network Operation Center             
+===============================================================
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-net" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 20020403111545.A98202@iguana.icir.org
+DATE: 2002-04-03T19:15:45+00:00  FROM: Luigi Rizzo <rizzo@icir.org> <None>
+SUBJ: Re: IPFW Max Rule Discrete Number Limit
+BODY:
+On Wed, Apr 03, 2002 at 08:59:23PM +0200, Christophe Pr�votaux wrote:
+
+you know you can assign explicit numbers to rules ?
+There is alot of magic you can do in userland rather than
+relying on the kernel to cope with all sorts of different
+user requirements...
+
+	cheers
+	luigi
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-net" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 20020404222556.5ddeb117.c.prevotaux@hexanet.fr
+DATE: 2002-04-04T20:25:56+00:00  FROM: Christophe Prevotaux <c.prevotaux@hexanet.fr> <None>
+SUBJ: Re: IPFW Max Rule Discrete Number Limit
+BODY:
+On Wed, 3 Apr 2002 11:15:45 -0800
+Luigi Rizzo <rizzo@icir.org> wrote:
+
+
+yes I know , do you seriously think I will do this ? 
+What happens when I insert new rules ? 
+
+I have to write a script to renumber them ? can't this be included
+in the ipfw itself for example by specifying a incremental step number 
+
+for exemple
+
+ipfw -q flush -i [step]
+
+ipfw -q flush -i 10
+
+in this manner no big changes to the rc.firewall or firewall rules files
+would be needed and everyone would be happy.
+
+
+
+
+--
+===============================================================
+Christophe Prevotaux        Email: c.prevotaux@hexanet.fr
+HEXANET SARL                URL: http://www.hexanet.fr/
+Z.A.C Les Charmilles        Tel: +33 (0)3 26 79 30 05 
+3 All�e Thierry Sabine      Direct: +33 (0)3 26 79 08 02 
+BP202                       Fax: +33 (0)3 26 79 30 06
+51686 Reims Cedex 2 		                   
+FRANCE                   HEXANET Network Operation Center             
+===================================================
+
+--------------------------------------------------------------------------------
+MID: 20020404174316.A11314@iguana.icir.org
+DATE: 2002-04-05T01:43:16+00:00  FROM: Luigi Rizzo <rizzo@icir.org> <None>
+SUBJ: Re: IPFW Max Rule Discrete Number Limit
+BODY:
+On Thu, Apr 04, 2002 at 10:25:56PM +0200, Christophe Prevotaux wrote:
+
+any serious ipfw usage (especially with the hundreds of rules you
+mention) involves skipto rules so you can make
+your search paths shorter than having to scan all rules sequentially.
+In such a context autonumbering is useless because you need to know
+where to jump, and so you want to assign number yourself.
+
+Additionally, you can have multiple rules with the same number,
+which is useful e.g. when you have a block of rules which you
+want to scan sequentially.
+
+A typical large configuration could be something like this:
+
+	# bunch of demux rules
+	ipfw add 1000 skipto 5000 udp from any to any
+	ipfw add 1000 skipto 5500 tcp from any to any
+	ipfw add 1000 skipto 6000 icmp from any to any
+	# all other traffic
+	ipfw add 1000 skipto 6500 ip from any to any
+
+	# udp specific rules 
+	ipfw add 5000 allow udp from any to any 53,137,138
+	ipfw add 5000 allow udp from any 53,137,138 to any
+	ipfw add 5000 deny ip from any to any
+
+	# 
+
+--------------------------------------------------------------------------------
+MID: 20020409125924.365286ca.scott@lampert.org
+DATE: 2002-04-09T19:59:24+00:00  FROM: Scott Lampert <scott@lampert.org> <None>
+SUBJ: IPFW bridges and, woe is me, ftp
+BODY:
+(If this shouldn't be on -net please accept my apologies.  It seemed all the
+networking gurus are there and this sort of overlaps onto that subject.)
+
+I have a 4.5 release box that is acting as a bridging firewall with ipfw
+for an internet connected network and I'm having some issues with ftp
+(as usual).  This network is NOT nat routed; the network has a real IP
+block.  Using keep-state and tcp established rules the best I can come
+up with is to allow active ftp in and passive ftp out with the following
+three rules:
+
+add check-state
+add pass tcp from any to any established
+add pass tcp from any to ${ftphost} 21 in via ${OIF} setup keep-state
+
+All internal hosts can initiate connections to outside hosts at will.
+
+This sort of leaves anyone who needs to ftp into this network from behind
+their own firewall with a passive connection totally out of luck.  The
+only functional solution to handle incoming passive connections seems to
+be to open up a range of ports which I'd prefer not to do fo
+
+--------------------------------------------------------------------------------
+MID: 3CCAE27B.2010408@netvulture.com
+DATE: 2002-04-27T17:40:11+00:00  FROM: Jonathan Feally <vulture@netvulture.com> <None>
+SUBJ: IPSEC, IPFW, and NATD
+BODY:
+Network setup:
+Networks
+Inside Net - 192
+Outside Net - 63 - Natd from 192 to 63 and back
+Server Net - 216
+I have a esp transport IPSec policy setup from my outside IP(63) to a 
+server on the Internet(216) and back.
+Machines on the 192 go though the natd on the outside interface and get 
+translated to 63
+The packets are then encrypted into the esp packets
+The server responds back in esp but the packets come back to the natd in 
+esp form not regular packet form.
+
+Apparent Packet Flow:
+echo request 192 -> 216 in interface ed2
+echo request 63 -> 216 out interface ed1 - though divert natd
+esp 63 -> 216 - Packet leaves my side - packet on the network
+esp 63 -> 216 - Packet gets to server - packet in em0
+echo reply 216 -> 63 - Packet decrypted and responded to
+esp 63 -> 216 - Packet leaves server - out interface em0
+esp 63 -> 216 - Packet arrives - in interface ed1 though divert natd
+packet dropped - firewall recieves reply instead of natd translating 
+back to 192
+
+Any help would be greatly a
+
+--------------------------------------------------------------------------------
+MID: 20020504031703.GA2184@pulsar.home.ben.com
+DATE: 2002-05-04T03:17:03+00:00  FROM: Ben Jackson <ben@ben.com> <None>
+SUBJ: ip_output: why IPSEC before IPF/IPFW?
+BODY:
+I have a FreeBSD box connected to my cable modem which NATs for the rest
+of my home network.  Recently I set up IPSEC between that box and a few
+others as an experiment.  Direct connections between these boxes work fine.
+
+However, since ip_output checks IPSEC before IPF/IPFW, my ipnat rules
+for the inside hosts are not applied until after the IPSEC check.  Since
+they don't match the IPSEC rule (which is point-to-point, using transport
+mode) they fall through, get rewritten by ipnat into packets which WOULD
+match the SAD, and then sent directly.  The far end rejects them because
+its policy is "require" ESP.
+
+Obviously this would work if I had *two* FreeBSD boxes, and had the
+"outermost" one handle only IPSEC and the "inner" one do IPF, but wouldn't
+it be easier to just move the IPSEC test below IPF/IPFW?
+
+ip_input would also have to change, but it's already in the right order,
+it just skips the IPF/IPFW section in the event of IPSEC traffic.
+
+Please CC me on the reply, I'm not on the li
+
+--------------------------------------------------------------------------------
+MID: Pine.BSF.4.21.0205032207040.85737-100000@InterJet.elischer.org
+DATE: 2002-05-04T05:10:56+00:00  FROM: Julian Elischer <julian@elischer.org> <None>
+SUBJ: Re: ip_output: why IPSEC before IPF/IPFW?
+BODY:
+
+
+Thanks for bringing this up..
+I'm actually flabberghasted that it's so. I've been assuming it was the
+other way around.
+The advantage of having it the other way would be to be able to do other
+evil
+things to ipsec packets, but as it is you can totally block
+all packets and ipsec will still work..
+but that's certainly not POLA.. because we tell teh world that
+the ipfw works on ALL packets.
+
+I'd vote to reverse it...
+
+On Fri, 3 May 2002, Ben Jackson wrote:
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-net" in the body of the message
+
+
+

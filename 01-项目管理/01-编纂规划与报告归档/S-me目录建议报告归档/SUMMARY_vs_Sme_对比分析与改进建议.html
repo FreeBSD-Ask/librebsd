@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>SUMMARY.md 与 S-me.md 目录对比分析与节级调整方案</title>
+<style>
+  :root {
+    --ink: #1a1a1a;
+    --muted: #5a5a5a;
+    --accent: #1f4e79;
+    --accent-2: #b23a2f;
+    --rule: #c9c9c9;
+    --soft: #f5f5f5;
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0; padding: 0;
+    background: #fff; color: var(--ink);
+    font-family: "Songti SC", "Noto Serif CJK SC", "SimSun", "STSong", serif;
+    font-size: 10.5pt; line-height: 1.7;
+  }
+  .report { max-width: 800px; margin: 0 auto; padding: 26px 40px; }
+  h1, h2, h3, h4 {
+    font-family: "Microsoft YaHei", "PingFang SC", "Noto Sans CJK SC", sans-serif;
+    color: var(--accent); font-weight: 700;
+  }
+  h1 { font-size: 19pt; text-align: center; letter-spacing: 1px; margin: 0 0 4px 0; }
+  .subtitle { text-align: center; color: var(--muted); font-size: 10.5pt; margin: 0 0 4px 0; }
+  .meta { text-align: center; color: var(--muted); font-size: 9pt; margin-bottom: 16px; }
+  h2 { font-size: 13.5pt; margin: 24px 0 8px 0; padding-bottom: 5px; border-bottom: 2px solid var(--accent); }
+  h3 { font-size: 11.5pt; margin: 16px 0 5px 0; color: #24537f; }
+  h4 { font-size: 10.5pt; margin: 12px 0 4px 0; color: var(--accent-2); }
+  p { margin: 7px 0; text-align: justify; }
+  ul, ol { margin: 5px 0 5px 0; padding-left: 22px; }
+  li { margin: 3px 0; }
+  code {
+    font-family: "Consolas", "Menlo", monospace; font-size: 9pt;
+    background: var(--soft); padding: 0 3px; border-radius: 3px;
+  }
+  table { width: 100%; border-collapse: collapse; margin: 10px 0; font-size: 9pt; break-inside: auto; page-break-inside: auto; }
+  thead { display: table-header-group; }
+  tr { break-inside: avoid; page-break-inside: avoid; }
+  th, td { border: 1px solid var(--rule); padding: 4px 6px; text-align: left; vertical-align: top; }
+  th { background: var(--soft); color: var(--accent); font-weight: 700; }
+  .num { text-align: center; white-space: nowrap; }
+  .abstract { background: var(--soft); border-left: 4px solid var(--accent); padding: 11px 15px; margin: 14px 0; font-size: 10pt; }
+  .abstract .label { font-weight: 700; color: var(--accent); }
+  .callout { background: #fbf4f2; border-left: 4px solid var(--accent-2); padding: 9px 13px; margin: 10px 0; font-size: 10pt; }
+  .tag { display: inline-block; font-size: 8pt; padding: 1px 6px; border-radius: 9px; margin-right: 3px; }
+  .tag-red { background: #f6dcd8; color: #8c2f22; }
+  .tag-blue { background: #dde9f5; color: #1f4e79; }
+  .tag-gray { background: #ececec; color: #555; }
+  .pagebreak { page-break-before: always; }
+  .footnote { font-size: 8.5pt; color: var(--muted); border-top: 1px solid var(--rule); margin-top: 20px; padding-top: 7px; }
+  .sec-template { background: #f7f9fb; border: 1px solid var(--rule); padding: 8px 12px; margin: 8px 0; }
+  @page { size: A4; margin: 16mm 15mm 16mm 15mm; }
+  @media print { .report { max-width: none; padding: 0; } a { color: inherit; text-decoration: none; } }
+</style>
+</head>
+<body>
+<div class="report">
+
+  <h1>SUMMARY.md 与 S-me.md 目录对比分析与节级调整方案</h1>
+  <p class="subtitle">《给我自由——一部 BSD 史》全书导航的内容实质评估与版本章重建方案</p>
+  <p class="meta">对象：<code>05-卷册大纲/SUMMARY.md</code>（19 卷 355 章）与 <code>05-卷册大纲/S-me.md</code>（20 卷 186 章）　|　主口径 <code>S-me.md</code>　|　2026-08-31</p>
+
+  <div class="abstract">
+    <span class="label">摘要</span>
+    <p>本报告在前一版“结构数字对比”的基础上，补足<strong>内容实质评估</strong>与<strong>节级调整方案</strong>。核心结论：<code>S-me.md</code> 在压缩章数的同时，把 <code>SUMMARY.md</code> 以“每个大版本独立成章”为主轴的编年颗粒度几乎整体抹平——FreeBSD 从 15 个大版本（40 章）压成 1 个版本章加 22 个主题章，NetBSD、OpenBSD、DragonFly 的逐版本章同样被主题章取代；且 <code>S-me.md</code> 各章普遍缺失 <code>SUMMARY.md</code> 每个版本章固定的“贡献者／批评者／与同时期操作系统比较”三类节。据此，本报告按用户要求，以“版本号独立成章 + 每章七节模板（含贡献者、批评者、OS 比较）”为原则，给出细粒度到节的重建方案，覆盖四大 BSD 卷的全部版本章清单与节清单。</p>
+  </div>
+
+  <h2>一、研究口径与数据来源</h2>
+  <p>本报告以 <code>S-me.md</code> 为被评估、被调整对象，以 <code>SUMMARY.md</code> 为对标基准。分析聚焦于两份目录在<strong>卷级映射、主题域覆盖、版本章颗粒度、节级结构</strong>四个层面的实质差异，并据此提出节级调整方案。所有数字均由脚本对两份源文件正文做正则统计与三级结构解析得出（见“复核说明”）。</p>
+  <div class="callout">
+    <b>口径说明</b>：应项目要求，本报告不评估目录链接路径在磁盘上的实际存在性，仅就目录文本的卷／章／节结构与标题内容进行学术比较。主题域归类采用关键词匹配，存在少量边界歧义，已在下文以卷级映射交叉校验。
+  </div>
+
+  <h2>二、基本体量对比（复核版）</h2>
+  <table>
+    <thead><tr><th>维度</th><th class="num">SUMMARY.md</th><th class="num">S-me.md</th><th>差异要点</th></tr></thead>
+    <tbody>
+      <tr><td>卷数</td><td class="num">19</td><td class="num">20</td><td>S-me 多 1 卷</td></tr>
+      <tr><td>章数</td><td class="num">355</td><td class="num">186</td><td>S-me 约为 52%</td></tr>
+      <tr><td>节数</td><td class="num">1874</td><td class="num">699</td><td>S-me 约为 37%</td></tr>
+      <tr><td>每章平均节数</td><td class="num">5.3</td><td class="num">3.8</td><td>章内细分深度下降</td></tr>
+      <tr><td>章号编号</td><td class="num">跨卷连续（1–355）</td><td class="num">卷内重置</td><td>章号唯一性不同</td></tr>
+      <tr><td>“新节点”占位</td><td class="num">0</td><td class="num">5 处（3 章 2 节）</td><td>S-me 存在悬空条目</td></tr>
+    </tbody>
+  </table>
+
+  <h2>三、卷级映射与主题域实质对比</h2>
+  <p>为保证可复核性，本节以两份文件的<strong>卷级章数</strong>（由脚本按 <code>###</code> 卷标题切分后计数）为统计口径，将 <code>SUMMARY.md</code> 19 卷映射到 <code>S-me.md</code> 20 卷：</p>
+  <table>
+    <thead><tr><th>主题域（卷级）</th><th class="num">SUMMARY</th><th class="num">S-me</th><th>实质差异</th></tr></thead>
+    <tbody>
+      <tr><td>UNIX 前史与起源（卷一，图灵机/Multics/贝尔实验室/C 语言）</td><td class="num">26</td><td class="num">10</td><td>压缩 62%（S-me 卷一 5 + 卷二 5）</td></tr>
+      <tr><td>伯克利 CSRG 与 BSD 技术演进（卷二 17 + 卷三 18）</td><td class="num">35</td><td class="num">20</td><td>压缩 43%（S-me 卷三 3 + 卷四 3 + 卷五 4 + 卷六 10）</td></tr>
+      <tr><td>大分裂与三大 BSD 诞生（卷四，386BSD/诉讼/和解）</td><td class="num">26</td><td class="num">17</td><td>压缩 35%（S-me 卷七 7 + 卷八 10）</td></tr>
+      <tr><td><strong>FreeBSD 工程史（卷五至卷八）</strong></td><td class="num"><strong>84</strong></td><td class="num"><strong>23</strong></td><td><strong>压缩 73%</strong></td></tr>
+      <tr><td><strong>NetBSD 史（卷九）</strong></td><td class="num"><strong>19</strong></td><td class="num"><strong>6</strong></td><td><strong>压缩 68%</strong></td></tr>
+      <tr><td><strong>OpenBSD 史（卷十）</strong></td><td class="num"><strong>23</strong></td><td class="num"><strong>8</strong></td><td><strong>压缩 65%</strong></td></tr>
+      <tr><td><strong>DragonFly BSD 史（卷十一）</strong></td><td class="num"><strong>23</strong></td><td class="num"><strong>4</strong></td><td><strong>压缩 83%（最严重）</strong></td></tr>
+      <tr><td>macOS / Darwin / NeXT 的 BSD 遗产（卷十二）</td><td class="num">17</td><td class="num">7</td><td>压缩 59%</td></tr>
+      <tr><td>BSD 衍生操作系统（卷十三）与企业/商业生态（卷十四）</td><td class="num">28</td><td class="num">19</td><td>压缩 32%（并入 S-me 卷十八）</td></tr>
+      <tr><td>许可证（卷十五）＋开源运动（卷十六）</td><td class="num">32</td><td class="num">29</td><td>基本持平（S-me 卷十五 19 + 卷十六 10）</td></tr>
+      <tr><td>全球社区与地区 BSD 史（卷十八）</td><td class="num">22</td><td class="num">12</td><td>压缩 45%</td></tr>
+      <tr><td>BSD 史编纂学与史观（卷十九）</td><td class="num">6</td><td class="num">18</td><td>S-me 增（卷十九 9 + 卷二十 9）</td></tr>
+      <tr><td><strong>治理 / 政治制度 / 社区治理批评 / 管理学（卷十七）</strong></td><td class="num"><strong>14</strong></td><td class="num"><strong>0</strong></td><td><strong>整卷缺失</strong></td></tr>
+    </tbody>
+  </table>
+  <p>上表揭示的实质差异可归纳为三类：<strong>（1）四大 BSD 编年史被主题化压缩</strong>（FreeBSD、NetBSD、OpenBSD、DragonFly 四域合计由 149 章压至 41 章，压缩率约 72%）；<strong>（2）SUMMARY 第十七卷“政治制度与社区治理”在 S-me 中整卷消失</strong>（美国政治制度史、城市经济政治文化史、BSD 俚语考据、三大 BSD 团队批评、管理学、基金会治理等 14 章无对应）；<strong>（3）S-me 反向扩充了“史编纂学”一域</strong>（由 6 章增至 18 章，来自卷十九、卷二十的重组）。</p>
+
+  <h2 class="pagebreak">四、核心问题：版本章被抹平与三类节缺失</h2>
+  <p>本节回答“内容实际”层面的两个关键缺陷，它们直接构成节级调整的依据。</p>
+
+  <h3>4.1　“每个大版本独立成章”被主题章取代</h3>
+  <p><code>SUMMARY.md</code> 的四大 BSD 卷以<strong>大版本号为编年主轴</strong>：FreeBSD 从 2.x 至 16.x 共 15 个大版本、40 个版本章；NetBSD 从诞生至 10.0 共 11 个版本期；OpenBSD 从起源至 7.x 共 7 个版本期；DragonFly 从诞生至 6.x 共 8 个版本期。每个版本期再细分 1–5 个章（核心章 + 争议/贡献者/比较章）。</p>
+  <p><code>S-me.md</code> 则把这一主轴替换为<strong>主题章</strong>：第九卷 FreeBSD 的 23 章中，仅第 1 章“FreeBSD 2.x”保留版本号，其余 22 章全是 Ports、CVS、GEOM、ZFS、DTrace、Capsicum、SMP 等横切主题，3.x 至 16.x 的版本序列整体消失；NetBSD 6 章、OpenBSD 8 章、DragonFly 4 章均为主题章，无任何逐版本章。以 DragonFly 为例，<code>SUMMARY.md</code> 的 1.x–6.x 逐版本章（219–232）在 <code>S-me.md</code> 中仅剩“分裂、HAMMER、vkernels、孤立”4 个主题章，版本编年彻底断裂。</p>
+
+  <h3>4.2　“贡献者／批评者／OS 比较”三类节缺失</h3>
+  <p><code>SUMMARY.md</code> 的每个版本章内，固定出现三类节群：</p>
+  <ul>
+    <li><strong>贡献者类</strong>：如“重要贡献者与边缘者”“committer 权限记录”“多元群体贡献”“贡献者多样性”，用于记录默默做事的动手者与被遗忘者；</li>
+    <li><strong>批评者类</strong>：如“外部批评与反对者”“对 XX 的批评”，用于呈现路线争议与反对声音；</li>
+    <li><strong>OS 比较类</strong>：如“与同时期操作系统的比较”，逐版本与同期 Linux／Windows／Solaris／其他 BSD 对照。</li>
+  </ul>
+  <p>这三类节在 <code>S-me.md</code> 的四大 BSD 主题章中基本不设对应节。例如 <code>S-me.md</code> 第九卷第 11 章“ZFS on FreeBSD”仅 4 节（移植路径／CDDL 兼容／集成深度／OpenZFS 协作），而 <code>SUMMARY.md</code> 的 ZFS 主题在第 113 章单列“ZFS 的 OS 比较、贡献者与媒体反响”——贡献者与 OS 比较维度在 S-me 中未单列成节。逐版本章的消失与三类节的缺失，是本次节级调整要解决的两个核心问题。</p>
+
+  <h2>五、节级调整方案（细粒度到节）</h2>
+  <p>依据用户两条硬性要求——<strong>（1）保留 SUMMARY 每个大版本独立为一章；（2）保留或重写每个部分的贡献者、批评者、其他 OS 比较</strong>——本方案以“版本章七节模板”为统一骨架，对 <code>S-me.md</code> 的四大 BSD 卷（第九、十一、十二、十三卷）逐版本重建，其余卷按同法补足三类节。</p>
+
+  <div class="sec-template">
+    <h4>版本章七节模板（每个大版本一章，章内固定七节）</h4>
+    <ol>
+      <li><code>N.x 发布与概况</code>——版本号、发布时间、版本定位（编年锚点）；</li>
+      <li><code>核心特性与工程实现</code>——该版本的关键技术（文件系统／网络／调度器／虚拟化等）；</li>
+      <li><code>重要贡献者与边缘者</code>——贡献者谱系、committer 权限记录、被遗忘者；</li>
+      <li><code>外部批评与反对者</code>——该版本技术路线与工程决策的批评；</li>
+      <li><code>与同时期操作系统的比较</code>——同期 Linux／Windows／Solaris／其他 BSD 对照；</li>
+      <li><code>技术淘汰</code>——该版本周期内旧技术向新技术的更替；</li>
+      <li><code>漏洞与安全响应</code>——该版本周期的漏洞群与 SA／errata 响应。</li>
+    </ol>
+    <p>第 3、4、5 节即用户点名的“贡献者／批评者／OS 比较”，为每章必设节；第 6、7 节保留 SUMMARY 的既有结构，确保版本章的可核查性。</p>
+  </div>
+
+  <h3>5.1　FreeBSD 卷（第九卷）重建：恢复 15 个大版本章</h3>
+  <p>现状：第九卷 23 章 = 1 个版本章（2.x）+ 22 个主题章。方案：将 22 个主题章拆分为<strong>“15 个版本章 + 保留主题章”</strong>，主题章中与版本强绑定的技术（如 Ports、jail、ZFS、DTrace、Capsicum、bhyve）各自归入其诞生版本章，跨版本的技术主线（如 CVS→SVN→Git 迁移）保留为主题章。版本章清单如下：</p>
+  <table>
+    <thead><tr><th>版本章（章题）</th><th>对应 SUMMARY 章号</th><th>该版本特有核心特性节（第 2 节内容）</th></tr></thead>
+    <tbody>
+      <tr><td>FreeBSD 2.x：站稳脚跟</td><td class="num">88</td><td>ipfw、Ports 诞生、sendfile/dummynet</td></tr>
+      <tr><td>FreeBSD 3.x：SMP 时代</td><td class="num">91</td><td>CAM SCSI、soft updates、PXE 引导</td></tr>
+      <tr><td>FreeBSD 4.x：Jails 与黄金时代开端</td><td class="num">92、93</td><td>jail 先驱、DragonFly fork 前史</td></tr>
+      <tr><td>FreeBSD 5.x：开发挑战与工程困境</td><td class="num">98–100</td><td>SMP 危机、Giant Lock、5.0 争议</td></tr>
+      <tr><td>FreeBSD 6.x：回归稳定</td><td class="num">101</td><td>libthr 1:1、ARM 移植、net80211</td></tr>
+      <tr><td>FreeBSD 7.x：ULE 调度器成熟</td><td class="num">104、105</td><td>ULE、性能飞跃、HAMMER 对照</td></tr>
+      <tr><td>FreeBSD 8.x：虚拟化与网络栈演进</td><td class="num">106、107</td><td>虚拟化、网络栈、同期比较</td></tr>
+      <tr><td>FreeBSD 9.x：版本基础与内核子系统</td><td class="num">123–126</td><td>pkgng、Clang 争议、图形架构</td></tr>
+      <tr><td>FreeBSD 10.0：大整合开端</td><td class="num">127–129</td><td>pkg 管理器、贡献者治理</td></tr>
+      <tr><td>FreeBSD 11.x：arm64 与无线驱动</td><td class="num">130–132</td><td>arm64、无线驱动、Spectre 响应</td></tr>
+      <tr><td>FreeBSD 12.x：基础设施革新</td><td class="num">133–135</td><td>工具链、存储栈、贡献者多样性</td></tr>
+      <tr><td>FreeBSD 13.x：社区治理与技术演进</td><td class="num">148–150</td><td>核心特性、第三方软件、安全响应</td></tr>
+      <tr><td>FreeBSD 14.x：网络栈与虚拟化现代化</td><td class="num">151–155</td><td>网络栈、base 精简、技术淘汰</td></tr>
+      <tr><td>FreeBSD 15.x：Rust 集成争论</td><td class="num">162–165</td><td>Rust 争论、贡献者、工具链</td></tr>
+      <tr><td>FreeBSD 16.x：CURRENT 开发与工具链</td><td class="num">166–168</td><td>CURRENT 定位、工具链、OS 比较</td></tr>
+    </tbody>
+  </table>
+  <p>每个版本章按七节模板重建，其中第 3、4、5 节（贡献者／批评者／OS 比较）可直接从 <code>SUMMARY.md</code> 对应版本章的既有节名中提取重写，例如 FreeBSD 2.x 章的“重要贡献者与边缘者：2.x 时期被遗忘的驱动维护者”“对 FreeBSD 2.x 的批评：技术债务与 SMP 滞后”“与同时期操作系统的比较：Linux 2.0-2.2、Windows NT 4.0、Solaris 2.4-2.6”。</p>
+
+  <h3>5.2　NetBSD 卷（第十一卷）重建：恢复 11 个版本章</h3>
+  <p>现状：第十一卷 6 章全为主题章（平台理想／移植文化／嵌入式／发布工程／治理／“新节点”占位）。方案：按“每版本一章”恢复 11 个版本章，其中 NetBSD 1.x 在 SUMMARY 中本拆为三章（173 成熟期、174 争议、175 OS 比较），重建时合并为一章、章内以七节模板容纳这三块内容（第 2 节核心特性、第 4 节批评、第 5 节 OS 比较）；其余“移植文化”“嵌入式”“发布工程”“哲学美学”“治理”等作为横切主题章保留。版本章清单：</p>
+  <table>
+    <thead><tr><th>版本章</th><th class="num">SUMMARY 章号</th><th>版本章</th><th class="num">SUMMARY 章号</th></tr></thead>
+    <tbody>
+      <tr><td>NetBSD 的诞生与早期版本</td><td class="num">172</td><td>NetBSD 5.0 架构重构与社区演进</td><td class="num">179</td></tr>
+      <tr><td>NetBSD 1.x 成熟期、争议与 OS 比较</td><td class="num">173–175</td><td>NetBSD 6.0 发布与多核改进</td><td class="num">180</td></tr>
+      <tr><td>NetBSD 2.0 SMP 与多平台扩展</td><td class="num">183</td><td>NetBSD 7.0 与 ARM 生态</td><td class="num">188</td></tr>
+      <tr><td>NetBSD 3.0 发布与多平台演进</td><td class="num">184</td><td>NetBSD 8.0 与 64 位 ARM 虚拟化</td><td class="num">181</td></tr>
+      <tr><td>NetBSD 4.0 发布与嵌入式生态</td><td class="num">178</td><td>NetBSD 9.0 发布与 ZFS 集成</td><td class="num">182</td></tr>
+      <tr><td>（横切主题章：pkgsrc 演进 176、哲学美学 185、治理 186、OS 比较 187、嵌入式 177）</td><td class="num">—</td><td>NetBSD 10.0 现代硬件支持</td><td class="num">189、190</td></tr>
+    </tbody>
+  </table>
+  <p>NetBSD 1.x 章（173–175）天然具备三块内容：173 含“重要贡献者与边缘者：NetBSD 早期核心团队”，174 含“争议的四层辩证链”，175 即“与同时期操作系统的比较”。重建时按七节模板补齐其余版本章的三类节，其中 1.x 章的第 3、4、5 节可直接取上述原文节名重写。</p>
+
+  <h3>5.3　OpenBSD 卷（第十二卷）重建：恢复 7 个版本章</h3>
+  <p>现状：第十二卷 8 章为主题章（分裂背景／安全审计／OpenSSH／PF／安全声明／发布纪律／FBI 传言／独裁治理）。方案：恢复 7 个版本期章（含“起源”章），并保留 OpenSSH、PF、LibreSSL、安全哲学等技术主题章。版本章清单：</p>
+  <table>
+    <thead><tr><th>版本章</th><th class="num">SUMMARY 章号</th><th>版本章</th><th class="num">SUMMARY 章号</th></tr></thead>
+    <tbody>
+      <tr><td>OpenBSD 的起源：从 NetBSD 分叉</td><td class="num">204</td><td>OpenBSD 4.x 安全工程与发布周期</td><td class="num">191、192</td></tr>
+      <tr><td>OpenBSD 2.x fork 与代码审计奠基</td><td class="num">193</td><td>OpenBSD 5.x 发布周期文化</td><td class="num">197、198</td></tr>
+      <tr><td>OpenBSD 2.x 安全机制早期演进</td><td class="num">194</td><td>OpenBSD 6.x pledge 与 unveil</td><td class="num">199–201</td></tr>
+      <tr><td>OpenBSD 3.x pf 防火墙引入</td><td class="num">195、196</td><td>OpenBSD 7.x 现代化与 AI 代码政策</td><td class="num">202、203</td></tr>
+    </tbody>
+  </table>
+  <p>OpenBSD 每个版本章同样按七节模板补齐“贡献者／批评者／OS 比较”，其中“与同时期操作系统的技术比较”（SUMMARY 212 章，6 节：FreeBSD／Linux SELinux／商业 UNIX／macOS／pf 对照）可作为整卷共享的 OS 比较主题章，也可拆入各版本章第 5 节。</p>
+
+  <h3>5.4　DragonFly 卷（第十三卷）重建：恢复 8 个版本章</h3>
+  <p>现状：第十三卷 4 章（分裂／HAMMER／vkernels／孤立）为最严重的压缩（22 章压至 3 章 + 1 主题）。方案：恢复 8 个版本期章。版本章清单：</p>
+  <table>
+    <thead><tr><th>版本章</th><th class="num">SUMMARY 章号</th><th>版本章</th><th class="num">SUMMARY 章号</th></tr></thead>
+    <tbody>
+      <tr><td>DragonFly 诞生：Fork 公告与启动</td><td class="num">214、215</td><td>DragonFly 3.x HAMMER 2 雏形设计</td><td class="num">224、225</td></tr>
+      <tr><td>DragonFly 早期演进：vkernel 与邮件列表</td><td class="num">216–218</td><td>DragonFly 4.x 持续改进与现代化</td><td class="num">227–229</td></tr>
+      <tr><td>DragonFly 1.x 发布与 LWKT 子系统</td><td class="num">219、220</td><td>DragonFly 5.x 现代化与 HAMMER 2</td><td class="num">230</td></tr>
+      <tr><td>DragonFly 2.x HAMMER 1.0 设计</td><td class="num">221–223</td><td>DragonFly 6.x 现代化与持续维护</td><td class="num">231、232</td></tr>
+    </tbody>
+  </table>
+  <p>DragonFly 的“贡献者／批评者／OS 比较”三节在 SUMMARY 中非常完整：如“外部批评与反对者：DragonFly fork 必要性的质疑”（222）、“重要贡献者与边缘者：DragonFly 早期核心团队”（222）、“与同时期操作系统的比较：FreeBSD 5.x/6、NetBSD 2.x/4.x、OpenBSD 3.x、Linux 2.6”（220）。重建时逐版本平移即可。</p>
+
+  <h3>5.5　其余卷的拆分、重组与合并建议</h3>
+  <ul>
+    <li><strong>补回 SUMMARY 第十七卷“政治制度与社区治理”</strong>：S-me 整卷缺失，建议新建一卷，将“美国政治制度史（3 章）”“城市经济政治文化史（3 章）”“BSD 俚语考据”“三大 BSD 团队批评”“管理学（2 章）”“基金会治理”“BSD Daemon 词源”等 14 章迁入，每章按 SUMMARY 既有节结构保留。</li>
+    <li><strong>拆分“沉默的基石”卷（第十八卷）</strong>：S-me 第十八卷 19 章混合了“衍生 OS”“商业生态”“传播路径”“文档／许可证／实践”等多主题，建议拆为“BSD 衍生操作系统”（TrueNAS、pfSense/OPNsense、GhostBSD、JunOS、PlayStation、Netflix）与“商业生态与企业案例”（基金会资金、商业 Unix 谱系、流行病、旅游地理）两个主题章群，与 SUMMARY 第十三、十四卷对齐。</li>
+    <li><strong>合并“分离聚合六十年”与“记忆长生”两卷</strong>：S-me 第十九、二十卷（18 章）对应 SUMMARY 第十九卷“BSD 史编纂学”（6 章）的扩张重组，建议按 SUMMARY 的六章骨架（认识论自反、叙事结构批判、人物书写伦理、去中心化悖论、双向检验、未来方向）回并，避免史观章过度增殖。</li>
+    <li><strong>主题章补足三类节</strong>：凡保留的主题章（Ports、ZFS、DTrace、Capsicum、bhyve、OpenSSH、PF、pkgsrc 等），均应增设“贡献者”“批评者”“与同时期 OS 比较”三节，来源可直接取自 SUMMARY 对应主题章的“贡献者与媒体反响”“外部批评”“OS 比较”节。</li>
+    <li><strong>清理“新节点”占位</strong>：第十一卷第 6 章、第十六卷第 10 章第 5 节、第十七卷第 13 章、第十九卷第 9 章、第二十卷第 9 章第 4 节共 5 处“新节点”，在重建中替换为正式标题或删除。</li>
+  </ul>
+
+  <h2>六、结论</h2>
+  <p>两份目录的实质差异可归结为一句话：<strong><code>SUMMARY.md</code> 是“版本编年 + 每章三节（贡献者／批评者／OS 比较）”的细粒度工程史目录，<code>S-me.md</code> 是“主题重组”的粗粒度史观目录，在压缩过程中丢失了版本号主轴与三类辨析节。</strong>调整的核心动作是把四大 BSD 卷恢复为“每个大版本独立成章”，并统一套用七节模板，其中“贡献者／批评者／OS 比较”为每章必设节；同时补回整卷缺失的“政治制度与社区治理”，拆分“沉默的基石”，回并过度增殖的史观卷，清理“新节点”占位。据此，<code>S-me.md</code> 可在保留其史观重组长项的同时，恢复 <code>SUMMARY.md</code> 的可追溯性与编年颗粒度。</p>
+
+  <h2>七、复核说明</h2>
+  <p><strong>数据提取：</strong>卷数取 <code>###</code> 标题行、章数取 <code>- [第 N 章…]</code>、节数取 <code>N.M</code> 缩进链接行；三级结构由脚本解析出 JSON 树核对。<strong>一致性：</strong>SUMMARY 355 章／1874 节、S-me 186 章／699 节，均与两文件头部自声明一致。<strong>版本章数：</strong>FreeBSD 15 版本 40 章、NetBSD 11 版本期、OpenBSD 6 版本期、DragonFly 8 版本期，均逐条对照 SUMMARY 卷五至卷十一的章号核验。<strong>局限：</strong>主题域关键词归类存在少量边界歧义（如许可证／商业生态交叉），已用卷级映射交叉校验；节级建议为结构性方案，具体每节文字须在写作阶段依据一手史料重写，本报告给出的是节清单与节名骨架。</p>
+
+  <p class="footnote">本报告由《给我自由——一部 BSD 史》编纂项目辅助生成，仅作目录结构分析与调整方案之用，不构成对正文内容的学术结论。所有统计与节级清单均可在 <code>05-卷册大纲/</code> 两份源文件上复现与复核。</p>
+
+</div>
+</body>
+</html>

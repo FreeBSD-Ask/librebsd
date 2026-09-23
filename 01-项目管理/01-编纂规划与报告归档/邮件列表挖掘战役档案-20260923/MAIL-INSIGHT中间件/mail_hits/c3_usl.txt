@@ -1,0 +1,3423 @@
+total 60
+[1993-01-06T15:32:21+00:00] [esr@snark.thyrsus.com (Eric S. Raymond)] [Archive-name: usl-bugs
+Last-update: Tue Jan  5 23:04:41 EST 1993
+Version: 10.0
+
+What's new in this issue:
+
+(In the table below, bugs new this issue or old bugs for which information has
+been added are marked with a * at the left margin)
+
+0. Table of Contents
+I. Introduction
+II. General Bugs
+    1. Dropout problems with tty devices
+    2. Suid programs dump core when signalled
+    3. DMAs on large ISA machines may fail
+    4. There is a cylinder limit on disk size
+    5. shmat(2) vs. vfork(2)
+    6. X performance problem
+    7. FIONREAD fails on regular files
+    8. A security hole in login
+    9. COFF problems with long filenames
+    10. Flakeouts in the Wangtek device driver
+    11. A kernel declaration bug
+    12. fread(3) does the wrong thing on pipes and FIFOs
+    13. Process accounting is broken
+    14. tar(1) foos up in the presence of symbolic links
+    15. Symbolic links can interfere with shellscript execution
+    16. Piping a csh builtin causes the shell to hang.
+    17. Quick port setup option in sysadm is broken
+    18. COFF binaries linked with curses(3) and shared libc hang
+    19. shl hangs, sxt devices bad
+    20. num-lock prevents mouse from working properly
+    21. adjtime() doesn't work
+    22. ttymon drops DTR
+    23. cron mail doesn't go through aliasing
+    24. fragility in xterm
+    25. csh lossage due to bad optimization
+    26. Bug in cp(1)
+    27. tbl -me doesn't work
+    28. who -r fragility leads to boot-time problems
+    29. at(1) breaks here-documents in shell scripts
+*   30. UHC mouse driver ignores the middle button.
+III. Networking and File-Sharing Bugs
+    1. NFS locking is unusably slow
+    2. UFS file system problems
+    3. Byte-order problem with NFS when accessing Sun disks
+    4. Under weird circumstances, lseek on UFS may cause corruption
+    5. FTP problems
+    6. A bug in the WD80x3 support
+IV. SCSI Support Problems
+    1. sar is confused by SCSI
+    2. A configuration problem
+    3. Synchronous SCSI hang problem
+    4. ps chokes on commands that do SCSI I/O
+    5. Transfer speed problems with Adaptec 1542B on 486s
+V. Development Tools Problems
+    1. General UCB library brokenness
+    2. USL emulation of BSD signals doesn't work
+    3. Possible string library problems
+    4. USL's ndbm support is broken.
+    5. An include file is missing
+    6. sscanf(3) has a potential bug
+    7. Compiler problems
+VI. The FUBYTE Problem
+VII. Destiny and Dell
+
+I. Introduction
+
+This posting lists known bugs in System V Release 4 implementations, and known
+fixes applied by various porting houses (there's also random bits of
+information about SCO UNIX here and there).  It was formerly part of the
+386-buyers-faq issues 1.0 through 4.0, and is still best read in conjunction
+with the pc-unix/software FAQ descended from that posting.
+
+This document is maintained and periodically updated as a service to the net by
+Eric S.  Raymond <esr@snark.thyrsus.com>, who began it for the very best
+self-interested reason that he was in the market and didn't believe in plonking
+down several grand without doing his homework first (no, I don't get paid for
+this, though I have had a bunch of free software and hardware dumped on me as a
+result of it!).  Corrections, updates, and all pertinent information are
+welcomed at that address.
+
+This posting is periodically broadcast to the USENET group comp.unix.sysv386
+and to a list of vendor addresses.  If you are a vendor representative, please
+check to make sure the information on your company is current and correct.  If
+it is not, please email me a correction ASAP.  If you are a knowledgeable user
+of any of these products, please send me a precis of your experiences for the
+improvement of future issues.
+
+The bug descriptions often include indications of fixes by the various porting
+houses to their current releases.  These are:
+
+Consensys UNIX Version 1.3			abbreviated as "Cons" below
+Dell UNIX Issue 2.2				abbreviated as "Dell" below
+Esix Revision A					abbreviated as "Esix" below
+Micro Station Technology SVr4 UNIX		abbreviated as "MST" below
+Microport System V Release 4.0 version 4	abbreviated as "uPort" below
+UHC Version 3.6					abbreviated as "UHC" below
+SCO Open DeskTop 1.1				abbreviated as "SCO" below
+
+II. General Bugs
+
+1. Dropout problems with tty devices
+   The most serious problem anyone has reported is that the USL asy driver is
+flaky and occasionally drops characters at above 4800 baud.
+   Microport, Dell, Esix, and UHC say that they believe they've fixed this.
+However, Dell, at least, was mistaken when they first made this claim; a more
+detailed description of the problem is given below.  I have been assured that
+this is on the fix list for the next Dell release.
+   Bela Lubkin at SCO comments "386 interrupt latency vs. unbuffered UARTs.
+This is a tough problem.  Nobody's driver should drop characters with a
+turned-on 16550.  It's not so easy with a 16450.  Anyone with 16450s or lower
+should be able to solve their problems by dropping in a 16550."
+
+2. Suid programs dump core when signalled
+   Mark Snitily of SGCS says that under many SVr4s, signalling a
+process that is running suid root will cause it to core-dump.  He says
+Dell and MST have fixed this, and SCO doesn't suffer from this.
+
+3. DMAs on large ISA machines may fail
+   On ISA machines with more that 16MB of RAM, SVr4 may try to do DMA
+from outside the bus's address space, causing serious problems.  UNIX ought
+to do an in-memory copy to within the low 16MB but the USL base code doesn't.
+   Dell says they've fixed this, and that's been confirmed by a user.
+   UHC says they've fixed this; they add that the special buffer-allocation
+logic to handle the problem can be turned off with a tunable kernel parameter
+if you've got less than 16M.
+   Microport says they've fixed this in their new 4.1 release, shipping early
+March.
+   Esix offers a patch to correct this problem.
+   SCO used to have a similar bug but fixed it long ago.
+   John Sully <jms@mport.com> writes: "This was due to a bug in pre version 4
+dma code.  The USL code has always at least attempted to do a copy from low
+memory to high memory on systems with more than 16Mb of RAM.  By the way UHC is
+wrong; the buffer allocation code only comes into play if you have more than
+16Mb of memory.  You can turn it off if you have a machine (ie. an EISA bus)
+which will allow you to do DMA above 16Mb.  You *must* have this tunable
+(MAXDMAPAGE) turned on if you are using *ISA* bus masters in a system with more
+than 16Mb of ram.  Unfortunately doing this will affect all drivers which do
+dma as there is no good way to do this on a per-driver basis."
+
+4. There is a cylinder limit on disk size
+   Stock USL code is limited to 1,024 cylinders per Winchester, which
+might cause problems with some disk drives.
+   Microport, Dell, Esix, MST, and UHC have fixed this.
+   Bela Lubkin says "SCO's boot filesystem must lie below 1024 cylinder mark;
+anything else can be anywhere.  This is more-or-less a limitation of the BIOS
+interface that the bootstrap loader must use.  Could be circumvented by going
+directly to controller hardware in the bootstrap loader, but that would be
+horrendously complex with all the controllers & host adapters to be supported."
+This limit probably applies to all other UNIXes as well.
+
+5. shmat(2) vs. vfork(2)
+   The shmat(2) call is known to interact bady with vfork(2).  Specifically,
+if you attach a shared-memory segment, vfork(), and then the child releases
+the segment, the parent loses it too!  Workaround; use fork(2).
+   UHC and Microport both suspect that they still have this bug and opine that
+anyone who uses vfork deserves to lose.  Dell has no plans to fix it.
+
+   John Sully <jms@mport.com> writes: "This is not a bug.  It is completely
+consistent with the semantics of a change to the address space of the child.
+Think about it: any change to the address space of a child process created by
+vfork(2) is reflected in the parent since the child is actually executing in
+the parent's address space.  Therefore if the child changes the address space
+(in this case by releasing the shared memory segment) what should happen?
+Right, the parent should have the same change happen.  And what does happen?
+The segment is released in the parent.  One can argue about the braindead
+semantics of vfork(2) all day, but the fact remains that this is exactly what
+one would expect to happen.  To quote from the manual page:
+
+     [...] vfork differs  from fork  in
+     that the	child  borrows	the parent's *memory* and thread of
+     control until a call to execve or an exit (either by a  call
+     to	 exit  or  abnormally.) [ emphasis added ]
+
+and later:
+
+     It does not work, however, to return while
+     running in	the child's  context  from  the	 procedure  which
+     called vfork since	the eventual return from vfork would then
+     return to a no longer existent  stack  frame.
+
+Please note that the entire address space of the parent is used by
+the child created by vfork(2).  The manual page also points out
+several other caveats involved in doing anything to the parent's
+address space except successfully calling an exec family function or
+_exit (note it specifically says *not* to call exit(2)).  I do not believe 
+that having a shared memory segment disappear from the parent's address 
+space is out of line after reading the man page for vfork(2).
+
+It is interesting to note that Sun after implementing its new VM system in
+SunOS 4.0 initially had no plans to support vfork, since they felt that the COW
+semantics of the new fork would provide the necessary efficiency gain.  Indeed
+they found that most programs which used vfork worked just fine by doing
+-Dvfork=fork.  All that is, except for a certain popular command interpreter
+[ed: can you say C shell?].  So we are stuck with the legacy of this braindead
+system call.
+
+BTW, Microport has no plans to fix this :-)."
+
+6. X performance problem
+   Stock X11R4 and R5 (at least prior to 1.2E) is said to hog the
+processor if you use the LOCALCONNECT option.  Jan Brittenson
+<bson@gnu.ai.mit.edu> posted the following workaround:
+
+   I don't know what causes the standard X server to hog the CPU, but
+it can be avoided. Use the following program instead of xinit. Compile
+it with `$CC -O -o xserv xserv.c -lX11' where CC is either
+/usr/ccs/bin/cc or gcc. Set DISPLAY and XINITRC and run `xserv' from
+your home directory. This is just a q&d hack, and not really a
+substitute for xinit -- but it works.
+
+/* xserv.c -- start X server
+
+   Start X server. Similar to xinit, but intended to
+   circumvent the X386 CPU Hog Mode
+
+   Jan Brittenson, June 2 1992  05:15 am */
+
+#include <stdio.h>
+#include <sys/types.h>
+#include <signal.h>
+#include <setjmp.h>
+#include <unistd.h>
+#include <libgen.h>
+
+#include <X11/Xlib.h>
+#include <X11/Xos.h>
+#include <X11/Xmu/SysUtil.h>
+
+
+extern int errno;
+
+
+/* Start X server. Fork-exec server, passing the DISPLAY environment
+   variable. Wait for server to get up and running (at which point it
+   passes back a SIGUSR1), at which point the user xinitrc file is run. */
+
+#define DEFAULT_XPATH "/usr/X386/bin/X386"
+#define XINITRC ".xinitrc"
+#define DEFAULT_XCOMMAND "xterm -g +1+1 -n login -display :0"
+
+extern void *malloc (), free ();
+extern char *basename (), *getenv (), *strcpy ();
+
+/* X stuff */
+Display *top_display;
+
+
+/* This is supposed to be in libgen.a... */
+static char
+*basename (s0)
+  char *s0;
+{
+  register char *s1;
+
+  for (s1 = s0 + strlen (s0) - 1;
+       s1 > s0 && *s1 != '/'; s1--);
+
+  if (*s1 == '/')
+    return s1+1;
+
+  return s1;
+}
+
+jmp_buf sigusr1_frame;
+
+static void
+caught_sigusr1 (int dummy) { longjmp (sigusr1_frame, !0); }
+
+
+static char
+*dispname (s0)
+  char *s0;
+{
+  register char *s1;
+
+  for (s1 = s0 + strlen (s0) - 1;
+       s1 > s0 && *s1 != ':'; s1--);
+
+  return s1;
+}
+
+
+/* No arguments */
+int
+main (argc, argv)
+int argc;
+char **argv;
+{
+  char *xserver_file, *xinitrc_file, *home_path, *display, *display_X_arg;
+  int xserver_pid, orgmask;
+  
+  
+  /* Not that it really matters, just to avoid being used as a direct
+     replacement for xinit. */
+  
+  if (argc != 1)
+    {
+      fprintf (stderr, "usage: %s\n", basename (*argv));
+      exit (1);
+    }
+  
+  
+  /* Resolve xinitrc path. This is done before the server is
+     started. */
+  
+  if (!(home_path = getenv ("HOME")))
+    home_path = "/etc";
+  
+  if (!(xinitrc_file = getenv ("XINITRC")))
+    {
+      xinitrc_file = malloc (strlen (home_path) + 1 + strlen (XINITRC) + 1);
+      sprintf (xinitrc_file, "%s/%s", home_path, xinitrc_file);
+    }
+  else
+    xinitrc_file = strdup (xinitrc_file);
+
+
+  /* Resolve display */
+  if (!(display = getenv ("DISPLAY")))
+    display = display_X_arg = ":0.0";
+  else
+    display_X_arg = dispname (display);
+
+
+  /* Tell server to notify us when up and running */
+  signal (SIGUSR1, SIG_IGN);
+  orgmask = sigblock (sigmask (SIGUSR1));
+
+  /* Start server */
+  if (!(xserver_pid = vfork ()))
+    {
+      xserver_file = DEFAULT_XPATH;
+      
+      execl (xserver_file, xserver_file, display_X_arg, NULL);
+
+      fprintf (stderr, "%s: can't exec %s (errno = %d) -- start-up aborted\n",
+               basename (*argv), xserver_file, errno);
+      exit (1);
+    }
+
+  if (xserver_pid < 0)
+    {
+      fprintf (stderr, "%s: can't fork (errno = %d) -- start-up aborted\n",
+               basename (*argv), errno);
+      
+      exit (1);
+    }
+  
+  /* Await signal from server */
+#if 0
+  /* Why the #@$*! doesn't this work?! */
+  sigsetmask (orgmask);
+  alarm (20);
+  sigpause (sigmask (SIGUSR1) | sigmask (SIGALRM));
+#else
+  sleep (5);
+#endif
+
+  /* Open display */
+  if (!(top_display = XOpenDisplay (display)))
+    {
+      fprintf (stderr, "%s: unable to open display '%s' -- start-up aborted\n",
+               basename (*argv), display);
+      exit (1);
+    }
+  
+  /* Execute xinitrc file */
+  if (system (xinitrc_file) < 0)
+    system (DEFAULT_XCOMMAND);
+      
+  /* Close display */
+  XCloseDisplay (top_display);
+
+  /* Terminate server */
+  kill (xserver_pid, SIGTERM);
+
+  /* Finished */
+  free (xinitrc_file);
+}
+
+7. FIONREAD fails on regular files
+  Christoph Badura <bad@generics.ka.sub.org> reports that the FIONREAD ioctl()
+fails on regular (disk) files.  He has sent USL a one-line kernel fix.
+
+8. A security hole in login
+   David Wexelblat <dwex@mtgzfs3.att.com> reports: "There is a HUGE security
+hole in /bin/login in all USL derived SVR4s before 4.0.4.  Refer to CERT
+advisory CA-91:08, dated 5/23/91.  This is known to be present in AT&T SVR4
+2.1, and Microport SVR4 3.1.  ESIX claims to have fixed it, Microport reports
+that it is fixed in 4.1.  I won't give any more details unless necessary.
+Suffice to say that this bug allows any non-privileged user on an SVR4 system
+to get read-write access to any file on the system."
+
+9. COFF problems with long filenames
+   A source at Dell urges: "Our SVR4v2 did some stuff that USL didn't get
+around to until SVR4v4.  Try Dell UNIX 2.1 with a COFF program on a large UFS
+filesystem in a directory with long names.  Runs on Dell UNIX.  Breaks on
+others."  I don't have more definite info yet.
+
+10. Flakeouts in the Wangtek device driver
+   Dell reports that USL's Wangtek device driver is seriously flaky.  "How'd
+you like a multi volume backup where the second and subsequent volumes don't
+follow on from the previous volumes?"  UHC confirms this and is actively
+working on the problem.
+   An anonymous SCOer says "The QIC02 tape controller `standard' is seriously
+flaky.  Our driver's in pretty good shape but nobody will ever have a truly
+solid driver that supports every QIC02 controller you can find."
+   Gordon Ross <gwr@mc.com> reports: "Actually, the SCSI tape target driver
+`st01' has a similar problem at version 4.0.3 which I corrected while I worked
+on the SVR4 code.  The correction was provided to the support group at USL.
+The actual problem was that the SCSI tape would return a `check status'
+completion code which was just trying to inform the driver of the arrival
+of the `logical end of media' indication but the driver was treating it
+as an error.  The tape drive had in fact written the data, but the driver
+incorrectly assumed that the "check status" return meant that it failed.
+The result of this is that when you write into the end of the tape, you
+can read back one more "chunk" than yu wrote.  Of course, cpio does not
+like this at all when doing multi-volume backups..."
+
+11. A kernel declaration bug
+    A botch in USL's /etc/conf/pack.d/kernel/space.c (which is present in
+Consensys 1.3, Dell 2.1, Esix 4.0.3A, Microport 4.0.3 and 4.0.4 and may also be
+present in other SVr4s) can step on the linesw[] table.  The problem is that
+the domain name array initialization is wrong and too short; thus, when it's
+set, data past the end of the array can be stomped.  To fix this, find the
+following near line 247:
+
+	char srpc_domain[] = SRPC_DOMAIN;
+
+and change it to
+
+	char srpc_domain[SYS_NMLN] = SRPC_DOMAIN;
+
+then rebuild the kernel.
+   Microport officially knows about this bug and plans to fix it in a
+near-future update release.  It has been fixed in Dell 2.2.
+
+12. fread(3) does the wrong thing on pipes and FIFOs
+   Ed Hall <edhall@rand.org> writes: "Unlike the raw read() system call,
+fread() is supposed to be able to make several partial reads to satisfy the
+data requested by its arguments.  The exceptions are an EOF or an error on the
+stream.  This characteristic is quite useful when moving data through pipes or
+over network connections, since partial reads are quite common in these cases.
+Well, the version of fread() in ESIX 4.0.3 (and likely other Sys5R4's) only
+does a single physical read, and if it only satifies part of the requested
+number of bytes, that's all you get.  This can sting you even if you carefully
+check the value returned by fread(), since the value returned is rounded down
+to the number of complete "nitems" read, although your position in the stream
+can be up to size-1 bytes beyond that point.  Neither ferror() nor feof()
+indicate anything is wrong when this happens."
+   This bug (which is also present in 4.0.4) is serious and nasty and should
+be high on every porting house's list to fix.  It appears to be peculiar to
+USL 4.0.3 and 4.0.4; 4.0.2 does *not* have it, nor does SCO.
+   A USL source claims it has been fixed in 4.1.
+
+13. Process accounting is broken
+    In 4.0.3, process accounting doesn't work.  From examining the accounting
+scripts, it appears that /usr/lib/acct/accton is supposed to set a return code
+depending on whether accounting was switched on already or not.  However, it
+always returns the same result - accounting switched off.  This means that the
+/usr/lib/acct/ckpacct script, which is run every hour to keep the proccess
+accounting log in check, instead turns off accounting the first time it is run
+after booting.  The same happens with the nightly /usr/lib/acct/monacct
+program.
+   I don't yet know whether this bug is present in 4.0.4.  It is definitely
+un-fixed in Dell 2.1 and Consensys 1.3.  In Dell 2.2 the return bug is fixed,
+but accounting isn't automatically enabled at boot time.
+
+14. tar(1) foos up in the presence of symbolic links
+    Tar can get the names of symbolic links wrong when creating an archive.
+This bug can be demonstrated by doing the following:
+
+   mkdir t
+   cd t
+   touch a 1234567890
+   ln -s 1234567890 b
+   ln -s a c
+   tar vcf ../t.tar .
+
+   The output generated by tar is:
+
+   a ./ 0 tape blocks
+   a ./a 0 tape blocks
+   a ./1234567890 0 tape blocks
+   a ./b symbolic link to 1234567890
+   a ./c symbolic link to a234567890
+
+(Note the above commands should be done in the order shown and in a new
+directory)  This bug is nasty.  Recommended solution: use GNU tar.
+   This is reported from Esix 4.0.3 and Consensys 1.3, but probably exists on
+other SVr4s as well.  It has been fixed in Dell 2.2.
+
+15. Symbolic links can interfere with shellscript execution
+   There is a problem running #! scripts when symbolic links are involved.
+Typing in the following from a command shell demonstrates the problem:
+
+   mkdir a b
+   ln -s a c
+   cd a
+   cat > script <<!
+   #!/bin/sh
+   echo Hello
+   !
+   chmod 755 script
+   cd ../b
+   ln -s ../c/script .
+   ./script
+
+The message generated from the last line is:
+
+     a/script: a/script: cannot open
+
+   This is reported from Esix 4.0.3, Consensys 1.3, and Dell 2.2, but
+probably exists on other SVr4s as well.
+
+16. Piping a csh builtin causes the shell to hang.
+   While running csh, this can be demonstrated by some of the following:
+
+   echo Hello | cat
+   history | more
+
+(A solution to this one is use tcsh-6.02.)
+   This is reported from Esix 4.0.3 and Consensys 1.3, but probably exists on
+other SVr4s as well.  It is reported fixed in Dell 2.2.
+
+17. Quick port setup option in sysadm is broken
+   In 4.0.3 sysadm, the quick port setup option, which is used to add and
+delete terminal ports, is seriously broken.  The script modifies /etc/conf/*
+files, and has incorrect minor numbers, sets the 5th field of sdevice.d if Y
+when it should be N, and is missing columns for node.d.  See
+/usr/sadm/sysadm/bin/q-add.
+
+18. COFF binaries linked with curses(3) and shared libc hang
+   ...eating the CPU.  Cause unknown.
+
+19. shl hangs, sxt devices bad
+   shl(1) does not work.  Try creating a layer and doing an 'ls'.  Your session
+hangs.  Bruce Momjian <root%candle.uucp@bts.com>, who reported this bug, says
+he believes it is the sxt devices which are broken.  It definitely exists in
+Consensys 1.3.
+
+20. num-lock prevents mouse from working properly
+   When using the Motif window manager, if your num lock is on, your mouse
+clicks are not recognized by the window manager.  The mouse still works in
+xterm(1).  This is allegedly fixed in Destiny (4.2).
+
+21. adjtime() doesn't work
+  Hugh Stearns <hoyt@isus.tnet.com> reports that in 4.0.3.6 adjtime() doesn't.
+Calling `date -a' works to adjust the time slowly.
+
+22. ttymon drops DTR
+  Hugh Stearns <hoyt@isus.tnet.com> reports that in 4.0.3.6 the ttymon(1)
+utility for HDB uucp drops DTR every few weeks.  The workaround is to disable
+and re-enable it.
+
+23. cron mail doesn't go through aliasing
+  Hugh Stearns <hoyt@isus.tnet.com> reports that in 4.0.3.6 cron mail to adm
+doesn't get redirected by the aliases file.
+
+24. fragility in xterm
+  Hugh Stearns <hoyt@isus.tnet.com> reports that in 4.0.3.6, doing ~! from
+a cu in xterm kills xterm.  This has been fixed in Dell 2.2.
+
+25. csh lossage due to bad optimization
+  If a csh user sources a non-existent file in their .cshrc (eg, source .alias,
+where .alias doesn't exist), then the system will hang for a couple of minutes.
+Eventually the user get an "Out of memory" error and the console logs "NOTICE:
+out of swap space - Insufficient memory to allocate 2 pages - system call
+failed".
+  This appears to be due to over-optimization of code surrounding a longjmp
+call.
+  (There are numerous other reports of memory leak bugs in csh).
+
+26. Bug in cp(1)
+   If ``copy'' encounters a directory before a file, it dumps core ...
+
+--- cut ---
+cd /tmp
+mkdir copybug jnk
+cd jnk
+mkdir directory
+>file
+cp -r * /tmp/copbug
+--- cut ---
+
+This was reported from Consensys 4.0.3 but is probably a generic SVr4 bug.
+
+27. tbl -me doesn't work
+   Wolfgang Denk reports that trying to use "tbl -me" for any input file causes
+tbl to quit.  The problem is that newer tbl versions don't accept [nt]roff
+contol lines (".rm @W") after .TS.
+
+28. who -r fragility leads to boot-time problems
+  It coredumps if the name of the timezone is longer than three characters.
+This can be a real problem for European sites...  and is potentially more
+hazardous than immediately apparent as _a lot_ of the initialization scripts
+(rc1.d, rc2.d) use ``who -r'' to see if the machine is in single- or multi-user
+mode.  And when ``who'' bombs out, the ``set'' command is iven an empty
+command-line and can't do much else than print the shell variables, $1-$9
+remain empty ... meaning that more or less all the scripts fail in various ways
+and the system has an exceptionally hard time coming up.
+
+29. at(1) breaks here-documents in shell scripts
+   at adds gratuitous empty lines to the job submitted by the user.
+This prevents shell here-documents from working.
+
+30. UHC mouse driver ignores the middle button
+   This may be a generic USL problem, but Dell (at least) has fixed it.  UHC
+says they have a patch for it, but I haven't seen the patch.
+
+III. Networking and File Sharing Bugs 
+
+1. NFS locking is unusably slow
+   Randy Terbush <randy@dsndata.dsndata.com> has posted code which
+demonstrates a serious bug in the SVr4 NFS locking daemon.
+   In his own words: "The symptoms are ~30% cpu usage by 'lockd' and
+severe slowing of the machines on the network.  This program
+demonstates that it takes ~20 seconds to obtain locks from an ailing
+'lockd'.  We have verified that this bug does not exist in HPUX 8.0x."
+   Randy's code is too large to be included here.  He is, quite
+rightly, exercised at USL's exceedingly slow response to this problem.
+The comment in his makefile reads, in part:
+
+# USL has admitted to the existance of this bug in version 4.0, 4.1,
+# and 4.2 of their distributed and yet to be released sources.  This is
+# a network crippling problem that they have refused to fix until
+# release 4.3, which will be OVER 1 YEAR from today. (29 Oct 1992)
+# If your version of 'lockd' exhibits this same problem, I would
+# strongly urge you to contact your vendor and ask them to put some
+# pressure on USL to fix this problem.  SVR4 is virtually useless in a
+# network of shared resources while this problem exists.
+
+2. UFS file system problems
+   In stock USL 4.0.3, you can't use a UFS file system as the root; the system
+hangs if you try.  Consensys, Dell, Esix, Microport, MST, UHC, and ESIX all
+appear to have fixed this.
+   David Aitken, the UNIX product manager at UHC, writes "The ufs as root file
+system [problem] was not really a bug, just a little oversight on USL's part -
+we have fixed it completely by adding one line to the /stand/boot script:
+rootfstype=ufs!"  He adds that they've been using ufs on their lab machines for
+over 10 months with no trouble, and the latest UHC release defaults to ufs if
+you have more than 120MB of disk.
+
+3. Byte-order problem with NFS when accessing Sun disks
+   Christoph Badura <bad@generics.ka.sub.org> notes that the stock USL resolver
+library suffers from serious confusion about the byte order in the
+socketaddr_in structure.  This bug is acknowledged by USL for the 4.0.4
+release.  A symptom of this bug is that Sun disks will not mount correctly over
+NFS. As a workaround, try removing the references to /usr/lib/resolv.so from
+/etc/netconfig and rebooting your system.  Unfortunately, this will mean
+you can't use nameservers.
+   Alan Batie <batie@agora.rain.com> writes: "Actually, you don't have to
+remove resolv.so, just put tcpip.so first and have a hosts file with the names
+of hosts you want to do NFS mounts from.  This way you can use nameservers for
+most things."
+
+4. Under weird circumstances, lseek on UFS may cause corruption
+  Christoph Badura <bad@generics.ka.sub.org> reports that a UFS lseek() to an
+offset which is a multiple of 4096 but not a multiple of 8192, followed by a
+write(), may corrupt the file being written.  The bug shows up only, if the
+file has no pages in the page pool associated with it at the seek offset and at
+4k before the seek offset.  He has sent USL kernel fix for this, which was
+included in 4.0.4.
+
+5. FTP problems
+  The in.ftpd on SVR4.0.3 does not support all the commands listed in RFC 959.
+When recent SCO UNIX/ODT versions ftp to SVR4.0.3, the SVR4 side will refuse,
+drop the connection, and core dump after you authenticate.  This is because the
+SCO end sends the 'SYST' command ala RFC 959, and the SVR4.0.3 end doesn't
+recognise it.  Some ports have fixed this.
+  Christoph Badura adds: "The bug is do to a longjmp(3) on a sigjmpbuf obtained
+by sigsetjmp(3). ARGH. Testing led to a bug in the original BSD sources, which
+is still present in the NET/2 ftpd.  "
+
+6. A bug in the WD80x3 support
+   MST reports a serious bug in the SVr4 kernel support for this card.  Here's
+how to reproduce it:
+
+	server: init 3 and share (export) /usr for example.
+
+	client: mount -F nfs server:/usr /mnt
+		cd /mnt
+		find . -print | cpio -ocBuv > /dev/null
+
+	what happens:
+		server and client will "hang" together.
+
+	"cue":
+		hit keys on server and/or client, hang will go away
+		for 10-20 seconds temporarily.  Yank BNC connectors
+		do the same trick.
+
+   They say they've heard from customers that this happens on Dell, UHC as well
+as USL 4.0.4.  PCNFS/BWNFS network xcopy suffers this as well.  Client can be a
+Sun Sparc for that matter.
+
+IV. SCSI Support Problems
+
+1. sar is confused by SCSI
+   Sar -d doesn't work on SCSI drives.  Dell fixed this in 2.1 and it's
+reported to work OK in Esix 4.0.3A; no report of any other SVr4 having fixed
+this yet.  SCO fixed it in 3.2.4.
+
+2. A configuration problem
+   Stock USL requires you to jumper your SCSI devices to fixed IDs
+during installation (it can be changed to any other ID after).  
+   Dell says they've fixed this.  The requirement is definitely still present
+in Esix and Consensys 1.3.  UHC thinks they've fixed this, but their 4.0.3.6
+release still seems to demand ID 1 to install. 
+
+3. Synchronous SCSI hang problem
+   David Wexelblat <dwex@mtgzfs3.att.com> reports: "Stock SVR4.0.3 will hang
+the SCSI bus with a 1542 in synchronous mode.  Dell fixed this, and this has
+been given to Microport [ed note: Microport 4.0.4 and Consensys 4.0.3 have
+fixed the problem; MST UNIX and Esix 4.0.3 still have this problem; I have not
+yet been able to determine if ESIX 4.0.4 does].  In the file /sbin/bcheckrc,
+change the line:
+
+	echo MARK > /dev/rswap
+
+to
+		
+	echo MARK | dd of=/dev/rswap bs=512 conv=sync > /dev/null 2>&1
+
+The magic is apparently the conv=sync, which forces a 512 byte block
+to be written.  The original echo writes 4 bytes, which apparently causes
+synchronous SCSI to go out to lunch.
+
+Now, you ask, how can I fix this, since the system won't boot?  There are
+a couple of methods.  First, if possible, disable synchronous negotiation
+(1542 jumper J5-1 removed, plus whatever you may need to do to your drive).
+Then boot up, edit /sbin/bcheckrc, then shutdown, restrap for synchronous,
+then reboot.  Everything should be OK.
+
+That's the easy way.  Unfortunately, some hard drives will only work
+in synchronous mode.  Well, you can still recover from this phenomenon.
+Here's how:
+
+        1) Install on your hard drive
+        2) Boot from the first boot floppy.  When it tells you to, insert
+           the second boot floppy.  At the first prompt, hit <DEL> to
+           break out to a shell.
+        3) Mount your hard drive under /mnt with the following command
+           (replace FS-TYPE with s5, s52, or ufs, whichever you used for
+           for your root partition):
+
+                /etc/fs/FS-TYPE/mount /dev/dsk/c0t0d0s1 /mnt
+
+        4) Now edit /mnt/sbin/bcheckrc:
+
+                ed /mnt/sbin/bcheckrc
+
+           You may want the 'ed' man page handy (I barely remember how to
+           to use 'ed' :->).  For simplicity, you can delete/comment out
+           the offending line, then replace it with the correct line later.
+        5) Unmount the hard drive:
+
+                umount /mnt
+
+        6) Reboot from the hard drive.  Everything should come up OK. and
+           you can finish editing /sbin/bcheckrc, if necessary.
+
+Note that you perform these actions at your own risk.  The first version was
+performed by me on Microport SVR4, and the second was performed by someone
+else (on my suggestion) on ESIX SVR4."
+   This problem appears to be fixed on Consensys 1.3 and Dell 2.1.
+
+4. ps chokes on commands that do SCSI I/O
+  Hugh Stearns <hoyt@isus.tnet.com> reports that in 4.0.3.6, ps
+doesn't work when a SCSI command in progress. It stops printing at the
+process executing the scsi command.
+  This is still broken in Dell 2.2.
+
+5. Transfer speed problems with Adaptec 1542B on 486s
+  If a system mount or install fails, try setting the DMA speed to 5MB/s,
+rather than the default 5.7MB/s.  This is accomplished by removing the jumper
+shorting the 12th pin pair of jumper block 5.
+
+V. Development Tools Problems
+
+1. General UCB library brokenness
+   The BSD compatibility libraries were badly broken in USL code.  A Dell
+source adds "That meant that almost all the apps derived from them were broken
+too.  Most stuff like automount will die when you send a SIGHUP, instead of
+rereading the map file.  You can get a system into very strange states when
+that happens."
+   John Sully <jms@mport> of Microport opines: "This is a bug in automount
+itself rather than BSD compatibility, since the automount which comes with SVR4
+is not compiled with the BSD libraries.  (isn't this comforting??  :-()."
+
+   Esix and UHC's BSD libraries are USL stock.  I don't yet know
+the status of other ports.  Microport has run into things they think may be
+symptoms of this but have no fix yet.
+
+   John Sully <jms@mport> of Microport counters with: "One common thread I find
+on reading of these problems is that the BSD compatibility libraries are
+*misused*. [...] The problem is that BSD and SYSV have similarly named .h files
+which sometimes contain different definitions for objects with the same name.
+This has been known to cause all sorts of problems because the SYSV headers are
+picked up and then the calls are satisfied from the BSD library rather than the
+shared object library.  I have found that if you use /usr/ucb/cc that the BSD
+compatibility is much less broken than it would seem at first because it
+ensures that the correct headers are picked up."
+
+   However, note that there is at least one *real* bug known --- as of 4.0.4
+the signal emulation cannot explicitly set a handler to SIG_DFL or SIG_IGN.
+
+   Ron Guilmette <rfg@ncd.com> writes "[Library lossage] may be easily
+demonstrated by attempting to build and link the GNU C compiler with
+`-L/usr/ucblib -lucb'.  The resulting compiler will most certainly
+crash and die."  John Sully thinks this is because the /usr/ucb/cc
+compiler should have been used, but wasn't.
+
+2. USL emulation of BSD signals doesn't work
+   A different source reports that the the USL implementatation of BSD signals
+is broken in both 4.0.3 and 4.0.4; in particular, the sigvec() family doesn't
+work properly.  It is possible to make minor tweaks to source to make such apps
+work properly with the native USL signals implementation.
+
+   Here's more on the signals problem, thanks to Richard <rc@siesoft.co.uk>:
+------------------------------------------------------------------------------
+The problem is to do with the signal() function that is within the BSD
+compatability libc. 
+
+To reproduce the problem do the following:
+
+#include <stdio.h>
+#include <sys/types.h>
+#include <signal.h>
+#include <sys/siginfo.h>
+
+main()
+{
+	signal(SIGPIPE,SIG_IGN);
+	pause();
+}
+
+and compile it with cc xx.c -o xx /usr/ucblib/libucb.a
+
+(John Sully observes that this is definitely wrong; /usr/ucb/cc should have
+been used rather than "cc ... -L/usr/ucblib -lucb" or the equivalent "cc ...
+/usr/ucblib/libucb.a".)
+
+If you run the program and then signal it with a SIGPIPE, the program
+will die, even though you've told it to ignore SIGPIPE.
+
+The fix is difficult unless you've got source because there's a missing 'else'
+clause from the signal() code. This is the only signal fault I've found in
+the BSD signal functions, details of the rumoured sigvec problem would be
+useful?
+
+If you're trying to compile an application you could change the application
+code to do the following, this does work..
+
+void
+catch(s)
+int	s;
+{
+	/* DO NOTHING */
+	;
+}
+
+main()
+{
+	signal(SIGPIPE,catch);
+	pause();
+}
+
+SUMMARY
+You can only change a signal handler to a function handler, any number of
+times.  Any attempt to set the handler to SIG_DFL, or SIG_IGN will fail.
+
+This bug has given some people working with X11R5 aggro, causing the X server
+to die when you close a client. 
+
+  Christoph Badura <bad@flatlin.ka.sub.org> confirms this bug
+He has sent USL a source fix.  It appears already to have been fixed in Dell
+2.2.
+------------------------------------------------------------------------------
+
+3. Possible string library problems
+   There are also persistent rumors of problems in the BSD-emulation string
+libraries.  I have not been able to pin down specifics on this.
+
+4. USL's ndbm support is broken.
+   Christoph Badura <bad@generics.ka.sub.org> reports "The ndbm functions in
+the ucb library are broken [apparently due to a compiler of optimizer bug in cc
+-- ed.].  Try makeing the whatis data base for /usr/share/man with Tom
+Christiansen's perl rewrite of man. 
+   The easiest way to fix this is to compile GNU's replacement ndbm.c with gcc
+-fpcc-struct-return -traditional (gcc1.40 or 2.2 will do nicely) and install it
+in your C library.  Source is available for FTP from prep.ai.mit.edu.
+
+5. An include file is missing
+   Both 4.0.3 and 4.0.4 USL versions are missing the documented dial.h
+file from their /usr/include directory.  Dell 2.1 has it.
+
+6. sscanf(3) has a potential bug
+   Anthony Shipman <als@bohra.cpg.oz.au> reports: " I found the following bug
+in SCO Unix 3.2.* and I think it may be common to many AT&T derived Unixes.
+
+sscanf() calls _doscan() to read from a pretend file.  The file
+uses the string as a buffer and a fake file descriptor of 60 (=_NFILE).  
+Since _NFILE (for SCO UNIX) is 60 it assumes that fd 60 can never be open.
+
+Then when fscanf() hits the end of the string it calls _filbuf() to read
+into the buffer (which is the string) from fd 60.  This should fail with
+an errno=9 and then _filbuf() sets EOF and it all terminates.
+
+However in SCO Unix you can reconfigure the kernel to increase the number
+of files per process to a recommended maximum of 150.  If you do this then
+your program might have fd 60 open one day.  Then sscanf() will read from this
+file overwriting your string.  The byte count to the read() in _filbuf() 
+is some undefined but large value so a lot of memory will be overwritten.  In
+my case the string was on the stack so my stack was wiped.
+
+In short if you configure your kernel to have NOFILES > _NFILE ie more than
+the default then sscanf() is a time bomb in your code."
+
+7. Compiler problems
+   Ronald Guilmette <rfg@ncd.com> also reports the following:
+
+------------------------------------------------------------------------------
+/* Here is a bug in the original SVR4 C compiler (aka C Issue 5) which
+   effectively prevents you from making good use of the `const' and
+   `volatile' qualifiers defined by ANSI C in conjunction with pointer
+   types and typedef statements.  Compile this code and you will get:
+
+   "qualifiers.c", line 23: left operand must be modifiable lvalue: op "="
+
+   ...if your copy of the svr4 C compiler still has the bug.  Note that
+   given these declarations, the ANSI C standard say that the thing pointed
+   to by the variable `pci' should be considered to be constant... not the
+   variable `pci' itself.  (The GCC compiler, either version 1.x or version
+   2.x, correctly compiles this example without complaint.)
+*/
+
+typedef const int *ptr_to_const_int;
+
+ptr_to_const_int pci;
+
+int i;
+
+void main ()
+{
+  pci = &i;
+}
+------------------------------------------------------------------------------
+/* Here is a subtle bug in the original SVR4 C compiler (aka C Issue 5)
+   which prevents you from first declaring a tagged type (i.e. a struct
+   type or a union type) in a parameter list, and then defining that tagged
+   type later on within the same scope.  (Note that according to the ANSI C
+   standard, the scope in which parameters get declared and the outermost
+   block of a function body are one and the same scope.  Thus, this really
+   is legal ANSI C code!)
+
+   Try compiling this with your C compiler on SVR4.  If your compiler still
+   has the bug, you will get:
+
+   "tagged_type.c", line 24: warning: dubious tag declaration: struct S
+   "tagged_type.c", line 28: warning: improper member use: i
+   "tagged_type.c", line 28: warning: improper member use: i
+   "tagged_type.c", line 31: warning: dubious tag declaration: struct S
+   "tagged_type.c", line 35: warning: improper member use: i
+   "tagged_type.c", line 35: warning: improper member use: i
+
+   (The GCC compiler also had this bug in version 1.x, but it has been fixed
+   in version 2.x.)
+*/
+
+void foobar1 (arg)		/* use old-style without prototypes */
+    struct S *arg;
+{
+  struct S { int i; };		/* define the type `struct S' */
+
+  arg->i = arg->i;		/* legal according to ANSI C rules! */
+}
+
+void foobar2 (struct S *arg)	/* use new-style with prototypes */
+{
+  struct S { int i; };		/* define the type `struct S' */
+
+  arg->i = arg->i;		/* legal according to ANSI C rules! */
+}
+------------------------------------------------------------------------------
+/* Here is a serious bug in the original SVR4 `dump' program which dumps
+   out parts of object files in either plain hex form or symbolically.
+
+   To see the `dump' program get a segfault and die, save this code under
+   the name `dump-bug.c' and then do:
+
+	cc -g -c dump-bug.c
+	dump -v -D dump-bug.o
+
+   The bug arises whenever `dump' tries to read Dwarf debugging information
+   for an array of pointers to any "user defined" type (e.g. `struct S' in
+   this example).  Past that point, `dump' is totally confused, so further
+   Dwarf debugging information finally causes it to go belly-up.
+*/
+
+struct S { int i; };
+struct S *array[10];
+int j;
+------------------------------------------------------------------------------
+It appears that the svr4 C compiler (for x86 machines) doesn't conform real
+well to either the letter or the spirit of the IEEE 754 floating-point
+standard.  In particular, "unordered comparisons" and other operations on
+NaNs don't always produce the result that that the IEEE 754 standard calls
+for.
+
+An AT&T source comments: "This is documented in the SVID as a future direction.
+We do not support NaNs in -Xa and -Xt modes, only in -Xc.  Try
+isnan(sqrt(-1.0)) to determine which modes support it."
+------------------------------------------------------------------------------
+
+The compiler fails to issue diagnostics for cases where a floating point
+literal is given which exceeds the range of its type (either float or
+double).  Actually this one could be argued either way, since IEEE FP
+format includes "infinities" and the compiler probably just changes any
+FP value which is out of range for its type into either positive infinity
+or negative infinity (as appropriate).
+
+The compiler fails to issue diagnostics in cases where a typedef name is
+reused to declare a formal parameter, as in:
+
+-----------------------------------------------------------------------
+typedef int FOO;
+void bar (FOO)
+    int FOO;
+{
+}
+-----------------------------------------------------------------------
+
+The compiler crashes on the following invalid input:
+
+-----------------------------------------------------------------------
+int i;
+volatile void *pvv;
+
+void pvv_test ()
+{
+  (i ? *pvv : *pvv);    /* ERROR */
+}
+-----------------------------------------------------------------------
+
+The compiler fails to issue diagnostics for cases where an attempt is
+made to "forward declare" an enum type (without also defining it), as
+in:
+
+-----------------------------------------------------------------------
+enum enum0 *ep;       /* ERROR */
+-----------------------------------------------------------------------
+
+The compiler rejects the following code with an error, although there
+seems to be no good reason why it should (because no object is being
+declared).
+
+-----------------------------------------------------------------------
+#include <limits.h>
+
+typedef char array_type[ULONG_MAX];
+-----------------------------------------------------------------------
+
+VI. The FUBYTE Problem
+
+(Thanks to Christoph Badura <bad@flatlin.ka.sub.org> for this info)
+
+The kernel function fubyte() is documented to return a positive value when
+given a valid user space address and -1 otherwise. In the latter case u.u_error
+is set to EFAULT.  USL SysV R4.0.3 has a sign extension bug in the
+implementation of fubyte() for local file descriptors (i.e. not opened via
+RFS), which causes fubyte() to return negative values if the byte fetched has
+its high bit set. This bug doesn't affect STREAMS drivers, as they don't call
+(and in fact are normally unable to call) fubyte().  Thus writing a byte with
+the high bit set to certain character device drivers returns with -1 and errno
+set to EFAULT.
+
+The bug may affect any character device driver that calls fubyte(). It's not
+limited to serial card drivers. The bug is noticed most often with serial card
+drivers, since uucp uses byte values > 127 very early during g-protocol setup
+and drivers for serial cards tend to use fubyte() quite often.
+
+Note also that the bug's effect is different if the driver checks for a -1
+return value of fubyte() or just a negative one. In the former case it is
+possible to pass bytes with the 8 bit set through fubyte(), except for 0xff
+which is -1 in two's complement. That makes the bug more obscure.
+
+The fix is easy.  First, make a backup copy of the kernel object file
+/etc/conf/pack.d/kernel/vm.o!  A disassembly of vm.o(lfubyte) should reveal
+*exactly* one mov[s]bl (move byte to long w/sign extend).  That one needs to be
+patched into a movzbl (zero extend). The difference is one bit in the second
+byte of the opcode.
+
+The movsbl has the bit pattern 00001111 1011111w mod/rm-byte.
+The movzbl has the bit pattern 00001111 1011011w mod/rm-byte.
+
+The 'w' bit is 0 for the instruction in question. So the opcodes are 0f be and
+0f b6. Here is the diff -c from dis -F lfubyte showing the patch applied to
+the Dell 2.1 kernel:
+
+*** vm.o	Mon Mar  9 00:31:38 1992
+--- vm.o.org	Mon Mar  9 00:32:40 1992
+***************
+*** 22,28 ****
+  	11c90:  85 c0                 testl  %eax,%eax
+  	11c92:  75 09                 jne    0x9 <11c9d>
+  	11c94:  8b 45 08              movl   8(%ebp),%eax
+! 	11c97:  0f b6 00              movzbl (%eax),%eax
+  	11c9a:  89 45 fc              movl   %eax,-4(%ebp)
+  	11c9d:  c7 05 d8 13 00 00 00 00 00 00 movl   $0x0,0x13d8
+  	11ca7:  83 3d dc 13 00 00 00  cmpl   $0x0,0x13dc
+--- 22,28 ----
+  	11c90:  85 c0                 testl  %eax,%eax
+  	11c92:  75 09                 jne    0x9 <11c9d>
+  	11c94:  8b 45 08              movl   8(%ebp),%eax
+! 	11c97:  0f be 00              movsbl (%eax),%eax
+  	11c9a:  89 45 fc              movl   %eax,-4(%ebp)
+  	11c9d:  c7 05 d8 13 00 00 00 00 00 00 movl   $0x0,0x13d8
+  	11ca7:  83 3d dc 13 00 00 00  cmpl   $0x0,0x13dc
+
+Of course there is a workaround at the driver level.  Canonically, one would do
+this by checking for fubyte() returning -1 *and* u.u_error being set to EFAULT
+(u.u_error is cleared upon entering a system call).  However, in R4.0.3
+fubyte() does NOT set u.u_error.  It *does* set u.u_fault_catch.fc_errno.
+
+Cristoph reports that Dell V.4 can be object-patched successfully to fix this.
+I'm told that the offending 11c97 is at exactly the same address in the
+Consensys 1.3 kernel.  I do not know the status of the other ports.
+
+Another poster (Marc Boucher <marc@cam.org>) adds:
+
+On ESIX SVR4.0.3 Rev. A, the instruction movsbl in question can be changed to
+movzbl (as described above) with a binary-editor on file
+/etc/conf/pack.d/kernel/vm.o. At offset 0x11eb0, change 0xbe to 0xb6.
+
+Before patching, verify that your /etc/conf/pack.d/kernel/vm.o is the same as
+mine!  On my system, the /bin/sum generated checksum of vm.o was "4440 222".
+
+The problem results from a sign-extension bug.  The function lfubyte(), which
+is called by fubyte(), is declared as
+
+int lfubyte(char *addr);	/* actually caddr_t */
+
+The byte is fetched with
+
+	val = *addr;
+
+which triggers sign extension.  Casting addr to a unsigned char * or declaring
+it as such solves the problem.
+
+This bug is still present in stock USL 4.0.4.  However, it has been fixed in
+Dell 2.2.
+
+VI. Destiny and Dell
+
+A source at at UNIX System Labs Europe claims that `Destiny' (the new Release
+4.2) incorporates all of Dell UNIX's fixes to 4.0.3; thus, any bug for which a
+Dell fix is indicated above should be gone in Destiny.
+--
+	Send your feedback to: Eric Raymond = esr@snark.thyrsus.com
+
+
+]
+MID: 1k2l0l#4OwP6M62kdrH67OSFO8TDRfm=esr@snark.thyrsus.com
+SUBJ: Known Bugs in the USL UNIX distribution
+BODY: Archive-name: usl-bugs | Last-update: Tue Jan  5 23:04:41 EST 1993 | Version: 10.0 |  | What's new in this issue: |  | (In the table below, bugs new this issue or old bugs for which information has | been added are marked with a * at the left margin) |  | 0. Table of Contents | I. Introduction | II. General Bugs |     1. Dropout problems with tty devices |     2. Suid programs dump core when signalled |     3. DMAs on large ISA machines may fail |     4. There is a cylinder limit on disk size |     5. shmat(2) vs. vfork(2) |     6. X performance problem |     7. FIONREAD fails on regular files |     8. A security hole in login |    
+------------------------------------------------------------
+[1993-01-15T01:35:19+00:00] [bzs@world.std.com (Barry Shein)] [
+There has been some speculation as to whether or not USL would try to
+extend this suit to control individuals who have ever had access to
+the Unix sources.
+
+I think the following quote from their latest legal filing leaves
+little doubt that the worst fears have now been confirmed...
+
+	(4) preliminarily enjoining and restraining BSDI, its
+	officers, agents, employees, servants, and all persons
+	in active concert or participation with them, from
+	employing, authorizing or otherwise allowing any person
+	who has had access to UNIX operating system source code
+	or any works, notes, memoranda, or other records,
+	copied from, based upon, or derived from such software,
+	disclosed to such person or his employer in confidence,
+	to participate on behalf of BSDI in the development of
+	source code for a multi-user computer operating system,
+	during the pendency of this action;
+
+If anyone thinks USL winning that point would only apply to BSDI
+you're, well, deceiving yourself. They could use it against any
+software company they like who doesn't have a Unix source license, the
+claims on concepts don't even have to be limited to operating systems.
+
+Worse, consider for a moment the climate of fear this would create and
+how long before employers will shun anyone who is thought to have had
+access to those sources?
+
+Another worrisome aspect is that if USL wins this whole thing it is
+not much of a stretch to consider exposure to anything based on Net2
+(e.g. Jolix, BSD386, 386BSD, whatever) to qualify a person as being
+irredeemably contaminated.
+
+If there's a better explanation for this behavior by USL I think it's
+high time USL made it be known. It looks pretty much cut and dry to
+me, from that text.
+
+-- 
+        -Barry Shein
+
+Software Tool & Die    | bzs@world.std.com          | uunet!world!bzs
+Purveyors to the Trade | Voice: 617-739-0202        | Login: 617-739-WRLD
+
+
+]
+MID: BZS.93Jan14203519@world.std.com
+SUBJ: BSDI/USL Lawsuit -- More Bad News for Human Beings...
+BODY:  | There has been some speculation as to whether or not USL would try to | extend this suit to control individuals who have ever had access to | the Unix sources. |  | I think the following quote from their latest legal filing leaves | little doubt that the worst fears have now been confirmed... |  | 	(4) preliminarily enjoining and restraining BSDI, its | 	officers, agents, employees, servants, and all persons | 	in active concert or participation with them, from | 	employing, authorizing or otherwise allowing any person | 	who has had access to UNIX operating system source code | 	or any works, notes, memoranda, or o
+------------------------------------------------------------
+[1993-01-15T02:55:53+00:00] [tg@cs.toronto.edu (Tom Glinos)] [In article <BZS.93Jan14203519@world.std.com> bzs@world.std.com (Barry Shein) writes:
+>Worse, consider for a moment the climate of fear this would create and
+>how long before employers will shun anyone who is thought to have had
+>access to those sources?
+
+Imagine somewhere in the bowls of Mircosoft.....
+"But boss, it was part of my operating systems course.
+You are firing me for being a good student???"
+
+>Another worrisome aspect is that if USL wins this whole thing it is
+>not much of a stretch to consider exposure to anything based on Net2
+>(e.g. Jolix, BSD386, 386BSD, whatever) to qualify a person as being
+>irredeemably contaminated.
+
+That would involve tens of thousands of people. Somehow, I don't
+think this would be realistic.
+
+>If there's a better explanation for this behavior by USL I think it's
+>high time USL made it be known. It looks pretty much cut and dry to
+>me, from that text.
+
+I think you are reading too much into things. I read it as USL wants to cut
+off BSDI from any outside help. They are simply applying more
+pressure. They are starting to play tough. I imagine things
+will get tougher, real soon, and on both sides. Pretty sad.
+
+Of course, a judge has to decide if this particular action has any
+merit and allow it.
+-- 
+=================
+No regrets, ever!			| Tom Glinos @ U of Toronto Statistics
+For down that path, lies madness	| tg@utstat.toronto.edu
+
+
+]
+MID: 93Jan14.215539edt.176@smoke.cs.toronto.edu
+SUBJ: Re: BSDI/USL Lawsuit -- More Bad News for Human Beings...
+BODY: In article <BZS.93Jan14203519@world.std.com> bzs@world.std.com (Barry Shein) writes: | >Worse, consider for a moment the climate of fear this would create and | >how long before employers will shun anyone who is thought to have had | >access to those sources? |  | Imagine somewhere in the bowls of Mircosoft..... | "But boss, it was part of my operating systems course. | You are firing me for being a good student???" |  | >Another worrisome aspect is that if USL wins this whole thing it is | >not much of a stretch to consider exposure to anything based on Net2 | >(e.g. Jolix, BSD386, 386BSD, whatever) to qualify a p
+------------------------------------------------------------
+[1993-01-15T03:11:44+00:00] [bzs@world.std.com (Barry Shein)] [
+>>Another worrisome aspect is that if USL wins this whole thing it is
+>>not much of a stretch to consider exposure to anything based on Net2
+>>(e.g. Jolix, BSD386, 386BSD, whatever) to qualify a person as being
+>>irredeemably contaminated.
+>>
+>
+>This may not be the case.  USL can sue UCB and BSDI for letting out trade
+>secret information, but once the information has been disseminated it would
+>be difficult to prove that individuals who are not under any non-disclosure
+>agreements have been contaminated (not to mention that the trade secret status
+>of the information itself would be in question).
+
+You're an optimist.
+
+-- 
+        -Barry Shein
+
+Software Tool & Die    | bzs@world.std.com          | uunet!world!bzs
+Purveyors to the Trade | Voice: 617-739-0202        | Login: 617-739-WRLD
+
+
+]
+MID: BZS.93Jan14221144@world.std.com
+SUBJ: Re: BSDI/USL Lawsuit -- More Bad News for Human Beings...
+BODY:  | >>Another worrisome aspect is that if USL wins this whole thing it is | >>not much of a stretch to consider exposure to anything based on Net2 | >>(e.g. Jolix, BSD386, 386BSD, whatever) to qualify a person as being | >>irredeemably contaminated. | >> | > | >This may not be the case.  USL can sue UCB and BSDI for letting out trade | >secret information, but once the information has been disseminated it would | >be difficult to prove that individuals who are not under any non-disclosure | >agreements have been contaminated (not to mention that the trade secret status | >of the information itself would be in questi
+------------------------------------------------------------
+[1993-01-15T14:11:10+00:00] [frank@martha.utcc.utk.edu (frank segner (phrank))] [hasty@netcom.com (Amancio Hasty Jr) writes:
+: In article <BZS.93Jan14203519@world.std.com> bzs@world.std.com (Barry Shein) writes:
+: 
+: If USL continues with this lawsuit non-sense, many of us will go to Windows/NT
+: and you can kiss Unix good-bye. In a way it will be good if USL wins, it
+: will leave very little choice as to where will go next. I for sure am not
+: going to contribute to USL. It really bothers me that such a small company
+: like USL could be so disruptive. So lets see how the games unfold...
+
+usl a small company ??? windows nt an alternative to bsd ??? are you NuTs ?
+btw.: isn't usl bought by novell ?
+
+'the fact that hitler was a politcal genius unmasks the nature of politics
+in general as no other can' (wilhelm reich) 
+
+advocats=politicians ?
+
+         frank
+--
+frank@martha.utk.edu
+
+
+]
+MID: 1993Jan15.141110.22279@utkux1.utk.edu
+SUBJ: Re: BSDI/USL Lawsuit -- More Bad News for Human Beings...
+BODY: hasty@netcom.com (Amancio Hasty Jr) writes: | : In article <BZS.93Jan14203519@world.std.com> bzs@world.std.com (Barry Shein) writes: | :  | : If USL continues with this lawsuit non-sense, many of us will go to Windows/NT | : and you can kiss Unix good-bye. In a way it will be good if USL wins, it | : will leave very little choice as to where will go next. I for sure am not | : going to contribute to USL. It really bothers me that such a small company | : like USL could be so disruptive. So lets see how the games unfold... |  | usl a small company ??? windows nt an alternative to bsd ??? are you NuTs ? | btw.: isn
+------------------------------------------------------------
+[1993-01-15T16:17:20+00:00] [chk@mcshh.Hanse.DE (Christian Kuhtz)] [hasty@netcom.com (Amancio Hasty Jr) writes:
+
+>In article <BZS.93Jan14203519@world.std.com> bzs@world.std.com (Barry Shein) writes:
+>If USL continues with this lawsuit non-sense, many of us will go to Windows/NT
+>and you can kiss Unix good-bye. In a way it will be good if USL wins, it
+>will leave very little choice as to where will go next. I for sure am not
+>going to contribute to USL. It really bothers me that such a small company
+>like USL could be so disruptive. So lets see how the games unfold...
+
+	Hi,
+
+	sorry. but Windows/NT is based on Mach and that's in fact 
+	another kinda UNIX. Based on a different software architecture,
+	sure. But it's UNIX.
+
+	Windows/NT is based on a Mach kernel... (as discussed in comp.os.mach)
+
+	Regards,
+		Chris
+
+
+	
+
+
+]
+MID: chk.727114640@mcshh.hanse.de
+SUBJ: Re: BSDI/USL Lawsuit -- More Bad News for Human Beings...
+BODY: hasty@netcom.com (Amancio Hasty Jr) writes: |  | >In article <BZS.93Jan14203519@world.std.com> bzs@world.std.com (Barry Shein) writes: | >If USL continues with this lawsuit non-sense, many of us will go to Windows/NT | >and you can kiss Unix good-bye. In a way it will be good if USL wins, it | >will leave very little choice as to where will go next. I for sure am not | >going to contribute to USL. It really bothers me that such a small company | >like USL could be so disruptive. So lets see how the games unfold... |  | 	Hi, |  | 	sorry. but Windows/NT is based on Mach and that's in fact  | 	another kinda UNIX. Based 
+------------------------------------------------------------
+[1993-01-15T16:32:20+00:00] [edguer@ces.cwru.edu (Aydin Edguer)] [In article <1993Jan15.023255.6020@zip.eecs.umich.edu> dmuntz@quip.eecs.umich.edu (Dan Muntz) writes:
+> The people who should really be worried are those who have been exposed
+> to recent USL research a.k.a. Plan 9.
+
+Excuse me, but this is incorrect.  Plan 9 is a research project of Bell
+Laboratories.  It is not a USL research project.  Please do not confuse 
+Bell Labs (white hats) with USL (black hats) or with AT&T corporate 
+(grey dunce caps ;-).
+
+Aydin Edguer
+
+
+]
+MID: 1j6oukINNd1i@usenet.INS.CWRU.Edu
+SUBJ: Re: BSDI/USL Lawsuit -- More Bad News for Human Beings...
+BODY: In article <1993Jan15.023255.6020@zip.eecs.umich.edu> dmuntz@quip.eecs.umich.edu (Dan Muntz) writes: | > The people who should really be worried are those who have been exposed | > to recent USL research a.k.a. Plan 9. |  | Excuse me, but this is incorrect.  Plan 9 is a research project of Bell | Laboratories.  It is not a USL research project.  Please do not confuse  | Bell Labs (white hats) with USL (black hats) or with AT&T corporate  | (grey dunce caps ;-). |  | Aydin Edguer |  |  | 
+------------------------------------------------------------
+[1993-01-15T18:09:44+00:00] [mikes@Ingres.COM (Mike Schilling)] []
+MID: 1993Jan15.180944.13266@pony.Ingres.COM
+SUBJ: Re: BSDI/USL Lawsuit -- More Bad News for Human Beings...
+BODY: 
+------------------------------------------------------------
+[1993-01-15T19:00:41+00:00] [das@eplunix.UUCP (David Steffens)] [In article <BZS.93Jan14203519@world.std.com>,
+bzs@world.std.com (Barry Shein) writes:
+> There has been some speculation as to whether or not USL would try to
+> extend this suit to control individuals who have ever had access to
+> the Unix sources. ... their latest legal filing leaves
+> little doubt that the worst fears have now been confirmed...
+
+We programmers have no one to blame for this but ourselves.
+
+For years we have been screaming for more and better laws and enforcement
+of licensing, copyright, patents, etc.  Everyone and her sister wants
+"intellectual property" protection (an oxymoron if ever there was one).
+
+How the hex do you think this "protection" will be accomplished?
+Since you can't lock up "intellectual property", you have to place controls
+on the individuals who have access to said "property".  If you are going
+to demand protection for _your_ "property", then you had d*mn well better
+be prepared for the consequences when others come forward to demand similar
+protection for _their_ "property".  All of us who have helped to make this
+bed will now just have to learn to sleep in it... or try to _un_make it.
+
+When ideas become "property", _everyone_ loses!  So it goes...
+-- 
+David Allan Steffens       | I believe in learning from past mistakes...
+Eaton-Peabody Laboratory   | but why does a good education require so many?
+Mass. Eye & Ear Infirmary, 243 Charles Street, Boston, MA 02114
+{harvard,mit-eddie}!eplunix!das    Tel (617) 573-3748    Fax (617) 720-4408
+
+
+]
+MID: 1343@eplunix.UUCP
+SUBJ: Re: BSDI/USL Lawsuit -- More Bad News for Human Beings...
+BODY: In article <BZS.93Jan14203519@world.std.com>, | bzs@world.std.com (Barry Shein) writes: | > There has been some speculation as to whether or not USL would try to | > extend this suit to control individuals who have ever had access to | > the Unix sources. ... their latest legal filing leaves | > little doubt that the worst fears have now been confirmed... |  | We programmers have no one to blame for this but ourselves. |  | For years we have been screaming for more and better laws and enforcement | of licensing, copyright, patents, etc.  Everyone and her sister wants | "intellectual property" protection (an oxymoro
+------------------------------------------------------------
+[1993-01-15T19:19:30+00:00] [jbuck@forney.berkeley.edu (Joe Buck)] [In article <1993Jan15.060754.12717@netcom.com> hasty@netcom.com (Amancio Hasty Jr) writes:
+>If USL continues with this lawsuit non-sense, many of us will go to Windows/NT
+>and you can kiss Unix good-bye. In a way it will be good if USL wins, it
+>will leave very little choice as to where will go next.
+
+Um, did you read Barry's article carefully?  If USL succeeds in getting
+the notion that anyone who has been exposed to Unix source code may not
+work on a competing operating system, Microsoft had better check very
+carefully that no one in their Windows/NT group has ever seen Unix source code,
+and I'll bet that several have.  I mean, most of us who worked with Unix
+in the early 80s, when source licenses were common, have seen the source
+code.
+
+Although I may be accused of being an optimist, I think that arguments
+like this will get this particular motion by USL ("we own your brain")
+discarded, because so many OS types have been exposed to Unix source
+code that the logical consequence would be to give USL a monopoly over
+all OSes that could compete with Unix.  We *do* still have antitrust laws
+despite the best efforts of the Reagan and Bush Justice departments.
+
+
+
+--
+Joe Buck	jbuck@ohm.berkeley.edu
+
+
+]
+MID: 1j72o2$rbp@agate.berkeley.edu
+SUBJ: Re: BSDI/USL Lawsuit -- More Bad News for Human Beings...
+BODY: In article <1993Jan15.060754.12717@netcom.com> hasty@netcom.com (Amancio Hasty Jr) writes: | >If USL continues with this lawsuit non-sense, many of us will go to Windows/NT | >and you can kiss Unix good-bye. In a way it will be good if USL wins, it | >will leave very little choice as to where will go next. |  | Um, did you read Barry's article carefully?  If USL succeeds in getting | the notion that anyone who has been exposed to Unix source code may not | work on a competing operating system, Microsoft had better check very | carefully that no one in their Windows/NT group has ever seen Unix source code, | and
+------------------------------------------------------------
+[1993-01-15T19:35:16+00:00] [betsys@cs.umb.edu (Elizabeth Schwartz)] [In article <BZS.93Jan14203519@world.std.com> bzs@world.std.com (Barry Shein) writes:
+
+>There has been some speculation as to whether or not USL would try to
+>extend this suit to control individuals who have ever had access to
+>the Unix sources.
+
+>I think the following quote from their latest legal filing leaves
+>little doubt that the worst fears have now been confirmed...
+
+	   (4) preliminarily enjoining and restraining BSDI, its
+	   officers, agents, employees, servants, and all persons
+	   in active concert or participation with them, from
+	   employing, authorizing or otherwise allowing any person
+	   who has had access to UNIX operating system source code
+	   or any works, notes, memoranda, or other records,
+	   copied from, based upon, or derived from such software,
+	   disclosed to such person or his employer in confidence,
+	   to participate on behalf of BSDI in the development of
+	   source code for a multi-user computer operating system,
+	   during the pendency of this action;
+
+Good Grief! What is this, exactly, a request for a legal action?
+Our university has source access for (old versions of) AT&T Unix. Does
+that mean that none of our students can ever work for any Unix
+company?
+
+This is unreal. What's next, no-one who's ever been in an AT&T
+building can enter an AT&T building? <no smiley>
+
+I understand that software *developers* can be asked to not go do the
+same work for another company within a time limit (not sure if I agree
+with it but I understand it) but this doesn't even limit itself to
+people who have USED the sources.
+
+
+--
+System Administrator                  Internet: betsys@cs.umb.edu
+MACS Dept, UMass/Boston               Phone   : 617-287-6448
+100 Morrissey Blvd                    Staccato signals
+Boston, MA 02125-3393                      of constant information....
+
+
+]
+MID: BETSYS.93Jan15143516@ra.cs.umb.edu
+SUBJ: Re: BSDI/USL Lawsuit -- More Bad News for Human Beings...
+BODY: In article <BZS.93Jan14203519@world.std.com> bzs@world.std.com (Barry Shein) writes: |  | >There has been some speculation as to whether or not USL would try to | >extend this suit to control individuals who have ever had access to | >the Unix sources. |  | >I think the following quote from their latest legal filing leaves | >little doubt that the worst fears have now been confirmed... |  | 	   (4) preliminarily enjoining and restraining BSDI, its | 	   officers, agents, employees, servants, and all persons | 	   in active concert or participation with them, from | 	   employing, authorizing or otherwise allowing any
+------------------------------------------------------------
+[1993-01-15T19:49:07+00:00] [scottm@intime.intime.com (Scott Michel)] [>>>>> In article <BZS.93Jan14203519@world.std.com>, bzs@world.std.com (Barry Shein) writes:
+
+bzs| There has been some speculation as to whether or not USL would try to
+bzs| extend this suit to control individuals who have ever had access to
+bzs| the Unix sources.
+
+Oh, geez. Talk about paranoia, or at least a well grounded fear from
+opening one's mind so that one's brains spill forth. Such is the danger
+from expecting a lot of lattitude when any judicial action is executed.
+
+[ legal quote deleted - look at the poster's message ]
+
+bzs| If anyone thinks USL winning that point would only apply to BSDI
+bzs| you're, well, deceiving yourself. They could use it against any
+bzs| software company they like who doesn't have a Unix source license, the
+bzs| claims on concepts don't even have to be limited to operating systems.
+
+In the strictest context, it only applies to BSDI and anyone connected
+to them (contractors, etc.) How would it affect the participants of this
+news group, for example? How would it affect Amancio?
+
+bzs| Worse, consider for a moment the climate of fear this would create and
+bzs| how long before employers will shun anyone who is thought to have had
+bzs| access to those sources?
+
+I think you're creating a self fulfilling prophesy here, since it
+explicitly states that it enjoins BSDI. It doesn't enjoin me, even
+though I have access to the sources. Unless you have dealings with
+BSDI, I don't see how it affects you?
+
+bzs| If there's a better explanation for this behavior by USL I think it's
+bzs| high time USL made it be known. It looks pretty much cut and dry to
+bzs| me, from that text.
+
+Vide infra.
+
+-scottm
+
+
+]
+MID: SCOTTM.93Jan15114909@intime.intime.com
+SUBJ: Re: BSDI/USL Lawsuit -- More Bad News for Human Beings...
+BODY: >>>>> In article <BZS.93Jan14203519@world.std.com>, bzs@world.std.com (Barry Shein) writes: |  | bzs| There has been some speculation as to whether or not USL would try to | bzs| extend this suit to control individuals who have ever had access to | bzs| the Unix sources. |  | Oh, geez. Talk about paranoia, or at least a well grounded fear from | opening one's mind so that one's brains spill forth. Such is the danger | from expecting a lot of lattitude when any judicial action is executed. |  | [ legal quote deleted - look at the poster's message ] |  | bzs| If anyone thinks USL winning that point would only apply to 
+------------------------------------------------------------
+[1993-01-15T20:04:56+00:00] [morgan@ms.uky.edu (Wes Morgan)] [bzs@world.std.com (Barry Shein) wrote:
+>
+>There has been some speculation as to whether or not USL would try to
+>extend this suit to control individuals who have ever had access to
+>the Unix sources.
+>
+> [ nasty clause from legal documents deleted ]
+>
+>If anyone thinks USL winning that point would only apply to BSDI
+>you're, well, deceiving yourself. They could use it against any
+>software company they like who doesn't have a Unix source license, the
+>claims on concepts don't even have to be limited to operating systems.
+>
+>Worse, consider for a moment the climate of fear this would create and
+>how long before employers will shun anyone who is thought to have had
+>access to those sources?
+
+This makes me wonder what will happen to all those Computer Science and
+Computer Engineering graduates who just happened to attend a univer-
+sity with a Unix source license.  
+
+"Oh, you went to the University of Foo, and took the Compilers class? 
+ <checking list> Sorry, but you were exposed to Unix source code; we 
+ can't hire you."
+
+Yeesh.
+
+--Wes
+-- 
+MORGAN@UKCC         |       Wes Morgan       |        ...!ukma!ukecc!morgan 
+morgan@ms.uky.edu   | University of Kentucky |   morgan@wuarchive.wustl.edu
+morgan@engr.uky.edu | Lexington,Kentucky USA | JWMorgan@dockmaster.ncsc.mil
+  Mailing list for AT&T StarServer S/E  - starserver-request@engr.uky.edu
+
+
+]
+MID: 1993Jan15.150456.9897@ms.uky.edu
+SUBJ: Re: BSDI/USL Lawsuit -- More Bad News for Human Beings...
+BODY: bzs@world.std.com (Barry Shein) wrote: | > | >There has been some speculation as to whether or not USL would try to | >extend this suit to control individuals who have ever had access to | >the Unix sources. | > | > [ nasty clause from legal documents deleted ] | > | >If anyone thinks USL winning that point would only apply to BSDI | >you're, well, deceiving yourself. They could use it against any | >software company they like who doesn't have a Unix source license, the | >claims on concepts don't even have to be limited to operating systems. | > | >Worse, consider for a moment the climate of fear this would create and
+------------------------------------------------------------
+[1993-01-15T20:58:38+00:00] [geoff@tyger.East.Sun.COM (Geoff Arnold @ Sun BOS - R.H. coast near the top)] [In article 727114640@mcshh.hanse.de, chk@mcshh.Hanse.DE (Christian Kuhtz) writes:
+##
+##	sorry. but Windows/NT is based on Mach and that's in fact 
+##	another kinda UNIX. Based on a different software architecture,
+##	sure. But it's UNIX.
+##
+##	Windows/NT is based on a Mach kernel... (as discussed in comp.os.mach)
+
+Sorry, but that's NOT "in fact". While Windows/NT borrows from
+Mach the idea of a kernel supporting multiple protected mode subsystems
+each of which supports a distinct service model, NT doesn't use any
+code from Mach. Go and read "Inside Windows NT" by Helen Custer
+(1993, Microsoft Press, ISBN 1-55615-481-X). NT != UNIX (for all values
+of UNIX). Internally, NT probably borrows more from VMS than anything
+else - after all, Cutler always wanted a chance to redo VMS "right".
+
+---
+Geoff Arnold, PC-NFS architect, Sun Select. (geoff.arnold@East.Sun.COM)
+
+
+]
+MID: 1j78huINNmi@seven-up.East.Sun.COM
+SUBJ: Re: BSDI/USL Lawsuit -- More Bad News for H
+BODY: In article 727114640@mcshh.hanse.de, chk@mcshh.Hanse.DE (Christian Kuhtz) writes: | ## | ##	sorry. but Windows/NT is based on Mach and that's in fact  | ##	another kinda UNIX. Based on a different software architecture, | ##	sure. But it's UNIX. | ## | ##	Windows/NT is based on a Mach kernel... (as discussed in comp.os.mach) |  | Sorry, but that's NOT "in fact". While Windows/NT borrows from | Mach the idea of a kernel supporting multiple protected mode subsystems | each of which supports a distinct service model, NT doesn't use any | code from Mach. Go and read "Inside Windows NT" by Helen Custer | (1993, Microsoft 
+------------------------------------------------------------
+[1993-01-15T22:01:35+00:00] [ed@weir.pa.dec.com (Ed Gould)] [> 	sorry. but Windows/NT is based on Mach and that's in fact 
+> 	another kinda UNIX. Based on a different software architecture,
+> 	sure. But it's UNIX.
+
+Neither is NT based on Mach, nor is Mach Unix.  The system known as Mach
+2.6 or 2.6 is closely derived from BSD - it's a BSD system with Mach
+VM and IPC added, more or less.  Mach 3.0 - the microkernel - is
+unrelated to Unix, although the most common server running atop Mach
+3.0 is a Unix server.  Other servers do exist, including a DOS server,
+which, obviously, bears no relation to Unix, and an OSF/1 server,
+which does.
+
+NT, and Windows/NT (which is Windows running on NT rather than on DOS)
+is completely unrelated.  NT was designed by Dave Cutler at Microsoft.
+Cutler was one of the main VMS architects when he was at DEC.
+
+--
+Ed Gould	  ed@pa.dec.com		Digital Equipment Corporation
++1 415 688 1309	  Network Systems Lab	181 Lytton Ave, Palo Alto, CA  94301
+
+"Unison is only one form of harmony." -- LW
+
+
+]
+MID: 1j7c7vINNok0@usenet.pa.dec.com
+SUBJ: Re: BSDI/USL Lawsuit -- More Bad News for Human Beings...
+BODY: > 	sorry. but Windows/NT is based on Mach and that's in fact  | > 	another kinda UNIX. Based on a different software architecture, | > 	sure. But it's UNIX. |  | Neither is NT based on Mach, nor is Mach Unix.  The system known as Mach | 2.6 or 2.6 is closely derived from BSD - it's a BSD system with Mach | VM and IPC added, more or less.  Mach 3.0 - the microkernel - is | unrelated to Unix, although the most common server running atop Mach | 3.0 is a Unix server.  Other servers do exist, including a DOS server, | which, obviously, bears no relation to Unix, and an OSF/1 server, | which does. |  | NT, and Windows/NT (
+------------------------------------------------------------
+[1993-01-15T22:23:13+00:00] [rlk@underprize.think.com (Robert Krawitz)] [In article <1j7f5rINNqvn@ftp.UU.NET> sef@Kithrup.COM (Sean Eric Fagan) writes:
+
+   In article <BETSYS.93Jan15143516@ra.cs.umb.edu> betsys@cs.umb.edu (Elizabeth Schwartz) writes:
+   >(4) preliminarily enjoining and restraining BSDI, its
+   >officers, agents, employees, servants, and all persons
+   >in active concert or participation with them, from
+   >employing, authorizing or otherwise allowing any person
+   >who has had access to UNIX operating system source code
+   >or any works, notes, memoranda, or other records,
+   >copied from, based upon, or derived from such software,
+   >disclosed to such person or his employer in confidence,
+   >to participate on behalf of BSDI in the development of
+   >source code for a multi-user computer operating system,
+   >during the pendency of this action;
+
+   The fun part about that, which I don't know how many people have
+   recognized or admitted, is that the Bach abd BSD books fall under
+   the category of "works, noted, memoranda" "copied from, based upon,
+   or derived from" the USL code.
+
+It does say "disclosed to such person or his employer in confidence",
+which would seem to rule that out.  Nonetheless, this *is* nasty...
+--
+ames >>>>>>>>>  |	Robert Krawitz <rlk@think.com>	245 First St.
+bloom-beacon >  |think!rlk				Cambridge, MA  02142
+harvard >>>>>>  .	Thinking Machines Corp.		(617)234-2116
+
+Member of the League for Programming Freedom -- write lpf@uunet.uu.net
+
+
+]
+MID: RLK.93Jan15222313@underprize.think.com
+SUBJ: Re: BSDI/USL Lawsuit -- More Bad News for Human Beings...
+BODY: In article <1j7f5rINNqvn@ftp.UU.NET> sef@Kithrup.COM (Sean Eric Fagan) writes: |  |    In article <BETSYS.93Jan15143516@ra.cs.umb.edu> betsys@cs.umb.edu (Elizabeth Schwartz) writes: |    >(4) preliminarily enjoining and restraining BSDI, its |    >officers, agents, employees, servants, and all persons |    >in active concert or participation with them, from |    >employing, authorizing or otherwise allowing any person |    >who has had access to UNIX operating system source code |    >or any works, notes, memoranda, or other records, |    >copied from, based upon, or derived from such software, |    >disclosed to
+------------------------------------------------------------
+[1993-01-15T22:37:46+00:00] [jja@fnbc.com (Joseph Alotta)] [
+since i don't know anything about operating systems,
+perhaps i can get a cushy job writing one now.
+
+that makes me100% uncontaminated by any knowledge
+of my subject matter.
+
+are you listening usl?
+
+joe.
+
+
+
+
+
+
+
+--
+==============================================================
+! joe alotta                                    jja@fnbc.com !                                               
+!                                             (312) 732-3439 !
+!                                                            !
+! "The main thing is to keep the main thing the main thing." !
+! Dr. George Sweeney                                         !
+==============================================================
+
+
+]
+MID: 1993Jan15.223746.24608@fnbc.com
+SUBJ: Re: BSDI/USL Lawsuit -- More Bad News for Human Beings...
+BODY:  | since i don't know anything about operating systems, | perhaps i can get a cushy job writing one now. |  | that makes me100% uncontaminated by any knowledge | of my subject matter. |  | are you listening usl? |  | joe. |  |  |  |  |  |  |  | -- | ============================================================== | ! joe alotta                                    jja@fnbc.com !                                                | !                                             (312) 732-3439 ! | !                                                            ! | ! "The main thing is to keep the main thing the main thing." ! | ! Dr. George Sweeney    
+------------------------------------------------------------
+[1993-01-15T22:51:39+00:00] [sef@Kithrup.COM (Sean Eric Fagan)] [In article <BETSYS.93Jan15143516@ra.cs.umb.edu> betsys@cs.umb.edu (Elizabeth Schwartz) writes:
+>(4) preliminarily enjoining and restraining BSDI, its
+>officers, agents, employees, servants, and all persons
+>in active concert or participation with them, from
+>employing, authorizing or otherwise allowing any person
+>who has had access to UNIX operating system source code
+>or any works, notes, memoranda, or other records,
+>copied from, based upon, or derived from such software,
+>disclosed to such person or his employer in confidence,
+>to participate on behalf of BSDI in the development of
+>source code for a multi-user computer operating system,
+>during the pendency of this action;
+
+The fun part about that, which I don't know how many people have
+recognized or admitted, is that the Bach abd BSD books fall under
+the category of "works, noted, memoranda" "copied from, based upon,
+or derived from" the USL code.
+
+In other words:  BSDI would be prevented from hiring anyone who has
+read one of the two most popular books for operating system classes!
+
+And, of course, "persons in active concert or participation with" BSDI
+also happens to include their customers.
+
+(In all honesty, I don't think it's likely for USL to get that
+injunction, and I have been told it's common practice to "shoot
+for the moon," expecting to get less.  Nonetheless... scary, ain't it?)
+
+Ya' know... UseNIX is coming up.  I kinda feel sorry for any USL people
+who might be coming.  They're probably going to get a whole lot of unwanted
+(and probably undeserved) attention.
+
+
+
+]
+MID: 1j7f5rINNqvn@ftp.UU.NET
+SUBJ: Re: BSDI/USL Lawsuit -- More Bad News for Human Beings...
+BODY: In article <BETSYS.93Jan15143516@ra.cs.umb.edu> betsys@cs.umb.edu (Elizabeth Schwartz) writes: | >(4) preliminarily enjoining and restraining BSDI, its | >officers, agents, employees, servants, and all persons | >in active concert or participation with them, from | >employing, authorizing or otherwise allowing any person | >who has had access to UNIX operating system source code | >or any works, notes, memoranda, or other records, | >copied from, based upon, or derived from such software, | >disclosed to such person or his employer in confidence, | >to participate on behalf of BSDI in the development of | >source
+------------------------------------------------------------
+[1993-01-16T02:10:51+00:00] [tg@cs.toronto.edu (Tom Glinos)] [In article <1j7f5rINNqvn@ftp.UU.NET> sef@Kithrup.COM (Sean Eric Fagan) writes:
+>Ya' know... UseNIX is coming up.  I kinda feel sorry for any USL people
+>who might be coming.  They're probably going to get a whole lot of unwanted
+>(and probably undeserved) attention.
+
+I think it would be a great idea if USL people showed up.
+This way, we could tell them, in person, what we think.
+That's what USENIX is all about!
+-- 
+=================
+No regrets, ever!			| Tom Glinos @ U of Toronto Statistics
+For down that path, lies madness	| tg@utstat.toronto.edu
+
+
+]
+MID: 93Jan15.211025edt.1578@smoke.cs.toronto.edu
+SUBJ: Re: BSDI/USL Lawsuit -- More Bad News for Human Beings...
+BODY: In article <1j7f5rINNqvn@ftp.UU.NET> sef@Kithrup.COM (Sean Eric Fagan) writes: | >Ya' know... UseNIX is coming up.  I kinda feel sorry for any USL people | >who might be coming.  They're probably going to get a whole lot of unwanted | >(and probably undeserved) attention. |  | I think it would be a great idea if USL people showed up. | This way, we could tell them, in person, what we think. | That's what USENIX is all about! | --  | ================= | No regrets, ever!			| Tom Glinos @ U of Toronto Statistics | For down that path, lies madness	| tg@utstat.toronto.edu |  |  | 
+------------------------------------------------------------
+[1993-01-16T02:46:34+00:00] [bhoughto@sedona.intel.com (Blair P. Houghton)] [In article <BZS.93Jan14203519@world.std.com> bzs@world.std.com (Barry Shein) writes:
+
+Someone want to get Barry half a valium?
+
+>	(4) preliminarily [...] during the pendency of this action;
+
+Not permanently.
+
+This clause is not binding after "this action" is settled,
+though another clause of a similar nature may come into being.
+
+>       enjoining and restraining BSDI, its
+>	officers, agents, employees, servants, and all persons
+>	in active concert or participation with them,
+
+This pretty clearly spells out that it's only BSDI and
+possibly other people directly involved in the "theft of
+intellectual property" (my term) that are being prevented
+from doing certain things.  It certainly doesn't apply to
+*every* person who's ever fondled the Lions book.
+
+>       from employing, authorizing or otherwise allowing [certain people]
+>	to participate on behalf of BSDI in the development of
+>	source code for a multi-user computer operating system,
+
+So even if you *are* the person who cracked alice and
+snarfed the source codes for v7, you can still be hired by
+BSDI to do single-user UNIX development, to develop architectures
+for multi-user UNIX, to do integrations and script programs
+for a UNIX environment, etc., etc.
+
+>	any person
+>	who has had access to UNIX operating system source code
+>	or any works, notes, memoranda, or other records,
+>	copied from, based upon, or derived from such software,
+
+Well, hell, that's about all of us who've read Bach...
+
+>	disclosed to such person or his employer in confidence,
+
+Then again, it's few of us, because Bach is hardly a matter
+of "in confidence," but it does include anyone who has a
+legal copy of the Lions book or has worked with licensed
+versions of UNIX OS system sources.  But it specifically
+excludes anyone whose only experience with that code is
+by having cracked Ma Bell and snarfed it illegally.
+
+
+Basically, whoever wrote this thing seems to have
+gone a long way out of their way to leave out a large
+part of the UNIX developing community, including some
+people who are more heinously guilty of crimes against
+USL than a little intellectual-property misfeasance.
+
+>If anyone thinks USL winning that point would only apply to BSDI
+>you're, well, deceiving yourself.
+
+Exactly the opposite.  Even if they win it with prejudice,
+your lawyer would have to be a babboon to let it apply
+to you.  It may not even apply to the people USL named
+as principals in its suit.
+
+				--Blair
+				  "I'm not a lawyer, but
+				   I play a TV on one..."
+
+
+]
+MID: 1j7suaINNj2u@chnews.intel.com
+SUBJ: Re: BSDI/USL Lawsuit -- More Bad News for Human Beings...
+BODY: In article <BZS.93Jan14203519@world.std.com> bzs@world.std.com (Barry Shein) writes: |  | Someone want to get Barry half a valium? |  | >	(4) preliminarily [...] during the pendency of this action; |  | Not permanently. |  | This clause is not binding after "this action" is settled, | though another clause of a similar nature may come into being. |  | >       enjoining and restraining BSDI, its | >	officers, agents, employees, servants, and all persons | >	in active concert or participation with them, |  | This pretty clearly spells out that it's only BSDI and | possibly other people directly involved in the "theft of | intell
+------------------------------------------------------------
+[1993-01-16T07:02:08+00:00] [hasty@netcom.com (Amancio Hasty Jr)] [In article <1j78huINNmi@seven-up.East.Sun.COM> geoff@tyger.East.Sun.COM writes:
+>In article 727114640@mcshh.hanse.de, chk@mcshh.Hanse.DE (Christian Kuhtz) writes:
+
+>of UNIX). Internally, NT probably borrows more from VMS than anything
+>else - after all, Cutler always wanted a chance to redo VMS "right".
+
+So add 1 to each letter of VMS and you get WNT :-)
+
+RSX-11, VMS, WNT, is like a hollywood movie exploiting the same theme
+over and over again...
+
+	Amancio
+
+
+-- 
+This message brought to you by the letters X and S and the number 3
+Amancio Hasty           |  
+Home: (415) 495-3046    |  ftp-site depository of all my work:
+e-mail hasty@netcom.com	|  sunvis.rtpnc.epa.gov:/pub/386bsd/incoming
+
+
+]
+MID: 1993Jan16.070208.12691@netcom.com
+SUBJ: Re: BSDI/USL Lawsuit -- More Bad News for H
+BODY: In article <1j78huINNmi@seven-up.East.Sun.COM> geoff@tyger.East.Sun.COM writes: | >In article 727114640@mcshh.hanse.de, chk@mcshh.Hanse.DE (Christian Kuhtz) writes: |  | >of UNIX). Internally, NT probably borrows more from VMS than anything | >else - after all, Cutler always wanted a chance to redo VMS "right". |  | So add 1 to each letter of VMS and you get WNT :-) |  | RSX-11, VMS, WNT, is like a hollywood movie exploiting the same theme | over and over again... |  | 	Amancio |  |  | --  | This message brought to you by the letters X and S and the number 3 | Amancio Hasty           |   | Home: (415) 495-3046    |  ftp-site d
+------------------------------------------------------------
+[1993-01-16T08:46:29+00:00] [gtoal@pizzabox.demon.co.uk (Graham Toal)] [In article <JET.93Jan15185603@boxer.nas.nasa.gov> jet@boxer.nas.nasa.gov (J. Eric Townsend) writes:
+:"das" == David Steffens <das@eplunix.UUCP> writes:
+:das> For years we have been screaming for more and better laws and
+:das> enforcement of licensing, copyright, patents, etc.  Everyone and
+:das> her sister wants "intellectual property" protection (an oxymoron
+:das> if ever there was one).
+:
+:`What you mean "we", paleface?' -- Tonto, in a moment of
+:self-awareness.
+
+Seconded.  This Steffens character is seriously out of touch with the
+mood of the net.  Perhaps 'every company and their sister company ...'
+
+G
+
+
+]
+MID: C0xv1I.nL@demon.co.uk
+SUBJ: Re: BSDI/USL Lawsuit -- More Bad News for Human Beings...
+BODY: In article <JET.93Jan15185603@boxer.nas.nasa.gov> jet@boxer.nas.nasa.gov (J. Eric Townsend) writes: | :"das" == David Steffens <das@eplunix.UUCP> writes: | :das> For years we have been screaming for more and better laws and | :das> enforcement of licensing, copyright, patents, etc.  Everyone and | :das> her sister wants "intellectual property" protection (an oxymoron | :das> if ever there was one). | : | :`What you mean "we", paleface?' -- Tonto, in a moment of | :self-awareness. |  | Seconded.  This Steffens character is seriously out of touch with the | mood of the net.  Perhaps 'every company and their sister co
+------------------------------------------------------------
+[1993-01-16T16:57:10+00:00] [phil@pex.eecs.nwu.edu (William LeFebvre)] [In article <1343@eplunix.UUCP> das@eplunix.UUCP (David Steffens) writes:
+>We programmers have no one to blame for this but ourselves.
+
+Or each other......
+
+>For years we have been screaming for more and better laws and enforcement
+>of licensing, copyright, patents, etc.  Everyone and her sister wants
+>"intellectual property" protection (an oxymoron if ever there was one).
+
+I haven't been doing any yelling.  Haven't heard much either.
+I must be going deaf........    1/2 :-)
+
+		William LeFebvre
+		Computing Facilities Manager and Analyst
+		Department of Electrical Engineering and Computer Science
+		Northwestern University
+		<phil@eecs.nwu.edu>
+
+
+
+
+]
+MID: 1993Jan16.165710.7389@eecs.nwu.edu
+SUBJ: Re: BSDI/USL Lawsuit -- More Bad News for Human Beings...
+BODY: In article <1343@eplunix.UUCP> das@eplunix.UUCP (David Steffens) writes: | >We programmers have no one to blame for this but ourselves. |  | Or each other...... |  | >For years we have been screaming for more and better laws and enforcement | >of licensing, copyright, patents, etc.  Everyone and her sister wants | >"intellectual property" protection (an oxymoron if ever there was one). |  | I haven't been doing any yelling.  Haven't heard much either. | I must be going deaf........    1/2 :-) |  | 		William LeFebvre | 		Computing Facilities Manager and Analyst | 		Department of Electrical Engineering and Computer Science
+------------------------------------------------------------
+[1993-01-16T17:46:49+00:00] [dfishman@teal.csn.org (Dan Fishman)] [A comment from the silent majority...  There seems to be an assumption that
+the UNIX community (users, programmers and gurus are included I presume)
+speaks with one mind with respect to legal and intellectual property issue;
+that of the vocal minority in this and other news groups.  They do not!
+
+Though I haven't the data to prove it, the UNIX community is much broader 
+than the gurus who attend USENIX and balk at any and every legal action 
+relating to UNIX or even the software industry in general.  There are many
+of us who give due respect to those in the industry who choose to advance
+the art by offering their services free of charge (or at least profit). 
+Thank you Jolitz's, Stallman, Amancio et al... GNU amd 386BSD are doing a
+great job at moving the software field ahead.  Berkeley and other academic
+institutions are doing their part as well supported by tax dollars and
+tuition.
+
+But I also pay due respect to USL, Novell, IBM, Microsoft, HP, DEC,
+and yes even the Apples of the industry for advancing the art of software
+based on profit motives and the associated use of intellectual property
+protection.  Let's give credit where credit is due!  This does not mean I
+support everything such massive companies may do in in the name of IP
+law enforcement, but I do not share the paranoia expressed by many readers
+of this and other groups that the sky will fall if USL moves this way or that.
+
+Some of you are kidding yourselves to think that the legal system always crushes
+the little guy.  These huge corps are scared shitless of the little guy with
+a good legal claim against them.  Certainly there are problems with our legal 
+system not only in terms relating to the software biz, but everywhere.  Work
+to correct those problems, don't toss the baby with the bathwater.
+
+There may in fact be some of you out there that may be directly affected
+by a USL victory (if it ever happens), but the industry as a whole will march
+ahead without noticing the outcome.
+
+My (long-windded) point is simply that too many of you are assuming that
+the UNIX community (or software community more generally) supports your 
+every claim that our business is unique and must be saved from the wolves
+at the door (IBM, USL...).  WE DO NOT!  There are those of us who see no
+problems in commercial expolitation of protected expressions and ideas, in
+fact, some of us even make a living doing so... it called programming too!
+
+Dan Fishman (dfishman@csn.org)
+
+
+]
+MID: C0yK27.9Ly@csn.org
+SUBJ: Re: BSDI/USL Lawsuit -- More Bad News for Human Beings...
+BODY: A comment from the silent majority...  There seems to be an assumption that | the UNIX community (users, programmers and gurus are included I presume) | speaks with one mind with respect to legal and intellectual property issue; | that of the vocal minority in this and other news groups.  They do not! |  | Though I haven't the data to prove it, the UNIX community is much broader  | than the gurus who attend USENIX and balk at any and every legal action  | relating to UNIX or even the software industry in general.  There are many | of us who give due respect to those in the industry who choose to advance | the a
+------------------------------------------------------------
+[1993-01-16T20:35:53+00:00] [scs@lokkur.dexter.mi.us (Steve Simmons)] [scottm@intime.intime.com (Scott Michel) writes:
+
+>>>>>> In article <BZS.93Jan14203519@world.std.com>, bzs@world.std.com (Barry Shein) writes:
+
+>bzs| If anyone thinks USL winning that point would only apply to BSDI
+>bzs| you're, well, deceiving yourself. They could use it against any
+>bzs| software company they like who doesn't have a Unix source license, the
+>bzs| claims on concepts don't even have to be limited to operating systems.
+
+>In the strictest context, it only applies to BSDI and anyone connected
+>to them (contractors, etc.) How would it affect the participants of this
+>news group, for example? How would it affect Amancio?
+
+In it's strictest context yes, the lawsuit by USL against BSDI applies
+only to BSDI.  What is of concern here (you listen up too, Blair) is that
+if USL establishes precedent that having access to source is sufficient
+to disqualify you from working on unix clones, we're all fucked.  They
+walk into court with the decision, point at Jolix, and *boom* down it
+goes.  They point at linux (can they prove *none* of the developers ever
+saw UNIX code?  didn't think so) *boom* down it goes.  Andy Tannenbaum
+is next, *boom* down goes Minix.
+-- 
+"When Dexter's on the Internet,    | "Make me taste like things I've never
+ can Hell be far behind?"          |  tasted before!"  Mr Peanut to Candied
+      scs@lokkur.dexter.mi.us	   |  Bergen in `Caramel Knowledge'
+
+
+]
+MID: 1993Jan16.203553.12911@lokkur.dexter.mi.us
+SUBJ: Re: BSDI/USL Lawsuit -- More Bad News for Human Beings...
+BODY: scottm@intime.intime.com (Scott Michel) writes: |  | >>>>>> In article <BZS.93Jan14203519@world.std.com>, bzs@world.std.com (Barry Shein) writes: |  | >bzs| If anyone thinks USL winning that point would only apply to BSDI | >bzs| you're, well, deceiving yourself. They could use it against any | >bzs| software company they like who doesn't have a Unix source license, the | >bzs| claims on concepts don't even have to be limited to operating systems. |  | >In the strictest context, it only applies to BSDI and anyone connected | >to them (contractors, etc.) How would it affect the participants of this | >news group, fo
+------------------------------------------------------------
+[1993-01-16T22:07:38+00:00] [gtoal@pizzabox.demon.co.uk (Graham Toal)] [In article <C0yK27.9Ly@csn.org> dfishman@teal.csn.org (Dan Fishman) writes:
+:Some of you are kidding yourselves to think that the legal system always crushes
+:the little guy.  These huge corps are scared shitless of the little guy with
+:a good legal claim against them.  Certainly there are problems with our legal 
+:system not only in terms relating to the software biz, but everywhere.  Work
+:to correct those problems, don't toss the baby with the bathwater.
+
+Only if the little guy has funding, eg financial help from EFF - if the
+little guy is truly on his own, the big corps will be laughing all the
+way to the bank no matter how good the little guy's case may be...
+
+G
+
+
+]
+MID: C0yw4t.5D8@demon.co.uk
+SUBJ: Re: BSDI/USL Lawsuit -- More Bad News for Human Beings...
+BODY: In article <C0yK27.9Ly@csn.org> dfishman@teal.csn.org (Dan Fishman) writes: | :Some of you are kidding yourselves to think that the legal system always crushes | :the little guy.  These huge corps are scared shitless of the little guy with | :a good legal claim against them.  Certainly there are problems with our legal  | :system not only in terms relating to the software biz, but everywhere.  Work | :to correct those problems, don't toss the baby with the bathwater. |  | Only if the little guy has funding, eg financial help from EFF - if the | little guy is truly on his own, the big corps will be laughing al
+------------------------------------------------------------
+[1993-01-16T23:24:52+00:00] [bhoughto@sedona.intel.com (Blair P. Houghton)] [In article <1993Jan16.203553.12911@lokkur.dexter.mi.us> scs@lokkur.dexter.mi.us (Steve Simmons) writes:
+>In it's strictest context yes, the lawsuit by USL against BSDI applies
+>only to BSDI.  What is of concern here (you listen up too, Blair) is that
+
+Oh boy; I just love being told big things!!!!
+
+:-/
+
+>if USL establishes precedent that having access to source is sufficient
+>to disqualify you from working on unix clones, we're all fucked.  They
+>walk into court with the decision, point at Jolix, and *boom* down it
+>goes.  They point at linux (can they prove *none* of the developers ever
+>saw UNIX code?  didn't think so) *boom* down it goes.  Andy Tannenbaum
+>is next, *boom* down goes Minix.
+
+The plaintiff has to have a "preponderance of the evidence"
+in civil cases (in criminal cases the state has to have
+evidence "beyond a reasonable doubt," which is much
+stricter, like 90% vs. the 50% for a "preponderance").  The
+defendants aren't required to "prove they never saw UNIX
+code."  USL has to prove that the defendants had access to,
+studied, and improved upon their specific code without
+having had a license to do so.
+
+Plus, the information used has to be copies of copyrighted
+items, or direct use of patented devices, or some breach of
+a contractual agreement between the two parties.  It can't
+just be decided on a likeness to UNIX (although, obviously,
+there may be some problem with the use of the trademarked
+word, "UNIX", in those contexts, but I'm pretty sure we
+know what goes at the bottom of every page on which that's
+occurred...).  The Apple case clobbered the look-and-feel
+argument outright.
+
+I don't know about Jolix or Minix, but Linux was most
+likely black-boxed, or at least far enough removed from the
+developers' involvement with original AT&T software that it
+isn't traceably similar.
+
+Plus, despite what you may believe, the paragraph in
+question was a temporary injunction for the duration of the
+case.  It's entirely probable that USL may enter into an
+agreement with Berkeley and BSDI which completely reverses
+everyone's idea of the conflict.  All it has to do is be a
+profitable arrangement.  USL gains nothing by putting ten
+thousand software engineers out of work.
+
+Anyone (other than the CEO of BSDI) who's chewing his
+fingernails off over this little blurb is sadly mistaken
+about the reach of USL and about the wiles of the average
+defense lawyer.
+
+				--Blair
+				  "Circle the wagons...NOT!"
+
+UNIX is a trademark and who knows who the hell owns it...
+
+
+]
+MID: 1ja5g4INNgrm@chnews.intel.com
+SUBJ: Re: BSDI/USL Lawsuit -- More Bad News for Human Beings...
+BODY: In article <1993Jan16.203553.12911@lokkur.dexter.mi.us> scs@lokkur.dexter.mi.us (Steve Simmons) writes: | >In it's strictest context yes, the lawsuit by USL against BSDI applies | >only to BSDI.  What is of concern here (you listen up too, Blair) is that |  | Oh boy; I just love being told big things!!!! |  | :-/ |  | >if USL establishes precedent that having access to source is sufficient | >to disqualify you from working on unix clones, we're all fucked.  They | >walk into court with the decision, point at Jolix, and *boom* down it | >goes.  They point at linux (can they prove *none* of the developers ever | >saw U
+------------------------------------------------------------
+[1993-01-16T23:36:07+00:00] [bhoughto@sedona.intel.com (Blair P. Houghton)] [In article <id.OPQW.K4I@ferranti.com> peter@ferranti.com (peter da silva) writes:
+>In article <1993Jan15.023255.6020@zip.eecs.umich.edu> dmuntz@quip.eecs.umich.edu (Dan Muntz) writes:
+>> The people who should really be worried are those who
+>> have been exposed to recent USL research [eg] Plan 9.
+
+Ergo Pike, Thompson, and Ritchie are to be chained to Bell
+for life and turned away from all other doors for fear they
+might coopt the intellectual protection?  (...not to
+mention Aho, Weinberger, and Kernighan, the Parsely Trinity...)
+
+>Plan 9 and USL, so far as I know, have never had anything to do with each
+>other. USL shortly won't even have the same parent company as Bell Labs.
+
+Speaking of which, when is Plan 9 going to become a product
+and stop being a research tool and topic of industrial gossip?
+
+				--Blair
+				  "This article placed in the
+				   Public Domain on the Sixteenth
+				   of January in the Year of Our
+				   Lord Nineteen Hundred and
+				   Ninety-three, exit 0."
+
+
+]
+MID: 1ja657INNh20@chnews.intel.com
+SUBJ: Re: BSDI/USL Lawsuit -- More Bad News for Human Beings...
+BODY: In article <id.OPQW.K4I@ferranti.com> peter@ferranti.com (peter da silva) writes: | >In article <1993Jan15.023255.6020@zip.eecs.umich.edu> dmuntz@quip.eecs.umich.edu (Dan Muntz) writes: | >> The people who should really be worried are those who | >> have been exposed to recent USL research [eg] Plan 9. |  | Ergo Pike, Thompson, and Ritchie are to be chained to Bell | for life and turned away from all other doors for fear they | might coopt the intellectual protection?  (...not to | mention Aho, Weinberger, and Kernighan, the Parsely Trinity...) |  | >Plan 9 and USL, so far as I know, have never had anything to do
+------------------------------------------------------------
+[1993-01-16T23:39:28+00:00] [bhoughto@sedona.intel.com (Blair P. Houghton)] [In article <C0yK27.9Ly@csn.org> dfishman@teal.csn.org (Dan Fishman) writes:
+>There are those of us who see no
+>problems in commercial expolitation of protected expressions and ideas, in
+>fact, some of us even make a living doing so... it called programming too!
+
+Much as I loathe sycophancy, especially my own, I need to
+mention that this was a very apt expression of my own
+opinion on the matter.
+
+				--Blair
+				  "Author!  Author!"
+
+
+]
+MID: 1ja6bgINNh23@chnews.intel.com
+SUBJ: Re: BSDI/USL Lawsuit -- More Bad News for Human Beings...
+BODY: In article <C0yK27.9Ly@csn.org> dfishman@teal.csn.org (Dan Fishman) writes: | >There are those of us who see no | >problems in commercial expolitation of protected expressions and ideas, in | >fact, some of us even make a living doing so... it called programming too! |  | Much as I loathe sycophancy, especially my own, I need to | mention that this was a very apt expression of my own | opinion on the matter. |  | 				--Blair | 				  "Author!  Author!" |  |  | 
+------------------------------------------------------------
+[1993-01-16T23:41:32+00:00] [bhoughto@sedona.intel.com (Blair P. Houghton)] [In article <JET.93Jan15185603@boxer.nas.nasa.gov> jet@boxer.nas.nasa.gov (J. Eric Townsend) writes:
+>`What you mean "we", paleface?' -- Tonto, in a moment of
+>self-awareness.
+
+"Kiss my ass; I've bought a boat; I'm going out to sea."
+	- Tonto, in a Lyle Lovett song
+
+				--Blair
+				  "This is getting silly.
+				   Who's up for Chinese food?"
+
+
+]
+MID: 1ja6fcINNh2c@chnews.intel.com
+SUBJ: Re: BSDI/USL Lawsuit -- More Bad News for Human Beings...
+BODY: In article <JET.93Jan15185603@boxer.nas.nasa.gov> jet@boxer.nas.nasa.gov (J. Eric Townsend) writes: | >`What you mean "we", paleface?' -- Tonto, in a moment of | >self-awareness. |  | "Kiss my ass; I've bought a boat; I'm going out to sea." | 	- Tonto, in a Lyle Lovett song |  | 				--Blair | 				  "This is getting silly. | 				   Who's up for Chinese food?" |  |  | 
+------------------------------------------------------------
+[1993-01-17T01:59:35+00:00] [bzs@world.std.com (Barry Shein)] [
+First: A Disclaimer...
+
+    Although this note appears on comp.org.usenix (and other groups) and
+    noting that I am on the Board of Directors of Usenix, this note is
+    not to be construed as expressing the official position of Usenix nor
+    their Board of Directors.
+
+From: bhoughto@sedona.intel.com (Blair P. Houghton)
+>In article <C0yK27.9Ly@csn.org> dfishman@teal.csn.org (Dan Fishman) writes:
+>>There are those of us who see no
+>>problems in commercial expolitation of protected expressions and ideas, in
+>>fact, some of us even make a living doing so... it called programming too!
+>
+>Much as I loathe sycophancy, especially my own, I need to
+>mention that this was a very apt expression of my own
+>opinion on the matter.
+
+The issue vis a vis the USL/BSDI suit isn't much about whether or not
+copyright protections (etc) are appropriate on software. That's a red
+herring interpretation. BSDI certainly claims copyrights on their own
+work and expects them to be honored.
+
+The issue is, among other things, whether anyone can really be made to
+believe that what occurred over a period of approximately 14 years at
+UCB/CSRG by their highly esteemed staff and by hundreds of members of
+the software community at large can really be construed as "copying"?
+
+One would think that "copying", at the very least, implies some sort
+of unfair short cut.
+
+Put another way, was the purpose of the Copyright law and its
+extension to software over the years to stop what CSRG actually did?
+
+Or is USL stretching a point beyond any rational limit and in fact
+there was no copying as protected under that law (if that law is even
+appropriate)?
+
+Further, the license at issue is Unix/32V* and whether or not there is
+copyright protection for that version remains an issue.
+
+USL clearly claims there is a legitimate copyright for 32V in their
+complaints. What's at issue is whether or not this copyright was first
+claimed many years after the software was distributed, and whether or
+not the reason that AT&T did not claim copyright for 32V at the time
+was at least in part due to their being forbidden from entering the
+software business as part of their monopoly agreement with the United
+States of America, or perhaps because they purposely did not copyright
+it for other strategic reasons (which perhaps now they regret)?
+
+Although there may well be nit-picky fine points regarding the line
+between minor "copying" and mere "compatability" (e.g. #define'd
+symbols which are the same, should they have renamed BUFSIZ or
+whatever?), one would hope that there is something more substantive to
+USL's claims to drag others into such a knock-down, drag-out fight.
+
+Let's get down to the point: Did CSRG or did CSRG not create a work of
+significant new creative content (in Net/2) to merit its being
+considered a wholely new and unique work under the copyright law?
+That's the issue under the law, not whether or not they both used a
+1-4-5 chord progression or both had the words "baby, oh baby"
+somewhere in the chorus.
+
+So, although the issue of copyright does indeed come up in the
+complaints filed by USL, the issue is not whether or not copyrights
+are valid in general, but whether or not A) USL's specific claim of
+copyright on 32V is valid and B) Even if the copyright is valid was
+anything material actually copied (put more simply: was the Copyright
+Law violated)?
+
+
+
+* 32V was a minor release of Unix around 1979 which provided a partial
+port of Unix Version 7 to the then new DEC/Vax hardware. This is the
+last source license and version Berkeley (UCB/CSRG) signed and
+acquired from AT&T. 32V, among other things, did not use the virtual
+memory features of the Vax. The first release to do so came from
+Berkeley/CSRG. AT&T entered the software business with Unix, after
+Judge Green cleared it, around 1982.
+
+-- 
+        -Barry Shein
+
+Software Tool & Die    | bzs@world.std.com          | uunet!world!bzs
+Purveyors to the Trade | Voice: 617-739-0202        | Login: 617-739-WRLD
+
+
+]
+MID: BZS.93Jan16205935@world.std.com
+SUBJ: Re: BSDI/USL Lawsuit -- More Bad News for Human Beings...
+BODY:  | First: A Disclaimer... |  |     Although this note appears on comp.org.usenix (and other groups) and |     noting that I am on the Board of Directors of Usenix, this note is |     not to be construed as expressing the official position of Usenix nor |     their Board of Directors. |  | From: bhoughto@sedona.intel.com (Blair P. Houghton) | >In article <C0yK27.9Ly@csn.org> dfishman@teal.csn.org (Dan Fishman) writes: | >>There are those of us who see no | >>problems in commercial expolitation of protected expressions and ideas, in | >>fact, some of us even make a living doing so... it called programming too! | > | >Much 
+------------------------------------------------------------
+[1993-01-17T02:00:30+00:00] [gardner@convex.com (Steve Gardner)] [In article <1343@eplunix.UUCP> das@eplunix.UUCP (David Steffens) writes:
+>In article <BZS.93Jan14203519@world.std.com>,
+>bzs@world.std.com (Barry Shein) writes:
+>> There has been some speculation as to whether or not USL would try to
+>> extend this suit to control individuals who have ever had access to
+>> the Unix sources. ... their latest legal filing leaves
+>> little doubt that the worst fears have now been confirmed...
+>
+>We programmers have no one to blame for this but ourselves.
+>For years we have been screaming for more and better laws and enforcement
+>of licensing, copyright, patents, etc.  Everyone and her sister wants
+>"intellectual property" protection (an oxymoron if ever there was one).
+	Yes.  Thank you for saying this.
+
+
+
+>When ideas become "property", _everyone_ loses!  So it goes...
+	The whole concept of intellectual property is so damned dishonest.
+	Of all the cockamamie ideas to come out of the legal profession
+	"intellectual property" has to be the most fraudulent.  It purports
+	to protect inventors.  What a fraud! How can anyone fall for it?
+	I can only conclude that the people who champion it 
+		a) either haven't fully considered the ramifications 
+
+			or 
+
+		b) that they are not the creators of technical 
+		   innovations themselves and hope to suck the blood 
+		   from those who DO create for a living.
+
+	How any engineer or scientist could be in favor of a system that
+	means that *someone else* could own the contents of their brain
+	is beyond me.  Do they harbor the myth that somehow they will 
+	be allowed to own ideas they come up with?  This is ridiculous.
+	Folks, Thomas Alva Edison is LONG DEAD.  Inventions are created
+	by engineers and scientists and OWNED by boards of directors.  
+	Engineers don't	even get a piece of the action (i.e. a percentage) 
+	in 99% of the cases.  Where is the justice here?  How can 
+	technical people be so easily mislead into supporting this fraud.
+
+
+							smg
+
+
+
+
+]
+MID: 1993Jan17.020030.11728@news.eng.convex.com
+SUBJ: Re: BSDI/USL Lawsuit -- More Bad News for Human Beings...
+BODY: In article <1343@eplunix.UUCP> das@eplunix.UUCP (David Steffens) writes: | >In article <BZS.93Jan14203519@world.std.com>, | >bzs@world.std.com (Barry Shein) writes: | >> There has been some speculation as to whether or not USL would try to | >> extend this suit to control individuals who have ever had access to | >> the Unix sources. ... their latest legal filing leaves | >> little doubt that the worst fears have now been confirmed... | > | >We programmers have no one to blame for this but ourselves. | >For years we have been screaming for more and better laws and enforcement | >of licensing, copyright, patents, 
+------------------------------------------------------------
+[1993-01-17T05:45:53+00:00] [clewis@ferret.ocunix.on.ca (Chris Lewis)] [In article <RLK.93Jan15222313@underprize.think.com> rlk@underprize.think.com (Robert Krawitz) writes:
+>In article <1j7f5rINNqvn@ftp.UU.NET> sef@Kithrup.COM (Sean Eric Fagan) writes:
+
+>   In article <BETSYS.93Jan15143516@ra.cs.umb.edu> betsys@cs.umb.edu (Elizabeth Schwartz) writes:
+>   >(4) preliminarily enjoining and restraining BSDI, its
+>   >officers, agents, employees, servants, and all persons
+>   >in active concert or participation with them, from
+>   >employing, authorizing or otherwise allowing any person
+>   >who has had access to UNIX operating system source code
+>   >or any works, notes, memoranda, or other records,
+>   >copied from, based upon, or derived from such software,
+>   >disclosed to such person or his employer in confidence,
+>   >to participate on behalf of BSDI in the development of
+>   >source code for a multi-user computer operating system,
+>   >during the pendency of this action;
+
+>   The fun part about that, which I don't know how many people have
+>   recognized or admitted, is that the Bach abd BSD books fall under
+>   the category of "works, noted, memoranda" "copied from, based upon,
+>   or derived from" the USL code.
+
+>It does say "disclosed to such person or his employer in confidence",
+>which would seem to rule that out.  Nonetheless, this *is* nasty...
+
+While reading the Bach/BSD books wouldn't get you contaminated, it
+is still *very* broad coverage.  Not only is this going to cover anybody
+ever having worked with UNIX source (which would include older BSD
+releases, and *present* releases because USL is insisting that BSD freed
+sources are USL's IP, plus Xenix, plus older AIXes etc. etc. etc.), it'd
+also probably include large chunks of each University's CS community.
+
+It'd also cause some, er, interesting, problems inside AT&T/Bell Labs itself.
+[Can you imagine AT&T/Bell Labs no longer being able to work on Plan 9?
+I mean, after all, I think those guys have had some exposure to UNIX
+source ;-)]
+
+I'd be "contaminated" in several different ways: V5/V6/V7 graduate student
+kernel hacking, BSD 4.[12], SIII, PWB, SV and Xenix source at several companies.
+In spite of the fact that I've not had access to source for 4 or 5 years.
+
+I've had a little exposure to stuff such as this.  When one of my
+employers, a manufacturer of 680x0-based Xenix systems, decided to
+fold, it attempted to enjoin the soon to be ex-employees from working
+for any of their customers (not competitors!) for a period of 3 years -
+which included almost all of the big corporations here.  It would have
+made it extremely difficult for me to get a job.  I consulted a lawyer
+expert in such matters, and he said not to worry because it "constituted
+a clear intent to deprive me of the ability to earn a living", and
+would be summarily thrown out.  He also said, while there are some
+situations where a company can enjoin you from working from their
+competitors for a year or three based on IP, the courts take a very
+dim view of overbroad restrictions (the USL/BSDI ones would apply in
+two ways - being in violation of the 3 year limit, and also being
+so indiscriminate), and will consider such drastic impairments of
+an individual's employability to be unacceptable and would be disallowed.
+
+My understanding is that the situation in the US is roughly comparable.
+
+It's a bit scary, because USL might have the wherewithall to get it made
+permanent, and extend it elsewhere.  But in order to do this, they'd
+have to violate existing precident (ie: Amdahl, 3 year limits) in
+the USA.  And violate precident and the various provincial employment
+standards acts in Canada too (unless I had a bout of insanity and decided
+to emmigrate to the USA ;-)  So I'm not panicking.  Yet.
+-- 
+Chris Lewis; clewis@ferret.ocunix.on.ca; Phone: Canada 613 832-0541
+Psroff 3.0 info: psroff-request@ferret.ocunix.on.ca
+Ferret list: ferret-request@ferret.ocunix.on.ca
+
+
+]
+MID: 4142@ecicrl.ocunix.on.ca
+SUBJ: Re: BSDI/USL Lawsuit -- More Bad News for Human Beings...
+BODY: In article <RLK.93Jan15222313@underprize.think.com> rlk@underprize.think.com (Robert Krawitz) writes: | >In article <1j7f5rINNqvn@ftp.UU.NET> sef@Kithrup.COM (Sean Eric Fagan) writes: |  | >   In article <BETSYS.93Jan15143516@ra.cs.umb.edu> betsys@cs.umb.edu (Elizabeth Schwartz) writes: | >   >(4) preliminarily enjoining and restraining BSDI, its | >   >officers, agents, employees, servants, and all persons | >   >in active concert or participation with them, from | >   >employing, authorizing or otherwise allowing any person | >   >who has had access to UNIX operating system source code | >   >or any works, no
+------------------------------------------------------------
+[1993-01-17T08:49:40+00:00] [msmith@beta.tricity.wsu.edu (Dragon Lord)] [In article <C0yK27.9Ly@csn.org> dfishman@teal.csn.org (Dan Fishman) writes:
+> [stuff deleted]
+>My (long-windded) point is simply that too many of you are assuming that
+>the UNIX community (or software community more generally) supports your 
+>every claim that our business is unique and must be saved from the wolves
+>at the door (IBM, USL...).  WE DO NOT!  There are those of us who see no
+>problems in commercial expolitation of protected expressions and ideas, in
+>fact, some of us even make a living doing so... it called programming too!
+>
+BINGO!  
+
+MY only bitch about USL in NOT that they're sueing 
+somebody.  It's that USL is saying "You stole something
+from us and we're not telling what it is.  Prove to us that
+you DIDN'T steel something.  Oh, while your at it, give us
+ALL of YOU'RE intelectual property, customer list and
+anything else that will help us."  
+
+The USL lawsuit is looked upon by many people that I know
+(Cray system engineer, system programers, college admin
+and others) as strictly a marketing ploy to bog BSDI down
+UNTIL USL gets there PC version of SVR4 out the door.
+
+Mark
+
+
+]
+MID: 1993Jan17.084940.20817@serval.net.wsu.edu
+SUBJ: Re: BSDI/USL Lawsuit -- More Bad News for Human Beings...
+BODY: In article <C0yK27.9Ly@csn.org> dfishman@teal.csn.org (Dan Fishman) writes: | > [stuff deleted] | >My (long-windded) point is simply that too many of you are assuming that | >the UNIX community (or software community more generally) supports your  | >every claim that our business is unique and must be saved from the wolves | >at the door (IBM, USL...).  WE DO NOT!  There are those of us who see no | >problems in commercial expolitation of protected expressions and ideas, in | >fact, some of us even make a living doing so... it called programming too! | > | BINGO!   |  | MY only bitch about USL in NOT that they're s
+------------------------------------------------------------
+[1993-01-17T20:34:43+00:00] [clewis@ferret.ocunix.on.ca (Chris Lewis)] [In article <1993Jan17.020030.11728@news.eng.convex.com> gardner@convex.com (Steve Gardner) writes:
+>	The whole concept of intellectual property is so damned dishonest.
+>	Of all the cockamamie ideas to come out of the legal profession
+>	"intellectual property" has to be the most fraudulent.  It purports
+>	to protect inventors.  What a fraud! How can anyone fall for it?
+>	I can only conclude that the people who champion it 
+
+It protects the people who *own* the invention, often having invested large
+sums of money in developing it.
+
+There's nothing wrong with the concept of intellectual property, when you
+consider that these "inventions" were invented by inventors who're being
+paid to do it, and the inventions are owned, usually by contract, by
+the employer.  The inventor is just doing his job - he got his reward,
+and the company got theirs.  There's nothing wrong with IP with respect
+to internal trade secrets as opposed to user-visible interfaces (look-and-feel
+is a whole 'nother ballgame)
+
+The problem arises where lawyers think that IP restrictions are forever,
+an (ex-) employee is assumed to necessarily *use* that technology in
+a new place, and that company IP supercedes someone's ability to make
+a living in their field (if we set aside situations which are tantamount
+to industrial espionage).
+
+Fortunately I live in an area where even employee-employer signed IP
+agreements are almost always struck down because they're overbroad,
+overlong or just plain ridiculously restrictive.  Leading to lawyers
+in the field saying not to worry about IPs, because they're almost always
+ipo-facto illegal being in contravention of employment standards
+legislation, or being trivially strike-downable.  The only time these
+tend to stand is where the company can establish that you were bribed
+with a new higher-paying job explicitly in return for company secrets.
+In those cases you're screwed, and you deserve to be.
+
+We're probably being unduely panicky about this at this point, for
+computer-company IP isn't different than IP in any other industry,
+and as yet, there doesn't appear to be significant abuse of IP
+in those areas either.  Future employment restrictions tend only
+to be upheld in extremely exceptional cases, and only for a limited
+time.  USL's restrictions wouldn't have a chance of becoming permanent
+here, unless the judge completely lost his/her mind and completely ignored
+the ample law and precedent.  Temporary injunction during litigation
+maybe, but certainly not permanent.
+-- 
+Chris Lewis; clewis@ferret.ocunix.on.ca; Phone: Canada 613 832-0541
+Psroff 3.0 info: psroff-request@ferret.ocunix.on.ca
+Ferret list: ferret-request@ferret.ocunix.on.ca
+
+
+]
+MID: 4148@ecicrl.ocunix.on.ca
+SUBJ: Re: BSDI/USL Lawsuit -- More Bad News for Human Beings...
+BODY: In article <1993Jan17.020030.11728@news.eng.convex.com> gardner@convex.com (Steve Gardner) writes: | >	The whole concept of intellectual property is so damned dishonest. | >	Of all the cockamamie ideas to come out of the legal profession | >	"intellectual property" has to be the most fraudulent.  It purports | >	to protect inventors.  What a fraud! How can anyone fall for it? | >	I can only conclude that the people who champion it  |  | It protects the people who *own* the invention, often having invested large | sums of money in developing it. |  | There's nothing wrong with the concept of intellectual property,
+------------------------------------------------------------
+[1993-01-17T20:43:20+00:00] [boyd@prl.dec.com (Boyd Roberts)] [In article <1j6oukINNd1i@usenet.INS.CWRU.Edu>, edguer@ces.cwru.edu (Aydin Edguer) writes:
+> Plan 9 is a research project of Bell Laboratories.  It is not a USL research
+> project.  Please do not confuse Bell Labs (white hats)...
+
+Actually, it's white shirts with red collars...
+
+
+Boyd Roberts			boyd@prl.dec.com
+
+``When the going gets wierd, the weird turn pro...''
+
+
+]
+MID: 1993Jan17.204320.22905@prl.dec.com
+SUBJ: Re: BSDI/USL Lawsuit -- More Bad News for Human Beings...
+BODY: In article <1j6oukINNd1i@usenet.INS.CWRU.Edu>, edguer@ces.cwru.edu (Aydin Edguer) writes: | > Plan 9 is a research project of Bell Laboratories.  It is not a USL research | > project.  Please do not confuse Bell Labs (white hats)... |  | Actually, it's white shirts with red collars... |  |  | Boyd Roberts			boyd@prl.dec.com |  | ``When the going gets wierd, the weird turn pro...'' |  |  | 
+------------------------------------------------------------
+[1993-01-18T01:34:11+00:00] [bhoughto@sedona.intel.com (Blair P. Houghton)] [In article <1993Jan17.020030.11728@news.eng.convex.com> gardner@convex.com (Steve Gardner) writes:
+>	How any engineer or scientist could be in favor of a system that
+>	means that *someone else* could own the contents of their brain
+>	is beyond me.
+
+Obviously, since that's almost entirely what "intellectual
+property" does NOT mean.
+
+				--Blair
+				  "Voooom!"
+
+
+]
+MID: 1jd1ejINNl20@chnews.intel.com
+SUBJ: Re: BSDI/USL Lawsuit -- More Bad News for Human Beings...
+BODY: In article <1993Jan17.020030.11728@news.eng.convex.com> gardner@convex.com (Steve Gardner) writes: | >	How any engineer or scientist could be in favor of a system that | >	means that *someone else* could own the contents of their brain | >	is beyond me. |  | Obviously, since that's almost entirely what "intellectual | property" does NOT mean. |  | 				--Blair | 				  "Voooom!" |  |  | 
+------------------------------------------------------------
+[1993-01-18T02:00:39+00:00] [bhoughto@sedona.intel.com (Blair P. Houghton)] [In article <BZS.93Jan16205935@world.std.com> bzs@world.std.com (Barry Shein) writes:
+>The issue is, among other things, whether anyone can really be made to
+>believe that what occurred over a period of approximately 14 years at
+>UCB/CSRG by their highly esteemed staff and by hundreds of members of
+>the software community at large can really be construed as "copying"?
+
+Well, Mr. Chairman-disclaimed, you're pretty much hitting
+the nail right on the head, here.
+
+The fact appears to be that this puppy is in court until it
+isn't, and until then we're ranting around in a colorfully
+speculatory manner.  (But I certainly won't stop MYself;
+it's too much fun. :-))
+
+>Further, the license at issue is Unix/32V* and whether or not there is
+>copyright protection for that version remains an issue.
+>
+>USL clearly claims there is a legitimate copyright for 32V in their
+>complaints. What's at issue is whether or not this copyright was first
+>claimed many years after the software was distributed, and whether or
+
+I'd find it hard to believe that copyright bugs weren't
+apparent in every element of the packaging and installed
+files of 32V when the license for it was signed; if they
+weren't then AT&T's lawyers probably have some excruciating
+explaining to do to the shareholders.
+
+I'm all for intellectual property, but not if the lawyers
+are going to screw it up and let the recipients think they
+have privileges they don't really have.
+
+>not the reason that AT&T did not claim copyright for 32V at the time
+>was at least in part due to their being forbidden from entering the
+>software business as part of their monopoly agreement with the United
+>States of America, or perhaps because they purposely did not copyright
+>it for other strategic reasons (which perhaps now they regret)?
+
+If they were forbidden by the USA, then they couldn't have
+"owned" it for the purpose of controlling it and certainly
+not for the purpose of profiting from it.
+
+I'm all for intellectual property, but not for monopolism
+(damn; now *I* gotta disclaim...  This posting is my
+opinion and not necessarily that of my employer or the
+United States Golf Association (I'm wearing my '92 Pebble
+Beach US Open sweatshirt as I type...)).
+
+>Although there may well be nit-picky fine points regarding the line
+>between minor "copying" and mere "compatability" (e.g. #define'd
+>symbols which are the same, should they have renamed BUFSIZ or
+>whatever?), one would hope that there is something more substantive to
+>USL's claims to drag others into such a knock-down, drag-out fight.
+
+THEY'LL NEVER GET THE SETUID-BIT!!! NEVER!!!
+
+(They can't.  It's PD.  Thanks, Dennis. :-))
+
+>Let's get down to the point: Did CSRG or did CSRG not create a work of
+>significant new creative content (in Net/2) to merit its being
+>considered a wholely new and unique work under the copyright law?
+
+Wholly new?  I don't think so, and I'd bet real money that
+a court of law won't think so, either.
+
+Significantly new enough that USL can't forbid its
+release?  There's a slim possibility of this but it's not
+likely.
+
+Just derivative enough that USL can be awarded some portion
+of the revenues generated?  Almost certainly.  This is how
+much intellectual property ends up; cross-licensed in a
+fine mesh of gross percentages and licensing fees.
+Otherwise, incremental improvements are forbidden and don't
+appear (and often they don't, for just that reason, and
+the original owner ends up way out of business because
+very little is marketable in the first rev).
+
+>That's the issue under the law, not whether or not they both used a
+>1-4-5 chord progression or both had the words "baby, oh baby"
+>somewhere in the chorus.
+
+There's another issue:  didn't AT&T intend for UNIX to be
+propagated openly in this way?  If not, then howcome AT&T's
+lawyers didn't react negatively when CSRG indicated that
+this was their intent?  If CSRG didn't indicate this was
+their intent and AT&T didn't indicate that it was okay,
+then how did they form the attitude that they could
+redistribute AT&T's intellectual property?
+
+>So, although the issue of copyright does indeed come up in the
+>complaints filed by USL, the issue is not whether or not copyrights
+>are valid in general, but whether or not A) USL's specific claim of
+>copyright on 32V is valid and B) Even if the copyright is valid was
+>anything material actually copied (put more simply: was the Copyright
+>Law violated)?
+
+And C) Did this copying somehow violate the terms of the
+original license?
+
+				--Blair
+				  "Anybody got a lawyer?---YIPE!!
+				   I can't believe I said that..."
+
+
+]
+MID: 1jd307INNlf6@chnews.intel.com
+SUBJ: Re: BSDI/USL Lawsuit -- More Bad News for Human Beings...
+BODY: In article <BZS.93Jan16205935@world.std.com> bzs@world.std.com (Barry Shein) writes: | >The issue is, among other things, whether anyone can really be made to | >believe that what occurred over a period of approximately 14 years at | >UCB/CSRG by their highly esteemed staff and by hundreds of members of | >the software community at large can really be construed as "copying"? |  | Well, Mr. Chairman-disclaimed, you're pretty much hitting | the nail right on the head, here. |  | The fact appears to be that this puppy is in court until it | isn't, and until then we're ranting around in a colorfully | speculatory manne
+------------------------------------------------------------
+[1993-01-18T02:11:04+00:00] [tg@cs.toronto.edu (Tom Glinos)] [
+>Uh, has it occurred to anyone out there that the folks doing the
+>litigating (the lawyers, presumably with prodding from the upper levels
+>of management) are the least likely folks to ever appear at a trade
+>show?  The folks attending the conference are just like all the rest of
+>us trying to earn our keep by doing the UNIX/software thing.
+>
+>Look, I'm not fond of what USL is doing *as* *a* *corporate* *body*, but
+>I like a lot of the things the folks in the trenches have done.  Do you
+>seriously want to be abused because of the corporate policies of *your*
+>employer?
+
+Yup, I pity the guy in the trenches. BUT, you ARE a representative
+of your company (USL) at a public function. Let the chain of command
+know that you don't like the situation and the public doesn't like
+it either.
+
+Imagine you are in a uniform. You think the enemy won't take shots
+at you because you don't share the same opinion as your political leaders??
+
+Remind you of someplace familiar?? 
+-- 
+=================
+No regrets, ever!			| Tom Glinos @ U of Toronto Statistics
+For down that path, lies madness	| tg@utstat.toronto.edu
+
+
+]
+MID: 93Jan17.211032edt.847@smoke.cs.toronto.edu
+SUBJ: Re: BSDI/USL Lawsuit -- More Bad News for Human Beings...
+BODY:  | >Uh, has it occurred to anyone out there that the folks doing the | >litigating (the lawyers, presumably with prodding from the upper levels | >of management) are the least likely folks to ever appear at a trade | >show?  The folks attending the conference are just like all the rest of | >us trying to earn our keep by doing the UNIX/software thing. | > | >Look, I'm not fond of what USL is doing *as* *a* *corporate* *body*, but | >I like a lot of the things the folks in the trenches have done.  Do you | >seriously want to be abused because of the corporate policies of *your* | >employer? |  | Yup, I pity the guy in
+------------------------------------------------------------
+[1993-01-18T02:13:35+00:00] [vjs@rhyolite.wpd.sgi.com (Vernon Schryver)] [In article <1993Jan17.203539.6063@s4mjs.uucp>, mjs@s4mjs.uucp (M.J.Shannon) writes:
+> ...
+> Look, I'm not fond of what USL is doing *as* *a* *corporate* *body*, but
+> I like a lot of the things the folks in the trenches have done.  Do you
+> seriously want to be abused because of the corporate policies of *your*
+> employer?
+
+
+Your heart is in the right place.  There must be some people in USL who
+are good people and smart and competent programers.  However, I cannot
+conceive of "[liking] a lot of the things the folks in the trenches [at
+USL] have done."
+
+
+The things that USL has done have in general been somewhere among
+undesirable, wrong, illconceived, and poorly executed.  I'm sure here
+there must be something good on the System V tapes from USL in the last
+half dozen years that were done by USL, but I can't think of one.  The
+few good things that I can think of from the System V tapes that I
+don't know to have originated outside of USL and at most to have been
+"improved and productized" (and generally messed up) predate SVR3.0.
+
+For example, the improved networking code in SVR4 is really 4.3BSD
+filtered through Sun and STREAM-ized, as can be easily seen if you
+`diff` various flavors of 4.3BSD with various SVR4 tapes.  The various
+version networking in SVR3 was also from outside USL.  For another
+example, rumor had it that the Ma Bell inventors of streams were, to
+put it mildly, less than enthused about how System V STREAMS turned
+out, which might have something to do with why they were using BSD
+based source in (I think it was) the 8th Edition.
+
+Years ago, code from CSRG could be characterized as "student code."
+USL kernel code has always had a strong flavor of "COBOL code."  Since
+the days of 4.1, BSD code has become quite reasonable.  System V is
+now ... well, on the grounds that there must be some good people somewhere
+in there, I'll stop.
+
+
+Most works of man and especially computer software reflect the
+political and cultural environment in which they were produced.
+What you would expect from USL is about what you get.
+
+
+Vernon Schryver,  vjs@sgi.com
+
+
+]
+MID: v0r38cs@rhyolite.wpd.sgi.com
+SUBJ: Re: BSDI/USL Lawsuit -- More Bad News for Human Beings...
+BODY: In article <1993Jan17.203539.6063@s4mjs.uucp>, mjs@s4mjs.uucp (M.J.Shannon) writes: | > ... | > Look, I'm not fond of what USL is doing *as* *a* *corporate* *body*, but | > I like a lot of the things the folks in the trenches have done.  Do you | > seriously want to be abused because of the corporate policies of *your* | > employer? |  |  | Your heart is in the right place.  There must be some people in USL who | are good people and smart and competent programers.  However, I cannot | conceive of "[liking] a lot of the things the folks in the trenches [at | USL] have done." |  |  | The things that USL has done have in ge
+------------------------------------------------------------
+[1993-01-18T06:22:47+00:00] [ed@weir.pa.dec.com (Ed Gould)] [[Houghton]
+> I'd find it hard to believe that copyright bugs weren't
+> apparent in every element of the packaging and installed
+> files of 32V when the license for it was signed; if they
+> weren't then AT&T's lawyers probably have some excruciating
+> explaining to do to the shareholders.
+
+[Shein]
+>> or perhaps because they purposely did not copyright
+>> it for other strategic reasons (which perhaps now they regret)?
+
+The copyright notices were *removed* from a previous version (I no
+longer remember just which, but I expect it was 5th Edition) before it
+was released outside AT&T.  This removal was at the explicit direction
+of the lawyers, who, at the time, believed that under then-current
+copyrught law they could not claim both copyright protection *and*
+trade secret protection for the work.  At the time, they wanted to
+protect UNIX as their trade secret.
+
+Whether the 32/V release is protected by copyright is one of the
+primary issues in the case.  As I understand things, it hinges on the
+technical definition of "publication."  USL claims that 32/V (and
+other systems that they released at that time) were not published
+works, hence they were not covered by the copyright law at the time.
+This is particularly important, because the law then said that, in
+order to claim copyright, the work must be marked as copyrighted.
+Current law does not have this requirement; USL has recently (since
+the bringing of the suit against BSDI) filed a copyright registration
+for 32/V.
+
+> I'm all for intellectual property, but ...
+
+Could you be clear about what you mean by "intellectual property?"  I
+suspect you have an understanding of the concept that is different
+from the legal meaning.
+
+> THEY'LL NEVER GET THE SETUID-BIT!!! NEVER!!!
+> 
+> (They can't.  It's PD.  Thanks, Dennis. :-))
+
+If by "PD" you mean "Public Domain," then no, it's not.  The set-uid
+bit is protected by a United States patent.  It happens that the owner
+of the patent (AT&T, not DMR, for all practical purposes), has decided
+to "let" the patent, which means, effectively, that they grant a
+royalty-free license, without application, to anyone who chooses to
+use it.
+
+"Public Domain" is probably the most mis-used phrase on the net.
+Nearly nothing whose author is still alive is legally in the public
+domain.  This doesn't mean that there aren't things that are freely
+distributable, but that's not a synonem for public domain.
+
+> And C) Did this copying somehow violate the terms of the
+> original license?
+
+The "original license" protected UNIX solely on trade secret grounds.
+I have heard tell of a legal analysis (but never talked to any of the
+lawyers who did the analysis) that described the trade secret status
+of UNIX thusly.  IF the case were ever to go to court, the defense
+would call as witness, someone from the plaintiff (USL, perhaps, in
+this case) and ask, "How many people, outside your organization, know
+this `secret'?"  The answer would be something like, "Oh, maybe
+100,000 or so."  IF that weren't sufficient for the judge to throw out
+the claim of a secret, the second question would be, "What secrets
+remain after the publication of Bach's book, the publication of which
+was approved by you?"  The only truthful answer to this question is,
+"None."
+
+--
+Ed Gould	  ed@pa.dec.com		Digital Equipment Corporation
++1 415 688 1309	  Network Systems Lab	181 Lytton Ave, Palo Alto, CA  94301
+
+"Unison is only one form of harmony." -- LW
+
+
+]
+MID: 1jdibnINN52u@usenet.pa.dec.com
+SUBJ: Re: BSDI/USL Lawsuit -- More Bad News for Human Beings...
+BODY: [Houghton] | > I'd find it hard to believe that copyright bugs weren't | > apparent in every element of the packaging and installed | > files of 32V when the license for it was signed; if they | > weren't then AT&T's lawyers probably have some excruciating | > explaining to do to the shareholders. |  | [Shein] | >> or perhaps because they purposely did not copyright | >> it for other strategic reasons (which perhaps now they regret)? |  | The copyright notices were *removed* from a previous version (I no | longer remember just which, but I expect it was 5th Edition) before it | was released outside AT&T.  This removal 
+------------------------------------------------------------
+[1993-01-18T07:32:13+00:00] [bhayden@teal.csn.org (Bruce Hayden)] [scs@lokkur.dexter.mi.us (Steve Simmons) writes:
+
+>scottm@intime.intime.com (Scott Michel) writes:
+
+>>>>>>> In article <BZS.93Jan14203519@world.std.com>, bzs@world.std.com (Barry Shein) writes:
+
+>>bzs| If anyone thinks USL winning that point would only apply to BSDI
+>>bzs| you're, well, deceiving yourself. They could use it against any
+>>bzs| software company they like who doesn't have a Unix source license, the
+>>bzs| claims on concepts don't even have to be limited to operating systems.
+
+>>In the strictest context, it only applies to BSDI and anyone connected
+>>to them (contractors, etc.) How would it affect the participants of this
+>>news group, for example? How would it affect Amancio?
+
+>In it's strictest context yes, the lawsuit by USL against BSDI applies
+>only to BSDI.  What is of concern here (you listen up too, Blair) is that
+>if USL establishes precedent that having access to source is sufficient
+>to disqualify you from working on unix clones, we're all fucked.  They
+>walk into court with the decision, point at Jolix, and *boom* down it
+>goes.  They point at linux (can they prove *none* of the developers ever
+>saw UNIX code?  didn't think so) *boom* down it goes.  Andy Tannenbaum
+>is next, *boom* down goes Minix.
+
+Well, I think everyone is being somewhat panicky here. Even if you saw
+source code, so what? Were you in court (as a named party) when the
+case was heard? Probably not. At best, a court might, (but might not)
+be able to bind parties that are in a close relationship with the party
+that is being injoined. What is missing here is Due Process. You haven't
+had your day in court yet. That is guaranteed by the 5th and 14th amdts.
+
+As to the waltzing into court with a previous decision - it doesn't work
+that way. There are actually a number of related concepts here. 
+
+First, stare decisis - precedent - this is the precedental value of a
+previous case. If two cases have the same facts (essentially) the law
+will apply the same law to them, to get the same result. Its actually
+more complex - but the important thing is that it applies to questions
+of LAW, not to facts.
+
+Second, there is something called collateral estoppel. This keeps a party
+from relitigating a point - after they have lost it. It most often applies
+to questions of facts. Note first that the universe that it applies to 
+is very limited (usually some sort of control is required). Secondly,
+practically it applies to the losers. This means that in many situations
+you can win the point as often as you litigate it, but each time you start
+back at ground zero. But once you have lost - it can be held against you.
+(As with everything in the law - there are exceptions to this too).
+
+Finally, there is something called law of the case. This is similar to
+collateral estoppal, but is limited to a single case. If you aren't a
+party, you can't be bound.
+
+Well, you could say that the judge might be predisposed against you, 
+having heard USL's case a bunch of times already. Well, this might
+work against a company, but not as an individual. That court probably
+cannot get either personal jurisdiction over you, nor is it proper venue.
+(Assumming that most of use don't live in California). One might say
+that this is what happened in the Lotus v. Borland case. The important
+thing here is that we have essentially nation wide jurisdiction and venue
+now for corps, but not for natural persons.
+
+So - the final result is that even if a judge were imprudent to grant
+such a temporary injunction, that court, or any such court, would be
+hard pressed to enforce it against most of the persons posting here.
+
+Bruce E. Hayden
+(303) 758-8400
+bhayden@csn.org
+
+
+
+]
+MID: bhayden.727342333@teal
+SUBJ: Re: BSDI/USL Lawsuit -- More Bad News for Human Beings...
+BODY: scs@lokkur.dexter.mi.us (Steve Simmons) writes: |  | >scottm@intime.intime.com (Scott Michel) writes: |  | >>>>>>> In article <BZS.93Jan14203519@world.std.com>, bzs@world.std.com (Barry Shein) writes: |  | >>bzs| If anyone thinks USL winning that point would only apply to BSDI | >>bzs| you're, well, deceiving yourself. They could use it against any | >>bzs| software company they like who doesn't have a Unix source license, the | >>bzs| claims on concepts don't even have to be limited to operating systems. |  | >>In the strictest context, it only applies to BSDI and anyone connected | >>to them (contractors, etc.) How
+------------------------------------------------------------
+[1993-01-18T08:42:17+00:00] [mjs@s4mjs.uucp (M.J.Shannon)] [In article <93Jan17.211032edt.847@smoke.cs.toronto.edu> tg@cs.toronto.edu (Tom Glinos) writes:
+] 
+] >Uh, has it occurred to anyone out there that the folks doing the
+] >litigating (the lawyers, presumably with prodding from the upper levels
+] >of management) are the least likely folks to ever appear at a trade
+] >show?  The folks attending the conference are just like all the rest of
+] >us trying to earn our keep by doing the UNIX/software thing.
+] >
+] >Look, I'm not fond of what USL is doing *as* *a* *corporate* *body*, but
+] >I like a lot of the things the folks in the trenches have done.  Do you
+] >seriously want to be abused because of the corporate policies of *your*
+] >employer?
+] 
+] Yup, I pity the guy in the trenches. BUT, you ARE a representative
+] of your company (USL) at a public function. Let the chain of command
+] know that you don't like the situation and the public doesn't like
+] it either.
+
+Down that path lies unemployment -- permanently (see Tom's signature
+below).
+
+Been there.  Done that.  Hated it.  (You can quote me on that.)
+
+] Imagine you are in a uniform. You think the enemy won't take shots
+] at you because you don't share the same opinion as your political leaders??
+
+Well, you could say that's why I didn't enlist.  It isn't why, but you
+could still say that.
+
+] Remind you of someplace familiar?? 
+
+Sure, any government -- no *place* has a monopoly on stupidity!  Did I
+miss something (been there....)?
+
+] -- 
+] =================
+] No regrets, ever!			| Tom Glinos @ U of Toronto Statistics
+] For down that path, lies madness	| tg@utstat.toronto.edu
+
+As I said above, are you willing to be abused for your company's
+lawyers' mistakes -- and forfeit your gainful employment because of your
+beliefs (and theirs, and the lack of unanimity thereof)?  Gimme a break!
+We all do what we have to to make a buck....
+-- 
+--------------+ <Delapsus Resurgam: When I fall I shall rise. --(10cc)>
+Marty Shannon | My opinions are just that.  You may share them.  No one
+mjs@s4mjs.uucp| speaks for me, and I speak only for myself -- no matter
+--------------+ where I post from.  Get it?		Post no flames.
+
+
+]
+MID: 1993Jan18.084217.11262@s4mjs.uucp
+SUBJ: Re: BSDI/USL Lawsuit -- More Bad News for Human Beings...
+BODY: In article <93Jan17.211032edt.847@smoke.cs.toronto.edu> tg@cs.toronto.edu (Tom Glinos) writes: | ]  | ] >Uh, has it occurred to anyone out there that the folks doing the | ] >litigating (the lawyers, presumably with prodding from the upper levels | ] >of management) are the least likely folks to ever appear at a trade | ] >show?  The folks attending the conference are just like all the rest of | ] >us trying to earn our keep by doing the UNIX/software thing. | ] > | ] >Look, I'm not fond of what USL is doing *as* *a* *corporate* *body*, but | ] >I like a lot of the things the folks in the trenches have done.  D
+------------------------------------------------------------
+[1993-01-18T13:05:07+00:00] [sml@mfltd.co.uk (Shaun Lowry)] [
+In article <BETSYS.93Jan15143516@ra.cs.umb.edu>, betsys@cs.umb.edu (Elizabeth Schwartz) writes:
+> In article <BZS.93Jan14203519@world.std.com> bzs@world.std.com (Barry Shein) writes:
+> 
+> >There has been some speculation as to whether or not USL would try to
+> >extend this suit to control individuals who have ever had access to
+> >the Unix sources.
+> 
+> >I think the following quote from their latest legal filing leaves
+> >little doubt that the worst fears have now been confirmed...
+> 
+> 	   (4) preliminarily enjoining and restraining BSDI, its
+> 	   officers, agents, employees, servants, and all persons
+> 	   in active concert or participation with them, from
+> 	   employing, authorizing or otherwise allowing any person
+> 	   who has had access to UNIX operating system source code
+> 	   or any works, notes, memoranda, or other records,
+> 	   copied from, based upon, or derived from such software,
+> 	   disclosed to such person or his employer in confidence,
+> 	   to participate on behalf of BSDI in the development of
+> 	   source code for a multi-user computer operating system,
+> 	   during the pendency of this action;
+> 
+> Good Grief! What is this, exactly, a request for a legal action?
+> Our university has source access for (old versions of) AT&T Unix. Does
+> that mean that none of our students can ever work for any Unix
+> company?
+
+It's not just restricted to that scenario, either.  Think - everyone who can use
+ftp, or dial up certain BBS's has *access* to the sources.  No-one with a PC and
+a modem can ever work for any UNIX company?
+
+    Shaun.
+-- 
+/s(Shaun Lowry)def/g{.7 setgray}def/c{10 0 -1 arc fill}def 300 600 100 0 360 arc
+stroke 300 600 50 180 0 arc stroke g 300 600 c stroke 1 2 scale 270 325 c stroke
+330 325 c stroke grestore 125 450 moveto/Helvetica findfont 60 scalefont setfont
+gsave 0.03 .09 rmoveto g [ 1 0 2 -1 0 0 ] concat s show grestore s show showpage
+
+
+]
+MID: 1993Jan18.130507.23863@mfltd.co.uk
+SUBJ: Re: BSDI/USL Lawsuit -- More Bad News for Human Beings...
+BODY:  | In article <BETSYS.93Jan15143516@ra.cs.umb.edu>, betsys@cs.umb.edu (Elizabeth Schwartz) writes: | > In article <BZS.93Jan14203519@world.std.com> bzs@world.std.com (Barry Shein) writes: | >  | > >There has been some speculation as to whether or not USL would try to | > >extend this suit to control individuals who have ever had access to | > >the Unix sources. | >  | > >I think the following quote from their latest legal filing leaves | > >little doubt that the worst fears have now been confirmed... | >  | > 	   (4) preliminarily enjoining and restraining BSDI, its | > 	   officers, agents, employees, servants, and 
+------------------------------------------------------------
+[1993-01-18T16:03:43+00:00] [tg@cs.toronto.edu (Tom Glinos)] [In article <1993Jan18.084217.11262@s4mjs.uucp> mjs@s4mjs.uucp (M.J.Shannon) writes:
+>Down that path lies unemployment -- permanently (see Tom's signature
+>below).
+>
+>Been there.  Done that.  Hated it.  (You can quote me on that.)
+
+Facinating. I too lost a job because I strongly believed in what
+I was doing. I have no regrets in what I did. But was I right?
+I really don't know. Wisdom comes slowly in this world.
+
+>] Imagine you are in a uniform. You think the enemy won't take shots
+>] at you because you don't share the same opinion as your political leaders??
+
+>Well, you could say that's why I didn't enlist.  It isn't why, but you
+>could still say that.
+>
+>] Remind you of someplace familiar?? 
+
+I was alluding to Saddam and his troops :-)
+
+>As I said above, are you willing to be abused for your company's
+>lawyers' mistakes -- and forfeit your gainful employment because of your
+>beliefs (and theirs, and the lack of unanimity thereof)?  Gimme a break!
+>We all do what we have to to make a buck....
+
+Willing, no! It's not the lawyers' driving this. It's managment at USL.
+I was working at AT&T when the SVR3 license came out and I too got
+abused by the outside world. I'm not saying that managment was
+right or wrong but I am saying they could have handled the problems
+a whole lot differently and definitely a whole lot better.
+
+Failure to resolve the SVR3 licensing issues resulted in OSF
+and the "UNIX Wars" The consequences of the BSDI suit, may
+be far more serious.
+-- 
+=================
+Prediction, 1993, Year the UNIX		| Tom Glinos @ U of Toronto Statistics
+industry collapsed			| tg@utstat.toronto.edu
+
+
+]
+MID: 93Jan18.110315edt.847@smoke.cs.toronto.edu
+SUBJ: Re: BSDI/USL Lawsuit -- More Bad News for Human Beings...
+BODY: In article <1993Jan18.084217.11262@s4mjs.uucp> mjs@s4mjs.uucp (M.J.Shannon) writes: | >Down that path lies unemployment -- permanently (see Tom's signature | >below). | > | >Been there.  Done that.  Hated it.  (You can quote me on that.) |  | Facinating. I too lost a job because I strongly believed in what | I was doing. I have no regrets in what I did. But was I right? | I really don't know. Wisdom comes slowly in this world. |  | >] Imagine you are in a uniform. You think the enemy won't take shots | >] at you because you don't share the same opinion as your political leaders?? |  | >Well, you could say that's why I 
+------------------------------------------------------------
+[1993-01-18T18:10:49+00:00] [chet@odin.ins.cwru.edu (Chet Ramey)] [In article <v0r38cs@rhyolite.wpd.sgi.com> vjs@rhyolite.wpd.sgi.com (Vernon Schryver) writes:
+>rumor had it that the Ma Bell inventors of streams were, to
+>put it mildly, less than enthused about how System V STREAMS turned
+>out, which might have something to do with why they were using BSD
+>based source in (I think it was) the 8th Edition.
+
+Your chronology is a little bit off.  The 8th edition used
+4.1 BSD as it's code base.  4.1 BSD was released in 1981. 
+streams (as Dennis has said, `streams means something
+different when shouted') was implemented on this system and
+first described in the 1984 BLTJ UNIX issue.  AT&T took the
+streams framework and turned it into STREAMS for SVR3, which
+came out around 1986. 
+
+You're certainly right that the inventors of streams were
+less than enthused about STREAMS. 
+
+Chet
+
+-- 
+``The use of history as therapy means the corruption of history as history.''
+	-- Arthur Schlesinger
+
+Chet Ramey, Case Western Reserve University	Internet: chet@po.CWRU.Edu
+
+
+]
+MID: 1jerr9INNpc8@usenet.INS.CWRU.Edu
+SUBJ: Re: BSDI/USL Lawsuit -- More Bad News for Human Beings...
+BODY: In article <v0r38cs@rhyolite.wpd.sgi.com> vjs@rhyolite.wpd.sgi.com (Vernon Schryver) writes: | >rumor had it that the Ma Bell inventors of streams were, to | >put it mildly, less than enthused about how System V STREAMS turned | >out, which might have something to do with why they were using BSD | >based source in (I think it was) the 8th Edition. |  | Your chronology is a little bit off.  The 8th edition used | 4.1 BSD as it's code base.  4.1 BSD was released in 1981.  | streams (as Dennis has said, `streams means something | different when shouted') was implemented on this system and | first described in the 19
+------------------------------------------------------------
+[1993-01-18T21:10:11+00:00] [panos@burton.cs.colorado.edu (Panos Tsirigotis)] [In article <1jerr9INNpc8@usenet.INS.CWRU.Edu> chet@odin.ins.cwru.edu (Chet Ramey) writes:
+>
+>You're certainly right that the inventors of streams were
+>less than enthused about STREAMS. 
+>
+>Chet
+>
+
+Could somebody summarize the differences between streams and STREAMS ?
+(or point to a paper with that info)
+
+Panos
+
+-- 
+Panos Tsirigotis, CS grad                        
+Pmail: Computer Science Dept., U. of Colorado @ Boulder, Boulder, CO 80309-0430
+Email: panos@cs.colorado.edu
+
+
+]
+MID: 1993Jan18.211011.616@colorado.edu
+SUBJ: Re: BSDI/USL Lawsuit -- More Bad News for Human Beings...
+BODY: In article <1jerr9INNpc8@usenet.INS.CWRU.Edu> chet@odin.ins.cwru.edu (Chet Ramey) writes: | > | >You're certainly right that the inventors of streams were | >less than enthused about STREAMS.  | > | >Chet | > |  | Could somebody summarize the differences between streams and STREAMS ? | (or point to a paper with that info) |  | Panos |  | --  | Panos Tsirigotis, CS grad                         | Pmail: Computer Science Dept., U. of Colorado @ Boulder, Boulder, CO 80309-0430 | Email: panos@cs.colorado.edu |  |  | 
+------------------------------------------------------------
+[1993-01-19T01:28:22+00:00] [sl@wimsey.bc.ca (Stuart Lynne)] [In article <1993Jan17.203539.6063@s4mjs.uucp> mjs@s4mjs.uucp (M.J.Shannon) writes:
+>In article <93Jan15.211025edt.1578@smoke.cs.toronto.edu> tg@cs.toronto.edu (Tom Glinos) writes:
+>] I think it would be a great idea if USL people showed up.
+>] This way, we could tell them, in person, what we think.
+>] That's what USENIX is all about!
+>
+>Uh, has it occurred to anyone out there that the folks doing the
+>litigating (the lawyers, presumably with prodding from the upper levels
+>of management) are the least likely folks to ever appear at a trade
+>show?  The folks attending the conference are just like all the rest of
+>us trying to earn our keep by doing the UNIX/software thing.
+>
+>Look, I'm not fond of what USL is doing *as* *a* *corporate* *body*, but
+>I like a lot of the things the folks in the trenches have done.  Do you
+>seriously want to be abused because of the corporate policies of *your*
+>employer?
+
+Given the importance of presenting a positive image at a large trade
+show and the $$$ spent to achieve it, you can bet that two things would
+happen. First you *would* get noticed. And second you would probably be
+escorted off the premises.
+
+This may have some of the desired effect of course. Especially if the
+trade press noticed.
+
+-- 
+Stuart Lynne <sl@wimsey.com> ......................... UNIX Facsimile Software
+Wimsey Information Technologies ................... moderator biz.sco.binaries
+uucp login:nuucp passwd:nuucp .................... ftp.wimsey.com:~ftp/ls-lR.Z
+PD Software for SCO UNIX .................... ftp.wimsey.com:~ftp/pub/wimseypd
+
+
+]
+MID: C12urA.7Dw@wimsey.bc.ca
+SUBJ: Re: BSDI/USL Lawsuit -- More Bad News for Human Beings...
+BODY: In article <1993Jan17.203539.6063@s4mjs.uucp> mjs@s4mjs.uucp (M.J.Shannon) writes: | >In article <93Jan15.211025edt.1578@smoke.cs.toronto.edu> tg@cs.toronto.edu (Tom Glinos) writes: | >] I think it would be a great idea if USL people showed up. | >] This way, we could tell them, in person, what we think. | >] That's what USENIX is all about! | > | >Uh, has it occurred to anyone out there that the folks doing the | >litigating (the lawyers, presumably with prodding from the upper levels | >of management) are the least likely folks to ever appear at a trade | >show?  The folks attending the conference are just li
+------------------------------------------------------------
+[1993-01-19T01:53:06+00:00] [nelson@crynwr.com (Russell Nelson)] [In article <1993Jan17.203539.6063@s4mjs.uucp> mjs@s4mjs.uucp writes:
+
+   Look, I'm not fond of what USL is doing *as* *a* *corporate* *body*, but
+   I like a lot of the things the folks in the trenches have done.  Do you
+   seriously want to be abused because of the corporate policies of *your*
+   employer?
+
+But don't you think USL would get a clue when all of their employees
+refused to go to a trade show?
+
+-russ <nelson@crynwr.com> What canst *thou* say?
+Crynwr Software           Crynwr Software sells packet driver support.
+11 Grant St.              315-268-1925 Voice  |  LPF member - ask me about
+Potsdam, NY 13676         315-268-9201 FAX    |  the harm software patents do.
+
+
+]
+MID: 727408386snx@crynwr.com
+SUBJ: BSDI/USL Lawsuit -- More Bad News for Human Beings... 
+BODY: In article <1993Jan17.203539.6063@s4mjs.uucp> mjs@s4mjs.uucp writes: |  |    Look, I'm not fond of what USL is doing *as* *a* *corporate* *body*, but |    I like a lot of the things the folks in the trenches have done.  Do you |    seriously want to be abused because of the corporate policies of *your* |    employer? |  | But don't you think USL would get a clue when all of their employees | refused to go to a trade show? |  | -russ <nelson@crynwr.com> What canst *thou* say? | Crynwr Software           Crynwr Software sells packet driver support. | 11 Grant St.              315-268-1925 Voice  |  LPF member - ask me 
+------------------------------------------------------------
+[1993-01-19T02:17:36+00:00] [mouse@thunder.mcrcim.mcgill.edu (der Mouse)] [In article <1343@eplunix.UUCP>, das@eplunix.UUCP (David Steffens) writes:
+
+> We programmers have no one to blame for this but ourselves.
+
+["this" refers to the USL attempt everyone here knows about by now]
+
+> For years we have been screaming for more and better laws and
+> enforcement of licensing, copyright, patents, etc.  Everyone and her
+> sister wants "intellectual property" protection (an oxymoron if ever
+> there was one).
+
+I don't know who you mean by "we" here, but it sure doesn't include me,
+and, I'm sure, lots of others.  Careful with your generalizations.
+Personally, I think the intellectual property laws in the US (and
+probably most other places) are too strong already.
+
+					der Mouse
+
+			    mouse@larry.mcrcim.mcgill.edu
+
+
+]
+MID: 1993Jan19.021736.17580@thunder.mcrcim.mcgill.edu
+SUBJ: Re: BSDI/USL Lawsuit -- More Bad News for Human Beings...
+BODY: In article <1343@eplunix.UUCP>, das@eplunix.UUCP (David Steffens) writes: |  | > We programmers have no one to blame for this but ourselves. |  | ["this" refers to the USL attempt everyone here knows about by now] |  | > For years we have been screaming for more and better laws and | > enforcement of licensing, copyright, patents, etc.  Everyone and her | > sister wants "intellectual property" protection (an oxymoron if ever | > there was one). |  | I don't know who you mean by "we" here, but it sure doesn't include me, | and, I'm sure, lots of others.  Careful with your generalizations. | Personally, I think the intel
+------------------------------------------------------------
+[1993-01-19T02:21:05+00:00] [mouse@thunder.mcrcim.mcgill.edu (der Mouse)] [In article <1993Jan16.203553.12911@lokkur.dexter.mi.us>, scs@lokkur.dexter.mi.us (Steve Simmons) writes:
+
+>> In the strictest context, it only applies to BSDI and anyone
+>> connected to them [...]
+
+> [I]f USL establishes precedent that having access to source is
+> sufficient to disqualify you from working on unix clones, we're all
+> fucked.
+
+Only if you're so pigheaded as to insist on working in the US.  All it
+would do, even if your worst fears were to come to pass (which IMO is
+unlikely), is to drive UNIXish work out of the US (except for USL).
+
+This prospect doesn't bother me much; I wrote off the US for software
+work a long time ago.  It'll thrash around for a while on inertia, but
+I think the legal climate is in the process of killing off software
+writing and, to some extent, use.  Oh well.  Go find a country with a
+sane - or at least less insane - legal system...I'm not (yet) so
+pessimistic as to think none such exist.
+
+					der Mouse
+
+			    mouse@larry.mcrcim.mcgill.edu
+
+
+]
+MID: 1993Jan19.022105.17798@thunder.mcrcim.mcgill.edu
+SUBJ: Re: BSDI/USL Lawsuit -- More Bad News for Human Beings...
+BODY: In article <1993Jan16.203553.12911@lokkur.dexter.mi.us>, scs@lokkur.dexter.mi.us (Steve Simmons) writes: |  | >> In the strictest context, it only applies to BSDI and anyone | >> connected to them [...] |  | > [I]f USL establishes precedent that having access to source is | > sufficient to disqualify you from working on unix clones, we're all | > fucked. |  | Only if you're so pigheaded as to insist on working in the US.  All it | would do, even if your worst fears were to come to pass (which IMO is | unlikely), is to drive UNIXish work out of the US (except for USL). |  | This prospect doesn't bother me much; I wrote 
+------------------------------------------------------------
+[1993-01-19T03:48:15+00:00] [bhoughto@sedona.intel.com (Blair P. Houghton)] [In article <1jdibnINN52u@usenet.pa.dec.com> ed@pa.dec.com writes:
+>[Houghton]
+>> I'm all for intellectual property, but ...
+>
+>Could you be clear about what you mean by "intellectual property?"  I
+>suspect you have an understanding of the concept that is different
+>from the legal meaning.
+
+The legal meaning has something to do with intangible
+assets accounting; "intellectual property" isn't a thing
+unto the law so much as a collection of things the free
+dissemination of which one has a vested interest in
+preventing.  Patents and Copyrights are the usual
+protected elements of intellectual property.
+
+[HAY!  I answered the question.  Where's my lollipop?  Chiseler.]
+
+>> THEY'LL NEVER GET THE SETUID-BIT!!! NEVER!!!
+>> (They can't.  It's PD.  Thanks, Dennis. :-))
+>
+>If by "PD" you mean "Public Domain," then no, it's not.  The set-uid
+
+Yes, it is.  Ritchie placed it there, after the patent was
+granted.  Or so goes the version of the story I've seen:
+somewhere there's a copy of the patent documents with his
+signature and the handwritten statement "placed in the
+public domain, <date>".
+
+...I just checked Bach, Leffler, and the Jargon file;
+Thompson&Pike of course has the footnote, but it doesn't
+mention the PD-ness; I must've seen it in a Usenet posting;
+that's sort of like hearsay evidence from Richard Nixon...
+
+>bit is protected by a United States patent.  It happens that the owner
+>of the patent (AT&T, not DMR, for all practical purposes), has decided
+>to "let" the patent, which means, effectively, that they grant a
+
+And I heard it was Ritchie's, not AT&T's (as long
+as we're being fast and loose).
+
+				--Blair
+				  "I meant 'Positively Darling.'
+				   What did you think I meant?"
+
+
+]
+MID: 1jftlvINNq62@chnews.intel.com
+SUBJ: Re: BSDI/USL Lawsuit -- More Bad News for Human Beings...
+BODY: In article <1jdibnINN52u@usenet.pa.dec.com> ed@pa.dec.com writes: | >[Houghton] | >> I'm all for intellectual property, but ... | > | >Could you be clear about what you mean by "intellectual property?"  I | >suspect you have an understanding of the concept that is different | >from the legal meaning. |  | The legal meaning has something to do with intangible | assets accounting; "intellectual property" isn't a thing | unto the law so much as a collection of things the free | dissemination of which one has a vested interest in | preventing.  Patents and Copyrights are the usual | protected elements of intellectual prope
+------------------------------------------------------------
+[1993-01-19T15:42:22+00:00] [drl@vuse.vanderbilt.edu (David R. Linn)] [In article <1jftlvINNq62@chnews.intel.com> bhoughto@sedona.intel.com (Blair P. Houghton) writes:
+>In article <1jdibnINN52u@usenet.pa.dec.com> ed@pa.dec.com writes:
+>>[Houghton]
+>>> THEY'LL NEVER GET THE SETUID-BIT!!! NEVER!!!
+>>> (They can't.  It's PD.  Thanks, Dennis. :-))
+>>
+>>If by "PD" you mean "Public Domain," then no, it's not.  The set-uid
+>
+>Yes, it is.  Ritchie placed it there, after the patent was
+>granted.  Or so goes the version of the story I've seen:
+>somewhere there's a copy of the patent documents with his
+>signature and the handwritten statement "placed in the
+>public domain, <date>".
+>
+>>bit is protected by a United States patent.  It happens that the owner
+>>of the patent (AT&T, not DMR, for all practical purposes), has decided
+>>to "let" the patent, which means, effectively, that they grant a
+>
+>And I heard it was Ritchie's, not AT&T's (as long
+>as we're being fast and loose).
+
+Actually, the adjective used to describe the current status of the
+setuid bit is "dedicated".  I spoke to D. Richie about this patent
+at the Nashville USENIX and, as I recall, he indicated that the patent
+was AT&T's (does Bell Labs retain all patents of its researchers?) and
+they were the ones who "dedicated" it to public use.  My purpose in
+starting this conversation was to thank him for allowing the public
+use of the setuid bit (and, yes, I admit it, so I would have an excuse
+for speaking to him).
+
+	 David
+-- 
+David R. Linn, System/Mail/News Manager	| INET: drl@vuse.vanderbilt.edu
+Disclaimer: I speak only for myself	| Phone: [+1] 615-343-6164
+      "Some do, some don't and that's the way of the world."
+
+
+]
+MID: C13yAn.BC@vuse.vanderbilt.edu
+SUBJ: Re: BSDI/USL Lawsuit -- More Bad News for Human Beings...
+BODY: In article <1jftlvINNq62@chnews.intel.com> bhoughto@sedona.intel.com (Blair P. Houghton) writes: | >In article <1jdibnINN52u@usenet.pa.dec.com> ed@pa.dec.com writes: | >>[Houghton] | >>> THEY'LL NEVER GET THE SETUID-BIT!!! NEVER!!! | >>> (They can't.  It's PD.  Thanks, Dennis. :-)) | >> | >>If by "PD" you mean "Public Domain," then no, it's not.  The set-uid | > | >Yes, it is.  Ritchie placed it there, after the patent was | >granted.  Or so goes the version of the story I've seen: | >somewhere there's a copy of the patent documents with his | >signature and the handwritten statement "placed in the | >public domain, 
+------------------------------------------------------------
+[1993-01-19T17:52:19+00:00] [gardner@convex.com (Steve Gardner)] [In article <C13yAn.BC@vuse.vanderbilt.edu> drl@vuse.vanderbilt.edu (David R. Linn) writes:
+>Actually, the adjective used to describe the current status of the
+>setuid bit is "dedicated".  I spoke to D. Richie about this patent
+>at the Nashville USENIX and, as I recall, he indicated that the patent
+>was AT&T's (does Bell Labs retain all patents of its researchers?)
+	     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+	Don't ALL corporations??  This is one of the problems with 
+	current intellectual property laws.  Engineers have to sign
+	away the contents of their heads (and the tools of their
+	trade in many cases) if they want to work.
+
+
+
+]
+MID: 1993Jan19.175219.4259@news.eng.convex.com
+SUBJ: Re: BSDI/USL Lawsuit -- More Bad News for Human Beings...
+BODY: In article <C13yAn.BC@vuse.vanderbilt.edu> drl@vuse.vanderbilt.edu (David R. Linn) writes: | >Actually, the adjective used to describe the current status of the | >setuid bit is "dedicated".  I spoke to D. Richie about this patent | >at the Nashville USENIX and, as I recall, he indicated that the patent | >was AT&T's (does Bell Labs retain all patents of its researchers?) | 	     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ | 	Don't ALL corporations??  This is one of the problems with  | 	current intellectual property laws.  Engineers have to sign | 	away the contents of their heads (and the tools of 
+------------------------------------------------------------
+[1993-01-19T21:56:12+00:00] [wrc@cs.rit.edu (Warren R Carithers)] [In article <1jftlvINNq62@chnews.intel.com>, bhoughto@sedona.intel.com (Blair P. Houghton) writes:
+|> In article <1jdibnINN52u@usenet.pa.dec.com> ed@pa.dec.com writes:
+|> >[Houghton]
+|> >> THEY'LL NEVER GET THE SETUID-BIT!!! NEVER!!!
+|> >> (They can't.  It's PD.  Thanks, Dennis. :-))
+|> >
+|> >If by "PD" you mean "Public Domain," then no, it's not.  The set-uid
+|> 
+|> Yes, it is.  Ritchie placed it there, after the patent was
+|> granted.  Or so goes the version of the story I've seen:
+|> somewhere there's a copy of the patent documents with his
+|> signature and the handwritten statement "placed in the
+|> public domain, <date>".
+|> 
+|> ...I just checked Bach, Leffler, and the Jargon file;
+|> Thompson&Pike of course has the footnote, but it doesn't
+|> mention the PD-ness; I must've seen it in a Usenet posting;
+|> that's sort of like hearsay evidence from Richard Nixon...
+
+For those who have the urge to check it out, a copy of the patent can be 
+found in Wood and Kochan, "UNIX System Security", Copyright 1985 by Pipeline
+Associates Inc., printed by Hayden books.  It's in Appendix L, pp. 268-275;
+on page 275 is reproduced the handwritten
+
+	"Dedicated to the public
+		11/28/79
+		991 OG 11"
+
+(crudely reproduced here).  It makes rather interesting reading, especially
+if you've never seen a patent document before.
+
+-- 
+Warren R. Carithers, RIT Department of Computer Science, Rochester NY 14623-0887
+Internet:  wrc@cs.rit.edu, wrcics@ultb.isc.rit.edu	(716) 475-2288
+UUCP:	   {allegra,rutgers}!rochester!rit!wrc      FAX (716) 475-7100
+
+
+]
+MID: 1993Jan19.215612.3662@cs.rit.edu
+SUBJ: Re: BSDI/USL Lawsuit -- More Bad News for Human Beings...
+BODY: In article <1jftlvINNq62@chnews.intel.com>, bhoughto@sedona.intel.com (Blair P. Houghton) writes: | |> In article <1jdibnINN52u@usenet.pa.dec.com> ed@pa.dec.com writes: | |> >[Houghton] | |> >> THEY'LL NEVER GET THE SETUID-BIT!!! NEVER!!! | |> >> (They can't.  It's PD.  Thanks, Dennis. :-)) | |> > | |> >If by "PD" you mean "Public Domain," then no, it's not.  The set-uid | |>  | |> Yes, it is.  Ritchie placed it there, after the patent was | |> granted.  Or so goes the version of the story I've seen: | |> somewhere there's a copy of the patent documents with his | |> signature and the handwritten statement "placed 
+------------------------------------------------------------
+[1993-01-19T22:15:00+00:00] [bhoughto@sedona.intel.com (Blair P. Houghton)] [In article <C13yAn.BC@vuse.vanderbilt.edu> drl@vuse.vanderbilt.edu (David R. Linn) writes:
+>In article <1jftlvINNq62@chnews.intel.com> bhoughto@sedona.intel.com (Blair P. Houghton) writes:
+>>Yes, it is.  Ritchie placed it there [in the PD], after the patent was
+[...]
+>>And I heard it was Ritchie's, not AT&T's (as long
+>>as we're being fast and loose).
+
+Ritchie sent me email today with these same corrections
+to my statements, so now we know:
+
+>Actually, the adjective [...] is "dedicated".
+>I asked D. Richie about this [and] he indicated that the patent
+>was AT&T's (does Bell Labs retain all patents of its researchers?)
+
+Sounds typical.  I considered the myth that it was all-his
+an indication of the esteem they'd have had for him, since
+corporations almost never do such a thing.  Apparently,
+they really never do such a thing.  Why they "dedicated"
+it remains a mystery.
+
+(And, in perfect Freudian style, I saved Dennis' message to
+~/mfold/unix and promptly deleted that exact folder while
+trying to rm the typo-named ~/mfold/uix and ~/mfold/unid...
+I couldn't wait until tomorrow, when today's files would
+have been on a backup tape, could I...I think I'll go soak
+my head in a bucket of hexafluoric acid for a while...)
+
+				--Blair
+				  "rm -rf $HOME/brains/*"
+
+
+]
+MID: 1jhuh4INNopg@chnews.intel.com
+SUBJ: Re: BSDI/USL Lawsuit -- More Bad News for Human Beings...
+BODY: In article <C13yAn.BC@vuse.vanderbilt.edu> drl@vuse.vanderbilt.edu (David R. Linn) writes: | >In article <1jftlvINNq62@chnews.intel.com> bhoughto@sedona.intel.com (Blair P. Houghton) writes: | >>Yes, it is.  Ritchie placed it there [in the PD], after the patent was | [...] | >>And I heard it was Ritchie's, not AT&T's (as long | >>as we're being fast and loose). |  | Ritchie sent me email today with these same corrections | to my statements, so now we know: |  | >Actually, the adjective [...] is "dedicated". | >I asked D. Richie about this [and] he indicated that the patent | >was AT&T's (does Bell Labs retain all pat
+------------------------------------------------------------
+[1993-01-19T22:25:41+00:00] [bhoughto@sedona.intel.com (Blair P. Houghton)] [In article <1993Jan19.021736.17580@thunder.mcrcim.mcgill.edu> mouse@thunder.mcrcim.mcgill.edu (der Mouse) writes:
+>In article <1343@eplunix.UUCP>, das@eplunix.UUCP (David Steffens) writes:
+>> For years we have been screaming for more and better laws and
+>> enforcement of licensing, copyright, patents, etc.  Everyone and her
+>> sister wants "intellectual property" protection (an oxymoron if ever
+>> there was one).
+>
+>I don't know who you mean by "we" here, but it sure doesn't include me,
+
+It depends on what one works on.
+
+When I'm doing GNU hacks or generic program technology,
+I aim for free distributability; but this takes work, since
+you have to make sure you aren't including licensed technology.
+
+When I'm doing big, esoteric, paid-for work, I avoid contact
+with anything other than generic scientific literature or
+properly licensed technologies and aim to make the thing just
+as protectable as possible.
+
+On the one hand is my socially conscientious contribution
+to the commonweal, and on the other is my job.
+
+				--Blair
+				  "Alms for the poor!"
+
+
+]
+MID: 1jhv55INNp16@chnews.intel.com
+SUBJ: Re: BSDI/USL Lawsuit -- More Bad News for Human Beings...
+BODY: In article <1993Jan19.021736.17580@thunder.mcrcim.mcgill.edu> mouse@thunder.mcrcim.mcgill.edu (der Mouse) writes: | >In article <1343@eplunix.UUCP>, das@eplunix.UUCP (David Steffens) writes: | >> For years we have been screaming for more and better laws and | >> enforcement of licensing, copyright, patents, etc.  Everyone and her | >> sister wants "intellectual property" protection (an oxymoron if ever | >> there was one). | > | >I don't know who you mean by "we" here, but it sure doesn't include me, |  | It depends on what one works on. |  | When I'm doing GNU hacks or generic program technology, | I aim for free di
+------------------------------------------------------------
+[1993-01-19T22:43:07+00:00] [boyd@prl.dec.com (Boyd Roberts)] [In article <1jdibnINN52u@usenet.pa.dec.com>, ed@weir.pa.dec.com (Ed Gould) writes:
+> 
+> Whether the 32/V release is protected by copyright is one of the
+> primary issues in the case.  As I understand things, it hinges on the
+> technical definition of "publication."  USL claims that 32/V (and
+> other systems that they released at that time) were not published
+> works, hence they were not covered by the copyright law at the time.
+
+Yeah 32V.  We (ie. people I worked with 5 years _before_ I joined
+Digital) did a lot of good stuff with 32V.  Turned it into the fastest
+780 on the face of the planet after a lot of good work by a handful
+of people, over a few years.  In those days, computers were _computers_.
+
+I added copy-on-write into 32V, so can I claim that USL have stolen
+_my_ intellectual property with their _pitiful_ attempts in V.[234]?
+
+I guess I could, as long as I could pay the lawyer's fees.
+
+Anyway, any information you could glean from System V would only
+server as object lessons in how _not_ to write operating systems;
+perhaps USL's lawyers realise this too...
+
+* Now before we all go crazy and say ``oh, he works for Digital''
+  I should state that my eclectic set of beliefs stem from my
+  stance on what is good and what is not.
+
+
+Boyd Roberts			boyd@prl.dec.com
+
+I think you here me knocking, and I think I'm coming in...
+I'm already wearing the Bullet-Proof T-shirt.
+
+
+]
+MID: 1993Jan19.224307.22194@prl.dec.com
+SUBJ: Re: BSDI/USL Lawsuit -- More Bad News for Human Beings...
+BODY: In article <1jdibnINN52u@usenet.pa.dec.com>, ed@weir.pa.dec.com (Ed Gould) writes: | >  | > Whether the 32/V release is protected by copyright is one of the | > primary issues in the case.  As I understand things, it hinges on the | > technical definition of "publication."  USL claims that 32/V (and | > other systems that they released at that time) were not published | > works, hence they were not covered by the copyright law at the time. |  | Yeah 32V.  We (ie. people I worked with 5 years _before_ I joined | Digital) did a lot of good stuff with 32V.  Turned it into the fastest | 780 on the face of the planet 
+------------------------------------------------------------
+[1993-01-19T23:23:24+00:00] [boyd@prl.dec.com (Boyd Roberts)] [In article <1jerr9INNpc8@usenet.INS.CWRU.Edu>, chet@odin.ins.cwru.edu (Chet Ramey) writes:
+> 
+> Your chronology is a little bit off.  The 8th edition used
+> 4.1 BSD as it's code base.  4.1 BSD was released in 1981. 
+
+As per usual Chet is right on the money: 14 char dir components,
+a first cut at BSD paging; a paging V7 in effect with a lot of
+really cool stuff written at Bell Labs to turn it into something
+fine, which is still not avaialable in the commercial world.
+
+Fortunately pjw had found all the paging badness before I coded
+up the V7 style 512byte file-system for the Sydney V8 (a cool plan
+devised by John Mackin so we could upgrade seemlessly).
+
+> You're certainly right that the inventors of streams were
+> less than enthused about STREAMS. 
+
+STREAMS were called ``sewers''.
+
+
+Boyd Roberts			boyd@prl.dec.com
+
+``When the going gets wierd, the weird turn pro...''
+
+
+]
+MID: 1993Jan19.232324.22918@prl.dec.com
+SUBJ: Re: BSDI/USL Lawsuit -- More Bad News for Human Beings...
+BODY: In article <1jerr9INNpc8@usenet.INS.CWRU.Edu>, chet@odin.ins.cwru.edu (Chet Ramey) writes: | >  | > Your chronology is a little bit off.  The 8th edition used | > 4.1 BSD as it's code base.  4.1 BSD was released in 1981.  |  | As per usual Chet is right on the money: 14 char dir components, | a first cut at BSD paging; a paging V7 in effect with a lot of | really cool stuff written at Bell Labs to turn it into something | fine, which is still not avaialable in the commercial world. |  | Fortunately pjw had found all the paging badness before I coded | up the V7 style 512byte file-system for the Sydney V8 (a cool pl
+------------------------------------------------------------
+[1993-01-19T23:36:17+00:00] [boyd@prl.dec.com (Boyd Roberts)] [In article <1993Jan18.211011.616@colorado.edu>, panos@burton.cs.colorado.edu (Panos Tsirigotis) writes:
+> 
+> Could somebody summarize the differences between streams and STREAMS ?
+> (or point to a paper with that info)
+> 
+
+The difference is that a beautiful piece of design and implementation
+was taken and ruthlessly slaughtered to turn it into ``a product''.  A
+simple lines of code vs functionality metric can prove this.  V8 streams
+were some 5-10 times smaller in code size and had complete functionality.
+
+I could quote a source on the ``productisation'' of streams regarding
+what actually happened, but I am not pepared to divulge my source.
+
+
+Boyd Roberts			boyd@prl.dec.com
+
+I think you hear me knocking, and I think I'm coming in...
+And you know what?  I'm already wearing the Bullet-Proof T-shirt.
+
+
+]
+MID: 1993Jan19.233617.23139@prl.dec.com
+SUBJ: Re: BSDI/USL Lawsuit -- More Bad News for Human Beings...
+BODY: In article <1993Jan18.211011.616@colorado.edu>, panos@burton.cs.colorado.edu (Panos Tsirigotis) writes: | >  | > Could somebody summarize the differences between streams and STREAMS ? | > (or point to a paper with that info) | >  |  | The difference is that a beautiful piece of design and implementation | was taken and ruthlessly slaughtered to turn it into ``a product''.  A | simple lines of code vs functionality metric can prove this.  V8 streams | were some 5-10 times smaller in code size and had complete functionality. |  | I could quote a source on the ``productisation'' of streams regarding | what actually happ
+------------------------------------------------------------

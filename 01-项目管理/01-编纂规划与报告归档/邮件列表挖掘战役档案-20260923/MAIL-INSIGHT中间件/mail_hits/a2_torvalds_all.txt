@@ -1,0 +1,1000 @@
+total 17
+[1992-05-21T17:47:43+00:00] [torvalds@klaava.Helsinki.FI (Linus Benedict Torvalds)] [In article <1992May21.115214.2553@ponds.uucp> rivers@ponds.uucp (Thomas David Rivers) writes:
+>
+> I have been working on speeding up my lazy-old non-cached 20MHZ
+> '386, in particularly the com driver (which I just posted.)
+>
+> However, I noticed the inb() and outb() are actually functions
+> defined in locore.s [with a strange NOP macro to delay a little,
+> why?]
+
+[ note - I haven't looked at the actual bsd sources, but I think I know
+  what this is all about... ]
+
+The reason is probably because fast machines can output IO faster than
+the motherboard/AT-cards can keep up.  On a 20MHz 386 this probably
+isn't a problem, but doing the io-ops inline with no delays on a fast
+486 will result in problems on some hardware.  Especially IDE drives can
+act weird (beleive me: I've had the same problems with linux).
+
+That said, I'd like to comment on the macros, and give as an example
+what linux does...
+
+>#define ASM
+>#ifdef ASM
+>/* Define inline assembly macros for the inb() and outb() functions */
+>#define inb(port) ( {long __res; long __port;\
+>			  __port = port; \
+>                          asm("movl %1,%%edx\n \
+>                               xorl %%eax,%%eax\n \
+>                               inb %%dx,%%al\n \
+>                               movl %%eax, %0\n" :  "=r" (__res)  \
+>                                                 : "r" (__port)  \
+>                                       		 : "dx", "ax"); \
+>                          __res;})
+>
+>#define outb(port,val) ( {long __port; long __val;\
+>				__val = (val);	\
+>				__port = (port); \
+>				asm("movl %0, %%eax\n \
+>				     movl %1, %%edx\n \
+>			 	     outb %%al,%%dx" \
+>				  : /* No outputs */ \
+>				  : "r" (__val), "r" (__port) \
+>				  : "dx", "ax"); \
+>			} )
+>
+>#endif
+
+These macros will work, but you do a lot of register shuffling which
+should really be left to gcc - with the above macros gcc can't really
+try to optimize the registers (and although speed definitely isn't a
+good thing here, it looks better anyway).  Also, I'd suggest using
+inline-functions, as it looks nicer...  Here's how linux does it:
+
+extern void inline outb(char value, unsigned short port)
+{
+__asm__ volatile ("outb %0,%1"
+		::"a" ((char) value),"d" ((unsigned short) port));
+}
+
+extern unsigned char inline inb(unsigned short port)
+{
+unsigned char c;
+__asm__ volatile ("inb %1,%0"
+		:"=a" (c)
+		:"d" ((unsigned short) port));
+return c;
+}
+
+The above let gcc decide how to move the values from/to registers, which
+means it can try to do it all the easiest way instead of using temporary
+registers as in your examples above.  The code is usually pretty good. 
+
+As in fact the code gets /too/ good on some machines, it's best to use
+inb_p/outb_p (_p for Pause) when you are doing several IO-operations
+after each other. Here the problem is to know how long to pause, while
+not delaying too much on slow machines.
+
+The standard trick on AT machines used to be to have two short jumps
+after each other between IO operations, and that's what I used
+originally.  This is not enough, however, in all circumstances: I have
+one beta-tester that reported that the harddisk driver started working
+only after he put a hundred (!) short jumps between io-operations: with
+"just" 50 jumps it was still flaky.  Obviously 100 short jumps is
+overkill on slow machines... 
+
+James van Artsdalen pointed out to me that putting dummy IO-operations
+between the actual ones is pretty safe: here are the inb_p/putb_p
+functions linux uses, which seem to work on most hardware:
+
+extern void inline outb_p(char value, unsigned short port)
+{
+__asm__ volatile ("outb %0,%1\n\t"
+		  "outb %0,$0x80\n\t"
+		  "outb %0,$0x80\n\t"
+		  "outb %0,$0x80\n\t"
+		  "outb %0,$0x80"
+		::"a" ((char) value),"d" ((unsigned short) port));
+}
+
+extern unsigned char inline inb_p(unsigned short port)
+{
+unsigned char c;
+__asm__ volatile ("inb %1,%0"
+		  "outb %1,$0x80\n\t"
+		  "outb %1,$0x80\n\t"
+		  "outb %1,$0x80\n\t"
+		  "outb %1,$0x80"
+		:"=a" (c)
+		:"d" ((unsigned short) port));
+return c;
+}
+
+These functions get a nice pause by doing 4 out's to port 0x80 (unused
+on the AT hardware), and this delay is enough even for the person who
+wanted 100 short jumps.  It's still over-kill on most machines, but not
+too bad.  (Again: 2 outb's were too few on this one particular machine,
+although they seemed enough on every other machine linux runs on)
+
+		Linus
+
+PS. Note to persons not used to gcc inline assembly and functions:
+
+The "extern" in the function declaration tells gcc not to include
+stand-alone copies of the inline-function.  "static" would have worked
+quite as well. 
+
+The "volatile" is needed in the inb()-asms, or gcc might optimize them
+away if the value inputted is never actually used.  It also tells gcc
+not to move the IO-operations around.  volatile isn't strictly necessary
+for the outb()-asms, as gcc notices that they have no output, and
+assumes they are volatile anyway.  I put them there just to make the
+point explicit. 
+
+"d" means that the agrument is in the %edx register, and the size tells
+gcc that it's just 16 bit wide, so only %dx is actually used.  Likewise
+"a" means %eax, and the byte size means %al is used. 
+
+The "unnecessary" casts (casting a unsigned short to unsigned short)
+seem actually to be needed in some circumstances - I don't know if this
+is true of 2.1 any more, but I think the reason is/has been that gcc
+otherwise does some internal widening of function arguments.  It also
+makes it clearer which part of a register the __asm__ will actually use. 
+
+
+]
+MID: 1992May21.174743.11767@klaava.Helsinki.FI
+SUBJ: Re: inb() and outb() inline assembly.
+BODY: In article <1992May21.115214.2553@ponds.uucp> rivers@ponds.uucp (Thomas David Rivers) writes: | > | > I have been working on speeding up my lazy-old non-cached 20MHZ | > '386, in particularly the com driver (which I just posted.) | > | > However, I noticed the inb() and outb() are actually functions | > defined in locore.s [with a strange NOP macro to delay a little, | > why?] |  | [ note - I haven't looked at the actual bsd sources, but I think I know |   what this is all about... ] |  | The reason is probably because fast machines can output IO faster than | the motherboard/AT-cards can keep up.  On a 20MHz 386 this 
+------------------------------------------------------------
+[1992-06-11T23:42:03+00:00] [torvalds@klaava.Helsinki.FI (Linus Benedict Torvalds)] [In article <1992Jun11.181144.11046@email.tuwien.ac.at> hp@vmars.tuwien.ac.at (Peter Holzer) writes:
+>torvalds@klaava.Helsinki.FI (Linus Benedict Torvalds) writes:
+>
+>>Just libsoft.a isn't enough: unless somebody has hacked gcc, it still
+>>emits the floating point load and store instructions even when compiling
+>>with -msoft-float.  Bruce Evans fixed this at least for the 1.40
+>>version, but the real fix is to move some emulation into the kernel. 
+>>That also means there is no problem with binaries that work on some
+>>machines, but not on others. 
+>
+>While this may be the real solution from the view-point of an OS-writer
+>(see, my kernel runs your binaries even though I don't have a 387!),
+>a compiler with an option -msoft-float should certainly be able to emit
+>code which doesn't rely on the presence of a (possibly emulated)
+>co-processor.
+
+The problem seems to be the sysv floating point standard: floating point
+functions are expected to return their values in the fpu registers in
+order to be conformant.  Thus gcc uses the fpu for loads/stores so that
+library functions etc will work correctly in all cases.  It's not really
+a gcc problem: gcc does the right thing for the 68k family, and it's
+just the i386 binary specification that messes things up. 
+
+>BTW, how fast is your FP emulation? The method used in Minix-GCC is
+>very slow (in fact unusable for any half-serious application).
+
+The original Minix-gcc fp emulation isn't real emulation in any normal
+sense: it's more of a hack to allow minix to run the gcc-produced
+binaries.  The linux emulation, on the other hand, is a real 387 emu,
+even though it's not 100% complete. 
+
+It seems the linux code might be in 386BSD version 0.1: at least Lynn
+Jolitz mailed me about it, and there already seems to be a working
+version available.  We'll see.. 
+
+As to speed: the linux emulator is simple, and not too slow: the problem
+is mostly in handling special cases.  There is no support for NaN's etc:
+they are seldom needed under "normal" use.  I wrote the emulator so that
+non-387 systems could run normal applications, and it handles that
+pretty well. 
+
+Apart from not supporting NaN's (and denormals etc), the linux emulator
+doesn't try to emulate the more exotic math functions.  sqrt/sin/exp etc
+still have to be done in user mode: these aren't used directly by gcc,
+though, so that's not a problem.
+
+The linux 387-emulator code is pretty simple and modular, so if somebody
+wirtes these (or better add/mul/div-routines) it doesn't mean the whole
+emulator has to be changed.  It also looks like a 387 to the kernel
+itself for all practical purposes (using the same internal
+datastructures), so dumping core etc don't have to change between
+different formats. 
+
+		Linus
+
+
+]
+MID: 1992Jun11.234203.12877@klaava.Helsinki.FI
+SUBJ: Re: !fpu compiler
+BODY: In article <1992Jun11.181144.11046@email.tuwien.ac.at> hp@vmars.tuwien.ac.at (Peter Holzer) writes: | >torvalds@klaava.Helsinki.FI (Linus Benedict Torvalds) writes: | > | >>Just libsoft.a isn't enough: unless somebody has hacked gcc, it still | >>emits the floating point load and store instructions even when compiling | >>with -msoft-float.  Bruce Evans fixed this at least for the 1.40 | >>version, but the real fix is to move some emulation into the kernel.  | >>That also means there is no problem with binaries that work on some | >>machines, but not on others.  | > | >While this may be the real solution from the
+------------------------------------------------------------
+[1992-07-23T01:03:41+00:00] [torvalds@klaava.Helsinki.FI (Linus Benedict Torvalds)] [In article <1992Jul22.152854.27730@nrao.edu> cflatter@nrao.edu writes:
+> [ deleted ]  Is anyone working on porting gcc 2.x to 386BSD? Come to
+>think of it, is there anything that needs to be done to do this (wouldn't
+>the BSD/386 configuration work)?
+
+One thing that migth be a problem with porting gcc-2.2.2 to 386BSD is
+that gcc-2.2.2 has added the 'fsqrt' command to the list of floating
+point instructions that gcc can create code for - and I don't know if
+the 386bsd math emulator emulates that particular command yet.  I've
+already written the code (it's in linux), but it wasn't available back
+when people ported the emulator to 386bsd. 
+
+If 386bsd 0.1 does indeed use the linux math-emulator (I haven't even
+checked: maybe they found something better) it shouldn't be difficult to
+add the fsqrt support in there (the linux math-emulator may not be fast
+or complete, but it's simple and relatively modular).  The code can be
+gotten from any linux site: while the linux source is generally
+copylefted, the math-code can be used freely for 386bsd (but /only/ for
+386bsd - if you want to use it for something else and cannot accept the
+copyleft conditions, contact me). 
+
+		Linus
+
+
+]
+MID: 1992Jul23.010341.22292@klaava.Helsinki.FI
+SUBJ: Re: Jolitz 386BSD-0.1 -- floating point perform
+BODY: In article <1992Jul22.152854.27730@nrao.edu> cflatter@nrao.edu writes: | > [ deleted ]  Is anyone working on porting gcc 2.x to 386BSD? Come to | >think of it, is there anything that needs to be done to do this (wouldn't | >the BSD/386 configuration work)? |  | One thing that migth be a problem with porting gcc-2.2.2 to 386BSD is | that gcc-2.2.2 has added the 'fsqrt' command to the list of floating | point instructions that gcc can create code for - and I don't know if | the 386bsd math emulator emulates that particular command yet.  I've | already written the code (it's in linux), but it wasn't available back
+------------------------------------------------------------
+[1992-07-29T22:27:08+00:00] [torvalds@klaava.Helsinki.FI (Linus Benedict Torvalds)] [In article <1992Jul29.152914.2508@nrao.edu> cflatter@nrao.edu writes:
+>In article l7ctu0INN880@neuro.usc.edu, merlin@neuro.usc.edu (merlin) writes:
+>>
+>>Does gcc 2.2 actually use 80387 inline code for transcedental functions?
+>
+>No. I just looked :-(.  (Unless it is very well hidden).
+
+gcc-2.2.2 only uses the basic math + fsqrt (fsqrt is new to gcc-2.x). 
+The basic math is handled pretty well, though: much better than with
+earlier versions.  gcc-2 knows about the fpu stack, resulting in fpu
+code that looks almost hand-optimized (at least sometimes).  gcc-1.40
+isn't very good at handling the 387 stack (it seems to use mostly
+ready-made templates). 
+
+>It could probably be made to though.  There appears to be some support for
+>inlining transcendental functions for the Moto 68881.
+
+I don't think inlining is as easy on the 387 as it's on a 68881: the 387
+transcendental functions have enough special cases (argument limitations
+etc) that it's probably easier to do it in a dedicated function.  But
+those functions should certainly use the 387 instructions instead of
+using series arithmetic or whatever portable C code the current 386bsd
+libraries seem to use. 
+
+The linux libraries might be useful: linux has two different math
+libraries, one for soft-float (ie using only the normal arithmetic
+functions that are emulated), and one for hard-float.  With shared
+libraries (under linux), the same binary can use either, but under
+386bsd you'd have to decide at link-time which to use. 
+
+		Linus
+
+
+]
+MID: 1992Jul29.222708.4315@klaava.Helsinki.FI
+SUBJ: Re: 386BSD-0.1/BRLCAD4.0 benchmark -- poor floa
+BODY: In article <1992Jul29.152914.2508@nrao.edu> cflatter@nrao.edu writes: | >In article l7ctu0INN880@neuro.usc.edu, merlin@neuro.usc.edu (merlin) writes: | >> | >>Does gcc 2.2 actually use 80387 inline code for transcedental functions? | > | >No. I just looked :-(.  (Unless it is very well hidden). |  | gcc-2.2.2 only uses the basic math + fsqrt (fsqrt is new to gcc-2.x).  | The basic math is handled pretty well, though: much better than with | earlier versions.  gcc-2 knows about the fpu stack, resulting in fpu | code that looks almost hand-optimized (at least sometimes).  gcc-1.40 | isn't very good at handling the 38
+------------------------------------------------------------
+[1992-08-01T11:44:36+00:00] [torvalds@klaava.Helsinki.FI (Linus Benedict Torvalds)] [In article <1992Jul30.174414.28488@kas.helios.mn.org> rhealey@kas.helios.mn.org (Rob Healey) writes:
+>In article <1992Jul21.152007.1126@news2.cis.umn.edu> rodeen@buddha.ncc.umn.edu (Rick Odeen) writes:
+>=I don't think this is a valid claim, Linus Torvalds developed the Linux
+>=system in less than one year from scratch.
+>=
+>	Where did Linus get 99% of his MODELS for Linux? Ans: USL and BSD
+>	UNIX. "We stand on the shoulders of giants..."
+
+Indeed - the /concepts/ of linux are naturally based on things that have
+been available in USL and BSD code.  That doesn't mean that there is any
+risk of linux being sued by AT&T - they are all properly documented
+features, and thus AT&T cannot claim any infringement due to things like
+uid/setgid etc general unix interfaces. 
+
+The problem with BSDI and 386BSD is that they have a bit more to prove
+than linux: BSD has been developed with free access to AT&T code (and
+nobody tries to argue otherwise), and there has been a flow of
+information both ways (arguably the flow has been bigger in the BSD ->
+AT&T direction, but that isn't the point).  Linux, on the other hand,
+has been coded without /any/ AT&T code - not even as a starting point. 
+I simply don't have access to any AT&T code even if I wanted to use it,
+which I don't. 
+
+So if AT&T claims that BSDI (or 386BSD) couldn't have been developed in
+such a short time without AT&T sources, linux is indeed an argument
+against that claim.  If one person can write a perfectly functional
+system in one year on his home machine (and some people that have tried
+both and don't need networking even /prefer/ linux to 386bsd), then a
+couple of knowledgeable people shouldn't have any problem to remove all
+the AT&T code.
+
+Note that linux isn't the only system that can claim being free from
+AT&T code: coherent, minix, etc have all been commercial for a long
+time, and USL hasn't tried to sue them.  But linux is special in that
+it's been developed in a very short time, and thus can be used as a
+counter-argument to the USL claim that the BSDI developement would have
+been impossible without AT&T code. 
+
+			Linus
+
+
+]
+MID: 1992Aug1.114436.8733@klaava.Helsinki.FI
+SUBJ: Re: AT&T vs. BSDI --> 4.3BSD-NET2 distribution requires AT&T license!!!
+BODY: In article <1992Jul30.174414.28488@kas.helios.mn.org> rhealey@kas.helios.mn.org (Rob Healey) writes: | >In article <1992Jul21.152007.1126@news2.cis.umn.edu> rodeen@buddha.ncc.umn.edu (Rick Odeen) writes: | >=I don't think this is a valid claim, Linus Torvalds developed the Linux | >=system in less than one year from scratch. | >= | >	Where did Linus get 99% of his MODELS for Linux? Ans: USL and BSD | >	UNIX. "We stand on the shoulders of giants..." |  | Indeed - the /concepts/ of linux are naturally based on things that have | been available in USL and BSD code.  That doesn't mean that there is any | risk of linu
+------------------------------------------------------------
+[1992-09-04T22:04:30+00:00] [torvalds@klaava.Helsinki.FI (Linus Benedict Torvalds)] [[ I haven't actually looked at the changes that were made to the 387
+emulator when porting from linux, but I assume they aren't major, so
+this should still be true unless 386bsd does something weird ]
+
+In article <BRTMAC.92Sep4124909@maverick.ksu.ksu.edu> brtmac@maverick.ksu.ksu.edu (Brett McCoy) writes:
+>I have a 386sx/16 machine without a 387.  Most of the time this
+>works fine, but in programs like ico, xgc and x11perf when they
+>do floating point intensive stuff the machine more or less locks
+>up and I generally have to reboot.
+>
+>I believe this is because of all the traps to the 387 emulation
+>code in the kernel.  I understand it being slow, but why does
+>it bring the machine to a virtual halt?
+
+I doubt it brings the machine to a halt: other things still get to run. 
+The emulator just makes some things very slow - I didn't originally
+write it for speed, but for ease of implementation, and I never went
+back to look more into it (as I do have a 387, and never actually used
+the emulator anyway other than for testing purposes). 
+
+>When I run ico everything will freeze for 5 or 10 seconds, then
+>the ball will move a ways and other X events will occur (such as
+>the mouse cursor moving), then everything will halt again.  It
+>seems that while the 387 emulation code is running nothing else
+>can run and the emulation code has priority over everything else.
+
+It's probably not the 387-emulator that has priority: it's X11.  Things
+that don't use the screen should be perfectly all right - but anything
+which wants to draw things on the screen has to wait for X to be ready. 
+And if X11 is busy calculating sin/cos for arcs, it won't update other
+windows, which is why it looks halted. 
+
+Try logging in over a serial line to see if that's ok: it will naturally
+be slower than on an unloaded machine, as X11 is chugging away on
+counting, but it shouldn't be any worse than any other CPU-intensive
+task.  And if you are serious about running X, I'd suggest you get a
+real 387 pronto: the 387-emulator was never meant to be used for any
+"real" calculations. 
+
+		Linus
+
+
+]
+MID: 1992Sep4.220430.807@klaava.Helsinki.FI
+SUBJ: Re: abysmal performance of X in xgc and x11perf
+BODY: [ I haven't actually looked at the changes that were made to the 387 | emulator when porting from linux, but I assume they aren't major, so | this should still be true unless 386bsd does something weird ] |  | In article <BRTMAC.92Sep4124909@maverick.ksu.ksu.edu> brtmac@maverick.ksu.ksu.edu (Brett McCoy) writes: | >I have a 386sx/16 machine without a 387.  Most of the time this | >works fine, but in programs like ico, xgc and x11perf when they | >do floating point intensive stuff the machine more or less locks | >up and I generally have to reboot. | > | >I believe this is because of all the traps to the 387 emula
+------------------------------------------------------------
+[1992-09-20T08:20:35+00:00] [torvalds@klaava.Helsinki.FI (Linus Torvalds)] [In article <19c1e4INN81h@agate.berkeley.edu> randyc@soda.berkeley.edu (Yen-Pang Randy Chou) writes:
+>
+>I was trying to compile vogl(emulates an sgi on X), and ran into the following
+>error message when I tried running one of the sample files :
+>
+>math_emulate: instruction d9ff not implemented
+
+0xd9ff is the code for "fcos", which is indeed not handled by the
+emulator (along with all the other trigonometric/logarithmic functions). 
+The math emulator only handles those instructions which gcc normally
+generates (loads/stores/add/sub/mul/div/cmp and state save/restore).  I
+don't think the bsd emulator even contains the fsqrt code which I added
+later for linux (as gcc-2.x can generate that too). 
+
+>does anyone know how to fix that?  I tried both the original libm.a and the
+>new libcfpu.a and they both gave me the same error message.  Would it help
+>if I had a 486?  BTW, has anyone gotten vogl to work?
+
+A math chip (387 or a full 486) would certainly help, as the emulator
+isn't needed then.  Another fix is to use a soft-float library, which
+does the library functions (that the emulator doesn't handle) by doing
+the correct series of simpler functions.  I don't know if/where such a
+library can be found for 386bsd. 
+
+		Linus
+
+
+]
+MID: 1992Sep20.082035.19305@klaava.Helsinki.FI
+SUBJ: Re: Help with math emulator!!!
+BODY: In article <19c1e4INN81h@agate.berkeley.edu> randyc@soda.berkeley.edu (Yen-Pang Randy Chou) writes: | > | >I was trying to compile vogl(emulates an sgi on X), and ran into the following | >error message when I tried running one of the sample files : | > | >math_emulate: instruction d9ff not implemented |  | 0xd9ff is the code for "fcos", which is indeed not handled by the | emulator (along with all the other trigonometric/logarithmic functions).  | The math emulator only handles those instructions which gcc normally | generates (loads/stores/add/sub/mul/div/cmp and state save/restore).  I | don't think the bsd emul
+------------------------------------------------------------
+[1992-09-29T10:33:34+00:00] [torvalds@klaava.Helsinki.FI (Linus Torvalds)] [In article <1992Sep28.054649.15131@lugb.latrobe.edu.au> lurch@ee.latrobe.edu.au (Geoffrey Liersch) writes:
+>
+>Has anyone got any comments on where to start the implementation of the 
+>vm86 system call such as the system call number, parameters, header files to
+>be changed or any other hints/documentation that I should be aware of as I
+>am looking at implementing such a call?
+
+A vm86 system call has the rather bad point of resulting in some
+fundamental changes in how interrupts/exceptions are handled: the
+supervisor stack looks different when the exception happened in vm86
+mode.  I don't know how 386bsd handles this state information, but it
+could be potentially ugly (ie needing a lot of small changes to some
+fundamental routines.)
+
+Assuming that isn't a problem, you might look at the way I did it (with
+comments/suggestions from others) for linux: as far as I am concerned,
+the linux VM86 code can be used freely for 386bsd if you can get it to
+work (under similar conditions as the math emulator.  See the copyright
+on that one).  Whatever you do, you need a good understanding of the
+vm86 mode.  If you decide to use code from linux, just drop me a line,
+and we can make it official (ie don't take the above as "do anything you
+like with my code" - but I'm flexible about the copyleft). 
+
+The linux vm86() code assumes all special cases are handled by the
+user-level DOS emulator - the kernel does nothing at all when an
+exception occurs, and only sends the process the correct signal which
+will then be processed in "normal" 32-bit mode.  That means the vm86()
+interface is only about 100 lines (might even be less) of C code (and a
+couple of checks in "ret_from_sys_call" which is written in assembler). 
+
+I'll be happy to answer (intelligent) questions about the linux
+implementation in case somebody wants to do something similar for
+386bsd.  It is entirely possible that the linux way of doing things
+simply won't work under 386bsd: the vm86() system call does some
+"interesting" simplifications by playing around with the supervisor
+stack addresses etc. 
+
+		Linus
+
+
+]
+MID: 1992Sep29.103334.18402@klaava.Helsinki.FI
+SUBJ: Re: vm86 system call
+BODY: In article <1992Sep28.054649.15131@lugb.latrobe.edu.au> lurch@ee.latrobe.edu.au (Geoffrey Liersch) writes: | > | >Has anyone got any comments on where to start the implementation of the  | >vm86 system call such as the system call number, parameters, header files to | >be changed or any other hints/documentation that I should be aware of as I | >am looking at implementing such a call? |  | A vm86 system call has the rather bad point of resulting in some | fundamental changes in how interrupts/exceptions are handled: the | supervisor stack looks different when the exception happened in vm86 | mode.  I don't know h
+------------------------------------------------------------
+[1992-10-23T22:28:05+00:00] [torvalds@klaava.Helsinki.FI (Linus Torvalds)] [In article <1992Oct23.065308.15617@ntuix.ntu.ac.sg> eoahmad@ntuix.ntu.ac.sg (Othman Ahmad) writes:
+>
+>I strongly advise people not to remove the original gcc-1.39.
+>gcc-2.2.2 has lots of bugs.
+
+gcc-2.2.2 does NOT have lot's of bugs - quite the reverse is true in my
+opinion (I had more troubles with gcc-1.39 code generation than with
+gcc-2.2.2).  You may have a few problems with C++, but so far I haven't
+heard of any bad bugs in gcc-2.2.2 that would make me want to have an
+older version. 
+
+The linux community has been using the newest gcc for quite a while
+(this includes actually testing out snapshots a few days after they are
+released etc), and compiler-generated problems have been very few
+(although there were quite a few library-related ones). 
+
+But there *IS* at least a couple of reasons for trouble with gcc-2.2.2
+under 386bsd:
+ - math support.  gcc-2.2.2 generates many new 387-instructions relative
+   to 1.39, and the bsd386 math-emulation may not be up to it (and I'm
+   not putting it down: I wrote most of it, and I just recognize that
+   it's not a piece of art.  Linux no longer uses it).  This will only
+   get worse: gcc-2.3 will emit the fsin/fcos instructions directly.
+ - gcc-2.x generates the 386 string instructions, and doesn't put a 'cld'
+   before them, assuming that the direction flag is always cleared.  If
+   the kernel doesn't clear the direction flag at an interrupt or trap,
+   you'll get weird behaviour.  I don't think this is a problem for
+   386bsd, but I remember having problems with it under linux when
+   testing out a pre-release of gcc-2.0.  Easily fixed in any case. 
+
+There should probably be no other major problems (although gcc-2.2.2 is
+a lot bigger than 1.39, so if you are tight on memory, 1.39 is much
+faster). 
+
+		Linus
+
+
+]
+MID: 1992Oct23.222805.24970@klaava.Helsinki.FI
+SUBJ: Re: How suitable is gcc-2.2.2 for 386bsd?
+BODY: In article <1992Oct23.065308.15617@ntuix.ntu.ac.sg> eoahmad@ntuix.ntu.ac.sg (Othman Ahmad) writes: | > | >I strongly advise people not to remove the original gcc-1.39. | >gcc-2.2.2 has lots of bugs. |  | gcc-2.2.2 does NOT have lot's of bugs - quite the reverse is true in my | opinion (I had more troubles with gcc-1.39 code generation than with | gcc-2.2.2).  You may have a few problems with C++, but so far I haven't | heard of any bad bugs in gcc-2.2.2 that would make me want to have an | older version.  |  | The linux community has been using the newest gcc for quite a while | (this includes actually testing out sn
+------------------------------------------------------------
+[1992-11-04T11:17:32+00:00] [torvalds@klaava.Helsinki.FI (Linus Torvalds)] [In article <1992Nov4.021453.22896@citec.oz.au> sgccseh@citec.oz.au (Steve Hocking) writes:
+>
+>	Looking at the latest Linux release and user comments on it, it
+>appears that a new math emulator has been written which is more complete and
+>accurate, plus about 2x faster. Does anybody have plans to port this to
+>386bsd (since we got the original emulator from Linux anyway)?
+
+The problem is the copyright: it's copylefted code by Bill Metzenthen,
+so you cannot distribute it under the 386bsd copyright.  The original
+emulator I wrote was also originally copylefted, but I gave Bill and
+Lynne the right to use it under 386bsd (the copyright was changed to
+something like "freely usable for the 386bsd and linux projects"). 
+You'd have to ask permission from Metzenthen - his email address can be
+found in the sources.
+
+		Linus
+
+
+]
+MID: 1992Nov4.111732.9703@klaava.Helsinki.FI
+SUBJ: Re: Port of new Linux math emulator to 386bsd?
+BODY: In article <1992Nov4.021453.22896@citec.oz.au> sgccseh@citec.oz.au (Steve Hocking) writes: | > | >	Looking at the latest Linux release and user comments on it, it | >appears that a new math emulator has been written which is more complete and | >accurate, plus about 2x faster. Does anybody have plans to port this to | >386bsd (since we got the original emulator from Linux anyway)? |  | The problem is the copyright: it's copylefted code by Bill Metzenthen, | so you cannot distribute it under the 386bsd copyright.  The original | emulator I wrote was also originally copylefted, but I gave Bill and | Lynne the right
+------------------------------------------------------------
+[1992-11-04T16:04:17+00:00] [torvalds@klaava.Helsinki.FI (Linus Torvalds)] [In article <2582@bigfoot.first.gmd.de> gt@prosun.first.gmd.de (Gerd Truschinski) writes:
+>In article <1992Nov4.052106.29266@menudo.uh.edu>, wjin@cs.uh.edu (W. Woody Jin) writes:
+>|> In article <Nov.2.20.33.38.1992.18690@remus.rutgers.edu> glenw@remus.rutgers.edu (Glenn Wasserman) writes:
+>|> >
+>|> >I have Linux running on my machine now, and I'm just wondering if this 
+>|> >is the right choice. Is 386BSD more stable? 
+>|> 
+>|> Version numbers say it : Linux 0.98  <--> 386BSD 0.1 p58.
+>                                  ^^^^               ^^^^^^^
+>Hey, its  --> 4.3 <--- 386BSD isn't it :-)
+
+Yes, yes, yes.  I promised myself that I wouldn't bother with this
+thread, but so what.  Anyway, the only good way to tell which is better
+for your needs is to actually try them both out.  Version numbers don't
+tell you much: different people give different version-numbers, and the
+different design policies between the setups also change the way the
+numbers grow: linux has "real-time" developement, ie most of the time
+people can use a version that is at most a week or two away from my
+current one, so linux numbers automatically grow differently. 
+
+386bsd was started before linux was (judging by the DDJ articles), but
+due to various problems (disagreement about the first version as well as
+just the porting problems) linux has actually been available for a
+longer time.  So in some respects linux may be more stable, especially
+when it comes to the 386-specific things.  But yes, 386bsd has many
+years of developement behind it, so not surprisingly it probably is more
+stable in other areas (networking..  you can still easily crash linux
+with heavy ftp'ing it seems)
+
+As to other arguments I've seen: neither 386bsd or linux are
+microkernels, and I cannot really say anything about speed.  There has
+been some talk about linux seeming more responsive: that may be
+partially true due to (a) scheduler implementation and (b) less memory
+usage due to shared libs (especially under X).  On the other hand, I
+assume 386bsd handles swapping more gracefully: the linux paging deamon
+(actually implemented in the kernel) isn't exactly clever.  It's gotten
+a lot better since 0.95, but it's still simplistic. 
+
+And yes, both kernels seem to have problems with some hardware: not
+surprising when you consider the amount of different hardware available
+for the IBM PC/AT.  I have reports of linux running for 50 days (under
+actual load - not just sitting there) without a reboot (and even then
+due to upgrading the kernel), but I also have some reports of linux not
+even booting, although the hardware "in theory" should fit.  I'd assume
+the same holds for 386bsd. 
+
+One major difference between the systems is the way they grow: linux has
+grown openly with many smaller patches and releases and with different
+people handling different aspects of the system (I only handle actual
+kernel source: others do gcc/X11/rootdisk etc).  This has it's good
+sides: the system has grown pretty fast, and people who want to keep up
+can do so.  The more centralized (and judging by myself probably better
+administered) 386bsd releases mean people don't have to worry about
+where to get things, when to upgrade etc. 
+
+The linux realtime releases have had their share of problems: it means
+end-users can be bitten by bugs more easily (but it also means they can
+be found/fixed more easily).  It also means many have gotten the idea
+that you have to recompile the kernel every week just to keep it
+working, as well as resulting in that there has often been different
+versions of the same binary that may use features that aren't available
+in all kernels.  But if you are a kernel hacker, the linux way is
+probably preferable. 
+
+So the result of the above is: read both c.o.linux and c.u.bsd, try them
+both out, keep an open mind, and select the one that fits you (or keep
+running both: variatio delectat).  Linux is more of a hackers kernel:
+both the kernel and tools are updated all the time (gcc has generally
+been available for alpha-testing under linux even before it's been
+released - hlu has made images from the snapshots GNU puts out.  And so
+on).  And while linux now does have networking and NFS support, 386bsd
+is still probably the choice if you really need networking as opposed to
+"just want to play around with it". 
+
+		Linus
+
+PS.  No, I don't follow my own advice: I haven't got the diskspace to
+try out 386bsd.  That has never hindered anybody else on usenet from
+giving good advice.  And besides, I'm biased.  Just a teeny-weeny bit. 
+
+
+]
+MID: 1992Nov4.160417.25258@klaava.Helsinki.FI
+SUBJ: Re: 386BSD or LINUX?
+BODY: In article <2582@bigfoot.first.gmd.de> gt@prosun.first.gmd.de (Gerd Truschinski) writes: | >In article <1992Nov4.052106.29266@menudo.uh.edu>, wjin@cs.uh.edu (W. Woody Jin) writes: | >|> In article <Nov.2.20.33.38.1992.18690@remus.rutgers.edu> glenw@remus.rutgers.edu (Glenn Wasserman) writes: | >|> > | >|> >I have Linux running on my machine now, and I'm just wondering if this  | >|> >is the right choice. Is 386BSD more stable?  | >|>  | >|> Version numbers say it : Linux 0.98  <--> 386BSD 0.1 p58. | >                                  ^^^^               ^^^^^^^ | >Hey, its  --> 4.3 <--- 386BSD isn't it :-) |  | Yes,
+------------------------------------------------------------
+[1992-12-08T13:12:40+00:00] [torvalds@klaava.Helsinki.FI (Linus Torvalds)] [In article <1992Dec7.232615.2854@tinman.mke.ab.com> tdphette@mke.ab.com (Thad Phetteplace x4461) writes:
+>
+>I am in favor of using virtual 8086 modes for the performance gain it would
+>have over a fully emulated version.  If the Linux DOS emulator uses a 386 
+>dependent implementation we might be able to borow from its design.  I don't
+>know much about linux but I get the feeling it has a different approach for
+>memory management and CPU scheduling.  This would make a direct port
+>difficult.  Nevertheless, it could be worth taking a look at as a starting
+>point.  Any Linux users out there care to comment about this?
+
+The problem with using the linux v86 mode code isn't so much the memory
+management: that probably needs only minor mods.  The thing that
+probably leads to problems is the different handling of kernel traps in
+the two systems. 
+
+When linux gets a kernel trap (be it a system call or a interrupt) it
+essentially does nothing special: it just saves some needed registers on
+the kernel stack, does the appropriate handler and returns (slightly
+simplified: if the return is to user mode, the return code also checks
+for signals, time slices etc).  Linux never saves any state anywhere
+else (well, the task-switching saves the registers, but that's done by
+the 386 hardware). 
+
+So when linux gets a request to move the process into v86 mode, all it
+does is move the tss->esp0 value below the current stack frame, which
+automatically means that the current process state is completely saved
+as far as the kernel is concerned.  After that, it just builds a new
+stack frame with the v86 info, and does an IRET.  All the old
+information is automatically protected on the stack, and any new
+interrupts automatically use a new stack frame below the saved values. 
+
+When a signal occurs and the process has to be moved back into protected
+mode again to handle it, the current (vm86 mode) stack frame is saved
+for later reference by the DOS emulator, and then discarded.  This
+automatically makes the stack frame below (the one that was used before
+entering v86 mode) the current stack frame, and a normal IRET will again
+restore the wanted mode (as well as returning to the emulator at the
+point the vm86() system call was done after handling the signal). 
+
+With this rather elegant v86 mode setup, the actual kernel code in linux
+to handle v86 mode is truly minimal: I think it's less than 100 lines of
+C and assembly in all (and most of that is actually setting up and
+saving the stack frames).  The reason this works is because linux never
+does any non-local jumps in the kernel (very much by design: I consider
+longjmp's very ugly), and never saves any process state anywhere but on
+the kernel stack (*). 
+
+With bsd, the above isn't true, I think, so you can't just simply
+protect the stack by changing the default esp0 pointer and assume that
+all state is correctly saved.  I might be wrong, but I think the kernel
+plays tricks with the kernel stack when handling signals and/or some
+sleep/wakeup code, so you have to save state somewhere else.  That makes
+it harder to implement transparently to the rest of the system. 
+
+So essentially: feel free to check out how the linux kernel does it, and
+using the same user-level interface might be worth it if only because
+you could then port the linux dos-emulator without any problems instead
+of starting from scratch.  But the actual switch into protected mode
+will almost certainly have to be handled differently, and there might be
+many places that need some minor tweaking to work correctly due the
+different kernel trap stack layout from vm86 mode. 
+
+		Linus
+
+(*) As mentioned, the task-switching obviously has to save state. 
+However, the linux task-switch is so simple that you never have to worry
+about it: it's essentially invisible to the kernel on a very low level,
+and is handled by one simple __asm__-statement in sched.c (and even that
+is hidden behind a macro).  No weird and complex transitions: all kernel
+functions always return to the place they were called from (except, of
+course, do_exit(), which kills the process and never returns anywhere). 
+
+
+]
+MID: 1992Dec8.131240.16747@klaava.Helsinki.FI
+SUBJ: Re: MS-DOS emulator? [386BSD]
+BODY: In article <1992Dec7.232615.2854@tinman.mke.ab.com> tdphette@mke.ab.com (Thad Phetteplace x4461) writes: | > | >I am in favor of using virtual 8086 modes for the performance gain it would | >have over a fully emulated version.  If the Linux DOS emulator uses a 386  | >dependent implementation we might be able to borow from its design.  I don't | >know much about linux but I get the feeling it has a different approach for | >memory management and CPU scheduling.  This would make a direct port | >difficult.  Nevertheless, it could be worth taking a look at as a starting | >point.  Any Linux users out there care
+------------------------------------------------------------
+[1992-12-09T23:39:40+00:00] [torvalds@klaava.Helsinki.FI (Linus Torvalds)] [In article <1992Dec3.071056.27426@ntuix.ntu.ac.sg> othman@ntrc25.ntrc.ntu.ac.sg (othman (EEE/Div 4)) writes:
+>
+>I've installed Joerg's shared lib with little problem.
+>
+>The improvement in code size is significant for small programs but can be
+>worse for larger programs such as cc1. cc1 using shared lib is actually
+>larger than static lib, but SysV manual warns of this problem.
+>	There is little hard-disk that I manage to save even after installing
+>the compressed man pages.
+>	At most 20 megabytes. That is too little but then there is still the
+>X386 with xview3, which takes up 32Mbyte. No wonder the linux guys refused to
+>give me figures for comparison.
+
+A couple of comments here:
+
+ - the linux way of doing shared libraries is different from the Joerg
+   type, which seems to follow sysvr4 and SunOS.  Under linux, shared
+   binaries are *never* bigger than their unshared counterparts, as
+   linux binaries don't have to contain any linking information at all. 
+   It's handled by a jump-table in the shared library image itself. This
+   is one reason I prefer the linux way, although others seem to feel
+   it's less dynamic and thus worse.  Linux shared binaries are probably
+   smaller than 386bsd's in all cases due to this. 
+
+ - The reason "the linux guys" "refused" to give you the information you
+   wanted was probably due to nobody caring either due to your attitude
+   or due to the fact that shared libraries under linux are by now the
+   standard thing, and nobody much uses static binaries any more.
+
+ - did you try X11 binaries? The difference is dramatic.
+
+Just to clarify: shared libraries do indeed save *a lot* of disk-space
+if done right.  And it's been tested: the linux rootdisk relies on
+shared libraries to pack in as many programs as it does into 1.2MB.
+
+I didn't find any static binaries on my system (expect for some
+uninteresting ones like "update" which is dated from last year..), so
+just to show an example, I made one. The binary in question is the
+openlook virtual window manager (olvwm), and here are the sizes (both
+are stripped):
+
+	# ll olvwm olvwm.static 
+	-rwxr-xr-x   1 root     root       209920 Dec  5 17:36 olvwm
+	-rwxr-xr-x   1 root     root       427012 Dec 10 00:43 olvwm.static
+
+As you can see, there is a doubling in size when linking statically, and
+you can guess which I want to use on my system with 2 40MB harddisks
+(I'm not kidding you). 
+
+I'd like to point out that 'olvwm' is not an extreme case: quite the
+reverse.  It was just a binary that I could easily re-link, as I had the
+object files from a couple of days ago (as can be seen from the dates). 
+With other binaries the savings are usually even more apparent: many X
+binaries contain mostly X library code when compiled statically, and can
+shrink to about 5-10% or their static size when recompiled to use shared
+libraries.
+
+Just for fun I just checked my /usr/bin/X11 directory: it contains 75
+binaries, of which 21 have the minimal linux binary size of 9220: this
+is 1kB of binary header, one page of code, and one page of data.  They
+could be shrunk yet more by linking them with the -N flag which packs
+all the data together, but they haven't (it's not the default gcc option
+under linux, as it means the binary won't get demand-loaded). 
+
+Of the rest, 12 or 13 have a size of 13316 (one page more for either
+code or data), 6 more are yet another page bigger, and only 6 are more
+than 100kB in size.  I'd be willing to bet that that isn't true under
+386bsd without shared libraries: X11 binaries without shared libraries
+have a tendency to be >300kB in size regardless of what they do.  Thus
+the shared libraries mean that I can have a pretty good complement of
+the standard small X utilities without worrying about disk space. 
+
+In case somebody wants to actually check the sizes against the 386bsd
+binaries, here are a couple of examples (more or less randomly picked
+from the X binaries).  I can't say how big the static versions are: I
+don't have them. 
+
+	-rwxr-xr-x   1 root     root         9220 Oct  2 03:58 xclock
+	-rwxr-xr-x   1 root     root        13316 Oct  2 04:40 xsetroot
+	-rwxr-xr-x   1 root     root        21508 Oct  2 03:40 puzzle
+	-rwxr-xr-x   1 root     root        21508 Oct  2 03:56 xcalc
+	-rwxr-xr-x   1 root     root        37892 Oct  2 03:36 ico
+	-rwxr-xr-x   1 root     root       111620 Oct  2 03:51 twm
+
+Feel free to come to your own conclusions. And yes, it's most obvious
+with X binaries, but it shows clearly even on normal binaries too.. A
+couple of small examples (yes, here I've used the -N flag to press them
+under the 9220 mark):
+
+	-rwxr-xr-x   1 root     root         4376 Sep  8 05:35 cat
+	-rwxr-xr-x   1 root     root         3888 Nov  9 19:12 printf
+	-rwxr-xr-x   1 root     root         3636 Nov  9 19:12 id
+
+Note that the above are GNU binaries, not something that I've hacked up
+to be as small as possible.  How big are they with static libs? I don't
+know, and I'm just as happy that way. 
+
+>	Anyone uses shared-lib for X applications or even server?
+>I'll do it later but it will help a lot if someone can share with me their
+>experiences.
+>	However there is some saving in virtual memory size, about 20Kbyte.
+
+Right now, running X11 with a couple of clients (3 xterms, xeyes,
+oclock, xgas), /proc/meminfo gives me (pasted from another xterm):
+
+	# cat /proc/meminfo 
+	        total:   used:    free:   shared:  buffers:
+	Mem:  15355904 14942208   413696  2629632  6291456
+	Swap:  5521408        0  5521408
+
+As you can see, out of 15+MB (16MB minus kernel memory) 6MB is used for
+buffers (it's dynamic, and I put a upper limit of 6MB on it so that it
+never grows to any more than that).  About 9MB is used by user-level
+binaries: 3.6MB of this the the X-server itself (probably much of it due
+to the background 1024x768 pixmap of Calvin & Hobbes).  And due to page
+sharing, I have 2.5MB more virtual memory than the amount of memory
+actually used.  Not all of it is shared libraries (the shell binaries
+are probably sharing normal code pages as well), but most of it probably
+is.  The above aren't doctored numbers: I've seen more than 3MB shared,
+but I've also seen less.  Anyway, for me the disk-space saved is more
+important. 
+
+As to the timing checks you made: yes, shared libraries may slow things
+down.  On the other hand, they can also speed things up: less memory
+used, less need to load in pages from disk etc..  I don't think the
+speed difference is much of an issue, but I haven't actually tested it
+at all. 
+
+		Linus
+
+
+]
+MID: 1992Dec9.233940.5174@klaava.Helsinki.FI
+SUBJ: Re: Shared lib benchmarks, and experiences
+BODY: In article <1992Dec3.071056.27426@ntuix.ntu.ac.sg> othman@ntrc25.ntrc.ntu.ac.sg (othman (EEE/Div 4)) writes: | > | >I've installed Joerg's shared lib with little problem. | > | >The improvement in code size is significant for small programs but can be | >worse for larger programs such as cc1. cc1 using shared lib is actually | >larger than static lib, but SysV manual warns of this problem. | >	There is little hard-disk that I manage to save even after installing | >the compressed man pages. | >	At most 20 megabytes. That is too little but then there is still the | >X386 with xview3, which takes up 32Mbyte. No won
+------------------------------------------------------------
+[1992-12-20T11:50:36+00:00] [torvalds@klaava.Helsinki.FI (Linus Torvalds)] [In article <davis.724817863@csrg2> davis@csrg2.ee.iastate.edu (Jim Davis) writes:
+>						But I have wondered
+>why there are two efforts to provide a free UNIX...is it just coincidence
+>that two groups developed a distribution at about the same time?  or did
+>they have different goals?  or is this a BSD vs. System-V thing?
+
+It's just coincidence: I knew about 386bsd through DDJ, but it obviously
+wasn't ready when I would have wanted it, so I just started on my own. 
+If 386bsd had been ready one year earlier, I'd probably not have started
+on linux at all, but used bsd instead - although I'm very happy with how
+it all turned out. 
+
+As to bsd vs sysv - no, nothing like that.  Linux isn't exactly sysv,
+but has a lot of features from both camps, and looks a bit more like
+sysv simply because POSIX generally leans in that direction. 
+
+			Linus
+
+
+]
+MID: 1992Dec20.115036.7197@klaava.Helsinki.FI
+SUBJ: Re: 386BSD vs Linux: major differences?
+BODY: In article <davis.724817863@csrg2> davis@csrg2.ee.iastate.edu (Jim Davis) writes: | >						But I have wondered | >why there are two efforts to provide a free UNIX...is it just coincidence | >that two groups developed a distribution at about the same time?  or did | >they have different goals?  or is this a BSD vs. System-V thing? |  | It's just coincidence: I knew about 386bsd through DDJ, but it obviously | wasn't ready when I would have wanted it, so I just started on my own.  | If 386bsd had been ready one year earlier, I'd probably not have started | on linux at all, but used bsd instead - although I'm very
+------------------------------------------------------------
+[1993-07-04T09:18:04+00:00] [torvalds@klaava.Helsinki.FI (Linus Torvalds)] [In article <214al6INNsmp@fstgds01.tu-graz.ac.at> chmr@edvz.tu-graz.ac.at (Christoph Robitschko) writes:
+>In article <1993Jul3.055522.4000@fcom.cc.utah.edu> A Wizard of Earth C (terry@cs.weber.edu) wrote:
+>-> In article <C9J9H8.Ltu@sneaky.lonestar.org> gordon@sneaky.lonestar.org (Gordon Burditt) writes:
+>-> >
+>-> >Now, the question I have is, with this bug in the system, why does
+>-> >it stay up for more than 10 minutes?  Why can I run the compiler
+>-> >without it crashing?  
+>-> >
+>-> >Is there a 486-specific fix for this (set the WP bit in the cr0 register?  
+>-> >anything else needed or is that alone enough?)
+>-> 
+>-> This would probably be enough if the process creation code didn't depend
+>-> on it being unenforced during create.
+>-> 
+>It is not enough with the current copyout: It basically uses the kernel
+>permissions to write to user space (same in copyin: You can read the kernel
+>memory with write() ). Also, if WP is on, you cannot map memory read-only
+>to the user and read-write for the kernel, but this is needed.
+
+Why? This seems like major braindamage, as I can't see any reasons for
+the kernel to write to WP'd user pages and not get a SIGSEGV.  mmap()
+and friends should go through the page tables anyway, and should fill in
+the page with any startup data before even inserting it into the user
+VM, so why are they using "copyout" in the first place? Linux enables WP
+by default on a 486, and I don't think it needed any kernel changes at
+all. 
+
+>The 'bug' of the VM system is that is assumes read-only memory cant be modified.
+>The *bug* of the copyout family is that it happily writes to read-only memory.
+>It is obvious what should be fixed. (I'm working on a clean+fast patch).
+
+For speed, could I suggest doing the WP checks only once, and not in
+copyout? I haven't looked at the 386bsd sources, but I assume that
+copyout is used for partial ranges of memory for things like "read()"
+that copies the data in chunks from the buffer cache.  It's probably
+more efficient to check the whole memory-area given as parameters to
+read first (you'd have to do this to check for EFAULT anyway), and then
+not worry about it at all in copyout().  Otherwise you'll end up going
+through tha page tables several times (for every byte if you are unlucky
+with terminal reads or something). 
+
+And for your own sanity, may I suggest cleaning up the kernel so that WP
+can be enabled: anything which breaks WP right now is probably a kernel
+bug, really.  I can't imagine that the original BSD sources depended on
+the bad 386 behaviour: that wouldn't be portable.  Enabling WP also gets
+rid of the checks totally in a 486 (as well as being a good debugging
+tool: it can be used to check the behaviour of the 386 routines, as the
+WP errors should never trigger if they work all right). 
+
+		Linus
+
+
+]
+MID: 21678c$13q@klaava.Helsinki.FI
+SUBJ: Re: Nethack
+BODY: In article <214al6INNsmp@fstgds01.tu-graz.ac.at> chmr@edvz.tu-graz.ac.at (Christoph Robitschko) writes: | >In article <1993Jul3.055522.4000@fcom.cc.utah.edu> A Wizard of Earth C (terry@cs.weber.edu) wrote: | >-> In article <C9J9H8.Ltu@sneaky.lonestar.org> gordon@sneaky.lonestar.org (Gordon Burditt) writes: | >-> > | >-> >Now, the question I have is, with this bug in the system, why does | >-> >it stay up for more than 10 minutes?  Why can I run the compiler | >-> >without it crashing?   | >-> > | >-> >Is there a 486-specific fix for this (set the WP bit in the cr0 register?   | >-> >anything else needed or is t
+------------------------------------------------------------
+[1993-08-13T20:21:02+00:00] [torvalds@klaava.Helsinki.FI (Linus Torvalds)] [In article <CBo9C6.9ED@sugar.neosoft.com> peter@NeoSoft.com (Peter da Silva) writes:
+>In article <24cc1hINNo8@kralizec.zeta.org.au> bde@kralizec.zeta.org.au (Bruce Evans) writes:
+>> Linux just uses the translation given by the BIOS.  The only problem
+>> with this is is that the translated geometry may not be appropriate
+>> for file system layout optimizations.
+>
+>Worse, you could lose disk space. For example, the translation given by the
+>Compaq BIOS eats between 30 and 60 MB off the drives I use.
+
+This is usually not a problem on most systems: almost all BIOSes have a
+"type 47" or whatever that allows you to set your geometry to suit your
+taste.  Linux uses the BIOS values for several reasons:
+
+ - it's easier.  'nuff said.  The "drive translation problem" subject
+   has never even come up in the linux camp as far as I know, but I seem
+   to see it every now and then in the 386bsd groups. 
+ - less problems with sharing the disk with other systems: the partition
+   table makes more sense if everybody agrees on the layout of the disk. 
+ - I personally think the "translation overhead" mentioned by some folks
+   as a source of inefficiency for the filesystems (either due to the
+   controller getting slower due to translation or due to the fs not
+   knowing about the real geometry) is mostly a load of bull-sh*t.  It
+   may have made sense 10-20 years ago, but I doubt the FFS disk
+   geometry optimizations are really worth it these days with
+   controllers that do sector mapping etc (the BSD 4kB blocks are
+   probably a *much* larger win when compared to linux' 1kB blocks). 
+ - parly the same as the above: new drives usually have a variable
+   number of sectors anyway in reality, so trying to use a "native
+   mapping" is definitely not worth it.  Let the hardware sort it out:
+   no need to worry unnecessarily on a software level.  Not to mention
+   the fact that it's ugly in the extreme that the filesystem should
+   need to know anything about the geometry in the first place. 
+
+Personal opinions, not backed by numbers..  Flame me all you dare,
+
+		Linus
+
+
+]
+MID: 24gt3e$gg7@klaava.Helsinki.FI
+SUBJ: Re: Hard disk geometry translation (was V86 mode ...)
+BODY: In article <CBo9C6.9ED@sugar.neosoft.com> peter@NeoSoft.com (Peter da Silva) writes: | >In article <24cc1hINNo8@kralizec.zeta.org.au> bde@kralizec.zeta.org.au (Bruce Evans) writes: | >> Linux just uses the translation given by the BIOS.  The only problem | >> with this is is that the translated geometry may not be appropriate | >> for file system layout optimizations. | > | >Worse, you could lose disk space. For example, the translation given by the | >Compaq BIOS eats between 30 and 60 MB off the drives I use. |  | This is usually not a problem on most systems: almost all BIOSes have a | "type 47" or whatever th
+------------------------------------------------------------
+[1993-08-16T12:00:43+00:00] [torvalds@klaava.Helsinki.FI (Linus Torvalds)] [In article <BLYMN.93Aug15160011@siren.awadi.com.au> blymn@awadi.com.au (Brett Lymn) writes:
+>>>>>> On Thu, 12 Aug 1993 11:00:32 GMT, rooij@bashful.isp.cft.philips.nl (Guido van Rooij) said:
+>
+>Guido> gt8134b@prism.gatech.EDU (Howlin' Bob) writes:
+>
+>>As for slow task switching, the 386 doesn't access the I/O permissions
+>>bitmap until an I/O instruction occurs.  The size of the bitmap has
+>>no effect on task switching performance.
+>
+>Guido> The reason this was brought up is the fact that on task switching you
+>Guido> also need somehow to get the io permission bitmap in the TSS. Since
+>Guido> 386bsd does not use the builtin taskswitching of the 386, theis bitmap
+>Guido> has to be memcpy'd into the TSS, resullting in slow task switches.
+>
+>I do not think that we need to copy the i/o bitmap at all.  There are
+>a couple of alternatives.  One is modify the TSS location on a task
+>switch to point at a different i/o bitmap.  Each task need not have
+>it's own i/o bitmap, they can use the default one until they request a
+>change - then the bitmap could be copied and updated as requested
+>(sort of a copy on write scheme).
+
+The TSS IO bitmap pointer is sadly only 16 bits, and has to point to
+within the TSS segment anyway, so juggling with the IO bitmap is
+essentially not an option, and you do indeed need to copy the bitmap at
+task switch or use separate TSS's (of course, you can try to optimize
+away some of the copying as most processes don't use the IO bitmap at
+all, but the logic behind that is probably slower than the copying). 
+
+>The other alternative is to actually use a TSS for each process and do
+>a jump through the TSS.  According to Bill Jolitz the only reason for
+>the scheme we have at the moment is it only saves 8 registers instead
+>of 20, the scheme is supposed to be faster than doing a jmp through a
+>TSS.  In fact if you look at the pcb structure it already has all the
+>TSS structure there so making use of it would not change any kernel
+>data structures.
+
+The i386/i486 documentation all seem to suggest doing task switches by
+hand if you want optimal performance due to the slowness of the
+task-switch, but I have my doubts about the validity of that..  It's
+probably faster to switch in software if you need to save only limited
+state, but when you need to set the TS bit (for the math coprocessor),
+change cr3 (the page directory pointer), and update the TSS, doing it in
+software is probably not any faster than the simpler longjump to a TSS
+segment. 
+
+I actually did some timing tests on this: the linux kernel has
+traditionally used the TSS jump for task switching due to simplicity,
+but I rewrote the fork/exec to allow software task switching without
+problems.  Performance went down wen doing it in software, even though I
+got rid of some register loads that way.  Note that I didn't try to
+over-optimize it, so it's still possible that the software taskswitch
+approach may be faster, but it does indicate that there at least is no
+major need to try to avoid the i386 hardware task-switching features.  I
+can only suggest that 386bsd kernel hackers should try it out. 
+
+		Linus
+
+
+]
+MID: 24nstc$554@klaava.Helsinki.FI
+SUBJ: Re: V86 mode & the BIOS (was Need advice: Which OS to port to?)
+BODY: In article <BLYMN.93Aug15160011@siren.awadi.com.au> blymn@awadi.com.au (Brett Lymn) writes: | >>>>>> On Thu, 12 Aug 1993 11:00:32 GMT, rooij@bashful.isp.cft.philips.nl (Guido van Rooij) said: | > | >Guido> gt8134b@prism.gatech.EDU (Howlin' Bob) writes: | > | >>As for slow task switching, the 386 doesn't access the I/O permissions | >>bitmap until an I/O instruction occurs.  The size of the bitmap has | >>no effect on task switching performance. | > | >Guido> The reason this was brought up is the fact that on task switching you | >Guido> also need somehow to get the io permission bitmap in the TSS. Since | >Guido> 3
+------------------------------------------------------------

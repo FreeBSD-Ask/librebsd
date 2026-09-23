@@ -1,0 +1,2722 @@
+==========================================================================================
+DB: freebsd-hackers.duckdb  hits=50
+--------------------------------------------------------------------------------
+MID: <199608041517.IAA08933@austin.polstra.com>
+DATE: 1996-08-04T15:17:44+00:00  FROM: John Polstra <jdp@polstra.com>
+SUBJ: Announcing CVSup: Intelligent SUP Replacement
+BODY:
+Announcing CVSup 13.0
+		     ---------------------
+
+I am pleased to announce the first public release of CVSup, an
+intelligent replacement for sup and rdist.
+
+Where to Get CVSup
+------------------
+CVSup is free software.  It is available from the following FTP sites:
+
+    ftp://freefall.freebsd.org/pub/CVSup/
+    ftp://ftp.freebsd.org/pub/FreeBSD/incoming/
+    ftp://ftp.polstra.com/pub/FreeBSD/CVSup/
+
+Full sources as well as FreeBSD binaries are available:
+
+    cvsup-bin-13.0.tar.gz	FreeBSD binaries for the client
+    cvsupd-bin-13.0.tar.gz	FreeBSD binaries for the server
+    cvsup-13.0.tar.gz		Sources **
+
+The MD5 signatures for these files are:
+
+    MD5 (cvsup-bin-13.0.tar.gz) = 2f9733d6ffbf47069ec5952ff6570dc3
+    MD5 (cvsupd-bin-13.0.tar.gz) = ec7da4f3c6395b2d3d44fbf2d82ddf92
+    MD5 (cvsup-13.0.tar.gz) = 463ee7a1ef64dd432cd6094e81925985
+
+** If you wish to build CVSup from the sources, be sure to read the
+discussion further on in this announcement.
+
+What Is CVSup?
+--------------
+CVS
+
+--------------------------------------------------------------------------------
+MID: <199612010946.KAA13506@gilberto.physik.rwth-aachen.de>
+DATE: 1996-12-01T09:46:15+00:00  FROM: Christoph Kukulies <kuku@gilberto.physik.rwth-aachen.de>
+SUBJ: cvsup can't find host - sometimes
+BODY:
+I'm running cvsup of ports by cron a couple of times daily - on weekends
+moreoften. Some cvsups run fine, but now and then I have one looking
+like that:
+
+Subject: ports CVSsup on blues Sun Dec  1 09:55:40 MET 1996 finished
+
+Parsing supfile "/home/kuku/ports-supfile"
+Looking up address of freefall.cdrom.com
+Unknown host "freefall.cdrom.com"
+
+(this is from a cvsup -L 2 cvsupfile | mail I send to myself when cvsup
+is finished)
+
+Pinging freefall works fine. I'm just wondering whether this is a
+network problem (load, nameservers unreachable or some such) or
+if it might be a cvsup problem since the lookup is done by the
+program and the name search might be not 'hard enough'.
+
+
+--Chris Christoph P. U. Kukulies kuku@gil.physik.rwth-aachen.de
+
+From owner-freebsd-hackers  Sun Dec  1 04:45:11 1996
+Return-Path: owner-hackers
+Received: (from root@localhost)
+          by freefall.freebsd.org (8.7.5/8.7.3) id EAA13686
+          for hackers-outgoing; Sun, 1 Dec 1996 04:45:11 -0800 (PST)
+Received: from
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-f1e657bc34968e14>
+DATE: 1996-08-08T00:51:41+00:00  FROM: John Polstra <jdp () polstra ! com> <None>
+SUBJ: CVSup problems with src/bin/ed/test/*
+BODY:
+CVSup users:
+
+Some recent very strange changes to the RCS files in
+"/home/ncvs/src/bin/ed/test" have exposed a bug in the CVSup server.
+If you've been trying to do checkout-mode updates of the src-bin
+collection, and it's been failing mysteriously, that's probably the
+cause of it.
+
+I am working on a fix for the problem.  Meanwhile, here is a way to work
+around it:
+
+1.  Remove all the files in your "src/bin/ed/test" directory.
+
+2.  Run cvsup to fetch them again.  It won't take very long, because
+    the files are small.
+
+That works.  The problem happens when you try to _update_ the files.  If
+you're checking them out from scratch, there's no problem.
+
+Sorry for the inconvenience.  A found bug is a fixed bug (almost).
+--
+   John Polstra                                       jdp@polstra.com
+   John D. Polstra & Co., Inc.                Seattle, Washington USA
+   "Self-knowledge is always bad news."                 -- John Barth
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-4563eb21b429f34b>
+DATE: 1996-08-08T04:27:45+00:00  FROM: John Polstra <jdp () polstra ! com> <None>
+SUBJ: CVSup 13.2 is now available
+BODY:
+                     Announcing CVSup 13.2
+		     ---------------------
+Release 13.2 of CVSup, the CVS-aware network distribution system, is now
+available.
+
+Where to Get CVSup
+------------------
+CVSup is free software.  It is available from the following FTP sites:
+
+    ftp://freefall.freebsd.org/pub/CVSup/
+    ftp://ftp.freebsd.org/pub/FreeBSD/incoming/
+    ftp://ftp.polstra.com/pub/FreeBSD/CVSup/       (slow)
+
+Full sources as well as FreeBSD binaries are available:
+
+    cvsup-bin-13.2.tar.gz	FreeBSD binaries for the client
+    cvsupd-bin-13.2.tar.gz	FreeBSD binaries for the server
+    cvsup-13.2.tar.gz		Sources **
+
+The MD5 signatures for these files are:
+
+    MD5 (cvsup-bin-13.2.tar.gz) = 56d31af278f32c6c6090fd5e1fdf6b20
+    MD5 (cvsupd-bin-13.2.tar.gz) = 99ea39a92edab9f527c765ed54146448
+    MD5 (cvsup-13.2.tar.gz) = a5c27b1310be8e3f4c7dbb864c0cee13
+
+** If you wish to build CVSup from the sources, be sure to read the
+discussion further on in this announcement.
+
+What Has Changed Since
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-9edd582e3a03d630>
+DATE: 1996-08-08T15:41:16+00:00  FROM: Warner Losh <imp () village ! org> <None>
+SUBJ: Re: Announcing CVSup: Intelligent SUP Replacement
+BODY:
+: How about putting the FreeBSD stuff on a branch, and let the local developer
+: work on the mainline.  That way, cvs can do the right thing and just update
+: the branch, while the local developer can cvs update -j when merging is
+: wanted.  That will also make merges safer, imho.
+
+I've been doing something similar for Linux for some time now.  It
+works, but it is slow.  And from time to time you trash the CVS files
+if, say, the system goes down right in the middle of a CVS import.
+Since CVSup wouldn't use import for the new vendor branch (which is
+what you are asking for), but rather just modify it, the windows are
+smaller.
+
+Warner
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-1d3f63eb54024704>
+DATE: 1996-08-23T20:59:00+00:00  FROM: John Polstra <jdp () polstra ! com> <None>
+SUBJ: CVSup release 13.3 is now available
+BODY:
+                     Announcing CVSup 13.3
+		     ---------------------
+Release 13.3 of CVSup, the CVS-aware network distribution system, is now
+available.
+
+Where to Get CVSup
+------------------
+CVSup is free software.  It is available from the following FTP sites:
+
+    ftp://freefall.freebsd.org/pub/CVSup/
+    ftp://ftp.freebsd.org/pub/FreeBSD/incoming/
+    ftp://ftp.polstra.com/pub/FreeBSD/CVSup/     (slow; avoid if possible)
+
+Full sources as well as FreeBSD binaries are available:
+
+    cvsup-bin-13.3.tar.gz	FreeBSD binaries for the client
+    cvsupd-bin-13.3.tar.gz	FreeBSD binaries for the server
+    cvsup-13.3.tar.gz		Sources **
+
+The MD5 signatures for these files are:
+
+    MD5 (cvsup-bin-13.3.tar.gz) = 63e7a4cdf60973a8660486ab3d67680c
+    MD5 (cvsupd-bin-13.3.tar.gz) = 221c98c87841fbaf1dc3a6740d0571c4
+    MD5 (cvsup-13.3.tar.gz) = c4c4ac290e53206a15b3645f1e173284
+
+** If you wish to build CVSup from the sources, be sure to read the
+discussion further on in this announcement.
+
+What 
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-9e93d9b5adf51536>
+DATE: 1996-08-26T17:45:55+00:00  FROM: John Polstra <jdp () polstra ! com> <None>
+SUBJ: Re: cvsup - the next generation multi purpose netw. distrib. system (even for news ?!)
+BODY:
+Thanks for the kind comments about CVSup!  I hope your repository is
+healthy again.
+
+
+You didn't want to just use the CVSup binary?  It's statically linked,
+and doesn't require the Modula-3 package, or anything else.  And the
+tar.gz file is only(!) about a megabyte. :-)
+
+I am testing a new version of the Modula-3 port.  It's stripped
+down quite a bit, so it builds faster and uses much less swap space.
+Also, the package is about half the size.  I'll commit that as soon
+as I can find the time.  (I've been having house guests here for
+about 2 weeks now.)
+
+
+That's an interesting idea, but I don't think it's practical.  Really, a
+news hierachy is quite different from a CVS repository.  In a news
+hierarchy, the individual files never change.  That is, each file gets
+created, used, and deleted (expired), but nothing else happens to it
+during its lifetime.  Once it's created, a file does not change.  In a
+CVS repository, on the other hand, the files themselves are modified.
+
+The main feature o
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-584aa2b04195e98c>
+DATE: 1996-09-02T18:04:57+00:00  FROM: John Polstra <jdp () polstra ! com> <None>
+SUBJ: Re: cvsup question, src/tools not updated, make release trouble
+BODY:
+
+My point is that there are thousands of FreeBSD supfiles out there
+in the world, and each line of every one contains "hostbase=/home".
+That means that every FreeBSD sup/CVSup mirror _must_ have a set
+of valid sup control files under "/home/sup".  The only alternative
+would be to ask every existing sup user to change his supfiles.
+The dust from that might settle within a year or so, if we were lucky.
+
+
+I don't understand what you mean.  Aren't we talking about keeping the
+sup _mirrors_ up-to-date?  It's only the mirrors who would be supping
+the sup control files.  The mirrors should not have any local
+modifications.  If they do, then they're not really mirrors.
+
+Maybe we're using different terminology?  When I say "supfile", I mean
+the file that a client feeds to the "sup" or "cvsup" program.  When I
+say "sup control files", I mean the set of files (under /home/sup for
+FreeBSD) that the server "supfilesrv" or "cvsupd" looks at.
+
+
+I bet there's not one official FreeBSD sup mirror that's
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-d87779d79892831b>
+DATE: 1996-09-12T23:42:18+00:00  FROM: John Polstra <jdp () polstra ! com> <None>
+SUBJ: CVSup 13.4 is now available
+BODY:
+                     Announcing CVSup 13.4
+		     ---------------------
+Release 13.4 of CVSup, the CVS-aware network distribution system, is now
+available.
+
+Where to Get CVSup
+------------------
+CVSup is free software.  It is available from the following FTP sites:
+
+    ftp://freefall.freebsd.org/pub/CVSup/
+    ftp://ftp.freebsd.org/pub/FreeBSD/incoming/
+    ftp://ftp.polstra.com/pub/FreeBSD/CVSup/     (slow; avoid if possible)
+
+Full sources as well as FreeBSD binaries are available:
+
+    cvsup-bin-13.4.tar.gz	FreeBSD binaries for the client
+    cvsupd-bin-13.4.tar.gz	FreeBSD binaries for the server
+    cvsup-13.4.tar.gz		Sources **
+
+MD5 signatures for these files are:
+
+    MD5 (cvsup-bin-13.4.tar.gz) = d22feb17efbfbb53fbb1da03162216d5
+    MD5 (cvsupd-bin-13.4.tar.gz) = 0c5b90c7534e9a1591d99a93b236aa21
+    MD5 (cvsup-13.4.tar.gz) = d6c5aef96a01f657e7d884f6d2185232
+
+An updated port will appear in the FreeBSD ports and packages
+collections soon:
+
+    ftp:://ftp.freebsd.org/pub/FreeBSD/po
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-1de4c45080003e8f>
+DATE: 1996-09-17T14:55:11+00:00  FROM: John Polstra <jdp () polstra ! com> <None>
+SUBJ: Re: CVSup Help! -- why did I get RCS files?
+BODY:
+dob@naserver1.cb.lucent.com wrote:
+
+
+Because you didn't specify the "tag" or "date" keyword in your supfile
+line.  If you don't specify one or both of those, you get the RCS files.
+--
+   John Polstra                                       jdp@polstra.com
+   John D. Polstra & Co., Inc.                Seattle, Washington USA
+   "Self-knowledge is always bad news."                 -- John Barth
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-5612d79b9c54b342>
+DATE: 1996-11-01T04:18:12+00:00  FROM: John Polstra <jdp () polstra ! com> <None>
+SUBJ: CVSup 13.5 is now available
+BODY:
+                     Announcing CVSup 13.5
+		     ---------------------
+Release 13.5 of CVSup, the CVS-aware network distribution system, is now
+available.
+
+Where to Get CVSup
+------------------
+CVSup is free software.  It is available from the following FTP sites:
+
+  ftp://freefall.freebsd.org/pub/CVSup/
+  ftp://ftp.polstra.com/pub/FreeBSD/CVSup/     (slow; avoid if possible)
+
+Full sources as well as FreeBSD binaries are available:
+
+  cvsup-bin-13.5.tar.gz		FreeBSD static binaries for the client
+  cvsupd-bin-13.5.tar.gz	FreeBSD static binaries for the server
+  cvsup-13.5.tar.gz		Sources **
+
+MD5 signatures for these files are:
+
+  MD5 (cvsup-bin-13.5.tar.gz) = 6ee6a4b335c18d0d00b2f140928d6a3d
+  MD5 (cvsupd-bin-13.5.tar.gz) = 005791d8483570f2a093b7e202876d95
+  MD5 (cvsup-13.5.tar.gz) = 82c6dc9290fb1ce055a6027670af57f6
+
+An updated port will appear in the FreeBSD ports and packages
+collections soon:
+
+  ftp://ftp.freebsd.org/pub/FreeBSD/ports-current/net/cvsup/
+  ftp://ftp.freebsd.org/pub/F
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-acc63c50c56df5da>
+DATE: 1996-11-04T20:26:54+00:00  FROM: John Polstra <jdp () polstra ! com> <None>
+SUBJ: CVSup users PLEASE READ
+BODY:
+A few people have been experiencing hangs and/or premature EOFs from the
+server with CVSup 13.5.  The problem is caused by an incompatible mix of
+Modula-3 shared libraries and header files.  I inadvertently made it
+possible for this to happen during a brief window when I split the
+shared libraries into a separate "modula-3-lib" port.
+
+This problem does not affect people who installed the "cvsup-13.5"
+(binary) package.
+
+Here is the scenario under which you might encounter the problems:
+
+    * You already had Modula-3 installed on your system.
+
+    * You built CVSup 13.5 from the port (i.e., from source).
+
+    * Building the CVSup port caused the new "modula-3-lib" port to get
+      built and installed, but it did not cause the latest version of
+      the "modula-3" port to get built and installed.
+
+Under this scenario, your CVSup port got built with a new set of shared
+libraries, but an old set of header files.  Here is another indication
+that you are probably affected by this problem:
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-a2f9a5f1c369ff62>
+DATE: 1996-11-16T05:47:18+00:00  FROM: John Polstra <jdp () polstra ! com> <None>
+SUBJ: Re: cvsup not even hinted at on web pages
+BODY:
+In article <328CCA0F.2781E494@whistle.com> you write:
+
+There is a brief mention of CVSup as an option in the FreeBSD
+handbook, section "17. Synchronizing source trees over the Internet",
+thanks to Jordan.  I told him I'd flesh it out a long time ago,
+but I just haven't gotten around to it.
+
+If anybody is willing to put this together, I'll be very grateful,
+and I'll do my best to provide whatever answers you need.  The cvsup(1)
+man page might be a reasonable place to start.  With a little
+reformatting into SGML, it could fit into the web pages reasonably.
+
+A FAQ is also desperately needed, hint hint. :-)
+
+John
+--
+   John Polstra                                       jdp@polstra.com
+   John D. Polstra & Co., Inc.                Seattle, Washington USA
+   "Self-knowledge is always bad news."                 -- John Barth
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-1bed498cbcf11854>
+DATE: 1996-11-20T20:13:09+00:00  FROM: Tom Samplonius <tom () sdf ! com> <None>
+SUBJ: Preserving local changes with cvsup
+BODY:
+
+  I used to use "sup -k" to preserve a few local changes I made.  What is
+a safe way to acomplish this with cvsup?
+
+Tom
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-2c00780c9c3649b5>
+DATE: 1996-11-26T04:31:41+00:00  FROM: Peter Wemm <peter () spinner ! DIALix ! COM> <None>
+SUBJ: Re: Local CVS commits (and cvsup)
+BODY:
+Tom Samplonius wrote:
+
+I'm sure John Polstra can fill in some more details, but there's a couple
+of extra steps needed.
+
+Yes, you need to set CVS_LOCAL_BRANCH_NUM.  But you also need to create
+a local branch on the files you want to edit...
+
+eg:
+setenv CVS_LOCAL_BRANCH_NUM 1000
+cvs tag -b MY_BRANCH file.c
+cvs update -r MY_BRANCH file.c
+cvs commit file.c
+
+But beware, you will no longer see changes made in -current, you'll have
+to merge them in manually, and this can get quite messy since cvs has
+no way of remembering what you have merged so far.. 'cvs update -jHEAD' will
+produce the same merge conflicts over and over again, and create new ones
+as time goes by.
+
+Another option is to tag the HEAD revision each time you merge.. eg:
+
+cvs tag MERGE_BASE file.c
+cvs tag -b MY_BRANCH file.c
+... edit, commit etc.
+.. cvsup, new deltas arrive that you want to integrate...
+cvs tag MERGE_1 file.c
+cvs update -j MERGE_BASE -j MERGE_1 file.c
+cvs commit -m 'merged changes from -current' file.c
+.. etc.
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-91fbb21b6caff516>
+DATE: 1996-11-27T05:13:44+00:00  FROM: Chris Timmons <skynyrd () tahoma ! cwu ! edu> <None>
+SUBJ: Re: Is there a CVSUP mirror kit?
+BODY:
+
+I'd be interested in this too; however it should be the rare case that you
+would have to load poor freefall with simultaneous parallel updates.
+
+If you're not tracking the CVS tree on all of your nodes (rather, a
+specific tag like RELENG_2_2) you can use cvs over rsh, as in:
+
+cvs -d user@cvshost.my.domain/mypath/FreeBSD-CVS [command]
+
+	(eg command: "update -d -P -rRELENG_2_2")
+
+Where user has read/write priv to the cvs repository for locking purposes.
+I use this on top of ssh via the CVS_RSH environment variable.  Combined
+with ssh compression, this works nicely over my 28.8 dialup.
+
+If you need full CVS trees on all hosts, then in a LAN environment, rdist
+is a possibility so long as you are not CVSuping at the same time.
+
+	(eg distfile)
+	HOSTS = ( client.my.domain )
+	FILES = ( /mypath/FreeBSD-CVS )
+
+	${FILES} -> ${HOSTS}
+	        install -R ;
+
+If you want to keep up CVS tree at the end of a 28.8 modem without
+bothering freefall... then a CVSUP mirror kit would come in real handy :) 
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-028a722341dcefdb>
+DATE: 1996-12-01T23:08:27+00:00  FROM: John Polstra <jdp () polstra ! com> <None>
+SUBJ: Re: Is there a CVSUP mirror kit?
+BODY:
+
+Not yet, but I have been working on it.  I'm putting together a "FreeBSD
+mirror kit" in the form of a standard port/package.  It's coming along
+nicely, though progress has been slowed recently by job demands, other
+FreeBSD commitments, Thanksgiving, and out-of-town guests.
+
+But rest assured, it's coming Real Soon Now.
+
+One other thing:  Please don't do parallel updates.  Schedule them for
+different times so that they don't overlap.  Thanks.
+
+John
+--
+   John Polstra                                       jdp@polstra.com
+   John D. Polstra & Co., Inc.                Seattle, Washington USA
+   "Self-knowledge is always bad news."                 -- John Barth
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-20ff8bfe25f1b4a9>
+DATE: 1996-12-01T23:22:03+00:00  FROM: John Polstra <jdp () polstra ! com> <None>
+SUBJ: Please report CVSup problems!
+BODY:
+Hi People,
+
+Lately it seems I only find out about problems people are having with
+CVSup by reading the mailing lists.  This is really unreliable for me,
+because I often get days behind on reading the lists.
+
+Please, if you have any problems with CVSup, report them to
+<cvsup-bugs@polstra.com>.  If I don't find out about problems, I can't
+help you solve them.  Even if you suspect it's just some local problem
+with your setup, I'd be happy to at least try to help.
+
+It doesn't bother me in the least if you also want to post such things
+to the mailing lists.  Just try to remember to send a copy to
+<cvsup-bugs@polstra.com> too.
+
+Thanks!
+--
+   John Polstra                                       jdp@polstra.com
+   John D. Polstra & Co., Inc.                Seattle, Washington USA
+   "Self-knowledge is always bad news."                 -- John Barth
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-017465bae7c8547d>
+DATE: 1996-12-01T23:28:12+00:00  FROM: John Polstra <jdp () polstra ! com> <None>
+SUBJ: CVSup vs. sup's "keep" keyword
+BODY:
+Recently somebody asked in -hackers how to make CVSup do something
+similar to sup's "keep" keyword or "-k" option.  I'm so behind on that
+list that it expired out of my news spool before I had a chance to
+reply.  I hope whoever asked is listening ...
+
+CVSup does not support sup's "keep" keyword.  However, if you have a few
+files that you don't want CVSup to touch, there's an easy way to get
+what you want.  The answer is in the "refuse" files, which are described
+near the end of cvsup(1).  These allow you to make CVSup completely
+ignore certain files.  The specified files will not be updated by CVSUp,
+nor will they be removed.  They're simply ignored.
+
+John
+--
+   John Polstra                                       jdp@polstra.com
+   John D. Polstra & Co., Inc.                Seattle, Washington USA
+   "Self-knowledge is always bad news."                 -- John Barth
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-698e86ff64f20d43>
+DATE: 1996-12-02T23:10:09+00:00  FROM: John Polstra <jdp () polstra ! com> <None>
+SUBJ: Re: cvsup vs. FreeBSD-2.1.6.1: can't find libc.so.3.0
+BODY:
+
+All packages are built to run under -current, which means they need
+libc.so.3.0.  So yes, technically, you need -current.  But not really.
+There are a couple of things you could do.
+
+The best solution, since you have already installed the Modula-3
+compiler, is to get the cvsup _port_ and build it from the sources.
+Then it will depend on the version of libc that actually exists on your
+system (libc.so.2.2).  This solution will also get rid of the warnings
+about your X11R6 libraries.
+
+As another option, it should also work to add a symbolic link:
+
+    /usr/local/lib/m3/FreeBSD2/libc.so.3.0 -> /usr/lib/libc.so.2.2
+
+and then do "ldconfig -m /usr/local/lib/m3/FreeBSD2".  This is cheating
+a little bit, but it should work fine.
+
+Finally, you could fetch the static binary release from
+freefall.freebsd.org in "/pub/CVSup/cvsup-bin-13.5.tar.gz".  It doesn't
+use any shared libraries at all.
+
+BTW, libz is included in FreeBSD-2.1.6.1-RELEASE; it shouldn't have been
+missing after you installed that
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-325bd957ddc37a24>
+DATE: 1996-12-02T23:36:04+00:00  FROM: John Polstra <jdp () polstra ! com> <None>
+SUBJ: Re: cvsup can't find host - sometimes
+BODY:
+
+It could possibly be something like that.  I am thinking it might be
+connected with the multithreading support.  The code disables thread
+switching before it enters gethostbyname, so it's definitely not that
+gethostbyname is being re-entered.  (Only one of the threads calls it,
+anyway.)
+
+But, the threads library uses SIGVTALRM to do preemption of
+compute-bound threads.  Perhaps that signal is being delivered within
+the resolver code, and causing a problem.  Again, I don't _think_ it
+should cause a problem, but it's the only idea I have.  The handler for
+the signal will simply return without doing anything (because thread
+switching is disabled).  If the signal comes in during a system call,
+the system call should resume.  Even if the system call doesn't resume,
+the resolver code handles EINTR alright, as far as I can tell.
+
+If it starts failing again, could you try to capture a ktrace of it?
+
+Thanks,
+John
+--
+   John Polstra                                       jdp@polstra.com
+   John 
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-f62c4953989eab26>
+DATE: 1996-12-10T03:59:59+00:00  FROM: John Polstra <jdp () polstra ! com> <None>
+SUBJ: Attention CVSup users!
+BODY:
+If you have started to get messages like these when you do your CVSup
+updates:
+
+    Unknown release "current" for "src-eBones"
+    Unknown release "current" for "src-secure"
+    Unknown release "stable" for "src-eBones"
+    Unknown release "stable" for "src-secure"
+
+it's because your cvsupfile isn't correct.  To get the "current"
+release, you should have this in your supfile:
+
+    release=cvs tag=.
+
+To get the "stable" release, you should have this:
+
+    release=cvs tag=RELENG_2_1_0
+
+I am only seeing this in the logs for the src-eBones and src-secure
+collections, and I think I know why.  You probably started with a sample
+supfile that had those two releases commented out.  Then you ran supconv
+on it.  Then, later, you uncommented the lines for the above
+collections.  Since supconv doesn't touch comments, those lines never
+got converted properly.
+
+It used to accidentally work if you had "release=current" or
+"release=stable", but it didn't work efficiently.  Now it doesn't work
+at all, s
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-13726dfe1464f76e>
+DATE: 1996-12-11T15:02:58+00:00  FROM: roberto () eurocontrol ! fr (Ollivier Robert) <None>
+SUBJ: Fwd: CVSup with SSH
+BODY:
+[I sent this to -hubs which is probably not the right list]
+
+Hi,
+
+I'm behind a firewall and I can't use SOCKS. I'd like to use the port
+forwarding features of SSH (the 22 port is open) with CVSup. Has anyone
+tried the same setup ?
+
+I've tried
+
+ssh -L 5999:freefall.freebsd.org:5999 -L 5998:freefall.freebsd.org:5998
+freefall.freebsd.org
+
+and
+
+cvsup -L 1 -g -p 5999 -P - cvs-supfile.cvsup
+
+but it still tries to connect to freefall directly:
+
+cvsup     13841  roberto    4u  inet   0xf2471900        0t0        TCP localhost.eurocontrol.fr:2480->localhost.eurocontrol.fr:5999
+cvsup     13841  roberto    5u  inet   0xf242ee00        0t0        TCP caerdonn.eurocontrol.fr:2481->freefall.FreeBSD.ORG:4798
+
+Thanks for any answer.
+-- 
+Ollivier ROBERT -=- Eurocontrol EEC/TS -=- Ollivier.Robert@eurocontrol.fr
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-0f0441117e1ed1ef>
+DATE: 1996-12-12T05:46:10+00:00  FROM: John Polstra <jdp () polstra ! com> <None>
+SUBJ: Re: CVSUP dying
+BODY:
+In article <Pine.NEB.3.95.961211111650.24955B-100000@mail.cdsnet.net> Jaye Mathisen writes:
+
+It's best to send (or cc) questions like this to "cvsup-bugs@polstra.com".
+I can usually help, but I don't always keep up with the mailing lists.
+
+Anyway, to answer your question, your list file
+"/usr/sup/src-lib/checkouts.cvs:." is apparently spammed.  You can
+check the file by looking at it with an editor.  It's a plain text
+file and you'll be able to see that it's damaged, I have a feeling.
+
+Assuming the list file is damaged, you can just delete it and then
+re-run CVSup.  (But see below.)  It will create a new one for you.
+It's much more efficient to have a list file, but it's not essential
+for correct operation.
+
+In the next CVSup release, I'll fix the error message so that it
+doesn't try to print out the invalid thing it got.
+
+The other question is, how did the file get damaged?  I would be
+surprised if CVSup itself damaged it.  It first writes the information
+to a temporary file, and only
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-0cd22d50b3555bb5>
+DATE: 1996-12-15T07:53:28+00:00  FROM: "Brian N. Handy" <handy () sag ! space ! lockheed ! com> <None>
+SUBJ: Re: CVSup 14.0 is now available
+BODY:
+Hey!
+
+
+Oho!  This was the problem, I didn't have the :RELENG_2_2 tacked onto the
+end of my file.  (Which was sort of evident after the fact, I just
+followed Nate's example a bit too closely.)  
+
+So...cool!  Works great, lasts a long time.  Thanks!
+
+Brian
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-9fb38dd06c34a58f>
+DATE: 1996-12-16T05:37:04+00:00  FROM: roberto () keltia ! freenix ! fr (Ollivier Robert) <None>
+SUBJ: Re: Fwd: CVSup with SSH
+BODY:
+According to John Polstra:
+
+I've turn off the compression in CVSup.
+-- 
+Ollivier ROBERT    -=- The daemon is FREE! -=-    roberto@keltia.freenix.fr
+  FreeBSD keltia.freenix.fr 3.0-CURRENT #31: Tue Dec  3 23:52:58 CET 1996
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-d8fbd79b8a4e4c34>
+DATE: 1996-12-17T16:47:59+00:00  FROM: John Polstra <jdp () polstra ! com> <None>
+SUBJ: Location of the cvsup-14.0 package
+BODY:
+A few people have told me that they can't find the package for the
+CVSup 14.0 port.  (I mean package as in "the FreeBSD ports and
+packages collection.")  Here's where it is:
+
+    ftp://ftp.freebsd.org/pub/FreeBSD/packages-2.2/All/cvsup-14.0.tgz
+
+New packages all seem to be going into packages-2.2 these days.  The
+newest package in packages-current is over a month old.
+
+I don't make the news, I just report it. :-)
+--
+   John Polstra                                       jdp@polstra.com
+   John D. Polstra & Co., Inc.                Seattle, Washington USA
+   "Self-knowledge is always bad news."                 -- John Barth
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-7507a2344eed155e>
+DATE: 1996-12-18T18:38:58+00:00  FROM: jdp () polstra ! com (John Polstra) <None>
+SUBJ: Re: Nasty gotcha with CVS/CVSup setup
+BODY:
+In article <199612180637.RAA29514@genesis.atrad.adelaide.edu.au>,
+Michael Smith  <msmith@atrad.adelaide.edu.au> wrote:
+
+Yup, it always seems like a good idea to suppress those "useless" Attic
+files.  But if you do that, the only thing you're guaranteed to be able
+to check out and build is today's version of -current.  If that's all
+you want, there's no point in maintaining a repository at all.
+
+John
+-- 
+   John Polstra                                       jdp@polstra.com
+   John D. Polstra & Co., Inc.                Seattle, Washington USA
+   "Self-knowledge is always bad news."                 -- John Barth
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-6890fb978f4db94b>
+DATE: 1996-12-26T22:17:29+00:00  FROM: jdp () polstra ! com (John Polstra) <None>
+SUBJ: Re: cvsup change
+BODY:
+In article <199612251512.HAA00997@squirrel.tgsoft.com>,
+mark thompson  <thompson@znet.com> wrote:
+
+It's not your fault.  As you know, I made my original announcement
+about it and then followed up with a string of 3 cascading
+"corrections".  Every one of them was incorrect in some way.  For
+some reason I just couldn't seem to do anything right in connection
+with this particular change.
+
+In my final bogus "correction", I reported that I had run a test
+and realized that no files were going to be deleted.  I did in fact
+run the test, and that's what I observed.  But I must have set up
+the test wrong, because later when I made the change on the real
+servers, my files got deleted just like everybody else's.
+
+Your case was even worse than most, because you happened to add
+src-release at the beginning of your supfile instead of at the end
+or in alphabetical order.  That made it come before src-etc, which
+was the release that caused the files to be deleted.  So your files
+didn't even get restor
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-ff5c969025ee8400>
+DATE: 1997-01-17T03:13:48+00:00  FROM: "Jordan K. Hubbard" <jkh () time ! cdrom ! com> <None>
+SUBJ: Re: Important new CVSup *server* release
+BODY:
+
+I'll do it tonite - you need it built on a 2.2 system, I assume?  I
+could give you a 3.0 package now (since I updated my own cvsup this
+morning), but 2.2 will have to wait for my slower machine to grind
+through the M3 build. :-)
+
+					Jordan
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-60919e05507a2292>
+DATE: 1997-01-31T01:36:44+00:00  FROM: Nate Williams <nate () mt ! sri ! com> <None>
+SUBJ: Re: $confusion == CVSUP + Jaye_Mathisen
+BODY:
+
+Nope, it hasn't been tagged into 2.2
+
+
+Are you sure the build completely successfully?  Sometimes it blows off
+in the middle of building/installing something, and anything in the
+build tree after that point isn't built/installed.
+
+
+Nate
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-27f8cdaf2d6069fe>
+DATE: 1997-02-17T12:30:56+00:00  FROM: joe () pavilion ! net (Josef Karthauser) <None>
+SUBJ: cvsup / firewall
+BODY:
+Hi,
+Am I right in thinking that I can't run CVSup through a firewall?
+That's a shame. :(
+Joe.
+-- 
+Josef Karthauser        
+Technical Manager       Email: joe@pavilion.net
+Pavilion Internet plc.  [Tel: +44 1273 607072  Fax: +44 1273 607073]
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-c18a7b51c7adf3bd>
+DATE: 1997-02-17T12:36:54+00:00  FROM: joe () pavilion ! net (Josef Karthauser) <None>
+SUBJ: cvsup / firewall [found it]
+BODY:
+Sorry, shoot me for wasting your time.
+I've found it: -P -
+
+Joe
+-- 
+Josef Karthauser        
+Technical Manager       Email: joe@pavilion.net
+Pavilion Internet plc.  [Tel: +44 1273 607072  Fax: +44 1273 607073]
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-cca08d5cad9d31df>
+DATE: 1997-03-04T10:53:56+00:00  FROM: Josef Karthauser <joe () pavilion ! net> <None>
+SUBJ: CVSup.FreeBSD.org
+BODY:
+Hiya,
+
+Is there anything wrong with cvsup.freebsd.org,  it's not been allowing
+connections since yesterday morning!
+
+Joe
+-- 
+Josef Karthauser        
+Technical Manager       Email: joe@pavilion.net
+Pavilion Internet plc.  [Tel: +44 1273 607072  Fax: +44 1273 607073]
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-53752e3030e63a33>
+DATE: 1997-03-05T08:53:44+00:00  FROM: Dick van den Burg <burg () is ! ge ! com> <None>
+SUBJ: Re: cvsup
+BODY:
+Chris Timmons wrote:
+
+  I have successfully hacked CVSup to make my setup work. The
+temporary very gross workaround is that I hard-code the PORT command with
+the IP address of the firewall and the port number from the -P
+argument. This results in CVSupd connecting back to a know port on the
+firewall. That connection is then plugged through to my FreeBSD box and
+both cvsup sides think they are talking to each other.
+  I would like to either expand the -P option to include a hostname or
+IP number, or add another option to specify the host to connect to,
+but I do not have enough knowledge of modula3 to do this quickly. I
+suspect that there are not many people waiting for this feature ...
+
+
+Ssh, socks or another box on the DMZ are not options I can use under
+our current security policy.
+
+Thanks ... Dick
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-b47d27969be28920>
+DATE: 1997-03-08T17:00:51+00:00  FROM: "John T. Croteau" <jt () sly ! org> <None>
+SUBJ: Re: cvsup, modula, 3.0-CURRENT, BLAH
+BODY:
+On Sat, 8 Mar 1997, John T. Croteau wrote:
+
+
+Nevermind, knew it was simple.. damn.  I fixered it myself. ;-)
+
+heheh
+
+-JT
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-3cc21b34aabedc7f>
+DATE: 1997-03-12T02:26:13+00:00  FROM: Joel Yancey <python () cia-g ! com> <None>
+SUBJ: Re: Updating /usr/src/Makefile with CVSup
+BODY:
+I ran into this Problem As Well, i just Went and Editing the
+/usr/src/gnu/usr.bin/gdb/Makefile and took out the gdb directory in the
+top, and it compiled fine =)
+
+
+Joel yancey
+Python@cia-g.com
+
+
+On Mon, 10 Mar 1997, Mark Mayo wrote:
+
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-66cf5ef6f414ba04>
+DATE: 1997-03-19T17:00:12+00:00  FROM: Chris Timmons <skynyrd () opus ! cts ! cwu ! edu> <None>
+SUBJ: Re: CVSup tags
+BODY:
+
+Bill Fenner has put together a nice WWW browsing mechanism for the CVS
+repository itself, if you aren't keeping one up-to-date on your local
+machine (CVSup is quite effective for doing that, too!  Then you could
+have all the tags at once :)
+
+http://www.freebsd.org/cgi/cvsweb.cgi
+
+is the url.  You can browse and get a sense of what tags are available by
+looking at one of the files in the core distribution (eg src/bin/ls/ls.c)
+
+Generally the only tags you will be interested in are the ones documented
+in the handbook and their logical successors.  Developers from time to
+time will tag files belonging to a particular subsystem in order to make
+their work easier; you'd probably want to steer clear of these unless you
+know from following -current what they are for.
+
+-Chris
+
+
+On Wed, 19 Mar 1997, Gareth McCaughan wrote:
+
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-ea3a3a44fb49a1cb>
+DATE: 1997-04-19T18:14:48+00:00  FROM: John Polstra <jdp () polstra ! com> <None>
+SUBJ: Re: CVSup Bug Report!
+BODY:
+
+:-)
+
+Probably when the tree dies and the guy is ready to chop it down,
+we'll hear from him here in hackers@freebsd.org. ;-)
+
+John P.
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-c19ae4ace35e6a7f>
+DATE: 1997-05-01T22:58:04+00:00  FROM: Chris Timmons <skynyrd () opus ! cts ! cwu ! edu> <None>
+SUBJ: cvsup.freebsd.org unreachable 0500-0900 UTC 2/May/1997
+BODY:
+
+IP connectivity to cvsup.freebsd.org has suffered in recent days,
+culminating with an operating system upgrade to our service provider's
+backbone routers last evening that made everything worse.
+
+night/friday morning)  our provider will be downgrading their routers to
+stable code. 
+
+During this time connectivity to cvsup.freebsd.org will be spotty.  The
+machine will be up during the outage; if you experience difficulty try
+back later.
+
+Sorry for the inconvenience.
+
+-Chris
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-a313da00f95c2f3d>
+DATE: 1997-05-09T05:46:44+00:00  FROM: John Polstra <jdp () polstra ! com> <None>
+SUBJ: Users of CVSup2.FreeBSD.ORG please read!
+BODY:
+CVSup2.FreeBSD.ORG developed RAM problems beginning May 7, 1997.
+The problems have now been fixed, but while they lasted some file
+corruption occurred.  This took the form of little 1-bit errors
+scattered through a number of files, including some served by CVSup.
+
+I have run MD5 checksums on the entire CVS repository both on
+freefall and on CVSup2.  Here is a list of files which may have
+been corrupted:
+
+    CVSROOT/commitlogs/gnu
+    CVSROOT/commitlogs/ports
+    CVSROOT/commitlogs/share
+    CVSROOT/commitlogs/sys
+    CVSROOT/commitlogs/usrsbin
+    src/gnu/usr.bin/gdb/Attic/ChangeLog,v
+    src/sys/i386/i386/math_emulate.c,v
+    src/usr.sbin/ppp/lqr.c,v
+
+I have replaced the possibly-corrupted files with fresh copies from
+freefall, but people who did updates from CVSup2 during the past
+two days may have gotten bad copies.  CVSup checksums all updated
+files, but it cannot detect errors that occur in RAM between the
+times when the program writes the data and the kernel flushes it
+to disk.
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-87e32299318ddbc0>
+DATE: 1997-05-18T04:18:05+00:00  FROM: John Polstra <jdp () polstra ! com> <None>
+SUBJ: CVSup 15.0 is now available
+BODY:
+                     Announcing CVSup 15.0
+		     ---------------------
+Release 15.0 of CVSup, the CVS-aware network distribution system, is now
+available.
+
+Where to Get CVSup
+------------------
+CVSup is free software.  It is available from the following FTP sites:
+
+  ftp://hub.freebsd.org/pub/CVSup/             (California)
+  ftp://ftp.cs.tu-berlin.de/pub/FreeBSD/CVSup/ (Germany)
+  ftp://ftp.polstra.com/pub/FreeBSD/CVSup/     (slow; avoid if possible)
+
+Full sources as well as FreeBSD binaries are available:
+
+  cvsup-bin-15.0.tar.gz		FreeBSD static binaries for the client + GUI
+  cvsup.nogui-bin-15.0.tar.gz	FreeBSD static binaries for the client (no GUI)
+  cvsupd-bin-15.0.tar.gz	FreeBSD static binaries for the server
+  cvsup-15.0.tar.gz		Sources **
+
+MD5 signatures for these files are:
+
+  MD5 (cvsup-bin-15.0.tar.gz) = 6456b1ec9d54c588ea02899a3292603c
+  MD5 (cvsup.nogui-bin-15.0.tar.gz) = 89d2e399d812f1969da8ab3c810fab7b
+  MD5 (cvsupd-bin-15.0.tar.gz) = 1578a568c762e1975676bf02a38c50cc
+ 
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-00d9b9bf05422412>
+DATE: 1997-05-26T05:56:49+00:00  FROM: Chris Timmons <skynyrd () opus ! cts ! cwu ! edu> <None>
+SUBJ: cvsup.freebsd.org down 26/May 1200-~2300 UTC
+BODY:
+
+cvsup.freebsd.org will be down on May 26 from 1200-~2300 UTC due to a
+power outage affecting the Central Washington University computer center.
+(Hopefully the outage will be much shorter.) 
+
+Sorry for the inconvenience!
+
+-Chris
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-58c06aeab68fe55e>
+DATE: 1997-07-11T22:48:30+00:00  FROM: John Polstra <jdp () polstra ! com> <None>
+SUBJ: CVSup vs. firewalls: a solution
+BODY:
+Quite a few of you have been unable to use CVSup in the past,
+because you are behind a firewall that is too restrictive for it.
+If you are in that category, I encourage you to try version 15.1,
+which I just released last night.  It supports a new "multiplexed"
+mode of operation.  In multiplexed mode, CVSup needs just a single
+TCP connection, initiated by the client, to do its work.  If you can
+persuade your firewall administrator to let you issue connections to
+port 5999 of your favorite CVSup server, you'll be in business.  To
+select multiplexed mode, add the option "-P m" to the cvsup command
+line.
+
+As its name implies, multiplexed mode works by managing a built-in
+packet protocol on top of the single TCP connection.  That enables
+the client and server to multiplex multiple logical connections in
+parallel through the channel.  Several people have been using it for
+a month or so, and it seems to function and perform just fine.
+
+See the announcement in the FreeBSD-announce mailing list
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-635b91fec60bd867>
+DATE: 1997-07-19T00:58:13+00:00  FROM: John Polstra <jdp () polstra ! com> <None>
+SUBJ: Re: CVSup and the CVS repository (fwd)
+BODY:
+In article <Pine.BSD.3.91.970718163423.29451F-100000@apollo.carroll.com>,
+Jim Carroll  <jim@carroll.com> wrote:
+
+Bleep.  If you want the repository, you must not specify "tag" or
+"date" in the supfile.  Specifying "tag" or "date" causes it to
+deliver a specific checked out version of each file.
+
+Also:
+
+
+You probably don't want "prefix=/usr" for the repository.  The
+"standard" prefix is "/home/ncvs".  If you use "prefix=/usr" it will
+put the repository on top of your "/usr/src" tree, which surely is
+not what you want.
+
+I'd suggest starting with /usr/share/examples/cvsup/cvs-supfile, and
+modifying it if necessary to meet your needs.  Look also at
+secure-cvs-supfile in the same directory.
+
+John
+--
+   John Polstra                                       jdp@polstra.com
+   John D. Polstra & Co., Inc.                Seattle, Washington USA
+   "Self-knowledge is always bad news."                 -- John Barth
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-e1d8225c85491e89>
+DATE: 1997-08-12T23:21:44+00:00  FROM: John Polstra <jdp () polstra ! com> <None>
+SUBJ: CVSup problems with the apache-current port
+BODY:
+It has been brought to my attention that some recent reshuffling of the
+apache ports in the CVS repository has led to assertion failures in
+CVSup during checkout-mode updates.  Some of the RCS files in the master
+repository were replaced with completely different files, and this
+caused the problems.  In checkout mode, CVSup assumes that "revision
+1.1" of a file means the same thing today as it did yesterday.  That
+assumption got violated.
+
+The problem affects at least the apache-current portion of the ports
+tree, and possibly some of the other apache variations too.  As far
+as I know, it affects only people using checkout mode ("tag=." in the
+supfile).
+
+To recover from the problem, do something like this:
+
+    cd /usr/ports/www
+    rm -rf apache*
+
+and then re-run CVSup to bring back those files from scratch.
+
+Sorry for the inconvenience.  I'll try to make CVSup deal with this
+class of repository problems better in a future release.
+
+Many thanks to Brian Handy and Alexander Indenbaum fo
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-5074947aaf2101b2>
+DATE: 1997-08-12T23:50:15+00:00  FROM: John Polstra <jdp () polstra ! com> <None>
+SUBJ: Re: CVSUP assert failure:
+BODY:
+In article <Pine.NEB.3.95.970812155519.1820U-100000@mail.cdsnet.net>,
+Jaye Mathisen   <mrcpu@cdsnet.net> wrote:
+
+Thanks for the report.
+
+It's caused by recent fiddling around with the RCS files in the
+repository. :-(  You will need to "rm -rf ports/www/apache-current"
+and run CVSup again.
+
+John
+--
+   John Polstra                                       jdp@polstra.com
+   John D. Polstra & Co., Inc.                Seattle, Washington USA
+   "Self-knowledge is always bad news."                 -- John Barth
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-0813b2e32ec92088>
+DATE: 1997-10-07T00:38:52+00:00  FROM: jack <jack () diamond ! xtalwind ! net> <None>
+SUBJ: Re: Help finding CVSup 15.2
+BODY:
+On Mon, 6 Oct 1997, Richard Wackerbarth wrote:
+
+
+     * ftp://hub.freebsd.org/pub/CVSup/cvsup.nogui-bin-15.2.tar.gz
+       (client without GUI).                                                    
+
+--------------------------------------------------------------------------
+Jack O'Neill                    Finger jacko@diamond.xtalwind.net or  
+jack@xtalwind.net               http://www.xtalwind.net/~jacko/pubpgp.html
+#include <std_disclaimers.h>    for my PGP key.
+ PGP Key fingerprint = F6 C4 E6 D4 2F 15 A7 67   FD 09 E9 3C 5F CC EB CD
+--------------------------------------------------------------------------
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-5c76da8d93d3aebc>
+DATE: 1997-10-17T16:17:48+00:00  FROM: John Polstra <jdp () polstra ! com> <None>
+SUBJ: Re: cvsup2, where are you?
+BODY:
+In article <XFMail.971015212754.Shimon@i-Connect.Net>,
+Simon Shapiro  <Shimon@i-Connect.Net> wrote:
+
+It seems to be working OK from where I sit.
+
+John
+--
+   John Polstra                                       jdp@polstra.com
+   John D. Polstra & Co., Inc.                Seattle, Washington USA
+   "Self-knowledge is always bad news."                 -- John Barth
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-96d88f0ee6f04581>
+DATE: 1997-10-24T00:54:13+00:00  FROM: Jaye Mathisen  <mrcpu () cdsnet ! net> <None>
+SUBJ: Weird CVSUP messages.
+BODY:
+
+
+I cvsup -current about 2-3 times a week on average.
+
+So why now am I getting delta's dated back in 1994?  Should I be worried?
+
+ Edit src/usr.sbin/timed/timedc/cmdtab.c
+  Add delta 1.1 94.05.26.05.23.25 rgrimes
+  Add delta 1.2 97.10.22.06.20.04 charnier
+ Edit src/usr.sbin/timed/timedc/timedc.8
+  Add delta 1.4 97.10.22.06.20.04 charnier
+ Edit src/usr.sbin/timed/timedc/timedc.c
+  Add delta 1.1 94.05.26.05.23.25 rgrimes
+  Add delta 1.2 97.10.22.06.20.04 charnier
+
+
+
+==========================================================================================
+DB: freebsd-announce.duckdb  hits=9
+--------------------------------------------------------------------------------
+MID: <199609211731.KAA24262@freefall.freebsd.org>
+DATE: 1996-09-21T17:31:14+00:00  FROM: Jordan K. Hubbard <jkh>
+SUBJ: CVSup 13.4 is now available
+BODY:
+Subject: CVSup 13.4 is now available
+Date: Thu, 12 Sep 1996 16:42:18 -0700
+From: John Polstra <jdp>
+
+                     Announcing CVSup 13.4
+		     ---------------------
+Release 13.4 of CVSup, the CVS-aware network distribution system, is now
+available.
+
+Where to Get CVSup
+- ------------------
+CVSup is free software.  It is available from the following FTP sites:
+
+    ftp://freefall.freebsd.org/pub/CVSup/
+    ftp://ftp.freebsd.org/pub/FreeBSD/incoming/
+    ftp://ftp.polstra.com/pub/FreeBSD/CVSup/     (slow; avoid if possible)
+
+Full sources as well as FreeBSD binaries are available:
+
+    cvsup-bin-13.4.tar.gz	FreeBSD binaries for the client
+    cvsupd-bin-13.4.tar.gz	FreeBSD binaries for the server
+    cvsup-13.4.tar.gz		Sources **
+
+MD5 signatures for these files are:
+
+    MD5 (cvsup-bin-13.4.tar.gz) = d22feb17efbfbb53fbb1da03162216d5
+    MD5 (cvsupd-bin-13.4.tar.gz) = 0c5b90c7534e9a1591d99a93b236aa21
+    MD5 (cvsup-13.4.tar.gz) = d6c5aef96a01f657e7d884f6d2185232
+
+An updated port wil
+
+--------------------------------------------------------------------------------
+MID: <24094.850957586@time.cdrom.com>
+DATE: 1996-12-19T01:06:26+00:00  FROM: Jordan K. Hubbard <jkh@time.cdrom.com>
+SUBJ: The cvsup.freebsd.org mirror has moved.
+BODY:
+To spatter.freebsd.org, one of the FreeBSD Project's other machines.
+The CVS tree on this secondary server is updated once an hour, so lag
+should be minimal.  This machine is also now known as cvsup.freebsd.org,
+so if you've been using this value for your supfile's host field then
+you shouldn't need to change anything (unless you also have a firewall
+specifically configured for freefall's cvsupd, in which case you will
+need to change this too).
+
+freefall.freebsd.org will continue to offer cvsup services to the
+general public for a short time during this transition, after which it
+will accept only a limited number of cvsup connections from mirrors
+and developers.
+
+I should also point out that cvsup2.freebsd.org continues to offer
+cvsupd services, and a cvsup3.freebsd.org should be coming online
+fairly shortly (watch this space for the announcement).  You may
+therefore wish to use one or both of these secondary servers if faced
+with overcrowding on the new cvsup server machine.
+
+Thanks.
+
+
+--------------------------------------------------------------------------------
+MID: <199701081531.HAA10318@freefall.freebsd.org>
+DATE: 1997-01-08T15:31:23+00:00  FROM: Jonathan M. Bresler <jmb>
+SUBJ: CVSup 14.1 is now available
+BODY:
+Subject: CVSup 14.1 is now available
+Date: Tue, 07 Jan 1997 16:23:12 -0800
+From: John Polstra <jdp>
+
+                     Announcing CVSup 14.1
+		     ---------------------
+Release 14.1 of CVSup, the CVS-aware network distribution system, is now
+available.
+
+Where to Get CVSup
+-------------------
+CVSup is free software.  It is available from the following FTP sites:
+
+  ftp://freefall.freebsd.org/pub/CVSup/
+  ftp://ftp.polstra.com/pub/FreeBSD/CVSup/     (slow; avoid if possible)
+
+Full sources as well as FreeBSD binaries are available:
+
+  cvsup-bin-14.1.tar.gz		FreeBSD static binaries for the client
+  cvsupd-bin-14.1.tar.gz	FreeBSD static binaries for the server
+  cvsup-14.1.tar.gz		Sources **
+
+The MD5 signatures for these files are:
+
+  MD5 (cvsup-bin-14.1.tar.gz) = b06efe8be163f127f5103968f0545067
+  MD5 (cvsupd-bin-14.1.tar.gz) = 6c822e77db2d8b9179d8c6d4c281acea
+  MD5 (cvsup-14.1.tar.gz) = e131ef39f1cfb5807d9f488b0b3b0691
+
+An updated port will appear in the FreeBSD ports and packages
+col
+
+--------------------------------------------------------------------------------
+MID: <199702010533.VAA24740@austin.polstra.com>
+DATE: 1997-02-01T05:33:04+00:00  FROM: John Polstra <jdp@polstra.com>
+SUBJ: cvsup5.FreeBSD.org is ready to serve you
+BODY:
+A new CVSup FreeBSD mirror, "cvsup5.FreeBSD.org" is up and running.
+This is a high-powered, maximum uptime server which carries
+everything:  the main source repository, smp, lite2, gnats, and
+www.  It updates its files hourly from the master repository.  That
+means it's only a half hour behind the master sources, on average.
+
+Many thanks to Chris Timmons for making the arrangements for this
+server, setting it up, and maintaining it.  We greatly appreciate
+the generosity of the folks at Central Washington University for
+making this valuable service available to us.
+
+Here is the current list of CVSup FreeBSD mirror sites:
+
+  USA:
+    cvsup.FreeBSD.org
+    cvsup2.FreeBSD.org
+    cvsup4.FreeBSD.org
+    cvsup5.FreeBSD.org
+
+  Argentina:
+    cvsup.ar.FreeBSD.org
+
+  Australia:
+    cvsup.au.FreeBSD.org
+
+  Germany:
+    cvsup.de.FreeBSD.org
+
+  Japan:
+    cvsup.jp.FreeBSD.org
+
+  Netherlands:
+    cvsup.nl.FreeBSD.org
+
+  South Africa:
+    cvsup.za.FreeBSD.org
+
+  Taiwan:
+    sup.tw.FreeBSD.org
+
+Pleas
+
+--------------------------------------------------------------------------------
+MID: <199707110634.XAA27265@austin.polstra.com>
+DATE: 1997-07-11T06:34:28+00:00  FROM: John Polstra <jdp@polstra.com>
+SUBJ: CVSup 15.1 is now available
+BODY:
+Announcing CVSup 15.1
+		     ---------------------
+Release 15.1 of CVSup, the CVS-aware network distribution system, is now
+available.
+
+Where to Get CVSup
+------------------
+CVSup is free software.  It is available from the following FTP sites:
+
+  ftp://hub.FreeBSD.org/pub/CVSup/             (California)
+  ftp://ftp.cs.tu-berlin.de/pub/FreeBSD/CVSup/ (Germany)
+  ftp://ftp.polstra.com/pub/FreeBSD/CVSup/     (slow; avoid if possible)
+
+Full sources as well as FreeBSD binaries are available:
+
+  cvsup-bin-15.1.tar.gz		FreeBSD static binaries for the client + GUI
+  cvsup.nogui-bin-15.1.tar.gz	FreeBSD static binaries for the client (no GUI)
+  cvsupd-bin-15.1.tar.gz	FreeBSD static binaries for the server
+  cvsup-15.1.tar.gz		Sources **
+
+MD5 signatures for these files are:
+
+MD5 (cvsup-bin-15.1.tar.gz) = 031621cb49d9e9ff2e69d1fb2d9bdc16
+MD5 (cvsup.nogui-bin-15.1.tar.gz) = 245878cb3b15b8f4e223f994b3178722
+MD5 (cvsupd-bin-15.1.tar.gz) = 87b5d200de5fee146575d3c233f4f433
+MD5 (cvsup-15.1.tar.gz) = cd
+
+--------------------------------------------------------------------------------
+MID: <199707140011.RAA14742@hub.freebsd.org>
+DATE: 1997-07-14T00:11:49+00:00  FROM:  <jdp@polstra.com>
+SUBJ: CVSup Brazil mirror site
+BODY:
+I'm happy to announce a new CVSup mirror site "CVSup.br.FreeBSD.org",
+located in Brazil.  It offers the entire FreeBSD CVS repository, as
+well as the FreeBSD web page data.
+ 
+Many thanks to Joao Carlos Mendes Luis and Rodolfo Heitor Gevaerd de
+Faria for making this service available!
+--
+   John Polstra                                       jdp@polstra.com
+   John D. Polstra & Co., Inc.                Seattle, Washington USA
+   "Self-knowledge is always bad news."                 -- John Barth
+This is the moderated mailing list freebsd-announce.
+The list contains announcements of new FreeBSD capabilities,
+important events and project milestones.
+See also the FreeBSD Web pages at http://www.freebsd.org
+
+m owner-freebsd-announce Thu Jul 17 12:06:52 1997
+Date: Thu, 17 Jul 1997 10:13:39 -0700 (PDT)
+From: "Jordan K. Hubbard" <jkh@time.cdrom.com>
+Message-Id: <199707171713.KAA11649@time.cdrom.com>
+To: announce@FreeBSD.org
+Subject: Issue #1 of the FreeBSD Newsletter now available
+Sender: owner-
+
+--------------------------------------------------------------------------------
+MID: <199707310435.VAA01078@austin.polstra.com>
+DATE: 1997-07-31T04:35:49+00:00  FROM: John Polstra <jdp@polstra.com>
+SUBJ: CVSup.uk.FreeBSD.org is at your service
+BODY:
+I'm pleased to announce our newest CVSup mirror site for FreeBSD,
+"CVSup.uk.FreeBSD.org".  As its name implies, it is located in the
+United Kingdom.
+
+Many thanks to Josef Karthauser for setting up this generous service!
+--
+   John Polstra                                       jdp@polstra.com
+   John D. Polstra & Co., Inc.                Seattle, Washington USA
+   "Self-knowledge is always bad news."                 -- John Barth
+
+--------------------------------------------------------------------------------
+MID: <199708172037.NAA16804@austin.polstra.com>
+DATE: 1997-08-17T20:37:32+00:00  FROM: John Polstra <jdp@polstra.com>
+SUBJ: CVSup.ru.FreeBSD.org is at your service
+BODY:
+I'm pleased to announce our new Russian CVSup mirror site for
+FreeBSD, "CVSup.ru.FreeBSD.org".
+
+Many thanks to Mikhail A. Sokolov <mishania@demos.su> for setting up
+and maintaining this valuable service.
+--
+   John Polstra                                       jdp@polstra.com
+   John D. Polstra & Co., Inc.                Seattle, Washington USA
+   "Self-knowledge is always bad news."                 -- John Barth
+
+From owner-freebsd-announce  Sun Aug 17 13:39:18 1997
+Return-Path: <owner-freebsd-announce>
+Received: (from root@localhost)
+          by hub.freebsd.org (8.8.5/8.8.5) id NAA20451
+          for freebsd-announce-outgoing; Sun, 17 Aug 1997 13:39:18 -0700 (PDT)
+Received: from austin.polstra.com (austin.polstra.com [206.213.73.10])
+          by hub.freebsd.org (8.8.5/8.8.5) with ESMTP id NAA20444
+          for <announce@freebsd.org>; Sun, 17 Aug 1997 13:39:14 -0700 (PDT)
+Received: from austin.polstra.com (jdp@localhost)
+	by austin.polstra.com (8.8.6/8.8.5) with ESMTP id NAA16855
+	
+
+--------------------------------------------------------------------------------
+MID: <199709282215.PAA20418@austin.polstra.com>
+DATE: 1997-09-28T22:15:25+00:00  FROM: John Polstra <jdp@polstra.com>
+SUBJ: CVSup-15.2 is now available
+BODY:
+Announcing CVSup 15.2
+		     ---------------------
+Release 15.2 of CVSup, the CVS-aware network distribution system, is now
+available.
+
+Where to Get CVSup
+------------------
+CVSup is free software.  It is available from the following FTP sites:
+
+  ftp://hub.FreeBSD.org/pub/CVSup/             (California)
+  ftp://ftp.cs.tu-berlin.de/pub/FreeBSD/CVSup/ (Germany)
+  ftp://ftp.polstra.com/pub/FreeBSD/CVSup/     (slow; avoid if possible)
+
+Full sources as well as FreeBSD binaries are available:
+
+  cvsup-bin-15.2.tar.gz		FreeBSD static binaries for the client + GUI
+  cvsup.nogui-bin-15.2.tar.gz	FreeBSD static binaries for the client (no GUI)
+  cvsupd-bin-15.2.tar.gz	FreeBSD static binaries for the server
+  cvsup-15.2.tar.gz		Sources **
+
+The MD5 file signatures for these files are:
+
+  MD5 (cvsup-bin-15.2.tar.gz) = e92c5afa6fc51894d8edd97d2b29247c
+  MD5 (cvsup.nogui-bin-15.2.tar.gz) = 00a8a2911cd7e4caf8a8c3d7c5dac961
+  MD5 (cvsupd-bin-15.2.tar.gz) = 1801d60628dbd7b731402a24faa5e6b8
+  MD5 (cvsup-
+
+==========================================================================================
+DB: freebsd-current.duckdb  hits=50
+--------------------------------------------------------------------------------
+MID: <Pine.BSF.3.95.960901092822.795A-100000@klemm.gtn.com>
+DATE: 1996-09-01T07:35:32+00:00  FROM: Andreas Klemm <andreas@klemm.gtn.com>
+SUBJ: cvsup question, src/tools not updated, make release trouble
+BODY:
+Hi !
+
+When trying to roll my own release of FreeBSD-current (to intall
+a fresh copy of -current on a 2nd computer), I detected some 
+problems on the way ...
+
+a) make release doesn't run through, stops when trying to copy
+   manpages in the beginning. I think the migration of tcl into
+   the contrib tree might be the culprit here.
+
+b) When getting cvs via cvsup I dont get the tools directory ... Why ?
+
+c) Why is everything so difficult now ... libtcl went to /usr/src/contrib,
+   but still there are files in /usr/src/lib/libtcl ...
+   Is that really needed ?!
+
+/usr/src/lib/libtcl/tclConfig.sh:
+
+# tclConfig.sh --
+# 
+# This shell script (for sh) is generated automatically by Tcl's
+# configure script.  It will create shell variables for most of
+[...]
+
+
+Here the error message from a make release:
+-rw-r--r--  1 root  wheel  99667  1 Sep 07:58 /usr/src/release.log
+
+===> lib/libscsi
+install -C -o bin -g bin -m 444 /usr/src/lib/libscsi/scsi.h  /local/release/usr/include
+install -c -o bin -g bin 
+
+--------------------------------------------------------------------------------
+MID: <19970405163731.AI51903@uriah.heep.sax.de>
+DATE: 1997-04-05T14:37:31+00:00  FROM: J Wunsch <j@uriah.heep.sax.de>
+SUBJ: Re: CVSUP RELENG_2_2 Question
+BODY:
+As Richard Wackerbarth wrote:
+
+
+Indeed.
+
+I've considered to merge it into 2.2, but eventually gave up.  It was
+(and IMHO still is) in a defunct state as it's in the tree now.  You
+need a lot of handwork in order to get it going.  The source is in
+src/contrib, sure, but that's about almost all.  It cannot be built as
+part of the kernel, only as an LKM yet.  However, the LKM hooks to
+build it (under src/lkm) are missing, so it won't be build as an LKM
+by default.  Likewise, the entire command hierarchy hooks that are
+finally expected to reference src/contrib/ipfilter are missing, too.
+(This probably requires a bunch of stub Makefiles, maybe with a few -D
+options in their CFLAGS, that reference the contrib stuff via .PATH
+statements.)  The kernel sources can be compiled into a kernel, but
+not used, since they don't generate cdevsw entries.  The required
+options to get ipfilter statically compiled into your kernel aren't
+described in LINT and src/sys/conf/options either.
+
+Once these points
+
+--------------------------------------------------------------------------------
+MID: 199608092042.PAA11458@utgard.bga.com
+DATE: 1996-08-09T20:41:23+00:00  FROM: "Boyd R. Faulkner" <faulkner@asgard.bga.com> <None>
+SUBJ: Praise for CVSup
+BODY:
+Blessed be CVSup.  Verily, I have used it and my povray problem hath fled in
+haste.  It is much faster, of course, and I can make pretty pictures again.
+
+Thanks,
+Boyd
+
+-- 
+_____________________________________________________________________________
+
+        Boyd Faulkner            "The fates lead him who will;
+   faulkner@asgard.bga.com       Him who won't, they drag."
+http://asgard.bga.com/~faulkner  Old Roman Saying -- Source:  Joseph Campbell
+_____________________________________________________________________________
+
+
+
+--------------------------------------------------------------------------------
+MID: 199608100056.RAA24189@austin.polstra.com
+DATE: 1996-08-10T00:56:55+00:00  FROM: John Polstra <jdp@polstra.com> <None>
+SUBJ: Re: Praise for CVSup
+BODY:
+
+Praise is always welcome, of course, but ... I don't understand.
+You're not implying that CVSup fixed povray, are you?  I was just
+_sure_ I had taken out the experimental "auto-fix-bugs" feature
+before I made the public release. :-)
+
+I wouldn't even ask this, but you said in a different posting that
+CVSup had "fixed something in my tree that sup wouldn't fix."  It's
+sort of hard for me to imagine what that might be.  If you ignore
+the details, they both do the same thing.  Namely, they find files
+that are different on the client and server, and make them the
+same.
+
+Can you give us some details about what you're referring to?
+
+Thanks,
+John
+
+
+
+--------------------------------------------------------------------------------
+MID: 199608100111.UAA14116@utgard.bga.com
+DATE: 1996-08-10T01:11:05+00:00  FROM: "Boyd R. Faulkner" <faulkner@asgard.bga.com> <None>
+SUBJ: Re: Praise for CVSup
+BODY:
+According to John Polstra:
+
+Check again.
+
+
+Actually, I am.  CVSup does more file checking than sup does.  You can
+end up with files with the right date and size but not the right contents
+and, while I may be wrong, sup will not detect this.  Since CVSup uses
+MD5 (yes?)  to ID the files, you are gurarnteed the correct contents.
+
+I was blowing my tree away and resupping pieces but I hadn't got very far.
+Whatever was bad is gone now.  I can run povray without getting 
+Floating point errors.  I knew it was my tree because I had installed
+2.1.5 on another drive in this box and povray had worked.
+
+Maybe I am wrong about how little checking sup does but I don't think so.
+Either way, it didn't work.  Then it did.  CVSup was the step inbetween.
+
+Thanks.
+Boyd
+
+
+-- 
+_____________________________________________________________________________
+
+        Boyd Faulkner            "The fates lead him who will;
+   faulkner@asgard.bga.com       Him who won't, they drag."
+http://asgard.bga.com/~faulkner 
+
+--------------------------------------------------------------------------------
+MID: 199608100159.SAA24389@austin.polstra.com
+DATE: 1996-08-10T01:59:59+00:00  FROM: John Polstra <jdp@polstra.com> <None>
+SUBJ: Re: Praise for CVSup 
+BODY:
+
+Well ... yes and no.  It depends on the situation.  In general, CVSup
+does _not_ ID the files via MD5 checksums.  It compares the time stamps
+between the client and the server, and if they are identical, it assumes
+that the files are identical too.  In that case, it doesn't examine the
+files further.  (There is an exception which, I conjecture, applies to
+your particular case.  I'll explain that in a minute.)
+
+The reason it doesn't compare MD5 checksums for every file on the client
+and the server is that it would be too slow, too compute intensive, and
+too disk intensive.  No real-time network file update package could do
+that, without bringing the server to its knees.  It has to cull the
+unchanged files from the list using just the information that it can get
+from a call to stat().
+
+The exception is when you are using CVSup's checkout mode the very
+first time.  In that case, CVSup cannot ID your existing checked-out
+files via the time stamps, because the time stamps of the checked-ou
+
+--------------------------------------------------------------------------------
+MID: 199608100207.MAA27674@spooky.eis.net.au
+DATE: 1996-08-10T02:07:13+00:00  FROM: Ernie Elu <ernie@spooky.eis.net.au> <None>
+SUBJ: Re: Praise for CVSup
+BODY:
+
+
+
+Well I thought I would install cvsup and after the port script downloaded
+15MB of Modula-3 compiler across my 28.8K modem link it gave a checksum
+error :-(
+
+- Ernie.
+
+
+
+--------------------------------------------------------------------------------
+MID: 199608100232.TAA19886@phaeton.artisoft.com
+DATE: 1996-08-10T02:32:23+00:00  FROM: Terry Lambert <terry@lambert.org> <None>
+SUBJ: Re: Praise for CVSup
+BODY:
+
+[ ... ]
+
+
+[ ... ]
+
+
+One operational difference is that the files on the local file system
+seem to get the server file system timestamp on them after a data
+transfer instead of a local modification time time stamp.
+
+Sup apparently is using the local time stamping implied by POSIX.
+
+The implication here is that if your local clock is skewed relative
+to the SUP server by more than the amount of time between the CVS
+time stamp and the SUP time local to the SUP server...  then using
+SUP you could very well get screwed.
+
+
+I believe CVSup has the capability to screw you this way if you do
+local checkins, which would modify the time stamp to the local time.
+
+If you had a negative skew, even if CVSup were checking for equality
+instead of later than, then you could get screwed.  The window there
+is teeny.
+
+If the CVSup looks for a "greater than" time stamp, and your modification
+in local time took place after the last modification in server time,
+and both you and the server side made modificati
+
+--------------------------------------------------------------------------------
+MID: 199608100401.VAA24795@austin.polstra.com
+DATE: 1996-08-10T04:01:36+00:00  FROM: John Polstra <jdp@polstra.com> <None>
+SUBJ: Re: Praise for CVSup 
+BODY:
+Terry wrote:
+
+I am a little hazy about what sup does, but it definitely seems to
+preserve the time stamps of the files it updates.  I.e., it does
+a stat() on the server's version, and passes that time stamp to a
+utimes() call on the client side.  Any possible client-server clock
+skew won't affect that.
+
+Where clock skew might be an issue for sup is in the "when.cvs" file.
+A single time stamp is stored there, representing the time when the last
+update for the collection occurred.  They call it the "scan time", so I
+assume it is a time representing when the tree was examined.  (The
+beginning of the scan?  The end of the scan?)  I looked into enough to
+know that the time stamp comes from the server's clock, but I don't know
+much more about it.
+
+
+Yes, it checks for equality, for exactly the reason you described.
+
+I have thought about comparing file sizes, too.  (In fact, I'm
+still thinking about it.)  That would give a large added degree of
+safety.  The disadvantage is the extra bytes need
+
+--------------------------------------------------------------------------------
+MID: 199608100423.VAA24889@austin.polstra.com
+DATE: 1996-08-10T04:23:58+00:00  FROM: John Polstra <jdp@polstra.com> <None>
+SUBJ: Re: Praise for CVSup
+BODY:
+Ernie Elu wrote:
+
+
+Could you please run "md5" on the files you got, and send me the
+checksums?  Somebody else recently reported the same problem to me.  But
+I re-downloaded the files myself, and double-checked them, and their
+checksums were OK.  I am wondering whether the new "fetch" program has
+some sort of problem with them, and is corrupting them.
+
+Meanwhile, you could either use the CVSup binaries, or grab the Modula-3
+package and install that.
+
+-- John
+
+
+
+--------------------------------------------------------------------------------
+MID: 199608101926.AA249845219@hpnmhjw.sr.hp.com
+DATE: 1996-08-10T19:26:59+00:00  FROM: Darryl Okahata <darrylo@hpnmhjw.sr.hp.com> <None>
+SUBJ: Re: Praise for CVSup 
+BODY:
+
+     Just as a data point, I used the Modula-3 port from 2.1.5, and I
+didn't have any problems.
+
+[ Well, I didn't have any problems initially downloading and building
+  it, but I had lots of "fun" bashing Modula-3 into getting outside our
+  firewall ... (cvsup isn't useful unless I can get outside ;-().  I
+  also found a small bug in the FreeBSD portion of Modula-3 -- where
+  should I send the report?  ]
+
+     -- Darryl Okahata
+	Internet: darrylo@sr.hp.com
+
+DISCLAIMER: this message is the author's personal opinion and does not
+constitute the support, opinion, or policy of Hewlett-Packard, or of the
+little green men that have been following him all day.
+
+
+
+
+--------------------------------------------------------------------------------
+MID: m0upKBT-000QYDC@main.statsci.com
+DATE: 1996-08-10T19:58:54+00:00  FROM: Scott Blachowicz <scott@statsci.com> <None>
+SUBJ: Re: Praise for CVSup 
+BODY:
+John Polstra <jdp@polstra.com> wrote:
+
+
+I'd tried doing it on a 2.1.0R system and it downloaded all the stuff just
+fine - then I ran out of disk space in the Modula-3 build...
+
+
+There doesn't appear to be a Modula-3 package in my 2.1.0R CDROM, but my
+2.1.5R CD should be here "any day now" (tm)...
+
+Scott Blachowicz  Ph: 206/283-8802x240   Mathsoft (Data Analysis Products Div)
+                                         1700 Westlake Ave N #500
+scott@statsci.com                        Seattle, WA USA   98109
+Scott.Blachowicz@seaslug.org
+
+
+
+--------------------------------------------------------------------------------
+MID: 199608111728.MAA00442@utgard.bga.com
+DATE: 1996-08-11T17:27:17+00:00  FROM: "Boyd R. Faulkner" <faulkner@asgard.bga.com> <None>
+SUBJ: Re: Praise for CVSup
+BODY:
+According to John Polstra:
+
+So you can force the issue by deleting the info files.
+
+This is doubtless what happened.  Perhaps I could have done the same
+thing by blowing away the sup info files.  I still like this one better.
+
+Thanks again,
+Boyd
+
+-- 
+_____________________________________________________________________________
+
+        Boyd Faulkner            "The fates lead him who will;
+   faulkner@asgard.bga.com       Him who won't, they drag."
+http://asgard.bga.com/~faulkner  Old Roman Saying -- Source:  Joseph Campbell
+_____________________________________________________________________________
+
+
+
+--------------------------------------------------------------------------------
+MID: 9608111549.ZM1725@deepthought.ctasim.com
+DATE: 1996-08-11T21:49:54+00:00  FROM: jon@ctasim.com ("Jon Doran" ) <None>
+SUBJ: Re: Irrelevant comments on cvsup
+BODY:
+John,
+
+I've been running 2.0.5R since its release, and only recently have had the
+time to play with -current.  Since I'm new to the mailing lists I'm lurking
+around, rather than jumping in and causing trouble :-)
+
+I haven't had a chance to play with cvsup yet, I just got sup working through
+our firewall last weekend...  On that note:
+
+You can either generate the checksums during off hours from a cron job, or
+build them up as things change.  As you pointed out, there are always people
+who backdoor changes in.  I think there are ways to deal with this problem.
+
+First, consider people who dump things into the tree via RCS or CVS.  Lets
+use RCS, since its a lower common denominator.  It would be useful to place
+hooks in RCS to run filters at various stages of the ci and co process.  For
+example, a site may have standards on the format of code in the tree, so part
+of the ci process might involve running indent on all code to convert it into
+the standard format.  Part of the co process might
+
+--------------------------------------------------------------------------------
+MID: 10562.839801989@time.cdrom.com
+DATE: 1996-08-11T22:19:49+00:00  FROM: "Jordan K. Hubbard" <jkh@time.cdrom.com> <None>
+SUBJ: Re: Irrelevant comments on cvsup 
+BODY:
+
+"Knowing when things change" is, of course, the art here. :-)
+
+
+Perhaps you've just picked a poor example here, but that seems like a
+pretty whacked-out idea to me.  If you checked in code for, say, vi
+and this auto-indenter ran on it, then Keith sent you another version
+of vi and you wanted to see what had changed between the two versions,
+you'd be totally screwed.  I dunno, I'd say a feature like this would
+be like a double-edged sword with no hilt.
+
+						Jordan
+
+
+
+--------------------------------------------------------------------------------
+MID: 9608111700.ZM2073@deepthought.ctasim.com
+DATE: 1996-08-11T23:00:45+00:00  FROM: jon@ctasim.com ("Jon Doran" ) <None>
+SUBJ: Re: Irrelevant comments on cvsup
+BODY:
+On Aug 11,  3:19pm, Jordan K. Hubbard wrote:
+
+Not if indent was ran on both with the same setup file.  We do this at our
+company without incident.  Also, there are a fair number of people who will
+work with any editable/readable version of the source, so once the source
+tree is cleaned up it stays that way.
+
+I'm not suggesting this for FreeBSD, just using it to illustrate the type
+of actions that people may wish to perform on checkin/checkout.
+
+Another one is rebuilding tags :-)  I do this via cron in the middle of the
+night, but would love to have things updated incrementaly.
+
+Knowing when/what things change is important, but there are ways to make people
+work hard to circumvent the system.  In general, timestamps will change
+someplace.  If someone dumps code into the tree without using RCS, and then
+changes the timestamps back, there are other ways of dealing with them.  A
+blunt object over the head should work well.
+
+Jon Doran
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 199608120135.SAA06868@baloon.mimi.com
+DATE: 1996-08-12T01:35:29+00:00  FROM: asami@cs.berkeley.edu (Satoshi Asami) <None>
+SUBJ: Re: Praise for CVSup
+BODY:
+ *   firewall ... (cvsup isn't useful unless I can get outside ;-().  I
+ *   also found a small bug in the FreeBSD portion of Modula-3 -- where
+ *   should I send the report?  ]
+
+To the maintainer (jdp) or freebsd-bugs via send-pr, I guess.
+
+Satoshi
+
+
+
+--------------------------------------------------------------------------------
+MID: 199608120511.WAA01376@freefall.freebsd.org
+DATE: 1996-08-12T05:11:29+00:00  FROM: "Justin T. Gibbs" <gibbs@freefall.freebsd.org> <None>
+SUBJ: Re: Praise for CVSup 
+BODY:
+
+Can you make MD5 checksumming of every file an option too?  I know that
+it is expensive, but it would be the perfect thing for recovery for
+a corrupted filesystem.
+
+--
+Justin T. Gibbs
+===========================================
+  FreeBSD: Turning PCs into workstations
+===========================================
+
+
+
+--------------------------------------------------------------------------------
+MID: Pine.BSF.3.91.960812134835.7380C-100000@haldjas.folklore.ee
+DATE: 1996-08-12T10:52:46+00:00  FROM: Narvi <narvi@haldjas.folklore.ee> <None>
+SUBJ: Re: Praise for CVSup 
+BODY:
+
+
+On Sun, 11 Aug 1996, Justin T. Gibbs wrote:
+
+
+Perhaps we should integrate the newer tiger hash into FreeBSD? It is 
+something like 2.2 - 2.3 times faster on my computer. That is, actually, 
+with 192 bit digests. Speeding up checksumming would not be too bad in 
+the cases where a lot of needs to be done.
+
+	Sander
+
+
+
+
+--------------------------------------------------------------------------------
+MID: Pine.BSF.3.95.960830221604.398B-100000@klemm.gtn.com
+DATE: 1996-08-30T20:18:32+00:00  FROM: Andreas Klemm <andreas@klemm.gtn.com> <None>
+SUBJ: cvsup.de.freebsd.org request
+BODY:
+On Fri, 30 Aug 1996, Christoph Kukulies wrote:
+
+Would it be possible to create a german (or generally
+national) cvsup server ... The protocol is great !!!
+I love it ... 
+
+The only disadvantage is, that the US servers sometimes
+aren't good reachable because of net load ...
+
+It would be great, if someone could make something
+like cvsup.de.freebsd.org ... ;-)))
+
+Thanks !
+
+	Andreas ///
+
+--
+andreas@klemm.gtn.com         /\/\___      Wiechers & Partner Datentechnik GmbH
+   Andreas Klemm          ___/\/\/         Support Unix -- andreas.klemm@wup.de
+pgp p-key  http://www-swiss.ai.mit.edu/~bal/pks-toplev.html  >>> powered by <<<
+ftp://sunsite.unc.edu/pub/Linux/system/Printing/aps-491.tgz  >>>    FreeBSD <<<
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 199608302238.AAA02135@xaa.stack.urc.tue.nl
+DATE: 1996-08-30T22:38:10+00:00  FROM: FreeBSD matters of Mark Huizer (xaa) <freebsd@xaa.stack.urc.tue.nl> <None>
+SUBJ: Re: cvsup.de.freebsd.org request
+BODY:
+
+You could try cvsup.nl.freebsd.org
+It's closer than the USA :-)
+
+Mark Huizer
+
+
+
+--------------------------------------------------------------------------------
+MID: 32280D58.794BDF32@gil.physik.rwth-aachen.de
+DATE: 1996-08-31T10:00:56+00:00  FROM: "Christoph P. Kukulies" <kuku@gilberto.physik.rwth-aachen.de> <None>
+SUBJ: Re: cvsup.de.freebsd.org request
+BODY:
+Andreas Klemm wrote:
+
+I'm in the course of reorganizing ftp.de.freebsd.org as well as 
+sup.de.freebsd.org (more disk space, faster CPU, more RAM).
+When done this (hopefully end of September) I'll look into
+cvsup.
+
+
+-- 
+Christoph Kukulies
+kuku@gil.physik.rwth-aachen.de
+
+
+
+--------------------------------------------------------------------------------
+MID: Pine.BSF.3.95.960831185341.343A-100000@klemm.gtn.com
+DATE: 1996-08-31T16:54:26+00:00  FROM: Andreas Klemm <andreas@klemm.gtn.com> <None>
+SUBJ: Re: cvsup.de.freebsd.org request
+BODY:
+On Sat, 31 Aug 1996, Christoph P. Kukulies wrote:
+
+
+This would be very fine, thanks.
+
+	Andreas ///
+
+--
+andreas@klemm.gtn.com         /\/\___      Wiechers & Partner Datentechnik GmbH
+   Andreas Klemm          ___/\/\/         Support Unix -- andreas.klemm@wup.de
+pgp p-key  http://www-swiss.ai.mit.edu/~bal/pks-toplev.html  >>> powered by <<<
+ftp://sunsite.unc.edu/pub/Linux/system/Printing/aps-491.tgz  >>>    FreeBSD <<<
+
+
+
+
+--------------------------------------------------------------------------------
+MID: Pine.BSF.3.95.960901092822.795A-100000@klemm.gtn.com
+DATE: 1996-09-01T07:35:32+00:00  FROM: Andreas Klemm <andreas@klemm.gtn.com> <None>
+SUBJ: cvsup question, src/tools not updated, make release trouble
+BODY:
+Hi !
+
+When trying to roll my own release of FreeBSD-current (to intall
+a fresh copy of -current on a 2nd computer), I detected some 
+problems on the way ...
+
+a) make release doesn't run through, stops when trying to copy
+   manpages in the beginning. I think the migration of tcl into
+   the contrib tree might be the culprit here.
+
+b) When getting cvs via cvsup I dont get the tools directory ... Why ?
+
+c) Why is everything so difficult now ... libtcl went to /usr/src/contrib,
+   but still there are files in /usr/src/lib/libtcl ...
+   Is that really needed ?!
+
+/usr/src/lib/libtcl/tclConfig.sh:
+
+# tclConfig.sh --
+# 
+# This shell script (for sh) is generated automatically by Tcl's
+# configure script.  It will create shell variables for most of
+[...]
+
+
+Here the error message from a make release:
+-rw-r--r--  1 root  wheel  99667  1 Sep 07:58 /usr/src/release.log
+
+===> lib/libscsi
+install -C -o bin -g bin -m 444 /usr/src/lib/libscsi/scsi.h  /local/release/usr/include
+install -c -o bin -g bin 
+
+--------------------------------------------------------------------------------
+MID: 199609012239.PAA12163@austin.polstra.com
+DATE: 1996-09-01T22:39:31+00:00  FROM: John Polstra <jdp@polstra.com> <None>
+SUBJ: Re: cvsup question, src/tools not updated, make release trouble
+BODY:
+
+It's not a CVSup problem.  It's because the mirror site you're using
+hasn't updated his sup configuration files recently.  The tools
+directory was recently added to the "src-etc" collection on freefall.
+But some of the other mirrors have not yet updated the necessary files
+on their systems.
+
+I know which mirror you're using.  I will contact the administrator
+and ask him to fix it.
+
+John
+--
+   John Polstra                                       jdp@polstra.com
+   John D. Polstra & Co., Inc.                Seattle, Washington USA
+   "Self-knowledge is always bad news."                 -- John Barth
+
+
+
+--------------------------------------------------------------------------------
+MID: Pine.BSF.3.95.960902075144.19419B-100000@klemm.gtn.com
+DATE: 1996-09-02T05:51:59+00:00  FROM: Andreas Klemm <andreas@klemm.gtn.com> <None>
+SUBJ: Re: cvsup question, src/tools not updated, make release trouble
+BODY:
+On Sun, 1 Sep 1996, John Polstra wrote:
+
+
+Thanks ;)
+
+--
+andreas@klemm.gtn.com         /\/\___      Wiechers & Partner Datentechnik GmbH
+   Andreas Klemm          ___/\/\/         Support Unix -- andreas.klemm@wup.de
+pgp p-key  http://www-swiss.ai.mit.edu/~bal/pks-toplev.html  >>> powered by <<<
+ftp://sunsite.unc.edu/pub/Linux/system/Printing/aps-491.tgz  >>>    FreeBSD <<<
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 199609021713.KAA04349@austin.polstra.com
+DATE: 1996-09-02T17:13:14+00:00  FROM: John Polstra <jdp@polstra.com> <None>
+SUBJ: Re: cvsup question, src/tools not updated, make release trouble 
+BODY:
+
+You're welcome.  It's fixed now.
+--
+   John Polstra                                       jdp@polstra.com
+   John D. Polstra & Co., Inc.                Seattle, Washington USA
+   "Self-knowledge is always bad news."                 -- John Barth
+
+
+
+--------------------------------------------------------------------------------
+MID: Pine.AUX.3.94.961004133308.12298B-100000@covina.lightside.com
+DATE: 1996-10-04T20:50:53+00:00  FROM: Jake Hamby <jehamby@lightside.com> <None>
+SUBJ: Wow, CVSup is cool!
+BODY:
+After complaining about some problems I had with sup4.freebsd.org (it
+repeatedly fetched large chunks of contrib even though nothing, other than
+the datestamp, had changed!), I decided to try out CVSup, even though it
+involves installing the 5MB Modula-3 package first.  I was _very_
+impressed!  My favorite features:
+
+1) Doesn't get confused by datestamps.  It uses checksums and the embedded
+RCS version to tell if the file has changed.  This was especially a
+problem with Sup when I tried to switch to an alternate sup server,
+because many datestamps were different (different time zones?).  Not a
+problem with CVSup.
+
+2) When a file changes, it applies the CVS deltas directly rather than
+redownloading the entire file.  This saves a tremendous amount of time,
+and combined with built-in compression support, makes CVSup a godsend for
+people on slow links (like my 28.8kbps modem!).
+
+3) Compatible with my existing sup configuration.  It includes an awk
+script to convert existing supfiles to CVS
+
+--------------------------------------------------------------------------------
+MID: 199610050056.RAA04443@austin.polstra.com
+DATE: 1996-10-05T00:56:31+00:00  FROM: John Polstra <jdp@polstra.com> <None>
+SUBJ: Re: Wow, CVSup is cool!
+BODY:
+Just one small point ...
+
+
+Or get the statically linked executable.  It's around 1.1 MB, and you
+don't need anything else in order to run it.  It's available from:
+
+    ftp://freefall.freebsd.org/pub/CVSup/
+    ftp://ftp.freebsd.org/pub/FreeBSD/incoming/
+    ftp://ftp.polstra.com/pub/FreeBSD/CVSup/     (slow; avoid if possible)
+
+in the file "cvsup-bin-13.4.tar.gz".
+
+
+... with the _ugliest_ scrollbars in the world!  Jordan hates them.
+
+The GUI is pretty worthless right now, as a tool for configuring
+the program.  It's mostly just a very complicated pacifier. :-) I
+have lots of ideas for it, but more important features keep coming
+first.  FWIW, in the next release it will be easy to build the
+client without the GUI, in case you don't have X11 or don't want
+such a large memory image.
+
+
+It's a clunky looking language, until you get used to it.  But it sure
+has been a pleasure to work with, for this application.
+
+John
+--
+   John Polstra                                       jdp@polstra.com
+
+
+--------------------------------------------------------------------------------
+MID: 199610050209.AA244811383@hpnmhjw.sr.hp.com
+DATE: 1996-10-05T02:09:43+00:00  FROM: Darryl Okahata <darrylo@hpnmhjw.sr.hp.com> <None>
+SUBJ: Re: Wow, CVSup is cool! 
+BODY:
+
+     John has precompiled cvsup binaries available, and so you didn't
+have to install M3.
+
+
+     I'll second the notion!
+
+     -- Darryl Okahata
+	Internet: darrylo@sr.hp.com
+
+DISCLAIMER: this message is the author's personal opinion and does not
+constitute the support, opinion, or policy of Hewlett-Packard, or of the
+little green men that have been following him all day.
+
+
+
+--------------------------------------------------------------------------------
+MID: 57ohidg328.fsf@tees.elsevier.co.uk
+DATE: 1996-10-08T10:31:27+00:00  FROM: Paul Richards <p.richards@elsevier.co.uk> <None>
+SUBJ: Re: Wow, CVSup is cool!
+BODY:
+Jake Hamby <jehamby@lightside.com> writes:
+
+
+I switched from sup to ctm some time ago and ctm is more appropriate
+for my modem link but last night, after a mail gateway disaster, I was
+forced to grab some ctm deltas by hand and it occured to me that a
+supscan of the deltas directory would be usefull so that when
+something does get badly spammed in your delta directory (assuming you
+archive them all which I do) then you can run sup as a one off to
+repair/retrieve missing delta files. It would mean having a slightly
+different structure to the delta directory layout in that when a new
+base delta is started it should be in in a separate directory. Otherwise,
+running sup across the whole lot would download all the base deltas
+that wouldn't be needed.
+
+My desire for this is that I needed to go out and got caught up trying
+to determine which deltas were missing and getting odd files one at a
+time. I really wanted some mechanism that I could just leave running
+while I was out that knew to grab
+
+--------------------------------------------------------------------------------
+MID: 4295.844773601@critter.tfs.com
+DATE: 1996-10-08T11:20:01+00:00  FROM: Poul-Henning Kamp <phk@critter.tfs.com> <None>
+SUBJ: Re: Wow, CVSup is cool! 
+BODY:
+In message <57ohidg328.fsf@tees.elsevier.co.uk>, Paul Richards writes:
+
+This is what I do:
+
+#!/bin/sh
+set -e
+cd /home/ncvs
+set `cat .ctm_status`
+old=foo
+this=$2
+while [ $old != $2 ] 
+do
+        next=`expr $this + 1`
+        ( cd /tmp && 
+                fetch -q ftp://freebsd.org/pub/CTM/cvs-cur/cvs-cur.${next}.gz)
+        if [ -f /tmp/cvs-cur.*${next}.gz ] ; then
+                ctm -v /tmp/cvs-cur.*${next}.gz
+                mv /tmp/cvs-cur.*${next}.gz /home/CTM
+                old=$this
+                set `cat .ctm_status`
+                this=$2
+        else
+                break
+        fi
+done
+
+
+--
+Poul-Henning Kamp           | phk@FreeBSD.ORG       FreeBSD Core-team.
+http://www.freebsd.org/~phk | phk@login.dknet.dk    Private mailbox.
+whois: [PHK]                | phk@ref.tfs.com       TRW Financial Systems, Inc.
+Future will arrive by its own means, progress not so.
+
+
+
+--------------------------------------------------------------------------------
+MID: l03010508ae7feb4fcae1@[208.2.87.4]
+DATE: 1996-10-08T11:34:23+00:00  FROM: Richard Wackerbarth <rkw@dataplex.net> <None>
+SUBJ: Re: Wow, CVSup is cool!
+BODY:
+
+Since this is an infrequent use, it is not worthwhile to support it with a
+mechanism as heavy as sup. I suggest that you use "mirror" for this.
+By setting the appropriate include/exclude rules, you get just the files
+that you want. In my own case, I do not get every base delta. It is
+"cheaper" for me to simply keep a few more files to carry me back to an
+earlier delta.
+
+What I would like to see is coordination between the sup disptibutions and
+the ctm distributions so that you can seamlessly use sup to "fix" a tree
+and ctm to routinely update it, or vise versa.
+
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 199610131433.SAA00830@nagual.ru
+DATE: 1996-10-13T14:33:49+00:00  FROM: "Андрей Чернов" (Andrey A. Chernov) <ache@nagual.ru> <None>
+SUBJ: Please fix CVSup collection
+BODY:
+...
+ Add delta 1.39 96.10.10.23.16.50 jdp
+Checkout src/lib/libmd/.depend
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ please remove this file
+Edit src/sbin/init/init.8
+...
+
+-- 
+Andrey A. Chernov
+<ache@nagual.ru>
+http://www.nagual.ru/~ache/
+
+
+
+--------------------------------------------------------------------------------
+MID: 199610172346.TAA00312@llama.bazzle.com
+DATE: 1996-10-17T23:46:47+00:00  FROM: "Dan O'Brien" <dob@gargoyle.bazzle.com> <None>
+SUBJ: CVSUP warning on -current
+BODY:
+I supped tonight (during dinner no less) and got the following CVSUP
+warning.  Is this important?
+
+Server warning: Cannot open "/home/ncvs/ports/security/ssh/patches/patch-ad,v": Permission denied
+
+
+Thanks,
+
+Dan O'Brien
+Columbus, OH
+
+
+
+--------------------------------------------------------------------------------
+MID: Pine.BSF.3.95.961017215643.24174A-100000@gargoyle.bazzle.com
+DATE: 1996-10-18T01:58:06+00:00  FROM: "Eric J. Chet" <ejc@gargoyle.bazzle.com> <None>
+SUBJ: Re: CVSUP warning on -current
+BODY:
+On Thu, 17 Oct 1996, Dan O'Brien wrote:
+
+Hello
+	I supped tonight at sup.961017.1750 and did not get that message.
+I used cvsup.freebsd.org
+
+Peace
+                                              Eric J. Chet
+                                               - ejc@bazzle.com
+
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 199610180454.VAA06692@austin.polstra.com
+DATE: 1996-10-18T04:54:32+00:00  FROM: John Polstra <jdp@polstra.com> <None>
+SUBJ: Re: CVSUP warning on -current
+BODY:
+
+Somebody put that file into the repository with incorrect permissions,
+so the CVSup server couldn't read it.  It's been fixed since you tried
+it.
+
+It's not a big deal.  You'll get the file the next time you run CVSup.
+
+John
+--
+   John Polstra                                       jdp@polstra.com
+   John D. Polstra & Co., Inc.                Seattle, Washington USA
+   "Self-knowledge is always bad news."                 -- John Barth
+
+
+
+--------------------------------------------------------------------------------
+MID: 199611040129.EAA00664@nagual.ru
+DATE: 1996-11-04T01:29:16+00:00  FROM: "Андрей Чернов" (Andrey A. Chernov) <ache@nagual.ru> <None>
+SUBJ: cvsup.nl problems (who owns it?)
+BODY:
+Parsing supfile "/usr/share/examples/cvsup/supfile.ports"
+Looking up address of cvsup.nl.freebsd.org
+Connecting to cvsup.nl.freebsd.org
+Connected to cvsup.nl.freebsd.org
+Exchanging collection information
+Server message: Unknown collection "ports-all" in hostbase "/home"
+
+It work yesterday.
+
+-- 
+Andrey A. Chernov
+<ache@nagual.ru>
+http://www.nagual.ru/~ache/
+
+
+
+--------------------------------------------------------------------------------
+MID: 199611110910.KAA18400@gilberto.physik.rwth-aachen.de
+DATE: 1996-11-11T09:10:21+00:00  FROM: Christoph Kukulies <kuku@gilberto.physik.rwth-aachen.de> <None>
+SUBJ: CVSup Q: some files missing
+BODY:
+
+I changed sup.de.freebsd.org to use CVSup. I used supconv to convert
+my supfile and it looks like CVSup is fetching the repository fine, also
+checks out but my /usr/src tree doesn't yet look like it used to be.
+
+COPYRIGHT Makefile TODO are missing.
+
+As I'm also a sup server, I assume it is correct that I run update-all
+after a CVSsup, right?
+
+--Chris Christoph P. U. Kukulies kuku@gil.physik.rwth-aachen.de
+
+
+
+--------------------------------------------------------------------------------
+MID: 1931.847708925@time.cdrom.com
+DATE: 1996-11-11T10:42:05+00:00  FROM: "Jordan K. Hubbard" <jkh@time.cdrom.com> <None>
+SUBJ: Re: CVSup Q: some files missing 
+BODY:
+
+And you have src-base in your supfile?
+
+
+That's correct.  *shudder* - death to sup!  long live cvsup! :-)
+
+						Jordan
+
+
+
+--------------------------------------------------------------------------------
+MID: 199611111113.MAA20009@gilberto.physik.rwth-aachen.de
+DATE: 1996-11-11T11:13:56+00:00  FROM: kuku@gilberto.physik.rwth-aachen.de (Christoph Kukulies) <None>
+SUBJ: Re: CVSup Q: some files missing
+BODY:
+Jordan K. Hubbard writes:
+
+Yes, I have. But it seems I found it. I was using the wrong cvsupfile
+in my sup script. Up to another try.
+
+
+-- 
+--Chris Christoph P. U. Kukulies kuku@gil.physik.rwth-aachen.de
+
+
+
+--------------------------------------------------------------------------------
+MID: Pine.NEB.3.95.961114085103.1207A-100000@wgrobez1.remote.louisville.edu
+DATE: 1996-11-14T13:53:06+00:00  FROM: Gary Roberts <wangel@wgrobez1.remote.louisville.edu> <None>
+SUBJ: cvsup
+BODY:
+Call me stupid.  I just upgraded to cvsup, ran it, worked great.  However,
+it put everything in /archive/pub/FreeBSD/FreeBSD-Current/src.  I thought
+it was supposed to go in /usr/src, w/ everything being in their
+directories.  Can I rm -rf the dirs from /usr/src, and run make world from
+the /archive dir?  Or do I need to move everything from /archive ->
+/usr/src?
+
+Thanks
+Gary
+
+
+
+
+--------------------------------------------------------------------------------
+MID: l03010600aeb0e9650110@[204.69.236.50]
+DATE: 1996-11-14T15:28:30+00:00  FROM: Richard Wackerbarth <rkw@dataplex.net> <None>
+SUBJ: Re: cvsup
+BODY:
+
+You will need the source in /usr/src when you compile it:-(
+
+However, I would leave it elsewhere and simply "ln -s
+....../FreeBSD-Current/src /usr".
+That way you can also easily switch to FreeBSD-2.2/src, etc. if you want to
+try another system (like the releases in progress).
+
+If you do not like " /archive/pub/FreeBSD", edit the supfile to include you
+own prefix.
+
+BTW, John, since we have to (CV)sup a large number of distributions from
+the same place, it would be nice if the input would allow us to specify the
+common elements only once rather thanon each entry.
+
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 199611152116.NAA21083@austin.polstra.com
+DATE: 1996-11-15T21:16:08+00:00  FROM: John Polstra <jdp@polstra.com> <None>
+SUBJ: Re: cvsup
+BODY:
+
+Yes, this is on my to-do list.
+
+John
+
+
+
+--------------------------------------------------------------------------------
+MID: 199611292026.PAA23180@llama.bazzle.com
+DATE: 1996-11-29T20:26:04+00:00  FROM: "Dan O'Brien" <dob@gargoyle.bazzle.com> <None>
+SUBJ: CVSUP problem with current
+BODY:
+Where's the problem?  
+
+I started getting this the other day.  Same error each time, 
+just different file numbers.
+
+	Connected to cvsup.FreeBSD.org
+	Updater failed: Updater error: Cannot create "/usr/sup/src-base/#cvs.cvsup-23114.0": File exists
+
+This is how I invoke cvsup:
+
+	/usr/local/sbin/cvsup -L 1 -g /usr/cvs/cvsup-supfile
+
+Here is the line from my cvsup file:
+
+	src-base release=cvs host=cvsup.FreeBSD.org hostbase=/home base=/usr prefix=/usr compress delete old use-rel-suffix tag=.
+
+It used to work fine.  No changes on my end.  I didn't notice anything 
+in the mailing list regarding cvsup changes, either.  What needs to be fixed?
+
+
+Thanks in advance,
+
+Dan
+
+
+
+--------------------------------------------------------------------------------
+MID: 199612010558.VAA18914@austin.polstra.com
+DATE: 1996-12-01T05:58:04+00:00  FROM: John Polstra <jdp@polstra.com> <None>
+SUBJ: Re: CVSUP problem with current
+BODY:
+In article <199611292026.PAA23180@llama.bazzle.com> Dan writes:
+
+Strange.  Next time it happens, could you please send me the following info:
+
+1.  The error message from cvsup.
+
+2.  The output from "ls -alRF" on the directory containing the offending
+    file (in this case, "/usr/sup/src-base").
+
+3.  The user-ID and group-ID under which you run cvsup (so I can check
+    for permission problems).
+
+4.  The date & time when you started the run (so I can check the server
+    logs).
+
+5.  Your mother's maiden name.  (Just kidding.)
+
+If it's stopped happening, please let me know that, too.
+
+Also, if anybody else is seeing this problem, please tell me.
+
+Thanks,
+John
+--
+   John Polstra                                       jdp@polstra.com
+   John D. Polstra & Co., Inc.                Seattle, Washington USA
+   "Self-knowledge is always bad news."                 -- John Barth
+
+
+
+--------------------------------------------------------------------------------
+MID: 199612011620.LAA26688@cbsky.cb.lucent.com
+DATE: 1996-12-01T16:20:55+00:00  FROM: cbsky!dob@naserver1.cb.lucent.com (Dan O'Brien, 614.860.3292) <None>
+SUBJ: Re: CVSUP problem with current
+BODY:
+Mea culpa.  Thanks to Steve who sent private email that gave me the tip.
+
+
+Setup:  /usr/sup is symlink to /var/usr/sup  
+	(var has extra space for things that grow)
+
+Problem: BANG!  (that's me shooting myself in the foot)
+
+	I was house cleaning and had rm -fr /var/usr/sup
+		``don't need that anymore, I'm using cvsup!'' :-(
+
+The symlink was left hanging /usr/sup -> /var/usr/sup
+
+Clean up was several days before trying cvsup so there was a disconnect
+in the synapses...
+
+
+
+
+It's stopped.   Fix was to mkdir /var/usr/sup and all is well.  The error 
+message was what threw me off.  
+
+
+No, thank you for CVSUP and to Steve for the tip.  
+
+Sorry for exposing my stupidity to the list.   I'll slink back to the shadows...
+
+
+Dan
+
+
+
+--------------------------------------------------------------------------------
+MID: 199612012049.MAA22613@austin.polstra.com
+DATE: 1996-12-01T20:49:42+00:00  FROM: John Polstra <jdp@polstra.com> <None>
+SUBJ: Re: CVSUP problem with current 
+BODY:
+
+Yes, well why not?!  That error message was bogus and badly misleading.
+
+
+You don't have to apologize for anything.  The fact that the error
+message was so wrong should properly be considered a bug.  Thanks for
+reporting it.
+
+John
+--
+   John Polstra                                       jdp@polstra.com
+   John D. Polstra & Co., Inc.                Seattle, Washington USA
+   "Self-knowledge is always bad news."                 -- John Barth
+
+
+
+--------------------------------------------------------------------------------
+MID: Pine.BSF.3.95.961216185020.2192A-100000@fools.ecpnet.com
+DATE: 1996-12-17T00:51:41+00:00  FROM: Jimbo Bahooli <moke@fools.ecpnet.com> <None>
+SUBJ: cvsup clobbering local changes
+BODY:
+
+Cvsup here clobbers all my local changes, even with the delete key taken
+out. Is there a way I can get it to stop doing this, or better yet is
+there a read-only cvs account that freebsd users can use?
+
+
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 199612170203.TAA07434@phaeton.artisoft.com
+DATE: 1996-12-17T02:03:52+00:00  FROM: Terry Lambert <terry@lambert.org> <None>
+SUBJ: Re: cvsup clobbering local changes
+BODY:
+
+You need to set a local tag before you make local changes.  Otherwise,
+your local changes will occur on the defualt tag, which is the one -current
+is using.  If they conflict with yours, theirs wins.
+
+
+					Terry Lambert
+					terry@lambert.org
+---
+Any opinions in this posting are my own and not those of my present
+or previous employers.
+
+

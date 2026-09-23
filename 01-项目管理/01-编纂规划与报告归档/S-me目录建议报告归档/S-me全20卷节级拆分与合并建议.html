@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>S-me 全部 20 卷节级拆分与合并建议</title>
+<style>
+  :root { --ink:#1a1a1a; --muted:#5a5a5a; --accent:#1f4e79; --accent-2:#b23a2f; --rule:#c9c9c9; --soft:#f5f5f5; }
+  * { box-sizing:border-box; }
+  html,body { margin:0; padding:0; background:#fff; color:var(--ink);
+    font-family:"Songti SC","Noto Serif CJK SC","SimSun","STSong",serif; font-size:9.5pt; line-height:1.6; }
+  .report { max-width:820px; margin:0 auto; padding:26px 38px; }
+  h1,h2,h3 { font-family:"Microsoft YaHei","PingFang SC","Noto Sans CJK SC",sans-serif; color:var(--accent); font-weight:700; }
+  h1 { font-size:18pt; text-align:center; letter-spacing:1px; margin:0 0 4px; }
+  .subtitle { text-align:center; color:var(--muted); font-size:10pt; margin:0 0 3px; }
+  .meta { text-align:center; color:var(--muted); font-size:8.5pt; margin-bottom:14px; }
+  h2 { font-size:13pt; margin:22px 0 8px; padding-bottom:5px; border-bottom:2px solid var(--accent); }
+  h3 { font-size:10.5pt; margin:14px 0 5px; color:#24537f; }
+  p { margin:6px 0; text-align:justify; }
+  .none { color:#666; font-size:9pt; }
+  code { font-family:"Consolas","Menlo",monospace; font-size:8.5pt; background:var(--soft); padding:0 3px; border-radius:3px; }
+  .abstract { background:var(--soft); border-left:4px solid var(--accent); padding:10px 14px; margin:12px 0; font-size:9.5pt; }
+  .abstract .label { font-weight:700; color:var(--accent); }
+  .callout { background:#fbf4f2; border-left:4px solid var(--accent-2); padding:8px 12px; margin:8px 0; font-size:9.5pt; }
+  table.grid { width:100%; border-collapse:collapse; margin:6px 0 12px; font-size:8.5pt; }
+  thead { display:table-header-group; }
+  tr { break-inside:avoid; page-break-inside:avoid; }
+  table.grid td, table.grid th { border:1px solid var(--rule); padding:4px 7px; vertical-align:top; text-align:left; }
+  table.grid th { background:var(--soft); color:var(--accent); font-weight:700; }
+  .op { white-space:nowrap; width:52px; font-weight:700; font-size:8pt; }
+  .loc { white-space:nowrap; width:56px; color:#24537f; font-size:8pt; }
+  .adv { width:46%; }
+  .legend span { display:inline-block; margin-right:10px; font-size:8.5pt; font-weight:700; }
+  ul { margin:4px 0 10px; padding-left:20px; }
+  li { margin:3px 0; }
+  .footnote { font-size:8pt; color:var(--muted); border-top:1px solid var(--rule); margin-top:18px; padding-top:6px; }
+  @page { size:A4; margin:14mm 12mm 14mm 12mm; }
+  @media print { .report { max-width:none; padding:0; } a { color:inherit; text-decoration:none; } }
+</style>
+</head>
+<body>
+<div class="report">
+第二十卷：记忆、长生与不死<h2>逐卷节级拆分与合并建议</h2>
+<h3>第一卷：自由与必然：从图灵机到 UNIX</h3><p class='none'>无需节级拆分/合并调整（节结构已按主题细分且无重复/占位）。</p>
+<h3>第二卷：UNIX 文化与物质基础</h3><table class='grid'><thead><tr><th class='op'>操作</th><th class='loc'>定位</th><th>节标题/对象</th><th class='adv'>建议</th></tr></thead><tbody><tr><td class='op' style='color:#1f4e79'>拆分并列</td><td class='loc'>2.1</td><td>Fortran、ALGOL、LISP、Pascal 的学术谱系</td><td class='adv'>四种语言横跨命令式/函数式两大范式，正文若超长可拆为「命令式谱系（Fortran、ALGOL、Pascal）」与「函数式谱系（LISP）」两节；作为背景综述亦可保留。</td></tr><tr><td class='op' style='color:#1f4e79'>拆分并列</td><td class='loc'>3.6</td><td>小型机厂商的兴衰：Data General、Prime、Wang</td><td class='adv'>三厂商为同类案例，可保留一节；若需展开可拆为三子节各述兴衰。</td></tr></tbody></table>
+<h3>第三卷：通往西部的帝国之路：从贝克莱到伯克利</h3><p class='none'>无需节级拆分/合并调整（节结构已按主题细分且无重复/占位）。</p>
+<h3>第四卷：从补丁集到操作系统：BSD 的创建</h3><p class='none'>无需节级拆分/合并调整（节结构已按主题细分且无重复/占位）。</p>
+<h3>第五卷：DARPA 赞助与 CSRG 的成立</h3><p class='none'>无需节级拆分/合并调整（节结构已按主题细分且无重复/占位）。</p>
+<h3>第六卷：BSD 的技术演进</h3><table class='grid'><thead><tr><th class='op'>操作</th><th class='loc'>定位</th><th>节标题/对象</th><th class='adv'>建议</th></tr></thead><tbody><tr><td class='op' style='color:#1f4e79'>拆分并列</td><td class='loc'>2.2</td><td>Shell 家族在 BSD 中的谱系：sh、csh、tcsh、bash、zsh</td><td class='adv'>五个 shell 各自有独立谱系，建议按「Bourne 系（sh/bash）」「C 系（csh/tcsh）」「交互系（zsh）」拆分，避免一节塞入五条谱系。</td></tr><tr><td class='op' style='color:#1f4e79'>拆分并列</td><td class='loc'>2.3</td><td>脚本语言与 BSD 的共生：Perl、Python、Ruby、Lua</td><td class='adv'>四种语言与 BSD 的共生关系差异大，建议拆为 Perl（系统管理）、Python（运维/教学）、Ruby/Lua（嵌入）两组。</td></tr><tr><td class='op' style='color:#1f4e79'>拆分并列</td><td class='loc'>3.2</td><td>SPARC、MIPS、Alpha：RISC 阵营的三条路线</td><td class='adv'>三条 RISC 路线可拆为三节，便于与各自工作站厂商（Sun/SGI/DEC）对应叙述。</td></tr></tbody></table>
+<h3>第七卷：诉讼、和解与延宕</h3><p class='none'>无需节级拆分/合并调整（节结构已按主题细分且无重复/占位）。</p>
+<h3>第八卷：386BSD 与大分裂</h3><p class='none'>无需节级拆分/合并调整（节结构已按主题细分且无重复/占位）。</p>
+<h3>第九卷：FreeBSD 的历史</h3><table class='grid'><thead><tr><th class='op'>操作</th><th class='loc'>定位</th><th>节标题/对象</th><th class='adv'>建议</th></tr></thead><tbody><tr><td class='op' style='color:#b25a00'>合并重复</td><td class='loc'>1.3</td><td>Ports Collection 的诞生与早期设计</td><td class='adv'>与第 2 章「Ports Collection」整章重复，应将 1.3 并入第 2 章，第 1 章仅保留 ipfw、sendfile、release 工程与驱动维护者。</td></tr><tr><td class='op' style='color:#b25a00'>合并重复</td><td class='loc'>1.5</td><td>版本控制迁移：CVS 到 SVN 到 Git 的工程史</td><td class='adv'>与第 5 章「CVS 到 SVN」、第 6 章「SVN 到 Git」重复，应拆入这两章，第 1 章不再单列版本控制迁移。</td></tr><tr><td class='op' style='color:#2a6b4a'>跨卷协调</td><td class='loc'>1.6</td><td>被遗忘的驱动维护者</td><td class='adv'>与第十八卷第 11 章「被忽略的 BSD 贡献者与驱动维护者」主题重叠，宜在本章保留个案、在第十八卷做群像综述，避免两处重复举证。</td></tr><tr><td class='op' style='color:#1f4e79'>拆分并列</td><td class='loc'>8.2</td><td>GEOM 类：RAID、加密、日志、镜像</td><td class='adv'>四类 GEOM 类功能差异大，建议按「RAID/镜像」「加密（GELI 协同）」「日志」拆分。</td></tr><tr><td class='op' style='color:#6a3fa0'>移出偏离</td><td class='loc'>18.5</td><td>jemalloc：BSD 内存分配器的工业散逸</td><td class='adv'>jemalloc 与本章 rcNG、ULE、GELI 主题不一致，建议移出，或并入内存管理主题（可与第六卷虚拟内存章呼应）。</td></tr><tr><td class='op' style='color:#1f4e79'>拆分并列</td><td class='loc'>2.3</td><td>Ports vs pkgsrc vs dpkg/rpm 的三方对照</td><td class='adv'>三方对照可保留一节，也可拆为「Ports 与 pkgsrc（BSD 系）」「Ports 与 dpkg/rpm（Linux 系）」两节。</td></tr></tbody></table>
+<h3>第十卷：macOS 历史</h3><table class='grid'><thead><tr><th class='op'>操作</th><th class='loc'>定位</th><th>节标题/对象</th><th class='adv'>建议</th></tr></thead><tbody><tr><td class='op' style='color:#2a6b4a'>跨卷协调</td><td class='loc'>7.2</td><td>用户量作为影响证据的合法性与局限</td><td class='adv'>与第二十卷第 9 章 9.2 节逐字重复，应保留一处（建议保留于第十卷谱系考察处），第二十卷引用不重述。</td></tr></tbody></table>
+<h3>第十一卷：NetBSD 的历史</h3><table class='grid'><thead><tr><th class='op'>操作</th><th class='loc'>定位</th><th>节标题/对象</th><th class='adv'>建议</th></tr></thead><tbody><tr><td class='op' style='color:#b25a00'>合并重复</td><td class='loc'>第1/2章</td><td>平台普遍性理想 与 移植文化</td><td class='adv'>第 1 章「移植作为第一原则」与第 2 章「50+ 平台的工程方法」主题邻近，节内容若交叉，宜以「原则（第 1 章）／方法（第 2 章）」明确分工，重叠节合并。</td></tr></tbody></table>
+<h3>第十二卷：OpenBSD 的历史</h3><p class='none'>无需节级拆分/合并调整（节结构已按主题细分且无重复/占位）。</p>
+<h3>第十三卷：DragonFly BSD 的历史</h3><p class='none'>无需节级拆分/合并调整（节结构已按主题细分且无重复/占位）。</p>
+<h3>第十四卷：开源社区的世界化</h3><p class='none'>无需节级拆分/合并调整（节结构已按主题细分且无重复/占位）。</p>
+<h3>第十五卷：开源、许可证、利益与法律</h3><p class='none'>无需节级拆分/合并调整（节结构已按主题细分且无重复/占位）。</p>
+<h3>第十六卷：自由软件运动、GNU、开源软件运动与基金会</h3><table class='grid'><thead><tr><th class='op'>操作</th><th class='loc'>定位</th><th>节标题/对象</th><th class='adv'>建议</th></tr></thead><tbody><tr><td class='op' style='color:#6a3fa0'>移出偏离</td><td class='loc'>4.4</td><td>GNU/Linux 命名已被实践淘汰：Chimera Linux、Alpine、Android 等</td><td class='adv'>与本章「OSI 成立与 Apache 谱系」主题偏离，建议移出；其内容属「Linux 范畴」辨析，可归入第十七卷文化挪用或独立处理。</td></tr><tr><td class='op' style='color:#6a3fa0'>移出偏离</td><td class='loc'>4.5</td><td>Linux 等价物：Illumos 比较与范畴错误</td><td class='adv'>同 4.4，与 OSI/Apache 主题偏离，建议移出，避免在 BSD 许可证章内展开 Linux 范畴讨论。</td></tr><tr><td class='op' style='color:#b23a2f'>删占位</td><td class='loc'>10.5</td><td>新节点</td><td class='adv'>占位条目，删除。</td></tr><tr><td class='op' style='color:#2a6b4a'>跨卷协调</td><td class='loc'>1.1/2</td><td>GNU 项目起源 与 GNU 工具链依赖</td><td class='adv'>与第十七卷第 5 章「GNU 项目」、第 4 章 4.4「GNU 工具链相互依赖」重复，宜在本卷侧重「运动与基金会」、在第十七卷侧重「谱系考据与挪用批判」，明确分工。</td></tr></tbody></table>
+<h3>第十七卷：文化挪用与代码谱系</h3><table class='grid'><thead><tr><th class='op'>操作</th><th class='loc'>定位</th><th>节标题/对象</th><th class='adv'>建议</th></tr></thead><tbody><tr><td class='op' style='color:#b23a2f'>删占位</td><td class='loc'>第13章</td><td>新节点（0 节）</td><td class='adv'>整章为占位，删除。</td></tr><tr><td class='op' style='color:#b25a00'>合并重复</td><td class='loc'>1.2 / 2.1</td><td>代码谱系考据：Linux 0.01 与 Minix 比对</td><td class='adv'>第 1 章 1.2 与第 2 章 2.1 均以 Linux 0.01 源码比对为核心，建议合并为一处「Linux 0.01 源码考古」，另一处只保留结论引用。</td></tr></tbody></table>
+<h3>第十八卷：沉默的基石</h3><table class='grid'><thead><tr><th class='op'>操作</th><th class='loc'>定位</th><th>节标题/对象</th><th class='adv'>建议</th></tr></thead><tbody><tr><td class='op' style='color:#b25a00'>合并重复</td><td class='loc'>第14章</td><td>网络栈：TCP/IP</td><td class='adv'>与第 2 章「BSD 在网络设备」及第六卷第 6 章「网络协议栈」重复，整章合并入第 2 章，删去占位。</td></tr><tr><td class='op' style='color:#b25a00'>合并重复</td><td class='loc'>第15章</td><td>场景：嵌入式、游戏主机、Netflix Open Connect</td><td class='adv'>与第 3、4、13 章重复，拆并回各对应章，删去占位。</td></tr><tr><td class='op' style='color:#b25a00'>合并重复</td><td class='loc'>第16章</td><td>实践：ports、包管理、安全审计、jail 等行动方式</td><td class='adv'>与第 9、10、11 章重复，拆并回各对应章，删去占位。</td></tr><tr><td class='op' style='color:#b25a00'>合并重复</td><td class='loc'>第17章</td><td>文档：文档与代码本体平等的遗产</td><td class='adv'>与第 5 章「BSD 文档作为教育载体」重复，整章合并入第 5 章，删去占位。</td></tr><tr><td class='op' style='color:#b25a00'>合并重复</td><td class='loc'>第18章</td><td>许可证：宽松许可的产业基础设施角色</td><td class='adv'>与第 12 章「传播路径」及第十五卷许可证卷重复，整章合并入第 12 章，删去占位。</td></tr><tr><td class='op' style='color:#b25a00'>合并重复</td><td class='loc'>12.1 / 12.3</td><td>传播的因果模型</td><td class='adv'>12.1 与 12.3 标题近乎相同（均为「传播的因果模型」），应合并为一节，保留一处。</td></tr><tr><td class='op' style='color:#b25a00'>合并重复</td><td class='loc'>7.1 / 7.5</td><td>外溢证据方法论 与 方法论局限</td><td class='adv'>7.1「版权头、vendor branch、特征指纹」与 7.5「方法论局限」应合并为一节「外溢证据的方法论与局限」。</td></tr></tbody></table>
+<h3>第十九卷：BSD 分离聚合的六十年</h3><table class='grid'><thead><tr><th class='op'>操作</th><th class='loc'>定位</th><th>节标题/对象</th><th class='adv'>建议</th></tr></thead><tbody><tr><td class='op' style='color:#b23a2f'>删占位</td><td class='loc'>第9章</td><td>新节点（0 节）</td><td class='adv'>整章为占位，删除。</td></tr></tbody></table>
+<h3>第二十卷：记忆、长生与不死</h3><table class='grid'><thead><tr><th class='op'>操作</th><th class='loc'>定位</th><th>节标题/对象</th><th class='adv'>建议</th></tr></thead><tbody><tr><td class='op' style='color:#b23a2f'>删占位</td><td class='loc'>9.4</td><td>新节点</td><td class='adv'>占位条目，删除。</td></tr><tr><td class='op' style='color:#b25a00'>合并重复</td><td class='loc'>9.2</td><td>用户量作为影响证据的合法性与局限</td><td class='adv'>与第十卷 7.2 逐字重复，保留一处（建议第十卷），此处删去或改为交叉引用。</td></tr><tr><td class='op' style='color:#b25a00'>合并重复</td><td class='loc'>5.1</td><td>Beastie 视觉形象（含 Ch91 全部视觉史内容）</td><td class='adv'>章题已标注「含 Ch91 全部视觉史内容」，应确认 Ch91 视觉史内容已并入本章，避免另存残留。</td></tr></tbody></table>
+  <h2>复核说明</h2>
+  <ul>
+    <li><strong>数据来源</strong>：20 卷 186 章 699 节全部提取自 <code>S-me.md</code>，节标题与节号（<code>N.N</code>）逐条核对。</li>
+    <li><strong>删占位</strong>：共 4 处节级占位 + 2 处章级占位（第十六卷 10.5、第十七卷第 13 章、第十九卷第 9 章、第二十卷 9.4，另第十七卷 13 章与第十九卷 9 章为 0 节整章占位）。</li>
+    <li><strong>合并重复</strong>：核心为第九卷第 1 章与后续主题章的重复（1.3 与第 2 章、1.5 与第 5/6 章）、第十八卷末 5 章（14-18 章）与卷首主题的整章重复、第二十卷 9.2 与第十卷 7.2 的逐字重复。</li>
+    <li><strong>拆分并列</strong>：针对「一节含多个并列谱系」的节（如 shell 家族 5 系、脚本语言 4 种、RISC 三路线），标注为可选拆分，仅在正文超长时执行。</li>
+    <li><strong>移出偏离</strong>：第十六卷 4.4、4.5 偏离 OSI/Apache 主题，第九卷 18.5（jemalloc）偏离 rcNG/ULE/GELI 主题，建议移出。</li>
+    <li><strong>原则</strong>：所有操作均不改变既有史实内容，仅调整节的组织归属，避免重复举证与主题偏离。</li>
+  </ul>
+
+  <p class="footnote">本建议由《给我自由——一部 BSD 史》编纂项目辅助生成，仅作目录节级组织调整之用，不构成对正文内容的学术结论。</p>
+
+</div>
+</body>
+</html>

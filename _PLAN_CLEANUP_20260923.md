@@ -37,11 +37,36 @@
 S-me* 交付物、`_PLAN_*`、`_usenet_keyword_hits.json`（keyword-hits 整改待批引用）、`_mine_*.json`（MAIL_INSIGHT 产物）、
 `_既有缺陷清单.json`、`_watch_git.*`、全部交接/断点文件、04-现代研究文献 现役 .duckdb 与 09-23 回滚点。
 
-## 二、后续轮次（按收益排序；每轮开工前重跑 §〇 判定）
+## 二、轮 2（2026-09-23 当晚，本会话）已部分闭环
 
-- **轮 2：script/_db_row_mining 内部**（8.5G，活跃）——40 路子代理逐目录审；只清已完成批次的
-  分件 tsv/dump/中间件与过期 .bak，交接书/台账/任务书/状态机/在途批次分件一律留；
-  `_rebuild_test.duckdb` 类 test 件如仍在顶层可清。开工前核对 `_RESUME_H2/H1/H4.md`＋`_HANDOFF_H3/H5.md` 在途断点。
+**清出 ≈4.8 GB**（经 `_recycle_stage_20260923b` 入回收站）＋合并归位一批：
+
+- **合并归位**：41 个 S-me 交付报告（round 1 因 `./` 前缀致排除失效误入回收站，已从回收站 $R 解析恢复）
+  ＋`S-me目录预览` → `01-项目管理/01-编纂规划与报告归档/S-me目录建议报告归档/`；
+  lm 线退役脚本（_lm_*/_lap/_larc/_spax/_value_*，主理人 09-23 已放弃价值反推推广）＋`linux_mail_mining/`
+  110 脚本＋2 work duckdb → `03-原始史料库/11-邮件列表史料/05-linux-kernel/mining/04-脚本/`；
+  MAIL_INSIGHT 中间件（mail_hits/mail_search_results/mail_insight_*×7/_mine_*.json×3/_usenet_keyword_hits.json）
+  ＋`_HANDOFF_邮件列表史学观点增补.md`＋`_longline_status.py` → `01-项目管理/01-编纂规划与报告归档/邮件列表挖掘战役档案-20260923/`；
+  `_既有缺陷清单.json` → `08-核查报告与多轮复核/重构2026/`；`_outdated_disposition_rules.md`＋`_watch_git.*` →
+  `00-编纂规则与格式规范/01-规则/`；`_jianyi_*.py` → `shenyue/`；B-LINE-HANDOFF-20260914×2 →
+  `01-项目管理/01-编纂规划与报告归档/`；`subagents_fsdevel/` → mining/ 下待入库；`_tmpndb11/` →
+  `11-元数据接口/ndb构建脚本-20260922/`；3 个最新 DB 回滚点（fq_b044/045/046 09-22）→ `12-数据库备份/20260923/`。
+- **_db_row_mining 安全清理**（🔴会话仍活跃：20:07 还在写 _HANDOFF_H3/_PLAN_H2_LONGTERM，只清无争议件）：
+  12 个旧 claim 回滚点（1.7G）＋61 个 _backup_/_bak_ 目录（1.9G）＋25 个 dump/pages 目录（410M）
+  ＋1131 个 forread/heads/tmp/bak_p0 杂件（2.4G）；**活跃状态/交接书/台账/活跃批次件（fpo_b175、fbug_b190、
+  tk_b145/146、h5arm_b521_2、fq_b062、fstb_b007、fcu_b007、fdoc_b009、fhk_b028）及 1.2 万个会话工具链脚本全保留**。
+- **根目录已清干净**：24 个今日分析中间件＋26 个一次性修补脚本＋_tmp/_work/_audit_tmp/__pycache__/tmp_b51/
+  _tmp_fix/_fix7/script_ 误建目录等入回收站；根目录现仅剩内容目录（00–12）、配置点文件、工具目录、
+  `_PLAN_*.md`×3、docs/spec、`review_logs/`（活跃，留）、`shenyue/`（jianyi 在用，留）。
+- **script/ 剩余**：`_db_row_mining`（3.4G，活跃战役＋review_logs 1.5G）＋`_recycle_*` 清理工具 6 件。
+- **🔴轮 2 遗留（最终清空，待 mail2d 会话收尾后做）**：`_db_row_mining` 内 1.2 万个一次性 .py、700+ 份
+  已完成批任务书（_READ_TASK_*/_NARR_TASK_*）、review_logs 1.5G、旧 forread 包；交接书/台账/状态机/断点页
+  届时按 §三 必留清单合入 `01-项目管理/01-编纂规划与报告归档/邮件列表挖掘战役档案-20260923/`。
+- round 1 教训入册：find 输出带 `./` 前缀时 `^S-me` 锚定排除失效——批量移动的排除过滤必须用子串匹配（grep -F）或先去前缀。
+
+## 三、后续轮次（按收益排序；每轮开工前重跑 §〇 判定）
+
+- **轮 2.5：_db_row_mining 最终清空**（3.4G，🔴待 mail2d 会话收尾）——见 §二 遗留条目。
 - **轮 3：12-数据库备份/**（28G）——40 路子代理逐备份审阅：git 重写离线包（git-history-backup-20260911）
   与 12-数据库备份/git-history-backup-20260911/ 等专属备份区按「备份目的是否已完成＋是否有更新替代」裁定；
   本轮未动，需用户确认口径后开工。

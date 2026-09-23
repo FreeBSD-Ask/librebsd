@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>贡献者/批评者节贯穿全书的安排建议</title>
+<style>
+  :root { --ink:#1a1a1a; --muted:#5a5a5a; --accent:#1f4e79; --accent-2:#b23a2f; --rule:#c9c9c9; --soft:#f5f5f5; --ok:#2a6b4a; }
+  * { box-sizing:border-box; }
+  html,body { margin:0; padding:0; background:#fff; color:var(--ink);
+    font-family:"Songti SC","Noto Serif CJK SC","SimSun","STSong",serif; font-size:9.5pt; line-height:1.6; }
+  .report { max-width:840px; margin:0 auto; padding:26px 38px; }
+  h1,h2,h3 { font-family:"Microsoft YaHei","PingFang SC","Noto Sans CJK SC",sans-serif; color:var(--accent); font-weight:700; }
+  h1 { font-size:18pt; text-align:center; letter-spacing:1px; margin:0 0 4px; }
+  .subtitle { text-align:center; color:var(--muted); font-size:10pt; margin:0 0 3px; }
+  .meta { text-align:center; color:var(--muted); font-size:8.5pt; margin-bottom:14px; }
+  h2 { font-size:13pt; margin:22px 0 8px; padding-bottom:5px; border-bottom:2px solid var(--accent); }
+  h3 { font-size:11pt; margin:14px 0 5px; color:#24537f; }
+  p { margin:6px 0; text-align:justify; }
+  code { font-family:"Consolas","Menlo",monospace; font-size:8.5pt; background:var(--soft); padding:0 3px; border-radius:3px; }
+  .abstract { background:var(--soft); border-left:4px solid var(--accent); padding:10px 14px; margin:12px 0; font-size:9.5pt; }
+  .abstract .label { font-weight:700; color:var(--accent); }
+  .callout { background:#fbf4f2; border-left:4px solid var(--accent-2); padding:8px 12px; margin:8px 0; font-size:9.5pt; }
+  table.grid { width:100%; border-collapse:collapse; margin:6px 0 12px; font-size:8.5pt; }
+  thead { display:table-header-group; }
+  tr { break-inside:avoid; page-break-inside:avoid; }
+  table.grid td, table.grid th { border:1px solid var(--rule); padding:4px 7px; vertical-align:top; text-align:left; }
+  table.grid th { background:var(--soft); color:var(--accent); font-weight:700; }
+  .num { white-space:nowrap; width:30px; color:#24537f; text-align:center; }
+  .src { white-space:nowrap; width:64px; color:#666; font-size:8pt; }
+  .c { white-space:nowrap; width:40px; text-align:center; color:#666; font-size:8pt; }
+  .ver { color:#b25a00; font-weight:700; white-space:nowrap; }
+  .keep { color:var(--ok); font-weight:700; white-space:nowrap; }
+  .skip { color:#999; white-space:nowrap; }
+  ul { margin:4px 0 10px; padding-left:20px; }
+  li { margin:3px 0; }
+  .footnote { font-size:8pt; color:var(--muted); border-top:1px solid var(--rule); margin-top:18px; padding-top:6px; }
+  @page { size:A4; margin:14mm 12mm 14mm 12mm; }
+  @media print { .report { max-width:none; padding:0; } a { color:inherit; text-decoration:none; } }
+</style>
+</head>
+<body>
+<div class="report">
+  <h1>贡献者/批评者节贯穿全书的安排建议</h1>
+  <p class="subtitle">《给我自由——一部 BSD 史》S-me 全部 20 卷——结合 SUMMARY 既有安排</p>
+  <p class="meta">对象：S-me 20 卷　|　2026-08-31</p>
+
+  <div class="abstract">
+    <span class="label">原则</span>
+    <p>贡献者、批评者节<strong>贯穿 S-me 全部 20 卷</strong>：① 四大 BSD 卷（第九至十二卷）用版本章九节模板，<strong>③重要贡献者与边缘者、④外部批评与反对者必设</strong>；② 其余编年史卷与主题史卷（第一至八、十四至十八卷）<strong>结合 SUMMARY 既有安排</strong>，保留或重写「重要贡献者与边缘者」「外部批评与反对者」节；③ 史编纂学方法论卷（第十九、二十卷）与 macOS 的贡献者（SUMMARY 第 12 卷为 0）<strong>实在没有则不勉强</strong>。</p>
+  </div>
+<h2>一、逐卷安排（20 卷）</h2>
+<table class='grid'><thead><tr><th class='num'>卷</th><th>卷名</th><th class='src'>对应 SUMMARY</th><th class='c'>贡献者</th><th class='c'>批评</th><th>类型</th><th>安排</th></tr></thead><tbody>
+<tr><td class='num'>1</td><td>第一卷：从图灵机到 UNIX</td><td class='src'>第 1 卷</td><td class='c'>9</td><td class='c'>10</td><td class='keep'>贯穿</td><td>保留/重写 SUMMARY 既有「重要贡献者与边缘者」「外部批评与反对者」节</td></tr>
+<tr><td class='num'>2</td><td>第二卷：UNIX 文化与物质基础</td><td class='src'>第 1 卷</td><td class='c'>9</td><td class='c'>10</td><td class='keep'>贯穿</td><td>保留/重写 SUMMARY 既有「重要贡献者与边缘者」「外部批评与反对者」节</td></tr>
+<tr><td class='num'>3</td><td>第三卷：从贝克莱到伯克利</td><td class='src'>第 2、3 卷</td><td class='c'>13</td><td class='c'>12</td><td class='keep'>贯穿</td><td>保留/重写 SUMMARY 既有「重要贡献者与边缘者」「外部批评与反对者」节</td></tr>
+<tr><td class='num'>4</td><td>第四卷：BSD 的创建</td><td class='src'>第 2 卷</td><td class='c'>10</td><td class='c'>9</td><td class='keep'>贯穿</td><td>保留/重写 SUMMARY 既有「重要贡献者与边缘者」「外部批评与反对者」节</td></tr>
+<tr><td class='num'>5</td><td>第五卷：DARPA 赞助与 CSRG</td><td class='src'>第 2 卷</td><td class='c'>10</td><td class='c'>9</td><td class='keep'>贯穿</td><td>保留/重写 SUMMARY 既有「重要贡献者与边缘者」「外部批评与反对者」节</td></tr>
+<tr><td class='num'>6</td><td>第六卷：BSD 的技术演进</td><td class='src'>第 2 卷</td><td class='c'>10</td><td class='c'>9</td><td class='keep'>贯穿</td><td>保留/重写 SUMMARY 既有「重要贡献者与边缘者」「外部批评与反对者」节</td></tr>
+<tr><td class='num'>7</td><td>第七卷：诉讼、和解与延宕</td><td class='src'>第 4 卷</td><td class='c'>10</td><td class='c'>9</td><td class='keep'>贯穿</td><td>保留/重写 SUMMARY 既有「重要贡献者与边缘者」「外部批评与反对者」节</td></tr>
+<tr><td class='num'>8</td><td>第八卷：386BSD 与大分裂</td><td class='src'>第 4 卷</td><td class='c'>10</td><td class='c'>9</td><td class='keep'>贯穿</td><td>保留/重写 SUMMARY 既有「重要贡献者与边缘者」「外部批评与反对者」节</td></tr>
+<tr><td class='num'>9</td><td>第九卷：FreeBSD（15 版本章）</td><td class='src'>第 5–8 卷</td><td class='c'>38</td><td class='c'>37</td><td class='ver'>版本章</td><td>九节模板 ③贡献者、④批评者必设（每版本章 1 组）</td></tr>
+<tr><td class='num'>10</td><td>第十卷：NetBSD（11 版本章）</td><td class='src'>第 9 卷</td><td class='c'>3</td><td class='c'>3</td><td class='ver'>版本章</td><td>九节模板 ③贡献者、④批评者必设（每版本章 1 组）</td></tr>
+<tr><td class='num'>11</td><td>第十一卷：OpenBSD（7 版本章）</td><td class='src'>第 10 卷</td><td class='c'>7</td><td class='c'>21</td><td class='ver'>版本章</td><td>九节模板 ③贡献者、④批评者必设（每版本章 1 组）</td></tr>
+<tr><td class='num'>12</td><td>第十二卷：DragonFly（8 版本章）</td><td class='src'>第 11 卷</td><td class='c'>6</td><td class='c'>9</td><td class='ver'>版本章</td><td>九节模板 ③贡献者、④批评者必设（每版本章 1 组）</td></tr>
+<tr><td class='num'>13</td><td>第十三卷：macOS 历史</td><td class='src'>第 12 卷</td><td class='c'>0</td><td class='c'>2</td><td class='skip'>不勉强</td><td>不勉强（SUMMARY 对应卷无既有贡献者/批评者节）</td></tr>
+<tr><td class='num'>14</td><td>第十四卷：开源社区的世界化</td><td class='src'>第 18 卷</td><td class='c'>26</td><td class='c'>9</td><td class='keep'>贯穿</td><td>保留/重写 SUMMARY 既有「重要贡献者与边缘者」「外部批评与反对者」节</td></tr>
+<tr><td class='num'>15</td><td>第十五卷：许可证与法律</td><td class='src'>第 15 卷</td><td class='c'>5</td><td class='c'>4</td><td class='keep'>贯穿</td><td>保留/重写 SUMMARY 既有「重要贡献者与边缘者」「外部批评与反对者」节</td></tr>
+<tr><td class='num'>16</td><td>第十六卷：自由软件运动与基金会</td><td class='src'>第 16 卷</td><td class='c'>12</td><td class='c'>5</td><td class='keep'>贯穿</td><td>保留/重写 SUMMARY 既有「重要贡献者与边缘者」「外部批评与反对者」节</td></tr>
+<tr><td class='num'>17</td><td>第十七卷：文化挪用与代码谱系</td><td class='src'>第 13、17 卷</td><td class='c'>4</td><td class='c'>10</td><td class='keep'>贯穿</td><td>保留/重写 SUMMARY 既有「重要贡献者与边缘者」「外部批评与反对者」节</td></tr>
+<tr><td class='num'>18</td><td>第十八卷：沉默的基石</td><td class='src'>第 3、14 卷</td><td class='c'>12</td><td class='c'>8</td><td class='keep'>贯穿</td><td>保留/重写 SUMMARY 既有「重要贡献者与边缘者」「外部批评与反对者」节</td></tr>
+<tr><td class='num'>19</td><td>第十九卷：分离聚合的六十年</td><td class='src'>第 19 卷</td><td class='c'>0</td><td class='c'>0</td><td class='skip'>不勉强</td><td>不勉强（SUMMARY 对应卷无既有贡献者/批评者节）</td></tr>
+<tr><td class='num'>20</td><td>第二十卷：记忆、长生与不死</td><td class='src'>第 19 卷</td><td class='c'>0</td><td class='c'>0</td><td class='skip'>不勉强</td><td>不勉强（SUMMARY 对应卷无既有贡献者/批评者节）</td></tr>
+</tbody></table>
+  <h2>二、SUMMARY 既有节型的四种形式</h2>
+  <ul>
+    <li><strong>重要贡献者与边缘者</strong>：如「重要贡献者与边缘者：Fabry 与被遗忘的早期贡献者」——每个时期/版本章各设一组，落实「贡献者」。</li>
+    <li><strong>外部批评与反对者 / 对 XXX 的批评</strong>：如「对 1BSD 的批评：单人英雄主义与可持续性」——每章对应设一组，落实「批评者」。</li>
+    <li><strong>多元群体贡献：XXX 贡献者多样性</strong>：如「多元群体贡献：FreeBSD 1995–2010 时期的贡献者多样性」——跨时期综述性贡献者节，适合卷末或阶段收束处。</li>
+    <li><strong>四层辩证链</strong>：如「pkgng 争议的四层辩证链」——批评、反批评、再回应与合图，适合重大争议主题。</li>
+  </ul>
+
+  <h2>三、不勉强的说明</h2>
+  <ul>
+    <li><strong>第十九卷（分离聚合）</strong>：对应 SUMMARY 第 19 卷「史编纂学方法论」，是方法论自反卷，SUMMARY 无既有贡献者/批评者节，<strong>不勉强</strong>。</li>
+    <li><strong>第二十卷（记忆）</strong>：同为记忆史方法论卷，SUMMARY 第 19 卷无既有节，<strong>不勉强</strong>；但「声名分配」「记忆变形」可酌情保留批评性审视。</li>
+    <li><strong>第十三卷（macOS）</strong>：SUMMARY 第 12 卷贡献者节为 0，<strong>贡献者不勉强</strong>；批评节既有 2 处（「文化批评与误解」「批评-反批评-再批评-合图四层辩证链」），<strong>保留</strong>。</li>
+  </ul>
+
+  <h2>四、复核说明</h2>
+  <ul>
+    <li><strong>数据来源</strong>：SUMMARY 各卷「贡献者」「批评」「反对」「边缘者」关键词节数经脚本全文统计（SUMMARY 19 卷 355 章 1857 节）。</li>
+    <li><strong>贯穿覆盖</strong>：除第十三卷（贡献者）、第十九/二十卷（方法论）外，其余 17 卷均有 SUMMARY 既有贡献者/批评者节可资保留或重写。</li>
+    <li><strong>版本章卷</strong>：第九至十二卷的「贡献者/批评」数为 SUMMARY 第 5–11 卷对应版本章节数的合计，落实为每版本章 ③④ 必设。</li>
+    <li><strong>原则</strong>：结合既有安排、实在没有不勉强，不虚构不存在的贡献者与批评者。</li>
+  </ul>
+
+  <p class="footnote">本文档由《给我自由——一部 BSD 史》编纂项目辅助生成，仅作目录节型安排之用，不构成对正文内容的学术结论。</p>
+
+</div>
+</body>
+</html>

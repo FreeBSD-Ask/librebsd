@@ -1,0 +1,201 @@
+total 40
+[1996-03-20T18:47:26+00:00] [Chuck Robey <chuckr@Glue.umd.edu>] []
+MID: Pine.OSF.3.91.960320134050.5504C-100000@gilligan.eng.umd.edu
+SUBJ: internationalization
+BODY: I am just a little puzzled on one point.  In ports, we have a healthy  | sized couple of sections dedicated to ports that have been handcrafted  | for Russian and Japanese FreeBSDers.  I was thinking about this, and I  | occurred to me that probably the largest group of FreeBSDers with a  | non-English home tongue would be the Germans.  How come there is no  | German section?  Are a very large number of Germans content with English  | programs, or is the interest not there, or are these things showing up on  | different venues? |  | I don't speak German myself, but it does seem unreasonable, given the  | size of 
+------------------------------------------------------------
+[1996-03-21T08:16:29+00:00] [Thomas Gellekum <thomas@ghpc8.ihf.rwth-aachen.de>] []
+MID: 199603210816.JAA25792@ghpc6.ihf.rwth-aachen.de
+SUBJ: Re: internationalization
+BODY: Chuck Robey wrote: | > I am just a little puzzled on one point.  In ports, we have a healthy  | > sized couple of sections dedicated to ports that have been handcrafted  | > for Russian and Japanese FreeBSDers.  I was thinking about this, and I  | > occurred to me that probably the largest group of FreeBSDers with a  | > non-English home tongue would be the Germans.  How come there is no  | > German section?  Are a very large number of Germans content with English  | > programs, or is the interest not there, or are these things showing up on  | > different venues? |  | For me, there's no need for a German section
+------------------------------------------------------------
+[1996-03-21T09:30:48+00:00] [cracauer@wavehh.hanse.de (Martin Cracauer)] []
+MID: 9603210930.AA22938@wavehh.hanse.de
+SUBJ: Re: internationalization
+BODY: chuckr@Glue.umd.EDU (Chuck Robey) wrote: |  | >I am just a little puzzled on one point.  In ports, we have a healthy  | >sized couple of sections dedicated to ports that have been handcrafted  | >for Russian and Japanese FreeBSDers.  I was thinking about this, and I  | >occurred to me that probably the largest group of FreeBSDers with a  | >non-English home tongue would be the Germans.  How come there is no  | >German section?  Are a very large number of Germans content with English  | >programs, or is the interest not there, or are these things showing up on  | >different venues? |  | >I don't speak German myself,
+------------------------------------------------------------
+[1996-03-21T09:41:50+00:00] [J Wunsch <j@uriah.heep.sax.de>] []
+MID: 199603210941.KAA12190@uriah.heep.sax.de
+SUBJ: Re: internationalization
+BODY: As Chuck Robey wrote: |  | > I am just a little puzzled on one point.  In ports, we have a healthy  | > sized couple of sections dedicated to ports that have been handcrafted  | > for Russian and Japanese FreeBSDers.  I was thinking about this, and I  | > occurred to me that probably the largest group of FreeBSDers with a  | > non-English home tongue would be the Germans.  How come there is no  | > German section? |  | German is in the unusual advantage that it can be run with a simple | 8-bit clean environment without much tweaking, now that ISO-8859-1 is | de facto the default font for most things around here in 
+------------------------------------------------------------
+[1996-03-21T13:29:54+00:00] [J Wunsch <j@uriah.heep.sax.de>] []
+MID: 199603211329.OAA13522@uriah.heep.sax.de
+SUBJ: Re: internationalization
+BODY: As Martin Cracauer wrote: |  | > I think the average Japan and Russia user is in a more diffucult | > situation, because a) English is teached to every school kid in | > germany (but not in the former DDR up to 19989) and b) German is quite | > similar to english. |  | Minor nit: about 60 ... 70 % of all school kids in GDR did also learn | English, in addition to Russian.  Or whaddaya think where i've learnt | it? ;)  (...as well as my last pieces of Russian that i haven't | already forgotten again.) |  | --  | cheers, J"org |  | joerg_wunsch@uriah.heep.sax.de -- http://www.sax.de/~joerg/ -- NIC: JW11-RIPE | Never trust an o
+------------------------------------------------------------
+[1996-03-21T14:57:41+00:00] [Greg Lehey <lehey.pad@sni.de>] []
+MID: 199603211400.PAA23280@nixpbe.pdb.sni.de
+SUBJ: Re: internationalization
+BODY: > | > As Chuck Robey wrote: | > | >> I am just a little puzzled on one point.  In ports, we have a healthy | >> sized couple of sections dedicated to ports that have been handcrafted | >> for Russian and Japanese FreeBSDers.  I was thinking about this, and I | >> occurred to me that probably the largest group of FreeBSDers with a | >> non-English home tongue would be the Germans.  How come there is no | >> German section? | > | > German is in the unusual advantage that it can be run with a simple | > 8-bit clean environment without much tweaking, now that ISO-8859-1 is | > de facto the default font for most things ar
+------------------------------------------------------------
+[1996-03-21T16:15:44+00:00] [Chuck Robey <chuckr@Glue.umd.edu>] []
+MID: Pine.OSF.3.91.960321111445.14148F-100000@skipper.eng.umd.edu
+SUBJ: Re: internationalization
+BODY: On Thu, 21 Mar 1996, Martin Cracauer wrote: |  | > chuckr@Glue.umd.EDU (Chuck Robey) wrote: | >  | > >I am just a little puzzled on one point.  In ports, we have a healthy  | > >sized couple of sections dedicated to ports that have been handcrafted  | > >for Russian and Japanese FreeBSDers.  I was thinking about this, and I  | > >occurred to me that probably the largest group of FreeBSDers with a  | > >non-English home tongue would be the Germans.  How come there is no  | > >German section?  Are a very large number of Germans content with English  | > >programs, or is the interest not there, or are these things s
+------------------------------------------------------------
+[1996-03-21T23:46:14+00:00] [J Wunsch <j@uriah.heep.sax.de>] []
+MID: 199603212346.AAA14652@uriah.heep.sax.de
+SUBJ: Re: internationalization
+BODY: As Greg Lehey wrote: |  | > 4.  The people you're asking are on this list, which is in English. | >     Ask a German language list and you might get a different kind of | >     reply. |  | Not entirely true (there are German lists, but the people on them | certainly don't want to convert the system into German --> ``Kein | Streichholz'' :-) |  | However, many ``common users'' around would appreciate it, i think. | They are used to get ``Unerlaubte Schutzverletzung'' instead of | ``General protection failure''.  Nevertheless, the reason for | establishing special ports for Japanese and Russian doesn't also hold | for Germ
+------------------------------------------------------------
+[1996-03-24T10:58:58+00:00] [Narvi] []
+MID: <Pine.BSF.3.91.960324123822.21822A-100000@haldjas.folklore.ee>
+SUBJ: Re: cvs commit: ports/editors/bpatch/pkg COMMENT
+BODY: On Sat, 23 Mar 1996, J Wunsch wrote: |  | > As Narvi wrote: | >  | > >  And there really aren't that many  | > > special cases (I haven't yet found out how you make sure from which  | > > gender a given word is other than learning by heart). Perhaps you should  | > > consider hard languages in which there are 14 or more cases. | >  | > Well, languages with many different grammatical cases usually replace | > prepositions by cases.  This is actually not much harder to learn than | > learning the correct usage of the prepositions.  (I don't know about | > Hungarian that doesn't have prepositions, but i know it from Sla
+------------------------------------------------------------
+[1996-03-25T13:35:35+00:00] [Narvi <narvi@haldjas.folklore.ee>] []
+MID: Pine.BSF.3.91.960325152938.24377B-100000@haldjas.folklore.ee
+SUBJ: Re: cvs commit: ports/editors/bpatch/pkg COMMENT
+BODY:  |  | Eat good food, preserve nature, be nice to all nice people :) |  | On Mon, 25 Mar 1996, Greg Lehey wrote: |  | > > As Narvi wrote: | > > | > >> And there really aren't that many | > >> special cases (I haven't yet found out how you make sure from which | > >> gender a given word is other than learning by heart). Perhaps you should | > >> consider hard languages in which there are 14 or more cases. | > > | > > Well, languages with many different grammatical cases usually replace | > > prepositions by cases. | >  | > In fact, within the Indo-European languages, it's the other way round: | > older languages, such as Latin a
+------------------------------------------------------------
+[1996-03-25T14:33:47+00:00] [Greg Lehey <lehey.pad@sni.de>] []
+MID: 199603251336.OAA11551@nixpbe.pdb.sni.de
+SUBJ: Re: cvs commit: ports/editors/bpatch/pkg COMMENT
+BODY: > On Mon, 25 Mar 1996, Greg Lehey wrote: | > | >>> As Narvi wrote: | >>> | >>>> And there really aren't that many | >>>> special cases (I haven't yet found out how you make sure from which | >>>> gender a given word is other than learning by heart). Perhaps you should | >>>> consider hard languages in which there are 14 or more cases. | >>> | >>> Well, languages with many different grammatical cases usually replace | >>> prepositions by cases. | >> | >> In fact, within the Indo-European languages, it's the other way round: | >> older languages, such as Latin and Greek, use endings to indicate | >> case, person, number an
+------------------------------------------------------------
+[1996-07-22T02:18:27+00:00] [Amancio Hasty] []
+MID: <199607220218.TAA04043@rah.star-gate.com>
+SUBJ: Re: 3-button mice on laptops (was Re: FreeBSD keyboard)
+BODY: If I am not mistake the Micronics notebook has a three button mouse. |  | 	Amancio |  |  |  | From owner-freebsd-chat  Mon Jul 22 06:39:04 1996 | Return-Path: owner-chat | Received: (from root@localhost) |           by freefall.freebsd.org (8.7.5/8.7.3) id GAA07201 |           for chat-outgoing; Mon, 22 Jul 1996 06:39:04 -0700 (PDT) | Received: from frig.mt.cs.keio.ac.jp (frig.mt.cs.keio.ac.jp [131.113.32.7]) |           by freefall.freebsd.org (8.7.5/8.7.3) with SMTP id GAA07194 |           for <freebsd-chat@freebsd.org>; Mon, 22 Jul 1996 06:39:01 -0700 (PDT) | Received: (from hosokawa@localhost) by frig.mt.cs.keio.ac.j
+------------------------------------------------------------
+[1996-07-25T20:28:51+00:00] [Annelise Anderson <andrsn@andrsn.stanford.edu>] []
+MID: Pine.BSI.3.94.960725132724.2457A-100000@andrsn.stanford.edu
+SUBJ: Re: Adv: Is Your Web Site A Secret?
+BODY:  |  | On Thu, 25 Jul 1996, Rob Snow wrote: |  | > On Wed, 24 Jul 1996 karen_17@interramp.com wrote: | > > Is your web site the best kept secret on the Internet?  | > > We'll promote it to 50 search engines and indexes for  | > > $85 and complete the job in two business days. | > >  | > > Please respond for details. | > >  | > > -Karen | > >  | >  | > Damn, and that /kernel just got appended by accident.... | >  | > -Rob |  | I sent them a 60-page paper on the Russian mafia. |  | Annelise |   |  |  | 
+------------------------------------------------------------
+[1996-07-25T22:23:00+00:00] [Robert Clark <ROBERTC@PII.COM>] []
+MID: 31F7F3ED@smtp
+SUBJ: Re: Adv: Is Your Web Site A Secret?
+BODY:  | >On Thu, 25 Jul 1996, Rob Snow wrote: |  | >> On Wed, 24 Jul 1996 karen_17@interramp.com wrote: | >> > Is your web site the best kept secret on the Internet? | >> > We'll promote it to 50 search engines and indexes for | >> > $85 and complete the job in two business days. | >> > | >> > Please respond for details. | >> > | >> > -Karen | >> > | >> | >> Damn, and that /kernel just got appended by accident.... | >> | >> -Rob |  | >I sent them a 60-page paper on the Russian mafia. |  | >Annelise |  |           That random number device would be handy for this. |  |      Maybe: cat /dev/random | mail karen_17@interramp.com ??? |  |  |             
+------------------------------------------------------------
+[1996-11-03T08:06:38+00:00] [Steve Price] []
+MID: <327C528E.31DFF4F5@hiwaay.net>
+SUBJ: Re: FreeBSD hacker dinner report...
+BODY: Ola Persson wrote: | >  | > Yuck! American beer :/ Or imported beer that tastes like water anyways... | >  |  | Ah, but you forget about us Americans (of German descent and proud of it) | that brew their own beer.  I have a batch (just brewed) that my friend | and I have coined 'Black Cat'.  If you like Bockbier, you will love this | stuff.  For ~$20 US, I can make any beer that you like. :)  Although I | don't know if the FBONE can transport SUDS packets as well, but I would | hope that it would. :0 |  | Steve |  | > ---------------------------------------------------------------------- | > I Ola Persson           I Tel. 
+------------------------------------------------------------
+[1996-11-03T17:44:51+00:00] [jack <jack@diamond.xtalwind.net>] []
+MID: Pine.FBS.3.95.961103122914.17983B-100000@localhost
+SUBJ: Re: FreeBSD hacker dinner report...
+BODY: On Sun, 3 Nov 1996, Tim Vanderhoek wrote: |  | > > > But has anyone thought of the security implications of either SFTP or the | > > > DTP?   Could someone put mushrooms in my spaghetti in route???  Yuck!  :-) | > >  | > > Not to worry, you'll have the option of either DES or PGP encryption. | >  | > So does this mean the food would have to be made outside of the US, | > then sent to the US, and then SFTP'd to all those German hackers? |  | No.  Controlled foods originating in and destined for North America would | use DES all others would use international PGP.  That allows for DoD | controls over the foods that it 
+------------------------------------------------------------
+[1996-11-03T20:00:25+00:00] [davidn@sdev.usn.blaze.net.au (David Nugent)] []
+MID: 199611032000.HAA07266@sdev.usn.blaze.net.au
+SUBJ: Re: FreeBSD hacker dinner report...
+BODY: jack writes: | > > So does this mean the food would have to be made outside of the US, | > > then sent to the US, and then SFTP'd to all those German hackers? | >  | > No.  Controlled foods originating in and destined for North America would | > use DES all others would use international PGP.  That allows for DoD | > controls over the foods that it has classified as munitions.  Just think | > of the danger to national security if a Swiss hacker were to get some | > cheese, or an order of borst were to end up in Russia.  |  | Damn. Which of course means that the Americans can't exchange food | with the rest of the w
+------------------------------------------------------------
+[1996-12-22T14:10:09+00:00] [Jonathan M. Bresler] []
+MID: <199612221410.GAA03899@freefall.freebsd.org>
+SUBJ: mailing list archives
+BODY: David Greenman wrote: | >  | > >> Marc Slemko wrote: | > >> >  | > >> > And still speaking of archives, where can the raw archives be ftped from?  | > >>  | > >> freefall.freebsd.org | > >> /home/mail/archive/ | > > | > >Not as anonymous ftp.. :-) We should probably get them back online | > >soon.  I think there's more than enough disk space on wcarchive; about | > >175MB since I just house-cleaned the SNAP (which is superceded by | > >2.2-ALPHA) and 2.1.5-RELEASE trees.  I wonder what the best way of | > >getting them across is going to be though...  rsync? | >  | >    I sure hate the ONE-BIG-FILE archive format. I find i
+------------------------------------------------------------
+[1996-12-27T22:13:27+00:00] [torstenb@travel.tlk.com (Torsten Blum)] []
+MID: m0vdkWt-0002J9C@travel.tlk.com
+SUBJ: Re: cvs commit: src/share/doc/handbook hw.sgml
+BODY: [Moved to -chat] |  | David O'Brien wrote: |  | > You've *GOT* to be kidding!   You mean every work w/in a letter of a | > trademark is concidered a trademark violatition?  And I thought the rest | > of the world was above this kind of B.S. that is often previalant in the | > United States... |  | whole world ? no, there's a city called "Munich" with a "famous" | lawyer called "von Gravenreuth"... |  | *sigh* |  | As I wrote in my previous mail, the lawyer we're talking about does similar | things since mid 1980. He's not dump - he knows exactely what he is | doing. Thats why he is so "dangerous". |  | If (in germany) cryptograp
+------------------------------------------------------------
+[1997-02-09T10:04:15+00:00] [Andrew Perry] []
+MID: <32FDA11F.6D14@shoal.net.au>
+SUBJ: Re: normal ftp blah blah --> newbie list
+BODY: (maybe this belongs on chat?) |  | I'd love to if I had the experience, sort of penance for the newbie questions I've asked. If  | you start a list like this I don't have the qualifications to meet your criteria but would  | subscribe to the list to answer any newbie questions that I can (ok they are few but I  | try!). |  | If your looking for people close to meeting your criteria the people who've helped me the  | most are::... (sorry, can't dob them in, mail me privately, their time may not permit!!) |  | It may be an idea to change questions to your newbie list with a few priveliged priviledged  | (however you 
+------------------------------------------------------------
+[1997-02-10T11:47:16+00:00] [Ola Persson <smurfen@ludd.luth.se>] []
+MID: Pine.SUN.3.95.970210123320.11926F-100000@brother.ludd.luth.se
+SUBJ: Re: Wradar!
+BODY:  | On Mon, 10 Feb 1997, Michael Smith wrote: |  | > It's small enough that it's still fun for the people that are | > involved, which is a major criterion from my POV 8) |  | Yeah they seemed to like it. I guess they told you guys about the accident | they had there a few years ago. It was a rocket that ignited in the | assembly building smashing one technician in to a concrete wall. So the | guy I spoke with said that he REALLY liked it. But that he was scared at | the same time. |  | > IIRC they were/are Vaxstation 4000's running VMS; in the anteroom to | > the Tele-X control room was (when I was there) one of the ol
+------------------------------------------------------------
+[1997-02-14T23:05:16+00:00] [Charles Mott <cmott@srv.net>] []
+MID: Pine.BSF.3.91.970214160049.8659A-100000@darkstar
+SUBJ: Re: Public Relations
+BODY: On Fri, 14 Feb 1997, J Wunsch wrote: | > As Robin Melville wrote: | > > Why don't we follow MSoft's lead of putting music videos on the | > > Win95 distribution CD? | >  | > Because we're not going to produce the Win95 distribution CD. :-) | >  | > > I propose an MPEG of Jordan singing "My Way" for the 2.2 release :) | >                                                 _ | > But only if his cats also take part in singing. :-) | >                                                 ~ | >  | >                                                 ^^^ me, stuffing my | >                                                 ears. :) | > -- 
+------------------------------------------------------------
+[1997-02-15T00:06:09+00:00] [j@uriah.heep.sax.de (J Wunsch)] []
+MID: Mutt.19970215010609.j@uriah.heep.sax.de
+SUBJ: Re: Public Relations
+BODY: As Charles Mott wrote: |  | > > > I propose an MPEG of Jordan singing "My Way" for the 2.2 release :) | > >                                                 _ | > > But only if his cats also take part in singing. :-) | > >                                                 ~ |  | > I would suggest an MPEG video of a politburo meeting, with the core team |  | Hmm, i think i've trashed too much of the old stuff already here.  I | don't think i still have a GDR flag to put on the table or such... |  | > wearing rented Soviet-era military uniforms.  Perhaps we could have an |  | Hmm, but i've got a uniform for this!  Uh, no, the
+------------------------------------------------------------
+[1997-02-15T21:49:27+00:00] [Narvi <narvi@haldjas.folklore.ee>] []
+MID: Pine.BSF.3.95.970215234842.7912C-100000@haldjas.folklore.ee
+SUBJ: Re: Public Relations
+BODY:  |  | On Fri, 14 Feb 1997, Charles Mott wrote: |  | > On Fri, 14 Feb 1997, J Wunsch wrote: | > > As Robin Melville wrote: | > > > Why don't we follow MSoft's lead of putting music videos on the | > > > Win95 distribution CD? | > >  | > > Because we're not going to produce the Win95 distribution CD. :-) | > >  | > > > I propose an MPEG of Jordan singing "My Way" for the 2.2 release :) | > >                                                 _ | > > But only if his cats also take part in singing. :-) | > >                                                 ~ | > >  | > >                                                 ^^^ me, stuffi
+------------------------------------------------------------
+[1997-02-15T22:15:09+00:00] [Charles Mott <cmott@srv.net>] []
+MID: Pine.BSF.3.91.970215150543.10861B-100000@darkstar
+SUBJ: Re: Public Relations
+BODY: > > I would suggest an MPEG video of a politburo meeting, with the core team | > > wearing rented Soviet-era military uniforms.  Perhaps we could have an | > > appropriate national anthem from the period playing as the soundtrack.  | >  | > It would not look convincing enough. I am afraid none of the core-team | > members is old enough :-) |  | Without a General Secretary (President), a politburo perhaps is no longer | the correct political analogy to the FreeBSD core team.  The situation is | now more like a council of Mongol chieftains after the passing away of | Ghengis Khan.  |  | This might make a more interesti
+------------------------------------------------------------
+[1997-02-15T23:22:06+00:00] [Robin Melville <robmel@innotts.co.uk>] []
+MID: l03010d00af2bf546370b@[194.176.130.16]
+SUBJ: Re: Public Relations
+BODY: At 3:15 pm -0700 15/2/97, Charles Mott wrote: | >> > I would suggest an MPEG video of a politburo meeting, with the core team | >> > wearing rented Soviet-era military uniforms....  | >> It would not look convincing enough. I am afraid none of the core-team | >> members is old enough :-) | > | >Without a General Secretary (President), a politburo perhaps is no longer | >the correct political analogy to the FreeBSD core team.  The situation is | >now more like a council of Mongol chieftains after the passing away of | >Ghengis Khan.  | > | >This might make a more interesting MPEG video. |  | This strand achieves 8/10 on
+------------------------------------------------------------
+[1997-02-16T17:13:50+00:00] [Tim Vanderhoek] []
+MID: <Pine.GSO.3.95.970216121059.3389B-100000@james.freenet.hamilton.on.ca>
+SUBJ: Re: Security Advisory - Recent compromise of freefall.freebsd.org
+BODY: On Tue, 11 Feb 1997, Jordan K. Hubbard wrote: |  | > mail to me <jkh@freebsd.org>.  I'll be working over the next 2 days on | > dividing /usr/src into reasonable, prioritized, chunks (there, I used | > "prioritized" in a sentence - I've always wanted to do that) and |  | The word is "priorized" and any dictionary that tells you | otherwise is a silly little word-of-the-month "per" version that | should be tossed at first opportunity. |  | :) |  | -- | Outnumbered?  Maybe.  Outspoken?  Never! | tIM...HOEk |  |  | From owner-freebsd-chat  Sun Feb 16 11:11:09 1997 | Return-Path: <owner-chat> | Received: (from root@localhost) |         
+------------------------------------------------------------
+[1997-02-21T13:14:10+00:00] [David Greenman <dg@root.com>] []
+MID: 199702211314.FAA04885@root.com
+SUBJ: new all-time traffic record on wcarchive
+BODY:    We set a new all-time one day traffic record on wcarchive yesterday. The | stats are attached. Note that the numbers would have been even higher (by | about 4GB) had a drive not failed and killed the machine an hour before the | log rotation/stats generation. |  | -DG |  | David Greenman | Core-team/Principal Architect, The FreeBSD Project |  | ------- Forwarded Message |  | Return-Path: root@wcarchive.cdrom.com | Received: from wcarchive.cdrom.com (wcarchive.cdrom.com [165.113.58.253]) by root.com (8.8.5/8.6.5) with ESMTP id FAA04672 for <dg@root.com>; Fri, 21 Feb 1997 05:04:26 -0800 (PST) | Received: (from root@loca
+------------------------------------------------------------
+[1997-04-17T15:48:56+00:00] ["Mikhail A. Sokolov" <mishania@demos.su>] []
+MID: 199704171548.TAA19701@skraldespand.demos.su
+SUBJ: FreeBSD vs other platforms?
+BODY: Hi, |  | My question is awfully simple and complicated also: |  | I wonder if anyone in this world collected/tryed to collect statistics on | the world usage of various platforms in networking applications, like,  | providing internet services (www/ftp/dns/dhcp/<insert here>)? Without any | doubt I'd mention, that we're willing to consider *BSD (open, net, free, BSD/OS) | to be one united field of calculations.  |  | Seems like I have to explain the situation:  as it always happening in pretty | huge ISP on the market, we have two 'technological' platforms, Suns and *BSD. | And as it's always happening, there's confr
+------------------------------------------------------------
+[1997-04-20T04:59:15+00:00] [Michael Smith <msmith@atrad.adelaide.edu.au>] []
+MID: 199704200459.OAA02794@genesis.atrad.adelaide.edu.au
+SUBJ: Re: Commercial, Non-Hacker CD Distribution - A thought
+BODY: mike allison stands accused of saying: | > I sense a bit of hostility here. |  | Pfagh.  No, you sense me being annoyed with people that ramble on | about stuff without caring a whit for the facts.  If they're not | convenient, hell, just make 'em up. |  | You're the one inventing the hostility; I really couldn't care what | you do except when it craps on my efforts. |  | >  I actually HAVE chacked write-ups reviews and Star's own stuff and | > there are always veiled references to Motif.  I believe at one time | > Motif was a requirement.  If it's not anymore they should drop all | > references. |  | Uhh, let me get this 
+------------------------------------------------------------
+[1997-05-05T06:56:55+00:00] [Thomas Gellekum] []
+MID: <87enbm1k5k.fsf@ghpc6.ihf.rwth-aachen.de>
+SUBJ: Re: cvs commit:  src/release Makefile
+BODY: j@uriah.heep.sax.de (J Wunsch) writes: |  | >  | > My DEM 0.02. |  | Euro 0.01? |  | tg |  | From owner-freebsd-chat  Mon May  5 12:22:52 1997 | Return-Path: <owner-chat> | Received: (from root@localhost) |           by hub.freebsd.org (8.8.5/8.8.5) id MAA13640 |           for chat-outgoing; Mon, 5 May 1997 12:22:52 -0700 (PDT) | Received: from sax.sax.de (sax.sax.de [193.175.26.33]) |           by hub.freebsd.org (8.8.5/8.8.5) with SMTP id MAA13635 |           for <chat@FreeBSD.ORG>; Mon, 5 May 1997 12:22:47 -0700 (PDT) | Received: (from uucp@localhost) by sax.sax.de (8.6.12/8.6.12-s1) with UUCP id VAA12968 for chat@FreeBSD.O
+------------------------------------------------------------
+[1997-05-06T00:17:38+00:00] ["John S. Dyson" <toor@dyson.iquest.net>] []
+MID: 199705060017.TAA25504@dyson.iquest.net
+SUBJ: Re: And now for something completely different
+BODY: > For anyone in britain:  Ch. 4 (whatever that is) is going to be doing | > animated versions of two Terry Pratchett books (_Wyrd Sisters_ | > and _Soul Musc_). | >  | > I haven't been able to find out if they will ever be released in | > the US. | >  | > Is there any chance of someone taping them, and transferring them | > from PAL to VHS? | >  | > I know several freebsders who would be interested (myself, obviously, | > and I bet Jordan as well)... | >  | One comment (I am not interested in the show content, but two orthogonal | standards were mentioned.) |  | VHS -- Somewhat lousy consumer video tape standard.  Its bigger
+------------------------------------------------------------
+[1997-05-06T06:38:39+00:00] [Carl Makin <cmakin@nla.gov.au>] []
+MID: Pine.BSF.3.95.970506163539.20635A-100000@gadget.nla.gov.au
+SUBJ: Re: And now for something completely different
+BODY:  | On Mon, 5 May 1997, John S. Dyson wrote: |  | > SECAM -- A very different color standard.  Used in France and Russia. |  | My TAFE teacher used to refer to SECAM as  | "Something Essentially Contrary to the American Method"  | and claimed it was created for much the same reason French Helicoptors | main rotors go the opposite way to US designs. |  | Carl. |  | -- | Carl Makin <C.Makin@nla.gov.au>  'Work +61 6 262 1576' | "Speaking for myself only!" |  |  |  | 
+------------------------------------------------------------
+[1997-05-18T10:04:18+00:00] [Gavin Cameron] []
+MID: <199705181004.UAA21562@gateway.ormond.unimelb.edu.au>
+SUBJ: Compiling a 2.2.2 world
+BODY: Hi all, |  | I'm trying to upgrade from 2.2.1 to 2.2.2 by doing a make world but I | don't know if I'm on the right track or not. |  | Here's what I do | 1) cvsup cvs-supfile | 2) cvsup secure-cvs-supfile | 3) cvs co -d RELENG_2_2_2_RELEASE |  | I hope I've got it right so far. |  | when I do a make world it bombs out |  |  | -------------------------------------------------------------- | make world started on Sun May 18 19:43:46 EST 1997 | -------------------------------------------------------------- | -------------------------------------------------------------- |  Making hierarchy | --------------------------------------------
+------------------------------------------------------------
+[1997-05-18T14:06:43+00:00] ["Victor A. Sudakov" <vas@vas.tomsk.su>] []
+MID: 199705181406.WAA00383@vas.tomsk.su
+SUBJ: Re: FreeBSD Users' Groups
+BODY: The Classiest Man Alive wrote: | > >> Has anyone started a FreeBSD Users' Group in his/her local area?  I'm | > >> considering starting one, and I want ideas on the best way(s) to go about | > >> that as well as an idea of how much time I'll need to commit. | > > | > >What would be the objectives of such a group? | >  | > Anyway, I think the group would encompass a range of activities, from | > hacking to general Unix education for PC users.  But I'd primarily like to | > see the FreeBSD user base expanded as well as set up local support for | > current users.  FreeBSD is the best secret in the free Unix communit
+------------------------------------------------------------
+[1997-05-25T17:47:34+00:00] [Sean Eric Fagan] []
+MID: <199705251747.KAA17807@kithrup.com>
+SUBJ: Re: Intel Pentium II released
+BODY: In article <338726E2.6A9D29F4.kithrup.freebsd.hardware@persprog.com> you write: | >The other problem with this design is that it will be short lived since | >the Deschutes will require a revised socket (called "Slot II" I | >believe). |  | Actually, the Deschutes is supposed to use the "Slot One" as well. |  | But this lets me get on a rant:  I am sick of Intel right now.  They have | been worrying me for quite a while, as they have a monopoly on the computer | market.  (More than 85% of all processors in the world currently in use are | Intel processors.  That constitutes a monopoly by most economists | definition
+------------------------------------------------------------
+[1997-06-01T07:15:00+00:00] [J Wunsch] []
+MID: <19970601091500.HT19999@uriah.heep.sax.de>
+SUBJ: Re: learn program
+BODY: As jmr@ugcs.caltech.edu wrote: |  | > A while ago there was some discussion about a learn program on one of  | > the mailing lists.  Well, I found this: | > http://cm.bell-labs.com/who/bwk/learn.tar.gz on Kernighan's web page. |  | Oh! |  | Well, you shouldn't be surprised to know that it's not an incident | that learn now finally appeared on Brian's webpage.  It hasn't been | there from the beginning... |  | I think thanks have to go, of course, to Brian himself first, for | freeing up this very early piece of Unix history, to Kevin Eliuk | (who's got the idea to ask for this program), and Annelise Anderson | (not an unkn
+------------------------------------------------------------
+[1997-06-04T05:24:22+00:00] [Paul Traina <pst@shockwave.com>] []
+MID: 199706040524.WAA03281@precipice.shockwave.com
+SUBJ: Re: sgml formatting code 
+BODY:  |   From: Michael Smith <msmith@atrad.adelaide.edu.au> |   Subject: Re: sgml formatting code |    |   The alternative is not _currently_ palatable; I agree that we need to |   help make SoSy part of the solution. |  | I actually don't disagree with your goals, I disagree with your analysis. :-) |  | I'd rather not be saddled with ancient festery versions of perl and tcl, | which is what happens when they get bundled with the system.  Yes, I can | install a perl5 port, but then I'm never quite sure which perl I'm running, | especially when the bloody port gets installed with a funky name so that | it doesn't conflict w
+------------------------------------------------------------
+[1997-06-18T09:53:54+00:00] [Robin Melville <robmel@innotts.co.uk>] []
+MID: l03010d00afcd55ee2175@[194.176.130.28]
+SUBJ: Re: To UNIX or not to UNIX ;-). Was: PPP problems.
+BODY: At Sun, 15 Jun 1997 19:21:13 -0400 Joel wrote: | >Let's look at a profile of J. Random Luser and his interface | >requirements in the modern OS world, shall we? | >... [* and so on *] |  | At 1:05 am +0100 16/6/97, Jordan K. Hubbard replied: | >...What stops FreeBSD from being the next NeXTStep is not a crisis of | >ideas, it's a crisis of coders.  Somebody needs to *build* the better | >mousetrap before people will come... |  | I'm a little puzzled by the whole thrust of this one. The thesis seems to | be that FreeBSD should challenge Windows & the Mac as a desktop system for | all. The fate of NeXT, for example, an
+------------------------------------------------------------
+[1997-07-06T07:37:04+00:00] [J Wunsch] []
+MID: <19970706093704.GG62174@uriah.heep.sax.de>
+SUBJ: Re: UNREGISTERED XV on SGI Workstations
+BODY: As Amancio Hasty wrote: |  | > Just caught a glimpse at JPL using XV on a SGI Workstation and it | > was unregistered :( |  | Did you ever try registering xv?  Our company tried, but eventually | gave up. |  | --  | cheers, J"org |  | joerg_wunsch@uriah.heep.sax.de -- http://www.sax.de/~joerg/ -- NIC: JW11-RIPE | Never trust an operating system you don't have sources for. ;-) |  | From owner-freebsd-chat  Sun Jul  6 08:44:19 1997 | Return-Path: <owner-chat> | Received: (from root@localhost) |           by hub.freebsd.org (8.8.5/8.8.5) id IAA25909 |           for chat-outgoing; Sun, 6 Jul 1997 08:44:19 -0700 (PDT) | Received: from 
+------------------------------------------------------------

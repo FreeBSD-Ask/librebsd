@@ -1,0 +1,3142 @@
+==========================================================================================
+DB: freebsd-current.duckdb  hits=21
+==========================================================================================
+--------------------------------------------------------------------------------
+MID: <200307270800.h6R80b7w077880@cueball.rtp.FreeBSD.org>
+DATE: 2003-07-27T08:00:37+00:00  FROM: Tinderbox <des+tinderbox@freebsd.org>
+SUBJ: [current tinderbox] failure on i386/i386
+BODY:
+TB --- 2003-07-27 06:25:00 - starting CURRENT tinderbox run for i386/i386
+TB --- 2003-07-27 06:25:00 - checking out the source tree
+TB --- cd /home/des/tinderbox/CURRENT/i386/i386
+TB --- /usr/bin/cvs -f -R -q -d/home/ncvs update -Pd -A src
+TB --- 2003-07-27 06:28:41 - building world
+TB --- cd /home/des/tinderbox/CURRENT/i386/i386/src
+TB --- /usr/bin/make -B buildworld
+TB --- 2003-07-27 07:34:15 - building generic kernel
+TB --- cd /home/des/tinderbox/CURRENT/i386/i386/src
+TB --- /usr/bin/make buildkernel KERNCONF=GENERIC
+TB --- 2003-07-27 07:48:41 - generating LINT kernel config
+TB --- cd /home/des/tinderbox/CURRENT/i386/i386/src/sys/i386/conf
+TB --- /usr/bin/make -B LINT
+TB --- 2003-07-27 07:48:41 - building LINT kernel
+TB --- cd /home/des/tinderbox/CURRENT/i386/i386/src
+TB --- /usr/bin/make buildkernel KERNCONF=LINT
+[...]
+cc -c -O -pipe -mcpu=pentiumpro -Wall -Wredundant-decls -Wnested-externs -Wstrict-prototypes  -Wmissing-prototypes -Wpointer-arith -Winline -Wcast-qual  -fformat-extensions -std=c99  -nostdinc -I-  -I. -I/vol/vol0/users/des/tinderbox/CURRENT/i386/i386/src/sys -I/vol/vol0/users/des/tinderbox/CURRENT/i386/i386/src/sys/dev -I/vol/vol0/users/des/tinderbox/CURRENT/i38
+
+--------------------------------------------------------------------------------
+MID: <1065340057.832.1.camel@localhost.localdomain>
+DATE: 2003-10-05T07:47:37+00:00  FROM: Dan Naumov <dan.naumov@ofw.fi>
+SUBJ: Re: SMBus / I2C h/w sensors and FreeBSD 5.1
+BODY:
+On Sun, 2003-10-05 at 02:53, Bernd Walter wrote:
+
+I've replaced intpm with viapm in my kernel config and this is what I am
+seeing in my dmesg now:
+
+viapropm0: SMBus I/O base at 0x5000
+viapropm0: <VIA VT82C686A Power Management Unit> port 0x5000-0x500f at
+device 7.4 on pci0
+viapropm0: failed to enable port mapping!
+viapropm0: could not allocate bus space
+device_probe_and_attach: viapropm0 attach returned 6
+
+Obviously, /dev/smb is still nowhere to be seen :(
+
+Sincerely,
+Dan Naumov
+
+From owner-freebsd-current@FreeBSD.ORG  Sun Oct  5 00:53:28 2003
+Return-Path: <owner-freebsd-current@FreeBSD.ORG>
+Delivered-To: freebsd-current@freebsd.org
+Received: from mx1.FreeBSD.org (mx1.freebsd.org [216.136.204.125])
+	by hub.freebsd.org (Postfix) with ESMTP id 6841A16A4B3
+	for <current@FreeBSD.ORG>; Sun,  5 Oct 2003 00:53:28 -0700 (PDT)
+Received: from spider.deepcore.dk
+	(cpe.atm2-0-56339.0x50c6aa0a.abnxx2.customer.tele.dk [80.198.170.10])
+	by mx1.FreeBSD.org (Postfix) with ESMTP id 3628843FE9
+	for <current@FreeBSD.ORG>; Sun,  5 Oct 2003 00:53:25 -0700 (PDT)
+	(envelope-from sos@spider.deepcore.dk)
+Received: from spider.deepcore.dk (localhost [127.0.0.1])
+	by spider.deepcore.dk (8.12.9/8.12.9) with ES
+
+--------------------------------------------------------------------------------
+MID: <1072600745.b8854200dhee@myrealbox.com>
+DATE: 2003-12-28T08:39:05+00:00  FROM: Dheeraj <dhee@myrealbox.com>
+SUBJ: Re: Re: Serial driver problems with 5.2-current
+BODY:
+It was still sio4.
+
+dheeraj
+
+-----Original Message-----
+From: "M. Warner Losh" <imp@bsdimp.com>
+To: dhee@myrealbox.com
+Date: Sat, 27 Dec 2003 20:58:09 -0700 (MST)
+Subject: Re: Serial driver problems with 5.2-current
+
+In message: <1072568933.c57d2260dhee@myrealbox.com>
+            "Dheeraj" <dhee@myrealbox.com> writes: 
+
+: At last it doesn't hang anymore. But it was what you expected with
+: that 'return', I cannot test it right away if it can dial-out with
+: that patch. I shall do it as soon as I get back home and reply on
+: the result later in the evening.
+
+which sio was it?
+
+Warner
+
+
+
+From owner-freebsd-current@FreeBSD.ORG  Sun Dec 28 00:39:26 2003
+Return-Path: <owner-freebsd-current@FreeBSD.ORG>
+Delivered-To: freebsd-current@freebsd.org
+Received: from mx1.FreeBSD.org (mx1.freebsd.org [216.136.204.125])
+	by hub.freebsd.org (Postfix) with ESMTP id 9148816A4CE
+	for <freebsd-current@freebsd.org>;
+	Sun, 28 Dec 2003 00:39:26 -0800 (PST)
+Received: from smtp-send.myrealbox.com (smtp-send.myrealbox.com
+	[192.108.102.143])
+	by mx1.FreeBSD.org (Postfix) with ESMTP id B514743D1D
+	for <freebsd-current@freebsd.org>;
+	Sun, 28 Dec 2003 00:39:25 -0800 (PST)
+	(envelope-from dhee@myrealbox.com)
+Rec
+
+--------------------------------------------------------------------------------
+MID: 20030208092406.GA12104@rot13.obsecurity.org
+DATE: 2003-02-08T09:24:06+00:00  FROM: Kris Kennaway <kris@obsecurity.org> <None>
+SUBJ: Panic in fork()
+BODY:
+Fatal trap 12: page fault while in kernel mode
+cpuid = 0; lapic.id = 01000000
+fault virtual address   = 0x14
+fault code              = supervisor read, page not present
+instruction pointer     = 0x8:0xc01a1e2d
+stack pointer           = 0x10:0xe4146c74
+frame pointer           = 0x10:0xe4146cbc
+code segment            = base 0x0, limit 0xfffff, type 0x1b
+                        = DPL 0, pres 1, def32 1, gran 1
+processor eflags        = interrupt enabled, resume, IOPL = 0
+current process         = 99992 (sh)
+kernel: type 12 trap, code=0
+Stopped at      fork1+0x3fd:    cmpl    %ebx,0x14(%eax)
+db> trace
+fork1(c6ee5000,14,0,e4146cd4,c6c04788) at fork1+0x3fd
+fork(c6ee5000,e4146d10,c03445dc,407,0) at fork+0x52
+syscall(2f,2f,2f,80f9cb4,80fe000) at syscall+0x28e
+Xint0x80_syscall() at Xint0x80_syscall+0x1d
+--- syscall (2, FreeBSD ELF32, fork), eip = 0x807bd63, esp = 0xbfbff69c, ebp = 0xbfbff6c8 ---
+db>
+
+Kris
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 20030208104836.GB11725@slurp.rodal.no
+DATE: 2003-02-08T10:48:41+00:00  FROM: Morten Rodal <morten@rodal.no> <None>
+SUBJ: Re: Panic in fork()
+BODY:
+On Sat, Feb 08, 2003 at 01:24:06AM -0800, Kris Kennaway wrote:
+
+Is this anything like the one I experienced in late January?
+
+http://www.freebsd.org/cgi/getmsg.cgi?fetch=1447263+1454677+/usr/local/www/db/text/2003/freebsd-current/20030126.freebsd-current
+
+-- 
+Morten Rodal
+
+
+
+--------------------------------------------------------------------------------
+MID: 20030208110512.GB12696@rot13.obsecurity.org
+DATE: 2003-02-08T11:05:12+00:00  FROM: Kris Kennaway <kris@obsecurity.org> <None>
+SUBJ: Re: Panic in fork()
+BODY:
+On Sat, Feb 08, 2003 at 01:24:06AM -0800, Kris Kennaway wrote:
+
+bento# addr2line -e kernel.debug 0xc01a1e2d
+../../../kern/kern_fork.c:388
+
+                for (; p2 != NULL; p2 = LIST_NEXT(p2, p_list)) {
+                        PROC_LOCK(p2);
+388 -->                 while (p2->p_pid == trypid || 
+
+Kris
+
+
+--------------------------------------------------------------------------------
+MID: 20030208141542.GC11725@slurp.rodal.no
+DATE: 2003-02-08T14:15:44+00:00  FROM: Morten Rodal <morten@rodal.no> <None>
+SUBJ: Re: Panic in fork()
+BODY:
+On Sat, Feb 08, 2003 at 03:05:12AM -0800, Kris Kennaway wrote:
+
+That is the exact same spot I saw my computer (old smp machine) crash.
+I think someone mentioned that it would be more or less impossible to
+crash there since one would not enter the for loop when p2 is NULL.
+
+Could it be that PROC_LOCK tampers with p2?
+
+Also see my other post to your original message.
+
+-- 
+Morten Rodal
+
+
+
+--------------------------------------------------------------------------------
+MID: 20030208151226.GB624@crow.dom2ip.de
+DATE: 2003-02-08T15:12:26+00:00  FROM: Thomas Moestl <tmoestl@gmx.net> <None>
+SUBJ: Re: Panic in fork()
+BODY:
+On Sat, 2003/02/08 at 15:15:44 +0100, Morten Rodal wrote:
+
+addr2line will usually point to the first line of a statement if it
+spans multiple lines; in this case, the full guard is:
+
+			while (p2->p_pid == trypid ||
+			    p2->p_pgrp->pg_id == trypid ||
+			    p2->p_session->s_sid == trypid) {
+
+The fault address indicates, that p2->p_pgrp->p_session (p_session is
+a macro that expands to p_pgrp->p_session) is NULL, since the offset
+of s_sid in struct session is 0x14.
+I haven't yet found out how that could happen though, this field is
+never legitimatly NULL and the locking seems to be tight so that it
+cannot be freed from under fork1().
+
+	- Thomas
+
+-- 
+Thomas Moestl <tmoestl@gmx.net>	http://www.tu-bs.de/~y0015675/
+              <tmm@FreeBSD.org>	http://people.FreeBSD.org/~tmm/
+PGP fingerprint: 1C97 A604 2BD0 E492 51D0  9C0F 1FE6 4F1D 419C 776C
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 20030208220456.GB15257@rot13.obsecurity.org
+DATE: 2003-02-08T22:04:56+00:00  FROM: Kris Kennaway <kris@obsecurity.org> <None>
+SUBJ: Re: Panic in fork()
+BODY:
+On Sat, Feb 08, 2003 at 04:12:26PM +0100, Thomas Moestl wrote:
+
+
+OK, I suspected that.
+
+tjr was looking into this last night and proposed the following patch:
+
+http://people.freebsd.org/~tjr/kf.diff
+
+Kris
+
+Index: kern_fork.c
+===================================================================
+RCS file: /x/freebsd/src/sys/kern/kern_fork.c,v
+retrieving revision 1.181
+diff -u -r1.181 kern_fork.c
+--- kern_fork.c	1 Feb 2003 12:17:07 -0000	1.181
++++ kern_fork.c	8 Feb 2003 11:32:18 -0000
+@@ -318,6 +318,7 @@
+ 	 * exceed the limit. The variable nprocs is the current number of
+ 	 * processes, maxproc is the limit.
+ 	 */
++	sx_slock(&proctree_lock);
+ 	sx_xlock(&allproc_lock);
+ 	uid = td->td_ucred->cr_ruid;
+ 	if ((nprocs >= maxproc - 10 && uid != 0) || nprocs >= maxproc) {
+@@ -425,6 +426,7 @@
+ 	LIST_INSERT_HEAD(&allproc, p2, p_list);
+ 	LIST_INSERT_HEAD(PIDHASH(p2->p_pid), p2, p_hash);
+ 	sx_xunlock(&allproc_lock);
++	sx_sunlock(&proctree_lock);
+ 
+ 	/*
+ 	 * Malloc things while we don't hold any locks.
+@@ -759,6 +761,7 @@
+ 	return (0);
+ fail:
+ 	sx_xunlock(&allproc_lock);
++	sx_sunlock(&proctree_lock);
+ 	uma_zfree(proc_zone, newproc);
+ 	if (p1->p_flag & P_KSES) {
+ 		PROC_LOCK(p1);
+
+
+--------------------------------------------------------------------------------
+MID: 20030209143936.A2648@dilbert.robbins.dropbear.id.au
+DATE: 2003-02-09T03:39:36+00:00  FROM: Tim Robbins <tjr@FreeBSD.org> <None>
+SUBJ: Re: Panic in fork()
+BODY:
+On Sat, Feb 08, 2003 at 02:04:56PM -0800, Kris Kennaway wrote:
+
+
+Alfred was the one who pointed out that holding proctree was probably
+necessary, though :-)
+
+
+Tim
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 20030209132747.GA638@crow.dom2ip.de
+DATE: 2003-02-09T13:27:48+00:00  FROM: Thomas Moestl <tmoestl@gmx.net> <None>
+SUBJ: Re: Panic in fork()
+BODY:
+On Sun, 2003/02/09 at 14:39:36 +1100, Tim Robbins wrote:
+
+I don't really get why this is required - the pg_session pointer in
+struct pgrp is constant over the pgrp's lifetime, so for it to be
+invalid the wrong struct pgrp must be referenced; the p_pgrp pointer
+is protected by the process lock however, which is held for this check.
+
+	- Thomas
+
+-- 
+Thomas Moestl <tmoestl@gmx.net>	http://www.tu-bs.de/~y0015675/
+              <tmm@FreeBSD.org>	http://people.FreeBSD.org/~tmm/
+PGP fingerprint: 1C97 A604 2BD0 E492 51D0  9C0F 1FE6 4F1D 419C 776C
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 20030214211414.GC2655@rot13.obsecurity.org
+DATE: 2003-02-14T21:14:14+00:00  FROM: Kris Kennaway <kris@obsecurity.org> <None>
+SUBJ: Re: Panic in fork()
+BODY:
+On Sat, Feb 08, 2003 at 02:04:56PM -0800, Kris Kennaway wrote:
+
+
+OK, I got another panic with this patch in place, so I guess that's
+not enough.  Maybe I should try Alfred's suggestion of changing the
+locks to exclusive locks.
+
+Fatal trap 12: page fault while in kernel mode
+cpuid = 1; lapic.id = 00000000
+fault virtual address   = 0x14
+fault code              = supervisor read, page not present
+instruction pointer     = 0x8:0xc01a1e2d
+stack pointer           = 0x10:0xe3639c74
+frame pointer           = 0x10:0xe3639cbc
+code segment            = base 0x0, limit 0xfffff, type 0x1b
+                        = DPL 0, pres 1, def32 1, gran 1
+processor eflags        = interrupt enabled, resume, IOPL = 0
+current process         = 97943 (sh)
+kernel: type 12 trap, code=0
+Stopped at      fork1+0x3fd:    cmpl    %ebx,0x14(%eax)
+db> trace
+fork1(ca1458c0,14,0,e3639cd4,ca179068) at fork1+0x3fd
+fork(ca1458c0,e3639d10,c03445dc,407,0) at fork+0x52
+syscall(2f,2f,2f,0,80fe000) at syscall+0x28e
+Xint0x80_syscall() at Xint0x80_syscall+0x1d
+--- syscall (2, FreeBSD ELF32, fork), eip = 0x807bd63, esp = 0xbfbff9fc, ebp = 0xbfbffa28 ---
+db>
+
+Kris
+
+
+
+--------------------------------------------------------------------------------
+MID: 20030214220511.GT93252@elvis.mu.org
+DATE: 2003-02-14T22:05:11+00:00  FROM: Alfred Perlstein <alfred@FreeBSD.org> <None>
+SUBJ: Re: Panic in fork()
+BODY:
+* Kris Kennaway <kris@obsecurity.org> [030214 13:19] wrote:
+
+Actually that was a mistake on my part.  I don't think the locks should
+be exclusive actually...  Anyhow, i'll look at it some more, now that
+crashdumps work again, any chance for a nice gdb session transcript?
+
+-Alfred
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 20030214233726.GA3888@rot13.obsecurity.org
+DATE: 2003-02-14T23:37:26+00:00  FROM: Kris Kennaway <kris@obsecurity.org> <None>
+SUBJ: Re: Panic in fork()
+BODY:
+On Fri, Feb 14, 2003 at 02:05:11PM -0800, Alfred Perlstein wrote:
+
+I've just updated bento to include your crashdump fix, so I'll have
+one for you next time it occurs.
+
+Kris
+
+
+--------------------------------------------------------------------------------
+MID: 200307200825.h6K8PZ48020213@apollo.backplane.com
+DATE: 2003-07-20T08:25:35+00:00  FROM: Matthew Dillon <dillon@apollo.backplane.com> <None>
+SUBJ: Re: Annoucning DragonFly BSD!
+BODY:
+:Wouldn't it be possible to achive the same result without the VFS with 
+:well organized lib subdirs? like "usr/lib/xyzlib1.2/" and 
+:"usr/lib/xyzlib1.3/" which would maintain the install for any given 
+:version of a lib? In other words, instead of just dumping all the libs 
+:into the one place, you simply place them into sub folders instead and 
+:then link them as needed? Granted this would cause havoc for things like 
+:LD_LIBRARY_PATH. I never did like the way we dump things in the lib 
+:dir's, its messy. The VFS idea is interesting, but it like cleaning the 
+:mess by sending parts of the big mess into another dimention, making it 
+:a trans-dimentional mess (technically a larger mess). This throws away 
+:the KISS principle.
+
+    Not unless one wanted to make major modifications to all the third
+    party applications out there, which nobody really wants to do, because
+    hacking all those programs up makes it difficult to track updates.
+
+:>     taken for granted.  Begin userland VFSs with the capability of
+:>     overlaying the entire filesystem space, these environments would be
+:>     extremely powerful.
+:
+:I suspect this ability would usefull for other things too, possibly fo
+
+--------------------------------------------------------------------------------
+MID: 3F1C3689.7DFBA876@mindspring.com
+DATE: 2003-07-21T18:52:57+00:00  FROM: Terry Lambert <tlambert2@mindspring.com> <None>
+SUBJ: Re: Annoucning DragonFly BSD!
+BODY:
+Kris Kennaway wrote:
+
+8^p.
+
+-- Terry
+
+
+
+--------------------------------------------------------------------------------
+MID: 3F261C92.2FB1AFCD@mindspring.com
+DATE: 2003-07-29T07:04:50+00:00  FROM: Terry Lambert <tlambert2@mindspring.com> <None>
+SUBJ: Re: LOR with filedesc structure and Giant
+BODY:
+Robert Watson wrote:
+
+This is basically an instance of the race I warned against being
+an impending danger to FreeBSD last week, now that we have the
+possibility of multiple application threads in the kernel
+simutaneously.
+
+The easiest fix is to take a reference on the descriptors in the
+select itself around the calls to selscan().  This is annoying,
+because it's moderately expensive.
+
+The problem is that you have to avoid false positives, and you
+could sleep as a result of some of the underylying implementation
+stuff.
+
+Effectively, this means that you have to allocate a copy of the
+descriptor table to hold a reference over the whole thing, so
+that a close of the descriptors out from under you doesn't cause
+you to panic after coming back.
+
+The tricky part is that you have to change the semantics of the
+selscan() (this part is ugly), which you do by verifying that
+the descriptor you are using is the same one you were using.  You
+have to do this because there's no way to safely avoid the race
+of the first and second selscan, where someone closes a descriptor
+out from under you, and then opens another one in its place in a
+separate thread in the same application.
+
+The way Solaris deal
+
+--------------------------------------------------------------------------------
+MID: 20031011214630.V61968@muheleja.eenet.ee
+DATE: 2003-10-11T19:00:35+00:00  FROM: Urmas Lett <pikk@muheleja.eenet.ee> <None>
+SUBJ: Re: Seeing system-lockups on recent current
+BODY:
+
+On Fri, 10 Oct 2003, Dag-Erling Sm�rgrav wrote:
+
+
+Same here. MSI K7D Master-L motherboard, with -CURRENT and MP kernel there
+is no way to make buildworld without panic. Even buildkernel exits with
+random signals. With MP 4-STABLE, MP Dragonfly and WinXP the same machine
+is rock-stable.
+
+
+
+--------------------------------------------------------------------------------
+MID: 200312261412.10182.max@love2party.net
+DATE: 2003-12-26T13:12:10+00:00  FROM: Max Laier <max@love2party.net> <None>
+SUBJ: Re: Recording RTT and RTO values
+BODY:
+On Friday 26 December 2003 11:49, Tanmay Ganacharya wrote:
+
+CC: net@ (current@ isn't exactly the list for this).
+
+None of these values are the RTT or RTO values of the connection as the debug 
+is rather sequence number centric. Take a look at "src/sys/netinet/tcp_var.h: 
+struct tcpcb", where you will find short explainations for each field.
+
+The value you might be looking for is "int t_rtttime". Modify the printf's in 
+tcp_debug.c to give you the values you need and recompile your kernel.
+
+Hope this helps.
+
+-- 
+Best regards,				| max@love2party.net
+Max Laier				| ICQ #67774661
+http://pf4freebsd.love2party.net/	| mlaier@EFnet #DragonFlyBSD
+
+
+
+--------------------------------------------------------------------------------
+MID: 200312311421.25383.max@love2party.net
+DATE: 2003-12-31T13:21:25+00:00  FROM: Max Laier <max@love2party.net> <None>
+SUBJ: Re: kern.osreldate and EAI_NODATA deprecation
+BODY:
+On Wednesday 31 December 2003 14:08, Mark Huizer wrote:
+
+__FreeBSD_version is defined in sys/sys/param.h. The closest for your case is: 
+501112 from October 16th. 
+http://www.freebsd.org/cgi/cvsweb.cgi/src/sys/sys/param.h
+
+I'd rather suggest using an unconditional patch which introduces #ifdef 
+EAI_NODATA where required. That is future save (as the comment notes that 
+EAI_NODATA will go forever on Apr 23th).
+
+Hope that helps.
+
+-- 
+Best regards,				| max@love2party.net
+Max Laier				| ICQ #67774661
+http://pf4freebsd.love2party.net/	| mlaier@EFnet #DragonFlyBSD
+
+
+
+--------------------------------------------------------------------------------
+MID: 200312311441.23719.max@love2party.net
+DATE: 2003-12-31T13:41:23+00:00  FROM: Max Laier <max@love2party.net> <None>
+SUBJ: Re: kern.osreldate and EAI_NODATA deprecation
+BODY:
+On Wednesday 31 December 2003 14:26, Mark Huizer wrote:
+
+Other question, does it hurt you that EAI_NODATA == EAI_NONAME? I'd not think 
+so ... so why borther?! But yes, the syntax is okay ... consider extra 
+parentheses for the second expression.
+
+
+As long as you keep it locally in the *FreeBSD* ports tree there is no point 
+in checking that twice. If you plan to submit patches to the original authors 
+you might want to double check which platforms have EAI_NODATA and which 
+don't (as the commit messages hints that there might be others w/o 
+EAI_NODATA). autoconf and friends ...
+
+-- 
+Best regards,				| max@love2party.net
+Max Laier				| ICQ #67774661
+http://pf4freebsd.love2party.net/	| mlaier@EFnet #DragonFlyBSD
+
+
+
+==========================================================================================
+DB: freebsd-chat.duckdb  hits=7
+==========================================================================================
+--------------------------------------------------------------------------------
+MID: <Pine.BSF.4.44.0309070044200.75233-100000@s1.stradamotorsports.com>
+DATE: 2003-09-07T08:00:40+00:00  FROM: Jason C. Wells <jcw@highperformance.net>
+SUBJ: The Old Way Was Better
+BODY:
+I would like to cast my vote for returning to the old release method.
+Please don't call the next major version of FreeBSD a release until it is
+truly ready to be a release.
+
+(I am sure this battle has been fought before my very abrieviated comment
+was penned.  I just wanted to be heard, for what it's worth.)
+
+Thanks,
+Jason C. Wells
+
+A lowly user wearing nomex
+who's mail hasn't graced
+a freebsd list in the
+passing of many moons.
+
+From owner-freebsd-chat@FreeBSD.ORG  Sun Sep  7 05:25:09 2003
+Return-Path: <owner-freebsd-chat@FreeBSD.ORG>
+Delivered-To: freebsd-chat@freebsd.org
+Received: from mx1.FreeBSD.org (mx1.freebsd.org [216.136.204.125])
+	by hub.freebsd.org (Postfix) with ESMTP id 3809716A4BF
+	for <freebsd-chat@freebsd.org>; Sun,  7 Sep 2003 05:25:09 -0700 (PDT)
+Received: from hannibal.servitor.co.uk (hannibal.servitor.co.uk
+	[195.188.15.48])
+	by mx1.FreeBSD.org (Postfix) with ESMTP id BAB2A43FDD
+	for <freebsd-chat@freebsd.org>; Sun,  7 Sep 2003 05:25:05 -0700 (PDT)
+	(envelope-from paul@iconoplex.co.uk)
+Received: from hannibal.servitor.co.uk ([195.188.15.48] helo=iconoplex.co.uk)
+	by hannibal.servitor.co.uk with esmtp (Exim 4.14)
+	id 19vyef-000E8f-Vl
+	for freebsd-chat@freebsd.org;
+
+--------------------------------------------------------------------------------
+MID: <3F9D461B.4050501@daleco.biz>
+DATE: 2003-10-27T16:21:47+00:00  FROM: Kevin D. Kinsey, DaleCo, S.P. <kdk@daleco.biz>
+SUBJ: But I sleep in a bit on Sundays!  (re: cron message...)
+BODY:
+(Yes, I probably shouldn't do this to
+either my ISP, or Yahoo! ...)
+
+I was amused by the following, and curious
+as to why I received this message?
+
+*************************************************
+
+Date: Sun, 26 Oct 2003 08:15:04 -0600 (CST)
+From: root@deskone.daleco.biz (Cron Daemon)
+To: root@deskone.daleco.biz
+Subject: Cron <root@deskone> /sbin/ping -t2 yahoo.com > /dev/null 2>&1
+X-Cron-Env: <SHELL=/bin/sh>
+X-Cron-Env: <HOME=/root>
+X-Cron-Env: <PATH=/usr/bin:/bin>
+X-Cron-Env: <LOGNAME=root>
+X-Cron-Env: <USER=root>
+
+Alarm clock
+
+**********************************************
+
+;-)
+
+Kevin Kinsey
+
+From owner-freebsd-chat@FreeBSD.ORG  Tue Oct 28 21:06:53 2003
+Return-Path: <owner-freebsd-chat@FreeBSD.ORG>
+Delivered-To: freebsd-chat@freebsd.org
+Received: from mx1.FreeBSD.org (mx1.freebsd.org [216.136.204.125])
+	by hub.freebsd.org (Postfix) with ESMTP id 7F7F416A4CE
+	for <freebsd-chat@FreeBSD.org>; Tue, 28 Oct 2003 21:06:53 -0800 (PST)
+Received: from web13403.mail.yahoo.com (web13403.mail.yahoo.com
+	[216.136.175.61])
+	by mx1.FreeBSD.org (Postfix) with SMTP id 1A94F43FA3
+	for <freebsd-chat@FreeBSD.org>; Tue, 28 Oct 2003 21:06:51 -0800 (PST)
+	(envelope-from giffunip@yahoo.com)
+Message-ID:
+
+--------------------------------------------------------------------------------
+MID: 3F26A888.4040405@iconoplex.co.uk
+DATE: 2003-08-27T10:34:40+00:00  FROM: paul at iconoplex.co.uk (Paul Robinson) <None>
+SUBJ: BSD certification.
+BODY:
+Mooneer Salem wrote:
+
+Wow. Haven't seen this thread for a while. It kind of died out as I got 
+busy with stuff at work-work, but I do have some notes I'm collating. 
+It's turning into a monster of a project here, but I'm having to step 
+back a little here because I want to talk to some people who know about 
+accreditation professionally. I work at a University in a project that 
+is involved with defining new CPD and accreditation mechanisms, so I 
+want to bring in some of that experience.
+
+<snip>
+
+OK, this is problematic. It causes problems because what you're 
+proposing has implications:
+
+1. Cost. What you're suggesting is expensive to setup, co-ordinate and 
+run. I'm fed up of hearing about people not wanting to do CPD because 
+it's a "waste of money". We can address that by increasing quality 
+within our own domain, AND reducing cost as much as possible.
+2. Consistency. How do we check the guys in CA are getting tests as hard 
+as the guys in Afghanistan? Employ an army of people who can check the 
+quality and standards of the testing centres?
+3. Complexity. Is the ability to walk into a room and fix a trashed boot 
+sector useful for somebody who is going to running an ISP operat
+
+--------------------------------------------------------------------------------
+MID: 5.0.2.1.1.20031101122917.03141b78@popserver.sfu.ca
+DATE: 2003-11-01T04:37:05+00:00  FROM: colin.percival at wadham.ox.ac.uk (Colin Percival) <None>
+SUBJ: FreeBSD-related-announcements list?
+BODY:
+   Just a wild idea here: It seems to me that there is a need for an 
+announcements list for items related to, but not part of, the FreeBSD 
+project.  Things like portupgrade, FreeBSD Update, freshports, and various 
+BSDs based on FreeBSD (DragonFly, war, pico, mini, freesbie...) are all 
+likely to be of interest to many FreeBSD users, but there isn't really any 
+logical mailing list for announcements from such projects.
+   Does anyone else feel this need?
+
+Colin Percival
+
+
+
+--------------------------------------------------------------------------------
+MID: 20031101164004.Y70057@carver.gumbysoft.com
+DATE: 2003-11-01T16:40:46+00:00  FROM: dwhite at gumbysoft.com (Doug White) <None>
+SUBJ: FreeBSD-related-announcements list?
+BODY:
+On Sat, 1 Nov 2003, Colin Percival wrote:
+
+
+daily.daemonnews.org
+
+-- 
+Doug White                    |  FreeBSD: The Power to Serve
+dwhite@gumbysoft.com          |  www.FreeBSD.org
+
+
+--------------------------------------------------------------------------------
+MID: 20030908023456.GA3126@online.fr
+DATE: 2003-09-07T19:35:01+00:00  FROM: rsidd at online.fr (Rahul Siddharthan) <None>
+SUBJ: The Old Way Was Better
+BODY:
+For around 4 months now I've been mainly using Debian because I couldn't
+get FreeBSD to work on my new laptop.  I really like the way they do
+things.  In a nutshell, they always have *three* branches:
+
+"stable" -- frozen, only bugfixes go in
+"testing" -- stuff in a queue for a "stable" release
+"unstable" -- the main development distribution
+
+"Unstable" packages are typically the latest bleeding-edge versions, and
+therefore a new package may break a lot of others, etc.  Packages are
+imported from "unstable" into "testing" automatically by a script, when
+it satisfies the criteria given at http://www.debian.org/devel/testing
+and "testing" becomes "stable" when the bug-count drops to acceptable
+levels (to facilitate this they "freeze" it when they think it's getting
+ready for a release).  When "testing" becomes the new "stable", the old
+"stable" is archived.  
+
+There are security advisories and bugfixes for "stable" but little else
+(so it's like our -RELEASE branches).  It is thus ideal for production
+environments where you want a solid system and not the latest bells and
+whistles, but if you look at the package list it has a distinctly musty,
+old-fashioned smell.  Security advisories 
+
+--------------------------------------------------------------------------------
+MID: 3F5C5D9B.4030603@iconoplex.co.uk
+DATE: 2003-09-08T03:45:19+00:00  FROM: paul at iconoplex.co.uk (Paul Robinson) <None>
+SUBJ: The Old Way Was Better
+BODY:
+Rahul Siddharthan wrote:
+
+
+What was the issue, just out of curiosity?
+
+
+You're right - that is a nice way to do things.
+
+
+There was some discussion several years ago when Jordan was still about, 
+and again a few months back, that making everything packages was a good 
+goal to aim for. It got tied up with the sysinstall bikeshed though.
+
+
+That's an understatment.
+
+
+It won't. DF is not that different from FBSD at this stage for the 
+majority of stuff. It certainly isn't going to be sufficiently different 
+to get you to a point of being more likely to install. Whenever FBSD 
+dails, I find Net or Open to save the day most times.
+
+-- 
+Paul Robinson
+
+
+
+
+==========================================================================================
+DB: freebsd-hackers.duckdb  hits=73
+==========================================================================================
+--------------------------------------------------------------------------------
+MID: <000c01c34947$0b02e2b0$020aa8c0@SABBATH>
+DATE: 2003-07-13T13:59:56+00:00  FROM: Boris Georgiev <maav@bastun.net>
+SUBJ: Broadcom NetXtreme BCM5705M support
+BODY:
+Hello All, 
+
+I've got a Compaq Evo N620c notebook, which comes with a built-in lan network card - Broadcom NetXtreme BCM5705M. I researched on the hardware support for this NIC in FreeBSD and noticed that there is no hardware support for it either in the STABLE, or in the CURRENT distribution. I found that there is Linux driver for this NIC, which can be downloaded from the 3Com web site on the following address:
+
+http://support.3com.com/infodeli/tools/nic/linux/bcm5700-5.0.5.tar.gz
+
+The driver comes as a RedHat binary, Linux kernel patch and standalone source. 
+Can you, please update me if there is an updated if_bge driver, which includes hardware support for this new chip or if someone is porting this driver for FreeBSD and there is a beta version, I can cooperate with testing it. 
+
+Boris Georgiev
+
+From owner-freebsd-hackers@FreeBSD.ORG  Sun Jul 13 08:23:20 2003
+Return-Path: <owner-freebsd-hackers@FreeBSD.ORG>
+Delivered-To: freebsd-hackers@freebsd.org
+Received: from mx1.FreeBSD.org (mx1.freebsd.org [216.136.204.125])
+	by hub.freebsd.org (Postfix) with ESMTP
+	id 07DCC37B401; Sun, 13 Jul 2003 08:23:20 -0700 (PDT)
+Received: from milla.ask33.net (milla.ask33.net [217.197.166.60])
+	by
+
+--------------------------------------------------------------------------------
+MID: <Pine.BSO.4.53.0307270909320.21807@positron.hjc.be>
+DATE: 2003-07-27T07:10:48+00:00  FROM: Wouter Clarie <rimshot@pandora.be>
+SUBJ: Re: NATD and Address Redirection
+BODY:
+On Sat, 26 Jul 2003, Jim Durham wrote:
+
+
+Yes, that's what I meant. It should work, since it does here. VNC Server
+on the internal network, accessed from outside.
+
+//Wouter
+
+From owner-freebsd-hackers@FreeBSD.ORG  Sun Jul 27 23:54:03 2003
+Return-Path: <owner-freebsd-hackers@FreeBSD.ORG>
+Delivered-To: freebsd-hackers@freebsd.org
+Received: from mx1.FreeBSD.org (mx1.freebsd.org [216.136.204.125])
+	by hub.freebsd.org (Postfix) with ESMTP id 9076137B401
+	for <hackers@freebsd.org>; Sun, 27 Jul 2003 23:54:03 -0700 (PDT)
+Received: from mail.silverwraith.com (66-214-182-79.la-cbi.charterpipeline.net
+	[66.214.182.79])
+	by mx1.FreeBSD.org (Postfix) with ESMTP id B3B2E43FB1
+	for <hackers@freebsd.org>; Sun, 27 Jul 2003 23:54:02 -0700 (PDT)
+	(envelope-from avleen@silverwraith.com)
+Received: from avleen by mail.silverwraith.com with local (Exim 4.20)
+	id 19h1tM-000LAm-V6; Sun, 27 Jul 2003 23:53:56 -0700
+Date: Sun, 27 Jul 2003 23:53:56 -0700
+From: Avleen Vig <lists-freebsd@silverwraith.com>
+To: Danny Braniss <danny@cs.huji.ac.il>
+Message-ID: <20030728065356.GK40189@silverwraith.com>
+References: <E19gJOV-000AZX-00@cs.huji.ac.il>
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Di
+
+--------------------------------------------------------------------------------
+MID: <20030907110314.U78699@xeon.unixathome.org>
+DATE: 2003-09-07T15:14:30+00:00  FROM: Dan Langille <dan@langille.org>
+SUBJ: comments on proposed uthread_write.c changes
+BODY:
+A problem with pthreads and EOT has been identified.  See PR 56274.  It
+was suggested the solution was probably just a matter of changing one of
+the >0 tests to >=0 in uthread_write.c
+
+Any comments on that?
+
+Here's a diff I came up with after looking at
+src/lib/libc_r/uthreaduthread_write.c.  Any suggestions/comments?
+
+I plan to apply and test this later in the week.
+
+--- uthread_write.c	Sun Sep  7 11:01:13 2003
++++ uthread_write.c.org	Sun Sep  7 10:58:31 2003
+@@ -131,7 +131,7 @@
+ 			 * If there was an error, return partial success
+ 			 * (if any bytes were written) or else the error:
+ 			 */
+-			} else if (n <= 0) {
++			} else if (n < 0) {
+ 				if (num > 0)
+ 					ret = num;
+ 				else
+
+From owner-freebsd-hackers@FreeBSD.ORG  Sun Sep  7 09:32:19 2003
+Return-Path: <owner-freebsd-hackers@FreeBSD.ORG>
+Delivered-To: freebsd-hackers@freebsd.org
+Received: from mx1.FreeBSD.org (mx1.freebsd.org [216.136.204.125])
+	by hub.freebsd.org (Postfix) with ESMTP id 4FE8616A4BF
+	for <freebsd-hackers@FreeBSD.org>;
+	Sun,  7 Sep 2003 09:32:19 -0700 (PDT)
+Received: from mail.pcnet.com (mail.pcnet.com [204.213.232.4])
+	by mx1.FreeBSD.org (Postfix) with ESMTP id D53CB44005
+	for <freebsd-hackers@FreeBSD.org
+
+--------------------------------------------------------------------------------
+MID: <20030914104348.83262.qmail@alo.louko.com>
+DATE: 2003-09-14T02:43:48+00:00  FROM: Antti Louko <alo@iki.fi>
+SUBJ: Problems when writing to a Compact Flash card, FreeBSD 5.1
+BODY:
+Does anyone has good suggestions for the following problem?
+
+Configuration
+
+Basic FreeBSD 5.1-RELEASE, not upgraded or patched except as mentioned
+below.  Full verbose dmesg and kernel config below.
+
+CPU: VIA C3 Samuel 2 (532.64-MHz 686-class CPU)
+mfsroot
+atapci0: <VIA 82C686B UDMA100 controller> port 0xc000-0xc00f at device 7.1 on pci0
+ad2: success setting PIO0 on VIA 82C686B chip
+ad2: <CFA/4.0> ATA-0 disk at ata1-master
+
+Verbatim 64MB CF card.
+
+Writing to the CF card freezes the whole system, only way out is to
+power cycle the machine.
+
+I have experimented a little bit and it seems that the freezing
+happens after writing about 8MB of data.  If the data is written in
+smaller chunks, problem doesn't occur.
+
+I alse patched ata-disk.c and added arbitrary delays in different
+places.  It seems that DELAY(600) (value 60 in twait variable) in
+relevant places mostly prevents the problem.
+
+I think the delay is not the real solution but it only hides the real
+problem and cures the symptom, not the disease itself.  It may be that
+slowing down the data transfer makes the problem go away.
+
+sysctl.conf, kernel config, dmesg (verbose) and the patched ata-disk.c
+are here: <URL:http://www.louko.co
+
+--------------------------------------------------------------------------------
+MID: <20031005014620.H45148-100000@skywalker.rogness.net>
+DATE: 2003-10-05T08:02:00+00:00  FROM: Nick Rogness <nick@rogness.net>
+SUBJ: Re: Changing the NAT IP on demand?
+BODY:
+On Sat, 4 Oct 2003, Leo Bicknell wrote:
+
+
+	This can simply not work without resetting connections.  The
+	socket pair on the "outside" would break as your outside traffic
+	switches from one to the other (src/dst would change).  There is
+	no fix, as this breaks basic IP principals.
+
+	A suggestion to make this kinda work would be to get a range that
+	ISP#1 && ISP#2 would both allow you to route in/out.  Then you
+	would have to write some app that routes your traffic out either
+	ISP, keeping the same "outside" range.
+
+	So you get a range (or single IP), call it X.X.X.X.  This is your
+	external (non 1918) address. When packets leave your FreeBSD
+	machine destined for the Internet, the source IP would be X.X.X.X.
+	Since both ISP's allow source IP X.X.X.X out, it is only a matter
+	of determining which ISP to send the traffic out to.  This would
+	be done by modifying the routing table (or with fw forwarding of
+	some sort).  The inverse is true with traffic inbound from the
+	Internet to X.X.X.X.
+
+	However, if you are going to go through this type of trouble, you
+	might as well just route peer with the ISPs via BGP or whatnot.
+
+Nick Rogness <nick@rogness.net>
+-
+  How many people here have te
+
+--------------------------------------------------------------------------------
+MID: <3F92B29E.7090604@kma.eu.org>
+DATE: 2003-10-19T15:49:50+00:00  FROM: Shill <devnull@kma.eu.org>
+SUBJ: Re: Why is PCE not set in CR4?
+BODY:
+
+Hello Bruce,
+
+I must confess that I am somewhat intimidated by the prospect of
+hacking the FreeBSD kernel, as I've never done it. There are several
+things inside perfmon.c which I do not quite understand.
+
+Right now, I went the "quick and dirty" route (shame on me). I wrote
+a tiny kernel module which sets PCE in CR4, and writes 4 values to
+my Athlon's 4 event select registers.
+
+I would be happy to take this opportunity to contribute to FreeBSD,
+and code something nice which makes it into the kernel. I might just
+need a little help along the way. Can I send my questions to the list?
+
+Terry Lambert said:
+
+  PCE counters are a scarce resource, and the kernel needs
+  to run interference on their allocation and deallocation
+  by user space applications, to avoid collisions between
+  applications; this is the same reason we have AGP and
+  sound card device drivers in the kernel.
+
+It seems to me that every application should get its own set of
+performance-monitoring counters and event select registers, the same
+way each application gets its own set of general-purpose registers.
+Each application can then monitor itself, without any interference
+from other applications.
+
+In other words, an
+
+--------------------------------------------------------------------------------
+MID: <200310260709.h9Q79LEq034660@apollo.backplane.com>
+DATE: 2003-10-26T07:09:21+00:00  FROM: Matthew Dillon <dillon@apollo.backplane.com>
+SUBJ: Re: Synchronization philosophy (was: Re: FreeBSD mail list
+	etiquette)
+BODY:
+:...
+:Moving towards message passing helps to structure the code to avoid
+:sharing of this sort, although it's not the only way to motivate that sort
+:of change.  I'm a big fan of the change in -CURRENT to use td->td_cred as
+:a read-only thread-local credential reference and avoid synchronization on
+:the credential reference--it nicely addresses the requirements for
+:consistency in the referenced data for the read-only cases (which are the
+:vast majority of uses of a credential).
+
+    I saw td->td_cred in -current, but while figuring out what to do in
+    DragonFly I realized that there was something fundamentally wrong
+    with pulling a ucred out of a proc *OR* a thread.  What's wrong is
+    that the ucred associated with the current process, or current thread,
+    or passed process, or passed thread may not be the correct ucred for
+    a particular operation, especially in DragonFly where I/O operations
+    are going to be messages and may be aggregated into a single thread
+    for a particular target, filesystem, or protocol in the case of the
+    network.
+
+    There is also the potential of writing buggy code... if the programmer
+    has a thread based ucred handy he might use
+
+--------------------------------------------------------------------------------
+MID: 200308022214.h72MEgrE015449@apollo.backplane.com
+DATE: 2003-08-02T15:14:47+00:00  FROM: dillon at apollo.backplane.com (Matthew Dillon) <None>
+SUBJ: Assembly Syscall Question
+BODY:
+    It's a toss up.   Linux's use of registers for syscall args is not 
+    a panacea, because many system calls require more then just the basic
+    call-used registers which means the linux userland code has to save
+    and restore those registers on the stack anyway.  And we won't even
+    mention syscalls that require more arguments then you have registers
+    for.  Oops!
+
+    I think the ultimate performance solution is to have some explicitly
+    shared memory between kerneland and userland and store the arguments,
+    error code, and return value there.  Being a fairly small package of
+    memory multi-threading would not be an issue as each thread would have
+    its own slot.
+
+    Of course, FreeBSD has other problems as well.. if you look at our syscall
+    entry and exit code it is simply *horrendous*  It goes through an
+    indirect jump and it has to check carry for error returns to set the
+    error code.  It is a real mess.
+
+    What I am doing in DragonFly is reimplementing system calls as messages.
+    It turns out that the overhead is not signifcantly greater (and I haven't
+    even tried optimizing the code yet).  With the system call as a message
+    the return c
+
+--------------------------------------------------------------------------------
+MID: 200307161942.h6GJg7n8094005@apollo.backplane.com
+DATE: 2003-07-16T12:42:31+00:00  FROM: dillon at apollo.backplane.com (Matthew Dillon) <None>
+SUBJ: Announcing DragonFly BSD!
+BODY:
+			    Announcing DragonFly BSD!
+			   http://www.dragonflybsd.org/
+
+    Hello everyone!  For the last few months I have been investigating
+    and then working on a new approach to the BSD kernel.  This has snowballed
+    into a far more ambitious project which is now ready for wider 
+    participation.
+
+    It is the intent of this project to take over development of the 4.x tree,
+    to move kernel development along an entirely new path towards SMP, and
+    to completely rewrite the packaging and distribution system.  We
+    eventually intend to backport many FreeBSD-5 features into the new tree,
+    but that is not where the initial focus will be.
+
+    The preliminary 'proving' work I have done is now available on the new
+    DragonFly site.  You can access it through cvsup or browse it through
+    ftp.  This proving work involved implementing much of the earlier UP->SMP
+    converstion work that was done when 5.x first branched, but under an
+    entirely new mutex-free light weight kernel threading infrastructure.
+    It includes the LWKT system, interrupt threads, and pure threads for
+    system processes amoung other things.
+
+    For obvious reasons the codebase will only ru
+
+--------------------------------------------------------------------------------
+MID: 20030717050048.Q215@freebsdmall.com
+DATE: 2003-07-17T05:01:12+00:00  FROM: murray at freebsd.org (Murray Stokely) <None>
+SUBJ: Announcing DragonFly BSD!
+BODY:
+On Wed, Jul 16, 2003 at 12:42:07PM -0700, Matthew Dillon wrote:
+
+Hi Matt,
+
+  I hope this project manages to explore new boundaries of performance
+and am pleased that you chose the FreeBSD stable development branch as
+a suitable starting point for your endeavors.  I hope Dragonfly will
+produce the same kinds of synergies with the FreeBSD Project that our
+ongoing relationships with NetBSD, OpenBSD, and various Linux projects
+have.  I'm especially interested in seeing you succeed with your
+package management goals, where many other attempts have failed in
+that area.
+
+  For our part, we're planning to release FreeBSD 4.9 with PAE support
+merged at the beginning of September.  We certainly haven't ruled out
+further 4.X releases after that time either.  As usual, our release
+related plans are available from http://www.FreeBSD.org/releng.
+
+  Good luck,
+
+  - Murray
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: not available
+Type: application/pgp-signature
+Size: 155 bytes
+Desc: not available
+Url : http://lists.freebsd.org/pipermail/freebsd-hackers/attachments/20030717/0065cf35/attachment.bin
+
+
+--------------------------------------------------------------------------------
+MID: 20030717142951.GG28290@iconoplex.co.uk
+DATE: 2003-07-17T07:29:49+00:00  FROM: paul at iconoplex.co.uk (Paul Robinson) <None>
+SUBJ: Announcing DragonFly BSD!
+BODY:
+On Thu, Jul 17, 2003 at 05:00:48AM -0700, Murray Stokely wrote:
+
+
+BEEP BEEP - Manager Alert! - BEEP BEEP - Manager Alert! - BEEP BEEP
+
+Sorry Murray, but there is no excuse for the use of the word "synergies" on
+any project where common sense and straight talking are the norm. :-)
+
+P.S. - the packaging stuff is very similar to thoughts I've had on the 
+subject derived from the conversations about the installer a few weeks back. 
+There may be some crossover here, so I'm keen to get on board there too, but 
+it'll be interesting to see who else gets on board. ;-)
+ 
+-- 
+Paul Robinson
+
+
+--------------------------------------------------------------------------------
+MID: 200307171914.h6HJEdQq001567@apollo.backplane.com
+DATE: 2003-07-17T12:17:14+00:00  FROM: dillon at apollo.backplane.com (Matthew Dillon) <None>
+SUBJ: Announcing DragonFly BSD!
+BODY:
+:Hi Matt,
+:
+:  I hope this project manages to explore new boundaries of performance
+:and am pleased that you chose the FreeBSD stable development branch as
+:a suitable starting point for your endeavors.  I hope Dragonfly will
+:produce the same kinds of synergies with the FreeBSD Project that our
+:ongoing relationships with NetBSD, OpenBSD, and various Linux projects
+:have.  I'm especially interested in seeing you succeed with your
+:package management goals, where many other attempts have failed in
+:that area.
+:
+:  For our part, we're planning to release FreeBSD 4.9 with PAE support
+:merged at the beginning of September.  We certainly haven't ruled out
+:further 4.X releases after that time either.  As usual, our release
+:related plans are available from http://www.FreeBSD.org/releng.
+:
+:  Good luck,
+:
+:  - Murray
+
+    Thanks Murray.  For the record, it is my intention to incorporate 
+    whatever work is committed to the FreeBSD-4 branch for as long as it
+    is possible to do so.  Even though the CVS trees are not compatible (I
+    started mine as a fresh non-branched import), I very carefully
+    documented the base revs that I started my CVS tree from in the 
+    initial import/c
+
+--------------------------------------------------------------------------------
+MID: 200307180511.h6I5B5HV004858@apollo.backplane.com
+DATE: 2003-07-17T22:11:11+00:00  FROM: dillon at apollo.backplane.com (Matthew Dillon) <None>
+SUBJ: Possible issue with in-kernel ELF loader.
+BODY:
+   I got an odd bug report for DragonFly today.  Apparently the module loader
+   was broken, the kernel complained about not being able to find
+   'globaldata'.
+
+   It turns out that the kernel's internal ELF loader is misinterpreting
+   an ABS symbol (i.e. set with .SET in assembly) whos value is 0 as being
+   'not found', and once that is fixed it was also confusing the absolute
+   symbol with a COMMON symbol.
+
+   While it appears neither -stable nor -current require the use of such
+   a symbol in kernel modules, the ELF loader in the kernel probably ought
+   to be fixed.  I've included the patch set I used on my tree below.  
+   It should be fairly close to the 4.x tree.  Just FYI.
+
+					-Matt
+					Matthew Dillon 
+					<dillon@backplane.com>
+
+Index: i386/i386/elf_machdep.c
+===================================================================
+RCS file: /cvs/src/sys/i386/i386/elf_machdep.c,v
+retrieving revision 1.2
+diff -u -r1.2 elf_machdep.c
+--- i386/i386/elf_machdep.c	17 Jun 2003 04:28:35 -0000	1.2
++++ i386/i386/elf_machdep.c	17 Jul 2003 23:21:47 -0000
+@@ -40,6 +40,7 @@
+ 	Elf_Addr addr;
+ 	Elf_Addr addend;
+ 	Elf_Word rtype;
++	caddr_t caddr;
+ 	const Elf_Rel *rel;
+ 	const Elf_Rela *r
+
+--------------------------------------------------------------------------------
+MID: 20030721055404.6EEB72A7EA@canning.wemm.org
+DATE: 2003-07-20T22:54:08+00:00  FROM: peter at wemm.org (Peter Wemm) <None>
+SUBJ: Possible issue with in-kernel ELF loader. 
+BODY:
+Matthew Dillon wrote:
+
+Thanks for the pointer.  FWIW, We use -fno-common on 5.x to avoid common
+symbols even existing in the first place.  There were a few missing
+externs that this turned up.
+
+Cheers,
+-Peter
+--
+Peter Wemm - peter@wemm.org; peter@FreeBSD.org; peter@yahoo-inc.com
+"All of this is for nothing if we don't go to the stars" - JMS/B5
+
+
+
+--------------------------------------------------------------------------------
+MID: 1058844639.2136.22.camel@CPE-65-26-140-154.kc.rr.com
+DATE: 2003-07-21T20:30:44+00:00  FROM: drevil at warpcore.org (Shawn) <None>
+SUBJ: Where / how to begin the FreeBSD development journey?
+BODY:
+I've recently setup and started using Free-BSD 5.1 as my desktop at home
+and was looking to find more information about getting started in
+contributing to the Free-BSD project.
+
+What piqued my interest is the well organised clean Free-BSD kernel, and
+the vast wealth of documentation on using the system. Also, the general
+attitude of the Free-BSD community seems to be far more mature than that
+of many other operating systems projects that seem to be appearing all
+over lately. While I am no master of the trade so to speak, I have seen
+lots of code over the last 10 years or so, and reading the Free-BSD
+kernel code is quite pleasant and enjoyable in comparison.
+
+The responsiveness and stability of Free-BSD 5.1 on my system have
+convinced me enough that I've switched my personal development desktop
+and email to Free-BSD 5.1, it really is that wonderful.
+
+Now before anyone floats away from all the hot air I've blown, I was
+wondering if there were any other recommended pieces of reading material
+that might be helpful in better understanding Free-BSD's architecture
+and design. I am aware of Tannenbaum's books, and I also own a few Linux
+Kernel books as well.
+
+As well, I have read through m
+
+--------------------------------------------------------------------------------
+MID: oprso0rerp8ckrg5@smtp.central.cox.net
+DATE: 2003-07-21T20:46:14+00:00  FROM: mezz7 at cox.net (Jeremy Messenger) <None>
+SUBJ: Where / how to begin the FreeBSD development journey?
+BODY:
+On 21 Jul 2003 22:30:39 -0500, Shawn <drevil@warpcore.org> wrote:
+
+
+Is this http://www.freebsd.org/doc/en_US.ISO8859-1/books/developers- 
+handbook/ what you are looking for? Also, you can try to check 
+http://www.freebsd.org/docs.html ..
+
+Cheers,
+Mezz
+
+
+-- 
+bsdforums.org 's moderator, mezz.
+
+
+--------------------------------------------------------------------------------
+MID: 20030618101419.GE1133@i2.informatik.rwth-aachen.de
+DATE: 2003-06-18T03:14:27+00:00  FROM: stolz at i2.informatik.rwth-aachen.de (Volker Stolz) <None>
+SUBJ: ITIMER_VIRTUAL running in child after fork()?
+BODY:
+The man page for fork() says:
+"? All interval timers are cleared; see setitimer(2)."
+So clearly ITIMER_VIRTUAL should be cleared as well, but a quick test
+showed that a fork()ed child still has the VIRTUAL (& PROF) timer running.
+
+Is this right?
+-- 
+http://www-i2.informatik.rwth-aachen.de/stolz/ *** PGP *** S/MIME
+rage against the finite state machine 
+
+
+--------------------------------------------------------------------------------
+MID: 3FA61A17.70605@turtle.freedns.us
+DATE: 2003-11-03T01:05:00+00:00  FROM: bt at turtle.freedns.us (Igor Serikov) <None>
+SUBJ: rfork problem
+BODY:
+
+   Hello,
+
+Combining flags RFNOWAIT and RFPPWAIT in rfork(2) under 4.6-RELEASE 
+makes the parent process sleeping on channel "ppwait" forever.
+
+    Regards,
+     Igor.
+
+
+
+--------------------------------------------------------------------------------
+MID: 20031104081800.GA78439@VARK.homeunix.com
+DATE: 2003-11-04T00:19:31+00:00  FROM: das at FreeBSD.ORG (David Schultz) <None>
+SUBJ: rfork problem
+BODY:
+On Mon, Nov 03, 2003, Igor Serikov wrote:
+
+RFPPWAIT tells rfork() to wait for the child to exit, and RFNOWAIT
+tells rfork() to detach the child such that it never tells the
+parent when it exits.  So you're getting exactly what you asked
+for, as silly as it may be.
+
+
+--------------------------------------------------------------------------------
+MID: 3FA76D43.1040508@turtle.freedns.us
+DATE: 2003-11-04T01:12:46+00:00  FROM: bt at turtle.freedns.us (Igor Serikov) <None>
+SUBJ: rfork problem
+BODY:
+
+   David,
+
+Is it okay to have a condition that can be created by a mortal user and 
+then cannot be changed by the root? The waiting process cannot be killed 
+and would keep "waiting" till system reboot.
+
+I do not think it is a good idea to make ppwait state uninterruptible in 
+any case.
+
+As to RFNOWAIT, I believe that the correct behavior is to detach after 
+leaving ppwait.
+
+
+David Schultz wrote:
+
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 20031104191526.GA79079@VARK.homeunix.com
+DATE: 2003-11-04T11:17:29+00:00  FROM: das at FreeBSD.ORG (David Schultz) <None>
+SUBJ: rfork problem
+BODY:
+On Tue, Nov 04, 2003, Igor Serikov wrote:
+
+Aah, I see.  No, it's not okay that a non-root user can create an
+unkillable process.  -CURRENT doesn't have this problem because it
+rightly fails when a userland program tries to use RFPPWAIT.  (It
+isn't supposed to be available to userland, which is why it isn't
+documented.)  The problem could be fixed by backporting the
+relevant bits from -CURRENT.  
+
+
+I do not think it would be safe to deliver a signal to a parent
+process while a vforked child is borrowing its address space.
+
+Here's a patch against -STABLE:
+
+Index: kern_fork.c
+===================================================================
+RCS file: /cvs/src/sys/kern/kern_fork.c,v
+retrieving revision 1.72.2.15
+diff -u -r1.72.2.15 kern_fork.c
+--- kern_fork.c	28 Sep 2003 11:08:31 -0000	1.72.2.15
++++ kern_fork.c	4 Nov 2003 19:13:33 -0000
+@@ -130,6 +130,9 @@
+ 	int error;
+ 	struct proc *p2;
+ 
++	/* Don't allow kernel only flags. */
++	if ((uap->flags & RFKERNELONLY) != 0)
++		return (EINVAL);
+ 	error = fork1(p, uap->flags, &p2);
+ 	if (error == 0) {
+ 		p->p_retval[0] = p2 ? p2->p_pid : 0;
+
+
+--------------------------------------------------------------------------------
+MID: 3FA802AF.4030107@openet-telecom.com
+DATE: 2003-11-04T11:50:51+00:00  FROM: peter.edwards at openet-telecom.com (Peter Edwards) <None>
+SUBJ: rfork problem
+BODY:
+David Schultz wrote:
+
+
+I don't think -STABLE defines RFKERNELONLY (or some of the other rfork 
+flags), so you need to add
+
+Index: unistd.h
+===================================================================
+RCS file: /pub/FreeBSD/development/FreeBSD-CVS/src/sys/sys/unistd.h,v
+retrieving revision 1.22.2.2
+diff -u -r1.22.2.2 unistd.h
+--- unistd.h    22 Aug 2000 01:46:30 -0000      1.22.2.2
++++ unistd.h    4 Nov 2003 19:46:03 -0000
+@@ -218,6 +218,7 @@
+ #define RFSIGSHARE     (1<<14) /* share signal handlers */
+ #define RFLINUXTHPN     (1<<16) /* do linux clone exit parent 
+notification */
+ #define RFPPWAIT       (1<<31) /* parent sleeps until child exits 
+(vfork) */
++#define RFKERNELONLY   RFPPWAIT
+ 
+ #endif /* !_POSIX_SOURCE */
+ 
+
+
+
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 20031111073553.GA14907@VARK.homeunix.com
+DATE: 2003-11-11T03:26:31+00:00  FROM: das at FreeBSD.ORG (David Schultz) <None>
+SUBJ: rfork problem
+BODY:
+On Tue, Nov 04, 2003, David Schultz wrote:
+
+Fixed in RELENG_4 in:
+
+	src/sys/sys/unistd.h,v 1.22.2.3
+	src/sys/kern/kern_fork.c,v 1.72.2.16
+
+
+--------------------------------------------------------------------------------
+MID: 200311290330.hAT3UbNL004349@apollo.backplane.com
+DATE: 2003-11-28T19:32:14+00:00  FROM: dillon at apollo.backplane.com (Matthew Dillon) <None>
+SUBJ: Problems with use of M_NOWWAIT in ATA (w/ demonstration patch)
+BODY:
+    All right, here's an example patch.  This patch is against the old
+    ATA code in DragonFly but most of the issues are the same with the
+    ATA code in -STABLE and -CURRENT.  It does not fix all the problems
+    (which would be a waste since we are about to import ATAng and do not
+    want to apply the same changes twice).  What this patch does is
+    demonstrate a solution to some of the issues.
+
+    Basically this patch introduces guarentees by pipelining requests via
+    the MPIPE code (see patch sys/mpipe.h and kern_mpipe.c).  
+
+    Take for example the ad_start() code in both FreeBSD-STABLE and
+    FreeBSD-CURRENT (that is, in ATAng).
+
+    ad_start() calls ata_alloc_request().  ata_alloc_request() calls
+    malloc(... M_NOWAIT), which can fail.  In ATAng if this malloc fails
+    the I/O request will fail with an error for absolutely no good reason.
+
+    Remember, high level code *DEPENDS* on being able to issue I/Os, 
+    especially in heavily memory loaded situations when the system is 
+    undergoing paging.  It is *NOT* acceptable for low level ATA code to
+    fail due to not being able to allocate memory for a request structure.
+
+    ---------------------------------
+
+--------------------------------------------------------------------------------
+MID: 3F8527E1.26ED0CF6@mindspring.com
+DATE: 2003-10-09T02:20:22+00:00  FROM: tlambert2 at mindspring.com (Terry Lambert) <None>
+SUBJ: Dynamic reads without locking.
+BODY:
+Harti Brandt wrote:
+
+For a read-before-write type read, this is always true.
+
+For an interlock read, this is also true, if you intend to use
+the data you read as a timing-dependent one-shot (e.g. for a
+condition variable, etc.).
+
+For certain uses, however, it's safe to not lock before the
+read *on Intel architectures*.  This can go out the window on
+SPARC or PPC, or any architecture where there is no guarantee
+that there won't be speculative execution or out-of-order
+execution without explicit synchronization.   For instance,
+on a PPC, there are two instructions that are used to implement
+a mutext, "isync" and "dsync", one which is used to check it,
+and the other which is used to take it.  Using these, it's a
+lot less expensive to implement a mutex, and you are guaranteed
+that after you take a mutex, there's no speculative execution
+coherency issues left outstanding.
+
+For things with an explicit periodicity, with no explicit
+guarantee of order of operation, reading without a lock will
+do no damage.
+
+For example, consider the case of a push-model migration of
+processes from one CPU to another, and a (in the general case)
+lockless implementation of a per CPU scheduler queue with
+expl
+
+--------------------------------------------------------------------------------
+MID: 20031020134532.B63978@demos.bsdclusters.com
+DATE: 2003-10-20T13:57:00+00:00  FROM: kmacy at fsmware.com (Kip Macy) <None>
+SUBJ: process checkpoint restore facility now in DragonFly BSD
+BODY:
+
+At BSDCon '03 it was mentioned that a process checkpoint / restore
+facility would be a useful addition to FreeBSD. This post is to
+announce that Matt and I have added such a facility to DragonFly BSD.
+It is noteworthy for -hackers as anyone who is interested could still
+port it with relative ease.
+
+Basically you use it by kldload'ing the checkpt.ko module, which
+should now be built automatically.  You then ^E the program you want
+to checkpoint, and use the 'checkpt' utility in /usr/bin to resume it
+from the checkpoint file.  The program is *NOT* killed by this signal, it
+continues to run after the checkpoint file(s) have been generated.
+Alternatively, you can send the program any signal that will cause it
+to coredump and exit. You will then be able to restore from the core
+dump! In conjunction with a shared file system this can be used for
+process migration.
+
+The checkpoint program is currently designed to work only with simple
+programs... it will restore the signal, descriptors references to regular
+files, the VM state (anonymous memory), as well as any nominal file
+mappings, but it cannot restore sockets, pipes, or device descriptors.
+So, while you can checkpoint a pipe sequence
+
+--------------------------------------------------------------------------------
+MID: 20031020140201.Y63978@demos.bsdclusters.com
+DATE: 2003-10-20T14:06:17+00:00  FROM: kmacy at fsmware.com (Kip Macy) <None>
+SUBJ: modified files for: process checkpoint restore facility now in
+ DragonFly BSD
+BODY:
+The impacted files are in the directories sys/checkpt and usr.bin/checkpt
+as well as sys/kern/imgact_elf.c and sys/kern/kern_fp.c.
+
+				-Kip
+
+
+--------------------------------------------------------------------------------
+MID: 200310201500.53053.sam@errno.com
+DATE: 2003-10-20T15:00:07+00:00  FROM: sam at errno.com (Sam Leffler) <None>
+SUBJ: process checkpoint restore facility now in DragonFly BSD
+BODY:
+I've lived through several checkpointing implementations.  You've got the easy 
+part.  Applications must participate or such a facility has very limited 
+usefulness.  Delivering a signal is only part of the problem; there tend to 
+be issues synchronizing user-mode checkpoint of application state with the 
+kernel's desired to stop the process and squirrel away state.
+
+There's lots of stuff published about this; check the literature.
+
+	Sam
+
+
+
+--------------------------------------------------------------------------------
+MID: 200310210001.h9L01Tea000708@apollo.backplane.com
+DATE: 2003-10-20T17:02:46+00:00  FROM: dillon at apollo.backplane.com (Matthew Dillon) <None>
+SUBJ: process checkpoint restore facility now in DragonFly BSD
+BODY:
+:I've lived through several checkpointing implementations.  You've got the easy 
+:part.  Applications must participate or such a facility has very limited 
+:usefulness.  Delivering a signal is only part of the problem; there tend to 
+:be issues synchronizing user-mode checkpoint of application state with the 
+:kernel's desired to stop the process and squirrel away state.
+:
+:There's lots of stuff published about this; check the literature.
+:
+:	Sam
+
+    Well, now it depends heavily on ones goals.  There are a huge number
+    of scientific jobs that only need the type of basic checkpointing
+    that you see in, say, linux, which I believe can only handle sbrk()
+    space.  Kip has taken it one step further with the file descriptor
+    and mapping save/restore.   It's kinda silly to poo-poo the work when
+    the alternative is to have nothing at all.   Being able to bite a chunk
+    out of a significant scientific application-set is important.  There's
+    an obvious demand for even the very basic checkpointing capability that
+    you see in Linux and I personally believe that it can be done a whole lot
+    better in a BSD environment. 
+
+    The work is also applicable to other things,
+
+--------------------------------------------------------------------------------
+MID: 20031021163038.GA66101@rot13.obsecurity.org
+DATE: 2003-10-21T09:34:11+00:00  FROM: kris at obsecurity.org (Kris Kennaway) <None>
+SUBJ: process checkpoint restore facility now in DragonFly BSD
+BODY:
+On Mon, Oct 20, 2003 at 01:52:07PM -0700, Kip Macy wrote:
+
+
+Why the wheel group?  Until now, the only special privilege this group
+has is that users are allowed to su to root, if they knew the
+password.  It looks like now you've removed the root password barrier
+and allow anyone in the wheel group to manipulate processes to obtain
+root without a password :-)
+
+Kris
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: not available
+Type: application/pgp-signature
+Size: 187 bytes
+Desc: not available
+Url : http://lists.freebsd.org/pipermail/freebsd-hackers/attachments/20031021/f2b21ca9/attachment.bin
+
+
+--------------------------------------------------------------------------------
+MID: 20031021200826.GS792@silverwraith.com
+DATE: 2003-10-21T13:09:06+00:00  FROM: lists-freebsd at silverwraith.com (Avleen Vig) <None>
+SUBJ: process checkpoint restore facility now in DragonFly BSD
+BODY:
+On Tue, Oct 21, 2003 at 09:30:38AM -0700, Kris Kennaway wrote:
+
+If you don't want them getting root, don't put them in wheel? ;-)
+<ducks>
+
+-- 
+Avleen Vig
+Systems Administrator
+Personal: www.silverwraith.com
+EFnet:    irc.mindspring.com (Earthlink user access only)
+
+
+--------------------------------------------------------------------------------
+MID: 20031022215722.M22060@demos.bsdclusters.com
+DATE: 2003-10-22T23:09:12+00:00  FROM: kmacy at fsmware.com (Kip Macy) <None>
+SUBJ: modified files for: process checkpoint restore facility now in
+ DragonFly BSD 
+BODY:
+
+Thank you Poul for taking the time to correct me. Although checkpointing
+was a specifically requested feature for FreeBSD, it was, given the
+circumstances, an unforgivable error for me to announce it on a FreeBSD
+list. The module was implemented in a fork of the code base and hence is
+clearly irrelevant.
+
+Particularly when contrasted with fascinating discussions about
+bikesheds, bringing up a mundane facility for serializing and
+deserializing process state truly only adds to the noise
+on the list.
+
+
+Once again my sincerest apologies. I'm flattered that someone who has
+made such fundamental contributions to the state of the art in FreeBSD as
+phkmalloc and the beerware license would condescend to correct me.
+
+I was so ashamed of myself for being so oblivious as to think that
+FreeBSD might still bear some relevance to DragonFly that I
+unsubscribed from all of the FreeBSD mailing lists, thus ensuring
+that I never make the same mistake again. I've CC'ed the list so
+that all might read my apology and know of your kindness in gently
+informing me off-list.
+
+I'm certain that your keen insights and low-key charisma, as demonstrated
+by this thoughtful e-mail, will help to ensure the continue
+
+--------------------------------------------------------------------------------
+MID: 200310230143.32244.wes@softweyr.com
+DATE: 2003-10-23T01:44:12+00:00  FROM: wes at softweyr.com (Wes Peters) <None>
+SUBJ: FreeBSD mail list etiquette
+BODY:
+In a recent message on this list, Poul-Henning Kamp <phk@phk.freebsd.dk> 
+took Kip Macy <kmacy@fsmware.com> to task for posting DragonFlyBSD 
+research and development results here, writing "You seem to have mistaken 
+hackers@freebsd.org for hackers@dragonflybsd.org.  Please don't make this 
+mistake again."
+
+Please note that Poul-Henning Kamp is NOT a moderator for this mail list, 
+nor an official of the FreeBSD Project in any way.  The above is simply 
+Poul-Henning's opinion; you may attach whatever validity to that you 
+wish.  
+
+Kip Macy, other DragonFlyBSD developers, and anyone else wishing to 
+contribute are invited to join and participate in the open FreeBSD mail 
+lists, sharing code, design information, research and test results, etc. 
+according to their own will.  We welcome input from everyone, including 
+constructive criticism of weaknesses or flaws in FreeBSD.
+
+-- 
+
+        Where am I, and what am I doing in this handbasket?
+
+Wes Peters                                               wes@softweyr.com
+
+
+
+--------------------------------------------------------------------------------
+MID: 20031025175948.GF683@funkthat.com
+DATE: 2003-10-25T11:01:24+00:00  FROM: gurney_j at efn.org (John-Mark Gurney) <None>
+SUBJ: FreeBSD mail list etiquette
+BODY:
+Wes Peters wrote this message on Thu, Oct 23, 2003 at 01:43 -0700:
+
+And patches (against FreeBSD) are highly encouraged.  It rarely helps
+to simply point out flaws (or showing how X OS runs soo much better than
+FreeBSD, why are you guys even running FreeBSD?) w/o showing code to fix it.
+
+Note: I am not speaking as an offical representive of FreeBSD, just as
+a developer who has too few time to try to code up a patch for code I
+haven't seen.  And considering that DragonFlyBSD is based upon FreeBSD
+coming up with said patches should be trivial.
+
+-- 
+  John-Mark Gurney				Voice: +1 415 225 5579
+
+     "All that I will do, has been done, All that I have, has not."
+
+
+--------------------------------------------------------------------------------
+MID: 3F9AC703.4DBAA14C@mindspring.com
+DATE: 2003-10-25T11:56:24+00:00  FROM: tlambert2 at mindspring.com (Terry Lambert) <None>
+SUBJ: FreeBSD mail list etiquette
+BODY:
+John-Mark Gurney wrote:
+
+
+First off, I really appreciate the mmap() discussion which has
+taken place.  Someone has done a lot of work to create benchmarks,
+which, while being microbenchmarks, are a hell of a lot more
+useful than most of their kind.
+
+Further, they've pointed out where to get code to get comparable
+results in FreeBSD, licensed under a two clause BSD license, which
+means the only issue facing anyone is one of trivial integration.
+
+Second, Kip Macy and Matt Dillon have done some excellent work on
+the checkpointing code.  It's basically ELF-based, and requires
+only small changes to the exec to set up the process for being
+able to be checkpointed and restarted.
+
+Again, the license is a two clause BSD license, and again, the only
+work necessary to get this over to FreeBSD is integration.
+
+
+When someone offers you a gift, you don't jump down their throat
+with jack-boots on, complaining about how the gift is wrapped or
+what color it is; you shut the hell up about any complaints and
+say "Thank you".
+
+If the wrapping bothers you, well, you're going to remove it anyway.
+
+If the color bothers you, wait until they leave and paint the damn
+thing.  If they come for a visit, they w
+
+--------------------------------------------------------------------------------
+MID: 20031025124518.F41344@demos.bsdclusters.com
+DATE: 2003-10-25T12:56:59+00:00  FROM: kmacy at fsmware.com (Kip Macy) <None>
+SUBJ: FreeBSD mail list etiquette
+BODY:
+
+I think this perfectly underscores, if not restates, Terry's point. He
+doesn't believe sufficient value is placed on the "dirty work". The
+following will sound as if it were intended to be ironic, but it isn't.
+Those working in the DragonFly tree, all appreciate Hiten's hard work as a
+"bottle-washer". We've benefited from the fact that members of the FreeBSD
+community, through racist remarks and endless flames, and a key member of
+core, through the indefinite postponement of a commit-bit, have alienated
+him. Thus providing us with a, perhaps small, but nonetheless, valuable
+resource.
+
+
+					-Kip
+
+
+--------------------------------------------------------------------------------
+MID: 20031025200601.GA96659@rot13.obsecurity.org
+DATE: 2003-10-25T13:06:36+00:00  FROM: kris at obsecurity.org (Kris Kennaway) <None>
+SUBJ: FreeBSD mail list etiquette
+BODY:
+On Sat, Oct 25, 2003 at 12:55:26PM -0700, Kip Macy wrote:
+
+
+Those allegations against the core member were withdrawn, and I think
+it is despicable of you to use slurs of racism to attempt to promote
+your project.  Hiten shouldn't be used as a pawn in your game.
+
+No-one has a problem with DragonFly having forked over technical
+differences.  Don't polarise it into active hate between the two
+projects, you'll only end up damaging both.
+
+Kris
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: not available
+Type: application/pgp-signature
+Size: 187 bytes
+Desc: not available
+Url : http://lists.freebsd.org/pipermail/freebsd-hackers/attachments/20031025/0dc82f72/attachment.bin
+
+
+--------------------------------------------------------------------------------
+MID: 20031025201003.GC18072@freebie.xs4all.nl
+DATE: 2003-10-25T13:10:52+00:00  FROM: wkb at freebie.xs4all.nl (Wilko Bulte) <None>
+SUBJ: FreeBSD mail list etiquette
+BODY:
+On Sat, Oct 25, 2003 at 12:55:26PM -0700, Kip Macy wrote:
+
+And that is certifiable BS.. I suggest you talk to Hiten first before
+you further spread fud like this....
+
+W/
+-- 
+|   / o / /_  _   		FreeBSD core team secretary
+|/|/ / / /(  (_)  Bulte		wilko@FreeBSD.org
+
+
+--------------------------------------------------------------------------------
+MID: 24644.1067112916@critter.freebsd.dk
+DATE: 2003-10-25T13:15:57+00:00  FROM: phk at phk.freebsd.dk (Poul-Henning Kamp) <None>
+SUBJ: FreeBSD mail list etiquette 
+BODY:
+In message <20031025124518.F41344@demos.bsdclusters.com>, Kip Macy writes:
+
+
+<IRONY>
+I suggest we donate a big statue to DragonFlyBSD.
+
+We could for instance inscribe it with "Give me your tired, your
+poor, your huddled masses yearning to breathe free."
+</IRONY>
+
+Kip,
+
+If you had managed to delude anybody to think you wanted peaceful
+cooperation between the projects, this email from you probably
+dispelled that notion pretty fast.
+
+For the last ten years, the NetBSD, OpenBSD and FreeBSD projects
+have had a tacit agreement not to post propaganda and inflamatory
+accusations to each others email lists (what project members do in
+their own projects is of course a different matter).
+
+I, and I think other members of FreeBSD, would appreciate it if
+the members of DragonflyBSD would adhere to this peace-keeping
+rule as well.
+
+Poul-Henning
+
+-- 
+Poul-Henning Kamp       | UNIX since Zilog Zeus 3.20
+phk@FreeBSD.ORG         | TCP/IP since RFC 956
+FreeBSD committer       | BSD since 4.3-tahoe    
+Never attribute to malice what can adequately be explained by incompetence.
+
+
+--------------------------------------------------------------------------------
+MID: 20031025130709.M41344@demos.bsdclusters.com
+DATE: 2003-10-25T13:18:05+00:00  FROM: kmacy at fsmware.com (Kip Macy) <None>
+SUBJ: FreeBSD mail list etiquette
+BODY:
+This isn't a game Kris. I'm sorry if it hurts your feelings. Core always
+supports its own. Take a look at the history of SMP locking, the sudden
+change of ownership when the foundation came into money, the ensuing
+letter to core, and then the complete inaction.
+
+
+Hiten is not a pawn. He is my friend. He has been endlessly hurt by
+numerous *private* e-mails to him from people on the FreeBSD lists.
+Please re-read my original e-mail I did not claim anything on the part of
+core.  I'm not slurring the community as a whole. Please note that
+DragonFly is not "my project" any more than FreeBSD is, I happened to do
+some work in it.
+
+Thank you for the advice. If you'll notice I'm not on any of the lists any
+more. As soon is thread is permitted to die you will likely never hear
+from me again. Please don't expect me to be silent on the e-mails that I
+do receive, taking some sort of "moral high-ground".
+
+				-Kip
+
+
+--------------------------------------------------------------------------------
+MID: 20031025131751.R41344@demos.bsdclusters.com
+DATE: 2003-10-25T13:19:06+00:00  FROM: kmacy at fsmware.com (Kip Macy) <None>
+SUBJ: FreeBSD mail list etiquette 
+BODY:
+Thank you for providing sound advice Poul in a public forum.
+
+
+			-Kip
+
+
+--------------------------------------------------------------------------------
+MID: 20031025205435.GA689@athlon.pn.xcllnt.net
+DATE: 2003-10-25T14:01:54+00:00  FROM: marcel at xcllnt.net (Marcel Moolenaar) <None>
+SUBJ: FreeBSD mail list etiquette
+BODY:
+On Sat, Oct 25, 2003 at 12:55:26PM -0700, Kip Macy wrote:
+
+There's a fundamental difference between recognition of important
+work and valuing important work. If you don't recognise it, you
+cannot value it. Undervaluing important work therefore implies
+that you at least recognise it.
+
+There probably is some undervaluing in the FreeBSD project. However,
+one must not forget that "there's always a bigger fish" (one of the
+more lame lines from The Phantom Menace, btw). There's such a thing
+as bad timing for dirty work. This does not render the dirty work
+unimportant per se, but it does make it irrelevent for the moment.
+This is where I think a lot of the friction originates.
+
+
+I don't understand why Hiten has to be insulted all of a sudden. Then
+again, it does make a weird kind of sense considering the following:
+
+
+I for one am very glad you're not a member of the FreeBSD community.
+And given that you've found a place with DragonFly, there's little
+chance that you become part of FreeBSD community in the future. For
+that I'm also very glad. So, all in all, I'm very glad DragonFly
+exists. Now even more than before. Because besides the technical
+divergence it also seems to have the effect 
+
+--------------------------------------------------------------------------------
+MID: 20031025135752.U84860@demos.bsdclusters.com
+DATE: 2003-10-25T14:20:15+00:00  FROM: kmacy at fsmware.com (Kip Macy) <None>
+SUBJ: FreeBSD mail list etiquette
+BODY:
+
+As stated previously, I'm not, nor have I ever been, a "member" of
+DragonFly BSD, FreeBSD, NetBSD, OpenBSD, or Linux. I've just done
+work in the first two and the last. So don't slur those who choose to
+define themselves as members with all the various evils that you appear
+to want to attribute to me.
+
+
+FreeBSD is not yet "pure", but people like you and phk are helping to
+ensure that every day it becomes more "pure". And once again, I thank
+you both for your efforts.
+
+
+Ouch. That truly is all encompassing. It is unfortunate that there isn't
+a competitive demand for people who are talented at making snide remarks.
+You and a couple of other notables would be very well off. It is also
+unfortunate that people like you and phk are the most vocal members of the
+FreeBSD community. There are so many good, kind, and talented people out
+there.
+
+
+			-Kip
+
+
+--------------------------------------------------------------------------------
+MID: 200310252142.h9PLgqq4032428@apollo.backplane.com
+DATE: 2003-10-25T14:43:47+00:00  FROM: dillon at apollo.backplane.com (Matthew Dillon) <None>
+SUBJ: FreeBSD mail list etiquette
+BODY:
+    I think it needs to be recognized that *no* submission or suggestion,
+    whether by core, a committer, or an outside member, will ever survive
+    its original maintainership 'forever'.  This is true for everything that
+    was ever put into the kernel throughout its entire history:  VFS, VM,
+    BIO, KLD, ELF, Makefiles, the Scheduler, and it is true of all
+    new contemporary work as well (Geom, Slab Allocator, Mutexes, Thread
+    scheduler rules, Security work, etc..).
+
+    For any outside submission, it is up to the inside project members to
+    take up the ball and do the final step if they want the work in the
+    project.  Heaping conformistic requirements on an outside originator
+    will simply result in the work not ever getting into your tree.  It's
+    really that simple.  After all, FreeBSD is not going to be the focus
+    for any outside submission (KAME's history in the tree being a really
+    good example of this).  Regardless of their intent, the lack of
+    involvement by the general FreeBSD developer community has led to
+    some severe issues over the years, yet it is equally obvious that
+    there is great demand for the work.  The outsider is not going t
+
+--------------------------------------------------------------------------------
+MID: 200310252213.h9PMDCHq032546@apollo.backplane.com
+DATE: 2003-10-25T15:15:05+00:00  FROM: dillon at apollo.backplane.com (Matthew Dillon) <None>
+SUBJ: FreeBSD mail list etiquette
+BODY:
+    Sheesh, you think you guys (*ALL* you guys) have enough time on your
+    hands?  There are better places to direct all that brainpower.
+
+    I don't really need to defend DragonFly... I believe it stands on its
+    own very well not only with what we have already accomplished but with
+    what we are about to accomplish.  Jeffrey is very close to decoupling
+    the NETIF and network protocol drivers from Giant and Hiten has been
+    playing with the APICs in regards to distributing interrupts to
+    particular CPUs (something which DragonFly is particularly good at due
+    to the way the light weight kernel threading system works).  As soon as
+    I get this namecache mess rewritten (and assuming David Rhodus doesn't 
+    keep pulling obscure panics out of his hat :-), but to be fair our NFS
+    is already gobs faster then 4.x)... I am going to start cleaning up
+    loose ends in the networking code and we will have the critical path
+    entirely decoupled and mostly (or completely) mutexless.
+
+    We are taking a somewhat different approach to BGL removal then 5.x.
+    Instead of halfhazardly locking up subsystems with mutexes we are 
+    instead locking up subsystems by movin
+
+--------------------------------------------------------------------------------
+MID: 20031025230438.GA1118@dhcp01.pn.xcllnt.net
+DATE: 2003-10-25T16:05:35+00:00  FROM: marcel at xcllnt.net (Marcel Moolenaar) <None>
+SUBJ: FreeBSD mail list etiquette
+BODY:
+On Sat, Oct 25, 2003 at 02:42:52PM -0700, Matthew Dillon wrote:
+
+Yes. Note that the developer doesn't even have to think the work is
+interesting. Just that it's valuable and worth doing.
+
+
+Agreed, to some extend. Not all open source projects have sufficient
+relation or impact on FreeBSD that discussing them here has an impact
+on FreeBSD. I certainly agree that work done in DragonFly can be
+discussed here. For the sake of DragonFly and FreeBSD I would expect
+that none of the FreeBSD lists are used as substitutes for DragonFly
+mailinglists and vice versa.
+
+
+Fiefdoms are natural. We humans have a long history of people trying
+to grab power at various levels of scope, with various levels of force
+or terror and for reasons of insecurity or insanity at various levels
+of mental abnormality. This does not mean that fiefdoms are good. It
+simply means that you're kicking-in open doors. The problem is how to
+create an environment where the creation of fiefdoms can be stopped
+before it becomes a problem.
+
+Also, I think that most fiefdoms are in fact protectorates. When some-
+one has put in a lot of thought and work to make some component as
+perfect as is reasonably possible, you're likely goin
+
+--------------------------------------------------------------------------------
+MID: 200310260401.h9Q41858034072@apollo.backplane.com
+DATE: 2003-10-25T21:03:16+00:00  FROM: dillon at apollo.backplane.com (Matthew Dillon) <None>
+SUBJ: FreeBSD mail list etiquette
+BODY:
+
+:>     It's a lot easier lockup path then the direction 5.x is going, and
+:>     a whole lot more maintainable IMHO because most of the coding doesn't
+:>     have to worry about mutexes or LORs or anything like that.  
+:
+:You still have to be pretty careful, though, with relying on implicit
+:synchronization, because while it works well deep in a subsystem, it can
+:break down on subsystem boundaries.  One of the challenges I've been
+:bumping into recently when working with Darwin has been the split between
+:their Giant kernel lock, and their network lock.  To give a high level
+:summary of the architecture, basically they have two Funnels, which behave
+:similarly to the Giant lock in -STABLE/-CURRENT: when you block, the lock
+:is released, allowing other threads to enter the kernel, and regained when
+:the thread starts to execute again. They then have fine-grained locking
+:for the Mach-derived components, such as memory allocation, VM, et al. 
+
+    I recall a presentation at BSDCon that mentioned that... yours I think.
+
+    The interfaces we are contemplating for the NETIF (at the bottom)
+    and UIPC (at the top) are different.  We probably won't need to use
+    any mutexes to queu
+
+--------------------------------------------------------------------------------
+MID: Pine.NEB.3.96L.1031026001054.74063I-100000@fledge.watson.org
+DATE: 2003-10-25T21:42:34+00:00  FROM: rwatson at freebsd.org (Robert Watson) <None>
+SUBJ: Synchronization philosophy (was: Re: FreeBSD mail list etiquette)
+BODY:
+
+(Subject changed to reflect the fact that it contains useful technical
+content and banter, resulting in a hijacking of the thread; hope no one
+minds)
+
+On Sat, 25 Oct 2003, Matthew Dillon wrote:
+
+
+Actually, the problem isn't so much the data referenced by ucred, but the
+references themselves.  Part of the issue in Darwin is that ucred
+references are always gained using the p_ucred pointer in the proc
+structure.  The proc structure is read and dereferenced fairly deep in the
+network code (network funnel), and also in the remainder of the kernel
+(kernel funnel).  In addition, there's a lock used to serialize writes to
+p->p_ucred, but not to protect against reads of stale data.  Shared
+structures, such as these, occur in pretty large quantity in BSD code, and
+will be a problem no matter what approach to synchronization is taken. 
+Moving towards message passing helps to structure the code to avoid
+sharing of this sort, although it's not the only way to motivate that sort
+of change.  I'm a big fan of the change in -CURRENT to use td->td_cred as
+a read-only thread-local credential reference and avoid synchronization on
+the credential reference--it nicely addresses the requirements for
+co
+
+--------------------------------------------------------------------------------
+MID: 200310260709.h9Q79LEq034660@apollo.backplane.com
+DATE: 2003-10-26T00:10:01+00:00  FROM: dillon at apollo.backplane.com (Matthew Dillon) <None>
+SUBJ: Synchronization philosophy (was: Re: FreeBSD mail list
+	etiquette)
+BODY:
+
+:...
+:Moving towards message passing helps to structure the code to avoid
+:sharing of this sort, although it's not the only way to motivate that sort
+:of change.  I'm a big fan of the change in -CURRENT to use td->td_cred as
+:a read-only thread-local credential reference and avoid synchronization on
+:the credential reference--it nicely addresses the requirements for
+:consistency in the referenced data for the read-only cases (which are the
+:vast majority of uses of a credential).
+
+    I saw td->td_cred in -current, but while figuring out what to do in
+    DragonFly I realized that there was something fundamentally wrong
+    with pulling a ucred out of a proc *OR* a thread.  What's wrong is
+    that the ucred associated with the current process, or current thread,
+    or passed process, or passed thread may not be the correct ucred for
+    a particular operation, especially in DragonFly where I/O operations
+    are going to be messages and may be aggregated into a single thread
+    for a particular target, filesystem, or protocol in the case of the
+    network.
+
+    There is also the potential of writing buggy code... if the programmer
+    has a thread based ucred handy he might us
+
+--------------------------------------------------------------------------------
+MID: 200310270656.08095.wes@softweyr.com
+DATE: 2003-10-27T07:56:16+00:00  FROM: wes at softweyr.com (Wes Peters) <None>
+SUBJ: FreeBSD mail list etiquette
+BODY:
+On Saturday 25 October 2003 13:15, Poul-Henning Kamp wrote:
+
+Well said, and thank you.  
+
+Tangential discussion full of wild, unsubstantiated accusation are certainly 
+NOT going to help relationships between any groups of humans.  Bad form, Mr. 
+Macy.  Please come back when you have a point.
+
+-- 
+         "Where am I, and what am I doing in this handbasket?"
+
+Wes Peters                                                  Softweyr LLC
+wes@softweyr.com                                    http://softweyr.com/
+
+
+
+--------------------------------------------------------------------------------
+MID: 20031030125747.GA38484@unixdaemons.com
+DATE: 2003-10-30T04:58:22+00:00  FROM: hiten at unixdaemons.com (Hiten Pandya) <None>
+SUBJ: Experimental FreeBSD and Linux kernel source cross reference
+	web site
+BODY:
+Robert Watson (Wed, Oct 29, 2003 at 11:18:51PM -0500) wrote:
+
+	Thank you very very much! ;-)
+
+	Atlast, someone got to it.  I have been wanting to setup LXR for
+	DragonFly for quite some time now, but did not have enough time
+	on my hands to mess with it.  Does it require any sort of
+	patching for it to work on FreeBSD ?  I recall it requires MySQL
+	and some other stuff..
+
+	Regards,
+
+		-- Hiten
+
+
+--------------------------------------------------------------------------------
+MID: Pine.NEB.3.96L.1031030120356.62816A-100000@fledge.watson.org
+DATE: 2003-10-30T09:13:01+00:00  FROM: rwatson at freebsd.org (Robert Watson) <None>
+SUBJ: Experimental FreeBSD and Linux kernel source cross reference
+	web site
+BODY:
+
+On Thu, 30 Oct 2003, Hiten Pandya wrote:
+
+
+I'm actually using an older version of the lxr software, 0.3.1, which
+doesn't make use of a back-end SQL database, rather, some simple db-based
+data stores and glimpse for searches.  It was a lot easier to set up, once
+I fixed some rather critical bugs :-).
+
+I've gone ahead and dropped a snapshot of the DFBSD sys tree on fxr as
+well, and am currently cvsuping opendarwin source to drop a recent
+snapshot of xnu.  I'm not sure if there are any DFBSD tags worth using
+other than HEAD, so I just used a timestamp for the checkout.  The
+rearrangement of the DFBSD tree makes diffing between FreeBSD and DFBSD
+bits a little more difficult, but in many cases it's fairly feasible. I've
+been trying to decide how to improve diffability between the FreeBSD and
+Darwin trees: most FreeBSD bits compare directly with xnu/bsd/..., not
+xnu/..., and lxr isn't very flexible about how it sets up diff
+comparisons. 
+
+I've also noticed that lxr is currently unwilling to index macros as
+identifiers when they're generated at compile-time, which means (for
+example) that you have to use freetext searches to find vnode operation
+macro use.  I'm not sure how much more tim
+
+--------------------------------------------------------------------------------
+MID: 200309030508.h8358Aj6020352@apollo.backplane.com
+DATE: 2003-09-02T22:08:44+00:00  FROM: dillon at apollo.backplane.com (Matthew Dillon) <None>
+SUBJ: mksnap_ffs, snapshot issues, again 
+BODY:
+
+:
+:Thanks for your thoughts. Let me know how your idea progresses
+:(e.g., whether you get to work :-)
+:
+:	~Kirk
+
+    I am starting work on on cache_lookup() and related functions now in
+    DragonFly.  I expect it will take at least the week to get a prototype
+    working and I believe the resulting patch set will be fairly easy to
+    port to FreeBSD.
+
+    The first step I am taking is to make the namecache more persistent.
+    *ALL* active vnodes accessed via lookup() will be guarenteed to have a
+    namecache entry.  I have successfully booted a test system with this
+    change, though I am sure there are bugs :-).  I am not entirely sure what
+    to do about the filehandle functions but I am not going to worry about
+    it for the moment.  What this basically means is that vnodes cannot be
+    recycled in the 'middle' of the topology, only at the leafs.  This does
+    not present a big problem since files are always leafs.  The namecache
+    topology will be guarenteed to remain unbroken except in cases where
+    the namespace is deleted (e.g. removing a file with active descriptors).
+
+    The second step will be to use a namecache structural pointer for our
+    'directory han
+
+--------------------------------------------------------------------------------
+MID: 20030913045444.407b1cd6.corecode@fs.ei.tum.de
+DATE: 2003-09-12T19:55:03+00:00  FROM: corecode at fs.ei.tum.de (Simon 'corecode' Schubert) <None>
+SUBJ: Prebinding for DragonFly/FreeBSD-4
+BODY:
+I created patch for DragonFly/FreeBSD-4 for prebinding, based on
+mdodd@'s patch for FreeBSD-5.
+
+The main difference (apart from the target platform) is that the linker
+needn't be patched. Rtld now uses a hash function to get an unique ID
+for every ELF object.
+
+This has been tested under DragonFly, but should run on FreeBSD-4 too.
+
+Feedback appreciated :)
+
+cheers
+  simon
+
+-- 
+/"\   http://corecode.ath.cx/#donate
+\ /
+ \     ASCII Ribbon Campaign
+/ \  Against HTML Mail and News
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: not available
+Type: application/pgp-signature
+Size: 189 bytes
+Desc: not available
+Url : http://lists.freebsd.org/pipermail/freebsd-hackers/attachments/20030913/87a75cb4/attachment.bin
+
+
+--------------------------------------------------------------------------------
+MID: 20030913045617.1533c556.corecode@fs.ei.tum.de
+DATE: 2003-09-12T19:56:28+00:00  FROM: corecode at fs.ei.tum.de (Simon 'corecode' Schubert) <None>
+SUBJ: Prebinding for DragonFly/FreeBSD-4
+BODY:
+No-brainer.
+
+Get the patch from here:
+http://chlamydia.fs.ei.tum.de/~corecode/prebind.diff
+
+
+-- 
+/"\   http://corecode.ath.cx/#donate
+\ /
+ \     ASCII Ribbon Campaign
+/ \  Against HTML Mail and News
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: not available
+Type: application/pgp-signature
+Size: 189 bytes
+Desc: not available
+Url : http://lists.freebsd.org/pipermail/freebsd-hackers/attachments/20030913/718c73b7/attachment.bin
+
+
+--------------------------------------------------------------------------------
+MID: 20030913012449.Y27896@sasami.jurai.net
+DATE: 2003-09-12T22:29:45+00:00  FROM: winter at jurai.net (Matthew N. Dodd) <None>
+SUBJ: Prebinding for DragonFly/FreeBSD-4
+BODY:
+On Sat, 13 Sep 2003, Simon 'corecode' Schubert wrote:
+
+Prebinding on a per executable basis rather than a per "object" (ELF
+executable or library) means that when you go to prebind KDE (for example)
+you run /var out of diskspace :/
+
+I don't yet have a totally satisfactory solution (mostly because I haven't
+really worked on prebinding for some time.)
+
+Hopefully you get some use out of this though. :)
+
+
+-- 
+| Matthew N. Dodd  | '78 Datsun 280Z | '75 Volvo 164E | FreeBSD/NetBSD  |
+| winter@jurai.net |       2 x '84 Volvo 245DL        | ix86,sparc,pmax |
+| http://www.jurai.net/~winter |  For Great Justice!  | ISO8802.5 4ever |
+
+
+--------------------------------------------------------------------------------
+MID: 20030914192655.51deb3a4.corecode@fs.ei.tum.de
+DATE: 2003-09-14T10:27:17+00:00  FROM: corecode at fs.ei.tum.de (Simon 'corecode' Schubert) <None>
+SUBJ: Prebinding for DragonFly/FreeBSD-4
+BODY:
+Lately Matthew N. Dodd told:
+
+
+Yes, that might be true. How about this approach:
+(doesn't cope with cyclic ``needs'' yet)
+
+- assign every .so a base address so that no collisions happen for every
+  binary considered
+
+Then, for every binary:
+- start with resolving the last object (often libc), as if only this
+  object was loaded
+- proceed to the next object (might be another .so or the binary)
+- there again, resolve stuff. if this changes resolved data in
+  objects resolved before (global references...), save this data too,
+  like deltas to the data of the object before.
+- loop
+
+This means: Every object has the data assigned which it ultimatively
+requests. If globals etc exists they will overridden by the next object
+which requested previous object.
+
+On load, just run the same way. First, load data of the last object
+(i.e. libc), then running the object list back to the binary, load data.
+Globals that get resolved another way than without object X will be
+overwriten by the patchup data for object X.
+
+Uhg, I hope I made myself (at least partly) clear enough to follow.
+
+cheers
+  simon
+
+-- 
+/"\   http://corecode.ath.cx/#donate
+\ /
+ \     ASCII Ribbon Campaign
+/ \  Against HTML Mail and
+
+--------------------------------------------------------------------------------
+MID: 3E1608CB.E8BCCA90@wanadoo.fr
+DATE: 2003-01-03T22:03:55+00:00  FROM: rmkml <rmkml@wanadoo.fr> <None>
+SUBJ: vfork/execve programming trouble
+BODY:
+Hi,
+
+I've a problem with a C program:
+This is a multithread client/server; there are 3 mains threads
+functions:
+- one to receive signals (pthread_setmask() SIGQUIT, HUP, ALRM,
+sigwait()...)
+- one to proceed tasks (pthread_cond_wait in an infinite loop)
+- one to accept tcp cnx (listen, accept, fgets...)
+a client can connect to the server (via a tcp port) and send cmd;
+each new cnx creates a new thread.
+Some commands generate something like a queue of tasks.
+Theses tasks are proceeded by the action thread: the client thread sends
+a
+pthread_cond_broadcast to the action thread, so it begins to proceed the
+queue.
+The action thread has to launch external progs. this is done by vfork
+and execve.
+so it is the action thread which vfork and execve.
+
+problem:
+each time the external cmd is called the program freezes.
+it seems that prog unfreeze only when the external cmd is over.
+I try to play with  sigaction and SA_NOCLDWAIT too but without
+any results.
+
+Any idea and suggestion are welcome
+
+Regards.
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 20030109202346.GS33821@elvis.mu.org
+DATE: 2003-01-09T20:23:46+00:00  FROM: Alfred Perlstein <bright@mu.org> <None>
+SUBJ: rfork DoS
+BODY:
+I think there can be a problem if we allow rfork without
+either RFCFDG or RFFDG and RFTHREAD.
+
+Basically because we cache the ADVLOCK flag in the proc
+we may have a situation where this happens:
+
+p1 rfork(RFMEM); /* gets back p2 */
+p2 advlocks some files from the shared table
+p2 exits, but since the refcount on the fdesc is still > 0 we leave it
+   alone and leak lock structures.
+p1 exits 
+
+Does this make sense as a problem area?  I think we should only
+allow filedesc sharing if RFTHREAD is set.   RFTHREAD seems to get
+it right because of the peers/leader mechanism.
+
+thanks,
+-- 
+-Alfred Perlstein [alfred@freebsd.org]
+'Instead of asking why a piece of software is using "1970s technology,"
+ start asking why software is ignoring 30 years of accumulated wisdom.'
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 200301092037.h09Kbo9v005055@apollo.backplane.com
+DATE: 2003-01-09T20:37:50+00:00  FROM: Matthew Dillon <dillon@apollo.backplane.com> <None>
+SUBJ: Re: rfork DoS
+BODY:
+    Well, the manual page (which may be out of date) infers
+    that the rfork() only operates on the current process if
+    RFPROC is not set.  If we extend that to include RFTHREAD
+    then the inference is that either RFPROC or RFTHREAD must be
+    set and if neither is set an error should be returned.  Am
+    I missing something?
+
+					-Matt
+					Matthew Dillon 
+					<dillon@backplane.com>
+
+
+:I think there can be a problem if we allow rfork without
+:either RFCFDG or RFFDG and RFTHREAD.
+:
+:Basically because we cache the ADVLOCK flag in the proc
+:we may have a situation where this happens:
+:
+:p1 rfork(RFMEM); /* gets back p2 */
+:p2 advlocks some files from the shared table
+:p2 exits, but since the refcount on the fdesc is still > 0 we leave it
+:   alone and leak lock structures.
+:p1 exits 
+:
+:Does this make sense as a problem area?  I think we should only
+:allow filedesc sharing if RFTHREAD is set.   RFTHREAD seems to get
+:it right because of the peers/leader mechanism.
+:
+:thanks,
+:-- 
+:-Alfred Perlstein [alfred@freebsd.org]
+:'Instead of asking why a piece of software is using "1970s technology,"
+: start asking why software is ignoring 30 years of accumulated wisdom.'
+:
+
+
+To Unsu
+
+--------------------------------------------------------------------------------
+MID: 20030109210048.GT33821@elvis.mu.org
+DATE: 2003-01-09T21:00:48+00:00  FROM: Alfred Perlstein <bright@mu.org> <None>
+SUBJ: Re: rfork DoS
+BODY:
+* Matthew Dillon <dillon@apollo.backplane.com> [030109 12:37] wrote:
+
+That sounds right.  The only reason I didn't go that far was
+because I wasn't sure if we wanted to allow shared sigacts
+without leadership.  I think that it would be safest to require
+userland to set either RFPROC or RFTHREAD.
+
+Yes, the manpage is out of date.  What the hell is a sigact anyhow?
+Can someone please fixup the manpage? :)
+
+-- 
+-Alfred Perlstein [alfred@freebsd.org]
+'Instead of asking why a piece of software is using "1970s technology,"
+ start asking why software is ignoring 30 years of accumulated wisdom.'
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 3E208017.F404526F@wanadoo.fr
+DATE: 2003-01-11T20:35:35+00:00  FROM: rmkml <rmkml@wanadoo.fr> <None>
+SUBJ: Re: vfork/execve programming trouble
+BODY:
+Hi,
+
+Do you have the same pbs,
+
+or can't you reproduce the same blocking ?
+
+In my program, I use execve,
+In your program, you use execv,
+Do you think can make a difference ?
+
+Why do you catch a SIGCHLD in sig_thread too waitpid, and you waitpid too in exec_thread ?
+Why do you use waitpid twice ?
+
+Thanks a lot.
+
+Regards
+
+
+
+Ferruccio Vitale wrote:
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 1043786630.3e36eb862a3a8@www.kerneled.com
+DATE: 2003-01-28T20:43:50+00:00  FROM: samy@kerneled.com <None>
+SUBJ: rfork behaviour
+BODY:
+The rfork() man page states that RFPROC should be set as the current
+implementation 'requires' this flag to always be set.
+
+Well from usage and kern_fork.c (/usr/src/sys/kern/kern_fork.c) and
+vm_glue.c (/usr/src/sys/vm/vm_glue.c) it seems that the current
+implementation does not 'require' this at all and it behaves as it
+should behave.
+
+Should I just forward a patch of some sort? or is there another reason
+for leaving that note in there...
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 3E3E9683.801036E1@wanadoo.fr
+DATE: 2003-02-03T16:19:15+00:00  FROM: rmkml <rmkml@wanadoo.fr> <None>
+SUBJ: vfork / execve / accept lock
+BODY:
+
+here is a sample code (vfork_execve.c) to demonstrate a locking problem.
+
+The code launch 3 threads :
+ 1 signal
+ 2 endless do nothing
+ 3 a socket server (bind to 127.0.0.1:12345)
+
+The server accept 3 cmd:
+ 1) close => close cnx
+ 2) sleep => use vfork /execv to launch external "/bin/sleep 20"
+
+to reproduce the lock:
+
+launch ./vfork_execve
+connect to server:
+=>telnet 127.1 12345
+type quickly
+sleep
+close
+=>telnet 127.1 12345
+->close
+the process telnet and vfork_execve is locked until the first 'sleep' cmd  has
+return.
+
+I've no idea why the process locks;
+maybe an implementation trouble or a bug.
+
+Any suggestions are welcome.
+Best Regards.
+
+
+
+--------------------------------------------------------------------------------
+MID: 3E3E9854.66026531@wanadoo.fr
+DATE: 2003-02-03T16:27:00+00:00  FROM: rmkml <rmkml@wanadoo.fr> <None>
+SUBJ: Re: vfork / execve / accept lock
+BODY:
+ok sorry, change on Makefile :
+
+CCFLAGS=$(CCFLAGS_BSD)
+LIBS= $(LIB_THREAD_BSD) $(LIB_BSD)
+
+Regards.
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 3E3EBA30.FB33EF1C@mindspring.com
+DATE: 2003-02-03T18:51:28+00:00  FROM: Terry Lambert <tlambert2@mindspring.com> <None>
+SUBJ: Re: vfork / execve / accept lock
+BODY:
+rmkml wrote:
+
+The short answer is that your code is wrong.
+
+The longer answer is that your code is assuming implementation
+details in vfork() which are undefined in threaded programs,
+according to the standard, and is assuming that the threads
+implementation is in the kernel, and assuming that the threads
+are created via a process similar to vfork().
+
+Since the standard permits implementations to be in user space,
+and fork interaction is undefined, and signal delivery targeting
+is undefined, you should probably expect that any threaded
+program using signals or using fork/vfork/rfork will exhibit
+undefined behaviour.
+
+For example, the pthreads implementation on AIX will not end up
+delivering the signal to the expected thread, either.  This was
+a bug in MySQL on AIX, for a while.  I can't remember if it was
+me, Mark Peek, Paul Ozzello, or Jenifer Meyers that fixed the
+assumption, and sent the patch off to the MySQL folks, but it
+was one of us.
+
+FWIW, it's also incorrect to expect PTHREAD_SCOPE_SYSTEM to work
+on a user space pthreads implementation, which is permitted by the
+standard.
+
+It's also illegal set up your signal handler the way you have,
+given that the standard specifically 
+
+--------------------------------------------------------------------------------
+MID: 3E3F985F.ED36E85C@wanadoo.fr
+DATE: 2003-02-04T10:39:27+00:00  FROM: rmkml <rmkml@wanadoo.fr> <None>
+SUBJ: Re: vfork / execve / accept lock
+BODY:
+Thank for you answer.
+
+It is difficult to find anything concerning the signal model
+of BSD implementation. In particular, for threaded applications.
+If you can give me some advise or documentation to read, it will
+be very helpfull to me .
+
+In the first part of the answer, do you want to say that a threaded
+application can't use vfork/fork/rfork command because the result
+will be undefined ?
+In this case is there a solution to launch external cmd ?
+In your opinion, can directly the application create a new thread,
+this thread used execve, and the parent thread waitpid() ?
+
+Thank you in advance.
+
+Bests regards.
+
+
+
+
+Terry Lambert wrote:
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 3E3FB756.AFA5ABFD@mindspring.com
+DATE: 2003-02-04T12:51:34+00:00  FROM: Terry Lambert <tlambert2@mindspring.com> <None>
+SUBJ: Re: vfork / execve / accept lock
+BODY:
+rmkml wrote:
+
+Sorry that it probably was not the answer you wanted.  8-(.
+
+
+
+I recommend the POSIX standard, the "Go Solo 2" book (I'm afraid
+it's out of print, now), and the O'Reilly book.  The rule of thumb
+is that anything that is "undefined"/"implementation defined" or
+is an extension -- don't use it.
+
+BSD attempts to implement strict POSIX 1003.1 signals.  It does
+not implement the POSIX "reliable signal delivery" mechanism at
+this time.
+
+With regard to threads, signals are delivered to the process.  This
+may mean that any thread that happens to be running at the time, or
+the threads schduler, gets the actual signal.
+
+In general, the user space threads implementation is what's called
+a "call conversion" implementation.  The wayhe this operates is by
+trading a blocking call for a non-blocking call, plus an entry into
+the user space threads scheduler.  If there are other threads that
+are pending execution (not blocked on resources), then the user
+space threads scheduler schedules them to run.
+
+The scheduler function is _thread_kern_sched(); this is the pthreads
+"kernel", in user space.  It's located in libc_r, in the source file
+/usr/src/lib/libc_r/uthread/uthread_kern.c; if the
+
+--------------------------------------------------------------------------------
+MID: Pine.GSO.4.10.10302040918100.11890-100000@pcnet1.pcnet.com
+DATE: 2003-02-04T14:39:12+00:00  FROM: Daniel Eischen <eischen@pcnet1.pcnet.com> <None>
+SUBJ: Re: vfork / execve / accept lock
+BODY:
+On Tue, 4 Feb 2003, Terry Lambert wrote:
+
+
+Or, when wanting a specific thread to receive a signal, it is
+wise to make sure that signal is masked in all but the one
+thread that should receive it.  pthread_kill() generated
+signals are an exception since they target a specific thread.
+Sigwait() is also your friend since it avoids having the signal
+handler called and returns with the received signal.
+
+In general, signals in threaded programs in FreeBSD are delivered
+to threads selected as follows:
+
+  1) A thread in sigwait() where the signal is in the waitset.
+     The signal handler is not invoked in this case.
+
+  2) Failing 1, a thread in sigsuspend() where the signal is
+     not masked in the suspended signal set.
+
+  3) Failing 1 and 2, any thread (chosen at random) which has
+     the signal unmasked.
+
+Expect future changes to add:
+
+  0) A synchronous signal is delivered to the thread that generated
+     it.  It may be impossible for libc_r to get this correct for
+     SIGPIPE since I/O is wrapped.
+
+Installing alternate signal stacks in threaded programs is not
+supported and "not defined" by POSIX (at least the '96 POSIX spec,
+which is to what libc_r tries to adhere).
+
+"Remember it 
+
+--------------------------------------------------------------------------------
+MID: 20030224183953.GB80651@gder.net
+DATE: 2003-02-24T18:39:53+00:00  FROM: G-der <gder@gder.net> <None>
+SUBJ: Properly reaping children from a fork()
+BODY:
+I wasn't sure which group to send this too but -hackers seemed more 
+appropriate than -questions.  I've started to play with sockets 
+under FreeBSD and have created a very simple server.  All it does is 
+listens (on port 2525 by default) and when it receives a connection 
+fork()s.  The only purpose it is accept a string, print it to stdout along 
+with the number of bytes received.
+
+This is a first attempt for me but I seem to have problems when it comes 
+to ensuring that all the children exit like they should.  What happens is 
+that each child process remains in a zombied state (as seen through ps).  
+Also if you check sockstat you can see that each zombied process still has 
+a connection open.
+
+I'm not sure if the problem is how I am trying to close the socket or if 
+it is with my signal handling.  I'm currently reading through intro(2) to 
+see if there is something simple I've missed.
+
+I've attached the code for your enjoyment...I'm sure someone will be able 
+to point out my mistake pretty quickly.  Also I've found a couple of web 
+pages that kind of explain socket handling but am looking for other 
+resources that I can consult.
+
+Thanks in advance, I'm not a normal subscriber to 
+
+--------------------------------------------------------------------------------
+MID: Pine.GSO.4.44.0302241959160.29367-100000@mail.ilrt.bris.ac.uk
+DATE: 2003-02-24T20:02:39+00:00  FROM: Jan Grant <Jan.Grant@bristol.ac.uk> <None>
+SUBJ: Re: Properly reaping children from a fork()
+BODY:
+On Mon, 24 Feb 2003, G-der wrote:
+
+
+You never establish the signal handler.
+
+
+If you've got a bit of spare cash, you might want to peruse a couple of
+excellent texts: Advanced Programming in the Unix Environment (APUE) and
+Unix Network Programming (particularly volume 1); both by the late W.
+Richard Stevens. Well worth the money (and you'll probably receive
+several recommendations along the same lines).
+
+Cheers,
+jan
+
+-- 
+jan grant, ILRT, University of Bristol. http://www.ilrt.bris.ac.uk/
+Tel +44(0)117 9287088 Fax +44 (0)117 9287112 http://ioctl.org/jan/
+You know something's gone badly wrong when your algorithm
+takes O(n^2) time but uses O(2^n) space.
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 20030224202706.GA99643@gder.net
+DATE: 2003-02-24T20:27:06+00:00  FROM: G-der <gder@gder.net> <None>
+SUBJ: Re: Properly reaping children from a fork()
+BODY:
+Thank you everyone for your replies.  The bug was a pretty silly one and 
+one that I should have caught just stepping through the code.
+
+The call to signal() to install the handler was beging made after the 
+fork().  So the children had a handler installed but not the parent.  I 
+moved the signal() call above the accept loop and before the fork and that 
+seems to have cleared up that issue.
+
+Again, thanks for the prompt responses...
+
+Regards
+
+Gene Dinkey
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 3E5A93EC.E8083957@mindspring.com
+DATE: 2003-02-24T21:51:40+00:00  FROM: Terry Lambert <tlambert2@mindspring.com> <None>
+SUBJ: Re: Properly reaping children from a fork()
+BODY:
+G-der wrote:
+
+Unless you explicitly close the connection, it's open.  In the case
+of a zombie, though, there is a zombie status structure, and the files
+are in fact closed.  Probably what you are seeing is the TCP connection
+is not being properly closed by the client, or the connection rate is
+high enough that the 2MSL timer has not expired by the time you are
+looking at it, so they appear open.
+
+
+
+Who is closing the socket, the client or the server?  If the client
+is closing the socket, it must call "shutdown(2)" on the socket, and
+then explicitly call close.   This is because certain user space TCP
+implementations, such as those in Windows, do not have proper resource
+tracking for sockets, which are implemented in user space, instead of
+being implemented in kernel space.
+
+There are also a number fo "test" applications, which are nothing
+more than "SYN-guns", i.e. they do not implement the full handshake,
+and their only purpose is to connection-load the server.  Many of
+these send RST, and then drop all knowledge of the connection.  This
+will, over time, result in a large number of outstanding open sockets
+on the server, since RST packets do not time out and repeat, since
+they do 
+
+==========================================================================================
+DB: freebsd-arch.duckdb  hits=10
+==========================================================================================
+--------------------------------------------------------------------------------
+MID: Pine.BSF.4.21.0305051237410.62854-100000@is
+DATE: 2003-05-05T01:47:05+00:00  FROM: is at rambler-co.ru (Igor Sysoev) <None>
+SUBJ: rfork(RFPROC|RFMEM)
+BODY:
+
+As stated in http://www.freebsd.org/cgi/query-pr.cgi?pr=50923
+rfork(RFPROC|RFMEM) in 4.8-STABLE and 5.0-CURRENT requires RFTHREAD flag
+but it is not even mentioned in man page.
+
+
+Igor Sysoev
+http://sysoev.ru/en/
+
+
+
+--------------------------------------------------------------------------------
+MID: 3EB66C92.304110A4@mindspring.com
+DATE: 2003-05-05T06:53:45+00:00  FROM: tlambert2 at mindspring.com (Terry Lambert) <None>
+SUBJ: rfork(RFPROC|RFMEM)
+BODY:
+Igor Sysoev wrote:
+
+This makes the stack glue implicit.  You can also use explicit
+stack glue.  Most people using the RFPROC flag use explicit
+stack glue, i.e. we carry arounbd our own assembly language
+trampoline code for stack setup that John Dyson originally
+wrote.  I think wanting RFPROC to act like Linux's "clone"
+system call is probably wrong.
+
+-- Terry
+
+
+--------------------------------------------------------------------------------
+MID: Pine.BSF.4.21.0305051756330.62854-100000@is
+DATE: 2003-05-05T07:08:02+00:00  FROM: is at rambler-co.ru (Igor Sysoev) <None>
+SUBJ: rfork(RFPROC|RFMEM)
+BODY:
+On Mon, 5 May 2003, Terry Lambert wrote:
+
+
+What is stack glue ?
+I use rfork_thread(3) wrapper that allows to setup another stack for
+rfork()ed process.
+
+What RFTHREAD flag does ?
+By the way linuxthreads port always uses RFTHREAD flag.
+
+
+Igor Sysoev
+http://sysoev.ru/en/
+
+
+
+--------------------------------------------------------------------------------
+MID: 3EB72C95.6E9EEA50@mindspring.com
+DATE: 2003-05-05T20:33:31+00:00  FROM: tlambert2 at mindspring.com (Terry Lambert) <None>
+SUBJ: rfork(RFPROC|RFMEM)
+BODY:
+Igor Sysoev wrote:
+
+See the code in fork1() in /sys/kern/kern_fork.c.
+
+
+
+See the code.  It basically sets up for kernel threading, rather
+than merely for processes sharing the same address space and/or
+file descriptor table and/or heap, which is what rfork was
+intended to be able to do.  It also ensures propagation of any
+SIGKILL to all peers, so they die all at once, in exit1() in 
+/sys/kern/kern_exit.c.
+
+
+
+They don't know any other way than the moral equivalent of
+the Linux "clone" system call, so that's what they use; it's
+technically not necessary.  See also the source code in the
+directory /usr/src/lib/libpthread, which doesn't use rfork()
+at all.
+
+-- Terry
+
+
+--------------------------------------------------------------------------------
+MID: Pine.BSF.4.21.0305061751340.64470-100000@is
+DATE: 2003-05-06T07:13:54+00:00  FROM: is at rambler-co.ru (Igor Sysoev) <None>
+SUBJ: rfork(RFPROC|RFMEM)
+BODY:
+On Mon, 5 May 2003, Terry Lambert wrote:
+
+
+I do not see any stack manipulation in kern_fork.c except the creating
+alternate kstack for KSE thread in 5.0. And rfork(2) can not create
+such stack - it passes 0 to fork1().
+In 4.x there's no stack code at all.
+
+
+By the way I found the bug in x86 rfork_thread(3)'s error handling:
+
+--- /usr/src/lib/libc/i386/gen/rfork_thread.S   Wed Feb  7 03:12:45 2001
++++ /usr/src/lib/libc/i386/gen/rfork_thread.S   Tue May  6 17:45:14 2003
+@@ -108,5 +108,8 @@
+         * Branch here if the thread creation fails:
+         */
+ 2:
++       popl    %esi
++       movl    %ebp, %esp
++       popl    %ebp
+        PIC_PROLOGUE
+        jmp     PIC_PLT(HIDENAME(cerror))
+
+
+
+It seems that the single purpose of the RFTHREAD flag is to kill peers
+when the leader got SIGKILL.
+And in 4.8-STABLE and 5.0-CURRENT (after 5.0-RELEASE) the leader also
+holds P_ADVLOCK flag.
+
+
+Now it's necessary. Otherwise rfork() returns EINVAL.
+
+
+I know it.
+
+
+Igor Sysoev
+http://sysoev.ru/en/
+
+
+
+--------------------------------------------------------------------------------
+MID: 3EB7D23D.FD5E4191@mindspring.com
+DATE: 2003-05-06T08:19:44+00:00  FROM: tlambert2 at mindspring.com (Terry Lambert) <None>
+SUBJ: rfork(RFPROC|RFMEM)
+BODY:
+Igor Sysoev wrote:
+
+You misunderstand.  After the rfork() returns, there is
+different stack glue required to implement "a threads
+library" when you use RFTHREAD than when you don't use
+RFTHREAD.
+
+And I *know* it can't create the stack: you have to do
+that in user space with assembly language glue you provide.
+
+In other words, it's working without RFTHREAD, you're just
+using the wrong stack glue in user space.
+
+
+
+That's because there's no thread library that uses rfork(),
+apart from the linuxthreads port.
+
+
+
+
+sendpr the fix to the linuxthreads maintainer, please.
+
+
+
+Yes, that's just for cleaning up advisory locks, which mostly
+no one uses in threads applications, since they can cause one
+thread to deadlock another.
+
+
+
+It only does that if at least one of a set of flags is not
+set; I don't see where you think EINVAL is coming from.
+
+But in any case, if RFTHREAD makes something work for you,
+then by all means use it.  It should not be implied, and
+it should not be required by documentation, since, as you
+noticed reading the code, all it does is associate sibling
+threads under a parent for killing and advisory locking.
+
+
+My point was that the only code that uses it without RFTHREAD
+suc
+
+--------------------------------------------------------------------------------
+MID: Pine.BSF.4.21.0305062342570.68150-100000@is
+DATE: 2003-05-06T12:44:07+00:00  FROM: is at rambler-co.ru (Igor Sysoev) <None>
+SUBJ: rfork(RFPROC|RFMEM)
+BODY:
+On Tue, 6 May 2003, Terry Lambert wrote:
+
+
+I do not see any difference in a stack glue when rfork() called
+with RFTHREAD and without it.
+
+
+What is difference of these stack glues ?
+
+
+I will sendpr but not to the linuxthreads maintainer.
+linuxthreads port does not use rfork_thread(3). It uses its own
+similar rfork(2) wrapper to set up the stack and this wrapper
+handles errors correctly.
+
+
+It's recent changes 1.182 in 5.0 and 1.72.2.12 in 4.8 in kern_fork.c.
+Now rfork() requires RFTHREAD to be set if RFPROC is set.
+
+
+Well, but I think this change should be documented.
+Right now rfork(RFPROC|RFMEM) returns EINVAL and rfork_thread(2) causes
+segmentation fault because it does not handle errors correctly.
+
+
+Yes, I belive it, rfork(RFPROC|RFMEM) runs on FreeBSD-4.3.
+
+
+RFTHREAD got to be required recently.
+
+
+Igor Sysoev
+http://sysoev.ru/en/
+
+
+
+--------------------------------------------------------------------------------
+MID: XFMail.20030506161215.jhb@FreeBSD.org
+DATE: 2003-05-06T13:12:55+00:00  FROM: jhb at FreeBSD.org (John Baldwin) <None>
+SUBJ: rfork(RFPROC|RFMEM)
+BODY:
+
+On 06-May-2003 Igor Sysoev wrote:
+
+Shouldn't this be:
+
+ 2:
++       addl    $8, %esp
++       popl    %esi
++       movl    %ebp, %esp
++       popl    %ebp
+        PIC_PROLOGUE
+        jmp     PIC_PLT(HIDENAME(cerror))
+
+To match the parent return case above the 1: label?
+
+-- 
+
+John Baldwin <jhb@FreeBSD.org>  <><  http://www.FreeBSD.org/~jhb/
+"Power Users Use the Power to Serve!"  -  http://www.FreeBSD.org/
+
+
+--------------------------------------------------------------------------------
+MID: 3EB8AF30.B25A18CD@mindspring.com
+DATE: 2003-05-07T00:03:13+00:00  FROM: tlambert2 at mindspring.com (Terry Lambert) <None>
+SUBJ: rfork(RFPROC|RFMEM)
+BODY:
+Igor Sysoev wrote:
+
+I still don't see it.  I'm looking at 1.197:
+
+        if ((uap->flags & (RFPROC | RFTHREAD | RFFDG | RFCFDG)) ==
+            RFPROC)
+                return(EINVAL);
+
+The only thing this does is prevent you from using RFPROC without
+at least one of the other flags.
+
+
+
+I wish you had said these were your flags earlier; I have been
+(incorrectly) assuming you were passing in one of the existing
+RF*FDG flags, and as a result, that you had rolled your own
+"helper" code.  So, with that in mind...
+
+This is correct behaviour.  You must set a flag in the set of
+(RFTHREAD | RFFDG | RFCFDG) when you set RFPROC.  It could be
+rewritten (less efficiently) as:
+
+        if ((uap->flags & RFPROC) == RFPROC &&
+	    (uap_flags & (RFTHREAD | RFFDG | RFCFDG)) == 0)
+                return(EINVAL);
+
+...Basically, if you use RFPROC, you have to do something about
+the file descriptor table, so that it's in one of 3 states:
+
+	RFTHREAD	I know the open file table is shared, so
+			I will act accordingly (I promise to
+			communicate state between processes so
+			that if one closes a file, the other
+			does not attempt to use it).
+
+	RFFDG		I want the file table copied, so that if
+			one proces
+
+--------------------------------------------------------------------------------
+MID: Pine.BSF.4.21.0305071201390.68981-100000@is
+DATE: 2003-05-07T01:16:12+00:00  FROM: is at rambler-co.ru (Igor Sysoev) <None>
+SUBJ: rfork(RFPROC|RFMEM)
+BODY:
+On Tue, 6 May 2003, John Baldwin wrote:
+
+
+
+Yes, you are right. My patch does not restore %esi but set it to 0.
+It seems that my code that I used to test the patch does not depend on %esi
+in an error case.
+
+
+Igor Sysoev
+http://sysoev.ru/en/
+
+

@@ -1,0 +1,2818 @@
+==========================================================================================
+DB: freebsd-hackers.duckdb  hits=16
+==========================================================================================
+--------------------------------------------------------------------------------
+MID: <199802010811.AAA06330@rah.star-gate.com>
+DATE: 1998-02-01T08:11:09+00:00  FROM: Amancio Hasty <hasty@rah.star-gate.com>
+SUBJ: Re: Can't get Linux-gdb (from ports collection) to work
+BODY:
+Is a there a fundamental difference between our ptrace and linux's
+ptrace for which the linux emulation layer does not implement ptrace?
+
+
+	Amancio
+
+
+
+From owner-freebsd-hackers  Sun Feb  1 01:07:07 1998
+Return-Path: <owner-freebsd-hackers@FreeBSD.ORG>
+Received: (from majordom@localhost)
+          by hub.freebsd.org (8.8.8/8.8.8) id BAA11301
+          for hackers-outgoing; Sun, 1 Feb 1998 01:07:07 -0800 (PST)
+          (envelope-from owner-freebsd-hackers@FreeBSD.ORG)
+Received: from svr-a-03.core.theplanet.net (svr-a-03.core.theplanet.net [194.152.64.45])
+          by hub.freebsd.org (8.8.8/8.8.8) with SMTP id BAA11289
+          for <hackers@freebsd.org>; Sun, 1 Feb 1998 01:07:01 -0800 (PST)
+          (envelope-from timo@timog.prestel.co.uk)
+Received: from modem33.tweety.pol.co.uk (timog.prestel.co.uk) [195.92.6.161] 
+	by svr-a-03.core.theplanet.net with smtp (Exim 1.82 #1)
+	id 0xyvMZ-0006q0-00; Sun, 1 Feb 1998 09:06:51 +0000
+Received: (qmail 183 invoked by uid 1007); 1 Feb 1998 09:04:16 -0000
+Message-ID: <19980201090415.34269@timog.prestel.co.uk>
+Date: Sun, 1 Feb 1998 09:04:15 +0000
+From: Timo Geusch <freebsd@timog.prestel.co.uk>
+To: hackers@FreeBSD.ORG
+Subject: Fast IDE CDROM pro
+
+--------------------------------------------------------------------------------
+MID: EEA0280E-B6C7-11D7-9819-000393DB86CA@ucla.edu
+DATE: 2003-07-15T06:26:30+00:00  FROM: shah at ucla.edu (Sumit Shah) <None>
+SUBJ: RAID and NFS exports (Possible Data Corruption)
+BODY:
+FreeBSD hackers,
+
+Here is a message I sent to freebsd-questions and I was hoping I could 
+get some help debugging this.
+
+Thanks
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 20030715162006.GA47687@walton.maths.tcd.ie
+DATE: 2003-07-15T09:20:14+00:00  FROM: dwmalone at maths.tcd.ie (David Malone) <None>
+SUBJ: RAID and NFS exports (Possible Data Corruption)
+BODY:
+On Tue, Jul 15, 2003 at 06:26:24AM -0700, Sumit Shah wrote:
+
+It seems very unlikely that restarting mountd cound cause an error
+like:
+
+
+The error means that that the disk said that there was an error
+trying to read this block. You say that when you rebooted that the
+controler said a disk had gone bad, so this would sort of confirm
+this. (I could believe that restarting mountd might upset raid stuff
+if there were a kernel bug, but it seems very unlikely it could
+cause a disk to go bad.)
+
+My best guess would be that you have a bad batch of disks that
+happen to have failed in similar ways. It is possible that restarting
+mountd uncovered the errors, 'cos I think mountd internally does
+a remount of the filesystem in question and that might cause a chunk
+of stuff to be flushed out on to the disk, highlighting an error.
+
+(I had a bunch of the IBM "deathstar" disks fail on me within the
+space of a week or so, after they'd been in use for about six
+months.)
+
+	David.
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-feab213af24c811f>
+DATE: 1997-05-27T14:09:41+00:00  FROM: Jonathan Lemon <jlemon () americantv ! com> <None>
+SUBJ: Re: Toshiba Satellite Pro 415CS and serial ports...
+BODY:
+On May 05, 1997 at 07:52:09PM -0700, Freeman P. Pascal IV wrote:
+
+I've also been trying to get -current running on a Pro 410.  Both serial
+ports are detected under windows.  When booting off the install disk, only
+one serial port (the IrDA one) is detected, the other is missing.  I've 
+turned on all debugging flags (0x40?) in the probe routine, but all it tells
+me is that every single probe failed.
+
+Ideas?
+--
+Jonathan
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-c5576bcc65cd0486>
+DATE: 1999-04-17T20:45:34+00:00  FROM: Juergen Lock <nox () jelal ! kn-bremen ! de> <None>
+SUBJ: strange things happening while trying to update ports/emulators/wine, could use some help...
+BODY:
+Using the patches below, and after updating to 3.1-stable, I can get
+freecell to run again, but only that: using its help menu (normally
+starts winhelp) still makes it die.  But first what happened:
+
+1. configure hangs in:
+
+	checking whether external symbols need an underscore prefix...
+and
+	checking whether assembler accepts .string...
+
+if i type ^D (EOF) it continues.  both checks assemble .s files and
+ktrace'ing reveals they hang in as in a read() from stdin.
+they didn't hang on 2.2.8-stable.
+
+2. an ELF wine (the aout executable built on 2.2.8-stable `worked'
+as described above) dies on the first call to malloc() (SIGSEGV in
+.cerror called from .cbrk called from malloc if i remember right),
+it even dies in malloc if i call that as the first thing in main().  huh!?? :)
+and when i want to debug that and link libc static (explicit /usr/lib/libc.a
+in the Makefiles link line), it works again.  other ports i built since
+the 3.1 upgrade and everything else thats ELF and uses libc.so.3 still
+runs so it (libc) can't be completely broken on my system...
+
+3. exiting wine always gives:
+
+	wine in free(): warning: junk pointer, too high to make sense.
+
+but that could also be a bug in wine of 
+
+--------------------------------------------------------------------------------
+MID: 19970527090941.33299@right.PCS
+DATE: 1997-05-27T14:09:41+00:00  FROM: Jonathan Lemon <jlemon@americantv.com> <None>
+SUBJ: Re: Toshiba Satellite Pro 415CS and serial ports...
+BODY:
+On May 05, 1997 at 07:52:09PM -0700, Freeman P. Pascal IV wrote:
+
+I've also been trying to get -current running on a Pro 410.  Both serial
+ports are detected under windows.  When booting off the install disk, only
+one serial port (the IrDA one) is detected, the other is missing.  I've 
+turned on all debugging flags (0x40?) in the probe routine, but all it tells
+me is that every single probe failed.
+
+Ideas?
+--
+Jonathan
+
+
+
+--------------------------------------------------------------------------------
+MID: 199708070430.VAA00295@rah.star-gate.com
+DATE: 1997-08-07T04:30:11+00:00  FROM: Amancio Hasty <hasty@rah.star-gate.com> <None>
+SUBJ: [snddrv]: supports xquake's sound using a gus pnp pro or a SB16.
+BODY:
+
+To clarify this is an interim driver release till Luigi and the rest 
+of the multimedia gang get a chance to complete the next generation
+sound driver.  If you can help in the way of sound driver hacking 
+please subscribe to the multimedia mailing list:
+
+mail majordomo@freebsd.org
+
+subscribe multimedia
+
+---
+
+Luigi's email:
+
+luigi@labinfo.iet.unipi.it (Luigi Rizzo)
+
+---
+
+
+GUSPNP11 8/6//97
+
+This sound driver is for FreeBSD 3.0-current .
+
+
+Major enhancement. We now support mapping the dma buffer to user
+space for write operations only. This features is useful for 
+games like xquake . So far the mmap features seems to work
+with the GUS PnP Pro and with the SB16. The latter you
+have to define BROKENSB in order for xquake to work additionally
+when you define this feature the provided example, mmap_test.c, will not work.
+Apparently, something in the Sb16 is causing the dma counter 
+to go backwards only for 16bit playback operations such as
+in xquake. If you are interested in debugging the problem just
+place a printf in dmabuf.c:get_buffer_pointer to print the
+returned value of isa_dmastatus. BTW: isa_dmastatus is part of 
+-current so if you don't have it just go up to ftp.freebsd.org
+and
+
+--------------------------------------------------------------------------------
+MID: 199709081852.NAA01461@argus.tfs.net
+DATE: 1997-09-08T18:52:12+00:00  FROM: Jim Bryant <jbryant@unix.tfs.net> <None>
+SUBJ: Re: what do you think ... should/could ports move to -> /usr/local/ports ?
+BODY:
+In reply:
+
+ACK!@#  E-V-I-L!!!!!!!  E-V-I-L!!!!!!!  E-V-I-L!!!!!!!  E-V-I-L!!!!!!!
+
+This would require all that much more hacking to makefiles and include
+files, not to mention those lame few proggies that hardcode paths in
+the source code...
+
+Besides, assuming /usr don't come up, why bother having /local come
+up, as almost everything in /local will reference the symlink
+/usr/local...
+
+Due to the way FreeBSD changes a lot, it is not really practical to
+build a seperate filesystem here, not to mention /usr/src compiles...
+after compiling in /usr/src or /usr/ports, I [and you to I hope] tend
+to do a `make clean` to get back those MEGZ and MEGZ for other uses,
+inluding /usr/local stuff...
+
+/dev/sd0s1f   1397791   871359   414609    68%    /usr
+
+and growing...
+
+jim
+-- 
+All opinions expressed are mine, if you    |  "I will not be pushed, stamped,
+think otherwise, then go jump into turbid  |  briefed, debriefed, indexed, or
+radioactive waters and yell WAHOO !!!      |  numbered!" - #1, "The Prisoner"
+------------------------------------------------------------------------------
+Inet: jbryant@tfs.net    AX.25: kc5vdj@wv0t.#neks.ks.usa.noam     grid: EM28PW
+voice: KC5VDJ - 6 & 2 Meters AM/F
+
+--------------------------------------------------------------------------------
+MID: 199711040019.QAA10230@salsa.gv.tsc.tdk.com
+DATE: 1997-11-04T00:19:48+00:00  FROM: Don Lewis <Don.Lewis@tsc.tdk.com> <None>
+SUBJ: Re: Password verification (Was: cvs commit: ports/x11/kdebase - Imported sources)
+BODY:
+On Nov 3,  9:52am, Bill Paul wrote:
+} Subject: Re: Password verification (Was: cvs commit: ports/x11/kdebase - I
+
+} The SCM_CREDS hack will work better. For those who don't know, SCM_CREDS
+} is an additional type of ancillary data that you can transmit with
+} sendmsg()/recvmsg() via an AF_UNIX socket. It's similar to SCM_RIGHTS
+} which, in 4.4BSD, is used to transfer a file descriptor between processes.
+} The idea is that the calling process does a sendmsg() with the SCM_CREDS
+} flag set and an empty controll emssage buffer, and when the kernel sees 
+} this in unp_internalize(), it fills in the empty buffer with the sending
+} process's credentials (UID, EUID, GID, other GIDS). When the receiving
+} process does a recvmsg(), it gets a copy of the filled-in buffer and
+} can use the credential info to determine the identity of the sending
+} process and do access checks. If the sender does not set the SCM_CREDS flag
+} when it transmits, the receiver can tell and refuse to do business with
+} the sender.
+
+I think this would be an interesting way to implement rcmd().  You send
+the daemon the various rcmd() arguments, then it gets your credentials
+using SCM_CREDS, authenticates you with the
+
+--------------------------------------------------------------------------------
+MID: 34D42632.41C67EA6@eunet.at
+DATE: 1998-02-01T07:37:22+00:00  FROM: "Helmut F. Wirth" <hfwirth@eunet.at> <None>
+SUBJ: Re: Can't get Linux-gdb (from ports collection) to work
+BODY:
+Pedro F. Giffuni wrote:
+
+It actually *runs* them fine, but debugging does'nt work, because the
+Linux emulator does not support ptrace()!
+
+
+I will go hunting for the package you mentioned above.
+
+Thank you
+Helmut
+
+-- 
+Helmut F. Wirth
+Email: hfwirth@ping.at
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 19980201153339.54250@scsn.net
+DATE: 1998-02-01T20:33:39+00:00  FROM: dmaddox@scsn.net (Donald J. Maddox) <None>
+SUBJ: Re: Can't get Linux-gdb (from ports collection) to work
+BODY:
+On Sun, Feb 01, 1998 at 09:24:02PM +0100, Helmut F. Wirth wrote:
+
+Heh, I can identify with that ;-)  I'm attempting to build the crosssco
+port with i386-linux as the target instead of i386-coff right now, so
+hopefully that will be the solution for me...
+
+
+
+--------------------------------------------------------------------------------
+MID: 34D4D9E2.167EB0E7@eunet.at
+DATE: 1998-02-01T20:24:02+00:00  FROM: "Helmut F. Wirth" <hfwirth@eunet.at> <None>
+SUBJ: Re: Can't get Linux-gdb (from ports collection) to work
+BODY:
+Donald J. Maddox wrote:
+
+Same problem here. This was the reason I went for a solution for
+debugging cross developed programs under FreeBSD. I want to play with
+my new 3DFX chipset but there is no chance I will start using Linux
+for it.
+
+Helmut
+-- 
+Helmut F. Wirth
+Email: hfwirth@ping.at
+
+
+
+--------------------------------------------------------------------------------
+MID: 20010927205912.E4232@roaming.cacheboy.net
+DATE: 2001-09-27T18:59:12+00:00  FROM: Adrian Chadd <adrian@freebsd.org> <None>
+SUBJ: closing down the squid22/23 ports?
+BODY:
+
+Hi all,
+
+Pardon the cross-posting. :-)
+
+I'd like to look at closing down / making inactive the squid22 and
+squid23 ports. The squid-2.2 and squid-2.3 codebases have been
+inactive and largely unsupported by the squid developers (read: myself
+inclusive here) for some time now, and I'd like to point users
+at the actively developed/maintained squid branch.
+
+Squid-2.5 is also in the pipeline for release soon, and I don't think
+there is a point in having 4 squid ports.
+
+What do people think?
+
+(please CC me, I'm currently not on the ports/hackers list
+for various time-related reasons..)
+
+Thanks!
+
+
+
+Adrian
+
+-- 
+Adrian Chadd			"Programming is like sex:
+<adrian@freebsd.org>		   One mistake and you have to support for
+				    a lifetime." -- rec.humor.funny
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 3BB43A84.34F8E732@mindspring.com
+DATE: 2001-09-28T08:53:24+00:00  FROM: Terry Lambert <tlambert2@mindspring.com> <None>
+SUBJ: Re: closing down the squid22/23 ports?
+BODY:
+Adrian Chadd wrote:
+
+You might want to check out which versions infringe which
+patents... I think the oldest port doesn't infringe any, but
+the newer ports infringe about 8 of them from IBM.  IBM made
+us rip squid out of the InterJet before we ever shipped with
+it because of this.
+
+-- Terry
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 3BB471BD.976B65B6@FreeBSD.org
+DATE: 2001-09-28T12:49:01+00:00  FROM: Maxim Sobolev <sobomax@FreeBSD.org> <None>
+SUBJ: Re: closing down the squid22/23 ports?
+BODY:
+Adrian Chadd wrote:
+
+
+I'm pretty sure that squid22 could be safely killed, but perhaps it would have
+a sense to keep squid23 around for some more time, because many production
+systems out there still use it.
+
+-Maxim
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 20020327144432.4CE71AEB8@reiher.informatik.uni-wuerzburg.de
+DATE: 2002-03-27T14:44:32+00:00  FROM: Matthias Buelow <mkb@informatik.uni-wuerzburg.de> <None>
+SUBJ: Re: ports/36307: nmh port cuts off last part of sender domain 
+BODY:
+Scott Blachowicz <scott@sabami.seaslug.org> writes:
+
+
+(freebsd-hackers, please see comment about sys/utsname.h / SYS_NMLN
+below; you might ignore the nmh bug correspondence above.)
+
+
+
+
+Heh, I've found the bug.  Your debugging code put me on the correct
+trail.  nmh now spits out:
+
+What now? s
+LocalName() - got from uname(): reiher.informatik.uni-wuerzburg
+LocalName() - returning: reiher.informatik.uni-wuerzburg
+LocalName() - got from uname(): reiher.informatik.uni-wuerzburg
+LocalName() - returning: reiher.informatik.uni-wuerzburg
+smtp.c[138]: calling LocalName()
+
+which made me look up uname(3) and write a little test program:
+
+    #include <sys/utsname.h>
+    #include <stdio.h>
+
+    int main()
+    {
+	struct utsname u;
+
+	if (-1 == (uname(&u))) {
+	    perror("uname failed");
+	    return 1;
+	}
+	printf("sysname: %s\nnodename: %s\nrelease: %s\nmachine: %s\n",
+		u.sysname, u.nodename, u.release, u.version, u.machine);
+	return 0;
+    }
+
+which prints:
+
+$ ./a.out
+sysname: FreeBSD
+nodename: reiher.informatik.uni-wuerzburg
+release: 4.5-STABLE
+machine: FreeBSD 4.5-STABLE #0: Fri Mar 
+
+Note that not only the "nodename" is truncated but the "machine"
+entry also.  Which made me look into sys/utsna
+
+==========================================================================================
+DB: freebsd-chat.duckdb  hits=19
+==========================================================================================
+--------------------------------------------------------------------------------
+MID: <5.0.2.1.1.20030622084009.01c8d600@popserver.sfu.ca>
+DATE: 2003-06-22T07:46:45+00:00  FROM: Colin Percival <colin.percival@wadham.ox.ac.uk>
+SUBJ: Re: Cryptographically enabled ports tree.
+BODY:
+At 22:59 21/06/2003 -0700, David Schultz wrote:
+
+   Well, sort of.  The authentication in cvsup relies upon starting with a 
+shared secret, which isn't an option for the general public.
+
+
+   Exactly.  I might, grudgingly, be willing to trust the people who run 
+the cvsup mirrors -- although I'd really rather not -- but trusting the 
+security, physical and electronic, of the mirrors is quite a different matter.
+
+Colin Percival
+
+
+From owner-freebsd-chat@FreeBSD.ORG  Mon Jun 23 00:24:39 2003
+Return-Path: <owner-freebsd-chat@FreeBSD.ORG>
+Delivered-To: freebsd-chat@freebsd.org
+Received: from mx1.FreeBSD.org (mx1.freebsd.org [216.136.204.125])
+	by hub.freebsd.org (Postfix) with ESMTP id 09F3F37B401
+	for <chat@freebsd.org>; Mon, 23 Jun 2003 00:24:39 -0700 (PDT)
+Received: from tulip.epweb.co.za (tulip.epweb.co.za [196.14.166.22])
+	by mx1.FreeBSD.org (Postfix) with ESMTP id 98FDA43FE3
+	for <chat@freebsd.org>; Mon, 23 Jun 2003 00:24:30 -0700 (PDT)
+	(envelope-from ultraviolet@tulip.epweb.co.za)
+Received: from tulip.epweb.co.za (localhost.epweb.co.za [127.0.0.1])
+	by tulip.epweb.co.za (8.12.9/8.12.9) with ESMTP id h5N7OOvD023023
+	for <chat@freebsd.org>; Mon, 23 Jun 2003 09:24:24 +0200 (SAST)
+	
+
+--------------------------------------------------------------------------------
+MID: 20031217211118.GB84538@pcwin002.win.tue.nl
+DATE: 2003-12-17T13:09:49+00:00  FROM: stijn at win.tue.nl (Stijn Hoop) <None>
+SUBJ: cvs commit: ports/net/gaim Makefile distinfo pkg-plist
+BODY:
+On Wed, Dec 17, 2003 at 02:46:55PM -0600, Jacques A. Vidrine wrote:
+
+Well basically they say "if you add this exception to your GPL license
+everything is fine". What I'd like to see is for them to remove the
+advertising clause, or else issue a statement to the effect of "if you
+use the GNU GPL v2 or later, the advertising clause is removed",
+because of...
+
+
+They do have some kind of a point -- it is incompatible on systems where
+OpenSSL is not part of the base system (afaik Solaris and others). And because
+of that, like you, I see a continuing trend towards...
+
+
+Well I "see" the same happening with other projects. Which is a real shame
+because OpenSSL is really the only choice for *BSD (because of licensing
+reasons) and it would mean another diversion between Linux and BSD. That's why
+I feel that the first option above would be better. Considering the history of
+this debate, I'm highly doubtful that something like that would happen
+though...
+
+Sorry that I had to pick this commit to chime in on, in hindsight it's not
+really this that I wanted to comment on... Moving to -chat...
+
+--Stijn
+
+-- 
+The right half of the brain controls the left half of the body.  This means
+that only left h
+
+--------------------------------------------------------------------------------
+MID: 20031126061611.GC55245@kosmos.my.net
+DATE: 2003-11-26T10:24:16+00:00  FROM: abowhill at blarg.net (Allan Bowhill) <None>
+SUBJ: Bug in ports howto question
+BODY:
+On  0, Erik Trulsson <ertr1013@student.uu.se> wrote:
+:> On  0, Erik Trulsson <ertr1013@student.uu.se> wrote:
+:> :On Tue, Nov 25, 2003 at 01:44:26AM -0800, Allan Bowhill wrote:
+:> :> On  0, Roman Neuhauser <neuhauser@bellavista.cz> wrote:
+:> :
+:> :
+:> :> :> :> > The skill sets are mutually exclusive.
+:> :> :> :
+:> :> :> :    aha. you can't possess skill in both skiing and driving. the skill
+:> :> :> :    sets are mutually exclusive. eh?
+:> :> :> 
+:> :> :> Yep. Skiiing is not driving, and driving is not skiiing.
+:> :> :> They require mutually exclusive skill sets.
+
+
+:> Knowing one set of skills does not necessarily preclude knowlege of the
+:> other. In fact, one often complements the other. But that is ouside the
+:> scope of the argument.
+:
+:But the only possible way I can interpret the statement "The skill sets
+:are mutually exclusive." is that knowing one skill set precludes
+:knowing the other.  That is what that statement means.
+
+You are changing the meaning of my statement and arguing against it,
+pretending I said it. You are creating a straw man.
+
+If you don't know what that is, see:
+http://www.nizkor.org/features/fallacies/straw-man.html
+
+:> Minus time, you should be able to se
+
+--------------------------------------------------------------------------------
+MID: 20031126225022.GA26587@falcon.midgard.homeip.net
+DATE: 2003-11-26T14:51:17+00:00  FROM: ertr1013 at student.uu.se (Erik Trulsson) <None>
+SUBJ: Bug in ports howto question
+BODY:
+On Tue, Nov 25, 2003 at 10:16:11PM -0800, Allan Bowhill wrote:
+
+I am not changing the meaning of anything.
+What I am saying is that the meaning of the phrase "The skill sets are
+mutually exclusive." is that you cannot possess both skill sets at
+once.  If you think it means something else, I am afraid you are
+mistaken.
+
+
+
+He was being sarcastic, yes, but about there being such a connection,
+but rather about the skill sets being mutually exclusive, pointing out
+how absurd that would be.
+
+
+I might have been somewhat mistaken in exactly who said what, which is
+not surprising since the beginning of the thread does not seem to be
+available in the mailing-list archives, and I have therefore not read
+it.
+
+However I am quite certain that you did say the following:
+
+"Skiiing is not driving, and driving is not skiiing.
+They require mutually exclusive skill sets."
+
+The first of these two statements is obviously true (skiing and driving
+are not the same thing.)  The other statement is just as obviously false.
+Since many people do know both how to drive and how to ski, the skills
+cannot be mutually exclusive.
+
+Let me repeat myself again since you seem to be unable to grasp this
+point:  *If two s
+
+--------------------------------------------------------------------------------
+MID: 199704141401.KAA03505@crh.cl.msu.edu
+DATE: 1997-04-14T14:01:42+00:00  FROM: Charles Henrich <henrich@crh.cl.msu.edu> <None>
+SUBJ: HP "ports"
+BODY:
+Here is an example of the weekly report mailed out by the HP porting folks,
+they use a nifty graphical interface tool to retrieve and install the software,
+although you can drop back to ftp/web.  Its really extremely well done, our
+porting folks might want to take a look at them for ideas to steal :)
+
+====
+
+New packages on the Software And Porting Archive Centre in the last week
+------------------------------------------------------------------------
+
+     Package: xmcd 2.1
+   Directory: /hpux/X11/Misc/xmcd-2.1
+        Date: 12 Apr 1997
+      Author: Ti Kan <ti@amb.org>
+Original URL: ftp://ftp.x.org/contrib/
+Install tree: /opt/xmcd
+ Static  bin: xmcd-2.1-sa-10.10.depot.gz               (1.49 MB)
+ Dynamic bin: xmcd-2.1-sd-10.10.depot.gz               ( 286 K)
+ Source code: xmcd-2.1-ss-10.10.tar.gz                 ( 394 K)
+ Description: Plays audio CDs on a CD ROM drive using a Motif interface.
+              Displays a front panel similar to a domestic CD player and allows
+              A->B repeat amongst other CD player features. It can also store
+              track and disc title information in a database and recall the
+              information at a later date. This release come
+
+--------------------------------------------------------------------------------
+MID: 354e28ff.227031838@mail.cetlink.net
+DATE: 1998-05-04T02:35:44+00:00  FROM: jak@cetlink.net (John Kelly) <None>
+SUBJ: Re: cvs commit: ports/www/ijb - Imported sources
+BODY:
+On Mon, 4 May 1998 04:26:49 +0200, Eivind Eklund <eivind@yes.no>
+wrote:
+
+
+
+On the contrary, there is.
+
+You're losing the debate so now you resort to insults.
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-chat" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: 19980504044244.39282@follo.net
+DATE: 1998-05-04T02:42:44+00:00  FROM: Eivind Eklund <eivind@yes.no> <None>
+SUBJ: Re: cvs commit: ports/www/ijb - Imported sources
+BODY:
+On Mon, May 04, 1998 at 02:35:44AM +0000, John Kelly wrote:
+
+What about the part before 'besides'?  What about _any_ underpinning of your
+claim?
+
+I can agree that there is an issue of being allowed to control what is going
+on in your own home (which you're not, in any country that I know of). 
+However, that is _not_ the same as privacy.  Please come with some form of
+argument.
+
+
+You seem to be unable to answer any arguments, and thus go for language. 
+So, for the understanding-impaired, I'll rephrase: What makes you claim that
+there is privacy involved?  If you can't come up with something that
+resemble a coherent argument, I will still consider you to be unable to type
+coherently.  Random sentences which follow the general rules of english
+isn't good enough - there must be coherency at the semantic level, too.
+
+Eivind.
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-chat" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: 354f2cb0.227976964@mail.cetlink.net
+DATE: 1998-05-04T02:57:23+00:00  FROM: jak@cetlink.net (John Kelly) <None>
+SUBJ: Re: cvs commit: ports/www/ijb - Imported sources
+BODY:
+On Mon, 4 May 1998 04:42:44 +0200, Eivind Eklund <eivind@yes.no>
+wrote:
+
+
+It's self evident to most people that they have the right to determine
+who and what enter their home.
+
+
+My home is private property.  If you're not welcome there, you don't
+get in.
+
+
+Consider anything you like.
+
+But I will filter what information comes into my home, whether you or
+your content provider friends like it or not.
+
+This argument is a dead horse.  Please don't beat it any more.
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-chat" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: Pine.GSO.3.96.980522203544.22000A-100000@james.hwcn.org
+DATE: 1998-05-23T00:39:53+00:00  FROM: Tim Vanderhoek <hoek@hwcn.org> <None>
+SUBJ: Re: Why installing ports on a computer?
+BODY:
+On Fri, 22 May 1998, Stuart Henderson wrote:
+
+
+If it really is too large, maybe it is time to break off the ja-,
+ko-, etc. lang-specific ports into a separate installation
+packet.
+
+It seems to me, though, that installation is a one-time thing and
+the amount of time it takes to unpack ports.tgz doesn't really
+figure when you view it that way...
+
+
+
+Don't expect this to get fixed anytime soon.  It would require
+significant manpower to say what things really are needed, and
+what old versions will suffice.  We have nowhere near the
+manpower resources to handle the increase in support and
+debugging that would be generated, IMO.
+
+You're going to have that problem regardless of how you track the
+ports tree.  It is not specific to using CVSup.
+
+
+--
+Outnumbered?  Maybe.  Outspoken?  Never!
+tIM...HOEk
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-chat" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: 199807220536.WAA06411@usr04.primenet.com
+DATE: 1998-07-22T05:36:03+00:00  FROM: Terry Lambert <tlambert@primenet.com> <None>
+SUBJ: Re: GNU software (was: "Open Source Town Meeting" supports only one faction)
+BODY:
+
+Which of these are maintained by FSF?
+
+CVS was originally a non-GPL'ed comp.sources.unix posting.
+
+gdb -- well, I have to admit to using backtrace once in a while;
+however, there are much better (X-only, admittely) source
+debuggers available.
+
+gzip?  -- use compress.
+
+RCS?   Paul Eggert touched it last -- who's he work for?
+
+texinfo?  Not needed.
+
+Bison?  Use yacc instead; mostly needed for the non-standard grammars
+used by GNU make, GCC, GNU configure, etc..
+
+Grep?  There are free alternatives.
+
+patch?  Larry Wall, NOT FSF.
+
+awk?  Brian Kernighan's version is still actively maintained.
+
+perl?  Larry Wall, NOT FSF.  I would personally not miss it in
+the slightest; it's yet another syntax-incompatible scripting
+language.
+
+sort?  This was a "conveniece" import, like taking GNU tar instead
+of (the superior) Berkeley "pax".
+
+That basically leaves "groff".  And that's because the original
+free "troff" clone for C/A/T typesetting wasn't very good at
+PostScript.  If I want printed copies, I'll buy them from O'Reilly;
+otherwise I'll use ditroff.
+
+
+Fine.  Send in your check today... just don't sign my name for
+me without asking me...
+
+
+					Terry Lambert
+					terry@lambert.org
+---
+Any opin
+
+--------------------------------------------------------------------------------
+MID: 199807220554.WAA07497@usr04.primenet.com
+DATE: 1998-07-22T05:54:31+00:00  FROM: Terry Lambert <tlambert@primenet.com> <None>
+SUBJ: Re: GNU software (was: "Open Source Town Meeting" supports only one faction)
+BODY:
+
+Actually... FreeBSD has been offered, a number of times, a commercial
+source code control system developed on FreeBSD.
+
+I believe it addresses most of the issues that normally bite me on
+the arse, such a seperate history maintenance for non-committers,
+unlike CVS...
+
+
+As far as complaining, I'd much rather complain about the Sleepycat
+license, which is for all intents and purposes GPL'ing the BSD dbm
+code, and unlike the GPL does not poison-pill itself against the
+UCB license.  All of FreeBSD could be distributed under such a
+license, and we would, of course, be screwed to the GPL cross if
+any were so stupid as to donate code back to the wrong place first.
+
+
+
+No, they have backtrace; I'm just a CLI-person, and too lazy to
+rewrite my alias.
+
+But of course, this isn't a point to you in any case... GPL'ed
+software is "free" software (why don't they just call it "liberated
+software" and quit confusing everyone?).  As such, I can utilize it
+all I want and not pay them a dime.  Just as they can utilize the
+code I've put out there under UCB license the same way.
+
+
+
+If you are really worried about this, rewrite the code.  The algorithms
+are not shrouded in mystery.  If they were, they wou
+
+--------------------------------------------------------------------------------
+MID: Pine.BSF.4.10.10002121802580.47232-100000@pawn.primelocation.net
+DATE: 2000-02-12T23:07:34+00:00  FROM: "Chris D. Faulhaber" <jedgar@fxp.org> <None>
+SUBJ: Re: cvs commit: ports/devel/kdevelop - Imported sources
+BODY:
+On Sat, 12 Feb 2000, Alfred Perlstein wrote:
+
+
+Well, it's not quite Delphi's IDE, but provides a decent integrated
+environment for developing visual (kde) apps (the above quote is from
+pkg/DESCR, not from experience).  It seems to provide Delphi-like
+functionality WRT editing/compiling/debugging but doesn't appear to have
+the drag-n-drop visual development stuff.
+
+Personally, I still prefer vi/make to all this fancy integrated stuff, but
+I'm sure this has it's place too :)
+
+-----
+Chris D. Faulhaber - jedgar@fxp.org - jedgar@FreeBSD.org
+--------------------------------------------------------
+FreeBSD: The Power To Serve   -   http://www.FreeBSD.org
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-chat" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 20000507211801.C25313@foobar.franken.de
+DATE: 2000-05-07T19:18:01+00:00  FROM: Harold Gutch <logix@foobar.franken.de> <None>
+SUBJ: Re: cvs commit: ports/archivers Makefile ports/archivers/mscompress Makefile ports/archivers/mscompress/files md5 ports/archivers/mscompress/pkg COMMENT DESCR PLIST
+BODY:
+On Sun, May 07, 2000 at 01:52:36PM -0400, Will Andrews wrote:
+
+As the data originates from some avarage Microsoft weenie, you
+could use rm(1) or dd(1) in combination with /dev/null - and
+gzip(1) if you wish :).
+
+bye,
+  Harold
+
+-- 
+Someone should do a study to find out how many human life spans have
+been lost waiting for NT to reboot.
+              Ken Deboy on Dec 24 1999 in comp.unix.bsd.freebsd.misc
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-chat" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: Pine.BSO.4.33.0105161030390.29956-100000@Aphex.NewGold.NET
+DATE: 2001-05-16T14:32:39+00:00  FROM: "Joseph A. Mallett" <jmallett@xMach.org> <None>
+SUBJ: Re: Opera ports to QNX but not BSD
+BODY:
+I love how these are versions of linux they're porting to:
+SGI IRIX 6.5 or better 32 bit
+Sun Solaris for x86 and Sparc
+FreeBSD 3.4 x86
+OpenBSD 2.6 x86
+SCO UnixWare 7.1
+SCO OpenServer 5.0.5
+NetBSD 1.4
+
+And how these are the distros they currently run on:
+Corel 1.0
+Caldera 2.2
+Debian Potato 2.2
+Mandrake 6.0, Mandrake 7.1, Mandrake 7.2
+---NetBSD 1.5_BETA/i386 ---
+RedHat 6.1, RedHat 6.2, Redhat 7.0
+Slackware 7
+SuSE 7.0
+YellowDog 2.2
+
+--
+[ Joseph Mallett            <jmallett@xMach.org> ] [ http://srcsys.org ]
+[ xMach Core Team         xMach: Proactively Unbloated Microkernel BSD ]
+[ Proud {Free,Net}BSD User; (Obj)C(++) Programmer ] [ http://xMach.org ]
+
+On Wed, 16 May 2001, Rahul Siddharthan wrote:
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-chat" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 3C939AF5.4FB5DA19@pythonemproject.com
+DATE: 2002-03-16T19:20:21+00:00  FROM: rob <rob@pythonemproject.com> <None>
+SUBJ: Linux with a ports collection
+BODY:
+I was thinking that that would be the perfect linux distribution last
+night after trying to get Windowmaker on Mandrake identical to that on
+my FreeBSD partition.  I took me an hour to find rpms, compile stuff
+from sources, etc.  I wonder how hard that would be?  
+
+I don't want to be too hard on Mandrake since it does seem to have some
+nice features, but having a ports collection would be so cool, and so
+much easier for novice users.  
+
+Rob.
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-chat" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 3C93BA80.5D1A9F46@pythonemproject.com
+DATE: 2002-03-16T21:34:56+00:00  FROM: rob <rob@pythonemproject.com> <None>
+SUBJ: Re: Linux with a ports collection
+BODY:
+"Jeremy C. Reed" wrote:
+
+
+Right.  We've got one team of people who work mostly on ports.  It would
+take some time to build that up.  SuSE has a pretty good rpm based
+system called Yast.  I've used it before a few years ago.  Still, I
+would always run into situations where I'd update a package, which then
+needed later libraries, and I'd find that 20 other packages then
+wouldn't run.  Rob.
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-chat" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 4.3.2.7.2.20020316160233.01a698a8@threespace.com
+DATE: 2002-03-16T22:11:57+00:00  FROM: Chip Morton <tech_info@threespace.com> <None>
+SUBJ: Re: Linux with a ports collection
+BODY:
+I think I must be the only FreeBSD user in the world who has never 
+successfully installed a port.  (I use packages with pretty good success 
+though.)  That used to be one of my biggest complaints with FreeBSD in my 
+early days with it--broken packages that broke dependency chains in other 
+packages.  But they still worked better for me than ports.
+
+Fortunately, packages seem to work pretty well nowadays, so I never have to 
+hear another port laughing at me with its cackling error messages any more. :-)
+
+<< Chip Morton >>
+
+
+
+At 03:34 PM 3/16/2002, rob wrote:
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-chat" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 20020509141046.D98098@lpt.ens.fr
+DATE: 2002-05-09T12:10:46+00:00  FROM: Rahul Siddharthan <rsidd@online.fr> <None>
+SUBJ: Re: Finally a Linux with a ports collection
+BODY:
+Joe Warner said on May  9, 2002 at 05:45:03:
+
+I don't think it has a ports-like system.  It seems to be RPM-based.
+
+Rahul
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-chat" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 3CDAFCDD.9CBA774C@attbi.com
+DATE: 2002-05-09T22:49:01+00:00  FROM: Joe Warner <rootman22@attbi.com> <None>
+SUBJ: Re: Finally a Linux with a ports collection
+BODY:
+Rahul Siddharthan wrote:
+
+
+Yes, I noticed that.  Oh well, I've read some good reviews about it,
+nonetheless.
+
+After all, when there's 188+ distributions of Linux out there, you
+should be
+able to find one or two that are decent.  As for me (this is for Terry)
+I'll stick with
+FreeBSD.  ;-)
+
+Joe
+
+
+
+--
+Now I lay me down to sleep
+I pray the double lock will keep;
+May no brick through the window break,
+And, no one rob me till I awake.
+
+
+
+
+==========================================================================================
+DB: freebsd-current.duckdb  hits=60
+==========================================================================================
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-current-3d7360698ed0a72c>
+DATE: 1998-10-14T04:45:11+00:00  FROM: "Ryan Ward" <rward () netcom ! ca> <None>
+SUBJ: Ports and Current
+BODY:
+This is a multi-part message in MIME format.
+
+------=_NextPart_000_0002_01BDF6FB.22AF9B40
+Content-Type: text/plain;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: 7bit
+
+I had mentioned a few days ago I had probs installing ports on a clean
+machine, somehow I got it all fixed now. It was either a manual install of
+the tk/tcl stuff or adding the gtk package that somehow made most of my
+ports fix themselves. Weird, I would have figured that a port would normally
+find out what its missing and add it anyway. Ahh well I'm happy for now.
+
+Ryan
+
+------=_NextPart_000_0002_01BDF6FB.22AF9B40
+Content-Type: application/ms-tnef;
+	name="winmail.dat"
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment;
+	filename="winmail.dat"
+
+eJ8+IgsEAQaQCAAEAAAAAAABAAEAAQeQBgAIAAAA5AQAAAAAAADoAAEIgAcAGAAAAElQTS5NaWNy
+b3NvZnQgTWFpbC5Ob3RlADEIAQ2ABAACAAAAAgACAAEGgAMADgAAAM4HCgANABYALQAAAAIAMQEB
+A5AGACAGAAAnAAAACwACAAEAAAALACMAAAAAAAMAJgAAAAAACwApAAAAAAADADYAAAAAAB4AcAAB
+AAAAEgAAAFBvcnRzIGFuZCBDdXJyZW50AAAAAgFxAAEAAAAWAAAAAb33LW0XJpX6SGLtEdK7LwAQ
+S9J+JQAAAgEdDAEAAAAVAAAAU01UUDpSV0FSREBORVRDT00uQ0EAAAAACwABDgAAAABAAAYOAC5p
+Zi33vQECAQoOAQAAABgAAAAAAAAAalTVLpBM0hG7LwAQS9J+JcKAAAALAB8OAQAAAAMABhBU6VCP
+A
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-current-eeb71fc65afb73c3>
+DATE: 2000-03-06T20:50:57+00:00  FROM: David Gilbert <dgilbert () velocet ! ca> <None>
+SUBJ: ports/net/tund not compiling.
+BODY:
+Looks like some very recent breakage:
+
+cc -O -pipe -g -DDEBUG -DNO_IDEA -static -o tund main.o tund.o secur.o scb.o utils.o md5.o alarm.o cipher.o search.o -L/usr/lib -lmd -lcrypto 
+/usr/lib/libcrypto.a(rsa_lib.o): In function `RSA_new_method':
+rsa_lib.o(.text+0x91): undefined reference to `RSA_PKCS1'
+*** Error code 1
+
+Stop in /usr/ports/net/tund/work/tund-0.20.
+*** Error code 1
+
+Dave.
+
+-- 
+============================================================================
+|David Gilbert, Velocet Communications.       | Two things can only be     |
+|Mail:       dgilbert@velocet.net             |  equal if and only if they |
+|http://www.velocet.net/~dgilbert             |   are precisely opposite.  |
+=========================================================GLO================
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-current-7931dfad611c6f95>
+DATE: 2000-05-08T19:53:18+00:00  FROM: "David O'Brien" <obrien () FreeBSD ! ORG> <None>
+SUBJ: Re: make release failure during ports
+BODY:
+On Sun, May 07, 2000 at 07:15:56PM -0400, John W. DeBoskey wrote:
+
+This belongs in ports@freebsd.org, NOT current@freebsd.org
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-current-dfffa123ecf81861>
+DATE: 2000-10-04T01:26:28+00:00  FROM: Neil Blakey-Milner <nbm () mithrandr ! moria ! org> <None>
+SUBJ: Re: Updating ports
+BODY:
+[ -> -ports ]
+
+On Tue 2000-10-03 (18:51), Leif Neland wrote:
+
+This really is an issue for ports@, not current@.
+
+We've had a long discussion on this, and not much has come out of it
+yet, but I imagine that it just needs some time to simmer at a low heat
+before some deep-frying. (:
+
+So far, we've identified (or, rather, some people have suggested) that
+we need relative versioning and virtual packages, so we've covered your
+suggestions.
+
+My "accurate" versioning stuff has come in (epoch, revision, just like
+Debian), and it'll take some time more for someone to supply and review
+the code for the others.  I believe Satoshi is reviewing a port of the
+NetBSD relative versioning stuff at the moment.  Virtual packages are an
+interesting thing, I don't believe there's code available for it, but it
+should be easy enough.
+
+Luckily, it seems things are progressing, and that the creative juices
+are flowing again.  Will has a talk which includes stuff based loosely
+on some suggestions of mine from way-back, which he'll give at BSDcon
+(hopefully I can make it), and that will probably be a good
+brain-storming starter.
+
+So, things are looking up.  I can't actually remember why I replied to
+this, ot
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-current-eab876d2ca6fffd8>
+DATE: 2000-11-14T18:45:42+00:00  FROM: Daniel Eischen <eischen () vigrid ! com> <None>
+SUBJ: Re: OpenH323 Core Dumps and gdb reports ptrace(PT_GETDBREGS)
+BODY:
+On Tue, 14 Nov 2000, Roger Hardiman wrote:
+
+I was suppose to look at this problem and I forgot to get
+back to you about it.  I wasn't able to reproduce this
+under a -current built over the weekend (fresh kernel also).
+
+-- 
+Dan Eischen
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: 19970703122520.11033@mi.uni-koeln.de
+DATE: 1997-07-03T10:25:20+00:00  FROM: Stefan Esser <se@FreeBSD.ORG> <None>
+SUBJ: Re: PCI-ISA bridge & sio ports
+BODY:
+[ CC: trimmed to freebsd-current only ]
+
+On Jul 2, Steven Wallace <swallace@ece.uci.edu> wrote:
+
+This is quite surprising!
+If the BIOS did not disable the builtin ports,
+then they ought to respond to the ISA probe, 
+and there is no further kernel support required!
+
+
+The recognizing of chipsets is just required to 
+display some chipset configuration registers in
+the verbose boot case. Only systems with more 
+than one gost to PCI bridge (some PPro boards)
+require actual code to support the PCI probe on
+the second and further directly attached PCI bus.
+This deos not apply to the P55XUW, and did only
+affect PCI probes, anyway ...
+
+
+I think I commited patches to identify all four 
+"functions" present in the TX chipset, a few weeks
+ago, but only to the -current branch.
+
+
+This is weird! The SIO's were not found by the ISA
+probe, and you may want to put some debugging printfs
+into the probe, in order to understand where it fails.
+
+TX boards have been sold for more than half a year,
+and I'm sure there is no problem in general, or it
+had been reported months ago ...
+
+I don't think that your problem is PCI related, but
+will give any support you need, within the (narrow) 
+limits of my spare ti
+
+--------------------------------------------------------------------------------
+MID: 19970802122332.51323@klemm.gtn.com
+DATE: 1997-08-02T10:23:32+00:00  FROM: Andreas Klemm <andreas@klemm.gtn.com> <None>
+SUBJ: Re: ports-current/packages-current discontinued
+BODY:
+On Sat, Aug 02, 1997 at 02:27:25AM -0700, Satoshi Asami wrote:
+
+Hmmm, words like "if it ain�t broken, don�t fix it".
+
+The whole thing intorduces new words an phrases as "ports-stable"
+removes well known things like ports-current.
+
+Wouldn�t it be simpler to keep things as they are and to 
+consolidate on a basis, that makes it again possible for
+you so as if nothing bad has happened ? ;-)
+
+
+Shouldn�t we then wait for an agreement without changing
+things or do you want to push the discussion forward by
+introducing ports-stable ?
+
+
+I think FreeBSD doesn�t have to use both scripting languages.
+Perl is _the_ straight forward enhancement of sh & Co., so
+that it should be ok to write utilities based on this.
+
+Desktop Managament systems or administration tool could be
+as well packaged as port with a proper dependency to the
+correct TCL/TK version.
+
+During system installation you could ask if the user wants
+to install the foo/bar administration tool package 
+and FreeBSD would be purified from the bloat of huge
+"work in progress" packages ...
+
+
+See above, I�d vote now to remove TCP completely after seeing
+that results.
+
+
+Thanks for your and all the others most valueable work.
+
+My big wish wou
+
+--------------------------------------------------------------------------------
+MID: 15386.870546758@time.cdrom.com
+DATE: 1997-08-02T18:32:38+00:00  FROM: "Jordan K. Hubbard" <jkh@time.cdrom.com> <None>
+SUBJ: Re: ports-current/packages-current discontinued 
+BODY:
+
+What most people here don't understand is that there was very fierce
+debate about this behind the scenes for some time before it was done,
+and what started as a TCL debate blew up into a whole "should FreeBSD
+have everything unbundled, from the compilers to perl, or should it
+bundle all the high level tools so that other system tools can be
+written which depend on them?" sort of fracas.  One man's useful tool
+is another man's wasteful, unnecessary bloat, it seems, and rather
+than see an anti-bloatist campaign which would have led to the removal
+of tcl, perl, xntpd, tn3270 and a host of other utilities which are
+currently not deemed "essential" by the anti-bloatists, I think it was
+sort of deemed the lesser of two evils to just let the bloatists win
+the TCL debate.
+
+At least that's how I see it from my perspective - frankly, after the
+debate in question was over (which, again, most people here were
+spared), I decided I didn't even want to think about the issue for
+awhile and that's why I've been silent in the face of Satoshi's
+impassioned pleas - I don't want to go back to the bargaining table
+and have to decide which utilities will get the axe.
+
+Once you start with TCL, it will *n
+
+--------------------------------------------------------------------------------
+MID: 16126.870554662@time.cdrom.com
+DATE: 1997-08-02T20:44:22+00:00  FROM: "Jordan K. Hubbard" <jkh@time.cdrom.com> <None>
+SUBJ: Re: ports-current/packages-current discontinued 
+BODY:
+[Please trim your cc's - this is getting out of control]
+
+
+This argument is hardly likely to win many points.
+
+If this matter is to be concluded reasonably then it's going to be
+because the principals involved agreed to sit down and discuss it
+*rationally*.  Demanding that people do things "now" is just fanning
+the flames and bringing yet more onwonted emotion to an already
+overly-emotional issue.
+
+In other words, Donald, you're not being part of the solution, you're
+being part of the problem.  Either change that aspect of your debating
+style or kindly stay out of the discussion since you're not helping.
+
+					Jordan
+
+
+
+--------------------------------------------------------------------------------
+MID: 19970802165908.37359@scsn.net
+DATE: 1997-08-02T20:59:08+00:00  FROM: "Donald J. Maddox" <root@scsn.net> <None>
+SUBJ: Re: ports-current/packages-current discontinued
+BODY:
+On Sat, Aug 02, 1997 at 01:44:22PM -0700, Jordan K. Hubbard wrote:
+
+    Jordan, that seems to be in direct contradiction to your last
+email to me on this matter.  Seems to me you were stating specifically
+that this issue was a _very emotional_ one, and it seemed that you put
+a lot of value on this emotional aspect.  It was I who was arguing that
+this should be considered in a more rational fashion.
+
+
+I'm sorry you see it that way, Jordan.  I have simply endured too many of
+these ego-wars amongst core-members to remain silent through this one.  I
+cannot see how any reasonable person cannot see at this point that having
+tcl in the base distribution was a rather MAJOR mistake from square one,
+and I, for one, am disgusted that people who I _used_ to have some measure
+of respect for could be so moved by ego alone to allow this situation to
+continue.
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 199708022133.HAA14498@unique.usn.blaze.net.au
+DATE: 1997-08-02T21:33:39+00:00  FROM: David Nugent <davidn@unique.usn.blaze.net.au> <None>
+SUBJ: Re: ports-current/packages-current discontinued 
+BODY:
+[..]
+
+Yes, yes, yes. But all completely besides the point.
+
+I don't care one way or another about "bloat". It is irrelevent
+to the point I was making. "Bloat" is subjective, as you point out,
+but it has nothing to do with how tools are updated and integrated
+into the system. Tools which are imported into the base system are
+*necessarily* more static, because of the very real concerns that
+have caused problems here. They won't change as often, they can't
+change as often, else we should by rights be carefully following
+perl development IN THE SOURCE TREE rather than having not only an
+obsolete version of perl, one completely unsupported and with
+seriously security bugs, and one which hardly anyone uses anyway.
+Tcl, until this apparently unpopular import, was at least in a
+better position than that.
+
+I've said before that perl4 must die. I don't particularly care
+whether it is imported into the source tree or left as a port.
+It is stale, it is old, it is obsolete and completely unsupported.
+It has bugs, limitations and security holes. It must go. Period.
+My only concern about importing a current version into the source
+tree is the same as tcl - what guarantees are there that this will
+
+--------------------------------------------------------------------------------
+MID: 16478.870558484@time.cdrom.com
+DATE: 1997-08-02T21:48:04+00:00  FROM: "Jordan K. Hubbard" <jkh@time.cdrom.com> <None>
+SUBJ: Re: ports-current/packages-current discontinued 
+BODY:
+
+No, I was stating that this was a *problem* in this discussion and
+that debating it on purely technical terms would miss that crucial
+point, not that emoting had some intrinsic value in this debate.  I
+was in no way trying to suggest that you should get all emotional in
+turn - stick to your technical points, please. :-)
+
+
+Yes, and that's your opinion.  Others have dissenting opinions or
+there would be no debate here.  I'm just trying to make the point that
+pounding on the desk with your shoe is no way to bring the other side
+into agreement.
+
+					Jordan
+
+
+
+--------------------------------------------------------------------------------
+MID: 19970802184536.51442@scsn.net
+DATE: 1997-08-02T22:45:36+00:00  FROM: "Donald J. Maddox" <root@scsn.net> <None>
+SUBJ: Re: ports-current/packages-current discontinued
+BODY:
+On Sat, Aug 02, 1997 at 02:48:04PM -0700, Jordan K. Hubbard wrote:
+
+    How can one stick to the technical points while simultaneously
+somehow implicitly acknowledging that this is not strictly a technical
+issue?  I don't know enough linguistic contortions to manage an email
+like that.
+
+
+    Agreed, emphatically...  But there _was_ no debate on this issue, at
+least none in a public forum.  Tcl8.x just appeared out of nowhere.
+(Actually, just prior to this, I was laboring under the apparent misap-
+prehension that tcl was finally about to be removed from the base
+distibution.)
+
+
+
+--------------------------------------------------------------------------------
+MID: 16924.870565825@time.cdrom.com
+DATE: 1997-08-02T23:50:25+00:00  FROM: "Jordan K. Hubbard" <jkh@time.cdrom.com> <None>
+SUBJ: Re: ports-current/packages-current discontinued 
+BODY:
+
+I never said it would be easy. :-)
+
+
+I think it's an acknowledged point that this could have been handled a
+lot better, and it's my hope that we can still come to some agreement
+as to how to handle this now, I'm just trying to keep everyone's back
+fur reasonably smoothed down in the meantime or we're only going to
+spend the next week shouting at one another.  Take it from someone with
+far too much experience with the latter.
+
+					Jordan
+
+
+
+--------------------------------------------------------------------------------
+MID: 17040.870566767@time.cdrom.com
+DATE: 1997-08-03T00:06:07+00:00  FROM: "Jordan K. Hubbard" <jkh@time.cdrom.com> <None>
+SUBJ: Re: ports-current/packages-current discontinued 
+BODY:
+[Trimmed to -current - PLEASE watch those cc lines, folks!  We're all
+ getting unforgivably sloppy here]
+
+
+OK, these are all good questions.  I will attempt to answer some
+of them.
+
+1. TCL needs, *at some point* (and note that the current move was
+   rather premature, but let's not debate that here) to be part of
+   the base system so that the installation tools can use it.
+   We do intend on being heavy users of TCL, if not right this minute
+   then in the future.
+
+2. If it were in ports, we'd have a build problem since you wouldn't
+   be able to build /usr/src/usr.sbin/setup (not existant yet, but
+   it will be) without first building and installing a port.  This
+   would break the world target.
+
+Now the obvious "answer" is to somehow integrate ports with things
+that depend on it in /usr/src (I'm assuming that we'd also bite the
+bullet with perl and that things like adduser would also have this
+problem), but the question is how?  Where do the distfiles live?  How
+does the world target jump from src to ports in building a "complete"
+system with all the trimmings?  How does this effect how we distribute
+ports and on which CD(s) the various files live?  Most people only
+have one dri
+
+--------------------------------------------------------------------------------
+MID: 199708030052.KAA17855@unique.usn.blaze.net.au
+DATE: 1997-08-03T00:52:41+00:00  FROM: David Nugent <davidn@unique.usn.blaze.net.au> <None>
+SUBJ: Re: ports-current/packages-current discontinued 
+BODY:
+
+No, wrong answer, imho. This makes things way too complex.
+
+I already suggested a better solution to this a few weeks ago
+in private email, in which I cc'd you. The discussion, if you
+recall it (I never saw any reply from you, so I can only
+assume you read it) was originally about ncurses. It seems
+that ncurses is used by libdialog, and the only thing that
+seems to use either in our tree is sysinstall. Our ncurses is
+at version 1.8.4 dated October 1994, yet the current vendor
+version is 4.1. Again, we have this disparity of release
+schedules that John mentioned. And worse, because it isn't
+being actively maintained, it gets mouldy and ports depending
+on libncurse run into problems (ever tried installing a newer
+version of ncurses? I have, and it ain't pretty).
+
+I suggest that sysinstall and the release tools do not belong
+under src/ in the repository. They belong in a separate place,
+say "release/", and don't even need to track the same CVS tags.
+95% of the commits you do on sysinstall are to all three
+branches, which I'm sure must be a headache for you. Certainly,
+the target for sysinstall needs to be modified based on release
+version, but you can handle this using makefile and p
+
+--------------------------------------------------------------------------------
+MID: 970802224942_-356235525@emout04.mail.aol.com
+DATE: 1997-08-03T02:49:43+00:00  FROM: StevenR362@aol.com <None>
+SUBJ: Re: ports-current/packages-current discontinued 
+BODY:
+In a message dated 97-08-02 20:24:04 EDT, jkh@time.cdrom.com (Jordan K.
+Hubbard) writes:
+
+
+  Basically, the same thing that was done recently with the Handbook and
+it's tool dependencies needs to be done with the install tools.  You
+move as much as is practical out of the /usr/src/release directories into a
+separate hierarchy.  The new setup tool should be written in such a generic
+data driven manner that it can install all existing versions of FreeBSD or
+any future version by just updating some configuration files.  These files 
+can be put in /usr/share/examples just like cvsup does. 
+
+In fact, now that I think of it cvsup would be a great model for a
+setup/install
+tool.  Maybe you should twist John Polstra's arm to write the new setup tool
+in Modula 3 ;) and No it should not be added to the base system.  Then we 
+can rip both perl and tcl out of the base system.
+
+The true perl afficionados surely can't be using version 4.36 can they?
+Nor does anything currently depend on tcl in the base system.  An
+install/setup tool truly does not need to be part of the base system either.
+It fits quite well in /stand and is very static for a specific release.
+
+Again, cvsup is a perfect example 
+
+--------------------------------------------------------------------------------
+MID: 199708031211.FAA01496@blimp.mimi.com
+DATE: 1997-08-03T12:11:11+00:00  FROM: asami@cs.berkeley.edu (Satoshi Asami) <None>
+SUBJ: Re: ports-current/packages-current discontinued
+BODY:
+ * From: David Nugent <davidn@unique.usn.blaze.net.au>
+
+This post contains most of what I wanted to say, so let me just quote
+the relevant points and add a useless "me too !" message to the
+debate. :)
+
+ * I don't care one way or another about "bloat". It is irrelevent
+ * to the point I was making.
+
+Me too.  I have gobs of disk space (I just got a 9GB drive as a
+replacement as a 4GB drive...gotta love those folks at Quantum :).
+What I'm concerned is consistency, manageability, timeliness, etc.
+
+ * The ports system, in spite of its faults and shortfalls, *works*,
+ * and works extremely well, mainly because of the efforts of porters
+ * and Satoshi's management. But I hardly need to point this out to
+
+You can also include Jordan for coming up with the idea and
+implementing it first.  (And as usual, when Americans make something,
+a Japanese (me) comes in to improve the product. :)
+
+ * 							 That
+ * point of view misses the issue entirely. tcl is a major headache
+ * in terms of multiple version operability. 
+
+Yes.  I should have yelled louder when tcl75 went in -- if I haven't
+read Prof. Ousterhout's release notes to tcl74/tk40 that he "made some 
+mistakes, and wanted to correct them b
+
+--------------------------------------------------------------------------------
+MID: 199708032035.WAA03286@sos.freebsd.dk
+DATE: 1997-08-03T20:35:44+00:00  FROM: S�ren Schmidt <sos@sos.freebsd.dk> <None>
+SUBJ: Re: ports-current/packages-current discontinued
+BODY:
+In reply to Jordan K. Hubbard who wrote:
+
+Wrong/bad arguments!
+
+
+Setup belongs in release/ which is not build by default anyways, and
+only has interest for people building their own releases.
+You can move release/ off to ports or whatever for all I care, those
+interested in building a release will also know howto get the tools
+etc for it (if not, let them die silently :) )
+This stuff is NOT needed for normal system use, just during install.
+And for the libs, build setup statically :)
+
+So the reason for bringing in TCL is invalid..
+(almost the same applies to perl)
+
+
+If they can afford to pull down the (by then) HUGE base system,
+they could also afford to pull down the needed packages, in fact
+that would need alot less space...
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+S�ren Schmidt               (sos@FreeBSD.org)               FreeBSD Core Team
+                Even more code to hack -- will it ever end
+..
+
+
+
+--------------------------------------------------------------------------------
+MID: 199708032125.OAA02340@phaeton.artisoft.com
+DATE: 1997-08-03T21:25:46+00:00  FROM: Terry Lambert <terry@lambert.org> <None>
+SUBJ: Re: ports-current/packages-current discontinued
+BODY:
+
+I thought you were going to skip TCL and go directly to JAVA?
+
+;-).
+
+
+					Terry Lambert
+					terry@lambert.org
+---
+Any opinions in this posting are my own and not those of my present
+or previous employers.
+
+
+
+--------------------------------------------------------------------------------
+MID: 199708040209.MAA11849@unique.usn.blaze.net.au
+DATE: 1997-08-04T02:09:10+00:00  FROM: David Nugent <davidn@unique.usn.blaze.net.au> <None>
+SUBJ: Re: ports-current/packages-current discontinued 
+BODY:
+Received: from genesis.atrad.adelaide.edu.au (genesis.atrad.adelaide.edu.au [129.127.96.120])
+	by unique.usn.blaze.net.au (8.8.6/8.8.5) with ESMTP id SAA24354
+	for <davidn@unique.usn.blaze.net.au>; Sun, 3 Aug 1997 18:33:52 +1000 (EST)
+Received: (from msmith@localhost) by genesis.atrad.adelaide.edu.au (8.8.5/8.7.3) id SAA13424; Sun, 3 Aug 1997 18:03:49 +0930 (CST)
+From: Michael Smith <msmith@atrad.adelaide.edu.au>
+Message-Id: <199708030833.SAA13424@genesis.atrad.adelaide.edu.au>
+Subject: Re: ports-current/packages-current discontinued
+In-Reply-To: <199708030052.KAA17855@unique.usn.blaze.net.au> from David Nugent at "Aug 3, 97 10:52:41 am"
+To: davidn@usn.blaze.net.au (David Nugent)
+Date: Sun, 3 Aug 1997 18:03:49 +0930 (CST)
+Cc: current@FreeBSD.ORG
+X-Mailer: ELM [version 2.4ME+ PL28 (25)]
+MIME-Version: 1.0
+Content-Type: text/plain; charset=US-ASCII
+Content-Transfer-Encoding: 7bit
+
+
+Ok, fair enough. I had assumed that this integration would involve
+make dependancies. I'm not entirely sure how an external tool could
+handle it, but I've enough exposure to know that any solution here
+would involve considerably more "splitting" of the system into more
+components.
+
+In any case, I *still* th
+
+--------------------------------------------------------------------------------
+MID: 199708040235.MAA12257@unique.usn.blaze.net.au
+DATE: 1997-08-04T02:35:05+00:00  FROM: David Nugent <davidn@unique.usn.blaze.net.au> <None>
+SUBJ: Re: ports-current/packages-current discontinued 
+BODY:
+
+Ok. I hope my own whinging isn't being interpreted as
+"yelling". I'm really just trying to raise the issues involved
+and actually discuss it "rationally", if such is possible.
+
+You mentioned earlier that moving release into its own
+top-level tree would be a problem, but other than having to
+get users (the very very small minority of whom need to build
+their own sysinstall or package a release) to cvsup a
+"release-all" distribution, I see that movement as a major win
+with a very large number of users. This is simple cost vs.
+benefit. IMHO, this is probably bogus anyway - we already
+handle "secure", "eBones" and other similar distributions in a
+manner that users can seem to get a handle on without too many
+problems. Adding a distribution into an existing cvsup file
+takes 5 seconds, and most of that is waiting for /usr/bin/vi
+to load. :)
+
+If/when sysinstall experiences the metamorphasis that you
+mentioned into one or more administrative tools, perhaps it is
+better to leave it there under src. Or maybe not, I'm not so
+sure that these tools will have to be bound to releases and
+CVS tags and that, like sysinstall, they track the entire
+system regardless of branch. Please, think about it
+
+--------------------------------------------------------------------------------
+MID: 199708040236.MAA17045@genesis.atrad.adelaide.edu.au
+DATE: 1997-08-04T02:36:26+00:00  FROM: Michael Smith <msmith@atrad.adelaide.edu.au> <None>
+SUBJ: Re: ports-current/packages-current discontinued
+BODY:
+David Nugent stands accused of saying:
+
+The splitting of the system allows users and installers a degree of 
+latitude in configuring the system, but it also provides the developers
+with more latitude in maintaining and coordinating the software set.
+
+
+The core issues have actually been completely ignored by most of the 
+respondents.  The need for better management tools is one, the other
+and one which has received even _less_ consideration is the need to
+make the ports collection stand _independantly_ of the base system.
+
+ie. it should make _minimal_ assumptions about what it's running on/with,
+and satisfy any dependancy requirements internally.  This would actually
+make the maintainers' job _easier_.
+
+
+Debian is a primitive version of what I _still_ suggest you go and look
+at.  Please?
+
+
+RedHat's model is IMHO too shallow and inflexible; we need to do better
+than that.
+
+-- 
+]] Mike Smith, Software Engineer        msmith@gsoft.com.au             [[
+]] Genesis Software                     genesis@gsoft.com.au            [[
+]] High-speed data acquisition and      (GSM mobile)     0411-222-496   [[
+]] realtime instrument control.         (ph)          +61-8-8267-3493   [[
+]] Unix hard
+
+--------------------------------------------------------------------------------
+MID: Pine.BSF.3.96.970803193617.5004C-100000@shell.uniserve.com
+DATE: 1997-08-04T02:47:00+00:00  FROM: Tom <tom@uniserve.com> <None>
+SUBJ: Re: Make this a relese coordinator decision (was Re: ports-current/packages-current discontinued)
+BODY:
+
+On Mon, 4 Aug 1997, Michael Smith wrote:
+
+
+  No.  We are talking about application level stuff here.  Unless you are
+changing an API, how could you break applications?
+
+  Also, your arguement has nothing to do with the ports-current vs.
+ports-stable debate.  Either way something is going to be broken.
+
+  Also, developers have never been required to test ports.  It is silly to
+suggest that anyone is requiring you to test ports.
+
+  Let's look at some real examples:  most ports don't build under 2.1.7.1.
+Why?  Mainly due to difference in bsd.port.mk, and "install" (grew some
+new flags in 2.2).  Many of the ports will build on 2.1 with a new
+"install" and bsd.port.mk.  It is easy to predict that changes to
+bsd.port.mk and "install" ports.
+
+
+Tom
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 199708040357.VAA26238@rocky.mt.sri.com
+DATE: 1997-08-04T03:57:16+00:00  FROM: Nate Williams <nate@mt.sri.com> <None>
+SUBJ: Re: ports-current/packages-current discontinued 
+BODY:
+
+Blew up into 'TCL belongs as much as PERL in the base system, and
+utilities are being written and will be in the tree in the next couple
+of months which are being asked for.'
+
+revision 1.1
+date: 1996/06/26 17:48:13;  author: phk;  state: Exp;
+Bmaked tcl 7.5
+
+Hmm, it's August (well over a year later), and there are still *NO*
+programs that use TCL in the base distribution.
+
+The big arguement moved into 'should FreeBSD be more modularized', but
+the anti-bloatist asceded that as long as programs in the base
+distribution used PERL/TCL/libdialog/etc..., then they should be part of
+the base system, otherwise they belong outside.
+
+TCL should go, and PERL should go *WHEN* those programs in the base
+distribution are not considered part of the base distribution or are
+re-written to not use PERL.
+
+TCL has no part in the base distribution, and I've heard 'the programs
+which will use it will be here 'Real Soon Now' for 14 months now.
+
+
+
+Nate
+
+
+
+--------------------------------------------------------------------------------
+MID: 199708040403.WAA26268@rocky.mt.sri.com
+DATE: 1997-08-04T04:03:51+00:00  FROM: Nate Williams <nate@mt.sri.com> <None>
+SUBJ: Re: ports-current/packages-current discontinued 
+BODY:
+
+When?  Why don't we bring it into the system *AFTER* it's needed, like
+we've done with everything else?  (Like, show me the working system, and
+then I'll believe that it works.  *SHOW ME THE SYSTEM*)
+
+
+I don't see setup in the tree?
+
+
+Let's have the problem actually be something that's *real*, because up
+till this point it's all been 'hypothetically speaking, if TCL were to
+be used like we plan on it being.'  TCL has been the 'Cairo release of
+WinNT' of FreeBSD for a long time.  Lots of noise and smoke, but little
+substance.
+
+
+nate
+
+
+
+--------------------------------------------------------------------------------
+MID: Pine.BSF.3.96.971227214039.8511B-100000@opus.cts.cwu.edu
+DATE: 1997-12-28T06:42:31+00:00  FROM: Chris Timmons <skynyrd@opus.cts.cwu.edu> <None>
+SUBJ: NFS/VM hang: build xemacs20 on nfs mounted /usr/ports
+BODY:
+
+I have a 2.2-STABLE nfs server which my -current machine mounts
+[rw,-2,-i,soft,bg] /usr/ports from.
+
+Reliably the build of ports/editors/xemacs20 hangs the -current machine
+after a temacs has been built and all of the lisp files have been
+recompiled - at the point where it says:
+  
+	 Dumping under the name xemacs
+	 Purespace usage: 705416 of 705928 (100%)
+
+Although this hangs the machine, the operation is completed successfully
+before the walls fall and once the system is restored the build of
+xemacs20 can be continued and completed properly. 
+
+-Chris
+
+#0  boot (howto=260) at ../../kern/kern_shutdown.c:285
+#1  0xf0118a4f in panic (fmt=0xf01013d9 "from debugger") at
+../../kern/kern_shutdown.c:425
+#2  0xf01013f5 in db_panic (dummy1=-266465635, dummy2=0, dummy3=1,
+dummy4=0xf3fadb2c "") at ../../ddb/db_command.c:440
+#3  0xf01012e5 in db_command (last_cmdp=0xf0207ac4, cmd_table=0xf0207914,
+aux_cmd_tablep=0xf022fb88) at ../../ddb/db_command.c:337
+#4  0xf0101462 in db_command_loop () at ../../ddb/db_command.c:462
+#5  0xf0103b23 in db_trap (type=3, code=0) at ../../ddb/db_trap.c:71
+#6  0xf01cb001 in kdb_trap (type=3, code=0, regs=0xf3fadc18) at
+../../i386/i386/db_interface.c:157
+#7  0xf01
+
+--------------------------------------------------------------------------------
+MID: Pine.SUN.3.95.971227232405.14907B-100000@tesla-fe0
+DATE: 1997-12-28T07:28:35+00:00  FROM: Tom Bartol <bartol@salk.edu> <None>
+SUBJ: Re: NFS/VM hang: build xemacs20 on nfs mounted /usr/ports
+BODY:
+
+I just had the same thing happen to me on the 23rd except that I could not
+complete the build after rebooting.  I was also building in an NFS-mounted
+/usr/ports dir and it hung at exactly the same point.  Looks like more NFS 
+garbling again.  I was in X at the time so I couldn't get into DDB to get
+a crash post-mortem.
+
+Tom
+
+
+On Sat, 27 Dec 1997, Chris Timmons wrote:
+
+
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 19980601210415.48779@follo.net
+DATE: 1998-06-01T19:04:15+00:00  FROM: Eivind Eklund <eivind@yes.no> <None>
+SUBJ: Re: How about /usr/ports/kernel ?
+BODY:
+On Mon, Jun 01, 1998 at 06:31:33AM -0500, Richard Wackerbarth wrote:
+
+This blows my present cross-builds (to 2.2) away, at least.  Not good,
+as that probably means that it blows other people's builds, too.
+
+I proposed something similar to this as a solution for mknod - jkh
+shot me down (and with good reason, I might add).  We need something
+that don't blow away our users - which I believe unfortunately mean
+we'll need to build compatibility into config for a while :-(
+
+
+This doesn't mesh with the use of 'SUBDIR' presently.  Possibly we
+could add a 'beforesubdir' target that are responsible for making sure
+there are a subdir in either ${.OJDIR} or ${.CURDIR}, but I'm not
+certain how easy this will be.  Something like the patches at the end
+_might_ work (but is completely untested).
+
+Now, to be able to do this with config files located other places that
+sys/<arch>/conf, we need to be able to specify different paths for the
+kernel config, and for the destination directory.  Patches to
+usr.sbin/config is at the end (compiles, but otherwise untested).
+
+This leaves us with a fairly simple sys/compile/Makefile, something
+like the following (again, completely untested):
+
+# Copyright (C) 19
+
+--------------------------------------------------------------------------------
+MID: 86r9f9lq6w.wl@localhost.local.idaemons.org
+DATE: 2000-01-22T22:03:19+00:00  FROM: Akinori MUSHA aka knu <knu@idaemons.org> <None>
+SUBJ: Re: bzip2 in src tree (Was Re: ports/16252: bsd.port.mk: Add bzip2 support for distribution patches)
+BODY:
+At Sat, 22 Jan 2000 12:42:55 -0500 (EST),
+Chuck Robey <chuckr@picnic.mat.net> wrote:
+
+Hmm... seems NetBSD folks already have bzip2 in their source tree,
+while OpenBSD folks not. Then how about us?
+
+IMHO, bzip2 tarballs are increasing in number out there because each
+software is growing bigger and bigger nowadays, and thus in great
+demand is the better compression: i.e. bzip2 rather than gzip.
+
+I don't think we should compress everything with bzip2 instead of
+gzip, however, I believe we'd better have bunzip2 by default as there
+are many software which both *.gz and *.bz2 are provided for download,
+such as Lynx, WindowMaker, GIMP, KDE and Linux kernel.
+
+Yes, they are pretty big enough to see the difference between two...
+
+			.tar.bz2	.tar.gz
+lynx2.8.2rel1		 1.4MB		 1.8MB
+WindowMaeker 0.61.1	 1.6MB		 1.9MB
+gimp-1.1.13		 6.2MB		 8.0MB
+kdebase-1.1.2		 7.0MB		 8.9MB
+linux-2.2.14		12.3MB		15.2MB
+
+It's crystal clear bzip2 wins in these cases. and far enough.
+
+-- 
+                     /
+                    /__  __
+                   / )  )  ) )  /  http://www.idaemons.org/knu/
+Akinori MUSHA aka / (_ /  ( (__(   mailto:knu@idaemons.org
+
+"We are but hungry..  Associated Ita-meshi Daemons!"
+  
+
+--------------------------------------------------------------------------------
+MID: 20000123004700.E18600@daemon.ninth-circle.org
+DATE: 2000-01-22T23:47:00+00:00  FROM: Jeroen Ruigrok/Asmodai <asmodai@wxs.nl> <None>
+SUBJ: Re: bzip2 in src tree (Was Re: ports/16252: bsd.port.mk: Add bzip2 support for distribution patches)
+BODY:
+-On [20000123 00:01], Akinori MUSHA aka knu (knu@idaemons.org) wrote:
+
+Then look at the memory overhead caused by bzipping versus gzipping and
+you'll loose.
+
+Anyways, we have had this discussion a few times in the past.
+
+Lets consult the archives and see what the reason was why we didn't do
+it back then.
+
+I am in favor with Chuck here.  Its fine as it is, as a port.
+
+-- 
+Jeroen Ruigrok vd W/Asmodai         asmodai@[wxs.nl|bart.nl|freebsd.org]
+Documentation nutter/B-rated Coder BSD: Technical excellence at its best  
+The BSD Programmer's Documentation Project <http://home.wxs.nl/~asmodai>
+Ain't gonna spend the rest of my Life, quietly fading away...
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 20000123223157.C81122@saturn.kn-bremen.de
+DATE: 2000-01-23T21:31:57+00:00  FROM: Juergen Lock <nox@jelal.kn-bremen.de> <None>
+SUBJ: Re: bzip2 in src tree (Was Re: ports/16252: bsd.port.mk: Add bzip2 support for distribution patches)
+BODY:
+On Sun, Jan 23, 2000 at 03:01:23PM -0500, Chuck Robey wrote:
+
+Oh, the original poster wasn't me.  And how `critical' the
+capabilities of the kernel on the install floppy are is debatable
+i'd say.  (Of course you probably could make a seperate one for
+pppoe installs by leaving out other things in that, and for fixit
+just make your own boot floppy...  but both of these at least make
+things more complicated for the newbies.)
+
+ Regard,
+-- 
+Juergen Lock <nox.foo@jelal.kn-bremen.de>
+(remove dot foo from address to reply)
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 20000123213022.B44712@dragon.nuxi.com
+DATE: 2000-01-24T05:30:23+00:00  FROM: "David O'Brien" <obrien@FreeBSD.ORG> <None>
+SUBJ: Re: bzip2 in src tree (Was Re: ports/16252: bsd.port.mk: Add bzip2 support for distribution patches)
+BODY:
+On Sun, Jan 23, 2000 at 08:21:12PM +0100, Dag-Erling Smorgrav wrote:
+
+Taking my 243662 KB ~/Mail:
+
+    gzip -9 every file:         80420 KB
+    bzip2 -9 every file:        70034 KB
+    tar ~/Mail and gzip -9:     78840 KB    (4m37s)
+    tar ~/Mail and bzip2 -9:    68960 KB    (14m29s)
+
+Who cares if it took longer, I enjoy the better compression and I'm not
+running Winloose, so I actually *CAN* run this in the background.  I
+certainly was not idle while Bzip2 was compressing.
+
+
+
+Feh.  Your opinion.  Why is it stupid?  When is the cost of transfer not
+high?  Most at home only have 53Kbps download speed.  I can start the
+compression of what I want to take home before I leave the lab, by the
+time I'm home, it is done and I start the download.
+
+I Bzip2 *everything*.  When I moved to Bzip2 a year ago, I bzip2'ed and
+gzip'ed every to keep the smaller of the two.  Only 2% of my bzip2'ed
+files were larger.  I don't ever bother comparing anymore.
+
+
+Lets look at the Ports distfiles on the FreeBSD CDROM:
+
+I grabbed a few -- the kde stuff, GCC, qt, rxvt, tin, xchat:
+    the BZIP'ed versions = 35625 Kbytes
+    the GZIP'ed versions = 47593 Kbytes
+a savings of 11MB on a small sample size.  The 3.1
+
+--------------------------------------------------------------------------------
+MID: 14532.6705.973327.980984@trooper.velocet.net
+DATE: 2000-03-06T20:50:57+00:00  FROM: David Gilbert <dgilbert@velocet.ca> <None>
+SUBJ: ports/net/tund not compiling.
+BODY:
+Looks like some very recent breakage:
+
+cc -O -pipe -g -DDEBUG -DNO_IDEA -static -o tund main.o tund.o secur.o scb.o utils.o md5.o alarm.o cipher.o search.o -L/usr/lib -lmd -lcrypto 
+/usr/lib/libcrypto.a(rsa_lib.o): In function `RSA_new_method':
+rsa_lib.o(.text+0x91): undefined reference to `RSA_PKCS1'
+*** Error code 1
+
+Stop in /usr/ports/net/tund/work/tund-0.20.
+*** Error code 1
+
+Dave.
+
+-- 
+============================================================================
+|David Gilbert, Velocet Communications.       | Two things can only be     |
+|Mail:       dgilbert@velocet.net             |  equal if and only if they |
+|http://www.velocet.net/~dgilbert             |   are precisely opposite.  |
+=========================================================GLO================
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 3916015D.569FF421@otter.cc
+DATE: 2000-05-07T23:50:53+00:00  FROM: Otter <otter@otter.cc> <None>
+SUBJ: Re: make release failure during ports
+BODY:
+"John W. DeBoskey" wrote:
+
+John, 
+Would this have anything to do with the ports upgrade recently? I
+notice I get errors trying to make some things, so I've just grabbed
+the tarball and done the job myself. I've found someimes I get an
+error:
+
+# make install
+-: You need to define PORTNAME and PORTVERSION instead of PKGNAME.
+(This port is too old for your bsd.port.mk, please update it to match
+ your bsd.port.mk.)
+*** Error code 1
+
+Yeah, I've done the cvsup thing several times, but there are still
+some ports with this error. Should I be pointing them out to port
+maintainers or is this an on-going fix due to the change? I'm not one
+claiming "I know what's going on" as you had hoped. I'm just some putz
+who has had a problem with some ports recently.
+
+-Otter
+./~sig files available for an additional fee; and NO! I don't Yahoo!
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 20000508125318.E52207@dragon.nuxi.com
+DATE: 2000-05-08T19:53:18+00:00  FROM: "David O'Brien" <obrien@freebsd.org> <None>
+SUBJ: Re: make release failure during ports
+BODY:
+On Sun, May 07, 2000 at 07:15:56PM -0400, John W. DeBoskey wrote:
+
+This belongs in ports@freebsd.org, NOT current@freebsd.org
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: Pine.BSF.4.21.0010031843250.43762-100000@arnold.neland.dk
+DATE: 2000-10-03T16:51:24+00:00  FROM: Leif Neland <leifn@neland.dk> <None>
+SUBJ: Updating ports
+BODY:
+
+
+On Sat, 30 Sep 2000, Seigo Tanimura wrote:
+
+Isn't enough information in /var/db/pkg?
+
+Perhaps a level of redirection is needed in the dependencies? (sp?)
+
+Something like the Debian way? 
+Instead of foo-1.23 being required by bar-3.34, bar should just require a
+foo >1.20.
+
+Or even bar requires an xyzzy.
+xyzzy is supplied by fee
+xyzzy is supplied by fie
+Then the user has the option of installing fee or fie.
+
+Leif.
+
+(Who descrambled the message-file for Collossal adventure on his zx81
+converted to cp/m many years ago...) 
+
+
+
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 20001004032628.A74975@mithrandr.moria.org
+DATE: 2000-10-04T01:26:28+00:00  FROM: Neil Blakey-Milner <nbm@mithrandr.moria.org> <None>
+SUBJ: Re: Updating ports
+BODY:
+[ -> -ports ]
+
+On Tue 2000-10-03 (18:51), Leif Neland wrote:
+
+This really is an issue for ports@, not current@.
+
+We've had a long discussion on this, and not much has come out of it
+yet, but I imagine that it just needs some time to simmer at a low heat
+before some deep-frying. (:
+
+So far, we've identified (or, rather, some people have suggested) that
+we need relative versioning and virtual packages, so we've covered your
+suggestions.
+
+My "accurate" versioning stuff has come in (epoch, revision, just like
+Debian), and it'll take some time more for someone to supply and review
+the code for the others.  I believe Satoshi is reviewing a port of the
+NetBSD relative versioning stuff at the moment.  Virtual packages are an
+interesting thing, I don't believe there's code available for it, but it
+should be easy enough.
+
+Luckily, it seems things are progressing, and that the creative juices
+are flowing again.  Will has a talk which includes stuff based loosely
+on some suggestions of mine from way-back, which he'll give at BSDcon
+(hopefully I can make it), and that will probably be a good
+brain-storming starter.
+
+So, things are looking up.  I can't actually remember why I replied to
+this, ot
+
+--------------------------------------------------------------------------------
+MID: 3A1181CE.A99EAB7C@cs.strath.ac.uk
+DATE: 2000-11-14T18:17:50+00:00  FROM: Roger Hardiman <roger@cs.strath.ac.uk> <None>
+SUBJ: OpenH323 Core Dumps and gdb reports ptrace(PT_GETDBREGS)
+BODY:
+Hi
+
+Since cvsup'ing -current box, I've got a port which
+core dumps immediatly.
+
+When I tried to run a debug version of the program under
+GDB I just got this
+
+
+ptrace(PT_GETDBREGS) failed: Operation not permitted
+ptrace(PT_GETDBREGS) failed: Operation not permitted
+Cannot insert breakpoint -1:
+Error accessing memory address 0x28260ea8: Bad address.
+
+
+The port is net/OpenH323 and the program is asnparser.
+(an internal program built by one part of the port and used
+in another part of the port)
+
+I noticed bento (the ports builder) core dumps on asnparser
+too now, so the problem is not just on my machine.
+
+The code runs fine on 4.2-RC and 3.x boxes.
+
+Can someone help work out what is going on.
+
+Cheers
+Roger
+--
+roger@freebsd.org
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: Pine.SUN.3.91.1001114133406.28033A-100000@pcnet1.pcnet.com
+DATE: 2000-11-14T18:45:42+00:00  FROM: Daniel Eischen <eischen@vigrid.com> <None>
+SUBJ: Re: OpenH323 Core Dumps and gdb reports ptrace(PT_GETDBREGS)
+BODY:
+On Tue, 14 Nov 2000, Roger Hardiman wrote:
+
+I was suppose to look at this problem and I forgot to get
+back to you about it.  I wasn't able to reproduce this
+under a -current built over the weekend (fresh kernel also).
+
+-- 
+Dan Eischen
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 3A5FE415.514893C7@camtech.net.au
+DATE: 2001-01-13T05:13:57+00:00  FROM: Matthew Thyer <thyerm@camtech.net.au> <None>
+SUBJ: Data corruption whilst debugging sonar module of 
+ ports/graphics/xscreensaver-gtk-3.26 ?
+BODY:
+Both of my main FreeBSD-CURRENT machines cant seem to run the sonar
+module from xscreensaver-gtk-3.26 for very long.  It crashes with a
+SIGBUS on line 1654 of xscreensaver-3.26/hacks/sonar.c when the sonar
+sweep gets back around to the first bogie that was ever displayed.
+
+Since my home box is XFree 3.3.6 and work is XFree 4.0.2, I assume
+this is a bug with the screensaver itself.  Note both machines are
+recent -CURRENT (within 1 week of today).
+
+Today I had some spare time (wife and kids out of my hair) so I
+installed ports/devel/ddd to have a look at whats going on.
+
+To reproduce what I'm doing:
+
+- Install ports/devel/ddd
+- Set "CFLAGS=-g -pipe" in /etc/make.conf
+- cd /usr/ports/x11/xscreensaver ; sudo make install
+- Set your CFLAGS back to what they were
+- cd /usr/ports/x11/xscreensaver/work/xscreensaver-3.26/hacks
+- ddd &
+- File->Open Program... and choose "sonar"
+- Run until it dies with the SIGBUS on line 1654 (subroutine "Sonar")
+- Display "si", "*si", "*si->visable", all the "*si->visable{->next}*"
+    (e.g. "*si->visable->next", "*si->visable->next->next" etc) and
+    the local variables.
+
+I'm seeing the local variable "bp" with a value of 0xd0d0d0d0.
+I cant see how this h
+
+--------------------------------------------------------------------------------
+MID: 20010907162049.4D28F115@nebula.anchoragerescue.org
+DATE: 2001-09-07T16:20:48+00:00  FROM: Beech Rintoul <akbeech@anchoragerescue.org> <None>
+SUBJ: acpi can't map ports/memory
+BODY:
+Yesterday I tried three different  nic cards in this machine, two use the rl 
+driver and one uses the xl. I got exactly the same error on all three. These 
+all work pre-acpi commit.
+
+here's the dmesg:
+
+ACPI debug layer 0x0  debug level 0x0
+Copyright (c) 1992-2001 The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+FreeBSD 5.0-CURRENT #0: Thu Sep  6 20:37:32 AKDT 2001
+    russell@intake.anchoragerescue.org:/usr/obj/usr/src/sys/INTAKE
+Timecounter "i8254"  frequency 1193182 Hz
+Timecounter "TSC"  frequency 901601981 Hz
+CPU: AMD Athlon(tm) Processor (901.60-MHz 686-class CPU)
+  Origin = "AuthenticAMD"  Id = 0x642  Stepping = 2
+  
+Features=0x183f9ff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,MMX,FXSR>
+  AMD Features=0xc0440000<<b18>,AMIE,DSP,3DNow!>
+real memory  = 402653184 (393216K bytes)
+avail memory = 385740800 (376700K bytes)
+Preloaded elf kernel "kernel" at 0xc04c2000.
+Pentium Pro MTRR support enabled
+Using $PIR table, 8 entries at 0xc00fa040
+acpi0: <COMPAQ HAWA7K11> on motherboard
+acpi0: power button is handled as a fixed feature programming model.
+Ti
+
+--------------------------------------------------------------------------------
+MID: 20020215002259.GA15937@kanpc.gte.com
+DATE: 2002-02-15T00:22:59+00:00  FROM: "Alexander N. Kabaev" <ak03@gte.com> <None>
+SUBJ: Re: ports/34908: libpng port makes bad dynamic library on -CURRENT
+BODY:
+Actually, the bug is somewhere in the new binutils code, and I am very
+close to finding where it is exactly. The new liker fails to set 
+DT_TEXTREL property in the shared library header even though its relocation
+table contains several entries which refer to the code segment. As a result,
+ld-elf.so.1 fails to enable writes on the text segment when relocating the
+binary and crashes with SIGBUS while processing the very first relocation
+record.
+I still need some time in debugger to find a proper way to fix this.
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 3C6C5C94.FCCDE556@mindspring.com
+DATE: 2002-02-15T00:55:48+00:00  FROM: Terry Lambert <tlambert2@mindspring.com> <None>
+SUBJ: Re: ports/34908: libpng port makes bad dynamic library on -CURRENT
+BODY:
+"Alexander N. Kabaev" wrote:
+
+Woohoo!  He shoots, he scores!
+
+
+My binutils-foo is rusty.  Personally, I just reverted to
+the old binutils and called it a day.  8-).
+
+-- Terry
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 20020215005452.GA2642@frolic.no-support.loc
+DATE: 2002-02-15T00:54:52+00:00  FROM: Bjoern Fischer <bfischer@Techfak.Uni-Bielefeld.DE> <None>
+SUBJ: Re: ports/34908: libpng port makes bad dynamic library on -CURRENT
+BODY:
+On Thu, Feb 14, 2002 at 07:22:59PM -0500, Alexander N. Kabaev wrote:
+
+Interesting. Is the DF_TEXTREL flag set in DT_FLAGS instead? Is the
+library linked w/ -enable-new-dtags? Are the new dtags enabled by
+default in the new binutils? Someting in elf32.em?
+
+Currently I'm experimenting with some code that enhances the FreeBSD
+runtime linker to handle some newer ELF features, such as DT_RUNPATH,
+DT_FLAGS and ${ORIGIN} substitution sequences
+
+-Bj�rn
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 20020316162135C.haro@h4.dion.ne.jp
+DATE: 2002-03-16T07:21:35+00:00  FROM: Munehiro Matsuda <haro@h4.dion.ne.jp> <None>
+SUBJ: problem with libz 1.1.4 when installing linux_base ports
+BODY:
+Hi All,
+
+After the import of libz 1.1.4, rpm (from ports) dumps core when
+trying to install linux_base.
+
+# make install
+===>  Installing for linux_base-6.1_1
+setup-2.0.5-1.noarch.rpm
+filesystem-1.3.5-1.noarch.rpm
+basesystem-6.0-4.noarch.rpm
+ldconfig-1.9.5-15.i386.rpm
+Segmentation fault - core dumped
+*** Error code 139
+
+Stop in /usr/ports/emulators/linux_base.
+*** Error code 1
+
+
+When runing rpm inside gdb, SEGV seems to be happing inside libz.
+
+Starting program: /usr/local/bin/rpm -U --ignoreos --root /compat/linux --dbpath /var/lib/rpm --nodeps --replacepkgs --noscripts /usr/ports/distfiles/rpm/ldconfig-1.9.5-15.i386.rpm
+
+Program received signal SIGSEGV, Segmentation fault.
+0x80a42b3 in inflate_codes ()
+(gdb) where
+#0  0x80a42b3 in inflate_codes ()
+#1  0x80a1d13 in inflate_blocks ()
+#2  0x809f737 in inflate ()
+#3  0x809ea94 in gzread ()
+#4  0x808184f in gzdRead (cookie=0x813a900, 
+    buf=0x81453f0 ' <repeats 200 times>..., count=14) at rpmio.c:2230
+
+
+I then went into src/lib/libz and checked the difference between libz 1.1.4
+and older 1.1.3. I found that if I backout the change for infcodes.c 1.3,
+rpm does not dump core.
+
+Could someone take a look into this?
+
+Thanks,
+  Haro
+=-----
+
+--------------------------------------------------------------------------------
+MID: 8FCECF5E61F0D511946000306E0189F839B910@ednex504.dsto.defence.gov.au
+DATE: 2002-05-03T04:49:40+00:00  FROM: "Thyer, Matthew" <Matthew.Thyer@dsto.defence.gov.au> <None>
+SUBJ: Can't install ports/emulators/linux_base on -CURRENT
+BODY:
+===>   Registering installation for rpm-3.0.6_6
+===>   Returning to build of linux_base-6.1_1
+===>  Patching for linux_base-6.1_1
+===>  Configuring for linux_base-6.1_1
+===>  Installing for linux_base-6.1_1
+setup-2.0.5-1.noarch.rpm
+filesystem-1.3.5-1.noarch.rpm
+unpacking of archive failed on file /proc: cpio: chown failed - Operation
+not supported
+*** Error code 1
+
+Stop in /usr/ports/emulators/linux_base.
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 20020502215951.A3875@Odin.AC.HMC.Edu
+DATE: 2002-05-03T04:59:57+00:00  FROM: Brooks Davis <brooks@one-eyed-alien.net> <None>
+SUBJ: Re: Can't install ports/emulators/linux_base on -CURRENT
+BODY:
+On Fri, May 03, 2002 at 02:19:40PM +0930, Thyer, Matthew wrote:
+
+Unmount your linprocfs file system first.
+
+-- Brooks
+
+-- 
+Any statement of the form "X is the one, true Y" is FALSE.
+PGP fingerprint 655D 519C 26A7 82E7 2529  9BF0 5D8E 8BE9 F238 1AD4
+
+
+--------------------------------------------------------------------------------
+MID: 8FCECF5E61F0D511946000306E0189F839B914@ednex504.dsto.defence.gov.au
+DATE: 2002-05-03T08:09:06+00:00  FROM: "Thyer, Matthew" <Matthew.Thyer@dsto.defence.gov.au> <None>
+SUBJ: RE: Can't install ports/emulators/linux_base on -CURRENT
+BODY:
+Thanks, I hope this is not a long-term workaround!
+
+-----Original Message-----
+From: Brooks Davis [mailto:brooks@one-eyed-alien.net]
+Sent: Friday, 3 May 2002 2:30 PM
+To: Thyer, Matthew
+Cc: 'Current@FreeBSD.Org'
+Subject: Re: Can't install ports/emulators/linux_base on -CURRENT
+
+
+On Fri, May 03, 2002 at 02:19:40PM +0930, Thyer, Matthew wrote:
+
+Unmount your linprocfs file system first.
+
+-- Brooks
+
+-- 
+Any statement of the form "X is the one, true Y" is FALSE.
+PGP fingerprint 655D 519C 26A7 82E7 2529  9BF0 5D8E 8BE9 F238 1AD4
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 20020511130611.A55218@xor.obsecurity.org
+DATE: 2002-05-11T20:06:12+00:00  FROM: Kris Kennaway <kris@obsecurity.org> <None>
+SUBJ: Re: bsd.port.mk dependency loop checking patch (Re: Who broke 'make clean' for ports ?)
+BODY:
+On Sat, May 11, 2002 at 04:00:53PM +0300, Maxim Sobolev wrote:
+
+Actually it would be useful to have this functionality somewhere.  I
+recently spent a couple of hours trying to track down a circular
+dependency I had introduced via a bsd.port.mk patch.  The main symptom
+was that the make_index script would just go into a loop and exhaust
+memory.  I ended up finding it by adding all sorts of debugging
+printfs to the perl script, but this was pretty ugly.
+
+Kris
+
+
+--------------------------------------------------------------------------------
+MID: 20020523104601.63164.qmail@web11405.mail.yahoo.com
+DATE: 2002-05-23T10:46:01+00:00  FROM: Shizuka Kudo <shizukakudo_99@yahoo.com> <None>
+SUBJ: Re: Infinite 'make' loops while building ports
+BODY:
+
+--- Marcel Moolenaar <marcel@xcllnt.net> wrote:
+marcel@xcllnt.net
+
+You're right. The only reason it didn't show up
+several days before is that v 1.58 added the real path
+to MAKEFILE as mentioned in the commit log:
+
+Make ReadMakefile() operate using the realpath(3) name
+for the file handed to
+it, which means that relative paths will be expanded
+to absolute paths, and
+filenames without a path will end up with their
+absolute path included as
+well.  This aids tremendously in debugging a build
+using our make(1) with
+multiple Makefile's, such as when there is a syntax
+error in a file in a
+sub-directory as per <bsd.subdir.mk>.  Normally we'd
+end up with just
+"Makefile" known about the Makefile in question, which
+means that an error
+would be useless for someone trying to debug their
+build system, now we
+end up with a complete real pathname for the Makefile.
+
+So mostly this is useful in a debugging context, but
+possibly others too
+(I haven't thought of them yet, but they probably are
+more useful if you
+make Dir_FindFile use realpath(3), but that's another
+story).
+
+
+
+__________________________________________________
+Do You Yahoo!?
+LAUNCH - Your Yahoo! Music Experience
+http://launch.yahoo.c
+
+--------------------------------------------------------------------------------
+MID: 3D0CAB48.1C33DFB4@FreeBSD.org
+DATE: 2002-06-16T15:14:16+00:00  FROM: Maxim Sobolev <sobomax@FreeBSD.org> <None>
+SUBJ: Problem with gdb 5.2 from ports
+BODY:
+Hi,
+
+As you have requested, I installed devel/gdb52 port on my -current
+system and gave it a try. It works most of the time, but I've noticed
+that breakpoint set to a finction in a shared library doesn't work, at
+least for libraries which have no debugging info compiled in (I have
+not tested it with ibraries with debugging info yet). This can be
+easily verified by seting up break point to some function in libc and
+then executing binary which calls this function in debugger. It worked
+just fine in old gdb.
+
+-Maxim
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: p05111a0ab93272b176be@[10.1.1.198]
+DATE: 2002-06-16T16:57:30+00:00  FROM: Mark Peek <mp@FreeBSD.org> <None>
+SUBJ: Re: Problem with gdb 5.2 from ports
+BODY:
+At 6:14 PM +0300 6/16/02, Maxim Sobolev wrote:
+
+Maxim,
+Can you provide a few more details on this problem? It worked for me 
+in the test below which was using the stock system libc (ie., no 
+debugging info).
+
+Mark
+
+current# cat > shlibtest.c
+#include <stdio.h>
+main() { fclose(stderr); }
+current# cc -g -o shlibtest shlibtest.c
+current# gdb52 shlibtest
+GNU gdb 5.2 (FreeBSD)
+Copyright 2002 Free Software Foundation, Inc.
+GDB is free software, covered by the GNU General Public License, and you are
+welcome to change it and/or distribute copies of it under certain conditions.
+Type "show copying" to see the conditions.
+There is absolutely no warranty for GDB.  Type "show warranty" for details.
+This GDB was configured as "i386-portbld-freebsd5.0"...
+(gdb) b fclose
+Breakpoint 1 at 0x80483d4
+(gdb) run
+Starting program: /tmp/shlibtest
+Breakpoint 1 at 0x280e076e
+
+Breakpoint 1, 0x280e076e in fclose () from /usr/lib/libc.so.5
+(gdb) where
+#0  0x280e076e in fclose () from /usr/lib/libc.so.5
+#1  0x0804853e in main () at shlibtest.c:2
+#2  0x0804847d in _start ()
+(gdb)
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 20021113074507.30655.qmail@web14105.mail.yahoo.com
+DATE: 2002-11-13T07:45:07+00:00  FROM: Galen Sampson <galen_sampson@yahoo.com> <None>
+SUBJ: Internal Compiler Error (not from ports)
+BODY:
+Hello all,
+
+After updating to -current sources last night I found that I can reproduce an
+internal compiler error with my own source code.  I'm not sure if it is related
+to the internal compiler error people are having with the ports are not.
+
+the command:
+   g++ -Wall -c btree.cpp
+
+generates the error (source code attached).
+
+To help track this down line 12 of btree.h is commented out.  Uncommenting this
+line allows the compiler to produce a .o file.
+
+If anyone is interested I will be happy to build a debug g++ if someone will
+point me in the right direction to get that accomplished.  If you need me to
+ident g++ or need more information feel free to ask.
+
+regards,
+Galen Sampson
+
+
+__________________________________________________
+Do you Yahoo!?
+U2 on LAUNCH - Exclusive greatest hits videos
+http://launch.yahoo.com/u2
+
+--------------------------------------------------------------------------------
+MID: 20021113082637.GA81766@rot13.obsecurity.org
+DATE: 2002-11-13T08:26:37+00:00  FROM: Kris Kennaway <kris@obsecurity.org> <None>
+SUBJ: Re: Internal Compiler Error (not from ports)
+BODY:
+On Tue, Nov 12, 2002 at 11:45:07PM -0800, Galen Sampson wrote:
+
+
+Have you submitted this to the gcc developers as requested by the error message?
+
+Kris
+
+
+--------------------------------------------------------------------------------
+MID: 20030206151302.E684@levais.imp.ch
+DATE: 2003-02-06T14:17:57+00:00  FROM: Martin Blapp <mb@imp.ch> <None>
+SUBJ: Re: 4.7-amd cannot mount exports from 5.0-RELEASE
+BODY:
+
+Hi,
+
+It works here for both cases. I've done intensive testing,
+and I just cannot reproduce this bug.
+
+The list here just looks normal as it should be:
+
+localhost:/ on /a/localhost (nfs, nodev, nosuid)
+127.0.0.1:/ on /a/127.0.0.1 (nfs, nodev, nosuid)
+levais:/ on /a/levais (nfs, nodev, nosuid)
+levais:/usr on /a/levais/usr (nfs, nodev, nosuid)
+192.168.0.66:/ on /a/192.168.0.66 (nfs, nodev, nosuid)
+192.168.0.66:/usr on /a/192.168.0.66/usr (nfs, nodev, nosuid)
+
+Can you send me both
+
+- tcpdump / ethereal dump of the failing request
+- amd, mountd configs (amd.*, /etc/exports)
+- a description of the mounted filesystems
+- how it fails ? what is the error message ?
+- run mountd in debug mode and keep the output ?
+
+Thank you very much
+Martin
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 20030318123941.GB68050@main.aviaport.ru
+DATE: 2003-03-18T12:39:41+00:00  FROM: Juriy Goloveshkin <juriy@mail.aviaport.ru> <None>
+SUBJ: Re: ports problem with 5.0-RELEASE -> CURRENT
+BODY:
+On Tue, Mar 18, 2003 at 04:07:32AM -0800, Kris Kennaway wrote:
+
+Ohhhhh, I've found out occasionally what it was.
+
+I thought that /usr/obj is a good place for WRKDIRPREFIX.
+It looks good, but ... WRONG :)
+
+It this case current folder for make target(like that vvv) is not 
+a /usr/ports/bla/bla, but /usr/obj/usr/ports/bla/bla
+with any other WRKDIRPREFIX It is /usr/ports/bla/bla.
+
+
+-- 
+bye
+Juriy Goloveshkin
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 1058695186.95919.4.camel@straycat
+DATE: 2003-07-20T09:59:46+00:00  FROM: Peter Kadau <peter.kadau@tuebingen.mpg.de> <None>
+SUBJ: Erratum: Re: Fixing gcc 3.3 compile failures -- kde ports proposal
+BODY:
+Hi !
+
+
+Ahem, not quite true, I forgot kdebase3.
+Everything configures, but that thing is the only
+reluctant to build.
+
+Some sort of known problem with static_cast as far as 
+I can see.
+
+So - no portupgrade -fa on my current... *sigh*
+
+Cheers
+Peter
+
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 200307201613.32916.andy@athame.co.uk
+DATE: 2003-07-20T13:13:32+00:00  FROM: Andy Fawcett <andy@athame.co.uk> <None>
+SUBJ: Re: Erratum: Re: Fixing gcc 3.3 compile failures -- kde ports
+	proposal
+BODY:
+On Sunday 20 July 2003 12:59, Peter Kadau wrote:
+
+We (kde@) are working on the problem. Since we're also working on 
+getting the upcoming 3.1.3 release ready for the ports tree, we're 
+concentrating on that and not 3.1.2.
+
+More news as it happens.
+
+A.
+
+-- 
+Andy Fawcett                                     | andy@athame.co.uk
+                                                 | tap@kde.org
+"In an open world without walls and fences,      | tap@lspace.org
+  we wouldn't need Windows and Gates."  -- anon  | tap@fruitsalad.org
+
+
+
+--------------------------------------------------------------------------------
+MID: 200308011608.h71G85fo023429@energistic.com
+DATE: 2003-08-01T16:08:05+00:00  FROM: Steve Ames <steve@energistic.com> <None>
+SUBJ: ports/news/newscache gives sig11 on recent -CURRENT
+BODY:
+
+ports/news/newscache now gives me a sig11. It didn't a few weeks ago
+but I really can't pin it down any closer than that. I thought it may
+have been related to the new gcc import but I'm not able to check
+that. After it gave me the sig11 I recompiled it and its dependancies
+and that didn't fix anything.
+
+I'm running -CURRENT as of 7/31/03.
+
+I have the following in /etc/syslog.conf: 
+
+news.* /var/log/news.log
+
+I see this in /var/log/news.log:
+
+Aug  1 10:36:06 energistic NewsCache[75426]: NewsCache Server Start
+Aug  1 10:36:38 energistic NewsCache[97305]: bdsl.66.12.217.43.gte.net [66.12.21
+7.43] connect
+Aug  1 10:36:38 energistic NewsCache[97305]: NServer::NServer() hostname set to:
+energistic.com
+Aug  1 10:36:38 energistic NewsCache[97305]: bdsl.66.12.217.43.gte.net [66.12.21
+7.43] MODE READER
+Aug  1 10:36:38 energistic NewsCache[97305]: bdsl.66.12.217.43.gte.net [66.12.21
+7.43] NEWGROUPS 030519 214720
+Aug  1 10:36:38 energistic NewsCache[97305]: active database timed out
+Aug  1 10:36:38 energistic NewsCache[97305]: RServer::issue: issue list active *
+Aug  1 10:36:38 energistic NewsCache[75426]: 97305 caught signal 11
+Aug  1 10:36:41 energistic NewsCache[68550]: bdsl.66.12.217.43.

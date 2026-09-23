@@ -1,0 +1,1742 @@
+==========================================================================================
+DB: freebsd-hackers.duckdb  hits=14
+==========================================================================================
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-90907966a64dd6e1>
+DATE: 2000-06-21T10:24:12+00:00  FROM: Poul-Henning Kamp <phk () critter ! freebsd ! dk> <None>
+SUBJ: Re: Jails
+BODY:
+In message <Pine.BSF.4.10.10006211126570.3183-100000@security.za.net>, lists@se
+curity.za.net writes:
+
+Havn't heard about any.
+
+
+Because implementation would be tricky (filtering raw IP packets)
+and nobody has done it yet.
+
+--
+Poul-Henning Kamp       | UNIX since Zilog Zeus 3.20
+phk@FreeBSD.ORG         | TCP/IP since RFC 956
+FreeBSD coreteam member | BSD since 4.3-tahoe    
+Never attribute to malice what can adequately be explained by incompetence.
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: 11744.938266471@critter.freebsd.dk
+DATE: 1999-09-25T13:34:31+00:00  FROM: Poul-Henning Kamp <phk@critter.freebsd.dk> <None>
+SUBJ: Re: about jail 
+BODY:
+In message <19990925171712.A80535@zenon.net>, Alexander Bezroutchko writes:
+
+
+That would work.
+
+
+127.0.0.1 is mapped to the jail address.  telnet localhost does what
+you'd expect it to.
+
+
+kern.hostname only writes the name for that jail.
+
+
+It's called "p_prison->pr_host" and it was there from day #1.
+
+
+It already does.
+
+
+Not from me. 
+
+
+no plans.
+
+
+You're right, I've overlooked that one.  Will fix.
+
+
+No, this is the first one I've heard about.
+
+--
+Poul-Henning Kamp             FreeBSD coreteam member
+phk@FreeBSD.ORG               "Real hackers run -current on their laptop."
+FreeBSD -- It will take a long time before progress goes too far!
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 6076.940543265@critter.freebsd.dk
+DATE: 1999-10-21T22:01:05+00:00  FROM: Poul-Henning Kamp <phk@critter.freebsd.dk> <None>
+SUBJ: Re: Finer-grained securelevel: proof of concept 
+BODY:
+In message <Pine.BSF.3.96.991021083426.46884A-100000@fledge.watson.org>, Robert
+ Watson writes:
+
+I have been talking to a lot of people over here, and one common
+thing seems to be that they want to be able to set these things
+differently on a "per jail" basis.
+
+I actually think we should not get into the jail thing, but rather
+make them inheritable like other credentials, so the structure
+containing the stuff should hang of the proc structure, and hey
+wait, we already have this "struct ucred" hanging there.
+
+--
+Poul-Henning Kamp             FreeBSD coreteam member
+phk@FreeBSD.ORG               "Real hackers run -current on their laptop."
+FreeBSD -- It will take a long time before progress goes too far!
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 21882.942127517@critter.freebsd.dk
+DATE: 1999-11-09T06:05:17+00:00  FROM: Poul-Henning Kamp <phk@critter.freebsd.dk> <None>
+SUBJ: Re: Should jail treat ip-number? 
+BODY:
+In message <19991109125445E.shin@nd.net.fujitsu.co.jp>, Yoshinobu Inoue writes:
+
+I agree, *IF* IPv6 ever becomes a reality, we will look at this.
+
+
+To isolate people in the jail from the "real" machine and from
+other jails.
+
+
+it isn't.
+
+--
+Poul-Henning Kamp             FreeBSD coreteam member
+phk@FreeBSD.ORG               "Real hackers run -current on their laptop."
+FreeBSD -- It will take a long time before progress goes too far!
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 23737.942154864@critter.freebsd.dk
+DATE: 1999-11-09T13:41:04+00:00  FROM: Poul-Henning Kamp <phk@critter.freebsd.dk> <None>
+SUBJ: Re: Should jail treat ip-number? 
+BODY:
+In message <Pine.BSF.4.10.9911090527520.39794-100000@moo.sysabend.org>, Jamie Bowden
+ writes:
+
+1. All tcp/ip forced to use a particular IP#.  This allows you to have
+   several inetd/sendmail/apache running, one per jail.
+
+2. Many things which root can normally do cannot be done if root is jailed.
+
+--
+Poul-Henning Kamp             FreeBSD coreteam member
+phk@FreeBSD.ORG               "Real hackers run -current on their laptop."
+FreeBSD -- It will take a long time before progress goes too far!
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 24337.942169052@critter.freebsd.dk
+DATE: 1999-11-09T17:37:32+00:00  FROM: Poul-Henning Kamp <phk@critter.freebsd.dk> <None>
+SUBJ: Re: Should jail treat ip-number? 
+BODY:
+In message <19991110022852N.shin@nd.net.fujitsu.co.jp>, Yoshinobu Inoue writes:
+
+
+Generally yes, although nothing in the code tries to (nor should
+it try to) enforce it.
+
+
+I'm not against adding IPv6 functionality to jail(2), my point is
+merely that until somebody who has sufficient time & ability to 
+fiddle with it does it, it's not going to happen.
+
+The usual rule applies:
+
+"Great idea, why don't you send me patches which does this ?"
+
+--
+Poul-Henning Kamp             FreeBSD coreteam member
+phk@FreeBSD.ORG               "Real hackers run -current on their laptop."
+FreeBSD -- It will take a long time before progress goes too far!
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 28858.942818296@critter.freebsd.dk
+DATE: 1999-11-17T05:58:16+00:00  FROM: Poul-Henning Kamp <phk@critter.freebsd.dk> <None>
+SUBJ: Re: Should jail treat ip-number? 
+BODY:
+In message <19991117134132S.shin@nd.net.fujitsu.co.jp>, Yoshinobu Inoue writes:
+
+
+No, that doesn't work.  People want to run servers so they want
+to know their IP for DNS.
+
+
+Yes, that also matters, this is a administrative facility.
+
+--
+Poul-Henning Kamp             FreeBSD coreteam member
+phk@FreeBSD.ORG               "Real hackers run -current on their laptop."
+FreeBSD -- It will take a long time before progress goes too far!
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 289.942825543@critter.freebsd.dk
+DATE: 1999-11-17T07:59:03+00:00  FROM: Poul-Henning Kamp <phk@critter.freebsd.dk> <None>
+SUBJ: Re: Should jail treat ip-number? 
+BODY:
+In message <19991117153126C.shin@nd.net.fujitsu.co.jp>, Yoshinobu Inoue writes:
+
+
+This has basically been the policy until now: Don't worry about a protocol
+until somebody needs it.
+
+
+Well, I guess we want it to be "and", right ?  Will people want to
+bind both a IPv4 and IPv6 address (does it make sense to do so ?)
+or will people only need to bind one of them ?
+
+
+I'm not against them being sockaddr's.
+
+
+Sure, this is trivial to do.
+
+--
+Poul-Henning Kamp             FreeBSD coreteam member
+phk@FreeBSD.ORG               "Real hackers run -current on their laptop."
+FreeBSD -- It will take a long time before progress goes too far!
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 59001.961583052@critter.freebsd.dk
+DATE: 2000-06-21T10:24:12+00:00  FROM: Poul-Henning Kamp <phk@critter.freebsd.dk> <None>
+SUBJ: Re: Jails 
+BODY:
+In message <Pine.BSF.4.10.10006211126570.3183-100000@security.za.net>, lists@se
+curity.za.net writes:
+
+Havn't heard about any.
+
+
+Because implementation would be tricky (filtering raw IP packets)
+and nobody has done it yet.
+
+--
+Poul-Henning Kamp       | UNIX since Zilog Zeus 3.20
+phk@FreeBSD.ORG         | TCP/IP since RFC 956
+FreeBSD coreteam member | BSD since 4.3-tahoe    
+Never attribute to malice what can adequately be explained by incompetence.
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 4007.963643480@critter.freebsd.dk
+DATE: 2000-07-15T06:44:40+00:00  FROM: Poul-Henning Kamp <phk@critter.freebsd.dk> <None>
+SUBJ: Re: DEVFS 
+BODY:
+In message <20000715013940.A51575@cokane.yi.org>, Coleman Kane writes:
+
+
+bp@ has a non-working prototype, (as has julian@).
+
+None of them fixes the root-mount kludges.
+
+None of them implement cloning devices.
+
+If you (or a group of people) seriously want to work on DEVFS, send
+me an email and I will coordinate and try to make sure we get this
+done *right* so that we cover all the issues we need to cover with
+devfs (root-mount, jail, cloning etc etc)
+
+
+--
+Poul-Henning Kamp       | UNIX since Zilog Zeus 3.20
+phk@FreeBSD.ORG         | TCP/IP since RFC 956
+FreeBSD coreteam member | BSD since 4.3-tahoe    
+Never attribute to malice what can adequately be explained by incompetence.
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 42046.966228545@critter
+DATE: 2000-08-14T04:49:05+00:00  FROM: Poul-Henning Kamp <phk@critter.freebsd.dk> <None>
+SUBJ: Re: limit processes that a user can 'see' 
+BODY:
+In message <39970D08.4BA72541@qualys.com>, Maxime Henrion writes:
+
+You can possibly make jail(8) do this for you...
+
+--
+Poul-Henning Kamp       | UNIX since Zilog Zeus 3.20
+phk@FreeBSD.ORG         | TCP/IP since RFC 956
+FreeBSD coreteam member | BSD since 4.3-tahoe    
+Never attribute to malice what can adequately be explained by incompetence.
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 74643.988226120@critter
+DATE: 2001-04-25T19:15:20+00:00  FROM: Poul-Henning Kamp <phk@critter.freebsd.dk> <None>
+SUBJ: Re: Idea for additional feature for jail - jailed security level 
+BODY:
+In message <200104251904.f3PJ4xP41049@earth.backplane.com>, Matt Dillon writes:
+
+That would be trivial to do, but I thought that securelevels were
+demed "nice proof of concept but not the right way" ?
+
+--
+Poul-Henning Kamp       | UNIX since Zilog Zeus 3.20
+phk@FreeBSD.ORG         | TCP/IP since RFC 956
+FreeBSD committer       | BSD since 4.3-tahoe    
+Never attribute to malice what can adequately be explained by incompetence.
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 79151.990731631@critter
+DATE: 2001-05-24T19:13:51+00:00  FROM: Poul-Henning Kamp <phk@critter.freebsd.dk> <None>
+SUBJ: Re: telnet to AF_UNIX sockets [PATCH] 
+BODY:
+In message <Pine.GSO.4.21.0105241509090.3391-100000@y.glue.umd.edu>, James Howa
+rd writes:
+
+Right, and just what was it the 'Inter' in InterNet referred to ?
+
+"Interconnected Networks", that's what.
+
+And nowhere does it say that these nets can be running IP only...
+
+Let me remind you that inetd already does RPC based stuff, which
+for all practical intents and purposes is a separate protocol
+(at least it has it's own namespace, that's close enough for me)
+
+-- 
+Poul-Henning Kamp       | UNIX since Zilog Zeus 3.20
+phk@FreeBSD.ORG         | TCP/IP since RFC 956
+FreeBSD committer       | BSD since 4.3-tahoe    
+Never attribute to malice what can adequately be explained by incompetence.
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 28863.1001425371@critter
+DATE: 2001-09-25T13:42:51+00:00  FROM: Poul-Henning Kamp <phk@critter.freebsd.dk> <None>
+SUBJ: Re: 4.4 jail and udp 
+BODY:
+In message <3BB0797A.FB060034@rt.ru>, "Dmitry S. Rzhavin" writes:
+
+RTFM.
+
+UDP works fine.  ICMP and other raw socket magic doesn't.
+
+-- 
+Poul-Henning Kamp       | UNIX since Zilog Zeus 3.20
+phk@FreeBSD.ORG         | TCP/IP since RFC 956
+FreeBSD committer       | BSD since 4.3-tahoe    
+Never attribute to malice what can adequately be explained by incompetence.
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+
+==========================================================================================
+DB: freebsd-current.duckdb  hits=22
+==========================================================================================
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-current-78796414e0d3a471>
+DATE: 1999-11-16T20:06:42+00:00  FROM: Poul-Henning Kamp <phk () critter ! freebsd ! dk> <None>
+SUBJ: Re: the ps/cmdline caching
+BODY:
+------- =_aaaaaaaaaa
+Content-Type: message/rfc822
+Content-Description: Original Message
+
+To: core@freebsd.org
+Subject: Re: the ps/cmdline caching 
+In-reply-to: Your message of "Tue, 16 Nov 1999 11:37:40 MST."
+             <199911161837.LAA00345@caspian.plutotech.com> 
+Date: Tue, 16 Nov 1999 21:06:42 +0100
+Message-ID: <26892.942782802@critter.freebsd.dk>
+From: Poul-Henning Kamp <phk@critter.freebsd.dk>
+MIME-Version: 1.0
+
+In message <199911161837.LAA00345@caspian.plutotech.com>, "Justin T. Gibbs" wri
+tes:
+
+
+Run this on a SMP box and it will die in seconds:
+
+	i=0
+	while [ $i -lt 200 ] 
+	do
+	    i=`expr $i + 1`
+	    ( while true ; do ps xao pid,command > /dev/null 2>&1 ; done ) &
+	done
+
+The problem is where ps using /proc/%pid/mem grovels around in the
+other process address room to get hold of argv.
+
+This gets particular nasty when we have multiple copies of ps(1)
+running on a SMP box:
+
+First CPU:	running process 100 which is a "ps -ax" currently
+		trying to get the argument list from process 101
+
+Second CPU:	running process 101 which is a "ps -ax" currently
+		trying to get the argument list from process 101
+		(or 100 for that matter).
+
+The code in procfs_mem.c has significant problems
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-current-7d9bdba1640b9184>
+DATE: 1999-12-17T09:20:38+00:00  FROM: Poul-Henning Kamp <phk () critter ! freebsd ! dk> <None>
+SUBJ: Re: linux /proc and vmware.
+BODY:
+In message <Pine.BSF.4.10.9912162208150.16082-100000@picnic.mat.net>, Chuck Rob
+ey writes:
+
+
+Such transparancy can be made with with either /proc or sysctl.
+
+
+Well, if you want to run linux binaries which insist on peeking into
+/proc you will need to mount a procfs there.
+
+--
+Poul-Henning Kamp             FreeBSD coreteam member
+phk@FreeBSD.ORG               "Real hackers run -current on their laptop."
+FreeBSD -- It will take a long time before progress goes too far!
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-current-37e3bb51914d56dc>
+DATE: 2000-03-22T18:56:25+00:00  FROM: Poul-Henning Kamp <phk () critter ! freebsd ! dk> <None>
+SUBJ: Re: Chrooted telnet support in 4.x???
+BODY:
+
+You could do that, rather easily.
+
+In message <Pine.BSF.4.21.0003221353440.5894-100000@inbox.org>, "Mr. K." writes
+:
+
+--
+Poul-Henning Kamp             FreeBSD coreteam member
+phk@FreeBSD.ORG               "Real hackers run -current on their laptop."
+FreeBSD -- It will take a long time before progress goes too far!
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: 14546.934712877@critter.freebsd.dk
+DATE: 1999-08-15T10:27:57+00:00  FROM: Poul-Henning Kamp <phk@critter.freebsd.dk> <None>
+SUBJ: Kernel hacker tasks seek interested hackers
+BODY:
+
+Well, autumn and winter is on us pretty soon.  At least on my
+lattitude that means hot tea inside warm and cosy houses while the
+elements do their best to make life misserable for anything still
+left on the outside.
+
+Here are some tasks which could put an evening or more to 
+productive and educational use for interested kernel hackers.
+
+They may also make a nice assignment for CS classes.
+
+1.      [easy] The SLIP device/interface could use the same
+	makeover as tun, bpf and pty has received. (see also #5)
+
+2.      [easy] The PPP device/interface ditto. (see also #5)
+
+3.      [easy] The snp/snoop device/interface ditto.
+
+4.      [not quite easy] The CCD device ditto.
+	Earn brownie points:  Make ccdconfig use sysctl instead of
+	libkvm to read back configuration.
+
+5.      [unknown] The I4B devices ditto.  Contact hm@FreeBSD.org
+	before starting on this one.
+
+6.      [medium] The TUN, SLIP and PPP interfaces should probably
+	clean up all the way including a if_detach on last close.
+	Earn brownie points: Do The Right Thing for SNMP.
+
+7.      [medium] The current naming for ptys doesn't scale that
+	well.  Changing it to ttyp%d / pty%d would probably be a
+	good idea in the long run, but 
+
+--------------------------------------------------------------------------------
+MID: 22209.942703421@critter.freebsd.dk
+DATE: 1999-11-15T22:03:41+00:00  FROM: Poul-Henning Kamp <phk@freebsd.org> <None>
+SUBJ: PATCH for testing
+BODY:
+
+http://phk.freebsd.dk/misc/p_args.patch
+
+The p_args.patch patch implements a cache of the commandline arguments
+in the process structure and makes ps(1) pick it up from there with
+sysctl rather than by groping around in the target process memory.
+
+This patch:
+        Speeds up ps(1).
+
+        Reduces the risk of some hairy races in procfs/proc_mem.c
+        when multiple ps(1) processes are running on a SMP system
+
+        Moves us closer to makeing procfs optional again (this is
+        a nice thing for chroot and jails).
+
+There is a new sysctl: kern.ps_arg_cache_limit which defaults to
+(PAGE_SIZE / 8).  This is the max amount of RAM we will use *PER
+PROCESS* to cache commandlines in.  If the commandline is longer
+*OR* of the process calls setproctitle(3) then nothing will be
+cached and ps(1) will have to take the long way though the process
+memory to find the command line for it.
+
+Things which need more work:
+
+        Examine if locking will be needed for p->p_args, in particular
+        for the refcount element.
+
+        Decide how setproctitle(3) should work.  Do we want to keep
+        the "real" commandline around in addition to the proctitle
+        or do we just overwrite 
+
+--------------------------------------------------------------------------------
+MID: 26892.942782802.1@critter.freebsd.dk
+DATE: 1999-11-16T20:06:42+00:00  FROM: Poul-Henning Kamp <phk@critter.freebsd.dk> <None>
+SUBJ: Re: the ps/cmdline caching 
+BODY:
+In message <199911161837.LAA00345@caspian.plutotech.com>, "Justin T. Gibbs" wri
+tes:
+
+
+Run this on a SMP box and it will die in seconds:
+
+	i=0
+	while [ $i -lt 200 ] 
+	do
+	    i=`expr $i + 1`
+	    ( while true ; do ps xao pid,command > /dev/null 2>&1 ; done ) &
+	done
+
+The problem is where ps using /proc/%pid/mem grovels around in the
+other process address room to get hold of argv.
+
+This gets particular nasty when we have multiple copies of ps(1)
+running on a SMP box:
+
+First CPU:	running process 100 which is a "ps -ax" currently
+		trying to get the argument list from process 101
+
+Second CPU:	running process 101 which is a "ps -ax" currently
+		trying to get the argument list from process 101
+		(or 100 for that matter).
+
+The code in procfs_mem.c has significant problems in this scenario,
+and rather than try to hunt them down, something we should eventually
+do my solution is to hang a copy of of the arg list from struct
+proc and use a sysctl in the kern.proc family to access it.
+
+My implementation has a sysctl variable which sets an upper limit
+on how many bytes we use per process for this.  If this limit
+is exceeded, we default to the current reality, obviously the
+limit can be set to 
+
+--------------------------------------------------------------------------------
+MID: 20167.945422438@critter.freebsd.dk
+DATE: 1999-12-17T09:20:38+00:00  FROM: Poul-Henning Kamp <phk@critter.freebsd.dk> <None>
+SUBJ: Re: linux /proc and vmware. 
+BODY:
+In message <Pine.BSF.4.10.9912162208150.16082-100000@picnic.mat.net>, Chuck Rob
+ey writes:
+
+
+Such transparancy can be made with with either /proc or sysctl.
+
+
+Well, if you want to run linux binaries which insist on peeking into
+/proc you will need to mount a procfs there.
+
+--
+Poul-Henning Kamp             FreeBSD coreteam member
+phk@FreeBSD.ORG               "Real hackers run -current on their laptop."
+FreeBSD -- It will take a long time before progress goes too far!
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 670.947193259@critter.freebsd.dk
+DATE: 2000-01-06T21:14:19+00:00  FROM: Poul-Henning Kamp <phk@critter.freebsd.dk> <None>
+SUBJ: Re: 4.0 code freeze scheduled for Jan 15th 
+BODY:
+In message <20000106152026.A98222@virtual-voodoo.com>, Steve Ames writes:
+
+
+Who said anything about -RELEASE being a beta ?  Some parts of a release
+will always be new, but the majority of it is the same code we released
+as 3.X, 2.X and even 1.X.
+
+We need for people to stop thinking of FreeBSD as commercial software
+which comes in "natural number" style enumerable packets.
+
+FreeBSD style is "real number", it is a continuously evolving
+quantity which every now and then passes a natural number on the
+way to infinity.
+
+We can now spot a milestone called 4.0 and that's very nice, but we
+are not going to stop, because the road goes on past 4.0.
+
+
+I'm sorry you you can't have ${insert pet feature here} in 4.0 if
+it is not ready yet.  That's too bad, check in later.
+
+In the meantime please enjoy:
+
+	NTFS filesytem
+
+	Netware support
+
+	Jail facility
+
+	Tons of new device drivers
+
+	Netgraph
+
+	etc, etc
+
+Isn't that just that very incomplete list worth a release ?
+
+FreeBSD-4.0 because now the time is right!
+
+Poul-Henning
+
+
+--
+Poul-Henning Kamp             FreeBSD coreteam member
+phk@FreeBSD.ORG               "Real hackers run -current on their laptop."
+FreeBSD -- It will take a long time before p
+
+--------------------------------------------------------------------------------
+MID: 33001.953750445@critter.freebsd.dk
+DATE: 2000-03-22T18:40:45+00:00  FROM: Poul-Henning Kamp <phk@critter.freebsd.dk> <None>
+SUBJ: Re: Chrooted telnet support in 4.x??? 
+BODY:
+In message <051001bf942c$87e3fa40$020a0a0a@megared.net.mx>, "Alejandro Ramirez"
+ writes:
+
+Investigate the jail(8) facility in 4.x, it is *far* stronger than
+anything chroot(2) has to offer.
+
+--
+Poul-Henning Kamp             FreeBSD coreteam member
+phk@FreeBSD.ORG               "Real hackers run -current on their laptop."
+FreeBSD -- It will take a long time before progress goes too far!
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 33113.953751385@critter.freebsd.dk
+DATE: 2000-03-22T18:56:25+00:00  FROM: Poul-Henning Kamp <phk@critter.freebsd.dk> <None>
+SUBJ: Re: Chrooted telnet support in 4.x??? 
+BODY:
+
+You could do that, rather easily.
+
+In message <Pine.BSF.4.21.0003221353440.5894-100000@inbox.org>, "Mr. K." writes
+:
+
+--
+Poul-Henning Kamp             FreeBSD coreteam member
+phk@FreeBSD.ORG               "Real hackers run -current on their laptop."
+FreeBSD -- It will take a long time before progress goes too far!
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 5250.954527944@critter.freebsd.dk
+DATE: 2000-03-31T18:39:04+00:00  FROM: Poul-Henning Kamp <phk@critter.freebsd.dk> <None>
+SUBJ: Re: Neat kernel development environment. 
+BODY:
+In message <200003311831.KAA30865@apollo.backplane.com>, Matthew Dillon writes:
+
+We don't need VMWare really, we can just run N jails...
+
+--
+Poul-Henning Kamp             FreeBSD coreteam member
+phk@FreeBSD.ORG               "Real hackers run -current on their laptop."
+FreeBSD -- It will take a long time before progress goes too far!
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 5391.954530417@critter.freebsd.dk
+DATE: 2000-03-31T19:20:17+00:00  FROM: Poul-Henning Kamp <phk@critter.freebsd.dk> <None>
+SUBJ: Re: Neat kernel development environment. 
+BODY:
+In message <Pine.BSF.4.10.10003311103010.23705-100000@InterJet.elischer.org>, Julian El
+ischer writes:
+
+
+No, not quite yet, but what IBM bragged about the 41k linuxes for
+was for what jails do for you.
+
+Poul-Henning
+
+
+--
+Poul-Henning Kamp             FreeBSD coreteam member
+phk@FreeBSD.ORG               "Real hackers run -current on their laptop."
+FreeBSD -- It will take a long time before progress goes too far!
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 5091.967454093@critter
+DATE: 2000-08-28T09:14:53+00:00  FROM: Poul-Henning Kamp <phk@critter.freebsd.dk> <None>
+SUBJ: Re: devfs 
+BODY:
+In message <76354.967453604@axl.fw.uunet.co.za>, Sheldon Hearn writes:
+
+You can also mount it other places:
+
+		mount -t devfs foo /usr/jail/jail1/dev
+
+(but the "no new devices" feature is not committed yet, I'm still
+working on it).
+
+The reason for mounting it in /sbin/init is historical and possibly
+wrong but it does have the benefit that it will DTRT for people.
+
+--
+Poul-Henning Kamp       | UNIX since Zilog Zeus 3.20
+phk@FreeBSD.ORG         | TCP/IP since RFC 956
+FreeBSD coreteam member | BSD since 4.3-tahoe    
+Never attribute to malice what can adequately be explained by incompetence.
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 94804.969432659@critter
+DATE: 2000-09-20T06:50:59+00:00  FROM: Poul-Henning Kamp <phk@freebsd.org> <None>
+SUBJ: 1131 unneeded includes in the kernel...
+BODY:
+
+UNNEEDED #includes in the FreeBSD kernel
+
+agp_if.c
+		<sys/kernel.h>
+
+cam/cam_periph.c
+		<cam/scsi/scsi_da.h>
+
+cam/scsi/scsi_all.c
+		<cam/cam_xpt_periph.h>
+
+cam/scsi/scsi_ch.c
+		<cam/cam_queue.h>
+		<sys/stat.h>
+
+cam/scsi/scsi_pass.c
+		<cam/scsi/scsi_da.h>
+		<sys/proc.h>
+		<sys/stat.h>
+
+cam/scsi/scsi_ses.c
+		<cam/cam_queue.h>
+		<sys/stat.h>
+
+cam/scsi/scsi_targ_bh.c
+		<cam/cam_extend.h>
+		<sys/bio.h>
+		<sys/conf.h>
+		<sys/uio.h>
+
+coda/coda_fbsd.c
+		<coda/cnode.h>
+		<coda/coda.h>
+		<sys/fcntl.h>
+		<sys/malloc.h>
+		<sys/proc.h>
+		<sys/systm.h>
+		<sys/ucred.h>
+
+coda/coda_namecache.c
+		<vm/vm_object.h>
+
+coda/coda_psdev.c
+		<sys/file.h>
+
+coda/coda_subr.c
+		<sys/proc.h>
+
+coda/coda_venus.c
+		<coda/coda_pioctl.h>
+
+coda/coda_vnops.c
+		<coda/coda_pioctl.h>
+		<sys/file.h>
+		<vm/vm_object.h>
+
+compat/linux/linux_file.c
+		<sys/conf.h>
+
+compat/linux/linux_misc.c
+		<sys/unistd.h>
+
+compat/svr4/svr4_fcntl.c
+		<sys/mount.h>
+		<sys/namei.h>
+		<sys/stat.h>
+
+compat/svr4/svr4_sysent.c
+		<netinet/in.h>
+
+compat/svr4/svr4_termios.c
+		<sys/sysproto.h>
+
+contrib/dev/fla/fla.c
+		<isa/isavar.h>
+
+contrib/dev/oltr/if_oltr.c
+		<net/ethernet.h>
+		<net/if_dl.h>
+
+crypto/blowfish/bf_skey.c
+		<sys/time.h>
+
+crypto/cast128/
+
+--------------------------------------------------------------------------------
+MID: 11875.981188862@critter
+DATE: 2001-02-03T08:27:42+00:00  FROM: Poul-Henning Kamp <phk@critter.freebsd.dk> <None>
+SUBJ: Re: DEVFS newbie... 
+BODY:
+In message <200102030413.f134Dd949495@harmony.village.org>, Warner Losh writes:
+
+	mount -t devfs devfs /home/jail/dev
+
+would work, but all dynamic devices would appear there too.
+
+Once we have an extensible facility for mount options, you will be
+able to say:
+
+	mount -t devfs devfs /home/jail/dev
+	( cd /home/jail/dev ; rm $devices_i_dont_want_in_my_jails )
+	mount -u -o nonewdev /home/jail/dev
+
+To solve that problem.
+
+--
+Poul-Henning Kamp       | UNIX since Zilog Zeus 3.20
+phk@FreeBSD.ORG         | TCP/IP since RFC 956
+FreeBSD committer       | BSD since 4.3-tahoe    
+Never attribute to malice what can adequately be explained by incompetence.
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 12371.981196605@critter
+DATE: 2001-02-03T10:36:45+00:00  FROM: Poul-Henning Kamp <phk@critter.freebsd.dk> <None>
+SUBJ: Re: DEVFS newbie... 
+BODY:
+In message <82167.981191888@winston.osd.bsdi.com>, Jordan Hubbard writes:
+
+That's called "mount -o ro" :-)
+
+I have not finalized the workings of the options, right now we have
+a 32-bit bitmap of mountoptions and they're all used up, and I
+don't have the time and bikeshedcarpenter hours to design a new
+mount option implementation.
+
+--
+Poul-Henning Kamp       | UNIX since Zilog Zeus 3.20
+phk@FreeBSD.ORG         | TCP/IP since RFC 956
+FreeBSD committer       | BSD since 4.3-tahoe    
+Never attribute to malice what can adequately be explained by incompetence.
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 14457.981221808@critter
+DATE: 2001-02-03T17:36:48+00:00  FROM: Poul-Henning Kamp <phk@critter.freebsd.dk> <None>
+SUBJ: Re: DEVFS newbie... 
+BODY:
+In message <200102031729.f13HTL960996@harmony.village.org>, Warner Losh writes:
+
+I have seriously been thinking about some way to say something like
+	mount -t devfs -o jailset /home/jail/dev
+but an elegant implementation evades me at this moment.
+
+And again, it hinges on an extensible set of mount options.
+
+--
+Poul-Henning Kamp       | UNIX since Zilog Zeus 3.20
+phk@FreeBSD.ORG         | TCP/IP since RFC 956
+FreeBSD committer       | BSD since 4.3-tahoe    
+Never attribute to malice what can adequately be explained by incompetence.
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 14529.981222845@critter
+DATE: 2001-02-03T17:54:05+00:00  FROM: Poul-Henning Kamp <phk@critter.freebsd.dk> <None>
+SUBJ: Re: DEVFS newbie... 
+BODY:
+
+
+unwhiteout(2) has more promise I think.
+
+--
+Poul-Henning Kamp       | UNIX since Zilog Zeus 3.20
+phk@FreeBSD.ORG         | TCP/IP since RFC 956
+FreeBSD committer       | BSD since 4.3-tahoe    
+Never attribute to malice what can adequately be explained by incompetence.
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 14760.981228917@critter
+DATE: 2001-02-03T19:35:17+00:00  FROM: Poul-Henning Kamp <phk@critter.freebsd.dk> <None>
+SUBJ: Re: DEVFS newbie... 
+BODY:
+In message <200102031932.f13JWo961621@harmony.village.org>, Warner Losh writes:
+
+Yes, it was a hack, and it will not be hacked that way in my DEVFS.
+
+--
+Poul-Henning Kamp       | UNIX since Zilog Zeus 3.20
+phk@FreeBSD.ORG         | TCP/IP since RFC 956
+FreeBSD committer       | BSD since 4.3-tahoe    
+Never attribute to malice what can adequately be explained by incompetence.
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 14918.981230622@critter
+DATE: 2001-02-03T20:03:42+00:00  FROM: Poul-Henning Kamp <phk@critter.freebsd.dk> <None>
+SUBJ: Re: DEVFS newbie... 
+BODY:
+In message <200102031948.f13Jm1961781@harmony.village.org>, Warner Losh writes:
+
+No that was another, and probably too avant garde idea Julian and I
+have discussed:
+
+	Basically device-drivers create devices in a private
+	namespace, in /dev you link from the filesystem namespace
+	to the private namespace with a kind of symbolic link.
+
+It has too many "issues" with standards and VOP's to be viable
+right now.
+
+Doing straight symlinks would not work.
+
+--
+Poul-Henning Kamp       | UNIX since Zilog Zeus 3.20
+phk@FreeBSD.ORG         | TCP/IP since RFC 956
+FreeBSD committer       | BSD since 4.3-tahoe    
+Never attribute to malice what can adequately be explained by incompetence.
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 15139.981232112@critter
+DATE: 2001-02-03T20:28:32+00:00  FROM: Poul-Henning Kamp <phk@critter.freebsd.dk> <None>
+SUBJ: Re: DEVFS newbie... 
+BODY:
+In message <200102032021.f13KLQ962051@harmony.village.org>, Warner Losh writes:
+
+It's really very simple, if I get my way, this will be possible:
+
+	# rm /dev/null
+	# echo 'OOPS!'
+	# rm -W /dev/null
+	# ls -l /dev/null
+	crw-rw-rw-  1 root  wheel    2,   2  3 Feb 21:25 /dev/null
+	# mount -t devfs devfs /home/jail/dev
+	# cd /home/jail/dev
+	# rm -f *
+	# rm -W null zero tty console
+	# ls -l
+	crw-------  1 phk   wheel    0,   0  2 Feb 01:09 console
+	drwxr-xr-x  2 root  wheel         0  2 Feb 01:06 fd
+	crw-rw-rw-  1 root  wheel    2,   2  3 Feb 21:25 null
+	crw-rw-rw-  1 root  wheel    1,   0  3 Feb 17:27 tty
+	crw-rw-rw-  1 root  wheel    2,  12  1 Jan  1970 zero
+	#
+	
+
+It is :-)
+
+--
+Poul-Henning Kamp       | UNIX since Zilog Zeus 3.20
+phk@FreeBSD.ORG         | TCP/IP since RFC 956
+FreeBSD committer       | BSD since 4.3-tahoe    
+Never attribute to malice what can adequately be explained by incompetence.
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 33229.997029324@critter
+DATE: 2001-08-05T16:35:24+00:00  FROM: Poul-Henning Kamp <phk@critter.freebsd.dk> <None>
+SUBJ: Re: Linux ls fails on DEVFS /dev 
+BODY:
+In message <Pine.NEB.3.96L.1010805122845.24868B-100000@fledge.watson.org>, Robert Watson writes:
+
+I think until the linuxolator the cookies were only used by NFS and
+therefore it didn't really make a lot of sense for pseudo-fs' to
+implement it.
+
+I havn't looked at the patch Michael sent me for DEVFS, but judging from
+the small size it's not a big thing to fix anyway...
+
+-- 
+Poul-Henning Kamp       | UNIX since Zilog Zeus 3.20
+phk@FreeBSD.ORG         | TCP/IP since RFC 956
+FreeBSD committer       | BSD since 4.3-tahoe    
+Never attribute to malice what can adequately be explained by incompetence.
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+
+==========================================================================================
+DB: freebsd-arch.duckdb  hits=17
+==========================================================================================
+--------------------------------------------------------------------------------
+MID: 94808.915113237@critter.freebsd.dk
+DATE: 1998-12-31T14:07:17+00:00  FROM: Poul-Henning Kamp <phk@FreeBSD.ORG> <None>
+SUBJ: DEVFS, the time has come...
+BODY:
+
+... to make up our mind about it.
+
+There are a number of options open for us, and to make sure we talk
+about the substance let me stress once and for all that this dicussion
+should be about the >concept< of a devfs, not the code currently in 
+the tree.
+
+Once concensus has been reached about what and how a DEVFS should be
+and react, we can start to study the code in the tree to see if it
+fits or what it will take to get a devfs that does.
+
+
+DEVFS, HERITAGE, CONCEPT and ADVANTAGES:
+
+I talked to Dennis Ritchie about the history of device nodes
+(CHR/BLK) when I ate breakfast with him in New Orleans.  Orginally
+it was very crude but simple: Inode number 7 was the printer, 8
+was the disk, and so on.  The root-dir was around 40 at the time.
+This soon became a problem, so the device nodes were introduced,
+and we've had them ever since.  Device nodes are a shortcut from
+one namespace (filesystem) to another (cdevsw/bdevsw arrays of
+device drivers).  There is according to Dennis Ritchie no compelling
+reason to have a separate namespace for anything, if you could put
+it in the filesystem (plan#9 anybody ?)
+
+So what a devfs does is to remove the cdevsw and bdevsw namespaces
+of device drivers 
+
+--------------------------------------------------------------------------------
+MID: 6040.915273405@critter.freebsd.dk
+DATE: 1999-01-02T10:36:45+00:00  FROM: Poul-Henning Kamp <phk@critter.freebsd.dk> <None>
+SUBJ: Re: DEVFS, the time has come... 
+BODY:
+
+I've gathered all my replies into this email to try to keep the focus.
+
+
+No, I will not.
+
+I think the great majority of developers hasn't even thought about
+the pro-et-contra of the situation, or as the emails here convinced
+me, mixes the issue up with other more technical issues which have
+solutions in both cases.
+
+
+There were more reasons than that, but please leave that out of
+the current discussion, that is not the subject we're trying to
+settle.
+
+
+If you look at your suggestion, will you not agree with me that this 
+sounds like a bunch of gross hacks which would violate POLA big time ?
+
+
+Please disregard the current implementation and its limitations and
+focus on the hot spot of this discussion.
+
+
+Unless of course you put it in the same slot :-(
+
+Yes, I think AIX did as good a job on persistence as you can do,
+modulus a few representation issues, and that is one of the reasons
+why I don't want persistence.  The fact that the IBM subsidiary who
+made the ATM adapter for the RS/6K didn't register their hardware
+at all and when told so said "Sorry that scheme sucks and we're not
+going to burn our users with it" certainly made an impression on me.
+
+
+But if you think about chroot f
+
+--------------------------------------------------------------------------------
+MID: 19624.915544040@critter.freebsd.dk
+DATE: 1999-01-05T13:47:20+00:00  FROM: Poul-Henning Kamp <phk@critter.freebsd.dk> <None>
+SUBJ: Re: DEVFS, the time has come... 
+BODY:
+
+Well, summary #2:
+
+    1. Nobody against DEVFS as standard so far.
+
+    2. All talk of persistence implemented in the kernel has stopped.
+
+Cool, that is much further than -core has managed to get in 2.5 years.
+
+
+The next thing to tackle is the "devd": what it does.
+
+(NB:  NOT HOW IT DOES IT, I will urge the moderator to try to stay
+close to this policy for this discussion, thankyou!)
+
+Some thinking points:
+
+   * "devd" must be optional, for embedded applications where space is
+     tight we don't want to force people to run it.  It could also
+     quickly become a problem for machines with many chroot jails if
+     they needed a devd for each, so the "/etc/dev.rc" mode of config
+     must be an option.
+
+   * "device classes", are probably a good idea, although I have a hard
+     time finding more classes than "disk" and "tty" and "console associated",
+     where the latter covers mice, sound, keyboards, cameras and so on.
+     I am against implementing them in the kernel because it should not
+     be needed to change the kernel to introduce a new class, and it isn't
+     a job for the kernel anyway in my eyes.
+
+So, lets brainstorm the "devd" concept a bit, where does it come into
+
+
+--------------------------------------------------------------------------------
+MID: 7167.963403025@critter.freebsd.dk
+DATE: 2000-07-12T11:57:05+00:00  FROM: Poul-Henning Kamp <phk@critter.freebsd.dk> <None>
+SUBJ: Re: SysctlFS 
+BODY:
+In message <Pine.BSF.4.20.0007121328020.49102-100000@mx.webgiro.com>, Andrz
+ej Bialecki writes:
+
+
+I think it would be the entirely wrong thing to do as it would put
+the burden of rendering information inside the kernel.
+
+
+No, in fact it would not, you can do more flexible things in C code
+than with struct stat.
+
+Also, if it forces us to mount /sysctl in every jail(8) expect people
+to yell at you for that as well.
+
+Plan9 had a nice idea, but either you take it all the way, or you
+don't go down that road.  Going halfway doesn't make sense.
+
+Forget it...
+
+--
+Poul-Henning Kamp       | UNIX since Zilog Zeus 3.20
+phk@FreeBSD.ORG         | TCP/IP since RFC 956
+FreeBSD coreteam member | BSD since 4.3-tahoe    
+Never attribute to malice what can adequately be explained by incompetence.
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-arch" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 2445.963612361@critter.freebsd.dk
+DATE: 2000-07-14T22:06:01+00:00  FROM: Poul-Henning Kamp <phk@critter.freebsd.dk> <None>
+SUBJ: Re: SysctlFS 
+BODY:
+In message <Pine.BSF.4.10.10007141457550.59294-100000@InterJet.elischer.org>, J
+ulian Elischer writes:
+
+
+Yeah, I remember this one Julian, but how do we handle a cloning
+driver like pty ?  (which is about the only think in /dev in a jail
+which matters btw :-)
+
+--
+Poul-Henning Kamp       | UNIX since Zilog Zeus 3.20
+phk@FreeBSD.ORG         | TCP/IP since RFC 956
+FreeBSD coreteam member | BSD since 4.3-tahoe    
+Never attribute to malice what can adequately be explained by incompetence.
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-arch" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 2365.963743367@critter.freebsd.dk
+DATE: 2000-07-16T10:29:27+00:00  FROM: Poul-Henning Kamp <phk@critter.freebsd.dk> <None>
+SUBJ: DEVFS, the complete picture (Was: Re: SysctlFS)
+BODY:
+
+OK, now I finally have time to sit down and write an email with the
+complete picture about devfs.
+
+For a moment, disregard jails and rootmounts and let us just look at
+cloning.
+
+Cloning means that a device driver doesn't have to call make_dev()
+on all potential instances up front.
+
+This makes most difference for pseudo-devices, tun, ppp, slip, pty,
+md bpf and so on, but other "actual" drivers like fd could use it
+as well to avoid calling make_dev() for every conceiveable format
+of floppydisk.
+
+Implementing cloning without devfs would be a gross hack: we would
+have to magically notice that /dev was searched and nothing found,
+and I think we might just as well forget everything about that idea.
+
+Implementing cloning with devfs is simple:
+
+    Device-drivers can call devfs during their initialization and
+    register a "clone()" function with devfs.  (They obviously have
+    to deregister it again at dettach time).
+
+    When devfs::VOP_LOOKUP() fails to find the name it is being told
+    to look for, it will call all registered clone() routines 
+    successively with the sought after name as argument.
+
+    Each driver clone routine examine the name, and if it can
+    instantiate a de
+
+--------------------------------------------------------------------------------
+MID: 4772.963868830@critter.freebsd.dk
+DATE: 2000-07-17T21:20:30+00:00  FROM: Poul-Henning Kamp <phk@critter.freebsd.dk> <None>
+SUBJ: Re: DEVFS, the complete picture (Was: Re: SysctlFS) 
+BODY:
+In message <397357D7.167EB0E7@elischer.org>, Julian Elischer writes:
+
+I'm not saying it can be ignored.  I'm saying that it is not
+worth complicating the issue with big time.
+
+Your "symlink device node" proposal still doesn't solve the
+cloning problem, so it is only 1/2 a solution to what in
+practice is a non-problem.
+
+
+No, your code still built a vnode with no backing filesystem (it
+had no v_mount for instance) and that still forced a lot of special
+case code in generic vfs functions).
+
+
+But /dev/tty can just be mknod(8)'d in the jail, and it will just
+work as it should.
+
+
+No it hasn't, the vnode still has to be magically handled because
+it doesn't have a mountpoint.
+
+
+see later.  (always read the entire message before replying :-)
+
+
+Your "SYMLINK-LINK" proposal offers nothing that we don't already
+have with major/minor identification, which for all intents
+and purposes we will have to retain compatibility with for quite
+some time anyway.
+
+--
+Poul-Henning Kamp       | UNIX since Zilog Zeus 3.20
+phk@FreeBSD.ORG         | TCP/IP since RFC 956
+FreeBSD coreteam member | BSD since 4.3-tahoe    
+Never attribute to malice what can adequately be explained by incompetence.
+
+
+To Unsubscribe
+
+--------------------------------------------------------------------------------
+MID: 2732.963993497@critter.freebsd.dk
+DATE: 2000-07-19T07:58:17+00:00  FROM: Poul-Henning Kamp <phk@critter.freebsd.dk> <None>
+SUBJ: Re: DEVFS, the complete picture (Was: Re: SysctlFS) 
+BODY:
+In message <3974D642.59E2B600@elischer.org>, Julian Elischer writes:
+
+
+No it doesn't.  You "symlink" idea just replaces the major+minor
+with a string, that's all.
+
+Cloning can be done two ways, which I will illustrate with the pty
+driver as example:
+
+A)	You open "/dev/pty", which clones and does some h0h0magic
+	with vnodes and fdesc.
+	You call ioctl(fd, WHATSMYREALNAME, buf, sizeof(buf))
+	and it tells you that you are really "/dev/pty102".
+
+B)	You try to open ("/dev/pty%d",N) for N [0...]
+	Once an open succeeds you have your fd and your name.
+	(this is what we do today)
+
+In scenario A) in a jail, we may not have a /dev/pty102 entry
+in /dev and we would have to try to create it.  Creating device
+nodes in jails is a NO-NO thing, and adding h0h0magic code to
+allow this for ptys anyway is at best a gross hack.
+*This* is the cloning problem in jails.
+
+In scenario B) this is not a problem, but a configuration issue:
+you have to create sufficient many ptys when you setup the jail.
+
+Jails were never meant to be a 100% faithfull rendition of a FreeBSD
+system, and in particular emphasis was put on it being a lightweight
+implementation.  If jails get in the way of something in the central
+cor
+
+--------------------------------------------------------------------------------
+MID: 88242.966757125@critter
+DATE: 2000-08-20T07:38:45+00:00  FROM: Poul-Henning Kamp <phk@critter.freebsd.dk> <None>
+SUBJ: Re: Integration of Net/OpenBSD code (was Re: your mail) 
+BODY:
+In message <Pine.LNX.4.21.0008200017430.15719-100000@zeppo.feral.com>, Matthew 
+Jacob writes:
+
+I think attempting to keep the *BSD's compatible at the source code
+level would severely limit out ability to respond to where the
+market is headed.
+
+I can imagine how the jail facility would still be sitting in a
+"working group" trying to resolve if it should be called "jail" or
+"gaol".
+
+As long as the *BSD's are separate projects, coordination can only
+happen in the case where it's the same developer in all of the
+projects.  Anything else is just futile dreaming...
+
+--
+Poul-Henning Kamp       | UNIX since Zilog Zeus 3.20
+phk@FreeBSD.ORG         | TCP/IP since RFC 956
+FreeBSD coreteam member | BSD since 4.3-tahoe    
+Never attribute to malice what can adequately be explained by incompetence.
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-arch" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 29882.988490305@critter
+DATE: 2001-04-28T20:38:25+00:00  FROM: Poul-Henning Kamp <phk@critter.freebsd.dk> <None>
+SUBJ: Re: jailNG 
+BODY:
+
+I'm not uninterested in jails, but I have no time (and no contracts
+to give me time) for it at present.
+
+In general I think jail is in much more capable hands with you anyway :-)
+
+Poul-Henning
+
+In message <Pine.NEB.3.96L.1010423141823.91472L-100000@fledge.watson.org>, Robe
+rt Watson writes:
+
+--
+Poul-Henning Kamp       | UNIX since Zilog Zeus 3.20
+phk@FreeBSD.ORG         | TCP/IP since RFC 956
+FreeBSD committer       | BSD since 4.3-tahoe    
+Never attribute to malice what can adequately be explained by incompetence.
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-arch" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 35283.988531065@critter
+DATE: 2001-04-29T07:57:45+00:00  FROM: Poul-Henning Kamp <phk@critter.freebsd.dk> <None>
+SUBJ: Re: jailNG 
+BODY:
+In message <Pine.BSF.4.21.0104281944550.84976-100000@sasami.jurai.net>, scanner
+@jurai.net writes:
+
+ICMP works just as usual, but programs which use RAW-IP sockets,
+such as the ping(8) program does not.
+
+--
+Poul-Henning Kamp       | UNIX since Zilog Zeus 3.20
+phk@FreeBSD.ORG         | TCP/IP since RFC 956
+FreeBSD committer       | BSD since 4.3-tahoe    
+Never attribute to malice what can adequately be explained by incompetence.
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-arch" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 33345.993888464@critter
+DATE: 2001-06-30T08:07:44+00:00  FROM: Poul-Henning Kamp <phk@freebsd.org> <None>
+SUBJ: DEVFS, devd and all that...
+BODY:
+
+Unfortunately I will not be able to attend online today, so instead
+you'll have to take this email as my input in the DEVFS/devd discussion.
+
+Considering the infrequency of device create events and the fact
+that nobody so far has come up with a good example which cannot
+be handled otherwise I prefer that devd does not need to be
+involved in all device creates.
+
+I'm also in favour of being able to run without devd on lightweight
+systems (picobsd, jails...)
+
+My ideas there for is this:
+
+The device driver, in make_dev() specifies:
+	a device type ("disk", "tape", "tty", "special")
+	a device name (as now: fd0a, ttyq3 etc)
+
+We implement a list of rules which is used to define what should
+happen at device create:
+
+	name="ad0s1a" : mode=0600 owner=root group=wheel
+	name="fd0*" : mode=0666 owner root group=wheel chown_on_open=yes
+	type="disk" : mode=0640 owner=root group=operator
+	type="pty" : mode = 0666 owner=root group=operator chown_on_open=yes
+	type="tty" : mode = 0600 owner=root group=tty
+
+That way we have a flexible and configurable policy even running without
+devd and we have a means for devd to express special wishes.
+One particular action could be:
+
+	type="ttyd*" : ask_devd=yes
+
+
+
+--------------------------------------------------------------------------------
+MID: 36373.1006968904@critter.freebsd.dk
+DATE: 2001-11-28T17:35:04+00:00  FROM: Poul-Henning Kamp <phk@critter.freebsd.dk> <None>
+SUBJ: Re: Anybody working on devd? 
+BODY:
+In message <Pine.NEB.3.96L.1011128113543.37721K-100000@fledge.watson.org>, Robert 
+Watson writes:
+
+Let me jump ahead a bit in the discussion here.
+
+There are a number of questions to answer when a new device node appears,
+the main two are:
+
+	1. What mode/owner/group should it have.
+	2. Should it appear in a particular devfs mount instance (ie: a jail)
+
+While it may sound simple to make everything start out 0/0/0 and have devd
+fix it up, it isn't simple once you start to implement it because now you
+have devices in two states (those only devd can see and the real ones).
+How do you recognize the authorized "devd" process from other processes ?
+What about small/picobsd systems ?
+
+My preferred solution therefore, is to add a rule-set facility to
+devfs, so that for each mount-point, the policy can be expressed
+in the kernel, by userland, if the defaults are not wanted.
+
+I would imagine the rules [cw]ould look like this:
+
+	class=disk owner=root group=wheel mode=0600
+		# nonstandard everything
+	name=uscanner* mode=666 chown chmod=0600
+		# nonstandard mode.  On open chown to opening
+		# process and mode 0600
+	name=pty* hide
+		# we don't want ptys in this jail.
+	
+In practice it will probabl
+
+--------------------------------------------------------------------------------
+MID: 37072.1006970327@critter.freebsd.dk
+DATE: 2001-11-28T17:58:47+00:00  FROM: Poul-Henning Kamp <phk@critter.freebsd.dk> <None>
+SUBJ: Re: Anybody working on devd? 
+BODY:
+In message <Pine.NEB.3.96L.1011128124824.40174A-100000@fledge.watson.org>, Robert 
+Watson writes:
+
+
+Well, we use the same as we had in MAKEDEV for "conservative".
+
+
+I agree this is not nice, but given the rule-system I proposed this would
+be a non-issue.
+
+
+Well, in a devfs context this is a non-issue since devices are local
+in NFS.
+
+
+Please read my email about the proposal for rules, that would move
+this back to the password file.
+
+
+Nope, it is on the file system representation.  No doubt about that
+from the author of jail.
+
+-- 
+Poul-Henning Kamp       | UNIX since Zilog Zeus 3.20
+phk@FreeBSD.ORG         | TCP/IP since RFC 956
+FreeBSD committer       | BSD since 4.3-tahoe    
+Never attribute to malice what can adequately be explained by incompetence.
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-arch" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 38117.1006972995@critter.freebsd.dk
+DATE: 2001-11-28T18:43:15+00:00  FROM: Poul-Henning Kamp <phk@critter.freebsd.dk> <None>
+SUBJ: Re: Anybody working on devd? 
+BODY:
+In message <Pine.NEB.3.96L.1011128125713.40174B-100000@fledge.watson.org>, Robert 
+Watson writes:
+
+
+And where do you want to run the devd for jails ?  Inside the jail ?
+
+Do you really want to spend a process per jail to be able to open a
+PTY in the jail ?
+
+It doesn't scale...
+
+-- 
+Poul-Henning Kamp       | UNIX since Zilog Zeus 3.20
+phk@FreeBSD.ORG         | TCP/IP since RFC 956
+FreeBSD committer       | BSD since 4.3-tahoe    
+Never attribute to malice what can adequately be explained by incompetence.
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-arch" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 40211.1006979891@critter.freebsd.dk
+DATE: 2001-11-28T20:38:11+00:00  FROM: Poul-Henning Kamp <phk@critter.freebsd.dk> <None>
+SUBJ: Re: Anybody working on devd? 
+BODY:
+In message <200111282025.PAA03173@wellington.cnchost.com>, Bakul Shah writes:
+
+
+This is what I call "DEVFS by simulation", and it has many
+drawbacks:
+
+1. Complexity.  This is actually more code to write and
+   less intuitive to document than doing a DEVFS.
+
+2. Functionality.  This doesn't work on a R/O root filesystem
+   or on a filesystem which does not implement device nodes.
+
+3. POLA.  If you lack the device node for your root disk, or
+   if your root filesystem is damaged so you cannot remount it
+   RW, you are in a sticky widget: your daemon cannot create
+   device nodes you may need to recover from the mess.
+
+4. JAILS.  This almost invariably will cost you a process per
+   jail, something I am trying very hard to avoid.
+
+5. Efficiency.  Opening a PTY now needs at least 4 context 
+   switches.
+
+etc etc.
+
+
+I am trying not to put policy in the kernel (or in the system at
+all for that matter), what I am proposing is a way to enforce
+whatever policy the admin wants.
+
+For reasons of code complexity it makes sense to do this enforcement
+in the kernel, rather than add a layer of complexity by sending
+notices out into userland and back into the kernel before the nodes
+can be created.
+
+
+--------------------------------------------------------------------------------
+MID: 3003.1007067161@critter.freebsd.dk
+DATE: 2001-11-29T20:52:41+00:00  FROM: Poul-Henning Kamp <phk@critter.freebsd.dk> <None>
+SUBJ: Re: Anybody working on devd? 
+BODY:
+In message <001401c178ee$8b6d7300$38a898d8@cryptohill.net>, "Jeroen C. van Geld
+eren" writes:
+
+While technically possible, it would be an administrative liability
+I think.
+
+That being said, since I am not going to write devd, I will not try
+to impose my view on things purely internal to its design.
+
+-- 
+Poul-Henning Kamp       | UNIX since Zilog Zeus 3.20
+phk@FreeBSD.ORG         | TCP/IP since RFC 956
+FreeBSD committer       | BSD since 4.3-tahoe    
+Never attribute to malice what can adequately be explained by incompetence.
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-arch" in the body of the message
+
+
+
+
+==========================================================================================
+DB: freebsd-chat.duckdb  hits=0
+==========================================================================================

@@ -1,0 +1,1043 @@
+==========================================================================================
+DB: freebsd-hackers.duckdb  hits=32
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-4238b77cc2235caa>
+DATE: 1999-04-08T19:03:12+00:00  FROM: Mike Smith <mike () smith ! net ! au> <None>
+SUBJ: Re: PXE services?
+BODY:
+
+Yes.  It's on the list of host environments that we want the loader's 
+diskless boot stuff to support.  Last time it was looked at it was 
+still a bit on the green side.
+
+-- 
+\\  Sometimes you're ahead,       \\  Mike Smith
+\\  sometimes you're behind.      \\  mike@smith.net.au
+\\  The race is long, and in the  \\  msmith@freebsd.org
+\\  end it's only with yourself.  \\  msmith@cdrom.com
+
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-a6fa1349639217d2>
+DATE: 2000-03-13T18:31:43+00:00  FROM: Oliver Fromme <olli () dorifer ! heim3 ! tu-clausthal ! de> <None>
+SUBJ: Re: PXE
+BODY:
+Jeroen Ruigrok van der Werven <asmodai@bart.nl> wrote in list.freebsd-hackers:
+ > -On [20000313 13:55], David Yeske (dyeske@yahoo.com) wrote:
+ > >I just got an Intel PRO/100+ Management card for a project I am working on.  I have done a little
+ > >a little research and it looks like it is going to be a lot of work to netboot this thing.  Anyone
+ > >gotten this to work so far?  I have tried using bootpd and dhcpd with no luck.
+ > 
+ > Please save your troubles.
+ > 
+ > I know of some committers whom are netbooting with 3Com's and Intels
+ > already.  I think that this will be committed ASAP.
+
+Over here, /usr/ports/net/etherboot works fine, after a bit of
+hacking.
+
+Regards
+   Oliver
+
+-- 
+Oliver Fromme, Leibnizstr. 18/61, 38678 Clausthal, Germany
+(Info: finger userinfo:olli@dorifer.heim3.tu-clausthal.de)
+
+"In jedem St�ck Kohle wartet ein Diamant auf seine Geburt"
+                                         (Terry Pratchett)
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe 
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-45ab9cc2bdf8dd88>
+DATE: 2000-07-11T15:14:36+00:00  FROM: Doug Ambrisko <ambrisko () whistle ! com> <None>
+SUBJ: Re: PXE (pxeboot) and serial consoles - force it!
+BODY:
+Paul Saab writes:
+| Doug Ambrisko (ambrisko@whistle.com) wrote:
+| > Paul Saab writes:
+| > | set console="comconsole" is what you want in /boot/loader.rc
+| > 
+| > Yep, except that it doesn't initialize the com port, it just starts
+| > using it so you end up with junk out the port.  However, if you have a
+| > BIOS that setups the baud rate etc. of the serial port then you would
+| > be okay.  Current FreeBSD does this in the boot blocks and not the loader.
+| 
+| Umm.. That isn't the case at all.  I use it all the time and it surely
+| does init the com port.
+
+Yep, you're right I just tried it and it worked.  I tried a similar thing
+once before with the loader and it failed for some reason to setup the serial
+port.  Thanks for the enlightenment, it will be usefull.
+
+Doug A.
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-2ffadae6542d8653>
+DATE: 2000-11-05T13:58:53+00:00  FROM: Danny Braniss <danny () cs ! huji ! ac ! il> <None>
+SUBJ: pxe
+BODY:
+hi all,
+	I'm trying to figure out why in pxe.c (sys/boot/i386/libi386)
+the ip in ip:path is quietly ignored. there must be a reason, but it escapes 
+me.
+
+the problem im having, is that since my nfs-root server is not the 
+dhcpd-server,
+the only way to give it the root nfs ip, is via the option swap-server.
+
+tia,
+
+	danny
+
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-6a3c3418c125260b>
+DATE: 2000-12-01T16:54:03+00:00  FROM: Mathew KANNER <mat () cs ! mcgill ! ca> <None>
+SUBJ: Re: PXE boot problem.
+BODY:
+On Nov 30, Matt Simerson wrote:
+	
+
+	Get the flash upgrade from intel. 
+
+	Mine reads:
+Intel(R) Boot Agent Version 4.0.14
+
+	and it works well.
+
+	--Mat
+
+
+-- 
+Mathew Kanner <mat@CS.McGill.CA>  SOCS McGill University
+   Obtuse quote: He [not me] understands: "This field of perception
+   is void of perception of man." -- The Quintessence of Buddhism 
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-9a89fd4723b2e22b>
+DATE: 2000-12-01T23:59:28+00:00  FROM: "Matt Simerson" <mpsimerson () hostpro ! com> <None>
+SUBJ: RE: PXE boot problem. - SOLVED
+BODY:
+That was it. Updating the flash on the Intel NIC and she booted right up. 
+
+Thanks,
+Matt
+
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-10ba87b87abeb034>
+DATE: 2000-12-18T22:28:44+00:00  FROM: Doug White <dwhite () resnet ! uoregon ! edu> <None>
+SUBJ: Re: diskless/pxe boot
+BODY:
+On Fri, 15 Dec 2000, Danny Braniss wrote:
+
+
+For your condition we'd need to know what PXE version you were using and
+on what device.  
+
+For newer PXE revs (2.X), you want build 082 or later.  Everything before
+is broken in some way.  The 0.99c version of the Boot Agent (on older fxp
+cards) is fine, however.
+
+The Intel 810 firmware is quite broken; a fixed one will be available
+shortly.
+
+Doug White                    |  FreeBSD: The Power to Serve
+dwhite@resnet.uoregon.edu     |  www.FreeBSD.org
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: 20000313125359.4258.qmail@web116.yahoomail.com
+DATE: 2000-03-13T12:53:59+00:00  FROM: David Yeske <dyeske@yahoo.com> <None>
+SUBJ: PXE
+BODY:
+I just got an Intel PRO/100+ Management card for a project I am working on.  I have done a little
+a little research and it looks like it is going to be a lot of work to netboot this thing.  Anyone
+gotten this to work so far?  I have tried using bootpd and dhcpd with no luck.
+
+Regards,
+David Yeske
+__________________________________________________
+Do You Yahoo!?
+Talk to your friends online with Yahoo! Messenger.
+http://im.yahoo.com
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 20000313135715.M77324@lucifer.bart.nl
+DATE: 2000-03-13T12:57:15+00:00  FROM: Jeroen Ruigrok van der Werven <asmodai@bart.nl> <None>
+SUBJ: Re: PXE
+BODY:
+-On [20000313 13:55], David Yeske (dyeske@yahoo.com) wrote:
+
+Please save your troubles.
+
+I know of some committers whom are netbooting with 3Com's and Intels
+already.  I think that this will be committed ASAP.
+
+-- 
+Jeroen Ruigrok van der Werven          Network- and systemadministrator
+<asmodai@bart.nl>                      VIA NET.WORKS The Netherlands
+BSD: Technical excellence at its best  http://www.bart.nl
+Here's a mirror, there's a screen, on both ways you can get in...
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 200003131831.TAA52849@dorifer.heim3.tu-clausthal.de
+DATE: 2000-03-13T18:31:43+00:00  FROM: Oliver Fromme <olli@dorifer.heim3.tu-clausthal.de> <None>
+SUBJ: Re: PXE
+BODY:
+Jeroen Ruigrok van der Werven <asmodai@bart.nl> wrote in list.freebsd-hackers:
+ > -On [20000313 13:55], David Yeske (dyeske@yahoo.com) wrote:
+ > >I just got an Intel PRO/100+ Management card for a project I am working on.  I have done a little
+ > >a little research and it looks like it is going to be a lot of work to netboot this thing.  Anyone
+ > >gotten this to work so far?  I have tried using bootpd and dhcpd with no luck.
+ > 
+ > Please save your troubles.
+ > 
+ > I know of some committers whom are netbooting with 3Com's and Intels
+ > already.  I think that this will be committed ASAP.
+
+Over here, /usr/ports/net/etherboot works fine, after a bit of
+hacking.
+
+Regards
+   Oliver
+
+-- 
+Oliver Fromme, Leibnizstr. 18/61, 38678 Clausthal, Germany
+(Info: finger userinfo:olli@dorifer.heim3.tu-clausthal.de)
+
+"In jedem St�ck Kohle wartet ein Diamant auf seine Geburt"
+                                         (Terry Pratchett)
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe 
+
+--------------------------------------------------------------------------------
+MID: 396A3126.78203836@digitalconvergence.com
+DATE: 2000-07-10T20:25:10+00:00  FROM: Alan Edmonds <aedmonds@digitalconvergence.com> <None>
+SUBJ: PXE (pxeboot) and serial consoles - force it!
+BODY:
+
+I'm playing with PXE and pxeboot.   I have a question about
+setting the serial console option.  The PC BIOS reports 
+'No Keyboard Present', but when PXE boots, BTX reports
+console as internal keyboard/video.  So, I'm looking at
+hard coding a serial console into BTX.  Normally, you
+put the -h option into /boot.conf, but PXE doesn't
+read that.  I tried putting console=comconsole into
+/boot/loader.rc, but it didn't work quite right.
+I modified src/sys/boot/i386/common/conf.c and
+removed the vidconsole option and that worked.
+I could set the flags in the kernel to 0x20 to
+force serial and that worked.
+
+I'd like a more 'supported' option.  That allowed
+me access to BTX before booting the kernel.  Does
+anyone have a suggestion?  Is there a /etc/make.conf
+option I could set?  
+
+Thanks.
+-- 
+Alan Edmonds      Director of International Technology
+DigitalConvergence.:Com
+aedmonds@digitalconvergence.com
+Phone: +1-214-292-6040
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe 
+
+--------------------------------------------------------------------------------
+MID: 20000710135722.A24439@elvis.mu.org
+DATE: 2000-07-10T20:57:22+00:00  FROM: Paul Saab <paul@mu.org> <None>
+SUBJ: Re: PXE (pxeboot) and serial consoles - force it!
+BODY:
+set console="comconsole" is what you want in /boot/loader.rc
+
+paul
+
+Alan Edmonds (aedmonds@digitalconvergence.com) wrote:
+
+-- 
+Paul Saab
+Technical Yahoo
+paul@mu.org - ps@yahoo-inc.com - ps@freebsd.org
+Do You .. uhh .. Yahoo!?
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 200007102100.OAA14857@whistle.com
+DATE: 2000-07-10T21:00:55+00:00  FROM: Doug Ambrisko <ambrisko@whistle.com> <None>
+SUBJ: Re: PXE (pxeboot) and serial consoles - force it!
+BODY:
+Alan Edmonds writes:
+| 
+| I'm playing with PXE and pxeboot.   I have a question about
+| setting the serial console option.  The PC BIOS reports 
+| 'No Keyboard Present', but when PXE boots, BTX reports
+| console as internal keyboard/video.  So, I'm looking at
+| hard coding a serial console into BTX.  Normally, you
+| put the -h option into /boot.conf, but PXE doesn't
+| read that.  I tried putting console=comconsole into
+| /boot/loader.rc, but it didn't work quite right.
+| I modified src/sys/boot/i386/common/conf.c and
+| removed the vidconsole option and that worked.
+| I could set the flags in the kernel to 0x20 to
+| force serial and that worked.
+
+I think the issue is that the loader (ie pxeboot in this case) does not
+initialize the COM port.  So in the case in which you don't have the 
+boot block initialize the COM port (ie the -h option) then you get
+garbage out the serial port at best.  I ran into the same problem.
+
+So it works fine from the boot blocks but is broken otherwise.  To fi
+
+--------------------------------------------------------------------------------
+MID: 200007102231.PAA16902@whistle.com
+DATE: 2000-07-10T22:31:36+00:00  FROM: Doug Ambrisko <ambrisko@whistle.com> <None>
+SUBJ: Re: PXE (pxeboot) and serial consoles - force it!
+BODY:
+Paul Saab writes:
+| set console="comconsole" is what you want in /boot/loader.rc
+
+Yep, except that it doesn't initialize the com port, it just starts
+using it so you end up with junk out the port.  However, if you have a
+BIOS that setups the baud rate etc. of the serial port then you would
+be okay.  Current FreeBSD does this in the boot blocks and not the loader.
+
+Doug A.
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 200007102252.PAA07378@mass.osd.bsdi.com
+DATE: 2000-07-10T22:52:43+00:00  FROM: Mike Smith <msmith@freebsd.org> <None>
+SUBJ: Re: PXE (pxeboot) and serial consoles - force it! 
+BODY:
+
+Are you sure about this?
+
+sys/boot/common/console.c:cons_probe()
+...
+    consoles[active]->c_init(0);
+...
+
+sys/boot/i386/libi386/comconsole.c:
+static int      comc_started;
+...
+static int
+comc_init(int arg)
+{
+    if (comc_started && arg == 0)
+        return 0;
+    comc_started = 1;
+
+    outb(COMPORT + com_cfcr, CFCR_DLAB | COMC_FMT);
+    outb(COMPORT + com_dlbl, COMC_BPS(COMSPEED) & 0xff);
+    outb(COMPORT + com_dlbh, COMC_BPS(COMSPEED) >> 8);
+    outb(COMPORT + com_cfcr, COMC_FMT);
+    outb(COMPORT + com_mcr, MCR_RTS | MCR_DTR);
+
+    do
+        inb(COMPORT + com_data);
+    while (inb(COMPORT + com_lsr) & LSR_RXRDY);
+
+    return(0);
+}
+
+-- 
+... every activity meets with opposition, everyone who acts has his
+rivals and unfortunately opponents also.  But not because people want
+to be opponents, rather because the tasks and relationships force
+people to take different points of view.  [Dr. Fritz Todt]
+
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers
+
+--------------------------------------------------------------------------------
+MID: 20000710154639.A26931@elvis.mu.org
+DATE: 2000-07-10T22:46:39+00:00  FROM: Paul Saab <paul@mu.org> <None>
+SUBJ: Re: PXE (pxeboot) and serial consoles - force it!
+BODY:
+Doug Ambrisko (ambrisko@whistle.com) wrote:
+
+Umm.. That isn't the case at all.  I use it all the time and it surely
+does init the com port.
+
+-- 
+Paul Saab
+Technical Yahoo
+paul@mu.org - ps@yahoo-inc.com - ps@freebsd.org
+Do You .. uhh .. Yahoo!?
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 396A5802.FEA3126D@digitalconvergence.com
+DATE: 2000-07-10T23:10:58+00:00  FROM: Alan Edmonds <aedmonds@digitalconvergence.com> <None>
+SUBJ: Re: PXE (pxeboot) and serial consoles - force it!
+BODY:
+Restating the question.
+
+Is there a way to force PXE to
+
+1) not probe for a console
+2) use a serial port as the default com port
+
+I know I can put set console="comconsole" in /boot/loader.rc.
+Normally, this is set in the boot blocks, but we don't
+have these in pxeboot.
+
+Thanks,
+-- 
+Alan Edmonds      Director of International Technology
+DigitalConvergence.:Com
+aedmonds@digitalconvergence.com
+Phone: +1-214-292-6040
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 200007102329.QAA07584@mass.osd.bsdi.com
+DATE: 2000-07-10T23:29:02+00:00  FROM: Mike Smith <msmith@freebsd.org> <None>
+SUBJ: Re: PXE (pxeboot) and serial consoles - force it! 
+BODY:
+
+I think you have some very serious confusion about what things are and 
+what they are called, and it is making it impossible for anyone else to 
+understand what you're talking about.
+
+"PXE" is a specification, and an interface compliant with that 
+specification.
+
+"PXE boot ROM" is code which implements the "PXE" interface in order to 
+boot your system and support other boot programs.
+
+"pxeboot" is a program loaded by the "PXE boot ROM" as part of the boot 
+process.  It is the same as the "loader" in the boot-from-disk case.
+
+
+Nothing probes for a console, apart from boot2 in the boot-from-disk case 
+if the -P flag is found in /boot.config.
+
+
+I think you mean "use a serial port as the console".  You can build 
+"pxeboot" without keyboard/video support by commenting out the vidconsole 
+entry in the definition of the consoles array in 
+sys/boot/i386/loader/conf.c
+
+
+Actually, you will find that if you have correctly configured your PXE
+environment, "pxeboot" will correctly find and parse /
+
+--------------------------------------------------------------------------------
+MID: 396A5D6B.BFFF396F@digitalconvergence.com
+DATE: 2000-07-10T23:34:03+00:00  FROM: Alan Edmonds <aedmonds@digitalconvergence.com> <None>
+SUBJ: Re: PXE (pxeboot) and serial consoles - force it!
+BODY:
+
+Mike Smith wrote:
+
+Yes, I understand this although my question didn't state that.
+I should have said 'in the case of booting over the 
+network with the PXE client in the NIC ROM and using
+pxeboot as the third stage boot loader.'
+ 
+
+Okay.  Maybe I used the word probe incorrectly.  As I understand
+pxeboot (and loader(8)), in the case of an unspecified console, 
+it searches for a console.  It first looks for the internal
+video/keyboard (vidconsole) and then for COMCONSOLE.  It uses
+the first one it finds.
+ 
+
+You are right, I meant console.  I need to proofread a bit.
+I've been stuck deep in the code and fresh air screws up my head.
+
+I've done that and that solves the problem.  However, it's
+a bit of a kludge in my book.
+
+
+Except if pxeboot can't read loader.rc you could be hosed.
+Since pxeboot is loaded over the network, you might not
+be able to mount the root fs and read /boot/loader.rc.
+I was just trying to set the default case to assume serial console
+like you can with boot[012].
+
+Tha
+
+--------------------------------------------------------------------------------
+MID: 20000710164855.A27888@elvis.mu.org
+DATE: 2000-07-10T23:48:55+00:00  FROM: Paul Saab <paul@mu.org> <None>
+SUBJ: Re: PXE (pxeboot) and serial consoles - force it!
+BODY:
+Alan Edmonds (aedmonds@digitalconvergence.com) wrote:
+
+pxeboot loads /boot/loader.rc over the network from the same place
+the PXE bootrom loaded pxeboot.  It is done with either NFS or TFTP
+(depending on what you compile).  Therefore, if it could load pxeboot,
+then it can more than likely load /boot/loader.rc.
+
+-- 
+Paul Saab
+Technical Yahoo
+paul@mu.org - ps@yahoo-inc.com - ps@freebsd.org
+Do You .. uhh .. Yahoo!?
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: XFMail.000710175725.jhb@FreeBSD.org
+DATE: 2000-07-11T00:57:25+00:00  FROM: John Baldwin <jhb@FreeBSD.ORG> <None>
+SUBJ: Re: PXE (pxeboot) and serial consoles - force it!
+BODY:
+
+On 10-Jul-00 Alan Edmonds wrote:
+
+Bzzzt.  UTSL.  The console variable overrides the detection.  However,
+/boot/loader.rc isn't run until after the loader has initialized, so the
+console won't kick in until after loader.rc has been loaded and ran. Thus,
+you won't see the first few messages over the serial console.
+
+
+There should be no need.  However, note that it won't take effect until
+after loader.rc.
+
+
+boot0 doesn't support a serial console, neither does boot1.
+If you want, you can change pxeldr.s to pass in the serial console
+flag to force a serial console.  From <sys/reboot.h>:
+
+#define       RB_SERIAL       0x1000  /* user serial port as console */
+
+Then pull up sys/boot/i386/pxeldr/pxeldr.s and after this:
+
+# Setup the arguments that the loader is expecting from boot[12]
+#
+                movw $bootinfo_msg, %si         # %ds:(%si) -> boot args message
+                callw putstr                    # display the message
+                movw $MEM_ARG, %bx              # %ds:(%bx
+
+--------------------------------------------------------------------------------
+MID: 396A909F.667C6688@digitalconvergence.com
+DATE: 2000-07-11T03:12:31+00:00  FROM: Alan Edmonds <aedmonds@digitalconvergence.com> <None>
+SUBJ: Re: PXE (pxeboot) and serial consoles - force it!
+BODY:
+I hate to disagree but my setup loads pxeboot
+from /tftpboot (as per the tftp line in inetd.conf)
+and my DHCP options specify the root fs as /pxeroot.
+pxeboot loads /boot/loader.rc from /pxeroot.  It's
+confusing I know.  It also appears to load /pxeboot
+via tftp and /boot/loader.rc via NFS.   Maybe I 
+just have an ill advised configuration.
+
+This configuration developed as I figured out how
+things were put together.  I haven't gone back and
+cleaned things up; but it needs it.
+
+Thanks.
+
+Paul Saab wrote:
+
+-- 
+Alan Edmonds      Director of International Technology
+DigitalConvergence.:Com
+aedmonds@digitalconvergence.com
+Phone: +1-214-292-6040
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 20000710215932.A32378@elvis.mu.org
+DATE: 2000-07-11T04:59:32+00:00  FROM: Paul Saab <paul@mu.org> <None>
+SUBJ: Re: PXE (pxeboot) and serial consoles - force it!
+BODY:
+Alan Edmonds (aedmonds@digitalconvergence.com) wrote:
+
+Ok.. that is true.. (I just dont do it that way)
+
+The PXE bootrom downloads via tftp and we set the loader to use NFS
+by default.  The NFS support is much better than tftp, so that is why
+its the default.
+
+
+:)
+
+-- 
+Paul Saab
+Technical Yahoo
+paul@mu.org - ps@yahoo-inc.com - ps@freebsd.org
+Do You .. uhh .. Yahoo!?
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 200007111514.IAA28017@whistle.com
+DATE: 2000-07-11T15:14:36+00:00  FROM: Doug Ambrisko <ambrisko@whistle.com> <None>
+SUBJ: Re: PXE (pxeboot) and serial consoles - force it!
+BODY:
+Paul Saab writes:
+| Doug Ambrisko (ambrisko@whistle.com) wrote:
+| > Paul Saab writes:
+| > | set console="comconsole" is what you want in /boot/loader.rc
+| > 
+| > Yep, except that it doesn't initialize the com port, it just starts
+| > using it so you end up with junk out the port.  However, if you have a
+| > BIOS that setups the baud rate etc. of the serial port then you would
+| > be okay.  Current FreeBSD does this in the boot blocks and not the loader.
+| 
+| Umm.. That isn't the case at all.  I use it all the time and it surely
+| does init the com port.
+
+Yep, you're right I just tried it and it worked.  I tried a similar thing
+once before with the loader and it failed for some reason to setup the serial
+port.  Thanks for the enlightenment, it will be usefull.
+
+Doug A.
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: E13sQJx-00041A-00@sexta.cs.huji.ac.il
+DATE: 2000-11-05T13:58:53+00:00  FROM: Danny Braniss <danny@cs.huji.ac.il> <None>
+SUBJ: pxe
+BODY:
+hi all,
+	I'm trying to figure out why in pxe.c (sys/boot/i386/libi386)
+the ip in ip:path is quietly ignored. there must be a reason, but it escapes 
+me.
+
+the problem im having, is that since my nfs-root server is not the 
+dhcpd-server,
+the only way to give it the root nfs ip, is via the option swap-server.
+
+tia,
+
+	danny
+
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 8D18712B2604D411A6BB009027F644980DD7A0@0SEA01EXSRV1
+DATE: 2000-12-01T00:42:22+00:00  FROM: "Matt Simerson" <mpsimerson@hostpro.com> <None>
+SUBJ: PXE boot problem.
+BODY:
+Hi Folks,
+
+I've been trying hard to get a FreeBSD system booted via PXE with only
+limited success. Maybe someone can have a look at my configs and shed a
+little light on this for me.
+
+Here's what happens at boot time:
+
+   Intel UNDI, PXE-2.0 (build 067)
+   Copyright (c) 1997, 1998 Intel Corporation
+
+   DHCP MAC ADDR
+   CLIENT ID: 192.168.254.133  MASK: 255.255.255.0  DHCP IP: 192.168.254.3
+   GATEWAY IP: 192.168.254.1
+   PXE Loader 1.00
+
+   Building the boot loader arguments
+   Relocating the loader and the BTX
+   Starting the BTX loader
+
+   BTX loader 1.00 BTX Version 1.01
+   Console: internal video/keyboard
+   BIOS drive A: is disk0
+
+   PXE Version 2.1, real mode entry point @9db3:0106
+   BIOS 639kB/392180kB available memory
+
+   FreeBSD/i386 bootstrap loader, Revision 0.8
+   (root@matt.domain.com, Thu Nov 30 11:45:41 PST 2000)
+   pxe_open: server addr: 192.168.254.3
+   pxe_open: server path: /tftpboot
+   pxe_open: gateway ip: 192.168.254.1
+   \
+   Hit [Enter] to boot immediately, or 
+
+--------------------------------------------------------------------------------
+MID: Pine.BSF.4.21.0011302015570.73661-100000@resnet.uoregon.edu
+DATE: 2000-12-01T04:18:26+00:00  FROM: Doug White <dwhite@resnet.uoregon.edu> <None>
+SUBJ: Re: PXE boot problem.
+BODY:
+On Thu, 30 Nov 2000, Matt Simerson wrote:
+
+
+Problem #1: broken build.  Flash your motherboard/card to the latest,
+build 082.
+
+
+Problem #2: This is not required, and is in fact wrong.  tftp != mtftp.  
+Unless you have an MTFTP server around ...
+
+I highly suggest doing it the old fashioned way with boot-file.  PXE will
+fault over to RPL/'normal' mode very quickly and works perfectly.
+
+Doug White                    |  FreeBSD: The Power to Serve
+dwhite@resnet.uoregon.edu     |  www.FreeBSD.org
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 20001201204138G.yoka@qf6.so-net.ne.jp
+DATE: 2000-12-01T11:41:38+00:00  FROM: yoka@qf6.so-net.ne.jp (Manabu Yokawa) <None>
+SUBJ: Re: PXE boot problem.
+BODY:
+From: Doug White <dwhite@resnet.uoregon.edu>
+Subject: Re: PXE boot problem.
+Date: Thu, 30 Nov 2000 20:18:26 -0800 (PST)
+
+
+I have two Intel PRO/100+ Management Adapters with differnet
+versions of ROM.  One is build 67, the other is build 78.
+Both work fine for me.
+
+
+Perhaps, you can add /tftpboot in /etc/exports.
+
+Manabu Yokawa
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 20001201115403.A16154@cs.mcgill.ca
+DATE: 2000-12-01T16:54:03+00:00  FROM: Mathew KANNER <mat@cs.mcgill.ca> <None>
+SUBJ: Re: PXE boot problem.
+BODY:
+On Nov 30, Matt Simerson wrote:
+	
+
+	Get the flash upgrade from intel. 
+
+	Mine reads:
+Intel(R) Boot Agent Version 4.0.14
+
+	and it works well.
+
+	--Mat
+
+
+-- 
+Mathew Kanner <mat@CS.McGill.CA>  SOCS McGill University
+   Obtuse quote: He [not me] understands: "This field of perception
+   is void of perception of man." -- The Quintessence of Buddhism 
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 8D18712B2604D411A6BB009027F644980DD7A6@0SEA01EXSRV1
+DATE: 2000-12-01T23:59:28+00:00  FROM: "Matt Simerson" <mpsimerson@hostpro.com> <None>
+SUBJ: RE: PXE boot problem. - SOLVED
+BODY:
+That was it. Updating the flash on the Intel NIC and she booted right up. 
+
+Thanks,
+Matt
+
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: E146tGD-0004cY-00@cs.huji.ac.il
+DATE: 2000-12-15T11:42:49+00:00  FROM: Danny Braniss <danny@cs.huji.ac.il> <None>
+SUBJ: diskless/pxe boot
+BODY:
+hi all,
+	I can't get the pxe/dhcp to work when it's 100Mbit Ethernet, it works
+fine when it's 10Mbit. Actually a newer Intel MB just succeeded, but 99%
+of the pxe enabled cards fail at 100Mbit. from sniffing the net the broadcast
+dhcp request does not make it. it does not help to set the switch to
+'no auto negotiation', ie fixed 100 (full or half duplex).
+
+	Is there any success out there? if so, what combination of NIC and
+switch?
+
+danny
+
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: Pine.BSF.4.21.0012181427190.59300-100000@resnet.uoregon.edu
+DATE: 2000-12-18T22:28:44+00:00  FROM: Doug White <dwhite@resnet.uoregon.edu> <None>
+SUBJ: Re: diskless/pxe boot
+BODY:
+On Fri, 15 Dec 2000, Danny Braniss wrote:
+
+
+For your condition we'd need to know what PXE version you were using and
+on what device.  
+
+For newer PXE revs (2.X), you want build 082 or later.  Everything before
+is broken in some way.  The 0.99c version of the Boot Agent (on older fxp
+cards) is fine, however.
+
+The Intel 810 firmware is quite broken; a fixed one will be available
+shortly.
+
+Doug White                    |  FreeBSD: The Power to Serve
+dwhite@resnet.uoregon.edu     |  www.FreeBSD.org
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+
+==========================================================================================
+DB: freebsd-current.duckdb  hits=4
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-current-32ddd5d2f61ee242>
+DATE: 2000-11-15T11:31:02+00:00  FROM: Mike Smith <msmith () FreeBSD ! ORG> <None>
+SUBJ: Re: PXE build?
+BODY:
+
+Some ROMs out there are pretty bad.
+
+
+Are you *sure* the card is 21143-based?  At any rate, the Intel PXE 
+codebase is buggy for the 8255x chips up to build 082, so you're probably 
+running bad code there.
+
+-- 
+... every activity meets with opposition, everyone who acts has his
+rivals and unfortunately opponents also.  But not because people want
+to be opponents, rather because the tasks and relationships force
+people to take different points of view.  [Dr. Fritz Todt]
+           V I C T O R Y   N O T   V E N G E A N C E
+
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: 31E4B6337A4FD411BD45000102472E0C05E6DB@EMAIL_SERVER
+DATE: 2000-11-14T20:56:25+00:00  FROM: Jeff Roberson <jeff@midstream.com> <None>
+SUBJ: PXE build?
+BODY:
+Does anyone know of any current issues with PXE?  I've searched the mailing
+lists and I don't see any mention of a problem similar to mine.
+
+I'm running FreeBSD-CURRENT from 2000 09 15 on a server.  The client has an
+Intel 21143 based ethernet card that claims it has PXE 2.0 (Build 74)
+support. I've setup bootp/tftp on the server which the client successfully
+uses to pull down the 'pxeboot' file.  After the client retrieves pxeboot it
+just hangs.  There is no further output from the machine.
+
+Does anyone know which particular build of PXE 2.0 works with pxeboot?  Or
+is this even a problem with my firmware?
+
+Thanks,
+Jeff
+
+
+--------------------------------------------------------------------------------
+MID: 20001114232443.D1264@cs.mcgill.ca
+DATE: 2000-11-15T04:24:43+00:00  FROM: Mathew KANNER <mat@cs.mcgill.ca> <None>
+SUBJ: Re: PXE build?
+BODY:
+On Nov 14, Jeff Roberson wrote:
+
+	Hello Jeff,
+	You didn't specify if you set-up NFS for the loader to fetch
+it's configuration and the kernel and such.  
+	Assuming you have an otherwise working PXE environment:
+
+	I've had problems with Intel card at work.  I'm at home now
+and don't remember off-hand what specific model of card or the flash
+version.  Depending on what motherboard was used, I would see crashes
+and hangs in the loader when configured for tftp (with some), nfs
+(with others).  
+	
+	However, recently someone on -questions referenced a flash
+upgrade available and I found it on the Intel web site.  It fixed all
+my problems.
+
+	--Mat
+
+
+-- 
+Mathew Kanner <mat@CS.McGill.CA>  SOCS McGill University
+   Obtuse quote: He [not me] understands: "This field of perception
+   is void of perception of man." -- The Quintessence of Buddhism 
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 200011151131.eAFBV2F03014@mass.osd.bsdi.com
+DATE: 2000-11-15T11:31:02+00:00  FROM: Mike Smith <msmith@freebsd.org> <None>
+SUBJ: Re: PXE build? 
+BODY:
+
+Some ROMs out there are pretty bad.
+
+
+Are you *sure* the card is 21143-based?  At any rate, the Intel PXE 
+codebase is buggy for the 8255x chips up to build 082, so you're probably 
+running bad code there.
+
+-- 
+... every activity meets with opposition, everyone who acts has his
+rivals and unfortunately opponents also.  But not because people want
+to be opponents, rather because the tasks and relationships force
+people to take different points of view.  [Dr. Fritz Todt]
+           V I C T O R Y   N O T   V E N G E A N C E
+
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+

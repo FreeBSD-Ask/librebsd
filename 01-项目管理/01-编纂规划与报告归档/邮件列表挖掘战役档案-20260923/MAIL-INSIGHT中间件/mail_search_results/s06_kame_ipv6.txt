@@ -1,0 +1,1618 @@
+==========================================================================================
+DB: freebsd-hackers.duckdb  hits=23
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-37c65d5b2fd8e8a1>
+DATE: 1999-01-03T23:52:07+00:00  FROM: Jun-ichiro itojun Hagino <itojun () kame ! net> <None>
+SUBJ: IPsec-only KAME kit
+BODY:
+	IPsec-only KAME kit for FreeBSD 3.0-RELEASE is ready for you.
+	The kit provides fully functional IPsec for FreeBSD 3.0-RELEASE.
+	Please report any bugs to KAME team via KAME GNATS bug database
+	(NOT to FreeBSD bug database).  Thanks.
+	ftp://ftp.kame.net/pub/kame/snap/kame-ipsec-19990104-fbsd30-snap.tgz
+
+itojun
+
+
+
+------- Forwarded Message
+
+To: snap-users@kame.net
+X-Template-Reply-To: itojun@itojun.org
+X-Template-Return-Receipt-To: itojun@itojun.org
+X-PGP-Fingerprint: F8 24 B4 2C 8C 98 57 FD  90 5F B4 60 79 54 16 E2
+Subject: KAME SNAP 19980104
+From: Jun-ichiro itojun Hagino <itojun@kame.net>
+Date: Mon, 04 Jan 1999 08:48:52 +0900
+Message-ID: <13042.915407332@coconut.itojun.org>
+Sender: itojun@coconut.itojun.org
+
+
+	A happy new year!  We got the very first KAME SNAP kit for 1999.
+
+	Key changes:
+	- ucd-snmp is updated to 3.5.3.
+	- NEW: IPsec-only (without IPv6) KAME kit for FreeBSD 3.0-RELEASE.
+	  Please test it and report troubles/bugs if any, to our GNATS bug
+	  tracking system.
+
+	KAME/F
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-d45f1b661948a4ba>
+DATE: 1999-07-30T12:13:18+00:00  FROM: itojun () iijlab ! net <None>
+SUBJ: Re: (KAME-snap 936) HOWTO: FreeBSD with integrated IPv6
+BODY:
+
+
+	guys at imasy.or.jp has been doing it for FreeBSD228+KAME+PAO for a
+	while, so please feel free to start (if you feel like so, of course).
+
+itojun
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-c527e09be778e119>
+DATE: 1999-09-02T01:20:03+00:00  FROM: itojun () iijlab ! net <None>
+SUBJ: Re: KAME IPv6 and freebsd
+BODY:
+
+
+	I believe those additions are by Network-Alchemy.  KAME does not
+	modify syslog (are these facilities, by any way, standardized?).
+
+itojun
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: 13115.915407527@coconut.itojun.org
+DATE: 1999-01-03T23:52:07+00:00  FROM: Jun-ichiro itojun Hagino <itojun@kame.net> <None>
+SUBJ: IPsec-only KAME kit
+BODY:
+	IPsec-only KAME kit for FreeBSD 3.0-RELEASE is ready for you.
+	The kit provides fully functional IPsec for FreeBSD 3.0-RELEASE.
+	Please report any bugs to KAME team via KAME GNATS bug database
+	(NOT to FreeBSD bug database).  Thanks.
+	ftp://ftp.kame.net/pub/kame/snap/kame-ipsec-19990104-fbsd30-snap.tgz
+
+itojun
+
+
+
+------- Forwarded Message
+
+To: snap-users@kame.net
+X-Template-Reply-To: itojun@itojun.org
+X-Template-Return-Receipt-To: itojun@itojun.org
+X-PGP-Fingerprint: F8 24 B4 2C 8C 98 57 FD  90 5F B4 60 79 54 16 E2
+Subject: KAME SNAP 19980104
+From: Jun-ichiro itojun Hagino <itojun@kame.net>
+Date: Mon, 04 Jan 1999 08:48:52 +0900
+Message-ID: <13042.915407332@coconut.itojun.org>
+Sender: itojun@coconut.itojun.org
+
+
+	A happy new year!  We got the very first KAME SNAP kit for 1999.
+
+	Key changes:
+	- ucd-snmp is updated to 3.5.3.
+	- NEW: IPsec-only (without IPv6) KAME kit for FreeBSD 3.0-RELEASE.
+	  Please test it and report troubles/bugs if any, to our GNATS bug
+	  tracking system.
+
+	KAME/F
+
+--------------------------------------------------------------------------------
+MID: 22875.933336798@coconut.itojun.org
+DATE: 1999-07-30T12:13:18+00:00  FROM: itojun@iijlab.net <None>
+SUBJ: Re: (KAME-snap 936) HOWTO: FreeBSD with integrated IPv6 
+BODY:
+
+
+	guys at imasy.or.jp has been doing it for FreeBSD228+KAME+PAO for a
+	while, so please feel free to start (if you feel like so, of course).
+
+itojun
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 14955.936062015@coconut.itojun.org
+DATE: 1999-08-31T01:13:35+00:00  FROM: itojun@iijlab.net <None>
+SUBJ: KAME IPv6 and freebsd
+BODY:
+	I heard that, some of you, got confused by recent news about
+	additional NetBSD-core guys (me).
+
+	The above fact does not change anything about KAME-FreeBSD
+	relationship (I can only speak for KAME side though), because:
+	- KAME project's goal is to provide IPv6/IPsec reference code to *BSD,
+	  so we of course continue to work on KAME/FreeBSD, KAME/BSDI, and
+	  KAME/NetBSD.  We are trying to support KAME/OpenBSD (so that no
+	  major BSDs are left out from our support list).
+	- KAME project is NOT itojun's personal project.  It involves 8 core
+	  KAME guys and several other people.  There are 3 KAME guys
+	  (incl. me) who has committer access to FreeBSD repository.
+	  So, the fact I became one of NetBSD-core does not mean anything to
+	  KAME project.
+	- NetBSD merged KAME stack earlier because NetBSD have more strict
+	  "feature freeze" policy than FreeBSD (if I don't import now KAME
+	  will not be inclduded in NetBSD 1.5).
+	  FreeBSD has been waiting for unified-ipv6 to experience les
+
+--------------------------------------------------------------------------------
+MID: 199908310642.IAA33895@gratis.grondar.za
+DATE: 1999-08-31T06:42:22+00:00  FROM: Mark Murray <mark@grondar.za> <None>
+SUBJ: Re: KAME IPv6 and freebsd 
+BODY:
+
+FreeBSD has the src/crypto directory for this purpose. It works in
+exactly the same way as src/contrib, but contains code that may
+get Americans into trouble if they export it, so I maintain a copy
+in South Africa (on internat.freebsd.org).
+
+I'll be very happy to work with you on this one.
+
+M
+--
+Mark Murray
+Join the anti-SPAM movement: http://www.cauce.org
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 18843.936082673@coconut.itojun.org
+DATE: 1999-08-31T06:57:53+00:00  FROM: itojun@iijlab.net <None>
+SUBJ: Re: KAME IPv6 and freebsd 
+BODY:
+
+
+	Does it make sense to make src/crypto/sys for kernel code?
+	(for IPsec we need crypto code *in kernel*).
+
+itojun
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 10335.936082907@localhost
+DATE: 1999-08-31T07:01:47+00:00  FROM: "Jordan K. Hubbard" <jkh@zippy.cdrom.com> <None>
+SUBJ: Re: KAME IPv6 and freebsd 
+BODY:
+
+I'd say it makes a lot of sense.
+
+- Jordan
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 199908310704.JAA34086@gratis.grondar.za
+DATE: 1999-08-31T07:04:09+00:00  FROM: Mark Murray <mark@grondar.za> <None>
+SUBJ: Re: KAME IPv6 and freebsd 
+BODY:
+
+I wonder...
+
+There was a contrib/sys (where softupdates went), and that got moved
+to sys/contrib.
+
+Perhaps something similar could be invented for src/crypto? We'd need
+to make the distibution machinery understand that, but I don't see
+too much a problem there.
+
+I have no strong feelings about src/crypto/sys or src/sys/crypto.
+
+M
+--
+Mark Murray
+Join the anti-SPAM movement: http://www.cauce.org
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 28187.936088589@critter.freebsd.dk
+DATE: 1999-08-31T08:36:29+00:00  FROM: Poul-Henning Kamp <phk@critter.freebsd.dk> <None>
+SUBJ: Re: KAME IPv6 and freebsd 
+BODY:
+In message <10335.936082907@localhost>, "Jordan K. Hubbard" writes:
+
+Yes, but shouldn't it be src/sys/crypto if we want to have 
+"kern-developer" still have a sensible meaning ?  (and for
+all the other reasons which made us move src/contrib/sys to
+src/sys/contrib)
+
+--
+Poul-Henning Kamp             FreeBSD coreteam member
+phk@FreeBSD.ORG               "Real hackers run -current on their laptop."
+FreeBSD -- It will take a long time before progress goes too far!
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 20898.936089197@coconut.itojun.org
+DATE: 1999-08-31T08:46:37+00:00  FROM: itojun@iijlab.net <None>
+SUBJ: Re: KAME IPv6 and freebsd 
+BODY:
+
+
+	FYI, There are crypto-related files in the following locations.
+	I'll take a detailed look into both repositories...
+
+itojun
+
+
+src/sys/netinet6/esp_output.c
+src/sys/netinet6/esp_input.c
+src/sys/netinet6/esp_core.c
+src/sys/crypto/cast128/cast128.c
+src/sys/crypto/cast128/cast128.h
+src/sys/crypto/cast128/cast128_cbc.c
+src/sys/crypto/cast128/cast128_subkey.h
+src/sys/crypto/blowfish/bf_cbc.c
+src/sys/crypto/blowfish/bf_cbc_m.c
+src/sys/crypto/blowfish/bf_enc.c
+src/sys/crypto/blowfish/bf_locl.h
+src/sys/crypto/blowfish/bf_pi.h
+src/sys/crypto/blowfish/bf_skey.c
+src/sys/crypto/blowfish/blowfish.h
+src/sys/crypto/des/des_3cbc.c
+src/sys/crypto/des/des.h
+src/sys/crypto/des/des_cbc.c
+src/sys/crypto/des/des_ecb.c
+src/sys/crypto/des/des_locl.h
+src/sys/crypto/des/des_setkey.c
+src/sys/crypto/des/podd.h
+src/sys/crypto/des/sk.h
+src/sys/crypto/des/spr.h
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 199908310903.LAA34509@gratis.grondar.za
+DATE: 1999-08-31T09:03:15+00:00  FROM: Mark Murray <mark@grondar.za> <None>
+SUBJ: Re: KAME IPv6 and freebsd 
+BODY:
+
+Thanks! It makes the most sense to keep this exactly as it it, except
+for the files in src/sys/netinet6/ which should move to src/sys/crypto/
+if they have crypto in them.
+
+Please do not import this until we (JDP!) gets the distribution channels
+crypto-happy. This is not difficult.
+
+--
+Mark Murray
+Join the anti-SPAM movement: http://www.cauce.org
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: Pine.BSF.4.10.9908311031530.340-100000@salmon.nlsystems.com
+DATE: 1999-08-31T09:33:50+00:00  FROM: Doug Rabson <dfr@nlsystems.com> <None>
+SUBJ: Re: KAME IPv6 and freebsd 
+BODY:
+On Tue, 31 Aug 1999, Mark Murray wrote:
+
+
+I would prefer src/sys/crypto. I tend to have a lot of kernel-only trees
+around for my work and the more self-contained they are the better. Moving
+softupdates into sys/crypto was a good thing (IMHO).
+
+--
+Doug Rabson				Mail:  dfr@nlsystems.com
+Nonlinear Systems Ltd.			Phone: +44 181 442 9037
+
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 506.936093482@localhost
+DATE: 1999-08-31T09:58:02+00:00  FROM: "Jordan K. Hubbard" <jkh@zippy.cdrom.com> <None>
+SUBJ: Re: KAME IPv6 and freebsd 
+BODY:
+Hmmm.  That's a point.  I was thinking primarily of the "segregate the
+crypto" issue, but you're right that this would also put us back to
+the "bad old days" where sys/ was broken across multiple directories.
+
+Hmph.  I guess common sense wins over ITAR in this case. :)
+
+- Jordan
+
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 28661.936093705@critter.freebsd.dk
+DATE: 1999-08-31T10:01:45+00:00  FROM: Poul-Henning Kamp <phk@critter.freebsd.dk> <None>
+SUBJ: Re: KAME IPv6 and freebsd 
+BODY:
+In message <506.936093482@localhost>, "Jordan K. Hubbard" writes:
+
+That's certainly an improvement in that particular battle :-)
+
+--
+Poul-Henning Kamp             FreeBSD coreteam member
+phk@FreeBSD.ORG               "Real hackers run -current on their laptop."
+FreeBSD -- It will take a long time before progress goes too far!
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 23628.936101898@coconut.itojun.org
+DATE: 1999-08-31T12:18:18+00:00  FROM: itojun@iijlab.net <None>
+SUBJ: Re: KAME IPv6 and freebsd 
+BODY:
+
+
+	Yes, this is very pity...  Hoping to see more open US export policy
+	in the near future.
+
+	KAME has "options IPSEC" (framework, authentication and compression)
+	and "options IPSEC_ESP" (encryption) separately defined.  Therefore,
+	even if you do not have access to South Africa, you can use AH
+	and IPComp.
+
+itojun
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 199908311800.MAA12397@harmony.village.org
+DATE: 1999-08-31T18:00:01+00:00  FROM: Warner Losh <imp@village.org> <None>
+SUBJ: Re: KAME IPv6 and freebsd 
+BODY:
+In message <28661.936093705@critter.freebsd.dk> Poul-Henning Kamp writes:
+: >Hmph.  I guess common sense wins over ITAR in this case. :)
+: 
+: That's certainly an improvement in that particular battle :-)
+
+Speaking of ITAR, has anybody actually every approached FreeBSD to say
+what we're doing is in violation of ITAR?
+
+Warner
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 199908311806.UAA36625@gratis.grondar.za
+DATE: 1999-08-31T18:06:54+00:00  FROM: Mark Murray <mark@grondar.za> <None>
+SUBJ: Re: KAME IPv6 and freebsd 
+BODY:
+
+IANAL, but IIRC, ITAR is dead; Wasssenaar is the bogeyman these days
+(at least outside the USA).
+
+The DoD, DoJ, DoE, DoC and watever other Do's you guys have are all
+passing the buck very fast nowadays.
+
+M
+--
+Mark Murray
+Join the anti-SPAM movement: http://www.cauce.org
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 3052.936142206@localhost
+DATE: 1999-08-31T23:30:06+00:00  FROM: "Jordan K. Hubbard" <jkh@zippy.cdrom.com> <None>
+SUBJ: Re: KAME IPv6 and freebsd 
+BODY:
+
+Nope.
+
+- Jordan
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 19990901054250.37802.qmail@rucus.ru.ac.za
+DATE: 1999-09-01T05:42:50+00:00  FROM: "Geoff Rehmet" <geoffr@is.co.za> <None>
+SUBJ: Re: KAME IPv6 and freebsd
+BODY:
+Mark Murray writes :
+
+Important thing to remember, and Mark and I have discussed this a little
+(I think we need a couple more beers when I come to Cape Town next week)
+there are countries like South Africa, which are not Wassennaar signataries.
+
+That makes SA a safe haven for crypto code.
+
+<grin>
+
+Geoff.
+
+-- 
+Geoff Rehmet,
+The Internet Solution
+geoffr@is.co.za; geoff@rucus.ru.ac.za; csgr@freebsd.org
+tel: +27-83-292-5800
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 19990902004027.7727815479@hub.freebsd.org
+DATE: 1999-09-02T00:40:27+00:00  FROM: "Jonathan M. Bresler" <jmb@hub.freebsd.org> <None>
+SUBJ: Re: KAME IPv6 and freebsd
+BODY:
+
+Itojun,
+
+	does KAME IPv6 and IPSec define additional facilities for
+syslog?  I have been working with IPSec devices from a company called
+Network-Alchemy.  They have additional syslog facilities including:
+IKE, IPSEC, L2TP, LOGIN (should be AUTH?), PPTP and others.
+
+	Does KAME IPv6 and IPSec have these as well, or are they are
+creation of Network-Alchemy?
+
+jmb
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 26164.936235203@coconut.itojun.org
+DATE: 1999-09-02T01:20:03+00:00  FROM: itojun@iijlab.net <None>
+SUBJ: Re: KAME IPv6 and freebsd 
+BODY:
+
+
+	I believe those additions are by Network-Alchemy.  KAME does not
+	modify syslog (are these facilities, by any way, standardized?).
+
+itojun
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+
+==========================================================================================
+DB: freebsd-current.duckdb  hits=40
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-current-cc4da39fda16017a>
+DATE: 1999-11-22T10:05:52+00:00  FROM: "Jeroen C. van Gelderen" <jeroen () vangelderen ! org> <None>
+SUBJ: Re: FYI: KAME netinet6 basic part is committed
+BODY:
+Yoshinobu Inoue wrote:
+
+Thanks!
+
+Cheers,
+Jeroen
+-- 
+Jeroen C. van Gelderen - jeroen@vangelderen.org
+Interesting read: http://www.vcnet.com/bms/ JLF
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-current-3a22d1345ca51912>
+DATE: 2000-01-09T05:22:49+00:00  FROM: Kris Kennaway <kris () hub ! freebsd ! org> <None>
+SUBJ: Re: -current or 3.4 with KAME ???
+BODY:
+On Thu, 6 Jan 2000, Boozy wrote:
+
+
+It's in the process of being integrated, and is therefore still
+incomplete. It's hoped that by the time of 4.0-RELEASE (not long away) it
+will be fully functional. If you need a fully functional IPv6 today, stick
+with FreeBSD 3.4 + KAME.
+
+Kris
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-current-60935e8e3e676a0d>
+DATE: 2000-06-19T00:34:02+00:00  FROM: Kris Kennaway <kris () FreeBSD ! ORG> <None>
+SUBJ: Latest KAME integrated with 5.0-CURRENT
+BODY:
+I've updated the KAME code in FreeBSD 5.0-CURRENT to sync it with the
+latest from the KAME repository. The diffs are rather large (1.5MB) but
+some of the code in FreeBSD was quite old, and this also now includes
+everything that's in KAME (for better or for worse - it was far too
+difficult for me to try and separate changes in different areas). As a
+nice bonus, that also includes ALTQ for IPv4 and IPv6.
+
+Itojun suggests that there are a couple of things which shouldn't go into
+FreeBSD yet, such as the RFC2292bis code which is still pre-RFC - after
+Usenix I'll take a look at removing this stuff from my patched code.
+
+So far the merged kernel is working nicely and interoperates with the
+current FreeBSD KAME code - I've been running it since yesterday and so
+far the only problem I've seen is a hung NFS mount when I was running NFS
+over IPSec (hung in state nfsrcvlk) - I haven't replicated this yet or
+determined whether it happens with regular NFS mounts also.
+
+Other remaining issues:
+* ALT
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-current-4f62ed7789feea49>
+DATE: 2000-06-20T16:20:15+00:00  FROM: Alexander Langer <alex () big ! endian ! de> <None>
+SUBJ: Re: Updated kame tarball (oops)
+BODY:
+Thus spake Mark Huizer (freebsd@dohd.cx):
+
+
+It's also unknown in our current tree, though stf(4) does exist.
+
+Alex
+
+-- 
+cat: /home/alex/.sig: No such file or directory
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-current-4a08f91cbe75bf45>
+DATE: 2000-07-04T17:17:57+00:00  FROM: itojun () iijlab ! net <None>
+SUBJ: Re: HEADS UP: more recent KAME code will hit the tree (as of early July 2000)
+BODY:
+
+
+	it will go into ports tree.
+
+itojun
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-current-89716b6ee7410ea1>
+DATE: 2000-07-06T08:08:04+00:00  FROM: Kris Kennaway <kris () FreeBSD ! ORG> <None>
+SUBJ: Call for help: KAME (inter)operational testing
+BODY:
+If anyone is able to help in verifying the new FreeBSD-current KAME
+ipv6/ipsec code, especially if you have available other platform
+ipv6/ipsec implementations to test against, please let me know or drop by
+the #kame channel on efnet on IRC (server irc.lsl.com, for example) so we
+can work together.
+
+We need to test the new KAME code as much as possible prior to merging
+into 4.0-STABLE, so anything you can do to help would be appreciated. I
+particularly want to make sure that racoon (IKE daemon) works as expected
+(/usr/ports/security/racoon) since that is the primary reason for wanting
+to push this stuff into -stable.
+
+Thanks!
+
+Kris
+
+--
+In God we Trust -- all others must submit an X.509 certificate.
+    -- Charles Forsythe <forsythe@alum.mit.edu>
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-current-2945b4ff3b262dbf>
+DATE: 2000-07-06T10:29:13+00:00  FROM: Kris Kennaway <kris () FreeBSD ! ORG> <None>
+SUBJ: Re: -current with new KAME doesn't build with KERBEROS5 defined
+BODY:
+On Wed, 5 Jul 2000, Louis A. Mamakos wrote:
+
+
+Fixed.
+
+
+Actually, the fix was one line ;-) <netinet6/in6.h> is no longer supposed
+to be included, so we just had to disable it in the pregenerated heimdal
+config.h file.
+
+Kris
+
+--
+In God we Trust -- all others must submit an X.509 certificate.
+    -- Charles Forsythe <forsythe@alum.mit.edu>
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-current-9135f5956a7d2fe5>
+DATE: 2000-07-12T00:15:44+00:00  FROM: Ben Smithurst <ben () FreeBSD ! ORG> <None>
+SUBJ: Re: KAME integration and plans
+BODY:
+
+--WsiejqUMGToi5pfa
+Content-Type: text/plain; charset=us-ascii
+Content-Disposition: inline
+Content-Transfer-Encoding: quoted-printable
+
+Kris Kennaway wrote:
+
+
+Ah.  I'm using -STABLE here...  AFAICT you still need 'pseudo-device
+gif' there.
+
+--=20
+Ben Smithurst / ben@FreeBSD.org / PGP: 0x99392F7D
+
+--WsiejqUMGToi5pfa
+Content-Type: application/pgp-signature
+Content-Disposition: inline
+
+-----BEGIN PGP SIGNATURE-----
+Version: PGPfreeware 5.0i for non-commercial use
+MessageID: 8q8se/3QTCU+AsGsgP3ZLSWUJIgZ3iBw
+
+iQCVAwUBOWu4rysPVtiZOS99AQFd8gP/SOwlBJQW9NT9q8WueARrWImKZo69vRdn
+Uo+fdAgLONCN4EM5CkUpw60stgRXzDmcw8XJCscFI5/4W+1DhLGvwmrpYh0pymyp
+wozo0qAeq39dDt1oQTCYrW6GCmDlmjxY+3CcHXDJBUwzLoYORWZkWcjSmj0o2HPR
+kDrGIb0YSo4=
+=jQUu
+-----END PGP SIGNATURE-----
+
+--WsiejqUMGToi5pfa--
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-current-b2abea6870e6ab04>
+DATE: 2000-09-16T11:20:11+00:00  FROM: "Shoichi 'Ne' Sakane" <sakane () ydc ! co ! jp> <None>
+SUBJ: Re: (KAME-snap 3318) Panic on current (12 Sept)
+BODY:
+
+I think IPsec is not relative to this issue.  To make sure,
+does your machine run healthy without IPsec ?
+Please try the following.
+	case 1) with option IPSEC, but no SPD entry.
+	case 2) without option IPSEC
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-current-b94e115712fa4391>
+DATE: 2000-09-18T08:05:53+00:00  FROM: Reinier Bezuidenhout <rbezuide () oskar ! nanoteq ! co ! za> <None>
+SUBJ: RE: (KAME-snap 3327) Re: Panic on current (12 Sept)
+BODY:
+Hi ...
+
+Without starting the racoon daemon and doing a secure connect
+everything works fine without a problem.  If I start racoon,
+do a tunnel connection and then run daily, the machine panics ..
+
+Reinier
+
+
+On 16-Sep-00 Shoichi 'Ne' Sakane wrote:
+
+###################################################################
+#                                                                 #
+#  R.N. Bezuidenhout                  NetSeq Firewall             #
+#  rbezuide@oskar.nanoteq.co.za       http://www.nanoteq.co.za    #  
+#                                                                 #
+###################################################################
+
+----------------------------------
+Date: 18-Sep-00
+Time: 10:04:59
+
+This message was sent by XFMail
+----------------------------------
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-current-fbed835f518aa913>
+DATE: 2000-09-18T13:59:35+00:00  FROM: Jun-ichiro itojun Hagino <itojun () iijlab ! net> <None>
+SUBJ: Re: (KAME-snap 3337) RE: Panic on current (12 Sept)
+BODY:
+
+
+	I bet you can panic the kernel with setkey(8) in that case.  am I
+	correct?  if so, something is not friendly with fine grain SMP, under
+	sys/netkey.
+
+itojun
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-current-b5a75edf11d58076>
+DATE: 2000-09-18T15:41:47+00:00  FROM: Hajimu UMEMOTO <ume () mahoroba ! org> <None>
+SUBJ: Re: (KAME-snap 3338) Re: Panic on current (12 Sept)
+BODY:
+
+rbezuide> As far as I recall ... the first kernel was before any of the SMP
+rbezuide> commits ... but in case it was not ... how do I go about
+rbezuide> going back to a "coarse grain lock" kernel ... can I set
+rbezuide> something in the config file or do I have to checkout old
+rbezuide> sources ??
+
+There is a tag just before SMPNG merge.  You can do cvsup with:
+
+	src-all tag=PRE_SMPNG
+
+--
+Hajimu UMEMOTO @ Internet Mutual Aid Society Yokohama, Japan
+ume@mahoroba.org  ume@bisd.hitachi.co.jp  ume@FreeBSD.org
+http://www.imasy.org/~ume/
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: 19991122120134R.shin@nd.net.fujitsu.co.jp
+DATE: 1999-11-22T03:01:34+00:00  FROM: Yoshinobu Inoue <shin@nd.net.fujitsu.co.jp> <None>
+SUBJ: FYI: KAME netinet6 basic part is committed
+BODY:
+Hello, FYI,
+KAME(IPv6, IPsec, and etc update kit for BSDs, http://www.kame.net)
+netinet6 basic part is committed to freebsd-current.
+
+It doesn't yet include several important parts (e.g.no IPsec,
+no v6 multcast forwarding, no TCP/UDP for IPv6 yet),
+but now it can assigne IPv6 addr automatically and can reply
+to IPv6 ping, if the kernel is built with "INET6" kernel
+config option.
+
+Please take care because inpcb structure is changed to be
+shared between netinet and netinet6.
+You will need to update include files to build several inpcb
+aware tools and applications. (fstat, netstat, systat, etc)
+
+Yoshinobu Inoue
+KAME project
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 38391580.C3934B@vangelderen.org
+DATE: 1999-11-22T10:05:52+00:00  FROM: "Jeroen C. van Gelderen" <jeroen@vangelderen.org> <None>
+SUBJ: Re: FYI: KAME netinet6 basic part is committed
+BODY:
+Yoshinobu Inoue wrote:
+
+Thanks!
+
+Cheers,
+Jeroen
+-- 
+Jeroen C. van Gelderen - jeroen@vangelderen.org
+Interesting read: http://www.vcnet.com/bms/ JLF
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: Version.32.20000106233126.00dd8710@rabelo.eti.br
+DATE: 2000-01-07T01:34:11+00:00  FROM: Boozy <boozy@rabelo.eti.br> <None>
+SUBJ: -current or 3.4 with KAME ???
+BODY:
+Hi Lists again :))),
+
+I'm sorry but when I sent this message I wasn't subscribe here. So I am
+puting this message again and I'd be happy if somebody reply me.
+
+-----
+How are the implementation of IPv6 in FreeBSD 4.0? Is it available? Is it
+stable?
+What is better: use FreeBSD 3.4 with Kame or FreeBSD 4.0?
+-----
+
+Thanks,
+
+Luciano Rabelo
+Salvador - Bahia - Brazil
+
+
+
+********************************
+*        Luciano Rabelo        *
+*     Analista de Sistemas     *
+*   Salvador - Bahia - Brasil  *
+*   http://www.rabelo.eti.br/  *
+*      lrcp@rabelo.eti.br      *
+*        UIN - 8642704         *
+********************************
+
+  /"\ 
+  \ / CAMPANHA DA FITA ASCII - CONTRA MAIL HTML 
+   X  ASCII RIBBON CAMPAIGN - AGAINST HTML MAIL 
+  / \
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: Pine.BSF.4.21.0001082121170.27924-100000@hub.freebsd.org
+DATE: 2000-01-09T05:22:49+00:00  FROM: Kris Kennaway <kris@hub.freebsd.org> <None>
+SUBJ: Re: -current or 3.4 with KAME ???
+BODY:
+On Thu, 6 Jan 2000, Boozy wrote:
+
+
+It's in the process of being integrated, and is therefore still
+incomplete. It's hoped that by the time of 4.0-RELEASE (not long away) it
+will be fully functional. If you need a fully functional IPv6 today, stick
+with FreeBSD 3.4 + KAME.
+
+Kris
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: Pine.BSF.4.21.0006181704520.79707-100000@freefall.freebsd.org
+DATE: 2000-06-19T00:34:02+00:00  FROM: Kris Kennaway <kris@FreeBSD.org> <None>
+SUBJ: Latest KAME integrated with 5.0-CURRENT
+BODY:
+I've updated the KAME code in FreeBSD 5.0-CURRENT to sync it with the
+latest from the KAME repository. The diffs are rather large (1.5MB) but
+some of the code in FreeBSD was quite old, and this also now includes
+everything that's in KAME (for better or for worse - it was far too
+difficult for me to try and separate changes in different areas). As a
+nice bonus, that also includes ALTQ for IPv4 and IPv6.
+
+Itojun suggests that there are a couple of things which shouldn't go into
+FreeBSD yet, such as the RFC2292bis code which is still pre-RFC - after
+Usenix I'll take a look at removing this stuff from my patched code.
+
+So far the merged kernel is working nicely and interoperates with the
+current FreeBSD KAME code - I've been running it since yesterday and so
+far the only problem I've seen is a hung NFS mount when I was running NFS
+over IPSec (hung in state nfsrcvlk) - I haven't replicated this yet or
+determined whether it happens with regular NFS mounts also.
+
+Other remaining issues:
+* ALT
+
+--------------------------------------------------------------------------------
+MID: Pine.BSF.4.21.0006191824260.79502-100000@freefall.freebsd.org
+DATE: 2000-06-20T01:26:15+00:00  FROM: Kris Kennaway <kris@FreeBSD.org> <None>
+SUBJ: Updated kame tarball (oops)
+BODY:
+I accidentally left out a bunch of files from my previous kame patch - the
+corrected version is at http://www.freebsd.org/~kris/kame.tar.gz - the
+same caveats apply as before. Extract that tarball in /usr/src/sys and
+apply the patch, then rebuild. The userland can be obtained from the
+latest freebsd4 KAME snapshot at ftp.kame.net (the code in the FreeBSD
+tree won't work).
+
+Kris
+
+--
+In God we Trust -- all others must submit an X.509 certificate.
+    -- Charles Forsythe <forsythe@alum.mit.edu>
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 20000620181128.A30543@dohd.cx
+DATE: 2000-06-20T16:11:28+00:00  FROM: Mark Huizer <freebsd@dohd.cx> <None>
+SUBJ: Re: Updated kame tarball (oops)
+BODY:
+On Mon, Jun 19, 2000 at 06:26:15PM -0700, Kris Kennaway wrote:
+the stf is unknown when running config but well :-)
+But I'll try to compile a kernel this way
+-- 
+Nice testing in little China...
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 20000620182015.B5196@cichlids.cichlids.com
+DATE: 2000-06-20T16:20:15+00:00  FROM: Alexander Langer <alex@big.endian.de> <None>
+SUBJ: Re: Updated kame tarball (oops)
+BODY:
+Thus spake Mark Huizer (freebsd@dohd.cx):
+
+
+It's also unknown in our current tree, though stf(4) does exist.
+
+Alex
+
+-- 
+cat: /home/alex/.sig: No such file or directory
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 19883.962726099@coconut.itojun.org
+DATE: 2000-07-04T15:54:59+00:00  FROM: itojun@iijlab.net <None>
+SUBJ: HEADS UP: more recent KAME code will hit the tree (as of early July 2000)
+BODY:
+
+	hello, more recent KAME code will hit the main trunc shortly.
+	the code in the freebsd-current tree is dated November 1999, and
+	there are many good changes made in KAME side.
+	there will be tons of changes in:
+		sys/netinet
+		sys/netinet6
+	and also to sync with modified headers:
+		lib/libipsec
+		usr.sbin/setkey
+		usr.bin/netstat
+	other portions may be updated shortly.
+
+	please torture-test it, so that the changes can go into 4.1.
+
+	there are some API changes with the commit.  specifically:
+	- some ioctls are added for IPv6.
+	- change in ipsec policy specification language change.  you may need
+	  to change setkey(8) configuration files.
+	- change in PF_KEY socket behavior to conform to standard better.
+	- additional member in mbuf header structure to carry around ipsec
+	  policy better.
+	you really need to swap setkey(8) if you update to the new kernel.
+
+	sorry that it took this long period to upgrade, there are couple of
+	reasons behind this: (1) shin, who took the primary role for
+
+--------------------------------------------------------------------------------
+MID: 2000-07-04-18-58-19+trackit+sam@antinea.enst.fr
+DATE: 2000-07-04T16:58:19+00:00  FROM: Samuel Tardieu <sam@inf.enst.fr> <None>
+SUBJ: Re: HEADS UP: more recent KAME code will hit the tree (as of early July 2000)
+BODY:
+
+itojun> - change in ipsec policy specification language change.  you
+itojun>   may need to change setkey(8) configuration files.
+
+Do you plan to integrate racoon while updating IPsec? It would be
+really great! (or whatever gives the same functionality)
+
+  Sam
+-- 
+Samuel Tardieu -- sam@inf.enst.fr
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 20862.962731077@coconut.itojun.org
+DATE: 2000-07-04T17:17:57+00:00  FROM: itojun@iijlab.net <None>
+SUBJ: Re: HEADS UP: more recent KAME code will hit the tree (as of early July 2000)
+BODY:
+
+
+	it will go into ports tree.
+
+itojun
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: Pine.BSF.4.21.0007050314090.84259-100000@freefall.freebsd.org
+DATE: 2000-07-05T10:37:39+00:00  FROM: Kris Kennaway <kris@FreeBSD.org> <None>
+SUBJ: KAME integration and plans
+BODY:
+As itojun has already posted, we are in the process of updating the
+KAME IPv6/IPSEC code in FreeBSD to the latest KAME sources.
+
+In importing the latest KAME code, we are not being too concerned about
+whitespace or cosmetic diffs, unifdef'ing __NetBSD__ sections (at least in
+userland) and so forth. The reason for this is that KAME is externally
+maintained code, and so cosmetic differences in FreeBSD needlessly
+complicate the diffs and really make life harder for merging. The KAME
+team already have a difficult enough job in maintaining and developing the
+code on 11 different BSD releases without us making life more difficult
+for them by committing unneccessary code changes to FreeBSD.
+
+In this vein, I'd like to suggest a new "hands-off" policy of not
+committing gratuitous changes to KAME-derived code, including manpage
+changes, unless:
+
+a) The commit is required for operation on FreeBSD (in which case it's not
+really gratuitous)
+
+b) The commit is suitable for the other platforms KAME su
+
+--------------------------------------------------------------------------------
+MID: 19381.962793651@critter.freebsd.dk
+DATE: 2000-07-05T10:40:51+00:00  FROM: Poul-Henning Kamp <phk@critter.freebsd.dk> <None>
+SUBJ: Re: KAME integration and plans 
+BODY:
+In message <Pine.BSF.4.21.0007050314090.84259-100000@freefall.freebsd.org>, Kri
+s Kennaway writes:
+
+
+I'm sorry, but isn't that a tad fast, considering the scope of these
+changes ?
+
+--
+Poul-Henning Kamp       | UNIX since Zilog Zeus 3.20
+phk@FreeBSD.ORG         | TCP/IP since RFC 956
+FreeBSD coreteam member | BSD since 4.3-tahoe    
+Never attribute to malice what can adequately be explained by incompetence.
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: Pine.BSF.4.21.0007050342040.84259-100000@freefall.freebsd.org
+DATE: 2000-07-05T10:46:58+00:00  FROM: Kris Kennaway <kris@FreeBSD.org> <None>
+SUBJ: Re: KAME integration and plans 
+BODY:
+On Wed, 5 Jul 2000, Poul-Henning Kamp wrote:
+
+
+I forgot to mention that I discussed this with Jordan at Usenix and
+(unless I'm mistaken) he okayed the general plan.
+
+These changes should only impact ipv6 and ipsec, with the exception of the
+DNS resolver code which I'm still unsure about merging (even though it's
+been well tested by KAME users, there remains the possibility of breakage
+for ipv4 resolution if there are undiscovered bugs)
+
+The bottom line is that we *need* the updated IPSEC code if FreeBSD is to
+be a viable IPSEC platform. At the moment it's really only usable for
+interoperating with other FreeBSD machines because in the real world
+people use an IKE daemon, which the older (currently in 4.0) code does not
+support.
+
+Delaying this another 3 months for 4.2 is, IMO, far too long to wait if
+we're going to be competitive in the IPSEC arena.
+
+Kris
+
+--
+In God we Trust -- all others must submit an X.509 certificate.
+    -- Charles Forsythe <forsythe@alum.mit.edu>
+
+
+
+To Unsubscribe
+
+--------------------------------------------------------------------------------
+MID: 2000-07-05-12-47-26+trackit+sam@inf.enst.fr
+DATE: 2000-07-05T10:47:25+00:00  FROM: Samuel Tardieu <sam@inf.enst.fr> <None>
+SUBJ: Re: KAME integration and plans
+BODY:
+On  5/07, Kris Kennaway wrote:
+
+| I intend to MFC this stuff in 4 or 5 days assuming it doesn't present any
+| problems, so this means we need everyone who is capable of doing so to
+| stress the new code as much as possible. IMO we *really* need to get this
+| into 4.1 despite the relatively short testing cycle, for the simple reason
+| that the newer code is much more functional, and in particular supports
+| the racoon IKE daemon for automatic management of IPSEFC security
+| associations (i.e. manually-keyed SAs are no longer required) - this is
+| already in ports. This is important for interoperability with other IPSEC
+| implementations.
+
+How hard would it be to use IPSEC with *.freebsd.org machines (at least
+www.freebsd.org)? This would be a good test. Of course, IPSEC should not be
+required ;)
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: Pine.BSF.4.21.0007050348570.84259-100000@freefall.freebsd.org
+DATE: 2000-07-05T10:51:24+00:00  FROM: Kris Kennaway <kris@FreeBSD.org> <None>
+SUBJ: Re: KAME integration and plans
+BODY:
+On Wed, 5 Jul 2000, Samuel Tardieu wrote:
+
+
+Well, IPSEC isn't configured at all on those machines right now, and it's
+probably not the best place to test from. But by all means if you have the
+capability to test the new racoon port, especially interoperating it with
+other IPSEC implementations (subject to what KAME is known to support)
+please do so.
+
+Kris
+
+--
+In God we Trust -- all others must submit an X.509 certificate.
+    -- Charles Forsythe <forsythe@alum.mit.edu>
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 4773.962799384@coconut.itojun.org
+DATE: 2000-07-05T12:16:24+00:00  FROM: itojun@iijlab.net <None>
+SUBJ: Re: KAME integration and plans 
+BODY:
+
+
+	actually, I've touched sys/sys/mbuf.h.  there should be no behavior
+	change if you do not use any of the following items:
+	- ipsec
+	- ipv6, inclding stf interface
+	- gif interface
+		gif can be used for v4 over v4.
+
+	due to the change mentioned above, and recent checksum offloading
+	stuff, some of network driver code may need fixes like below.
+http://www.freebsd.org/cgi/cvsweb.cgi/src/sys/dev/lnc/if_lnc.c.diff?r1=1.78&r2=1.79
+http://www.freebsd.org/cgi/cvsweb.cgi/src/sys/dev/vx/if_vx.c.diff?r1=1.27&r2=1.28
+	(if a driver sets M_PKTHDR flag manually, it needs checking)
+
+itojun
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: Pine.BSF.4.20.0007051147341.27253-100000@localhost
+DATE: 2000-07-05T10:48:04+00:00  FROM: Nick Hibma <n_hibma@calcaphon.com> <None>
+SUBJ: Re: KAME integration and plans
+BODY:
+Could you mention the locations (as in a set of paths) that are
+hands-off?
+
+Nick
+
+On Wed, 5 Jul 2000, Kris Kennaway wrote:
+
+
+--
+n_hibma@webweaving.org
+n_hibma@freebsd.org                                          USB project
+http://www.etla.net/~n_hibma/
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 8609.962815139@coconut.itojun.org
+DATE: 2000-07-05T16:38:59+00:00  FROM: itojun@iijlab.net <None>
+SUBJ: Re: KAME integration and plans
+BODY:
+
+
+	thanks for your understanding,
+	will try to list those and put the list into sys/netinet6/README.
+
+itojun
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: Pine.NEB.3.96L.1000705132132.28854C-100000@fledge.watson.org
+DATE: 2000-07-05T17:24:07+00:00  FROM: Robert Watson <rwatson@FreeBSD.org> <None>
+SUBJ: Re: KAME integration and plans
+BODY:
+
+This is great news -- one of the big hangups in our interop testing at NAI
+Labs was the like of IKE on FreeBSD.  I notice that right now racoon is a
+port -- assuming this interpretation is correct, are their any plans to
+integrate racoon as a base system component?  As you point out, without
+IKE, FreeBSD's IPsec implementation is effectively useless for
+cross-platform communication due to the number of frobs in SA
+configuration.  I also look forward to the rapid MFC'ing, assuming that
+the code works :-).
+
+  Robert N M Watson 
+
+robert@fledge.watson.org              http://www.watson.org/~robert/
+PGP key fingerprint: AF B5 5F FF A6 4A 79 37  ED 5F 55 E9 58 04 6A B1
+TIS Labs at Network Associates, Safeport Network Services
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 12255.962823471@coconut.itojun.org
+DATE: 2000-07-05T18:57:51+00:00  FROM: itojun@iijlab.net <None>
+SUBJ: Re: KAME integration and plans
+BODY:
+
+
+	this is because we expect to have so many many changes/improvements
+	in racoon - once we put racoon into base tree, we need to be much
+	more careful about backward-compatibility in config file, for
+	example.  also, we need to improve kernel policy management for
+	socket-based policy, and process-to-process policy inheritance.
+
+itojun
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: Pine.BSF.4.21.0007051332160.36226-100000@freefall.freebsd.org
+DATE: 2000-07-05T20:33:14+00:00  FROM: Kris Kennaway <kris@FreeBSD.org> <None>
+SUBJ: Re: KAME integration and plans
+BODY:
+On Wed, 5 Jul 2000, Nick Hibma wrote:
+
+
+I'll generate a list and put it somewhere (in the tree?) Good idea.
+
+Kris
+
+--
+In God we Trust -- all others must submit an X.509 certificate.
+    -- Charles Forsythe <forsythe@alum.mit.edu>
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: Pine.BSF.4.21.0007051334290.36226-100000@freefall.freebsd.org
+DATE: 2000-07-05T20:35:52+00:00  FROM: Kris Kennaway <kris@FreeBSD.org> <None>
+SUBJ: Re: KAME integration and plans
+BODY:
+On Wed, 5 Jul 2000, Robert Watson wrote:
+
+
+racoon was not imported because it is still a rapidly changing
+target..perhaps once development slows down a bit we can import it (NetBSD
+also have it in ports)
+
+Kris
+
+--
+In God we Trust -- all others must submit an X.509 certificate.
+    -- Charles Forsythe <forsythe@alum.mit.edu>
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 200007060340.XAA57381@whizzo.transsys.com
+DATE: 2000-07-06T03:40:50+00:00  FROM: "Louis A. Mamakos" <louie@TransSys.COM> <None>
+SUBJ: -current with new KAME doesn't build with KERBEROS5 defined
+BODY:
+
+I get errors like this while 'make depend' in the Heimdel code.  So far,
+in libroken and libasn1.
+
+I tried looking at fixing this, but I fear the build system is too
+tricky for me to want to venture in to fix.
+
+louie
+
+
+mkdep -f .depend -a    -I/usr/src/kerberos5/lib/libasn1/../../../crypto/heimdal/include -I/usr/src/kerberos5/lib/libasn1/../../../crypto/heimdal/lib/asn1 -I/usr/src/kerberos5/lib/libasn1/../../../crypto/heimdal/lib/roken -I/usr/src/kerberos5/lib/libasn1/../../include -I/usr/obj/usr/src/kerberos5/lib/libasn1 -I/usr/src/kerberos5/lib/libasn1/../../include -I/usr/src/kerberos5/lib/libasn1/../../include -DHAVE_CONFIG_H -DKRB5_KRB4_COMPAT -DKRB4 -DINET6 -I/usr/obj/usr/src/i386/usr/include  /usr/src/kerberos5/lib/libasn1/../../../crypto/heimdal/lib/asn1/der_get.c /usr/src/kerberos5/lib/libasn1/../../../crypto/heimdal/lib/asn1/der_put.c /usr/src/kerberos5/lib/libasn1/../../../crypto/heimdal/lib/asn1/der_free.c /usr/src/kerberos5/lib/libasn1/../../../crypto/heimdal/lib/asn1/der
+
+--------------------------------------------------------------------------------
+MID: Pine.BSF.4.21.0007060100570.80520-100000@freefall.freebsd.org
+DATE: 2000-07-06T08:08:04+00:00  FROM: Kris Kennaway <kris@FreeBSD.org> <None>
+SUBJ: Call for help: KAME (inter)operational testing
+BODY:
+If anyone is able to help in verifying the new FreeBSD-current KAME
+ipv6/ipsec code, especially if you have available other platform
+ipv6/ipsec implementations to test against, please let me know or drop by
+the #kame channel on efnet on IRC (server irc.lsl.com, for example) so we
+can work together.
+
+We need to test the new KAME code as much as possible prior to merging
+into 4.0-STABLE, so anything you can do to help would be appreciated. I
+particularly want to make sure that racoon (IKE daemon) works as expected
+(/usr/ports/security/racoon) since that is the primary reason for wanting
+to push this stuff into -stable.
+
+Thanks!
+
+Kris
+
+--
+In God we Trust -- all others must submit an X.509 certificate.
+    -- Charles Forsythe <forsythe@alum.mit.edu>
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: Pine.BSF.4.21.0007060327400.2623-100000@freefall.freebsd.org
+DATE: 2000-07-06T10:29:13+00:00  FROM: Kris Kennaway <kris@FreeBSD.org> <None>
+SUBJ: Re: -current with new KAME doesn't build with KERBEROS5 defined
+BODY:
+On Wed, 5 Jul 2000, Louis A. Mamakos wrote:
+
+
+Fixed.
+
+
+Actually, the fix was one line ;-) <netinet6/in6.h> is no longer supposed
+to be included, so we just had to disable it in the pregenerated heimdal
+config.h file.
+
+Kris
+
+--
+In God we Trust -- all others must submit an X.509 certificate.
+    -- Charles Forsythe <forsythe@alum.mit.edu>
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: Pine.BSF.4.20.0007052209050.28809-100000@localhost
+DATE: 2000-07-05T21:09:44+00:00  FROM: Nick Hibma <n_hibma@calcaphon.com> <None>
+SUBJ: Re: KAME integration and plans
+BODY:
+
+To be honest, I was more thinking of the heads up message. But it was
+suggested to add it to the readme in netinet6/
+
+Nick
+--
+n_hibma@webweaving.org
+n_hibma@freebsd.org                                          USB project
+http://www.etla.net/~n_hibma/
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 20000711145635.A18912@magnesium.scientia.demon.co.uk
+DATE: 2000-07-11T13:56:35+00:00  FROM: Ben Smithurst <ben@FreeBSD.org> <None>
+SUBJ: Re: KAME integration and plans
+BODY:
+Kris Kennaway wrote:
+
+
+I'd like to commit this:
+
+--- stf.4       2000/07/04 16:39:23     1.4
++++ stf.4       2000/07/11 13:44:47
+@@ -36,7 +36,7 @@
+ .Nd
+ .Tn 6to4 tunnel interface
+ .Sh SYNOPSIS
+-.Cd "pseudo-device stf"
++.Cd "pseudo-device gif"
+ .Sh DESCRIPTION
+ The
+ .Nm
+
+'pseudo-device stf' gives an error, stf lives in the gif driver, so this
+is required really.  Is that ok?  Is there anyone at KAME I should send
+this to as well?
+
+
+ah... right.  I guess that answers my question. :-) Sheldon - you can
+commit this yourself if you want, or shall I do it and you just take
+care of passing it back to KAME?  It's releated to PR 19163 by the way.
+
+-- 
+Ben Smithurst / ben@FreeBSD.org / PGP: 0x99392F7D
+

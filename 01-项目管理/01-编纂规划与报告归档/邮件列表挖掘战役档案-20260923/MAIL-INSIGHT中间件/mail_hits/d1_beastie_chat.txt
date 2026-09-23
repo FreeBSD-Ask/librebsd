@@ -1,0 +1,201 @@
+total 40
+[1995-07-24T07:45:13+00:00] [Michael Elbel] []
+MID: <m0saICP-000Pa5C@tartufo.pcs.dec.com>
+SUBJ: Re: cvs commit: ports/games/xkobo - Imported sources
+BODY: > And I have to admit, level 23 is a pain in the butt---several orders | > of magnitude harder than levels 1--22.  I'll keep you posted :-) | >  |  | Actually, if you are patient and try not to shoot down too many | beasties at a time, it's manageable. Now on to level 24 :-) |  | Michael | --  | Michael Elbel, PCS GmbH, Muenchen, Germany - me@FreeBSD.org | Fermentation fault (coors dumped) |  | From owner-freebsd-chat  Mon Jul 24 05:44:08 1995 | Return-Path: chat-owner | Received: (from majordom@localhost) |           by freefall.cdrom.com (8.6.11/8.6.6) id FAA18255 |           for chat-outgoing; Mon, 24 Jul 1995 05:44:08 -0
+------------------------------------------------------------
+[1995-07-24T07:45:13+00:00] [me@tartufo.pcs.dec.com (Michael Elbel)] []
+MID: m0saICP-000Pa5C@tartufo.pcs.dec.com
+SUBJ: Re: cvs commit: ports/games/xkobo - Imported sources
+BODY: > And I have to admit, level 23 is a pain in the butt---several orders | > of magnitude harder than levels 1--22.  I'll keep you posted :-) | >  |  | Actually, if you are patient and try not to shoot down too many | beasties at a time, it's manageable. Now on to level 24 :-) |  | Michael | --  | Michael Elbel, PCS GmbH, Muenchen, Germany - me@FreeBSD.org | Fermentation fault (coors dumped) |  | 
+------------------------------------------------------------
+[1995-07-24T12:47:39+00:00] [kelly@fsl.noaa.gov (Sean Kelly)] []
+MID: 9507241247.AA16806@emu.fsl.noaa.gov
+SUBJ: Re: cvs commit: ports/games/xkobo - Imported sources
+BODY: >>>>> "Michael" == Michael Elbel <me@tartufo.pcs.dec.com> writes: |  |     Michael> Actually, if you are patient and try not to shoot down |     Michael> too many beasties at a time, it's manageable. Now on to |     Michael> level 24 :-) |  | You're right ... it certainly took a long time, but I kept things | off-screen as much as possible and finally did it. |  | An even faster way is to use the following patch ... :-) |  | *** myship.C~   Sat Jul  1 13:31:34 1995 | --- myship.C    Mon Jul 24 06:35:42 1995 | *************** | *** 123,130 **** | --- 123,132 ---- |   void _myship::destroyed() |   { |       if (state != normal) re
+------------------------------------------------------------
+[1995-07-24T21:23:51+00:00] [roberto@blaise.ibp.fr (Ollivier Robert)] []
+MID: 199507242123.XAA04656@blaise.ibp.fr
+SUBJ: Re: cvs commit: ports/games/xkobo - Imported sources
+BODY: >  | > You're right ... it certainly took a long time, but I kept things | > off-screen as much as possible and finally did it. | >  | > An even faster way is to use the following patch ... :-) |  | it is a very nice game, fast and all that but last time I played with it | it ates 60 MB of swap on my 32 MB RAM system... and at the end of the | game , the 60 MB os swap were not given back to the system :-( |  | PS: I played -doublesize. | --  | Ollivier ROBERT     -=- The daemon is FREE! -=-     roberto@FreeBSD.ORG |       FreeBSD 2.2-CURRENT #5: Fri Jul 14 12:28:04 MET DST 1995 |  | 
+------------------------------------------------------------
+[1995-07-25T10:01:37+00:00] [roberto@blaise.ibp.fr (Ollivier Robert)] []
+MID: 199507251001.MAA07239@blaise.ibp.fr
+SUBJ: Re: cvs commit: ports/games/xkobo - Imported sources
+BODY: >  | > Look at the size of your X server. Xkobo downloads all its graphics | > into the server - the only way to get such fast graphics. Since the | > default X servers aren't linked with gnumalloc, you won't get your | > memory back. On the other hand, if you have enough swap that doesn't |  | My server uses gnumalloc :-) |  | > hurt you. The server *won't* grow any more for the second and | > subsequent starts of the game. I've been running a 60 MB server for | > a week now (ok, I have some 300 Mb swap). |  | 32 MB RA, 96 swap. | --  | Ollivier ROBERT     -=- The daemon is FREE! -=-     roberto@FreeBSD.ORG |       FreeBS
+------------------------------------------------------------
+[1995-07-27T23:01:56+00:00] [Brian Tao <taob@gate.sinica.edu.tw>] []
+MID: Pine.BSI.3.91.950728065910.23040I-100000@aries
+SUBJ: Re: Walnut Creek at the Toronto Comdex
+BODY: On Fri, 14 Jul 1995, Sean Kelly wrote: | >  | > BSD tattoos?  Are you serious?  I think I'd like a daemon stepping out | > of a CD-ROM for my left shoulder, and a daemon holding a heart for my | > wife's right buttock. |  |     As soon as I can get some time on the PowerMac upstairs (connected | to a Umax S6 flatbed), I'll scan in a photo of a lady friend of mine | with the tatoo on her upper thigh.  Not quite the butt, but as close | as she would let me.  ;-) | --  | Brian ("Though this be madness, yet there is method in't") Tao | taob@gate.sinica.edu.tw <-- work ........ play --> taob@io.org |  |  | 
+------------------------------------------------------------
+[1995-08-07T12:55:28+00:00] [Brian Tao] []
+MID: <Pine.BSI.3.91.950807205402.720D-100000@aries>
+SUBJ: Re: Eureka!.... thanks to you all
+BODY: On Wed, 2 Aug 1995, AAU System Operator wrote: | >  | > My good friend in South Africa, Mike Lawrie, once told me when my employer  | > was considering networking options, platforms and such: | >  | >     "When it comes to unix, don't go for the commercial stuff, go for the  | >     free stuff.  And DON'T equate the word "free" with inferior.  You are  | >     a thousand times more likely to receive better support from the free | >     folks on the net than from any commercial vendors". |  |     Amen, brother!  :) |  | > You won me.  Count me among your friends in Ghana and Africa. |  |     What language is spoken in Gha
+------------------------------------------------------------
+[1995-08-10T02:00:53+00:00] [Brian Tao <taob@gate.sinica.edu.tw>] []
+MID: Pine.BSI.3.91.950810094901.2688s-100000@aries
+SUBJ: Promoting FreeBSD Web servers
+BODY:     There is a thread on the Apache mailing list about promoting sites | that used the Apache HTTP server.  A contest of sorts was commenced, | asking for submissions of graphic art indicating that the server was | using the Apache software. |  |     I thought this would be a nice idea for FreeBSD servers as well. | The only problem is the copyright on the BSD Daemon.  Are we allowed | to use it if no profit is gained from it, and if the copyright is | clearly displayed?  I used the rendition of the Daemon from the cover | of the 2.0.5 CD-ROM in my icon.  http://aries.ibms.sinica.edu.tw/ . | --  | Brian ("Though th
+------------------------------------------------------------
+[1995-08-10T07:02:33+00:00] [J Wunsch <j@uriah.heep.sax.de>] []
+MID: 199508100702.JAA03384@uriah.heep.sax.de
+SUBJ: Re: Promoting FreeBSD Web servers
+BODY: As Brian Tao wrote: | >  | >     I thought this would be a nice idea for FreeBSD servers as well. | > The only problem is the copyright on the BSD Daemon.  Are we allowed | > to use it if no profit is gained from it, and if the copyright is | > clearly displayed?  I used the rendition of the Daemon from the cover | > of the 2.0.5 CD-ROM in my icon.  http://aries.ibms.sinica.edu.tw/ . |  | I believe so.  For non-commercial purposes, Kirk doesn't mind, as long | as it's used in a ``morally good'' way (e.g. the daemon smashing a | Window(s) would violate the copyright). |  | Below is Kirk's answer when i was going to in
+------------------------------------------------------------
+[1995-08-10T13:53:16+00:00] ["Jordan K. Hubbard" <jkh@time.cdrom.com>] []
+MID: 1672.808062796@time.cdrom.com
+SUBJ: Re: Promoting FreeBSD Web servers 
+BODY: >     I thought this would be a nice idea for FreeBSD servers as well. | > The only problem is the copyright on the BSD Daemon.  Are we allowed | > to use it if no profit is gained from it, and if the copyright is | > clearly displayed?  I used the rendition of the Daemon from the cover |  | Yes, that pretty much sums it up. |  | 						Jordan |  | 
+------------------------------------------------------------
+[1995-08-10T15:31:17+00:00] [Brian Tao <taob@gate.sinica.edu.tw>] []
+MID: Pine.BSI.3.91.950810231749.2688D-100000@aries
+SUBJ: Re: Promoting FreeBSD Web servers
+BODY: On Thu, 10 Aug 1995, J Wunsch wrote: | >  | > I believe so.  For non-commercial purposes, Kirk doesn't mind, as long | > as it's used in a ``morally good'' way (e.g. the daemon smashing a | > Window(s) would violate the copyright). |  |     Nope, nothing as violent as that.  ;-)  I redrew the icon today | (got rid of the pinkish glow, used slightly larger lettering and the | daemon is much clearer now).  The graphic is located on my Web site at | http://aries.ibms.sinica.edu.tw/~taob/Images/pbf.gif .  Of course, | everyone is welcome to use it wherever they see fit.  I suggest using | it in this context: |  | <A HREF="
+------------------------------------------------------------
+[1995-08-10T15:45:56+00:00] ["Jonathan M. Bresler" <jmb@kryten.Atinc.COM>] []
+MID: Pine.3.89.9508101153.E28228-0100000@kryten.atinc.com
+SUBJ: Re: Promoting FreeBSD Web servers
+BODY: On Thu, 10 Aug 1995, Brian Tao wrote: |  | >     Nope, nothing as violent as that.  ;-)  I redrew the icon today | > (got rid of the pinkish glow, used slightly larger lettering and the | > daemon is much clearer now).  The graphic is located on my Web site at | > http://aries.ibms.sinica.edu.tw/~taob/Images/pbf.gif .  Of course, |  | 	<rave> brian!  it is absolutely beautiful.   this is going to  | become a sticker on every machine running FreeBSD in this office,  | including the laptops. |  | 	now can you create a version that is 7.5 to 10 cm tall and scaled  | width.   i think we have a bumper sticker :)) |  |  | Jonath
+------------------------------------------------------------
+[1995-08-10T16:08:48+00:00] ["Jordan K. Hubbard" <jkh@freefall.FreeBSD.org>] []
+MID: 9797.808070928@freefall.FreeBSD.org
+SUBJ: Re: Promoting FreeBSD Web servers 
+BODY: > On Thu, 10 Aug 1995, Brian Tao wrote: | >  | > >     Nope, nothing as violent as that.  ;-)  I redrew the icon today | > > (got rid of the pinkish glow, used slightly larger lettering and the | > > daemon is much clearer now).  The graphic is located on my Web site at | > > http://aries.ibms.sinica.edu.tw/~taob/Images/pbf.gif .  Of course, | >  | > 	<rave> brian!  it is absolutely beautiful.   this is going to  | > become a sticker on every machine running FreeBSD in this office,  | > including the laptops. |  | This may go very well with my next set of enhancements to sysinstall.. |  | I noticed when installing BSD/
+------------------------------------------------------------
+[1995-08-10T16:16:23+00:00] [-Vince- <vince@penzance.econ.yale.edu>] []
+MID: Pine.LNX.3.91.950810121525.3949a-100000@penzance.econ.yale.edu
+SUBJ: Re: Promoting FreeBSD Web servers
+BODY: On Thu, 10 Aug 1995, Brian Tao wrote: |  | >     There is a thread on the Apache mailing list about promoting sites | > that used the Apache HTTP server.  A contest of sorts was commenced, | > asking for submissions of graphic art indicating that the server was | > using the Apache software. | >  | >     I thought this would be a nice idea for FreeBSD servers as well. | > The only problem is the copyright on the BSD Daemon.  Are we allowed | > to use it if no profit is gained from it, and if the copyright is | > clearly displayed?  I used the rendition of the Daemon from the cover | > of the 2.0.5 CD-ROM in my icon
+------------------------------------------------------------
+[1995-08-10T16:55:31+00:00] [Brian Tao <taob@gate.sinica.edu.tw>] []
+MID: Pine.BSI.3.91.950811003558.2688I-100000@aries
+SUBJ: Re: Promoting FreeBSD Web servers
+BODY: On Thu, 10 Aug 1995, Jonathan M. Bresler wrote: | >  | > 	<rave> brian!  it is absolutely beautiful.   this is going to  | > become a sticker on every machine running FreeBSD in this office,  | > including the laptops. |  |     *blush*... thank you.  :) |  | > 	now can you create a version that is 7.5 to 10 cm tall and scaled  | > width.   i think we have a bumper sticker :)) |  |     More FreeBSD paraphernalia!  The daemon I have was scanned from | the reverse side of a wipe-off tattoo, then flipped around, so the | colours are rather blotchy.  I diddled around with it in Photoshop, | then reduced it so you can't really
+------------------------------------------------------------
+[1995-08-10T19:47:11+00:00] ["Jonathan M. Bresler" <jmb@kryten.Atinc.COM>] []
+MID: Pine.3.89.9508101554.I28228-0100000@kryten.atinc.com
+SUBJ: Re: Promoting FreeBSD Web servers
+BODY: On Fri, 11 Aug 1995, Brian Tao wrote: |  | >     More FreeBSD paraphernalia!  The daemon I have was scanned from | > the reverse side of a wipe-off tattoo, then flipped around, so the | > colours are rather blotchy.  I diddled around with it in Photoshop, | > then reduced it so you can't really tell.  Mr. Hosokawa ought to have | > a large rendition of the daemon in mid-stride from his CD-ROM cover | > artwork.  If I can get a copy of that from him, I could easily create | > a big version of the logo, suitable for output on a colour printer for | > a variety of uses around home and office.  :) |  | 	now that would 
+------------------------------------------------------------
+[1995-08-13T08:33:40+00:00] [Brian Tao <taob@gate.sinica.edu.tw>] []
+MID: Pine.BSI.3.91.950812191736.204J-100000@aries
+SUBJ: "Powered by FreeBSD" stickers
+BODY:     Tatsumi Hosokawa was kind enough to send me a humungous daemon | graphic he used for the CD-ROM cover (2728x2728!!!), which I then | patched up and scaled down for the "Powered by FreeBSD" graphic. |  |     You can see a large version of it at http://aries.ibms.sinica.edu.tw/ . | It's a 1549x598 JPEG on a white background.  I printed it out at | 150 lpi on a 600 dpi HP and it looks pretty nice, even in greyscale. | This little exercise convinces me that we need Photoshop 3.0 for | FreeBSD.  :) | --  | Brian ("Though this be madness, yet there is method in't") Tao | taob@gate.sinica.edu.tw <-- work ........ play
+------------------------------------------------------------
+[1995-08-13T08:33:40+00:00] [Brian Tao] []
+MID: <Pine.BSI.3.91.950812191736.204J-100000@aries>
+SUBJ: "Powered by FreeBSD" stickers
+BODY: Tatsumi Hosokawa was kind enough to send me a humungous daemon | graphic he used for the CD-ROM cover (2728x2728!!!), which I then | patched up and scaled down for the "Powered by FreeBSD" graphic. |  |     You can see a large version of it at http://aries.ibms.sinica.edu.tw/ . | It's a 1549x598 JPEG on a white background.  I printed it out at | 150 lpi on a 600 dpi HP and it looks pretty nice, even in greyscale. | This little exercise convinces me that we need Photoshop 3.0 for | FreeBSD.  :) | --  | Brian ("Though this be madness, yet there is method in't") Tao | taob@gate.sinica.edu.tw <-- work ........ play -->
+------------------------------------------------------------
+[1995-08-13T20:23:45+00:00] [AAU System Operator <sysop@aau.org>] []
+MID: m0shkBG-000CPYC@kudu.ru.ac.za
+SUBJ: Configuring Network Interface Card (EZ-2000) on FreeBSD...help!!
+BODY: Hello Friends @ FreeBSD: |  | It's me again! |  | As you know, you solved my password problem and here am I again with more  | trouble! |  | We have a 2-server system down here (one FreeBSD the other Novell NetWare  | 3.12).  All clients on the ethernet LAN are able to attach to and log into  | the Novell server and use and run any applications without problem. |  | Now, we installed Mercury SMTP on top of the Novell, and this also works  | fine--any mail sent from a client is properly recognized by Mercury and  | local ones are successfully delivered locally, but when Mercury tries to  | transmit non-local mail to the U
+------------------------------------------------------------
+[1995-08-13T22:20:00+00:00] [jcaron@pressimage.net (Jacques Caron)] []
+MID: v01530500ac542a0e6fa5@[194.2.222.120]
+SUBJ: Re: Configuring Network Interface Card (EZ-2000) on FreeBSD...help!!
+BODY: At 22:23 13/08/95, AAU System Operator wrote: |  | [blah blah Ethernet won't work] |  | >Here are some statistics about our setup and some messages during booting: | > | >-   EZ-2000 is the NIC we're using | > | >-   But during FreeBSD boot, a line says something like "NE2000 (16- | >    bit) card..." is what the kernel has been configured to use. | > | >-   "ed1: device timeout" displays in BOLD during/after starting the | >    daemons |  | OK. Boot under DOS, and run the utility provided with the NIC, and do a | "view settings" or whatever. Check the IRQ. Oh, is it 3? Set it to 5. | Reboot FreeBSD. |  | Ohhhh it works. |  | Questi
+------------------------------------------------------------
+[1995-08-21T06:33:06+00:00] [J Wunsch] []
+MID: <199508210633.IAA04176@uriah.heep.sax.de>
+SUBJ: echo test
+BODY: Not sure if i've also been dropped off this list, or if it's only | silent here... | --  | cheers, J"org |  | joerg_wunsch@uriah.heep.sax.de -- http://www.sax.de/~joerg/ | Never trust an operating system you don't have sources for. ;-) |  | From owner-freebsd-chat  Mon Aug 21 18:26:57 1995 | Return-Path: chat-owner | Received: (from majordom@localhost) |           by freefall.FreeBSD.org (8.6.11/8.6.6) id SAA23746 |           for chat-outgoing; Mon, 21 Aug 1995 18:26:57 -0700 | Received: from relay3.UU.NET (relay3.UU.NET [192.48.96.8]) |           by freefall.FreeBSD.org (8.6.11/8.6.6) with ESMTP id SAA23740 |           fo
+------------------------------------------------------------
+[1995-08-24T16:14:27+00:00] [Bill Fenner <fenner@parc.xerox.com>] []
+MID: 95Aug24.091439pdt.177475@crevenia.parc.xerox.com
+SUBJ: Re: Why Linux? (fwd) 
+BODY: In message <2945.809151091@time.cdrom.com> you write: | >If someone uses the | >Daemon to grace their porno site, on the other hand, the Kirk gets | >pretty upset... |  | "the Kirk"?  Is that like "the Picard"?  "All hail the Kirk!"... |  | erk. |  |   Bill |  |  | 
+------------------------------------------------------------
+[1995-08-25T15:31:27+00:00] [Brian Tao <taob@gate.sinica.edu.tw>] []
+MID: Pine.BSI.3.91.950825232737.193A-100000@aries
+SUBJ: We need more FreeBSD goodies?
+BODY:     Looks like the Linux crowd finally got their act together and got | their own T-shirt.  ;-)  It's from the cover of the O'Reilly book on | Linux (horseman) with the slogan "There's A New Operating System In | Town" or some equally ignorant statement.  :) |  |     Of course, I proudly wear my cute little Daemon T-shirt, but I | would really love to have other FreeBSD paraphernalia too.  Like those | Daemon plushies (eh, Mark?  Any progress on those?)...  :)  I also | remember hearing one guy in news say something to the effect of "I've | got two young kids and I'd like to raise them on the right operating | sy
+------------------------------------------------------------
+[1995-08-25T17:31:59+00:00] [J Wunsch <j@uriah.heep.sax.de>] []
+MID: 199508251732.TAA04268@uriah.heep.sax.de
+SUBJ: Re: We need more FreeBSD goodies?
+BODY: As Brian Tao wrote: | >  | >     Of course, I proudly wear my cute little Daemon T-shirt, |  | Hey, where did'ya get _this_? | --  | cheers, J"org |  | joerg_wunsch@uriah.heep.sax.de -- http://www.sax.de/~joerg/ | Never trust an operating system you don't have sources for. ;-) |  | 
+------------------------------------------------------------
+[1995-08-25T17:43:55+00:00] [kelly@fsl.noaa.gov (Sean Kelly)] []
+MID: 9508251743.AA25590@emu.fsl.noaa.gov
+SUBJ: Re: We need more FreeBSD goodies?
+BODY: >>>>> "Joerg" == J Wunsch <j@uriah.heep.sax.de> writes: |  |     Joerg> As Brian Tao wrote: |     >>  Of course, I proudly wear my cute little Daemon T-shirt, |  |     Joerg> Hey, where did'ya get _this_?  |  | Probably from below: |  |    To: announce@freebsd.org |    Subject: Come and get 'em!  New FreeBSD T-shirts available. |    Date: Thu, 25 May 1995 13:36:52 -0700 |    From: "Jordan K. Hubbard" <jkh@freefall.cdrom.com> |  |    Walnut Creek CDROM has just commissioned a new line of FreeBSD |    T-shirts, featuring Tatsumi Hosokawa's "daemon walking out of a CD" |    image in 2-color process.  The text below the daemon s
+------------------------------------------------------------
+[1995-08-25T18:59:17+00:00] [J Wunsch <j@uriah.heep.sax.de>] []
+MID: 199508251859.UAA04735@uriah.heep.sax.de
+SUBJ: Re: We need more FreeBSD goodies?
+BODY: As Sean Kelly wrote: | >  | >     >>  Of course, I proudly wear my cute little Daemon T-shirt, | >  | >     Joerg> Hey, where did'ya get _this_?  | >  | > Probably from below: | >  | >    To: announce@freebsd.org |  | >    Walnut Creek CDROM has just commissioned a new line of FreeBSD | >    T-shirts, |  | You mean to tell me i should rather subscribe to -announce? :-) |  | Anyway, it might be an interesting idea to have some T-shirts on the | European hackers' meeting in Aachen next weekend.  Is there any | interest? |  | --  | cheers, J"org |  | joerg_wunsch@uriah.heep.sax.de -- http://www.sax.de/~joerg/ | Never trust an operating syste
+------------------------------------------------------------
+[1995-08-25T20:20:33+00:00] ["Don's FList drop" <freelist@elf.kendall.mdcc.edu>] []
+MID: Pine.BSF.3.91.950825161838.11735B-100000@elf.kendall.mdcc.edu
+SUBJ: Re: We need more FreeBSD goodies?
+BODY:  | On Fri, 25 Aug 1995, Sean Kelly wrote: |  | >     Joerg> As Brian Tao wrote: | >     >>  Of course, I proudly wear my cute little Daemon T-shirt, | >  | >     Joerg> Hey, where did'ya get _this_?  | >  | > Probably from below: | >  | >    Walnut Creek CDROM has just commissioned a new line of FreeBSD | >    T-shirts, featuring Tatsumi Hosokawa's "daemon walking out of a CD" | >    image in 2-color process.  The text below the daemon simply says |  | Wow, didn't know about these. I got the "The Daemon is Free!" shirt over  | a year ago with the little BSD daemon (actually had a woman walk up to me  | and say "how cute!" on
+------------------------------------------------------------
+[1995-08-26T19:06:21+00:00] ["Jordan K. Hubbard" <jkh@time.cdrom.com>] []
+MID: 2429.809463981@time.cdrom.com
+SUBJ: Re: Why Linux? (fwd) 
+BODY: > >Daemon to grace their porno site, on the other hand, the Kirk gets | > >pretty upset... | >  | > "the Kirk"?  Is that like "the Picard"?  "All hail the Kirk!"... | >  |  | I read that too and went "whoops!".  ^the^then^ |  | :-) |  | 					Jordan |  | 
+------------------------------------------------------------
+[1995-08-26T19:41:52+00:00] [Mark Murray <mark@grondar.za>] []
+MID: 199508261941.VAA28345@grumble.grondar.za
+SUBJ: Re: Why Linux? (fwd) 
+BODY: > > >Daemon to grace their porno site, on the other hand, the Kirk gets | > > >pretty upset... | > >  | > > "the Kirk"?  Is that like "the Picard"?  "All hail the Kirk!"... | > >  | >  | > I read that too and went "whoops!".  ^the^then^ | >  | > :-) | >  | > 					Jordan |  | OTOH - "Kirk" is a Scottish for church. Sure, if you use little red devils |        to advertise your porno site, the Church is likely to get more tense |        about it! |  |        ]:-> |  | M |  | -- | Mark Murray | 46 Harvey Rd, Claremont, Cape Town 7700, South Africa | +27 21 61-3768 GMT+0200 | Finger mark@grumble.grondar.za for PGP key |  |  | 
+------------------------------------------------------------
+[1995-08-28T03:47:30+00:00] [Brian Tao] []
+MID: <199508280347.LAA09748@aries.ibms.sinica.edu.tw>
+SUBJ: New Secure HTTP Server Software for BSD/OS et al.
+BODY: Didn't know where best to send this, so I'll stick in chat to | reduce the clutter in other lists.  These folks have binaries for | BSD/OS, so I imagine it would not be too difficult to produce a | FreeBSD one as well.  We should pepper them with requests (I'm mailing | in my form right now). |  | In article <41qtqi$m84@sierra.onr.com> you write: | > | >Onramp Access, Inc. of Austin, TX is close to completing an  | >agreement with a local software company that has developed  | >high-performance server software for secure publishing and  | >communications on the Internet and other TCP/IP-based networks.  | >The server
+------------------------------------------------------------
+[1995-08-28T12:04:04+00:00] [Brian Tao <taob@gate.sinica.edu.tw>] []
+MID: Pine.BSI.3.91.950828200257.3729F-100000@aries
+SUBJ: Re: We need more FreeBSD goodies?
+BODY: On Fri, 25 Aug 1995, J Wunsch wrote: | >  | > >     Of course, I proudly wear my cute little Daemon T-shirt, | >  | > Hey, where did'ya get _this_? |  |     Walnut Creek was giving them away at the booth at the Toronto | Comdex this past summer.  A friend of mine came back from the show | with one, and I just *had* to get one of my own, so I went down the | next day, picked up 2.0.5 and the T-shirt.  Wearing it right now, as a | matter of fact.  :) | --  | Brian ("Though this be madness, yet there is method in't") Tao | taob@gate.sinica.edu.tw <-- work ........ play --> taob@io.org |  |  | 
+------------------------------------------------------------
+[1995-09-02T20:07:28+00:00] [Ollivier Robert <roberto@keltia.frmug.fr.net>] []
+MID: 199509022007.WAA06036@keltia.frmug.fr.net
+SUBJ: Re: Microsoft runs BSD!!!
+BODY: It seems that Stephen Hocking said: | > 	Over in the unixware groups, there was some mention that Microsoft's | > web servers were running Unix (BSDI 2.0, to be precise). Telnet | > www.microsoft.com.... |  | Last time  I checked, Microsoft's mail  servers were  running Xenix with an | old version of sendmail (5.65 not even IDA...).  IBM main machine (ibm.net) | was probably running AIX on a PC-RT (it answer BSD 4.3 to telnet).  |  | --  | Ollivier ROBERT    -=- The daemon is FREE! -=-    roberto@keltia.frmug.fr.net |       FreeBSD keltia 2.2-CURRENT #16: Tue Aug 22 01:54:17 MET DST 1995 |  | 
+------------------------------------------------------------
+[1995-09-02T20:10:21+00:00] [Ollivier Robert <roberto@keltia.frmug.fr.net>] []
+MID: 199509022010.WAA06063@keltia.frmug.fr.net
+SUBJ: Re: We need more FreeBSD goodies?
+BODY: A mug with the daemon on it would be very nice too... | --  | Ollivier ROBERT    -=- The daemon is FREE! -=-    roberto@keltia.frmug.fr.net |       FreeBSD keltia 2.2-CURRENT #16: Tue Aug 22 01:54:17 MET DST 1995 |  | 
+------------------------------------------------------------
+[1995-09-02T23:55:47+00:00] ["Jordan K. Hubbard" <jkh@time.cdrom.com>] []
+MID: 9476.810086147@time.cdrom.com
+SUBJ: Re: We need more FreeBSD goodies? 
+BODY: We're making these right now! |  | 				Jordan |  | > A mug with the daemon on it would be very nice too... | > --  | > Ollivier ROBERT    -=- The daemon is FREE! -=-    roberto@keltia.frmug.fr.net | >       FreeBSD keltia 2.2-CURRENT #16: Tue Aug 22 01:54:17 MET DST 1995 |  |  |  | 
+------------------------------------------------------------
+[1995-09-03T13:51:26+00:00] [Sean Kelly] []
+MID: <9509031351.AA17885@emu.fsl.noaa.gov>
+SUBJ: Re: And now for something completely different..
+BODY: >>>>> "Ollivier" == Ollivier Robert <roberto@keltia.frmug.fr.net> writes: |  |     Ollivier> It seems that Sean Kelly said: |     >> >From traceroutes, it looks like some place in Texas.  Anyone |     >> know better/for certain? |  |     Ollivier> Did anyone checked with whois ?  |  | That's too easy!  :-) |  | It was Zero Micro Software, of Cincinatti, Ohio, USA. |  | --  | Sean Kelly | NOAA Forecast Systems Lab, Boulder Colorado USA |  | Shoot rubber bands at your roommate while his/her back is turned, and | then look away quickly. | -- One of 120 ways to annoy your roommate. |  | From owner-freebsd-chat  Mon Sep  4 00:00:00 1995 | 
+------------------------------------------------------------
+[1995-09-05T00:57:17+00:00] [Bill Fenner <fenner@parc.xerox.com>] []
+MID: 95Sep4.175727pdt.177475@crevenia.parc.xerox.com
+SUBJ: Re: Test/Release cycle. 
+BODY: >Speaking of which, I'm headed out to Mtn View next week.  Anyone out | >there (core or lurker) wanna wear FreeBSD shirts and hit the Tied house? |  | Hmm... I don't have a FreeBSD shirt, but I could probably be dragged to | the Tied house with my 4.3bsd system daemon shirt... =) |  |   Bill |  | 
+------------------------------------------------------------
+[1995-09-08T20:21:55+00:00] [Ollivier Robert <roberto@keltia.Freenix.FR>] []
+MID: 199509082021.WAA10773@keltia.Freenix.FR
+SUBJ: Re: fvwm's home? (fwd)
+BODY: It seems that Rob Snow said: | > It should be a fairly easy port.  I got pl26 yesterday and compiled it | > to see what it looked like.  It compiled easily and ran fine.  I did | > notice that it uses QUITE a bit more memory than 1.24r, hence 1.24r | > still has a job around here. |  | And it  has  a different initlization file   for at *again*.   I think I'll | revert to 1.24r... The new format is more complicated and  I don't see what | it gives us.  In fact, I don't  really see any  difference between 1.24 and | 2.x (in term of features). | --  | Ollivier ROBERT    -=- The daemon is FREE! -=-    roberto@keltia.f
+------------------------------------------------------------
+[1995-09-12T05:43:06+00:00] [J Wunsch] []
+MID: <199509120543.HAA27982@uriah.heep.sax.de>
+SUBJ: Re: serial console
+BODY: Took this to -chat, maybe somebody is going to write a FreeBSD history | some day... |  | As Joe Greco wrote: |  | > Anyways, kudos to Bill Paul(?) for his serial console work. |  | Credit where credit is due. |  | The code to use a serial _console_ has been there long since.  I | suspect it's already been in 386BSD 0.0, at least in 386BSD 0.1.  I | have checked both, 386BSD 1.0 and FreeBSD 1.0, it is there.  (This is | also the origin of the name ``COMCONSOLE'': the driver for it was the | "com" driver.) |  | It's been a compile-time option in all those systems.  (Unfortunately, | FreeBSD 1.0's LINT file does not mention th
+------------------------------------------------------------
+[1995-09-16T15:54:01+00:00] [J Wunsch <j@uriah.heep.sax.de>] []
+MID: 199509161554.RAA00980@uriah.heep.sax.de
+SUBJ: Daemon poll
+BODY: This is just an informative poll.  We've got a company that is willing | to produce daemon plushies.  I've already sent a mail to Kirk McKusick | asking for permission, and in order to estimate the amount of plushies | we'd have to order (and to estimate the price then), i need a very | rough figure about the potential interest. |  | So if anybody here is interested in getting one (or more) of them, | please drop me a note.  My current estimation is that the whole thing | might work as long as we could sell them (including shipping costs) | for DM 30 (abt. US$ 20) or below. |  | In case it will happen, we are also 
+------------------------------------------------------------
+[1995-09-17T12:23:36+00:00] [Jonathan M. Bresler] []
+MID: <Pine.3.89.9509170859.C25887-0100000@kryten.atinc.com>
+SUBJ: write-back vs write-thru
+BODY: 10% ;))) |  | on friday i received a brand spanking new 'dirty' chip for the 256kB  | level 2 cache sp3g motherboard i have. |  | last night i supped -stable and did the usual make world |  | write-thur: |     30082.80 real     16436.87 user      3887.32 sys |     36442.26 real     16598.26 user      3967.11 sys  <-- excessive use of | 							  tail -f by operator |     30638.79 real     16447.05 user      3895.20 sys |  | write-back: |     27178.79 real     16038.30 user      3789.03 sys |  |  | its only one data point and -stable does change from day to day, but  | looks good! |  | i will run more make world's starting again wedne
+------------------------------------------------------------

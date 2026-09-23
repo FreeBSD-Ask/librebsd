@@ -1,0 +1,1853 @@
+total 6
+[1991-02-06T13:11:58+00:00] [rol at grasp2.univ-lyon1.fr (Paul Rolland)] [Hello,
+
+	I've an Unisys U6000 running system V R3.2. I'd like to turn on
+the equivalent of syslogd on the other systems (like AIX). Unfortunately,
+there's no syslogd. I've found that all the daemons started by inetd are
+using the file /etc/log/socket to write a lire-record containing their
+name and the date (+time). But I don't have the name of the user, the
+machine the call comes from and so on. In fact, only ftpd as a logging
+option (-l) and only telnetd and ftpd have debugging options (-d).
+But the debugging infos aren't stored in /etc/log/socket (I don't
+know where they are stored), and talkd, rlogind, rshd and rexecd have none.
+
+	Could any one tell me what I have to do to gain access to these
+informations and have them stored in a file ? I've heard about strace
+and strerr, but I know understand precisely how they act, and I can't 
+find any informations on the parameters that are required. 
+	If it's not possible with the standard tools, where can I find
+others which will work, and has anybody already done that on a similar
+system ?
+
+	Thanks,
+	Paul.
+
+PS : You can either reply to the list or directly to one of the following
+     addresses.
+-- 
+ +---------------------------------------------------------------------+
+ |      Paul Rolland  -  INSA de Lyon  - Departement Informatique      |
+ |                    Etudiant en 5 eme annee                          |
+ +---------------------------------------------------------------------+
+ |     Email :  rol at grasp1.univ-lyon1.fr, rol at riri.univ-lyon1.fr       |
+ +---------------------------------------------------------------------+
+
+
+]
+MID: 25856@adm.brl.mil
+SUBJ: Unix System V R3.2
+BODY: Hello, |  | 	I've an Unisys U6000 running system V R3.2. I'd like to turn on | the equivalent of syslogd on the other systems (like AIX). Unfortunately, | there's no syslogd. I've found that all the daemons started by inetd are | using the file /etc/log/socket to write a lire-record containing their | name and the date (+time). But I don't have the name of the user, the | machine the call comes from and so on. In fact, only ftpd as a logging | option (-l) and only telnetd and ftpd have debugging options (-d). | But the debugging infos aren't stored in /etc/log/socket (I don't | know where they are stored), and ta
+------------------------------------------------------------
+[1992-04-15T20:27:40+00:00] [pk@cs.few.eur.nl (Paul Kranenburg)] [Here is an implementation of the ptrace(2) system call for 386BSD.
+If you are only interested in the stock ptrace operations (as currently
+defined in <sys/ptrace.h>) the only files that modifications are
+ `kern/sys_process.c' and 'kern_execve.c'.
+
+The rest of the diffs attached below contain some changes necessary to
+let a debugger attach-to/detach-from a running process, do system call
+tracing and trace flags inheritance by debuggee's child processes
+(experimental). The files affected are:
+
+	- kern/kern_sig.c
+	- kern/kern_exit.c
+	- kern/kern_fork.c
+	- i386/i386/trap.c
+	- sys/proc.h
+	- sys/ptrace.h
+	- sys/user.h	(!)
+
+(!) Unfortunately, I had to bring back a number of fields to user area
+ to support system call tracing (an alternative solution, anyone?)
+
+You may also want to apply a mod to the machine dependent part of gdb.
+
+To demonstrate these ptrace extensions, I have ported `strace' - a symbolic
+system call tracer originally written for SunOS - to NET-2 BSD. It can be
+anonymously FTP'ed from `ftp.cs.few.eur.nl' (~ftp/pub/386bsd/strace.tar.Z).
+
+I am also looking into the feasibility of implementing a /proc filesystem.
+Are there plans for such things in future BSD releases?
+
+Cheers,
+
+Paul.
+
+
+[PS. the file `kern_execve.c' is included in full below, due to the numerous
+incompatible patches floating around. It contains a number of other
+rationalisations as well.]
+
+---------------------------------------------------------------------------
+#! /bin/sh
+# This is a shell archive.  Remove anything before this line, then unpack
+# it by saving it into a file and typing "sh file".  To overwrite existing
+# files, type "sh file -c".  You can also feed this as standard input via
+# unshar, or by typing "sh <file", e.g..  If this archive is complete, you
+# will see the following message at the end:
+#		"End of shell archive."
+# Contents:  kern.diff i386.diff sys.diff kern_execve.c gdb.diff
+# Wrapped by pk@bridei on Wed Apr 15 21:00:17 1992
+PATH=/bin:/usr/bin:/usr/ucb ; export PATH
+if test -f 'kern.diff' -a "${1}" != "-c" ; then 
+  echo shar: Will not clobber existing file \"'kern.diff'\"
+else
+echo shar: Extracting \"'kern.diff'\" \(10619 characters\)
+sed "s/^X//" >'kern.diff' <<'END_OF_FILE'
+X
+X------- kern_fork.c -------
+X*** /tmp/da06888	Wed Apr 15 20:48:51 1992
+X--- kern_fork.c	Wed Apr 15 20:19:36 1992
+X***************
+X*** 231,236 ****
+X--- 231,246 ----
+X  			VREF(p2->p_tracep);
+X  	}
+X  #endif
+X+ #ifdef SFTRC
+X+ 	if ((p1->p_flag & (STRC|SFTRC)) == (STRC|SFTRC)) {
+X+ 		/* Inherit trace flags */
+X+ 		p2->p_flag |= (p1->p_flag & (STRC|SFTRC|SSTRC));
+X+ 		if (p1->p_tptr)
+X+ 			p2->p_tptr = p1->p_tptr;
+X+ 		else
+X+ 			p2->p_tptr = p1->p_pptr;
+X+ 	}
+X+ #endif
+X  
+X  #if defined(tahoe)
+X  	p2->p_vmspace->p_ckey = p1->p_vmspace->p_ckey; /* XXX move this */
+X
+X------- kern_exit.c -------
+X*** /tmp/da06891	Wed Apr 15 20:48:52 1992
+X--- kern_exit.c	Wed Apr 15 20:19:36 1992
+X***************
+X*** 210,216 ****
+X--- 210,221 ----
+X  		 * Traced processes are killed
+X  		 * since their existence means someone is screwing up.
+X  		 */
+X+ #include "ptrace.h"
+X+ #ifndef PT_ATTACH
+X  		if (q->p_flag&STRC) {
+X+ #else
+X+ 		if (q->p_flag&STRC && (q->p_tptr == 0 || q->p_tptr == p)) {
+X+ #endif
+X  			q->p_flag &= ~STRC;
+X  			psignal(q, SIGKILL);
+X  		}
+X***************
+X*** 373,380 ****
+X--- 378,396 ----
+X  			nprocs--;
+X  			return (0);
+X  		}
+X+ 
+X  		if (p->p_stat == SSTOP && (p->p_flag & SWTED) == 0 &&
+X+ #ifndef PT_ATTACH
+X  		    (p->p_flag & STRC || uap->options & WUNTRACED)) {
+X+ #else
+X+ 			/*
+X+ 			 * Don't let natural father have it (yet), if this
+X+ 			 * process is being traced by someone else
+X+ 			 */
+X+ 		    ((p->p_flag & STRC || uap->options & WUNTRACED) &&
+X+ 			(p->p_tptr == 0 || p->p_tptr == q))) {
+X+ #endif
+X+ 
+X  			p->p_flag |= SWTED;
+X  			retval[0] = p->p_pid;
+X  #ifdef COMPAT_43
+X***************
+X*** 392,397 ****
+X--- 408,443 ----
+X  			return (error);
+X  		}
+X  	}
+X+ 
+X+ #ifdef PT_ATTACH
+X+ 	/*if (nfound == 0)*/
+X+ 		/* Look for bastards */
+X+ 		for (p = allproc; p; p = p->p_nxt) {
+X+ 			if (uap->pid != WAIT_ANY &&
+X+ 			    p->p_pid != uap->pid && p->p_pgid != -uap->pid ||
+X+ 			    p->p_tptr != q || (p->p_flag & STRC) == 0)
+X+ 				continue;
+X+ 
+X+ 			nfound++;
+X+ 			if (p->p_stat == SSTOP && (p->p_flag & SWTED) == 0) {
+X+ 				p->p_flag |= SWTED;
+X+ 				retval[0] = p->p_pid;
+X+ #ifdef COMPAT_43
+X+ 				if (uap->compat) {
+X+ 					retval[1] = W_STOPCODE(p->p_xstat);
+X+ 					error = 0;
+X+ 				} else
+X+ #endif
+X+ 				if (uap->status) {
+X+ 					status = W_STOPCODE(p->p_xstat);
+X+ 					error = copyout((caddr_t)&status,
+X+ 					    (caddr_t)uap->status, sizeof(status));
+X+ 				} else
+X+ 					error = 0;
+X+ 				return (error);
+X+ 			}
+X+ 		}
+X+ #endif
+X  	if (nfound == 0)
+X  		return (ECHILD);
+X  	if (uap->options & WNOHANG) {
+X
+X------- kern_sig.c -------
+X*** /tmp/da06894	Wed Apr 15 20:48:52 1992
+X--- kern_sig.c	Wed Apr 15 20:19:37 1992
+X***************
+X*** 55,60 ****
+X--- 55,61 ----
+X  #include "vm/vm.h"
+X  #include "kinfo_proc.h"
+X  #include "user.h"		/* for coredump */
+X+ #include "ptrace.h"
+X  
+X  /*
+X   * Can process p, with pcred pc, send the signal signo to process q?
+X***************
+X*** 798,803 ****
+X--- 799,809 ----
+X  			 * stopped until released by the parent.
+X  			 */
+X  			p->p_xstat = sig;
+X+ #ifdef PT_ATTACH
+X+ 			if (p->p_tptr)
+X+ 				psignal(p->p_tptr, SIGCHLD);
+X+ 			else
+X+ #endif
+X  			psignal(p->p_pptr, SIGCHLD);
+X  			do {
+X  				stop(p);
+X***************
+X*** 909,914 ****
+X--- 915,925 ----
+X  
+X  	p->p_stat = SSTOP;
+X  	p->p_flag &= ~SWTED;
+X+ #ifdef PT_ATTACH
+X+ 	if (p->p_tptr)
+X+ 		wakeup((caddr_t)p->p_tptr);
+X+ 	else
+X+ #endif
+X  	wakeup((caddr_t)p->p_pptr);
+X  }
+X  
+X
+X------- sys_process.c -------
+X*** /tmp/da06920	Wed Apr 15 20:51:42 1992
+X--- sys_process.c	Wed Apr 15 20:37:40 1992
+X***************
+X*** 48,53 ****
+X--- 48,99 ----
+X  #include "user.h"
+X  
+X  /*
+X+  * NOTES.
+X+  *
+X+  * The following ptrace calls have been defined in addition to
+X+  * the standard ones found in original <sys/ptrace.h>:
+X+  *
+X+  * PT_ATTACH		-	attach to running process
+X+  * PT_DETACH		-	detach from running process
+X+  * PT_SYSCALL		-	trace system calls
+X+  * PT_GETREG		-	get register file
+X+  * PT_SETREG		-	set register file
+X+  * PT_BREAD_[IDU]	-	block read from process (not yet implemented)
+X+  * PT_BWRITE_[IDU]	-	block write	"		"
+X+  * PT_INHERIT		-	make forked processes inherit trace flags
+X+  *
+X+  */
+X+ 
+X+ /* Define to prevent extraneous clutter in source */
+X+ #ifndef SSTRC
+X+ #define	SSTRC	0
+X+ #endif
+X+ #ifndef SFTRC
+X+ #define	SFTRC	0
+X+ #endif
+X+ 
+X+ /*
+X+  * `ipcreg' defined in <machine/reg.h>
+X+  * Should we define a structure with all regs?
+X+  */
+X+ int sipcreg[NIPCREG] =
+X+   { 0,0,sEDI,sESI,sEBP,sEBX,sEDX,sECX,sEAX,sEIP,sCS,sEFLAGS,sESP,sSS };
+X+ 
+X+ struct {
+X+ 	int	flag;
+X+ #define IPC_BUSY	1
+X+ #define IPC_WANT	2
+X+ #define IPC_DONE	4
+X+ 	int	req;			/* copy of ptrace request */
+X+ 	int	*addr;			/* copy of ptrace address */
+X+ 	int	data;			/* copy of ptrace data */
+X+ 	int	error;			/* errno from `procxmt' */
+X+ 	int	regs[NIPCREG];		/* PT_[GS]ETREG */
+X+ 	caddr_t	buf;			/* PT_BREAD/WRITE */
+X+ 	int	buflen;			/* 	"	*/
+X+ } ipc;
+X+ 
+X+ /*
+X   * Process debugging system call.
+X   */
+X  ptrace(curp, uap, retval)
+X***************
+X*** 60,80 ****
+X  	} *uap;
+X  	int *retval;
+X  {
+X  
+X! 	/*
+X! 	 * Body deleted.
+X! 	 */
+X! 	return (ENOSYS);
+X  }
+X  
+X  procxmt(p)
+X  	register struct proc *p;
+X  {
+X  
+X! 	/*
+X! 	 * Body deleted.
+X! 	 */
+X! 	return (0);
+X  }
+X  
+X  /*
+X--- 106,368 ----
+X  	} *uap;
+X  	int *retval;
+X  {
+X+ 	struct proc *p;
+X+ 	int s, error = 0;
+X  
+X! 	*retval = 0;
+X! 	if (uap->req == PT_TRACE_ME) {
+X! 		curp->p_flag |= STRC;
+X! 		/*p->p_tptr = p->p_pptr; * What shall we do here ? */
+X! 		return 0;
+X! 	}
+X! 	if ((p = pfind(uap->pid)) == NULL) {
+X! 		return ESRCH;
+X! 	}
+X! 
+X! 	if (curp->p_ucred->cr_uid != 0 &&
+X! 		(curp->p_ucred->cr_uid != p->p_ucred->cr_uid ||
+X! 		curp->p_ucred->cr_uid != p->p_cred->p_svuid)) {
+X! 
+X! 		return EACCES;
+X! 	}
+X! 
+X! #ifdef PT_ATTACH
+X! 	switch (uap->req) {
+X! 	case PT_ATTACH:
+X! 		p->p_tptr = curp;
+X! 		p->p_flag |= STRC;
+X! 		psignal(p, SIGTRAP);
+X! 		return 0;
+X! 
+X! 	case PT_DETACH:
+X! 		if ((unsigned)uap->data >= NSIG)
+X! 			return EINVAL;
+X! 		p->p_flag &= ~(STRC|SSTRC|SFTRC);
+X! 		p->p_tptr = NULL;
+X! 		psignal(p->p_pptr, SIGCHLD);
+X! 		wakeup((caddr_t)p->p_pptr);
+X! 		s = splhigh();
+X! 		if (p->p_stat == SSTOP) {
+X! 			p->p_xstat = uap->data;
+X! 			setrun(p);
+X! 		} else if (uap->data) {
+X! 			psignal(p, uap->data);
+X! 		}
+X! 		splx(s);
+X! 		return 0;
+X! 
+X! #ifdef PT_INHERIT
+X! 	case PT_INHERIT:
+X! 		if ((p->p_flag & STRC) == 0)
+X! 			return ESRCH;
+X! 		p->p_flag |= SFTRC;
+X! 		return 0;
+X! #endif
+X! 
+X! 	default:
+X! 		break;
+X! 	}
+X! #endif
+X! 
+X! 	/* Other ptrace calls require target process to be in stopped state */
+X! 	if ((p->p_flag & STRC) == 0 || p->p_stat != SSTOP) {
+X! 		return ESRCH;
+X! 	}
+X! 
+X! 	/* Acquire the ipc structure */
+X! 	while (ipc.flag & IPC_BUSY) {
+X! 		ipc.flag |= IPC_WANT;
+X! 		error = tsleep((caddr_t)&ipc, PWAIT|PCATCH, "ipc", 0);
+X! 		if (error)
+X! 			goto out;
+X! 	}
+X! 
+X! 	/* Got it, fill it */
+X! 	ipc.flag = IPC_BUSY;
+X! 	ipc.error = 0;
+X! 	ipc.req = uap->req;
+X! 	ipc.addr = uap->addr;
+X! 	ipc.data = uap->data;
+X! 
+X! #ifdef PT_GETREGS
+X! 	switch (uap->req) {
+X! 	case PT_SETREGS:
+X! 		error = copyin((char *)ipc.addr, (char *)ipc.regs, sizeof(ipc.regs));
+X! 		if (error)
+X! 			goto out;
+X! 		break;
+X! 
+X! #ifdef notyet	/* requires change in number of args to ptrace syscall */
+X! 	case PT_BWRITE_I:
+X! 	case PT_BWRITE_D:
+X! 		ipc.buflen = uap->data;
+X! 		ipc.buf = kmem_alloc_wait(kernelmap, uap->data);
+X! 		error = copyin((char *)ipc.addr, (char *)ipc.buf, ipc.buflen);
+X! 		if (error) {
+X! 			kmem_free_wakeup(kernelmap, ipc.buf, ipc.buflen);
+X! 			goto out;
+X! 		}
+X! #endif
+X! 	default:
+X! 		break;
+X! 	}
+X! #endif
+X! 
+X! 	setrun(p);
+X! 	while ((ipc.flag & IPC_DONE) == 0) {
+X! 		error = tsleep((caddr_t)&ipc, PWAIT|PCATCH, "ipc", 0);
+X! 		if (error)
+X! 			goto out;
+X! 	}
+X! 
+X! 	*retval = ipc.data;
+X! 	if (error = ipc.error)
+X! 		goto out;
+X! 
+X! #ifdef PT_GETREGS
+X! 	switch (uap->req) {
+X! 	case PT_GETREGS:
+X! 		error = copyout((char *)ipc.regs, (char *)ipc.addr, sizeof(ipc.regs));
+X! 		break;
+X! 
+X! 	case PT_BREAD_I:
+X! 	case PT_BREAD_D:
+X! 		/* Not yet */
+X! 	default:
+X! 		break;
+X! 	}
+X! #endif
+X! 
+X! out:
+X! 	/* Release ipc structure */
+X! 	ipc.flag &= ~IPC_BUSY;
+X! 	if (ipc.flag & IPC_WANT) {
+X! 		ipc.flag &= ~IPC_WANT;
+X! 		wakeup((caddr_t)&ipc);
+X! 	}
+X! 	return error;
+X  }
+X  
+X  procxmt(p)
+X  	register struct proc *p;
+X  {
+X+ 	int i, *xreg, rv = 0;
+X  
+X! 	/* Are we still being traced? */
+X! 	if ((p->p_flag & STRC) == 0)
+X! 		return 1;
+X! 
+X! 	p->p_addr->u_kproc.kp_proc = *p;
+X! 	fill_eproc(p, &p->p_addr->u_kproc.kp_eproc);
+X! 
+X! 	switch (ipc.req) {
+X! 	case PT_READ_I:
+X! 	case PT_READ_D:
+X! 		rv = copyin((char *)ipc.addr, (char *)&ipc.data, sizeof(ipc.data));
+X! 		break;
+X! 
+X! 	case PT_READ_U:
+X! 		if ((u_int)ipc.addr > UPAGES * NBPG - sizeof(int)) {
+X! 			ipc.error = EFAULT;
+X! 			break;
+X! 		}
+X! 		ipc.data = *(int *)((u_int)p->p_addr + (u_int)ipc.addr);
+X! 		break;
+X! 
+X! 	case PT_WRITE_I:
+X! 	case PT_WRITE_D:
+X! 		rv = copyout((char *)&ipc.data, (char *)ipc.addr, sizeof(ipc.data));
+X! 		break;
+X! 
+X! 	case PT_WRITE_U:
+X! 		if ((u_int)ipc.addr > UPAGES * NBPG - sizeof(int)) {
+X! 			ipc.error = EFAULT;
+X! 			break;
+X! 		}
+X! 		*(int *)((u_int)p->p_addr + (u_int)ipc.addr) = ipc.data;
+X! 		break;
+X! 
+X! 	case PT_CONTINUE:
+X! 		if (ipc.addr != (int *)1) {
+X! #ifdef i386
+X! 			p->p_regs[(curpcb->pcb_flags&FM_TRAP)?tEIP:sEIP] = (int)ipc.addr;
+X! #endif
+X! 		}
+X! 		p->p_flag &= ~SSTRC;	/* Only set by PT_SYSCALL */
+X! 		if ((unsigned)ipc.data >= NSIG) {
+X! 			ipc.error = EINVAL;
+X! 		} else {
+X! 			p->p_xstat = ipc.data;
+X! 			rv = 1;
+X! 		}
+X! 		break;
+X! 
+X! 	case PT_KILL:
+X! 		p->p_flag &= ~SSTRC;	/* Only set by PT_SYSCALL */
+X! 		rv = 2;
+X! 		break;
+X! 
+X! 	case PT_STEP:
+X! #ifdef i386
+X! 		if (ipc.addr != (int *)1) {
+X! 			p->p_regs[(curpcb->pcb_flags&FM_TRAP)?tEIP:sEIP] = (int)ipc.addr;
+X! 		}
+X! 		p->p_regs[(curpcb->pcb_flags&FM_TRAP)?tEFLAGS:sEFLAGS] |= PSL_T;
+X! #endif
+X! 		p->p_flag &= ~SSTRC;	/* Only set by PT_SYSCALL */
+X! 		p->p_xstat = 0;
+X! 		rv = 1;
+X! 		break;
+X! 
+X! #ifdef PT_SYSCALL
+X! 	case PT_SYSCALL:
+X! 		if (ipc.addr != (int *)1) {
+X! #ifdef i386
+X! 			p->p_regs[(curpcb->pcb_flags&FM_TRAP)?tEIP:sEIP] = (int)ipc.addr;
+X! #endif
+X! 		}
+X! 		p->p_flag |= SSTRC;
+X! 		p->p_xstat = 0;
+X! 		rv = 1;
+X! 		break;
+X! #endif
+X! #ifdef PT_GETREGS
+X! 	case PT_GETREGS:
+X! #ifdef i386
+X! 		xreg = (curpcb->pcb_flags&FM_TRAP)?ipcreg:sipcreg;
+X! #endif
+X! 
+X! 		for (i = 0; i < NIPCREG; i++)
+X! 			ipc.regs[i] = p->p_regs[xreg[i]];
+X! 		break;
+X! 
+X! 	case PT_SETREGS:
+X! #ifdef i386
+X! 		xreg = (curpcb->pcb_flags&FM_TRAP)?ipcreg:sipcreg;
+X! #endif
+X! 
+X! 		for (i = 0; i < NIPCREG; i++)
+X! 			p->p_regs[xreg[i]] = ipc.regs[i];
+X! 		break;
+X! #endif
+X! 
+X! #ifdef PT_DUMP
+X! 	case PT_DUMP:
+X! 		/* Should be able to specify core file name */
+X! 		ipc.error = coredump(p);
+X! 		break;
+X! #endif
+X! 
+X! 	default:
+X! 		ipc.error = EINVAL;
+X! 	}
+X! 	ipc.flag |= IPC_DONE;
+X! 	wakeup((caddr_t)&ipc);
+X! 
+X! 	if (rv == 2)
+X! 		exit(p, 0); 	/*???*/
+X! 
+X! 	return rv;
+X  }
+X  
+X  /*
+END_OF_FILE
+if test 10619 -ne `wc -c <'kern.diff'`; then
+    echo shar: \"'kern.diff'\" unpacked with wrong size!
+fi
+# end of 'kern.diff'
+fi
+if test -f 'i386.diff' -a "${1}" != "-c" ; then 
+  echo shar: Will not clobber existing file \"'i386.diff'\"
+else
+echo shar: Extracting \"'i386.diff'\" \(2185 characters\)
+sed "s/^X//" >'i386.diff' <<'END_OF_FILE'
+X
+X------- trap.c -------
+X*** /tmp/da06881	Wed Apr 15 20:47:23 1992
+X--- trap.c	Wed Apr 15 20:21:35 1992
+X***************
+X*** 391,397 ****
+X--- 391,459 ----
+X  #endif
+X  	rval[0] = 0;
+X  	rval[1] = frame.sf_edx;
+X+ #ifdef SSTRC
+X+ #ifdef notyet
+X+ 	/* We might consider trapping exec calls here in stead of
+X+ 	 * of doing a psignal(SIGTRAP) in `kern_execve', like so:
+X+ 	 */
+X+ 	if (code == SYS_exec)
+X+ 		exectrap = 1;
+X+ 
+X+ again:
+X+ 	if (p->p_flag & STRC && (p->p_flag & SSTRC || exectrap)) {
+X+ 		if (p->p_flag & SSTRC)
+X+ 			exectrap = 0;	/* I will say this only once */
+X+ #endif
+X+ 	if (p->p_flag & STRC && p->p_flag & SSTRC) {
+X+ 		/* Copy args to u. */
+X+ 		bcopy((char *)args, (char *)p->p_addr->u_arg, sizeof(args));
+X+ 		p->p_addr->u_scno = code;
+X+ 		p->p_xstat = SIGTRAP;
+X+ 		if (p->p_tptr)
+X+ 			psignal(p->p_tptr, SIGCHLD);
+X+ 		else
+X+ 			psignal(p->p_pptr, SIGCHLD);
+X+ 		do {
+X+ 			stop(p);
+X+ 			swtch();
+X+ 		} while (!procxmt(p) && p->p_flag & STRC);
+X+ 		p->p_addr->u_scno = 0;
+X+ #ifdef notyet
+X+ 		if (exectrap) {
+X+ 			exectrap = 0;
+X+ 			goto again;
+X+ 		}
+X+ #endif
+X+ 	}
+X+ #endif
+X+ 
+X  	error = (*callp->sy_call)(p, args, rval);
+X+ 
+X+ 	/*
+X+ 	 * Reinitialize proc pointer `p' as it may be different
+X+ 	 * if this is a child returning from fork syscall.
+X+ 	 */
+X+ 	p = curproc;
+X+ 
+X+ #ifdef SSTRC
+X+ 	if (p->p_flag & STRC && p->p_flag & SSTRC) {
+X+ 		/* Copy args to u. */
+X+ 		bcopy((char *)args, (char *)p->p_addr->u_arg, sizeof(args));
+X+ 		p->p_addr->u_rval[0] = rval[0];
+X+ 		p->p_addr->u_rval[1] = rval[1];
+X+ 		p->p_addr->u_error = error;
+X+ 		p->p_flag &= ~SSTRC;
+X+ 		p->p_xstat = SIGTRAP;
+X+ 		if (p->p_tptr)
+X+ 			psignal(p->p_tptr, SIGCHLD);
+X+ 		else
+X+ 			psignal(p->p_pptr, SIGCHLD);
+X+ 		do {
+X+ 			stop(p);
+X+ 			swtch();
+X+ 		} while (!procxmt(p) && p->p_flag & STRC);
+X+ 	}
+X+ #endif
+X  	if (error == ERESTART)
+X  		frame.sf_eip = opc;
+X  	else if (error != EJUSTRETURN) {
+X***************
+X*** 407,417 ****
+X  	/* else if (error == EJUSTRETURN) */
+X  		/* nothing to do */
+X  done:
+X- 	/*
+X- 	 * Reinitialize proc pointer `p' as it may be different
+X- 	 * if this is a child returning from fork syscall.
+X- 	 */
+X- 	p = curproc;
+X  	while (i = CURSIG(p))
+X  		psig(i);
+X  	p->p_pri = p->p_usrpri;
+X--- 469,474 ----
+END_OF_FILE
+if test 2185 -ne `wc -c <'i386.diff'`; then
+    echo shar: \"'i386.diff'\" unpacked with wrong size!
+fi
+# end of 'i386.diff'
+fi
+if test -f 'sys.diff' -a "${1}" != "-c" ; then 
+  echo shar: Will not clobber existing file \"'sys.diff'\"
+else
+echo shar: Extracting \"'sys.diff'\" \(2388 characters\)
+sed "s/^X//" >'sys.diff' <<'END_OF_FILE'
+X
+X------- proc.h -------
+X*** /tmp/da06994	Wed Apr 15 20:58:11 1992
+X--- proc.h	Wed Apr 15 20:57:39 1992
+X***************
+X*** 101,106 ****
+X--- 101,107 ----
+X  #define	p_startzero	p_ysptr
+X  	struct	proc *p_ysptr;	/* pointer to younger siblings */
+X  	struct	proc *p_cptr;	/* pointer to youngest living child */
+X+ 	struct	proc *p_tptr;	/* pointer to tracing process */
+X  
+X  	/* scheduling */
+X  	u_int	p_cpu;		/* cpu usage for scheduling */
+X***************
+X*** 207,212 ****
+X--- 208,216 ----
+X  #endif
+X  /* not currently in use (never set) */
+X  #define	SPAGE	0x0020000	/* process in page wait state */
+X+ /* More tracing flags */
+X+ #define	SSTRC	0x0080000	/* process is tracing syscalls */
+X+ #define	SFTRC	0x0100000	/* trace state is inherited on fork */
+X  
+X  #ifdef KERNEL
+X  /*
+X
+X------- user.h -------
+X*** /tmp/da06997	Wed Apr 15 20:58:11 1992
+X--- user.h	Wed Apr 15 20:57:39 1992
+X***************
+X*** 66,71 ****
+X--- 66,79 ----
+X  	 * not valid at other times!
+X  	 */
+X  	struct	kinfo_proc u_kproc;	/* proc + eproc */
+X+ 
+X+ 	/* Support for syscall tracing, can't these be in eproc? */
+X+ 	int	u_scno;			/* syscall number */
+X+ 	int	u_arg[8];		/* syscall arguments */
+X+ 	int	u_rval[2];		/* syscall return values */
+X+ #define u_rval1 u_rval[0]		/* compatibility mode */
+X+ #define u_rval2 u_rval[1]
+X+ 	int	u_error;		/* syscall error */
+X  };
+X  
+X  /*
+X
+X------- ptrace.h -------
+X*** /tmp/da07000	Wed Apr 15 20:58:12 1992
+X--- ptrace.h	Wed Apr 15 20:57:39 1992
+X***************
+X*** 47,52 ****
+X--- 47,66 ----
+X  #define	PT_KILL		8	/* kill the child process */
+X  #define	PT_STEP		9	/* single step the child */
+X  
+X+ #define PT_ATTACH	10	/* attach to running process */
+X+ #define PT_DETACH	11	/* detach from previously attached process */
+X+ #define PT_SYSCALL	12	/* trace system calls */
+X+ #define PT_DUMP		13	/* make a core dump */
+X+ #define PT_BREAD_I	14	/* read data from child's I space */
+X+ #define PT_BREAD_D	15	/* read data from child's D space */
+X+ #define PT_BWRITE_I	16	/* write data to child's I space */
+X+ #define PT_BWRITE_D	17	/* write data to child's D space */
+X+ #define PT_GETREGS	18	/* get all registers */
+X+ #define PT_SETREGS	19	/* set all registers */
+X+ #define PT_GETFPREGS	20	/* get all floating point registers */
+X+ #define PT_SETFPREGS	21	/* set all floating point registers */
+X+ #define PT_INHERIT	22	/* let tracees children inherit trace flag */
+X+ 
+X  #ifndef KERNEL
+X  
+X  #include <sys/cdefs.h>
+END_OF_FILE
+if test 2388 -ne `wc -c <'sys.diff'`; then
+    echo shar: \"'sys.diff'\" unpacked with wrong size!
+fi
+# end of 'sys.diff'
+fi
+if test -f 'kern_execve.c' -a "${1}" != "-c" ; then 
+  echo shar: Will not clobber existing file \"'kern_execve.c'\"
+else
+echo shar: Extracting \"'kern_execve.c'\" \(12055 characters\)
+sed "s/^X//" >'kern_execve.c' <<'END_OF_FILE'
+X/*
+X * Copyright (c) 1992 William Jolitz. All rights reserved.
+X * Written by William Jolitz 1/92
+X *
+X * Redistribution and use in source and binary forms are freely permitted
+X * provided that the above copyright notice and attribution and date of work
+X * and this paragraph are duplicated in all such forms.
+X * THIS SOFTWARE IS PROVIDED ``AS IS'' AND WITHOUT ANY EXPRESS OR
+X * IMPLIED WARRANTIES, INCLUDING, WITHOUT LIMITATION, THE IMPLIED
+X * WARRANTIES OF MERCHANTIBILITY AND FITNESS FOR A PARTICULAR PURPOSE.
+X *
+X * This procedure implements a minimal program execution facility for
+X * 386BSD. It interfaces to the BSD kernel as the execve system call.
+X * Significant limitations and lack of compatiblity with POSIX are
+X * present with this version, to make its basic operation more clear.
+X *
+X */
+X
+X#include "param.h"
+X#include "systm.h"
+X#include "proc.h"
+X#include "mount.h"
+X#include "namei.h"
+X#include "vnode.h"
+X#include "file.h"
+X#include "exec.h"
+X#include "stat.h"
+X#include "wait.h"
+X#include "signalvar.h"
+X#include "mman.h"
+X
+X#include "vm/vm.h"
+X#include "vm/vm_param.h"
+X#include "vm/vm_map.h"
+X#include "vm/vm_kern.h"
+X
+X#include "machine/reg.h"
+X
+Xstatic char rcsid[] = "$Header: /usr/bill/working/sys/kern/RCS/kern_execve.c,v 1.3 92/01/21 21:29:13 william Exp $";
+X
+X/*
+X * Bill's first-cut execve() system call. Puts hair on your chest.
+X */
+X
+X/* ARGSUSED */
+Xexecve(p, uap, retval)
+X	struct proc *p;
+X	register struct args {
+X		char	*fname;
+X		char	**argp;
+X		char	**envp;
+X	} *uap;
+X	int *retval;
+X{
+X	register struct nameidata *ndp;
+X	int rv, amt;
+X	struct nameidata nd;
+X	struct exec hdr;
+X	char **kargbuf, **kargbufp, *kstringbuf, *kstringbufp;
+X	char **org, **vectp, *ep;
+X	int needsenv, limitonargs;
+X	u_int stringlen;
+X	int addr, size;
+X	int argc;
+X	char *cp;
+X	struct vmspace *vs;
+X	int tsize, dsize, bsize, cnt, foff;
+X
+X	int indir = 0;
+X	register struct pcred *pcred = p->p_cred;
+X	register struct ucred *cred ;
+X	struct vnode *vp;
+X	struct vattr vattr;
+X	uid_t uid;
+X	gid_t gid;
+X	char *shellname;
+X	union {
+X		char	ex_shell[MAXINTERP];	/* #! and interpreter name */
+X		struct	exec ex_exec;
+X	} exdata;
+X
+X	/*
+X	 * Step 1. Lookup filename to see if we have something to execute.
+X	 */
+X	ndp = &nd;
+X	ndp->ni_dirp = uap->fname;
+X	ndp->ni_segflg = UIO_USERSPACE;
+X
+Xagain:
+X	ndp->ni_nameiop = LOOKUP | LOCKLEAF | FOLLOW;
+X
+X	/* is it there? */
+X	if (rv = namei(ndp, p))
+X		return (rv);
+X
+X	vp = ndp->ni_vp;
+X	cred = pcred->pc_ucred;
+X	uid = pcred->p_ruid;		/* get orginal uid/gid */
+X	gid = pcred->p_rgid;
+X
+X        if (rv = VOP_GETATTR(vp, &vattr, cred, p))
+X		goto exec_fail;
+X
+X        if (vp->v_mount->mnt_flag & MNT_NOEXEC) {	/* no exec on fs ? */
+X		rv = EACCES;
+X		goto exec_fail;
+X	}
+X        if (indir == 0 && (p->p_flag & STRC) == 0 &&
+X			(vp->v_mount->mnt_flag & MNT_NOSUID) == 0) {
+X		if (vattr.va_mode & VSUID)	/* check for SUID */
+X			uid = vattr.va_uid;
+X		if (vattr.va_mode & VSGID)	/* check for SGID */
+X			gid = vattr.va_gid;
+X	}
+X
+X	/* is it a regular file? */
+X	if (vp->v_type != VREG) {
+X		rv = EACCES;
+X		goto exec_fail;
+X	}
+X
+X	/* is it executable? */
+X	if ((vattr.va_mode & VEXEC) == 0) {
+X		rv = ENOEXEC;
+X		goto exec_fail;
+X	}
+X
+X	/* Can user access it? (always succeeds for root) */
+X	if (rv = VOP_ACCESS(vp, VEXEC, cred, p))
+X		goto exec_fail;
+X	
+X
+X	/*
+X	 * Step 2. Does the file contain a format we can
+X	 * understand and execute
+X	 */
+X	/*
+X	 * Read in first few bytes of file for segment sizes, magic number:
+X	 *	ZMAGIC = demand paged RO text
+X	 * Also an ASCII line beginning with #! is
+X	 * the file name of a ``shell'' and arguments may be prepended
+X	 * to the argument list if given here.
+X	 */
+X	exdata.ex_shell[0] = '\0';	/* for zero length files */
+X
+X	rv = vn_rdwr(UIO_READ, vp, (caddr_t)&exdata, sizeof (exdata),
+X	    (off_t)0, UIO_SYSSPACE, (IO_UNIT|IO_NODELOCKED), cred, &amt, p);
+X	if (rv)
+X		goto exec_fail;
+X#ifndef lint
+X	if (amt > sizeof(exdata) - sizeof(exdata.ex_exec) &&
+X	    exdata.ex_shell[0] != '#') {
+X		rv = ENOEXEC;
+X		goto exec_fail;
+X	}
+X#endif
+X	/* that we recognize? */
+X	rv = ENOEXEC;
+X	if ((int)exdata.ex_exec.a_magic == ZMAGIC) {
+X
+X		/* sanity check  "ain't not such thing as a sanity clause" -groucho */
+X		if (	/*exdata.ex_exec.a_text == 0 || */
+X			exdata.ex_exec.a_text > MAXTSIZ ||
+X			exdata.ex_exec.a_text % NBPG ||
+X			exdata.ex_exec.a_text > vattr.va_size)
+X			goto exec_fail;
+X
+X		if (	exdata.ex_exec.a_data == 0 ||
+X			exdata.ex_exec.a_data > DFLDSIZ ||
+X			exdata.ex_exec.a_data > vattr.va_size ||
+X			exdata.ex_exec.a_data + exdata.ex_exec.a_text > vattr.va_size)
+X			goto exec_fail;
+X
+X		if (exdata.ex_exec.a_bss > MAXDSIZ)
+X			goto exec_fail;
+X	
+X		if (exdata.ex_exec.a_text + exdata.ex_exec.a_data +
+X				exdata.ex_exec.a_bss > MAXTSIZ + MAXDSIZ)
+X			goto exec_fail;
+X
+X	} else {
+X
+X		if (exdata.ex_shell[0] != '#' ||
+X		    exdata.ex_shell[1] != '!' ||
+X		    indir) {
+X			rv = ENOEXEC;
+X			goto exec_fail;
+X		}
+X		for (cp = &exdata.ex_shell[2];; ++cp) {
+X			if (cp >= &exdata.ex_shell[MAXINTERP]) {
+X				rv = ENOEXEC;
+X				goto exec_fail;
+X			}
+X			if (*cp == '\n') {
+X				*cp = '\0';
+X				break;
+X			}
+X			if (*cp == '\t')
+X				*cp = ' ';
+X		}
+X		cp = &exdata.ex_shell[2];	/* get shell interpreter name */
+X		while (*cp == ' ')
+X			cp++;
+X		shellname = ndp->ni_dirp = cp;
+X		while (*cp && *cp != ' ')
+X			cp++;
+X		if (*cp)
+X			*cp++ = '\0';
+X
+X		indir = 1;	/* indicate this is a script file */
+X		vput(vp);	/* find shell interpreter */
+X		ndp->ni_segflg = UIO_SYSSPACE;
+X		goto again;
+X#if 0
+X		ndp->ni_nameiop = LOOKUP | FOLLOW | LOCKLEAF;
+X		if (rv = namei(ndp, p))
+X			return (rv);
+X		vp = ndp->ni_vp;
+X		if (rv = VOP_GETATTR(vp, &vattr, cred, p))
+X			goto exec_fail;
+X		uid = pcred->p_ruid;	/* shell scripts can't be setuid */
+X		gid = pcred->p_rgid;
+X#endif
+X	}
+X	
+X	/*
+X	 * Step 3.  File and header are valid. Now, dig out the strings
+X	 * out of the old process image.
+X	 */
+X
+X	/* assumption: most execve's have less than 256 arguments, with a
+X	 * total of string storage space not exceeding 2K. It is more
+X	 * frequent that when this fails, string space falls short first
+X	 * (e.g. as when a large termcap environment variable is present).
+X	 * It is infrequent when more than 256 arguments are used that take
+X	 * up less than 2K of space (e.g. args average more than 8 chars).
+X	 *
+X	 * What we give up in this implementation is a dense encoding of
+X	 * the data structure in the receiving program's address space.
+X	 * This means that there is plenty of wasted space (up to 6KB)
+X	 * as the price we pay for a fast, single pass algorithm.
+X	 *
+X	 * Our alternative would be to accumulate strings and pointers
+X	 * in the first pass, then, knowing the sizes and number of the
+X	 * strings, pack them neatly and tightly togeither in the second
+X	 * pass. This means two copies of the strings, and string copying
+X	 * is much of the cost of exec.
+X	 */
+X
+X	/* allocate string buffer and arg buffer */
+X	org = kargbuf = (char **) kmem_alloc_wait(exec_map, NCARGS + PAGE_SIZE);
+X	kstringbuf = kstringbufp = ((char *)kargbuf) + NBPG/2;
+X	kargbuf += NBPG/(4*sizeof(int));
+X	kargbufp = kargbuf;
+X				/* for each envp, copy in string */
+X	limitonargs = NCARGS;
+X	cnt = 0;
+X
+X	/* first, do (shell name if any then) args */
+X	needsenv = 1;
+X	if (indir)  {
+X		ep = shellname ;
+Xtwice:
+X	    if (ep) {
+X		/* did we outgrow initial argbuf, if so, die */
+X		if (kargbufp >= (char **)kstringbuf) {
+X			rv = E2BIG;
+X			goto exec_fail;
+X		}
+X	
+X		if (rv = copyinstr(ep, kstringbufp, limitonargs,
+X			&stringlen)) goto exec_fail;
+X		*kargbufp = (char *)(kstringbufp - kstringbuf
+X			+ USRSTACK + NBPG/2);
+X		kargbufp++;
+X		cnt++;
+X		kstringbufp += stringlen;
+X		limitonargs -= stringlen + sizeof(long);
+X	    }
+X
+X		if (indir) {
+X			indir = 0;
+X			ep = uap->fname;	/* orginal executable is 1st
+X						   arguement with scripts */
+X			goto twice;
+X		}
+X		if (vectp = uap->argp) vectp++;	/* manually doing the first
+X						   arguement with scripts */
+X	}
+X	else
+X		vectp = uap->argp;	/* normal executable */
+X
+Xdo_env_as_well:
+X	if (vectp == 0) goto dont_bother;
+X	do {
+X		/* did we outgrow initial argbuf, if so, die */
+X		if (kargbufp >= (char **)kstringbuf)
+X			goto exec_fail;
+X	
+X		/* get an string pointer */
+X		ep = (char *)fuword(vectp++);
+X		if (ep == (char *)-1) {
+X			rv = EFAULT;
+X			goto exec_fail;
+X		}
+X
+X		/* if not null pointer, copy in string */
+X		if (ep) {
+X			if (rv = copyinstr(ep, kstringbufp, limitonargs,
+X				&stringlen)) goto exec_fail;
+X			/* assume that strings usually all fit in last page */
+X			*kargbufp = (char *)(kstringbufp - kstringbuf
+X				+ USRSTACK + NBPG/2);
+X			kargbufp++;
+X			cnt++;
+X			kstringbufp += stringlen;
+X			limitonargs -= stringlen + sizeof(long);
+X		} else {
+X			*kargbufp++ = 0;
+X			limitonargs -= sizeof(long);
+X			break;
+X		}
+X	} while (limitonargs > 0);
+X
+Xdont_bother:
+X	if (limitonargs <= 0) {
+X		rv = E2BIG;
+X		goto exec_fail;
+X	}
+X
+X	if (needsenv) {
+X		argc = cnt;
+X		vectp = uap->envp;
+X		needsenv = 0;
+X		goto do_env_as_well;
+X	}
+X 
+X	kargbuf[-1] = (char *)argc;
+X
+X	/*
+X	 * Step 4. Build the new processes image.
+X	 */
+X
+X	/* At this point, we are committed -- destroy old executable */
+X
+X	/*
+X	 * This seems to work for the moment, should really be using `copyin'
+X	 * Besides, `namei' already did this, should have a way of culling
+X	 * this out of nameidata
+X	 */
+X	cp = uap->fname + strlen(uap->fname) - 1;
+X	while (*cp != '/' && cp > uap->fname) cp--;
+X	strncpy(p->p_comm, cp+1, MAXCOMLEN);
+X
+X	vs = p->p_vmspace;
+X	addr = 0;
+X	size = USRSTACK - addr;
+X	/* blow away all address space */
+X	rv = vm_deallocate(&vs->vm_map, addr, size, FALSE);
+X
+X	/* At this point we release vfork'ed parent, before we blow it */
+X	if (p->p_flag & SPPWAIT) {
+X		p->p_flag &= ~(SPPWAIT);
+X		wakeup((caddr_t)p->p_pptr);
+X	}
+X	if (rv)
+X		goto exec_abort;
+X
+X	/* build a new address space */
+X	addr = 0;
+X	if (exdata.ex_exec.a_text == 0) {
+X		/* screwball mode */
+X		foff = tsize = 0;
+X		exdata.ex_exec.a_data += exdata.ex_exec.a_text;
+X	} else {
+X		tsize = roundup(exdata.ex_exec.a_text, NBPG);
+X		foff = NBPG;
+X	}
+X	dsize = roundup(exdata.ex_exec.a_data, NBPG);
+X	bsize = roundup(exdata.ex_exec.a_bss + dsize, NBPG);
+X	bsize -= dsize;
+X
+X	/* map text & data*/
+X	rv = vm_mmap(&vs->vm_map, &addr, tsize+dsize, VM_PROT_ALL,
+X	MAP_FILE|MAP_COPY|MAP_FIXED, (caddr_t)ndp->ni_vp, foff);
+X	if (rv)
+X		goto exec_abort;
+X
+X	/* r/w data, ro text */
+X	if (tsize) {
+X		addr = 0;
+X		rv = vm_protect(&vs->vm_map, addr, tsize, FALSE, VM_PROT_READ|VM_PROT_EXECUTE);
+X		if (rv)
+X			goto exec_abort;
+X	}
+X
+X	/* create anonymous memory region for bss */
+X	addr = dsize + tsize;
+X	rv = vm_allocate(&vs->vm_map, &addr, bsize, FALSE);
+X	if (rv)
+X		goto exec_abort;
+X
+X	/* create anonymous memory region for stack */
+X	addr = USRSTACK - MAXSSIZ;
+X	rv = vm_allocate(&vs->vm_map, &addr, MAXSSIZ, FALSE);
+X	if (rv)
+X		goto exec_abort;
+X
+X	/*
+X	 * Step 5. Prepare process for execution.
+X	 */
+X
+X	/* touchup process information */
+X	vs->vm_tsize = tsize/NBPG;		/* text size (pages) XXX */
+X	vs->vm_dsize = (dsize+bsize)/NBPG;	/* data size (pages) XXX */
+X	vs->vm_ssize = MAXSSIZ/NBPG;	/* stack size (pages) */
+X	vs->vm_taddr = 0;	/* user virtual address of text XXX */
+X	vs->vm_daddr = (caddr_t)tsize;	/* user virtual address of data XXX */
+X	/* user VA at max stack growth */
+X	vs->vm_maxsaddr = (caddr_t)(USRSTACK - MAXSSIZ);
+X
+X	/* everything fits in a single page, no fixups, no more work */
+X	/* (groan) due to bug in vm_map_copy, can't remap. copy for now. */
+X	size = kstringbufp + 1 - kstringbuf;
+X	size = roundup(size + NBPG/2, NBPG);
+X	for (; kargbuf < kargbufp; kargbuf++)
+X		if (*kargbuf)
+X			*kargbuf -= size;
+X	rv = copyout((caddr_t)org, (caddr_t)USRSTACK - size, size);
+X	if(rv)
+X		goto exec_abort;
+X
+X	/* close files on exec, fixup signals */
+X	fdcloseexec(p);
+X	execsigs(p);
+X
+X	p->p_regs[SP] = USRSTACK - size + NBPG/4 - 4;
+X	vs->vm_ssize = size / NBPG;	/* stack size (pages) */
+X	setregs(p, exdata.ex_exec.a_entry);
+X	kmem_free_wakeup(exec_map, org, NCARGS + PAGE_SIZE);
+X	vput(ndp->ni_vp);
+X
+X	p->p_ucred->cr_uid = p->p_cred->p_svuid = uid;
+X	p->p_ucred->cr_gid = p->p_cred->p_svgid = gid;
+X
+X	/* Notify debugger that interesting things are abound */
+X	if (p->p_flag & STRC)
+X		psignal(p, SIGTRAP);
+X
+X	return (0);
+X
+Xexec_fail:
+X	vput(ndp->ni_vp);
+X	return(rv);
+X
+Xexec_abort:
+X	/* untested and probably bogus */
+X	kmem_free_wakeup(exec_map, org, NCARGS + PAGE_SIZE);
+X	vput(ndp->ni_vp);
+X	exit(p, W_EXITCODE(0, SIGABRT));
+X	return(0);
+X
+X}
+END_OF_FILE
+if test 12055 -ne `wc -c <'kern_execve.c'`; then
+    echo shar: \"'kern_execve.c'\" unpacked with wrong size!
+fi
+# end of 'kern_execve.c'
+fi
+if test -f 'gdb.diff' -a "${1}" != "-c" ; then 
+  echo shar: Will not clobber existing file \"'gdb.diff'\"
+else
+echo shar: Extracting \"'gdb.diff'\" \(898 characters\)
+sed "s/^X//" >'gdb.diff' <<'END_OF_FILE'
+X
+X------- m-i386bsd.h -------
+X*** /tmp/da06961	Wed Apr 15 20:55:59 1992
+X--- m-i386bsd.h	Wed Apr 15 20:55:17 1992
+X***************
+X*** 330,335 ****
+X--- 330,338 ----
+X  #define POP_FRAME  { i386_pop_frame (); }
+X  
+X  #define	NEW_CALL_FUNCTION
+X+ 
+X+ #define ATTACH_DETACH
+X+ 
+X  
+X  #if 0
+X  /* Interface definitions for kernel debugger KDB.  */
+X
+X------- i386bsd-dep.c -------
+X*** /tmp/da06964	Wed Apr 15 20:55:59 1992
+X--- i386bsd-dep.c	Wed Apr 15 20:55:16 1992
+X***************
+X*** 1552,1558 ****
+X  setregmap(flags)
+X  	int flags;
+X  {
+X! #ifdef EX_TRAPSTK
+X  	regmap = flags & EX_TRAPSTK ? trapmap : syscallmap;
+X  #else
+X  	regmap = trapmap;	/* the lesser evil */
+X--- 1552,1560 ----
+X  setregmap(flags)
+X  	int flags;
+X  {
+X! #ifdef FM_TRAP
+X! 	regmap = flags & FM_TRAP ? trapmap: syscallmap;
+X! #elif EX_TRAPSTK
+X  	regmap = flags & EX_TRAPSTK ? trapmap : syscallmap;
+X  #else
+X  	regmap = trapmap;	/* the lesser evil */
+END_OF_FILE
+if test 898 -ne `wc -c <'gdb.diff'`; then
+    echo shar: \"'gdb.diff'\" unpacked with wrong size!
+fi
+# end of 'gdb.diff'
+fi
+echo shar: End of shell archive.
+exit 0
+
+
+]
+MID: 1992Apr15.202740.10911@cs.few.eur.nl
+SUBJ: ptrace
+BODY: Here is an implementation of the ptrace(2) system call for 386BSD. | If you are only interested in the stock ptrace operations (as currently | defined in <sys/ptrace.h>) the only files that modifications are |  `kern/sys_process.c' and 'kern_execve.c'. |  | The rest of the diffs attached below contain some changes necessary to | let a debugger attach-to/detach-from a running process, do system call | tracing and trace flags inheritance by debuggee's child processes | (experimental). The files affected are: |  | 	- kern/kern_sig.c | 	- kern/kern_exit.c | 	- kern/kern_fork.c | 	- i386/i386/trap.c | 	- sys/proc.h | 	- sys/ptr
+------------------------------------------------------------
+[1992-04-19T02:30:48+00:00] [overby@next210.NoDak.edu (Glen Overby)] [I said I'd do it, and here it is.  Heed the cautionary note: I'm getting this
+out the door fast so I haven't tested it.  Glen/B
+
+File: ADM/Info
+
+                     386BSD Patch Collection
+                            Release A
+
+       Organized by Glen Overby <overby@plains.nodak.edu>
+     $Id: Info,v 1.1 1992/04/19 02:20:22 overby Exp overby $
+
+
+WARNING: To expedite this release, I have NOT compiled and tested it.
+
+
+This is release A of my 386BSD ("Jolix") patch collection.  I  am
+releasing  it  to  the  net in an attempt to provide an organized
+base of changes to William Jolitz's 386BSD Release 0.0.
+
+This collection is mantained under the control of CVS.  My source
+tree  started with the BSD Net2 release, then incorporated 386BSD
+and finally all the changes people have posted  to  comp.unix.bsd
+and comp.bugs.4bsd.
+
+
+Where To Get It
+
+I have placed a tar file  containing  all  the  files  that  were
+touched  since 386BSD 0.0new on plains.nodak.edu [134.129.111.64]
+in pub/386BSD/patch-a.tar.  The postings themselves  are  in  the
+'News'  directory  (see  the  Index  file  for  a cross-reference
+between Message-IDs and sequence numbers).  A  diff  set  is  not
+currently available.
+
+If you do not have Interenet access, sending mail to the  program
+archive-server@plains  might  be  of  use  to  you (if it works).
+Start out by asking for help.
+
+Special Files
+
+  ADM/Log A manually maintained list of what postings were incor-
+          porated  to  create  this release, including what files
+          each posting touched.
+
+  ADM/Rlog The output of RCS's "rlog" command detailing the  mas-
+          ter CVS database (,v) files.
+
+Soapbox
+
+I intend to continue releasing patch kits on a weekly basis,  un-
+til flamed to a crisp.
+
+I regularly save all code changes I see, but being human (and  on
+a  flakey system) I might miss something.  If you do not see your
+contribution in the next release after posting it, please contact
+me at the above address.
+
+Do Not expect me to do hand-holding (e.g. help you compile it  on
+your BSD box).
+
+Things To Do
+
+          - I forgot  to  add  RCS  $Id:  Info,v  1.1  1992/04/19
+          02:20:22  overby  Exp  overby  $  lines  to the files I
+          touched.
+
+          - I haven't taken the time to dump this onto a  machine
+          running 386BSD to see if it compiles.
+
+          - Decide if it is better to store the news postings  in
+          numbered files or by Message-ID.
+
+          - #include <sucker.h> :-)
+
+File: ADM/Log
+
+			Log of changes to 386BSD
+
+	$Id: Log,v 1.2 1992/04/19 02:11:24 overby Exp overby $
+
+CVSROOT=~/_src
+mkdir $CVSROOT/{src,bin,etc,lib,share,usr.bin,usr.sbin}
+# BSD-NET2 sources
+cd ${repository}
+checkin ${repository} -m "Net2 from wuarchive" BSD NET2
+# 386BSD sources
+checkin ${repository} -m "Jolitz's 386BSD" BSD i386BSD
+checkout ${repository}
+
+
+From: pace@blitz.com (Pace Willisson)
+Subject: Re: 386BSD announcement (I offer the patch kit)
+Message-ID: <PACE.92Mar14082918@blitz.com>
+Date: 14 Mar 92 13:29:22 GMT
+Organization: Blitz Product Development Corporation
+File: sys/i386/i386/locore.s
+
+Path: plains!ogicse!uwm.edu!cs.utexas.edu!swrinde!gatech!bloom-beacon!bloom-picayune.mit.edu!athena.mit.edu!eichin
+From: eichin@athena.mit.edu (Mark W. Eichin)
+Subject: Re: 386BSD success story
+Summary: SLIP WORKS w/one bugfix
+Keywords: bsd 486 kernel slip bug
+Message-ID: <1992Mar21.214847.10895@athena.mit.edu>
+Date: 21 Mar 92 21:48:47 GMT
+File: sys/net/if_sl.c
+
+From: brad@Cayman.COM (Brad Parker)
+Subject: bug in if_we.c prevents seeing ethernet card
+Message-ID: <BRAD.92Mar22203421@moon-patrol.Cayman.COM>
+Date: 23 Mar 92 01:34:21 GMT
+Organization: Cayman Systems Inc., Cambridge, MA
+File: sys/i386/isa/if_we.c
+
+From: tih@barsoom.nhh.no (Tom Ivar Helbekkmo)
+Subject: Two hard disks works just fine now!
+Message-ID: <tih.701381716@barsoom>
+Date: 23 Mar 92 20:15:16 GMT
+Organization: Norwegian School of Economics
+File: sys/i386/isa/wd.c
+
+From: rwd@CS.CMU.EDU (Randall Dean)
+Subject: Bug found in kern/vfs_bio.c
+Message-ID: <RWD.92Mar24155044@RWD.MACH.CS.CMU.EDU>
+Date: 24 Mar 92 20:50:44 GMT
+Organization: Carnegie Mellon
+File: sys/kern/vfs__bio.c
+
+From: brad@Cayman.COM (Brad Parker)
+Subject: we patch, ps/netstat & kvm
+Message-ID: <BRAD.92Mar25103740@moon-patrol.Cayman.COM>
+Date: 25 Mar 92 15:37:40 GMT
+Organization: Cayman Systems Inc., Cambridge, MA
+File: sys/i386/isa/if_we.c
+File: sys/i386/isa/if_wereg.h
+$
+
+
+From: cgd@agate.berkeley.edu (Chris Demetriou)
+Subject: Process and kernel profiling w/386bsd.
+Message-ID: <qsgjmINNhsv@agate.berkeley.edu>
+Organization: University of California, Berkeley
+File: sys/kern/sys_process.c
+File: sys/kern/kern_clock.c
+File: sys/kern/subr_mcount.c
+File: sys/i386/conf/Makefile.i386
+File: sys/i386/i386/locore.s
+Tfile: ./usr/share/mk/386bsd.lib.mk
+Tfile: ./usr/share/mk/sys.mk
+
+From: eichin@athena.mit.edu (Mark W. Eichin)
+Subject: Found it! close-on-exec was broken (386BSD)
+Summary: never "hand optimize" a loop.
+Message-ID: <1992Mar28.053102.4567@athena.mit.edu>
+File: sys/kern/kern_descrip.c
+
+From: james@raid.dell.com (James Van Artsdalen)
+Subject: Fix for hard-coded address in if_we.c
+Message-ID: <1992Mar31.031405.6555@raid.dell.com>
+Organization: Dell Computer Co
+File: sys/i386/isa/if_we.c
+
+From: james@raid.dell.com (James Van Artsdalen)
+Subject: a20 bug in locore.s
+Message-ID: <1992Mar31.022830.4814@raid.dell.com>
+Organization: Dell Computer Co
+File: sys/i386/i386/locore.s
+
+From: tih@barsoom.nhh.no (Tom Ivar Helbekkmo)
+Subject: Re: WD "Elite" ethernet cards (was Re: Problems booting 0.0 5in on DT!
+Message-ID: <tih.702063847@barsoom>
+Organization: Norwegian School of Economics
+File: sys/i386/isa/if_we.c
+
+From: dmuntz@dip.eecs.umich.edu (Daniel A Muntz)
+Subject: New com driver
+Message-ID: <1992Mar31.224013.22682@zip.eecs.umich.edu>
+Organization: University of Michigan EECS Dept., Ann Arbor, MI
+File: sys/i386/isa/com.c
+
+From: rwd@CS.CMU.EDU (Randall Dean)
+Subject: Re: Bug fix coordination
+Message-ID: <RWD.92Apr3104542@ERNST.MACH.CS.CMU.EDU>
+Organization: School of Computer Science, Carnegie Mellon University
+File: sys/kern/vfs__bio.c
+
+From: pk@cs.few.eur.nl (Paul Kranenburg)
+Subject: 386bsd: bug in trap.c
+Message-ID: <1992Apr8.111714.15779@cs.few.eur.nl>
+Organization: Erasmus University Rotterdam
+File: sys/i386/i386/trap.c
+
+From: turtle@newshub.sdsu.edu (Andrew Scherpbier)
+Subject: New console/kdb driver
+Message-ID: <1992Apr12.164319.28275@newshub.sdsu.edu>
+Organization: San Diego State University, College of Sciences
+File: sys/i386/isa/pccons.c
+
+From: mm@mentor.cc.purdue.edu (Mike MacKenzie)
+Subject: timeout() bug
+Keywords: timeout callout
+Message-ID: <45105@mentor.cc.purdue.edu>
+Organization: Purdue University
+File: sys/i386/i386/machdep.c
+
+From: mmitchel@digi.lonestar.org (Mitch Mitchell)
+Subject: 386BSD 0.1 boot block mods.
+Summary: delay loop needed in wdbootblk.c to boot Toshiba 5100 w/200MB disk
+Keywords: 386BSD wdbootblk.c
+Message-ID: <1992Apr13.164733.10829@digi.lonestar.org>
+Organization: DSC Communications Corporation
+File: sys/i386/stand/wdbootblk.c
+
+From: pk@cs.few.eur.nl (Paul Kranenburg)
+Subject: ptrace
+Message-ID: <1992Apr15.202740.10911@cs.few.eur.nl>
+Organization: Erasmus University Rotterdam
+File: sys/kern/kern_sig.c
+File: sys/kern/kern_exit.c
+File: sys/kern/kern_fork.c
+File: sys/i386/i386/trap.c
+File: sys/sys/proc.h
+File: sys/sys/ptrace.h
+File: sys/sys/user.h
+Tfile: gdb's m-i386bsd.h
+Tfile: `ftp.cs.few.eur.nl' (~ftp/pub/386bsd/strace.tar.Z).
+
+From: tinguely@plains.NoDak.edu (Mark Tinguely)
+Subject: Re: Fixed problem with long command lines
+Message-ID: <16553@plains.NoDak.edu>
+Organization: North Dakota State University, Fargo, ND
+File: sys/kern/kern_execve.c
+
+From: jfw@eddie.mit.edu (John Woods)
+Subject: Bug in make (4.3Reno/NET2)
+Message-ID: <1992Mar17.052343.7513@eddie.mit.edu>
+Organization: MIT EECS/ECF Facility, Cambridge Mass
+File: usr.bin/make/main.c
+
+From: richard@aiai.ed.ac.uk (Richard Tobin)
+Subject: config bug
+Message-ID: <6466@skye.ed.ac.uk>
+Organization: AIAI, University of Edinburgh, Scotland
+File: usr.sbin/config/mkmakefile.c
+
+From: bostic@hermes.Berkeley.EDU (Keith Bostic)
+Subject: Re: tmac.doc not in BSD-net2
+Keywords: tmac.doc bsd net2 man pages
+Message-ID: <1992Mar21.044706.6192@pasteur.Berkeley.EDU>
+Organization: University of California at Berkeley
+File: share/tmac/Makefile
+
+From: pk@cs.few.eur.nl (Paul Kranenburg)
+Subject: kvm.c
+Message-ID: <1992Apr1.140638.2684@cs.few.eur.nl>
+Organization: Erasmus University Rotterdam
+File: lib/libutil/kvm.c
+
+From: ehrlich@daneel.cs.psu.edu (Dan Ehrlich)
+Subject: Patch to whereis(1) to read search dirs from a file
+Keywords: whereis(1)
+Message-ID: <d92Hgz*f6@cs.psu.edu>
+Organization: Computer Science Department, Penn State University
+File: usr.bin/whereis/Makefile
+File: usr.bin/whereis/whereis.1
+File: usr.bin/whereis/whereis.c
+File: usr.bin/whereis/whereis.conf
+
+From: tinguely@plains.NoDak.edu (Mark Tinguely)
+Subject: /sbin/init replacement program
+Message-ID: <16873@plains.NoDak.edu>
+Organization: North Dakota State University, Fargo
+File: etc/init/init.c
+
+From: pace@blitz.com (Pace Willisson)
+Subject: SCSI boot for 386BSD
+Message-ID: <PACE.92Apr11114636@blitz.com>
+Organization: Blitz Product Development Corporation
+File: sys/i386/stand/as.c
+File: sys/i386/stand/asbootblk.c
+File: sys/i386/isa/as.c
+File: sys/i386/isa/asreg.h
+
+From: ejh@slustl.uucp (Eric J. Haug)
+Subject: Mods to pace's Adaptec driver for Archive 2150
+Message-ID: <1992Apr8.172606.28048@slustl.uucp>
+Organization: St. Louis Univ.
+File: sys/i386/isa/as.c
+
+
+]
+MID: 16919@plains.NoDak.edu
+SUBJ: Re: 386BSD: How to help
+BODY: I said I'd do it, and here it is.  Heed the cautionary note: I'm getting this | out the door fast so I haven't tested it.  Glen/B |  | File: ADM/Info |  |                      386BSD Patch Collection |                             Release A |  |        Organized by Glen Overby <overby@plains.nodak.edu> |      $Id: Info,v 1.1 1992/04/19 02:20:22 overby Exp overby $ |  |  | WARNING: To expedite this release, I have NOT compiled and tested it. |  |  | This is release A of my 386BSD ("Jolix") patch collection.  I  am | releasing  it  to  the  net in an attempt to provide an organized | base of changes to William Jolitz's 386BSD Rel
+------------------------------------------------------------
+[1992-09-18T22:08:43+00:00] [witr@rwwa.COM (Robert Withrow)] [In article <1992Sep18.085534@IASTATE.EDU>, jzelle@IASTATE.EDU (James A Zelle) writes:
+| I'm having a similar problem with a Western Digital Ethernet card, except I
+| think the error says "reject655341" in my case. 
+
+Ooooo...  
+
+I was working on a (streams [SVR4]) driver yesterday, and so I strace
+running and I was periodically getting strlog messages about 
+``FIN not suppressed'' with numbers like that...  and this is SVR4 
+but with the *same* card.
+
+A coincidence?
+
+-- 
+ Robert Withrow, Tel: +1 617 598 4480, Fax: +1 617 598 4430, Net: witr@rwwa.COM
+ R.W. Withrow Associates, 21 Railroad Ave, Swampscott MA 01907-1821 USA
+
+
+]
+MID: 1992Sep18.220843.8467@rwwa.COM
+SUBJ: Re: /386bsd: reject 65340
+BODY: In article <1992Sep18.085534@IASTATE.EDU>, jzelle@IASTATE.EDU (James A Zelle) writes: | | I'm having a similar problem with a Western Digital Ethernet card, except I | | think the error says "reject655341" in my case.  |  | Ooooo...   |  | I was working on a (streams [SVR4]) driver yesterday, and so I strace | running and I was periodically getting strlog messages about  | ``FIN not suppressed'' with numbers like that...  and this is SVR4  | but with the *same* card. |  | A coincidence? |  | --  |  Robert Withrow, Tel: +1 617 598 4480, Fax: +1 617 598 4430, Net: witr@rwwa.COM |  R.W. Withrow Associates, 21 Railroad Ave, Sw
+------------------------------------------------------------
+[1993-04-11T04:48:00+00:00] [besp@ellis.uchicago.edu (Anna Pluzhnikov)] [In article <PRZEMEK.93Mar28212112@rrdstrad.nist.gov> przemek@rrdstrad.nist.gov (Przemek Klosowski) writes:
+>
+>I came across a peculiar behavior of pclose(); when only one file is
+>popen()'ed, everything works as the man page and Stevens' book 
+>claim: pclose() closes the pipe and kills the child process.
+
+pclose() doesn't kill the child, it just closes pipe to the child, so
+the child gets EOF and exits by itself.
+
+>
+>However, if two filehandles are popen()'ed, the subsequent pclose() 
+>never returns (on Ultrix it sits forever in wait()).
+>
+>Does anyone have an idea what causes it and how to get around it?
+> 
+>This behavior has been checked on ConvexOS and Ultrix 4.3. I enclose a
+>short program demonstrating this behaviour.
+>
+As well as on Linux, but not on SunOS.
+>
+>------------------------cut here-------------------------------------
+>
+>#include <stdio.h>
+>
+>int
+>main(){
+>  FILE * fp1, *fp2;
+>  
+>  /* this works fine (it better!!!) */
+>  fp1 = popen ("cat","w");
+>  fprintf (fp1,"This is output to first filehandle \n");   fflush (fp1);
+>  pclose(fp1);
+>
+>  /* this is broken (nobody ran two filters at the same time, eh?) */
+>  fp1 = popen ("cat","w");
+>  fp2 = popen ("cat","w");
+>  fprintf (fp1,"This is output to first filehandle\n");   fflush (fp1);
+>  fprintf (fp2,"This is output to second filehandle\n");  fflush (fp2);
+>
+>  pclose(fp1);			/* this call never returns */
+>  pclose(fp2);
+>}
+
+
+This was a fun problem to solve. I might even use it when I next interview
+somebody claiming to be a UNIX wizard :-)
+
+Let's see what's going on. (My system is Linux mozart 0.99.pl6-2 03/07/93 i486)
+21:35:10 > cc -o tmp tmp.c
+21:35:23 > strace tmp
+uselib("/usr/lib//libc.so.4") = -1 (No such file or directory)
+uselib("/lib//libc.so.4") = 0
+brk(0) = 0x2000
+brk(5000) = 0x5000
+brk(6000) = 0x6000
+/* this is inside first call to popen() */
+pipe([3,4]) = 0
+fork() = 1666
+close(3) = 0
+fstat(4, [dev 0 0 ino 0 nlnks 1 ...]) = 0
+brk(7000) = 0x7000
+write(4, "This is output to first filehand".., 36This is output to first filehandle 
+) = 36
+/* and this is inside first call to pclose() */
+close(4) = 0
+sgetmask() = 0
+ssetmask([SIGHUP SIGINT SIGQUIT]) = 0
+wait4(-1,  - [SIGCHLD]
+EXITED(0), 0, (struct rusage *)0) = 1666
+sgetmask([SIGHUP SIGINT SIGQUIT]) = 0x7
+ssetmask(0) = 0x7
+/* second popen() */
+pipe([3,4]) = 0
+fork() = 1668
+close(3) = 0
+/* third popen() */
+pipe([3,5]) = 0
+fork() = 1670
+close(3) = 0
+fstat(4, [dev 0 0 ino 0 nlnks 1 ...]) = 0
+write(4, "This is output to first filehand".., 35This is output to first filehandle
+) = 35
+fstat(5, [dev 0 0 ino 0 nlnks 1 ...]) = 0
+write(5, "This is output to second filehan".., 36This is output to second filehandle
+) = 36
+/* second pclose() */
+close(4) = 0
+sgetmask() = 0
+ssetmask([SIGHUP SIGINT SIGQUIT]) = 0
+wait4(-1, 
+/* second pclose() never returns ??? */
+
+And here is sits forever ...
+In another xterm:
+
+21:35:40 > ps -l
+ F   UID   PID  PPID PRI NI SIZE  RSS WCHAN      STAT TT   TIME COMMAND
+ 4   101  1664    58   1  0   50  148 wait4      S    p2   0:00 strace tmp
+34   101  1665  1664   1  0   30  156 wait4      S    p2   0:00 tmp
+ 4   101  1668  1665   1  0  270  296 pause      S    p2   0:00 sh -c cat
+ 4   101  1669  1668   1  0   26   88 pipe_read  S    p2   0:00 cat
+ 4   101  1670  1665   1  0  270  296 pause      S    p2   0:00 sh -c cat
+ 4   101  1671  1670   1  0   26   88 pipe_read  S    p2   0:00 cat
+ 4   101  1681  1677  24  0   81  176            R    p1   0:00 ps -l
+(Irrelevant processes deleted)
+
+So, for some reason the first "cat" (pid 1669) doesn't die even though it's 
+parent close()d the necessary file.
+
+Let's look some more:
+21:35:55 > fstat
+USER     COMMAND    PID    FD  DEV   INUM   SZ|DV MODE       NAME
+(this is the parent, as expected it only has a pipe to the second shell)
+anna     tmp       1665    wd  3,2    750     480 drwx--x--x 
+anna     tmp       1665  text  3,2   5667   14104 -rwxr-xr-x 
+anna     tmp       1665   lib  3,2   1457  623620 -rwxr-xr-x /lib/libc.so.4.3.3
+anna     tmp       1665     0  3,2    161   4,194 crw--w--w- /dev/ttyp2
+anna     tmp       1665     1  3,2    161   4,194 crw--w--w- /dev/ttyp2
+anna     tmp       1665     2  3,2    161   4,194 crw--w--w- /dev/ttyp2
+anna     tmp       1665     5* (pipe -> 0x75d000 0 1r 1w)
+
+(this is the first shell, and it still has the pipe open !!! to whom ???)
+anna     sh        1668    wd  3,2    750     480 drwx--x--x 
+anna     sh        1668  text  3,2      6  218112 -r-xr-xr-x 
+anna     sh        1668   lib  3,2    206  173060 -r-xr-xr-x /lib/libc.2.2.2
+anna     sh        1668     0* (pipe <- 0x1ac000 0 1r 1w)
+anna     sh        1668     1  3,2    161   4,194 crw--w--w- /dev/ttyp2
+anna     sh        1668     2  3,2    161   4,194 crw--w--w- /dev/ttyp2
+
+anna     cat       1669    wd  3,2    750     480 drwx--x--x 
+anna     cat       1669   lib  3,2   1457  623620 -rwxr-xr-x /lib/libc.so.4.3.3
+anna     cat       1669     0* (pipe <- 0x1ac000 0 1r 1w)
+anna     cat       1669     1  3,2    161   4,194 crw--w--w- /dev/ttyp2
+anna     cat       1669     2  3,2    161   4,194 crw--w--w- /dev/ttyp2
+
+(AHA!!! this is the second shell, and it has it's stdin going from pipe 
+from "tmp", but it also has an open pipe going to the first shell, which it
+inherited from "tmp" when we fork()ed inside of the third popen())
+anna     sh        1670    wd  3,2    750     480 drwx--x--x 
+anna     sh        1670  text  3,2      6  218112 -r-xr-xr-x 
+anna     sh        1670   lib  3,2    206  173060 -r-xr-xr-x /lib/libc.2.2.2
+anna     sh        1670     0* (pipe <- 0x75d000 0 1r 1w)
+anna     sh        1670     1  3,2    161   4,194 crw--w--w- /dev/ttyp2
+anna     sh        1670     2  3,2    161   4,194 crw--w--w- /dev/ttyp2
+anna     sh        1670     4* (pipe -> 0x1ac000 0 1r 1w)
+
+anna     cat       1671    wd  3,2    750     480 drwx--x--x 
+anna     cat       1671   lib  3,2   1457  623620 -rwxr-xr-x /lib/libc.so.4.3.3
+anna     cat       1671     0* (pipe <- 0x75d000 0 1r 1w)
+anna     cat       1671     1  3,2    161   4,194 crw--w--w- /dev/ttyp2
+anna     cat       1671     2  3,2    161   4,194 crw--w--w- /dev/ttyp2
+anna     cat       1671     4* (pipe -> 0x1ac000 0 1r 1w)
+
+So, to solve the problem, we should just reverse the order of pclose()s, and
+everything would be happy ever after.
+
+But! There is yet another mistery to solve: how come the original program
+works under SunOS ?
+
+
+]
+MID: 1993Apr11.044800.6582@midway.uchicago.edu
+SUBJ: Re: Peculiar behavior of pclose() -- mistery solved (long)
+BODY: In article <PRZEMEK.93Mar28212112@rrdstrad.nist.gov> przemek@rrdstrad.nist.gov (Przemek Klosowski) writes: | > | >I came across a peculiar behavior of pclose(); when only one file is | >popen()'ed, everything works as the man page and Stevens' book  | >claim: pclose() closes the pipe and kills the child process. |  | pclose() doesn't kill the child, it just closes pipe to the child, so | the child gets EOF and exits by itself. |  | > | >However, if two filehandles are popen()'ed, the subsequent pclose()  | >never returns (on Ultrix it sits forever in wait()). | > | >Does anyone have an idea what causes it and how to ge
+------------------------------------------------------------
+[1994-07-29T03:38:53+00:00] [johnsonm@calypso-2.oit.unc.edu (Michael K. Johnson)] [
+In article <317k55$kq3@news.halcyon.com> mpdillon@coho.halcyon.com (Michael Dillon) writes:
+
+   In article <316bjc$hlh@thor.tjhsst.edu>,
+   Craig Metz <cmetz@thor.tjhsst.edu> wrote:
+   >	I had a talk today with Debbie Gray (sp?) of American Power Conversion
+   >regarding trying to get information on how to communicate with their Smart
+   >UPS products' onboard controllers in order to write a Linux driver. APC is
+   >one of the *many* manufacturers that plays the old NDA game, i.e., ``we
+   >consider that to be proprietary information that we have to protect''. H
+
+   Really now! Those boxes use an RS-232 interface, right? What do they tell 
+   the computer? If they only communicate one thing (power fail) then it
+   is probably something as simple as shorting the RD and SD lines. Get a
+   technician to check it out for you while you pull the plug.
+
+The "Back-UPS" do this.
+
+   If they are giving more info than that, then it probably can be 
+   reverse engineered with simple program to monitor the incoming 
+   serial port.
+
+The "Smart-UPS" are smarter.  I'll be getting one, and I'll try to
+reverse-engineer it.  Heck, the person at APC that I talked to said it
+would be fine if I wrote a program to do monitoring under Linux and
+distributed it freely.  She didn't say anything about an NDA.  Of
+course, I didn't ask for the details, either.  I will after I buy it,
+and make a royal stink if they don't give them to me.  If I have to,
+I'll get their unixware software, set up unixware (there's a spare
+copy at work I could borrow, it's not installed anywhere because it
+doesn't like the disk I offered it...) and monitor it.  strace is
+available on unixware, too... :-)
+
+Actually, I have iBCS2 installed, so I may be able to use that to
+trace their cute software.  I don't want to trust their software to
+shut down *my* machine, though; I'd write my own even if I used
+unixware.  We'll see what happens.
+
+   I remember a UPS that we set up about 7 years ago. I provided two terminals
+   on the box that it shorted together when the power failed. We hooked
+   them up to pins 2 and 3 on a serial port and made a little shell script
+   daemon that periodically checked for powerfail every five minutes. When 
+   it got two hits in a row, it shutdown the system.
+
+That will work for their "Back-UPS", assuming you get the right
+combination of pins.  I think that it is possible to talk back to the
+"Smart-UPS".
+
+I'd buy from a more open vendor, but APC is the *only* vendor with a
+decent LI product with 900kva in my price range.  The next one is 1.5
+times the cost, more than I can afford.
+
+michaelkjohnson
+
+
+]
+MID: JOHNSONM.94Jul28233853@calypso-2.oit.unc.edu
+SUBJ: Re: APC UPS owners or potential buyers, trying to show user base
+BODY:  | In article <317k55$kq3@news.halcyon.com> mpdillon@coho.halcyon.com (Michael Dillon) writes: |  |    In article <316bjc$hlh@thor.tjhsst.edu>, |    Craig Metz <cmetz@thor.tjhsst.edu> wrote: |    >	I had a talk today with Debbie Gray (sp?) of American Power Conversion |    >regarding trying to get information on how to communicate with their Smart |    >UPS products' onboard controllers in order to write a Linux driver. APC is |    >one of the *many* manufacturers that plays the old NDA game, i.e., ``we |    >consider that to be proprietary information that we have to protect''. H |  |    Really now! Those boxes us
+------------------------------------------------------------

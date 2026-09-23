@@ -1,0 +1,3516 @@
+total 40
+[1994-01-01T00:00:00+00:00] [] [
+I've been asked a lot lately about the availability of the 4.4BSD Manual
+Set and of the 4.4BSD-Lite distribution on CD-ROM.  I'm glad to be able
+to say that the USENIX Association and O'Reilly & Associates have pooled
+resources to make them available.  Attached are three articles, the
+first from the upcoming USENIX ;login publication, the second from an
+O'Reilly & Associates net posting, and finally an O'Reilly & Associates
+press release.
+
+I'd like to thank the USENIX board members, the USENIX staff, (especially
+Ellie Young and Alain Henon), and Tim O'Reilly and his staff for making
+this happen.
+
+Keith Bostic                    bostic@cs.berkeley.edu
+CSRG
+Department of EECS
+University of California
+Berkeley, CA  94720
+
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+;login:
+
+4.4 BSD Manuals - 
+Hot off the Press!
+
+The USENIX Association and O'Reilly & Associates are publishing the
+final, definitive release of the Berkeley version of UNIX, which has
+been the basis for many commercial UNIX variants. Written by the
+Computer Systems Research Group at the University of California,
+Berkeley, the complete five volume set includes a CD-ROM and will be
+available in early July.  As this newsletter goes to press, we hope that
+two volumes (*) will be available at the USENIX Summer Conference in
+Boston.
+
+Below is a brief summary of each volume. USENIX members will receive a
+special discount and can order these directly from O'Reilly in July.
+More information will be forthcoming in the next issue.
+
+4.4BSD User's Reference Manual (URM)* 
+898 pp. ISBN 1-56592-075-9, June 1994.
+
+This volume (URM) collects the man pages for the more than 284 user
+programs that make up the user portion of the 4.4BSD UNIX release
+(section 1 of the traditional UNIX Reference Manual), plus additional
+pages for games (section 6 of the traditional manual) and miscellaneous
+information (section 7, which includes mostly information on troff macro
+packages and other text processing information.) URM is useful even if
+you don't use the BSD version of UNIX. Many of the commands are
+compatible with the POSIX standard and thus identical to those in other
+UNIX versions.  Because 4.4BSD includes many freeware programs that are
+available but not documented in other versions of UNIX, you may find
+yourself turning first to this book to look up options for programs like
+perl, GNU emacs, compress, patch, g++, or kerberos.
+
+4.4BSD System Manager's Manual (SMM) 
+646 pp. ISBN 1-56592-080-5, May 1994.
+
+SMM includes man pages for system administration commands (section 8 of
+the online reference manual), plus supplementary documents useful to
+system administrators.
+
+4.4BSD Programmer's Supplementary
+Documents (PSD)606 pp. ISBN 1-56592-079-1, June 1994.
+
+In this volume, you'll find useful papers on such tools as the gdb and
+adb debuggers, source code control systems RCS and SCCS, lex and yacc,
+and the m4 macro processor.  You'll also find such historical documents
+as Dennis Ritchie and Ken Thompson's classic first paper about UNIX and
+Kernighan and Ritchie's classic introduction to UNIX programming.
+
+On a more up to date note, this book also includes a two part tutorial
+on interprocess communication (IPC) under 4.4BSD UNIX.
+
+4.4BSD Programmer's Reference Manual (PRM)*
+868 pp. ISBN 1-56592-078-3, June 1994.
+
+PRM collects the man pages for the various UNIX  program ming libraries,
+plus related information for programmers.  It consists of sections 2
+through 5 of the online man page collection:
+
+(2) UNIX System Calls 
+(3) C Library Subroutines
+(4) Special Files (device interfaces) 
+(5) File Formats
+
+4.4BSD User's Supplementary Documents 
+(USD) 686 pp. ISBN 1-56592-076-7, June 1994.
+
+This volume, the User's Supplementary Documents, collects papers
+relating to miscellaneous "user" tools, principally text editors and
+document processors.
+
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+>From O'Reilly & Associates publications:
+
+       THE USENIX ASSOCIATION and O'REILLY & ASSOCIATES 
+    TO RELEASE BERKELEY BSD 4.4 DOCUMENT SET AND CD IN JULY
+
+     The USENIX Association and O'Reilly & Associates are publishing 
+the final, definitive release of the Berkeley version of UNIX, which 
+has been the basis for many commercial UNIX variants. Written by the 
+Computer Systems Research Group at the University of California, 
+Berkeley, the complete five volume set includes a CD-ROM and will be 
+available in early July. 
+
+          4.4BSD SYSTEM MANAGER'S MANUAL (SMM)  
+          646 pp. ISBN 1-56592-080-5, $30 US
+
+     This volume includes man pages for system administration commands 
+(section 8 of the online reference manual), plus supplementary documents 
+useful to system administrators.  Includes installation instructions for 
+the 4.4BSD release (which are also included with the 4.4BSD-lite CD-ROM 
+Companion), plus papers on many system administration utilities and tasks, 
+many of which are the definitive works on the topic. 
+
+          4.4BSD USER'S REFERENCE MANUAL (URM) 
+          898 pp. ISBN 1-56592-075-9, $30 US
+
+     This volume (URM) collects the man pages for the more than 284 user 
+programs that make up the user portion of the 4.4BSD UNIX release 
+(section 1 of the traditional UNIX Reference Manual), plus additional 
+pages for games (section 6 of the traditional manual) and miscellaneous 
+information (section 7, which includes mostly information on troff macro 
+packages and other text processing information.) URM is useful even if 
+you don't use the BSD version of UNIX. Many of the commands are compatible 
+with the POSIX standard and thus identical to those in other UNIX versions.  
+Because 4.4BSD includes many freeware programs that are available but not 
+documented in other versions of UNIX, you may find yourself turning first 
+to this book to look up options for programs like perl, GNU emacs, 
+compress, patch, g++, or kerberos.
+
+          4.4BSD USER'S SUPPLEMENTARY DOCUMENTS (USD) 
+          686 pp. ISBN 1-56592-076-7, $30 US 
+
+     A collection of papers relating to miscellaneous "user" tools, 
+principally text editors and document processors.  Some remain the only 
+tutorial documentation for many UNIX programs.  
+
+          4.4BSD PROGRAMMER'S REFERENCE MANUAL (PRM) 
+          868 pp. ISBN 1-56592-078-3, $30 US 
+
+PRM collects the man pages for the various UNIX  program ming libraries, 
+plus related information for programmers.  It consists of sections 2 
+through 5 of the online man page collection: (2) UNIX System Calls; 
+(3) C Library Subroutines; (4) Special Files (device interfaces); and,
+(5) File Formats.  Useful not only for 4.4BSD systems but for many 
+related UNIX implementations, including SunOS, BSDI, and Linux.
+
+          4.4 BSD PROGRAMMER'S SUPPLEMENTARY DOCUMENTS (PSD) 
+          606 pp. ISBN 1-56592-079-1, $30 US 
+
+     In this volume, you'll find useful papers on such tools as the gdb 
+hand adb debuggers, source code control systems RCS and SCCS, lex and 
+yacc, and the m4 macro processor.  You'll also find such historical 
+documents as Dennis Ritchie and Ken Thompson's classic first paper about 
+UNIX and Kernighan and Ritchie's classic introduction to UNIX programming.
+On a more up to date note, this book also includes a two part tutorial on 
+interprocess communication (IPC) under 4.4BSD UNIX.
+
+          4.4 BSD-LITE CD COMPANION  
+     CD Domestic: 1-56592-081-3 ($40 US); CD International: 1-56592-092-9
+
+     This CD contains a copy of the University of California, Berkeley's 
+4.4BSD-Lite release, with additional documentation and enhancements.  
+Access to the source code included on it will provide invaluable information 
+on the design of a modern UNIX-like system, and the source ce for the 
+utilities and support libraries will great any programmer's toolkit.
+     The CD is a source distribution, and does not contain program binaries 
+for any architecture.  It will not be possible to compile or run this 
+software without a pre-existing system that is already installed and 
+running.  The 4.4BSD-Lite distribution did not include sources for the 
+complete 4.4BSD system.  The source code for a small number of utilities 
+and files (including a few from the operating system) were removed so that 
+the system could be freely distributed.   
+
+---------------------------------------------------------------
+This and other O'Reilly products are available in the Americas 
+and Japan through bookstores, or directly from the publisher 
+(credit card orders 800-889-8969; email order@ora.com). 
+
+For information: telephone 707-829-0515 (800-998-9938 in US & 
+Canada); FAX 707-829-0104; email nuts@ora.com; or write O'Reilly & 
+Associates, 103A Morris St., Sebastopol, CA, 95472, USA.  
+GSA # GS-02F-6095A.  Access our online gopher catalog via "telnet 
+gopher.ora.com" (log in as "gopher" -- no password needed).
+
+Our international distributors:
+* EUROPE (except German-speaking countries), MIDDLE EAST, AFRICA 
+International Thomson Publishing, Berkshire House, 168-173 High 
+Holborn, London WC1V 7AA, UK.  Telephone 44-71-497-1422;
+FAX 44-71-497-1426; or email danni.dolbear@itpuk.co.uk
+* GERMAN-SPEAKING COUNTRIES.  International Thomson Publishing,
+Konigswinterer Strasse 418, 53227 Bonn, Germany. Telephone 49-228-445171;
+FAX 49-228-441342; or email 100272.2422@compuserve.com
+* ASIA. International Thomson Publishing, 221 Henderson Rd.,
+#05-10 Henderson Building, Singapore 0315. Telephone 65-272-6496;
+FAX 65-272-6498
+ * AUSTRALIA AND NEW ZEALAND.  WoodsLane, Unit 8, 101 Darley Street,
+Mona Vale, NSW 2103, Australia. Telephone 61-2-979-5944;
+FAX 61-2-997-3348; or email woods@tmx.mhs.oz.au
+
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+FOR IMMEDIATE RELEASE                              CONTACT:  Brian Erwin
+                                                             O'Reilly
+                                                             707/829-0515
+                                                             brian@ora.com
+
+                                                             USENIX Association
+		                                             510-528-8649
+		                                             office@usenix.org
+
+
+       O'REILLY AND USENIX PUBLISH FINAL BERKELEY VERSION OF UNIX 
+                  ON CD-ROM AND FIVE-VOLUME DOC SET
+
+SEBASTOPOL, CA -- 4.4BSD is the final release of what may be one of the 
+most significant research projects in the history of computing.  When Bell 
+Labs originally released UNIX source code to the research and development
+community, brilliant researchers wrote their own software and added it to 
+UNIX in a spree of creative anarchy that hasn't been equaled since.  The 
+Berkeley Software Distribution became the repository of much of that work.
+
+     In those years of creative ferment, source code was widely available,
+so programmers could build on the work of others.  As UNIX became 
+commercialized, access to source became increasingly curtailed and original 
+development more difficult.
+
+     The Computer Systems Research Group of the University of California at
+Berkeley, in cooperation with the Usenix Association and O'Reilly &
+Associates, Inc, has now published the final, definitive release of the
+Berkeley version of UNIX, which has been the basis for many commercial
+UNIX variants.  The source code for the system is available on CD-ROM and
+is accompanied by a five-volume documentation set.
+
+                 4.4BSD-LITE CD-ROM COMPANION
+
+     With this release of 4.4BSD, one need no longer work at a
+university or UNIX system development house to have access to UNIX
+source.  The University has prepared a "Lite" release of the operating
+system, from which the source code for a small number of utilities
+and files, including a few from the operating system, has been removed
+so that the system can be freely distributed.  
+     
+     The source code included on the 4.4BSD-Lite CD-ROM Companion
+will provide invaluable information on the design of any modern
+UNIX or UNIX-like system, and the source code for the utilities and
+support libraries will greatly enhance any programmer's toolkit.
+  
+     In addition to source code, the CD includes the manual pages, other 
+documentation, and research papers from the University of California, 
+Berkeley's 4.4BSD-Lite distribution.  (CD Domestic: ISBN 1-56592-081-3 
+($40 US); CD International: ISBN 1-56592-092-9.)
+
+
+                   4.4BSD FIVE-VOLUME DOC SET
+
+     A five-volume doc set is available from O'Reilly directly with or
+without CD-ROM. Volumes 1 through 5 plus CD-ROM, ISBN 1-56592-082-1,
+costs $150 (US).  Volumes 1 through 5 only, ISBN 1-56592-077-5, costs 
+$120 (US).  The doc set includes:
+                     
+     4.4BSD SYSTEM MANAGER'S MANUAL (SMM)  
+     646 pp. ISBN 1-56592-080-5, $30 US
+
+     This volume includes man pages for system administration commands 
+(section 8 of the online reference manual), plus supplementary documents 
+useful to system administrators.  Includes installation instructions for 
+the 4.4BSD release (which are also included with the 4.4BSD-lite CD-ROM 
+Companion), plus papers on many system administration utilities and tasks, 
+many of which are the definitive works on the topic. 
+
+     4.4BSD USER'S REFERENCE MANUAL (URM) 
+     898 pp. ISBN 1-56592-075-9, $30 US
+
+     This volume collects the man pages for the more than 284 user 
+programs that make up the user portion of the 4.4BSD UNIX release 
+(section 1 of the traditional UNIX Reference Manual), plus additional 
+pages for games (section 6 of the traditional manual) and miscellaneous 
+information (section 7, which includes mostly information on troff macro 
+packages and other text processing information.) URM is useful even if 
+you don't use the BSD version of UNIX. Many of the commands are compatible 
+with the POSIX standard and thus identical to those in other UNIX versions.  
+Because 4.4BSD includes many freeware programs that are available but not 
+documented in other versions of UNIX, you may find yourself turning first 
+to this book to look up options for programs like perl, GNU emacs, 
+compress, patch, g++, or kerberos.
+
+     4.4BSD USER'S SUPPLEMENTARY DOCUMENTS (USD) 
+     686 pp. ISBN 1-56592-076-7, $30 US 
+
+     A collection of papers relating to miscellaneous "user" tools, 
+principally text editors and document processors.  Some remain the only 
+tutorial documentation for many UNIX programs.  
+
+     4.4BSD PROGRAMMER'S REFERENCE MANUAL (PRM) 
+     868 pp. ISBN 1-56592-078-3, $30 US 
+
+     The PRM collects the man pages for the various UNIX  program ming libraries, 
+plus related information for programmers.  It consists of sections 2 
+through 5 of the online man page collection: (2) UNIX System Calls; 
+(3) C Library Subroutines; (4) Special Files (device interfaces); and,
+(5) File Formats.  Useful not only for 4.4BSD systems but for many 
+related UNIX implementations, including SunOS, BSDI, and Linux.
+
+     4.4 BSD PROGRAMMER'S SUPPLEMENTARY DOCUMENTS (PSD) 
+     606 pp. ISBN 1-56592-079-1, $30 US 
+
+     This volume contains useful papers on such tools as the gdb 
+hand adb debuggers, source code control systems RCS and SCCS, lex and 
+yacc, and the m4 macro processor.  Also included are such historical 
+documents as Dennis Ritchie and Ken Thompson's classic first paper about 
+UNIX and Kernighan and Ritchie's classic introduction to UNIX programming.
+On a more up to date note, this book also includes a two part tutorial on 
+interprocess communication (IPC) under 4.4BSD UNIX.
+
+
+                    ABOUT O'REILLY & ASSOCIATES 
+
+          O'Reilly & Associates is recognized worldwide for its definitive 
+books on UNIX, the Internet, and The X Window System.  Working closely 
+with developers of new technologies, O'Reilly's editors are "computer 
+people" who use the software they write about.  The company's planning 
+and review cycles link together authors, computer vendors, and technical 
+experts throughout the industry in a creative collaboration that mirrors 
+the strengths of the "open systems" philosophy itself.
+
+                           ABOUT USENIX 
+              The UNIX and Advanced Computing Systems 
+               Professional and Technical Association 
+  
+     The USENIX Association is the original non-profit membership organization 
+of individuals and institutions with an interest in UNIX and other advanced 
+computing systems.  USENIX extends its support to the broad computing environment 
+and to professional subspecialties such as software development and system 
+administration.  USENIX and its members are dedicated to: problem-solving with 
+a practical bias; research that works; and, rapid communication of the results 
+of both research and innovation.
+
+                           #     #     #
+-- 
+Brian Erwin, brian@ora.com
+O'Reilly & Associates
+103A Morris Street, Sebastopol CA 95472
+707-829-0515, Fax 707-829-0104
+---------- snip ---------- snip ---------- snip --------- snip ----------
+
+In the USENIX group somebody told O'Reilly sold the CD's during
+USENIX.
+
+Bye,
+-Michael
+-- 
+------------------------------+------------------------------
+Michael Giegerich             | migieger@luva.stgt.sub.org
+------------------------------+------------------------------
+
+
+]
+MID: <no-id-unix.bsd-98ab945bed49d31d>
+SUBJ: 
+BODY:  | I've been asked a lot lately about the availability of the 4.4BSD Manual | Set and of the 4.4BSD-Lite distribution on CD-ROM.  I'm glad to be able | to say that the USENIX Association and O'Reilly & Associates have pooled | resources to make them available.  Attached are three articles, the | first from the upcoming USENIX ;login publication, the second from an | O'Reilly & Associates net posting, and finally an O'Reilly & Associates | press release. |  | I'd like to thank the USENIX board members, the USENIX staff, (especially | Ellie Young and Alain Henon), and Tim O'Reilly and his staff for making | this happ
+------------------------------------------------------------
+[1994-01-01T00:00:00+00:00] [] [> In article <x667edusq9.fsf@no-such-thing-as-a.free-lunch.demon.co.uk>,
+>   james@no-such-thing-as-a.free-lunch.demon.co.uk(James Youngman) wrote:
+> > kskeithley@my-dejanews.com writes:
+> >
+> > > A working group at the X Consortium circa 1994 was unable to reach
+> > > agreement on a common architecture -- for the most part they each
+> > > had their own architecture already and did not want to incur the
+> > > expense to reimplement the functionality.
+> >
+> > Hooray for vendor-driven standards.
+> 
+> What other kind of standards are there?
+
+You make it sounds like standards efforts are the exclusive domain of
+commerical vendors.  This is simply not the case.  There are the various
+POSIX standards, which certainly include non-vendor folks in them.
+POSIX 1003.1 included CSRG members if I'm not mistaken.  Also, while
+I can't name names, I do believe there are members of the free OS
+community doing work with the IETF as well.
+
+ - todd
+-- 
+     Todd C. Miller    Sysadmin/Consultant     Todd.Miller@courtesan.com
+
+
+
+]
+MID: <no-id-unix.bsd.openbsd.misc-83ccf46b7d13cc84>
+SUBJ: 
+BODY: > In article <x667edusq9.fsf@no-such-thing-as-a.free-lunch.demon.co.uk>, | >   james@no-such-thing-as-a.free-lunch.demon.co.uk(James Youngman) wrote: | > > kskeithley@my-dejanews.com writes: | > > | > > > A working group at the X Consortium circa 1994 was unable to reach | > > > agreement on a common architecture -- for the most part they each | > > > had their own architecture already and did not want to incur the | > > > expense to reimplement the functionality. | > > | > > Hooray for vendor-driven standards. | >  | > What other kind of standards are there? |  | You make it sounds like standards efforts are the exclu
+------------------------------------------------------------
+[1994-01-11T16:26:53+00:00] [jfw@ksr.com (John F. Woods)] [douzzer@PIRANHA.LCS.MIT.EDU (Daniel G. Pouzzner) writes:
+>can anyone direct me to a site with the 4.4BSD release, hopefully
+>available via anonymous ftp?
+
+4.4BSD is still subject to [owner-of-the-week-of-the-UNIX-trademark]
+licensing, pending the resolution of the suit USL filed against BSDI and
+UCB; if the former members of CSRG are still interested if and when BSDI
+and UCB win the suit (indeed, if they have not died of old age by that
+time, lawsuits being what they are :-), they may or may not get around to
+finishing up "4.4BSD lite" as promised.
+
+>as an aside, has anyone ported any of the recent bsd's (e.g.
+>4.3network2, 4.3reno) to an R4000 SGI? the wrangling over licensing
+>for this -n- that in IRIX has led me to think the only solution is to
+>abandon it.
+
+The NetBSD crowd has ported the 386BSD port of Net-2 to several architectures,
+and would probably be a good start for an SGI port.  Note, of course, that
+you'd lose the gigabytes of fascinating software that accompanies the IRIX
+kernel, but if you just want to run plain, vanilla BSD on your fast SGI,
+that might be the way to go.
+
+
+]
+MID: 38336@ksr.com
+SUBJ: Re: 4.4BSD
+BODY: douzzer@PIRANHA.LCS.MIT.EDU (Daniel G. Pouzzner) writes: | >can anyone direct me to a site with the 4.4BSD release, hopefully | >available via anonymous ftp? |  | 4.4BSD is still subject to [owner-of-the-week-of-the-UNIX-trademark] | licensing, pending the resolution of the suit USL filed against BSDI and | UCB; if the former members of CSRG are still interested if and when BSDI | and UCB win the suit (indeed, if they have not died of old age by that | time, lawsuits being what they are :-), they may or may not get around to | finishing up "4.4BSD lite" as promised. |  | >as an aside, has anyone ported any of the r
+------------------------------------------------------------
+[1994-01-11T21:06:43+00:00] [arg@regent.e-technik.tu-muenchen.de (Armin Gruner)] [douzzer@PIRANHA.LCS.MIT.EDU (Daniel G. Pouzzner) writes:
+
+
+>hello.
+>can anyone direct me to a site with the 4.4BSD release, hopefully
+>available via anonymous ftp?
+
+>as an aside, has anyone ported any of the recent bsd's (e.g.
+>4.3network2, 4.3reno) to an R4000 SGI? the wrangling over licensing
+>for this -n- that in IRIX has led me to think the only solution is to
+>abandon it.
+
+4.4BSD hasn't been released publically yet. This is due to the
+lawsuit USL <-> UCB. Here is the announcement:
+
+From: bostic@VANGOGH.CS.BERKELEY.EDU (Keith Bostic)
+Subject: 4.4BSD Release
+
+                                                June 1, 1993
+
+Dear Colleague:
+
+
+     We are happy to send you  information  about  our  June
+1993  release  of  4.4BSD.   This  distribution is the final
+release that will be done by the Computer  Systems  Research
+Group  (CSRG).  For details on the demise of CSRG, see ``The
+End of BSD from Berkeley'' below.
+
+     This distribution is intended to be used on  production
+systems;  it  has been run extensively at several test sites
+and has proven to be stable and reliable.  However,  because
+of the shutdown of the CSRG, there will not be anyone avail-
+able at Berkeley to assist with problems, so it  should  not
+be  used by sites without enough local expertise to find and
+fix any problems that are encountered.
+
+     The code in this distribution may be redistributed  and
+used in released products provided that you abide by the due
+credit requirements listed in your  license  agreement.   We
+have  attempted  to  make  the  system as compliant with the
+POSIX 1003.1 and 1003.2 standards as  was  possible  at  the
+time  of  its  release.   We  have  not  been able to run it
+through any of  the  verification  test  suites,  thus,  you
+should  not  claim  conformance with either standard without
+first validing the code.
+
+     We  had  planned  on  releasing  two  versions  of  the
+software,  4.4BSD-Encumbered and 4.4BSD-Lite.  Currently, we
+are releasing only 4.4BSD-Encumbered.  The 4.4BSD-Encumbered
+distribution is available only to  sites with UNIX/32V, Sys-
+tem III, or System V source licenses with Western  Electric,
+American  Telephone  and  Telegraph  (AT&T), or UNIX Systems
+Laboratories (USL).  The 4.4BSD-Encumbered distribution is a
+complete distribution in the style of  4.3BSD  and  contains
+the complete source for the Berkeley Distribution.
+
+     The 4.4BSD-Lite distribution was to have been a distri-
+bution  that was copyrighted by the University of California
+and others, but could be freely redistributed.   It  was  to
+have  been  available  to  anyone  and  require  no previous
+license, either  from  USL/Novell  or  The  Regents  of  the
+University of California.  Its license agreement and content
+would have been similar to that of the  two  BSD  Networking
+Releases.   However,  USL  has brought a lawsuit against the
+University and the University  has  voluntarily  decided  to
+withhold  the  distribution of 4.4BSD-Lite until the lawsuit
+is resolved.
+
+     The enclosed information is designed to serve two  pur-
+poses.   The  first  purpose  is  to  acquaint  you with the
+details of our distribution so you can  decide  whether  you
+would like to receive it.  The second purpose is to tell you
+how to obtain our distribution.
+
+What is 4.4BSD?
+
+     This software distribution is provided on  one  6250bpi
+1/2''  9-track  tape  or one 8mm Exabyte cassette only.  The
+4.4BSD-Encumbered distribution contains complete  source  as
+well  as  binaries  for one of the following three architec-
+tures:
+
+  +  HP 9000/300 68000-based workstations.
+
+  +  DECstation 3100 and 5000 MIPS-based workstations.
+
+  +  Sparcstation I & II SPARC-based  workstations.   Please
+     note  that the SPARC kernel will not run on the Sparcs-
+     tation 10.
+
+If you wish to obtain binaries for more than  one  architec-
+ture,  they  may  be purchased at the same time for an addi-
+tional $500.00 fee.
+
+     The distribution  supports  a  somewhat  wider  set  of
+machines  than  those for which we have built binaries.  The
+architectures that are supported in source form include:
+
+  +   HP 9000/300 68000-based workstations
+
+  +    Intel 386/486-based machines (ISA/AT or EISA bus only)
+
+  +    Sony News MIPS-based workstations
+
+  +    Omron Luna 68000-based workstations
+
+  +    DECstation 3100 and 5000 MIPS-based workstations
+
+  +    Sparcstation I & II SPARC-based workstations
+
+The distribution does not include the  machine  support  for
+the  Tahoe  and VAX architectures found in previous BSD dis-
+tributions.  Our  primary  development  environment  is  the
+HP9000/300  series  machines.   The  other architectures are
+developed and supported by people  outside  the  university.
+Consequently,  we  are not able to directly test or maintain
+these  other  architectures,  so  cannot  comment  on  their
+robustness, reliability, or completeness.
+
+     The  major  new  facilities  available  in  the  4.4BSD
+release  are  a  new  virtual memory system, the addition of
+ISO/OSI networking support, a new virtual filesystem  inter-
+face  supporting  filesystem stacking, a freely redistribut-
+able implementation of  NFS,  a  log-structured  filesystem,
+enhancement  of  the  local filesystems to support files and
+filesystems that are up to  2^63  bytes  in  size,  enhanced
+security  and  system management support, and the conversion
+to and addition of the IEEE Std1003.1 (``POSIX'') facilities
+and  many  of  the  IEEE Std1003.2 facilities.  In addition,
+many new utilities  and  additions  to  the  C  library  are
+present  as  well.  The kernel sources have been reorganized
+to collect all machine-dependent files for each architecture
+under  one  directory,  and  most of the machine-independent
+code is now free of code conditional on  specific  machines.
+The  user structure and process structure have been reorgan-
+ized to eliminate the statically-mapped user  structure  and
+to  make most of the process resources shareable by multiple
+processes.  The system and include files have been converted
+to  be compatible with ANSI C, including function prototypes
+for most of the  exported  functions.   There  are  numerous
+other changes throughout the system.
+
+     The new virtual memory implementation is  derived  from
+the  MACH operating system developed at Carnegie-Mellon, and
+was ported to the BSD kernel at the University of Utah.  The
+MACH  virtual memory system call interface has been replaced
+with the ``mmap''-based interface described in the  ``Berke-
+ley  Software  Architecture  Manual'' (see UNIX Programmer's
+Manual, Supplementary Documents, PSD:5).  The  interface  is
+similar to the interfaces shipped by several commercial ven-
+dors such as  Sun,  USL,  and  Convex  Computer  Corp.   The
+integration  of  the new virtual memory is functionally com-
+plete, but still  has  serious  performance  problems  under
+heavy  memory load.  The internal kernel interfaces have not
+yet been completed and the memory pool and buffer cache have
+not been merged.
+
+     The ISO/OSI Networking consists of a kernel implementa-
+tion  of transport class 4 (TP-4), connectionless networking
+protocol  (CLNP),   and   802.3-based   link-level   support
+(hardware-compatible  with  Ethernet*).   We  also   include
+support for ISO Connection-Oriented Network  Service,  X.25,
+TP-0.  The session and presentation layers are provided out-
+side the kernel by the ISO development environment  (ISODE).
+Included  in  this development environment are file transfer
+and management (FTAM), virtual terminals (VT),  a  directory
+services  implementation  (X.500),  and  miscellaneous other
+utilities.
+
+     A new virtual filesystem interface has  been  added  to
+the  kernel  to support multiple filesystems.  In comparison
+with other  interfaces,  the  Berkeley  interface  has  been
+structured  for  more  efficient support of filesystems that
+maintain state (such as the local filesystem).   The  inter-
+face  has  been extended with support for stackable filesys-
+tems done at UCLA.  These extensions allow  for  filesystems
+to  be  layered  on  top  of  each other and allow new vnode
+operations to be added without requiring changes to existing
+filesystem implementations.
+
+     In addition to the local ``fast filesystem'',  we  have
+added an implementation of the network filesystem (NFS) that
+fully interoperates with the NFS  shipped  by  Sun  and  its
+licensees.   Because  our NFS implementation was implemented
+using only the publicly available NFS specification, it does
+not  require  a  license from Sun to use in source or binary
+form.  By default it runs over UDP  to  be  compatible  with
+Sun's  implementation.   However,  it can be configured on a
+per-mount basis to run over TCP.  Using TCP allows it to  be
+used  quickly  and  efficiently  through  gateways  and over
+long-haul networks.  Using an extended protocol, it supports
+Leases  to  allow  a limited callback mechanism that greatly
+reduces the network traffic necessary to maintain cache con-
+sistency between the server and its clients.
+
+     A new log-structured filesystem  has  been  added  that
+provides near disk-speed output and fast crash recovery.  It
+is still experimental in the 4.4BSD release, so  we  do  not
+recommend  it  for  production  use.   We  have also added a
+memory-based filesystem that runs in pageable memory, allow-
+ing  large temporary filesystems without requiring dedicated
+physical memory.
+
+     The local ``fast filesystem'' has been enhanced  to  do
+clustering  which  allows  large pieces of files to be allo-
+cated contiguously resulting in near doubling of  filesystem
+throughput.   The  filesystem interface has been extended to
+allow files and filesystems to grow to 2^63 bytes  in  size.
+The quota system has been rewritten to support both user and
+group quotas (simultaneously if desired).  Quota  expiration
+is  based  on time rather than the previous metric of number
+of logins over quota.  This change makes quotas more  useful
+on fileservers onto which users seldom login.
+
+     The system security has been greatly  enhanced  by  the
+addition  of  additional file flags that permit a file to be
+marked as immutable or append only.  Once set,  these  flags
+can  only  be  cleared  by the super-user when the system is
+running single  user.   To  protect  against  indiscriminate
+reading  or  writing  of kernel memory, all writing and most
+reading of kernel data structures must be done using  a  new
+``sysctl''  interface.   The  information  to  be  access is
+described through  an  extensible  ``Management  Information
+Base'' (MIB).
+
+     The 4.4BSD distribution contains most of the interfaces
+specified  in  the IEEE Std1003.1 system interface standard.
+The biggest area of change is a new  terminal  driver.   The
+terminal  driver  is similar to the System V terminal driver
+with the addition of the necessary  extensions  to  get  the
+functionality  previously  available  in the 4.3BSD terminal
+driver.  4.4BSD also adds the  IEEE  Std1003.1  job  control
+interface, which is similar to the 4.3BSD job control inter-
+face, but adds a security model  that  was  missing  in  the
+4.3BSD  job control implementation.  Other additions include
+IEEE Std1003.1 signals, FIFOs, byte-range file locking,  and
+saved user and group identifiers.
+
+     There are several new tools and utilities  included  in
+this  release.  A new version of make allows much-simplified
+makefiles for the system software and allows compilation for
+multiple  architectures from the same source tree (which may
+be mounted read-only).  Notable additions to  the  libraries
+include  functions to traverse a filesystem hierarchy, data-
+base interfaces to btree and hashing functions, a new,  fast
+implementation  of  stdio  and  a  radix sort function.  The
+additions to the utility suite include greatly enhanced ver-
+sions  of  programs  that display system status information,
+implementations of various traditional  tools  described  in
+the IEEE Std1003.2 standard, and many others.
+
+     We have been tracking  the  IEEE  Std1003.2  shell  and
+utility  work  and  have  included prototypes of many of the
+proposed utilities.  Because most of the traditional  utili-
+ties  have  been replaced with implementations conformant to
+the POSIX standards, you should  realize  that  the  utility
+software  may  not be as stable, reliable or well documented
+as in traditional Berkeley releases.  In particular,  almost
+the  entire  manual  suite has been rewritten to reflect the
+POSIX defined interfaces, and in some instances it does  not
+correctly  reflect the current state of the software.  It is
+also worth noting that, in rewriting this software, we  have
+generally   been   rewarded   with  significant  performance
+improvements.  Most of the libraries and header  files  have
+been  converted  to  be  compliant with ANSI C.  The default
+compiler (gcc)  is  a  superset  of  ANSI  C,  but  supports
+traditional   C   as  a  command-line  option.   The  system
+libraries and utilities all  compile  with  either  ANSI  or
+traditional C.
+
+     Work  has  also  progressed  in  several  other  areas.
+Several important enhancements have been added to the TCP/IP
+protocols including TCP header prediction and serial line IP
+(SLIP)  with header compression.  The routing implementation
+has been completely rewritten to use a hierarchical  routing
+tree  with  a mask per route to support the arbitrary levels
+of routing found in the ISO protocols.   The  routing  table
+also  stores  and  caches route characteristics to speed the
+adaptation of the throughput and congestion avoidance  algo-
+rithms.
+
+     The Kerberos (version 4)  authentication  software  has
+been  integrated  into much of the system (including NFS) to
+provide the first real network authentication on BSD.
+
+     This release includes several important structural ker-
+nel  changes.   The  kernel  uses a new internal system call
+convention; the use  of  global  (``u-dot'')  variables  for
+parameters and error returns has been eliminated, and inter-
+rupted system calls no longer abort using  non-local  goto's
+(longjmp's).   A  new  sleep interface separates signal han-
+dling from  scheduling  priority,  returning  characteristic
+errors  to  abort  or restart the current system call.  This
+sleep call also  passes  a  string  describing  the  process
+state,  which  is  used by the ps(1) program.  The old sleep
+interface can be used  only  for  non-interruptible  sleeps.
+The  sleep  interface  (tsleep) can be used at any priority,
+but is only interruptible if the PCATCH flag is  set.   When
+interrupted, tsleep returns EINTR or ERESTART.
+
+     Many data structures that  were  previously  statically
+allocated  are  now allocated dynamically.  These structures
+include mount entries, file entries, user open file descrip-
+tors,  the process entries, the vnode table, the name cache,
+and the quota structures.
+
+The End of BSD from Berkeley
+
+     For the following three reasons, the CSRG clearly could
+not continue in its present form.
+
+     Funding had become increasingly time-consuming and dif-
+ficult.   We were spending more and more of our time obtain-
+ing funding, time that we  would  have  preferred  to  spend
+working  on  BSD.  As many of you are intimately aware, com-
+puter corporations are actively seeking ways to reduce  dis-
+cretionary  outlays.   Also,  as UNIX vendors have developed
+their own research groups, the work of the CSRG became  less
+necessary  to them.  Finally, making BSD freely redistribut-
+able  resulted  in  fewer  distributions  sold,   as   other
+organizations sold our releases for less money.
+
+     Support within the University of California declined as
+BSD  became less widely used internally.  Victims of our own
+success, many of the features once found only in BSD are now
+available from every vendor.
+
+     The system has become too large and complex for a group
+of four to architect and maintain.  In the last few years it
+became obvious to us that we had to expand the size  of  our
+group if we wanted to continue developing and distributing a
+complete UNIX system.  Expansion was  impossible  given  the
+external  funding  environment  and  the  space  constraints
+imposed by the university.
+
+     BSD has always been a community effort, and, as a  com-
+munity  effort,  does not rely on a small group of people in
+Berkeley to keep it going.  BSD will not go away,  but  will
+live  on through the free software and commercial efforts of
+many people.  We thank you for your support over the  years,
+your  funding,  and,  of course, the software you've contri-
+buted to make the BSD system what it is today!
+
+How to obtain 4.4BSD-Encumbered
+
+     To obtain 4.4BSD-Encumbered we require execution of the
+Berkeley  License  Agreement  (6/92).   In addition, foreign
+licensees must  execute  Addendum  Number  One  for  Foreign
+Licensees   in   ordering  4.4BSD-Encumbered.   The  fee  is
+$2500.00 for 4.4BSD-Encumbered.
+
+     Because we are a research and development  organization
+and  not  a  commercial  organization,  we make our research
+results available for a small license  fee.   We  distribute
+only  the  whole system ``As Is'' and cannot send individual
+pieces of the system.  We are required by the University  of
+California  to  have  a formal license arrangement with each
+organization  to  which  we  distribute.  In  addition,  for
+4.4BSD-Encumbered,  we  are required to secure a copy of the
+USL (or AT&T or Western Electric)  Software  Agreement  with
+your  organization  and  confirm  it  with  USL  before  the
+software can be shipped.
+
+     Specifically, for 4.4BSD-Encumbered,  we  must  receive
+from  your  organization  the  following material before the
+distribution can be sent:
+
+  +  Two copies of the current  Software  Agreement  between
+     your company or institution and USL (or AT&T or Western
+     Electric) that authorize you as a source  licensee  for
+     UNIX/32V,  System  III,  or System V.  Note that a com-
+     plete copy of the  agreement  up  to  the  Schedule  is
+     required,  not  just  the  cover and/or signature page.
+     Letters authorizing additional CPUs are  not  necessary
+     in this process; however, it is your legal responsibil-
+     ity to obtain an additional CPU authorization from USL.
+
+  +  Two original signed and executed copies of the Berkeley
+     License Agreement (6/92) between your company or insti-
+     tution and The Regents of the University of  California
+     along  with Exhibit A properly filled out.  For Foreign
+     licensees, there is an Addendum to the  License  Agree-
+     ment  that  must  also  be  executed.   The name of the
+     organization on the Berkeley License Agreement must  be
+     the  same  as that which appears on the Software Agree-
+     ment with USL  (or  AT&T  or  Western  Electric).   The
+     Berkeley  License  Agreement (6/92) must be signed by a
+     duly authorized person who holds a position that is  at
+     the  same  level or a higher level of authority as that
+     which appears on the USL (or AT&T or Western  Electric)
+     Software  Agreement. Please have this person's name and
+     title typed in the available space in addition  to  the
+     signature.   This  license agreement applies to all the
+     CPUs covered by the Software  Agreement  with  USL  (or
+     AT&T  or Western Electric) that you have provided.  One
+     signed copy of the Berkeley License Agreement  will  be
+     returned  to  you  after  it  has  been executed by The
+     Regents of the University of California.
+
+  +  A check from a U.S. bank for $2500.00 must be  received
+     before  the distribution can be sent.  Checks should be
+     made payable to ``The Regents of the University of Cal-
+     ifornia, Computer Systems Research Group.'' If you must
+     issue a Purchase Order, together with your  prepayment,
+     please  issue one that is blank-backed.  If this is not
+     possible, insert and initial in the body  of  the  Pur-
+     chase  Order the following clause: ``The terms and con-
+     ditions of this Purchase Order are not accepted by  The
+     Regents  of  the University of California.  The revised
+     Berkeley  License  Agreement  (6/92)  prevails.''  Wire
+     transfers are strongly discouraged.
+
+  +  The attached Site Information  Form  completely  filled
+     out.  Your copy of the signed 4.4BSD-Encumbered License
+     Agreement will be sent to  the  person  listed  as  the
+     administrative  contact.   The distribution itself will
+     be sent to the technical contact.  All  information  is
+     kept  confidential;  it is for our use in notifying you
+     of important bug fixes and the availability of  4.4BSD-
+     Lite  should  it become available.  Please note that we
+     cannot ship to post  office  boxes;  therefore,  please
+     have  the  technical contact's address supplied without
+     use of a post office box.
+
+     A checklist is included to aid you in  assembling  this
+material.  All the above material must be sent to:
+
+        Pauline Schwartz, Distribution Coordinator
+        Computer Systems Research Group
+        Computer Science Division, EECS
+        University of California
+        Berkeley, California 94720
+
+Once all these items have been received and  are  in  proper
+order,  the  distribution  will  be  sent  to  the technical
+address listed on the Site Information Form.  We cannot pro-
+vide  delivery  dates.   Once  the material is assembled and
+packaged, the distribution is shipped by commercial carrier.
+Order  of  shipment  will be based on time of arrival of the
+properly completed paperwork and confirmation  with  USL  if
+necessary.  Because of the differential in costs of shipping
+outside the United States, we ask that organizations  beyond
+the  North  American  continent  pay  the  collect  shipping
+charges.  If the destination is one where  collect  shipment
+cannot  be  made by the carrier, then advance payment of the
+shipping charges will be required.
+
+     The most expedient way to ensure that your full distri-
+bution  is  sent  as  quickly as possible is to include in a
+single package two original copies of the appropriate Berke-
+ley License Agreement completed and properly signed (without
+change), two complete copies of your USL (or AT&T or Western
+Electric) Software Agreement, the appropriate check properly
+made out to ``The Regents of the University  of  California,
+Computer  Systems  Research  Group'' and a completely filled
+out Site Information Form and to send this single package to
+the address noted above.
+
+     Please note that if you  modify  the  Berkeley  License
+Agreement,  you  may  experience  a delay of three months or
+more  before  receiving  an  acceptance  or  denial  of  the
+changes.  We reserve the right to cancel your application if
+we have not received the requested paperwork within 60  days
+from the date it was sent to us.
+
+Special Cases
+
+     University of California Sites.  If you are a  part  of
+the  University  of  California,  the following requirements
+apply: To run 4.4BSD-Encumbered on any CPU, you must have  a
+CPU  authorization  under  The  Regents of the University of
+California  Software  Agreement  with  USL.   This  can   be
+obtained  by contacting Pam True at (510) 642-6348 in Berke-
+ley Campus Materiel Management for an application. A copy of
+this should be sent to us.  In addition, the following items
+must be sent to the Computer Systems Research  Group:  1)  a
+letter  of  authorization  signed by the Director or Head of
+Department requesting 4.4BSD-Encumbered,  stating  that  you
+have  read  and  understood  the  Berkeley License Agreement
+(6/92) and that your organization will abide by  it;  2)  an
+IOC for $2,500.00; and 3) a Site Information Form.
+
+     Government Agencies and Government Contractors.
+
+  +  The U.S. Government has a UNIX Source  Software  Agree-
+     ment  with  AT&T  dated  Sept.  1,  1975.  If you are a
+     government agency operating  under  the  1975  Software
+     Agreement, you do not need a copy of the aforementioned
+     Software Agreement; instead you must  send  a  copy  of
+     your  additional  CPU  authorization  from  AT&T.   The
+     Berkeley License Agreement for 4.4BSD-Encumbered (6/92)
+     should  be  signed  by the appropriate Contracting Off-
+     icer.
+
+  +  Several government agencies  have  acquired  their  own
+     AT&T  UNIX Software Agreement.  Here, we need a copy of
+     this Software Agreement with USL or AT&T.  The Berkeley
+     License  Agreement  (6/92)  must  be signed by the same
+     officeholder (or replacement) whose  signature  appears
+     on  the  Software  Agreement  with  USL  or  AT&T.  The
+     government agency shall be identified as  the  Licensee
+     in the Berkeley License Agreement (6/92).
+
+  +  If you are a contractor  of  the  Government  and  have
+     obtained  an  additional  CPU authorization from USL or
+     AT&T for  your  contract  work,  the  Berkeley  License
+     Agreement (6/92) must be signed by the appropriate Con-
+     tracting Officer  for  the  contract.   The  contractor
+     should  address  a  letter  to  the Contracting Officer
+     stating that the contractor  agrees  to  abide  by  the
+     terms  and conditions of the Berkeley License Agreement
+     (6/92) for 4.4BSD and ask that the Contracting  Officer
+     sign  the Berkeley License Agreement (6/92) for 4.4BSD.
+     The Contracting Officer should then return  the  signed
+     Berkeley  License Agreement (6/92) directly to the Com-
+     puter Systems Research Group with a cover letter  stat-
+     ing that the contractor is hereby authorized to receive
+     a copy of 4.4BSD-Encumbered.
+
+A Special Note
+
+     The procedures and rules set out in this  document  are
+University and USL constraints that must be followed for the
+distribution of software to be possible.  The Computer  Sys-
+tems  Research  Group  has no control over these constraints
+and must reject your application if  material  submitted  is
+not  in  order.   If  you have questions about the licensing
+process after reading this  letter,  you  may  call  Pauline
+Schwartz at (510) 642-7780, write to her, or contact her via
+electronic mail at pauline@cs.berkeley.edu.
+
+
+                         Sincerely yours,
+
+                         Marshall Kirk McKusick
+                         Research Computer Scientist
+                         Computer Systems Research Group
+
+
+_________________________
+UNIX, UNIX/32V, UNIX System III, and  UNIX System V are
+registered trademarks of USL/Novell in the USA and some
+other countries.
+
+_________________________
+Ethernet is a trademark of the Xerox Corporation.
+
+
+
+]
+MID: 2gv4d3$t5m@rebas.regent.e-technik.tu-muenchen.de
+SUBJ: Re: 4.4BSD
+BODY: douzzer@PIRANHA.LCS.MIT.EDU (Daniel G. Pouzzner) writes: |  |  | >hello. | >can anyone direct me to a site with the 4.4BSD release, hopefully | >available via anonymous ftp? |  | >as an aside, has anyone ported any of the recent bsd's (e.g. | >4.3network2, 4.3reno) to an R4000 SGI? the wrangling over licensing | >for this -n- that in IRIX has led me to think the only solution is to | >abandon it. |  | 4.4BSD hasn't been released publically yet. This is due to the | lawsuit USL <-> UCB. Here is the announcement: |  | From: bostic@VANGOGH.CS.BERKELEY.EDU (Keith Bostic) | Subject: 4.4BSD Release |  |                                
+------------------------------------------------------------
+[1994-01-12T21:17:18+00:00] [cgd@eden.CS.Berkeley.EDU (Chris G. Demetriou)] [In article <2h2k6n$6in@panix.com> tls@panix.com (Thor Lancelot Simon) writes:
+>Still can't understand why nobody can have the VFS module implementation of
+>LFS to hack at.  LFS is clearly a product of the Sprite project, and Berkeley
+>has no problem distributing Sprite -- yes, I know LFS won't run without major
+>buffer-cache hacking -- but why oughtn't we be able to start such stuff?
+
+"clear as solid stone"?
+
+The idea that produced LFS came from the sprite project, that much is
+true.  However, the implementation is different, BSD-ish.  I can't say
+for sure, but i'd bet that what routines could be were cloned off
+of the corresponding UFS routines.  In any case, 4.4BSD LFS is
+decidedly *NOT* the Sprite code.
+
+
+Also, even if you got 4.4's LFS, you'd still be SOL, because of the
+way CSRG split up the file system code.  the size of the lfs code is
+about the same as the size of the "generic ufs" code (i.e. the "UNIX FS"
+semantics-handling goop, which is common to the FFS and LFS.  You'd have
+about half of the code that you needed for a functional file system.
+Sure, the the "generic ufs" code could probably be boiled out of net/2's,
+but it wouldn't be easy at all...
+
+
+
+cgd
+--
+chris g. demetriou                                   cgd@cs.berkeley.edu
+
+                    smarter than your average clam.
+
+
+]
+MID: CGD.94Jan12211718@eden.CS.Berkeley.EDU
+SUBJ: Re: 4.4BSD
+BODY: In article <2h2k6n$6in@panix.com> tls@panix.com (Thor Lancelot Simon) writes: | >Still can't understand why nobody can have the VFS module implementation of | >LFS to hack at.  LFS is clearly a product of the Sprite project, and Berkeley | >has no problem distributing Sprite -- yes, I know LFS won't run without major | >buffer-cache hacking -- but why oughtn't we be able to start such stuff? |  | "clear as solid stone"? |  | The idea that produced LFS came from the sprite project, that much is | true.  However, the implementation is different, BSD-ish.  I can't say | for sure, but i'd bet that what routines could
+------------------------------------------------------------
+[1994-01-20T10:14:08+00:00] [terry@spcvxb.spc.edu (Terry Kennedy, Operations Mgr.)] [In article <CJw7A1.2J4@news.direct.net>, jeffw@indirect.com (Jeffrey D. Wheelhouse) writes:
+> I'm setting up a BSDI BSD/386 machine, and I'm having a problem with
+> remote logins to the machine.  On console, it behaves, but if you 
+> telnet into it, It does not always carriage return.  It linefeeds fine,
+> but carriage returns are pretty sporadic.  This makes the output from
+> commands like "ls -l" and "finger" pretty useless.  Does anyone know
+> what might cause this, and how to fix it?
+
+  What sort of system are you telneting in from? There are a number of
+quirks in the telnet protocol which make interoperation "exciting" on
+occasion. When comparing the telnet sources that have come with various
+CSRG BSD releases, I see a number of changes that cause interoperability
+problems. Oddly, there aren't any warnings about this in most of the
+sources.
+
+  You might try fetching the Net-2 telnet sources and compiling it on
+your non-BSDI system and see if that helps. Various folks have suggested
+playing with the KLUDGELINEMODE define in the BSDI telnet code as well.
+
+	Terry Kennedy		Operations Manager, Academic Computing
+	terry@spcvxa.bitnet	St. Peter's College, Jersey City, NJ USA
+	terry@spcvxa.spc.edu	+1 201 915 9381
+
+
+]
+MID: 1994Jan20.051408.1@spcvxb.spc.edu
+SUBJ: Re: Logging into BSDI BSD/386
+BODY: In article <CJw7A1.2J4@news.direct.net>, jeffw@indirect.com (Jeffrey D. Wheelhouse) writes: | > I'm setting up a BSDI BSD/386 machine, and I'm having a problem with | > remote logins to the machine.  On console, it behaves, but if you  | > telnet into it, It does not always carriage return.  It linefeeds fine, | > but carriage returns are pretty sporadic.  This makes the output from | > commands like "ls -l" and "finger" pretty useless.  Does anyone know | > what might cause this, and how to fix it? |  |   What sort of system are you telneting in from? There are a number of | quirks in the telnet protocol which
+------------------------------------------------------------
+[1994-01-28T14:51:36+00:00] [mark@alias.com (Mark Andrews)] [In <CK7tE2.27Mq@hawnews.watson.ibm.com> curt@watson.ibm.com (Curt McDowell) writes:
+
+>What is the E-mail address at Berkeley for reporting BSD bugs?  I posted
+>a bug fix on comp.bugs.4bsd, but nobody's home.
+
+Try 4bsd-bugs@cs.berkeley.edu. I'm not sure of the status of bug fixing as
+CSRG (Computer Systems Research group), the group responsible for the
+BSD releases is supposed to have disbanded after the release of 4.4BSD.
+
+
+]
+MID: 1994Jan28.145136.2652@alias.com
+SUBJ: Re: BSD bug reports
+BODY: In <CK7tE2.27Mq@hawnews.watson.ibm.com> curt@watson.ibm.com (Curt McDowell) writes: |  | >What is the E-mail address at Berkeley for reporting BSD bugs?  I posted | >a bug fix on comp.bugs.4bsd, but nobody's home. |  | Try 4bsd-bugs@cs.berkeley.edu. I'm not sure of the status of bug fixing as | CSRG (Computer Systems Research group), the group responsible for the | BSD releases is supposed to have disbanded after the release of 4.4BSD. |  |  | 
+------------------------------------------------------------
+[1994-02-09T19:06:44+00:00] [jfw@ksr.com (John F. Woods)] [aradhika.webber@teaminfinity.com (Sysop) writes:
+>What is the difference between, NETBSD, FeeBSD BSDI and Linux.
+
+NETBSD and FeeBSD differ from the others in that they do not exist :-).
+
+NetBSD and FreeBSD are derivatives of Bill Jolitz' port of 4.3BSD/Net2 to
+the PC architecture ("386BSD").  BSDI is the name of a company selling
+a product named BSD/386, which is their port (with some assistance from
+the members of the UCB CSRG) of 4.3BSD/Net2.  Linux is a from-scratch
+operating system written by Linus Torvalds and maintained by him and a
+slavering horde of twisted hackers all over the Internet :-).
+
+Linux has more of a System V feel to its programming interface.  The *BSD*
+operating systems, obviously, have a BSD feel.  BSD/386 costs money ($1000
+for OS and sources, I believe), but is extremely well supported; the others
+are all free, and supported by volunteers.  The differences between NetBSD
+and FreeBSD are hotly debated almost constantly in comp.os.386bsd.*, despite
+the need of an electron microscope to spot most of them.  The indisputable
+differences are (1) NetBSD currently runs on several non-386 architectures,
+because the NetBSD team has placed a high priority on removing 386 dependancies
+that were inserted into 386BSD where they didn't belong; FreeBSD as distributed
+doesn't, yet, though I believe their current source runs on one other
+architecture, as their core team has other priorities.  (2) The installation
+process for FreeBSD 1.0 is said to be slicker and easier than that of NetBSD
+0.9, since the FreeBSD team spent quite a bit of time polishing it; the NetBSD
+process does, at least, work (if you're careful).
+
+Linux is entirely GNU copyright; FreeBSD and NetBSD are primarily UCB
+copyright, except for the GNU utilities they include (hence you could develop
+your own proprietary kernel starting with their work).  BSD/386 as a whole
+is copyright by BSDI and not redistributable; you do, at least, get all the
+sources (except to a couple of device drivers that they got from board
+manufacturers and cannot ship source to).  BSDI has given some of their
+changes and development to the "free" BSD community.
+
+> Which ones will do TCP/IP, Telnet, FTP, SNMP, PPP, UUCP out of the box ?
+
+With the exception of SNMP, NetBSD certainly covers all of these as shipped,
+as do FreeBSD and BSD/386 (which may, for all I know, also have an SNMP
+agent shipped with it); I believe public-domain SNMP agents are available,
+and should run on them.  Linux presumably can make the same claim, but I've
+heard numerous complaints about the quality of their TCP/IP implementation
+(no IP fragmentation/reassembly, for example).
+
+>Which one is overall the best for setting up an Internet site with ?
+
+I shouldn't touch this with a ten foot pole, but:  if "best" means you won't
+have to spend much time and thought on it, and will get guaranteed hand-holding
+by genuine experts and reasonably prompt positive responses to bug reports,
+and if you have the cash for it, go with BSD/386.  If "best" involves
+not paying much for it, then you'll probably have to try out all three of
+the other operating systems (unless you don't have a 386, in which case
+NetBSD is your only choice).
+
+>Which ones can be obtained already on media, for how much and from whom?
+
+BSD/386 obviously comes on purchasable media (info@bsdi.com); Linux and 
+FreeBSD both have CD-ROMs available, and probably floppy distributions as
+well; I do not know whether NetBSD is available on media, but wouldn't be
+at all surprised.  You can ask about distributions in comp.os.linux.help
+and comp.os.386bsd.misc.
+
+
+
+]
+MID: 2jbc84$1j1@hopscotch.ksr.com
+SUBJ: Re: NetBSD FreeBSD LINUX and BSDI Unixes
+BODY: aradhika.webber@teaminfinity.com (Sysop) writes: | >What is the difference between, NETBSD, FeeBSD BSDI and Linux. |  | NETBSD and FeeBSD differ from the others in that they do not exist :-). |  | NetBSD and FreeBSD are derivatives of Bill Jolitz' port of 4.3BSD/Net2 to | the PC architecture ("386BSD").  BSDI is the name of a company selling | a product named BSD/386, which is their port (with some assistance from | the members of the UCB CSRG) of 4.3BSD/Net2.  Linux is a from-scratch | operating system written by Linus Torvalds and maintained by him and a | slavering horde of twisted hackers all over the Interne
+------------------------------------------------------------
+[1994-02-10T16:14:14+00:00] [mark@alias.com (Mark Andrews)] [In <2j9181$l4l@jadzia.CSOS.ORST.EDU> beattie@CSOS.ORST.EDU (Brian Beattie) writes:
+
+>I guess it is probably too early but does anybody have a guess as to when
+>4.4lite will be released?  I would like to get the TCP/IP stuff for a port
+>to OS/2.
+
+I had an email conversation with Keith Bostic yesterday where he answered
+a number of my questions. In terms of availability of 4.4-lite, Keith thought
+in about a month. CSRG (and the USL people) are busy combing over the kernel
+files changing them to meet the requirements of the lawsuit outcome. As for
+what will be missing from 4.4-lite:
+
+  The same things that were missing from Net/2, with a couple of minor
+  additions.  In the kernel, support for executing files, doing physical
+  I/O, managing the buffer cache, handling process tracing, terminal
+  character I/O, and accounting are still missing.  In addition, System
+  V shared memory emulation will be missing from 4.4BSD-Lite.  In user
+  land, the cpio(1) utility has been deleted from 4.4BSD-Lite.  We have
+  also added a few freely redistributable implementations of standard
+  utilities to the system since Net/2.
+
+The 4.4-lite tape will probably cost $1000 (U.S.) but the price won't be
+finalized until CSRG is ready to ship.
+
+As for availability of the manuals, CSRG is pushing for their publication
+but nothing has been finalized.
+
+
+]
+MID: 1994Feb10.161414.23939@alias.com
+SUBJ: Re: Release of 4.4lite - When?
+BODY: In <2j9181$l4l@jadzia.CSOS.ORST.EDU> beattie@CSOS.ORST.EDU (Brian Beattie) writes: |  | >I guess it is probably too early but does anybody have a guess as to when | >4.4lite will be released?  I would like to get the TCP/IP stuff for a port | >to OS/2. |  | I had an email conversation with Keith Bostic yesterday where he answered | a number of my questions. In terms of availability of 4.4-lite, Keith thought | in about a month. CSRG (and the USL people) are busy combing over the kernel | files changing them to meet the requirements of the lawsuit outcome. As for | what will be missing from 4.4-lite: |  |   The same t
+------------------------------------------------------------
+[1994-02-12T03:36:09+00:00] [gingell@opus.eng.sun.com (Rob Gingell)] [In article <2jekt5$let@nntp2.Stanford.EDU> jonathan@leland.Stanford.EDU (Jonathan Stone) writes:
+>Casper H.S. Dik (casper@fwi.uva.nl) writes:
+>>steve@sccsi.com (Steve Nuchia) writes:
+>>>I always wondered how sysVr4 was written.  Did the AT+T programmers
+>>>implement virtual memory and TCP/IP from published specifications,
+>>>or did they have access to BSD code?
+>
+>>The virtual memory came from Sun.
+
+Yes, the SunOS 4.0 VM system was extracted from SunOS (along with other
+things) and used for the work that resulted in SVR4.  The process of 
+doing SVR4 changed it of course, but it's easily recognizable as the
+SunOS 4.0 and later VM system.
+
+>Whose VM system was derived from 4.2BSD, if I recall correctly.
+>Didn't SunOS 3.x use a "machine-independent"  VM system
+>that *was* VAX virtual memory structures, and translate in
+>software to the Sun-2/Sun-3 MMU?
+
+The SunOS 4.0 VM system's implementation was not derived from 4.2BSD, though
+its specification at the system call level is very clearly derived from
+4.2BSD.
+
+However, you're correct that prior to SunOS 4.0, the  memory management system
+in SunOS was essentially straight 4.2BSD.  It's something of a stretch to call
+the 4.2BSD VM system "machine  independent", and  I don't  believe anyone ever
+represented it as such.  It definitely knew it was a VAX VM system.   Ports of
+4.2BSD, including the pre-SunOS 4.0 systems,  tried to  create an "abstract
+VAX" in the lower levels of the system so that the upper  levels could operate
+easily on it.  4.2BSD was certainly well-enough written  that it  was easy for
+people to do this, but it basically implemented a VAX abstract machine.
+
+>Yes, it's a nitpick, Sun's VM system changed for SunOS 4.x;
+>I don't know how *much* because I've never studied the SunOS source.
+>My point is simply that the ancestry is *there*...
+
+I see what you're trying to say, but the point isn't really valid.  Casper's
+original assertion is basically correct -- SVR4's VM system is the SunOS 4.0
+one, and relative to the code, there's no anscestry there.
+
+The 4.0 implementation bears little but superficial resemblance to the 4.2BSD
+one.  Such ancestry as exists comes from the fact that the 4.0 VM system was
+essentially a complete implementation (and expansion of) the 4.2BSD
+specification.  It was the SunOS 4.0 implementation that was written "from
+scratch" starting with the specification, and SVR4 used the resulting
+implementation.
+
+Of course, we started with the 4.2BSD specification because (first of all) it
+was a pretty decent specification that no one had gotten around to fully
+implementing.  We built an original implementation largely because a number of
+aspects of the "abstract VAX" were too constraining to deliver both the full
+functionality of the specification and to allow us to rapidly get to the
+variety of hardware we had and anticipated in the future.  The process of
+building that implementation taught us a lot, things that are reflected in the
+literal differences from and amplification upon the 4.2BSD specification.
+
+The 4.3BSD specification captured many (if not all) of these differences,
+certainly all the important ones.  We were fortunate as we worked to be able
+to collaborate with a number of people in the BSD community, and particularly
+Kirk McKusick and Mike Karels at CSRG.  Ultimately, of course, later BSD
+releases also implemented the full specification, though that implementation
+was as independent of SunOS 4.0 as 4.0 was of 4.2BSD.
+
+
+
+]
+MID: mlojl9INNdn@exodus.Eng.Sun.COM
+SUBJ: Re: How was BSD written?
+BODY: In article <2jekt5$let@nntp2.Stanford.EDU> jonathan@leland.Stanford.EDU (Jonathan Stone) writes: | >Casper H.S. Dik (casper@fwi.uva.nl) writes: | >>steve@sccsi.com (Steve Nuchia) writes: | >>>I always wondered how sysVr4 was written.  Did the AT+T programmers | >>>implement virtual memory and TCP/IP from published specifications, | >>>or did they have access to BSD code? | > | >>The virtual memory came from Sun. |  | Yes, the SunOS 4.0 VM system was extracted from SunOS (along with other | things) and used for the work that resulted in SVR4.  The process of  | doing SVR4 changed it of course, but it's easily recogn
+------------------------------------------------------------
+[1994-02-13T19:10:19+00:00] [vixie@vix.com (Paul A Vixie)] [I've been thinking about this for a long time. I would support a BSD Consortium
+if such is created; however, there are several reasons why our situation
+differs sufficiently from X11 and the X Consortium that it'll be very hard
+to get a BSD Consortium in place.  Here's my thinking, starting with X11
+differences.
+
+1. vendor support.  almost all X Consortium members (which in turn means:
+  X Consortium funding sources) are system vendors who want to ship X11
+  with their systems and see this as a cheaper/better alternative to doing
+  their own incompatible window system.  i do not see a corresponding list
+  of system vendors eager to stop shipping their own proprietary UNIX-like
+  operating systems in favor of something based on the output of a proposed
+  BSD Consortium.
+
+2. egos.  even with CSRG, who is fairly introfocused and apolitical, i suspect
+  that each BNR2-derived system (BSDi, NetBSD, FreeBSD, and to some extent,
+  Linux) will pick and choose from what they see in 4.4-lite and put in only
+  the things that won't overwrite the parts of the system that each group has
+  done a lot of work on and therefore has a strong personal interest in.  even
+  if those conflict areas have already resulted in lots of code being "donated"
+  to CSRG, sometimes CSRG has to do something "else" for whatever reason and
+  in those instances i know of specific strong personalities in each of the 
+  BNR2-derivative camps who will say "sorry, i don't agree, we're not moving
+  that part of our system to 4.4-lite".  a BSD Consortium would have a hard
+  time staying relevant since so many BSD folks are wild-assed cowboys who
+  want to be different sometimes just to be different.  again, the X Consortium
+  has less trouble with this because the people _in_ the X Consortium wrote
+  most of the code that they ship.  folks outside the X Consortium pretty much
+  _expect_ that the system's interface and architecture will continue to evolve
+  and they _trust_ the people in the X Consortium to "do the right thing".  I
+  don't see enough of the CSRG team (even counting emeritus members) remaining
+  who would want to be a part of a BSD Consortium; therefore the people who
+  would form the BSD Consortium would have a large credibility problem with
+  the great unwashed mass of BSD cowboys.
+
+All that aside, I think this is a great idea and if I thought I could make it
+work (that is, not go bankrupt in the first year) I'd give it a go.  But it's
+hard to do it without funding, and the people who would need to fund a BSD
+Consortium are all out there chasing OSF/1 and SVR4 as their O S strategy.  We
+are working on a "public internet software consortium" for various components
+like BIND that still tend to have "one true version", cast in the image of the
+highly successful GateD Consortium.  but a Consortium covering all of BSD seems
+impossible for several reasons, some commercial, some political, all shown
+above.  
+
+Vendors with interest in funding this sort of activity are welcome speak up
+and prove me wrong, of course...
+--
+Paul Vixie
+Redwood City, CA    Also: <comp-sources-unix@uunet.uu.net>, <vixie@bsdi.com>,
+decwrl!vixie!paul         <ftpmail-admin@pa.dec.com>, <vixie@sony.com>,
+<paul@vix.com>            <{bind-workers,objectivism}-request@vix.com>
+
+
+]
+MID: VIXIE.94Feb13191019@office.home.vix.com
+SUBJ: Re: Could the BSD 4.4 Lite be a new beginning?
+BODY: I've been thinking about this for a long time. I would support a BSD Consortium | if such is created; however, there are several reasons why our situation | differs sufficiently from X11 and the X Consortium that it'll be very hard | to get a BSD Consortium in place.  Here's my thinking, starting with X11 | differences. |  | 1. vendor support.  almost all X Consortium members (which in turn means: |   X Consortium funding sources) are system vendors who want to ship X11 |   with their systems and see this as a cheaper/better alternative to doing |   their own incompatible window system.  i do not see a correspo
+------------------------------------------------------------
+[1994-02-13T19:10:19+00:00] [vixie@vix.com (Paul A Vixie)] [I've been thinking about this for a long time. I would support a BSD Consortium
+if such is created; however, there are several reasons why our situation
+differs sufficiently from X11 and the X Consortium that it'll be very hard
+to get a BSD Consortium in place.  Here's my thinking, starting with X11
+differences.
+
+1. vendor support.  almost all X Consortium members (which in turn means:
+  X Consortium funding sources) are system vendors who want to ship X11
+  with their systems and see this as a cheaper/better alternative to doing
+  their own incompatible window system.  i do not see a corresponding list
+  of system vendors eager to stop shipping their own proprietary UNIX-like
+  operating systems in favor of something based on the output of a proposed
+  BSD Consortium.
+
+2. egos.  even with CSRG, who is fairly introfocused and apolitical, i suspect
+  that each BNR2-derived system (BSDi, NetBSD, FreeBSD, and to some extent,
+  Linux) will pick and choose from what they see in 4.4-lite and put in only
+  the things that won't overwrite the parts of the system that each group has
+  done a lot of work on and therefore has a strong personal interest in.  even
+  if those conflict areas have already resulted in lots of code being "donated"
+  to CSRG, sometimes CSRG has to do something "else" for whatever reason and
+  in those instances i know of specific strong personalities in each of the 
+  BNR2-derivative camps who will say "sorry, i don't agree, we're not moving
+  that part of our system to 4.4-lite".  a BSD Consortium would have a hard
+  time staying relevant since so many BSD folks are wild-assed cowboys who
+  want to be different sometimes just to be different.  again, the X Consortium
+  has less trouble with this because the people _in_ the X Consortium wrote
+  most of the code that they ship.  folks outside the X Consortium pretty much
+  _expect_ that the system's interface and architecture will continue to evolve
+  and they _trust_ the people in the X Consortium to "do the right thing".  I
+  don't see enough of the CSRG team (even counting emeritus members) remaining
+  who would want to be a part of a BSD Consortium; therefore the people who
+  would form the BSD Consortium would have a large credibility problem with
+  the great unwashed mass of BSD cowboys.
+
+All that aside, I think this is a great idea and if I thought I could make it
+work (that is, not go bankrupt in the first year) I'd give it a go.  But it's
+hard to do it without funding, and the people who would need to fund a BSD
+Consortium are all out there chasing OSF/1 and SVR4 as their O S strategy.  We
+are working on a "public internet software consortium" for various components
+like BIND that still tend to have "one true version", cast in the image of the
+highly successful GateD Consortium.  but a Consortium covering all of BSD seems
+impossible for several reasons, some commercial, some political, all shown
+above.  
+
+Vendors with interest in funding this sort of activity are welcome speak up
+and prove me wrong, of course...
+--
+Paul Vixie
+Redwood City, CA    Also: <comp-sources-unix@uunet.uu.net>, <vixie@bsdi.com>,
+decwrl!vixie!paul         <ftpmail-admin@pa.dec.com>, <vixie@sony.com>,
+<paul@vix.com>            <{bind-workers,objectivism}-request@vix.com>
+
+
+]
+MID: VIXIE.94Feb13191019@office.home.vix.com
+SUBJ: Re: Could the BSD 4.4 Lite be a new beginning?
+BODY: I've been thinking about this for a long time. I would support a BSD Consortium | if such is created; however, there are several reasons why our situation | differs sufficiently from X11 and the X Consortium that it'll be very hard | to get a BSD Consortium in place.  Here's my thinking, starting with X11 | differences. |  | 1. vendor support.  almost all X Consortium members (which in turn means: |   X Consortium funding sources) are system vendors who want to ship X11 |   with their systems and see this as a cheaper/better alternative to doing |   their own incompatible window system.  i do not see a correspo
+------------------------------------------------------------
+[1994-02-18T13:37:21+00:00] [peter@usenix.org (Peter H. Salus)] [In article <2k12l8$flq@explorer.clark.net> phil@clark.net (Phil Anglin) writes:
+>Q:  What neat things does 4.4BSD have?
+>A:  Berkeley improvements since Net/2, our code base and the predecessor
+>    to 4.4, include:  improved filesystem throughput (through clustering),
+>    availability of a log-based filesystem, stackable file systems (which
+>    ease filesystem development), and networking code improvements.
+
+	And, of course, portals as implemented by 
+	Jan-Simon Pendry.  I think it's important 
+	to recognize that as it went out of business,
+	the CSRG continued what has been done for 
+	15 years:  incorporation of good work into 
+	a release that was done by one of the "far flung"
+	users.  (Recall, the first version of job 
+	control in 4.1 was done by Jim Kulp at IIASA
+	in Austria.)
+
+Peter
+(historical memorialist)
+-- 
+________________________________________________________________
+
+Peter H. Salus	#3303	4 Longfellow Place	Boston, MA 02114
+	+1 617 723-3092
+
+
+]
+MID: CLF9u9.HBw@usenix.org
+SUBJ: Re: UCB/USL lawsuit settled
+BODY: In article <2k12l8$flq@explorer.clark.net> phil@clark.net (Phil Anglin) writes: | >Q:  What neat things does 4.4BSD have? | >A:  Berkeley improvements since Net/2, our code base and the predecessor | >    to 4.4, include:  improved filesystem throughput (through clustering), | >    availability of a log-based filesystem, stackable file systems (which | >    ease filesystem development), and networking code improvements. |  | 	And, of course, portals as implemented by  | 	Jan-Simon Pendry.  I think it's important  | 	to recognize that as it went out of business, | 	the CSRG continued what has been done for  | 	15 ye
+------------------------------------------------------------
+[1994-02-20T19:21:06+00:00] [henry@zoo.toronto.edu (Henry Spencer)] [In article <CLF9u9.HBw@usenix.org> peter@usenix.UUCP (Peter H. Salus) writes:
+>	...the CSRG continued what has been done for 
+>	15 years:  incorporation of good work into 
+>	a release that was done by one of the "far flung"
+>	users.  (Recall, the first version of job 
+>	control in 4.1 was done by Jim Kulp at IIASA
+>	in Austria.)
+
+These two statements are unquestionably true, Peter, but what have they to
+do with each other? :-)
+
+(Job control was not "good work"; it was a wretched botch that probably
+delayed the appearance of better multiplexed-interaction schemes for years,
+and will continue to haunt us for decades since it somehow got into POSIX.
+Its wide acceptance only shows how desperate people were for *some kind*
+of multiplexed interaction, however awkward and gross.)
+-- 
+Belief is no substitute                 | Henry Spencer @ U of Toronto Zoology
+for arithmetic.                         |  henry@zoo.toronto.edu  utzoo!henry
+
+
+]
+MID: CLJF38.IKB@zoo.toronto.edu
+SUBJ: Re: UCB/USL lawsuit settled
+BODY: In article <CLF9u9.HBw@usenix.org> peter@usenix.UUCP (Peter H. Salus) writes: | >	...the CSRG continued what has been done for  | >	15 years:  incorporation of good work into  | >	a release that was done by one of the "far flung" | >	users.  (Recall, the first version of job  | >	control in 4.1 was done by Jim Kulp at IIASA | >	in Austria.) |  | These two statements are unquestionably true, Peter, but what have they to | do with each other? :-) |  | (Job control was not "good work"; it was a wretched botch that probably | delayed the appearance of better multiplexed-interaction schemes for years, | and will continue to
+------------------------------------------------------------
+[1994-03-15T23:18:19+00:00] [jwa@yog-sothoth.dcrt.nih.gov (James W. Adams)] [In article <2m2kem$f29@mhaau.inhouse.compuserve.com> dneedham@csi.compuserve.com (Douglas Wade Needham) writes:
+>[...]
+>Now all I am really waiting (re: drooling) for is for it to be moved over
+>to BSD4.4 now that the suit is settled. 8)  Just MHO.
+
+All this hoopla over 4.4BSD-Lite has me a bit confused.  According to
+the release announcement letter for 4.4BSD-Alpha, 4.4 Lite was to be
+essentially Net-2 with bug fixes, some enhancements and support for
+additional architectures, with no new kernel files and only a few
+additional programs.  Most of the real improvements in 4.4BSD were in
+the kernel interfaces and filesystems, code which the letter distinctly
+implied would *not* be in 4.4 Lite.
+
+Since the so-called "settlement" doesn't permit distribution of
+4.4BSD-Encumbered without the customary USL source license, it seems to
+me that most of this work will end up benefiting only those whose
+pockets are deep enough to have a USL UNIX source license.
+
+Has this situation changed, or am I correct in assuming that the change
+in BSDI from Net-2 to 4.4-Lite will result in minimal functional
+benefit?
+
+For the sake of discussion, I have included the relevant portions of the
+4.4 Alpha release announcement below:
+
+
+-----------------------------------------------------------------------
+
+Licensing info:  Pauline Schwartz
+                 Distribution Coordinator
+                 Computer Systems Research Group
+                 Computer Science Division, EECS
+                 University of California
+                 Berkeley, California 94720
+                 (510) 642-7780
+                 pauline@cs.berkeley.edu
+                 
+-----------------------------------------------------------------------
+
+
+
+UNIVERSITY OF CALIFORNIA, BERKELEY
+
+COMPUTER SYSTEMS RESEARCH GROUP
+COMPUTER SCIENCE DIVISION, EECS
+BERKELEY, CALIFORNIA 94720
+(510) 642-7780
+
+
+Dear Colleague:
+
+July 7, 1992
+
+We are happy to send you information about our June 1992 release of
+4.4BSD-alpha.  This release represents our expectations for the final
+interfaces that will be present in 4.4BSD.  Our goal in making this
+release available is to get feedback on any problems in the design or
+implementation of the new facilities, and to allow adventurous sites to
+gain experience with the new interfaces in 4.4BSD.
+
+This distribution is NOT intended to be used on production systems; nor
+is it intended for sites without enough local expertise to find and fix
+any problems that are encountered. It is intended to be used to provide
+an advance look at some of the facilities and interfaces that we will be
+distributing in 4.4BSD. We are interested in getting feedback on the
+problems that you find and also any compatibility problems that you
+encounter in converting your applications to run on this release. While
+we hope that the interfaces in this release will not change before the
+final release of 4.4BSD, we will make changes that we feel are necessary
+to fix problems that arise during the alpha release period (at least in
+part based on feedback from this test group). Where possible, we will
+minimize changes that will break applications ported to this release.
+The code in this distribution may be redistributed and used in released
+products. However, you are strongly encouraged to upgrade any code that
+you use from this distribution to the similarly-licensed distribution of
+the 4.4BSD code within one year of its release.
+
+Only limited support can be provided by our group.  Specifically, we
+cannot provide help with installation of this software on other
+systems, although we are, of course, interested in hearing of problems
+that you encounter.
+
+We are planning on releasing two versions of the software,
+4.4BSD-Encumbered and 4.4BSD-Lite. The 4.4BSD-Encumbered distribution is
+available only to sites with UNIX/32V, System III, or System V source
+licenses with USL/AT&T. The 4.4BSD-Encumbered distribution is a complete
+distribution in the style of 4.3BSD and contains the complete source for
+the Berkeley Distribution.
+
+The 4.4BSD-Lite distribution will be a distribution that is copyrighted
+by the University of California and others, but may be freely
+redistributed. It will be available to anyone and requires no previous
+license either from USL/AT&T or The Regents of the University of
+California. Its license agreement and content will be similar to that of
+the two BSD Networking Releases. The 4.4BSD-Lite distribution will
+contain only a few additional programs and no additional kernel files
+from the Second Networking release done in June 1991. However, it will
+contain support for additional architectures and will have many bug fixes
+and performance enhancements. The distribution will include both software
+developed at Berkeley and also much of software contributed by
+authors outside Berkeley.
+
+Only the 4.4BSD-Encumbered distribution is available at this time. The
+4.4BSD-Lite distribution is not available at this time; we will send out
+a mailing to notify you when it is available.
+
+The enclosed information is designed to serve two purposes. The first
+purpose is to acquaint you with the details of our distribution so you
+can decide whether you would like to receive it.  The second purpose is
+to tell you how to obtain our distribution.
+
+What is 4.4BSD?
+
+This software distribution is provided on one 6250bpi 1/2" 9-track tape
+or one 8mm Exabyte cassette only. The 4.4BSD-Encumbered distribution
+contains complete source as well as binaries for the HP9000/300 series of
+workstations. The 4.4BSD-Lite distribution will contain only freely
+redistributable sources. As the sources do not comprise a complete
+system, no binaries will be included.
+
+The architectures that are supported include:
+
+HP 9000/300 68000-based workstations
+
+Intel 386/486-based machines (ISA/AT or EISA bus only)
+
+Sony News MIPS-based workstations
+
+Omron Luna 68000-based workstations
+
+DECstation 3100 and 5000 MIPS-based workstations
+
+Sparcstation I & II SPARC-based workstations
+
+The distribution does not include the machine support for the Tahoe and
+VAX architectures found in previous BSD distributions. Our primary
+development is on the HP9000/300 series machines. The other
+architectures are being developed and supported by people outside the
+university. Consequently, we are not able to directly test or maintain
+these other architectures, so cannot comment on their robustness,
+reliability, or completeness.
+
+The major new facilities available in the 4.4BSD release are a new
+virtual memory system, a log-structured filesystem, enhancement of the
+local filesystems to support files and filesystems that are up to 2^63
+bytes in size, the addition of ISO/OSI networking support, a freely
+redistributable implementation of NFS, and the conversion to and
+addition of the IEEE Std1003.1 ("POSIX") facilities and many of the
+IEEE Std1003.2 facilities. In addition, many new utilities and additions
+to the C library are present as well.  The kernel sources have been
+reorganized to collect all machine-dependent files for each architecture
+under one directory, and most of the machine-independent code is now
+free of code conditional on specific machines. The user structure and
+process structure have been reorganized to eliminate the statically-
+mapped user structure and to make most of the process resources
+sharable by multiple processes. The system and include files have been
+converted to be compatible with ANSI C, including function prototypes
+for most of the exported functions. There are numerous other changes
+throughout the system.
+
+The new virtual memory implementation is derived from the MACH operating
+system developed at Carnegie-Mellon, and was ported to the BSD kernel
+at the University of Utah. The MACH virtual memory system call interface
+has been replaced with the "mmap"-based interface described in the
+"Berkeley Software Architecture Manual" (see UNIX Programmer's Manual,
+Supplementary Documents, PS1:6). The interface is similar to the
+interfaces shipped by several commercial vendors such as Sun, Convex
+Computer Corp. and USL/AT&T. The integration of the new virtual
+memory is functionally complete, but still has serious performance
+problems under heavy memory load. The internal kernel interfaces have
+not yet been completed and the memory pool and buffer cache have not yet
+been merged. Some of these changes are expected before the release of
+4.4BSD.
+
+The ISO/OSI Networking consists of a kernel implementation of transport
+class 4 (TP-4), connectionless networking protocol (CLNP), and
+802.3-based link-level support (hardware-compatible with Ethernet). We
+also include support for ISO Connection-Oriented Network Service, X.25,
+TP-0. The session and presentation layers are provided outside the kernel
+by the ISO development environment (ISODE). Included in this development
+environment are file transfer and management (FTAM), virtual terminals
+(VT), a directory services implementation (X.500), and miscellaneous
+other utilities.
+
+A new virtual filesystem interface has been added to the kernel to
+support multiple filesystems. In comparison with other interfaces, the
+Berkeley interface has been structured for more efficient support of
+filesystems that maintain state (such as the local filesystem). The
+interface has been extended with support for stackable filesystems done
+at UCLA. These extensions allow for filesystems to be layered on top of
+each other and allow new vnode operations to be added without requiring
+changes to existing filesystem implementations.
+
+In addition to the local "fast filesystem", we have added an
+implementation of the network filesystem (NFS) that fully
+interoperates with the NFS shipped by Sun and its licensees. Because our
+NFS implementation was implemented using only the publicly available
+NFS specification, it does not require a license from Sun to use in
+source or binary form. By default it runs over UDP to be compatible with
+Sun's implementation. However, it can be configured on a per-mount basis
+to run over TCP. Using TCP allows it to be used quickly and efficiently
+through gateways and over long-haul networks. Using an extended
+protocol, it supports Leases to allow a limited callback mechanism that
+greatly reduces the network traffic necessary to maintain cache
+consistency between the server and its clients.
+
+A new log-structured filesystem has been added that provides near
+disk-speed output and fast crash recovery. It is still experimental in
+the alpha release, though we hope to have enough experience with it to
+recommend it for production use by the time of the final 4.4BSD release.
+We have also added a memory-based filesystem that runs in pageable
+memory, allowable large temporary filesystems without requiring dedicated
+physical memory.
+
+The quota system has been rewritten to support both user and group
+quotas (simultaneously if desired). Quota expiration is based on time
+rather than the previous metric of number of logins over quota. This
+change makes quotas more useful on fileservers onto which users seldom
+login.
+
+The 4.4BSD distribution contains most of the interfaces specified in the
+IEEE Std1003.1 system interface standard. The biggest area of change is a
+new terminal driver. The terminal driver is similar to the System V
+terminal driver with the addition of the necessary extensions to get the
+functionality previously available in the 4.3BSD terminal driver. 4.4BSD
+also adds the IEEE Std1003.1 job control interface, which is similar to
+the 4.3BSD job control interface, but adds a security model that was
+missing in the 4.3BSD job control implementation. Other additions
+include IEEE Std1003.1 signals, FIFOs, byte-range file locking, and saved
+user and group identifiers.
+
+There are several new tools and utilities included in this release. A
+new version of make allows much-simplified makefiles for the system
+software and allows compilation for multiple architectures from the same
+source tree (which may be mounted read-only). Notable additions to the
+libraries include functions to traverse a filesystem hierarchy,
+database interfaces to btree and hashing functions, a new, fast
+implementation of stdio and a radix sort function. The additions to the
+utility suite include greatly enhanced versions of programs that display
+system status information, implementations of various traditional
+tools described in the IEEE Std1003.2 standard, and many others.
+
+We have been tracking the IEEE Std1003.2 shell and utility work and have
+included prototypes of many of the proposed utilities. Because most of
+the traditional utilities have been replaced with implementations
+conformant to the POSIX standards, you should realize that the utility
+software may not be as stable, reliable or well documented as in
+traditional Berkeley releases. In particular, almost the entire manual
+suite has been rewritten to be freely redistributable and, in many
+instances, it does not correctly reflect the current state of the
+software. It is also worth noting that, in rewriting this software, we
+have generally been rewarded with significant performance
+improvements. Most of the libraries and header files have been converted
+to be compliant with ANSI C. The default compiler (gcc) is a superset of
+ANSI C, but supports traditional C as a command-line option. The system
+libraries and utilities all compile with either ANSI or traditional C.
+
+Work has also progressed in several other areas. Several important
+enhancements have been added to the TCP/IP protocols including TCP
+header prediction and serial line IP (SLIP) with header compression. The
+routing implementation has been completely rewritten to use a
+hierarchical routing tree with a mask per route to support the arbitrary
+levels of routing found in the ISO protocols. The routing table also
+stores and caches route characteristics to speed the adaptation of the
+throughput and congestion avoidance algorithms.
+
+The Kerberos (version 4) authentication software has been integrated
+into much of the system (including NFS) to provide the first real
+network authentication on BSD.
+
+This release includes several important structural kernel changes. The
+kernel uses a new internal system call convention; the use of global
+("u-dot") variables for parameters and error returns has been
+eliminated, and interrupted system calls no longer abort using non-local
+goto's (longjmp's). A new sleep interface separates signal handling from
+scheduling priority, returning characteristic errors to abort or restart
+the current system call. This sleep call also passes a string describing
+the process state, which is used by the ps(1) program. The old sleep
+interface can be used only for non-interruptible sleeps. The sleep
+interface (tsleep) can be used at any priority, but is only
+interruptible if the PCATCH flag is set. When interrupted, tsleep
+returns EINTR or ERESTART.
+
+Many data structures that were previously statically allocated are now
+allocated dynamically. These structures include mount entries, file
+entries, user open file descriptors, the process entries, the vnode
+table, the name cache, and the quota structures.
+
+The End of BSD from Berkeley
+
+As you may already have heard, the CSRG is going to go away after the
+final release of 4.4BSD. For the following reasons, clearly the CSRG
+cannot continue in its present form.
+
+Funding has become increasingly time-consuming and difficult. We are
+spending more and more of our time obtaining funding, time that we would
+prefer to spend working on BSD. As many of you are intimately aware,
+computer corporations are actively seeking ways to reduce discretionary
+outlays. Also, as UNIX vendors have developed their own research
+groups, the work of the CSRG has become less necessary to them.
+Finally, making BSD freely redistributable has resulted in fewer
+distributions sold, as other organizations sell our releases for less
+money.
+
+Support within the University of California has declined as BSD has
+become less widely used internally. Victims of our own success, many of
+the features once found only in BSD are now available from every
+vendor.
+
+The system has become too large and complex for a group of four to
+architect and maintain. In particular, losing Mike Karels has made it
+obvious to us that the group is below critical mass for developing and
+distributing a complete UNIX system.
+
+We are making the 4.4BSD-alpha distribution available now. We will spend
+the summer and some part of the fall cleaning up the release and make
+the final 4.4BSD release available in the fall. When the final release
+happens is mostly dependent on when our current funding runs out. At
+that time we will close down the group. We would really like to have six
+months to finish up 4.4BSD. The amount of time that we get is largely a
+function of how many of you purchase the alpha distribution. So, if you
+are planning to get 4.4BSD when it comes out, please consider buying an
+alpha distribution with an upgrade option instead. That way your money
+will go to support the final 4.4BSD release.
+
+BSD has always been a community effort, and, as a community effort, does
+not rely on a small group of people in Berkeley to keep it going. BSD
+will not go away, but will live on through the free software and
+commercial efforts of many people. We thank you for your support over
+the years, your funding, and, of course, the software you've contributed
+to make the BSD system what it is today!
+
+How to obtain 4.4BSD-Encumbered
+
+To obtain 4.4BSD-Encumbered we require execution of the Berkeley License
+Agreement (6/92). In addition, foreign licensees must execute Addendum
+Number One for Foreign Licensees in ordering 4.4BSD-Encumbered. The fee
+is $2000.00 for 4.4BSD-Encumbered.
+
+Because we are a research and development organization and not a
+commercial organization, we make our research results available for a
+small license fee. We distribute only the whole system "As Is" and cannot
+send individual pieces of the system. We are required by the University
+of California to have a formal license arrangement with each
+organization to which we distribute. All material is considered licensed
+material regardless of its availability from other sources that make
+such material publicly available. In addition, for 4.4BSD-Encumbered,
+we are required to secure a copy of the AT&T Software Agreement with
+your organization and confirm it with AT&T before the software can be
+shipped.
+
+[...details of licensing edited out for brevity]
+
+
+
+                                 Sincerely yours,
+
+
+                                 Marshall Kirk McKusick
+                                 Research Computer Scientist
+                                 Computer Systems Research Group
+
+
+
+
+--
+  James W. Adams     --     Bioinformatics and Molecular Analysis Section
+  Building 12A, Room 2013              jwa@alw.nih.gov, uunet!nih-csl!jwa
+  National Institutes of Health
+  Bethesda, MD 20892                          "Spay the Children"
+
+
+]
+MID: 1994Mar15.231819.6874@alw.nih.gov
+SUBJ: 4.4BSD-Lite (Was: BSD vs. Linux)
+BODY: In article <2m2kem$f29@mhaau.inhouse.compuserve.com> dneedham@csi.compuserve.com (Douglas Wade Needham) writes: | >[...] | >Now all I am really waiting (re: drooling) for is for it to be moved over | >to BSD4.4 now that the suit is settled. 8)  Just MHO. |  | All this hoopla over 4.4BSD-Lite has me a bit confused.  According to | the release announcement letter for 4.4BSD-Alpha, 4.4 Lite was to be | essentially Net-2 with bug fixes, some enhancements and support for | additional architectures, with no new kernel files and only a few | additional programs.  Most of the real improvements in 4.4BSD were in | the ker
+------------------------------------------------------------
+[1994-04-05T01:15:39+00:00] [brian@demon.uucp (Brian Murray)] [In article <CnM4BH.8s5@lscruz.scf.lmsc.lockheed.com> alan@lscruz.scf.lmsc.lockheed.com (Alan Strassberg) writes:
+>+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-
+>From a previous posting to comp.unix.bsd
+>Note: this was prior to lawsuit settlement
+>+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-
+>
+>Subject: 4.4BSD Release
+>                                                June 1, 1993
+>Dear Colleague:
+>
+>     We are happy to send you  information  about  our  June
+>1993  release  of  4.4BSD.   This  distribution is the final
+>release that will be done by the Computer  Systems  Research
+>Group  (CSRG).  For details on the demise of CSRG, see ``The
+>End of BSD from Berkeley'' below.
+>
+>[...]
+
+Would it be possible to repost the entire article? I would be interested
+in the full story, and I'm sure others would also.
+
+Thanks,
+-- 
+------------------------------------------------ Brian Murray ---
+brian@demon.csd.unsw.edu.au CBX250 Apple//c VAX 11/750 SGI Indigo
+-----------------------------------------------------------------
+
+
+]
+MID: 1994Apr5.011539.1611@usage.csd.unsw.OZ.AU
+SUBJ: Re: cost of 4.4 bsd
+BODY: In article <CnM4BH.8s5@lscruz.scf.lmsc.lockheed.com> alan@lscruz.scf.lmsc.lockheed.com (Alan Strassberg) writes: | >+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+- | >From a previous posting to comp.unix.bsd | >Note: this was prior to lawsuit settlement | >+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+- | > | >Subject: 4.4BSD Release | >                                                June 1, 1993 | >Dear Colleague: | > | >     We are happy to send you  information  about  our  June | >1993  release  of  4.4BSD.   This  distribution is the final | >release that will be done by the Com
+------------------------------------------------------------
+[1994-04-22T23:27:55+00:00] [pauls@locust.cic.net (Paul Southworth)] [In article <2p9fur$kin@zenos.physci.psu.edu>,
+Dan Cross <tenser@zenos.physci.psu.edu> wrote:
+>Now that the UCB has stopped working on BSD, bell labs has discontinued work
+>on the 10th edition research UNIX, and Novell has bought USL, who is going to
+>keep UNIX alive?
+
+NetBSD, FreeBSD, BSDI, and OSF, IMO.  I add OSF since the OSF1
+operating system seems to be tolerable, but obviously if you're looking
+for full source, they have to be left out as cost-prohibitive.  I think
+we should also *not* discount the continued efforts of the BSD old
+school; Eric Allman and Keith Bostic deserve credit for keeping some
+pieces alive while the rest is being dropped.  I hope it can be worth
+their while to keep it up.
+
+> (heh, sorry if this sounds morbid...)  Anyway, how is UNIX
+>going to keep being advanced if no one but commercial vendors are working on 
+>it?
+
+Given that BSDI offers full source and the whole thing is priced 
+reasonably, I think there's hope for both commercial and non-commercial
+torch-bearers.  Their future qualification, I think, will rely on expansion
+beyond i386-PC architectures, but that appears to be in the works, so...
+
+BSDI also appears to be developing as a home for former CSRG programmers
+and other unrelated but experienced BSD programmers where they can continue
+to do the work they want and get paid for it.
+
+--
+pauls@cic.net
+
+
+]
+MID: 2p9mhr$eih@spruce.cic.net
+SUBJ: Re: Where do we go from here?
+BODY: In article <2p9fur$kin@zenos.physci.psu.edu>, | Dan Cross <tenser@zenos.physci.psu.edu> wrote: | >Now that the UCB has stopped working on BSD, bell labs has discontinued work | >on the 10th edition research UNIX, and Novell has bought USL, who is going to | >keep UNIX alive? |  | NetBSD, FreeBSD, BSDI, and OSF, IMO.  I add OSF since the OSF1 | operating system seems to be tolerable, but obviously if you're looking | for full source, they have to be left out as cost-prohibitive.  I think | we should also *not* discount the continued efforts of the BSD old | school; Eric Allman and Keith Bostic deserve credit for k
+------------------------------------------------------------
+[1994-04-23T13:54:31+00:00] [vixie@vix.com (Paul A Vixie)] [>As far as I understood it, this is true. Perhaps they didn't make it
+>available, because they wanted to earn some money, before everybody
+>can ftp it. The origional announcement stated, that it has the usual
+>BSD copyright notice, which allows you to freely redistribute the
+>stuff. What I do not understand is, why are they making such a heck
+>around the licensing?
+
+Because if _they_ provide it to you, the method by which they do so has to
+please _their_ lawyers; if you get it from CSRG and subsequently provide it
+via anonymous FTP, then you will do so in a way that pleases _your_ lawyers.
+
+Noone in the post-USL-UCB-lawsuit era should question the motives of UCB's
+lawyers if they appear to be overly conservative.
+--
+Paul Vixie
+Redwood City, CA
+decwrl!vixie!paul
+<paul@vix.com>
+
+
+]
+MID: VIXIE.94Apr23135431@office.home.vix.com
+SUBJ: Re: The 4.4BSD-Lite distribution announcement
+BODY: >As far as I understood it, this is true. Perhaps they didn't make it | >available, because they wanted to earn some money, before everybody | >can ftp it. The origional announcement stated, that it has the usual | >BSD copyright notice, which allows you to freely redistribute the | >stuff. What I do not understand is, why are they making such a heck | >around the licensing? |  | Because if _they_ provide it to you, the method by which they do so has to | please _their_ lawyers; if you get it from CSRG and subsequently provide it | via anonymous FTP, then you will do so in a way that pleases _your_ lawyers. |  | No
+------------------------------------------------------------
+[1994-04-30T15:28:25+00:00] [bostic@toe.CS.Berkeley.EDU (Keith Bostic)] [In article <1994Apr26.225043.1564@newcom.kiae.su>,
+Andrew A. Chernov, Black Mage <ache@astral.msk.su> wrote:
+>
+>Keith, please tell us what exactly happens in 44Lite with list of
+>kernel files marked by USL as "encumbred" in Net/2
+>Are this files simple deleted or rewrited or anything else?
+
+Kernel functionality missing in Net/2 is still missing in
+4.4BSD-Lite.  The functionality missing from 4.4BSD-Lite,
+that was present in Net/2, is the System V shared memory
+implementation and cpio(1).
+
+Keith Bostic
+        CSRG
+        University of California
+
+        uunet!bostic
+        bostic@cs.berkeley.edu
+
+
+
+]
+MID: 2pttep$g1c@agate.berkeley.edu
+SUBJ: Re: The 4.4BSD-Lite distribution announcement
+BODY: In article <1994Apr26.225043.1564@newcom.kiae.su>, | Andrew A. Chernov, Black Mage <ache@astral.msk.su> wrote: | > | >Keith, please tell us what exactly happens in 44Lite with list of | >kernel files marked by USL as "encumbred" in Net/2 | >Are this files simple deleted or rewrited or anything else? |  | Kernel functionality missing in Net/2 is still missing in | 4.4BSD-Lite.  The functionality missing from 4.4BSD-Lite, | that was present in Net/2, is the System V shared memory | implementation and cpio(1). |  | Keith Bostic |         CSRG |         University of California |  |         uunet!bostic |         bostic@cs.berkele
+------------------------------------------------------------
+[1994-04-30T15:28:25+00:00] [bostic@toe.CS.Berkeley.EDU (Keith Bostic)] [In article <1994Apr26.225043.1564@newcom.kiae.su>,
+Andrew A. Chernov, Black Mage <ache@astral.msk.su> wrote:
+>
+>Keith, please tell us what exactly happens in 44Lite with list of
+>kernel files marked by USL as "encumbred" in Net/2
+>Are this files simple deleted or rewrited or anything else?
+
+Kernel functionality missing in Net/2 is still missing in
+4.4BSD-Lite.  The functionality missing from 4.4BSD-Lite,
+that was present in Net/2, is the System V shared memory
+implementation and cpio(1).
+
+Keith Bostic
+        CSRG
+        University of California
+
+        uunet!bostic
+        bostic@cs.berkeley.edu
+
+
+
+]
+MID: 2pttep$g1c@agate.berkeley.edu
+SUBJ: Re: The 4.4BSD-Lite distribution announcement
+BODY: In article <1994Apr26.225043.1564@newcom.kiae.su>, | Andrew A. Chernov, Black Mage <ache@astral.msk.su> wrote: | > | >Keith, please tell us what exactly happens in 44Lite with list of | >kernel files marked by USL as "encumbred" in Net/2 | >Are this files simple deleted or rewrited or anything else? |  | Kernel functionality missing in Net/2 is still missing in | 4.4BSD-Lite.  The functionality missing from 4.4BSD-Lite, | that was present in Net/2, is the System V shared memory | implementation and cpio(1). |  | Keith Bostic |         CSRG |         University of California |  |         uunet!bostic |         bostic@cs.berkele
+------------------------------------------------------------
+[1994-04-30T15:32:23+00:00] [bostic@toe.CS.Berkeley.EDU (Keith Bostic)] [In article <1994Apr27.074929.1863@newsroom.bsc.no>,
+Mark Dapoz <md@bsc.no> wrote:
+>
+>Then I guess the next obvious question is, is there a new release of the
+>full 4.4 source or alternativly, are there patches that we can apply to
+>the original 4.4 source tree?
+
+We are probably going to recut the Sparc version of the
+4.4BSD-Encumbered distribution because of the instability
+of the original one's kernel.  Other than that, I doubt
+that we'll recut 4.4BSD-Encumbered.
+
+The changes are far too extensive to make patches available.
+
+Keith Bostic
+        CSRG
+        University of California
+
+        uunet!bostic
+        bostic@cs.berkeley.edu
+
+
+
+]
+MID: 2pttm7$g2l@agate.berkeley.edu
+SUBJ: Re: The 4.4BSD-Lite distribution announcement
+BODY: In article <1994Apr27.074929.1863@newsroom.bsc.no>, | Mark Dapoz <md@bsc.no> wrote: | > | >Then I guess the next obvious question is, is there a new release of the | >full 4.4 source or alternativly, are there patches that we can apply to | >the original 4.4 source tree? |  | We are probably going to recut the Sparc version of the | 4.4BSD-Encumbered distribution because of the instability | of the original one's kernel.  Other than that, I doubt | that we'll recut 4.4BSD-Encumbered. |  | The changes are far too extensive to make patches available. |  | Keith Bostic |         CSRG |         University of California |  |         
+------------------------------------------------------------
+[1994-04-30T15:32:23+00:00] [bostic@toe.CS.Berkeley.EDU (Keith Bostic)] [In article <1994Apr27.074929.1863@newsroom.bsc.no>,
+Mark Dapoz <md@bsc.no> wrote:
+>
+>Then I guess the next obvious question is, is there a new release of the
+>full 4.4 source or alternativly, are there patches that we can apply to
+>the original 4.4 source tree?
+
+We are probably going to recut the Sparc version of the
+4.4BSD-Encumbered distribution because of the instability
+of the original one's kernel.  Other than that, I doubt
+that we'll recut 4.4BSD-Encumbered.
+
+The changes are far too extensive to make patches available.
+
+Keith Bostic
+        CSRG
+        University of California
+
+        uunet!bostic
+        bostic@cs.berkeley.edu
+
+
+
+]
+MID: 2pttm7$g2l@agate.berkeley.edu
+SUBJ: Re: The 4.4BSD-Lite distribution announcement
+BODY: In article <1994Apr27.074929.1863@newsroom.bsc.no>, | Mark Dapoz <md@bsc.no> wrote: | > | >Then I guess the next obvious question is, is there a new release of the | >full 4.4 source or alternativly, are there patches that we can apply to | >the original 4.4 source tree? |  | We are probably going to recut the Sparc version of the | 4.4BSD-Encumbered distribution because of the instability | of the original one's kernel.  Other than that, I doubt | that we'll recut 4.4BSD-Encumbered. |  | The changes are far too extensive to make patches available. |  | Keith Bostic |         CSRG |         University of California |  |         
+------------------------------------------------------------
+[1994-04-30T15:35:27+00:00] [bostic@toe.CS.Berkeley.EDU (Keith Bostic)] [In article <Coy234.HHz@kithrup.com>, Sean Eric Fagan <sef@kithrup.com> wrote:
+>(Note the new newsgroup.)
+>In article <2pmrk6$bar@spruce.cic.net> pauls@locust.cic.net (Paul Southworth) w
+rites:
+>>Anyone know what would happen if you just extracted the "lite" release
+>>on top of a pre-existing encumbered source tree?
+>
+>That wouldn't really be feasible, since there were (as far as I could
+>tell) changes after the original 4.4 release.  Copyrights were changed on
+>some kernel files, and there were some new files.
+
+Sean and Paul are right.  As we did not know when the lawsuit
+would end, we continued normal development in some areas.  The
+4.4BSD-Encumbered and 4.4BSD-Lite trees are substantially different.
+
+Keith Bostic
+        CSRG
+        University of California
+
+        uunet!bostic
+        bostic@cs.berkeley.edu
+
+
+
+
+]
+MID: 2pttrv$g36@agate.berkeley.edu
+SUBJ: Re: The 4.4BSD-Lite distribution announcement
+BODY: In article <Coy234.HHz@kithrup.com>, Sean Eric Fagan <sef@kithrup.com> wrote: | >(Note the new newsgroup.) | >In article <2pmrk6$bar@spruce.cic.net> pauls@locust.cic.net (Paul Southworth) w | rites: | >>Anyone know what would happen if you just extracted the "lite" release | >>on top of a pre-existing encumbered source tree? | > | >That wouldn't really be feasible, since there were (as far as I could | >tell) changes after the original 4.4 release.  Copyrights were changed on | >some kernel files, and there were some new files. |  | Sean and Paul are right.  As we did not know when the lawsuit | would end, we continu
+------------------------------------------------------------
+[1994-05-04T22:20:22+00:00] [ars@regent.e-technik.tu-muenchen.de (Arne Steinkamm)] [Second try:
+
+Rob Kolstad asked me to forward this to the net:
+
+>From: kolstad@BSDI.COM (Rob Kolstad)
+>Message-Id: <9405032339.AA00786@ace.BSDI.COM>
+>To: bsdi-users@BSDI.COM
+>Subject: Rumors of our death are exaggerated
+
+The last couple weeks have seen rumors of BSDI's bankruptcy surface.
+I have been unable to track the source of the rumors.  We are *not*
+planning bankruptcy (or any other form of quitting business)!
+
+BSDI just had the best month ever and expects an even better month in
+May.  We have ample cash reserves with which to mount a marketing campaign
+and we have paid all of our bills (except the final installments on the
+legal bills).
+
+Note that the CSRG guys (4.x folks at Berkeley) have, in fact,
+disbanded -- that might be the source of the rumors.  I called all
+the other companies with 'Berkeley' in their name, and they say they
+are not declaring bankruptcy, either.
+
+If you know the source of these false rumors, please let me know!
+
+                                RK, your BSDI president
+
+   ====================================================================
+         /\      Rob Kolstad           Berkeley Software Design, Inc. 
+      /\/  \     kolstad@bsdi.com      7759 Delmonico Drive
+     /  \   \    719-593-9445          Colorado Springs, CO  80919
+   ====================================================================
+
+-- 
+Arne Steinkamm           | Smart: {arne,postmaster}@guug.de
+Tel.: 089 / 29 97 56     |        ars@regent.e-technik.tu-muenchen.de
+Robert-Koch-Str. 4       |\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+D-8000 Muenchen 22       |///////////////////////////////////////////
+
+
+]
+MID: 2q9736$h4i@recycle.regent.e-technik.tu-muenchen.de
+SUBJ: BSDI: Rumors of our death are exaggerated
+BODY: Second try: |  | Rob Kolstad asked me to forward this to the net: |  | >From: kolstad@BSDI.COM (Rob Kolstad) | >Message-Id: <9405032339.AA00786@ace.BSDI.COM> | >To: bsdi-users@BSDI.COM | >Subject: Rumors of our death are exaggerated |  | The last couple weeks have seen rumors of BSDI's bankruptcy surface. | I have been unable to track the source of the rumors.  We are *not* | planning bankruptcy (or any other form of quitting business)! |  | BSDI just had the best month ever and expects an even better month in | May.  We have ample cash reserves with which to mount a marketing campaign | and we have paid all of our bills (
+------------------------------------------------------------
+[1994-05-11T00:17:06+00:00] [michaelv@iastate.edu (Michael L. VanLoon)] [In <1994May10.183040.919@wicat.com> rwas@wicat.com (Robert Wasiersky) writes:
+
+>	I've waited patiently for a post telling where I may find a
+>	version of BSD that I can download and is meant for workstations
+>	or not specifically for pc's. I have had no luck so far.
+
+Well, if you included as little information in your original post, I
+wouldn't be surprised.  Regardless...
+
+You can get souce and binaries for NetBSD from ftp.iastate.edu.
+NetBSD currently runs on Intel-based PC's, 68k Macs, Amigas, Sun 3 and
+Sun 4 architectures, HP 300, certain MIPS-based DECstations, and
+PC532.  It is meant for workstations, PC's and other microcomputers.
+
+Are you running one of these?  Otherwise, you could try getting a copy
+of 4.4BSD-lite from CSRG, but that is not a complete system.
+
+-- 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+ Michael L. VanLoon                 Iowa State University Computation Center
+    michaelv@iastate.edu                    Project Vincent Systems Staff
+  Free your mind and your machine -- NetBSD free Un*x for PC/Mac/Amiga/etc.
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+
+]
+MID: michaelv.768615426@ponderous.cc.iastate.edu
+SUBJ: Re: BSD src for non pc
+BODY: In <1994May10.183040.919@wicat.com> rwas@wicat.com (Robert Wasiersky) writes: |  | >	I've waited patiently for a post telling where I may find a | >	version of BSD that I can download and is meant for workstations | >	or not specifically for pc's. I have had no luck so far. |  | Well, if you included as little information in your original post, I | wouldn't be surprised.  Regardless... |  | You can get souce and binaries for NetBSD from ftp.iastate.edu. | NetBSD currently runs on Intel-based PC's, 68k Macs, Amigas, Sun 3 and | Sun 4 architectures, HP 300, certain MIPS-based DECstations, and | PC532.  It is meant for 
+------------------------------------------------------------
+[1994-05-20T00:13:51+00:00] [bostic@toe.CS.Berkeley.EDU (Keith Bostic)] [I've been asked a lot lately about the availability of the 4.4BSD Manual
+Set and of the 4.4BSD-Lite distribution on CD-ROM.  I'm glad to be able
+to say that the USENIX Association and O'Reilly & Associates have pooled
+resources to make them available.  Attached are three articles, the
+first from the upcoming USENIX ;login publication, the second from an
+O'Reilly & Associates net posting, and finally an O'Reilly & Associates
+press release.
+
+I'd like to thank the USENIX board members, the USENIX staff, (especially
+Ellie Young and Alain Henon), and Tim O'Reilly and his staff for making
+this happen.
+
+Keith Bostic                    bostic@cs.berkeley.edu
+CSRG
+Department of EECS
+University of California
+Berkeley, CA  94720
+
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+;login:
+
+4.4 BSD Manuals - 
+Hot off the Press!
+
+The USENIX Association and O'Reilly & Associates are publishing the
+final, definitive release of the Berkeley version of UNIX, which has
+been the basis for many commercial UNIX variants. Written by the
+Computer Systems Research Group at the University of California,
+Berkeley, the complete five volume set includes a CD-ROM and will be
+available in early July.  As this newsletter goes to press, we hope that
+two volumes (*) will be available at the USENIX Summer Conference in
+Boston.
+
+Below is a brief summary of each volume. USENIX members will receive a
+special discount and can order these directly from O'Reilly in July.
+More information will be forthcoming in the next issue.
+
+4.4BSD User's Reference Manual (URM)* 
+898 pp. ISBN 1-56592-075-9, June 1994.
+
+This volume (URM) collects the man pages for the more than 284 user
+programs that make up the user portion of the 4.4BSD UNIX release
+(section 1 of the traditional UNIX Reference Manual), plus additional
+pages for games (section 6 of the traditional manual) and miscellaneous
+information (section 7, which includes mostly information on troff macro
+packages and other text processing information.) URM is useful even if
+you don't use the BSD version of UNIX. Many of the commands are
+compatible with the POSIX standard and thus identical to those in other
+UNIX versions.  Because 4.4BSD includes many freeware programs that are
+available but not documented in other versions of UNIX, you may find
+yourself turning first to this book to look up options for programs like
+perl, GNU emacs, compress, patch, g++, or kerberos.
+
+4.4BSD System Manager's Manual (SMM) 
+646 pp. ISBN 1-56592-080-5, May 1994.
+
+SMM includes man pages for system administration commands (section 8 of
+the online reference manual), plus supplementary documents useful to
+system administrators.
+
+4.4BSD Programmer's Supplementary
+Documents (PSD)606 pp. ISBN 1-56592-079-1, June 1994.
+
+In this volume, you'll find useful papers on such tools as the gdb and
+adb debuggers, source code control systems RCS and SCCS, lex and yacc,
+and the m4 macro processor.  You'll also find such historical documents
+as Dennis Ritchie and Ken Thompson's classic first paper about UNIX and
+Kernighan and Ritchie's classic introduction to UNIX programming.
+
+On a more up to date note, this book also includes a two part tutorial
+on interprocess communication (IPC) under 4.4BSD UNIX.
+
+4.4BSD Programmer's Reference Manual (PRM)*
+868 pp. ISBN 1-56592-078-3, June 1994.
+
+PRM collects the man pages for the various UNIX  program ming libraries,
+plus related information for programmers.  It consists of sections 2
+through 5 of the online man page collection:
+
+(2) UNIX System Calls 
+(3) C Library Subroutines
+(4) Special Files (device interfaces) 
+(5) File Formats
+
+4.4BSD User's Supplementary Documents 
+(USD) 686 pp. ISBN 1-56592-076-7, June 1994.
+
+This volume, the User's Supplementary Documents, collects papers
+relating to miscellaneous "user" tools, principally text editors and
+document processors.
+
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+>From O'Reilly & Associates publications:
+
+       THE USENIX ASSOCIATION and O'REILLY & ASSOCIATES 
+    TO RELEASE BERKELEY BSD 4.4 DOCUMENT SET AND CD IN JULY
+
+     The USENIX Association and O'Reilly & Associates are publishing 
+the final, definitive release of the Berkeley version of UNIX, which 
+has been the basis for many commercial UNIX variants. Written by the 
+Computer Systems Research Group at the University of California, 
+Berkeley, the complete five volume set includes a CD-ROM and will be 
+available in early July. 
+
+          4.4BSD SYSTEM MANAGER'S MANUAL (SMM)  
+          646 pp. ISBN 1-56592-080-5, $30 US
+
+     This volume includes man pages for system administration commands 
+(section 8 of the online reference manual), plus supplementary documents 
+useful to system administrators.  Includes installation instructions for 
+the 4.4BSD release (which are also included with the 4.4BSD-lite CD-ROM 
+Companion), plus papers on many system administration utilities and tasks, 
+many of which are the definitive works on the topic. 
+
+          4.4BSD USER'S REFERENCE MANUAL (URM) 
+          898 pp. ISBN 1-56592-075-9, $30 US
+
+     This volume (URM) collects the man pages for the more than 284 user 
+programs that make up the user portion of the 4.4BSD UNIX release 
+(section 1 of the traditional UNIX Reference Manual), plus additional 
+pages for games (section 6 of the traditional manual) and miscellaneous 
+information (section 7, which includes mostly information on troff macro 
+packages and other text processing information.) URM is useful even if 
+you don't use the BSD version of UNIX. Many of the commands are compatible 
+with the POSIX standard and thus identical to those in other UNIX versions.  
+Because 4.4BSD includes many freeware programs that are available but not 
+documented in other versions of UNIX, you may find yourself turning first 
+to this book to look up options for programs like perl, GNU emacs, 
+compress, patch, g++, or kerberos.
+
+          4.4BSD USER'S SUPPLEMENTARY DOCUMENTS (USD) 
+          686 pp. ISBN 1-56592-076-7, $30 US 
+
+     A collection of papers relating to miscellaneous "user" tools, 
+principally text editors and document processors.  Some remain the only 
+tutorial documentation for many UNIX programs.  
+
+          4.4BSD PROGRAMMER'S REFERENCE MANUAL (PRM) 
+          868 pp. ISBN 1-56592-078-3, $30 US 
+
+PRM collects the man pages for the various UNIX  program ming libraries, 
+plus related information for programmers.  It consists of sections 2 
+through 5 of the online man page collection: (2) UNIX System Calls; 
+(3) C Library Subroutines; (4) Special Files (device interfaces); and,
+(5) File Formats.  Useful not only for 4.4BSD systems but for many 
+related UNIX implementations, including SunOS, BSDI, and Linux.
+
+          4.4 BSD PROGRAMMER'S SUPPLEMENTARY DOCUMENTS (PSD) 
+          606 pp. ISBN 1-56592-079-1, $30 US 
+
+     In this volume, you'll find useful papers on such tools as the gdb 
+hand adb debuggers, source code control systems RCS and SCCS, lex and 
+yacc, and the m4 macro processor.  You'll also find such historical 
+documents as Dennis Ritchie and Ken Thompson's classic first paper about 
+UNIX and Kernighan and Ritchie's classic introduction to UNIX programming.
+On a more up to date note, this book also includes a two part tutorial on 
+interprocess communication (IPC) under 4.4BSD UNIX.
+
+          4.4 BSD-LITE CD COMPANION  
+     CD Domestic: 1-56592-081-3 ($40 US); CD International: 1-56592-092-9
+
+     This CD contains a copy of the University of California, Berkeley's 
+4.4BSD-Lite release, with additional documentation and enhancements.  
+Access to the source code included on it will provide invaluable information 
+on the design of a modern UNIX-like system, and the source ce for the 
+utilities and support libraries will great any programmer's toolkit.
+     The CD is a source distribution, and does not contain program binaries 
+for any architecture.  It will not be possible to compile or run this 
+software without a pre-existing system that is already installed and 
+running.  The 4.4BSD-Lite distribution did not include sources for the 
+complete 4.4BSD system.  The source code for a small number of utilities 
+and files (including a few from the operating system) were removed so that 
+the system could be freely distributed.   
+
+---------------------------------------------------------------
+This and other O'Reilly products are available in the Americas 
+and Japan through bookstores, or directly from the publisher 
+(credit card orders 800-889-8969; email order@ora.com). 
+
+For information: telephone 707-829-0515 (800-998-9938 in US & 
+Canada); FAX 707-829-0104; email nuts@ora.com; or write O'Reilly & 
+Associates, 103A Morris St., Sebastopol, CA, 95472, USA.  
+GSA # GS-02F-6095A.  Access our online gopher catalog via "telnet 
+gopher.ora.com" (log in as "gopher" -- no password needed).
+
+Our international distributors:
+* EUROPE (except German-speaking countries), MIDDLE EAST, AFRICA 
+International Thomson Publishing, Berkshire House, 168-173 High 
+Holborn, London WC1V 7AA, UK.  Telephone 44-71-497-1422;
+FAX 44-71-497-1426; or email danni.dolbear@itpuk.co.uk
+* GERMAN-SPEAKING COUNTRIES.  International Thomson Publishing,
+Konigswinterer Strasse 418, 53227 Bonn, Germany. Telephone 49-228-445171;
+FAX 49-228-441342; or email 100272.2422@compuserve.com
+* ASIA. International Thomson Publishing, 221 Henderson Rd.,
+#05-10 Henderson Building, Singapore 0315. Telephone 65-272-6496;
+FAX 65-272-6498
+ * AUSTRALIA AND NEW ZEALAND.  WoodsLane, Unit 8, 101 Darley Street,
+Mona Vale, NSW 2103, Australia. Telephone 61-2-979-5944;
+FAX 61-2-997-3348; or email woods@tmx.mhs.oz.au
+
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+FOR IMMEDIATE RELEASE                              CONTACT:  Brian Erwin
+                                                             O'Reilly
+                                                             707/829-0515
+                                                             brian@ora.com
+
+                                                             USENIX Association
+		                                             510-528-8649
+		                                             office@usenix.org
+
+
+       O'REILLY AND USENIX PUBLISH FINAL BERKELEY VERSION OF UNIX 
+                  ON CD-ROM AND FIVE-VOLUME DOC SET
+
+SEBASTOPOL, CA -- 4.4BSD is the final release of what may be one of the 
+most significant research projects in the history of computing.  When Bell 
+Labs originally released UNIX source code to the research and development
+community, brilliant researchers wrote their own software and added it to 
+UNIX in a spree of creative anarchy that hasn't been equaled since.  The 
+Berkeley Software Distribution became the repository of much of that work.
+
+     In those years of creative ferment, source code was widely available,
+so programmers could build on the work of others.  As UNIX became 
+commercialized, access to source became increasingly curtailed and original 
+development more difficult.
+
+     The Computer Systems Research Group of the University of California at
+Berkeley, in cooperation with the Usenix Association and O'Reilly &
+Associates, Inc, has now published the final, definitive release of the
+Berkeley version of UNIX, which has been the basis for many commercial
+UNIX variants.  The source code for the system is available on CD-ROM and
+is accompanied by a five-volume documentation set.
+
+                 4.4BSD-LITE CD-ROM COMPANION
+
+     With this release of 4.4BSD, one need no longer work at a
+university or UNIX system development house to have access to UNIX
+source.  The University has prepared a "Lite" release of the operating
+system, from which the source code for a small number of utilities
+and files, including a few from the operating system, has been removed
+so that the system can be freely distributed.  
+     
+     The source code included on the 4.4BSD-Lite CD-ROM Companion
+will provide invaluable information on the design of any modern
+UNIX or UNIX-like system, and the source code for the utilities and
+support libraries will greatly enhance any programmer's toolkit.
+  
+     In addition to source code, the CD includes the manual pages, other 
+documentation, and research papers from the University of California, 
+Berkeley's 4.4BSD-Lite distribution.  (CD Domestic: ISBN 1-56592-081-3 
+($40 US); CD International: ISBN 1-56592-092-9.)
+
+
+                   4.4BSD FIVE-VOLUME DOC SET
+
+     A five-volume doc set is available from O'Reilly directly with or
+without CD-ROM. Volumes 1 through 5 plus CD-ROM, ISBN 1-56592-082-1,
+costs $150 (US).  Volumes 1 through 5 only, ISBN 1-56592-077-5, costs 
+$120 (US).  The doc set includes:
+                     
+     4.4BSD SYSTEM MANAGER'S MANUAL (SMM)  
+     646 pp. ISBN 1-56592-080-5, $30 US
+
+     This volume includes man pages for system administration commands 
+(section 8 of the online reference manual), plus supplementary documents 
+useful to system administrators.  Includes installation instructions for 
+the 4.4BSD release (which are also included with the 4.4BSD-lite CD-ROM 
+Companion), plus papers on many system administration utilities and tasks, 
+many of which are the definitive works on the topic. 
+
+     4.4BSD USER'S REFERENCE MANUAL (URM) 
+     898 pp. ISBN 1-56592-075-9, $30 US
+
+     This volume collects the man pages for the more than 284 user 
+programs that make up the user portion of the 4.4BSD UNIX release 
+(section 1 of the traditional UNIX Reference Manual), plus additional 
+pages for games (section 6 of the traditional manual) and miscellaneous 
+information (section 7, which includes mostly information on troff macro 
+packages and other text processing information.) URM is useful even if 
+you don't use the BSD version of UNIX. Many of the commands are compatible 
+with the POSIX standard and thus identical to those in other UNIX versions.  
+Because 4.4BSD includes many freeware programs that are available but not 
+documented in other versions of UNIX, you may find yourself turning first 
+to this book to look up options for programs like perl, GNU emacs, 
+compress, patch, g++, or kerberos.
+
+     4.4BSD USER'S SUPPLEMENTARY DOCUMENTS (USD) 
+     686 pp. ISBN 1-56592-076-7, $30 US 
+
+     A collection of papers relating to miscellaneous "user" tools, 
+principally text editors and document processors.  Some remain the only 
+tutorial documentation for many UNIX programs.  
+
+     4.4BSD PROGRAMMER'S REFERENCE MANUAL (PRM) 
+     868 pp. ISBN 1-56592-078-3, $30 US 
+
+     The PRM collects the man pages for the various UNIX  program ming libraries, 
+plus related information for programmers.  It consists of sections 2 
+through 5 of the online man page collection: (2) UNIX System Calls; 
+(3) C Library Subroutines; (4) Special Files (device interfaces); and,
+(5) File Formats.  Useful not only for 4.4BSD systems but for many 
+related UNIX implementations, including SunOS, BSDI, and Linux.
+
+     4.4 BSD PROGRAMMER'S SUPPLEMENTARY DOCUMENTS (PSD) 
+     606 pp. ISBN 1-56592-079-1, $30 US 
+
+     This volume contains useful papers on such tools as the gdb 
+hand adb debuggers, source code control systems RCS and SCCS, lex and 
+yacc, and the m4 macro processor.  Also included are such historical 
+documents as Dennis Ritchie and Ken Thompson's classic first paper about 
+UNIX and Kernighan and Ritchie's classic introduction to UNIX programming.
+On a more up to date note, this book also includes a two part tutorial on 
+interprocess communication (IPC) under 4.4BSD UNIX.
+
+
+                    ABOUT O'REILLY & ASSOCIATES 
+
+          O'Reilly & Associates is recognized worldwide for its definitive 
+books on UNIX, the Internet, and The X Window System.  Working closely 
+with developers of new technologies, O'Reilly's editors are "computer 
+people" who use the software they write about.  The company's planning 
+and review cycles link together authors, computer vendors, and technical 
+experts throughout the industry in a creative collaboration that mirrors 
+the strengths of the "open systems" philosophy itself.
+
+                           ABOUT USENIX 
+              The UNIX and Advanced Computing Systems 
+               Professional and Technical Association 
+  
+     The USENIX Association is the original non-profit membership organization 
+of individuals and institutions with an interest in UNIX and other advanced 
+computing systems.  USENIX extends its support to the broad computing environment 
+and to professional subspecialties such as software development and system 
+administration.  USENIX and its members are dedicated to: problem-solving with 
+a practical bias; research that works; and, rapid communication of the results 
+of both research and innovation.
+
+                           #     #     #
+-- 
+Brian Erwin, brian@ora.com
+O'Reilly & Associates
+103A Morris Street, Sebastopol CA 95472
+707-829-0515, Fax 707-829-0104
+
+
+
+]
+MID: 2rgvbv$l6u@agate.berkeley.edu
+SUBJ: 4.4BSD Manuals, 4.4BSD-Lite CD-ROM
+BODY: I've been asked a lot lately about the availability of the 4.4BSD Manual | Set and of the 4.4BSD-Lite distribution on CD-ROM.  I'm glad to be able | to say that the USENIX Association and O'Reilly & Associates have pooled | resources to make them available.  Attached are three articles, the | first from the upcoming USENIX ;login publication, the second from an | O'Reilly & Associates net posting, and finally an O'Reilly & Associates | press release. |  | I'd like to thank the USENIX board members, the USENIX staff, (especially | Ellie Young and Alain Henon), and Tim O'Reilly and his staff for making | this happe
+------------------------------------------------------------
+[1994-05-20T00:13:51+00:00] [bostic@toe.CS.Berkeley.EDU (Keith Bostic)] [I've been asked a lot lately about the availability of the 4.4BSD Manual
+Set and of the 4.4BSD-Lite distribution on CD-ROM.  I'm glad to be able
+to say that the USENIX Association and O'Reilly & Associates have pooled
+resources to make them available.  Attached are three articles, the
+first from the upcoming USENIX ;login publication, the second from an
+O'Reilly & Associates net posting, and finally an O'Reilly & Associates
+press release.
+
+I'd like to thank the USENIX board members, the USENIX staff, (especially
+Ellie Young and Alain Henon), and Tim O'Reilly and his staff for making
+this happen.
+
+Keith Bostic                    bostic@cs.berkeley.edu
+CSRG
+Department of EECS
+University of California
+Berkeley, CA  94720
+
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+;login:
+
+4.4 BSD Manuals - 
+Hot off the Press!
+
+The USENIX Association and O'Reilly & Associates are publishing the
+final, definitive release of the Berkeley version of UNIX, which has
+been the basis for many commercial UNIX variants. Written by the
+Computer Systems Research Group at the University of California,
+Berkeley, the complete five volume set includes a CD-ROM and will be
+available in early July.  As this newsletter goes to press, we hope that
+two volumes (*) will be available at the USENIX Summer Conference in
+Boston.
+
+Below is a brief summary of each volume. USENIX members will receive a
+special discount and can order these directly from O'Reilly in July.
+More information will be forthcoming in the next issue.
+
+4.4BSD User's Reference Manual (URM)* 
+898 pp. ISBN 1-56592-075-9, June 1994.
+
+This volume (URM) collects the man pages for the more than 284 user
+programs that make up the user portion of the 4.4BSD UNIX release
+(section 1 of the traditional UNIX Reference Manual), plus additional
+pages for games (section 6 of the traditional manual) and miscellaneous
+information (section 7, which includes mostly information on troff macro
+packages and other text processing information.) URM is useful even if
+you don't use the BSD version of UNIX. Many of the commands are
+compatible with the POSIX standard and thus identical to those in other
+UNIX versions.  Because 4.4BSD includes many freeware programs that are
+available but not documented in other versions of UNIX, you may find
+yourself turning first to this book to look up options for programs like
+perl, GNU emacs, compress, patch, g++, or kerberos.
+
+4.4BSD System Manager's Manual (SMM) 
+646 pp. ISBN 1-56592-080-5, May 1994.
+
+SMM includes man pages for system administration commands (section 8 of
+the online reference manual), plus supplementary documents useful to
+system administrators.
+
+4.4BSD Programmer's Supplementary
+Documents (PSD)606 pp. ISBN 1-56592-079-1, June 1994.
+
+In this volume, you'll find useful papers on such tools as the gdb and
+adb debuggers, source code control systems RCS and SCCS, lex and yacc,
+and the m4 macro processor.  You'll also find such historical documents
+as Dennis Ritchie and Ken Thompson's classic first paper about UNIX and
+Kernighan and Ritchie's classic introduction to UNIX programming.
+
+On a more up to date note, this book also includes a two part tutorial
+on interprocess communication (IPC) under 4.4BSD UNIX.
+
+4.4BSD Programmer's Reference Manual (PRM)*
+868 pp. ISBN 1-56592-078-3, June 1994.
+
+PRM collects the man pages for the various UNIX  program ming libraries,
+plus related information for programmers.  It consists of sections 2
+through 5 of the online man page collection:
+
+(2) UNIX System Calls 
+(3) C Library Subroutines
+(4) Special Files (device interfaces) 
+(5) File Formats
+
+4.4BSD User's Supplementary Documents 
+(USD) 686 pp. ISBN 1-56592-076-7, June 1994.
+
+This volume, the User's Supplementary Documents, collects papers
+relating to miscellaneous "user" tools, principally text editors and
+document processors.
+
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+>From O'Reilly & Associates publications:
+
+       THE USENIX ASSOCIATION and O'REILLY & ASSOCIATES 
+    TO RELEASE BERKELEY BSD 4.4 DOCUMENT SET AND CD IN JULY
+
+     The USENIX Association and O'Reilly & Associates are publishing 
+the final, definitive release of the Berkeley version of UNIX, which 
+has been the basis for many commercial UNIX variants. Written by the 
+Computer Systems Research Group at the University of California, 
+Berkeley, the complete five volume set includes a CD-ROM and will be 
+available in early July. 
+
+          4.4BSD SYSTEM MANAGER'S MANUAL (SMM)  
+          646 pp. ISBN 1-56592-080-5, $30 US
+
+     This volume includes man pages for system administration commands 
+(section 8 of the online reference manual), plus supplementary documents 
+useful to system administrators.  Includes installation instructions for 
+the 4.4BSD release (which are also included with the 4.4BSD-lite CD-ROM 
+Companion), plus papers on many system administration utilities and tasks, 
+many of which are the definitive works on the topic. 
+
+          4.4BSD USER'S REFERENCE MANUAL (URM) 
+          898 pp. ISBN 1-56592-075-9, $30 US
+
+     This volume (URM) collects the man pages for the more than 284 user 
+programs that make up the user portion of the 4.4BSD UNIX release 
+(section 1 of the traditional UNIX Reference Manual), plus additional 
+pages for games (section 6 of the traditional manual) and miscellaneous 
+information (section 7, which includes mostly information on troff macro 
+packages and other text processing information.) URM is useful even if 
+you don't use the BSD version of UNIX. Many of the commands are compatible 
+with the POSIX standard and thus identical to those in other UNIX versions.  
+Because 4.4BSD includes many freeware programs that are available but not 
+documented in other versions of UNIX, you may find yourself turning first 
+to this book to look up options for programs like perl, GNU emacs, 
+compress, patch, g++, or kerberos.
+
+          4.4BSD USER'S SUPPLEMENTARY DOCUMENTS (USD) 
+          686 pp. ISBN 1-56592-076-7, $30 US 
+
+     A collection of papers relating to miscellaneous "user" tools, 
+principally text editors and document processors.  Some remain the only 
+tutorial documentation for many UNIX programs.  
+
+          4.4BSD PROGRAMMER'S REFERENCE MANUAL (PRM) 
+          868 pp. ISBN 1-56592-078-3, $30 US 
+
+PRM collects the man pages for the various UNIX  program ming libraries, 
+plus related information for programmers.  It consists of sections 2 
+through 5 of the online man page collection: (2) UNIX System Calls; 
+(3) C Library Subroutines; (4) Special Files (device interfaces); and,
+(5) File Formats.  Useful not only for 4.4BSD systems but for many 
+related UNIX implementations, including SunOS, BSDI, and Linux.
+
+          4.4 BSD PROGRAMMER'S SUPPLEMENTARY DOCUMENTS (PSD) 
+          606 pp. ISBN 1-56592-079-1, $30 US 
+
+     In this volume, you'll find useful papers on such tools as the gdb 
+hand adb debuggers, source code control systems RCS and SCCS, lex and 
+yacc, and the m4 macro processor.  You'll also find such historical 
+documents as Dennis Ritchie and Ken Thompson's classic first paper about 
+UNIX and Kernighan and Ritchie's classic introduction to UNIX programming.
+On a more up to date note, this book also includes a two part tutorial on 
+interprocess communication (IPC) under 4.4BSD UNIX.
+
+          4.4 BSD-LITE CD COMPANION  
+     CD Domestic: 1-56592-081-3 ($40 US); CD International: 1-56592-092-9
+
+     This CD contains a copy of the University of California, Berkeley's 
+4.4BSD-Lite release, with additional documentation and enhancements.  
+Access to the source code included on it will provide invaluable information 
+on the design of a modern UNIX-like system, and the source ce for the 
+utilities and support libraries will great any programmer's toolkit.
+     The CD is a source distribution, and does not contain program binaries 
+for any architecture.  It will not be possible to compile or run this 
+software without a pre-existing system that is already installed and 
+running.  The 4.4BSD-Lite distribution did not include sources for the 
+complete 4.4BSD system.  The source code for a small number of utilities 
+and files (including a few from the operating system) were removed so that 
+the system could be freely distributed.   
+
+---------------------------------------------------------------
+This and other O'Reilly products are available in the Americas 
+and Japan through bookstores, or directly from the publisher 
+(credit card orders 800-889-8969; email order@ora.com). 
+
+For information: telephone 707-829-0515 (800-998-9938 in US & 
+Canada); FAX 707-829-0104; email nuts@ora.com; or write O'Reilly & 
+Associates, 103A Morris St., Sebastopol, CA, 95472, USA.  
+GSA # GS-02F-6095A.  Access our online gopher catalog via "telnet 
+gopher.ora.com" (log in as "gopher" -- no password needed).
+
+Our international distributors:
+* EUROPE (except German-speaking countries), MIDDLE EAST, AFRICA 
+International Thomson Publishing, Berkshire House, 168-173 High 
+Holborn, London WC1V 7AA, UK.  Telephone 44-71-497-1422;
+FAX 44-71-497-1426; or email danni.dolbear@itpuk.co.uk
+* GERMAN-SPEAKING COUNTRIES.  International Thomson Publishing,
+Konigswinterer Strasse 418, 53227 Bonn, Germany. Telephone 49-228-445171;
+FAX 49-228-441342; or email 100272.2422@compuserve.com
+* ASIA. International Thomson Publishing, 221 Henderson Rd.,
+#05-10 Henderson Building, Singapore 0315. Telephone 65-272-6496;
+FAX 65-272-6498
+ * AUSTRALIA AND NEW ZEALAND.  WoodsLane, Unit 8, 101 Darley Street,
+Mona Vale, NSW 2103, Australia. Telephone 61-2-979-5944;
+FAX 61-2-997-3348; or email woods@tmx.mhs.oz.au
+
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+FOR IMMEDIATE RELEASE                              CONTACT:  Brian Erwin
+                                                             O'Reilly
+                                                             707/829-0515
+                                                             brian@ora.com
+
+                                                             USENIX Association
+		                                             510-528-8649
+		                                             office@usenix.org
+
+
+       O'REILLY AND USENIX PUBLISH FINAL BERKELEY VERSION OF UNIX 
+                  ON CD-ROM AND FIVE-VOLUME DOC SET
+
+SEBASTOPOL, CA -- 4.4BSD is the final release of what may be one of the 
+most significant research projects in the history of computing.  When Bell 
+Labs originally released UNIX source code to the research and development
+community, brilliant researchers wrote their own software and added it to 
+UNIX in a spree of creative anarchy that hasn't been equaled since.  The 
+Berkeley Software Distribution became the repository of much of that work.
+
+     In those years of creative ferment, source code was widely available,
+so programmers could build on the work of others.  As UNIX became 
+commercialized, access to source became increasingly curtailed and original 
+development more difficult.
+
+     The Computer Systems Research Group of the University of California at
+Berkeley, in cooperation with the Usenix Association and O'Reilly &
+Associates, Inc, has now published the final, definitive release of the
+Berkeley version of UNIX, which has been the basis for many commercial
+UNIX variants.  The source code for the system is available on CD-ROM and
+is accompanied by a five-volume documentation set.
+
+                 4.4BSD-LITE CD-ROM COMPANION
+
+     With this release of 4.4BSD, one need no longer work at a
+university or UNIX system development house to have access to UNIX
+source.  The University has prepared a "Lite" release of the operating
+system, from which the source code for a small number of utilities
+and files, including a few from the operating system, has been removed
+so that the system can be freely distributed.  
+     
+     The source code included on the 4.4BSD-Lite CD-ROM Companion
+will provide invaluable information on the design of any modern
+UNIX or UNIX-like system, and the source code for the utilities and
+support libraries will greatly enhance any programmer's toolkit.
+  
+     In addition to source code, the CD includes the manual pages, other 
+documentation, and research papers from the University of California, 
+Berkeley's 4.4BSD-Lite distribution.  (CD Domestic: ISBN 1-56592-081-3 
+($40 US); CD International: ISBN 1-56592-092-9.)
+
+
+                   4.4BSD FIVE-VOLUME DOC SET
+
+     A five-volume doc set is available from O'Reilly directly with or
+without CD-ROM. Volumes 1 through 5 plus CD-ROM, ISBN 1-56592-082-1,
+costs $150 (US).  Volumes 1 through 5 only, ISBN 1-56592-077-5, costs 
+$120 (US).  The doc set includes:
+                     
+     4.4BSD SYSTEM MANAGER'S MANUAL (SMM)  
+     646 pp. ISBN 1-56592-080-5, $30 US
+
+     This volume includes man pages for system administration commands 
+(section 8 of the online reference manual), plus supplementary documents 
+useful to system administrators.  Includes installation instructions for 
+the 4.4BSD release (which are also included with the 4.4BSD-lite CD-ROM 
+Companion), plus papers on many system administration utilities and tasks, 
+many of which are the definitive works on the topic. 
+
+     4.4BSD USER'S REFERENCE MANUAL (URM) 
+     898 pp. ISBN 1-56592-075-9, $30 US
+
+     This volume collects the man pages for the more than 284 user 
+programs that make up the user portion of the 4.4BSD UNIX release 
+(section 1 of the traditional UNIX Reference Manual), plus additional 
+pages for games (section 6 of the traditional manual) and miscellaneous 
+information (section 7, which includes mostly information on troff macro 
+packages and other text processing information.) URM is useful even if 
+you don't use the BSD version of UNIX. Many of the commands are compatible 
+with the POSIX standard and thus identical to those in other UNIX versions.  
+Because 4.4BSD includes many freeware programs that are available but not 
+documented in other versions of UNIX, you may find yourself turning first 
+to this book to look up options for programs like perl, GNU emacs, 
+compress, patch, g++, or kerberos.
+
+     4.4BSD USER'S SUPPLEMENTARY DOCUMENTS (USD) 
+     686 pp. ISBN 1-56592-076-7, $30 US 
+
+     A collection of papers relating to miscellaneous "user" tools, 
+principally text editors and document processors.  Some remain the only 
+tutorial documentation for many UNIX programs.  
+
+     4.4BSD PROGRAMMER'S REFERENCE MANUAL (PRM) 
+     868 pp. ISBN 1-56592-078-3, $30 US 
+
+     The PRM collects the man pages for the various UNIX  program ming libraries, 
+plus related information for programmers.  It consists of sections 2 
+through 5 of the online man page collection: (2) UNIX System Calls; 
+(3) C Library Subroutines; (4) Special Files (device interfaces); and,
+(5) File Formats.  Useful not only for 4.4BSD systems but for many 
+related UNIX implementations, including SunOS, BSDI, and Linux.
+
+     4.4 BSD PROGRAMMER'S SUPPLEMENTARY DOCUMENTS (PSD) 
+     606 pp. ISBN 1-56592-079-1, $30 US 
+
+     This volume contains useful papers on such tools as the gdb 
+hand adb debuggers, source code control systems RCS and SCCS, lex and 
+yacc, and the m4 macro processor.  Also included are such historical 
+documents as Dennis Ritchie and Ken Thompson's classic first paper about 
+UNIX and Kernighan and Ritchie's classic introduction to UNIX programming.
+On a more up to date note, this book also includes a two part tutorial on 
+interprocess communication (IPC) under 4.4BSD UNIX.
+
+
+                    ABOUT O'REILLY & ASSOCIATES 
+
+          O'Reilly & Associates is recognized worldwide for its definitive 
+books on UNIX, the Internet, and The X Window System.  Working closely 
+with developers of new technologies, O'Reilly's editors are "computer 
+people" who use the software they write about.  The company's planning 
+and review cycles link together authors, computer vendors, and technical 
+experts throughout the industry in a creative collaboration that mirrors 
+the strengths of the "open systems" philosophy itself.
+
+                           ABOUT USENIX 
+              The UNIX and Advanced Computing Systems 
+               Professional and Technical Association 
+  
+     The USENIX Association is the original non-profit membership organization 
+of individuals and institutions with an interest in UNIX and other advanced 
+computing systems.  USENIX extends its support to the broad computing environment 
+and to professional subspecialties such as software development and system 
+administration.  USENIX and its members are dedicated to: problem-solving with 
+a practical bias; research that works; and, rapid communication of the results 
+of both research and innovation.
+
+                           #     #     #
+-- 
+Brian Erwin, brian@ora.com
+O'Reilly & Associates
+103A Morris Street, Sebastopol CA 95472
+707-829-0515, Fax 707-829-0104
+
+
+
+]
+MID: 2rgvbv$l6u@agate.berkeley.edu
+SUBJ: 4.4BSD Manuals, 4.4BSD-Lite CD-ROM
+BODY: I've been asked a lot lately about the availability of the 4.4BSD Manual | Set and of the 4.4BSD-Lite distribution on CD-ROM.  I'm glad to be able | to say that the USENIX Association and O'Reilly & Associates have pooled | resources to make them available.  Attached are three articles, the | first from the upcoming USENIX ;login publication, the second from an | O'Reilly & Associates net posting, and finally an O'Reilly & Associates | press release. |  | I'd like to thank the USENIX board members, the USENIX staff, (especially | Ellie Young and Alain Henon), and Tim O'Reilly and his staff for making | this happe
+------------------------------------------------------------
+[1994-05-20T00:19:52+00:00] [bostic@VANGOGH.CS.BERKELEY.EDU (Keith Bostic)] [
+I've been asked a lot lately about the availability of the 4.4BSD Manual
+Set and of the 4.4BSD-Lite distribution on CD-ROM.  I'm glad to be able
+to say that the USENIX Association and O'Reilly & Associates have pooled
+resources to make them available.  Attached are three articles, the
+first from the upcoming USENIX ;login publication, the second from an
+O'Reilly & Associates net posting, and finally an O'Reilly & Associates
+press release.
+
+I'd like to thank the USENIX board members, the USENIX staff, (especially
+Ellie Young and Alain Henon), and Tim O'Reilly and his staff for making
+this happen.
+
+Keith Bostic                    bostic@cs.berkeley.edu
+CSRG
+Department of EECS
+University of California
+Berkeley, CA  94720
+
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+;login:
+
+4.4 BSD Manuals - 
+Hot off the Press!
+
+The USENIX Association and O'Reilly & Associates are publishing the
+final, definitive release of the Berkeley version of UNIX, which has
+been the basis for many commercial UNIX variants. Written by the
+Computer Systems Research Group at the University of California,
+Berkeley, the complete five volume set includes a CD-ROM and will be
+available in early July.  As this newsletter goes to press, we hope that
+two volumes (*) will be available at the USENIX Summer Conference in
+Boston.
+
+Below is a brief summary of each volume. USENIX members will receive a
+special discount and can order these directly from O'Reilly in July.
+More information will be forthcoming in the next issue.
+
+4.4BSD User's Reference Manual (URM)* 
+898 pp. ISBN 1-56592-075-9, June 1994.
+
+This volume (URM) collects the man pages for the more than 284 user
+programs that make up the user portion of the 4.4BSD UNIX release
+(section 1 of the traditional UNIX Reference Manual), plus additional
+pages for games (section 6 of the traditional manual) and miscellaneous
+information (section 7, which includes mostly information on troff macro
+packages and other text processing information.) URM is useful even if
+you don't use the BSD version of UNIX. Many of the commands are
+compatible with the POSIX standard and thus identical to those in other
+UNIX versions.  Because 4.4BSD includes many freeware programs that are
+available but not documented in other versions of UNIX, you may find
+yourself turning first to this book to look up options for programs like
+perl, GNU emacs, compress, patch, g++, or kerberos.
+
+4.4BSD System Manager's Manual (SMM) 
+646 pp. ISBN 1-56592-080-5, May 1994.
+
+SMM includes man pages for system administration commands (section 8 of
+the online reference manual), plus supplementary documents useful to
+system administrators.
+
+4.4BSD Programmer's Supplementary
+Documents (PSD)606 pp. ISBN 1-56592-079-1, June 1994.
+
+In this volume, you'll find useful papers on such tools as the gdb and
+adb debuggers, source code control systems RCS and SCCS, lex and yacc,
+and the m4 macro processor.  You'll also find such historical documents
+as Dennis Ritchie and Ken Thompson's classic first paper about UNIX and
+Kernighan and Ritchie's classic introduction to UNIX programming.
+
+On a more up to date note, this book also includes a two part tutorial
+on interprocess communication (IPC) under 4.4BSD UNIX.
+
+4.4BSD Programmer's Reference Manual (PRM)*
+868 pp. ISBN 1-56592-078-3, June 1994.
+
+PRM collects the man pages for the various UNIX  program ming libraries,
+plus related information for programmers.  It consists of sections 2
+through 5 of the online man page collection:
+
+(2) UNIX System Calls 
+(3) C Library Subroutines
+(4) Special Files (device interfaces) 
+(5) File Formats
+
+4.4BSD User's Supplementary Documents 
+(USD) 686 pp. ISBN 1-56592-076-7, June 1994.
+
+This volume, the User's Supplementary Documents, collects papers
+relating to miscellaneous "user" tools, principally text editors and
+document processors.
+
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+>From O'Reilly & Associates publications:
+
+       THE USENIX ASSOCIATION and O'REILLY & ASSOCIATES 
+    TO RELEASE BERKELEY BSD 4.4 DOCUMENT SET AND CD IN JULY
+
+     The USENIX Association and O'Reilly & Associates are publishing 
+the final, definitive release of the Berkeley version of UNIX, which 
+has been the basis for many commercial UNIX variants. Written by the 
+Computer Systems Research Group at the University of California, 
+Berkeley, the complete five volume set includes a CD-ROM and will be 
+available in early July. 
+
+          4.4BSD SYSTEM MANAGER'S MANUAL (SMM)  
+          646 pp. ISBN 1-56592-080-5, $30 US
+
+     This volume includes man pages for system administration commands 
+(section 8 of the online reference manual), plus supplementary documents 
+useful to system administrators.  Includes installation instructions for 
+the 4.4BSD release (which are also included with the 4.4BSD-lite CD-ROM 
+Companion), plus papers on many system administration utilities and tasks, 
+many of which are the definitive works on the topic. 
+
+          4.4BSD USER'S REFERENCE MANUAL (URM) 
+          898 pp. ISBN 1-56592-075-9, $30 US
+
+     This volume (URM) collects the man pages for the more than 284 user 
+programs that make up the user portion of the 4.4BSD UNIX release 
+(section 1 of the traditional UNIX Reference Manual), plus additional 
+pages for games (section 6 of the traditional manual) and miscellaneous 
+information (section 7, which includes mostly information on troff macro 
+packages and other text processing information.) URM is useful even if 
+you don't use the BSD version of UNIX. Many of the commands are compatible 
+with the POSIX standard and thus identical to those in other UNIX versions.  
+Because 4.4BSD includes many freeware programs that are available but not 
+documented in other versions of UNIX, you may find yourself turning first 
+to this book to look up options for programs like perl, GNU emacs, 
+compress, patch, g++, or kerberos.
+
+          4.4BSD USER'S SUPPLEMENTARY DOCUMENTS (USD) 
+          686 pp. ISBN 1-56592-076-7, $30 US 
+
+     A collection of papers relating to miscellaneous "user" tools, 
+principally text editors and document processors.  Some remain the only 
+tutorial documentation for many UNIX programs.  
+
+          4.4BSD PROGRAMMER'S REFERENCE MANUAL (PRM) 
+          868 pp. ISBN 1-56592-078-3, $30 US 
+
+PRM collects the man pages for the various UNIX  program ming libraries, 
+plus related information for programmers.  It consists of sections 2 
+through 5 of the online man page collection: (2) UNIX System Calls; 
+(3) C Library Subroutines; (4) Special Files (device interfaces); and,
+(5) File Formats.  Useful not only for 4.4BSD systems but for many 
+related UNIX implementations, including SunOS, BSDI, and Linux.
+
+          4.4 BSD PROGRAMMER'S SUPPLEMENTARY DOCUMENTS (PSD) 
+          606 pp. ISBN 1-56592-079-1, $30 US 
+
+     In this volume, you'll find useful papers on such tools as the gdb 
+hand adb debuggers, source code control systems RCS and SCCS, lex and 
+yacc, and the m4 macro processor.  You'll also find such historical 
+documents as Dennis Ritchie and Ken Thompson's classic first paper about 
+UNIX and Kernighan and Ritchie's classic introduction to UNIX programming.
+On a more up to date note, this book also includes a two part tutorial on 
+interprocess communication (IPC) under 4.4BSD UNIX.
+
+          4.4 BSD-LITE CD COMPANION  
+     CD Domestic: 1-56592-081-3 ($40 US); CD International: 1-56592-092-9
+
+     This CD contains a copy of the University of California, Berkeley's 
+4.4BSD-Lite release, with additional documentation and enhancements.  
+Access to the source code included on it will provide invaluable information 
+on the design of a modern UNIX-like system, and the source ce for the 
+utilities and support libraries will great any programmer's toolkit.
+     The CD is a source distribution, and does not contain program binaries 
+for any architecture.  It will not be possible to compile or run this 
+software without a pre-existing system that is already installed and 
+running.  The 4.4BSD-Lite distribution did not include sources for the 
+complete 4.4BSD system.  The source code for a small number of utilities 
+and files (including a few from the operating system) were removed so that 
+the system could be freely distributed.   
+
+---------------------------------------------------------------
+This and other O'Reilly products are available in the Americas 
+and Japan through bookstores, or directly from the publisher 
+(credit card orders 800-889-8969; email order@ora.com). 
+
+For information: telephone 707-829-0515 (800-998-9938 in US & 
+Canada); FAX 707-829-0104; email nuts@ora.com; or write O'Reilly & 
+Associates, 103A Morris St., Sebastopol, CA, 95472, USA.  
+GSA # GS-02F-6095A.  Access our online gopher catalog via "telnet 
+gopher.ora.com" (log in as "gopher" -- no password needed).
+
+Our international distributors:
+* EUROPE (except German-speaking countries), MIDDLE EAST, AFRICA 
+International Thomson Publishing, Berkshire House, 168-173 High 
+Holborn, London WC1V 7AA, UK.  Telephone 44-71-497-1422;
+FAX 44-71-497-1426; or email danni.dolbear@itpuk.co.uk
+* GERMAN-SPEAKING COUNTRIES.  International Thomson Publishing,
+Konigswinterer Strasse 418, 53227 Bonn, Germany. Telephone 49-228-445171;
+FAX 49-228-441342; or email 100272.2422@compuserve.com
+* ASIA. International Thomson Publishing, 221 Henderson Rd.,
+#05-10 Henderson Building, Singapore 0315. Telephone 65-272-6496;
+FAX 65-272-6498
+ * AUSTRALIA AND NEW ZEALAND.  WoodsLane, Unit 8, 101 Darley Street,
+Mona Vale, NSW 2103, Australia. Telephone 61-2-979-5944;
+FAX 61-2-997-3348; or email woods@tmx.mhs.oz.au
+
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+FOR IMMEDIATE RELEASE                              CONTACT:  Brian Erwin
+                                                             O'Reilly
+                                                             707/829-0515
+                                                             brian@ora.com
+
+                                                             USENIX Association
+		                                             510-528-8649
+		                                             office@usenix.org
+
+
+       O'REILLY AND USENIX PUBLISH FINAL BERKELEY VERSION OF UNIX 
+                  ON CD-ROM AND FIVE-VOLUME DOC SET
+
+SEBASTOPOL, CA -- 4.4BSD is the final release of what may be one of the 
+most significant research projects in the history of computing.  When Bell 
+Labs originally released UNIX source code to the research and development
+community, brilliant researchers wrote their own software and added it to 
+UNIX in a spree of creative anarchy that hasn't been equaled since.  The 
+Berkeley Software Distribution became the repository of much of that work.
+
+     In those years of creative ferment, source code was widely available,
+so programmers could build on the work of others.  As UNIX became 
+commercialized, access to source became increasingly curtailed and original 
+development more difficult.
+
+     The Computer Systems Research Group of the University of California at
+Berkeley, in cooperation with the Usenix Association and O'Reilly &
+Associates, Inc, has now published the final, definitive release of the
+Berkeley version of UNIX, which has been the basis for many commercial
+UNIX variants.  The source code for the system is available on CD-ROM and
+is accompanied by a five-volume documentation set.
+
+                 4.4BSD-LITE CD-ROM COMPANION
+
+     With this release of 4.4BSD, one need no longer work at a
+university or UNIX system development house to have access to UNIX
+source.  The University has prepared a "Lite" release of the operating
+system, from which the source code for a small number of utilities
+and files, including a few from the operating system, has been removed
+so that the system can be freely distributed.  
+     
+     The source code included on the 4.4BSD-Lite CD-ROM Companion
+will provide invaluable information on the design of any modern
+UNIX or UNIX-like system, and the source code for the utilities and
+support libraries will greatly enhance any programmer's toolkit.
+  
+     In addition to source code, the CD includes the manual pages, other 
+documentation, and research papers from the University of California, 
+Berkeley's 4.4BSD-Lite distribution.  (CD Domestic: ISBN 1-56592-081-3 
+($40 US); CD International: ISBN 1-56592-092-9.)
+
+
+                   4.4BSD FIVE-VOLUME DOC SET
+
+     A five-volume doc set is available from O'Reilly directly with or
+without CD-ROM. Volumes 1 through 5 plus CD-ROM, ISBN 1-56592-082-1,
+costs $150 (US).  Volumes 1 through 5 only, ISBN 1-56592-077-5, costs 
+$120 (US).  The doc set includes:
+                     
+     4.4BSD SYSTEM MANAGER'S MANUAL (SMM)  
+     646 pp. ISBN 1-56592-080-5, $30 US
+
+     This volume includes man pages for system administration commands 
+(section 8 of the online reference manual), plus supplementary documents 
+useful to system administrators.  Includes installation instructions for 
+the 4.4BSD release (which are also included with the 4.4BSD-lite CD-ROM 
+Companion), plus papers on many system administration utilities and tasks, 
+many of which are the definitive works on the topic. 
+
+     4.4BSD USER'S REFERENCE MANUAL (URM) 
+     898 pp. ISBN 1-56592-075-9, $30 US
+
+     This volume collects the man pages for the more than 284 user 
+programs that make up the user portion of the 4.4BSD UNIX release 
+(section 1 of the traditional UNIX Reference Manual), plus additional 
+pages for games (section 6 of the traditional manual) and miscellaneous 
+information (section 7, which includes mostly information on troff macro 
+packages and other text processing information.) URM is useful even if 
+you don't use the BSD version of UNIX. Many of the commands are compatible 
+with the POSIX standard and thus identical to those in other UNIX versions.  
+Because 4.4BSD includes many freeware programs that are available but not 
+documented in other versions of UNIX, you may find yourself turning first 
+to this book to look up options for programs like perl, GNU emacs, 
+compress, patch, g++, or kerberos.
+
+     4.4BSD USER'S SUPPLEMENTARY DOCUMENTS (USD) 
+     686 pp. ISBN 1-56592-076-7, $30 US 
+
+     A collection of papers relating to miscellaneous "user" tools, 
+principally text editors and document processors.  Some remain the only 
+tutorial documentation for many UNIX programs.  
+
+     4.4BSD PROGRAMMER'S REFERENCE MANUAL (PRM) 
+     868 pp. ISBN 1-56592-078-3, $30 US 
+
+     The PRM collects the man pages for the various UNIX  program ming libraries, 
+plus related information for programmers.  It consists of sections 2 
+through 5 of the online man page collection: (2) UNIX System Calls; 
+(3) C Library Subroutines; (4) Special Files (device interfaces); and,
+(5) File Formats.  Useful not only for 4.4BSD systems but for many 
+related UNIX implementations, including SunOS, BSDI, and Linux.
+
+     4.4 BSD PROGRAMMER'S SUPPLEMENTARY DOCUMENTS (PSD) 
+     606 pp. ISBN 1-56592-079-1, $30 US 
+
+     This volume contains useful papers on such tools as the gdb 
+hand adb debuggers, source code control systems RCS and SCCS, lex and 
+yacc, and the m4 macro processor.  Also included are such historical 
+documents as Dennis Ritchie and Ken Thompson's classic first paper about 
+UNIX and Kernighan and Ritchie's classic introduction to UNIX programming.
+On a more up to date note, this book also includes a two part tutorial on 
+interprocess communication (IPC) under 4.4BSD UNIX.
+
+
+                    ABOUT O'REILLY & ASSOCIATES 
+
+          O'Reilly & Associates is recognized worldwide for its definitive 
+books on UNIX, the Internet, and The X Window System.  Working closely 
+with developers of new technologies, O'Reilly's editors are "computer 
+people" who use the software they write about.  The company's planning 
+and review cycles link together authors, computer vendors, and technical 
+experts throughout the industry in a creative collaboration that mirrors 
+the strengths of the "open systems" philosophy itself.
+
+                           ABOUT USENIX 
+              The UNIX and Advanced Computing Systems 
+               Professional and Technical Association 
+  
+     The USENIX Association is the original non-profit membership organization 
+of individuals and institutions with an interest in UNIX and other advanced 
+computing systems.  USENIX extends its support to the broad computing environment 
+and to professional subspecialties such as software development and system 
+administration.  USENIX and its members are dedicated to: problem-solving with 
+a practical bias; research that works; and, rapid communication of the results 
+of both research and innovation.
+
+                           #     #     #
+-- 
+Brian Erwin, brian@ora.com
+O'Reilly & Associates
+103A Morris Street, Sebastopol CA 95472
+707-829-0515, Fax 707-829-0104
+
+
+
+]
+MID: 199405200019.RAA14290@vangogh.CS.Berkeley.EDU
+SUBJ: V1.104 (4.4BSD Manuals, 4.4BSD-Lite CD-ROM)
+BODY:  | I've been asked a lot lately about the availability of the 4.4BSD Manual | Set and of the 4.4BSD-Lite distribution on CD-ROM.  I'm glad to be able | to say that the USENIX Association and O'Reilly & Associates have pooled | resources to make them available.  Attached are three articles, the | first from the upcoming USENIX ;login publication, the second from an | O'Reilly & Associates net posting, and finally an O'Reilly & Associates | press release. |  | I'd like to thank the USENIX board members, the USENIX staff, (especially | Ellie Young and Alain Henon), and Tim O'Reilly and his staff for making | this happ
+------------------------------------------------------------
+[1994-05-29T04:19:24+00:00] [vixie@vix.com (Paul A Vixie)] [> one would have to start thinking of operating systems releases in terms of
+> vintages ("Oh, I see this is an april '93 HPUX - that was a very fine year!
+> Yes, vendor, I'll have that please!" :-).
+
+I was going to follow up humourously on this message but I decided not to.
+Then as I was brushing my teeth I realized that my reply wasn't humourous
+after all, I _mean_ it.
+
+"That's how it is, Jordan."
+
+Systems _do_ evolve.  Version N of an operating system or library or
+whatever will have fewer features than Version N+1 but more than Version
+N-1.  When I write code for these systems I have the choice of coding for
+the least common denominator, which often results in a suboptimal program
+that doesn't take good advantage of a system's recent improvements, or
+putting in some #ifdef's which often results in an unreadable and
+unmaintainable and generally gateful program text.
+
+Imagine using stty/gtty all the time rather than trying to use termios if
+it's there -- your program will not be able to go faster than 38400 baud
+even if the system supports it.
+
+The key to #ifdef's is to do them _sensibly_.  They don't have to be icky.
+
+But I sure would like it if ULTRIX was defined as a datecoded macro in
+<sys/param.h>, since that way BIND and my other software systems could make
+compile-time decisions about which kernel bugs to work around, rather than
+testing for the existence of macros which I knew (because I worked at DEC
+at the time) weren't in some older version of the system.  Talk about your
+counter-intuitive software.
+
+So, yes, I'd much rather choose, or at least know, the vintage of my system.
+BSD is luminary in the field for many reasons, and this is one of them.  The
+folks at CSRG understood that programs and programmers would want to know the
+date code of the BSD System Interface that describes the system.  I wish that
+the iron vendors would be as wise, but I think I know better by now.
+--
+Paul Vixie
+Redwood City, CA
+decwrl!vixie!paul
+<paul@vix.com>
+
+
+]
+MID: VIXIE.94May29041924@office.home.vix.com
+SUBJ: Re: Request to ``ports'' developers
+BODY: > one would have to start thinking of operating systems releases in terms of | > vintages ("Oh, I see this is an april '93 HPUX - that was a very fine year! | > Yes, vendor, I'll have that please!" :-). |  | I was going to follow up humourously on this message but I decided not to. | Then as I was brushing my teeth I realized that my reply wasn't humourous | after all, I _mean_ it. |  | "That's how it is, Jordan." |  | Systems _do_ evolve.  Version N of an operating system or library or | whatever will have fewer features than Version N+1 but more than Version | N-1.  When I write code for these systems I have the ch
+------------------------------------------------------------
+[1994-05-29T13:11:35+00:00] [jkh@whisker.hubbard.ie (Jordan K. Hubbard)] [In article <VIXIE.94May29041924@office.home.vix.com> vixie@vix.com (Paul A Vixie) writes:
+
+>  "That's how it is, Jordan."
+>
+>  Systems _do_ evolve.  Version N of an operating system or library or
+>  whatever will have fewer features than Version N+1 but more than Version
+>  N-1.  When I write code for these systems I have the choice of coding for
+>  the least common denominator, which often results in a suboptimal program
+>  that doesn't take good advantage of a system's recent improvements, or
+>  putting in some #ifdef's which often results in an unreadable and
+>  unmaintainable and generally gateful program text.
+
+I think you missed my basic point.  *I* know that, and *you* know
+that, but just how the heck is Joe Blow supposed to know that?  Or,
+for that matter, just how are we supposed to even *remember* such
+things 5 or even 3 years from now?  There is truly no easily
+accessible roadmap to follow that's going to give someone who hasn't
+been intimately coupled with the BSD effort (and say what you like,
+not all of us can or even should be) the ability to say that 9303
+means one particular set of things and 9201 means another.  Certainly,
+you who know such things can write your code just fine to
+conditionally adapt to the various incarnations, and you may even
+strenuously defend the practice since it gives you a potentially high
+degree of granularity to work with in determining just what features
+you can rely on, but it fails the acceptance test in 2 critical (IMHO)
+areas:
+
+	1. It gives the user who is trying to use your code for reference
+	   absolutely no idea _why_ it is you're doing what you're doing.
+	   Sure, they can sort of intuit that 9301 must have been something
+	   special in the tty code department if they see lots of termios
+	   features #ifdef'd to it, but they can't really be sure to exactly
+	   what extent those features were implemented at that time.
+
+	   It can scarcely be argued that `HAVE_TERMIOS' is a far superior
+	   and more descriptive option flag than `#if BSD >= 9212', and to
+	   my mind actively encouraging people to use this BSD hook just
+	   discourages the more self-documenting feature specific macros
+	   that CSRG really ought to have been providing in the first place.
+	   I know you can't change the past, but now wouldn't have been a bad
+	   time to start worrying about the future.
+
+	2. It encourages the user to think in entirely the wrong way.
+	   The chronology of an OS is important to its maintainers and
+	   those close to the action, but basically irrelevant to anyone
+	   else.  If the user twigs onto some special bit of behavior in a
+	   commercial product, they do it either by version number
+	   ("Lotus 1-2-3 version 4.0") or by feature ("Windows for
+	   Workgroups").  They don't do it by date, and considering the
+	   variable lag times between development and general release, such
+	   dates wouldn't have a lot of meaning anyway.
+
+
+>  But I sure would like it if ULTRIX was defined as a datecoded macro in
+>  <sys/param.h>, since that way BIND and my other software systems could make
+>  compile-time decisions about which kernel bugs to work around, rather than
+>  testing for the existence of macros which I knew (because I worked at DEC
+>  at the time) weren't in some older version of the system.  Talk about your
+>  counter-intuitive software.
+
+You do make a reasonable point in saying that a datecoded ULTRIX would
+allow you to work around kernel bugs with specific #ifdefs, the
+assumption being that the maintainers of ULTRIX probably didn't know
+about those bugs at the time of release and therefore were hardly able
+to give you handy `SIGMASK_SAVE_ON_LONGJMP_BROKEN' types of defines in
+sys/param.h, but would not a version number give you much the same
+thing?  For each release of the OS there's going to be some version
+and point release number, and that number DOES at least have the
+advantage of being written on the fronts of enough manuals and other
+supporting documentation to be fairly visible to the user.  It's also
+a lot easier to pass along oral history in the form of "avoid versions
+2.1 or 2.2, they were both full of mice" than "april 3rd and may 22nd
+were pretty bad days!"
+
+Doesn't look like we're going to agree on this one, Paul, but then it
+wouldn't be the first time.. :-)
+
+					Jordan
+--
+Jordan K. Hubbard	FreeBSD core team	Friend to mollusks
+
+
+]
+MID: JKH.94May29131135@whisker.hubbard.ie
+SUBJ: Re: Request to ``ports'' developers
+BODY: In article <VIXIE.94May29041924@office.home.vix.com> vixie@vix.com (Paul A Vixie) writes: |  | >  "That's how it is, Jordan." | > | >  Systems _do_ evolve.  Version N of an operating system or library or | >  whatever will have fewer features than Version N+1 but more than Version | >  N-1.  When I write code for these systems I have the choice of coding for | >  the least common denominator, which often results in a suboptimal program | >  that doesn't take good advantage of a system's recent improvements, or | >  putting in some #ifdef's which often results in an unreadable and | >  unmaintainable and generally
+------------------------------------------------------------
+[1994-06-23T17:58:43+00:00] [vixie@vix.com (Paul A Vixie)] [>as a unsolicited observation that no one has mentioned. I expect some delay
+>in getting 4.4-lite to ftp sites is an attempt to get some much needed money
+>to UCB.
+
+With CSRG "gone", this is less important now than it once was.  UCB doesn't
+care and the money doesn't go anymore to pay the people who will produce the
+next release.
+--
+Paul Vixie
+Redwood City, CA
+decwrl!vixie!paul
+<paul@vix.com>
+
+
+]
+MID: VIXIE.94Jun23175843@office.home.vix.com
+SUBJ: Re: 4.4-lite?
+BODY: >as a unsolicited observation that no one has mentioned. I expect some delay | >in getting 4.4-lite to ftp sites is an attempt to get some much needed money | >to UCB. |  | With CSRG "gone", this is less important now than it once was.  UCB doesn't | care and the money doesn't go anymore to pay the people who will produce the | next release. | -- | Paul Vixie | Redwood City, CA | decwrl!vixie!paul | <paul@vix.com> |  |  | 
+------------------------------------------------------------
+[1994-06-26T12:26:39+00:00] [jan@encap.Hanse.DE (Jan-Oliver Neumann)] [The subject says it all: will CSRG-folks or anybody else release such 
+a nifty book ?
+-- 
+Jan-Oliver Neumann	                                    <jan@encap.Hanse.DE>
+Keep on rockin' in the free world...
+
+
+]
+MID: 1994Jun26.122639.888@encap.Hanse.DE
+SUBJ: Will there be a 4.4BSD(-Lite) daemon book ?
+BODY: The subject says it all: will CSRG-folks or anybody else release such  | a nifty book ? | --  | Jan-Oliver Neumann	                                    <jan@encap.Hanse.DE> | Keep on rockin' in the free world... |  |  | 
+------------------------------------------------------------
+[1994-06-28T09:30:16+00:00] [jwshin@nitride.EECS.Berkeley.EDU (Jinwoo Shin)] [jan@encap.Hanse.DE (Jan-Oliver Neumann) writes:
+
+>The subject says it all: will CSRG-folks or anybody else release such 
+>a nifty book ?
+
+I thought as of 4.4 and 4.4lite release, CSRG closed down.
+-- 
+Jinwoo Shin				jwshin@eecs.berkeley.edu
+System Administrator			
+Berkeley Sensor and Actuator Center
+
+
+]
+MID: jwshin.772795816@nitride.EECS.Berkeley.EDU
+SUBJ: Re: Will there be a 4.4BSD(-Lite) daemon book ?
+BODY: jan@encap.Hanse.DE (Jan-Oliver Neumann) writes: |  | >The subject says it all: will CSRG-folks or anybody else release such  | >a nifty book ? |  | I thought as of 4.4 and 4.4lite release, CSRG closed down. | --  | Jinwoo Shin				jwshin@eecs.berkeley.edu | System Administrator			 | Berkeley Sensor and Actuator Center |  |  | 
+------------------------------------------------------------
+[1994-06-28T14:07:48+00:00] [williams@bolero.gsfc.nasa.gov (James W. Williams)] [In article <1994Jun26.122639.888@encap.hanse.de>,
+Jan-Oliver Neumann <jan@encap.Hanse.DE> wrote:
+>The subject says it all: will CSRG-folks or anybody else release such 
+>a nifty book ?
+>-- 
+>Jan-Oliver Neumann	                                    <jan@encap.Hanse.DE>
+>Keep on rockin' in the free world...
+
+Yes.  I believe Kirk McKusick will be the principal author.  I don't know if
+any of the other authors of the "The Design and Implementation of the 4.3
+BSD Unix Operating System" ("deamon book" sure is shorter!) will be involved.
+
+Jim
+
+-- 
+------------------------------------------------------------------------ 
+ James W. Williams                      NASA Goddard Space Flight Center
+ williams@bolero.gsfc.nasa.gov          Code 633
+ +1 301 286-1131                        Greenbelt, MD 20771
+
+
+]
+MID: 2upark$t7r@paperboy.gsfc.nasa.gov
+SUBJ: Re: Will there be a 4.4BSD(-Lite) daemon book ?
+BODY: In article <1994Jun26.122639.888@encap.hanse.de>, | Jan-Oliver Neumann <jan@encap.Hanse.DE> wrote: | >The subject says it all: will CSRG-folks or anybody else release such  | >a nifty book ? | >--  | >Jan-Oliver Neumann	                                    <jan@encap.Hanse.DE> | >Keep on rockin' in the free world... |  | Yes.  I believe Kirk McKusick will be the principal author.  I don't know if | any of the other authors of the "The Design and Implementation of the 4.3 | BSD Unix Operating System" ("deamon book" sure is shorter!) will be involved. |  | Jim |  | --  | -------------------------------------------------------
+------------------------------------------------------------
+[1994-07-06T05:08:57+00:00] [v30yjs@v0sun11.ccl.itri.org.tw (������������������������)] [Paul A Vixie (vixie@vix.com) wrote:
+
+: With CSRG "gone", this is less important now than it once was.  UCB doesn't
+: care and the money doesn't go anymore to pay the people who will produce the
+
+Well, maybe I ask : Why do they close CSRG ?
+And does UCB keep developing UNIX ?
+--
+------------------
+�� �� ��    Email: JS@v0sun11.ccl.itri.org.tw 
+�u��|/�q�q��/��T�n��q����    
+
+
+]
+MID: 1994Jul6.050857.8410@comserv.itri.org.tw
+SUBJ: Re: 4.4-lite?
+BODY: Paul A Vixie (vixie@vix.com) wrote: |  | : With CSRG "gone", this is less important now than it once was.  UCB doesn't | : care and the money doesn't go anymore to pay the people who will produce the |  | Well, maybe I ask : Why do they close CSRG ? | And does UCB keep developing UNIX ? | -- | ------------------ | �� �� ��    Email: JS@v0sun11.ccl.itri.org.tw  | �u��|/�q�q��/��T�n��q����     |  |  | 
+------------------------------------------------------------
+[1994-07-06T06:57:09+00:00] [jwshin@nitride.EECS.Berkeley.EDU (Jinwoo Shin)] [>Paul A Vixie (vixie@vix.com) wrote:
+
+>Well, maybe I ask : Why do they close CSRG ?
+>And does UCB keep developing UNIX ?
+
+As I understood it, no non-commercial group is doing anymore Unix research.
+Bell lab stopped, and CSRG (I think) said 4.4 was the last version. The further
+Unix research will be done in places like USL, Sun, IBM ... Although there is
+Linux :)
+
+-- 
+Jinwoo Shin				jwshin@eecs.berkeley.edu
+System Administrator			
+Berkeley Sensor and Actuator Center
+
+
+]
+MID: jwshin.773477829@nitride.EECS.Berkeley.EDU
+SUBJ: Re: 4.4-lite?
+BODY: >Paul A Vixie (vixie@vix.com) wrote: |  | >Well, maybe I ask : Why do they close CSRG ? | >And does UCB keep developing UNIX ? |  | As I understood it, no non-commercial group is doing anymore Unix research. | Bell lab stopped, and CSRG (I think) said 4.4 was the last version. The further | Unix research will be done in places like USL, Sun, IBM ... Although there is | Linux :) |  | --  | Jinwoo Shin				jwshin@eecs.berkeley.edu | System Administrator			 | Berkeley Sensor and Actuator Center |  |  | 
+------------------------------------------------------------
+[1994-07-06T08:07:15+00:00] [c9020@rrzc1a (Hubert Feyrer)] [Jinwoo Shin (jwshin@nitride.EECS.Berkeley.EDU) wrote:
+> As I understood it, no non-commercial group is doing anymore Unix research.
+> Bell lab stopped, and CSRG (I think) said 4.4 was the last version. The further
+> Unix research will be done in places like USL, Sun, IBM ... Although there is
+> Linux :)
+
+And NetBSD!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+Hubert
+
+--
+=============== Hubert Feyrer ============================================
+      Weekdays: Rennerstr. 19, D-93053 Regensburg,  Tel. 0941/701788
+      Weekends: Bachstr. 40,   D-84066 Mallersdorf, Tel. 08772/6084
+      Internet: hubert.feyrer@rz.uni-regensburg.de == IRC: hubertf
+==========================================================================
+  Click <A HREF="http://dusk.rz.uni-regensburg.de/hubert.html">here.</A>
+
+
+]
+MID: 2vdonjINNs4q@rrzs3.uni-regensburg.de
+SUBJ: Re: 4.4-lite?
+BODY: Jinwoo Shin (jwshin@nitride.EECS.Berkeley.EDU) wrote: | > As I understood it, no non-commercial group is doing anymore Unix research. | > Bell lab stopped, and CSRG (I think) said 4.4 was the last version. The further | > Unix research will be done in places like USL, Sun, IBM ... Although there is | > Linux :) |  | And NetBSD!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! |  |  | Hubert |  | -- | =============== Hubert Feyrer ============================================ |       Weekdays: Rennerstr. 19, D-93053 Regensburg,  Tel. 0941/701788 |       Weekends: Bachstr. 40,   D-84066 Mallersdorf, Tel. 087
+------------------------------------------------------------
+[1994-07-06T14:55:47+00:00] [michaelv@iastate.edu (Michael L. VanLoon)] [In <jwshin.773477829@nitride.EECS.Berkeley.EDU> jwshin@nitride.EECS.Berkeley.EDU (Jinwoo Shin) writes:
+
+>>Paul A Vixie (vixie@vix.com) wrote:
+
+>>Well, maybe I ask : Why do they close CSRG ?
+>>And does UCB keep developing UNIX ?
+
+>As I understood it, no non-commercial group is doing anymore Unix research.
+>Bell lab stopped, and CSRG (I think) said 4.4 was the last version. The further
+>Unix research will be done in places like USL, Sun, IBM ... Although there is
+>Linux :)
+
+Oh, puh-leaze.  "Linux will save the world!".  What do you call NetBSD
+and FreeBSD?  Please don't try to evangelize the discussion when it
+was specifically targeted at BSD OS's.
+
+CSRG was closed because they simply didn't have the time or desire to
+continue trying to raise donation money while trying to write a
+superior operating system.  Various members have gone on to BSDI
+(BSD/386), and/or other activities.  I'm sure someone else would be
+able to speak more authoritatively about this, considering the
+readership of this group.
+
+-- 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+ Michael L. VanLoon                 Iowa State University Computation Center
+    michaelv@iastate.edu                    Project Vincent Systems Staff
+  Free your mind and your machine -- NetBSD free Un*x for PC/Mac/Amiga/etc.
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+
+]
+MID: michaelv.773506547@ponderous.cc.iastate.edu
+SUBJ: Re: 4.4-lite?
+BODY: In <jwshin.773477829@nitride.EECS.Berkeley.EDU> jwshin@nitride.EECS.Berkeley.EDU (Jinwoo Shin) writes: |  | >>Paul A Vixie (vixie@vix.com) wrote: |  | >>Well, maybe I ask : Why do they close CSRG ? | >>And does UCB keep developing UNIX ? |  | >As I understood it, no non-commercial group is doing anymore Unix research. | >Bell lab stopped, and CSRG (I think) said 4.4 was the last version. The further | >Unix research will be done in places like USL, Sun, IBM ... Although there is | >Linux :) |  | Oh, puh-leaze.  "Linux will save the world!".  What do you call NetBSD | and FreeBSD?  Please don't try to evangelize the dis
+------------------------------------------------------------
+[1994-07-06T16:32:42+00:00] [vixie@vix.com (Paul A Vixie)] [> >Paul A Vixie (vixie@vix.com) wrote:
+>
+> >Well, maybe I ask : Why do they close CSRG ?
+> >And does UCB keep developing UNIX ?
+
+check your attributions.  i didn't say that.
+
+> As I understood it, no non-commercial group is doing anymore Unix research.
+> Bell lab stopped, and CSRG (I think) said 4.4 was the last version. The
+> further Unix research will be done in places like USL, Sun, IBM [...]
+
+...and BSDI...
+--
+Paul Vixie
+Redwood City, CA
+decwrl!vixie!paul
+<paul@vix.com>
+
+
+]
+MID: VIXIE.94Jul6163242@office.home.vix.com
+SUBJ: Re: 4.4-lite?
+BODY: > >Paul A Vixie (vixie@vix.com) wrote: | > | > >Well, maybe I ask : Why do they close CSRG ? | > >And does UCB keep developing UNIX ? |  | check your attributions.  i didn't say that. |  | > As I understood it, no non-commercial group is doing anymore Unix research. | > Bell lab stopped, and CSRG (I think) said 4.4 was the last version. The | > further Unix research will be done in places like USL, Sun, IBM [...] |  | ...and BSDI... | -- | Paul Vixie | Redwood City, CA | decwrl!vixie!paul | <paul@vix.com> |  |  | 
+------------------------------------------------------------
+[1994-07-08T13:03:38+00:00] [mikc@gnu.ai.mit.edu (Mike Coughlin)] [In article <VIXIE.94Jul6163242@office.home.vix.com>,
+Paul A Vixie <vixie@vix.com> wrote:
+> [somebody else wrote:]
+>> As I understood it, no non-commercial group is doing anymore Unix research.
+>> Bell lab stopped, and CSRG (I think) said 4.4 was the last version. The
+>> further Unix research will be done in places like USL, Sun, IBM [...]
+>...and BSDI...
+    
+   Things change with time. Many years ago, researchers at Berkeley were 
+paid to write new improved code for AT&T's Unix operating system. Unix
+was then an academic exercise. AT&T couldn't be a computer company since
+it was a Telephone monopoly. Now Unix is a commercial product guarded by
+lawyers that want to sue as much as possible. Researchers at Berkeley 
+are interested in newer things than the ideas in Unix.
+   There has been a problem for the past few years in that the academic
+program code from Berkeley was mixed in with the commercial code from
+AT&T. After a monumental struggle, this code has finally been disentangled.
+We now have a completely different situation from years ago. There is
+no need for a company or a research institution to continue the
+development of Unix. Now anyone with the necessary skills can work on 
+the project over the net in his spare time. The need for copyrights
+and license payments is gone. People can work on netBSD or freeBSD to
+further their education and establish their reputation as first class
+programming consultants.
+   So I'd say that the largest possible non-commercial group is now
+doing research on Unix.
+
+-- 
+   Michael Coughlin             mikc@gnu.ai.mit.edu      Cambridge, MA USA
+
+
+]
+MID: 2vjiraINNa7e@life.ai.mit.edu
+SUBJ: Re: 4.4-lite?
+BODY: In article <VIXIE.94Jul6163242@office.home.vix.com>, | Paul A Vixie <vixie@vix.com> wrote: | > [somebody else wrote:] | >> As I understood it, no non-commercial group is doing anymore Unix research. | >> Bell lab stopped, and CSRG (I think) said 4.4 was the last version. The | >> further Unix research will be done in places like USL, Sun, IBM [...] | >...and BSDI... |      |    Things change with time. Many years ago, researchers at Berkeley were  | paid to write new improved code for AT&T's Unix operating system. Unix | was then an academic exercise. AT&T couldn't be a computer company since | it was a Telephone m
+------------------------------------------------------------

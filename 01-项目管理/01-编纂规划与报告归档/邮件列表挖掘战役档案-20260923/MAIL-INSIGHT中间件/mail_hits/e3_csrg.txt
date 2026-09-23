@@ -1,0 +1,71 @@
+total 14
+[1995-09-17T12:23:36+00:00] [Jonathan M. Bresler] []
+MID: <Pine.3.89.9509170859.C25887-0100000@kryten.atinc.com>
+SUBJ: write-back vs write-thru
+BODY: 10% ;))) |  | on friday i received a brand spanking new 'dirty' chip for the 256kB  | level 2 cache sp3g motherboard i have. |  | last night i supped -stable and did the usual make world |  | write-thur: |     30082.80 real     16436.87 user      3887.32 sys |     36442.26 real     16598.26 user      3967.11 sys  <-- excessive use of | 							  tail -f by operator |     30638.79 real     16447.05 user      3895.20 sys |  | write-back: |     27178.79 real     16038.30 user      3789.03 sys |  |  | its only one data point and -stable does change from day to day, but  | looks good! |  | i will run more make world's starting again wedne
+------------------------------------------------------------
+[1995-09-21T23:49:18+00:00] ["Jonathan M. Bresler" <jmb@kryten.Atinc.COM>] []
+MID: Pine.3.89.9509211955.A19775-0100000@kryten.atinc.com
+SUBJ: Technical Specifications on FreeBSD 2.0.5 (fwd)
+BODY:  | Justin (below) wants to know how compatible we are with standard UNIX. |  | now that USL has been sold to SCO |  | and CSRG has been closed..... |  |  | we ARE standard unix ;) |  |  | Jonathan M. Bresler  jmb@kryten.atinc.com       | Analysis & Technology, Inc.   | FreeBSD Postmaster   jmb@FreeBSD.Org            | 2341 Jeff Davis Hwy | play go.                                        | Arlington, VA 22202 | ride bike. hack FreeBSD.--ah the good life      | 703-418-2800 x346 |  | ---------- Forwarded message ---------- | Date: Thu, 21 Sep 1995 14:23:48 -0700 | From: Justin M. Dority <JMDority@ix.netcom.com> | To: questions@FreeB
+------------------------------------------------------------
+[1996-05-12T07:21:28+00:00] [Greg Lehey] []
+MID: <199605120721.JAA29151@allegro.lemis.de>
+SUBJ: Re: [Forwarded e-mail from Alexander O. Yuriev]
+BODY: J Wunsch writes: | > | > As Mike O'Brien wrote: | > | >>> Yep, but since it's copyrighted, he rules what happens to anything | >>> that closely resembles HIS daemon. | >> | >> 	I wonder if he can copyright something I owned ten years before?  Seems | >> odd that he can do that without having inherited the rights. | > | > He can, since you haven't copyrighted your version before. | > | > Anyway: funny story. :) Pity that it didn't make it into Salus' | book. |  | It's made it into the new edition of "Installing FreeBSD". |  | > It raised the question in me how many daemons there have been in the | > early Unices.  Most of our cur
+------------------------------------------------------------
+[1996-05-14T09:05:48+00:00] [edd@aic.net] []
+MID: 199605140905.NAA03572@aic.net
+SUBJ: Re: UNIX System
+BODY: >  | > > > >> still wondering, however, whether it may not be called "Berkeley | > > > >> UNIX". | > >  | > > I think there are no such thing as "Berkeley UNIX". If you refer to | > > BSD, you have to write BSD (and indicate release),  | > > not UNIX. Because "UNIX" originally referred | > > to System V, again, IMHO. | >  | > The term "Berkeley UNIX" was used in the origina daemon book, and | > AT&T/USL did not object to that usage. |  | ok. At least in CSRG documentation it's called BSD :) |  |  | -edd |  |  | 
+------------------------------------------------------------
+[1996-07-06T19:46:37+00:00] [Martin Welk] []
+MID: <m0ucrP2-00036yC@viking.ucsalf.ac.uk>
+SUBJ: Re: Root filesystem on NFS, Linux style ???
+BODY: In article <4r81kk$ovg@plato.ucsalf.ac.uk>, | Mark Powell <mark@plato.ucsalf.ac.uk> wrote: |  | >  Linux allows a kernel to be booted from DOS and then perform it's own RARP | >to find it's IP and root filesystem over NFS. FreeBSD only seems to allow this | >with the netboot.(com|rom) program (albeit using BOOTP.) We use this here to  | >allow users to turn their PC into an X terminal be selecting an option from | >our DOS menu system. We currently do it with Linux. However, I'd prefer to  | >do it with FreeBSD, for obvious reasons. NETNOOT.COM does not work | >if there is already a network driver loaded, as th
+------------------------------------------------------------
+[1996-07-07T15:39:51+00:00] [Wolfram Schneider <wosch@cs.tu-berlin.de>] []
+MID: 199607071539.RAA04672@campa.panke.de
+SUBJ: source growth
+BODY:  | $ cvs co -p -r <tag> src | wc |  | tag			lines	words	 chars |  | CSRG			1550797  5433954  37714292 | bsd_44_lite  		1467802  5178465  35824540 | RELEASE_2_0		3581617 13879752  96688411 | RELENG_2_0_5_RELEASE	3948192 15288222 106394680 | RELENG_2_1_0_RELEASE	4013369 15538258 108293194 | RELENG_2_1_0		4166320 16187532 112897708 (alias FreeBSD 2.1.5) | current			4267977 16493959 115153082 |  | Wolfram |  | 
+------------------------------------------------------------
+[1996-07-08T11:00:12+00:00] [James Raynard <james@jraynard.demon.co.uk>] []
+MID: 199607081100.LAA00223@jraynard.demon.co.uk
+SUBJ: Re: source growth
+BODY: >>>>> Wolfram Schneider <wosch@cs.tu-berlin.de> writes: | >  | > tag                   lines   words    chars | > CSRG                  1550797  5433954  37714292 | > current               4267977 16493959 115153082 |  | What about the "true" origin of BSD, the Sixth Edition? The one where | people used to carry around the complete (printed) source in their | briefcases... |  | --  | James Raynard, Edinburgh, Scotland | james@jraynard.demon.co.uk | http://www.freebsd.org/~jraynard/ |  | 
+------------------------------------------------------------
+[1996-07-10T11:42:49+00:00] [Wolfram Schneider <wosch@cs.tu-berlin.de>] []
+MID: 199607101142.NAA02589@campa.panke.de
+SUBJ: Re: source growth
+BODY: James Raynard writes: | >> tag                   lines   words    chars | >> CSRG                  1550797  5433954  37714292 |                          | The figures are not correct because many (GNU) utilities moved | from src/contrib into source tree. This "imported" sources have | of course no CSRG tag. |  |  | >> current               4267977 16493959 115153082 | > | >What about the "true" origin of BSD, the Sixth Edition? The one where | >people used to carry around the complete (printed) source in their | >briefcases... |  | 
+------------------------------------------------------------
+[1996-07-22T02:18:27+00:00] [Amancio Hasty] []
+MID: <199607220218.TAA04043@rah.star-gate.com>
+SUBJ: Re: 3-button mice on laptops (was Re: FreeBSD keyboard)
+BODY: If I am not mistake the Micronics notebook has a three button mouse. |  | 	Amancio |  |  |  | From owner-freebsd-chat  Mon Jul 22 06:39:04 1996 | Return-Path: owner-chat | Received: (from root@localhost) |           by freefall.freebsd.org (8.7.5/8.7.3) id GAA07201 |           for chat-outgoing; Mon, 22 Jul 1996 06:39:04 -0700 (PDT) | Received: from frig.mt.cs.keio.ac.jp (frig.mt.cs.keio.ac.jp [131.113.32.7]) |           by freefall.freebsd.org (8.7.5/8.7.3) with SMTP id GAA07194 |           for <freebsd-chat@freebsd.org>; Mon, 22 Jul 1996 06:39:01 -0700 (PDT) | Received: (from hosokawa@localhost) by frig.mt.cs.keio.ac.j
+------------------------------------------------------------
+[1996-07-23T19:51:31+00:00] [obrien@cs.ucdavis.edu] []
+MID: 199607231951.MAA12089@kongur
+SUBJ: Re: BSD4.4, Lite, Lite-2
+BODY: > however). 4.4BSD-lite is 4.4BSD without the encumbered stuff. 4.4BSD-lite2 | > is an update to 4.4BSD-lite.  |  | Who did this (both who was still working on it, and who coordinated the | release)?  I thought CSRG had disbanded right after 4.4BSD-lite was made | availible. |  | -- David    (obrien@cs.ucdavis.edu) |  | 
+------------------------------------------------------------
+[1996-09-02T18:28:12+00:00] [Matt Clark] []
+MID: <322B273C.4E68@netgate.net>
+SUBJ: GNNserver Equals?
+BODY: Does anyone know about a server/client set that is equal to | GNNserver/GNNpress? GNNserver is basicly a HTTP server that allows for | the HTTP PUT command (Used to be NaviServer). GNNpress is an authoring | tool that lets you upload the files easily to the server. Apparently, | they are not supporting FreeBSD anymore because 'the pthreads lib is | buggy' (I think they are using MIT's version). Anyone? (We've tried | FrontPage) |  | --matt Clark |  | From owner-freebsd-chat  Tue Sep  3 06:52:24 1996 | Return-Path: owner-chat | Received: (from root@localhost) |           by freefall.freebsd.org (8.7.5/8.7.3) id GAA29834
+------------------------------------------------------------
+[1996-09-04T21:36:25+00:00] [Theo de Raadt <deraadt@theos.com>] []
+MID: 9609042136.AA12381@theos.com
+SUBJ: Re: FreeBSD vs. Linux 96 (my impressions) - Reply 
+BODY: > You gain the ability to 'prove' that your system is more secure by | > statements other than "it's more secure".  When Marcus Ranum (formerly | > of TFS) states his system is secure, I believe him because of his track | > record.  You don't have one positive or negative since OpenBSD has | > virtually no track record.  We have to trust that what you're saying is | > true, and trust is something that is earned, not implicitly given.  You | > haven't earned my trust. |  | Right.  I haven't earned your trust.  Ignore my fixes, they are not | worthwhile. |  | > All *anyone* has asked (in Usenet and other forms) is th
+------------------------------------------------------------
+[1996-12-01T09:35:50+00:00] [William Wong] []
+MID: <199612010935.BAA28304@wiley.csusb.edu>
+SUBJ: Re: Laws of Physics (was Re: SCSI A/V drives)
+BODY: Wes Peters writes: |  | > If you stick around as long as I have, you eventually get to write | > your own job title so you can impress friends and colleagues, and | > stump everyone who doesn't get it.  Jordan was highly amused by mine | > and that of my partner at Comdex last week.  Unfortunately, he didn't | > get to meet the third member of our party, Mark A. Matthews, who is | > titled "Evil Genius, Acme Rocket and Stormdoor Co." | > |  | Just curious... What were your titles? |  | > You haven't lurked here long enough, or you would know that Terry, | > Jordan, and I comprise the all-knowing, all-seeing triumvirate
+------------------------------------------------------------
+[1996-12-03T00:26:27+00:00] ["Jonathan M. Bresler" <jmb>] []
+MID: 199612030026.QAA23882@freefall.freebsd.org
+SUBJ: EurOpen.SE: FreeBSD Presentation, trip report
+BODY: This is a (belated) trip report of my FreeBSD presentation at | EurOpen.SE.  There are several sections.  The first does the | "reporter's questions": who?, where?, when?, and what?.  The | second are some observations on making presentations.  And the | final section approximates some of my spoken remarks. |  | The slides from the presentation are available on freefall. | ftp://freefall.freebsd.org/pub/incoming/sweden.slides.ps |  | ================================================================= |  | 	On October 24th and 25th, EurOpen.SE (the Swedish | National Unix Users' Group) held its annual conference.  The | t
+------------------------------------------------------------

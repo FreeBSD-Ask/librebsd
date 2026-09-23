@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>S-me 目录标题过长拆分建议报告</title>
+<style>
+  :root{--ink:#1a1a1a;--muted:#6b7280;--accent:#1f4e79;--red:#b23a2f;--soft:#f4f6f8;--line:#e5e7eb;}
+  *{box-sizing:border-box;}
+  body{margin:0;background:#fafafa;color:var(--ink);font-family:"Songti SC","Noto Serif CJK SC","SimSun",serif;font-size:14px;line-height:1.75;}
+  .wrap{max-width:880px;margin:0 auto;padding:40px 24px;}
+  h1{font-family:"Microsoft YaHei","PingFang SC",sans-serif;font-size:23px;color:var(--accent);margin:0 0 4px;}
+  .sub{color:var(--muted);font-size:13px;margin:0 0 24px;}
+  h2{font-family:"Microsoft YaHei","PingFang SC",sans-serif;font-size:17px;color:var(--accent);margin:24px 0 10px;padding-left:10px;border-left:4px solid var(--accent);}
+  p{margin:8px 0;}
+  .card{background:#fff;border:1px solid var(--line);border-radius:10px;padding:16px 20px;margin:12px 0;}
+  table{border-collapse:collapse;width:100%;margin:10px 0;font-size:13px;}
+  th,td{border:1px solid var(--line);padding:7px 10px;text-align:left;vertical-align:top;}
+  th{background:var(--soft);font-family:"Microsoft YaHei",sans-serif;}
+  .num{color:var(--red);font-weight:700;font-family:"Microsoft YaHei",sans-serif;}
+  .ok{color:#1a7f4b;font-weight:700;}
+  .old{color:var(--muted);}
+  .new{color:var(--accent);font-weight:600;}
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>S-me 目录标题过长拆分建议报告</h1>
+<p class="sub">三级标题（卷/章/节）长度诊断与拆分方案（2026-09-01）</p>
+
+<h2>一、诊断</h2>
+<div class="card">
+<p>目录三级标题中，<strong>节标题过长最严重</strong>：曾有多达 218 条节标题超 40 字、最长 727 字。根因有二：① 单个 SUMMARY 素材本身超长（142 条超 100 字、最长 731 字，含大量括号考证与列举）；② 生成逻辑把多个素材用「；」拼接成一行，进一步加长。</p>
+<p>章标题次之（8 条超 40 字，最长 55 字），卷标题较轻（2 条超 35 字，最长 39 字）。</p>
+</div>
+
+<h2>二、已执行的节标题优化</h2>
+<table>
+<tr><th>措施</th><th>效果</th></tr>
+<tr><td>「；」拼接改为独立成节（每个素材一节）</td><td>消除拼接型超长</td></tr>
+<tr><td>clean_sec 优先去括号长考证（&gt;8 字）</td><td>去除「（1977.10.25…）」「（Chris Mason 2007…）」等考证</td></tr>
+<tr><td>超 50 字统一截断（冒号后保核心 30 字）</td><td>硬性封顶</td></tr>
+<tr><td>主题卷节同样套用 clean_sec</td><td>覆盖全部节</td></tr>
+</table>
+<p>结果：<span class="ok">节标题最长 727 字 → 75 字</span>，超 50 字节从数百条降至 15 条；节数由 856 增至 1397（拆分所致）。</p>
+
+<h2>三、章标题拆分建议（8 条，超 40 字）</h2>
+<div class="card">
+<p>章标题均为「主标题：长列举/长说明」结构，建议<strong>主标题留作章题，冒号后的列举降为节</strong>（或并入既有节）：</p>
+<table>
+<tr><th>原章标题</th><th>建议章题</th><th>降为节的内容</th></tr>
+<tr><td>BSD 在企业系统与存储中：Netflix Open Connect、Isilon、FreeNAS</td><td>BSD 在企业系统与存储中</td><td>Netflix Open Connect、Isilon、FreeNAS</td></tr><tr><td>代码层面的偶然交汇：macOS/FreeBSD 与 Linux 的代码交换（非谱系继承）</td><td>代码层面的偶然交汇</td><td>macOS/FreeBSD 与 Linux 的代码交换</td></tr><tr><td>从 4-clause 到 3-clause 到 2-clause：条款演化的利益调整</td><td>BSD 许可证条款的演化</td><td>4-clause → 3-clause → 2-clause</td></tr><tr><td>Beastie 视觉史：1976 漫画到 1988 彩色到 ASCII 与商标化</td><td>Beastie 视觉史</td><td>1976 漫画 → 1988 彩色 → ASCII 与商标化</td></tr><tr><td>安全神话的形成：Only one remote hole、FBI 传言与审计声誉</td><td>安全神话的形成</td><td>Only one remote hole 与 FBI 传言</td></tr><tr><td>桌面 BSD 被忽略的历史：PC-BSD、TrueOS、DesktopBSD</td><td>桌面 BSD 被忽略的历史</td><td>PC-BSD、TrueOS、DesktopBSD</td></tr><tr><td>BSD 如何丢失自己的历史：CVS 到 SVN 到 Git 迁移的史料损失</td><td>BSD 如何丢失自己的历史</td><td>CVS → SVN → Git 迁移的史料损失</td></tr><tr><td>开源基金会比较：FreeBSD、Linux、Apache、GNOME</td><td>开源基金会比较</td><td>FreeBSD、Linux、Apache、GNOME</td></tr>
+</table>
+</div>
+
+<h2>四、卷标题精简建议（2 条，超 35 字）</h2>
+<div class="card">
+<p>卷标题为「卷号：主标题：副标题（年份）」三层嵌套，建议去掉冗余主标题，保留「卷号：核心主题（年份）」：</p>
+<table>
+<tr><th>原卷标题</th><th>建议卷题</th></tr>
+<tr><td>第十二卷：孤高的创新：DragonFly BSD 的历史（2003-2026）</td><td>第十二卷：DragonFly BSD 的历史（2003-2026）</td></tr><tr><td>第十一卷：世界上最安全的操作系统：OpenBSD 的历史（1995-2026）</td><td>第十一卷：OpenBSD 的历史（1995-2026）</td></tr>
+</table>
+</div>
+
+<h2>五、结论</h2>
+<p>节标题过长已通过「拆分 + 去考证 + 截断」三项措施基本解决（最长 727→75 字）。章标题 8 条、卷标题 2 条建议按上表拆分/精简。处理后全书标题均可控在合理长度内，兼顾可读性与信息完整性。</p>
+</div>
+</body>
+</html>

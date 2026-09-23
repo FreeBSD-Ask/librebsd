@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>S-me 四大 BSD 卷既有章节时间重排与完整目录结构建议</title>
+<style>
+  :root { --ink:#1a1a1a; --muted:#5a5a5a; --accent:#1f4e79; --accent-2:#b23a2f; --rule:#c9c9c9; --soft:#f5f5f5; }
+  * { box-sizing:border-box; }
+  html,body { margin:0; padding:0; background:#fff; color:var(--ink);
+    font-family:"Songti SC","Noto Serif CJK SC","SimSun","STSong",serif; font-size:10pt; line-height:1.7; }
+  .report { max-width:800px; margin:0 auto; padding:26px 38px; }
+  h1,h2,h3 { font-family:"Microsoft YaHei","PingFang SC","Noto Sans CJK SC",sans-serif; color:var(--accent); font-weight:700; }
+  h1 { font-size:18pt; text-align:center; letter-spacing:1px; margin:0 0 4px; }
+  .subtitle { text-align:center; color:var(--muted); font-size:10pt; margin:0 0 3px; }
+  .meta { text-align:center; color:var(--muted); font-size:8.5pt; margin-bottom:14px; }
+  h2 { font-size:13pt; margin:22px 0 8px; padding-bottom:5px; border-bottom:2px solid var(--accent); }
+  h3 { font-size:11.5pt; margin:16px 0 6px; color:#24537f; }
+  p { margin:6px 0; text-align:justify; }
+  code { font-family:"Consolas","Menlo",monospace; font-size:8.5pt; background:var(--soft); padding:0 3px; border-radius:3px; }
+  .abstract { background:var(--soft); border-left:4px solid var(--accent); padding:10px 14px; margin:12px 0; font-size:9.5pt; }
+  .abstract .label { font-weight:700; color:var(--accent); }
+  .callout { background:#fbf4f2; border-left:4px solid var(--accent-2); padding:8px 12px; margin:8px 0; font-size:9.5pt; }
+  table.grid { width:100%; border-collapse:collapse; margin:6px 0 12px; font-size:9pt; break-inside:auto; page-break-inside:auto; }
+  thead { display:table-header-group; }
+  tr { break-inside:avoid; page-break-inside:avoid; }
+  table.grid td, table.grid th { border:1px solid var(--rule); padding:4px 7px; vertical-align:top; text-align:left; }
+  table.grid th { background:var(--soft); color:var(--accent); font-weight:700; }
+  .num { text-align:center; white-space:nowrap; width:44px; }
+  .era { color:#24537f; white-space:nowrap; font-size:8.5pt; }
+  .orig { color:#999; white-space:nowrap; font-size:8.5pt; }
+  ol.toc { margin:4px 0 10px; padding-left:22px; }
+  ol.toc li { margin:3px 0; }
+  .footnote { font-size:8pt; color:var(--muted); border-top:1px solid var(--rule); margin-top:18px; padding-top:6px; }
+  @page { size:A4; margin:15mm 13mm 15mm 13mm; }
+  @media print { .report { max-width:none; padding:0; } a { color:inherit; text-decoration:none; } }
+</style>
+</head>
+<body>
+<div class="report">
+第十三卷：孤高的创新：DragonFly BSD 的历史（2003-2026）<h2>一、时间重排对照表</h2>
+<h3>第九卷：从大教堂到集市：FreeBSD 的历史（1993-2026）</h3><table class='grid'><thead><tr><th class='num'>新序号</th><th>章题</th><th>时间锚点</th><th class='orig'>原序号</th></tr></thead><tbody><tr><td class='num'>1</td><td>CVS 时代：补丁文化与中央仓库文化</td><td class='era'>1993 起</td><td class='orig'>原第 4 章</td></tr><tr><td class='num'>2</td><td>FreeBSD 2.x：ipfw、Ports、sendfile</td><td class='era'>1994–1998</td><td class='orig'>原第 1 章</td></tr><tr><td class='num'>3</td><td>Ports Collection：软件分发的第三种模式</td><td class='era'>1994 起</td><td class='orig'>原第 2 章</td></tr><tr><td class='num'>4</td><td>FreeBSD 的发布工程与社区节奏</td><td class='era'>1994 起</td><td class='orig'>原第 3 章</td></tr><tr><td class='num'>5</td><td>FreeBSD 基金会：制度化的工程治理</td><td class='era'>2000</td><td class='orig'>原第 7 章</td></tr><tr><td class='num'>6</td><td>FreeBSD jail：操作系统级虚拟化的先驱</td><td class='era'>2000</td><td class='orig'>原第 10 章</td></tr><tr><td class='num'>7</td><td>FreeBSD SMP 与可扩展性危机</td><td class='era'>2000–2005</td><td class='orig'>原第 14 章</td></tr><tr><td class='num'>8</td><td>UFS2 与 Soft Updates：文件系统的工程演化</td><td class='era'>2003</td><td class='orig'>原第 9 章</td></tr><tr><td class='num'>9</td><td>GEOM：模块化存储框架</td><td class='era'>2003</td><td class='orig'>原第 8 章</td></tr><tr><td class='num'>10</td><td>FreeBSD 的工程体系重构：rcNG、ULE、GELI</td><td class='era'>2003–2005</td><td class='orig'>原第 18 章</td></tr><tr><td class='num'>11</td><td>网络栈现代化：多队列、Netmap 与 BPF</td><td class='era'>2005–2015</td><td class='orig'>原第 15 章</td></tr><tr><td class='num'>12</td><td>CVS 到 SVN：迁移争论的八年</td><td class='era'>2008</td><td class='orig'>原第 5 章</td></tr><tr><td class='num'>13</td><td>ZFS on FreeBSD：跨许可证的移植工程</td><td class='era'>2009</td><td class='orig'>原第 11 章</td></tr><tr><td class='num'>14</td><td>DTrace：从 Solaris 到 FreeBSD 的跨项目传播</td><td class='era'>2009</td><td class='orig'>原第 12 章</td></tr><tr><td class='num'>15</td><td>Capsicum：FreeBSD 原创安全模型</td><td class='era'>2012</td><td class='orig'>原第 13 章</td></tr><tr><td class='num'>16</td><td>FreeBSD 的工具链演进：GCC 到 LLVM/Clang</td><td class='era'>2012–2014</td><td class='orig'>原第 16 章</td></tr><tr><td class='num'>17</td><td>FreeBSD 的虚拟化与云适配</td><td class='era'>2014（bhyve）</td><td class='orig'>原第 20 章</td></tr><tr><td class='num'>18</td><td>SVN 到 Git：史料损失与社区重构</td><td class='era'>2019–2021</td><td class='orig'>原第 6 章</td></tr><tr><td class='num'>19</td><td>Rust 与系统编程语言在 BSD 的集成</td><td class='era'>2021–2024</td><td class='orig'>原第 17 章</td></tr><tr><td class='num'>20</td><td>FreeBSD 安全响应：从 CERT 到 SA 体系</td><td class='era'>2002 起（贯穿）</td><td class='orig'>原第 19 章</td></tr><tr><td class='num'>21</td><td>FreeBSD 在企业应用中的生态</td><td class='era'>贯穿</td><td class='orig'>原第 21 章</td></tr><tr><td class='num'>22</td><td>FreeBSD 工程美学与视觉文化</td><td class='era'>2010s–2020s</td><td class='orig'>原第 22 章</td></tr><tr><td class='num'>23</td><td>FreeBSD 社区演进：贡献者生态与代际更替</td><td class='era'>贯穿</td><td class='orig'>原第 23 章</td></tr></tbody></table>
+<h3>第十一卷：可移植的执念：NetBSD 的历史（1993-2026）</h3><table class='grid'><thead><tr><th class='num'>新序号</th><th>章题</th><th>时间锚点</th><th class='orig'>原序号</th></tr></thead><tbody><tr><td class='num'>1</td><td>NetBSD 的平台普遍性理想：移植作为第一原则</td><td class='era'>1993 起</td><td class='orig'>原第 1 章</td></tr><tr><td class='num'>2</td><td>NetBSD 的移植文化：50+平台的工程方法</td><td class='era'>1993 起（贯穿）</td><td class='orig'>原第 2 章</td></tr><tr><td class='num'>3</td><td>NetBSD 发布工程：跨平台构建系统</td><td class='era'>1993 起（贯穿）</td><td class='orig'>原第 4 章</td></tr><tr><td class='num'>4</td><td>NetBSD 的嵌入式战略与长期维护</td><td class='era'>2000s 起</td><td class='orig'>原第 3 章</td></tr><tr><td class='num'>5</td><td>NetBSD 社区治理与代际转折</td><td class='era'>2000s–2020s</td><td class='orig'>原第 5 章</td></tr></tbody></table>
+<h3>第十二卷：世界上最安全的操作系统：OpenBSD 的历史（1995-2026）</h3><table class='grid'><thead><tr><th class='num'>新序号</th><th>章题</th><th>时间锚点</th><th class='orig'>原序号</th></tr></thead><tbody><tr><td class='num'>1</td><td>OpenBSD 的分裂背景：Theo de Raadt 被逐事件</td><td class='era'>1995</td><td class='orig'>原第 1 章</td></tr><tr><td class='num'>2</td><td>OpenBSD 的安全审计文化：代码即敌人</td><td class='era'>1996 起</td><td class='orig'>原第 2 章</td></tr><tr><td class='num'>3</td><td>OpenBSD 的发布纪律：六个月周期</td><td class='era'>1996 起</td><td class='orig'>原第 6 章</td></tr><tr><td class='num'>4</td><td>OpenSSH：安全工具的全域扩散</td><td class='era'>1999</td><td class='orig'>原第 3 章</td></tr><tr><td class='num'>5</td><td>PF：包过滤的替代谱系</td><td class='era'>2001</td><td class='orig'>原第 4 章</td></tr><tr><td class='num'>6</td><td>安全声明与审计声誉</td><td class='era'>2000s（宣传语）</td><td class='orig'>原第 5 章</td></tr><tr><td class='num'>7</td><td>FBI 传言、审计声誉与 OpenBSD 的公共形象</td><td class='era'>2010</td><td class='orig'>原第 7 章</td></tr><tr><td class='num'>8</td><td>Theo de Raadt 的独裁治理模式</td><td class='era'>贯穿</td><td class='orig'>原第 8 章</td></tr></tbody></table>
+<h3>第十三卷：孤高的创新：DragonFly BSD 的历史（2003-2026）</h3><table class='grid'><thead><tr><th class='num'>新序号</th><th>章题</th><th>时间锚点</th><th class='orig'>原序号</th></tr></thead><tbody><tr><td class='num'>1</td><td>DragonFly BSD 的分裂：FreeBSD 5 SMP 争议</td><td class='era'>2003</td><td class='orig'>原第 1 章</td></tr><tr><td class='num'>2</td><td>vkernels 与 DragonFly 的架构实验</td><td class='era'>2004（早期演进）</td><td class='orig'>原第 3 章</td></tr><tr><td class='num'>3</td><td>HAMMER 文件系统：另一种存储哲学</td><td class='era'>2008（HAMMER 1.0）</td><td class='orig'>原第 2 章</td></tr><tr><td class='num'>4</td><td>DragonFly 的孤立与独立：中心-边缘的极端案例</td><td class='era'>贯穿</td><td class='orig'>原第 4 章</td></tr></tbody></table>
+<h2>二、重排后的完整目录结构建议</h2>
+<h3>第九卷：从大教堂到集市：FreeBSD 的历史（1993-2026）</h3><ol class='toc'><li>第 1 章　CVS 时代：补丁文化与中央仓库文化 <span class='era'>(1993 起)</span></li><li>第 2 章　FreeBSD 2.x：ipfw、Ports、sendfile <span class='era'>(1994–1998)</span></li><li>第 3 章　Ports Collection：软件分发的第三种模式 <span class='era'>(1994 起)</span></li><li>第 4 章　FreeBSD 的发布工程与社区节奏 <span class='era'>(1994 起)</span></li><li>第 5 章　FreeBSD 基金会：制度化的工程治理 <span class='era'>(2000)</span></li><li>第 6 章　FreeBSD jail：操作系统级虚拟化的先驱 <span class='era'>(2000)</span></li><li>第 7 章　FreeBSD SMP 与可扩展性危机 <span class='era'>(2000–2005)</span></li><li>第 8 章　UFS2 与 Soft Updates：文件系统的工程演化 <span class='era'>(2003)</span></li><li>第 9 章　GEOM：模块化存储框架 <span class='era'>(2003)</span></li><li>第 10 章　FreeBSD 的工程体系重构：rcNG、ULE、GELI <span class='era'>(2003–2005)</span></li><li>第 11 章　网络栈现代化：多队列、Netmap 与 BPF <span class='era'>(2005–2015)</span></li><li>第 12 章　CVS 到 SVN：迁移争论的八年 <span class='era'>(2008)</span></li><li>第 13 章　ZFS on FreeBSD：跨许可证的移植工程 <span class='era'>(2009)</span></li><li>第 14 章　DTrace：从 Solaris 到 FreeBSD 的跨项目传播 <span class='era'>(2009)</span></li><li>第 15 章　Capsicum：FreeBSD 原创安全模型 <span class='era'>(2012)</span></li><li>第 16 章　FreeBSD 的工具链演进：GCC 到 LLVM/Clang <span class='era'>(2012–2014)</span></li><li>第 17 章　FreeBSD 的虚拟化与云适配 <span class='era'>(2014（bhyve）)</span></li><li>第 18 章　SVN 到 Git：史料损失与社区重构 <span class='era'>(2019–2021)</span></li><li>第 19 章　Rust 与系统编程语言在 BSD 的集成 <span class='era'>(2021–2024)</span></li><li>第 20 章　FreeBSD 安全响应：从 CERT 到 SA 体系 <span class='era'>(2002 起（贯穿）)</span></li><li>第 21 章　FreeBSD 在企业应用中的生态 <span class='era'>(贯穿)</span></li><li>第 22 章　FreeBSD 工程美学与视觉文化 <span class='era'>(2010s–2020s)</span></li><li>第 23 章　FreeBSD 社区演进：贡献者生态与代际更替 <span class='era'>(贯穿)</span></li></ol>
+<h3>第十一卷：可移植的执念：NetBSD 的历史（1993-2026）</h3><ol class='toc'><li>第 1 章　NetBSD 的平台普遍性理想：移植作为第一原则 <span class='era'>(1993 起)</span></li><li>第 2 章　NetBSD 的移植文化：50+平台的工程方法 <span class='era'>(1993 起（贯穿）)</span></li><li>第 3 章　NetBSD 发布工程：跨平台构建系统 <span class='era'>(1993 起（贯穿）)</span></li><li>第 4 章　NetBSD 的嵌入式战略与长期维护 <span class='era'>(2000s 起)</span></li><li>第 5 章　NetBSD 社区治理与代际转折 <span class='era'>(2000s–2020s)</span></li></ol>
+<h3>第十二卷：世界上最安全的操作系统：OpenBSD 的历史（1995-2026）</h3><ol class='toc'><li>第 1 章　OpenBSD 的分裂背景：Theo de Raadt 被逐事件 <span class='era'>(1995)</span></li><li>第 2 章　OpenBSD 的安全审计文化：代码即敌人 <span class='era'>(1996 起)</span></li><li>第 3 章　OpenBSD 的发布纪律：六个月周期 <span class='era'>(1996 起)</span></li><li>第 4 章　OpenSSH：安全工具的全域扩散 <span class='era'>(1999)</span></li><li>第 5 章　PF：包过滤的替代谱系 <span class='era'>(2001)</span></li><li>第 6 章　安全声明与审计声誉 <span class='era'>(2000s（宣传语）)</span></li><li>第 7 章　FBI 传言、审计声誉与 OpenBSD 的公共形象 <span class='era'>(2010)</span></li><li>第 8 章　Theo de Raadt 的独裁治理模式 <span class='era'>(贯穿)</span></li></ol>
+<h3>第十三卷：孤高的创新：DragonFly BSD 的历史（2003-2026）</h3><ol class='toc'><li>第 1 章　DragonFly BSD 的分裂：FreeBSD 5 SMP 争议 <span class='era'>(2003)</span></li><li>第 2 章　vkernels 与 DragonFly 的架构实验 <span class='era'>(2004（早期演进）)</span></li><li>第 3 章　HAMMER 文件系统：另一种存储哲学 <span class='era'>(2008（HAMMER 1.0）)</span></li><li>第 4 章　DragonFly 的孤立与独立：中心-边缘的极端案例 <span class='era'>(贯穿)</span></li></ol>
+  <h2>三、重排依据与复核说明</h2>
+  <ul>
+    <li><strong>FreeBSD 卷</strong>：按“CVS 补丁文化（1993）→ 2.x（1994–1998）→ Ports（1994）→ 发布工程（1994）→ 基金会/jail（2000）→ SMP 危机（2000–2005）→ UFS2/GEOM/工程重构（2003）→ 网络栈（2005–2015）→ CVS→SVN（2008）→ ZFS/DTrace（2009）→ Capsicum/工具链（2012）→ bhyve（2014）→ SVN→Git（2019–2021）→ Rust（2021–2024）”排序；安全响应、企业应用、工程美学、社区演进等贯穿性主题章置于末尾。</li>
+    <li><strong>NetBSD 卷</strong>：平台理想、移植文化、发布工程为 1993 起即贯穿的主线，置前；嵌入式战略（2000s）、社区治理（2000s–2020s）按起步年代后置；“新节点”占位章删除。</li>
+    <li><strong>OpenBSD 卷</strong>：分裂（1995）→ 审计文化（1996）→ 发布纪律（1996 起）→ OpenSSH（1999）→ PF（2001）→ 安全声明（2000s）→ FBI 传言（2010）→ 独裁治理（贯穿）。</li>
+    <li><strong>DragonFly 卷</strong>：分裂（2003）→ vkernels（2004）→ HAMMER（2008）→ 孤立（贯穿），纠正 HAMMER 与 vkernels 的时序倒置。</li>
+    <li><strong>复核</strong>：时间锚点均与 <code>SUMMARY.md</code> 对应章节的年份标注一致（如 FreeBSD 2.x 对应 1994–1998、jail 对应 4.x 2000 年引入、ZFS 对应 8.x 2009 年集成、HAMMER 1.0 对应 2008）。重排仅调整章序与章号，不改章节内容与节结构。</li>
+  </ul>
+
+  <p class="footnote">本建议由《给我自由——一部 BSD 史》编纂项目辅助生成，仅作目录章节粒度时序调整之用，不构成对正文内容的学术结论。</p>
+
+</div>
+</body>
+</html>

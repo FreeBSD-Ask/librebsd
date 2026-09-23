@@ -1,0 +1,449 @@
+===== net2_subject (80) =====
+27538|comp.sys.sun|1991-06-04|csg at pyramid.pyramid.com (Ca|NET2 Certification Software?|724
+27753|comp.sys.sun|1991-06-04|csg at pyramid.pyramid.com (Ca|NET2 Certification Software?|724
+27789|comp.sys.sun|1991-06-04|csg at pyramid.pyramid.com (Ca|NET2 Certification Software?|724
+27835|comp.sys.sun|1991-06-04|csg at pyramid.pyramid.com (Ca|NET2 Certification Software?|724
+27890|comp.sys.sun|1991-06-04|csg at pyramid.pyramid.com (Ca|NET2 Certification Software?|724
+28058|comp.sys.sun|1991-06-04|csg at pyramid.pyramid.com (Ca|NET2 Certification Software?|724
+28122|comp.sys.sun|1991-06-04|csg at pyramid.pyramid.com (Ca|NET2 Certification Software?|724
+172507|unix.bsd|1992-02-29|cs318a52@ibmb5.cs.uiuc.edu (Ma|Re: Networking 2 release, BSDI, etc|388
+172508|unix.bsd|1992-03-01|anthony@csd4.csd.uwm.edu (Anth|Re: Networking 2 release, BSDI, etc|889
+172510|unix.bsd|1992-03-02|mib@geech.gnu.ai.mit.edu (Mich|Re: Networking 2 release, BSDI, etc|736
+172512|unix.bsd|1992-03-02|zoo@aps1.spa.umn.edu (david d |Re: Networking 2 release, BSDI, etc|197
+126879|bugs.4bsd|1992-03-17|jfw@eddie.mit.edu (John Woods)|Bug in make (4.3Reno/NET2)|1050
+172265|unix.bsd|1992-03-18|michael@uni-paderborn.de (Mich|record route in ping of the net2 release|427
+172293|unix.bsd|1992-03-19|bill@falcon.cs.uofs.edu (Bill |NET/2|641
+172382|unix.bsd|1992-03-19|tk27@cunixb.cc.columbia.edu (T|BSD386, NET2 and Sun 3|971
+172399|unix.bsd|1992-03-20|tk27@cunixb.cc.columbia.edu (T|Re: BSD386, NET2 and Sun 3|2125
+172392|unix.bsd|1992-03-21|bostic@hermes.Berkeley.EDU (Ke|Re: tmac.doc not in BSD-net2|1357
+171976|unix.bsd|1992-04-05|drg@bubba.ma30.bull.com (Danie|How to patch net2 to 386bsd|597
+126891|bugs.4bsd|1992-05-05|julian@tfs.com (Julian Elische|bug in tp_usrreq.c in ISO code of net2.|916
+126895|bugs.4bsd|1992-05-09|Karl_Kleinpaste@cs.cmu.edu|Misuse of mbuf ptr after m_free() in net2 sys/kern/uipc_syscalls.c|285
+171107|unix.bsd|1992-06-01|gast@cs.ucla.edu|Net/2|359
+170819|unix.bsd|1992-06-19|mark@comp.vuw.ac.nz (Mark Davi|gcc under BSD NET2 (Was Re: gcc2.2.2 for 386BSD,success?)|3573
+126910|bugs.4bsd|1992-06-20|phk@data.fls.dk (Poul-Henning |NET2: usr.sbin/lpr/lpd/printjob.c:540 hardcoded length|389
+170211|unix.bsd|1992-07-21|smart@wanda.mel.dit.CSIRO.AU (|Re: AT&T vs. BSDI --> 4.3BSD-NET2 distribution requires AT&T license!!!|787
+170059|unix.bsd|1992-07-21|michael@resonex.com (Michael B|Re: AT&T vs. BSDI --> 4.3BSD-NET2 distribution requires AT&T license!!!|1006
+170223|unix.bsd|1992-07-21|eoahmad@ntuix.ntu.ac.sg (Othma|Re: AT&T vs. BSDI --> 4.3BSD-NET2 distribution requires AT&T license!!!|361
+170224|unix.bsd|1992-07-21|jjsmith@nyx.cs.du.edu (Jonatha|Re: AT&T vs. BSDI --> 4.3BSD-NET2 distribution requires AT&T license!!!|635
+170025|unix.bsd|1992-07-21|rodeen@buddha.ncc.umn.edu (Ric|Re: AT&T vs. BSDI --> 4.3BSD-NET2 distribution requires AT&T license!!!|916
+170039|unix.bsd|1992-07-21|jtkohl@cs.Berkeley.EDU (John T|Re: AT&T vs. BSDI --> 4.3BSD-NET2 distribution requires AT&T license!!!|1020
+170130|unix.bsd|1992-07-21|vixie@pa.dec.com (Paul A Vixie|Re: AT&T vs. BSDI --> 4.3BSD-NET2 distribution requires AT&T license!!!|492
+170062|unix.bsd|1992-07-21|Havard.Eidnes@runit.sintef.no |netstat from NET2 ported|819
+170067|unix.bsd|1992-07-21|alanc@ocf.berkeley.edu (Alan C|Re: AT&T vs. BSDI --> 4.3BSD-NET2 distribution requires AT&T license!!!|954
+170072|unix.bsd|1992-07-22|bambi@bu.oz.au (David J. Hughe|Re: AT&T vs. BSDI --> 4.3BSD-NET2 distribution requires AT&T license!!!|1090
+170142|unix.bsd|1992-07-22|brown@vidiot.UUCP (Vidiot)|Re: AT&T vs. BSDI --> 4.3BSD-NET2 distribution requires AT&T license!!!|858
+170159|unix.bsd|1992-07-22|mcuddy@fensende.Rational.COM (|Re: AT&T vs. BSDI --> 4.3BSD-NET2 distribution requires AT&T license!!!|1448
+170078|unix.bsd|1992-07-22|rmk@rmkhome.UUCP (Rick Kelly)|Re: AT&T vs. BSDI --> 4.3BSD-NET2 distribution requires AT&T license!!!|1144
+170169|unix.bsd|1992-07-22|tal@Warren.MENTORG.COM (Tom Li|Re: AT&T vs. BSDI --> 4.3BSD-NET2 distribution requires AT&T license!!!|1476
+170083|unix.bsd|1992-07-22|terry@npd.Novell.COM (Terry La|Re: AT&T vs. BSDI --> 4.3BSD-NET2 distribution requires AT&T license!!!|6025
+170107|unix.bsd|1992-07-23|lyndon@ampr.ab.ca (Lyndon Nere|Re: AT&T vs. BSDI --> 4.3BSD-NET2 distribution requires AT&T license!!!|162
+170109|unix.bsd|1992-07-23|lyndon@ampr.ab.ca (Lyndon Nere|Re: AT&T vs. BSDI --> 4.3BSD-NET2 distribution requires AT&T license!!!|704
+170118|unix.bsd|1992-07-23|sb380@cs.city.ac.uk (Andy Holt|Re: AT&T vs. BSDI --> 4.3BSD-NET2 distribution requires AT&T license!!!|438
+169993|unix.bsd|1992-07-23|markl@spuddy.uucp (Mark Livers|Re: AT&T vs. BSDI --> 4.3BSD-NET2 distribution requires AT&T license!!!|321
+169981|unix.bsd|1992-07-23|lyndon@ampr.ab.ca (Lyndon Nere|Re: AT&T vs. BSDI --> 4.3BSD-NET2 distribution requires AT&T license!!!|1103
+169935|unix.bsd|1992-07-23|mike@pacsoft.com (Mike Stefani|Re: AT&T vs. BSDI --> 4.3BSD-NET2 distribution requires AT&T license!!!|606
+169979|unix.bsd|1992-07-23|grog@adagio.UUCP (Greg Lehey)|Re: AT&T vs. BSDI --> 4.3BSD-NET2 distribution requires AT&T license!!!|1289
+170003|unix.bsd|1992-07-23|dennis@nebulus.ca (Dennis S. B|Re: AT&T vs. BSDI --> 4.3BSD-NET2 distribution requires AT&T license!!!|1345
+169986|unix.bsd|1992-07-23|meharp01@vlsi.louisville.edu (|Re: AT&T vs. BSDI --> 4.3BSD-NET2 distribution requires AT&T license!!!|264
+170001|unix.bsd|1992-07-23|lyndon@ampr.ab.ca (Lyndon Nere|Re: AT&T vs. BSDI --> 4.3BSD-NET2 distribution requires AT&T license!!!|547
+170009|unix.bsd|1992-07-23|karl@ddsw1.mcs.com (Karl Denni|Re: AT&T vs. BSDI --> 4.3BSD-NET2 distribution requires AT&T license!!!|3262
+170014|unix.bsd|1992-07-23|mellon@ncd.com (Ted Lemon)|Re: AT&T vs. BSDI --> 4.3BSD-NET2 distribution requires AT&T license!!!|664
+170012|unix.bsd|1992-07-23|mmorg@ruf.rice.edu (Matt Morga|Re: AT&T vs. BSDI --> 4.3BSD-NET2 distribution requires AT&T license!!!|1297
+169931|unix.bsd|1992-07-24|jim@ferkel.ucsb.edu (Jim Lick)|Re: AT&T vs. BSDI --> 4.3BSD-NET2 distribution requires AT&T license!!!|954
+169937|unix.bsd|1992-07-24|gab10@griffincd.amdahl.com (Ga|Re: AT&T vs. BSDI --> 4.3BSD-NET2 distribution requires AT&T license!!!|1420
+169945|unix.bsd|1992-07-24|spel@hippo.ru.ac.za (Dr. Eberh|Re: AT&T vs. BSDI --> 4.3BSD-NET2 distribution requires AT&T license!!!|2197
+169830|unix.bsd|1992-07-24|quanstro@lars.StOlaf.edu (goon|Re: AT&T vs. BSDI --> 4.3BSD-NET2 distribution requires AT&T license!!!|270
+169958|unix.bsd|1992-07-24|ckd@eff.org (Christopher Davis|Re: AT&T vs. BSDI --> 4.3BSD-NET2 distribution requires AT&T license!!!|679
+169974|unix.bsd|1992-07-24|jfw@ksr.com (John F. Woods)|Re: AT&T vs. BSDI --> 4.3BSD-NET2 distribution requires AT&T license!!!|926
+169970|unix.bsd|1992-07-24|tal@Warren.MENTORG.COM (Tom Li|Re: AT&T vs. BSDI --> 4.3BSD-NET2 distribution requires AT&T license!!!|898
+169825|unix.bsd|1992-07-24|jfw@ksr.com (John F. Woods)|Re: AT&T vs. BSDI --> 4.3BSD-NET2 distribution requires AT&T license!!!|2141
+169972|unix.bsd|1992-07-24|tal@Warren.MENTORG.COM (Tom Li|Re: AT&T vs. BSDI --> 4.3BSD-NET2 distribution requires AT&T license!!!|443
+169832|unix.bsd|1992-07-24|jim@ferkel.ucsb.edu (Jim Lick)|Re: AT&T vs. BSDI --> 4.3BSD-NET2 distribution requires AT&T license!|1104
+169834|unix.bsd|1992-07-24|jeff@aiai.ed.ac.uk (Jeff Dalto|Re: AT&T vs. BSDI --> 4.3BSD-NET2 distribution requires AT&T license!!!|1909
+169842|unix.bsd|1992-07-24|andrew@alice.att.com (Andrew H|Re: AT&T vs. BSDI --> 4.3BSD-NET2 distribution requires AT&T license!|1928
+169836|unix.bsd|1992-07-24|sef@kithrup.COM (Sean Eric Fag|Re: AT&T vs. BSDI --> 4.3BSD-NET2 distribution requires AT&T license!!!|1330
+169838|unix.bsd|1992-07-24|sef@kithrup.COM (Sean Eric Fag|Re: AT&T vs. BSDI --> 4.3BSD-NET2 distribution requires AT&T license!!!|912
+169839|unix.bsd|1992-07-24|sef@kithrup.COM (Sean Eric Fag|Re: AT&T vs. BSDI --> 4.3BSD-NET2 distribution requires AT&T license!!!|817
+169848|unix.bsd|1992-07-24|tg@utstat.uucp (Tom Glinos)|Re: AT&T vs. BSDI --> 4.3BSD-NET2 distribution requires AT&T license!!!|461
+169849|unix.bsd|1992-07-24|tg@utstat.uucp (Tom Glinos)|Re: AT&T vs. BSDI --> 4.3BSD-NET2 distribution requires AT&T license!!!|426
+169776|unix.bsd|1992-07-24|bremner@cs.sfu.ca (David Bremn|Re: AT&T vs. BSDI --> 4.3BSD-NET2 distribution requires AT&T license!!!|62476
+169867|unix.bsd|1992-07-25|ian@airs.com (Ian Lance Taylor|Re: AT&T vs. BSDI --> 4.3BSD-NET2 distribution requires AT&T license!|1247
+169808|unix.bsd|1992-07-25|cbp@gmhgate.gmh.edu (Christoph|Re: AT&T vs. BSDI --> 4.3BSD-NET2 distribution requires AT&T license!!!|1198
+169869|unix.bsd|1992-07-25|grog@adagio.UUCP (Greg Lehey)|Re: AT&T vs. BSDI --> 4.3BSD-NET2 distribution requires AT&T license!|1612
+169779|unix.bsd|1992-07-25|grog@adagio.UUCP (Greg Lehey)|Re: AT&T vs. BSDI --> 4.3BSD-NET2 distribution requires AT&T license!|1613
+169781|unix.bsd|1992-07-25|obi@gumby.ocs.com (Kuryan "Obi|Re: AT&T vs. BSDI --> 4.3BSD-NET2 distribution requires AT&T license!!!|411
+169710|unix.bsd|1992-07-25|bzs@ussr.std.com (Barry Shein)|Re: AT&T vs. BSDI --> 4.3BSD-NET2 distribution requires AT&T license!!!|1479
+169786|unix.bsd|1992-07-25|fwp@CC.MsState.Edu (Frank Pete|Re: AT&T vs. BSDI --> 4.3BSD-NET2 distribution requires AT&T license!!!|1423
+169812|unix.bsd|1992-07-26|ken@sugra.uucp (Kenneth Ng)|Re: AT&T vs. BSDI --: 4.3BSD-NET2 distribution requires AT&T license!!!|858
+169880|unix.bsd|1992-07-26|peter@taronga.com (Peter da Si|Re: AT&T vs. BSDI --> 4.3BSD-NET2 distribution requires AT&T license!!!|623
+169881|unix.bsd|1992-07-26|peter@taronga.com (Peter da Si|Precedent... Whitesmiths
+	Re: AT&T vs. BSDI --> 4.3BSD-NET2 distribution|1033
+169905|unix.bsd|1992-07-27|bowen@olsen.ch (Devon Bowen)|Re: AT&T vs. BSDI --> 4.3BSD-NET2 distribution requires AT&T license!!!|560
+===== bostic_posts (120) =====
+3399|comp.bugs.4bsd|1988-02-16|V1.45 (File System reorganizat|8802161757.AA04841@okeeffe.Berkeley.EDU|
+105842|comp.unix.wizards|1988-02-23|AT&T/Sun merged UNIX|23103@ucbvax.BERKELEY.EDU|
+3498|comp.bugs.4bsd|1988-04-05|V1.46 ((README) updated IP/TCP|8804050317.AA00514@okeeffe.Berkeley.EDU|
+128937|bugs.4bsd.ucb-fixes|1988-04-05|V1.46 ((README) updated IP/TCP|8804050317.AA00514@okeeffe.Berkeley.EDU|
+3500|comp.bugs.4bsd|1988-04-05|V1.47 ((inet 1 of 4) updated I|8804050317.AA00518@okeeffe.Berkeley.EDU|
+128938|bugs.4bsd.ucb-fixes|1988-04-05|V1.47 ((inet 1 of 4) updated I|8804050317.AA00518@okeeffe.Berkeley.EDU|
+128939|bugs.4bsd.ucb-fixes|1988-04-05|V1.48 ((inet 2 of 4) updated I|8804050318.AA00520@okeeffe.Berkeley.EDU|
+3490|comp.bugs.4bsd|1988-04-05|V1.48 ((inet 2 of 4) updated I|8804050318.AA00520@okeeffe.Berkeley.EDU|
+128940|bugs.4bsd.ucb-fixes|1988-04-05|V1.49 ((inet 3 of 4) updated I|8804050318.AA00522@okeeffe.Berkeley.EDU|
+3499|comp.bugs.4bsd|1988-04-05|V1.49 ((inet 3 of 4) updated I|8804050318.AA00522@okeeffe.Berkeley.EDU|
+128941|bugs.4bsd.ucb-fixes|1988-04-05|V1.50 ((inet 4 of 4) updated I|8804050318.AA00528@okeeffe.Berkeley.EDU|
+3496|comp.bugs.4bsd|1988-04-05|V1.50 ((inet 4 of 4) updated I|8804050318.AA00528@okeeffe.Berkeley.EDU|
+3495|comp.bugs.4bsd|1988-04-05|V1.51 ((netns 1 of 2) updated |8804050318.AA00532@okeeffe.Berkeley.EDU|
+128942|bugs.4bsd.ucb-fixes|1988-04-05|V1.51 ((netns 1 of 2) updated |8804050318.AA00532@okeeffe.Berkeley.EDU|
+128943|bugs.4bsd.ucb-fixes|1988-04-05|V1.52 ((netns 2 of 2) updated |8804050318.AA00534@okeeffe.Berkeley.EDU|
+3492|comp.bugs.4bsd|1988-04-05|V1.52 ((netns 2 of 2) updated |8804050318.AA00534@okeeffe.Berkeley.EDU|
+3493|comp.bugs.4bsd|1988-04-05|V1.53 ((socket 1 of 2) updated|8804050318.AA00537@okeeffe.Berkeley.EDU|
+128944|bugs.4bsd.ucb-fixes|1988-04-05|V1.53 ((socket 1 of 2) updated|8804050318.AA00537@okeeffe.Berkeley.EDU|
+3491|comp.bugs.4bsd|1988-04-05|V1.54 ((socket 2 of 2) updated|8804050318.AA00541@okeeffe.Berkeley.EDU|
+128945|bugs.4bsd.ucb-fixes|1988-04-05|V1.54 ((socket 2 of 2) updated|8804050318.AA00541@okeeffe.Berkeley.EDU|
+3497|comp.bugs.4bsd|1988-04-05|V1.55 ((tcp 1 of 2) updated IP|8804050318.AA00543@okeeffe.Berkeley.EDU|
+128946|bugs.4bsd.ucb-fixes|1988-04-05|V1.55 ((tcp 1 of 2) updated IP|8804050318.AA00543@okeeffe.Berkeley.EDU|
+3494|comp.bugs.4bsd|1988-04-05|V1.56 ((tcp 2 of 2) updated IP|8804050318.AA00545@okeeffe.Berkeley.EDU|
+128947|bugs.4bsd.ucb-fixes|1988-04-05|V1.56 ((tcp 2 of 2) updated IP|8804050318.AA00545@okeeffe.Berkeley.EDU|
+128948|bugs.4bsd.ucb-fixes|1988-04-06|V1.57 (spp_timer.h for updated|8804060027.AA09538@okeeffe.Berkeley.EDU|
+3489|comp.bugs.4bsd|1988-04-06|V1.57 (spp_timer.h for updated|8804060027.AA09538@okeeffe.Berkeley.EDU|
+3522|comp.bugs.4bsd|1988-05-06|V1.58 (Bug in forwarding XNS p|8805060235.AA01067@okeeffe.Berkeley.EDU|
+128949|bugs.4bsd.ucb-fixes|1988-05-06|V1.58 (Bug in forwarding XNS p|8805060235.AA01067@okeeffe.Berkeley.EDU|
+128950|bugs.4bsd.ucb-fixes|1988-05-24|V1.59 (setuid/setgid shell scr|8805240301.AA05540@okeeffe.Berkeley.EDU|
+3523|comp.bugs.4bsd|1988-05-24|V1.59 (setuid/setgid shell scr|8805240301.AA05540@okeeffe.Berkeley.EDU|
+108464|comp.unix.wizards|1988-06-01|setuid shell scripts|24479@ucbvax.BERKELEY.EDU|
+3537|comp.bugs.4bsd|1988-06-10|V1.60 (rlogind/telnetd securit|8806102208.AA27177@okeeffe.Berkeley.EDU|
+128951|bugs.4bsd.ucb-fixes|1988-06-10|V1.60 (rlogind/telnetd securit|8806102208.AA27177@okeeffe.Berkeley.EDU|
+53304|comp.unix.questions|1988-06-13|grep replacement|44370@beno.seismo.CSS.GOV|
+108417|comp.unix.wizards|1988-06-13|grep replacement|44370@beno.seismo.CSS.GOV|
+3536|comp.bugs.4bsd|1988-06-15|V1.61 (4.3BSD-tahoe release)|8806152300.AA28766@okeeffe.Berkeley.EDU|
+128952|bugs.4bsd.ucb-fixes|1988-06-15|V1.61 (4.3BSD-tahoe release)|8806152300.AA28766@okeeffe.Berkeley.EDU|
+128953|bugs.4bsd.ucb-fixes|1988-07-21|V1.62 (Request for user-contri|8807212226.AA02439@okeeffe.Berkeley.EDU|
+3584|comp.bugs.4bsd|1988-07-21|V1.62 (Request for user-contri|8807212226.AA02439@okeeffe.Berkeley.EDU|
+109202|comp.unix.wizards|1988-07-22|Request for user-contributed s|44381@beno.seismo.CSS.GOV|
+110452|comp.unix.wizards|1988-09-02|Source pricing...|25909@ucbvax.BERKELEY.EDU|
+55117|comp.unix.questions|1988-09-02|Source pricing...|25909@ucbvax.BERKELEY.EDU|
+690|comp.bugs.2bsd|1988-09-03|'sed -e' dumps core|25927@ucbvax.BERKELEY.EDU|
+3716|comp.bugs.4bsd|1988-09-03|'sed -e' dumps core|25927@ucbvax.BERKELEY.EDU|
+128065|bugs.4bsd|1988-09-03|Re: 'sed -e' dumps core|25927@ucbvax.BERKELEY.EDU|
+3698|comp.bugs.4bsd|1988-09-11|Installing 4.3-Tahoe on a VAX|26049@ucbvax.BERKELEY.EDU|
+127982|bugs.4bsd|1988-09-11|Re: Installing 4.3-Tahoe on a |26049@ucbvax.BERKELEY.EDU|
+128954|bugs.4bsd.ucb-fixes|1988-09-13|V1.63 (ISO BSD Licensees)|8809132115.AA03457@okeeffe.Berkeley.EDU|
+3732|comp.bugs.4bsd|1988-09-13|V1.63 (ISO BSD Licensees)|8809132115.AA03457@okeeffe.Berkeley.EDU|
+128010|bugs.4bsd|1988-09-14|Re: another unix joke|26090@ucbvax.BERKELEY.EDU|
+3665|comp.bugs.4bsd|1988-09-14|another unix joke|26090@ucbvax.BERKELEY.EDU|
+54737|comp.unix.questions|1988-09-14|another unix joke|26090@ucbvax.BERKELEY.EDU|
+3652|comp.bugs.4bsd|1988-09-27|How to tune d1,d2,d3 params in|26233@ucbvax.BERKELEY.EDU|
+110493|comp.unix.wizards|1988-09-27|How to tune d1,d2,d3 params in|26233@ucbvax.BERKELEY.EDU|
+127957|bugs.4bsd|1988-09-27|How to tune d1,d2,d3 params in|26233@ucbvax.BERKELEY.EDU|
+128955|bugs.4bsd.ucb-fixes|1988-09-27|V1.64 (How to tune d1,d2,d3 pa|8809270443.AA21707@okeeffe.Berkeley.EDU|
+3731|comp.bugs.4bsd|1988-09-27|V1.64 (How to tune d1,d2,d3 pa|8809270443.AA21707@okeeffe.Berkeley.EDU|
+111001|comp.unix.wizards|1988-10-12|System V Release 4 ...|26396@ucbvax.BERKELEY.EDU|
+111332|comp.unix.wizards|1988-10-28|System V file systems|26599@ucbvax.BERKELEY.EDU|
+3817|comp.bugs.4bsd|1988-10-31|V1.65 (security problem in ftp|8810312317.AA14287@okeeffe.Berkeley.EDU|
+128956|bugs.4bsd.ucb-fixes|1988-10-31|V1.65 (security problem in ftp|8810312317.AA14287@okeeffe.Berkeley.EDU|
+128957|bugs.4bsd.ucb-fixes|1988-11-02|V1.66 (MicroVAX 3000 support)|8811021859.AA06646@okeeffe.Berkeley.EDU|
+3819|comp.bugs.4bsd|1988-11-02|V1.66 (MicroVAX 3000 support)|8811021859.AA06646@okeeffe.Berkeley.EDU|
+128958|bugs.4bsd.ucb-fixes|1988-11-03|V1.67 (Virus posting)|8811031054.AA22156@okeeffe.Berkeley.EDU|
+3816|comp.bugs.4bsd|1988-11-03|V1.67 (Virus posting)|8811031054.AA22156@okeeffe.Berkeley.EDU|
+128959|bugs.4bsd.ucb-fixes|1988-11-03|V1.68 (Virus posting #2)|8811031612.AA22864@okeeffe.Berkeley.EDU|
+3815|comp.bugs.4bsd|1988-11-03|V1.68 (Virus posting #2)|8811031612.AA22864@okeeffe.Berkeley.EDU|
+3818|comp.bugs.4bsd|1988-11-04|V1.69 (Virus posting #3)|8811040318.AA26579@okeeffe.Berkeley.EDU|
+128960|bugs.4bsd.ucb-fixes|1988-11-04|V1.69 (Virus posting #3)|8811040318.AA26579@okeeffe.Berkeley.EDU|
+3813|comp.bugs.4bsd|1988-11-04|V1.70 (Virus (really worm) pos|8811042204.AA13551@okeeffe.Berkeley.EDU|
+128961|bugs.4bsd.ucb-fixes|1988-11-04|V1.70 (Virus (really worm) pos|8811042204.AA13551@okeeffe.Berkeley.EDU|
+3820|comp.bugs.4bsd|1988-11-17|V1.71 (MicroVAX 3000 support, |8811170128.AA13873@okeeffe.Berkeley.EDU|
+128962|bugs.4bsd.ucb-fixes|1988-11-17|V1.71 (MicroVAX 3000 support, |8811170128.AA13873@okeeffe.Berkeley.EDU|
+3814|comp.bugs.4bsd|1988-11-18|V1.72 (Fix for posted version |8811181830.AA00901@okeeffe.Berkeley.EDU|
+128963|bugs.4bsd.ucb-fixes|1988-11-18|V1.72 (Fix for posted version |8811181830.AA00901@okeeffe.Berkeley.EDU|
+128964|bugs.4bsd.ucb-fixes|1988-12-07|V1.73 (BSD Networking Software|8812070154.AA18358@okeeffe.Berkeley.EDU|
+3869|comp.bugs.4bsd|1988-12-07|V1.73 (BSD Networking Software|8812070154.AA18358@okeeffe.Berkeley.EDU|
+3868|comp.bugs.4bsd|1988-12-21|V1.74 (security problem in pas|8812211705.AA02504@okeeffe.Berkeley.EDU|
+128965|bugs.4bsd.ucb-fixes|1988-12-21|V1.74 (security problem in pas|8812211705.AA02504@okeeffe.Berkeley.EDU|
+112543|comp.unix.wizards|1988-12-30|Password security - Another id|27283@ucbvax.BERKELEY.EDU|
+3897|comp.bugs.4bsd|1989-01-17|V1.75 (chown security problem)|8901172353.AA10589@okeeffe.Berkeley.EDU|
+128967|bugs.4bsd.ucb-fixes|1989-01-17|V1.75 (chown security problem)|8901172353.AA10589@okeeffe.Berkeley.EDU|
+3896|comp.bugs.4bsd|1989-01-23|V1.76 (new version of sendmail|8901231809.AA06108@okeeffe.Berkeley.EDU|
+128966|bugs.4bsd.ucb-fixes|1989-01-23|V1.76 (new version of sendmail|8901231809.AA06108@okeeffe.Berkeley.EDU|
+128968|bugs.4bsd.ucb-fixes|1989-01-28|V1.77 (re-fix for chown securi|8901281800.AA27433@okeeffe.Berkeley.EDU|
+3895|comp.bugs.4bsd|1989-01-28|V1.77 (re-fix for chown securi|8901281800.AA27433@okeeffe.Berkeley.EDU|
+3961|comp.bugs.4bsd|1989-04-14|V1.78 (VAX serial line driver |8904141733.AA00936@okeeffe.Berkeley.EDU|
+128969|bugs.4bsd.ucb-fixes|1989-04-14|V1.78 (VAX serial line driver |8904141733.AA00936@okeeffe.Berkeley.EDU|
+3962|comp.bugs.4bsd|1989-04-18|V1.79 (Running 4.3BSD-tahoe on|8904181929.AA26693@okeeffe.Berkeley.EDU|
+128970|bugs.4bsd.ucb-fixes|1989-04-18|V1.79 (Running 4.3BSD-tahoe on|8904181929.AA26693@okeeffe.Berkeley.EDU|
+128971|bugs.4bsd.ucb-fixes|1989-05-09|V1.81 (Shadow passwords)|8905091915.AA18887@okeeffe.Berkeley.EDU|
+3987|comp.bugs.4bsd|1989-05-09|V1.81 (Shadow passwords)|8905091915.AA18887@okeeffe.Berkeley.EDU|
+3988|comp.bugs.4bsd|1989-05-25|V1.82 (Rcp/rdist security patc|8905251533.AA15059@okeeffe.Berkeley.EDU|
+128972|bugs.4bsd.ucb-fixes|1989-05-25|V1.82 (Rcp/rdist security patc|8905251533.AA15059@okeeffe.Berkeley.EDU|
+3986|comp.bugs.4bsd|1989-05-25|V1.83 (Rcp/rdist security patc|8905251818.AA16150@okeeffe.Berkeley.EDU|
+128973|bugs.4bsd.ucb-fixes|1989-05-25|V1.83 (Rcp/rdist security patc|8905251818.AA16150@okeeffe.Berkeley.EDU|
+128974|bugs.4bsd.ucb-fixes|1989-06-28|V1.84 (Fsck may not convert fi|8906280049.AA03321@okeeffe.Berkeley.EDU|
+4019|comp.bugs.4bsd|1989-06-28|V1.84 (Fsck may not convert fi|8906280049.AA03321@okeeffe.Berkeley.EDU|
+61652|comp.unix.questions|1989-08-10|ls source code|30530@ucbvax.BERKELEY.EDU|
+117039|comp.unix.wizards|1989-08-10|ls source code|30530@ucbvax.BERKELEY.EDU|
+4124|comp.bugs.4bsd|1989-09-15|V1.85 (Login, rshd, rlogind an|8909152229.AA14477@okeeffe.Berkeley.EDU|
+128975|bugs.4bsd.ucb-fixes|1989-09-15|V1.85 (Login, rshd, rlogind an|8909152229.AA14477@okeeffe.Berkeley.EDU|
+775|comp.bugs.2bsd|1989-09-29|Question re inodes|31593@ucbvax.BERKELEY.EDU|
+61734|comp.unix.questions|1989-09-29|Bcopy, bzero and bcmp on a not|31594@ucbvax.BERKELEY.EDU|
+117516|comp.unix.wizards|1989-09-29|Bcopy, bzero and bcmp on a not|31594@ucbvax.BERKELEY.EDU|
+127633|bugs.4bsd|1989-10-01|Re: Bugs in the BSD sources ??|31631@ucbvax.BERKELEY.EDU|
+4158|comp.bugs.4bsd|1989-10-01|Bugs in the BSD sources ??|31631@ucbvax.BERKELEY.EDU|
+118225|comp.unix.wizards|1989-10-01|Bugs in the BSD sources ??|31631@ucbvax.BERKELEY.EDU|
+786|comp.bugs.2bsd|1989-11-22|TK50 driver under 2.10BSD|32754@ucbvax.BERKELEY.EDU|
+39251|comp.unix.i386|1990-04-14|(very) preliminary 386 release|84504@uunet.UU.NET|
+120214|comp.unix.wizards|1990-04-14|(very) preliminary 386 release|84504@uunet.UU.NET|
+4227|comp.bugs.4bsd|1990-06-04|V1.88 (cp question)|9006042343.AA27858@okeeffe.Berkeley.EDU|
+128976|bugs.4bsd.ucb-fixes|1990-06-04|V1.88 (cp question)|9006042343.AA27858@okeeffe.Berkeley.EDU|
+120670|comp.unix.wizards|1990-06-04|cp(1) question|36756@ucbvax.BERKELEY.EDU|
+128977|bugs.4bsd.ucb-fixes|1990-06-20|V1.89 (sendmail 5.64 available|9006200618.AA25950@okeeffe.Berkeley.EDU|
+128979|bugs.4bsd.ucb-fixes|1990-07-06|V1.90 (4.3BSD-Reno)|9007060750.AA04879@okeeffe.Berkeley.EDU|
+4245|comp.bugs.4bsd|1990-07-06|V1.90 (4.3BSD-Reno)|9007060750.AA04879@okeeffe.Berkeley.EDU|
+121249|comp.unix.wizards|1990-07-06|4.3BSD-Reno|37431@ucbvax.BERKELEY.EDU|
+128978|bugs.4bsd.ucb-fixes|1990-07-06|V1.91 (4.3BSD-Reno contributor|9007060810.AA05021@okeeffe.Berkeley.EDU|
+4246|comp.bugs.4bsd|1990-07-06|V1.91 (4.3BSD-Reno contributor|9007060810.AA05021@okeeffe.Berkeley.EDU|
+===== berkeley_lecture (2) =====
+15376|comp.sys.sun|1989-01-27|SALZMAN at pucc.princeton.edu |Stephen Wolfram lecture on Mathematica at JvNC|1683
+35639|comp.unix.cray|1990-08-17|yedwest at gpu.utcs.utoronto.c|LECTURE: Introduction to Unicos (Thu, 30-Aug)|2257
+===== net2_law (40) =====
+170211|unix.bsd|1992-07-21|smart@wanda.mel.dit.CSIRO.AU (|Re: AT&T vs. BSDI --> 4.3BSD-NET2 distribution requires AT&T license!!!|787
+170059|unix.bsd|1992-07-21|michael@resonex.com (Michael B|Re: AT&T vs. BSDI --> 4.3BSD-NET2 distribution requires AT&T license!!!|1006
+170223|unix.bsd|1992-07-21|eoahmad@ntuix.ntu.ac.sg (Othma|Re: AT&T vs. BSDI --> 4.3BSD-NET2 distribution requires AT&T license!!!|361
+170224|unix.bsd|1992-07-21|jjsmith@nyx.cs.du.edu (Jonatha|Re: AT&T vs. BSDI --> 4.3BSD-NET2 distribution requires AT&T license!!!|635
+170025|unix.bsd|1992-07-21|rodeen@buddha.ncc.umn.edu (Ric|Re: AT&T vs. BSDI --> 4.3BSD-NET2 distribution requires AT&T license!!!|916
+170039|unix.bsd|1992-07-21|jtkohl@cs.Berkeley.EDU (John T|Re: AT&T vs. BSDI --> 4.3BSD-NET2 distribution requires AT&T license!!!|1020
+170130|unix.bsd|1992-07-21|vixie@pa.dec.com (Paul A Vixie|Re: AT&T vs. BSDI --> 4.3BSD-NET2 distribution requires AT&T license!!!|492
+170067|unix.bsd|1992-07-21|alanc@ocf.berkeley.edu (Alan C|Re: AT&T vs. BSDI --> 4.3BSD-NET2 distribution requires AT&T license!!!|954
+170072|unix.bsd|1992-07-22|bambi@bu.oz.au (David J. Hughe|Re: AT&T vs. BSDI --> 4.3BSD-NET2 distribution requires AT&T license!!!|1090
+170142|unix.bsd|1992-07-22|brown@vidiot.UUCP (Vidiot)|Re: AT&T vs. BSDI --> 4.3BSD-NET2 distribution requires AT&T license!!!|858
+170159|unix.bsd|1992-07-22|mcuddy@fensende.Rational.COM (|Re: AT&T vs. BSDI --> 4.3BSD-NET2 distribution requires AT&T license!!!|1448
+170078|unix.bsd|1992-07-22|rmk@rmkhome.UUCP (Rick Kelly)|Re: AT&T vs. BSDI --> 4.3BSD-NET2 distribution requires AT&T license!!!|1144
+170169|unix.bsd|1992-07-22|tal@Warren.MENTORG.COM (Tom Li|Re: AT&T vs. BSDI --> 4.3BSD-NET2 distribution requires AT&T license!!!|1476
+170083|unix.bsd|1992-07-22|terry@npd.Novell.COM (Terry La|Re: AT&T vs. BSDI --> 4.3BSD-NET2 distribution requires AT&T license!!!|6025
+170107|unix.bsd|1992-07-23|lyndon@ampr.ab.ca (Lyndon Nere|Re: AT&T vs. BSDI --> 4.3BSD-NET2 distribution requires AT&T license!!!|162
+170109|unix.bsd|1992-07-23|lyndon@ampr.ab.ca (Lyndon Nere|Re: AT&T vs. BSDI --> 4.3BSD-NET2 distribution requires AT&T license!!!|704
+170118|unix.bsd|1992-07-23|sb380@cs.city.ac.uk (Andy Holt|Re: AT&T vs. BSDI --> 4.3BSD-NET2 distribution requires AT&T license!!!|438
+169993|unix.bsd|1992-07-23|markl@spuddy.uucp (Mark Livers|Re: AT&T vs. BSDI --> 4.3BSD-NET2 distribution requires AT&T license!!!|321
+169981|unix.bsd|1992-07-23|lyndon@ampr.ab.ca (Lyndon Nere|Re: AT&T vs. BSDI --> 4.3BSD-NET2 distribution requires AT&T license!!!|1103
+169935|unix.bsd|1992-07-23|mike@pacsoft.com (Mike Stefani|Re: AT&T vs. BSDI --> 4.3BSD-NET2 distribution requires AT&T license!!!|606
+169979|unix.bsd|1992-07-23|grog@adagio.UUCP (Greg Lehey)|Re: AT&T vs. BSDI --> 4.3BSD-NET2 distribution requires AT&T license!!!|1289
+170003|unix.bsd|1992-07-23|dennis@nebulus.ca (Dennis S. B|Re: AT&T vs. BSDI --> 4.3BSD-NET2 distribution requires AT&T license!!!|1345
+169986|unix.bsd|1992-07-23|meharp01@vlsi.louisville.edu (|Re: AT&T vs. BSDI --> 4.3BSD-NET2 distribution requires AT&T license!!!|264
+170001|unix.bsd|1992-07-23|lyndon@ampr.ab.ca (Lyndon Nere|Re: AT&T vs. BSDI --> 4.3BSD-NET2 distribution requires AT&T license!!!|547
+170009|unix.bsd|1992-07-23|karl@ddsw1.mcs.com (Karl Denni|Re: AT&T vs. BSDI --> 4.3BSD-NET2 distribution requires AT&T license!!!|3262
+170014|unix.bsd|1992-07-23|mellon@ncd.com (Ted Lemon)|Re: AT&T vs. BSDI --> 4.3BSD-NET2 distribution requires AT&T license!!!|664
+170012|unix.bsd|1992-07-23|mmorg@ruf.rice.edu (Matt Morga|Re: AT&T vs. BSDI --> 4.3BSD-NET2 distribution requires AT&T license!!!|1297
+169931|unix.bsd|1992-07-24|jim@ferkel.ucsb.edu (Jim Lick)|Re: AT&T vs. BSDI --> 4.3BSD-NET2 distribution requires AT&T license!!!|954
+169937|unix.bsd|1992-07-24|gab10@griffincd.amdahl.com (Ga|Re: AT&T vs. BSDI --> 4.3BSD-NET2 distribution requires AT&T license!!!|1420
+169945|unix.bsd|1992-07-24|spel@hippo.ru.ac.za (Dr. Eberh|Re: AT&T vs. BSDI --> 4.3BSD-NET2 distribution requires AT&T license!!!|2197
+169830|unix.bsd|1992-07-24|quanstro@lars.StOlaf.edu (goon|Re: AT&T vs. BSDI --> 4.3BSD-NET2 distribution requires AT&T license!!!|270
+169958|unix.bsd|1992-07-24|ckd@eff.org (Christopher Davis|Re: AT&T vs. BSDI --> 4.3BSD-NET2 distribution requires AT&T license!!!|679
+169974|unix.bsd|1992-07-24|jfw@ksr.com (John F. Woods)|Re: AT&T vs. BSDI --> 4.3BSD-NET2 distribution requires AT&T license!!!|926
+169970|unix.bsd|1992-07-24|tal@Warren.MENTORG.COM (Tom Li|Re: AT&T vs. BSDI --> 4.3BSD-NET2 distribution requires AT&T license!!!|898
+169825|unix.bsd|1992-07-24|jfw@ksr.com (John F. Woods)|Re: AT&T vs. BSDI --> 4.3BSD-NET2 distribution requires AT&T license!!!|2141
+169972|unix.bsd|1992-07-24|tal@Warren.MENTORG.COM (Tom Li|Re: AT&T vs. BSDI --> 4.3BSD-NET2 distribution requires AT&T license!!!|443
+169832|unix.bsd|1992-07-24|jim@ferkel.ucsb.edu (Jim Lick)|Re: AT&T vs. BSDI --> 4.3BSD-NET2 distribution requires AT&T license!|1104
+169834|unix.bsd|1992-07-24|jeff@aiai.ed.ac.uk (Jeff Dalto|Re: AT&T vs. BSDI --> 4.3BSD-NET2 distribution requires AT&T license!!!|1909
+169842|unix.bsd|1992-07-24|andrew@alice.att.com (Andrew H|Re: AT&T vs. BSDI --> 4.3BSD-NET2 distribution requires AT&T license!|1928
+169836|unix.bsd|1992-07-24|sef@kithrup.COM (Sean Eric Fag|Re: AT&T vs. BSDI --> 4.3BSD-NET2 distribution requires AT&T license!!!|1330
+===== uunet_tape (38) =====
+172467|unix.bsd|1992-03-12|jdi@franz.com (John D. Irwin)|386BSD 0.0 Release Notes|16848
+172473|unix.bsd|1992-03-13|bostic@hermes.Berkeley.EDU (Ke|Re: 386BSD 0.0 Release Notes|1787
+172496|unix.bsd|1992-03-14|richard@pegasus.com (Richard F|386BSD Release Notes|16656
+172404|unix.bsd|1992-03-14|pace@blitz.com (Pace Willisson|Re: 386BSD announcement (I offer the patch kit)|1540
+172386|unix.bsd|1992-03-20|cchase@theory.TC.Cornell.EDU (|386BSD libc sources|1016
+172206|unix.bsd|1992-03-21|bostic@hermes.Berkeley.EDU (Ke|Re: 386BSD 0.0 Release Notes|1105
+172238|unix.bsd|1992-03-23|bill@falcon.cs.uofs.edu (Bill |386BSD|685
+172191|unix.bsd|1992-03-25|ghelmer@dsuvax.dsu.edu (Guy He|BSDI unfair (NOT), was Re: What happens ...|3570
+172195|unix.bsd|1992-03-25|traub@rtf.bt.co.uk (Michael Tr|The continuing BSDI/386BSD saga|3220
+171663|unix.bsd|1992-04-25|karl@NeoSoft.com (Karl Lehenba|386BSD - Frequently Asked Questions (last updated 25-Apr-92)|17437
+170699|unix.bsd|1992-06-24|sef@kithrup.COM (Sean Eric Fag|Re: Passing the hat (was: Re: 4.4 BSD, and the challenge after)|1027
+170715|unix.bsd|1992-06-25|pmetzger@snark.shearson.com (P|Re: Passing the hat (was: Re: 4.4 BSD, and the challenge after)|1222
+170719|unix.bsd|1992-06-25|sef@kithrup.COM (Sean Eric Fag|Re: Funding 4.4BSD Development|5879
+170650|unix.bsd|1992-06-27|vixie@pa.dec.com (Paul A Vixie|Re: Funding 4.4BSD Development|1757
+170585|unix.bsd|1992-06-29|bostic@hermes.Berkeley.EDU (Ke|Re: Funding 4.4BSD Development|1919
+170538|unix.bsd|1992-07-02|mark@alias.com (Mark Andrews)|Re: BSD program - Window|2267
+170194|unix.bsd|1992-07-21|sef@kithrup.COM (Sean Eric Fag|Re: AT&T sues BSDI|2623
+170026|unix.bsd|1992-07-21|michael@resonex.com (Michael B|Re: AT&T sues BSDI|630
+170032|unix.bsd|1992-07-21|mgrjtb@nextwork.rose-hulman.ed|Re: AT&T sues BSDI|1309
+170081|unix.bsd|1992-07-22|rt@MAGEC.COM (P.A. Marshall  x|AT&T sues BSDI|2068
+170087|unix.bsd|1992-07-23|mwalker@wc.novell.com (Mel Wal|Re: AT&T sues BSDI|2618
+169857|unix.bsd|1992-07-24|terry@npd.Novell.COM (Terry La|386BSD FAQ|37866
+169795|unix.bsd|1992-07-25|sef@kithrup.COM (Sean Eric Fag|Re: AT&T sues BSDI|2791
+169522|unix.bsd|1992-07-29|heiko@uwesa.hanse.de (Heiko We|386BSD 0.1 and Net/2 - Are there diff's ?|403
+169292|unix.bsd|1992-08-03|gwh@soda.berkeley.edu (George |Re: AT&T amended complaint available on uunet|2289
+126946|bugs.4bsd|1992-08-13|mark@alias.com (Mark Andrews)|Code Newer than Net/2|428
+126958|bugs.4bsd|1992-09-11|luik@isa.de (Andreas Luik)|is rdist security patch integrated in Net/2 release?|775
+167091|unix.bsd|1992-09-21|terry@cs.weber.edu (A Wizard o|Re: 386bsd and cd-roms|2685
+166948|unix.bsd|1992-09-23|s902113@minyos.xx.rmit.oz.au (|Re: Questions about 386BSD|5664
+126757|bugs.4bsd|1992-09-23|luik@isa.de (Andreas Luik)|rdist (Net/2) bug with symbolic linked directories|2625
+165871|unix.bsd|1992-10-20|bzs@ussr.std.com (Barry Shein)|BSD Net/2 Distribution by UCB/CSRG Suspended!|854
+165565|unix.bsd|1992-10-21|bzs@ussr.std.com (Barry Shein)|Re: BSD Net/2 Distribution by UCB/CSRG Suspended!|926
+165232|unix.bsd|1992-10-26|rdc30@nmrdc1.nmrdc.nnmc.navy.m|Re: Rumour: UCB considering dropping defence of BSD|1163
+164686|unix.bsd|1992-11-06|wkt@csadfa.cs.adfa.oz.au (Warr|Wanted: Info on USL/BSDI suit & Net/2 history|882
+164159|unix.bsd|1992-11-23|jcargill@grilled.cs.wisc.edu (|Summary:  386bsd CD-ROM Survey|27959
+162939|unix.bsd|1992-12-21|cgd@eden.CS.Berkeley.EDU (Chri|Re: BSD on HP3500s?|2434
+162723|unix.bsd|1992-12-23|terry@cs.weber.edu (A Wizard o|Re: Limiting Telnet access.|5283
+162818|unix.bsd|1992-12-24|reink@hpuamsa.neth.hp.com (Rei|Re: BSD for Apollo DN3000|2592
+===== linux_hurd (80) =====
+172523|unix.bsd|1992-03-04|gentry@predator.engin.umich.ed|hurd-folks mailing list|111
+172502|unix.bsd|1992-03-14|ajayshah@alhena.usc.edu (Ajay |Curious about free Unixes and ABI (BSD, Linux, GNU)|1227
+172412|unix.bsd|1992-03-14|meggin@epas.utoronto.ca (David|Re: Curious about free Unixes and ABI (BSD, Linux, GNU)|585
+172434|unix.bsd|1992-03-16|dws@engr.uark.edu (David W. Su|Re: Curious about free Unixes and ABI (BSD, Linux, GNU)|1826
+172435|unix.bsd|1992-03-16|srodawa@vela.acs.oakland.edu (|Re: Curious about free Unixes and ABI (BSD, Linux, GNU)|1972
+172256|unix.bsd|1992-03-17|pgd@compuram.bbt.se (Per Lindq|Re: Curious about free Unixes and ABI (BSD, Linux, GNU)|417
+172280|unix.bsd|1992-03-19|max@underg.UUCP (Max Cray)|Re: Curious about free Unixes and ABI (BSD, Linux, GNU)|1191
+172284|unix.bsd|1992-03-19|max@underg.UUCP (Max Cray)|Re: Curious about free Unixes and ABI (BSD, Linux, GNU)|1406
+172282|unix.bsd|1992-03-19|preece@urbana.mcd.mot.com (Sco|Re: Curious about free Unixes and ABI (BSD, Linux, GNU)|1033
+172281|unix.bsd|1992-03-20|mrs@netcom.com (Morgan Schweer|Re: Curious about free Unixes and ABI (BSD, Linux, GNU)|2921
+172283|unix.bsd|1992-03-20|schemers@jessica.stanford.edu |Re: Curious about free Unixes and ABI (BSD, Linux, GNU)|1435
+172210|unix.bsd|1992-03-22|pgd@compuram.bbt.se (Per Lindq|Re: Curious about free Unixes and ABI (BSD, Linux, GNU)|829
+172188|unix.bsd|1992-03-25|pinkas@caraway.intel.com (Isra|Re: Curious about free Unixes and ABI (BSD, Linux, GNU)|1378
+172104|unix.bsd|1992-03-25|meissner@osf.org (Michael Meis|Re: Curious about free Unixes and ABI (BSD, Linux, GNU)|1765
+172131|unix.bsd|1992-03-27|allbery@NCoast.ORG (Brandon S.|Re: Curious about free Unixes and ABI (BSD, Linux, GNU)|1471
+172137|unix.bsd|1992-03-27|sef@kithrup.COM (Sean Eric Fag|Re: Free BSD release: future of Minix/Linux?|1259
+172141|unix.bsd|1992-03-27|news@pegasus.com (Usenet News)|Re: Curious about free Unixes and ABI (BSD, Linux, GNU)|140
+172000|unix.bsd|1992-03-27|mike@socrates.umd.edu (Mike Sa|Features/experiences of/with Linux?|1011
+172013|unix.bsd|1992-03-28|mrs@netcom.com (Morgan Schweer|Re: Features/experiences of/with Linux?|3426
+172024|unix.bsd|1992-03-29|drew@cs.colorado.edu (Drew Eck|Re: Features/experiences of/with Linux?|3264
+172032|unix.bsd|1992-03-29|dharris@svcs1.UUCP (David Harr|386BSD and Linux (talk and software)|5718
+172047|unix.bsd|1992-03-30|joel@wam.umd.edu (Joel M. Hoff|Re: 386BSD and Linux (talk and software)|496
+172051|unix.bsd|1992-03-30|choke@wet.UUCP (Sean Gallaty)|Re: 386BSD and Linux (talk and software)|1204
+172074|unix.bsd|1992-03-31|nickel@cs.tu-berlin.de (Juerge|Re: 386BSD and Linux (talk and software)|578
+172085|unix.bsd|1992-04-02|bambi@bu.oz.au (David J. Hughe|386BSD & Linux Mirrored on kirk.bu.oz.au|944
+171582|unix.bsd|1992-04-29|brendan@cs.widener.edu (Brenda|Re: From whence "The Hurd" (Was: Re: MACH is not UNIX)|618
+171573|unix.bsd|1992-04-29|alan@auad.acadiau.ca (Alan McK|From whence "The Hurd" (Was: Re: MACH is not UNIX)|616
+171197|unix.bsd|1992-05-18|andrew@airs.com (Andrew Evans)|GNU Hurd details (was Re: full proc table)|629
+170545|unix.bsd|1992-07-03|kobler@informatik.tu-muenchen.|386BSD or Linux?|662
+170489|unix.bsd|1992-07-07|bet@cyclone.sbi.com (Bennett E|Re: 386BSD or Linux?|1526
+170258|unix.bsd|1992-07-20|STDN%MARIST@VM.MARIST.EDU (Dan|386BSD questions, as compared to Linux|311
+170272|unix.bsd|1992-07-20|cflatter@nrao.edu (Chris Flatt|Re: 386BSD questions, as compared to Linux|1183
+170189|unix.bsd|1992-07-21|randy@ms.uky.edu (Randy Applet|Performance of Linux and BSD|613
+170190|unix.bsd|1992-07-21|rich@Rice.edu (Richard Murphey|Re: 386BSD questions, as compared to Linux|803
+170197|unix.bsd|1992-07-21|oreillym@tartarus.uwa.edu.au (|Re: Performance of Linux and BSD|660
+169950|unix.bsd|1992-07-24|kuku@acds.physik.rwth-aachen.d|Re: S: Contact to LINUX-Users in GERMANY|205
+169513|unix.bsd|1992-07-29|gilgalad@sparky.eecs.umich.edu|WANTED: Help with BSD 386, Linux, SVGA and X (X386)|1221
+168553|unix.bsd|1992-08-17|hedrick@athos.rutgers.edu (Cha|Re: Restrictions on 'free' UNIX / 386BSD (Linux licensing)|2541
+167745|unix.bsd|1992-09-08|muts@fysap.fys.ruu.nl (Peter M|BSD vs. LINUX (was Re: What's LINUX? And other misc questions....)|420
+167304|unix.bsd|1992-09-19|hlu@yoda.eecs.wsu.edu (H.J. Lu|Re: RFD: comp.os.linux split|516
+167054|unix.bsd|1992-09-21|newsman@milton.u.washington.ed|Linux Newbie|1089
+167001|unix.bsd|1992-09-21|sasctw@duckhead.unx.sas.com (C|Re: RFD: comp.os.linux split|599
+167011|unix.bsd|1992-09-22|stewart@wimsey.bc.ca (Jim Stew|Re: RFD: comp.os.linux split|108
+166883|unix.bsd|1992-09-25|pauls@css.itd.umich.edu (Paul |Re: bsd386 vs linux|215
+166788|unix.bsd|1992-09-26|pat@sleepy.UUCP (Pat Eyler   )|linux, 386BSD, and free UN*X systems|5060
+166458|unix.bsd|1992-10-01|Bill.Viggers@comp.vuw.ac.nz (B|386BSD vs Linux|397
+166510|unix.bsd|1992-10-02|peter@ferranti.com (peter da s|386BSD and Linux SCSI device drivers.|547
+166525|unix.bsd|1992-10-03|julian@tfs.com (Julian Elische|Re: 386BSD and Linux SCSI device drivers.|1533
+166322|unix.bsd|1992-10-07|fink@et.msc.edu (Paul Fink)|distributing linux on floppies|521
+166324|unix.bsd|1992-10-08|adrian@ibmpcug.co.uk (Superuse|Re: distributing linux on floppies|1015
+166100|unix.bsd|1992-10-09|gsh7w@fermi.clas.Virginia.EDU |Re: distributing linux on floppies|949
+166096|unix.bsd|1992-10-09|eric@tantalus.nrl.navy.mil (Er|Re: distributing linux on floppies|4339
+166107|unix.bsd|1992-10-09|terry@cs.weber.edu (A Wizard o|Re: distributing linux on floppies|3290
+166018|unix.bsd|1992-10-09|jhelberg@nl.oracle.com (Joost |Re: distributing linux on floppies|1569
+165920|unix.bsd|1992-10-10|hpa@casbah.acns.nwu.edu (H. Pe|Re: distributing linux on floppies|908
+166057|unix.bsd|1992-10-12|lwv26@cas.org (Larry W. Virden|Why buy a Lotus book (Was: Re: distributing linux on floppies)|1198
+165970|unix.bsd|1992-10-12|peter@ferranti.com (peter da s|Re: distributing linux on floppies|1232
+165676|unix.bsd|1992-10-14|pete@q106fm.uucp (pete cervasi|Re: Which Tape to use with 386BSD and/or Linux ?|1279
+165282|unix.bsd|1992-10-23|paoletti@cps.msu.edu (David R.|386BSD <-> Linux binary compatability? (ie: X8514)|474
+165293|unix.bsd|1992-10-24|hasty@netcom.com (Amancio Hast|Re: 386BSD <-> Linux binary compatability? (ie: X8514)|789
+165184|unix.bsd|1992-10-27|lam836@cucs18.cs.cuhk.hk (Lam |386BSD and Linux, which one to choose?|355
+165141|unix.bsd|1992-10-28|jdb@bitcave.in-berlin.de (Joer|Re: Linux on a CD-ROM, joined effort w/386bsd?|508
+165142|unix.bsd|1992-10-28|eric@tantalus.nrl.navy.mil (Er|Re: Linux on a CD-ROM, joined effort w/386bsd?|654
+165080|unix.bsd|1992-10-29|nerd@percival.rain.com (Michae|Re: Linux on a CD-ROM, joined effort w/386bsd?|502
+165082|unix.bsd|1992-10-29|hpa@casbah.acns.nwu.edu (H. Pe|Re: Linux on a CD-ROM, joined effort w/386bsd?|630
+165093|unix.bsd|1992-10-30|eoahmad@ntuix.ntu.ac.sg (Othma|Re: Linux on a CD-ROM, joined effort w/386bsd?|803
+164955|unix.bsd|1992-10-31|jdb@bitcave.in-berlin.de (Joer|Re: Linux on a CD-ROM, joined effort w/386bsd?|744
+164948|unix.bsd|1992-10-31|raz@socs.uts.edu.au (The Inimi|Re: Linux on a CD-ROM, joined effort w/386bsd?|1098
+165042|unix.bsd|1992-11-03|glenw@remus.rutgers.edu (Glenn|386BSD or LINUX?|586
+164878|unix.bsd|1992-11-03|dsc3pzp@nmrdc1.nmrdc.nnmc.navy|Re: 386BSD or LINUX?|1441
+164903|unix.bsd|1992-11-04|wjin@cs.uh.edu (W. Woody Jin)|Re: 386BSD or LINUX?|2141
+164912|unix.bsd|1992-11-04|eoahmad@ntuix.ntu.ac.sg (Othma|Re: 386BSD or LINUX?|2458
+164917|unix.bsd|1992-11-04|torvalds@klaava.Helsinki.FI (L|Re: Port of new Linux math emulator to 386bsd?|827
+164825|unix.bsd|1992-11-04|kapela@prism.poly.edu (Theodor|Re: 386BSD or LINUX?|1763
+164822|unix.bsd|1992-11-04|gt@prosun.first.gmd.de (Gerd T|Re: 386BSD or LINUX?|1427
+164831|unix.bsd|1992-11-04|torvalds@klaava.Helsinki.FI (L|Re: 386BSD or LINUX?|4534
+164846|unix.bsd|1992-11-04|elmar@gulasch.hanse.de (Elmar |Re: 386BSD or LINUX?|490
+164842|unix.bsd|1992-11-04|drew@kinglear.cs.colorado.edu |Re: 386BSD or LINUX?|2835
+164843|unix.bsd|1992-11-04|drew@kinglear.cs.colorado.edu |Re: 386BSD or LINUX?|2081
+164845|unix.bsd|1992-11-04|lcd@ais.org (Leon Dent)|Re: 386BSD or LINUX?|500
+===== shadow_pw (60) =====
+111807|comp.unix.wizards|1988-11-11|dlm at cuuxb.ATT.COM (Dennis L|/etc/shadow|2555
+112064|comp.unix.wizards|1988-11-12|gwyn at smoke.BRL.MIL (Doug Gw|/etc/shadow|1746
+111780|comp.unix.wizards|1988-11-13|arosen at hawk.ulowell.edu (MF|/etc/shadow|1762
+111481|comp.unix.wizards|1988-11-14|pengo at tmpmbx.UUCP (Hans H. |/etc/shadow|747
+111731|comp.unix.wizards|1988-11-15|mfp at sobeco.UUCP (Mark F. Pr|/etc/shadow|312
+111702|comp.unix.wizards|1988-11-16|guy at auspex.UUCP (Guy Harris|/etc/shadow|690
+111394|comp.unix.wizards|1988-11-17|honey at mailrus.cc.umich.edu |/etc/shadow|100
+111761|comp.unix.wizards|1988-11-17|rbj at nav.icst.nbs.gov (Root |/etc/shadow|812
+112301|comp.unix.wizards|1988-11-17|chris at mimsy.UUCP (Chris Tor|/etc/shadow|1283
+111874|comp.unix.wizards|1988-11-18|gwyn at smoke.BRL.MIL (Doug Gw|/etc/shadow|1116
+111529|comp.unix.wizards|1988-11-18|jfh at rpp386.Dallas.TX.US (Th|/etc/shadow|3960
+112182|comp.unix.wizards|1988-11-18|ok at quintus.uucp (Richard A.|/etc/shadow|1069
+111704|comp.unix.wizards|1988-11-18|pengo at tmpmbx.UUCP (Hans H. |Shadow password file library posted|109
+112038|comp.unix.wizards|1988-11-19|daveb at gonzo.UUCP (Dave Brow|/etc/shadow|1312
+111710|comp.unix.wizards|1988-11-28|dlm at cuuxb.ATT.COM (Dennis L|/etc/shadow|2127
+57733|comp.unix.questions|1989-03-05|norstar at tnl.UUCP (Daniel Ra|/etc/shadow equivalent without a source license!|1833
+57797|comp.unix.questions|1989-03-05|debra at alice.UUCP (Paul De B|/etc/shadow equivalent without a source license!|1336
+58163|comp.unix.questions|1989-03-06|davidsen at steinmetz.ge.com (|/etc/shadow equivalent without a source license!|1565
+57959|comp.unix.questions|1989-03-07|debra at alice.UUCP (Paul De B|/etc/shadow equivalent without a source license!|1233
+58208|comp.unix.questions|1989-03-10|norstar at tnl.UUCP (Daniel Ra|Followup to /etc/shadow equivalent without a source license!|2277
+16815|comp.sys.sun|1989-03-21|fmr at cwi.nl (Frank Rahmani)|Where is Shadowcube?|244
+58437|comp.unix.questions|1989-04-04|rbj at dsys.icst.nbs.gov (Root|/etc/shadow equivalent without a source license!|2891
+58541|comp.unix.questions|1989-04-05|norstar at tnl.UUCP (Daniel Ra|/etc/shadow equivalent without a source license!|2078
+3987|comp.bugs.4bsd|1989-05-09|bostic at OKEEFFE.BERKELEY.EDU|V1.81 (Shadow passwords)|3956
+128971|bugs.4bsd.ucb-fixes|1989-05-09|bostic@OKEEFFE.BERKELEY.EDU (K|V1.81 (Shadow passwords)|3953
+721|comp.bugs.2bsd|1989-05-16|sms at wlv.imsd.contel.com (St|shadow password file for 2.10.1BSD|20478
+718|comp.bugs.2bsd|1989-05-17|sms at wlv.imsd.contel.com (St|Shadow passwd prevents compilation of some programs|2971
+127535|bugs.4bsd|1989-05-19|sms@wlv.imsd.contel.com (Steve|Shadow passwords prevent some programs from recompiling|3071
+3976|comp.bugs.4bsd|1989-05-19|sms at wlv.imsd.contel.com (St|Shadow passwords prevent some programs from recompiling|3071
+18931|comp.sys.sun|1989-06-20|fmr at cwi.nl (Frank Rahmani)|Shadowcube (multiprocessor simulation)(still looking for info!)|685
+127579|bugs.4bsd|1989-08-22|sean@cadre.dsl.PITTSBURGH.EDU |vipw(8) in shadow passwords does not always update files|1281
+4078|comp.bugs.4bsd|1989-08-22|sean at cadre.dsl.PITTSBURGH.E|vipw(8) in shadow passwords does not always update files|1281
+117742|comp.unix.wizards|1989-10-17|cliff at SSD.HARRIS.COM (Cliff|Shadow Disks|2216
+118041|comp.unix.wizards|1989-10-20|nagle at well.UUCP (John Nagle|Shadow Disks|342
+37615|comp.unix.i386|1989-12-27|jdp at PacBell.COM (Jerry D. P|Shadow passwords|828
+37590|comp.unix.i386|1989-12-27|cpcahil at virtech.uucp (Conor|Shadow passwords|1897
+37683|comp.unix.i386|1989-12-27|hoffman at wrdso.ATT.DSO (Paul|Shadow passwords|1489
+37180|comp.unix.i386|1989-12-27|weave at sun.acs.udel.edu (Ken|Shadow passwords|1279
+37461|comp.unix.i386|1989-12-28|jdp at PacBell.COM (Jerry D. P|Shadow passwords|1326
+37380|comp.unix.i386|1989-12-29|mike at antel.uucp (Michael Bo|Shadow passwords|1384
+64118|comp.unix.questions|1990-01-02|AGRISCS at umcvmb.missouri.edu|shadow...|1067
+64333|comp.unix.questions|1990-01-02|jik at athena.mit.edu (Jonatha|shadow...|435
+80842|comp.unix.ultrix|1990-01-15|spell at uncw.UUCP (Chris Spel|disk shadowing & pick|637
+64332|comp.unix.questions|1990-01-18|system at asuvax.asu.edu (Marc|Shadow passwds breaks programs with pw_stayopen?|907
+119413|comp.unix.wizards|1990-02-21|dave at csd4.csd.uwm.edu (Davi|shadow password question|677
+38772|comp.unix.i386|1990-03-06|aland at infmx.UUCP (Dr. Scump|passwd file maint utilities - shadowing|1362
+65511|comp.unix.questions|1990-03-06|aland at infmx.UUCP (Dr. Scump|passwd file maint utilities - shadowing|1362
+38732|comp.unix.i386|1990-03-06|cpcahil at virtech.uucp (Conor|Disk shadowing or striping under 386/ix|2596
+38821|comp.unix.i386|1990-03-06|paul at actrix.co.nz (Paul Gil|Disk shadowing or striping under 386/ix|851
+39062|comp.unix.i386|1990-03-07|support at ism780c.isc.com (Su|Disk shadowing or striping under 386/ix|611
+65525|comp.unix.questions|1990-03-08|pag at tcsc3b2.tcsc.com (Phili|passwd file maint utilities - shadowing|2502
+65773|comp.unix.questions|1990-03-12|nts0302 at dsacg3.dsac.dla.mil|passwd file maint utilities - shadowing|1353
+22580|comp.sys.sun|1990-05-07|ohnielse at ltf.dth.dk (Ole Ho|Using the SunOS 4.0 shadow password file|1365
+22739|comp.sys.sun|1990-05-07|jdh at bu-pub.bu.edu (jdh at b|Using the SunOS 4.0 shadow password file|3801
+66839|comp.unix.questions|1990-06-03|leadley at uhura.cc.rochester.|Using the SunOS 4.0 shadow password file|7112
+40868|comp.unix.i386|1990-07-17|micha at ixos (micha at ixos)|Shadow RAM with UNIX|897
+23433|comp.sys.sun|1990-07-20|leadley at uhura.cc.rochester.|Design error in Sun shadow password system|772
+40893|comp.unix.i386|1990-07-22|davidsen at sixhub.UUCP (Wm E.|Shadow RAM with UNIX|670
+82159|comp.unix.ultrix|1990-08-12|sanghvi at uncw.UUCP (arun san|disc shadowing (mirroring) under ultrix|169
+81941|comp.unix.ultrix|1990-08-14|chris at winsrf.dco.dec.com (C|disc shadowing (mirroring) under ultrix|133
+===== net2_contrib (8) =====
+172467|unix.bsd|1992-03-12|jdi@franz.com (John D. Irwin)|386BSD 0.0 Release Notes|16848
+172473|unix.bsd|1992-03-13|bostic@hermes.Berkeley.EDU (Ke|Re: 386BSD 0.0 Release Notes|1787
+172496|unix.bsd|1992-03-14|richard@pegasus.com (Richard F|386BSD Release Notes|16656
+172206|unix.bsd|1992-03-21|bostic@hermes.Berkeley.EDU (Ke|Re: 386BSD 0.0 Release Notes|1105
+172178|unix.bsd|1992-03-24|roh@CS.ColoState.EDU (Lucas Ro|Re: What happens if you have both BSD/386 and 386BSD?|1602
+171663|unix.bsd|1992-04-25|karl@NeoSoft.com (Karl Lehenba|386BSD - Frequently Asked Questions (last updated 25-Apr-92)|17437
+169857|unix.bsd|1992-07-24|terry@npd.Novell.COM (Terry La|386BSD FAQ|37866
+164159|unix.bsd|1992-11-23|jcargill@grilled.cs.wisc.edu (|Summary:  386bsd CD-ROM Survey|27959
+===== consent_decree (11) =====
+109515|comp.unix.wizards|1988-08-01|res at ihlpe.ATT.COM (Rich Str|att & osf|3546
+109999|comp.unix.wizards|1988-08-05|henry at utzoo.uucp (Henry Spe|att & osf|4513
+109912|comp.unix.wizards|1988-08-09|dwc at homxc.UUCP (Malaclypse |att & osf|6577
+109745|comp.unix.wizards|1988-08-19|henry at utzoo.uucp (Henry Spe|att & osf|2813
+58075|comp.unix.questions|1989-03-20|gwyn at smoke.BRL.MIL (Doug Gw|Where to get BSD docs?|1224
+114854|comp.unix.wizards|1989-04-26|ed at mtxinu.COM (Ed Gould)|SysV IPC:  eyesore or misunderstood art?|1837
+114982|comp.unix.wizards|1989-04-26|dwc at cbnewsh.ATT.COM (Malacl|SysV IPC:  eyesore or misunderstood art?|1804
+132227|os.386bsd.development|1995-02-13|wes@indirect.com (Barnacle Wes|Re: Cannons Away: Vote NO on newsgroup reformation.|1165
+155317|unix.bsd|1995-02-13|wes@indirect.com (Barnacle Wes|Re: Cannons Away: Vote NO on newsgroup reformation.|1165
+132230|os.386bsd.development|1995-02-14|jfw@proteon.com (John Woods)|Re: Cannons Away: Vote NO on newsgroup reformation.|1283
+155178|unix.bsd|1995-02-14|jfw@proteon.com (John Woods)|Re: Cannons Away: Vote NO on newsgroup reformation.|1283

@@ -1,0 +1,1397 @@
+
+##### DB_ID 170185 | unix.bsd | 1992-07-20T21:18:11+00:00 | jeffrey@algor2.algorists.com (Jeffrey Kegler)
+SUBJ: AT&T sues BSDI
+MID: 1992Jul20.211811.3152@algor2.algorists.com
+----
+According to today's _ComputerWorld_ (July 20, 1992, page 16) AT&T's
+USL has sued Berkeley Software Design, Inc. in U.S. District Court in
+NJ.  Copyright and patent infringement are apparently *not* involved,
+the grounds being specified as "trademark infringement, false
+advertizing and unfair competition."
+
+The article is very short, and I have nothing more on this.  Its
+relevance to this group is marginal if no copyright, patent or trade
+secret issue is involved, but that itself may be interesting -- like
+the curious matter in one of Sherlock's Holmes stories about what the
+dog did in the night.  (For Holmes non-fans, the dog did nothing, in
+particular did not bark, suggesting that the parties involved were
+familiar to him.)  That AT&T does not sue BSDI on intellectual
+property rights in software might suggest it believes it has none that
+are worth suing over.  Then again ...
+
+-- 
+
+Jeffrey Kegler, Independent UNIX Consultant, Algorists, Inc.
+jeffrey@algor2.ALGORISTS.COM or uunet!algor2!jeffrey
+137 E Fremont AVE #122, Sunnyvale CA 94087
+
+
+
+
+##### DB_ID 169926 | unix.bsd | 1992-07-24T01:39:57+00:00 | jeffrey@algor2.algorists.com (Jeffrey Kegler)
+SUBJ: Best Reaction to AT&T Suit == Join LPF
+MID: 1992Jul24.013957.10852@algor2.algorists.com
+----
+I should add IMHO to the above, but I like to keep subject lines
+short.  :-) You can contact the League for Programming Freedom as
+shown below.  I believe the LPF is the best instrument for reacting to
+these situations.  I am proud to be a member.  Joining the LPF now
+would 1) send a message; 2) not commit us prematurely to anything; 3)
+strengthen us against future similar threats.
+
+I have down-loaded the legal docs from uunet and the matter looks
+complex.  Some have suggested we rush out and boycott AT&T.  I would
+suggest the following considerations.
+
+1) AT&T's hints of wide ranging legal action are so far just that --
+strong hints.  Perhaps our response should be proportional.
+
+2) Issues central to AT&T v. BSDI are not so central to our concerns.
+For example, the question of whether an 800-ITS-UNIX number violates
+AT&T's trademark is one which, if the suit were limited to it, I would
+be glad to leave up to the courts.  Therefore:
+
+3) Before engaging in a boycott or any other action, we should clarify
+exactly what our grievance is, and in what respect (if any) we object
+to the AT&T suit.
+
+Again, I think the LPF is the best way to do this.
+
+Here follows contact information for LPF from uunet!~/doc/lpf/lpf.join.Z:
+
+> If you have any questions, please write to the League, phone
+> (617) 243-4091, or send Internet mail to league@prep.ai.mit.edu.
+>		       Jack Larsen, President
+> Jack Larsen can be contacted at (708) 698-1160; Fax (708) 698-6221.
+> To join, please send a check and the following information [ questionnaire
+> ommitted for space -- JK ] to:
+>
+>    League for Programming Freedom
+>    1 Kendall Square #143
+>    P.O.Box 9171
+>    Cambridge, Massachusetts 02139
+-- 
+
+Jeffrey Kegler, Independent UNIX Consultant, Algorists, Inc.
+jeffrey@algor2.ALGORISTS.COM or uunet!algor2!jeffrey
+137 E Fremont AVE #122, Sunnyvale CA 94087
+
+
+
+
+##### DB_ID 169776 | unix.bsd | 1992-07-24T20:17:44+00:00 | bremner@cs.sfu.ca (David Bremner)
+SUBJ: Re: AT&T vs. BSDI --> 4.3BSD-NET2 distribution requires AT&T license!!!
+MID: 1992Jul24.201744.20071@cs.sfu.ca
+----
+In article <7009@skye.ed.ac.uk> jeff@aiai.ed.ac.uk (Jeff Dalton) writes:
+
+>(NB -- my statements about AT&T's case are based entriely on
+>what I've read in this newsgroup.  I could easily be wrong.)
+>
+>-- jd
+
+
+I was going to suggest that people ftp the legalize  from ftp.uu.net,  
+but to forstall the requests for mailed  copies, I will append the documents
+from the directory vendor/bsdi/usl.  After all, compared to alt.binaries.*
+this is only a minor waste of bandwidth :-)
+
+Have a nice day...
+or else.
+
+David
+
+::::::::::::::
+/home/csgrads/bremner/920420.complaint
+::::::::::::::
+                                                                      
+Michael D. Loprete (MDL1695)
+CRUMMY, DEL DEO, DOLAN,
+  GRIFFINGER & VECCHIONE, P.C.
+One Riverfront Plaza
+Newark, New Jersey 07102
+(201) 596-4500
+
+George L. Graff
+James W. Kennedy
+Charles B. Ortner
+MILGRIM THOMAJAN & LEE P.C.
+New York, New York 10005-2815
+(212) 858-5300
+
+Sanford Tannebaum
+Executive Vice President and General Counsel
+UNIX System Laboratories, Inc.
+190 River Road
+Summit, New Jersey  07901-1444
+(908) 522-6666
+
+Attorneys for Plaintiff Unix System Laboratories, Inc.
+
+
+UNITED STATES DISTRICT COURT
+DISTRICT OF NEW JERSEY
+
+                                          
+
+UNIX SYSTEM LABORATORIES, INC.,
+
+             	        Plaintiff,		Civil Action No.
+						92-1667 (DRD)
+          -against-
+						COMPLAINT 
+BERKELEY SOFTWARE DESIGN, INC.,
+
+			Defendant.
+
+
+	Plaintiff UNIX System Laboratories, Inc. ("USL"), for
+its Complaint against defendant Berkeley Software Design, Inc.
+("BSDI"), avers as follows:
+
+The Nature of The Action
+
+	1. This is an action for trademark infringement, false 
+advertising and unfair competition under the federal Lanham 
+Trademark Act, 15 U.S.C. Section 1051, et seq., and under the 
+statutory and common law of New Jersey and of each State in 
+which BSDI has engaged in the conduct detailed below. USL 
+seeks injunctive relief and damages to redress BSDI's ongoing 
+unauthorized use of the UNIX(R) trademark in BSDI's toll-free 
+telephone number, 1-800-ITS UNIX, and its inclusion in its 
+advertising and promotional materials of materially false and 
+misleading statements in violation of the rights of USL. 
+
+
+	Jurisdiction and Venue
+
+	2. This Court has subject matter jurisdiction over this 
+action pursuant to 15 U.S.C. Section 1121(a) and 28 U.S.C. 
+Sections 1331, 1338. 
+
+	3. Venue is properly laid in this district pursuant to 
+28 U.S.C. Section1391(b). 
+
+
+	The Parties
+
+	4. USL is a Delaware corporation with its principal place of 
+business located in Summit, New Jersey. USL is a subsidiary of 
+American Telephone and Telegraph Company ("AT&T") 
+engaged in the development, manufacture, licensing and sale of 
+computer software operating systems and related products and 
+servlces. 
+
+	5. Defendant BSDI is a Delaware corporation engaged in the 
+manufacture and sale of computer software operating systems 
+and related services. BSDI's principal place of business is located 
+in Richmond Falls, Virginia.                        
+
+
+	Background
+
+	6. Beginning in the early 1970s, AT&T's Bell Laboratories 
+developed proprietary computer operating system software and 
+other computer related products which it identified with the 
+trademark "UNIX." 
+
+	7. On May 6, 1986, AT&T's UNIX trademark was placed on 
+the Principal Register of the United States Patent and Trademark 
+Office for computer programs, under Registration No. 1,392,203. A 
+copy of the registration is annexed as Exhibit A. This registration is 
+valid, subsisting, in full force and effect, and is now incontestable 
+pursuant to 15 U.S.C. Section 1065. 
+
+	8. AT&T has assigned all of its proprietary rights in the UNIX 
+trademark and the software sold and licensed thereunder to USL. 
+For more than fifteen years, AT&T and its successor, USL, have 
+widely used the trademark UNIX to identify their system software, 
+computers and related products and services, including educational 
+and training services, system manuals, and technical and consulting 
+services. 
+
+	10. The trademark UNIX is widely known as identifying the 
+products of AT&T and its successor, USL. 
+
+	11. Pursuant to agreement with AT&T, the Regents of the 
+University of California (the "Regents") have been authorized to 
+distribute to third parties certain works derived from UNIX system 
+software subject to various restrictions intended to protect and 
+preserve AT&T's proprietary rights thereto. Those restrictions 
+include a requirement limiting such distribution to persons who 
+have also acquired licenses from AT&T or USL. The derivative 
+works distributed by the Regents are generally known as "Berkeley 
+Software Distributions," and USL-authorized releases thereof have 
+been widely distributed by the Regents under the initials "BSD" 
+(e.g., "4.3BSD"). 
+
+	12. BSDI is not affiliated with the Regents, nor has it entered 
+into any license agreements with USL pertaining to UNIX brand 
+software, computers or related products. 
+
+	13. BSDI is attempting
+[...TRUNCATED len=62476]
+
+##### DB_ID 158431 | unix.bsd | 1994-02-07T01:35:18+00:00 | kolstad@BSDI.COM (Rob Kolstad)
+SUBJ: USL vs. BSDI Lawsuit Settled
+MID: 2j45sm$39l@BSDI.COM
+----
+We are delighted to announce that the USL vs. BSDI lawsuit was settled on
+Friday, February 4, 1994.  The text of the joint press release reads:
+
+    UNIX System Laboratories, Inc./Novell Corporation ("Novell") and
+    Berkeley Software Design, Inc. ("BSDI") announce the settlement of
+    litigation based upon BSDI's distribution of its computer software
+    product known as BSD/386.
+
+    BSDI has agreed to substitute a port of the University of
+    California's forthcoming new release to be known as 4.4 BSD(Lite)
+    for BSD/386.  For a limited period of time, BSDI may continue to
+    distribute its BSD/386 product, although certain portions of the
+    code may be distributed in binary form.
+
+    All other terms of the settlement are confidential.
+
+All legal disagreements, suits, and countersuits have been resolved.
+
+The announcement of UCB's settlement with USL enables us to begin the
+integration of 4.4(Lite) immediately.  Additionally, engineers will be
+completing the SCO binary emulation mode and completing the port of BSDI's
+operating system to the SPARC architecture.
+
+BSDI's 1.1 release will ship in about a week:  February 14, 1994.
+
+We are delighted to have resolved our disagreements with USL and look
+forward to a successful 1.1 product shipment and a bright future devoting
+our full attention to our product and our customers.
+
+					Rob Kolstad
+					President, BSDI
+
+   ====================================================================
+         /\      Rob Kolstad           Berkeley Software Design, Inc. 
+      /\/  \     kolstad@bsdi.com      7759 Delmonico Drive
+     / /    \    719-593-9445          Colorado Springs, CO  80919
+   ====================================================================
+
+
+
+
+##### DB_ID 158432 | unix.bsd | 1994-02-07T01:51:58+00:00 | kolstad@BSDI.COM (Rob Kolstad)
+SUBJ: USL vs. BSDI Lawsuit Settled
+MID: 2j45fl$2jb@BSDI.COM
+----
+We are delighted to announce that the USL vs. BSDI lawsuit was settled on
+Friday, February 4, 1994.  The text of the joint press release reads:
+
+    UNIX System Laboratories, Inc./Novell Corporation ("Novell") and
+    Berkeley Software Design, Inc. ("BSDI") announce the settlement of
+    litigation based upon BSDI's distribution of its computer software
+    product known as BSD/386.
+
+    BSDI has agreed to substitute a port of the University of
+    California's forthcoming new release to be known as 4.4 BSD(Lite)
+    for BSD/386.  For a limited period of time, BSDI may continue to
+    distribute its BSD/386 product, although certain portions of the
+    code may be distributed in binary form.
+
+    All other terms of the settlement are confidential.
+
+All legal disagreements, suits, and countersuits have been resolved.
+
+The announcement of UCB's settlement with USL enables us to begin the
+integration of 4.4(Lite) immediately.  Additionally, engineers will be
+completing the SCO binary emulation mode and completing the port of BSDI's
+operating system to the SPARC architecture.
+
+BSDI's 1.1 release will ship in about a week:  February 14, 1994.
+
+We are delighted to have resolved our disagreements with USL and look
+forward to a successful 1.1 product shipment and a bright future devoting
+our full attention to our product and our customers.
+
+					Rob Kolstad
+					President, BSDI
+
+   ====================================================================
+         /\      Rob Kolstad           Berkeley Software Design, Inc.
+      /\/  \     kolstad@bsdi.com      7759 Delmonico Drive
+     / /    \    719-593-9445          Colorado Springs, CO  80919
+   ====================================================================
+
+
+
+
+##### DB_ID 170122 | unix.bsd | 1992-07-23T06:40:28+00:00 | rcd@raven.eklektix.com (Dick Dunn)
+SUBJ: AT&T or USL, and extrapolation
+MID: 1992Jul23.064028@eklektix.com
+----
+The discussion about the BSDI lawsuit seems to be focusing on AT&T.  These
+days, it's really USL which is responsible for the development (such as it
+is) and the licensing of UNIX systems.  Now, my understanding is that USL
+isn't exactly a piece of AT&T but isn't exactly separate either.  Can any-
+one explain the real nature of this neither-fishy-nor-foul relationship? 
+It bears on things such as whether it means anything at all to protest by
+changing your long-distance service.  Could any information actually
+trickle down/across to USL?  (I doubt that it has much effect in the best
+case, but I'm wondering if it has any at all.)
+_ _ _ _ _
+
+Next...There's been a lot of extrapolation from what is known about the
+lawsuit to what it might mean.  People are off guessing how AT&T must think
+that nobody who's seen the inside of UNIX can do OS work without revealing
+trade secret and nobody's going to be able to work in the field any more...
+Let's hold on.  The best we can say is that, to the typical reader among
+us, the suit simply Doesn't Make Sense.  We don't know what it is that USL
+claims as violations--in fact, the defendants don't even know what the
+alleged violations are.  It's one thing to be wary--and I think we'd all
+better watch this one carefully--but it's another thing to extrapolate from
+lack of facts or lack of substantive accusations to doomsday scenarios.
+There just isn't any justification for them (yet), and it would help us
+understand the facts if we didn't have to keep filtering out the uninformed
+guesses.
+-- 
+Dick Dunn    rcd@raven.eklektix.com   -or-   raven!rcd    Boulder, Colorado
+  ...The way to meet an impossible circumstance is with voluntary craziness.
+
+
+
+
+##### DB_ID 170121 | unix.bsd | 1992-07-23T07:08:25+00:00 | rcd@raven.eklektix.com (Dick Dunn)
+SUBJ: Re: AT&T shoots self in the foot (was Re: AT&T sues BSDI)
+MID: 1992Jul23.070825@eklektix.com
+----
+drg@bubba.ma30.bull.com (Daniel R Guilderson) writes:
+>I would just like to comment on the public relations angle of this
+>move.  Suppose that AT&T wins the suit and BSDI is put out of
+>business.  AT&T will have spent thousands if not millions in legal
+>fees for what gains?...
+
+sort of a devil's-advocate response...
+
+The gain is that they scare away anyone else who might have ideas of doing
+something similar to what BSDI is doing.  They would establish a precedent.
+
+>...It will have pissed-off a large community of
+>people who were/are responsible for a great deal of the success of
+>***X.  Namely the academic and research communities...
+
+Large is relative.  The academic/research communities are of negligible
+size compared to the customer base required for UNIX to succeed in USL's
+terms.
+
+Besides, they've already gotten what they want out of research/academia.
+The fertilization as people encountered UNIX in school, then carried it out
+to the larger world, is done.  AT&T finally failed to avoid picking up some
+of the most obvious improvements from BSD, but now they've got them.  What
+use do they have for BSD at this point?  It's just an annoying splintering,
+an unwanted disturbance in their control over UNIX (R).  Why should they
+put up with it?
+
+And if USL doesn't want to put up with it, how should they deal with it?
+They're certainly not going to innovate to surpass BSD.  They're not in the
+business of innovating in UNIX, and anyway, innovation is nasty, expensive,
+unpredictable stuff.  Better to stick to a safe approach like litigation.
+Besides, they've got a small army of lawyers and the other side doesn't.
+If you're going to fight, pick the battlefield where you can win.
+-- 
+Dick Dunn    rcd@raven.eklektix.com   -or-   raven!rcd    Boulder, Colorado
+   ...A clear analysis of any situation is often mistaken for pessimism.
+
+
+
+
+##### DB_ID 169982 | unix.bsd | 1992-07-23T17:32:48+00:00 | rcd@raven.eklektix.com (Dick Dunn)
+SUBJ: Re: AT&T sues BSDI
+MID: 1992Jul23.173248@eklektix.com
+----
+paigen@tfs.com (David Paigen) writes:
+
+>I think someone should give BSDI a medal for doing their work...
+
+Easy, there.  BSDI is doing what they must do to survive as a business. 
+They *have* done their legal homework, and let's hope it's good enough.
+But let's save the celebration for when the battle's over and they've won.
+
+>...More to
+>the point, we should start contributing to the "BSDI legal defense fund."
+
+I don't think that's a very effective way to go.  If you want to contribute
+to BSDI's efforts, buy their product.  I'm not saying that because the
+legal issues are unimportant, but because a "legal defense fund" isn't the
+way for a small group of people to have a significant effect against a
+large corporation with lots of lawyers.  If you're really rich, or in some
+position to make a substantial contribution to the legal battle, fine...
+but that's doesn't apply to most of the readers of this group.  USL can
+just throw money at the battle; it's hard for us to do that effectively.
+Instead, think of ways we can use the abilities or the connections we do
+have.
+
+Most of us are just ordinary individuals with ordinary amounts of money.
+I think a better way to help is to make the BSD-based software widely
+available.  Encourage the use of *any* systems based on Net 2 (yes, gasp!,
+I'm advocating both BSDI and 386BSD in the same breath), get them out all
+over the world.  USL hasn't moved against Net 2, which sure looks like
+tacit approval to me...so let's make sure it's everywhere.  My own opinion
+is that the genie is already out of the bottle anyway, and not likely to
+be put back in, but we might as well try to be as thorough as we can.
+-- 
+Dick Dunn    rcd@raven.eklektix.com   -or-   raven!rcd    Boulder, Colorado
+   ...A clear analysis of any situation is often mistaken for pessimism.
+
+
+
+
+##### DB_ID 169374 | unix.bsd | 1992-08-01T07:12:26+00:00 | rcd@raven.eklektix.com (Dick Dunn)
+SUBJ: Re: UNIGRAM's article on the USL-BSDI suit
+MID: 1992Aug1.071226@eklektix.com
+----
+Thanks to Tom Limoncelli for posting parts of that Unigram-X article.  I
+was able to make the connection to having seen a sample copy of it at a
+Uniforum a couple years ago--is it still printed on yellow paper?? :-)
+Now and then I've wondered what would be the trade-press equivalent of the
+US's "National Enquirer"...wish I'd known it was there all along...
+-- 
+Dick Dunn    rcd@raven.eklektix.com   -or-   raven!rcd    Boulder, Colorado
+   ...I'm not cynical - just experienced.
+
+
+
+
+##### DB_ID 169942 | unix.bsd | 1992-07-24T07:52:38+00:00 | brian@apt.bungi.com (Brian Litzinger)
+SUBJ: Re: AT&T sues BSDI & Our Retaliation
+MID: 1992Jul24.075238.12570@apt.bungi.com
+----
+In article <9207231306.AA06854@GRANNY.CS.NYU.EDU> m-jk8594@GRANNY.CS.NYU.EDU (James Kyriannis) writes:
+>I don't believe simply disconnecting your AT&T service, destroying your AT&T
+>calling/credit cards, or boycotting System V is going to make AT&T notice
+>your disgust in their policies.
+>
+>Simply telling a 'phone rep.' that you want your long distance service
+>disconnected because AT&T sucks isn't enough -- your telephone conversation
+>with the 'rep' is not going to be recorded and played back to his/her 
+>manager.  People of higher authority have to hear your statement if you
+>want to make any sort of impact.
+
+I called my local AT&T sales droid and told them that I was upset
+over this USL (AT&T) vs BSDI lawsuit and that I would disconnect
+my long distance service with AT&T if AT&T didn't drop that suit.
+
+I expected, of course, sort of a yawn from the sales droid.  Instead
+the sales droid was very interested and wanted to write down the
+details of my complaint, and said that she was going to forward them
+to some big-wig somewhere.
+
+However, I agree with James' assessment.  A letter is in the works.
+
+brian@apt.bungi.com
+
+
+
+
+##### DB_ID 169968 | unix.bsd | 1992-07-24T18:14:20+00:00 | jtw@lcs.mit.edu (John Wroclawski)
+SUBJ: Re: AT&T sues BSDI & Our Retaliation
+MID: JTW.92Jul24131420@pmws.lcs.mit.edu
+----
+
+In article <1992Jul24.075238.12570@apt.bungi.com> brian@apt.bungi.com (Brian Litzinger) writes:
+
+   I called my local AT&T sales droid and told them that I was upset
+   over this USL (AT&T) vs BSDI lawsuit...
+
+   I expected, of course, sort of a yawn from the sales droid.  Instead
+   the sales droid was very interested and wanted to write down the
+   details of my complaint, and said that she was going to forward them
+   to some big-wig somewhere.
+
+They are specifically trained to respond this way to any customer
+complaint about AT&T policies.
+
+I don't know, though, whether they are then supposed to actually pass
+the complaint on or throw it away. Perhaps someone else can fill us in.
+
+				-john
+John Wroclawski
+jtw@lcs.mit.edu
+
+
+
+
+##### DB_ID 159177 | unix.bsd | 1993-09-09T05:52:47+00:00 | terry@spcvxb.spc.edu (Terry Kennedy, Operations Mgr.)
+SUBJ: Re: Legalities
+MID: 1993Sep9.015247.1@spcvxb.spc.edu
+----
+In article <1993Sep8.140654.12593@neb>, bbs@neb (BBS System 801-572-4969) writes:
+> Just yesterday I was talking to a systems consultant about
+> free versions of Unix and he told me that BSDI is under
+> suit from AT&T for releasing NetBSD and 386BSD, and that
+> anyone who uses these programs is also liable.  I have read
+> a couple of documents about the standoff between the two
+> companies, but the latest was dated March 1993, and it seemed
+> to show the ruling so far in BSDI's favor.  What has changed
+> since then?  (I'd really like to get a 4.3BSD compatible
+> system, if not 4.3/4.4BSD itself.)
+
+  USL felt that the release of Net-2 code to the general public (without 
+requiring a USL source license) violated USL's agreement with UC Berkeley.
+However, they didn't do anything about it until BSDI started shipping a
+complete system based on that code (with many enhancements, missing parts
+written, etc.). BSDI made a mistake in using a phone number of 800-ITS-UNIX,
+which was an infringement of USL's UNIX trademark. At that point USL sued
+BSDI, demanding that they change the phone number and no longer claim that
+BSD/386 was a "UNIX" operating system. BSDI complied. USL then amended the
+suit to add the complaint that USL code was used. The legal response was
+that BSDI got it from a public site where UC Berkeley contributed it. USL
+then decided to amend the suit to add UC Berkeley as a defendant.
+
+  A lot of legal maneuvering went on. Finally, USL got a hearing on their
+request to prevent BSDI from shipping product. The judge decided that it
+was unlikely that USL would prevail in the suit if it was continued, and
+denied USL's request. Thus, BSDI's ability to ship product was affirmed,
+and they shipped V1.0.
+
+  BSDI's customers are not legally liable for any of this. The worst case
+would be that BSDI loses the suit and support for BSD/386 would no longer
+be available. However, (IMHO) that isn't likely based on the court decis-
+ions so far.
+
+  In later developments, UC Berkeley has sued USL for using 4BSD code in
+System V without appropriate credit being given. Also, the CEO of USL has
+left to pursue "other opportunites", and Novell (who now owns USL) seems
+more interested in shipping quality product than in filing lawsuits. My
+guess is that the suit will die over the next year or so.
+
+  BSDI has nothing to do with the free BSD systems, other than the fact
+that they all started from the common code base of Net-2. However, if BSDI
+didn't defend Net-2, it's unlikely that the Net-2 software would be "legal",
+since (by definition) free software doesn't have the funds for a massive
+legal defense.
+
+	Terry Kennedy		Operations Manager, Academic Computing
+	terry@spcvxa.bitnet	St. Peter's College, Jersey City, NJ USA
+	terry@spcvxa.spc.edu	+1 201 915 9381
+
+
+
+
+##### DB_ID 169195 | unix.bsd | 1992-08-05T00:28:34+00:00 | mellon@ncd.com (Ted Lemon)
+SUBJ: Re: UNIGRAM's article on the USL-BSDI suit
+MID: MELLON.92Aug4172834@pepper.ncd.com
+----
+
+>That does not give me a whole lot of incentive for further investment
+>in the development of products for open licensing.  The BSDI people
+>chant the litany of how they are the champions of open systems, but
+>they are the ones spoiling open systems for everyone.
+
+Good.   By all means, keep your vile "open licensing" away from my
+computers.   Have you ever read the OSF/1 source license agreement?
+How about the OSF/Motif license agreement?   Let me clue you in -
+they're even more closed than AT&T's license agreements.   This isn't
+really OSF/s fault - most of their code is licensed from foundation
+members, which means that they don't have control over the actual
+language in the license.
+
+I understand that you might feel motivated to make a buck in this
+marketplace, but the copyright laws don't allow you to make a buck by
+copyrighting ideas; only by copyrighting specific expressions of
+ideas.   Allowing AT&T and USL to use the copyright laws to enforce
+the ownership of the ideas inherent in UNIX, particularly when AT&T
+didn't invent any of them (as has been discussed in previous
+articles), and particularly when even those ideas embodied in AT&T
+code which UCB has had access to are irrelevant now, would be a
+horrifying travesty of justice.
+
+Furthermore, allow me to point out that AT&T represented UNIX as a
+research operating system and encouraged schools to hack on it in a
+free and open manner, as early as Version 3 (I think; it might have
+been V4 or V4).   They then took a lot of work contributed by those
+outside institutions, packaged it up, and declared it their property.
+
+The early AT&T versions of UNIX didn't include the Bourne shell, and
+my recollection from talking to old-timers (sorry guys... :') is that
+a lot of the file descriptor paradigm came about after the initial
+university releases.   Certainly, the VM code and many of the nifty
+utilities came after this time.   I would be very surprised to learn
+if even 50% of the code included with the 32V release actually
+originated at AT&T.
+
+In other words, characterizing the situation WRT AT&T, USL, CSRG and
+BSDI in the way that you have is so completely off base as to border
+on the ridiculous.
+
+			       _MelloN_
+--
+mellon@ncd.com
+Member, League for Programming Freedom | To learn how software patents could
+cost you your right to program, contact the LPF - league@prep.ai.mit.edu
+
+
+
+
+##### DB_ID 169004 | unix.bsd | 1992-08-07T21:46:54+00:00 | mellon@ncd.com (Ted Lemon)
+SUBJ: Re: UNIGRAM's article on the USL-BSDI suit
+MID: MELLON.92Aug7144654@pepper.ncd.com
+----
+
+>To continue along this line, perhaps the consortium of Multics developers
+>should now launch a suit against USL?
+
+This discussion is getting downright silly.   You can't copyright a
+concept.   This is the most fundamental rule of copyrights.   You can
+only copyright an expression, such as a book or a piece of source code
+- the concepts that went into the source code are fundamentally not
+copyrightable.
+
+The only way that AT&T can make any claims about infringements due to
+concepts that they "own" is on the basis of licenses that various
+parties have signed, or based on the idea that the expression known as
+Net2 is a derivative of the expression known as UNIX 32V, in the sense
+that Net2 contains actual UNIX 32V code.
+
+AT&T has shown no evidence that Net2 contains 32V code in their
+lawsuit - they are making that claim, but they will have to present
+evidence to justify their claim, and they have yet to do so.
+
+AT&T's claim that Net2 makes use of trade secrets which were
+inappropriately made public by CSRG, perhaps in collusion with
+officers of BSDI, is, to me, the more defensible claim.
+
+In order for AT&T to win in their suit against BSDI, they must prove
+both that Net2 contains trade secrets covered under the 32V license,
+that CSRG released those secrets in violation of the 32V license, and
+that BSDI was in some way covered by that same license (i.e., the
+officers of the corporation were constrained by the license agreement,
+or the corporation itself was constrained by the license agreement).
+
+In order for AT&T to win against the Regents of UC Berkeley, they only
+have to prove that Net2 contains trade secrets covered by the 32V
+license, and that Berkeley released those trade secrets in violation
+of the 32V license agreement.   This will probably be a lot easier
+than making the case against BSDI.
+
+However, the bottom line is that without extending copyright
+protection into an entirely new realm, the copyrighting of ideas, USL
+and the courts can't put the genie back into the bottle.  Trade secret
+protection is enforced by contract law, which means that only those
+who have signed the contract are constrained from releasing the trade
+secret.  Once the trade secret has passed into the hands of the
+public, legally or no, it is no longer a trade secret, and even
+somebody who has signed the license can snarf it and hack on it
+freely.  As it is so eloquently put in the text of the USL suit, there
+is ``no suitable remedy at law.''
+
+			       _MelloN_
+
+--
+mellon@ncd.com
+Member, League for Programming Freedom | To learn how software patents could
+cost you your right to program, contact the LPF - league@prep.ai.mit.edu
+
+
+
+
+##### DB_ID 160221 | unix.bsd | 1993-03-10T15:43:44+00:00 | jds@cs.umd.edu (James da Silva)
+SUBJ: BSDI: 1   USL: 0
+MID: 64956@mimsy.umd.edu
+----
+Congratulations to BSDI!
+
+Anyone have any word on whether Berkeley will be able to release 4.4-Lite
+now, or will their lawyers still have them wait til the whole thing is
+finally over?
+
+I'm one happy naive hippy-freak Unix tech-weenie today!  Hmm, I wonder how
+UNIGRAM-X is going to report this? :-)
+
+Jaime
+............................................................................
+: Stand on my shoulders, : jds@cs.umd.edu  :                  James da Silva
+: not on my toes.        : uunet!mimsy!jds : Systems Design & Analysis Group
+
+
+------- Forwarded Message
+
+Date: Tue, 9 Mar 93 19:15:21 MST
+From: kolstad@BSDI.COM (Rob Kolstad)
+Message-Id: <9303100215.AA01258@ace.BSDI.COM>
+To: bsdi-users@bsdi.com
+Subject: BSDI: 1   USL: 0
+
+
+Greetings from Washington, D.C. and Interop.
+
+Good news today in the legal arena; here's our press release:
+
+----------------------------------------------------------------------
+
+USL Motion Against BSDI Dismissed.
+
+Unix System Laboratories, a majority-owned subsidiary of AT&T, has been
+unsuccessful in its attempt to stop the distribution of BSD/386, a
+UNIX-compatible software product offered by Berkeley Software Design,
+Inc.  BSD/386 is designed to run on IBM-compatible personal computers,
+and is based on the Networking Release 2 software developed at the
+University of California, at Berkeley.
+
+USL had sought to enjoin the distribution of BSD/386 pending trial,
+alleging that both the University and Berkeley Software Design had
+infringed copyrights and trade secrets in its 32V UNIX operating
+system.  However, in an opinion filed March 3, 1993, in the United
+States District Court for the District of New Jersey, District Judge
+Dickinson R. Debevoise denied USL's request for a preliminary
+injunction to stop the distribution of BSD/386.
+
+His denial was based on a finding that USL was unlikely to succeed in
+showing that it had a valid copyright in 32V and that USL had not
+successfully shown that either Networking Release 2 or BSD/386
+contained any trade secrets belonging to USL.  In making that ruling,
+Judge Debevoise noted that the accused header files, file names and
+function names were not trade secrets and stated that on the current
+record he "was unable to ascertain whether any aspect of Net2 or
+BSD/386, be it an individual line of code or the overall system
+organization, deserves protection as Plaintiff's trade secret."
+
+Berkeley Software Design thus remains free to distribute BSD/386
+without restriction.
+
+----------------------------------------------------------------------
+
+We hope to ship 1.0 shortly.
+
+RK
+
+   ====================================================================
+         /\      Rob Kolstad           Berkeley Software Design, Inc. 
+      /\/  \     kolstad@bsdi.com      7759 Delmonico Drive
+     /  \   \    719-593-9445          Colorado Springs, CO  80919
+   ====================================================================
+
+
+------- End of Forwarded Message
+
+
+
+
+
+##### DB_ID 162067 | unix.bsd | 1993-01-15T01:35:19+00:00 | bzs@world.std.com (Barry Shein)
+SUBJ: BSDI/USL Lawsuit -- More Bad News for Human Beings...
+MID: BZS.93Jan14203519@world.std.com
+----
+
+There has been some speculation as to whether or not USL would try to
+extend this suit to control individuals who have ever had access to
+the Unix sources.
+
+I think the following quote from their latest legal filing leaves
+little doubt that the worst fears have now been confirmed...
+
+	(4) preliminarily enjoining and restraining BSDI, its
+	officers, agents, employees, servants, and all persons
+	in active concert or participation with them, from
+	employing, authorizing or otherwise allowing any person
+	who has had access to UNIX operating system source code
+	or any works, notes, memoranda, or other records,
+	copied from, based upon, or derived from such software,
+	disclosed to such person or his employer in confidence,
+	to participate on behalf of BSDI in the development of
+	source code for a multi-user computer operating system,
+	during the pendency of this action;
+
+If anyone thinks USL winning that point would only apply to BSDI
+you're, well, deceiving yourself. They could use it against any
+software company they like who doesn't have a Unix source license, the
+claims on concepts don't even have to be limited to operating systems.
+
+Worse, consider for a moment the climate of fear this would create and
+how long before employers will shun anyone who is thought to have had
+access to those sources?
+
+Another worrisome aspect is that if USL wins this whole thing it is
+not much of a stretch to consider exposure to anything based on Net2
+(e.g. Jolix, BSD386, 386BSD, whatever) to qualify a person as being
+irredeemably contaminated.
+
+If there's a better explanation for this behavior by USL I think it's
+high time USL made it be known. It looks pretty much cut and dry to
+me, from that text.
+
+-- 
+        -Barry Shein
+
+Software Tool & Die    | bzs@world.std.com          | uunet!world!bzs
+Purveyors to the Trade | Voice: 617-739-0202        | Login: 617-739-WRLD
+
+
+
+
+##### DB_ID 159560 | unix.bsd | 1993-08-05T00:49:20+00:00 | gwh@soda.berkeley.edu (George William Herbert)
+SUBJ: UCB Sues USL
+MID: 23pleg$7v6@agate.berkeley.edu
+----
+
+This from the bsdi.com ftp site, (bsdi-info/usl/930610.ucb_complaint)
+
+--
+JOEL LINZNER
+CARLA J. SHAPREAU 
+CROSBY, HEAFEY, ROACH & MAY 
+Professional Corporation 
+1999 Harrison Street
+Oakland, California 94612 
+Telephone (510) 763-2000
+
+JAMES E. HOLST
+JOHN F. LUNDBERG
+MARY E. MacDONALD
+University of California
+300 Lakeside Drive, 7th Floor
+Oakland, California 94612-3565
+Telephone: (510) 987-9800
+
+Attorneys for Plaintiff
+The Regents of the University of California
+
+
+        SUPERIOR COURT OF CALIFORNIA - COUNTY OF ALAMEDA
+
+
+THE REGENTS OF THE UNIVERSITY OF CALIFORNIA
+
+          Plaintiff,
+
+     v.
+
+UNIX SYSTEM LABORATORIES, INC.,
+
+          Defendant.
+                                
+
+
+
+
+No. 717864-3
+
+COMPLAINT
+
+	  Plaintiff The Regents of the University of California
+("the University") alleges as follows:
+
+	  1.   Defendant Unix Systems Laboratories, Inc. ("USL")
+is a Delaware corporation with its principal place of business in
+Summit, New Jersey.  USL is a majority-owned subsidiary of AT&T engaged
+in the development, manufacture, licensing and sale of computer
+software operating systems and related products and services.  The
+University of California is a public trust created under Article IX,
+Section 9 of the California Constitution that is administered by The
+Regents of the University of California.
+
+		       FACTUAL BACKGROUND
+
+	  2.   Commencing in the 1970s, the University began
+developing software named the Berkeley Software Distribution ("BSD").
+The BSD releases are a series of Unix-compatible software distributions
+that incorporate leading edge technology and are developed by the
+University of California Berkeley Computer Systems Research Group
+("CSRG").
+
+	  3.   On or about March 4, 1986, the University and AT&T
+entered into a written license agreement for the use of the
+University's 4.2 BSD and 4.3 BSD computer programs and documentation, a
+copy of the agreement is attached here to as Exhibit A.
+
+	  4.   On or about May 4, 1989, the University and AT&T
+entered into a written license agreement for the use of the
+University's 4.3 BSD-Tahoe computer programs and documentation, a copy
+of which is attached hereto as Exhibit B. The University's 4.3
+BSD-Tahoe computer programs and documentation were made available to
+USL under the same terms and conditions set forth in the March 4, 1986
+agreement. (The 4.2 BSD, 4.3 BSD, and 4.3 BSD-Tahoe agreements will
+hereinafter be collectively referred to as the "BSD Agreements.")
+
+	  5.   AT&T licensed, for itself and its subsidiaries,
+the right to use and sublicense the University's BSD software for,
+among other purposes, the development of AT&T's (and subsequently
+USL's) commercial Unix Operating System.  The price charged by the
+University for a license to use its BSD software and documentation was,
+and is, a nominal fee to cover the cost of production and shipping of
+the software and related documentation.  The University has never
+licensed its BSD software for profit.
+
+	  6.   The BSD Agreements require that USL give the
+University proper credit and recognition for its use of any part of 4.2
+BSD, 4.3 BSD, and 4.3 BSD-Tahoe in Paragraph 8 as follows:
+
+	  Proper Credit and Recognition.  In the use of any part of 4.2
+	  BSD and 4.3 BSD, AT&T will give appropriate credit to the
+	  University and the Electrical Engineering and Computer
+	  Sciences Department at the Berkeley Campus of the University
+	  of California and Other Contributors for their roles in its
+	  development and will require sublicensees to give such
+	  credit.
+
+	  If AT&T is providing documentation similar to that which is
+	  provided with 4.2 BSD and 4.3 BSD, notices similar to those
+	  included in that documentation suffice to satisfy this
+	  requirement.  If AT&T is providing new documentation, this
+	  requirement will be satisfied if each document includes the
+	  following statement:  'This software and documentation is
+	  based in part on the Fourth Berkeley Software distribution
+	  under license from The Regents of the University of
+	  California.  We acknowledge the following individuals and
+	  institutions for their role in its development:  [insert
+	  names of individuals and institutions which appear in the
+	  documentation provided to AT&T as part of 4.2 BSD and 4.3 BSD
+	  for those portions of said Distribution used by AT&T.]'
+
+	  7.   In addition, in Paragraph 7 of the BSD Agreements,
+the University granted to AT&T and its subsidiaries the right to
+sublicense 4.2 BSD, 4.3 BSD, and 4.3 BSD-Tahoe to third parties as long
+as AT&T and its subsidiaries required its sublicensees to comply with
+the "Proper Credit and Recognition" obligations contained in Paragraph
+8, referenced above.  The University is informed and believes that USL
+has sublicensed 4.2 BSD, 4.3 BSD, and/or 4.3 BSD-Tahoe to sublicensees,
+including, but not limited to Silicon Graphics, Inc., the Santa Cruz
+Operation, Inc., and Intel Corporation, who have failed to give the
+University proper credit and recognition in the follow
+[...TRUNCATED len=19006]
+
+##### DB_ID 161826 | unix.bsd | 1993-01-21T15:28:12+00:00 | wagner@utoday.com (Mitch Wagner)
+SUBJ: net.views - novell/usl deal - REPOST
+MID: 1993Jan21.152812.20521@utoday.com
+----
+            Does the imminent acquisition of USL by 
+            Novell mean the end of Unix as an open
+            operating system?
+
+
+We're asking this question to collect opinions for the "net.views" column in
+OPEN SYSTEMS TODAY. Please E-mail your responses to wagner@utoday.com.
+ 
+By responding to that address, you'll be granting permission to OST to publish
+your response.
+ 
+In order to use your response, we'd like to know who you are. Please tell us
+our real, full name, your job title, your employer, and location---or,
+alternately, if you're a student, your class standing (freshman, sophomore,
+junior, senior, grad, etc.), college and university, and its location. Please
+also include a telephone number where you can be reached during daytime hours
+in North America.
+ 
+Please limit responses to about two full screens (24x80) of text, not including
+headers and other administrivia.
+ 
+Responses to net.views will be posted to this space in about two weeks
+(FYI, for those interested - A previous net.views question on DEC and
+Alpha went out about a week ago, and I'll be posting responses there
+as soon as they slow down coming in.)
+
+Thanks for participating, and we look forward to hearing from you!
+ 
+                         -- mitch w.
+--
+Mitch Wagner, senior editor, Open Systems Today
+2353 Massachusetts Ave. Suite 47, Cambridge, MA 02140
+wagner@utoday.com  (617)547-8485  CIS:70212,51  GEnie:MITCHWAGNER  
+For subscription information, please call 516/562-5882
+
+
+
+
+
+
+
+##### DB_ID 126829 | bugs.4bsd | 1993-07-05T22:49:55+00:00 | bostic@toe.CS.Berkeley.EDU (Keith Bostic)
+SUBJ: The 4.4BSD-Lite distribution
+MID: 21a86e$78o@agate.berkeley.edu
+----
+Several people have asked if it is the intention of the University of
+California and the CSRG to ever make the 4.4BSD-Lite distribution.  To
+the best of my knowledge, it is the intention of Kirk, myself and the
+University that the distribution be made when the lawsuit is resolved.
+The contents of the distribution will, of course, be a function of the
+outcome of the lawsuit.  The licensing will be very similar to the
+licensing for the NET/2 release.
+
+Keith Bostic
+
+
+
+
+
+
+##### DB_ID 157943 | unix.bsd | 1994-04-21T00:47:12+00:00 | bostic@toe.CS.Berkeley.EDU (Keith Bostic)
+SUBJ: The 4.4BSD-Lite distribution announcement
+MID: 2p4ieg$89j@agate.berkeley.edu
+----
+    COMPUTER SYSTEMS RESEARCH GROUP
+    COMPUTER SCIENCE DIVISION, EECS
+    BERKELEY, CALIFORNIA 94720
+    (510) 642-7780
+
+
+                                               March 1, 1994
+
+Dear Colleague:
+
+
+     We are delighted, at long last, to send you information
+about our March 1994 release of 4.4BSD-Lite.  The University
+and UNIX System Laboratories have resolved the  issues  sur-
+rounding the second BSD Networking Release (Net/2) distribu-
+tion (see attached press release), and the University is now
+able to release 4.4BSD-Lite.  We strongly recommend that you
+replace any Net/2 source or binary code with 4.4BSD-Lite.
+
+     The 4.4BSD-Lite software is copyrighted by the  Univer-
+sity  of  California and others, but may be freely redistri-
+buted without fee.  It is available to anyone  and  requires
+no previous license from AT&T, Novell/USL, or The Regents of
+the University of  California.   The  distribution  includes
+both  software  developed at Berkeley and much software con-
+tributed by authors outside Berkeley.  The code in this dis-
+tribution may be redistributed and used in released products
+without fee, if the due credit, copyright notice, and  other
+requirements  described  in the license and the source files
+are met.
+
+     This packet is intended to  serve  two  purposes.   The
+first  is  to acquaint you with the details of our distribu-
+tion so you may decide if you  wish  to  purchase  it.   The
+second is to inform you how to obtain our distribution.
+
+Distribution contents
+
+     The distribution is a  source  distribution  only,  and
+does  not contain program binaries for any architecture.  It
+will not be possible to compile or run this software without
+a pre-existing system that is already installed and running.
+In addition, the distribution does not include sources for a
+complete  system.   It includes source code and manual pages
+for the C library, approximately 90% of the  utilities  dis-
+tributed as part of 4.4BSD, and most of the kernel (the same
+subsystems that were deleted in Net/2 are still  missing  in
+4.4BSD-Lite  -  support  for executing files, doing physical
+I/O, managing the buffer cache,  handling  process  tracing,
+terminal  character I/O, and doing accounting).  Because the
+Computer Systems Research Group has shut down (other than  a
+brief  reunion to put together this release), there will not
+be anyone available at Berkeley to assist with problems,  so
+sites  are  encouraged  to  ensure enough local expertise to
+find and fix any problems that are encountered.
+
+     We have attempted to make the system as compliant  with
+the ANSI C and IEEE POSIX 1003.1 and 1003.2 standards as was
+possible at the time of its release.  We  have  not  run  it
+through  any  of  the  verification  test  suites, thus, you
+should not claim conformance with  either  standard  without
+first validating the code.
+
+     This software distribution is  only  available  on  two
+6250bpi  1/2''  9-track  tapes  or one 8mm Exabyte cassette.
+The 4.4BSD-Lite distribution contains source for the follow-
+ing architectures:
+
++    HP 9000/300 68000-based workstations,
+
++    DECstation 3100 and 5000 MIPS-based workstations,
+
++    Sparcstation I & II  SPARC-based  workstations  (Please
+     note that the distribution does not support the Sparcs-
+     tation 10.),
+
++    Sony News MIPS-based workstations,
+
++    Omron Luna 68000-based workstations,
+
++    Intel 386/486-based machines (ISA/AT or EISA bus only).
+
+The distribution does not include the  machine  support  for
+the  Tahoe  and VAX architectures found in previous BSD dis-
+tributions.  Our  primary  development  environment  is  the
+HP9000/300  series  machines.   The  other architectures are
+developed and supported by people  outside  the  university.
+Consequently,  we  are not able to directly test or maintain
+these  other  architectures,  so  cannot  comment  on  their
+robustness,  reliability,  or  completeness.   More specifi-
+cally, the support for the x86 architectures is known to  be
+unstable.
+
+     The major new facilities available in  the  4.4BSD-Lite
+release  are  a  new  virtual memory system, the addition of
+ISO/OSI networking support, a new virtual filesystem  inter-
+face  supporting  filesystem stacking, a freely redistribut-
+able implementation of  NFS,  a  log-structured  filesystem,
+enhancement  of  the  local filesystems to support files and
+filesystems that are up to 2**63 bytes in size, an ISO CDROM
+9660 filesystem with Rockridge extensions, enhanced security
+and system management support, and  the  conversion  to  and
+addition  of  the  IEEE Std1003.1 (``POSIX'') facilities and
+many of the IEEE Std1003.2 facilities.   In  addition,  many
+new  tools  and additions to the C library are present.  The
+kernel  sources  have  been  reorganized  to   collect   all
+machine-dependent  files  for  each  architecture  under one
+directory, and most of the machine-independent code  is  now
+free  of  code  conditional  on specific machines.  The user
+stru
+[...TRUNCATED len=20117]
+
+##### DB_ID 157892 | unix.bsd | 1994-04-09T16:00:40+00:00 | hasty@netcom.com (Amancio Hasty Jr)
+SUBJ: USL vs. 386bsd derivatives
+MID: hastyCo01t4.3K3@netcom.com
+----
+
+Hi,
+
+I saw a couple of postings on comp.os.386bsd.questions that USL wants
+distributors of 386bsd derivatives to stop distribution!
+
+Has anyone of the NetBSD team been contacted?
+
+Does anyone knows what is going on from the USL side?
+
+I find the current situation a bit odd because USL vs BSDI & UCB lawsuits
+are over...
+
+	Thanks
+	Amancio
+-- 
+FREE unix, gcc, tcp/ip, X, open-look, interviews, tcl/tk, MIME, midi, sound
+at  freebsd.cdrom.com:/pub/FreeBSD
+Amancio Hasty,  Consultant |
+Home: (415) 495-3046       |  
+e-mail hasty@netcom.com	   |  ftp-site depository of all my work:    
+ahasty@cisco.com           |  sunvis.rtpnc.epa.gov:/pub/386bsd/X
+
+
+
+
+##### DB_ID 157934 | unix.bsd | 1994-04-18T16:39:27+00:00 | jkh@sentnl.ilo.dec.com (Jordan Hubbard)
+SUBJ: Re: UCB and USL/NOVELL settlement
+MID: JKH.94Apr18173927@sentnl.ilo.dec.com
+----
+In article <cproto.765983338@marsh> cproto@cs.curtin.edu.au (Computer Protocol) writes:
+
+   So now NOVELL is the new "Deathstar". Lets boycot the bastards. I have to 
+   decide on a major new enterprise wide network. IT WON'T BE NOVELL. I'm 
+   considering BANYAN. Any ideas.
+
+Just to set this particular record straight - in talking with Burt
+Levine, who is USL's senior legal council, I have been very favorably
+impressed with his willingness to negotiate with us, even to the
+extend of spending reasonably large portions of his (what must be very
+expensive) time to try and work out a reasonable compromise.
+
+USL could have just put the boot down and said "HALT."  They did not.
+What they have done instead is talk to us (well me, anyway) about the
+immediate and future needs of FreeBSD vs those of USL, and what kind
+of arrangements might be made in order to keep both sides happy.
+Considering that we're really nothing more than a group of guys who
+bang this stuff out for fun, their willingness to treat us as
+legitimate entities in our own right and negotiate with us at all is
+somewhat surprising.
+
+Needless to say, this attitude in any company, much less one the size
+of Novell, deserves a certain degree of praise.  They're not the
+Deathstar, nor do I believe they can afford to be ("USL sues small
+group of non-profit UNIX developers, claims UNIX is an Open System!
+:-)") and I believe they know this.
+
+				Jordan
+
+
+
+
+
+##### DB_ID 160514 | unix.bsd | 1993-02-17T15:54:33+00:00 | tg@cs.toronto.edu (Tom Glinos)
+SUBJ: Idle speculation about USL's ability to compete
+MID: 93Feb17.105411edt.556@smoke.cs.toronto.edu
+----
+In article <BZS.93Feb16143724@world.std.com> bzs@world.std.com (Barry Shein) writes:
+>
+>With all due respect I think that Novell is smarter than that sort of
+>over-simplicity. That presumes that BSDI/Net2 somehow trashes USL's
+>ability to make money in the market place, highly unlikely, unless USL
+>is just not capable of competing which may be true and what motivates
+>their reliance litigiousness.
+
+In writing news articles to fit under a page, you at times have to present
+highly compressed articles that may appear to over-simplify your arguements.
+
+Novell is not only buying the product, they are buying the people as well.
+Although I think highly of some people at USL and various parts of SVR4 I 
+don't think the management is particularly stellar at USL. USL, over the 
+last decade, has failed to provide the leadership in marketing and technology.
+They have consistantly come out with sub-optimal solutions to conflict
+situations. I ask myself, could I have done better? I think I could.
+
+Other things to ponder. Why would AT&T buy/keep NCR if they were
+going to throw away the software side of the equation?
+
+>It's not hard to argue that the complete opposite would occur: BSDI et
+>al making Unix much more ubiquitous and continuing that tradition of
+>experimenting with new features in Unix which can, if successful,
+>later be adopted by more conservative vendors.
+
+I only wish that was true. But I don't yet see how current or future market
+forces could make that happen. Hence, my rather gloomy signature. I hope
+I'm wrong.
+-- 
+=================
+Prediction, 1993, Year the UNIX		| Tom Glinos @ U of Toronto Statistics
+industry collapsed			| tg@utstat.toronto.edu
+
+
+
+
+##### DB_ID 160063 | unix.bsd | 1993-04-16T01:24:19+00:00 | bri@athena.mit.edu (brian d. carlstrom)
+SUBJ: Status of Lawsuit
+MID: BRI.93Apr15212215@wilbur.mit.edu
+----
+what is the status of the USL lawsuit? i was off the net for a couple of
+weeks and apparently missed the big news. seems USL gave up. if anyone
+has any press releases or annoucements that were posted, i'd love to
+send them to this sysadm that told me my 386bsd system was "illegal"
+
+-bri
+
+--
+-bri
+
+Brian D. Carlstrom	bri@mit.edu
+Programmer and System Administrator
+M.I.T. Flight Transportation Laboratry
+
+
+
+
+##### DB_ID 163530 | unix.bsd | 1992-12-06T17:44:17+00:00 | jds@cs.umd.edu (James da Silva)
+SUBJ: Update on the USL Lawsuit
+MID: 62619@mimsy.umd.edu
+----
+Well, those friendly "journalists" at Unigram have been at it again.
+Remember them?  They're the ones who this summer characterised the BSD
+community as a "drug-happy, hippy-freak Unix culture" and the net uproar
+over the lawsuit as "naive tech weenies ready to form a lynch mob".
+
+Following is a BSDI statement that responds to a recent Unigram article and
+gives an update on recent events on the legal front.  Disclaimer: I am not
+affiliated with BSDI in any way, I'm just posting this because I think it
+is important to get real information out rather than FUD rumors.
+
+The above opinions are mine, the BSDI statement is below.
+Jaime
+............................................................................
+: Stand on my shoulders, : jds@cs.umd.edu  :                  James da Silva
+: not on my toes.        : uunet!mimsy!jds : Systems Design & Analysis Group
+
+
+
+-------- Forwarded Message
+
+Date:    Fri, 4 Dec 92 22:27:09 MST
+From:    kolstad@BSDI.COM (Rob Kolstad)
+Subject: A note about the Unigram article
+To:      beta@BSDI.COM
+
+
+Yesterday, the unigram article reproduced below was posted to this
+list with a query about whether it was true or not.  Our management
+and attorneys have worked through the day and have the response I've
+included below.
+
+RK
+
+   ====================================================================
+         /\      Rob Kolstad           Berkeley Software Design, Inc. 
+      /\/  \     kolstad@bsdi.com      7759 Delmonico Drive
+     /  \   \    719-593-9445          Colorado Springs, CO  80919
+   ====================================================================
+
+----------------------------------------------------------------------
+
+	unigram#413
+	  BSD/386 DISTRIBUTION HALTED
+
+	     A US federal judge has prohibited Berkeley Software Design Inc
+	     from distributing production or updated pre-production versions
+	     of its BSD/386 operating system to anyone anywhere. BSD/386,
+	     which the company may distribute in its current pre-production or
+	     beta state, is the centrepiece of the lawsuit Unix System
+	     Laboratories has filed against BSDI charging it with copyright
+	     infringement and misappropriation of trade secrets (UX No 396).
+	     The ruling came after BSDI asked the court to postpone a hearing
+	     on a motion for a preliminary injunction against it made by USL.
+	     USL is asking the court for a preliminary injunction forbidding
+	     BSDI from distributing any of its BSD/386 software hoping that as
+	     a result of the anticipated trial the courts will make it
+	     permanent. The hearing has been moved from December 14 to January
+	     25.
+	 
+
+
+Response:
+
+Unigram has again published an extremely slanted article based loosely on
+the actual facts. It is unclear what ties Unigram has with USL, but as
+always, Unigram continues to present only the USL version of reality and
+makes no attempt to determine the actual facts or to even ask for an
+opposing viewpoint.
+
+In a presumably unrelated coincidence, USL has produced documents at
+BSDI depositions that bear the Unigram fax header line.
+
+The facts relevant to this issue are that on November 12th, USL served
+a notice that they had filed a motion for preliminary injunctive
+relief.  The motion named a hearing date of December 14, 1992. BSDI's
+response to USL's motion was due 14 calendar days before the hearing or
+November 30, 1992.
+
+Because of the Thanksgiving Holidays (a coincidence of course...) this
+only allowed nine business days to respond to USL's lengthy brief that
+they had had eight months to prepare.
+
+USL's motion asks that BSDI be ordered to stop shipping all products,
+recall all copies already shipped and cease all development on the
+product "until the final determination of this action", which is
+probably at least a year away - i.e., to shut down BSDI and put them out
+of business.
+
+USL's action at this time (eight months after the original complaint)
+is puzzling. They claim they will suffer immediate and irreversible
+harm if BSDI is allowed to continue shipping. Yet, BSDI has been
+shipping a product based on NET2 since December, 1991.  Further, the
+NET2 code that is principally at issue continues to be available for
+anonymous ftp on over 66 sites, to be made available on various CD-ROM
+distributions and to be incorporated in 386BSD.
+
+With this motion, USL for the first time, has provided details of what
+intellectual property has been allegedly violated. However, they have
+designated that material as their confidential technical information
+so that it may only be shown to the attorneys and outside experts - not
+the BSDI employees who are best qualified to rebut their claims.
+
+By pressing the issue now, when they have had eight months to prepare
+their case, and only now giving any specifics regarding the alleged
+violation, USL is forcing BSDI to respond in a hurried, less than
+fully prepared manner.
+
+To allow more time to respond to USL's lengthy and presumably well
+prepared motion, BSDI VOLUNTARILY offered to delay shipping the
+production release of its software in order to postpone the hearing
+date until January 25, 1993.
+
+The judge accepted BSDI's offer and adjourned the hearing six weeks to
+allow BSDI to more fully prepare its opposition to USl's motion.  BSDI
+is explicitly permitted to continue shipping the preproduction releases
+that it was already shipping and BSDI continues to do that.
+
+BSDI continues to support its customers and  operates business as
+usual.  BSDI continues to have no access to any specifics of its
+alleged violations.
+
+
+-------- End of Forwarded Message
+
+
+

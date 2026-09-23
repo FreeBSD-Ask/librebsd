@@ -1,0 +1,1814 @@
+==========================================================================================
+DB: freebsd-arch.duckdb  hits=21
+==========================================================================================
+--------------------------------------------------------------------------------
+MID: 20000406002126.B80578@prism.flugsvamp.com
+DATE: 2000-04-06T05:21:26+00:00  FROM: Jonathan Lemon <jlemon@flugsvamp.com> <None>
+SUBJ: RFC: kqueue API and rough code
+BODY:
+  I would like to solicit comments on the kqueue mechanism
+that I've been working on.  Currently, it will report events
+for sockets, vnodes, and aio requests, and hopefully is 
+designed to be extensible.
+
+  An API document and rough code is at:
+
+	http://www.flugsvamp.com/~jlemon/fbsd
+
+Thanks...
+--
+Jonathan
+
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-arch" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 20000406151312.E80578@prism.flugsvamp.com
+DATE: 2000-04-06T20:13:12+00:00  FROM: Jonathan Lemon <jlemon@flugsvamp.com> <None>
+SUBJ: Re: RFC: kqueue API and rough code
+BODY:
+On Tue, Apr 04, 2000 at 11:09:09PM -0700, Justin C. Walker wrote:
+
+Yes, that is what initially motivated me to write this; having
+a scalable notification mechanism for a large number of descriptors.
+
+However, this is general enough that it can act as a general event
+mechanism, and isn't limited to file deescriptors.
+
+Right now, I have sockets and UFS vnodes connected, and I've converted
+the `tail' utility to use the new kqueue() mechanism, so the process
+immediately gets notified of changes to a file it is monitoring.
+
+There is also a hack to allow queueing an AIO event after the I/O has
+finished.
+
+Another possibility would be to make this a general `timer' mechanism,
+simply by allowing an EV_TIMER event to be hooked up directly to the
+kernel timing wheel, giving the application an unlimited number of timers.
+--
+Jonathan
+
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-arch" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 20000406210443.I80578@prism.flugsvamp.com
+DATE: 2000-04-07T02:04:43+00:00  FROM: Jonathan Lemon <jlemon@flugsvamp.com> <None>
+SUBJ: Re: RFC: kqueue API and rough code
+BODY:
+On Thu, Apr 06, 2000 at 06:07:11PM -0700, Archie Cobbs wrote:
+
+I believe that is already handled right now; the filter will not
+trigger until the socket is actually connected.  If it fails to 
+connect, then it returns EV_EOF in the flag field.  The actual code
+for the socket write filter is:
+
+        kn->kn_data = sbspace(&so->so_snd);
+        if (so->so_state & SS_CANTSENDMORE) {
+                kn->kn_flags |= EV_EOF; 
+                return (1);
+        }
+        if (((so->so_state & SS_ISCONNECTED) == 0) &&
+            (so->so_proto->pr_flags & PR_CONNREQUIRED))
+                return (0);
+        return (kn->kn_data >= so->so_snd.sb_lowat);
+
+
+
+Hmm.  Actually, you could have `FILTER_PID' to attach to an arbitrary
+process in the system, so you get notifications when it goes away.
+This might be useful for writing a monitoring tool which attaches 
+to (say) your webserver and database processes.  I don't know if this
+would be considered a security issue, since the information is probably
+already available through other means.
+
+
+
+
+Queued signal delivery, with `data' giving a count of the number of
+times the signal happened?  I suppose you could do this, but I'm 
+not sure if it would
+
+--------------------------------------------------------------------------------
+MID: 20000406220454.J80578@prism.flugsvamp.com
+DATE: 2000-04-07T03:04:54+00:00  FROM: Jonathan Lemon <jlemon@flugsvamp.com> <None>
+SUBJ: Re: RFC: kqueue API and rough code
+BODY:
+On Thu, Apr 06, 2000 at 07:20:54PM -0700, Matthew Dillon wrote:
+
+Um.  One problem with this: the structure just went from 12 bytes
+(on a x86) to 32 bytes.  I'm trying to keep this as small as possible,
+since I really want to minimize both the overhead of copying data
+back and forth, and the amount of space used in the kernel.   I can
+see adding one more field (to 16 bytes), but doubling the size seems
+to be just too much.
+
+
+
+This essentially moves the state into the kernel.  My feeling is that
+it's not the kernel's job to track the data; if the user wants to 
+associate more state with the identifier, then it can maintain that
+in user space.  The (ident/filter) should be enough to identify the 
+event.
+
+
+
+The event is returned in the context of the calling thread; that is,
+the thread itself is what does the dequeing, so I'm not sure how this
+would be useful.  Could you explain how this would work?
+
+
+
+I was planning to simply handle this by creating multiple kq's.  Then
+the caller builds its own priority mechanism by assigning the events
+to different kqueues, depending on what priority you want the returned
+event to be.
+
+
+
+I don't have any objection to this.
+--
+Jonathan
+
+
+
+
+To Unsubsc
+
+--------------------------------------------------------------------------------
+MID: 20000406234905.K80578@prism.flugsvamp.com
+DATE: 2000-04-07T04:49:05+00:00  FROM: Jonathan Lemon <jlemon@flugsvamp.com> <None>
+SUBJ: Re: RFC: kqueue API and rough code
+BODY:
+On Thu, Apr 06, 2000 at 09:01:39PM -0700, Matthew Dillon wrote:
+
+Exactly.  Now, this is just what the code does at the moment, only
+slightly differently.  In the scheme above, every "registration", 
+via kqueuectl, copies in (filter, fd, ev), and then the kernel
+additionally copies in (data, flags), as those are also input parameters.
+So far, this turns out to be one more element than the current structure.
+
+When returning data, the kernel does a copyout of (data, flags) to
+the saved event structure, and then copies out the pointer to the
+structure.  This saves one copy over what I have now.
+
+In total, this comes out equal to just copying (data,flags,ident,filter).
+
+The only difference that I can see is that with the scheme above,
+the user-level code must keep the data in the same location, which
+may not be ideal for some applications.  It also binds the implementation
+between user and kernel a little tighter than I would like.
+
+Looking at it another way, I use (event/filter) as a capability
+descriptor to user space rather than a pointer.  It seems that if
+you simply had (void *udata) field to the kevent structure,
+then it would be easy for you to implement your method above.  Then
+
+
+--------------------------------------------------------------------------------
+MID: 20000407001929.N80578@prism.flugsvamp.com
+DATE: 2000-04-07T05:19:29+00:00  FROM: Jonathan Lemon <jlemon@flugsvamp.com> <None>
+SUBJ: Re: RFC: kqueue API and rough code
+BODY:
+I won't analyze this too much, since I think that with Matt's
+next reply, we moved much closer to an agreement.  But I wanted
+to comment on a few things:
+
+
+On Thu, Apr 06, 2000 at 08:40:19PM -0700, Matthew Dillon wrote:
+
+My vision in this scenario is that each library will create it's own
+kqueue, and register the events that it is interested in within that
+kqueue.  This way there is no conflict between events registered by
+a library, and those registered by the main program.  (recall that the
+uniqifier for an event within a kqueue is (ident/filter).
+
+The libraries then either run in their own thread, and register their
+thread with the main process, _or_ they register the kq descriptor 
+with the main process, and the process calls the library when there 
+is an event pending.
+
+	main code:
+		poll( bunch of kq's )
+	  	call_library(kq)
+
+	library:
+		event = kevent(kq, ....)
+			
+
+
+As a matter of fact, this pretty closely matches a project that I'm
+working on.  What's missing here is the definition of setdispatch()
+and dispatch().
+
+I see these as being:
+
+	setdispatch(fd, m, function, priority, filter) 
+	{
+		kq = module_kq(m);
+		save_info(fd, filter, m, function, priority, ....)
+		kevent(kq
+
+--------------------------------------------------------------------------------
+MID: 20000407003819.O80578@prism.flugsvamp.com
+DATE: 2000-04-07T05:38:19+00:00  FROM: Jonathan Lemon <jlemon@flugsvamp.com> <None>
+SUBJ: Re: RFC: kqueue API and rough code
+BODY:
+On Thu, Apr 06, 2000 at 10:10:32PM -0700, Matthew Dillon wrote:
+
+I haven't missed the point, note the 'struct user_data *udata' within
+the `kevent' structure.
+
+
+No, I'm not copying data _to_ the user structure at all.  I'm just
+keeping the user-level pointer around so it can be used by userspace
+rather than forcing it to maintain an (ident/filter) mapping.
+
+
+
+Yes, but that's not how this necessarily works, it isn't AIO.  I can
+create a huge buffer to copy in 10,000 events at once, and then read
+events out into another buffer in chunks of 100 if I want.  I don't
+necessarily have to, in fact I definitely *don't* want to keep the
+original structures around where I copied data from.
+
+
+
+But that's essentially what I did, but I haven't defined a "base user
+structure" for the kernel, since it may not be needed.  Recall that 
+each filter has its own small code segment associated with it.  So 
+the "base structure" can be different for those sections of code which
+require it, and nonexistent for those that don't.  Those filters which
+need a large amount of extended data can use the `udata' pointer for 
+access to an extended structure, and those filters which don't know 
+anything about this w
+
+--------------------------------------------------------------------------------
+MID: 20000407013358.P80578@prism.flugsvamp.com
+DATE: 2000-04-07T06:33:58+00:00  FROM: Jonathan Lemon <jlemon@flugsvamp.com> <None>
+SUBJ: Re: RFC: kqueue API and rough code
+BODY:
+On Thu, Apr 06, 2000 at 10:47:19PM -0700, Matthew Dillon wrote:
+
+Yes, I agree.  However, please note that the numbers aren't quite
+this good.  You have to copy out both the data and flag values to
+user space, along with the pointer to the structure you chnaged.
+So this is about 12x100.  Also, since the flag/data values are now
+all over memory, you can't aggregate your calls to copyout().
+
+
+
+Okay, I believe we can reach consensus here.  What I'll do is essentially
+keep the current `struct kevent' as it is now.  However, a flag will be
+added to the kqueue() call which establishes the kq, to indicate whether
+the arrays being passed/returned to kevent() should be pointers to 
+`struct kevent', or the actual structure itself.  This will allow exactly
+what you've outlined above, as well as what I currently have.
+
+I understand what you're saying, but I feel more confortable with
+the copyin/copyout of the structure, it just feels simpler to use,
+not to mention debug.
+
+Anyway, it's 1:30am here, I think I'll sleep on it now.  :-)
+--
+Jonathan
+
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-arch" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 20000409004834.R80578@prism.flugsvamp.com
+DATE: 2000-04-09T05:48:34+00:00  FROM: Jonathan Lemon <jlemon@flugsvamp.com> <None>
+SUBJ: kqueue again
+BODY:
+
+  I've put up a new patch and some tiny test programs again at: 
+
+	http://www.flugsvamp.com/~jlemon/fbsd
+
+   This round adds support for signal notification via kqueues,
+and also process exit notification.
+
+
+API changes:
+
+    The kevent() call now takes an array of pointers to `struct kevent'
+    on input.  This allows the structures to be embedded in a larger
+    structure, instead of requiring them to be contiguous in memory. 
+
+    Hoever, the full `struct kevent' is returned when an event happens,
+    instead of trying to use a pointer to update the original structure.
+    This allows the user not to keep any state between kevent() calls,
+    if they choose.
+
+    To assist the user in tracking their requests, a void *udata field
+    was added to struct kqueue. This field is passed in and out of the
+    kernel untouched, so the user may use it in any fashion. 
+
+--
+Jonathan
+
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-arch" in the body of the message
+
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 20000410215249.B42765@prism.flugsvamp.com
+DATE: 2000-04-11T02:52:49+00:00  FROM: Jonathan Lemon <jlemon@flugsvamp.com> <None>
+SUBJ: Re: RFC: kqueue API and rough code
+BODY:
+On Tue, Apr 11, 2000 at 12:32:50AM +0000, Terry Lambert wrote:
+
+[ ..snip.. ]
+ 
+
+[ ..snip.. ]
+
+
+
+I understand what you're saying here, but it's a different
+area in problem space.  What you seem to be looking for is 
+essentially a message passing mechanism between the kernel
+and userland.  This is not exactly what the current code is
+targeted for.
+--
+Jonathan
+
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-arch" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 20000428143400.C84498@prism.flugsvamp.com
+DATE: 2000-04-28T19:34:00+00:00  FROM: Jonathan Lemon <jlemon@flugsvamp.com> <None>
+SUBJ: Re: timeout(9) question
+BODY:
+On Fri, Apr 28, 2000 at 01:03:00PM -0600, Justin T. Gibbs wrote:
+
+
+Or take a look at how the races are handled in netint/tcp_timer.c:
+
+        s = splnet();
+        if (callout_pending(tp->tt_keep)) {
+                splx(s);
+                return;
+        }
+        callout_deactivate(tp->tt_keep);
+
+
+where a network interrupt could come and and reset the timer between
+when it was taken off the timing wheel, and the timeout servicing
+routine was actually called.
+--
+Jonathan
+
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-arch" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 20000619164329.F37084@prism.flugsvamp.com
+DATE: 2000-06-19T21:43:29+00:00  FROM: Jonathan Lemon <jlemon@flugsvamp.com> <None>
+SUBJ: Re: kblob discussion.
+BODY:
+On Mon, Jun 19, 2000 at 02:03:07PM -0700, Mike Smith wrote:
+
+*cough*.  Are you sure about that?  An output accelerator is a new I/O
+method regardless of what you want to call it.  And for a lot of cases
+you don't need stuff to actually go to user space.  In many situations,
+you will receive data, perform operations on a very small part of it,
+and then send the data elsewhere, whether to disk or network.
+
+In this case, why bother sending things to user space if you're just
+going to end up sending them back out again?  I can assure you that 
+receiving into a kernel-side buffer is a win in this case.
+
+Kblob only addresses part of the problem.
+
+Also, if I want to send data from disk -> network, with the kblob
+API, I essentially have the following sequence of calls:
+
+	read(fd, address, length)
+	kblob(address, length)
+	kblobsend(...)
+
+which is to say, the data is copied from
+	disk -> userspace   (assuming direct I/O)
+ 	userspace -> kernel,
+	kernel -> network.
+
+Why shouldn't I be able to bypass second copy entirely and do:
+	disk -> kernel     (data now in kernel 'blob')
+	kernel -> network
+
+Again, this is not addressed in the kblob API.  Don't throw sendfile()
+up as an example, because I w
+
+--------------------------------------------------------------------------------
+MID: 20000714112035.C12492@prism.flugsvamp.com
+DATE: 2000-07-14T16:20:35+00:00  FROM: Jonathan Lemon <jlemon@flugsvamp.com> <None>
+SUBJ: Re: SysctlFS
+BODY:
+On Fri, Jul 14, 2000 at 05:53:11AM -0500, Chris Costello wrote:
+
+Right now, there is only a filter for the FFS filesystem, and due
+to its semantics, when an inode is changed, we don't know what 
+pathname was used to reference the inode.
+
+However, if a filter was written for a devfs, there is no reason 
+that it can't behave differently in this case; presumably it would
+be easier to map a dev_t back into a canonical name, since the 
+implementation would not be the same as FFS.
+--
+Jonathan
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-arch" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 20000717114102.E67727@prism.flugsvamp.com
+DATE: 2000-07-17T16:41:02+00:00  FROM: Jonathan Lemon <jlemon@flugsvamp.com> <None>
+SUBJ: kqueue API change
+BODY:
+
+  After some feedback and real real world experience with kqueue,
+I'd like to make some small changes to the API in order to clean it up.
+
+The parameters to the system call will be changed from:
+
+    kevent(int kq, int nchanges, struct kevent **changelist, int nevents,
+            struct kevent *eventlist, struct timespec *timeout)
+
+to:
+
+    int
+    kevent(int kq, const struct kevent *changelist, int nchanges,
+            struct kevent *eventlist, int nevents,
+            const struct timespec *timeout)
+
+
+There are 3 changes:
+
+    - swap the argment order so it is (buffer, count) in order to
+      match almost every other system call (thanks to green for
+      pointing this out)
+
+    - addition of `const' to the parameters to make it clear that 
+      they are not changed by the kernel
+
+    - change the `array of pointers to structs' to a flat array of
+      structures.
+
+The latter change will allow the elimination of one layer of copyin()
+calls in the kernel, and will probably make the API easier to understand
+for new users.  By eliminating the indirection, the cache footprint is
+also reduced as well.  The only possible downside that I can see is that
+the input array now must be 
+
+--------------------------------------------------------------------------------
+MID: 20000924130841.A2487@prism.flugsvamp.com
+DATE: 2000-09-24T18:08:41+00:00  FROM: Jonathan Lemon <jlemon@flugsvamp.com> <None>
+SUBJ: Re: need advice, fsetown annoyances and mpsafeness.
+BODY:
+On Sun, Sep 24, 2000 at 10:33:03AM -0700, Alfred Perlstein wrote:
+
+kqueue has a similar problem, and resolves this in a similar fashion
+as above.  A knote can be attached to a process, which may exit; in
+this case, the process just walks down the list and sets a flag, the
+structure is then destroyed when kevent gets around to examining it.
+--
+Jonathan
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-arch" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 20010205193507.J650@prism.flugsvamp.com
+DATE: 2001-02-06T01:35:07+00:00  FROM: Jonathan Lemon <jlemon@flugsvamp.com> <None>
+SUBJ: Re: nonblocking sockets and EINTR (kevent does not observe SA_RESTART?)
+BODY:
+On Mon, Feb 05, 2001 at 05:16:56PM -0800, Jonathan Graehl wrote:
+
+The difficulty in restarting the kevent call is that it would have
+to re-apply the changelist, which is probably not what you want.  The
+only case where it is possible to perform a restart is with an empty
+changelist.  I didn't put this optimization in, as I think it would be
+better if the interface was consistent in all cases.
+--
+Jonathan
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-arch" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 20010206093201.K650@prism.flugsvamp.com
+DATE: 2001-02-06T15:32:01+00:00  FROM: Jonathan Lemon <jlemon@flugsvamp.com> <None>
+SUBJ: Re: nonblocking sockets and EINTR (kevent does not observe SA_RESTART?)
+BODY:
+On Mon, Feb 05, 2001 at 05:50:37PM -0800, Jonathan Graehl wrote:
+
+Correct.  Technically, an EINTR is returned when a signal interrupts
+the process after it goes to sleep (that is, after it calls tsleep). 
+
+So if (as an example) you call kevent() with a zero valued timespec,
+you'll never get EINTR, since there's no possibility of it sleeping.
+--
+Jonathan
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-arch" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 20010220105723.C85542@prism.flugsvamp.com
+DATE: 2001-02-20T16:57:23+00:00  FROM: Jonathan Lemon <jlemon@flugsvamp.com> <None>
+SUBJ: Re: DJBDNS vs. BIND
+BODY:
+On Tue, Feb 20, 2001 at 11:31:52AM -0500, Randell Jesup wrote:
+
+It would be fairly trivial to monitor a configuration file with kevent,
+which would generate a notice whenever the file is changed/copied/renamed,
+etc.  I believe that John-Mark Gurney had patches somewhere to implement
+exactly this for inetd.
+
+The problem is that under our current model, the administrators do not
+expect writes to the file to take immediate effect, and this immediately
+breaks POLA.  So while it could be done, it may not be a good idea.  At
+the very least, I would argue that it should be hidden behind a flag option.
+--
+Jonathan
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-arch" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 20010928185913.U9056@prism.flugsvamp.com
+DATE: 2001-09-28T23:59:13+00:00  FROM: Jonathan Lemon <jlemon@flugsvamp.com> <None>
+SUBJ: Re: Style Wars
+BODY:
+On Fri, Sep 28, 2001 at 04:54:01PM -0700, John Baldwin wrote:
+
+I prefer 1) (and the 1b variant), but not 1a).   (e.g.: <sys/eventvar.h> )
+-- 
+Jonathan
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-arch" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 20011218104750.M377@prism.flugsvamp.com
+DATE: 2001-12-18T16:47:50+00:00  FROM: Jonathan Lemon <jlemon@flugsvamp.com> <None>
+SUBJ: Re: swi_net
+BODY:
+On Wed, Dec 19, 2001 at 01:25:58AM +1100, Bruce Evans wrote:
+
+I'm planning on revising swi_net so that it is possible to run all
+network processing under the device interrupt instead of deferring
+things to a netisr().  This also has the advantage of eliminating all
+ipintr() style loops, as packet dequeueing is done in a centralized
+place, and makes it easier to bound the amount of work which is done.
+(Actually, the interface queues and netisrs are not completely gone;
+it is possible to switch back and forth dynamically)
+
+I have this working on -stable (the more difficult of the two, IMO)
+and it should be easy to extend this to -current.
+
+This will permit removal of Luigi's ether_pollmore() and associated
+cruft, since all packet handling relating to polling would be run in
+a single netisr 'thread'.
+-- 
+Jonathan
+
+
+PS:
+
+
+Yeah, I saw that.  However, panic'ing in a netisr (which I did several 
+times over the weekend) appears to produce a stream of faults, eventually
+wedging the box so that it needs a powercycle.
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-arch" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 20011218170817.P377@prism.flugsvamp.com
+DATE: 2001-12-18T23:08:17+00:00  FROM: Jonathan Lemon <jlemon@flugsvamp.com> <None>
+SUBJ: Re: swi_net
+BODY:
+On Tue, Dec 18, 2001 at 02:55:38PM -0800, Luigi Rizzo wrote:
+
+Yes - this is essentially what the code is cleaning up.  Instead
+of grabbing packets from the interface, putting them on the queue,
+then running the netisr, it gets the packet from the queue and does
+the processing (in one step).
+
+So this removes the need for ether_pollmore(); which is really there
+because of the intermediate queue limits, and because we want to try
+and account for the time spent doing packet processing.
+
+
+
+Yes - with the direct dispatch loop, we also have the ability to measure
+how long it takes to process each packet, because the "for (;;)" loop
+which completely drained the protocol queue is gone, and moved up into
+a central loop.  This makes it easier to account for processing time.
+-- 
+Joanthan
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-arch" in the body of the message
+
+
+
+
+==========================================================================================
+DB: freebsd-hackers.duckdb  hits=28
+==========================================================================================
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-4d42aa123f59ee8d>
+DATE: 2000-10-06T17:52:16+00:00  FROM: Jonathan Lemon <jlemon () hub ! freebsd ! org> <None>
+SUBJ: Re: aio_read timeout per request
+BODY:
+On Fri, Oct 06, 2000 at 01:46:26PM -0400, Marc Tardif wrote:
+ 
+
+I think there's a bit of confusion here.  The timeout value to
+aiowaitcomplete is similar to that of poll; basically you are 
+telling the system how long you are willing to stall until any
+request comes ready.  The value is not indicative of a maximum
+timeout on the I/O request; there is none.  If you want to have
+a time limit on each request, you will need to implement your 
+own timer mechanism, and call aio_cancel() to terminate those 
+which haevn't completed.
+--
+Jonathan
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: 19990216154205.64792@right.PCS
+DATE: 1999-02-16T21:42:06+00:00  FROM: Jonathan Lemon <jlemon@americantv.com> <None>
+SUBJ: system freeze while core dumping
+BODY:
+
+  I have a machine running 3.0-STABLE from Jan 31, on which I'm running
+a fairly large process.  If it coredumps, the entire system appears 
+to lock up, and no new commands appear to executed until the coredump is 
+complete (which, at about 117M, takes forever).  The machine is a P-II,
+with a SCSI disk system (ahc, 2 7200 disks, 20MB/s), and 380MB mem.
+
+  Any existing processes appear to run fine.  iostat -o shows:
+
+      tty          fd0           da0           da1         pass0             cpu
+ tin tout sps tps msps  sps tps msps  sps tps msps  sps tps msps  us ni sy in id
+   0  267   0   0  0.0 5673 154  6.5    0   0  0.0    0   0  0.0   0  0  1  2 98
+   0   81   0   0  0.0 8851 429  2.3    0   0  0.0    0   0  0.0   0  0 11  1 88
+   0  673   0   0  0.0 4816  86 11.6    0   0  0.0    0   0  0.0   0  0  0  0100
+   0   81   0   0  0.0 8118  68 14.6    0   0  0.0    0   0  0.0   0  0 19  0 81
+   0  540   0   0  0.0 3533 124  8.1    0   0  0.0    0   0  0.0   1  0  0  0 99
+   0   81   0   0  0.0 3485 121  8.3    0   0  0.0    0   0  0.0   0  0  0  0100
+
+top shows the coredumping process seems to be perpetually waiting
+on "getblk".
+
+How can I prevent the dumping process from essenti
+
+--------------------------------------------------------------------------------
+MID: 199903260017.SAA13252@free.pcs
+DATE: 1999-03-26T00:17:37+00:00  FROM: Jonathan Lemon <jlemon@americantv.com> <None>
+SUBJ: Re: 3.1-STABLE dies on 40+ connects
+BODY:
+In article <local.mail.freebsd-hackers/199903252220.OAA03456@apollo.backplane.com> you write:
+
+
+Yup.  However, FBSD will still panic whne it runs out of NMBCLUSTERS.
+
+I have a machine with 64K mbufs, 20K NMBCLUSTERS, and if I run out of
+mbuf clusters (usually because I fell behind in processing) the machine
+will panic.
+
+Not very nice, I suppose I should go digging to fix it sometime soon.
+
+Can someone give a short explanation (or a pointer to the relevant code)
+as to exactly when a NMBCLUSTER comes into play, instead of using a long
+mbuf chain?
+--
+Jonathan
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 199907030427.XAA17423@free.pcs
+DATE: 1999-07-03T04:27:34+00:00  FROM: Jonathan Lemon <jlemon@americantv.com> <None>
+SUBJ: Re: poll() vs select()
+BODY:
+In article <local.mail.freebsd-hackers/Pine.LNX.3.95.990702160538.27513C-100000@crb.crb-web.com> you write:
+
+select() as a user-level call will never go away; there is a large base
+of code that uses it.
+
+poll() is faster (it doesn't have to do bit twiddling), and it's interface
+is cleaner (it can report invalid fd's, something select() can't do).  As
+its functionality is a superset of select()'s, it is used as the internal
+implementation for select().
+
+As for new code, use whichever you are comfortable with.  Personally, I
+would recommend poll(), since it provides some added functionality over
+select() that makes for easier programming.
+--
+Jonathan
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 19990703083935.61252@right.PCS
+DATE: 1999-07-03T13:39:35+00:00  FROM: Jonathan Lemon <jlemon@americantv.com> <None>
+SUBJ: Re: poll() vs select()
+BODY:
+On Jul 07, 1999 at 01:01:07AM -0400, Brian F. Feldman wrote:
+
+Yup, I have.  poll() is faster; copying the parameters takes less time
+than bit twiddling.
+
+
+
+Whichever you're comfortable with.  poll() isn't a pain once you know
+how to use it, and it does bring additional benefits.
+--
+Jonathan
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 19990703104412.48991@right.PCS
+DATE: 1999-07-03T15:44:12+00:00  FROM: Jonathan Lemon <jlemon@americantv.com> <None>
+SUBJ: Re: poll() vs select()
+BODY:
+On Jul 07, 1999 at 11:27:57AM -0400, Brian F. Feldman wrote:
+
+Yes, it does require more initial setup.  But consider:
+
+    - you don't have to re-initialize the fd sets every time around the
+      loop, as you do with select().  This administrative overhead is 
+      moved into the initial setup, not into the main loop.
+
+    - it becomes simple to ignore a slot entry; simply set the fd value to -1.
+
+    - you get notification when the fd is closed.  E.g.: you can poll()
+      on a fd, ignoring both read ready and write ready state, and get
+      POLLHUP returned when it closes.  for select(), the only way to
+      know that the fd closed is to actually do a read() on the descriptor,
+      and have it return EOF.
+
+--
+Jonathan
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 19990703231029.08379@right.PCS
+DATE: 1999-07-04T04:10:29+00:00  FROM: Jonathan Lemon <jlemon@americantv.com> <None>
+SUBJ: Re: poll() vs select()
+BODY:
+On Jul 07, 1999 at 12:04:35PM +0800, Peter Wemm wrote:
+
+YES!  As a matter of fact, I've done something similar to this already,
+but instead of a queue, it's a variant of poll which passes in and out
+"change lists"; a list of fd's which have had status changes since the
+last call.  I've been trying to bring it up for discussion on the -arch
+list, but it's been dead.  (I think it was just fixed recently).
+--
+Jonathan
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 19990703233119.17254@right.PCS
+DATE: 1999-07-04T04:31:20+00:00  FROM: Jonathan Lemon <jlemon@americantv.com> <None>
+SUBJ: Re: poll() vs select()
+BODY:
+On Jul 07, 1999 at 01:51:28PM +0930, Greg Lehey wrote:
+
+Is this the paper by Mogul, et al?  I didn't make it to USENIX, and
+don't have the proceedings at hand, but my implementation is fairly
+similar to a series of papers that Jeff Mogul has produced regarding
+web scalability.
+--
+Jonathan
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 19990704000042.59954@right.PCS
+DATE: 1999-07-04T05:00:42+00:00  FROM: Jonathan Lemon <jlemon@americantv.com> <None>
+SUBJ: poll() scalability
+BODY:
+
+This is an earlier posting that I attempted to make, perhaps
+it can provide a starting point for discussion.  While this 
+is already implemented, I'm not adverse to tossing it all for
+something better.
+--
+Jonathan
+
+
+----- Forwarded message from owner-freebsd-arch@FreeBSD.ORG -----
+
+Date: Mon, 5 Apr 1999 17:42:02 -0500
+From: Jonathan Lemon <jlemon@cs.wisc.edu>
+To: freebsd-arch@freebsd.org
+
+I'd like to open discussion on adding a new interface to FreeBSD,
+specifically, a variant of poll().
+
+The problem is that poll() (and select(), as well) do not scale
+well as the number of open file descriptors increases.  When there
+are a large number of descriptors under consideration, poll() takes
+an inordinate amount of time.  For the purposes of my particular 
+application, "large" translates into roughly 40K descriptors.
+
+As having to walk this descriptor list (and pass it between user and
+kernel space) is unpalatable, I would like to have the interface
+simply take a "change" list instead.  The kernel would keep the 
+state of the descriptors being examined, and would in turn, return
+a short list of descriptors that actually had any activity.
+
+In essence, I want to move the large "struct pollf
+
+--------------------------------------------------------------------------------
+MID: 19990704085249.54969@right.PCS
+DATE: 1999-07-04T13:52:49+00:00  FROM: Jonathan Lemon <jlemon@americantv.com> <None>
+SUBJ: Re: poll() scalability
+BODY:
+On Jul 07, 1999 at 11:15:13AM +0100, Doug Rabson wrote:
+
+Right now, the selection list is hung off of struct filedesc, since that
+seemed a good place as any to put it.  I'm not sure what you mean by 
+a 'single call' to poll; there can be multiple calls.  The caller can
+also call poll() or select() on a descriptor as well.
+
+
+
+Yes, it does seem more interesting, but I'd like to see more details.
+If multiple processes are sharing the queue, then the queue registry
+would have to be done at the struct file level, with something converting
+the struct file pointer back into an fd, yes?
+
+
+
+Actually, by setting events to "DELETE"; then the descriptor is removed
+from the kernel's internal list.
+
+
+
+I'm not sure how a library would fit in.  The main program will have
+to keep some state, which wouldn't be available to the library either.
+--
+Jonathan
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 19990704175106.56355@right.PCS
+DATE: 1999-07-04T22:51:06+00:00  FROM: Jonathan Lemon <jlemon@americantv.com> <None>
+SUBJ: Re: poll() scalability
+BODY:
+On Jul 07, 1999 at 01:37:13PM -0700, Mike Smith wrote:
+
+I would think that a system that uses callbacks (like POSIX's completion
+signals) would be more expensive than a call like poll() or select().
+Also, you really want to return more than one event at at time in
+order to amortize the cost of the system call over several events, this
+doesn't seem possible with callbacks (or upcalls).
+ 
+Also, I would guess that you would start getting into locking problems,
+and how to cancel a signal which has already been posted. 
+--
+Jonathan
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 19990705144352.55649@right.PCS
+DATE: 1999-07-05T19:43:52+00:00  FROM: Jonathan Lemon <jlemon@americantv.com> <None>
+SUBJ: Re: poll() scalability
+BODY:
+On Jul 07, 1999 at 01:10:38AM -0400, Zach Brown wrote:
+
+Yes; that's effectively what the "delta" method I'm using now gets
+rid of; it only passes around state changes instead of the entire state.
+I agree that passing around the entire state is quite un-efficient; that's
+what I would like to get rid of.  We just need to agree on a new method.
+
+
+
+Yes, but I also need support for temporarily "de-registering" interest
+in an fd, as well selectively choosing read/write/close events.
+
+
+
+In this case, it doesn't seem all that different than a poll() type
+call, or an event queue that Peter was talking about.  If the signal
+is blocked, then sigwaitinfo() effectively becomes a poll(), but with
+no timeout parameter.
+
+
+
+I agree.  One aspect of the design that should be explored is whether
+the new call should report "events", or "state".  My current implementation
+reports state; (think of it as a level-triggered design), while the 
+siginfo approach appears to be more of an "edge-triggered" design.  I
+just looked at Banga's USENIX paper and they have a nice discussion of  
+this issue.  
+
+ 
+
+Hah.  It showed up on my profiling; the kernel I'm running has routines
+so the child fd inherits certain se
+
+--------------------------------------------------------------------------------
+MID: 19990706111812.31063@right.PCS
+DATE: 1999-07-06T16:18:12+00:00  FROM: Jonathan Lemon <jlemon@americantv.com> <None>
+SUBJ: Re: poll() scalability
+BODY:
+On Jul 07, 1999 at 11:41:35AM -0400, Zach Brown wrote:
+
+I wouldn't want to post the events to userland; I think it would be
+better (and simpler) to handle the aggregation in the kernel.
+
+
+
+Currently, I'm thinking along the lines of:
+
+	1. create an "event queue"
+	2. register your interest in various events with this queue. 
+
+	   Note that it appears possible to get a little carried away
+	   here with specifying exactly what an event is.
+
+	   E.g.: only call it an event after > X bytes have arrived, or
+	   only after Y amount of time has passed with no activity, or 
+	   some combination of the two.  This would provide something
+	   like the reverse of a "delayed ack", on the receiver side.
+
+	   You could probably even register multiple timer events, and
+	   have an arbitrary number of timer events pending.  :-)
+
+	3. a structure is allocated to handle the event at registration
+	   time, and hooked into the appropriate points in the kernel.
+	4. when an event occurs, instead of just tacking a new structure
+	   onto the queue, a kernel callback routine for the type of event
+	   specified in step 2 is performed.  If it's determined that the
+	   event should be posted, the event structure 
+
+--------------------------------------------------------------------------------
+MID: 199907061707.MAA27353@free.pcs
+DATE: 1999-07-06T17:07:19+00:00  FROM: Jonathan Lemon <jlemon@americantv.com> <None>
+SUBJ: Re: poll() vs select()
+BODY:
+In article <local.mail.freebsd-hackers/199907061636.JAA15322@vashon.polstra.com> you write:
+
+There was another message in this thread indicating that this has
+the potential to grow creeping featuritis.  :-)
+
+I've been thinking this over, and unlimited timers should be easy to do.
+I suppose you could fold signal delivery into an event notification
+mechanism as well.
+
+What other events are on the various wishlists out there?
+--
+Jonathan
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 199907152244.RAA12439@free.pcs
+DATE: 1999-07-15T22:44:25+00:00  FROM: Jonathan Lemon <jlemon@americantv.com> <None>
+SUBJ: Re: Swap overcommit (was Re: Replacement for grep(1) (part 2))
+BODY:
+In article <local.mail.freebsd-hackers/199907151825.LAA11948@apollo.backplane.com> you write:
+
+aladdin[5:32pm]> prtconf
+System Configuration:  Sun Microsystems  i86pc
+Memory size: 128 Megabytes
+
+aladdin[5:41pm]> uname -a
+SunOS aladdin 5.6 Generic_105182-14 i86pc i386
+
+
+total: 67280k bytes allocated + 28668k reserved = 95948k used, 196460k avail
+malloced 32MB...
+total: 67320k bytes allocated + 61460k reserved = 128780k used, 163592k avail
+touched...
+total: 100084k bytes allocated + 28696k reserved = 128780k used, 163732k avail
+forking...
+total: 100092k bytes allocated + 61520k reserved = 161612k used, 130864k avail
+touching again (parent)...
+touching again (child)...
+total: 132864k bytes allocated + 28748k reserved = 161612k used, 130760k avail
+exiting...
+exiting...
+total: 67248k bytes allocated + 28700k reserved = 95948k used, 196448k avail
+
+--
+Jonathan
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 199909090102.UAA26715@free.pcs
+DATE: 1999-09-09T01:02:01+00:00  FROM: Jonathan Lemon <jlemon@americantv.com> <None>
+SUBJ: Re: message queues for I/O (usenix paper)
+BODY:
+In article <local.mail.freebsd-hackers/19990909003757.66140.qmail@scam.xcf.berkeley.edu> you write:
+
+Yes.  I don't particularly like some of the things in the paper,
+although it does have several good concepts.  I have an implementation
+that does exactly this, and have a line on two other implementations
+that do the same thing (but in a different fashion).  Unfortunately, 
+all of these are somewhat problem-specific and are not a general 
+solution.
+
+I've spent some time working on a generic implementation that draws
+its ideas from several places.  I hope to be in a position where I
+can work on this almost full time within a month.
+--
+Jonathan
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 19990908211220.51724@right.PCS
+DATE: 1999-09-09T02:12:20+00:00  FROM: Jonathan Lemon <jlemon@americantv.com> <None>
+SUBJ: Re: message queues for I/O (usenix paper)
+BODY:
+On Sep 09, 1999 at 06:49:46PM -0700, Jayson Nordwick wrote:
+
+There wouldn't be much point, since it was written for a specific
+problem and doesn't handle some general cases that could come up.
+
+Search the -hackers archive for "poll() and scalability", around July,
+for the archived discussions, and my original interface.
+
+
+
+I'll present a possible interface (and implementation) when I'm 
+satisfied it'll work well for most consumers.  This isn't going 
+to be for a month or so, I have PhD qualifying exams and some 
+other things to clear off my plate first.
+--
+Jonathan
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 199912211522.JAA04702@free.pcs
+DATE: 1999-12-21T15:22:04+00:00  FROM: Jonathan Lemon <jlemon@americantv.com> <None>
+SUBJ: Re: Practical limit for number of TCP connections?
+BODY:
+In article <local.mail.freebsd-hackers/Pine.BSF.4.05.9912201950190.82375-100000@qwerty.maxwell.syr.edu> you write:
+
+Yes, it is better.  Select uses the same backend as poll(), but those
+"bit flag manipulations" that you are talking about consume a measurable
+amount of CPU time when you start throwing thousands of descriptors at it.
+--
+Jonathan
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 19991221170823.39068@right.PCS
+DATE: 1999-12-21T23:08:23+00:00  FROM: Jonathan Lemon <jlemon@americantv.com> <None>
+SUBJ: Re: Practical limit for number of TCP connections?
+BODY:
+On Dec 12, 1999 at 03:55:18PM -0800, Jason Nordwick wrote:
+
+I'd suggest doing your own measurements.  :-)
+
+Possibly it's application dependent.  For my application, the overhead
+of copying more bytes is outweighed by the CPU time spent bit twiddling.
+I'll also note that you can set up the poll array for 100% density, so
+you don't have to copyin/out descriptors you aren't interested in.
+--
+Jonathan
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 200003260551.XAA37498@prism.flugsvamp.com
+DATE: 2000-03-26T05:51:03+00:00  FROM: Jonathan Lemon <jlemon@flugsvamp.com> <None>
+SUBJ: Re: syslogd stops logging - caught in the act
+BODY:
+I asked Sue to get a ktrace of the syslogd, and here's the
+output:
+
+ 18869 syslogd  954045445.977145 PSIG  SIGALRM caught handler=0x804b068 mask=0x0
+ code=0x0
+ 18869 syslogd  954045445.977343 RET   poll -1 errno 4 Interrupted system call
+ 18869 syslogd  954045445.977366 CALL  gettimeofday(0xbfbfc5f0,0)
+ 18869 syslogd  954045445.977382 RET   gettimeofday 0
+ 18869 syslogd  954045445.977403 CALL  setitimer(0,0xbfbfc5e8,0xbfbfc5d8)
+ 18869 syslogd  954045445.977424 RET   setitimer 0
+ 18869 syslogd  954045445.977438 CALL  old.sigreturn(0xbfbfc624)
+ 18869 syslogd  954045445.977456 RET   old.sigreturn JUSTRETURN
+ 18869 syslogd  954045445.977476 CALL  poll(0xbfbfc6f0,0x1,0x9c40)
+ 18869 syslogd  954045475.987785 PSIG  SIGALRM caught handler=0x804b068 mask=0x0
+ code=0x0
+ 18869 syslogd  954045475.987859 RET   poll -1 errno 4 Interrupted system call
+ 18869 syslogd  954045475.987879 CALL  gettimeofday(0xbfbfc5f0,0)
+ 18869 syslogd  954045475.987895 RET   gettimeofday 0
+ 18869 syslogd  954045475.987917 CALL  setitimer(0,0xbfbfc5e8,0xbfbfc5d8)
+ 18869 syslogd  954045475.987938 RET   setitimer 0
+ 18869 syslogd  954045475.987952 CALL  old.sigreturn(0xbfbfc624)
+ 18869 syslogd  954045475.987969 RET   ol
+
+--------------------------------------------------------------------------------
+MID: 20001006105216.C18697@hub.freebsd.org
+DATE: 2000-10-06T17:52:16+00:00  FROM: Jonathan Lemon <jlemon@hub.freebsd.org> <None>
+SUBJ: Re: aio_read timeout per request
+BODY:
+On Fri, Oct 06, 2000 at 01:46:26PM -0400, Marc Tardif wrote:
+ 
+
+I think there's a bit of confusion here.  The timeout value to
+aiowaitcomplete is similar to that of poll; basically you are 
+telling the system how long you are willing to stall until any
+request comes ready.  The value is not indicative of a maximum
+timeout on the I/O request; there is none.  If you want to have
+a time limit on each request, you will need to implement your 
+own timer mechanism, and call aio_cancel() to terminate those 
+which haevn't completed.
+--
+Jonathan
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 20001025170117.C87091@prism.flugsvamp.com
+DATE: 2000-10-25T22:01:17+00:00  FROM: Jonathan Lemon <jlemon@flugsvamp.com> <None>
+SUBJ: Re: kqueue microbenchmark results
+BODY:
+On Wed, Oct 25, 2000 at 11:54:57AM -0700, Alfred Perlstein wrote:
+
+I'd love to do that, but am not quite sure how I'd go about it.
+If you read the l-k mailing list, you'll see Linus calling kqueue
+"overengineered", and what he is proposing is something that is
+definitely not well thought out.
+
+Other than whacking him on the head with a stick, any ideas on 
+how to get him to turn away from the "NIH" syndrome?
+--
+Jonathan
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 20010127143607.T29115@prism.flugsvamp.com
+DATE: 2001-01-27T20:36:07+00:00  FROM: Jonathan Lemon <jlemon@flugsvamp.com> <None>
+SUBJ: Re: kevent signal handling question.
+BODY:
+On Sat, Jan 27, 2001 at 03:15:43PM -0500, Trent Nelson wrote:
+
+Correct.
+--
+Jonathan
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 200105030213.f432Drf74664@prism.flugsvamp.com
+DATE: 2001-05-03T02:13:53+00:00  FROM: Jonathan Lemon <jlemon@flugsvamp.com> <None>
+SUBJ: Re: KEvent doesnt return and KEvent sample troubles
+BODY:
+In article <local.mail.freebsd-hackers/F45sAitVGeSJIEoPXCF00000265@hotmail.com> you write:
+
+AAARGH.  /me hastily goes and removes that example directory.
+
+Sorry about that; those examples were correct during the initial
+kqueue development, and haven't been updated to reflect reality.
+I'll put the examples back up after I've corrected them to work
+with the current version of FreeBSD.
+--
+Jonathan
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 200105152332.f4FNWNr03497@prism.flugsvamp.com
+DATE: 2001-05-15T23:32:23+00:00  FROM: Jonathan Lemon <jlemon@flugsvamp.com> <None>
+SUBJ: Re: Kqueue and FreeBSD versions
+BODY:
+In article <local.mail.freebsd-hackers/3B01AAB7.3EA371F5@sm.socccd.cc.ca.us> you write:
+
+It was introduced with 4.1; I believe the correct __FreeBSD_version
+to use is 41000.
+--
+Jonathan
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 200106172033.f5HKXEn56198@prism.flugsvamp.com
+DATE: 2001-06-17T20:33:14+00:00  FROM: Jonathan Lemon <jlemon@flugsvamp.com> <None>
+SUBJ: Re: poll(2)'s arbitrary limit
+BODY:
+In article <local.mail.freebsd-hackers/Pine.LNX.4.33.0106172146470.6072-100000@rossini.schumann.cx> you write:
+
+Well, I have to disagree, as the conclusion in the above paper is
+misleading.  Basically, they say that if a listen socket returned
+by select() becomes ready, then it is more efficient to call accept()
+on the socket multiple times, rather than once per select() call.
+
+Well gee, that's nice, and quite true, but has nothing to do with
+the efficiency (or lack thereof) of select() itself.  This is simply
+the old 'polling' vs 'interrupt' argument that has been around for
+ages (see also: 'interrupt livelock').
+-- 
+Jonathan
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 20011001133019.A12292@prism.flugsvamp.com
+DATE: 2001-10-01T18:30:19+00:00  FROM: Jonathan Lemon <jlemon@flugsvamp.com> <None>
+SUBJ: Re: cvs commit: src/sys/conf majors src/sys/net if.c
+BODY:
+On Mon, Oct 01, 2001 at 08:22:23PM +0200, Guido van Rooij wrote:
+
+Right now, there is /dev/network, which is intended as a control node.
+One possibility would be to use this to provde a central place to do 
+general operations like device cloning.  Another possibility would have
+have network node changes (addition, removal) reported here, although
+this probably wants some sort of central devd mechanism, rather than
+restricting it to network devices only.   
+
+As for link up/down events, try the small sample program attached.
+I'm not quite satisfied with the behavior yet; there should be a way
+to get the inital status of the link as well as link changes, but it 
+is a start.
+-- 
+Jonathan
+
+#include <stdio.h>
+#include <fcntl.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <sys/signal.h>
+#include <sys/time.h>
+#include <sys/errno.h>
+#include <sys/types.h>
+#include <sys/event.h>
+
+int
+main(int argc, char **argv)
+{
+	int fd, kq, n;
+	struct kevent event[2];
+	char buffer[128];
+	struct timespec nullts = { 0, 0 };
+	int fdout = 1;
+
+	if (argc != 2)
+		errx(1, "Usage: %s net_device\n", argv[0]);
+
+	fd = open(argv[1], O_RDWR);
+	if (fd == -1)
+		err(1, "open(%s)", argv[1]);
+	
+        kq = kqueue();
+  
+
+--------------------------------------------------------------------------------
+MID: 20011020153343.U75389@prism.flugsvamp.com
+DATE: 2001-10-20T20:33:43+00:00  FROM: Jonathan Lemon <jlemon@flugsvamp.com> <None>
+SUBJ: patch for review: multiple console support
+BODY:
+This patch adds support for multiple simultaneous low level consoles
+to the kernel.  In essence, it is equivalent to the -D flag in the
+/boot.config file.
+
+Support can be turned on by executing 'boot -D' from the loader, or 
+by using the comcontrol program (which is appended to the end of the
+patch).
+
+The motivation for performing this work (other than wanting to be able
+to use ddb on vidconsol and comconsole interchangeably) is the upcoming
+network console support, which requires the ability to add a console 
+after the system is up.
+
+Objections and bugs aside, I plan to commit this shortly.
+-- 
+Jonathan
+
+Index: kern/tty_cons.c
+===================================================================
+RCS file: /ncvs/src/sys/kern/tty_cons.c,v
+retrieving revision 1.92
+diff -u -r1.92 tty_cons.c
+--- kern/tty_cons.c	2001/09/12 08:37:46	1.92
++++ kern/tty_cons.c	2001/10/20 03:23:04
+@@ -44,11 +44,15 @@
+ #include <sys/conf.h>
+ #include <sys/cons.h>
+ #include <sys/kernel.h>
++#include <sys/malloc.h>
++#include <sys/namei.h>
+ #include <sys/proc.h>
++#include <sys/queue.h>
+ #include <sys/reboot.h>
+ #include <sys/sysctl.h>
+ #include <sys/tty.h>
+ #include <sys/uio.h>
++#include <sys/vnode.h>
+ 
+ #include <
+
+==========================================================================================
+DB: freebsd-current.duckdb  hits=14
+==========================================================================================
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-current-14b30d1c8684893f>
+DATE: 2000-04-18T17:56:50+00:00  FROM: Jonathan Lemon <jlemon () flugsvamp ! com> <None>
+SUBJ: Re: event.h troubles
+BODY:
+On Tue, Apr 18, 2000 at 10:17:36AM -0700, Matthew Dillon wrote:
+ 
+
+Yeah, I know, but I fed the change through a full buildworld
+anyway to make sure I didn't break anything else.
+--
+Jonathan
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-current-798100dde2fde2f6>
+DATE: 2000-06-22T18:52:06+00:00  FROM: Jonathan Lemon <jlemon () flugsvamp ! com> <None>
+SUBJ: Re: tail after kqueue changes
+BODY:
+On Thu, Jun 22, 2000 at 05:25:55PM +0200, Alexander Leidinger wrote:
+
+I got a little too aggressive when following the file; it wouuld switch
+to the new file immediately, and get upset when it couldn't find it.
+
+I've just committed a fix which allows for a window of time where 
+the file doesn't exist at all, which should solve the above problem.
+--
+Jonathan
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: 199908052033.PAA16082@free.pcs
+DATE: 1999-08-05T20:33:45+00:00  FROM: Jonathan Lemon <jlemon@americantv.com> <None>
+SUBJ: Re: recent apm changes
+BODY:
+In article <local.mail.freebsd-current/87n1w6hk62.fsf@muon.xs4all.nl> you write:
+
+FreeBSD's APM suspend works by sending the BIOS a suspend event
+for all BIOS managed devices, and the BIOS is supposed to put
+all devices under it's control into the "low-power suspend" state.
+
+I'd guess that this isn't the same as "off".  You can't tell the 
+BIOS to turn off all devices, you need to specify which devices
+to turn off.
+
+You could play around with adding something like this to 
+apm_suspend_system (for your hdd:):
+
+        sc->bios.r.eax = (APM_BIOS << 8) | APM_SETPWSTATE;
+        sc->bios.r.ebx = 0x02ff;
+        sc->bios.r.ecx = state ? PMST_APMENABLED : PMST_OFF;
+        sc->bios.r.edx = 0;
+ 
+        if (apm_bioscall())
+                printf("Failed to turn off HDD: errcode = %d\n",
+                       0xff & (sc->bios.r.eax >> 8));
+
+Of course, you'd probably also need a corresponding "turn on", call
+somewhere.  As for your fan, I'm not sure what the deviceid for the
+fan would be, the "0x02ff" above means "all 2ndary storage devices".
+Perhaps "0x80FF", for all OEM devices.
+
+At the moment, there isn't the ability to control individual devices,
+but at some point, I can see this being
+
+--------------------------------------------------------------------------------
+MID: 19991221161621.17529@right.PCS
+DATE: 1999-12-21T22:16:21+00:00  FROM: Jonathan Lemon <jlemon@americantv.com> <None>
+SUBJ: Re: Odd TCP glitches in new currents
+BODY:
+On Dec 12, 1999 at 04:00:00PM -0500, Garrett Wollman wrote:
+
+
+Yes, I remember having that discussion, but can't seem to find any
+corresponding code.  I thought I put in a sysctl for changing 
+TCPTV_MIN, but perhaps I took it out after putting in the bad-
+retransmit recovery section.
+--
+Jonathan
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 200002192226.QAA92457@prism.flugsvamp.com
+DATE: 2000-02-19T22:26:00+00:00  FROM: Jonathan Lemon <jlemon@flugsvamp.com> <None>
+SUBJ: Re: feedback on CD install of 4.0-RC2
+BODY:
+In article <local.mail.freebsd-current/38AF1186.8D04CE12@newsguy.com> you write:
+
+Cool, seconded.  I actually use "novice" most of the time, simply
+because I like the hints that help me not to screw up, and I've been
+using this option (or equivalent) since 1.1.5 at least.
+
+Guided sounds like a better description to me.
+--
+Jonathan
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 200004181407.JAA84381@prism.flugsvamp.com
+DATE: 2000-04-18T14:07:44+00:00  FROM: Jonathan Lemon <jlemon@flugsvamp.com> <None>
+SUBJ: Re: event.h troubles
+BODY:
+In article <local.mail.freebsd-current/20000418062200.A85325@freebsd.org> you write:
+
+I'm looking at this now.
+--
+Jonathan
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 20000418125650.G62026@prism.flugsvamp.com
+DATE: 2000-04-18T17:56:50+00:00  FROM: Jonathan Lemon <jlemon@flugsvamp.com> <None>
+SUBJ: Re: event.h troubles
+BODY:
+On Tue, Apr 18, 2000 at 10:17:36AM -0700, Matthew Dillon wrote:
+ 
+
+Yeah, I know, but I fed the change through a full buildworld
+anyway to make sure I didn't break anything else.
+--
+Jonathan
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 200006202036.PAA87914@prism.flugsvamp.com
+DATE: 2000-06-20T20:36:17+00:00  FROM: Jonathan Lemon <jlemon@flugsvamp.com> <None>
+SUBJ: Re: SMP locking primities (was Re: HEADS UP: Destabilization due to SMP development) 
+BODY:
+In article <local.mail.freebsd-current/51028.961486917@critter.freebsd.dk> you write:
+
+I believe that Jason Evans already sent a message summarizing the
+meeting, and Matt Dillon's webpage gives a pretty good summary of 
+the work too (at http://apollo.backplane.com/FreeBSDSmp/)
+
+
+
+Chuck Patterson presented a bunch of slides (which was actually a .ps
+file that displayed page by page in gv), so perhaps he could be persuaded
+to make the entire postscript file available somewhere.
+
+
+
+After several mishaps, I believe that Greg finally got a video camera
+up and running for most of the session.  I think that it was in PAL format
+as well.  Greg has the tapes, so I assume that after he's done with
+USENIX, he'll have them available.
+--
+Jonathan
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 20000622135206.A70466@prism.flugsvamp.com
+DATE: 2000-06-22T18:52:06+00:00  FROM: Jonathan Lemon <jlemon@flugsvamp.com> <None>
+SUBJ: Re: tail after kqueue changes
+BODY:
+On Thu, Jun 22, 2000 at 05:25:55PM +0200, Alexander Leidinger wrote:
+
+I got a little too aggressive when following the file; it wouuld switch
+to the new file immediately, and get upset when it couldn't find it.
+
+I've just committed a fix which allows for a window of time where 
+the file doesn't exist at all, which should solve the above problem.
+--
+Jonathan
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 200102231853.f1NIrM788285@prism.flugsvamp.com
+DATE: 2001-02-23T18:53:22+00:00  FROM: Jonathan Lemon <jlemon@flugsvamp.com> <None>
+SUBJ: Re: tail -f kernel panic
+BODY:
+In article <local.mail.freebsd-current/200102231756.f1NHuTq91448@zibbi.icomtek.csir.co.za> you write:
+
+Hmm.  I reproduced this here; the panic is in SLIST_REMOVE() when it
+is removing the second event.  Funny enough, this does not happen on
+-stable.  Did something change in the list macros recently that would
+cause this?
+--
+Jonathan
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 20010228095439.P20550@prism.flugsvamp.com
+DATE: 2001-02-28T15:54:39+00:00  FROM: Jonathan Lemon <jlemon@flugsvamp.com> <None>
+SUBJ: DNS & kqread (kq in general)
+BODY:
+I"ve committed a fix for the problem where DNS hangs or takes 
+a long time to resolve (the process gets stuck in kqread).
+
+In the last kqueue update, I added a new filter-specific flag to
+the read/write filters, which allows the filter to specify its
+own read/write watermarks.  However, since this flag was previously
+unused, if you do not initialize the structure to zero, you may
+get unexpected results.
+
+To that end, I'd encourage kqueue users to review their code and
+make sure that the structure is completely initialized.  A new 
+a new convenience macro EV_SET() was also added to <sys/event.h>
+which should also assist this process.
+--
+Jonathan
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 200103151644.f2FGiG503946@prism.flugsvamp.com
+DATE: 2001-03-15T16:44:16+00:00  FROM: Jonathan Lemon <jlemon@flugsvamp.com> <None>
+SUBJ: Re: status of KSE?
+BODY:
+In article <local.mail.freebsd-current/424452460.20010315150427@21cn.com> you write:
+
+That's news to me.  kqueue + libc_r should work fine in -stable, AFAIK.
+--
+Jonathan
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 200105251815.f4PIF7242701@prism.flugsvamp.com
+DATE: 2001-05-25T18:15:07+00:00  FROM: Jonathan Lemon <jlemon@flugsvamp.com> <None>
+SUBJ: Re: tail -f over NFS in -stable
+BODY:
+In article <local.mail.freebsd-current/3B0DD6BD.8E54A5E5@DougBarton.net> you write:
+
+It shouldn't be needed.  Instead, the following logic is used:
+
+                        if (kevent(kq, ev, n, NULL, 0, &ts) < 0) {
+                                close(kq);
+                                kq = -1;
+                                action = USE_SLEEP;
+
+Registration of a VNODE filter on a filesystem that doesn't understand
+it (NFS) should fail.  Hardcoding ufs in the binary is the wrong thing 
+to do; it precludes kernel enhancements later where other filesystems 
+are taught about kqueue.
+-- 
+Jonathan
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 200110071521.f97FLTh32994@prism.flugsvamp.com
+DATE: 2001-10-07T15:21:29+00:00  FROM: Jonathan Lemon <jlemon@flugsvamp.com> <None>
+SUBJ: Re: KRIS: FOR YOU TO COMMIT: soft interrupt coelescing
+BODY:
+In article <local.mail.freebsd-current/3BC00739.6633D737@mindspring.com> you write:
+
+Oh, bah.  The fxp clearly has the equivalent of fxp_rxeof and fxp_txeof
+routines, these are just inlined into the fxp_intr routine instead
+of being separate functions.  It was all of 10 minutes work to break
+them out into separate functions.  I did this to allow polled transmit/receive
+for some work in progress that will be committed soon.
+-- 
+Jonathan
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+
+==========================================================================================
+DB: freebsd-performance.duckdb  hits=0
+==========================================================================================

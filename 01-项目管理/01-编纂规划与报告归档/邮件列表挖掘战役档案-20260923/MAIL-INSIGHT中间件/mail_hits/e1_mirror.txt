@@ -1,0 +1,201 @@
+total 40
+[1995-10-01T13:22:58+00:00] [Mark Murray] []
+MID: <199510011322.PAA04959@grumble.grondar.za>
+SUBJ: Re: Printing handbook chapter COMPLETE
+BODY: > >And don't take a laptop either :-) | >  | > >Don't laugh, I've  seen people taking a  laptop with them  for holidays (my | > >own boss!). I just can't understand this... | >  | > Hey! I've done that.. (and a modem) :-)  Only I made sure that the | > only interesting thing on there was a terminal program..  I did | > actually need it once when I got a panic phone call from work that I had | > to dial in to fix..  There are downsides to being the only one who | > understands the systems/network. |  | I cannot imagine going on a trip without making sure I have a reciprocity | agreement with every ISP in earshot ;-) |  | 
+------------------------------------------------------------
+[1995-10-02T14:19:58+00:00] [Jon Loeliger <jdl@chrome.onramp.net>] []
+MID: 199510021419.JAA26762@chrome.jdl.com
+SUBJ: SCO, HP and Novell carve Unix between them
+BODY:  | ------- Forwarded Message |  | Forwarded-by: bostic@bsdi.com (Keith Bostic) | Forwarded-by: Todd Kover <kovert@umiacs.UMD.EDU> | Forwarded-by: Omar Siddique <omar@gl.umbc.edu> | Forwarded-by: more@power.globalnews.com |  | SANTA CRUZ, HEWLETT-PACKARD, NOVELL CARVE UP UNIX BETWEEN THEM | (September 25th 1995) Novell Inc admitted last week that its buying Unix | System Laboratories from AT&T Corp had been a mistake. It handed on its | main contribution to the Unix world - the UnixWare mass market low-end | iAPX-86 Unix - to Santa Cruz Operation Inc. In return it is to get shares | representing 17% of the enlarged equi
+------------------------------------------------------------
+[1995-12-18T00:52:19+00:00] [Bill/Carolyn Pechter] []
+MID: <199512180052.TAA16914@shell.monmouth.com>
+SUBJ: Re: FreeBSD on laptop
+BODY: >  | > pechter@shell.monmouth.com writes: | > > Just wanted to announce that FreeBSD 2.0.5-release runs unmodified on a  | > > ThinkPad 365.  I'm hacking in the IDE CD support to work out the | > > installation of additional tools. | >  | > Does that mean you didn't even have to mess with the console drivers? | >  | >  | > Nate | >  |  | Absolutely.  This is a different chipset than the 755/760/701 and 350/360  | series.  It's a  chips & techologies video set.  I don't know about the  | keyboard controller.  Seems pretty standard.  Uses a Phoenix 1.03 bios | rev with a Cyrix (according to FreeBSD's probe) 486DLC (I think i
+------------------------------------------------------------
+[1995-12-20T07:27:23+00:00] [Rob Snow <rsnow@txdirect.net>] []
+MID: Pine.BSF.3.91.951220012519.12715A-100000@oasis.txdirect.net
+SUBJ: Kinda cool
+BODY:  | I was just looking for the latest version of xcdplayer:  Hit | xarchie for "xcdplayer" and I got HAMMERED by FreeBSD mirrors of | some sort! |  | I LOVE it. |  | __________________________________________________________________ | Rob Snow                                        Powered by FreeBSD | rsnow@txdirect.net                          http://www.freebsd.org |  |  | 
+------------------------------------------------------------
+[1995-12-20T14:15:15+00:00] [kelly@fsl.noaa.gov (Sean Kelly)] []
+MID: 9512201415.AA24843@emu.fsl.noaa.gov
+SUBJ: Re: Kinda cool
+BODY: >>>>> "Rob" == Rob Snow <rsnow@txdirect.net> writes: |  |     Rob> I was just looking for the latest version of xcdplayer: Hit |     Rob> xarchie for "xcdplayer" and I got HAMMERED by FreeBSD mirrors |     Rob> of some sort! |  | YESSSSSS!! |  |     Rob> I LOVE it. |  | That's one reason I avoid archie.sura.net ... even if I look for | hpux or sunos, I seem to get 500 linux hits. |  | --  | Sean Kelly | NOAA Forecast Systems Laboratory, Boulder Colorado USA |  | TASK: Shoot yourself in the foot.  In Modula2: After realizing that | you can't actually accomplish anything in this language, you shoot | yourself in the head. |  | 
+------------------------------------------------------------
+[1996-03-03T17:14:12+00:00] [Chuck Robey] []
+MID: <Pine.OSF.3.91.960303120821.10333A-100000@skipper.eng.umd.edu>
+SUBJ: Re: UNIX Specification
+BODY: On Sun, 3 Mar 1996, Charles Green wrote: |  | > Chuck Robey stands accused of saying: | > }  | > } I wasn't being fascetious.  You define what you actually mean by your  | > } reference to SINGLE UNIX SPECIFICATION, then you can get an answer.  | >  | > 	Actually that was a cut and paste off of  | > http://www.xopen.co.uk/public/tech/unix/overview.htm | > The technical specification for UNIX (as they refer to it :-) | >  | > }									I'm  | > } horrible at names, but I think I've seen yours before; I wasn't sure, so  | >  | > 	Yeah I've been hanging around and throwing my two cents worth every  | > once and awhile. | >  | > }
+------------------------------------------------------------
+[1996-03-07T22:42:00+00:00] [invalid opcode <coredump@nervosa.com>] []
+MID: Pine.BSF.3.91.960307143944.659A-100000@nervosa.com
+SUBJ: 
+BODY: Just on a whim, I decided to go into #linux (irc) and ask their opinions  | of FreeBSD. Some were uneducated, some were just plain wrong. Here is the  | log, it has been edited for brevity: |  | -- cut here --------------------------------------------------------------- | *** coredump_ (coredump@nervosa.com) has joined channel #linux | *** Topic for #linux: when in doubt, RTFM | *** Topic for #linux set by Durtro on Mar  7 13:34:33 | *** Users on #linux: coredump_ assassin fogg |napa|m Lews ferkku keiser Downtown_ robl sv sewilco gonner wyme [oscar] AsmPro Dasmius Iridium Puppe @LinBitch [skum] antmo MCB 
+------------------------------------------------------------
+[1996-03-10T16:23:54+00:00] [Robert Shady] []
+MID: <199603101623.LAA25348@server.id.net>
+SUBJ: Re: Poor connection to WC
+BODY: > > >Is it just me or are all of you seeing a bloody slow connection today | > > >(Saturday afternoon, 9th March, GMT-0200)? | > > > | > > >A traceroute shows that most packets are getting lost in bbnplanet(?). | > > > | > > >Any clues/ides? | > >  | > >    There is a problem in the Stanford<->Berkeley connectivity that has been | > > around for about 2 months and fluctuates in severity. We reported the problem | > > to BBN Planet over a month ago but no action on it was taken on it. Next week | > > I'll be switching WC CDROM to a new service provider. | >  | > HOORAY!! |  | Wow.. That's great news, I thought I might be 
+------------------------------------------------------------
+[1996-03-15T06:23:08+00:00] [obrien@cs.ucdavis.edu (David E. O'Brien)] []
+MID: 9603150623.AA20756@toadflax.cs.ucdavis.edu
+SUBJ: (fwd) A New Era for Linux has Arrived! (fwd)
+BODY: Good grief!!!  More amunition for them.  I wonder who in the world paid | the $$$ for them. |  | -- David    (obrien@cs.ucdavis.edu) |  | ----- Forwarded message ----- |  | From: info@lasermoon.co.uk | Newsgroups: comp.os.linux.announce | Subject: A New Era for Linux has Arrived! | Followup-To: comp.os.linux.misc | Date: Wed, 13 Mar 96 20:03:11 GMT | Approved: linux-announce@news.ornl.gov (Lars Wirzenius) |  | -----BEGIN PGP SIGNED MESSAGE----- |  |                     POSIX.1 (FIPS 151-2) Certification |  |                         A Historic Development!! |  |          (Availability : Intel and Digital ALPHA Architectures) |  | Linux h
+------------------------------------------------------------
+[1996-03-17T20:13:47+00:00] [Brian Tao <taob@io.org>] []
+MID: Pine.BSF.3.91.960317151028.10548B-100000@cabal.io.org
+SUBJ: Mirroring ftp.freebsd.org effectively
+BODY:     I've got mirror 2.8 installed and running here, but I'm having a | little trouble getting consistent results with the FreeBSD archives. | I see a lot of "Not symlinking ..." errors and empty directories. | Could someone send me their package entry for FreeBSD?  Mine is | currently: |  | package=freebsd |         comment=The FreeBSD Project |         use_files=true |         site=ftp.freebsd.org |         remote_dir=/pub/FreeBSD/ |         local_dir+/.1/freebsd/ |         exclude_patt=.*/.mirror |         do_deletes=false |  |     I use "mirror -d -pfreebsd /root/mirror/ftp.io.org" to update the | local archives.  Should 
+------------------------------------------------------------
+[1996-03-18T13:59:46+00:00] [Robert Shady <rls@server.id.net>] []
+MID: 199603181359.IAA27428@server.id.net
+SUBJ: Re: Mirroring ftp.freebsd.org effectively
+BODY: >     I've got mirror 2.8 installed and running here, but I'm having a | > little trouble getting consistent results with the FreeBSD archives. | > I see a lot of "Not symlinking ..." errors and empty directories. | > Could someone send me their package entry for FreeBSD?  Mine is | > currently: | >  | > package=freebsd | >         comment=The FreeBSD Project | >         use_files=true | >         site=ftp.freebsd.org | >         remote_dir=/pub/FreeBSD/ | >         local_dir+/.1/freebsd/ | >         exclude_patt=.*/.mirror | >         do_deletes=false | >  | >     I use "mirror -d -pfreebsd /root/mirror/ftp.io.org" to upd
+------------------------------------------------------------
+[1996-03-18T18:43:46+00:00] [Bill Fenner <fenner@parc.xerox.com>] []
+MID: 96Mar18.104351pst.177478@crevenia.parc.xerox.com
+SUBJ: Re: more about net troubles 
+BODY: In message <199603171621.IAA11964@Root.COM> davidg wrote: | >It turns out that there was a gas explosion in the Wintel building |  | For the curious, here's an eye-witness report. |  | mpetach@falcon.netflight.com said: | > I was driving to work, running a bit late at around 11:10 am, and  | > turned west on Walsh Avenue from San Tomas.  I pulled into the left  | > turn lane leading into the business park, and noticed the driveway  | > was blocked with orange cones and a backhoe digging.  A woman in a  | > dark, Pennsylvania green lincoln towncar pulled up into the left turn  | > lane behind me.  When the left turn
+------------------------------------------------------------
+[1996-03-18T20:00:49+00:00] [Brian Tao <taob@io.org>] []
+MID: Pine.BSF.3.91.960318145915.1434K-100000@cabal.io.org
+SUBJ: Re: Mirroring ftp.freebsd.org effectively
+BODY: On Mon, 18 Mar 1996, Robert Shady wrote: | >  | > I'm not sure what the "official" word on mirroring the FreeBSD archives | > is, but 'mirror' puts a pretty heavy load on the server it's mirroring. |  |     Hmmmm... maybe I'll just keep the frozen stuff around and not | bother with -CVS, -current and -stable.  Mirror updates are taking 8 | hours a day now, for just the FreeBSD stuff (and mirror 2.8 still eats | up 50 to 60MB of core!). | -- | Brian Tao (BT300, taob@io.org) | Systems Administrator, Internex Online Inc. | "Though this be madness, yet there is method in't" |  |  | 
+------------------------------------------------------------
+[1996-03-22T16:08:34+00:00] [Brian Tao <taob@io.org>] []
+MID: Pine.BSF.3.91.960322110708.8112A-100000@cabal.io.org
+SUBJ: March 21 snapshot?
+BODY:     I thought this fragment of my nightly mirror logs is amusing: |  | package=freebsd ftp.freebsd.org:/pub/FreeBSD/ -> /var/spool/ftp/.1/freebsd/ | Scanning local directory /var/spool/ftp/.1/freebsd/ | Scanning remote directory /pub/FreeBSD/ | compare directories (src 7302, dest 8835) | Got 2.2-960321-SNAP/DONT_GRAB_THIS_YET 55 | Got 2.2-960321-SNAP/src/ssmailcf.aa 56157 | Got 2.2-960321-SNAP/src/susbin.ao 166973 | [...] |  |     Should I put in some sort of rule into the mirror script to skip a | package if it finds a file named "DONT_GRAB_THIS_YET"?  :) | -- | Brian Tao (BT300, taob@io.org) | System and Network Administ
+------------------------------------------------------------
+[1996-03-23T00:37:22+00:00] ["Jordan K. Hubbard" <jkh@time.cdrom.com>] []
+MID: 22347.827541442@time.cdrom.com
+SUBJ: Re: March 21 snapshot? 
+BODY: >     Should I put in some sort of rule into the mirror script to skip a | > package if it finds a file named "DONT_GRAB_THIS_YET"?  :) |  | :-) |  | Well, when your mirror deletes it again you'll know! |  | 					Jordan |  | 
+------------------------------------------------------------
+[1996-05-05T08:45:17+00:00] [Jim Fleming] []
+MID: <01BB3A35.4772BC80@webster.unety.net>
+SUBJ: RE: IPv8 Tutorial #1: Minimal IPv8 hack
+BODY: On Sunday, May 05, 1996 3:35 AM, Jordan K. Hubbard[SMTP:jkh@time.cdrom.com] wrote: | @ Can I call a time-out on the IPv8 discussion in -hackers, please? | @ It's a very specialized topic and of very _narrow_ interest to most | @ FreeBSD hackers, who will still be using IPv4 for the forseeable | @ future (and no debate on the desirability of that, please!) | @  | @ I'm sure that this can be taken to private email with little or no | @ degradation in the quality of the discussion, and certainly far fewer | @ people screaming "aigh!  shut up about IPv8 already, we beg of you!" | @  | @ 					Jordan | @  | @  |  | Whatever yo
+------------------------------------------------------------
+[1996-05-07T23:27:20+00:00] ["Mike O'Brien" <obrien@antares.aero.org>] []
+MID: 9605072327.AA11714@antares.aero.org
+SUBJ: Re: [Forwarded e-mail from Alexander O. Yuriev] 
+BODY: >         details and gifs PLEASE! |  | 	If you insist. :-) |  |         Sherman, set the Wayback Machine for around 1976 or so (see Peter | Salus' _A Quarter Century of UNIX_ for details), when the first really | national UNIX meeting was held in Urbana, Illinois.  This would be after | the "forty people in a Brooklyn classroom" meeting held by Mel Ferentz | (yeah I was at that too) and the more-or-less simultaneous West Coast | meeting(s) hosted by SRI, but before the UNIX Users Group was really | incorporated as a going concern. |  | 	I knew Ken Thompson and Dennis Ritchie would be there.  I was | living in Chicago 
+------------------------------------------------------------
+[1996-05-12T07:21:28+00:00] [Greg Lehey] []
+MID: <199605120721.JAA29151@allegro.lemis.de>
+SUBJ: Re: [Forwarded e-mail from Alexander O. Yuriev]
+BODY: J Wunsch writes: | > | > As Mike O'Brien wrote: | > | >>> Yep, but since it's copyrighted, he rules what happens to anything | >>> that closely resembles HIS daemon. | >> | >> 	I wonder if he can copyright something I owned ten years before?  Seems | >> odd that he can do that without having inherited the rights. | > | > He can, since you haven't copyrighted your version before. | > | > Anyway: funny story. :) Pity that it didn't make it into Salus' | book. |  | It's made it into the new edition of "Installing FreeBSD". |  | > It raised the question in me how many daemons there have been in the | > early Unices.  Most of our cur
+------------------------------------------------------------
+[1996-05-13T20:49:21+00:00] [Brian Tao <taob@io.org>] []
+MID: Pine.NEB.3.92.960513162609.14554V-100000@zot.io.org
+SUBJ: Marathon ][
+BODY:     Did someone port the game "Marathon ][" to FreeBSD? |  | package=freebsd ftp.freebsd.org:/pub/FreeBSD/ -> /var/spool/ftp/.1/freebsd/ | Scanning local directory /var/spool/ftp/.1/freebsd/ | Scanning remote directory /pub/FreeBSD/ | compare directories (src 7705, dest 7698) | Got incoming/fvwm-1.24r.tar.gz 0 | Got incoming/make-3.74.tar.gz 0 | Got incoming/marathon2.sit 32162176      <--- hmmmmm? | Got incoming/src-2.1.0060C.gz 1029655 | Got incoming/src-2.1.0096A.gz 28860457 | Got incoming/sliplogin-2.1.0.tgz 40746 | Got incoming/sliplogin.lsm 1287 |  |     I unpacked it on a Mac, and it is in fact the full commercial
+------------------------------------------------------------
+[1996-06-30T15:43:03+00:00] [Chuck Robey] []
+MID: <Pine.OSF.3.91.960630114129.6174G-100000@fiber.eng.umd.edu>
+SUBJ: Getting current via cvs-cur
+BODY: I am going to try to start using cvs to store my current tree, so I need  | to get current via cvs-cur.  The beginning file, on freefall.freebsd.org,  | in pub/CTM/cvs-cur, is cvs-cur.2100A.gz (I think) and it's 51 megabytes  | huge.  I can't get that in one ftp, even using the /tmp dir on local  | machines, that's just too huge (I connect via the University, I have much  | more than that available on my home machine, but that doesn't help here). |  | Could someone get that file for me, and maybe break it up some, so I  | could download it in smaller pieces? |  |  | ----------------------------+--------------------
+------------------------------------------------------------
+[1996-07-04T10:56:46+00:00] [Zach Heilig <zach@blizzard.gaffaneys.com>] []
+MID: 87afxgxp5d.fsf@freebsd.gaffaneys.com
+SUBJ: Re: Fast mirror of 2.1-960627-SNAP in South Africa...
+BODY: "Irvine Short" <ishort@pcm.co.za> writes: | > Hi All | >  | > Is there such a thing? | >  | > I found the one at ftp.za.freebsd.org and I am ftp'ing the boot.flp  | > intending to do a ftp install, but at 1.3k/s between me and them  | > it'll take ages and ages... |  | Try installing with a 14.4K modem :-) (I actually got 1.5K/sec | though).  BTW, I've noticed ftp transfers have dropped to .57K/sec (I | never get more, unless it's text, then it's up to 2K/sec).  I checked, | and I connect at 14400/ARQ/V42bis/(couple other things), so that isn't | the problem.  My ISP gets about 60K/sec from most sites, so that isn't | th
+------------------------------------------------------------
+[1996-07-04T10:56:58+00:00] [Mark Murray <mark@grondar.za>] []
+MID: 199607041056.MAA00265@grumble.grondar.za
+SUBJ: Re: Fast mirror of 2.1-960627-SNAP in South Africa... 
+BODY: "Irvine Short" wrote: | > I found the one at ftp.za.freebsd.org and I am ftp'ing the boot.flp  | > intending to do a ftp install, but at 1.3k/s between me and them  | > it'll take ages and ages... |  | Try ftp2 and ftp3... |  | M | -- | Mark Murray | 46 Harvey Rd, Claremont, Cape Town 7700, South Africa | +27 21 61-3768 GMT+0200 | Finger mark@grondar.za for PGP key |  | 
+------------------------------------------------------------
+[1996-07-04T11:54:47+00:00] ["Irvine Short" <ishort@pcm.co.za>] []
+MID: 199607041008.MAA29421@pcmgate.pcm.co.za
+SUBJ: Fast mirror of 2.1-960627-SNAP in South Africa...
+BODY: Hi All |  | Is there such a thing? |  | I found the one at ftp.za.freebsd.org and I am ftp'ing the boot.flp  | intending to do a ftp install, but at 1.3k/s between me and them  | it'll take ages and ages... |  | Regards, |  | Irvine Short |  | http://www.pcm.co.za/homepage/ishort/irv_home.html |  |      Technical Support |      Professional Computer Manufacturers |      Cape Town, South Africa | Tel: ++27-21-235084         Fax ++27-21-235089 |  | 
+------------------------------------------------------------
+[1996-07-14T07:13:34+00:00] [J Wunsch] []
+MID: <199607140713.JAA15291@uriah.heep.sax.de>
+SUBJ: Re: FreeBSD keyboard
+BODY: As John Fieber wrote: |  | > It has nothing to do with typing ability.  It has everything to | > do with the basic fact that humans are far better at | > recognition than recall.  Recall may be more efficient, but only | > comes after a great time investment in memorization.  For | > infrequent users, or infrequent tasks, recall will never be as | > efficient as recognition. |  | The problem arises, however, that even for frequent users of such a | recognition-based system, the efficiency cannot grow beyond a certain | point. |  | When looking at the icon and toolbar etc. forest of the typical | application of these days
+------------------------------------------------------------
+[1996-07-16T10:27:41+00:00] [grog@lemis.de (Greg Lehey)] []
+MID: 199607161027.MAA17281@allegro.lemis.de
+SUBJ: Re: FreeBSD keyboard
+BODY: Tim Vanderhoek writes: | > | > On Mon, 15 Jul 1996, Greg Lehey wrote: | > | >> Tim Vanderhoek writes: | >> i suppose i should make it clear at the | >> outset that there's no way to access f keys as easily as the base | >> keys, no matter where you put them.  but i maintain that it's easier | >> to do so if they're on the left than if they're above. | > | > maybe your hands are in some way dysfunctional?  :) |  | what makes you assume it's my hands?  hands up all those people with | three 4" fingers on any hand. |  | >>> the f keys, however are greatly placed!  just curl the thumb to hit the | >>> <alt> and extend a finger a
+------------------------------------------------------------
+[1996-09-02T18:28:12+00:00] [Matt Clark] []
+MID: <322B273C.4E68@netgate.net>
+SUBJ: GNNserver Equals?
+BODY: Does anyone know about a server/client set that is equal to | GNNserver/GNNpress? GNNserver is basicly a HTTP server that allows for | the HTTP PUT command (Used to be NaviServer). GNNpress is an authoring | tool that lets you upload the files easily to the server. Apparently, | they are not supporting FreeBSD anymore because 'the pthreads lib is | buggy' (I think they are using MIT's version). Anyone? (We've tried | FrontPage) |  | --matt Clark |  | From owner-freebsd-chat  Tue Sep  3 06:52:24 1996 | Return-Path: owner-chat | Received: (from root@localhost) |           by freefall.freebsd.org (8.7.5/8.7.3) id GAA29834
+------------------------------------------------------------
+[1996-09-03T22:38:55+00:00] [Nate Williams <nate@mt.sri.com>] []
+MID: 199609032238.QAA27527@rocky.mt.sri.com
+SUBJ: Re: FreeBSD vs. Linux 96 (my impressions)  - Reply
+BODY: > I have to take responsibility for the organization template copied | > from the "FreeBSD + patchkit" days. |  | You're taking too much credit for something you had no part in.  FreeBSD | came about because of the technical problems of the patchkit (which were | great and many), but the non-technical organization you had nothing to | do with, positive or negative. |  | > The template resulted from the inherent requirement for a central | > serialization authority for patches because the tools I built were | > simply not up to arbitrating concurrent developement. |  | That wasn't the problem, though it did lead to pa
+------------------------------------------------------------
+[1996-09-22T14:12:30+00:00] [Amancio Hasty] []
+MID: <199609221412.HAA00292@rah.star-gate.com>
+SUBJ: Matrox's FAQ page mentions that FreeBSD supports the Meteor 8)
+BODY: Browsing along on Matrox web page , I noticed this: |  | http://www.matrox.com/imgweb/tech_faq.htm#7. |  |  |        21. Are there Meteor drivers available for Linux and FreeBSD?  |        Yes, drivers are available, but not from Matrox. MATROX DOES NOT OFFER SUPPORT FOR LINUX OR |        FREEBSD.  |        See http://www.xinside.com for the driver for Linux.  |        See http://www.freebsd.org for the driver for FreeBSD.  |        For more information regarding support for the Meteor under these operating systems check: |        http://www.cs.virginia.edu/~bah6f/matrox/ |  |  | From owner-freebsd-chat  Sun Sep 22 07:32
+------------------------------------------------------------
+[1996-09-28T12:02:38+00:00] [J Wunsch <j@uriah.heep.sax.de>] []
+MID: 199609281202.OAA01218@uriah.heep.sax.de
+SUBJ: Re: request for library file
+BODY: As Eka Kelana wrote: |  | > I need this file: | >  | >      libX11.so.6.1 |  | Should be found in the public beta areas on the XFree86 mirror sites. |  | --  | cheers, J"org |  | joerg_wunsch@uriah.heep.sax.de -- http://www.sax.de/~joerg/ -- NIC: JW11-RIPE | Never trust an operating system you don't have sources for. ;-) |  | 
+------------------------------------------------------------
+[1996-10-13T08:32:39+00:00] [David E. O'Brien] []
+MID: <199610130832.BAA29432@relay.nuxi.com>
+SUBJ: Sad state of afairs for US ftp mirrors
+BODY: Somebody please tell me I'm missing something here. |  | At Ollivier's suggestion, I wanted to get | FreeBSD-current/src/gnu/usr.bin/cvs/contrib/* |  | No problem I think -- just ftp it from wcarchive.  But it was refusing | incoming connections (421 Service not available, remote server has closed | connection) (seems to be doing this a lot lately).  So I figure I'll just | get it from a mirror site.  Using ncftp | ftpX.freebsd.org:/pub/FreeBSD/FreeBSD-current/src/gnu/usr.bin/cvs, where | X={1,2,3,4,5,6} (the USA mirrors) this is what I found:                   |  | ftp2 (phoenix) -- doesn't allow get foo.tar.gz AND 
+------------------------------------------------------------
+[1996-10-13T08:32:39+00:00] ["David E. O'Brien" <obrien@Nuxi.cs.ucdavis.edu>] []
+MID: 199610130832.BAA29432@relay.nuxi.com
+SUBJ: Sad state of afairs for US ftp mirrors
+BODY: Somebody please tell me I'm missing something here. |  | At Ollivier's suggestion, I wanted to get | FreeBSD-current/src/gnu/usr.bin/cvs/contrib/* |  | No problem I think -- just ftp it from wcarchive.  But it was refusing | incoming connections (421 Service not available, remote server has closed | connection) (seems to be doing this a lot lately).  So I figure I'll just | get it from a mirror site.  Using ncftp | ftpX.freebsd.org:/pub/FreeBSD/FreeBSD-current/src/gnu/usr.bin/cvs, where | X={1,2,3,4,5,6} (the USA mirrors) this is what I found:                   |  | ftp2 (phoenix) -- doesn't allow get foo.tar.gz AND 
+------------------------------------------------------------
+[1996-10-13T09:47:42+00:00] [David Dawes <dawes@rf900.physics.usyd.edu.au>] []
+MID: 199610130947.TAA16492@rf900.physics.usyd.edu.au
+SUBJ: Re: Sad state of afairs for US ftp mirrors
+BODY: >Somebody please tell me I'm missing something here. | > | >At Ollivier's suggestion, I wanted to get | >FreeBSD-current/src/gnu/usr.bin/cvs/contrib/* | > | >No problem I think -- just ftp it from wcarchive.  But it was refusing | >incoming connections (421 Service not available, remote server has closed | >connection) (seems to be doing this a lot lately).  So I figure I'll just | >get it from a mirror site.  Using ncftp | >ftpX.freebsd.org:/pub/FreeBSD/FreeBSD-current/src/gnu/usr.bin/cvs, where | >X={1,2,3,4,5,6} (the USA mirrors) this is what I found:                   | > | >ftp2 (phoenix) -- doesn't allow get fo
+------------------------------------------------------------
+[1996-10-13T10:19:20+00:00] [Michael Smith <msmith@atrad.adelaide.edu.au>] []
+MID: 199610131019.TAA08396@genesis.atrad.adelaide.edu.au
+SUBJ: Re: Sad state of afairs for US ftp mirrors
+BODY: David Dawes stands accused of saying: | > > | > >No problem I think -- just ftp it from wcarchive.  But it was refusing | > >incoming connections (421 Service not available, remote server has closed | > >connection) (seems to be doing this a lot lately).  So I figure I'll just |  | This is likely to be a network problem between you & wcarchive rather | than wcarchive itself.  I certainly haven't had any problems with it | of late, and I probably hit it ~10 times a day from various directions | (aust, canda, europe, japan). |  | > >get it from a mirror site.  Using ncftp | > >ftpX.freebsd.org:/pub/FreeBSD/FreeBSD-curr
+------------------------------------------------------------
+[1996-10-13T10:32:37+00:00] [David Greenman <dg@root.com>] []
+MID: 199610131032.DAA02667@root.com
+SUBJ: Re: Sad state of afairs for US ftp mirrors 
+BODY: >No problem I think -- just ftp it from wcarchive.  But it was refusing | >incoming connections (421 Service not available, remote server has closed | >connection) (seems to be doing this a lot lately). |  |    This is/was caused by a failing disk causing processes to deadlock until | enough of them pile up that the system runs out of swap space. It will get | fixed on Monday. |  | -DG |  | David Greenman | Core-team/Principal Architect, The FreeBSD Project |  | 
+------------------------------------------------------------
+[1996-10-13T16:18:03+00:00] [roberto@keltia.freenix.fr (Ollivier Robert)] []
+MID: 199610131618.SAA07743@keltia.freenix.fr
+SUBJ: Re: Sad state of afairs for US ftp mirrors
+BODY: According to Michael Smith: | > the contrib tree where it belongs.  If you want the contrib segment | > out of the CVS distribution, it's in src/contrib/cvs/contrib. |  | easy-import.pl (the file David wanted) is not in contrib/cvs because it is | a FreeBSD addition so it is in src/gnu/usr.bin/cvs/contrib... |   | --  | Ollivier ROBERT    -=- The daemon is FREE! -=-    roberto@keltia.freenix.fr | FreeBSD keltia.freenix.fr 2.2-CURRENT #24: Thu Oct 10 19:35:39 MET DST 1996 |  | 
+------------------------------------------------------------
+[1996-10-13T18:48:02+00:00] [hoek@freenet.hamilton.on.ca] []
+MID: 199610131848.OAA20786@james.freenet.hamilton.on.ca
+SUBJ: Re: Sad state of afairs for US ftp mirrors
+BODY: In Email, "David E. O'Brien" <obrien@Nuxi.cs.ucdavis.edu> wrote: | >  | > ftpX.freebsd.org:/pub/FreeBSD/FreeBSD-current/src/gnu/usr.bin/cvs, where | > X={1,2,3,4,5,6} (the USA mirrors) this is what I found:                   |  | Add to this ftp.ca.freebsd.org, which has for a long time not had the  | FreeBSD stuff available. |  | It was actually mentioned in one of the lists a long time ago, but nothing | happened -- ftp.ca.freebsd.org is still listed as the ftpsite to use when | installing FreeBSD in Canada. |  |  | --  | -- | tIM...HOEk | The opinions expressed above are mine, | and if my employer shares them,  | that's his h
+------------------------------------------------------------
+[1996-10-15T05:23:24+00:00] [Brian Tao <taob@io.org>] []
+MID: Pine.BSF.3.95.961015012148.481Q-100000@crunch.io.org
+SUBJ: Re: Sad state of afairs for US ftp mirrors
+BODY: On Sun, 13 Oct 1996 hoek@freenet.hamilton.on.ca wrote: | >  | > Add to this ftp.ca.freebsd.org, which has for a long time not had the  | > FreeBSD stuff available. |  |     I have a mirror at ftp.io.org:/pub/mirrors/freebsd, if anyone | wants to use it.  I don't make any guarantees on its completeness or | timeliness, but it works well enough for me to use whenever an install | is needed.  I don't mirror the FreeBSD-CVS stuff, but the latest | snapshots, -stable and -current should all be up to date. | -- | Brian Tao (BT300, taob@io.org, taob@ican.net) | Senior Systems and Network Administrator, Internet Canada Corp.
+------------------------------------------------------------
+[1996-10-18T19:21:45+00:00] [Will Mitayai Keeso Rowe <mitayai@dreaming.org>] []
+MID: Pine.BSI.3.95.961018151539.4023B-100000@dreamlabs.dreaming.org
+SUBJ: Re: Sad state of afairs for US ftp mirrors
+BODY: On Tue, 15 Oct 1996, Brian Tao wrote: |  | > On Sun, 13 Oct 1996 hoek@freenet.hamilton.on.ca wrote: | > >  | > > Add to this ftp.ca.freebsd.org, which has for a long time not had the  | > > FreeBSD stuff available. | >  | >     I have a mirror at ftp.io.org:/pub/mirrors/freebsd, if anyone | > wants to use it.  I don't make any guarantees on its completeness or | > timeliness, but it works well enough for me to use whenever an install | > is needed.  I don't mirror the FreeBSD-CVS stuff, but the latest | > snapshots, -stable and -current should all be up to date. |  | Brian, i use this archive at IO almost exclusively a
+------------------------------------------------------------
+[1996-11-17T10:13:28+00:00] [Greg Lehey] []
+MID: <199611171013.LAA25485@freebie.lemis.de>
+SUBJ: Re: "free" SCO O/S
+BODY: John S. Dyson writes: | >> | >> Ok, so I get a prompt for the BTLD disk, and insert it.  Only it | >> appears that the 'slha' driver isn't on the disk.  Or perhaps I | >> mistyped it.  At any rate, this section from the SCO manual is | >> pertinent : | >> | >>            NOTE  If there are any errors during this extraction (linking) | >>            process, the process is aborted and you are forced to reboot. | >> | >> Like hell I am.  Stick it back on the shelf and worry about it some | >> other time.  Anyone tells me FreeBSD is difficult to install is going | >> to get laughed out of the room. |  | Too true. |  | > You nee
+------------------------------------------------------------
+[1996-11-18T16:31:02+00:00] [exidor@superior.net (Christopher Masto)] []
+MID: 199611181631.LAA24415@nimbus.superior.net
+SUBJ: Problems with 2.1.6-RELEASE
+BODY: ftp.freebsd.org |   Can't complete download, site is too loaded | ftp2.freebsd.org |   2.1.6-RELEASE not present |   Mirror looks ancient - recent snapshots of 2.2 missing | ftp3.freebsd.org |   XFree86 missing from 2.1.6 distribution | ftp4.freebsd.org |   Does not respond to FTP | ftp5.freebsd.org |   XFree86 missing from 2.1.6 distribution | ftp6.freebsd.org |   Many files missing from 2.1.6 distribution | ftp7.freebsd.org |   unknown host. |  | --  | Christopher Masto  .   .   .   .   Superior Net Support: support@superior.net | chris@masto.com  .   .   .   .   . Masto Consulting:           info@masto.com |  | On Redundancy: |   I
+------------------------------------------------------------

@@ -1,0 +1,1677 @@
+==========================================================================================
+DB: freebsd-hackers.duckdb  hits=5
+==========================================================================================
+--------------------------------------------------------------------------------
+MID: 3D5FDA8F.5D735D38@mindspring.com
+DATE: 2002-08-18T17:34:07+00:00  FROM: Terry Lambert <tlambert2@mindspring.com> <None>
+SUBJ: Hotmail (was Re: Insider's scoop: Why FreeBSD is dying)
+BODY:
+Andy wrote:
+
+Oh, I could definitely see Microsoft needing a lot of VIPs; they
+would need one per unique, deployed services, and potentially one
+per "branding" partner (depends on whether they expect a modern
+browser -- "Host:" being set correctly for virtual hosting).  I'm
+"pretty sure", that they have other address blocks, as well.  8-).
+
+For service availability, though, they would only really need a
+small number of VIPs per colocation facility, for a large and
+distributed service (basically, one per redundant virtual circuit
+path for initial distribution).
+
+So if they were widely deployed, you would expect maybe 8 VIPs
+per colocation facility... but you would not expect them to be
+in a large, contiguous netblock: you'd expect them to be 8 here,
+and 8 there, etc., based on geographic location.
+
+It's actually my understanding (I'm willing to be corrected here)
+that HotMail is pretty centrally served, because of the protocols
+involved, and because of their architecture.
+
+Anyway, I guess if I could get a full class B, I'd have one, and
+I wouldn't be questioning *why* someone had been willing to give
+it to me.  8-) 8-).  It just seemed mighty strange.
+
+-- Terry
+
+To Unsubscribe: send 
+
+--------------------------------------------------------------------------------
+MID: 1029694230.310.20.camel@cocaine
+DATE: 2002-08-18T18:10:30+00:00  FROM: Wouter Van Hemel <wouter@pair.com> <None>
+SUBJ: Re: Hotmail (was Re: Insider's scoop: Why FreeBSD is dying)
+BODY:
+On Sun, 2002-08-18 at 19:34, Terry Lambert wrote:
+
+Microsoft seems to like putting everything in the same subnet - remember
+their nameserver incident a while ago?
+
+http://www.theregister.co.uk/content/archive/16321.html
+
+Painfully hilarious. I wonder if they hire MCSE's themselves...
+
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 405432E0-B2EB-11D6-A7FE-0003938C7B7E@queasyweasel.com
+DATE: 2002-08-18T20:44:12+00:00  FROM: Jordan K Hubbard <jkh@queasyweasel.com> <None>
+SUBJ: Re: Hotmail (was Re: Insider's scoop: Why FreeBSD is dying)
+BODY:
+Can we maybe stop debating this and just have our postmaster do what he 
+can to filter this kind of noise out?  Recycled slashdot trolls are 
+hardly the kind of content we want to see on hackers@freebsd.org and 
+what goes on in IRC has been repeatedly made clear to have nothing to 
+do with the project on any official basis, so we don't need discussions 
+of IRC behavior on hackers either.  If we took it up in -hackers every 
+time somebody dissed somebody else in IRC, we'd never have the 
+bandwidth to discuss anything else.
+
+Filters?  Please?  Enough is enough.
+
+- Jordan
+
+On Sunday, August 18, 2002, at 10:34 AM, Terry Lambert wrote:
+
+--
+Jordan K. Hubbard
+Engineering Manager, BSD technology group
+Apple Computer
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 20020819004847.037023B12@ns1.ovis.net
+DATE: 2002-08-19T01:57:39+00:00  FROM: chromexa@ovis.net <None>
+SUBJ: re: Re: Hotmail (was Re: Insider's scoop: Why FreeBSD is dying)
+BODY:
+
+
+
+
+
+
+
+
+
+
+Pithy short comment that can seldom do. Well to expand on the Mark Twain saying, "News of the Demise of *BSD is greatly exaggerated."  News of  the demise of many people, places or things often is very exaggerated. As long as it doesn't spark endless messages. Let's see ...sorry for the anti-socially short reply to a long message, but I like to quote whold contents and none of us, AS FAR AS I KNOW HAS SUFFER WITH A 300 BAUD WORLD!!! :)
+
+Have Fun,
+Sends Steve
+
+
+Download NeoPlanet at http://www.neoplanet.com
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 33886.148.243.211.89.1037337396.squirrel@mail.unixmexico.com
+DATE: 2002-11-15T05:16:36+00:00  FROM: <nbari@unixmexico.com> <None>
+SUBJ: hotmail and yahoo 
+BODY:
+Hi all
+
+i just want to know what type or authentication does yahoo or hotmail uses
+for their webmail service
+
+what do they use for does big servers ldap or some sql (mysql, oracle, etc)?
+
+thanks
+
+
+
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-hackers" in the body of the message
+
+
+
+
+==========================================================================================
+DB: freebsd-chat.duckdb  hits=40
+==========================================================================================
+--------------------------------------------------------------------------------
+MID: Pine.BSF.4.10.9909201043060.66830-100000@thelab.hub.org
+DATE: 1999-09-20T13:44:48+00:00  FROM: The Hermit Hacker <scrappy@hub.org> <None>
+SUBJ: Hotmail/NT issue ...
+BODY:
+
+Awhile back, when M$ first bought out Hotmail, they tried to switch it
+over to NT and it failed...couldn't kep the servers stable or something to
+that effect...
+
+Or, at least, I *seem* to remember that...
+
+Now, I can't find anything on it :(  Does anyone have any references I can
+use for an argument against using NT on a high-load server?  
+
+Thanks...
+
+Marc G. Fournier                   ICQ#7615664               IRC Nick: Scrappy
+Systems Administrator @ hub.org 
+primary: scrappy@hub.org           secondary: scrappy@{freebsd|postgresql}.org 
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-chat" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 4.2.0.58.19990920104549.05b70cf0@localhost
+DATE: 1999-09-20T16:47:07+00:00  FROM: Brett Glass <brett@lariat.org> <None>
+SUBJ: Re: Hotmail/NT issue ...
+BODY:
+At 10:44 AM 9/20/99 -0300, The Hermit Hacker wrote:
+
+
+http://www.unix-vs-nt.org/
+
+--Brett
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-chat" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 199909202026.GAA01686@ska.bsn
+DATE: 1999-09-20T20:26:09+00:00  FROM: atrn@zeta.org.au <None>
+SUBJ: Re: Hotmail/NT issue ...
+BODY:
+
+There was a post to comp.os.linux.advocacy many months ago from an
+alleged hotmail employee denying all claims that they attempted to
+switch to NT.  The usual archive(s) may have a copy if you look hard
+enough.  This may not be what you want (you're trying to convince
+people why NT shouldn't be used right?) but it may be closer to the
+truth than the alleged attempted conversion.  But then again MS have had
+Hotmail for long enough now that they may have tried.  It would be
+useful for them to attempt to run such a service with their flagship
+OS so they really may have attempted to move it.  I doubt it could do
+it but they could try nonetheless.
+
+--
+Andy Newman
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-chat" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: Pine.BSF.4.10.9909201732240.23117-100000@germanium.xtalwind.net
+DATE: 1999-09-20T21:36:06+00:00  FROM: jack <jack@germanium.xtalwind.net> <None>
+SUBJ: Re: Hotmail/NT issue ...
+BODY:
+
+http://webserv.vnunet.com/www_user/plsql/pkg_vnu_search_mo.right_frame?p_story=52704
+http://www.unix-vs-nt.org/kirch/
+
+
+--------------------------------------------------------------------------
+Jack O'Neill                    Systems Administrator / Systems Analyst
+jack@germanium.xtalwind.net     Crystal Wind Communications, Inc.
+          Finger jack@germanium.xtalwind.net for my PGP key.
+   PGP Key fingerprint = F6 C4 E6 D4 2F 15 A7 67   FD 09 E9 3C 5F CC EB CD
+               enriched, vcard, HTML messages > /dev/null
+--------------------------------------------------------------------------
+
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-chat" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: Pine.BSF.4.10.9910251308130.53784-100000@hub.freebsd.org
+DATE: 1999-10-25T20:11:06+00:00  FROM: Kris Kennaway <kris@hub.freebsd.org> <None>
+SUBJ: Re: Hotmail security vulnerability (viruses) (fwd)
+BODY:
+
+
+--------------------------------------------------------------------------------
+MID: Pine.BSF.4.20.9910251622490.91975-100000@germanium.xtalwind.net
+DATE: 1999-10-25T20:25:11+00:00  FROM: jack <jack@germanium.xtalwind.net> <None>
+SUBJ: Re: Hotmail security vulnerability (viruses) (fwd)
+BODY:
+Today Kris Kennaway wrote:
+
+
+IIRC, it is only the front end that runs on FreeBSD.  The back
+(mail) end is sun HW and SW.
+
+--------------------------------------------------------------------------
+Jack O'Neill                    Systems Administrator / Systems Analyst
+jack@germanium.xtalwind.net     Crystal Wind Communications, Inc.
+          Finger jack@germanium.xtalwind.net for my PGP key.
+   PGP Key fingerprint = F6 C4 E6 D4 2F 15 A7 67   FD 09 E9 3C 5F CC EB CD
+               enriched, vcard, HTML messages > /dev/null
+--------------------------------------------------------------------------
+
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-chat" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: Pine.BSF.4.10.9910251329550.59784-100000@hub.freebsd.org
+DATE: 1999-10-25T20:31:12+00:00  FROM: Kris Kennaway <kris@hub.freebsd.org> <None>
+SUBJ: Re: Hotmail security vulnerability (viruses) (fwd)
+BODY:
+On Mon, 25 Oct 1999, jack wrote:
+
+
+My question still stands, and that _was_ still quoted as the reason..
+
+Kris
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-chat" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 199910260131.SAA22839@usr06.primenet.com
+DATE: 1999-10-26T01:31:22+00:00  FROM: Terry Lambert <tlambert@primenet.com> <None>
+SUBJ: Re: Hotmail security vulnerability (viruses) (fwd)
+BODY:
+
+
+You can de-MIME anything MIME into a seperate file, and then run the
+scan on it based on it being a file.  You would need to do this
+anyway, since you would need to seperate the queue-commit, scan,
+and deliver phases of the process.
+
+You could do this pretty easily using "deferred" delivery mode in
+sendmail, and then moving the queue files into a directory to be
+scanned (there's perl code in the sendmail 8.9.3 distribution for
+doing this with appropriate locking), and then into a third queue
+directory after the attachments have been vetted, where you could
+do a queue run to deliver them.  I believe that all the pieces to
+do this are already in "ports" (i.e. sendmail and metamail).
+
+
+Another alternative is to use the Melissa patch for sendmail that is
+available from sendmail.com, but this is a header blocking patch
+that would not stop variants.
+
+Since Melissa is a Microsoft Word macro virus, one technique that
+would work is to delete all MS Word attachments from all email that
+flows through your server.  8-).
+
+
+Scanning for viruses is a legal nightmare; consider if your users
+get a virus anyway, after you have supposedly vetted the code.
+
+
+					Terry Lambert
+					terry@lambert.org
+
+--------------------------------------------------------------------------------
+MID: 199910260134.SAA23052@usr06.primenet.com
+DATE: 1999-10-26T01:34:32+00:00  FROM: Terry Lambert <tlambert@primenet.com> <None>
+SUBJ: Re: Hotmail security vulnerability (viruses) (fwd)
+BODY:
+
+Most likely, this is a Sun issue, not a FreeBSD issue.  The SMTP
+virus scanner that McAfee sells is only available for NT at this
+time.
+
+Also, the McAfee software in question is written in Java, and
+just needs a JVM and glue into the mail delivery path to run;
+HotMail is a big enough customer that they could get a port,
+given the amount of money they'd have to flush to get the
+software, in any case.
+
+
+					Terry Lambert
+					terry@lambert.org
+---
+Any opinions in this posting are my own and not those of my present
+or previous employers.
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-chat" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 4.2.0.58.19991025194033.0452f6b0@localhost
+DATE: 1999-10-26T01:43:29+00:00  FROM: Brett Glass <brett@lariat.org> <None>
+SUBJ: Re: Hotmail security vulnerability (viruses) (fwd)
+BODY:
+Terry's right, of course. John Hardin has a package that does this,
+and it DOES run under FreeBSD. So the article's claim that there are
+no macro virus protection systems for FreeBSD is bogus.
+
+Our community network uses Hardin's package, and we've never seen
+a macro virus get through.
+
+See ftp://ftp.rubyriver.com/pub/jhardin/antispam/procmail-security.html
+
+--Brett
+
+At 01:31 AM 10/26/1999 +0000, Terry Lambert wrote:
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-chat" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 3925AEFB.F014FF9C@slt.sel.Sony.com
+DATE: 2000-05-19T21:15:39+00:00  FROM: Robert Bowen <rbowen@slt.sel.sony.com> <None>
+SUBJ: New and interesting Hotmail/FreeBSD gossip
+BODY:
+We got a new sysadmin where I work part time. He just came from a job at
+Hotmail, and he told me today that they are in the process of converting
+all of their FreeBSD machines (over 15,000) to Win2000. A purely
+political move by Microsoft to stamp out this thorn in their side. Does
+anyone know more about the story?
+
+Robert
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-chat" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 200005192128.OAA22571@implode.root.com
+DATE: 2000-05-19T21:28:25+00:00  FROM: David Greenman <dg@root.com> <None>
+SUBJ: Re: New and interesting Hotmail/FreeBSD gossip 
+BODY:
+
+   I thought it was 'only' about 5000 machines. Anyway, yes, it's true that
+they are trying to convert again to Win/NT. The previous attempts failed;
+perhaps they'll have more success this time.
+
+-DG
+
+David Greenman
+Co-founder, The FreeBSD Project - http://www.freebsd.org
+Creator of high-performance Internet servers - http://www.terasolutions.com
+Pave the road of life with opportunities.
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-chat" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 20000519174504.A38512@mad
+DATE: 2000-05-19T21:45:04+00:00  FROM: Tim Vanderhoek <vanderh@ecf.utoronto.ca> <None>
+SUBJ: Re: New and interesting Hotmail/FreeBSD gossip
+BODY:
+On Fri, May 19, 2000 at 02:28:25PM -0700, David Greenman wrote:
+
+Maybe that's why it's 15000 machines this time...
+
+
+-- 
+Signature withheld by request of author.
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-chat" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 20000519152346.E13502@fw.wintelcom.net
+DATE: 2000-05-19T22:23:46+00:00  FROM: Alfred Perlstein <bright@wintelcom.net> <None>
+SUBJ: Re: New and interesting Hotmail/FreeBSD gossip
+BODY:
+* Tim Vanderhoek <vanderh@ecf.utoronto.ca> [000519 15:18] wrote:
+
+I thought MS was getting about a 40-1 ratio with thier clustering?
+
+40 NT boxes to match 1 FreeBSD box was the last count with
+ftp.cdrom.com versus the Evil MS Cluster for the ftp bench?
+
+Is there really enough silicon here in the valley for Hotmail
+to deploy NT?
+
+-- 
+-Alfred Perlstein - [bright@wintelcom.net|alfred@freebsd.org]
+"I have the heart of a child; I keep it in a jar on my desk."
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-chat" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: Pine.BSF.4.00.10005200252380.26255-100000@super-g.inch.com
+DATE: 2000-05-20T06:55:40+00:00  FROM: spork <spork@super-g.com> <None>
+SUBJ: Re: New and interesting Hotmail/FreeBSD gossip
+BODY:
+On Fri, 19 May 2000, Robert Bowen wrote:
+
+
+I would think 15,000 of anything to frontend a mail service should work
+OK..  I heard from a guy working at one of the big Chat/Community sites
+still has an old chat server app that runs on NT, and there is literally
+a number of employees there who run a 24/7 "push the reset button on the
+NT server" department.  Lower TCO my ass...  How many button pushers would
+you need for 15,000 NT servers?  It seems like you'd lose one every few
+minutes at that size...
+
+Charles
+
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-chat" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 398A000E.A5175FBB@uwi.tt
+DATE: 2000-08-03T23:28:14+00:00  FROM: "Dale E. Chulhan" <dchulhan@uwi.tt> <None>
+SUBJ: MS Hotmail servers begin switch from FreeBSD to Win2k
+BODY:
+MS Hotmail servers begin switch from FreeBSD to Win2k
+By: John Lettice
+Posted: 01/08/2000 at 08:41 GMT
+
+http://www.theregister.co.uk/content/4/12290.html
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-chat" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 20000804150321.A45180@klapaucius.zer0.org
+DATE: 2000-08-04T22:03:21+00:00  FROM: Gregory Sutter <gsutter@zer0.org> <None>
+SUBJ: Re: MS Hotmail servers begin switch from FreeBSD to Win2k
+BODY:
+On 2000-08-03 19:28 -0400, "Dale E. Chulhan" <dchulhan@uwi.tt> wrote:
+
+This has been on Daemon News since 20000801.  Gotta keep up with
+your daily BSD news... :)
+
+http://daily.daemonnews.org/view_story.php3?story_id=1081
+
+Greg
+-- 
+Gregory S. Sutter                 Bureaucrats cut red tape--lengthwise.
+mailto:gsutter@zer0.org 
+http://www.zer0.org/~gsutter/ 
+PGP DSS public key 0x40AE3052
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-chat" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: XFMail.000809145341.doconnor@gsoft.com.au
+DATE: 2000-08-09T05:23:41+00:00  FROM: "Daniel O'Connor" <doconnor@gsoft.com.au> <None>
+SUBJ: Re: hotmail now running win2000
+BODY:
+
+<moved to -chat>
+
+On 09-Aug-00 Brian Hechinger wrote:
+
+Well, if you have a procedure for doing it when you build the machines, it
+probably wouldn't take much more effort..
+
+The powerstrip is simpler though :)
+
+---
+Daniel O'Connor software and network engineer
+for Genesis Software - http://www.gsoft.com.au
+"The nice thing about standards is that there
+are so many of them to choose from."
+  -- Andrew Tanenbaum
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-chat" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 200008090553.BAA62721@entropy.tmok.com
+DATE: 2000-08-09T05:53:45+00:00  FROM: Brian Hechinger <wonko@users.tmok.com> <None>
+SUBJ: Re: hotmail now running win2000
+BODY:
+Daniel O'Connor drunkenly mumbled...
+
+take out of box
+mount in cabinet
+plug in power and ethernet
+
+installation finished.
+
+
+much.  :)
+
+-brian
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-chat" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 3A3819E7.327D8F31@phoenixdsl.com
+DATE: 2000-12-14T00:52:55+00:00  FROM: 1MAZDA1{WC} <1mazda1@phoenixdsl.com> <None>
+SUBJ: Hotmail not FreeBSD anymore???
+BODY:
+
+
+The site www.hotmail.com runs Microsoft-IIS/5.0 on Windows 2000
+
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-chat" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: XFMail.001213170345.jhb@FreeBSD.org
+DATE: 2000-12-14T01:03:45+00:00  FROM: John Baldwin <jhb@FreeBSD.org> <None>
+SUBJ: RE: Hotmail not FreeBSD anymore???
+BODY:
+
+On 14-Dec-00 1MAZDA1{WC} wrote:
+
+Old news.
+
+-- 
+
+John Baldwin <jhb@FreeBSD.org> -- http://www.FreeBSD.org/~jhb/
+PGP Key: http://www.baldwin.cx/~john/pgpkey.asc
+"Power Users Use the Power to Serve!"  -  http://www.FreeBSD.org/
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-chat" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 3A381BDB.92A9BEDB@phoenixdsl.com
+DATE: 2000-12-14T01:01:15+00:00  FROM: 1MAZDA1{WC} <1mazda1@phoenixdsl.com> <None>
+SUBJ: Re: Hotmail not FreeBSD anymore???
+BODY:
+Not to me..
+
+John Baldwin wrote:
+
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-chat" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: Pine.LNX.4.21.0104102224000.7124-100000@pilchuck.reedmedia.net
+DATE: 2001-04-11T05:27:02+00:00  FROM: "Jeremy C. Reed" <reed@reedmedia.net> <None>
+SUBJ: HotMail still using FreeBSD?
+BODY:
+I often read articles (as recent as last week) that mention BSD powering
+HotMail. Is this still the case?
+
+ Migrating Microsoft Hotmail from FreeBSD to Microsoft Windows 2000
+ Technical Case Study
+
+ "During June and July of 2000, the Hotmail site was converted from
+ FreeBSD running Apache Web services to Windows 2000 Server running
+ Microsoft Internet Information Services 5.0. ..."
+
+ http://www.microsoft.com/technet/migration/hotmail/default.asp
+
+   Jeremy C. Reed
+   http://bsd.reedmedia.net/
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-chat" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 20010411060454.K20908-100000@blues.jpj.net
+DATE: 2001-04-11T10:09:16+00:00  FROM: Trevor Johnson <trevor@jpj.net> <None>
+SUBJ: Re: HotMail still using FreeBSD?
+BODY:
+
+They must have converted a few computers back:
+
+http://uptime.netcraft.com/up/graph/?host=ad.law3.hotmail.com
+http://uptime.netcraft.com/up/graph/?host=ad.law4.hotmail.com
+http://uptime.netcraft.com/up/graph/?host=ad.law7.hotmail.com
+
+The "Last Changed" dates for those are last 12 October.
+-- 
+Trevor Johnson
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-chat" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 15080.15992.732520.463161@guru.mired.org
+DATE: 2001-04-26T15:27:52+00:00  FROM: Mike Meyer <mwm@mired.org> <None>
+SUBJ: Re: hotmail converted from freeBSD
+BODY:
+[Moved from -questions to -chat]
+Hervey Wilson <herveyw@dynamic-cast.com> types:
+
+Actually, the first one was pretty much what I was looking for - at
+least at this level. It looks like completion ports give you a way to
+tune behavior between the single thread w/select and the
+thread-per-socket model, which is an interesting concept. The real use
+is to adopt the single thread w/select model to an SMP system.  The
+recommended tuning on a uniprocessor system is a single thread.
+
+The only thing that the completion port model clearly saves you
+compared to the thread-per-socket model is memory resources. It may
+save you context switches compared to some approaches, but that looks
+to be more of a problem with the underlying platform than anything
+else.
+
+It does add the problems of dealing with threading to the single
+thread w/select model. That's pretty much the cost of using more than
+one CPU, though.
+
+In theory, the Unix select & thread semantics can generate this kind
+of behavior. I'd be surprised if it actually worked that well,
+though. I'd *not* be surprised if it failed in some strange way.
+
+	Thanx,
+	<mike
+--
+Mike Meyer <mwm@mired.org>			http://www.mired.org/home/mwm/
+Independent WW
+
+--------------------------------------------------------------------------------
+MID: 200104261739.KAA24045@usr05.primenet.com
+DATE: 2001-04-26T17:37:46+00:00  FROM: Terry Lambert <tlambert@primenet.com> <None>
+SUBJ: Re: hotmail converted from freeBSD
+BODY:
+
+The reasoning behind I/O completion ports is that it permits
+you to do something on completion of I/O, such as initiate yet
+another I/O (a "feedme" signal that is delivered reliably as an
+event, unlike a UNIX signal, which is merely a persistant
+condition).
+
+Effectively, this allows you to provide the equivalent of a
+multithreaded program, without having to adopt the stupidity and
+context switch overhead of most threads implementations (e.g Linux,
+SVR4, etc.) which results from the inability to implement thread
+group affinity in the scheduler properly, without resulting in a
+starvation deadlock for other processes whose threads are not in
+the same group ("process" == "group of threads").
+
+If you look at the FreeBSD threads design, it doesn't suffer from
+these problems (barring the "KSEG == CPU affinity" silliness that
+pops up in discussion on -arch occasionally).
+
+This _significantly_ saves on context switch overhead; in particular,
+it avoid reloading of control register 3, and TLB shootdown, which
+would otherwise result in significant  processing overhead, even
+when switching between threads in the same group (since you can
+never know what thread the scheduler is going to pick, o
+
+--------------------------------------------------------------------------------
+MID: 15080.47377.734245.834332@guru.mired.org
+DATE: 2001-04-27T00:10:57+00:00  FROM: Mike Meyer <mwm@mired.org> <None>
+SUBJ: Re: hotmail converted from freeBSD
+BODY:
+Terry Lambert <tlambert@primenet.com> types:
+
+The author of the paper I referenced mentions that, but goes on to
+state that what IO completions ports provide that some other Windows
+facility doesn't is the ability to control how many threads are
+actively dealing with the results of IO going through that port.
+
+
+The author listed two savings over the "thread per socket" model: one
+was the memory resources used by that number of threads, and the other
+was the context switch overhead. I couldn't see why you would get a
+lot of context switch savings on a properly designed system.  Glad to
+see FreeBSD is such a system.
+
+
+While I appreciate the suggestion, I'm not going to follow up on
+it. If I ever find myself in a situation where the only income I can
+get programming involves working with Windows, I'll start selling used
+cars for a living.
+
+	<mike
+--
+Mike Meyer <mwm@mired.org>			http://www.mired.org/home/mwm/
+Independent WWW/Perforce/FreeBSD/Unix consultant, email for more information.
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-chat" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 200104271749.KAA01700@usr07.primenet.com
+DATE: 2001-04-27T17:49:48+00:00  FROM: Terry Lambert <tlambert@primenet.com> <None>
+SUBJ: Re: hotmail converted from freeBSD
+BODY:
+
+The author is naieve, or is simplifying the situation intentionally.
+
+Are you in the Bay Area?  I have full Microsoft documentation of
+the "VIPER" framework, which I could show you, but could not let
+you copy.
+
+You can abuse it that way, certainly, but you are doing so only
+in order to avoid properly marshalling objects.
+
+It turns out in the Windows model, that the virtual address spaces
+per thread are actually "copy on write".  This effectively means
+that if thread "A" uses some thread local storage (all COM and DCOM
+objects are instances in thread local storage), and then thread "A"
+created thread "B", than all of the objects previously instanced
+in thread "A" thread local storage are accessible in thread "B",
+without explicit marshalling.
+
+This is not often talked about, since thread "A" could run as ADMIN,
+and thread "B" could do an "impersonate" prior to opening up a
+network connection, and you would then erroneously believe that
+you could only damage heap information, not instance information,
+if you were a malicious attacker who caused a buffer overflow in
+thread "B".
+
+AFAIK, there have been no attacks against NT or 2000 servers which
+take advantage of this, since it's real
+
+--------------------------------------------------------------------------------
+MID: 15081.63562.908112.407519@guru.mired.org
+DATE: 2001-04-27T22:52:58+00:00  FROM: Mike Meyer <mwm@mired.org> <None>
+SUBJ: Re: hotmail converted from freeBSD
+BODY:
+Terry Lambert <tlambert@primenet.com> types:
+
+Since he's discussing writing scalable network servers for NT 3.5, I'd
+say the latter.
+
+
+No. That - like LA - is a place I've escaped from.
+
+
+That was pretty much what I had assumed, and appreciate you verifying
+my assumption.
+
+
+It's not a book, it's a paper from MicroSoft on writing servers for
+NT. I don't trust it - some of the assumptions didn't mesh with my
+experience writing multithreaded servers on other platforms. That's
+why I asked about it on -chat - I wanted to know if MS's documentation
+was up the level of their software. I appreciate your verification
+that the authors assumptions were indeed bogus. The white paper that
+MS published on migrating Hotmail from FreeBSD to W2K makes these same
+assumptions, which is where this thread started.
+
+Since we're discussing proper behavior on public mailing lists, I'd
+suggest you read documents before critizing them publicly. The thing
+about the horses mouth, you know.
+
+	<mike
+--
+Mike Meyer <mwm@mired.org>			http://www.mired.org/home/mwm/
+Independent WWW/Perforce/FreeBSD/Unix consultant, email for more information.
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe free
+
+--------------------------------------------------------------------------------
+MID: 200104272310.QAA13891@usr02.primenet.com
+DATE: 2001-04-27T23:10:47+00:00  FROM: Terry Lambert <tlambert@primenet.com> <None>
+SUBJ: Re: hotmail converted from freeBSD
+BODY:
+
+
+The problem with these white papers, and most of Microsoft's code,
+is that the people who Know What They Are Doing are off doing
+much more interesting work than migrating legacy applications
+systems from where they used to run, to Microsoft platforms.
+
+
+
+I don't have to read the paper to know that, if it said what
+you said it said; I just need to know it's wrong.  8-).
+
+I got my information from the VIPER Technology Preview for IIS,
+and the authors of the OS, at a meeting in Redmond Washington,
+so I consider them to be more autoritative than hacks working
+on legacy code because they don't rate more interesting work.  8-).
+
+
+					Terry Lambert
+					terry@lambert.org
+---
+Any opinions in this posting are my own and not those of my present
+or previous employers.
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-chat" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: Pine.BSF.4.21.0106071049120.4693-100000@heorot.1nova.com
+DATE: 2001-06-07T17:50:52+00:00  FROM: Rick Hamell <hamellr@heorot.1nova.com> <None>
+SUBJ: Hotmail Email
+BODY:
+
+	Anyone else getting bounced emails from Hotmail? Everytime I send
+something that way it bounces back the first time but works just fine the
+2nd time. Ah well... I guess Windows 2000 isn't that great... :)
+
+	Rick
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-chat" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 20010607200023.R39309@messiah.megadeb.org
+DATE: 2001-06-07T18:00:23+00:00  FROM: Munish Chopra <chopra@runbox.com> <None>
+SUBJ: Re: Hotmail Email
+BODY:
+On Thu, Jun 07, 2001 at 10:50:52AM -0700, Rick Hamell wrote:
+
+Same thing here. Hotmail has really gone down the toilet.
+
+-- 
+-Munish
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-chat" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: Pine.BSF.4.21.0112121809010.13638-100000@heorot.1nova.com
+DATE: 2001-12-13T02:09:39+00:00  FROM: Rick Hamell <hamellr@heorot.1nova.com> <None>
+SUBJ: Hotmail still uses FreeBSD!!!
+BODY:
+
+...according to The
+Regiter. :) http://www.theregister.co.uk/content/28/23348.html
+
+	Rick
+
+*******************************************************************
+Rick's FreeBSD Web page http://heorot.1nova.com/freebsd
+Ace Logan's Hardware Guide http://hw.shatteredcrystal.com
+***FreeBSD - The Power to Serve! http://www.freebsd.org
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-chat" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 002b01c18396$61485d30$0a00000a@atkielski.com
+DATE: 2001-12-13T05:23:58+00:00  FROM: "Anthony Atkielski" <anthony@atkielski.com> <None>
+SUBJ: Re: Hotmail still uses FreeBSD!!!
+BODY:
+Even years ago, Hotmail was running heavily tweaked versions of standard
+UNIX e-mail software on UNIX servers (possibly Solaris at one time, IIRC).
+With tens of millions of accounts, it's very difficult to find any standard
+solution that will scale.  UNIX software is easier to modify for special
+purposes than Windows software (even for Microsoft), and this would largely
+explain the lingering presence of FreeBSD at Hotmail.  Additionally, to
+achieve parity with Windows 2000 would require more hardware ... and when
+you are dealing with an application that already puts a strain on whatever
+hardware you throw at it with an OS as simple as UNIX, trying to make it all
+run on Windows may be a nearly impossible task.
+
+Microsoft used to receive a lot of heat for the fact that they never used
+their Microsoft Mail product internally (on the server side), even though
+they tried to sell it as a solution for companies just like themselves, and
+they are probably still sensitive on that point (today they run Exchange
+Server internally, the same product that they sell to everyone else).  Many
+other companies more or less competing with MS still use Windows on the
+desktop, though, so I don't see why
+
+--------------------------------------------------------------------------------
+MID: 4.3.2.7.2.20020324105234.0199cda8@threespace.com
+DATE: 2002-03-24T16:58:41+00:00  FROM: Chip Morton <tech_info@threespace.com> <None>
+SUBJ: Re: [burnscharlesn@hotmail.com: Advocacy help for CS professor]
+BODY:
+At 01:16 PM 3/22/2002, David Johnson wrote:
+
+I disagree with this one.  I would pay cash to have Internet Explorer on 
+FreeBSD.  It would probably cut down significantly on my Windows use.
+
+My experience is that IE renders pages faster than any other browser I've 
+used recently (except Lynx) and I never find myself wondering if a page 
+will display correctly.  It handles with ease all the "standards-compliant" 
+pages that I've seen.  Mozilla, on the other hand, seems to gobble up as 
+much RAM as you have before it goes for your swap space.  Konqueror is 
+sweet, but it still doesn't display *all* the pages I visit the way they 
+were meant to be seen.
+
+Of course, I realize that a person's assessment of a web browser is only as 
+good as the pages he tends to visit, so opinions are sure to vary here.
+
+<< Chip Morton >>
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-chat" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 3C9E11B7.F36170B8@centtech.com
+DATE: 2002-03-24T17:49:43+00:00  FROM: Eric Anderson <anderson@centtech.com> <None>
+SUBJ: Re: [burnscharlesn@hotmail.com: Advocacy help for CS professor]
+BODY:
+Chip Morton wrote:
+
+
+I think the problem is that when MS created IE, they intentionally made it
+NOT follow all the standards, and then made software that created web pages that
+also didn't follow the standards (but broke the rules the MS way).  Netscape
+didn't follow those broken rules, and since a huge population of web designers
+are Windows addicts, they used Windows tools, which used the easily
+implementable IE libraries and made broken html, Netscape appeared to be the one
+that was "broken".  There are numerous sites that work fine in IE but do not
+work in Netscape or Opera, or any other browser I could find.  Rendering pages
+faster?  Sure, probably because they render / correct as the page downloads, and
+Netscape doesn't, but I agree with you here.  Netscape, IE, Mozilla, all suck.
+If there was a browser out there that did everything IE/Netscape do (including
+the GUI email client), I'd pay for it hands down.  Opera is close, but no cigar.
+
+Eric
+
+
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-chat" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 20020324194719.K307-100000@phoenix.vh.laserfence.net
+DATE: 2002-03-24T17:50:20+00:00  FROM: Willie Viljoen <will@laserfence.net> <None>
+SUBJ: Re: [burnscharlesn@hotmail.com: Advocacy help for CS professor]
+BODY:
+Have you tried Konqueror?
+
+It comes with 2.0 and up version of the KDE desktop. Although I'm not one
+for GUIs, I must say it impresses me.
+
+One feature I particularly like is the ability to change the user agent
+string it sends, per webpage.
+
+My internet banking facility uses a web page which blatantly refuses users
+access until the user agent string contains the magic IE version reply,
+mostly because they know they use broken HTML. With the right setting
+applied, it works fine in Konqueror though...
+
+Konqueror even has fully working java and javascript support (although for
+java you have to download the enormous file from Sun). It is also binary
+compatible with Netscape plugins from Windows and Linux.
+
+The Kmail client is more or less as user friendly as MS's abomination..
+althogh I still prefer my pine and my lynx, I might just be a stuck up old
+console relic.
+
+Will
+
+On Sun, 24 Mar 2002, Eric Anderson wrote:
+
+
+-- 
+Willie Viljoen
+Private IT Consultant
+
+214 Paul Kruger Avenue
+Universitas
+Bloemfontein
+9321
+
+South Africa
+
++27 51 522 15 60, a/h +27 51 522 44 36
++27 82 404 03 27
+
+will@laserfence.net
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-chat" in
+
+--------------------------------------------------------------------------------
+MID: 15518.6465.710922.324623@guru.mired.org
+DATE: 2002-03-24T18:21:53+00:00  FROM: Mike Meyer <mwm-dated-1017426114.b7072f@mired.org> <None>
+SUBJ: Re: [burnscharlesn@hotmail.com: Advocacy help for CS professor]
+BODY:
+In <3C9E11B7.F36170B8@centtech.com>, Eric Anderson <anderson@centtech.com> typed:
+
+Just FYI, I've seen a graphical browser that was faster than Lynx on
+the same platform. It was also very standards-compliant, at least for
+the standards of the time. It even had a switch to make it swallow
+non-standard code that MSIE and NS swallowed. I'd pay money for it on
+FreeBSD. I'd do the port and give it back to the author, but he never
+answered my letter asking him about it.
+
+
+That's SOP for Microsoft.
+
+
+No, Netscape followed their own broken rules, and acted like Microsoft
+in nearly every way when they had the most popular browser. They
+didn't even bother send people to the IETF HTML meetings - at least
+not until after they had already written code that did what the IETF's
+proposed standards did, but not as well. That's why HTML 3.2 is so
+much worse than HTML 3.0.
+
+Anyone who actually knew anything about the desktop market would have
+predicted the result of Netscape trying to out-Microsoft Microsoft.
+It's like the neighborhood bully tangling with the 800-lb gorilla. You
+get a very broken bully.
+
+
+Since I value security, I turn off all the things that can spread
+viruses. I also disable a numb
+
+--------------------------------------------------------------------------------
+MID: 4.3.2.7.2.20020324125154.0197b368@threespace.com
+DATE: 2002-03-24T18:56:48+00:00  FROM: Chip Morton <tech_info@threespace.com> <None>
+SUBJ: Re: [burnscharlesn@hotmail.com: Advocacy help for CS professor]
+BODY:
+At 11:50 AM 3/24/2002, Willie Viljoen wrote:
+
+I recently got turned on to Konqueror, and it's kinda slick.  It's 
+definitely my browser of choice on FreeBSD.  But I do find that there a few 
+pages with "display anomalies" that will send me back to using Internet 
+Explorer.  Not many though.  And I haven't even taken the time to install 
+the Java interpreter yet.
+
+
+
+Where the hell do you get KMail?  I can't seem to find it anywhere.  Now 
+that I'm actually *using* FreeBSD again, I figured I would try to read my 
+freebsd.org e-mail using its tools instead.
+
+<< Chip Morton >>
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-chat" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 4.3.2.7.2.20020324125937.019edf00@threespace.com
+DATE: 2002-03-24T19:06:36+00:00  FROM: Chip Morton <tech_info@threespace.com> <None>
+SUBJ: Re: [burnscharlesn@hotmail.com: Advocacy help for CS professor]
+BODY:
+At 12:21 PM 3/24/2002, Mike Meyer wrote:
+
+And as much as I recognize the problem, at the end of the day I don't 
+really care about standards as much as being able to see my choice web 
+sites quickly and correctly.  I think most web site designers are the same 
+way, figuring that most of their audience will be using Internet Explorer, 
+and the small minority who aren't will be able to find their way to an IE 
+without too much effort.  (It is free, right?)
+
+As much as possible, I try not to set my non-Windows browsers to report as 
+IE.  Site administrators may never notice, but I want to "stand up and be 
+counted" as a FreeBSD user.  Somebody might actually start paying attention 
+one day.
+
+
+
+I'm glad to know that I'm not the only one who did/does this.  I had a 
+Windows 98 system for a while whose only purposes was running IE6 and 
+displaying web pages. :-)
+
+<< Chip Morton >>
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-chat" in the body of the message
+
+
+
+
+==========================================================================================
+DB: freebsd-current.duckdb  hits=21
+==========================================================================================
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-current-0c2a47753063764f>
+DATE: 2000-08-09T04:29:44+00:00  FROM: thomas () hentschel ! net <None>
+SUBJ: Re: hotmail now running win2000 (not all of it)
+BODY:
+On  8 Aug, Irwan Hadi wrote:
+
+            
+www.hotmail.com is running Apache/1.3.6 (Unix) mod_ssl/2.2.8 SSLeay/0.9.0b on FreeBSD 
+
+at least on my query. Every 3rd query comes up with W2k. This time they
+approaching this a bit more careful ...
+
+-Th
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-current-77cc7e7751f0642e>
+DATE: 2000-08-11T17:16:57+00:00  FROM: alex () big ! endian ! de (Alexander Langer) <None>
+SUBJ: Re: hotmail now running win2000
+BODY:
+Thus spake The Hermit Hacker (scrappy@hub.org):
+
+
+a quick DirectActiveVBScript, you mean.
+
+Alex
+-- 
+cat: /home/alex/.sig: No such file or directory
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+--------------------------------------------------------------------------------
+MID: 4.2.0.58.20000808221617.00a98480@staf.bpkpenabur.or.id
+DATE: 2000-08-09T04:16:25+00:00  FROM: Irwan Hadi <irwanhadi@iname.com> <None>
+SUBJ: hotmail now running win2000
+BODY:
+Sigh http://www.netcraft.com/whats/?host=www.hotmail.com 
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 200008090428.AAA61610@entropy.tmok.com
+DATE: 2000-08-09T04:28:35+00:00  FROM: Brian Hechinger <wonko@users.tmok.com> <None>
+SUBJ: Re: hotmail now running win2000
+BODY:
+Irwan Hadi drunkenly mumbled...
+
+not on all the machines however.  re-run the query, sometimes you get:
+
+www.hotmail.com is running Apache/1.3.6 (Unix) mod_ssl/2.2.8 SSLeay/0.9.0b on FreeBSD
+
+got both goin.  just in case w2k didn't make the grade i assume.
+
+-brian
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 200008090429.VAA55899@falcon.home.hentschel.net
+DATE: 2000-08-09T04:29:44+00:00  FROM: thomas@hentschel.net <None>
+SUBJ: Re: hotmail now running win2000 (not all of it)
+BODY:
+On  8 Aug, Irwan Hadi wrote:
+
+            
+www.hotmail.com is running Apache/1.3.6 (Unix) mod_ssl/2.2.8 SSLeay/0.9.0b on FreeBSD 
+
+at least on my query. Every 3rd query comes up with W2k. This time they
+approaching this a bit more careful ...
+
+-Th
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 4.2.0.58.20000808222949.00a86390@staf.bpkpenabur.or.id
+DATE: 2000-08-09T04:30:44+00:00  FROM: Irwan Hadi <irwanhadi@iname.com> <None>
+SUBJ: Re: hotmail now running win2000
+BODY:
+At 12:28 AM 8/9/00 -0400, Brian Hechinger wrote:
+
+But I guess soon they will change all their freeBSD servers ;(
+and I wonder, how many people should be employed by Microsoft, just to 
+press the restart button at their 2000 servers for Hotmail, in case they 
+got BSOD ?
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 200008090444.AAA61833@entropy.tmok.com
+DATE: 2000-08-09T04:44:47+00:00  FROM: Brian Hechinger <wonko@users.tmok.com> <None>
+SUBJ: Re: hotmail now running win2000
+BODY:
+Irwan Hadi drunkenly mumbled...
+
+it's called the APC MasterSwitch (or similar peoduct by alternate vendor)
+
+reboot machines over the network.  takes the place of 64.2% of all people
+employed with the word microsoft in their title.
+
+-b
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 4.2.0.58.20000808224658.00a83c70@staf.bpkpenabur.or.id
+DATE: 2000-08-09T04:48:43+00:00  FROM: Irwan Hadi <irwanhadi@iname.com> <None>
+SUBJ: Re: hotmail now running win2000
+BODY:
+At 12:44 AM 8/9/00 -0400, Brian Hechinger wrote:
+
+Including MCSE, MCP , etc ? ;) :)
+
+BTW how can the administrator of hotmail determine if a server is BSOD or 
+not then ?, because they have 2000 servers and I think without enough 
+employees to watch the system and how can APC master switch reboot the 
+machine in case it BSOD ?
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: Pine.BSF.4.21.0008090146280.31845-100000@thelab.hub.org
+DATE: 2000-08-09T04:46:52+00:00  FROM: The Hermit Hacker <scrappy@hub.org> <None>
+SUBJ: Re: hotmail now running win2000
+BODY:
+On Wed, 9 Aug 2000, Brian Hechinger wrote:
+
+
+and they do have their own 'Foundry' like product that they can use as a
+front end ...
+
+
+Marc G. Fournier                   ICQ#7615664               IRC Nick: Scrappy
+Systems Administrator @ hub.org 
+primary: scrappy@hub.org           secondary: scrappy@{freebsd|postgresql}.org 
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 200008090459.AAA62024@entropy.tmok.com
+DATE: 2000-08-09T04:59:02+00:00  FROM: Brian Hechinger <wonko@users.tmok.com> <None>
+SUBJ: Re: hotmail now running win2000
+BODY:
+Irwan Hadi drunkenly mumbled...
+
+bingo.
+
+
+SNMP is your friend.
+
+-b
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: Pine.BSF.4.21.0008090150330.31845-100000@thelab.hub.org
+DATE: 2000-08-09T04:51:44+00:00  FROM: The Hermit Hacker <scrappy@hub.org> <None>
+SUBJ: Re: hotmail now running win2000
+BODY:
+On Tue, 8 Aug 2000, Irwan Hadi wrote:
+
+
+use something like netsaint to monitor those machines?  and the APC master
+switch is web administered, so it would be too easy to build a quick perl
+script to trigger a power outlet correspondign to the partiular server
+that was n olonger responding ...
+
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: XFMail.000809142949.doconnor@gsoft.com.au
+DATE: 2000-08-09T04:59:49+00:00  FROM: "Daniel O'Connor" <doconnor@gsoft.com.au> <None>
+SUBJ: Re: hotmail now running win2000
+BODY:
+
+On 09-Aug-00 The Hermit Hacker wrote:
+
+Personally I would wire something up to the reset switch instead..
+
+Much less potential for accidentally nuking your hardware if your script is
+broken and starts toggling machines on and off like mad..
+(much less violent on disk etc too)
+
+---
+Daniel O'Connor software and network engineer
+for Genesis Software - http://www.gsoft.com.au
+"The nice thing about standards is that there
+are so many of them to choose from."
+  -- Andrew Tanenbaum
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 200008090517.BAA62285@entropy.tmok.com
+DATE: 2000-08-09T05:17:29+00:00  FROM: Brian Hechinger <wonko@users.tmok.com> <None>
+SUBJ: Re: hotmail now running win2000
+BODY:
+Daniel O'Connor drunkenly mumbled...
+
+but how feasable is that for a large installation.  would you like to pull
+2000 machines apart and make the needed modifications?  the masterswitch
+solutions is "plug 'n play" it just a powerstip as far as i''m concerned.
+
+just food for thought.
+
+-b
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: Pine.BSF.4.21.0008090116560.90843-100000@turtle.looksharp.net
+DATE: 2000-08-09T05:18:39+00:00  FROM: "Brandon D. Valentine" <bandix@looksharp.net> <None>
+SUBJ: Re: hotmail now running win2000
+BODY:
+Take this to -chat or -advocacy, PLEASE.  This is nowhere near a
+relevant topic for -current.
+
+Brandon D. Valentine
+-- 
+bandix at looksharp.net  |  bandix at structbio.vanderbilt.edu
+"Truth suffers from too much analysis." -- Ancient Fremen Saying
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: Pine.BSF.4.21.0008090110510.77892-100000@turtle.looksharp.net
+DATE: 2000-08-09T05:58:32+00:00  FROM: Adam <bsdx@looksharp.net> <None>
+SUBJ: Re: hotmail now running win2000
+BODY:
+On Tue, 8 Aug 2000, Irwan Hadi wrote:
+
+
+I hate to dissapoint you all, but Windows NT (certainly 4 and 5(win2k),
+not sure about 3.51 because I havent used it) has a "feature" to enable
+automatic reboot at BSOD.  Its just off by default, whereas FreeBSD has
+this feature on by default :)
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 200008091336.IAA25610@plains.NoDak.edu
+DATE: 2000-08-09T13:36:54+00:00  FROM: Mark Tinguely <tinguely@plains.NoDak.edu> <None>
+SUBJ: Re: hotmail now running win2000
+BODY:
+
+
+there are watchdog cards like the Berkshire to do this. I was asked to
+fix a Linux driver problem for one of these cards and wrote a FreeBSD
+driver for the card. Thankfully *BSD is stable enough that this board
+is not needed, but (trying to justify my time in doing the driver for BSD)
+the card also has a temperature feature that you could use with a ATX power
+supply and the FreeBSD 3.x/4.x init to shut off the machine if the
+internals get to hot.
+
+--mark tinguely
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 200008091401.KAA18840@hc1.hci.net
+DATE: 2000-08-09T14:01:21+00:00  FROM: Mike Johnson <ahze@wp.cc.nc.us> <None>
+SUBJ: Re: hotmail now running win2000
+BODY:
+
+I wonder what the back servers that handle the mail are running though... I
+wonder if they are gonna be changed to windows 2000 .. 
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 8D18C4F9CBA1D311900F00A0C990C97F01044526@neimail.networkengines.com
+DATE: 2000-08-09T14:14:21+00:00  FROM: Craig Hughes <Craig.Hughes@networkengines.com> <None>
+SUBJ: RE: hotmail now running win2000
+BODY:
+
+Or you could use something like Network Engines servers and AdminEngine that
+have built in out-of-band management...even if the main OS loses its lunch,
+you can still reach the machine (including power cycling, temp. detection,
+etc.). 
+
+Craig 
+(Disclaimer: I work for them!)
+
+-----Original Message-----
+From: Mark Tinguely [mailto:tinguely@plains.NoDak.edu]
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 4.2.0.58.20000809115010.00a41920@staf.bpkpenabur.or.id
+DATE: 2000-08-09T17:50:36+00:00  FROM: Irwan Hadi <irwanhadi@iname.com> <None>
+SUBJ: Re: hotmail now running win2000
+BODY:
+At 10:01 AM 8/9/00 -0400, Mike Johnson wrote:
+
+
+Seems Microsoft SMTPSVC for the mail.
+You can try sending an email to your account from a hotmail account to prove ;)
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 8325.965855090@localhost
+DATE: 2000-08-09T21:04:50+00:00  FROM: "Jordan K. Hubbard" <jkh@zippy.osd.bsdi.com> <None>
+SUBJ: Re: hotmail now running win2000 
+BODY:
+Erm, can I ask what this thread POSSIBLY has to do with
+freebsd-current?  Do people even care about posting on-topic things to
+the correct mailing lists anymore?  At best, this is and always was
+freebsd-chat material.  Thank you.
+
+- Jordan
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 20000811191657.A8035@cichlids.cichlids.com
+DATE: 2000-08-11T17:16:57+00:00  FROM: alex@big.endian.de (Alexander Langer) <None>
+SUBJ: Re: hotmail now running win2000
+BODY:
+Thus spake The Hermit Hacker (scrappy@hub.org):
+
+
+a quick DirectActiveVBScript, you mean.
+
+Alex
+-- 
+cat: /home/alex/.sig: No such file or directory
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-current" in the body of the message
+
+
+

@@ -1,0 +1,4848 @@
+==========================================================================================
+DB: freebsd-hackers.duckdb  hits=120
+==========================================================================================
+--------------------------------------------------------------------------------
+MID: <199505070734.AA08842@physics.su.oz.au>
+DATE: 1995-05-07T07:34:03+00:00  FROM: David Dawes <dawes@physics.usyd.edu.au>
+SUBJ: Number of partitions reports/required by disklabel incorrect?
+BODY:
+I just noticed that the output of disklabel(8) on SNAP-950412 reports the
+number of partitions to be one more than it displays.  The main reason I
+noticed it was that when editing the label, and setting the number to the
+actual number:
+
+3 partitions:
+#        size   offset    fstype   [fsize bsize bps/cpg]
+  a:   164538      198    4.2BSD      512  4096    16   # (Cyl.    1 - 831)
+  c:   164538      198    unused        0     0         # (Cyl.    1 - 831)
+  d:   164736        0    unused        0     0         # (Cyl.    0 - 831)
+
+
+disklabel would say:
+
+Warning, unused partition d: size 164736 offset 0
+
+
+and sure enough running disklabel again reports:
+
+3 partitions:
+#        size   offset    fstype   [fsize bsize bps/cpg]
+  a:   164538      198    4.2BSD      512  4096    16   # (Cyl.    1 - 831)
+  c:   164538      198    unused        0     0         # (Cyl.    1 - 831)
+
+
+If I tell it I've got 4 partitions, then the 3 get written to the label
+correctly.
+
+David
+
+From owner-freebsd-hackers  Sun May  7 01:14:44 1995
+Return-Path: hackers-owner
+Received: (from majordom@localhost)
+          by freefall.cdrom.com (8.6.10/8.6.6) id BAA09668
+          for hackers-outgoing; Sun, 7 May 1995
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-cd5a462c8b4c2ca2>
+DATE: 1995-02-05T12:05:36+00:00  FROM: rkw () dataplex ! net (Richard Wackerbarth) <None>
+SUBJ: Re: sophisticated executable/library dependency checking in ports
+BODY:
+
+We really need this feature. Then we SHOULD realize that, in effect, the
+whole system is a "port". These same features need to apply to the whole
+tree, particularly the build tools, as well.
+
+Another thing that I have seen recently is hard coding of paths.
+IMHO, this must stop. I am trying to get to a point where I can compile one
+version of "world" without destroying the system on which I am running. To
+do this, ALL paths will have to become relative.
+
+----
+Richard Wackerbarth
+rkw@dataplex.net
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-08cfe4db700e474b>
+DATE: 1995-02-10T21:37:18+00:00  FROM: Mark Tinguely <tinguely () plains ! nodak ! edu> <None>
+SUBJ: video packages put into incoming
+BODY:
+
+I am putting the nv 3.3 changes we use at NDSU for PPM and RGB video grabbers
+on the the incoming directory of freebsd.cdrom.com.
+
+hopefully you will not need the PPM video grabber, but there is a small
+aplology/explaination as to why we wrote it. The RGB is video grabber
+written for the Digitial Vision Computer Eyes capture card (again don't
+buy one of these, it was written because that is what was here and I know
+there are several of them out there). Other than the ioctl that gets the
+width and height for the image, this will work with any capture RGB card
+and I hope to add the functionality of other cards as we write the drivers
+for them.
+
+I shipped a statically linked copy of nv and a PPM file. this way you can
+run this on a machine that does not have X installed (redirecting the DISPLAY
+of course.).
+
+I will also put the DVCE driver in the incoming directory.
+
+--mark.
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-9d613a5124cfc2a6>
+DATE: 1995-02-23T08:10:38+00:00  FROM: "Christoph P. Kukulies" <kuku () gilberto ! physik ! rwth-aachen ! de> <None>
+SUBJ: /etc/exports format
+BODY:
+
+I had a line 
+
+/home/snap /home/snap10 -maproot=root gil
+
+in /etc/exports on blues. Today I found that the mount that existed
+has disappeared (?---------    root wheel  ).
+
+I saw recent changes regarding /etc/exports format.
+I tried to mount again to no avail:  RPC error : permission denied
+
+What is the final rule now for exporting subtrees of a filesystem?
+
+
+
+--Chris Christoph P. U. Kukulies kuku@gil.physik.rwth-aachen.de
+FreeBSD blues 2.1.0-Development FreeBSD 2.1.0-Development #0: Fri Feb 17
+18:32:16  1995     root@blues:/usr/src/sys/compile/BLUES  i386
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-0510a00eeb0c0d62>
+DATE: 1995-02-23T14:32:55+00:00  FROM: "Michael C. Newell" <mnewell () lupine ! nsi ! nasa ! gov> <None>
+SUBJ: Re: DOS ppp/slip packages
+BODY:
+On Tue, 21 Feb 1995, Don Yuniskis wrote:
+
+
+Trumpet is a shareware TCP/IP package for Windoze that supports SLIP and 
+provides a Winsock (actually, when we tested it it was the ONLY package 
+that completely supported all Winsock features!) API.  It won't help you 
+with MS-DOG users, but if you're using Windoze it's easy to install and 
+we've found it to be pretty solid.  
+
+We've also used Chameleon, SuperTCP, and LAN Workplace for DOS; all of
+them work with various features (I use SuperTCP's NFS at home) but they
+are really messy to set up and manage [with SuperTCP every time I want to
+install a new interface I basically have to re-install the entire package;
+it keeps losing track of configuration files... ;{(]  There are lots of 
+other packages out there too, but these are the ones I've experienced.
+
+On the MS-DOG only side things are a bit thinner since there's no 
+"standard" API for TCP/IP under MS-DOG.  However, we've had some success 
+with Minuet (shareware) and I've also used PC/TCP (commercial).  SuperTCP 
+also allows some TCP/IP functionality under MS-DOG (I use the NFS 
+capability); I'm sure some of the other packages have like functionality.
+
+Hope this helps,
+
+Mike
+
++-----
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-2448c6a049a1862d>
+DATE: 1995-02-25T12:39:32+00:00  FROM: Luigi Rizzo <luigi () labinfo ! iet ! unipi ! it> <None>
+SUBJ: A suggestion on ports/ layout
+BODY:
+I recently had to grab the ports distribution for FreeBSD. With
+the current strategy of separating the original distribution and
+the FreeBSD diffs, and the fact that most ftp sites support tar
+and gzip, I thought it was ok to move to the the parent directory
+of ports and do
+
+	get ports.tar.gz
+
+EXCEPT that this also includes "ports/distfiles", which is huge.
+Could we move it somewhere else ? This way, grabbing a ports
+distribution would become very fast.
+
+	Luigi
+====================================================================
+Luigi Rizzo                     Dip. di Ingegneria dell'Informazione
+email: luigi@iet.unipi.it       Universita' di Pisa
+tel: +39-50-568533              via Diotisalvi 2, 56126 PISA (Italy)
+fax: +39-50-568522
+====================================================================
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-e32e995f594688b4>
+DATE: 1995-02-26T10:03:41+00:00  FROM: Luigi Rizzo <luigi () labinfo ! iet ! unipi ! it> <None>
+SUBJ: Re: A couple of points about ports
+BODY:
+
+Well you suggest how to fix the code, but a lot of code already
+exists and new one will come out with the wrong (for FreeBSD 2.X)
+declarations. Anyways, if I remember well, the actual problem is
+that in stdio.h there are a couple of __const in the declaration
+of sys_errlist which do not appear in the offending sources. Could
+we try to compile them with -D__const= ?
+
+	Luigi
+====================================================================
+Luigi Rizzo                     Dip. di Ingegneria dell'Informazione
+email: luigi@iet.unipi.it       Universita' di Pisa
+tel: +39-50-568533              via Diotisalvi 2, 56126 PISA (Italy)
+fax: +39-50-568522
+====================================================================
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-0ee00e2821370ea9>
+DATE: 1995-03-26T14:53:57+00:00  FROM: Amancio Hasty <hasty () star-gate ! com> <None>
+SUBJ: Packages was (Re: httpd as part of the system. )
+BODY:
+
+
+Well, at least one of the Linux distributions has a CDROM App distribution.
+This can go a long way from alleviating the needs of those who want
+to USE FreeBSD and not just hack on the kernel or with its utilities.
+Also, it may save the end users including myself from having to 
+compile packages all over again. I do it however I can see that 
+many will not like to or an unable due to system resources to 
+re-compile some of the Apps.
+
+	Amancio
+
+  
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-70abade23efcb767>
+DATE: 1995-04-09T10:07:18+00:00  FROM: asami () cs ! berkeley ! edu (Satoshi Asami | 浅 =?ISO-2022 <None>
+SUBJ: Ports hackers wanted!
+BODY:
+(Note: I've CC:ed this to "hackers" too for wider audience...if you are 
+ following up, please send it to "ports" only...thanks)
+
+I'm now working on a bunch of projects aimed at "a better, friendlier
+ports scheme" (how nice! :).  However, I'm severely short-handed and
+at the rate things are going, most of my (brilliant!) ideas are not
+going to make it into 2.1.  This is sad!
+
+So, I need help.  If you are interested in one or more of the projects 
+listed in FreeBSD-current/src/TODO-2.1/asami, please contact me.  In
+particular, I need immediate help in the following areas:
+
+-*-
+
+Update: Thu Apr  6 08:24:02 PDT 1995
+Due:	Hopefully before 2.1
+Prio:	High
+Task:	Enhance pkg_install
+
+Again a couple of ideas here:
+
+(1) Make pkg_create or pkg_add able to "register" a package from the
+    ports directory by looking into pkg/PLIST.  We can then call this
+    from the "install" rule in bsd.port.mk so that the user can
+    pkg_delete it later.
+
+(2) Add some way to include the dependency information (usually
+    LIB_DEPENDS, maybe EXEC_DEPENDS too but this one is harder 'cause
+    it may be required only for compilation) into the package so that
+    pkg_add will check for the existences and print
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-31e35e75ce65ba92>
+DATE: 1995-04-23T18:45:19+00:00  FROM: Frank Mayhar <frank () exit ! com> <None>
+SUBJ: Re: 1.1.5.1 ports
+BODY:
+
+Ayup.  And will be, at least until 2.1 comes out, and maybe a bit past that.
+I've stayed with 1.1.5.1 because of the stability it had which 2.0, sadly,
+lacked.
+
+One thing that would be useful (for myself and, undoubtedly, others) would
+be some kind of upgrade script, that would avoid the necessity of a complete
+from-scratch reinstall.  (As far as I'm concerned, something based on the
+sources would be fine.  Unfortunately, I just don't have the time or
+resources to do this myself, not only because I don't run 2.x, but because
+of work and personal commitments.)
+-- 
+Frank Mayhar frank@exit.com
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-fae9613b4da5f837>
+DATE: 1995-05-04T04:45:03+00:00  FROM: "Charles M. Hannum" <mycroft () ai ! mit ! edu> <None>
+SUBJ: Re: NetBSD supports LBA and large (EIDE) drives
+BODY:
+
+   I used to think LBA was only a hardware standard for IDE drives.  Is
+   there also a software standard for bypassing the C/H/S limits for both
+   ordinary BIOS calls and for booting?
+
+There is a separate set of BIOS calls that take LBA addresses.  What
+they actually do when talking to the drive is unspecified; they may,
+in fact, convert the addresses to C/H/S form.
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-f45917c0cdc61af7>
+DATE: 1995-05-06T11:53:32+00:00  FROM: "Andrey A. Chernov, Black Mage" <ache () astral ! msk ! su> <None>
+SUBJ: Re: cvs commit: ports/news/inn/pkg PLIST
+BODY:
+In message <199505052342.QAA09851@gndrsh.aac.dev.com> Rodney W. Grimes
+    writes:
+
+
+
+Ok, here current situation:
+
+cnews   /var/news
+nn      /var/news
+nntp    /var/news
+inn     /var/spool/news (should be fixed per Rod statement)
+trn     configured for NNTP (don't use news dir), else ask interactively with
+	defalut /usr/spool/news
+
+Torsten, please, fix it.
+
+Thanx in advance.
+
+-- 
+Andrey A. Chernov        : And I rest so composedly,  /Now, in my bed,
+ache@astral.msk.su       : That any beholder  /Might fancy me dead -
+FidoNet: 2:5020/230.3    : Might start at beholding me,  /Thinking me dead.
+RELCOM Team,FreeBSD Team :         E.A.Poe         From "For Annie" 1849
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-6f8fdee5755712b8>
+DATE: 1995-05-07T08:12:03+00:00  FROM: Bruce Evans <bde () zeta ! org ! au> <None>
+SUBJ: Re: Number of partitions reports/required by disklabel incorrect?
+BODY:
+
+
+
+
+
+You already had 3 (a, b and c with b empty and not displayed).  Then d
+was one too many.
+
+Bruce
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-0a9bd74a2f5993e3>
+DATE: 1995-05-15T03:24:01+00:00  FROM: asami () CS ! Berkeley ! EDU (Satoshi Asami | 浅 =?ISO-2022 <None>
+SUBJ: build of ports tree under way
+BODY:
+(Sent to "ports" and "hackers" for wider audience -- reply only to
+ "ports", please)
+
+I just started a full build of the ports tree on thud (fresh kernel,
+fresh world).  /e/thud.X11R6 and /d/thud.local are renamed to
+X11R6.old and local.old, respectively, if you need something.
+
+The "shells" subdir is already built, so people can log in (sorry
+last time, Gary ;).  I installed ~rich/x/*.tgz in /usr/X11R6 too.
+
+The actual command that is running (in /e/work/asami/ports) is:
+
+## make -k package BATCH=yes DUDS="archivers japanese print russian
+    shells smail dgd" < /dev/null > make.3 2>&1 &
+
+I'm hoping Andrey is rebuilding archivers/russian and Jean-Marc is
+rebuilding print. :)  And I'll do japanese later.
+
+smail is taken out because it uses bash and picks up some shell
+functions from my environment and bombs, I'll build it later.  And
+dgd...well, we'll deal with that later too.
+
+The packages will be (manually) copied to ftp.freebsd.org as they are
+rebuilt.  The whole distfiles directory should already be on
+ftp.freebsd.org.
+
+Please test them and report any problems.  Also, I'm hoping the
+maintainers of the interactive ports would build theirs.  These are
+the ones that have IS_INTEAC
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-52f0f407cd44aac3>
+DATE: 1995-05-18T05:00:16+00:00  FROM: "Rodney W. Grimes" <rgrimes () gndrsh ! aac ! dev ! com> <None>
+SUBJ: Re: Help ( out of ports )
+BODY:
+
+You should have waited for my mail, you missed the increase of
+pseudo-device   pty     16
+to 
+pseudo-device   pty     64
+
+
+Means you are out of pty devices...
+
+
+
+-- 
+Rod Grimes                                      rgrimes@gndrsh.aac.dev.com
+Accurate Automation Company                   Custom computers for FreeBSD
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-93140eb8f8fc6d66>
+DATE: 1995-05-28T06:53:55+00:00  FROM: asami () CS ! Berkeley ! EDU (Satoshi Asami | 浅 =?ISO-2022 <None>
+SUBJ: Re: /usr/local filetree and ports question
+BODY:
+I think questions like this are more well-suited to the "ports" list,
+Alexis....
+
+ * 	My knowledges may be out of date, but every FreeBSD port I saw
+ * before used /usr/local/lib directory for its libraries. The question is
+ :
+ * 	The thing described above would, as I suppose, enhace the structure
+ * of the whole FreeBSD.
+
+I agree with you, it's just that we are try to minimize the changes
+necessary to the original source to make upgrades and stuff easier.
+This means following the original's directory structures (as long as
+they are in /usr/local or /usr/X11R6), and this usually means
+/usr/local/lib for the libraries, architecture independent or not.
+
+It's really not any philosophical decision on our part.  But with
+nearly 300 ports out there, holding the upgrade headaches to a minimum
+has a very high priority to us. ;)
+
+Satoshi
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-cb509af62f67ed24>
+DATE: 1995-06-26T15:55:41+00:00  FROM: "Julian Stacey <jhs () freebsd ! org>" <jhs () vector ! eikon ! e-technik ! tu-muenchen ! de> <None>
+SUBJ: Re: ports/x11/xview-clients broken
+BODY:
+
+
+Well I just tried on a rebuilt tree, (from my master sites's (PCS) archive,
+this time, it extracts & creates a .build_done,
+but didnt actually run cc, or anything,
+
+I'll forget this one, it's not something I use anyway, & time is short.
+
+Julian S
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-1a79c928bc8921c8>
+DATE: 1995-06-28T20:40:46+00:00  FROM: "Rodney W. Grimes" <rgrimes () gndrsh ! aac ! dev ! com> <None>
+SUBJ: Re: Re[2]: Triton supports Parity?
+BODY:
+[I am posting this to the FreeBSD-hackers mailing lists as this has
+been another place there has been massive confusion about Triton and
+parity.  I would like the other folks involved here to post this reply
+to the Usenet news groups, etc that started this mess]
+
+
+He should have been able to forward his original post then with your
+number in it to me or possible given me an article number so I could go
+dig it out of the archives.  What is the big deal about anyway, all I
+I asked for was his source of information so I might yet again squelch
+bad data about the Triton chip set!  [Which Intel does not seem to be
+too concerned about :-(]
+
+
+I think you missed my point.  I am in agreement here that people _should_
+realize that this is not an official Intel claim, but that does not stop
+the folks who do not understand this from propagating it as an Intel
+claim.  Especially if it is forwarded from a Usenet article to some one
+via private email and the .signature gets cut off.
+
+Also you aol.com case is a strawman, those folks are not AOL employees
+using an aol.com address talking about Intel products.  Quite different
+than an Intel Employee with an Intel address talking about Intel products
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-03c060a0b1a75ce6>
+DATE: 1995-06-28T14:49:01+00:00  FROM: Paul Turley <Paul_Turley () ccm2 ! hf ! intel ! com> <None>
+SUBJ: Re[4]: Triton supports Parity?
+BODY:
+
+Text item: 
+
+
+    ...
+     
+    I did not argue the fact of this point with you, see above, I was just
+    trying to make you more aware of what some folks will do with your postings.
+
+    --
+    Rod Grimes                                      rgrimes@gndrsh.aac.dev.com
+    Accurate Automation Company                 Reliable computers for FreeBSD
+    
+    
+Actually, I think it was you who missed the point. Re-distributing a person's 
+email address and/or private email is a violation of "netiquette" at the least, 
+and, as i pointed out in an earlier private message, a violation of ethics. I'm 
+far less concerned about what "some folks" will do with my messages that what 
+you *have* done. Such as forwarding a private email message to an entire mailing
+list without permission. 
+
+Second, i have never made any "postings" on this matter. *All* my correspondence
+regarding this issue has been through *private* email. On only one occasion was 
+my correspondent given permission to repeat my message.
+
+---
+Paul Turley
+turley@ornews.intel.com
+Copyright (C) 1995, Paul Turley. Redistribution through any means prohibited
+without expressed, written permission of the author.
+
+Text item: External M
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-8fdb940e34c160a4>
+DATE: 1995-06-29T07:15:30+00:00  FROM: David Greenman <davidg () Root ! COM> <None>
+SUBJ: Re: Re[4]: Triton supports Parity?
+BODY:
+...
+...
+
+   Blah blah blah...
+
+   Could you two PLEASE remove freebsd-hackers from your little bitch session?
+All of this is far outside the charter of this list. Please take this private.
+
+-DG
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-67ce6ae9691fd9b5>
+DATE: 1995-06-30T15:45:58+00:00  FROM: Craig Struble <cstruble () quirk ! com> <None>
+SUBJ: Re: Weirdnesses with serial ports and lpd
+BODY:
+On Fri, June 30, 1995 at 07:51:22 (+0200), J. Wunsch wrote:
+ > As Craig .regexp. Struble wrote:
+ > > 
+ > > The other problem has to do with lpd. It core dumps if I run lpr from
+ > > within an XEmacs 19.12 command shell. It runs fine within an
+ > > xterm. Anyone else seen this?
+ > 
+ > Which is dumping core, lpd or lpr?
+ > 
+ > I've never seen such a problem.  Using lpr all the time, also from
+ > within (FSF) emacs.
+ > 
+lpd dumps core. Don't ask me why. I was trying to print a DVI file
+from within XEmacs (I love LaTeX mode), and I noticed that nothing was
+being piped to the printer. I went into /var/spool/output and there
+was an lpd.core file. I tried typing it directly in the window,
+thinking XEmacs was doing something wierd, same thing happens. Then I
+tried printing the same file from the xterm and everything was fine. 
+
+It would seem to have something to do with the terminal settings,
+here's the printcap entry:
+
+#
+# Okidata OL400e Page Printer--
+#
+lp|ol400e|lp1|text|ljet2p:\
+        :if=/usr/local/libexec/lpr/apsfilter:\
+        :lf=/var/log/lp1err:\
+        :lp=/dev/lpt0:\
+        :mx#0:\
+        :pl#66:\
+        :pw#80:\
+        :sd=/var/spool/output/lp1:\
+        :sh:
+
+apsfilter
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-4b4970993e3cb8d2>
+DATE: 1995-07-06T23:27:06+00:00  FROM: Jean-Marc Zucconi <jmz () cabri ! obs-besancon ! fr> <None>
+SUBJ: FYI: JAPAN COMPUTER CORPORATION PORTS BSD BERKELEY TO PREP
+BODY:
+------- Start of forwarded message -------
+
+JAPAN COMPUTER CORPORATION PORTS BSD BERKELEY TO PREP 
+(July 3rd 1995) Japan Computer Corporation launches its first
+PReP-compliant desktop this month, based on technology from
+FirePower. It also reports that it has signed parallel processing
+technology from Groupe Bull plus a further deal with Canon for
+technology, and possible future sales of Canon's laptop machines. 
+
+But perhaps the most notable aspect of the announcement is the
+inclusion of a PReP-compatible version of the 4.4 BSD Lite freeware
+Unix. This will be bundled as a standard part of the system - the
+other PReP operating systems will also be available, but will cost
+extra. Whether JCC will make its BSD implementation available to
+other vendors is unclear at the moment.  
+
+The Japanese PC market is fragmented compared to much of the rest of
+the world and Microsoft has failed to secure the grip that it has
+obtained elsewhere. Much of this is due to the alphabetical problems
+which beset the original DOS market. JCC says that one of the main
+reasons it decided to base its operating system strategy on BSDLite
+is a perceived English-centric attitude among the other OS providers.
+B
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-d492addd79fe8dc8>
+DATE: 1995-07-07T19:53:27+00:00  FROM: "Jordan K. Hubbard" <jkh () freebsd ! org> <None>
+SUBJ: Re: cvs commit: ports/editors/xemacs/pkg COMMENT PLIST
+BODY:
+
+Eh?  Maybe we're having email drop-outs, because I didn't get anything.
+
+My not getting a reply is what finally led me to just do it myself, in
+fact, as I surmised (incorrectly) that you were simply busy..
+
+
+Well, I removed them both and can always rescue one from the Attic.
+Are you sure the patch is still required?  I've been running the
+XEmacs I build from this for awhile now..
+
+
+Erm.  Yeah, sorry!  I forgot about that and will add it.
+
+
+Also true..  Shucks.
+
+
+Hmm...  It looks like I'm batting about .100 on this one.  Would you
+like to simply pick it up again?  Sorry for standing on your feet,
+and I'll jump off with hastily mumbled apologies and go back to doing
+something else now if you wish!
+
+						Jordan
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-e08255541f023547>
+DATE: 1995-07-12T18:55:17+00:00  FROM: Joe Greco <jgreco () brasil ! moneng ! mei ! com> <None>
+SUBJ: Re: ports and checksums (Re: Cloning systems)
+BODY:
+
+In many cases, nothing, I just wasn't aware it could be done.  Thank you I
+will look into it!  :-)  (is this documented anywhere, besides the
+source, btw?)
+
+In other cases, mostly site-customized stuff like mail and newsreaders, the
+program *must* be compiled on the target (yes, I realize many programs like
+elm and trn will run properly on machines within the same domain, and this
+is good - except I maintain machines within multiple domains).  If I can do
+a "make NO_EXTRACT=yes" and have it reconfigure and rebuild itself, using
+the already extracted sources, I would be quite pleased.
+
+(no I haven't tried *any* of this yet - tooooo busy getting ready for a
+major move and no scratch boxes to play on).
+
+... Joe
+
+-------------------------------------------------------------------------------
+Joe Greco - Systems Administrator			      jgreco@ns.sol.net
+Solaria Public Access UNIX - Milwaukee, WI			   414/342-4847
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-ea3124d182989622>
+DATE: 1995-07-14T22:04:27+00:00  FROM: Julian Howard Stacey <jhs () vector ! eikon ! e-technik ! tu-muenchen ! de> <None>
+SUBJ: WYSIWYG kit for src/usr.bin/vi, ports/net/chimera, print/ghostview
+BODY:
+
+I have written a set of patches that apply to:
+	src/usr.bin/vi, ports/net/chimera, print/ghostview
+	src/share/mk/some_new_file_name.mk
+
+They provide enhanced functionality, allowing a vi xterm to auto signal
+an adjacent chimera or ghostview, each time a :w is done,
+to cause the chimera or ghostview to redisplay, without need for 
+mousing about & clicking reload repetitively.
+
+I wrote them because I was envious of the WYSIWYG capability of
+the Doze & Windoze applications where WYSIWYG is normal.
+I freely admit this is Not WYSIWYG, its Semi-WYSIWYG,
+it only updates on each :w, not on each keystroke.
+
+I have just posted the chimera patches to the chimera author,
+the ghostview & vi patches were posted to ghostview & vi authors a month
+or two back.
+
+It will be a very long time before we see these enhancements work through all
+3 authors' release cycles & get integrated back here at FreeBSD, but
+meanwhile we can score a minor first for FreeBSD, & have them here first,
+if folk don't object. 
+
+The patches are small, & non intrusive, they don't wreck anything that
+I've noticed (I've been using them a couple of months now).
+
+I'd like to add them to our sources, but would like to offer a coup
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-71da29504dc28543>
+DATE: 1995-07-23T16:41:15+00:00  FROM: Bruce Evans <bde () zeta ! org ! au> <None>
+SUBJ: Re: Problem w/ serial ports going busy.
+BODY:
+
+This error occurs in the following cases:
+
+1) /dev/cuaa1 is already open and is in exclusive mode.
+2) /dev/ttyd1 is already open.
+3) /dev/ttyd1 was opened (in nonblocking mode) while it was and still is
+   being opened (in blocking mode), and your version of FreeBSD has broken
+   `last close' handling in vfs (all versions except 1.1.5+patches are
+   broken here).
+
+Case 3) is quite common.  It happens whenever there is a getty sleeping in
+open for /dev/ttyd1 and you do `stty -f /dev/ttyd1'.  Vfs counts opens
+before they succeed.  Thus the open count is 1 when getty goes to sleep.
+After stty opens the device, the device is active and the open count is 2.
+After stty closes the device, the open count is 1 and the device is still
+active because vfs only informs device drivers about last closes (open count
+== 0).
+
+
+This fails to fix case 3) because:
+
+a) the driver doesn't clear the busy flag.  It has no way of knowing that
+   the nonblocking open isn't still active.
+b) the device isn't open so exit() doesn't close it.  The device close
+   function never gets called.
+
+Case 2) can be hard to fix because close() can hang waiting to flush output.
+
+
+Run a program that holds /dev/ttyd1 open a
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-8e167e09114283d8>
+DATE: 1995-08-30T12:54:23+00:00  FROM: Coranth Gryphon <gryphon () healer ! com> <None>
+SUBJ: Re: copyright notices for ports/packages
+BODY:
+
+
+How about an option (check box on the install list, clopt for the command
+line version) to install them? That makes the user aware that there
+is a copyright/license file, and leaves it up to them (which it
+would be in any event) if the want to keep a copy on their disk.
+
+-coranth
+
+------------------------------------------+------------------------+
+Coranth Gryphon <gryphon@healer.com>      |  "Faith Manages."      |
+                                          |        - Satai Delenn  |
+Phone: 603-598-3440   Fax: 603-598-3430   +------------------------+
+USMail: 11 Carver St, Nashua, NH  03060
+Disclaimer: All these words are yours, except Europa... 
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-204355bf7fa129ea>
+DATE: 1995-09-27T11:28:14+00:00  FROM: peter () taronga ! com (Peter da Silva) <None>
+SUBJ: Re: Problems with packages, and general third party software.
+BODY:
+
+Since it's run by "operator" from cron, it doesn't have to be setuid-anything,
+really, if you have the permissions right.
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-e785dd33f8628976>
+DATE: 1995-09-29T03:34:56+00:00  FROM: Coranth Gryphon <gryphon () healer ! com> <None>
+SUBJ: Re: ports startup scripts
+BODY:
+From: Terry Lambert <terry@lambert.org>
+
+If we do the sanity check, then we can verify correctness at install
+time, with a cost of a lot more detail work required for each package.
+
+The sanity check requires being able to clearly specify what requirements
+exist, AND what each target satisfies. That is just not feasible.
+
+
+It's far easier to run "make -n start" to check validity of the configuration.
+
+-coranth
+
+------------------------------------------+------------------------+
+Coranth Gryphon <gryphon@healer.com>      |  "Faith Manages."      |
+                                          |        - Satai Delenn  |
+Phone: 603-598-3440   Fax: 603-598-3430   +------------------------+
+USMail: 3 Hansom Drive, Merrimack, NH  03054
+Disclaimer: All these words are yours, except Europa... 
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-ab0ade477b8b6dd4>
+DATE: 1995-11-08T10:13:54+00:00  FROM: Андрей Чернов <None>
+SUBJ: Re: cvs commit: ports/emulators/linux_lib/files md5
+BODY:
+In message <199511071832.MAA00812@jake.lodgenet.com> Eric L. Hernes
+    writes:
+
+
+
+Thanks, but I notice that lib distribution becomes too large,
+i.e. no symlinks present now for newly added libs f.e:
+
+libX11.so.6 _not_ symlink to libX11.so.6.0
+libXt.so.6 _not_ symlink to libXt.so.6.0
+etc.
+
+also they are the same libs!
+
+Please make symlinks to all equal libraries, it saves lot of space.
+
+-- 
+Andrey A. Chernov        : And I rest so composedly,  /Now, in my bed,
+ache@astral.msk.su       : That any beholder  /Might fancy me dead -
+http://dt.demos.su/~ache : Might start at beholding me,  /Thinking me dead.
+RELCOM Team,FreeBSD Team :         E.A.Poe         From "For Annie" 1849
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-80780426da078b41>
+DATE: 1995-11-28T13:02:28+00:00  FROM: "Andrew V. Stesin" <stesin () elvisti ! kiev ! ua> <None>
+SUBJ: Thoughts on ports&packages policies and FS layout (was: Re: More nits)
+BODY:
+Hello Peter da Silva,
+
+: > How do you handle namespace collisions? I would agree with this
+: > iff the utilities were installed somewhere outside of the standard
+: > PATH (i.e. in /usr/gnu/bin).
+
+: If they're installed from packages they'd be in /usr/local/bin.
+
+: I personally like having a /usr/gnu/bin myself.
+
+	I vote for "/usr/gnu/bin" for the stuff from FSF which
+	didn't come in a base distribution, too.
+
+: > My biggest complaint with the ports stuff right now is the way it
+: > scribbles all over /usr/local. Even worse, it isn't consistent (e.g.
+: > binaries installed in /usr/bin and support stuff under /usr/local/lib).
+: > /usr/local should be HANDS OFF to the vendor-supplied software, something
+: > I consider "ports" to be.
+
+	Seems to be a reasonable observation. It really may be annoying.
+	Suppose a (very realistic!) scenario: I'm installing a binary package,
+	it sits itself down in /usr/local/*. But I'm _not_ satisfied with it and
+	want to do some research and more experiments myself; I go get a
+	"port" stuff (I mean the Makefile + patch-* things) as a starting
+	point, and do some mine own experimental changes.  Then what?
+	`make install`, and the original binary package ge
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-ef3f6998b5d3d14c>
+DATE: 1995-11-28T17:54:20+00:00  FROM: Joe Greco <jgreco () brasil ! moneng ! mei ! com> <None>
+SUBJ: Re: 16 ports Boca - anyone using it?
+BODY:
+
+I've used that word a lot lately, myself  :-)
+
+
+Ok, I am installing:
+
+wye# diff -c sio.c{.fcs,}
+*** sio.c.fcs   Tue May 30 03:03:06 1995
+--- sio.c       Tue Nov 28 11:50:18 1995
+***************
+*** 1570,1575 ****
+--- 1570,1581 ----
+                }
+                if (incc <= 0 || !(tp->t_state & TS_ISOPEN))
+                        continue;
++ 
++               /* Bruce Evans / Michael Smith debug patch.. */
++               iir = inb(com->int_id_port) & 0x07;
++               if ((iir & 1) == 0)
++                       log(LOG_DEBUG, "sio%d: IRQ pending (%d) in poll\n", com->unit, iir);
++ 
+                /*
+                 * XXX only do this when we bypass ttyinput.
+                 */
+
+and I will report what happens when it happens.
+
+Thanks guys, I appreciate the help from people who know what the code is
+doing...  ;-)
+
+... Joe
+
+-------------------------------------------------------------------------------
+Joe Greco - Systems Administrator			      jgreco@ns.sol.net
+Solaria Public Access UNIX - Milwaukee, WI			   414/342-4847
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-dbecedc1825a0386>
+DATE: 1995-12-03T17:08:19+00:00  FROM: Dmitry Khrustalev <dima () bog ! msu ! su> <None>
+SUBJ: Re: Wine patch submitted to ports@freebsd.org
+BODY:
+
+
+On Fri, 1 Dec 1995, Julian Elischer wrote:
+
+
+Netware server for linux. After working around this bug it works under 
+freebsd. I think linware code is wrong anyway, since it will fail if  
+multiple clients access the same directory simultaneously.
+
+	-Dima
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-a72e7266125118e6>
+DATE: 1995-12-05T11:46:51+00:00  FROM: "Andrew V. Stesin" <stesin () elvisti ! kiev ! ua> <None>
+SUBJ: Again on a ports naming scheme (on hackers@ was: Re: More nits
+BODY:
+Hi,
+
+: > The ports software should be configured to install into either the
+: > standard directory tree, or into a seperate /usr/ports hierarchy.
+
+: What about 
+
+: 	/usr/ports/NameOfPackage/{bin,man,lib,include,info,doc}
+
+: And - to have only one path in $PATH and $MANPATH - symlinks of every
+: package in:
+
+: 	/usr/ports/{bin,man,lib,include,info}
+
+: Makes it easier to see, what belongs to a port.
+
+	... or what is missed accidentally.
+
+: I generally dislike
+: a /usr/local/bin directory with about 327 utilities ...
+
+	I vote YES! loudly for both suggestions.
+
+	Why on the Earth must someone consider a great stuff ported
+	by FreeBSD people to be 'local'?
+	What if I have some my _really_ local stuff, written locally
+	and installed locally? Why mess them in a single huge directory?
+
+	Already asked this, but there wasn't an answer. I apologize
+	for bothering people, that's my last attempt to rise this
+	topic, but I have a strong feel that such a change will be
+	a Good Thing (tm).
+
+	Of course, if 'local' is taken from me, I'll create another
+	subtree after all. :-)
+
+
+: --
+: andreas@knobel.gun.de       /\/\___  Wiechers & Partner Datentechnik GmbH
+:    Andreas Klemm        ___/\/\/       - 
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-78cfd0407781644b>
+DATE: 1995-12-11T01:12:48+00:00  FROM: "Jordan K. Hubbard" <jkh () time ! cdrom ! com> <None>
+SUBJ: Re: why the hell did sup remove many of my ports directories ?
+BODY:
+
+Maybe because you have an old sup file?  You don't read announce? :-)
+
+					Jordan
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-5a99204145183a80>
+DATE: 1995-12-11T18:23:30+00:00  FROM: Joe Diehl <joed () engg ! ksu ! edu> <None>
+SUBJ: problems with ports in 2.1-RELEASE && freefall
+BODY:
+There are a couple of ports that are essentially broken.  The
+problem is that make, nor myself for that matter, is unable to 
+fetch the distribution.
+
+The two ports that come to mind now are ncftp2 and xsnow.
+Neither of these ports have a distribution on ftp.freebsd.org 
+in the /pub/FreeBSD/distfiles directory.  I finally found the
+xsnow distribution in, I believe, current/distfiles,  or something
+like that.  I finally gave up on ncftp2.
+
+I'm afraid I can't provide more information, simply because it
+has been so long since I've tried.
+
+The other question is, why does xcolors have a dependency on
+ncftp2?  Since I couldn't fetch the ncftp2 dist, I simply 
+cut that dependency out of the Makefile... The program seems
+to work just fine...
+
+---
+Joe Diehl <joed@engg.ksu.edu>
+Engineering Computing Center
+Kansas State University
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-f4f69d63018d5af4>
+DATE: 1995-12-19T23:10:34+00:00  FROM: "Justin T. Gibbs" <gibbs () freefall ! freebsd ! org> <None>
+SUBJ: Re: Ports Tree Empty :-(
+BODY:
+
+The ports tree was never tagged.  I think the idea was that the -current
+ports tree would continue to work for 2.1 systems.  If that is not the
+case, then we've screwed up.  If/When we decide to do something that
+will break this functionality, we should tag the ports tree.
+--
+Justin T. Gibbs
+===========================================
+  FreeBSD: Turning PCs into workstations
+===========================================
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-98f2463dca1e5d6a>
+DATE: 1995-12-20T07:34:59+00:00  FROM: Ollivier Robert <roberto () keltia ! freenix ! fr> <None>
+SUBJ: Re: Ports.
+BODY:
+It seems that Jaye Mathisen said:
+
+I think the reason   it was not updated  is  that since 2.0.1,  it requires
+Motif to compile if my memory serves me right...
+-- 
+Ollivier ROBERT    -=- The daemon is FREE! -=-    roberto@keltia.frmug.fr.net
+   FreeBSD keltia.freenix.fr 2.2-CURRENT #7: Mon Dec 18 00:50:47 MET 1995
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-161c487f017428f8>
+DATE: 1995-12-20T17:20:44+00:00  FROM: Nate Williams <nate () rocky ! sri ! MT ! net> <None>
+SUBJ: Re: USR Sportster 28.8 internal
+BODY:
+
+
+I've got 4 external versions working fine here.  Assuming it's being
+probed correctly it should be exactly the same (modulo the DIP switches)
+
+
+Nate
+
+
+
+--------------------------------------------------------------------------------
+MID: 199412190821.SAA22128@orion.devetir.qld.gov.au
+DATE: 1994-12-19T08:21:13+00:00  FROM: Stephen McKay <syssgm@devetir.qld.gov.au> <None>
+SUBJ: Re: shared irq on serial ports
+BODY:
+J Wunsch <julia!j@uriah.sax.de> writes:
+
+
+Certainly you can't enable the IRQ lines of both ports at once, but the
+critically IRQ deprived can possibly get some use out of their shared ports.
+
+Assuming you have a high speed application for one port and a low speed
+application (or output only application) for the other, you can run one port
+via interrupts and one port via polling.  When the low speed port is open for
+reading, or output is queued, polling would be enabled, and disabled otherwise.
+If you keep your system clock at 100Hz and use a 16550, that gives you almost
+1600 cps, which means you could comfortably poll 9600bps input.  Fine for a
+mouse, printer or low speed modem.  A 16450 would yield a miserable 100 cps
+upper limit on input unless the tick rate was increased, though it might be
+useful for a printer.
+
+I don't know how much cpu you would lose with all this, and it is an awful
+lot of pissing about for such a small gain.  Check out the cost of a 4 or 8
+port serial card.  I've never regretted mine.
+
+Stephen.
+
+
+
+--------------------------------------------------------------------------------
+MID: 9412220915.AA19300@ns.GE.com
+DATE: 1994-12-22T09:12:00+00:00  FROM: Dick van den Burg <burg@burg.is.ge.com> <None>
+SUBJ: bidirectional ports ?
+BODY:
+I have asked this before on c.o.3.q, but I got no answers. 
+
+I would like to set up my system such that I can call in when the one
+modem is not in use for calling out. My understanding from the sio man page
+is that it should be possible.
+
+However, whe I start a getty on ttyd0, cu will give 'Line in use':
+
+/usr/u/burg# uname -v
+FreeBSD 2.0-RELEASE #5: Fri Dec  9 15:47:05 MET 1994     burg@burgpc.is.ge.com:/mnt/src/sys/compile/VDB 
+/usr/u/burg# ps ax | grep getty
+  112 v1  Is+    0:00.09 /usr/libexec/getty Pc ttyv1 
+  113 v2  Is+    0:00.10 /usr/libexec/getty Pc ttyv2 
+  162 00  Is+    0:00.07 /usr/libexec/getty std.38400 ttyd0 
+/usr/u/burg# ls -l /dev/ttyd0 /dev/cua00
+crw-rw-rw-  1 uucp  dialer   28, 128 Dec 20 16:35 /dev/cua00
+crw-rw-rw-  1 root  wheel    28,   0 Dec 21 09:18 /dev/ttyd0
+/usr/u/burg# 
+/usr/u/burg# cu -s38400 -l/dev/cua00 dir
+cu: /dev/cua00: Line in use
+/usr/u/burg#
+
+
+Am I doing something wrong, or is what I want simply not possible?
+
+Thanks,
+Dick van den Burg
+burg@is.ge.com
+
+
+
+--------------------------------------------------------------------------------
+MID: 199412221107.WAA02772@godzilla.zeta.org.au
+DATE: 1994-12-22T11:07:02+00:00  FROM: Bruce Evans <bde@zeta.org.au> <None>
+SUBJ: Re: bidirectional ports ?
+BODY:
+
+
+Perhaps getty has opened /dev/ttyd0.  Use "fstat | grep ttyd0" and/or
+"ps -laxt d0" to see if /dev/ttyd0 is open.  Carrier must be configured
+correctly for previous gettys to be killed.
+
+Check for junk in /var/spool/lock.  getty doesn't use lock files so
+there should be no locking conflicts between in and cu.
+
+Another bug: if I run cu while rlogin'ed, it connects correctly, but
+when I type "~.", both cu and rlogin exit.
+
+Bruce
+
+
+
+--------------------------------------------------------------------------------
+MID: 9412221127.AA02151@blaise.ibp.fr
+DATE: 1994-12-22T11:27:53+00:00  FROM: roberto@blaise.ibp.fr (Ollivier ROBERT) <None>
+SUBJ: Re: bidirectional ports ?
+BODY:
+
+AFAIK it is not a bug but a feature of the rlogin protocol :-)
+
+The problem is that both cu and rlogin use the same escape mechanism...
+When I know that I'll use cu, I do a telnet first :-)
+-- 
+Ollivier ROBERT   -=- FreeBSD: the daemon is FREE! -=-   roberto@freebsd.org
+      FreeBSD keltia 2.1.0-Development #0: Sun Dec 11 20:52:22  1994
+          roberto@keltia:/usr/src/sys/compile/KELTIA i386 ctm#199
+
+
+
+--------------------------------------------------------------------------------
+MID: 9412221225.AA22425@ns.GE.com
+DATE: 1994-12-22T12:21:24+00:00  FROM: Dick van den Burg <burg@burg.is.ge.com> <None>
+SUBJ: Re: bidirectional ports ?
+BODY:
+
+Yes, of course getty has /dev/ttyd0 open. That is exactly the problem.
+How can I start a getty without without it opening the device?
+
+There is no locl file.
+man sio says: The callout device is used to steel the port from processes
+waiting for carrier ... 
+This does not happen: I get the busy message.
+
+Thanks,
+Dick van den Burg
+burg@is.ge.com
+
+
+
+--------------------------------------------------------------------------------
+MID: 9412221232.AA00759@brasil.moneng.mei.com
+DATE: 1994-12-22T06:32:27+00:00  FROM: Joe Greco <jgreco@brasil.moneng.mei.com> <None>
+SUBJ: Re: bidirectional ports ?
+BODY:
+
+Er, am I missing something?  This sounds right.  If you are rlogin'd, you
+have one layer of tilde-controls.  If you rlogin and then cu, the cu is a
+second layer of tilde-control.  If you want to quote a tilde, send "~~".  So
+if one were rlogin'd twice, and wanted to exit cu, one would do "~~~~."
+
+Or did you mean something else?
+
+(I routinely intermix several levels of rlogin, telnet, and kermit, so it
+gets interesting sometimes, breaking out at just the right level... kermit
+from my home box to my work box, rlogin to another work box, kermit out to a
+sol.net box, telnet to Solaria itself, running screen on Solaria, screen in
+turn has telnet sessions to other boxes on the network...  you can easily
+get the characters going back and forth over half a dozen links... hehh fun)
+
+... Joe
+
+-------------------------------------------------------------------------------
+Joe Greco - Systems Administrator			      jgreco@ns.sol.net
+Solaria Public Access UNIX - Milwaukee, WI			   414/342-4847
+
+
+
+--------------------------------------------------------------------------------
+MID: 199412221237.XAA04236@godzilla.zeta.org.au
+DATE: 1994-12-22T12:37:45+00:00  FROM: Bruce Evans <bde@zeta.org.au> <None>
+SUBJ: Re: bidirectional ports ?
+BODY:
+
+Don't have carrier present when there is no connection.  Then getty will
+block while opening the device and "ps lax" will show /usr/libexec/[getty]
+sleeping on "siodcd".
+
+Bruce
+
+
+
+--------------------------------------------------------------------------------
+MID: 199412221247.XAA04385@godzilla.zeta.org.au
+DATE: 1994-12-22T12:47:13+00:00  FROM: Bruce Evans <bde@zeta.org.au> <None>
+SUBJ: Re: bidirectional ports ?
+BODY:
+
+
+I always used ^D to exit from rlogin and didn't know that ~. exited from
+it.
+
+Bruce
+
+
+
+--------------------------------------------------------------------------------
+MID: 9412221303.AA00817@brasil.moneng.mei.com
+DATE: 1994-12-22T07:03:46+00:00  FROM: Joe Greco <jgreco@brasil.moneng.mei.com> <None>
+SUBJ: Re: bidirectional ports ?
+BODY:
+
+Clarification (not flame/etc):
+
+^D doesn't (normally) cause rlogin to exit.  ^D might happen to cause a 
+program on the other end - a shell, perhaps :-) - to exit, terminating the
+connection (and therefore rlogin), but if you were in an interactive program,
+it would not work.
+
+One can use ^M~^Z (remember all tilde-cmds need to be right after a carriage
+return) to suspend a connection (given a shell with job control)...
+^M~. to terminate a connection...  ^M~~ to send ^M~, etc.  These commands
+work on both cu and rlogin.  Others are listed in the manual pages and are
+not necessarily available in both programs.  In any case, it gets sorta
+interesting when you're about 8 levels deep in some muddle of telnet, tip,
+cu, kermit, rlogin, etc. and you wanna get to level 3.
+
+;-)  Merry Christmas,
+
+... Joe
+
+-------------------------------------------------------------------------------
+Joe Greco - Systems Administrator			      jgreco@ns.sol.net
+Solaria Public Access UNIX - Milwaukee, WI			   414/342-4847
+
+
+
+--------------------------------------------------------------------------------
+MID: 9412221327.AA25744@ns.GE.com
+DATE: 1994-12-22T13:23:54+00:00  FROM: Dick van den Burg <burg@burg.is.ge.com> <None>
+SUBJ: Re: bidirectional ports ?
+BODY:
+Thanks, I am slowly getting there. My one problem is that the getty does not
+die, once the modem has picked up the phone (no carrier, just call in, and
+hang up the phone). The wait state changes to ttyin. When I kill the getty
+it changes to sciodtr and when I power the modem on/off it goes back to
+sciodcd.
+ How can I get the getty to die after I hang up the phone? I thought that
+'hc' in my gettytab would do the trick, but obviously it is not enough.
+my gettytab entry is std.38400|38400-baud:np:sp#38400:hc
+
+Any more wise words?
+
+Thanks again ... Dick
+
+
+
+--------------------------------------------------------------------------------
+MID: mScQN-k41K@astral.msk.su
+DATE: 1994-12-22T12:52:54+00:00  FROM: "Andrew A. Chernov, Black Mage" <ache@astral.msk.su> <None>
+SUBJ: Re: bidirectional ports ?
+BODY:
+In message <9412221127.AA02151@blaise.ibp.fr> Ollivier ROBERT writes:
+
+
+
+
+you can change ~ inside cu, but I am not shure that it works.
+Something like ~s escape <new_char>
+-- 
+Andrew A. Chernov        : And I rest so composedly,  /Now, in my bed,
+ache@astral.msk.su       : That any beholder  /Might fancy me dead -
+FidoNet: 2:5020/230.3    : Might start at beholding me,  /Thinking me dead.
+RELCOM Team,FreeBSD Team :         E.A.Poe         From "For Annie" 1849
+
+
+
+--------------------------------------------------------------------------------
+MID: 199412221315.HAA15472@bonkers.taronga.com
+DATE: 1994-12-22T13:15:29+00:00  FROM: Peter da Silva <peter@bonkers.taronga.com> <None>
+SUBJ: Re: bidirectional ports ? 
+BODY:
+
+
+You can use two ~ to get the first through rlogin. Or use the -E option to
+disable the escape. (for example, on a machine used as a terminal server you'd
+call rlogin -8 -E) Or use -e to change it in rlogin. Or ise -E to change it in
+cu. ...
+
+
+
+--------------------------------------------------------------------------------
+MID: 199412221454.PAA11410@bonnie.tcd-dresden.de
+DATE: 1994-12-22T14:54:29+00:00  FROM: j@uriah.sax.de (J Wunsch) <None>
+SUBJ: Re: bidirectional ports ?
+BODY:
+As Bruce Evans wrote:
+| 
+| Another bug: if I run cu while rlogin'ed, it connects correctly, but
+| when I type "~.", both cu and rlogin exit.
+
+A feature.  You'll have to count the tildas.  "~." will close the
+rlogin session and hence HUP the cu session.  "~~." will only quit the
+cu session.  (Likewise, you could easily end up with something like
+"~~~~~." if you're gatewayed via several rlogin and/or cu
+session. :-O)
+
+-- 
+cheers, J"org                             work:      --- no longer ---
+                                          private:   joerg_wunsch@uriah.sax.de
+
+Never trust an operating system you don't have sources for. ;-)
+
+
+
+--------------------------------------------------------------------------------
+MID: 199412221607.AA264472435@yarmouth.fsl.noaa.gov
+DATE: 1994-12-22T16:07:15+00:00  FROM: kelly@fsl.noaa.gov (Sean Kelly) <None>
+SUBJ: Re: bidirectional ports ?
+BODY:
+
+    Bruce> Another bug: if I run cu while rlogin'ed, it connects
+    Bruce> correctly, but when I type "~.", both cu and rlogin exit.
+
+No bug: ``~'' is the escape character for both rlogin and cu.
+Send ~~. to disconnect the cu and keep the rlogin alive.
+
+--k
+
+
+
+--------------------------------------------------------------------------------
+MID: 199412221609.AA264792552@yarmouth.fsl.noaa.gov
+DATE: 1994-12-22T16:09:12+00:00  FROM: kelly@fsl.noaa.gov (Sean Kelly) <None>
+SUBJ: Re: bidirectional ports ?
+BODY:
+
+    Dick> man sio says: The callout device is used to steel the port
+    Dick> from processes waiting for carrier ...  This does not
+    Dick> happen: I get the busy message.
+
+Does your modem keep carrier-detect always on?
+
+--k
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 199412221637.DAA08189@godzilla.zeta.org.au
+DATE: 1994-12-22T16:37:36+00:00  FROM: Bruce Evans <bde@zeta.org.au> <None>
+SUBJ: Re: bidirectional ports ?
+BODY:
+
+Does it go to siodtr when you hang up?  That is is the correct behaviour.
+It should stay in the siodtr state for a default of 3 seconds to give
+the modem a chance to see dtr drop.  The default can be changed using
+comcontrol.  If modem off/on is required to get out of the siodtr state
+then there is a software bug.
+
+
+You have to configure the modem to drop CD when the other end hangs up.
+Many modems can be configured to never drop carrier.  This configuration
+is wrong for dialin lines and bidirectional lines.
+
+`hc' is for dropping DTR when the other end logs out.
+
+Bruce
+
+
+
+--------------------------------------------------------------------------------
+MID: 9412221702.AA05512@cs.weber.edu
+DATE: 1994-12-22T17:02:42+00:00  FROM: terry@cs.weber.edu (Terry Lambert) <None>
+SUBJ: Re: bidirectional ports ?
+BODY:
+
+The wait state should not change unless you have an off-to-on DCD signal
+change from the modem.
+
+Probably the modem is still set up incorrectly (ie: to raise DCD when
+offhook instead of when carrier is present).
+
+
+Don't wake it up in the first place, by way of setting up the modem to
+only raise DCD when carrier is present.
+
+
+					Terry Lambert
+					terry@cs.weber.edu
+---
+Any opinions in this posting are my own and not those of my present
+or previous employers.
+
+
+
+--------------------------------------------------------------------------------
+MID: 199412221740.LAA19017@bonkers.taronga.com
+DATE: 1994-12-22T17:40:04+00:00  FROM: Peter da Silva <peter@bonkers.taronga.com> <None>
+SUBJ: Re: bidirectional ports ? 
+BODY:
+Lotsa modems make it hard to set up carrier-detect right. For example Intel
+144 FAX modems play silly games with DSR and DTR no matter what you do with
+the flags.
+
+For most modems it's the AT&C and AT&D settings.
+
+
+
+--------------------------------------------------------------------------------
+MID: v02110102ab5a6e57b73f@[199.183.109.242]
+DATE: 1995-02-05T12:05:36+00:00  FROM: rkw@dataplex.net (Richard Wackerbarth) <None>
+SUBJ: Re: sophisticated executable/library dependency checking in ports
+BODY:
+
+We really need this feature. Then we SHOULD realize that, in effect, the
+whole system is a "port". These same features need to apply to the whole
+tree, particularly the build tools, as well.
+
+Another thing that I have seen recently is hard coding of paths.
+IMHO, this must stop. I am trying to get to a point where I can compile one
+version of "world" without destroying the system on which I am running. To
+do this, ALL paths will have to become relative.
+
+----
+Richard Wackerbarth
+rkw@dataplex.net
+
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 199502102137.AA25747@plains.NoDak.edu
+DATE: 1995-02-10T21:37:18+00:00  FROM: Mark Tinguely <tinguely@plains.nodak.edu> <None>
+SUBJ: video packages put into incoming
+BODY:
+
+I am putting the nv 3.3 changes we use at NDSU for PPM and RGB video grabbers
+on the the incoming directory of freebsd.cdrom.com.
+
+hopefully you will not need the PPM video grabber, but there is a small
+aplology/explaination as to why we wrote it. The RGB is video grabber
+written for the Digitial Vision Computer Eyes capture card (again don't
+buy one of these, it was written because that is what was here and I know
+there are several of them out there). Other than the ioctl that gets the
+width and height for the image, this will work with any capture RGB card
+and I hope to add the functionality of other cards as we write the drivers
+for them.
+
+I shipped a statically linked copy of nv and a PPM file. this way you can
+run this on a machine that does not have X installed (redirecting the DISPLAY
+of course.).
+
+I will also put the DVCE driver in the incoming directory.
+
+--mark.
+
+
+
+--------------------------------------------------------------------------------
+MID: 199502212022.NAA05971@seagull.rtd.com
+DATE: 1995-02-21T20:22:54+00:00  FROM: Don Yuniskis <dgy@seagull.rtd.com> <None>
+SUBJ: DOS ppp/slip packages
+BODY:
+Greetings!
+    I'd like to setup my FreeBSD box to cater to some DOS users.
+Are there any freely-available packages which would allow them to run
+ppp/slip into FreeBSD host?  What's this "Trumpet" package?
+    Thx, --don
+
+
+
+--------------------------------------------------------------------------------
+MID: 199502230810.JAA17295@gilberto.physik.rwth-aachen.de
+DATE: 1995-02-23T08:10:38+00:00  FROM: "Christoph P. Kukulies" <kuku@gilberto.physik.rwth-aachen.de> <None>
+SUBJ: /etc/exports format
+BODY:
+
+I had a line 
+
+/home/snap /home/snap10 -maproot=root gil
+
+in /etc/exports on blues. Today I found that the mount that existed
+has disappeared (?---------    root wheel  ).
+
+I saw recent changes regarding /etc/exports format.
+I tried to mount again to no avail:  RPC error : permission denied
+
+What is the final rule now for exporting subtrees of a filesystem?
+
+
+
+--Chris Christoph P. U. Kukulies kuku@gil.physik.rwth-aachen.de
+FreeBSD blues 2.1.0-Development FreeBSD 2.1.0-Development #0: Fri Feb 17
+18:32:16  1995     root@blues:/usr/src/sys/compile/BLUES  i386
+
+
+
+--------------------------------------------------------------------------------
+MID: Pine.SUN.3.91.950223092645.18462G-100000@lupine.nsi.nasa.gov
+DATE: 1995-02-23T14:32:55+00:00  FROM: "Michael C. Newell" <mnewell@lupine.nsi.nasa.gov> <None>
+SUBJ: Re: DOS ppp/slip packages
+BODY:
+On Tue, 21 Feb 1995, Don Yuniskis wrote:
+
+
+Trumpet is a shareware TCP/IP package for Windoze that supports SLIP and 
+provides a Winsock (actually, when we tested it it was the ONLY package 
+that completely supported all Winsock features!) API.  It won't help you 
+with MS-DOG users, but if you're using Windoze it's easy to install and 
+we've found it to be pretty solid.  
+
+We've also used Chameleon, SuperTCP, and LAN Workplace for DOS; all of
+them work with various features (I use SuperTCP's NFS at home) but they
+are really messy to set up and manage [with SuperTCP every time I want to
+install a new interface I basically have to re-install the entire package;
+it keeps losing track of configuration files... ;{(]  There are lots of 
+other packages out there too, but these are the ones I've experienced.
+
+On the MS-DOG only side things are a bit thinner since there's no 
+"standard" API for TCP/IP under MS-DOG.  However, we've had some success 
+with Minuet (shareware) and I've also used PC/TCP (commercial).  SuperTCP 
+also allows some TCP/IP functionality under MS-DOG (I use the NFS 
+capability); I'm sure some of the other packages have like functionality.
+
+Hope this helps,
+
+Mike
+
++-----
+
+--------------------------------------------------------------------------------
+MID: 199502251239.NAA03786@labinfo.iet.unipi.it
+DATE: 1995-02-25T12:39:32+00:00  FROM: Luigi Rizzo <luigi@labinfo.iet.unipi.it> <None>
+SUBJ: A suggestion on ports/ layout
+BODY:
+I recently had to grab the ports distribution for FreeBSD. With
+the current strategy of separating the original distribution and
+the FreeBSD diffs, and the fact that most ftp sites support tar
+and gzip, I thought it was ok to move to the the parent directory
+of ports and do
+
+	get ports.tar.gz
+
+EXCEPT that this also includes "ports/distfiles", which is huge.
+Could we move it somewhere else ? This way, grabbing a ports
+distribution would become very fast.
+
+	Luigi
+====================================================================
+Luigi Rizzo                     Dip. di Ingegneria dell'Informazione
+email: luigi@iet.unipi.it       Universita' di Pisa
+tel: +39-50-568533              via Diotisalvi 2, 56126 PISA (Italy)
+fax: +39-50-568522
+====================================================================
+
+
+
+--------------------------------------------------------------------------------
+MID: 199502251848.TAA04037@labinfo.iet.unipi.it
+DATE: 1995-02-25T18:48:10+00:00  FROM: Luigi Rizzo <luigi@labinfo.iet.unipi.it> <None>
+SUBJ: A couple of points about ports
+BODY:
+A lot of ports under 2.X suffer from a different definition of "sys_errlist" 
+Most of the times the patches symply remove the offending line in the
+source. Is there any better way ? In stdio.h, there are a couple of
+macros, ANSI_SOURCE and POSIX_SOURCE if I remember well, which might
+solve the problem. Which one is better for this purpose ?
+
+Second: some ports (one example is freeWAIS, another cern_httpd) do not
+compile with bmake, they require gmake. Unfortunately, make is called
+recursively and the top level make requires bmake... again, is there a
+way to solve this without patching the makefiles ? Such as putting an
+option in the toplevel makefile to specify that gmake should be used
+for recursive calls...
+
+	Luigi
+====================================================================
+Luigi Rizzo                     Dip. di Ingegneria dell'Informazione
+email: luigi@iet.unipi.it       Universita' di Pisa
+tel: +39-50-568533              via Diotisalvi 2, 56126 PISA (Italy)
+fax: +39-50-568522
+====================================================================
+
+
+
+--------------------------------------------------------------------------------
+MID: 199502251939.GAA27825@godzilla.zeta.org.au
+DATE: 1995-02-25T19:39:58+00:00  FROM: Bruce Evans <bde@zeta.org.au> <None>
+SUBJ: Re: A couple of points about ports
+BODY:
+
+The correct way is to remove all declarations and explicit use of
+sys_errlist and sys_nerr and use strerror().  This is a worse way 
+if you want a quick and dirty port.
+
+
+_POSIX_SOURCE is better because ANSI features are a subset of POSIX
+features and most programs require POSIX features and BSD extensions.
+Using either is bogus because incorrectly declaring features and
+extensions doesn't change them.
+
+Bruce
+
+
+
+--------------------------------------------------------------------------------
+MID: 199502260108.CAA02218@uriah.heep.sax.de
+DATE: 1995-02-26T01:08:55+00:00  FROM: J Wunsch <j@uriah.heep.sax.de> <None>
+SUBJ: Re: A couple of points about ports
+BODY:
+As Luigi Rizzo wrote:
+
+Perhaps
+
+	make MAKE=gmake
+
+will work (where ``make'' is expected to be bmake)?
+
+
+-- 
+cheers, J"org
+
+joerg_wunsch@uriah.heep.sax.de -- http://www.sax.de/~joerg/
+Never trust an operating system you don't have sources for. ;-)
+
+
+
+--------------------------------------------------------------------------------
+MID: 199502261003.LAA04690@labinfo.iet.unipi.it
+DATE: 1995-02-26T10:03:41+00:00  FROM: Luigi Rizzo <luigi@labinfo.iet.unipi.it> <None>
+SUBJ: Re: A couple of points about ports
+BODY:
+
+Well you suggest how to fix the code, but a lot of code already
+exists and new one will come out with the wrong (for FreeBSD 2.X)
+declarations. Anyways, if I remember well, the actual problem is
+that in stdio.h there are a couple of __const in the declaration
+of sys_errlist which do not appear in the offending sources. Could
+we try to compile them with -D__const= ?
+
+	Luigi
+====================================================================
+Luigi Rizzo                     Dip. di Ingegneria dell'Informazione
+email: luigi@iet.unipi.it       Universita' di Pisa
+tel: +39-50-568533              via Diotisalvi 2, 56126 PISA (Italy)
+fax: +39-50-568522
+====================================================================
+
+
+
+--------------------------------------------------------------------------------
+MID: 199503131313.IAA15188@larry.infi.net
+DATE: 1995-03-11T23:13:34+00:00  FROM: "Pavlov's Cat" <Pavlov's.Cat@infi.net> <None>
+SUBJ: Re: Adaptek 1542 on other ports
+BODY:
+In response to some poor guy with Adaptec 1542 problems, Terry writes:
+
+This has been bugging me for a while - I really appreciate the 
+ability to arbitrarily re-vector the hardware stuff sorta on-the-fly 
+like this.  In fact, many times it's been the only way to get a box 
+up and running short of building a new kernel on another box.  But... 
+
+Why is it that if a J. Random User goes thru the drill of configuring
+the plethora of non-standard locations for his misbegotten hardware
+setup, must he not only remember how he got the thing to boot, but he
+must also re-enter this stuff *every*flippin'*time*he*reboots*.  
+
+Now whazzup with that?  Isn't this what we have computers for in the
+first place -- to remember all that triviata that we humans don't
+have the time/ability/inclination to remember?  
+
+Is there any _technical_ reason that FreeBSD can't find some 
+sacrosanct place to stash all of this '-c' stuff and magically use 
+that as the default next time 'round?  
+
+This bites me every time I install a SNAP or generic kernel.  For 
+some reason, the sea0 driver wedges my boxes during probe like every 
+time.  No sweat - I know how to fix it. 
+
+But poor ol' J. Random - the guy's making a
+
+--------------------------------------------------------------------------------
+MID: 199503131522.KAA03087@hda.com
+DATE: 1995-03-13T15:22:20+00:00  FROM: Peter Dufault <dufault@hda.com> <None>
+SUBJ: Re: Adaptek 1542 on other ports
+BODY:
+Pavlov's Cat writes:
+
+Because the software hasn't been written?
+
+I doubt that Jordan and David are slapping themselves on the forehead
+now and saying "Of course!  It would work better if we SAVED
+userconfig someplace!"
+
+Julian had a suggestion inspired by an OSF approach for some separate
+file that you load at boot.  I'd propose a kernel-zapping ioctl
+that modified the on disk kernel after you were up and running if
+I wasn't afraid I'd get chased out of town.
+
+"-c" has helped many people get the distribution booted.  It isn't
+fair to suggest that because it doesn't dance it shouldn't come
+out on stage to sing.
+
+Peter
+
+-- 
+Peter Dufault               Real Time Machine Control and Simulation
+HD Associates, Inc.         Voice: 508 433 6936
+dufault@hda.com             Fax:   508 433 5267
+
+
+
+--------------------------------------------------------------------------------
+MID: 9503131703.AA03264@cs.weber.edu
+DATE: 1995-03-13T17:03:39+00:00  FROM: terry@cs.weber.edu (Terry Lambert) <None>
+SUBJ: Re: Adaptek 1542 on other ports
+BODY:
+
+Punishment for opening his box and playing around with the dip
+switches and jumpers and getting them moved away from factory
+defaults.
+
+It's a method of promoting the use of super-glue at the factory.
+
+Insidious, isn't it?
+
+
+How do you read the 1542 base address off the disk so the kernel
+can find the 1542 base address so you can read it off the disk so ...
+
+The problem is that the kernel is not data-driven (or rather, not
+data-driven enough) in some areas.
+
+
+There was a preliminary shot at a utility to do this, but it had some
+problems and was canned for now (there was a discussion of this on
+the hackers list).
+
+Linux handles this by cramming it into the stuff LILO gives the kernel
+on boot.
+
+
+Good choice... 8-).
+
+
+					Terry Lambert
+					terry@cs.weber.edu
+---
+Any opinions in this posting are my own and not those of my present
+or previous employers.
+
+
+
+--------------------------------------------------------------------------------
+MID: 199503131717.DAA00161@godzilla.zeta.org.au
+DATE: 1995-03-13T17:17:25+00:00  FROM: Bruce Evans <bde@zeta.org.au> <None>
+SUBJ: Re: Adaptek 1542 on other ports
+BODY:
+
+
+It (/sbin/dset) has been in -current since 1995/01/23 but was too buggy
+to use.  The 1995/03/12 version might work.
+
+Bruce
+
+
+
+--------------------------------------------------------------------------------
+MID: 199503131734.JAA14365@ref.tfs.com
+DATE: 1995-03-13T17:34:11+00:00  FROM: Poul-Henning Kamp <phk@ref.tfs.com> <None>
+SUBJ: Re: Adaptek 1542 on other ports
+BODY:
+As far as I know this is being pursued by one of our Russian friends ?
+
+no, they did that long time ago.
+
+-- 
+Poul-Henning Kamp <phk@login.dknet.dk> -- TRW Financial Systems, Inc.
+'All relevant people are pertinent' && 'All rude people are impertinent'
+=> 'no rude people are relevant'
+
+
+
+--------------------------------------------------------------------------------
+MID: m0roFPQ-0003wXC@TFS.COM
+DATE: 1995-03-13T19:04:04+00:00  FROM: julian@tfs.com (Julian Elischer) <None>
+SUBJ: Re: Adaptek 1542 on other ports
+BODY:
+well, lsdev -c will give you the parameters you need to put into
+your config file to make a kernel that has the same setup as what you are
+presently running......
+
+I'm toying with the possibility of making the bootloader load a second
+ascii file that contains that stuff.. I have the mods to the bootloader
+from OSF that do it, and both bootloaders have a common parent..
+(The mach bootloader).. the question is where do I find the ROOM in the
+bootblocks to cram it in, and how shall Itell FreeBSD where I've put it?
+
+julian
+
+
+
+
+
+--------------------------------------------------------------------------------
+MID: m0roFVQ-0003wlC@TFS.COM
+DATE: 1995-03-13T19:10:16+00:00  FROM: julian@tfs.com (Julian Elischer) <None>
+SUBJ: Re: Adaptek 1542 on other ports
+BODY:
+The bios bootloader (or any bootloader) can look for a 2nd file,
+/kernel.conf for /kernel
+or
+/kernel.old.conf  cor /kernel.old
+
+and dump it into the ram, alongside the kernel..
+
+julian
++----------------------------------+       ______ _  __
+|   __--_|\  Julian Elischer       |       \     U \/ / On assignment
+|  /       \ julian@tfs.com        +------>x   USA    \ in a very strange
+| (   OZ    ) 300 lakeside Dr. oakland CA. \___   ___ | country !
++- X_.---._/  USA+(510) 645-3137(wk)           \_/   \\            
+          v
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 199503140045.QAA00450@corbin.Root.COM
+DATE: 1995-03-14T00:45:41+00:00  FROM: David Greenman <davidg@Root.COM> <None>
+SUBJ: Re: Adaptek 1542 on other ports 
+BODY:
+
+   This capability has always been in the forefront of thinking. In fact, the
+implementation of 'userconfig' was delayed because of a concern that doing this
+was going to be difficult and that the correct method (seperate file or modify
+the kernel binary) wasn't clear. I decided to do a first cut proof of concept
+without the write-back capability, however, and then turned the whole thing
+over to Jordan (who has much more experiance writing parsers and such). We've
+always planned to implement storing the configuration.
+   ...then Ugen wanted something to do, so I suggested via Jordan that he
+write a utility to write back the data to the kernel binary (as this was the
+easiest and most straightforward way to do it [concerns about diskless booting
+notwithstanding]). The utility he came up with is called "dset", and has been
+committed. It didn't work right in the beginning, but I think it works fine
+now (I haven't tested it).
+   It would be nice if the parameters were read from a seperate file (that
+is human readable and could be edited), but this complicates the bootstrap
+a bunch - especially for diskless booting - and I'm not sure if we can squeeze
+it into our already full bootblocks
+
+--------------------------------------------------------------------------------
+MID: 199503141348.IAA28145@larry.infi.net
+DATE: 1995-03-14T11:23:38+00:00  FROM: "Pavlov's Cat" <Pavlov's.Cat@infi.net> <None>
+SUBJ: Re: Adaptek 1542 on other ports
+BODY:
+dufault@hda.com writes:
+
+I never meant to imply such.  (I'd personally hunt down the guy who
+proposes taking '-c' away and handcuff him to an HP-3000 running MPE
+for the rest of his natural existance; I'm far too spoiled by '-c' to 
+give it up.)
+
+But what I was trying to convey is that it'd be a big WIN if we 
+didn't try to coerce FreeBSD newbies to have to roll-their-own in 
+order to make the system fire up without minimal user intervention.
+
+If J. Random Newbie wants to run with an unecessarily bloated kernel 
+that has a bunch of devices he'll never have, that's his business; 
+it's the business of FreeBSD to provide an environment that is 
+stable, extendable, tailorable and (significantly) easy to set up.  
+
+I submit that a *lot* of users haven't got clue one about what a 
+makefile is, what a compiler is good for, or what constitutes an 
+optimal configuration.  They just want the sucker to work.
+
+Granted, an all-singing, all-dancing, 100% accurate probe logic would
+solve many (all?) of the '-c' issues, but given the tendency of a
+lot of vendors to silently change their firmware, etc (Adaptec, you
+copy, over?) this is and will continue to be, difficult.
+
+All I propose(d) is that, 
+
+--------------------------------------------------------------------------------
+MID: 199503142236.XAA20259@vector.enet
+DATE: 1995-03-14T22:36:23+00:00  FROM: Julian Howard Stacey <jhs@regent.e-technik.tu-muenchen.de> <None>
+SUBJ: Re: Adaptek 1542 on other ports
+BODY:
+What are BVD's ... underwear ?
+Julian S
+
+
+
+--------------------------------------------------------------------------------
+MID: 199503151315.IAA22618@larry.infi.net
+DATE: 1995-03-15T10:54:01+00:00  FROM: "Pavlov's Cat" <Pavlov's.Cat@infi.net> <None>
+SUBJ: Re: Adaptek 1542 on other ports
+BODY:
+Julian Howard Stacey <jhs@regent.e-technik.tu-muenchen.de> said:
+
+Oops - forgot our internation audience!  
+
+Should have been:  "BVD's(tm)"
+They are, as you surmise, a U.S. Brand Name for underwear.  I guess 
+when hackers wear 'em, they're "Under-Ware" ;-)
+
+--
+...sjs...
+
+Steve Sims  (SJS7)                                    SimsS@Infi.Net
+Systems Engineer, IPC Technologies, Inc.          Virginia Beach, VA
+"Everyone wants to save the Earth; 
+   Nobody wants to help Mom do the dishes."         ...P.J. O'Roarke
+
+
+
+--------------------------------------------------------------------------------
+MID: 199503261454.OAA03591@star-gate.com
+DATE: 1995-03-26T14:53:57+00:00  FROM: Amancio Hasty <hasty@star-gate.com> <None>
+SUBJ: Packages was (Re: httpd as part of the system. )
+BODY:
+
+
+Well, at least one of the Linux distributions has a CDROM App distribution.
+This can go a long way from alleviating the needs of those who want
+to USE FreeBSD and not just hack on the kernel or with its utilities.
+Also, it may save the end users including myself from having to 
+compile packages all over again. I do it however I can see that 
+many will not like to or an unable due to system resources to 
+re-compile some of the Apps.
+
+	Amancio
+
+  
+
+
+
+--------------------------------------------------------------------------------
+MID: Pine.NEB.3.91.950402224212.3882A-100000@w8hd.w8hd.org
+DATE: 1995-04-03T02:54:07+00:00  FROM: Kim Culhan <kimc@w8hd.w8hd.org> <None>
+SUBJ: Re: supfiles [was] ports/games Makefile
+BODY:
+On Sun, 2 Apr 1995, Satoshi Asami/=?ISO-2022-JP?B?GyRCQHUbKEI=?= =?ISO-2022-JP?B?GyRCOCsbKEIgGyRCOC0bKEI=?= wrote:
+
+
+Thanks for the shot, I must not have been reading -hackers when the change
+was made.
+The sup I was using is on freefall:/pub/sup  3297 Oct 25 13:49 supfile
+
+I added ports-graphics to this and snarfed the required stuff, now I wonder
+if anyone who uses SUP regularly knows of a location where a more recent
+supfile is kept?
+
+kim
+
+--
+kimc@w8hd.org
+
+
+
+
+--------------------------------------------------------------------------------
+MID: v02120b05aba5a06005ce@[199.183.109.242]
+DATE: 1995-04-03T13:03:49+00:00  FROM: rkw@dataplex.net (Richard Wackerbarth) <None>
+SUBJ: Experimental packages
+BODY:
+Do we have a mechanism for setting up "not ready for prime time ports" so
+that we can share the current state of the art?
+
+As an example, perl5 is not of release quality, but is useful for some
+other packages that rely on it. I am sure that someone has attempted to
+port it. I would like to be able to utilize the results of their efforts.
+
+1) It you have worked on this, please send we your patches.
+2) IMHO, we need a formal place in the distribution tree for this class of
+port. (Use at your own risk)
+
+----
+Richard Wackerbarth
+rkw@dataplex.net
+
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 9504031442.AA11369.SM@odin.INS.CWRU.Edu
+DATE: 1995-04-03T14:42:16+00:00  FROM: Chet Ramey <chet@odin.INS.CWRU.Edu> <None>
+SUBJ: Please finish up reports on bash-1.14.4 beta
+BODY:
+I would like to release 1.14.4 soon, so please finish up and send off
+any reports of problems you've encountered.
+
+FYI:
+
+There have been several changes since the beta release:  a better
+mechanism is now used to search the $PATH for ranlib, an off-by-one
+error in the mail checking code was corrected, and $MAILPATH is no
+longer set by default.  Some cosmetic changes have also been made
+to the source code: signal has finally been completely replaced by
+set_signal_handler.
+
+-- 
+``The lyf so short, the craft so long to lerne.'' - Chaucer
+
+Chet Ramey, Case Western Reserve University	Internet: chet@po.CWRU.Edu
+
+
+
+--------------------------------------------------------------------------------
+MID: 199504091007.DAA05993@silvia.HIP.Berkeley.EDU
+DATE: 1995-04-09T10:07:18+00:00  FROM: asami@cs.berkeley.edu (Satoshi Asami | 浅見 賢) <None>
+SUBJ: Ports hackers wanted!
+BODY:
+(Note: I've CC:ed this to "hackers" too for wider audience...if you are 
+ following up, please send it to "ports" only...thanks)
+
+I'm now working on a bunch of projects aimed at "a better, friendlier
+ports scheme" (how nice! :).  However, I'm severely short-handed and
+at the rate things are going, most of my (brilliant!) ideas are not
+going to make it into 2.1.  This is sad!
+
+So, I need help.  If you are interested in one or more of the projects 
+listed in FreeBSD-current/src/TODO-2.1/asami, please contact me.  In
+particular, I need immediate help in the following areas:
+
+-*-
+
+Update: Thu Apr  6 08:24:02 PDT 1995
+Due:	Hopefully before 2.1
+Prio:	High
+Task:	Enhance pkg_install
+
+Again a couple of ideas here:
+
+(1) Make pkg_create or pkg_add able to "register" a package from the
+    ports directory by looking into pkg/PLIST.  We can then call this
+    from the "install" rule in bsd.port.mk so that the user can
+    pkg_delete it later.
+
+(2) Add some way to include the dependency information (usually
+    LIB_DEPENDS, maybe EXEC_DEPENDS too but this one is harder 'cause
+    it may be required only for compilation) into the package so that
+    pkg_add will check for the existences and print
+
+--------------------------------------------------------------------------------
+MID: 199504231710.MAA05656@bonkers.taronga.com
+DATE: 1995-04-23T17:10:04+00:00  FROM: Peter da Silva <peter@bonkers.taronga.com> <None>
+SUBJ: 1.1.5.1 ports
+BODY:
+I'm trying to set up a pretty complete 1.1.5.1 FTP site, so that between it
+and the 1.1 CD you can pretty much recover all the 1.1.5.1 environment that
+used to be available at ftp.cdrom.com. Unfortunately my FTP access is pretty
+slow, over a PPP link...
+
+I found the following ports at gilberto.physik.RWTH-Aachen.DE that were
+not on the 1.1 CDROM. Are these all the "new" ports? Were any of the old
+ports updated between 1.1 and 1.1.5.1?
+
+
+ports/game:
+nethack.tar.gz  xmine.tar.gz
+
+ports/lang:
+itcl.tar.gz     logo.tar.gz
+
+ports/net:
+fspclient.tar.gz
+
+ports/util:
+cpm.tar.gz              ispell.tar.gz           sattrack.tar.gz
+hfs.tar.gz              libmytinfo.tar.gz
+
+ports/x11:
+gnuplot.tar.gz  kterm.tar.gz    piewm.tar.gz    rxvt.tar.gz     xphoon.tar.gz
+
+
+Yes, I know 1.1.5.1 is the past, but there's quite a few people still using it.
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 199504231845.LAA23543@exit.com
+DATE: 1995-04-23T18:45:19+00:00  FROM: Frank Mayhar <frank@exit.com> <None>
+SUBJ: Re: 1.1.5.1 ports
+BODY:
+
+Ayup.  And will be, at least until 2.1 comes out, and maybe a bit past that.
+I've stayed with 1.1.5.1 because of the stability it had which 2.0, sadly,
+lacked.
+
+One thing that would be useful (for myself and, undoubtedly, others) would
+be some kind of upgrade script, that would avoid the necessity of a complete
+from-scratch reinstall.  (As far as I'm concerned, something based on the
+sources would be fine.  Unfortunately, I just don't have the time or
+resources to do this myself, not only because I don't run 2.x, but because
+of work and personal commitments.)
+-- 
+Frank Mayhar frank@exit.com
+
+
+
+--------------------------------------------------------------------------------
+MID: 9505021828.AA08074@cs.weber.edu
+DATE: 1995-05-02T18:28:40+00:00  FROM: terry@cs.weber.edu (Terry Lambert) <None>
+SUBJ: NetBSD supports LBA and large (EIDE) drives
+BODY:
+] From: "John R. Winans" <winans@ganymede.net>
+] Date: 29 Apr 1995 16:48:07 GMT
+] Organization: American Information Systems, Inc.
+] Newsgroups: comp.unix.bsd.netbsd.misc 
+] References: 1 
+] 
+] 
+] nnoiseux@tiac.net (Nicolas Noiseux) wrote:
+] >
+] > i need a larger hard drive, and am considering conner 1.2g ide...
+] > do i need lba support for netbsd(only) drives larger than 528 meg?
+] > does netbsd require it? does it handle it? what release of netbsd
+] > do i require?
+] > thanks for the help!
+] 
+] Apr 27 07:20:05 ns2 /netbsd: wd0 at wdc0 drive 0: 325MB 768 cyl, 14 head, 62 sec <ST3390A>
+] Apr 27 07:20:05 ns2 /netbsd: wd1 at wdc0 drive 1: 1033MB 2100 cyl, 16 head, 63 sec <WDC AC31000H>
+] 
+] 
+] Yes it does.  I am using 1.0 at patch level 6.  And have been able to
+] use the larger drives on all my machines... even on an old Gateway whose
+] bios groked the drive!  (On the gateway, the boot drive was a regular
+] 350MB, the second was a 1.2G.)
+] 
+] I have been using the Western Digital Caviar 1.2G drives.  I have a
+] couple of them and have not had a single problem with them.  (Unlike 
+] my damn SCSI drive timeing out and causing panics once a week.)
+] 
+] --John
+
+
+
+--------------------------------------------------------------------------------
+MID: 199505021842.LAA08565@ref.tfs.com
+DATE: 1995-05-02T18:42:59+00:00  FROM: Poul-Henning Kamp <phk@ref.tfs.com> <None>
+SUBJ: Re: NetBSD supports LBA and large (EIDE) drives
+BODY:
+So do we, and have done for a long time...
+
+
+
+-- 
+Poul-Henning Kamp <phk@login.dknet.dk> -- TRW Financial Systems, Inc.
+'All relevant people are pertinent' && 'All rude people are impertinent'
+=> 'no rude people are relevant'
+
+
+
+--------------------------------------------------------------------------------
+MID: 199505021852.MAA07756@trout.sri.MT.net
+DATE: 1995-05-02T18:52:56+00:00  FROM: Nate Williams <nate@trout.sri.MT.net> <None>
+SUBJ: Re: NetBSD supports LBA and large (EIDE) drives
+BODY:
+
+There are also people running FreeBSD on big drives as well.  AFAIK,
+there is nothing required to support LBA *once* you get past the initial
+install and understand the limitations of the hardware.
+
+
+Nate
+
+
+
+--------------------------------------------------------------------------------
+MID: 199505021859.LAA08667@ref.tfs.com
+DATE: 1995-05-02T18:59:06+00:00  FROM: Poul-Henning Kamp <phk@ref.tfs.com> <None>
+SUBJ: Re: NetBSD supports LBA and large (EIDE) drives
+BODY:
+
+And there seems to be too little gained to even bother until it becomes
+widespread...
+
+-- 
+Poul-Henning Kamp <phk@login.dknet.dk> -- TRW Financial Systems, Inc.
+'All relevant people are pertinent' && 'All rude people are impertinent'
+=> 'no rude people are relevant'
+
+
+
+--------------------------------------------------------------------------------
+MID: 9505021911.AA08387@cs.weber.edu
+DATE: 1995-05-02T19:11:11+00:00  FROM: terry@cs.weber.edu (Terry Lambert) <None>
+SUBJ: Re: NetBSD supports LBA and large (EIDE) drives
+BODY:
+
+I was under the impression that there were problems using EIDE drives
+under FreeBSD.
+
+Are you saying that there is no problem?
+
+
+					Terry Lambert
+					terry@cs.weber.edu
+---
+Any opinions in this posting are my own and not those of my present
+or previous employers.
+
+
+
+--------------------------------------------------------------------------------
+MID: 199505021919.MAA08796@ref.tfs.com
+DATE: 1995-05-02T19:19:50+00:00  FROM: Poul-Henning Kamp <phk@ref.tfs.com> <None>
+SUBJ: Re: NetBSD supports LBA and large (EIDE) drives
+BODY:
+
+There are no problems.
+
+The problems are with BIOS, >1024cyl geometry estimation for writing
+MBR's.
+
+-- 
+Poul-Henning Kamp <phk@login.dknet.dk> -- TRW Financial Systems, Inc.
+'All relevant people are pertinent' && 'All rude people are impertinent'
+=> 'no rude people are relevant'
+
+
+
+--------------------------------------------------------------------------------
+MID: 199505022229.PAA09546@ref.tfs.com
+DATE: 1995-05-02T22:29:21+00:00  FROM: Poul-Henning Kamp <phk@ref.tfs.com> <None>
+SUBJ: Re: NetBSD supports LBA and large (EIDE) drives
+BODY:
+
+There is no such thing as "true EIDE support".
+
+I will look at it nontheless :-)
+
+-- 
+Poul-Henning Kamp <phk@login.dknet.dk> -- TRW Financial Systems, Inc.
+'All relevant people are pertinent' && 'All rude people are impertinent'
+=> 'no rude people are relevant'
+
+
+
+--------------------------------------------------------------------------------
+MID: 199505022224.XAA08382@isl.cf.ac.uk
+DATE: 1995-05-02T22:24:04+00:00  FROM: Paul Richards <paul@isl.cf.ac.uk> <None>
+SUBJ: Re: NetBSD supports LBA and large (EIDE) drives
+BODY:
+In reply to Poul-Henning Kamp who said
+
+I don't think we do, not in the sense that NetBSD does. EIDE and LBA just
+happens to work with us, they've made some progress in true EIDE support
+in their wd driver.
+
+-- 
+  Paul Richards, FreeBSD core team member. 
+  Internet: paul@FreeBSD.org, http://www.isl.cf.ac.uk/
+  Phone: +44 1222 874000 x6646 (work), +44 1222 457651 (home)
+
+
+
+--------------------------------------------------------------------------------
+MID: 199505022234.XAA08462@isl.cf.ac.uk
+DATE: 1995-05-02T22:34:15+00:00  FROM: Paul Richards <paul@isl.cf.ac.uk> <None>
+SUBJ: Re: NetBSD supports LBA and large (EIDE) drives
+BODY:
+In reply to Poul-Henning Kamp who said
+
+I wouldn't bother, I'm sure Soren's driver will arrive soon and then we'll
+have "true" EIDE support too.
+
+-- 
+  Paul Richards, FreeBSD core team member. 
+  Internet: paul@FreeBSD.org, http://www.isl.cf.ac.uk/
+  Phone: +44 1222 874000 x6646 (work), +44 1222 457651 (home)
+
+
+
+--------------------------------------------------------------------------------
+MID: 199505030732.AA27536@dkuug.dk
+DATE: 1995-05-03T09:31:21+00:00  FROM: "Soeren Schmidt" <sos@kmd-ac.dk> <None>
+SUBJ: Re: NetBSD supports LBA and large (EIDE) drives
+BODY:
+In reply to Paul Richards who wrote:
+
+Don't bother, I did, they have what you could call "very rudimentary
+LBA support", in the commercial sense of the wording...
+
+
+
+Exactly.
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+Soren Schmidt      (sos@FreeBSD.org | sos@kmd-ac.dk)      FreeBSD Core Team
+..
+
+
+
+--------------------------------------------------------------------------------
+MID: 199505031237.IAA12969@duality.gnu.ai.mit.edu
+DATE: 1995-05-03T12:37:47+00:00  FROM: "Charles M. Hannum" <mycroft@ai.mit.edu> <None>
+SUBJ: Re: NetBSD supports LBA and large (EIDE) drives
+BODY:
+
+   Don't bother, I did, they have what you could call "very rudimentary
+   LBA support", in the commercial sense of the wording...
+
+That's an interesting assertion, considering the driver does exactly
+what the standard allows it to do -- namely, use logical block
+numbers.
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 199505031358.JAA30695@husky.cs.vt.edu
+DATE: 1995-05-03T13:58:21+00:00  FROM: Jeff Aitken <jaitken@cslab.cs.vt.edu> <None>
+SUBJ: Re: NetBSD supports LBA and large (EIDE) drives
+BODY:
+
+Does this mean that things like EIDE CD-ROMs will be supported soon? 
+-- 
+Jeff Aitken
+jaitken@vt.edu
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 199505031500.IAA00574@Root.COM
+DATE: 1995-05-03T15:00:31+00:00  FROM: John Dyson <dyson@Root.COM> <None>
+SUBJ: Re: NetBSD supports LBA and large (EIDE) drives
+BODY:
+It would have been more correct to say:
+
+Don't bother, I did, they have what you could call "very rudimentary
+*EIDE* support", in the commercial sense of the wording...
+
+But, our current IDE driver is very rudimetary in the *EIDE* area too.  When
+I made the last set of changes to wd.c, I just did not think that LBA was that
+necessary, considering the TRUE EIDE support coming.  The Multi-block
+and the 32Bit access (done by another contributor) can both make
+significant performance improvements.  Maybe I should have added
+the 20 or so lines to get LBA support?????  My goal was to
+keep from breaking the driver, while getting the desired performance
+improvements.
+
+John
+dyson@root.com
+
+
+
+--------------------------------------------------------------------------------
+MID: 9505031508.AA26340@login.dknet.dk
+DATE: 1995-05-03T17:08:33+00:00  FROM: sos@FreeBSD.org <None>
+SUBJ: Re: NetBSD supports LBA and large (EIDE) drives
+BODY:
+In reply to John Dyson who wrote:
+
+:-)
+
+
+Hmm, you get absolutely NO performance improvement out of using
+LBA instead of CHS addressing, its simply just another way of
+communicating the same info. And you can support big drives
+using CHS as well as LBA, just the FDISK/BIOS/DISK problems are
+hmm "different"...
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+Soren Schmidt  (sos@FreeBSD.org | sos@login.dknet.dk)  FreeBSD Core Team
+               So much code to hack -- so little time
+
+
+
+--------------------------------------------------------------------------------
+MID: 199505031557.IAA12888@ref.tfs.com
+DATE: 1995-05-03T15:57:15+00:00  FROM: Poul-Henning Kamp <phk@ref.tfs.com> <None>
+SUBJ: Re: NetBSD supports LBA and large (EIDE) drives
+BODY:
+
+According to Hale Landis, the guy who wrote 20-40% of the ATA std, LBA
+is inmature and buggy, even more so considering that it is not needed
+for anything.
+
+-- 
+Poul-Henning Kamp <phk@login.dknet.dk> -- TRW Financial Systems, Inc.
+'All relevant people are pertinent' && 'All rude people are impertinent'
+=> 'no rude people are relevant'
+
+
+
+--------------------------------------------------------------------------------
+MID: 199505031742.NAA09007@duality.gnu.ai.mit.edu
+DATE: 1995-05-03T17:42:32+00:00  FROM: "Charles M. Hannum" <mycroft@ai.mit.edu> <None>
+SUBJ: Re: NetBSD supports LBA and large (EIDE) drives
+BODY:
+
+   According to Hale Landis, the guy who wrote 20-40% of the ATA std, LBA
+   is inmature and buggy, even more so considering that it is not needed
+   for anything.
+
+The problems that Hale has noted are entirely on the software end --
+that there is little or no standardization about how the BIOS converts
+beetween C/H/S addresses and LBAs.  This is only an issue when sharing
+a disk with another OS, or when booting from it, and is analagous to
+the standard geometry translation compatibility problems.
+
+LBA mode is not `needed' for IDE drives smaller than 8GB.  However:
+
+1) In practice, the differences between BIOS LBA implementations seem
+to be less annoying than the differences between BIOS C/H/S
+implementations.
+
+2) There are already 9GB SCSI drives on the market, and the antiquated
+C/H/S addressing is not capable of supporting a drive that large.
+
+3) LBA mode is *required* for ATAPI devices (i.e. EIDE CD-ROMs).
+
+
+What I really don't understand is why people are flaming at me about
+this.
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 199505031750.KAA13325@ref.tfs.com
+DATE: 1995-05-03T17:50:12+00:00  FROM: Poul-Henning Kamp <phk@ref.tfs.com> <None>
+SUBJ: Re: NetBSD supports LBA and large (EIDE) drives
+BODY:
+
+You know, FreeBSD can exist on the same disk as other OS's.
+
+And nobody has been insane enough to make a 8GB+ IDE drive yet.
+
+Well, you're in for a surprise then...
+
+But no IDE's in sight... (because most PC's don't do LBA so the market
+isn't there.  Furthermore people with that kind of storage req's tend
+to prefer SCSI anyway...)
+
+ATAPI is "SCSI over ATA" and is an entirely different beast anyway.
+
+We're not flaming anybody...
+
+-- 
+Poul-Henning Kamp <phk@login.dknet.dk> -- TRW Financial Systems, Inc.
+'All relevant people are pertinent' && 'All rude people are impertinent'
+=> 'no rude people are relevant'
+
+
+
+--------------------------------------------------------------------------------
+MID: 199505031834.OAA15789@duality.gnu.ai.mit.edu
+DATE: 1995-05-03T18:34:44+00:00  FROM: "Charles M. Hannum" <mycroft@ai.mit.edu> <None>
+SUBJ: Re: NetBSD supports LBA and large (EIDE) drives
+BODY:
+
+   > The problems that Hale has noted are entirely on the software end --
+   > that there is little or no standardization about how the BIOS converts
+   > beetween C/H/S addresses and LBAs.  This is only an issue when sharing
+   > a disk with another OS, or when booting from it, and is analagous to
+   > the standard geometry translation compatibility problems.
+
+   You know, FreeBSD can exist on the same disk as other OS's.
+
+That's a non-sequitur.  NetBSD certainly coexists with other OSes,
+even on disks using LBA mode.
+
+   > LBA mode is not `needed' for IDE drives smaller than 8GB.  However:
+   And nobody has been insane enough to make a 8GB+ IDE drive yet.
+
+Precisely because software vendors are being extraordinarily lame
+about it.  Someone has to take the initiative, and it's *much* cheaper
+for the software vendors.
+
+   > 1) In practice, the differences between BIOS LBA implementations seem
+   > to be less annoying than the differences between BIOS C/H/S
+   > implementations.
+   Well, you're in for a surprise then...
+
+I sincerely doubt that.  I've been following this for years.
+
+
+
+
+--------------------------------------------------------------------------------
+MID: Pine.SUN.3.91.950503122326.13470c-100000@mail.nws.orst.edu
+DATE: 1995-05-03T19:25:32+00:00  FROM: -Vince- <vince@mail.nws.orst.edu> <None>
+SUBJ: Re: NetBSD supports LBA and large (EIDE) drives
+BODY:
+On Wed, 3 May 1995, Poul-Henning Kamp wrote:
+
+
+	Hale Landis only wrote the FAQ on ATA-2 and had nothing to do 
+with writing the Standard.  He is only sharing what he knows since he 
+used to work for Seagate.  According to John from Seagate, LBA isn't buggy.
+
+Cheers,
+Vince -vince@mail.nws.orst.edu-
+UCLA Physics/Electrical Engineering
+
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 199505040348.NAA00265@godzilla.zeta.org.au
+DATE: 1995-05-04T03:48:47+00:00  FROM: Bruce Evans <bde@zeta.org.au> <None>
+SUBJ: Re: NetBSD supports LBA and large (EIDE) drives
+BODY:
+
+Indeed.
+
+
+It's not `needed' for IDE drives smaller than 128GB.  There are 16
+cylinder bits, 4 head bits and 8 sector bits in the IDE interface.
+The 8GB limit is on the BIOS software end (10 cylinder bits, 8 head
+bits and 6 sector bits).
+
+
+I used to think LBA was only a hardware standard for IDE drives.  Is
+there also a software standard for bypassing the C/H/S limits for both
+ordinary BIOS calls and for booting?
+
+
+It's interesting that SCSI drives are hitting the 8MB limit at much the
+same time as IDE drives are hitting the 504MB limit.
+
+Bruce
+
+
+
+--------------------------------------------------------------------------------
+MID: 199505040445.AAA18105@duality.gnu.ai.mit.edu
+DATE: 1995-05-04T04:45:03+00:00  FROM: "Charles M. Hannum" <mycroft@ai.mit.edu> <None>
+SUBJ: Re: NetBSD supports LBA and large (EIDE) drives
+BODY:
+
+   I used to think LBA was only a hardware standard for IDE drives.  Is
+   there also a software standard for bypassing the C/H/S limits for both
+   ordinary BIOS calls and for booting?
+
+There is a separate set of BIOS calls that take LBA addresses.  What
+they actually do when talking to the drive is unspecified; they may,
+in fact, convert the addresses to C/H/S form.
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 199505051950.MAA09447@gndrsh.aac.dev.com
+DATE: 1995-05-05T19:50:43+00:00  FROM: "Rodney W. Grimes" <rgrimes@gndrsh.aac.dev.com> <None>
+SUBJ: Re: cvs commit: ports/news/inn/pkg PLIST
+BODY:
+[Moved to -hackers]
+
+
+See below, BSD changed this long ago.
+
+
+Agreed.
+
+
+It was done before 4.4, this goes back to Net/2 and possibly farther, 
+/var/mail is not a spool area as it is an end point for mail.
+
+
+Agreed.  And /var/spool/news is a spool area, it has both incoming and
+outgoing data keep in there that is handled by daemons.
+
+
+
+Be carefull it what you label FreeBSD change and what you label CSRG 
+changes.  It was CSRG that moved /usr/spool/mail to /var/mail.
+
+-- 
+Rod Grimes                                      rgrimes@gndrsh.aac.dev.com
+Accurate Automation Company                   Custom computers for FreeBSD
+
+
+
+--------------------------------------------------------------------------------
+MID: 199505052342.QAA09851@gndrsh.aac.dev.com
+DATE: 1995-05-05T23:42:05+00:00  FROM: "Rodney W. Grimes" <rgrimes@gndrsh.aac.dev.com> <None>
+SUBJ: Re: cvs commit: ports/news/inn/pkg PLIST
+BODY:
+[moved to -hackers]
+
+
+Go through all the news related ports, find out which each thinks is
+the default.  Pick the one that is most common to minimize the number
+of things that have to be patched.
+
+Then patch them all so that you can override this value with a
+single know so sites running either way can easily build the
+software the way there sight needs it.
+
+-- 
+Rod Grimes                                      rgrimes@gndrsh.aac.dev.com
+Accurate Automation Company                   Custom computers for FreeBSD
+
+
+
+--------------------------------------------------------------------------------
+MID: 199505060031.RAA02163@precipice.shockwave.com
+DATE: 1995-05-06T00:31:01+00:00  FROM: Paul Traina <pst@shockwave.com> <None>
+SUBJ: Re: cvs commit: ports/news/inn/pkg PLIST 
+BODY:
+
+  From: "Rodney W. Grimes" <rgrimes@gndrsh.aac.dev.com>
+  Subject: Re: cvs commit: ports/news/inn/pkg PLIST
+  
+  Be carefull it what you label FreeBSD change and what you label CSRG 
+  changes.  It was CSRG that moved /usr/spool/mail to /var/mail.
+
+Yes, I know that, I just didn't quite say it right, sorry.
+
+
+
+--------------------------------------------------------------------------------
+MID: HQyCsglmh2@astral.msk.su
+DATE: 1995-05-06T11:53:32+00:00  FROM: "Andrey A. Chernov, Black Mage" <ache@astral.msk.su> <None>
+SUBJ: Re: cvs commit: ports/news/inn/pkg PLIST
+BODY:
+In message <199505052342.QAA09851@gndrsh.aac.dev.com> Rodney W. Grimes
+    writes:
+
+
+
+Ok, here current situation:
+
+cnews   /var/news
+nn      /var/news
+nntp    /var/news
+inn     /var/spool/news (should be fixed per Rod statement)
+trn     configured for NNTP (don't use news dir), else ask interactively with
+	defalut /usr/spool/news
+
+Torsten, please, fix it.
+
+Thanx in advance.
+
+-- 
+Andrey A. Chernov        : And I rest so composedly,  /Now, in my bed,
+ache@astral.msk.su       : That any beholder  /Might fancy me dead -
+FidoNet: 2:5020/230.3    : Might start at beholding me,  /Thinking me dead.
+RELCOM Team,FreeBSD Team :         E.A.Poe         From "For Annie" 1849
+
+
+
+--------------------------------------------------------------------------------
+MID: 199505070734.AA08842@physics.su.oz.au
+DATE: 1995-05-07T07:34:03+00:00  FROM: David Dawes <dawes@physics.usyd.edu.au> <None>
+SUBJ: Number of partitions reports/required by disklabel incorrect?
+BODY:
+I just noticed that the output of disklabel(8) on SNAP-950412 reports the
+number of partitions to be one more than it displays.  The main reason I
+noticed it was that when editing the label, and setting the number to the
+actual number:
+
+3 partitions:
+#        size   offset    fstype   [fsize bsize bps/cpg]
+  a:   164538      198    4.2BSD      512  4096    16   # (Cyl.    1 - 831)
+  c:   164538      198    unused        0     0         # (Cyl.    1 - 831)
+  d:   164736        0    unused        0     0         # (Cyl.    0 - 831)
+
+
+disklabel would say:
+
+Warning, unused partition d: size 164736 offset 0
+
+
+and sure enough running disklabel again reports:
+
+3 partitions:
+#        size   offset    fstype   [fsize bsize bps/cpg]
+  a:   164538      198    4.2BSD      512  4096    16   # (Cyl.    1 - 831)
+  c:   164538      198    unused        0     0         # (Cyl.    1 - 831)
+
+
+If I tell it I've got 4 partitions, then the 3 get written to the label
+correctly.
+
+David
+
+
+
+--------------------------------------------------------------------------------
+MID: 199505070812.SAA07864@godzilla.zeta.org.au
+DATE: 1995-05-07T08:12:03+00:00  FROM: Bruce Evans <bde@zeta.org.au> <None>
+SUBJ: Re: Number of partitions reports/required by disklabel incorrect?
+BODY:
+
+
+
+
+
+You already had 3 (a, b and c with b empty and not displayed).  Then d
+was one too many.
+
+Bruce
+
+
+
+--------------------------------------------------------------------------------
+MID: 199505150324.UAA01043@silvia.HIP.Berkeley.EDU
+DATE: 1995-05-15T03:24:01+00:00  FROM: asami@CS.Berkeley.EDU (Satoshi Asami | 浅見 賢) <None>
+SUBJ: build of ports tree under way
+BODY:
+(Sent to "ports" and "hackers" for wider audience -- reply only to
+ "ports", please)
+
+I just started a full build of the ports tree on thud (fresh kernel,
+fresh world).  /e/thud.X11R6 and /d/thud.local are renamed to
+X11R6.old and local.old, respectively, if you need something.
+
+The "shells" subdir is already built, so people can log in (sorry
+last time, Gary ;).  I installed ~rich/x/*.tgz in /usr/X11R6 too.
+
+The actual command that is running (in /e/work/asami/ports) is:
+
+## make -k package BATCH=yes DUDS="archivers japanese print russian
+    shells smail dgd" < /dev/null > make.3 2>&1 &
+
+I'm hoping Andrey is rebuilding archivers/russian and Jean-Marc is
+rebuilding print. :)  And I'll do japanese later.
+
+smail is taken out because it uses bash and picks up some shell
+functions from my environment and bombs, I'll build it later.  And
+dgd...well, we'll deal with that later too.
+
+The packages will be (manually) copied to ftp.freebsd.org as they are
+rebuilt.  The whole distfiles directory should already be on
+ftp.freebsd.org.
+
+Please test them and report any problems.  Also, I'm hoping the
+maintainers of the interactive ports would build theirs.  These are
+the ones that have IS_INTEAC
+
+--------------------------------------------------------------------------------
+MID: 199505180348.XAA00493@panther.ferrum.edu
+DATE: 1995-05-18T03:48:06+00:00  FROM: "James E. Dunn" <dunn@panther.ferrum.edu> <None>
+SUBJ: Help ( out of ports )
+BODY:
+
+Greetings!
+
+I can only get 16 users on my machine.  Running FreeBSD-2.0R.  I've
+tried adding ttyp's in my /dev/ directory and in my /etc/ttys to no
+avail; I've even recompiled the kernel with MAXUSERS=64.
+
+So, could someone PLEASE tell me how to increase the number of ports
+available?
+
+Thanks
+Jim
+
+Output follows:
+
+	telnetd: All Ports Currently in Use.
+	connection terminated...
+
+EOF
+
+
+
+--------------------------------------------------------------------------------
+MID: 199505180500.WAA13370@gndrsh.aac.dev.com
+DATE: 1995-05-18T05:00:16+00:00  FROM: "Rodney W. Grimes" <rgrimes@gndrsh.aac.dev.com> <None>
+SUBJ: Re: Help ( out of ports )
+BODY:
+
+You should have waited for my mail, you missed the increase of
+pseudo-device   pty     16
+to 
+pseudo-device   pty     64
+
+
+Means you are out of pty devices...
+
+
+
+-- 
+Rod Grimes                                      rgrimes@gndrsh.aac.dev.com
+Accurate Automation Company                   Custom computers for FreeBSD
+
+
+
+--------------------------------------------------------------------------------
+MID: 199505272021.AAA23918@unicorn.ww.net
+DATE: 1995-05-28T00:21:28+00:00  FROM: "Alexis Yushin" <alexis@unicorn.ww.net> <None>
+SUBJ: /usr/local filetree and ports question
+BODY:
+	My knowledges may be out of date, but every FreeBSD port I saw
+before used /usr/local/lib directory for its libraries. The question is
+why it is so, instead of placing, for example IRC files into
+/usr/local/share/IRC instead of /usr/local/lib/IRC following, thus, the
+original BSD filtree philosophy. For example, I think that elm.rc should
+go into /usr/local/etc but its help files would go into /usr/local/share/misc
+or just /usr/local/share. I don't have a strong point about local manual pages,
+but I think it is likely that /usr/local/share/man is the right place for
+them. Well, then thinking about lets say inn, I think that its binaries
+would go into /usr/local/libexec (innd etc) /usr/local/bin (frontends)
+and /usr/local/libexec/news or innd (backends and utilities)
+	The thing described above would, as I suppose, enhace the structure
+of the whole FreeBSD.
+	Please let me know if I'm wrong. I made such adjustments at my
+FreeBSD-950322-SNAP boxes and they make me happy now.
+	So, again, I would be just crazy to hear any other philosophical
+views.
+								alexis
+
+P.S. I'm not sure if I'm on the hackers list now -- it is up to majordomo
+admin (I subscribed local alias instead of me, so 
+
+--------------------------------------------------------------------------------
+MID: 199505280653.XAA07439@silvia.HIP.Berkeley.EDU
+DATE: 1995-05-28T06:53:55+00:00  FROM: asami@CS.Berkeley.EDU (Satoshi Asami | 浅見 賢) <None>
+SUBJ: Re: /usr/local filetree and ports question
+BODY:
+I think questions like this are more well-suited to the "ports" list,
+Alexis....
+
+ * 	My knowledges may be out of date, but every FreeBSD port I saw
+ * before used /usr/local/lib directory for its libraries. The question is
+ :
+ * 	The thing described above would, as I suppose, enhace the structure
+ * of the whole FreeBSD.
+
+I agree with you, it's just that we are try to minimize the changes
+necessary to the original source to make upgrades and stuff easier.
+This means following the original's directory structures (as long as
+they are in /usr/local or /usr/X11R6), and this usually means
+/usr/local/lib for the libraries, architecture independent or not.
+
+It's really not any philosophical decision on our part.  But with
+nearly 300 ports out there, holding the upgrade headaches to a minimum
+has a very high priority to us. ;)
+
+Satoshi
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 199506231006.MAA23613@gilberto.physik.rwth-aachen.de
+DATE: 1995-06-23T10:06:39+00:00  FROM: Christoph Kukulies <kuku@gilberto.physik.rwth-aachen.de> <None>
+SUBJ: Re: ports/x11/xview-clients broken
+BODY:
+
+I gave it a try in my supped ports-2.0 tree:
+===>  xview-lib-3.2.1 depends on:  /usr/ports/x11/xview-config
+===>  Verifying build for /usr/ports/x11/xview-config
+Checksums OK.
+===>  Extracting for xview-config-3.2.1
+===>  Patching for xview-config-3.2.1
+===>  Applying FreeBSD patches for xview-config-3.2.1
+===>  Configuring for xview-config-3.2.1
+
+No problems with applying the patches.
+
+
+--Chris Christoph P. U. Kukulies kuku@gil.physik.rwth-aachen.de
+FreeBSD blues.physik.rwth-aachen.de 2.0-BUILT-19950619 FreeBSD 2.0-BUILT-1995
+0619 #1: Mon Jun 19 19:54:08 MET DST 1995     kuku@blues.physik.rwth-aachen.d
+e:/usr/src/sys/compile/BLUESGUS  i386
+
+
+
+--------------------------------------------------------------------------------
+MID: 199506241052.DAA05349@silvia.HIP.Berkeley.EDU
+DATE: 1995-06-24T10:52:04+00:00  FROM: asami@cs.berkeley.edu (Satoshi Asami) <None>
+SUBJ: Re: ports/x11/xview-clients broken
+BODY:
+ * I gave it a try in my supped ports-2.0 tree:
+ * ===>  xview-lib-3.2.1 depends on:  /usr/ports/x11/xview-config
+ * ===>  Verifying build for /usr/ports/x11/xview-config
+ * Checksums OK.
+ * ===>  Extracting for xview-config-3.2.1
+ * ===>  Patching for xview-config-3.2.1
+ * ===>  Applying FreeBSD patches for xview-config-3.2.1
+ * ===>  Configuring for xview-config-3.2.1
+ * 
+ * No problems with applying the patches.
+
+Thanks Chris.  Julian, can you ftp the xview-* stuff and try again?
+
+Satoshi
+
+
+
+--------------------------------------------------------------------------------
+MID: 199506261555.RAA02231@vector.eikon.e-technik.tu-muenchen.de
+DATE: 1995-06-26T15:55:41+00:00  FROM: "Julian Stacey <jhs@freebsd.org>" <jhs@vector.eikon.e-technik.tu-muenchen.de> <None>
+SUBJ: Re: ports/x11/xview-clients broken 
+BODY:
+
+
+Well I just tried on a rebuilt tree, (from my master sites's (PCS) archive,
+this time, it extracts & creates a .build_done,
+but didnt actually run cc, or anything,
+
+I'll forget this one, it's not something I use anyway, & time is short.
+
+Julian S
+
+
+
+==========================================================================================
+DB: freebsd-announce.duckdb  hits=2
+==========================================================================================
+--------------------------------------------------------------------------------
+MID: <199504181027.DAA03803@silvia.HIP.Berkeley.EDU>
+DATE: 1995-04-18T10:27:35+00:00  FROM: Satoshi Asami <asami@cs.berkeley.edu>
+SUBJ: New packages available!
+BODY:
+Hello, ports world!
+
+We have a bunch of new packages compiled with the latest SNAP in
+
+	ftp://freebsd.org/pub/FreeBSD/packages
+
+(Note:  This isn't "ftp.freebsd.org", our regular ftp server -- we're
+ short of diskspace there right now, so they'll only be available from 
+ "freebsd.org" for a few days.)
+
+These packages are compiled with the new libc and thus WILL NOT RUN on
+2.0R systems.  We'd like to have these tested soon so we can support
+the SNAP users better.  The old packages/ directory will also be
+renamed soon, with this collection becoming our "official" package
+collection.
+
+The packages are classified by categories, one subdirectory per
+category.  The directory ".packages/" holds the actual packages and
+the other directories contain symbolic links to it.  "all/" is a
+special category that contains links to all packages.
+
+NOTE TO FTP USERS:
+
+If you do ``get <dir>.tar.gz'' using our ftp server (which allows
+whole-hierarchy fetches this way) you will get these symlinks intact
+and store only one copy of each package.  If you ``cd'' into a
+directory and use the ``get'' or ``mget'' commands, you'll get the
+file each link is pointing to.  This may be a better strategy if you
+only w
+
+--------------------------------------------------------------------------------
+MID: <199505161025.DAA05228@silvia.HIP.Berkeley.EDU>
+DATE: 1995-05-16T10:25:38+00:00  FROM: Satoshi Asami |  浅見 賢 <asami@cs.berkeley.edu>
+SUBJ: New ports now available for testing
+BODY:
+We are currently running a full build of the ports tree.  The packages
+are copied to
+
+ftp://ftp.freebsd.org/pub/FreeBSD/packages/
+
+as they are built.  As these will go into the 2.0.5 release, we'd like
+to have them tested as much as possible.  So please try them out and
+send in reports if you encounter any bugs.  If you are IP connected,
+"send-pr" would be great, otherwise mail to the ports list will do.
+
+Note that for many of the things to work, you will need to be running
+a fairly recent -current (like from the last couple days or so).  If
+you are running 2.0R or an older -current and can't do a full upgrade
+at this time, I made a "quick upgrade kit" that is available from
+
+ftp://forgery.cs.berkeley.edu/pub/FreeBSD/ports/
+
+Please make sure you read the two READMEs in the directory carefully.
+I make no guarantees for the contents of this kit (it's basically the
+things I *think* has changed since 2.0R, taken from my very current
+machine).  In particular, if it screws up your shared library, sorry
+about that. :)
+
+Also available from the same directory are the tarballs of each of the
+subdirectories of the ports tree.  They are checked out right after
+the ports code freeze (12:01 AM S
+
+==========================================================================================
+DB: freebsd-current.duckdb  hits=53
+==========================================================================================
+--------------------------------------------------------------------------------
+MID: 199502232141.WAA09080@uriah.heep.sax.de
+DATE: 1995-02-23T21:41:40+00:00  FROM: J Wunsch <j@uriah.heep.sax.de> <None>
+SUBJ: MD5 in ports
+BODY:
+What will i have to do to create those mystic MD5 files for a port?
+
+I believed there were a comment in the GUIDELINES file, but couldn't
+find anything.
+-- 
+cheers, J"org
+
+joerg_wunsch@uriah.heep.sax.de -- http://www.sax.de/~joerg/
+Never trust an operating system you don't have sources for. ;-)
+
+
+
+--------------------------------------------------------------------------------
+MID: 9502232311.AA29473@cabri.obs-besancon.fr
+DATE: 1995-02-23T23:11:36+00:00  FROM: jmz@cabri.obs-besancon.fr (Jean-Marc Zucconi) <None>
+SUBJ: Re: MD5 in ports
+BODY:
+
+ > What will i have to do to create those mystic MD5 files for a port?
+ > I believed there were a comment in the GUIDELINES file, but couldn't
+ > find anything.
+ > -- 
+
+`make makesum'
+
+ > cheers, J"org
+
+ > joerg_wunsch@uriah.heep.sax.de -- http://www.sax.de/~joerg/
+ > Never trust an operating system you don't have sources for. ;-)
+
+Jean-Marc
+
+-- 
+    ~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~
+    Jean-Marc Zucconi             |         jmz@cabri.obs-besancon.fr
+    Observatoire de Besancon      |    
+    F 25010 Besancon cedex        | PGP Key: finger jmz@cabri.obs-besancon.fr
+    =========================================================================
+
+
+
+--------------------------------------------------------------------------------
+MID: 1566.793578435@palmer.demon.co.uk
+DATE: 1995-02-23T22:27:15+00:00  FROM: Gary Palmer <gary@palmer.demon.co.uk> <None>
+SUBJ: Re: MD5 in ports 
+BODY:
+In message <199502232141.WAA09080@uriah.heep.sax.de>, J Wunsch writes:
+
+
+There is something about it in the /usr/share/FAQ/ports.FAQ, but all you
+really need to do is cd to the directory for the port you want the
+MD5 checksum made for, and type `make makesum'. `make checksum' will
+check it's OK.
+
+Gary
+
+
+
+--------------------------------------------------------------------------------
+MID: m0rmYCr-000NB2C@simon.chi.il.us
+DATE: 1995-03-09T02:44:00+00:00  FROM: steve@simon.chi.il.us (Steven E. Piette) <None>
+SUBJ: Ethernet interface AUI, UTP and BNC ports
+BODY:
+
+I haven't been reading "current" so forgive me if this has be hashed
+to death.
+
+Given the number of questions users, new and old, keep asking about the correct
+ifconfig options for using the various ports on an interface, doesn't make
+sense to define AUI, UTP, and BNC as some alias of link0-2 in ifconfig?
+
+Also, on boards that have EEPROM configuration should we always use the
+configured port type at probe time and not change it unless something
+is specified via ifconfig.
+
+I think this would eliminate all these "my 3C5X9 doesn't work" questions.
+
+If this is something deemed useful I'd offer to hack ifconfig and as many
+of the ethernet drivers as I can before 2.1 release to do this.
+
+
+Any comments?
+
+Steve Piette                                       Applied Computer Technology
+steve@simon.chi.il.US.                             7N852 Phar Lap Drive 
+(708) 513-6920                                     St. Charles, IL 60175-6868
+-------------------------------------------------------------------------------
+
+
+
+--------------------------------------------------------------------------------
+MID: 9503091939.AA12491@halloran-eldar.lcs.mit.edu
+DATE: 1995-03-09T19:39:37+00:00  FROM: Garrett Wollman <wollman@halloran-eldar.lcs.mit.edu> <None>
+SUBJ: Ethernet interface AUI, UTP and BNC ports
+BODY:
+<<On Wed, 8 Mar 95 20:44 CST, steve@simon.chi.il.us (Steven E. Piette) said:
+
+
+No.  The drivers (and ifconfig(8)) should be fixed to use the type
+field that I defined a couple of months ago, and stop abusing the
+flags in this way.
+
+-GAWollman
+
+--
+Garrett A. Wollman   | Shashish is simple, it's discreet, it's brief. ... 
+wollman@lcs.mit.edu  | Shashish is the bonding of hearts in spite of distance.
+Opinions not those of| It is a bond more powerful than absence.  We like people
+MIT, LCS, ANA, or NSA| who like Shashish.  - Claude McKenzie + Florent Vollant
+
+
+
+--------------------------------------------------------------------------------
+MID: 199503092223.OAA00478@estienne.cs.berkeley.edu
+DATE: 1995-03-09T22:23:30+00:00  FROM: "Justin T. Gibbs" <gibbs@estienne.CS.Berkeley.EDU> <None>
+SUBJ: Re: Ethernet interface AUI, UTP and BNC ports 
+BODY:
+
+Can you give a rough outline of the work needed so that others can start 
+it if you don't have the time?  I'm so sick of answering the link2 questions,
+that I'd like to make this happen as soon as possible.
+
+Thanks.
+
+
+--
+Justin T. Gibbs
+==============================================
+TCS Instructional Group - Programmer/Analyst 1
+  Cory | Po | Danube | Volga | Parker | Torus
+==============================================
+
+
+
+--------------------------------------------------------------------------------
+MID: 9503092247.AA12950@halloran-eldar.lcs.mit.edu
+DATE: 1995-03-09T22:47:01+00:00  FROM: Garrett Wollman <wollman@halloran-eldar.lcs.mit.edu> <None>
+SUBJ: Re: Ethernet interface AUI, UTP and BNC ports 
+BODY:
+<<On Thu, 09 Mar 1995 14:23:30 -0800, "Justin T. Gibbs" <gibbs@estienne.cs.berkeley.edu> said:
+
+
+Sure.  Jsut define a SIOCSIFMEDIA and SIOCGIFMEDIA ioctls, implement
+them in ifioctl() and in each relevant interface's if_ioctl() routine,
+and then explain the whole thing to ifconfig.
+
+-GAWollman
+
+--
+Garrett A. Wollman   | Shashish is simple, it's discreet, it's brief. ... 
+wollman@lcs.mit.edu  | Shashish is the bonding of hearts in spite of distance.
+Opinions not those of| It is a bond more powerful than absence.  We like people
+MIT, LCS, ANA, or NSA| who like Shashish.  - Claude McKenzie + Florent Vollant
+
+
+
+--------------------------------------------------------------------------------
+MID: 95Mar14.170144met.43045@eikon.regent.e-technik.tu-muenchen.de
+DATE: 1995-03-14T16:01:36+00:00  FROM: Julian H Stacey <Julian.H.Stacey@regent.e-technik.tu-muenchen.de> <None>
+SUBJ: Testers needed - sys/Makefile that supports CD-ROM and NFS multi hosts
+BODY:
+I have revised my /sys/Makefile, & am looking for alpha testers
+
+So .. big deal .. tiddly little make file Eh ? .... We...ll not exactly
+ 19377 Mar 13 18:24 Makefile    (Yup, considerable comment in, as still in test)
+  2052 Mar 13 14:50 Makefile_sub.c
+Plus I have associated diffs to apply to Makefile.i386 etc ...
+
+Why did I bother & Why should you ? ...
+# FEATURES:
+#       - Kernel configuration & make, defaulting to a kernel config name
+#         automatically selected on a host name basis; (also does subdir make).
+#       - Supports optional obj tree.
+#       - Supports compilation from cd-rom.
+#       - Supports NFS multiple host parallel simultaneous use of
+#         shared /usr/src.
+#       - Config automatically called if configuration name changes.
+#       - Depend done automatically.
+#       - Overide of default config name by either "make CONFIG=whatever"
+#         or by editing default file.
+#       - Config Selection precedence order & examples:
+#               PRIORITY        METHOD
+#               High:           make CONFIG=GENERICAH
+#               Medium:         echo "GENERICAH" > ${DEFAULT_CONFIG}
+#               Low:            Makefile internally does CONFIG=`h
+
+--------------------------------------------------------------------------------
+MID: 24443.796804736@freefall.cdrom.com
+DATE: 1995-04-02T06:38:56+00:00  FROM: "Jordan K. Hubbard" <jkh@freefall.cdrom.com> <None>
+SUBJ: Re: Ethernet interface AUI, UTP and BNC ports 
+BODY:
+
+What's the story with this?
+
+					Jordan
+
+
+
+--------------------------------------------------------------------------------
+MID: 199504020644.WAA14076@estienne.cs.berkeley.edu
+DATE: 1995-04-02T06:44:49+00:00  FROM: "Justin T. Gibbs" <gibbs@estienne.CS.Berkeley.EDU> <None>
+SUBJ: Re: Ethernet interface AUI, UTP and BNC ports 
+BODY:
+
+I don't have time to do it.  There was someone else that was interested
+in doing it.
+--
+Justin T. Gibbs
+==============================================
+TCS Instructional Group - Programmer/Analyst 1
+  Cory | Po | Danube | Volga | Parker | Torus
+==============================================
+
+
+
+--------------------------------------------------------------------------------
+MID: m0rvTFh-000NB2C@simon.chi.il.us
+DATE: 1995-04-02T17:15:00+00:00  FROM: steve@simon.chi.il.us (Steven E. Piette) <None>
+SUBJ: Re: Ethernet interface AUI, UTP and BNC ports
+BODY:
+
+
+
+I've started the work and have most of the changes to ifconfig done. I'm waiting
+on some feedback from Garrett to see if I going in the right direction before
+starting on the drivers.
+
+Steve
+
+
+
+--------------------------------------------------------------------------------
+MID: m0rvhNn-000K0iC@pelican.com
+DATE: 1995-04-03T01:21:00+00:00  FROM: pete@pelican.com (Pete Carah) <None>
+SUBJ: Re: cvs commit: ports/games Makefile
+BODY:
+In article <199504030109.SAA08610@silvia.HIP.Berkeley.EDU> Satoshi writes:
+
+
+Given this, what is the current list of sup packages, both system and
+ports?  It is hard to keep up with...  I just added ports-graphics...
+
+-- Pete
+
+
+
+--------------------------------------------------------------------------------
+MID: 874.796924101@palmer.demon.co.uk
+DATE: 1995-04-03T15:48:21+00:00  FROM: Gary Palmer <gary@palmer.demon.co.uk> <None>
+SUBJ: Re: cvs commit: ports/games Makefile 
+BODY:
+In message <m0rvhNn-000K0iC@pelican.com>, Pete Carah writes:
+
+ftp://ftp.freebsd.org/pub/FreeBSD/FreeBSD-current/src/share/FAQ/extras/*
+are the files that you want.
+
+Gary
+
+
+
+--------------------------------------------------------------------------------
+MID: 9504032016.AA22790@halloran-eldar.lcs.mit.edu
+DATE: 1995-04-03T20:16:29+00:00  FROM: Garrett Wollman <wollman@halloran-eldar.lcs.mit.edu> <None>
+SUBJ: Re: Ethernet interface AUI, UTP and BNC ports
+BODY:
+<<On Sun, 2 Apr 95 12:15 CDT, steve@simon.chi.il.us (Steven E. Piette) said:
+
+
+I think I deleted your message.  Send code and I'll tell you what I
+think.
+
+-GAWollman
+
+--
+Garrett A. Wollman   | Shashish is simple, it's discreet, it's brief. ... 
+wollman@lcs.mit.edu  | Shashish is the bonding of hearts in spite of distance.
+Opinions not those of| It is a bond more powerful than absence.  We like people
+MIT, LCS, ANA, or NSA| who like Shashish.  - Claude McKenzie + Florent Vollant
+
+
+
+--------------------------------------------------------------------------------
+MID: m0rvyZF-000NB4C@simon.chi.il.us
+DATE: 1995-04-04T02:42:00+00:00  FROM: steve@simon.chi.il.us (Steven E. Piette) <None>
+SUBJ: Re: Ethernet interface AUI, UTP and BNC ports
+BODY:
+
+
+
+Besides if_ep (3C5x9) and some devices in if_ed what other devices support 
+on the fly physical port selection that will need hacking once ifconfig
+stops using the LINK flags. (A quick check for IFF_LINK turns up if_ze)
+
+Steve
+
+
+
+--------------------------------------------------------------------------------
+MID: 199504181255.FAA02773@freefall.cdrom.com
+DATE: 1995-04-18T12:55:59+00:00  FROM: "Jordan K. Hubbard" <jkh> <None>
+SUBJ: Using current ports..
+BODY:
+If you're going to start using any of the ports in
+ftp://freebsd.org/pub/FreeBSD/packages, let me just first warn you:
+	Update your pkg_install tools.
+
+If you're running pre 0412-SNAP level pkg_install binaries, you won't
+get the dependency handling in pkg_add and your life will generally suck.. :-)
+
+						Jordan
+
+
+
+--------------------------------------------------------------------------------
+MID: 9504222109.AA03643@olympus
+DATE: 1995-04-22T21:09:20+00:00  FROM: faulkner@mpd.tandem.com (Boyd Faulkner) <None>
+SUBJ: Re: cvs commit: /host/freefall/a/ncvs/ports/
+BODY:
+Rod,
+My 486 PCI  Asus Box boots FreeBSD current great... but the latest snap 
+boot floppy and the fixit disk do not.  Everthing is cool until the PCI
+is found.
+
+Apr 22 15:05:09 catburg /kernel: Probing for devices on the pci0 bus:
+Apr 22 15:05:10 catburg /kernel:        configuration mode 2 allows 16 devices.
+Apr 22 15:05:10 catburg /kernel: chip0 <Intel 82424ZX cache DRAM controller>
+ rev 4 on pci0:0
+Apr 22 15:05:10 catburg /kernel: ncr0 <ncr 53c810 scsi> rev 2 int a irq 9 on 
+ pci 0:1 
+Apr 22 15:05:10 catburg /kernel:        reg20: virtual=0xf2fe9000 
+ physical=0xfbf ef000 size=0x100
+
+Up to here life is good, but the following never happens from floppy.
+
+Apr 22 15:05:10 catburg /kernel: ncr0: restart (scsi reset). 
+Apr 22 15:05:10 catburg /kernel: ncr0 scanning for targets 0..6 
+ (V2 pl21 95/03/21)
+
+I have waited over a minute.
+
+Seen this before?
+
+Boyd
+
+-- 
+_______________________________________________________________________
+
+ Boyd Faulkner                                  faulkner@isd.tandem.com 
+_______________________________________________________________________
+
+
+
+--------------------------------------------------------------------------------
+MID: 199504222124.OAA02464@gndrsh.aac.dev.com
+DATE: 1995-04-22T21:24:24+00:00  FROM: "Rodney W. Grimes" <rgrimes@gndrsh.aac.dev.com> <None>
+SUBJ: Re: cvs commit: /host/freefall/a/ncvs/ports/
+BODY:
+
+No I have not, but then I don't run the SNAP shots as it is easier
+for me to build my own releases here and do disk to disk installs
+using ``make DESTDIR=/newroot'' install.
+
+I will down load the latest snap boot floppies and take a look at
+what they do on my 5 PCI test systems.
+
+I currently don't have a ASUS PCI/I-486SP3G on site, but could pull
+one in on monday easily.  (And probably going to have to anyway for
+other reasons).
+
+
+-- 
+Rod Grimes                                      rgrimes@gndrsh.aac.dev.com
+Accurate Automation Company                   Custom computers for FreeBSD
+
+
+
+--------------------------------------------------------------------------------
+MID: 199504222231.AA28723@FileServ1.MI.Uni-Koeln.DE
+DATE: 1995-04-22T22:31:55+00:00  FROM: se@MI.Uni-Koeln.DE (Stefan Esser) <None>
+SUBJ: Re: cvs commit: /host/freefall/a/ncvs/ports/
+BODY:
+On Apr 22, 16:09, Boyd Faulkner wrote:
+} Subject: Re: cvs commit: /host/freefall/a/ncvs/ports/
+} Rod,
+} My 486 PCI  Asus Box boots FreeBSD current great... but the latest snap 
+} boot floppy and the fixit disk do not.  Everthing is cool until the PCI
+} is found.
+} 
+} Apr 22 15:05:09 catburg /kernel: Probing for devices on the pci0 bus:
+} Apr 22 15:05:10 catburg /kernel:        configuration mode 2 allows 16 devices.
+} Apr 22 15:05:10 catburg /kernel: chip0 <Intel 82424ZX cache DRAM controller>
+}  rev 4 on pci0:0
+} Apr 22 15:05:10 catburg /kernel: ncr0 <ncr 53c810 scsi> rev 2 int a irq 9 on 
+}  pci 0:1 
+} Apr 22 15:05:10 catburg /kernel:        reg20: virtual=0xf2fe9000 
+}  physical=0xfbf ef000 size=0x100
+} 
+} Up to here life is good, but the following never happens from floppy.
+} 
+} Apr 22 15:05:10 catburg /kernel: ncr0: restart (scsi reset). 
+} Apr 22 15:05:10 catburg /kernel: ncr0 scanning for targets 0..6 
+}  (V2 pl21 95/03/21)
+
+No, sorry, haven't ...
+
+I just booted the SNAP floppies on my SP3G, and 
+everything seems fine.
+
+Regards, STefan
+-- 
+ Stefan Esser				Internet:	<se@ZPR.Uni-Koeln.DE>
+ Zentrum fuer Paralleles Rechnen	Tel:		+49 221 4706019
+ Universitaet zu Koeln			FAX:		+4
+
+--------------------------------------------------------------------------------
+MID: 199505010729.JAA10698@lirmm.lirmm.fr
+DATE: 1995-05-01T07:29:08+00:00  FROM: "Philippe Charnier" <charnier@lirmm.fr> <None>
+SUBJ: new dynamic libraries from ports
+BODY:
+Hello,
+
+When a dynamic library is added (in the ldconfig's searching path),
+the library is not seen until ldconfig is rerun (because ld.so only
+search for libs in ld.so.hints). This is a problem when making some
+ports (e.g xv) that depend on libs (e.g libtiff and libjpeg).
+
+--------                                                        --------
+Philippe Charnier                                      charnier@lirmm.fr
+                               
+
+         LIRMM, 161 rue Ada, 34392 Montpellier cedex 5 -- France
+------------------------------------------------------------------------
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 20260.799317541@time.cdrom.com
+DATE: 1995-05-01T08:39:01+00:00  FROM: "Jordan K. Hubbard" <jkh@time.cdrom.com> <None>
+SUBJ: Re: new dynamic libraries from ports 
+BODY:
+
+This has come up before.  ldconfig needs two things:
+
+1. An option for "refreshing" its internal path.
+2. An option for adding a directory to that path.
+
+In conversations with Satoshi, I've recommended that a new `-a' flag
+be added.  If you give it no directories as args, it does the
+`refresh' action.  Both options handled with one flag.  Adding a
+directory that's already in the search list should also be handled
+gracefully (essentially, "refresh this directory").  This would
+allow people to put stuff like:
+
+	@exec ldconfig -a ${PREFIX}/lib
+
+In their packing lists or install rules.
+
+The only problem is, I have no time to do this now.  Any takers?
+
+						Jordan
+
+
+
+--------------------------------------------------------------------------------
+MID: 199505010902.LAA11250@lirmm.lirmm.fr
+DATE: 1995-05-01T09:02:30+00:00  FROM: "Philippe Charnier" <charnier@lirmm.fr> <None>
+SUBJ: Re: new dynamic libraries from ports 
+BODY:
+Salut,
+
+In the message Re: new dynamic libraries from ports ,
+"Jordan K. Hubbard" <jkh@time.cdrom.com> wrote :
+
+
+So, ldconfig need to remember its last  call  (without -a). This
+means that a line need to be added in ld.so.hints 
+e.g 
+# /usr/lib /usr/X11R6/lib /usr/local/lib  
+
+where # looks like a comment line for ld.so which should of course walk 
+over this line.
+
+--------                                                        --------
+Philippe Charnier                                      charnier@lirmm.fr
+                               
+
+         LIRMM, 161 rue Ada, 34392 Montpellier cedex 5 -- France
+------------------------------------------------------------------------
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 9505011742.AA09538@cs.weber.edu
+DATE: 1995-05-01T17:42:15+00:00  FROM: terry@cs.weber.edu (Terry Lambert) <None>
+SUBJ: Re: new dynamic libraries from ports
+BODY:
+3. an option for deleting a directory from the path.
+
+
+Since dups are eliminated, the last command would be the current
+set; this state should be available without that line in the hints
+file.
+
+On the other hand, this is starting to look a lot like the problem that
+is solved by xset.  8-).
+
+    To set the font path:
+         fp= path[,path...]
+    To restore the default font path:
+         fp default
+    To have the server reread font databases:
+         fp rehash
+    To remove elements from font path:
+        -fp path[,path...]  fp- path[,path...]
+    To prepend or append elements to font path:
+        +fp path[,path...]  fp+ path[,path...]
+
+
+					Terry Lambert
+					terry@cs.weber.edu
+---
+Any opinions in this posting are my own and not those of my present
+or previous employers.
+
+
+
+--------------------------------------------------------------------------------
+MID: 199505021309.GAA07293@silvia.HIP.Berkeley.EDU
+DATE: 1995-05-02T13:09:34+00:00  FROM: asami@cs.berkeley.edu (Satoshi Asami | 浅見 賢) <None>
+SUBJ: lots of bogus packages on wcarchive
+BODY:
+I noticed that many packages shrunk dramatically during the last
+build.  It seems like the older ones have lots of duplicates inside.
+For example:
+
+=====
+asami(p8) freefall 67 06:02:04 /net/thud/e/ports/old.packages/.packages
+-rw-r--r-- root/wheel       69 Apr 22 12:06 1995 +COMMENT
+-rw-r--r-- root/wheel      122 Apr 22 12:06 1995 +CONTENTS
+-rw-r--r-- root/wheel      260 Apr 22 12:06 1995 +DESC
+drwxrwxrwx root/ports        0 Apr 22 12:06 1995 bin/
+-rwxr-xr-x root/ports    61440 Apr 22 12:06 1995 bin/ytalk
+-rwxr-xr-x root/ports    61440 Apr 22 12:06 1995 bin/ytalk
+drwxrwxrwx root/ports        0 Apr 22 12:06 1995 man/
+drwxrwxrwx root/ports        0 Apr 22 12:06 1995 man/man1/
+-rw-r--r-- root/ports     5001 Apr 22 12:06 1995 man/man1/ytalk.1.gz
+drwxrwxrwx root/ports        0 Apr 22 12:06 1995 man/man1/
+-rw-r--r-- root/ports     5001 Apr 22 12:06 1995 man/man1/ytalk.1.gz
+-rw-r--r-- root/ports     5001 Apr 22 12:06 1995 man/man1/ytalk.1.gz
+=====
+
+This is why emacs and its friends are 30MBish.
+
+This doesn't seem to be happening to the newer (i.e., built in the
+last couple of days) packages.  I don't know where the bug was
+(kernel, tar, pkg_create), but I thought I'd warn everybody on the
+
+--------------------------------------------------------------------------------
+MID: 199505021330.GAA07345@silvia.HIP.Berkeley.EDU
+DATE: 1995-05-02T13:30:03+00:00  FROM: asami@cs.berkeley.edu (Satoshi Asami | 浅見 賢) <None>
+SUBJ: Re: lots of bogus packages on wcarchive
+BODY:
+ * I noticed that many packages shrunk dramatically during the last
+ * build.  It seems like the older ones have lots of duplicates inside.
+
+Now that I think of it, I have an idea how this happened...Jordan? :p
+
+If he has an explanation, current users and thud-users need not worry.
+
+Satoshi
+
+
+
+--------------------------------------------------------------------------------
+MID: 10648.799421925@time.cdrom.com
+DATE: 1995-05-02T13:38:45+00:00  FROM: "Jordan K. Hubbard" <jkh@time.cdrom.com> <None>
+SUBJ: Re: lots of bogus packages on wcarchive 
+BODY:
+The duplicate item problem was a transient bug in pkg_create; I fixed
+it in the second round.  I'm surprised it even made it onto thud
+as it was only broken in the tree for about 2 hours before I fixed it.
+
+					Jordan
+
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 199507062055.WAA00855@vector.eikon.e-technik.tu-muenchen.de
+DATE: 1995-07-06T20:55:08+00:00  FROM: Julian Howard Stacey <jhs@vector.eikon.e-technik.tu-muenchen.de> <None>
+SUBJ: cd /usr/ports ; make -i fetch
+BODY:
+Just to say "Thanks" to whoever (Satoshi etc I think )
+made
+	cd /usr/ports ; make -i fetch
+possible.
+I reccomend it to others, it keeps your modem nice & busy, while doing
+other interactive things, thus ensuring you squeeze maximum value out of
+your phone connection (& associated telecom bill).
+Julian S
+
+
+
+--------------------------------------------------------------------------------
+MID: 199507071252.FAA05852@silvia.HIP.Berkeley.EDU
+DATE: 1995-07-07T12:52:50+00:00  FROM: asami@cs.berkeley.edu (Satoshi Asami) <None>
+SUBJ: Re: cd /usr/ports ; make -i fetch
+BODY:
+ * Just to say "Thanks" to whoever (Satoshi etc I think )
+
+That was done by Paul's request, so say thanks to him too.... :)
+
+ * made
+ * 	cd /usr/ports ; make -i fetch
+ * possible.
+ * I reccomend it to others, it keeps your modem nice & busy, while doing
+ * other interactive things, thus ensuring you squeeze maximum value out of
+ * your phone connection (& associated telecom bill).
+
+Also don't forget Jordan's "make fetch-list" command, especially
+useful if your FreeBSD machine is not IP connected.
+
+Satoshi
+
+
+
+--------------------------------------------------------------------------------
+MID: IHGrS_l8fE@deep-thought.demos.su
+DATE: 1995-07-08T00:12:00+00:00  FROM: Андрей Чернов aka "Andrey A. Chernov, Black Mage" <ache@astral.msk.su> <None>
+SUBJ: When ports-emulators SUP target will be available?
+BODY:
+-- 
+Andrey A. Chernov        : And I rest so composedly,  /Now, in my bed,
+ache@astral.msk.su       : That any beholder  /Might fancy me dead -
+FidoNet: 2:5020/230.3    : Might start at beholding me,  /Thinking me dead.
+RELCOM Team,FreeBSD Team :         E.A.Poe         From "For Annie" 1849
+
+
+
+--------------------------------------------------------------------------------
+MID: 199507081035.MAA05012@vector.eikon.e-technik.tu-muenchen.de
+DATE: 1995-07-08T10:35:04+00:00  FROM: "Julian Stacey <jhs@freebsd.org>" <jhs@vector.eikon.e-technik.tu-muenchen.de> <None>
+SUBJ: Re: cd /usr/ports ; make -i fetch 
+BODY:
+
+Thanks !
+
+					^ permanently
+Thanks, Ive tried this too after you mentioned it, it's great :-)
+Julian S
+
+
+
+--------------------------------------------------------------------------------
+MID: 199507151026.UAA16821@godzilla.zeta.org.au
+DATE: 1995-07-15T10:26:03+00:00  FROM: Bruce Evans <bde@zeta.org.au> <None>
+SUBJ: Re: ports/617: screen(1) locks up on startup and hangs tty
+BODY:
+
+Do other versions of screen work?  My old version of screen-3.5.2 (August
+1993 distribution) compiled on 11 Jan 1995 still works under FreeBSD-current.
+Screen is configured to use fifos instead of sockets (this required fixing
+many configuration bugs).  FreeBSD-current has one fix for revoking of
+ttys that might be relevant.
+
+Bruce
+
+
+
+--------------------------------------------------------------------------------
+MID: 199507151348.XAA22673@godzilla.zeta.org.au
+DATE: 1995-07-15T13:48:04+00:00  FROM: Bruce Evans <bde@zeta.org.au> <None>
+SUBJ: Re: bin/613: send-pr reports wrong release
+BODY:
+
+
+
+
+This is wrong for a different reason - it only works if the machine sending
+the mail is running the buggy version of FreeBSD.  Machines that aren't
+connected to the net won't be sending the mail and machines that are
+connected may be running a different version.
+
+Bruce
+
+
+
+--------------------------------------------------------------------------------
+MID: iV-U12mmO1@astral.msk.su
+DATE: 1995-07-15T19:32:14+00:00  FROM: Андрей Чернов aka "Andrey A. Chernov, Black Mage" <ache@astral.msk.su> <None>
+SUBJ: Re: ports/617: screen(1) locks up on startup and hangs tty
+BODY:
+In message <199507151026.UAA16821@godzilla.zeta.org.au> Bruce Evans
+    writes:
+
+
+
+I have all screen versions worked on several machines, it seems
+some outer problems involved.
+
+-- 
+Andrey A. Chernov        : And I rest so composedly,  /Now, in my bed,
+ache@astral.msk.su       : That any beholder  /Might fancy me dead -
+FidoNet: 2:5020/230.3    : Might start at beholding me,  /Thinking me dead.
+RELCOM Team,FreeBSD Team :         E.A.Poe         From "For Annie" 1849
+
+
+
+--------------------------------------------------------------------------------
+MID: Pine.BSD.3.91.950721082235.11999A-100000@vishnu.alias.net
+DATE: 1995-07-21T13:28:41+00:00  FROM: "John A. Perry" <perry@vishnu.alias.net> <None>
+SUBJ: getting ports?
+BODY:
+-----BEGIN PGP SIGNED MESSAGE-----
+
+	I was FTP'ing to get the port for MH and I experienced some add
+behavior. I went to pub/FreeBSD/2.0.5-RELEASE/ports/mail and found the MH
+directory where it should be. I then type "get mh.tar.Z" to have the
+directory structure tarred and compressed and I kept getting the message
+"mh.tar.Z" does not exist. Is FreeBSD.org using wuftp? I thought they
+were. Anyway the ability to tar and compress directories for ftp transfer
+has stopped working. 
+
+ John Perry - KG5RG - perry@jpunix.com -  PGP-encrypted e-mail welcome!
+ WWW - http://www.jpunix.com
+ PGP 2.62 key for perry@jpunix.com is on the keyservers.
+
+
+-----BEGIN PGP SIGNATURE-----
+Version: 2.6.2
+Comment: Processed by mkpgp, a Pine/PGP interface.
+
+iQEVAwUBMA+reaghiWHnUu4JAQG1hwf+IZOeTmVgydev/HJZOHtbXT4/6EmlOTbI
+8aufi6YDtZRbxJU+IqDHJb6zNRZGSuTHFfCS+DmwYtZ+jYx+RANZzqtz8WtAwWe2
+FGuv0gZb6u1FvCK9I1Zj3zWEl3Df0S4Z86FmbVhcgOXcQh3nvelxln+tO+KFlVTQ
+w85F33jyf6roDliuCOZca6TNTAMn+57ZKttV7lw5HRx331zWtEyXvos3TY/4FSvx
+zJxfjm0nzXb/tK4mfZTHlTkS0w1dwA38tOslCfAC0XAmpo8D376yXX15svYGfpNl
+5W3xMjRuQ+dxcMQhqvZx9X9puKkqVCYbVNW4Z+5ky6hh2Rr+jNd6sg==
+=1sC6
+-----END PGP SIGNATURE-----
+
+
+
+--------------------------------------------------------------------------------
+MID: 199508091733.TAA06532@vector.eikon.e-technik.tu-muenchen.de
+DATE: 1995-08-09T17:33:45+00:00  FROM: "Julian Stacey <jhs@freebsd.org>" <jhs@vector.eikon.e-technik.tu-muenchen.de> <None>
+SUBJ: Re: cvs commit: ports/devel/noweb/work/contrib/norman/numarkup Makefile numarkup.aux numarkup.bbl numarkup.nw 
+BODY:
+This sent to current ...
+
+
+
+locate easy-import:
+	/usr/src/gnu/usr.bin/cvs/contrib/easy-import.perl
+But it's not in my bin path, 
+
+Perhaps tools we approve for our own use on freefall should also be installed
+in src or ports, so they show up on our local tree ?
+
+It'd make trying & testing things easier (safer too for freefall :-)
+
+Julian S
+
+
+
+--------------------------------------------------------------------------------
+MID: 199508101212.OAA04331@uriah.heep.sax.de
+DATE: 1995-08-10T12:12:50+00:00  FROM: J Wunsch <j@uriah.heep.sax.de> <None>
+SUBJ: Re: cvs commit: ports/devel/noweb/work/contrib/norman/numarkup Makefile numarkup.aux numarkup.bbl numarkup.nw
+BODY:
+As Julian Stacey wrote:
+
+On freefall, it's /usr/local/bin/easy-import.  It's not installed
+anywhere by default, since it's use is restricted to a very limited
+number of people.
+
+-- 
+cheers, J"org
+
+joerg_wunsch@uriah.heep.sax.de -- http://www.sax.de/~joerg/
+Never trust an operating system you don't have sources for. ;-)
+
+
+
+--------------------------------------------------------------------------------
+MID: 199508101947.MAA02305@gndrsh.aac.dev.com
+DATE: 1995-08-10T19:47:27+00:00  FROM: "Rodney W. Grimes" <rgrimes@gndrsh.aac.dev.com> <None>
+SUBJ: Re: cvs commit: ports/devel/noweb/work/contrib/norman/numarkup Makefile numarkup.aux numarkup.bbl numarkup.nw
+BODY:
+
+/usr/local/bin/easy-import*, there are 2 aliases via hard links to
+it for historical reasons :-)
+
+
+Right!  And that script is extreamly FreeBSD specific, as it has things
+like not allowing RELENG* as a tag name.
+
+
+-- 
+Rod Grimes                                      rgrimes@gndrsh.aac.dev.com
+Accurate Automation Company                 Reliable computers for FreeBSD
+
+
+
+--------------------------------------------------------------------------------
+MID: 199508132017.WAA06851@uriah.heep.sax.de
+DATE: 1995-08-13T20:17:37+00:00  FROM: J Wunsch <j@uriah.heep.sax.de> <None>
+SUBJ: ports.Attic.950813.tgz
+BODY:
+Whoever might be user 2004 on freefall...
+
+creating a 455491 bytes long file in ~ncvs and distributing it via
+CTM hasn't been the most enlightening idea. :-(
+
+-- 
+cheers, J"org
+
+joerg_wunsch@uriah.heep.sax.de -- http://www.sax.de/~joerg/
+Never trust an operating system you don't have sources for. ;-)
+
+
+
+--------------------------------------------------------------------------------
+MID: 1716.808348574@time.cdrom.com
+DATE: 1995-08-13T21:16:14+00:00  FROM: "Jordan K. Hubbard" <jkh@time.cdrom.com> <None>
+SUBJ: Re: ports.Attic.950813.tgz 
+BODY:
+
+That would be Rod.. :)
+
+					Jordan
+
+
+
+--------------------------------------------------------------------------------
+MID: 199508132225.PAA11232@gndrsh.aac.dev.com
+DATE: 1995-08-13T22:25:02+00:00  FROM: "Rodney W. Grimes" <rgrimes@gndrsh.aac.dev.com> <None>
+SUBJ: Re: ports.Attic.950813.tgz
+BODY:
+
+While doing so I also deleted 2.8MB of Attic.  Sorry, but this
+stuff must be archived some place, and that is as good as any.
+If I archive it outside of ~ncvs it does not end up on my system
+where I write the backup tapes from that I use to restore repository
+stuff from.
+
+And I don't see you complaing about the 2.8MB of file deletes CTM
+should have just told you to go do (or did for you, I am not very
+intune with if that feature got added)
+
+I was also not aware that CTM would pick up bits from the top
+level directory, and have made a request that this be changed.
+
+If 455Kbytes is a problem for you, how did you mange the 190MB (45MB
+compressed) to get the repository in the first place?
+
+Though you may not like me for this, I know Bruce is going to be
+a bit happy about it :-)
+-- 
+Rod Grimes                                      rgrimes@gndrsh.aac.dev.com
+Accurate Automation Company                 Reliable computers for FreeBSD
+
+
+
+--------------------------------------------------------------------------------
+MID: 199508140539.HAA11141@uriah.heep.sax.de
+DATE: 1995-08-14T05:39:21+00:00  FROM: J Wunsch <j@uriah.heep.sax.de> <None>
+SUBJ: Re: ports.Attic.950813.tgz
+BODY:
+As Rodney W. Grimes wrote:
+
+I've noticed it.
+
+
+Hmmm... perhaps we really need an `exclude' clause (e.g. for a
+non-repository ``~ncvs/tmp'') in CTM.
+
+
+Of course, it does it for me... and i've noticed it.  I've rather been
+wondering why it could have been so broken to create such a huge delta
+just for the sake of removing some files, until i finally saw that the
+real reason for the huge blurb has been an erroneously picked file.
+
+Well, the next delta will only contain the FR (file remove)
+instruction.  :-) (Oh no, i won't remove it by hand, this will confuse
+CTM. ;)
+
+
+I've got it per tape (from Jordan directly). ;-)
+
+-- 
+cheers, J"org
+
+joerg_wunsch@uriah.heep.sax.de -- http://www.sax.de/~joerg/
+Never trust an operating system you don't have sources for. ;-)
+
+
+
+--------------------------------------------------------------------------------
+MID: KHcCNTmCy3@deep-thought.demos.su
+DATE: 1995-10-06T18:19:18+00:00  FROM: Андрей Чернов(aka Andrey A. Chernov, Black Mage) <ache@astral.msk.su> <None>
+SUBJ: Ports SUP junk
+BODY:
+SUP Requesting changes since Oct  1 13:39:33 1995
+SUP Receiving file sysutils/.#Makefile.1.3
+SUP Receiving file sysutils/Makefile
+-- 
+Andrey A. Chernov        : And I rest so composedly,  /Now, in my bed,
+ache@astral.msk.su       : That any beholder  /Might fancy me dead -
+FidoNet: 2:5020/230.3    : Might start at beholding me,  /Thinking me dead.
+RELCOM Team,FreeBSD Team :         E.A.Poe         From "For Annie" 1849
+
+
+
+--------------------------------------------------------------------------------
+MID: m0t9e4S-000ItnC@nemesis.lonestar.org
+DATE: 1995-10-29T14:11:00+00:00  FROM: uhclem%nemesis@fw.ast.com (Frank Durda IV) <None>
+SUBJ: Ports - What is the standard for "ported"?
+BODY:
+I recently (and am still) going through a rather agonizing migration
+of a SCO UNIX system to FreeBSD 2.0.5.
+
+Apart from lots of issues with SCSI hardware that SCO took in stride and
+FreeBSD hated ("unknown board" errors for an Adaptec 1540A, which is one
+of the non-thru-hole, 2nd generation surface-mount boards, and dealing with
+a WangDAT tape drive that under 2.0.5 won't let you remove the media until
+you reboot the system, OR you can issue a mt offline, remove the media, and
+then reboot to get the drive to load new media - that really stinks and
+didn't happen under SCO and I hope it is fixed in 2.1.0), I ran into a lot
+of application issues.
+
+My big problem came with some of the ports.  I really haven't had
+the opportunity to use or rely on these or the associated mechanisms before,
+but in the past 72 hours I have and found them to be a tad "uneven".
+
+The worst offender was smail.  I had to manually locate the files
+since the site was not operating under its final IP address yet (so
+that the neighbors would not try to send mail yet), and the pkg system
+tried to get the package first from ftp.uu.net, which refuses all
+requests from sites with no reverse DNS look-up.  Nice deadly e
+
+--------------------------------------------------------------------------------
+MID: Pine.3.89.9510291530.E20975-0100000@kryten.atinc.com
+DATE: 1995-10-29T20:42:52+00:00  FROM: "Jonathan M. Bresler" <jmb@kryten.Atinc.COM> <None>
+SUBJ: Re: Ports - What is the standard for "ported"?
+BODY:
+On Sun, 29 Oct 1995, Frank Durda IV wrote:
+
+
+	this problem must be unique to WangDAT or at least non-exabyte 
+4mm tape drives.   i use a 4mm for daily backup.  unload the tape with 
+"/usr/bin/mt -f /dev/rst0 rewoffl".   load a new tape every morning and 
+haev no problems at all.  
+
+	here is my dump.4mm script (the rewind gets the tape started, 
+should not be needed but is, alas)
+
+#!/bin/sh
+echo "" >> dump.log
+echo "" >> dump.log
+echo "" >> dump.log
+/usr/bin/mt -f /dev/rst0 rewind
+/sbin/dump 0unBbf 1200000 10 /dev/nrst0 /dev/sd1a 2>&1 | tee -a  
+/root/dump.log
+/sbin/dump 0unBbf 1200000 10 /dev/nrst0 /dev/sd1e 2>&1 | tee -a  
+/root/dump.log
+/sbin/dump 0unBbf 1200000 10 /dev/rst0 /dev/sd1f 2>&1  | tee -a  
+/root/dump.log
+/usr/bin/mt -f /dev/rst0 rewoffl
+
+
+Jonathan M. Bresler  jmb@kryten.atinc.com       | Analysis & Technology, Inc.  
+FreeBSD Postmaster   jmb@FreeBSD.Org            | 2341 Jeff Davis Hwy
+play go.                                        | Arlington, VA 22202
+ride bike. hack FreeBSD.--ah the good life      | 703-418-2800 x346
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 199510300334.TAA09564@ref.tfs.com
+DATE: 1995-10-30T03:34:38+00:00  FROM: Julian Elischer <julian@ref.tfs.com> <None>
+SUBJ: Re: Ports - What is the standard for "ported"?
+BODY:
+                               ^^^^^^^^^^ this dissables the button
+                               ^^^^^^^^ this enables it again (on close)
+                  ^^^^^^^^ so does this
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 199510300339.TAA09588@ref.tfs.com
+DATE: 1995-10-30T03:39:37+00:00  FROM: Julian Elischer <julian@ref.tfs.com> <None>
+SUBJ: Re: Ports - What is the standard for "ported"?
+BODY:
+
+I BELIEVE this is fixed, they bumped the board-id code and we didn't
+recognise it (3 line fix).
+
+
+Are you saying that a
+mt -f /dev/nrst0 offline
+stops the tape from ever working again?
+
+I've never heard that before..
+
+julian
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 199511262052.WAA16864@grumble.grondar.za
+DATE: 1995-11-26T20:52:41+00:00  FROM: Mark Murray <mark@grondar.za> <None>
+SUBJ: Re: Repository copy request: (part of) ports/net -> ports/www 
+BODY:
+You wrote:
+:
+
+My turn! :-) (Thanks for doing the libgmp stuff!)
+
+Please will you also do these two moves for current:
+
+1) Secure Telnet
+pcopy secure/lib/libtelnet	eBones/lib/libtelnet
+pcopy secure/libexec/telnetd	eBones/libexec/telnetd
+pcopy secure/usr.bin/telnet	eBones/usr.bin/telnet
+
+2) eBones docs
+eBones/man/k* to eBones/usr.sbin.kerberos
+eBones/man/des* to eBones/des
+
+M
+
+--
+Mark Murray
+46 Harvey Rd, Claremont, Cape Town 7700, South Africa
++27 21 61-3768 GMT+0200
+Finger mark@grumble.grondar.za for PGP key
+
+
+
+--------------------------------------------------------------------------------
+MID: Pine.BSF.3.91.951127102438.13407Z-100000@jhome.DIALix.COM
+DATE: 1995-11-27T02:28:09+00:00  FROM: Peter Wemm <peter@jhome.DIALix.COM> <None>
+SUBJ: Re: Repository copy request: (part of) ports/net -> ports/www 
+BODY:
+On Sun, 26 Nov 1995, Mark Murray wrote:
+
+"pcopy" was "ports copy" BTW..  It doesn't do enough for other areas with 
+branches and tags.
+
+Is this going to be a move or a copy? (ie: is telnet going to stay under 
+secure, but with no kerberos hooks?)
+
+-Peter
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 199511270611.IAA13985@grumble.grondar.za
+DATE: 1995-11-27T06:11:54+00:00  FROM: Mark Murray <mark@grondar.za> <None>
+SUBJ: Re: Repository copy request: (part of) ports/net -> ports/www 
+BODY:
+
+I just knew I shouldn't have worked last night! :-) Annual break coming up!
+
+
+Naah. For us, Secure Telnet == Kerberised Telnet, therefore it must _move_
+to eBones.
+
+M
+--
+Mark Murray
+46 Harvey Rd, Claremont, Cape Town 7700, South Africa
++27 21 61-3768 GMT+0200
+Finger mark@grumble.grondar.za for PGP key
+
+
+
+--------------------------------------------------------------------------------
+MID: 199512081519.JAA04463@luke.pmr.com
+DATE: 1995-12-08T15:19:24+00:00  FROM: Bob Willcox <bob@luke.pmr.com> <None>
+SUBJ: Problems suping ports-utils
+BODY:
+I have noticed lately (last week or so) that when I attempt to sup
+the ports collection I get the following error on the ports-utils
+part:
+
+SUP: Invalid release current for collection ports-utils
+SUP: Upgrade of ports-utils aborted at Dec  8 08:48:57 1995
+
+Here is my entry for ports-utils in the sup file:
+
+ports-utils release=current host=SUP.FreeBSD.ORG hostbase=/home base=/usr prefix=/bsd/FreeBSD/FreeBSD-2.1-ports delete old 
+
+Am I doing something wrong here?  Anyone else seeing this?
+
+Thanks,
+-- 
+Bob Willcox
+bob@luke.pmr.com (or obiwan%bob@uunet.uu.net)
+Austin, TX
+
+
+
+--------------------------------------------------------------------------------
+MID: 199512081537.JAA07145@freebsd.netcom.com
+DATE: 1995-12-08T15:37:08+00:00  FROM: Mark Hittinger <bugs@freebsd.netcom.com> <None>
+SUBJ: re: Problems suping ports-utils
+BODY:
+
+
+Me too!  I used to see this on ports-www right when they were adding it.  Maybe
+they messed up utils adding www?  :-)
+
+Regards,
+
+Mark Hittinger
+Netcom/Dallas
+bugs@freebsd.netcom.com
+
+
+
+--------------------------------------------------------------------------------
+MID: 199512082130.NAA25548@silvia.HIP.Berkeley.EDU
+DATE: 1995-12-08T21:30:34+00:00  FROM: asami@cs.berkeley.edu (Satoshi Asami) <None>
+SUBJ: re: Problems suping ports-utils
+BODY:
+ * Me too!  I used to see this on ports-www right when they were
+ * adding it.  Maybe they messed up utils adding www?  :-)
+
+Sorry, I should have sent an announcement.  ports-utils is obsolete
+and is (mostly) renamed ports-misc.
+
+So, if you are supping ports, please add ports-www and change
+ports-utils to ports-misc.  If you are not sure what to do, you can
+just pick up the new example supfile in FreeBSD-current.
+
+Satoshi
+
+
+
+--------------------------------------------------------------------------------
+MID: Pine.BSF.3.91.951230130731.27105A-100000@hub.org
+DATE: 1995-12-30T18:09:14+00:00  FROM: "Marc G. Fournier" <scrappy@ki.net> <None>
+SUBJ: Problem Reports
+BODY:
+
+Hi...
+
+	I'm just wondering what SOP is for problem reports...how should I
+handle the problem repeating itself?  Re-report it?
+
+	Problem in question is kern/911, where a find operation seems to
+be causing a panic in statfs...
+
+Thanks...
+
+Marc G. Fournier | POP Mail  Telnet Acct  DNS Hosting
+System           |  WWW Services   Database Services  | Knowledge, 
+  Administrator  |                                    | Information and
+ scrappy@ki.net  |      WWW: http://www.ki.net        | Communications, Inc
+
+
+
+
+==========================================================================================
+DB: freebsd-chat.duckdb  hits=26
+==========================================================================================
+--------------------------------------------------------------------------------
+MID: <m0saICP-000Pa5C@tartufo.pcs.dec.com>
+DATE: 1995-07-24T07:45:13+00:00  FROM: Michael Elbel <me@tartufo.pcs.dec.com>
+SUBJ: Re: cvs commit: ports/games/xkobo - Imported sources
+BODY:
+
+Actually, if you are patient and try not to shoot down too many
+beasties at a time, it's manageable. Now on to level 24 :-)
+
+Michael
+-- 
+Michael Elbel, PCS GmbH, Muenchen, Germany - me@FreeBSD.org
+Fermentation fault (coors dumped)
+
+From owner-freebsd-chat  Mon Jul 24 05:44:08 1995
+Return-Path: chat-owner
+Received: (from majordom@localhost)
+          by freefall.cdrom.com (8.6.11/8.6.6) id FAA18255
+          for chat-outgoing; Mon, 24 Jul 1995 05:44:08 -0700
+Received: from fslg8.fsl.noaa.gov (fslg8.fsl.noaa.gov [137.75.131.171])
+          by freefall.cdrom.com (8.6.11/8.6.6) with SMTP id FAA18249
+          ; Mon, 24 Jul 1995 05:44:06 -0700
+Received: by fslg8.fsl.noaa.gov (5.57/Ultrix3.0-C)
+	id AA29908; Mon, 24 Jul 95 06:44:00 -0600
+Received: by emu.fsl.noaa.gov (1.38.193.4/SMI-4.1 (1.38.193.4))
+	id AA16806; Mon, 24 Jul 1995 06:47:39 -0600
+Date: Mon, 24 Jul 1995 06:47:39 -0600
+From: kelly@fsl.noaa.gov (Sean Kelly)
+Message-Id: <9507241247.AA16806@emu.fsl.noaa.gov>
+To: me@freebsd.org
+Cc: jkh@time.cdrom.com, me@freebsd.org, chat@freebsd.org
+In-Reply-To: <m0saICP-000Pa5C@tartufo.pcs.dec.com> (me@tartufo.pcs.dec.com)
+Subject: Re: cvs commit: ports/games/xkobo - Imported sources
+Sender: c
+
+--------------------------------------------------------------------------------
+MID: 199507160900.LAA17058@uriah.heep.sax.de
+DATE: 1995-07-16T09:00:13+00:00  FROM: J Wunsch <j@uriah.heep.sax.de> <None>
+SUBJ: Re: WYSIWYG kit for src/usr.bin/vi, ports/net/chimera, print/ghostview
+BODY:
+As Julian Howard Stacey wrote:
+
+Declination:
+
+WYSIWYMG = What You See Is What You Might Get
+WYSIWYNG = What You See Is What You Never Get
+
+:-)
+
+Sorry, couldn't resist...
+-- 
+cheers, J"org
+
+joerg_wunsch@uriah.heep.sax.de -- http://www.sax.de/~joerg/
+Never trust an operating system you don't have sources for. ;-)
+
+
+
+--------------------------------------------------------------------------------
+MID: m0sYUbY-000Pa5C@tartufo.pcs.dec.com
+DATE: 1995-07-19T10:35:00+00:00  FROM: me@tartufo.pcs.dec.com (Michael Elbel) <None>
+SUBJ: Re: cvs commit: ports/games/xkobo - Imported sources
+BODY:
+In pcs.freebsd.cvs.all you write:
+
+
+Bah.
+
+---
+name	cleared stages	high score
+
+khe	   00000000022   000019608
+me	   00000000022   000014759
+---
+
+Tell us once you master level 23 ;-)
+
+Btw. The server on my Magnum grew to 60 MB once I started it with
+-doublesize. Pretty amazing game I'd say. Stays fast and fluid
+even when run over the net in double size mode. Thanks for beating
+me to making a port, I'd have done it today, another saved hour :-)
+
+Michael
+-- 
+Michael Elbel, PCS GmbH, Muenchen, Germany - me@FreeBSD.org
+Fermentation fault (coors dumped)
+
+
+
+--------------------------------------------------------------------------------
+MID: 1682.806176377@time.cdrom.com
+DATE: 1995-07-19T17:52:57+00:00  FROM: "Jordan K. Hubbard" <jkh@time.cdrom.com> <None>
+SUBJ: Re: cvs commit: ports/games/xkobo - Imported sources 
+BODY:
+
+Geeze!  Now I'm feeling distinctly emasculated..  This is playing in
+non-doubled mode, right?  Doubled, the games is slower and a lot
+easier to get a high score on, so let's make sure we're talking apples
+and apples here! :-)
+
+
+Yeah, I got Xaccel up to 90MB with doublesize - my P590 swapped into
+the 128MB of swap I have pretty heavily! :(
+
+					JOrdan
+
+
+
+--------------------------------------------------------------------------------
+MID: m0sZLFS-000Pa5C@tartufo.pcs.dec.com
+DATE: 1995-07-21T18:48:00+00:00  FROM: me@tartufo.pcs.dec.com (Michael Elbel) <None>
+SUBJ: Re: cvs commit: ports/games/xkobo - Imported sources
+BODY:
+In pcs.freebsd.chat you write:
+
+
+
+Me playing double-size because otherwise I wouldn't see anything on
+the 1280x1024 screen. Karlheinz plays in normal mode on a Pentium.
+I *don't* think it's that much easier doubled, since the whole game
+reacts slower.
+
+Nevertheless, one amazing game. I wouldn't have thought that such
+fluid graphics are possible under X over a IP connection.
+
+Michael
+-- 
+Michael Elbel, PCS GmbH, Muenchen, Germany - me@FreeBSD.org
+Fermentation fault (coors dumped)
+
+
+
+--------------------------------------------------------------------------------
+MID: 9507211702.AA20891@emu.fsl.noaa.gov
+DATE: 1995-07-21T17:02:14+00:00  FROM: kelly@fsl.noaa.gov (Sean Kelly) <None>
+SUBJ: Re: cvs commit: ports/games/xkobo - Imported sources
+BODY:
+
+    >> Tell us once you master level 23 ;-)
+
+    Jordan> Geeze!  Now I'm feeling distinctly emasculated.
+
+Okay, I got curious.
+
+And I have to admit, level 23 is a pain in the butt---several orders
+of magnitude harder than levels 1--22.  I'll keep you posted :-)
+
+-- 
+Sean Kelly
+NOAA Forecast Systems Lab, Boulder Colorado USA
+
+If God dwells inside us, like some people say, I sure hope He like
+enchiladas, because that's what He's getting!  -- Jack Handey
+
+
+
+--------------------------------------------------------------------------------
+MID: 28104.806350259@time.cdrom.com
+DATE: 1995-07-21T18:10:59+00:00  FROM: "Jordan K. Hubbard" <jkh@time.cdrom.com> <None>
+SUBJ: Re: cvs commit: ports/games/xkobo - Imported sources 
+BODY:
+
+I still cry foul since I'm ALSO using a 1280x1024 screen and using it
+in non-doubled mode.  With my P5-90 the game is significantly easier
+to play with the slowed down double size and when I tried actually
+playing in that mode, I rocketed all the way up to level 21 without
+even trying (and then quit, because the game wasn't much fun at that
+speed).  The whole game does and doesn't react slower - the ship can
+still be pivoted at the same rate, which often saves your butt when
+there are lots of things coming at you.  My most frequent cause of
+death is also a red ship coming on a diagonal VERY fast and wiping me
+out before I can react.  Under the doubled mode, the game is slow
+enough that this doesn't happen.
+
+So I repeat my challenge:  Level 23 with 1280x1024 and standard mode (no
+command line flags)?  We shall see! :-)
+
+					Jordan
+
+P.S. Kim says hello! :)
+
+
+
+--------------------------------------------------------------------------------
+MID: m0saICP-000Pa5C@tartufo.pcs.dec.com
+DATE: 1995-07-24T07:45:13+00:00  FROM: me@tartufo.pcs.dec.com (Michael Elbel) <None>
+SUBJ: Re: cvs commit: ports/games/xkobo - Imported sources
+BODY:
+
+Actually, if you are patient and try not to shoot down too many
+beasties at a time, it's manageable. Now on to level 24 :-)
+
+Michael
+-- 
+Michael Elbel, PCS GmbH, Muenchen, Germany - me@FreeBSD.org
+Fermentation fault (coors dumped)
+
+
+
+--------------------------------------------------------------------------------
+MID: 9507241247.AA16806@emu.fsl.noaa.gov
+DATE: 1995-07-24T12:47:39+00:00  FROM: kelly@fsl.noaa.gov (Sean Kelly) <None>
+SUBJ: Re: cvs commit: ports/games/xkobo - Imported sources
+BODY:
+
+    Michael> Actually, if you are patient and try not to shoot down
+    Michael> too many beasties at a time, it's manageable. Now on to
+    Michael> level 24 :-)
+
+You're right ... it certainly took a long time, but I kept things
+off-screen as much as possible and finally did it.
+
+An even faster way is to use the following patch ... :-)
+
+*** myship.C~   Sat Jul  1 13:31:34 1995
+--- myship.C    Mon Jul 24 06:35:42 1995
+***************
+*** 123,130 ****
+--- 123,132 ----
+  void _myship::destroyed()
+  {
+      if (state != normal) return;
++ #if 0
+      manage.lost_myship();
+      state = dead;
++ #endif
+  }
+  
+  int _myship::hit_structure()
+
+-- 
+Sean Kelly
+NOAA Forecast Systems Lab, Boulder Colorado USA
+
+I put contact lenses in my dog's eyes.  They had little pictures of
+cats on them.  Then I took one out and he ran around in circles.
+-- Steven Wright
+
+
+
+--------------------------------------------------------------------------------
+MID: 199507242123.XAA04656@blaise.ibp.fr
+DATE: 1995-07-24T21:23:51+00:00  FROM: roberto@blaise.ibp.fr (Ollivier Robert) <None>
+SUBJ: Re: cvs commit: ports/games/xkobo - Imported sources
+BODY:
+
+it is a very nice game, fast and all that but last time I played with it
+it ates 60 MB of swap on my 32 MB RAM system... and at the end of the
+game , the 60 MB os swap were not given back to the system :-(
+
+PS: I played -doublesize.
+-- 
+Ollivier ROBERT     -=- The daemon is FREE! -=-     roberto@FreeBSD.ORG
+      FreeBSD 2.2-CURRENT #5: Fri Jul 14 12:28:04 MET DST 1995
+
+
+
+--------------------------------------------------------------------------------
+MID: m0sae1e-000Pa5C@tartufo.pcs.dec.com
+DATE: 1995-07-25T09:03:00+00:00  FROM: me@tartufo.pcs.dec.com (Michael Elbel) <None>
+SUBJ: Re: cvs commit: ports/games/xkobo - Imported sources
+BODY:
+In pcs.freebsd.chat you write:
+
+
+Look at the size of your X server. Xkobo downloads all its graphics
+into the server - the only way to get such fast graphics. Since the
+default X servers aren't linked with gnumalloc, you won't get your
+memory back. On the other hand, if you have enough swap that doesn't
+hurt you. The server *won't* grow any more for the second and
+subsequent starts of the game. I've been running a 60 MB server for
+a week now (ok, I have some 300 Mb swap).
+
+Michael
+-- 
+Michael Elbel, PCS GmbH, Muenchen, Germany - me@FreeBSD.org
+Fermentation fault (coors dumped)
+
+
+
+--------------------------------------------------------------------------------
+MID: 199507251001.MAA07239@blaise.ibp.fr
+DATE: 1995-07-25T10:01:37+00:00  FROM: roberto@blaise.ibp.fr (Ollivier Robert) <None>
+SUBJ: Re: cvs commit: ports/games/xkobo - Imported sources
+BODY:
+
+My server uses gnumalloc :-)
+
+
+32 MB RA, 96 swap.
+-- 
+Ollivier ROBERT     -=- The daemon is FREE! -=-     roberto@FreeBSD.ORG
+      FreeBSD 2.2-CURRENT #5: Fri Jul 14 12:28:04 MET DST 1995
+
+
+
+--------------------------------------------------------------------------------
+MID: 199509212320.TAA13063@shell.monmouth.com
+DATE: 1995-09-21T23:20:48+00:00  FROM: Bill/Carolyn Pechter <pechter@shell.monmouth.com> <None>
+SUBJ: Re: ports startup scripts
+BODY:
+
+That's a generic Unix problem.  Unix usually doesn't have "Documentation"
+it has reference matter.  Now Vax/VMS had DOCUMENTATION.
+
+I've tried to configure HP-UX by the "Documentation"... ugh. 
+
+/etc/netnfsrc
+/etc/bsdsrc
+/etc/bull&*^%$#rc...
+
+Init and inittab were in the docs with OS/x and DC/OSx...
+However the man pages don't give real sample scripts.  They should 
+be in some skel directory... I always used the TCPIP or NFS starter
+script as a model.
+
+
+And a damned good one. 8-)
+
+
+I'm not much of a coder -- but I'm interested in Sysadmin issues.
+
+FreeBSD's going to get better and better the more discussion that goes
+into it.
+
+*I'll avoid the idea of conditional symbolic links and two sets of binaries
+so you could have both BSD and SYS_V compatible utilities. I'll avoid
+/usr/5bin or /usr/ucb -- both of which drove me nuts. *(i would've 
+preferred the symlinks) *
+
+Bill
+
+
+-------------------------------------------------------------------------------
+ Bill Pechter/Carolyn Pechter        | The postmaster always pings twice.
+ Lakewood MicroSystems               | 17 Meredith Drive,
+ 908-389-3592                        | Tinton Falls, NJ 07724       
+ pechter@shell.monmouth.com        
+
+--------------------------------------------------------------------------------
+MID: 199509221532.LAA10231@shell.monmouth.com
+DATE: 1995-09-22T15:32:48+00:00  FROM: Bill/Carolyn Pechter <pechter@shell.monmouth.com> <None>
+SUBJ: Re: ports startup scripts
+BODY:
+
+The Ss single user startup is the same as BSD single user.
+The 1 level on the machines I've seen runs the things like
+sync, cron, and a getty on the console... It's real nice for testing
+things like startup without letting users on via the net or over
+serial port gettys.
+
+I've used it as a final check before going to run states that let real
+users get at the machine. (Not too useful in workstations -- I agree -- but 
+real slick on mini's and mainframe size multiprocessors.)
+
+
+Sometimes you just want everything up except the database -- like
+during exports of the database and backups.  Since dropping from 4 to
+3 shuts the db down you've got an easy automated backup method -- since
+cron could just change the run state, back up, and then go run level 4 again.
+
+I've done this with drops to run state 1 at times under Linux at home
+to automate a lot of backups.  (It's real hard to do Single user cron'd
+backups 8-)...)
+
+Actually the a,b,c run states are supposed to be used for stuff like
+Oracle/Sybase etc.  But no one really uses them. (If anyone has please
+let me know.)
+
+In 4 years of Unix training classes I've never found anyone
+who's used them except me.  I just did it Beta'ing SVR4 t
+
+--------------------------------------------------------------------------------
+MID: 199509221537.LAA10284@shell.monmouth.com
+DATE: 1995-09-22T15:37:06+00:00  FROM: Bill/Carolyn Pechter <pechter@shell.monmouth.com> <None>
+SUBJ: Re: ports startup scripts
+BODY:
+
+You could use who -r to make decisions within the script as to whether
+to do something like killing the daemons.
+
+most SVRx scripts (and rc in SVR0-->2 do something like 
+
+set who -r to get the following info -- run level, previous run level
+and the number of times in this run level.  This info would allow you to
+avoid running the same stuff twice.
+
+Bill
+
+-------------------------------------------------------------------------------
+ Bill Pechter/Carolyn Pechter        | The postmaster always pings twice.
+ Lakewood MicroSystems               | 17 Meredith Drive,
+ 908-389-3592                        | Tinton Falls, NJ 07724       
+ pechter@shell.monmouth.com          |
+
+
+
+--------------------------------------------------------------------------------
+MID: 9509221629.AA14641@emu.fsl.noaa.gov
+DATE: 1995-09-22T16:29:10+00:00  FROM: kelly@fsl.noaa.gov (Sean Kelly) <None>
+SUBJ: Re: ports startup scripts
+BODY:
+
+    Bill> The 1 level on the machines I've seen runs the things like
+    Bill> sync, cron, and a getty on the console... It's real nice for
+    Bill> testing things like startup without letting users on via the
+    Bill> net or over serial port gettys.
+
+And then there's /etc/nologin---but I'm not sure if that's a better
+solution.
+
+    Bill> I've done this with drops to run state 1 at times under
+    Bill> Linux at home to automate a lot of backups.  (It's real hard
+    Bill> to do Single user cron'd backups 8-)...)
+
+Okay, I'm getting more and more convinced.  But then again, I've been
+doing automated multiuser backups at 3.00am (with some die-hard users
+still on) and haven't lost any files.
+
+-- 
+Sean Kelly
+NOAA Forecast Systems Laboratory, Boulder Colorado USA
+
+TASK: Shoot yourself in the foot.  In Ada: After correctly packing
+your foot, you attempt to concurrently load the gun, pull the trigger,
+scream, and shoot yourself in the foot. When you try, however, you
+discover you can't because your foot is of the wrong type.
+
+
+
+--------------------------------------------------------------------------------
+MID: 199509230406.AAA26269@shell.monmouth.com
+DATE: 1995-09-23T04:06:04+00:00  FROM: Bill/Carolyn Pechter <pechter@shell.monmouth.com> <None>
+SUBJ: Re: ports startup scripts
+BODY:
+
+rc.3 on most SysV machines is just a script that goes through 
+rc3.d starting and stopping stuff via the S* and K* scripts.
+
+Bill
+-------------------------------------------------------------------------------
+ Bill Pechter/Carolyn Pechter        | The postmaster always pings twice.
+ Lakewood MicroSystems               | 17 Meredith Drive,
+ 908-389-3592                        | Tinton Falls, NJ 07724       
+ pechter@shell.monmouth.com          |
+
+
+
+--------------------------------------------------------------------------------
+MID: 199509260050.SAA12272@rocky.sri.MT.net
+DATE: 1995-09-26T00:50:27+00:00  FROM: Nate Williams <nate@rocky.sri.MT.net> <None>
+SUBJ: Re: Unix and the desktop ( was Re: ports startup scripts)
+BODY:
+Terry Lambert writes:
+
+Hmm, seems SCO *attempted* to win the desktop.  Their *actual*
+(vs. mythical) attempt failed.  As a matter of fact, the name of the
+product was called "Open Desktop" perchance. ;)
+
+
+Nate
+
+
+
+--------------------------------------------------------------------------------
+MID: 199509260055.SAA12300@rocky.sri.MT.net
+DATE: 1995-09-26T00:55:35+00:00  FROM: Nate Williams <nate@rocky.sri.MT.net> <None>
+SUBJ: Re: ports startup scripts
+BODY:
+{ Moved to -chat }
+
+
+Huh?  What does the init stuff have to do with the desktop?  Sean is
+arguing that by adding the extra complexity to init you aren't buying
+anything for the normal user.  His arguement is backed by the fact that
+the average user is competent b/c Unix lost/doesn't have/never
+had/couldn't have/would like to have but didn't stand a chance on the
+desktop. :)
+
+
+Nate
+
+
+
+--------------------------------------------------------------------------------
+MID: 199509260133.SAA06459@phaeton.artisoft.com
+DATE: 1995-09-26T01:33:48+00:00  FROM: Terry Lambert <terry@lambert.org> <None>
+SUBJ: Re: Unix and the desktop ( was Re: ports startup scripts)
+BODY:
+
+SCO did not try to win the desktop.  You can't win the destop by replacing
+a contender (Xenix) with a piece of crap (SVR3).  I would be very suprised,
+given the large Microsoft ownership of SCO, if SCO did not take a dive on
+that one, if I didn't know for a fact that they shot themselves in the
+foot in an attempt to capture government $$$.
+
+I used Alpha and Beta ODT on Xenix before SVR3 was forced down SCO's
+throat by the Desktop III and AFCAC 451 contract bids by their Federal
+Systems Division on the basis of SVID requirements as CLIN's on the
+Request For Bids.  It was usable.  At the time, the fastest hardware
+you could get was an Everex Step/20.
+
+After the switch to SVR3, SCO was unusable, period, let alone for running
+ODT on barely-sufficient-under-Xenix-hardware.
+
+
+I also attended the 1989 SCO Developer conference in Santa Cruz on the UCSC
+campus (not my first time at the conference) and argued long and hard
+with Doug Michaels and a number of other vendors on "the appearance of
+speed" with regard to delaying client EXPOSE events until the window
+manager had processed them to completion instead of having the client and
+window manager competing to be swapped in and running simu
+
+--------------------------------------------------------------------------------
+MID: 199509260138.SAA06487@phaeton.artisoft.com
+DATE: 1995-09-26T01:38:20+00:00  FROM: Terry Lambert <terry@lambert.org> <None>
+SUBJ: Re: ports startup scripts
+BODY:
+
+The argument relies on the fact that a normal user doesn't use the
+administrative utilities, but edits the files instead.
+
+An easy argument to make, with no administrative utilities present, but
+not a valid one.
+
+
+					Terry Lambert
+					terry@lambert.org
+---
+Any opinions in this posting are my own and not those of my present
+or previous employers.
+
+
+
+--------------------------------------------------------------------------------
+MID: 9509260315.AA11966@emu.fsl.noaa.gov
+DATE: 1995-09-26T03:15:04+00:00  FROM: kelly@fsl.noaa.gov (Sean Kelly) <None>
+SUBJ: Re: ports startup scripts
+BODY:
+
+    Nate> Huh?  What does the init stuff have to do with the desktop?
+    Nate> Sean is arguing that by adding the extra complexity to init
+    Nate> you aren't buying anything for the normal user.  His
+    Nate> arguement is backed by the fact that the average user is
+    Nate> competent b/c Unix lost/doesn't have/never had/couldn't
+    Nate> have/would like to have but didn't stand a chance on the
+    Nate> desktop. :)
+
+Yeah!  That's what I meant!
+
+(Thanks, Nate :-)
+
+-- 
+Sean Kelly
+NOAA Forecast Systems Laboratory, Boulder Colorado USA
+
+When the age of the Vikings came to a close, they must have sensed it.
+Probably, the gathered together one evening, slapped each other on the
+back and said, "Hey, good job."  -- Jack Handey
+
+
+
+--------------------------------------------------------------------------------
+MID: 199509260349.VAA12578@rocky.sri.MT.net
+DATE: 1995-09-26T03:49:43+00:00  FROM: Nate Williams <nate@rocky.sri.MT.net> <None>
+SUBJ: Re: ports startup scripts
+BODY:
+
+Sure it is, given what I consider to be a normal user.
+
+
+Until decent administrative utilities are present, it will continue to
+be a requirement of a 'normal' user.  Don't put the cart before the
+horse.
+
+
+
+Nate
+
+
+
+--------------------------------------------------------------------------------
+MID: 199509260354.VAA12583@rocky.sri.MT.net
+DATE: 1995-09-26T03:54:45+00:00  FROM: Nate Williams <nate@rocky.sri.MT.net> <None>
+SUBJ: Re: Unix and the desktop ( was Re: ports startup scripts)
+BODY:
+
+That's an opinion I doubt the management of SCO would agree with.
+
+[ Xenix usability vs. ODT ]
+
+
+Hmm, this sounds *alot* like what a large # of unix vendors did.
+
+SunOS  -> Slowlaris
+Xenix  -> ODT
+SVR3   -> SVR4
+Ultrix -> OSF/1 (now Digital Unix)
+
+Unfortunately, moving from a small/robust OS to a more featureful but
+slower (and often more buggy) OS isn't considered a 'bad thing' by
+marketing, but rather instead a step in the right direction.
+
+However, this arguement has already degenerate into an opinion war,
+which I'll no longer participate in.
+
+
+
+Nate
+
+
+
+--------------------------------------------------------------------------------
+MID: 199509261728.KAA07825@phaeton.artisoft.com
+DATE: 1995-09-26T17:28:41+00:00  FROM: Terry Lambert <terry@lambert.org> <None>
+SUBJ: Re: ports startup scripts
+BODY:
+
+The horse is a machine-administratable setup (which is what I'm arguing
+for) that pulls the tool cart behind it.
+
+If I write an administration tool that uses a particular layout, will
+you modify the layout to conform to the tools needs?  That seems to be
+the only argument that will make the layout the "cart" and the tools
+the "horse".
+
+
+					Terry Lambert
+					terry@lambert.org
+---
+Any opinions in this posting are my own and not those of my present
+or previous employers.
+
+
+
+--------------------------------------------------------------------------------
+MID: 199509261741.LAA13904@rocky.sri.MT.net
+DATE: 1995-09-26T17:41:13+00:00  FROM: Nate Williams <nate@rocky.sri.MT.net> <None>
+SUBJ: Re: ports startup scripts
+BODY:
+Terry Lambert writes:
+
+I disagree.  As we have seen time and time again in FreeBSD, even after
+the framework in place for automatic tools, the automatic tools never
+materialize.  So, we've changed the system for no apparent reason, thus
+making it different with no gain.
+
+Also, will the tool work on text and graphic screens?  Will the setup 
+be modifiable w/out the tools?  (ie; can I use vi to modify my setup?)
+
+
+Show me a sample frame-work which can do all of the above, and then I
+think discussions about changing the framework is more appropriate.  I
+contend we don't have an acceptable technology for even building the
+toolset framework yet.  That's what I meant when I said you were putting
+the cart before the horse.
+
+
+
+Nate
+
+

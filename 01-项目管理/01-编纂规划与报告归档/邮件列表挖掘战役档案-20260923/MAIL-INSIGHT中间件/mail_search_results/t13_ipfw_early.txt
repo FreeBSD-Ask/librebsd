@@ -1,0 +1,4374 @@
+==========================================================================================
+DB: freebsd-hackers.duckdb  hits=80
+==========================================================================================
+--------------------------------------------------------------------------------
+MID: <199707201526.RAA02191@yedi.iaf.nl>
+DATE: 1997-07-20T15:26:06+00:00  FROM: Wilko Bulte <wilko@yedi.iaf.nl>
+SUBJ: ipfw and secure http
+BODY:
+Quick question: I just had a little collision with ipfw (due to me..).
+I tried to access a server that uses secure http (is that the right
+name for it anyway?). In any case it wanted to access the port#
+corresponding to https (instead of http).
+
+Am I correct in assuming the packetfiltering characteristics are identical
+to http save for the https port# ?
+
+Wilko
+_     ____________________________________________________________________
+ |   / o / /  _  Bulte  email: wilko@yedi.iaf.nl - Arnhem, The Netherlands
+ |/|/ / / /( (_) 	Do, or do not. There is no 'try' - Yoda
+--------------------------------------------------------------------------
+
+From owner-freebsd-hackers  Sun Jul 20 10:06:30 1997
+Return-Path: <owner-freebsd-hackers>
+Received: (from root@localhost)
+          by hub.freebsd.org (8.8.5/8.8.5) id KAA24533
+          for hackers-outgoing; Sun, 20 Jul 1997 10:06:30 -0700 (PDT)
+Received: from csd.cs.technion.ac.il (csd.cs.technion.ac.il [132.68.32.8])
+          by hub.freebsd.org (8.8.5/8.8.5) with SMTP id KAA24501
+          for <FreeBSD-hackers@FreeBSD.ORG>; Sun, 20 Jul 1997 10:06:18 -0700 (PDT)
+Received: from localhost (nadav@localhost) by csd.cs.technion.ac.il (8.6.11/8.6.10)
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-83093bc9d6ad4506>
+DATE: 1995-04-22T23:36:11+00:00  FROM: dima () FreeBSD ! org (Dima Ruban) <None>
+SUBJ: Re: ipfw code
+BODY:
+Gary Palmer writes:
+
+As I know, now he's in Russia now. Probably his email is
+ugen@deep-thought.demos.su
+
+
+-- dima
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-7eab19618ed2edb8>
+DATE: 1995-05-02T09:15:59+00:00  FROM: michael butler <imb () asstdc ! scgt ! oz ! au> <None>
+SUBJ: IPFW - accounting still broken ?
+BODY:
+When trying to add an accounting "filter" using ipfw, I get ...
+
+gw3:~ % ipfw adda bidirectional all from 0/0 to 202.12.127.0/24
+ipfw: setsockopt failed.
+
+This is true of 950412-SNAP and -current (as of yesterday),
+
+	michael
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-8aa72561a5ec3139>
+DATE: 1995-05-10T17:15:56+00:00  FROM: Ollivier Robert <Ollivier.Robert () hsc ! fr ! net> <None>
+SUBJ: IP Firewall s/w for SunOS 4.1.x
+BODY:
+FYI.
+
+------- start of forwarded message -------
+Newsgroups: comp.security.unix,comp.sys.sun.admin,comp.sys.sun.apps,comp.unix.bsd.netbsd.misc
+From: darrenr@arbld.unimelb.edu.au (Darren Reed)
+Subject: IP Firewall s/w for SunOS 4.1.x
+Organization: Computer Science, University of Melbourne, Australia
+Date: Wed, 10 May 1995 15:29:44 GMT
+I've just finished work on version 2.6 of my IP filter and I'm almost
+100% happy with fragment handling - although it hasn't really changed
+since 2.5.
+
+For more details, see:
+
+http://cheops.anu.edu.au/~avalon/ip-filter.html
+ftp://coombs.anu.edu.au/pub/net/kernel/ip_fil2.6.tar.gz
+
+...the % that isn't happy with fragment handling is that depending on
+the reassembly implementation, it may or may not be safe to filter on
+"established" (or any other) bits in the TCP header, regardless of
+whether they are present or not.
+
+Cheers,
+Darren
+------- end of forwarded message -------
+
+-- 
+Ollivier ROBERT  -=-=-  Herve Schauer Consultants -=-=-   roberto@hsc.fr.net
+-=-=-=-=-=- Support The Free UNIX Systems ! FreeBSD Linux NetBSD -=-=-=-=-=-
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-c2fe79a4b9803b38>
+DATE: 1995-06-28T12:59:15+00:00  FROM: rkw () dataplex ! net (Richard Wackerbarth) <None>
+SUBJ: Re: ipfw code
+BODY:
+
+The ability to recognize certain packets also relates to the option to log
+their occurance. If you wish to log TCP connections, that you need to
+recognize the connection as distinct from the continuing traffic.
+
+Another reason to distinguish the packets of filtering efficiency. The bulk
+of the packets are a continuation of an existing connection. If you allow
+the already established connections to continue, the average number of
+tests per packet can be greatly reduced.
+
+----
+Richard Wackerbarth
+rkw@dataplex.net
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-467cf39e3eacc32f>
+DATE: 1995-08-28T18:24:48+00:00  FROM: guido () gvr ! win ! tue ! nl (Guido van Rooij) <None>
+SUBJ: Re: IPFW and SCREEND
+BODY:
+
+Actually it turns out to be much simpler...Paul Traina forwarded something
+about this.
+Just filter anything that is TCP and has an ip_off == 1.
+The offset is to be shifted 3 bits. So the *only* frag that can
+overwrite the TCP_FLAGS (like SYN and ACK) is one with ip_off equal
+to one.
+
+-Guido
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-f236abf8b052fcb2>
+DATE: 1995-09-21T06:34:55+00:00  FROM: J Wunsch <j () uriah ! heep ! sax ! de> <None>
+SUBJ: Re: Firewalling one interface using IPFW?
+BODY:
+As Ugen J.S.Antsilevich wrote:
+
+:-)
+
+That's the best reason to document it in the first place. :)
+
+-- 
+cheers, J"org
+
+joerg_wunsch@uriah.heep.sax.de -- http://www.sax.de/~joerg/
+Never trust an operating system you don't have sources for. ;-)
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-06a8448b87d36752>
+DATE: 1995-09-25T14:25:22+00:00  FROM: Coranth Gryphon <gryphon () healer ! com> <None>
+SUBJ: Re: IPFW vs IPACCT vs IPFIL2.8
+BODY:
+From: Peter Wemm <peter@jhome.DIALix.COM>
+
+
+I like this idea a lot. Help offered.
+
+-coranth
+
+------------------------------------------+------------------------+
+Coranth Gryphon <gryphon@healer.com>      |  "Faith Manages."      |
+                                          |        - Satai Delenn  |
+Phone: 603-598-3440   Fax: 603-598-3430   +------------------------+
+USMail: 11 Carver St, Nashua, NH  03060
+Disclaimer: All these words are yours, except Europa... 
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-e7ebd1cf81d2e9e4>
+DATE: 1996-01-31T22:22:00+00:00  FROM: Angelo Turetta <turetta () stylo ! it> <None>
+SUBJ: IPFW Accounting problem
+BODY:
+
+My previous posting on Jan 19th to 'questions' probably got lost (my message 
+is not in the www.freebsd.org mail archives)
+
+I'm using 2.0.5R and I tried to use IP Accounting without any success.
+
+Can anyone explain one possible cause for the following error:
+
+  ~> ipfw adda bidirectional all from 0/0 to 0/0 via 194.21.207.250
+  ipfw: setsockopt failed.
+  ~> ipfw adda single all from 194.21.207.254 to 194.20.20.15 via 
+194.20.20.37
+  ipfw: setsockopt failed.
+
+Of course my kernel config contains:
+
+     options         IPFIREWALL              #firewall
+     options         IPFIREWALL_VERBOSE      #.....
+     options         IPACCT                  #Accounting
+
+Is there something more to setup before trying the ipfw command ? The man 
+page is rather sparse if you are not yet experienced with this topic.
+
+The mail archives report rumours about IPACCT brokenness in 2.0.5R: is that 
+true ?
+
+Thanks in advance.
+
+Angelo Turetta
+Stylo Multimedia
+<aturetta@stylo.it>
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-958dc631bb006b85>
+DATE: 1996-02-08T22:04:20+00:00  FROM: Joe Greco <jgreco () solaria ! sol ! net> <None>
+SUBJ: Re: IPFW Accounting problem (Yes, again.....)
+BODY:
+
+Your configuration looked OK to me.  The following is what I am using on
+gateway.inr.sol.net:
+
+---------------------------------------------------------------
+#
+# ROUTER_ET -- Generic machine with WD/AHx/NCR/BTx family disks
+#
+#	ROUTER_ET,v 1.45.2.3 1995/06/05 21:50:41 jkh Exp
+#
+
+machine		"i386"
+cpu		"I386_CPU"
+cpu		"I486_CPU"
+cpu		"I586_CPU"
+ident		"ROUTER_ET"
+maxusers	16
+
+options		MATH_EMULATE		#Support for x87 emulation
+options		INET			#InterNETworking
+options		FFS			#Berkeley Fast Filesystem
+options		NFS			#Network Filesystem
+#options		MSDOSFS			#MSDOS Filesystem
+#options		"CD9660"		#ISO 9660 Filesystem
+options		PROCFS			#Process filesystem
+options		"COMPAT_43"		#Compatible with BSD 4.3
+options		"SCSI_DELAY=15"		#Be pessimistic about Joe SCSI device
+options		BOUNCE_BUFFERS		#include support for DMA bounce buffers
+options		UCONSOLE		#Allow users to grab the console
+
+options		GATEWAY			#internetwork gateway
+options		MROUTING		# Multicast routing
+options         IPFIREWALL              #firewall
+options		IPACCT			#ipaccounting
+
+config		kernel	root on wd0 
+
+controller	isa0
+controller	pci0
+
+controller	fdc0	at isa? port "IO_FD1" bio irq 6 drq 2 vector fdintr
+disk		fd0	at fdc0 drive 
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-ea5884cda763cee2>
+DATE: 1996-02-09T16:15:53+00:00  FROM: dennis () etinc ! com (dennis) <None>
+SUBJ: IPFW impact
+BODY:
+
+Is there any impact (on performance or anything else) of having the IPFIREWALL 
+option on in the kernel if it isnt used (ie no filters set)?
+
+db
+----------------------------------------------------------------------------
+Emerging Technologies, Inc.      http://www.etinc.com
+
+Synchronous Communications Cards and Routers For
+Discriminating Tastes. 56k to T1 and beyond. Frame
+Relay, PPP, HDLC, and X.25 for BSD/OS, FreeBSD 
+and LINUX
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-e80dbac55a3e0120>
+DATE: 1996-02-27T16:26:34+00:00  FROM: dennis () etinc ! com (dennis) <None>
+SUBJ: Re: IPFW - how fast/robust is it ?
+BODY:
+
+You won't notice much on a single serial line system...if you're doing
+local routing and have a lot of rules you will.
+
+db
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-deb00a25ed007481>
+DATE: 1996-03-28T18:35:51+00:00  FROM: Wilko Bulte <wilko () yedi ! iaf ! nl> <None>
+SUBJ: Re: Firewall in FreeBSD
+BODY:
+
+
+
+I am using the TIS Firewall tool kit (FWTK) with good results on a
+FreeBSD 2.0.5 box that serves as a proxyserver/PPP gateway to the Internet.
+I think it is at ftp://ftp.tis.com or somesuch
+
+Wilko
+_     __________________________________________________________________________
+ |   / o / /  _   Wilko Bulte             email: wilko@yedi.iaf.nl
+ |/|/ / / /( (_)  Private FreeBSD site  - Arnhem - The Netherlands
+--------------------------------------------------------------------------------
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-ba43fb3e1ff1dc38>
+DATE: 1996-05-08T12:47:57+00:00  FROM: Poul-Henning Kamp <phk () critter ! tfs ! com> <None>
+SUBJ: Re: Fix for ipfw.c
+BODY:
+
+Thanks, got it!
+
+Poul-Henning
+--
+Poul-Henning Kamp           | phk@FreeBSD.ORG       FreeBSD Core-team.
+http://www.freebsd.org/~phk | phk@login.dknet.dk    Private mailbox.
+whois: [PHK]                | phk@ref.tfs.com       TRW Financial Systems, Inc.
+Future will arrive by its own means, progress not so.
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-6fb59c7fb38527c5>
+DATE: 1996-07-15T20:14:08+00:00  FROM: Wilko Bulte <wilko () yedi ! iaf ! nl> <None>
+SUBJ: Re: FreeBSD press coverage in article on firewalls
+BODY:
+As Narvi wrote...
+
+Hmm. In this particular case the rest of the article is not relevant
+to FreeBSD (and quite big...). IMO you approach has its merits with
+more or less concise stuff, not for multipage articles with say <10%
+relevant content.
+
+Just my Dfl 0.02
+
+Wilko
+_     ____________________________________________________________________
+ |   / o / /  _   Wilko Bulte             email: wilko@yedi.iaf.nl
+ |/|/ / / /( (_)  Private FreeBSD site  - Arnhem - The Netherlands
+--------------------------------------------------------------------------
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-91151123c690e8f2>
+DATE: 1996-08-14T18:05:06+00:00  FROM: Hal Snyder <hal () post ! vale ! com> <None>
+SUBJ: ipfw considered harmful (not?)
+BODY:
+I've used ipfw in past with very satisfactory results, protecting
+small corporation from the Internet.  Don't know ipfilter for comparison.
+
+What made ipfw bearable was an rc.ipfw script, beginning with
+environmental variables for major addresses, and the line
+  ipfw flush
+as the first real ipfw command.
+
+I don't think it would be too hard to graft an HTML/CGI front-end
+onto ipfw (anyone seen Checkpoint?).  Does ipfilter do this?
+
+On the downside -
+
+I found the code for ipfw to be unreadable, mainly due to lack
+of comments in key areas.  That always makes me suspicious the
+writer started with "int i;" rather than a design for the code.
+
+[Nothing personal against the original author - just that I spent
+over a decade reading student programming efforts and eventually
+lost all patience with puzzling over needlessly undocumented code.]
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-a08801060bf76ffe>
+DATE: 1996-08-14T14:23:46+00:00  FROM: "Ugen J.S.Antsilevich" <ugen () latte ! worldbank ! org> <None>
+SUBJ: WOW: ipfw vs ipfilter
+BODY:
+Hmm..That was fun..i actually unsubscribed from all the FreeBSD groups recently as
+i am planning a trip abroad and don't want my mailbox to explode while i am gone, so
+i wasn't reading FreeBSd lists for a while, and i sent this note thinking pretty much i 
+am sending it back to Jordan , my friend Gena forwarded the mail to me..:)
+
+Well anyway, interestingly enough how two lines can produce such a reaction...
+Yes, i know i haven't been working on this for a long time, and i don't think i will ever, 
+i am at 20% (which as all you know is nothing in normal terms) of writing completely new
+conceptually different firewall (well that means i worked last week for 3 hours).
+
+As to the pig and such - i don't think the firewall code was messy, in fact it was pretty
+normally writen, not worse then any other part and no matter what ppl say i can compare - 
+i know when i write good code and when it is bad myself. Besides a lot of it was derived from
+another guy and nobody blamed him before:) 
+
+Put aside the quality of code at the time i put it in the system it included everything ipfilter
+does, but the actual problem is not that - i beleive ipfilter is better now as time goes and it
+doesn't sta
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-da565d9d1a0da225>
+DATE: 1996-08-14T14:40:03+00:00  FROM: "Ugen J.S.Antsilevich" <ugen () latte ! worldbank ! org> <None>
+SUBJ: WOW: ipfw vs ipfilter (part II)
+BODY:
+I missed the point i actually wanted to bring so probably all i wrote is not really understoodable
+without this: 
+
+In the last year i received lots of problem reports about IPFW, of them most were because of 
+misunderstanding of the command line  interface. As i researched the topic (installed it and
+played for 10 minutes) i realised that the interface is obviously rather different then what i had
+in place and (per my statistics) all the problems reported to me were because only of this reason.
+ipfw itself is a rather primitive and straightforward ipfilter and hardly has place for bugs. 
+ What kind of set me off this time is that Jordan just tried to install it first time AFAIS,
+most certainly (and tell me if i am wrong) stumped upon misconfiguration (some keyword which
+acts differently than it has to or some undocumented stuff or what not) and because of this 
+he actually says that ipfw is bad. To my defence i can say only - i am sure if you tell me what 
+do you wan tto do and i use my original version it is a matter of 1-2 lines of config. 
+
+I hope it clears the issue of fairy tales and such:) 
+
+Thanx!
+
+--Ugen
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-7da126a030866f69>
+DATE: 1996-08-17T18:17:42+00:00  FROM: "Jordan K. Hubbard" <jkh () time ! cdrom ! com> <None>
+SUBJ: Anyone care to set up a firewall in exchange for CDs? :-)
+BODY:
+I could probably also toss in a couple of FreeBSD T-shirts. :-)
+
+WC has no budget right now for paying consultants, so this would have
+to be a trade of sorts, but we really need someone to set up a new
+firewall here using FreeBSD (what else? :).
+
+Any firewall experts willing to do a little work in exchange for the
+aformentioned merchandise and/or credit in WC's good will bank?
+
+I've taken a couple of stabs at this myself, but I'm a *lousy* person
+for doing firewalls as my entire career has been devoted to the
+science of delivering data, not blocking it, and I have never really
+given the science of computer security much thought - there has always
+been someone else around who cared easily twice as much as I did about
+it, so I haven't had to. :-)
+
+Anyway, if this sounds like it's of potential interest to you and
+you've experience in setting up firewalls, please contact me directly.
+If you're in the California Bay Area, even better!
+
+Thanks!
+
+					Jordan
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-732939e7fbb37b1d>
+DATE: 1996-08-19T20:01:43+00:00  FROM: guido () gvr ! win ! tue ! nl (Guido van Rooij) <None>
+SUBJ: Re: ipfw vs ipfilter?
+BODY:
+If it's going to be a vote, I would choose Darren's ipfilter, because:
+
+1) Lot's of ppl are using it on lot's pf different platforms.
+2) It has very nice features, without really suffering from featurism.
+3) Is indeed well documented
+4) It's configuration is stable.
+5) I'm using it for a long time and am very satisfied with it.
+
+-Guido
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-a7654c4333e784e3>
+DATE: 1996-08-19T23:42:33+00:00  FROM: Paul Traina <pst () jnx ! com> <None>
+SUBJ: Re: ipfw vs ipfilter
+BODY:
+imp@village.org (Warner Losh) writes:
+
+As I wrote in RFC 1858, since filtering decisions are only performed on
+information contained within the first 16 octets of the TCP header,
+protecting FO>1 is uninteresting and unnecessary and further violates
+RFC 791.
+
+Paul
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-1d23b8336985260e>
+DATE: 1996-08-19T23:50:55+00:00  FROM: Paul Traina <pst () jnx ! com> <None>
+SUBJ: Re: ipfw/ipfilter - what will it be?
+BODY:
+avalon@coombs.anu.edu.au (Darren Reed) writes:
+
+
+The reason for that bit of cruft was to insure that you have enough context to
+do NAT reasonably.  It could be avoided if they would simply store all
+fragments locally until they have a complete packet (look at ip->ip_id +
+source & destination) and then perform identical functions on each fragment,
+however, it does nothing to solve the OTHER part of nat, which is in-stream
+data modification and/or sniffing (e.g. the PORT commands in the FTP control
+stream).
+
+So, even though the idea was utterly gross and disgusting, it truely
+simplifies the entire NAT process, so I am not against it.
+
+Paul
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-af47cda656b6b93a>
+DATE: 1996-08-20T02:33:20+00:00  FROM: michael butler <imb () scgt ! oz ! au> <None>
+SUBJ: Re: Which fragments to discard (was Re: ipfw vs ipfilter)
+BODY:
+Daniel O'Callaghan writes:
+
+
+Except that the first fragment contained a different port number, nntp has it
+happens, which is disallowed here to all but a few external hosts,
+
+	michael
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-639fd7075f5b600b>
+DATE: 1996-09-12T16:55:10+00:00  FROM: Darius Moos <moos () degnet ! baynet ! de> <None>
+SUBJ: Looking for ipfw-accounting-scripts
+BODY:
+Hi all,
+
+i am looking for some scripts to do ipfw-accounting and -summaries.
+I need it for dialin-user accounting.
+Any pointers and suggestions are highly appreciated.
+
+Thanks a lot
+
+Darius Moos.
+-- 
+email: moos@degnet.baynet.de
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-64af19740bfa4ea3>
+DATE: 1996-09-17T06:48:34+00:00  FROM: "Daniel O'Callaghan" <danny () panda ! hilink ! com ! au> <None>
+SUBJ: IPFW sysconfig and netstart niceties
+BODY:
+
+Perhaps some committer who thinks that too many people are tripping over the 
+"IPFW Policy Deny" would like to review the diffs to sysconfig and 
+netstat below.  It's only cosmetic, but appearances do count.
+
+Thanks,
+
+Danny
+
+*** sysconfig.orig	Tue Sep 17 16:10:12 1996
+--- sysconfig	Tue Sep 17 16:10:02 1996
+***************
+*** 196,201 ****
+--- 196,202 ----
+  gateway=YES
+  
+  # If you want this host to be a firewall or otherwise filter IP, set to YES.
++ # If you wish to turn off filtering in the kernel, set to OFF.
+  firewall=NO
+  
+  # Set to YES if you wish to check quotas.
+
+-----
+*** netstart.orig	Tue Sep 17 14:42:40 1996
+--- netstart	Tue Sep 17 16:08:22 1996
+***************
+*** 24,31 ****
+  fi
+  
+  # If IP filtering
+! if [ -n "$firewall" -a "x$firewall" != "xNO" -a -f /etc/rc.firewall ] ; then
+  	sh /etc/rc.firewall
+  fi
+  
+  #
+--- 24,49 ----
+  fi
+  
+  # If IP filtering
+! /sbin/ipfw flush > /dev/null 2>&1
+! 
+! if [ $? = 0 ] ; then
+!     # IPFIREWALL is in kernel
+!     if [ "x$firewall" = "xYES" -a -f /etc/rc.firewall ] ; then
+  	sh /etc/rc.firewall
++     else
++     	if [  "x$firewall" = "xOFF" ] ; then
++ 	    /sbin/ipfw add 65000 pass all from any to any
++ 	else
++ 	    echo "Warn
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-f976a0eff46786cb>
+DATE: 1996-09-18T13:18:04+00:00  FROM: Darren Reed <avalon () coombs ! anu ! edu ! au> <None>
+SUBJ: Re: IPFW !IP#
+BODY:
+In some mail from Adam David, sie said:
+
+This is getting back to 1st principals...
+
+Put the rule before the case which I want to create an exception for.
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-d897afa69b07e69b>
+DATE: 1996-12-02T02:36:48+00:00  FROM: Jason Thorpe <thorpej () nas ! nasa ! gov> <None>
+SUBJ: Re: ipfilter vs ipfw
+BODY:
+On Mon, 2 Dec 1996 13:35:01 +1100 (EST) 
+ "Daniel O'Callaghan" <danny@panda.hilink.com.au> wrote:
+
+ > Remember the ipfw vs ipfilter discussion of a couple of months ago?
+ > That was when Jordan suggested that ipfilter should be the default 
+ > filtering package.  Well I just noticed that at 
+ > http://coombs.anu.edu.au/~avalon/ OpenBSD has adopted ipfilter as an 
+ > integral part of the OS release.
+
+NetBSD is about to fully integrate ipfilter, as well, now that
+we have a sufficiently generic mechanism for hooking in packet
+filters.  Contact Matthew Green <mrg@netbsd.org> for details.
+
+Jason R. Thorpe                                       thorpej@nas.nasa.gov
+NASA Ames Research Center                               Home: 408.866.1912
+NAS: M/S 258-6                                          Work: 415.604.0935
+Moffett Field, CA 94035                                Pager: 415.428.6939
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-96aeefa359575559>
+DATE: 1997-01-16T00:01:04+00:00  FROM: Brian Somers <brian () awfulhak ! demon ! co ! uk> <None>
+SUBJ: Re: IPFW + Samba -> performance problem
+BODY:
+[.....]
+
+[Explaination deleted]
+
+
+Nice one !  Looks like TCP_NODELAY makes about a 100-400% improvement here !
+
+-- 
+Brian <brian@awfulhak.demon.co.uk>, <brian@freebsd.org>
+      <http://www.awfulhak.demon.co.uk/>
+Don't _EVER_ lose your sense of humour....
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-a3a34f9a2e4b4afd>
+DATE: 1997-01-16T07:13:20+00:00  FROM: Eivind Eklund <eivind () dimaga ! com> <None>
+SUBJ: IPFW LKM - 2.1.6
+BODY:
+I just tried to use IPFW as a loadable kernel module under 2.1.6, running
+the command
+
+# modload -e ip_fw_init /lkm/ipfw_mod.o
+
+which resulted in an error of -2147483648 being returned from modload, and
+the kernel panicing about 3 seconds later.
+All of the kernel, the module, modload and ld was re-created from source
+earlier today. 
+
+Does this work for everybody else?  I have patches to the kernel for being
+able to run IP Filter as an LKM, do anybody know if these (patches and
+IPFW) should work together?  (IP Filter is not loaded, obviously)
+
+
+Eivind Eklund / perhaps@yes.no / http://maybe.yes.no/perhaps/
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-bd8324057e1a2b63>
+DATE: 1997-01-17T22:57:21+00:00  FROM: Brian Somers <brian () awfulhak ! demon ! co ! uk> <None>
+SUBJ: Re: ipfw patches to test
+BODY:
+
+But if you put the "other test" in front of the two lines, it'll be the same :)
+Anyway, you're right - it's not the same.
+
+-- 
+Brian <brian@awfulhak.demon.co.uk>, <brian@freebsd.org>
+      <http://www.awfulhak.demon.co.uk/>
+Don't _EVER_ lose your sense of humour....
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-475f0f790cfc7500>
+DATE: 1997-01-28T17:32:22+00:00  FROM: Terry Lambert <terry () lambert ! org> <None>
+SUBJ: Re: file locking / firewalling based on uid/gid
+BODY:
+
+This is for giving files away to other users, right?
+
+There are a number of nasty exploits available via NFS doing this
+(you can get root on almost any old SGI system this way; check
+the CERT advisory log).
+
+
+					Regards,
+					Terry Lambert
+					terry@lambert.org
+---
+Any opinions in this posting are my own and not those of my present
+or previous employers.
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-a84f2b5113795843>
+DATE: 1997-02-10T03:32:39+00:00  FROM: Nate Williams <nate () mt ! sri ! com> <None>
+SUBJ: Re: ipfw command line - opinions wanted.
+BODY:
+
+Yes.
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-27f8cdaf2d6069fe>
+DATE: 1997-02-17T12:30:56+00:00  FROM: joe () pavilion ! net (Josef Karthauser) <None>
+SUBJ: cvsup / firewall
+BODY:
+Hi,
+Am I right in thinking that I can't run CVSup through a firewall?
+That's a shame. :(
+Joe.
+-- 
+Josef Karthauser        
+Technical Manager       Email: joe@pavilion.net
+Pavilion Internet plc.  [Tel: +44 1273 607072  Fax: +44 1273 607073]
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-c18a7b51c7adf3bd>
+DATE: 1997-02-17T12:36:54+00:00  FROM: joe () pavilion ! net (Josef Karthauser) <None>
+SUBJ: cvsup / firewall [found it]
+BODY:
+Sorry, shoot me for wasting your time.
+I've found it: -P -
+
+Joe
+-- 
+Josef Karthauser        
+Technical Manager       Email: joe@pavilion.net
+Pavilion Internet plc.  [Tel: +44 1273 607072  Fax: +44 1273 607073]
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-84288aadb4e26dfc>
+DATE: 1997-03-25T15:45:12+00:00  FROM: Adrian Chadd <adrian () obiwan ! aceonline ! com ! au> <None>
+SUBJ: Packets refragmented before firewall rules are applied?
+BODY:
+Just a quick question.
+
+I'm abuot to setup firewalling on a 2.2-BETA_A machine and I was wondering
+if that kernel refragmented packets before applying the firewall rulesets
+to them. I know Linux has a special compile option in it (under
+Experimental, its not shown by default).
+
+What about IPFilter btw.. does it do this too?
+
+Thanks,
+
+Adrian Chadd
+<adrian@psinet.net.au>
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-4700434737e220ad>
+DATE: 1997-04-04T08:59:41+00:00  FROM: Robert Eckardt <roberte () mep ! ruhr-uni-bochum ! de> <None>
+SUBJ: ipfw configuration
+BODY:
+Hi,
+
+is there any configuration tool to generate ipfw rules from
+a simple policy matrix
+e.g.
+              OUT->IN   OUT->FW    IN->OUT   IN->FW   FW->OUT  FW->IN
+
+telnet|tcp     deny       deny      allow     allow    allow    allow
+
+ftp|tcp        allow   allow from   allow     deny     allow    allow
+                        a.b.c.d
+
+(including multiple adresses for FW)
+
+
+ o  If yes, where can I get it ?
+
+
+ o  If not, I would need to write one (prob. Tcl/Tk based).
+
+    Any comments, recommendations, ... ?
+
+
+Robert
+
+-- 
+Dr. Robert Eckardt                                                 (
+    Ruhr-Universitaet Bochum, Inst.f.Theor.Physik, NB6/169          )
+    Universitaetsstrasse 150,   D-44780 Bochum,    Germany     ----X---8----
+    Telefon: +49 234 700-3709,   Telefax: +49 234 7094-574             8
+    E-Mail:  RobertE@MEP.Ruhr-Uni-Bochum.de                    --------8----
+    URL:  http://WWW.MEP.Ruhr-Uni-Bochum.de/~roberte
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-db1516b6b11022ec>
+DATE: 1997-04-13T09:42:11+00:00  FROM: Darren Reed <avalon () coombs ! anu ! edu ! au> <None>
+SUBJ: Re: kern/3244: ipfw flush closes connections
+BODY:
+In some mail from Daniel O'Callaghan, sie said:
+
+Sorry, I meant EACCESS.
+
+It comes out as a result of a packet being denied.
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-00ba56162e2cfd0f>
+DATE: 1997-05-09T05:11:07+00:00  FROM: Archie Cobbs <archie () whistle ! com> <None>
+SUBJ: ipfw patches available
+BODY:
+
+If anyone is interested, I have patches available for these ipfw changes:
+
+  - new "skipto X" command to jump forward to rule number X
+  - new "tee X" command to copy packet to divert socket X (unfinished)
+  - new "unreach X" command to reject with ICMP code X
+  - new "reset" command to reject TCP packets with a RST
+  - new "xmit iface" and "recv iface" for specifying the transmit
+    and receive interface of a packet; can both be used together
+    (packets must be outgoing)
+  - minor enhancements & bug fixes
+
+They're at ftp://ftp.whistle.com/pub/archie/ipfw.patches.tgz
+These are against RELENG_2_2; haven't tried them against -current.
+Any comments appreciated.
+
+Thanks,
+-Archie
+
+___________________________________________________________________________
+Archie Cobbs   *   Whistle Communications, Inc.  *   http://www.whistle.com
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-ebe1a70013021d4c>
+DATE: 1997-05-26T03:43:54+00:00  FROM: Brian Tao <taob () nbc ! netcom ! ca> <None>
+SUBJ: Re: New IPFW code
+BODY:
+On Sun, 25 May 1997, Julian Elischer wrote:
+
+    Very cool.  Is this what is in production use for the Interjet?
+
+
+    The file does not seem to be there:
+
+ref:/> cd /incoming
+ref:/incoming> ls -l
+ref:/incoming> get IPFW.patches
+IPFW.patches: No such file OR directory.
+ref:/incoming> cd ..
+ref:/> ls -l
+total 12
+d--x--x--x  2 0  10   512 Nov 15  1996 bin/
+d--x--x--x  2 0  10   512 Nov 15  1996 etc/
+drwxrwx-wx  2 0  11  1024 May 26 01:47 incoming/
+drwxrwxr-x  2 0  0    512 Jun 16  1996 pub/
+d--x--x--x  2 0  11   512 Nov 15  1996 tfs/
+d--x--x--x  2 0  10   512 Nov 15  1996 usr/
+ref:/>
+
+-- 
+Brian Tao (BT300, taob@netcom.ca)
+"Though this be madness, yet there is method in't"
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-2759869a52058c20>
+DATE: 1997-06-11T09:08:11+00:00  FROM: Dmitry Kohmanyuk <dk () dog ! farm ! org> <None>
+SUBJ: Re: Improvements to rc.firewall?
+BODY:
+In article <199706021148.EAA14857@hub.freebsd.org> you wrote:
+
+
+
+
+
+Beware folks, BIND 8.1 issues UDP queries from _any_ port by default
+(older binds used port 53 when originating only).  It can be configured
+to use any other port;  Vixie uses 42 himself, he told.
+
+Also, TCP queries can be used instead of UDP - there are indeed some
+names which have lots of MXes / As and resolvers have the right to use
+TCP anytime for reliable delivery.
+
+So, the modern rule is `allow from any host:any port to our host:53 tcp|udp'
+for all queries to our name servers to work.
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-bf04d9d646f96818>
+DATE: 1997-06-21T00:28:55+00:00  FROM: Julian Elischer <julian () whistle ! com> <None>
+SUBJ: 2.2-stable IPFW warning
+BODY:
+To fix some unrecoverably broken stuff in the firewall
+cade it was necessary to implement the same interface through
+a different method. this means that the ipfw program must match
+the kernel. Hopefully this is the last time this will be needed.
+
+The change has been tested and is in production here at whistle.
+
+I guess other programs that hit the firewall rules (e.g. natd)
+might need to be recompiled for the next 2.2 release
+I'll make (or help with) the changes if I can track them down..
+
+I don't like making a change like this to -stable, but I couldn't
+see a way around this one and it's ramifications are limited to a
+small audience.
+
+julian
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-ee97090c126abae8>
+DATE: 1997-06-27T18:07:48+00:00  FROM: Alfred Perlstein <perlsta () fang ! cs ! sunyit ! edu> <None>
+SUBJ: Re: ipfw: setsockopt failed
+BODY:
+
+this is dumb, but are you root when you try this?
+
+
+you need to specify the port to divert to :)
+ie. from my machine:
+
+/sbin/ipfw add 2000 divert 6668 all from any to any via ed0
+			     |
+this is the port number -----/
+
+you should have a program listening to the port to manipulate the data
+coming in.
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-34d9b5e8c57da36e>
+DATE: 1997-06-22T13:42:42+00:00  FROM: BRiGHTMN <brightmn () a-v25 ! rh ! sunyit ! edu> <None>
+SUBJ: Re: ipfw rules processing order when DIVERTing
+BODY:
+it works like so:
+first matched = action
+
+if you want anything firewalled out put it before it hits natd
+
+           /sbin/ipfw -f flush
+           /sbin/ipfw add 100 deny ip from evil.place.org to any
+           /sbin/ipfw add 200 divert 6668 all from any to any via ed0
+           /sbin/ipfw add 300 pass all from any to any
+the numbers are the order that way if you decide to change anything you
+can:
+           /sbin/ipfw delete 200
+to get rid of the natd...
+
+if you want you can take a look at my natd configuration files i'm going
+to post them on my webpage:
+
+www.cs.sunyit.edu/~perlsta
+
+it should be up later tonight...
+
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-62ae9d4757ae3d3d>
+DATE: 1997-07-11T12:47:40+00:00  FROM: Drew Derbyshire <ahd () kew ! com> <None>
+SUBJ: RFC: IPFW-DIVERT change. WAS:[ipfw rules processing order..]
+BODY:
+Sort of a separate issue, but ...
+
+While it depends on your plans for divert sockets, in the current
+motif I prefer the full ruleset be rescanned and processed.  As previous
+noted, the simple semantics (hopefully) make it harder to confuse the
+user. 
+
+Avoiding this additional confusion is desirable if you follow my personal
+rules for the use of divert rules:
+
+	Inserting a divert rule for _inbound_ packets only near
+	the top of the file.  (It may be possible to limit the
+	diverted port range, at least on my system, to 1024-65K;
+	I have not looked at this in detail, but it would help inbound
+	SMTP traffic.)
+
+	Dropping the "setup" keyword from numerous TCP well-known port
+	rules (WWW is most important, SMTP doesn't use its well-known
+	port for most _outbound_ traffic.)
+
+	Moving the "pass tcp from any to any established" rule after the
+	well-known port TCP rules.  
+
+	Inserting the outbound packwet divert rule immediately before
+	the above "established" rule.
+
+With this configuration on a true firewall system running both a
+lot of services on well-known ports and natd, natd is bypassed for
+the bulk of the locally generated outbound traffic with resulting
+lower CPU usage.
+
+Of course, no 
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-58c06aeab68fe55e>
+DATE: 1997-07-11T22:48:30+00:00  FROM: John Polstra <jdp () polstra ! com> <None>
+SUBJ: CVSup vs. firewalls: a solution
+BODY:
+Quite a few of you have been unable to use CVSup in the past,
+because you are behind a firewall that is too restrictive for it.
+If you are in that category, I encourage you to try version 15.1,
+which I just released last night.  It supports a new "multiplexed"
+mode of operation.  In multiplexed mode, CVSup needs just a single
+TCP connection, initiated by the client, to do its work.  If you can
+persuade your firewall administrator to let you issue connections to
+port 5999 of your favorite CVSup server, you'll be in business.  To
+select multiplexed mode, add the option "-P m" to the cvsup command
+line.
+
+As its name implies, multiplexed mode works by managing a built-in
+packet protocol on top of the single TCP connection.  That enables
+the client and server to multiplex multiple logical connections in
+parallel through the channel.  Several people have been using it for
+a month or so, and it seems to function and perform just fine.
+
+See the announcement in the FreeBSD-announce mailing list, or just
+grab it from <ftp://hub.freebsd.org/pub/CVSup/>.
+--
+   John Polstra                                       jdp@polstra.com
+   John D. Polstra & Co., Inc.                Seattle, Washington US
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-36c14aa29af6ffba>
+DATE: 1997-07-14T01:24:14+00:00  FROM: Julian Elischer <julian () whistle ! com> <None>
+SUBJ: Re: ipfw rules processing order when DIVERTing
+BODY:
+Darren Reed wrote:
+
+
+As I said earlier, this is the main argument FOR keeping it as it is...
+the new semantic however would allow this decision to be taken
+by the diverting program.
+If it feeds it back with the received line number processing carries
+on where it left off.
+if it sets it to 0 processing restarts at the beginning...
+
+it would be easier to set up "cascades" of processes
+where you could chain theoutput of one to another..
+I'd also like to see the 'only forwards' rule with 'skipto'
+removed..
+and some sort of 'subroutine' capability.
+:)
+
+
+
+julian
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-07eca139ad4b9f20>
+DATE: 1997-07-20T17:06:00+00:00  FROM: Nadav Eiron <nadav () cs ! technion ! ac ! il> <None>
+SUBJ: Re: ipfw and secure http
+BODY:
+
+
+On Sun, 20 Jul 1997, Wilko Bulte wrote:
+
+
+Yes, and both can easily be served by a proxy too, which is generally
+considered safer than letting the packets through. Anyhow, you should be
+fine just letting them through with ipfw. The port number is 443, BTW.
+
+Nadav
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-a308655be2f97a21>
+DATE: 1997-07-28T09:12:06+00:00  FROM: "Lenzi, Sergio" <lenzi () bsi ! com ! br> <None>
+SUBJ: Re: ipfw divert, transparent proxy
+BODY:
+On Sun, 27 Jul 1997, Dan Janowski wrote:
+
+There is a "package" (natd_1.8.tgz) at ftp://netplus.com.br/packages
+
+install the package and use man natd to see the example.
+
+
+It works great with that ISP that uses ONLY ONE IP (200.247.23.97).
+
+
+Hope this can help,
+
+Sergio Lenzi.
+
+Unix consult.
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-a72b8221b4936e30>
+DATE: 1997-08-05T00:48:12+00:00  FROM: Julian Elischer <julian () whistle ! com> <None>
+SUBJ: Re: IPFW-DIVERT change. WAS:[ipfw rules processing order..]
+BODY:
+
+maybe I will later
+I'm still in the UK for a day however..
+
+julian
+
+
+On Mon, 4 Aug 1997, Archie Cobbs wrote:
+
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-91bff892bab6a36d>
+DATE: 1997-08-25T17:39:54+00:00  FROM: Thomas David Rivers <ponds!rivers () dg-rtp ! dg ! com> <None>
+SUBJ: 2.2-970825 and ipfw..
+BODY:
+
+F.Y.I. -
+
+I just researched this a little bit; to avert anyone else doing
+unnecessary work:
+
+In ip_fw.c:check_ipfw_struct(), we have:
+
+        /* Must apply to incoming or outgoing (or both) */
+        if (!(frwl->fw_flg & (IP_FW_F_IN | IP_FW_F_OUT))) {
+                dprintf(("%s neither in nor out\n", err_prefix));
+                return (NULL);
+        }
+
+But - in previous versions of 2.2 sources, if neither of these
+was set; we assumed both as in:
+
+        /* If neither In nor Out, then both */
+        if (!(frwl->fw_flg & (IP_FW_F_IN | IP_FW_F_OUT)))
+                frwl->fw_flg |= IP_FW_F_IN | IP_FW_F_OUT;
+
+
+
+This is the change that appears to have broken my ipfw setup...
+
+Looking at the ipfw in the ssbin.XX files for 2.2-970825, I see
+the following:
+
+      /* No direction specified -> do both directions */
+      if (!(rule.fw_flg & (IP_FW_F_OUT|IP_FW_F_IN)))
+              rule.fw_flg |= (IP_FW_F_OUT|IP_FW_F_IN);
+
+So - although I haven't verified this; it appears the ip_fw.c
+check is valid, and ipfw has been updated appropriately.
+
+	- Dave Rivers -
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-3107f660917defc9>
+DATE: 1997-08-28T05:06:56+00:00  FROM: "Daniel O'Callaghan" <danny () panda ! hilink ! com ! au> <None>
+SUBJ: Re: ipfw configuration.
+BODY:
+On Wed, 27 Aug 1997, Tim Baur wrote:
+
+
+Ah.  I think you need to read up about subnetting.  What sort of IP 
+address allocation do you have?  What IP addresses have you assigned to 
+devices?  How many devices do you have?
+
+How do you connect to the Internet?  What is the ethernet interface IP 
+address of your router?
+
+Danny
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-ffb83c1a67a102c2>
+DATE: 1997-08-30T06:22:46+00:00  FROM: Archie Cobbs <archie () whistle ! com> <None>
+SUBJ: Re: ipfw protocols
+BODY:
+
+
+What version of FreeBSD (ie, ipfw) are you using? The current versions
+in 2.2.X and -current support naming all IP protocols.
+
+
+     proto:
+
+         ip                All packets match. The alias all has the same ef-
+
+                           fect.
+
+         tcp               Only TCP packets match.
+
+         udp               Only UDP packets match.
+
+         icmp              Only ICMP packets match.
+
+         <number|name>     Only packets for the specified protocol matches
+                           (see /etc/protocols for a complete list).
+
+-Archie
+
+___________________________________________________________________________
+Archie Cobbs   *   Whistle Communications, Inc.  *   http://www.whistle.com
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-20cbc8902bb11138>
+DATE: 1997-10-20T04:24:57+00:00  FROM: "Studded" <Studded () dal ! net> <None>
+SUBJ: Fwd: misc/4766: Changes to rc* scripts for ipfw
+BODY:
+	Pardon my forwarding this to yet another list, but it's been 5 days now, the deadline is 
+close at hand, and I've yet to hear any kind of comment on this.  Even "Doug, go away." would 
+be fine at this point.  :)  If the concept of making the default rule "open" is too much of a 
+challenge, I would really like to suggest that some kind of warning is included in rc.conf, since 
+I think the fact that "open" is not the same as "OPEN" will cause more than one person to 
+stumble.  
+
+	I have temporarily subscribed to -hackers since that seems to be the list that is next 
+most likely to get a response.  I would prefer that discussion about this take place on -stable 
+though, since that is where it started.  I know y'all are busy and it's close to release time, but 
+the actual changes I'm proposing are quite small (except for the default policy change, which 
+is easily reversed) and I really believe they will add to the usability of the system.
+
+Thanks for your time,
+
+Doug
+
+==================BEGIN FORWARDED MESSAGE==================
+
+DALnet IRC network
+
+	All FreeBSD 2.2x systems.  (Note that I'm unsure about the
+category.)
+
+
+	The ipfw functionality is a valuable part of FreeBSD, however
+co
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-3df91c58f42cc48c>
+DATE: 1997-11-07T16:16:35+00:00  FROM: Archie Cobbs <archie () whistle ! com> <None>
+SUBJ: Re: ipfw in syslog.conf?
+BODY:
+Thomas Stromberg writes:
+
+I'm pretty sure the current 2.2 code allows you to put this
+into /etc/syslog.conf:
+
+  # Put all ipfw output into its own log file
+  !ipfw
+  *.*             /var/log/ipfw
+
+If this doesn't work let me know and I'll try to recall what
+hacks we did to make it work :-)
+
+-Archie
+
+___________________________________________________________________________
+Archie Cobbs   *   Whistle Communications, Inc.  *   http://www.whistle.com
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-63712c85478132da>
+DATE: 1997-11-13T09:41:48+00:00  FROM: Johannes Schwabe <johannes.schwabe () informatik ! tu-chemnitz ! de> <None>
+SUBJ: Re: Need a Firewall but don´t know which
+BODY:
+On Thu, 13 Nov 1997, Barfu Egon jun. wrote:
+
+
+I think you sound like someone who sees a firewall as the ultimate
+solution to security problems, which it is not, of course. See
+http://flummi.de/~bofh/security-faq.html.
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-f8efc467f8b23dd3>
+DATE: 1997-11-13T10:26:12+00:00  FROM: "Ewout Meij" <ewout () pinewood ! nl> <None>
+SUBJ: Re: [NTSEC] Need a Firewall but don´t know
+BODY:
+On Nov 13,  9:35, Barfu� Egon jun. wrote:
+[snip]
+
+I guess you'll draw a *lot* of extra attention to your site this way ;-)
+
+current hits 009413 and counting!
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-71225af148b8d3c9>
+DATE: 1997-11-13T14:05:54+00:00  FROM: Mark Fearer <mfearer () mail ! fearernet ! com> <None>
+SUBJ: Re: [NTSEC] Need a Firewall but dont know which one
+BODY:
+ Try checking out www.raptor.com. We are running the Eagle NT 4.0 where I
+work. Same GUI as the unix version.
+
+-----------
+Mark Fearer
+mfearer@mail.fearernet.com
+
+On Thu, 13 Nov 1997, Barfu Egon jun. wrote:
+
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-7a4a3b9291966ba1>
+DATE: 1997-11-13T19:21:56+00:00  FROM: "Postmaster" <pm () ns ! online ! samara ! ru> <None>
+SUBJ: ipfw and syslog.conf
+BODY:
+I insert in syslog.conf next strings
+
+!ipfw
+*.*     /var/log/ipfw.log
+
+but all ipfw output direct to console
+What I must doing that the ipfw output put to ipfw.log
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-d3954efeb6173b78>
+DATE: 1997-11-14T19:46:05+00:00  FROM: Eugeny Kuzakov <Eugeny.Kuzakov () lab321 ! ru> <None>
+SUBJ: Re: Need a Firewall but don��t know which one
+BODY:
+Alfred Perlstein wrote:
+ipfw ? I like more ipfilter.
+It can customize responses to packets.
+
+-- 
+	Best wishes, Eugeny Kuzakov
+		Laboratory 321 ( Omsk, Russia )
+		kev@lab321.ru
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-fc5b2317edf9a4cb>
+DATE: 1997-11-27T19:11:50+00:00  FROM: Eivind Eklund <perhaps () yes ! no> <None>
+SUBJ: Re: How many rules maximum in ipfw?  Oh wait, comment...
+BODY:
+
+IMHO: Dynamic allocation.  ipfw shouldn't limit the number of rules;
+if anything should be allowed to limit this, it should be the kernel.
+
+Eivind.
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-2c9fb2fb60f9977d>
+DATE: 1997-12-05T20:44:03+00:00  FROM: Archie Cobbs <archie () whistle ! com> <None>
+SUBJ: Re: Teeny-weeny /usr/src/sbin/ipfw/ipfw.c patch
+BODY:
+Dmitry Kohmanyuk writes:
+
+I almost agree with you, but not quite :-)
+
+The reason is that you never know when a # might become a valid
+part of an ipfw command.
+
+An an example, mpd used to do this for comments in the config files.
+Then somebody wanted to put a '#' in their password:
+
+  set password "a&xq#53F"
+
+and suddenly they couldn't login... Not a perfect counter-example,
+but the idea is ... you never know.
+
+-Archie
+
+___________________________________________________________________________
+Archie Cobbs   *   Whistle Communications, Inc.  *   http://www.whistle.com
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-fee71155d12978d8>
+DATE: 1997-12-10T23:23:20+00:00  FROM: David Richards <dave () marvin ! cs ! dis ! qut ! edu ! au> <None>
+SUBJ: IP Firewall
+BODY:
+Sorry,
+
+	I found the initialisation,  please ignore my last e-mail!
+
+Sorry,
+
+Dave.
+
+-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-
+David Richards				Ph: 	+61 7 3864 4347
+Network Programmer			Fax: 	+61 7 3864 5272
+Computing Services			E-mail:	dj.richards@qut.edu.au
+Queensland University of Technology
+Brisbane, Australia
+-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-
+
+
+
+--------------------------------------------------------------------------------
+MID: <no-id-freebsd-hackers-22bcfb90e58bc7fd>
+DATE: 1997-12-19T04:03:14+00:00  FROM: Julian Elischer <julian () whistle ! com> <None>
+SUBJ: ipfw fix
+BODY:
+This is a multi-part message in MIME format.
+
+--------------1CFBAE3959E2B60015FB7483
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+
+If you use ipfw and the "reset tcp" option,
+you may want to apply the following patch.
+In fact you may want to do it if you MIGHT in the future do that.
+
+stops random kernel panics due to kernel stack overwrites.
+
+this fix is valid for 2.2.5 and 3.0
+
+It has just been checked in..
+
+--------------1CFBAE3959E2B60015FB7483
+Content-Type: text/plain; charset=us-ascii; name="knarlybugfix.patch"
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline; filename="knarlybugfix.patch"
+
+*** netinet/ip_fw.c	1997/11/22 13:00:48	1.51.2.6
+--- new/netinet/ip_fw.c	1997/12/19 02:54:54
+***************
+*** 576,598 ****
+  		  {
+  			struct tcphdr *const tcp =
+  				(struct tcphdr *) ((u_long *)ip + ip->ip_hl);
+! 			struct tcpiphdr ti;
+  
+  			if (offset != 0 || (tcp->th_flags & TH_RST))
+  				break;
+  			ti.ti_i = *((struct ipovly *) ip);
+  			ti.ti_t = *tcp;
+! 			NTOHL(ti.ti_seq);
+! 			NTOHL(ti.ti_ack);
+! 			ti.ti_len = ip->ip_len - hlen - (ti.ti_off << 2);
+  			if (tcp->th_flags & TH_ACK) {
+! 				tcp_respond(NULL, &ti, *m,
+  				    (tcp_se
+
+--------------------------------------------------------------------------------
+MID: 9501121359.AA26900@hdxu03.telecom.ptt.nl
+DATE: 1995-01-01T00:00:00+00:00  FROM: Jakob Schripsema <sch@telecom.ptt.nl> <None>
+SUBJ: Anyone working on the ipfirewall code ?
+BODY:
+Hi,
+
+Is there anyone working on the ipfirewall code for FreeBSD ?? I intend to
+use it with release 2.0 but I ran into some problems (panics, strange ways
+of handling bitmasks and the like). I hate reinventing wheel, so I someone
+is already working on the code I prefer to join.
+
+Jakob
+
+-------------------------------------------------------------------------------
+Jakob Schripsema		| Telephone: +31 50 855537
+PTT Telecom BV			| Telefax  : +31 50 855310
+I&AT				| E-mail   : J.Schripsema@telecom.ptt.nl
+P.O. Box 188			| DISCLAIMER: This statement is not an official
+NL-9700 AD Groningen		| statement from, nor does it represent an
+The Netherlands			| official position of, PTT Telecom B.V.
+-------------------------------------------------------------------------------
+
+
+
+--------------------------------------------------------------------------------
+MID: 199501130743.RAA18845@orion.devetir.qld.gov.au
+DATE: 1995-01-13T07:43:47+00:00  FROM: Stephen McKay <syssgm@devetir.qld.gov.au> <None>
+SUBJ: Re: Anyone working on the ipfirewall code ?
+BODY:
+Jakob Schripsema <sch@telecom.ptt.nl> writes:
+
+
+Yeah, I'm trying to use the firewall code here at work.  It's got a few bugs
+and is absolutely gross inside.  I don't know how efficient or not it might
+be because it is too ugly to read.  I'm all for a total discard and rewrite.
+I'd love to do this, but unless the boss will fund it, I'm not going to be
+able to find time.
+
+There are changes in -current to ip_fw.c, but I can't tell if they do any
+good as I can't read them either.
+
+Anyway, I'm about to build a new kernel including the following patch:
+(This is relative to 2.0R, and should fix the 'ipfw policy deny' crash, and
+the inability to have both 'tcp' and 'udp' filters active simultaneously.)
+
+--- netinet/ip_fw.c.dist	Tue Nov  8 22:47:27 1994
++++ netinet/ip_fw.c	Fri Jan 13 17:27:12 1995
+@@ -277,6 +277,7 @@
+      * be ever accepted or rejected...
+      */
+ 
++#if 0	/* HEY, THIS CRAP AIN'T DOIN' ANYBODY ANY GOOD! */
+ #ifdef IPFIREWALL_VERBOSE
+ 		/*
+ 		 * VERY ugly piece of code which actually
+@@ -306,6 +307,7 @@
+ 	return(0);
+     }
+ #endif
++#endif /* CRAP */
+     return(ip_fw_policy);
+ 
+ }
+@@ -371,8 +373,10 @@
+ 
+ 		if (newkind!=IP_FW_F_ALL 
+ 		&&  oldkind!=IP_FW_F_ALL
+-		&&  oldkind
+
+--------------------------------------------------------------------------------
+MID: Chameleon.950113140731.ugen@ugen.NetManage.co.il
+DATE: 1995-01-13T14:05:52+00:00  FROM: "Ugen J.S.Antsilevich" <ugen@netvision.net.il> <None>
+SUBJ: Re: Anyone working on the ipfirewall code ? 
+BODY:
+This code WORKS and does actually good thing for those who
+want to see packets while they are rejected....If you don't need
+this it is still useful,for me as example:)
+This patch is completely wrong but -current already patched
+from that problemm in another way.Sorry:)
+
+-- 
+-=Ugen J.S.Antsilevich=-
+NetVision - Israeli Commercial Internet          |  Learning 
+E-mail: ugen@NetVision.net.il                    | To Fly. [c]
+Phone : +972-4-550330                            |   
+
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 199503021132.MAA10170@labinfo.iet.unipi.it
+DATE: 1995-03-02T11:32:05+00:00  FROM: Luigi Rizzo <luigi@labinfo.iet.unipi.it> <None>
+SUBJ: Playing with ipfw...
+BODY:
+I have been playing with ipfw lately. Here are a few bugs/questions.
+I'd also give the fixes, but I have misconfigured the firewall and I
+cannot access it at the moment :)
+
+
+[BUG] ipfw in its current form does not accept setting the destination
+    port. Looking at the code, it actually accepts the port, but after
+    expects a 'via' or something similar field.
+
+    The fix is quite easy, just check if the parameter string is
+    empty after the port number.
+
+[BUG] the program does not look for full keywords [from,to] when
+    parsing the string. Thus, if I say
+
+       ipfw addf accept tcp from myhost telnet to somewhere
+
+    it mistakes "telnet" for "to", and then complains that it cannot
+    resolve "to" to a service name. Better check for full words, even if
+    it takes more typing.
+
+[COMMENT] Quite often, allowing a service requires a two-line
+   specification. As an example, I am using
+
+       ipfw addf accept udp from 0/0 520 to 0/0
+       ipfw addf accept udp from 0/0 to 0/0 520
+
+    to let routing information pass to hosts in the subnet.
+
+    It would be nice to have a way to specify "one of the port
+    numbers must be XXX". Is this supported by the system calls ?
+
+	Luigi
+
+--------------------------------------------------------------------------------
+MID: Chameleon.950302142908.ugen@ugen.NetManage.co.il
+DATE: 1995-03-02T14:24:48+00:00  FROM: "Ugen J.S.Antsilevich" <ugen@netvision.net.il> <None>
+SUBJ: RE: Playing with ipfw... 
+BODY:
+
+Fixed in -current...
+
+
+This was nice feature(any keyword was specified as it's first 1 or 2 letters
+ so you could not type too much) but already "fixed" in -current
+
+Ok..this is by my definition "bidirectional",now accounting has this but
+in firewall it is in TODO ...
+
+-- 
+-=Ugen J.S.Antsilevich=-
+NetVision - Israeli Commercial Internet          |  Learning 
+E-mail: ugen@NetVision.net.il                    | To Fly. [c]
+Phone : +972-4-550330                            |   
+
+
+
+
+
+--------------------------------------------------------------------------------
+MID: v02110102ab7b799a5340@[199.183.109.242]
+DATE: 1995-03-02T13:46:32+00:00  FROM: rkw@dataplex.net (Richard Wackerbarth) <None>
+SUBJ: Re: Playing with ipfw...
+BODY:
+Luigi Rizzo <luigi@labinfo.iet.unipi.it> writes:
+
+
+perhaps the external language could accept
+
+"ipfw addf accept udp between 0/0 520 and 0/0"
+
+and expand it into the two non-symetrical rules.
+
+----
+Richard Wackerbarth
+rkw@dataplex.net
+
+
+
+
+
+--------------------------------------------------------------------------------
+MID: Chameleon.950302153958.ugen@ugen.NetManage.co.il
+DATE: 1995-03-02T15:38:30+00:00  FROM: "Ugen J.S.Antsilevich" <ugen@netvision.net.il> <None>
+SUBJ: Re: Playing with ipfw... 
+BODY:
+
+Yeh..i think i already talked with someone about possibility of
+completely different extarnal language expanding to firewall entries..
+This is something one can do even now..Well..firewall itself will 
+change anyway but such language can give user a good choice..my ipfw
+interface is just straightforward interface to ipfw iocontrols..:))
+
+-- 
+-=Ugen J.S.Antsilevich=-
+NetVision - Israeli Commercial Internet          |  Learning 
+E-mail: ugen@NetVision.net.il                    | To Fly. [c]
+Phone : +972-4-550330                            |   
+
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 199503021600.RAA10448@labinfo.iet.unipi.it
+DATE: 1995-03-02T16:00:24+00:00  FROM: Luigi Rizzo <luigi@labinfo.iet.unipi.it> <None>
+SUBJ: Re: Playing with ipfw...
+BODY:
+
+The thing is trickier, the case 0/0 to 0/0 is very special.
+
+If I telnet from host a to host b, I have two types of packets:
+one with
+
+	SRC_IP= a, SRC_PORT= some_port, DST_IP= b, DST_PORT= 23
+
+and the other with
+
+	SRC_IP= b, SRC_PORT= 23, DST_IP= a, DST_PORT= some_port
+
+so I need probably two rules in ipfw (if I understand well, the
+fields passed to IPFW are matched with the IP/TCP/UDP headers).
+If I want to pass telnet packets from b to a, two more packets are
+present:
+
+	SRC_IP= b, SRC_PORT= some_port, DST_IP= a, DST_PORT= 23
+	SRC_IP= a, SRC_PORT= 23, DST_IP= b, DST_PORT= some_port
+
+which means two more rules.
+
+In my opinion, it makes no much sense in the user interface to
+specify the source port. It would be less confusing to assume that
+a port is actually a service, and filter access to services. I'd
+like something like the following:
+
+    accept tcp from source.host to dest.host portX
+
+to mean "source.host is allowed access to service on portX on dest.host"
+
+Of course I might be wrong.
+	Luigi
+====================================================================
+Luigi Rizzo                     Dip. di Ingegneria dell'Informazione
+email: luigi@iet.unipi.it       Universita' di Pi
+
+--------------------------------------------------------------------------------
+MID: Chameleon.950302183631.ugen@ugen.NetManage.co.il
+DATE: 1995-03-02T18:34:50+00:00  FROM: "Ugen J.S.Antsilevich" <ugen@netvision.net.il> <None>
+SUBJ: Re: Playing with ipfw... 
+BODY:
+But this one you have already:
+This one allows access to telnet port from outside...
+
+ipfw addf accept tcp from source.host to dest.host portX 
+
+And you probably need not any other definition because packets from dest.host 
+to source.host was never denied...
+
+-- 
+-=Ugen J.S.Antsilevich=-
+NetVision - Israeli Commercial Internet          |  Learning 
+E-mail: ugen@NetVision.net.il                    | To Fly. [c]
+Phone : +972-4-550330                            |   
+
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 199503022330.KAA09244@vitruvius.arbld.unimelb.EDU.AU
+DATE: 1995-03-02T23:30:41+00:00  FROM: Darren Reed <darrenr@vitruvius.arbld.unimelb.edu.au> <None>
+SUBJ: Re: Playing with ipfw...
+BODY:
+In some email I received from Luigi Rizzo, they wrote:
+
+You might want to checkout an alternative to "ipfw" for IP firewalling,
+which has a much clearer language for defining packet filters if you and
+others are finding "ipfw" to be somewhat confusing.
+
+For cases such as "0/0 0/0", keywords such as "any" are provided so that
+you don't really have to worry about what it does.
+
+For example:
+
+log in on le0 from any to any with ipopts
+block in log on le0 from any to any with short frag
+log in on le0 proto tcp from any to any port != 80 flags S
+block in log quick on le0 proto icmp from any to any icmp-type unreach
+block in log quick on le0 proto udp from any to any port = 2049
+block in quick on le0 from any to any with ipopts
+pass in on le0 from any to any
+
+aren't very ambiguous.  It'll take "host/#" or "from foo mask bar".
+
+checkout coombs.anu.edu.au:/pub/net/kernel/ip_fil2.5c.tar.Z
+
+darren
+
+
+
+--------------------------------------------------------------------------------
+MID: 199504221039.MAA18831@gvr.win.tue.nl
+DATE: 1995-04-22T10:39:36+00:00  FROM: guido@gvr.win.tue.nl (Guido van Rooij) <None>
+SUBJ: ipfw code
+BODY:
+Has anyone seen/heart form Ugen lately? I am trying to send him
+some email about a rewrite of ipfw I want to do. But I cant reach
+him.
+
+-Guido
+
+
+
+--------------------------------------------------------------------------------
+MID: 16925.798548199@freefall.cdrom.com
+DATE: 1995-04-22T10:56:39+00:00  FROM: Gary Palmer (FreeBSD/ARM Team) <gpalmer@freefall.cdrom.com> <None>
+SUBJ: Re: ipfw code 
+BODY:
+In message <199504221039.MAA18831@gvr.win.tue.nl>, Guido van Rooij writes:
+
+I had e-mail from him ~2-3 weeks ago saying he was still snowed under
+at work, but I haven't sent mail since, so I dunno if he's still
+there.
+
+Gary
+
+
+
+--------------------------------------------------------------------------------
+MID: 199504221314.QAA24469@Burka.NetVision.net.il
+DATE: 1995-04-22T13:14:26+00:00  FROM: Gennady Sorokopud <gena@NetVision.net.il> <None>
+SUBJ: Re: ipfw code
+BODY:
+Ugen is on his way to US ( he's got a job in Washington )
+Right now he's in Moscow i guess.
+
+He promised that he'll back to bussines in 2-3 weeks
+and will answer all the ipfw related questions.
+
+I hope he'll get back real fast because besides ipfw
+he's working with me on some mail project :-)
+( If you want to take a look go to:
+ftp://Burka.NetVision.net.il/pub/xfmail )
+
+
+Regards
+
+
+
+
+--------------------------------------------------------------------------------
+MID: cY9KJclKNL@astral.msk.su
+DATE: 1995-04-22T16:55:37+00:00  FROM: "Andrey A. Chernov, Black Mage" <ache@astral.msk.su> <None>
+SUBJ: Re: ipfw code
+BODY:
+In message <199504221039.MAA18831@gvr.win.tue.nl> Guido van Rooij
+    writes:
+
+
+AFAIK Ugen arrive to Moscow several days ago and then
+travel to Kazan.
+
+-- 
+Andrey A. Chernov        : And I rest so composedly,  /Now, in my bed,
+ache@astral.msk.su       : That any beholder  /Might fancy me dead -
+FidoNet: 2:5020/230.3    : Might start at beholding me,  /Thinking me dead.
+RELCOM Team,FreeBSD Team :         E.A.Poe         From "For Annie" 1849
+
+
+
+--------------------------------------------------------------------------------
+MID: 199504222336.QAA06967@freefall.cdrom.com
+DATE: 1995-04-22T23:36:11+00:00  FROM: dima@FreeBSD.org (Dima Ruban) <None>
+SUBJ: Re: ipfw code
+BODY:
+Gary Palmer writes:
+
+As I know, now he's in Russia now. Probably his email is
+ugen@deep-thought.demos.su
+
+
+-- dima
+
+
+
+--------------------------------------------------------------------------------
+MID: 199505020916.TAA14309@asstdc.scgt.oz.au
+DATE: 1995-05-02T09:15:59+00:00  FROM: michael butler <imb@asstdc.scgt.oz.au> <None>
+SUBJ: IPFW - accounting still broken ?
+BODY:
+When trying to add an accounting "filter" using ipfw, I get ...
+
+gw3:~ % ipfw adda bidirectional all from 0/0 to 202.12.127.0/24
+ipfw: setsockopt failed.
+
+This is true of 950412-SNAP and -current (as of yesterday),
+
+	michael
+
+
+
+--------------------------------------------------------------------------------
+MID: 199505101715.TAA10139@sidhe.hsc-sec.fr
+DATE: 1995-05-10T17:15:56+00:00  FROM: Ollivier Robert <Ollivier.Robert@hsc.fr.net> <None>
+SUBJ: IP Firewall s/w for SunOS 4.1.x
+BODY:
+FYI.
+
+------- start of forwarded message -------
+Newsgroups: comp.security.unix,comp.sys.sun.admin,comp.sys.sun.apps,comp.unix.bsd.netbsd.misc
+From: darrenr@arbld.unimelb.edu.au (Darren Reed)
+Subject: IP Firewall s/w for SunOS 4.1.x
+Organization: Computer Science, University of Melbourne, Australia
+Date: Wed, 10 May 1995 15:29:44 GMT
+I've just finished work on version 2.6 of my IP filter and I'm almost
+100% happy with fragment handling - although it hasn't really changed
+since 2.5.
+
+For more details, see:
+
+http://cheops.anu.edu.au/~avalon/ip-filter.html
+ftp://coombs.anu.edu.au/pub/net/kernel/ip_fil2.6.tar.gz
+
+...the % that isn't happy with fragment handling is that depending on
+the reassembly implementation, it may or may not be safe to filter on
+"established" (or any other) bits in the TCP header, regardless of
+whether they are present or not.
+
+Cheers,
+Darren
+------- end of forwarded message -------
+
+-- 
+Ollivier ROBERT  -=-=-  Herve Schauer Consultants -=-=-   roberto@hsc.fr.net
+-=-=-=-=-=- Support The Free UNIX Systems ! FreeBSD Linux NetBSD -=-=-=-=-=-
+
+
+
+==========================================================================================
+DB: freebsd-current.duckdb  hits=80
+==========================================================================================
+--------------------------------------------------------------------------------
+MID: 199504161243.TAA00756@gw.itfs.nsk.su
+DATE: 1995-04-16T12:43:16+00:00  FROM: "Nickolay N. Dudorov" <nnd@gw.itfs.nsk.su> <None>
+SUBJ: Ipfw/Ipacct questions
+BODY:
+	Ipfirewall/Ipaccounting code in current
+only partially enabled/disabled by IPFIREWALL/IPACCT kernel
+config options. Why does this code contains run time tests
+(f.e. if(ip_acct_cnt_ptr == NULL) ) when I config kernel
+without IPFIREWALL/IPACCT ? Is it possible to #ifdef all
+such tests by IPFIREWALL/IPACCT ?
+
+	N.Dudorov
+
+
+
+--------------------------------------------------------------------------------
+MID: 199504161251.FAA00127@corbin.Root.COM
+DATE: 1995-04-16T12:50:59+00:00  FROM: David Greenman <davidg@Root.COM> <None>
+SUBJ: Re: Ipfw/Ipacct questions 
+BODY:
+
+   Because ipfw is also an LKM.
+
+-DG
+
+
+
+--------------------------------------------------------------------------------
+MID: 199504161416.VAA01173@gw.itfs.nsk.su
+DATE: 1995-04-16T14:16:25+00:00  FROM: "Nickolay N. Dudorov" <nnd@gw.itfs.nsk.su> <None>
+SUBJ: Re: Ipfw/Ipacct questions
+BODY:
+
+	The next question - is it possible/feasible to
+build a kernel which'll not allow modload 'ipfw' LKM ?
+It seems to me that such a situation was here some time ago
+with IBCS2 support - i.e. I have to define option IBCS2 (?)
+for later use of IBCS2-support LKMs.
+
+	N.Dudorov
+
+
+
+--------------------------------------------------------------------------------
+MID: 199506271507.BAA08082@asstdc.scgt.oz.au
+DATE: 1995-06-27T15:07:34+00:00  FROM: michael butler <imb@scgt.oz.au> <None>
+SUBJ: ipfw - addf reject = panic
+BODY:
+This evening I was looking to move back to kernel mode ppp and, in doing so,
+exploring the firewall facility ipfw once more. Sad news ..
+
+gw3:~ #	ipfw addf reject all from any to harvey
+ :
+ :
+asstdc:~ # traceroute harvey
+
+ .. results in a kernel panic on gw3 running current as of yesterday :-(
+
+	michael
+
+
+
+--------------------------------------------------------------------------------
+MID: 684.804265983@westhill.cdrom.com
+DATE: 1995-06-27T15:13:03+00:00  FROM: Gary Palmer <gpalmer@westhill.cdrom.com> <None>
+SUBJ: Re: ipfw - addf reject = panic 
+BODY:
+In message <199506271507.BAA08082@asstdc.scgt.oz.au>, michael butler writes:
+
+
+
+
+Really? Have you tried just `ipfw addf ldeny ...' instead to see if
+it's a problem with the ICMP sending code? If not, I'm in trouble... I
+just turned on the firewall locally - on a -current box, although I'm
+not using `reject'...
+
+Gary
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 199506271518.BAA08464@asstdc.scgt.oz.au
+DATE: 1995-06-27T15:18:31+00:00  FROM: michael butler <imb@scgt.oz.au> <None>
+SUBJ: Re: ipfw - addf reject = panic
+BODY:
+Gary Palmer writes:
+
+
+"ldeny" works properly .. just throws it onto the gw3's console as it
+should. Thanks, a workaround whilst it gets scrutinised :-)
+
+	michael
+
+
+
+--------------------------------------------------------------------------------
+MID: 199506271539.QAA01048@freebsd.netcraft.co.uk
+DATE: 1995-06-27T15:39:11+00:00  FROM: Paul Richards <paul@lambda.demon.co.uk> <None>
+SUBJ: Re: ipfw - addf reject = panic
+BODY:
+In reply to Gary Palmer who said
+
+The ipfw code works for me fine but using user-space PPP. I suspect
+that it is the kernel PPP code that is falling over rather than
+anything else since it was flakey in 2.0 and has since been largely
+ignored since everyones switched.
+
+-- 
+  Paul Richards, Bluebird Computer Systems. FreeBSD core team member. 
+  Internet: paul@FreeBSD.org, http://www.freebsd.org/~paul
+  Phone: 0370 462071 (Mobile), +44 1222 457651 (home)
+
+
+
+--------------------------------------------------------------------------------
+MID: 199506271610.CAA11019@asstdc.scgt.oz.au
+DATE: 1995-06-27T16:10:38+00:00  FROM: michael butler <imb@scgt.oz.au> <None>
+SUBJ: Re: ipfw - addf reject = panic
+BODY:
+Paul Richards writes:
+
+
+Different code .. user-mode PPP has its own internal filter functions
+executed at context-switch intervals along with the rest of the protocol. 
+It also currently has no facility to return ICMP unreachable indications,
+
+	michael
+
+
+
+--------------------------------------------------------------------------------
+MID: 199506271640.RAA01451@freebsd.netcraft.co.uk
+DATE: 1995-06-27T16:40:58+00:00  FROM: Paul Richards <paul@lambda.demon.co.uk> <None>
+SUBJ: Re: ipfw - addf reject = panic
+BODY:
+In reply to michael butler who said
+
+Ehh? I'm using ipfw, the kernel firewall code, not the user-mode PPP
+filtering code.
+
+I think the layering is (is this right?)
+
+modem <-> user PPP <-> tun <-> IP layer <-> ipfw <-> TCP
+
+so ipfw is always common.
+
+-- 
+  Paul Richards, Bluebird Computer Systems. FreeBSD core team member. 
+  Internet: paul@FreeBSD.org, http://www.freebsd.org/~paul
+  Phone: 0370 462071 (Mobile), +44 1222 457651 (home)
+
+
+
+--------------------------------------------------------------------------------
+MID: 199506271835.EAA01749@asstdc.scgt.oz.au
+DATE: 1995-06-27T18:35:36+00:00  FROM: michael butler <imb@scgt.oz.au> <None>
+SUBJ: Re: ipfw - addf reject = panic
+BODY:
+Paul Richards writes:
+
+
+Oh, OK .. sorry, I misunderstood.
+ 
+ 
+ 
+Yup ..
+
+
+ .. and, having just tested it with user-mode PPP instead of kernel PPP,
+"ipfw addf reject .." will still panic the box it's running on. "deny"
+doesn't,
+
+	michael
+
+
+
+--------------------------------------------------------------------------------
+MID: 199507091059.UAA17555@asstdc.scgt.oz.au
+DATE: 1995-07-09T10:59:29+00:00  FROM: michael butler <imb@scgt.oz.au> <None>
+SUBJ: ipfw panics
+BODY:
+Bill Fenner (fenner@parc.xerox.com) sent me this set of patches but I
+haven't heard from him since I acknowledged that they worked. Consequently,
+I apologize in advance if this is "bad form", however, if anyone else is
+trying to use "ipfw addf reject", they do solve a show-stopper .. relative
+to this afternoon's sup ..
+
+diff -r -c ./ip_fw.c /usr/custom/netinet/ip_fw.c
+*** ./ip_fw.c	Tue Jul  4 19:06:08 1995
+--- /usr/custom/netinet/ip_fw.c	Sun Jul  9 17:23:14 1995
+***************
+*** 104,110 ****
+  
+  #ifdef IPFIREWALL
+  int 
+! ip_fw_chk(ip, rif, chain)
+  	struct ip *ip;
+  	struct ifnet *rif;
+  	struct ip_fw *chain;
+--- 104,111 ----
+  
+  #ifdef IPFIREWALL
+  int 
+! ip_fw_chk(m, ip, rif, chain)
+! 	struct mbuf *m;
+  	struct ip *ip;
+  	struct ifnet *rif;
+  	struct ip_fw *chain;
+***************
+*** 115,121 ****
+  	struct icmp *icmp = (struct icmp *) ((u_long *) ip + ip->ip_hl);
+  	struct ifaddr *ia = NULL, *ia_p;
+  	struct in_addr src, dst, ia_i;
+- 	struct mbuf *m;
+  	u_short src_port = 0, dst_port = 0;
+  	u_short f_prt = 0, prt;
+  	char notcpsyn = 1;
+--- 116,121 ----
+***************
+*** 302,308 ****
+  		return TRUE;
+  
+  bad_packet:
+- 	m = dtom(ip);
+  	if (f != NULL) {
+  		/*
+  		 * Do n
+
+--------------------------------------------------------------------------------
+MID: Chameleon.4.00.4.950926110501.ugen@ugen
+DATE: 1995-09-26T17:58:24+00:00  FROM: "Ugen J.S.Antsilevich" <ugen@latte.worldbank.org> <None>
+SUBJ: IpFw vs IpFilter vs IpFirewall 2.0
+BODY:
+Hi guys.
+
+I just ended looking into Ipfirewall 2.0 and Ipfilter 2.7.XXX (whatever version 
+is last accessible from the web page:).
+
+So my idea on topic is as following:
+1) As i noticed in my last mail IpFirewall 2.0 has IP options functionality
+which ipfw has not.
+2) Same applies to IpFilter.
+3) There is no any other difference in functionality which present in 
+both those filters and lacks in ipfw.
+4) There is a lot of things like ipacct, automatic sorting of rules etc. which 
+are part of ipfw and has no compatible features in others.
+ So i am not thinking of changin ipfw to any of those two and i don't think 
+doing so by anybody else would be wise move:)
+ On the contrary i am going to add ipoptions features in the next two weeks so 
+that ipfw will gain more functionality then both other filter packages.
+My plans are far beyond what any other filtering package for today can do (or
+even planning as far as i understand).
+
+Thank you. *IMHO*
+--Ugen
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 199509261608.JAA09138@precipice.shockwave.com
+DATE: 1995-09-26T16:08:04+00:00  FROM: Paul Traina <pst@shockwave.com> <None>
+SUBJ: Re: IpFw vs IpFilter vs IpFirewall 2.0 
+BODY:
+OK, when you're done, I'll code review it.
+
+In the past, I've tried to stay out of this area of the code because I want
+to avoid any hint of a conflict of interest with my employer,  but given that
+the author is external,  I don't see it as a big deal.
+
+
+
+--------------------------------------------------------------------------------
+MID: KHVzrBnO3m@ache.dialup.ru
+DATE: 1996-02-24T18:56:31+00:00  FROM: Андрей Чернов(aka Andrey A. Chernov, Black Mage) <ache@astral.msk.su> <None>
+SUBJ: ipfw_lkm not compiled now
+BODY:
+cc -O2 -m486 -pipe -DIPFIREWALL  -DIPACCT  -DKERNEL -DACTUALLY_LKM_NOT_KERNEL -I/usr/src/lkm/ipfw/../../sys  -W -Wreturn-type -Wcomment -Wredundant-decls -Wimplicit  -Wnested-externs -Wstrict-prototypes -Wmissing-prototypes  -Winline -c /usr/src/lkm/ipfw/ipfw_lkm.c
+In file included from /usr/src/lkm/ipfw/ipfw_lkm.c:37:
+/usr/src/lkm/ipfw/../../sys/netinet/ip_fw.h:55: parse error before `LIST_ENTRY'
+/usr/src/lkm/ipfw/../../sys/netinet/ip_fw.h:55: warning: no semicolon at end of struct or union
+/usr/src/lkm/ipfw/../../sys/netinet/ip_fw.h:57: parse error before `}'
+/usr/src/lkm/ipfw/ipfw_lkm.c: In function `ipfw_load':
+/usr/src/lkm/ipfw/ipfw_lkm.c:52: `ip_acct_cnt_ptr' undeclared (first use this function)
+/usr/src/lkm/ipfw/ipfw_lkm.c:52: (Each undeclared identifier is reported only once
+/usr/src/lkm/ipfw/ipfw_lkm.c:52: for each function it appears in.)
+/usr/src/lkm/ipfw/ipfw_lkm.c:52: `ip_acct_ctl_ptr' undeclared (first use this function)
+/usr/src/lkm/ipfw/ipfw_lkm.c:58: `ip_fw_chk' undeclared (first use this function)
+/usr/src/lkm/ipfw/ipfw_lkm.c:59: `ip_fw_ctl' undeclared (first use this function)
+/usr/src/lkm/ipfw/ipfw_lkm.c:62: `ip_acct_cnt' undeclared (first use this function)
+/us
+
+--------------------------------------------------------------------------------
+MID: 7550.825191258@critter.tfs.com
+DATE: 1996-02-24T19:47:38+00:00  FROM: Poul-Henning Kamp <phk@critter.tfs.com> <None>
+SUBJ: Re: ipfw_lkm not compiled now 
+BODY:
+Your sources are not up to date, or I made a major blunder...
+
+--
+Poul-Henning Kamp           | phk@FreeBSD.ORG       FreeBSD Core-team.
+http://www.freebsd.org/~phk | phk@login.dknet.dk    Private mailbox.
+whois: [PHK]                | phk@ref.tfs.com       TRW Financial Systems, Inc.
+Future will arrive by its own means, progress not so.
+
+
+
+--------------------------------------------------------------------------------
+MID: 11931.825357016@critter.tfs.com
+DATE: 1996-02-26T17:50:16+00:00  FROM: Poul-Henning Kamp <phk@critter.tfs.com> <None>
+SUBJ: IPFW (was: Re: -stable hangs at boot)
+BODY:
+
+I have tried to collapse three threads here, sorry for the cross-posting
+
+PHK: > If you have IPFW in your kernel, you don't want it to pass any packets
+PHK: > you haven't approved in your filters.
+PHK: >
+PHK: > QED:  Setup your filters before anything gets passed.
+
+Nate: I can't do this on my box at all.  It's a PPP connection, and *all* of
+Nate: the filtering is done on my PPP interface, which can vary depending on
+Nate: incoming calls.  So, by having a default 'global' firewall entry I have
+Nate: a couple problems.
+
+Nate: 1) There is no established way to have it be on a per-process.  This is
+Nate: *bad* news for me since my PPP box is also my DNS/router.  I can't wait
+Nate: for my PPP connection to come up before I add entries, and I want all of
+Nate: my local machines to have access to *everything* on my router box.
+
+Yes you can.  Add this to the top of /etc/netstart:
+
+	ipfw add 65000 pass all from any to any.
+
+This changes your default policy to "pass everything".
+Then later you can add the restrictions you want to.
+
+Nate: 2) There is no established method for adding IPFW entries in FreeBSD.
+Nate: If we are going to make this the default method, I think we need some
+Nate: hoo
+
+--------------------------------------------------------------------------------
+MID: 199602261926.MAA00360@rocky.sri.MT.net
+DATE: 1996-02-26T19:26:22+00:00  FROM: Nate Williams <nate@sri.MT.net> <None>
+SUBJ: Re: IPFW (was: Re: -stable hangs at boot)
+BODY:
+
+No problem, I like it this way and appreciate the extra work you've
+done.
+
+
+OK so far, but it needs to be in doable from a sysconfig or netstart
+hook (which you talk about later).
+
+
+So far so good. :)
+
+
+I'll be glad to see it go in.
+
+
+Glad to hear it, but it happened after I sup'd the CVS tree.  It also
+appears that you need to add the patch you just made to -current into
+-stable as well.  Don't you just hate having to keep two trees in sync
+sometimes?  (Though the advantages outweigh the disadvantages).
+
+
+Unless you require them to add a line similar to what you are requiring
+me to do in /etc/sysconfig.  I think it should be sysconfig know to
+'lock-down' the system, rather than have it be the default.  It's just
+as easy to add a line to /etc/netstart to 'tighten up' the system as it
+is to 'loosen-up'.  The latter will cause us much more support grief
+than the former.
+
+
+Waiting expectantly.   (And I won't even bug you about reviewing the
+PC-CARD patches either. *grin*)
+
+
+Sure you could.  I'm doing that now w/out the changes you've made.
+
+
+You could do it before, and can do it now if we add a line to
+/etc/netstart which is off by default which shuts down the entire
+machine.
+
+
+
+Does
+
+--------------------------------------------------------------------------------
+MID: 199602262238.OAA14871@GndRsh.aac.dev.com
+DATE: 1996-02-26T22:38:22+00:00  FROM: "Rodney W. Grimes" <rgrimes@GndRsh.aac.dev.com> <None>
+SUBJ: Re: IPFW (was: Re: -stable hangs at boot)
+BODY:
+...
+
+
+That is why I raised the little protest the other day, this should have all
+been done in -current, stabalized, tested, hashed out, etc, then and ONLY
+then should have it been brought over to -stable.  As it stands now I have
+``Frozen'' my stable sources until this work is done, which means I can not
+take advantage of several other nice fixes that just recently went in to
+-stable :-( :-(.
+
+Work should really be done in one branch only until it is _complete_.
+
+
+-- 
+Rod Grimes                                      rgrimes@gndrsh.aac.dev.com
+Accurate Automation Company                 Reliable computers for FreeBSD
+
+
+
+--------------------------------------------------------------------------------
+MID: 96Feb28.110530pst.177480@crevenia.parc.xerox.com
+DATE: 1996-02-28T19:05:24+00:00  FROM: Bill Fenner <fenner@parc.xerox.com> <None>
+SUBJ: Re: IPFW (was: Re: -stable hangs at boot) 
+BODY:
+In message <199602261926.MAA00360@rocky.sri.MT.net> Nate wrote:
+
+You can prevent many IP spoofing attacks by disallowing packets with IP source 
+addresses that match your internal network addresses from coming in your 
+external connection (e.g. Xerox does
+
+access-list N deny 13.0.0.0 0.255.255.255 any
+
+on its incoming interface on the Cisco)
+
+
+Sorry, this doesn't make much sense to me -- shouldn't "filtering routing 
+information" just be another firewall rule?  Seems like policy to me.
+
+  Bill
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 199602281910.MAA08395@rocky.sri.MT.net
+DATE: 1996-02-28T19:10:42+00:00  FROM: Nate Williams <nate@sri.MT.net> <None>
+SUBJ: Re: IPFW (was: Re: -stable hangs at boot) 
+BODY:
+
+The routing code didn't go through the firewall code in the previous
+implementation, so there was no way for it to filter out routing
+information.
+
+
+Nate
+
+
+
+--------------------------------------------------------------------------------
+MID: 199602281913.MAA08403@rocky.sri.MT.net
+DATE: 1996-02-28T19:13:34+00:00  FROM: Nate Williams <nate@sri.MT.net> <None>
+SUBJ: Re: IPFW (was: Re: -stable hangs at boot) 
+BODY:
+Nate Williams writes:
+
+Man, I think I'm going to crawl into a hole today.  I can't communicate
+at all effectively.
+
+What that should have said is:
+
+Routing packets didn't pass through the firewall code previously, so
+there was no way to filter it out.
+
+Sorry,
+
+
+
+Nate
+
+
+
+--------------------------------------------------------------------------------
+MID: 199602282205.QAA03415@brasil.moneng.mei.com
+DATE: 1996-02-28T22:05:26+00:00  FROM: Joe Greco <jgreco@brasil.moneng.mei.com> <None>
+SUBJ: Re: IPFW (was: Re: -stable hangs at boot)
+BODY:
+
+Technically, one might want to place it's much-less-often-considered brother
+in the firewall too...  the one that prevents OUTgoing packets that do NOT
+have a 13.0.0.0 address...
+
+(no I don't do this either but I should).
+
+... JG
+
+
+
+--------------------------------------------------------------------------------
+MID: 2612.825584015@critter.tfs.com
+DATE: 1996-02-29T08:53:35+00:00  FROM: Poul-Henning Kamp <phk@critter.tfs.com> <None>
+SUBJ: Re: IPFW (was: Re: -stable hangs at boot) 
+BODY:
+rce 
+
+And if you're on a lousy ISP, also a filter to block all of the "private"
+networks, 192.168.x.x and so on, (RFC 1596 ?)
+
+--
+Poul-Henning Kamp           | phk@FreeBSD.ORG       FreeBSD Core-team.
+http://www.freebsd.org/~phk | phk@login.dknet.dk    Private mailbox.
+whois: [PHK]                | phk@ref.tfs.com       TRW Financial Systems, Inc.
+Future will arrive by its own means, progress not so.
+
+
+
+--------------------------------------------------------------------------------
+MID: 199602291707.JAA05845@precipice.shockwave.com
+DATE: 1996-02-29T17:07:06+00:00  FROM: Paul Traina <pst@shockwave.com> <None>
+SUBJ: Re: IPFW (was: Re: -stable hangs at boot) 
+BODY:
+On sites that I run, my filter rules -start- with:
+
+deny <my networks> any
+deny <multicast and above> any
+deny 127.0.0.0 0.255.255.255 any
+deny 0.0.0.0   0.255.255.255 any
+deny <1597 nets> any
+
+The idea is that you want to block off all source addresses that you should
+never expect to see.  127 is a favorite of mine, because a lot of people have
+localhost in their hosts.equiv files.
+
+Paul
+
+
+
+--------------------------------------------------------------------------------
+MID: 199602291731.LAA04770@brasil.moneng.mei.com
+DATE: 1996-02-29T17:31:52+00:00  FROM: Joe Greco <jgreco@brasil.moneng.mei.com> <None>
+SUBJ: Re: IPFW (was: Re: -stable hangs at boot)
+BODY:
+
+RFC1597:
+
+	10.0.0.0        -   10.255.255.255
+	172.16.0.0      -   172.31.255.255
+	192.168.0.0     -   192.168.255.255
+
+That's a real good point, actually.  Also 127.*, I would think...
+
+(actually, some non-lousy ISP's assign space out of this address range as it
+serves as a very "gross" firewall.  And even if you don't, your customers
+might use it as described in 1597 and have a misconfigured router that
+doesn't prevent outbound packets.  This implies you want to stop traffic in
+BOTH directions).
+
+Gosh, this gets complex quickly :-)
+
+... Joe
+
+-------------------------------------------------------------------------------
+Joe Greco - Systems Administrator			      jgreco@ns.sol.net
+Solaria Public Access UNIX - Milwaukee, WI			   414/546-7968
+
+
+
+--------------------------------------------------------------------------------
+MID: 199602292016.OAA06433@brasil.moneng.mei.com
+DATE: 1996-02-29T20:16:15+00:00  FROM: Joe Greco <jgreco@brasil.moneng.mei.com> <None>
+SUBJ: Re: IPFW (was: Re: -stable hangs at boot)
+BODY:
+
+Okay, firewall debaters.  Here's what I've done on gateway.inr.sol.net.
+204.95.219.1 is the local address of my T1 interface.  206.55.64.17 is the
+address of the router on my backbone Ethernet.
+
+Commentary in curly braces.
+
+#! /bin/sh -
+
+PATH=/sbin; export PATH 
+
+ipfw f
+echo "Installing Firewall"
+#
+# ----- IP Bad Address Prevention Section -----
+
+# { Packets from these addresses should never be coming in }
+
+# Block RFC1597 "Private Internets" (inbound)
+ipfw addf deny all from 10.0.0.0/8 to 0/0 via 204.95.219.1 
+ipfw addf deny all from 172.16.0.0/16 to 0/0 via 204.95.219.1
+ipfw addf deny all from 192.168.0.0/16 to 0/0 via 204.95.219.1
+# Block other "Shouldn't Exist" Internets (inbound)
+ipfw addf deny all from 127.0.0.0/8 to 0/0 via 204.95.219.1
+ipfw addf deny all from 0.0.0.0/8 to 0/0 via 204.95.219.1
+
+# { Likewise, we should never allow packets with these addresses }
+# { as source or destination to go out onto the Big Net }
+
+# Block RFC1597 "Private Internets" as Source Address (outbound)
+ipfw addf deny all from 10.0.0.0/8 to 0/0 via 206.55.64.17
+ipfw addf deny all from 172.16.0.0/16 to 0/0 via 206.55.64.17
+ipfw addf deny all from 192.168.0.0/16 to 0/0 via 206.55.64.17 
+# Block RF
+
+--------------------------------------------------------------------------------
+MID: 199602292038.MAA00408@precipice.shockwave.com
+DATE: 1996-02-29T20:38:13+00:00  FROM: Paul Traina <pst@shockwave.com> <None>
+SUBJ: Re: IPFW (was: Re: -stable hangs at boot) 
+BODY:
+Obligatory comment:
+
+1597 space should *NEVER* be considered "more secure."
+
+The only difference between 1597 space and non-1597 space is that 1597 space
+is not guaranteed to be unique across the internet.
+
+I can still get my packets through to (and often received from) a 1597 based
+machine.
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 199602292050.OAA06496@brasil.moneng.mei.com
+DATE: 1996-02-29T20:50:07+00:00  FROM: Joe Greco <jgreco@brasil.moneng.mei.com> <None>
+SUBJ: Re: IPFW (was: Re: -stable hangs at boot)
+BODY:
+
+Of course that is true.  However, it IS inherently more difficult for you to
+get a packet routed to a 1597 network that is local, here, because there
+aren't any routes to help you, and in my opinion that does count as being
+"more secure".  I am BY NO MEANS advocating the use of 1597 networks instead
+of firewalls and other traditional security tools.  Paranoia and politics
+simply suggests that a 1597 network is yet another tool that helps keep
+trouble away.
+
+... Joe
+
+-------------------------------------------------------------------------------
+Joe Greco - Systems Administrator			      jgreco@ns.sol.net
+Solaria Public Access UNIX - Milwaukee, WI			   414/546-7968
+
+
+
+--------------------------------------------------------------------------------
+MID: 199603011214.NAA11058@keltia.freenix.fr
+DATE: 1996-03-01T12:14:36+00:00  FROM: Ollivier Robert <roberto@keltia.freenix.fr> <None>
+SUBJ: Re: IPFW (was: Re: -stable hangs at boot)
+BODY:
+It seems that Poul-Henning Kamp said:
+
+It is RFC-1918 now. It supersedes both 1597 and 1620.
+-- 
+Ollivier ROBERT    -=- The daemon is FREE! -=-    roberto@keltia.frmug.fr.net
+   FreeBSD keltia.freenix.fr 2.2-CURRENT #1: Tue Feb 20 01:16:51 MET 1996
+
+
+
+--------------------------------------------------------------------------------
+MID: 199603180623.IAA03506@grumble.grondar.za
+DATE: 1996-03-18T06:23:29+00:00  FROM: Mark Murray <mark@grondar.za> <None>
+SUBJ: Firewall setup...
+BODY:
+Hi
+
+As I have a leased line to the net, andas my home net is frequently
+unsupervised, I am pretty paranoid about security. So, I have decided
+to add one more layer of protection, a firewall. I _love_ the FreeBSD
+firewall setup! It took me about an hour from having never setup such
+a thing before to having the rudiments working pretty well:
+
+
+It is however not that clear how to do the last bit. I would like
+to zap spoofing -
+
+
+If my firewall machine has 2 interfaces - tun0=196.7.18.65
+and ed0=196.7.18.129 with a netmask of 0xfffffff0, how do I prevent
+packets claiming to be from 196.7.18/24 from coming into tun0?
+The above 2 lines are necessary for me to communicate with the world.
+
+Are there any other "standard" anti spoofing rules that can be
+applied? I am basically running my firewall as a serious filter, rather
+than as a closed-to-the-world firewall.
+
+
+(I based most of this on a script by PST about 2 months ago(?), but
+that was before PHK's reorg of the sorting rules, and the sytax has
+changed quite a bit since then.)
+
+Thanks!
+
+M
+--
+Mark Murray
+46 Harvey Rd, Claremont, Cape Town 7700, South Africa
++27 21 61-3768 GMT+0200
+Finger mark@grondar.za for PGP key
+
+
+
+--------------------------------------------------------------------------------
+MID: 7209.827132613@critter.tfs.com
+DATE: 1996-03-18T07:03:33+00:00  FROM: Poul-Henning Kamp <phk@critter.tfs.com> <None>
+SUBJ: Re: Firewall setup... 
+BODY:
+    01355 deny all from 196.7.18/24 to any in via tun0
+					   ^^
+If it doesn't work, yell.
+
+--
+Poul-Henning Kamp           | phk@FreeBSD.ORG       FreeBSD Core-team.
+http://www.freebsd.org/~phk | phk@login.dknet.dk    Private mailbox.
+whois: [PHK]                | phk@ref.tfs.com       TRW Financial Systems, Inc.
+Future will arrive by its own means, progress not so.
+
+
+
+--------------------------------------------------------------------------------
+MID: 199603200638.IAA10967@grumble.grondar.za
+DATE: 1996-03-20T06:37:59+00:00  FROM: Mark Murray <mark@grondar.za> <None>
+SUBJ: Firewalls and all...
+BODY:
+Hi
+
+I am having some problems with a firewall I built the other night. I got
+it right at that time, but right now I can't figure something out (I am
+running -CURRENT)
+
+My firewall has an ethernet card (ed0), iijppp (tun0) and a simple set of
+filters mainly designed to stop spoofing and other silly things. Iijpp
+has to play games with the modem to start the connection. Althouh I have
+a leased line, I have cheap modems that need to be tickled to establish
+the connection)
+
+I have to boot the thing with a lot of manual intervention. If the
+firewall startup calls are kluged into /etc/netstart, then at boot
+time mountd and sendmail freeze up, and a ^c is needed to unwedge them.
+Also logging in is broken; I get a login: prompt but no passwd prompt.
+This has something to do with the fact that ypserv/ypbind do not get
+loaded :-), but I do not understad why root cannot get in.
+
+My current boot procedure is to boot the machine with no firewall
+rules, and load those after it has started. Then I load by hand
+all the daemons that have failed: mountd, ypserv, ypbind, rpc.yppasswdd
+and one or two others.
+
+Life is slightly complicated by the fact that this machine also runs
+my nameserver.
+
+Question
+
+--------------------------------------------------------------------------------
+MID: 11533.827309290@critter.tfs.com
+DATE: 1996-03-20T08:08:10+00:00  FROM: Poul-Henning Kamp <phk@critter.tfs.com> <None>
+SUBJ: Re: Firewalls and all... 
+BODY:
+
+Add you rules at the top of /etc/netstart.
+
+Changes to sysconfig is in the pipe-line.
+
+--
+Poul-Henning Kamp           | phk@FreeBSD.ORG       FreeBSD Core-team.
+http://www.freebsd.org/~phk | phk@login.dknet.dk    Private mailbox.
+whois: [PHK]                | phk@ref.tfs.com       TRW Financial Systems, Inc.
+Future will arrive by its own means, progress not so.
+
+
+
+--------------------------------------------------------------------------------
+MID: 199603251332.VAA00749@FreeBSD.csie.NCTU.edu.tw
+DATE: 1996-03-25T13:32:13+00:00  FROM: Jian-Da Li <jdli@FreeBSD.csie.NCTU.edu.tw> <None>
+SUBJ: 2.2-960323-SNAP: ipfw problem
+BODY:
+
+	Hi :
+
+	I just upgraded to 960323 from 960212, and my network was dead.
+	After try&error for 2 hours, I found that if I add IPFW-related
+	functions into kernel, my network will die even localhost.
+	The problem is, my ipfw list is empty, it should not block any
+	host.
+	It's ok since I don't really use ipfw, but please check it.  :)
+	Thanks.
+
+-- 
+
+                                             �� �� �F (Jian-Da Li) ��j��u
+                                             E-Mail : jdli@csie.nctu.edu.tw
+
+
+
+--------------------------------------------------------------------------------
+MID: 26913.827764276@time.cdrom.com
+DATE: 1996-03-25T14:31:16+00:00  FROM: "Jordan K. Hubbard" <jkh@time.cdrom.com> <None>
+SUBJ: Re: 2.2-960323-SNAP: ipfw problem 
+BODY:
+This is entirely correct, and has been discussed here for weeks.
+The idea now is that ipfw blocks all by default and you have to add
+rules to make it accept things.  I'm sure there's a single wildcard
+rule you can add to get your network working again, or simply turn
+ipfw off if you're not using it!
+
+					Jordan
+
+
+
+
+
+--------------------------------------------------------------------------------
+MID: Pine.SOL.3.91.960325095339.14170A-100000@s1
+DATE: 1996-03-25T15:00:13+00:00  FROM: Eric Chet <ec0@s1.GANet.NET> <None>
+SUBJ: Re: 2.2-960323-SNAP: ipfw problem
+BODY:
+On Mon, 25 Mar 1996, Jian-Da Li wrote:
+
+	
+	Hello
+	The latest implementation of ipfw is to block everything if your
+list is empty.  It makes sense, you put a firewall in place but you did
+not tell it which ip's to not firewall.
+
+Eric J. Chet (ejc@nasvr1.cb.att.com || ec0@ganet.net)
+Lucent Technologies, Bell Labs Innovations
+Columbus, Ohio 43213  RM 1E222
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 199603271805.UAA08738@cantina.clinet.fi
+DATE: 1996-03-27T18:05:24+00:00  FROM: Heikki Suonsivu <hsu@clinet.fi> <None>
+SUBJ: Re: 2.2-960323-SNAP: ipfw problem
+BODY:
+
+From: Eric Chet <ec0@s1.GANet.NET>
+	   The latest implementation of ipfw is to block everything if your
+   list is empty.  It makes sense, you put a firewall in place but you did
+   not tell it which ip's to not firewall.
+
+This should have been a new config option or the name should have been
+changed.  I have had ipfw in kernel on all my routers so that when I need
+to, I could block out links which were flooding or otherwise broken (named
+loops, for example).  This has been a very useful feature in the past.  I
+was very lucky to try this out on a machine which was sitting in our
+computer room, not one of our remote machines.
+
+This is similar, though much more dangerous change compared to removing
+GATEWAY option completely.  Since GATEWAY change I have at least 4 times
+managed to generate a 15 minute routing break when upgrading a remote
+router by copying a new kernel over, wondering what went wrong, realizing
+it, logging into the router and adding sysctl to netstart (some of these
+things are really old, as I try to avoid upgrading things which work).
+Now, GATEWAY is a case where I *can* still log in the machine.  Guess what
+happens when someone who does not know about ipfw "improv
+
+--------------------------------------------------------------------------------
+MID: 1406.827951621@time.cdrom.com
+DATE: 1996-03-27T18:33:41+00:00  FROM: "Jordan K. Hubbard" <jkh@time.cdrom.com> <None>
+SUBJ: Re: 2.2-960323-SNAP: ipfw problem 
+BODY:
+
+You should subscribe to the -current mailing list, where this was all
+discussed.  If you don't subscribe or don't read the messages that
+come across here frequently when a change like this is planned, then
+frankly you should either NOT be running -current or you should fully
+expect this kind of problem to become a regular part of your life.
+You're running the development sources, what do you expect?  We make
+-stable available for those who don't like to be on the fast-track, so
+one can hardly say that you don't hae a choice.
+
+
+This is silly.  We have hooks in sysconfig for this and have had since
+*before* the GATEWAY option was removed.  Again, there was plenty of
+warning and if you make it a practice of leaping off without looking
+first then you can hardly blame us for your broken nose.  "Doctor,
+Doctor, it hurts when I shoot myself in the foot!"  :-)
+
+
+Actually, the only one falling in appears to be one Finnish guy who
+doesn't read very carefully.. :-)
+
+P.S. When are you going to remove all those redundant lines from your
+kernel configuration, like David keeps asking you to?  I'd be far more
+sympathetic to your plight if you didn't have a long history of
+sticking your hands in t
+
+--------------------------------------------------------------------------------
+MID: 199603281518.PAA26261@tees
+DATE: 1996-03-28T15:18:13+00:00  FROM: Paul Richards <p.richards@elsevier.co.uk> <None>
+SUBJ: Re: 2.2-960323-SNAP: ipfw problem
+BODY:
+In reply to Heikki Suonsivu who said
+
+It was well discussed and these problems were raised but at the end of the
+day the new behaviour is more correct. We *DO* need to make sure it's
+extremely well documented though.
+
+To be honest, if you reboot a remote router with a new kernel then you
+deserve what you get.
+
+-- 
+  Paul Richards. Originative Solutions Ltd.  (Netcraft Ltd. contractor)
+  Elsevier Science TIS online journal project.
+  Email: p.richards@elsevier.co.uk
+  Phone: 0370 462071 (Mobile), +44 (0)1865 843155
+
+
+
+--------------------------------------------------------------------------------
+MID: 9604010926.ZM20722@pwood1.pinewood.nl
+DATE: 1996-04-01T08:26:18+00:00  FROM: "Frank ten Wolde" <franky@pinewood.nl> <None>
+SUBJ: src/sbin/ipfw/ipfw.c broken (2.2-960323-SNAPSHOT, fix supplied)
+BODY:
+Hello,
+
+I think I have found some small bugs in /usr/src/sbin/ipfw/ipfw.c
+(2.2-960323-SNAPSHOT):
+
+	1. Adding a port-range causes a SEGV:
+
+		ipfw add accept all from any 1024-2048 to any
+
+	   Problem is at line 366 where (*av == NULL).
+
+	2. Listing a DST port-range when a SRC port range is in
+	   effect causes the DST port range to be listed with a
+	   ',' instead of a '-'.  Problem is at line 178.
+
+	3. The usage is misleading:
+
+	   ...
+	   action: {allow|deny|reject|count}[,log]
+	   ...
+
+	   Should read:
+
+	   action: {allow|deny|reject|count} [log]
+
+	   (note the space and the removal of the ',')
+
+I'm not sure who maintains this code so I post it here expecting it
+to be picked up by the appropriate person(s).
+
+
+--- SNIP SNIP SNIP SNIP SNIP SNIP SNIP SNIP SNIP SNIP SNIP SNIP ---
+*** /usr/src/sbin/ipfw/ipfw.c.orig	Sat Feb 24 14:39:46 1996
+--- /usr/src/sbin/ipfw/ipfw.c	Mon Apr  1 10:24:22 1996
+***************
+*** 175,181 ****
+  	comma = " ";
+  	for (i=0;i<chain->fw_ndp;i++) {
+  		printf("%s%d",comma,chain->fw_pts[chain->fw_nsp+i]);
+! 		if (i==chain->fw_nsp && (chain->fw_flg & IP_FW_F_DRNG))
+  			comma = "-";
+  		else
+  		    comma = ",";
+--- 175,181 ----
+  	comma = " ";
+  	for (i=0;i<
+
+--------------------------------------------------------------------------------
+MID: 9604011020.ZM20909@pwood1.pinewood.nl
+DATE: 1996-04-01T09:20:05+00:00  FROM: "Frank ten Wolde" <franky@pinewood.nl> <None>
+SUBJ: [Q] Semantics of 'established' in ipfw tcp
+BODY:
+Hello,
+
+I would like to know other people's reactions to the current semantics of
+the 'established' keyword for TCP connections in the 2.2-960323-SNAPSHOT
+implementation of the ipfw in the kernel. 
+
+Currently 'established' means (according to the manpage *and* some
+experimentation): 
+
+    established      Matches packets that do not have the SYN bit set.
+                     TCP packets only.
+
+Should this not be:
+
+    established      Matches packets that do have the ACK bit set.
+                     TCP packets only.
+
+(To my knowledge this is the way conventional packet filters interpret
+ 'established'.)
+
+Or put it in another way...  Consider the TCP three way handshake:
+
+	#  packet direction     TCP flags       matched by rule
+	----------------------------------------------------------------
+	1. client --> server:   SYN             'setup'
+	2. server --> client:   SYN+ACK	        NO RULE
+	3. client --> server:   ACK             'established'
+	   other packets:       ACK             'established'
+	
+There is no way to specifically specify the second packet (with SYN *and*
+ACK on).  For example, if I wanted to allow outgoing telnet sessions I
+need a rule:
+
+	accept tcp from <internal
+
+--------------------------------------------------------------------------------
+MID: 15278.828354438@critter.tfs.com
+DATE: 1996-04-01T10:27:18+00:00  FROM: Poul-Henning Kamp <phk@critter.tfs.com> <None>
+SUBJ: Re: [Q] Semantics of 'established' in ipfw tcp 
+BODY:
+
+
+Yes indeed it is available.  You can specify any combination of flags you
+want.
+
+
+I got side tracked by some real-world problems but I'm on my way back to
+the IPFW stuff.
+
+Please send any suggestions you have.
+
+--
+Poul-Henning Kamp           | phk@FreeBSD.ORG       FreeBSD Core-team.
+http://www.freebsd.org/~phk | phk@login.dknet.dk    Private mailbox.
+whois: [PHK]                | phk@ref.tfs.com       TRW Financial Systems, Inc.
+Future will arrive by its own means, progress not so.
+
+
+
+--------------------------------------------------------------------------------
+MID: 15321.828354780@critter.tfs.com
+DATE: 1996-04-01T10:33:00+00:00  FROM: Poul-Henning Kamp <phk@critter.tfs.com> <None>
+SUBJ: Re: src/sbin/ipfw/ipfw.c broken (2.2-960323-SNAPSHOT, fix supplied) 
+BODY:
+
+Presently I do, please keep them patches comming!
+
+Poul-Henning
+
+--
+Poul-Henning Kamp           | phk@FreeBSD.ORG       FreeBSD Core-team.
+http://www.freebsd.org/~phk | phk@login.dknet.dk    Private mailbox.
+whois: [PHK]                | phk@ref.tfs.com       TRW Financial Systems, Inc.
+Future will arrive by its own means, progress not so.
+
+
+
+--------------------------------------------------------------------------------
+MID: 15820.828369683@critter.tfs.com
+DATE: 1996-04-01T14:41:23+00:00  FROM: Poul-Henning Kamp <phk@critter.tfs.com> <None>
+SUBJ: Re: [Q] Semantics of 'established' in ipfw tcp 
+BODY:
+
+Now I have had more time to read your email, I have more comments:
+
+First of all, "setup" and "established" are just shortform for "tcpflags foo"
+for various values of "foo", so you can have it anyway you want, even if
+you disagree with the semantics of those two keywords.
+
+
+
+I added the "establised" keyword as I remembered it to be used
+from memory, it is very possible I got it wrong.
+
+
+My own prefered way is
+	allow tcp something or other setup
+	allow tcp somebody else setup
+	deny  tcp all setup
+	allow tcp all
+
+In this context the "established" keyword isn't needed.
+
+
+Yes it is, you can use the "tcpflags foo" for that.
+
+What ???  Could you explain this to me ?
+
+--
+Poul-Henning Kamp           | phk@FreeBSD.ORG       FreeBSD Core-team.
+http://www.freebsd.org/~phk | phk@login.dknet.dk    Private mailbox.
+whois: [PHK]                | phk@ref.tfs.com       TRW Financial Systems, Inc.
+Future will arrive by its own means, progress not so.
+
+
+
+--------------------------------------------------------------------------------
+MID: 199604022129.WAA09553@trane.uninett.no
+DATE: 1996-04-02T21:29:57+00:00  FROM: sthaug@nethelp.no <None>
+SUBJ: Re: [Q] Semantics of 'established' in ipfw tcp
+BODY:
+
+I believe it was Cisco that started using the 'established' keyword, and
+at least according to Cisco documentation, for instance
+
+http://cio.cisco.com/univercd/data/doc/software/11_0/rpcr/rip.htm#REF24774
+
+it should be ACK *or* RST:
+
+"A match occurs if the TCP datagram has the ACK or RST bits set. The
+nonmatching case is that of the initial TCP datagram to form a connection."
+
+Steinar Haug, Nethelp consulting, sthaug@nethelp.no
+
+
+
+--------------------------------------------------------------------------------
+MID: 199604040814.AAA15211@multivac.orthanc.com
+DATE: 1996-04-04T08:14:57+00:00  FROM: Lyndon Nerenberg VE7TCP <lyndon@orthanc.com> <None>
+SUBJ: Nice Firewall :-)
+BODY:
+I just finished nailing up a recent (3 Apr from sup3) current,
+rebuilt (twice) from source, rebooted, and got the following ...
+
+Any network access returns permission denied (ERRNO == 13). Bizarre.
+Even remade all of /dev. It's late and I'm not going to chase this
+any further tonight, but not having seen (or recalling) anything from
+the -current list, maybe this will give people something to chew on
+for a bit. What follows is a ktrace from ping, followed by the
+kernel config I was running. (A 2.1-RELEASE kernel works fine on
+the same machine.)
+
+
+  3416 ktrace   RET   ktrace 0
+  3416 ktrace   CALL  mmap(0,0x1000,0x3,0x1002,0xffffffff,0,0,0)
+  3416 ktrace   RET   mmap 134328320/0x801b000
+  3416 ktrace   CALL  break(0x5000)
+  3416 ktrace   RET   break 0
+  3416 ktrace   CALL  break(0x6000)
+  3416 ktrace   RET   break 0
+  3416 ktrace   CALL  execve(0xefbfd9a8,0xefbfde04,0xefbfde10)
+  3416 ktrace   NAMI  "/sbin/ping"
+  3416 ping     RET   execve 0
+  3416 ping     CALL  ioctl(0,0x402c7413 ,0xefbfddb8)
+  3416 ping     RET   ioctl 0
+  3416 ping     CALL  ioctl(0,0x802c7414 ,0xefbfddb8)
+  3416 ping     RET   ioctl 0
+  3416 ping     CALL  mmap(0,0x1000,0x3,0x1002,0xffffffff,0,0,0)
+  3416 ping
+
+--------------------------------------------------------------------------------
+MID: 1879.828608478@critter.tfs.com
+DATE: 1996-04-04T09:01:18+00:00  FROM: Poul-Henning Kamp <phk@critter.tfs.com> <None>
+SUBJ: Re: Nice Firewall :-) 
+BODY:
+
+If you had paid attention to the mailinglists, you would have known
+that ipfw was changed to a default policy of deny some time back.
+
+Look at the manual and the /etc/rc.firewall I committed yesterday for 
+more info.
+
+--
+Poul-Henning Kamp           | phk@FreeBSD.ORG       FreeBSD Core-team.
+http://www.freebsd.org/~phk | phk@login.dknet.dk    Private mailbox.
+whois: [PHK]                | phk@ref.tfs.com       TRW Financial Systems, Inc.
+Future will arrive by its own means, progress not so.
+
+
+
+--------------------------------------------------------------------------------
+MID: 199604042026.MAA24533@multivac.orthanc.com
+DATE: 1996-04-04T20:26:07+00:00  FROM: Lyndon Nerenberg VE7TCP <lyndon@orthanc.com> <None>
+SUBJ: Re: Nice Firewall :-) 
+BODY:
+
+    Poul-Henning> If you had paid attention to the mailinglists, you
+    Poul-Henning> would have known that ipfw was changed to a default
+    Poul-Henning> policy of deny some time back.
+
+Yes yes. The surprise was the -1 return from sendto(). This was not
+consistent with the old behaviour of just swallowing the packet. I
+don't remember this being mentioned on the list.
+
+    Poul-Henning> Look at the manual and the /etc/rc.firewall I
+    Poul-Henning> committed yesterday for more info.
+
+The rc.firewall file is a very good idea. I'll assume the relevent
+manpages will be updated at some point to document the new error
+return. (The sup's still running and hasn't gotten that far yet.)
+
+--lyndon
+
+
+
+--------------------------------------------------------------------------------
+MID: 447.828649797@critter.tfs.com
+DATE: 1996-04-04T20:29:57+00:00  FROM: Poul-Henning Kamp <phk@critter.tfs.com> <None>
+SUBJ: Re: Nice Firewall :-) 
+BODY:
+
+I have not definitively decided on that point.  I think ENOACCES is
+a good idea but it may break too many things.
+
+--
+Poul-Henning Kamp           | phk@FreeBSD.ORG       FreeBSD Core-team.
+http://www.freebsd.org/~phk | phk@login.dknet.dk    Private mailbox.
+whois: [PHK]                | phk@ref.tfs.com       TRW Financial Systems, Inc.
+Future will arrive by its own means, progress not so.
+
+
+
+--------------------------------------------------------------------------------
+MID: Pine.BSF.3.92.960408170210.210A-100000@knobel.gun.de
+DATE: 1996-04-08T15:55:24+00:00  FROM: Andreas Klemm <andreas@knobel.gun.de> <None>
+SUBJ: rc.firewall has some syntax errors and sample config hangs machine
+BODY:
+-----BEGIN PGP SIGNED MESSAGE-----
+
+Hi !
+
+I tried to use the example firewall configuration from
+/etc/rc.firewall and had some serious problems.
+
+- - syntax errors in /etc/rc.firewall
+- - machine hangs during access to internet and simply reboots
+
+I compiled my kernel with both options:
+
+	option IPFIREWALL
+	option IPFIREWALL_VERBOSE
+
+My Ethernet / PPP configuration (on demand dialup ppp):
+
+ed0: flags=8843<UP,BROADCAST,RUNNING,SIMPLEX,MULTICAST> mtu 1500
+	inet 149.237.250.1 netmask 0xffffff00 broadcast 149.237.250.255
+	ether 00:00:c0:25:fd:2d
+tun0: flags=8051<UP,POINTOPOINT,RUNNING,MULTICAST> mtu 1500
+	inet 192.109.159.141 --> 192.109.159.13 netmask 0xffffff00
+lo0: flags=8009<UP,LOOPBACK,MULTICAST> mtu 16384
+	inet 127.0.0.1 netmask 0xff000000
+
+At the very beginning of my experiments I used the 1st
+example from /etc/rc.firewall :
+
+%-------------------------------------------------------------------------
+# problems or you just want to disallow some particular kinds of traffic
+# they you will want to change the default policy to open.
+
+# /sbin/ipfw add 65000 pass all from any to any
+
+############
+# Only in rare cases do you want to change this rule
+/sbin/ipfw add 1000 pass all from 12
+
+--------------------------------------------------------------------------------
+MID: Pine.BSF.3.92.960408215634.571B-100000@knobel.gun.de
+DATE: 1996-04-08T19:58:47+00:00  FROM: Andreas Klemm <andreas@knobel.gun.de> <None>
+SUBJ: Re: rc.firewall has some syntax errors and sample config hangs machine
+BODY:
+-----BEGIN PGP SIGNED MESSAGE-----
+
+On Mon, 8 Apr 1996, Andreas Klemm wrote:
+
+Some additions to my kgdb trace, perhaps you see more here...
+
+(kgdb) down
+#14 0xf018309d in swi_net_next ()
+(kgdb) down
+#13 0xf01456f0 in ipintr () at ../../netinet/ip_input.c:453
+453                     ip_input(m);
+(kgdb) list
+448                     s = splimp();
+449                     IF_DEQUEUE(&ipintrq, m);
+450                     splx(s);
+451                     if (m == 0)
+452                             return;
+453                     ip_input(m);
+454             }
+455     }
+456
+457     NETISR_SET(NETISR_IP, ipintr);
+(kgdb) down
+#12 0xf0145684 in ip_input (m=0xf1762300) at ../../netinet/ip_input.c:435
+435             m_freem(m);
+(kgdb) list
+430              */
+431             ipstat.ips_delivered++;
+432             (*inetsw[ip_protox[ip->ip_p]].pr_input)(m, hlen);
+433             return;
+434     bad:
+435             m_freem(m);
+436     }
+437
+438     /*
+439      * IP software interrupt routine - to go away sometime soon
+(kgdb) down
+#11 0xf0125ab6 in m_freem (m=0xf1762300) at ../../kern/uipc_mbuf.c:245
+245                     MFREE(m, n);
+(kgdb) list
+240             register struct mbuf *n;
+241
+2
+
+--------------------------------------------------------------------------------
+MID: Pine.BSF.3.92.960408214953.571A-100000@knobel.gun.de
+DATE: 1996-04-08T19:52:32+00:00  FROM: Andreas Klemm <andreas@knobel.gun.de> <None>
+SUBJ: Re: rc.firewall has some syntax errors and sample config hangs machine
+BODY:
+-----BEGIN PGP SIGNED MESSAGE-----
+
+On Mon, 8 Apr 1996, Andreas Klemm wrote:
+
+Here again, this time with kgdb trace...
+
+"panic: free: multiple frees"
+
+This was my firewall config;
+
+#! /bin/sh
+
+/sbin/ipfw flush
+
+# no restriction
+# /sbin/ipfw add 65000 pass all from any to any
+
+# Only in rare cases do you want to change this rule
+/sbin/ipfw add 1000 pass all from 127.0.0.1 to 127.0.0.1
+
+if true ; then
+    # set these to your outside interface network and netmask and ip
+    oif="tun0"
+    onet="192.109.159.0"
+    omask="255.255.255.0"
+    oip="192.109.159.141"
+
+    # set these to your inside interface network and netmask and ip
+    iif="ed0"
+    inet="149.237.250.0"
+    imask="255.255.255.0"
+    iip="149.237.250.1"
+
+    # Stop spoofing
+    /sbin/ipfw add deny all from ${inet}:${imask} to any via ${oif}
+    /sbin/ipfw add deny all from ${onet}:${omask} to any via ${iif}
+
+    # Stop RFC1918 nets on the outside interface
+    /sbin/ipfw add deny all from 192.168.0.0:255.255.0.0 to any via ${oif}
+    /sbin/ipfw add deny all from 172.16.0.0:255.240.0.0 to any via ${oif}
+    /sbin/ipfw add deny all from 10.0.0.0:255.0.0.0 to any via ${oif}
+
+    # Allow TCP through if setup succeeded
+    /sbi
+
+--------------------------------------------------------------------------------
+MID: 96Apr8.153809pdt.177476@crevenia.parc.xerox.com
+DATE: 1996-04-08T22:38:05+00:00  FROM: Bill Fenner <fenner@parc.xerox.com> <None>
+SUBJ: Re: rc.firewall has some syntax errors and sample config hangs machine 
+BODY:
+The data path appears to me to be
+
+	ip_input()
+
+	->	ip_fw_chk()
+		if the packet is bad, free it, either by calling icmp_error
+		 or explicitly, and return 0
+	if ip_fw_chk returned 0, goto bad
+
+bad:
+	free packet
+
+e.g. ipfw seems to multiply free every bad packet on input.
+
+I think the fix is change the "goto bad" to "return" in ip_input().
+(and to test stuff with a DIAGNOSTIC kernel before committing it?)
+
+  Bill
+
+
+
+--------------------------------------------------------------------------------
+MID: 14052.829301116@critter.tfs.com
+DATE: 1996-04-12T09:25:16+00:00  FROM: Poul-Henning Kamp <phk@critter.tfs.com> <None>
+SUBJ: Re: rc.firewall has some syntax errors and sample config hangs machine 
+BODY:
+
+I have just committed the fix to ip_input.c, thanks for the help, and
+sorry for the delay.
+
+--
+Poul-Henning Kamp           | phk@FreeBSD.ORG       FreeBSD Core-team.
+http://www.freebsd.org/~phk | phk@login.dknet.dk    Private mailbox.
+whois: [PHK]                | phk@ref.tfs.com       TRW Financial Systems, Inc.
+Future will arrive by its own means, progress not so.
+
+
+
+--------------------------------------------------------------------------------
+MID: Pine.BSF.3.92.960412163647.1905A-100000@knobel.gun.de
+DATE: 1996-04-12T14:37:20+00:00  FROM: Andreas Klemm <andreas@knobel.gun.de> <None>
+SUBJ: Re: rc.firewall has some syntax errors and sample config hangs machine 
+BODY:
+-----BEGIN PGP SIGNED MESSAGE-----
+
+On Fri, 12 Apr 1996, Poul-Henning Kamp wrote:
+
+
+Thanks Paul, I'll test it this weekend !
+
+	Andreas ///
+
+- --
+andreas@knobel.gun.de         /\/\___      Wiechers & Partner Datentechnik GmbH
+   Andreas Klemm          ___/\/\/         $$  Support Unix - aklemm@wup.de  $$
+pgp p-key  http://www-swiss.ai.mit.edu/~bal/pks-toplev.html  >>> powered by <<<
+ftp://sunsite.unc.edu/pub/Linux/system/Printing/aps-491.tgz  >>>    FreeBSD <<<
+
+-----BEGIN PGP SIGNATURE-----
+Version: 2.6.2
+
+iQCVAwUBMW5qofMLpmkD/U+FAQF9sQP+K/ZlTrExqMCps9ZAV1/rKghK+usiIVu8
+PWP/QnpPNuO6vrAMPS9nOjYUR060Jx+n8VolM+Oi+W//d9K/M6Rrc6lHmKt37Ouy
+lq9LrK0W8NgT4yJl42S9d6FXzfjMqjUlbcnQN2MQxA7+AwQ/9Vz9qfK9CFu8ec22
+bWdIXQcVE/M=
+=66Hs
+-----END PGP SIGNATURE-----
+
+
+
+
+--------------------------------------------------------------------------------
+MID: Pine.BSF.3.92.960413153705.672A-100000@knobel.gun.de
+DATE: 1996-04-13T14:02:03+00:00  FROM: Andreas Klemm <andreas@knobel.GUN.de> <None>
+SUBJ: Re: rc.firewall has some syntax errors and sample config hangs machine 
+BODY:
+-----BEGIN PGP SIGNED MESSAGE-----
+
+On Fri, 12 Apr 1996, Poul-Henning Kamp wrote:
+
+
+Everything is working fine now. No panics anymore ! Thanks !
+
+It would be fine, if the firewall configurations in /etc/rc.firewall
+could be enhanced. For example one could add more examples, so
+that people could pick up better, what they really need ...
+
+I suggest adding the following which is a typical end user configuration.
+Dialup to internet via Modem and PPP. Allow everything outgoing, deny
+and log everythig incoming... Perhaps someone could check, if my ideas
+of rules are ok... thanks...
+
+Here in short my ipfw policy
+
+FireWall chain entries: 256 0
+01000 allow all from 127.0.0.1 to 127.0.0.1
+01100 deny log tcp from any to any via tun0 setup
+65000 allow all from any to any
+65535 deny all from any to any
+
+Here my suggested diffs
+
+Index: rc.firewall
+===================================================================
+RCS file: /cvs/src/etc/rc.firewall,v
+retrieving revision 1.2
+diff -u -r1.2 rc.firewall
+- --- rc.firewall	1996/04/12 09:16:42	1.2
++++ rc.firewall	1996/04/13 13:58:46
+@@ -30,6 +30,11 @@
+ #
+
+ ############
++# flush all rules, so you can modify and restart rc.firewall if you like
++
++/sbin/i
+
+--------------------------------------------------------------------------------
+MID: 18312.829409918@critter.tfs.com
+DATE: 1996-04-13T15:38:38+00:00  FROM: Poul-Henning Kamp <phk@critter.tfs.com> <None>
+SUBJ: Re: rc.firewall has some syntax errors and sample config hangs machine 
+BODY:
+
+Well, you see, I kind of expected somebody like you to say something
+along those lines.  Now, Andreas, you don't have anything really 
+important scheduled the next couple of weeks ?  No ?  Fine!.
+You see I'm flat out of time right now...
+
+I'm looking forward to your patches :-)
+
+Maybe rc.firewall needs to be rethought a bit, maybe one file
+per example or something, I'm not too happy with the "if false" 
+thing...
+
+
+--
+Poul-Henning Kamp           | phk@FreeBSD.ORG       FreeBSD Core-team.
+http://www.freebsd.org/~phk | phk@login.dknet.dk    Private mailbox.
+whois: [PHK]                | phk@ref.tfs.com       TRW Financial Systems, Inc.
+Future will arrive by its own means, progress not so.
+
+
+
+--------------------------------------------------------------------------------
+MID: Pine.BSF.3.92.960413181733.672B-100000@knobel.gun.de
+DATE: 1996-04-13T16:18:44+00:00  FROM: Andreas Klemm <andreas@knobel.gun.de> <None>
+SUBJ: Re: rc.firewall has some syntax errors and sample config hangs machine 
+BODY:
+-----BEGIN PGP SIGNED MESSAGE-----
+
+On Sat, 13 Apr 1996, Andreas Klemm wrote:
+
+
+Hmm, forget it, this one seems to be better ;-)
+
+
+Index: rc.firewall
+===================================================================
+RCS file: /cvs/src/etc/rc.firewall,v
+retrieving revision 1.2
+diff -u -r1.2 rc.firewall
+- --- rc.firewall	1996/04/12 09:16:42	1.2
++++ rc.firewall	1996/04/13 16:16:31
+@@ -30,6 +30,11 @@
+ #
+
+ ############
++# flush all rules, so you can modify and restart rc.firewall if you like
++
++/sbin/ipfw flush
++
++############
+ # If you just configured ipfw in the kernel as a tool to solve network
+ # problems or you just want to disallow some particular kinds of traffic
+ # they you will want to change the default policy to open.
+@@ -46,6 +51,47 @@
+ #
+ # To enable simply change "false" to "true" in the if line and set the
+ # variables to your network parameters
++
++if false ; then
++
++    # Configuration Suggestion for a typical FreeBSD "leafe-site"
++    # dials up to internet via Modem using PPP (ppp -auto ondemand)
++    # every outgoing traffic is allowed
++    # every incoming tcp traffic is denied and logged
++
++    # set these to your outside interface network and netmask and ip
++    o
+
+--------------------------------------------------------------------------------
+MID: Pine.BSF.3.92.960413212653.6017B-100000@knobel.gun.de
+DATE: 1996-04-13T19:45:22+00:00  FROM: Andreas Klemm <andreas@knobel.gun.de> <None>
+SUBJ: Re: rc.firewall has some syntax errors and sample config hangs machine 
+BODY:
+-----BEGIN PGP SIGNED MESSAGE-----
+
+On Sat, 13 Apr 1996, Poul-Henning Kamp wrote:
+
+
+ok, as usual ;-)) So you seem to have more important things
+on your wishlist ;-))
+
+
+Sorry, I can't promise much in the moment. Was a bit clumsy from
+me to expect, that you can simply present a well tested clever
+solution ... This firewall stuff is really not trivial. The biggest
+problem is, to have the hardware and time to _test_ it.
+
+
+Don't say that ... I like the file really much. Because it's
+well documented and shows, how one could configure a firewall.
+
+My only wish was a clever entry for the many people like me, that
+are connected to the internet via dialup modem && want to have
+a safe machine. When I was fiddeling around with this I saw, that
+it's really difficult, to forbid things without breaking the
+services you need yourself (ftp, telnet, http proxy, uucp over
+tcp ;-))
+
+Thanks again for making this example and I'll see if I can make
+a good working and good documented example for PPP...
+
+Nice weekend
+
+	Andreas ///
+
+- --
+andreas@knobel.gun.de         /\/\___      Wiechers & Partner Datentechnik GmbH
+   Andreas Klemm          ___/\/\/         $$  Support Unix - aklemm@wup.de  $$
+pgp p-key  h
+
+--------------------------------------------------------------------------------
+MID: Pine.SV4.3.93.960613172214.28548A-100000@parkplace.cet.co.jp
+DATE: 1996-06-13T08:25:34+00:00  FROM: Michael Hancock <michaelh@cet.co.jp> <None>
+SUBJ: opt_ipfw.h
+BODY:
+make obj depend all
+
+fails on building the ip firewall stuff.
+
+ip_fw.c needs opt_ipfw.h
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 21000.834655114@palmer.demon.co.uk
+DATE: 1996-06-13T08:38:34+00:00  FROM: "Gary Palmer" <gpalmer@FreeBSD.ORG> <None>
+SUBJ: Re: opt_ipfw.h 
+BODY:
+Michael Hancock wrote in message ID
+<Pine.SV4.3.93.960613172214.28548A-100000@parkplace.cet.co.jp>:
+
+Did you re-run config? It was added to /sys/conf/options at the same
+time the #include was added to /sys/netinet/ip_fw.c (and
+/sys/netinet/ip_input.c). You should run `config -n CONFIGNAME' and
+see if that generates an opt_ipfw.h file for you... Certainly it
+worked here.
+
+Gary
+--
+Gary Palmer                                          FreeBSD Core Team Member
+FreeBSD: Turning PC's into workstations. See http://www.FreeBSD.ORG/ for info
+
+
+
+--------------------------------------------------------------------------------
+MID: 199606130856.KAA08335@keltia.freenix.fr
+DATE: 1996-06-13T08:56:57+00:00  FROM: Ollivier Robert <roberto@keltia.freenix.fr> <None>
+SUBJ: Re: opt_ipfw.h
+BODY:
+It seems that Michael Hancock said:
+ 
+Re-run config (and read cvs-all mailing  list :-)) and make. The opt_ipfw.h
+should be created by config(8) now.
+
+gpalmer     96/06/12 12:34:35
+
+  Modified:    sys/conf  options
+               sys/netinet  ip_fw.c ip_input.c
+  Log:
+  Convert ipfw to use opt_ipfw.h
+  
+  Revision  Changes    Path
+  1.14      +4 -2      src/sys/conf/options
+  1.38      +4 -1      src/sys/netinet/ip_fw.c
+  1.44      +3 -1      src/sys/netinet/ip_input.c
+
+-- 
+Ollivier ROBERT    -=- The daemon is FREE! -=-    roberto@keltia.freenix.fr
+FreeBSD keltia.freenix.fr 2.2-CURRENT #10: Tue Jun 11 13:36:57 MET DST 1996
+
+
+
+--------------------------------------------------------------------------------
+MID: Pine.SV4.3.93.960613182851.28831A-100000@parkplace.cet.co.jp
+DATE: 1996-06-13T09:30:49+00:00  FROM: Michael Hancock <michaelh@cet.co.jp> <None>
+SUBJ: Re: opt_ipfw.h 
+BODY:
+On Thu, 13 Jun 1996, Gary Palmer wrote:
+
+
+Oops, I missed it in the cvs mailing.
+
+-mh
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 199606130950.LAA15818@keltia.freenix.fr
+DATE: 1996-06-13T09:50:49+00:00  FROM: Ollivier Robert <roberto@keltia.freenix.fr> <None>
+SUBJ: #include opt_ipfw.h problem for lkm
+BODY:
+sys/netinet/ip_fw.c includes  "opt_ipfw.h" when compiling the kernel (which
+is fine) but includes it also when compiling as lkm (which is bad). 
+
+That breaks "make depend" and "make world". 
+
+Index: sys/netinet/ip_fw.c
+===================================================================
+RCS file: /spare/FreeBSD-current/src/sys/netinet/ip_fw.c,v
+retrieving revision 1.38
+diff -u -2 -u -r1.38 ip_fw.c
+--- ip_fw.c	1996/06/12 19:34:33	1.38
++++ ip_fw.c	1996/06/13 09:43:12
+@@ -20,5 +20,7 @@
+  */
+ 
++#ifndef ACTUALLY_LKM_NOT_KERNEL
+ #include "opt_ipfw.h"
++#endif
+ 
+ #include <sys/param.h>
+
+-- 
+Ollivier ROBERT    -=- The daemon is FREE! -=-    roberto@keltia.freenix.fr
+FreeBSD keltia.freenix.fr 2.2-CURRENT #10: Tue Jun 11 13:36:57 MET DST 1996
+
+
+
+--------------------------------------------------------------------------------
+MID: 21410.834673943@palmer.demon.co.uk
+DATE: 1996-06-13T13:52:23+00:00  FROM: "Gary Palmer" <gpalmer@FreeBSD.ORG> <None>
+SUBJ: Re: #include opt_ipfw.h problem for lkm 
+BODY:
+Ollivier Robert wrote in message ID
+<199606130950.LAA15818@keltia.freenix.fr>:
+
+Phoey. You're right.
+
+On this subject, does anyone object to my REMOVAL of the option to
+have IPFW as an LKM? Having it as an LKM is (IMHO) stupid ... all a
+person breaking in needs to do to throw security WIDE open is
+modunload the module, and then the machine will fall back to being a
+simple router. Not my idea of a secure option.
+
+Will anyone seriously miss it if I remove the lkm?
+
+Gary
+--
+Gary Palmer                                          FreeBSD Core Team Member
+FreeBSD: Turning PC's into workstations. See http://www.FreeBSD.ORG/ for info
+
+
+
+--------------------------------------------------------------------------------
+MID: 9606131726.AA09438@halloran-eldar.lcs.mit.edu
+DATE: 1996-06-13T17:26:13+00:00  FROM: Garrett Wollman <wollman@lcs.mit.edu> <None>
+SUBJ: Re: #include opt_ipfw.h problem for lkm 
+BODY:
+<<On Thu, 13 Jun 1996 14:52:23 +0100, "Gary Palmer" <gpalmer@FreeBSD.org> said:
+
+
+Yes, yes, yes, please please please DO DO this!  I have been arguing
+for this for a while now!
+
+-GAWollman
+
+--
+Garrett A. Wollman   | Shashish is simple, it's discreet, it's brief. ... 
+wollman@lcs.mit.edu  | Shashish is the bonding of hearts in spite of distance.
+Opinions not those of| It is a bond more powerful than absence.  We like people
+MIT, LCS, ANA, or NSA| who like Shashish.  - Claude McKenzie + Florent Vollant
+
+
+
+--------------------------------------------------------------------------------
+MID: 31C0511A.279A7B71@fa.tdktca.com
+DATE: 1996-06-13T17:34:18+00:00  FROM: Alex Nash <alex@fa.tdktca.com> <None>
+SUBJ: Re: #include opt_ipfw.h problem for lkm 
+BODY:
+Gary Palmer wrote:
+
+
+I know at least one person who will...
+
+The following exchange resulted from PR 1192:
+
+   From: Garrett Wollman 
+   To: nash@mcs.com
+   Cc: FreeBSD-gnats-submit@freebsd.org, phk@freebsd.org
+   Subject: kern/1192: Kernel IPFW
+   Date: Sun, 12 May 1996 16:23:32 -0400
+
+    < said:
+        
+    >   Moved the majority of code out of the ipfw_load (module load)
+    >   routine and instead issue a call to ipfw_init which does the same
+    >   thing (sans the splnet() issued at the beginning of ipfw_load).
+        
+    Actually, I would very much like to get rid of the
+    dynamically-loadable IPFW module entirely.  If you are running any
+    sort of a reasonable router configuration (i.e., with multiple cards
+    from the same vendor), you will have to reconfigure the kernel anyway,
+    and I think there are probably good security reasons for wanting in
+    that way.  (What if the LKM fails to load because you are out of disk
+    space in /tmp?  Oops.)  Perhaps more significantly, it puts extra hair
+    in the IP input and output paths that doesn't need to be there in the
+    common case (workstation or non-firewalling router), so I'd like to
+    see it removed.
+     
+
+--------------------------------------------------------------------------------
+MID: 199606131753.TAA28914@keltia.freenix.fr
+DATE: 1996-06-13T17:53:08+00:00  FROM: Ollivier Robert <roberto@keltia.freenix.fr> <None>
+SUBJ: Re: #include opt_ipfw.h problem for lkm
+BODY:
+It seems that Gary Palmer said:
+
+Not me.
+-- 
+Ollivier ROBERT    -=- The daemon is FREE! -=-    roberto@keltia.freenix.fr
+FreeBSD keltia.freenix.fr 2.2-CURRENT #11: Thu Jun 13 11:01:47 MET DST 1996
+
+
+
+--------------------------------------------------------------------------------
+MID: 3321.834694935@critter.tfs.com
+DATE: 1996-06-13T19:42:15+00:00  FROM: Poul-Henning Kamp <phk@FreeBSD.org> <None>
+SUBJ: Re: #include opt_ipfw.h problem for lkm 
+BODY:
+
+I object STRONGLY to removing the ipfw LKM.
+
+What would we gain ?  -- nothing.
+
+What would we loose ? -- a feature.
+
+You argument that an intruder just has to unload the lkm is bogus.
+If you used ipfw for sercurity purposes, you would NOT use the LKM
+in the first place.  Second, if you did, you would surely be running
+with a secure-level that prevented the unloading of the lkm.
+"Doctor! doctor! It hurts when I do this!" -- "Don't do that then!"
+
+The point of having it as an LKM, is that you can use it to remove
+traffic that you don't want, ie. use it as a network tool not a 
+security device as such.  I have used it to do things like filter
+out RIP from a bogus router or merely logging of traffic from a 
+particular host.  Neither of these uses warranted a hyper-secure
+setup, and being able to load ipfw was just the thing to do the 
+job.
+
+Why would we kill a feature like that ?
+
+I will conceede to Garretts argument of speed, and you can add:
+#ifdef INET_REALLY_FAST around the two function calls as long as
+you don't put it in GENERIC.
+
+According to your logic I expect you to advocate the removal of
+ufs-async, ext2fs, msdosfs not to mention rm features because 
+they are dangerous if u
+
+--------------------------------------------------------------------------------
+MID: 199606132356.JAA32106@godzilla.zeta.org.au
+DATE: 1996-06-13T23:56:47+00:00  FROM: Bruce Evans <bde@zeta.org.au> <None>
+SUBJ: Re: #include opt_ipfw.h problem for lkm
+BODY:
+
+Including it conditionally is the wrong fix.  lkms must not depend on any
+options, since their behaviour must be the same as the statically configured
+versions.  I think the conditional include doesn't do much damage because
+option IPFIREWALL isn't used.  Only the option IPFIREWALL_VERBOSE is used.
+Other bugs: option IPFIREWALL_VERBOSE_LIMIT isn't in the options file, and
+lkm ipfw and option file opt_ipfw.h have hard to remember names - `ip' is
+followed by `_' in all other ip file names.
+
+There is a potentially much more serious problem in the use of the option
+IPFIREWALL in ip_input.c.  I think this isn't actually a problem, because
+the option is only used to control the initialization of ip_fw, and this
+initialization gets done in another way if ip_^Hfw is an lkm.  Why isn't
+PSEUDO_SET() used to do the initialization transparently like it is for
+other lkm's?  I guess there are ordering problems.
+
+Bruce
+
+
+
+--------------------------------------------------------------------------------
+MID: 199606280135.TAA12732@rocky.mt.sri.com
+DATE: 1996-06-28T01:35:08+00:00  FROM: Nate Williams <nate@mt.sri.com> <None>
+SUBJ: IPFW (mis)feature
+BODY:
+Why doesn't ipfw(8) allow me to specify the services using the names out
+of /etc/services?  I *used* to be able to specify it using the service
+names, and I don't know why this is removed (but at least it's
+documented).
+
+  Service names (from 
+  .Pa /etc/services )
+  may not be used instead of a numeric port value.
+  Also, note that a range may only be specified as the first value,
+  and the port list is limited to
+  .Nm IP_FW_MAX_PORTS
+
+All of the other firewall products I have allow me to use the service
+names as it makes 'reading' the rules much easier.
+
+
+
+Nate
+
+
+
+--------------------------------------------------------------------------------
+MID: Pine.NEB.3.92.960627221935.8514B-100000@zap.io.org
+DATE: 1996-06-28T02:20:37+00:00  FROM: Brian Tao <taob@io.org> <None>
+SUBJ: Re: IPFW (mis)feature
+BODY:
+On Thu, 27 Jun 1996, Nate Williams wrote:
+
+    Funny, I was *just* about to ask the exact same question, after
+fiddling with our new firewall for a couple of hours today.  As it is
+now, I have comments in rc.firewall, but an 'ipfw l' is difficult to
+parse, even with only a few of the well-known services enabled.
+--
+Brian Tao (BT300, taob@io.org, taob@ican.net)
+Systems and Network Administrator, Internet Canada Corp.
+"Though this be madness, yet there is method in't"
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 199606280455.WAA13473@rocky.mt.sri.com
+DATE: 1996-06-28T04:55:10+00:00  FROM: Nate Williams <nate@mt.sri.com> <None>
+SUBJ: IPFW bugs?
+BODY:
+This is really weird.
+
+I'm trying to setup my firewall using all the documentation I can get a
+hold of.  Unfortunately, there are 'bugs' in the documentation which I
+unfortunately can't get to right now.
+
+In any case, I'm trying to make my system 'fairly' secure to the outside
+world, but let everyone on the inside not even be aware of the firewall.
+
+In the below context, $1 is the network address for our internet
+connection, which could be one of ppp[0123] depending on conditions.
+
+--- CUT HERE -------
+# Spoofing our internal machines
+ipfw add  10 deny log all from 204.182.243.0/24 to any via $1 in
+ipfw add  10 deny log all from 127.0.0.1 to any via $1 in
+
+# RFC 1918 unroutable hosts
+ipfw add  11 deny log all from 192.168.0.0/16 to any via $1 in
+ipfw add  11 deny log all from 172.16.0.0/12 to any via $1 in 
+ipfw add  11 deny log all from 10.0.0.0/8 to any via $1 in
+
+# Deny chargen,tftp,sunrpc 
+#ipfw add  12 deny log all from any to any 19,69,111 via $1
+#ipfw add  13 deny log all from any 19,69,111 to any via $1
+
+# Who,syslog
+#ipfw add  12 deny log udp from any to any 513,514 via $1
+#ipfw add  13 deny log udp from any 513,514 to any via $1
+
+# Allow SSH/SMTP/DNS/POP3 connections to/f
+
+--------------------------------------------------------------------------------
+MID: 1236.835939525@critter.tfs.com
+DATE: 1996-06-28T05:25:25+00:00  FROM: Poul-Henning Kamp <phk@freebsd.org> <None>
+SUBJ: Re: IPFW bugs? 
+BODY:
+In message <199606280455.WAA13473@rocky.mt.sri.com>, Nate Williams writes:
+
+
+
+biff/comsat
+
+DNS:  port 123 is NTP, DNS is port 53  (duh!  <:-)
+
+
+Hey, lets teach the pilot a bit first, shall we ?
+
+
+--
+Poul-Henning Kamp           | phk@FreeBSD.ORG       FreeBSD Core-team.
+http://www.freebsd.org/~phk | phk@login.dknet.dk    Private mailbox.
+whois: [PHK]                | phk@ref.tfs.com       TRW Financial Systems, Inc.
+Future will arrive by its own means, progress not so.
+
+
+
+--------------------------------------------------------------------------------
+MID: 199606280537.XAA13666@rocky.mt.sri.com
+DATE: 1996-06-28T05:37:05+00:00  FROM: Nate Williams <nate@mt.sri.com> <None>
+SUBJ: Re: IPFW bugs? 
+BODY:
+   ^^^^^^^^
+sendmail -> sending.
+
+Biff/comsat is at 512, not at 125/127, and sendmail isn't even running.
+
+The line above should have read:
+  If I enable the below lines, I get LOG messages that are caused by
+  something sending packets from port 125-127 on my box.  Why are they
+  matching?
+
+
+Yeah, and your point is?  See the comments above the lines, it explains
+that 123 is NTP.  The problem is that DNS/udp wasn't enabled, yet one I
+enabled NTP/all DNS worked, and when I disabled NTP/all DNS quit
+working.  Why is that?
+
+
+The pilot has a pretty good idea what he's doing.
+
+I'm also pretty sure that the bug is not limited only to UDP packets.
+
+Given the following output.
+nec# ipfw list
+FireWall chain entries: 2200 0
+00010 deny log all from 127.0.0.1 to any in  via ep0
+00011 deny log all from 192.168.0.0/16 to any in  via ep0
+00011 deny log all from 172.16.0.0/12 to any in  via ep0
+00011 deny log all from 10.0.0.0/8 to any in  via ep0
+00012 deny log udp from any to any 513,514 via ep0
+00013 deny log udp from any 513,514 to any via ep0
+00020 allow tcp from any to any 22,25,110 via ep0
+00020 allow tcp from any 22,25,110 to any via ep0
+00020 allow all from any to any 53 via ep0
+00020 all
+
+--------------------------------------------------------------------------------
+MID: 2910.835941172@critter.tfs.com
+DATE: 1996-06-28T05:52:52+00:00  FROM: Poul-Henning Kamp <phk@freebsd.org> <None>
+SUBJ: Re: IPFW bugs? 
+BODY:
+In message <199606280537.XAA13666@rocky.mt.sri.com>, Nate Williams writes:
+
+Your email listed rules saying "123" in a context where you complain
+about DNS.  :-)
+
+didn't look like it :-)  At least not for the DNS part :-)
+
+
+Remember that the default is "Allow nothing"
+
+You will probably want to have
+
+	allow all from 127.0.0.1 to 127.0.0.1 via lo0
+
+in there somewhere...  (if your 123 was a typo, this could be why your
+DNS fails.)
+
+
+It's certainly a bug that you have rules with the same number, that
+looks VERY weird to me, also where was your 65535 block all rule ?
+
+
+Add "log" to all rules and see which number lets you though.
+
+Also, don't let your current fight with Jordan affect your temper and
+or patience with other people.
+
+I'm not saying the code is bug free, I'm merely asking you to be less
+incoherent and more constructive.
+
+--
+Poul-Henning Kamp           | phk@FreeBSD.ORG       FreeBSD Core-team.
+http://www.freebsd.org/~phk | phk@login.dknet.dk    Private mailbox.
+whois: [PHK]                | phk@ref.tfs.com       TRW Financial Systems, Inc.
+Future will arrive by its own means, progress not so.
+
+
+
+--------------------------------------------------------------------------------
+MID: 199606280602.AAA13869@rocky.mt.sri.com
+DATE: 1996-06-28T06:02:33+00:00  FROM: Nate Williams <nate@mt.sri.com> <None>
+SUBJ: Re: IPFW bugs? 
+BODY:
+Poul-Henning Kamp writes:
+
+Go re-read it.
+
+I'll repeat the two rules again out of my original email, for the seeing
+impaired.
+
+# Allow SSH/SMTP/DNS/POP3 connections to/from anywhere
+ipfw add  20 pass tcp from any to any 22,25,53,110 via $1
+
+That's the DNS line:
+
+# Allow NTP stuff through
+ipfw add pass all from any 123 to any via $1
+ipfw add pass all from any to any 123 via $1
+
+And there's the NTP line.  No confusion except in your reading of it.
+
+
+I think the err is in your reading.
+
+
+Umm, that's irrelevant.  My DNS server is remote, not local.  I'm not
+trying to send anything out via lo0, so why bring this up?
+
+
+I set them to be the same #.  Should I not?
+
+
+Ahh, I didn't realize you could 'log' accept rules.  I'll do that.
+
+
+
+
+Nate
+
+
+
+--------------------------------------------------------------------------------
+MID: 199606280606.AAA13890@rocky.mt.sri.com
+DATE: 1996-06-28T06:06:54+00:00  FROM: Nate Williams <nate@mt.sri.com> <None>
+SUBJ: Re: IPFW bugs? 
+BODY:
+
+OK, here's the rule that let's *EVERYTHING* through.
+
+# Should be allowing DNS through, which can be either UDP/TCP
+ipfw add  21 pass log all from any 53 to any via $1
+
+But, I get icmp packets, telnet, ftp, etc...
+
+Somehow the '53' port isn't being used at all.
+
+
+Nate
+
+
+
+--------------------------------------------------------------------------------
+MID: 3503.835942175@critter.tfs.com
+DATE: 1996-06-28T06:09:35+00:00  FROM: Poul-Henning Kamp <phk@freebsd.org> <None>
+SUBJ: Re: IPFW bugs? 
+BODY:
+(DNS:  I didn't keep your original email but check your +outbox :-)
+
+If you never need lo0, certainly keep it down.  Some programs croak.
+
+no, I thought it was impossible to do so actually, and intended it to
+be for that matter.  Have same number makes it harder too understand
+which one did that, and may lead to confusion as to what order they
+apply in.
+
+
+Not only that, but all rules have counters ipfw can show you, so you
+can even see activation of rules that didn't log.
+
+--
+Poul-Henning Kamp           | phk@FreeBSD.ORG       FreeBSD Core-team.
+http://www.freebsd.org/~phk | phk@login.dknet.dk    Private mailbox.
+whois: [PHK]                | phk@ref.tfs.com       TRW Financial Systems, Inc.
+Future will arrive by its own means, progress not so.
+
+
+
+--------------------------------------------------------------------------------
+MID: 4616.835943754@critter.tfs.com
+DATE: 1996-06-28T06:35:54+00:00  FROM: Poul-Henning Kamp <phk@FreeBSD.ORG> <None>
+SUBJ: Re: IPFW bugs? 
+BODY:
+In message <199606280606.AAA13890@rocky.mt.sri.com>, Nate Williams writes:
+
+Yes, (I just talk(1)'ed Nate).  The curent implentation doesn't complain
+about "over-specified" rules.  The portnumber isn't used with "all" as
+protocol.
+
+ipfw and the kernel should both complain about such a rule being set.
+
+--
+Poul-Henning Kamp           | phk@FreeBSD.ORG       FreeBSD Core-team.
+http://www.freebsd.org/~phk | phk@login.dknet.dk    Private mailbox.
+whois: [PHK]                | phk@ref.tfs.com       TRW Financial Systems, Inc.
+Future will arrive by its own means, progress not so.
+
+
+
+==========================================================================================
+DB: freebsd-chat.duckdb  hits=12
+==========================================================================================
+--------------------------------------------------------------------------------
+MID: 9601171400.ZM11522@jester.autometric.com
+DATE: 1996-01-17T19:00:06+00:00  FROM: "Brian J. Sletten" <bsletten@jester.autometric.com> <None>
+SUBJ: FreeBSD Firewalls
+BODY:
+Anyone have any specific arguments for using FreeBSD over Linux for a
+dual-homed firewall?
+
+-- 
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Brian J. Sletten	    2905 Wickersham Way, #202       (703) 658-4178 (O)
+bsletten@autometric.com	      Falls Church, VA 22042	    (703) 207-9377 (H)
+	       http://www.acm.org/~brians/homepage.html
+       If I keep a green bough in my heart, the singing bird will come.
+                              -- Chinese Proverb
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+
+
+--------------------------------------------------------------------------------
+MID: 8777.830798592@palmer.demon.co.uk
+DATE: 1996-04-29T17:23:12+00:00  FROM: "Gary Palmer" <gpalmer@FreeBSD.ORG> <None>
+SUBJ: Re: Q on using "netpipes" for firewall maintanance tasks 
+BODY:
+[Redirected to -chat]
+
+Paul Traina wrote in message ID
+<199604290613.XAA01257@precipice.shockwave.com>:
+
+
+
+Would you be the same ``Paul Trania of Cisco Systems'' that got named
+a couple of times in Sprint trouble tickets as working with them to
+solve the IS-IS adjacency problem in Cisco routers? :)
+
+Gary
+--
+Gary Palmer                                            FreeBSD Core Team Member
+FreeBSD - Turning PC's into workstations. See http://www.FreeBSD.ORG/ for info.
+
+
+
+--------------------------------------------------------------------------------
+MID: 199604291957.MAA03098@precipice.shockwave.com
+DATE: 1996-04-29T19:57:06+00:00  FROM: Paul Traina <pst@shockwave.com> <None>
+SUBJ: Re: Q on using "netpipes" for firewall maintanance tasks 
+BODY:
+
+  From: "Gary Palmer" <gpalmer@FreeBSD.ORG>
+  Subject: Re: Q on using "netpipes" for firewall maintanance tasks 
+  [Redirected to -chat]
+  
+  Paul Traina wrote in message ID
+  <199604290613.XAA01257@precipice.shockwave.com>:
+  >   > Not buying the cisco box.
+  
+  >   Is this just a blatant marketting plug or is there a reason behind this ?
+  
+  > Who, me?  I'm just a stockholder. :-)
+  
+  Would you be the same ``Paul Trania of Cisco Systems'' that got named
+  a couple of times in Sprint trouble tickets as working with them to
+  solve the IS-IS adjacency problem in Cisco routers? :)
+
+Who, me?  I'm just a stockholder...and the guy who wrote and maintains most
+of the IP security part of the cisco router.
+
+
+
+--------------------------------------------------------------------------------
+MID: 199606291633.SAA29276@uriah.heep.sax.de
+DATE: 1996-06-29T16:33:35+00:00  FROM: J Wunsch <j@uriah.heep.sax.de> <None>
+SUBJ: Re: Firewalling DNS TCP (was Re: IPFW bugs?)
+BODY:
+(Moved to -chat since it's of political, not technical nature. :)
+
+As Alex Nash wrote:
+
+
+I think that idea is fundamentally flawed. :-)
+
+I usually transfer DNS zone files if i think this will take load off
+my line (e.g. for zones i know i'm referencing quite often).  DNS is a
+_public service_, and if local sites have something you can learn from
+a DNS zone transfer, this is rather an indication that there's
+something else broken at this site.  E.g., they are using a firewall
+to hide the administrative chaos they've got in their local network,
+and thus don't want you to know about the local hosts -- but of
+course, you are a clever Bad Guy, thus you do already know which hosts
+they've got and which are vulnerable, and to the least, you know how
+to get this information even without the support of their DNS
+server. <:)
+
+Further, the above statement is moot if the ``known secondary domain
+name servers'' don't do the same policy, and if they are not sure
+whether all their ``known secondary domain name servers'' are beyond
+suspicion that they do also filter port 53 etc...
+
+``Firewalls are a lame excuse for total lack of local system
+administration.'' :)
+
+-- 
+cheers, J"org
+
+joerg_wunsch@ur
+
+--------------------------------------------------------------------------------
+MID: 21937.840111170@time.cdrom.com
+DATE: 1996-08-15T12:12:50+00:00  FROM: "Jordan K. Hubbard" <jkh@time.cdrom.com> <None>
+SUBJ: Re: ipfw vs ipfilter? 
+BODY:
+[redirected to -chat]
+
+
+Yeah, that is indeed how a lot started out.  I started in timesharing
+on the HP2000 access system - all you had was a BASIC interpreter :-)
+
+Later, when my friend Bruce purchased what was, if I remember
+correctly, one of the first 50 Apple II's to come out of Apple
+(complete with tempermental switching power supply :), I started
+banging away on that as well.  Ultimately, the pain of cassette tape
+loads and the high cost of Applesoft ROM cards (which you were only
+too cool if you had one of) led me back to the HP and its far faster
+hard disk - a HP 2888, 50Mb of raw pack-pounding power :-)
+
+Perhaps if the Apple had been just a little more powerful, and its
+peripherals less expensive, I'd be a Mac programmer now instead of a
+timesharing operating system junkie.  A sobering thought indeed.
+
+					Jordan
+
+[Bruce, on the other hand, went on to become positively enamored of
+the machine and eventually wound up working for Apple, poor guy. :) ]
+
+
+
+--------------------------------------------------------------------------------
+MID: 199608151642.JAA21301@freefall.freebsd.org
+DATE: 1996-08-15T16:42:22+00:00  FROM: "Jonathan M. Bresler" <jmb> <None>
+SUBJ: Re: ipfw vs ipfilter?
+BODY:
+Daniel O'Callaghan wrote:
+
+	my doctor requests that you do not mention trash-80's
+	the flashbacks are too much to endure at my advanced age.
+
+jmb
+--
+Jonathan M. Bresler           FreeBSD Postmaster             jmb@FreeBSD.ORG
+FreeBSD--4.4BSD Unix for PC clones, source included. http://www.freebsd.org/
+PGP 2.6.2 Fingerprint:      31 57 41 56 06 C1 40 13  C5 1C E3 E5 DC 62 0E FB
+
+
+
+--------------------------------------------------------------------------------
+MID: 199608160154.UAA04280@luke.pmr.com
+DATE: 1996-08-16T01:54:48+00:00  FROM: Bob Willcox <bob@luke.pmr.com> <None>
+SUBJ: Re: ipfw vs ipfilter?
+BODY:
+Jordan K. Hubbard wrote:
+
+What about those of us that started out with punched cards on IBM
+1401's and 7094's in the mid-60's?  In those days you key-punched
+the machine instructions in the cards (in column or row binary,
+depending on the machine).  Only wimps used assemblers!
+
+-- 
+Bob Willcox	       politics, n:
+bob@luke.pmr.com         A strife of interests masquerading as a contest of
+Austin, TX               principles.  The conduct of public affairs for private
+                         advantage.       -- Ambrose Bierce
+
+
+
+--------------------------------------------------------------------------------
+MID: XFMail.960815234246.dkelly@hiwaay.net
+DATE: 1996-08-16T04:27:59+00:00  FROM: David Kelly <dkelly@hiwaay.net> <None>
+SUBJ: Selling FreeBSD to Mac users (was Re: ipfw vs ipfilter?)
+BODY:
+
+On 10:12:50 "Jordan K. Hubbard" wrote:
+
+
+I've been thinking there is a great opportunity for Walnut Creek to
+advertise FreeBSD in Mac magazines. Recently a number of companies,
+Claris included, have started selling very expensive Mac-hosted
+email servers. The kind of thing FreeBSD does so easily.
+
+But the kicker is the *way* you write the ad. Mac users like to be
+entertained at Wintel system's expense. Say something like, "Now
+you've retired that troublesome PC and replaced it with a Mac, put
+the PC where it belongs, in the closet. In the networking closet.
+Running FreeBSD as your email server, internet gateway, etc.
+Because a Mac is a terrible thing to waste (for grunt work.)"
+Might even include a mention of Eudora Lite for the Mac end of the
+email system.
+
+--
+David Kelly N4HHE, dkelly@tomcat1.tbe.com (wk), dkelly@hiwaay.net (hm)
+=====================================================================
+The human mind ordinarily operates at only ten percent of its
+capacity -- the rest is overhead for the operating system.
+
+
+
+--------------------------------------------------------------------------------
+MID: 57enl0u4xz.fsf@elsevier.co.uk
+DATE: 1996-08-21T15:34:16+00:00  FROM: Paul Richards <p.richards@elsevier.co.uk> <None>
+SUBJ: Re: ipfw vs ipfilter?
+BODY:
+Terry Lambert <terry@lambert.org> writes:
+
+
+I started out on Commodore PET's too, or it's sister the CBM.
+
+Then got a BBC computer, really nice machine that, still got it
+gathering dust in a cupboard somewhere.
+
+-- 
+  Paul Richards. Originative Solutions Ltd.  (Netcraft Ltd. contractor)
+  Elsevier Science TIS online journal project.
+  Email: p.richards@elsevier.co.uk
+  Phone: 0370 462071 (Mobile), +44 (0)1865 843155
+
+
+
+--------------------------------------------------------------------------------
+MID: 29457.840760251@orion.webspan.net
+DATE: 1996-08-23T00:30:51+00:00  FROM: "Gary Palmer" <gpalmer@freebsd.org> <None>
+SUBJ: Re: ipfw vs ipfilter? 
+BODY:
+Paul Richards wrote in message ID
+<57enl0u4xz.fsf@elsevier.co.uk>:
+
+What I liked about the ``Beeb'' was the fact it came with so many
+expansion opions (there was even direct I/O ports to the memory and
+address bus if I remember). It booted (from ROM) into a very
+reasonable BASIC too.
+
+Nice machine. Pity it wasn't more popular.
+
+Gary
+--
+Gary Palmer                                          FreeBSD Core Team Member
+FreeBSD: Turning PC's into workstations. See http://www.FreeBSD.ORG/ for info
+
+
+
+--------------------------------------------------------------------------------
+MID: 199701010037.TAA20268@hda.hda.com
+DATE: 1997-01-01T00:37:15+00:00  FROM: Peter Dufault <dufault@hda.com> <None>
+SUBJ: Re: cvs commit:  src/share/doc/handbook ctm.sgml current.sgml cvsup.sgml dialup.sgml firewalls.sgml hw.sgml install.sgml isdn.sgml k
+BODY:
+
+I'm not sure.  I checked Strunk and White's "Elements of Style"
+(ISBN 0-02-418200-1) and nowhere do I see "Avoid the use of
+contractions".  I do see "it's" versus "its" on page 1.
+
+Peter
+
+-- 
+Peter Dufault (dufault@hda.com)   Realtime Machine Control and Simulation
+HD Associates, Inc.               Voice: 508 433 6936
+
+
+
+
+--------------------------------------------------------------------------------
+MID: 32CA7125.41C67EA6@fsl.noaa.gov
+DATE: 1997-01-01T14:13:57+00:00  FROM: Sean Kelly <kelly@fsl.noaa.gov> <None>
+SUBJ: Re: cvs commit:  src/share/doc/handbook ctm.sgml current.sgml cvsup.sgml dialup.sgml firewalls.sgml hw.sgml install.sgml isdn.sgml k
+BODY:
+Peter Dufault wrote:
+
+Avoiding contractions usually makes for writing that sounds stiff and is
+somewhat harder to follow.  I remember when I got my BS degree in
+Technical Writing studying writing styles and seeing that, especially
+for technical documentation, contractions make the material much more
+approachable, readable, and memorizable.
+
+I seem to remember asking John Fieber about this guidline and his
+response was that it would help us write documentation better
+understandable by our international audience for whom English wasn't the
+first language.
+
+-- 
+Sean Kelly
+NOAA Forecast Systems Laboratory
+Boulder Colorado USA
+
+

@@ -1,0 +1,251 @@
+total 50
+[1998-04-15T20:46:23+00:00] [Jonathan M. Bresler] []
+MID: <199804152046.NAA09021@hub.freebsd.org>
+SUBJ: asdf
+BODY: test advocacy |  | --  | Jonathan M. Bresler      FreeBSD Core Team, Postmaster       jmb@FreeBSD.ORG | FreeBSD--The Power to Serve                          http://www.freebsd.org/ | PGP 2.6.2 Fingerprint:      31 57 41 56 06 C1 40 13  C5 1C E3 E5 DC 62 0E FB |  | To Unsubscribe: send mail to majordomo@FreeBSD.org | with "unsubscribe freebsd-advocacy" in the body of the message |  | From owner-freebsd-advocacy  Wed Apr 15 18:16:51 1998 | Return-Path: <owner-freebsd-advocacy@FreeBSD.ORG> | Received: (from majordom@localhost) |           by hub.freebsd.org (8.8.8/8.8.8) id SAA20905 |           for freebsd-advocacy-outgoing
+------------------------------------------------------------
+[1998-04-17T18:50:00+00:00] [Adam Turoff <AdamT@smginc.com>] []
+MID: 35379BAA@smginc.com
+SUBJ: Linux Advocacy How-to
+BODY:  | This old (Feb '97) document resurfaced recently on slashdot.org. |  | Linux Advocacy Mini-HOWTO: | http://sunsite.unc.edu/LDP/HOWTO/mini/Advocacy.html |  | Just another collection of sensible thoughts about spreading the | message about package Foo.  Not necessarily Linux specific | (there are references to Linus et. al.); with a few diffs, it | should be applicable to practically any open-source project | like Apache, perl, FreeBSD or PostgreSQL. |  | Presented in the spirit of Santayama: "those who fail to learn | from the past are doomed to repeat it." (or words to that effect) |  |  -- Adam.   |  | To Unsubscribe: send 
+------------------------------------------------------------
+[1998-04-17T19:17:00+00:00] ["Jeays, Mike" <JEAYS@statcan.ca>] []
+MID: 199804171811.OAA08056@smtpsha.statcan.ca
+SUBJ: RE: Promoting FreeBSD.
+BODY:  | For writing GUI applications within FreeBSD, I find the TCL/TK environment  | preferable.  Development seems a good bit faster, and small applications  | start much more quickly - the Java VM seems to take forever to load, and  | this is quite a nuisance with apps that are used frequently. |  | TCL/TK is already available as a package, and can be set up as part of a  | base system more easily than Java, as it is at present, anyway. |  | No, I don't want to start a flame war! |  ---------- | From: Open Systems Networking | To: Jeffrey Kukkola | Cc: Freebsd-Advocacy | Subject: RE: Promoting FreeBSD. | Date: Friday, April 
+------------------------------------------------------------
+[1998-04-17T21:43:28+00:00] [Todd Holmes <taholmes@pacbell.net>] []
+MID: v03130300b15d7d0526cf@[192.168.0.3]
+SUBJ: SUBSRCIBE FREEBSD-ADVOCACY
+BODY: SUBSRCIBE FREEBSD-ADVOCACY |  |  |  | To Unsubscribe: send mail to majordomo@FreeBSD.org | with "unsubscribe freebsd-advocacy" in the body of the message |  | 
+------------------------------------------------------------
+[1998-04-18T20:26:33+00:00] [Edwin Culp <eculp@ver1.telmex.net.mx>] []
+MID: 35390C79.13956D1B@ver1.telmex.net.mx
+SUBJ: Re: salesman is thinking.....
+BODY: Time to put on my flame proof suit.  I can't wait any more.  What is | wrong | with comming up with a vga xwindows and a simple mozilla as a | configuration | front end for configuration.  This is the front end that more than maybe | 80 Million people are using.  Doesn't this tell us something?  How many | people are using Tcl/Tk or any other option? |  | Thanks |  | ed |  |  | Dan Benjamin wrote: | >  | > Stefanos Kiakas writes: | >  | > > I know! It is not difficult to use the CLI, but it does not matter to | > > them and they don't care, *they want a GUI*. | >  | > This is very often the case in my experiences as well, and has, i
+------------------------------------------------------------
+[1998-04-18T20:34:05+00:00] [Don Wilde <dwilde1@ibm.net>] []
+MID: 35390E3D.CE6B786F@ibm.net
+SUBJ: Re: salesman is thinking.....
+BODY: Edwin Culp wrote: | >  | > Time to put on my flame proof suit.  I can't wait any more.  What is | > wrong | > with comming up with a vga xwindows and a simple mozilla as a | > configuration | > front end for configuration.  This is the front end that more than maybe | > 80 Million people are using.  Doesn't this tell us something?  How many | > people are using Tcl/Tk or any other option? |  | Well, actually, I sorta had something like that in the back of my mind, | but you have to have the Apache AND the Mozilla AND the <name your own | poisonous CGI script language> loaded to go there. |  | To Unsubscribe: send mail to
+------------------------------------------------------------
+[1998-04-18T21:55:09+00:00] [remy@synx.com] []
+MID: 9804182345.aa18858@s3.synx.com
+SUBJ: Re: salesman is thinking.....
+BODY: On 18 Apr, Don Wilde wrote: | > Edwin Culp wrote: | >>  | >> Time to put on my flame proof suit.  I can't wait any more.  What is | >> wrong | >> with comming up with a vga xwindows and a simple mozilla as a | >> configuration | >> front end for configuration.  This is the front end that more than maybe | >> 80 Million people are using.  Doesn't this tell us something?  How many | >> people are using Tcl/Tk or any other option? | >  | > Well, actually, I sorta had something like that in the back of my mind, | > but you have to have the Apache AND the Mozilla AND the <name your own | > poisonous CGI script language> loa
+------------------------------------------------------------
+[1998-04-19T01:07:08+00:00] [Joey Garcia <bear@pacificnet.net>] []
+MID: Pine.LNX.3.96.980418175335.449B-100000@mustang
+SUBJ: Re: salesman is thinking.....
+BODY: Personally, I use Tcl/Tk apps....don't know how to write them, but I know | how to compile and use them.  That's because I'm just a user, not a | programmer.   |  | I also use KDE...because it looks nice, it works great, and | makes life on a Unix workstation so much easier.  I don't have to mess | with any rc files or anything like that.  KDE is simple...point and click. | That might be "icky" to programmers, but it's nice to users.   |  | What's the point of the computer revolution (newer faster chips, faster | motherboards and video cards, etc) if we're stuck using CLI all the time. | Sure, it's quick and dirty,
+------------------------------------------------------------
+[1998-04-19T11:05:14+00:00] [Karl M. Joch] []
+MID: <01bd6b83$07a7fee0$0100007f@ws01>
+SUBJ: Re: salesman is thinking.....
+BODY: one more thought. i think th reality is far away of our discussion. to | enhance the installed base FreeBSD needs the "normal" market. this means | small comapnies (80% in the whole world are small). but they need. |  | - 1 or 2 servers | - 3 - 20 workstations | - no neccecary of sysop/sysadmin | - easy setup and stable running system |  | FreeBSD have a lot of advantages against the M$ products. let me create a | standard installation: |  | - workstation: |     pentium PC with word processcing, spredsheat, internet browser, email (� | had to learn that most of the "normal users" are not able or WILLING to | handle more). | 
+------------------------------------------------------------
+[1998-04-19T11:05:14+00:00] ["Karl M. Joch" <k.joch@kmjeuro.com>] []
+MID: 01bd6b83$07a7fee0$0100007f@ws01
+SUBJ: Re: salesman is thinking.....
+BODY: one more thought. i think th reality is far away of our discussion. to | enhance the installed base FreeBSD needs the "normal" market. this means | small comapnies (80% in the whole world are small). but they need. |  | - 1 or 2 servers | - 3 - 20 workstations | - no neccecary of sysop/sysadmin | - easy setup and stable running system |  | FreeBSD have a lot of advantages against the M$ products. let me create a | standard installation: |  | - workstation: |     pentium PC with word processcing, spredsheat, internet browser, email (� | had to learn that most of the "normal users" are not able or WILLING to | handle more). | 
+------------------------------------------------------------
+[1998-04-19T13:07:22+00:00] [Edwin Culp <eculp@ver1.telmex.net.mx>] []
+MID: 3539F70A.386A550A@ver1.telmex.net.mx
+SUBJ: Re: salesman is thinking.....
+BODY: Don Wilde wrote: | >  | > Edwin Culp wrote: | > > | > > Time to put on my flame proof suit.  I can't wait any more.  What is | > > wrong | > > with comming up with a vga xwindows and a simple mozilla as a | > > configuration | > > front end for configuration.  This is the front end that more than maybe | > > 80 Million people are using.  Doesn't this tell us something?  How many | > > people are using Tcl/Tk or any other option? | >  | > Well, actually, I sorta had something like that in the back of my mind, | > but you have to have the Apache AND the Mozilla AND the <name your own | > poisonous CGI script language> load
+------------------------------------------------------------
+[1998-04-19T15:56:15+00:00] ["Jonathan M. Bresler" <jmb>] []
+MID: 199804191556.IAA06989@hub.freebsd.org
+SUBJ: Re: your mail
+BODY: Daniel Haischt wrote: | > HI | >  | > MAYBE THIS IS OFF-TOPIC, BUT I'LL DO IT ANYWAY.... | >  | > I want to start a discussion about FreeBSD and LINUX, cause I had somethimes that incredible feeling that both OS are something like rivals. | > (I had some awesome discussion about that with some friends ;-) |  | 	DANGER WILL ROBINSON! |  | 	this may, does not have to but may, degenerate quickly into | 	a cat-scratching, mud-slinging, name-calling flamefest. |  | 	that is not the purpose of any of the FreeBSD lists. | 	the lists exist solely to benefit the FreeBSD community. |  | 	anyone or any list that endangers that communit
+------------------------------------------------------------
+[1998-04-19T20:39:40+00:00] ["Matthew D. Fuller" <fullermd@futuresouth.com>] []
+MID: Pine.BSF.3.96.980419153714.2387A-100000@shell.futuresouth.com
+SUBJ: Re: your mail
+BODY: On Sun, 19 Apr 1998, Jonathan M. Bresler wrote: |  | > Daniel Haischt wrote: | > > HI | > >  | > > MAYBE THIS IS OFF-TOPIC, BUT I'LL DO IT ANYWAY.... | > >  | > > I want to start a discussion about FreeBSD and LINUX, cause I had somethimes that incredible feeling that both OS are something like rivals. | > > (I had some awesome discussion about that with some friends ;-) | >  | > 	DANGER WILL ROBINSON! | >  | > 	this may, does not have to but may, degenerate quickly into | > 	a cat-scratching, mud-slinging, name-calling flamefest. | >  | > 	that is not the purpose of any of the FreeBSD lists. | > 	the lists exist solely to b
+------------------------------------------------------------
+[1998-04-20T13:11:30+00:00] [Dan Benjamin <dpb@mail.hqs.crc.com>] []
+MID: 353B4982.91FF85FD@mail.hqs.crc.com
+SUBJ: Re: salesman is thinking.....
+BODY: Edwin Culp wrote: | >  | > Time to put on my flame proof suit.  I can't wait any more.  What is | > wrong | > with comming up with a vga xwindows and a simple mozilla as a | > configuration | > front end for configuration.  This is the front end that more than maybe | > 80 Million people are using.  Doesn't this tell us something?  How many | > people are using Tcl/Tk or any other option? |  | No flames here.  Honestly, I couldn't agree more.  If we want to | increase a user base, what better way to grab users than by giving them | something that's either the same as or similar to what they're used to?  | At any rate, 
+------------------------------------------------------------
+[1998-04-21T02:38:47+00:00] [Greg Lehey <grog@lemis.com>] []
+MID: 19980421103846.39361@papillon.lemis.com
+SUBJ: Re: FreeBSD and Linux
+BODY: On Sun, 19 April 1998 at 21:22:52 -0500, Nikolas Kauer wrote: | >> From http://www.futuresouth.com/~fullermd/freebsd/bsd/bsdvlinux.14 I | > infer that the second edition of "The Complete FreeBSD" by Greg Lehey | > has a paragraph about FreeBSD vs. Linux. (My apologies.)  Why is this | > issue so taboo? (Greg: "That's a hot potato. A lot of people get fanatical | > about the question. Still, I've just had to write this up for the new edition | > of 'The Complete FreeBSD', so here goes [...]") |  | The problem is that a lot of people (on both sides) get fanatical | about the question.  The result is a flamefest. 
+------------------------------------------------------------
+[1998-04-22T11:02:03+00:00] [Donald Burr <dburr@POBoxes.com>] []
+MID: XFMail.980422040203.dburr@POBoxes.com
+SUBJ: The best tool for advocacy...
+BODY: -----BEGIN PGP SIGNED MESSAGE----- |  | ...is a CD-R drive. |  | I just purchased one of these at a computer show.  And let me tell you, | these are veritable Advocacy Machines. |  | I've made a special FreeBSD CD-ROM, which contains a fully installable | FreeBSD distribution, complete with X and sources.  I also put HTML and | text copies of the FAQ and Handbook, a mirror of www.freebsd.org, and a | set of web pages I created on my own, with various bits of random | info, such as what FreeBSD can do, what software packages are | available to do <x>, what other organizations/web sites/whatever | are using FreeBSD, etc.
+------------------------------------------------------------
+[1998-04-24T01:13:26+00:00] [Greg Lehey <grog@lemis.com>] []
+MID: 19980424091326.35888@papillon.lemis.com
+SUBJ: Re: The best tool for advocacy...
+BODY: On Wed, 22 April 1998 at  4:02:03 -0700, Donald Burr wrote: | > -----BEGIN PGP SIGNED MESSAGE----- | > | > ...is a CD-R drive. | > | > I just purchased one of these at a computer show.  And let me tell you, | > these are veritable Advocacy Machines. | > | > I've made a special FreeBSD CD-ROM, which contains a fully installable | > FreeBSD distribution, complete with X and sources.  I also put HTML and | > text copies of the FAQ and Handbook, a mirror of www.freebsd.org, and a | > set of web pages I created on my own, with various bits of random | > info, such as what FreeBSD can do, what software packages are | > avail
+------------------------------------------------------------
+[1998-04-25T23:24:16+00:00] [Jason Nordwick] []
+MID: <19980426072416.6653.qmail@xcf.berkeley.edu>
+SUBJ: KTEH action
+BODY: The public tv station KTEH is having a TV action to raise money for | the station and I noticed that about 15% of the donations are computer | related with about 30% of those being developer related (they have | had some symantec stuff, borland stuff, MS dev stuff) and about | another 30% being Web releated (HTML and Java Applet builder stuff). |  | They say that they are still looking for items, so I was wondering  | if it would be a good idea to give them a couple of "The Complete | FreeBSD" books with CDs.  If anybody thinks that this would be a  | good idea, I would be willing to help pay for some of them (
+------------------------------------------------------------
+[1998-04-30T14:10:07+00:00] [Don Wilde <dwilde1@ibm.net>] []
+MID: 3548863F.F05D37D9@ibm.net
+SUBJ: Re: Andreessen: Linux use growing
+BODY: Hi, Frank - | 	Been there, flamed that! We all get fried at both MS and Linux, just | because of their boorish, snotty attitude (and perhaps a bit because of | crappy software!). However, then we -- myself MOST DEFINITELY included | -- turn around and do the same thing. | 	We have a shot at the server market, but unless we add to our appeal to | the desktop set by improving ppp and printer setup and building our own | office suite, we will remain a niche OS. That's why I take Jordan's | comments to heart about carefully approaching the Popular Science crowd | with inteesting articles, and why I want to make a D
+------------------------------------------------------------
+[1998-04-30T16:28:36+00:00] [Frank Pawlak <fpawlak@execpc.com>] []
+MID: 199804301628.LAA01682@darkstar.connect.com
+SUBJ: Re: Andreessen: Linux use growing
+BODY: On 30 Apr, Don Wilde wrote: | > Hi, Frank - | > 	Been there, flamed that! We all get fried at both MS and Linux, just | > because of their boorish, snotty attitude (and perhaps a bit because of | > crappy software!). However, then we -- myself MOST DEFINITELY included | > -- turn around and do the same thing. |  |  | Hi Don, |  | Yup, sometimes it pays to go out and kick a tree when something sticks | in your craw the wrong way. |  |  | > 	We have a shot at the server market, but unless we add to our appeal to | > the desktop set by improving ppp and printer setup and building our own | > office suite, we will remain a niche
+------------------------------------------------------------
+[1998-05-01T03:30:41+00:00] [Frank Pawlak <fpawlak@execpc.com>] []
+MID: 199805010330.WAA00565@darkstar.connect.com
+SUBJ: Re: FreeBSD versus LINUX
+BODY: On  1 May, Greg Lehey wrote: | > On Wed, 29 April 1998 at 23:40:10 -0500, Frank Pawlak wrote: | >> On 29 Apr, John Kelly wrote: | >>> On Wed, 29 Apr 1998 19:10:58 +0200, "Yves Holzgen" | >>> <yves.holzgen@mba.be> wrote: | >>> | >>>> We already use LINUX system. What are the main difference between Linux and | >>>> freeBSD ? | >>> | >> | >> ... | >> | >> Linux is a very young clone of SYSV UNIX.  It is not really an | >> operating system, just a kernel.  The libs and other components that | >> make up an operating system come from many developers with out a central | >> centrol mechanism to ensure the quality of the release
+------------------------------------------------------------
+[1998-05-02T02:53:22+00:00] ["Jason C. Wells" <jcwells@u.washington.edu>] []
+MID: Pine.BSF.3.96.980501193142.918I-100000@s8-37-26.student.washington.edu
+SUBJ: Newbies and advocacy Was: FreeBSD vs YouKnowWho
+BODY: On Sat, 2 May 1998, John Kelly wrote: |  | >Linux is a good as a UNIX learning tool and a place for newbies to | >start.  If they cut their teeth on Linux, we won't be inundated by a | >horde of newbies who know next to nothing about UNIX. |  | Just about two years ago I was one of those newbies. After learning 'ls' | on the school account, I downloaded FreeBSD. That is just how fresh I was. | Man that is kind of funny. All I knew was 'ls'' one day. The next day I | was a "sysadmin" (sic). |  | I do not intend to denigrate your position. We should be cheering to be | inundated with newbies. I would just like you to r
+------------------------------------------------------------
+[1998-05-02T14:11:17+00:00] [Don Wilde <dwilde1@ibm.net>] []
+MID: 354B2984.CC161BAB@ibm.net
+SUBJ: Re: A GUI greyscale interface by default
+BODY: Ben Cohen wrote: | >  | > Hi! | >  | > > Sh*t, I even _use_ GUI's myself (sometimes). I just don't want to get | > > STUCK with using them to accomplish things. That's all. We aleady have | > > /stand/sysinstall,  | [snip] | > [Assuming that the -current /stand/sysinstall is the same as the 2.2.5 | > version] I am not personally keen on the dialog interface---I prefer the | > interface in the sysadmsh utility under SCO UNIX V r4 (the one before the | > current Open Server, though I'm not sure what the exact name was).  This | > seemed to cover everything including kernel config (which, admittedly | > is different for F
+------------------------------------------------------------
+[1998-05-02T14:57:56+00:00] [Ben Cohen <bjc23@hermes.cam.ac.uk>] []
+MID: Pine.BSF.3.96.980502154357.241L-100000@bjc23.trin.cam.ac.uk
+SUBJ: Re: A GUI greyscale interface by default
+BODY: Hi! |  | > I just want to keep | > the GUI-to-script separation absolute, because I don't want to lose any | > of the command-line text-file configuration interface. I'm afraid that | > GUI will eventually lead to binary config files, and then we've lost the | > access to mass config changes. I'm speaking specifically of user changes | > in passwd, but there are other places where I want to use scripts to | > make config changes. Before I get flamed, I realize that GUI doesn't | > imply lack of access, I just want to keep it on the sane path from the | > start. |  | I agree---I'm sure there are plenty of places where
+------------------------------------------------------------
+[1998-05-03T01:56:21+00:00] [Kris Kirby <kris@airnet.net>] []
+MID: 354BCEC4.7488008C@airnet.net
+SUBJ: Re: FreeBSD versus LINUX
+BODY: John Kelly wrote: | >  | > On Thu, 30 Apr 1998 22:30:41 -0500 (CDT), Frank Pawlak | > <fpawlak@execpc.com> wrote: | >  | > >In answering the question as I did, I was trying to provide some | > >information to persons that were switching from Linux to FreeBSD and | > >asking for information on the differences between them, and quite | > >frankly were given bullshit for an answer. | >  | > I don't think so.  Take of poll of all ISP's running either of the | > two, and I think you'll find that the vast majority prefer FreeBSD | > instead of Linux.  My statement stands.  "Amateurs like Linux, but | > professionals prefer F
+------------------------------------------------------------
+[1998-05-03T07:34:37+00:00] [John S. Dyson] []
+MID: <199805030734.CAA00413@dyson.iquest.net>
+SUBJ: Re: InfoWorld Electric: Linux Zealots Trashing FreeBSD,  Berkeley License
+BODY: Brett Glass said: | > I'm not mentioning FreeBSD explicitly in my messages, but I *am* advocating | > the Berkeley-style license. The angry zealots who respond to me, however, | > are trashing FreeBSD and the *BSDs in general. | >  | > I agree that one can rarely "win" these arguments, but one can raise the | > awareness | > level of the lurkers (of which there are many) that there's an alternative | > point of view. That's where the benefit comes in. | >  | My suggestion (I don't have time to flamewar right now) is to extoll the | virtues of a license that is both commercial and free friendly.   One | cannot win a d
+------------------------------------------------------------
+[1998-05-03T07:34:37+00:00] ["John S. Dyson" <dyson@FreeBSD.ORG>] []
+MID: 199805030734.CAA00413@dyson.iquest.net
+SUBJ: Re: InfoWorld Electric: Linux Zealots Trashing FreeBSD,  Berkeley License
+BODY: Brett Glass said: | > I'm not mentioning FreeBSD explicitly in my messages, but I *am* advocating | > the Berkeley-style license. The angry zealots who respond to me, however, | > are trashing FreeBSD and the *BSDs in general. | >  | > I agree that one can rarely "win" these arguments, but one can raise the | > awareness | > level of the lurkers (of which there are many) that there's an alternative | > point of view. That's where the benefit comes in. | >  | My suggestion (I don't have time to flamewar right now) is to extoll the | virtues of a license that is both commercial and free friendly.   One | cannot win a d
+------------------------------------------------------------
+[1998-05-03T21:40:52+00:00] ["Jan B. Koum " <jkb@best.com>] []
+MID: Pine.BSF.3.96.980503143957.9280H-100000@shell6.ba.best.com
+SUBJ: Re: FreeBSD versus LINUX
+BODY:  | 	Just like my .sig said all this time. :) | 	Yet, we are better to have Linux then Windows. |  | -- Yan |  | Jan Koum                  jkb@best.com |  "Turn up the lights; I don't want | www.FreeBSD.org -- The Power to Serve  |   to go home in the dark." |                         Linux -- DOS of the Unix world. |  | On Sat, 2 May 1998, Kris Kirby wrote: |  | >John Kelly wrote: | >>  | >> On Thu, 30 Apr 1998 22:30:41 -0500 (CDT), Frank Pawlak | >> <fpawlak@execpc.com> wrote: | >>  | >> >In answering the question as I did, I was trying to provide some | >> >information to persons that were switching from Linux to FreeBSD and | >>
+------------------------------------------------------------
+[1998-05-04T03:20:29+00:00] ["John S. Dyson" <dyson@FreeBSD.ORG>] []
+MID: 199805040320.WAA00468@dyson.iquest.net
+SUBJ: Re: InfoWorld Electric: Linux Zealots Trashing FreeBSD, Berkeley
+BODY: Amancio Hasty said: | >  | > One issue to keep in mind is that is very difficult and costly to  | > privatize an OS installation like FreeBSD . | >  | I agree, and a paraphrased version of your statement might end up | in my signature line.  I suggest that someone might want to beat | me to it :-).  (I don't have time for flamewars right now, lots | and lots of work beckons right now.) |  | --  | John                  | Never try to teach a pig to sing, | dyson@freebsd.org     | it just makes you look stupid, | jdyson@nc.com         | and it irritates the pig. |  | To Unsubscribe: send mail to majordomo@FreeBSD.org | with "u
+------------------------------------------------------------
+[1998-05-05T15:34:48+00:00] [kriston@ibm.net (Kriston J. Rehberg)] []
+MID: 2738-Tue05May1998113448-0400-kriston@ibm.net
+SUBJ: FreeBSD and OpenBSD -- differences?
+BODY: I've cut my teeth on all the free Unixes except OpenBSD.  After using | FreeBSD, I'm reluctant to move on since I've found that it's so much | better than NetBSD and the Linuxes.  Among those of you who have used | OpenBSD, what qualities does it possess, besides cross-platform ports | and self-proclaimed security hardening, that would make it any more or | less viable than FreeBSD?  I've read all the info about all of them, | but am reluctant to try OpenBSD. |  | Thanks, |  | Kris |  | PS...To try to avoid a flagrant idealism flame-war, I'm asking that | you reply only if you've actually used OpenBSD. |  | --  | Kriston J. 
+------------------------------------------------------------
+[1998-05-05T19:25:15+00:00] [Brett Glass <brett@lariat.org>] []
+MID: 199805051925.NAA24410@lariat.lariat.org
+SUBJ: Re: InfoWorld brawl esclates
+BODY: At 11:08 AM 5/5/98 -0700, Gary Kline wrote: |   | >	One reason we humans have survived these score millennia  | >	is because cooperation precedes competition.  Individual | >	effort sometimes yield brilliant results; cooperative,  | >	maximum.  Both operating systems would gain if features | >	from each were shared.  | > | >	Both the *BSD and *Linux OS's agree with the free software | >	paradigm; it's a matter of degree.  |  | One would certainly hope so! But tune in to that InfoWorld forum | to see what's actually going on. Anyone who critiques the GPL | is *immediately* branded a "Linux basher," a "zealot," or worse.
+------------------------------------------------------------
+[1998-05-05T20:55:12+00:00] [Gary Kline <kline@tera.tera.com>] []
+MID: 199805052055.NAA21094@athena.tera.com
+SUBJ: Re: InfoWorld brawl esclates
+BODY: According to Amancio Hasty: | > Curious, why can't you post such nice message to the Infoworld forum?? | >  |  | 	What? and get flamed!!? |  | 	What's their URL?  Brett? David? Anybody? |  | 	gary |  |  | To Unsubscribe: send mail to majordomo@FreeBSD.org | with "unsubscribe freebsd-advocacy" in the body of the message |  | 
+------------------------------------------------------------
+[1998-05-05T21:01:17+00:00] [Brett Glass <brett@lariat.org>] []
+MID: 199805052101.PAA25689@lariat.lariat.org
+SUBJ: Re: InfoWorld brawl esclates
+BODY: The URL of the Forum is |  | http://forums.infoworld.com/threads/get.cgi?53767 |  | You can read it without registering, but to post you need to fill | out a short registration form. Very little on the form is mandatory. |  | --Brett |  | At 01:55 PM 5/5/98 -0700, Gary Kline wrote: |   | >According to Amancio Hasty: | >> Curious, why can't you post such nice message to the Infoworld forum?? | >>  | > | >	What? and get flamed!!? | > | >	What's their URL?  Brett? David? Anybody? | > | >	gary | >  |  | To Unsubscribe: send mail to majordomo@FreeBSD.org | with "unsubscribe freebsd-advocacy" in the body of the message |  | 
+------------------------------------------------------------
+[1998-05-07T16:20:53+00:00] [Amancio Hasty <hasty@rah.star-gate.com>] []
+MID: 199805071620.JAA00452@rah.star-gate.com
+SUBJ: New Advocacy Mission: (Re: Oracle 7 on FreeBSD )
+BODY: Brief: I am sick and tire of listening to ISPs stating that they would love |        to have a supported version of Oracle's database. |  | Target : Oracle and NCI |  | Objective: Secure option to purchase Oracle 7 from either NCI or Oracle |  | What we need is contacts, fax numbers, e-mail address so we can ask for | Oracle 7. |  | 	End - Of - Transmission |  |  |  | To Unsubscribe: send mail to majordomo@FreeBSD.org | with "unsubscribe freebsd-advocacy" in the body of the message |  | 
+------------------------------------------------------------
+[1998-05-07T18:46:55+00:00] [Julian Elischer <julian@whistle.com>] []
+MID: Pine.BSF.3.95.980507114510.29363F-100000@current1.whistle.com
+SUBJ: Re: New Advocacy Mission: (Re: Oracle 7 on FreeBSD )
+BODY: remember, they HAVE such a beast, they are just not selling it.... |  | john, can you do 10 minutes of research and get the name of a sales person | to call..?  then we can put it in the archives to make sure all the calls | go through the same place.  |  | On Thu, 7 May 1998, Amancio Hasty wrote: |  | > Brief: I am sick and tire of listening to ISPs stating that they would love | >        to have a supported version of Oracle's database. | >  | > Target : Oracle and NCI | >  | > Objective: Secure option to purchase Oracle 7 from either NCI or Oracle | >  | > What we need is contacts, fax numbers, e-mail address so we can 
+------------------------------------------------------------
+[1998-05-08T14:01:25+00:00] [Don Wilde <dwilde1@ibm.net>] []
+MID: 35531035.CCE5C790@ibm.net
+SUBJ: Re: The importance of InfoWorld
+BODY: Simply put, InfoWorld is the most prominent of the weekly trade papers | dealing with networking and Internet issues. It is also one that is | beginning to bring respectibility to freeware through its columns and | editorial stance. The recent thread has related to IW Electric, which is | their on-line version. |  | Unfortunately, IW-E is degenerating into a flameware slugfest, and my | fear is that this present anti-GPL crusade is going to turn off a lot of | honest systems people who want working solutions and not controversy. I | don't go there anymore. |  |  |  | To Unsubscribe: send mail to majordomo@FreeBSD.org | w
+------------------------------------------------------------
+[1998-05-10T02:30:12+00:00] [Amancio Hasty <hasty@rah.star-gate.com>] []
+MID: 199805100230.TAA00766@rah.star-gate.com
+SUBJ: Re: Linux as a Mozilla total reference platform 
+BODY: Try to go out with a bang so if you read linux as reference make it  | a point to also include FreeBSD as a viable Open OS Platform and if | you get caught in a stupid linux flame fest you can always ask us | for support by posting on this mailing list. |  | 	Enjoy, | 	Amancio | 	 |  | >  | > The Classiest Man Alive, on Sat 5/9/1998, wrote the following: | > >  | > > There's an interesting bit of reading about Mark Andreesen's views on | > > Netscape's ties to Linux at | > > http://www.techweb.com/wire/story/TWB19980402S0013.  One of the more | > > interesting paragraphs is: | > >  | > > ----> | > > Andreessen outlined a scenari
+------------------------------------------------------------
+[1998-05-10T02:40:57+00:00] [Jason Nordwick <nordwick@scam.XCF.Berkeley.EDU>] []
+MID: 19980510024057.11773.qmail@xcf.berkeley.edu
+SUBJ: Re: Linux as a Mozilla total reference platform 
+BODY:  | Amancio Hasty, on Sat 5/9/1998, wrote the following: | >  | > Try to go out with a bang so if you read linux as reference make it  | > a point to also include FreeBSD as a viable Open OS Platform and if | > you get caught in a stupid linux flame fest you can always ask us | > for support by posting on this mailing list. | >  | > 	Enjoy, | > 	Amancio | > 	 | >  |  | Thanks for the support, but I dont think that anybody is going to | see FreeBSD on their radar for a few more years, I think.  People | are too caught up in Linux and the hype.  I started submitting | articles to http://slashdot.org that mention FreeBSD, to see
+------------------------------------------------------------
+[1998-05-10T02:52:06+00:00] [Amancio Hasty <hasty@rah.star-gate.com>] []
+MID: 199805100252.TAA00956@rah.star-gate.com
+SUBJ: Re: Linux as a Mozilla total reference platform 
+BODY: All the more reason to post . Like I said lets go out with a bang and | we don't have to rag on linux to do it just ask for FreeBSD to  | be considered as a  viable alternative OS. |  | 	All Is Not Lost, | 	Amancio |  | >  | > Amancio Hasty, on Sat 5/9/1998, wrote the following: | > >  | > > Try to go out with a bang so if you read linux as reference make it  | > > a point to also include FreeBSD as a viable Open OS Platform and if | > > you get caught in a stupid linux flame fest you can always ask us | > > for support by posting on this mailing list. | > >  | > > 	Enjoy, | > > 	Amancio | > > 	 | > >  | >  | > Thanks for the suppor
+------------------------------------------------------------
+[1998-05-10T06:58:21+00:00] [Jordan K. Hubbard] []
+MID: <24156.894783501@time.cdrom.com>
+SUBJ: Re: Linux as a Mozilla total reference platform
+BODY: [restricted to just advocacy] |  | > There's an interesting bit of reading about Mark Andreesen's views on | > Netscape's ties to Linux at | > http://www.techweb.com/wire/story/TWB19980402S0013.  One of the more | > interesting paragraphs is: |  | Um, this is _really_ old news. :-) |  | It's also a topic which has already been discussed to death in these | lists and various efforts have long since been set in motion to try | and get ourselves more aligned with Netscape.  We'll just have to let | the results (or lack thereof) speak for the success of those efforts. |  | - Jordan |  | To Unsubscribe: send mail to majordomo@Fre
+------------------------------------------------------------
+[1998-05-13T05:10:24+00:00] ["Frank Pawlak" <fpawlak@execpc.com>] []
+MID: 199805130010240788.00CCE456@mailgate.execpc.com
+SUBJ: BSD vs Linux
+BODY: I have been watching the unfolding of recent events in the "Open Source" | world and the various postings regarding FreeBSD  not getting its' deserved | recognition with great interest.  There is a sense of a great deal of | frustration with Linux getting all the press and BSD sits there like the | frog waiting to be kissed by a princess and turned into a prince. |  | The thought occurs that something is wrong here, something fundamental that | goes back to the advent of Linux.  I think if we can understand what that | something is we may be able to get a grip on the issues and get FreeBSD the | recognition it 
+------------------------------------------------------------
+[1998-05-13T14:31:56+00:00] ["Jason C. Wells" <jcwells@u.washington.edu>] []
+MID: Pine.BSF.3.96.980513141809.836B-100000@s8-37-26.student.washington.edu
+SUBJ: Proposed Charter for -advocacy
+BODY: Mr. Hubbard has been consistent in his calls for activity to back up | discussion. For a hodge podge of different people to be effective there | should be some degree of organization. |  | The core enjoys a degree of organization; so should advocacy. |  | In lay terms: Let's get our stuff together as a group. |  | I propose a charter for -advocacy. This charter will serve to transform | -advocacy from a channel of communications (discussion part) about FreeBSD | to an organizational unit (activity part) _within_ FreeBSD, Inc.  |  | Let's make -advocacy officially recognized as the "FreeBSD Advocacy | Group". |  | Before I 
+------------------------------------------------------------
+[1998-05-13T16:14:43+00:00] ["Jason C. Wells" <jcwells@u.washington.edu>] []
+MID: Pine.BSF.3.96.980513161344.1135A-100000@s8-37-26.student.washington.edu
+SUBJ: Re: Proposed Charter for -advocacy 
+BODY: On Wed, 13 May 1998, Jordan K. Hubbard wrote: |  | >> I move that FreeBSD, Inc and its community membership begin the charter of | >> the "FreeBSD Advocacy Group". | > | >Seconded. | > | >- Jordan |  | All in favor? |  | Aye. |  | Thank you,       | Try some of this. It will show you where you're at. | Jason Wells	 | http://www.freebsd.org/ |  |  | To Unsubscribe: send mail to majordomo@FreeBSD.org | with "unsubscribe freebsd-advocacy" in the body of the message |  | 
+------------------------------------------------------------
+[1998-05-13T19:27:15+00:00] ["Matthew D. Fuller" <fullermd@futuresouth.com>] []
+MID: Pine.BSF.3.96.980513140149.19536d-100000@shell.futuresouth.com
+SUBJ: Re: BSD vs Linux 
+BODY: These are my thoughts. | I can't do most of them, certainly not alone. | I do what I can.  Over the year (well, a little more) that I've been | running FreeBSD, I've personally converted at least 3 people.  If every | one of us converted 3 people a year, above and beyond other growth, that'd | add up pretty dang quick. | OK, onto my spiel. |  |  | On Wed, 13 May 1998, Jordan K. Hubbard wrote: |  | > > All I am saying is that FreeBSD isn't really on the mainstream's mind.  I | >  | > But we know all that already and you're not really adding anything | > useful to this conversation in pointing that out.  What we need | > her
+------------------------------------------------------------
+[1998-05-13T21:29:56+00:00] ["Jason C. Wells" <jcwells@u.washington.edu>] []
+MID: Pine.BSF.3.96.980513212553.503A-100000@s8-37-26.student.washington.edu
+SUBJ: Can GNATS be used to serve advocacy?
+BODY: I am brewing an idea. |  | Can GNATS be used to serve advocacy? (Seperately of course.) |  | I was thinking that it could be utilized as atracking mechanism for | advocacy issues. |  | Thank you,       | Try some of this. It will show you where you're at. | Jason Wells	 | http://www.freebsd.org/ |  |  | To Unsubscribe: send mail to majordomo@FreeBSD.org | with "unsubscribe freebsd-advocacy" in the body of the message |  | 
+------------------------------------------------------------
+[1998-05-13T23:04:21+00:00] ["Jordan K. Hubbard" <jkh@time.cdrom.com>] []
+MID: 12151.895100661@time.cdrom.com
+SUBJ: Re: Proposed Charter for -advocacy 
+BODY: > I move that FreeBSD, Inc and its community membership begin the charter of | > the "FreeBSD Advocacy Group". |  | Seconded. |  | - Jordan |  | To Unsubscribe: send mail to majordomo@FreeBSD.org | with "unsubscribe freebsd-advocacy" in the body of the message |  | 
+------------------------------------------------------------
+[1998-05-13T23:40:40+00:00] [Greg Lehey <grog@lemis.com>] []
+MID: 19980514091040.B320@freebie.lemis.com
+SUBJ: Re: Proposed Charter for -advocacy
+BODY: On Wed, 13 May 1998 at 14:31:56 +0000, Jason C. Wells wrote: | > Mr. Hubbard has been consistent in his calls for activity to back up | > discussion. For a hodge podge of different people to be effective there | > should be some degree of organization. | > | > The core enjoys a degree of organization; so should advocacy. | > | > In lay terms: Let's get our stuff together as a group. | > | > I propose a charter for -advocacy. This charter will serve to transform | > -advocacy from a channel of communications (discussion part) about FreeBSD | > to an organizational unit (activity part) _within_ FreeBSD, Inc. | > | > Let'
+------------------------------------------------------------
+[1998-05-13T23:57:08+00:00] ["Ron 'The Insane One' Rosson" <insane@oneinsane.net>] []
+MID: 19980513165708.53985@the.oneinsane.net
+SUBJ: Re: Proposed Charter for -advocacy
+BODY: If I have any say in this  ;-) | I third it   |  | Ron |  | On Wed, May 13, 1998 at 04:14:43PM +0000, Jason C. Wells wrote: | > On Wed, 13 May 1998, Jordan K. Hubbard wrote: | >  | > >> I move that FreeBSD, Inc and its community membership begin the charter of | > >> the "FreeBSD Advocacy Group". | > > | > >Seconded. | > > | > >- Jordan | >  | > All in favor? | >  | > Aye. | >  | > Thank you,       | Try some of this. It will show you where you're at. | > Jason Wells	 | http://www.freebsd.org/ | >  | >  | > To Unsubscribe: send mail to majordomo@FreeBSD.org | > with "unsubscribe freebsd-advocacy" in the body of the message |  | --  | ------------
+------------------------------------------------------------
+[1998-05-14T00:30:08+00:00] ["Frank Pawlak" <fpawlak@execpc.com>] []
+MID: 199805131930080411.01ED3F2D@mailgate.execpc.com
+SUBJ: Re: Proposed Charter for -advocacy
+BODY: I will second the motion. | Frank |  |  | *********** REPLY SEPARATOR *********** |  | On 5/13/98, at 5:49 PM, Jason C. Wells wrote:  |  | >Mr. Hubbard has been consistent in his calls for activity to back up | >discussion. For a hodge podge of different people to be effective there | >should be some degree of organization. | > | >The core enjoys a degree of organization; so should advocacy. | > | >In lay terms: Let's get our stuff together as a group. | > | >I propose a charter for -advocacy. This charter will serve to transform | >-advocacy from a channel of communications (discussion part) about FreeBSD | >to an organizationa
+------------------------------------------------------------
+[1998-05-14T00:49:42+00:00] [cliff ainsworth III <cliff@cliffsworld.com>] []
+MID: 3.0.5.32.19980513204942.008c0960@mail.internexus.net
+SUBJ: Re: Proposed Charter for -advocacy 
+BODY:  |  |  | In favor...count me in.... |  |  | -cliff |  | /-------------------------------------------------------------------------\ |  <http://www.cliffsworld.com> <http://www.openthrottle.com> |   PGP v5.0 public key       <http://www.cliffsworld.com/flash> |     |           "Those of you that renounce this superstitious  | 	and hysterical belief in users will be eligible  | 	to join the Warrior Elite of the M.C.P." -Tron 1982	 |  | To Unsubscribe: send mail to majordomo@FreeBSD.org | with "unsubscribe freebsd-advocacy" in the body of the message |  | 
+------------------------------------------------------------

@@ -1,0 +1,16 @@
+total 3
+[2000-01-01T00:00:00+00:00] [espie@liafa.jussieu.fr (Marc Espie)] [unix.bsd.openbsd.misc]
+MID: 8t8rho$lqq$1@vishnu.jussieu.fr>#1/1
+SUBJ: Re: ALSA sound drivers
+BODY: In article <39F785FD.F1AC87F5@host.com>, Johnny Kim  <user@host.com> wrote: | >Has anyone used ALSA sound drivers on OpenBSD?  I know OpenBSD has Linux | >compatibility but I'm not sure whether that just applies to binaries or | >if it extends to drivers and such. |  | No, this does not extend to drivers. | With some work, it is probably possible to grab some ALSA drivers and port | them. |  | >And just kinda curious, how much of a performance hit does using Linux | >(or any other OS like Solaris) binaries on OpenBSD? |  | Almost none, except for the memory footprint, as emulations usually need | to load some more shared libraries. |  | --  | 	Marc Espie		 | |anime, sf, juggling, unicycle, acrobatics, comics... | |AmigaOS, Ope
+------------------------------------------------------------
+[2000-10-26T01:22:14+00:00] [Johnny Kim <user@host.com>] [unix.bsd.openbsd.misc]
+MID: 39F785FD.F1AC87F5@host.com
+SUBJ: ALSA sound drivers
+BODY: Has anyone used ALSA sound drivers on OpenBSD?  I know OpenBSD has Linux | compatibility but I'm not sure whether that just applies to binaries or | if it extends to drivers and such. |  | And just kinda curious, how much of a performance hit does using Linux | (or any other OS like Solaris) binaries on OpenBSD? |  |  | 
+------------------------------------------------------------
+[2000-10-26T13:02:02+00:00] [Johnny Kim <user@host.com>] [unix.bsd.openbsd.misc]
+MID: 39F82A00.6087C406@host.com
+SUBJ: Re: ALSA sound drivers
+BODY: Marc Espie wrote: | >  | > In article <39F785FD.F1AC87F5@host.com>, Johnny Kim  <user@host.com> wrote: | > >Has anyone used ALSA sound drivers on OpenBSD?  I know OpenBSD has Linux | > >compatibility but I'm not sure whether that just applies to binaries or | > >if it extends to drivers and such. | >  | > No, this does not extend to drivers. | > With some work, it is probably possible to grab some ALSA drivers and port | > them. | >  | > >And just kinda curious, how much of a performance hit does using Linux | > >(or any other OS like Solaris) binaries on OpenBSD? | >  | > Almost none, except for the memory footprint, as emulations usually need | > to load some more shared libraries. | >  | > -- | >         Marc Espie | > |anime
+------------------------------------------------------------

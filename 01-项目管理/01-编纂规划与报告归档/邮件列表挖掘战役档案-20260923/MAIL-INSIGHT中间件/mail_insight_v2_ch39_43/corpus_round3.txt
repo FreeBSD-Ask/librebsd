@@ -1,0 +1,1248 @@
+
+##### DB_ID 165871 | unix.bsd | 1992-10-20T04:14:32+00:00 | bzs@ussr.std.com (Barry Shein)
+SUBJ: BSD Net/2 Distribution by UCB/CSRG Suspended!
+MID: BZS.92Oct19231432@ussr.std.com
+----
+
+Out of curiosity, and figuring maybe it would be a good idea to buy a
+copy, I contacted UCB about obtaining a copy of the Net/2 freeware on
+tape.
+
+I was informed by Pauline Schwartz (UCB/CSRG) that it is not being
+distributed, she cannot tell me why but I should check back "in a
+month or two".
+
+I asked if this was due to a technical problem? She said, no, but she
+really couldn't talk about it (fair enough, I thanked her and ended
+the conversation.)
+
+This is what is known in law as a "chilling effect". No decision, no
+court case (yet), but people are changing their behavior as if they
+were under a court order.
+
+Very disturbing. Universities should not be bullied like this.
+
+--
+        -Barry Shein
+
+Software Tool & Die    | bzs@world.std.com          | uunet!world!bzs
+Purveyors to the Trade | Voice: 617-739-0202        | Login: 617-739-WRLD
+
+
+
+
+##### DB_ID 172473 | unix.bsd | 1992-03-13T09:14:33+00:00 | bostic@hermes.Berkeley.EDU (Keith Bostic)
+SUBJ: Re: 386BSD 0.0 Release Notes
+MID: 1992Mar13.091433.19796@pasteur.Berkeley.EDU
+----
+In article <1992Mar12.224517.6018@franz.com> jdi@franz.com (John D. Irwin) writes:
+> Here are the release notes for the 386BSD 0.0 distribution.
+
+I would like to comment on one portion of the 386 Release Notes recently
+posted in this newsgroup, as I think that it could possibly be misunderstood.
+The sentences that caught my attention were:
+
+	Also, new subsystems created after the NET/2 tape and contributed
+	to Berkeley have not been added back in, because we did not want
+	to blur the distinctions of what is required to make NET/2
+	operational, and because CSRG will not allow us access to this
+	contributed work, although other groups have been allowed access.
+
+While it is true that some people have access to software contributed to
+Berkeley before it is officially released by the University, this access
+is in the form of an account on one of the CSRG's development machines.
+These accounts have the explicit restriction that source may not be copied
+from the machine without written or electronic permission from a member
+of the CSRG.  Usually, this type of access is provided to groups that are
+funding our efforts or individuals with whom we are collaborating.
+
+The system at Berkeley continually changes.  As a group of three and a
+half people, we do not have the time to make a distribution each time a
+significant change is made.  We try to be responsive to specific requests
+by sending updates to UUNET for their ftp archives.
+
+To the best of my knowledge, NO software has been made available to any
+organization for redistribution (including those which fund us) without
+also making it freely available to everyone either as part of an official
+BSD release or by placing it for anonymous ftp on uunet.uu.net.
+
+Keith Bostic
+	uunet!bostic
+	bostic@okeeffe.berkeley.edu
+
+
+
+
+
+##### DB_ID 172206 | unix.bsd | 1992-03-21T17:43:41+00:00 | bostic@hermes.Berkeley.EDU (Keith Bostic)
+SUBJ: Re: 386BSD 0.0 Release Notes
+MID: 1992Mar21.174341.12777@pasteur.Berkeley.EDU
+----
+In article <253@sleepy.UUCP> allyn@sleepy.UUCP (Mark Allyn) writes:
+>In article <1992Mar13.091433.19796@pasteur.Berkeley.EDU>, bostic@hermes.Berkeley.EDU (Keith Bostic) writes:
+>> The system at Berkeley continually changes.  As a group of three and a
+>> half people, we do not have the time to make a distribution each time a
+>
+>I cant help but notice from many of your postings. . . Three and a half
+>people. Does this mean three people working full time and a part timer
+>like a 20 hour per week grad student?
+
+Yes.  We have three full-time staff people, and half of the time of a
+fourth staff person.  That's the reason that we make such a point of
+giving credit to the UNIX community in our releases -- they do the
+work!  Three and a half people, no matter how dedicated, can't possibly
+generate or maintain the amount of software included in the 4BSD
+system.  The contributed software acknowledgements for NET/2 listed
+roughly 150 separate contributions.
+
+Speaking of which, we're always looking for volunteers to work on the
+project!  ;-}
+
+Keith Bostic
+	uunet!bostic
+	bostic@okeeffe.berkeley.edu
+
+
+
+
+
+##### DB_ID 170585 | unix.bsd | 1992-06-29T17:50:21+00:00 | bostic@hermes.Berkeley.EDU (Keith Bostic)
+SUBJ: Re: Funding 4.4BSD Development
+MID: 1992Jun29.175021.8142@pasteur.Berkeley.EDU
+----
+Let me talk about the who/what/where of NET/2, so that we don't start
+more rumors about who did what to whom in a vicious, but evil plot N
+years ago.
+
+Also, my memory is as bad as most people's and worse than some, and I'm
+not going to paw through email from four years ago until the subpoena's
+in my hands.  So, these are my recollections, worth what you're paying
+for them, and they're probably not too far wrong.
+
+The freely redistributable pieces of 4.3BSD-Reno were placed on-line by
+UUNET.  I don't remember when or where the deal got made, but Rick Adams
+and John Gilmore and I, and I'm sure some other people, talked it over,
+thought it was a good idea and did it.  Since there wasn't a freely
+redistributable release available from the University at the time, there's
+no issue as to when UUNET made it available.
+
+The NET/1 release was made in November of 1988, and was immediately placed
+online by UUNET.
+
+The Net/2 release was made in July of 1991.  UUNET did not immediately
+place it online, and there are two reasons for the delay.
+
+First, since UUNET is reachable from non-domestic sites, Rick had to wait
+until the GTDA license for the NET/2 release was approved.  (Don't ask me
+about all the ramifications of various licenses, it's amazingly complex.
+Suffice it to say that the GTDA license made NET/2 freely redistributable
+outside of the US.)  I got the GTDA license in November of 1991, so there's
+no way that Rick should have placed NET/2 online before then.
+
+Second, the CSRG explicitly asked Rick to not place NET/2 online or include
+it in the UUNET source distributions for an unspecified time so that we
+could make some money from the release.  Rick agreed to this request.   Once
+other organizations (who refused our request to not make NET/2 part of their
+distributions for a few months) started making NET/2 available, Rick quite
+reasonably wanted to do so as well, and we agreed.
+
+--keith
+
+
+
+
+##### DB_ID 164917 | unix.bsd | 1992-11-04T11:17:32+00:00 | torvalds@klaava.Helsinki.FI (Linus Torvalds)
+SUBJ: Re: Port of new Linux math emulator to 386bsd?
+MID: 1992Nov4.111732.9703@klaava.Helsinki.FI
+----
+In article <1992Nov4.021453.22896@citec.oz.au> sgccseh@citec.oz.au (Steve Hocking) writes:
+>
+>	Looking at the latest Linux release and user comments on it, it
+>appears that a new math emulator has been written which is more complete and
+>accurate, plus about 2x faster. Does anybody have plans to port this to
+>386bsd (since we got the original emulator from Linux anyway)?
+
+The problem is the copyright: it's copylefted code by Bill Metzenthen,
+so you cannot distribute it under the 386bsd copyright.  The original
+emulator I wrote was also originally copylefted, but I gave Bill and
+Lynne the right to use it under 386bsd (the copyright was changed to
+something like "freely usable for the 386bsd and linux projects"). 
+You'd have to ask permission from Metzenthen - his email address can be
+found in the sources.
+
+		Linus
+
+
+
+
+##### DB_ID 164831 | unix.bsd | 1992-11-04T16:04:17+00:00 | torvalds@klaava.Helsinki.FI (Linus Torvalds)
+SUBJ: Re: 386BSD or LINUX?
+MID: 1992Nov4.160417.25258@klaava.Helsinki.FI
+----
+In article <2582@bigfoot.first.gmd.de> gt@prosun.first.gmd.de (Gerd Truschinski) writes:
+>In article <1992Nov4.052106.29266@menudo.uh.edu>, wjin@cs.uh.edu (W. Woody Jin) writes:
+>|> In article <Nov.2.20.33.38.1992.18690@remus.rutgers.edu> glenw@remus.rutgers.edu (Glenn Wasserman) writes:
+>|> >
+>|> >I have Linux running on my machine now, and I'm just wondering if this 
+>|> >is the right choice. Is 386BSD more stable? 
+>|> 
+>|> Version numbers say it : Linux 0.98  <--> 386BSD 0.1 p58.
+>                                  ^^^^               ^^^^^^^
+>Hey, its  --> 4.3 <--- 386BSD isn't it :-)
+
+Yes, yes, yes.  I promised myself that I wouldn't bother with this
+thread, but so what.  Anyway, the only good way to tell which is better
+for your needs is to actually try them both out.  Version numbers don't
+tell you much: different people give different version-numbers, and the
+different design policies between the setups also change the way the
+numbers grow: linux has "real-time" developement, ie most of the time
+people can use a version that is at most a week or two away from my
+current one, so linux numbers automatically grow differently. 
+
+386bsd was started before linux was (judging by the DDJ articles), but
+due to various problems (disagreement about the first version as well as
+just the porting problems) linux has actually been available for a
+longer time.  So in some respects linux may be more stable, especially
+when it comes to the 386-specific things.  But yes, 386bsd has many
+years of developement behind it, so not surprisingly it probably is more
+stable in other areas (networking..  you can still easily crash linux
+with heavy ftp'ing it seems)
+
+As to other arguments I've seen: neither 386bsd or linux are
+microkernels, and I cannot really say anything about speed.  There has
+been some talk about linux seeming more responsive: that may be
+partially true due to (a) scheduler implementation and (b) less memory
+usage due to shared libs (especially under X).  On the other hand, I
+assume 386bsd handles swapping more gracefully: the linux paging deamon
+(actually implemented in the kernel) isn't exactly clever.  It's gotten
+a lot better since 0.95, but it's still simplistic. 
+
+And yes, both kernels seem to have problems with some hardware: not
+surprising when you consider the amount of different hardware available
+for the IBM PC/AT.  I have reports of linux running for 50 days (under
+actual load - not just sitting there) without a reboot (and even then
+due to upgrading the kernel), but I also have some reports of linux not
+even booting, although the hardware "in theory" should fit.  I'd assume
+the same holds for 386bsd. 
+
+One major difference between the systems is the way they grow: linux has
+grown openly with many smaller patches and releases and with different
+people handling different aspects of the system (I only handle actual
+kernel source: others do gcc/X11/rootdisk etc).  This has it's good
+sides: the system has grown pretty fast, and people who want to keep up
+can do so.  The more centralized (and judging by myself probably better
+administered) 386bsd releases mean people don't have to worry about
+where to get things, when to upgrade etc. 
+
+The linux realtime releases have had their share of problems: it means
+end-users can be bitten by bugs more easily (but it also means they can
+be found/fixed more easily).  It also means many have gotten the idea
+that you have to recompile the kernel every week just to keep it
+working, as well as resulting in that there has often been different
+versions of the same binary that may use features that aren't available
+in all kernels.  But if you are a kernel hacker, the linux way is
+probably preferable. 
+
+So the result of the above is: read both c.o.linux and c.u.bsd, try them
+both out, keep an open mind, and select the one that fits you (or keep
+running both: variatio delectat).  Linux is more of a hackers kernel:
+both the kernel and tools are updated all the time (gcc has generally
+been available for alpha-testing under linux even before it's been
+released - hlu has made images from the snapshots GNU puts out.  And so
+on).  And while linux now does have networking and NFS support, 386bsd
+is still probably the choice if you really need networking as opposed to
+"just want to play around with it". 
+
+		Linus
+
+PS.  No, I don't follow my own advice: I haven't got the diskspace to
+try out 386bsd.  That has never hindered anybody else on usenet from
+giving good advice.  And besides, I'm bi
+[...TRUNCATED len=4534]
+
+##### DB_ID 172032 | unix.bsd | 1992-03-29T08:14:59+00:00 | dharris@svcs1.UUCP (David Harris)
+SUBJ: 386BSD and Linux (talk and software)
+MID: 587@svcs1.UUCP
+----
+
+	Linux and 386BSD, Talk and Software Party!
+	------------------------------------------
+
+At PC UNIX SIG on Wednesday, April 1, 7pm, in Cupertino.
+
+The age of free Unix for 386 machines has arrived, and the biggest
+question is which one to pick!  A rewrite of Unix called Linux started
+the excitement a few months ago, and the March meeting of SVNet made
+bigger news by making a bootable 386 version of Berkeley Unix available.
+Both are pre-releases that people around the world are helping debug.
+
+Frank Schulz, our recently converted Minix expert, has been working with
+both Linux and 386BSD, and will give an overview of the 2 systems.  He
+will explain the differences between them and help you decide which one
+is better for your environment.  He will also talk about gcc 2.0, the
+GNU C compiler, which is part of both systems.
+
+We are hoping to see some of the other people in the area who are
+working on these systems, especially those brave enough to use the 0.0
+release of 386BSD.
+
+"Software Reproduction Party":
+
+Bring your own computer or formatted disks.  Frank will have the latest
+Linux version and John Sokol, who is helping Bill Jolitz, will have the
+latest 386BSD version.
+
+
+General Meeting Information:
+
+	Date:	Wednesday, April 1, 7:00pm to 9:00pm -- no fooling!
+
+	Place:	Cupertino Library		(Still looking for a
+		10400 Torre Ave.		 place to call home.)
+
+		Take 280 to the Cupertino exit South; turn left on
+		Stevens Creek; turn right on Torre; the library is
+		past the city hall on the left.
+
+	Info:	Dan Kionka,  408-944-7941, dkionka@cadence.com
+		Bill Miller, 408-253-3175, {uunet,mips}!svcs1!slix
+
+
+Upcoming meetings:
+
+	May 13:  Bill Jolitz on 386BSD (Combined meeting with SVNet)
+
+
+The PC UNIX SIG is a group that meets monthly to learn about UNIX and
+discuss the popular UNIX versions for the IBM PC family.  The format is
+technical discussions or product presentations.  We also have a club
+computer with Usenet access.
+
+The meetings are free and open to the public, but members are encouraged
+to join the parent group, Silicon Valley Computer Society, an IBM PC
+users group.  For more information on SVCS call 408-286-1271.
+
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+DETAILS ON THE 386BSD TO BE DISTRIBUTED:
+
+   This will be the SAME CODE NOW AVAILABLE ON THE INTERNET, but available 
+on 1.2 MB 5.25" disks and 1.44 MB 3.5" disks for those people who want 
+it now but can't get it from the net.
+
+   William F. Jolitz, the author of the 386 port of BSD UNIX (now free of 
+AT&T code) began releasing "386BSD" to the public about 4 weeks ago.  
+This is the result of the major porting effort described in Jolitz's 
+DR. DOBB'S JOURNAL series on 386 BSD.  
+
+   This version of 386 BSD is an "alpha" release and is recommended for
+skilled experimenters only.  You want "kernel experience" for your
+resume?  This is your chance.  While the source and binaries are 
+copyrighted by Bill Jolitz, he authorizes redistribution without required 
+charge (donations needed, but voluntary) for this and future releases.  
+He also plans to write a book about 386BSD, for educational use.
+
+   This version is said to run on 386/486 SX/DX ISA (AT bus), with
+traditional hard and floppy controller (IDE, ESDI, MFM types), and common
+displays (MDA/CGA/VGA/Hercules).  Ethernet controllers supported include
+Western Digital 8003EB, 8003EBT, 8003S, WD8003SBT, 8013EBT and Novell
+NE2000.  Clones also appear to work quite well.  Tape drive support is
+available for QIC-02 controllers as well, allowing use of 3M cartridges of
+QIC-60 through QIC-150 format.  
+
+   As configured on the binary distribution, the system REQUIRES a floating 
+point coprocessor (387 or compatible), 2 MB of memory (will run on 1 MB
+using paging).   4 MB of memory and a 200 MB hard disk is comfortable.
+
+   This early version is not reliable, and has trouble booting on some
+systems. There are known serious bugs, and missing utilities.  Even
+booting this version MIGHT cause a write to your hard disk, potentially
+clobbering whateve is there.  Please do a full backup first!  But this is 
+based on the Berkeley UNIX that vast numbers of students learned and used 
+--- now available FREE.  One would expect this software to be widely used 
+for education and as an introduction to UNIX.  There is an active group of 
+contributors worldwide improving and enhancing this code.  Their effort 
+is coordinated mainly by messages in the Usenet newsgroup called 
+"comp.unix.bsd".
+
+ ***************
+[...TRUNCATED len=5718]
+
+##### DB_ID 171573 | unix.bsd | 1992-04-29T13:57:30+00:00 | alan@auad.acadiau.ca (Alan McKay)
+SUBJ: From whence "The Hurd" (Was: Re: MACH is not UNIX)
+MID: alan.704555850@auad
+----
+mlanett@void.ncsa.uiuc.edu (Mark Lanett) writes:
+
+>are driving unix services. Once the hurd becomes available, though, I
+>expect that people will be wishing their unixes were "real" Mach :-) (the hurd
+>is a non-unix derived os for the Mach kernal being developed by the FSF. It
+>will be backwards-compatible with unix, but it looks like it'll be designed
+>much better than any unix around).
+
+I am aware of what "The Hurd" is, but was wondering where the name 
+comes from.  Anyone know?
+--
+Alan W. McKay		| (902)542-2201.396	| Wolfville, N.S. Canada
+alan@aucs.acadiau.ca	| Acadia University	| SUB Box 6008, B0P 1Z1
+
+
+
+
+##### DB_ID 3987 | comp.bugs.4bsd | 1989-05-09T19:15:04+00:00 | bostic at OKEEFFE.BERKELEY.EDU (Keith Bostic)
+SUBJ: V1.81 (Shadow passwords)
+MID: 8905091915.AA18887@okeeffe.Berkeley.EDU
+----
+Subject: Shadow passwords
+Index: lib 4.3BSD-tahoe
+
+Description:
+	     A shadow  password implementation is now available from
+	Berkeley,  and  will  be  a  standard  part of the next 4BSD
+	distribution.  The following describes the package  in  more
+	detail.  To get copies of the package, send electronic  mail
+	to  ucb-fixes-request at ucbvax.berkeley.edu,  or  call the BSD
+	distribution office at 415-642-7780.
+	     In the current BSD  system, there  are  three  password
+	files:  /etc/passwd,  /etc/passwd.pag,  and /etc/passwd.dir.
+	The first is the password file as  described  in  passwd(5);
+	the  others  are  files  containing  an ndbm(3) style hashed
+	database version of /etc/passwd.
+	     In the new  system,  there  are  four  password  files:
+	/etc/passwd,    /etc/master.passwd,   /etc/passwd.pag,   and
+	/etc/passwd.dir.  The first is exactly as it has always been
+	with  the  exception  that  the encrypted password field has
+	been replaced with a single asterisk.  The next three  files
+	have  much  the  same  relationship  as  the original model;
+	master.passwd is the new password file, and  passwd.pag  and
+	passwd.dir  comprise  the  ndbm version.  The one difference
+	between the contents of master.passwd and  the  contents  of
+	its  ndbm files is that only master.passwd has the encrypted
+	form of the password.  The ndbm  files  have,  instead,  its
+	offset  in  master.passwd.  Note, the file /etc/passwd is no
+	longer used for anything, it is simply  left  in  place  for
+	backward  compatibility  with  shell  scripts.
+	     The model we are  using  assumes  that  standard,  non-
+	privileged  programs  do  not  need to look at the encrypted
+	form of  the  password.   Therefore,  we  have  altered  the
+	getpwent(3) routines to read the standard data from the ndbm
+	files, and only attempt to read  and  return  the  encrypted
+	password  if  the  process  is running as super-user.  Obvi-
+	ously, master.passwd is read/writable only by the super-user
+	and  and  the ndbm files are readable by anyone and writable
+	only by the super-user.
+	     We also added three new fields to the password file;  a
+	``change''  field,  for password aging, an ``expire'' field,
+	for account expiration, and a ``class'' field for everything
+	else.   The  first two are implemented in login(1), and are,
+	respectively,  the  date  by  which  the  password  must  be
+	changed,  and  the date when the account expires.  The third
+	will be part of the next  4BSD  release,  but  is  currently
+	unimplemented.   It will be a ``pointer'' to a termcap style
+	database that may be used to store  site-dependent  informa-
+	tion  about a user, from when the user may be allowed to log
+	into the system, to how often the user is required to change
+	their password.
+	     The include file, pwd.h, has changed  in  fairly  major
+	ways.   We've  deleted  the two unused fields, ``pw_quota'',
+	and ``pw_comment'', and replaced them with ``pw_change'' and
+	``pw_class'',    respectively.    The   other   new   field,
+	``pw_expire'', has been added at the end of the structure.
+	     The only known problem with the current  implementation
+	of  password aging is that there is no ``reset'' -- when the
+	user changes his or her password it  essentially  shuts  off
+	password  aging  for  that  user.   To  reenable  aging,  an
+	administrator will have to use vipw(8) or chpass(1) to  pro-
+	vide  a new password timeout.  We expect to remedy this with
+	the new ``class'' database, where one of the provided fields
+	will  be  a value specifying how often the password needs to
+	be updated.  Once this is in place,  passwd(1)  will  simply
+	reset  the password timeout value each time the user changes
+	their password.
+	     Two programs have been deleted by this package, chfn(1)
+	and  chsh(1).  They are replaced by the much more comprehen-
+	sive program chpass(1).  The other programs affected by this
+	package behave much like they have always behaved.
+
+
+
+
+##### DB_ID 57733 | comp.unix.questions | 1989-03-05T00:49:15+00:00 | norstar at tnl.UUCP (Daniel Ray)
+SUBJ: /etc/shadow equivalent without a source license!
+MID: 199@tnl.UUCP
+----
+Hello everybody. I am trying to hack together a working equivalent to
+the /etc/shadow scheme of unreadable passwords. I run a XENIX 386 v2.2.3
+system, and only have a binary license. Working with the 'bpatch' binary
+editor, I was planning to substitute the word 'shadow' for 'passwd' in
+the text string appearances of '/etc/passwd' in the compiled object files
+for: /bin/passwd, /etc/login, and /bin/su. (Then I would have cron periodic-
+ally copy /etc/shadow to /etc/passwd except that the 2nd field would be
+an 'x' in the public /etc/passwd version, while the real passwd file would
+be /etc/shadow).
+
+I think I could have made the scheme work except for one thing: /bin/passwd
+does a chmod("/etc/passwd",444); somewhere before exiting, which is quite
+proper for a PUBLIC passwd file. Only I want it to leave the mode as 400
+for the substituted PRIVATE shadow file.
+
+My question is: is there a way to use 'bpatch' on /bin/passwd so that I can
+edit the mode 444 to mode 400. How would I identify the hex bytes that do
+this chmod?? Is this more trouble than its worth (maybe I should find or
+write my own /bin/passwd ???). I wish SCO and other UNIX sellers would
+include the source code for these security-related programs as they do
+for the UUCP dial program...as it stands now I'd have to fork over $60000
+for the privilege! oh well..
+
+Thanks if anyone can assist me in this!
+
+dan
+norstar
+The Northern Lights, Burlington Vermont               |     Futility, like
+tnl dialins: 802-865-3614 at 300-2400 bps.          ` | /   suffering, is
+------------------------------------------        --- * --- a *hell* of a
+uucp: uunet!uvm-gen!tnl!norstar or                  / | .   lot of fun!
+{decvax,linus}!dartvax!uvm-gen!tnl!norstar            |     (Try it you'll
+                                                            like it!!)
+
+
+
+
+##### DB_ID 109515 | comp.unix.wizards | 1988-08-01T15:14:21+00:00 | res at ihlpe.ATT.COM (Rich Strebendt, AT&T-DSG @ Indian Hill West)
+SUBJ: att & osf
+MID: 3232@ihlpe.ATT.COM
+----
+In article <4964 at killer.DALLAS.TX.US>, dono at killer.DALLAS.TX.US (Don OConnell) writes:
+> >From: bzs at bu-cs.BU.EDU (Barry Shein)
+> >From: kluft at hpcupt1.HP.COM (Ian Kluft)
+> >>rogers at ofc.Columbia.NCR.COM (H. L. Rogers) writes:
+> >>> Does AT&T membership give respectability to the OSF crowd?
+> >>Actually, it was AT&T and Sun who were lacking in respectability after
+> >>trying to steal the whole market for themselves.
+> >"Steal" is a very strange choice of words to apply to the owner (AT&T).
+> Strange "owner".
+> They didn't want anything to do with it's creation or even support
+> until a lot of different people were enthralled with it.
+
+Sigh.
+
+Why is it that AT&T's roles and positions get so garbled in time, and
+all sort of nasty motives imputed, where none existed.
+
+This is probably futile, in view of the anti-AT&T sentiment of many on
+the net (part of the "Big is Bad" view of the world?), but my
+conscience will not allow me to remain silent.  Be advised that this is
+the view of someone who was not in on the beginnings himself, but who
+has been around and involved in the Software world to have a fair
+degree of understanding of the history.  I invite the actual
+participants to correct any misstatements I may make.
+
+The developers of the UNIX Operating System and of the C Programming
+Language were indeed supported by AT&T.  They were members of Bell
+Telephone Laboratories, and were paid a modest but reasonable salary
+for their labors.  They were allowed the use of some otherwise idle
+computer gear when they requested it, and were allowed to develop their
+toy operating system unmolested.  When others in the Laboratories
+discovered that this "toy" was damn useful, company resources were used
+in many locations to make it available for use.  I had the good fortune
+to be on the sidelines when UNIX was first brought up on a PDP/11 in
+the Indian Hill Computer Center here in Illinois (where we now have a
+huge number of Comp Center and private machines running it -- including
+the UNIX PC on which I am typing this note!).
+
+> It is only the greed of the corporate environment that makes ATT want to
+> have anything to do with UNIX(Although they are not alone in this philosophy).
+
+At that time AT&T was under the constraints of the 1956 Consent Decree
+which did not allow AT&T to sell commercial computers or software.  In
+its "greed" the company allowed the Bell Labs people to virtually give
+away copies of the UNIX source to their collegues at Universities
+around the world.  It was not totally free, of course, but no great
+sums of money were made in this distribution of the programs.  The cost
+was largely to cover the cost of administering the distribution program
+(personel, media costs, etc.).
+
+Once the 1956 Consent Decree was set aside by the Divestiture of 1984,
+it was realized that the UNIX Operating System was a unique product of
+AT&T and could be used to gain entry into the computer business that
+was suddenly opened to the Company.  Subsequently, it has been developed
+as a product, supported as a product, and marketed as a product.  Is
+this "the greed of the corporate environment" ???  I guess it is as
+much that as it is greed that makes Apple Computer actually charge
+MONEY for THEIR products, or makes Microsoft actually expect you to PAY
+for a copy of MS-DOS!!!
+
+> Signed Don
+> "One who only has 2 cents worth to give."
+
+Let us hope that my own $0.02 can help to dispell some of the
+misinformation that runs rampant on the net.
+
+				Rich Strebendt
+				...!att![iwsl6|ihlpe|ihaxa]!res
+
+
+
+
+##### DB_ID 109999 | comp.unix.wizards | 1988-08-05T21:12:17+00:00 | henry at utzoo.uucp (Henry Spencer)
+SUBJ: att & osf
+MID: 1988Aug5.211217.21037@utzoo.uucp
+----
+In article <3396 at vpk4.UUCP> scott at attcan.UUCP (Scott MacQuarrie) writes:
+>As I understand it, we were not forced to share any of our developed 
+>technologies prior to 1984. We were simply not allowed to make a profit
+>from them...
+
+I could be wrong, but my impression is that one of the Consent Decrees
+required licensing on reasonable terms to all comers.  I know of at
+least one occasion when lawsuits were being considered over possible
+refusal to release technology (although of course that may just mean
+that the potential plaintiffs were going to try it on speculation).
+
+>> ... there have already
+>> been two releases of the SVID, and nobody seriously believes there won't be
+>> more...
+>There have not been two versions of the SVID, there have been volumes added
+>to the SVID to cover developments in various areas...
+
+There most certainly have been two separate publications of it, although I
+admit I didn't check them line-for-line for incompatibilities.  It used to
+be all one volume, remember?  And adding stuff to the standard definitely
+constitutes changing it, from the viewpoint of those who want to claim
+compliance.
+
+Note also that the SVID explicitly promises changes in a number of areas
+in the future.
+
+>> this is really laying it on a bit too thick.  There are many things AT&T
+>> could have done to make hardware independence easier, and they have done
+>> very few of them. 
+>System V Unix runs on a variety of equipment which is not manufactured with
+>or by AT&T. Your arguement that SYSV or SYSV-compatible operating systems only
+>run on AT&T equipment is simply wrong.
+
+That's not what I said, and not what I meant.  I didn't say it would not run
+on non-AT&T equipment; I said AT&T was making no serious attempt to make it
+easy to port it to non-AT&T equipment.  Last time I looked, SysV still had
+quite a bit of code that dereferences NULL pointers, a known portability
+problem (and coding error) that AT&T has made no effort to fix.  You were
+the one claiming that they were bending over backwards to make it portable;
+well, when are they going to fix the NULL-pointer bugs?
+
+>The "Red Alert" as you so quaintly put it, was the result of UNIX
+>becoming a serious contender in the computer market and the company
+>with the most knowledge of it (us) beginning a business relationship
+>with a corporation which has displayed a sharp and aggressive ability
+>in that market.
+
+It was the result of the company with the most influence on Unix, AT&T,
+which is simultaneously the supplier of Unix and the setter of de-facto
+standards for it, allying itself with one particular hardware supplier.
+Many people see this as a major conflict of interest for AT&T; how can
+it remain the paragon of evenhandedness that you claim it is, when it has
+climbed into bed with one manufacturer to the exclusion of the others?
+
+>AT&T has in the past, and will in the future, work towards creating a
+>UNIX standard which will allow the system to grow to its full potential.
+
+Its full potential as a source of revenue for AT&T.  That is how profit-
+making corporations, like AT&T nowadays, work.  This does not necessarily
+have anything to do with its full potential as useful software for the
+rest of us.  In particular, note that changing the rules regularly, so
+that AT&T and its intimate partners consistently stay ahead of the rest
+of the manufacturers, is very much in the financial best interests of AT&T
+and its stockholders.  AT&T is not a philanthropic institution; it is
+required to put the interests of its stockholders first.
+
+>Your comments implying a strategy to control the market or to create a
+>proprietary operating system would be humorous, except for the concern
+>that someone might actually take you serious.
+
+I am by no means the first one to suggest this, so don't credit me with
+any special paranoia or influence.  Ask the OSF people, if you really
+want an earful.
+
+>You obviously possess an unfortunate anti-AT&T attitude which is 
+>suprising since one of the things which AT&T Canada has started doing
+>is to provide a backbone usenet feed into Canada, at currently our own
+>expense...
+
+I'm not anti-AT&T, I'm anti-certain-AT&T-policies.  I am pleased and
+grateful for AT&T Canada's support of Usenet hereabouts, but I am not
+bribable (not at this price, anyway!) and do not see that the two issues
+are connected.
+-- 
+MSDOS is not dead, it just     |     Henry Spencer at U of Toronto Zoology
+smells that way.               | uunet!attcan!utzoo!henry henry at zoo.t
+[...TRUNCATED len=4513]
+
+##### DB_ID 170083 | unix.bsd | 1992-07-22T21:29:03+00:00 | terry@npd.Novell.COM (Terry Lambert)
+SUBJ: Re: AT&T vs. BSDI --> 4.3BSD-NET2 distribution requires AT&T license!!!
+MID: 1992Jul22.212903.29537@gateway.novell.com
+----
+Newsgroups: comp.unix.bsd
+Subject: Re: AT&T vs. BSDI --> 4.3BSD-NET2 distribution requires AT&T license!!!
+Summary: 
+Expires: 
+References: <l6nibgINNje6@neuro.usc.edu> <1992Jul21.142631.14517@mnemosyne.cs.du.edu> <mcuddy.711795634@fensende>
+Sender: 
+Followup-To: 
+Distribution: 
+Organization: Novell NPD -- Sandy, UT
+Keywords: AT&T 'Death Star' rises over BSDI's horizon [Tel. 1-800-800-4BSD
+
+In article <mcuddy.711795634@fensende> mcuddy@fensende.Rational.COM (Mike Cuddy) writes:
+>jjsmith@nyx.cs.du.edu (Jonathan J. Smith) writes:
+>
+>
+>>Hrm well to the uneducated in legalieze (me) this sounds just a tad unlikely,
+>>First of I believe that AT&T has to PROVE that said things actually were
+>>based on derived from intellectual property of AT&T.  I also believe that
+>>burden of proof lies with AT&T.  To me it sounds a shade unlikely that they
+>>could possibly prove that , I COULD be totaly wrong here however.  Just 
+>>doubting that is will happen i guess, sounds way to unreasonable.
+>
+>Heh, you forget that USL/ATT have lots of money for lawyers.  How many 5 to 10
+>thousand dollar lawsuits can BSDI withstand?  5?  10?  That's a lot of money
+>for a startup, however, it's piss in a bucket for ATT/USL. *SIGH*   Do not
+>forget the principles this country is decaying under:  Only the financially 
+>advantaged win :-(.
+
+I would think that there are several issues involved here:
+
+1)	Trademark infringement
+
+Is the University of California, Berkeley, entitled to use the AT&T
+trademark because it is an AT&T licensee?  If so, the trademark is
+defensible on the basis that it is held by AT&T and licensed.  The suit
+may be pressed on grounds that use of the "1-800-ITS-UNIX" appearing in
+the BSDI materials constituted use of the trademark without footnoting
+the fact that "UNIX is a registered trademark of AT&T and Bell
+Laboratories" for that particular use.  Even if the trademark is clearly
+identified due to other use in the materials, this is a nit that AT&T is
+entitled to pick.  Under what conditions would this not be true?  The
+first is that if UCB is not entitled to use of the trademark, a case can
+be made that UCB's longstanding use constitutes "common usage", and thus
+"UNIX" is no longer a trademark.  The second case is if the initial use
+of the trademark is footnoted.  This implies inclusion of all subsequent
+references in the materials.
+
+
+2)	Copyright infringement
+
+I do not think it is possible to pursue a case on this basis; this is due
+in large part to the nature of the developement effort that took place.
+One place where this might fall down would be infringement on the basis
+of "look and feel".  I think that it would be possible to argue that the
+"look and feel" of the AT&T OS derives in large part from UCB code that is
+not proprietary to AT&T.  The problem with this approach, as opposed to
+simple copyright violation by inclusion of AT&T dervied source, is that
+the burden of proof for "look and feel" would be easily satisfied, and
+that it would then be up to BSDI (or UCB) to prove that the "look and feel"
+is derivitive of UCB code.  This could be rather expensive.  I think AT&T's
+failure to bring suit against Andy Tannenbaum rules this out.
+
+
+3)	Trade secret infringement
+
+I do not believe this is defensible at all.  First, there has not been
+sufficient effort by AT&T to protect their trade secrets.  Allowing the
+Bachman book, among many, many other titles to continue to be published,
+each of which disclose in large measure AT&T's "trade secrets".  I think
+it would be difficult for AT&T to find a particular "trade secret" to
+litigate over; there are too many counter examples.  This could still be
+effective, as it will be very expensive coming up with counter examples.
+
+
+All of these issues fail from the standpoint of BSDI's willingness to drag
+UCB, CSRG, and the Jolitz's into the matter.  Using any of these as an
+example, it would be trivial to provide proof of "adverse use".  This would
+have the effect of placing litigation issues brought by AT&T into the
+public domain, thereby restricting.  Obviously, UCB and CSRG are much
+better targets than the Jolitz's, in this case, as any suits brought
+against the Jolitz's for their release of code would be considered to be
+contemporaries of the suits against BSDI, and therefore would not be
+binding on the court (this has yet to reach appellate level).
+
+I think it is possible to exempt UCB, CSRG, and the Jolitz's from this by
+declaration that their disclosure constitutes "educational use" wi
+[...TRUNCATED len=6025]
+
+##### DB_ID 164686 | unix.bsd | 1992-11-06T04:36:57+00:00 | wkt@csadfa.cs.adfa.oz.au (Warren Toomey)
+SUBJ: Wanted: Info on USL/BSDI suit & Net/2 history
+MID: 1992Nov6.043657.21607@sserve.cc.adfa.oz.au
+----
+I've been asked to present a seminar locally on the USL/BSDI lawsuit, and I'm
+after more information about the current progress of the case, and the
+history of the Net/2 tape. If anybody can help with the following, I'd be
+very much obliged.
+
+	+ Current state of the lawsuit.
+
+	+ Any blurb/propaganda disseminated by USL/BSDI/BSD Regents.
+
+	+ Release dates of Net/1 and Net/2 (esp. if you have Usenet
+	  announcements), and what each tape contains wrt 4.3-Tahoe
+	  and 4.3-Reno.
+
+	+ Anything else that you think might be of interest.
+
+I already have
+
+	+ The last 3-4 months of comp.unix.bsd postings :-)
+
+	+ The few files describing the suit from
+	  (??) wuarchive:vendors/bsdi	(something like that).
+
+Please email anything to wkt@csadfa.cs.adfa.oz.au. I'll summarise to the
+net, and will also make my seminar available when I've written it.
+
+Many thanks in advance!!!
+
+	Warren
+
+
+
+
+
+
+##### DB_ID 155317 | unix.bsd | 1995-02-13T03:38:08+00:00 | wes@indirect.com (Barnacle Wes)
+SUBJ: Re: Cannons Away: Vote NO on newsgroup reformation.
+MID: D3x63K.D28@indirect.com
+----
+Kaleb KEITHLEY (kaleb@fedora.x.org) takes Terry Lambert to task:
+: This keeps coming up, and you can say it a thousand times, but mere
+: saying it isn't going to make it true. 386BSD, FreeBSD 1.x, and NetBSD
+: 0.9 are all derivative works from the Berkeley UNIX Net/2 release,
+: a combination of BSD UNIX 4.2 and BSD UNIX 4.3.
+
+: FreeBSD 2.x and NetBSD 1.x are derivative works of of Berkeley UNIX 4.4,
+: specifically the 4.4Lite release.
+
+: If you have some substantive evidence (besides another tiresome round
+: of "because I say so") that speaks to the contrary, then by all means
+: let's have it.
+
+How 'bout last summer's consent decree, declaring once and forever
+that '4.4 BSD Lite' contains no 'UNIX' source code?  You dork!
+
+OK, so this is a fine legal point, but I'm really sick of this dweeb
+arguing the point.  Everyone that uses FreeBSD or NetBSD got dragged
+through the mud on this issue last year, so let's just say it once and
+for all: 4.4-Lite is not UNIX!  FreeBSD is not UNIX!  NetBSD is not
+UNIX!  None of us has to pay AT&T, Novell, or X/Open *any* licensing
+fees!
+
+Terry, stop arguing with this dweeb!  Both of you shaddup!  ;^)
+
+	Wes Peters
+
+
+
+
+##### DB_ID 128978 | bugs.4bsd.ucb-fixes | 1990-07-06T08:10:32+00:00 | bostic@OKEEFFE.BERKELEY.EDU (Keith Bostic)
+SUBJ: V1.91 (4.3BSD-Reno contributors)
+MID: 9007060810.AA05021@okeeffe.Berkeley.EDU
+----
+Subject: 4.3BSD-Reno contributors
+
+	Much of the software in the Berkeley Software Distribution is
+contributed by people and organizations in the user community.  We
+gratefully acknowledge these contributions; without their support this
+distribution would not be possible.
+
+	As part of the 4.3BSD-Reno distribution, we have continued to
+identify portions of the distribution which are freely redistributable
+to and by anyone, except as restricted by law.  (As a note to anyone
+interested in international redistribution, we have recently obtained
+a General License GTDA from the Commerce Department covering the BSD
+Networking Release #1.) Source code with the following copyright
+notice may be freely redistributed, under the specified conditions,
+without further license.
+ 
+    Redistribution and use in source and binary forms are permitted
+    provided that: (1) source distributions retain this entire copyright
+    notice and comment, and (2) distributions including binaries display
+    the following acknowledgement:  ``This product includes software
+    developed by the University of California, Berkeley and its
+    contributors'' in the documentation or other materials provided with
+    the distribution and in all advertising materials mentioning
+    features or use of this software.  Neither the name of the University
+    nor the names of its contributors may be used to endorse or promote
+    products derived from this software without specific prior written
+    permission.
+
+    THIS SOFTWARE IS PROVIDED ``AS IS'' AND WITHOUT ANY EXPRESS OR IMPLIED
+    WARRANTIES, INCLUDING, WITHOUT LIMITATION, THE IMPLIED WARRANTIES OF
+    MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
+
+	The following list are people and organizations that have contributed
+source code that will be part of the 4.4BSD release.  The first group provided
+large subsystems, the second, a specific program or library routine.  Please
+report any errors or omissions to ``bigbug@ucbvax.berkeley.edu''.  Also, if
+you're interested in contributing software, please contact the CSRG at this
+address.
+
+=-=-=-=-=-=-=-=-=
+HP300 support			Systems Programming Group of the University of
+				Utah Computer Science Department.
+386 support			William Jolitz
+CCI 6/32 support		Computer Consoles Inc.
+VAX device support		Digital Equipment Corp.
+VAX BI support			Chris Torek
+Stdio				Chris Torek
+ANSI C library support		Chris Torek
+Compiler support		The Free Software Foundation
+NFS support			Rick Macklem
+RPC support			Sun Microsystems Inc.
+NFS automounter			Jan Pendry
+Autoconfiguration		Robert Elz
+Quota support			Robert Elz
+Job control			Jim Kulp
+Network device drivers		Micom-Interlan, Excelan
+X11				Project Athena, MIT
+Transport/Network OSI layers	IBM Corp., and the University of Wisconsin
+VAX 3000 support		Mt. Xinu
+C library documentation		American National Standards Committee X3
+System documentation		IEEE (POSIX)
+
+=-=-=-=-=-=-=-=-=
+cal(1)				Kim Letkeman
+cat(1)				Kevin Fall
+col(1)				Michael Rendell
+comm(1)				Case Larsen
+compress(1)			James A. Woods, Spencer Thomas and Joseph Orost
+cp(1)				David Hitz
+cut(1)				Adam S. Moskowitz and Marciano Pitargue
+des(1)				Phil Karn, Jim Gillogly and Richard Outerbridge
+du(1)				Chris Newcomb
+emacs(1)			Richard Stallman
+find(1)				Cimarron Taylor
+finger(1)			Tony Nardo
+fold(1)				Kevin Ruddy
+fpr(1)				Robert Corbett
+fsplit(1)			Jerry Berkman and Asa Romberger
+gprof(1)			Peter Kessler
+indent(1)			David Willcox, Eric Schmidt, James Gosling and Sun Microsystems
+jove(1)				Jonathon Payne
+lex(1)				Vern Paxson
+locate(1)			James A. Woods
+ls(1)				Michael Fischbein
+m4(1)				Ozan Yigit
+mail(1)				Kurt Schoens
+make(1)				Adam de Boor
+mh(1)				Rand Corporation
+mv(1)				Ken Smith
+news(1)				Rick Adams (and a cast of thousands)
+nm(1)				Hans Huebner
+paste(1)			Adam S. Moskowitz
+patch(1)			Larry Wall
+rcs(1)				Walter F. Tichy
+tn3270(1)			Gregory Minshall
+tsort(1)			Michael Rendell
+unifdef(1)			Dave Yost
+uniq(1)				Case Larsen
+uuq(1)				Lou Salkind and Rick Adams
+who(1)				Michael Fischbein
+window(1)			Edward Wang
+write(1)			Craig Leres and Jef Poskanzer
+xargs(1)			John B. Roll Jr.
+yacc(1)				Robert Paul Corbett
+
+bitstring(3)			Paul Vixie
+ctime(3) (timezone support)	Arthur David Olson
+fnmatch(3)			Guido van Rossum
+glob(3)				Guido van Rossum
+lsearch(3)			Roger L. Snyder
+nsaddr(3)			J.Q. Johnson
+
+arithmetic(6)			Eamonn McManus
+atc(6)				Ed James
+bcd(6)				Steve Hayman
+caesar(6)			Rick Adams
+ching(6)			Guy Harris
+factor(6)			Landon Curt Noll
+fortune(6)			K
+[...TRUNCATED len=4951]
+
+##### DB_ID 126879 | bugs.4bsd | 1992-03-17T05:23:43+00:00 | jfw@eddie.mit.edu (John Woods)
+SUBJ: Bug in make (4.3Reno/NET2)
+MID: 1992Mar17.052343.7513@eddie.mit.edu
+----
+
+There is a bug in the new make from 4.3Reno and also present in the Net2
+release (as found on uunet).  A command line argument consisting of a lone
+dash (-) causes an infinite loop ("make - make" was an excellent test case).
+
+I believe the following patch fixes the bug; it still represents what I
+would call unwarranted chumminess with the library.  The fix is to keep
+getopt() from being asked to re-examine the - argument, which it will
+again call an error and not advance optind past...
+
+*** main.c.orig	Mon Mar 16 20:19:13 1992
+--- main.c	Mon Mar 16 20:20:52 1992
+***************
+*** 280,286 ****
+  			if (!**argv)
+  				Punt("illegal (null) argument.");
+  			if (**argv == '-') {
+! 				optind = 0;
+  				goto rearg;
+  			}
+  			(void)Lst_AtEnd(create, (ClientData)*argv);
+--- 280,289 ----
+  			if (!**argv)
+  				Punt("illegal (null) argument.");
+  			if (**argv == '-') {
+! 				if ((*argv)[1])
+! 					optind = 0;	/* -flag... */
+! 				else
+! 					optind = 1;	/* - */
+  				goto rearg;
+  			}
+  			(void)Lst_AtEnd(create, (ClientData)*argv);
+
+
+
+
+##### DB_ID 126946 | bugs.4bsd | 1992-08-13T16:57:51+00:00 | mark@alias.com (Mark Andrews)
+SUBJ: Code Newer than Net/2
+MID: 1992Aug13.165751.10727@alias.com
+----
+I just noticed that someone reported a typo from the Net/2 tset source code.
+Alot of these typos have already been reported to CSRG, been fixed and the
+code made available. I remember a new version of tset being made available
+at ftp.uu.net in packages/bsd-sources/usr.bin/tset. There are a number of
+utilities like this; the original code from the Net/2 tape has been replaced
+by code found at uunet.
+
+Hope this helps,
+
+Mark
+
+
+
+
+##### DB_ID 169292 | unix.bsd | 1992-08-03T09:49:28+00:00 | gwh@soda.berkeley.edu (George William Herbert)
+SUBJ: Re: AT&T amended complaint available on uunet
+MID: 15ivf8INN8uc@agate.berkeley.edu
+----
+In article phr@soda.berkeley.edu (Paul Rubin) writes:
+>For those that are interested, the AT&T/USL First Amended Complaint
+>against BSDI and the UC Regents has recently appeared on
+>ftp.uu.net:vendor/bsdi/usl/920724.complaint.Z.
+>
+>The new complaint names all the UC regents (individually), outlines a
+>fairly lurid conspiracy theory about CSRG purposely passing AT&T
+>secrets to BSDI, and alleges that Net/2 contains AT&T copyrighted code
+>but does *not* say what specific code is supposedly copied.  It asks for
+>injunctions to stop BSDI and UC from distributing Net/2 derived code.
+
+	Rather scarily, it also mentions but does not quite explain how
+is relevant the clause that lets AT&T/USL take back the rights of the
+University of California's right to use UNIX.
+	
+	I also would like to see two things: one, the USL evidence that
+there's copied or significantly derived code in Net/2 (files & line # please)
+and two, evidence that CSRG people conspired to illegally give BSDI
+something that they couldn't get publically.  I can't comment on the
+first one lacking locations and both sets of code (Do I really want to
+look at AT&T code enough to compare them after the taint claims that
+have come up?  8-P ).  The second one, however, looks sorta tenuous...
+BSDI didn't start doing things, as far as I can tell, until after
+Net/2 appeared; Kolstad, if I remember right, says that they got their
+copy of Net/2 off uunet.  There's obviously an incestuous relationship
+between some people from CSRG and BSDI... not that we didn't already know
+that.  It was pretty apparent at the winter Usenix.  Was it illegal?
+Didn't look that way; better have good evidence.  Was it immoral?
+Well, since CSRG was disintegrating anyway 8-(, why not?  I don't like
+it going away, but they need to make money and if it's not CSRG paying
+for thier living, someone else has to.  *shrug*  I just want to see
+the evidence.
+
+
+-george william herbert
+gwh@soda.berkeley.edu  gwh@lurnix.com  herbert@uchu.isu92.ac.jp until 28 aug
+++  copyright 1992 george william herbert.       All rights except usenet   ++
+++ transmission/use and inclusion in followup/reply articles/mail reserved. ++
+
+Disclaimer: I sure as hell am not talking for the University or its regents
+or any other officials or groups.  Sorry 8-) .
+
+
+
+
+
+##### DB_ID 160063 | unix.bsd | 1993-04-16T01:24:19+00:00 | bri@athena.mit.edu (brian d. carlstrom)
+SUBJ: Status of Lawsuit
+MID: BRI.93Apr15212215@wilbur.mit.edu
+----
+what is the status of the USL lawsuit? i was off the net for a couple of
+weeks and apparently missed the big news. seems USL gave up. if anyone
+has any press releases or annoucements that were posted, i'd love to
+send them to this sysadm that told me my 386bsd system was "illegal"
+
+-bri
+
+--
+-bri
+
+Brian D. Carlstrom	bri@mit.edu
+Programmer and System Administrator
+M.I.T. Flight Transportation Laboratry
+
+
+
+
+##### DB_ID 170719 | unix.bsd | 1992-06-25T23:40:31+00:00 | sef@kithrup.COM (Sean Eric Fagan)
+SUBJ: Re: Funding 4.4BSD Development
+MID: 1992Jun25.234031.6037@kithrup.COM
+----
+In article <79@ampr.ab.ca> lyndon@ampr.ab.ca (Lyndon Nerenberg) writes:
+>Before everyone throws their money away trying to keep CSRG alive,
+>consider that the way every gov't institution works makes it impossible
+>for us to "fund" the CSRG. Any money sent to UCB goes into the general
+>revenue fund (at least that's the way it works at every gov't and
+>post-secondary institution I have dealt with). 
+
+Wrong.  One *can* donate money (as a "gift," not a "grant") to CSRG
+*specifically*.  Not all of the money goes to CSRG, however.  I think Kirk
+said that 50-75% would go to CSRG, the rest elsewhere (obviously, I forget
+all of the details).
+
+>It you want to see BSD continue as a living entity, take your money
+>down to the BSDI folks and exchange it for a distribution tape.
+
+*sigh*
+
+That does *NOT* contribute towards a "free" BSD.  Yes, the BSDi license is
+"only" $1k (although previous advertisements also said that the production
+release would be $1.5k; this may have changed since, however), and I, right
+now, do recommend their product for people who want a running system.  Other
+people, however, either want to hack around, or prefer a little
+inconvenience in order to have a "free" system, and, for them, there are
+alternatives (386bsd, the 386bsd mach single server, stuff like that).
+
+>At this point BSDI and CSRG aren't really that different. 
+
+Yes, they are *incredibly* different.  I do worry, sometimes, about what
+happens if/when your statement becomes completely true.  But, then, I'm a
+worrier 8-).
+
+>Yes, BSDI is
+>in it for the bucks, but then again BSD from UCB was never really "free"
+>either. We payed via the license fee, and the money that lets UCB operate
+>to begin with doesn't come out of thin air.
+
+You paid (not "payed," btw; silly english 8-() for an AT&T license.  If you
+already had one, you did not have to pay anything:  you could get BSD from
+anyone who had it and was willing to make you a tape.  When the Net/2 tape
+came out, you could ftp it from any place that had it (uunet eventually
+offered it).  The $600-$900 that you paid to UCB was a pittance (although it
+was quite useful to CSRG even so).
+
+BSDi is now charging $1k for what I freely admit is a lot of work.  (They
+rewrote some missing functions, they rewrote missing utilities, they
+integrated everything, they wrote device drivers or integrated drivers from
+other people, they *tested*, and they offer support.  Last, and certainly
+not least, they make *releases*.  *None* of that is trivial, folks, and is
+*easily* worth $1k.  Or even $1.5k.)
+
+Bill Jolitz is spearheading an effort to make a truly free BSD-based system.
+He is also doing a lot of work.  His initial two releases were not as stable,
+complete, or well-put together as BSDi's (but, then, his "product" was also
+a bit younger).  He does not, at least right now, offer guaranteed support
+(he may answer your email, or, if you post about it, there is a huge
+community of people who will read it, and some of them may be able to offer
+help), and at least part of the delay with the 0.1 release is, I'm sure, due
+to the troubles with making a decent release (i.e., making a set of floppies
+that will install on more-or-less generic hardware, format the disk, work
+with cards that may be installed differently, etc.).
+
+Due to their work, CSRG has provided a base system that other people can
+use.  Telling people that "BSDi is cheap enough, you should pay them" is
+offensive to me, although I cannot really say why.  (I got into an argument
+with someone because I thought he was telling me that.)  Part of it is
+because, even if BSD/386 were $100, it would *still* not be cheap enough,
+not unless I could give copies to anybody who wanted it.  I am, of course, a
+special case (some would say a bizarre, twisted, and weird case, and,
+frankly, they might be right 8-)).
+
+After CSRG dissolves, if BSDi becomes the focal point for BSD development,
+then all new developments will probably become proprietary to BSD (meaning
+that, in order to get it, you will have to pay BSDi money, and will not be
+able to share it with anyone who is not a BSDi licensee).  This is fine --
+but a lot of very good things came out of CSRG and BSD, and the fact that
+they were free had a lot to do with it (the networking, for example, could
+be used, at at least some point in its development, without any AT&T
+license at all).  Right now, there is complete C library available for free,
+because it was written by / for CSRG (it happens to include Chris Torek's
+std
+[...TRUNCATED len=5879]
+
+##### DB_ID 111807 | comp.unix.wizards | 1988-11-11T21:33:37+00:00 | dlm at cuuxb.ATT.COM (Dennis L. Mumaugh)
+SUBJ: /etc/shadow
+MID: 2189@cuuxb.ATT.COM
+----
+In article <8861 at smoke.BRL.MIL> gwyn at brl.arpa (Doug Gwyn (VLD/VMB) <gwyn>) writes:
+>It would be a great service to the community if specifications for
+>this feature were posted or at least sent to developers who want
+>to enable a similar feature on their (typically BSD-based) systems.
+>For example, what is the shadow file called, what is its format,
+>what sort of stuff is left in the password field in /etc/passwd,
+>what facilities are there to validate a password against the
+>shadow encrypted password file?
+
+The documentation is scattered in the Release Notes for System V
+Release 3.2.  Of course they don't have a page shadow(4) but:
+
+The file is /etc/shadow and is owned by root and mode 400.
+It contains one line per login.  Fields are separated by colons:
+	username \- users login name
+	password \- A 13 character encrypted password or a lock string to
+		    indicater the login is not accessible
+	lastchanged \- number of days since January 1, 1970 that the password
+	               has been modified
+	min \- the number of days required between password changes
+	max \- the maximum number of days the password is valid.
+
+Routines to work with /etc/shadow:
+	#include <shadow.h>
+	struct spwd *getspent();
+	struct spwd *getspnam(char * name);
+	void setspent();
+	void endspent();
+	struct spwd *fgetspent(FILE *fp);
+	int putspent(struct spwd *p,FILE *fp);
+
+Programs allied with this are 
+	pwconv \- install and/or update /etc/shadow with information
+		  from /etc/passwd
+	pwunconv \- restore /etc/password from /etc/shadown 
+ 
+Programs like login, su and passwd work with  either  /etc/passwd
+ONLY  or  with  the  added  /etc/shadow.  If there is no entry in
+/etc/shadow we accept the /etc/passwd as gospel [in case  someone
+forgot to run /usr/lib/pwconv after adding a user.]
+
+Also /usr/include/shadow.h:
+
+struct spwd {
+	char	*sp_namp; /* users login name */
+	char	*sp_pwdp; /* encrypted password */
+	long	sp_lstchg; /* number of days since January 1, 1970 
+			      that the password has been modified */
+	int	sp_max; /* the number of days required between password changes */
+	int	sp_min; /* the maximum number of days the password is valid. */
+}
+#define  SHADOW "/etc/shadow"
+
+ATT doesn't provide any of the functions or the  header  file  as
+part  of  its  product.  It  is in the source but not the binary.
+Thus developers who need the  routines  must  contact  their  ATT
+person [not me!] to obtain the shadow password security library
+-- 
+=Dennis L. Mumaugh
+ Lisle, IL       ...!{att,lll-crg}!cuuxb!dlm  OR cuuxb!dlm at arpa.att.com
+
+
+
