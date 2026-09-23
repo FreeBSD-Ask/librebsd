@@ -1,0 +1,119 @@
+166604|L4|Dennis Ferguson 分析 TAILQ_INSERT 写入顺序要求，新元素 tqe_next 须先写入，读端须保证顺序以维持并发安全
+166605|L3|Ryota Ozaki 对 Uebayashi 关于 ifnet 与 ifaddr 处理方案提出不同意见，认为为快路径优化而让慢路径多做预分配是合理取舍
+166606|L4|Ryota Ozaki 移植 FreeBSD 每接口 callout 方案，针对上千虚拟接口场景提出按接口分配 watchdog callout 补丁
+166607|L4|Dennis Ferguson 提议 membar_datadep_consumer 替代 membar_consumer，避免各架构承担 Alpha 开销
+166608|L3|Masao Uebayashi 认可 ozaki-r 的 ifnet 补丁方案，建议提交前完成实测
+166609|L3|Ryota Ozaki 回应 Uebayashi 关于大量虚拟接口场景的疑问，说明当前不存在虚拟伪接口这一情形
+166610|L3|Dennis Ferguson 回复 Uebayashi 关于 TAILQ_INSERT 写入顺序要求的意见，强调读端仍须显式保证该顺序
+166611|L3|Christos Zoulas 在 pserialize 与 TAILQ 讨论中引用 Eduardo Horvath 关于 MP Alpha 支持态度的判断
+166612|L4|Ryota Ozaki 发现为支持 callout_t 需给 if.h 加入 _KERNEL 条件编译，并提议在 ifnet 结构内加 _KERNEL 宏
+166613|L4|Thor Lancelot Simon 说明其在多台多处理器 Alpha 系统上运行 NetBSD，回应是否值得保留 Alpha 目标平台
+166614|L3|Eduardo Horvath 在 pserialize 讨论中引用 Thor Lancelot Simon 关于多处理器 Alpha 的论述
+166615|L4|Taylor R Campbell 批评仅新增内存屏障 API，认为除非决定回改既有代码否则对新屏障无用，Alpha 支持仍只是理论
+166616|L4|Taylor R Campbell 指出既有 membar API 缺少消除原子操作条件编译的函数集，建议增加 preatomic_membar 前缀家族
+166617|L3|Taylor R Campbell 在 ifnet 讨论中引用 Ryota Ozaki 关于 m 引用计数与原子操作的处理片段
+166618|L4|Taylor R Campbell 提议在 sys/queue.h 为插入移除遍历操作加入 _PSZ 变体，以数据存储屏障替代 REMOVE 别名
+166619|L4|Taylor R Campbell 分析 TAILQ_INSERT 与 pserialize 的顺序语义，指出多数 CPU 已默认满足写入顺序
+166620|L3|Eduardo Horvath 建议在 SPARC V9 宽松内存序环境下测试，并质疑现有 API 是否足够让内核在该序下运行
+166621|L3|Masao Uebayashi 回应 Taylor R Campbell 关于 pserialize 读端顺序保证的追问
+166622|L4|Taylor R Campbell 指出 TAILQ_FOREACH 读路径可能读到 stale e->key，membar_enter 语义不匹配
+166623|L4|Taylor R Campbell 说明读端在 pserialize_read_enter 之后的负载顺序与缓存命中情形，volatile 只约束编译器
+166624|L3|Masao Uebayashi 自引 Taylor R Campbell 关于 TAILQ 与 pserialize 交互的论述并继续讨论
+166625|L3|Masao Uebayashi 更正前述论断：可读变量应用 volatile 而无需内存屏障，超出 pserialize 责任范围
+166626|L3|Chuck Silvers 回应 Taylor R Campbell 关于为 struct fileops 增加 fo_mmap 字段的旧提案
+166627|L3|Masao Uebayashi 回复 Dennis Ferguson 关于 TAILQ_INSERT 宏写入顺序与内存屏障要求的论证
+166628|L3|Dennis Ferguson 回复 Masao Uebayashi 关于 TAILQ_INSERT 宏在并发读者下的行为分析
+166629|L3|Masao Uebayashi 回应 Taylor R Campbell 关于 TAILQ_FOREACH 与 volatile key 字段读取的分析
+166630|L3|Masao Uebayashi 说明将 sys/callout.h 移出 _KERNEL 会与 external/bsd/am-utils 同名结构冲突
+166631|L4|Dennis Ferguson 指出 sparc/mutex.h 的 MUTEX_RECEIVE 与 MUTEX_GIVE 宏为空，与 RMO 内存序不匹配
+166632|L3|Martin Husemann 在 sparc 互斥宏内存屏障问题上补充 sparc64 include/mutex.h 的相关情况
+166633|L4|Taylor R Campbell 澄清 volatile 与内存屏障不等同，volatile 不阻止 CPU 重排内存负载，TAILQ 特化不应过度泛化
+166634|L4|Michael van Elst 提出引导加载器传字符串作为内核判定根磁盘的第五种方式，与主次设备号、字面设备名等并列
+166635|L3|matthew green 列举内核根磁盘判定中由 MD 层传给 MI 层的全局变量，含 boothowto、booted_device 等
+166636|L3|Christos Zoulas 在 aprint 讨论中转引 Jared McNeill 所引 Martin Husemann 关于 log_dev 设计
+166637|L3|Christos Zoulas 在 aprint 改造讨论中回应 matthew green 关于项目推进的意见
+166638|L3|Christos Zoulas 在 aprint 改造讨论中转引 Izaak 所引关于 log_dev 与 log 接口设计的段落
+166639|L3|mlelstv 在 Boot wedges 讨论中回应 matthew green 对全局变量清单的补充
+166640|L3|matthew green 在 aprint 项目讨论中转引 Izaak 关于参与 printf 转 log 改造项目的说明
+166641|L3|Dennis Ferguson 引用 Taylor 关于 x86 存储屏障与其他架构内存顺序语义差异的论述
+166642|L4|Dennis Ferguson 澄清 TAILQ_REMOVE 宏在并发读者下不需修改，前提是不要求读取被移除项字段
+166643|L3|Rhialto 报告 NetBSD 6.1.5 amd64 中 userconf disable 无法禁用设备导致系统挂起，手册与实测不符
+166644|L4|Masao Uebayashi 提议用 membar_enter 与 membar_exit 替代 sparc/mutex.h 中空的 MUTEX 宏
+166645|L3|J Hannken-Illjes 在 sys_unmount 讨论中询问 NFS 服务端宕机时强卸载是否仍会因 namei 阻塞而失败
+166646|L4|Emmanuel Dreyfus 报告 glusterfs NFS 服务器允许挂载点根 vnode 为 VLNK 符号链接，原生 mountd 会阻止
+166647|L4|Nicolas Joly 提议修正 posix_madvise 在无效地址范围上的返回值以对齐 OpenGroup 规范，改 EINVAL 为 ENOMEM
+166648|L3|Emmanuel Dreyfus 确认 netbsd-7 下 NFS 服务端宕机时强卸载仍可正常工作
+166649|L3|Dennis Ferguson 回复 Martin Husemann 关于 sparc 互斥宏与内存屏障的实现讨论
+166650|L3|Justin Cormack 回复 Nicolas Joly 关于 posix_madvise 返回值改动，质疑是否应保留 EINVAL 而非改 ENOMEM
+166651|L3|Taylor R Campbell 将 Uebayashi 关于 callout 动态分配与 slowtimo 命名的方案以 marc.info 链接转引
+166652|L3|Emmanuel Dreyfus 在 sys_unmount 讨论中提议移除 FOLLOW 标志，认为不带 R 选项时 umount 应已解析路径
+166653|L4|Masao Uebayashi 提议 slowtimo 回调新设计，callout_t 改为动态分配，ifnet 仅留指针，命名由 watchdog 改为
+166654|L3|Masao Uebayashi 回复 Taylor R Campbell 表示无法及时跟进邮件
+166655|L4|Dennis Ferguson 提议改写 vfs_cache.c 的统计收集，采用多处理器能力下按处理器分配独立计数器结构的方式
+166656|L3|Izaak 在 aprint 项目中回复 matthew green 关于 autoconf 消息转换方向的意见
+166657|L4|Ryota Ozaki 发现 ifnet 初始化缺陷，if_attach 与 if_alloc_sadl 调用序致 if_dl 等未初始化即放行 ioctl
+166658|L3|Christos Zoulas 在 aprint 讨论中引用 Izaak 关于 autoconf 消息转换的段落
+166659|L4|David Holland 询问有多少硬件驱动真正需要多 LWP 并发运行，倾向判断仅网卡例外，以此挑起讨论
+166660|L3|Nasonov 报告 Linux ptrace 支持差异，compat_linux32 优于 compat_linux，64 位断点触发 SIGTRAP
+166662|L3|Manuel Bouyer 支持 David Holland 关于驱动并发的讨论，认为支持大量并发事务的磁盘控制器亦可受益
+166663|L3|Thor Lancelot Simon 在驱动并发讨论中引用 Manuel Bouyer 关于磁盘控制器并发事务的论述
+166664|L4|Thor Lancelot Simon 指出 SCSI 代码全局锁使驱动并发无意义，即使多数驱动改造不难，SCSI 层重构也极乱
+166665|L3|Manuel Bouyer 反驳 Thor 关于 SCSI 全局锁的判断，认为 SCSI 应可无全局锁运行，并指出部分驱动不走 SCSI 层
+166666|L3|Justin Cormack 在驱动并发讨论中引用 Manuel Bouyer 关于 SCSI 与 ld 接口层关系的论述
+166667|L3|Christos Zoulas 询问 Alexander Nasonov 的 PEEKUSER 读取内容，追问是寄存器还是 user_regs_struct
+166668|L3|Thor Lancelot Simon 在驱动并发讨论中回应 SCSI 全局锁改造难度
+166669|L3|Masao Uebayashi 指出 scsipi 与 wscons 是驱动并发讨论中最糟的实例
+166670|L3|Nasonov 说明 Pin 是动态插桩工具并会即时修改代码，不确定该工具能否正常工作
+166671|L3|Christos Zoulas 在 Linux ptrace 讨论中回复 Nasonov，询问工具能否移植到 NetBSD 且源代码是否可得
+166673|L3|Christos Zoulas 在 Linux ptrace 讨论中引用 Nasonov 关于 PEEKUSER 与 user_regs_struct 的论述
+166675|L3|Christos Zoulas 询问 Alexander Nasonov 能否将所用工具移植到 NetBSD
+166676|L3|Nasonov 说明 Pin 可能无源代码可得，判断在 NetBSD 上难有进一步进展
+166677|L3|Ryota Ozaki 提议硬件中断读侧用 pserialize_read_enter 替代 splhigh 以保证并发安全
+166678|L3|Nasonov 说明卡住点是 orig_ax，因为 Pin 与 strace 都需知道 syscall 编号所以无法推进
+166679|L3|Chuck Silvers 澄清 msync 带 MS_INVALIDATE 对 vnode 及任意 uvm_object 页都有效，差异仅在脏页先落盘再失效
+166680|L3|Emmanuel Dreyfus 认可 Alexander Nasonov 为支持 /proc/sys/kernel/osrelease 所做的补丁
+166681|L4|Mindaugas Rasiukevicius 确认硬件中断读侧用 pserialize_read_enter 替代 splhigh 的做法正确
+166682|L3|Christos Zoulas 在 procfs 补丁讨论中提出 PFSsyskern 与 PFSsys 的代码可以因子化并可能被其他目录复用
+166683|L4|Nasonov 提交 procfs/sys/kernel/osrelease 补丁以便 Pin 工具运行，并讨论静态条目框架的能力限制
+166684|L4|Maxime Villard 提供由 Brainy 代码扫描器发现并链接的九项潜在缺陷报告
+166685|L3|Ryota Ozaki 在 pserialize 与硬件中断讨论中回复 Mindaugas 关于中断级保护的追问
+166687|L3|Thor Lancelot Simon 转述 Vinaykumar Bhat 关于 NetBSD 压缩缓存项目的进展与仓库位置
+166689|L4|David Holland 基于 reptyr 提出在 tty 之间迁移进程的可行方案，意图收集反馈并说服他人实现
+166690|L3|Rhialto 在 tty 进程迁移讨论中回复 David Holland 的方案
+166691|L3|mlelstv 在 m_reclaim 讨论中给出 if_drain 例程的可见位置与 donothing 例程的位置
+166692|L3|mlelstv 澄清 if_drain 的官方 donothing 例程在接口停用置指针时设置
+166693|L4|Ryota Ozaki 提议将 ieee1394_drain 改为延迟调用以与其他 if_drain 回调保持一致
+166694|L3|Ryota Ozaki 在 m_reclaim 讨论中回复 Michael van Elst 关于 donothing 例程定位的意见
+166695|L3|Ryota Ozaki 在 m_reclaim 讨论中继续回复 Michael van Elst
+166696|L3|Frank Zerangue 询问为 evbarm 移植加入 L2 缓存支持需要哪些工作
+166697|L3|macallan 在 pm2fb 讨论中回复 Etomi 关于 Permedia2 芯片驱动与问题报告 49229 的情况
+166698|L4|Naruaki Etomi 提交 Permedia2 芯片驱动并报告 pm2fb 在 Sparc64 与 Alpha 上无法附加的缺陷
+166699|L3|Matt Thomas 回复 Zerangue 指出 L2 缓存支持极度依赖 SoC，多数情况下已经支持
+166700|L3|Thor Lancelot Simon 在 pserialize 与硬件中断讨论中回复 Ryota Ozaki
+166701|L3|Ryota Ozaki 在 pserialize 与硬件中断讨论中回复 Thor Lancelot Simon
+166702|L4|Kamil Rytarowski 分享在树莓派 ArchLinux 上运行 reptyr 的经验，指出后台休眠进程与平台移植性两个局限
+166703|L3|Masao Uebayashi 在 virtio 讨论中说明 softint 开关下的间接调用可安全移除
+166704|L3|Masao Uebayashi 指出 vioif 在 vioif_rx_vq_done 内调度软中断导致延迟略长，并纠正位运算写法
+166705|L4|Ryota Ozaki 提议 vioif 直接调用 vioif_rx_softint 以绕开中断软中断层，实测性能提升
+166706|L3|Ryota Ozaki 在 virtio 讨论中回复 Masao Uebayashi 关于补丁范围的追问
+166707|L3|Ryota Ozaki 在 pserialize 与硬件中断讨论中引用 Thor Lancelot Simon 关于提高 HZ 的建议
+166708|L3|Ryota Ozaki 说明 HZ 取 1000 在 KVM 环境效果不佳并尝试 500 与 200 等值
+166709|L3|Thor Lancelot Simon 回复 Ryota Ozaki 关于提高 HZ 的实测结果
+166710|L3|Matt Thomas 在 pserialize 与硬件中断讨论中引用关于提高 HZ 的段落
+166711|L3|Christian Koch 在 tty 进程迁移讨论中提出 screen 已存在类似用途
+166712|L3|Ryota Ozaki 在 pserialize 与硬件中断讨论中自引先前关于 splhigh 与中断级保护的段落继续讨论
+166713|L3|Ryota Ozaki 在 pserialize 与硬件中断讨论中自引先前关于软中断级保护的内容
+166714|L3|Ryota Ozaki 在 ifnet 处理讨论中自引先前关于 if_attach 初始化缺陷的段落
+166715|L3|Steffen Nurpmeso 在 tty 进程迁移讨论中回应 Koch 关于 screen 定位的意见
+166716|L3|Thor Lancelot Simon 在 pserialize 讨论中引用 Ryota Ozaki 关于提高 HZ 的意见
+166717|L4|Naruaki Etomi 在 TVP4020 芯片卡上验证字节序调整方案，给出 adjust 等于 1 的位块传输补丁
+166718|L3|Radoslaw Kujawa 在 pm2fb 讨论中引用 Etomi 关于字节序副作用的论述
+166719|L3|Ryota Ozaki 在 pserialize 讨论中引用 Thor 关于中断级保护的内容
+166720|L3|macallan 在 pm2fb 讨论中建议禁用字形缓存以隔离绘制路径问题
+166721|L3|Ryota Ozaki 在 pserialize 讨论中引用 Matt Thomas 关于中断级保护的内容
+166722|L3|macallan 询问 Kujawa 是否曾改造 amigappc 支持 radeonfb 以复用至 CyberVision
+166723|L3|macallan 建议在 pm2fb_putchar_aa 中禁用字形缓存以隔离绘制路径问题
+166724|L3|Naruaki Etomi 回复 Kujawa 感谢合作意愿
+166725|L3|Naruaki Etomi 说明问题疑为字形缓存复制而非实际绘制，建议禁用缓存以隔离
+166726|L3|Naruaki Etomi 在 alpha 上配置 FONT_DROID_SANS_MONO9x18 测试字节序方案
+166727|L4|Ryota Ozaki 报告 lockstat 输出的调用方符号名损坏现象，指向 ksyms 相关子系统的近期提交

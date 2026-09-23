@@ -1,0 +1,108 @@
+166979|L3|Quentin Garnier 回复 i386 上 radeondrmkms 与 isa 附件顺序冲突线程复述 David Brownlee 意见
+166980|L3|Joerg Sonnenberger 询问 Tom 是否愿意把 workaround 作为 bug 报告提交 GNATS 以便长期留档检索
+166982|L4|Tom Helbekkmo 已在 GNATS 提交 kern/49711 记录中断风暴缓解补丁的 workaround 以便检索
+166983|L4|Michael van Elst 指出 cfdata 显式优先级无法解决间接总线驱动比较顺序的问题
+166984|L4|matthew green 说明间接总线没有优先级概念由驱动自身决定导致无法预先排定挂载顺序
+166985|L3|matthew green 回复 Brian Buhrow 关于 vga 驱动映射延后与缓冲区保存版权消息的讨论
+166986|L4|Brian Buhrow 提议让 vga 驱动延后映射等待 Radeon 完成挂载并用 dmesg 类缓冲区保存版权消息
+166987|L3|Christos Zoulas 审阅 Ryota Ozaki 更新 DTrace syscall provider 补丁的变更列表与贡献注释
+166989|L4|Lourival Vieira Neto 宣布 LabLua 入选 GSoC 2015 指导组织并新增 NetBSD 内核 Lua 项目
+166990|L4|Taylor R Campbell 回忆曾向riz提出避免signed unsigned转换的建议以降低未定义行为
+166991|L3|Ryota Ozaki 回复 Christos Zoulas 关于 DTrace syscall provider 更新的评论以大量引用为主
+166992|L3|Ryota Ozaki 讨论 systrace 与 dtrace 模块命名取舍并解释为何改回后又改回原名
+166993|L4|J Hannken-Illjes 复述 David Holland 发现新 inode 号分配再 vcache_get 会触发 VFS_LOAD 问题
+166994|L3|Izumi Tsutsui 回复 Christos 关于 bootimage 提交中 INSTALL 内核与 ptyfs 的疑问
+166995|L3|Christos Zoulas 回复 Tsutsui 关于 bootimage 提交与 ptyfs 挂载方式的追问
+166996|L3|Christos Zoulas 回复 Tsutsui 关于 bootimage 提交引发的 PR install 47774 长期无回应问题
+166997|L4|Martin Husemann 表示在无 ptyfs 内核上仍能工作即可 曾在 VAX 极小内存环境实测 COMPAT_BSDPTY
+166998|L3|Christos Zoulas 回复 Ryota Ozaki 关于 systrace 命名取舍讨论 FreeBSD 模块命名情况
+166999|L4|Izumi Tsutsui 说明 ramdisk 列表过多 部分移植仍受 1440KB 限制 且 sun2 sun3 因引导装载器受限
+167000|L3|Christos Zoulas 回复 Tsutsui 表示会测试 sun2 与 sun3 上的内核大小差异
+167001|L4|Izumi Tsutsui 建议 openpty 失败时由 sysinst 直接 mount ptyfs 避免修改大量 crunch 列表
+167002|L3|Christos Zoulas 回复 Tsutsui 关于 bootimage 提交后 sysinst fallback 挂载 ptyfs 的方案
+167003|L4|Izumi Tsutsui 承认 6.0 的静默安装失败已经影响用户 但对新方案可能带来的后果不确定
+167004|L4|David Brownlee 说明用户态工具用 SMALL 宏 若保留 COMPAT_BSDTTY 需改名字明确用途与运行时内存
+167005|L4|Joerg Sonnenberger 估算移除 openpty 的 COMPAT_BSDTTY 可省 600 字节 仅加 PTYFS 后代码小几 K
+167006|L3|Christos Zoulas 回复 Tsutsui 表示愿意测试 sun2 与 sun3 并认为 6.0 静默安装失败不可接受
+167007|L3|Izumi Tsutsui 回复 Christos 关于 6.0 静默安装失败已经用户受影响需要更多考虑
+167008|L3|Christos Zoulas 回复 Tsutsui 认为消除旧代码对用户无益但便于维护一致性稳健性
+167009|L3|Christos Zoulas 回复 Tsutsui 认为一致性对开发者重要但应把营销工作放在前面
+167010|L3|Izumi Tsutsui 回复 Christos 追问为何营销有助于现有开发者 请扩展说明
+167011|L3|Izumi Tsutsui 回复 Christos 同意消除旧代码更省维护成本 一致性稳健性也更好
+167012|L3|Christos Zoulas 回复 Tsutsui 提出无用户则无必要延续旧代码 追问营销论点的含义
+167013|L4|Christos Zoulas 表决保留 compat 代码 把所有 install 内核加 ptyfs 并在 sysinst 里 openpty 前先挂载
+167014|L4|Martin Husemann 反对无自测条件的 INSTALL 内核随意加入 ptyfs 只在 compat ipty 可用时静默失败
+167015|L3|Martin Husemann 回复 Joerg 支持把 ptyfs 移到所有安装内核 但挂载失败不应静默
+167016|L3|Joerg Sonnenberger 回复 Martin 反对在无法自测的 INSTALL 内核随意加入 ptyfs 代码
+167017|L3|Christos Zoulas 回复 Martin 关于 compat 代码保留与 sysinst 挂载 ptyfs 顺序的讨论
+167018|L3|Christos Zoulas 回复 Martin 关于 sysinst 挂载失败静默处理的进一步讨论
+167019|L3|Joerg Sonnenberger 回复 Martin 反对无自测条件下向 INSTALL 内核加入 ptyfs 的立场
+167020|L4|Christoph Badura 认为 cv_timedwaitns 与 cv_timedwaitns_sig 名字差异不足以体现语义区别应改名
+167021|L4|Martin Husemann 承认误记 实际约 10kb 在 VAX 上约 9.5 并最终改为 USE ptyfs 避免额外 tmpfs 实例
+167022|L4|Maxime Villard 提议给每个 compat 模块加 .enabled sysctl 使 Linux FreeBSD 模块默认可用但不启用
+167023|L3|Taylor R Campbell 讨论 cv_timedwait 中 timespec 与 timespecadd 手动转换代码示例
+167024|L4|Taylor R Campbell 认为此调用仅在 LWP 即将睡眠时发生 倾向保持 timespec
+167025|L4|Maxime Villard 用扫描器发现 bwi.c 存在 double free bug 并提交补丁请求审阅
+167026|L3|Christos Zoulas 回复 Jean-Yves Migeon 追问 compat 模块 .enabled sysctl 具体含义
+167027|L3|Joerg Sonnenberger 回复 Taylor 关于 cv_timedwaitns 中 timespec 硬编码与 bintime 取舍
+167028|L4|Taylor R Campbell 表示考虑未来 callout 处理使用精确时间 bintime 使差值跨秒字段溢出仅需二进制运算
+167030|L3|Joerg Sonnenberger 回复 Taylor 讨论 callout 处理使用精确时间时 bintime 简化计算
+167031|L4|Christoph Badura 建议改名为 cv_boundedwaitns 强调此调用为等待时间设置上界而非重试机制
+167032|L4|Emmanuel Dreyfus 报告 netbsd-6 与 current 在较新 Mac 上无法使用键盘 pckbc 命令字写入错误
+167033|L3|J Hannken-Illjes 回复 Taylor 关于为无 vm_page 设备页追踪 P 到 V 方案的讨论
+167034|L4|Taylor R Campbell 提出为无 vm_page 的设备页建立 P 到 V 追踪列表以支持 DRM 卸载虚拟映射
+167035|L4|Robert Sprowson 审阅 xhci 3.0 hub 补丁 认为当前形态难以消化 内含好的修复与更多内容
+167036|L3|Taylor R Campbell 回复 J Hannken-Illjes 讨论 pmap 扩展与 pv 追踪线性列表
+167037|L3|Maxime Villard 回复 Jean-Yves Migeon 关于 compat-FreeBSD 移除方案讨论
+167038|L4|Maxime Villard 提议移除 bread 函数中无用的 cred 参数并请求审核
+167039|L3|matthew green 回复 Maxime Villard 关于 compat-FreeBSD 移除方案的讨论
+167040|L3|J Hannken-Illjes 认可移除 bread 中 cred 参数并提醒同时检查 breadn 函数
+167041|L3|Pierre Pronchery 回复 Emmanuel Dreyfus 关于较新 Mac 键盘无响应问题的讨论
+167042|L3|Maxime Villard 回复 matthew green 关于 compat-FreeBSD 移除方案的进一步讨论
+167043|L3|Taylor R Campbell 回复 Maxime Villard 提醒移除 bread cred 参数时同步更新 param.h 版本号
+167044|L3|Stephan 请求熟悉者核查 syscall 开发者文档中 syscalls.master 格式与参数处理变化
+167045|L4|Maxime Villard 发布 Brainy 扫描器新报告的 11 个潜在 bug 列表要求加关键词 Brainy 便于跟踪
+167046|L3|Michael macallan 回复 Maxime Villard 关于 Brainy 11 个潜在 bug 列表的审阅讨论
+167047|L3|D'Arcy J.M. Cain 以玩笑询问 Brainy 列表编号从 0x09 跳到 0x10 是否为 bug
+167048|L3|Maxime Villard 回复 Taylor 关于 ffs_is_appleufs 补丁的讨论并解释行为改变
+167049|L4|Maxime Villard 提出把 AppleUFS 检测封装为 ffs_is_appleufs 函数并让不确定时按普通 UFS 处理
+167050|L3|Taylor R Campbell 建议 Maxime Villard 把 AppleUFS 检测拆成两个补丁一个重构一个行为
+167051|L3|Maxime Villard 解释 Brainy 缺陷列表最初意图是 REPORT_NUMBERxBUG_NUMBER 编号未递增
+167054|L3|Robert Sprowson 回复 Nick Hudson 关于 xhci 3.0 hub 补丁审阅的后续讨论
+167057|L4|Martin Husemann 报告 sparc64 偶发内核崩溃疑似通过错误函数指针 栈损坏 ddb 回溯失败
+167059|L3|Eric Haszlakiewicz 回复 Martin Husemann 关于 VOCALL 魔数指针校验思路的讨论
+167060|L4|Masao Uebayashi 认为 PV 应保留在 vm_physseg 而非 vm_page 因 vm_page 无指向回路的指针
+167061|L3|Taylor R Campbell 回复 Masao Uebayashi 关于 vm_physseg 与 vm_page PV 存放位置的讨论
+167062|L3|David Holland 回复 Eric Haszlakiewicz 关于 VOCALL 校验魔数指针方案的讨论
+167063|L3|Taylor R Campbell 回复 Masao Uebayashi 关于 pmap_pv API 追踪设备页的讨论
+167064|L3|Masao Uebayashi 回复 Taylor 关于 PV 存储在 vm_physseg 而非 vm_page 的讨论
+167065|L4|Masao Uebayashi 指出 pmap_enter 无需改动但需改 fault handler 原方案在该点不工作
+167066|L3|Matt Thomas 回复 Kengo NAKAHARA 关于 x86 MD MSI MSI-X 补丁的评审意见
+167067|L3|Kengo NAKAHARA 回复 Matt Thomas 关于 x86 MD MSI MSI-X 补丁评审讨论
+167068|L3|Kengo NAKAHARA 回复 Taylor R Campbell 关于 x86 MD MSI MSI-X 补丁中 pci_msi_machdep.c 缺失
+167069|L3|Taylor R Campbell 指出 Kengo NAKAHARA 的 x86 MD MSI MSI-X 补丁缺少 pci_msi_machdep.c
+167070|L4|Kengo NAKAHARA 提交 x86 MD MSI MSI-X 支持补丁并附 if_wm 用法示例
+167071|L3|Kengo NAKAHARA 回复 Matt Thomas 关于 x86 MD MSI MSI-X 补丁中互斥锁与句柄类型的讨论
+167074|L4|Taylor R Campbell 提出 MP 安全的引用计数抽象 API 覆盖三种典型用例并与 dholland 讨论
+167075|L3|Matt Thomas 回复 Kengo NAKAHARA 关于 x86 MD MSI MSI-X 补丁中 vih 与 mutex 的问题
+167078|L4|Ryota Ozaki 确认 bridge 已有类似机制并愿意尝试 refcount 是否满足 bridge 需求
+167079|L3|Masao Uebayashi 回复参考计数讨论想起 ozaki-r 曾在部分 pserialized IFNET_FOREACH 中写过类似代码
+167080|L4|Kamil Rytarowski 提交 ACPICA-20150410 请求 tech-pkg 审阅 并改双许可为 modified-bsd 或 gpl-v2
+167081|L3|Taylor R Campbell 回复 Ryota Ozaki 关于 bridge 类似机制与 refcount 提议灵活度比较
+167082|L4|Taylor R Campbell 表示可自行加 i2c 依赖到 drmkms_linux 原计划是独立 drmkms_i2c 模块
+167083|L3|Reinoud Zandijk 回复 Taylor 关于 P 到 V 追踪无 vm_page 设备页方案的讨论
+167084|L4|Taylor R Campbell 指出 ttm_bo.c 断言 bo bus base 未页对齐属已知问题但原因不明
+167085|L3|Ryota Ozaki 回复 Taylor 关于 refcount 与 bridge 的讨论 正文以引用为主
+167086|L3|Ryota Ozaki 回复 Taylor 关于 refcount 抽象与 ozaki-r 类似实现讨论
+167087|L3|Masao Uebayashi 回复 Taylor 建议用 KERNHIST 追踪 P 到 V 设备页追踪问题
+167088|L3|Taylor R Campbell 回复 Ryota Ozaki 关于 refcount 在 bridge 上测试的进一步讨论
+167090|L4|Ryota Ozaki 提议删除 ip_encap.c 中多年总开启且非 USE_RADIX 无法构建的开关并征求异议
+167091|L3|Masao Uebayashi 回复 Paul Goyette 关于 swwdog 转内核模块 autoconfig 问题的讨论
+167093|L3|Maxime Villard 回复 Taylor 关于 FFS ffs_is_appleufs 补丁拆分行为的进一步讨论
+167094|L4|Michael van Elst 提议扩展 gpio 框架支持重新配置引脚方向与在安全内核下禁用输出等功能
+167095|L3|Kengo NAKAHARA 回复 Matt Thomas 关于 x86 MD MSI MSI-X 实现评审意见的感谢与调整
+167097|L3|Michael van Elst 指出 kthread_destroy 应用 kthread_exit 询问 kthread_join 时机
+167100|L4|Ryota Ozaki 提议移除 if_vlan.c 中支持 FDDI 等其他硬件类型但多年未有实现遗留的 if_type switch
+167101|L4|Ryota Ozaki 确认已作为 ip_encap.c 版本 1.45 提交 USE_RADIX 开关的删除
+167102|L4|Maxime Villard 报告 Brainy R4 arm/xscale 平台 ixp425_if_npe.c 无错误设置问题并提出修复建议
+167103|L4|Matt Thomas 反对移除 if_vlan.c 中 if_type switch 认为多年未实现不代表不正确应保留

@@ -1,0 +1,124 @@
+190529|L4|Stone 就 RAS_PURGE_ALL_AND_INSTALL_ONE 追问动机，援引与 Bershad 的私交认为 Mach 语义下或有合理性
+190530|L3|Tad Hunt 补述 newfs 在 c 分区报 bad magic number 而在 a 分区仅警告无错误，两分区 disklabel 尺寸相同
+190531|L4|McGarry 列出 RAS 提案中四个 RAS_CONTROL 原语的 Mach 语义映射，主张 RAS 应跨 fork 继承并追问实现动机
+190532|L4|Tad Hunt 在 NetBSD 1.5 powerpc 上对 wd0 c 分区运行 newfs 报 cg 0 bad magic number
+190533|L4|Shapiro 主张 POSIX 共享内存可整体下沉用户态以 mmap 加真实文件系统文件实现，精简内核路径并支持 rm 清理
+190534|L4|Thorpe 在 wsscreen_descr 增字段提案中反提 void 指针 modecookie 方案，理由 wscons 无需知晓点时钟
+190535|L4|der Mouse 论证单一 video_modetiming 不足以描述多卡差异，主张不透明指针以避免过度抽象
+190536|L4|Soda 反对 wscons 层感知点时钟等硬件参数，认为只有 VGA 支持代码应持有此类信息，modecookie 更合适
+190537|L4|Bang Jun-Young 提交 wsscreen_descr 新增视频模式字段补丁，动机是 VGA 与 Mach64 驱动缺模式切换存放位置
+190538|L3|kpneal 转发 Shapiro 关于用 mmap 在 libc 实现 shmat shmdt 从而精简内核的提议
+190539|L3|Stone 就 PURGE_ALL_AND_INSTALL_ONE 原子性追问提及曾与 Bershad 会面但记不清原动机自评未看到强理由
+190540|L4|Thorpe 纠正 Stone 关于 RAS 仅适用单处理器的说法，指出商业 Unix 在特定条件下将其用于 SMP 但非通用锁
+190541|L3|Bang Jun-Young 复述 Soda 对 void modecookie 方案的质疑并引用 Thorpe 原始提案主张结构体类型检查更优
+190542|L3|cgd 就 wsdisplay_softc 中 struct device 内嵌写法调侃，认为修复内核结构比 wscons 显示层改动更紧要
+190543|L3|Soda 复述 der Mouse 对单一类型局限的论述并重申点时钟等硬件参数应留在 VGA 支持代码而非 wscons
+190544|L4|Sommerfeld 就 RAS 原子清除替换操作动机分析，认为原子性在语义上非必要仅在多线程并发竞争下才可能有意义
+190545|L3|Bang Jun-Young 逐条回应 Thorpe 的质疑，坚持视频模式参数需以具体结构体描述才能支持类型检查与驱动扩展
+190546|L3|itojun 就取巧方案与真正方案之争回应，认为 takemura-san 做法与 struct ifaddr 内嵌 in_ifaddr 既有习惯一致
+190547|L3|TAKEMURA Shin 复述 Thorpe 关于 void modecookie 的原始提案并援引 wsdisplay_softc 中 device 内嵌
+190548|L3|Bang Jun-Young 就模式数据定位争议复述 TAKEMURA 观点指出通过 name 成员检索与新增字段在语义上等价
+190549|L4|TAKEMURA Shin 论证 wscons 仅记录屏幕尺寸而不保存逐屏视频模式信息设计不合理，栅格驱动需模式数据
+190550|L3|TAKEMURA Shin 复述与 Bang Jun-Young 关于取巧方案长期无效性的争论并援引 VGA 与芯片相关前端分层惯例
+190551|L3|Bang Jun-Young 就模式数据定位继续论证 video_modetiming 相较不透明指针更利于类型检查与驱动扩展
+190552|L4|Drochner 指出嵌套结构在 NetBSD 驱动中属惯例，芯片相关私有数据应保存在芯片前端而非核心 VGA 驱动
+190553|L3|Bang Jun-Young 回应 Drochner 的嵌套惯例论点承认取巧方案长期不可持续转向讨论 wscons 层是否应持有模式信息
+190554|L4|Bang Jun-Young 阐述 VESA BIOS 仅提供有限模式集，扩展寄存器仍需驱动掌握，比较 BIOS 与驱动接管两条路径
+190555|L3|Bang Jun-Young 复述 Drochner 关于模式切换两条路径的分析并补充除 i386 外多数平台无法适用该结论
+190556|L3|Bang Jun-Young 复述 TAKEMURA 关于 wsdisplay_softc 中 device 内嵌先例的论证并自我承认先前措辞不当
+190557|L4|Drochner 分析 i386 上 BIOS 与驱动混合初始化不可行，模式切换需在驱动掌握扩展寄存器或交由 BIOS 二选一
+190558|L3|itojun 就模式切换参数归属提问，主张多数 VGA 卡参数由 BIOS 统一管理驱动自造参数不合常规
+190559|L4|Thorpe 就硬件辅助数据搬移接口 RFC 同意将前端与后端手册分离并考虑重命名接口，承诺当日修改文档
+190560|L3|Studenmund 就 wscons 结构体嵌套方案与 C++ 类继承机制的类比进行技术评论
+190561|L4|Laight 报告 ddb 停止系统导致硬件时钟失准缺陷，根因是 cpu_reboot 每次关机将当前时间回写硬件时钟
+190562|L4|Laight 阐述视频模式切换归属观点，VGA BIOS 在多数平台仅提供初始化能力，模式切换仍需驱动掌握扩展寄存器
+190563|L3|Studenmund 回应 Mondor 关于 vfs 权限模型扩展的问题，援引相关线程并指出属既有讨论范畴
+190564|L4|Husemann 指出 sparc64 平台不存在 VESA BIOS 且固件不足以支持串口控制台下的显示初始化，故 BIOS 方案不适用
+190565|L3|Gary Thorpe 就视频模式结构讨论转发 cgd 关于 wsdisplay_softc 中 device 内嵌写法的历史沿用性论述
+190566|L4|Studenmund 反驳 Stone 关于时钟精度诉求仅由 NTP 用户持有的说法，主张 PPS 精度并非所有用户实际需求
+190567|L4|Stone 就 ddb 硬件时钟失准议题提出务实观点，关心时钟精度者应运行 NTPD 并由内核将校准时间写回电池时钟
+190568|L3|Stone 就先前回复态度过于强硬向 Laight 致歉，说明自己关于实时精度的关切实际是秒级 NFS 编译时钟偏差
+190569|L4|cgd 反驳 Stone 认为真正关心精度即运行 NTPD 的说法，指出用户精度需求呈梯度多数用户仅要求亚分钟级
+190570|L3|Bang Jun-Young 就视频模式切换归属争论复述各方观点，主张多数 VGA 卡参数由 BIOS 统一管理而非驱动自造
+190571|L3|cgd 就 Thorpe 质疑 kernel structure 与模块 ABI 的关联提出见解，主张核心层设计不应因加载模块需重编而受限
+190572|L3|cgd 就结构体 ABI 与二进制模块兼容性讨论复述 Thorpe 关于厂商重建模块的观点并补充自身判断
+190573|L3|Gary Thorpe 就 wsdisplay_softc 中 device 内嵌写法提出 kernel 模块 ABI 论证加载模块须以 device 首元素
+190574|L3|cgd 就二进制模块重建代价问题回应，认为只要不依赖 device 软配置结构作为 ABI 就不需每次添加成员都重建厂商模块
+190575|L3|Laight 就模块加载函数调用性能开销复述 Thorpe 观点，认为即便老旧机器调用开销也不显著
+190576|L4|Tad Hunt 追述 ATA 闪存盘 newfs 问题根因，测试后确认 Delkin eFilm DDA1FLS2 出厂即坏 Windows 下同样失败
+190577|L4|Tsutsui 就 53c700 与 53c710 驱动架构差异回应指出内存间接寻址为两芯片关键区别并解释补丁如何抽象该差异
+190578|L4|Thorpe 就闪存文件系统答复指出 Wasabi Systems 已有用于内存映射闪存的磨损平衡设备但尚未并入主源
+190579|L3|Gary Thorpe 复述 cgd 关于加载模块接口必须以 device 软配置结构为元素起点的论证并展开接口层考量
+190580|L3|Puchar 提及自己曾使用 nodevmtime 挂载选项的经验并询问 NetBSD 是否有适合闪存的文件系统
+190581|L4|Thorpe 就 LFS 适配闪存提出质疑，指出 LFS 关闭 cleaner 会导致清理周期重写数据而压缩闪存固件已内置磨损平衡
+190582|L3|Puchar 就 LFS 分布写入策略反驳 Thorpe 观点，指出 LFS 均匀分散写入而 FFS 集中写入位图与 inode 区域
+190583|L3|Puchar 就压缩闪存无磨损平衡会更快损坏的观点作简短附和
+190584|L4|Marin 援引 AMD 关于写入百万次后十年保持时间的旧文档反驳闪存卡必然快速损坏的常见论断
+190585|L3|Tad Hunt 就 LFS 稳定性表达疑虑，认为该文件系统尚未达到生产可用成熟度
+190586|L4|Laight 就压缩闪存磨损寿命提出独立分析，援引 AMD 关于写入百万次后十年保持时间的旧文档反驳闪存快速损坏论断
+190587|L3|Souvatzis 就 NFS 客户端服务器时间比较可能影响编译时钟同步提出观点并自述 NFS 时钟偏移经验
+190588|L3|Marin 就闪存磨损寿命讨论回应，复述 Laight 关于 AMD 文档的引用并补充自身见解
+190589|L4|Seibert 介绍双队列 I/O 调度公平性算法，激活队列被填充期间新请求进入非活动队列，两队列交替处理并从反向消费
+190590|L3|Losh 就 Wasabi Systems 闪存磨损平衡设备回应，指出主源未包含该设备但生态已有闪存相关支持方案
+190591|L4|Hannken-Illjes 就双队列 I/O 公平性算法回应，分析该策略对队列饥饿与延迟的影响并讨论扩展为多队列的可行性
+190592|L4|Belevich 就闪存卡性能问题提出反驳，认为不应轻易归咎闪存硬件本身可能闪存卡或主机控制端存在问题
+190593|L4|Laight 就 rlimit.memorylocked 语义争议答复，指出文档标注为进程级但实际表现为系统级
+190594|L4|Hannken-Illjes 提交 buffer queue 接口重写 RFC，指出现行缓冲队列假定入队即排序阻碍按消费排序调度
+190595|L4|Thorpe 就 buffer queue RFC 澄清同步标记当前未被使用且 I/O 屏障由各需求方自行实现，主张移除 barrier 代码
+190596|L3|Hannken-Illjes 就 buffer queue RFC 与 Laight 讨论缓冲区顺序保证与同步标记用法
+190597|L4|Thorpe 就 buffer queue 接口设计评估 bufq_init 初始化 put get 函数与私有部分 MALLOC 方案并补充关切
+190598|L4|Laight 就 buffer queue 接口重读代码后回复提出同步标记当前未用但可能仍需保留以支持顺序写入等场景
+190599|L3|Kamal Prasad 建议修改 uvmexp.wiredmax 放宽 mlock 上限，指出 rlimit.memorylocked 由 pmap 层控制
+190600|L3|Laight 就 buffer queue 接口讨论顺序写入需求与 biodone 回调调度方案
+190601|L3|Thorpe 就 buffer queue 接口顺序写入场景讨论 biodone 回调调度与 I/O 屏障语义
+190602|L4|Kamal Prasad 报告 kill 800MB mmap 应用致内核 panic 附 pmap_pvo_to_pte 栈回溯与 pvo 无效 pte 消息
+190603|L4|Thorpe 就 mmap 应用 panic 分析询问平台与具体 panic 消息以定位 pmap_pvo_to_pte 中 pvo pte 状态不一致根因
+190604|L3|Kamal Prasad 就 mmap panic 补充平台为 powerpc 附 pmap_pvo_to_pte panic 消息与 pvo pte 表不一致
+190605|L4|Anggard 实测新 Mac 与旧 Mac 文件系统元数据性能差异本地磁盘 0.7s 19s 与 NFS 挂载 1s 29s，soft updates 改善
+190606|L4|Thorpe 指出 Matt Thomas 已在新 Xserve 发现类似问题根因是 CPU 电源节省严重拉低中断延迟，旧 mac 用 DOZE
+190607|L3|Thorpe 就 7450 处理器无法软件进入 DOZE 模式回复说明 NetBSD 代码因此对 7450 使用 NAP 而非 DOZE
+190608|L4|Laight 就 buffer queue 接口讨论 B_ORDERED 标记指出同步标记代码已存在但可能仅对写请求有效
+190609|L3|Kamal Prasad 询问是否有 PowerPC 平台 pmap 层实现的技术文档未提供任何具体技术信息
+190610|L4|Thorpe 就硬件辅助数据搬运器 RFC 回复 cgd 的评审区分必须立即解决与可为未来扩展预留的关切
+190611|L3|Matt Thomas 就 mmap panic 线程回复转发 Prasad 的报告以讨论 PowerPC 平台上 pmap_pvo_to_pte 状态不一致
+190612|L3|Matt Thomas 就新 Mac 文件系统元数据性能问题回复就 7450 处理器 DOZE 与 NAP 模式选择进行讨论
+190613|L3|Feyrer 就 pmap 层实现文档询问回复指向 pmap 手册页并说明无法评论 PowerPC 实现细节
+190614|L3|Anggard 就新 Mac 电源节省与 7450 处理器 DOZE 模式不可用回复计划编译禁用电源节省的内核测试
+190615|L4|Dolecek 说明 NetBSD 最大支持内存端口相关，i386 1.6 支持 4GB 举例 ftp.netbsd.org 接近 4GB 机器运行
+190616|L3|Brodin 作为新手询问 NetBSD 支持的最大物理内存以及 i386 与 sparc 移植的内存上限
+190617|L4|Feyrer 建议为 Xserve 上 7455 处理器 NAP 模式导致的长中断延迟问题加入检测与警告输出
+190618|L3|Curt Sampson 更正 ftp.netbsd.org 内存规格指其运行在接近而非恰好 4GB 内存的机器上
+190619|L4|Anggard 报告禁用电源节省后 libc 编译从 27 分钟降至 4 分 40 秒通过注释 mpc6xx cpu_subr.c 中 MPC7450 分支
+190620|L4|Bouyer 就 proc.curproc.rlimit.memorylocked.soft 语义回复澄清每进程限额独立而系统级上限由 uvm 层控制
+190621|L4|Bouyer 就 osiop 与 53c700 讨论检查 ncr53cxxxx.c 后确认 700 与 710 之间仅 dmode 不同怀疑汇编中为错字
+190622|L3|Bouyer 就 osiop 与 53c700 驱动扩展回复 Matt Fredette 的原始提案
+190623|L3|Souvatzis 就 53c700 与 53c710 驱动偏移量差异回复指出 700 加 710 共用一组而 720 加 770 加 8xx 另一组
+190624|L3|Kamal Prasad 就 rlimit.memorylocked 系统级上限回复称其为总物理内存三分之一且运行时不可通过 sysctl 调整
+190626|L4|Simon 批评 32 位端口当前 buffer cache 限制指出 3.5GB AnonCVS 上大页缓存与 vnode 缓存仍产生不必要元数据 I/O
+190627|L3|Matt Thomas 就 DTYPE_SYSTRACE 重命名回复评估 Thorpe 提出的克隆设备语义方案与 son-of-devvp 缺位权衡
+190628|L4|Thorpe 提案将 systrace 通信通道 DTYPE_SYSTRACE 重命名为 DTYPE_MISC 理由是三个开发项目需克隆设备语义
+190629|L4|Thorpe 就硬件辅助数据搬运器 RFC 提出会话级后端列表方案通过注册或注销时递增代际号检测后端变更刷新缓存
+190630|L4|cgd 就硬件辅助数据搬运器 RFC 评论 UIO 支持被移除指出其实现未使用 UIO 而用户态接口采用请求响应队列
+190631|L3|Brown 就硬件辅助数据搬运器代际号方案提醒选用足够大的类型以防运行期回绕
+190632|L4|cgd 就硬件辅助数据搬运器 RFC 提出负载均衡算法过于随意与静态会话绑定后端限制性问题并询问额外能力
+190633|L4|Thorpe 就 netgear-621 gsip 驱动问题回复指出手册 BUGS 段声明不支持光纤卡而 ga-621 与 ga-622 芯片相同
+190634|L3|Puchar 就 wscons 多头支持回复说明想搭建双工作站时若第二张卡由 BIOS 初始化可能更简单
+190635|L3|Merino 询问 wscons 是否支持多头显示报告 vga 驱动仅识别 AGP 卡而 PCI 卡无法初始化但 X Xinerama 可工作
+190636|L3|Joseph N Reed 询问 NetGear GA-621 网卡驱动问题此前被建议 gsip 驱动但手册 BUGS 段声明不支持光纤卡
+190637|L4|cgd 就硬件辅助数据搬运器 DMOVER_REQ_WAIT 标志回复认为若用于无法睡眠但硬件搬运器大幅优于 CPU 复制场景有价值
+190638|L3|Kamal Prasad 询问 beige powermac G3 双启动方案因 Apple 固件不配合担心损坏机器
+190639|L4|Thorpe 回应 cgd 关于 UIO 支持被移除的评论已重新加入单次 copy 操作聚合离散块到连续目标缓冲区的能力
+190640|L4|der Mouse 就 NFS 客户端 bug 提出诊断建议尝试移动目标字节至较低偏移但保持模 8192 位置一致并截断文件大小
+190641|L4|Puchar 报告 1.6BETA4 上修改 uvmexp.inactarg 计算从除以 3 改为除以 20 后 128MB 机器高 I/O 负载下可用性改善
+190642|L3|Marin 就 NFS 阻塞问题回复引用 Nathan J Williams 关于降低 NFS 块大小的建议
+190643|L3|Anggard 就 der Mouse 建议的文件偏移调整尝试回复报告缩小文件后问题依旧并附 hex dump 字节序列
+190644|L4|Anggard 就 NFS 客户端 bug 报告已同时在服务器与客户端做 tcpdump 附数据包对比链接以定位软件或硬件问题
+190645|L4|Anggard 首报 Strange NFS-client bug QuickSilver 2002 上 1.6 current 特定文件 NFS 客户端异常
+190646|L4|Anggard 更正先前结论尝试从 NFSv3 切换到 NFSv2 后问题并未解决撤回认为 NFSv3 客户端实现有缺陷的初步判断
+190647|L3|Kamal Prasad 更正先前 mmap panic 根因承认系自研设备驱动中恶意代码引起反问能否在 UVM 允许用户态读写内核内存情境写驱动
+190648|L4|Laight 报告自己调用轮次表实测约 30 个 callouts 分布在 1024 个槽位中绝大多数短周期小于 1 秒 10 秒窗口几乎无项
+190649|L4|Studenmund 就 beige powermac G3 双启动回复自称同型号机器未找到双启动加载器且预计不会得到支持
+190650|L4|Laight 分析 callout 表 callwheelsize 依赖 MAXUSERS 而实际应按 hz 配置 i386 GENERIC 1024 项
+190651|L4|Laight 就 NFS 客户端 bug 提供跨平台对照从 Solaris 8 sparc 经 NFSv3 到 NetBSD 1.6D i386 客户端未见问题
+190652|L3|Bouyer 就 NFS 阻塞问题回复指出 Williams 关于降低 NFS 块大小的建议与网络栈交互问题可能与较慢网卡相关
+190653|L4|Laight 就 NFS 阻塞问题回复指出网络无路由问题后推断升级客户端从 1.5W 到 1.6beta 前后差异指向 NetBSD 代码变化

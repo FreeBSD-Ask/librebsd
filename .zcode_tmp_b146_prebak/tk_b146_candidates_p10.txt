@@ -1,0 +1,105 @@
+165854|L3|Ryota Ozaki 在 if_wm 中断处理回调 if_start 的线程中复述与 Manuel Bouyer 的早前往来，正文以多层引用为主
+165855|L3|Manuel Bouyer 在 if_wm 中断线程提议将 in6_if_link_up 的 callout 延时改为大于等于 1 而非 0，其余为引用往来
+165856|L3|Hannken 就其提出的 vcache_rekey 操作参与讨论，正文以引用 Taylor Campbell 对该新 vcache 操作的评审意见为主
+165857|L4|Retzlaff 采纳 Zoulas 建议，boot.cfg 解析补丁的新增符号改用 bootcfg_ 与 BOOTCFG_ 前缀，既有名称保留以便对照
+165858|L3|就 vcache_rekey 补丁中 __UNCONST 的用法讨论，认为从 API 移除 const 不妥，宜在构造临时密钥时处理
+165859|L3|Ryota Ozaki 表示其改动意在让调用方明确是否经由 callout，认为把 in6_if_link_up 的延时改为大于等于 1 更易出错
+165860|L4|Maxime Villard 提交补丁使 netbsd32 兼容层 getfh 对齐本地实现，修复 E2BIG 被 copyout 覆盖与缺 vput 泄漏
+165861|L3|Maxime Villard 回应 Christos Zoulas 对 netbsd32 getfh 补丁的逐条评审，正文以引用评审意见为主
+165862|L3|matthew green 转引 Christos Zoulas 不应沿袭分配失败后再释放的糟糕设计之论，并自荐由自己负责修正该处代码
+165863|L4|Christos Zoulas 说明 vfs_composefh_free 能正确处理 NULL 指针且本地代码即如此，承认这是糟糕设计但不主张把它扩散到别处
+165864|L3|Christos Zoulas 在 netbsd32 getfh 线程中转引该补丁的缺陷清单，正文以引用为主
+165865|L4|David Holland 凭两周前审阅的经历指出文件系统确实可能改变 v 节点密钥的长度，请相应位置补上长度参数，并就 const 的处理表达看法
+165866|L3|Christos Zoulas 在 netbsd32 getfh 线程中转引 matthew green 关于糟糕设计的论述，正文以引用为主
+165867|L3|Thor Lancelot Simon 加入 if_wm 中断回调 if_start 与 in6_if_link_up 延时争议的讨论，正文以引用早前往来为主
+165868|L3|Christos Zoulas 表示 netbsd32 getfh 补丁可以了，并建议改用 if (error) 以符合树内多数写法
+165869|L3|Hannken 在 vcache_rekey 线程中回应 David Holland 关于密钥长度可变与 const 处理的意见，正文以引用为主
+165870|L4|matthew green 回应动态分配主设备号时如何创建设备节点的问题，指出未见现成查询模块主设备号的机制，暂建议模块内注册 sysctl 变量供外部读取
+165871|L3|Christos Zoulas 回答模块动态分配主设备号时创建设备节点的疑问，正文以引用提问者原帖为主
+165872|L3|Christos Zoulas 在该线程中转引 matthew green 关于 sysctl 查询主设备号的说法并继续讨论，正文以引用为主
+165873|L3|Radoslaw Kujawa 加入主设备号动态分配与设备节点创建线程的讨论，正文以引用早前往来为主
+165874|L3|Maxime Villard 指出本地代码并未采用 if (error) 写法，并表示 netbsd32 getfh 的补丁已经提交入树
+165875|L3|matthew green 记起 mknod 可按设备名自动解析主设备号且模块同样适用，并说明该机制借助 kern.drivers 系统变量实现
+165877|L3|Ryota Ozaki 在 if_wm 中断线程中再次复述与 Bouyer 关于 callout 延时语义的往来，正文以多层引用为主
+165878|L3|Hannken 在 vcache_rekey 线程中转引 David Holland 与 Taylor Campbell 关于密钥长度与 const 的讨论
+165880|L4|Ryota Ozaki 更新 wm 网卡多处理器安全补丁，callout 改 MPSAFE、降低 splnet 层级，修复 ifconfig up down
+165884|L3|Iain Hibbert 回应索取已创建套接字列表的提问，指出 so 相关代码中没有专用表或链表，仅 fsocreate 建立的套接字可由文件描述符回查
+165885|L4|Staffan Thomasson 报告 Soekris net6501 上 amd64 当前内核配每日用户态时 libpthread 崩溃，i386 正常
+165887|L3|Ryota Ozaki 在 vioif 与 wm 的 mpsafe 线程中转引自己前一封关于补丁更新的说明，正文以引用为主
+165888|L3|Taylor Campbell 在 libpthread 崩溃线程中转引 Staffan Thomasson 的报告，正文以引用为主
+165889|L3|Ryota Ozaki 在 if_wm 中断线程中再次转引 Bouyer 关于 callout 延时 0 语义的往来，正文以多层引用为主
+165890|L3|Ryota Ozaki 在 vioif 与 wm 的 mpsafe 线程中转引与 Darren Reed 的往来，提及与 rmind 目标相同但工作路径不同
+165891|L4|Maxime Villard 提出改进二进制加载器优先级，指现行循环中 32 位兼容加载器先于本地加载器调用，64 位系统跑 64 位程序时先做无谓尝试
+165892|L3|David Young 就如何取得全部已创建套接字列表参与讨论，正文以引用早前关于 netstat 与 lsof 的往来为主
+165893|L3|Justin Cormack 回应二进制加载器优先级问题，正文以引用 Maxime Villard 的原帖为主
+165894|L3|David Holland 在加载器优先级线程中转引 Justin Cormack 关于 FreeBSD 引入 elf 头部签名解析的说法
+165895|L3|Staffan Thomasson 在 libpthread 崩溃线程中转引自己早前的报告与往来，正文以多层引用为主
+165896|L3|Staffan Thomasson 在该线程中再次转引自己关于 amd64 上 libpthread 崩溃的原帖，正文以引用为主
+165898|L3|Maxime Villard 在加载器优先级线程中回应为错架构二进制自动调用仿真器的设想，正文以引用为主
+165899|L3|Matt Thomas 在加载器优先级线程中转引 FreeBSD 引入 elf 头部签名解析的讨论，正文以引用为主
+165900|L3|Villard 转发 Holland 关于自动调用模拟器只是顺带一提的往返，正文以引用双方原信为主
+165901|L3|David Holland 表示错架构二进制自动调用仿真器一说系 Justin 顺带提及、与优先级问题仅间接相关
+165902|L4|Ryota Ozaki 提交 mpsafe bridge 补丁令网桥转发多处理器安全，并引入 BRIDGE_MPSAFE 开关，部分锁代码常驻以削减条件编译
+165904|L3|Ryota Ozaki 补充确认 mpsafe bridge 补丁在 NET_MPSAFE 与未开启两种配置下都未引入新的失败
+165905|L4|Villard 自我纠正，只移除 exec_elf32_modcmd 无法让兼容加载器失效，模块仍在 md.amd64 列表中
+165906|L3|Kengo NAKAHARA 就 bus_msi 提案向 David Young 提问，质疑沿用现有 pci 接口的简单方案是否更好
+165907|L4|Maxime Villard 指出 netbsd32 因子模块依赖缺失早已破坏模块加载器并可能不友好地崩溃系统，该问题已在 -r1.4 修复
+165909|L4|Lourival Vieira Neto 请评审 lua 补丁，其中一项把 lua 升至 5.3 候选版，改 lua_Integer 为 intmax_t
+165910|L3|Lourival Vieira Neto 回应 Alexander Nasonov 对 lua 补丁的提问，正文以引用为主
+165911|L3|Alexander Nasonov 表示稍后评审 lua 补丁，质疑为何急于升级到仍在开发中的版本
+165912|L4|matthew green 提交补丁让 libpciaccess 支持判断设备是否已绑定内核驱动，起因是 drmkms 下加载 vesa 驱动会严重冲突
+165914|L3|Marc Balmer 在 lua 补丁线程中转引 Alexander Nasonov 对升级到开发中版本的质疑，正文以引用为主
+165915|L3|matthew green 在 libpciaccess 支持线程中转引自己关于 drmkms 与 vesa 驱动冲突的原帖
+165916|L4|Martin Husemann 认为显式忽略 vga 驱动绑定的做法不妥，建议改为查询设备属性中标记与 DRM 不兼容，由 vesa 内核驱动显式设置
+165917|L3|Christos Zoulas 在 libpciaccess 支持线程中转引 matthew green 的原帖，正文以引用为主
+165918|L4|Eduardo Horvath 凭当年修改 LFS 的经历提醒测试前滚代码，他观察到在脏文件系统上跑 fsck 造成的问题比修复的多，多次运行更糟
+165919|L3|Ryota Ozaki 在无人提出异议的情况下宣布将于次日提交 mpsafe bridge 补丁，正文其余为引用
+165921|L4|Matthias Drochner 发现某些 U 盘因 bpb 检查过严导致 msdosfs 挂载失败，建议另设上限或移除 pm_SecPerTrack
+165922|L3|Frank Zerangue 询问 crunchgen 是否兼容 C++ 可执行文件，称打成压缩二进制后执行触发非法指令陷阱，且静态变量初始化时机异常
+165923|L3|Christos Zoulas 在 msdosfs 线程中转引快速挂载卸载裸设备且块大小小于 1 KiB 时触发的故障，正文以引用为主
+165925|L3|Maxime Villard 在 msdosfs 线程中转引 Matthias Drochner 关于 bpb 检查过严致 U 盘挂载失败的说法
+165926|L3|Martin Husemann 追问 secsize 经 getdisksize 的 ioctl 取得后能否强制取最小 512 字节
+165927|L3|Greg Troxel 在小扇区 msdosfs 线程中转引关于以 512 字节为最小扇区大小的讨论，正文以引用为主
+165928|L3|Maxime Villard 称自己未找到明确规定，但各处都隐含暗示 512 是最小扇区大小，fat 设备的 BytesPerSec 最小值也是 512
+165929|L3|David Holland 在小扇区 msdosfs 线程中就真实设备可能出现 128 字节扇区的担忧表达意见，正文以引用为主
+165930|L4|Maxime Villard 在 msdosfs_vfsops 中提出疑问，secsize 由 getdisksize 取得，设备扇区小于 512 有无风险
+165931|L4|Manuel Bouyer 报告 USB 触摸屏在 -current 下无法正常工作，设备为 N-trig DuoSense，部分 uhid 未配置
+165932|L3|Maxime Villard 称已把最小扇区大小定为 512 并认为这是最不魔法的上限，提交记录称可防极小 secsize 造成内存溢出
+165933|L3|mattheta green 指出 msdosfs 补丁以 DIAGNOSTIC 包裹挂载时坏数据的告警属误用，该宏只应用于不可能发生情形的断言
+165934|L3|Maxime Villard 在小扇区 msdosfs 线程中转引 mattheta green 关于 DIAGNOSTIC 误用的意见，正文以引用为主
+165935|L4|Maxime Villard 提议在 DIAGNOSTIC 下启用 KMEM_REDZONE，为每次分配追加 2 字节校验模式并在释放时检查，可捕获越界写
+165936|L3|Greg Troxel 在小扇区 msdosfs 线程中转引 mattheta green 关于 DIAGNOSTIC 误用的意见，正文以引用为主
+165937|L3|Yorick Hardy 就 Bouyer 的 USB 触摸屏问题回应，正文以引用设备识别信息为主
+165938|L4|Ryota Ozaki 提交 mpsafe 系列最后一块补丁令 if_vioif 多处理器安全，改动与 wm 部分基本相同
+165939|L4|Alexander Nasonov 拟提交 rump 组件加入 icache 同步超调用以在 arm 与 mips 上测试 bpfjit，Antti 迟迟未回信
+165941|L3|Nasonov 称在 rump 内核编译 mips 的 cache.h 需在 Makefile.rump 加 -DMIPS3=1，是 sljit 范围外唯一改动
+165942|L3|Greg Troxel 追问 icache 同步超调用组件为何做成私有，认为若普遍需要就应进入标准接口，并询问是否仅 sljit 生成将被执行的代码
+165943|L3|Alexander Nasonov 在 rump 组件线程中就 mips 平台的 MIPS3 取值继续回应，正文以引用为主
+165944|L3|Nasonov 澄清各 MIPS 修订互为超集仅对 MIPS I 至 V 成立，MIPS 32 基于 MIPS II，MIPS 64 基于 MIPS V
+165945|L4|Alexander Nasonov 称约一月前曾把 icache 同步放进标准位置但遭 Antti 反对而回滚，双方曾在 source-changes-d 讨论
+165946|L3|Greg Troxel 在 rump 组件线程中转引 Nasonov 关于此前改动被回滚的说明，正文以引用为主
+165948|L3|Alexander Nasonov 表示已提交代码会加注说明其临时性，但自己不确定新接口应包含什么故无法承诺承担该工作
+165949|L3|Alexander Nasonov 指出部分 mips 在用户态与其他环境下的指令加载模型并不相同，正文其余为引用
+165950|L3|Manuel Bouyer 回复称原先使用 mouse 驱动现已改用 ws，并贴出 xinput list 输出供排查，正文以引用为主
+165951|L4|Christoph Badura 建议让 ubsec 在具备 PCI 总线架构作为模块构建，并在 alpha 至 amd64 跑通发布构建，evbppc 失败
+165952|L3|Alexander Nasonov 在 rump 组件线程中转引 Matt Thomas 关于缓存指令需特权级及 sysarch 接口的说法
+165953|L3|Matt Thomas 指出 mips 的缓存指令需特权级，建议改用既有 sysarch 接口清理缓存而非让 rump 组件直接使用
+165954|L4|Greg Troxel 反对在 DIAGNOSTIC 下启用 KMEM_REDZONE 的提交，称未见 tech-kern 讨论与 KMEM_POISON 说明
+165955|L3|Greg Troxel 在 KMEM_REDZONE 线程中转引 Nick Hudson 关于开销可能远低于 15% 的说法，正文以引用为主
+165956|L3|Maxime Villard 反驳该改动未在 tech-kern 讨论一说，称自己确实发布过公告并附链接
+165958|L3|David Holland 在 KMEM_REDZONE 线程中要求有人实测该选项的真实开销，正文以引用他人关于 15% 的推测为主
+165959|L3|Taylor Campbell 询问如何移除 uvm 对象某区段或设备页的全部虚拟映射，指因不知全部 vm_map 位置而 uvm_unmap 不可用
+165960|L4|Taylor Campbell 为交换后备图形缓冲提出在 bus_dma 新增机独立接口，常驻 KVA 者可用 bus_dmamem 但这些缓冲多且大
+165961|L4|Taylor Campbell 指出树内缺少让驱动在线程上下文异步执行任务的轻量机制，workqueue 需各用户自行记账且长期占用基本空闲的内核线程
+165963|L3|Thor Lancelot Simon 称新购 Supermicro 机架机配 Marvell 88SE9230 控制器，问是否有人用 NetBSD 搭配
+165964|L3|续帖称 FreeBSD 的 ahci 视其为近似 AHCI 兼容但有小毛病，并问是否有人用 NetBSD 搭配 88SE9128 或 9130
+165965|L3|Christos Zoulas 在构建信息线程中转引 Alan Barrett 用 BUILDINFO 向内核版本串追加信息的私有补丁
+165966|L4|Taylor Campbell 读 fstrans 代码时做了基于 pserialize 的读写锁，一递归一非递归，频繁读不需跨处理器同步而靠池缓存
+165967|L3|Manuel Bouyer 回应 Marvell 88SE9230 的询问，正文以引用提问者关于 FreeBSD ahci 的说法为主
+165969|L4|Greg Troxel 区分两件事，一是 DIAGNOSTIC 是否开启增大分配的功能，二是 KMEM_SIZE 与 KMEM_REDZONE 是否默认开启
+165970|L4|Taylor Campbell 认为多行 BUILDINFO 经 uname 会被截断并折叠成单行，倾向改用新内核变量经 sysctl 节点暴露
+165972|L4|Martin Husemann 就中断亲和 RFC 主张最佳界面是没有界面、内核应自行统计并公平分发中断，指定设备中断到特定 CPU 宜用新增 intrctrl
+165974|L3|Maxime Villard 在 KMEM_REDZONE 线程中转引 Greg 关于区分两类议题的说法，正文以引用为主
+165975|L4|Ryota Ozaki 提交补丁把 wm 的互斥锁拆成收发两把以降低竞争，init 与 stop 及 ioctl 仍需同时持两把，先前未做因观察到性能下降
+165977|L3|Justin Cormack 就中断亲和 RFC 的界面粗陋问题回应，正文以引用 Kengo 关于 sysctl 用法的说明为主
+165978|L4|Kengo NAKAHARA 提交 amd64 中断亲和即中断路由 RFC，自陈界面粗陋请人评论，用法为写 kern.cpu_affinity.irq

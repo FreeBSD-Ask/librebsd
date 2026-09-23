@@ -1,0 +1,94 @@
+207869|L4|大崎亮提案把驱动内的 bpf_mtap 与 if_ipackets 递增统一进 percpuq if_input 框架，以减少代码、统一驱动行为并支持软中断执行
+207870|L4|Nasonov 自述 amd64 仅有 gnu-efi 与 grub 支持而无完整 EFI 原生支持，已能链接 hello world 却输出乱码
+207871|L4|Nathanial Sloss 自述音频改动已提交，修正虚拟声道环缓冲区块大小须不小于硬件块大小的限制，audioctl 不再因内存泄漏挂起
+207872|L4|Nasonov 报告可从 Nonaka 的 efiboot 引导器启动，但在 amd64 上构建失败，链接器提示找不到 startprog32.o
+207873|L4|Nonaka 回复称自己正在开发 efiboot，并公布存放于 cdn.netbsd.org 的补丁链接，回应 amd64 原生 EFI 支持进展的询问
+207874|L3|某开发者就 amd64 上 efiboot 链接期缺 startprog32.o 一事回应，正文几乎全为引用块，未见其新增独立论述
+207876|L3|某开发者就 x86 上 LAPIC 虚拟地址迁移线程的后续讨论发出回应，正文几乎全部为引用自己早前说明的引用块，未见新增独立论述
+207877|L3|某开发者就 amd64 EFI 原生支持线程继续回话，正文以引用他人更新的补丁与试用观察为主，未见新增独立论述
+207878|L4|matthew green 自述在 Pentium 4-M 系统上重现该问题，质疑仅涉及老旧或不带 LAPIC 的说法，主张该改动须修正或回退
+207880|L4|matthew green 指出 pcppi 并非 x86 专有，当前只在 x86 构建只是构建产物而非代码事实，主张应面向所有 isa 平台构建
+207881|L3|某开发者在 spkr 与 spkr_synth 模块讨论线程中回应，正文以引用他人关于平台枚举能力缺失的评论为主并附签名
+207882|L4|某开发者提案将 vnode 空闲链表改为 lru 链表，免掉 vget 中的摘链操作，使缓存 vnode 下 namei 提速约 3 个百分点
+207884|L3|某开发者在 spkr 与 spkr_synth 模块线程中回应，正文以斜杠标记引用他人关于模块加载命名不对称与 modstat 输出难辨的意见
+207886|L3|某开发者就 vrele 与 syncer 死锁线程追问细节，要求提供完整回溯并询问 syncer 等待父 vnode 的位置与所用文件系统
+207887|L3|某开发者在 vrele 与 syncer 死锁线程中回应，先引用问题描述后起手写 syncer 一侧的处理思路
+207888|L4|David Holland 分析低内存机器上的死锁：重命名时释放子 vnode 引发截断与缓冲区耗尽，同步进程反等被锁的父 vnode，持锁释放不安全
+207890|L3|David Holland 就 vrele 与 syncer 死锁线程回应，正文以引用 Michael van Elst 关于同步进程修补建议的内容为主
+207892|L3|某开发者就 vnode 空闲链表改 lru 链表提案回应，正文以引用提案内容与三部分拆分说明为主，未见其新增独立论述
+207893|L3|某开发者在 vrele 与 syncer 死锁线程中多层引用后回应，正文几乎全为嵌套引用块，未见其新增独立论述
+207894|L3|Nathanial Sloss 在 spkr 与 spkr_synth 模块线程中回应，正文以多层引用他人关于模块命名不对称的意见为主
+207895|L3|Manuel Bouyer 自述未密切跟进该线程，据其理解 spkr_synth 经声卡模拟 pcppi 接口，并陈述自己在 x86 平台上的遭遇
+207897|L3|Martin Husemann 在 spkr 与 spkr_synth 线程回应，正文以引用 Manuel Bouyer 关于两驱动共存与绑定的疑问为主
+207898|L3|Manuel Bouyer 在 spkr 与 spkr_synth 线程中回应，正文以多层引用他人关于弃用 spkr_pcppi 的建议为主
+207900|L3|Christos Zoulas 在 spkr 与 spkr_synth 线程中回应，正文以引用他人关于模块实现与铃声处理方式的内容为主
+207902|L3|Christos Zoulas 在 spkr 与 spkr_synth 线程中回应，正文以引用 Nathanial Sloss 关于模块主次与铃声实现为主
+207903|L4|David Holland 评点 vrele 死锁线程中提出的补丁，指其并不充分但应足以停止死锁，并指向自己另一封邮件的说明
+207905|L3|Manuel Bouyer 在 spkr 与 spkr_synth 线程中回应，正文以多层引用他人关于何处可关闭铃声音效的问答为主
+207906|L4|Christos Zoulas 回应称将尝试让 spkr 支持挂接 audio 与 pcppi 两类父设备，交由 autoconf 恰当实例化
+207908|L4|Martin Husemann 自述在 sparc64 上被合成的 spkr 铃声打断音乐，把 wscons.conf 铃声音量置零，因音频整体失效未实测
+207909|L3|Kengo NAKAHARA 就 pppoe MP 安全化线程回应，正文以引用自己早先说明补丁与放弃 pserialize 改走其他思路的内容为主
+207910|L4|Valery Ushakov 指出 Gdb 已支持硬件辅助断点，据此推断其他操作系统应已有现成设计，并继续展开比较讨论
+207911|L3|Nathanial Sloss 在 spkr 与 spkr_synth 线程中回应，正文以多层引用他人关于铃声音量的讨论为主，末段提及自己最初设过 sysctl
+207912|L4|Kamil Rytarowski 提案 ptrace 硬件断点接口，把数据监控命名为 watchpoint、指令执行监控命名为 breakpoint
+207914|L3|Kamil Rytarowski 在 ptrace 硬件断点接口线程中逐条回应，正文以多层引用 Valery Ushakov 关于额外逻辑的追问为主
+207915|L3|Greg Troxel 就 agr 聚合 VPN 隧道用法线程回应，先引用提问内容，随后以 tap 并非真正物理接口为由给出看法
+207917|L3|Robert Elz 在 agr 聚合 VPN 隧道用法线程中回应，正文以引用 BERTRAND Joël 请求协助修复该问题的邮件头与内容为主
+207918|L3|kre 追问 agr 聚合中 tap 接口是否只需 ifconfig tap0 与 tap1 up 即可标记为 UP，认为恐怕不这么简单
+207919|L4|Edgar Fuß 报告 6.1 amd64 NFS 服务器在异常请求时崩溃，nfsd 在 ufs_fhtovp 触发 uvm_fault 致命页错误
+207921|L4|Valery Ushakov 直言不懂 amd64 调试寄存器细节，但认为该设计在机器无关层暴露了端口特定语义，主张下推到调试器用户态
+207923|L4|Eduardo Horvath 提出另一种思路，认为断点可借 MMU 的精心使用实现，并给出含字符数组与整型的结构体监视示例
+207924|L3|Kamil Rytarowski 在 ptrace 硬件断点接口线程中逐条回应，说明已就部分问题另邮件沟通，正文以引用他人追问为主
+207925|L3|某开发者在 ptrace 断点接口线程中论证宜用位掩码而非原始寄存器，认为内核本就要校验组合有效性，导出到用户态更便于复用
+207926|L3|Kamil Rytarowski 在 ptrace 硬件断点接口线程中回应，正文以多层引用他人关于接口复杂度的追问为主并逐条作答
+207927|L3|Kamil Rytarowski 在 ptrace 断点接口线程中回应，正文以多层引用 Eduardo Horvath 关于借 MMU 实现断点的观点为主
+207931|L3|Kamil Rytarowski 在 ptrace 断点接口线程中回应，正文以多层引用关于单步执行时须停用硬件断点的讨论为主
+207932|L3|Kamil Rytarowski 在 ptrace 断点接口线程中回应，正文以多层引用 Andrew Cagney 关于 DWARF 问题的往来为主
+207933|L3|Valery Ushakov 在 ptrace 断点接口线程中回应，正文以多层引用 Kamil Rytarowski 关于进程级断点额外逻辑的说明为主
+207934|L3|Manuel Bouyer 就 6.1 amd64 的 NFS 与 UFS 崩溃报告回应，正文以引用 Edgar Fuß 的完整 panic 回溯为主
+207935|L4|Abhinav Upadhyay 提议用乘后移位替代模运算来映射到固定区间，理由是除法比乘法昂贵，并说明适用于随机数与哈希取模
+207936|L4|Joerg Sonnenberger 直接指出该乘移方案并非新东西，树内已有 fast_divide32 手册函数可查
+207938|L3|Taylor R Campbell 就取模运算加速提案回应，正文以引用 Abhinav Upadhyay 关于乘后移位与除法开销的说明为主
+207939|L4|Mouse 指出除法慢于乘法只在部分机器上成立，就三十二位乘得六十四位与三十二位除的场景而言，这类机器确实可能存在
+207941|L3|Alexander Nasonov 就取模运算加速提案回应，正文以引用 Mouse 关于熵分布与字符串哈希假设的讨论为主
+207942|L3|Cherry G Mathew 在 uvm physseg 治理线程中回应，正文以多层引用自己早先关于用 extent 接口管理物理地址空间的论述为主
+207943|L3|Matt Thomas 在 uvm physseg 治理线程中回应，正文以引用 Cherry 关于用 extent 接口管理物理地址空间的论述为主
+207944|L3|Cherry G Mathew 在 uvm physseg 线程中回复 Matt Thomas，正文以多层引用关于热插拔取舍的往来内容为主
+207945|L3|Hubert Feyrer 在进程未均匀分配 CPU 线程中重申自己的选项归纳：维持现状等研究出公式，或先提交现有补丁再等研究
+207946|L4|Michael van Elst 就 CPU 与进程分配不均线程征集测试者，希望有人考察不同使用场景与旋钮参数下的性能表现
+207947|L3|matthew green 在 vrele 与 syncer 死锁线程中回应，正文以引用 ffs_vfsops 中 ffs_sync 的补丁差异为主
+207948|L4|J. Hannken-Illjes 指出该预测有误，同步进程的职责是更新并写出缓冲区而非为缓冲区池腾挪内存，并由此展开反驳
+207950|L3|Cherry G Mathew 在 uvm physseg 线程中回应，正文以多层引用 Matt Thomas 关于改走 uvm_md_init 的往来为主
+207951|L3|Michael van Elst 就 CPU 与进程分配不均线程回应，正文以引用 Hubert Feyrer 关于测试人员与性能用例的追问为主
+207952|L3|Hubert Feyrer 在 CPU 与进程分配不均线程中追问具体的性能测试用例有哪些，正文以引用他人建议为主
+207954|L4|Cherry G Mathew 就其改动引起多个平台构建损坏致歉，称 acorn26、sh3 与 evbppc 相关构建现已修复
+207955|L4|Taylor R Campbell 报告多个平台构建因 pmap 与 uvm 改动损坏并给出自动构建链接，要求 Cherry 补充接口变更摘要
+207957|L3|Taylor R Campbell 在音频克隆线程中致谢后表示未能理解对方那段评论，就此追问是否还需补充更多信息
+207958|L4|Martin Husemann 报告 sparc64 上挂载 GPT 分区反复打印无磁盘标签告警，定位到 readdisklabel 与 dk_getlabel
+207960|L3|David Laight 就 UVM 与空页线程隔数月回应，称对方所熟悉的 CPU 组合很特殊，并就此提出异议
+207961|L4|coypu 认为禁用空页映射对 Wine 的影响多是假设，自己自该改动后即在使用，并称该环境仍能跑大量程序并附参考链接
+207962|L3|Mouse 在 UVM 与空页线程中回应，正文以引用他人关于 mmap 未指定 MAP_FIXED 不应返回空指针与空指针编码的讨论为主
+207963|L4|Greg Troxel 认为打印此类消息不妥，DIAGNOSTIC 只应在内核有缺陷时可能不成立的条件上加 KASSERT，且并无规定磁盘必须有标签
+207964|L4|Mouse 回忆 4.3 BSD 没有磁盘上的标签，分区表内建在各驱动里，改分区须重新编译对应驱动，并称自己所用机器即如此
+207965|L4|Michael van Elst 认为该消息早于 Martin Husemann 的用法而存在故有其理由，但随即表示另有所见，展开评论
+207966|L4|Michael van Elst 指出具体磁盘标签告警在多数驱动中是无条件打印的，仅少数共用子程序里受 DIAGNOSTIC 控制
+207969|L4|David Holland 认为换用全一编码帮助不大，下一个可行候选还需更大的用户态偏移，且崩溃时内核同样可能被污染
+207970|L4|Michael van Elst 回忆 4.3 没有磁盘上的标签，4.3tahoe 才为部分驱动加入磁盘标签，并承认记忆较模糊
+207971|L3|Matt Thomas 就 ibm4xx 平台 DDB 崩溃线程回应，正文以引用 Rin Okuyama 关于程序中断陷阱与用户态限制的说明为主
+207972|L3|David Laight 就 i386 系统调用栈溢出线程回应，正文以引用 Maxime Villard 关于 x86_copyargs 分段拷贝的说明为主
+207973|L3|coypu 就 UVM 与空页线程补充，并非所有 x86 都如此，较新的 CPU 具备 SMEP 与 SMAP 可提供该保护
+207974|L4|Matt Thomas 举例 ARM 旧架构须把零页映射进用户地址空间、PowerPC 则彻底分离用户与内核空间，说明各架构差异
+207975|L4|Nathanial Sloss 提交音频克隆改动，音频设备可被克隆，不再限制每进程一设备且文件描述符可在进程间共享，audiommap 尚待改
+207976|L3|David Holland 再次就 UVM 与空页线程论证换用全一编码帮助不大，需更大用户态偏移且内核同样可能被污染
+207977|L4|Mouse 指出候选值取决于架构，以 VAX 为例认为 c0000000 与 e0000000 是首选，因其地址空间高位区段的特点
+207978|L3|David Holland 对 4.3tahoe 才引入磁盘标签的说法表示怀疑，并追问到 4.4 时是否已固化到无法另用分区方案
+207979|L3|matthew green 在 UVM 与空页线程中回应，正文以引用他人关于零页映射一旦被诱导则内核亦可能被越界映射的论述为主
+207981|L3|Matt Thomas 就 ibm4xx 平台 DDB 崩溃线程回应，正文以引用 Rin Okuyama 关于修订补丁与嵌套陷阱疑虑的说明为主
+207985|L4|Matt Thomas 就 ibm4xx 平台 DDB 崩溃线程授权 Rin Okuyama 直接提交该补丁，仅以一句 Go commit it 简短批复
+207986|L4|Timo Buhrmester 实测确认克隆生效且逐次打开设备音量下降的问题消失，但 mpg123 播放 mp3 仍出现周期性可闻失真
+207987|L4|J. Hannken-Illjes 提案把 vget 改名 vcache_vget 并移出全局命名空间，因引入全局 vnode 缓存后已不再需要它
+207988|L3|Simon Burge 就 powerpc 浮点模拟线程回应，正文以引用 Rin Okuyama 关于单精度算术修复并借鉴 FreeBSD 的说明为主
+207990|L4|Tom Ivar Helbekkmo 核对自己手头的 4.3-Tahoe 安装说明，其中确描述了磁盘标签，构成对 4.3 无标签说法的反证
+207991|L4|Mouse 澄清自己使用的 4.3 早于 Tahoe、Lite 与 Reno，此前自 4.1c 一路沿用至 mtXinu 的 4.3 加 NFS
+207992|L3|Taylor R Campbell 就音频克隆改动线程回应，正文以引用 Nathanial Sloss 关于音频设备克隆与文件描述符共享的说明为主
+207993|L4|Edgar Fuß 回忆 1983 年在 VAX 11/750 上交替使用 VMS 与 4.2BSD，两块盘分区布局不同，并称磁盘标签本属 DEC 原生方案

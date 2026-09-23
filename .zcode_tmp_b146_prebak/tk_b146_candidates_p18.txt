@@ -1,0 +1,115 @@
+166854|L3|Roy Marples 在 dhcpcd 无盘客户端线程转贴他人关于启动中途 NFS 报 EHOSTUNREACH 的旧帖链接，正文以引用为主
+166855|L4|Martin Husemann 认为无盘客户端启动时序只能靠运气，建议设 LD_BIND_NOW 并让 dhcpcd 带 future 标志调 malloc
+166856|L3|Roy Marples 转贴 matthew green 称 dhcpcd 自导入后体积增大主要来自 DHCP 选项引擎与 IPv6 功能，正文以引用为主
+166857|L4|Greg Troxel 主张无盘客户端唯一稳妥的做法是 DHCP 客户端启动阶段不改地址与子网路由乃至默认路由
+166858|L3|Emmanuel Dreyfus 反对移除 compat_FreeBSD，称自己用它跑 tw_cli，并回忆 Linux 兼容层当年不易用
+166860|L3|Marc Balmer 认为移除大体合理但 tw_cli 用户需先有可用替代方案，建议可向 3Ware 方寻求协助
+166861|L4|Jose Luis Rodriguez Garcia 建议删除 sys/crypto/arc4，据 OpenGrok 检索 arc4_setkey 已无调用
+166862|L3|Roy Marples 回应 Alan Barrett 关于代码布局影响缺页时机的说法，正文以引用为主
+166863|L3|kre 质疑 dhcpcd 是否使用 RTM_DELETE 与 RTM_ADD，建议改用 RTM_CHANGE 并认为这触及问题关键
+166864|L3|Christos Zoulas 回复 Jose Luis 关于删除 sys/crypto/arc4 目录的提议，正文以引用为主
+166865|L4|Greg Troxel 认为 RTM_CHANGE 不清理克隆路由是路由实现缺陷，且本子网路由通常无需换接口
+166866|L3|Christos Zoulas 转述 Roy Marples 关于 i386 与 amd64 内存布局影响缺页时机的说法，正文以引用为主
+166867|L4|Joerg Sonnenberger 建议在 uhci.c 第 1317 行加计数器，以确认设备是否在不改变状态的情况下发出中断
+166868|L4|Tom Ivar 报告 Dell PowerEdge 2850 上 amd64 高磁盘与网络 I/O 时神秘挂起，经 Christos Zoulas 协助定位
+166869|L3|Tom Ivar 更正自己先前数据，UPS 串口线路通常只产生每秒约 120 次中断而非 1200 次
+166870|L4|Tom Ivar 报告按建议加计数器后确认设备确实在该处提前 return，且次数比预期多得多
+166871|L3|Joerg Sonnenberger 建议先试关闭 uhci 中断改用 timeout 轮询这个 hack，并提醒对方别忘了自己标题里提的第二部分
+166872|L3|Tom Ivar 表示几小时后回去试轮询 hack，并补充此前未提到的症状即关闭 USB 后表现不同，正文以引用为主
+166873|L4|Tom Ivar 指出新包装函数未取 sc_intr_lock 互斥量致 uhci_intr1 的 KASSERT 失败，将补上 enter 与 exit 调用
+166874|L3|Joerg Sonnenberger 复述自己关于在 uhci.c 第 1317 行加计数器以判断中断来源的建议，正文以引用为主
+166875|L4|Tom Ivar 报告重启后看到 ioapic 上 uhci2 引脚在系统刚可登录时已累积明显偏多的中断计数
+166876|L4|Tom Ivar 报告机器已连续运行九小时执行并发构建与夜间备份而无事故，同时 uhci2 引脚中断计数已超 210000
+166877|L4|Tom Ivar 报告补上互斥量调用后轮询包装已可运行，机器经 USB 串口与 UPS 通信正常并已做过 cvs update
+166878|L3|Izaak 汇报 aprint 项目进度，称正在把自动配置阶段的 printf 转为 aprint，并发现许多 printf 被 DPRINTF 宏包裹
+166879|L3|Thor Lancelot Simon 转贴 Tom Ivar 关于 uhci 引脚无突发的中断计数观察，正文以引用为主
+166880|L4|Tom Ivar 给出九小时运行的中断计数，uhci2 约 60 万、uhci0 约 40 万，而 amr0 约 300 万、wm0 约 200 万属正常
+166881|L3|Maxime Villard 回应称 tw_cli 既然已在 FreeBSD 上可用，移植到 NetBSD 所需工作量不大
+166882|L3|Joerg Sonnenberger 转贴 Thor Lancelot Simon 关于 Tom 仍收到中断从而付出处理开销的观察，正文以引用为主
+166883|L4|某开发者将中断风暴拆为共享中断与 uhci 在不该中断时发中断两点，判断前者无从着手，下一步做中断速率统计并在过高时关掩码转轮询
+166884|L3|Thor Lancelot Simon 转贴 Joerg Sonnenberger 关于共享中断与 uhci 误发中断两点分析，正文以引用为主
+166885|L3|Maxime Villard 转贴 Marc Balmer 关于 tw_cli 用户需先有可用替代方案的意见，正文以引用为主
+166886|L3|Marc Balmer 转贴 Maxime Villard 关于移除 compat_FreeBSD 的提案与其动机说明，正文以引用为主
+166887|L3|Roy Marples 转贴 Greg Troxel 关于无盘客户端启动不应改动地址与子网路由的主张，正文以引用为主
+166888|L4|Tom Ivar 贴出更新后的中断计数器全表并标注各设备使用情况，含 cpu0 定时器 6817487 与 ioapic0 各引脚计数
+166889|L3|Greg Troxel 指出重大变更的惯例大致是共识或多数意见，目前无人支持禁用而多人仍在使用该兼容层
+166890|L4|Maxime Villard 宣布改为在 GENERIC 内核中默认禁用 compat_FreeBSD 除非有人反对，并重申其因无主流专有软件依赖而价值有限
+166891|L4|Tom Ivar 通过逐秒 ping 日志对比，无 Joerg 修改时周期性挂起，修改后改为间歇性时延从亚毫秒骤升
+166892|L3|Maxime Villard 转贴 Greg Troxel 关于重大变更需共识或多数意见的判断，正文以引用为主
+166893|L3|Christos Zoulas 转贴 Izaak 关于自动配置阶段 printf 常被 DPRINTF 宏包裹的困惑，正文以引用为主
+166894|L3|Maxime Villard 就 FFS 的 brelse 分支提问，认为 fs_sbsize 判断使 else 分支永不可达，BC_INVAL 含义不清
+166895|L3|Joerg Sonnenberger 转贴 Greg Troxel 关于无人支持禁用 compat_FreeBSD 的观察，正文以引用为主
+166896|L3|Quentin Garnier 转贴 Greg Troxel 关于重大变更需共识与多数意见的论述，正文以引用为主
+166897|L3|Taylor R Campbell 转贴 Joerg Sonnenberger 称曾在清理过时仿真层时问过同样问题，正文以引用为主
+166898|L3|Michael van Elst 反驳默认禁用会使问题隐形并加速代码烂掉，认为这大概就是该建议的用意
+166899|L3|Joerg Sonnenberger 转贴 Thor Lancelot Simon 关于还能向上游多远禁用或屏蔽该中断的疑问，正文以引用为主
+166900|L3|Marc Balmer 表示反对默认禁用 compat_FreeBSD，理由仍是有人在使用
+166901|L3|Izaak 转贴 Christos Zoulas 关于 DPRINTF 包裹处如何处理 printf 的建议，正文以引用为主
+166902|L4|J. Hannken-Illjes 指出 fs_sbsize 也可能等于 SBLOCKSIZE，并说明 BC_INVAL 的作用是不让缓冲区留在缓存中
+166903|L3|Michael van Elst 补充 fs_sbsize 还可能等于 SBLOCKSIZE，若超级块损坏甚至会更大
+166904|L3|Joerg Sonnenberger 回应 Michael van Elst 关于默认禁用会使 compat_FreeBSD 隐形并烂掉的反驳，正文以引用为主
+166905|L3|Christos Zoulas 转贴 Joerg Sonnenberger 关于清理过时仿真层的历史先例，正文以引用为主
+166906|L3|Christos Zoulas 转贴 Izaak 关于 printf 被 DPRINTF 宏包裹时的处理疑问，正文以引用为主
+166907|L3|Kamil Rytarowski 转贴 Greg Troxel 关于重大变更需共识且目前无人支持禁用的论述，正文以引用为主
+166908|L3|Brian Buhrow 指出禁用 COMPAT_FREEBSD 也得禁用 twe 与 twa，自己亦用 tw_cli，建议改由手册说明兼容层脆弱性
+166909|L3|Eric Haszlakiewicz 认为 tw_cli 依赖与驱动编译依赖并非同一回事，正文以引用为主
+166910|L3|Matt Thomas 转贴 Christos Zoulas 转述 Joerg Sonnenberger 关于清理过时仿真层与安全性的意见，正文以引用为主
+166911|L3|Eric Haszlakiewicz 转贴 Brian Buhrow 关于禁用 compat_FreeBSD 会失去 twa 与 twe 管理能力的意见
+166912|L3|Christos Zoulas 转贴 Brian Buhrow 关于兼容层依赖与 tw_cli 使用情况的陈述，正文以引用为主
+166913|L3|Brian Buhrow 重申从 GENERIC 移除 compat_FreeBSD 会失去管理 twa 与 twe 卡的能力，新持有者或因此放弃 NetBSD
+166914|L4|David Holland 回应称自己也刚读过 compat_FreeBSD 的代码，反问其中到底有什么问题
+166915|L3|Maxime Villard 转贴 J. Hannken-Illjes 关于 fs_sbsize 与 BC_INVAL 用意的解答，正文以引用为主
+166916|L3|Taylor R Campbell 转贴 Ignatios Souvatzis 关于 sparc64 升级后卡在 vm_map 的报告，正文以引用为主
+166917|L4|Ignatios Souvatzis 报告 sparc64 升级 6.1.5 后无法 exec 与 fork，卡在 vm_map，杀进程也挂起，只能硬件复位
+166918|L3|Izaak 确认将采纳 Martin 建议，仅把自动配置阶段的 DPRINTF 换成 aprint_debug 而不动其他 printf 变体
+166919|L3|matthew green 转贴 Christos Zoulas 转贴 Izaak 关于 DPRINTF 包裹 printf 的疑问，正文以引用为主
+166920|L3|Marc Balmer 转贴 David Holland 关于无人支持禁用 compat_FreeBSD 的引述，正文以引用为主
+166921|L3|David Holland 转述 Maxime Villard 关于无人支持禁用的说法及自己已读过相关代码的回应，正文以引用为主
+166922|L3|Maxime Villard 转贴 David Holland 关于重大变更需共识或多数意见的论述，正文以引用为主
+166923|L3|Christos Zoulas 以斜线格式转发 aprint 调试宏讨论链，正文以引用为主
+166924|L4|David Holland 认为按同样理由就不该有任何二进制兼容代码，compat_FreeBSD 只是过期，正确处理是更新它，并询问更新是否可行
+166926|L3|Justin Cormack 指出这是测试覆盖为零的问题，Linux 仿真已用 rump 有尚可的树外覆盖，而 rump 尚未具备相应能力
+166927|L3|Christos Zoulas 转贴 Pavel 关于希望在 GSOC 中修 ptyfs 多实例化问题的求助，正文以引用为主
+166928|L3|Pavel Teixeira 自述为计算机工程学生，希望在 GSOC 中获指导去修 ptyfs 多实例化问题，并同步参加 Eudyptula 挑战
+166929|L3|David Holland 回复 compat_FreeBSD 下有效调用 sched_getparam 会致系统崩溃的报告，正文以引用为主
+166930|L3|Izaak 转贴 Christos Zoulas 关于 DPRINTF 改 aprint_debug 会改变语义的疑问，正文以引用为主
+166931|L3|Christos Zoulas 转贴 Izaak 转贴 matthew green 关于调试消息语义变化的讨论，正文以引用为主
+166933|L3|Tom Ivar 追问为 ehci 与 uhci 驱动加入轮询模式选项是否算大的改动
+166936|L3|Joerg Sonnenberger 转贴 Tom Ivar 关于共享中断与 uhci 误发中断两点分析，正文以引用为主
+166937|L3|Tom Ivar 请 Joerg Sonnenberger 解释自己在跑的实验补丁，认为它似乎从不使能 uhci 中断而是排程一系列超时
+166938|L3|Joerg Sonnenberger 转贴 Tom Ivar 关于该补丁是否从不使能 uhci 中断的观察，正文以引用为主
+166939|L3|Christos Zoulas 收到 Uwe 已用 7.99.x 验证 ixgbe 问题已解决、PR 49328 可关闭的通知，回复将去处理
+166940|L3|Iain Hibbert 表示不确定改用 aprint_debug 如何会引入代码膨胀，认为只是简单替换，若核心开发者有决定他会照办
+166941|L3|Roy Marples 转贴 Greg Troxel 关于无盘客户端启动不应改动地址与子网路由的论述，正文以引用为主
+166942|L3|Izaak 转贴 Christos Zoulas 关于 DPRINTF 改 aprint_debug 会改变语义的疑问，正文以引用为主
+166943|L4|Tom Ivar 经检索发现 NetBSD 基金会早在 2006 年就记录过同类 uhci 中断问题，并附 port-amd64 索引链接
+166944|L3|Thor Lancelot Simon 转贴 Tom Ivar 关于发现 2006 年曾记录同类问题的消息，正文以引用为主
+166945|L4|Ryota Ozaki 接手并完成 Jeff Rizzo 数年前提交的 DTrace 系统调用提供者补丁，称经调整已在 amd64 可用
+166946|L3|Christos Zoulas 指出 DPRINTF 调试消息并未编进内核，正文以引用为主
+166947|L3|Brad Harder 询问 NetBSD 是否有用户态 DTrace 能力的计划与路线图，认为目前只支持内核内追踪
+166948|L3|Ryota Ozaki 确认 NetBSD 目前只支持内核内活动追踪，据他所知无人正从事用户态支持
+166950|L3|Ryota Ozaki 转贴 Jeff Rizzo 转贴本人关于用户态 DTrace 路线图的转发链，正文以引用为主
+166951|L4|Brad Harder 实测最新当前版，未加载内核模块时 dtrace -l 仍列出探针，执行即内核故障重启
+166952|L3|Ryota Ozaki 解释模块自动加载是 NetBSD 特性，dtrace -l 后 solaris.kmod 与 dtrace.kmod 会被加载
+166953|L3|Ryota Ozaki 转贴自己关于模块自动加载的解释与 Brad Harder 的复现报告，正文以引用为主
+166956|L3|Ryota Ozaki 转贴 Paul Goyette 关于模块未加载时系统调用入口为 no-op 且卸载前会检查的规则，正文以引用为主
+166957|L3|Ryota Ozaki 转贴本人关于模块自动加载的解释与 Brad Harder 的报告，正文以引用为主
+166958|L3|Ryota Ozaki 转贴 Paul Goyette 转贴本人关于模块加载与探针可见性的讨论，正文以引用为主
+166959|L4|Maxime Villard 报告内核加载 ELF 时处理 PaX 标志的缺陷，指出 exec_elf 在动态链接执行前无条件写入 p_pax
+166961|L4|Christos Zoulas 认为加载解释器时 p_pax 标志没有理由不能沿用，建议直接打开验证
+166962|L3|Christos Zoulas 转贴 Maxime Villard 关于加载解释器时 p_pax 是否被沿用的疑问，正文以引用为主
+166963|L3|Maxime Villard 转贴 Christos Zoulas 关于把该标志打开试看的建议，正文以引用为主
+166964|L4|Ryota Ozaki 提交基于最新当前版的 DTrace 系统调用补丁更新，删去 kern_dtrace 意外注释，有使用者时不卸 systrace 模块
+166965|L3|Maxime Villard 转贴 Christos Zoulas 关于打开 p_pax 标志试看并追问其含义的往来，正文以引用为主
+166966|L3|Stephan 询问如何把新 C 文件加入 sys/kern 使构建系统纳入编译，并就实现 IPC 的代码应否沿用 uipc 前缀求教
+166967|L3|Greg Troxel 告知新内核文件应登记在 src/sys/kern/files.kern，并对 uipc 前缀含义给出看法，正文以引用为主
+166968|L4|matthew green 分析 i386 上 radeondrmkms 问题，它须等 mountroot 完成才附加，而 GENERIC 里 vga 已抢占
+166969|L3|Maxime Villard 撤回自己先前提交的 PaX 补丁，承认其错误并承诺稍后用更好的方案再来
+166970|L4|Martin Husemann 认为控制台附加时须从文件系统加载固件很糟糕，建议 radeondrmkmsfs 先做纯文本控制台，固件加载后再切帧缓冲
+166971|L3|matthew green 反驳 i386 已映射 VGA 寄存器导致 radeon 失败的推断，指出若成立则今天所有系统都会失败，正文以引用为主
+166972|L3|Taylor R Campbell 转贴 matthew green 关于固件加载与 VGA 寄存器映射双重问题的说法，正文以引用为主
+166973|L3|Taylor R Campbell 转贴 Martin Husemann 关于固件加载时机糟糕与文本控制台方案的看法，正文以引用为主
+166975|L3|David Brownlee 转贴 matthew green 关于 radeondrmkms 附加时机与遗留 VGA 抢占的原始分析，正文以引用为主
+166976|L3|Joerg Sonnenberger 转贴 Tom Ivar 称 uhci 轮询补丁在 SMP 下长期稳定并将作为本地补丁维护，正文以引用为主
+166977|L3|Tom Ivar 同意把补丁提交到 GNATS，询问以带已知规避办法的缺陷报告形式提交再被关闭为不修是否合适
+166978|L4|Tom Ivar 报告 Joerg Sonnenberger 的 uhci 轮询模式补丁在 SMP 下已长期稳定运行，将作为本地补丁自行维护并致谢

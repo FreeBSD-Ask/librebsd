@@ -1,0 +1,52 @@
+190779|L4|enami tsugutomo 追问为何 vndioctl 一律要求 root 权限，其他磁盘设备并无此要求，认为只要对设备与目标文件具备足够权限便无拒绝理由
+190780|L4|Simon Burge 发现 pciide.o 是内核最大的目标文件之一，加入 PCIIDE_RESTRICTED_SUPPORT 选项按板卡只编译所需子集
+190781|L3|作者说明 systrace ioctls 的向后不兼容变更源于新增序列号以规避 bin/systrace 与内核失步竞态，并带入了参数替换 ioctl 改动
+190782|L3|itojun 认可更小的二进制但反感成串 options 的做法，转而建议把 pciide 驱动拆分成多个部件以分别编译选择
+190783|L4|Thorpe 自述 __clone() 是很合适的函数名且恰好与 Linux 应用层 API 一致，这正是当初的设计意图
+190784|L3|Christoph Hellwig 澄清 Linux 内核 API 用的是 clone 而 __clone 属于 glibc 层的应用接口，两者语义并不相同
+190785|L4|Antti Kantee 自述为让 FreeBSD 版 pthread 库直接运行而增加 rfork() 系统调用，实现上把参数转交给 fork1 处理
+190786|L3|Love 在 PT_MEMMAP 线程中回帖，可见正文以引用 McGarry 关于 pmap 输出与其自托管 ptrace 补丁的评论为主
+190787|L4|Manuel Bouyer 计划把 pciide 拆成 piixide、amdide、viaide 等多个独立驱动并保留通用 pciide 兜底
+190789|L3|Thorpe 自述 __clone 是所有应用实际使用的那个接口，因此也正是他们应当提供的那个
+190791|L3|Thorpe 认为 pciide 应保留基础 DMA 支持并沿用 BIOS 的设置结果，仅在 0x0001 标志存在时启用
+190792|L4|Thorpe 澄清 microtime 基于 time 而非 mono_time 返回结果，因此在该场景使用 time 语义比 mono_time 更契合
+206171|L4|Thor Lancelot Simon 说明 C7 stepping 8 及后续 VIA CPU 具双 RNG，需显式开启第二噪声源
+206172|L3|Aiannei 询问 i386 引导码 PBR 中 oemname 为何仍是 NetBSD60 及其用途，并称在 7-RELEASE 中未找到其他引用
+206173|L3|Cherry 回应 vm_physseg 裁剪提案时说明初查未见任何端口以预期方式使用 avail_start 与 avail_end 字段
+206175|L3|Kollasch 认为 oemname 基本无关紧要，除非存在被其他操作系统读取 MBR 的情形否则没有改动理由
+206179|L4|Michael van Elst 说明常规操作已充分测试但 raiddump 未测，并已修正 RF_PROTECTED_SECTORS 误清标签
+206180|L3|Stephan 请求把 usbdi.c 中轮询相关的修正提拉到 netbsd-7，使 ddb(4) 能在下一个修补版中正常工作
+206182|L4|Stephan 判断 RPi B+ 上 micro SD 卡传输延迟源于文件系统延迟聚合写入，建议划单独分区并改用裸设备测试以定位差异
+206183|L4|Stephan 报告 RPi 上执行 find 全盘扫描会使进程长时间阻塞，复现出 find 进入 D 状态的 ps 输出并关联到 daily 任务
+206185|L3|Campbell 在 spec_write panic 线程中转述 Goyette 的内核地址映射分析，可见正文全为引用块
+206186|L4|Stephan 实测 Pi 上把 I/O 调度器由 disksort 改为 fcfs 并未如预期提升顺序写速度，写速波动无规律并给出 dd 数据
+206189|L3|该回帖正文全为引用 Campbell 关于 cpu_rng_init 应报告 CPU 是否具备 RNG 及特性位决定 rndsource 的提问
+206190|L4|Paul Goyette 确认 DIAGNOSTIC 条件用错应改为判断 uio_vmspace 等于 vmspace_kernel()，将在两处同时修正
+206191|L4|nakahara 更新并重新提交 gif(4) 与 ip_encap 的 MP 化补丁供审，附自托管补丁链接并致谢各方评审意见
+206193|L3|van Elst 建议改用 crash(8) 对内核中的目标进程做回溯以定位其等待点
+206194|L3|Stephan 用 crash(8) 回溯把 D 状态进程定位在 fd_close 到 cv_wait 的调用链上并附上 crash 7.99.25 的输出
+206198|L3|Michael van Elst 指出 fd_close 只有单一 condvar 在等待其他引用排空，因此阻塞来源可以直接锁定该处
+206201|L3|bch 认为该情形与 sqlite 编译选项文档中最低文件描述符一节所述同类，并给出该文档链接
+206203|L4|Thor Lancelot Simon 建议改用 workqueues 由他线程移除引用，手册中 work item 不得在回调返回前重新入队的表述易被误读
+206208|L3|该邮件质疑文件描述符为何按升序关闭，认为 0、1、2 通常应该最后关闭，但也承认 Goyette 提出的理由较为站得住脚
+206210|L4|David Holland 认为应直接移除 close() 中导致 filemon 挂死的缺陷行为，而不是让 filemon 长期持有 fd 引用
+206215|L4|Taylor R Campbell 建议 filemon 改用 fd_getfile2 与 closef 仅持有 file 引用而非 fd 引用以绕开死锁
+206219|L4|Terry Moore 借 tmpnam(3) 弃用类比质疑 fd_getfile() 安全边界，追问若 fd 指向只读文件 filemon 是否仍会写入
+206220|L3|nakahara 在 cacheline 对齐锁线程回帖，正文以引用 Campbell 转述其 COHERENCY_UNIT 填充疑问为主
+206223|L4|Michael van Elst 说明模块挂载行为取决于具体驱动并因 devsw、伪设备与克隆机制而更复杂，认为不存在统一答案
+206226|L3|Terry Moore 追问 fd_getfile() 之后是否还有 spec_write() 调用，认为假设句柄仍与原先相同极其脆弱且安全分析是开放的
+206229|L3|Terry Moore 追问若 make 因信号例如 ctrl-C 或 kill -9 而终止时该挂起是否仍会发生，并援引邮件列表转发头以核对场景
+206232|L4|Robert Elz 建议启用日志时把被记录文件从进程中分离，使 attach 的 ioctl 在进程视角等同于一次 close
+206234|L4|Kengo NAKAHARA 报告按文档构建 amd64 GENERIC.PROF 内核失败并附 profile.h 与 subr_prof.c 的修复补丁
+206236|L3|Robert Elz 建议内核中照 newfd 等于 dup 旧 fd 再 close 旧 fd 的等价流程处理，只是不必真的关闭旧描述符
+206237|L4|David Holland 指出新增的 mcount 锁属于机器相关范畴应移至对应 MD 文件而非 sys/kern/subr_prof.c 中定义
+206239|L4|Robert Elz 认为与其保留 fd_getfile 与 fd_putfile 的半成品做法，不如直接修正 filemon 使其持有对文件的正规引用
+206243|L3|Holland 在 filemon 线程回帖，可见正文以引用 Goyette 关于 /dev/filemon 退出顺序依赖的说明为主
+206249|L3|Campbell 指出 kern_descrip.c 中 fd_getfile2() 的注释要求进程在跨此调用期间不得 fork 或退出
+206252|L4|David Holland 认为 sys_fktrace 更适合作为参考，因其直接使用 file handle 且与 filemon 用途近似但实现更彻底
+206261|L3|Rhialto 提出另一思路，让 filemon 在需要更低 fd 时改用 dup2 把输出 fd 抬到足够高再使用以避免该情形
+206269|L4|David Holland 指出 t->p_lock 在 mutex_exit 后未重新加锁使进程最终处于无锁状态运行，fork1 中也有类似样例并已修复
+206272|L4|Cherry G Mathew 说明 vm_physseg 的裁剪 API 意图是作为启动后热插拔接口覆盖在数组实现之上且数据结构初期退化为数组
+206275|L4|Masao Uebayashi 说明 avail_start 与 avail_end 追踪加入 free list 的受管页范围供内核向 UVM 申请内存
+206276|L4|Thor Lancelot Simon 提交 cpu_rng 框架补丁称已处理全部既有意见但因偏好 VLA 与 size_t cnt 声明而保留该构造
+206278|L3|Campbell 在 cpu_rng 框架补丁评审中指出 cnt 的声明至少应加 const 限定，因 VLA 长度表达式不要求变量非 const

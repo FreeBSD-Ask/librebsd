@@ -1,0 +1,123 @@
+165479|L3|Taylor R Campbell 就全局 vnode 缓存的 vnode API 改造回帖，正文以引用 kpause 与 vnalloc 改动说明为主
+165480|L3|J Hannken-Illjes 就 vnode 缓存改造线程回帖，正文以引用 Taylor 转引的 kpause 与 vnalloc 改动说明为主
+165481|L3|Thor Lancelot Simon 更新 cprng_fast 补丁，称补上缺失文件并吸收 Taylor 的部分意见后重新贴出
+165482|L4|Sergio Lopez 指出 linux 仿真进程计数泄漏仅出现在最后存活线程不是主线程而是子线程的情形，其余情形不出现该状态
+165483|L3|Thor Lancelot Simon 提交 cprng_fast 性能补丁求审，正文以引用 Mindaugas 追问基准结果是否公布为主
+165484|L3|Thor Lancelot Simon 回应 Taylor 指出其 cprng_fast 补丁遗漏 percpu_putref 一事，称已修正该处
+165485|L4|Taylor R Campbell 公开其私下意见，反对暴露 cprng_fast 实现细节，把重写目标限为安全替换 arc4random 与提升扩展性
+165486|L3|Greg Troxel 就 COMPAT_10 下 open 系统调用不一致回帖，追问 pathbuf_create 之后是否还需释放 pb
+165487|L3|Izumi Tsutsui 就 cprng_fast 补丁回帖，正文以引用 hc128 中 pack_littleendian 等新增代码为主
+165488|L4|Maxime Villard 报告 open 在 COMPAT_10 下不一致，主张 COMPAT_10 应加在 compat32 而非原生系统调用
+165489|L3|Izumi Tsutsui 就 cprng_fast 补丁回帖，正文以引用 hc128_init 在栈上分配 5KB 数组及调用点代码为主
+165490|L4|Thor Lancelot Simon 反驳 Taylor 的性能约束，认为须与移除互斥锁后的 arc4random 版本相比该约束才成立
+165491|L4|Thor Lancelot Simon 回应 hc128 重密钥占 9KB 栈在各端口致命之说，主张拉大重密钥间隔或改用 kmem_alloc
+165492|L4|Taylor R Campbell 指出 HC-128 用密钥依赖数组下标且状态过大不宜采用，并要求把改动拆成三部分分别测量
+165493|L3|tls 回应 Izumi Tsutsui 关于 pack_littleendian 在 arm mips 上触发非对齐陷阱的质疑
+165494|L3|tls 回应 Taylor 关于 HC-128 密钥依赖下标与状态过大的评估，表示愿意按要求拆分改动
+165495|L4|Taylor R Campbell 回应 HC-128 密钥依赖下标是否构成实际弱点之问，称使用者稀少故难有实用计时攻击研究
+165496|L3|Christos Zoulas 就 open 的 COMPAT_10 不一致回帖，正文以引用 Maxime Villard 的报告与源码片段为主
+165497|L3|tls 就 cprng_fast 补丁回帖，正文以引用 Izumi Tsutsui 关于 cprng_fast_randrekey 调用点的说明为主
+165498|L4|Markku-Juhani Olavi Saarinen 建议弃用 RC4 改用 AES CTR 模式，称其标准紧凑且多数系统有 AES-NI 加速
+165499|L4|Thomas Klausner 纠正 hc128_init 的栈占用估算，指出 uint32_t 数组 w 长 1280 故占 1280 乘 4 字节
+165500|L3|Markku-Juhani Olavi Saarinen 就 cprng_fast 补丁回帖，正文以引用 Taylor 关于 AES CTR 评价为主
+165501|L4|Taylor R Campbell 指出 /dev/urandom 与 cprng_strong 已用 AES CTR，但它更慢且同样有缓存计时侧信道
+165502|L4|Thor Lancelot Simon 提出 cprng_fast 设计准则，列举其用于内存映射重排、程序启动取值与逐包处理等性能敏感位置
+165503|L4|Thor Lancelot Simon 反驳 AES-NI 已相当普及之说，指出内嵌 MIPS 与 ARM 是重要目标而其中能加速 AES 的很少
+165504|L3|tls 就 cprng_fast 补丁线程回帖，承认 Thomas Klausner 关于 uint32_t 数组字节数的计算正确并致谢
+165505|L4|Roland C Dowdeswell 反驳近三年新机器普遍具备 AES-NI 之说，自述其约三年机龄笔记本与服务器均无该指令
+165506|L3|Markku-Juhani Olavi Saarinen 在 cprng_fast 线程收尾，仅追问 AES-NI 是否会出现在全部未来系统上
+165507|L4|Thor Lancelot Simon 追问为何不用 RDRAND 这类硬件随机源，并称开发用虚拟机即使硬件虚拟化也不暴露 AES-NI
+165508|L3|tls 就 cprng_fast 补丁回帖，正文以引用关于近三年新机器是否普遍具备 AES-NI 的多轮争论为主
+165509|L3|tls 回应 Markku-Juhani Olavi Saarinen 关于 AES-NI 将全面普及之说，称除非排除非高端 x86 否则不会
+165510|L3|Izumi Tsutsui 就 hc128 重密钥时栈占用过大回帖，表示若改用 kmem_alloc 分配则无异议
+165511|L3|Thor Lancelot Simon 称正在做此前讨论的基准测试，并单独考虑是否应从 hc-128 改用 salsa20
+165512|L3|Joerg Sonnenberger 就 cprng_fast 补丁回帖，正文以引用关于虚拟机不暴露 AES-NI 与是否改用硬件随机源的讨论为主
+165513|L3|David Holland 就 COMPAT_10 下 open 系统调用不一致回帖，指出无论如何都必须调用 pathbuf_destroy
+165514|L3|darkstar 就 cprng_fast 补丁回帖，正文以引用 Salsa20 与 ChaCha 在 Ivy Bridge 上的周期数实测为主
+165515|L4|Thor Lancelot Simon 公布 cprng_fast 各实现基准，涵盖 arc4 三版与 hc128、chacha8 变体并给出扩展系数
+165516|L3|Dennis Ferguson 就 cprng_fast 基准回帖，正文以引用 percpu ARC4 只是陪衬且 RC4 已不安全等结论为主
+165517|L3|Matt Thomas 就 AES-NI 普及率争论回帖，仅指出并非所有机器都是 x86 架构
+165518|L3|Taylor R Campbell 就 cprng_fast 基准回帖，正文以引用按字节周期数与生成 4GB 16GB 数据的测法为主
+165519|L4|Taylor R Campbell 认为 cprng_fast 设计准则中的强度标准过于严苛，称不足以作为否决密码算法的依据
+165520|L3|tls 就 cprng_fast 基准回帖，正文以引用各实现 cpb 与扩展系数的结果表为主
+165521|L4|Taylor R Campbell 就 cprng_fast 与中断优先级新开题，认为 spl 内代码耗时极短故进入何种 spl 影响不大
+165522|L3|Mindaugas Rasiukevicius 就 cprng_fast 补丁回帖，以清单列出数点评审意见，正文以引用提案者说明为主
+165523|L3|Joerg Sonnenberger 就 cprng_fast 基准回帖，正文以引用 ChaCha8 在已知攻击下具 139 位强度等论述为主
+165524|L3|Mindaugas Rasiukevicius 就 cprng_fast 设计准则回帖，正文以引用其内核中性能敏感用途的观察为主
+165525|L3|tls 就 cprng_fast 基准回帖，正文以引用 ChaCha8 是否适用及 6 轮 ChaCha 强度等讨论为主
+165526|L4|Thor Lancelot Simon 说明基准表 cpb 列测法，称改内核代码在每次重密钥后连调 cprng_fast32 取得 32 位请求吞吐
+165527|L3|Manuel Bouyer 就 cprng_fast 基准回帖，回答编译期判断单处理器内核之问并称 options MULTIPROCESSOR 仍在
+165528|L3|Mindaugas Rasiukevicius 就 cprng_fast 基准回帖，正文以引用关于 4 字节请求吞吐与 cpb 列测法的讨论为主
+165529|L3|Mindaugas Rasiukevicius 就 cprng_fast 基准回帖，正文以引用各实现 cpb 与 4GB 16GB 耗时及扩展系数为主
+165530|L3|Mindaugas 就 cprng_fast 基准回帖，接 Manuel Bouyer 关于 MULTIPROCESSOR 仍在的说法续议
+165531|L3|Joerg Sonnenberger 就 cprng_fast 基准回帖，正文以引用 ChaCha8 与 ChaCha7 攻击强度对比为主
+165532|L3|tls 就 cprng_fast 基准回帖，正文以引用关于 4 字节请求每秒 cprng_fast32 调用次数的讨论为主
+165533|L3|David Laight 就 linux 仿真资源泄漏回帖，正文以引用 Sergio Lopez 关于最后存活子线程致计数增长的分析为主
+165534|L3|Paul Koning 就 cprng_fast 基准回帖，正文以引用各实现 cpb 与 4GB 16GB 耗时及扩展系数结果表为主
+165535|L4|Thor Lancelot Simon 澄清内核有两套随机数生成器，强随机数基于 CTR_DRBG 与 AES128，快随机数基于 RC4
+165536|L3|David Laight 就 cprng_fast 补丁回帖，认可 tls 关于 x86 内核无法用 AES-NI 的说明并欢迎改进
+165537|L3|David Laight 就 cprng_fast 基准回帖，接 Manuel Bouyer 关于 MULTIPROCESSOR 选项的说明继续追问
+165538|L3|Paul Koning 就 cprng_fast 基准回帖，正文以引用关于强随机数用 CTR_DRBG 与 AES128、快随机数用 RC4 的澄清为主
+165539|L4|Mindaugas Rasiukevicius 质疑若目标只是非强随机数生成器，何必讨论安全属性并考虑如此复杂的算法
+165540|L3|Paul Koning 就 cprng_fast 基准回帖，正文以引用关于非强随机数生成器该讨论哪些安全属性的争论为主
+165541|L3|Paul Koning 就 cprng_fast 基准回帖，正文以引用快随机数用于 ip_id 与临时端口号生成等用途清单为主
+165542|L3|Paul Koning 就 cprng_fast 基准回帖，正文以引用关于 UDP 端口号生成安全问题的论述为主
+165543|L4|Mindaugas Rasiukevicius 指出 TCP ISN 与 UDP 端口号随机化需兼顾安全与性能，且两者要求并不相同
+165544|L4|Thor Lancelot Simon 说明 CTR_DRBG 防御的诸多攻击在此场景并不相关，故算法强弱不能单以密码强度比较
+165545|L3|Paul Koning 就 cprng_fast 基准回帖，正文以引用关于 CTR_DRBG 防御目标与本场景攻击相关性的论述为主
+165546|L3|tls 回应 Paul Koning 要求点名具体攻击的分析诉求，表示自己已无余力逐点推进
+165547|L4|Thor Lancelot Simon 列举快随机数的实际用途，包括 ip_id 生成、临时端口号、加密协议显式 IV 与随机化等
+165548|L4|Greg Troxel 总结 cprng_fast 讨论，认为快非超强随机数改用 ChaCha8 已是进步，后续仍需按够用随机规范做正式分析
+165549|L4|David Holland 解释路径名按斜杠拆分逐组件处理放在 VFS 层的原因，称其为各类文件系统通用
+165550|L3|David Holland 就全局 vnode 缓存改造回帖，正文以引用 Taylor 关于长期复制 getnewvnode 逻辑的异议为主
+165551|L3|Paul Koning 就 cprng_fast 基准回帖，正文以引用关于点名具体攻击与安全分析需逐点进行的争论为主
+165553|L3|J Hannken-Illjes 就全局 vnode 缓存改造回帖，正文以引用 David Holland 与 Taylor 的异议为主
+165554|L4|Ilia Zykov 反对全局 vnode 缓存引入挂载点重载，称每次查找多一次挂载点比较且哈希表更大，按挂载点独立哈希更灵活
+165555|L4|Ilia Zykov 提出 VFS API 改造，新增 VOP_LOOKUPFN、VFS_VFILL 与 genfs_lookup 供其他文件系统通用查找
+165556|L3|J Hannken-Illjes 就全局 vnode 缓存改造回帖，正文以引用 Ilia Zykov 关于挂载点重载与哈希表规模的质疑为主
+165557|L3|J Hannken-Illjes 就全局 vnode 缓存回帖，正文以引用 Ilia Zykov 关于单一全局表在多文件系统故障时影响的质疑为主
+165558|L3|Ilia Zykov 就 vnode 缓存线程收尾，表示按挂载点分表并非根本问题，如确有需要可稍后再改
+165559|L4|Patrick Welche 报告 vnd 启用 DIOCGDISKINFO 后清单与磁盘标签的扇区数与总大小对不上，附 labeltest 实测输出
+165560|L3|Ilia Zykov 就全局 vnode 缓存回帖，认为只有一个全局表只有劣势，举例多文件系统之一有坏扇区时其余不受影响
+165561|L3|Patrick Welche 就 vnd 几何参数回帖，正文以引用 J Hannken-Illjes 关于伪几何与 Adaptec 虚拟几何的说明为主
+165562|L3|J Hannken-Illjes 就 vnd 几何参数回帖，追问 VNDIOF_HASGEOM 在何种条件下会被置位以及几何参数的来源
+165563|L3|Patrick Welche 就 vnd 几何参数回帖，正文以引用关于 VNDIOF_HASGEOM 置位条件与 vnconfig 几何规格的讨论为主
+165564|L3|J Hannken-Illjes 就 vnd 几何参数回帖，正文以多层引用关于 VNDIOF_HASGEOM 置位条件的讨论为主
+165565|L4|Taylor R Campbell 撤回对 vnode 缓存改造的异议以免阻碍进度，仍认为不应存在两条 vnode 创建路径，并留下后续处理意见
+165566|L3|Ilia Zykov 就 VFS API 改造回帖，称自己才发现 vnode 生命周期修正议题，认为 VOP_LOOKUPFN 对之有用
+165567|L3|Patrick Welche 就 vnd 几何参数回帖，正文以多层引用关于 VNDIOF_HASGEOM 置位条件的讨论为主
+165568|L4|J Hannken-Illjes 提议定下 vcache 接口，含查找、移除等成员与 VFS_LOAD_NODE，并附上更新后的 diff
+165569|L3|Ilia Zykov 就全局 vnode 缓存回帖，建议参考 DragonFly 的 VOP_NRESOLVE 接口，称其先锁名字组件再操作 vnode
+165570|L3|David Holland 就 vnode 缓存回帖，正文以引用 J Hannken-Illjes 追问重复 getnewvnode 逻辑之问为主
+165571|L3|Ilia Zykov 就 vnode 缓存回帖，针对 virtual 对象无需计入 maxvnodes 或换出内存之说，补充 procfs 对象确实会消失
+165572|L3|Ilia Zykov 就 vnode 缓存线程回帖，更正自己前述关于 procfs 对象的表述，称指的不是实际对象
+165573|L3|J Hannken-Illjes 就全局 vnode 缓存回帖，正文以多层引用关于重复 getnewvnode 逻辑与否决意见的讨论为主
+165574|L4|David Holland 说明设单一 vnode 缓存表的唯一理由是限定所有文件系统的 vnode 总量并共用一条 LRU 链以免局部耗尽
+165575|L3|J Hannken-Illjes 就全局 vnode 缓存回帖，正文以多层引用关于重复 getnewvnode 逻辑与疑虑的讨论为主
+165576|L3|Christos Zoulas 就 linux 仿真资源泄漏回帖，接 David Laight 在 kern_exit 何处释放 l_lid 的建议
+165577|L3|Matthew Mondor 就不对称 SMP 线程回帖，正文以引用 Johnny Billquist 关于以半双工 NFS 根盘做无盘机的实测设置
+165578|L3|Matthew Mondor 就 linux 仿真资源泄漏回帖，正文以引用 Christos Zoulas 补丁及 Mark Davies 的确认为主
+165579|L3|Mark Davies 确认该补丁修好了进程数持续增长的问题，并请求有人提交并回填到 6 分支
+165580|L3|Mark Davies 就 linux 仿真资源泄漏回帖，认为释放点应在 kern_exit 更下方且持有 proc_lock 之处
+165582|L4|Thor Lancelot Simon 判定该问题属通用 LWP 代码的缺陷，linux 兼容层只是当前唯一会触发它的场景
+165583|L3|Matthew Mondor 就不对称 SMP 线程回帖，把此前含混的写法更正为指 CAS 指令
+165584|L3|Christos Zoulas 就 linux 仿真资源泄漏回帖，正文以引用 Mark Davies 确认补丁有效并请求提交的讨论为主
+165585|L4|Thomas Schmitt 自述已解答 cd9660 疑问，称 inode 号可按 32 倍缩小，并找出 32 位回绕致挂载失败的机制
+165586|L4|Thomas Schmitt 报告 fs/cd9660 缺陷并提出疑问，称找到 32 位回绕触发点，追问 isodirino 的 inode 计算是否有误
+165587|L3|Matthew Mondor 就 DomU 内删除大量文件引发 panic 的旧帖回帖，询问是否已立 PR 或已查明修复，并检索到疑似无关的 Xen PR
+165588|L3|Matthew Mondor 就 NetBSD-5 无法执行 0.9A 二进制的旧帖回帖，询问是否曾立 PR，并提示该问题属安全修复
+165589|L3|Matthew Mondor 就 P1003_1B_SEMAPHORE 旧帖回帖，道歉长期未跟进 tech-kern，正文以引用 Paul 为主
+165590|L4|Brian Buhrow 自述该问题原由 Chuck Silvers 实现修复并经其测试，称在 2012 年 9 月上半月，不确定立过 PR 或回填
+165591|L3|Matthew Mondor 就 NetBSD-5 执行 0.9A 二进制问题回帖，正文以引用 Brian 称修复由 Chuck Silvers 实现为主
+165592|L3|Joerg Sonnenberger 就 P1003_1B_SEMAPHORE 回帖，称未找到 PR 但添加 pkgsrc Python 修复时有讨论
+165593|L3|Joerg Sonnenberger 就 P1003_1B_SEMAPHORE 线程回帖，正文以引用关于内核信号量实现在 -current 中不佳讨论
+165594|L4|Matthias Drochner 称 -current 内核信号量实现不佳，Python 与 gcc/libgomp 须禁用信号量避免崩溃
+165595|L3|Thomas Klausner 就 P1003_1B_SEMAPHORE 线程回帖，称不知此事并追问是否与 imagemagick 讨论串报告的现象相似
+165596|L3|Drochner 就 P1003_1B_SEMAPHORE 回帖，正文以引用 Joerg 关于未找到 PR 与 pkgsrc Python 修复的讨论为主
+165597|L3|Matthias Drochner 就 P1003_1B_SEMAPHORE 回帖，回应信号量应否在 exec 关闭，并引用 sem_open 手册作答
+165598|L4|Mindaugas 指出 NetBSD 的 sem_open 与 POSIX 不同但更合理，实为提供文件描述符且 OS X 亦如此
+165599|L4|Matthias Drochner 分析崩溃栈落在仅命名与共享信号量用的 ksem 路径，推测 libgomp 使用了它并附 gcc-4.5.4 补丁
+165600|L3|Matthias Drochner 就 P1003_1B_SEMAPHORE 回帖，正文以引用其早前关于 sem_open 的信号量生命周期论述
+165601|L3|Matthias Drochner 就 P1003_1B_SEMAPHORE 线程回帖，接自己前帖称尚未查明 libgomp 具体如何使用信号量
+165602|L4|Matthias Drochner 就 P1003_1B_SEMAPHORE 回帖，称该补丁可实现 exec 时关闭信号量，试过改法无问题但违反约束
+165603|L3|Joerg Sonnenberger 就 P1003_1B_SEMAPHORE 回帖，正文以多层引用关于信号量在 exec 应关闭却在子进程继承的讨论

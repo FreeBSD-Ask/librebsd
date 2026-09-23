@@ -1,0 +1,103 @@
+166480|L3|Uebayashi 就链接脚本主题附上早期邮件索引链接，概述其共享目标文件以改善构建的旧提议，并接续关于链接器处理的争论
+166482|L3|John Nemeth 转贴 Uebayashi 关于链接器的回应并继续争辩配置与模块改动缺乏讨论的问题，正文以引用为主
+166483|L4|Uebayashi 反驳 Nemeth 关于配置与模块改动缺乏讨论的说法，认为整套方案的表述过于夸张，自己只是摘取低垂果实
+166484|L3|Uebayashi 转贴 Zoulas 关于依赖 ld -r 是否恰当的评论，继续链接脚本与配置改动路线之争，正文以引用为主
+166486|L3|John Nemeth 转贴 Uebayashi 的回应，继续争辩 config(1) 改动规模是否被夸大的问题，正文以引用为主
+166487|L4|van Elst 为 malloc 改造辩护，否认其引入过多缺陷，并称 ffs 上最近的问题或反而暴露了既有缺陷
+166489|L3|Elz 转贴 Villard 关于 KMEM_SIZE 仅在诊断模式启用、可用分配尺寸校验释放正确性的论述，续接 kmem 接口争议
+166490|L3|van Elst 转贴 Villard 关于分配标签未被编译因而难以辅助调试的论述，并指出这是 API 层面的取舍
+166491|L4|Uebayashi 开启 .eh_frame 讨论，说明它由 GCC 与 LLVM 生成用于栈回溯，内核中的引用尚未接入实际功能
+166492|L4|Rasiukevicius 反对新增 kmem_valloc，认为 kmem 接口争议并非首次出现，并另提出值得讨论的一点
+166494|L3|Uebayashi 转贴 Sonnenberger 关于 eh_frame 生成方与能否安全移除的逐条答复，续接内核 .eh_frame 讨论
+166496|L4|Sonnenberger 逐条回应 Uebayashi，否认 .eh_frame 是 GNU 扩展，确认由 GCC 与 LLVM 生成，并阻止将其从内核删除
+166497|L3|Cagney 分享 lldb-dev 讨论链接，指出 eh_frame 本意是最小回溯信息，多数系统实际附带更详细内容
+166498|L3|Sonnenberger 承认 eh_frame 接近 DWARF debug_frame 但两者有别，并澄清它并非 GNU 扩展
+166499|L3|Uebayashi 转贴 Cagney 关于回溯信息与用户态调试器的说明，续接内核 eh_frame 是否可移除的讨论
+166500|L3|Matt Thomas 转贴 Uebayashi 关于初始化顺序与 modularity 的设想，并就构造器声明放置位置的疑问简短表示同意
+166501|L4|Dreyfus 宣布将提交补丁让 GENERIC 类内核支持 UFS1 扩展属性，启用需文件系统为 UFS1、根目录建属性目录且以 extattr 挂载
+166502|L4|Husemann 转贴 Matt Thomas 主张弃用链接集的意见并表示同意，改用编译器构造器与析构器属性，并建议拆分子系统初始化函数传入整数优先级
+166503|L4|Uebayashi 说明自己一周前同意弃用链接集，但有把链接集合并入只读数据段的 MI 链接脚本后，可以接受链接集
+166504|L3|Uebayashi 转贴 Sonnenberger 反对移除 .eh_frame 的意见，就内核该段落的去留继续讨论，正文以引用为主
+166505|L3|Cagney 在 .eh_frame 线程接续讨论 gdb 与 libunwind 对回溯信息的使用情况，正文以引用为主
+166506|L4|Nurpmeso 表示自己的代码确实受益于把清零下沉到 kmem_intr_zalloc，因它使对齐边界处的真实范围被清零
+166507|L3|Sonnenberger 回应 Cagney 关于 gdb 与 libunwind 使用情况的追问，继续 .eh_frame 讨论
+166508|L3|Justin Cormack 转贴 Uebayashi 关于 init_main 当前难以更难看的评价并附和其看法，未提出新的事实或方案
+166509|L4|Simon 反对给 kmem_free 增加尺寸参数，认为与内核已知尺寸矛盾，且会多占一个 kmem 页而损失优化
+166510|L3|该帖转贴 Uebayashi 早前关于构造器属性可按优先级排序、难点在提供与用户态等价符号的论述，正文以引用为主
+166511|L3|Thor Simon 转贴 Uebayashi 关于把硬编码初始化序列改为按依赖定序向量的设想，表示支持任何能消除 rump 重复代码的方案
+166512|L3|Cagney 引述 joerg 称内核尚无相关用法，并注意到 arm 的 profile.h 可能含手写 eh-frame 代码
+166513|L3|Cagney 认为 amd64 栈回溯确需 CFI 协作，质疑关于 x86_64 必须禁用帧指针才能可靠回溯的说法
+166515|L3|Uebayashi 转贴 Simon 支持消除 rump 重复初始化代码的表态，继续内核构造器与链接集方案的讨论，正文以引用为主
+166516|L3|David Holland 引述 Uebayashi 展示的 kctors 链接集改动并表达关切，正文以引用为主
+166517|L4|Ozaki 提出以 callout_halt 替换 callout_stop 以便安全调用 callout_destroy，因须确保没有实例正在运行
+166519|L3|该帖正文是 Holland 反对构造器方案、警告隐藏顺序依赖会静默表现为怪异 bug 的引述，无发件人可见文字
+166520|L3|该帖转贴 Rytarowski 转引 Holland 关于构造器隐藏顺序依赖的警告，以及代码转换须极谨慎并保留原有顺序的强调
+166521|L4|Campbell 确认应当以 callout_halt 替换 callout_stop，并建议为 usb_remove 增补 callout 使用
+166522|L3|Campbell 转贴 Kille 关于初始化顺序应可离线预知运行时行为的观点，并提到 rcorder 一类离线预处理工具
+166523|L4|Rytarowski 转贴 Uebayashi 的担忧后论证受限静态分析并非更大问题，因构造器更危险的是循环依赖与启动竞争等新增缺陷类
+166525|L3|Izaak 表示希望参与把内核 printf 迁移到 aprint 与 log 的项目，并提到六月已有修改 log 的简短讨论
+166527|L3|Zoulas 转贴 Husemann 关于修改 log 接口的评论，接续内核 printf 迁移到 aprint 与 log 的方案讨论
+166528|L3|Nemeth 转贴 Kille 与 Holland 关于构造器隐藏顺序依赖的警告，接续内核构造器方案的争议，正文以引用为主
+166529|L3|Zoulas 转贴 Husemann 建议为驱动打印新建 log_dev 函数以替代 printf 的方案，正文以引用为主
+166530|L3|Campbell 转贴 Zoulas 关于不必退休 aprint 但欢迎 log_dev 用于非自动配置打印的见解，正文以引用为主
+166531|L4|Husemann 认可创建 log_dev 函数并让驱动在非 attach 函数中用它替代 printf 的计划，请对方纠正理解偏差
+166533|L4|Uebayashi 发现链接脚本可含多个 SECTIONS 命令，或将把 MI 与 MD 脚本直接拼接以省去中间 ld -r 步骤
+166534|L4|Young 转贴 NAKAHARA 关于 MSI-X 规范的追问，主张中断处理器亲和性不应由用户设置，那是设计与操作系统的职责
+166535|L3|Ozaki 在 callout 线程回应 Campbell 的确认，继续 callout_stop 与 callout_halt 替换的讨论
+166537|L4|Ozaki 提交新的 ifnet 补丁，按 rmind 建议对 IFNET_FOREACH 用 pserialize、对可阻塞临界区改用锁并给出硬件中断折中
+166538|L3|Uebayashi 转贴 Campbell 转引 Kille 关于初始化顺序须可离线预知的观点，接续构造器方案争议，正文以引用为主
+166540|L4|Uebayashi 提议把精力转向调查 init_main 中真实依赖，并质疑 pax 是否依赖 veriexec、ipsec 是否依赖 pax
+166541|L3|该帖转贴 Kille 关于链接集与构造器只是换装、构造器只应登记注册信息而不该执行动作的论述，全文以引用块呈现
+166542|L3|Ozaki 转贴 Campbell 转贴其 ifnet 补丁内容并就锁与分配顺序提问，在 ifnet 锁讨论中回应，正文以引用为主
+166543|L3|Christos Zoulas 转贴 Urban 关于 arp 报文抑制补丁的提议，对该方案回帖，正文以引用为主
+166544|L4|Urban 提议增加 sysctl 抑制 arp 主机不在本网关的消息，因其网络中该消息频繁出现并致日志每六小时轮转
+166545|L4|Uebayashi 总结链接集调研结论，指出链接集除最终链接后会暴露未用节外可用，且依赖 ld 自动生成的起止符号
+166546|L4|Uebayashi 说明内核使用构造器属性并无实质用处，其带优先级的语法可用链接脚本中的排序函数替代，因用户态才需要
+166547|L4|Urban 转贴 Christos 建议用包过滤丢弃该类 arp 的提议并予以回应，称其网络中此类报文合法且需要应答
+166548|L3|Zoulas 转贴 Urban 关于合法报文与经网关回复现状的说明并予以回应，继续 arp 抑制补丁讨论，正文以引用为主
+166549|L3|Dreyfus 追踪 DDB 中的加锁问题时询问由 vnode 反查所涉文件的方法，怀疑 ddb 无法打印 inode
+166550|L3|该帖转贴 ozaki-r 关于持 ifnet 锁调用 malloc 属违规、LOCKDEBUG 未检出并提议增加 ASSERT_SLEEPABLE 断言
+166551|L3|David Young 转贴 NAKAHARA 的追问，补充澄清自己前一条说明含糊之处，继续 MSI-X 实现讨论
+166552|L3|Hannken-Illjes 建议用 VOP_PRINT 传入 vnode 地址，回答 Dreyfus 在 DDB 中定位文件的问题
+166553|L4|Rytarowski 转贴 Uebayashi 的链接集调研并致谢，提议考虑在内核中引入扁平设备树，说明其在嵌入式环境广泛使用
+166556|L3|Uebayashi 转贴 Rytarowski 关于在内核引入扁平设备树的提议并予回应，继续链接集与设备树话题，正文以引用为主
+166560|L3|Sonnenberger 转贴 Young 与 NAKAHARA 关于中断处理器亲和性归属的往来，在 MSI-X 实现讨论中接续发言
+166561|L3|该帖转贴 ozaki-r 关于持互斥量时分配对象应改用池还是预分配的疑问、避免嵌套互斥量的讨论，正文以引用为主
+166562|L3|Ozaki 在 ifnet 锁讨论中回应 Campbell 关于 malloc 与锁限制的质疑，正文以引用为主
+166563|L3|Ozaki 转贴 Campbell 关于持锁分配应改用池或预先分配对象的答复并在 ifnet 锁讨论中接续，正文以引用为主
+166564|L3|Pradhan 自称本科生，表示希望承担内核项目中 boot.cfg 处理平台无关化课题作为毕设，并请指导熟悉代码库
+166566|L3|Dreyfus 追踪某个链表字段的内存破坏问题时，询问能否以编程方式设置监视断点而非在 ddb 提示符上手工设置
+166567|L3|Ozaki 在 callout 线程回应 Campbell 关于替换 callout_stop 的意见，正文以引用为主
+166568|L4|Rytarowski 汇报 AdvFS 移植至 NetBSD 的第三份状态，已完成基础锁，期间更多投入虚拟内存子系统的学习
+166569|L3|该帖转贴 Ozaki 关于补丁仅含需互锁与重排用例的内容，其余可直接以 callout_halt 替换且已提交
+166570|L3|Ozaki 转贴 Campbell 转发其补丁内容的说明，在 callout 线程回应补丁用例分类问题，正文以引用为主
+166571|L3|Campbell 转贴 Ozaki 关于弃用 sme_callout_mtx 统一改用 sme_mtx 的意见，正文以引用为主
+166572|L3|Ozaki 转贴 Campbell 关于弃用 sme_callout_mtx 统一改用 sme_mtx 的意见并在 callout 线程接续，正文以引用为主
+166573|L3|Ozaki 转贴前述关于弃用 callout 互斥锁、统一改用单一互斥量的意见并在 callout 线程接续，正文以引用为主
+166574|L3|Ozaki 为前文关于 ifnet 锁约束的表述不足致歉，承认自己表述误导对方，并承诺补写醒目的规则注释说明约束
+166575|L4|Uebayashi 指出 psz-ifnet 补丁在持 IFNET_LOCK 时仍有大量 copyout 调用，认为应先做结构调整
+166576|L4|Uebayashi 建议为 refcount 结构增加 dying 标志位，使 ifput 无需持锁即可原子置位，稍后再触发回调
+166577|L3|Ozaki 转贴 David Young 关于 psz-ifnet 补丁锁策略的意见并在 ifnet 锁线程接续，正文以引用为主
+166578|L3|Ozaki 转贴 Uebayashi 关于大量 copyout 与应先做结构调整的意见并在 ifnet 锁线程回应，正文以引用为主
+166579|L4|Uebayashi 指出 ioctl 等非性能敏感路径同样触碰性能敏感数据结构，正是问题所在，此类路径必须更谨慎
+166580|L3|Ozaki 转贴 Uebayashi 关于非性能敏感路径也触碰性能敏感结构的论述，在 ifnet 锁线程接续最小重构讨论
+166582|L3|Uebayashi 读 pserialize 手册后仍有困惑，询问写者在 mutex_enter 与 pserialize_perform 之间可做哪些更新
+166584|L3|Ozaki 在 ifnet 锁线程回应 Uebayashi 关于 refcount 增设 dying 标志位的提议，正文以引用为主
+166585|L3|Ferguson 转贴 Uebayashi 关于 pserialize 与 TAILQ 关系以及指针赋值原子性的论述并回帖，正文以引用为主
+166586|L3|Uebayashi 转贴 Ferguson 关于 TAILQ 更新操作安全性与文档应更清晰的论述并接续，正文以引用为主
+166587|L4|Uebayashi 指出在持 ifnet 锁的临界区内调用 if_watchdog 不安全，因其可能重新发包，建议改用全局数组
+166588|L3|该帖转贴关于先前 ifnet 表述致歉的内容，澄清 ifnet 通常经 ethercom 嵌入驱动 softc 故 if_detach 必须等待
+166589|L3|Campbell 转贴 Ferguson 关于 CIRCLEQ 式类型双关会致未来编译器误编的警告，追问具体指哪一处并说自己未能看出
+166591|L3|Izaak 转贴 Husemann 与 Christos 关于新建 log_dev 函数、退休 aprint 的讨论并接续，正文以引用为主
+166592|L3|Uebayashi 转贴 Ferguson 关于读取者需在解引用前发出消费端内存屏障的论述并接续，正文以引用为主
+166593|L3|Ozaki 在 ifnet 锁线程回应 Uebayashi 关于 if_watchdog 与全局数组的建议，正文以引用为主
+166594|L3|该帖转贴 Campbell 关于读取者取到 tqe_next 后须先发出 membar_consumer 再解引用的论述
+166595|L3|该帖转贴 Uebayashi 关于 pserialize_perform 上下文切换与旧数据销毁时机以及 TAILQ 适用性的论述，正文以引用为主
+166596|L3|Ferguson 转贴 Campbell 关于 TAILQ 宏类型双关与生命周期的质疑并在 pserialize 与 TAILQ 线程接续，正文以引用为主
+166597|L4|Uebayashi 转贴 Ozaki 认为不经重构难以达成锁外列表访问的观点，另提为每个接口分配 callout 的替代方案
+166598|L3|Ozaki 在 ifnet 锁线程接续 Campbell 关于致歉与 ethercom 嵌入关系的澄清，正文以引用为主
+166599|L3|Ferguson 转贴 Campbell 关于类型双关出处的追问并予以回应，继续 pserialize 与 TAILQ 讨论，正文以引用为主
+166600|L3|Ferguson 转贴 Uebayashi 关于 pserialize 与 TAILQ 适用性边界的论述并接续讨论，正文以引用为主
+166601|L3|Campbell 转贴 Ferguson 提出的 TAILQ_LAST 与 TAILQ_PREV 宏定义，用以指明具体的类型双关问题所在
+166602|L3|Uebayashi 转贴 Ferguson 与 Campbell 关于内存屏障与插入者责任分工的争论并在 pserialize 线程接续，正文以引用为主
+166603|L3|Campbell 转贴读取者须先发出 membar_consumer 再解引用 tqe_next 的论述，正文以引用为主

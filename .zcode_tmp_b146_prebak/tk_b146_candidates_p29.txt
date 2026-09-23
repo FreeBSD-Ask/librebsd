@@ -1,0 +1,118 @@
+206279|L3|mrg 在 DE 进程等待态排查线程回应，正文以引用 Stephan 的内核崩溃转储与 fd_close 调用栈为主
+206280|L4|mrg 主张 filemon 现有实现应整体替换为不替换系统调用也不借用文件描述符的方案，认为不值得在现形态上继续投入
+206281|L3|Stephan 在 DE 进程等待态线程回应，正文以引用 amd64 参数经寄存器传递不保留而 i386 可在栈上显示的对比为主
+206282|L3|TLS 在 CPU RNG 框架补丁线程回应，正文以引用 Campbell 对 softint_establish 与 rndsource 挂载顺序的疑问为主
+206283|L3|Andrew Cagney 在 CPU RNG 补丁线程回应，正文以引用 TLS 的版本说明与 VLA 常量声明 diff 片段为主
+206284|L3|TLS 在 CPU RNG 补丁线程回应，正文以引用 Andrew Cagney 关于 VLA 常量声明的往返为主
+206285|L3|Kengo 在 amd64 profiling 构建失败线程回应，正文以引用 David Holland 关于 subr_prof 加入 gmon 头的补丁为主
+206286|L3|Christos 在 CPU RNG 框架补丁线程回应，正文以引用 Valery Ushakov 与 TLS 之间关于该补丁的往返为主
+206287|L3|Valery Ushakov 在 CPU RNG 补丁线程回应，正文以引用 TLS 与 Andrew Cagney 关于 VLA 声明的往返为主
+206288|L3|Kengo 在 gif 四 MP 化 RFC 线程致谢 Campbell，正文余下以引用对方对持锁调用 softint_establish 的担忧为主
+206289|L3|Campbell 在 gif 四 MP 化 RFC 线程回复，自述因常用的 joerg Git 镜像未同步而错过 PR/50522 的竞态修复
+206290|L3|Kengo 在 softint 并行操作问题线程回应，正文以引用 Campbell 关于等待 SOFTINT_PENDING 可能掩盖真缺陷的意见为主
+206291|L3|Kengo 在 gif 四 MP 化 RFC 线程回应，正文以引用 Campbell 关于 PR/50522 修复与 Git 镜像未同步的说明为主
+206292|L4|Campbell 认为让 softint_disestablish 同时等待 SOFTINT_PENDING 可能掩盖别处真缺陷，所举交错场景本不应出现
+206293|L4|Joerg Sonnenberger 在 softint 化 if_input RFC 线程表态同意目标且快进通道不应因此阻断，另有补充意见
+206294|L3|Campbell 在 softint 化 if_input RFC 线程回复，就引入大量 IPI 的可能性表示担忧，正文前段为转载 Ozaki 的改动
+206295|L4|Ozaki 提出 RFC 将 if_input 及以上含二层处理移入 softint，由通用入队代码调度帧处理以缩小各驱动改动
+206296|L4|Bouyer 指出 vnd 1.251 的 ENXIO 改动令 vnconfig -l 报 Device not configured 并破坏 Xen 脚本
+206297|L3|Bouyer 在 vnd 版本日志线程补充说明，正文以引用自己前封关于 1.251 破坏 vnconfig -l 的原始陈述为主
+206298|L3|Ozaki 就 softint 化 if_input RFC 致谢 Joerg 的评论，正文余下以引用对方关于性能退化的质疑为主
+206299|L3|Christos 在 vnd 版本日志线程回应，正文以引用 Bouyer 关于 1.251 破坏 vnconfig -l 的原始陈述为主
+206300|L4|Christos 说明当内核未硬编码伪设备数时 vnd_cd.cd_ndevs 应取 4 或已分配设备数中的较大者，回答 Bouyer 的追问
+206301|L3|Thor Lancelot Simon 在 softint 化 if_input RFC 线程回应，正文以引用 Campbell 的 pktq 两种方案为主
+206302|L3|Bouyer 在 vnd 版本日志线程追问 cd_ndevs 中数值 4 从何而来，以及伪设备数未硬编码在内核时的取值行为
+206303|L3|Christos 在 vnd 版本日志线程回应，正文以引用 Bouyer 对 cd_ndevs 数值来源与伪设备上限的追问为主
+206304|L3|Bouyer 在 vnd 版本日志线程回应，正文以引用 Christos 关于 cd_ndevs 应取 4 或已分配最大值的说明为主
+206305|L3|Robert Elz 质疑前四个 vnd 被占用时 vnconfig -l 无法列举空闲设备，追问若不应列举又该从哪里停止
+206306|L3|John Nemeth 在 vnd 版本日志线程回应，正文以引用 Elz 关于前四个 vnd 占用时无法列举空闲设备的论述为主
+206307|L3|Bouyer 在 vnd 版本日志线程回应，正文以引用自己关于 1.251 破坏 vnconfig -l 与 Xen 脚本的原始陈述为主
+206308|L3|Bouyer 在 vnd 版本日志线程回应，正文以引用 Elz 关于不应列举空闲 vnd 设备与 head 是否合理的争辩为主
+206309|L4|Robert Elz 指出 vnd 成为克隆设备仅始于 NetBSD 7 且该改动落在 6.99 系列中，此前 vnconfig -l 不作设备枚举
+206310|L3|John Nemeth 补充说明该问题的成因是某些条件下 vnconfig -l 会无限循环输出 not in use 条目
+206311|L3|Robert Elz 在 vnd 版本日志线程就 xparams 只是备用存储文件路径这一点回应 Nemeth，认为若含几何参数则另有考虑
+206312|L3|Bouyer 在 vnd 版本日志线程坚持 vnconfig -l 不带参数列举可用设备已是长期行为，正文余下以引用 Elz 反驳为主
+206313|L3|Bouyer 在 vnd 版本日志线程回应 Elz，正文以引用对方关于列举可用设备须能合理枚举这一前提的论述为主
+206314|L3|Bouyer 就 chroot 下 /dev 与根 /dev 实为同一组设备的不同名称这一点回应，认为列出可用设备与运行目录无关
+206315|L3|Robert Elz 回应 Bouyer 关于 chroot 下设备清单的看法，认为通常成立但并非总是如此，仍须能合理枚举
+206316|L3|Robert Elz 在 vnd 版本日志线程认同列举可用设备本可行，但指出仅在设备数固定时可合理枚举，动态扩展后前提不再成立
+206317|L4|Martin Husemann 报告某 USB 转 IDE 设备须先被查询配置描述符才转动磁盘导致驱动超时，提交超时放宽补丁求 OK
+206318|L3|Robert Elz 指出内核只有一组设备而存在多套名称映射，chroot 下按目录区分忙闲状态在语义上不成立
+206319|L4|Bouyer 指出对方仍在跑 7.0 发布版 vnconfig 因其在 netbsd-7 分支未更新，根源是 7 为绕开克隆设备改动加了坏 hack
+206320|L3|Michael van Elst 认为 vnconfig -l 显示内核视图更符合逻辑且与其他设备命令一致，正文余下以引用 Bouyer 主张为主
+206321|L3|Robert Elz 反对称 head 现状理性，主张现实现已尽量贴近 vnd 出现以来的行为，vnconfig -l 列内核内全部 vnd
+206322|L3|John Nemeth 在 vnd 版本日志线程回应，正文以引用 Elz 关于列举可用设备须能合理枚举的前置条件论述为主
+206323|L3|John Nemeth 在 vnd 版本日志线程回应，正文以引用 Bouyer 与 Elz 关于 chroot 下设备清单归属的往返为主
+206324|L3|John Nemeth 在 vnd 版本日志线程回应，正文以引用 Elz 关于列 /dev 可用项合理且 chroot 内清单相同的论述为主
+206325|L3|Bouyer 在 vnd 版本日志线程回应，正文以引用 Elz 反对 head 现状理性并主张贴近历史行为的主张为主
+206326|L3|Bouyer 在 vnd 版本日志线程回应，正文以引用 Michael van Elst 关于用 shell 查 /dev 节点即可的质疑为主
+206327|L3|John Nemeth 在 vnd 版本日志线程回应，正文以引用 Elz 关于特殊文件无须限定在 /dev 的论述为主
+206328|L4|Michael van Elst 认为 7.0 现状也不甚实用，更希望有命令列举现有设备并分配空闲项并给出名称且通用于各类伪磁盘
+206329|L3|Bouyer 就列举可用设备的行为存在时长回应 Elz，自述可确认到 6.x 与 5.x 但未曾核查更早版本
+206330|L3|Robert Elz 再次否认列举可用设备的行为长期存在，并认为这是关于历史事实的反复争执无助于推进结论
+206331|L3|Michael van Elst 在 vnd 版本日志线程回应，正文以引用 Bouyer 关于该行为至少自 7.0 两个发布版起存在的主张为主
+206332|L3|Bouyer 在 vnd 版本日志线程回应，正文以引用 Elz 否认该行为长期存在并追问其历史依据的往返为主
+206333|L3|Robert Elz 认为两种实现下 vnconfig -l 都列出忙闲 vnd 供用户挑选已足够，并提醒对方测试时用的是组合脚本
+206334|L3|Robert Elz 回应 Nemeth，认为这并非离奇用法只是不合惯例，且历来没有特殊文件只可位于 /dev 的要求
+206335|L3|Robert Elz 自回补充一段 shell 单行取用空闲 vnd 的做法，认为列举 /dev 已有节点比改命令行为更省事
+206336|L3|Robert Elz 在 vnd 版本日志线程转发 Michael van Elst 的脚本用法，正文余下以引用对方保留 cgd0 的做法说明为主
+206337|L3|John Nemeth 在 vnd 版本日志线程回应，正文以引用 Elz 与 van Elst 关于用脚本分配伪磁盘的往返为主
+206338|L3|Ozaki 在 softint 化 if_input RFC 线程回应，正文以引用 Campbell 转贴其关于 ipi_sysinit 调整的说明为主
+206339|L3|John Nemeth 在 vnd 版本日志线程回应，正文以引用自己与 Elz 关于 Xen 脚本只查 /dev 的往返为主
+206340|L3|Edgar Fuss 建议给 vnconfig 增加 -d 参数以显式指定 /dev/vnd 从而明确空闲单位的含义来结束争执
+206341|L3|Stephan 在 RPi B+ micro SD 读写缓慢线程回复自己前帖，正文以引用自己关于每日任务导致线程长时间挂起的陈述为主
+206342|L3|Chuck Silvers 在 RPi SD 缓慢线程回应，正文以引用 Brian 转贴的关于 noatime 是否设为默认的讨论为主
+206343|L3|Brian Buhrow 反对把 noatime 设为默认，自述常以访问时间作诊断依据，服务器仍须保留而工作站开启曾后悔
+206344|L3|Campbell 在 noatime 讨论中表态支持设为默认，自述多年来将所有文件系统挂载为 noatime 且从未后悔过
+206345|L4|Joerg Sonnenberger 指出 NetBSD 实际早已接近 relatime 语义，访问时间只在 vnode 销毁或挂起时写回
+206346|L4|Frank Zerangue 给出 IMX31 移植的 CPU_ARM1136 与 VFP 构建选项，说明该 ARM11 r0p4 核不支持 armv6k 扩展
+206347|L3|mrg 在 RPi micro SD 缓慢线程回应，正文以引用 Joerg 关于 relatime 与访问时间写回时机的说明为主
+206349|L4|Frank Zerangue 报告私有 IMX31 移植自 5.0.1 顺利推进到 6.1.5 后在 7.0 触发 pmap.c 的 pdep 断言致内核恐慌
+206350|L3|Brian Buhrow 就 softint 化 if_input RFC 的测试数据向 Ozaki 求证 vanilla 一词所指基线
+206351|L3|Eric Haszlakiewicz 在 noatime 讨论中回应，正文以引用 Campbell 转贴 Stephan 关于改挂载选项绕过挂起的说明为主
+206352|L4|Ozaki 说明 vanilla 指 2016-01-13 起未改动的 current，唯一例外是把 wm 四改为关闭流控以做快进测试
+206353|L4|Sheda 称其 2014 年提交 GRUB 团队的补丁已被合并，请求评估集成对应的 efi.patch 以支持经 GRUB 引导 EFI 机型
+206354|L3|Sheda 在 EFI 与 ACPI 线程回应，正文以引用 Christos 关于该补丁用途与集成途径的看法和意见为主
+206355|L3|Christos 在 EFI 与 ACPI 线程回应，正文以引用 Sheda 关于 GRUB 补丁已合并并请求评估集成 efi.patch 的陈述为主
+206356|L3|Kengo 就 gif 四 softint 契约违例修复发帖，正文以引用 Campbell 提出的全局锁与拆分封装拆除的协议为主
+206357|L3|Ozaki 在 softint 化 if_input RFC 线程回应，正文以引用 Campbell 与 Joerg 关于 bpf 挂载点与测试的往返为主
+206358|L3|Christos 在 EFI 与 ACPI 线程回应，正文以引用 Sheda 与 Christos 之间关于该补丁集成的往返为主
+206359|L4|Campbell 自行纠正指出移除基数树使 ip_encap 利于多核扩展但不利于多隧道，并承认未细读 encap 查找函数
+206360|L4|Jeff Rizzo 报告 dtrace 默认启用工作最终完成且用户态部分已为 i386 与 amd64 构建，正文含 Campbell 原提案引用
+206362|L3|Campbell 在 gif 四 softint 契约修复线程转发 Kengo 的补丁说明，含回退 kern_softint.c r1.42 与查找竞态修复
+206363|L4|Campbell 提出被动引用提案，指出路由与隧道等资源无法用 pserialize 因包处理路径会休眠，须另寻共享方式
+206364|L3|Ozaki 在 softint 化 if_input RFC 线程回应，正文以引用 Campbell 关于无线栈存在多个 bpf 挂载点的提醒为主
+206365|L3|Ozaki 在被动引用线程回应，正文以引用 Campbell 关于把 psref 用于桥接成员列表作为试用的肯定为主
+206366|L3|Ozaki 在 softint 化 if_input RFC 线程回应，正文以引用 Campbell 转贴其完整补丁链接的往返为主
+206367|L3|Ozaki 在 softint 化 if_input RFC 线程多层引用后回应，正文以嵌套引用 Campbell 与自己前帖为主
+206368|L3|Roy Marples 在温度阈值关机线程回应，正文以引用 Murenin 关于温传感不可靠不宜默认关机的意见为主
+206369|L3|Julian Coleman 在温度阈值关机线程回应，正文以引用 Murenin 关于传感读数应做阻尼再判定关机的意见为主
+206370|L3|Edgar Fuss 在温度阈值关机线程就芯片默认阈值与开机编程值回应，正文以引用与简短确认为主
+206371|L3|Julian Coleman 在温度阈值关机线程回应，正文以引用他方关于 54 度触发紧急关机而 57 度风扇全速的解读为主
+206373|L3|Christos 在温度阈值关机线程回应，正文以引用 Marples 与 Murenin 关于不应默认关机的往返为主
+206374|L3|Edgar Fuss 在温度阈值关机线程补充自己主问不清，正文以引用他方关于 powerd 脚本负责关机的答复为主
+206375|L3|Constantine Murenin 在温度阈值关机线程纠正 Coleman，认为 lm 四支持的多数芯片确实带风扇控制能力
+206376|L3|某回帖在温感线程说明 W83627HF 同时被 wbsio 四与 lm 四支持且属风扇控制补丁覆盖，却不见于 Tyan 手册
+206377|L3|Julian Coleman 在温感线程回应，正文以引用他方关于芯片测温标尺可能是 AMD 虚拟刻度的说明为主
+206378|L3|Campbell 在被动引用线程回应，正文以引用 Ozaki 提议把 psref 用于桥接成员列表与自己的肯定为主
+206379|L3|Campbell 在 softint 化 if_input RFC 线程回应，正文为转贴 Ozaki 关于暂不推向全部驱动的意见
+206380|L3|Christos 在 DTrace 调度提供者线程回应，正文以引用 Rizzo 关于首次实现该提供者的自述与请求复审为主
+206381|L3|Julian Coleman 在温感线程回应，正文以引用 Murenin 关于 lm 四芯片具备风扇控制功能的说明与链接为主
+206382|L3|Campbell 在 softint 化 if_input RFC 线程回应，正文以引用 Ozaki 关于分两步推进的安排的往返为主
+206383|L4|Julian Coleman 就 envsys 设计提问，指出 getlimits 后立即 setlimits 会把误读值写回芯片，且读取值前已改限
+206385|L3|Mouse 在温度阈值关机线程以自己 ThinkPad z60m 风扇已坏、过热只能自行断电的经验为依据，倾向优雅关机而非被粗暴断电
+206386|L3|Ozaki 在 softint 化 if_input RFC 线程回应，正文以引用 Campbell 转贴其对推进节奏的保留意见为主
+206387|L3|Ozaki 在 softint 化 if_input RFC 线程多层引用后回应，正文以嵌套引用 Campbell 与自己的往返为主
+206389|L3|Roy Marples 在温度阈值关机线程回应 Murenin，正文以引用对方关于温传感不可靠不宜默认关机的往返为主
+206391|L3|Martin Husemann 建议若管理员坚持该方向，可在 powerd 脚本捕捉软阈值再调整 rlimits，但自认未必可行
+206392|L4|Joerg Sonnenberger 指出调度器激活已从内核完全移除，并建议检索存档找 libpthread 替身构建说明
+206393|L3|Edgar Fuss 报告先在 4.0.1 amd64 机器上升级 6.1 内核后启动 nslcd 报 libpthread 的 sa_register 失败
+206394|L3|Edgar Fuss 追问若调度器激活在 6.1 已移除则应返回 ENOSYS 而非 EINVAL，怀疑是旧内核残留
+206396|L3|Edgar Fuss 追问 kern.no_sa_support 的作用并查无相关文档，戏称它像刻意部分破坏四系兼容性的开关
+206397|L4|Eduardo Horvath 认为杀高耗进程代替整机关机依据不足，指出低功率模式周期性介入降热在部分 CPU 上确有实现
+206398|L3|Campbell 在 softint 化 if_input RFC 线程回应，正文以引用 Ozaki 新版补丁与差异链接为主
+206399|L4|Joerg Sonnenberger 说明 kern.no_sa_support 的用途是允许通过 ld.so.conf 覆盖 libpthread
+206400|L3|Thor Lancelot Simon 建议若 spatch 能编译通过，则它足以自动完成一百多个驱动的机械改写工作
+206401|L3|Ozaki 在 softint 化 if_input RFC 线程回应，正文以引用 skrll 关于调用方须处于硬中断上下文的追问为主
+206402|L3|Ozaki 在 softint 化 if_input RFC 线程回应，正文以引用 Campbell 转贴其新版补丁与差异链接为主
+206403|L3|Ozaki 在 softint 化 if_input RFC 线程回应，正文以引用 Simon 关于用 spatch 批量改写驱动的提议为主
