@@ -1,0 +1,2131 @@
+# 160.10 与同时期操作系统的比较：Linux 的安全生态（SELinux、KSPP、LKML 安全讨论）、Windows 的安全演进（可信计算、Patch Tuesday、Defender）、OpenBSD 的安全至上（代码审计、pledge/unveil）——BSD 的安全路径以 TrustedBSD 为基础以实用主义为边界
+
+## 160.10.1 Linux 的安全生态与 SELinux/KSPP
+
+**要点**：梳理 Linux 安全生态的发展脉络——2000 年 12 月美国国家安全局（NSA）发布 Security-Enhanced Linux（SELinux），基于犹他大学与 Secure Computing Corporation 联合设计的 Flask 架构，实现强制访问控制（MAC）；2001 年 3 月 NSA 在 Linux Kernel Summit 展示 SELinux，促使 林纳斯·托瓦兹（Linus Torvalds）发起 Linux Security Modules（LSM）项目以提供通用安全框架；2003 年 12 月 SELinux 随 Linux 2.6 合入内核主线；2004 年 5 月 Fedora Core 2 成为首个官方支持 SELinux 的发行版，同年 11 月 Fedora Core 3 引入 targeted 策略并默认启用 SELinux；2010 年代后 Linux 安全版图扩展至 Kernel Self Protection Project（KSPP，内核自我保护项目）、seccomp 沙箱、AppArmor、Smack、TOMOYO 等多个并行路线
+
+**史料**：NSA 2000 年 12 月 SELinux 开源发布公告、2001 年 Linux Kernel Summit 会议记录、Flask 架构原始论文（Spencer et al.）、James Morris 2008 年 OLS 论文《Have You Driven an SELinux Lately?》、Linux Kernel Self Protection Project 创立记录、LSM 内核文档历史版本 ［A］
+
+**史观**：总纲第 14 条——哲学思潮：Linux 的安全生态是 “ Cathedral 与 Bazaar” 在安全领域的投射——SELinux 代表自上而下的、体系化的、NSA 主导的安全设计（大教堂模式），而 KSPP、grsecurity、PaX 等则代表自下而上的、分布式的、社区驱动的安全探索（集市模式），多种路径并行竞争演化
+
+**辨析**：SELinux 的历史常被简化为 “NSA 给 Linux 加安全”，但实际 Flask 架构的思想源头可追溯至 1980 年代的高安全操作系统研究（Multics、Secure Xenix、DTOS）；SELinux 合入主线的过程充满争议，林纳斯·托瓦兹 最初持怀疑态度，LSM 框架的建立是多方妥协的结果；SELinux 虽技术上强大，但因配置复杂度高，长期以来在桌面和服务器场景的实际使用率有限
+
+**文献**：Spencer, R. et al. (1999). *The Flask Security Architecture: System Support for Diverse Security Policies*. OSDI '99; Morris, J. (2008). *Have You Driven an SELinux Lately?* Ottawa Linux Symposium; NSA. (2000). *Security-Enhanced Linux Release Announcement*. NSA National Security Agency［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］
+
+## 160.10.2 Windows 的安全演进与 Patch Tuesday
+
+**要点**：考察 Windows 安全工程的制度化历程——2002 年 1 月 15 日比尔·盖茨发布《可信计算》（Trustworthy Computing）备忘录，将安全提升为微软最高优先级战略，推动全公司安全开发流程变革；2003 年 10 月微软启动首个 “补丁星期二”（Patch Tuesday），建立每月第二个周二定期发布安全更新的制度，以平衡补丁及时性与管理员规划便利性；此后 Windows 安全演进经历四个阶段：2003–2007（补丁制度建立与 XP SP2 防火墙增强）、2008–2012（UAC、Defender、PatchGuard）、2013–2017（Windows 8.1/10 安全强化、EMET）、2018 至今（Windows 10/11 的 Virtualization-Based Security、WDAC、EDR 深度集成）；2020 年代后 AI 辅助漏洞挖掘成为新变量
+
+**史料**：比尔·盖茨 2002 年 1 月 15 日《可信计算》备忘录原文、微软 2023 年 Patch Tuesday 二十周年回顾文章、Windows XP SP2 发布技术文档、Michael Howard & David LeBlanc《Writing Secure Code》一书各版次、微软 MSRC 历史年度报告、2025/2026 年 Patch Tuesday 漏洞统计数据 ［B］
+
+**史观**：总纲第 3 条——形式主义膨胀：Patch Tuesday 是安全工程形式主义的极致体现——将补丁发布固定到每月特定的一天，本质上是用时间节律的形式化来驯服安全的不确定性；从 “随时发补丁” 到 “每月第二个周二”，看似倒退，实则是形式化带来的可预测性收益
+
+**辨析**：Windows 的安全声誉长期不佳，但 2002 年后的安全工程投入（SDL、Patch Tuesday、漏洞缓解技术）实际上大幅提升了系统的安全基线；“Windows 不安全” 的刻板印象部分源于其市场占有率高导致的攻击面大，而非单纯的工程质量问题；与开源系统相比，Windows 的安全过程透明度低，但安全工程的组织化程度和资源投入规模远超任何单个开源项目
+
+**文献**：Gates, B. (2002). *Trustworthy Computing*（内部备忘录）; Microsoft. (2023). *Reflecting on 20 years of Patch Tuesday*. Microsoft Technical Blog; Howard, M., & LeBlanc, D. (2002). *Writing Secure Code*. Microsoft Press［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］
+
+## 160.10.3 OpenBSD 的安全至上路线
+
+**要点**：分析 OpenBSD 的安全哲学与技术贡献——OpenBSD 自 1995 年从 NetBSD fork 以来以 “安全至上” 为核心价值观，坚持对基础系统进行全面代码审计；安全创新密集且具有全球影响力：1997 年 2 月首个免费操作系统集成 IPsec 栈、2002 年 3 月 OpenSSH 中实现权限分离（privilege separation）、2003 年 OpenBSD 3.3 首个默认启用栈保护（ProPolice/SSP）和 W^X 内存保护、2003 年 3.4 首个默认启用 ASLR 的广泛使用系统、2008 年 PIE 支持、2012 年全局默认启用 PIE；2015 年 OpenBSD 5.8 引入 pledge() 系统调用（原名 tame，5.9 改名），2018 年 6.4 引入 unveil() 系统调用，二者共同构成轻量级应用沙箱体系
+
+  **OpenBSD 关键安全创新时间线（1997-2018）**：
+
+  | 年份 | OpenBSD 版本 | 安全创新 | 全球影响 |
+  |---|---|---|---|
+  | 1997 年 2 月 | — | 首个免费操作系统集成 IPsec 栈 | 推动 IPsec 普及 |
+  | 2002 年 3 月 | OpenBSD 3.2 | OpenSSH 实现权限分离（privilege separation） | OpenSSH 全球安全标准 |
+  | 2003 年 | OpenBSD 3.3 | 默认启用栈保护（ProPolice/SSP）和 W^X | 首个默认栈保护系统 |
+  | 2003 年 | OpenBSD 3.4 | 首个默认启用 ASLR 的广泛使用系统 | ASLR 工程化标杆 |
+  | 2008 年 | — | 引入 PIE 支持 | 位置无关可执行文件 |
+  | 2012 年 | — | 全局默认启用 PIE | 完整化 PIE 体系 |
+  | 2015 年 | OpenBSD 5.8 | 引入 pledge() 系统调用（原名 tame，5.9 改名） | 轻量级应用沙箱 |
+  | 2018 年 | OpenBSD 6.4 | 引入 unveil() 系统调用 | 文件系统访问控制沙箱 |
+
+**史料**：OpenBSD 官方 Innovations 页面（按时间线整理的全部安全创新）、Niels Provos（尼尔斯·普罗沃斯） & Markus Friedl（马库斯·弗里德尔） 2002 年 OpenSSH 权限分离论文、Bob Beck 2018 年 BSDCan 演讲《Pledge, and Unveil, in OpenBSD》、OpenBSD 各版本 release notes（3.3/3.4/5.3/5.8/5.9/6.4 等关键版本）、Theo de Raadt（西奥·德·若特） 历次访谈中关于安全哲学的论述 ［B］
+
+**史观**：总纲第 1 条——项目统摄史观：OpenBSD 的安全路线是 “少即是多” 哲学的极致体现——通过删除不必要的代码、默认关闭不安全的功能、最小化攻击面，来实现安全而非靠增加复杂的安全层；pledge 和 unveil 的设计理念与 SELinux 的宏大体系形成鲜明对比：一个做减法，一个做加法
+
+**辨析**：OpenBSD 的安全声誉极高，但 “最安全操作系统” 的说法需要语境限定——OpenBSD 的安全性主要体现在默认配置和基础系统的代码质量上，但在企业级功能（如 MAC 框架、集中式安全管理）和硬件安全支持方面不如 Linux 和 Windows 丰富；OpenBSD 的安全路线是否具有普适性，还是依赖于其特定的社区文化和项目规模，是安全工程领域长期争论的话题
+
+**文献**：OpenBSD Project. *OpenBSD Innovations*. openbsd.org/innovations.html; Beck, B. (2018). *Pledge, and Unveil, in OpenBSD*. BSDCan 2018; Provos, N., Friedl, M., & Honeyman, P. (2003). *Preventing Privilege Escalation*. USENIX Security Symposium ［B］
+
+## 160.10.4 BSD 安全路径的实用主义边界
+
+**要点**：定位 FreeBSD 的安全路线在整个操作系统安全谱系中的位置——FreeBSD 走的是一条介于 OpenBSD 的激进安全与 Linux 的功能丰富之间的实用主义道路：以 TrustedBSD 项目为基础构建 MAC 框架（罗伯特·N. M. 沃森（Robert Watson）主导，2000 年代初启动，2003 年左右随 FreeBSD 5.x 进入基础系统）、移植 OpenBSD 的 OCF 加密框架和 OpenSSH、自主开发 Capsicum 能力安全模型（剑桥大学与 FreeBSD 合作，2010 年代初引入）、集成 Jails 容器作为轻量级隔离机制；FreeBSD 安全策略的特点是 “不做第一个，但争取做得最好”——对新技术保持审慎观察，成熟后再高质量集成
+
+  **FreeBSD 安全路径核心要素对照**：
+
+  | 安全要素 | 来源 | 引入时间 | FreeBSD 集成方式 |
+  |---|---|---|---|
+  | MAC 框架（TrustedBSD） | 罗伯特·N. M. 沃森 自主开发 | 2000 年代初启动，2003 年随 FreeBSD 5.x 进入基础系统 | FreeBSD 原创安全基础架构 |
+  | OCF 加密框架 | OpenBSD | 2001 年 9 月由 Sam Leffler 移植，2002 年 12 月提交 stable | 跨 BSD 项目移植 |
+  | OpenSSH | OpenBSD 主导 | OpenSSH 成熟后纳入 base system | 下游集成与本地修改（PAM、audit、jails） |
+  | Capsicum 能力安全 | 剑桥大学 罗伯特·N. M. 沃森 团队 | 2010 年论文，2012 年 FreeBSD 9.0 首次合入 | 学术研究到生产系统的典范 |
+  | Jails 容器 | FreeBSD 原创自主开发 | 2000 年由 Poul-Henning Kamp（波尔-亨宁·坎普） 引入 | 从设计层面解决 chroot 逃逸问题 |
+
+**史料**：TrustedBSD 项目历史文档、罗伯特·N. M. 沃森 关于 MAC Framework 的论文、FreeBSD 5.0/5.1 release notes 中 TrustedBSD 相关条目、Watson et al. 2010 年 Capsicum 论文（USENIX Security）、FreeBSDFoundation 2024 年代码审计报告（Capsicum & bhyve）、FreeBSD 各版本安全功能更新记录；**freebsd.duckdb** L2.2.1.sys_security 查询（freebsd-src 子系统 sys/security/ 随时间的 commit 量变化）——查询结果摘要：经核查 `原材料/研究/bsd仓库分析/数据分析/中观模式挖掘.md`，§L2.2.1 系列查询仅覆盖 8 个子系统（sys/kern、sys/net、sys/geom、sys/cam、sys/dev、sys/vm、sys/fs、sys/contrib），**未包含 sys/security 子系统查询**，故 ch68 关心的 TrustedBSD/MAC 框架（sys/security/ 目录）commit 演化数据本次查询未获取；替代查询 SQL：`SELECT substr(c.author_date, 1, 4) AS year, COUNT(*) AS commit_count, COUNT(DISTINCT cf.file_path) AS files_touched FROM commit_files cf JOIN commits c ON cf.commit_hash = c.commit_hash AND cf.repo_name = c.repo_name WHERE cf.repo_name = 'freebsd-src' AND cf.file_path LIKE 'sys/security%' ESCAPE '\' GROUP BY year ORDER BY year`；0 信任原则局限提示：(1) sys/security/ 路径匹配可能漏掉重命名后的文件或 Mac 框架相关但位于其他目录的代码（如 sys/kern/kern_mac.c）；(2) TrustedBSD 早期代码（2000 年代初）在 2020 年 SVN-to-Git 迁移中可能存在 author_date 回填偏差；(3) commit 量仅反映开发活跃度，不等于安全功能质量——TrustedBSD MAC 框架的成熟度须结合 FreeBSD Security Advisories 与 Capsicum/bhyve 审计报告综合判断；(4) sys/security/ 子系统 commit 量在 2010 年代后可能因安全审计工作分散到其他子系统（如 sys/amd64/vmm for bhyve、sys/fs for Capsicum）而被低估 ［A］
+
+**史观**：总纲第 15 条——治理技艺：FreeBSD 的安全路线是实用主义治理的典范——既不盲目追求 “最安全” 的虚名，也不放任安全风险，而是根据自身的工程资源和用户群体，选择最适合的安全策略组合；这种 “够用就好、稳步推进” 的策略看似保守，实则是对安全工程资源有限性的清醒认知
+
+**辨析**：FreeBSD 的安全路径常被批评为 “不够激进”——在 OpenBSD 已经默认启用 SSP、ASLR、PIE 多年后，FreeBSD 才逐步跟进；但换个角度看，FreeBSD 的保守也避免了很多因激进变更导致的兼容性问题和安全回归；安全不是越 “新” 越好，而是越 “稳” 越可靠，这是 BSD 传统与前沿安全研究之间的永恒张力
+
+**文献**：Watson, R. N. M. et al. (2010). *Capsicum: Practical Capabilities for UNIX*. USENIX Security Symposium; Watson, R. N. M. (2004). *TrustedBSD: Adding Trusted Operating System Features to FreeBSD*. USENIX Annual Technical Conference; FreeBSD Foundation. (2024). *Security Audit of the Capsicum and bhyve Subsystems* ［B］
+
+### 史观映射
+
+> 1988 年 11 月 2 日晚上，Morris 蠕虫瘫痪了互联网——然后 CERT/CC 诞生了，安全漏洞管理从此走上了制度化的不归路。计算机安全的历史是一部形式主义不断膨胀的历史：从个人黑客的代码审计，到 CERT/CC 的漏洞编号，到 CVE 的标准化披露，到 FIPS 140 的密码模块认证——每一次制度化都是对安全实践的抽象化，但安全的本质从未改变：代码在那里，漏洞也在那里，只是发现的工具从人的眼睛变成了自动化的扫描器。OpenSSH 是 BSD 对全球安全生态最伟大的贡献——一个从 OpenBSD 的代码审计中长出来的工具，如今守护着全球数亿台服务器的远程登录，它是 “做一件事并做好” 在安全领域最极致的体现。但 FreeBSD 的安全生态高度依赖 OpenSSH——一个来自姐妹项目的礼物，而非自己的原创——这种依赖既是实力的证明，也是弱点的暴露
+
+---
+
+> ## 第 68.12 不同时期人员的采访录（详见 [采访录.md](采访录.md)）
+
+<!-- foundation-writeback: Linux Foundation | Linux Foundation Core Infrastructure Initiative (CII) -->
+**Linux Foundation 史料**（Linux Foundation Core Infrastructure Initiative (CII)，下载日期 2026-07-26）：
+
+- Open Source Security Foundation &#8211; Linux Foundation Projects：`www-index-index.md`（来源 URL：<https://www.coreinfrastructure.org/>；本地路径：`cf30b12aed93`；SHA-256 前缀：`cf30b12aed93`）
+
+## 160.10.13 节 媒体反响与社区舆论（详见 [媒体反响与社区舆论.md](媒体反响与社区舆论.md)）
+
+<!-- DB_REF:freebsd.duckdb -->
+> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。
+> 2024-2026 年间：168,386 次提交。
+
+<!-- PODCAST_REVIEW v20260829 -->
+<!-- 语义复核范围：BSD Now EP255（共 1 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
+
+**要点**：
+
+- 节目据 Chris 的博客系列详解 ZFS block pointer：它是一个约 128 字节的结构，含三个指向磁盘位置的 DVA、256 位校验和与逻辑/物理诞生事务组，block pointer 自身不单独存校验和，而由包含它的上层对象隐式覆盖。（BSD Now EP255，[53.00-1211.90]，L2）
+- 节目解释 embedded block pointer 可把至多 112 字节的小数据直接塞进 block pointer 充当载荷，省去额外块分配；由于 copy-on-write，底层块一旦改变即重写并向上逐级更新校验和，逻辑诞生时间因此使 ZFS 增量发送能直接按事务组找变更块，比 rsync 逐文件比对更快。（BSD Now EP255，[596.58-1034.86]，L2）
+- 漏洞经纪商 Zerodium 宣布对 FreeBSD、OpenBSD、NetBSD 与 Linux 发行版的零日漏洞提供最高 50 万美元悬赏，把 BSD 零日的收购价从以往约为 Linux 的十分之一提升到同档；公司称其目标是对每个主流系统常备两个以上可用漏洞，价格由市场份额、用户交互成本与默认配置可打性驱动。（BSD Now EP255，[1221.18-1708.68]，L2）
+- 2018 年 7 月 4 日 FreeBSD 选出新一届 9 人 Core 团队（含 Alan Jude、Benedict Reuschling、Brooks Davis、John Baldwin、Warner Losh 等）；选举每两年一次，过去 365 天内向任一 FreeBSD 仓库提交过代码的 committer 有资格提名与投票，得票前九者当选。（BSD Now EP255，[2140.74-2356.80]，L1）
+- NetBSD 基金会宣布与 Philip Nelson 签约，以 FreeBSD current 代码为基底更新 NetBSD 的 IEEE 802.11 栈，目标是缩小两栈差异以利后续更新，并新增 802.11n/ac、SMP 与虚拟接入点支持。（BSD Now EP255，[2415.36-2570.10]，L2）
+
+**史料**：
+
+- 一手史料：Chris（多伦多大学系统管理员）的 ZFS block pointer 博客系列；FreeBSD Core 团队选举公告（2018 年 7 月 4 日）；NetBSD 基金会 2018 年夏与 Philip Nelson 的 802.11 栈更新合约公告（netbsd-users 邮件列表）；Zerodium 经 Bleeping Computer 转述的收购声明。（BSD Now EP255，[53.00-2570.10]，L2）
+
+**史观**：
+
+- 总纲11 商品是形式主义：零日漏洞被漏洞经纪商按市场份额、利用条件与默认配置可打性定价收购，显示漏洞作为商品的定价机制由市场而非技术内在价值决定。（BSD Now EP255，[1328.42-1609.94]，L2）
+- 总纲10 动手者创造历史：Core 团队由过去一年实际提交过代码的 committer 投票产生，治理权归于动手写代码者而非旁观者。（BSD Now EP255，[2283.66-2342.52]，L1）
+- 总纲4 分离聚合是永恒规律：NetBSD 以移植 FreeBSD 802.11 栈的方式重新收敛（reconverge）两分支已分化的无线代码，呈现分离之后的再聚合。（BSD Now EP255，[2432.24-2570.10]，L2）
+
+**辨析**：
+
+- [考据脚注] Chris 博客作者的完整姓名、单位职务与博客原始 URL 节目未逐一给出，须以博客原文为准。　[考据脚注] 博客作者全名与出处须以原文为准。（BSD Now EP255，[71.52-83.84]，L4）
+- [存疑脚注] Zerodium 的具体悬赏档位与收购条件系节目转述 Bleeping Computer 报道，属单一来源，须与 Zerodium 官方公告交叉核验。　[存疑脚注] Zerodium 悬赏细节系单一来源转述。（BSD Now EP255，[1328.42-1419.42]，L4）
+
+**文献**：
+
+- [BSD Now EP255] Pennington J. BSD Now: Episode 255: What Are You Pointing At | BSD Now 255[EB/OL]. (2018-07-18)[2026-08-15]. <https://www.bsdnow.tv/255>.
+
+<!-- /PODCAST_REVIEW -->
+
+**〔当事人素材回写〕素材：06-security征集与维护者峰会机制 §6.2 security TODO 征集：Google 赏金化与 KSPP 主线索**
+
+## 160.10.14 当事人素材与叙述章——Linux 安全生态与 BSD 安全层的互动（2006–2026）
+
+2006 年 8 月 Alexey Dobriyan 提交一个 inode 瘦身补丁，首行是一句极简谱系陈述："[BSD security levels are deleted in -mm, assuming this below]"，正文补充 "The only user of i_security, f_security, s_security fields is SELinux, so ifdef them with CONFIG_SECURITY_SELINUX"；BSD 安全等级是 FreeBSD 与 NetBSD 的强制访问控制设施，与 SELinux 同源异路，此句把二者并置于同一删除语境，BSD 侧删掉通用安全层，Linux 侧由 SELinux 独占其结构字段；同期 Crispin Cowan 在 AppArmor FAQ 争论中把 BSD Jail 列为非标签式约束方案，"Many systems besides AppArmor have used non-label schemes for effective confinement: TRON, Janus, LIDS, Systrace, BSD Jail, EROS, PSOS, KeyOS, AS400, to name just a few"，Stephen Smalley 反驳传统意义的 confinement 指信息流控制、AppArmor 并不提供；2010 年 7 月 David P. Quigley 在 NFSD MAC Labeling 补丁中要求两套标签互通，"if we have an SELinux box with an MLS policy and a FreeBSD box with their MLS MAC module"，BSD 的 MAC 框架在 Linux 世界既是竞争对象也是互操作标准；2010 年 10 月 26 日 James Morris 在 IMA 补丁争论中以 BSD secure levels 已被移除为例反驳 Al Viro 对 security/ 子树的贬斥，说明 BSD 谱系代码的删减本身成了 Linux 上游取舍论证的正面证据
+
+2017 年 1 月 20 日 Kees Cook 在 ksummit-discuss 发帖 "security-related TODO items?"，自述 "I've already got various Kernel Self-Protection Project TODO items collected"，并称 "Google's Patch Reward Program is trying to expand by helping create a bounty program for security-related TODOs"，向各维护者征集 security wish-lists，安全从此有了可编号、可悬赏的工作项，Linus 式的一票否决之外多了 Google 式的外部激励；同串中 Andy Lutomirski 提出最激进的自保护形态 "how about rewriting execve() so that the actual binary format parsers run in user mode?"，David Howells 列出 pre-loader 内建映射、ASLR、无栈启动、NOMMU 双模 binfmt、脚本循环安全重算等七点难点，Matthew Wilcox 设想内核地址空间的用户模式执行，Alexey Dobriyan 补上 modules_disabled=1 后 unmap 模块加载器这一具体项
+
+2018 年 9 月 5 日 David Howells 提议将 secure boot 与 kernel lockdown 立为 TECH TOPIC，Jiri Kosina 承认 SUSE 是少数自带非上游 lockdown 补丁集的发行版并自承已忘究竟阻塞何在，Justin Forbes 要求 CONFIG_LOCK_DOWN_IN_EFI_SECURE_BOOT 而非一刀切禁用 BPF，Lutomirski 提出 LOCKDOWN_PROTECT_INTEGRITY 与 LOCKDOWN_PROTECT_SECRECY 分级并主张拆小补丁集先并基础框架；10 月 1 日 debugfs 迁往 sysfs 的讨论中 Greg KH 自陈 "Until about 8 months or so ago, maybe a year, debugfs was totally insecure and it was very trivial to use to crash the kernel"，Shuah 实查发现发行版仍启用 BLK_DEBUG_FS 与 KVM_DEBUG_FS，Jan Kara 要求为现场排障保留 tracepoint，这条争论浓缩两种哲学：Linux 保留危险接口再做安全，BSD 直接不提供
+
+2016 年 8 月 Mickaël Salaün 发布 Landlock LSM RFC v2，目标是 "to allow any process, including unprivileged ones, to create powerful security sandboxes comparable to the Seatbelt/XNU Sandbox or the OpenBSD Pledge"；此后 v14 至 v33 的补丁系列反复写明 "Landlock also takes inspiration from other OS sandbox mechanisms: XNU Sandbox, FreeBSD Capsicum or OpenBSD Pledge/Unveil"；SELinux 需受信用户加载策略且配置复杂，Landlock 则把 seccomp-bpf 补成可表达动态策略的沙箱，其坐标系从 NSA 的 Flask 转向 OpenBSD 的 pledge(2)，做减法的系统成为做加法的内核的设计基准
+
+2014 年 6 月 David Drysdale 的 O_BENEATH 与 execveat 系列交代出身，"Capsicum is a security framework that has been present in FreeBSD since version 9.0 (Jan 2012)"，而该功能 "was originally implemented as part of the internals of the Capsicum security framework, which is available in FreeBSD 10.x"；2019 年 10 月 Aleksa Sarai 的 openat2 复活 Al Viro 的 AT_NO_JUMPS，其语义又源自 O_BENEATH；Ameer Hamza 的 O_EMPTY_PATH 自陈 "it is very similar to the FreeBSD O_EMPTY_PATH flag"，动机是避免为 samba 容器授予 /proc 访问，能力安全这条线自剑桥大学经 FreeBSD 9.0 流入 Linux VFS
+
+2019 年 11 月 Jann Horn 在 clone3 文档评审中转述 "on OpenBSD, they do use MAP_STACK now AFAIK" 与 "they periodically check whether the userspace stack pointer points into a MAP_STACK region, and if not, they kill the process"，Kees Cook 认为仅系统调用入口检查不足以防御 ROP；2023 年 4 月 Andrew Morton 引 mmap(2) 手册承认 "MAP_STACK exists (and has an effect) on some other systems (e.g., some of the BSDs)"，2024 年 5 月 14 日 Linus Torvalds 在同串重复此语；2024 年 2 月 Theo de Raadt 在 mseal 线程点明机制差异 "In OpenBSD, sigaltstack() forces MAP_STACK onto the specified (pre-allocated) region, because on kernel-entry we require the sp register to point to a MAP_STACK region"，随即补一句 "Linux does not have MAP_STACK enforcement (yet)"；同年 10 月 Pedro Falcato 称 "I think this version of mseal() is OpenBSD's mimmutable()"，2026 年 6 月 Li Chen 在进程孵化模板 RFC 中横向调研三家并记 "FreeBSD has P_INEXEC, OpenBSD has PS_INEXEC"，而 Linux 至今无等价标志
+
+GTSM 补丁中 Stephen Hemminger 说明 "This is already implemented the same way in BSD kernels"；David S. Miller 讨论随机临时端口时称 "randomized ephemeral port selection, which OpenBSD implements and we could easily implement as well"；Yoshifuji 论证 IPv6 扩展头默认禁止时称 "FreeBSD does this in the same way"；Hallyn 在网络命名空间争论中反问 "we can all use the network part of the bsdjail lsm"；David Miller 以 "The existing LSM hooks do not break BSD socket behavior" 守护 BSD 套接字兼容性契约；反向判例同样存在，2022 年 7 月 Linus Torvalds 批评 "the traditionally horribly broken BSD model of do SCSI ioctl's using read/write calls was a complete disaster"，Hemminger 评 XDP 示例中成串的 bzero 则笑称 "It looks like you write OpenBSD security code"，并指出只有 BSD 派系用 bzero
+
+三条主线合观：Linux 以 SELinux 为骨架、KSPP 清单与 Google 悬赏为血液、Landlock 为轻量新向，治理方式是保留接口再做安全；BSD 路线是删除不需要的东西、在系统调用入口强制语义、让机制不可绕过；但 Linux 的接口语义大量取自 BSD，Capsicum、O_BENEATH、O_EMPTY_PATH、MAP_STACK、GTSM 与 BSD Jail 皆是；BSD 的遗留也在内核中留痕数十年，Jeff Layton 在 NFSv4 讨论中指出 "the only user of fs_pin is the BSD process accounting subsystem"，acct.c 的清理仍在操作 struct bsd_acct，unix.7 手册把 CVE-1999-1402 记为 Solaris 2.x、SunOS 4.x 与 4.4 之前 BSD-based 系统忽略 socket 权限的历史缺陷；BSD 安全哲学因此在 Linux 中同时充当设计基准与反面教材、兼容性契约与待删遗留
+
+## 160.10.15 叙述章——BSD 安全工程在 Linux 内核中的三条谱系线（2012–2026）
+
+2012 年 1 月 FreeBSD 9.0 发布，同期合入的对象能力框架 Capsicum 从剑桥大学 David Chisnall 与 Robert Watson 的合作项目中走出实验室，成为此后十四年 Linux 内核讨论中最常被引用的 BSD 安全设计参照物，Paulo Bonzini 在 2014 年 linux-api 邮件列表提出 "Adding FreeBSD Capsicum security framework" RFC v2 时直接把该框架作为整体移植对象，Eric Biederman 反驳 Capsicum 与 POSIX.1e 能力不同必须每处 fget/fdget/user_path_at 都加能力标注、约 100 处修改点，Bonizni 则把方案改造成按 file descriptor 而非 struct file 关联 seccomp-bpf 过滤器，把 FreeBSD 的能力模型翻译成 eBPF 语义；这条线最终没有以完整移植落地，却在 2014 年 6 月 David Drysdale 提交的 O_BENEATH 补丁中被显式承认出身——"was originally implemented as part of the internals of the Capsicum security framework, which is available in FreeBSD 10.x"，Kees Cook 2016 年补充 "Capsicum is a security framework that has been present in FreeBSD since version 9.0 (Jan 2012)" 并解释能力模式下 /proc 不可访问才导致 fexecve3 无法工作、execveat 因此是"实现 Capsicum 所需的一小部分"，Andy Lutomirski 在 v4 系列继续援引此说明，Christoph Hellwig 与 David Drysdale 各自补证这一动机链，Capsicum 的完整移植失败但语义碎片经 Drysdale 之手进入 openat 与 execve 两条接口线
+
+第二条线从 Landlock 展开，Mickaël Salaün 2016 年 8 月提交 LSM RFC v2 时把目标写作 "to allow any process, including unprivileged ones, to create powerful security sandboxes comparable to the Seatbelt/XNU Sandbox or the OpenBSD Pledge"，此后 v3、v4、v8、v12、v14、v15、v19、v20、v21、v22、v23、v24、v25、v26、v30、v31、v32、v33 每一次重投都在 cover letter 里保留 "Landlock also takes inspiration from other OS sandbox mechanisms: XNU Sandbox, FreeBSD Capsicum or OpenBSD Pledge/Unveil" 一句，Salaün 与 Pavel Machek 在 v2/v3 讨论中反复回到"非特权进程自沙箱化"这一目标，Kees Cook 与 Alexei Starovoitov 把 seccomp 扩展为 eBPF 视为 Capsicum 指针追踪的等价路径，Landlock 十五轮补丁在 2020 年 9 月合入 Linux 内核主线，此线把 FreeBSD 9.0 的能力框架与 OpenBSD pledge(2)/unveil(2) 共同折算为 Linux LSM 的一个可堆叠模块，是 BSD 派系沙箱概念在 Linux 中最彻底的一次内化
+
+第三条线由 MAP_STACK 引出，2019 年 11 月 Jann Horn 在 clone3 文档评审中转述 "on OpenBSD, they do use MAP_STACK now AFAIK" 与 "they periodically check whether the userspace stack pointer points into a MAP_STACK region, and if not, they kill the process"，Theodore Ts'o 由此发问 Linux 是否应照做即使只在系统调用入口检查成本也低，Kees Cook 明确反对只此一处不足以防 ROP、认为取得系统调用能力后即可把 ROP 栈搬到合法栈上，但承认 MAP_STACK 仍具"你的进程行为异常"的声明与强制价值；2023 年 4 月 20 日 Andrew Morton 在 MAP_STACK 到 VM_STACK 映射讨论中引 mmap(2) 手册明言 "MAP_STACK exists (and has an effect) on some of the BSDs"，2024 年 5 月 14 日 Linus Torvalds 在 buffered IO 的 LSF/MM/BPF TOPIC 讨论中重复此语并承认 BSD 家族系统行为差异是显式事实，2024 年 2 月 Theo de Raadt 在 mseal 线程中点明机制差异 "In OpenBSD, sigaltstack() forces MAP_STACK onto the specified (pre-allocated) region, because on kernel-entry we require the sp register to point to a MAP_STACK region"，随即补一句 "Linux does not have MAP_STACK enforcement (yet)"，Jeff Xu 引 Theo 视角说明 sigaltstack 可能构成 mseal 绕过路径，Waiman Long 提议把 MAP_STACK 映射为 VM_STACK 防止栈 VMA 与非栈匿名 VMA 合并、指出 glibc 用 MAP_STACK 而 Linux 完全忽略该标志触发 SELinux 禁止可执行栈的检查失败并造成随机 SEGV，2024 年 10 月 Pedro Falcato 评 mseal 时写 "I think this version of mseal() is OpenBSD's mimmutable()"，2026 年 6 月 Li Chen 在进程孵化模板 RFC 中横向调研三家并记 "FreeBSD has P_INEXEC, OpenBSD has PS_INEXEC"、Linux 至今无等价标志，这条线证明 OpenBSD 的 MAP_STACK 强制语义在 Linux 侧被反复作为设计基准、兼容性提示与待补齐项
+
+同期还有若干散点级证据：Alexsa Sarai 2019 年 10 月提交 openat2 系列明言该系列复活 Al Viro 的 AT_NO_JUMPS、其语义源自 David Drysdale 的 O_BENEATH，"RESOLVE_BENEATH 的语义建模于 FreeBSD 的 O_BENEATH"，Ameer Hamza 提交 O_EMPTY_PATH 时说明"it is very similar to the FreeBSD O_EMPTY_PATH flag"、动机是避免为 samba 容器授予 /proc 访问权限；David Miller 在 GTSM 线程称 "This is already implemented the same way in BSD kernels"、在随机临时端口讨论中称 OpenBSD 已实现的随机化"we could easily implement as well"、并以 "The existing LSM hooks do not break BSD socket behavior" 守护 BSD 套接字兼容性契约，Yoshifuji 论证 IPv6 扩展头默认禁止时称 "FreeBSD does this in the same way"，Hallyn 在网络命名空间争论中反问 "we can all use the network part of the bsdjail lsm"，Eric Dumazet 在 GTSM 补丁中说明该机制的实现方式在 BSD 内核中早已存在同样实现，David S. Miller 在 XDP 示例讨论中评 bzero 用法时笑称 "It looks like you write OpenBSD security code"、并指出只有 BSD 派系用 bzero
+
+反向判例与遗留同时存在，2022 年 7 月 Linus Torvalds 批评 "the traditionally horribly broken BSD model of do SCSI ioctl's using read/write calls was a complete disaster"，Jeff Layton 2025 年提交 Linux fsdevel 补丁由 Christian Brauner 合入 vfs-7.0.misc 分支理由是即便该接口需要特权也隐患众多、已有 eBPF 等更佳替代、原文"begin the deprecation of legacy BSD process accounting"，Peter Anvin 反对 CONFIG_STRICT_DEVMEM 做成运行时开关并援引 BSD securelevel 单向提权的思路作为对照、说明即便照搬该设计也需重新论证其合理性、"kind of like the BSD securelevel idea"，David Mosberger 与 Arnd Bergmann 在 BSD accounting format 跨架构测试串中贴出 s390、ia64 上 uname -a 输出与 struct acct 各 ac_ 字段偏移的三版本对照表，Doug Gilbert 在 SG_IO 命令白名单 CVE-2011-4127 争论中说明 ddpt 工具已移植到 FreeBSD 和 Win32、把 FreeBSD 列为该工具链的跨平台移植目标之一，Theodore Ts'o 在 SG_IO 白名单 CVE-2012-4542 的漫长往返中提到有 CD 刻录工具开发者想在 BSD、Solaris 与 Windows 虚拟机内测试、与既有诉求一致，unix.7 手册 CVE-1999-1402 记录连接 UNIX domain socket 需读/写权限但 Solaris 2.x、SunOS 4.x 与 4.4 之前的 BSD-based 系统会忽略这些访问权限、可移植程序不应据此做安全判断，2006 年 Alexey Dobriyan 的 inode 瘦身补丁则给出这条谱系最早的删除节点"[BSD security levels are deleted in -mm, assuming this below]"与 "The only user of i_security, f_security, s_security fields is SELinux, so ifdef them with CONFIG_SECURITY_SELINUX"、同期 Crispin Cowan 在 AppArmor FAQ 争论中列出 TRON、Janus、LIDS、Systrace、BSD Jail、EROS、PSOS、KeyOS、AS400 等非标签式约束方案、Stephen Smalley 反驳传统意义的 confinement 指信息流控制、AppArmor 并不提供、2010 年 7 月 David P. Quigley 在 NFSD MAC Labeling 补丁中要求 "if we have an SELinux box with an MLS policy and a FreeBSD box with their MLS MAC module" 互通、2010 年 10 月 26 日 James Morris 在 IMA 补丁争论中以 BSD secure levels 已被移除为例反驳 Al Viro 对 security/ 子树的贬斥
+
+合观而言，BSD 安全工程在 Linux 内核中留下三条清晰谱系：一条是自 FreeBSD 9.0 起经 Capsicum 到 execveat 与 openat2 的能力语义流、Bonizni 与 Drysdale 是两条主要桥梁、语义落地但完整框架被放弃；一条是自 OpenBSD Pledge 与 Landlock 到 2020 年合入主线的非特权沙箱流、Salaün 把 pledge(2) 的减法哲学翻译成 Linux LSM 的可堆叠加法语义；一条是自 OpenBSD MAP_STACK 强制语义到 mseal 与进程孵化标志位的强制语义流、Horn、Ts'o、Morton、Linus、de Raadt、Falcato、Li Chen 各自在不同年份反复援引 BSD 侧行为作为设计基准或待补齐项；同时反向判例与遗留并存，acct(2) 与 fs_pin、SG_IO 与 SCSI ioctl、UNIX socket 权限与 CVE-1999-1402、BSD secure levels 与 STRICT_DEVMEM 各自以不同形式留在 Linux 内核治理视野中，BSD 派系安全工程因此在 Linux 中同时是设计基准、反面教材、兼容性契约与待删遗留、四种角色共存于同一内核谱系
+
+## 160.10.16 叙述章——TrustedBSD 安全工程从 FreeBSD 5.3 audit 到 FreeBSD 10.x Capsicum O_BENEATH 迁入 Linux 内核的十五年（2002–2024）
+
+自由软件安全史上有一条少被单独书写的谱系，其起点并非 NSA 的 SELinux 也不是 OpenBSD 的 pledge(2)，而是剑桥大学 Robert N.M. Watson 主导的 TrustedBSD 项目从 FreeBSD 5.x 时代把 audit(4) 内核审计、MAC 强制访问控制与 secure levels 塞进一个通用 Unix 系统内核的十年工程。2003 年 9 月 FreeBSD 5.3 发布时首次把 audit(4) 审计事件与 auditd(8) 事件库纳入 base system，这是继 TARA、TANDEM、SEC-SYSV 之后 Unix 家族里第一个真正跨平台落地并长期维护的 audit 框架，为后来 Capsicum、Jails、Landlock 等所有面向 Linux 的能力安全沙箱埋下了 audit 事件语义与 capability 语义两条平行的根
+
+2004 年 6 月 FreeBSD 5.1 release notes 里出现 TrustedBSD MAC 模块的官方描述，Robert Watson 同期在 USENIX 2004 Annual Technical Conference 发表《TrustedBSD: Adding Trusted Operating System Features to FreeBSD》，宣告 MAC 框架从概念移植进入生产系统；同一时期 IBM 研究员 Serge E. Hallyn 在 netdev 提交 BSD Jail LSM 补丁集，Alan Cox 与 Daniel Lezcano 在评审中反复把 "BSD Jail" 当作网络与文件系统隔离的设计基准，2006 年 Kirill Korotaev 在 netdev 讨论 namespace 隔离设计时甚至把 Serge Hallyn 的版本与 Vserver 并列为 "Layer 3 (Basically bind filtering)" 的代表方案，这一串邮件是 FreeBSD Jails 概念进入 Linux 内核治理视野最早的一次制度化引用
+
+2010 年 7 月 7 日 David P. Quigley 在 linux-fsdevel 上提交 NFSD MAC Labeling 补丁集的评审回复，原话 "if we have an SELinux box with an MLS policy and a FreeBSD box with their MLS MAC module" 把 FreeBSD MAC 模块的 MLS 策略直接列为与 SELinux 平级的互通主体，是 FreeBSD 派生的 MAC 框架第一次被 Linux 网络文件系统语义正式引用；三个月后的 2010 年 10 月 26 日 James Morris 在 IMA 补丁争论中援引 BSD secure levels 已被 Linux 移除为例反驳 Al Viro 对 security/ 子树的贬斥，把 BSD 谱系的删除本身作为 Linux 上游治理的正面论证；Daniel Lezcano 同期在 netdev 上写 "its aim other kind of isolation like a bsdjail for example" 主张 unshare 应当覆盖容器之外的 BSD Jail 语义隔离，Eric Biederman 在 2006 与 2009 的两次 namespace RFC 回复中把 "bsdjail" 作为 unshare 系统调用必须支持的隔离用例反复登记
+
+2012 年 1 月 FreeBSD 9.0 发布时把剑桥大学 Robert Watson 与 David Chisnall 合作了六年的 Capsicum 能力框架正式合入 base system，这是 Unix 家族历史上第一次在通用操作系统内核里以对象能力为主、标签为辅的能力安全模型落地，此后四年里 Linux 侧连续出现三个把它搬进内核的补丁集：2014 年 6 月 Paolo Bonzini 在 linux-api 上提交 "Adding FreeBSD's Capsicum security framework" RFC，David Drysdale 在同一串回复中介绍 FreeBSD 9.x/10.x 引入 Capsicum 使 OpenSSH 6.5 及以上可细粒度沙箱化 sshd，Eric Biederman 明确反驳"Capsicum 与 POSIX.1e 能力不同"必须逐处 fget/fdget/user_path_at 加能力标注约一百处修改点，Bonizni 随即把方案改造成按 file descriptor 而非 struct file 关联 seccomp-bpf 过滤器，这条完整移植线最终没有落地；同一时期 David Drysdale 独立提交 fs: add O_BENEATH flag to openat(2) 补丁，明确写 "originally implemented as part of the internals of the Capsicum security framework, which is available in FreeBSD 10.x"，把 Capsicum 内部实现暴露为独立系统调用标志
+
+2014 年 10 月 Eric Biederman 与 David Drysdale 在 execveat(2) 补丁讨论中反复说明该接口是 "needed as a (small) part of implementing Capsicum in the Linux kernel"，理由是能力模式下 /proc 不可访问导致 fexecve3 无法工作，Kees Cook 于 2016 年补充 "Capsicum is a security framework that has been present in FreeBSD since version 9.0 (Jan 2012)" 并把 execveat 描述成"实现 Capsicum 所需的一小部分"，Andy Lutomirski 与 Christoph Hellwig 各自补证这一动机链，Capsicum 的完整移植失败但语义碎片经 Drysdale 之手进入 openat 与 execve 两条接口线
+
+2016 年 8 月 Mickaël Salaün 在 linux-api 提交 Landlock LSM RFC v2，目标写为 "to allow any process, including unprivileged ones, to create powerful security sandboxes comparable to the Seatbelt/XNU Sandbox or the OpenBSD Pledge"，此后 v14 至 v33 每一轮补丁集都保留 "Landlock also takes inspiration from other OS sandbox mechanisms: XNU Sandbox, FreeBSD Capsicum or OpenBSD Pledge/Unveil" 一句，Kees Cook 与 Alexei Starovoitov 把 seccomp 扩展为 eBPF 视为 Capsicum 指针追踪的等价路径，Landlock 在 2020 年 9 月合入 Linux 主线，把 FreeBSD 9.0 的能力框架与 OpenBSD pledge(2)/unveil(2) 共同折算为 Linux LSM 的一个可堆叠模块
+
+2019 年 10 月 Aleksa Sarai 提交 openat2 系列明言该系列复活 Al Viro 的 AT_NO_JUMPS 补丁、其语义源自 David Drysdale 的 O_BENEATH，补丁说明中写 "RESOLVE_BENEATH 的语义建模于 FreeBSD 的 O_BENEATH"，Capsicum 谱系从 openat 一路扩展到 openat2 目录遍历语义；2022 年 12 月 31 日 Ameer Hamza 在 linux-fsdevel 提交 O_EMPTY_PATH 补丁，明言 "it is very similar to the FreeBSD O_EMPTY_PATH flag"，动机是避免为 samba 容器授予 /proc 访问权限，David Laight 质疑补丁的独立价值但 Hamza 说明它能把一个 O_PATH 描述符转成适合读写工作的描述符，从而绕开 procfs 再打开文件
+
+2019 年 11 月 Jann Horn 在 clone3 文档评审中转述 OpenBSD 用法 "they periodically check whether the userspace stack pointer points into a MAP_STACK region, and if not, they kill the process"，Theodore Ts'o 由此发问 Linux 是否应照做、Kees Cook 反对只在 syscall entry 检查不足以防御 ROP；2023 年 4 月 20 日 Andrew Morton 在 MAP_STACK 到 VM_STACK 映射讨论中引 mmap(2) 手册明言 "MAP_STACK exists (and has an effect) on some of the BSDs"，2024 年 5 月 14 日 Linus Torvalds 在 buffered IO 的 LSF/MM/BPF TOPIC 讨论中重复同一语并承认 BSD 家族系统行为差异是显式事实；2024 年 2 月 Theo de Raadt 在 mseal 线程点明机制差异 "In OpenBSD, sigaltstack() forces MAP_STACK onto the specified (pre-allocated) region, because on kernel-entry we require the sp register to point to a MAP_STACK region"，随即补一句 "Linux does not have MAP_STACK enforcement (yet)"，Jeff Xu 引 Theo 视角说明 sigaltstack 可能构成 mseal 绕过路径，Waiman Long 提议 MAP_STACK 到 VM_STACK 的映射以防止栈 VMA 与非栈匿名 VMA 合并并指出 glibc 用 MAP_STACK 映射线程栈而 Linux 完全忽略该标志、触发 SELinux 禁止可执行栈检查失败并造成随机 SEGV；2024 年 10 月 Pedro Falcato 评 mseal 时写 "I think this version of mseal() is OpenBSD's mimmutable()"；2026 年 6 月 Li Chen 在进程孵化模板 RFC 中横向调研三家并记 "FreeBSD has P_INEXEC, OpenBSD has PS_INEXEC"，Linux 至今无等价标志
+
+2025 年 5 月 Jeff Layton 在 linux-fsdevel 提交废弃 acct(2) 遗留接口的补丁，由 Christian Brauner 合入 vfs-7.0.misc 分支，理由是即便该接口需要特权也隐患众多、已有 eBPF 等更佳替代，原文 "begin the deprecation of legacy BSD process accounting"，unix.7 手册 CVE-1999-1402 条目记录连接 UNIX domain socket 需读/写权限但 Solaris 2.x、SunOS 4.x 与 4.4 之前的 BSD-based 系统会忽略这些访问权限，BSD 遗留因此在内核治理视野里同时以"待删废弃"与"历史缺陷参考"两种形态存在
+
+从 FreeBSD 5.3 的 audit(4) 到 FreeBSD 9.0 的 Capsicum，从 FreeBSD 10.x 的 O_BENEATH 到 openat2 与 execveat，从 2016 年 Landlock 到 2024 年 MAP_STACK 与 mseal，再到底层 1999 年前后就存在的 acct(2) 与 BSD socket 权限遗留，FreeBSD 能力框架与 OpenBSD pledge/unveil 的语义碎片在十五年里进入 Linux 内核而不是一次完整移植，同时 BSD 派系的兼容契约由 David Miller 用 "The existing LSM hooks do not break BSD socket behavior" 反复守护、历史缺陷由 unix.7 手册 CVE-1999-1402 条目持续登记，四种身份——设计基准、反面教材、兼容性契约与待删遗留——在同一内核谱系中持续并存，构成 Linux 安全生态吸收 TrustedBSD 工程遗产的完整图景
+
+## 160.10.17 叙述章——TrustedBSD 安全工程的接口契约与遗留负担：fsuid、BSD accounting、BSD socket 与 unix_find_bsd()（1999–2026）
+
+1999 年 3 月 30 日 Eric W. Biederman 在 linux-mm 转发 Conrad Sanderson 关于 bigphysarea 的呼吁，理由是 BSD 内核早已提供该功能，"Linux needs this as standard functionality"，这是本章时间轴最早的锚点，TrustedBSD 一脉在 Linux 中首先以"功能缺口"而非"安全框架"的身份被援引；2002 年 8 月 31 日 Alan Cox 与 Chris Wright 在 "Introduce BSD-style user credential" 补丁线程中往复，Cox 一句 "Needs fsuid too" 把 BSD 的 fsuid 与 euid 分离语义推进 Linux 凭证结构，TrustedBSD 的凭证模型自此以接口字段形式进入主线，此后二十余年 Linux 的 fsuid 语义从未再被重新论证其来历
+
+2004 年 4 月 26 日 David Mosberger 与 Arnd Bergmann 在 "[rft] testing BSD accounting format on different archs" 串中分别贴出 ia64 与 s390 上 uname -a 输出与 struct acct 各 ac_ 字段偏移的三版本对照表，BSD 进程记账格式以跨架构兼容实验形态进入主线视野；同年 9 月 13 日 Serge Hallyn 提交 BSD Jail LSM 补丁把 FreeBSD 的 jails 移植为 Linux 安全模块，代码里出现 jail_flags 与 GOT_IPV4、GOT_IPV6 标志位，Alan Cox 质疑 "could be addressed by netfilter chains run at bind/connect time"，Hallyn 当晚回信 "The attached version supports simultaneous ipv4 and ipv6 addresses"，这套移植最终未合入主线，却在 2006 年 6 月 Hallyn 反问 "we can all use the network part of the bsdjail lsm" 与 9 月 Daniel Lezcano 写下 "its aim other kind of isolation like a bsdjail for example" 的两次引用中复活，成为 Linux 网络隔离接口的事实参照物；2007 年 4 月 18 至 19 日 Crispin Cowan 在 AppArmor FAQ 争论中列出 "TRON, Janus, LIDS, Systrace, BSD Jail, EROS, PSOS, KeyOS, AS400" 主张标签远非有效约束的唯一方式，Stephen Smalley 反驳称传统意义的 confinement 指信息流控制而 AppArmor 并不提供，BSD Jail 在此成为非标签路线的辩护对象
+
+2006 年 8 月 6 日 Alexey Dobriyan 提交 fs.h 补丁把 i_security、f_security、s_security 字段按 CONFIG_SECURITY_SELINUX 条件编译以缩小 inode，补丁首行即 "[BSD security levels are deleted in -mm, assuming this below]"，Hallyn 同日反驳称 SLIM 安全模块正试图上游化并仍在使用这些字段；2008 年 11 月 16 日 Peter Anvin 反对把 CONFIG_STRICT_DEVMEM 做成运行时开关，援引 "kind of like the BSD securelevel idea" 说明照搬单向提权设计亦需重新论证；2010 年 10 月 27 日 James Morris 在 IMA 争论中以 "This already happened once with the BSD secure levels" 反驳 Al Viro 对 security/ 子树的贬斥，证明 BSD 谱系代码的删除本身可正当化为上游取舍的正面论据
+
+2010 年 7 月 22 日 David Miller 在 LSM post-recvmsg 钩子之争中以 "The existing LSM hooks do not break BSD socket behavior" 守护 BSD 套接字语义，并称既有钩子是 "someone who understood all of this spent a great deal of time carefully designing them" 的结果，BSD socket 由此成为 Linux 网络子系统的不可破坏契约；2010 年 8 月 15 日 Stephen Hemminger 在 GTSM 与 TCP accept 争论中拒绝把 MINTTL 表下沉到 iptables，理由是 "a general application that needs to run on BSD, and would mess up existing firewall rules"，BSD 可移植性在此成为内核参数设计的硬约束
+
+2013 年 2 月 7 日 Jan Kara 第三次重发补丁系列修复冻结文件系统上的记账挂死，标题即 "Fix hang of BSD accounting on frozen filesystem" 并说明已有真实用户触发死锁；2014 年 4 月 14 日 Eric Biederman 的 "No I/O from mntput" RFC 把 BSD 记账文件的自动关闭搬进工作队列并自问 "I may be going overboard in the case where we auto close BSD accounting files"；2023 年 1 月 Ameer Hamza 提交 O_EMPTY_PATH 时自陈 "it is very similar to the FreeBSD O_EMPTY_PATH flag"，动机是避免为 samba 容器授予 /proc 访问权限；2025 年 2 月 12 日 Christian Brauner 修复 acct(2) 访问内部文件系统导致的空指针解引用并主张弃用；2026 年 1 月 9 日 Jeff Layton 在 NFSv4 状态撤销讨论中指出 "the only user of fs_pin is the BSD process accounting subsystem"，废弃补丁由 Brauner 合入 vfs-7.0.misc 分支，原文 "begin the deprecation of legacy BSD process accounting"；同月 15 日 Günther Noack 的 unix_path_connect LSM 钩子补丁引发 Paul Moore 的谨慎意见，担心改动超出 unix_find_bsd() 之外会阻碍新钩子被接受，BSD 遗留函数名成为新安全钩子的落地阻力；2026 年 6 月 10 日 Li Chen 在进程孵化模板 RFC 中记 "FreeBSD has P_INEXEC, OpenBSD has PS_INEXEC"，而 Linux 至今无等价标志，仅有 LSM 使用的 in_execve 提示
+
+合观而言，TrustedBSD 安全工程在 Linux 中呈现三种治理身份：一是可移植性契约，fsuid、BSD socket 语义、GTSM 与 O_EMPTY_PATH 均以"程序必须在 BSD 上运行"或"不得破坏 BSD 行为"为设计边界；二是非标签约束的辩护对象，BSD Jail 在 2007 年 AppArmor FAQ 争论与 2006 年命名空间 RFC 中充当标签路线之外的有效约束范本；三是待删遗留，i_security 于 2006 年被条件编译、fs_pin 与 acct(2) 于 2025 至 2026 年被正式标记弃用、unix_find_bsd() 与 P_INEXEC 的缺失构成新工作的阻力；三重身份同时存在，说明 TrustedBSD 一脉既是被继承的设计基准，也是被治理的对象与待清理的历史负担
+
+## 160.10.18 叙述章——TrustedBSD 安全工程在 Linux 内核治理的制度化路径：RFC、KSPP 与 TECH TOPIC 四条通道（2016–2024）
+
+160.10.16 与 160.10.17 从技术谱系与接口契约两侧记录了 TrustedBSD 安全工程迁入 Linux 的技术事实，本节转向治理通道——BSD 谱系的安全设计以何种制度化形式被 Linux 上游接收，以及这种制度化形式如何反过来重塑 BSD 概念在 Linux 语境中的语义
+
+第一条通道是 RFC 补丁集的正式引用学，Mickaël Salaün 在 2016 年 9 月 20 日发布 Landlock LSM RFC v2 时直接把目标写成 "allow any process, including unprivileged ones, to create powerful security sandboxes comparable to the Seatbelt/XNU Sandbox or the OpenBSD Pledge"，随后 v20、v22、v30 每一轮都保留 "FreeBSD Capsicum or OpenBSD Pledge/Unveil" 的显式并列，BSD 沙箱由此不是补丁作者的个人偏好，而是 Linux 上游可堆叠 LSM 的公开设计基准
+
+第二条通道是 KSPP 与商业化悬赏的制度化，2017 年 1 月 20 日 Kees Cook 在 ksummit-discuss 上以 "Kernel Self-Protection Project TODO items" 为名向各维护者征集 security wishlist，同串中他明言 Google 的 Patch Reward Program 正试图扩展为 security bounty，把"内核自保护"从概念口号变成可编号可激励的治理工单，同一串内 Andy Lutomirski 主张把 execve() 二进制格式解析器下沉到用户模式、David Howells 逐条列出七点实现难点、Matthew Wilcox 反向提议内核地址用户态执行、Greg Ungerer 补充 FLAT binfmt 的 MMU/NOMMU 双模信息，安全工程议题在此从个人倡议升级为跨子系统的协作工单池
+
+第三条通道是 Kernel Summit 的议题化机制，2018 年 9 月 5 日 David Howells 以 [TECH TOPIC] 提议 kernel lockdown 与 secure boot 专场，Jiri Kosina 承认 SUSE 是少数自带非上游 lockdown 补丁集的发行版、Justin Forbes 要求把 lockdown 从 secure boot 拆成独立 config 并指出当前一刀切禁用 BPF 伤及 IPAddressAllow 与 IPAddressDeny、Andy Lutomirski 主张拆小补丁集先并基础框架再逐个加 lockdown 用户并提 LOCKDOWN_PROTECT_INTEGRITY 与 LOCKDOWN_PROTECT_SECRECY 分级，BSD 谱系的概念首次以独立议题而非边缘讨论形式获得上游席位
+
+第四条通道是 Maintainers Summit 与 LSF/MM/BPF 的技术议题机制，2018 年 10 月 1 日至 3 日的 debugfs 迁移争论中 Greg KH 直言 "debugfs things should never be used for real functionality" 与 "until about a year ago debugfs was not secure at all and it was trivial to crash the kernel"，Shuah Khan 实查发现发行版仍启用 BLK_DEBUG_FS 与 KVM_DEBUG_FS、Olof Johansson 提出"命名空间与安全理顺方可毕业进 sysfs"、Mauro 指出 debugfs 泄露内存地址有助攻破系统、Sudeep Holla 附和 ARM PM 补丁存在向远程系统发指令的 debugfs 文件、Jan Kara 反驳发行版需要这些配置排客户问题、Mark Brown 说明自己一贯抵制 regmap 与 regulator debugfs 文件可写、Takashi Iwai 质疑 debugfs 默认挂载在生产系统上，Linux 内核安全治理在此把"调试便利"与"生产安全"之间的张力作为制度选择显式化
+
+同一条 LSF/MM/BPF 通道在 2019 年 11 月至 2024 年 10 月的 MAP_STACK 争论中再次运作，Jann Horn 在 clone3 文档评审中转述 OpenBSD 用法 "they periodically check whether the userspace stack pointer points into a MAP_STACK region, and if not, they kill the process"、Theodore Ts'o 由此发问 Linux 是否应照做、Kees Cook 反对只在 syscall entry 检查不足以防御 ROP，2023 年 4 月 20 日 Andrew Morton 在 MAP_STACK 到 VM_STACK 映射讨论中引 mmap(2) 手册明言 "MAP_STACK exists (and has an effect) on some of the BSDs"、Waiman Long 提议把 MAP_STACK 映射为 VM_STACK 以防止栈 VMA 与非栈匿名 VMA 合并并指出 glibc 用 MAP_STACK 映射线程栈而 Linux 完全忽略该标志、2024 年 2 月 Jeff Xu 引 Theo de Raadt 视角说明 sigaltstack 可能构成 mseal 绕过路径、2024 年 5 月 14 日 Linus Torvalds 在 buffered IO 的 LSF/MM/BPF TOPIC 讨论中重复同一语、2024 年 10 月 Pedro Falcato 以 "OpenBSD's mimmutable() doesn't do any of this and it Just Works" 反衬 Linux 侧简化选择
+
+四条通道共同显示 TrustedBSD 一脉在 Linux 上游的治理路径已从"补丁作者个人援引"演化为"RFC 引用学—KSPP 工单—Summit 议题—LSF TOPIC"的制度化链条，BSD 概念不再仅仅是兼容契约或反面教材，而是被 Linux 上游以议题为单位反复审议的设计输入，其制度化程度既高于 160.10.14 的互动总览与 160.10.15 的三条谱系，也不同于 160.10.16 的技术迁移与 160.10.17 的接口契约，而是治理形式本身作为研究对象
+
+## 160.10.19 叙述章——TrustedBSD 谱系在 Linux 内核中的三种证据形态：先例、契约与判例（1999–2026）
+
+160.10.15 至 160.10.18 分别记录了移植谱系、接口契约与治理通道，本节从话语证据的角度补一层：在 1999 至 2026 年的邮件存档中，BSD 派系安全工程以先例、契约与判例三种身份反复出现，同一事实同时充当设计理由、拒绝理由与验收标准
+
+第一种形态是先例，BSD 已有实现本身就是 Linux 采纳某项设计的充分论证。2000 年 8 月 3 日 Rik van Riel 发布新 VM 设计草案自述 "The design is heavily based on the FreeBSD VM subsystem"，Chris Wedgwood 随即追问能否把两个内核的分歧隔离起来、"if/when the new system is implement it would nice to know if performance differences are tuning related or because of 'tweaks'"，Lamont Jones 顺势提议加一个 CONFIG_VM_FREEBSD_ME_HARDER 编译开关，用以开关整块 BSD 化行为而不必逐处争论；2010 年 1 月 Stephen Hemminger 提交 GTSM 补丁时把论证压成一句 "This is already implemented the same way in BSD kernels"，David Miller 当月即合入 net-next-2.6，补丁说明的篇幅因此无需再为设计本身辩护；2020 年 9 月 1 日 Mark Rutland 与 Mickaël Salaün 在 W^X 与 Trampoline File Descriptor 争论中校准时间线，确认 "partial OpenBSD implementation from 2003" 早于带永久 mprotect 限制的完整实现，BSD 的实现年表成为 Linux 上游判定自身方案先后轻重的标尺——三件事确立同一论证逻辑，即 BSD 的实现不是可供移植的代码，而是该设计已被上游验证的凭据
+
+第二种形态是兼容性契约，它把 BSD 行为从参照物抬升为主线不得破坏的条件。2004 年 4 月 21 日 David S. Miller 讨论 TCP 漏洞缓解时点名 "randomized ephemeral port selection, which OpenBSD implements and we could easily implement as well"，并称 "I'm very happy that OpenBSD checked in a fix for this a week or so ago and took some of the thunder out"；同年 7 月 15 日 Evgeniy Polyakov 宣布 CARP 实现，自承 "It is based on OpenBSD's CARP protocol but is not compatible with it"，理由是 OpenBSD 版本缺少对重复消息发送的保护，说明参照物亦可被显式放弃；2006 年 11 月 28 日 Herbert Poetzl 在 namespace 隔离层级争论中反驳称轻量三层方案 "is the traditional way 'containers' are built (see BSD, solaris ...)"，BSD 与 SunOS 的既有部署成为 Linux 不能砍掉功能层的实证依据；2007 年 7 月 18 日 NetBSD 核心的 Roy Pledge 在 skb 缓冲区串接讨论中援引 "a facility like mbuf's in netbsd where one can chain multiple buffers together"，Stephen Hemminger 回应 "Yes, skb frag list could be used for that but you don't want to do that"，BSD 缓冲模型的经验由此沉淀为网络子系统的技术常识；到 2010 年 7 月 22 日 Miller 在 LSM post-recvmsg 钩子之争中以 "The existing LSM hooks do not break BSD socket behavior" 封住修改面，BSD socket 语义不再是外来参照而是主线条件
+
+第三种形态是安全判例与公告的双向流转，这是安全机制谱系与治理通道之外最被低估的一条证据线。2004 年 9 月 14 日 OSDL Bug 3397 的标题本身即 "Network connections hang going through an OpenBSD firewall"，报障者以 2.6.5 与 2.6.6 的行为差异定位回归，BSD 防火墙从此进入 Linux 缺陷数据库；2006 年 4 月 11 日 Hemminger 排查 2.6.17 网络缓慢回归时把嫌疑指向不理解 TCP 窗口缩放的中间盒，自陈 "I've usually seen this in the past with OpenBSD firewall"；2007 年 10 月 17 日 Florin Andrei 在千兆双宿主防火墙加 UDP 洪泛测试中报告 "OpenBSD 4.1 as a firewall fails even worse in this test case (it freezes instantly)"、4.2 则正常，BSD 侧的版本差异被当作 Linux NAT 的问题定位坐标；2010 年 1 月 8 日 Neil Horman 检查原始 tcpdump 后关闭 BSD 4.2 风格 keepalive 线程的争论，结论是 "w2k doesn't compute the checksum properly on these old style keepalives"，即 Linux 侧无可修之处、缺陷在 Windows 2000 一侧，判例也可以反向指认归属。反向判例同样成立：2019 年 3 月 21 日 Luca Moro 自陈 "During a review of OpenBSD Packet Filter, we discovered a minor security issue that also impacts netfilter"，ICMP 错误报文的关联检查缺失同时命中两侧，BSD 侧审计反哺 Linux 由此得到直接例证；2008 年 10 月 2 日 Pekka Savola 把 FreeBSD 安全公告 FreeBSD-SA-08:10.nd6 连同 FreeBSD cvsweb 修订转发进 netdev，提示 Linux 可能受同一邻居发现缺陷影响；2009 年 2 月 Eugene Teo 的补丁说明指认 "The fix for CVE-2009-0676 is incomplete"，指出 SO_BSDCOMPAT gsopt 泄漏会在 timeval 含内部填充的架构上重演，David Miller 将其合入 -stable；2010 年 12 月 2 日 BPF 安装时安全检查争论中 Changli Gao 实查 "I checked the implementation of bpf in FreeBSD, and found RAM isn't initialized to 0"，Eric Dumazet 补证 "Their scratch memory is not on stack but part of the filter, so no security problem"，同一安全问题的两侧实现成为互相对照的样本
+
+三种形态合观，BSD 派系安全工程在 Linux 内核中并不表现为一次移植或一条补丁线，而表现为话语角色上的三重并存：2000 年前后它以先例出现，2004 至 2010 年它被抬为不可破坏的兼容性契约，2004 至 2020 年它以漏洞判例与安全公告在两个内核间双向流转，而判例线跨越的时间最长、留存最完整，成为本组证据中唯一能独立支撑"以 TrustedBSD 为基础、以实用主义为边界"这一章题判断的维度
+
+<!-- ROW_MINE: ksummit-discuss.messages.347765 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；ksummit-discuss 邮件列表全库行级遍历考据采纳）
+
+Kees Cook：KSPP TODO 列表 + Google Patch Reward 程序扩展为 security bounty——向各维护者征集 security wishlist；ksummit-discuss 是比 LKML（公共存档）更好的维护者触达渠道（源码：KSPP 维基 TODO 页）。以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: ksummit-discuss.messages.347767 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；ksummit-discuss 邮件列表全库行级遍历考据采纳）
+
+Kees Cook：回应 vsyscall opt-out（ELF note？）；PCID 催促。以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: ksummit-discuss.messages.347771 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；ksummit-discuss 邮件列表全库行级遍历考据采纳）
+
+Alexey Dobriyan：modules_disabled=1 后 unmap 模块加载器——内核自保护具体项。以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: ksummit-discuss.messages.347778 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；ksummit-discuss 邮件列表全库行级遍历考据采纳）
+
+Christoph Hellwig：误发列表提醒——“你把它发到 ksummit-discuss 而不是 linux-kernel 了”（列表职能定位史料）。以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: ksummit-discuss.messages.347783 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；ksummit-discuss 邮件列表全库行级遍历考据采纳）
+
+Andy Lutomirski：/proc 现代拆分总纲——sysctlfs（scope=global/net 挂载）、procfs 真 per-superblock 挂载选项、hidepid per mount、cmdline 仅 argv[0]、mini-proc（无非 PID 内容）。以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+**〔当事人素材回写〕素材：06-security征集与维护者峰会机制 §6.3 execve 用户态化论证链（安全架构史）**
+
+<!-- ROW_MINE: ksummit-discuss.messages.347766 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；ksummit-discuss 邮件列表全库行级遍历考据采纳）
+
+Andy Lutomirski：execve() 重写为 binfmt 解析在用户模式运行——“实际二进制格式解析器移到用户空间”；x86 次要项：binaries opt out vsyscall page（hard part 已完成，ABI 待定）。以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: ksummit-discuss.messages.347770 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；ksummit-discuss 邮件列表全库行级遍历考据采纳）
+
+Josh Triplett：扩展 execve 用户态化——不仅 binfmt 解析，除 execve 过渡（execve(2) 文档化的重置位）全部外移；compat/x32/废弃 syscall 用户态化隔离单一进程妥协；setuid 安全挑战。以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: ksummit-discuss.messages.347769 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；ksummit-discuss 邮件列表全库行级遍历考据采纳）
+
+Wilcox：内核地址空间的用户模式执行能力——只能访问自己的栈+用户空间内存（get_user 系）+可发系统调用（mmap）；compat/ioctl 上表层受益。以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: ksummit-discuss.messages.347772 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；ksummit-discuss 邮件列表全库行级遍历考据采纳）
+
+David Howells：execve 用户态化的 7 点实现难点—（pre-loader 内建映射/proc/preloader、映射地址避开、ASLR、无栈启动、参数环境、NOMMU/ELF-FDPIC 双模、脚本循环安全重算）。以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: ksummit-discuss.messages.347777 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；ksummit-discuss 邮件列表全库行级遍历考据采纳）
+
+David Howells：追问——/proc/pid/maps 看到什么、vmlinux 映射到哪、NOMMU 双模式 binfmt（ELF-FDPIC/FLAT）、解析后可能需重做安全计算。以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: ksummit-discuss.messages.347780 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；ksummit-discuss 邮件列表全库行级遍历考据采纳）
+
+Matthew Wilcox：内核地址用户态执行——希望支持只访问自身栈+用户地址、可发 syscall（mmap）的受限执行。以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: ksummit-discuss.messages.347776 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；ksummit-discuss 邮件列表全库行级遍历考据采纳）
+
+Andy Lutomirski：clarify 设计——内核 fresh mm_struct 直接映射 text 运行后作为 execve 结果，vmlinux 内执行；ASLR 非问题；NOMMU 放弃；真正担心的是解析器；vsyscall 可用 munmap 特例（问 mm 友邻能否架构特判 gate pseudo-vma）。以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: ksummit-discuss.messages.347781 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；ksummit-discuss 邮件列表全库行级遍历考据采纳）
+
+Andy Lutomirski：已开始原型（kernel-code-in-user-mode 部分）；务实：用户地址观察更简单（x86 单地址空间、split-address-space 的 s390 可能无法实现）。以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: ksummit-discuss.messages.347782 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；ksummit-discuss 邮件列表全库行级遍历考据采纳）
+
+Greg Ungerer：FLAT binfmt 同 MMU/NOMMU 双模（ELF-FDPIC 亦然）——NOMMU 可行性信息。以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: ksummit-discuss.messages.348937 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；ksummit-discuss 邮件列表全库行级遍历考据采纳）
+
+David Howells 提议 TECH TOPIC：推进 secure boot 与 kernel lockdown 补丁，称多发行版已在自带该补丁集。以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: ksummit-discuss.messages.348945 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；ksummit-discuss 邮件列表全库行级遍历考据采纳）
+
+Jiri Kosina 答 David：SUSE 是少数自带非上游 lockdown 补丁集者之一，自承已忘究竟何阻塞上游合并。以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: ksummit-discuss.messages.348948 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；ksummit-discuss 邮件列表全库行级遍历考据采纳）
+
+Justin Forbes 答 Jiri：lockdown 应与 secure boot 分离成独立 config，并指当前 lockdown 一刀切禁用 BPF 伤及 IPAddressAllow/IPAddressDeny。以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: ksummit-discuss.messages.348949 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；ksummit-discuss 邮件列表全库行级遍历考据采纳）
+
+David Howells 答 Justin：补丁集已有 CONFIG_LOCK_DOWN_IN_EFI_SECURE_BOOT；疑点之一是 Linus 似要编译期全锁或全不锁、而非启动期条件。以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: ksummit-discuss.messages.348953 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；ksummit-discuss 邮件列表全库行级遍历考据采纳）
+
+Justin Forbes 续谈 lockdown config：上次推送有 CONFIG_LOCK_DOWN_MANDATORY 与 lockdown=1，独缺 UEFI 触发项；作为发行版跑 MANDATORY 不可行，曾用 4.17 rawhide 跑 KERNEL 无人觉 secure boot 关。以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: ksummit-discuss.messages.348955 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；ksummit-discuss 邮件列表全库行级遍历考据采纳）
+
+Andy Lutomirski 评 lockdown 不必占整 TECH TOPIC：阻塞点一为启用时机、二为作用范围；主张拆小补丁集先并基础框架与一个用户，再逐个加 lockdown 用户，并提 LOCKDOWN_PROTECT_INTEGRITY/SECRECY 分级。以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: ksummit-discuss.messages.349658 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；ksummit-discuss 邮件列表全库行级遍历考据采纳）
+Greg KH："技术议题别上 maintainer summit"；debugfs 东西永远不该用于真实功能；多数发行版已关 debugfs、Android 亦然；放哪个案个案定。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: ksummit-discuss.messages.349663 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；ksummit-discuss 邮件列表全库行级遍历考据采纳）
+Olof 提升格判据：命名空间与安全理顺方可毕业进 sysfs——debugfs 里可全无视；容器想要的功能（如 trace）进 sysfs 却无法提供给非特权容器——应避免。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: ksummit-discuss.messages.349664 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；ksummit-discuss 邮件列表全库行级遍历考据采纳）
+Shuah：移 sysfs 更安全但“留在 debugfs 也要讲安全”；不给 debugfs 更低门槛；正处理容器场景驱动、其命名空间未限制在容器范围。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: ksummit-discuss.messages.349665 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；ksummit-discuss 邮件列表全库行级遍历考据采纳）
+Greg：“直到约一年前 debugfs 完全不安全、崩溃内核轻而易举——所以要锁死、不挂载不可信系统”；“内核不知道什么是容器 :)；sysfs 有命名空间（网络即例）、多数驱动子系统没有也不该有”。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: ksummit-discuss.messages.349666 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；ksummit-discuss 邮件列表全库行级遍历考据采纳）
+Greg：“另一公开列表讨论表明 debugfs 仍有可致大问题的残留——别挂不可信系统；正在好转、再给一年”。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: ksummit-discuss.messages.349669 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；ksummit-discuss 邮件列表全库行级遍历考据采纳）
+Mauro：即使不能崩内核/提权，debugfs 些东西也不该上生产——泄露内存地址等有助攻破系统。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: ksummit-discuss.messages.349670 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；ksummit-discuss 邮件列表全库行级遍历考据采纳）
+Shuah 实查发行版配置：一家启用 BLK_DEBUG_FS/KVM_DEBUG_FS/DEBUG_FS、另一家 BLK_DEBUG_FS/DEBUG_FS；“需广而告之让 distros 收紧”。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: ksummit-discuss.messages.349671 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；ksummit-discuss 邮件列表全库行级遍历考据采纳）
+Greg：“幸好 debugfs 已默认仅 root、攻击面大减；那些 distro 大概可去掉那些配置项”。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: ksummit-discuss.messages.349674 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；ksummit-discuss 邮件列表全库行级遍历考据采纳）
+Sudeep Holla 附和：评审 ARM 平台 PM 补丁——debugfs 有完整系统时钟控制、还能向远程系统控制处理器发指令——生产系统绝不想要。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: ksummit-discuss.messages.349677 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；ksummit-discuss 邮件列表全库行级遍历考据采纳）
+Jan Kara：“Not really——发行版需要这些配置排客户问题（请客户开 tracepoint/看 debugfs stats 很常见）”。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: ksummit-discuss.messages.349679 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；ksummit-discuss 邮件列表全库行级遍历考据采纳）
+Brown：“这就是我一直强烈抵制 regmap/regulator debugfs 文件可写的原因——写 regmap 的代码存在但须改内核才能启用”。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: ksummit-discuss.messages.349680 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；ksummit-discuss 邮件列表全库行级遍历考据采纳）
+Greg：“tracepoint 不该在 debugfs；哪些 stats 是 debugfs 独有？若依赖就该移到稳定位置”。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: ksummit-discuss.messages.349682 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；ksummit-discuss 邮件列表全库行级遍历考据采纳）
+Shuah：“这是现场排障通用做法；所以要继续把 debugfs 做安全、新服务提高门槛——不是别启用而是自担风险地启用、我们尽力做安全”。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: ksummit-discuss.messages.349686 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；ksummit-discuss 邮件列表全库行级遍历考据采纳）
+Sudeep：“下次见 debugfs 必须限制写的场合就照 Brown 的做——加个小补丁才能启用”。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: ksummit-discuss.messages.349687 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；ksummit-discuss 邮件列表全库行级遍历考据采纳）
+Jan Kara：个人用 bdi/ stats；这些通常只在排障时有用、契合 debugfs 宗旨；“不必常挂 debugfs（与 root-only 有何区别）——但必须编译进内核”。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: ksummit-discuss.messages.349690 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；ksummit-discuss 邮件列表全库行级遍历考据采纳）
+Iwai：“问题是 debugfs 默认挂载在我们系统上；只用于调试就不该默认挂载；想在生产系统收集调试数据故禁编译 no-go；禁挂载是另一回事”。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+【linux邮件提取】
+<!-- ROW_MINE: linux-man.messages.727522 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-man 邮件列表价值反推选封考据采纳）
+
+Horn 指出 OpenBSD 已使用 MAP_STACK 标志：内核定期检查用户态栈指针是否落在 MAP_STACK 区域，否则终止进程；Ts'o 由此发问 Linux 是否应照做，即使只在系统调用入口检查成本也低且能有效防御各类 ROP 技术；Ts'o 随后表示并不看好仅在系统调用入口做检查——认为攻击者一旦取得系统调用能力，把 ROP 栈搬到合法栈上并不困难；Cook 则认为该机制仍有价值：它具备「你的进程行为异常」的声明与强制作用（虽不纯粹作为 ROP 防御）。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-man.messages.741675 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-man 邮件列表价值反推选封考据采纳）
+
+unix.7 记入连接 UNIX domain socket 需具备读/写权限，而 Solaris 2.x、SunOS 4.x 以及 4.4 之前的其他 BSD-based 系统会忽略这些访问权限（CVE-1999-1402），故可移植程序不应据此做安全判断。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-man.messages.752984 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-man 邮件列表价值反推选封考据采纳）
+
+Jann Horn 在 clone3() 文档评审中转述 OpenBSD 用法："they periodically check whether the userspace stack pointer points into a MAP_STACK region, and if not, they kill the process"，建议即便在 Linux 上该标志为 no-op 也应写入；tytso 询问 Linux 是否应跟进，Jann 认为仅在 syscall entry 检查不足以防御 ROP。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: sparclinux.messages.9327885 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；sparclinux 邮件列表价值反推选封考据采纳）
+
+Glaubitz 与 Linus Walleij 讨论旧架构平台的存废标准。Glaubitz 认为按 git 活跃度判断一个移植是否已死是糟糕指标，商业利益正在挤压爱好者用途，二者需要健康平衡，并指出 m68k 等冷门架构仍有 SECCOMP 等功能缺口可供教学性开发。Walleij 回应称自己在 ARM 树中删改子架构时从不删除愿意维护的项目，公司实体偏向删除主义，而社区总有强烈的包容立场与之对抗，并援引 Torvalds 自传 Just for fun 中的动机说明作为保护这一特质的依据。他要求保留宠儿架构者做三件事：测试确认他人补丁、迁移驱动到通用子系统、改用设备树或 ACPI 描述硬件。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: sparclinux.messages.9331311 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；sparclinux 邮件列表价值反推选封考据采纳）
+
+Aleksa Sarai 介绍 openat2 系统调用系列，说明该系列是对 Al Viro 早期 AT_NO_JUMPS 补丁集的复活，而 AT_NO_JUMPS 源自 David Drysdale 的 O_BENEATH 补丁集，后者又是 Capsicum 项目的一个衍生。他明确写出一句谱系陈述：RESOLVE_BENEATH 的语义建模于 FreeBSD 的 O_BENEATH。补丁集的核心动机是长期困扰 openat 的目录逃逸与恶意路径问题，因为 openat 不检查未知标志，成了不要静默接受用户空间垃圾这一准则的反例。这是 FreeBSD 的 O_BENEATH 与 Capsicum 安全机制进入 Linux VFS 的具体路径。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: sparclinux.messages.9337044 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；sparclinux 邮件列表价值反推选封考据采纳）
+
+2023年1月 Ameer Hamza 回复 David Laight 对 O_EMPTY_PATH 补丁的质疑。他在补丁说明中写道：「This patch adds a new flag O_EMPTY_PATH that allows openat and open system calls to open a file referenced by fd if the path is empty, and it is very similar to the FreeBSD O_EMPTY_PATH flag」，用途是路径为空时打开 fd 所引用文件，避免为 samba 容器等场景授予 /proc 访问权限，从而以无竞争方式重新打开文件以修改标志。David Laight 在本封中反问「But what does it do? (Apart from add code to a common kernel code path.)」；Hamza 的答复是「It can convert an O_PATH descriptor to one suitable for r/w work」，即以 openat(opath_fd, "", O_EMPTY_PATH | O_RDWR) 替代经由 procfs 打开 /proc/self/fd/ 的做法。这是 Linux 侧显式引用 FreeBSD 同名标志的一处记录；本封为同一邮件在 sparclinux 列表中的索引副本。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-api.messages.16974 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-api 邮件列表价值反推选封考据采纳）
+
+Mickaël Salaün 发布 Landlock LSM 无特权沙箱 RFC v2，将其定位为可与 XNU Seatbelt Sandbox 及 OpenBSD Pledge 相当的安全沙箱机制。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-api.messages.17562 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-api 邮件列表价值反推选封考据采纳）
+
+Eric Dumazet 讨论 GTSM 广义 TTL 安全机制补丁时引用说明，该机制的实现方式在 BSD 内核中早已存在同样实现。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-api.messages.19058 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-api 邮件列表价值反推选封考据采纳）
+
+Mickaël Salaün 发布 Landlock LSM bpf-next v12 补丁集，将最终目标定义为允许任意含非特权进程创建可与 FreeBSD Capsicum 或 OpenBSD Pledge 相媲美的安全沙箱。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-api.messages.39485 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-api 邮件列表价值反推选封考据采纳）
+
+Paolo Bonzini 在 FreeBSD Capsicum 安全框架 RFC v2 讨论中回应 David Drysdale 关于按 file descriptor 而非 struct file 关联 seccomp-bpf 过滤器、以及能力属性到底关联到 descriptor 还是 description 的疑问，指出「This is the same for using seccompv2 to limit child processes」并提示相关可用性问题「it's just about usability—in the end it does exactly what it's meant and documented to do」，并建议在 seccomp-bpf 参数中引入 thread id 作为 ancillary datum。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-api.messages.40436 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-api 邮件列表价值反推选封考据采纳）
+
+Paolo Bonzini 在 FreeBSD Capsicum 框架 RFC v2 讨论中回应 Eric Biederman 关于 struct file 附加 seccomp-bpf 过滤器的两个实施方案，说明该补丁集提供与父进程设置 BPF 过滤器过滤读写 fd 类似的功能。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-api.messages.41213 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-api 邮件列表价值反推选封考据采纳）
+
+Mickaël Salaün 发布 Landlock LSM 补丁系列 v30，明确将其安全沙箱设计定位为受 XNU Sandbox、FreeBSD Capsicum 及 OpenBSD Pledge/Unveil 启发，属 BSD 谱系安全机制在 Linux 内核中的移植。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-api.messages.42679 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-api 邮件列表价值反推选封考据采纳）
+
+Solar Designer 在 Trampoline File Descriptor RFC v2 讨论中援引 PaX 与 OpenBSD 的历史上对 W^X 的定义（见一级引用段），指出 W^X 并非仅为防御已具备完全代码注入能力的攻击者而设计，而是兼有策略强制意味。FROM 本人论述行具体列出 ret2libc/ROP 与 mprotect() 结合注入 shellcode 的技术路线、Windows 与 iOS 上曾被使用的类似手法，以及 ptrace() 在 ROP 链中的可用性。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-api.messages.73171 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-api 邮件列表价值反推选封考据采纳）
+
+Mickaël Salaün 提交 Landlock LSM v20 补丁，明确列出该沙箱机制的借鉴来源包含 FreeBSD Capsicum 与 OpenBSD Pledge/Unveil，是 Linux 主动吸收 BSD 沙箱设计的直接证据。引语: FreeBSD Capsicum or OpenBSD Pledge/Unveil。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-api.messages.73219 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-api 邮件列表价值反推选封考据采纳）
+
+Jann Horn 在 clone3 文档评审中引用 OpenBSD 引入的 MAP_STACK 内存映射标志以及配套栈寄存器检查机制，Theodore Ts'o 随即询问 Linux 是否也值得借鉴该 ROP 防护方案。引语: on OpenBSD, they do use MAP_STACK now AFAIK。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-api.messages.69279 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-api 邮件列表价值反推选封考据采纳）
+
+Mickaël Salaün 发布 Landlock LSM 补丁集，明确称其设计灵感取自其他操作系统的沙箱机制 XNU Sandbox, FreeBSD Capsicum or OpenBSD Pledge/Unveil，属 BSD 谱系安全机制在 Linux 内核中的移植。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-api.messages.70064 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-api 邮件列表价值反推选封考据采纳）
+
+Mickaël Salaün 的 seccomp-object RFC 把 seccomp 扩展为可解引用参数指针以支持用户态沙箱，直接点名 to create a full sandbox managed by userland like the Seatbelt/XNU Sandbox or the OpenBSD Pledge，把 BSD 能力框架作为目标形态。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-api.messages.70249 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-api 邮件列表价值反推选封考据采纳）
+
+Mickaël Salaün 的 Landlock 第十五个补丁系列把沙箱能力定位为 seccomp 的替代路径使非特权进程也能自限，并将目标水平对齐既有机制 comparable to the Seatbelt/XNU Sandbox or the OpenBSD Pledge，BSD 谱系由此进入 Linux LSM 讨论。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-api.messages.71981 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-api 邮件列表价值反推选封考据采纳）
+
+Mickaël Salaün 的 Landlock 第二个 RFC 说明该 LSM 补上 seccomp 无法解引用参数指针与表达动态策略的缺口，并把目标沙箱水平对齐既有机制"comparable to the Seatbelt/XNU Sandbox or the OpenBSD Pledge"；Pavel Machek 转发并询问文档归宿。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-api.messages.72681 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-api 邮件列表价值反推选封考据采纳）
+
+David Drysdale 提出 O_BENEATH 标志并交代其出身即 FreeBSD 能力框架的内部实现，原文 originally implemented as part of the internals of the Capsicum security framework, which is available in FreeBSD 10.x，同时反问 FreeBSD 是否也在考虑专用错误码。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-arch.messages.9705287 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-arch 邮件列表价值反推选封考据采纳）
+
+Linux 新增 execveat 系统调用的动机直接引自 FreeBSD Capsicum 能力模式 属 BSD 特性向 Linux 移植的谱系信号：Capsicum is a security framework that has been present in FreeBSD since version 9.0。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-arch.messages.9730318 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-arch 邮件列表价值反推选封考据采纳）
+
+Arnd Bergmann 转发并回复了一组关于在多种架构上测试 BSD 会计信息格式的记录，他在帖中只给出了 s390 上的测试结果。BSD accounting format 源自经典 BSD 内核的 acct 接口，说明这一内核数据结构在 Linux 移植语境中仍被当作 BSD 血统参照使用 testing BSD accounting format on different archs。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-arch.messages.9698147 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-arch 邮件列表价值反推选封考据采纳）
+
+移植 O_BENEATH 到 Linux openat 时说明该能力原是 FreeBSD 10.x Capsicum 安全框架的内部机制，FreeBSD 侧同期也在提案对外暴露这一变体 "the internals of the Capsicum security framework, which is available in FreeBSD 10.x"。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-api.messages.10972 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-api 邮件列表价值反推选封考据采纳）
+
+Landlock沙箱LSM的设计目标明确对标Seatbelt和OpenBSD Pledge等已有安全沙箱机制 comparable to the Seatbelt/XNU Sandbox or the OpenBSD Pledge。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-api.messages.11973 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-api 邮件列表价值反推选封考据采纳）
+
+Landlock LSM v19版本明确声明其设计灵感来源于FreeBSD Capsicum和OpenBSD Pledge与Unveil等BSD沙箱机制 FreeBSD Capsicum or OpenBSD Pledge/Unveil。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-api.messages.12576 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-api 邮件列表价值反推选封考据采纳）
+
+Landlock LSM v31版本延续声明其设计参考了FreeBSD Capsicum和OpenBSD Pledge与Unveil的BSD沙箱方案 FreeBSD Capsicum or OpenBSD Pledge/Unveil。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-api.messages.12679 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-api 邮件列表价值反推选封考据采纳）
+
+Landlock早期RFC将设计目标定位为类似OpenBSD Pledge和XNU Sandbox的轻量级安全沙箱机制 comparable to the Seatbelt/XNU Sandbox or the OpenBSD Pledge。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-api.messages.12821 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-api 邮件列表价值反推选封考据采纳）
+
+Landlock LSM v24版本延续声明其设计灵感来自FreeBSD Capsicum和OpenBSD Pledge与Unveil的BSD沙箱方案 FreeBSD Capsicum or OpenBSD Pledge/Unveil。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-api.messages.14240 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-api 邮件列表价值反推选封考据采纳）
+
+Linux 内核引入 FreeBSD's Capsicum 安全框架的 RFC 讨论详细分析了能力模式下文件描述符权限检查的实现方案：Adding FreeBSD's Capsicum security framework。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-api.messages.32730 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-api 邮件列表价值反推选封考据采纳）
+
+Paolo Bonzini 在本封反对在 struct file 上放置限制：他坚持"they have to be in the file descriptor"，理由是同一文件描述符可被 dup 并携带不同能力传给不同进程（并举 SCM_RIGHTS 传 eventfd 例），为本封中的自述。关于"Capsicum 能力与文件描述符绑定、与 POSIX.1e 能力完全不同、需在 fget/fdget/user_path_at 等各调用点标注、约 100 处需改"等描述，出自该 RFC 补丁描述本身（在本封中为多层被引内容），为提案作者文字，非 Eric Biederman 论述；Biederman 对同一 RFC 的回复实为否定该做法（"And it is silly"），二者立场相反。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-api.messages.32910 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-api 邮件列表价值反推选封考据采纳）
+
+Paolo Bonzini 在评论 FreeBSD Capsicum 移植补丁时讨论 seccomp 无法追踪指针导致单系统调用处理多文件描述符受限（poll、select 尤其受影响；sendm?msg 则不然），并提出 FreeBSD 能力与文件描述符关联而非打开文件本身的机制——David Drysdale 原话为 "Capsicum capabilities are associated with the file descriptor (a la F_GETFD), not the open file itself -- different FDs with different associated rights can map to the same underlying open file." Bonzini 认为 poll/select 属水平触发、幂等性上并无必要拦截。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-api.messages.33433 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-api 邮件列表价值反推选封考据采纳）
+
+David Drysdale 在 FreeBSD Capsicum 移植补丁中介绍 FreeBSD 9.x/10.x 引入的 Capsicum 安全框架使 OpenSSH 6.5 及以上版本可细粒度沙箱化 sshd，Paolo Bonzini 提出将 Capsicum 能力转为 BPF 程序附加到文件描述符的方案。The last couple of versions of FreeBSD 9.x/10.x have included the Capsicum security framework。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-api.messages.35238 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-api 邮件列表价值反推选封考据采纳）
+
+Landlock LSM 的补丁说明把目标定位为可与 FreeBSD Capsicum 和 OpenBSD Pledge 相当的安全沙箱，并明确指出 Pledge 可用 Landlock 实现，直接把 BSD 谱系的安全模型作为 Linux 功能的设计坐标。security sandboxes comparable to FreeBSD Capsicum or OpenBSD Pledge。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-api.messages.36052 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-api 邮件列表价值反推选封考据采纳）
+
+execveat 系统调用提案的说明中明确把在内核中实现 Capsicum 列为动机之一，并指出该安全框架自 FreeBSD 起长期存在，其能力模式会锁定进程的文件访问，是 BSD 机制驱动 Linux 新接口设计的直接证据。Capsicum is a security framework present in FreeBSD.
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-api.messages.36519 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-api 邮件列表价值反推选封考据采纳）
+
+execveat 系列的同一论证再次出现，把实现 Capsicum 列为内核新系统调用的理由，并说明该框架自 FreeBSD 起已长期存在，是 BSD 安全模型影响 Linux 接口规划的另一处留痕。Capsicum is a security framework present in FreeBSD.
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-api.messages.37054 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-api 邮件列表价值反推选封考据采纳）
+
+execveat 提案的后续版本继续把 FreeBSD 上的 Capsicum 作为引入新系统调用的理由，体现 BSD 能力型安全模型对 Linux 用户态接口演进的持续牵引。Capsicum is a security framework that has been present in FreeBSD since.
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-api.messages.37647 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-api 邮件列表价值反推选封考据采纳）
+
+讨论用户命名空间下系统调用限流时，给出构建 sandbox、chroot jail 或 chromium 标签页等场景的用例示例。原文引语（逐字，保留斜杠）: "So if you are building a sandbox/chroot jail/chromium tab or anything like that"。该用例列举把 BSD 谱系中的 chroot/jail 隔离原语与 Chromium 标签页一并列为内核限流机制的目标场景。配套技术论断可核：补丁集合覆盖两个用例——为命名空间数量设定合理上限，以及为沙箱提供收缩命名空间攻击面的手段；Kees Cook 指出 seccomp 实际上可以叠加（seccomp does stack），顾虑多来自对 seccomp 开销的感知，且截至 v4.8 起已无法用 ptrace 绕过。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-api.messages.38350 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-api 邮件列表价值反推选封考据采纳）
+
+Mickaël Salaün 在其 Landlock LSM RFC 提案中提出目标为「allow any process, including unprivileged ones, to create powerful security sandboxes comparable to the Seatbelt/XNU Sandbox or the OpenBSD Pledge」——即对标 Apple 的 Seatbelt（又称 XNU Sandbox）与 OpenBSD 的 Pledge 两类 BSD 家族沙箱机制。Andy Lutomirski 本封未参与该定位，只追问 Landlock 的 eBPF API 具体描述（函数、调用时机、可调用范围、arraymap 语义）。该沙箱对标表述的作者是提案者 Mickaël Salaün，非本封 FROM。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-api.messages.59040 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-api 邮件列表价值反推选封考据采纳）
+
+在 execveat 补丁讨论中，David Drysdale 提出该 syscall 是"implementing Capsicum in the Linux kernel"的一小部分，并说明「Capsicum is a security framework that has been present in FreeBSD since version 9.0 (Jan 2012), and is based on concepts from object-capability security」；Kees Cook 回复致谢，认为这可用于「very tightly confined sandboxes」，并评价「Capsicum itself is an interesting way to do programmatic isolation」。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-api.messages.59166 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-api 邮件列表价值反推选封考据采纳）
+
+Alexei Starovoitov 在 FreeBSD Capsicum 安全框架线程中说明 seccomp 转 eBPF 后可追指针。Adding FreeBSD's Capsicum security framework (part 1)
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-api.messages.60121 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-api 邮件列表价值反推选封考据采纳）
+
+2018年2月 Landlock LSM v8 系列（Toward unprivileged sandboxing）在 linux-api 上的讨论中，作者 Mickaël Salaün 在系列说明里交代设计取舍：三类 Landlock 钩子 FS_WALK、FS_PICK、FS_GET 各接受一个专用 eBPF 程序，可串联以按目录或文件列表施加完整访问控制；文件的动作集（read、write、ioctl、append、lock、mount…）定义明确，其灵感取自主要 Linux LSM 以及包括 Capsicum 在内的其他访问控制机制（原话 "taking inspiration from the major Linux LSMs and some other access-controls like Capsicum."），这些程序类型被设计为对缓存友好，为日后优化留出空间。需澄清两点：第一，Salaün 所说的灵感来源针对的是文件动作集的选取，不是 Landlock 的整体设计，也非 Capsicum 的「能力模型」；第二，Capsicum 只是并列灵感之一，主要来源仍是主要 Linux LSM。本封作者 Andy Lutomirski 的回复与此无关，他从分类角度提出反对：Landlock 与 seccomp() 的共性被低估了——seccomp 要么阻止对更特权任务的 ptrace()，要么过滤以确保无法跟踪更特权程序，Landlock 需要的是完全相同的处理，no_new_privs 一类考虑两者一致；他因此主张把 seccomp() 扩展为能对系统调用入口之外的对象（例如文件打开）挂载过滤器，而非新增一种 bpf() 程序类型。故本条作为「BSD 谱系与 Linux 安全模块设计对齐」的证据，只能支持「Capsicum 与主要 Linux LSM 并列被列为动作集灵感来源之一」这一较弱表述。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-api.messages.60302 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-api 邮件列表价值反推选封考据采纳）
+
+Pavel Machek 与 Kees Cook 审 Landlock LSM 目标对标 OpenBSD Pledge 的沙盒。The goal of this new stackable Linux Security Module (LSM) called Landlock is to allow any process... to create powerful security sandboxes comparable to the Seatbelt/XNU Sandbox or the OpenBSD Pledge。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-api.messages.21049 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-api 邮件列表价值反推选封考据采纳）
+
+Landlock v26覆盖信逐一点名XNU、FreeBSD与OpenBSD的既有沙箱机制，作为自身设计灵感的直接来源 XNU Sandbox, FreeBSD Capsicum or OpenBSD Pledge/Unveil。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-api.messages.21720 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-api 邮件列表价值反推选封考据采纳）
+
+Landlock v21覆盖信说明其借鉴其他操作系统沙箱机制，涵盖XNU、FreeBSD Capsicum与OpenBSD的Pledge和Unveil takes inspiration from other OS sandbox mechanisms: XNU Sandbox, FreeBSD Capsicum or OpenBSD Pledge/Unveil。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-api.messages.22266 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-api 邮件列表价值反推选封考据采纳）
+
+execveat补丁背景说明该接口是Linux内核实现Capsicum所需的小部分，而Capsicum自FreeBSD 9.0起已存在 Capsicum is a security framework that has been present in FreeBSD since version 9.0 (Jan 2012)
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-api.messages.22306 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-api 邮件列表价值反推选封考据采纳）
+
+Landlock早期RFC说明其目标是让无特权进程创建可与XNU Seatbelt和OpenBSD Pledge相比的安全沙箱 to create powerful security sandboxes comparable to the Seatbelt/XNU Sandbox or the OpenBSD Pledge。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-api.messages.43911 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-api 邮件列表价值反推选封考据采纳）
+
+Mickaël Salaün 发布 Landlock LSM 无特权沙箱 RFC v4，明确将安全沙箱目标定位为可与 Seatbelt、XNU Sandbox 或 OpenBSD Pledge 相媲美的机制，属 BSD 谱系安全机制在 Linux 内核中的移植 comparable to the Seatbelt/XNU Sandbox or the OpenBSD Pledge。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-api.messages.44104 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-api 邮件列表价值反推选封考据采纳）
+
+Mickaël Salaün 在 Landlock LSM RFC v3 中说明该系列是 seccomp 的概念验证，旨在支持系统调用参数指针检查与更动态的安全策略，并将安全沙箱目标定位为可与 Seatbelt、XNU Sandbox 或 OpenBSD Pledge 相比 comparable to the Seatbelt/XNU Sandbox or the OpenBSD Pledge。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-api.messages.44615 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-api 邮件列表价值反推选封考据采纳）
+
+Andy Lutomirski 在 proc 目录 highpid 提案讨论中支持 Eric Biederman 提出的基于文件描述符的进程管理 API 方向，并指出 FreeBSD 的 Capsicum 相关实现可作为良好起点，属 BSD 安全框架作为 Linux 设计输入的实例 the Capsicum stuff from FreeBSD would probably be a very good start here。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-api.messages.45045 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-api 邮件列表价值反推选封考据采纳）
+
+Mickaël Salaün 的 seccomp-object RFC v1 说明该系列旨在扩展 seccomp 以检查 syscall 参数指针，从而支持创建类似 Seatbelt/XNU Sandbox 或 OpenBSD Pledge 的完整用户态沙箱；Kees Cook 回帖表示将在机上细读。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-api.messages.45362 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-api 邮件列表价值反推选封考据采纳）
+
+Mickaël Salaün 在 Landlock LSM RFC v2 讨论中针对 Andy Lutomirski 对 eBPF API 描述的追问，指出 eBPF 上下文与函数（bpf_landlock_cmp_fs_prop_with_struct_file / bpf_landlock_cmp_fs_beneath_with_struct_file / bpf_landlock_cmp_cgroup_beneath）分别分布在 [RFC v2 06/10]、[08/10]、[09/10] 中，类型枚举见 include/uapi/linux/bpf.h，并附 [RFC v2 10/10] 沙箱示例以便整体理解。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-api.messages.46399 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-api 邮件列表价值反推选封考据采纳）
+
+Theodore Ts'o 在 clone3 文档评审中援引 Jann Horn 的说法，指出 OpenBSD 已采用 MAP_STACK，并周期性检查用户态栈指针是否落在 MAP_STACK 区域内，否则终止进程，进而提议 Linux 也应考虑该做法 Not on Linux, but on OpenBSD, they do use MAP_STACK now AFAIK。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-api.messages.46725 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-api 邮件列表价值反推选封考据采纳）
+
+Mickaël Salaün 在 Landlock LSM 补丁系列 v32 中说明该机制从其他操作系统的沙箱机制中汲取灵感，明确列举 XNU Sandbox、FreeBSD Capsicum 以及 OpenBSD Pledge 与 Unveil，属 BSD 谱系安全机制在 Linux 内核中的移植 Landlock also takes inspiration from other OS sandbox mechanisms: XNU Sandbox, FreeBSD Capsicum or OpenBSD Pledge/Unveil。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-api.messages.46741 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-api 邮件列表价值反推选封考据采纳）
+
+David Drysdale 与 Andy Lutomirski 在 execveat v4 讨论中说明该补丁是实现 Linux 内核 Capsicum 所需的一小部分；Capsicum 是 FreeBSD 自 9.0 版本起存在的基于对象能力安全框架，用于在能力模式下绕过 /proc 执行 fexecve。Christoph Hellwig 补充 Rich Felker 对 O_SEARCH 的兴趣并关闭原引用块。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-api.messages.47470 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-api 邮件列表价值反推选封考据采纳）
+
+Mickaël Salaün 在 Landlock LSM bpf-next v8 系列邮件中反驳 Andy Lutomirski 的建议，指出 Landlock 不在 syscall 层过滤而是像 LSM 一样处理内核对象与动作，且本系列相较 v7 已通过 Kees Cook 建议与后续用户需求支持文件路径评估。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-api.messages.24209 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-api 邮件列表价值反推选封考据采纳）
+
+Landlock LSM 的定位是与 Seatbelt、XNU Sandbox 及 OpenBSD Pledge 等既有沙箱机制对标，构成 Linux 沙箱设计对 BSD 谱系的显式借鉴。The goal is to create powerful security sandboxes comparable to XNU Sandbox or OpenBSD Pledge。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-api.messages.24923 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-api 邮件列表价值反推选封考据采纳）
+
+seccomp-object 提案把自身定位为实现 Seatbelt/XNU Sandbox 与 OpenBSD Pledge 同类沙箱的能力，属 BSD 安全机制的显式对标。This add a needed feature to create a full sandbox managed by userland like the OpenBSD Pledge。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-api.messages.27373 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-api 邮件列表价值反推选封考据采纳）
+
+该 RFC 请求把 FreeBSD 的 Capsicum 能力框架移植进 Linux，以便应用获得同等细粒度的自我沙箱能力。The last couple of versions of FreeBSD (9.x/10.x) have included the Capsicum security framework。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-api.messages.48698 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-api 邮件列表价值反推选封考据采纳）
+
+seccomp-object（seccomp 沙箱化）RFC v1 讨论中，RFC 提案者 Mickaël Salaün 称该系列要为 seccomp 增加参数指针检查能力，以'create a full sandbox managed by userland like the Seatbelt/XNU Sandbox or the OpenBSD Pledge'，即参照 macOS Seatbelt/XNU Sandbox 与 OpenBSD Pledge 这类由用户空间管理的完整沙箱（该句位于被引用块内，作者为 Salaün，非本封 FROM）。本封 FROM Kees Cook 通读全系列后认为其'overly complex for what it results in providing'，指出该系列并未提供其所称的'参数解引用检查'（他命名为 DAI，即按 BPF 处理报文的思路处理参数），而是仅做路径等静态检查；他主张既然只做静态检查，就应完全放进 LSM hooks，并就 DAI 的两种走法作了取舍分析（一是重写系统调用入口用统一可缓存参数解析器做真正的 BPF 字节处理，他认为对常规路径有负面性能影响；二是沿用 LSM hooks 定义可预加载的策略语言，他会写得像 AppArmor 或 TOMOYO，若要处理网络结构则更近 TOMOYO），并指出该系列缓存 struct path 会让非特权用户探测路径存在性，最后拒绝整系列但接受其中一个早期修复。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-api.messages.48783 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-api 邮件列表价值反推选封考据采纳）
+
+Loganaden Velvindron 在 Capsicum 讨论中回复 Paolo Bonzini，探讨 Capsicum 在 QEMU 等用户空间软件中的应用前景（"Aside from OpenSSH, I've also been working on implementing Capsicum, in other userspace software."）；David Drysdale 早前邮件中提及"The last couple of versions of FreeBSD (9.x/10.x) have included the Capsicum security framework"作为背景。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-api.messages.48965 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-api 邮件列表价值反推选封考据采纳）
+
+Jann Horn在clone3讨论中引用OpenBSD的MAP_STACK机制和栈寄存器检查实践，探讨Linux是否应借鉴其ROP防御策略 on OpenBSD, they do use MAP_STACK now AFAIK。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-api.messages.50233 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-api 邮件列表价值反推选封考据采纳）
+
+Mickaël Salaün在Landlock LSM中明确引用XNU Sandbox和FreeBSD Capsicum和OpenBSD Pledge等BSD衍生沙箱机制作为设计灵感来源 Landlock also takes inspiration from other OS sandbox mechanisms: XNU Sandbox, FreeBSD Capsicum or OpenBSD Pledge/Unveil。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-api.messages.52384 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-api 邮件列表价值反推选封考据采纳）
+
+这条 RFC 讨论把 FreeBSD 的 Capsicum 安全框架移植进 Linux 内核。Kees Cook 回复同线程关于 seccomp 借助 eBPF 追踪指针的设想，指出线程竞态下 seccomp 看到的指针目标内容与随后系统调用实际读到的可能不一致，故 eBPF 只是前提而非完整方案，原话为 "Obviously eBPF is a prerequisite to this, but it isn't the full solution, as far as I understand it."
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-api.messages.53054 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-api 邮件列表价值反推选封考据采纳）
+
+Andy Lutomirski 讨论 execveat 系统调用，其中 David Drysdale 说明该补丁是为实现 Capsicum 所需，而 Capsicum 自 FreeBSD 9.0 起就存在Capsicum is a security framework that has been present in FreeBSD since version 9.0。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-api.messages.53110 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-api 邮件列表价值反推选封考据采纳）
+
+Landlock 无特权沙箱 RFC 引用 BSD 谱系沙箱作对照，明确提到 Seatbelt XNU 沙箱与 OpenBSD Pledge 为可比较对象powerful security sandboxes comparable to the Seatbelt/XNU Sandbox or the OpenBSD Pledge。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-api.messages.54431 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-api 邮件列表价值反推选封考据采纳）
+
+Landlock net-next 提案继续把 XNU Seatbelt 沙箱与 OpenBSD Pledge 列为对标对象，说明 BSD 系沙箱是 Linux Landlock 的直接参照powerful security sandboxes comparable to XNU Sandbox or OpenBSD Pledge。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-api.messages.55755 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-api 邮件列表价值反推选封考据采纳）
+
+Landlock net-next v6 版本同样以 XNU Sandbox 和 OpenBSD Pledge 为参照系，称这类沙箱有助于缓解 bug 的安全影响sandboxes comparable to XNU Sandbox or OpenBSD Pledge. This kind of sandbox is。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-arch.messages.9744111 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-arch 邮件列表价值反推选封考据采纳）
+
+David Drysdale提交execveat系统调用补丁时说明该功能源于FreeBSD 9.0引入的Capsicum安全框架，能力模式下proc不可访问导致fexecve3无法工作。Capsicum is a security framework that has been present in FreeBSD since version 9.0。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-arch.messages.9748842 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-arch 邮件列表价值反推选封考据采纳）
+
+在 execveat(2) 补丁系列中，补丁作者 David Drysdale 补充背景称该补丁是"实现 Linux 内核 Capsicum 所需的一小部分"，并说明"Capsicum is a security framework that has been present in FreeBSD since version 9.0 (Jan 2012), and is based on concepts from object-capability security"，其能力模式会锁住对 /proc 等全局命名空间的访问从而令 fexecve(3) 失效（系本封转引内容）。Andy Lutomirski 本封另举自用的理由：为向沙箱或强锁命名空间注入程序，他希望可靠地执行 nsenter 式的"打开 toybox 后进入命名空间再 execveat"，并追问补丁能否为 3.19 近乎原样合入。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-arch.messages.9763199 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-arch 邮件列表价值反推选封考据采纳）
+
+Landlock LSM 的提交说明明确把 FreeBSD 的 Capsicum 与 OpenBSD 的 Pledge/Unveil 列为其沙箱机制的直接设计借鉴，构成 BSD 谱系影响内核安全子系统的正面证据，作者 Mickaël Salaün FreeBSD Capsicum or OpenBSD Pledge/Unveil。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-arch.messages.9750681 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-arch 邮件列表价值反推选封考据采纳）
+
+Landlock LSM 系列说明明确其从其他操作系统的沙箱机制汲取灵感，直接列出 FreeBSD Capsicum 与 OpenBSD Pledge 和 Unveil，构成 BSD 安全沙箱谱系反向影响 Linux 内核 LSM 设计的直接证据。 "Landlock also takes inspiration from other OS sandbox mechanisms: XNU Sandbox, FreeBSD Capsicum or OpenBSD Pledge/Unveil"。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-arch.messages.9753842 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-arch 邮件列表价值反推选封考据采纳）
+
+Peter Anvin 反对把 CONFIG_STRICT_DEVMEM 做成运行时开关，并援引 BSD securelevel 单向提权的思路作为对照，说明即便照搬该设计也需重新论证其合理性。BSD 安全模型在此作为 Linux devmem 访问控制的参照物出现 kind of like the BSD securelevel idea。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-arch.messages.9756336 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-arch 邮件列表价值反推选封考据采纳）
+
+Christoph Hellwig 在 execveat 讨论中补充背景，说明该补丁是 Linux 实现 Capsicum 的一部分，而 Capsicum 是 FreeBSD 自 9.0 起内置的能力安全框架，用于在能力模式下绕过 /proc 执行 fexecve。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-arch.messages.9761441 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-arch 邮件列表价值反推选封考据采纳）
+
+Landlock LSM 设计说明明确列出其沙箱机制的外部来源，直接对标 XNU Sandbox 与 FreeBSD Capsicum 以及 OpenBSD Pledge 和 Unveil 三套 BSD 系安全框架，是 Linux 安全模型借鉴 BSD 系设计的直接史料  Landlock also takes inspiration from other OS sandbox mechanisms: XNU Sandbox, FreeBSD Capsicum or OpenBSD Pledge。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-arch.messages.9761561 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-arch 邮件列表价值反推选封考据采纳）
+
+execveat 系统调用系列的前导说明将本补丁定位为在内核中实现 Capsicum 的一小部分，并指出 Capsicum 是 FreeBSD 自 9.0 版起内置的能力安全框架，基于对象能力安全模型，属 BSD 系安全机制向 Linux 移植的史料  Capsicum is a security framework that has been present in FreeBSD since version 9.0 (Jan 2012)
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-api.messages.64970 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-api 邮件列表价值反推选封考据采纳）
+
+Mickaël Salaün 在 Landlock LSM v23 补丁系列中说明该 Linux 沙箱机制设计灵感来自其他操作系统的沙箱实现，包括 XNU Sandbox、FreeBSD Capsicum 与 OpenBSD Pledge/Unveil，引语 takes inspiration from other OS sandbox mechanisms: XNU Sandbox, FreeBSD Capsicum or OpenBSD Pledge/Unveil。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-api.messages.68108 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-api 邮件列表价值反推选封考据采纳）
+
+Eric W. Biederman 在 FreeBSD Capsicum 安全框架移植 RFC 讨论中主张利用现有 mount namespace 与目录文件描述符绑定替代新增能力对象接口，认为所需目录级粒度已可用现有代码实现，引语 Adding FreeBSD's Capsicum security framework。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-api.messages.68164 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-api 邮件列表价值反推选封考据采纳）
+
+Pavel Machek 在 Landlock LSM RFC v2 讨论中引用设计目标说明，指出该 Linux 沙箱机制允许包括非特权进程在内创建与 Seatbelt/XNU Sandbox 或 OpenBSD Pledge 相媲美的安全沙箱，引语 comparable to the Seatbelt/XNU Sandbox or the OpenBSD Pledge。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-api.messages.68332 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-api 邮件列表价值反推选封考据采纳）
+
+David Drysdale 在 execveat 补丁线程中指出一个被忽略的技术约束：若按 Biederman 建议把 bprm->filename/interp 写成 /dev/fd/${fd}/${filename->name}，因 /dev/fd 是指向 /proc/self/fd 的符号链接，无 /proc 的系统上脚本调用将必然失败，而"没有 /proc 的场景本应是 execveat 最初的动机之一"（出自本封中的原话）。他另补充 FreeBSD Capsicum 实现已把动态链接器改为通过预打开的描述符列表（LD_LIBRARY_PATH_FDS）而非路径取库搜索路径（另见本封表述）。关于"Capsicum 自 FreeBSD 9.0（2012-01）起引入、基于对象能力安全模型、capability mode 使 /proc 不可达故需内核态 execveat"的背景说明，出自他自己 2014-06-05 的邮件（出自他早前邮件，为更深层被引内容）。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-arch.messages.9783641 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-arch 邮件列表价值反推选封考据采纳）
+
+David Drysdale 在 execveat 系统调用系列补丁中说明其动机是为 Linux 引入 FreeBSD 的 Capsicum 安全框架而做准备，指出 Capsicum 自 FreeBSD 9.0 起存在并基于能力安全理念，因能力模式下 /proc 不可访问才需要 fexecve 类的 execveat。这是 FreeBSD 派生安全架构被 Linux 显式借鉴的溯源 Capsicum ... has been present in FreeBSD since version 9.0。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-arch.messages.9788668 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-arch 邮件列表价值反推选封考据采纳）
+
+Mickaël Salaün 提交 Landlock LSM 封面信时声明其灵感来自其他操作系统的沙箱机制，点名 XNU Sandbox、FreeBSD Capsicum 与 OpenBSD Pledge/Unveil，并说明当前形态尚未覆盖这些能力。这是 BSD 与 XNU 安全模型被 Linux 显式借鉴的溯源 FreeBSD Capsicum or OpenBSD Pledge/Unveil。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-arch.messages.9790864 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-arch 邮件列表价值反推选封考据采纳）
+
+Landlock LSM v19 补丁集在设计说明中直接列出其对外的 BSD 系安全框架参照,明确点名 XNU Sandbox、FreeBSD Capsicum、OpenBSD Pledge 与 Unveil 三套 BSD 谱系沙箱机制  Landlock also takes inspiration from other OS sandbox mechanisms: XNU Sandbox, FreeBSD Capsicum or OpenBSD Pledge/Unveil。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-arch.messages.9791407 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-arch 邮件列表价值反推选封考据采纳）
+
+Landlock LSM v23 补丁集延续 v19 的设计说明模板继续显式对标 BSD 系沙箱,XNU Sandbox、FreeBSD Capsicum 与 OpenBSD Pledge/Unveil 在补丁描述中被并列列出作为外部参照  Landlock also takes inspiration from other OS sandbox mechanisms: XNU Sandbox, FreeBSD Capsicum or OpenBSD Pledge/Unveil。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-arch.messages.9792259 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-arch 邮件列表价值反推选封考据采纳）
+
+Landlock LSM v25 补丁集继续采用同一份设计说明模板,把 XNU Sandbox、FreeBSD Capsicum 和 OpenBSD Pledge/Unveil 作为外部 OS 沙箱参照反复列入,Linux 安全模型借鉴 BSD 系设计的史料第三次落档  Landlock also takes inspiration from other OS sandbox mechanisms: XNU Sandbox, FreeBSD Capsicum or OpenBSD Pledge/Unveil。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-scsi.messages.1391139 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-scsi 邮件列表价值反推选封考据采纳）
+
+SG_IO 白名单 CVE 争议的往返中，本封 FROM Theodore Ts'o 说明：两种情形下所有虚拟机与宿主 OS 都在同一信任边界内，这简化了相比通用云服务器（虚拟机彼此互不信任）所需的安全要求，也简化了对需下推到设备/驱动的约束的要求。线程中更早发言者另提供了一个动机例：存在一位 CD 刻录工具开发者希望把刻录机用在本地工作站的虚拟机内、并在 BSD、Solaris 与 Windows 虚拟机里测试（"developer of a CD burning tool that wanted to test it inside BSD, Solaris and Windows VMs"）。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-arch.messages.9821880 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-arch 邮件列表价值反推选封考据采纳）
+
+Mickaël Salaün 提交 Landlock LSM v30，明言沙箱设计借鉴 XNU Sandbox、FreeBSD Capsicum 与 OpenBSD Pledge/Unveil，构成 BSD 家族安全沙箱机制在 Linux 的直接对照。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-arch.messages.9822167 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-arch 邮件列表价值反推选封考据采纳）
+
+Landlock LSM v33 更新版本继续保留对其他操作系统沙箱机制的引用，与 FreeBSD 能力模型和 OpenBSD Pledge 形成跨内核安全策略比较。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-arch.messages.9822219 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-arch 邮件列表价值反推选封考据采纳）
+
+Landlock LSM v32 把重挂载限制错误码从 EACCES 改为 EXDEV，说明文照录对其他操作系统沙箱机制的借鉴，点名 FreeBSD 与 OpenBSD。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-scsi.messages.1457391 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-scsi 邮件列表价值反推选封考据采纳）
+
+Paolo Bonzini 在 SG_IO 命令白名单 CVE-2012-4542 的争论中，以真实客户需求论证保留白名单扩展，举例有 CD 刻录工具开发者需要在 BSD、Solaris 与 Windows 虚拟机内测试，把 BSD 列为该工具链的测试平台之一。a developer of a CD burning tool that wanted to test it inside BSD, Solaris and Windows VMs。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-arch.messages.9805906 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-arch 邮件列表价值反推选封考据采纳）
+
+David Mosberger 在 BSD accounting format 跨架构测试串中回复 ia64 结果,贴出 uname -a 输出与 struct acct 各 ac_ 字段偏移的三版本对照表,是经典 BSD 进程记账格式向 Linux 多架构对齐的实验记录,属 BSD 谱系格式兼容案例,英文原引语 [rft] testing BSD accounting format on different archs 为题眼。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-arch.messages.9812663 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-arch 邮件列表价值反推选封考据采纳）
+
+Landlock LSM v31 补丁集说明文档中明确提及除 seccomp-bpf 外还从 FreeBSD Capsicum 与 OpenBSD Pledge Unveil 等沙箱机制汲取设计灵感 直接引用 BSD 家族的安全模型作为 Landlock 语义来源 (FreeBSD Capsicum or OpenBSD Pledge/Unveil)
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-arch.messages.9836338 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-arch 邮件列表价值反推选封考据采纳）
+
+David Drysdale 在 execveat 补丁线程中指出 /dev/fd/${fd}/${filename->name} 方案在 /proc-less 系统上会使脚本调用必然失败（因 /dev/fd 是指向 /proc/self/fd 的符号链接），而"没有 /proc 的场景本应是 execveat 最初的动机之一"（出自本封中的原话）；他另补充 FreeBSD Capsicum 实现把动态链接器改为以预打开描述符列表 LD_LIBRARY_PATH_FDS 取代路径取库搜索路径（另见本封表述）。"Capsicum 自 FreeBSD 9.0（2012-01）引入、基于对象能力安全模型、capability mode 使 /proc 不可达"的背景出自他自己 2014-06-05 邮件（出自他早前邮件，为更深层被引内容）。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-scsi.messages.1378206 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-scsi 邮件列表价值反推选封考据采纳）
+
+Douglas Gilbert 在 SG_IO ioctl 特权升级漏洞 CVE-2011-4127 讨论中说明 ddpt 工具已移植到 FreeBSD 和 Win32，把 FreeBSD 列为 ddpt 跨平台移植的目标之一 ddpt is ported to FreeBSD and Win32。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-arch.messages.9769616 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-arch 邮件列表价值反推选封考据采纳）
+
+Landlock LSM v14 系列的 RFC 说明在描述沙箱目标时援引 BSD 谱系安全机制作为外部对照，明确对标 XNU Sandbox 与 FreeBSD Capsicum 以及 OpenBSD Pledge 与 Unveil，是 BSD 沙箱机制启发 Linux 安全子系统的正面史料。英文引语 Landlock also takes inspiration from other OS sandbox mechanisms: XNU Sandbox, FreeBSD Capsicum or OpenBSD Pledge/Unveil。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-fsdevel.messages.258718 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-fsdevel 邮件列表价值反推选封考据采纳）
+
+在将 i_security、f_security、s_security 字段按 CONFIG_SECURITY 条件编译的补丁中（SELinux 之外多个安全模块也在申请入树），Alexey Dobriyan 给出了一条针对 BSD 安全级别的历史处理假设——「assuming BSD security levels are deleted」（源邮件未附 -mm 字样）。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-fsdevel.messages.262099 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-fsdevel 邮件列表价值反推选封考据采纳）
+
+Landlock LSM v22 系列说明其设计在 seccomp-bpf 之外还参考其他操作系统的沙箱机制，包括 XNU Sandbox、FreeBSD Capsicum 与 OpenBSD Pledge/Unveil。 FreeBSD Capsicum or OpenBSD Pledge/Unveil。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-fsdevel.messages.289718 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-fsdevel 邮件列表价值反推选封考据采纳）
+
+Jeff Layton 在 NFSv4 状态撤销讨论中指出 fs_pin 这个内核机制在 Linux 中唯一的用户是 BSD 进程会计 子系统, 并附 bsd-acct 移植补丁链接, 说明该接口在 Linux 内保留的动机正是 BSD acct 谱系 the only user of fs_pin is the BSD process accounting subsystem。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-fsdevel.messages.295392 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-fsdevel 邮件列表价值反推选封考据采纳）
+
+新增 open(2) 标志 O_EMPTY_PATH 的补丁说明自陈该标志与 FreeBSD 的 O_EMPTY_PATH 非常相似，用途是避免为 samba 容器之类场景授予 /proc 访问权限，David Laight 追问其实际语义，是 FreeBSD 接口设计被移植进 Linux 的实例。it is very similar to the FreeBSD O_EMPTY_PATH flag。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-fsdevel.messages.301364 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-fsdevel 邮件列表价值反推选封考据采纳）
+
+Landlock LSM v21 的设计说明明确把 BSD 系沙箱机制列为灵感来源，与 seccomp-bpf 并列，说明 Linux 安全框架在接口思想上直接承接 FreeBSD Capsicum 与 OpenBSD Pledge 及 Unveil 的谱系。 原文: "FreeBSD Capsicum or OpenBSD Pledge/Unveil".
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-fsdevel.messages.304061 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-fsdevel 邮件列表价值反推选封考据采纳）
+
+Mark Rutland 与 Mickaël Salaün 在 W^X 与 Trampoline File Descriptor 讨论中互相纠正 OpenBSD 与 PaX 的时间线，确认带永久 mprotect 限制的 W^X 早于 OpenBSD 的部分实现，属 BSD 安全机制谱系考证。 原文: "partial OpenBSD implementation from 2003".
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-fsdevel.messages.316380 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-fsdevel 邮件列表价值反推选封考据采纳）
+
+mntput 中禁止 I/O 的 RFC 把 BSD 记账文件的自动关闭搬进工作队列。Eric W. Biederman 自述「I may be going overboard in the case where we auto close BSD accounting files」。四补丁依次为 vfs 去除 mntput_no_expire 中的空循环、vfs 把 BSD 记账自动关闭移入工作队列、vfs 在 mntput 中以浅栈运行 deactivate_super，以及仅在 BSD 记账场景做直觉式阻塞。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-fsdevel.messages.318423 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-fsdevel 邮件列表价值反推选封考据采纳）
+
+Landlock LSM v19 的说明文档点名 BSD 系沙箱机制。Mickaël Salaün: "Landlock also takes inspiration from other OS sandbox mechanisms: XNU Sandbox, FreeBSD Capsicum or OpenBSD Pledge/Unveil"。该系列约 1299 行实现加 1752 行自测,landlock 目录行覆盖率 93.6%。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-fsdevel.messages.367611 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-fsdevel 邮件列表价值反推选封考据采纳）
+
+此邮件为 Jan Kara 第三次重发的补丁系列，修复冻结文件系统上的 BSD 进程记账挂死。标题即点明 BSD 会计设施: 'Fix hang of BSD accounting on frozen filesystem'。作者说明已有真实用户触发死锁，并请求 Al Viro 复审或合入。BSD accounting 源自 BSD 的 acct 记账机制移植至 Linux，是 BSD 谱系在 Linux 内核中的延续。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-fsdevel.messages.324725 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-fsdevel 邮件列表价值反推选封考据采纳）
+
+AppArmor FAQ 的争论中，James Morris 列举采用非标签方案的约束机制——"TRON, Janus, LIDS, Systrace, BSD Jail, EROS, PSOS, KeyOS, AS400, to name just a few"，并主张标签远非唯一有效约束方式；Stephen Smalley 反驳称传统意义上的 confinement 指信息流控制，AppArmor 并不提供，且 DTOS 通用系统安全评估报告已说明为何对该类方案有顾虑。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-fsdevel.messages.377408 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-fsdevel 邮件列表价值反推选封考据采纳）
+
+Alexey Dobriyan 提交 fs.h 补丁把 i_security 等字段用 CONFIG_SECURITY_SELINUX 条件编译起来以缩小 inode, 补丁首行直接说明 BSD 侧早已删除该设施, 原文: "[BSD security levels are deleted in -mm, assuming this below]". BSD 安全等级是 FreeBSD 与 NetBSD 的 MAC 机制, 与 Linux SELinux 同源异路, 这条记录把两者放在同一删除语境下对照.
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-fsdevel.messages.418481 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-fsdevel 邮件列表价值反推选封考据采纳）
+
+Shaya Potter 回复 AppArmor FAQ 中 Crispin Cowan 关于为何标签是有效禁锢所必需的追问——Cowan 列举 TRON、Janus、LIDS、Systrace、BSD Jail、EROS、PSOS、KeyOS、AS400 等非标签有效禁锢设计反驳 Potter 先前主张；Potter 则回到具体讨论，指出 AppArmor/Janus/Systrace/subdomain 都依赖路径名解析，须为符号链接绕许多弯，主张在 FS 层做 lookup() 与 permission 更干净，并提及堆叠式文件系统与 LSM 存储 dentry 私有数据两种替代路径。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-fsdevel.messages.423392 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-fsdevel 邮件列表价值反推选封考据采纳）
+
+AppArmor 讨论中，Crispin Cowan 反驳安全标记为唯一有效约束的主张，举出一串非标签隔离方案: "TRON, Janus, LIDS, Systrace, BSD Jail"。BSD Jail 作为 BSD 安全机制被列入 Linux 安全模块的对照讨论。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-fsdevel.messages.443266 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-fsdevel 邮件列表价值反推选封考据采纳）
+
+David Drysdale 提交 openat 新增 O_BENEATH 标志，说明该能力源于 FreeBSD 10.x Capsicum 安全框架的内部实现并附 reviews.freebsd.org 评审编号，还在评审中询问是否新增 ENOTBENEATH 以对齐 FreeBSD 正在考虑的 errno 方案，是 Linux 承接 BSD 沙箱谱系的直接移植证据。原文：implemented as part of the internals of the Capsicum security framework。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-fsdevel.messages.444661 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-fsdevel 邮件列表价值反推选封考据采纳）
+
+Landlock LSM v26 系列在设计说明中明文记载其沙箱机制的多源谱系："takes inspiration from other OS sandbox mechanisms: XNU Sandbox, FreeBSD Capsicum or OpenBSD Pledge/Unveil"。Linux 新安全模块对 FreeBSD、OpenBSD 与 XNU 沙箱机制的溯源声明，是 BSD 谱系影响面的一手证据。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-fsdevel.messages.462112 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-fsdevel 邮件列表价值反推选封考据采纳）
+
+Mickaël Salaün 的 Landlock ioctl 支持提案设有相关工作小节，其中提到"OpenBSD's pledge(2) [1] restricts ioctl(2) independent of the file descriptor which is used"，并比较 OpenBSD 与 Linux 在 ABI 向后兼容承诺上的差异。Günther Noack 在回复中转贴该段并澄清对 landlock_ioctl_attr 结构的理解。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-fsdevel.messages.462898 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-fsdevel 邮件列表价值反推选封考据采纳）
+
+Jamie Lokier 在反驳快照式方案时指出沙箱化适用于虚拟机与守护进程 jail 场景，理由是新建 jail 时克隆发行版目录树，把 BSD jail 语义作为联合文件系统用例的对照面。"Sandboxing is appropriate for virtual machines and daemon jails"。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-fsdevel.messages.463196 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-fsdevel 邮件列表价值反推选封考据采纳）
+
+David P. Quigley 在 NFSD MAC Labeling 补丁评审中举例说明跨平台标签互译需求，把 FreeBSD 的 MLS MAC 模块与 SELinux 的 MLS 策略并列为两个待互通主体，属 BSD 侧强制访问控制框架进入 Linux NFSv4 标签设计的记录。"if we have an SELinux box with an MLS policy and a FreeBSD box with their MLS MAC module"。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-fsdevel.messages.464363 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-fsdevel 邮件列表价值反推选封考据采纳）
+
+Mickaël Salaün 发出 Landlock LSM v18 封面信，本封 FROM 段直接表述 Landlock 是 stackable LSM，灵感取自 seccomp-bpf，同时「Landlock also takes inspiration from other OS sandbox mechanisms: XNU Sandbox, FreeBSD Capsicum or OpenBSD Pledge/Unveil」——内核侧沙箱设计公开承认 FreeBSD Capsicum 与 OpenBSD Pledge/Unveil，构成 BSD 安全模型外溢的直接证据。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-fsdevel.messages.482226 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-fsdevel 邮件列表价值反推选封考据采纳）
+
+Mickaël Salaün 的 Landlock LSM 第 31 版覆盖说明自陈设计借鉴其他操作系统沙箱机制,点名 FreeBSD 的 Capsicum 以及 OpenBSD 的 Pledge 与 Unveil,构成 BSD 家族安全机制向 Linux 迁移的显式书面记录。引文: "FreeBSD Capsicum or OpenBSD Pledge/Unveil."。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-fsdevel.messages.493324 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-fsdevel 邮件列表价值反推选封考据采纳）
+
+Landlock LSM 第 33 版系列总说明在设计部分点名 BSD 系沙箱机制作为灵感来源，XNU Sandbox、FreeBSD Capsicum 与 OpenBSD 的 Pledge 和 Unveil 被并列，说明 Linux 可移植权限边界能力在接口思想上承接这些实现，同系列还附自测覆盖率与 syzkaller 覆盖数据。XNU Sandbox, FreeBSD Capsicum or OpenBSD Pledge/Unveil。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-fsdevel.messages.531519 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-fsdevel 邮件列表价值反推选封考据采纳）
+
+Josef Jeff Sipek 在 ext4 安全删除与回收站补丁讨论中提出用 inode 标志标记白点节点的方案,并声明该做法与 BSD 相似,同时回忆 Jan Blunck 曾在 VFS unionfs 挂载实现中尝试过类似方案;他承认对这一路径是否完全正确尚无把握,提出该点主要是为了不必等待 XFS 磁盘格式变更。引文: "using a flag to mark inodes as whiteouts (similar to what BSD does)".
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-fsdevel.messages.534371 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-fsdevel 邮件列表价值反推选封考据采纳）
+
+Eric Sandeen 提交 minixfs  printk 限流补丁修复 CVE-2006-6058，说明损坏的 minix 目录 inode 报告超大 i_size 时会在 minix_readdir、minix_find_entry 等路径长时间空转并在 BKL 下打印刷屏从而挂死整机；他同时说明 minix.fsck 对该情形处理不佳，故在日志中不推荐它。原文: "Essentially a corrupted minix dir inode reporting a very large i_size will loop for a very long time"。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-fsdevel.messages.536223 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-fsdevel 邮件列表价值反推选封考据采纳）
+
+Bodo Eggert 评审 Eric Sandeen 针对 CVE-2006-6058 的 minixfs printk 限流补丁，提醒自己只是在审视补丁本身，并质疑仅给 printk 套上限流并未解决根因，主张应打印面向用户的错误信息而非像聊天窗口那样输出内部状态，还追问为何不抄送安全列表。补丁落在 fs/minix/itree_v1.c 的 block_to_path。原文: "Index: linux-2.6.22-rc4/fs/minix/itree_v1.c"。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-fsdevel.messages.374794 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-fsdevel 邮件列表价值反推选封考据采纳）
+
+Chris Wright 就引入 BSD 风格用户凭证的补丁第 3 节回复 Alan Cox 关于需要 fsuid 以及需要为安全 LSM 模块附加私有信息的意见，认可以不透明数据块实现较简单。原文："Introduce BSD-style user credential" 原文："Needs fsuid too" 该补丁直接引用 BSD fsuid 与 euid 语义进入 Linux 凭证结构。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-fsdevel.messages.391302 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-fsdevel 邮件列表价值反推选封考据采纳）
+
+2008 年 Brad Boyer 在 SELinux inode 安全上下文钩子讨论中以 hfsplus 为例说明目录条目与 inode 的元数据分离，指出 hfsplus 是苹果操作系统 darwin 的原生文件系统，属 BSD 派生系统在 Linux 内的直接实现。 英文原文："It is even used as the native file system of a unix variant"。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-fsdevel.messages.391664 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-fsdevel 邮件列表价值反推选封考据采纳）
+
+2022 年 FIDEDUPERANGE 只读文件信息泄漏讨论中，Linus Torvalds 直接批评 BSD 以读写调用承载 SCSI 设备调用的权限检查模型，称其在权限判定时机上的历史设计是一贯灾难，属 BSD 接口模型在 Linux 安全评审中的负向判例。 英文原文："the traditionally horribly broken BSD model"。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-fsdevel.messages.476012 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-fsdevel 邮件列表价值反推选封考据采纳）
+
+Alan Cox 回应关于 BSD 风格用户凭据结构的补丁，该凭据模型源自 BSD 系统调用设计。正文虽转向讨论 SELinux 的许可证属性，但主题本身记录了 BSD 设计影响 Linux 的早期痕迹。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-fsdevel.messages.476342 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-fsdevel 邮件列表价值反推选封考据采纳）
+
+Serge Hallyn 反对把 security 字段限定为 SELinux 专有，依据是 BSD 安全级别曾用过同样字段。Alexey Dobriyan 的补丁从 -mm 树删除了 BSD 安全级别相关代码，属 BSD 机制退出主线的治理痕迹。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-fsdevel.messages.538319 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-fsdevel 邮件列表价值反推选封考据采纳）
+
+Landlock LSM 补丁系列 v23 封面，Mickaël Salaün 在设计说明中明列 BSD 谱系为直接灵感来源：Landlock 亦借鉴其他操作系统沙箱机制，包括 XNU 的 Sandbox、FreeBSD 的 Capsicum，以及 OpenBSD 的 Pledge 与 Unveil。该系列强调按内核语义管控文件层次等内核对象，本版改动为修正拼写、改进注释、简化代码、增加一个测试并补入若干 Reviewed-by 标记，SLOC 为 1180 行、自测 1680 行、行覆盖率 95.5%，可基于 v5.10-rc1 应用。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-fsdevel.messages.545182 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-fsdevel 邮件列表价值反推选封考据采纳）
+
+Mickaël Salaün 在 Landlock LSM v32 覆盖信中声明该堆叠式 LSM 沙箱除借鉴 seccomp-bpf 外, 还直接借鉴 XNU Sandbox、FreeBSD Capsicum 与 OpenBSD Pledge/Unveil, 为 Linux 文件系统侧沙箱设计公开承认 FreeBSD 与 OpenBSD 的 BSD 谱系来源。原文: "XNU Sandbox, FreeBSD Capsicum or OpenBSD Pledge/Unveil"。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-fsdevel.messages.567918 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-fsdevel 邮件列表价值反推选封考据采纳）
+
+Ameer Hamza 提出新增 open(2) 标志 O_EMPTY_PATH, 称其非常接近 FreeBSD 的同名标志, 可让 openat 以空路径打开文件描述符所引用的文件, 从而避免为 samba 容器授予 /proc 访问权限; Christian Brauner 则担心这会把宽松行为固化下来。Hamza 原文: "it is very similar to the FreeBSD O_EMPTY_PATH flag"。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-fsdevel.messages.613713 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-fsdevel 邮件列表价值反推选封考据采纳）
+
+2021 年 Landlock LSM v30 提交说明中明确列出设计灵感来源，包括 XNU Sandbox、FreeBSD Capsicum 与 OpenBSD Pledge 和 Unveil，直接建立 Linux 沙箱机制与 BSD 家族安全机制的继承关系，是 BSD 谱系对照的强证据。原文: "XNU Sandbox, FreeBSD Capsicum or OpenBSD Pledge/Unveil".
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-fsdevel.messages.614145 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-fsdevel 邮件列表价值反推选封考据采纳）
+
+2020 年关于 trampoline 文件描述符的 W^X 语义争论中，Mark Rutland 援引 OpenBSD 3.3 发布说明及相应演讲作为当代 W^X 原则的权威解释，指出其允许 JIT 通过 mprotect 翻转写执行属性，是 BSD 材料被引用于 Linux 安全语义论证的实例。原文: "the OpenBSD 3.3 release notes and related presentation make this clear".
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-fsdevel.messages.623731 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-fsdevel 邮件列表价值反推选封考据采纳）
+
+Alan Cox 回复 [PATCH] Introduce BSD-style user credential [3/3]，针对 `struct pcred` 布局提出异议：本封 FROM 段直接表述该结构「Needs fsuid too, and space for the security LSM modules to attach private information. SELinux needs a few more credentials than base kernels!」——BSD 风格用户凭证提案在 Linux 侧被指缺少 fsuid 与 SELinux 私域空间。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-fsdevel.messages.627089 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-fsdevel 邮件列表价值反推选封考据采纳）
+
+Christian Brauner 修复 acct(2) 访问内部文件系统导致的空指针解引用并主张弃用该接口，转引内核配置项帮助文字说明其用途，BSD 风格进程记账在内核配置系统中以选项名与说明文留痕，构成该接口历史来历与 BSD 谱系的直接证据。英文引语: "If you say Y here, a user level program will be able to instruct the kernel"。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-fsdevel.messages.634514 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-fsdevel 邮件列表价值反推选封考据采纳）
+
+James Morris 就 IMA 补丁回击 Al Viro 对 security/ 子树的贬斥，举 BSD secure levels 已因基本未使用、无人维护且存在无法修复的安全问题而被从内核删除为例，论证未使用或有严重技术缺陷的 security/ 代码同样可被正当裁剪。他还说明 Unix 在设计时未把安全放在首位、维护几十年兼容性同时应对新威胁的困难，以及数据结构的每多几字节的敏感性。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-fsdevel.messages.688611 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-fsdevel 邮件列表价值反推选封考据采纳）
+
+针对 revoke(2) 语义与 mmap 交互的 RFC 讨论,明确对标 BSD 家族行为。引文指出 FreeBSD 允许在 MAC 安全重标注时拆除 mmap 映射,并给出 FreeBSD 源码修订号: "FreeBSD allowes tearing down a mmap on MAC security relabel"。并结合其对 BSD 家族历史上仅对未映射到内存的字符设备提供 revoke(2) 的描述,共同构成 BSD 谱系在 Linux revoke 设计上的直接技术参照。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-fsdevel.messages.698748 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-fsdevel 邮件列表价值反推选封考据采纳）
+
+John Ericson 在进程孵化模板 RFC 串中汇报横向调研："I looked at FreeBSD/OpenBSD/XNU after your note. FreeBSD has P_INEXEC, OpenBSD has PS_INEXEC, and XNU seems even closer with P_LINTRANSIT, described as 'process in exec or in creation'. Linux does not seem to have a single equivalent today: current->in_execve is only an LSM hint, while the real synchronization is spread across exec_update_lock, cred_guard_mutex, and the exec path."。此为 BSD 家族（FreeBSD/OpenBSD）与 XNU 的进程状态标志被引为 Linux 缺失的对应设计的一例。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-mm.messages.758720 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-mm 邮件列表价值反推选封考据采纳）
+
+Linus Torvalds 就把 ZERO_SIZE_PTR 指向未映射页的修复表态，认为 NULL 指针攻击既非易行也非常见，安全研究者不应执着于每一个小概率情形；Larry H. 反驳这远非小事，并追问得出该结论的经验依据从何而来。属 Linux 内核安全口径分歧的一手治理档案。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-mm.messages.804020 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-mm 邮件列表价值反推选封考据采纳）
+
+Linux 地址空间随机化 RFC 讨论中，作者以 OpenBSD 的 mmap 随机化实现作为保守方案的直接对标，讨论碎片化与性能代价取舍。原文引语："The OpenBSD randomized mmap is a fairly conservative implementation to avoid causing excessive fragmentation"。属 BSD 与 Linux 安全加固实现的明确对比记录。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8012449 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+Alan Cox 对 BSD Jail LSM 补丁提出接口设计意见，认为 jail 场景下应当允许同时挂载 ipv4 与 ipv6 接口，并进一步质疑用 bind 或 connect 时机的 netfilter 链能否覆盖全部选择接口的需求 "could be addressed by netfilter chains run at bind/connect time"。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8017675 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+Sargun Dhillon 在 Checmate（BPF 驱动的 minor LSM）提案中给出用例，指出 Docker 端口映射走 DNAT 有开销，且 BSD Socket API 在识别正在发生什么这件事上存在保真度损失，因此改为在 bind 时直接重写端口、依据 BPF map 中的数据与 cgroup 匹配，把 BSD 套接字 API 的既有局限作为 Linux 侧设计取舍的直接依据 "there's some loss of fidelity in the BSD Socket API to identify what's going on"。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8020038 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+Serge Hallyn 在网络命名空间隔离争论中反问，在层二隔离被重新设计之前大家是否都可以先用 bsdjail lsm 的网络部分来满足隔离需求，把 FreeBSD jail 的思路直接接到 Linux 命名空间问题上 "we can all use the network part of the bsdjail lsm"。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8040978 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+iptables 大规模地址匹配模块公告回帖中,有人称 OpenBSD 优于 Linux 是因为它有树形防火墙表,Jan Engelhardt 回应 Linux 也有只是不易发现,原文称 "OpenBSD is better than Linux because OpenBSD has tree-based firewall tables"。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8064687 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+IPv6 扩展头特权判定讨论中,Yoshifuji 回应质疑称默认禁止更安全,并指出 FreeBSD 采用同样做法,同时提示可考虑 sysctl 位图方案,属 BSD 安全默认策略被援引为 Linux 实现的正当性依据。原文:"FreeBSD does this in the same way."。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8066713 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+OSDL Bugzilla #2399 远程路由报文问题讨论中,Stephen Hemminger 指出 Linux 中 IP 地址并不绑定到接口,若需要该语义必须使用 SO_BINDTODEVICE,并称安全模型本身正确且定义清晰只是与 BSD 衍生实现不同,属 BSD 语义差异被用于解释 Linux 安全模型。原文:"The security model is correct, and well defined, just different than BSD derived"。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-mm.messages.839435 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-mm 邮件列表价值反推选封考据采纳）
+
+SGX enclave 驱动的许可证争议。维护者质问混入 GPL-only 头文件的文件为何能声明 BSD 许可，并要求提交者请法务确认GPL-2-only 代码与 BSD-3 混用的可行性。是 BSD-3 与 GPL-2 兼容性冲突在 Linux mm 安全子系统的正面碰撞。原文: "You use gpl-only header files in this file, so how in the world can it be bsd-3 licensed?"。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8068287 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+Landlock 是允许任意进程包括无特权进程创建安全沙箱的新增 Linux Security Module,其设计目标被明确对标 XNU 的 Seatbelt 与 OpenBSD 的 Pledge,原文为 "comparable to the Seatbelt/XNU Sandbox or the OpenBSD Pledge",是 BSD 安全机制充当 Linux 设计基准的史料。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8078800 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+Sam Vilain 问 Lezcano 是否在移植 BSD Jail 的 LSM, Lezcano 否认, 说自己改的是一个网络应用容器原型, 并提议按二层三层分工合作。原文: "you're writing a LSM module or adapting the BSD Jail LSM, right?"。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8079546 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+Lezcano 主张 unshare 的目标不止容器, 还包括类似 bsdjail 的隔离场景, 因此网络非共享不宜做成一刀切方案, 并列出二层方案下四步配置的运维代价。原文: "The unsharing mechanism is not only for containers, its aim other kind of isolation like a \"bsdjail\" for example"。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8102763 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+Lorenzo Hernández García-Hierro 在 OpenBSD 网络随机化移植补丁线程中提交第二版补丁：正文称已按 Arjan 的意见调整， 说明因邮件客户端会破坏内联 diff 格式而放弃 inlined 写法，并仍在等待 OSDL STP 测试结果。本封正文不含 BSD 字样， BSD 关联仅由主题行 `Re: [PATCH] OpenBSD Networking-related randomization port` 承载。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8190066 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+Pekka Savola 转发 FreeBSD 安全公告 FreeBSD-SA-08:10.nd6 并附 FreeBSD cvsweb 修订，指出 Linux 可能受同一邻居发现缺陷影响 "http://security.freebsd.org/advisories/FreeBSD-SA-08:10.nd6.asc"。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-mm.messages.845913 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-mm 邮件列表价值反推选封考据采纳）
+
+Andrew Morton合入的kernel/acct.c预处理清理把ACCT_VERSION分支的endif加if改为elif,而该条件块内操作的正是 struct bsd_acct 类型。bsd_acct是Linux进程记账接口沿用自BSD的遗留命名,是BSD血统在内核用户可见接口中的直接残留证据,虽本补丁本身仅为条件编译整理,无许可或谱系论证。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8133633 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+Andy Lutomirski 转发 Landlock LSM 非特权沙箱概念验证 RFC, 该提案明确以 BSD 与苹果阵营沙箱机制为对标对象, 原文为 "powerful security sandboxes comparable to the Seatbelt/XNU Sandbox or the OpenBSD Pledge", 属 Linux 内核新增安全机制设计时对 FreeBSD OpenBSD Pledge 与 Darwin XNU Seatbelt 的直接参照。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8137730 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+在 TCP 漏洞缓解讨论中，David S. Miller 转贴 Jörn Engel 之分析：Engel 认为 "You need to guess the ports and source/destination addresses as well, which is why I don't consider this such a serious issue personally"，并列出两条缓解手段——"It is mitigated if timestamps are enabled"、"It is mitigated also by randomized ephemeral port selection, which OpenBSD implements and we could easily implement as well"，并评论 "I'm very happy that OpenBSD checked in a fix for this a week or so ago and took some of the thunder out of this bogusly hyped announcement"（正文均无 `>` 前缀，Miller 转贴 Engel 之论，非 Miller 本人论述）。OpenBSD 临时端口随机化实现被 Linux TCP 安全讨论引用为参考先例。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8144219 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+J.M. 在 OSDL Bugzilla 2399 号远程路由报文讨论中转述前一位的立场, 指出 Linux 中 IP 地址并不绑定到接口, 需要 SO_BINDTODEVICE 才能得到该语义, 并评价该安全模型本身正确且定义清晰只是与 BSD 衍生系统不同。英文引语为 "The security model is correct, and well defined, just different than BSD derived systems", 属 BSD 派生语义被援引为 Linux 安全模型判据。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8145959 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+Stephen Hemminger 在 2.6.17 网络传输缓慢回归的排查线程中转述 John Heffner 的判断，认为症状极可能源于不理解 TCP 窗口缩放的路径中间盒，且他过去通常遇到的是 OpenBSD 防火墙，并据此追问用户路径中是否有此类设备。原文引语（逐字）: "I've usually seen this in the past with OpenBSD firewalls"，属 BSD 防火墙行为被点名作为 Linux 性能问题的常见归因。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8148063 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+David Miller 在 SO_BSDCOMPAT gsopt 信息泄漏 CVE-2009-0676 修复不完整问题的回复中直接受理 Eugene Teo 提出的补丁, 说明同一泄漏会在 timeval 结构有内部填充的架构上重演。英文引语为 "The fix for CVE-2009-0676…is incomplete", 属 BSD 兼容开关在 Linux 内核安全漏洞修复中的直接记录。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8172721 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+本封 Kirill Korotaev 对网络命名空间讨论分类方式提出质疑，本封转引内容来自 Eric W. Biederman：其将候选方案分为「Layer 3 (Basically bind filtering) nothing at the packet level.」并给出归属说明「The approach taken by Serge's version of bsdjails and Vserver.」——BSD jails 与 Vserver 在同一层分类中并列，bsdjails 由此被点名为三种网络隔离方案之一。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8217261 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+Daniel Lezcano 论证 unshare 隔离动机时引 "its aim other kind of isolation like a bsdjail for example",以 BSD jail 作为网络隔离机制的设计参照。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-mm.messages.881354 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-mm 邮件列表价值反推选封考据采纳）
+
+Eric Biederman 将 Conrad Sanderson 关于将 bigphysarea 纳入 Linux MM 内核的请愿转发至 linux-mm，请愿以 BSD 内核已内置此功能为理由明确指出现有功能缺口，原文称 "Linux needs this as standard functionality - the *BSD folks have this in their kernel"。Sanderson 另补充树外补丁 "does not work on 2.2.x SMP machines"。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8211265 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+Landlock LSM 的 RFC 说明中,Mickaël Salaün 将目标定位为允许任何进程包括无特权进程创建强力的安全沙箱,并明确对标 Seatbelt 与 XNU 沙箱以及 OpenBSD 的 Pledge。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8212086 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+Stephen Hemminger 批评 XDP 示例程序中成串的 bzero 调用属于多余,直言这看起来像是写 OpenBSD 安全代码,只有安全人员才会这样在返回前清零栈变量,而只有 BSD 派系才用 bzero,Linux 风格应当使用 memset。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8156299 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+Landlock LSM 无特权沙箱 RFC 讨论中,提案说明 Landlock 允许任意进程包括无特权进程创建安全沙箱,设计目标对标 XNU 的 Seatbelt 沙箱与 OpenBSD 的 Pledge;提问方则追问 eBPF API 的描述为何缺失。原文: "comparable to the Seatbelt/XNU Sandbox or the OpenBSD Pledge"。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8234808 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+该邮件属于把 FreeBSD 的 jails 移植为 Linux 安全模块的补丁线程，标题即标出 BSD Jail LSM；正文是哈林与考克斯就单一 IPv4 或 IPv6 接口选择、以及是否改用绑定与连接时刻的 netfilter 钩子取代 LSM 钩子的追问。原文引语：“BSD Jail LSM”。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8251946 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+Evgeniy Polyakov 坚持 CARP 应放内核而非用户态，本封 FROM 段直接表述「Userspace is too slow.」「It can only initiate master's failover, load balancing is a good example here - userspace _itself_ can not control real time traffic.」并说明 ct_sync 模块借助连接跟踪把防火墙状态跨 slaves 同步。jamal 在本封转引中点出 OpenBSD 渊源：「probably thats what the opnebsd people did.」
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8248307 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+NetBSD 的 Roy Pledge 询问内核 skb 能否像 netbsd 的 mbuf 那样链式拼接非连续缓冲区,Stephen Hemminger 回应,原文称 "Yes, skb frag list could be used for that but you don't want to do that",建议复制数据到新建 skb 并预留头部对齐。Pledge 是 NetBSD 核心人物,此段是 BSD 缓冲模型与 Linux skb 模型的直接比较。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-mm.messages.887979 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-mm 邮件列表价值反推选封考据采纳）
+
+Daniel Micay 在 2018 年 Linux mmap 地址随机化 RFC 讨论中以 OpenBSD 为直接设计参照, 认为其实现以保守方式规避 VMA 碎片, 并指认 OpenBSD 在低碎片与 ASLR 安全收益之间找到折中, 同时主张 Linux 内核应提供 mappings 周边强制留白的选项。 原文: "The OpenBSD randomized mmap is a fairly conservative implementation"。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8283067 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+Evgeniy Polyakov 在 netdev 宣布 CARP 失败转移实现。本封转引其本人早前发言：「It is based on OpenBSD's CARP protocol but is not compatible with it since OpenBSD's implementation does not contain protection against repeated message sending.」项目目标为 CARP + firewall sync，后半段已由 Harald Welte 与 KOVACS Krisztian 在 ct_sync 中完成。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8271053 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+LSM 沙箱讨论中 Sam Vilain 将新模块直接对标 FreeBSD 机制，反问 "you're writing a LSM module or adapting the BSD Jail LSM, right?"。BSD jail 仍是 Linux 侧强制访问控制隔离设计时的事实参照物。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8276833 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+该补丁线程主题为 "[PATCH] OpenBSD Networking-related randomization port"，正文说明作者把 grSecurity 的随机化拆分并研究哪些特性可低成本实现。讨论集中在随机化是否应做成配置项，以及是否必要地改动 random 驱动。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8393719 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+无状态 1:1 NAT 压测中，发帖人 Florin Andrei 报告了一组 BSD 栈在压测下行为的一手实测：他在一台千兆网络双宿主防火墙（CentOS 5，内核 2.6.18）上用 pktgen 发随机源地址的小 UDP 包，观察到 conntrack 相关瓶颈，并附注 OpenBSD 4.1 作防火墙在同一用例下「fails even worse in this test case (it freezes instantly)」、而 OpenBSD 4.2 在同样的 UDP 洪水下工作正常；本封的 Patrick McHardy 则回应这不是工作量问题而是 conntrack 存在固定跟踪上限，建议测试 2.6.23 的淘汰算法变更或调大 conntrack 上限。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8395845 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+Landlock LSM 提议把目标能力对标为 Seatbelt、XNU Sandbox 与 OpenBSD Pledge, 显示 BSD 与 XNU 家族沙箱设计对 Linux 安全模块的影响。引语 "comparable to the Seatbelt/XNU Sandbox or the OpenBSD Pledge"。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8389752 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+Landlock LSM的提案定位明确对标BSD派生安全机制："security sandboxes comparable to the Seatbelt/XNU Sandbox or the OpenBSD Pledge" XNU沙箱与OpenBSD Pledge作为Linux安全模块设计的外部参照。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8296139 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+Mickaël Salaün 在 Landlock LSM 提案（RFC）中自述该堆叠式 LSM 目标是让任意进程（含非特权进程）创建强能力沙箱，并明言 "comparable to the Seatbelt/XNU Sandbox or the OpenBSD Pledge"（该句系源封内更深层被引内容）。Andy Lutomirski 本封仅为询问其是否出席 KS/LPC，未作技术论述。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-mm.messages.967030 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-mm 邮件列表价值反推选封考据采纳）
+
+本封 `From:` 为 `<lamont@icopyright.com>`，开篇建议增加 CONFIG_VM_FREEBSD_ME_HARDER 内核选项。其本封转引内容来自 Chris Wedgwood：Chris 引 Rik van Riel 关于新 VM 的 RFC——「The design is heavily based on the FreeBSD VM subsystem - a proven design - with some tweaks where we think things can be improved.」——随后追问 FreeBSD 的偏差能否被隔离，以使日后性能差距能归因于 tuning 而非 FreeBSD 设计本身。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8442507 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+Serge Hallyn 的 BSD Jail LSM 补丁线程回应 Alan Cox 关于须二选一选择 IPv4 或 IPv6 接口的意见,说明新版本支持同时持有 IPv4 与 IPv6 地址各一个,引文 "The attached version supports simultaneous ipv4 and ipv6 addresses"。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8264842 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+dummy 能否替代 IMQ 的讨论中，jamal 提出仿 OpenBSD 防火墙的思路，原文为 "Something along the lines of what OBSD firewall does but selectively"，并解释其可做到选择性队列化，OpenBSD 防火墙的入口处理被引为设计参照。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8266973 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+网络命名空间与隔离层的争论中，Herbert Poetzl 反驳 Biederman，原文为 "There has been a demonstrated use for the full performance IP layer isolation too, both in BSD and Linux"，结尾又称轻量三层隔离 "which _is_ the traditional way 'containers' are built (see BSD, solaris ...)"，BSD 被指为容器隔离的传统实现。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8327773 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+David Miller 在 LSM 钩子之争中直接以 BSD socket 语义为基准,称 "The existing LSM hooks do not break BSD socket behavior",并指现有钩子是长期审慎设计的结果,证明 BSD socket 接口已构成 Linux 网络子系统的兼容性契约,是 BSD API 谱系进入主线治理逻辑的证据。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8414009 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+以 dummy 设备替代 IMQ 做整形限速的讨论中, jamal 提到 OpenBSD 防火墙在入接口即 IP 栈之前做跟踪的做法, 并设想按选择性跟踪的方式借用, 属 BSD 防火墙设计被引为 Linux 方案参考。引语 "Something along the lines of what OBSD firewall does"。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8415618 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+TCP 泛化 TTL 安全机制补丁中被 David Miller 采纳, 提交者 Stephen Hemminger 说明该机制在 BSD 内核中已以相同方式实现, 同时注明 BSD 不支持 IPv6 的最小跳数限制选项, 属 BSD 到 Linux 特性移植。引语 "This is already implemented the same way in BSD kernels"。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8473995 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+Fernando Gont 在 PMTUD 攻击反制措施草案公告中指出该措施已有两个实现并明确谱系:引文 "OpenBSD implemented the first one, and NetBSD ported it to their OS."他本人参与构建与测试 OpenBSD 版，而 Linux 尚未实现。带年份标注的 BSD 安全特性谱系证据。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8492498 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+LSM 新增 post recvmsg 钩子补丁讨论中，David Miller 在引用块内以设计意图反驳 Tomoyo 方案，原话为 "The existing LSM hooks do not break BSD socket behavior. Do you know why? Because someone who understood all of this spent a great deal of time carefully designing them." 他指出既有钩子在看接收队列之前即报错（如 -EFAULT、-ENFILE 一类），不会丢包。Tetsuo Handa 则就 SELinux avc_has_perm_noaudit 在 select() 之后与 security_socket_recvmsg() 之前的时序问题提出疑虑。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8492893 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+以 dummy 设备替代 IMQ 做流量整形的讨论中,参与者在引用 TCP 吞吐公式后建议参考 OBSD 防火墙做法,称 "Something along the lines of what OBSD firewall does but selectively",即在 IP 栈之前做入口跟踪。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8493683 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+回应 FreeBSD 是否存在 BPF 安全检查问题,Eric Dumazet 确认 FreeBSD 未做该校验并解释成因,称 "Their scratch memory is not on stack but part of the filter, so no security problem"。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8641477 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+Willy Tarreau 回复 Stephen Hemminger 关于 TCP 接收失败的诊断。Hemminger 在上一条消息中提出历史线索：一些 broken middle boxes 忽略 TCP 窗口缩放，其中若干是「boxes based on old (buggy) version of FreeBSD firewall code that did not remember the window scaling from the handshake」，并建议测试关闭 TCP window scaling；Tarreau 本人回复则补充了长期观察到的一类问题：PAWS 处理不当、以及部分中间设备会「for your safety」随机化序列号、在遗忘前次连接后可能让 ISN 反向跳变导致新连接建立失败。Tarreau 另指出该事件的抓包是在接收侧做的、包丢在 tcpdump 与 TCP 栈之间，因此怀疑 conntrack 或客户端 conntrack 超时过短，并非 FreeBSD 防火墙相关。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8519422 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+Stephen Suryaputra 讨论 XFRM 安全关联查找时援引 BSD 内核代码的 key_freesav 注释，指出 FreeBSD 同样仅按 SPI 匹配入站 SA，把 Linux xfrm 与 BSD 实现并置比较以追问规范符合性。 "I read BSD code which seems to be doing the same with the following comments"。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8354778 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+Serge Hallyn 的 BSD Jail LSM 补丁评审,BSD jails 隔离机制被移植为 Linux 安全模块,代码含 jail_flags 与 GOT_IPV4 GOT_IPV6 等标志位定义。属 BSD 功能向 Linux 移植。 原文引文 "#define got_ipv4(x) (x->jail_flags & (GOT_IPV4))"。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8360557 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+Landlock LSM 未特权沙箱提案的比较基准直接列出 Darwin XNU 沙箱与 OpenBSD Pledge,称要创建可与二者媲美的强力安全沙箱。属 BSD 与 Darwin 安全机制的横向比较。 原文引文 "comparable to the Seatbelt/XNU Sandbox or the"。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8361300 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+OpenBSD 网络相关随机化移植补丁的评审中讨论 OpenBSD 的随机端口分配,对方将其对比为 Linux tcp_v4_get_port 的线性扫描。属 OpenBSD 安全特性移植至 Linux。 原文引文 "things in OpenBSD, like randomized port assignment"。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8204848 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+OSDL Bugzilla 远程路由漏洞讨论中，David Stevens 反驳 Hemminger 称 Linux 安全模型不同于 BSD 派生系统的说法，主张 IP 一直采用弱端系统模型，并引 WRS 的经典著作所载 BSD 代码。原文: "This is not different from BSD behavior."。属 BSD 语义作为安全模型争议判据的史料。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8320024 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+网络命名空间隔离之争中，Eric W. Biederman 认为让网络设备出现在多个命名空间毫无道理，命名空间完全独立时语义最清晰；Serge E. Hallyn 在同线程早前发言里打趣「Ok, and in the meantime we can all use the network part of the bsdjail lsm? :)」，把 FreeBSD jail 方案当过渡替代，Eric 答「If necessary.」但称重点是先做透二层隔离。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8556951 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+Flow Queue PIE 的 AQM 补丁评审中，Toke Høiland-Jørgensen 建议尽量将 fq_pie 代码结构与 fq_codel 靠拢以便后续抽取公共代码，并会另发邮件说明具体建议。本 pk 未见 FreeBSD 相关论述。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8121943 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+Landlock LSM 说明把自身目标定位与两类 BSD 系沙箱对齐,原文:"comparable to XNU Sandbox or OpenBSD Pledge"。作者同时对比 SELinux 与 AppArmor 需受信用户加载策略,强调 eBPF 规则可被非特权进程安全加载,构成无特权沙箱路线图。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8461386 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+Stephen Hemminger 在排查 Amanda 备份客户端于 2.6.9 内核无法建立 TCP 连接的问题时，把嫌疑指向防火墙设备，并点名 OpenBSD 防火墙破坏窗口缩放是同类故障的既有先例。原语："another instance of an OpenBSD firewall stomping on window scaling"。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8462385 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+在网络命名空间 RFC 讨论中，Daniel Lezcano 提出 unshare 机制的目标不止于容器，还包括 bsdjail 那类隔离用途——若走 layer 3，给应用分配独享 IP 地址只需一步，而走 layer 2 则需先在应用命名空间内建虚拟设备、配 IP、再在根命名空间建透传设备并配 IP，管理开销大得多。Eric Biederman 反驳称真正的 layer 3 实现与 layer 2 几乎没有共用代码、不允许在容器间复制地址故无需改动 socket 处理路径，并认为 layer 3 隔离应做成新的 security module 或 iptables 的新形态，layer 2 才是命名空间的本分。本封 FROM Herbert Poetzl 认为 LSM 从来就不是可行选项：a) 用途复杂难用、b) 缺少必需的钩子、c) 效率与性能不足；用"类似 iptables"的东西或许能做，但也不确定那是最佳路径。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8465814 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+Florin Andrei 在 stateless 1:1 NAT 讨论中用 OpenBSD 作为对照测试给出实测结论：在千兆网双宿主防火墙上加 UDP 洪泛压力下，OpenBSD 4.1 作为防火墙失败得更彻底会瞬间冻结，而 OpenBSD 4.2 则表现正常如同无事发生。原语："OpenBSD 4.1 as a firewall fails even worse in this test case (it freezes instantly)"。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8468971 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+Changli Gao 在 bpf 安全检查补丁讨论中对比 FreeBSD 的实现得出不同结论：他检查了 FreeBSD 中的 bpf 实现，发现其 RAM 并未初始化为 0，因此那不能算是通用特性且没有应用依赖它，Eric Dumazet 还补充 FreeBSD 存在 Dan 报告的安全问题。原语："I checked the implementation of bpf in FreeBSD, and found RAM isn't initialized to 0"。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8708729 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+Toke Høiland-Jørgensen 回复 Gautam Ramakrishnan 的 FQ-PIE 提案，转引其中一句「This patch doesn't yet have the timestamp based queue delay estimator like freebsd, that Dave Taht thinks is better.」，并追问 fq_ 部分是否与 fq_codel 基本相同、可否复用代码，同时提醒这恐怕不是随手能完成的重构。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8716875 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+Luca Moro 报告 netfilter 的 ICMP[v6] 关联检查缺失，「During a review of OpenBSD Packet Filter, we discovered a minor security issue that also impacts netfilter」。内层匹配已知连接、外层却指向某个被过滤主机的封装 ICMP 错误，会被整体打上 IP_CT_RELATED 标记，后果包括规则绕过与已知状态预言机。他建议检查内层源地址是否与外层目的地址一致，并给出 OpenBSD 在 sys/net/pf.c 的修复链接。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.9183916 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+Günther Noack 的 unix_path_connect LSM hook 补丁引发讨论,Paul Moore 表示担心把改动超出 unix_find_bsd() 之外会阻碍新 LSM hook 被接受,认为改动越小越容易落地。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8337576 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+在 Linux 防火墙规则表达方式的讨论中，被引材料称 "OpenBSD is better than Linux because OpenBSD has tree-based firewall tables"，将 OpenBSD 的树形防火墙表作为 Linux 侧的改进参照。本封 FROM Mikulas Patocka 的自有 论述是权衡内核实现成本："I thought about this too but I realized that building the tree in kernel would be easier to write than building it with a shell script :)"。 OpenBSD 优劣断言归属被引用方，内核实现取舍归属 Patocka。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8341104 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+网络经 OpenBSD 防火墙即中断的回归报告在 netdev 被转交,Nivedita 因无余力处理请列表协助,而缺陷编号 3397 的标题本身就是 "Network connections hang going through an OpenBSD firewall",表明 BSD 防火墙作为互操作性测试环境直接进入 Linux 回归验证与缺陷流转。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8342171 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+无状态 1:1 NAT 的对比测试中,BSD 实现被直接拿来作基准:Andrei 报告 "OpenBSD 4.1 as a firewall fails even worse in this test case (it freezes instantly)",而 OpenBSD 4.2 在 UDP 洪泛下表现正常,随后被问 Linux 2.6.23 表现并答称与 2.6.18 相当甚至更差,显示 BSD 版本演进的修复被用作 Linux NAT 实现的问题定位参照。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8365978 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+OpenBSD 防火墙导致连接挂起的内核缺陷报告（Bug 3397），主题即 "Network connections hang going through an OpenBSD firewall"。报障者比对 2.6.5 与 2.6.6 行为差异，属 BSD 与 Linux 的互操作缺陷线索。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8366507 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+eBPF 驱动的 Checmate LSM 讨论中被引用者指出 BPF 重写端口优于 Docker DNAT，部分原因是 "there's some loss of fidelity in the BSD Socket API to identify what's going on"。BSD 套接字 API 被作为 Linux BPF 方案设计约束论据，属 BSD 谱系。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-mm.messages.1186716 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-mm 邮件列表价值反推选封考据采纳）
+
+mseal 对 madvise MADV_DONTNEED 的限制之争中，Pedro Falcato 以 OpenBSD 实现为简约性论据，写道 OpenBSD's mimmutable() doesn't do any of this and it Just Works，反对在 Linux 侧为受封映射增设 PROT_NONE 与只读私有映射的特判，Jeff Xu 则反驳 Android 依赖该路径布置 NX 栈保护页。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-mm.messages.1187223 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-mm 邮件列表价值反推选封考据采纳）
+
+MDWE 无法阻止只读可执行共享内存被后备文件写入改写的缺陷通报中，Bugspray Bot 转述 alip 的发现，写明 the same PoC works on HardenedBSD，并附 HardenedBSD 自有 PaX 实现的问题链接，指出该缺陷在启用私有映射的 BSD 安全分支上同样可复现，形成跨内核谱系的安全缺陷证据。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8298451 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+Neil Horman 在 2010-01-08 Re: BSD 4.2 style TCP keepalives 串中回复 David Miller，称已复查最初提报所用的 tcpdump 故本案可废弃，原文 apparently w2k doesn't compute the checksum properly on these old style keepalives 指出 w2k 在那些老式 keepalive 上不正确计算校验和；因 Wireshark 默认关闭 tcp keepalive 校验故原先看不出来，开启后各帧校验和均被标为坏帧，故 Linux 侧无事可做，只留案底以备将来再现。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8299701 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+2016-08-30 Landlock LSM RFC 的回复中，该无特权沙箱安全模块被明确定位为实现可与 Seatbelt/XNU 沙箱（macOS/Darwin 的 XNU 内核）与 OpenBSD Pledge 相媲美的强大安全沙箱，目标让非特权进程能自建沙箱，而不只是填补 seccomp 的缺口。Verbatim: "comparable to the Seatbelt/XNU Sandbox or the OpenBSD Pledge"。本封正文其余内容为会议安排（Mickaël Salaün 称自己不去 KS/LPC，改在巴黎 Kernel Recipes 演讲）。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8303117 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+Stephen Hemminger 讨论 GTSM 在 TCP accept 侧留下的卡死握手问题：流氓对端仍能完成三次握手，留下必须靠超时回收的僵死连接。他列出三种可能应对办法，其中把 MINTTL 表按对端下推到 iptables 被否，因为「a general application that needs to run on BSD, and would mess up existing firewall rules」——这类通用应用还需要在 BSD 上也能跑，改防火墙规则也会破坏现有配置。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8350547 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+Mickaël Salaün 在 Landlock LSM RFC 提案中把目标定位为「powerful security sandboxes comparable to the Seatbelt/XNU Sandbox or the OpenBSD Pledge」——即以 Apple Seatbelt（XNU Sandbox）与 OpenBSD Pledge 作为对标。Andy Lutomirski 本封仅追问 eBPF API 描述，未参与对标定位。该 BSD 家族沙箱成为 Linux 新 LSM 设计基准的表述出自提案方 Salaün，非本封 FROM。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8352560 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+XDP 之争的转发讨论中,BSD 系旁路方案被引作对照:被引用的意见指出 netmap 一类旁路方案同样能把包重新注回内核栈,原话为 "Bypass solutions like netmap can also inject packets back to kernel stack again",而质疑者随即表达根本性顾虑,称一旦包离开内核所有安全保证就失效,属 BSD 网络旁路框架持续充当 XDP 安全模型讨论参照系的记录。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-mm.messages.1139187 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-mm 邮件列表价值反推选封考据采纳）
+
+Jeff Xu引Theo de Raadt的OpenBSD视角说明mseal与sigaltstack的交互风险, 引语: "In OpenBSD, sigaltstack() forces MAP_STACK onto the specified (pre-allocated) region"。Theo称OpenBSD在syscall入口强制sp指向MAP_STACK区域, 能严重破坏ROP跳转方法, 而Linux尚无MAP_STACK强制机制, 建议Linux检查sigaltstack是否构成mseal的绕过路径。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-mm.messages.1141674 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-mm 邮件列表价值反推选封考据采纳）
+
+Waiman Long提议将MAP_STACK映射为VM_STACK以防止栈VMA与非栈匿名VMA合并。引语: "One of the flags of mmap(2) is MAP_STACK to request a memory segment suitable for a process or thread stack"。他指出glibc用MAP_STACK映射线程栈, 而Linux内核完全忽略该标志, 致使栈VMA可与相邻匿名VMA合并, 触发SELinux禁止可执行栈的检查失败并造成随机SEGV。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-mm.messages.1226857 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-mm 邮件列表价值反推选封考据采纳）
+
+Andrew Morton 在 2023-04-20 关于 MAP_STACK 到 VM_STACK 映射的讨论中直接引用 mmap(2) 手册并明言该标志在其它系统真实存在且生效: MAP_STACK exists (and has an effect) on some of the BSDs. Linux 当前将其视为 no-op 仅用于将来兼容与移植性, 是 BSD 家族与 Linux 语义差异的直接书面证据.
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-fsdevel.messages.309800 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-fsdevel 邮件列表价值反推选封考据采纳）
+
+Jeff Layton 提交废弃 acct(2) 遗留接口的补丁，由 Christian Brauner 合入 vfs-7.0.misc 分支，理由是即便该接口需要特权也隐患众多，且已有 eBPF 等更佳替代。原文: "begin the deprecation of legacy BSD process accounting"。acct(2) 源自 BSD 进程核算机制，该条记录了 BSD 谱系遗留接口在现代 Linux 内核治理下被正式标记弃用的节点。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-fsdevel.messages.398985 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-fsdevel 邮件列表价值反推选封考据采纳）
+
+Mickael Salau 的 Landlock LSM v20 补丁集说明中明确列出借鉴来源,除 seccomp-bpf 外还包括 XNU Sandbox、FreeBSD Capsicum 以及 OpenBSD Pledge 与 Unveil 等操作系统沙箱机制,把多谱系沙箱设计作为 Linux Landlock 语义的先例,属 BSD 系接口设计在内核安全模块中的直接参照。原文: "XNU Sandbox, FreeBSD Capsicum or OpenBSD Pledge/Unveil"。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+

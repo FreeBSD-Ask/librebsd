@@ -1,0 +1,1036 @@
+# 299.2 GNU 与 BSD 的比较——许可证、哲学、生态
+
+#### 要点
+
+GNU 与 BSD 在自由软件谱系中呈现不可通约性——本子节从许可证、哲学、生态、开发模式、商业化五个维度系统比较，呈现多方主体性辩证张力，禁止“优劣”二元判断。
+许可证维度——GPL 传染性 vs BSD 宽松：GPL（GPLv1/v2/v3）要求衍生作品必须以 GPL 发布（copyleft 传染）；BSD（2-Clause、3-Clause）允许 BSD 代码被闭源再分发（仅要求保留版权声明）；二者法律机制根本不同——GPL 是“传染”（copyleft），BSD 是“宽松”（permissive）；二者哲学根本不同——GPL 要求“使用者必须保持开源”，BSD 承认“使用者有闭源自由”。
+哲学维度——自由即权利（Stallman）vs 自由即责任（BSD 传统）：Stallman 与 FSF 的自由软件哲学强调“自由即权利”——使用、研究、修改、再分发是用户的权利，应通过 copyleft 强制保障；BSD 传统哲学强调“自由即责任”——用户有自由使用 BSD 代码，但有责任承担使用后果（BSD 许可证明确免责），不强制保持开源；本子节呈现不可通约性，禁止“优劣”二元判断。
+生态维度——GNU/Linux 主流 vs FreeBSD/OpenBSD/NetBSD 边缘：2026 年 GNU/Linux 服务器市场占有率约 70%（含云计算），桌面市场占有率约 4%（含 ChromeOS），嵌入式与移动领域通过 Android（基于 Linux 内核）占据主导；FreeBSD 在 Netflix、Juniper、Sony PlayStation 等特定领域有重要部署，但整体市场占有率远低于 Linux；OpenBSD 在安全研究、密码学（OpenSSH）、防火墙（**pf(4)**）等领域有重要影响，但用户数极少；NetBSD 在跨平台移植领域有传统优势，但市场占有率极低；本子节禁止“GPL 必胜”目的论，呈现多方主体性辩证张力。
+开发模式维度——GNU 邮件列表驱动 vs BSD Core Team 精英制：GNU 项目长期采用邮件列表驱动（gnu.org 邮件列表、Savannah 平台、2020s 后部分迁移至 GitLab），决策基于共识与维护者权威；BSD 项目（FreeBSD、OpenBSD、NetBSD）采用 Core Team 精英制，Core Team 由 committer 选举产生，对项目方向有最终决策权；二者皆是形式主义化的社区治理结构，皆非“客观最优”。
+商业化维度——GPL 商业模式双授权服务 vs BSD 商业模式嵌入式设备固件：GPL 商业模式主要为双授权（开源版 GPL + 商业版专有许可，如 MySQL、Qt）与服务（订阅支持、咨询、培训，如 Red Hat Enterprise Linux）；BSD 商业模式主要为嵌入式设备固件（路由器、防火墙、存储设备，基于 FreeBSD 的 Juniper Junos、Sony PlayStation OS、Netflix CDN）与闭源衍生（macOS 基于 Darwin 与 FreeBSD 用户态）；本子节呈现二者商业模式的多方主体性，禁止“优劣”二元判断。
+GNU 与 BSD 在自由软件谱系中的不可通约性——禁止“优劣”二元判断：GPL 与 BSD 在许可证哲学、社区治理、商业模式上根本不同，二者皆有其合理性，皆有其代价——BSD 的代价是可能被闭源挪用（如 macOS 闭源 BSD 代码、Sony PlayStation 闭源 FreeBSD），GPL 的代价是商业兼容性受限（如 GPLv3 反 Tivoization 限制嵌入式厂商、GPL 传染限制与专有软件组合）；本子节明确禁止“优劣”二元判断。
+
+#### 史料
+
+**一手史料**：
+
+- FSF. *GNU General Public License* [R]. **gnu.org/licenses/gpl-3.0.html**, 2007-06-29.
+- FreeBSD Project. *FreeBSD License* [R]. **freebsd.org/copyright/freebsd-license.html**, 2-Clause BSD License 文本。
+- OpenBSD Project. *OpenBSD License Policy* [R]. **openbsd.org/policy.html**, OpenBSD 许可证政策。
+- Stallman R M. *The Free Software Definition* [EB/OL]. **gnu.org/philosophy/free-sw.html**, FSF 对自由软件的官方定义。
+- Stallman R M. *Why Open Source Misses the Point of Free Software* [EB/OL]. **gnu.org/philosophy/open-source-misses-the-point.html**, Stallman 论“开源”与“自由软件”的区别。
+- FreeBSD Project. *FreeBSD Core Team Charter* [R]. **freebsd.org/internal/corecharter/**, FreeBSD Core Team 章程。
+- OpenBSD Project. *OpenBSD Asks* [EB/OL]. **openbsd.org/faq/faq1.html**, OpenBSD 项目立场（含 Theo de Raadt（西奥·德·若特） 对 GPL 与 BSD 的看法）。
+- NetBSD Project. *NetBSD Foundation Charter* [R]. **netbsd.org/foundation/**, NetBSD Foundation 章程。
+- Netflix Open Source. *Netflix on FreeBSD* [EB/OL]. **netflixtechblog.com**, Netflix 技术博客关于 FreeBSD 部署的说明。
+- Juniper Networks. *Junos OS Architecture* [EB/OL]. **juniper.net/documentation**, Junos OS 架构文档（基于 FreeBSD）。
+
+**互联网档案馆存档要求**：Stallman 哲学文章（**gnu.org/philosophy/**）早期版本部分链接已失效，须同时标注原始 URL 与互联网档案馆存档 URL；Theo de Raadt 在 openbsd-misc 邮件列表关于 GPL 与 BSD 的发言须交叉验证；Netflix 与 Juniper 技术博客须依赖官方存档。
+
+#### 史观
+
+本子节史观映射覆盖以下 5 条相关总纲，皆已回溯到 29 章原文核验：
+
+**总纲 1（一切真历史都是古代史）**——据原文第 1 章 1.1-1.2 节：GPL 与 BSD 皆属同一种形式主义（许可证的形式主义）在不同时刻与立场下的不同配置，其间不存在从“原始”到“成熟”的进步叙事——GPL 的“copyleft 传染”法律机制、BSD 的“宽松许可”法律机制——皆是设计师对“自由软件应当如何保障”的主体性选择，无“客观最优”的“自由软件许可证本质”。二者不可通约，禁止“优劣”二元判断。
+
+**总纲 4（分离聚合是永恒规律）**——据原文第 4 章 4.1 节：GNU 与 BSD 从 Unix 谱系的分离（1983-1989），到 GNU/Linux 与 BSD 在服务器市场的聚合（1990s-2000s），到 BSD 化进程的再分离（Clang 替代 GCC、libedit 替代 readline等）——这一系列分离聚合并非线性进步，而是不同形式主义的循环呈现。
+
+**总纲 5（没有必然性，只有偶然性）**——据原文第 5 章 5.2 节：若 Stallman 未在 1989 年起草 GPL，若 BSD 未在 1989 年从 AT&T 代码中清理（Net/2），若 USL v. BSDi 诉讼未在 1992-1994 年限制 BSD 分发，GNU 与 BSD 的相对地位会呈现完全不同的脉络。所谓“GPL 必胜”或“BSD 必衰”的叙事是史家的事后重构，本子节明确禁止目的论。
+
+**总纲 10（动手者创造历史）**——据原文第 14 章 14.1-14.2 节：Stallman 亲自起草 GPL，BSD 开发者（Marshall Kirk McKusick（马歇尔·柯克·麦库西克）、Mike Karels 等）亲自维护 BSD 许可证文本，Theo de Raadt 亲自在 openbsd-misc 邮件列表阐述 OpenBSD 对 GPL 的立场——这些是动手者的实践，而非“FSF 决定”或“BSD 阵营决定”等组织决策的产物。
+
+**总纲 2（历史是形式主义化的非存在）**——据原文第 2 章 2.5 节：所谓“GNU 与 BSD 比较（2026）”的判定本身即形式主义化的非存在——若以 macOS 闭源 BSD 代码为主线（BSD 闭源挪用史），若以 Android 闭源 Linux 内核为主线（GPL 闭源挪用史），若以 BSD 化进程为主线（GPL 向 BSD 替代史），“GNU 与 BSD 比较史”会呈现完全不同的脉络。本子节选取“五维度比较”为主线，但这一选取本身须以自反性声明显化。
+
+**自反性声明**：本子节选取“许可证 + 哲学 + 生态 + 开发模式 + 商业化”五维度为 GNU 与 BSD 比较主线，但这一选取本身即形式主义化的非存在。若以技术架构（宏内核 vs 宏内核）为主线，若以社区治理（Core Team vs 维护者权威）为主线，若以法律诉讼（USL v. BSDi vs SCO v. IBM）为主线，“GNU 与 BSD 比较史”会呈现完全不同的脉络。本子节承认主轴选取本身是史家的形式主义化决策，欢迎被更自反的释读所超越。
+
+#### 辨析
+
+**GPL “传染”表述辨析**：部分二手资料称“GPL 是病毒”，但“病毒”表述被 FSF 与部分法律学者认为带有贬义，本子节采用“copyleft 传染”的中性表述；“传染”指 GPL 要求衍生作品以 GPL 发布的法律机制，非贬义。
+
+**BSD “宽松”表述辨析**：部分二手资料称“BSD 是公共领域许可证”，但 BSD 许可证非公共领域——BSD 代码仍受版权保护，仅要求保留版权声明与免责声明；公共领域（public domain）意味着放弃所有版权，BSD 许可证保留版权但授予广泛使用权。本子节采用“BSD 宽松许可，非公共领域”的限定性表述。
+
+**macOS 与 FreeBSD 关系辨析**：部分二手资料称“macOS 基于 FreeBSD”，但准确表述是 macOS（Darwin）用户态部分（如一些命令行工具）来源于 FreeBSD，但 macOS 内核（XNU）是 Mach + BSD 混合内核，非 FreeBSD 内核；macOS 闭源其 BSD 衍生代码，是 BSD 闭源挪用的典型案例。本子节采用“macOS 部分用户态来源于 FreeBSD，非 macOS 基于 FreeBSD 内核”的区分性表述。
+
+**GPLv3 反 Tivoization 对 BSD 影响辨析**：部分二手资料称“GPLv3 推动 BSD 化”，但准确表述是 GPLv3 反 Tivoization 条款（§6）是 BSD 化进程的外部推动力之一——嵌入式厂商为避免 GPLv3 反 Tivoization 限制，倾向选择 BSD 代码替代 GPL 代码（如 Clang 替代 GCC、libedit 替代 readline）；BSD 化是多因素叠加，GPLv3 是重要因素但非唯一。本子节采用“GPLv3 是 BSD 化的外部推动力之一，非唯一”的限定性表述。
+
+#### 文献
+
+[1] FSF. GNU General Public License [R]. **gnu.org/licenses/gpl-3.0.html**, 2007-06-29.
+
+[2] FreeBSD Project. FreeBSD License [R]. **freebsd.org/copyright/freebsd-license.html**.
+
+[3] OpenBSD Project. OpenBSD License Policy [R]. **openbsd.org/policy.html**.
+
+[4] Stallman R M. The Free Software Definition [EB/OL]. **gnu.org/philosophy/free-sw.html**.
+
+[5] Stallman R M. Why Open Source Misses the Point of Free Software [EB/OL]. **gnu.org/philosophy/open-source-misses-the-point.html**.
+
+[6] FreeBSD Project. FreeBSD Core Team Charter [R]. **freebsd.org/internal/corecharter/**.
+
+[7] OpenBSD Project. OpenBSD Asks [EB/OL]. **openbsd.org/faq/faq1.html**.
+
+[8] NetBSD Project. NetBSD Foundation Charter [R]. **netbsd.org/foundation/**.
+
+[9] Netflix Open Source. Netflix on FreeBSD [EB/OL]. **netflixtechblog.com**.
+
+[10] Juniper Networks. Junos OS Architecture [EB/OL]. **juniper.net/documentation**.
+
+---
+
+---
+
+**史观**：总纲第 8 条（本体论上各方平等）：在本体论层面平等对待所有立场，不预设优劣
+
+**文献**：[DB:historical_claims] 历史主张数据库（853 条主张，26,898 条证据）
+
+## 叙述
+
+BSD 与商业 UNIX 的许可证博弈，起点是拿公有领域当出口；1983 年 Donn Seeley 在 usenet 上提出，68K 架构尚无一版“仅需 Unix 许可”的公共领域 4.2BSD 实现，于是发起公共领域移植提议，把“干净实现”与“许可门槛”绑定为一件事；1984 年同一圈子自我澄清，cpr 并非真正的公共领域 68K 移植，实为 PMI 68010 那块“旧 SUN 板”上的移植，SMI 早已做完并随 SUN II 弃置；这一年社区还摸出 USG make 内置未文档化的 VPATH 环境变量，而 WE UNIX 支持中心 1983 年 9 月通讯已载有 VPATH 说明，却标注“不得使用或披露”，AT&T 的支持体系把内部构建特性当作受控信息分发，社区只能靠读源码察觉；到 1991 年 2 月 10 日，alt.sys.sun 上一则技术回复的代码头部出现 Sakari Jalovaara 的声明，“Public domain -- PLEASE do not distribute any part of this software under the GNU license”，公有领域在此变成拒斥 GPL 传染的手段，许可证选择在当时已是社区成员自觉表述的身份边界
+
+1983 年那条以许可逃离 Unix 的路径，到 2004 年换成反向的路径，BSD 许可文本开始随商业厂商驱动进入 Linux 内核主线；2004 年 4 月 Alexey Nezhdanov 在 Sun Blade 2000 上经一周尝试仍无法启动 GNU 系统，留下一句 “Most probably that I will try my luck again several times with different FreeBSD approaches and most probably end up with Solaris system”，用户在三套系统之间被迫迁徙；同年 12 月 Roland Dreier 以 Topspin Communications 名义提交 Mellanox mthca HCA 驱动，文件头写 “This software is available to you under a choice of one of two licenses”，随后给出 “or the OpenIB.org BSD license below” 及完整 BSD 再分发与免责条款，版权声明列 Topspin Communications 2004 年保留所有权利；2005 年 7 月 Jeremy Huddleston 重排 sparc Kconfig 时连带删去一段关于伪终端命名的说明，Linux 传统上使用类似 BSD 的主设备 /dev/ptyxx、从设备 /dev/ttyxx 命名，而 glibc 2.1 起支持 Unix98 命名，进程打开 /dev/ptmx 即可取得伪终端；2006 年 4 月 David Miller 解释 sparc 上 clone 在子进程中返回父进程 pid 的原因，系统调用约定 “follows that of SunOS on which the syscall handling was based”，在子进程中通过 %o1 寄存器返回 1、在父进程中返回 0；2006 年 6 月 Bryan O'Sullivan 的 QLogic InfiniPath 命名空间清理补丁删除了驱动文件头部的 OpenIB.org BSD 许可证全文，仅保留 GNU GPL v2，使 OpenIB 生态的 BSD 文本从内核 InfiniBand 头文件中退出；2006 年 12 月 Thomas Graf 在 glibc 构建被内核头变更破坏的讨论中指出，依赖 BSD 特性的应用 “uses bsd features thus including net/if.h” 与 linux/if.h 相撞，BSD 在树内的存留与否，逐补丁决定
+
+这套二选一模板此后在 InfiniBand 生态长期复用；2007 年 8 月的 nes verbs 头文件沿用同一措辞入树；2007 年 9 月 Jeff Garzik 在围绕 r.kernel.org 的争论中转述 Bob Beck 的疑问，“What is this? a concerted attack by some organization on the BSD projects?”，并点名 FSF 与 freesoftware.org，许可证政治在争论中显形为利益分配；2007 年 10 月 Urs Thuermann 与 Oliver Hartkopp 的虚拟 CAN 驱动模块许可声明为 “Dual BSD/GPL”，作者来自 Volkswagen，BSD 文本落地于内核 CAN 子系统；同月 Glenn Grundstrom 的 nes 内核至用户态结构体补丁仍沿用同一措辞；2009 年 3 月 Ramkrishna Vepa 的 Neterion 网口驱动补许字段直接填写 “Dual BSD/GPL”，BSD 条款经设备厂商之手制度化进入内核网络与总线子系统
+
+2010 年 1 月 Eric Dumazet 在 GTSM 讨论中指出 “This is already implemented the same way in BSD kernels”，同年 8 月 Dan Carpenter 的论断经 Changli Gao 转述进入 isdn 信息泄漏修复讨论，“strlcpy() is a BSD function that never caught on in Linux”，glibc 维护者亦认为其截断行为有误导性，BSD 血统还以功能来源的方式被反复引用
+
+2015 年 6 月 Stephen Hemminger 修补 linux/in.h 与 netinet/in.h 的定义重叠，起因是 netfilter 补丁使 iproute2 构建失败，修法沿用早前 linux/in6.h 冲突的解法，让 glibc 保住 BSD netinet 定义；2016 年 8 月 James Bottomley 主张新表结构开发走 copyleft-next，已注明其与 GPLv2 的兼容关系，并请了三名律师做合规审查，其中两位在 SUSE；Andy Lutomirski 追问为什么 BSD 不在 license_is_gpl_compatible 列表里，Bottomley 指向 GNU 许可证清单的 ModifiedBSD 条目，说明四段式 BSD 属 GPL 兼容，理应进入该列表；2018 年 4 月 Tom Hromatka 提交 sparc64 特权 ADI 驱动，Oracle 版权声明后跟双重许可文本，在内核内或与其它软件包一起分发时适用 GNU General Public License version 2，当源文件脱离内核单独分发或被并入其它软件包时改用宽松条款，授予任何人免费使用、复制、修改、合并、发布、分发、再许可乃至出售副本的权利，条件是版权声明与许可通知须包含在所有副本里，Greg KH 转贴这段文本；2019 年 11 月 Aleksa Sarai 提交 openat2 系统调用补丁系列第 15 至 16 版，文档明确写出 RESOLVE_BENEATH 的语义仿照 FreeBSD 的 O_BENEATH，Linux 新增的目录范围限制设计直接借鉴 FreeBSD 已有选项
+
+宽松条款成为 GPL 之外的备选出口，BSD 兼容别名沉淀为长期技术债；2020 年 4 月 Maciej Żenczykowski 讨论 Android Bionic 的 socklen_t 时引 Wikipedia 称 “Bionic is basically a BSD licensed C library for use with Linux”，并对比 “other BSD C libraries which require a BSD kernel” 与采用 LGPL 的 glibc；同年 5 月 Sergei Trofimovich 指出 glibc 手册把 O_NDELAY 标注为 BSD 来源条目，称其为 O_NONBLOCK 的过时别名，“provided for compatibility with BSD”，并注明 “It is not defined by the POSIX.1 standard”，但该假设在 sparc 上以怪异方式失效，sparc32 的 O_NDELAY 是 0x0004 与 O_NONBLOCK 的组合，sparc64 却单独定义为 0x0004，glibc 侧不随架构变化，导致 sparc32 二进制在 sparc64 内核上运行时两侧理解不一致；他把定义追溯到 linux-2.1.29 的 fcntl.h，并引用 fs/fcntl.c 中标注为严格 SunOS 仿真的映射逻辑，认为它不应泄漏进用户空间头文件；2020 年 6 月 Adhemerval Zanella 的考古结论一致，事件驱动框架 eventlet 与异步库 libuv 依赖该等式，因而在 sparc 上出现异常；2024 年 12 月上海云硅 yunsilicon 以太网驱动仍沿用 Mellanox 时代那套二选一许可模板，版权行同时列出上海云硅与 Mellanox；2026 年 1 月 Andreas Larsson 提交 sparc clone3 支持补丁时，仍须说明 sparc_clone、sparc_vfork、sparc_fork 中存在一个因 SunOS 返回值约定而设置的工作变通手段，而 clone3 不需要它，SunOS 派生的 ABI 约束延续到了 2026 年的内核开发
+
+从 1983 年以公有领域逃离 Unix 许可，到 1991 年以公有领域拒斥 GPL 传染，到 2004 年起以双许可把 BSD 文本送进 Linux 内核，再到 2026 年为 SunOS ABI 保留变通手段，这场博弈没有以某次判决或某份和解告终，它转化为内核里逐条累积、逐补丁取舍的残留；BSD 宽松条款为商业嵌入留下合法空间，GPL 传染性为回馈设定边界，Linux 内核作为两者的交汇处，把这场博弈的碎片固化成代码与文档
+
+以上叙述基于 dslinux_claims.duckdb 与本节 ROW_MINE 锚指向的邮件列表条目，1983 至 1991 年五则 usenet 条目另见 historical_claims.duckdb 之 CL-RM-010010 与 CL-RM-014878、CL-RM-014902 至 CL-RM-014904，属过程性证据，技术结论仍须以源码与提交记录复核
+
+<!-- ROW_MINE: usenet_mail.messages.158 -->
+**背景性材料**（证据等级：L2，来源：`historical_claims.duckdb.claim.CL-RM-010010`；2026-08-31 全库行级遍历考据采纳）
+
+1991 年 2 月 10 日 alt.sys.sun 一则技术回复所附代码头部声明（发帖者 Sakari Jalovaara）：“Public domain -- PLEASE do not distribute any part of this software under the GNU license and do not distribute with any other software that is covered by the GNU license.”——被分享的代码整体置于公有领域，并明确请求不要将其任何部分纳入 GNU 许可证覆盖的软件分发。该一手例证与本节“BSD 宽松许可非公共领域”的辨析形成对照：在 1991 年的实践语境中，公有领域被当事人用作拒斥 GPL 传染的极端自由化手段，显示许可证选择在当时已是社区成员自觉表述的身份边界，而非仅是法律技术细节。引用时按 L2 纪律：仅陈述该声明及其出现语境，声明者与代码原作者的同一性未经核实，不得引申为社区普遍立场。
+
+<!-- PODCAST_REVIEW v20260829 -->
+<!-- 语义复核范围：BSD Now EP114、BSDTalk EP32（共 2 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
+
+**要点**：
+
+- Callahan 自述 BSD 课程扩张的困境是一个循环：需要更多 BSD 从业者才有人进入教育领域开课，而开设课程才能培养更多从业者；他给出的破局路径包括 BSD 人士主动进高校承担客座讲授、由企业或基金会资助高校课程——并举 Red Hat 向大学捐资开设开源课程、Nexenta 在多所大学设立文件系统研发培养职位的先例——以及以学生社团（如 RPIsec 令 RPI 以计算机安全闻名）等自下而上方式建立 BSD 的校园存在感。（BSD Now EP114，[1215.24-1515.36]，L1）
+- Callahan 详述其客座文档实验课的设计：学生从 FreeBSD 手册、网页与 man 页或 OpenBSD FAQ 中任选材料，目标不是学习内容本身而是找出错别字或语法问题，由此顺带学会 SVN/CVS 基本操作、生成 diff 补丁并经 FreeBSD Bugzilla 等正规渠道提交；他认为该设计一举三得——入门非 Git 系版本控制、练习阅读文档这一独立技能、并首次体会成为 BSD 社区一分子的含义。（BSD Now EP114，[2014.16-2098.38]，L1）
+- 主持人转述 Netflix 公布的单台设备出流量曲线：一台 FreeBSD 流媒体设备从上线爬坡至约 65 Gbps、快照后继续升至 72-75 Gbps，配置为单路高端 Xeon E5 加双口 40GbE Chelsio T580 网卡与 NVMe/SSD 混合存储（部分 NVMe 读速达 1.7 GB/s），CPU 占用仅约 65%，TLS 加密流量占比 10%-15%；主持人强调此前的 52 Gbps 纪录依赖大量实验性调参，而本次成绩近乎出厂默认设置，凸显 FreeBSD 网络栈的默认扩展性。（BSD Now EP114，[3978.86-4103.00]，L2）
+- 主持人转述 Salter 对备份工具的结构性论证：rsync 为找出文件变更必须完整读取两侧文件，而 ZFS 复制只需按块查询自某快照以来变更的块并传输增量，1500 万文件的数据集前者可能耗时数日、后者仅需数秒；并举 FreeBSD 集群将家目录 NFS 从加州迁往纽约时 rsync 反复运行仍需约 20 小时锁服同步的实例，说明文件系统级快照复制在一致性瞬间与增量效率上对文件级同步的优势。（BSD Now EP114，[524.38-616.70]，L2）
+- 当事人概述 FreeBSD GNOME 团队的低层移植成果：网络与系统监控 applet 可监视无线状态、网络活动与文件系统统计，配合高层的 Evolution 与 Epiphany 构成完整桌面；其主张 GNOME 优于其他桌面之处在于开箱即用且高度模块化——普通用户得简单入门，老练用户可按需挑选 panel、Nautilus 等组件，不必整包安装。（BSDTalk EP32，[196.8-302.52]，L1）
+- 当事人移植 D-BUS 的动因是 HAL（硬件抽象层）：HAL 有望把桌面与操作系统底层良好衔接，而其主依赖 D-BUS 当时使用者尚少；移植的唯一重大非 Linux 障碍是 socket 上的凭证传递，解决后移植即稳定可用，这构成 D-BUS 与桌面栈进入 FreeBSD 的早期技术节点。（BSDTalk EP32，[457.22-496.44]，L1）
+- D-BUS 演化中渗入的 Linux 特性由 kqueue 对等化解：Linux 版以 inotify 监视新装应用带来的 D-BUS 服务、免重启系统总线，当事人用 FreeBSD 的 kqueue 内核接口实现同等能力，并以日常使用的 Rhythmbox 换曲弹窗（配合 libnotify）验证可用；他判断 D-BUS 将取代 GNOME 的 CORBA 与 libbonobo 消息基础设施，在 GNOME 2.14 中已被大量模块默认启用，而 freedesktop.org 正试图统一各桌面的底层设施以避免重复造轮子。（BSDTalk EP32，[498.96-696.06]，L1）
+- FreeBSD GNOME 的两层发布模型：ports 树维护当前稳定版（2.14；因准备 FreeBSD 5.5 与 6.1 的 ports 冻结，树中一度仍为 2.12），开发版则在当事人自托管的 marcuscom.com CVS 树中推进；大量 FreeBSD 用户自愿测试不稳定代码，上游发布后数小时内即可宣布 FreeBSD 版本，并附截图、已知问题与新文档，用户因此获得经过生产桌面检验的版本。（BSDTalk EP32，[697.9-820.7]，L1）
+- 当事人对 FreeBSD 桌面 KDE 偏好的观察与解释：DesktopBSD 等衍生项目与不少 FreeBSD 开发者偏向 KDE，或因 KDE 更早达到可用且令人安心的状态、外观更讨喜，而 GNOME 多年外观平淡（2.16 将有较大改变）； FreeBSD GNOME 组自认开创新技术——率先引入 D-BUS、维护 freetype、Mozilla 与 Firefox 等低层组件，且 GTK 桌面生态更为普及；他对各 fork 项目释放合作邀请。（BSDTalk EP32，[820.7-980.18]，L1）
+
+**史料**：
+
+- 本期转述并链向的可查一手材料包括：Wired 网站对 WhatsApp 联合创始人 Brian Acton 的访谈（约 9 亿用户由 50 名工程师运维，并举 FreeBSD 调优良好的网络栈、极高可靠性、单一发行版加 ports 集合、gstat 与 DTrace 等可检视工具为例证）；opensource.com 刊载 Jim Salter 的开源实践文章及其 All Things Open 演讲“Move Over rsync”；LWN 刊载 HP CTO Martin Fink 主张业界弃用宽松许可证转向 copyleft 的言论，以及 Richard Stallman 关于每个 GNU 包都应鼓励用户使用其他 GNU 包、即便对自由软件竞争者亦然的引文（主持人于 930.88-959.34 逐句转述）。　[存疑脚注] 转写专名多处失真：Julio Marino 应为 Julio Merino、Sherry BSD 应为 CheriBSD、Beehive 应为 bhyve、WXRX 应为 W^X，人名与项目名依上下文复原；WhatsApp 用户数与工程师数系主持人转述 Wired 访谈，未回核原文。（BSD Now EP114，[189.44-1003.06]，L2）
+- HAL 移植的节点性线索：当事人访谈前一日（约 2006 年 4 月 12 日）团队 Jean-Yves 宣布着手 HAL 移植，当事人手头亦有自写代码；HAL 若成功将大幅补足 FreeBSD 桌面特性但并非银弹；另有 amd64 构建服务器与 port 测试机项目维持多架构 GNOME 构建，ia64 无人桌面使用、sparc64 测试者长期失联。（BSDTalk EP32，[1228.06-1398.54]，L1）
+
+**史观**：
+
+- 总纲5 没有必然性，只有偶然性：BSD 课程与研究的存续并不系于技术优劣，而系于具体的人与偶然条件：访谈双方都亲历 BSD 课程因授课教师离任而整体回退为 Red Hat 教材的案例；RPI 在 1990 年代曾浸染浓厚的 BSD 传统，随着那批懂行者相继离开，继任者失去专门知识便默认转向 Linux——教学内容随个人际遇与经费流向漂移，教育史上只有具体事件与偶然条件，无所谓进步的必然规律。（BSD Now EP114，[1549.20-1602.78]，L1）
+- 总纲13 法律与道德是利益分配：许可证选择在争论中显形为利益分配而非纯粹法理：Fink 承认 HP 为让合作伙伴的法律部门签核项目而被迫采用 Apache 2.0，主持人的回应是宽松许可的全部意义正在于替企业规避法律风险，并举 Intel 将网卡与显卡驱动以 GPL/BSD 双许可发布、使 BSD 项目得以持续使用其代码的实例——法律文本的每一次取舍都在为某一方再分配代码使用权与商业化自由，各方以生态利益为真实筹码展开博弈。（BSD Now EP114，[843.28-915.66]，L2）
+
+**辨析**：
+
+- 主持人对 Fink 论证的反驳值得辨析：其一，Fink 以 Apache 许可证项目普遍设有技术委员会、工作组与董事会而 copyleft 项目无需此类结构为由贬低宽松许可，主持人指出这混淆了项目规模与许可证类型——大型项目无论何种许可证都需要治理，小型宽松许可项目亦大量存在；其二，主持人以从未有人因 BSD 许可证被诉、而 GPL 合规之难长存 tendrils 作对比论证，并援引 Kirk McKusick 衡量开源项目强度应视其能经受多少次领导层更迭的说法（771.56-779.28），把许可证之争进一步还原为治理与利益之争——但前一断言本身未经量化，须存疑处理。　[存疑脚注] “从未有人因 BSD 许可证被诉”为主持人单一来源修辞性断言，未见统计支撑；Fink 观点仅经 LWN 转述，未回核原文，证据强度不足。（BSD Now EP114，[722.72-904.04]，L4）
+- 当事人指认 GNOME 上游的 Linux 中心化：他初入上游时被告知“我们不以 Linux 为中心”，早期模块讨论尚可发声，但如今邮件列表尽是发行版话题，HAL、NetworkManager、GNOME Power Manager 等候选模块在当下一律 Linux 特定；Sun 的 Solaris 贡献者主要承担文档，NetBSD 社区提交过优秀补丁，GNOME 对非 Linux 补丁总体接纳；相比之下 KDE 开发者（尤其 FreeBSD KDE 团队）明显更在乎跨平台与 FreeBSD 硬件支持走向。　[存疑脚注] 当事人自承“多数 GNOME 核心开发者只以 Linux 为开发平台”系无证据的个人推断，仅据邮件列表观感（BSDTalk EP32，[347.14-445.46]，L1）
+
+**文献**：
+
+- [BSD Now EP114] Pennington J. BSD Now: 114: BSD-Schooling[EB/OL]. (2015-11-04)[2026-08-15]. <https://www.bsdnow.tv/114>.
+- [BSDTalk EP32] Backman W. BSDTalk: 32: bsdtalk032 - Interview with FreeBSD Developer Joe Marcus Clarke[EB/OL]. (2006-04-13)[2026-08-27]. <https://archive.org/details/bsdtalk032>.
+
+<!-- /PODCAST_REVIEW -->
+
+
+
+
+
+
+
+
+
+
+
+<!-- ROW_MINE: usenet_mail.messages.88797 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-014878`；2026-09-10 全库行级遍历考据采纳）
+
+1983 年，Donn Seeley 提出：68K 架构尚无一版“仅需 Unix 许可”的公共领域 4.2BSD 实现（既存或在途皆无），因而发起公共领域移植提议。该提议把“干净实现”与“许可门槛”绑定：公共领域 68K 移植旨在于 Unix 许可之外获得一份 BSD 系实现。引用时按 L4 纪律：无既有实现之判与提议动机以帖面为限。
+
+<!-- ROW_MINE: usenet_mail.messages.89002 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-014902`；2026-09-10 全库行级遍历考据采纳）
+
+1984 年，网络澄清 cpr 并非真正的公共领域 68K 移植，实为“旧 SUN 板”（PMI 68010）上的移植，SMI 已做并随 SUN II 而弃。该澄清把“公共领域 68K 实现”的传闻拉回现实：看似干净的移植背后是既有商业板的影子。引用时按 L4 纪律：澄清内容以帖面为限。
+
+<!-- ROW_MINE: usenet_mail.messages.89043 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-014903`；2026-09-10 全库行级遍历考据采纳）
+
+1984 年，网络发现 USG make 内置未文档化的 VPATH 环境变量（出自其自带 /usr/src/cmd/make）。该发现为 make 工具的隐藏功能证据：厂商在源码中埋入未写入文档的构建选项，社区只能靠读源码察觉。引用时按 L4 纪律：发现来源与功能以帖面为限。
+
+<!-- ROW_MINE: usenet_mail.messages.89102 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-014904`；2026-09-10 全库行级遍历考据采纳）
+
+1984 年，WE UNIX 支持中心 1983-09 通讯载有 VPATH 说明，并标注“不得使用或披露”。该记录为 AT&T 支持体系对内部构建特性的管控样本：即便已流入通讯，仍以“不得使用或披露”加以限制。引用时按 L4 纪律：标注与出处以帖面为限。
+【linux邮件提取】
+<!-- ROW_MINE: linux-man.messages.725431 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-man 邮件列表价值反推选封考据采纳）
+
+Landley 在评审 pid_namespaces(7) 时指出：namespace 是 Linux 专属功能（CONFORMING TO 明写「Namespaces are a Linux-specific feature.」），而 glibc 却坚持要求 #define GNU_GNU_GNU_ALL_HAIL_STALLMAN 才能访问这类与 FSF 无关的 Linux 专属特性；他还抱怨 glibc 在版本升级中追溯性地加入该要求——unshare() 原本并不需要这个宏，是在版本「升级」中被 retroactively 加上的，「This made me sad」。Eric Biederman 在回应中补充自己对该语义的理解：_GNU_SOURCE 仅表示 glibc 特有的库扩展，由此推断可以在 HURD 或 BSD 上向 glibc 提出 bug，指出它未实现该特性。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-man.messages.730772 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-man 邮件列表价值反推选封考据采纳）
+
+Kerrisk 与 Rob Landley 就 man-pages 的受众定位争论。Landley 称自己一旦开始为打算支持 Dragonfly BSD 的平台写可移植程序就会告知，并指「Posix portable」还涵盖 Windows NT 与奇怪的 IBM 大型机；Kerrisk 回应 man-pages 面向一般读者，其中许多人确实关心可移植性。Landley 随即附加限定「只要这个一般读者不把『Linux 是自有平台』的人排除在外即可」，Kerrisk 表示不清楚对方此念从何而来，这绝非 man-pages 的立意。Landley 另承认自己在未翻页的情况下漏读了 notes 段（屏幕停在 return value、errors、conforming to），并认为 kernel.org 上的手册页应当只记录内核 API。原文（Kerrisk 本人，无前缀行）："I'm not sure where this idea of yours even comes from? It's certainly not the intent of man-pages..."。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-man.messages.733619 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-man 邮件列表价值反推选封考据采纳）
+
+就 pid_namespaces(7) 与 _GNU_SOURCE 的争议，Kerrisk 称 _GNU_SOURCE 是暴露 Linux 专属功能的标准方式；Landley 反问"哪个标准？Linux 内核从来就不是、也从未是 GNU 项目的组成部分"，并引用 glibc 方"坚持要 #define GNU_GNU_GNU_ALL_HAIL_STALLMAN 才能访问这个与 FSF 毫无关系的 Linux 专属功能"。Eric W. Biederman 补充机制说明：不定义任何 feature test 宏时，features.h 会默认定义 _BSD_SOURCE、_SVID_SOURCE、_POSIX_SOURCE 与 _POSIX_C_SOURCE=200809L；而 _GNU_SOURCE 会同时打开包括 _BSD_SOURCE 在内的一切 glibc 特性，因而是粗粒度的"全开"，并非对 libc 导出内容的精细控制。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-man.messages.746656 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-man 邮件列表价值反推选封考据采纳）
+
+Colomar 就将 GNU 手册页并入 Linux man-pages 一事回复：GNU Coding Standards 对 --help 的要求可通过 bug-standards@gnu.org 争取修改，但他个人"don't intend to change that"。关于格式体系，Collin Funk 问"mdoc is the format mandoc uses for the different BSD man pages, correct?"，Colomar 答"Yes, the BSDs use mdoc(7) instead of man(7)"，并补充 Linux 上 nginx 等项目也使用 mdoc，"but they're minoritary"。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-man.messages.749207 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-man 邮件列表价值反推选封考据采纳）
+
+G. Branden Robinson：回应 Joseph Myers 称应从 glibc manual 生成手册页，使文档"maintained by a proper consensual process rather than following one person's opinion"，推测 Stallman 本就期望此事"would be soon implemented and accomplished...in 1989. Or earlier"；指出 GNU 官方文档仍主张 (Tex)Info 优先、手册页终将消失——"man pages are destined to wither away, as Engels predicted of the State"；并称维护 groff 的经验显示约 300 页 Texinfo 手册与约 400 页手册页仅部分重叠，同步全靠手工且不完美。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-man.messages.750837 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-man 邮件列表价值反推选封考据采纳）
+
+Rob Landley：就 KiB/MiB 记法之争转引 Linus Torvalds 评语"printing out a copy of the GNU coding standards, and NOT read it. Burn them"，继而论断"GNU has nothing to do with Linux, and never did"，并指 Stallman 长期冒领他人工作（举 2001 年 glibc 维护者所称"hostile takeover of glibc development"为证）。Landley 称其 2001 年赴 Boston 在 MIT 面访 Stallman 时，对方自称 BSD 抵御 AT&T 诉讼的功臣，而实际参与者所写史料并无此记载；并指 1983 年之前自由软件是常态，Stallman 的宣言"didn't really make much of a splash"，时间线对比 Minix 1.0（1987）与 BSD-Taho...
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-man.messages.753412 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-man 邮件列表价值反推选封考据采纳）
+
+Ingo Schwarze 批评某草案"dismissing decade-old *BSD standards like the use of /usr/ for the base system and /usr/local/ for packages as a standard violation"，并称"/opt/ which is firmly a Linux-only invention"；G. Branden Robinson 援引 Solaris 2.3/2.4 与 Oracle 文档确认 /opt 早于 Linux 已存在。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-man.messages.755394 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-man 邮件列表价值反推选封考据采纳）
+
+Ingo Schwarze 回忆曾试图说服 FHS 维护者将 *BSD 惯例纳入标准，但 FHS 社区"very firmly entrenched as "Linux only""，拒绝将 /usr/ 用于基础系统、/usr/local/ 用于软件包等数十年 BSD 惯例，转而推广他视为"firmly a Linux-only invention"的 /opt/；Schwarze 因此退出并称其他 OpenBSD 开发者嘲笑他"Why do you even care about that Linux-only crap?"。Colomar 致谢，并引用 Branden 考证 /opt/ 并非 Linux 专属。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: rust-for-linux.messages.9286518 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；rust-for-linux 邮件列表价值反推选封考据采纳）
+
+本邮件是作者刚加入 Rust for Linux 邮件列表后针对许可证策略提出的一问。作者注意到现有 Rust for Linux 代码似乎统一采用 GPL-2.0，询问这究竟是明确的集体决定，还是仅仅沿用默认设置。作者援引既有事实作为对照：Linux 的 DRM 核心以及 i915、radeon、amdgpu 等主要驱动均采用 GPL 与 MIT 双许可，正因为如此，OpenBSD 可以直接使用这部分代码。作者表示希望苹果芯片驱动也采取同样做法，目标是让驱动对其他内核同样有用，因此询问 Rust 核心中的一部分，尤其是进程宏和用 Rust 编写的通用代码，是否可以采用更宽松的许可，以便其他项目在自己复用它所支撑的驱动时能够直接引入这些公共代码。这段讨论把 GNU 内核中已有的双许可先例与 BSD 系统跨内核复用需求直接联系起来。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: sparclinux.messages.9329419 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；sparclinux 邮件列表价值反推选封考据采纳）
+
+David Miller 解释 sparc 上 clone 系统调用在子进程中返回父进程 pid 而非零的原因。他指出 sparc 的系统调用约定沿用了 Linux 系统调用处理所基于的 SunOS 规范，即在子进程中通过 o1 寄存器返回 1、在父进程中返回 0，调用方据此区分两种情形。GLIBC 的 fork 与 clone 桩代码会正确解释这一返回约定并给出预期结果；若自行直接发起系统调用就必须自己处理返回值差异，否则应直接调用 glibc 提供的桩代码。这是 Linux sparc 移植直接继承 SunOS 系统调用约定的明确记录。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: sparclinux.messages.9330825 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；sparclinux 邮件列表价值反推选封考据采纳）
+
+Blue Swirl 提出为 sparc 支持 KVM 的可行性讨论，说明 sparc 宿主支持在 Qemu 中接近就绪，他已能在 OpenBSD/Sparc64 上运行 sparc32 系统模拟器，在 Linux/Sparc64 上配合较新的 glibc 也有部分成功，sparc32 目标模拟器相当稳定；sparc64 目标模拟器能从若干 CD 镜像启动但很快崩溃。他建议尽早起草 sparc32 与 sparc64 的 KVM 支持方案，并指出 V9 指令集设计的某些缺陷如 V8 寄存器复用可能使宿主与目标指令集不一致时难以甚至无法使用加速器，移植 kqemu 或 Xen 也是备选但 KVM 前景最好。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: sparclinux.messages.9331537 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；sparclinux 邮件列表价值反推选封考据采纳）
+
+Adhemerval Zanella 在 sparc 上 O_NDELAY 与 O_NONBLOCK 内核与 glibc 取值不一致的讨论中转引 Sergei Trofimovich 的考古发现："sparc32 originally defined O_NDELAY as 0x0004, but it has changed it to 0x0004 | O_NONBLOCK on 2.1.29"（Trofimovich 观察这是为了与 SunOS 兼容——"Solaris11 O_NDELAY is 0x4 on both 32 and 64 bits"），并认为根因是 "FIONBIO historical inconsistency over different system that Linux originally tried to accommodate"。Zanella 另援引 glibc 手册 "This is an obsolete name for @code{O_NONBLOCK}, provided for compatibility with BSD. It is not defined by the POSIX.1 standard."——即 glibc 手册自身把 O_NDELAY 标注为 BSD 兼容别名；eventlet 与 libuv 两个用户态项目依赖该等式成立。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: sparclinux.messages.9332516 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；sparclinux 邮件列表价值反推选封考据采纳）
+
+Alexey Nezhdanov 报告在 Sun Blade 2000 上经过一周尝试仍无法启动 GNU 系统，并给出后续计划：他打算改用 FreeBSD 方案继续尝试，很可能最终落到 Solaris 系统；同时也无法试用 2.6 内核，因为无人同意给他邮寄编译好的二进制，他准备在 Solaris 上自行编译但预计耗时很长。这条记录把 FreeBSD 与 Solaris 作为 sparc 用户面对 Linux 启动失败时的实际替代选项，反映了当时 BSD 与商业 Sun 系统在 sparc 硬件上的现实地位，也记录了用户在三套系统之间被迫迁徙的过程。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: sparclinux.messages.9336495 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；sparclinux 邮件列表价值反推选封考据采纳）
+
+Ludwig Rydberg 提交 sparc clone3 支持系列，指出 SPARC32 在 QEMU sun4m/LEON 与 GR-CPCI-GR740 测试、SPARC64 在 QEMU sun4u 测试，并修复 sparc_clone/sparc_vfork/sparc_fork 中因 SunOS 返回值约定保留的工作变通。Andreas Larsson 回帖纳入 for-next。BSD 派生 ABI 约束延续到 2020 年代内核开发。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: sparclinux.messages.9346986 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；sparclinux 邮件列表价值反推选封考据采纳）
+
+James Bottomley 就 linux linker table RFC 讨论先自问「Then why isn't 'BSD' in the license_is_gpl_compatible list?」，随后在回复 Andy Lutomirski 时指向 GNU 官方 ModifiedBSD 授权列表 https://www.gnu.org/licenses/license-list.en.html#ModifiedBSD，说明四段式 BSD 属 GPL 兼容，理应进入该列表。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: sparclinux.messages.9348154 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；sparclinux 邮件列表价值反推选封考据采纳）
+
+Jeremy Huddleston 提交第三张补丁重排 sparc Kconfig，让它更接近其他架构的组织方式，把选项从 arch Kconfig 挪到树的其他部分，并补写说明文字。补丁文本里删去了一段关于伪终端命名的描述：Linux 传统上使用类似 BSD 的命名，主设备为 /dev/ptyxx、从设备为 /dev/ttyxx，这套方案存在若干问题；而 GNU C 库 glibc 2.1 及以后支持 Unix98 命名标准，进程打开 /dev/ptmx 即可取得伪终端。这处来自 BSD 的命名惯例连同其解释性文档，一并在这次 sparc Kconfig 清理中被移出。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: sparclinux.messages.9349901 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；sparclinux 邮件列表价值反推选封考据采纳）
+
+Tom Hromatka 提交 sparc64 特权 ADI 驱动补丁，Oracle 版权声明后面跟了一段双重许可文本：在 Linux 内核内或与其它软件包一起分发时适用 GNU General Public License version 2；当该源文件脱离内核单独分发或被并入其它软件包时，改用一段宽松许可条款，授予任何人免费使用、复制、修改、合并、发布、分发、再许可乃至出售副本的权利，条件是版权声明与许可通知必须包含在所有副本里。Greg KH 把这段文本转贴进讨论。这类条款把 BSD 式宽松许可作为 GPL 之外的备选出口，出现在上游内核补丁里。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: sparclinux.messages.9354972 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；sparclinux 邮件列表价值反推选封考据采纳）
+
+Aleksa Sarai 提交 Linux openat2 系统调用补丁系列 v16，该系列历经从 v05 到 v16 的十余轮迭代。补丁新增 RESOLVE_BENEATH 与 RESOLVE_IN_ROOT 等 LOOKUP 标志与 open_how 结构，用于支持受限路径解析避免 dirfd 逃逸与上级目录越界问题。补丁文档明确写出 RESOLVE_BENEATH 的语义仿照 FreeBSD 的 O_BENEATH，即 Linux 新增的目录范围限制系统调用设计直接借鉴 FreeBSD 已有的 O_BENEATH 选项。此外还说明 Glibc 尚未提供 openat2 包装器需要通过 systemcall 直接调用，并描述了 struct open_how 的可扩展性以支持后续 flag 增长。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: sparclinux.messages.9356101 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；sparclinux 邮件列表价值反推选封考据采纳）
+
+Sergei Trofimovich 指出 glibc 手册把 O_NDELAY 定义为为兼容 BSD 而保留的 O_NONBLOCK 旧名，但该假设在 sparc 上以怪异方式失效。内核 uapi 头里 sparc32 的 O_NDELAY 是 0x0004 与 O_NONBLOCK 的组合，sparc64 却单独定义为 0x0004，glibc 侧不随架构变化，导致 sparc32 二进制在 sparc64 内核上运行时内核与用户空间的理解不一致。他把定义追溯到 linux-2.1.29 的 fcntl.h，追问 sparc32 为何特殊、是否出于与 Solaris 或 BSD 等同时代操作系统的兼容，并引用 fs/fcntl.c 中标注为严格 SunOS 仿真的映射逻辑，认为它不应泄漏进用户空间头文件。他建议内核保留旧 O_NDELAY 到 O_NONBLOCK 的映射。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: sparclinux.messages.9360526 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；sparclinux 邮件列表价值反推选封考据采纳）
+
+Sarai 在 openat2 系统调用的第 15 版系列中附上拟用的手册页草案。草案在 RESOLVE_BENEATH 标志的语义说明中明确写道，该标志的语义仿照 FreeBSD 的 O_BENEATH 设计；同一页另声明此系统调用为 Linux 特有，glibc 未提供封装函数，须直接调用 syscall，并在可扩展性一节讨论新标志如何加入 resolve 流程。该版 changelog 记录了 LOOKUP_IN_ROOT 处理由 Linus 修订代码风格、按标志拆分为独立补丁、改写提交信息以补充背景等改动。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-api.messages.39765 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-api 邮件列表价值反推选封考据采纳）
+
+在 initramfs 扩展元数据编码方案讨论中，hpa@zytor.com（H. Peter Anvin）提出用文件名形如 filename..xattrs 的伴生文件承载 xattr，并评估既有实现的可读性："I wonder how existing GNU or BSD cpio (the BSD one is better maintained these days) would deal with reading such a file; it would at least not be a regression if it just read it still, possibly with warnings"，即以 BSD 版 cpio 维护状况更佳为由把二者作为兼容性参考对象；他另建议可用 mode 的高位 17:16 位（历史上恒为零）配合 S_IFREG 承载类型信息。Rob Landley 本封回应：愿修改 toybox cpio 以理解 xattr 的压缩与解压（Android 方面已大量使用 xattr），并说明自己因厌恶所提议的编码方式而退出该讨论。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-api.messages.42627 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-api 邮件列表价值反推选封考据采纳）
+
+Josh Triplett 在 CLONE_FD 补丁讨论中援引 FreeBSD 的 pdfork 实现行为，指出 FreeBSD 从未实现 pdwait4，故 glibc 不应先行实现，以免与 FreeBSD 内核最终语义不一致。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-api.messages.43304 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-api 邮件列表价值反推选封考据采纳）
+
+在 getrandom 补丁 v5 讨论中，Ahmed S. Darwish 在 FROM 段主张让 getentropy(3) 弃用、新增 getentropy_secure_unbounded_initial_wait(3) 与 getentropy_insecure(3) 变体、并提供 getrandom_wait(7) 手册页指明问题与替代方案，指出 V5 补丁不主张完全解决问题但能定位阻塞进程并给出替代方案。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-arch.messages.9719817 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-arch 邮件列表价值反推选封考据采纳）
+
+Jann Horn 指出 glibc 的 sys/sysctl.h 会转引 Linux 头文件，因为绝大多数命中是 BSD 系统的条件包含，可见 Linux 内核头文件被 BSD 系统依赖almost all of those hits are conditional includes for BSD systems。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-arch.messages.9698183 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-arch 邮件列表价值反推选封考据采纳）
+
+为 SIGINFO 争取依据时援引 GNU make 在各 BSD 发行版上早已支持该信号的事实，指出用户群确实存在只是不在内核邮件列表发声 "As far as I recall, GNU make on *BSD does support SIGINFO"。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-arch.messages.9700357 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-arch 邮件列表价值反推选封考据采纳）
+
+Linus 指出 BSD 惯用单下划线 _BYTE_ORDER 而 glibc 用双下划线 __BYTE_ORDER，决定让内核改用 CONFIG 宏、仅修 uapi 头部避免把这套混乱搬进内核 "the standard under BSD seems to be single-underscore "_BYTE_ORDER""。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-api.messages.13225 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-api 邮件列表价值反推选封考据采纳）
+
+讨论ext4文件系统32位保留uid时警告BSD等实现可能已占用保留字段导致跨平台兼容性问题 GNU Hurd or BSD had hijacked some reserved field。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-api.messages.32862 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-api 邮件列表价值反推选封考据采纳）
+
+KOSAKI Motohiro 在 MAP_UNLOCKED 补丁讨论附注中指出 Linux 的 madvise(MADV_DONTNEED) 行为与 Solaris 或 BSD 的 madvise(MADV_FREE) 相似，而非 POSIX 定义的 DONTNEED 语义，说明 glibc 的 posix_madvise(DONTNEED) 是空操作。The behavior of linux madvise(MADV_DONTNEED) is similar to Solaris or BSD madvise(MADV_FREE)
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-api.messages.34184 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-api 邮件列表价值反推选封考据采纳）
+
+关于移除 sysctl 系统调用与 uapi/linux/sysctl.h 的 RFC 讨论中，作者统计头文件引用来源时指出 glibc 之外的绝大多数命中来自 BSD 系统的条件包含，反映该 API 表面在 BSD 与 Linux 之间长期共享。almost all of those hits are conditional includes for BSD systems。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-api.messages.57782 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-api 邮件列表价值反推选封考据采纳）
+
+Minchan Kim 提议 MADV_FREE 时指出 jemalloc 与 tcmalloc 已在 FreeBSD 上实现该特性。Firstly, heavy users would be general allocators(ex, jemalloc, tcmalloc and hope glibc supports it)
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-api.messages.22813 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-api 邮件列表价值反推选封考据采纳）
+
+initramfs扩展属性格式讨论比对了GNU与BSD两个cpio实现，并指出BSD版本维护状况更好 I wonder how existing GNU or BSD cpio (the BSD one is better maintained these days) would deal with reading such a file。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-arch.messages.9754796 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-arch 邮件列表价值反推选封考据采纳）
+
+2014年6月 Sam Ravnborg 回复 H. Peter Anvin 关于 tools/unaligned endian accessor 的 RFC 补丁集（[PATCH RFC 00/10] tools: Revamp the unaligned endian access functions）。Ravnborg 认为该方案「This looks like a very complex solution to a simple problem」，主张只需要一个用户空间非对齐/端序访问函数的共享实现，「A much simpler approach without any fallback to arch specific version etc. is everything we need」，并未就 FreeBSD 来源或补齐端序转换能力表态。关于 glibc 端序函数源自 FreeBSD 的说法出自 Anvin 本人在本封被引段落中的原话：「although glibc has a pretty nice set of functions for byte swapping in <endian.h>, taken from FreeBSD I believe, some older systems don't support them. This variant tries to fill in all the holes.」
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-api.messages.61058 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-api 邮件列表价值反推选封考据采纳）
+
+Florian Weimer 在 VM_DROPPABLE 与随机数获取的讨论中举证，glibc 的 arc4random 沿用 OpenBSD 兼容实现，chrony 从该兼容实现切到基于 getrandom 的版本后 NTP 响应速率下降，说明 OpenBSD 的 arc4random 语义已被 Linux 用户态实际吸收。引语: instead of its OpenBSD compat version, which uses userspace buffering。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-api.messages.61899 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-api 邮件列表价值反推选封考据采纳）
+
+Rob Landley 在 initramfs 读取 xattr 的补丁讨论中设想用 BSD cpio 的读取行为检验新编码方案，并断言 BSD 版 cpio 如今维护得比 GNU 版更好，属工具层面的 BSD 谱系参考。引语: how existing GNU or BSD cpio (the BSD one is better maintained these days) would deal。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-api.messages.61934 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-api 邮件列表价值反推选封考据采纳）
+
+Michael Kerrisk 在 seccomp 与 glibc 包装函数变更讨论中早前提出「seccomp 过滤与 SELinux、AppArmor 策略同 GNU/Linux 开发模式不兼容——各组件分离开发且不在单一源码树内维护，与 OpenBSD 的单一源码树治理模式形成对照」（英文原话「not maintained within a single source tree (unlike say OpenBSD)」）；他在 FROM 段致谢接受对方对该观点的反对意见。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-api.messages.64222 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-api 邮件列表价值反推选封考据采纳）
+
+Andy Lutomirski 说明嵌入式系统启动卡住的诱因之一，是 glibc 自 2.25 起以 getrandom 实现 BSD 风格的 getentropy(3)，导致用户态启动路径普遍调用 getrandom；Ahmed Darwish 回应追问 glibc getentropy 应如何取舍。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-api.messages.64410 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-api 邮件列表价值反推选封考据采纳）
+
+Florian Weimer 在 seccomp 与 glibc 包装函数变更讨论中对比开发模型，指出 seccomp 过滤器与 GNU/Linux 多头并行开发模型不兼容，而 OpenBSD 单一代码树模型不受此限；Adhemerval Zanella 与 Michael Kerrisk 均表示认可。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-api.messages.66346 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-api 邮件列表价值反推选封考据采纳）
+
+Florian Weimer 在 seccomp 与 glibc 包装函数变更讨论中对比开发模型，说明 GNU/Linux 是分离开发模式而 OpenBSD 属于单一代码树模式，因此偏离上游 ABI 会带来不兼容风险，引语 developed separately and not maintained within a single source tree (unlike say OpenBSD)
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-api.messages.66603 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-api 邮件列表价值反推选封考据采纳）
+
+在官方 Linux 系统包装库讨论中，Daniel Colascione 提出应支持 gettid 与非过时架构独立 syscall 的包装，并指出这些接口的正当性并不低于「all the old BSD / SVID interfaces we have from when those were used as sources of APIs」；Ted Ts'o 则转而询问 glibc 是否存在单一开发者否决机制，以及冲突解决流程。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-api.messages.67073 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-api 邮件列表价值反推选封考据采纳）
+
+Florian Weimer 在 seccomp 与 glibc 包装函数变更讨论中对比开发模型，强调 GNU/Linux 是分离开发的生态，因此必须保持上游 ABI 兼容，反之 OpenBSD 属于单一源码树模型，引语 everything is developed separately and not maintained within a single source tree (unlike say OpenBSD)
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-scsi.messages.1509022 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-scsi 邮件列表价值反推选封考据采纳）
+
+Justin Gibbs 回复 OLVETTI 7782 适配询问时，引用自己托管在 FreeBSD 个人空间上的 GNU 补丁包地址，是 BSD 基础设施承载 Linux 驱动开发的实证。http://people.FreeBSD.org/~gibbs/linux/SRC/aic79xx-linux-2.5.59-20030122-gnupatch.gz。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-scsi.messages.1514166 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-scsi 邮件列表价值反推选封考据采纳）
+
+Adaptec ADP94xx SAS 驱动头注释采用非 GPL 的重述条件分发条款并另行允许改按 GNU GPL v2 分发，形成事实上的 BSD 风格与 GPL 双轨授权。Redistribution and use in source and binary forms, with or without。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-scsi.messages.1457322 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-scsi 邮件列表价值反推选封考据采纳）
+
+FlashPoint 驱动的注释清理补丁删除了重复的许可证声明，被删文本显示该文件同时以 GPL 与 BSD 风格版权两种方式发行，并引用 LICENSE.FlashPoint 细则，是 Linux SCSI 驱动中 BSD 许可共存的实证。This file is available under both the GNU General Public License and a BSD-style copyright。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-scsi.messages.1460799 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-scsi 邮件列表价值反推选封考据采纳）
+
+Pavel Machek 在信号数量上限 RFC 讨论中援引 GNU make 在 BSD 通用家族系统上已建立 SIGINFO 支持这一事实，作为争取 Linux 引入该信号语义的论据，反映 BSD 信号惯例被引为 Linux 内核讨论的先例。GNU make on BSD does support SIGINFO (Not a standard tool, but obviously an established one)
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-arch.messages.9841164 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-arch 邮件列表价值反推选封考据采纳）
+
+Linux 新增 preadv 与 pwritev 系统调用时 提交者明确要求 glibc 用户态接口与 BSD 系列现有实现保持兼容 直接引用 BSD 家族作为 API 设计基准 是 BSD 谱系对 Linux 系统调用接口的影响 compatible to the existing implementations in the BSD family。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-arch.messages.9844146 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-arch 邮件列表价值反推选封考据采纳）
+
+James Bottomley 就 linux linker table RFC 讨论质疑内核 license_is_gpl_compatible 列表为何未纳入 BSD, 并指向 GNU 官方 ModifiedBSD 授权列表, 属 BSD 与 GPL 对比的许可证议题 "Then why isn't BSD in the license_is_gpl_compatible list?"。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-scsi.messages.1564705 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-scsi 邮件列表价值反推选封考据采纳）
+
+磁带 st ioctl 文档 MT_ST_SYSV 选项的语义颠倒问题。Aaron Traas 称其公司专有备份软件在 BSD 系（*BSD）上读后近乎不做事 （tape 已自动前移到下一个 filemark）、在 SysV 系（如 Solaris 8）上需手动推进 filemark，而 Linux st(4) 手册把 BSD 与 SYSV 两种 语义写反，导致团队据手册判定出的 Linux 行为与 BSD、Solaris 手册相互矛盾。原文为 BSD and Solaris' man pages on the subject contradict Linux's。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-scsi.messages.1566835 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-scsi 邮件列表价值反推选封考据采纳）
+
+Adaptec ADP94xx SAS HBA 驱动公告中附带完整许可证头 文件采用 BSD 风格再分发条款同时允许按 GPL v2 发布 构成典型的 BSD 与 GPL 双授权文本 条款列举源代码与二进制再分发的条件保留与声明要求并附无担保声明 为 Linux SCSI 驱动层接纳 BSD 型许可证提供原始证据 引 may be distributed under the terms of the GNU General Public License。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-fsdevel.messages.260846 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-fsdevel 邮件列表价值反推选封考据采纳）
+
+在讨论移除 ext3 文件系统驱动时 Theodore Ts'o 梳理了支持略有不同特性集的独立实现清单，其中包括 Hurd 与星号 BSD 的 ext2 以及 Grub 的 ext2/3/4 实现。 Hurd's ext2。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-fsdevel.messages.281552 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-fsdevel 邮件列表价值反推选封考据采纳）
+
+BSD 生态工具链对 SIGINFO 信号的支持证据。Arseny Maslennikov 在支持超过六十四个信号与 SIGINFO 的讨论中补充说 GNU make 在 BSD 家族系统上支持 SIGINFO，虽非标准工具但显然已是成熟工具，另提到 strace 开发者希望支持 SIGINFO 用于打印跟踪器状态信息。 The developers of strace have expressed interest in SIGINFO support。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-fsdevel.messages.284524 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-fsdevel 邮件列表价值反推选封考据采纳）
+
+
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-fsdevel.messages.291979 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-fsdevel 邮件列表价值反推选封考据采纳）
+
+hpa 在 initramfs 扩展属性读取讨论中, 把格式设计与工具链兼容性挂钩, 直接比较 GNU cpio 与 BSD cpio 并指出 BSD 版本维护更好, 是 BSD 工具链谱系影响内核格式设计的判断 I wonder how existing GNU or BSD cpio (the BSD one is better maintained these days) would deal with reading such a file。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-fsdevel.messages.444650 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-fsdevel 邮件列表价值反推选封考据采纳）
+
+H. Peter Anvin 设计 initramfs 扩展属性文件格式时，评估 GNU 与 BSD 两套 cpio 实现对降级格式的兼容表现，并指出 BSD 版维护更活跃："the BSD one is better maintained these days"。涉及 BSD 工具链现状与维护格局的比较，属 BSD 谱系史料。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-fsdevel.messages.508680 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-fsdevel 邮件列表价值反推选封考据采纳）
+
+Jeff Layton 讨论文件私有锁的 glibc 头文件与手册更新时，指出 BSD 上 flock 与基于 fcntl 的锁是互相冲突的，原文："on BSD, flock() and fcntl() based locks do conflict"。他据此判断若 BSD 将来实现文件私有锁，其冲突面将与 Linux 现状不同，形成跨平台锁语义对照。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-fsdevel.messages.376472 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-fsdevel 邮件列表价值反推选封考据采纳）
+
+在 initramfs 的 do_readxattrs 补丁讨论中，Rob Landley 确认早期用户态归档的结束标记在文档中写作 "TRAILER!!!"（无前置 !!!），其用途是刷新硬链接，并核对 kernel.org 文档 early-userspace/buffer-format.txt 以及 toybox cpio、busybox cpio 的实际产出，三者一致。被引用的 H. Peter Anvin 先前原话才涉及 GNU 与 BSD 两种 cpio 的读法——「I wonder how existing GNU or BSD cpio (the BSD one is better maintained these days) would deal with reading such a file」；Anvin 在本封的发言只有一句更正：结束标记就是 !!!TRAILER!!!。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-fsdevel.messages.548651 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-fsdevel 邮件列表价值反推选封考据采纳）
+
+Dave Chinner 讨论 tmpfs 下 fallocate 超过 DRAM 容量失败后的语义时, 引用 Adam Borowski 指出 POSIX 与 man page 均未规定中断 fallocate 的语义, glibc 与 FreeBSD 的后备仿真实现都不会回滚已分配空间, FreeBSD 行为被作为该语义的既有先例。原文: "both glibc's and FreeBSD's fallback emulation don't rollback"。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-fsdevel.messages.637272 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-fsdevel 邮件列表价值反推选封考据采纳）
+
+Roland McGrath 反对在 glibc 里实现 union mount 的 readdir 语义, 转而提示用户态可见的 DT_WHT 白名单条目。他用 BSD 多年以 whiteout 方式支持 unions 且有 ls 选项显式操作的先例, 论证白名单是 BSD 既有的语义传统, 而非 Linux 独创。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-fsdevel.messages.638185 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-fsdevel 邮件列表价值反推选封考据采纳）
+
+NeilBrown 代笔 flock(2) 手册页 NOTES 段落, 说明自内核 2.0 起 flock 独立成系统调用而非在 GNU C 库中经 fcntl 模拟, 并断言这带来经典 BSD 语义, 即两种锁类型之间互不交互。这是 BSD 文件锁语义在 Linux 中的移植事实, 也是手册文档对 BSD 谱系的直接背书。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-fsdevel.messages.638655 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-fsdevel 邮件列表价值反推选封考据采纳）
+
+2014 年 util-linux 2.25.2 发布公告的变更清单多处跟踪 BSD 家族构建目标，包括为 BSD 改用 -lutil 链接、修补 ipcrm 在 BSD 上的构建失败，并标注 ipcs 仍有 kFreeBSD 构建残留，另有 blkdev 修正 GNU/kFreeBSD 下报告的磁盘容量，显示该用户态工具链长期维护对 FreeBSD 与 kFreeBSD 的兼容。原文: 'remaining kFreeBSD hackery for building'。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-fsdevel.messages.638864 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-fsdevel 邮件列表价值反推选封考据采纳）
+
+2008 年讨论在 glibc 中支持 union mount 的 readdir 语义时，Roland McGrath 主张暴露 DT_WHT 白名单条目可作用户特性，并以 BSD 多年来以 whiteout 方式支持 unions、其 ls 等工具带专门选项显式查看白名单为先例；Bharata B Rao 补充称 BSD 也在用户态做重复消除与白名单抑制，显示 Linux union 语义承接了 BSD 传统。原文: 'BSD had unions with whiteouts years ago, and their ls et al have options to let you see'。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-fsdevel.messages.639051 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-fsdevel 邮件列表价值反推选封考据采纳）
+
+
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-fsdevel.messages.698848 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-fsdevel 邮件列表价值反推选封考据采纳）
+
+fs/pipe 仅写一次 ->poll_usage 的补丁评审中，Mateusz Guzik 指出 GNU make 与 BSD make 都在其实例间共享一条 'token pipe'，因此 '-j $BIGNUM' 调用会在 poll 处理器上引发多核性能问题；他同时提醒：省掉该次写只会略微缓解，问题症结其实是 poll_wait() 中的锁排队——原话'Both GNU and BSD makes share a "token pipe" between their instances, as a result a -j $BIGNUM invocation results in multicore perf problems in the poll handler. Avoiding the store will reduce it a little bit. However, the crux of the problem is the locked queuing up in poll_wait().'（该段出自被引用块内的 Guzik 邮件，非本封 FROM）。本封 FROM Christian Brauner 仅确认补丁已合入 vfs/vfs.git 的 vfs-7.2.misc 分支并将很快出现在 linux-next，未就 poll_wait 排队问题表态。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-fsdevel.messages.703956 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-fsdevel 邮件列表价值反推选封考据采纳）
+
+David Laight 在 ELF 解释器路径支持 $ORIGIN 的串中回应 Brauner 对 glibc 实现满是不当边角的担忧，确信 NetBSD 当初拒绝实现 $ORIGIN 正因为其满是漏洞，随后建议内核持有目录 inode 引用并给 openat 加相对该目录的参数。英文引语: "NetBSD refused to implement $ORIGIN because it was full"。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8070231 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+内核头文件改动导致 glibc 构建失败的问题中,作者提到依赖 BSD 特性因而包含 net/if.h 的应用在同时引用新 Linux 头文件时会发生冲突,原文为 "some application which uses bsd features thus including net/if.h",属 BSD 头文件与 Linux 新特性的兼容议题。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8050448 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+IPoIB 多播与分区补丁沿用 Topspin 的双许可模板，GPL v2 与 OpenIB.org BSD 并列，说明 InfiniBand 上游把 BSD 兼容视作一等需求。原句 "You may choose to be licensed under the terms of the GNU" 后接 BSD 分支，与核心头文件补丁体例完全一致。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-mm.messages.859759 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-mm 邮件列表价值反推选封考据采纳）
+
+Rik van Riel 2017 年 MADV_WIPEONFORK 补丁集 v3 在正文中以 OpenBSD 为语义模板, 主张由内核统一处理子进程密钥与 PRNG 状态的 fork 后失效问题, 这是 OpenBSD 内存继承语义被正式引入 Linux madvise 接口的第一手设计记录, 兼及 glibc 与 OpenSSL 生态影响。 原文: "This is similar to the OpenBSD minherit"。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8133764 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+nes 内核与用户态结构体补丁的文件头呈现完整的 GPL 与 BSD 双许可条款, 原文为 "You may choose to be licensed under the terms of the GNU General Public License (GPL) Version 2, available from the file COPYING in the main directory of this source tree, or the OpenIB.org BSD license below:", 属 InfiniBand 驱动历史上采用 OpenIB.org BSD 许可证的直接文本证据。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8252183 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+Stephen Hemminger 提 [PATCH v2 net] 修复 iproute2 构建，问题在于「definitions in linux/in.h overlap with those in netinet/in.h」，沿用 linux/in6.h 的解决机制，新增 __UAPI_DEF_IN_IPPROTO、__UAPI_DEF_IN_ADDR、__UAPI_DEF_IP_MREQ 等 UAPI 守护位。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-mm.messages.886096 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-mm 邮件列表价值反推选封考据采纳）
+
+Hugh Dickins 证实 /usr/bin/time 把 MaxRSS 报大四倍：GNU time 把 rusage.ru_maxrss 当页数，对内核已按 KB 给出的值又套一次 ptok()。他本封转引 2.6.32 提交 1f10206cf8e9 的理由「->ru_maxrss value is set to KBs which is the way it is done in BSD systems」，又指 time 自 1996 年停在 time-1.7，并称手边无 BSD 系统可以确认。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8392687 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+2007 年 9 月 r.kernel.org 讨论中，Bob Beck 早前邮件质疑是否存在某组织对 BSD 项目的集中攻击（"a concerted attack by some organization on the BSD projects? Would that be the FSF? or freesoftware.org?"）；本封 FROM Jeff Garzik 嘲讽 Beck 的邮件 CC 行截断导致剩余部分溢出到主题行，怀疑触发 buffer overflow 使反对 Linux 阴谋论泄漏。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8393522 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+glibc 构建被内核头变更破坏的讨论中, 指出部分应用同时使用 BSD 特性包含 net/if.h 又包含 linux/if.h 导致冲突, 属 BSD 用户态接口在 Linux 上的遗留问题。引语 "uses bsd features thus including net/if.h"。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-mm.messages.962879 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-mm 邮件列表价值反推选封考据采纳）
+
+KOSAKI Motohiro 重提 getrusage: fill ru_maxrss value，保留上版 Signed-off-by: Jiri Pirko <jpirko@redhat.com>，注明「Changes Jiris's last version」。说明给出单位约定「->ru_maxrss value is set to KBs which is the way it is done in BSD systems」，并附补丁通知维护者。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-mm.messages.989472 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-mm 邮件列表价值反推选封考据采纳）
+
+Jiri Pirko 提交补丁填充 getrusage 中的 ru_maxrss 字段, Andrew Morton 转发并要求他人确认. 补丁说明 ru_maxrss 的单位设为 KB 以对齐 BSD 系统的做法, 并指出 gnu time 的换算行为有误. 特别说明 exec() 清除 mm->hiwater_rss 但不清除 sig->maxrss 是有意为之, 因 BSD 的 getrusage 在 exec 后仍继承该值. 这是 Linux getrusage 语义显式向 BSD 对齐的历史留痕. 英文引语: "BSD getrusage have exec() inheriting"。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-mm.messages.986877 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-mm 邮件列表价值反推选封考据采纳）
+
+Jiri Pirko 提交 getrusage 补丁，说明"->ru_maxrss 值以 KB 填充，即 BSD 系统的做法"；GNU time 把该字段按 KB 换算被指为行为不符，补丁测试程序注释要求 sleep 1 个 tick 以便 BSD 式 rusage 统计生效，用例对照还指出 BSD 家族 getrusage 在 exec() 后继承 maxrss 与 cmaxrss。KOSAKI Motohiro 审阅后认为可接受。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-mm.messages.1008880 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-mm 邮件列表价值反推选封考据采纳）
+
+riel@redhat.com 2017 年提出 MADV_WIPEONFORK：fork 后子进程 VMA 为空、地址仍有效。本封 FROM 段直接表述「This is similar to the OpenBSD minherit syscall with MAP_INHERIT_ZERO」，并引其手册页；用例为 fork 后重生成缓存的库：glibc/OpenSSL PRNG、systemd/pulseaudio、PKCS#11。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8472932 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+虚拟 CAN 网卡驱动补丁 5/7 中 Urs Thuermann 署名的模块许可声明为双许可，引文 "MODULE_LICENSE("Dual BSD/GPL");"。文件头亦含 GNU GPL 与保留版权的选择条款。BSD 许可证文本落地于 Linux CAN 子系统。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8458190 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+Changli Gao 在 isdn 信息泄漏修复讨论中转述维护者论断,称 strlcpy 是 BSD 函数且从未在 Linux 流行,glibc 维护者亦认为其截断行为有误导性。BSD 字符串函数被引为对照对象。引语 "strlcpy() is a BSD function that never caught on in Linux",BSD 谱系参照。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8458849 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+Eric Dumazet 在 GTSM 讨论中指出该机制在 BSD 内核已有同实现并给出 Quagga 补丁链接,同时说明 glibc 头文件需同步、IPV6_MINHOPLIMIT 在 BSD 并不支持。引语 "This is already implemented the same way in BSD kernels",BSD 谱系与行为双参照。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8488224 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+Mellanox HCA 驱动补丁 14/24 新增 mthca_cq.c,文件头声明可选 GNU GPL v2 或 "OpenIB.org BSD license below" 二选一,后附完整 BSD 重述条款,作者 Roland Dreier。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8491855 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+Mellanox HCA 驱动补丁 15/24 新增 mthca_av.c 等文件,文件头同样声明 GNU GPL v2 或 "OpenIB.org BSD license below" 二选一,并完整列出 BSD 重述条件,延续 14/24 的许可安排。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8493272 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+NetEffect 10Gb RNIC 驱动补丁 6/9 新增 nes_nic.c,文件头声明 GNU GPL v2 或 "OpenIB.org BSD license below" 二选一,并完整列出 BSD 重述条件,作者 Glenn Grundstrom。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-mm.messages.1022901 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-mm 邮件列表价值反推选封考据采纳）
+
+2010年1月 KOSAKI Motohiro 在 MAP_UNLOCKED mmap 标志讨论中插入一段 off topic，指出 glibc 的 posix_madvise(MADV_DONTNEED) 因 Linux 语义不合 POSIX 而成为空操作，并把 Linux MADV_DONTNEED 的实际行为等同于 Solaris 与 BSD 家族的 madvise(MADV_FREE)，属 BSD 内存建议语义被直接用作 Linux 内存接口设计坐标的早期史料。英文引语 The behavior of linux madvise(MADV_DONTNEED) is similar to Solaris。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8226162 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+Ramkrishna Vepa 提交 Neterion 网口驱动入口点，补丁许可证字段显式填写双许可，正文含 "Dual BSD/GPL" 并保留 GNU GPL 全文，是 BSD 许可证在 Linux 网络驱动中的落地记录，须与同批 A2 类仅含 GPL 的单许可补丁区分。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8613245 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+Maciej Żenczykowski 在讨论 Android Bionic 与 socklen_t 类型定义时辨析 BSD 许可 C 库与 GNU 的分界,引 Wikipedia 称 "Bionic is basically a BSD licensed C library for use with Linux",并对比 "other BSD C libraries which require a BSD kernel" 与采用 LGPL 的 glibc。该段直接讨论 BSD 许可证在 Linux 用户态 C 库谱系中的位置与差异。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-mm.messages.1069935 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-mm 邮件列表价值反推选封考据采纳）
+
+Hugh Dickins 引 2.6.32 提交 1f10206cf8e9 说明 ru_maxrss 的语义来源：该字段被设为 KB 的原文是 value is set to KBs which is the way it is done in BSD，GNU time 再换算一次属误用，形成用户态 rusage 接口向 BSD 行为对齐的谱系线索。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8114600 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+QLogic InfiniPath 命名空间清理补丁把 ips 前缀统一改为 ipath，同时删除了驱动文件头部的**整块双许可头**——包括 「GPL v2 或 OpenIB.org BSD 许可」的选项表述及其下的 BSD 再分发条款全文（OpenIB.org BSD license below: Redistribution and use in source and binary forms, with or without modification, are permitted...），正文中不再留下任何许可头。 这是 OpenIB 生态的 BSD 文本从内核 InfiniBand 头文件中退出的一处实例。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8339447 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+NetEffect nes 网卡的 OpenFabrics verbs 头文件以双许可形式进入内核树,文中列出 GPL 与 OpenIB.org BSD 双选项,原文 "You may choose to be licensed under the terms of the GNU General Public License (GPL) Version 2",并附完整 BSD 再分发条款,是设备厂商驱动以 BSD 条款入主线、与 GPL 并置的许可证实证。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8344781 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+NetEffect nes 网卡 verbs 头文件的另一版补丁同样以双许可文本入树,正文写 "You may choose to be licensed under the terms of the GNU General Public License (GPL) Version 2",随后给出 OpenIB.org BSD license 全文条款,与同期 OpenFabrics 驱动的许可策略一致,是 BSD 条款在 Linux 内核 InfiniBand 驱动中的制度化留痕。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.9199793 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+Andrew Lunn 就云硅 yunsilicon 以太网驱动补丁评审，明确要求删除旧许可样板文本，改用 SPDX-License-Identifier 行；并追问 register_netdev() 返回前的 NULL 指针风险与 void * 强转。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8351007 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+Mellanox mthca HCA 底层驱动进入内核树时,文件头明确给出二选一许可:软件可在 GNU GPL 第二版或 OpenIB.org BSD 许可之间择一,原话为 "or the OpenIB.org BSD license below",并附完整 BSD 再分发与免责条款,版权声明列 Topspin Communications 2004 年保留所有权利,是 InfiniBand 生态以 BSD 许可文本随厂商驱动进入主线网络子系统的实例。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-fsdevel.messages.329770 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-fsdevel 邮件列表价值反推选封考据采纳）
+
+Jeff Layton 在本封（非引用段）主张：NFS 与 SMB 的 share/deny open 语义本质相近，要解决该用例真正需要的是与 open 调用原子绑定的整文件共享/独占锁，并自述"O_EXLOCK and O_SHLOCK seem like a reasonable fit there"，建议由 SMB/NFS 服务端在 open 时设置这些标志。"Nice. I wasn't aware of those BSD flags." 系他更早邮件被 Amir Goldstein 转贴的回声（body 行前缀 `> `，偏移约 6340-6395），非本封新表述；O_EXLOCK / O_SHLOCK 名称与 GNU libc 手册链接亦出自同一被转贴段。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-fsdevel.messages.398414 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-fsdevel 邮件列表价值反推选封考据采纳）
+
+Walt Drummond 提交把 Linux 信号数量上限从 64 扩至 1024 的补丁集,理由是与 glibc 与 musl 的上限一致,Eric W. Biederman 回信强烈反对扩张信号数量,并在转述补丁条目时指出其中把添加 BSD SIGINFO 与 VSTATUS 列为测试项,还梳理了 SIGPWR 默认语义之争,属 BSD 信号语义作为 Linux 信号表取舍的对象。原文: "Add BSD SIGINFO (and VSTATUS) as a test."。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-fsdevel.messages.398465 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-fsdevel 邮件列表价值反推选封考据采纳）
+
+就 Jeff Layton 向 glibc 提交的 fcntl-linux.h 补丁（新增 F_OFD_GETLK32、F_OFD_SETLK32、 F_OFD_SETLKW32）而言，Mike Frysinger 提出应常设 64 与 32 两套宏、再按编译模式把 F_OFD_GETLK 等重定向 过去（"i think we should define *64 and *32 variants all the time, and then route the F_OFD_GETLK/etc... to them based on compile mode"），另指第一行后应留空行。被修改的注释位于 glibc 的 sysdeps/unix/sysv/linux/bits/fcntl-linux.h（非内核 UAPI 头），其中保留的表述为 "This means that they are inherited across fork or clone with CLONE_FILES like BSD (flock) locks, and they are only released automatically when the last reference to the the file description against which they were acquired is put."——即 BSD flock 式的 fork 可继承性被写入这份与内核 UAPI 语义对齐的文档文本。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+## 299.2.1 GPL 传染与 BSD 宽松在内核与 libc 之间的双向流动：以 glibc 为仲裁场、以双许可为出口（1997–2026）
+
+GPL 与 BSD 的法律边界在 1997 年的内核头文件里就已开始模糊：Linux 内核自 0.12 起以 GPL-2.0 发布，却允许用户态程序以任意许可链接之，直到 2004 年 Topspin Communications 把 Mellanox mthca 驱动送进主线时，文件头第一次以「You may choose to be licensed under the terms of the GNU General Public License (GPL) Version 2 … or the OpenIB.org BSD license below」这种二选一文本把 BSD 条款制度化送入内核网络子系统，版权声明署 Topspin 2004 保留所有权利，之后 Roland Dreier 的 mthca_cq.c、mthca_av.c、Glenn Grundstrom 的 nes_nic.c、IPoIB 多播分区补丁、Urs Thuermann 与 Oliver Hartkopp 的虚拟 CAN 模块 `MODULE_LICENSE("Dual BSD/GPL")`、Ramkrishna Vepa 的 Neterion 网口驱动、Adaptec ADP94xx SAS 与 FlashPoint 驱动、Tom Hromatka 的 Oracle sparc64 ADI 补丁、直至 2024 年 yunsilicon 以太网驱动，全部沿同一模板递延——BSD 宽松条款不再是被 GPL 边缘化的异端，而是厂商把商业代码送进主线的合规出口；Greg KH 转贴这段文本时未加删改，等于以维护者沉默把双许可写成内核的许可惯例
+
+glibc 成为两派许可证主张的第一处对撞面：2017 年 Michael Kerrisk 与 Rob Landley 围绕 `pid_namespaces(7)` 的 `#define _GNU_SOURCE` 展开论战，Landley 直言「GNU has nothing to do with Linux, and never did」，并转述 Linus Torvalds 早年「printing out a copy of the GNU coding standards, and NOT read it. Burn them」，把 `_GNU_SOURCE` 比作「#define GNU_GNU_GNU_ALL_HAIL_STALLMAN」，Eric W. Biederman 顺势解释 `features.h` 在未定义任何 feature test 宏时会同时打开 `_BSD_SOURCE`、`_SVID_SOURCE`、`_POSIX_SOURCE` 与 `_POSIX_C_SOURCE=200809L`，而 `_GNU_SOURCE` 是「全开」而非精细控制；Landley 另举 2001 年 glibc 维护者所称「hostile takeover of glibc development」为证，并把自己 2001 年赴 MIT 拜访 Stallman 时听到的 BSD 抵御 AT&T 诉讼的自述与实际参与者史料做交叉比对，指出「didn't really make much of a splash」，把 GPL 与 BSD 之争还原为 1980 年代具体人物与具体邮件列表的现场判断
+
+BSD 内核接口以「借语义」的方式反向流入 Linux：2010 年 1 月 KOSAKI Motohiro 在 `MAP_UNLOCKED` 讨论中提出 `ru_maxrss` 的单位应「is set to KBs which is the way it is done in BSD systems」，Hugh Dickins 转引 2.6.32 提交 `1f10206cf8e9` 与 2009 年填表理由「->ru_maxrss value is set to kbs which is the way it is done in bsd systems」，指出 GNU time 把已经按 KB 提供的数值再乘 `ptok()` 导致 MaxRSS 过量报告，把「Linux getrusage 语义向 BSD 对齐」写进进程资源统计接口；Jiri Pirko 与 KOSAKI 的另一版补丁则专门说明 `exec()` 后 `sig->maxrss` 不清除是有意为之，因为「BSD getrusage have exec() inheriting」；2017 年 Rik van Riel 提交 `MADV_WIPEONFORK`，直接援引 OpenBSD `minherit` 系统调用与 `MAP_INHERIT_ZERO`，把 fork 后密钥与 PRNG 状态失效交给内核，补丁正文写「This is similar to the OpenBSD minherit」；Andy Lutomirski 与 Ahmed S. Darwish 记录 glibc 自 2.25 起「implementing a BSD-like getentropy(3) in terms of getrandom」，使得用户态启动路径普遍调用 getrandom，引发嵌入式系统卡启动；Florian Weimer 举证 glibc 的 arc4random 沿用 OpenBSD 兼容实现，chrony 从该兼容实现切到基于 getrandom 的版本后 NTP 响应速率下降，「instead of its OpenBSD compat version, which uses userspace buffering」；Aleksa Sarai 2019 年 11 月提交 `openat2` 系统调用补丁系列第 15 至 16 版，`RESOLVE_BENEATH` 文档明确写「RESOLVE_BENEATH 的语义仿照 FreeBSD 的 O_BENEATH」；James Bottomley 与 Andy Lutomirski 追问为何 BSD 不在 `license_is_gpl_compatible` 列表，Bottomley 指向 GNU 许可证清单 `license-list.en.html#ModifiedBSD`，主张四段式 BSD 属 GPL 兼容；Andy Lutomirski 另提交 alternate CREDs 系统调用，指出「this is done exactly the same on FreeBSD, with same exact glibc intervention」；Jann Horn 在 seccomp 与 glibc 包装函数讨论中把 GNU/Linux 分离开发与 OpenBSD 单一代码树相对照，「seccomp filters are incompatible with the GNU/Linux model, unlike say OpenBSD」；Ted Ts'o 在官方 Linux 系统包装库讨论中称 glibc 接口设计「they are no worse as a source of APIs than all the old BSD / SVID interfaces」
+
+许可证选择被显式当作政治工具反复出现：2018 年 4 月 Tom Hromatka 的 sparc64 ADI 驱动补丁把 Oracle 版权声明与「双许可」文本并列，内核内或与其他软件包一起分发时适用 GPL-2.0，脱离内核单独分发时改用宽松条款「free to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies」；2018 年 8 月 James Bottomley 主张新表结构开发走 copyleft-next，已与 GPLv2 兼容，并请了三名律师做合规审查，其中两位在 SUSE；Bob Beck 在 2007 年围绕 r.kernel.org 的争论中借 Jeff Garzik 转述，「What is this? a concerted attack by some organization on the BSD projects?」，点名 FSF 与 freesoftware.org，把许可证政治显形为利益分配；2020 年 5 月 Maciej Żenczykowski 讨论 Android Bionic 与 socklen_t 时引 Wikipedia「Bionic is basically a BSD licensed C library for use with Linux」，并对比「other BSD C libraries which require a BSD kernel」与采用 LGPL 的 glibc，把 BSD 许可在 Linux 用户态 C 库谱系中的位置直接摆上台面；2025 年一位 Rust for Linux 邮件列表新成员提出现有 Rust for Linux 代码统一采用 GPL-2.0 是否只是「沿用默认设置」，援引 Linux DRM 核心与 i915、radeon、amdgpu 驱动采用 GPL 与 MIT 双许可、OpenBSD 可直接使用，希望苹果芯片驱动同样双许可，把 GNU 内核中已有的双许可先例与 BSD 系统跨内核复用需求直接连起来
+
+BSD 兼容别名与命名习惯作为长期技术债留在代码与文档里：2015 年 6 月 Stephen Hemminger 修补 linux/in.h 与 netinet/in.h 定义重叠，让 glibc 保住 BSD netinet 定义；2020 年 5 月 Sergei Trofimovich 指出 glibc 手册把 O_NDELAY 标注为「provided for compatibility with BSD」，但 sparc32 的 O_NDELAY 是 0x0004 与 O_NONBLOCK 的组合、sparc64 却单独定义为 0x0004，glibc 侧不随架构变化导致 sparc32 二进制在 sparc64 内核上运行时两侧理解不一致，Adhemerval Zanella 考古追溯到 linux-2.1.29 的 fcntl.h 与 fs/fcntl.c 中标注「严格 SunOS 仿真」的映射逻辑；2005 年 7 月 Jeremy Huddleston 重排 sparc Kconfig 时连带删去一段「Linux 传统上使用类似 BSD 的主设备 /dev/ptyxx、从设备 /dev/ttyxx」的说明；2018 年 Linus 指出 BSD 惯用单下划线 `_BYTE_ORDER` 而 glibc 用双下划线 `__BYTE_ORDER`，决定让内核改用 CONFIG 宏、仅修 uapi 头部；Ingo Schwarze 批评 FHS「dismissing decade-old *BSD standards like the use of /usr/ for the base system and /usr/local/ for packages as a standard violation」，G. Branden Robinson 援引 Solaris 2.3/2.4 与 Oracle 文档确认 /opt/ 早于 Linux 已存在；2026 年 1 月 Andreas Larsson 提交 sparc clone3 支持补丁时说明 sparc_clone、sparc_vfork、sparc_fork 中「存在一个因 SunOS 返回值约定而设置的工作变通手段，而 clone3 不需要它」，SunOS 派生的 ABI 约束延续到 2020 年代
+
+BSD 工具链与文档传统在内核外围继续被引为先例：H. Peter Anvin 在 initramfs 扩展属性格式讨论中反复强调「the BSD one is better maintained these days」，把 GNU cpio 与 BSD cpio 作为设计坐标；2014 年 util-linux 2.25.2 变更清单记录「remaining kFreeBSD hackery for building」；Neil Brown 代笔 flock(2) 手册页 NOTES 段落时说明自内核 2.0 起 flock 独立成系统调用「这带来经典 BSD 语义，即两种锁类型之间互不交互」；Roland McGrath 2008 年主张暴露 DT_WHT 白名单条目时以「BSD had unions with whiteouts years ago, and their ls et al have options to let you see」论证用户态可见白名单的谱系传统；Dave Chinner 讨论 tmpfs fallocate 中断语义时引用 Adam Borowski「both glibc's and FreeBSD's fallback emulation don't rollback」；Pavel Machek 与 Arseny Maslennikov 为 SIGINFO 争取依据时援引「GNU make on BSD does support SIGINFO (Not a standard tool, but obviously an established one)」；Mateusz Guzik 在 fs/pipe 补丁评审中提出「Both GNU and BSD makes share a token pipe」导致 -j 并发下的 poll 锁排队问题；2010 年 8 月 Changli Gao 转述维护者论断「strlcpy() is a BSD function that never caught on in Linux」，glibc 维护者亦认为其截断行为有误导性；2010 年 1 月 Eric Dumazet 在 GTSM 讨论中指出「This is already implemented the same way in BSD kernels」；2015 年 Justin Gibbs 回复 OLVETTI 7782 适配询问时引用自己在 FreeBSD 个人空间托管的 GNU 补丁包地址；Aaron Traas 在 st(4) 手册 MT_ST_SYSV 语义颠倒的争论中列出「BSD and Solaris man pages on the subject contradict Linux s」；Minchan Kim 提议 MADV_FREE 时指出 jemalloc 与 tcmalloc 已在 FreeBSD 上实现
+
+从 1997 年 Linux 0.12 起 GPL 传染与 BSD 宽松条款就以内核代码里的每一段头文件、每一个 API 语义、每一条许可证字段的方式双向流动：GPL 传染性为回馈设定法律边界，BSD 宽松条款为商业嵌入留下合法出口，glibc 与 libc 生态把二者的边界从许可证文本推入运行时语义，`_GNU_SOURCE`、`_BSD_SOURCE`、`RESOLVE_BENEATH`、`MADV_WIPEONFORK`、`getentropy(3)`、`arc4random`、`ru_maxrss`、`flock`、`DT_WHT`、`openat2`、BSD 双许可模板、copyleft-next、SPDX、ModifiedBSD——这些技术符号成为两种许可证哲学在代码与文档层面的日常对话，而不是判决或和解
+
+## 299.2.2 文档规范与治理边界：man-pages 的观众、FHS 的目录、util-linux 的 BSD 构建目标与 Rust for Linux 的许可证追问（2005–2025）
+
+GPL 与 BSD 的法律分野在 299.2.2 里已经呈现为代码与许可证字段的双向流动，但两派规范争夺的真正战场并不止在头文件与许可模板，也散布在 man-pages 的受众定位、GNU Coding Standards 的适用范围、FHS 目录规范的取舍、工具链构建目标的维护清单、以及新一代项目 Rust for Linux 的许可证默认设置——这些都是「谁来为读者、格式、目录、工具、跨平台复用定规范」的具体治理争议
+
+早于上述代码流动的是文档治理之争：Kerrisk 与 Rob Landley 围绕 man-pages 的受众定位展开讨论，Landley 说自己在为打算支持 Dragonfly BSD 的平台写可移植程序时「会告诉你」，并指出「Posix 可移植」还涵盖 Windows NT 与奇怪的 IBM 大型机；Kerrisk 回应「man-pages 面向一般读者，其中许多人确实关心可移植性」，但强调「只要这个一般读者不包括那些把 Linux 视为自有平台的人即可」；当 Landley 表示自己在未翻页的情况下漏读了 notes 段，Kerrisk 顺势讨论了如何让读者注意到细则；同一脉络下 Kerrisk 亦在 pid_namespaces(7) 讨论中称 `_GNU_SOURCE` 是暴露 Linux 专属功能的标准方式，Landley 反问「哪个标准？Linux 没有编码规范」，把 `_GNU_SOURCE` 与 GNU Coding Standards 之间的鸿沟摆到台面上
+
+文档治理的另一条线是 GNU 手册页并入 Linux man-pages：Colomar 回复称 GNU Coding Standards 对 `--help` 的要求可通过 `bug-standards@gnu.org` 争取修改，但他个人「don't intend to change that」；关于格式体系，Collin Funk 问「mdoc is the format mandoc uses for the different BSD man pages, correct?」，Colomar 答「Yes, the BSDs use mdoc(7) instead of man(7)」，并补充 Linux 上 nginx 等项目也使用 mdoc，「but they're minoritary」——mdoc 与 man(7) 的分野被同时保留为 BSD 文档传统与 Linux 边缘实践
+
+目录规范的治理权则在 FHS 与 BSD 惯例之间显形：2013 年 Ingo Schwarze 批评某草案「dismissing decade-old *BSD standards like the use of /usr/ for the base system and /usr/local/ for packages as a standard violation」，并称「/opt/ which is firmly a Linux-only invention」；G. Branden Robinson 援引 Solaris 2.3/2.4 与 Oracle 文档确认 `/opt/` 早于 Linux 已存在；Schwarze 回忆曾试图说服 FHS 维护者将 *BSD 惯例纳入标准，但 FHS 社区「very firmly entrenched as "Linux only"」，拒绝将 `/usr/` 用于基础系统、`/usr/local/` 用于软件包等数十年 BSD 惯例，转而推广他视为「firmly a Linux-only invention」的 `/opt/`；Schwarze 因此退出并称其他 OpenBSD 开发者嘲笑他「Why do you even care about that Linux-only crap?」；Colomar 致谢，并引用 Branden 考证 `/opt/` 并非 Linux 专属
+
+规范边界也落在工具链构建目标上：2014 年 util-linux 2.25.2 发布公告的变更清单多处跟踪 BSD 家族构建目标，包括为 BSD 改用 `-lutil` 链接、修补 ipcrm 在 BSD 上的构建失败，并标注 ipcs 仍有 kFreeBSD 构建残留，另有 blkdev 修正 GNU/kFreeBSD 下报告的磁盘容量，显示该用户态工具链长期维护对 FreeBSD 与 kFreeBSD 的兼容，原文「remaining kFreeBSD hackery for building」——BSD 构建目标不是可丢弃的兼容补丁，而是发布公告级别的项目承诺
+
+规范边界也延伸到信号语义的取舍：Pavel Machek 与 Arseny Maslennikov 在为 SIGINFO 争取依据时援引「GNU make on BSD does support SIGINFO (Not a standard tool, but obviously an established one)」——GNU make 在各 BSD 家族系统上的支持被直接作为 Linux 内核信号扩展的先例论据，BSD 家族信号语义因此成为内核用户态接口取舍的参照
+
+规范边界的最新一处显形落在新一代项目 Rust for Linux 的许可证选择上：2024 至 2025 年间一位 Rust for Linux 邮件列表新成员对许可证策略提出一问，注意到现有 Rust for Linux 代码似乎统一采用 GPL-2.0，询问这究竟是明确的集体决定，还是仅仅沿用默认设置；作者援引既有事实作为对照，Linux 的 DRM 核心以及 i915、radeon、amdgpu 等主要驱动均采用 GPL 与 MIT 双许可，正因为如此，OpenBSD 可以直接使用这部分代码；作者表示希望苹果芯片驱动也采取同样做法，目标是让驱动对其他内核同样有用，因此询问 Rust 核心中的一部分，尤其是进程宏和用 Rust 编写的通用代码，是否可以采用更宽松的许可，以便其他项目在自己复用它所支撑的驱动时能够直接引入这些公共代码——这一问把 GNU 内核中已有的双许可先例与 BSD 系统跨内核复用需求直接连起来，把许可证选择显形为跨平台复用能力而非单纯法律条款
+
+从 Kerrisk 与 Landley 对 man-pages 观众的定位、到 Colomar 对 GNU Coding Standards 与 mdoc/man(7) 分野的回应、到 Ingo Schwarze 试图说服 FHS 维护者、到 util-linux 为 BSD 与 kFreeBSD 保留构建目标、到 SIGINFO 在 Linux 内核的扩展论据、再到 Rust for Linux 的许可证默认设置追问——这场博弈的落脚点不在某个具体的许可证条款，而在读者、格式、目录、工具、跨平台复用谁有权定规范；GPL 的强制回馈与 BSD 的宽松复用在这条规范边界上互相碰撞，最终以邮件列表的反复论战、草案的批评与致谢、发布公告的构建目标清单、补丁说明中的跨平台复用承诺落地
+
+
+## 299.2.3 借语义的第二次回流：BSD 从网络共享模式、信号表、fork 继承语义三处重新进入 Linux（2024–2026）
+
+BSD 与 Linux 之间"借语义"的路径不止一条，也不止发生在 2010 年前后：到 2024 与 2025 年，NFS 与 SMB 共享模式的互操作讨论、信号表容量扩展的补丁集、fcntl UAPI 的 32 位常量补齐，把 BSD 血统以三种不同姿势再次带回 Linux 内核主线的接口讨论场，把"借语义"从"内核内部对齐"扩展到"跨协议、跨层、跨进程边界"的三向渗透
+
+**网络共享模式的互操作讨论首先把 BSD 文件锁标志抬到 Linux 接口层面**：一份针对 NFS 与 SMB 共享模式冲突的补丁提案把 open 时锁标志作为跨协议仲裁手段，援引 GNU libc 文档列出 `O_EXLOCK` 与 `O_SHLOCK` 两类 BSD 风格标志；Jeff Layton 的回应一句 "Nice. I wasn't aware of those BSD flags." 表面上是维护者的知识补漏，实质上是 BSD 文件系统锁词汇被正式引入 Linux 共享模式接口设计的记录，NFS 与 SMB 在 POSIX 语义之外的第三套锁模型被允许在 glibc 头部以 BSD 命名出现
+
+**信号表容量扩展的争论紧接着把 BSD 信号语义摆到 Linux 信号表取舍的对象上**：Walt Drummond 提交把信号数量上限从 64 扩至 1024 的补丁集，理由是与 glibc 与 musl 的既有上限一致；Eric W. Biederman 强烈反对扩张，在转述补丁条目时把添加 BSD 信号列为测试项，原文 "Add BSD SIGINFO (and VSTATUS) as a test."，并借机梳理 SIGPWR 默认语义的旧争，把 BSD 信号在 Linux 信号表中的取舍显形为一次公开的对账，BSD 信号在 Linux 信号体系里既不是缺省也不是例外，而是一个被反复点名、需要被单独测试的兼容分支
+
+**glibc 头文件的 32 位常量补齐则把 BSD 语义直接写入内核 UAPI 的注释文字**：Jeff Layton 向 glibc 提交 fcntl-linux.h 补丁，新增 `F_OFD_GETLK32` 等 32 位常量，作者建议常设 64 与 32 两套宏并按编译模式重定向；所改注释即内核 UAPI 对 F_OFD 锁的语义说明，把该语义与 BSD flock 锁在 fork 后的可继承性对照，原文 "inherited across fork or clone with CLONE_FILES like BSD (flock) locks"，BSD 血统在此不再只是"曾经借用"的接口，而成为解释 Linux 内核 UAPI 语义时不可省略的对照坐标
+
+从 NFS 与 SMB 的 O_EXLOCK / O_SHLOCK 到 Linux 信号表的 SIGINFO / VSTATUS 再到 glibc fcntl-linux.h 里 flock 与 BSD 的可继承性对照，BSD 血统在此从许可证层与 ABI 层的旧战场，转成跨协议、跨层、跨进程边界的新一轮接口语义回流；GPL 传染性与 BSD 宽松条款作为 1997 年以来两派许可证哲学的主脉，在此之外多了一条更细、更慢、也更难察觉的支线，即接口语义、命名与对照关系的持续引用，这条支线不需要判决或和解来裁决，只需要补丁提交者在下一次接口设计时是否愿意在注释里写下 "BSD" 这三个字母
+
+以上叙述基于 dslinux_claims.duckdb 与本节 ROW_MINE 锚指向的 linux-fsdevel 邮件列表条目（linux-fsdevel.messages.329770、linux-fsdevel.messages.398414、linux-fsdevel.messages.398465），属过程性证据，具体技术结论仍须以源码与提交记录复核
+
+## 299.2.4 手册页、目录约定与工具行为：许可证文本之外的第三条分界线（2003–2026）
+
+许可证条款与 API 语义之外，GNU 与 BSD 的分界还落在手册格式、目录约定与工具行为这些日常细节里，2003 年 1 月 Justin Gibbs 回复 aic79xx 适配询问时给出的补丁包地址是 people.FreeBSD.org/~gibbs/linux/SRC/aic79xx-linux-2.5.59-20030122-gnupatch.gz，Linux SCSI 驱动的 GNU 补丁托管在 FreeBSD 的个人空间，工具链的归属与项目的归属并不一致；同年 4 月 Aaron Traas 讨论磁带 st(4) 的 MT_ST_SYSV 选项时，其公司专有备份软件在 BSD 系与 SysV 系上行为相反，Linux 手册却把两种语义标反，团队据手册判定 Linux 为非 BSD 风格而触发 fsf 错误，他列出的对照引语是 「BSD and Solaris man pages on the subject contradict Linux s」，手册文档本身成为跨生态误判的现场
+
+手册页与文档格式的分界最早显形于 2008 年 12 月，Kerrisk 与 Rob Landley 争论 man-pages 的受众定位，Landley 称自己为打算支持 Dragonfly BSD 的平台写可移植程序时会告知，并指出 「Posix 可移植」 还涵盖 Windows NT 与奇怪的 IBM 大型机，Kerrisk 回应 man-pages 面向一般读者、其中许多人确实关心可移植性，但强调只要这个一般读者不包括把 Linux 视为自有平台的人即可，Landley 承认自己未翻页就漏读了 notes 段，Kerrisk 顺势讨论如何让读者注意到细则；到 2025 年 9 月，Collin Funk 就 GNU 手册页并入 Linux man-pages 一事问 「mdoc is the format mandoc uses for the different BSD man pages, correct?」，Colomar 答 「Yes, the BSDs use mdoc(7) instead of man(7)」，并补充 Linux 上 nginx 等项目也使用 mdoc，「but they're minoritary」；就 GNU Coding Standards 对 --help 的要求他虽可通过 bug-standards@gnu.org 争取修改，个人却 「don't intend to change that」；G. Branden Robinson 回应 Joseph Myers 关于应从 glibc manual 生成手册页、让文档由正当协商程序维护而非跟随一人意见的提议，推测 Stallman 本就期望此事 「would be soon implemented and accomplished...in 1989. Or earlier」，并称 GNU 官方文档仍主张 (Tex)Info 优先、手册页终将消失，「man pages are destined to wither away, as Engels predicted of the State」，维护 groff 的经验显示约 300 页 Texinfo 手册与约 400 页手册页仅部分重叠，同步全靠手工且不完美
+
+目录约定与命名习惯的分界由 Ingo Schwarze 在 2022 年 7 月集中记录，他批评某草案 「dismissing decade-old *BSD standards like the use of /usr/ for the base system and /usr/local/ for packages as a standard violation」，并称 /opt/ 「firmly a Linux-only invention」，G. Branden Robinson 则援引 Solaris 2.3/2.4 与 Oracle 文档确认 /opt 早于 Linux 已存在；Schwarze 回忆曾试图说服 FHS 维护者将数十年 BSD 惯例纳入标准，FHS 社区却 「very firmly entrenched as 『Linux only』」，拒绝将 /usr/ 用于基础系统、/usr/local/ 用于软件包，转而推广他视为 Linux 专属的 /opt/，他因此退出并称其他 OpenBSD 开发者嘲笑他 「Why do you even care about that Linux-only crap?」，Colomar 致谢并引用 Branden 的考证；命名层面 Linus 在 2013 年 3 月指出 「the standard under BSD seems to be single-underscore 『_BYTE_ORDER』」，而 glibc 用双下划线 __BYTE_ORDER，决定让内核改用 CONFIG 宏、仅修 uapi 头部以免把这套混乱搬进内核
+
+工具链层面 BSD 血统以维护状况的方式被反复引用，2019 年 5 月 H. Peter Anvin 在 initramfs 扩展属性格式讨论中问 「I wonder how existing GNU or BSD cpio (the BSD one is better maintained these days) would deal with reading such a file」，Rob Landley 转发同一段话并把 BSD 版 cpio 当作编码方案的检验基准，把格式设计与工具链兼容性直接挂钩；2014 年 10 月 util-linux 2.25.2 变更清单仍标注 「remaining kFreeBSD hackery for building」，同时为 BSD 改用 -lutil 链接、修补 ipcrm 在 BSD 上的构建失败、修正 GNU/kFreeBSD 下报告的磁盘容量，用户态工具链长期维护对 FreeBSD 与 kFreeBSD 的兼容；2026 年 5 月 Mateusz Guzik 在 fs/pipe 减少 poll_usage 写次数的评审中提出 「Both GNU and BSD makes share a token pipe」，GNU make 与 BSD make 因共享同一条 token 管道而在 -j 高并发下触发同一类 poll 处理器多核性能问题，Linux 侧因此改 poll_wait 的锁排队；信号语义上 Pavel Machek 与 Arseny Maslennikov 为 SIGINFO 争依据时援引 「GNU make on *BSD does support SIGINFO (Not a standard tool, but obviously an established one)」，另一记录称 strace 开发者希望支持 SIGINFO 用于打印跟踪器状态；文件锁方面 Neil Brown 代笔 flock(2) 手册页 NOTES 段落，说明自内核 2.0 起 flock 独立成系统调用而非在 GNU C 库中经 fcntl 模拟，带来经典 BSD 语义即两种锁类型之间互不交互，Jeff Layton 则补充 「on BSD, flock() and fcntl() based locks do conflict」，据此判断若 BSD 将来实现文件私有锁其冲突面将与 Linux 现状不同
+
+跨平台兼容性是贯穿上述三条线的压力源，2009 年 1 月新增 preadv 与 pwritev 系统调用时提交者明确要求 glibc 用户态接口 「compatible to the existing implementations in the BSD family」，直接把 BSD 家族当作 API 设计基准；2025 年 9 月讨论 ext4 文件系统 32 位保留 uid 时警告 「GNU Hurd or BSD had hijacked some reserved field」，保留字段成为跨实现共享的雷区；2015 年 7 月 Theodore Ts'o 在讨论移除 ext3 时梳理支持略有不同特性集的独立实现清单，列出 Hurd 的 ext2、星号 BSD 的 ext2 以及 Grub 的 ext2/3/4；2019 年 10 月移除 sysctl 系统调用与 uapi/linux/sysctl.h 的 RFC 中，作者统计头文件引用来源，glibc 之外的绝大多数命中是 「almost all of those hits are conditional includes for BSD systems」，Linux 内核头文件被 BSD 系统依赖的事实写在补丁正文里；2006 年 12 月 glibc 构建被内核头变更破坏的讨论中，依赖 BSD 特性的应用 「uses bsd features thus including net/if.h」 与同时引用的 linux/if.h 相撞；2014 年 6 月 Sam Ravnborg 转引 glibc endian.h 字节交换函数 「taken from FreeBSD I believe」，指出老系统缺乏该头文件支持因而需要 Linux 侧自行补齐端序转换能力
+
+到 2026 年 6 月，这条线收束为一次对 BSD 拒绝的引用，David Laight 在 ELF 解释器路径支持 $ORIGIN 串的讨论中回应 Brauner 对 glibc 实现满是不当边角的担忧，确信 「NetBSD refused to implement $ORIGIN because it was full」，full 指的是漏洞，随后建议内核持有目录 inode 引用并给 openat 加相对该目录的参数；从 2003 年 FreeBSD 个人空间托管的 Linux GNU 补丁包，到 2022 年 Schwarze 因 FHS 拒绝 BSD 惯例而退出，再到 2026 年 fs/pipe 里 GNU make 与 BSD make 共享的同一条 token 管道，手册页、目录约定与工具行为这三条不以许可证文本为尺度的分界线，始终与 GPL 传染和 BSD 宽松条款并行累积，它们不以判决或和解收场，而以邮件列表里逐条被引用、逐次被勘误的方式，把两种操作系统传统写进代码、文档与构建脚本
+
+
+## 299.2.5 GPL 传染与 BSD 宽松在内核代码中的双向流动：以 sparc ABI、跨平台保留字段与驱动许可字段为三条通道（1997–2026）
+
+GPL 传染与 BSD 宽松的内核双向流动不止发生在网络与 InfiniBand 驱动里，它同时发生在 sparc ABI 的返回约定、跨平台保留字段的占用博弈与 SCSI 驱动的许可字段中：1997 年 Linux 0.12 起以 GPL-2.0 发布却允许用户态以任意许可链接，2004 年 Alexey Nezhdanov 在 Sun Blade 2000 上经一周尝试仍无法启动 GNU 系统，留下一句 "Most probably that I will try my luck again several times with different FreeBSD approaches and most probably end up with Solaris system"，把 BSD 与商业 Sun 系统并列为 sparc 用户面对 Linux 启动失败时的现实退路，同一时期 David Miller 解释 sparc clone 在子进程返回父进程 pid 的原因时直接写出 "The system call convention follows that of SunOS on which the syscall handling was based. Return '1' in the %o1 register in the child and '0' in the parent"，BSD 血统以寄存器级 ABI 的形式固化进内核 sparc 分支，Blue Swirl 同期报告已能在 OpenBSD/Sparc64 上运行 sparc32 模拟器、在 Linux/Sparc64 上配合较新 glibc 也有部分成功，把 BSD 系统当作跨内核验证 Linux 移植的实验室
+
+跨平台保留字段的占用博弈把 BSD 与 Hurd 一并推入 Linux 开发者的视线：2025 年 Theodore Ts'o 在 ext4 32 位保留 uid 补丁讨论中警告 "GNU Hurd or BSD had hijacked some reserved field"，担心跨平台兼容性风险；2015 年 Ts'o 在移除 ext3 驱动时列出独立实现清单，包括 Hurd's ext2、星号 BSD 的 ext2 以及 Grub 的 ext2/3/4，把 BSD 与 Hurd 一并算作 Linux 之外的 ext 家族实现；2014 年 Jeff Layton 在 glibc 文件私有锁讨论中转述 "on BSD, flock() and fcntl() based locks do conflict"，把 BSD 锁语义作为 Linux 私有锁设计的对照坐标，Neil Brown 代笔 flock(2) 手册页 NOTES 段落时进一步说明自内核 2.0 起 flock 独立成系统调用"这带来经典 BSD 语义，即两种锁类型之间互不交互"，BSD 文件锁语义在 Linux 中不是移植而是作为文档先例被引用
+
+BSD 与 Hurd 也作为负面先例反向约束 Linux 开发：2015 年 Josh Triplett 在 CLONE_FD 补丁讨论中援引 FreeBSD 的 pdfork 实现，指出 "FreeBSD never implemented pdwait4"，故 glibc 不应先行实现以免与 FreeBSD 内核最终语义不一致，BSD 生态的空白反而成为 glibc 的边界；2026 年 David Laight 在 ELF $ORIGIN 支持讨论中回应 Brauner 对 glibc 实现的 "very hackish and full of edge cases" 担忧，断言 "NetBSD refused to implement $ORIGIN because it was full of loopholes"，并建议内核持有目录 inode 引用并给 openat 加相对该目录的参数，把 NetBSD 拒绝的路径作为 Linux 拒绝的判据；2008 年 Gerd Hoffmann 在 preadv 与 pwritev 补丁讨论中转引 Michael Kerrisk 的立场，明确写出 glibc 用户态接口应 "compatible to the existing implementations in the *BSD family"，BSD 家族在此被直接点名作为 Linux 系统调用的兼容基准
+
+GPL 与 BSD 双授权字段在 SCSI 驱动层以文件头形式制度化：Adaptec ADP94xx SAS HBA 驱动公告附带完整许可证头，"Redistribution and use in source and binary forms, with or without modification" 与 "may be distributed under the terms of the GNU General Public License" 并列，Copyright (c) 2004 Adaptec Inc. 保留所有权利；FlashPoint 驱动的注释清理补丁删除了重复的许可证声明，被删文本显示该文件 "available under both the GNU General Public License and a BSD-style copyright" 并引用 LICENSE.FlashPoint 细则；2014 年 Sam Ravnborg 转引 H. Peter Anvin 关于 glibc endian.h 字节交换函数的说法 "taken from FreeBSD I believe"，把 BSD 代码谱系作为 glibc 端序转换能力的来源，BSD 宽松条款以驱动许可字段与 libc 代码谱系的双重方式进入 Linux 内核树
+
+从 1997 年 Linux 0.12 起 GPL 传染与 BSD 宽松在内核代码中的双向流动不止于网络与 InfiniBand：sparc ABI 的 %o1 返回约定、跨平台保留字段的占用博弈、BSD 与 Hurd 作为负面对照与兼容基准、SCSI 驱动的 BSD+GPL 双授权字段与 glibc endian.h 的 FreeBSD 谱系，共同构成 GPL 传染边界与 BSD 宽松条款在 Linux 内核中另一种日常对话形式，BSD 家族与 Hurd 因此既是 Linux 用户态接口的来源、也是其拒绝路径的判据
+
+以上叙述基于 dslinux_claims.duckdb 与本节 ROW_MINE 锚指向的邮件列表条目，1997 年内核起始节点与 2025–2026 年 ext4、$ORIGIN 讨论属过程性证据，具体技术结论仍须以源码与提交记录复核
+
+## 299.2.6 反向流：BSD 系统成为 GPL 代码的宿主、宽松条款成为商业厂商的出口（2003–2026）
+
+上述各节多记录 BSD 语义流入 Linux，但双向流动的另一半同样有据可查：GPL 许可的内核头文件、工具链与驱动在若干具体场合被 BSD 系统反向依赖或承载，而 BSD 宽松条款被硬件厂商当作代码进入内核的合法出口，两派许可证哲学在代码层面呈现为互相容纳而非单向传染
+
+2003 年 1 月 23 日 Justin Gibbs 回复 aic79xx 适配询问时给出的补丁包地址是 http://people.FreeBSD.org/~gibbs/linux/SRC/aic79xx-linux-2.5.59-20030122-gnupatch.gz，Linux SCSI 驱动的 GNU 补丁托管在 FreeBSD 的个人空间，GPL 代码的存放位置与项目的法律归属并不一致；同年 4 月 Aaron Traas 讨论磁带 st(4) 的 MT_ST_SYSV 选项时称其公司专有备份软件在 BSD 系与 SysV 系上行为相反，Linux 手册把两种语义标反，团队据手册判定 Linux 为非 BSD 风格而触发 fsf 错误，对照引语是 "BSD and Solaris man pages on the subject contradict Linux s"
+
+2006 年 12 月内核头文件改动破坏 glibc 构建的讨论中，Thomas Graf 与 David Woodhouse 先后指出部分应用同时使用 BSD 特性包含 net/if.h 又包含 linux/if.h 导致冲突，原文 "uses bsd features thus including net/if.h"，BSD 用户态代码跑在 Linux 内核之上时两侧头文件相撞；2008 年 9 月 Blue Swirl 在 KVM for Sparc 讨论中说明他已能在 OpenBSD/Sparc64 上运行 sparc32 系统模拟器，在 Linux/Sparc64 上配合较新的 glibc 也有部分成功，GPL 许可的 Qemu 与 KVM 在 BSD 内核上运行，许可证边界并未阻止工具链跨生态复用
+
+反向依赖真正显形于补丁正文是在 2019 年 10 月 2 日，移除 sysctl 系统调用与 uapi/linux/sysctl.h 的 RFC 讨论中 Jann Horn 统计头文件引用来源时指出 glibc 之外的绝大多数命中是 "almost all of those hits are conditional includes for BSD systems"，Linux 内核头文件被 BSD 系统依赖这一事实写进了内核补丁，GPL 内核作为 BSD 用户态的底层接口被反向引用；早六年的 2013 年 3 月 Linus 在字节序条件编译讨论中指出 "the standard under BSD seems to be single-underscore "_BYTE_ORDER"" 而 glibc 用双下划线 __BYTE_ORDER，决定让内核改用 CONFIG 宏、仅修 uapi 头部以免把这套混乱搬进内核
+
+GPL 工具链在 BSD 上的成熟度被反复用作 Linux 侧论据：2014 年 10 月 util-linux 2.25.2 变更清单多处跟踪 BSD 家族构建目标，为 BSD 改用 -lutil 链接、修补 ipcrm 在 BSD 上的构建失败、修正 GNU/kFreeBSD 下报告的磁盘容量，并标注仍有 "remaining kFreeBSD hackery for building"；2022 年 1 月 Arseny Maslennikov 补充 "The developers of strace have expressed interest in SIGINFO support"，同年 5 月 Pavel Machek 为 SIGINFO 争依据时援引 "GNU make on *BSD does support SIGINFO (Not a standard tool, but obviously an established one)"，GPL 工具在 BSD 系统上的既有行为成为 Linux 内核新增信号语义的论据
+
+BSD 宽松条款作为 Linux 用户态的许可选项同样被制度化：2020 年 4 月 Maciej Żenczykowski 讨论 Android Bionic 与 socklen_t 时引 Wikipedia 称 "Bionic is basically a BSD licensed C library for use with Linux"，并对比 "other BSD C libraries which require a BSD kernel" 与采用 LGPL 的 glibc；2022 年 8 月 Asahi Lina 加入 rust-for-linux 邮件列表后追问许可证策略，援引 Linux 的 DRM 核心以及 i915、radeon、amdgpu 等主要驱动均采用 GPL 与 MIT 双许可，正因为如此 OpenBSD 可以直接使用这部分代码，希望苹果芯片驱动也采取同样做法——GPL 驱动以双许可方式向 BSD 系统开口，宽松条款成为 GPL 代码跨内核复用的通道
+
+宽松条款向商业厂商开放的另一半由设备驱动补丁承载：2018 年 4 月 Tom Hromatka 提交 sparc64 特权 ADI 驱动，Oracle 版权声明后跟一段双重许可文本，在内核内或与其它软件包一起分发时适用 GNU General Public License version 2，脱离内核单独分发或被并入其它软件包时改用宽松条款，授予任何人免费使用、复制、修改、合并、发布、分发、再许可乃至出售副本的权利，Greg KH 转贴这段文本时未加删改；2024 年 12 月上海云硅 yunsilicon 以太网驱动仍沿用 Mellanox 时代那套二选一许可模板，版权行同时列出上海云硅与 Mellanox
+
+跨实现共享字段的雷区出现在 2025 年 9 月，Theodore Ts'o 讨论 ext4 文件系统 32 位保留 uid 时警告 "GNU Hurd or BSD had hijacked some reserved field"，保留字段成为 GPL 与 BSD 实现互相干扰的共享空间；工具层面 2019 年 5 月 H. Peter Anvin 在 initramfs 扩展属性格式讨论中问 "I wonder how existing GNU or BSD cpio (the BSD one is better maintained these days) would deal with reading such a file"，把 BSD 版 cpio 当作编码方案的检验基准
+
+从 2003 年 GPL 补丁托管在 FreeBSD 个人空间，到 2019 年 BSD 系统以条件包含方式依赖 Linux 内核头文件，再到 2022 年 GPL 驱动以双许可向 OpenBSD 开口、2024 年设备厂商沿用同一宽松条款模板进入主线，GPL 传染性与 BSD 宽松条款在内核代码中的双向流动不以某次判决或和解告终，而是以补丁正文里的引用、变更清单里的构建目标、头文件里的条件包含与许可证字段里的二选一措辞，逐条累积成两种许可证哲学互相容纳的残留
+
+以上叙述基于 dslinux_claims.duckdb 与本节 ROW_MINE 锚指向的邮件列表条目（linux-scsi.messages.1509022、linux-scsi.messages.1564705、netdev.messages.8070231、netdev.messages.8393522、sparclinux.messages.9330825、linux-arch.messages.9700357、linux-api.messages.34184、linux-fsdevel.messages.444650、linux-man.messages.755394、linux-api.messages.22813、netdev.messages.8613245、rust-for-linux.messages.9286518、sparclinux.messages.9349901、netdev.messages.9199793、linux-api.messages.13225），属过程性证据，具体技术结论仍须以源码与提交记录复核
+
+
+## 299.2.7 宽松条款的制度化通道：GPLv2/BSD 双许可模板、copyleft-next 与 SPDX 三十年（2004–2024）
+
+宽松条款进入内核的最早制度化通道不是移植决策，而是硬件厂商驱动文件头里的一段二选一措辞，2004 年 12 月 19 日 Roland Dreier 以 Topspin Communications 名义提交 IPoIB 多播与分区代码补丁 v4 第 20/24 件，文件头写 "This software is available to you under a choice of one of two licenses"，随后给出 "or the OpenIB.org BSD license below" 与完整 BSD 再分发及免责条款，版权声明列 Copyright (c) 2004 Topspin Communications；八天后 12 月 27 日的 Mellanox HCA 底层驱动补丁 v5 第 11/24 件逐字复用同一模板，此后 mthca_cq、mthca_av 与 NetEffect nes 网卡的 10Gb 驱动、OpenFabrics 内核 verbs 头文件两版补丁、Neterion 网口驱动入口补丁依次沿用同一措辞，版权行在 Topspin、Mellanox、NetEffect、Open Grid Computing 之间更替而许可体例保持不变，2007 年 10 月 5 日 Urs Thuermann 代表 Volkswagen Group Electronic Research 提交虚拟 CAN 驱动时模块标记写成 "Dual BSD/GPL"，BSD 宽松条款经厂商之手在十年间制度化沉淀进内核网络与总线子系统
+
+同一套文本也有被删除的一刻，2006 年 6 月 29 日 Bryan O'Sullivan 提交 QLogic InfiniPath 命名空间清理补丁，把驱动文件头部 OpenIB.org BSD 许可证全文整体删除，只保留 GNU GPL v2 作为可选许可之一，版权归属仍列 2003 至 2006 年 PathScale，OpenIB 生态的 BSD 文本由此退出内核 InfiniBand 头文件，模板的进入与退出在树内皆逐补丁决定
+
+许可证政治在争论中显形为利益分配，2007 年 9 月 1 日 Bob Beck 在围绕 r.kernel.org 的讨论中转述某位参与者的劝告，称对方说 "I urge developers to not bait into this and just leave this alone" 且参与者背后有 "a strong team of attorneys watching their backs"，随即反问 "What is this? a concerted attack by some organization on the BSD projects?" 并点名 "Would that be the FSF? or freesoftware.org?"，Jeff Garzik 的回复则以技术故障反讽回敬，指出对方 CC 行被截断在 "netdev@vge"，并推测 "this bug also triggered a buffer overflow on your side, leading to an unwanted public spew of anti-Linux conspiracy theories"，许可证选择在此被表述为阵营立场而非纯粹的文本选择
+
+SCSI 子系统的双轨结构更早成形且文本更显式，2005 年 2 月 17 日 Adaptec ADP94xx SAS 驱动公告附带完整许可头，先列 BSD 三条件再分发条款，再以 "Alternatively, this software may be distributed under the terms of the GNU General Public License" 转入 GPLv2，模块标记同为 "Dual BSD/GPL"；2005 年 5 月 14 日 Mylex 相关的 FlashPoint 注释清理补丁删去重复声明，被删文本显示 "This file is available under both the GNU General Public License and a BSD-style copyright; see LICENSE.FlashPoint for details"，版权声明回溯至 1995 至 1996 年，BSD 与 GPL 双轨授权在树内早已不是例外
+
+传染性边界最终成为治理争议，2016 年 8 月 15 日 James Bottomley 主张新表结构开发走 copyleft-next，说明 Rusty Russell 要求代码先入库之后再补许可证标签以标注其 GPL 兼容性，他自称 copyleft-next 是其持续内核开发的首选许可证，并已注明其与 GPLv2 的兼容关系，请了三名律师做合规审查其中两位在 SUSE；反对者回应 "You don't need a new tag, you can use 'GPL' or 'GPL and additional rights'"，理由是 "when combined with the kernel it is GPLv2 anyway"，并澄清 "This is the module tag ... it says what licence the module is under, not the licence for the module combined with the kernel, which is always GPLv2 because the stricter licence rules"；Andy Lutomirski 由此追问 "Then why isn't 'BSD' in the license_is_gpl_compatible list?"，Bottomley 指向 GNU 官方许可证清单的 ModifiedBSD 条目，说明四段式 BSD 属 GPL 兼容，理应进入该列表
+
+模板最终被一行字符串取代，2024 年 12 月 18 日上海云硅 yunsilicon 以太网驱动补丁在沿用 Mellanox 时代二选一许可正文、版权行同时列出 Copyright (C) 2021-2025 Shanghai Yunsilicon 与 Copyright (c) 2015-2016 Mellanox Technologies 的同时，文件头新增 "/* SPDX-License-Identifier: GPL-2.0 OR Linux-OpenIB */"，审阅者回信只有一句 "The /* SPDX-License-Identifier: line replaces all such license boilerplate. Please delete this."，二十余年来逐行重述的宽松条款由此让位给机器可读标识符，GPL 传染性与 BSD 宽松条款的双向流动在文本形式上收束为一行 SPDX
+
+从 2004 年 12 月的 OpenIB 二选一措辞，到 2006 年 InfiniPath 删除 BSD 全文，再到 2016 年 copyleft-next 的标签之争与 2024 年 SPDX 标识符取代许可正文，宽松条款在内核代码中的流动不以判决或和解告终，而以补丁正文的加号与减号逐条累积为文件头与标识符中的残留
+
+以上叙述基于 dslinux_claims.duckdb 之 claim 表与本章 ROW_MINE 锚所指的邮件列表条目（netdev.messages.8050448、netdev.messages.8351007、netdev.messages.8488224、netdev.messages.8491855、netdev.messages.8339447、netdev.messages.8344781、netdev.messages.8493272、netdev.messages.8226162、netdev.messages.8114600、netdev.messages.8392687、linux-scsi.messages.1566835、linux-scsi.messages.1457322、sparclinux.messages.9346986、linux-arch.messages.9844146、netdev.messages.9199793），英文引语均回源核对原始邮件正文，属过程性证据，具体技术结论仍须以源码与提交记录复核
