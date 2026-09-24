@@ -1,0 +1,2037 @@
+### PK 2597247 ###
+===== 序 22562 | PK 2597247 =====
+DATE: 1999-04-30
+FROM: Brad Knowles <brad@shub-internet.org> <None>
+SUBJ: Porting Greg Lehey's rawio.c from FreeBSD to Linux...
+
+Folks,
+
+    I don't want to get into any OS wars here, but I'd like to do some
+low-level disk benchmarking of a Linux system using the same tool I used
+for that under FreeBSD, namely Greg Lehey's "rawio" (see
+<ftp://ftp.lemis.com/pub/rawio.tar.gz>).
+
+    This program was originally written to test his "vinum" software
+mirroring/striping/RAID device driver for FreeBSD (see
+<http://www.lemis.com/vinum.html>), but I believe that it would be
+generally useful to do low-level disk testing under most any *nix OS.
+
+
+    Anyway, if there's anyone out there with any experience in porting
+programs that do low-level disk I/O, I'd appreciate it if you could take
+a look at this program and give me some pointers on what it would take to
+get it to compile and run under Linux (specifically, Debian Linux with
+kernel 2.2.6).
+
+    Also, since I'm not subscribed to either of these mailing lists and I
+can't keep up with the newsgroup gateway for them, I would appreciate it
+if you would also e-mail me any responses you might have on this subject.
+
+
+    TIA!
+
+-- 
+Brad Knowles <brad@shub-internet.org> <http://www.shub-internet.org/brad/>
+    <http://wwwkeys.pgp.net:11371/pks/lookup?op=get&search=0xE38CCEF1>
+
+Your mouse has moved.   Windows NT 
+...[正文已截断，共 1590 字符]
+
+
+
+### PK 2597248 ###
+===== 序 22563 | PK 2597248 =====
+DATE: 1999-04-30
+FROM: Gavan McCormack <tetragon@cyber.com.au> <None>
+SUBJ: Problems with packages.
+
+
+I was wondering if anyone can give me any pointes to help me with a
+problem I have.
+
+Setup: FreeBSD 3.1-Stable (3.1-STABLE #3: Wed Apr 28 10:09:54) with an 
+unknown cvsup of ports, but only about a week old.
+
+It seems like FSR on my installation the package machanism has been
+corrupted. Doing a pkg_info -a produces all the normal output of installed
+packages (up to the point where it got screwed) and then at the end comes
+back with: pkg_info: can't change directory to '/var/db/pkg/.mkversion'!
+(.mkversion is a file, not a directory.)
+
+THe last package installed successfully was cvsup-bin-16.0. Later on, I
+tried to make the port wide-dhcp, with no success. Sincethen, installing
+any ports or packages has not worked.
+
+The only clue I have, besides the error above from pkg_info is that my
+bsd.port.mk file in /usr/ports/mk (which is ususally 77K) gets overwritten
+by a small file consisting of only:
+bitey# more bsd.port.mk
+PORTSDIR?=      /usr/ports
+.include        "${PORTSDIR}/Mk/bsd.port.mk"
+
+Ofcourse, having it call itself gets me nowhere when trying to make a port. :)
+
+So: 1. What would be overwriting /usr/ports/MK/bsd.port.mk?
+and 2. Is my package database corrupted, and where should I start looking, to 
+	learn how to fix it?
+
+Thanks in advance..
+...[正文已截断，共 1655 字符]
+
+
+
+### PK 2597250 ###
+===== 序 22565 | PK 2597250 =====
+DATE: 1999-04-30
+FROM: Paulo Fragoso <paulo@nlink.com.br> <None>
+SUBJ: Re: CD SCSI
+
+Hi,
+
+I'm using Adaptec 2940 SCSI. It have suport to ultra-wide scsi devices,
+now I have disabled this options in board setup. After this, I haven't
+found the problem, yet. But my scsi devices are a bit slower than before.
+
+I'm using one Sony cdrom cdu-76s and one HP cd-writer 6020. The problem
+happened more with HP.
+
+My demsg:
+------------------------------------------------------------------------
+Copyright (c) 1992-1999 FreeBSD Inc.
+Copyright (c) 1982, 1986, 1989, 1991, 1993
+        The Regents of the University of California. All rights reserved.
+FreeBSD 3.1-19990426-STABLE #4: Wed Apr 28 11:41:54 EST 1999
+    paulo@seneca.nlink.com.br:/usr/src/sys/compile/KERNEL1
+Timecounter "i8254"  frequency 1193182 Hz
+CPU: Pentium/P55C (200.46-MHz 586-class CPU)
+  Origin = "GenuineIntel"  Id = 0x543  Stepping=3
+  Features=0x8001bf<FPU,VME,DE,PSE,TSC,MSR,MCE,CX8,MMX>
+real memory  = 67108864 (65536K bytes)
+avail memory = 61755392 (60308K bytes)
+Preloaded elf kernel "kernel" at 0xc035d000.
+Probing for devices on PCI bus 0:
+chip0: <Intel 82439TX System Controller (MTXC)> rev 0x01 on pci0.0.0
+chip1: <Intel 82371AB PCI to ISA bridge> rev 0x01 on pci0.7.0
+ide_pci0: <Intel PIIX4 Bus-master IDE controller> rev 0x01 on pci0.7.1
+chip2: <Intel 82371AB Power management controller> rev 
+...[正文已截断，共 6388 字符]
+
+
+
+### PK 2597252 ###
+===== 序 22567 | PK 2597252 =====
+DATE: 1999-04-30
+FROM: "Chuck O'Donnell" <cao@bus.net> <None>
+SUBJ: Perl config broken: ld='ld'
+
+Has anyone noticed Perl reporting ld='ld' instead of ld='gcc' under
+3.1-STBALE? It causes problems sometimes when installing Perl modules.
+
+cao@fern$ perl -V
+Summary of my perl5 (5.0 patchlevel 5 subversion 2) configuration:
+  Platform:
+    osname=freebsd, osvers=3.0-current, archname=i386-freebsd
+    uname='freebsd 3.0-current #0: '
+    hint=recommended, useposix=true, d_sigaction=define
+    usethreads=undef useperlio=undef d_sfio=undef
+  Compiler:
+    cc='cc', optimize='undef', gccversion=2.7.2.1
+    cppflags=''
+    ccflags =''
+    stdchar='char', d_stdstdio=undef, usevfork=true
+    intsize=4, longsize=4, ptrsize=4, doublesize=8
+    d_longlong=define, longlongsize=8, d_longdbl=define, longdblsize=12
+    alignbytes=4, usemymalloc=n, prototype=define
+  Linker and Libraries:
+    ld='ld', ldflags ='-Wl,-E '
+       ^^^^
+       Should be 'gcc' under ELF, no?
+
+I tried to look and see where this is set during a `make world', but
+I'm just not familiar enough with the way Perl is configured during
+FreeBSD's build process. Left to its own devices, Perl's Configure
+script will guess `gcc' correctly, so the value of `ld' must be hard
+wired somewhere...
+
+Thanks.
+
+Chuck
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-stable" in the
+...[正文已截断，共 1425 字符]
+
+
+
+### PK 2597253 ###
+===== 序 22568 | PK 2597253 =====
+DATE: 1999-05-04
+FROM: "Greg Quinlan" <greg@qmpgmc.ac.uk> <None>
+SUBJ: FreeBSD 3.1-Release keeps crashing!
+
+
+root             ttyv0                     Wed Apr 28 11:36 - crash (1+02:11)
+root             ttyv0                     Tue Apr 20 09:42 - 12:13 (7+02:31)
+root             ttyv0                     Tue Apr 20 08:33 - crash  (01:07)
+root             ttyv0                     Tue Apr 20 08:30 - shutdown  (00:00)
+root             ttyv0                     Mon Apr 19 15:20 - crash  (00:15)
+root             ttyv0                     Mon Apr 19 12:53 - 12:53  (00:00)
+root             ttyv0                     Fri Apr 16 12:54 - shutdown (1+01:26)
+
+root             ttyv0                     Thu Apr 15 19:52 - crash  (17:01)
+root             ttyv0                     Wed Apr 14 16:30 - crash (1+00:20)
+root             ttyv1                     Mon Apr 12 16:13 - crash (2+00:17)
+root             ttyv0                     Wed Apr  7 17:37 - crash (6+22:53)
+root             ttyv0                     Wed Apr  7 10:27 - shutdown  (07:07)
+root             ttyv0                     Thu Apr  1 12:26 - shutdown (2+05:54)
+
+
+wtmp begins Thu Apr  1 11:43:19 1999
+
+Impressive isn't it
+
+
+
+
+
+
+
+### PK 2597259 ###
+===== 序 22574 | PK 2597259 =====
+DATE: 1999-04-30
+FROM: "Chad R. Larson" <chad@anasazi.com> <None>
+SUBJ: ports make crash
+
+Ports collection CVSup'd yesterday.  In /usr/ports a "make readmes"
+blows off as follows:
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+===> deskutils/xopps
+===>   Creating README.html for xopps-1.13
+===> deskutils/xpostit
+===>   Creating README.html for xpostit-3.3.1
+===> deskutils/xpostitPlus
+===>   Creating README.html for XPostitPlus-2.3
+===> deskutils/xrolo
+===>   Creating README.html for xrolo-2.6
+===> deskutils/zorro
+===>   Creating README.html for zorro-1.1.8
+===> devel
+===>  Creating README.html
+"Makefile", line 18: warning: String comparison operator should be either == or !=
+"Makefile", line 18: Malformed conditional (${OSREL} >= 4)
+"Makefile", line 18: Need an operator
+"Makefile", line 21: if-less else
+"Makefile", line 21: Need an operator
+"Makefile", line 30: if-less endif
+"Makefile", line 30: Need an operator
+make: fatal errors encountered -- cannot continue
+===> devel/ElectricFence
+===>   Creating README.html for electricfence-2.0.5
+===> devel/ORBacus
+"Makefile", line 18: warning: String comparison operator should be either == or !=
+"Makefile", line 18: Malformed conditional (${OSREL} >= 4)
+"Makefile", line 18: Need an operator
+"Makefile", line 21: if-less else
+"Makefile", line 21: Need an operator
+"Makefile", lin
+...[正文已截断，共 1936 字符]
+
+
+
+### PK 2597260 ###
+===== 序 22575 | PK 2597260 =====
+DATE: 1999-05-01
+FROM: asami@FreeBSD.org (Satoshi - Ports Wraith - Asami) <None>
+SUBJ: Re: ports make crash
+
+ * From: "Chad R. Larson" <chad@anasazi.com>
+
+ * ===> devel/ORBacus
+ * "Makefile", line 18: warning: String comparison operator should be either == or !=
+ * "Makefile", line 18: Malformed conditional (${OSREL} >= 4)
+ * "Makefile", line 18: Need an operator
+ * "Makefile", line 21: if-less else
+ * "Makefile", line 21: Need an operator
+ * "Makefile", line 30: if-less endif
+ * "Makefile", line 30: Need an operator
+ * make: fatal errors encountered -- cannot continue
+ * *** Error code 1
+
+I checked devel/ORBacus/Makefile and the only thing I could find was
+that the last <bsd.port.mk> should have been <bsd.port.post.mk> (which 
+I just fixed).  But make readme worked fine even before that change.
+Are you sure you have the correct ports/Mk/bsd.port.*mk files?
+
+-PW
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-stable" in the body of the message
+
+
+
+
+
+
+
+### PK 2597262 ###
+===== 序 22577 | PK 2597262 =====
+DATE: 1999-05-01
+FROM: "Daniel C. Sobral" <dcs@newsguy.com> <None>
+SUBJ: Re: Re2: FreeBSD 3.1-Release keeps crashing!
+
+Greg Quinlan wrote:
+> 
+> Sorry for the brief message...but  I'm a little frustrated!
+> I've tried so desperately to work out what could be causing the problem but
+> there isn't anything to indicate that something's wrong no messages.. no
+> nothing, and I do not want to just keep upgrading hoping it will just go
+> away!
+
+Reduce maxusers to something like 128 or 100.
+
+--
+Daniel C. Sobral			(8-DCS)
+dcs@newsguy.com
+dcs@freebsd.org
+
+	"Proof of Trotsky's farsightedness if that _none_ of his
+predictions have come true yet."
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-stable" in the body of the message
+
+
+
+
+
+
+
+### PK 2597264 ###
+===== 序 22579 | PK 2597264 =====
+DATE: 1999-05-01
+FROM:  <None>
+SUBJ: 
+
+your Adaptec 2940U. How long is the SCSI bus? Keep in mind that 
+Ultra SCSI should use < 1.5 meter bus length. Combining external
+devices (guess: the ZIP drive ?) and internal devices is not recommended.
+
+> Waiting 15 seconds for SCSI devices to settle
+> sa0 at ahc0 bus 0 target 3 lun 0
+> sa0: <SONY SDT-4000E E326> Removable Sequential Access SCSI-2 device 
+> sa0: 5.000MB/s transfers (5.000MHz, offset 8)
+> changing root device to da0s1a
+> da1 at ahc0 bus 0 target 1 lun 0
+> da1: <CONNER CFP2105S  2.14GB 172A> Fixed Direct Access SCSI-2 device 
+> da1: 10.000MB/s transfers (10.000MHz, offset 15), Tagged Queueing Enabled
+> da1: 2048MB (4194304 512 byte sectors: 255H 63S/T 261C)
+> da0 at ahc0 bus 0 target 0 lun 0
+> da0: <QUANTUM FIREBALL_TM3200S 300X> Fixed Direct Access SCSI-2 device 
+> da0: 10.000MB/s transfers (10.000MHz, offset 15), Tagged Queueing Enabled
+> da0: 3067MB (6281856 512 byte sectors: 255H 63S/T 391C)
+> cd0 at ahc0 bus 0 target 2 lun 0
+> cd0: <SONY CD-ROM CDU-76S 1.1a> Removable CD-ROM SCSI-2 device 
+> cd0: 5.681MB/s transfers (5.681MHz, offset 15)
+> cd0: cd present [328163 x 2048 byte records]
+> da2 at ahc0 bus 0 target 5 lun 0
+> da2: <IOMEGA ZIP 100 D.09> Removable Direct Access SCSI-2 device 
+> da2: 3.300MB/s transfers
+> da2: Attempt to query device size failed: NOT READY, Medium not present
+> WARNING: / was not properly dismounted
+> de0: enabling BNC port
+> cd1 at ahc0 bus 0 target 4 lun 0
+> cd1: <HP CD-Writer 6020 1.07> Removable CD-ROM SCSI-2 device 
+> cd1: 3.300MB/s transfers
+> cd1: Attempt to query device size failed: NOT READY, Logical unit not
+> ready, cau
+> se not reportable
+
+Groeten / Cheers,
+
+|   / o / /  _  	 Arnhem, The Netherlands	- Powered by FreeBSD -
+|/|/ / / /( (_) Bulte 	 WWW  : http://www.tcja.nl 	http://www.freebsd.org
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-stable" in the body of the message
+
+
+
+
+
+
+
+### PK 2597265 ###
+===== 序 22580 | PK 2597265 =====
+DATE: 1999-05-02
+FROM: Angelo Nardone <ang@adinet.com.uy> <None>
+SUBJ: bktr (brooktree device)
+
+I have a 3.1-stable, and I included the "bktr" device in my local config
+
+for create a new kernel.
+I generated the directory, and when I made "make depend" i had the
+messages that the file "smbus_if.h" , "iicbus_if.h" and "iicbb_if.h"
+doesn't exist. And dos not exists, but the files "smbus_if.m"
+,"iicbus_if.m" and "iicbb_if.m" exists.
+I can't compile the kernel, the files with the problems are
+"brooktree848.c" and bt848_i2c.c".
+Do somebody know what is the problem ?
+Thanks.
+
+
+
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-stable" in the body of the message
+
+
+
+
+
+
+
+### PK 2597270 ###
+===== 序 22585 | PK 2597270 =====
+DATE: 1999-05-02
+FROM: Paulo Fragoso <paulo@nlink.com.br> <None>
+SUBJ: Re: CD SCSI
+
+Hi,
+
+On Sat, 1 May 1999, Wilko Bulte wrote:
+
+> > now I have disabled this options in board setup. After this, I haven't
+> 
+> So, you went from Ultra SCSI speeds to Fast SCSI and the problem went away?
+
+No, it have the problem yet. I was thinking it was solved but I wasn't
+rigth.
+
+> 
+> > found the problem, yet. But my scsi devices are a bit slower than before.
+> > 
+> > I'm using one Sony cdrom cdu-76s and one HP cd-writer 6020. The problem
+> > happened more with HP.
+> 
+> >From the dmesg below it looks you have quite a lot of SCSI devices on
+> your Adaptec 2940U. How long is the SCSI bus? Keep in mind that 
+> Ultra SCSI should use < 1.5 meter bus length. Combining external
+> devices (guess: the ZIP drive ?) and internal devices is not recommended.
+
+Hummm, I have one external zip drive and five internal devices. It's
+probably my problem.
+
+Thanks,
+Paulo.
+
+> Groeten / Cheers,
+> 
+> |   / o / /  _  	 Arnhem, The Netherlands	- Powered by FreeBSD -
+> |/|/ / / /( (_) Bulte 	 WWW  : http://www.tcja.nl 	http://www.freebsd.org
+> 
+
+------
+"  ... Overall we've found FreeBSD to excel in performace, stability,
+technical support, and of course price. Two years after discovering
+FreeBSD, we have yet to find a reason why we switch to anything else"
+						-David Filo, Yahoo!
+
+
+
+
+To U
+...[正文已截断，共 1512 字符]
+
+
+
+### PK 2597272 ###
+===== 序 22587 | PK 2597272 =====
+DATE: 1999-05-02
+FROM: "David Schwartz" <davids@webmaster.com> <None>
+SUBJ: Cannot 'make world'
+
+
+	I went to do a 'make world' today and it bombed out in 'ar'. Any ideas?
+
+	DS
+
+cc -O -pipe -I/usr/src/usr.bin/ar -Wall   -I/usr/obj/usr/src/tmp/usr/include
+ -c /usr/src/usr.bin/ar/print.c
+cc -O -pipe -I/usr/src/usr.bin/ar -Wall   -I/usr/obj/usr/src/tmp/usr/include
+ -c /usr/src/usr.bin/ar/replace.c
+cc -O -pipe -I/usr/src/usr.bin/ar -Wall   -I/usr/obj/usr/src/tmp/usr/include
+  -static -o ar append.o ar.o archive.o contents.o delete.o extract.o misc.o
+move.o print.o replace.o
+archive.o: In function `put_arobj':
+archive.o(.text+0x51b): undefined reference to `copy_ar'
+contents.o: In function `contents':
+contents.o(.text+0xf6): undefined reference to `skip_arobj'
+delete.o: In function `delete':
+delete.o(.text+0x83): undefined reference to `skip_arobj'
+delete.o(.text+0xf9): undefined reference to `copy_ar'
+extract.o: In function `extract':
+extract.o(.text+0x89): undefined reference to `skip_arobj'
+extract.o(.text+0xe4): undefined reference to `skip_arobj'
+extract.o(.text+0x123): undefined reference to `copy_ar'
+move.o: In function `move':
+move.o(.text+0x1a5): undefined reference to `copy_ar'
+move.o(.text+0x1ec): undefined reference to `copy_ar'
+move.o(.text+0x229): undefined reference to `copy_ar'
+print.o: In function `print':
+print.o(.text+0x64): undefin
+...[正文已截断，共 1827 字符]
+
+
+
+### PK 2597273 ###
+===== 序 22588 | PK 2597273 =====
+DATE: 1999-05-02
+FROM: Cliff Skolnick <cliff@steam.com> <None>
+SUBJ: 2 lockups in 24 hours
+
+
+I've been running 3.1-stable for almost 2 months now without a hitch,
+suddenly after an update on or about 4/29 my system has locked up twice.
+Before the 3.1-stable upgrade I ran various 2.2 branch stable on the same
+machine for 6+ months without a single lockup.  After the first lockup I did
+an update to the kernel.
+
+The system is a server, no x display, just telnet sessions.  The load on the
+machine is quite lite also.
+
+It looks like the disk subsystem locks up.  For a while the system will
+respond to pings, and even keyboard input which does not require any
+swapping.  It will of course not execute commands from live shell windows,
+only lock them up.  But after a minute of trying to get more info, things
+that did work stop.  Eventually the system is totally hosed.
+
+No messages to the console, nothing unusual (actually nothing pertaining to
+this at all) in /var/log/messages.
+
+I've attached my kernel config file and bootup messages.
+
+--
+Cliff Skolnick
+Steam Tunnel Operations
+cliff@steam.com
+http://www.steam.com/
+
+
+
+
+
+### PK 2597274 ###
+===== 序 22589 | PK 2597274 =====
+DATE: 1999-05-02
+FROM: Patrick Seal <patseal@hyperhost.net> <None>
+SUBJ: libutil and  undefined reference to `realhostname'
+
+compiling ftpd, rexecd, telnetd, whatever, gives me an error such as:
+ftpd.o(.text+0x2fe6): undefined reference to `realhostname'
+
+The only similarity is that they all include libutil, which just had a
+fresh change by brian.
+
+So, brian (probably) broke libutil.  Is anyone else having the same
+trouble?
+
+------------------------------------ _____________________________________
+Patrick Seal                        |"Microsoft isn't evil, they just make
+<patseal@hyperhost.net>             |   really crappy operating systems."
+Hyperhost - http://www.hyperhost.net| -Linus Torvalds
+hosting and Design
+
+http://www.freebsd.org - http://www.linux.org
+
+
+
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-stable" in the body of the message
+
+
+
+
+
+
+
+### PK 2597276 ###
+===== 序 22591 | PK 2597276 =====
+DATE: 1999-05-03
+FROM: Don Lewis <Don.Lewis@tsc.tdk.com> <None>
+SUBJ: Re: ppbus causes hangs?
+
+On Apr 29,  7:41pm, Mike Smith wrote:
+} Subject: Re: ppbus causes hangs?
+} 
+} Try setting the flags on the 'ppc' device to 0x40 and _please_ report 
+} the results.
+
+I also ran into this problem with a 4/30/1999 version of 3.1-stable
+on a Dell Dimension XPS R400.  The 0x40 flag fixed the problem.
+
+BTW, the UPDATING file on the RELENG_3 branch hasn't been updated
+since the branch point, so there is no info on the ppbus stuff and
+the post-branch enhancements to the loader.  Also, src/sys/boot/README
+hasn't been added to the RELENG_3 branch.
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-stable" in the body of the message
+
+
+
+
+
+
+
+### PK 2597277 ###
+===== 序 22592 | PK 2597277 =====
+DATE: 1999-05-03
+FROM: Don Lewis <Don.Lewis@tsc.tdk.com> <None>
+SUBJ: getting vinum working in -stable
+
+
+I just upgraded one of our servers to a 4/30/1999 version of 3.1-stable
+in order to use vinum and ran into a minor problem.
+
+It appears that the preferred way to start vinum at boot time is to
+"vinum start", but this is now how /etc/rc works.  If the vinum_drives
+variable is set in /etc/rc.conf, then /etc/rc executes
+"vinum read $vinum_drives".
+
+The problem is that no matter what I set vinum_drives to, vinum wouldn't
+initialize correctly.
+
+    # vinum read /dev/da2e /dev/da2f /dev/da3e /dev/da3f
+    ** no drives found: No such file or directory
+
+If I execute "vinum start", everything works just fine.
+
+    May  1 08:27:51 news /kernel: vinum: loaded
+    May  1 08:27:52 news /kernel: vinum: reading configuration from /dev/da3f
+    May  1 08:27:52 news /kernel: vinum: updating configuration from /dev/da3e
+    May  1 08:27:52 news /kernel: vinum: updating configuration from /dev/da2e
+    May  1 08:27:52 news /kernel: vinum: updating configuration from /dev/da2f
+
+I ended up tweaking /etc/rc to just execute "vinum start".
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-stable" in the body of the message
+
+
+
+
+
+
+
+### PK 2597279 ###
+===== 序 22594 | PK 2597279 =====
+DATE: 1999-05-03
+FROM: Greg Lehey <grog@lemis.com> <None>
+SUBJ: Re: getting vinum working in -stable
+
+On Monday,  3 May 1999 at  0:09:05 -0700, Don Lewis wrote:
+>
+> I just upgraded one of our servers to a 4/30/1999 version of 3.1-stable
+> in order to use vinum and ran into a minor problem.
+>
+> It appears that the preferred way to start vinum at boot time is to
+> "vinum start", but this is now how /etc/rc works.  If the vinum_drives
+> variable is set in /etc/rc.conf, then /etc/rc executes
+> "vinum read $vinum_drives".
+>
+> The problem is that no matter what I set vinum_drives to, vinum wouldn't
+> initialize correctly.
+>
+>     # vinum read /dev/da2e /dev/da2f /dev/da3e /dev/da3f
+>     ** no drives found: No such file or directory
+>
+> If I execute "vinum start", everything works just fine.
+>
+>     May  1 08:27:51 news /kernel: vinum: loaded
+>     May  1 08:27:52 news /kernel: vinum: reading configuration from /dev/da3f
+>     May  1 08:27:52 news /kernel: vinum: updating configuration from /dev/da3e
+>     May  1 08:27:52 news /kernel: vinum: updating configuration from /dev/da2e
+>     May  1 08:27:52 news /kernel: vinum: updating configuration from /dev/da2f
+>
+> I ended up tweaking /etc/rc to just execute "vinum start".
+
+Thanks for reminding me.  I've been meaning to commit changes to
+/etc/rc for some time now.  I'll do it immediately.
+
+Greg
+--
+See complete headers for address, home page and phone numbers
+finger grog@lemis.com for PGP public key
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-stable" in the body of the message
+
+
+
+
+
+
+
+### PK 2597283 ###
+===== 序 22598 | PK 2597283 =====
+DATE: 1999-05-03
+FROM: "Jeff Vehrs" <JWVEHRS@hewitt.com> <None>
+SUBJ: Re: Perl5 - make install failed!
+
+
+Hi Rudi
+
+I'm working with Mark on this. Actually, a few ported applications depend
+on perl5. So, I'd like to see to it(installed successfully). As I've
+learned with Mark, the patch-aa is the culprit. I'm learning how to
+troubleshoot and solve it.
+
+Thanks.
+
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-stable" in the body of the message
+
+
+
+
+
+
+
+### PK 2597293 ###
+===== 序 22608 | PK 2597293 =====
+DATE: 1999-05-03
+FROM: Seth <seth@freebie.dp.ny.frb.org> <None>
+SUBJ: Re: Dos2unix
+
+While this works in the majority of cases (I use the same command on
+occasion), it has the nasty side effect of stripping ALL ^M's, not just
+those occuring at EOL, and won't do anything about the ^Z's you get at the
+end of (some) DOS files.  Sed can be used for this, as can perl (as people
+have pointed out).
+
+Not to start a war here, but perl just seems to me to be overkill for
+something as simple as this.
+
+SB
+
+On Mon, 3 May 1999, Vince Vielhaber wrote:
+
+> 
+> This is all I use in a shell script to convert to unix.
+> 
+> tr -d '^M' < $1
+> 
+> But change the ^M to an actual ASCII 13.  I call it 2ux and to 
+> use it:
+> 
+> 2ux INFILE > OUTFILE
+> 
+> I've never bothered converting them back, if needed I just load it into 
+> an editor on the dos machine and save it, but you can probably use tr or 
+> sed to do that if you really needed to.
+> 
+> Vince.
+> -- 
+> ==========================================================================
+> Vince Vielhaber -- KA8CSH   email: vev@michvhf.com   flame-mail: /dev/null
+>        # include <std/disclaimers.h>                   TEAM-OS2
+>         Online Campground Directory    http://www.camping-usa.com
+>        Online Giftshop Superstore    http://www.cloudninegifts.com
+> ================================================================
+...[正文已截断，共 1661 字符]
+
+
+
+### PK 2597296 ###
+===== 序 22611 | PK 2597296 =====
+DATE: 1999-05-03
+FROM: Axel Thimm <Axel.Thimm@physik.fu-berlin.de> <None>
+SUBJ: aha0 and 64MB RAM problem?
+
+Hello,
+
+on a 2.2.8 system we have the following problem. The kernel configuration
+options for a SCSI controler look like:
+controller      aha0    at isa? port "IO_AHA0" bio irq ? drq 5 vector ahaintr
+controller      scbus0
+device          pt0     at scbus?    # SCSI processor type
+
+options         "BOUNCE_BUFFERS"
+
+On this system we were running successfully with 32MB RAM xvscan with a
+scanner connected to the SCSI port (HP). After upgrading to 64MB ioctl
+calls caused core dumps. IS this perhaps a known problem (fixed in a newer
+release?)
+
+Sorry, if this is not 100% "stable" related.
+
+Please reply also in private, thanks.
+-- 
+Axel.Thimm@physik.fu-berlin.de Axel.Thimm@ifh.de
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-stable" in the body of the message
+
+
+
+
+
+
+
+### PK 2597304 ###
+===== 序 22619 | PK 2597304 =====
+DATE: 1999-05-04
+FROM: "Louis A. Mamakos" <louie@TransSys.COM> <None>
+SUBJ: Re: ppbus causes hangs?
+
+> On Apr 29,  7:41pm, Mike Smith wrote:
+> } Subject: Re: ppbus causes hangs?
+> } 
+> } Try setting the flags on the 'ppc' device to 0x40 and _please_ report 
+> } the results.
+> 
+> I also ran into this problem with a 4/30/1999 version of 3.1-stable
+> on a Dell Dimension XPS R400.  The 0x40 flag fixed the problem.
+
+I had the same problem on a Motorola CPV5000 Compact-PCI system board.  I
+had to disable the parallel port in the BIOS setup to be able to install
+FreeBSD on it, or boot kernels with the 'ppc' device configured.  SInce
+adding the flag, this all seems to be better now.
+
+This is with a 4.0-current based system as of early March.  Petium MMX
+at 233MHz with an 'HX' chipset.  More details upon request.
+
+louie
+
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-stable" in the body of the message
+
+
+
+
+
+
+
+### PK 2597305 ###
+===== 序 22620 | PK 2597305 =====
+DATE: 1999-05-04
+FROM: Mike Smith <mike@smith.net.au> <None>
+SUBJ: Re: FreeBSD 3.1 remote reboot exploit (fwd)
+
+
+I have to say that Jamie really let us down by not running a raw 
+tcpdump alongside the second targetted machine here.  Any chance of 
+provoking these people into "demonstrating" the exploit on a machine, 
+while another connected to the same wire is running
+
+ tcpdump -s 2000 -w splot.raw
+
+and then sending us the 'splot.raw' file?
+
+> Just hit bugtraq, figured people might want to get in touch or start
+> digging.
+> 
+> SB
+> 
+> ---------- Forwarded message ----------
+> Date: Sat, 01 May 1999 03:18:40 -0500
+> From: Jamie Rishaw <jamie@EXODUS.NET>
+> To: BUGTRAQ@netspace.org
+> Subject: FreeBSD 3.1 remote reboot exploit
+> 
+> Hi,
+> 
+>   Sorry to be so vague, but I wanted to let everyone know,
+> 
+>   It's been demonstrated to me by two people who will not reveal "how"
+> that there is a remote bug exploit, almost certainly over IP, that will
+> cause FreeBSD-3.1 systems to reboot with no warnings.
+> 
+>   The second box this was demonstrated on today had no open services
+> besides ircd, and was remote rebooted.  (The first box had open services
+> such as smtp, ssh, pop, http, but did /not/ run ircd, eliminating ircd
+> as the culprit).
+> 
+>   If anyone can shed some light on this (really bad) issue, it'd be
+> greatly appreciated, especially since I
+...[正文已截断，共 2240 字符]
+
+
+
+### PK 2597306 ###
+===== 序 22621 | PK 2597306 =====
+DATE: 1999-05-04
+FROM: Ted Spradley <tsprad@set.spradley.tmi.net> <None>
+SUBJ: make buildworld failing in gnu/usr.bin/groff/mm
+
+Has anyone else seen this?
+
+...
+===> gnu/usr.bin/groff/mm
+Making groff_mm.7 from /scratch/source/src/gnu/usr.bin/groff/mm/../../../.
+./contrib/groff/mm/groff_mm.man
+make: don't know how to make groff_mmse.man. Stop
+*** Error code 2
+
+Stop.
+
+etc...
+
+I've rm -rf'ed /usr/obj/* and done cvs update from my own repository 
+(cvsup'ed nightly) three days straight now, always landing here.
+
+My next step is to rm -rf /usr/src/gnu/usr.bin/groff and 
+/usr/src/contrib/groff and cvs update again, because I think I recall 
+that it built OK at least once before the first time this happened, with 
+no source change in between.  I was running a lot of make buildworld's as 
+hardware stress tests, trying to isolate flakey hardware.
+
+Or it's possible that my repository is corrupted, that's happened before.
+
+
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-stable" in the body of the message
+
+
+
+
+
+
+
+### PK 2597307 ###
+===== 序 22622 | PK 2597307 =====
+DATE: 1999-05-03
+FROM: Brian Somers <brian@Awfulhak.org> <None>
+SUBJ: Re: libutil and undefined reference to `realhostname'
+
+I plead innocence (it works for me) !
+
+Have you done a make depend then make install in libutil, then done 
+the same in src/libexec ?  ``make world'' will do this the easy way...
+
+> compiling ftpd, rexecd, telnetd, whatever, gives me an error such as:
+> ftpd.o(.text+0x2fe6): undefined reference to `realhostname'
+> 
+> The only similarity is that they all include libutil, which just had a
+> fresh change by brian.
+> 
+> So, brian (probably) broke libutil.  Is anyone else having the same
+> trouble?
+> 
+> ------------------------------------ _____________________________________
+> Patrick Seal                        |"Microsoft isn't evil, they just make
+> <patseal@hyperhost.net>             |   really crappy operating systems."
+> Hyperhost - http://www.hyperhost.net| -Linus Torvalds
+> hosting and Design
+> 
+> http://www.freebsd.org - http://www.linux.org
+
+-- 
+Brian <brian@Awfulhak.org>                        <brian@FreeBSD.org>
+      <http://www.Awfulhak.org>                   <brian@OpenBSD.org>
+Don't _EVER_ lose your sense of humour !          <brian@uk.FreeBSD.org>
+
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-stable" in the body of the message
+
+
+
+
+
+
+
+### PK 2597312 ###
+===== 序 22627 | PK 2597312 =====
+DATE: 1999-05-08
+FROM: "Greg Quinlan" <greg@qmpgmc.ac.uk> <None>
+SUBJ: Re: FreeBSD 3.1 remote reboot exploit (fwd)
+
+This sounds so.. so very familiar!!
+
+I have been the target of exploits before......
+
+The exact same thing I have been experiencing........but not for about 5
+days now!
+
+I'm not convinced its a pure exploit.. (i.e. a program specifically written
+for the purpose)
+
+Greg
+
+-----Original Message-----
+From: Karl Denninger <karl@Denninger.Net>
+To: chris@calldei.com <chris@calldei.com>; Jordan K. Hubbard
+<jkh@zippy.cdrom.com>
+Cc: Mike Smith <mike@smith.net.au>; Seth <seth@freebie.dp.ny.frb.org>;
+freebsd-stable@FreeBSD.ORG <freebsd-stable@FreeBSD.ORG>;
+security@FreeBSD.ORG <security@FreeBSD.ORG>; jamie@exodus.net
+<jamie@exodus.net>
+Date: 04 May 1999 05:20
+Subject: Re: FreeBSD 3.1 remote reboot exploit (fwd)
+
+
+>On Mon, May 03, 1999 at 10:51:32PM -0500, Chris Costello wrote:
+>> On Mon, May 3, 1999, Jordan K. Hubbard wrote:
+>> > > I have to say that Jamie really let us down by not running a raw
+>> > > tcpdump alongside the second targetted machine here.  Any chance of
+>> > > provoking these people into "demonstrating" the exploit on a machine,
+>> > > while another connected to the same wire is running
+>> >
+>> > I'd say he or whomever first reported this to bugtraq let us down even
+>> > more by releasing an "advisory" in such an unknown and unv
+...[正文已截断，共 2628 字符]
+
+
+
+### PK 2597313 ###
+===== 序 22628 | PK 2597313 =====
+DATE: 1999-05-04
+FROM: "Raymond Wiker" <raymond@orion.no> <None>
+SUBJ: Re: FreeBSD 3.1 remote reboot exploit (fwd)
+
+Greg Quinlan writes:
+ > This sounds so.. so very familiar!!
+ > 
+ > I have been the target of exploits before......
+ > 
+ > The exact same thing I have been experiencing........but not for about 5
+ > days now!
+ > 
+ > I'm not convinced its a pure exploit.. (i.e. a program specifically written
+ > for the purpose)
+
+	My first post to freebsd-stable (and security) - and it's a
+me-too :-)
+
+	I'm running 3.1-RELEASE on a 486 with 16 MB of RAM, and this
+machine has been falling over regularly. Up until now I have suspected 
+the local electricity, but it had rebooted this morning, even though
+it's now on a UPS.
+
+	I have two other machines running 3.1-RELEASE in a slightly
+less hostile environment (i.e, no direct connections outwards), and
+they have been much more stable. I cannot rule out a hardware problem
+on the 486; I'll know for sure as soon as I upgrade it.
+
+	//Raymond.
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-stable" in the body of the message
+
+
+
+
+
+
+
+### PK 2597314 ###
+===== 序 22629 | PK 2597314 =====
+DATE: 1999-05-04
+FROM: "Georg-W. Koltermann" <gwk@sgi.com> <None>
+SUBJ: resume-to-disk / incorrect default chosen by boot menu
+
+The good news is that suspend-to-disk works just fine with my Latitude and 3.1R. There is something to improve, however:
+
+When the system powers up after a suspend-to-disk, the FreeBSD boot menu prompts for the partition to load.  Since this is a poweron after suspend-to-disk, it should set the default to the suspend partition so that, if no key is pressed, it just resumes the saved image. That does not currently happen, however.  The default chosen by the boot menu is simply the last partition that was loaded previously.
+
+I did a little debugging with DOS debug.exe, and it is apparent that the boot menu saves the default partition to use at some byte in the MBR.
+
+I would like to change the code to not save the default partition explicitly, but instead use the active partition as the default. The reason behind this change is that the BIOS (hopefully) sets the active partition to the suspend partition when suspending to disk.
+
+Could somebody please point me to the place where the source for the FreeBSD boot menu lives so I can change it?
+
+
+Regards,
+Georg.
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-stable" in the body of the message
+
+
+
+
+
+
+
+### PK 2597315 ###
+===== 序 22630 | PK 2597315 =====
+DATE: 1999-05-04
+FROM: Kris Kennaway <kkennawa@physics.adelaide.edu.au> <None>
+SUBJ: tcopy patch for large tapes
+
+Can someone with appropriate hardware test the following patch to
+usr.bin/tcopy/tcopy.c:
+
+----------------------------
+revision 1.5
+date: 1999/04/30 13:13:32;  author: phk;  state: Exp;  lines: +35 -15
+Tcopy uses 32 bit unsigned to accumulate a count of bytes read/written.
+That doesn't work well for tapes over 4G.
+
+I use tcopy a lot to write images of a tape to tape as tape to tape
+copying is terribly slow. Slower than it should be. Quickly found out
+tcopy can not rewind a file when doing copy/verify.
+
+PR:             11386
+Submitted by:   David Kelly dkelly@hiwaay.net
+Reviewed by:    phk
+----------------------------
+
+The patch should apply cleanly to -stable and looks like a good MFC candidate
+for 3.2, providing it works.
+
+Kris
+
+-----
+"That suit's sharper than a page of Oscar Wilde witticisms that's been
+rolled up into a point, sprinkled with lemon juice and jabbed into
+someone's eye"
+"Wow, that's sharp!" - Ace Rimmer and the Cat, _Red Dwarf_
+
+
+
+
+
+### PK 2597318 ###
+===== 序 22633 | PK 2597318 =====
+DATE: 1999-05-04
+FROM: bmah@CA.Sandia.GOV (Bruce A. Mah) <None>
+SUBJ: MFC request
+
+Hi -stablers...
+
+I'm wondering what would be the chances of getting a MFC for the changes from 
+bin/8637?  This patch allows fgetpos(3), fsetpos(3), and ftell(3) to work with 
+file sizes in excess of 2 GB, which I need for some mods I'm doing to 
+tcpslice(1).  I haven't vetted out the manpage changes, but the code seems to 
+Do The Right Thing (TM) when I've dropped it into an otherwise-3.1-RELEASE 
+system.
+
+Affected files:
+
+src/include/stdio.h			1.21 -> 1.22
+src/lib/libc/stdio/Makefile.inc		1.15 -> 1.17
+src/lib/libc/stdio/fgetpos.c		1.6 -> 1.7
+src/lib/libc/stdio/fseek.3		1.2 -> 1.4
+src/lib/libc/stdio/fseek.c		1.7 -> 1.8
+src/lib/libc/stdio/fsetpos.c		1.5 -> 1.6
+src/lib/libc/stdio/ftell.c		1.9 -> 1.10
+
+It looks like this PR is still open, even though its included patches have 
+been committed...is this because of the discussion of changes to errno.h?
+
+Thanks!
+
+Bruce.
+
+PS.  Thanks Dan, for submitting these patches, they saved me a lot of time 
+trying to figure out why tcpslice(1) was falling over.
+
+
+
+
+
+
+
+### PK 2597319 ###
+===== 序 22634 | PK 2597319 =====
+DATE: 1999-05-04
+FROM: indrek siitan <tfr@cafe.ee> <None>
+SUBJ: ncpmount
+
+Hey,
+
+has anyone been able to get the ncpmount libraries 
+(by Boris Popov [bp@butya.kz]) and utilites working?
+
+i've been trying to get that working on two 3.1-STABLE
+machines, one with 1 and the other with 2 processors.
+after getting the config finally right, ncplogin just
+displays a pile of garbage and hangs the whole machine.
+
+
+PS. since i'm not on the list, pls include a cc: to my e-mail.
+
+
+Rgds,
+  Tfr
+
+  --==< tfr@cafe.ee >==< http://tfr.cafe.ee/ >==< +372-50-17621 >==--
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-stable" in the body of the message
+
+
+
+
+
+
+
+### PK 2597320 ###
+===== 序 22635 | PK 2597320 =====
+DATE: 1999-05-04
+FROM: Tom Embt <tom@embt.com> <None>
+SUBJ: Re: FreeBSD 3.1 remote reboot exploit (fwd)
+
+>Hi,
+>
+>  Sorry to be so vague, but I wanted to let everyone know,
+>
+>  It's been demonstrated to me by two people who will not reveal "how"
+>that there is a remote bug exploit, almost certainly over IP, that will
+>cause FreeBSD-3.1 systems to reboot with no warnings.
+>
+>-jamie
+
+
+I've a hunch I've just been victim to this.  I just noticed my 3.1-STABLE
+box isn't running RC5 anymore, then noticed the uptime of 0+12:34:12, which
+is certainly not right.  dmesg shows the typical WARNING: / was not
+properly dismounted message.
+
+I was asleep at the supposed reboot time, but my brother who was in the
+room says he did hear the CD-changer making some noise (which it does upon
+bootup).  Another Win98 machine on the same power line was up and running
+continuously.
+
+Tom Embt
+tom@embt.com
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-stable" in the body of the message
+
+
+
+
+
+
+
+### PK 2597325 ###
+===== 序 22640 | PK 2597325 =====
+DATE: 1999-05-04
+FROM: Mike Smith <mike@smith.net.au> <None>
+SUBJ: Re: resume-to-disk / incorrect default chosen by boot menu
+
+
+Please learn to format your messages.  Specifically, break your lines
+somewhere before 80 columns.  More specifically, stop using Outlook.
+
+> The good news is that suspend-to-disk works just fine with my Latitude
+> and 3.1R. There is something to improve, however:
+
+It doesn't seem to be working, actually.
+
+> When the system powers up after a suspend-to-disk, the FreeBSD boot
+> menu prompts for the partition to load.  Since this is a poweron after
+> suspend-to-disk, it should set the default to the suspend partition so
+> that, if no key is pressed, it just resumes the saved image. That does
+> not currently happen, however.  The default chosen by the boot menu is
+> simply the last partition that was loaded previously.
+
+This is not how suspend-to-disk works.  When you power up after a 
+suspend-to-disk, you should resume where you suspended.
+
+> I would like to change the code to not save the default partition
+> explicitly, but instead use the active partition as the default. The
+> reason behind this change is that the BIOS (hopefully) sets the active
+> partition to the suspend partition when suspending to disk.
+
+The boot0 bootmanager has this behaviour (the 'default' and 'active' 
+flags are the same thing).
+
+> Could somebod
+...[正文已截断，共 1960 字符]
+
+
+
+### PK 2597326 ###
+===== 序 22641 | PK 2597326 =====
+DATE: 1999-05-04
+FROM: Robin Melville <robmel@innotts.co.uk> <None>
+SUBJ: Re: Problems with packages.
+
+At 12:27 pm +0100 30/4/99, Gavan McCormack wrote:
+>It seems like FSR on my installation the package machanism has been
+>corrupted. Doing a pkg_info -a produces all the normal output of installed
+>packages (up to the point where it got screwed) and then at the end comes
+>back with: pkg_info: can't change directory to '/var/db/pkg/.mkversion'!
+
+You're OK. This isn't a corruption, it's an incomplete kludge. '.mkversion'
+is (now) used by the ports build process to check that the port isn't too
+new for your version of FreeBSD.
+
+I guess someone will soon make a small change to pkg_info to make it ignore
+this file.
+
+Regards
+Robin.
+
+
+----------------------------------------------------------------------
+Robin Melville, Addiction Information Services
+Nottingham Alcohol & Drug Team
+Tel:  +44 (0)115 952 9478       Fax:  +44 (0)115 952 9421
+work: robmel@nadt.org.uk        home: robmel@innotts.co.uk
+Pages: http://www.innotts.co.uk/~robmel    (home page)
+       http://www.innotts.co.uk/nadt       (substance misuse pages)
+----------------------------------------------------------------------
+
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-stable" in the body of the message
+
+
+
+
+
+
+
+### PK 2597327 ###
+===== 序 22642 | PK 2597327 =====
+DATE: 1999-05-04
+FROM: lambert@warped.cswnet.com <None>
+SUBJ: 256MB mail server with 190+MB inactive?
+
+Hi guys,
+
+I've run into something I don't understand.  I have replaced a 64MB mail
+server running 2.1.6 with a 256MB server running 3.1-19990218-STABLE.  
+
+The 64MB system was running about 9MB into swap at all times and used 20 -
+25MB for cache, ~23MB active, 10-15MB wired, and between 490K and 3MB 
+free.  The rest was inact or buf.  We had a few problems with users timing
+out while checking their mail.  
+
+The 256MB server went up this morning and is seeing real load for the 
+first time.  It hung after 5 hours of uptime.  We had to push the reset 
+button to recover.  It was still responding to pings and would switch 
+between virtual consoles.  You could enter a username at the login prompt
+but would not get a password prompt.  Ctrl-Alt-Del did not work to reload 
+the box.  
+
+Now it's back up and has been up for 3:30.  Current memory stats from top
+are:
+
+Mem: 23M Active, 189M Inact, 19M Wired, 12M Cache, 8330K Buf, 6512K Free
+120 processes, 118 sleeping.
+
+The rpc.statd process shows to be using 257M with 468K resident.
+
+Most of the other processes are sendmail of sizes < 1532K.  
+
+Where did all of my memory go?  I've seen the archives stating that rpc.statd 
+is known to show un-realistic virtual memory sizes in the 3.x tree.  
+
+Also how do I se
+...[正文已截断，共 1591 字符]
+
+
+
+### PK 2597328 ###
+===== 序 22643 | PK 2597328 =====
+DATE: 1999-05-04
+FROM: Warner Losh <imp@harmony.village.org> <None>
+SUBJ: Re: FreeBSD 3.1 remote reboot exploit (fwd)
+
+In message <XFMail.990503194059.vev@michvhf.com> Vince Vielhaber writes:
+: It's typically in bad taste to post it to BugTraq before contacting the
+: vendor.
+
+I can say that no one appears to have contacted security-officer about
+this.  People have contacted us in the past saying that their machine
+randomly reboots.  When pressed for details, or to enable ddb or crash
+dumps to see why the machine is rebooting, they disappear and nothing
+further is heard from them.
+
+Warner
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-stable" in the body of the message
+
+
+
+
+
+
+
+### PK 2597329 ###
+===== 序 22644 | PK 2597329 =====
+DATE: 1999-05-04
+FROM: Mike Uttech <mike@negativezero.com> <None>
+SUBJ: Re: FreeBSD 3.1 remote reboot exploit (fwd)
+
+	We used to have problems with one of our 3.1-RELEASE boxes randomly
+locking up with no logs of why.  We decided to split the load off of the
+one machine and have not had a problem with it locking up since.  If my
+memory serves me today, I remember reading about a problem in the
+3.1-RELEASE distribution that under heavy load caused the system to hang or
+reboot.  I personally feel that many of these people (the ones who are
+saying they have been having random reboots) are not being attacked in
+anyway but rather are having their machines overloaded and rebooting.  
+	
+
+Mike
+
+
+At 03:53 PM 5/4/99 , Warner Losh wrote:
+>In message <XFMail.990503194059.vev@michvhf.com> Vince Vielhaber writes:
+>: It's typically in bad taste to post it to BugTraq before contacting the
+>: vendor.
+>
+>I can say that no one appears to have contacted security-officer about
+>this.  People have contacted us in the past saying that their machine
+>randomly reboots.  When pressed for details, or to enable ddb or crash
+>dumps to see why the machine is rebooting, they disappear and nothing
+>further is heard from them.
+>
+>Warner
+>
+>
+>To Unsubscribe: send mail to majordomo@FreeBSD.org
+>with "unsubscribe freebsd-security" in the body of the message
+> 
+
+
+To Unsubscribe: se
+...[正文已截断，共 1498 字符]
+
+
+
+### PK 2597330 ###
+===== 序 22645 | PK 2597330 =====
+DATE: 1999-05-04
+FROM: Jason Aley <jason@southchurch.demon.co.uk> <None>
+SUBJ: freebsd wont reboot!
+
+
+hi,
+hope this is the right list to post this to, i have just upgraded to 3.1 after a long time following 2.x stable, after installing and building a new kernel i find that the reboot and shutdown commands no longer work!, the 3 finger sulute does work, but i need to administer this box remotly so  i need the reboot or shutdown commands to work! however if i boot with the generic kernal all's fine! the machine is a p100 running adaptec 1545 adaptor scsi hd and cdrom, below is my kernel config and an output of dmeg, i hope this is enough info.
+
+ 
+
+machine		"i386"
+#cpu		"I386_CPU"
+cpu		"I486_CPU"
+cpu		"I586_CPU"
+#cpu		"I686_CPU"
+ident		MYKERNEL
+maxusers	64
+
+options		INET			#InterNETworking
+options		FFS			#Berkeley Fast Filesystem
+options		FFS_ROOT		#FFS usable as root device [keep this!]
+options		MFS			#Memory Filesystem
+options		MFS_ROOT		#MFS usable as root device, "MFS" req'ed
+options		NFS			#Network Filesystem
+options		NFS_ROOT		#NFS usable as root device, "NFS" req'ed
+options		MSDOSFS			#MSDOS Filesystem
+options		"CD9660"		#ISO 9660 Filesystem
+options		"CD9660_ROOT"		#CD-ROM usable as root. "CD9660" req'ed
+options		PROCFS			#Process filesystem
+options		"COMPAT_43"		#Compatible with BSD 4.3 [KEEP THIS!]
+options		SCSI_DELAY=5000		#Be pessimistic
+...[正文已截断，共 5555 字符]
+
+
+
+### PK 2597334 ###
+===== 序 22649 | PK 2597334 =====
+DATE: 1999-05-04
+FROM: Tim Priebe <tim@iafrica.com.na> <None>
+SUBJ: Re: FreeBSD 3.1 remote reboot exploit (fwd)
+
+I saw such behavior Sunday when trying to implement a new firewall. The
+system would repeatedly panic with a trap 12. This would happen
+immediatelly after the login prompt appeared after the previous panic.
+The system would be stable, if I removed the first ethernet cable, plug
+the cable back in, and a short while later it would start over again.
+It was late, and we had to get the system working again, so we restored
+to the previous system. I have some information logged for packets at
+the time. I will check this and try to reproduce after I finish the
+course I am on this week.
+
+Tim.
+
+Greg Quinlan wrote:
+> 
+> This sounds so.. so very familiar!!
+> 
+> I have been the target of exploits before......
+> 
+> The exact same thing I have been experiencing........but not for about 5
+> days now!
+> 
+> I'm not convinced its a pure exploit.. (i.e. a program specifically written
+> for the purpose)
+> 
+> Greg
+> 
+> -----Original Message-----
+> From: Karl Denninger <karl@Denninger.Net>
+> To: chris@calldei.com <chris@calldei.com>; Jordan K. Hubbard
+> <jkh@zippy.cdrom.com>
+> Cc: Mike Smith <mike@smith.net.au>; Seth <seth@freebie.dp.ny.frb.org>;
+> freebsd-stable@FreeBSD.ORG <freebsd-stable@FreeBSD.ORG>;
+> security@FreeBSD.ORG <security@FreeBSD.ORG>; jamie@exodus.net
+> <jamie@exodus.net>
+> Date: 04 May 1999 05:20
+> Subject: Re: FreeBSD 3.1 remote reboot exploit (fwd)
+> 
+> >On Mon, May 03, 1999 at 10:51:32PM -0500, Chris Costello wrote:
+> >> On Mon, May 3, 1999, Jordan K. Hubbard wrote:
+> >> > > I have to say that Jamie really let us down by not running a raw
+> >> > > tcpdump alongside the second targetted machine here.  Any chance of
+> >> > > provoking these people into "demonstrating" the exploit on a machine,
+> >> > > while another connected to the same wire is running
+> >> >
+> >> > I'd say he or whomever first reported this to bugtraq let us down even
+> >> > more by releasing an "advisory" in such an unknown and unverifyable
+> >> > state.  By doing so, all they've done is hand ammunition to the FUD
+> >> > corps and given us no reasonable chance to respond since the advisory
+> >>
+> >>    I get the impression that that was the whole point of the
+> >> bugtraq post, to give us more grief.
+> >
+> >Ding!
+> >
+> >Give that man a cigar.
+> >
+> >Anyone who saw this done to one machine and didn't *immediately* configure
+> >machine #2 to trap and trace on the second instance deserves raspberries -
+> >at a minimum.
+> >
+> >Its one thing to have it done "anyonmously" (among other things you might
+> >not be there when it goes "boom" under those conditions!)  Its another to
+> >have it done under controlled conditions and neither get an explanantion
+> >OR trap the condition that caused it yourself with a tcpdump trace.
+> >
+> >--
+> >--
+> >Karl Denninger (karl@denninger.net)  Web: fathers.denninger.net
+> >I ain't even *authorized* to speak for anyone other than myself, so give
+> >up now on trying to associate my words with any particular organization.
+> >
+> >
+> >To Unsubscribe: send mail to majordomo@FreeBSD.org
+> >with "unsubscribe freebsd-security" in the body of the message
+> >
+> 
+> To Unsubscribe: send mail to majordomo@FreeBSD.org
+> with "unsubscribe freebsd-security" in the body of the message
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-stable" in the body of the message
+
+
+
+
+
+
+
+### PK 2597335 ###
+===== 序 22650 | PK 2597335 =====
+DATE: 1999-05-04
+FROM: Andreas Braukmann <braukmann@tse-online.de> <None>
+SUBJ: Re: ncpmount
+
+Hi,
+
+On Tue, May 04, 1999 at 07:14:25PM +0300, indrek siitan wrote:
+> has anyone been able to get the ncpmount libraries 
+> (by Boris Popov [bp@butya.kz]) and utilites working?
+yes. definately.
+At least on one machine.
+ 
+> i've been trying to get that working on two 3.1-STABLE
+3.1-stable a few days old (Apr., 27.), single processor PII,
+ncplib 1.3b7
+
+> after getting the config finally right, ncplogin just
+> displays a pile of garbage and hangs the whole machine.
+hmm. I havn't setup a config file, yet. 
+I just gave it a try in a testing environment for one of
+our clients and transfered multiple GBytes of data from various
+NW 4.11 volumes to the FreeBSD box.
+
+I followed the instructions and it worked without a hitch.
+
+Regards,
+    Andreas
+
+-- 
+: TSE TeleService GmbH  :  Gsf: Arne Reuter        :                 :
+: Hovestrasse 14        :       Andreas Braukmann  : We do it with   :
+: D-48351 Everswinkel   :  HRB: 1430, AG WAF       :  FreeBSD/SMP    :
+:--------------------------------------------------------------------:
+: Anti-Spam Petition:     http://www.politik-digital.de/spam/        :
+: PGP-Key:                http://www.tse-online.de/~ab/public-key    :
+: Key fingerprint:  12 13 EF BC 22 DD F4 B6  3C 25 C9 06 DC D3 45 9B :
+
+
+To Unsubscribe: send m
+...[正文已截断，共 1494 字符]
+
+
+
+### PK 2597336 ###
+===== 序 22651 | PK 2597336 =====
+DATE: 1999-05-04
+FROM: "Michael C. Vergallen" <mvergall@mail.double-barrel.be> <None>
+SUBJ: Re: FreeBSD 3.1 remote reboot exploit (fwd)
+
+I don't see how this can be a exploit if you have /etc/hosts.deny and
+/etc/hosts.allow set up correctly and dont allow rcmd commands on your
+system..I tried to remotely reboot my ftp server here and no it does not
+work on that machine and I also tried on my gateway machine and no luck
+there either. Now I will try my print server but I first have to upgrade
+that box to 3.1 ...However on my network I see more and more poeple
+scanning with a portscanner so I supose I better keep a look out for
+strange items in my log files.
+
+Michael
+---
+Michael C. Vergallen A.k.A. Mad Mike, 
+Sportstraat 28			http://www.double-barrel.be/mvergall/
+B 9000 Gent			ftp://ftp.double-barrel.be/pub/linux/
+Belgium				tel : 32-9-2227764 Fax : 32-9-2224976
+			
+On Wed, 5 May 1999, Tim Priebe wrote:
+
+> I saw such behavior Sunday when trying to implement a new firewall. The
+> system would repeatedly panic with a trap 12. This would happen
+> immediatelly after the login prompt appeared after the previous panic.
+> The system would be stable, if I removed the first ethernet cable, plug
+> the cable back in, and a short while later it would start over again.
+> It was late, and we had to get the system working again, so we restored
+> to the previous system. I have some information logged for packets at
+> the time. I will check this and try to reproduce after I finish the
+> course I am on this week.
+> 
+> Tim.
+> 
+> Greg Quinlan wrote:
+> > 
+> > This sounds so.. so very familiar!!
+> > 
+> > I have been the target of exploits before......
+> > 
+> > The exact same thing I have been experiencing........but not for about 5
+> > days now!
+> > 
+> > I'm not convinced its a pure exploit.. (i.e. a program specifically written
+> > for the purpose)
+> > 
+> > Greg
+> > 
+> > -----Original Message-----
+> > From: Karl Denninger <karl@Denninger.Net>
+> > To: chris@calldei.com <chris@calldei.com>; Jordan K. Hubbard
+> > <jkh@zippy.cdrom.com>
+> > Cc: Mike Smith <mike@smith.net.au>; Seth <seth@freebie.dp.ny.frb.org>;
+> > freebsd-stable@FreeBSD.ORG <freebsd-stable@FreeBSD.ORG>;
+> > security@FreeBSD.ORG <security@FreeBSD.ORG>; jamie@exodus.net
+> > <jamie@exodus.net>
+> > Date: 04 May 1999 05:20
+> > Subject: Re: FreeBSD 3.1 remote reboot exploit (fwd)
+> > 
+> > >On Mon, May 03, 1999 at 10:51:32PM -0500, Chris Costello wrote:
+> > >> On Mon, May 3, 1999, Jordan K. Hubbard wrote:
+> > >> > > I have to say that Jamie really let us down by not running a raw
+> > >> > > tcpdump alongside the second targetted machine here.  Any chance of
+> > >> > > provoking these people into "demonstrating" the exploit on a machine,
+> > >> > > while another connected to the same wire is running
+> > >> >
+> > >> > I'd say he or whomever first reported this to bugtraq let us down even
+> > >> > more by releasing an "advisory" in such an unknown and unverifyable
+> > >> > state.  By doing so, all they've done is hand ammunition to the FUD
+> > >> > corps and given us no reasonable chance to respond since the advisory
+> > >>
+> > >>    I get the impression that that was the whole point of the
+> > >> bugtraq post, to give us more grief.
+> > >
+> > >Ding!
+> > >
+> > >Give that man a cigar.
+> > >
+> > >Anyone who saw this done to one machine and didn't *immediately* configure
+> > >machine #2 to trap and trace on the second instance deserves raspberries -
+> > >at a minimum.
+> > >
+> > >Its one thing to have it done "anyonmously" (among other things you might
+> > >not be there when it goes "boom" under those conditions!)  Its another to
+> > >have it done under controlled conditions and neither get an explanantion
+> > >OR trap the condition that caused it yourself with a tcpdump trace.
+> > >
+> > >--
+> > >--
+> > >Karl Denninger (karl@denninger.net)  Web: fathers.denninger.net
+> > >I ain't even *authorized* to speak for anyone other than myself, so give
+> > >up now on trying to associate my words with any particular organization.
+> > >
+> > >
+> > >To Unsubscribe: send mail to majordomo@FreeBSD.org
+> > >with "unsubscribe freebsd-security" in the body of the message
+> > >
+> > 
+> > To Unsubscribe: send mail to majordomo@FreeBSD.org
+> > with "unsubscribe freebsd-security" in the body of the message
+> 
+> 
+> To Unsubscribe: send mail to majordomo@FreeBSD.org
+> with "unsubscribe freebsd-stable" in the body of the message
+> 
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-stable" in the body of the message
+
+
+
+
+
+
+
+### PK 2597337 ###
+===== 序 22652 | PK 2597337 =====
+DATE: 1999-05-04
+FROM: "Jordan K. Hubbard" <jkh@zippy.cdrom.com> <None>
+SUBJ: Re: Problems with packages.
+
+> You're OK. This isn't a corruption, it's an incomplete kludge. '.mkversion'
+> is (now) used by the ports build process to check that the port isn't too
+> new for your version of FreeBSD.
+
+Nope, it's not even supposed to be in /var/db/pkg at all anymore; you can
+remove it.  Satoshi has moved it to a more appropriate location.
+
+- Jordan
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-stable" in the body of the message
+
+
+
+
+
+
+
+### PK 2597341 ###
+===== 序 22656 | PK 2597341 =====
+DATE: 1999-05-05
+FROM: Laurence Berland <stuyman@confusion.net> <None>
+SUBJ: Re: freebsd wont reboot!
+
+You have two uncommented cpu lines, 486 and 586
+I dont know that that would cause the bug, but it strikes me as wrong
+
+Jason Aley wrote:
+> 
+> hi,
+> hope this is the right list to post this to, i have just upgraded to 3.1 after a long time following 2.x stable, after installing and building a new kernel i find that the reboot and shutdown commands no longer work!, the 3 finger sulute does work, but i need to administer this box remotly so  i need the reboot or shutdown commands to work! however if i boot with the generic kernal all's fine! the machine is a p100 running adaptec 1545 adaptor scsi hd and cdrom, below is my kernel config and an output of dmeg, i hope this is enough info.
+> 
+> 
+> 
+> machine         "i386"
+> #cpu            "I386_CPU"
+> cpu             "I486_CPU"
+> cpu             "I586_CPU"
+> #cpu            "I686_CPU"
+> ident           MYKERNEL
+> maxusers        64
+> 
+> 
+
+-- 
+Laurence Berland, Stuyvesant HS Debate
+<><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><>
+Windows 98: n.
+        useless extension to a minor patch release for 
+        32-bit extensions and a graphical shell for a 
+        16-bit patch to an 8-bit operating system 
+        originally coded for a 4-bit microprocessor, 
+        written by a 2-b
+...[正文已截断，共 1650 字符]
+
+
+
+### PK 2597342 ###
+===== 序 22657 | PK 2597342 =====
+DATE: 1999-05-05
+FROM: "Sameer R. Manek" <manek@ecst.csuchico.edu> <None>
+SUBJ: bug with lockf(3)?
+
+On freebsd 3-1-stable I'm not sure if this is a bug or my misinterpetation
+of how lockf() works. But here's the situation.
+
+Given 2 processes A and B, both with open file descriptors to a file,
+using open ("file.txt",O_RDWR)
+A calls lockf (fd,F_LOCK,0) and proceeds to read/write to file 
+while file is still locked.... 
+B calls lockf (fd,F_LOCK,0) and enters blocked stait
+A calls lockf (fd,F_ULOCK,0)
+B is still in blocked state, until A exit(3)s.
+
+According to the man page:
+     F_LOCK and F_TLOCK requests differ only by the action taken if the
+section is not available.  F_LOCK blocks the calling process until the
+section is available.  F_TLOCK makes the function fail if the section is
+already locked by another process.
+
+
+
+
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+Sameer Manek                                      manek@ecst.csuchico.edu
+"They that will sacrifice liberty in exchange for temporary safety 
+ deserve neither liberty or safety." -Ben Franklin
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-stable" in the body of the message
+
+
+
+
+
+
+
+### PK 2597343 ###
+===== 序 22658 | PK 2597343 =====
+DATE: 1999-05-05
+FROM: David Kelly <dkelly@hiwaay.net> <None>
+SUBJ: Re: tcopy patch for large tapes
+
+Uh, I *did* test it before submitting it via send-pr. Big problem now 
+is I no longer have access to the 4 Seagate Scorpion DDS-3 drives that I 
+had on a single FreeBSD box. Hows this for a test:
+
+nospam: {1175} dd if=/dev/zero bs=64k count=80000 | tcopy /dev/stdin /dev/null
+file 0: block size 65536: 80000+0 records in
+80000+0 records out
+5242880000 bytes transferred in 47.559275 secs (110238854 bytes/sec)
+80000 records
+file 0: eof after 80000 records: 947912704 bytes
+eot
+total length: 947912704 bytes
+tcopy: tape op: Operation not supported by device
+
+"947912704 bytes" is 4G short.
+
+nospam: {1176} dd if=/dev/zero bs=64k count=80000 | ./tcopy /dev/stdin /dev/null 
+file 0: block size 65536: 80000+0 records in
+80000+0 records out
+5242880000 bytes transferred in 44.714596 secs (117252094 bytes/sec)
+80000 records
+file 0: eof after 80000 records: 5242880000 bytes
+eot
+total length: 5242880000 bytes
+tcopy: tape op: Operation not supported by device
+nospam: {1177} which tcopy 
+/usr/bin/tcopy
+nospam: {1178} which ./tcopy
+./tcopy
+nospam: {1179} 
+
+Hmmm. Possibly needs more enhancment as I think the above "tcopy: tape
+op: Operation not supported by device" was an attempt to write an EOF on
+/dev/null vi mtio.h's ioctl's.
+
+Submitted another similar send-pr earlier for wc, which has the same 32
+bit counter limit. Haven't seen it come thru. There was a complaint that
+I did the diffs wrong. Do I need to resubmit that one too? That would be
+bin/11141.
+
+Its easy to test wc as one can use /dev/zero as a source thru dd as a 
+throttle. "dd if=/dev/zero bs=1024k count=6000 | wc -c"
+
+Using the above I did notice the fixed wc runs slower. Guess its all 
+those syscalls to increment a 64 bit variable.
+
+Kris Kennaway writes:
+>   This message is in MIME format.  The first part should be readable text,
+>   while the remaining parts are likely unreadable without MIME-aware tools.
+>   Send mail to mime@docserver.cac.washington.edu for more info.
+> 
+> --0-1619344480-925818190=:32078
+> Content-Type: TEXT/PLAIN; charset=US-ASCII
+> 
+> Can someone with appropriate hardware test the following patch to
+> usr.bin/tcopy/tcopy.c:
+> 
+> ----------------------------
+> revision 1.5
+> date: 1999/04/30 13:13:32;  author: phk;  state: Exp;  lines: +35 -15
+> Tcopy uses 32 bit unsigned to accumulate a count of bytes read/written.
+> That doesn't work well for tapes over 4G.
+> 
+> I use tcopy a lot to write images of a tape to tape as tape to tape
+> copying is terribly slow. Slower than it should be. Quickly found out
+> tcopy can not rewind a file when doing copy/verify.
+> 
+> PR:             11386
+> Submitted by:   David Kelly dkelly@hiwaay.net
+> Reviewed by:    phk
+> ----------------------------
+> 
+> The patch should apply cleanly to -stable and looks like a good MFC candidate
+> for 3.2, providing it works.
+> 
+> Kris
+> 
+> -----
+> "That suit's sharper than a page of Oscar Wilde witticisms that's been
+> rolled up into a point, sprinkled with lemon juice and jabbed into
+> someone's eye"
+> "Wow, that's sharp!" - Ace Rimmer and the Cat, _Red Dwarf_
+> 
+> --0-1619344480-925818190=:32078
+> Content-Type: TEXT/PLAIN; charset=US-ASCII; name="tcopy.patch"
+> Content-ID: <Pine.OSF.4.10.9905042113090.32078@bragg>
+> Content-Description: 
+> Content-Disposition: attachment; filename="tcopy.patch"
+> Content-Transfer-Encoding: BASE64
+> 
+> LS0tIHRjb3B5LmMub3JpZwlUaHUgQXVnIDE0IDE2OjExOjAwIDE5OTcNCisr
+> KyB0Y29weS5jCVNhdCBNYXkgIDEgMjE6MDI6MDUgMTk5OQ0KQEAgLTQyLDcg
+> KzQyLDcgQEANCiBzdGF0aWMgY2hhciBzY2NzaWRbXSA9ICJAKCMpdGNvcHku
+> Ywk4LjIgKEJlcmtlbGV5KSA0LzE3Lzk0IjsNCiAjZW5kaWYNCiBzdGF0aWMg
+> Y29uc3QgY2hhciByY3NpZFtdID0NCi0JIiRJZDogdGNvcHkuYyx2IDEuNCAx
+> OTk3LzA4LzE0IDA2OjQxOjAwIGNoYXJuaWVyIEV4cCAkIjsNCisJIiRJZDog
+> dGNvcHkuYyx2IDEuNSAxOTk5LzA0LzMwIDEzOjEzOjMyIHBoayBFeHAgJCI7
+> DQogI2VuZGlmIC8qIG5vdCBsaW50ICovDQogDQogI2luY2x1ZGUgPHN5cy90
+> eXBlcy5oPg0KQEAgLTY1LDcgKzY1LDcgQEANCiAjZGVmaW5lCU5PQ09VTlQJ
+> KC0yKQ0KIA0KIGludAlmaWxlbiwgZ3Vlc3NsZW4sIG1heGJsayA9IE1BWFJF
+> QzsNCi11X2xvbmcJbGFzdHJlYywgcmVjb3JkLCBzaXplLCB0c2l6ZTsNCit1
+> X2ludDY0X3QJbGFzdHJlYywgcmVjb3JkLCBzaXplLCB0c2l6ZTsNCiBGSUxF
+> CSptc2cgPSBzdGRvdXQ7DQogDQogdm9pZAkqZ2V0c3BhY2UgX19QKChpbnQp
+> KTsNCkBAIC03Myw2ICs3Myw3IEBADQogc3RhdGljIHZvaWQJIHVzYWdlIF9f
+> UCgodm9pZCkpOw0KIHZvaWQJIHZlcmlmeSBfX1AoKGludCwgaW50LCBjaGFy
+> ICopKTsNCiB2b2lkCSB3cml0ZW9wIF9fUCgoaW50LCBpbnQpKTsNCit2b2lk
+> CXJld2luZF90YXBlKGludCk7DQogDQogaW50DQogbWFpbihhcmdjLCBhcmd2
+> KQ0KQEAgLTE1NiwxNiArMTU3LDE2IEBADQogCQkJCWlmIChucmVhZCA+PSAw
+> KQ0KIAkJCQkJZ290byByMTsNCiAJCQl9DQotCQkJZXJyKDEsICJyZWFkIGVy
+> cm9yLCBmaWxlICVkLCByZWNvcmQgJWxkIiwgZmlsZW4sIHJlY29yZCk7DQor
+> CQkJZXJyKDEsICJyZWFkIGVycm9yLCBmaWxlICVkLCByZWNvcmQgJXF1Iiwg
+> ZmlsZW4sIHJlY29yZCk7DQogCQl9IGVsc2UgaWYgKG5yZWFkICE9IGxhc3Ru
+> cmVhZCkgew0KIAkJCWlmIChsYXN0bnJlYWQgIT0gMCAmJiBsYXN0bnJlYWQg
+> IT0gTk9DT1VOVCkgew0KIAkJCQlpZiAobGFzdHJlYyA9PSAwICYmIG5yZWFk
+> ID09IDApDQotCQkJCQlmcHJpbnRmKG1zZywgIiVsZCByZWNvcmRzXG4iLCBy
+> ZWNvcmQpOw0KKwkJCQkJZnByaW50Zihtc2csICIlcXUgcmVjb3Jkc1xuIiwg
+> cmVjb3JkKTsNCiAJCQkJZWxzZSBpZiAocmVjb3JkIC0gbGFzdHJlYyA+IDEp
+> DQotCQkJCQlmcHJpbnRmKG1zZywgInJlY29yZHMgJWxkIHRvICVsZFxuIiwN
+> CisJCQkJCWZwcmludGYobXNnLCAicmVjb3JkcyAlcXUgdG8gJXF1XG4iLA0K
+> IAkJCQkJICAgIGxhc3RyZWMsIHJlY29yZCk7DQogCQkJCWVsc2UNCi0JCQkJ
+> CWZwcmludGYobXNnLCAicmVjb3JkICVsZFxuIiwgbGFzdHJlYyk7DQorCQkJ
+> CQlmcHJpbnRmKG1zZywgInJlY29yZCAlcXVcbiIsIGxhc3RyZWMpOw0KIAkJ
+> CX0NCiAJCQlpZiAobnJlYWQgIT0gMCkNCiAJCQkJZnByaW50Zihtc2csICJm
+> aWxlICVkOiBibG9jayBzaXplICVkOiAiLA0KQEAgLTE4Myw5ICsxODQsOSBA
+> QA0KIAkJCQludyA9IHdyaXRlKG91dHAsIGJ1ZmYsIG5yZWFkKTsNCiAJCQkJ
+> aWYgKG53ICE9IG5yZWFkKSB7DQogCQkJCQlpZiAobncgPT0gLTEpIHsNCi0J
+> CQkJCXdhcm4oIndyaXRlIGVycm9yLCBmaWxlICVkLCByZWNvcmQgJWxkIiwg
+> ZmlsZW4sIHJlY29yZCk7DQorCQkJCQl3YXJuKCJ3cml0ZSBlcnJvciwgZmls
+> ZSAlZCwgcmVjb3JkICVxdSIsIGZpbGVuLCByZWNvcmQpOw0KIAkJCQkJfSBl
+> bHNlIHsNCi0JCQkJCXdhcm54KCJ3cml0ZSBlcnJvciwgZmlsZSAlZCwgcmVj
+> b3JkICVsZCIsIGZpbGVuLCByZWNvcmQpOw0KKwkJCQkJd2FybngoIndyaXRl
+> IGVycm9yLCBmaWxlICVkLCByZWNvcmQgJXF1IiwgZmlsZW4sIHJlY29yZCk7
+> DQogCQkJCQl3YXJueCgid3JpdGUgKCVkKSAhPSByZWFkICglZCkiLCBudywg
+> bnJlYWQpOw0KIAkJCQkJfQ0KIAkJCQkJZXJyeCg1LCAiY29weSBhYm9ydGVk
+> Iik7DQpAQCAtMTk5LDcgKzIwMCw3IEBADQogCQkJCWJyZWFrOw0KIAkJCX0N
+> CiAJCQlmcHJpbnRmKG1zZywNCi0JCQkgICAgImZpbGUgJWQ6IGVvZiBhZnRl
+> ciAlbHUgcmVjb3JkczogJWx1IGJ5dGVzXG4iLA0KKwkJCSAgICAiZmlsZSAl
+> ZDogZW9mIGFmdGVyICVxdSByZWNvcmRzOiAlcXUgYnl0ZXNcbiIsDQogCQkJ
+> ICAgIGZpbGVuLCByZWNvcmQsIHNpemUpOw0KIAkJCW5lZWRlb2YgPSAxOw0K
+> IAkJCWZpbGVuKys7DQpAQCAtMjA5LDE0ICsyMTAsMTQgQEANCiAJCX0NCiAJ
+> CWxhc3RucmVhZCA9IG5yZWFkOw0KIAl9DQotCWZwcmludGYobXNnLCAidG90
+> YWwgbGVuZ3RoOiAlbHUgYnl0ZXNcbiIsIHRzaXplKTsNCisJZnByaW50Ziht
+> c2csICJ0b3RhbCBsZW5ndGg6ICVxdSBieXRlc1xuIiwgdHNpemUpOw0KIAko
+> dm9pZClzaWduYWwoU0lHSU5ULCBvbGRzaWcpOw0KIAlpZiAob3AgPT0gQ09Q
+> WSB8fCBvcCA9PSBDT1BZVkVSSUZZKSB7DQogCQl3cml0ZW9wKG91dHAsIE1U
+> V0VPRik7DQogCQl3cml0ZW9wKG91dHAsIE1UV0VPRik7DQogCQlpZiAob3Ag
+> PT0gQ09QWVZFUklGWSkgew0KLQkJCXdyaXRlb3Aob3V0cCwgTVRSRVcpOw0K
+> LQkJCXdyaXRlb3AoaW5wLCBNVFJFVyk7DQorCQkJcmV3aW5kX3RhcGUob3V0
+> cCk7DQorCQkJcmV3aW5kX3RhcGUoaW5wKTsNCiAJCQl2ZXJpZnkoaW5wLCBv
+> dXRwLCBidWZmKTsNCiAJCX0NCiAJfQ0KQEAgLTI4MywxMCArMjg0LDEwIEBA
+> DQogew0KIAlpZiAocmVjb3JkKQ0KIAkJaWYgKHJlY29yZCAtIGxhc3RyZWMg
+> PiAxKQ0KLQkJCWZwcmludGYobXNnLCAicmVjb3JkcyAlbGQgdG8gJWxkXG4i
+> LCBsYXN0cmVjLCByZWNvcmQpOw0KKwkJCWZwcmludGYobXNnLCAicmVjb3Jk
+> cyAlcXUgdG8gJXF1XG4iLCBsYXN0cmVjLCByZWNvcmQpOw0KIAkJZWxzZQ0K
+> LQkJCWZwcmludGYobXNnLCAicmVjb3JkICVsZFxuIiwgbGFzdHJlYyk7DQot
+> CWZwcmludGYobXNnLCAiaW50ZXJydXB0IGF0IGZpbGUgJWQ6IHJlY29yZCAl
+> bGRcbiIsIGZpbGVuLCByZWNvcmQpOw0KKwkJCWZwcmludGYobXNnLCAicmVj
+> b3JkICVxdVxuIiwgbGFzdHJlYyk7DQorCWZwcmludGYobXNnLCAiaW50ZXJy
+> dXB0IGF0IGZpbGUgJWQ6IHJlY29yZCAlcXVcbiIsIGZpbGVuLCByZWNvcmQp
+> Ow0KIAlmcHJpbnRmKG1zZywgInRvdGFsIGxlbmd0aDogJWxkIGJ5dGVzXG4i
+> LCB0c2l6ZSArIHNpemUpOw0KIAlleGl0KDEpOw0KIH0NCkBAIC0zMTksNCAr
+> MzIwLDIzIEBADQogew0KIAlmcHJpbnRmKHN0ZGVyciwgInVzYWdlOiB0Y29w
+> eSBbLWN2eF0gWy1zIG1heGJsa10gW3NyYyBbZGVzdF1dXG4iKTsNCiAJZXhp
+> dCgxKTsNCit9DQorDQordm9pZA0KK3Jld2luZF90YXBlKGludCBmZCkNCit7
+> DQorCXN0cnVjdCBzdGF0IHNwOw0KKw0KKwlpZihmc3RhdChmZCwgJnNwKSkN
+> CisJCWVycngoMTIsICJmc3RhdCBpbiByZXdpbmQiKTsNCisNCisJLyoNCisJ
+> ICogZG9uJ3Qgd2FudCB0byBkbyB0YXBlIGlvY3RsIG9uIHJlZ3VsYXIgZmls
+> ZXM6DQorCSAqLw0KKwlpZiggU19JU1JFRyhzcC5zdF9tb2RlKSApIHsNCisJ
+> CWlmKCBsc2VlayhmZCwgMCwgU0VFS19TRVQpID09IC0xICkNCisJCQllcnJ4
+> KDEzLCAibHNlZWsiKTsNCisJfSBlbHNlDQorCQkvKiAgYXNzdW1lIGl0cyBh
+> IHRhcGUJKi8NCisJCXdyaXRlb3AoZmQsIE1UUkVXKTsNCiB9DQo=
+> --0-1619344480-925818190=:32078--
+> 
+> 
+> To Unsubscribe: send mail to majordomo@FreeBSD.org
+> with "unsubscribe freebsd-stable" in the body of the message
+> 
+
+
+--
+David Kelly N4HHE, dkelly@nospam.hiwaay.net
+=====================================================================
+The human mind ordinarily operates at only ten percent of its
+capacity -- the rest is overhead for the operating system.
+
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-stable" in the body of the message

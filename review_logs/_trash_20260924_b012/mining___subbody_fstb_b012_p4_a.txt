@@ -1,0 +1,1642 @@
+### PK 2597177 ###
+===== 序 22492 | PK 2597177 =====
+DATE: 1999-04-26
+FROM: "David Schwartz" <davids@webmaster.com> <None>
+SUBJ: RE: file disappeared?
+
+
+	You are expecting 'rm' to do something other than it actually does. All
+'rm' does is call 'unlink'. Read the man page for 'unlink' and you should
+understand what is happening:
+
+     The unlink() function removes the link named by path from its directory
+     and decrements the link count of the file which was referenced by the
+     link.  If that decrement reduces the link count of the file to zero,
+and
+     no process has the file open, then all resources associated with the
+file
+     are reclaimed.  If one or more process have the file open when the last
+     link is removed, the link is removed, but the removal of the file is
+de-
+     layed until all references to it have been closed.  path may not be a
+di-
+     rectory.
+
+	DS
+
+> -----Original Message-----
+> From: owner-freebsd-stable@FreeBSD.ORG
+> [mailto:owner-freebsd-stable@FreeBSD.ORG]On Behalf Of Chris Costello
+> Sent: Monday, April 26, 1999 10:08 AM
+> To: Dean Lombardo <"ayk1 "@ukc.ac.uk>
+> Cc: stable@FreeBSD.ORG
+> Subject: Re: file disappeared?
+>
+>
+> On Mon, Apr 26, 1999, Dean Lombardo wrote:
+> > The subject says it all:  I removed a file, but according to df, it's
+> > still there!
+> >
+> > pcayk:~/tmp$ df -k .
+> > Filesystem   1K-blocks     Used    Avail Capacity  Mounted on
+> > /dev/wd0
+...[正文已截断，共 2008 字符]
+
+
+
+### PK 2597178 ###
+===== 序 22493 | PK 2597178 =====
+DATE: 1999-04-26
+FROM: Dennis Rockwell <dennis@bbn.com> <None>
+SUBJ: Re: nmbclusters=4096 doesn't increase mbufs
+
+On 23 Apr, mwlucas@exceptionet.com wrote:
+
+> We've rebooted twice; once with maxusers = 256, and one with nmbclusters
+> specifically set.  And yes, we did a config, make depend && make all
+> install.
+> 
+> > #define quoting(mwlucas@exceptionet.com)
+
+> > // scooby# netstat -m
+> > [ ... ]
+> > // 128/132 mbuf clusters in use
+
+In most Unix kernels I've diddled with (and I can't say for
+sure about FreeBSD), and cluster count numbers (here as
+128/132) should be labelled "in use" and "allocated".  The
+limit for "allocated" (4096) is not given by netstat -m in
+most cases, since that's not kept in the tables that netstat
+-m examines.
+
+In other words, the 132 is simply the current high-water
+mark for cluster allocations.
+
+Dennis Rockwell                 dennis@bbn.com
+GTE Internetworking
+Powered by BBN                  +1-617-873-5745
+Cambridge, MA                   +1-617-873-6091 (Fax)
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-stable" in the body of the message
+
+
+
+
+
+
+
+### PK 2597180 ###
+===== 序 22495 | PK 2597180 =====
+DATE: 1999-04-26
+FROM: mwlucas@exceptionet.com <None>
+SUBJ: Re: nmbclusters=4096 doesn't increase mbufs
+
+The machine in question frequently slows to a crawl.  The IPFilter people
+have specifically cited mbuf starvation as a classic cause of this
+symptom.
+
+How can I determine how many mbufs a FreeBSD machine has at a given time?
+
+If 132 is the current high-water mark, and we actually have 4096
+available, I'll shut up and go away happy.
+
+==ml
+
+> In most Unix kernels I've diddled with (and I can't say for
+> sure about FreeBSD), and cluster count numbers (here as
+> 128/132) should be labelled "in use" and "allocated".  The
+> limit for "allocated" (4096) is not given by netstat -m in
+> most cases, since that's not kept in the tables that netstat
+> -m examines.
+> 
+> In other words, the 132 is simply the current high-water
+> mark for cluster allocations.
+
+
+-- 
+Michael Lucas			|
+Exceptionet, Inc.		|	www.exceptionet.com
+"Exceptional Networking"	|
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-stable" in the body of the message
+
+
+
+
+
+
+
+### PK 2597181 ###
+===== 序 22496 | PK 2597181 =====
+DATE: 1999-04-26
+FROM: Dennis Rockwell <dennis@bbn.com> <None>
+SUBJ: Re: nmbclusters=4096 doesn't increase mbufs
+
+On 26 Apr, mwlucas@exceptionet.com wrote:
+
+> The machine in question frequently slows to a crawl.  The IPFilter people
+> have specifically cited mbuf starvation as a classic cause of this
+> symptom.
+
+Run netstat -m when the system is crawling and see what you
+get, especially the denied and delayed numbers.
+
+> How can I determine how many mbufs a FreeBSD machine has at a given time?
+
+That's what netstat -m tells you; how many mbufs and
+clusters have been allocated, and how many of them are in
+use (ie, not on the freelists).
+
+> If 132 is the current high-water mark, and we actually have 4096
+> available, I'll shut up and go away happy.
+
+That is precisely the case on other related systems I've
+dealt with; I cannot claim to be authoritative about this
+particular version of FreeBSD, but the output of netstat -m
+is similar enough that I would expect that the underlying
+mechanisms are the same.
+
+Dennis Rockwell                 dennis@bbn.com
+GTE Internetworking
+Powered by BBN                  +1-617-873-5745
+Cambridge, MA                   +1-617-873-6091 (Fax)
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-stable" in the body of the message
+
+
+
+
+
+
+
+### PK 2597182 ###
+===== 序 22497 | PK 2597182 =====
+DATE: 1999-04-26
+FROM: David Greenman <dg@root.com> <None>
+SUBJ: Re: nmbclusters=4096 doesn't increase mbufs
+
+>> If 132 is the current high-water mark, and we actually have 4096
+>> available, I'll shut up and go away happy.
+>
+>That is precisely the case on other related systems I've
+>dealt with; I cannot claim to be authoritative about this
+>particular version of FreeBSD, but the output of netstat -m
+>is similar enough that I would expect that the underlying
+>mechanisms are the same.
+
+   Correct. Newer versions of FreeBSD show the maximum as well.
+
+-DG
+
+David Greenman
+Co-founder/Principal Architect, The FreeBSD Project - http://www.freebsd.org
+Creator of high-performance Internet servers - http://www.terasolutions.com
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-stable" in the body of the message
+
+
+
+
+
+
+
+### PK 2597183 ###
+===== 序 22498 | PK 2597183 =====
+DATE: 1999-04-26
+FROM: Ludwig Pummer <ludwigp@toy.chip-web.com> <None>
+SUBJ: Re: 2.2.8 to 3.1-STABLE
+
+At 09:30 PM 4/25/99 , Renegade wrote:
+>I want to upgrade from 2.2.8 to 3.1-STABLE, but am unsure how to do it.
+>I configured CVSup and grabbed the STABLE tree, but was unable to do a
+>"make buildworld" successfully.  If somebody could point me to some
+>documentation or if you have any suggestions I would appreciate it.
+>
+>Steve
+>renegade@unforgettable.com
+
+2.x to 3.x upgrades need to use 'make upgrade', 'make aout-to-elf' or 'make
+aout-to-elf-build && make aout-to-elf-install'. After that, you can use
+'make buildworld'. Be sure to install mergemaster from the ports collection
+first, so that you can update your /etc files (or read ``Making the world''
+your own at 
+http://www.nothing-going-on.demon.co.uk/FreeBSD/make-world/make-world.html,
+paying special attention to 'Update /etc'). IIRC, you can skip the 'Update
+/dev' section because the upgrade process will do that for you.
+
+--Ludwig Pummer ( ludwigp@bigfoot.com ) ICQ UIN: 692441
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-stable" in the body of the message
+
+
+
+
+
+
+
+### PK 2597184 ###
+===== 序 22499 | PK 2597184 =====
+DATE: 1999-04-26
+FROM: jack <jack@germanium.xtalwind.net> <None>
+SUBJ: Re: /usr/src/etc/mail
+
+Jordan K. Hubbard wrote:
+
+> > 	what is the date for 3.2 ??
+> 
+> As announced on -committers, May 15th.
+
+Can the corpse of "TUNE_1542" be removed by then?  It's no longer
+in any source files.
+
+germanium:jack {106} grep -R TUNE_1542 /usr/src
+./sys/i386/conf/LINT:# TUNE_1542 enables the automatic ISA bus
+./sys/i386/conf/LINT:options    "TUNE_1542"
+./sys/i386/conf/options.i386:TUNE_1542
+./sys/pc98/conf/options.pc98:TUNE_1542
+germanium:jack {107}
+
+LINT says don't use VESA with SMP.  IIRC, Mike Smith posted that
+that was fixed a while ago.  It "works here".
+
+HARDWARE.TXT lists mcd and ft as "Unmaintained drivers, ....".
+mcd is in the tree, GENERIC, and LINT, and the device node is
+still created so it is readily available.  ft has gone to the
+Attic making it difficult at best for most users to even try.
+
+Do the LKM kernel config file and the empty /lkm directory serve
+any useful purposes?
+
+--------------------------------------------------------------------------
+Jack O'Neill                    Systems Administrator / Systems Analyst
+jack@germanium.xtalwind.net     Crystal Wind Communications, Inc.
+          Finger jack@germanium.xtalwind.net for my PGP key.
+   PGP Key fingerprint = F6 C4 E6 D4 2F 15 A7 67   FD 09 E9 3C 5F CC EB CD
+               enriched, vca
+...[正文已截断，共 1629 字符]
+
+
+
+### PK 2597187 ###
+===== 序 22502 | PK 2597187 =====
+DATE: 1999-04-27
+FROM: KIRIYAMA Kazuhiko <kiri@pis.toba-cmt.ac.jp> <None>
+SUBJ: Can'nt compile japanese/platex-common!
+
+Hi.
+
+japanese/platex-common port can'nt compile because of ld-elf.so.1 has no
+run-time symbol table! 
+
+===>  Building for ja-platex2e-common-1998.09.01
+Ignored d_tag 14337
+Ignored d_tag 14594
+Ignored d_tag 6658
+Ignored d_tag 4097
+Ignored d_tag 6914
+Ignored d_tag 1793
+Ignored d_tag 5378
+Ignored d_tag 1793
+Ignored d_tag 5378
+Ignored d_tag 14849
+Ignored d_tag 11266
+Ignored d_tag 14082
+/usr/libexec/ld-elf.so.1: tex: Shared object has no run-time symbol table
+*** Error code 1
+
+Stop.
+
+-stable machine has maked world at yesterday :
+
+>>> elf make world completed on Tue Apr 27 06:37:05 JST 1999
+
+Is there any suggesions?
+
+Regards.
+---
+KIRIYAMA Kazuhiko <kiri@pis.toba-cmt.ac.jp>
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-stable" in the body of the message
+
+
+
+
+
+
+
+### PK 2597192 ###
+===== 序 22507 | PK 2597192 =====
+DATE: 1999-04-27
+FROM: John Polstra <jdp@polstra.com> <None>
+SUBJ: Re: How to cvsup 3.1-RELEASE?
+
+In article <Pine.BSF.4.10.9904251010430.81922-100000@shattered.disturbed.net>,
+Alex Perel  <veers@disturbed.net> wrote:
+> > 
+> > 	Okay, I have to backup this server to 3.1-RELEASE...what do I need
+> > to change my tag line to in cvsup to pull down those sources, instead of
+> > 3.1-STABLE?  If this possible, or do I have to grab the source tree and go
+> > back by a date?
+> 
+> I believe it is RELENG_3_0_0_RELEASE
+                           ^
+			   1
+
+John
+-- 
+  John Polstra                                               jdp@polstra.com
+  John D. Polstra & Co., Inc.                        Seattle, Washington USA
+  "Self-interest is the aphrodisiac of belief."           -- James V. DeLong
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-stable" in the body of the message
+
+
+
+
+
+
+
+### PK 2597193 ###
+===== 序 22508 | PK 2597193 =====
+DATE: 1999-04-27
+FROM: Juergen Lock <nox@jelal.kn-bremen.de> <None>
+SUBJ: QIC tape problems on -stable (was: hanging `tar xfvR /dev/nrst0' process, can i debug it?)
+
+On Tue, Apr 20, 1999 at 02:39:54AM +0200, nox wrote:
+> [Cc'd to -scsi, subscription is on the way...]
+> 
+> bash# tar xfvR /dev/nrst0
+> tar: rec 0: read error on /dev/nrst0 : Input/output error
+> 
+> ^C
+> 
+> [other xterm:]
+> bash# ps -xawl|grep tar
+>     0 20103 19849   4  -6  0   940  516 piperd S+    p1    0:00.03 grep tar
+>     0 19838 18532   0  -6  0   436  192 cgticb DE+   p8    0:00.00  (tar)
+> 
+>  The tape drive is silent, all other targets on the bus can be
+> accessed without problems.  I have positioned the tape with a script
+> thats doing
+> 
+> 	camcontrol cmd -u 0 -n sa -t 3000 -c "2b 4 0 v v v v 0 0 0" 0x$c3 0x$c2 0x$c1 0x$c0
+
+Well...  after having discovered mt rdhpos/sethpos :), and mounted
+the drive into a new external case (the old ones PSU died), i now have
+some more data:
+
+1.  exactly the same happens when i use mt sethpos instead of the
+camcontrol script: the 1st tar returns `tar: rec 0: Blocksize = 12 records',
+(ok so maybe the position i gave is a few blocks off), the next goes
+hanging like mentioned above.  And if i then look at the console there
+is this:
+
+Apr 27 19:00:22 saturn /kernel: (sa0:ncr0:0:5:0): WRITE FILEMARKS. CDB: 10 0 0 0 0 0 
+Apr 27 19:00:22 saturn
+...[正文已截断，共 16970 字符]
+
+
+
+### PK 2597197 ###
+===== 序 22512 | PK 2597197 =====
+DATE: 1999-04-28
+FROM: Paulo Fragoso <paulo@nlink.com.br> <None>
+SUBJ: Swap problem?
+
+Hi,
+
+I'm using FreeBSD 3.1-19990426-STABLE and I get some times vm_fault
+errors. Is it happening because I have disk problem? Are There any problem
+with 3.1-STABLE?
+
+dmesg results:
+swap_pager: I/O error - pagein failed; blkno 6496, size 12288, error 0
+vm_fault: pager read error, pid 266 (bash)
+pid 266 (bash), uid 501: exited on signal 11 (core dumped)
+
+Thanks,
+Paulo.
+
+------
+"  ... Overall we've found FreeBSD to excel in performace, stability,
+technical support, and of course price. Two years after discovering
+FreeBSD, we have yet to find a reason why we switch to anything else"
+						-David Filo, Yahoo!
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-stable" in the body of the message
+
+
+
+
+
+
+
+### PK 2597199 ###
+===== 序 22514 | PK 2597199 =====
+DATE: 1999-04-28
+FROM: volf@oasis.IAEhv.nl (Frank Volf) <None>
+SUBJ: xl0 driver problem?
+
+
+Hi,
+
+I have some problems with the xl0 driver. I have a DeLL laptop and the
+ethernet card is in my docking station. Usually all communication is fine,
+but the card stops working properly. This seems to happen while a backup of
+the system is made. So, I suspect it has something to do with heavy traffic
+on the card.
+
+Here are the relevant syslog messages.
+
+Apr 27 12:40:27 calimero /kernel: xl0: <3Com 3c905-TX Fast Etherlink XL> rev 0x00 int a irq 10 on pci0.13.0
+Apr 27 12:40:27 calimero /kernel: xl0: Ethernet address: 00:c0:4f:f5:91:ee
+Apr 27 12:40:27 calimero /kernel: xl0: autoneg complete, link status good (half-duplex, 10Mbps)
+Apr 27 12:52:17 calimero /kernel: xl0: transmission error: 90
+Apr 27 12:52:58 calimero /kernel: xl0: watchdog timeout
+Apr 27 13:34:38 calimero /kernel: xl0: watchdog timeout
+....
+
+After this the ethernet card is unusable (no traffic is send/received) even
+after a 'ifconfig xl0 down up'.
+
+Does anyone have a clue (or even better: a cure) for this problem?
+
+Frank
+
+ ----------------------------------------------------------------------------
+                    Frank Volf - Internet Access Eindhoven
+ ----------------------------------------------------------------------------
+  ||  volf@oasis.IAEhv.nl - use for personal mail            
+...[正文已截断，共 1843 字符]
+
+
+
+### PK 2597200 ###
+===== 序 22515 | PK 2597200 =====
+DATE: 1999-04-28
+FROM: "Jordan K. Hubbard" <jkh@zippy.cdrom.com> <None>
+SUBJ: Re: NFSv3 seriously broken in 3.1
+
+> Me, too! I strongly suggest making NFSv2/UPD the default for 3.2 (unless
+> the problems with NFSv3 definitely have been fixed, that is).
+
+But it already is!
+
+- Jordan
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-stable" in the body of the message
+
+
+
+
+
+
+
+### PK 2597201 ###
+===== 序 22516 | PK 2597201 =====
+DATE: 1999-04-28
+FROM: blitz <blitz@pdq.net> <None>
+SUBJ: Errors during make world, 3.0-release to 3.1 stable
+
+I got this error during a make world on my machine running 3.0-Release.  I 
+have cvsup'd and was trying to go to 3.1-Stable.
+
+--- clean ---
+rm -f a.out Errs errs mklog vmstat vmstat.o vmstat.8.gz vmstat.8.cat.gz
+--- cleandepend ---
+rm -f .depend /usr/src/usr.bin/vmstat/GRTAGS /usr/src/usr.bin/vmstat/GSYMS 
+/usr/src/usr.bin/vmstat/GTAGS
+1 error
+*** Error Code 2
+1 error
+*** Error Code 2
+1 error
+
+Any ideas?
+
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-stable" in the body of the message
+
+
+
+
+
+
+
+### PK 2597202 ###
+===== 序 22517 | PK 2597202 =====
+DATE: 1999-04-28
+FROM: Matthew Reimer <mreimer@vpop.net> <None>
+SUBJ: MFC pthreads before 3.2 is released?
+
+Would someone MFC Dan's/John's threads patches before the 3.2 freeze?
+The reason is performance; to quote a post by Richard Seaman:
+
+> On another note, the recent changes to the FreeBSD user
+> pthreads code, which you committed on about March 22,
+> appears to be a major improvement in this code.  On my
+> very crude benchmarks, the linuxthreads port used to
+> beat the heck out of the uthread code.  This is no longer
+> true.  Most tests show them about equal, except that uthread
+> context switches are now much faster than the linuxthreads code,
+> as they should be (before March 22 uthread was slower).
+
+
+
+Date:      Mon, 22 Mar 1999 21:11:30 -0800 (PST)
+From:      John Birrell <jb@FreeBSD.org>
+To:        cvs-committers@FreeBSD.org, cvs-all@FreeBSD.org
+Subject:   cvs commit: src/include pthread.h pthread_np.h
+Message-ID:  <199903230511.VAA13715@freefall.freebsd.org>
+
+jb          1999/03/22 21:11:30 PST
+
+  Modified files:
+    include              pthread.h pthread_np.h 
+  Log:
+    o Runnable threads are now maintained in priority queues.  The
+      implementation requires two things:
+  
+        1.) The priority queues must be protected during insertion
+            and removal of threads.  Since the kernel scheduler
+            must modify the p
+...[正文已截断，共 4222 字符]
+
+
+
+### PK 2597203 ###
+===== 序 22518 | PK 2597203 =====
+DATE: 1999-04-28
+FROM: Mike Meyer <mwm@phone.net> <None>
+SUBJ: Re: MFC pthreads before 3.2 is released?
+
+I've been meaning to ask about something related to this.
+
+I've got a box that's doing some light services - apache, PostgreSQL,
+Perforce;, running the distributed.net code (and if you're not a
+member of team FreeBSD, you should be), and playing workstation.
+
+Some comments on the PostgreSQL list make me think that adding a
+second processor wouldn't be that much of a benefit, as the locking in
+the -STABLE branch increases the contention.
+
+Anyone got advice on this?
+
+	Thanx,
+	<mike
+
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-stable" in the body of the message
+
+
+
+
+
+
+
+### PK 2597207 ###
+===== 序 22522 | PK 2597207 =====
+DATE: 1999-04-28
+FROM: "David O'Brien" <obrien@NUXI.com> <None>
+SUBJ: Re: NFSv3 seriously broken in 3.1
+
+> > Me, too! I strongly suggest making NFSv2/UPD the default for 3.2 (unless
+> > the problems with NFSv3 definitely have been fixed, that is).
+> 
+> But it already is!
+
+It is in /etc/amd.map, but if you left out the "vers=2" you would be
+trying version 3 1st.  I changed the default from TCP to UDP as most
+(all?) reports I had, v3/UDP was working fine for people.
+
+-- 
+-- David    (obrien@NUXI.com  -or-  obrien@FreeBSD.org)
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-stable" in the body of the message
+
+
+
+
+
+
+
+### PK 2597208 ###
+===== 序 22523 | PK 2597208 =====
+DATE: 1999-04-28
+FROM: naddy@mips.rhein-neckar.de (Christian Weisgerber) <None>
+SUBJ: Re: Does tar do sparse files these days
+
+Brian O'Connor. CF583173 HO 2nd Floor <boconno6@ford.com> wrote:
+
+> In the dim dark days of yore(90-91) I was advised not to do full backups
+> using tar. There were problems with sparse files, and device files etc. 
+
+There still are.
+
+GNU tar, which FreeBSD uses, can't handle 32-bit dev_t. Apparently this
+is a limitation of the archive format.
+
+naddy@bigeye[~] tar cf /dev/null /dev
+tar: Removing leading / from absolute path names in the archive.
+tar: /dev/da0s3: minor number too large; not dumped
+tar: /dev/da0s4: minor number too large; not dumped
+tar: /dev/rda0s3: minor number too large; not dumped
+tar: /dev/rda0s4: minor number too large; not dumped
+
+Sparse files are a special case. You *cannot* reliably recognize sparse
+files through the file API. The state of the art, which you get when you
+invoke GNU tar with the -S option, is to compare stat.st_blocks with the
+file size. If there are fewer blocks than you'd expect from the size,
+there obviously must be holes somewhere, and you can now take guesses
+which large ranges of null bytes might be holes. This should work for
+most real world cases, but no way are you going to be able to exactly
+reproduce a file that freely intermixes holes with actual blocks of null
+bytes.
+
+
+...[正文已截断，共 1665 字符]
+
+
+
+### PK 2597212 ###
+===== 序 22527 | PK 2597212 =====
+DATE: 1999-04-28
+FROM: brooks@one-eyed-alien.net <None>
+SUBJ: Re: Does tar do sparse files these days
+
+On Wed, 28 Apr 1999, Mike Meyer wrote:
+
+> The handbook says only dump can be trusted. I'm not sure how amanda
+> fits into this picture.
+
+Since amanda normaly uses dump, you should be able to trust it.  From a
+somewhat simplistic point of view, amanda is just a control system to put
+dumps from multiple machines on a single tape in an inteligent manner.  At
+some point they added a GNU tar option, but you only need that for
+filesystems without dump equivlents (i.e. ext2fs for quite some time
+(though it now has a dump program)).
+
+-- Brooks
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-stable" in the body of the message
+
+
+
+
+
+
+
+### PK 2597213 ###
+===== 序 22528 | PK 2597213 =====
+DATE: 1999-04-28
+FROM: Jonathan Fosburgh <wotan@fosburgh.dyndns.org> <None>
+SUBJ: Kernel panic while running mailq
+
+Earlier today (while accessing the computer from offsite) I had a crash
+while executing `mailq`.  This system is -STABLE from Saturday night.
+Since I am rather inexperienced with handling kernel panics I am not sure
+what all I need to give you.  The attachment is the info from gdb.  What I
+find really screwy is that I had run mailq successfully prior to this
+panic, nor can I see any reason why that seemingly innocuous command could
+cause a problem.  If I need to provide any additional information please
+let me know what might have happened and how I should go about preventing
+it (or should I just update my sources again?)
+
+Jonathan Fosburgh
+Geotechnician
+Snyder Oil Corporation
+Houston, TX
+
+Home Page:
+http://www.geocities.com/vienna/1498
+Manager, FreeBSD Webring: 
+http://www.geocities.com/vienna/1498/computer/freebsdring.html
+ICQ: 32742908
+AIM: Namthorien
+
+
+
+
+
+### PK 2597216 ###
+===== 序 22531 | PK 2597216 =====
+DATE: 1999-04-29
+FROM: "Matthew N. Dodd" <winter@jurai.net> <None>
+SUBJ: Re: WaveLAN IEEE 802.11 ISA Card derivers
+
+On Thu, 29 Apr 1999, Yuri Vorobyev wrote:
+> Somebody plans to include support Lucent WaveLAN IEEE 802.11 ISA Card
+> in FreeBSD?
+
+Bill Paul has been working on a driver for them.  I expect you'll hear
+something about them on -hackers or -hardware at some point in the near
+future.
+
+-- 
+| Matthew N. Dodd  | 78 280Z | 75 164E | 84 245DL | FreeBSD/NetBSD/Sprite/VMS |
+| winter@jurai.net |      This Space For Rent     | ix86,sparc,m68k,pmax,vax  |
+| http://www.jurai.net/~winter | Are you k-rad elite enough for my webpage?   |
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-stable" in the body of the message
+
+
+
+
+
+
+
+### PK 2597217 ###
+===== 序 22532 | PK 2597217 =====
+DATE: 1999-04-29
+FROM: Pawel Jaskorzynski <pawel@mw.mil.pl> <None>
+SUBJ: Cyclades driver broken in 3.1-STABLE??
+
+Hi there,
+	Is the driver for Cyclades-16ye broken?
+	I have been using the cy driver with 2.2.X successfully for more than a
+year in my access server. A few days ago I decided, that I will move up
+to 3.1-STABLE (needed libradius).
+With 3.1, only one user can successfully dial in at a time. Every next
+attempt (while one port is busy) leaves:
+pppd[1339]: ioctl(TIOCSETD): Device not configured
+in /var/log/messages. 
+The cy board and the kernel have the same settings (default, like in the
+man cy page):
+device cy0 at isa? tty irq 10 iomem 0xd4000 iosiz 0x2000
+I also tried it on different hardware with no success.
+All the configuration (/dev, /etc/ttys) was done just like for 2.2.X
+Thanx,
+	Pawel
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-stable" in the body of the message
+
+
+
+
+
+
+
+### PK 2597218 ###
+===== 序 22533 | PK 2597218 =====
+DATE: 1999-04-29
+FROM: Gregory Bond <gnb@itga.com.au> <None>
+SUBJ: WARNING: need to do a 'config -r'
+
+Something has changed in an odd sort of way since I did my last kernel install
+(Apr 1) and today.  
+
+Normally, I do
+ cvsup
+ make buildworld
+ make installworld
+ mergemaster
+ check my kernel config files against changes to LINT and/or GENERIC
+ config -g Kernel
+ cd compile/Kernel
+ make depend all
+ make install
+ reboot.
+
+This time, it all went without errors but the kernel generated would not boot.
+It got loaded by the BTX loader, the kernel booting countdown went to zero,
+then nothing - no message, no activity, no nothing. Reset switch the only way
+out.  Fortunately, the old kernel.GENERIC would boot.  Phew!
+
+I had to do a 'config -r -g Kernel' and rebuild the kernel from absolute 
+scratch before I could get a bootable kernel.  It seems something in the 
+kernel sources changed but in a way too subtle for make depend to discover...
+
+Greg.
+
+
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-stable" in the body of the message
+
+
+
+
+
+
+
+### PK 2597220 ###
+===== 序 22535 | PK 2597220 =====
+DATE: 1999-04-29
+FROM: Tom Embt <tom@embt.com> <None>
+SUBJ: pn0 driver sometimes loses connectivity ??
+
+Today I was FTPing a large (~300MB) file from my headless FreeBSD machine
+to a Windoze 98 one, and somewhere in the middle, it stopped transferring.
+That's when I found out my telnet sessions had also disconnected, and I
+couldn't ping the BSD machine at all.  This has happened once before,
+several weeks ago, but I don't remember the circumstances that time.
+
+I'm no TCP/IP expert (yet) but I did notice one thing I thought was funny.
+The BSD machine is a DHCP server for the Win98 one, and after I lost
+network connectivity I brought up winipcfg for some reason.  If I tried to
+"Renew" the lease, it would refuse, but if I first "Release"'d it, I could
+successfully renew the lease.
+
+Anyway, getting back on the subject...  even though I could get a DHCP
+lease from the FreeBSD box, I could not ping it's IP address or any of it's
+aliases.  So, I grabbed the keyboard of the FreeBSD box and blindly logged
+in and typed:
+
+ifconfig pn0 down
+ifconfig pn0 up
+
+Fixed!  All network connectivity was restored.  Since it's easy to remedy I
+am not too worried about this problem, but still I'd like to know if this
+is a known bug, or if anyone else has had similar problems.  I have not
+been successful in reproducing it, so I don't know if it is related to
+network load
+...[正文已截断，共 3137 字符]
+
+
+
+### PK 2597221 ###
+===== 序 22536 | PK 2597221 =====
+DATE: 1999-04-29
+FROM: Fred Gilham <gilham@snapdragon.csl.sri.com> <None>
+SUBJ: Change in VM_MAXUSER_ADDRESS affects CMU Lisp
+
+
+Hello,
+
+I track FreeBSD-stable on three machines I use.
+
+Some time between April 14 and April 27, something changed.  On one
+machine, with a kernel built on April 14, in assym.s in my kernel
+compile directory, there's the following:
+
+#define VM_MAXUSER_ADDRESS 0xefbfe000
+
+On another machine, with a kernel built on April 28, it has changed to
+
+#define VM_MAXUSER_ADDRESS 0xbfbfe000
+
+Unfortunately, the version of CMU lisp I use executes the following
+mmap (gotten from ktrace):
+
+ 23673 lisp.save CALL  mmap(0x48000000,0x7ffff000,0x7,0x1012,0xffffffff,0,0,0)
+ 23673 lisp.save RET   mmap -1 errno 22 Invalid argument
+ 
+(It's trying to map 2GB into its `dynamic memory space'.)
+
+On the machine with the older kernel, this works:
+
+ 23623 lisp     CALL  mmap(0x48000000,0x7ffff000,0x7,0x1012,0xffffffff,0,0,0)
+ 23623 lisp     RET   mmap 1207959552/0x48000000
+
+Obviously, the change in VM_MAXUSER_ADDRESS causes the mmap to be
+outside the allowed memory area.
+
+I'm wondering if this is change was intentional or if it could be
+backed out without causing a lot of trouble.
+
+-Fred
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-stable" in the body of the message
+
+
+
+
+
+
+
+### PK 2597222 ###
+===== 序 22537 | PK 2597222 =====
+DATE: 1999-04-29
+FROM: "Jeff Vehrs" <JWVEHRS@hewitt.com> <None>
+SUBJ: Perl5 - make install failed!
+
+
+I've checked dejanews website for a solution. I saw none of it. So, I'm
+trying to install Perl5.00502 since a few apps depend on it. Here's the
+error message:
+---------------------------------------------------------------------------
+-------------------
+===> Patching for perl-5.00502
+===> Applying FreeBSD patches for perl-5.00502
+1 out of 1 hunks failed--saving rejects to Configure.rej
+*** Error code 1
+
+Stop.
+*** Error code 1
+
+Stop.
+*** Error code 1
+
+Stop.
+---------------------------------------------------------------------------
+-------------------
+
+So, how do I fix it on my machine? I've done upgrade packages for ports
+collection.
+
+Thanks.
+
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-stable" in the body of the message
+
+
+
+
+
+
+
+### PK 2597223 ###
+===== 序 22538 | PK 2597223 =====
+DATE: 1999-04-29
+FROM: Mail Handler <admin@channel1.com> <None>
+SUBJ: Re: pn0 driver sometimes loses connectivity ??
+
+At 05:53 AM 4/29/99 -0400, you wrote:
+>
+>ifconfig pn0 down
+>ifconfig pn0 up
+
+Increase your NMBCLUSTERS to at 4096 or 8192.
+
+We used to see this all the time with the old 3Com cards.
+We now run Netgear also, and have never seen the out of
+buffer message/no network with decent NMBCLUSTERS.
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-stable" in the body of the message
+
+
+
+
+
+
+
+### PK 2597225 ###
+===== 序 22540 | PK 2597225 =====
+DATE: 1999-04-29
+FROM: Mark Murray <mark@grondar.za> <None>
+SUBJ: Re: Perl5 - make install failed!
+
+"Jeff Vehrs" wrote:
+> 
+> I've checked dejanews website for a solution. I saw none of it. So, I'm
+> trying to install Perl5.00502 since a few apps depend on it. Here's the
+> error message:
+
+If your doing this on FreeBSD 3.x or CURRENT, then why? Perl5 is already
+there. Rather fix the other ports.
+
+If another version, let us know.
+
+M
+--
+Mark Murray
+Join the anti-SPAM movement: http://www.cauce.org
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-stable" in the body of the message
+
+
+
+
+
+
+
+### PK 2597226 ###
+===== 序 22541 | PK 2597226 =====
+DATE: 1999-04-29
+FROM: Paulo Fragoso <paulo@nlink.com.br> <None>
+SUBJ: CD SCSI
+
+Hi,
+
+After upgrade from 3.1-RELEASE to 3.1-19990426-STABLE, I'm having problems
+with second scsi cdrom. When I reboot my sistem, it's reborting
+this some time:
+
+(cd1:ahc0:0:4:0): READ CD RECORDED CAPACITY. CDB: 25 0 0 0 0 0 0 0 0 0 
+(cd1:ahc0:0:4:0): Vendor Specific info:80000000 asc:d0,0
+(cd1:ahc0:0:4:0): Vendor Specific ASC
+(cd1:ahc0:0:4:0): fatal error, failed to attach to device
+(cd1:ahc0:0:4:0): lost device
+(cd1:ahc0:0:4:0): removing device entry
+
+I have two scsi cdroms.
+
+Paulo.
+
+------
+"  ... Overall we've found FreeBSD to excel in performace, stability,
+technical support, and of course price. Two years after discovering
+FreeBSD, we have yet to find a reason why we switch to anything else"
+						-David Filo, Yahoo!
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-stable" in the body of the message
+
+
+
+
+
+
+
+### PK 2597227 ###
+===== 序 22542 | PK 2597227 =====
+DATE: 1999-04-29
+FROM: "Jeff Vehrs" <JWVEHRS@hewitt.com> <None>
+SUBJ: Re: Perl5 - make install failed!
+
+
+Oh, man! Forgot to add the info about my machine! My fault. It is
+2.2.8-STABLE on Dell GXL 5133 with 48 Mb RAM & 1Gb hd.
+
+-- Jeff
+
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-stable" in the body of the message
+
+
+
+
+
+
+
+### PK 2597228 ###
+===== 序 22543 | PK 2597228 =====
+DATE: 1999-04-29
+FROM: Pawel Jaskorzynski <pawel@mw.mil.pl> <None>
+SUBJ: Re: Cyclades driver broken in 3.1-STABLE??
+
+cy driver works OK. Please disregard my problem notification. Adding
+appropriate number of ppp* interfaces in the kernel completely solved
+the issue. I forgot about this 'little' detail :) 
+
+Thanx anyway,
+	Pawel
+
+
+
+"Kevin J. Rowett" wrote:
+> 
+> Pawel,
+> 
+> I've had a very similar experience to yours just last week.
+> 
+> I haven't had time to debug the problem yet.
+> 
+> KR
+> 
+> At 11:00 PM 4/28/99 , you wrote:
+> >Hi there,
+> >         Is the driver for Cyclades-16ye broken?
+> >         I have been using the cy driver with 2.2.X successfully for more than a
+> >year in my access server. A few days ago I decided, that I will move up
+> >to 3.1-STABLE (needed libradius).
+> >With 3.1, only one user can successfully dial in at a time. Every next
+> >attempt (while one port is busy) leaves:
+> >pppd[1339]: ioctl(TIOCSETD): Device not configured
+> >in /var/log/messages.
+> >The cy board and the kernel have the same settings (default, like in the
+> >man cy page):
+> >device cy0 at isa? tty irq 10 iomem 0xd4000 iosiz 0x2000
+> >I also tried it on different hardware with no success.
+> >All the configuration (/dev, /etc/ttys) was done just like for 2.2.X
+> >Thanx,
+> >         Pawel
+> >
+> >
+> >To Unsubscribe: send mail to majordomo@FreeBSD.org
+> >with "unsubscribe freebsd-stable" in the body of the message
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-stable" in the body of the message
+
+
+
+
+
+
+
+### PK 2597229 ###
+===== 序 22544 | PK 2597229 =====
+DATE: 1999-04-29
+FROM: Aleksander Rozman - Andy <andy@kksonline.com> <None>
+SUBJ: ssh connect not possible
+
+
+Hi !
+
+While ago I installed 3.1 FreeBSD. Before that I had 2.7.2. On 2.* I used
+ssh and it worked fine. After I installed 3.1 (this time with encryption
+libraries) and now I can't access my machine with ssh. It always said that
+I don't have right password. I worked with telnet for quite some time now,
+but I am worried about security. Can somebody tell me how can I make
+passwords readable by ssh.
+
+Have nice time,
+Andy
+**************************************************************************
+*  Aleksander Rozman - Andy  * Member of:  E2:EA, E2F, SAABer, Trekkie,  *
+*     andy@mail.kks.net      * X-Phile, Heller's angel, True's screamer, *
+*    andy@atechnet.ml.org    * True's Trooper, Questie, Legacy, PO5,     *
+* Maribor, Slovenia (Europe) * Profiler, Buffy (Slayerete), Pretender    *
+*     ICQ-UIC: 4911125       *********************************************
+*     PGP key available      *    http://www.atechnet.ml.org/~andy/      *
+**************************************************************************
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-stable" in the body of the message
+
+
+
+
+
+
+
+### PK 2597230 ###
+===== 序 22545 | PK 2597230 =====
+DATE: 1999-04-29
+FROM: Stephen Montgomery-Smith <stephen@math.missouri.edu> <None>
+SUBJ: Kernel Panic
+
+Yesterday I replaced a Cyrix 686 (133Mhz) with a Pentium MMX 223Mhz.
+
+Then, when I booted up, I got a panic message (that I enclose below).
+Then I reboot.  Since the panic failed to sync the disks, the kernel
+goes through the process of rebooting, including fixing the incorrect
+superblocks, and then everything works fine.
+
+Today I found out that my /etc was not up to date.  My last make world
+was March 30 1999, whereas my /etc was last updated March 5 1999.
+The changes don't seem that significant.  Could that have caused the
+problem?  I updated /etc, and the problem seems to have stopped.
+
+But the panic seems a tough punishment for having /etc 25 days old.
+Could it be that I have merely slightly changed an odd set of 
+circumstances that trigger this problem, and that I have not found the
+true cause?
+
+The panic message comes just after the kernel sends out the message
+saying it has started sendmail, and just before the message:
+Initial rc.i386 initialization: linux
+so maybe it is the linux emulation that does this.
+
+This action has happened many times, so it seems rather
+consistant.  I had to copy the panic message by hand, since as far
+as I can figure, this message has not been saved anywhere.
+All of the times, the message was exactly the same.
+...[正文已截断，共 2724 字符]
+
+
+
+### PK 2597231 ###
+===== 序 22546 | PK 2597231 =====
+DATE: 1999-04-29
+FROM: Mark Murray <mark@grondar.za> <None>
+SUBJ: Re: Perl5 - make install failed!
+
+"Jeff Vehrs" wrote:
+> Oh, man! Forgot to add the info about my machine! My fault. It is
+> 2.2.8-STABLE on Dell GXL 5133 with 48 Mb RAM & 1Gb hd.
+
+I'll need your help if there's any chance of fixing this.
+
+In the port, first do a "make clean", then a "make extract".
+Then cd to the port directory with "cd work/perl<version>"; then
+apply each patch in turn until one fails - "patch < ../../patches/patch-<>".
+
+When a patch fails, manually fix it by examining the patch and the
+*.rej files it produces. Give me back the results.
+
+M
+--
+Mark Murray
+Join the anti-SPAM movement: http://www.cauce.org
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-stable" in the body of the message
+
+
+
+
+
+
+
+### PK 2597232 ###
+===== 序 22547 | PK 2597232 =====
+DATE: 1999-04-29
+FROM: Mike Tancsa <mike@sentex.net> <None>
+SUBJ: Any action on PR 10570 ? getting closer to 65K :-(
+
+
+I am currently using a couple of FreeBSD boxes for my border routers, and
+it seems that the global routing table is getting closer and closer to 65K+
+routes (i.e. sooner than later I am going to bump into PR 10570).  I am not
+a systems programmer by any stretch of the imagination, so I would not know
+how to go about debugging anything and everything that would be effected by
+changing the size from a short to a long.  I guess this PR only effects
+very few people, so I can understand it not being a priority.  But are
+there any plans to look at it soon ?
+
+wat-border# netstat -nr | wc
+   59118  355941 4200959
+
+
+	---Mike
+------------------------------------------------------------------------
+Mike Tancsa,                          	          tel 01.519.651.3400
+Network Administrator,     			  mike@sentex.net
+Sentex Communications                 		  www.sentex.net
+Cambridge, Ontario Canada
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-stable" in the body of the message
+
+
+
+
+
+
+
+### PK 2597235 ###
+===== 序 22550 | PK 2597235 =====
+DATE: 1999-04-29
+FROM: John Chia <kid@secureshell.com> <None>
+SUBJ: 3.1-STABLE, acd and nfs oddities
+
+
+Not sure which version of NFS I'm using, most likely 2, but could be 3.
+But I have a peculiar situation and it only started cropping up recently.
+(After 20 days of continuous service)
+
+I mailed the list a bit ago about a linux client crashing when accessing
+anything one directory below the root of an acd mount. I fixed this by
+not having any folders on my burned cds (mp3s, so no need for em)
+
+But now when i try to access it, right after boot..I'll get:
+
+  05:02pm kid@eye:/usr/home/kid > ls /cdrom1
+  ls: /cdrom1: Input/output error
+
+a ``umount /cdrom1; mount /cdrom1'' will go through again, but the above
+condition repeats itself after a few accesses. The directory (on the
+linux side) also seems to disappear sometimes.
+
+This is a 3.1-stable cvsup'd about 20-30 days ago. The hardware is fairly
+new, except the CD-ROM drive which a cheap toshiba OEM about 3 years old.
+The Linux box is 2.2.6, SuSE-6.0 with some mucky hacks by me.
+
+Also of note is the trickery to get it to mount a cd: 
+
+  06:16pm root@booger /etc $ mount_cd9660 /dev/acd0a /cdrom
+  mount_cd9660: Invalid argument
+  06:16pm root@booger /etc $ mount_cd9660 -s 0 /dev/acd0a /cdrom
+
+Anything insightful is appreciated.
+--
+John Chia
+``Boys are like RISC: slow compiles and simple brains. Girls 
+...[正文已截断，共 1600 字符]
+
+
+
+### PK 2597238 ###
+===== 序 22553 | PK 2597238 =====
+DATE: 1999-04-29
+FROM: "Jeffrey Bernt" <jbernt@bigfoot.com> <None>
+SUBJ: Make Most...
+
+When I try to do a make most, (because I get all kinds of other errors when
+I try to do a make buildworld) I get an error when it tries to build the
+mount_cd9660 module, it says that ISOFSMNT_NOJOLIET undeclared here, (not in
+a function)
+I also get all kinds of warnings like:
+Warning: Object directory not changed from original
+/usr/src/sbin/mount_cd9660, as well as almost every other executable that
+tries to get built. I thought I had done what I had to do to make
+buildworld, but these errors keep me from doing so. If anyone has any ideas,
+please let me know. I'm just now starting to learn about -stable and making
+world.
+
+Jeff Bernt
+jbernt@bigfoot.com
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-stable" in the body of the message
+
+
+
+
+
+
+
+### PK 2597239 ###
+===== 序 22554 | PK 2597239 =====
+DATE: 1999-04-29
+FROM: "Scot W. Hetzel" <hetzels@westbend.net> <None>
+SUBJ: Re: Perl5 - make install failed!
+
+From: Mark Murray <mark@grondar.za>
+> In the port, first do a "make clean", then a "make extract".
+> Then cd to the port directory with "cd work/perl<version>"; then
+> apply each patch in turn until one fails - "patch <
+../../patches/patch-<>".
+>
+Wouldn't it be easier to do a "make patch -DPATCH_DEBUG", (DPATCH_DEBUG
+displays the error/status of the current patch it is working on). Now when
+it fails, it will tell you which patch file failed & where it failed.
+
+> When a patch fails, manually fix it by examining the patch and the
+> *.rej files it produces. Give me back the results.
+>
+Scot
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-stable" in the body of the message
+
+
+
+
+
+
+
+### PK 2597240 ###
+===== 序 22555 | PK 2597240 =====
+DATE: 1999-04-29
+FROM: Gregory Bond <gnb@itga.com.au> <None>
+SUBJ: Re: WARNING: need to do a 'config -r'
+
+> Not really. Make depend generates the .depend files that will be
+> read on the next run of make. Ie, they were not used in the
+> following target "all". 
+
+Ah, that explains it.  Thanks!  I've been spoilt by gmake's ability to reread 
+Makefiles that get changed during the make run.
+
+I'd suggest adding this feature to the system make, but I realise what a huge
+can of worms any change to make is!
+
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-stable" in the body of the message
+
+
+
+
+
+
+
+### PK 2597242 ###
+===== 序 22557 | PK 2597242 =====
+DATE: 1999-04-30
+FROM: Stephen Montgomery-Smith <stephen@math.missouri.edu> <None>
+SUBJ: Re: Kernel Panic
+
+I believe that I found the cause of my problems.  It was not an
+incorrectly updated /etc as I previously reported.
+
+So when I upgraded from a Cyrix to a Pentium, I had to recompile 
+my kernel because I was changing from a 486 to a 586 (as the 
+kernel options put it).
+
+So I did
+
+cd /sys/i386/conf
+/usr/sbin/config MONT
+cd ../../compile/MONT
+make depend
+make
+make install
+
+What I think I should have done, before running the second command is:
+
+rm -r ../../compile/MONT
+
+That is, I was hoping to reduce the amount of time to compile the
+kernel by only recompiling the bits I need.  But I guess an action
+as changing from a 486 to a 586 is such that make will not recompile
+all the bits that need recompiling.
+
+Well, that is what I think it was.  I have not had the problems since.
+
+Hope this might help someone else who falls into the same trap as I did.
+
+-- 
+
+Stephen Montgomery-Smith              stephen@math.missouri.edu
+307 Math Science Building             stephen@showme.missouri.edu
+Department of Mathematics             stephen@missouri.edu
+University of Missouri-Columbia
+Columbia, MO 65211
+USA
+
+Phone (573) 882 4540
+Fax   (573) 882 1869
+
+http://math.missouri.edu/~stephen
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd
+...[正文已截断，共 1440 字符]
+
+
+
+### PK 2597244 ###
+===== 序 22559 | PK 2597244 =====
+DATE: 1999-04-30
+FROM: <kvgu@uswest.net> <None>
+SUBJ: Apache13-php3
+
+Greets:
+
+Was recently installing Apache1.3.6 w/php3 and modssl port, when openssl
+complained thusly:
+
+===>  Applying distribution patches for openssl-0.9.2b
+Ignoring previously applied (or reversed) patch.
+1 out of 1 hunks ignored--saving rejects to crypto/rsa/rsa_oaep_test.c.rej
+Ignoring previously applied (or reversed) patch.
+1 out of 1 hunks ignored--saving rejects to rsaref/rsaref.c.rej
+*** Error code 2
+
+Stop.
+*** Error code 1
+
+I did this same install on a similarly configured box only a couple weeks
+back w/no worries.  So why has rsa suddenly decided to get a bee in it's
+bonnet?
+
+Thanks-- kg
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-stable" in the body of the message
+
+
+
+
+
+
+
+### PK 2597245 ###
+===== 序 22560 | PK 2597245 =====
+DATE: 1999-04-30
+FROM: Rudi Opperman <rudi@askas.co.za> <None>
+SUBJ: Re: Perl5 - make install failed!
+
+hi Jeff
+
+I have just experienced the same problem - some of my perl scripts where
+bombing under perl4 so i tried to install perl5.5.2 from the ports
+collection and it blew like you describe below.  My question is - do you
+really need 5.5.2 ?  I was told it is unstable under 2.2.8 (this is what
+i run) - so i downloaded the 5.4.4 archive, uncompressed it and
+installed it by hand - quite simple.  All problems went away -so if you
+don't need perl 5.5.2  - and perl5.4.4 will do just as well-  perhasp
+this helps ?
+
+bye
+rudi
+
+
+
+Jeff Vehrs wrote:
+> 
+> I've checked dejanews website for a solution. I saw none of it. So, I'm
+> trying to install Perl5.00502 since a few apps depend on it. Here's the
+> error message:
+> ---------------------------------------------------------------------------
+> -------------------
+> ===> Patching for perl-5.00502
+> ===> Applying FreeBSD patches for perl-5.00502
+> 1 out of 1 hunks failed--saving rejects to Configure.rej
+> *** Error code 1
+> 
+> Stop.
+> *** Error code 1
+> 
+> Stop.
+> *** Error code 1
+> 
+> Stop.
+> ---------------------------------------------------------------------------
+> -------------------
+> 
+
+> So, how do I fix it on my machine? I've done upgrade packages for ports
+> collection.
+> 
+> Thanks.
+
+
+To Unsubscrib
+...[正文已截断，共 1503 字符]
+
+
+
+### PK 2597246 ###
+===== 序 22561 | PK 2597246 =====
+DATE: 1999-04-30
+FROM: Jaye Mathisen <mrcpu@internetcds.com> <None>
+SUBJ: Re: Any action on PR 10570 ? getting closer to 65K :-(
+
+
+Interesting, I was considering trying this with a new UUNET connection
+with gated, but they're sending me 69,000+ routes.  Glad I didn't try it
+yet. :)
+
+On Thu, 29 Apr 1999, Mike Tancsa wrote:
+
+> 
+> I am currently using a couple of FreeBSD boxes for my border routers, and
+> it seems that the global routing table is getting closer and closer to 65K+
+> routes (i.e. sooner than later I am going to bump into PR 10570).  I am not
+> a systems programmer by any stretch of the imagination, so I would not know
+> how to go about debugging anything and everything that would be effected by
+> changing the size from a short to a long.  I guess this PR only effects
+> very few people, so I can understand it not being a priority.  But are
+> there any plans to look at it soon ?
+> 
+> wat-border# netstat -nr | wc
+>    59118  355941 4200959
+> 
+> 
+> 	---Mike
+> ------------------------------------------------------------------------
+> Mike Tancsa,                          	          tel 01.519.651.3400
+> Network Administrator,     			  mike@sentex.net
+> Sentex Communications                 		  www.sentex.net
+> Cambridge, Ontario Canada
+> 
+> 
+> To Unsubscribe: send mail to majordomo@FreeBSD.org
+> with "unsubscribe freebsd-current" in the body of the message
+> 
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-stable" in the body of the message

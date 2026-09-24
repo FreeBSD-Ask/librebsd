@@ -1,0 +1,44 @@
+2597247|L3|Knowles 想把 Lehey 为 vinum 写的 rawio 基准工具移植到 Linux 做低级磁盘测速
+2597248|L4|3.1-Stable 四月二十八日构建配约一周前 cvsup 的 ports，pkg_info -a 输出到尾部即损坏
+2597250|L3|关掉 Adaptec 2940 的 Ultra Wide 后问题仍在且设备变慢，HP CD-Writer 6020 上更常见
+2597252|L4|3.1-STABLE 下 Perl 报 ld=ld 而非 ld=gcc，附 perl -V 显示 osvers=3.0-current，致模块安装出问题
+2597253|L3|3.1-Release 频繁崩溃并附 wtmp 记录，四月内多次 crash，自述无法定位原因
+2597259|L4|ports 于昨日 cvsup 后 make readmes 崩溃，日志显示从 deskutils 系列端口中途失败
+2597260|L4|asami 定位在 devel/ORBacus Makefile，报 Malformed conditional 与 if-less else
+2597262|L3|Daniel Sobral 建议把 maxusers 降到 128 或 100 试试
+2597264|L4|Bulte 提示 Ultra SCSI 总线应短于 1.5 米且不宜混插内外设备，并附完整 dmesg
+2597265|L4|3.1-stable 加 bktr 后 make depend 报 smbus_if.h 与 iicbus_if.h 不存在，只有同名 .m
+2597270|L3|Paulo 更正：关掉 Ultra 后问题仍在，先前以为解决了是错的
+2597272|L4|make world 在 ar 处失败，附 usr.bin/ar 的编译命令日志
+2597273|L4|3.1-stable 跑近两月无问题，四月二十九日更新后二十四小时内死锁两次，此前 2.2 分支稳定六个月
+2597274|L4|编 ftpd、rexecd、telnetd 均报 undefined reference to realhostname，疑为 libutil 有错
+2597276|L4|ppbus 挂死：ppc 设备 flags 设为 0x40 即修复，亦见于 Dell Dimension XPS R400
+2597277|L4|3.1-stable 上 /etc/rc 执行 vinum read 取不到设备报 no drives found，改用 vinum start 即正常
+2597279|L4|vinum 作者 Lehey 确认开机应执行 vinum start 而非 vinum read，表示将立即修改 /etc/rc 提交
+2597283|L3|Vehrs 与 Mark 协作排查，确认坏的是 patch-aa
+2597293|L3|指出 tr -d 会剥掉全部 ^M 而不止行尾的，也不处理 DOS 文件末尾的 ^Z
+2597296|L4|2.2.8 上 aha0 配 BOUNCE_BUFFERS 接 HP 扫描仪，32MB 内存正常，升到 64MB 后 ioctl 异常
+2597304|L4|Mamakos 在 Motorola CPV5000 Compact-PCI 板上遇到同样 ppbus 挂死，须禁用并口
+2597305|L3|Smith 要求让报告者在另一台同网段机器上跑 tcpdump -s 2000 -w splot.raw 抓原始包
+2597306|L4|buildworld 在 groff/mm 报 don't know how to make groff_mmse.man，三次重建仍复现
+2597307|L4|Brian Somers 指应在 libutil 与 src/libexec 各自先 make depend 再 make install
+2597312|L3|Quinlan 称症状与远程重启漏洞报告高度相似，但五天来未再发生，不信是专门程序
+2597313|L3|Wiker 自述 486 配 16MB 跑 3.1-RELEASE 同样症状，另两台环境温和的机器稳定得多，不排除硬件问题
+2597314|L4|Latitude 上 3.1R 挂起到磁盘可用，但恢复后开机菜单未默认选挂起分区，无按键时不会自动恢复
+2597315|L4|提交 tcopy 补丁：原实现用 32 位无符号累加读写字节数，磁带超 4G 时失效，请求有硬件者测试
+2597318|L4|请求 MFC bin/8637 的改动，使 fgetpos、fsetpos、ftell 支持超 2GB 文件，tcpslice 改造需要
+2597319|L3|两台 3.1-STABLE 上跑 Boris Popov 的 ncpmount，配置调好后 ncplogin 显示乱码并挂死整机
+2597320|L3|Embt 疑自己中招：3.1-STABLE 机器上 RC5 突然停跑，uptime 仅剩十余小时
+2597325|L3|Smith 反驳称挂起到磁盘其实并未工作，并吐槽消息超过 80 列且用 Outlook
+2597326|L3|Robin Melville 解释 .mkversion 报错不是包系统损坏，而是一处不完整的临时对策
+2597327|L4|256MB 跑 3.1-19990218-STABLE 的邮件服务器大量内存落在 inactive，64MB 的 2.1.6 仅用 9MB swap
+2597328|L4|Warner Losh 称无人联系过 security-officer，此前报随机重启者在被要求开 ddb 或 crash dump 后便消失
+2597329|L3|Uttech 有一台 3.1-RELEASE 随机锁死且无日志，把负载分担到别的机器后不再发生
+2597330|L4|升 3.1 后自编内核的 reboot 与 shutdown 命令失效，三指法可用，换 generic 内核正常
+2597334|L4|部署新防火墙当天系统反复 panic 报 trap 12，登录提示后立刻复发；拔掉并重插第一根网线后稳定
+2597335|L3|Braukmann 确认 ncpmount 可用，环境为四月二十七日版 3.1-stable、单颗 PII、ncplib 1.3b7
+2597336|L3|Vergallen 称配好 hosts.allow 与 hosts.deny 且禁 rcmd 后自己远程重启 ftp 服务器失败
+2597337|L3|Jordan Hubbard 指 .mkversion 本就不该再留在 /var/db/pkg，可直接删除，Satoshi 已移到别处
+2597341|L3|Berland 指出 Aley 的内核配置同时启用了 486 与 586 两行 cpu 而未注释
+2597342|L4|同用 open 的 A、B 两进程：A 加 F_LOCK，B 阻塞，A 释放 F_ULOCK 后 B 仍阻塞至 A 退出
+2597343|L4|实测 tcopy 补丁：原版报 947912704 字节短了 4G，补丁版报 5242880000；wc 有同样 32 位上限
