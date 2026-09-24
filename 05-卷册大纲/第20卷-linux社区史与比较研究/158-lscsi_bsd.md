@@ -304,7 +304,7 @@
 - 【Linux社区】Boaz 在 exofs 讨论中介绍 OSC 的 osd-target 用户态 OSD 实现并说明自己正在把它移植到 FreeBSD，出现 Linux SCSI 目标框架的反向移植。that project to freebsd `<!-- ROW_MINE: linux-scsi.messages.1513784 -->`
 - 【Linux社区】sg3_utils 1.34 发布公告列出该 SCSI 命令行工具包的跨平台移植目标，FreeBSD 与 Solaris 同列，BSD 生态中的 SCSI 工具链仍在随版本演进。ports to FreeBSD, Tru64, Solaris `<!-- ROW_MINE: linux-scsi.messages.1513866 -->`
 - 【Linux社区】Adaptec ADP94xx SAS 驱动头注释采用非 GPL 的重述条件分发条款并另行允许改按 GNU GPL v2 分发，形成事实上的 BSD 风格与 GPL 双轨授权。Redistribution and use in source and binary forms, with or without `<!-- ROW_MINE: linux-scsi.messages.1514166 -->`
-- 【Linux社区】aic79xx 1.3.8 与 aic7xxx 6.2.33 的发布公告仍指向 FreeBSD 用户目录，Justin Gibbs 维护线是这两枚 Adaptec 驱动进入 Linux 的唯一来源。people.FreeBSD.org/~gibbs/linux/SRC/ `<!-- ROW_MINE: linux-scsi.messages.1515803 -->`
+- 【Linux社区】aic79xx 1.3.8 与 aic7xxx 6.2.33 的发布公告由 Justin Gibbs 发布,并指向其 FreeBSD 用户目录(原句含 "I've just uploaded version 1.3.8 of the aic79xx driver and version 6.2.33 of the aic7xxx driver" 与地址 http://people.FreeBSD.org/~gibbs/linux/SRC/),显示这两枚 Adaptec 驱动在 Linux 上的发布长期经由 FreeBSD 侧的基础设施完成。 `<!-- ROW_MINE: linux-scsi.messages.1515803 -->`
 - 【Linux社区】Tomas Szepe 为 aic7xxx 与 aic79xx 争取进入 -ac 测试树时以 FreeBSD 生产环境充分测试作为理由，BSD 生产实践被用作 Linux 合入的背书。tested thoroughly in FreeBSD `<!-- ROW_MINE: linux-scsi.messages.1516650 -->`
 - 【Linux社区】Eric Biggers 把 ufs 驱动头注释的冗长 GPL 条款替换为 SPDX 标识时引发版本表述争议，焦点是 SPDX GPL-2.0 与实际 GPL v2 or later 的语义偏差。This actually says GPL v2 or later `<!-- ROW_MINE: linux-scsi.messages.1517762 -->`
 - 【Linux社区】Christoph Hellwig 批评 megaraid 私有直通 ioctl，维护方反问其与 FreeBSD 和微软方案是否做过比较，BSD 接口设计被当作 Linux RAID 直通能力的对照。compared it with FreeBSD and Microsoft `<!-- ROW_MINE: linux-scsi.messages.1518768 -->`
