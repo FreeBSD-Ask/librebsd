@@ -16,7 +16,6 @@
 - 【Linux社区】Linus Torvalds 对 iscsi 空指针回归的修复方向给出架构判断,主张从 blk_execute_rq 层面而非调用方修正. 引语 "I think we should just fix blk_execute_rq() instead" `<!-- ROW_MINE: linux-scsi.messages.1358586 -->`
 - 【Linux社区】m68k 平台为摆脱 53c7xx 旧核心改用 53c700 驱动的 RFC 讨论,涉及 Amiga 与 Sun3 等多平台共存. 引语 "unless the m68k folks provide the new 53c700-based driver" `<!-- ROW_MINE: linux-scsi.messages.1359699 -->`
 - 【Linux社区】arcmsr 驱动字符串修订补丁,其上下文保留驱动原有的 Dual BSD/GPL 许可标记. 引语 "MODULE_LICENSE(Dual BSD/GPL)" `<!-- ROW_MINE: linux-scsi.messages.1360238 -->`
-- 【Linux社区】aic7xxx 构建回归报告显示该驱动源码头仍保留 BSD/GPL 双重许可标记,本次补丁上下文未改动该行. 引语 "MODULE_LICENSE(Dual BSD/GPL)" `<!-- ROW_MINE: linux-scsi.messages.1360404 -->`
 - 【Linux社区】sdparm 命令行工具用于读写 SCSI 设备模式页参数,声明同时支持 Linux 及 FreeBSD 与 Solaris 等端口. 引语 "ports to FreeBSD, Solaris, Tru64 and Windows" `<!-- ROW_MINE: linux-scsi.messages.1361142 -->`
 - 【Linux社区】Linus Torvalds 质疑 James Bottomley 关于介质读写命令自动降级策略的说明,要求澄清代码原有设计意图. 引语 "The code was supposed to always start off with READ/WRITE_10" `<!-- ROW_MINE: linux-scsi.messages.1361425 -->`
 - 【Linux社区】sym53c8xx 驱动 2.1.18k 版本将许可证由双 BSD/GPL 改为纯 GPL,引发 FreeBSD 生态反应担忧. 引语 "The BSD world ain't gonna like this" `<!-- ROW_MINE: linux-scsi.messages.1361509 -->`

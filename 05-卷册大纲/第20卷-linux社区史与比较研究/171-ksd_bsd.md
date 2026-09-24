@@ -2971,14 +2971,14 @@
 - 【Linux社区】[maintainer] Bottomley：我们都不想在自己云系统跑 git→想用 kernel.org——但自己的脚本还处理 rebase/remove（update=remove+add 两 mail）以及正确 committer 检查（曾有错发数百封的教训）；曾跑 pending 树 + nag mail 催 review；对比 Mauro 附全文 `<!-- ROW_MINE: ksummit-discuss.messages.347883 -->`
 - 【Linux社区】[maintainer] Nicolas Ferre（at91）：6 年前建立 co-maintainership（at91 与 Belloni 双治）——"常常被当万能药，但其实有严重缺陷/限制"，值得讨论 best practice 及落地成功 `<!-- ROW_MINE: ksummit-discuss.messages.347884 -->`
 - 【Linux社区】[maintainer] Olof：DT 先 review 入树（避免摩擦）、绑定间 step-on-toes 少；「开始又见新 platforms」，该来一次新 ARM-SoC talk（旧的面向老手、已过时）；DT 是高量 in-tree 内容——若不协调终会被压出 kernel repo；冲突用 quiet 惯例解决（add/add 简单） `<!-- ROW_MINE: ksummit-discuss.messages.347885 -->`
-- 【Linux社区】[maintainer] Linus Walleij：immutable topic branch——典型触发是新 API/头文件 nexus（<linux/mfd/*.h>、<dt-bindings/*.h>）一提交/后续跨树使用；Lee Jones 是 MFD 协调者、他 announce 后各子系统（GPIO 等）拉入即可开发——"no one has patience to wait a cycle"，fastforward 键族 `<!-- ROW_MINE: ksummit-discuss.messages.347886 -->`
+- 【Linux社区】Linus Walleij 说明 immutable topic branch 的典型触发是新 API 或头文件 nexus, 一次提交后其依赖补丁必然以该 nexus 提交为基底, 典型情形如 <linux/mfd/*.h> 与 <dt-bindings/*.h>; 原因是开发者在别处需要 API 往往不愿等一个内核周期, 而是把一根手指一直放在 fastforward 键上, Lee Jones 则作为 MFD 协调者以 immutable topic branch 队列加公告的方式让各子系统如 GPIO 拉入后再做本子系统改动。`<!-- ROW_MINE: ksummit-discuss.messages.347886 -->`
 - 【Linux社区】[maintainer] Olof：clk 的 Mike/Stephen 每 driver 一条 immutable 分支好实践；对「加 branch 依赖只为加一个数值 define」推回（请跟一 follow-up patch，不必跨树）——协调原则 `<!-- ROW_MINE: ksummit-discuss.messages.347887 -->`
 - 【Linux社区】[maintainer] Brown：对需 cross-merge 的情况也这样（regulator/regmap）——「before 那些事总是痛苦，现在只需 sign a tag」——immutable 实证收益 `<!-- ROW_MINE: ksummit-discuss.messages.347888 -->`
 - 【Linux社区】[maintainer] Lee Jones：MFD 是跨子系统枢纽——multi-function device 依赖关系复杂；用 immutable branch 协调（pull 到 Linus 可能带 1-7 个 immutable tag）；「新功能想走单树只因确定性时间」硬性不批，除非有编译期硬依赖——能走各自子系统树就走 `<!-- ROW_MINE: ksummit-discuss.messages.347889 -->`
 - 【Linux社区】[KS2014] Jason Cooper（2014-05-12）：QR oops——pr_warn "cut here" 保留（具体行数提示：cut 10 lines above here）；新手报告常引不足（Gentoo 年代多收到 make[1]: 或 emerge 段）；对 hpa "why not just drop it" 的取舍：具体比删更保护数据 `<!-- ROW_MINE: ksummit-discuss.messages.347890 -->`
 - 【Linux社区】[maintainer] Chris Mason（btrfs）：半 distro 内核视角——老板问题（bugs/perf/stable 拉取）大部分平稳、性能回归多因自己基准未进更多人手、驱动 bug 不构成跨面过程变更需要；对 Linus "distro 代表问题"：愿意分享这方面的内容 `<!-- ROW_MINE: ksummit-discuss.messages.347891 -->`
 - 【Linux社区】[maintainer] Bart Van Assche：给 Bottomley 圆桌提议做引子——block/SCSI/RDMA 都反馈快，两个子系统却要几周-几个月（不可接受）；summit 该讨论这个（因 VFS Al 失踪带出的圆桌方向，开发者需要 bitch-at-maintainers 的出口） `<!-- ROW_MINE: ksummit-discuss.messages.347892 -->`
-- 【Linux社区】[maintainer] Brown：反馈延迟每年都提；能爆出什么「新并切实行动」的？——可行动的另一点："new things between maintainers"（新子系统）无人「正向」（负面评论有人发、无人接收或当接收），长期被忽略甚至让新人有被迫感——这比延迟本身更值得 summit 谈 `<!-- ROW_MINE: ksummit-discuss.messages.347893 -->`
+- 【Linux社区】Mark Brown 认为反馈延迟这个话题 most years 都会提，反问讨论能否带来 anything new that's concretely actionable；他另指出真正肯定是 maintainer summit 议题的，是把 new things into the kernel that somehow sit between maintainers（新子系统是最明显的例子）弄进内核——现状存在 gap：有人会 negatively review 却既不接收也不给正面评审，这种情况可能拖很长 periods with people being just ignored，对提交者 obviously offputting。`<!-- ROW_MINE: ksummit-discuss.messages.347893 -->`
 - 【Linux社区】[maintainer] Guenter：反馈时效双刃剑——活跃且有评审者的子系统快没问题；但被公开判为 obscure/obsolete 的子系统、维护者可能就是全世界唯一在看 patch 的人——应给这类维护者一点宽松（或你 volunteer 去 review）——平衡视角 `<!-- ROW_MINE: ksummit-discuss.messages.347894 -->`
 - 【Linux社区】[maintainer] Bart：理解优先级/时间变化，但不理解「不再有时间当维护者却不找有技能且有兴趣的人成为 co-maintainer」——对 Brown "每年都会出现"的直接反问 `<!-- ROW_MINE: ksummit-discuss.messages.347895 -->`
 - 【Linux社区】[maintainer] Geert：行为人可能没时间/有其他优先事项去找一个技术过硬的替代——co-maintainer 倡议的反题 `<!-- ROW_MINE: ksummit-discuss.messages.347896 -->`
@@ -2986,7 +2986,7 @@
 - 【Linux社区】[maintainer] Petersen：复杂 patch 需要不被中断的大块时间（稀缺）；厂商「30+ patch 更新到司机版本 XYZ」常等 merge window 前一周才发，然后怪没人评（但那就是巨大时间投入）；应该丢「arbitrary pointless 版本 XYZ」概念、每周发几个小 patch——reviewer 才好在 15 分钟空档投入、更彻底的评 `<!-- ROW_MINE: ksummit-discuss.messages.347898 -->`
 - 【Linux社区】[maintainer] Brown：对"不找 co-maintainer"的另一视角——「要么人彻底消失，要么子系统少有兴趣、无候选人」——问题不是新变、也没变多少 `<!-- ROW_MINE: ksummit-discuss.messages.347899 -->`
 - 【Linux社区】[maintainer] Bottomley：SCSI 史例——「hold to need enough current reviews before merge」：mixed results，多发抱怨、需要严与公开纪律；但让 submitter 平等参与 review 是「scalable」正道，难在如何不引起 ruckus——回引（resurrect 议题） `<!-- ROW_MINE: ksummit-discuss.messages.347900 -->`
-- 【Linux社区】[KS2014] Sang（2014-05-12）：tinification CORE topic——内存 vs 存储、内核随时间增长、如何避免 size regressions；bloat-o-meter/allnoconfig 工具；自己读 strings 已见低垂果实（OOM 消息在时几一可省）——"keep the bloat at a level that's really needed" `<!-- ROW_MINE: ksummit-discuss.messages.347901 -->`
+- 【Linux社区】Wolfram Sang 在 KS2014 tinification CORE topic 提案中列出四项议题——RAM 与存储上的体积之辨、内核随时间的增长、size regressions 如何发生以及如何避免、以及 bloat-o-meter 与 allnoconfig 等尺寸测量工具；他自述已开始研究内核中的 strings 并看到 low hanging fruits，以 OOM message removal 为例，故结论是 "keep the bloat on a level that is really needed for a new feature."`<!-- ROW_MINE: ksummit-discuss.messages.347901 -->`
 - 【Linux社区】[maintainer] Jiri Kosina：Reviewed-by 廉价化问题——recipients 发「Reviewed-by」的方式太容易（若不是真实 review 意愿，而是应答）——给 Bottomley hold-until-reviewed 机制伤的注脚 `<!-- ROW_MINE: ksummit-discuss.messages.347902 -->`
 - 【Linux社区】[maintainer] Andrew Lunn（netdev 确认做法）：1 天内 NACK 并说明「拆小批再发」——教学提交者 how the process 和 how best to present（这正是 Maintainer 职责的一部分）——回报显著 `<!-- ROW_MINE: ksummit-discuss.messages.347903 -->`
 - 【Linux社区】[maintainer] Bottomley：信任因子——维护者常有自己的 reviewer trust 因子（公共化或许值得讨论）；自己对低信任 reviewer 的做法：自己重做 review、指出遗漏、劝「更彻底前别回来」——信任机制提上议题 `<!-- ROW_MINE: ksummit-discuss.messages.347904 -->`
@@ -4592,7 +4592,7 @@
 - 【Linux社区】Geert：proofpoint 重写后的链接 wget 截断后竟能用；问服务可否被利用；赞成八步草案+github 集成可从分支发系列；须防垃圾（v2.6.12-rc2 全系列事故）；奇怪 git send-email 至今没出过这种事故 `<!-- ROW_MINE: ksummit-discuss.messages.349508 -->`
 - 【Linux社区】Greg KH 质疑第八步代发：冒充 sony.com 发不出去；FOO1234@k.o munging 后修改请求成中间人转发；"feedback loop 才是崩坏处——我只收 1/3 补丁、重试与对话是常态"；"那我们发明了 gerrit！认真的，好主意但别 gerrit" `<!-- ROW_MINE: ksummit-discuss.messages.349509 -->`
 - 【Linux社区】Konstantin 追加想象功能：账户挂远程 git 树别名、CLI vapor-git-thingy -g alias -r range -v2 -c coverletter 自动生成补丁；"我能凑到资金把它建出来" `<!-- ROW_MINE: ksummit-discuss.messages.349510 -->`
-- 【Linux社区】Konstantin 答 Greg：SRS0 envelope-sender 已在用、可过 DKIM/SPF；或 vapor-git-thingy@kernel.org 发+Reply-To 原作者；中间人转发"是现实我们已身处其中"；"叫 ging——ging is not gerrit" `<!-- ROW_MINE: ksummit-discuss.messages.349511 -->`
+- 【Linux社区】社区治理议题。Konstantin Ryabitsev 2018-09-18 在 Ksummit-discuss 关于社区管理与子系统治理的讨论中回答 Greg KH 关于投递要看起来像原作者发出的难题，指出 mail.kernel.org 投递邮件的 envelope-sender 已呈现为「SRS0=crc=stuff=orig-domain.com=orig-local@kernel.org」的形式，因此发信并通过 DKIM/SPF 检查以可靠投递是可行的；也可改从「vapor-git-thingy@kernel.org」发出并把原发件人放入 Reply-To，同样合规；对 Greg 所谓成为「man in the middle」到处转发邮件的担忧，他答这是本已身处其中的现实、并未把我们置于任何新增暴露之下；Greg 末尾另留有「no gerrit please」一句。`<!-- ROW_MINE: ksummit-discuss.messages.349511 -->`
 - 【Linux社区】Kurusa：kerneloops 三改进（X 次自动转维护者/RC 期统计/503 与 REST API 之议）；QR 屏占比与位置之辩；base64 33% 开销可由精简 oops 内容补偿；主张 URL+baseXX 路线失用户最少；Android app 与 bugzilla xml-rpc 认证问题（2014-05-15 档案信） `<!-- ROW_MINE: ksummit-discuss.messages.349512 -->`
 - 【Linux社区】Torokhov "Seconded no gerrit"：Chrome OS 评审 75% 时间耗在点 UI 而非评论问题本身 `<!-- ROW_MINE: ksummit-discuss.messages.349513 -->`
 - 【Linux社区】Sasha 答 Greg 冒发问题：不必冒充原作者——补丁带 From: 字段 git 自会做对、Cc 原作者则问答直达不经过系统 `<!-- ROW_MINE: ksummit-discuss.messages.349514 -->`
@@ -4834,7 +4834,7 @@
 - 【Linux社区】Vetter："想过加'旧 Code of Conflict 暂行有效'但已有社论之嫌、可能阻碍 ack 山；严格限于无可争议事实；**本人不愿 ack/nack 任何具体变更（包括临时回旧版）——只要 Linus 还没澄清为何仓促、为何觉得必要**；搞清什么是对需要比 4.19 前更长的时间（即便延一周，见 -rc7 公告）" `<!-- ROW_MINE: ksummit-discuss.messages.349751 -->`
 - 【Linux社区】Roeck Acked-by patch 1/2 `<!-- ROW_MINE: ksummit-discuss.messages.349752 -->`
 - 【Linux社区】**Roeck Acked-by patch 2/2 + 理由**："TAB 未被选为执行机构；我作为维护者在我被决定负有执行 CoC 责任时未被咨询" `<!-- ROW_MINE: ksummit-discuss.messages.349753 -->`
-- 【Linux社区】Geert patch 2/2："Fixes: 8a104f8b5867c682 + Acked-by" `<!-- ROW_MINE: ksummit-discuss.messages.349754 -->`
+- 【Linux社区】Geert 于 [PATCH 2/2] code-of-conduct: Strip the enforcement paragraph pending community discussion 中以 Fixes: 8a104f8b5867c682 (Code of Conduct: Let's revamp it.) 指向前序提交，并自署 Acked-by: Geert Uytterhoeven <geert@linux-m68k.org>。`<!-- ROW_MINE: ksummit-discuss.messages.349754 -->`
 - 【Linux社区】Airlie："同意要类似的东西；问题是改上游 CoC 文本还是单独节澄清——这不是有法律约束力的许可，但偏离上游措辞会让将来合并上游新版本更棘手" `<!-- ROW_MINE: ksummit-discuss.messages.349755 -->`
 - 【Linux社区】Greg KH 附议 tinification："既是有效议题、也是 Linux 应达成的目标"（2014-05-15 档案信） `<!-- ROW_MINE: ksummit-discuss.messages.349756 -->`
 - 【Linux社区】Al Viro 讽 Airlie 被动语态"Considered appropriate by whom?"；"upstream 显然不适合 Linus 内核社区结构——开放列表/子项目量/入主线传输链长度/贡献者总量/偶入者数量；CoC 上游自己都说不适配"；"用解释包围它则每次上游变更都须重新分析" `<!-- ROW_MINE: ksummit-discuss.messages.349757 -->`

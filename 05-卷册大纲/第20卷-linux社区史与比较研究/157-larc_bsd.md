@@ -5,7 +5,7 @@
 
 ## 157.1 杂项
 
-- 【Linux社区】讨论 close(2) 语义时明确指出 Linux 与 Solaris 在并发线程中 close 是否中断 IO 上不同  "unlike Solaris we do NOT close(2) abort IO on the same descriptor from another thread" `<!-- ROW_MINE: linux-arch.messages.9701416 -->`
+- 【Linux社区】Nate Karstens 在 RE: Implement close-on-fork 中转引他人关于 netlink 通知反应与 socket IO 之间用何种互斥的追问，其中指出 Linux 与 Solaris 在并发线程中 close(2) 是否中断 IO 上不同，原文为 unlike Solaris we do NOT (and will not) have close(2) abort IO on the same descriptor from another thread，并说明若一线程停在 recvmsg(2) 而另一线程执行 close(2)，该 socket 在 recvmsg(2) 返回前并不会真正关闭；Karstens 据此说明其 netlink 通知虽在独立线程接收，但关闭重开 socket 与 socket IO 都在同一线程完成，system() 调用夹在决策关闭与关闭完成之间，留下子进程仍持有 socket 引用的窗口。`<!-- ROW_MINE: linux-arch.messages.9701416 -->`
 - 【Linux社区】Linux ELF core dump 引入扩展编号时显式对齐 AMD64-ABI 与 Solaris 的既有实现,体现与 Sun 系谱系在 ABI 层面的衔接。This is supported by AMD64-ABI and Solaris `<!-- ROW_MINE: linux-arch.messages.9712389 -->`
 
 ## 157.2 BSD谱系
