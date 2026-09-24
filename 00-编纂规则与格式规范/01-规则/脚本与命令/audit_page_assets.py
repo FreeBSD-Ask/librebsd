@@ -389,7 +389,7 @@ def main():
                                    else "；声明 %s 实得 %s" % (mi.group(1), got)))
 
     # ---- E 测试夹具口径一致性 ----
-    m_v = re.search(r"<strong>(\d+)</strong><small>谱系", h)
+    m_v = re.search(r"<strong>(\d+)</strong><small>主线", h)
     m_c = re.search(r"<strong>(\d+)</strong><small>正章", h)
     m_s = re.search(r"<strong>(\d+)</strong><small>节级落点", h)
     if m_v and m_c and m_s:
