@@ -3440,14 +3440,14 @@
     - [346.13 社区治理与管理批评史的辩证运动——项目统摄史观视角](./第18卷-全球社区地区bsd史/第346章-bsd社区治理与管理批评史/346.13-社区治理与管理批评史的辩证运动-项目统摄史观视角.md)
     - [本章索引](./第18卷-全球社区地区bsd史/第346章-bsd社区治理与管理批评史/index.md)
 
-  - [第 347 章 重要人物传记——UNIX 创世一代：Thompson、Ritchie、Kernighan、McIlroy](./第18卷-全球社区地区bsd史/第347章-unix创世一代人物传记/概述.md)
+  - [第 347 章 重要人物传记——BSD 谱系核心与三大 BSD 创始一代（2026-09-24 裁定改题）](./第18卷-全球社区地区bsd史/第347章-unix创世一代人物传记/概述.md)
     - [347.1 BSD 谱系核心——Joy、McKusick、Karels、Bostic](./第18卷-全球社区地区bsd史/第347章-unix创世一代人物传记/347.1-BSD-谱系核心-Joy-McKusick-Karels-Bostic.md)
     - [347.2 三大 BSD 创始一代——Theo de Raadt、Jordan Hubbard 等](./第18卷-全球社区地区bsd史/第347章-unix创世一代人物传记/347.2-三大-BSD-创始一代-Theo-de-Raadt-Jordan-Hubbard.md)
     - [347.3 FreeBSD 核心贡献者群体——Grimes、Kamp、Watson、Losh、Maste](./第18卷-全球社区地区bsd史/第347章-unix创世一代人物传记/347.3-FreeBSD-核心贡献者群体-Grimes-Kamp-Watson-Losh.md)
     - [347.4 NetBSD 核心贡献者群体——Demetriou、Hannum、Crooks](./第18卷-全球社区地区bsd史/第347章-unix创世一代人物传记/347.4-NetBSD-核心贡献者群体-Demetriou-Hannum-Crooks.md)
     - [本章索引](./第18卷-全球社区地区bsd史/第347章-unix创世一代人物传记/index.md)
 
-  - [第 348 章 重要人物传记——OpenBSD 核心贡献者群体：de Raadt、Espie、Moerbeek](./第18卷-全球社区地区bsd史/第348章-openbsd核心贡献者人物传记/概述.md)
+  - [第 348 章 重要人物传记——通用计算机史四代人物（2026-09-24 裁定改题）](./第18卷-全球社区地区bsd史/第348章-openbsd核心贡献者人物传记/概述.md)
     - [348.1 硬件与大型机一代——Olsen、Amdahl、Cray、Bell、Brooks](./第18卷-全球社区地区bsd史/第348章-openbsd核心贡献者人物传记/348.1-硬件与大型机一代-Olsen-Amdahl-Cray-Bell-Brooks.md)
     - [348.2 小型机与工作站一代——de Castro、Bechtolsheim、McNealy](./第18卷-全球社区地区bsd史/第348章-openbsd核心贡献者人物传记/348.2-小型机与工作站一代-de-Castro-Bechtolsheim-McNealy.md)
     - [348.3 编程语言创造者——Backus、Hopper、Wirth、Wall、Rossum、Eich](./第18卷-全球社区地区bsd史/第348章-openbsd核心贡献者人物传记/348.3-编程语言创造者-Backus-Hopper-Wirth-Wall-Rossum.md)
