@@ -1,0 +1,1641 @@
+### PK 1129924 ###
+===== 序 23248 | PK 1129924 =====
+DATE: 2013-09-13
+FROM: ronald-freebsd8 at klop.yi.org (Ronald Klop) <None>
+SUBJ: Doc about Swapfile is old.
+
+Hello documentation team,
+
+FYI.
+
+Today I tried creating a swapfile on FreeBSD 10-CURRENT using this  
+documentation.
+http://www.freebsd.org/doc/en_US.ISO8859-1/books/handbook/adding-swap-space.html
+
+It did not work and some googling gave me this commit which describes the  
+right way to configure this.
+http://lists.freebsd.org/pipermail/svn-src-head/2013-June/048862.html
+
+I don't know if the handbook is only for stable/release.
+
+Regards,
+Ronald.
+
+
+
+
+
+
+### PK 1129925 ###
+===== 序 23249 | PK 1129925 =====
+DATE: 2013-09-13
+FROM: www-data at FreeBSD.org (User Www-data) <None>
+SUBJ: FreeBSD web build failed on build-web.stream.freebsd.org
+
+                                                                               ^
+Entity: line 35: parser error : Opening and ending tag mismatch: td line 34 and tr
+        </tr>
+             ^
+Entity: line 39: parser error : Opening and ending tag mismatch: a line 39 and td
+&url.rel;/powerpc/powerpc/&betarel2.current;-&betarel2.vers;">[Distribution]</td
+                                                                               ^
+Entity: line 40: parser error : Opening and ending tag mismatch: a line 40 and td
+<td><a href="&url.rel;/powerpc/powerpc/ISO-IMAGES/&betarel2.current;/">[ISO]</td
+                                                                               ^
+Entity: line 41: parser error : Opening and ending tag mismatch: td line 40 and tr
+        </tr>
+             ^
+Entity: line 54: parser error : Opening and ending tag mismatch: td line 39 and tbody
+      </tbody>
+              ^
+Entity: line 55: parser error : Opening and ending tag mismatch: tr line 36 and table
+    </table>
+            ^
+Entity: line 56: parser error : Premature end of data in tag td line 33
+
+^
+Entity: line 56: parser error : Premature end of data in tag tr line 30
+
+^
+Entity: line 56: parser error : Premature end of data in tag
+...[正文已截断，共 2040 字符]
+
+
+
+### PK 1129930 ###
+===== 序 23254 | PK 1129930 =====
+DATE: 2013-09-14
+FROM: kostikbel at gmail.com (Konstantin Belousov) <None>
+SUBJ: Tweaks to the wait(2) manpage
+
+On Thu, Sep 12, 2013 at 04:43:46PM -0400, John Baldwin wrote:
+> I have some tweaks to the wait(2) manpage, in particular to the sections on 
+> wait6() and idtypes.  I did also change two other places to use uppercase for 
+> ID since that seems to be what we do in other pages.  The alternate rendered 
+> text is below followed by the diff.  One structural change I chose to make was 
+> using a tagged list for the non-standard idtypes.  Our manpages in general 
+> prefer tagged lists to bullet lists for enumerations.  I left the list of 
+> standard types as-is as it includes a fourth bullet point that would not have 
+> an associated tag (though one could perhaps move that into the paragraph 
+> introducing the list of standard types if a tagged list was desired).  I kept
+> reading this page as I was writing this e-mail and changed more bits to 
+> attempt to be more consisent with existing paragraphs, etc.:
+> 
+>      The broadest interface of all functions in this family is wait6() which
+>      is otherwise very much like wait4() but with a few very important dis-
+>      tinctions.  To wait for exited processes the option flag WEXITED must be
+I did not liked the introductory sentence above, but was not able to
+formulate the idea better.  Specifically, I do not like the narrative tone,
+and think that 'broadest' and 'distinction' should be expressed better.
+
+>      explicitly specified.  This allows waiting for processes which have expe-
+>      rienced other status changes without having to also handle the exit sta-
+>      tus from terminated processes.  Instead of the traditional rusage argu-
+>      ment, the wrusage arguments points to a structure defined as:
+> 
+>      struct __wrusage {
+>              struct rusage   wru_self;
+>              struct rusage   wru_children;
+>      };
+> 
+>      This allows the calling process to collect resource usage statistics from
+>      both its own child process as well as from its grand children.  When no
+>      resource usage statistics are needed this pointer can be NULL.  The last
+>      argument infop must be either NULL or a pointer to a siginfo_t structure.
+>      If non-NULL, the structure is filled with the same data as for a SIGCHLD
+>      signal delivered when the process changed state.
+> 
+>      The set of child processes to be queried is specified by the arguments
+>      idtype and id.  The separate idtype and id arguments support many other
+>      types of identifers in addition to process IDs and process group IDs.
+> 
+>            o   If idtype is P_PID, waitid() and wait6() wait for the child
+>                process with a process ID equal to (pid_t)id.
+> 
+>            o   If idtype is P_PGID, waitid() and wait6() wait for the child
+>                process with a process group ID equal to (pid_t)id.
+> 
+>            o   If idtype is P_ALL, waitid() and wait6() wait for any child
+>                process and the id is ignored.
+> 
+>            o   If idtype is P_PID or P_PGID and the id is zero, waitid() and
+>                wait6() wait for any child process in the same process group as
+>                the caller.
+> 
+>      Non-standard identifier types supported by this implementation of
+>      waitid() and wait6() are:
+> 
+>      P_UID     Wait for processes whose effective user ID is equal to (uid_t)
+>                id.
+> 
+>      P_GID     Wait for processes whose effective group ID is equal to (gid_t)
+>                id.
+> 
+>      P_SID     Wait for processes whose session ID is equal to id.  If the
+>                child process started its own session, its session ID will be
+>                the same as its process ID.  Otherwise the session ID of a
+>                child process will match the caller's session ID.
+> 
+>      P_JAILID  Waits for processes within a jail whose jail identifier is
+>                equal to id.
+> 
+>      For the wait(), wait3(), and wait4() functions, the single wpid argument
+>      specifies the set of child processes for which to wait.
+> 
+>            o   If wpid is -1, the call waits for any child process.
+> 
+>            o   If wpid is 0, the call waits for any child process in the
+>                process group of the caller.
+> 
+>            o   If wpid is greater than zero, the call waits for the process
+>                with process ID wpid.
+> 
+>            o   If wpid is less than -1, the call waits for any process whose
+>                process group ID equals the absolute value of wpid.
+> 
+> ....
+> 
+>      If wrusage is non-NULL, separate summaries are returned for the resources
+>      used by the terminated process and the resources used by all its chil-
+>      dren.
+> 
+>      If infop is non-NULL, a siginfo_t structure is returned with the si_signo
+>      field set to SIGCHLD and the si_pid field set to the process ID of the
+>      process reporting status.
+> 
+>      When the WNOHANG option is specified and no processes wish to report sta-
+>      tus, waitid() sets the si_signo and si_pid fields in infop to zero.
+>      Checking these fields is the only way to know if a status change was
+>      reported.
+> 
+>      When the WNOHANG option is specified and no processes wish to report sta-
+>      tus, wait4() and wait6() return a process id of 0.
+> 
+>      The waitpid() function is identical to wait4() with an rusage value of
+>      zero.  The older wait3() call is the same as wait4() with a wpid value of
+s/zero/NULL/ ?
+>      -1.  The wait4() function is identical to wait6() with the flags WEXITED
+>      and WTRAPPED set in options and infop set to NULL.
+> 
+> ....
+> 
+>      The implementation queues one SIGCHLD signal for each child process whose
+>      status has changed; if wait() returns because the status of a child
+>      process is available, the pending SIGCHLD signal associated with the
+>      process ID of the child process will be discarded.  Any other pending
+>      SIGCHLD signals remain pending.
+> 
+>      If SIGCHLD is blocked and wait() returns because the status of a child
+>      process is available, the pending SIGCHLD signal will be cleared unless
+>      another status of the child process is available.
+> 
+> ....
+> 
+>      If waitid() returns because one or more processes have a state change to
+>      report, 0 is returned.  If an error is detected, a value of -1 is
+>      returned and errno is set to indicate the error.  If WNOHANG is specified
+>      and there are no stopped, continued or exited children, 0 is returned.
+>      The si_signo and si_pid fields of infop must be checked against zero to
+>      determine if a process reported status.
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: not available
+Type: application/pgp-signature
+Size: 834 bytes
+Desc: not available
+URL: <http://lists.freebsd.org/pipermail/freebsd-doc/attachments/20130914/52d947e3/attachment.sig>
+
+
+
+
+
+
+### PK 1129932 ###
+===== 序 23256 | PK 1129932 =====
+DATE: 2013-09-14
+FROM: wblock at wonkity.com (Warren Block) <None>
+SUBJ: Tweaks to the wait(2) manpage
+
+On Sat, 14 Sep 2013, Konstantin Belousov wrote:
+
+> On Thu, Sep 12, 2013 at 04:43:46PM -0400, John Baldwin wrote:
+>> I have some tweaks to the wait(2) manpage, in particular to the sections on
+>> wait6() and idtypes.  I did also change two other places to use uppercase for
+>> ID since that seems to be what we do in other pages.  The alternate rendered
+>> text is below followed by the diff.  One structural change I chose to make was
+>> using a tagged list for the non-standard idtypes.  Our manpages in general
+>> prefer tagged lists to bullet lists for enumerations.  I left the list of
+>> standard types as-is as it includes a fourth bullet point that would not have
+>> an associated tag (though one could perhaps move that into the paragraph
+>> introducing the list of standard types if a tagged list was desired).  I kept
+>> reading this page as I was writing this e-mail and changed more bits to
+>> attempt to be more consisent with existing paragraphs, etc.:
+>>
+>>      The broadest interface of all functions in this family is wait6() which
+>>      is otherwise very much like wait4() but with a few very important dis-
+>>      tinctions.  To wait for exited processes the option flag WEXITED must be
+> I did not liked the introductory sentence above, but was not able to
+> formulate the idea better.  Specifically, I do not like the narrative tone,
+> and think that 'broadest' and 'distinction' should be expressed better.
+
+Agreed about "broadest", it's hard to tell what that means.  How about:
+
+   wait6() is the most general function in this family, differing from
+   wait4() in these important ways:
+
+   To wait for exited processes, the WEXITED option flag must be
+   explicitly specified.  This allows waiting for processes which have
+   experienced other status changes without having to also handle the
+   exit status from terminated processes.
+
+   Instead of the traditional rusage argument, the wrusage argument
+   points to a structure defined as:
+
+...
+
+
+
+
+
+
+### PK 1129934 ###
+===== 序 23258 | PK 1129934 =====
+DATE: 2013-09-15
+FROM: matthew.penna at gmail.com (Matt Penna) <None>
+SUBJ: augment USE_GCC description in the porter's handbook
+
+On Sep 12, 2013, at 11:24 PM, Alexey Dokuchaev <danfe at nsu.ru> wrote:
+
+> hi,
+> 
+> cooked something up, so people would get less confused about proper
+> USE_GCC usage.  diff attached.
+
+> 
+
+> -	  <programlisting>USE_GCC=3.4</programlisting>
+> +	  <programlisting>USE_GCC=X.Y</programlisting>
+>  
+> -	  <para>would add a dependency on gcc34 for every port,
+> -	    including gcc34 itself!</para>
+> +	  <para>(where X.Y is version number) would add a dependency on
+> +	    gccXY for every port, including <literal>lang/gccXY</literal>
+> +	    itself!</para>
+
+I am unsure about this change. I understand the value in generalizing it, but I think leaving it with a specific version number provides a clearer example. So, it might be better as it is currently written?
+
+
+>  		<entry><makevar>USE_GCC</makevar></entry>
+> -		<entry>The port requires a specific version of
+> -		  <command>gcc</command> to build.  The exact version
+> -		  can be specified with value such as
+> -		  <literal>3.4</literal>.  The minimal required
+> -		  version can be specified as <literal>3.4+</literal>.
+> -		  The <command>gcc</command> from the base system is
+> -		  used when it satisfies the requested version,
+> -		  otherwise an appropriate <command>gcc</command> is
+> -		  compiled from ports and the <makevar>CC</makevar>
+> -		  and <makevar>CXX</makevar> variables are
+> -		  adjusted.</entry>
+> +		<entry>The port requires GCC (<command>gcc</command> or
+> +		  <command>g++</command>) to build.  Some ports need any
+> +		  GCC version, some require modern, recent versions.  It
+> +		  is typically set to <literal>any</literal> (in this
+> +		  case, GCC from base would be used on versions of &os;
+> +		  that still have it, or <literal>lang/gcc</literal> port
+> +		  would be installed when default C/C++ compiler is Clang);
+> +		  or <literal>yes</literal> (means always use stable, modern
+> +		  GCC from <literal>lang/gcc</literal> port).  The exact
+> +		  version can be also specified, with a value such as
+> +		  <literal>4.7</literal>.  The minimal required
+> +		  version can be specified as <literal>4.6+</literal>.
+> +		  The GCC from the base system is used when it satisfies
+> +		  the requested version, otherwise an appropriate compiler
+> +		  in built from the port, and the <makevar>CC</makevar>
+> +		  and <makevar>CXX</makevar> variables are adjusted
+> +		  accordingly.</entry>
+
+I have some ideas about clarifying this, but I would like to better understand the final point because "appropriate compiler" is a little vague. Is lang/gcc the compiler that is always used in this situation as long as it satisfies the minimal version requirement? Or is it possible that a version older than lang/gcc will be used?
+
+Example: USE_GCC is set to "4.2+". Would lang/gcc (currently at 4.6, I believe) always be built and installed? Or would 4.2 potentially be built, as this is also available in the ports tree? If I should get clarification on another list, I would be glad to do that.
+
+	Matt
+
+
+
+
+
+
+### PK 1129937 ###
+===== 序 23261 | PK 1129937 =====
+DATE: 2013-09-16
+FROM: albert at mietus.nl (albert at mietus.nl) <None>
+SUBJ: Please update projects
+
+Hi,
+
+On http://www.freebsd.org/projects/projects.html the following very old project is still mentioned. 
+I did this project, but it is stalled for 10years or so. 
+Please remove it, or update it. The code en docs is available on http://sourceforge.net/projects/syslog-sec/
+
+This week I got an email of a student who was willing to work on it, and found my email on this page. 
+That is nice, and whisked him well en good luck. But ... but as I'm hardy programming , nor involved in 
+FreeBSD anymore (nor syslog ) I think it is better reflect that on the website. Although it is with pain in my hard
+
+
+
+
+SYSLOG-SECURE: In August 2001 a standard of syslog was made: RFC3164. This RFC describes some extensions to add security to syslog. A project started in 2002 to adapt RFC3164 to the FreeBSD version of syslog and to add some security extensions, at least syslog-sign. Both libc and syslogd will be modified. And optionally some tools to verify or manage the security would be made. All help is welcome. Send an email to albert at ons-huis.net for info.
+
+--ALbert    06 16531258 (priv?), 06 52659260 (Sogeti)
+                 Verstuurd vanaf mijn iPad
+
+
+
+
+
+
+
+### PK 1129938 ###
+===== 序 23262 | PK 1129938 =====
+DATE: 2013-09-18
+FROM: dnixon-fnre at nyclocal.net (Dee Nixon) <None>
+SUBJ: Proposed addition to FreeBSD handbook
+
+Hello.  The following page contains an incomplete draft of some
+proposed additions to the FreeBSD handbook:
+
+http://petitecloud.org/handbook.jsp
+
+We'll be fleshing it out over the next couple of days.
+
+The proposed new sections concern bhyve, the new hypervisor that
+will be part of the base system of FreeBSD 10.  Currently the
+relevant section of FreeBSD manual covers VirtualBox, but not bhyve.
+
+We were advised by Eitan Adler to post this to the doc list.
+
+(I am co-developer of petitecloud, a forthcoming front end for bhyve.)
+
+
+
+
+
+
+
+
+
+
+
+
+### PK 1129944 ###
+===== 序 23268 | PK 1129944 =====
+DATE: 2013-09-18
+FROM: bryan at shatow.net (Bryan Drewery) <None>
+SUBJ: docs/182202: Handbook pkgng description doesn't mention there
+ are no repos
+
+The following reply was made to PR docs/182202; it has been noted by GNATS.
+
+From: Bryan Drewery <bryan at shatow.net>
+To: Scott Robbins <scottro11 at gmail.com>
+Cc: FreeBSD-gnats-submit at freebsd.org
+Subject: Re: docs/182202: Handbook pkgng description doesn't mention there
+ are no repos
+Date: Wed, 18 Sep 2013 16:14:40 -0500
+
+ Switch to pkgng does not require there to be repositories. It works in
+ ports just fine, as a replacement for the old tools. The ability to
+ upgrade/install from a remote repository is not ready yet, but pkgng
+ is ready to switch to today, while still using portmaster/portupgrade.
+
+
+
+
+
+
+### PK 1129950 ###
+===== 序 23274 | PK 1129950 =====
+DATE: 2013-09-19
+FROM: cyrilus at inbox.com (Cyril) <None>
+SUBJ: two chapter 22 in FreeBSD Handbook Revision 42118
+
+Hello!
+
+Regarding the table of contents of the FreeBSD handbook, i see that the chapter 22 is about Virtualization.
+But with this link http://www.freebsd.org/doc/en_US.ISO8859-1/books/handbook/vinum-vinum.html  vinum chapter is also the chapter 22.
+And the vinum chapter is not on the table of contents.
+
+I'm wrong?
+---
+Cyril.
+
+____________________________________________________________
+FREE 3D MARINE AQUARIUM SCREENSAVER - Watch dolphins, sharks & orcas on your desktop!
+Check it out at http://www.inbox.com/marineaquarium
+
+
+
+
+
+
+
+
+### PK 1129951 ###
+===== 序 23275 | PK 1129951 =====
+DATE: 2013-09-19
+FROM: taras at synfin.me (Taras Korenko) <None>
+SUBJ: two chapter 22 in FreeBSD Handbook Revision 42118
+
+On Thu, Sep 19, 2013 at 09:12:24AM -0800, Cyril wrote:
+> Hello!
+> 
+> Regarding the table of contents of the FreeBSD handbook, i see that the chapter 22 is about Virtualization.
+> But with this link http://www.freebsd.org/doc/en_US.ISO8859-1/books/handbook/vinum-vinum.html  vinum chapter is also the chapter 22.
+> And the vinum chapter is not on the table of contents.
+> 
+> I'm wrong?
+  Nope.
+
+  That's a stale webpage (vinum-vinum.html).  A short explanation may be
+found in the following post:
+http://lists.freebsd.org/pipermail/freebsd-doc/2013-September/022562.html
+
+-- 
+  WBR, Taras Korenko
+
+
+
+
+
+
+### PK 1129954 ###
+===== 序 23278 | PK 1129954 =====
+DATE: 2013-09-21
+FROM: lists at eitanadler.com (Eitan Adler) <None>
+SUBJ: Moving __FreeBSD_version to an appendix
+
+Hi,
+
+At the moment the listings of __FreeBSD_version values in in the "dos
+and don't" section.  I'd like to move it to an appendix.  This will
+create a new file similar to how uses.xml is currently implemented.
+
+There is a patch for versions.xml but it is deceptively long (I used
+'svn cp' to ensure the history is preserved).
+
+Index: Makefile
+===================================================================
+--- Makefile	(revision 42681)
++++ Makefile	(working copy)
+@@ -21,6 +21,7 @@ INSTALL_ONLY_COMPRESSED?=
+ # XML content
+ SRCS=  book.xml
+ SRCS+= uses.xml
++SRCS+= versions.xml
+
+ # Images from the cross-document image library
+ IMAGES_LIB+=	callouts/1.png
+Index: book.xml
+===================================================================
+--- book.xml	(revision 42683)
++++ book.xml	(working copy)
+@@ -2,6 +2,7 @@
+ <!DOCTYPE book PUBLIC "-//FreeBSD//DTD DocBook XML V4.5-Based Extension//EN"
+ 	"../../../share/xml/freebsd45.dtd" [
+ <!ENTITY values.uses SYSTEM "uses.xml">
++<!ENTITY values.versions SYSTEM "versions.xml">
+ ]>
+
+ <!--
+@@ -11489,4847 +11490,6 @@ Reference: &lt;http://www.freebsd.org/ports/portau
+ 	</para>
+     </sect1>
+
+-    <sect1 id="freebsd-versions">
+...
+
+-    </sect1>
+-
+     <sect1 id="dads-after-port-mk">
+       <title>Writ
+...[正文已截断，共 2895 字符]
+
+
+
+### PK 1129956 ###
+===== 序 23280 | PK 1129956 =====
+DATE: 2013-09-22
+FROM: frank2 at fjl.co.uk (Frank Leonhardt) <None>
+SUBJ: its freebsd easy as MAC
+
+The Macintosh and Windows user environments hide the complexities, 
+allowing unskilled server administrators to do a limited number of 
+things in an easy way without any understanding of the underlying 
+technology. This is what a lot of people want.
+
+Underneath the wizards, the Macintosh OS is very similar to FreeBSD. 
+While GUIs exist for FreeBSD (note the plural), it was never designed to 
+be simple for unskilled operators to administer and it won't be a 
+comfortable experience for Macintosh users looking for a simple 
+point-and-click subset of server options (or Windows users, come to 
+that). However, I can't quite bring myself to recommend either a 
+Macintosh or Windows as a server.
+
+Some Linux distributions position themselves as a half-way between 
+Windows and UNIX.
+
+There are some platforms with FreeBSD underneath but bundled with a GUI 
+(or web front end). FreeNAS is an obvious example, and I believe it 
+supports a web server plugin (or will do soon). Personally I've not got 
+on with FreeNAS as I get frustrated by trying to figure things the GUI 
+way and end up editing the config files directly to get what I want. But 
+then I've wasted a lifetime learning how, and it was never written with 
+me in mind.
+
+Most UNIX servers wishing to give use
+...[正文已截断，共 2919 字符]
+
+
+
+### PK 1129957 ###
+===== 序 23281 | PK 1129957 =====
+DATE: 2013-09-22
+FROM: blackend at FreeBSD.org (Marc Fonvieille) <None>
+SUBJ: HEADS UP: doc/ slush for 10.0R begins on 24 October, 2013
+
+Hi all,
+
+The doc slush will begin on 24 October, 2013.
+
+The purpose of the doc slush is to slow down the rate of changes in that
+tree in order to allow the translation teams time to finalize their work
+and to avoid last-minute breakage for the 10.0-RELEASE.
+
+Please note that the slush will not apply to <lang>/htdocs documents.
+
+As usual, this is not a real freeze and requires no formal commit
+approval procedure for your commit, but you are kindly requested not to
+commit large, structural changes during that period.
+
+Tagging of the doc tree is scheduled to take place on 31 October, 2013.
+Thank you for your cooperation and keep up the good work!
+
+-- 
+Marc on behalf of doceng@
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: not available
+Type: application/pgp-signature
+Size: 188 bytes
+Desc: not available
+URL: <http://lists.freebsd.org/pipermail/freebsd-doc/attachments/20130922/afb9681d/attachment.sig>
+
+
+
+
+
+
+### PK 1129969 ###
+===== 序 23293 | PK 1129969 =====
+DATE: 2013-09-24
+FROM: jhb at freebsd.org (John Baldwin) <None>
+SUBJ: Tweaks to the wait(2) manpage
+
+On Saturday, September 14, 2013 9:11:48 am Warren Block wrote:
+> On Sat, 14 Sep 2013, Konstantin Belousov wrote:
+> 
+> > On Thu, Sep 12, 2013 at 04:43:46PM -0400, John Baldwin wrote:
+> >> I have some tweaks to the wait(2) manpage, in particular to the sections on
+> >> wait6() and idtypes.  I did also change two other places to use uppercase for
+> >> ID since that seems to be what we do in other pages.  The alternate rendered
+> >> text is below followed by the diff.  One structural change I chose to make was
+> >> using a tagged list for the non-standard idtypes.  Our manpages in general
+> >> prefer tagged lists to bullet lists for enumerations.  I left the list of
+> >> standard types as-is as it includes a fourth bullet point that would not have
+> >> an associated tag (though one could perhaps move that into the paragraph
+> >> introducing the list of standard types if a tagged list was desired).  I kept
+> >> reading this page as I was writing this e-mail and changed more bits to
+> >> attempt to be more consisent with existing paragraphs, etc.:
+> >>
+> >>      The broadest interface of all functions in this family is wait6() which
+> >>      is otherwise very much like wait4() but with a few very important dis-
+> >>      tinctions.  To wait for exited
+...[正文已截断，共 16640 字符]
+
+
+
+### PK 1129970 ###
+===== 序 23294 | PK 1129970 =====
+DATE: 2013-09-24
+FROM: kostikbel at gmail.com (Konstantin Belousov) <None>
+SUBJ: Tweaks to the wait(2) manpage
+
+On Tue, Sep 24, 2013 at 04:31:44PM -0400, John Baldwin wrote:
+> On Saturday, September 14, 2013 9:11:48 am Warren Block wrote:
+> > On Sat, 14 Sep 2013, Konstantin Belousov wrote:
+> > 
+> > > On Thu, Sep 12, 2013 at 04:43:46PM -0400, John Baldwin wrote:
+> > >> I have some tweaks to the wait(2) manpage, in particular to the sections on
+> > >> wait6() and idtypes.  I did also change two other places to use uppercase for
+> > >> ID since that seems to be what we do in other pages.  The alternate rendered
+> > >> text is below followed by the diff.  One structural change I chose to make was
+> > >> using a tagged list for the non-standard idtypes.  Our manpages in general
+> > >> prefer tagged lists to bullet lists for enumerations.  I left the list of
+> > >> standard types as-is as it includes a fourth bullet point that would not have
+> > >> an associated tag (though one could perhaps move that into the paragraph
+> > >> introducing the list of standard types if a tagged list was desired).  I kept
+> > >> reading this page as I was writing this e-mail and changed more bits to
+> > >> attempt to be more consisent with existing paragraphs, etc.:
+> > >>
+> > >>      The broadest interface of all functions in this family is wait6() which
+> > >>      is otherwise very much like wait4() but with a few very important dis-
+> > >>      tinctions.  To wait for exited processes the option flag WEXITED must be
+> > > I did not liked the introductory sentence above, but was not able to
+> > > formulate the idea better.  Specifically, I do not like the narrative tone,
+> > > and think that 'broadest' and 'distinction' should be expressed better.
+> > 
+> > Agreed about "broadest", it's hard to tell what that means.  How about:
+> > 
+> >    wait6() is the most general function in this family, differing from
+> >    wait4() in these important ways:
+> > 
+> >    To wait for exited processes, the WEXITED option flag must be
+> >    explicitly specified.  This allows waiting for processes which have
+> >    experienced other status changes without having to also handle the
+> >    exit status from terminated processes.
+> > 
+> >    Instead of the traditional rusage argument, the wrusage argument
+> >    points to a structure defined as:
+> 
+> I've fixed the zero -> NULL case Konstantin pointed out (and another one).
+> I also made a stab at fixing this.  I actually changed the prior paragraph
+> to state that both wait4 and wait6 are the general functions for this API
+> and then went from there.  I also reworded the descriptions of the flags
+> in options and clarified that WTRAPPED is implicit the same as WEXITED in
+> a few places.
+> 
+> At this point it's probably easiest for me to just put the entire page here:
+> 
+> WAIT(2)                   FreeBSD System Calls Manual                  WAIT(2)
+> 
+> NAME
+>      wait, waitid, waitpid, wait3, wait4, wait6 -- wait for processes to
+>      change status
+> 
+> LIBRARY
+>      Standard C Library (libc, -lc)
+> 
+> SYNOPSIS
+>      #include <sys/types.h>
+>      #include <sys/wait.h>
+> 
+>      pid_t
+>      wait(int *status);
+> 
+>      pid_t
+>      waitpid(pid_t wpid, int *status, int options);
+> 
+>      #include <sys/signal.h>
+> 
+>      int
+>      waitid(idtype_t idtype, id_t id, siginfo_t *info, int options);
+> 
+>      #include <sys/time.h>
+>      #include <sys/resource.h>
+> 
+>      pid_t
+>      wait3(int *status, int options, struct rusage *rusage);
+> 
+>      pid_t
+>      wait4(pid_t wpid, int *status, int options, struct rusage *rusage);
+> 
+>      pid_t
+>      wait6(idtype_t idtype, id_t id, int *status, int options,
+>          struct __wrusage *wrusage, siginfo_t *infop);
+> 
+> DESCRIPTION
+>      The wait() function suspends execution of its calling thread until status
+>      information is available for a child process or a signal is received.  On
+>      return from a successful wait() call, the status area contains informa-
+>      tion about the process that reported a status change as defined below.
+> 
+>      The wait() call is the same as wait4() with a wpid value of -1, with an
+>      options value of zero, and a rusage value of NULL.
+> 
+>      The wait4() and wait6() system calls provide a more general interface for
+>      programs that need to wait for specific child processes, that need
+>      resource utilization statistics accumulated by child processes, or that
+>      require options.  The other wait functions are implemented using either
+>      wait4() or wait6().
+> 
+>      The wait6() function is the most general function in this family and dif-
+>      fers from wait4() in these important ways:
+Still, this sentence highlights the difference with wait4(), but there were
+no description for wait4() given before.  Might be, modulo the language
+rewording, say
+	The wait6() function is the most general function in this family and
+	its distinctive features are:
+> 
+>      All of the desired process statuses to be waited on must be explicitly
+>      specified in options.  The wait(), waitpid(), wait3(), and wait4() func-
+>      tions all implicitly wait for exited and trapped processes, but the
+>      waitid() and wait6() functions require the corresponding WEXITED and
+>      WTRAPPED flags to be explicitly specified.  This allows waiting for pro-
+>      cesses which have experienced other status changes without having to also
+>      handle the exit status from terminated processes.
+> 
+>      Instead of the traditional rusage argument, the wrusage arguments points
+>      to a structure defined as:
+And there,
+	The wait6() function takes the wrusage argument, which points to ...
+
+I like other parts of the text.
+> 
+>      struct __wrusage {
+>              struct rusage   wru_self;
+>              struct rusage   wru_children;
+>      };
+> 
+>      This allows the calling process to collect resource usage statistics from
+>      both its own child process as well as from its grand children.  When no
+>      resource usage statistics are needed this pointer can be NULL.
+> 
+>      The last argument infop must be either NULL or a pointer to a siginfo_t
+>      structure.  If non-NULL, the structure is filled with the same data as
+>      for a SIGCHLD signal delivered when the process changed state.
+> 
+>      The set of child processes to be queried is specified by the arguments
+>      idtype and id.  The separate idtype and id arguments support many other
+>      types of identifers in addition to process IDs and process group IDs.
+> 
+>            o   If idtype is P_PID, waitid() and wait6() wait for the child
+>                process with a process ID equal to (pid_t)id.
+> 
+>            o   If idtype is P_PGID, waitid() and wait6() wait for the child
+>                process with a process group ID equal to (pid_t)id.
+> 
+>            o   If idtype is P_ALL, waitid() and wait6() wait for any child
+>                process and the id is ignored.
+> 
+>            o   If idtype is P_PID or P_PGID and the id is zero, waitid() and
+>                wait6() wait for any child process in the same process group as
+>                the caller.
+> 
+>      Non-standard identifier types supported by this implementation of
+>      waitid() and wait6() are:
+> 
+>      P_UID     Wait for processes whose effective user ID is equal to (uid_t)
+>                id.
+> 
+>      P_GID     Wait for processes whose effective group ID is equal to (gid_t)
+>                id.
+> 
+>      P_SID     Wait for processes whose session ID is equal to id.  If the
+>                child process started its own session, its session ID will be
+>                the same as its process ID.  Otherwise the session ID of a
+>                child process will match the caller's session ID.
+> 
+>      P_JAILID  Waits for processes within a jail whose jail identifier is
+>                equal to id.
+> 
+>      For the wait(), wait3(), and wait4() functions, the single wpid argument
+>      specifies the set of child processes for which to wait.
+> 
+>            o   If wpid is -1, the call waits for any child process.
+> 
+>            o   If wpid is 0, the call waits for any child process in the
+>                process group of the caller.
+> 
+>            o   If wpid is greater than zero, the call waits for the process
+>                with process ID wpid.
+> 
+>            o   If wpid is less than -1, the call waits for any process whose
+>                process group ID equals the absolute value of wpid.
+> 
+>      The status argument is defined below.
+> 
+>      The options argument contains the bitwise OR of any of the following
+>      options.
+> 
+>      WCONTINUED  Report the status of selected processes that have continued
+>                  from a job control stop by receiving a SIGCONT signal.
+> 
+>      WNOHANG     Do not block when there are no processes wishing to report
+>                  status.
+> 
+>      WUNTRACED   Report the status of selected processes which are stopped due
+>                  to a SIGTTIN, SIGTTOU, SIGTSTP, or SIGSTOP signal.
+> 
+>      WSTOPPED    An alias for WUNTRACED.
+> 
+>      WTRAPPED    Report the status of selected processes which are being
+>                  traced via ptrace(2) and have trapped or reached a break-
+>                  point.  This flag is implicitly set for the functions wait(),
+>                  waitpid(), wait3(), and wait4().
+>                  For the waitid() and wait6() functions, the flag has to be
+>                  explicitly included in options if status reports from trapped
+>                  processes are expected.
+> 
+>      WEXITED     Report the status of selected processes which have termi-
+>                  nated.  This flag is implicitly set for the functions wait(),
+>                  waitpid(), wait3(), and wait4().
+>                  For the waitid() and wait6() functions, the flag has to be
+>                  explicitly included in options if status reports from termi-
+>                  nated processes are expected.
+> 
+>      WNOWAIT     Keep the process whose status is returned in a waitable
+>                  state.  The process may be waited for again after this call
+>                  completes.
+> 
+>      For the waitid() and wait6() functions, at least one of the options
+>      WEXITED, WUNTRACED, WSTOPPED, WTRAPPED, or WCONTINUED must be specified.
+>      Otherwise there will be no events for the call to report.  To avoid hang-
+>      ing indefinitely in such a case these functions return -1 with errno set
+>      to EINVAL.
+> 
+>      If rusage is non-NULL, a summary of the resources used by the terminated
+>      process and all its children is returned.
+> 
+>      If wrusage is non-NULL, separate summaries are returned for the resources
+>      used by the terminated process and the resources used by all its chil-
+>      dren.
+> 
+>      If infop is non-NULL, a siginfo_t structure is returned with the si_signo
+>      field set to SIGCHLD and the si_pid field set to the process ID of the
+>      process reporting status.
+> 
+>      When the WNOHANG option is specified and no processes wish to report sta-
+>      tus, waitid() sets the si_signo and si_pid fields in infop to zero.
+>      Checking these fields is the only way to know if a status change was
+>      reported.
+> 
+>      When the WNOHANG option is specified and no processes wish to report sta-
+>      tus, wait4() and wait6() return a process id of 0.
+> 
+>      The waitpid() function is identical to wait4() with an rusage value of
+>      NULL.  The older wait3() call is the same as wait4() with a wpid value of
+>      -1.  The wait4() function is identical to wait6() with the flags WEXITED
+>      and WTRAPPED set in options and infop set to NULL.
+> 
+>      The following macros may be used to test the current status of the
+>      process.  Exactly one of the following four macros will evaluate to a
+>      non-zero (true) value:
+> 
+>      WIFCONTINUED(status)
+>              True if the process has not terminated, and has continued after a
+>              job control stop.  This macro can be true only if the wait call
+>              specified the WCONTINUED option.
+> 
+>      WIFEXITED(status)
+>              True if the process terminated normally by a call to _exit(2) or
+>              exit(3).
+> 
+>      WIFSIGNALED(status)
+>              True if the process terminated due to receipt of a signal.
+> 
+>      WIFSTOPPED(status)
+>              True if the process has not terminated, but has stopped and can
+>              be restarted.  This macro can be true only if the wait call spec-
+>              ified the WUNTRACED option or if the child process is being
+>              traced (see ptrace(2)).
+> 
+>      Depending on the values of those macros, the following macros produce the
+>      remaining status information about the child process:
+> 
+>      WEXITSTATUS(status)
+>              If WIFEXITED(status) is true, evaluates to the low-order 8 bits
+>              of the argument passed to _exit(2) or exit(3) by the child.
+> 
+>      WTERMSIG(status)
+>              If WIFSIGNALED(status) is true, evaluates to the number of the
+>              signal that caused the termination of the process.
+> 
+>      WCOREDUMP(status)
+>              If WIFSIGNALED(status) is true, evaluates as true if the termina-
+>              tion of the process was accompanied by the creation of a core
+>              file containing an image of the process when the signal was
+>              received.
+> 
+>      WSTOPSIG(status)
+>              If WIFSTOPPED(status) is true, evaluates to the number of the
+>              signal that caused the process to stop.
+> 
+> NOTES
+>      See sigaction(2) for a list of termination signals.  A status of 0 indi-
+>      cates normal termination.
+> 
+>      If a parent process terminates without waiting for all of its child pro-
+>      cesses to terminate, the remaining child processes are assigned the par-
+>      ent process 1 ID (the init process ID).
+> 
+>      If a signal is caught while any of the wait() calls are pending, the call
+>      may be interrupted or restarted when the signal-catching routine returns,
+>      depending on the options in effect for the signal; see discussion of
+>      SA_RESTART in sigaction(2).
+> 
+>      The implementation queues one SIGCHLD signal for each child process whose
+>      status has changed; if wait() returns because the status of a child
+>      process is available, the pending SIGCHLD signal associated with the
+>      process ID of the child process will be discarded.  Any other pending
+>      SIGCHLD signals remain pending.
+> 
+>      If SIGCHLD is blocked and wait() returns because the status of a child
+>      process is available, the pending SIGCHLD signal will be cleared unless
+>      another status of the child process is available.
+> 
+> RETURN VALUES
+>      If wait() returns due to a stopped, continued, or terminated child
+>      process, the process ID of the child is returned to the calling process.
+>      Otherwise, a value of -1 is returned and errno is set to indicate the
+>      error.
+> 
+>      If wait6(), wait4(), wait3(), or waitpid() returns due to a stopped, con-
+>      tinued, or terminated child process, the process ID of the child is
+>      returned to the calling process.  If there are no children not previously
+>      awaited, -1 is returned with errno set to ECHILD.  Otherwise, if WNOHANG
+>      is specified and there are no stopped, continued or exited children, 0 is
+>      returned.  If an error is detected or a caught signal aborts the call, a
+>      value of -1 is returned and errno is set to indicate the error.
+> 
+>      If waitid() returns because one or more processes have a state change to
+>      report, 0 is returned.  If an error is detected, a value of -1 is
+>      returned and errno is set to indicate the error.  If WNOHANG is specified
+>      and there are no stopped, continued or exited children, 0 is returned.
+>      The si_signo and si_pid fields of infop must be checked against zero to
+>      determine if a process reported status.
+> 
+> ERRORS
+>      The wait() function will fail and return immediately if:
+> 
+>      [ECHILD]           The calling process has no existing unwaited-for child
+>                         processes.
+> 
+>      [ECHILD]           No status from the terminated child process is avail-
+>                         able because the calling process has asked the system
+>                         to discard such status by ignoring the signal SIGCHLD
+>                         or setting the flag SA_NOCLDWAIT for that signal.
+> 
+>      [EFAULT]           The status or rusage argument points to an illegal
+>                         address.  (May not be detected before exit of a child
+>                         process.)
+> 
+>      [EINTR]            The call was interrupted by a caught signal, or the
+>                         signal did not have the SA_RESTART flag set.
+> 
+>      [EINVAL]           An invalid value was specified for options, or idtype
+>                         and id do not specify a valid set of processes.
+> 
+> SEE ALSO
+>      _exit(2), ptrace(2), sigaction(2), exit(3), siginfo(3)
+> 
+> STANDARDS
+>      The wait(), waitpid(), and waitid() functions are defined by POSIX;
+>      wait6(), wait4(), and wait3() are not specified by POSIX.  The
+>      WCOREDUMP() macro is an extension to the POSIX interface.
+> 
+>      The ability to use the WNOWAIT flag with waitpid() is an extension; POSIX
+>      only permits this flag with waitid().
+> 
+>      POSIX requires waitid() to return the full 32 bits passed to _exit(2);
+>      this implementation only returns 8 bits like in the other calls.
+> 
+> HISTORY
+>      The wait() function appeared in Version 6 AT&T UNIX.
+> 
+> -- 
+> John Baldwin
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: not available
+Type: application/pgp-signature
+Size: 834 bytes
+Desc: not available
+URL: <http://lists.freebsd.org/pipermail/freebsd-doc/attachments/20130925/f8efa286/attachment.sig>
+
+
+
+
+
+
+### PK 1129984 ###
+===== 序 23308 | PK 1129984 =====
+DATE: 2013-09-30
+FROM: bsd-unix at embarqmail.com (Randy Pratt) <None>
+SUBJ: Docbook: programlisting and screen
+
+I've noticed that trying to copy content from the rendered Handbook
+from a browser does not retain the line breaks in some places.  This
+occurs for material that are contained within a <programlisting> or
+<screen> elements.
+ 
+As an example, try to copy and paste some content from the section
+30.6.5.5. for "An Example Stateful Ruleset" into a text editor.
+(http://www.freebsd.org/doc/en_US.ISO8859-1/books/handbook/firewalls-ipfw.html)
+ 
+The result is the entire copied content is a single line which would
+require a lot of tedious editing.  I've tried different browsers with
+the same result.  I finally ended using the xml source to do the
+copy.
+
+I seem to remember being able to do a copy but it was probably
+when sgml was used.  Is there some way to make it easier to copy
+these sections?
+
+Thanks,
+
+Randy
+
+
+
+
+
+
+
+### PK 1129985 ###
+===== 序 23309 | PK 1129985 =====
+DATE: 2013-09-30
+FROM: wblock at wonkity.com (Warren Block) <None>
+SUBJ: Docbook: programlisting and screen
+
+On Mon, 30 Sep 2013, Randy Pratt wrote:
+
+> I've noticed that trying to copy content from the rendered Handbook
+> from a browser does not retain the line breaks in some places.  This
+> occurs for material that are contained within a <programlisting> or
+> <screen> elements.
+>
+> As an example, try to copy and paste some content from the section
+> 30.6.5.5. for "An Example Stateful Ruleset" into a text editor.
+> (http://www.freebsd.org/doc/en_US.ISO8859-1/books/handbook/firewalls-ipfw.html)
+>
+> The result is the entire copied content is a single line which would
+> require a lot of tedious editing.  I've tried different browsers with
+> the same result.  I finally ended using the xml source to do the
+> copy.
+>
+> I seem to remember being able to do a copy but it was probably
+> when sgml was used.  Is there some way to make it easier to copy
+> these sections?
+
+Firefox on FreeBSD does this for me also.  Interestingly, IE on Windows 
+copies and pastes that example fine.  Firefox does not, on either 
+FreeBSD or Windows.  Midori on FreeBSD pastes it correctly.  Either a 
+new Firefox bug, or maybe a default setting that changed?
+
+
+
+
+
+
+### PK 1129989 ###
+===== 序 23313 | PK 1129989 =====
+DATE: 2014-04-01
+FROM: smh at freebsd.org (Steven Hartland) <None>
+SUBJ: Adding a new entry to 10.0R errata
+
+Hi guys I've just been tripped up by an issue with the 10-RELEASE
+which causes a panic and hang when patching LSI firmware on mps.
+
+This is already fixed in 10/stable by mav. Having spoken to him
+he agrees that its likely worth mentioning in the 10.0R errata.
+
+So the question is how do we go about doing that?
+
+For reference the following two revisions are required:-
+http://svnweb.freebsd.org/base?view=revision&amp;revision=262553
+http://svnweb.freebsd.org/base?view=revision&amp;revision=262575
+
+    Regards
+    Steve
+
+
+
+
+
+
+### PK 1129999 ###
+===== 序 23323 | PK 1129999 =====
+DATE: 2014-04-03
+FROM: tg at gmplib.org (Torbjorn Granlund) <None>
+SUBJ: Downplaying a serious issue
+
+I notice that you seriously downplay the filesystem malfunctioning issue
+of FreeBSD/i386 10.0 (and its many betas).
+
+http://www.freebsd.org/releases/10.0R/errata.html
+
+This is not specific to some weird hardware.  It is not specific to
+virtualbox.  As I have reported (and been shouted down) it happens under
+KVM and Xen.  It happens under Xen+Linux as well as Xen+NetBSD.
+
+FreeBSD is becoming strange.  I've been using every release since 1.1,
+and have liked it.  Now it is unstable, critical bug reports are
+ignored, serious problems are being downplayed, the compiler is
+terrible.  Did Apple money corrupt a great project?
+
+
+Torbj?rn
+Please encrypt, key id 0xC8601622
+
+
+
+
+
+
+### PK 1130001 ###
+===== 序 23325 | PK 1130001 =====
+DATE: 2014-04-03
+FROM: rfg at tristatelogic.com (Ronald F.Guilmette) <None>
+SUBJ: docs/188214: Manpage for fsck(8) doesn't say what happens when no -t
+ or -T
+
+
+>Number:         188214
+>Category:       docs
+>Synopsis:       Manpage for fsck(8) doesn't say what happens when no -t or -T
+>Confidential:   no
+>Severity:       serious
+>Priority:       medium
+>Responsible:    freebsd-doc
+>State:          open
+>Quarter:        
+>Keywords:       
+>Date-Required:
+>Class:          doc-bug
+>Submitter-Id:   current-users
+>Arrival-Date:   Thu Apr 03 03:40:00 UTC 2014
+>Closed-Date:
+>Last-Modified:
+>Originator:     Ronald F. Guilmette
+>Release:        FreeBSD 9.1-RELEASE amd64
+>Organization:
+entr0py
+>Environment:
+
+9.1-RELEASE amd64
+
+>Description:
+
+It has been suggested to me that if and when fsck(8) is invoked _without_
+any explicitly provided -t or -T options, fsck will, in such cases, attempt
+to intuit the type of the filesystem on its own, perhaps based upon
+information/clues gleened from the local /etc/fstab file and/or from some
+relevant BSD disk label.
+
+If true, then this behavior does not appear to be documented at all within
+the fsck(8) manpage.
+
+This is an important aspect of the behavior of fsck(8).  If verified, then
+it should be documented in the manpage.
+
+>How-To-Repeat:
+
+man 8 fsck
+
+>Fix:
+
+Sorry, I do not have any suggested replacement text for the
+...[正文已截断，共 1478 字符]
+
+
+
+### PK 1130003 ###
+===== 序 23327 | PK 1130003 =====
+DATE: 2014-04-03
+FROM: gjb at FreeBSD.org (Glen Barber) <None>
+SUBJ: Downplaying a serious issue
+
+On Wed, Apr 02, 2014 at 09:43:28PM -0600, Warren Block wrote:
+> On Thu, 3 Apr 2014, Torbjorn Granlund wrote:
+> 
+> >I notice that you seriously downplay the filesystem malfunctioning issue
+> >of FreeBSD/i386 10.0 (and its many betas).
+> 
+> Do we?  What should it say?  Please be specific, preferably in the form of a
+> PR.  Is this really a doc problem?
+> 
+
+It is not a doc problem.
+
+The issue is specific to certain hardware configurations, and unless
+anyone has made any breakthroughs that I am unaware of, the cause is
+still unknown.
+
+> >http://www.freebsd.org/releases/10.0R/errata.html
+> >
+> >This is not specific to some weird hardware.
+
+Not "weird", but it is specific to certain hardware configurations.
+
+> >It is not specific to virtualbox.
+
+This is the first I am hearing of this problem on non-VirtualBox
+hypervisors.
+
+Glen
+
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: not available
+Type: application/pgp-signature
+Size: 834 bytes
+Desc: not available
+URL: <http://lists.freebsd.org/pipermail/freebsd-doc/attachments/20140402/bbcaa054/attachment.sig>
+
+
+
+
+
+
+### PK 1130005 ###
+===== 序 23329 | PK 1130005 =====
+DATE: 2014-04-03
+FROM: tg at gmplib.org (Torbjorn Granlund) <None>
+SUBJ: Downplaying a serious issue
+
+Glen Barber <gjb at FreeBSD.org> writes:
+
+  It is not a doc problem.
+  
+  The issue is specific to certain hardware configurations, and unless
+  anyone has made any breakthroughs that I am unaware of, the cause is
+  still unknown.
+  
+It happens on:
+
+AMD piledriver running Linux+KVM
+AMD piledriver running Linux+Xen
+Intel Nehalem running NetBSD+Xen
+Intel Sandybridge running NetBSD+Xen
+Intel Haswell running NetBSD+Xen
+AMD K10 Barcelona running NetBSD+Xen
+AMD Bulldozer running NetBSD+Xen
+
+I've seen the laughable claim that this is a "bug in Virtualbox", and now
+the major downplay at http://www.freebsd.org/releases/10.0R/errata.html,
+where this is a minor hardware specific problem.
+
+I have not found one piece of PC hardware where it does not happen under
+virtualisation.  Please let me know some configuration where FreeBSD/i386
+works under a type 1 virtualiser?  Perhaps Bhyve is FreeBSD-compatible?
+
+  Not "weird", but it is specific to certain hardware configurations.
+  
+  > >It is not specific to virtualbox.
+  
+  This is the first I am hearing of this problem on non-VirtualBox
+  hypervisors.
+  
+I've mentioned it on FreeBSD lists before.  But after having lost many
+hours on reporting the ssh panic for FreeBSD/amd64 and FreeBSD/i386
+(amd64/183397), I d
+...[正文已截断，共 1539 字符]
+
+
+
+### PK 1130006 ###
+===== 序 23330 | PK 1130006 =====
+DATE: 2014-04-03
+FROM: tg at gmplib.org (Torbjorn Granlund) <None>
+SUBJ: Downplaying a serious issue
+
+Warren Block <wblock at wonkity.com> writes:
+  
+  Do we?  What should it say?  Please be specific, preferably in the
+  form of a PR.  Is this really a doc problem?
+  
+Full disclosure.  Don't downplay.  Both the scope and the gravity of the
+issue is grossly downplayed here
+
+The truth is that FreeBSD/i386 10 is completely unusable under all three
+major type 1 virtualisers.  It should not be used, or one will cause
+data loss.
+
+It might be embarrasing to fess up about bugs, but downplaying serious
+issues make people lose confidence.  Which is worst?
+
+
+Torbj?rn
+Please encrypt, key id 0xC8601622
+
+
+
+
+
+
+### PK 1130007 ###
+===== 序 23331 | PK 1130007 =====
+DATE: 2014-04-03
+FROM: gjb at FreeBSD.org (Glen Barber) <None>
+SUBJ: Downplaying a serious issue
+
+On Thu, Apr 03, 2014 at 09:47:02AM +0200, Torbjorn Granlund wrote:
+> Glen Barber <gjb at FreeBSD.org> writes:
+> 
+>   It is not a doc problem.
+>   
+>   The issue is specific to certain hardware configurations, and unless
+>   anyone has made any breakthroughs that I am unaware of, the cause is
+>   still unknown.
+>   
+> It happens on:
+> 
+> AMD piledriver running Linux+KVM
+> AMD piledriver running Linux+Xen
+> Intel Nehalem running NetBSD+Xen
+> Intel Sandybridge running NetBSD+Xen
+> Intel Haswell running NetBSD+Xen
+> AMD K10 Barcelona running NetBSD+Xen
+> AMD Bulldozer running NetBSD+Xen
+> 
+
+We need more specifics.
+
+> I've seen the laughable claim that this is a "bug in Virtualbox", and now
+> the major downplay at http://www.freebsd.org/releases/10.0R/errata.html,
+> where this is a minor hardware specific problem.
+> 
+> I have not found one piece of PC hardware where it does not happen under
+> virtualisation.  Please let me know some configuration where FreeBSD/i386
+> works under a type 1 virtualiser?  Perhaps Bhyve is FreeBSD-compatible?
+> 
+
+Does not happen on my VirtualBox host.
+
+Glen
+
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: not available
+Type: application/pgp-signature
+Size: 834 bytes
+Desc: not available
+URL: <http://lists.freebsd.org/pipermail/freebsd-doc/attachments/20140403/dbb9f521/attachment.sig>
+
+
+
+
+
+
+### PK 1130009 ###
+===== 序 23333 | PK 1130009 =====
+DATE: 2014-04-03
+FROM: gjb at FreeBSD.org (Glen Barber) <None>
+SUBJ: Downplaying a serious issue
+
+On Thu, Apr 03, 2014 at 02:08:15PM +0100, Frank Leonhardt wrote:
+> On 03/04/2014 12:36, Glen Barber wrote:
+> >On Thu, Apr 03, 2014 at 09:47:02AM +0200, Torbjorn Granlund wrote:
+> >>Glen Barber <gjb at FreeBSD.org> writes:
+> >>
+> >>   It is not a doc problem.
+> >>   The issue is specific to certain hardware configurations, and unless
+> >>   anyone has made any breakthroughs that I am unaware of, the cause is
+> >>   still unknown.
+> >>It happens on:
+> >>
+> >>AMD piledriver running Linux+KVM
+> >>AMD piledriver running Linux+Xen
+> >>Intel Nehalem running NetBSD+Xen
+> >>Intel Sandybridge running NetBSD+Xen
+> >>Intel Haswell running NetBSD+Xen
+> >>AMD K10 Barcelona running NetBSD+Xen
+> >>AMD Bulldozer running NetBSD+Xen
+> >>
+> >We need more specifics.
+> >
+> >>I've seen the laughable claim that this is a "bug in Virtualbox", and now
+> >>the major downplay at http://www.freebsd.org/releases/10.0R/errata.html,
+> >>where this is a minor hardware specific problem.
+> >>
+> >>I have not found one piece of PC hardware where it does not happen under
+> >>virtualisation.  Please let me know some configuration where FreeBSD/i386
+> >>works under a type 1 virtualiser?  Perhaps Bhyve is FreeBSD-compatible?
+> >>
+> >Does not happen on my VirtualBox host.
+> >
+> >Glen
+> >
+> I've been following this discussion with some alarm, but have now looked at
+> the Errata:
+> 
+> ------------------------------------------
+> 
+> "FreeBSD/i386 10.0-RELEASE running as a guest operating system
+> onVirtualBoxcan have a problem with disk I/O access. It depends on some
+> specific hardware configuration and does not depend on a specific version
+> ofVirtualBoxor host operating system.
+> 
+> It causes various errors and makes FreeBSD quite unstable. Although the
+> cause is still unclear, disabling unmapped I/O works as a workaround."
+> etcetera
+> 
+> -------------------------------------
+> 
+> I don't read this as "down-playing" - it's up front about saying that
+> there's a problem with every version of VirtualBox. It would, of course, be
+> useful to add that it doesn't work with other named emulators too (for a
+> virtual machine IS emulating the I/O hardware).
+> 
+> My concern was that this bug may be present on the real hardware too. I
+> suspect more people would be running an i386 version as a VM than on real
+> metal these days.
+> 
+> Does the problem exist on previous releases?
+> 
+
+No.
+
+> It seems to me that, after research, the list of confirmed incompatible
+> configurations need to be expanded, especially to encompass other
+> known-to-fail emulations. A list of "confirmed" problem environments would
+> make readers wary about untested emulators too.
+> 
+> Incidentally, I don't see this as a bug in FreeBSD. A hypervisor is supposed
+> to transparent to the OS, emulating the hardware that the OS thinks it has,
+> to perfection. This is a broken VM, as clearly it's not behaving as the real
+> hardware would. Or is it?
+> 
+
+The cause is unclear.
+
+Glen
+
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: not available
+Type: application/pgp-signature
+Size: 834 bytes
+Desc: not available
+URL: <http://lists.freebsd.org/pipermail/freebsd-doc/attachments/20140403/8a4b7d34/attachment.sig>
+
+
+
+
+
+
+### PK 1130010 ###
+===== 序 23334 | PK 1130010 =====
+DATE: 2014-04-03
+FROM: wblock at wonkity.com (Warren Block) <None>
+SUBJ: Downplaying a serious issue
+
+On Thu, 3 Apr 2014, Torbjorn Granlund wrote:
+
+> Warren Block <wblock at wonkity.com> writes:
+>
+>  Do we?  What should it say?  Please be specific, preferably in the
+>  form of a PR.  Is this really a doc problem?
+>
+> Full disclosure.  Don't downplay.  Both the scope and the gravity of the
+> issue is grossly downplayed here
+
+I asked for specifics.  "Grossly" is subjective.  What information 
+should be given?  What specific configuration and situation fails, 
+and in what way?
+
+> The truth is that FreeBSD/i386 10 is completely unusable under all three
+> major type 1 virtualisers.  It should not be used, or one will cause
+> data loss.
+
+Please post evidence of that.
+
+> It might be embarrasing to fess up about bugs, but downplaying serious
+> issues make people lose confidence.  Which is worst?
+
+I pointed out before that accusing us of things will not produce good 
+results.  If you want to discuss concerns politely, without assuming the 
+worst of us, I'm interested in that.  Otherwise, I'm going to use my 
+time elsewhere.
+
+
+
+
+
+
+### PK 1130015 ###
+===== 序 23339 | PK 1130015 =====
+DATE: 2014-04-03
+FROM: freebsd at allanjude.com (Allan Jude) <None>
+SUBJ: Downplaying a serious issue
+
+On 2014-04-03 10:25, Torbjorn Granlund wrote:
+> Glen Barber <gjb at FreeBSD.org> writes:
+> 
+>   On Thu, Apr 03, 2014 at 07:36:05AM -0400, Glen Barber wrote:
+>   > On Thu, Apr 03, 2014 at 09:47:02AM +0200, Torbjorn Granlund wrote:
+>   > > Glen Barber <gjb at FreeBSD.org> writes:
+>   > >   The issue is specific to certain hardware configurations, and unless
+>   > >   anyone has made any breakthroughs that I am unaware of, the cause is
+>   > >   still unknown.
+>   > >   
+>   > > It happens on:
+>   > > 
+>   > > AMD piledriver running Linux+KVM
+>   > > AMD piledriver running Linux+Xen
+>   > > Intel Nehalem running NetBSD+Xen
+>   > > Intel Sandybridge running NetBSD+Xen
+>   > > Intel Haswell running NetBSD+Xen
+>   > > AMD K10 Barcelona running NetBSD+Xen
+>   > > AMD Bulldozer running NetBSD+Xen
+>   > > 
+>   > 
+>   > We need more specifics.
+>   > 
+>   
+>   Here is the type of information we need:
+>    CPU information
+>    RAM
+>    ACPI information
+>    Drive controller information
+>   
+> The CPU list is above.
+> 
+> I have used RAM from 192 MiB to 512 MiB.  Your machine where you have
+> not observed problems clearly has an amount of memory in a quite
+> different range.  Perhaps this bug is related to the amount of RAM?
+> 
+> For all Xen runs, I have had 'apic = 1' in the guest config files.  I
+> don't know about KVM, I used the default.  (I cannot easily retest this,
+> since the machine in question now runs Linux+Xen instead of Linux+KVM.
+> I have no other KVM machine.)
+> 
+> Not sure about emulated drive controller, and how to control that.  I've
+> used file:/xen/freebsd/32/v100/disk.img,hda,w' mostly, but also tried
+> xvda instead of hda.
+> 
+> I have been persistent, trying at least 30 installs of 10.0-foo for
+> several values of foo (BETA, RC, RELEASE, STABLE) and on the various
+> systems above.
+> 
+> It seems quite likely that this is very easy to confirm, given that
+> every one of my attempts has been a failure.
+> 
+> Note that the actual installation procedure apparently works.  After
+> reboot some simple repeated filesystem command, say
+> 
+>   sha1 /bin/cat
+>   sha1 /bin/cat
+> 
+> will almost certainly yield different results.
+> 
+> I've tested vfs.unmapped_buf_allowed=0 only for one machine (since I saw
+> that only recently) and it works in that case.  It is the AMD piledriver
+> running Linux+Xen, 512 MiB RAM.
+> 
+> 
+> Torbj?rn
+> Please encrypt, key id 0xC8601622
+> _______________________________________________
+> freebsd-doc at freebsd.org mailing list
+> http://lists.freebsd.org/mailman/listinfo/freebsd-doc
+> To unsubscribe, send any mail to "freebsd-doc-unsubscribe at freebsd.org"
+> 
+
+Glen is looking for very specific details about the CPU, RAM and disk
+controller of the host, not the VM
+
+
+-- 
+Allan Jude
+
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: signature.asc
+Type: application/pgp-signature
+Size: 899 bytes
+Desc: OpenPGP digital signature
+URL: <http://lists.freebsd.org/pipermail/freebsd-doc/attachments/20140403/d7ddda01/attachment.sig>
+
+
+
+
+
+
+### PK 1130018 ###
+===== 序 23342 | PK 1130018 =====
+DATE: 2014-04-03
+FROM: Eric.Roseman at Colorado.EDU (Eric Roseman) <None>
+SUBJ: newcons wiki page
+
+The newcons wiki page (https://wiki.freebsd.org/Newcons) Testing
+section says:
+
+To enable Newcons on i386 or amd64, remove the vga and sc drivers, and add vt and vt_vga.
+#device        vga             # VGA video card driver                 
+#device        sc                                                      
+device         vt                                                              
+device         vt_vga
+
+This does not explain which file to edit. I'm guessing this is a well
+known or common file, but I'm not sure where these modifications should
+be made.
+
+Thanks,
+Eric
+
+
+
+
+

@@ -1,0 +1,1227 @@
+### PK 1129849 ###
+===== 序 23173 | PK 1129849 =====
+DATE: 2013-10-25
+FROM: sjg at juniper.net (Simon J. Gerraty) <None>
+SUBJ: FreeBSD Make question
+
+>Johan:
+>Can you give an example of such a (glob chars) substitution?
+>May it be similar to, or better than, my ugly hack (see below)?
+
+Doesn't really help.
+Eg.
+
+--------------------8<--------------------
+TLIST = "/tmp/dir with space/one" "/tmp/another spacey thing/two"
+
+tlist=
+.for t in ${TLIST}
+tlist+= ${t:tW:S, ,?,g:S,",,g}
+# the above :tW causes the value to be treated as one-word
+.endfor
+
+all:
+	@echo TLIST='${TLIST}'
+	@echo tlist='${tlist}'
+--------------------8<--------------------
+$ make
+TLIST="/tmp/dir with space/one" "/tmp/another spacey thing/two"
+tlist= /tmp/dir?with?space/one /tmp/another?spacey?thing/two
+$
+
+but when we try to use ${tlist} as targets:
+
+--------------------8<--------------------
+TLIST = "/tmp/dir with space/one" "/tmp/another spacey thing/two"
+
+tlist=
+.for t in ${TLIST}
+tlist+= ${t:tW:S, ,?,g:S,",,g}
+.endfor
+
+all: ${tlist}
+	@echo TLIST='${TLIST}'
+	@echo tlist='${tlist}'
+
+${tlist}: .PHONY
+	@echo "making: '$@'"
+--------------------8<--------------------
+$ make
+TLIST="/tmp/dir with space/one" "/tmp/another spacey thing/two"
+tlist= /tmp/dir?with?space/one /tmp/another?spacey?thing/two
+$
+
+note we don't get 'making...'
+If we replace ? with . it works but that isn't very useful:
+
+all: ${tlist:S,?,.,g}
+        @echo TLIST='${TLIST
+...[正文已截断，共 1703 字符]
+
+
+
+### PK 1129851 ###
+===== 序 23175 | PK 1129851 =====
+DATE: 2013-10-26
+FROM: pluknet at gmail.com (Sergey Kandaurov) <None>
+SUBJ: docs/183333: Misnamed constant in bpf(4)
+
+The following reply was made to PR docs/183333; it has been noted by GNATS.
+
+From: Sergey Kandaurov <pluknet at gmail.com>
+To: Mats Erik Andersson <bsd at gisladisker.se>
+Cc: bug-followup at FreeBSD.org
+Subject: Re: docs/183333: Misnamed constant in bpf(4)
+Date: Sat, 26 Oct 2013 20:49:50 +0400
+
+ The bpf(4) documentation states that the example is taken from the Reverse
+ ARP Daemon.  rarpd is tightly coupled with BPF.  This macro is actually
+ used there mapped to ARPOP_REVREQUEST.  From rarpd code snippet's p.o.v.
+ this EXAMPLES is correct, but is not compilable as is without adding this
+ mapping there.
+ 
+ The REVARP_REQUEST localism is probably came from SunOS? (and RFC1931).
+ This macro does not exist in net/if_arp.h (in any BSD except Solaris) and
+ is/was probably used for source compatibility with SunOS.
+ The ARPOP_REVREQUEST macro sits there since 1992 (4.4BSD).  SunOS took
+ if_arp.h from UCB on 1/24/86 and added REVARP_REQUEST on its own.  It seems
+ to not have ARPOP_REVREQUEST.
+ 
+ wpaul modified rarpd.c in r19859 to use REVARP_REQUEST (it was
+ ARPOP_REVREQUEST there originally r6823).  The bpf(4) man page came in with
+ r5882 from 1.1.5, and it was REVARP_REQUEST there.  It was REVARP_REQUEST
+ in rarpd as found in 4.3BSD-UWi
+...[正文已截断，共 1493 字符]
+
+
+
+### PK 1129858 ###
+===== 序 23182 | PK 1129858 =====
+DATE: 2013-10-27
+FROM: ds at ukrhub.net (Taras Korenko) <None>
+SUBJ: [patch] Re: docs/177056: typo in link in handbook section 31.4.16
+
+The following reply was made to PR docs/177056; it has been noted by GNATS.
+
+From: Taras Korenko <ds at ukrhub.net>
+To: bug-followup at FreeBSD.org
+Cc:  
+Subject: [patch] Re: docs/177056: typo in link in handbook section 31.4.16
+Date: Mon, 28 Oct 2013 00:22:49 +0200
+
+ --gBBFr7Ir9EOA20Yy
+ Content-Type: text/plain; charset=koi8-u
+ Content-Disposition: inline
+ 
+   There're extraneous characters in freebsd-xhtml-common.xsl XSL template.
+ 
+ -- 
+   WBR, Taras Korenko
+ 
+ --gBBFr7Ir9EOA20Yy
+ Content-Type: text/x-diff; charset=koi8-u
+ Content-Disposition: attachment; filename="f-x-c.xsl.diff"
+ 
+ --- share/xsl/freebsd-xhtml-common.xsl.orig	2013-10-27 23:56:39.000000000 +0200
+ +++ share/xsl/freebsd-xhtml-common.xsl	2013-10-27 23:57:01.000000000 +0200
+ @@ -195,7 +195,7 @@
+    <xsl:template name="generate.citerefentry.link">
+      <xsl:text>http://www.FreeBSD.org/cgi/man.cgi?query=</xsl:text>
+      <xsl:value-of select="refentrytitle"/>
+ -    <xsl:text>&#38;amp;sektion=</xsl:text>
+ +    <xsl:text>&amp;sektion=</xsl:text>
+      <xsl:value-of select="manvolnum"/>
+    </xsl:template>
+  
+ 
+ --gBBFr7Ir9EOA20Yy--
+
+
+
+
+
+
+### PK 1129861 ###
+===== 序 23185 | PK 1129861 =====
+DATE: 2013-10-28
+FROM: madpilot at FreeBSD.org (Guido Falsi) <None>
+SUBJ: docs/182872: [patch] add updated iconv information to the porter's
+ handbook.
+
+Hi,
+
+I filed the PR in subject to add a chapter regarding the iconv changes 
+in 10 regarding to the ports tree.
+
+I'd really like to have these included in the documentation before 10.0 
+is released.
+
+Is there someone who can review and approve this patch?
+
+I'm, obviously, available for any discussion and to make any needed 
+changes to the patch to make ti acceptable to the documentation project.
+
+Thanks in advance!
+
+-- 
+Guido Falsi <madpilot at FreeBSD.org>
+
+
+
+
+
+
+### PK 1129863 ###
+===== 序 23187 | PK 1129863 =====
+DATE: 2013-10-28
+FROM: kuuse at redantigua.com (Johan Kuuse) <None>
+SUBJ: FreeBSD Make question
+
+> --------------------8<--------------------
+> TLIST = "/tmp/dir with space/one" "/tmp/another spacey thing/two"
+>
+> tlist=
+> .for t in ${TLIST}
+> tlist+= ${t:tW:S, ,?,g:S,",,g}
+> # the above :tW causes the value to be treated as one-word
+
+The ':tW' variable modifier seems to be pmake/fmake syntax.
+At least it doesn't work using my Make (9201120530, FreeBSD 9.1 RELEASE)
+Is there any similar, non-documented, "treat-as-one-word"-modifier
+avilable for FreeBSD Make?
+
+...
+
+> note we don't get 'making...'
+> If we replace ? with . it works but that isn't very useful:
+>
+> all: ${tlist:S,?,.,g}
+>         @echo TLIST='${TLIST}'
+>         @echo tlist='${tlist}'
+>
+> ${tlist:S,?,.,g}: .PHONY
+>         @echo "making: '$@'"
+>
+> $ make
+> making: '/tmp/dir.with.space/one'
+> making: '/tmp/another.spacey.thing/two'
+> TLIST="/tmp/dir with space/one" "/tmp/another spacey thing/two"
+> tlist= /tmp/dir?with?space/one /tmp/another?spacey?thing/two
+> $
+>
+
+Yes, finally we end up with a .PHONY target, which isn't useful in a
+real-case Makefile.
+Any targets containing whitespaces will always be rebuilt even if
+they're up to date.
+
+I guess my final solution will be :
+"Warning:
+You are using FreeBSD Make, and one or more of your directories/files
+contains whitespaces.
+Either renam
+...[正文已截断，共 1494 字符]
+
+
+
+### PK 1129864 ###
+===== 序 23188 | PK 1129864 =====
+DATE: 2013-10-28
+FROM: sjg at juniper.net (Simon J. Gerraty) <None>
+SUBJ: FreeBSD Make question
+
+
+On Mon, 28 Oct 2013 18:06:31 +0100, Johan Kuuse writes:
+>> --------------------8<--------------------
+>> TLIST = "/tmp/dir with space/one" "/tmp/another spacey thing/two"
+>>
+>> tlist=
+>> .for t in ${TLIST}
+>> tlist+= ${t:tW:S, ,?,g:S,",,g}
+>> # the above :tW causes the value to be treated as one-word
+>
+>The ':tW' variable modifier seems to be pmake/fmake syntax.
+
+it is bmake (NetBSD make) specific - tells make to treat the variable
+value as one word - avoids the need to do things like:
+
+frobbed != echo ${var} | sed 's, ,+,g'
+
+:tw undoes the effect 
+
+>Is there any similar, non-documented, "treat-as-one-word"-modifier
+>avilable for FreeBSD Make?
+
+fmake - no.
+
+
+
+
+
+
+
+
+### PK 1129867 ###
+===== 序 23191 | PK 1129867 =====
+DATE: 2013-10-29
+FROM: freebsd at allanjude.com (Allan Jude) <None>
+SUBJ: ZFS docs from vBSDCon
+
+Attached find a patch for the zfsupdate-201307 project branch of stuff I
+wrote during the vBSDCon Doc Sprint
+
+More coming soon
+
+-- 
+Allan Jude
+-------------- next part --------------
+Index: en_US.ISO8859-1/books/handbook/zfs/chapter.xml
+===================================================================
+--- en_US.ISO8859-1/books/handbook/zfs/chapter.xml	(revision 43069)
++++ en_US.ISO8859-1/books/handbook/zfs/chapter.xml	(working copy)
+@@ -12,6 +12,16 @@
+ 	<surname>Rhodes</surname>
+ 	<contrib>Written by </contrib>
+       </author>
++      <author>
++	<firstname>Allan</firstname>
++	<surname>Jude</surname>
++	<contrib>Written by </contrib>
++      </author>
++      <author>
++	<firstname>Benedict</firstname>
++	<surname>Reuschling</surname>
++	<contrib>Written by </contrib>
++      </author>
+     </authorgroup>
+   </chapterinfo>
+ 
+@@ -470,12 +480,52 @@
+     <sect2 id="zfs-zpool-create">
+       <title>Creating &amp; Destroying Storage Pools</title>
+ 
++      <para>Creating a ZFS Storage Pool (<acronym>zpool</acronym>)
++	involves making a number of decisions that are relatively
++	permanent because the structure of the pool cannot be
++	changed after the pool has been created.  The most important
++	decision is what type(s) of vdevs to group the physical disks
++	into.
+...[正文已截断，共 8160 字符]
+
+
+
+### PK 1129870 ###
+===== 序 23194 | PK 1129870 =====
+DATE: 2013-10-29
+FROM: wblock at wonkity.com (Warren Block) <None>
+SUBJ: Developers' Handbook on the web server
+
+http://www.freebsd.org/doc/en_US.ISO8859-1/books/developers-handbook/index.html
+
+The copyrights only go to 2010.
+
+Also:
+
+"Last modified on August 2000 by ."
+
+That seems just a tad off.
+
+
+
+
+
+
+### PK 1129871 ###
+===== 序 23195 | PK 1129871 =====
+DATE: 2013-10-29
+FROM: taras at synfin.me (Taras Korenko) <None>
+SUBJ: Developers' Handbook on the web server
+
+On Tue, Oct 29, 2013 at 02:57:55PM -0600, Warren Block wrote:
+> ...
+> Also:
+> "Last modified on August 2000 by ."
+> ...
+  may be simply fixed with:
+
+Index: en_US.ISO8859-1/books/developers-handbook/book.xml
+===================================================================
+--- en_US.ISO8859-1/books/developers-handbook/book.xml	(revision 43072)
++++ en_US.ISO8859-1/books/developers-handbook/book.xml	(working copy)
+@@ -16,7 +16,7 @@
+ 
+     <corpauthor>The FreeBSD Documentation Project</corpauthor>
+ 
+-    <pubdate>August 2000</pubdate>
++    <pubdate>$FreeBSD$</pubdate>
+ 
+     <copyright>
+       <year>2000</year>
+
+-- 
+  WBR, Taras Korenko
+
+
+
+
+
+
+### PK 1129874 ###
+===== 序 23198 | PK 1129874 =====
+DATE: 2013-10-30
+FROM: pluknet at gmail.com (Sergey Kandaurov) <None>
+SUBJ: FreeBSD FTP doc build failed (fwd)
+
+On 30 October 2013 16:24, Bjoern A. Zeeb <bz at freebsd.org> wrote:
+> Hi,
+>
+> I've seen this for days now; can someone figure out why this is please
+> and fix it or tell me what needs to be done?
+
+Thanks for report, fix committed in r43075.
+This change was initially in my working directory, and I tended to commit it
+together with other changes but missed to do that since it was out of scope
+wrt the porters-handbook directory. That's why I got success with my local
+test build (due to uncommitted part), and I didn't see any build failures
+on freebsd.org (like tinderbox) so far until I got your mail.
+
+-- 
+wbr,
+pluknet
+
+
+
+
+
+
+### PK 1129876 ###
+===== 序 23200 | PK 1129876 =====
+DATE: 2013-10-30
+FROM: pluknet at gmail.com (Sergey Kandaurov) <None>
+SUBJ: Minor typo in handbook 28.7 Domain Name Server
+
+On 30 October 2013 20:31, Gustav Bergquist <gusber at kth.se> wrote:
+> Hi,
+>
+> In section "28.7.6.1. Recursive DNS Server Configuration"
+> there's a minor typo I think.
+>
+> % dig +multi +noall +answer DNSKEY . > root.dnskey
+> % dnssec-dsfromkey -f root-dnskey . > root.ds
+>
+> These lines probably should be:
+> % dig +multi +noall +answer DNSKEY . > root.dnskey
+> % dnssec-dsfromkey -f root.dnskey . > root.ds
+
+Fixed, thanks!
+
+-- 
+wbr,
+pluknet
+
+
+
+
+
+
+### PK 1129877 ###
+===== 序 23201 | PK 1129877 =====
+DATE: 2013-10-30
+FROM: juris.kaminskis at gmail.com (Juris Kaminskis) <None>
+SUBJ: TODO item: Add info on USB printers
+
+Hi,
+
+Some first trial to create better coverage for USB printing support in
+FreeBSD documentation. There are some more chapters to revise but this is
+definetly one:
+
+ 10.3.1.4.1. Checking a Parallel and USB Printer
+
+This section tells you how to check if FreeBSD can communicate with a
+printer connected to a parallel or USB port.
+
+To test a printer on a parallel port use /dev/lptN on a USB port use
+/dev/ulptN::
+
+Become root with su(1).
+
+Send data to the printer.
+
+If the printer can print plain text, then use lptest(1). Type:
+
+# lptest > /dev/lptN
+
+Where N is the number of the parallel port, starting from zero. For USB
+port /dev/ulptN, N number identifies how many USB printers are connected,
+if zero then one printer connected.
+
+If the printer understands PostScript? or other printer language, then send
+a small program to the printer. Type:
+
+# cat > /dev/lptN
+
+Then, line by line, type the program carefully as you cannot edit a line
+once you have pressed RETURN or ENTER. When you have finished entering the
+program, press CONTROL+D, or whatever your end of file key is.
+
+Alternatively, you can put the program in a file and type:
+
+# cat file > /dev/lptN
+
+Where file is the name of the file containing the program you want to send
+to the
+...[正文已截断，共 2486 字符]
+
+
+
+### PK 1129878 ###
+===== 序 23202 | PK 1129878 =====
+DATE: 2013-10-30
+FROM: wblock at wonkity.com (Warren Block) <None>
+SUBJ: TODO item: Add info on USB printers
+
+Forgot to send this to the list also...
+
+On Wed, 30 Oct 2013, Warren Block wrote:
+
+> On Wed, 30 Oct 2013, Juris Kaminskis wrote:
+>> 
+>> Some first trial to create better coverage for USB printing support in
+>> FreeBSD documentation. There are some more chapters to revise but this is
+>> definetly one:
+>> 
+>> 10.3.1.4.1. Checking a Parallel and USB Printer
+>> 
+>> This section tells you how to check if FreeBSD can communicate with a
+>> printer connected to a parallel or USB port.
+>> 
+>> To test a printer on a parallel port use /dev/lptN on a USB port use
+>> /dev/ulptN::
+>> 
+>> Become root with su(1).
+>> 
+>> Send data to the printer.
+>> 
+>> If the printer can print plain text, then use lptest(1). Type:
+>> 
+>> # lptest > /dev/lptN
+>> 
+>> Where N is the number of the parallel port, starting from zero. For USB
+>> port /dev/ulptN, N number identifies how many USB printers are connected,
+>> if zero then one printer connected.
+>> 
+>> If the printer understands PostScript? or other printer language, then send
+>> a small program to the printer. Type:
+>> 
+>> # cat > /dev/lptN
+>> 
+>> Then, line by line, type the program carefully as you cannot edit a line
+>> once you have pressed RETURN or ENTER. When you have finished entering the
+>> program, press CONTROL+D, or whatever your end of file key is.
+>> 
+>> Alternatively, you can put the program in a file and type:
+>> 
+>> # cat file > /dev/lptN
+>> 
+>> Where file is the name of the file containing the program you want to send
+>> to the printer.
+>> 
+>> 10.3.1.4.1.1. Testing printers with special wire protocols
+>> 
+>> Many printers use different wire protocols instead of PostScript?. To test
+>> communication create a file first in a format printer understands. Many
+>> variants exist use Ghostscript and/or foo2zjs to convert PostScript? files.
+>> 
+>> Example:
+>> 
+>> HP Laserjet M1120 uses XQX protocol http://foo2xqx.rkkda.com/
+>> 
+>> Install foo2zjs port (includes foo2xqx)
+>> 
+>> Create a test PostScript? file (any decent program will print a PostScript?
+>> file). Foo2xqx converts pbmraw file into xqx format, thus first
+>> convert PostScript?
+>> file to pbmraw format:
+>> 
+>> gs -sDEVICE=pbmraw -sOutputFile=YourFileName.pbm YourFile
+>> 
+>> And convert outputfile to xqx wire:
+>> 
+>> foo2xqx YourFileName.pbm > YourFileName.xqx
+>> 
+>> Last check if something prints:
+>> 
+>> cat YourFileName.xqx > /dev/ulptN
+>> 
+>> You should see something print. Do not worry if the text does not look
+>> right; we will fix such things later.
+>> 
+>> 
+>> Is there someone who can help me to review this and put into documentation?
+>> After that I will take a look what else requires update to cover USB
+>> printing.
+>
+> Thank you for working on this.  The entire printing chapter really needs a 
+> rewrite, and I've been meaning to write an outline for what a new printing 
+> chapter should cover.  In the meantime, please look at
+> http://www.wonkity.com/~wblock/docs/html/lpdprinting.html and see if it is 
+> adequate in the meantime.
+
+
+
+
+
+
+### PK 1129883 ###
+===== 序 23207 | PK 1129883 =====
+DATE: 2013-09-01
+FROM: culot at FreeBSD.org (Frederic Culot) <None>
+SUBJ: docs/181080: porters-handbook: mention PLIST_DIRSTRY
+
+The following reply was made to PR docs/181080; it has been noted by GNATS.
+
+From: Frederic Culot <culot at FreeBSD.org>
+To: bug-followup at FreeBSD.org
+Cc:  
+Subject: Re: docs/181080: porters-handbook: mention PLIST_DIRSTRY
+Date: Sun, 1 Sep 2013 07:22:08 +0000
+
+ --d6Gm4EdcadzBjdND
+ Content-Type: text/plain; charset=us-ascii
+ Content-Disposition: inline
+ 
+ Following an off-list feedback from Warren (wblock@) I submit this
+ updated patch which adds a note explaining into a bit more detail
+ what PLIST_DIRSTRY is used for.
+ 
+ This note is added right after the first PLIST_DIRS appearence and
+ gives a link to the section where the @dirrm and @dirrmtry macros
+ are explained, so I believe the reader is now able to grasp the
+ meaning of PLIST_DIRSTRY more easily.
+ 
+ However, adding an example of the PLIST_DISTRY usage was not deemed
+ necessary as it is pretty straightforward to extrapolate the already
+ existing PLIST_DIRS example for PLIST_DIRSTRY.
+ 
+ Feel free to ping me in case you have any comments related to this
+ updated patch, and thanks again Warren for your feedback.
+ 
+ Cheers,
+ Frederic
+ 
+ --d6Gm4EdcadzBjdND
+ Content-Type: text/x-diff; charset=us-ascii
+ Content-Disposition: attachment; filename="porters-handbook.diff"
+...[正文已截断，共 4861 字符]
+
+
+
+### PK 1129887 ###
+===== 序 23211 | PK 1129887 =====
+DATE: 2013-09-03
+FROM: jhb at freebsd.org (John Baldwin) <None>
+SUBJ: docs/162354: Improve wording in rc.conf(5) regarding
+ network-interfaces.
+
+On Monday, November 07, 2011 12:09:36 pm moritz at wzff.de wrote:
+> 
+> >Number:         162354
+> >Category:       docs
+> >Synopsis:       Improve wording in rc.conf(5) regarding network-interfaces.
+> >Confidential:   no
+> >Severity:       non-critical
+> >Priority:       low
+> >Responsible:    freebsd-doc
+> >State:          open
+> >Quarter:        
+> >Keywords:       
+> >Date-Required:
+> >Class:          doc-bug
+> >Submitter-Id:   current-users
+> >Arrival-Date:   Mon Nov 07 19:00:22 UTC 2011
+> >Closed-Date:
+> >Last-Modified:
+> >Originator:     Moritz Wilhelmy
+> >Release:        FreeBSD 9.0-RC1 amd64
+> >Organization:
+> >Environment:
+> >Description:
+> 	According to rc.conf(5), ifconfig_<interface>_alias<n> is deprecated,
+> 	because it fails if <n> is not continuously increasing (i.e. if a number 
+is
+> 	missing, the rc-scripts abort the search for bigger values of <n>.)
+> 	It isn't specified what should be used instead; I guessed
+> 	ipv4_addrs_<interface>, but Marco Steinbach brought
+> 	/etc/start_if.<interface> to my attention, which is mentioned in the same
+> 	paragraph. This is confusing. Could someone please clarify which one of
+> 	these is supposed to be used in place of the deprecated
+> 	ifconfig_<interface>_alias<n>, especially since ipv4_addrs_<interface> 
+seems
+> 	not to have an equivalent ipv6_* variable?
+
+I don't think ifconfig_IF_aliasN is depreated, though you can now use
+ifconfig_IF_aliases as an alternate.  Also, both ifconfig_IF_aliases
+and ifconfig_IF_aliasN handle both IPv4 and IPv6.  See this commit for more
+details:
+
+http://svnweb.freebsd.org/base?view=revision&revision=252015
+
+-- 
+John Baldwin
+
+
+
+
+
+
+### PK 1129891 ###
+===== 序 23215 | PK 1129891 =====
+DATE: 2013-09-04
+FROM: moritz at wzff.de (Moritz Wilhelmy) <None>
+SUBJ: docs/162354: Improve wording in rc.conf(5) regarding
+ network-interfaces.
+
+On Wed, Sep 04, 2013 at 13:22:35 +0900, Hiroki Sato wrote:
+> John Baldwin <jhb at freebsd.org> wrote
+>   in <201309031426.34775.jhb at freebsd.org>:
+> jh> I don't think ifconfig_IF_aliasN is depreated, though you can now use
+> jh> ifconfig_IF_aliases as an alternate.  Also, both ifconfig_IF_aliases
+> jh> and ifconfig_IF_aliasN handle both IPv4 and IPv6.  See this commit for more
+> jh> details:
+> jh>
+> jh> http://svnweb.freebsd.org/base?view=revision&revision=252015
+
+Thanks. Having both IPv6 and IPv4 in the same place with the ability to
+just configure an entire subnet sounds like a sane decision.
+
+>  The sentence "Due to this difficult to manage behavior, the
+>  ifconfig_IF_aliasN form is deprecated." was added back in 2005, when
+>  ipv4_addrs_IF was added.  I guess it was considered that
+>  ipv4_addrs_IF was the replacement of ifconfig_IF_aliasN.
+> 
+>  I refactored it in a AF-independent manner and used
+>  ifconfig_IF_aliases as the successor, but I did not change that part
+>  in rc.conf(5) manual page.  I think we can think both
+>  ifconfig_IF_aliasN and ifconfig_IF_aliases are currently supported.
+>  There is no immediate plan to remove ifconfig_IF_aliasN, at least.
+> 
+>  Is it reasonable to remove the sentence?
+
+I think it is. Thank you!
+I see the changes are already in 9.2 so I'm happy for now :)
+
+Moritz
+
+
+
+
+
+
+### PK 1129892 ###
+===== 序 23216 | PK 1129892 =====
+DATE: 2013-09-04
+FROM: olevole at olevole.ru (olevole) <None>
+SUBJ: handbook chapter for jail best practices needs for security remark
+
+Mounting directory via nullfs when RW part mounted above RO from one filesystem 
+is insecure for RO location, 
+because it allows you to edit a file by hardlink on RO place, due to the fact 
+that the files have one inode.
+
+For example (by root user):
+
+% mkdir /usr/chroot
+% bsdinstall jail /usr/chroot
+% mount_nullfs -oro /bin /usr/chroot/bin
+% mkdir /rw
+% mount_nullfs /rw /usr/chroot/root
+
+% chroot /usr/chroot
+% touch /bin/date
+touch: /bin/date: Read-only file system
+ 
+% cd ~
+% ln /bin/date
+% ls -i /bin/date /root/date
+58182 /bin/date         58182 /root/date
+
+(open /root/date in vi editor and change something)
+% vi date
+dd
+:wq!
+
+(logout from chroot)
+% exit
+
+(now /bin/date is corrupted)
+% /bin/date
+/bin/date: Exec format error. Binary file not executable.
+
+Such scheme when the RW data is overlaid above RO data is popular for jail 
+hosting and described in Handbook:
+
+http://www.freebsd.org/doc/en_US.ISO8859-1/books/handbook/jails-application.html
+
+Perhaps it is worth mentioning in the article about 
+the need to separate base to cross-device storage or place it on a read-only 
+system.
+
+
+
+
+
+
+
+### PK 1129894 ###
+===== 序 23218 | PK 1129894 =====
+DATE: 2013-09-04
+FROM: galtsev at kicp.uchicago.edu (Valeri Galtsev) <None>
+SUBJ: handbook chapter for jail best practices needs for security 
+ remark
+
+Nice observation!
+
+Yet: for that to work both rw and ro portions mounted inside the same jail
+have to be on the same filesystem. For hardlinks to work, both parts of
+hardlink ("source" and "destination") should be on the same filesystem.
+Even though I'm not considering myself an expert in security, I will never
+have ro and rw filesystem (mounted inside the same jail) to live
+physically on the same filesystem...
+
+That said, I'm never using ezjail or some other scripts to lay out jails
+for me. So, apart from making a warning in handbook (which is always
+instructive and educational!), one may need to audit jail creating
+scripts. I'm certain, they are good about that (and my great respects to
+authors!), but taking an extra look at specific thing never hurts.
+
+Thanks.
+Valeri
+
+On Wed, September 4, 2013 4:40 am, olevole wrote:
+> Mounting directory via nullfs when RW part mounted above RO from one
+> filesystem
+> is insecure for RO location,
+> because it allows you to edit a file by hardlink on RO place, due to the
+> fact
+> that the files have one inode.
+>
+> For example (by root user):
+>
+> % mkdir /usr/chroot
+> % bsdinstall jail /usr/chroot
+> % mount_nullfs -oro /bin /usr/chroot/bin
+> % mkdir /rw
+> % moun
+...[正文已截断，共 2669 字符]
+
+
+
+### PK 1129898 ###
+===== 序 23222 | PK 1129898 =====
+DATE: 2013-09-05
+FROM: papowell at astart.com (Patrick Powell) <None>
+SUBJ: docs/181845: Virtualbox Host Setup needs acd0 in /etc/devfs.conf,
+ also enable atapicam
+
+
+>Number:         181845
+>Category:       docs
+>Synopsis:       Virtualbox Host Setup needs acd0 in /etc/devfs.conf, also enable atapicam
+>Confidential:   no
+>Severity:       non-critical
+>Priority:       low
+>Responsible:    freebsd-doc
+>State:          open
+>Quarter:        
+>Keywords:       
+>Date-Required:
+>Class:          doc-bug
+>Submitter-Id:   current-users
+>Arrival-Date:   Thu Sep 05 17:30:00 UTC 2013
+>Closed-Date:
+>Last-Modified:
+>Originator:     Patrick Powell
+>Release:        8.4
+>Organization:
+Astart Technologies
+>Environment:
+FreeBSD laptop_84.private 8.4-RELEASE FreeBSD 8.4-RELEASE #0 r251259: Sun Jun  2 21:26:57 UTC 2013     root at bake.isc.freebsd.org:/usr/obj/usr/src/sys/GENERIC  amd64
+
+>Description:
+The Wiki:
+https://wiki.freebsd.org/VirtualBox
+
+And section 22.3.3 Virtualbox Host DVD/CD Access both indicate that /etc/devfs.conf needs:
+
+perm cd* 0600
+perm xpt0 0660 
+perm pass* 0660
+
+However, if the CD/DVD on the host is detected as acd0 then you need:
+
+link acd0    cd0
+perm acd* 0600
+perm xpt0 0660 
+perm pass* 0660
+
+Also, as noted in another PR,  you need to enable ATAPICAM.  From the Wiki:
+
+Host DVD/CD access
+
+atapicam kernel module needs to be loaded via /boot/lo
+...[正文已截断，共 1504 字符]
+
+
+
+### PK 1129899 ###
+===== 序 23223 | PK 1129899 =====
+DATE: 2013-09-05
+FROM: amvandemore at gmail.com (Adam Vande More) <None>
+SUBJ: docs/181845: Virtualbox Host Setup needs acd0 in /etc/devfs.conf, 
+ also enable atapicam
+
+The following reply was made to PR docs/181845; it has been noted by GNATS.
+
+From: Adam Vande More <amvandemore at gmail.com>
+To: Patrick Powell <papowell at astart.com>
+Cc: freebsd-gnats-submit at freebsd.org
+Subject: Re: docs/181845: Virtualbox Host Setup needs acd0 in /etc/devfs.conf,
+ also enable atapicam
+Date: Thu, 5 Sep 2013 12:55:38 -0500
+
+ --047d7bd751602a13e304e5a6a163
+ Content-Type: text/plain; charset=ISO-8859-1
+ 
+ On Thu, Sep 5, 2013 at 12:23 PM, Patrick Powell <papowell at astart.com> wrote:
+ 
+ >
+ > >Number:         181845
+ > >Category:       docs
+ > >Synopsis:       Virtualbox Host Setup needs acd0 in /etc/devfs.conf, also
+ > enable atapicam
+ > >Confidential:   no
+ > >Severity:       non-critical
+ > >Priority:       low
+ > >Responsible:    freebsd-doc
+ > >State:          open
+ > >Quarter:
+ > >Keywords:
+ > >Date-Required:
+ > >Class:          doc-bug
+ > >Submitter-Id:   current-users
+ > >Arrival-Date:   Thu Sep 05 17:30:00 UTC 2013
+ > >Closed-Date:
+ > >Last-Modified:
+ > >Originator:     Patrick Powell
+ > >Release:        8.4
+ > >Organization:
+ > Astart Technologies
+ > >Environment:
+ > FreeBSD laptop_84.private 8.4-RELEASE FreeBSD 8.4-RELEASE #0 r251259: Sun
+ > Jun  2 
+...[正文已截断，共 4812 字符]
+
+
+
+### PK 1129905 ###
+===== 序 23229 | PK 1129905 =====
+DATE: 2013-09-06
+FROM: nicky.maddison at gmail.com (Nicky MADDISON) <None>
+SUBJ: no download available
+
+Hello,
+
+Just to let you know that I am trig to download Freebsd since yesterday evening and it is not working.
+
+Yesterday, the speed was very slow and today the web site is asking for authentication when clicking on the ISO download.
+
+Than you.
+
+Nicky
+
+Nicky MADDISON
+nicky.maddison at gmail.com
+www.easy-ict.be
+
+
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: smime.p7s
+Type: application/pkcs7-signature
+Size: 3072 bytes
+Desc: not available
+URL: <http://lists.freebsd.org/pipermail/freebsd-doc/attachments/20130906/373d1a53/attachment.bin>
+
+
+
+
+
+
+### PK 1129909 ###
+===== 序 23233 | PK 1129909 =====
+DATE: 2013-09-08
+FROM: mike at skew.org (Mike Brown) <None>
+SUBJ: stale Handbook chapters online need to be removed
+
+Old but still sitting around, showing up in search engine results:
+http://www.freebsd.org/doc/en_US.ISO8859-1/books/handbook/smtp-dialup.html
+http://www.freebsd.org/doc/en_US.ISO8859-1/books/handbook/smtp-auth.html
+
+Current versions:
+http://www.freebsd.org/doc/en_US.ISO8859-1/books/handbook/SMTP-Auth.html
+http://www.freebsd.org/doc/en_US.ISO8859-1/books/handbook/SMTP-dialup.html
+
+I didn't look, but there may be other examples where the capitalization 
+of the file names changed.
+
+The old files should be deleted, and the web server should be configured to 
+permanently redirect the old URLs to the new.
+
+Do I need to file a PR, or is this message sufficient?
+
+Thanks
+
+
+
+
+
+
+### PK 1129914 ###
+===== 序 23238 | PK 1129914 =====
+DATE: 2013-09-09
+FROM: mandree at FreeBSD.org (Matthias Andree) <None>
+SUBJ: What is MAKE_JOBS_UNSAFE?
+
+Am 09.09.2013 22:22, schrieb Thomas Mueller:
+
+> So I want to know what MAKE_JOBS_UNSAFE=yes is supposed to do, and do I set it by
+> 
+> env MAKE_JOBS_UNSAFE=yes portmaster multimedia/vlc 
+> (or whatever other port it applies to)?
+
+Thomas,
+
+It prevents parallel ("make -j 4") build of ports, and your assumption
+about how to set it is correct; alternatively, it can be given on the
+make command line:
+
+portmaster -mMAKE_JOBS_UNSAFE=yes multimedia/vlc.
+
+URL: http://www.freebsd.org/doc/en/books/porters-handbook/building.html
+
+It's described in Section 6.3.1 Building Ports in Parallel of the
+porter's handbook, and apparently a bit out of date, because
+MAKE_JOBS_SAFE=yes is now the default, and this feature must explicitly
+be _disabled_.
+
+Can someone from among the doc committers team please reflect the new
+default in the Porter's Handbook?  (I was looking at r42618.)
+
+HTH
+Matthias
+
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: signature.asc
+Type: application/pgp-signature
+Size: 261 bytes
+Desc: OpenPGP digital signature
+URL: <http://lists.freebsd.org/pipermail/freebsd-doc/attachments/20130909/ae4f623e/attachment.sig>
+
+
+
+
+
+
+### PK 1129917 ###
+===== 序 23241 | PK 1129917 =====
+DATE: 2013-09-11
+FROM: fender0107401 at gmail.com (Li) <None>
+SUBJ: docs/182003: Missing a word.
+
+
+>Number:         182003
+>Category:       docs
+>Synopsis:       Missing a word.
+>Confidential:   no
+>Severity:       non-critical
+>Priority:       low
+>Responsible:    freebsd-doc
+>State:          open
+>Quarter:        
+>Keywords:       
+>Date-Required:
+>Class:          doc-bug
+>Submitter-Id:   current-users
+>Arrival-Date:   Wed Sep 11 00:30:00 UTC 2013
+>Closed-Date:
+>Last-Modified:
+>Originator:     Li
+>Release:        9.1 Release
+>Organization:
+>Environment:
+>Description:
+In our great handbook:
+
+7.5.3. KMyMoney
+
+KMyMoney is a personal finance created by the KDE community.
+
+
+I think we should add "tool" in this sentence, as follows:
+
+KMyMoney is a personal finance tool created by the KDE community.
+
+
+
+
+
+>How-To-Repeat:
+
+>Fix:
+
+
+>Release-Note:
+>Audit-Trail:
+>Unformatted:
+
+
+
+
+
+
+### PK 1129919 ###
+===== 序 23243 | PK 1129919 =====
+DATE: 2013-09-11
+FROM: matthew.penna at gmail.com (Matt Penna) <None>
+SUBJ: docs/182004: Missing a word(a nother solution).
+
+On Sep 10, 2013, at 8:37 PM, Li <fender0107401 at gmail.com> wrote:
+
+>> Number:         182004
+>> Category:       docs
+>> Synopsis:       Missing a word(a nother solution).
+>> Confidential:   no
+>> Severity:       non-critical
+>> Priority:       low
+>> Responsible:    freebsd-doc
+>> State:          open
+>> Quarter:        
+>> Keywords:       
+>> Date-Required:
+>> Class:          doc-bug
+>> Submitter-Id:   current-users
+>> Arrival-Date:   Wed Sep 11 00:40:00 UTC 2013
+>> Closed-Date:
+>> Last-Modified:
+>> Originator:     Li
+>> Release:        9.1 Release
+>> Organization:
+>> Environment:
+>> Description:
+> I am sorry.
+> 
+> I reported this problem a few minutes ago, but I did not give a perfect solution.
+> 
+> In our handbook: 7.5.3. KMyMoney
+> 
+> Here is the original sentence:
+> KMyMoney is a personal finance created by the KDE community.
+> 
+> I think the better one should be:
+> KMyMoney is a personal financial tool created by the KDE community.
+> 
+> ============================================================
+> 
+> In other words, I think we should add ?tool? and also change ?finance? to ?financial?.
+
+
+
+In this case, I think the original suggestion of "personal finance tool" is more correct. "Personal finance" is a widely used term. Compare to "corporate finance" or "public finance."
+
+(I just rejoined the list after an 11-year hiatus. Greetings to all.)
+
+	Matt
+
+
+
+
+
+
+### PK 1129921 ###
+===== 序 23245 | PK 1129921 =====
+DATE: 2013-09-12
+FROM: jhb at freebsd.org (John Baldwin) <None>
+SUBJ: Tweaks to the wait(2) manpage
+
+I have some tweaks to the wait(2) manpage, in particular to the sections on 
+wait6() and idtypes.  I did also change two other places to use uppercase for 
+ID since that seems to be what we do in other pages.  The alternate rendered 
+text is below followed by the diff.  One structural change I chose to make was 
+using a tagged list for the non-standard idtypes.  Our manpages in general 
+prefer tagged lists to bullet lists for enumerations.  I left the list of 
+standard types as-is as it includes a fourth bullet point that would not have 
+an associated tag (though one could perhaps move that into the paragraph 
+introducing the list of standard types if a tagged list was desired).  I kept
+reading this page as I was writing this e-mail and changed more bits to 
+attempt to be more consisent with existing paragraphs, etc.:
+
+     The broadest interface of all functions in this family is wait6() which
+     is otherwise very much like wait4() but with a few very important dis-
+     tinctions.  To wait for exited processes the option flag WEXITED must be
+     explicitly specified.  This allows waiting for processes which have expe-
+     rienced other status changes without having to also handle the exit sta-
+     tus from terminated processes.  Instead of
+...[正文已截断，共 13623 字符]
+
+
+
+### PK 1129922 ###
+===== 序 23246 | PK 1129922 =====
+DATE: 2013-09-13
+FROM: danfe at nsu.ru (Alexey Dokuchaev) <None>
+SUBJ: augment USE_GCC description in the porter's handbook
+
+hi,
+
+cooked something up, so people would get less confused about proper
+USE_GCC usage.  diff attached.
+
+./danfe
+-------------- next part --------------
+Index: book.xml
+===================================================================
+--- book.xml	(revision 42655)
++++ book.xml	(working copy)
+@@ -3822,10 +3822,11 @@
+ 	    <filename>/etc/make.conf</filename>.  For instance,
+ 	    setting</para>
+ 
+-	  <programlisting>USE_GCC=3.4</programlisting>
++	  <programlisting>USE_GCC=X.Y</programlisting>
+ 
+-	  <para>would add a dependency on gcc34 for every port,
+-	    including gcc34 itself!</para>
++	  <para>(where X.Y is version number) would add a dependency on
++	    gccXY for every port, including <literal>lang/gccXY</literal>
++	    itself!</para>
+ 	</note>
+ 
+ 	<table frame="none">
+@@ -3856,17 +3857,23 @@
+ 
+ 	      <row>
+ 		<entry><makevar>USE_GCC</makevar></entry>
+-		<entry>The port requires a specific version of
+-		  <command>gcc</command> to build.  The exact version
+-		  can be specified with value such as
+-		  <literal>3.4</literal>.  The minimal required
+-		  version can be specified as <literal>3.4+</literal>.
+-		  The <command>gcc</command> from the base system is
+-		  used when it satisfies the requested version,
+-		  oth
+...[正文已截断，共 2590 字符]
+
+
+

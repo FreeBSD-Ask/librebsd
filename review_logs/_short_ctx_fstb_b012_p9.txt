@@ -1,0 +1,268 @@
+### PK 2598353 ###
+现叙述(54字): Matt Behrens判断该现象像是内核与world版本不同步，或系统某处损坏，认为版本不同步的可能性更大
+### PK 2598353 ###
+===== 序 23668 | PK 2598353 =====
+DATE: 1999-07-12
+FROM: Matt Behrens <matt@zigg.com> <None>
+SUBJ: Re: netstat: kvm_read: Bad address
+
+Looks like your kernel and world are out of sync, or something's
+broken.  More likely the former.
+
+On Mon, 12 Jul 1999, Greg Quinlan wrote:
+
+: running 3.2-Stable and doing a number of "netstat -r"  I got the following
+: error (continuously - ie endless loop broken with Ctrl-C)
+: 
+: netstat: kvm_read: Bad address
+: netstat: kvm_read: Bad address
+
+Matt Behrens <matt@zigg.com>
+Owner/Administrator, zigg.com
+Chief Engineer, Nameless IRC Network
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-stable" in the body of the message
+
+
+
+
+
+
+
+
+### PK 2598407 ###
+现叙述(52字): Tomasz Luchowski简短回应bad DMI checksum问题，判断这或许是硬件层面的毛病
+### PK 2598407 ###
+===== 序 23722 | PK 2598407 =====
+DATE: 1999-07-14
+FROM: "Tomasz Luchowski" <zuntum@lagoon.freebsd.org.pl> <None>
+SUBJ: Re: HELP !
+
+> I've just seen my router lockup ... And now it gives me /kernel bad DMI
+> checksum. What does that mean ?
+perhaps _hardware_ problem. :-(
+
+--
+zuntum:*:*:Tomasz Luchowski:http://lagoon.freebsd.org.pl/~zuntum
+zuntum@lagoon.freebsd.org.pl:@nemezis:@fenix
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-stable" in the body of the message
+
+
+
+
+
+
+
+
+### PK 2598420 ###
+现叙述(49字): Mike Smith回复称bad DMI checksum无害，它只说明BIOS厂商不会做基本算术
+### PK 2598420 ###
+===== 序 23735 | PK 2598420 =====
+DATE: 1999-07-14
+FROM: Mike Smith <mike@smith.net.au> <None>
+SUBJ: Re: HELP !
+
+> I've just seen my router lockup ... And now it gives me /kernel bad DMI
+> checksum. What does that mean ?
+
+It's harmless; it just tells you that your BIOS vendor doesn't know how 
+to do basic arithmetic.
+
+-- 
+\\  The mind's the standard       \\  Mike Smith
+\\  of the man.                   \\  msmith@freebsd.org
+\\    -- Joseph Merrick           \\  msmith@cdrom.com
+
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-stable" in the body of the message
+
+
+
+
+
+
+
+
+### PK 2598430 ###
+现叙述(57字): Marcel Moolenaar判断linux仿真段错误的根源是RedHat 6.0这个客户端版本，并承诺尽快修复
+### PK 2598430 ###
+===== 序 23745 | PK 2598430 =====
+DATE: 1999-07-15
+FROM: Marcel Moolenaar <marcel@scc.nl> <None>
+SUBJ: Re: linux emulation seg fault
+
+"Mark W. Krentel" wrote:
+> My machine dual boots between freebsd and linux.  Freebsd is a fresh
+> install of 3.2-release from CD's.  Linux is Red Hat 6.0.
+
+I think RH 6.0 is your problem. I hope to fix it soon.
+
+-- 
+Marcel Moolenaar                                  mailto:marcel@scc.nl
+SCC Internetworking & Databases                     http://www.scc.nl/
+Amsterdam, The Netherlands                         tel: +31 20 4200655
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-stable" in the body of the message
+
+
+
+
+
+
+
+
+### PK 2598443 ###
+现叙述(49字): Dem0n报告在3.2-stable上配Linux仿真跑VMware两周未果，请求提供能工作的配置
+### PK 2598443 ###
+===== 序 23758 | PK 2598443 =====
+DATE: 1999-07-15
+FROM: Dem0n <blovett@darkstar.sandi.net> <None>
+SUBJ: VMWare under FreeBSD 3.2-stable using Linux Emulation
+
+I have been trying for the past 2 weeks trying to get vmware working under
+FreeBSD 3.2-stable with linux emulation..  but so far, nothing has
+worked..  If anybody has gotten it working, please reply with how you got
+it working.. thank you
+
+Ben 
+dem0n@darkstar.sandi.net
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-stable" in the body of the message
+
+
+
+
+
+
+
+
+### PK 2598444 ###
+现叙述(56字): Stefan Molnar断言不可能成功，VMware依赖Linux内核模块，这些模块在FreeBSD上不会工作
+### PK 2598444 ###
+===== 序 23759 | PK 2598444 =====
+DATE: 1999-07-15
+FROM: Stefan Molnar <stefan@csudsu.com> <None>
+SUBJ: Re: VMWare under FreeBSD 3.2-stable using Linux Emulation
+
+
+Yout won't.  VMware uses linux kernel modules.  Those will not
+work in FreeBSD.
+
+Stefan
+
+
+On Thu, 15 Jul 1999, Dem0n wrote:
+
+> I have been trying for the past 2 weeks trying to get vmware working under
+> FreeBSD 3.2-stable with linux emulation..  but so far, nothing has
+> worked..  If anybody has gotten it working, please reply with how you got
+> it working.. thank you
+> 
+> Ben 
+> dem0n@darkstar.sandi.net
+> 
+> 
+> 
+> To Unsubscribe: send mail to majordomo@FreeBSD.org
+> with "unsubscribe freebsd-stable" in the body of the message
+> 
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-stable" in the body of the message
+
+
+
+
+
+
+
+
+### PK 2598469 ###
+现叙述(45字): Tom建议不必装快照，可用CVS在任意时点重建源码树并查阅变更历史，而且这样能省下不少带宽
+### PK 2598469 ###
+===== 序 23784 | PK 2598469 =====
+DATE: 1999-07-17
+FROM: Tom <tom@uniserve.com> <None>
+SUBJ: Re: Snapshots
+
+On Sat, 17 Jul 1999, Jasper O'Malley wrote:
+
+> How long are snapshots kept on releng3.freebsd.org? I'd like to track down
+> when proxy ARP broke, but I don't have a machine just yet I can use to
+> install successive -STABLE snapshots until it find which day it died. Just
+> want to make sure they're not going to disappear before I get the hardware
+> :)
+
+  It doesn't matter.  You can use CVS to recreate the tree at any point
+in time.  You can also look at the changes that were made to the source.
+It would also use way less bandwidth.
+
+
+Tom
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-stable" in the body of the message
+
+
+
+
+
+
+
+
+### PK 2598479 ###
+现叙述(45字): Tugrul追问对方确切的cvsup命令，并问防火墙之后是否按FAQ提示使用了-P m参数
+### PK 2598479 ###
+===== 序 23794 | PK 2598479 =====
+DATE: 1999-07-18
+FROM: Tugrul Galatali <tugrul@brainlink.com> <None>
+SUBJ: Re: Problem with cvsup
+
+
+
+On 18 Jul 1999, Dag-Erling Smorgrav wrote:
+
+> obituary <c9710216@atlas.newcastle.edu.au> writes:
+> > If anyone can shed some light on my situation (or has experienced
+> > similar troubles themselves) I'd be most grateful to hear from you.
+> 
+> You forgot to attach the output of 'ipfw -a l'.
+> 
+
+	The exact cvsup command would also be nice I think. Are you using
+"-P m" as the FAQ hints at if you are behind a firewall?
+
+<http://www.polstra.com/projects/freeware/CVSup/faq.html#fwhang>
+
+> DES
+> -- 
+> Dag-Erling Smorgrav - des@flood.ping.uio.no
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-stable" in the body of the message
+
+
+
+
+
+

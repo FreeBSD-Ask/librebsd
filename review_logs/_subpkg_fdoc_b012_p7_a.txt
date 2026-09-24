@@ -1,0 +1,27 @@
+1129849|L3|给出 TLIST 含空格绝对路径的样本，用 .for 循环与 :S, ,?,g 替换空格后再去引号的做法，并说明这并不真正有用
+1129851|L3|bpf(4) 文档称示例取自 Reverse ARP Daemon，rarpd 与 BPF 紧密耦合
+1129858|L3|freebsd-xhtml-common.xsl 的 XSL 模板中存在多余字符
+1129861|L3|请求评审补充 10 里 iconv 针对 ports 树变化的章节 PR 182872，希望在 10.0-RELEASE 前纳入文档
+1129863|L3|:tW 变量修饰符在自己的 Make 9201120530 上不生效，疑属 pmake 或 fmake 语法
+1129864|L3|:tW 修饰符属 bmake 即 NetBSD make 专属语法
+1129867|L3|提交 zfsupdate-201307 项目分支补丁，内容为 vBSDCon 文档冲刺期间撰写的 ZFS 章节更新
+1129870|L3|developers-handbook 网页版权只到 2010 年，且 Last modified on August 2000 by 之后为空
+1129871|L3|提议把 developers-handbook 的 pubdate 由 August 2000 改为 $FreeBSD$
+1129874|L3|修复已在 r43075 提交，该改动原在本地工作目录，因超出 porters-handbook 改动范围而被遗漏
+1129876|L3|报告 handbook 28.7.6.1 的 dig 与 dnssec-dsfromkey 示例存在轻微笔误，并给出他认为应改成的写法
+1129877|L4|提交 10.3.1.4.1 并口与 USB 打印机检查一节修订稿，覆盖 lptest 与向 /dev/lptN 直接输出测试程序
+1129878|L3|认为整个打印章节需要重写，建议先看其 lpdprinting 文档作为过渡
+1129883|L3|提交关于在 porters-handbook 中补充 PLIST_DIRSTRY 说明的更新补丁，称源自 Warren 的列表外反馈
+1129887|L4|ifconfig_IF_aliasN 并未弃用，可用 ifconfig_IF_aliases 作为替代，两者都同时处理 IPv4 与 IPv6
+1129891|L4|rc.conf(5) 的弃用说法是 2005 年加入 ipv4_addrs_IF 时写入，并无移除 aliasN 的近期计划，改动已进入 9.2
+1129892|L4|当 RO 与 RW 来自同一文件系统时，jail 内经 nullfs 只读挂载可借硬链接改写只读位置的文件
+1129894|L4|硬链接要求两端位于同一文件系统，因此 jail 内 RO 与 RW 挂载点须物理位于同一文件系统才会触发该风险
+1129898|L3|VirtualBox 宿主配置需在 /etc/devfs.conf 中加入 acd0 并启用 atapicam
+1129899|L3|回复称 Virtualbox Host Setup 需要 /etc/devfs.conf 中的 acd0 并启用 atapicam，与另两位一起讨论
+1129905|L3|反映 FreeBSD ISO 下载速度骤降，且点击 ISO 下载时站点要求身份认证
+1129909|L3|handbook 的 smtp-dialup.html 与 smtp-auth.html 已过期仍留在站点并被搜索引擎收录
+1129914|L4|MAKE_JOBS_UNSAFE=yes 用于禁止 ports 并行构建，env 方式设置无误，也可在 make 命令行给出
+1129917|L3|手册 7.5.3 中 KMyMoney 被称作 a personal finance created by the KDE community
+1129919|L3|建议改为 personal financial tool，personal finance 是常用术语，可与 corporate finance 对照
+1129921|L4|wait(2) 手册补充 wait6 与 idtypes 章节，ID 改大写
+1129922|L3|为 porter's handbook 的 USE_GCC 说明补充内容，避免 USE_GCC=3.4 这类写法引起混淆

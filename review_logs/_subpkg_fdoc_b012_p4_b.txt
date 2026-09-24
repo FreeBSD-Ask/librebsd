@@ -1,0 +1,28 @@
+1129242|L3|认为 SSD 文章里 kernel 配置建议确实过时，并说架构手册多处严重过时且没有修复时间表
+1129254|L4|手册过时代扫描中质疑 vinum 整章实际已变成 gvinum，应否保留在手册中
+1129256|L3|建议把 vinum 章节改写成独立文章而非直接删除，并加说明何时从手册移除及原因
+1129262|L3|主张把 vinum 章节移到文章而非留在手册首层，并建议增设过时资料归档区
+1129263|L4|说明 base r252230 引入新的 hostap 配置方式 ifconfig_wlanX=HOSTAP，询问文档是否需要跟进
+1129269|L4|提交补丁要求文档化 WITH 与 WITH 加 SVNLITE 变量，PR 的 Release 字段为 10-CURRENT
+1129293|L4|报告 ctm-svs-cur 邮件列表已不再运作，环境 FreeBSD 8.3-STABLE amd64
+1129303|L4|报告 netmap 手册页里的示例有误，Release 字段为 9.1
+1129304|L4|报告 restore(8) 手册页具有误导性且令人困惑，环境 FreeBSD 9.1-RELEASE amd64
+1129307|L4|提出 freebsd-update-server 文章更新补丁，指出原代码所在的 projects CVS 仓库已不可用
+1129314|L4|建议在 porters handbook 增加关于 PORTEPOCH 的提示，环境 FreeBSD 10.0-CURRENT amd64
+1129319|L4|报告新装并启动前用 vipw(8) 检查发现 jail 的 root 密码为空，认为应当被文档化
+1129321|L4|提议把 ZFS 引导 wiki 页合并为 Booting to ZFS 与 Advanced ZFS partitioning 两篇，自述花数日记录多机引导
+1129334|L4|列出未被任何手册页记录的 GEOM 内核选项，其中 GEOM_BDE 见于 gbde(4)、GEOM_ELI 见于 geli(8)
+1129342|L4|报告 recv(2) 手册页存在语法问题，环境 FreeBSD 9.1-STABLE amd64
+1129353|L4|提出对 jail.8 手册页的修改建议，环境 9.1-RELEASE GENERIC
+1129354|L4|提交补丁要求 porters handbook 删除已弃用的 OPTIONS 框架相关说明
+1129363|L4|报告 tzfile 手册页给出的 tzfile.h 路径有误，环境 9.1-RELEASE
+1129365|L4|把 PR 描述改为从 default_colors(3x) 手册页删除对 ded(1) 的引用
+1129374|L4|报告 cas(4) 手册页有拼写错误，环境 FreeBSD orion 9.1-STABLE
+1129377|L3|质疑 gpart(8) 与 geli(8) 手册页把内核选项写进 SYNOPSIS 是否妥当，提议改用 geom(4)
+1129379|L3|认为把 GEOM 选项集中到 geom(4) 会丢掉开机加载模块的明确说明，但总体可行
+1129401|L4|提交补丁为 lsearch(3) 手册页增加示例，环境 9.0-RELEASE
+1129402|L4|报告 handbook 5.6 节 Using the Ports Collection 的示例有误
+1129407|L4|说明 mdoc 里 .Bl -tag 列表混用多个标签时 groff 会在条项之间插入多余空行
+1129413|L4|提交 FAQ 第 1.10 条 When are FreeBSD releases made? 的 ThwackAFAQ 修订补丁
+1129414|L4|提交 FAQ 第 3.6 条 How can I make my own custom release or install disk? 的修订补丁
+1129420|L3|公布 handbook 第 16 章 Jails 的整章重写稿并征集概念与措辞层面的批评

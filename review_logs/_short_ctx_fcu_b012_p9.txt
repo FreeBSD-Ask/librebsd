@@ -1,0 +1,895 @@
+### PK 1047259 ###
+现叙述(58字): Max Khon再次指出cvs与csup并非同一物，并猜想会有多人在就cvs表达意见时其实指的是cvsup或csup
+### PK 1047259 ###
+===== 序 23628 | PK 1047259 =====
+DATE: 2011-12-03
+FROM: fjoe at samodelkin.net (Max Khon) <None>
+SUBJ: CVS removal from the base
+
+Hello!
+
+On Sat, Dec 3, 2011 at 8:03 PM,  <sthaug@nethelp.no> wrote:
+
+> I use CVS (or rather csup) to keep the base system up to date. I would
+> be perfectly okay with using a different utility - however, I would
+> strongly prefer that this utility was included in the base system.
+
+CVS != csup.
+
+I wonder how many people will express their sentiments about CVS when
+they really mean cvsup/csup.
+
+Max
+
+
+
+
+
+
+### PK 1047261 ###
+现叙述(58字): Sean M. Collins表示同意，称开发工作都在SVN进行再导出回cvs，认为把多数开发迁到svn的硬活已完成
+### PK 1047261 ###
+===== 序 23630 | PK 1047261 =====
+DATE: 2011-12-03
+FROM: sean at coreitpro.com (Sean M. Collins) <None>
+SUBJ: CVS removal from the base
+
+On 12/2/11 4:27 AM, Max Khon wrote:
+> In my opinion it is just another piece of bitrot that resides in the
+> base system for no real reasons.
+
+I agree, especially since all the development work is being done on SVN
+and then is exported back to CVS, if I am not mistaken[1]. We've done
+the hard part, moving the majority of development over to SVN.
+
+[1]: http://people.freebsd.org/~peter/svn_notes.txt
+
+-- 
+Sean M. Collins
+
+
+
+
+
+
+### PK 1047268 ###
+现叙述(59字): Michiel Boland就ports是否仍以cvs更新一事向Sean M. Collins求证，落款Michiel
+### PK 1047268 ###
+===== 序 23637 | PK 1047268 =====
+DATE: 2011-12-03
+FROM: michiel at boland.org (Michiel Boland) <None>
+SUBJ: CVS removal from the base
+
+On 12/03/2011 17:29, Sean M. Collins wrote:
+[...]
+> all the development work is being done on SVN
+> and then is exported back to CVS, if I am not mistaken[1].
+[...]
+
+Aren't ports still updated with CVS?
+
+Cheers
+Michiel
+
+
+
+
+
+
+### PK 1047276 ###
+现叙述(59字): Adrian Chadd指出base内的cvs在稳定版中与系统其余部分同等待遇：不盲目升级，关键bug与安全漏洞回移植
+### PK 1047276 ###
+===== 序 23645 | PK 1047276 =====
+DATE: 2011-12-04
+FROM: adrian at freebsd.org (Adrian Chadd) <None>
+SUBJ: CVS removal from the base
+
+The problem I have with all of this is pretty simple.
+
+With the CVS in base, it's treated like the (mostly) rest of the
+system in a stable release - ie, people don't simply keep updating it
+to the latest and greatest without some testing. If there are any
+critical bugs or security flaws, they're backported. The port isn't
+upgraded unless it has to be, and then if it's a major update, there
+are plenty of eyeballs to review it. It's in /src, after all.
+
+But with ports, the ports tree only has the "latest" version or two;
+sometimes a few major versions to choose from (eg apache), but we
+don't maintain the same kind of package versions that Linux operating
+system packages do.
+
+So it's entirely possible the "CVS" port maintainer updates the port
+to the latest and greatest, which works for him - and it breaks
+someone's older CVS repository somehow.
+
+I'd be happier with the idea of things moving into ports if the ports
+tree did have stable snapshots which had incremental patches for
+bug/security fixes, rather than "upgrade to whatever the port
+maintainer chooses."
+
+I'm all for change, but it seems those pushing forward change seem to
+be far exceeding the comfortable level of more conservative people; or
+those with real needs. Those who have relied on Fre
+...[正文已截断，共 1848 字符]
+
+
+
+
+### PK 1047283 ###
+现叙述(50字): Scot Hetzel称据某网页该port multiplier应与sil3124兼容，并附链接佐证
+### PK 1047283 ###
+===== 序 23652 | PK 1047283 =====
+DATE: 2011-12-04
+FROM: swhetzel at gmail.com (Scot Hetzel) <None>
+SUBJ: Sil3124 + Sil4726 PortMultipier and FreeBSD9
+
+On Sat, Dec 3, 2011 at 8:46 PM, Nenhum_de_Nos <matheus@eternamente.info> wrote:
+>
+> On Sun, December 4, 2011 00:32, Adrian Chadd wrote:
+>> Why not just run FreeNAS?
+>
+> thanks for the tip on FreeNAS, as others said too.
+>
+> will it run some other services, as http server for some stuff (wiki for example), edonkey and
+> torrent clients, and some other stuff ? (I will visit the FreeNAS site and try to figure out)
+>
+> although it would solve the problem on configuring the box, I still have the doubts on the port
+> multiplier being usefull on it, as FreeNAS will end on FreeBSD :)
+>
+> this port multiplier will work ok ? On Sil3124 and which others ?
+>
+According to this web site, it should work with the Sil3124:
+
+http://www.addonics.com/products/ad5sapm.php
+
+Scot
+
+
+
+
+
+
+### PK 1047284 ###
+现叙述(43字): sthaug自答称过去多数情况下无需装任何包，如今至少装Perl，多装一个并非不可想象
+### PK 1047284 ###
+===== 序 23653 | PK 1047284 =====
+DATE: 2011-12-04
+FROM: sthaug at nethelp.no (sthaug@nethelp.no) <None>
+SUBJ: CVS removal from the base
+
+> I want to ask some serious questions here, because I genuinely want to
+> understand your thought process.
+> 
+> 1. Do you install *any* ports/packages on a new system before you update
+> the source?
+
+Answering just for myself here...
+
+Going back a bit, in many cases I didn't need to install any packages.
+Nowadays as a minimum I install Perl.
+
+> 2. If so, why is installing one more unthinkable?
+
+It's not unthinkable. However, IMHO we're then gradually edging closer
+to various Linux distros that need lots of packages installed to do
+anything useful. And that, of course, brings up the question - why not
+just use Linux in the first place? For me, having FreeBSD as a "self
+contained" system with lots of useful functionality in the base system
+is one of the main reasons why I use FreeBSD.
+
+> 3. Why is it a problem if the port/package you need to install in the
+> early stages has dependencies?
+
+For me the dependency on other ports/packages, in itself, is not really
+a problem. I am much more worried about the fact that a FreeBSD release
+corresponds to one particular point in time, while the ports collection
+moves on - and that we'll end up with a FreeBSD release which is broken
+with the existing ports collection (but works with an earlier version).
+
+
+...[正文已截断，共 1454 字符]
+
+
+
+
+### PK 1047292 ###
+现叙述(45字): Roman Kurakin自承若非软件开发人员且无法自行修bug便不会用cvs，落款rik
+### PK 1047292 ###
+===== 序 23661 | PK 1047292 =====
+DATE: 2011-12-04
+FROM: rik at inse.ru (Roman Kurakin) <None>
+SUBJ: CVS removal from the base
+
+Christian Laursen wrote:
+> On 12/04/11 01:25, Doug Barton wrote:
+>
+> [snip]
+>
+> Replying to a somewhat random mail in this thread.
+>
+> Has anyone considerede that the people actually using CVS for getting 
+> the source might be somewhat overrepresented on freebsd-current?
+Probably you are right. I guess I would never use CVS if I wouldn't be a 
+software developer
+and was not able to fix smth by my self. But as a developer I like to 
+see the tool I got accustomed
+out of the box as it was to for many years. Especially after I've 
+started to help to friends working in
+companies with restricted Internet access or detached systems. I've 
+started to hate most of linux
+distributions since they do not have almost any tool for digging and 
+solving problems. But
+with FreeBSD I even can solve the problem from my seat just giving 
+instructions by phone or
+skype.
+
+rik
+> If I had to guess, the average user is using either freebsd-update or 
+> csup (or even cvsup) to update a freshly installed system. Those that 
+> need the added flexibility provided by using CVS directly should be 
+> fully able to install it using pkg_add.
+>
+> Personally I pkg_add screen on new systems before doing anything else. 
+> I have never considered that a problem.
+>
+> I use CVS myself from ti
+...[正文已截断，共 1530 字符]
+
+
+
+
+### PK 1047295 ###
+现叙述(59字): Vladislav V. Prodan自认误操作：挂载usr/obj时加-o setuid=off导致make权限被拒
+### PK 1047295 ###
+===== 序 23664 | PK 1047295 =====
+DATE: 2011-12-04
+FROM: universite at ukr.net (Vladislav V. Prodan) <None>
+SUBJ: 9.0-RC2  & make
+
+04.12.2011 19:08, Vladislav V. Prodan wrote:
+> # /usr/bin/make
+> /usr/obj/usr/src/make.amd64/make: Permission denied
+> *** Error code 126
+> 
+> Stop in /usr/src.
+> 
+
+Sorry. It's my fault, I put:
+-o setuid=off $poolname/usr/obj
+
+-- 
+Vladislav V. Prodan
+System & Network Administrator
+http://support.od.ua
++380 67 4584408, +380 99 4060508
+VVP88-RIPE
+
+
+
+
+
+
+### PK 1047306 ###
+现叙述(56字): Andriy Gapon称反复听到加trampoline的建议却不懂其在本语境下的技术含义及对锁的帮助，请求解释
+### PK 1047306 ###
+===== 序 23675 | PK 1047306 =====
+DATE: 2011-12-04
+FROM: avg at FreeBSD.org (Andriy Gapon) <None>
+SUBJ: Stop scheduler on panic
+
+on 21/11/2011 18:58 Attilio Rao said the following:
+> I would be very in favor about having a 'thread trampoline for KDB',
+> thus that it can use locks.
+
+I keep hearing the suggestion to add this trampoline, but I admit that I do not
+understand its technical meaning in this context.  And also how it helps with
+the locking.  So I will appreciate an explanation!  Thanks!
+
+-- 
+Andriy Gapon
+
+
+
+
+
+
+### PK 1047307 ###
+现叙述(48字): Kevin Oberman称提议合情合理但魔鬼在细节，关于何者移出base及何者晋升必有漫长争论
+### PK 1047307 ###
+===== 序 23676 | PK 1047307 =====
+DATE: 2011-12-04
+FROM: kob6558 at gmail.com (Kevin Oberman) <None>
+SUBJ: CVS removal from the base
+
+On Sun, Dec 4, 2011 at 1:22 PM, Doug Barton <dougb@freebsd.org> wrote:
+> On 12/4/2011 12:19 PM, Julian Elischer wrote:
+>
+>> I propose we create a companion directory to src in SVN and cal it
+>> "sysports"
+>> it uses the ports infrastructure in organization (though may be more
+>> hierarchical)
+>> but is populated with items that have come out of the 'src' tree.
+>> it is shipped along with src and revisioned WITH src.
+>>
+>> basically a privileged set of "primary" packages.
+>> both ports and src maintainers have access to them and they
+>> are tested as part of the release engineering process.
+>
+> Julian,
+>
+> You've proposed this before, and the more I've thought about it the more
+> I like it. :) ?In fact, the other day a bunch of us in #bsdports were
+> kicking it around and the idea was generally well received. (I think we
+> slightly preferred the category "system," but that's an implementation
+> detail.)
+>
+> My (personal) plan is to start pushing for this after the 9.0-RELEASE,
+> and after the ports repo svn conversion. That's one of the reasons that
+> I want to start socializing the idea now.
+>
+> In regards to having this new category be supported as part of the
+> release process, we've already received tentative support from the
+> release engineering team for the idea of having a small number of
+> critical packages on the install medium and offered to the user as
+> options at install time. So the seeds have been planted for this idea,
+> and I'm hoping to see it grow in the coming months.
+>
+>
+> Doug
+
+This seems too reasonable a suggestion, but, as always, the devil is
+in the details. There will be long. painful discussions (and
+arguments) about what to remove from the base to the new structure and
+what things currently NOT in the base should be promoted.
+
+As to what to name the new area, I vote for burnt orange with blue
+trim. Go Broncos! (American football for those out of the Estados
+Unidos.)
+-- 
+R. Kevin Oberman, Network Engineer
+E-mail: kob6558@gmail.com
+
+
+
+
+
+
+### PK 1047308 ###
+现叙述(43字): Andriy Gapon认为该补丁与panic补丁之间无强依赖，并称对方补丁可直接合入
+### PK 1047308 ###
+===== 序 23677 | PK 1047308 =====
+DATE: 2011-12-04
+FROM: avg at FreeBSD.org (Andriy Gapon) <None>
+SUBJ: Stop scheduler on panic
+
+on 02/12/2011 19:18 Attilio Rao said the following:
+> BTW, I'm waiting for the details to settle (including the patch we
+> have been discussing internally about binding to CPU0 during ACPI
+> shutdown) 
+
+I do not see strong interdependency between that patch and the panic patch.
+BTW, I think that your patch is good to go.
+
+> before to read the whole thread and start a proper review,
+> would it be possible to have an almost-final version of the patch?
+
+It is still the same patch that Kostik posted a few weeks ago.
+I think that it is long overdue to be committed.
+
+-- 
+Andriy Gapon
+
+
+
+
+
+
+### PK 1047316 ###
+现叙述(38字): Randy Bush称bind不在其安装集内，若需本机缓存则用unbound
+### PK 1047316 ###
+===== 序 23685 | PK 1047316 =====
+DATE: 2011-12-05
+FROM: randy at psg.com (Randy Bush) <None>
+SUBJ: CVS removal from the base
+
+>>> BIND OTOH is something different.
+>> what's bind?  :)
+> http://www.isc.org/software/bind
+
+see the smily?
+
+bind is not in my install set.  if i need an on-system cache, i use
+unbound.
+
+randy
+
+
+
+
+
+
+### PK 1047320 ###
+现叙述(47字): Bernhard Froehlich通知补丁已被上游合入，附changeset 39521链接
+### PK 1047320 ###
+===== 序 23689 | PK 1047320 =====
+DATE: 2011-12-05
+FROM: decke at FreeBSD.org (Bernhard Froehlich) <None>
+SUBJ: Freeze with 10.0 and VirtualBox {4.1.4|4.1.6|4.1.51r38464}
+
+On 02.12.2011 12:55, Bernhard Froehlich wrote:
+> On 01.12.2011 09:37, Bernhard Froehlich wrote:
+>> On 01.12.2011 00:07, Jung-uk Kim wrote:
+>>> On Wednesday 30 November 2011 05:32 pm, Andriy Gapon wrote:
+>>>> on 26/11/2011 18:33 Gleb Kurtsou said the following:
+>>>> > Using new vm_page_alloc_contig() may be a better option here.
+>>>> > Can't help with patch, stuck with pre Nov 15 CURRENT myself.
+>>>>
+>>>> on 27/11/2011 19:09 Alan Cox said the following:
+>>>> > vm_page_alloc_contig() should be used instead.
+>>>>
+>>>> My take on the patch:
+>>>> http://people.freebsd.org/~avg/vbox-10.patch
+>>>> This is for head only, no check for FreeBSD version.
+>>>
+>>> Actually, I did the same thing last night:
+>>>
+>>> 
+>>> http://people.freebsd.org/~jkim/patch-src-VBox-Runtime-r0drv-freebsd-memobj-r0drv-freebsd.c
+>>>
+>>> This is a drop-in replacement for the patch.  The only practical
+>>> difference I see from yours is I used VM_ALLOC_INTERRUPT instead of
+>>> VM_ALLOC_NORMAL.  I believe this function may be used in interrupt
+>>> context.  FYI, I tried FreeBSD 9 and Fedora 10 without problem.
+>>
+>> Thanks a lot for both patches! Could you please as usual reply and 
+>> tell
+>> me if it is okay to send this patch upstream under MIT license?
+>>
+>> Once there is some positive feedback I will commit both patches to
+>> the ports tree.
+>
+> Patch has been send upstream:
+>
+> 
+> https://www.virtualbox.org/pipermail/vbox-dev/2011-December/004842.html
+
+Patches have been committed upstream. Thanks a lot guys!
+
+https://www.virtualbox.org/changeset/39521
+
+-- 
+Bernhard Froehlich
+http://www.bluelife.at/
+
+
+
+
+
+
+### PK 1047321 ###
+现叙述(53字): Andriy Gapon补充认为还需在传给vm_phys相关函数的标志中加入VM_ALLOC_NOBUSY
+### PK 1047321 ###
+===== 序 23690 | PK 1047321 =====
+DATE: 2011-12-05
+FROM: avg at FreeBSD.org (Andriy Gapon) <None>
+SUBJ: Freeze with 10.0 and VirtualBox {4.1.4|4.1.6|4.1.51r38464}
+
+on 05/12/2011 14:57 Bernhard Froehlich said the following:
+> On 02.12.2011 12:55, Bernhard Froehlich wrote:
+>> Patch has been send upstream:
+>>
+>>
+>> https://www.virtualbox.org/pipermail/vbox-dev/2011-December/004842.html
+> 
+> Patches have been committed upstream. Thanks a lot guys!
+> 
+> https://www.virtualbox.org/changeset/39521
+> 
+
+BTW, I think that we additionally need VM_ALLOC_NOBUSY in flags that we pass to
+vm_phys_alloc_contig.
+
+-- 
+Andriy Gapon
+
+
+
+
+
+
+### PK 1047331 ###
+现叙述(51字): Claude Buisson建议若该提议由最初提出者以权威形式事先写明，bikeshed讨论可更早平息
+### PK 1047331 ###
+===== 序 23700 | PK 1047331 =====
+DATE: 2011-12-05
+FROM: clbuisson at orange.fr (Claude Buisson) <None>
+SUBJ: CVS removal from the base
+
+On 12/05/2011 16:28, Tom Evans wrote:
+> On Mon, Dec 5, 2011 at 3:12 PM, Lowell Gilbert
+> <freebsd-current-local@be-well.ilk.org>  wrote:
+>> Tom Evans<tevans.uk@googlemail.com>  writes:
+>>
+>>> On Sat, Dec 3, 2011 at 3:24 PM, Max Khon<fjoe@samodelkin.net>  wrote:
+>>>> CVS != csup.
+>>>>
+>>>> I wonder how many people will express their sentiments about CVS when
+>>>> they really mean cvsup/csup.
+>>>
+>>> I wasn't going to jump onto this bikeshed, as CVS will not be going
+>>> anywhere any time soon, I am sure.
+>>>
+>>> I use cvs, rather than csup. I use cvsup to fetch CVS archives to
+>>> /home/ncvs, and check out ports from there, as described in
+>>> development(7).
+>>>
+>>> If ports were no longer delivered via CVS, you may have had a point
+>>> about removing CVS from base - but they are not.
+>>
+>> Max Khon was the one who posted the original message in the thread.
+>> That message explicitly stated that moving ports and doc away from CVS
+>> was a prerequisite for removing CVS from base. As far as I've noticed,
+>> no one has challenged that.
+>>
+>> I'm trying to think of a way to fit the previous paragraph into the
+>> bikeshed metaphor, but I'm coming up with nothing.
+>>
+>
+> The bikeshed is discussing about how cvs will eventually be removed
+> from base when there are known, unsolved, issues that block that
+> happening.
+>
+> Removing CVS will be an emotive issue, there is no need to discuss it
+> until appropriate, as every one (like me) will wade in saying that "x
+> is good and must stay" and "x is bad and must die", and every colour
+> of bike shed in between. Just look at the number of replies to this
+> topic.
+>
+> It would be much better to concentrate on the other issues rather than
+> animated discussion of something that cannot realistically happen for
+> quite some time yet.
+>
+
+This could have been more clear, and the bikeshed could be stopped soooner, if
+it had been written before in an authoritative form, and by those who are at the
+start of this "unrealistic proposal".
+
+
+> Cheers
+>
+> Tom
+
+Claude Buisson
+
+
+
+
+
+
+### PK 1047334 ###
+现叙述(58字): Hans Petter Selasky就MK_CTF相关改动询问current用户是否验证过外部ports代码仍合规
+### PK 1047334 ###
+===== 序 23703 | PK 1047334 =====
+DATE: 2011-12-05
+FROM: hselasky at c2i.net (Hans Petter Selasky) <None>
+SUBJ: problem compiling cuse4bsd-kmod
+
+Hi current users,
+
+Regarding the MK_CTF=XXX changes, did you check that code is still compliant 
+for external ports?
+
+--HPS
+
+On Monday 05 December 2011 14:39:56 Robert Huff wrote:
+> Hello:
+> 	When trying to update I get:
+> 
+> ===>  Building for cuse4bsd-kmod-0.1.21_2
+> make -f
+> /data/port-work/usr/ports/multimedia/cuse4bsd-kmod/work/cuse4bsd-kmod-0.1.
+> 21/Makefile.lib HAVE_DEBUG=YES all Warning: Object directory not changed
+> from original
+> /data/port-work/usr/ports/multimedia/cuse4bsd-kmod/work/cuse4bsd-kmod-0.1.
+> 21 make -f
+> /data/port-work/usr/ports/multimedia/cuse4bsd-kmod/work/cuse4bsd-kmod-0.1.
+> 21/Makefile.kmod all "/sys/conf/kmod.mk", line 204: Malformed conditional
+> (${MK_CTF} != "no") "/sys/conf/kmod.mk", line 206: if-less endif
+> make: fatal errors encountered -- cannot continue
+> *** Error code 1
+
+--HPS
+
+
+
+
+
+
+### PK 1047343 ###
+现叙述(55字): Curtis Ruck称把对齐默认设为4kb在多数虚拟化环境中帮助巨大，因底层共享存储对访客操作系统基本不可见
+### PK 1047343 ###
+===== 序 23712 | PK 1047343 =====
+DATE: 2011-12-05
+FROM: ruckc at yahoo.com (Curtis Ruck) <None>
+SUBJ: bsdinstall guided partitioning should 4k-align swap and ufs
+	partitions
+
+Defaulting alignment to 4kb would also help drastically in most
+virtualization environments due to the underlying (and its essentially
+invisible to the guest os) shared storage that is likely being used.
+
+--
+Curtis Ruck
+Anytime: 347-542-7825
+
+
+On Mon, Dec 5, 2011 at 12:40, Mark Martinec <Mark.Martinec+freebsd@ijs.si>wrote:
+
+> > Seems to me the min(4KB,stripesize) would be a safe bet.
+>
+> s/min/max/
+>
+>  Mark
+> _______________________________________________
+> freebsd-current@freebsd.org mailing list
+> http://lists.freebsd.org/mailman/listinfo/freebsd-current
+> To unsubscribe, send any mail to "freebsd-current-unsubscribe@freebsd.org"
+>
+
+
+
+
+
+
+### PK 1047344 ###
+现叙述(50字): Poul-Henning Kamp称对方那句But读来像嫌太难只想打个补丁，不同意，坚持应把问题做对
+### PK 1047344 ###
+===== 序 23713 | PK 1047344 =====
+DATE: 2011-12-05
+FROM: phk at phk.freebsd.dk (Poul-Henning Kamp) <None>
+SUBJ: bsdinstall guided partitioning should 4k-align swap and ufs
+	partitions
+
+In message <CAJcQMWfgBrmGAAMwFPJVkTawgRXg5JDf1bTpOEkx61X32jftow@mail.gmail.com>
+, Maxim Khitrov writes:
+
+>Interesting... But [...]
+
+A "But" which I read to mean "Nahh, too hard, lets just hack it..."
+
+I don't agree with that, we should do it right.
+
+-- 
+Poul-Henning Kamp       | UNIX since Zilog Zeus 3.20
+phk@FreeBSD.ORG         | TCP/IP since RFC 956
+FreeBSD committer       | BSD since 4.3-tahoe    
+Never attribute to malice what can adequately be explained by incompetence.
+
+
+
+
+
+
+### PK 1047346 ###
+现叙述(58字): Mark Martinec称procstat与wchan输出数日前已贴过，并已按建议转投freebsd-scsi列表
+### PK 1047346 ###
+===== 序 23715 | PK 1047346 =====
+DATE: 2011-12-05
+FROM: Mark.Martinec+freebsd at ijs.si (Mark Martinec) <None>
+SUBJ: iSCSI initiator: iscontrol cannot be stopped or killed
+
+Xin LI wrote:
+> Try procstat -kk <pid> to find the calling stack, as a start?
+> This could be very useful when tracking down problems.
+> Also the 'D' flag from ps(1) output in most times are not quite useful
+> and ps -o wchan would tell you what exactly it was waiting for, just FYI.
+
+Posted both a few days ago, you must have missed it.
+
+Ivan Voras wrote:
+> You should probably ask at the freebsd-scsi@ mailing list. From looking 
+> at the code it looks like "ffp" is used for LUN scan timeout.
+
+Done, posted to freebsd-scsi@ mailing list.
+Thanks for the suggestion.
+
+  Mark
+
+
+
+
+
+
+### PK 1047358 ###
+现叙述(52字): Jack Vogel反问在何种配置硬件下ixgbe跑不满线速，称自家验证中可达线速但结果对硬件与配置敏感
+### PK 1047358 ###
+===== 序 23727 | PK 1047358 =====
+DATE: 2011-12-05
+FROM: jfvogel at gmail.com (Jack Vogel) <None>
+SUBJ: datapoints on 10G throughput with TCP ?
+
+You can't get line rate with ixgbe, in what configuration/hardware?
+We surely do get line rate in validation here, but its sensitive to
+your hardware and config.
+
+Jack
+
+
+On Mon, Dec 5, 2011 at 2:28 PM, Luigi Rizzo <rizzo@iet.unipi.it> wrote:
+
+> On Mon, Dec 05, 2011 at 11:15:09PM +0200, Daniel Kalchev wrote:
+> >
+> > On Dec 5, 2011, at 9:27 PM, Luigi Rizzo wrote:
+> >
+> > > - have two machines connected by a 10G link
+> > > - on one run "nuttcp -S"
+> > > - on the other one run "nuttcp -t -T 5 -w 128 -v the.other.ip"
+> > >
+> >
+> > Any particular tuning of FreeBSD?
+>
+> actually my point is first to see how good or bad are the defaults.
+>
+> I have noticed that setting hw.ixgbe.max_interrupt_rate=0
+> (it is a tunable, you need to do it before loading the module)
+> improves the throughput by a fair amount (but still way below
+> line rate with 1500 byte packets).
+>
+> other things (larger windows) don't seem to help much.
+>
+> cheers
+> luigi
+> _______________________________________________
+> freebsd-current@freebsd.org mailing list
+> http://lists.freebsd.org/mailman/listinfo/freebsd-current
+> To unsubscribe, send any mail to "freebsd-current-unsubscribe@freebsd.org"
+>
+
+
+
+
+
+
+### PK 1047359 ###
+现叙述(49字): Alan Cox认为正确做法是把vm_page_alloc_contig合并前移，并称其并不难合并
+### PK 1047359 ###
+===== 序 23728 | PK 1047359 =====
+DATE: 2011-12-06
+FROM: alc at rice.edu (Alan Cox) <None>
+SUBJ: Freeze with 10.0 and VirtualBox {4.1.4|4.1.6|4.1.51r38464}
+
+On 12/5/2011 4:38 PM, Andriy Gapon wrote:
+> on 06/12/2011 00:22 Alan Cox said the following:
+>> On 12/5/2011 4:02 PM, Andriy Gapon wrote:
+>>> on 05/12/2011 19:58 Alan Cox said the following:
+>>>> On 12/05/2011 07:56, Andriy Gapon wrote:
+>>>>> Pages should be marked busy only for some special occasions, wired pages are
+>>>>> not
+>>>>> normally busy; the correct explanation is quite a bit longer than this, the
+>>>>> comment in the code explains VPO_BUSY as "page is in transit".  Right now this
+>>>>> flag doesn't seem tom affect vboxdrv code but it may lead to surprises when
+>>>>> some
+>>>>> parts of code that are incorrect now are re-implemented properly:
+>>>>> http://article.gmane.org/gmane.os.freebsd.devel.emulation/9297
+>>>> VM_ALLOC_NOOBJ implies that the returned page does not have VPO_BUSY set.  From
+>>>> the comment at the head of both vm_page_alloc() and vm_page_alloc_contig():
+>>>>
+>>>>    *      VM_ALLOC_NOOBJ          page is not associated with an object and
+>>>>    *                              should not have the flag VPO_BUSY set
+>>> Ah, oops, forgot about this.
+>>>
+>>>> With regard to the message that the above link points to, I suspect that the
+>>>> introduction of vm_page_alloc_contig() can be used to address the first problem
+>>>> that you point out.  Specifically, one or more OBJT_PHYS vm objects could be
+>>>> created and passed to vm_map_find() and then vm_page_alloc_contig() could be
+>>>> used to fill these vm objects with memory.
+>>> That's exactly what I was trying to do when I encountered a need for
+>>> VM_ALLOC_NOOBJ - my object was not NULL.
+>>> Alan, BTW, is it safe to map an OBJT_PHYS object into the kernel_map and into a
+>>> user map (or a few of them) at the same time?
+>>>
+>> Yes, it is.
+> Thank you!  And another question - what would you recommend as a substitute for
+> vm_page_alloc_contig in FreeBSD versions that do not have it?  All I can think
+> of is essentially replicating kmem_alloc_contig + contigmapping and allowing a
+> user-specified object to be used in place of kernel_object.
+>
+
+The right thing to do is to MFC vm_page_alloc_contig().  It shouldn't be 
+that hard to merge it.
+
+Alan
+
+
+
+
+
+
+
+
+### PK 1047365 ###
+现叙述(55字): Eitan Adler答称10-current需自行由源码构建，附handbook的makeworld章节链接
+### PK 1047365 ###
+===== 序 23734 | PK 1047365 =====
+DATE: 2011-12-06
+FROM: lists at eitanadler.com (Eitan Adler) <None>
+SUBJ: Looking to start Testing 10-current on Vbox
+
+On Thu, Dec 1, 2011 at 1:01 PM, list, mailing <list@sprymed.com> wrote:
+> I'm looking to start testing 10 on my own.
+>
+> I went to: ftp://ftp.freebsd.org/pub/FreeBSD/snapshots/
+> Last update was 201107
+
+Strange.
+
+>
+> Where do I get the Current snapshot of 10. ?(Or do I upgrade from 9.0-RC2)?
+
+You need up build from source. Information for doing so is available
+here: http://www.freebsd.org/doc/handbook/makeworld.html
+Sorry for my short email - but I should be asleep now ;)
+
+-- 
+Eitan Adler
+
+
+
+
+
+
+### PK 1047368 ###
+现叙述(35字): Andriy Gapon强调希望能在过往版本上运行virtualbox
+### PK 1047368 ###
+===== 序 23737 | PK 1047368 =====
+DATE: 2011-12-06
+FROM: avg at FreeBSD.org (Andriy Gapon) <None>
+SUBJ: Freeze with 10.0 and VirtualBox {4.1.4|4.1.6|4.1.51r38464}
+
+on 06/12/2011 02:08 Alan Cox said the following:
+> The right thing to do is to MFC vm_page_alloc_contig().  It shouldn't be that
+> hard to merge it.
+
+Ah, but we want to be able to run virtualbox on the past releases too.
+
+-- 
+Andriy Gapon
+
+
+
+
+
+
+### PK 1047370 ###
+现叙述(34字): Andriy Gapon反问这是否等于对仍停留8.2的用户直接说放弃
+### PK 1047370 ###
+===== 序 23739 | PK 1047370 =====
+DATE: 2011-12-06
+FROM: avg at FreeBSD.org (Andriy Gapon) <None>
+SUBJ: Freeze with 10.0 and VirtualBox {4.1.4|4.1.6|4.1.51r38464}
+
+on 06/12/2011 11:40 Bernhard Froehlich said the following:
+> On 06.12.2011 10:08, Andriy Gapon wrote:
+>> on 06/12/2011 02:08 Alan Cox said the following:
+>>> The right thing to do is to MFC vm_page_alloc_contig().  It shouldn't be that
+>>> hard to merge it.
+>>
+>> Ah, but we want to be able to run virtualbox on the past releases too.
+> 
+> Which releases are we talking about here? VirtualBox was always deprecating
+> older FreeBSD releases much faster than our Security EOL so if we focus on latest
+> 8.x and >= 9.0 I think it should be okay.
+> 
+> We have already deprecated 7.x because of some other problems with the userland
+> bits so we can forget about 7.x completely. What is left is 8.1 and 8.2 and both
+> are EOL until mid 2012. So if is possible to get it merged in time for 8.3 and
+> 9.1 (if needed) we should be fine.
+
+So we would just say "screw you" to people who stick to e.g. 8.2 at the moment? :)
+
+-- 
+Andriy Gapon
+
+
+
+

@@ -1,0 +1,1002 @@
+### PK 1046133 ###
+现叙述(59字): 承认 Marius 说得对，自己确实想到过恢复 ATA_STATIC_ID 选项，但之前没把这个选项与架构差异联系起来
+### PK 1046133 ###
+===== 序 22509 | PK 1046133 =====
+DATE: 2011-04-25
+FROM: mav at FreeBSD.org (Alexander Motin) <None>
+SUBJ: Old ATA disk names emulation [Was: Switch from legacy ata(4)
+ to CAM-based ATA]
+
+Marius Strobl wrote:
+> On Mon, Apr 25, 2011 at 01:23:37PM +0300, Alexander Motin wrote:
+>> I've implemented following patch to keep basic compatibility for the
+>> migrating users. I don't like such hacky things, but at least I tried to
+>> make it less invasive.
+>>
+>> The idea:
+>>  - New xpt_path_legacy_ata_id() function in CAM tries to predict bus
+>> unit number and then device unit number for specified path, as if it was
+>> with legacy ATA with ATA_STATIC_ID option.
+>>  - on attach, ada driver fetches that number (if not disabled using
+>> tunable kern.cam.ada.legacy_aliases), prints to console something like:
+>> ada0: Previously was known as ad12
+>> , and sets kernel environment variable like:
+>> kern.devalias.ada0="ad12"
+>>  - when geom_dev tastes new geom and creates device node for it, it also
+>> tries to match prefix of the device name with present kern.devalias.*
+>> enviromnent variables, and, if some match found, creates alias with
+>> substituted name (ada0 -> ad12, ada0s1 -> ad12s1, etc.).
+>>
+>> The patch is here: http://people.freebsd.org/~mav/legacy_aliases.patch
+>>
+>> I did few tests and it seems like working -- two sets of device nodes
+>> appeared for each device, I can successfully label and mount any of them.
+>>
+>> What will not work:
+>>  - old device names won't be seen inside GEOM, so users who hardcoded
+>> provider names in gmirror/gstripe/... metadata (not the default
+>> behavior) are still in trouble.
+>>  - patch mimics ATA_STATIC_ID behavior, if user had custom kernel
+>> without it, he should update device names manually.
+>>  - it won't work for users with hot-unplugging ATA controllers (not
+>> devices), but I believe it is really rare case.
+>>  - low-level tools, such as smartmontools, won't be able to work with
+>> alias devices, as background ada driver doesn't implements legacy
+>> ioctls. May be I could partially fix this.
+>>
+>> Except those, I think this patch should work for the most of users.
+>>
+>> Any more objections/ideas? Is this an acceptable solution?
+> 
+> given that only the amd64, i386 and pc98 GENERIC kernel configuration
+> files had ATA_STATIC_ID enabled by default it would be highly desireable
+> that your compatibility shim also only mimics that behavior on these
+> archs or probably better actually check for ATA_STATIC_ID and put that
+> option back into the respective kernel configuration files.
+
+You are right. I have also thought about restoring that option, but
+haven't related it with architectures.
+
+-- 
+Alexander Motin
+
+
+
+
+
+
+### PK 1046151 ###
+现叙述(54字): 作者表示不再继续排查 ti/te 的 termcap 问题，改用 xterm-clear，该配置可以正常使用
+### PK 1046151 ###
+===== 序 22527 | PK 1046151 =====
+DATE: 2011-04-25
+FROM: randy at psg.com (Randy Bush) <None>
+SUBJ: xterm termcape :ti@:te@:
+
+i gave up and am using xterm-clear, which is working for me.
+
+randy
+
+
+
+
+
+
+### PK 1046156 ###
+现叙述(57字): 说明 /usr/obj/lib32 下的根结构与源码根相同，该目录是专门用来构建 amd64 上 32 位兼容库的
+### PK 1046156 ###
+===== 序 22532 | PK 1046156 =====
+DATE: 2011-04-26
+FROM: dim at FreeBSD.org (Dimitry Andric) <None>
+SUBJ: Why is /usr/obj/lib32 where it is?
+
+On 2011-04-25 21:53, Doug Barton wrote:
+> In my /usr/obj (on amd64) I have 2 directories; lib32, and the root of
+> the fs where the sources are. It seems odd to me that lib32 is not under
+> the same root as everything else, so I'm asking why. :)
+
+If you look under /usr/obj/lib32, you will see the same root of the fs
+where the sources are, and approximately the same directory structure.
+
+The lib32 dir is used for building the 32-bit compatibility libraries on
+amd64, and needs to be separate from the 'native' obj directory.
+
+
+
+
+
+
+### PK 1046164 ###
+现叙述(59字): 补充说重 IO 时鼠标光标完全不响应，猜测是调度器问题，建议试试非抢占内核，或者换回旧的 4bsd scheduler
+### PK 1046164 ###
+===== 序 22540 | PK 1046164 =====
+DATE: 2011-04-26
+FROM: arundel at freebsd.org (Alexander Best) <None>
+SUBJ: responsiveness during IO tasks
+
+On Mon Apr 25 11, Steve Wills wrote:
+> -----BEGIN PGP SIGNED MESSAGE-----
+> Hash: SHA1
+> 
+> Hi,
+> 
+> I've noticed lately that when doing heavy IO, my 9-CURRENT system (Fri
+> Apr 15 23:33:46 EDT 2011) is quite unresponsive. I have two ZFS mirrors
+> setup and run KDE4. The system has 12GB of RAM.
+> 
+> When I, for example, copy an ISO image from one mirror to the other, the
+> whole desktop becomes really slow during the copy. It takes a good 15
+> seconds to open a new tab in Konsole, switching windows takes a while,
+> etc. Once the copy is finished, things are fine. It wasn't like this
+> back before I upgraded from 8.2-RC1 to 9-CURRENT. Has anyone else
+> noticed something similar, or is it just me? Is there any other info I
+> can provide or something I should look for?
+
+i've noticed this too. for me the situation is sometimes even worse. during
+heavy i/o the mouse cursor won't even respond.
+
+i think this is a scheduler isse. maybe running a non-preemptive kernel or
+switching to the old 4bsd scheduler fixes it?
+
+cheers.
+alex
+
+> 
+> Thanks,
+> Steve
+> -----BEGIN PGP SIGNATURE-----
+> Version: GnuPG v2.0.17 (FreeBSD)
+> 
+> iQEcBAEBAgAGBQJNtiDLAAoJEPXPYrMgexuh2hgIAK4a33NtKUNP5bDy9nCumjNM
+> Y+0WYxio72kDEUR0KPGJKB8TT3qV4DAknvydEvOTvXNQq2GZUX5WvJKu0cNwbg7g
+> qQt7xawaQq9NkE4dGJLMgDRDrkGVzHEFFHKegmFl8l9WnUxC8ffAjEvtW63Lcefe
+> xLzo9s3SbfmKS5p6dm/EXx49rSrtZv3uENnPBErXDY4Vd6LtNRBV2umk2GzU0Jgr
+> HdOcZVv+MOSEbIMavJidRtYE5Ous0XYRBYFF+ZHhRVkLQ4yIj2OXmQiB0IjYh11O
+> gX0NcHSBA8Pe6WbRRpcUbS0Evr4ur/n1VWgwZB/Bfbrtt0RnFbRDNCnBfOLAhuw=
+> =ZgkD
+> -----END PGP SIGNATURE-----
+
+-- 
+a13x
+
+
+
+
+
+
+### PK 1046177 ###
+现叙述(54字): 确认自己已经做过一次全新完整构建，重新 config KERNEL 之后一切干净通过，感谢 Rick 的修复
+### PK 1046177 ###
+===== 序 22553 | PK 1046177 =====
+DATE: 2011-04-26
+FROM: ohartman at mail.zedat.fu-berlin.de (O. Hartmann) <None>
+SUBJ: Heads up: was Re: error building kernel: nfs_clvfsops.o: In
+ function `nfs_mount':,
+ nfs_clvfsops.c:(.text+0x1638): undefined reference to `nfs_diskless_valid'
+
+On 04/26/11 15:54, Rick Macklem wrote:
+>>> Since today's source (FreeBSD 9.0-CURRENT/amd64 (source is:
+>>> Revision:
+>>> 221060) update I get the follwoing error while building the kernel
+>>> (options NFSD/options NFSCL instead of options NFSSERVER/options
+>>> NFSCLIENT):
+>>>
+>>> cc -c -O2 -frename-registers -pipe -fno-strict-aliasing
+>>> -march=native
+>>> -std=c99 -Wall -Wredundant-decls -Wnested-externs
+>>> -Wstrict-prototypes
+>>> -W issing-prototypes -Wpointer-arith -Winline -Wcast-qual -Wundef
+>>> -Wno-pointer-sign -fformat-extensions -nostdinc -I. -I/usr/src/sys
+>>> -I/usr/src/s s/contrib/altq -D_KERNEL -DHAVE_KERNEL_OPTION_HEADERS
+>>> -include opt_global.h -fno-common -finline-limit=8000 --param
+>>> inline-unit-growth=100 --par m large-function-growth=1000
+>>> -fno-omit-frame-pointer -mcmodel=kernel -mno-red-zone -mfpmath=387
+>>> -mno-mmx -mno-3dnow -mno-sse -mno-sse2 -mno-ss 3 -msoft-float
+>>> -fno-asynchronous-unwind-tables -ffreestanding -fstack-protector
+>>> -Werror
+>>> vers.c
+>>> linking kernel
+>>> nfs_clvfsops.o: In function `nfs_mount':
+>>> nfs_clvfsops.c:(.text+0x1638): undefined reference to
+>>> `nfs_diskless_valid'
+>>> nfs_clvfsops.c:(.text+0x1652): undefined reference to
+>>> `nfsv3_diskless'
+>>> nfs_clvfsops.c:(.text+0x1658): undefined reference to
+>>> `nfsv3_diskless'
+>>> nfs_clvfsops.c:(.text+0x1689): undefined reference to
+>>> `nfsv3_diskless'
+>>> nfs_clvfsops.c:(.text+0x16d1): undefined reference to
+>>> `nfsv3_diskless'
+>>> nfs_clvfsops.c:(.text+0x1712): undefined reference to
+>>> `nfsv3_diskless'
+>>> nfs_clvfsops.o:nfs_clvfsops.c:(.text+0x171b): more undefined
+>>> references
+>>> to `nfsv3_diskless' follow
+>>> nfs_clvfsops.o: In function `nfs_mount':
+>>> nfs_clvfsops.c:(.text+0x1e19): undefined reference to `nfs_diskless'
+>>> nfs_clvfsops.c:(.text+0x1e2a): undefined reference to
+>>> `nfsv3_diskless'
+>>> nfs_clvfsops.c:(.text+0x1e31): undefined reference to `nfs_diskless'
+>>> nfs_clvfsops.c:(.text+0x1e3d): undefined reference to `nfs_diskless'
+>>> nfs_clvfsops.c:(.text+0x1e44): undefined reference to `nfs_diskless'
+>>> nfs_clvfsops.c:(.text+0x1e4a): undefined reference to `nfs_diskless'
+>>> nfs_clvfsops.c:(.text+0x1e50): undefined reference to `nfs_diskless'
+>>> nfs_clvfsops.o:nfs_clvfsops.c:(.text+0x1e57): more undefined
+>>> references
+>>> to `nfs_diskless' follow
+>>> nfs_clvfsops.o: In function `nfs_mount':
+>>> nfs_clvfsops.c:(.text+0x1e65): undefined reference to
+>>> `nfsv3_diskless'
+>>> nfs_clvfsops.c:(.text+0x1e6b): undefined reference to
+>>> `nfsv3_diskless'
+>>> nfs_clvfsops.c:(.text+0x1e73): undefined reference to
+>>> `nfsv3_diskless'
+>>> nfs_clvfsops.c:(.text+0x1e79): undefined reference to
+>>> `nfsv3_diskless'
+>>> nfs_clvfsops.c:(.text+0x1e80): undefined reference to `nfs_diskless'
+>>> nfs_clvfsops.c:(.text+0x1e87): undefined reference to `nfs_diskless'
+>>> nfs_clvfsops.c:(.text+0x1e8e): undefined reference to `nfs_diskless'
+>>> nfs_clvfsops.c:(.text+0x1e94): undefined reference to `nfs_diskless'
+>>> nfs_clvfsops.c:(.text+0x1e9a): undefined reference to `nfs_diskless'
+>>> nfs_clvfsops.o:nfs_clvfsops.c:(.text+0x1ea0): more undefined
+>>> references
+>>> to `nfs_diskless' follow
+>>> nfs_clvfsops.o: In function `nfs_mount':
+>>> nfs_clvfsops.c:(.text+0x1eb3): undefined reference to
+>>> `nfsv3_diskless'
+>>> nfs_clvfsops.c:(.text+0x1ebd): undefined reference to
+>>> `nfsv3_diskless'
+>>> nfs_clvfsops.c:(.text+0x1ec4): undefined reference to
+>>> `nfsv3_diskless'
+>>> nfs_clvfsops.c:(.text+0x1ecb): undefined reference to
+>>> `nfsv3_diskless'
+>>> nfs_clvfsops.c:(.text+0x1ed2): undefined reference to
+>>> `nfsv3_diskless'
+>>> nfs_clvfsops.o:nfs_clvfsops.c:(.text+0x1ed9): more undefined
+>>> references
+>>> to `nfsv3_diskless' follow
+>>> nfs_clvfsops.o: In function `nfs_mount':
+>>> nfs_clvfsops.c:(.text+0x1f18): undefined reference to `nfs_diskless'
+>>> nfs_clvfsops.c:(.text+0x1f1e): undefined reference to
+>>> `nfsv3_diskless'
+>>> nfs_clvfsops.c:(.text+0x1f33): undefined reference to
+>>> `nfsv3_diskless'
+>>> nfs_clvfsops.c:(.text+0x1f3a): undefined reference to `nfs_diskless'
+>>> nfs_clvfsops.c:(.text+0x1f4b): undefined reference to
+>>> `nfsv3_diskless'
+>>> nfs_clvfsops.c:(.text+0x1f52): undefined reference to `nfs_diskless'
+>>> nfs_clvfsops.c:(.text+0x1f5e): undefined reference to `nfs_diskless'
+>>> nfs_clvfsops.c:(.text+0x1f6a): undefined reference to
+>>> `nfsv3_diskless'
+>>> nfs_clvfsops.c:(.text+0x1f71): undefined reference to `nfs_diskless'
+>>> nfs_clvfsops.c:(.text+0x1f78): undefined reference to
+>>> `nfsv3_diskless'
+>>> nfs_clvfsops.c:(.text+0x1f83): undefined reference to
+>>> `nfs_diskless_valid'
+>>> nfs_clvfsops.c:(.text+0x1fcc): undefined reference to
+>>> `nfsv3_diskless'
+>>> nfs_clvfsops.c:(.text+0x1fd3): undefined reference to `nfs_diskless'
+>>> nfs_clvfsops.c:(.text+0x1fd9): undefined reference to
+>>> `nfsv3_diskless'
+>>> nfs_clvfsops.c:(.text+0x20ae): undefined reference to
+>>> `nfsv3_diskless'
+>>> nfs_clvfsops.o:(.data+0x1f8): undefined reference to
+>>> `nfsv3_diskless'
+>>> nfs_clvfsops.o:(.data+0x258): undefined reference to
+>>> `nfsv3_diskless'
+>>> nfs_clvfsops.o:(.data+0x2b8): undefined reference to
+>>> `nfs_diskless_valid'
+>>> *** Error code 1
+>>>
+>> Oops, you'll have to add "options NFS_ROOT" to your kernel config
+>> until
+>> I commit a fix.
+>>
+> This should be fixed by r221066.
+>
+> You will need to do a fresh "config KERNEL" etc after upgrading
+> past r221032. (I should have sent an email w.r.t. this yesterday,
+> sorry.)
+>
+> rick
+
+I did already a full build, thank you very much.
+Everything builds cleanly now.
+
+Oliver
+
+
+
+
+
+
+### PK 1046186 ###
+现叙述(55字): 在两台 ATA 映射不同的机器上试了该补丁，一台识别为 ad0，另一台为 ad6，第一块机器上的补丁单机也能用
+### PK 1046186 ###
+===== 序 22562 | PK 1046186 =====
+DATE: 2011-04-26
+FROM: lacombar at gmail.com (Arnaud Lacombe) <None>
+SUBJ: Old ATA disk names emulation [Was: Switch from legacy ata(4) to
+ CAM-based ATA]
+
+Hi,
+
+2011/4/25 Alexander Motin <mav@freebsd.org>:
+> Kostik Belousov wrote:
+>> On Mon, Apr 25, 2011 at 03:26:02PM +0300, Alexander Motin wrote:
+>>> Andrey V. Elsukov wrote:
+>>>> On 25.04.2011 14:23, Alexander Motin wrote:
+>>>>> What will not work:
+>>>>> ?- old device names won't be seen inside GEOM, so users who hardcoded
+>>>>> provider names in gmirror/gstripe/... metadata (not the default
+>>>>> behavior) are still in trouble.
+>>>>> ?- patch mimics ATA_STATIC_ID behavior, if user had custom kernel
+>>>>> without it, he should update device names manually.
+>>>>> ?- it won't work for users with hot-unplugging ATA controllers (not
+>>>>> devices), but I believe it is really rare case.
+>>>>> ?- low-level tools, such as smartmontools, won't be able to work with
+>>>>> alias devices, as background ada driver doesn't implements legacy
+>>>>> ioctls. May be I could partially fix this.
+>>>>>
+>>>>> Except those, I think this patch should work for the most of users.
+>>>>>
+>>>>> Any more objections/ideas? Is this an acceptable solution?
+>>>> what about new GEOM class? You can create new class instance after
+>>>> disk_alloc(), attach it to the new disk and create provider with old-style
+>>>> name. It seems this class will be very simple.
+>>> It sounds like less dirty option. I'll try it. Thank you. Won't
+>>> re-providing exactly the same device into GEOM create some problems?
+>>> glabel and co will connect to each of them (original and legacy) and
+>>> report two equal sets of labels.
+>
+> I have implemented it by adding one more specialized glabel submodule:
+> http://people.freebsd.org/~mav/legacy_aliases_geom.patch
+>
+so far, so good, with that patches on 2 different machine with
+different ATA mapping (one was detected as ad0, the other ad6). I only
+tested the first patch on a single machine (was ad0), worked too.
+
+Thanks,
+ - Arnaud
+
+> But when I already done it, I understood where will be the problem: if
+> somebody open any partition on the device with the new name, all legacy
+> names will become inaccessible (busy), and vice versa. It could be not a
+> big problem if it would only be user's choice -- we could say just: "use
+> one or another, not both". But provider could be chosen blindly by some
+> GEOM class, such as glabel, and then it turns into pure lottery.
+>
+> So while from the code side and for point of supporting hardcoded
+> provider names it looks much better, it probably won't work so.
+>
+>> Can you limit the real functionality of this new class to the calls
+>> to make_dev_alias(9) ? Ideally, I would think about some extension of
+>> the core GEOM, which would take some parameter, lets call it alias
+>> name, and will acompany the existing make_dev() calls with parallel
+>> make_dev_alias().
+>
+> Adding one more alias name field to the struct g_geom probably is not a
+> problem. And the result probably would not have downsides of two
+> previous approaches. And from the code side it would probably looked
+> better then textual parsing in a first patch. But supporting alias in
+> every place where names used in GEOM (that is required to make it
+> usable) will probably require quite a massive set of changes though GEOM
+> core and many classes. I am not sure I want to go there.
+>
+> --
+> Alexander Motin
+> _______________________________________________
+> freebsd-current@freebsd.org mailing list
+> http://lists.freebsd.org/mailman/listinfo/freebsd-current
+> To unsubscribe, send any mail to "freebsd-current-unsubscribe@freebsd.org"
+>
+
+
+
+
+
+
+### PK 1046205 ###
+现叙述(45字): 说明 em 7.2.2 是三月合入的版本，四月已有较新的 7.2.3，建议改用新版本再测试
+### PK 1046205 ###
+===== 序 22581 | PK 1046205 =====
+DATE: 2011-04-27
+FROM: mike at sentex.net (Mike Tancsa) <None>
+SUBJ: problems with em(4) since update to driver 7.2.2
+
+On 4/27/2011 2:45 PM, Olivier Smedts wrote:
+>> Are you testing with what is in HEAD ? ie. 7.2.3 or something else ?
+>> Your subject line implies something else.
+> 
+> I'm using what's in HEAD since r219753, the commit which updated the
+> em driver from version 7.1.9 to 7.2.2 and broke it at least for me.
+
+Oh, ok. Thats from back in March.  There is a newer one 7.2.3 in April.
+I would test with that perhaps. I am using a back ported version on
+RELENG8 and it works quite well for me.
+
+http://lists.freebsd.org/pipermail/svn-src-head/2011-April/026202.html
+
+
+Hopefully MFC'd soon ?
+
+
+	---Mike
+
+
+
+-- 
+-------------------
+Mike Tancsa, tel +1 519 651 3400
+Sentex Communications, mike@sentex.net
+Providing Internet services since 1994 www.sentex.net
+Cambridge, Ontario Canada   http://www.tancsa.com/
+
+
+
+
+
+
+### PK 1046215 ###
+现叙述(59字): 指出要在 xen 上跑 9.x，kern.eventtimer.periodic 必须关闭，并说明这是几个月前起的要求
+### PK 1046215 ###
+===== 序 22591 | PK 1046215 =====
+DATE: 2011-04-28
+FROM: julian at freebsd.org (Julian Elischer) <None>
+SUBJ: responsiveness during IO tasks
+
+> Doug Barton wrote:
+> No problem, just let's hunt things down. I'll wait for that larger post.
+> In meantime, if it is related to eventtimers, it would be good to
+> collect more detailed information. You could try to make timer run
+> during idle (kern.eventtimer.idletick). You could try to switch timer
+> from one-shot to periodic mode (kern.eventtimer.periodic). You could
+> also try to switch to another timer (kern.eventtimer.timer).
+
+kern.eventtimer.periodic needs to be disabled to run 9.x on xen
+(as of a few months ago)
+
+
+
+
+
+
+
+
+### PK 1046216 ###
+现叙述(44字): 澄清那个选项实际需要的是启用而不是关闭，因为它默认就是禁用的，并表示自己稍后会做实验验证
+### PK 1046216 ###
+===== 序 22592 | PK 1046216 =====
+DATE: 2011-04-28
+FROM: mav at FreeBSD.org (Alexander Motin) <None>
+SUBJ: responsiveness during IO tasks
+
+Julian Elischer wrote:
+>> Doug Barton wrote:
+>> No problem, just let's hunt things down. I'll wait for that larger post.
+>> In meantime, if it is related to eventtimers, it would be good to
+>> collect more detailed information. You could try to make timer run
+>> during idle (kern.eventtimer.idletick). You could try to switch timer
+>> from one-shot to periodic mode (kern.eventtimer.periodic). You could
+>> also try to switch to another timer (kern.eventtimer.timer).
+> 
+> kern.eventtimer.periodic needs to be disabled to run 9.x on xen
+> (as of a few months ago)
+
+Yes, but it needs to be enabled (it is disabled by default). I remember
+about it and going to experiment with it nearest time.
+
+-- 
+Alexander Motin
+
+
+
+
+
+
+### PK 1046221 ###
+现叙述(44字): 说明经过 Craig 测试后，head 已经有修复，新客户端现在能配合 amd 正常工作
+### PK 1046221 ###
+===== 序 22597 | PK 1046221 =====
+DATE: 2011-04-28
+FROM: rmacklem at uoguelph.ca (Rick Macklem) <None>
+SUBJ: Heads up: default nfs client switched to new one
+
+> On Wed, Apr 27, 2011 at 07:39:17PM -0400, Rick Macklem wrote:
+> > > Hi,
+> > >
+> > > Is there any impact on /usr/sbin/amd?
+> > >
+> > I'll admit I haven't tested it (I've never used the FreeBSD amd). I
+> > will
+> > do so once I figure out how to set it up, but I'm hoping others will
+> > report
+> > any problems. If you can test it, that would be appreciated. (I
+> > can't think
+> > of why it wouldn't work, but...)
+> 
+> Hi,
+> 
+> I'll try and test amd and give feedback.
+> 
+> --
+> Craig Rodrigues
+> rodrigc@crodrigues.org
+> 
+Thanks to Craig's testing, there is now a fix in head that makes the
+new client work with amd.
+
+rick
+
+
+
+
+
+
+### PK 1046225 ###
+现叙述(57字): 建议不要买廉价硬件 RAID 卡，改用 gmirror；而 ZFS 只有在内存充裕、比如 4 GiB 以上时才推荐
+### PK 1046225 ###
+===== 序 22601 | PK 1046225 =====
+DATE: 2011-04-29
+FROM: edhoprima at gmail.com (Edho P Arief) <None>
+SUBJ: Hardware RAID and FreeBSD.
+
+On Fri, Apr 29, 2011 at 7:11 AM, Colin Mitchell
+<crm@colinrmitchell.endoftheinternet.org> wrote:
+> Anyways, I bought a new lower-end computer that I was hoping to replace
+> both with. ?It is a dirt-cheap dual-core AMD that I had built for
+> $175US. ?It came with a 500GB HDD, and I would like to get another one
+> to put in it. ?Now, I would like to set up as a mirrored RAID setup (I
+> think). I don't really know much about RAID, but I want to have the same
+> disk image on both hard drives (in case one fails), and possibly three
+> if I buy another HDD in the future. ?Is RAID 1 what I want? ?I also want
+> to do SVN on it for my PhD code, as well as back up my Wordpress,
+> Coppermine, etc...
+>
+> Now, here is where the FreeBSD gurus can chime in. ?I would like to get
+> a hardware RAID card to tie it all together. ?I am also looking for a
+> cheap one, maybe $30-$60US, if this is even feasible. ?Anyone have any
+> suggestions? ?Any successes?
+>
+
+As I'm in softraid camp, I suggest saving yourself from buying a raid
+card (especially the cheap ones) and use gmirror instead.
+
+> Also, I see a lot of talk on here bout ZFS. ?Is this something I should
+> try, instead of the standard UFS?
+>
+
+Only if you have lots of ram (4 GiB or more). Possible with less ram
+but I believe it's not recommended.
+
+
+
+
+
+
+### PK 1046227 ###
+现叙述(48字): 赞赏把 label 相关代码拆成各自独立部分的做法，但质疑补丁里那些 sysctl 是否真的必要
+### PK 1046227 ###
+===== 序 22603 | PK 1046227 =====
+DATE: 2011-04-29
+FROM: jhell at DataIX.net (Jason J. Hellenthal) <None>
+SUBJ: A replacement for GEOM_LABEL's gpt/gptid
+
+
+Andrey,
+
+Great work, thank you. I have a little destraught about this over the
+years since its inception with having just a label class for itself. Now
+that this has all be properly tested it seems like a good idea to me to
+split them up into their respective sections as you have done.
+
+Now with the following I have some insight and question of if these
+sysctls are really needed.
+
+>> The patch is here:
+>> http://people.freebsd.org/~ae/gpart_labels.diff
+>
+>I updated the patch, it is in the same location.
+>I turned off glabel's gpt/gpid support and added loader tunables:
+>
+>kern.geom.part_label.apm.enable
+>kern.geom.part_label.gpt.enable
+>kern.geom.part_label.gptid.enable
+>kern.geom.part_label.pc98.enable
+>
+
+As I see from the patch listed above, you have properly turned off the
+support of these in the label class to move them to the consumers that
+they are actually used in.
+
+With that said, I do not understand and cant seem to wrap my mind around
+why there needs to be a compatibility layer to provide both a sysctl for
+what you have done and the old sysctl.
+
+Why if this is only going to be used by the class where it is only
+enabled do we need two sysctl ?
+
+Can we not just keep them under the same OID they are under now ? It is
+ju
+...[正文已截断，共 2213 字符]
+
+
+
+
+### PK 1046231 ###
+现叙述(56字): 计划提交并 MFC SNDCTL_DSP_GETIPTR 的实现，请原生与 Linux 的多媒体录音程序一起测试
+### PK 1046231 ###
+===== 序 22607 | PK 1046231 =====
+DATE: 2011-04-29
+FROM: avg at FreeBSD.org (Andriy Gapon) <None>
+SUBJ: Fwd: SNDCTL_DSP_GETIPTR implementation
+
+
+I intend to commit the following change soon and MFC it after a short period of
+time.  Please test it if you use multimedia applications, both native and Linux,
+especially if they deal with audio recording/capture.
+
+Thank you.
+
+-------- Original Message --------
+Message-ID: <4DB6F7BA.4070808@FreeBSD.org>
+Date: Tue, 26 Apr 2011 19:50:02 +0300
+From: Andriy Gapon <avg@FreeBSD.org>
+To: multimedia@freebsd.org
+Subject: SNDCTL_DSP_GETIPTR implementation
+
+Guys,
+
+I reading this http://manuals.opensound.com/developer/SNDCTL_DSP_GETOPTR.html
+It says: "In mmap mode (only) the ptr field tells the location where the next
+sample will be recorded."
+In my opinion that means that we have a mistake in our code and the following
+patch should be applied.  But I am not sufficiently familiar with this code.
+
+--- a/sys/dev/sound/pcm/dsp.c
++++ b/sys/dev/sound/pcm/dsp.c
+@@ -1655,7 +1655,7 @@ dsp_ioctl
+ 				/* XXX abusive DMA update: chn_rdupdate(rdch); */
+ 	        		a->bytes = sndbuf_gettotal(bs);
+ 	        		a->blocks = sndbuf_getblocks(bs) - rdch->blocks;
+-	        		a->ptr = sndbuf_getreadyptr(bs);
++	        		a->ptr = sndbuf_getfreeptr(bs);
+ 				rdch->blocks = sndbuf_getblocks(bs);
+ 				CHN_UNLOCK(rdch);
+ 	    		} else
+
+P.S. leading (indenting) whitespace i
+...[正文已截断，共 1443 字符]
+
+
+
+
+### PK 1046233 ###
+现叙述(32字): HPS 回复说在 AMD64 8-stable 上该改动工作正常
+### PK 1046233 ###
+===== 序 22609 | PK 1046233 =====
+DATE: 2011-04-29
+FROM: hselasky at c2i.net (Hans Petter Selasky) <None>
+SUBJ: Fwd: SNDCTL_DSP_GETIPTR implementation
+
+On Friday 29 April 2011 07:59:39 Andriy Gapon wrote:
+> I intend to commit the following change soon and MFC it after a short
+> period of time.  Please test it if you use multimedia applications, both
+> native and Linux, especially if they deal with audio recording/capture.
+> 
+> Thank you.
+
+Seems to work with AMD64 8-stable.
+
+--HPS
+
+
+
+
+
+
+### PK 1046235 ###
+现叙述(43字): 说明 2GB 内存跑 ZFS 不成问题，根分区装在 3.76TB 的 raidz2 上
+### PK 1046235 ###
+===== 序 22610 | PK 1046235 =====
+DATE: 2011-04-29
+FROM: lebel.jerome.mail at gmail.com (Jérôme Lebel) <None>
+SUBJ: Hardware RAID and FreeBSD.
+
+I'm a n00b with freebsd too. But I'm happy with zfs. My server has 2GB of RAM, but it doesn't seem to be a problem. Even with my / using 3.76TB full of data in raidz2.
+
+
+Le 29 avr. 2011 ? 02:11, Colin Mitchell a ?crit :
+
+> Hello, BSDians.
+> 
+> I am kind of a n00b to FreeBSD but have had great success and fun with
+> it so far.
+> 
+> I have two old Dell servers at home.  One has Ubuntu server and is my
+> web and mail server.  The other is FreeBSD, and I run servers for a
+> video game on it.  I really like the FreeBSD server, especially the
+> ports system, and how well it runs even though it is a 1GHz CPU.
+> 
+> Anyways, I bought a new lower-end computer that I was hoping to replace
+> both with.  It is a dirt-cheap dual-core AMD that I had built for
+> $175US.  It came with a 500GB HDD, and I would like to get another one
+> to put in it.  Now, I would like to set up as a mirrored RAID setup (I
+> think). I don't really know much about RAID, but I want to have the same
+> disk image on both hard drives (in case one fails), and possibly three
+> if I buy another HDD in the future.  Is RAID 1 what I want?  I also want
+> to do SVN on it for my PhD code, as well as back up my Wordpress,
+> Coppermine, etc...
+> 
+> Now, here is where the FreeBSD gurus can chime in.  I would like to get
+> a hardware RAID card to tie it all together.  I am also looking for a
+> cheap one, maybe $30-$60US, if this is even feasible.  Anyone have any
+> suggestions?  Any successes?  
+> 
+> Also, I see a lot of talk on here bout ZFS.  Is this something I should
+> try, instead of the standard UFS?
+> 
+> Thanks for any help and suggestions!
+> 
+> Colin.
+> 
+> _______________________________________________
+> freebsd-current@freebsd.org mailing list
+> http://lists.freebsd.org/mailman/listinfo/freebsd-current
+> To unsubscribe, send any mail to "freebsd-current-unsubscribe@freebsd.org"
+
+
+
+
+
+
+
+### PK 1046241 ###
+现叙述(47字): bsam 回复说自己升级了自家小网络里的一台主机加两台 diskless 客户端，目前没有问题
+### PK 1046241 ###
+===== 序 22616 | PK 1046241 =====
+DATE: 2011-04-29
+FROM: bsam at ipt.ru (Boris Samorodov) <None>
+SUBJ: Heads up: default nfs client switched to new one
+
+On Wed, 27 Apr 2011 13:59:49 -0400 (EDT) Rick Macklem wrote:
+
+> Hopefully, you won't need to do anything to keep things working
+> and this won't cause you grief, rick
+
+I've updated my tiny home network (host + two diskless clients).
+No problems so far. Great work, thanks!
+
+-- 
+WBR, Boris Samorodov (bsam)
+Research Engineer, http://www.ipt.ru Telephone & Internet SP
+FreeBSD Committer, http://www.FreeBSD.org The Power To Serve
+
+
+
+
+
+
+### PK 1046245 ###
+现叙述(56字): 更新源之后编新内核即报错，报错文件位于 /usr/src/sys/fs/nfsclient，并贴出 cc 命令行
+### PK 1046245 ###
+===== 序 22620 | PK 1046245 =====
+DATE: 2011-04-29
+FROM: ohartman at zedat.fu-berlin.de (O. Hartmann) <None>
+SUBJ: CURRENT/amd64: kernel compil error:
+ /usr/src/sys/fs/nfsclient/nfs_clvfsops.c: In function 'nfs_mount':,
+ /usr/src/sys/fs/nfsclient/nfs_clvfsops.c:1030: warning:
+ passing argument 4 of 'copyinstr' from incompatible pointer type
+
+Since this morning after updating the sources I get the following error 
+while compiling a new kernel:
+
+cc -c -O2 -frename-registers -pipe -fno-strict-aliasing -march=native 
+-std=c99  -Wall -Wredundant-decls -Wnested-externs -Wstrict-prototypes 
+-Wmissing-prototypes -Wpointer-arith -Winline -Wcast-qual  -Wundef 
+-Wno-pointer-sign -fformat-extensions -nostdinc  -I. -I/usr/src/sys 
+-I/usr/src/sys/contrib/altq -D_KERNEL -DHAVE_KERNEL_OPTION_HEADERS 
+-include opt_global.h -fno-common -finline-limit=8000 --param 
+inline-unit-growth=100 --param large-function-growth=1000 
+-fno-omit-frame-pointer -mcmodel=kernel -mno-red-zone  -mfpmath=387 
+-mno-mmx -mno-3dnow -mno-sse -mno-sse2 -mno-sse3  -msoft-float 
+-fno-asynchronous-unwind-tables -ffreestanding -fstack-protector -Werror 
+  /usr/src/sys/fs/nfsclient/nfs_clvfsops.c
+cc1: warnings being treated as errors
+/usr/src/sys/fs/nfsclient/nfs_clvfsops.c: In function 'nfs_mount':
+/usr/src/sys/fs/nfsclient/nfs_clvfsops.c:1030: warning: passing argument 
+4 of 'copyinstr' from incompatible pointer type
+*** Er
+...[正文已截断，共 1430 字符]
+
+
+
+
+### PK 1046255 ###
+现叙述(47字): 提交新补丁 geom_alias.diff，把该功能开放给更多消费者，支持 gpt/gptid
+### PK 1046255 ###
+===== 序 22630 | PK 1046255 =====
+DATE: 2011-04-29
+FROM: ae at FreeBSD.org (Andrey V. Elsukov) <None>
+SUBJ: A replacement for GEOM_LABEL's gpt/gptid
+
+On 27.04.2011 11:37, Andrey V. Elsukov wrote:
+>> I wrote a small extension for the GEOM_PART class. It adds an ability
+>> to GEOM_PART class to create partition labels for schemes which are
+>> support them.
+
+Hi All,
+
+i got several successful reports from users, but now i decided to make
+this functional available for another consumers.
+New patch:
+http://people.freebsd.org/~ae/geom_alias.diff
+
+What it contains:
+* gpt/gptid support removed from GEOM_LABEL class;
+* new GEOM_ALIAS class added. This class has two public functions:
+	void g_alias_create(struct g_provider *pp, const char *name);
+	void g_alias_spoil(struct g_provider *pp);
+* first two consumers of GEOM_ALIAS class are GEOM_PART and GEOM_DISK:
+
+GEOM_DISK uses g_alias_create() to create aliases for disks, disk's
+serial number is used for alias name.
+
+GEOM_PART uses g_alias_create() to create aliases for labeled partitions
+(gpt/gptid, apm and pc98).
+
+How it looks like:
+http://paste.org.ru/?5exeve
+
+-- 
+WBR, Andrey V. Elsukov
+
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: signature.asc
+Type: application/pgp-signature
+Size: 488 bytes
+Desc: OpenPGP digital signature
+Url : http://lists.freebsd.org/pipermail/freebsd-current/attachments/20110429/7
+...[正文已截断，共 1424 字符]
+
+
+
+
+### PK 1046259 ###
+现叙述(53字): 提交 rfc5682 的 F-RTO 恢复算法补丁，已在 SACK 开启与关闭两种环境验证，并附前后对比图
+### PK 1046259 ###
+===== 序 22634 | PK 1046259 =====
+DATE: 2011-04-29
+FROM: weongyo.jeong at gmail.com (Weongyo Jeong) <None>
+SUBJ: [CFT] Forward RTO recovery algorithm (rfc5682) patch
+
+Hello,
+
+I sent a email to current@ two months ago about F-RTO patch CFR but
+didn't get proper feedbacks from yours.  And at now two months later, I
+have prepared my final code for F-RTO patch and checked it's working for
+SACK enabled and disabled environments:
+
+	http://people.freebsd.org/~weongyo/rfc5682/
+
+The above links include some graphs before and after applying RFC5682
+patch and a patch I prepared.
+
+If no objections I'd like to commit it into HEAD and still welcomes your
+opinions and reviews.
+
+If you have any concerns and questions please let me know.
+
+regards,
+Weongyo Jeong
+
+
+
+
+
+
+
+### PK 1046261 ###
+现叙述(33字): 要求给出完整的 verbose dmesg，现有片段不足以分析问题
+### PK 1046261 ###
+===== 序 22636 | PK 1046261 =====
+DATE: 2011-04-29
+FROM: mav at FreeBSD.org (Alexander Motin) <None>
+SUBJ: line in problem with snd_hda in mother asus m2npv-vm
+
+Hi.
+
+On 29.04.2011 21:20, Matias Kreder wrote:
+> The problem is that I cannot get line in to work, there is not any
+> recording device displayed in mixer. I know that there may be
+> something to tweak in device.hints but I'm not sure how, and I never
+> touched this file.
+>
+> root@pearl ~]# cat /dev/sndstat
+> FreeBSD Audio Driver (newpcm: 32bit 2009061500/i386)
+> Installed devices:
+> pcm0:<HDA Analog Devices AD1986A PCM #0 Analog>  (play) default
+> pcm1:<HDA Analog Devices AD1986A PCM #1 Digital>  (play)
+
+Show full verbose dmesg please. Provided part is not enough to analyze 
+your problem.
+
+-- 
+Alexander Motin
+
+
+
+
+
+
+### PK 1046271 ###
+现叙述(37字): 询问用户是否试过用 mixer =rec mic 把录音源从线路切到麦克风
+### PK 1046271 ###
+===== 序 22645 | PK 1046271 =====
+DATE: 2011-04-30
+FROM: mav at FreeBSD.org (Alexander Motin) <None>
+SUBJ: line in problem with snd_hda in mother asus m2npv-vm
+
+Matias Kreder wrote:
+> I tried and now I have a lot of options finally but I'm not having
+> sound, I tried all my inputs but I'm hearing nothing.
+> 
+> Here is my mixer output:
+> 
+> pearl# mixer
+> Mixer vol      is currently set to  76:76
+> Mixer pcm      is currently set to 100:100
+> Mixer speaker  is currently set to 100:100
+> Mixer mic      is currently set to 100:100
+> Mixer cd       is currently set to 100:100
+> Mixer rec      is currently set to 100:100
+> Mixer igain    is currently set to 100:100
+> Mixer ogain    is currently set to  50:50
+> Recording source: cd
+
+What exactly have you tried? Have you tried to switch recording to mic
+with `mixer =rec mic`?
+
+-- 
+Alexander Motin
+
+
+
+
+
+
+### PK 1046272 ###
+现叙述(45字): 发现 =rec line 只能录音不能同时送扬声器，切到 =rec mic 后只录到白噪声
+### PK 1046272 ###
+===== 序 22646 | PK 1046272 =====
+DATE: 2011-04-30
+FROM: mkreder at gmail.com (Matias Kreder) <None>
+SUBJ: line in problem with snd_hda in mother asus m2npv-vm
+
+> What exactly have you tried? Have you tried to switch recording to mic
+> with `mixer =rec mic`?
+
+Ok, I just discovered that line was working but just to record,
+setting =rec line and recording with audacity it records but sound is
+not being routed to speakers at the same time: Unless of course I
+reproduce what I recorded.
+
+Them I switched =rec to mic, it records just white noise event though
+that everything is almost 100% in mixer. I tried both inputs the front
+and the back one. Same behavior with both.
+
+I tried with =rec to line1 and to =cd, just to see if there it
+captured my mic or line, but it records nothing, not even noise.
+
+Last, I tried the front headphone output, it's not working at all, no
+sound, it continue to be routed only to the speakers.
+
+Thanks for being helping me.
+
+Regards
+Matias Kreder
+
+
+
+

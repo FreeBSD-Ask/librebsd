@@ -1,0 +1,1183 @@
+### PK 1129154 ###
+===== 序 22478 | PK 1129154 =====
+DATE: 2013-06-09
+FROM: gjb at FreeBSD.org (gjb at FreeBSD.org) <None>
+SUBJ: docs/179443: Rewrite of the Handbook Chapter 16 Jails.
+
+Synopsis: Rewrite of the Handbook Chapter 16 Jails.
+
+State-Changed-From-To: open->suspended
+State-Changed-By: gjb
+State-Changed-When: Sun Jun 9 18:16:21 UTC 2013
+State-Changed-Why: 
+The provided URL does not exist.
+
+gjb at nucleus:~ % fetch -o /dev/null http://downloads.sourceforge.net/projects/qjail/handbook/index.html
+fetch: http://downloads.sourceforge.net/projects/qjail/handbook/index.html: Not Found
+
+
+http://www.freebsd.org/cgi/query-pr.cgi?pr=179443
+
+
+
+
+
+
+### PK 1129156 ###
+===== 序 22480 | PK 1129156 =====
+DATE: 2013-06-09
+FROM: gjb at FreeBSD.org (gjb at FreeBSD.org) <None>
+SUBJ: docs/179443: Rewrite of the Handbook Chapter 16 Jails.
+
+Synopsis: Rewrite of the Handbook Chapter 16 Jails.
+
+State-Changed-From-To: suspended->closed
+State-Changed-By: gjb
+State-Changed-When: Sun Jun 9 21:12:15 UTC 2013
+State-Changed-Why: 
+URL is not found with ftp(1) either.
+
+  gjb at nucleus:~/freebsd/relengsvn/src % ftp -o /dev/null \
+    	http://downloads.sourceforge.net/projects/qjail/handbook/index.html
+  Requesting http://downloads.sourceforge.net/projects/qjail/handbook/index.html
+  ftp: Error retrieving file `404 Not Found'
+
+Perhaps you do not realize that the utility used to obtain the file does not
+matter when the file does not exist.
+
+That said, the PR also says "Do whatever you want with it."
+
+So, PR closed.  If you would like to show some respect to those who were
+entertaining the thought of looking at your document, maybe it will be
+reopened.  But not by me.
+
+
+http://www.freebsd.org/cgi/query-pr.cgi?pr=179443
+
+
+
+
+
+
+### PK 1129157 ###
+===== 序 22481 | PK 1129157 =====
+DATE: 2013-06-09
+FROM: fbsd8 at a1poweruser.com (Fbsd8) <None>
+SUBJ: docs/179443: Rewrite of the Handbook Chapter 16 Jails.
+
+gjb at FreeBSD.org wrote:
+> Synopsis: Rewrite of the Handbook Chapter 16 Jails.
+> 
+> State-Changed-From-To: suspended->closed
+> State-Changed-By: gjb
+> State-Changed-When: Sun Jun 9 21:12:15 UTC 2013
+> State-Changed-Why: 
+> URL is not found with ftp(1) either.
+> 
+>   gjb at nucleus:~/freebsd/relengsvn/src % ftp -o /dev/null \
+>     	http://downloads.sourceforge.net/projects/qjail/handbook/index.html
+>   Requesting http://downloads.sourceforge.net/projects/qjail/handbook/index.html
+>   ftp: Error retrieving file `404 Not Found'
+> 
+> Perhaps you do not realize that the utility used to obtain the file does not
+> matter when the file does not exist.
+> 
+> That said, the PR also says "Do whatever you want with it."
+> 
+> So, PR closed.  If you would like to show some respect to those who were
+> entertaining the thought of looking at your document, maybe it will be
+> reopened.  But not by me.
+> 
+> 
+> http://www.freebsd.org/cgi/query-pr.cgi?pr=179443
+> 
+> 
+
+Sorry typo in url
+
+it's project not projects
+
+ftp http://downloads.sourceforge.net/project/qjail/handbook/index.html
+
+
+
+
+
+
+
+
+### PK 1129160 ###
+===== 序 22484 | PK 1129160 =====
+DATE: 2013-06-10
+FROM: gjb at FreeBSD.org (Glen Barber) <None>
+SUBJ: docs/179443: Rewrite of the Handbook Chapter 16 Jails.
+
+On Sun, Jun 09, 2013 at 05:30:43PM -0400, Fbsd8 wrote:
+> http://downloads.sourceforge.net/project/qjail/handbook/index.html
+> 
+
+So, you are introducing an entirely "new" set of scripts that the user
+must copy/paste for it to work.
+
+Sorry, I fail to see how this is an improvement over the existing
+documentation, in addition to using jail(8) directly, or the
+sysutils/ezjail port.
+
+Glen
+
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: not available
+Type: application/pgp-signature
+Size: 488 bytes
+Desc: not available
+URL: <http://lists.freebsd.org/pipermail/freebsd-doc/attachments/20130609/d4d8f789/attachment.sig>
+
+
+
+
+
+
+### PK 1129162 ###
+===== 序 22486 | PK 1129162 =====
+DATE: 2013-06-10
+FROM: shen.elf at gmail.com (Yanhui Shen) <None>
+SUBJ: docs/179459: the example function in filemon(4) should have a return
+ value
+
+
+>Number:         179459
+>Category:       docs
+>Synopsis:       the example function in filemon(4) should have a return value
+>Confidential:   no
+>Severity:       non-critical
+>Priority:       low
+>Responsible:    freebsd-doc
+>State:          open
+>Quarter:        
+>Keywords:       
+>Date-Required:
+>Class:          doc-bug
+>Submitter-Id:   current-users
+>Arrival-Date:   Mon Jun 10 17:00:00 UTC 2013
+>Closed-Date:
+>Last-Modified:
+>Originator:     Yanhui Shen
+>Release:        FreeBSD 9.1-STABLE
+>Organization:
+>Environment:
+FreeBSD ThinkPad 9.1-STABLE FreeBSD 9.1-STABLE #0 r251600: Mon Jun 10 21:49:57 CST 2013     root at ThinkPad:/usr/obj/usr/src/sys/ThinkPad  amd64
+>Description:
+man filemon
+
+The function is "static void open_filemon(void)",
+but there are "return 0"s.
+>How-To-Repeat:
+
+>Fix:
+
+
+>Release-Note:
+>Audit-Trail:
+>Unformatted:
+
+
+
+
+
+
+### PK 1129163 ###
+===== 序 22487 | PK 1129163 =====
+DATE: 2013-06-11
+FROM: ohauer at FreeBSD.org (Olli Hauer) <None>
+SUBJ: docs/179497: [patch] service.8 add csh completion example
+
+
+>Number:         179497
+>Category:       docs
+>Synopsis:       [patch] service.8 add csh completion example
+>Confidential:   no
+>Severity:       non-critical
+>Priority:       low
+>Responsible:    freebsd-doc
+>State:          open
+>Quarter:        
+>Keywords:       
+>Date-Required:
+>Class:          change-request
+>Submitter-Id:   current-users
+>Arrival-Date:   Tue Jun 11 20:50:00 UTC 2013
+>Closed-Date:
+>Last-Modified:
+>Originator:     Olli Hauer
+>Release:        FreeBSD 8.4-RELEASE amd64
+>Organization:
+>Environment:
+System: FreeBSD donot.tell 8.4-RELEASE FreeBSD 8.4-RELEASE #0 r251259: Sun Jun 2 21:26:57 UTC 2013 root at bake.isc.freebsd.org:/usr/obj/usr/src/sys/GENERIC amd64
+
+>Description:
+service(8) has an example for bash completion, however bash is third party
+and in /usr/share/examples/csh/dot.cshrc is a working example for csh.
+
+Extend the service(8) manpage with the completion ripped from dot.cshrc
+
+>How-To-Repeat:
+avoid bash and use csh as shell ;)
+
+>Fix:
+
+--- service_8.diff begins here ---
+Index: usr.sbin/service/service.8
+===================================================================
+--- usr.sbin/service/service.8	(revision 251637)
++++ usr.sbin/service/service.8	(working copy)
+@@ -110,6 +110,13 @@
+ .Dl 
+...[正文已截断，共 2066 字符]
+
+
+
+### PK 1129172 ###
+===== 序 22496 | PK 1129172 =====
+DATE: 2013-06-15
+FROM: remko at FreeBSD.org (remko at FreeBSD.org) <None>
+SUBJ: docs/179443: Rewrite of the Handbook Chapter 16 Jails.
+
+Synopsis: Rewrite of the Handbook Chapter 16 Jails.
+
+State-Changed-From-To: open->feedback
+State-Changed-By: remko
+State-Changed-When: Sat Jun 15 19:48:54 UTC 2013
+State-Changed-Why: 
+Dear Joe,
+
+Please submit an unified diff so that I can review what you have written and what
+the changes are. I will not be looking at the raw HTML you provided. In addition
+it seems that from a peek only you are the contributor, but we both know that that is
+not the case.
+
+I still have the qjail vs ezjail discussion in mind, so I think you should provide
+a very  heldback diff and not change the contributors at all (which you seem to be
+doing again).
+
+
+
+Responsible-Changed-From-To: freebsd-doc->remko
+Responsible-Changed-By: remko
+Responsible-Changed-When: Sat Jun 15 19:48:54 UTC 2013
+Responsible-Changed-Why: 
+Take the PR so that I can either close it or work on it IF joe convinces
+me that it's worth the trouble.
+
+http://www.freebsd.org/cgi/query-pr.cgi?pr=179443
+
+
+
+
+
+
+### PK 1129183 ###
+===== 序 22507 | PK 1129183 =====
+DATE: 2013-06-17
+FROM: mexas at bris.ac.uk (Anton Shterenlikht) <None>
+SUBJ: proposed new mailing list: FreeBSD-Fortran
+
+I propose to create a dedicated FreeBSD Fortran mailing list.
+The list will be helpful because:
+
+1. There are a number of ports which depend on fortran compiler
+or libraries in some way:
+
+$ find /usr/ports/ -name "Makefile" | xargs grep -i fortran | wc -l
+     361
+$
+
+2. The FreeBSD Fortran expertise is scattered over many lists
+at present. This will be a single point of contact for all
+parties interested in Fortran on FreeBSD.
+
+3. There are several developers/committers with Fortran
+expertise, e.g. bf@, gerald@, maho@, who maintain a lot
+of the critical fortran ports infrastructure, i.e. key
+libraries and compilers. The list will help Fortran users
+attaract the attention of all these people (hopefully
+they will want to subscribe).
+
+4. Fortran is old and new, i.e. there are codes which
+are still in 77 standard, and there are compilers supporting
+2008 standard. Accordingly, there is a great diversity
+of the needs of fortran users. How the fortran ports infrastructure
+supports these needs should be discussed.
+
+5. There are number of fortran libraries already in ports.
+There are many which are not. A discussion of what would
+be good to have in fortran ports is needed. 
+
+6. There might be a discussion of the need
+for a long term st
+...[正文已截断，共 2158 字符]
+
+
+
+### PK 1129185 ###
+===== 序 22509 | PK 1129185 =====
+DATE: 2013-06-17
+FROM: wblock at wonkity.com (Warren Block) <None>
+SUBJ: RFC: Profiling and merging for the print edition
+
+My proposal for merging the ISBN branch and getting out of our
+two-branch problem.
+
+First, profiling works.  A demo file of the Porter's Handbook is here:
+http://wonkity.com/~wblock/profiledemo/
+
+After applying the patch, build either the online or print version of
+the book with:
+
+   make EDITION=online clean book.html
+   make EDITION=print  clean book.html
+
+The "online" version includes all sections with edition="online" or an
+edition not set.
+
+The "print" version includes all sections with edition="print" or an
+edition not set.
+
+Actually, all we need to mark are the online (non-print) sections.  By 
+default, all sections would be for the print edition unless marked as 
+online.
+
+(Difficulties: the default edition should be set in the Makefile, and
+make needs to recognize that changing the EDITION setting means the
+files need to be rebuilt.  Left as an exercise for the reader.)
+
+Given that we can do all or nearly all that needs to be done for the
+print edition of the Handbook with profiling, I propose the following
+merge plan:
+
+     Immediately merge the ISBN branch to head
+
+     Start using profiling in the entire Handbook
+
+     When ready to print the book:
+
+       branch ISBN
+
+       in the branch, make only the changes a
+...[正文已截断，共 1831 字符]
+
+
+
+### PK 1129186 ###
+===== 序 22510 | PK 1129186 =====
+DATE: 2013-06-17
+FROM: wblock at wonkity.com (Warren Block) <None>
+SUBJ: RFC: acronym tags
+
+The FDP writing guide says:
+
+   The first three uses of an acronym should be enclosed in acronym tags,
+   with a role attribute with the full term defined. This allows a link
+   to the glossary to be created, and for mouseovers to be rendered with
+   the fully expanded term.
+
+I believe this is obsolete.  The current usage is to tag every 
+occurrence of an acronym, but not enter the definition in the role 
+attribute.  AFAIK, we've never used these to generate the glossary or 
+mouseover links.
+
+My suggestion is to make the current usage the preferred style:
+1. Tag each occurrence of an acronym.
+2. Do not enter the role= attribute.  These could result in differing 
+definitions for the same acronym.
+
+
+
+
+
+
+### PK 1129195 ###
+===== 序 22519 | PK 1129195 =====
+DATE: 2013-06-18
+FROM: rfg at tristatelogic.com (Ronald F.Guilmette) <None>
+SUBJ: docs/179697: Handbook incomplete WRT Opera flash usage (linproc)
+
+
+>Number:         179697
+>Category:       docs
+>Synopsis:       Handbook incomplete WRT Opera flash usage (linproc)
+>Confidential:   no
+>Severity:       non-critical
+>Priority:       low
+>Responsible:    freebsd-doc
+>State:          open
+>Quarter:        
+>Keywords:       
+>Date-Required:
+>Class:          doc-bug
+>Submitter-Id:   current-users
+>Arrival-Date:   Tue Jun 18 23:40:00 UTC 2013
+>Closed-Date:
+>Last-Modified:
+>Originator:     Ronald F. Guilmette
+>Release:        FreeBSD 9.1-RELEASE amd64
+>Organization:
+entr0py
+>Environment:
+
+FreeBSD 9.1-RELEASE amd64
+
+>Description:
+
+The Handbook describes how to install and use Opera on this page:
+
+http://www.freebsd.org/doc/en_US.ISO8859-1/books/handbook/desktop-browsers.html
+
+Unfortunately that page fails to mention that in order to make use of the
+Flash plug-in with Opera, one has to first mount the "linproc" thingy.
+
+>How-To-Repeat:
+
+Install Opera and the associated flash plugin and then try to visit a page
+containing some flash content.  It won't work until you mount the linproc
+thing.
+
+>Fix:
+
+The Handbook page mentioned above should describe what has to be added to
+/etc/fstab in order to get the linproc pseudo-filesystem mounted.
+>Release-Note:
+>Audit-
+...[正文已截断，共 1424 字符]
+
+
+
+### PK 1129197 ###
+===== 序 22521 | PK 1129197 =====
+DATE: 2013-06-19
+FROM: gabor at FreeBSD.org (Gabor Kovesdan) <None>
+SUBJ: RFC: Upgrading to DocBook 5.0
+
+Em 17-06-2013 22:05, Dru Lavigne escreveu:
+> Can we have a summary for the FDP (and for the benefit of Handbook editors) of when/if systemitem class= should be used? Are there also systemitems for the different types of <filename>s which should be used instead?
+The systemitem element is documented well here:
+http://www.docbook.org/tdg5/en/html/systemitem.html
+
+When to specify the class atttribute is our decision and as you see, 
+there are different preferences. And it is important to note that at the 
+moment we are using our extensions and <systemitem> will only be used 
+once we upgrade to DB 5.0. So the documentation should not be updated 
+with this in head but in db5.
+
+As for filename, it will be still <filename> and we already use 
+correctly the class names, yet it should be documented. The DocBook 
+reference is here:
+http://www.docbook.org/tdg5/en/html/filename.html
+
+As for the FDP, it is another item, which we have to solve. I have some 
+ideas in my mind but I haven't got there yet so I haven't started a 
+discussion. First, I would like to more clearly separate it into 2-3 parts:
+1, A technology introduction: XML, XHTML, DocBook, XSLT. A concise 
+introduction to the ideas behind these technologies and how they can be 
+used for technical 
+...[正文已截断，共 1983 字符]
+
+
+
+### PK 1129201 ###
+===== 序 22525 | PK 1129201 =====
+DATE: 2013-06-19
+FROM: ds at ukrhub.net (Taras Korenko) <None>
+SUBJ: wrong: Last modified on April 2000 by . in porters handbook
+
+On Wed, Jun 19, 2013 at 12:59:43PM +0100, Anton Shterenlikht wrote:
+> http://www.freebsd.org/doc/en_US.ISO8859-1/books/porters-handbook/index.html
+> 
+> says:
+> 
+> Last modified on April 2000 by .
+> ...
+
+  because <pubdate/> is 'hardcoded'.  A workaround is:
+
+% svn diff en_US.ISO8859-1/books/porters-handbook/book.xml 
+Index: en_US.ISO8859-1/books/porters-handbook/book.xml
+===================================================================
+--- en_US.ISO8859-1/books/porters-handbook/book.xml     (revision 41948)
++++ en_US.ISO8859-1/books/porters-handbook/book.xml     (working copy)
+@@ -18,7 +18,7 @@
+       <corpauthor>The FreeBSD Documentation Project</corpauthor>
+     </authorgroup>
+ 
+-    <pubdate>April 2000</pubdate>
++    <pubdate>$FreeBSD$</pubdate>
+ 
+     <copyright>
+       <year>2000</year>
+
+-- 
+  Best regards,
+  Taras Korenko
+
+
+
+
+
+
+### PK 1129203 ###
+===== 序 22527 | PK 1129203 =====
+DATE: 2013-06-19
+FROM: lists at eitanadler.com (Eitan Adler) <None>
+SUBJ: wrong: Last modified on April 2000 by . in porters handbook
+
+On Wed, Jun 19, 2013 at 2:11 PM, Taras Korenko <ds at ukrhub.net> wrote:
+> On Wed, Jun 19, 2013 at 12:59:43PM +0100, Anton Shterenlikht wrote:
+>> http://www.freebsd.org/doc/en_US.ISO8859-1/books/porters-handbook/index.html
+>>
+>> says:
+>>
+>> Last modified on April 2000 by .
+>> ...
+>
+>   because <pubdate/> is 'hardcoded'.  A workaround is:
+>
+> % svn diff en_US.ISO8859-1/books/porters-handbook/book.xml
+...
+
+Fixed in r41954.
+
+-- 
+Eitan Adler
+
+
+
+
+
+
+### PK 1129204 ###
+===== 序 22528 | PK 1129204 =====
+DATE: 2013-06-19
+FROM: tony at hain-global-consulting.com (Tony Hain) <None>
+SUBJ: broken instructions for buildkernel
+
+The steps in
+http://www.freebsd.org/doc/en/books/handbook/kernelconfig-building.html
+are simply broken/incomplete. This sequence goes straight from 'get the src'
+to 'make buildkernel'. Doing that to build 10-current on a 9.1 fresh install
+results in "no previous prototype for yyparse". Searching for that error
+string shows it has been a recurring problem; & returns comments like   :::
+"you must do make buildworld first" :::
+If buildworld is a prereq, why isn't that in the instruction sequence? Even
+if it is only required once, on a fresh install it should be possible to
+look at the FreeBSD docs and build a custom kernel without hitting errors
+and having to search for hints. 
+
+On a separate but related note: the instruction to 'cp GENERIC
+/root/kernels/MYKERNEL' seems
+pointless/dated/waste-of-disk-space/likely-to-result-in-confusion-over-time.
+Direct editing of the entirety of a copy of GENERIC makes it harder to
+figure out what changes were made specifically for local functions later
+when GENERIC might have changed in an update. In searching for Hyper-V
+related builds I stumbled across the mechanism of using 'include' to pull in
+a current GENERIC, then isolate all local changes in the system specific
+file. It seems like this wo
+...[正文已截断，共 1792 字符]
+
+
+
+### PK 1129206 ###
+===== 序 22530 | PK 1129206 =====
+DATE: 2013-06-20
+FROM: amvandemore at gmail.com (Adam Vande More) <None>
+SUBJ: broken instructions for buildkernel
+
+On Wed, Jun 19, 2013 at 6:51 PM, Tony Hain
+<tony at hain-global-consulting.com>wrote:
+
+> If buildworld is a prereq, why isn't that in the instruction sequence? Even
+> if it is only required once, on a fresh install it should be possible to
+> look at the FreeBSD docs and build a custom kernel without hitting errors
+> and having to search for hints.
+>
+
+It isn't a prereq.  Those instructions have remained largely unchanged for
+years for a reason. You were following instructions on how to build a new
+kernel when in fact you were trying to upgrade FreeBSD.
+
+Use these steps and you'll get a lot farther:
+
+http://www.freebsd.org/doc/handbook/updating-upgrading.html
+
+-- 
+Adam Vande More
+
+
+
+
+
+
+### PK 1129209 ###
+===== 序 22533 | PK 1129209 =====
+DATE: 2013-06-20
+FROM: gabor at FreeBSD.org (Gabor Kovesdan) <None>
+SUBJ: RFC: Profiling and merging for the print edition
+
+Em 20-06-2013 17:55, Hiroki Sato escreveu:
+> wb> After applying the patch, build either the online or print version of
+> wb> the book with:
+> wb>
+> wb>   make EDITION=online clean book.html
+> wb>   make EDITION=print  clean book.html
+> wb>
+> wb> The "online" version includes all sections with edition="online" or an
+> wb> edition not set.
+>
+>   Please do not add a separate make variable for that.  We already have
+>   FORMATS, and setting profiling variables (profile.attribute and
+>   profile.value in XSLT) based on it should work.
+>
+>   Also, we should consider/discuss what kind of difference we need
+>   actually and should allow between the two first.  Basically I am
+>   against marking up everything with "online" or "print" because it
+>   just makes the source files complicated.  I think it is useful only
+>   for separating lengthy preface, edition history, and pgpkey list from
+>   the body in book.xml.
+I believe that XHTML is an online format by nature but pdf may also be 
+distributed as an online snapshot after the actual release so I would 
+also treat them separated as Warner suggests.
+
+Gabor
+
+
+
+
+
+
+### PK 1129211 ###
+===== 序 22535 | PK 1129211 =====
+DATE: 2013-06-20
+FROM: wblock at wonkity.com (Warren Block) <None>
+SUBJ: RFC: Handbook Storage chapter RAID section removal
+
+The Handbook Storage chapter has a section called RAID that describes 
+the use of ccd(4) and ataraid(4).
+
+ccd(4) is obsolete, having been replaced several times by newer drivers. 
+I think ataraid(4) has been supplanted by graid(8).
+
+So I propose to remove that RAID section entirely.  Yes, people may 
+still be using these devices.  But we should not be recommending them to 
+new users.
+
+If you have a reason that should not be done, speak now.
+
+
+
+
+
+
+### PK 1129214 ###
+===== 序 22538 | PK 1129214 =====
+DATE: 2013-06-20
+FROM: tony at hain-global-consulting.com (Tony Hain) <None>
+SUBJ: broken instructions for buildkernel
+
+Thanks Adam. 
+
+ 
+
+I had been on the page you sent for the 9.0 to 9.1 upgrade of this machine.
+My intent was not to upgrade the machine to 10.0, at this point it was just
+to build the kernel for a new VM. Granted I am not the most engrained in
+FreeBSD procedures, but to me that leads to the "building a kernel" page. 
+
+ 
+
+While buildworld may not be a declared prereq, something in that process
+"fixes" a missing definition. No matter which distro of 10.0 I tried to
+build it would always exit on a missing prototype for yyparse, but after
+buildworld it just ran to completion. That sounds like a prereq to me...
+Even if it is not, a hint on one or both of the pages that reference
+building a kernel, about yyparse failures being fixed by buildworld would
+save people frustration and time. If I was the first to stumble over this, I
+wouldn't have been able to find discussion about it on the web, and still
+wouldn't know how to fix it. 
+
+ 
+
+Tony
+
+ 
+
+ 
+
+From: Adam Vande More [mailto:amvandemore at gmail.com] 
+Sent: Wednesday, June 19, 2013 7:01 PM
+To: Tony Hain
+Cc: doc at freebsd.org
+Subject: Re: broken instructions for buildkernel
+
+ 
+
+On Wed, Jun 19, 2013 at 6:51 PM, Tony Hain <tony at hain-global-consulting.com>
+wrote:
+
+If buildworld is a p
+...[正文已截断，共 1987 字符]
+
+
+
+### PK 1129216 ###
+===== 序 22540 | PK 1129216 =====
+DATE: 2013-06-20
+FROM: crum.zach at gmail.com (Zach Crum) <None>
+SUBJ: docs/179788: section 19.3 gpart examples should use partition in
+ newfs and fstab examples
+
+
+>Number:         179788
+>Category:       docs
+>Synopsis:       section 19.3 gpart examples should use partition in newfs and fstab examples
+>Confidential:   no
+>Severity:       non-critical
+>Priority:       low
+>Responsible:    freebsd-doc
+>State:          open
+>Quarter:        
+>Keywords:       
+>Date-Required:
+>Class:          doc-bug
+>Submitter-Id:   current-users
+>Arrival-Date:   Thu Jun 20 20:30:00 UTC 2013
+>Closed-Date:
+>Last-Modified:
+>Originator:     Zach Crum
+>Release:        9.1
+>Organization:
+>Environment:
+9.1-RELEASE-p4 FreeBSD 9.1-RELEASE-p4 #0: Mon Jun 17 11:42:37 UTC 2013     root at amd64-builder.daemonology.net:/usr/obj/usr/src/sys/GENERIC  amd64
+>Description:
+newfs -U /dev/ada1 generates errors and the disk is unusable.
+change example to newly created partition
+newfs -U /dev/ada1p1
+
+change fstab entry example from /dev/ada1 to /dev/ada1p1
+>How-To-Repeat:
+
+>Fix:
+
+
+>Release-Note:
+>Audit-Trail:
+>Unformatted:
+
+
+
+
+
+
+### PK 1129223 ###
+===== 序 22547 | PK 1129223 =====
+DATE: 2013-06-21
+FROM: jgh at FreeBSD.org (Jason Helfman) <None>
+SUBJ: docs/179801: [patch] jdk16 is deprecated, reflect within documentation
+
+
+>Number:         179801
+>Category:       docs
+>Synopsis:       [patch] jdk16 is deprecated, reflect within documentation
+>Confidential:   no
+>Severity:       non-critical
+>Priority:       low
+>Responsible:    freebsd-doc
+>State:          open
+>Quarter:        
+>Keywords:       
+>Date-Required:
+>Class:          change-request
+>Submitter-Id:   current-users
+>Arrival-Date:   Fri Jun 21 07:30:00 UTC 2013
+>Closed-Date:
+>Last-Modified:
+>Originator:     Jason Helfman
+>Release:        FreeBSD 10.0-CURRENT amd64
+>Organization:
+>Environment:
+System: FreeBSD freefall.freebsd.org 10.0-CURRENT FreeBSD 10.0-CURRENT #0 r252008: Wed Jun 19 21:39:58 UTC 2013 peter at freefall.freebsd.org:/usr/obj/usr/src/sys/FREEFALL amd64
+
+
+	
+>Description:
+java/jdk16 is gone
+>How-To-Repeat:
+	
+>Fix:
+Index: en_US.ISO8859-1/htdocs/java/install.xml
+===================================================================
+--- en_US.ISO8859-1/htdocs/java/install.xml	(revision 41991)
++++ en_US.ISO8859-1/htdocs/java/install.xml	(working copy)
+@@ -23,16 +23,6 @@
+ <br/>make install clean
+ </code></p>
+ 
+-<h3><a name="jdk">Oracle JDK on FreeBSD</a></h3>
+-
+-<p>This is the effort of the Java FreeBSD porting project.
+-By the use of patchsets and the JDK sou
+...[正文已截断，共 2558 字符]
+
+
+
+### PK 1129224 ###
+===== 序 22548 | PK 1129224 =====
+DATE: 2013-06-21
+FROM: freebsd-docs at allanjude.com (Allan Jude) <None>
+SUBJ: docs/179801: [patch] jdk16 is deprecated,
+ reflect within documentation
+
+On 2013-06-21 03:20, Jason Helfman wrote:
+>> Number:         179801
+>> Category:       docs
+>> Synopsis:       [patch] jdk16 is deprecated, reflect within documentation
+>> Confidential:   no
+>> Severity:       non-critical
+>> Priority:       low
+>> Responsible:    freebsd-doc
+>> State:          open
+>> Quarter:        
+>> Keywords:       
+>> Date-Required:
+>> Class:          change-request
+>> Submitter-Id:   current-users
+>> Arrival-Date:   Fri Jun 21 07:30:00 UTC 2013
+>> Closed-Date:
+>> Last-Modified:
+>> Originator:     Jason Helfman
+>> Release:        FreeBSD 10.0-CURRENT amd64
+>> Organization:
+>> Environment:
+> System: FreeBSD freefall.freebsd.org 10.0-CURRENT FreeBSD 10.0-CURRENT #0 r252008: Wed Jun 19 21:39:58 UTC 2013 peter at freefall.freebsd.org:/usr/obj/usr/src/sys/FREEFALL amd64
+>
+>
+> 	
+>> Description:
+> java/jdk16 is gone
+>> How-To-Repeat:
+> 	
+>> Fix:
+> Index: en_US.ISO8859-1/htdocs/java/install.xml
+> ===================================================================
+> --- en_US.ISO8859-1/htdocs/java/install.xml	(revision 41991)
+> +++ en_US.ISO8859-1/htdocs/java/install.xml	(working copy)
+> @@ -23,16 +23,6 @@
+>  <br/>make install clean
+>  </code></p>
+>  
+> -<h3><a name="jdk">Oracle JDK on FreeBSD</a></h3>
+> -
+> -<p>This is the effort of the Java FreeBSD porting project.
+> -By the use of patchsets and the JDK source code released by Oracle,
+> -this port builds a native JDK for FreeBSD.</p>
+> -
+> -<p><code>cd /usr/ports/java/jdk16
+> -<br/>make install clean
+> -</code></p>
+> -
+>  <h3><a name="linux-sun-jdk">Oracle JDK for Linux</a></h3>
+>  
+>  <p>This port installs the Java Development Kit from Oracle which was built for Linux. It will run under FreeBSD using the Linux compatibility.</p>
+> Index: en_US.ISO8859-1/books/porters-handbook/book.xml
+> ===================================================================
+> --- en_US.ISO8859-1/books/porters-handbook/book.xml	(revision 41991)
+> +++ en_US.ISO8859-1/books/porters-handbook/book.xml	(working copy)
+> @@ -6981,8 +6981,8 @@
+>  	<para>There are several JDKs in the ports collection, from
+>  	  various vendors, and in several versions.  If your port must
+>  	  use one of these versions, you can define which one.  The
+> -	  most current version is <filename
+> -	    role="package">java/jdk16</filename>.</para>
+> +	  most current version, and &os; default is <filename
+> +	    role="package">java/openjdk6</filename>.</para>
+>  
+>  	<table frame="none">
+>  	  <title>Variables Which May be Set by Ports That Use
+>> Release-Note:
+>> Audit-Trail:
+>> Unformatted:
+> _______________________________________________
+> freebsd-doc at freebsd.org mailing list
+> http://lists.freebsd.org/mailman/listinfo/freebsd-doc
+> To unsubscribe, send any mail to "freebsd-doc-unsubscribe at freebsd.org"
+
+Oracle has EOL'd Java6 http://java.com/en/download/faq/java_6.xml
+The update they released this Tuesday, Java 6u51 is only available to
+enterprise customers with support contracts.
+
+
+
+
+
+
+### PK 1129227 ###
+===== 序 22551 | PK 1129227 =====
+DATE: 2013-06-22
+FROM: priit at cc.ttu.ee (Priit J�rv) <None>
+SUBJ: docs/179832: manual page of mac_from_text suggests incorrect freeing
+ of mac_t type
+
+
+>Number:         179832
+>Category:       docs
+>Synopsis:       manual page of mac_from_text suggests incorrect freeing of mac_t type
+>Confidential:   no
+>Severity:       non-critical
+>Priority:       low
+>Responsible:    freebsd-doc
+>State:          open
+>Quarter:        
+>Keywords:       
+>Date-Required:
+>Class:          doc-bug
+>Submitter-Id:   current-users
+>Arrival-Date:   Sat Jun 22 08:20:00 UTC 2013
+>Closed-Date:
+>Last-Modified:
+>Originator:     Priit J?rv
+>Release:        9.1-RELEASE (the problem persists in head/stable)
+>Organization:
+>Environment:
+FreeBSD test 9.1-RELEASE FreeBSD 9.1-RELEASE #1: Sat May 11 16:22:59 EEST 2013     root at test:/usr/obj/usr/src/sys/MACTEST  amd64
+>Description:
+manual page of mac_from_text(3) notes that the allocated storage should be freed with free(). I strongly suspect this is incorrect, as the type mac_t points to a structure which itself contains a pointer.
+
+It seems this was introduced in svn rev 122777 where "mac_free(3)" was changed to "free(3)". It seems the specific change was meant for the mac_to_text() function call (a char* pointer indeed should be freed with free()).
+
+Reported for 9.1-RELEASE but still present in head/stable.
+
+>How-To-Repeat:
+...[正文已截断，共 1771 字符]
+
+
+
+### PK 1129228 ###
+===== 序 22552 | PK 1129228 =====
+DATE: 2013-06-23
+FROM: gjb at FreeBSD.org (Glen Barber) <None>
+SUBJ: cgi/ports.cgi: Last database update
+
+On Mon, Jun 17, 2013 at 01:52:34PM +0400, Ruslan Makhmatkhanov wrote:
+> Glen Barber wrote on 17.06.2013 01:02:
+> >On Sun, Jun 16, 2013 at 08:58:04PM +0400, Ruslan Makhmatkhanov wrote:
+> >>Hi Glen,
+> >>
+> >>Glen Barber wrote on 15.05.2013 16:54:
+> >>>On Wed, May 15, 2013 at 08:20:11AM +0400, Ruslan Makhmatkhanov wrote:
+> >>>>Hello,
+> >>>>
+> >>>>some user on a forum pointed out that freebsd.org's ports tree is
+> >>>>not updated since 2012-11-11. F.e. I looking for gajim in the ports
+> >>>>tree:
+> >>>>http://www.freebsd.org/cgi/ports.cgi?query=gajim&stype=all&sektion=all
+> >>>>
+> >>>>There is the message:
+> >>>>"Last database update: 2012-11-11 10:45:48 UTC"
+> >>>>
+> >>>>And gajim version is at 0.15.2 (while it was already updated to
+> >>>>0.15.3_1) and gajim-devel still here.
+> >>>>
+> >>>>If I understand correctly, this may be related to CVS-exporter deprecation.
+> >>>>
+> >>>>Is this is a known issue and is there any plans to fix that?
+> >>>>Thanks.
+> >>>>
+> >>>
+> >>>I will take a look at this today.
+> >>>
+> >>>Glen
+> >>
+> >>Any news?
+> >>
+> >
+> >Sorry for the delay here.
+> >
+> >So, there are a few different problems all in this area, that are all
+> >related to the same underlying infrastructure.  But, here's the short
+> >version:
+> >
+> >I am in the midst of deprecating the machine that used to be responsible
+> >for doing the doc/www builds (previously known as red.FreeBSD.org).
+> >Well, to be more clear, it is already (physically) deprecated, but its
+> >services have been moved to a jail on a different system.
+> >
+> >The problem I've run into is that there are a few things that are so
+> >intertwined, and dependent on the filesystem, that it is actually quite
+> >much of a mess to untangle.
+> >
+> >I have some (I think most) of these running within the new system.
+> >(These are where some of the random error emails originated a few weeks
+> >ago, actually.)  But there are still some service-untangling to do.
+> >
+> >Some of the filesystem-dependent things appear to use cvs-style
+> >checkouts of doc/www (meaning, different directories), and I think this
+> >is the core of the problem with the CGI stuff not working.
+> >
+> >Getting this working again is a very high priority for me, but
+> >unfortunately was out of town last week unexpectedly, so not a whole lot
+> >of untangling got accomplished.
+> >
+> >Once I get the CGI hosting moved from the current setup to the new
+> >setup, some (if not all) of these website CGI problems should go away as
+> >a general side effect of the updates.
+> >
+> >I hope, worst case, to have everything fully functional on the new
+> >system within the week.  When this happens, I'll send a heads-up to
+> >ops-announce@ mailing list, since I found with the last move that some
+> >things did unexpectedly break, so while I can test the majority of the
+> >services provided here, I likely will miss something.
+> >
+> >I know it is not the answer you wanted to hear.  But I am working on it,
+> >and just need a bit more time to make sure I do not break everything,
+> >since there are a lot of interdependencies here.
+> >
+> >Glen
+> 
+> Thank you for such an extended response, Glen. Feel free to ping me
+> if you need any help with testing of the new setup (from web-user
+> point of view).
+> 
+
+I appreciate your offer to help debug.  I will certainly ask for your
+help if needed.
+
+I was a able to fix the original issue without any special hacks and
+
+    http://www.freebsd.org/cgi/ports.cgi?query=gajim&stype=all&sektion=all
+
+now shows up-to-date information.
+
+I'm going to babysit this update for about a day or so before
+considering it "done", so please let me know if you see anything
+strange.  Note that the updates are to happen every 2 hours UTC time, so
+if something is not reflected within 10 minutes, do not panic.
+
+This is still running on the old system, so I have yet to do the other
+magic to move things around.
+
+Glen
+
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: not available
+Type: application/pgp-signature
+Size: 488 bytes
+Desc: not available
+URL: <http://lists.freebsd.org/pipermail/freebsd-doc/attachments/20130622/376cdd5c/attachment.sig>
+
+
+
+
+
+
+### PK 1129233 ###
+===== 序 22557 | PK 1129233 =====
+DATE: 2013-06-23
+FROM: chip.senkbeil at gmail.com (Chip Senkbeil) <None>
+SUBJ: Misprint in Architecture Handbook?
+
+Hello,
+
+I was taking a look at the guide for SSDs and FreeBSD (
+http://www.freebsd.org/doc/en/articles/solid-state/index.html) and think
+that there "might" be some old instructions. On the second page (
+http://www.freebsd.org/doc/en/articles/solid-state/kernel.html), the
+instructions say to add "options MFS", "options MD_ROOT", and
+"pseudo-device md" to your kernel configuration. I've been searching
+briefly (very briefly) and came across a fairly old post (
+http://lists.freebsd.org/pipermail/freebsd-stable/2005-May/015115.html)
+claiming that pseudo-device is no longer used or is at least deprecated.
+Trying to add that option gave me a syntax error; so, I'm going out on a
+limb to say that the option isn't supported? I later found in the generic
+kernel that the line "device md" is already in place with the comment
+"Pseudo devices."
+
+Another issue (this may or may not be a fault of my own) is regarding
+"options MFS" as a suggested addition to the configuration. Attempt to
+include the option and build the kernel yields an unknown option error.
+I'll be digging around, but if this is blatantly no longer the correct
+option, please let me know!
+
+The final option regarding MD_ROOT was already included in the generic
+kernel; so, I guess that'
+...[正文已截断，共 2342 字符]
+
+
+
+### PK 1129234 ###
+===== 序 22558 | PK 1129234 =====
+DATE: 2013-06-24
+FROM: wblock at wonkity.com (Warren Block) <None>
+SUBJ: RFC: Handbook Storage chapter floppy backup section removal
+
+Continuing with the project to remove stuff from the Storage chapter 
+that is long overdue...
+
+The Backups to Floppies section has been warning that floppies are not 
+suitable backup media for a decade now.  New machines have not included 
+floppy drives for a long time.  It's time for this section to be 
+retired.
+
+I plan to remove this at the same time as the RAID section (ccd(4) and 
+ataraid(4)).
+
+
+
+
+
+
+### PK 1129239 ###
+===== 序 22563 | PK 1129239 =====
+DATE: 2013-06-24
+FROM: mike at skew.org (Mike Brown) <None>
+SUBJ: docs/179914: remove inactive user dougb from mergemaster maintainers
+
+
+>Number:         179914
+>Category:       docs
+>Synopsis:       remove inactive user dougb from mergemaster maintainers
+>Confidential:   no
+>Severity:       non-critical
+>Priority:       low
+>Responsible:    freebsd-doc
+>State:          open
+>Quarter:        
+>Keywords:       
+>Date-Required:
+>Class:          doc-bug
+>Submitter-Id:   current-users
+>Arrival-Date:   Mon Jun 24 03:10:00 UTC 2013
+>Closed-Date:
+>Last-Modified:
+>Originator:     Mike Brown
+>Release:        FreeBSD 8.3-RELEASE-p3 i386
+>Organization:
+>Environment:
+System: FreeBSD chilled.skew.org 8.3-RELEASE-p3 FreeBSD 8.3-RELEASE-p3 #0: Mon Jun 11 23:52:38 UTC 2012 root at i386-builder.daemonology.net:/usr/obj/usr/src/sys/GENERIC i386
+
+
+>Description:
+Doug Barton (formerly dougb at freebsd.org) tells me via private email that he 
+is no longer involved with the FreeBSD project. He is unavailable to help with 
+mergemaster(8) issues.
+>How-To-Repeat:
+'grep dougb /usr/src/MAINTAINERS'
+'man mergemaster'
+>Fix:
+Remove the mergemaster line from MAINTAINERS, and remove the "Please report any problems, 
+comments or suggestions to the author" note from the end of the mergemaster(8) man page:
+
+--- MAINTAINERS.old	2013-04-10 17:46:54.000000000 -0600
++++ MAINTAINERS	20
+...[正文已截断，共 2172 字符]
+
+
+

@@ -1,0 +1,44 @@
+2596763|L4|2.2.8-STABLE 上自己的卡工作完美，贴出 dmesg 与 grep xl0 输出显示 3C905 完成 autoneg
+2596764|L4|自述根因：在 installworld 之后又多次重编内核，属多用户模式下构建所致
+2596766|L4|自己在此事后编过约 50 个内核且都在多用户下，怀疑是 LINT 配置中某条指令、可能是 Posix 相关
+2596767|L3|询问 kern.timecounter.method=1 是否也能解决 negative calcru 与时钟漂移
+2596768|L3|提示不需要 lsof，因为 fstat 已恢复正常，可用 netstat -A 观察
+2596769|L3|致谢并说明自己最终完成了安装过程，但期间仍有数次内核 panic 与崩溃
+2596771|L4|rc 中重置 pty 权限的 chmod 666 与 chown root:wheel 在联网完成前执行，试图提 PR 时代理报无法连接
+2596774|L4|软更新唯一已知问题：文件系统写满后立即删除又新建文件时磁盘仍显示满，据他所知已修复
+2596776|L3|realtek 芯片走 rl0 驱动；realtek 卡探测网络类型与双工时偶有问题，关键服务器建议 3c905 或 Intel Pro 10/100
+2596778|L3|自己有两台 FreeBSD 系统在用这类网卡，工作良好且速度很快
+2596779|L3|开发者确认 3.1-STABLE 支持 Intel PRO/100+，82558B 芯片应使用 fxp 驱动
+2596780|L4|-current ffs_softdep.c 1.24 版重排加锁，避免在可能睡眠的 bdwrite 与 brelse 期间持锁
+2596781|L4|实测 Pro/100+ 很快；DEC 卡与 RealTek 8139 直连 Cisco 2924XL 只跑 10Mbps 半双工，问如何强制 100Mbps
+2596783|L3|Vision 10/100 卡被识别为 vr0 驱动；另购两张 3com905TX 正常工作，但 Vision 与它们共存时无法工作
+2596784|L4|从 3.1 CD 升级 3.0 后无法登录，单用户下发现口令加密方式已变，改回 root 口令后又无法编译内核
+2596787|L4|内核编译失败：syscons.o 的 scvidprobe 报 vid_configure、vid_allocate
+2596790|L4|Samba 登录失败，日志报 Failed to get local UDP socket for address 1000007f
+2596791|L3|建议先 ping 127.0.0.1，不通就先修它，再考虑 samba 的问题
+2596794|L4|找到根因：rc.conf 的设备列表里误删 lo0 环回而误留 vr0，修复后一切正常
+2596795|L3|建议软更新诊断带出设备名，如 ffs_mountfs superblock updated for soft updates 前加 /dev/da0s1e
+2596796|L4|更新 ports 树后系统缺少 /usr/libexec/ld-elf.so.1，无法编译，只能 cd、ls、pico；运行 3.1-stable
+2596797|L4|多用户 buildworld、单用户 installworld 后 ps 仍报 bad namelist；重建 /var/run/utmp 并重编内核后恢复
+2596798|L4|Micronics M4PI 板从安装盘装 3.X 受阻：486 支持到 DX4/100
+2596799|L4|make release 在安装第 4 节 man 页时中断：欲建链接 plip.4.gz 指向 lp.4.gz 而后者不存在，附 Makefile 补丁
+2596800|L3|反驳：/var/run/utmp 是数据文件，installworld 时根本不会被安装
+2596803|L4|who 显示 6 个用户在线而 rwho 只报 2 个，推测只显示近期有活动的登录
+2596805|L4|2.2.8-stable 升级 3.1-stable 时 crtbegin.c 报 section attributes are not supported
+2596806|L3|两台笔记本由 2.2.x-PAO 升 3.1-STABLE 后，插入以太网卡动作触发的 perl 脚本输出不再到达控制台
+2596807|L4|全新安装 3.1-19990408-STABLE 后 ps 起初正常，构建自定义内核重启后 ps 报 bad namelist，w 输出也错乱
+2596809|L3|按同样做法用自定义内核（去掉 nfs、vm86、bpfilter、ether、pca0、speaker）也无效，问题完全相同
+2596810|L4|由 2.2.8 转 3.1-RELEASE 再到 3.1-Stable 后 ntpdate 新问题：找不到 suitable server
+2596811|L4|2.2.X 升 3.1 须用 make upgrade
+2596815|L4|判断服务器本身时间不对：leap 位双双为 11 属告警状态，参考时间还停在二月，都说明上游时钟异常
+2596816|L4|3.1-STABLE #4 机器（32M 内存、ahc7850 SCSI 控制器）CRON 报 malloc 指针页警告，自升级 3.1 起多次重编未解决
+2596819|L3|升级步骤：cvsup、buildworld、单用户 installworld、更新 /etc 与 /dev、重编内核；并试重建 utmp 与卸载 /proc
+2596821|L3|推测 ps、w、uptime 在四月初的快照里就已坏，自己拿到的是 19990410 快照，正在翻 CVS 网页接口
+2596823|L4|开发者判断这属于明确的同步问题，因此在 -stable 不必继续讨论
+2596824|L4|由 2.2.7-RELEASE 升 3.1-STABLE：改用 CVSup 取源后直接 make buildworld 失败，读完说明文档后才继续
+2596825|L4|3.1-STABLE 下串口控制台只见 [Boot] 提示，内核加载后无任何消息也拿不到登录提示，当前 /boot.config 只用 -P
+2596826|L4|wd2s1f: wdstart: timeout waiting to give command，随后 wd2: error 4<abort>
+2596827|L3|排查清单：procfs 是否挂在 /proc、是否写在 fstab、是否在内核、是否以 kld 载入、新编 GENERIC 下 ps 是否正常
+2596829|L4|新编 GENERIC 内核下 ps 仍不正常；加 options LKM 重编后 modstat 不再报 device not configured
+2596830|L3|自述见过同类问题：只 make world 更新源码却不重编内核就会出现，取回匹配的内核源码重编后即正常
+2596834|L4|用 egcs 编 egcs 建的共享库时出现未定义符号丢失；rtld 已改为将未解析弱引用映射为零
