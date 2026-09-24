@@ -1,0 +1,27 @@
+1129154|L4|以 fetch -o /dev/null 实测所给 URL 返回 Not Found 遂将 PR 挂起
+1129156|L4|改用 ftp -o /dev/null 复测同一地址仍报 404 Not Found 遂关闭 PR
+1129157|L4|更正网址拼写应为 project 而非 projects 并给出可用的 ftp 下载地址
+1129160|L3|质疑 jail 手册重写只是引入另一套需复制粘贴的脚本，相比直接用 jail(8) 或 sysutils/ezjail 不见得是改进
+1129162|L4|PR 179459 指 filemon(4) 示例函数声明为 static void open_filemon(void) 却含 return 0
+1129163|L3|PR 179497 建议 service.8 补一段 csh 补全示例，报 8.4-RELEASE amd64 环境
+1129172|L3|要求提交统一 diff 便于审查改动内容 表示不会查看所给的原始 HTML 稿件
+1129183|L3|提议建立 FreeBSD Fortran 专用邮件列表，理由是361个端口依赖 Fortran 编译器或库且相关经验分散
+1129185|L4|RFC 提出用 profiling 合并 ISBN 分支以解决双分支问题，并给出应用补丁后分别构建在线版与打印版的做法
+1129186|L4|RFC 质疑 FDP 写作指南里前三次出现缩写才用 acronym 标签的规定已过时，主张每次出现都标记但不在 role 属性中写定义
+1129195|L4|报告 FreeBSD 9.1-RELEASE amd64 上手册未说明 Opera 使用 linproc 才能跑 flash
+1129197|L4|DocBook 5.0 升级讨论中说明 systemitem 元素的 class 属性何时指定由自己决定
+1129201|L4|porters handbook 首页 Last modified on April 2000 by 为空系 pubdate 写死，给出改动办法
+1129203|L4|确认 porters handbook 首页 Last modified 显示异常已在 r41954 修复
+1129204|L4|报告 9.1 新装机照构建内核页做 make buildkernel 报 no previous prototype for yyparse
+1129206|L3|认为 buildworld 并非构建内核的前置条件，那些说明基本未变过
+1129209|L3|认为 XHTML 本就属在线格式，而 pdf 也可能在实际发布后作为在线快照发行，故宜同样与在线版分开处理
+1129211|L4|RFC 提议删除 handbook 存储章节的 RAID 一节，因 ccd 已废弃、ataraid 也被 graid 取代
+1129214|L3|说明自己只是要为新的虚拟机构建内核并非要升级到 10.0，但仍认为构建内核页把人带到错误入口
+1129216|L4|报告 handbook 19.3 节 gpart 示例应在 newfs 与 fstab 中使用分区而非卷，环境为 9.1
+1129223|L4|提交变更请求指出 jdk16 已弃用，要求把该情况反映到文档中，Release 字段 FreeBSD 10.0-CURRENT
+1129224|L3|补充指出 Oracle 已结束 Java6 支持，本周发布的 Java 6u51 只提供给有支持合同的客户
+1129227|L4|报告 mac_from_text 手册页建议的错误释放方式与 mac_t 类型不符
+1129228|L4|说明 ports.cgi 的 Last database update 问题已修好且未用特殊手段，并提示更新每两小时一次
+1129233|L4|指出 SSD 相关文章的 kernel 页仍要求在内核配置里加入 MFS、MD_ROOT 与 pseudo-device md，疑似过时
+1129234|L4|RFC 提议移除 handbook 存储章节的 Backups to Floppies 一节，理由是软盘已不适合作备份介质且新机不再配软驱
+1129239|L4|报告 mergemaster 维护者名单中 dougb 已不活跃应予移除，环境 FreeBSD 8.3-RELEASE-p3

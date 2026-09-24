@@ -1,0 +1,160 @@
+### PK 1047187 ###
+现叙述(55字): Adrian Chadd 认可在 STABLE 创建时禁用 profile 库,认为这样比重审重改膨胀代码省事
+### PK 1047187 ###
+===== 序 23556 | PK 1047187 =====
+DATE: 2011-12-02
+FROM: adrian at freebsd.org (Adrian Chadd) <None>
+SUBJ: WITHOUT_PROFILE=yes by default
+
+On 2 December 2011 09:51, David O'Brien <obrien@freebsd.org> wrote:
+
+> Wow, a single day of discussion in freebsd-current@ was sufficient to
+> invert a 17 year default.
+>
+> I'd like to see the profile libs remain built by default in -CURRENT.
+>
+> If you like, add it to the list of things to disable on -STABLE creation.
+
+It's easier to do that than go review/re-engineer bloated code. :)
+
+
+Adrian
+
+
+
+
+
+
+### PK 1047197 ###
+现叙述(59字): Doug Barton 附和称该需求仅惠及极少用户乃至开发者,如果真想用就自己把开关打开,好想法无论怎么讨论都是好想法
+### PK 1047197 ###
+===== 序 23566 | PK 1047197 =====
+DATE: 2011-12-02
+FROM: dougb at FreeBSD.org (Doug Barton) <None>
+SUBJ: WITHOUT_PROFILE=yes by default
+
+On 12/01/2011 22:41, Steve Kargl wrote:
+
+> Having a set of profiled libraries in-sync with the static
+> and shared libraries allows one to run the profiler on their
+> code when someone changes a library and that change causes
+> a dramatic change in the performance of one's code.
+
+And as Max pointed out in his OP, that only applies to a tiny fraction
+of our users, or even our developers. If you want to use them, turn the
+knob.
+
+> PS: David was not complaining about "fixing a 17 year old bug".
+> He was stating that a single day of discussion changing
+> a 17 year old practice seems a little too brief.
+
+If it's a good idea, it's a good idea no matter how many different ways
+we flog it. :)
+
+
+Doug
+
+-- 
+
+		"We could put the whole Internet into a book."
+		"Too practical."
+
+	Breadth of IT experience, and depth of knowledge in the DNS.
+	Yours for the right price.  :)  http://SupersetSolutions.com/
+
+
+
+
+
+
+
+### PK 1047207 ###
+现叙述(51字): Max Khon 回应称最重要的是合理的默认值,而默认开启 WITH_PROFILE 在他看来并不合理
+### PK 1047207 ###
+===== 序 23576 | PK 1047207 =====
+DATE: 2011-12-02
+FROM: fjoe at samodelkin.net (Max Khon) <None>
+SUBJ: WITHOUT_PROFILE=yes by default
+
+David,
+
+On Fri, Dec 2, 2011 at 3:35 PM, David O'Brien <obrien@freebsd.org> wrote:
+> On Fri, Dec 02, 2011 at 11:56:31AM +0700, Max Khon wrote:
+>> You still failed to name a single compelling reason to leave profiled
+>> libs even in -CURRENT.
+>
+> Sorry Joe, I don't think your reasoning is compelling.
+> I'm sure you know how to stick "NO_PROFILE=true" in your /etc/src.conf.
+>
+> How far do you want to take this? ?By this reasoning we should set all
+> the knobs to "NO" to speed up the build. ?I mean we're all competent
+> code builders running FreeBSD-current and know how to enable knobs in
+> /etc/src.conf.
+>
+> Is speeding up the build import important to you then the default
+> base system being an comfortable featureful development environment?
+
+The most important thing is to have reasonable defaults.
+Having WITH_PROFILE by default does not seem to be a reasonable default to me.
+
+Max
+
+
+
+
+
+
+### PK 1047220 ###
+现叙述(57字): Adrian Chadd 认为应顾及用户对新变动的适应度,建议让这些改动沉淀一段时间,让众人慢慢接受正在变化的现状
+### PK 1047220 ###
+===== 序 23589 | PK 1047220 =====
+DATE: 2011-12-02
+FROM: adrian at freebsd.org (Adrian Chadd) <None>
+SUBJ: CVS removal from the base
+
+I think you're missing the point a little.
+
+The point is, you have to keep in mind how comfortable people feel
+about things, and progress sometimes makes people uncomfortable. I
+think you should leave these changes bake for a while and let people
+get comfortable with the changing status quo.
+
+
+
+Adrian
+
+
+
+
+
+
+### PK 1047227 ###
+现叙述(51字): Steve Kargl 指出用户并不跑 freebsd-current,除非愿意接受其伴随的风险与瑕疵
+### PK 1047227 ###
+===== 序 23596 | PK 1047227 =====
+DATE: 2011-12-02
+FROM: sgk at troutmask.apl.washington.edu (Steve Kargl) <None>
+SUBJ: WITHOUT_PROFILE=yes by default
+
+On Fri, Dec 02, 2011 at 04:23:40PM +0000, Chris Rees wrote:
+> On 2 Dec 2011 15:57, "Lyndon Nerenberg" <lyndon@orthanc.ca> wrote:
+>>
+>>
+>> If you choose not to profile your code, that's entirely your choice.
+>> Breaking this functionality for everyone else who *does* make the effort to
+>> profile their code is a non-starter.
+> 
+> Nothing is being broken here, just a default being changed.
+> 
+> Users make up a greater proportion of our userbase than developers, so
+> sensible defaults for them are more appropriate, right?
+
+Users don't run freebsd-current (unless they are willing to
+accept the inherit risks/warts associated with it).
+
+-- 
+Steve
+
+
+
+

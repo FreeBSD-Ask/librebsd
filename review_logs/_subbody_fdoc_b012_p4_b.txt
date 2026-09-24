@@ -1,0 +1,1193 @@
+### PK 1129242 ###
+===== 序 22566 | PK 1129242 =====
+DATE: 2013-06-24
+FROM: kaduk at MIT.EDU (Benjamin Kaduk) <None>
+SUBJ: Misprint in Architecture Handbook?
+
+On Sun, 23 Jun 2013, Chip Senkbeil wrote:
+
+> Hello,
+>
+> I was taking a look at the guide for SSDs and FreeBSD (
+> http://www.freebsd.org/doc/en/articles/solid-state/index.html) and think
+> that there "might" be some old instructions. On the second page (
+> http://www.freebsd.org/doc/en/articles/solid-state/kernel.html), the
+> instructions say to add "options MFS", "options MD_ROOT", and
+> "pseudo-device md" to your kernel configuration. I've been searching
+> briefly (very briefly) and came across a fairly old post (
+> http://lists.freebsd.org/pipermail/freebsd-stable/2005-May/015115.html)
+> claiming that pseudo-device is no longer used or is at least deprecated.
+> Trying to add that option gave me a syntax error; so, I'm going out on a
+> limb to say that the option isn't supported? I later found in the generic
+> kernel that the line "device md" is already in place with the comment
+> "Pseudo devices."
+>
+> Another issue (this may or may not be a fault of my own) is regarding
+> "options MFS" as a suggested addition to the configuration. Attempt to
+> include the option and build the kernel yields an unknown option error.
+> I'll be digging around, but if this is blatantly no longer the correct
+> option, please let me know!
+>
+> The final option regarding MD_ROOT was already included in the generic
+> kernel; so, I guess that's fine to still reference.
+>
+> I haven't taken a look at the later pages since I wasn't able to build the
+> kernel. Since I'm not very familiar with FreeBSD, I wouldn't know what to
+> look for in terms of outdated material. If this page is indeed out of date,
+> it might be worth adding to the backlog to take a look at the rest of the
+> SSD material to ensure it isn't old.
+
+Hi Chip,
+
+I believe you are correct; unfortuately, the architecture handbook has 
+many places which are woefully out of date, and there is no ETA for fixes.
+
+Could you file a PR or three noting these issues? 
+(http://www.freebsd.org/send-pr.html)
+
+Thanks,
+
+Ben Kaduk
+
+
+
+
+
+
+### PK 1129254 ###
+===== 序 22578 | PK 1129254 =====
+DATE: 2013-06-25
+FROM: wblock at wonkity.com (Warren Block) <None>
+SUBJ: Handbook obsolescence scan: "The vinum Volume Manager"
+
+Next on the list of potentially outdated things in the Handbook: "The 
+vinum Volume Manager", a whole chapter on vinum.  Actually, it is really 
+now about gvinum.
+
+Are there any situations where new users should be advised to use gvinum 
+rather than ZFS or gconcat/gstripe/gmirror?
+
+What reasons are there for this chapter to remain in the Handbook given 
+the newer, simpler alternatives?
+
+If the information should remain, why should it be separate from the 
+GEOM chapter?
+
+
+
+
+
+
+### PK 1129256 ###
+===== 序 22580 | PK 1129256 =====
+DATE: 2013-06-25
+FROM: wblock at wonkity.com (Warren Block) <None>
+SUBJ: Handbook obsolescence scan: "The vinum Volume Manager"
+
+On Tue, 25 Jun 2013, Frank Leonhardt wrote:
+
+> On 25/06/2013 16:43, Warren Block wrote:
+>> Next on the list of potentially outdated things in the Handbook: "The vinum 
+>> Volume Manager", a whole chapter on vinum. Actually, it is really now about 
+>> gvinum.
+>> 
+>> Are there any situations where new users should be advised to use gvinum 
+>> rather than ZFS or gconcat/gstripe/gmirror?
+>> 
+>> What reasons are there for this chapter to remain in the Handbook given the 
+>> newer, simpler alternatives?
+>> 
+>> If the information should remain, why should it be separate from the GEOM 
+>> chapter?
+>
+> I remember reading this and the gmirror stuff at the same time and wondering 
+> what it was all about. Whilst I'm generally not in favour of chucking stuff 
+> out of a manual if it exists on the ground, at the very least this could do 
+> with a sanity warning. At the time I had no way of knowing whether one method 
+> or the other was deprecated. I suppose I made a lucky guess.
+
+That is exactly the problem with old information.  gvinum still works, 
+but there is little reason to recommend it over the newer solutions.
+
+Rather than just removing this chapter, it could be converted to a 
+separate article, along with an added introduction about when it was 
+removed from the Handbook and why.
+
+
+
+
+
+
+### PK 1129262 ###
+===== 序 22586 | PK 1129262 =====
+DATE: 2013-06-26
+FROM: wblock at wonkity.com (Warren Block) <None>
+SUBJ: Handbook obsolescence scan: "The vinum Volume Manager"
+
+On Tue, 25 Jun 2013, Benjamin Kaduk wrote:
+
+> On Tue, 25 Jun 2013, Warren Block wrote:
+>
+>> Next on the list of potentially outdated things in the Handbook: "The vinum 
+>> Volume Manager", a whole chapter on vinum.  Actually, it is really now 
+>> about gvinum.
+>> 
+>> Are there any situations where new users should be advised to use gvinum 
+>> rather than ZFS or gconcat/gstripe/gmirror?
+>> 
+>> What reasons are there for this chapter to remain in the Handbook given the 
+>> newer, simpler alternatives?
+>> 
+>> If the information should remain, why should it be separate from the GEOM 
+>> chapter?
+>
+> Hmm, I seem to recall there being desire to keep the documentation around the 
+> last time this question came up, but don't remember why.  Let's go rooting 
+> around in the archives...
+>
+> It seems that as of 2009, gvinum was still useful enough that I was happy to 
+> have documentation fixes for it 
+> (http://lists.freebsd.org/pipermail/freebsd-doc/2009-May/015913.html), though 
+> just two weeks later this thread 
+> (http://lists.freebsd.org/pipermail/freebsd-hackers/2009-May/028730.html) 
+> sees to indicate that it was dying already.  The documentation is always 
+> behind on the times...
+>
+> I thought there was an attempt to remove gvinum or the documentation thereof 
+> since then, but cannot find any record of it.  That means we don't get to 
+> re-analyze the arguments presented then, and can just do it.
+
+Moving it to an article should cover all the bases.  It won't be 
+first-line information in the Handbook, but can still be found.  And 
+eventually, if not already, we can have an archive section for obsolete 
+information that may still be useful to someone, somewhere, but not most 
+users.
+
+
+
+
+
+
+### PK 1129263 ###
+===== 序 22587 | PK 1129263 =====
+DATE: 2013-06-26
+FROM: rpaulo at FreeBSD.org (Rui Paulo) <None>
+SUBJ: ifconfig_wlanX=HOSTAP
+
+Hi,
+
+There's a new configuration mode for hostap: ifconfig_wlanX=HOSTAP. See http://svnweb.freebsd.org/base?view=revision&revision=252230
+
+Do you know if the FreeBSD handbook (or any other documentation besides man pages) needs to be changed?
+
+Thanks,
+--
+Rui Paulo
+
+
+
+
+
+
+
+### PK 1129269 ###
+===== 序 22593 | PK 1129269 =====
+DATE: 2013-06-27
+FROM: yaneurabeya at gmail.com (Garrett Cooper) <None>
+SUBJ: docs/180025: [PATCH] Document WITH*_SVNLITE
+
+
+>Number:         180025
+>Category:       docs
+>Synopsis:       [PATCH] Document WITH*_SVNLITE
+>Confidential:   no
+>Severity:       non-critical
+>Priority:       low
+>Responsible:    freebsd-doc
+>State:          open
+>Quarter:        
+>Keywords:       
+>Date-Required:
+>Class:          sw-bug
+>Submitter-Id:   current-users
+>Arrival-Date:   Thu Jun 27 11:30:01 UTC 2013
+>Closed-Date:
+>Last-Modified:
+>Originator:     Garrett Cooper
+>Release:        10-CURRENT
+>Organization:
+EMC Isilon
+>Environment:
+FreeBSD fuji-current.local 10.0-CURRENT FreeBSD 10.0-CURRENT #3 r+b278358-dirty: Sun Jun  9 16:05:39 PDT 2013     root at fuji-current.local:/usr/obj/usr/src/sys/FUJI-NOCOMPAT  i386
+>Description:
+The attached patch documents WITH*_SVNLITE after r251886 was committed to head.
+>How-To-Repeat:
+
+>Fix:
+
+
+Patch attached with submission follows:
+
+>From baac22b29ef2ace3a39d31058b2103862278e358 Mon Sep 17 00:00:00 2001
+From: Garrett Cooper <yanegomi at gmail.com>
+Date: Thu, 27 Jun 2013 04:24:52 -0700
+Subject: [PATCH] Document WITH*_SVNLITE
+
+Signed-off-by: Garrett Cooper <yanegomi at gmail.com>
+---
+ tools/build/options/WITHOUT_SVNLITE | 4 ++++
+ 1 file changed, 4 insertions(+)
+ create mode 100644 tools/build/options/WITHOUT_SVNLITE
+
+diff --git a
+...[正文已截断，共 1719 字符]
+
+
+
+### PK 1129293 ###
+===== 序 22617 | PK 1129293 =====
+DATE: 2013-03-03
+FROM: stephen at freebsd.org (Stephen Montgomery-Smith) <None>
+SUBJ: docs/176623: ctm-svs-cur list no longer operating.
+
+
+>Number:         176623
+>Category:       docs
+>Synopsis:       ctm-svs-cur list no longer operating.
+>Confidential:   no
+>Severity:       non-critical
+>Priority:       low
+>Responsible:    freebsd-doc
+>State:          open
+>Quarter:        
+>Keywords:       
+>Date-Required:
+>Class:          change-request
+>Submitter-Id:   current-users
+>Arrival-Date:   Sun Mar 03 19:40:04 UTC 2013
+>Closed-Date:
+>Last-Modified:
+>Originator:     Stephen Montgomery-Smith
+>Release:        FreeBSD 8.3-STABLE amd64
+>Organization:
+>Environment:
+System: FreeBSD wilberforce 8.3-STABLE FreeBSD 8.3-STABLE #0: Wed Jan 2 15:53:46 CST 2013 root at wilberforce:/usr/obj/usr/src/sys/GENERIC amd64
+
+
+	
+>Description:
+The ctm-svs-cur and ctm-svs-cur-fast mailing lists are no longer operating.  The FreeBSD handbook needs to be updated.
+	
+>How-To-Repeat:
+	
+>Fix:
+In section A.5.2, change the sentence:
+ctm-cvs-cur supports the entire CVS tree.
+to
+ctm-svn-cur supports the entire SVN tree.
+and change the link as well.
+	
+
+
+>Release-Note:
+>Audit-Trail:
+>Unformatted:
+
+
+
+
+
+
+### PK 1129303 ###
+===== 序 22627 | PK 1129303 =====
+DATE: 2013-03-04
+FROM: mirnshi at gmail.com (Paul Meng) <None>
+SUBJ: docs/176645: The example in man page netmap is wrong
+
+
+>Number:         176645
+>Category:       docs
+>Synopsis:       The example in man page netmap is wrong
+>Confidential:   no
+>Severity:       non-critical
+>Priority:       low
+>Responsible:    freebsd-doc
+>State:          open
+>Quarter:        
+>Keywords:       
+>Date-Required:
+>Class:          doc-bug
+>Submitter-Id:   current-users
+>Arrival-Date:   Mon Mar 04 18:40:01 UTC 2013
+>Closed-Date:
+>Last-Modified:
+>Originator:     Paul Meng
+>Release:        9.1
+>Organization:
+>Environment:
+FreeBSD bsd9 9.1-RELEASE FreeBSD 9.1-RELEASE #0 r243825: Tue Dec  4 09:23:10 UTC 2012     root at farrell.cse.buffalo.edu:/usr/obj/usr/src/sys/GENERIC  amd64
+>Description:
+The example in man page netmap is wrong. Struct netmap_request can not be found, 'buf_index' is not a member of struct netmap_ring, etc.
+
+     #include <net/netmap.h>
+     #include <net/netmap_user.h>
+     struct netmap_if *nifp;
+     struct netmap_ring *ring;
+     struct netmap_request nmr;
+
+     fd = open("/dev/netmap", O_RDWR);
+     bzero(&nmr, sizeof(nmr));
+     strcpy(nmr.nm_name, "ix0");
+     ioctl(fd, NIOCREG, &nmr);
+     p = mmap(0, nmr.memsize, fd);
+     nifp = NETMAP_IF(p, nmr.offset);
+     ring = NETMAP_TXRING(nifp, 0);
+     fds.fd = fd;
+     fds.events = POLLOUT;
+   
+...[正文已截断，共 1909 字符]
+
+
+
+### PK 1129304 ###
+===== 序 22628 | PK 1129304 =====
+DATE: 2013-03-04
+FROM: rfg at tristatelogic.com (Ronald F.Guilmette) <None>
+SUBJ: docs/176648: restore(8) man page is misleading/confusing
+
+
+>Number:         176648
+>Category:       docs
+>Synopsis:       restore(8) man page is misleading/confusing
+>Confidential:   no
+>Severity:       non-critical
+>Priority:       low
+>Responsible:    freebsd-doc
+>State:          open
+>Quarter:        
+>Keywords:       
+>Date-Required:
+>Class:          doc-bug
+>Submitter-Id:   current-users
+>Arrival-Date:   Mon Mar 04 20:00:01 UTC 2013
+>Closed-Date:
+>Last-Modified:
+>Originator:     Ronald F. Guilmette
+>Release:        FreeBSD 9.1-RELEASE amd64
+>Organization:
+entr0py
+>Environment:
+
+System: FreeBSD 9.1-RELEASE amd64
+
+>Description:
+
+The following text appears in the restore(8) man page:
+
+    The -r flag ... can be detrimental to one's health if
+    not used carefully (not to mention the disk).  An example:
+
+             newfs /dev/da0s1a
+             mount /dev/da0s1a /mnt
+             cd /mnt
+
+             restore rf /dev/sa0
+
+The above passage is confusing because first it is giving an omnious
+warning about bad effects that can derive from misusing the -r option,
+and then, immediately following that, it gives an example of _correct_
+usage of the -r option.
+
+It has been suggested that the material begining with "An example:" should
+be placed into its own separate p
+...[正文已截断，共 1710 字符]
+
+
+
+### PK 1129307 ###
+===== 序 22631 | PK 1129307 =====
+DATE: 2013-03-05
+FROM: jgh at FreeBSD.org (Jason Helfman) <None>
+SUBJ: [RFC] freebsd-update-server article update
+
+Hello All,
+
+Attached is a patch that introduces a number of updates to my article on how
+to create your own FreeBSD Update Server.
+
+Part of this update will also allow users to build update servers, as the
+code for the freebsd-update-server was in the projects repository in CVS
+that is no-longer available.
+
+The changes are as follows:
+
+* Add copyright for 2013
+* Point users to new source of software. (location name and source have
+changed).
+   * cvs -> svn
+   * freebsd-update-server -> freebsd-update-build
+* Add instructions how to get software, as download via tarball is
+no-longer an option.
+* Role change for Security Officer
+* Drop tip for rst packets as this is no longer an issues with all supported
+versions of FreeBSD.
+* Drop two tip comments as they have been merged into document. (one
+previously, and one for this diff)
+
+Any comments, suggestions and feedback are welcome. My documentation skills
+are not the greatest, so pardon any whitespace or placement issues and feel
+free to slap me with an editorial fish!
+
+Thanks!
+-jgh
+
+-- 
+Jason Helfman
+FreeBSD Committer | http://people.freebsd.org/~jgh | The Power To Serve
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: article.diff
+Type: text/x-diff
+Si
+...[正文已截断，共 1538 字符]
+
+
+
+### PK 1129314 ###
+===== 序 22638 | PK 1129314 =====
+DATE: 2013-03-06
+FROM: culot at FreeBSD.org (Frederic Culot) <None>
+SUBJ: docs/176685: porters-handbook: add a tip related to PORTEPOCH
+
+
+>Number:         176685
+>Category:       docs
+>Synopsis:       porters-handbook: add a tip related to PORTEPOCH
+>Confidential:   no
+>Severity:       non-critical
+>Priority:       low
+>Responsible:    freebsd-doc
+>State:          open
+>Quarter:        
+>Keywords:       
+>Date-Required:
+>Class:          change-request
+>Submitter-Id:   current-users
+>Arrival-Date:   Wed Mar 06 13:30:04 UTC 2013
+>Closed-Date:
+>Last-Modified:
+>Originator:     Frederic Culot
+>Release:        FreeBSD 10.0-CURRENT amd64
+>Organization:
+FreeBSD
+>Environment:
+System: FreeBSD freefall.freebsd.org 10.0-CURRENT FreeBSD 10.0-CURRENT #0 r247807: Mon Mar 4 19:35:47 UTC 2013 peter at freefall.freebsd.org:/usr/obj/usr/src/sys/FREEFALL amd64
+>Description:
+I believe the tip mentioned in the attached patch could be of some help
+to junior porters as it saves them the need to dive into bsd.port.mk
+to learn how the check for ports versions going backwards is done.
+
+Regards,
+Frederic
+>How-To-Repeat:
+>Fix:
+--- book.xml.diff begins here ---
+Index: book.xml
+===================================================================
+--- book.xml	(revision 41102)
++++ book.xml	(working copy)
+@@ -1025,6 +1025,19 @@
+ 	    incorrectly treated as a newer version since 2
+...[正文已截断，共 2167 字符]
+
+
+
+### PK 1129319 ###
+===== 序 22643 | PK 1129319 =====
+DATE: 2013-03-07
+FROM: mamalos at eng.auth.gr (George Mamalakis) <None>
+SUBJ: Default empty root password should be documented
+
+Hi all,
+
+Recently on one of my systems I installed a jail from scratch (I usually 
+copy my jails from other machines). Before running it, I checked to see 
+if the password format was the one I was expecting to be with vipw(8) 
+and I saw that the root password was empty. I understand that this is 
+the case with "make installworld" and that it is also the case when 
+installing a system from CLI; it's not the first time I noticed it, and 
+I suppose there is a reason for root's default password to be empty and 
+not starred out -probably to prevent someone from getting locked out 
+from the machine accidentally before setting a root password-. 
+Furthermore, I know that this is documented in jail(8)'s man page, but 
+due to the security risk imposed when someone forgets to set a password 
+for root, I see no reason why a reminder for setting the root password 
+should not be mentioned in the Handbook's jail section as well, with 
+bold fonts or in a warning-box.
+
+Thank you all for your time in advance,
+
+George Mamalakis.
+
+
+
+
+
+
+### PK 1129321 ###
+===== 序 22645 | PK 1129321 =====
+DATE: 2013-03-07
+FROM: cr at caltel.com (Cody Ritts) <None>
+SUBJ: Wiki / ZFS Booting
+
+Hello all,
+
+I have some suggestions for the wiki regarding root on zfs.
+
+In short, I think it would be EXTREMELY helpful to consolidate all of 
+the pages into two.
+
+1.  Booting to ZFS
+2.  Advanced ZFS partitioning
+
+The long story is that I have just spent several days documenting my 
+efforts to get multiple systems to boot from ZFS.  First, thank you to 
+all who have contributed to the wiki, I would not have been able to get 
+it done without you.
+
+That being said these are 11 pages I have found on the wiki:
+
+/RootOnZFS, /RootOnZFS/UFSBoot, /RootOnZFS/ZFSBootPartition, 
+/RootOnZFS/ZFSBootSlice, /RootOnZFS/GPTZFSBoot, 
+/RootOnZFS/GPTZFSBoot/Mirror, /RootOnZFS/GPTZFSBoot/RAIDZ1, 
+/RootOnZFS/GPTZFSBoot/RAIDZ2, /RootOnZFS/GPTZFSBoot/9.0-RELEASE, 
+/ZFSOnRoot, /ZFSOnRootWithZFSboot
+
+I have read all of those, plus another half dozen on the internet. While 
+the steps are largely the same, they all seem to have their own little 
+differences.  I have copied and pasted the commands from more than one 
+of them into virtual machines, and they would not boot.
+
+My overall experience was extremely draining.  I expected that when I am 
+copying and pasting commands from a wiki, and it does not boot, the 
+problem is not with the commands.  When there are different commands 
+being 
+...[正文已截断，共 6629 字符]
+
+
+
+### PK 1129334 ###
+===== 序 22658 | PK 1129334 =====
+DATE: 2013-03-09
+FROM: joel at freebsd.org (Joel Dahl) <None>
+SUBJ: Documenting various GEOM_* kernel options
+
+Hi,
+
+I recently noticed we haven't documented all of the various GEOM_* kernel
+options in any manual pages. I don't know if this is intentional or not. A
+quick grep reveals the following ("-" means not documented anywhere):
+
+GEOM_AES		-
+GEOM_BDE		Documented in gbde(4) manpage
+GEOM_BSD		-
+GEOM_CACHE		-
+GEOM_CONCAT		-
+GEOM_ELI		Documented in geli(8) manpage
+GEOM_FOX		Documented in geom_fox(4) manpage
+GEOM_GATE		Mentioned in hastd(8)
+GEOM_JOURNAL		-
+GEOM_LABEL		-
+GEOM_LINUX_LVM		Documented in geom_linux_lvm(4) manpage
+GEOM_MBR		-
+GEOM_MIRROR		-
+GEOM_MULTIPATH		-
+GEOM_NOP		-
+GEOM_PART_APM		Documented in gpart(8) manpage
+GEOM_PART_BSD		Documented in gpart(8) manpage
+GEOM_PART_EBR		Documented in gpart(8) manpage
+GEOM_PART_EBR_COMPAT	Documented in gpart(8) manpage
+GEOM_PART_GPT		Documented in gpart(8) manpage
+GEOM_PART_LDM		Documented in gpart(8) manpage
+GEOM_PART_MBR		Documented in gpart(8) manpage
+GEOM_PART_PC98		Documented in gpart(8) manpage
+GEOM_PART_VTOC8		Documented in gpart(8) manpage
+GEOM_PC98		-
+GEOM_RAID		-
+GEOM_RAID3		-	
+GEOM_SHSEC		-
+GEOM_STRIPE		-
+GEOM_SUNLABEL		-	
+GEOM_UZIP		Documented in geom_uzip(4) manpage
+GEOM_VIRSTOR		-
+GEOM_VOL		-
+GEOM_ZERO		-
+
+Both the gpart(8) and geli(8) manpages have kernel options in the SYNOPSIS,
+whi
+...[正文已截断，共 1670 字符]
+
+
+
+### PK 1129342 ###
+===== 序 22666 | PK 1129342 =====
+DATE: 2013-03-10
+FROM: jdc at koitsu.org (Jeremy Chadwick) <None>
+SUBJ: docs/176806: recv(2) man page grammatical fixes
+
+
+>Number:         176806
+>Category:       docs
+>Synopsis:       recv(2) man page grammatical fixes
+>Confidential:   no
+>Severity:       non-critical
+>Priority:       low
+>Responsible:    freebsd-doc
+>State:          open
+>Quarter:        
+>Keywords:       
+>Date-Required:
+>Class:          doc-bug
+>Submitter-Id:   current-users
+>Arrival-Date:   Sun Mar 10 08:30:00 UTC 2013
+>Closed-Date:
+>Last-Modified:
+>Originator:     Jeremy Chadwick
+>Release:        FreeBSD 9.1-STABLE amd64
+>Organization:
+>Environment:
+System: FreeBSD icarus.home.lan 9.1-STABLE FreeBSD 9.1-STABLE #0 r247132: Thu Feb 21 19:15:34 PST 2013 root at icarus.home.lan:/usr/obj/usr/src/sys/X7SBA_RELENG_9_amd64 amd64
+>Description:
+	recv(2) has the following description for EAGAIN:
+
+  [EAGAIN]           The socket is marked non-blocking, and the receive
+                     operation would block, or a receive timeout had been
+                     set, and the timeout expired before data were
+                     received.
+
+	Improper use of commas make the sentence difficult to comprehend,
+	and the word "were" should be "was".
+>How-To-Repeat:
+	n/a
+>Fix:
+	Patch is below.  Patch will also be available at the below URL
+	once I receive a PR number:
+
+	http://jdc.koitsu.org/fr
+...[正文已截断，共 2115 字符]
+
+
+
+### PK 1129353 ###
+===== 序 22677 | PK 1129353 =====
+DATE: 2013-03-11
+FROM: trh411 at gmail.com (Tom) <None>
+SUBJ: docs/176832: Proposed changes to jail.8 man page
+
+
+>Number:         176832
+>Category:       docs
+>Synopsis:       Proposed changes to jail.8 man page
+>Confidential:   no
+>Severity:       non-critical
+>Priority:       low
+>Responsible:    freebsd-doc
+>State:          open
+>Quarter:        
+>Keywords:       
+>Date-Required:
+>Class:          doc-bug
+>Submitter-Id:   current-users
+>Arrival-Date:   Mon Mar 11 03:40:00 UTC 2013
+>Closed-Date:
+>Last-Modified:
+>Originator:     Tom
+>Release:        9.1-RELEASE GENERIC
+>Organization:
+N/A
+>Environment:
+FreeBSD imacfbsd 9.1-RELEASE FreeBSD 9.1-RELEASE #0 r243825: Tue Dec  4 09:23:10 UTC 2012     root at farrell.cse.buffalo.edu:/usr/obj/usr/src/sys/GENERIC  amd64
+>Description:
+Proposing the following changes to the jail.8 man page (r248141):
+
+1) switch the order of the 'jail -c' and 'jail -r' commands in the description of the -rc option since as ordered they would do just the opposite of what the text states.
+
+2) change all 30 instances of the word 'prison' to 'jail'. The word 'jail' is used 256 times in the man page, the word 'prison' is used 30 times. Since there does not seem to be any special meaning to the word 'prison' in the context of a jail, the text should consistently use the word 'jail' to refer to a 'jail' or its attributes.
+>How-To-R
+...[正文已截断，共 9624 字符]
+
+
+
+### PK 1129354 ###
+===== 序 22678 | PK 1129354 =====
+DATE: 2013-03-11
+FROM: jgh at FreeBSD.org (Jason Helfman) <None>
+SUBJ: docs/176836: [patch] porters-handbook: remove information on
+ deprecated OPTIONS framework
+
+
+>Number:         176836
+>Category:       docs
+>Synopsis:       [patch] porters-handbook: remove information on deprecated OPTIONS framework
+>Confidential:   no
+>Severity:       non-critical
+>Priority:       low
+>Responsible:    freebsd-doc
+>State:          open
+>Quarter:        
+>Keywords:       
+>Date-Required:
+>Class:          change-request
+>Submitter-Id:   current-users
+>Arrival-Date:   Mon Mar 11 07:00:00 UTC 2013
+>Closed-Date:
+>Last-Modified:
+>Originator:     Jason Helfman
+>Release:        FreeBSD 10.0-CURRENT amd64
+>Organization:
+>Environment:
+System: FreeBSD freefall.freebsd.org 10.0-CURRENT FreeBSD 10.0-CURRENT #0 r247807: Mon Mar 4 19:35:47 UTC 2013 peter at freefall.freebsd.org:/usr/obj/usr/src/sys/FREEFALL amd64
+
+
+	
+>Description:
+It is no longer necessary to mention old-style of port options.
+This patch removes it.
+
+
+>How-To-Repeat:
+	
+>Fix:
+
+Index: books/porters-handbook/book.xml
+===================================================================
+--- books/porters-handbook/book.xml	(revision 41156)
++++ books/porters-handbook/book.xml	(working copy)
+@@ -4574,27 +4574,6 @@
+ .include &lt;bsd.port.mk&gt;</programlisting>
+ 	  </example>
+ 
+-	  <example id="ports-options-old-styl
+...[正文已截断，共 2017 字符]
+
+
+
+### PK 1129363 ###
+===== 序 22687 | PK 1129363 =====
+DATE: 2013-03-11
+FROM: stephenfisher at outlook.com (Stephen Fisher) <None>
+SUBJ: docs/176864: tzfile man page has wrong path to tzfile.h
+
+
+>Number:         176864
+>Category:       docs
+>Synopsis:       tzfile man page has wrong path to tzfile.h
+>Confidential:   no
+>Severity:       non-critical
+>Priority:       low
+>Responsible:    freebsd-doc
+>State:          open
+>Quarter:        
+>Keywords:       
+>Date-Required:
+>Class:          doc-bug
+>Submitter-Id:   current-users
+>Arrival-Date:   Mon Mar 11 21:50:00 UTC 2013
+>Closed-Date:
+>Last-Modified:
+>Originator:     Stephen Fisher
+>Release:        9.1-RELEASE
+>Organization:
+>Environment:
+FreeBSD <hostname omitted> 9.1-RELEASE FreeBSD 9.1-RELEASE #0 r243825: Tue Dec  4 09:23:10 UTC 2012     root at farrell.cse.buffalo.edu:/usr/obj/usr/src/sys/GENERIC  amd64
+>Description:
+The manpage for tzfile(5) says under the synopsis that the include file tzfile.h is in /usr/src/lib/libc/stdtime/, but it's really in /usr/src/contrib/tzcode/stdtime/
+>How-To-Repeat:
+
+>Fix:
+
+
+>Release-Note:
+>Audit-Trail:
+>Unformatted:
+
+
+
+
+
+
+### PK 1129365 ###
+===== 序 22689 | PK 1129365 =====
+DATE: 2013-03-12
+FROM: linimon at FreeBSD.org (linimon at FreeBSD.org) <None>
+SUBJ: docs/176871: [patch] remove ded(1) reference from
+ default_colors(3x)
+
+Old Synopsis: [patch] remove ded(1) reference from manpage
+New Synopsis: [patch] remove ded(1) reference from default_colors(3x)
+
+Responsible-Changed-From-To: freebsd-bugs->freebsd-doc
+Responsible-Changed-By: linimon
+Responsible-Changed-When: Tue Mar 12 09:45:53 UTC 2013
+Responsible-Changed-Why: 
+Over to maintainer(s).
+
+http://www.freebsd.org/cgi/query-pr.cgi?pr=176871
+
+
+
+
+
+
+### PK 1129374 ###
+===== 序 22698 | PK 1129374 =====
+DATE: 2013-03-13
+FROM: KOT at MATPOCKuH.Ru (Dmitry Afanasiev) <None>
+SUBJ: docs/176915: cas(4) man page mistype
+
+
+>Number:         176915
+>Category:       docs
+>Synopsis:       cas(4) man page mistype
+>Confidential:   no
+>Severity:       non-critical
+>Priority:       low
+>Responsible:    freebsd-doc
+>State:          open
+>Quarter:        
+>Keywords:       
+>Date-Required:
+>Class:          doc-bug
+>Submitter-Id:   current-users
+>Arrival-Date:   Wed Mar 13 12:10:00 UTC 2013
+>Closed-Date:
+>Last-Modified:
+>Originator:     Dmitry Afanasiev
+>Release:        9.1
+>Organization:
+>Environment:
+FreeBSD orion 9.1-STABLE FreeBSD 9.1-STABLE #14 r247546: Fri Mar  1 19:52:15 MSK 2013     root at orion:/usr/obj/usr/src/sys/orion  amd64
+
+>Description:
+cas(4) man page mistype:
+     Alternatively, to load the driver as a module at boot time, place the
+     following line in loader.conf(5):
+
+           if_cas="YES"
+
+must be:
+           if_cas_load="YES"
+
+>How-To-Repeat:
+
+>Fix:
+
+
+>Release-Note:
+>Audit-Trail:
+>Unformatted:
+
+
+
+
+
+
+### PK 1129377 ###
+===== 序 22701 | PK 1129377 =====
+DATE: 2013-03-13
+FROM: joel at freebsd.org (Joel Dahl) <None>
+SUBJ: Documenting various GEOM_* kernel options
+
+On Sat, Mar 09, 2013 at 10:11:23AM +0100, Joel Dahl wrote:
+>
+> I recently noticed we haven't documented all of the various GEOM_* kernel
+> options in any manual pages.
+>
+> Both the gpart(8) and geli(8) manpages have kernel options in the SYNOPSIS,
+> which probably isn't correct for section 8 manpages.
+> 
+> What about using the SYNOPSIS in the geom(4) manpage? Opinions?
+
+I have something like the attached patch in mind.
+
+-- 
+Joel
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: geom.diff
+Type: text/x-diff
+Size: 2891 bytes
+Desc: not available
+URL: <http://lists.freebsd.org/pipermail/freebsd-doc/attachments/20130313/ca463418/attachment.diff>
+
+
+
+
+
+
+### PK 1129379 ###
+===== 序 22703 | PK 1129379 =====
+DATE: 2013-03-13
+FROM: kaduk at MIT.EDU (Benjamin Kaduk) <None>
+SUBJ: Documenting various GEOM_* kernel options
+
+On Wed, 13 Mar 2013, Joel Dahl wrote:
+
+> On Sat, Mar 09, 2013 at 10:11:23AM +0100, Joel Dahl wrote:
+>>
+>> I recently noticed we haven't documented all of the various GEOM_* kernel
+>> options in any manual pages.
+>>
+>> Both the gpart(8) and geli(8) manpages have kernel options in the SYNOPSIS,
+>> which probably isn't correct for section 8 manpages.
+>>
+>> What about using the SYNOPSIS in the geom(4) manpage? Opinions?
+>
+> I have something like the attached patch in mind.
+
+That looses the explicit instructions for loading the module at boot-time, 
+but otherwise seems plausible.
+
+-Ben
+
+
+
+
+
+
+### PK 1129401 ###
+===== 序 22725 | PK 1129401 =====
+DATE: 2013-03-16
+FROM: fernando.apesteguia at gmail.com (Fernando) <None>
+SUBJ: docs/177025: [PATCH] lsearch.3 manual page example addition
+
+
+>Number:         177025
+>Category:       docs
+>Synopsis:       [PATCH] lsearch.3 manual page example addition
+>Confidential:   no
+>Severity:       non-critical
+>Priority:       low
+>Responsible:    freebsd-doc
+>State:          open
+>Quarter:        
+>Keywords:       
+>Date-Required:
+>Class:          doc-bug
+>Submitter-Id:   current-users
+>Arrival-Date:   Sat Mar 16 17:40:01 UTC 2013
+>Closed-Date:
+>Last-Modified:
+>Originator:     Fernando
+>Release:        9.0-RELEASE
+>Organization:
+OpenSistemas
+>Environment:
+FreeBSD beastie 9.0-RELEASE FreeBSD 9.0-RELEASE #0: Tue Jan  3 07:46:30 UTC 2012     root at farrell.cse.buffalo.edu:/usr/obj/usr/src/sys/GENERIC  amd64
+>Description:
+We lack an example for the lsearch(3)/lfind(3) man pages.
+We should improve documentation with more examples.
+>How-To-Repeat:
+man lsearch
+>Fix:
+Apply the attached patch.
+
+Since lsearch is referenced by the hsearch(3) and bsearch(3) man pages, and all these functions work pretty much the same way, I think this one should suffice as a reference for all of them
+
+Patch attached with submission follows:
+
+--- /usr/src/lib/libc/stdlib/lsearch.3	2012-01-03 04:26:05.000000000 +0100
++++ lsearch.3	2013-03-15 20:27:22.000000000 +0100
+@@ -81,6 +81,49 @
+...[正文已截断，共 2377 字符]
+
+
+
+### PK 1129402 ###
+===== 序 22726 | PK 1129402 =====
+DATE: 2013-03-16
+FROM: knezour at weboutsourcing.cz (Ondra Knezour) <None>
+SUBJ: docs/177031: Handbook: 5.6 Using the Ports Collection - wrong example
+
+
+>Number:         177031
+>Category:       docs
+>Synopsis:       Handbook: 5.6 Using the Ports Collection - wrong example
+>Confidential:   no
+>Severity:       non-critical
+>Priority:       low
+>Responsible:    freebsd-doc
+>State:          open
+>Quarter:        
+>Keywords:       
+>Date-Required:
+>Class:          doc-bug
+>Submitter-Id:   current-users
+>Arrival-Date:   Sat Mar 16 21:20:00 UTC 2013
+>Closed-Date:
+>Last-Modified:
+>Originator:     Ondra Knezour
+>Release:        
+>Organization:
+>Environment:
+>Description:
+Handbook page http://www.freebsd.org/doc/en_US.ISO8859-1/books/handbook/ports-using.html contains wrong example for make fetch-recursive option. Sentence "Use makefetch-recursive fetch to fetch all the dependencies of a port." should read "Use make fetch-recursive to fetch all the dependencies of a port."
+
+
+>How-To-Repeat:
+
+>Fix:
+Change sentence Use makefetch-recursive fetch to fetch all the dependencies of a port to Use make fetch-recursive to fetch all the dependencies of a port.
+
+>Release-Note:
+>Audit-Trail:
+>Unformatted:
+
+
+
+
+
+
+### PK 1129407 ###
+===== 序 22731 | PK 1129407 =====
+DATE: 2013-03-17
+FROM: des at des.no (Dag-Erling Smørgrav) <None>
+SUBJ: Tagged lists with multiple tags in mdoc
+
+I need to make a tagged list where some items have multiple tags - for
+instance,
+
+    function1()
+    function2()
+    function3()
+            These are the first three functions.
+
+    function4()
+            This is the fourth function.
+
+If I use
+
+.Bl -tag
+.It Fn function1
+.It Fn function2
+.It Fn function3
+These are the first three functions.
+.It Fn function4
+This is the fourth function.
+.El
+
+groff will insert blank lines after function1() and function2(), which
+I'd like to avoid.  Conversely, if I use -compact, it will omit the
+blank lines between before function4() and between the list and the
+surrounding text, which is also wrong.
+
+I also tried
+
+.It Fn function1 , Fn function2 , Fn function3
+
+but this is far less readable, and if there are enough items to cause
+groff to wrap, the second line will be indented:
+
+    function1(), function2(), function3(), function4(), function5(),
+            function6(), function7(), function8()
+            These are the first eight functions.
+
+Is there a non-hackish (or not-too-hackish) way to achieve the desired
+result?
+
+DES
+-- 
+Dag-Erling Sm?rgrav - des at des.no
+
+
+
+
+
+
+### PK 1129413 ###
+===== 序 22737 | PK 1129413 =====
+DATE: 2013-03-18
+FROM: alexwebr at gmail.com (Alex Weber) <None>
+SUBJ: ThwackAFAQ release-freq
+
+Patch for ThwackAFAQ entry 'release-freq', or FAQ entry "1.10. When are
+FreeBSD releases made?"
+
+-Alex
+-------------- next part --------------
+Index: en_US.ISO8859-1/books/faq/book.xml
+===================================================================
+--- en_US.ISO8859-1/books/faq/book.xml	(revision 41257)
++++ en_US.ISO8859-1/books/faq/book.xml	(working copy)
+@@ -515,7 +515,7 @@
+ 	    pages on the &os; Web site.</para>
+ 
+ 	  <para>For people who need or want a little more excitement,
+-	    binary snapshots are made daily as discussed above.</para>
++	    binary snapshots are made weekly as discussed above.</para>
+ 	</answer>
+       </qandaentry>
+ 
+
+
+
+
+
+
+### PK 1129414 ###
+===== 序 22738 | PK 1129414 =====
+DATE: 2013-03-18
+FROM: alexwebr at gmail.com (Alex Weber) <None>
+SUBJ: ThwackAFAQ custom-boot-floppy
+
+Patch for ThwackAFAQ custom-boot-floppy, which is FAQ entry "3.6. How
+can I make my own custom release or install disk?".
+-------------- next part --------------
+Index: en_US.ISO8859-1/books/faq/book.xml
+===================================================================
+--- en_US.ISO8859-1/books/faq/book.xml	(revision 41257)
++++ en_US.ISO8859-1/books/faq/book.xml	(working copy)
+@@ -1257,8 +1257,8 @@
+ 	  <para>Customized &os; installation media can be created by
+ 	    building a custom release.  Follow the instructions in the
+ 	    <ulink
+-	      url="&url.articles.releng;/article.html">Release Engineering</ulink>
+-	    article.</para>
++	      url="&url.articles.releng;/article.html#release-build">Release Engineering</ulink>
++	    article and take a look at &man.release.7;.</para>
+ 	</answer>
+       </qandaentry>
+ 
+
+
+
+
+
+
+### PK 1129420 ###
+===== 序 22744 | PK 1129420 =====
+DATE: 2013-03-18
+FROM: fbsd8 at a1poweruser.com (Fbsd8) <None>
+SUBJ: Handbook Jail Chapter rewrite available for critique
+
+To all interested parties;
+
+I have completed the final draft of the total rewrite of FreeBSD's 
+handbook Chapter 16 on Jails.
+
+Before submitting my work for submission to the documentation group for 
+insertion in the handbook I am looking for critique of the work to find 
+errors in concept, wrong use of words, or anything to make it better.
+
+All feedback welcomed.
+
+Use this URL to access it  http://www.jails.a1poweruser.com/
+
+
+Thank You.
+
+
+
+
+
+

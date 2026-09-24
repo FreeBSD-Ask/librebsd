@@ -1,0 +1,43 @@
+2596684|L4|在 2.2.5R 上 buildworld 出现与 2.2.8-19990120-SNAP 相同的 DES 警告，编完 lkms 后无任何错误即停止
+2596687|L4|3.1-STABLE 崩溃而 2.2.8 在同样硬件正常，涉及 ASUS P2B-S 与 FIC PA-2013 两组配置及 CSC 宽 SCSI 卡
+2596689|L3|用脚本自动 config 与构建内核，其中 domainname 取 TCP/IP 域名；并质疑 config 后为何不自动 make depend
+2596691|L4|3.1-19990309-STABLE 486 机每两天崩一次，根与 /usr 文件系统损坏，fsck 报 STILL DIRTY 并要求重跑 dsck
+2596693|L4|3.1-Stable 写写保护 msdos 软盘时崩溃；atapi 光驱无法挂 /dev/wcd0c，改挂 /dev/acd0a 也报设备忙
+2596694|L4|两台机同为 3.1-STABLE，其中一台启动时 PCI 设备查找行为异常，附 dmesg 供排查
+2596695|L3|3.1 自带新版 sendmail 的 relay-domains 需自行授权本机域名，建议安装与 make world 代劳
+2596697|L4|-STABLE 在 P2 400、64MB RAM、4GB IDE 硬盘机器上安装，进行到 gimp-1.x 时内核崩溃
+2596698|L4|3.1-RELEASE 重启报 changing root device to wd2s1a 与 wd2a，随后 panic can't mount /
+2596699|L3|不要用 defaults 覆盖 rc.conf，应复制到 /etc/rc.conf.local 再编辑
+2596700|L3|补充磁盘配置：FreeBSD 盘位于第二个控制器的 IDE 主盘，第一个控制器仅一块盘
+2596701|L3|自己曾误装到 wd2，重启报 changing root device to wd1a；解法是启动停顿处敲 help 找设置根设备命令
+2596705|L4|releng_3 中 options BRIDGE 疑已坏：源码不到 24 小时且无相关提交，配置同时含 DUMMYNET 与 BRIDGE
+2596707|L3|疑与 shell 相关：用户设为 tcsh 时同样出错，而 root 在控制台用 sh 能登录
+2596708|L3|猜测是 shell 需要 aout 库而未加载，自己升级时曾久试 ldconfig 才载入 aout 库，简易办法是改用 ELF 版 shell
+2596712|L3|版本差异：v3.1 可直接手改 rc.conf，v2.2.6 则应改 rc.conf.local
+2596715|L4|3.1-STABLE 上于 rtfree 崩溃
+2596717|L3|一般应改 rc.conf.local，但安装或升级时自己直接编辑 /stand/rc.conf，也可复制 /etc/rc.conf 过去
+2596718|L4|cvsup 3.1 后 config kernel 完成，但 Makefile 中 MFILES= all: 为空，make install 报没有内核
+2596719|L4|软更新在多台繁忙机器上跑数月稳定；tunefs 根分区直接做即可
+2596722|L4|3.1-STABLE 装在 Apricot Shogun 上 xntpd 无法同步，同机 RedHat 5.2 正常；40 次重启中 TSC 时钟漂移
+2596724|L4|软更新已用于生产环境无问题，其中一台为 Squid 代理，512Mb 内存、3 块 9Gb 加 4.5Gb 磁盘、现存 800,000 文件
+2596725|L3|早年弱配置机器上软更新出过严重问题，但当前一周旧的 3.1-STABLE 上运行正常
+2596726|L4|Samba 在 3.0-beta 上与两台 Windows 98 客户端正常，升级到 3.1-Stable 后无法登录，提示密码错误或拒绝访问
+2596727|L3|建议确认是否 securelevel>1，并彻底关闭 BIOS 中所有 APM 选项，某些 BIOS 需特定操作才能完全禁用
+2596731|L3|从未在跑软更新的机器上见过 panic；即便如此也绝不会把根分区调成软更新，心里一直有警戒
+2596732|L3|提示有一个与时钟相关的 sysctl，可在 LINT 里找到引用，猜测靠近 APM 部分
+2596735|L4|3.1-RELEASE 安装程序能读到 3C509b 网卡信息却无法收发数据，该卡在 2.2.x 与 3.0-STABLE 上均正常
+2596736|L4|3.1-STABLE 下 ISA 3C509B 同样被识别但收发异常，已退回 ne2000 卡
+2596740|L4|光驱损坏且无法卸载，报 atapi0.0: READ_BIG res.code 0x1 st 0x51 err 0x34 与 wcd0 i/o error
+2596741|L3|3C905B 在一台 3.1-STABLE 机器上作为 SAMBA 与 pc-nfs 服务器稳定使用约 5 个月
+2596743|L4|同类 Samba 问题：在 /usr/local/etc/smb.conf 打开 encrypt passwords = yes 并重跑 smbpasswd
+2596744|L4|在自己机器 grep blackjack /etc/services 得到 1025/tcp 与 1025/udp，判断本机跑着 blackjack
+2596745|L3|指出有进程占着 1025 端口，用 grep ^blackj /etc/services 可确认该端口对应 blackjack 服务
+2596746|L3|提出另一种可能：非特权端口的低端随机被某条连接占用
+2596747|L4|以 root 执行 ps -x 看不到 smbd 却有两个 nmbd，杀掉重跑 nmbd 与 smbd 后仍不出现
+2596748|L3|经排查后自述那些 blackjack 端口的连接实际来自 squid
+2596749|L4|make release 也坏了：vn 伪设备在内核里且设备节点存在，但已不再像过去那样加载 vn 内核模块
+2596752|L4|3.1-STABLE #16 上 ps 完全不可用，报 ps: bad namelist，而 top 工作正常
+2596754|L3|回答怀疑方向：只要 ps 的版本与内核版本匹配，就不会有问题
+2596757|L4|3.1-RELEASE 上以 LINT 为基编译内核后出现同样问题，改用 GENERIC 作基后解决
+2596759|L3|这些网卡有时进入怪异模式弄坏所有收到的帧，通常在启动别的 OS 再回 FreeBSD 时发生
+2596760|L3|认为根分区本不该被写入，唯一可能需要的是 /tmp，自己把 /tmp 做成挂载点没有问题，也可做成 MFS 分区

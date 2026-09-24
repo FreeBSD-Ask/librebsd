@@ -1,0 +1,28 @@
+1129924|L4|按 handbook 的 adding-swap-space 在 FreeBSD 10-CURRENT 上创建 swapfile 失败
+1129925|L3|powerpc 发行页构建报标签不匹配，第 34 行 td 与 tr 不匹配，第 39 与 40 行 a 与 td 不匹配
+1129930|L4|Kostik Belousov 不认可 wait(2) 人页新增导句的叙述腔，认为 broadest 与 distiction 应换说法
+1129932|L4|认可 broadest 含混，提议改述 wait6() 为 is the most general function in this family
+1129934|L4|质疑 USE_GCC 文档改为通用化示例，问 USE_GCC 设为 4.2+ 时会装 lang/gcc 还是 ports 树中的较旧版本
+1129937|L4|报告 projects 页面 syslog-sec 项目已停滞约十年，请求移除或更新，代码与文档在 sourceforge
+1129938|L4|提议为 handbook 新增 bhyve 章节，bhyve 是 FreeBSD 10 基系统的新 hypervisor，现有章节只有 VirtualBox
+1129944|L4|答复 PR：切换 pkgng 不要求存在 repositories，仅用于 ports 也正常工作
+1129950|L4|指出手册目录中第 22 章为 Virtualization，而 vinum 章节也编号第 22 章且不在目录内
+1129951|L4|判定 vinum 章节编号重复并非手册问题，而是该页面为 stale webpage
+1129954|L4|拟把 __FreeBSD_version 取值表移出 dos and don't 段移入附录，并新增类似 uses.xml 的文件
+1129956|L3|认为 Mac 与 FreeBSD 底层相似，GUI 只是遮住复杂度，FreeBSD 从未设计给不熟练操作者使用
+1129957|L4|通告 doc 树自 10 月 24 日起 slush 以配合 10.0R 翻译收尾，lang 与 htdocs 文档不受该冻结限制
+1129969|L4|改写 wait(2) 全页，把 wait4() 与 wait6() 并列为通用接口，说明 WTRAPPED 与 WEXITED 对旧接口为隐式设定
+1129970|L4|指出 wait(2) 新导句强调与 wait4() 的差异，但前文未描述 wait4()，建议改述为 distinctive features
+1129984|L4|报告从渲染后 Handbook 复制 programlisting 与 screen 内容时换行丢失，示例见 30.6.5.5 节，最终改用 xml 源
+1129985|L4|Firefox 在 FreeBSD 与 Windows 上均丢，IE on Windows 复制正常，Midori on FreeBSD 复制正确
+1129989|L4|10-RELEASE 上修补 mps 的 LSI firmware 会 panic 并挂死，mav 已在 10/stable 修复，建议入 errata
+1129999|L4|报 FreeBSD/i386 10.0 及多个 beta 的 filesystem 异常，不限于特定硬件，KVM 与 Xen 下均现
+1130001|L4|报告 fsck(8) manpage 未说明省略 -t 或 -T 时发生什么
+1130003|L4|Glen Barber 判定这是硬件配置相关的内核问题而非文档问题，起因仍未知，需更多具体信息
+1130005|L4|引 Glen Barber 清单：AMD piledriver 配 Linux+KVM/Xen，Intel Nehalem 配 NetBSD+Xen
+1130006|L4|主张 FreeBSD/i386 10 在三大 type 1 virtualiser 下完全不可用且会导致 data loss，errata 严重淡化问题
+1130007|L4|称该问题未在其 VirtualBox host 上出现
+1130009|L4|认为 errata 并非淡化，已明说所有 VirtualBox 版本均受影响，建议补充其他已知失效的模拟器
+1130010|L4|认为 Grossly 属主观措辞，要求给出具体配置信息，最好以 PR 形式提出
+1130015|L4|引 Torbjorn：Xen 客户机 apic = 1，重启后 sha1 /bin/cat 结果不一致；Allan 称 Glen 要 host 侧细节
+1130018|L4|报告 newcons wiki 的 Testing 一节只给出 #device vga 等指令未说明应编辑哪个文件

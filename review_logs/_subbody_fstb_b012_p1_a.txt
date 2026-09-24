@@ -1,0 +1,1869 @@
+### PK 2596684 ###
+===== 序 22000 | PK 2596684 =====
+DATE: 1999-04-06
+FROM: Gabriel <gabriel@discover.laker.net> <None>
+SUBJ: Re: Buildworld problem w/ 2.2.8-19990120-SNAP
+
+Hello again,
+
+I just tried to buildworld on a 2.2.5R box and had the same DES warnings as
+the 2.2.8-19990120-SNAP box.
+After fbsd compiled the lkms (2.2.5R), it stopped compiling (w/o any errors).
+I assume that means it has completed buildworld (a text message saying that
+Buildworld was completed successfully would have been nice for people who
+have never built the world before).  Can safely I installworld now, or should
+I worry about those DES errors?  The first time I tried buildworld w/ -j4
+(this is on a Pentium Classic 166 MHz).  Could the ccd.c errors have been
+caused by the -j4 option? I wiped /usr/obj and avoided using the -j4 option for
+later buildworld attempts (since I used -DNOLKM, I dont know if removing -j4
+fixed the ccd.c errors).
+
+> I have been trying to buildworld on FBSD 2.2.8-19990120-SNAP.
+> I cvsupped before buildworld.
+> Compilation stopped with many warnings and parse errors when reaching ccd.c:
+> Here are some of the errors or ccd.c (there were about 160 errors):
+> 
+> ===> lkm/ccd
+> --- ccd.h ---
+> --- vnode_if.h ---
+> --- ccd.o ---
+> --- ccd.h ---
+> echo "#define NCCD 4" > ccd.h
+> --- vnode_if.h ---
+> sh /usr/src/lkm/ccd/../../sys/kern/vnode_if.sh /usr/src/lkm/ccd/../../sys/kern/vnode_if.src
+> --- ccd.o 
+...[正文已截断，共 4148 字符]
+
+
+
+### PK 2596687 ###
+===== 序 22003 | PK 2596687 =====
+DATE: 1999-04-06
+FROM: Rahul Dhesi <dhesi@rahul.net> <None>
+SUBJ: 3.1-STABLE + specific hardware crashes, 2.2.8 ok on same hardware
+
+I am encountering an odd situation.  I am doing experiments with two
+machines and two OSs.
+
+Configuration I:  ASUS P2B-S m/b, Pentium II 400 MHz, 256M ECC memory
+	Configuration Ia:  Using onboard SCSI.
+	Configuration Ib:  Onboard SCSI disabled, Symbios-based
+			CSC wide SCSi card added.
+
+Configuration II:  FIC PA-2013 m/b, AMD K6-2 380 MHz, 128M ECC memory,
+		Symbios-based CSC wide SCSi card.
+
+Both have Netgear FA310TX (Tulip) network cards.
+
+The CSC SCSI card shows up at boot time as
+'ncr 53c875 fast20 wide scsi'.
+
+The operating systems are:
+- FreeBSD 3.1-STABLE updated via cvsup on April 3rd.  (Called 3.1 below.)
+	I used the exact same OS disk in all experiments, i.e., moved the
+	disk from machine to machine.
+
+- FreeBSD 2.2.8-19990120-SNAP. (Called 2.2.8 below.)
+
+The 'intensive processing' below involves doing the following concurrently:
+   - using rsync to copy fileystem A to filesystem B, repeated in a loop
+   - rm -rf on filesystem B, repeated in a loop
+
+Thus we have lots of file copies and directory creates going on, 
+concurrently with rm -rf.
+
+Here is what I find.
+
+1. Configuration Ia + 3.1:  Repeatedly crashes every 1-2 hours
+	under intensive processing.  Crash dump backtrace is completely
+	different each t
+...[正文已截断，共 2847 字符]
+
+
+
+### PK 2596689 ###
+===== 序 22005 | PK 2596689 =====
+DATE: 1999-04-07
+FROM: Rahul Dhesi <dhesi@rahul.net> <None>
+SUBJ: Re: Debug kernel by default (was: System size with -g)
+
+FWIW, I have been using the below script to config and build new
+kernels.  Note that `domainname` yields the TCP/IP domain in my case.
+
+BTW, would we ever want to do a 'config' and not follow that with
+'make depend' in the build directory?  If not, then config ought to
+automatically do 'make depend'.
+
+--cut here--cut here--
+#! /bin/sh
+if :
+then
+host=`hostname`
+domain=`domainname`
+kernel=`basename $host .$domain`
+
+kdebug=kernel.debug
+
+config -g $kernel &&
+   (cd ../../compile/$kernel && 
+    make clean && make depend && 
+    make &&
+    make install &&
+    ( cd /var/crash; rm -f $kdebug.old;
+    test -f $kdebug && mv -f $kdebug $kdebug.old || true ) &&
+    cp /kernel /var/crash/$kdebug &&
+    chflags noschg /kernel &&
+    strip --strip-debug /kernel &&
+    chflags schg /kernel
+   )
+fi > Log 2>&1
+--cut here--cut here--
+-- 
+Rahul Dhesi <dhesi@spams.r.us.com>
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-stable" in the body of the message
+
+
+
+
+
+
+
+### PK 2596691 ###
+===== 序 22007 | PK 2596691 =====
+DATE: 1999-04-07
+FROM: butthead@icb.spb.su <None>
+SUBJ: RE: 3.1-STABLE + specific hardware crashes, 2.2.8 ok on same hard
+	ware
+
+I would like to report that my system crashes too
+[uname -a]
+FreeBSD cyber.spb.osi.ru 3.1-19990309-STABLE FreeBSD 3.1-19990309-STABLE #1:
+Thu Mar 11 16:44:45 GMT 1999
+butthead@cyber.spb.osi.ru:/export/src/sys/compile/RUX  i386
+
+its 486 box with IDE disk and 8Mb memory...
+
+just crashes once per day or two days.
+Also I have / and /usr FS corrupted in some way
+fsck says that FILE SYSTEM STILL DIRTY and
+asks to rerun dsck again. I did, but messages still the same.
+I still can boot and operate this box in multiuser.
+
+crash message is about page fault. Also my /var/log/wtmp and
+/var/log/messages are corrupted. they contains garbage with 
+usual data...
+
+my last dmesg follows
+
+Copyright (c) 1992-1999 FreeBSD Inc.
+Copyright (c) 1982, 1986, 1989, 1991, 1993
+	The Regents of the University of California. All rights reserved.
+FreeBSD 3.1-19990309-STABLE #1: Thu Mar 11 16:44:45 GMT 1999
+    butthead@cyber.spb.osi.ru:/export/src/sys/compile/RUX
+Timecounter "i8254"  frequency 1193182 Hz
+CPU: i486DX (486-class CPU)
+real memory  = 8388608 (8192K bytes)
+avail memory = 6115328 (5972K bytes)
+Preloaded elf kernel "kernel" at 0xf0261000.
+Probing for devices on the ISA bus:
+sc0 on isa
+sc0: VGA color <16 virtual consoles, flags=0x0>
+ed0 at 0x3
+...[正文已截断，共 5244 字符]
+
+
+
+### PK 2596693 ###
+===== 序 22009 | PK 2596693 =====
+DATE: 1999-04-07
+FROM: talon@lpthe.jussieu.fr (Michel TALON) <None>
+SUBJ: Crash mounting a msdos floppy write-protected.
+
+Hello,
+
+this is to report that FreeBSD-3.1-Stable still crashes
+when trying to write to a write-protected msdos floppy.
+I have cvsupped all sources yesterday 6 April 99, made
+world and rebuildt kernel.
+
+At the same time i discovered that i could no longer
+mount my atapi cdrom at /dev/wcd0c (this worked previously).
+I had to do a MAKEDEV acd0 and mount at /dev/acd0a
+(both /dev/wdc0c and /dev/acd0c reply with device busy)
+Similarly i have to use xcdplayer as
+xcdplayer -device /dev/acd0a &
+otherwise a lot of acd0: read_toc failed
+are generated.
+
+
+-- 
+
+Michel TALON
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-stable" in the body of the message
+
+
+
+
+
+
+
+### PK 2596694 ###
+===== 序 22010 | PK 2596694 =====
+DATE: 1999-04-07
+FROM: talon@lpthe.jussieu.fr (Michel TALON) <None>
+SUBJ: Strange PCI lookup at boot
+
+Hello,
+
+now that i have two machines running FreeBSD-3.1-Stable, i
+can see a strange behaviour of the code looking for PCI
+devices at boot on one of them. here is dmesg:
+
+Copyright (c) 1992-1999 FreeBSD Inc.
+Copyright (c) 1982, 1986, 1989, 1991, 1993
+        The Regents of the University of California. All rights reserved.
+FreeBSD 3.1-STABLE #0: Tue Apr  6 15:56:51 CEST 1999
+    talon@aglae.lpthe.jussieu.fr:/usr/src/sys/compile/AGLAE
+Timecounter "i8254"  frequency 1193182 Hz
+Timecounter "TSC"  frequency 200004435 Hz
+CPU: Pentium Pro (200.00-MHz 686-class CPU)
+  Origin = "GenuineIntel"  Id = 0x616  Stepping=6
+  Features=0xf9ff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,SEP,MTRR,PGE,MCA,CMOV>
+real memory  = 134217728 (131072K bytes)
+avail memory = 127905792 (124908K bytes)
+Preloaded elf kernel "kernel" at 0xf028c000.
+Preloaded userconfig_script "/kernel.config" at 0xf028c09c.
+Preloaded splash_image_data "/boot/splash.bmp" at 0xf028c0e8.
+Preloaded elf module "splash_bmp.ko" at 0xf028c138.
+Probing for devices on PCI bus 0:
+chip0: <Intel 82378IB PCI to ISA bridge> rev 0x43 on pci0.2.0
+xl0: <3Com 3c900-COMBO Etherlink XL> rev 0x00 int a irq 11 on pci0.4.0
+xl0: Ethernet address: 00:60:97:1f:75:ca
+xl0: selecting 10baseT transceiver, half duplex
+vga0: <Matrox MG
+...[正文已截断，共 3631 字符]
+
+
+
+### PK 2596695 ###
+===== 序 22011 | PK 2596695 =====
+DATE: 1999-04-07
+FROM: Wayne M Barnes <stabilizer@klentaq1.emergingtech.org> <None>
+SUBJ: Re: mail relaying denied
+
+Dear Javier,
+
+     Thank you very much.  This worked.  
+
+     Now I would like to suggest that the FreeBSD 3.1 install and make
+world should have done this for me.  Evidently this new 'feature' is
+part of an upgraded sendmail that is in 3.1 for the first time recently,
+so the install should provide my poor computer with its own domain
+authorized in the new file /etc/mail/relay-domains.
+
+     Then the user that learns more about the new sendmail
+filtering can always tighten it up later, if necessary.  Luckily,
+I had only two users using Pegasus (I suppose Eudora would have had
+the same problem).  It could have been dozens.  My poor users popped with 
+their login names and passwords.  Who knew that sendmail would now consider
+their W95 systems to be real computers?
+
+     After a couple of replies to my posting, I was able to find the
+error message from the bounced emails in /etc/sendmail.cf.  I altered
+it to include the name of my computer, so then I knew my computer
+was indeed doing the bouncing.  These messages should always include which
+computer is doing the bouncing, since email goes through countless computers,
+does it not?  
+
+     I have looked at the URL you suggested.  Thank you very much.
+Eventually that will help a lot.  T
+...[正文已截断，共 4496 字符]
+
+
+
+### PK 2596697 ###
+===== 序 22013 | PK 2596697 =====
+DATE: 1999-04-07
+FROM: Brad Knowles <blk@skynet.be> <None>
+SUBJ: -STABLE kernel panics during install...
+
+Folks,
+
+    I've got a pretty plain-vanilla PC that I'm trying to install -STABLE
+on (P2 400, 64MB RAM, 4GB Western Digital IDE hard drive, 3Com 3C9xx
+10/100Base-TX ethernet card, etc...).
+
+    I go through and tell it that I want all the typical parts of the OS
+installed, no problem (I only have to select which crypto parts I do/do
+not want).  I tell it which additional packages I want installed
+(laboriously selecting *everything* but the Japanese, Korean, Russian,
+and German stuff), spend half a day slogging through "XFree-whatever is a
+required package but was not found" warning dialog messages (requiring
+user input), and when it gets to installing gimp-1.x, it kernel panics.
+
+
+    When the machine reboots, the installation information I had provided
+to it was not saved, so it doesn't know it's hostname, doesn't support
+creating crash dumps, doesn't have it's IP address, doesn't have the
+specified root password, etc....  It also sorely complains about squid
+being started as root, and it *really* doesn't like that.
+
+    Opening /etc/rc.conf with vi, pulling in /etc/defaults/rc.conf and
+changing the things that are obvious (especially including where crash
+dumps may be written), then rebooting, leaves me with the error ".: Out
+of file descr
+...[正文已截断，共 2601 字符]
+
+
+
+### PK 2596698 ###
+===== 序 22014 | PK 2596698 =====
+DATE: 1999-04-07
+FROM: Rich Winkel <rich@chumbly.math.missouri.edu> <None>
+SUBJ: 3.1-RELEASE install: changing root device to both wd2s1a and wd2a
+
+I'm trying to talk a friend through the CD install on the phone.  The
+install appears to go fine, but when he reboots, it says:
+changing root device to wd2s1a
+AND
+changing root device to wd2a
+before panicing with "can't mount /"
+Has anyone seen this before?
+
+Thanks for any help!!
+Rich
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-stable" in the body of the message
+
+
+
+
+
+
+
+### PK 2596699 ###
+===== 序 22015 | PK 2596699 =====
+DATE: 1999-04-07
+FROM: Wayne M Barnes <stabilizer@klentaq1.emergingtech.org> <None>
+SUBJ: Re: -STABLE kernel panics during install...
+
+
+    Don't 'pull rc.conf from defaults'.  
+
+    Instead, cp /etc/defaults/rc.conf /etc/rc.conf.local, and then
+edit rc.conf.local.
+Otherwise, a nasty loop is engendered by code at the end of rc.conf,
+causing 'Out of file descriptors'.  Other fixes for this have
+been posted, but evidently not accepted.  
+
+Wayne M Barnes      stabilizer@klentaq1.emergingtech.org
+more free advice at   http://     "         "         " 
+
+
+> Folks,
+> 
+>     I've got a pretty plain-vanilla PC that I'm trying to install -STABLE
+> on (P2 400, 64MB RAM, 4GB Western Digital IDE hard drive, 3Com 3C9xx
+> 10/100Base-TX ethernet card, etc...).
+> 
+>     I go through and tell it that I want all the typical parts of the OS
+> installed, no problem (I only have to select which crypto parts I do/do
+> not want).  I tell it which additional packages I want installed
+> (laboriously selecting *everything* but the Japanese, Korean, Russian,
+> and German stuff), spend half a day slogging through "XFree-whatever is a
+> required package but was not found" warning dialog messages (requiring
+> user input), and when it gets to installing gimp-1.x, it kernel panics.
+> 
+> 
+>     When the machine reboots, the installation information I had provided
+> to it was not saved, so it doesn't know it's hostname, doesn't support
+> creating crash dumps, doesn't have it's IP address, doesn't have the
+> specified root password, etc....  It also sorely complains about squid
+> being started as root, and it *really* doesn't like that.
+> 
+>     Opening /etc/rc.conf with vi, pulling in /etc/defaults/rc.conf and
+> changing the things that are obvious (especially including where crash
+> dumps may be written), then rebooting, leaves me with the error ".: Out
+> of file descriptors\nEnter full pathname of shell or RETURN for /bin/sh:"
+> right after the messages "npx0: INT 16 interface\nchanging root device to
+> wd0s1a".
+> 
+> 
+>     Any ideas what might be wrong?  Next thing I'm going to do is a fresh
+> re-install from scratch, but this time not select any third-party
+> packages to also install -- at least not until the bare OS is installed,
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-stable" in the body of the message
+
+
+
+
+
+
+
+### PK 2596700 ###
+===== 序 22016 | PK 2596700 =====
+DATE: 1999-04-07
+FROM: Rich Winkel <rich@chumbly.math.missouri.edu> <None>
+SUBJ: Re: 3.1-RELEASE install: changing root device to both wd2s1a and wd2a
+
+I should mention he has a somewhat unusual disk configuration.
+The freebsd disk is the IDE master on the second controller,
+and there's only 1 disk on the first controller.  Might this be a
+problem?
+
+According to Rich Winkel:
+> 
+> I'm trying to talk a friend through the CD install on the phone.  The
+> install appears to go fine, but when he reboots, it says:
+> changing root device to wd2s1a
+> AND
+> changing root device to wd2a
+> before panicing with "can't mount /"
+> Has anyone seen this before?
+> 
+> Thanks for any help!!
+> Rich
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-stable" in the body of the message
+
+
+
+
+
+
+
+### PK 2596701 ###
+===== 序 22017 | PK 2596701 =====
+DATE: 1999-04-07
+FROM: Wayne M Barnes <stabilizer@klentaq1.emergingtech.org> <None>
+SUBJ: Re: 3.1-RELEASE install: changing root device to both wd2s1a and wd2a
+
+Dear Rich,
+
+    This sort of happened to me, once.  I accidentally installed onto
+wd2, and then after booting part way, it said 'changing root device to wd1a'
+which is sort of the opposite of what is happening to you.
+
+    Part of the cure was to halt the boot during a pause that it gives you,
+and get a list of commands (by typing 'help'), I think.  There
+was a command in there that went something like
+'set root device to wd2s1a'   
+
+    Then it booted from my correct drive.  
+
+    Unfortunately, after replugging my drive to controller 1, so
+it was now wd1, my etc/fstab was pointing to the wrong drive.  The
+cure to that was to mount /dev/wd1a /mnt   which is a loophole that
+allows you to mount the same partition writable which was readonly.
+I hope noone fixes this loophole.  I was never able to get vi
+working in this mode so I could edit /etc/fstab, so I copied an
+fstab file from a floppy.
+
+    Unfortunatley, /dev/wd1s1a thru f were not in /dev, and the
+/stand/sysinstall refused to create them.  I think I went to 
+/mnt/dev and did a 'sh MAKEDEV wd1s1a'   , which created a thru f.
+Or maybe I had to replug to controller 2 (back to wd2a) and then
+do this.  
+
+    I apologize for imperfection
+...[正文已截断，共 2034 字符]
+
+
+
+### PK 2596705 ###
+===== 序 22021 | PK 2596705 =====
+DATE: 1999-04-07
+FROM: John Preisler <john@vapornet.net> <None>
+SUBJ: breakage in -stable?
+
+
+In releng_3:
+
+It would seem options BRIDGE is broken.  The sources are less than 24
+hours old and I havent seen any relevant commits go past.  I'd paste
+the $Id string but there isnt one.  Suggestions?  I already blew away
+the compile/ dir and tried again to no avail.  Kernel config file has
+both DUMMYNET and BRIDGE.
+
+
+cc -c -O -pipe -Wreturn-type -Wcomment -Wredundant-decls -Wimplicit  -Wnested-externs -Wstrict-prototypes -Wmissing-prototypes  -Wpointer-arith -Winline -Wuninitialized -Wformat -Wunused  -fformat-extensions -ansi  -nostdinc -I- -I. -I../.. -I../../../include  -DKERNEL -DVM_STACK -include opt_global.h -elf  ../../net/bridge.c
+../../net/bridge.c: In function `bdg_forward':
+../../net/bridge.c:529: `ip' undeclared (first use this function)
+../../net/bridge.c:529: (Each undeclared identifier is reported only once
+../../net/bridge.c:529: for each function it appears in.)
+*** Error code 1
+
+Stop.
+
+
+-- 
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-stable" in the body of the message
+
+
+
+
+
+
+
+### PK 2596707 ###
+===== 序 22023 | PK 2596707 =====
+DATE: 1999-04-07
+FROM: Jim Cassata <jim@web-ex.com> <None>
+SUBJ: Re: Upgrade to 3.1-Stable and Logon Errors
+
+I think this may be shell related.  I had this happen when my users were
+set to tcsh, but root login at console was sh and got in.
+
+
+Jim Cassata
+
+516.421.6000
+jim@web-ex.com
+
+Web Express
+20 Broadhollow Road
+Suite 3011
+Melville, NY 11747
+
+On Wed, 7 Apr 1999, Allen Smith wrote:
+
+> I'm seeing this also.
+> 
+> 	-Allen
+> 
+> On Mar 30, 10:12am, Dave Cantrell (possibly) wrote:
+> > Opps...I forgot to add a Subject Line.  Mea culpa, me culpa, mea maxima culpa.
+> > 
+> > *****
+> > I  installed a 2.2.8 system from CD-ROM, cvsup'd the 3.1-Stable source from
+> > one of the mirrors, did a "make upgrade", and waited a few hours. There
+> > were no (apparent) error messages.  I rebooted the machine, it booted thru
+> > the usual messages (with 3.1-STABLE showing up at the appropriate places).
+> > BUT....
+> > 
+> > When I attempted to logon:  1) It asked for my passsword; 2) Told me I had
+> > mail; 3) then gave the following error messages:
+> >    /usr/libexec/ld.so:  warning:  .usr/lib/libc.so.3:  minor version -1 older
+> >    than expected 1, using it anyway
+> > 
+> >    ld.so failed:  bad magic number in "/usr/lib/libc.so.3"
+> > 
+> > It dis this with every login ID I had in the system
+> > 
+> > I re-installed everything and started the process all over, with exactly
+> > the same results.  Anyone have any idea what I did wrong, and/or how to
+> > correct this?
+> > ******
+> > 
+> > 
+> > drc
+> > 
+> > --
+> > Dave Cantrell				| E-Mail	dcantrell@nebook.com
+> > Nebraska Book Company		| Phone	800 487-9861
+> > PRISM POS/Customer Support		| FAX		402 421-0554
+> > 
+> > 
+> > To Unsubscribe: send mail to majordomo@FreeBSD.org
+> > with "unsubscribe freebsd-stable" in the body of the message
+> 
+> 
+> -- 
+> Allen Smith				easmith@beatrice.rutgers.edu
+> 	
+> 
+> 
+> To Unsubscribe: send mail to majordomo@FreeBSD.org
+> with "unsubscribe freebsd-stable" in the body of the message
+> 
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-stable" in the body of the message
+
+
+
+
+
+
+
+### PK 2596708 ###
+===== 序 22024 | PK 2596708 =====
+DATE: 1999-04-07
+FROM: Jonathan Fosburgh <wotan@fosburgh.dyndns.org> <None>
+SUBJ: Re: Upgrade to 3.1-Stable and Logon Errors
+
+On Wed, 7 Apr 1999, Jim Cassata wrote:
+
+> I think this may be shell related.  I had this happen when my users were
+> set to tcsh, but root login at console was sh and got in.
+> 
+> 
+> Jim Cassata
+> 
+> 516.421.6000
+> jim@web-ex.com
+> 
+> Web Express
+> 20 Broadhollow Road
+> Suite 3011
+> Melville, NY 11747
+> 
+> On Wed, 7 Apr 1999, Allen Smith wrote:
+> 
+> > I'm seeing this also.
+> > 
+> > 	-Allen
+> > 
+> > On Mar 30, 10:12am, Dave Cantrell (possibly) wrote:
+> > > Opps...I forgot to add a Subject Line.  Mea culpa, me culpa, mea maxima culpa.
+> > > 
+> > > *****
+> > > I  installed a 2.2.8 system from CD-ROM, cvsup'd the 3.1-Stable source from
+> > > one of the mirrors, did a "make upgrade", and waited a few hours. There
+> > > were no (apparent) error messages.  I rebooted the machine, it booted thru
+> > > the usual messages (with 3.1-STABLE showing up at the appropriate places).
+> > > BUT....
+> > > 
+> > > When I attempted to logon:  1) It asked for my passsword; 2) Told me I had
+> > > mail; 3) then gave the following error messages:
+> > >    /usr/libexec/ld.so:  warning:  .usr/lib/libc.so.3:  minor version -1 older
+> > >    than expected 1, using it anyway
+> > > 
+> > >    ld.so failed:  bad magic number in "/usr/lib/libc.so.3"
+> > > 
+> > > It dis this with every login ID I had in the system
+> > > 
+> > > I re-installed everything and started the process all over, with exactly
+> > > the same results.  Anyone have any idea what I did wrong, and/or how to
+> > > correct this?
+> > > ******
+> > > 
+> > > 
+> > > drc
+> > > 
+> > > --
+> > > Dave Cantrell				| E-Mail	dcantrell@nebook.com
+> > > Nebraska Book Company		| Phone	800 487-9861
+> > > PRISM POS/Customer Support		| FAX		402 421-0554
+> > > 
+> > > 
+> > > To Unsubscribe: send mail to majordomo@FreeBSD.org
+> > > with "unsubscribe freebsd-stable" in the body of the message
+> > 
+> > 
+> > -- 
+> > Allen Smith				easmith@beatrice.rutgers.edu
+> > 	
+> > 
+> > 
+> > To Unsubscribe: send mail to majordomo@FreeBSD.org
+> > with "unsubscribe freebsd-stable" in the body of the message
+> > 
+> 
+> 
+> 
+> To Unsubscribe: send mail to majordomo@FreeBSD.org
+> with "unsubscribe freebsd-stable" in the body of the message
+> 
+> 
+IIRC this is because the shell you are trying to use wants the aout libs
+and they are probably not being picked up (when I did this upgrade it took
+me forever to find the right ldconfig incantation to load the aout libs.)
+The "easy" finx is to upgrade the ported shells to ELF versions.
+Otherwise, try to get your ldconfig stuff done.; :)
+
+Jonathan Fosburgh
+Geotechnician
+Snyder Oil Corporation
+Houston, TX
+
+Home Page:
+http://www.geocities.com/vienna/1498
+Manager, FreeBSD Webring: 
+http://www.geocities.com/vienna/1498/computer/freebsdring.html
+ICQ: 32742908
+AIM: Namthorien
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-stable" in the body of the message
+
+
+
+
+
+
+
+### PK 2596712 ###
+===== 序 22028 | PK 2596712 =====
+DATE: 1999-04-07
+FROM: Scott Sewall <scott@iprg.nokia.com> <None>
+SUBJ: Re: How should I change rc.conf by hand (was Re: -STABLE kernelpanics 
+ during install...)
+
+
+You can modify rc.conf by hand in v3.1. In v2.2.6 modify rc.conf.local.
+
+-- Scott
+
+
+
+Jim Cassata wrote:
+
+> rc.conf can be edited by hand and is well documented for those who do so.
+>
+> Jim Cassata
+>
+> 516.421.6000
+> jim@web-ex.com
+>
+> Web Express
+> 20 Broadhollow Road
+> Suite 3011
+> Melville, NY 11747
+>
+> On Wed, 7 Apr 1999, Charles Quarri wrote:
+>
+> >
+> >
+> > On Wed, 7 Apr 1999, Wayne M Barnes wrote:
+> >
+> > >
+> > >     Don't 'pull rc.conf from defaults'.
+> > >
+> > >     Instead, cp /etc/defaults/rc.conf /etc/rc.conf.local, and then
+> > > edit rc.conf.local.
+> > > Otherwise, a nasty loop is engendered by code at the end of rc.conf,
+> > > causing 'Out of file descriptors'.  Other fixes for this have
+> > > been posted, but evidently not accepted.
+> >
+> > since we are the topic, how should rc.conf be changed by hand.  I know
+> > rc.conf picks up changes from /stand/sysinstall.  Should all of the
+> > by hand changes go into rc.conf.local?
+> >
+> > Charles Quarri
+> >
+> >
+> >
+> > To Unsubscribe: send mail to majordomo@FreeBSD.org
+> > with "unsubscribe freebsd-stable" in the body of the message
+> >
+>
+> To Unsubscribe: send mail to majordomo@FreeBSD.org
+> with "unsubscribe freebsd-stable" in the body of the message
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-stable" in the body of the message
+
+
+
+
+
+
+
+### PK 2596715 ###
+===== 序 22031 | PK 2596715 =====
+DATE: 1999-04-08
+FROM: "Eric Griff" <eric@netdesign1.com> <None>
+SUBJ: panic in rtfree
+
+Over the weekend I ran into a definate panic in rtfree on a 3.1-STABLE from
+Last Thursday..
+
+Unfortunatly all the details aren't where I can get into them from here.
+It specifically involved the 'route/getrt' example from pg 450 of "Unix
+Network Programming, Volume 1 2nd Edition", W. Richard Stevens.
+
+Just thought it might be of interest..
+
+Eric A. Griff,
+NETDesign Inc.
+181 Genesee St.
+Suite 500
+Utica, NY 13501
+(315) 734-1668 Extension 205
+
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-stable" in the body of the message
+
+
+
+
+
+
+
+### PK 2596717 ###
+===== 序 22033 | PK 2596717 =====
+DATE: 1999-04-08
+FROM: butthead@icb.spb.su <None>
+SUBJ: RE: How should I change rc.conf by hand (was Re: -STABLE kernel p
+	anics during install...)
+
+
+
+
+> since we are the topic, how should rc.conf be changed by hand.  I know
+> rc.conf picks up changes from /stand/sysinstall.  Should all of the
+> by hand changes go into rc.conf.local?
+Generally, yes.
+But for install/upgrade I just have edited /stand/rc.conf (or something....)
+Don't know is it good idea, but it worked for me.
+I think you can even copy /etc/rc.conf or /etc/rc.conf.local to
+/stand/rc.conf
+
+-Dima.
+
+> Charles Quarri 
+> 
+> 
+> 
+> To Unsubscribe: send mail to majordomo@FreeBSD.org
+> with "unsubscribe freebsd-stable" in the body of the message
+> 
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-stable" in the body of the message
+
+
+
+
+
+
+
+### PK 2596718 ###
+===== 序 22034 | PK 2596718 =====
+DATE: 1999-04-08
+FROM: Kenn Martin <kmartin@infoteam.com> <None>
+SUBJ: kernel config breakage
+
+Just cvsup'd 3.1 stable at approx 1AM EDT ...
+
+make world completed fine (at least I believe so).
+config kernel completed (but apparently not fine).
+make depend completes.
+make OR make all does nothing.
+make install complains that there is no kernel to install (and there is none).
+
+Looking at the Makefile created, I see
+
+  MFILES=
+  all:
+
+I expect there should be references to kernel here, but there are none.
+Is this a configuration/installworld problem, or did something break
+elsewhere?
+
+thanks,
+kenn
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-stable" in the body of the message
+
+
+
+
+
+
+
+### PK 2596719 ###
+===== 序 22035 | PK 2596719 =====
+DATE: 1999-04-08
+FROM: Jesper Skriver <jesper@skriver.dk> <None>
+SUBJ: Re: How stable is soft updates?
+
+On Wed, Apr 07, 1999 at 08:43:06PM -0700, jfesler@gigo.com wrote:
+> Some stuff I didn't see answers for..
+>  1: how stable is it :-)
+
+Dead stable, at least to my experience, I've been running it for months
+on very busy boxes ...
+
+>  2: If I somehow manage to boot from a kernel lacking soft updates,
+>     will the partition still be mountable (ie, sans soft updates)? 
+
+Don't know.
+
+>  3: How do we tunefs "/" ?
+
+Just do it, and then turn the box off ... next time you boot it's ok.
+
+/Jesper
+
+-- 
+Jesper Skriver (JS4261-RIPE), Network manager      
+Tele Danmark DataNet, IP section (AS3292)
+
+One Unix to rule them all, One Resolver to find them,
+One IP to bring them all and in the zone to bind them.
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-stable" in the body of the message
+
+
+
+
+
+
+
+### PK 2596722 ###
+===== 序 22038 | PK 2596722 =====
+DATE: 1999-04-08
+FROM: Mark Powell <M.S.Powell@ais.salford.ac.uk> <None>
+SUBJ: Real time clock problem in 3.1-STABLE
+
+Installed 3.1-STABLE on an Apricot Shogun server. xntpd wouldn't sync time
+correctly though. I set it up just as I do on any other machine. However,
+on the same machine RedHat 5.2 can sync the time just fine.
+  FreeBSD had problems both before and after the recent kernel clock mods.
+I notice that with 3.1-S looking at the clocks at boot up, it would appear
+that over 40 reboots, the TSC clock has varied from 126668897 to
+132002659, a variance of almost 5%. Is this normal? Whereas when Linux
+boots up the variance in processor clock speed is only about 1000Hz. Could
+this be causing the time problems, and if so is there anyway I can fiddle
+with tickadj or something to let xntpd work on this machine?
+  Unfortunately I'm going to have to go with Linux on this machine if
+3.1-S can't sync the time correctly. Anyone help? Cheers.
+
+Mark Powell - System Administrator (UNIX) - Clifford Whitworth Building
+A.I.S., University of Salford, Salford, Manchester, UK.
+Tel: +44 161 295 5936  Fax: +44 161 295 5888  www.pgp.com for PGP key
+M.S.Powell@ais.salfrd.ac.uk (spell salford correctly to reply to me)
+
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-stable" in the body of the message
+
+
+
+
+
+
+
+### PK 2596724 ###
+===== 序 22039 | PK 2596724 =====
+DATE: 1999-04-08
+FROM: Oliver Fromme <olli@dorifer.heim3.tu-clausthal.de> <None>
+SUBJ: Re: How stable is soft updates?
+
+jfesler@gigo.com wrote in list.freebsd-stable:
+ > [about soft-updates]
+ >  1: how stable is it :-)
+
+We're using it on some boxes in production use, no problems so
+far.  One of them is a Squid web proxy, 512 Mb RAM, 3 x 9 Gb +
+4.5 Gb disks, currently 800,000 files (and growing).
+
+ >  2: If I somehow manage to boot from a kernel lacking soft updates,
+ >     will the partition still be mountable (ie, sans soft updates)? 
+
+It will just work (but without soft-updates, of course).  Soft-
+updates is not a special  filesystem format or something like
+that, it uses just the normal Berkeley FFS/UFS format.  The
+soft-update code just handles write access to such filesystems
+in a special way (which is enabled by a single flag in the
+"super block").  A kernel without soft-updates support will
+just ignore that flag and handle write access the usual way.
+
+ >  3: How do we tunefs "/" ?
+
+Boot in single-user mode ("boot -s"), make sure that "/" is
+mounted read-only and is clean, tunefs, reboot.  The following
+example assumes you're using your first SCSI disk:
+
+# mount
+/dev/da0s1a on / (local, read-only)
+# fsck /dev/rda0s1a
+...
+# tunefs -n enable /dev/rda0s1a
+soft updates set
+# reboot
+
+It is not necesary to press the reset button (or even power-
+
+...[正文已截断，共 2007 字符]
+
+
+
+### PK 2596725 ###
+===== 序 22040 | PK 2596725 =====
+DATE: 1999-04-08
+FROM: Matt Behrens <matt@zigg.com> <None>
+SUBJ: Re: How stable is soft updates?
+
+On Thu, 8 Apr 1999, Jesper Skriver wrote:
+
+: On Wed, Apr 07, 1999 at 08:43:06PM -0700, jfesler@gigo.com wrote:
+
+: > Some stuff I didn't see answers for..
+: >  1: how stable is it :-)
+
+: Dead stable, at least to my experience, I've been running it for months
+: on very busy boxes ...
+
+I had serious problems with some underpowered systems earlier this
+year.  However, I'm running a week-old 3.1-STABLE now, and it's
+been running softupdates for a few days with no more problems.  I
+finally can't break it, no matter how I thrash the disk.  YMMV,
+though.
+
+: >  2: If I somehow manage to boot from a kernel lacking soft updates,
+: >     will the partition still be mountable (ie, sans soft updates)? 
+
+: Don't know.
+
+I imagine it would be, since the softupdates flag is just that --
+a flag -- tha t can be ignored.  fsck treats softupdates-enabled
+disks differently but I think that's more of an issue with
+softupdates-induced problems needing different fixes.
+
+: >  3: How do we tunefs "/" ?
+
+: Just do it, and then turn the box off ... next time you boot it's ok.
+
+I always did it like this:
+
+	reboot -s
+	tunefs -n enable /
+	tunefs -n enable /usr	(and any other partitions)
+	exit
+
+then when the system continued, it was enabled.  Similar procedure
+for turning it off; ju
+...[正文已截断，共 1656 字符]
+
+
+
+### PK 2596726 ###
+===== 序 22041 | PK 2596726 =====
+DATE: 1999-04-08
+FROM: "Clay Smith" <blitz@pdq.net> <None>
+SUBJ: Samba login problems
+
+I was running Samba on my FreeBSD 3.0-beta machine and had two Windows 98 clients logging into it and mappnig drives just fine.  I upgraded to 3.1-Stable and it no longer lets me login.  It says either my login password is incorrect or access has been denied.  I checked the password to make sure it was right and even checked more than one login account from more than one machine, and it doesn't work, still.  Does anyone have any suggestions?
+
+Clay Smith
+
+
+
+
+
+### PK 2596727 ###
+===== 序 22042 | PK 2596727 =====
+DATE: 1999-04-08
+FROM: "Daniel C. Sobral" <dcs@newsguy.com> <None>
+SUBJ: Re: Real time clock problem in 3.1-STABLE
+
+Mark Powell wrote:
+> 
+> Installed 3.1-STABLE on an Apricot Shogun server. xntpd wouldn't sync time
+> correctly though. I set it up just as I do on any other machine. However,
+> on the same machine RedHat 5.2 can sync the time just fine.
+
+Are you running securelevel>1?
+
+Try completely disabling APM on BIOS. I mean *completely*, as in
+*all* options. There are some BIOS in which APM will *not* be
+completely disabled unless you disable *all* options related to it,
+no matter what the fields description would led you to believe.
+
+Alternatively, try using a kernel with APM.
+
+--
+Daniel C. Sobral			(8-DCS)
+dcs@newsguy.com
+dcs@freebsd.org
+
+	"nothing better than the ability to perform cunning linguistics"
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-stable" in the body of the message
+
+
+
+
+
+
+
+### PK 2596731 ###
+===== 序 22046 | PK 2596731 =====
+DATE: 1999-04-08
+FROM: Bill Fumerola <billf@chc-chimes.com> <None>
+SUBJ: Re: How stable is soft updates?
+
+On Wed, 7 Apr 1999 jfesler@gigo.com wrote:
+
+>  1: how stable is it :-)
+
+I have never had a panic on a machine that ran softupdates.
+
+>  3: How do we tunefs "/" ?
+
+Even with the above confidence, I would never tune my root partition to
+have softupdates.
+
+That 'no-no' buzzer goes on in the back of my head whenever I think about
+doing that. 
+
+- bill fumerola - billf@chc-chimes.com - BF1560 - computer horizons corp -
+- ph:(800) 252-2421 - bfumerol@computerhorizons.com - billf@FreeBSD.org  -
+
+
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-stable" in the body of the message
+
+
+
+
+
+
+
+### PK 2596732 ###
+===== 序 22047 | PK 2596732 =====
+DATE: 1999-04-08
+FROM: "Daniel C. Sobral" <dcs@newsguy.com> <None>
+SUBJ: Re: Real time clock problem in 3.1-STABLE
+
+Mark Powell wrote:
+> 
+> Something to do with the kernel not understanding the Real Time Clock
+> hardware properly? Checking through the ntp logs I note that for one time
+> whilst the machine was up the time was getting set correctly. However,
+> after the next reboot the clock was drifting again.
+
+There is one sysctl that is related to the clock. You'll find a
+reference to it in LINT, I *think* near the APM stuff. I suggest you
+try tweaking this sysctl.
+
+As for securelevel and lack of APM in your BIOS, your response
+indicates the problem isn't related to either.
+
+This is as far as I can help you. If the sysctl stuff doesn't help,
+either someone else steps up, or I suggest you file a PR.
+
+--
+Daniel C. Sobral			(8-DCS)
+dcs@newsguy.com
+dcs@freebsd.org
+
+	"nothing better than the ability to perform cunning linguistics"
+
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-stable" in the body of the message
+
+
+
+
+
+
+
+### PK 2596735 ###
+===== 序 22050 | PK 2596735 =====
+DATE: 1999-04-08
+FROM: Benjamin Gavin <gavinb@supranet.net> <None>
+SUBJ: 3Com 3C5x9 Network cards
+
+Hi all,
+  Has anyone else seen problems with the 3C509b Ethernet cards when running
+the FreeBSD installer?  I am attempting to install FreeBSD 3.1-RELEASE and
+it seems that while the OS can grab the Ethernet Card information, it seems
+unable to send or receive data through the card.  Any ideas?  I have had
+this card working fine in 2.2.x and 3.0-STABLE boxes.  It seems that
+sometime between 3.0-STABLE and 3.1-RELEASE that the code for this card was
+broken.
+
+Any thoughts?
+
+Thanks,
+Ben
+
+/--------------------------------------------------------------------------/
+  Benjamin Gavin - Senior Consultant
+
+  ***********  NO SPAM!!  ************
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-stable" in the body of the message
+
+
+
+
+
+
+
+### PK 2596736 ###
+===== 序 22051 | PK 2596736 =====
+DATE: 1999-04-08
+FROM: Vladimir Litovka <doka@triton.kiev.sovam.com> <None>
+SUBJ: Re: 3Com 3C5x9 Network cards
+
+Hi!
+
+On Thu, 8 Apr 1999, Benjamin Gavin wrote:
+
+> this card working fine in 2.2.x and 3.0-STABLE boxes.  It seems that
+> sometime between 3.0-STABLE and 3.1-RELEASE that the code for this card was
+> broken.
+
+ I have had the same problem under 3.1-STABLE with ISA 3C509B cards -
+ FreeBSD did detect them, but had problems with sending/receiving data
+ through them. I've rolled back to simple ne2000 cards.
+
+ BTW as I remember, FreeBSD had never worked good with this card's type.
+
+-- 
+Yours sincerely,
+	Vladimir Litovka, hostmaster of Sovam Teleport Kiev
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-stable" in the body of the message
+
+
+
+
+
+
+
+### PK 2596740 ###
+===== 序 22055 | PK 2596740 =====
+DATE: 1999-04-08
+FROM: "Chad R. Larson" <chad@DCFinc.com> <None>
+SUBJ: dead drive
+
+I think my CD-ROM drive has died.  I can't unmount it (and therefore
+can't get the CD out), and it's saying this on the console:
+
+    atapi0.0: READ_BIG res.code 0x1 st 0x51 err 0x34 LBA 22 cnt 1
+    wcd0: i/o error, status=51<ready,opdone,check>, error=34<abort>
+
+Where would I look for the magic decoder ring for these messages?
+
+	-crl
+--
+Chad R. Larson (CRL15)   602-953-1392   Brother, can you paradigm?
+chad@dcfinc.com chad@larsons.org chad@anasazi.com larson1@home.net   
+DCF, Inc. - 14623 North 49th Place, Scottsdale, Arizona 85254-2207
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-stable" in the body of the message
+
+
+
+
+
+
+
+### PK 2596741 ###
+===== 序 22056 | PK 2596741 =====
+DATE: 1999-04-08
+FROM: Chris Stenton <jacs@gnome.co.uk> <None>
+SUBJ: Re: 3Com 3C5x9 Network cards
+
+> On Thu, Apr 8, 1999, Vladimir Litovka <doka@triton.kiev.sovam.com> wrote:
+> 
+> > I have had the same problem under 3.1-STABLE with ISA 3C509B cards -
+> > FreeBSD did detect them, but had problems with sending/receiving data
+> > through them. I've rolled back to simple ne2000 cards.
+> >
+> > BTW as I remember, FreeBSD had never worked good with this card's type.
+> 
+>     Is this to imply that FreeBSD has problems with 3Com 3C905 (10/100
+> Base-TX) cards as well?  I was under the impression that FreeBSD and
+> Linux were the only two OSes outside of Microsoft to have semi-decent
+> drivers for these cards, primarily because of the user community self-support.
+> 
+
+I have been using the 3C905B on a  3.1-STABLE  box for about 5 months as a
+SAMBA and pc-nfs server and have had no problem with it.
+
+
+Chris
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-stable" in the body of the message
+
+
+
+
+
+
+
+### PK 2596743 ###
+===== 序 22058 | PK 2596743 =====
+DATE: 1999-04-08
+FROM: Andy McConnell <andym@ntt.net> <None>
+SUBJ: Re: Samba login problems
+
+On Thu, 8 Apr 1999, Michael C. Vergallen wrote:
+
+}the newer versions of samba use encripted passwords.. (If I remember
+}correctly).
+
+Had a *similar* problem.  I got it to work by:
+
+# uncomment from /usr/local/etc/smb.conf
+	encrypt passwords = yes
+
+cat /etc/passwd | mksmbpasswd.sh > /usr/local/samba/private/smbpasswd 
+
+smbpasswd username
+	and re-enter the password here. ugly, but it works.
+
+And I was able to get in.
+Your mileage may vary, depending on how new you verion of Samba is.  I'm
+running 2.0.3, remade on 7 Apr 99.
+
+-Andy
+
+}On Thu, 8 Apr 1999, Clay Smith wrote:
+}
+}> I was running Samba on my FreeBSD 3.0-beta machine and had two Windows
+}98 clients logging into it and mappnig drives just fine.  I upgraded to
+}3.1-Stable and it no longer lets me login.  It says either my login
+}password is incorrect or access has been denied.  I checked the password
+}to make sure it was right and even checked more than one login account
+}from more than one machine, and it doesn't work, still.  Does anyone have
+}any suggestions? 
+
+--
+Andy McConnell      $B??8~N}(B $B0BEHN6(B
+NTT America IP Headquarters
+
+Freedom means that we have to tolerate hateful and ignorant speech, because 
+we worry that someday our own views may not be popular. 
+
+
+
+To Unsubscribe: send mail 
+...[正文已截断，共 1490 字符]
+
+
+
+### PK 2596744 ###
+===== 序 22059 | PK 2596744 =====
+DATE: 1999-04-08
+FROM: Darcy Buskermolen <Darcy@ok-connect.com> <None>
+SUBJ: Re: netstat & blackjack
+
+bash-2.01$ grep blackjack /etc/services
+blackjack       1025/tcp   #network blackjack
+blackjack       1025/udp   #network blackjack
+
+it would apear you have a game of network blackjack running on your box.
+
+
+
+At 10:03 AM 4/8/99 -0700, you wrote:
+>
+>When I run netstat I get output with a couple of lines that say:
+>
+>tcp        0      0  localhost.blackjack    localhost.1026
+>ESTABLISHED
+>tcp        0      0  localhost.1026         localhost.blackjack
+>ESTABLISHED
+>
+>
+>can anybody tell me what this is..??
+>
+>TIA,
+>Daren
+>
+>
+>
+>To Unsubscribe: send mail to majordomo@FreeBSD.org
+>with "unsubscribe freebsd-stable" in the body of the message
+>
+>
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-stable" in the body of the message
+
+
+
+
+
+
+
+### PK 2596745 ###
+===== 序 22060 | PK 2596745 =====
+DATE: 1999-04-08
+FROM: Mike Tancsa <mike@sentex.net> <None>
+SUBJ: Re: netstat & blackjack
+
+At 10:03 AM 4/8/99 -0700, Daren Sefcik wrote:
+>
+>When I run netstat I get output with a couple of lines that say:
+>
+>tcp        0      0  localhost.blackjack    localhost.1026
+>ESTABLISHED
+>tcp        0      0  localhost.1026         localhost.blackjack
+>ESTABLISHED
+>
+>
+>can anybody tell me what this is..??
+
+Something on your computer is connected to port 1025... 
+
+web# grep ^blackj /etc/services
+blackjack       1025/tcp   #network blackjack
+blackjack       1025/udp   #network blackjack
+
+Are you playing network blackjack by chance ? ;-)  Or, if you are not, use
+lsof to find out which process is bound to that port.
+
+	---Mike
+------------------------------------------------------------------------
+Mike Tancsa,                          	          tel 01.519.651.3400
+Network Administrator,     			  mike@sentex.net
+Sentex Communications                 		  www.sentex.net
+Cambridge, Ontario Canada
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-stable" in the body of the message
+
+
+
+
+
+
+
+### PK 2596746 ###
+===== 序 22061 | PK 2596746 =====
+DATE: 1999-04-08
+FROM: Bill Fumerola <billf@chc-chimes.com> <None>
+SUBJ: Re: netstat & blackjack
+
+On Thu, 8 Apr 1999, Darcy Buskermolen wrote:
+
+> bash-2.01$ grep blackjack /etc/services
+> blackjack       1025/tcp   #network blackjack
+> blackjack       1025/udp   #network blackjack
+> 
+> it would apear you have a game of network blackjack running on your box.
+
+Or considering that at the (very) low end of non-privleged ports a random
+connection got that port.
+
+- bill fumerola - billf@chc-chimes.com - BF1560 - computer horizons corp -
+- ph:(800) 252-2421 - bfumerol@computerhorizons.com - billf@FreeBSD.org  -
+
+
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-stable" in the body of the message
+
+
+
+
+
+
+
+### PK 2596747 ###
+===== 序 22062 | PK 2596747 =====
+DATE: 1999-04-08
+FROM: "Clay Smith" <blitz@pdq.net> <None>
+SUBJ: Re: Samba login problems
+
+This is really strange.  When I do ps -x as root, smbd isn't showing up, but
+I have two copies of nmbd.  I killed them both, re ran nmbd, and then ran
+smbd, but it still doesn't show up in the list.  You think there's an error
+in it's init?  I'll check the logs.
+----- Original Message -----
+From: Andy McConnell <andym@ntt.net>
+To: Michael C. Vergallen <mvergall@mail.double-barrel.be>
+Cc: Clay Smith <blitz@pdq.net>; FreeBSD Stable <FreeBSD-Stable@FreeBSD.ORG>
+Sent: Thursday, April 08, 1999 11:15 AM
+Subject: Re: Samba login problems
+
+
+> On Thu, 8 Apr 1999, Michael C. Vergallen wrote:
+>
+> }the newer versions of samba use encripted passwords.. (If I remember
+> }correctly).
+>
+> Had a *similar* problem.  I got it to work by:
+>
+> # uncomment from /usr/local/etc/smb.conf
+> encrypt passwords = yes
+>
+> cat /etc/passwd | mksmbpasswd.sh > /usr/local/samba/private/smbpasswd
+>
+> smbpasswd username
+> and re-enter the password here. ugly, but it works.
+>
+> And I was able to get in.
+> Your mileage may vary, depending on how new you verion of Samba is.  I'm
+> running 2.0.3, remade on 7 Apr 99.
+>
+> -Andy
+>
+> }On Thu, 8 Apr 1999, Clay Smith wrote:
+> }
+> }> I was running Samba on my FreeBSD 3.0-beta machine and had two Windows
+> }98 clients logging into it and mappnig drives j
+...[正文已截断，共 2208 字符]
+
+
+
+### PK 2596748 ###
+===== 序 22063 | PK 2596748 =====
+DATE: 1999-04-08
+FROM: Daren Sefcik <daren@sefcik.cc> <None>
+SUBJ: Re: netstat & blackjack
+
+Thanks all...it turned out to be squid
+
+Daren
+
+
+On Thu, 8 Apr 1999, Sean O'Connell wrote:
+
+> On 1999 Apr 08, Daren Sefcik (aka daren@sefcik.cc) wrote:
+> > 
+> > When I run netstat I get output with a couple of lines that say:
+> > 
+> > tcp        0      0  localhost.blackjack    localhost.1026
+> > ESTABLISHED
+> > tcp        0      0  localhost.1026         localhost.blackjack
+> > ESTABLISHED
+> > 
+> > 
+> > can anybody tell me what this is..??
+> 
+> I have seen this from Digital Unix when nmap'ing (emphasis on) my Digital
+> Unix boxes from FreeBSD.  It turned out to rpc.statd.  1025 is _not_ listed
+> in /etc/services under Digital Unix but is under FreeBSD.
+> 
+> It is most likely benign.  (One of the other postings mentioned using
+> lsof ... it is a godsend
+> 
+> lsof -i tcp 
+> 
+> will show all of your tcpip connections and what daemons or processes are 
+> involved. )
+> 
+> S
+> -- 
+> -------------------------------------------------------------------------
+> Sean O'Connell                                  Email: sean@stat.Duke.EDU
+> Institute of Statistics and Decision Sciences   Phone: (919) 684-5419
+> Duke University                                 Fax:   (919) 684-8594
+> 
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-stable" in the body of the message
+
+
+
+
+
+
+
+### PK 2596749 ###
+===== 序 22064 | PK 2596749 =====
+DATE: 1999-04-08
+FROM: John Preisler <john@vapornet.net> <None>
+SUBJ: make release broke too?
+
+
+Make release broken too?
+
+the vn pseudo-device IS in my kernel.  The device nodes are there,
+too. Make release used to load the vn driver as a kernel module
+regardless of whether it was in the kernel or not, but now its not
+loading the module.  
+
+Sources and world are from yesterday.
+
+
+gzip -9c /usr/src/release/../COPYRIGHT > /R/stage/mfsfd/stand/help/COPYRIGHT.hlp.gz
+for i in README.TXT RELNOTES.TXT INSTALL.TXT UPGRADE.TXT HARDWARE.TXT; do  gzip -9c /usr/src/release/texts/${i} > /R/stage/mfsfd/stand/help/${i}.gz; done
+test -f /usr/src/release/install.cfg && cp /usr/src/release/install.cfg /R/stage/mfsfd
+*** Error code 1 (ignored)
+Making the regular boot floppy.
+Compressing doc files...
+sh -e /usr/src/release/scripts/doFS.sh -s mfsroot /R/stage /mnt  2880 /R/stage/mfsfd 8000 minimum2
+Apr  8 13:28:22 datapit /kernel: link_elf: symbol vm_pager_strategy undefined
+vnconfig: cannot find or load "vn" kernel module: Exec format error
+*** Error code 1
+
+Stop.
+*** Error code 1
+
+Stop.
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-stable" in the body of the message
+
+
+
+
+
+
+
+### PK 2596752 ###
+===== 序 22067 | PK 2596752 =====
+DATE: 1999-04-08
+FROM: Spidey <spidey@libdns.qc.ca> <None>
+SUBJ: ps problems
+
+Hi!
+
+I've got serious problems with ps. I does not work at all:
+
+spidey@freed [03:01pm] spidey$ ps
+ps: bad namelist
+spidey@freed [03:01pm] spidey$ 
+
+is all I can get.
+
+Top is working properly though. I don't understand what the problem is and
+what I have done (again!) to make this happen...
+
+This is 
+
+FreeBSD freed.libdns.qc.ca 3.1-STABLE FreeBSD 3.1-STABLE #16: Fri Apr 2
+11:51:50 EST 1999
+spidey@freed.libdns.qc.ca:/usr/src/sys/compile/SHALL i386
+
+cvsupped on : 01/04/99...
+
+Is it possible that a make world in multi-user mode caused this?
+
+Si l'image donne l'illusion de savoir
+C'est que l'adage pretend que pour croire,
+L'important ne serait que de voir
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-stable" in the body of the message
+
+
+
+
+
+
+
+### PK 2596754 ###
+===== 序 22069 | PK 2596754 =====
+DATE: 1999-04-08
+FROM: Tom <tom@uniserve.com> <None>
+SUBJ: Re: ps problems
+
+On Thu, 8 Apr 1999, Spidey wrote:
+
+> Hi!
+> 
+> I've got serious problems with ps. I does not work at all:
+> 
+> spidey@freed [03:01pm] spidey$ ps
+> ps: bad namelist
+> spidey@freed [03:01pm] spidey$ 
+> 
+> is all I can get.
+
+...
+> Is it possible that a make world in multi-user mode caused this?
+
+  Not as long as the version of "ps" matches the version of your kernel.
+
+
+Tom
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-stable" in the body of the message
+
+
+
+
+
+
+
+### PK 2596757 ###
+===== 序 22072 | PK 2596757 =====
+DATE: 1999-04-08
+FROM: "Eric Griff" <eric@netdesign1.com> <None>
+SUBJ: Re: ps problems
+
+
+I got this with 3.1-RELEASE after making a kernel based on LINT. Didn't have
+the time to fix it. Tried using GENERIC as a base and it worked after that.
+
+Eric A. Griff
+NETDesign Inc.
+181 Genesee St.
+Suite 500
+Utica, NY 13501
+(315) 734-1668 Extension 205
+
+-----Original Message-----
+From: Tom <tom@uniserve.com>
+To: Spidey <beaupran@jsp.umontreal.ca>
+Cc: freebsd-stable@freebsd.org <freebsd-stable@freebsd.org>
+Date: Thursday, April 08, 1999 3:44 PM
+Subject: Re: ps problems
+
+
+>On Thu, 8 Apr 1999, Spidey wrote:
+>
+>> Hi!
+>>
+>> I've got serious problems with ps. I does not work at all:
+>>
+>> spidey@freed [03:01pm] spidey$ ps
+>> ps: bad namelist
+>> spidey@freed [03:01pm] spidey$
+>>
+>> is all I can get.
+>
+>...
+>> Is it possible that a make world in multi-user mode caused this?
+>
+>  Not as long as the version of "ps" matches the version of your kernel.
+>
+>
+>Tom
+
+
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-stable" in the body of the message
+
+
+
+
+
+
+
+### PK 2596759 ###
+===== 序 22074 | PK 2596759 =====
+DATE: 1999-04-08
+FROM: Michiel Boland <boland@diva.nl> <None>
+SUBJ: Re: 3Com 3C5x9 Network cards
+
+> I've been using and recommending the 3C509 cards for years.  Never had any
+> kind of problem with them, and performance is fine.  Be sure to take the
+> card out of "plug and play" mode and hardwire the IRQ/IO settings.
+
+What bothers me sometimes is that these cards get into a funny mode where
+they appear to mess up all imcoming frames. This usually happens when I
+boot Another OS (TM), and then FreeBSD. I have to hit the reset switch
+(soft reboots do not work) to get the thing working again. This is the
+3c509 model that has a BNC and a 10BaseT connector. Haven't seen it on
+other models yet.
+
+Other than that, nice cards.
+
+-- 
+Michiel Boland <boland@diva.nl>
+Digital Valley Internet Professionals
+Duivendaal 4, Wageningen, The Netherlands
+Phone: +31 317 465555, Fax: +31 317 460276
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-stable" in the body of the message
+
+
+
+
+
+
+
+### PK 2596760 ###
+===== 序 22075 | PK 2596760 =====
+DATE: 1999-04-08
+FROM: Khetan Gajjar <khetan@chain.freebsd.os.org.za> <None>
+SUBJ: Re: How stable is soft updates?
+
+Around Wednesday, "jfesler@gigo.com" wrote :
+
+>   3: How do we tunefs "/" ?
+
+Why would you want to ?
+
+IMO, a designed system has a / partition that is never written to.
+The only possible thing that is possibly written to during the
+normal course of events is /tmp.
+
+Although some people freak at making /tmp a mount point, I do, and haven't
+had any problems.
+
+If you don't like that, you can make it a MFS partition.
+
+---
+Khetan Gajjar       (!kg1779) * khetan@os.org.za
+http://www.os.org.za/~khetan  * Talk/Finger khetan@chain.freebsd.os.org.za
+FreeBSD enthusiast            * http://www2.za.freebsd.org/
+Security-wise, NT is a OS with a "kick me" sign taped to it
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-stable" in the body of the message
+
+
+
+
+
+
+

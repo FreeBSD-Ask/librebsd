@@ -1,0 +1,1294 @@
+### PK 1045821 ###
+现叙述(45字): 说明自己删掉判空检查是因为空函数指针会破坏 panic 调试，故不接受据此判定栈到底的做法
+### PK 1045821 ###
+===== 序 22202 | PK 1045821 =====
+DATE: 2011-04-06
+FROM: jhb at freebsd.org (John Baldwin) <None>
+SUBJ: KGDB stack traces in the kernel.
+
+On Monday, April 04, 2011 9:04:23 pm Justin Hibbits wrote:
+> On Apr 4, 2011, at 6:57 PM, Julian Elischer wrote:
+> > is there anyone here with enough gdb/kgdb source experience to know  
+> > what
+> > we would need to put on the stack at fork_exit() to make it stop  
+> > when it
+> > gets there?
+> >
+> > not only is it annoying but it slows down debugging because kgdb and  
+> > the ddd
+> > front end ask for stacks a LOT. sometimes it actually just hangs as  
+> > the stack
+> > goes into a loop and never ends.
+> >
+> > I had a quick look but didn't spot how gdb decides it has reached  
+> > the end of a stack.
+> >
+> > Julian
+> 
+>  From my experience, it checks for a NULL stack chain pointer.  Once  
+> that reaches NULL, it's the end of the stack.
+
+No, I removed that because it broke debugging panics due to NULL function 
+pointers.
+
+-- 
+John Baldwin
+
+
+
+
+
+
+### PK 1045827 ###
+现叙述(32字): 建议跑一次包含全部模块的内核测试编译来验证，通过即说明改动没问题
+### PK 1045827 ###
+===== 序 22206 | PK 1045827 =====
+DATE: 2011-04-06
+FROM: hselasky at freebsd.org (Hans Petter Selasky) <None>
+SUBJ: use_generic and usb probing
+
+On Wednesday 06 April 2011 15:21:19 Andriy Gapon wrote:
+> on 06/04/2011 10:33 Hans Petter Selasky said the following:
+
+> 
+> Which drivers I have missed?
+> Thanks!
+
+Run a kernel test compile including all modules. If that's OK it should be 
+fine.
+
+--HPS
+
+
+
+
+
+
+### PK 1045828 ###
+现叙述(53字): 答自己正是用包含全部模块的内核测试编译验证，并用 glimpse 找出所有 use_generic 出现处
+### PK 1045828 ###
+===== 序 22207 | PK 1045828 =====
+DATE: 2011-04-06
+FROM: avg at FreeBSD.org (Andriy Gapon) <None>
+SUBJ: use_generic and usb probing
+
+on 06/04/2011 16:28 Hans Petter Selasky said the following:
+> On Wednesday 06 April 2011 15:21:19 Andriy Gapon wrote:
+>> on 06/04/2011 10:33 Hans Petter Selasky said the following:
+> 
+>>
+>> Which drivers I have missed?
+>> Thanks!
+> 
+> Run a kernel test compile including all modules. If that's OK it should be 
+> fine.
+
+Yes, that's how I tested it.
+I also used 'glimpse' to find all occurrences of use_generic :)
+
+-- 
+Andriy Gapon
+
+
+
+
+
+
+### PK 1045829 ###
+现叙述(58字): 报告 CVS 自涉及 patch-update.mli.diff 的 burp 之后未见任何 src 更新，询问原因
+### PK 1045829 ###
+===== 序 22208 | PK 1045829 =====
+DATE: 2011-04-06
+FROM: imb at protected-networks.net (Michael Butler) <None>
+SUBJ: SVN -> CVS burp?
+
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+It seem that CVS hasn't seen any "src" updates sine the burp involving
+"/usr/ports/net/unison232/files/patch-update.mli.diff".
+
+Any ideas?
+
+	imb
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.11 (FreeBSD)
+
+iEYEARECAAYFAk2cbSEACgkQQv9rrgRC1JLglwCfZj7aMroEyTrk1s6/NfiCS4GK
+FYsAnR4cWbt6DrsGHqAUPFFVbtlEeAT/
+=n3Vi
+-----END PGP SIGNATURE-----
+
+
+
+
+
+
+### PK 1045831 ###
+现叙述(58字): 起初以为是 CPU 亲和实现所致，后看清 sched_add 在 smp_started 未置位时会短路，并给出补丁
+### PK 1045831 ###
+===== 序 22210 | PK 1045831 =====
+DATE: 2011-04-06
+FROM: rysto32 at gmail.com (Ryan Stone) <None>
+SUBJ: sched_4bsd startup crash trying to run a bound thread on an AP
+ that hasn't started
+
+On Wed, Apr 6, 2011 at 8:36 AM, John Baldwin <jhb@freebsd.org> wrote:
+> Hummm. ?Patching 4BSD to use the same route as ULE may be the best solution
+> for now if that is easiest. ?Alternatively, you could change 4BSD's
+> sched_add() to not try to kick other CPUs until smp_started is true.
+
+At first I thought that it was a consequence of the way it does CPU
+affinity, but now I see that it shortcuts if smp_started is not true.
+How about something like the following for 4BSD?
+
+--- sched_4bsd.c        (revision 220222)
++++ sched_4bsd.c        (working copy)
+@@ -1242,14 +1242,14 @@
+        }
+        TD_SET_RUNQ(td);
+
+-       if (td->td_pinned != 0) {
++       if (smp_started && td->td_pinned != 0) {
+                cpu = td->td_lastcpu;
+                ts->ts_runq = &runq_pcpu[cpu];
+                single_cpu = 1;
+                CTR3(KTR_RUNQ,
+                    "sched_add: Put td_sched:%p(td:%p) on cpu%d runq", ts, td,
+                    cpu);
+-       } else if (td->td_flags & TDF_BOUND) {
++       } else if (smp_started && (td->td_flags & TDF_BOUND)) {
+                /* Find CPU from bound runq. */
+                KASSERT(SKE_RUNQ_PCPU(ts),
+                    ("sched_add: bound td_sched not on 
+...[正文已截断，共 2010 字符]
+
+
+
+
+### PK 1045842 ###
+现叙述(59字): 提议 TSC 在 invariant 且跨核同步时提升为最佳时基，暂无自动检测仍依赖 tunable，单包情况亦难判断
+### PK 1045842 ###
+===== 序 22219 | PK 1045842 =====
+DATE: 2011-04-07
+FROM: avg at FreeBSD.org (Andriy Gapon) <None>
+SUBJ: prefer tsc timecounter when it's good
+
+
+Guys,
+
+what do you think about the following change?
+The idea is mark TSC as the best timecounter when it's invariant and synchronized
+between cores.
+Unfortunately I don't have code to auto-detect the synchronization and keep
+relying on the corresponding tunable.  I thought about auto-setting it for
+single-package configurations, but even that information is currently not trivial
+to get out of our mp (i386/amd64) machdep code.
+
+--- a/sys/x86/x86/tsc.c
++++ b/sys/x86/x86/tsc.c
+@@ -169,6 +169,9 @@ init_TSC_tc(void)
+ 			printf("TSC timecounter disabled: APM enabled.\n");
+ 	}
+
++	if (tsc_is_invariant)
++		tsc_timecounter.tc_quality = 1200;
++
+ #ifdef SMP
+ 	/*
+ 	 * We can not use the TSC in SMP mode unless the TSCs on all CPUs
+
+-- 
+Andriy Gapon
+
+
+
+
+
+
+### PK 1045846 ###
+现叙述(59字): 表示支持该改动，自述本机须手设 timecounter 为 TSC，默认 fast-acpi 令测试慢 10%-20%
+### PK 1045846 ###
+===== 序 22223 | PK 1045846 =====
+DATE: 2011-04-07
+FROM: julian at freebsd.org (Julian Elischer) <None>
+SUBJ: prefer tsc timecounter when it's good
+
+On 4/7/11 10:12 AM, Andriy Gapon wrote:
+> Guys,
+>
+> what do you think about the following change?
+> The idea is mark TSC as the best timecounter when it's invariant and synchronized
+> between cores.
+> Unfortunately I don't have code to auto-detect the synchronization and keep
+> relying on the corresponding tunable.  I thought about auto-setting it for
+> single-package configurations, but even that information is currently not trivial
+> to get out of our mp (i386/amd64) machdep code.
+>
+> --- a/sys/x86/x86/tsc.c
+> +++ b/sys/x86/x86/tsc.c
+> @@ -169,6 +169,9 @@ init_TSC_tc(void)
+>   			printf("TSC timecounter disabled: APM enabled.\n");
+>   	}
+>
+> +	if (tsc_is_invariant)
+> +		tsc_timecounter.tc_quality = 1200;
+
+I like this.
+I have to set the timecounter to TSC manually on my machines as using 
+teh default (fast-acpi)
+slows my tests down by 10%-20%
+mind you if one were to be able to put the tunable into /boot, one 
+could put the sysctl into
+/etc/sysctl.conf to do the same thing..
+
+> +
+>   #ifdef SMP
+>   	/*
+>   	 * We can not use the TSC in SMP mode unless the TSCs on all CPUs
+>
+
+
+
+
+
+
+
+### PK 1045850 ###
+现叙述(32字): 为自己未经测试便下的结论认错，并同意把该选项加入默认集合是好主意
+### PK 1045850 ###
+===== 序 22227 | PK 1045850 =====
+DATE: 2011-04-07
+FROM: yanegomi at gmail.com (Garrett Cooper) <None>
+SUBJ: [RFC] adding -Wmissing-include-dirs to CWARNFLAGS
+
+On Thu, Apr 7, 2011 at 2:22 PM, Alexander Best <arundel@freebsd.org> wrote:
+> On Thu Apr ?7 11, Garrett Cooper wrote:
+>> On Thu, Apr 7, 2011 at 1:53 PM, Garrett Cooper <yanegomi@gmail.com> wrote:
+>> > On Thu, Apr 7, 2011 at 11:55 AM, Alexander Best <arundel@freebsd.org> wrote:
+>> >> hi there,
+>> >>
+>> >> i'd like to propose adding -Wmissing-include-dirs to CWARNFLAGS. this will let
+>> >> tinderbox fail, if any new kernel code was committed with (a) broken include
+>> >> dir(s).
+>> >>
+>> >> i ran a test via
+>> >>
+>> >> make toolchains
+>> >> make MAKE_JUST_KERNELS=yes tinderbox
+>> >>
+>> >> and nothing seemed to go wrong with the extra warning enabled. i even found a
+>> >> missing include dir, which should be fixed by the attached patch.
+>> >>
+>> >> opinions?
+>> >>
+>> >> so far i've only tested this with gcc. i think someone on #freebsd-clang told
+>> >> me that -Wmissing-include-dirs is a noop for clang (for whatever reasons).
+>> >
+>> > ? ?make -f /etc/src.conf -VMODULES_OVERRIDE and make -f /etc/src.conf
+>> > -VMODULES_OVERRIDE say... (tinderbox should also really ignore these
+>> > files, but it doesn't currently)?
+>
+> otaku% make -f /etc/src.conf -VMODULES_OVERRIDE
+> netgraph/netgraph netgraph/socket netgraph/bluetooth/bluetooth ?netgraph/bluetooth/hci netgraph/bluetooth/l2cap netgraph/bluetooth/socket ?netgraph/bluetooth/ubt tmpfs sound/sound sound/driver/hda usb/uhid ?procfs pseudofs linux linprocfs linsysfs lindev usb/quirk geom ?opensolaris dtrace cyclic nfsclient krpc nfs_common nfslock
+> otaku% make -f /etc/make.conf -VMODULES_OVERRIDE
+> netgraph/netgraph netgraph/socket netgraph/bluetooth/bluetooth ?netgraph/bluetooth/hci netgraph/bluetooth/l2cap netgraph/bluetooth/socket ?netgraph/bluetooth/ubt tmpfs sound/sound sound/driver/hda usb/uhid ?procfs pseudofs linux linprocfs linsysfs lindev usb/quirk geom ?opensolaris dtrace cyclic nfsclient krpc nfs_common nfslock
+>
+> ...however i checked and tinderbox *does* ignore src.conf and make.conf. the
+> _.* log files show that modules were being build which are not returned by
+> the commands above.
+>
+> i think having this flag would be very useful, because it would force people to
+> make sure their include dirs are correct.
+>
+>>
+>> Sorry. Second invocation should have been make.conf, not src.conf.
+
+Ok then. I stand corrected for not having tested out my claim beforehand.
+
+Yes, I agree that adding this flag in the default set is a good idea.
+
+Thanks,
+-Garrett
+
+
+
+
+
+
+### PK 1045852 ###
+现叙述(47字): 自谦说可能讲蠢话，反问从实用角度看 devstat 里区分 SCSI 与 IDE 到底有无必要
+### PK 1045852 ###
+===== 序 22229 | PK 1045852 =====
+DATE: 2011-04-08
+FROM: avg at FreeBSD.org (Andriy Gapon) <None>
+SUBJ: multiple issues with devstat_*(9)
+
+on 07/04/2011 13:59 Alexander Motin said the following:
+> Any objections? Or SCSI/IDE there expected to mean command set?
+> 
+
+Sorry for saying something potentially stupid, but... do we actually have any
+reason to make that distinction from any practical point?
+
+-- 
+Andriy Gapon
+
+
+
+
+
+
+### PK 1045857 ###
+现叙述(55字): 称自己在 UP amd64、AMD Mobile Athlon64 上遇到同样问题，已报给 kib 与 jhb
+### PK 1045857 ###
+===== 序 22234 | PK 1045857 =====
+DATE: 2011-04-08
+FROM: bf1783 at googlemail.com (b. f.) <None>
+SUBJ: svn commit: r220430 - head/sys/amd64/amd64
+
+> > Author: jhb
+> > Date: Thu Apr  7 21:32:25 2011
+...
+> > URL: http://svn.freebsd.org/changeset/base/220430
+...
+>
+> I think that this commit (plus r220431) has broken something in my environment.
+> After updating to the most recent head I started to get semi-random problems in
+> various areas:
+> - named would consistently fail to start, but with different errors (assertions)
+> - ^Z and fg result in a process getting SIGSEGV
+> - X sometimes fails to start complaining about failed VT switch
+>
+> Reverting just these two commits restores sanity.
+>
+> Just in case, my processor is AMD (arch is obviously amd64).
+
+I experienced similar problems (UP amd64, AMD Mobile Athlon64
+processor) and reported it  to kib@ and jhb@.
+
+b.
+
+
+
+
+
+
+### PK 1045861 ###
+现叙述(46字): 为 syslogd 提交补丁新增 -H 选项，开启后每条日志不再附带主机名，无反对将自行提交
+### PK 1045861 ###
+===== 序 22238 | PK 1045861 =====
+DATE: 2011-04-08
+FROM: rysto32 at gmail.com (Ryan Stone) <None>
+SUBJ: [PATCH] Add syslogd option that suppresses hostname logging
+
+I've written a short patch for syslogd that adds a -H option.  Setting
+that option will prevent syslogd from logging the hostname with every
+log messages.   If there are no objections I'm going to commit this in
+the next couple of days.
+
+Index: syslogd.c
+===================================================================
+--- syslogd.c   (revision 220452)
++++ syslogd.c   (working copy)
+@@ -301,6 +301,7 @@
+                                /* 0=no, 1=numeric, 2=names */
+ static int     KeepKernFac;    /* Keep remotely logged kernel facility */
+ static int     needdofsync = 0; /* Are any file(s) waiting to be fsynced? */
++static int     LogHost = 1;
+ static struct pidfh *pfh;
+
+ volatile sig_atomic_t MarkSet, WantDie;
+@@ -358,7 +359,7 @@
+                dprintf("madvise() failed: %s\n", strerror(errno));
+
+        bindhostname = NULL;
+-       while ((ch = getopt(argc, argv, "468Aa:b:cCdf:kl:m:nop:P:sS:Tuv"))
++       while ((ch = getopt(argc, argv, "468Aa:b:cCdf:Hkl:m:nop:P:sS:Tuv"))
+            != -1)
+                switch (ch) {
+                case '4':
+@@ -394,6 +395,9 @@
+                case 'f':               /* configuration file */
+                        ConfFile = optarg;
+                        break;
++          
+...[正文已截断，共 2370 字符]
+
+
+
+
+### PK 1045871 ###
+现叙述(50字): 答 4 月 6 日 svn2cvs 确曾短暂宕机，但 ports 本就不在 SVN 上，与该问题无关
+### PK 1045871 ###
+===== 序 22248 | PK 1045871 =====
+DATE: 2011-04-09
+FROM: simon at nitro.dk (Simon L. B. Nielsen) <None>
+SUBJ: SVN -> CVS burp?
+
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+
+On 6 Apr 2011, at 15:39, Michael Butler wrote:
+
+> It seem that CVS hasn't seen any "src" updates sine the burp involving
+> "/usr/ports/net/unison232/files/patch-update.mli.diff".
+
+svn2cvs was down for a bit on April 6, but as ports isn't in SVN that's not related to anything there.
+
+FWIW, see also: http://twitter.com/clusteradm
+
+- -- 
+Simon L. B. Nielsen
+
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG/MacGPG2 v2.0.17 (Darwin)
+Comment: GPGTools - http://gpgtools.org
+
+iEYEARECAAYFAk2gi3gACgkQBJx0gP90kKsrfwCbBQf4B7ntp4PPO4QFSHw3Xrdz
+w5oAnjlPHnrOY2z3MeT8Z13cm0c5eQHg
+=Vabl
+-----END PGP SIGNATURE-----
+
+
+
+
+
+
+### PK 1045872 ###
+现叙述(40字): 补充一条可能相关的 PR 链接，指向 query-pr 的 pr 号 81497
+### PK 1045872 ###
+===== 序 22249 | PK 1045872 =====
+DATE: 2011-04-09
+FROM: avg at FreeBSD.org (Andriy Gapon) <None>
+SUBJ: multiple issues with devstat_*(9)
+
+on 08/04/2011 08:51 Andriy Gapon said the following:
+> on 07/04/2011 13:59 Alexander Motin said the following:
+>> Any objections? Or SCSI/IDE there expected to mean command set?
+>>
+> 
+> Sorry for saying something potentially stupid, but... do we actually have any
+> reason to make that distinction from any practical point?
+
+And the following could be related here too:
+http://www.freebsd.org/cgi/query-pr.cgi?pr=kern/81497
+
+-- 
+Andriy Gapon
+
+
+
+
+
+
+### PK 1045889 ###
+现叙述(52字): 追问 ahci(4) 手册写支持 ATAPI 设备，是否意味着自己的 DVD 机也能挂到 ahci 驱动
+### PK 1045889 ###
+===== 序 22266 | PK 1045889 =====
+DATE: 2011-04-11
+FROM: arundel at freebsd.org (Alexander Best) <None>
+SUBJ: multiple issues with devstat_*(9)
+
+On Mon Apr 11 11, Alexander Motin wrote:
+> Alexander Best wrote:
+> > On Sun Apr 10 11, Alexander Motin wrote:
+> >> Alexander Best wrote:
+> >>> On Thu Apr  7 11, Alexander Motin wrote:
+> >>>> Assuming that SCSI and IDE in -t option means transport type, and
+> >>>> assuming that we count everything except ATA and SATA as SCSI, I've made
+> >>>> following patch, that should fix issues from the CAM side:
+> >>>> http://people.freebsd.org/~mav/cam.devstat.patch
+> >>> with your patch i get the following output:
+> >>>
+> >>> otaku% iostat -t ide
+> >>>        tty            ada0             ada1             cpu
+> >>>  tin  tout  KB/t tps  MB/s   KB/t tps  MB/s  us ni sy in id
+> >>>    6   144 14.21   6  0.09  20.46  40  0.81   2  0  3  0 95
+> >>> otaku% iostat -t scsi
+> >>>        tty             cd0             cpu
+> >>>  tin  tout  KB/t tps  MB/s  us ni sy in id
+> >>>    6   146  2.32   0  0.00   2  0  3  0 95
+> >>> otaku% iostat -t pass
+> >>>        tty           pass0            pass1            pass2             cpu
+> >>>  tin  tout  KB/t tps  MB/s   KB/t tps  MB/s   KB/t tps  MB/s  us ni sy in id
+> >>>    6   147  0.36   0  0.00   0.36   0  0.00   0.00   0  0.00   2  0  3  0 95
+> >>> otaku% iostat -t da  
+> >>>        tty            ada0             ada1             cpu
+> >>>  tin  tout  KB/t tps  MB/s   KB/t tps  MB/s  us ni sy in id
+> >>>    6   147 14.21   6  0.08  20.46  37  0.75   1  0  3  0 95
+> >>> otaku% iostat -t cd
+> >>>        tty             cd0             cpu
+> >>>  tin  tout  KB/t tps  MB/s  us ni sy in id
+> >>>    7   147  2.32   0  0.00   1  0  3  0 95
+> >>> otaku% iostat -t other
+> >>>        tty            cpu
+> >>>  tin  tout us ni sy in id
+> >>>    7   149  1  0  3  0 95
+> >>> otaku% iostat -n 100  
+> >>>        tty            ada0             ada1              cd0            pass0            pass1            pass2             cpu
+> >>>  tin  tout  KB/t tps  MB/s   KB/t tps  MB/s   KB/t tps  MB/s   KB/t tps  MB/s   KB/t tps  MB/s   KB/t tps  MB/s  us ni sy in id
+> >>>    6   135 14.21   5  0.07  20.44  32  0.64   2.32   0  0.00   0.36   0  0.00   0.36   0  0.00   0.00   0  0.00   1  0  3  0 96
+> >>>
+> >>> the the remaining issues imho are:
+> >>>
+> >>> 1) ada* and cd* are SATA/ATA devices. so i think they should show up together
+> >>>    either under ide *or* scsi. i don't have any *real* scsi devices.
+> >> I've just retested the patch and haven't reproduced your problem:
+> >> %iostat -d
+> >>              da0             ada0              da1              cd0
+> >>   KB/t tps  MB/s   KB/t tps  MB/s   KB/t tps  MB/s   KB/t tps  MB/s
+> >>   0.01   0  0.00   3.27   1  0.00   2.65   1  0.00   0.00   0  0.00
+> >> %iostat -d -t ide
+> >>              da0             ada0              cd0
+> >>   KB/t tps  MB/s   KB/t tps  MB/s   KB/t tps  MB/s
+> >>   0.01   0  0.00   3.27   1  0.00   0.00   0  0.00
+> >> %iostat -d -t scsi
+> >>              da1
+> >>   KB/t tps  MB/s
+> >>   2.65   1  0.00
+> >> %iostat -d -t pass
+> >>            pass0            pass1            pass2            pass3
+> >>   KB/t tps  MB/s   KB/t tps  MB/s   KB/t tps  MB/s   KB/t tps  MB/s
+> >>   0.00   0  0.00   0.00   0  0.00   0.00   0  0.00   0.00   0  0.00
+> >> %iostat -d -t ide,pass
+> >>            pass0            pass1            pass2
+> >>   KB/t tps  MB/s   KB/t tps  MB/s   KB/t tps  MB/s
+> >>   0.00   0  0.00   0.00   0  0.00   0.00   0  0.00
+> >> %iostat -d -t scsi,pass
+> >>            pass3
+> >>   KB/t tps  MB/s
+> >>   0.00   0  0.00
+> >>
+> >> da0 is an PATA ATAPI ZIP, da1 - USB floppy, ada0 - SATA HDD, cd0 - PATA
+> >> ATAPI CD-ROM.
+> >>
+> >> Just an idea, aren't you are using legacy ata(4) + atapicam for your
+> >> cd0? atapicam lies that it's buses are SPI (SCSI).
+> > 
+> > my cd0 is a pata atapi dvdrom drive and i have the following in my kernel conf:
+> > 
+> > device          atacore
+> > device          ahci
+> > device          atajmicron
+> > device          atapci
+> > #device         atapicd
+> > device          atapicam
+> > 
+> > device          umass
+> > device          scbus
+> > device          cd
+> > device          pass
+> > device          da
+> > device          random
+> > device          pty
+> > device          md
+> > 
+> > the dmesg entries for cd0 are:
+> > 
+> > cam_periph_alloc: attempt to re-allocate valid device cd0 rejected
+> > cdasync: Unable to attach new device due to status 0x6
+> > cd0 at ata2 bus 0 scbus8 target 0 lun 0
+> > cd0: <HL-DT-ST DVDRAM GSA-H10N JL12> Removable CD-ROM SCSI-0 device 
+> > cd0: 3.300MB/s transfers
+> > cd0: cd present [2149024 x 2048 byte records]
+> 
+> Aha, that's it. It is atapicam's lie. atapicam is one of a things that
+> will go away during migration to CAM ATA. If you remove `device
+> atapicam`, but add `options ATA_CAM` instead, CAM will manage that bus
+> directly and report it as ATA.
+
+thanks for the hint. i also read the following in the ahci(4) man page:
+
+"     Driver features include support for Serial ATA and ATAPI devices, ..."
+
+...does that mean that my DVD drive can also attach to the ahci driver?
+
+cheers.
+alex
+
+> 
+> -- 
+> Alexander Motin
+
+-- 
+a13x
+
+
+
+
+
+
+### PK 1045890 ###
+现叙述(38字): 答若是 SATA 光盘接到 AHCI 控制器，就可以用 ahci 控制器驱动
+### PK 1045890 ###
+===== 序 22267 | PK 1045890 =====
+DATE: 2011-04-11
+FROM: mav at FreeBSD.org (Alexander Motin) <None>
+SUBJ: multiple issues with devstat_*(9)
+
+Alexander Best wrote:
+> On Mon Apr 11 11, Alexander Motin wrote:
+>> Alexander Best wrote:
+>>> my cd0 is a pata atapi dvdrom drive and i have the following in my kernel conf:
+>>>
+>>> device          atacore
+>>> device          ahci
+>>> device          atajmicron
+>>> device          atapci
+>>> #device         atapicd
+>>> device          atapicam
+>>>
+>>> device          umass
+>>> device          scbus
+>>> device          cd
+>>> device          pass
+>>> device          da
+>>> device          random
+>>> device          pty
+>>> device          md
+>>>
+>>> the dmesg entries for cd0 are:
+>>>
+>>> cam_periph_alloc: attempt to re-allocate valid device cd0 rejected
+>>> cdasync: Unable to attach new device due to status 0x6
+>>> cd0 at ata2 bus 0 scbus8 target 0 lun 0
+>>> cd0: <HL-DT-ST DVDRAM GSA-H10N JL12> Removable CD-ROM SCSI-0 device 
+>>> cd0: 3.300MB/s transfers
+>>> cd0: cd present [2149024 x 2048 byte records]
+>> Aha, that's it. It is atapicam's lie. atapicam is one of a things that
+>> will go away during migration to CAM ATA. If you remove `device
+>> atapicam`, but add `options ATA_CAM` instead, CAM will manage that bus
+>> directly and report it as ATA.
+> 
+> thanks for the hint. i also read the following in the ahci(4) man page:
+> 
+> "     Driver features include support for Serial ATA and ATAPI devices, ..."
+> 
+> ...does that mean that my DVD drive can also attach to the ahci driver?
+
+If it is SATA and you connect it to AHCI controller -- yes, it will work
+with ahci(4) controller driver.
+
+-- 
+Alexander Motin
+
+
+
+
+
+
+### PK 1045893 ###
+现叙述(54字): 为 ifconfig(8) 增加 -t 参数以点分十进制显示 IPv4 子网掩码，默认行为不变故无兼容性问题
+### PK 1045893 ###
+===== 序 22270 | PK 1045893 =====
+DATE: 2011-04-11
+FROM: boogie at lazybytes.org (Sergey Vinogradov) <None>
+SUBJ: [PATCH] ifconfig(8) flag to display IPv4 netmasks in dot-decimal
+ format
+
+Hi,
+I've written a tiny-tiny patch, which adds the '-t' flag to ifconfig(8). 
+It modifies the output to display IPv4 netmasks in dotted decimal notation:
+
+% ifconfig msk0
+msk0: flags=8843<UP,BROADCAST,RUNNING,SIMPLEX,MULTICAST> metric 0 mtu 1500
+
+options=c011a<TXCSUM,VLAN_MTU,VLAN_HWTAGGING,TSO4,VLAN_HWTSO,LINKSTATE>
+         ether 00:16:e6:88:0f:89
+         inet 10.10.0.1 netmask 0xffffff00 broadcast 10.10.0.255
+         media: Ethernet autoselect (none)
+         status: no carrier
+
+% ifconfig -t msk0
+msk0: flags=8843<UP,BROADCAST,RUNNING,SIMPLEX,MULTICAST> metric 0 mtu 1500
+
+options=c011a<TXCSUM,VLAN_MTU,VLAN_HWTAGGING,TSO4,VLAN_HWTSO,LINKSTATE>
+         ether 00:16:e6:88:0f:89
+         inet 10.10.0.1 netmask 255.255.255.0 broadcast 10.10.0.255
+         media: Ethernet autoselect (none)
+         status: no carrier
+
+There was a discussion [1] in freebsd-hackers@ about adding such 
+functionality to ifconfig(8), which urged me write this patch. The 
+default behavior of ifconfig(8) is kept unmodified, so there shouldn't 
+be any compatibility breakages. At least, it works fine for me :)
+
+[1] 
+http://lists.freebsd.org/pipermail/freebsd-hackers/2011-April/034997.html
+
+-- 
+wbr,
+Boo
+-------------- nex
+...[正文已截断，共 5413 字符]
+
+
+
+
+### PK 1045895 ###
+现叙述(42字): 称 devstat 的设备类型判定自 GEOM 引入起就是坏的，故肯定该补丁方向正确
+### PK 1045895 ###
+===== 序 22272 | PK 1045895 =====
+DATE: 2011-04-11
+FROM: ken at freebsd.org (Kenneth D. Merry) <None>
+SUBJ: multiple issues with devstat_*(9)
+
+On Thu, Apr 07, 2011 at 13:59:35 +0300, Alexander Motin wrote:
+> Alexander Best wrote:
+> > On Fri Apr  1 11, John Baldwin wrote:
+> >> On Thursday, March 31, 2011 6:33:39 pm Alexander Best wrote:
+> >>> i think there are multiple issues with devstat. i found the following in
+> >>> devicestat.h:
+> 
+> ...
+> 
+> >>> funny thing is i found the following in scsi_pass.c:
+> >>>
+> >>>         softc->device_stats = devstat_new_entry("pass",
+> >>>                           periph->unit_number, 0,
+> >>>                           DEVSTAT_NO_BLOCKSIZE
+> >>>                           | (no_tags ? DEVSTAT_NO_ORDERED_TAGS : 0),
+> >>>                           softc->pd_type |
+> >>>                           DEVSTAT_TYPE_IF_SCSI |
+> >>>                           DEVSTAT_TYPE_PASS,
+> >>>                           DEVSTAT_PRIORITY_PASS);
+> >>>
+> >>> ...so pass* *should* show up under iostat -t scsi.
+> 
+> As I can see, this is a bug (or feature) of the libdevstat /
+> devstat_selectdevs(). If you specify any -t, then pass devices will be
+> reported only if you request "pass" specifically.
+> 
+> >> Hmm, pass devices for adaX should not be SCSI though, they should be ide I
+> >> think.
+> > 
+> > i think the situation with ATA_CAM should be discussed further. still besides
+> > this issue there are many more with devstat(3).
+> > 
+> > i'll try to track all the "devstat_new_entry()" occurrences and see if some
+> > issues can be fixed. maybe only the proper DEVSTAT_* args were forgotten.
+> 
+> Assuming that SCSI and IDE in -t option means transport type, and
+> assuming that we count everything except ATA and SATA as SCSI, I've made
+> following patch, that should fix issues from the CAM side:
+> http://people.freebsd.org/~mav/cam.devstat.patch
+> 
+> Any objections? Or SCSI/IDE there expected to mean command set?
+
+For what it's worth, I think the above patch is the right approach.  The
+device type stuff in devstat has been broken since GEOM went in, so I'm
+glad to see you step up to fix it!
+
+Ken
+-- 
+Kenneth Merry
+ken@FreeBSD.ORG
+
+
+
+
+
+
+### PK 1045905 ###
+现叙述(52字): 称 MCP51 又出问题了，建议先从抓取完整 verbose dmesg 开始，至少给出与磁盘相关的部分
+### PK 1045905 ###
+===== 序 22282 | PK 1045905 =====
+DATE: 2011-04-12
+FROM: mav at FreeBSD.org (Alexander Motin) <None>
+SUBJ: [regression] unable to boot: no GEOM devices found.
+
+David Naylor wrote:
+> I am running -current and since a few days ago (at least 2011/04/11) I am 
+> unable to boot.  
+> 
+> The boot process stops when it looks to find a bootable device.  The prompt 
+> (when pressing '?') does not display any device and yielding one second (or 
+> more) to the kernel (by pressing '.') does not improve the situation.  
+> 
+> A known working date is 2011/02/20.  
+> 
+> I am running amd64 on a nVidia MCP51 chipset.  
+
+MCP51... again...
+
+> I am willing to help any way I can.  
+
+You could start from capturing and showing verbose dmesg. Full or at
+least in parts related to disks.
+
+-- 
+Alexander Motin
+
+
+
+
+
+
+### PK 1045933 ###
+现叙述(43字): 认可所建议的解决办法，并另指出还有一个此前讨论过的小问题在 r220528 上尚未解决
+### PK 1045933 ###
+===== 序 22310 | PK 1045933 =====
+DATE: 2011-04-14
+FROM: geo.liaskos at gmail.com (George Liaskos) <None>
+SUBJ: KDE related compile errors on CURRENT.
+
+> You can just copy /usr/src/contrib/gcc/config/i386/tmmintrin.h to
+> /usr/include/gcc/4.2 for now, or apply the attached patch and run "make
+> install" in /usr/src/gnu/usr.bin/cc/include. ?I'll commit a fix to
+> -current tonight.
+
+This is great, thank you very much.
+
+There's one more minor hiccup described here
+http://lists.freebsd.org/pipermail/freebsd-current/2011-March/023415.html
+
+This issue as of r220528 is not resolved.
+
+Regards
+
+
+
+
+
+
+### PK 1045937 ###
+现叙述(28字): 确认自己的基础 gcc 是当天从 r220620 构建的
+### PK 1045937 ###
+===== 序 22314 | PK 1045937 =====
+DATE: 2011-04-14
+FROM: dim at FreeBSD.org (Dimitry Andric) <None>
+SUBJ: KDE related compile errors on CURRENT.
+
+On 2011-04-14 16:03, Alexander Best wrote:
+...
+> for me too when using clang. i cannot say anything about base gcc because it's
+> dated march 13th on my machine, which is before r219697 was committed.
+>
+> are you sure you are running a copy of base gcc built from a recent HEAD?
+
+Yep, built today from r220620.
+
+
+
+
+
+
+### PK 1045947 ###
+现叙述(56字): 请求提供完整启动 verbose dmesg，并请确认 pci0:0:9:0 处的设备是否为 PCI-PCI 桥
+### PK 1045947 ###
+===== 序 22324 | PK 1045947 =====
+DATE: 2011-04-15
+FROM: jhb at freebsd.org (John Baldwin) <None>
+SUBJ: [regression] unable to boot: no GEOM devices found.
+
+On Wednesday, April 13, 2011 1:07:06 pm David Naylor wrote:
+> On Tuesday 12 April 2011 22:12:55 Alexander Motin wrote:
+> > David Naylor wrote:
+> > > On Tuesday 12 April 2011 08:17:51 Alexander Motin wrote:
+> > >> David Naylor wrote:
+> > >>> I am running -current and since a few days ago (at least 2011/04/11) I
+> > >>> am unable to boot.
+> > >>> 
+> > >>> The boot process stops when it looks to find a bootable device.  The
+> > >>> prompt (when pressing '?') does not display any device and yielding 
+one
+> > >>> second (or more) to the kernel (by pressing '.') does not improve the
+> > >>> situation.
+> > >>> 
+> > >>> A known working date is 2011/02/20.
+> > >>> 
+> > >>> I am running amd64 on a nVidia MCP51 chipset.
+> > >> 
+> > >> MCP51... again...
+> >
+> > +ata2: reiniting channel ..
+> > +ata2: SATA connect time=0ms status=00000113
+> > +ata2: reset tp1 mask=01 ostat0=58 ostat1=00
+> > +ata2: stat0=0x50 err=0x01 lsb=0x00 msb=0x00
+> > +ata2: reset tp2 stat0=50 stat1=00 devices=0x1
+> > +ata2: reinit done ..
+> > +unknown: FAILURE - ATA_IDENTIFY timed out LBA=0
+> > 
+> > As soon as all devices detected but not responding to commands, I would
+> > suppose that there is something wrong with ATA interrupts. There is a
+> > long chain of interrupt problems in this chipset. I have already tried
+> > to debug one case where ATA wasn't generating interrupts at all.
+> > Unfortunately, without success -- requests were executing, but not
+> > generating interrupts, it wasn't looked like ATA driver problem.
+> > 
+> > What's about possible candidate to revision triggering your problem, I
+> > would look on this message:
+> > +pcib0: Enabling MSI window for HyperTransport slave at pci0:0:9:0
+> > 
+> > At least it is recent (SVN revs 219737,219740 on 2011-03-18 by jhb) and
+> > it is interrupt related.
+> 
+> I reverted those two revs and everything works again.
+
+Hmm, can you provide a full boot verbose dmesg?  Alternatively, can you see if 
+the device at pci0:0:9:0 is a PCI-PCI bridge?
+
+-- 
+John Baldwin
+
+
+
+
+
+
+### PK 1045948 ###
+现叙述(58字): 称该 ZFS v28 补丁在 stable/8 上试了但编译报错中断，并询问是否有针对 stable 源码的近期补丁
+### PK 1045948 ###
+===== 序 22325 | PK 1045948 =====
+DATE: 2011-04-15
+FROM: l.messner at physik.tu-berlin.de (Leon Meßner) <None>
+SUBJ: ZFS V28
+
+On Fri, Apr 15, 2011 at 06:28:07PM +0300, George Kontostanos wrote:
+> I was wondering if ZFS v28 is going to be MFC to 8-Stable or not.
+
+On Fri, Apr 15, 2011 at 06:28:07PM +0300, George Kontostanos wrote:
+> I was wondering if ZFS v28 is going to be MFC to 8-Stable or not.
+ 
+Is there a recent patch against stable sources ? I tried the following:
+ 
+http://people.freebsd.org/~mm/patches/zfs/v28/stable-8-zfsv28-20110317.patch.xz
+ 
+This patch failes at sys/cddl/compat/opensolaris/sys/sysmacros.h which i
+think should just be deleted. I tried deleting this file and then 
+building produces some errors then walls of text and then aborts.
+The first errors look like this:
+ 
+Script started on Fri Apr 15 18:32:36 2011
+make -j 6 buildworld
+"/usr/share/mk/bsd.prog.mk", line 128: warning: duplicate script for
+target "_EXTRADEPEND" ignored
+"Makefile", line 222: warning: duplicate script for target "clean"
+ignored
+"Makefile", line 222: warning: duplicate script for target "cleandepend"
+ignored
+"Makefile", line 222: warning: duplicate script for target "distribute"
+ignored
+"Makefile", line 222: warning: duplicate script for target "lint"
+ignored
+"Makefile", line 222: warning: duplicate script for target "obj" ignored
+"Makefile", line 222: warning: duplicate script for targe
+...[正文已截断，共 1858 字符]
+
+
+
+
+### PK 1045955 ###
+现叙述(55字): 宣布计划从基础系统移除 libobjc 及其他 Objective-C 组件，理由是极其过时且基础系统无人使用
+### PK 1045955 ###
+===== 序 22332 | PK 1045955 =====
+DATE: 2011-04-17
+FROM: dim at FreeBSD.org (Dimitry Andric) <None>
+SUBJ: HEADS UP: Removal of libobjc from the base system
+
+I will be removing libobjc and other Objective-C related components
+from the base system, as these are extremely outdated, and not used by
+anything in the base system.
+
+The previous thread about this (*) did not generate much discussion, but
+if there are any objections, please speak up.
+
+
+*) http://docs.freebsd.org/cgi/mid.cgi?2AD11EA8-18FC-46E1-AE97-184599A054AD
+
+
+
+
+
+
+### PK 1045977 ###
+现叙述(51字): 用 codespell 扫描 sys 目录找出大量潜在拼写错误，完整 diff 公开并自承其中确有误改
+### PK 1045977 ###
+===== 序 22353 | PK 1045977 =====
+DATE: 2011-04-19
+FROM: bruce at cran.org.uk (Bruce Cran) <None>
+SUBJ: Finding typos using codespell
+
+There's a new tool that can be used to find spelling mistakes in code: codespell 
+from http://www.politreco.com has already been used to find mistakes in both 
+Linux and LLVM. I ran it on sys/ and it found lots of potential typos - the 
+full diff (which I know does contain some incorrect changes) can be found at 
+http://www.cran.org.uk/~brucec/freebsd/codespell_sys.diff .
+
+-- 
+Bruce Cran
+
+
+
+
+
+
+
+### PK 1045981 ###
+现叙述(48字): 称带 vimage 支持的内核编译通过且系统能启动，但一加载 PF 模块就死锁，请人给补丁或绕法
+### PK 1045981 ###
+===== 序 22357 | PK 1045981 =====
+DATE: 2011-04-19
+FROM: gpeskens85 at gmail.com (Gijs Peskens) <None>
+SUBJ: FreeBSD 9 Vimage and PF ?
+
+of course I know that Vimage is still very much experimental and still very
+much unfinished as well, but I would like to use it to try and set up a box
+where everything is seggregated into jails as much as possible, compiling
+the kernel with vimage support works like a charm and the system even boots
+up. But as soon as the PF module (for the jail host a absolute requirement)
+is loaded the system deadlocks. Are there any work arounds or patches in
+order to get it working and at least support PF in the jail host ? I looked
+around a lot and googled around a lot and found some patches (wich don't
+work for me unfortunately :/ ) But nothing really recent ?
+
+Gijs
+
+
+
+
+
+
+### PK 1045995 ###
+现叙述(33字): 称自己无法复现该 segfault，反问作者是否测出现状代码会崩溃
+### PK 1045995 ###
+===== 序 22371 | PK 1045995 =====
+DATE: 2011-04-20
+FROM: davidxu at freebsd.org (David Xu) <None>
+SUBJ: [PATCH] Call _thr_check_init() from _pthread_once
+
+On 2011/04/20 00:53, Ryan Stone wrote:
+> In r179417 the implementation of pthread_once in libthr was changed
+> from using a global pthread_mutex_t for synchronization to rolling its
+> own synchronization mechanism.  Unfortunately, this introduced a bug.
+> Calling _pthread_mutex_lock implicitly ensured that _thr_check_init()
+> had been called.  In the current version, there is no such guarantee.
+> This means that if your first call into libthr is pthread_once, your
+> executable will segfault when it tries to access curthread.  This
+> patch resolves the issue for me:
+> 
+> Index: lib/libthr/thread/thr_once.c
+> ===================================================================
+> --- lib/libthr/thread/thr_once.c        (revision 220603)
+> +++ lib/libthr/thread/thr_once.c        (working copy)
+> @@ -64,6 +64,8 @@
+>         struct pthread *curthread;
+>         int state;
+> 
+> +       _thr_check_init();
+> +
+>         for (;;) {
+>                 state = once_control->state;
+>                 if (state == ONCE_DONE)
+> 
+> If there are no objections I'll commit this soon.
+
+Have you tested that current code causes segfault ?
+anyway, I can not reproduce it on my machne.
+
+Regards,
+David Xu
+
+
+
+
+
+
+### PK 1046001 ###
+现叙述(53字): 称补丁验证成功，能读到 62.0C，并追问 coretemp 与 acpi 温度读数为何不同、是否两块硬件
+### PK 1046001 ###
+===== 序 22377 | PK 1046001 =====
+DATE: 2011-04-20
+FROM: romain.garbage at gmail.com (Romain Garbage) <None>
+SUBJ: `hw.acpi.thermal.tz0.temperature' disappeared
+
+2011/4/18  <mdf@freebsd.org>:
+> I don't seem to have a hw.acpi.thermal sysctl node on my box. ?Can
+> someone please try this patch?
+
+Works for me too.
+
+$> sysctl -a | grep temp
+[...]
+hw.acpi.thermal.tz0.temperature: 62.0C
+dev.cpu.0.temperature: 55.0C
+dev.cpu.1.temperature: 56.0C
+[...]
+
+By the way, why the temperature from coretemp is different of the one
+from acpi? Are they two different hardware?
+
+Regards,
+Romain
+
+
+
+
+
+
+### PK 1046015 ###
+现叙述(31字): 称试用 mav 提交的改用更严格设备签名检查的补丁后问题已修复
+### PK 1046015 ###
+===== 序 22391 | PK 1046015 =====
+DATE: 2011-04-20
+FROM: bruce at cran.org.uk (Bruce Cran) <None>
+SUBJ: Switch from legacy ata(4) to CAM-based ATA
+
+On Thu, 21 Apr 2011 00:17:44 +0300
+Alexander Motin <mav@FreeBSD.org> wrote:
+
+> 2 Bruce: Looking on XEN sources, it seems that the only place how it
+> differs missing and present disk is the device signature. ata(4) at
+> this moment doesn't checks signature if it is not ATAPI and READY bit
+> is set. Attached patch should solve the problem by using more strict
+> check, and I only hope it won't break anything else. Try it please.
+
+That seems to have fixed it. Thanks!
+
+-- 
+Bruce Cran
+
+
+
+
+
+
+### PK 1046036 ###
+现叙述(45字): 追问 COMPAT_FREEBSD8 是否应保留旧 ABI，并称除非自己误解了兼容宏的用途
+### PK 1046036 ###
+===== 序 22412 | PK 1046036 =====
+DATE: 2011-04-21
+FROM: lacombar at gmail.com (Arnaud Lacombe) <None>
+SUBJ: Heads up - please recompile ifconfig if you're using wireless
+
+Hi,
+
+On Thu, Apr 21, 2011 at 12:21 AM, Adrian Chadd <adrian.chadd@gmail.com> wrote:
+> Hi,
+>
+> If you're using wireless on -HEAD and using an older base w/ newer kernels,
+> you may wish to recompile ifconfig.
+> I've changed the binary ABI used for MIMO statistics (which nothing actually
+> exports yet) but it may generate garbage looking MIMO noise floor output (in
+> ifconfig X list station.)
+> If you don't mind about that, don't worry about updating. :)
+>
+Unless I misunderstand the purpose of the COMPAT_FREEBSD[4567] entries
+in the config file, shouldn't the previous ABI be kept available under
+COMPAT_FREEBSD8 ?
+
+Thanks,
+ - Arnaud
+
+> Thanks,
+>
+>
+> Adrian
+> _______________________________________________
+> freebsd-current@freebsd.org mailing list
+> http://lists.freebsd.org/mailman/listinfo/freebsd-current
+> To unsubscribe, send any mail to "freebsd-current-unsubscribe@freebsd.org"
+>
+
+
+
+
+
+
+### PK 1046039 ###
+现叙述(56字): 称 unionfs 同一挂载点多重挂载会超出内核栈上限引发 panic，已有人报告，并做了跨挂载与递归挂载的原型
+### PK 1046039 ###
+===== 序 22415 | PK 1046039 =====
+DATE: 2011-04-21
+FROM: daichi at freebsd.org (Daichi GOTO) <None>
+SUBJ: RFC: unionfs multiple mounts, cross mounts and recursive mounts
+ limits and manegement feature
+
+Hi unionfs lovers,
+
+It is possible to mount unionfs multiple times more than once at a
+mount point. However, exceeding multiple mounts could consume kernel
+stack over its limits and lead a system panic easily. Some users 
+reported that they got a system panic by multiple unionfs mounts.
+
+So I make a preproduction prototype to check multiple mounts, 
+cross mounts, recursive mounts and the combination of those of unionfs
+and prevent that situation.
+
+http://people.freebsd.org/~daichi/unionfs/experiments/unionfs-cross-mount3.diff
+
+It is adjustable with sysctl value 'vfs.unionfs.recursive_limit' as
+multiple mounts limits. The default value is 1 and it means two-layered ok.
+Max value of 'vfs.unionfs.recursive_limit' is 8, it is heuristic value. 
+I couldn't get a system panic unless 'vfs.unionfs.recursive_limit' is over 8.
+
+Test reports, suggestions and new patches are always welcome. I'm considering
+to get merged into current if there are no issues and problems.
+
+-- 
+Daichi GOTO
+
+
+
+
+
+
+### PK 1046056 ###
+现叙述(41字): 称首个补丁工作正常，第二个补丁后 mwl 模块构建出问题，贴出 cc 命令行供诊断
+### PK 1046056 ###
+===== 序 22432 | PK 1046056 =====
+DATE: 2011-04-21
+FROM: gkontos.mail at gmail.com (George Kontostanos) <None>
+SUBJ: Switch from legacy ata(4) to CAM-based ATA
+
+First patch seemed to work fine.
+
+Second however,
+
+===> mwl (all)
+cc -O2 -pipe -fno-strict-aliasing -Werror -D_KERNEL -DKLD_MODULE -nostdinc
+-DHAVE_KERNEL_OPTION_HEADERS -include
+/usr/obj/usr/src/sys/GENERIC/opt_global.h -I. -I@ -I@/contrib/altq
+-finline-limit=8000 --param inline-unit-growth=100 --param
+large-function-growth=1000 -fno-common  -fno-omit-frame-pointer
+-I/usr/obj/usr/src/sys/GENERIC  -mcmodel=kernel -mno-red-zone  -mfpmath=387
+-mno-mmx -mno-3dnow -mno-sse -mno-sse2 -mno-sse3  -msoft-float
+-fno-asynchronous-unwind-tables -ffreestanding -fstack-protector
+-std=iso9899:1999 -fstack-protector -Wall -Wredundant-decls -Wnested-externs
+-Wstrict-prototypes  -Wmissing-prototypes -Wpointer-arith -Winline
+-Wcast-qual  -Wundef -Wno-pointer-sign -fformat-extensions -c
+/usr/src/sys/modules/mwl/../../dev/mwl/if_mwl.c
+cc -O2 -pipe -fno-strict-aliasing -Werror -D_KERNEL -DKLD_MODULE -nostdinc
+-DHAVE_KERNEL_OPTION_HEADERS -include
+/usr/obj/usr/src/sys/GENERIC/opt_global.h -I. -I@ -I@/contrib/altq
+-finline-limit=8000 --param inline-unit-growth=100 --param
+large-function-growth=1000 -fno-common  -fno-omit-frame-pointer
+-I/usr/obj/usr/src/sys/GENERIC  -mcmodel=kernel -mno-red-zone  -mfpmath=387
+-mno-mmx -mno-3dnow -mno-sse -mno-
+...[正文已截断，共 5776 字符]
+
+
+
+
+### PK 1046057 ###
+现叙述(38字): 称第二个补丁的构建失败是与本次无关的 WiFi MIMO 支持破坏且已经修好
+### PK 1046057 ###
+===== 序 22433 | PK 1046057 =====
+DATE: 2011-04-21
+FROM: mav at FreeBSD.org (Alexander Motin) <None>
+SUBJ: Switch from legacy ata(4) to CAM-based ATA
+
+George Kontostanos wrote:
+> First patch seemed to work fine.
+> 
+> Second however,
+
+It was unrelated breakage related to WiFi MIMO support. Already fixed.
+
+-- 
+Alexander Motin
+
+
+

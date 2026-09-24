@@ -1,0 +1,43 @@
+2597177|L4|rm 只调用 unlink，按 man page 链接计数减一，归零且无进程打开时才真正释放
+2597178|L3|Dennis Rockwell 说在多数 Unix 内核上 cluster 计数含义不同，FreeBSD 不敢断言
+2597180|L4|机器常慢到爬行，IPFilter 方指 mbuf 匮乏是该症状经典成因，问如何查看当前 mbuf 数
+2597181|L4|建议系统爬行时跑 netstat -m 观察 denied 与 delayed 计数，该输出即给出 mbuf 总量
+2597182|L3|David Greenman 确认 mwlucas 关于 netstat -m 的判断，称新版 FreeBSD 机制相同
+2597183|L4|2.x 升 3.x 须走 make upgrade 与 make aout-to-elf 流程，不能直接 buildworld
+2597184|L4|TUNE_1542 已从源码移除，但仍留在 sys/i386/conf/LINT 与 options.i386、options.pc98
+2597187|L4|japanese/platex-common 编译失败，ld-elf.so.1 无运行时符号表，反复 Ignored d_tag 后 tex 报错
+2597192|L3|Polstra 认为取 3.1-RELEASE 源码应把 cvsup tag 从 3.1-STABLE 改成 RELENG_3_0_0_RELEASE ^1
+2597193|L4|QIC 磁带 tar xfvR /dev/nrst0 报 rec 0 read error，tar 进程陷 DE 态挂死，盘体无动作
+2597197|L4|swap_pager I/O error 与 vm_fault pager read error 致 bash 信号 11 中止
+2597199|L4|DeLL 笔记本经底座 xl0 网卡在备份大流量时失效，附 3Com 3c905-TX 相关 syslog 报文
+2597200|L4|Jordan Hubbard 指出 NFSv2 已是 3.2 默认，无需再建议改默认
+2597201|L4|从 3.0-Release cvsup 到 3.1-Stable 后 make world 在 vmstat 处报 Error Code 2
+2597202|L4|请求在 3.2 冻结前 MFC Dan 与 John 的线程补丁，理由是 3 月 22 日提交的 pthreads 改动大幅提升性能
+2597203|L3|自述跑 apache、PostgreSQL、Perforce 与 distributed.net，认为锁竞争使加第二颗 CPU 收益不大
+2597207|L4|David O'Brien 说明 amd 默认是 v3/UDP，map 未写 vers=2 就会先试 v3，且默认已由 TCP 改为 UDP
+2597208|L4|Weisgerber 指 FreeBSD 所用 GNU tar 处理不了 32 位 dev_t，属归档格式限制，并附 tar 报错
+2597212|L3|brooks 说明 amanda 通常用 dump 故可信，它只是把多台机器的 dump 智能排上单一磁带的控制系统
+2597213|L4|远端访问时执行 mailq 触发内核恐慌并附 gdb 输出，此前 mailq 运行正常
+2597216|L3|Dodd 称 Bill Paul 在做 WaveLAN 802.11 ISA 卡驱动，近期 -hackers 或 -hardware 会有消息
+2597217|L4|Cyclades cy 在 3.1-STABLE 只允许一路拨入
+2597218|L4|4 月 1 日后同套流程产出的内核不引导，BTX loader 载入即失败，需 config -r -g Kernel 彻底重建
+2597220|L4|pn0 在 FTP 约 300MB 文件至对端 Windoze 98 时中断，telnet 断且 ping 不通，数周前出现过一次
+2597221|L4|VM_MAXUSER_ADDRESS 在 4 月 14 日至 4 月 28 日间由 0xefbfe000 变为 0xbfbfe000，影响 CMU Lisp
+2597222|L3|安装 perl-5.00502 时 FreeBSD patch 打不上，Configure 出现 hunk 失败并生成 Configure.rej
+2597223|L3|建议把 NMBCLUSTERS 提到 4096 或 8192，旧 3Com 卡常见 out of buffer，改用 Netgear 后未见
+2597225|L3|Mark Murray 指 FreeBSD 3.x 或 CURRENT 已自带 Perl5，无需另装，应去修其他 ports
+2597226|L4|3.1-RELEASE 升 3.1-STABLE 后 SCSI CDROM 报 READ CD RECORDED CAPACITY
+2597227|L3|补充环境为 2.2.8-STABLE、Dell GXL 5133、48Mb 内存、1Gb 硬盘
+2597228|L4|更正：cy 驱动本身正常，内核里加足 ppp 接口数即解决，此前忽略了这一细节
+2597229|L3|2.7.2 上 ssh 正常，装 3.1 带加密库后一直提示密码不对，telnet 可用
+2597230|L4|换 Pentium MMX 223 取代 Cyrix 686 133 后开机 panic，盘未同步致重启修 superblock
+2597231|L3|Mark Murray 给 perl port 排错步骤：make clean、make extract 后逐个应用 patch 直至失败
+2597232|L3|边界路由器全局路由表逼近 65K，担心撞上 PR 10570，不知把 short 改 long 会牵动哪些
+2597235|L4|3.1-STABLE 下 linux 客户端访问 acd 挂载点根下一级即崩，光盘上不建目录后修好，如今另有访问异常
+2597238|L4|make most 编 mount_cd9660 模块时 ISOFSMNT_NOJOLIET 未声明
+2597239|L3|Scot Hetzel 建议改用 make patch -DPATCH_DEBUG，失败时会打印当前 patch 的错误与状态
+2597240|L3|Bond 发现系统 make 不会重读 make 过程中被改动的 Makefile 而 gmake 可以，建议给 make 加此功能
+2597242|L4|回溯自身 panic 原因：由 486 换 586 后 config MONT 重编内核，认为第二次 make 前漏做了一步
+2597244|L4|openssl-0.9.2b 报 Ignoring previously applied patch 并 Error code 2
+2597245|L3|在 2.2.8 上遇同样 perl 安装问题，转下载 5.4.4 手工解压安装后问题解决
+2597246|L3|UUNET 正向他送 69,000 多条路由，庆幸没拿新线试 gated，印证 65K 上限之近

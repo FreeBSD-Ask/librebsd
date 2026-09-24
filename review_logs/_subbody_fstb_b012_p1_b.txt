@@ -1,0 +1,1973 @@
+### PK 2596763 ###
+===== 序 22078 | PK 2596763 =====
+DATE: 1999-04-08
+FROM: "Chad R. Larson" <chad@freebie.dcfinc.com> <None>
+SUBJ: Re: 3Com 3C5x9 Network cards
+
+>>  BTW as I remember, FreeBSD had never worked good with this card's type.
+
+Mine's been working perfectly under 2.2.8-STABLE.
+
+Witness:
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Script started on Thu Apr  8 16:34:40 1999
+% dmesg | grep xl0
+xl0 <3Com 3c905 Fast Etherlink XL 10/100BaseTX> rev 0 int a irq 11 on pci0:16:0
+xl0: Ethernet address: 00:60:97:de:2b:a8
+xl0: autoneg complete, link status good (full-duplex, 10Mbps)
+% netstat -I xl0
+Name  Mtu   Network       Address            Ipkts Ierrs    Opkts Oerrs  Coll
+xl0   1500  <Link>      00.60.97.de.2b.a8  2435591     2   138342     0    42
+xl0   1500  138.113.128/2 chad             2435591     2   138342     0    42
+% ifconfig xl0
+xl0: flags=8843<UP,BROADCAST,RUNNING,SIMPLEX,MULTICAST> mtu 1500
+        inet 138.113.128.36 netmask 0xfffffe00 broadcast 138.113.129.255
+        ether 00:60:97:de:2b:a8 
+        media: 10baseT/UTP <full-duplex>
+        supported media: autoselect 100baseTX <full-duplex> 100baseTX <half-duplex> 100baseTX 10baseT/UTP <full-duplex> 10baseT/UTP 10baseT/UTP <half-duplex>
+% exit
+
+Script done on Thu Apr  8 16:35:04 1999
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+	-crl
+--
+Chad R. Larson (CRL15)   602-953
+...[正文已截断，共 1690 字符]
+
+
+
+### PK 2596764 ###
+===== 序 22079 | PK 2596764 =====
+DATE: 1999-04-09
+FROM: Spidey <spidey@libdns.qc.ca> <None>
+SUBJ: Re: ps problems (explained)
+
+I want to make clear for future generations that I recompiled my kernel
+(several times!!!) after the 'installworld', so the problem is obviously
+due to the fact that I did it in multi-user mode...
+
+naughty-naughty-naughty... :)
+
+On Thu, 8 Apr 1999, Tom wrote:
+
+> On Thu, 8 Apr 1999, Spidey wrote:
+> 
+> > Hi!
+> > 
+> > I've got serious problems with ps. I does not work at all:
+> > 
+> > spidey@freed [03:01pm] spidey$ ps
+> > ps: bad namelist
+> > spidey@freed [03:01pm] spidey$ 
+> > 
+> > is all I can get.
+> 
+> ...
+> > Is it possible that a make world in multi-user mode caused this?
+> 
+>   Not as long as the version of "ps" matches the version of your kernel.
+> 
+> 
+> Tom
+> 
+
+Si l'image donne l'illusion de savoir
+C'est que l'adage pretend que pour croire,
+L'important ne serait que de voir
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-stable" in the body of the message
+
+
+
+
+
+
+
+### PK 2596766 ###
+===== 序 22081 | PK 2596766 =====
+DATE: 1999-04-09
+FROM: "Eric Griff" <eric@netdesign1.com> <None>
+SUBJ: Re: ps problems (explained)
+
+Nope, hehe.
+
+I've probably built 50 kernels since my 'LINT' derived incident. Always in
+multi-user.
+
+One of the directives in the LINT configurations will do it. I suspect the
+Posix ones maybe.
+
+When I got that error (sorry for vaguenesses, but that was back at the end
+of February), rebuilding ps, had no effect either. But when I copied
+GENERIC, and added the other stuff I needed in, and installed it, after
+reboot, ps was fine again.. The problem actually seemed to arrise somehow
+out of PROCFS, as there were a few other things that didn't work right
+either.
+
+I haven't seen this since. I wish I had sent a bug report now.. It would
+have better memory than I do, hehe
+
+Eric A. Griff,
+NETDesign Inc.
+181 Genesee St.
+Suite 500
+Utica, NY 13501
+(315) 734-1668 ext. 205
+
+-----Original Message-----
+From: Spidey <spidey@libdns.qc.ca>
+To: Tom <tom@uniserve.com>
+Cc: freebsd-stable@freebsd.org <freebsd-stable@freebsd.org>
+Date: Thursday, April 08, 1999 7:59 PM
+Subject: Re: ps problems (explained)
+
+
+>I want to make clear for future generations that I recompiled my kernel
+>(several times!!!) after the 'installworld', so the problem is obviously
+>due to the fact that I did it in multi-user mode...
+>
+>naughty-naughty-naughty... :)
+>
+>On Thu, 8 Apr 1999, Tom wrote:
+>
+
+...[正文已截断，共 2182 字符]
+
+
+
+### PK 2596767 ###
+===== 序 22082 | PK 2596767 =====
+DATE: 1999-04-09
+FROM: Michael Robinson <robinson@netrinsics.com> <None>
+SUBJ: Re: Real time clock problem in 3.1-STABLE
+
+Mike Smith <mike@smith.net.au> writes:
+>The problem is probably our "advanced" timecounter code being screwed 
+>by the Apricot's firmware.  You might try
+>
+>sysctl -w kern.timecounter.method=1
+
+Could this also be used to get rid of "negative calcru" and clock drift
+problems?
+
+	-Michael Robinson
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-stable" in the body of the message
+
+
+
+
+
+
+
+### PK 2596768 ###
+===== 序 22083 | PK 2596768 =====
+DATE: 1999-04-09
+FROM: Matt Behrens <matt@zigg.com> <None>
+SUBJ: Re: netstat & blackjack
+
+On Thu, 8 Apr 1999, Mike Tancsa wrote:
+
+: Something on your computer is connected to port 1025... 
+: 
+: web# grep ^blackj /etc/services
+: blackjack       1025/tcp   #network blackjack
+: blackjack       1025/udp   #network blackjack
+: 
+: Are you playing network blackjack by chance ? ;-)  Or, if you are not, use
+: lsof to find out which process is bound to that port.
+
+You don't even need lsof, now that fstat works again. :)
+
+$ netstat -A		(find the descriptor in the left column)
+$ fstat | grep descriptor
+
+Matt Behrens <matt@zigg.com>
+Owner/Administrator, zigg.com
+Chief Engineer, Nameless IRC Network
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-stable" in the body of the message
+
+
+
+
+
+
+
+### PK 2596769 ###
+===== 序 22084 | PK 2596769 =====
+DATE: 1999-04-09
+FROM: Brad Knowles <blk@skynet.be> <None>
+SUBJ: -STABLE kernel panics during install...
+
+On Wed, Apr 7, 1999, Brad Knowles <blk@skynet.be> wrote:
+
+>    I've got a pretty plain-vanilla PC that I'm trying to install -STABLE on
+>(P2 400, 64MB RAM, 4GB Western Digital IDE hard drive, 3Com 3C9xx
+10/100Base-TX
+>ethernet card, etc...).
+
+    Thanks to the folks here, I managed to finally make it through the
+installation process, although I did have a couple of kernel panics and
+crashes (and some really stupid mis-configuration problems on my part).
+
+
+    However, yesterday I had a kernel panic and crash after having
+installed all the stubs for all the standard third-party packages, and
+was in the process of exiting /stand/sysinstall.
+
+    Since the machine was configured to save crash dumps, I now actually
+have one sitting in /var/adm/crash (although this may not be all that
+useful, since the kernel is the default GENERIC, and I haven't had a
+chance to rebuild it with just the stuff I want/need or with a full
+symbol table, etc....).
+
+    Anybody interested in taking a look at this crash dump and trying to
+figure out what went wrong?
+
+-- 
+  These are my opinions -- not to be taken as official Skynet policy
+ ____________________________________________________________________
+|o| Brad Knowles, <blk@skynet.be>            Belgacom Skynet NV
+...[正文已截断，共 1949 字符]
+
+
+
+### PK 2596771 ###
+===== 序 22086 | PK 2596771 =====
+DATE: 1999-04-09
+FROM: Fred Gilham <gilham@snapdragon.csl.sri.com> <None>
+SUBJ: Problem with rc
+
+
+I tried to send a PR on this but it didn't work---I got the following
+error:
+
+Proxy Error
+
+The proxy server could not handle this request. 
+
+Reason: Could not connect to remote machine 
+
+So here it is:
+
+I notice that there's a spot in the rc file that does the following:
+
+# Whack the pty perms back into shape.
+chmod 666 /dev/tty[pqrsPQRS]*
+chown root:wheel /dev/tty[pqrsPQRS]*
+
+Unfortunately this is done before networking is up, in particular
+NIS.  Since we manage our wheel group centrally, the wheel group isn't
+present in the /etc/group file, and an NIS lookup is attempted, with
+results that should be obvious to anyone with familiarity with this
+kind of setup.
+
+Moving this section past the network_pass stuff fixes the problem.
+
+Here's a context-diff:
+
+
+
+japonica:/etc > diff -c rc /usr/src/etc/rc
+*** rc  Fri Apr  9 18:13:18 1999
+--- /usr/src/etc/rc     Thu Mar 18 02:08:18 1999
+***************
+*** 170,175 ****
+--- 170,179 ----
+  mount -a -t nfs
+  echo .
+  
++ # Whack the pty perms back into shape.
++ chmod 666 /dev/tty[pqrsPQRS]*
++ chown root:wheel /dev/tty[pqrsPQRS]*
++ 
+  # clean up left-over files
+  clean_var                     # If it hasn't already been done
+  rm /var/run/clean_var
+***************
+*** 248,256 ****
+        network_pass3
+  fi
+  
+- # 
+...[正文已截断，共 1681 字符]
+
+
+
+### PK 2596774 ###
+===== 序 22089 | PK 2596774 =====
+DATE: 1999-04-09
+FROM: Rene de Vries <rene@canyon.demon.nl> <None>
+SUBJ: Re: How stable is soft updates?
+
+On Thu, 08 Apr 1999, jfesler@gigo.com wrote:
+>Some stuff I didn't see answers for..
+> 1: how stable is it :-)
+
+The only problem I've had (but that is some time ago) is that *if* your
+filesystem fills up and you delete something and right away create some other
+files (or enlarge existing files) the file system seems full. The is as far as
+I know fixed.
+
+> 2: If I somehow manage to boot from a kernel lacking soft updates,
+>    will the partition still be mountable (ie, sans soft updates)? 
+
+I don't know if it is recommended practice; the fsck is slightly different, but
+I'm not sure if it matters (I sometimes boot my GENERIC kernel without
+softupdates and I've never seen anything strang there).
+
+> 3: How do we tunefs "/" ?
+
+go to single user mode: "shutdown now"
+remount your filesystem read-only: "mount -u -r /"
+run tunefs: "tunefs -n enable /"
+press ^D to return to multi-user mode.
+
+>Thanks in advance..
+
+--
+Rene de Vries                    http://www.tcja.nl/~rene; mailto:rene@tcja.nl
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-stable" in the body of the message
+
+
+
+
+
+
+
+### PK 2596776 ###
+===== 序 22091 | PK 2596776 =====
+DATE: 1999-04-10
+FROM: "Joe Gleason" <clash@tasam.com> <None>
+SUBJ: Re: network card installation
+
+Most cheap cards seem to be using the realtek chipset, which is
+supported with the rl0 driver.
+I have seen some problems with realtek cards detecting which network
+type and duplex and they are generaly not as efficent, I have heard.
+I think that getting a 3c905 or Intel Pro 10/100 is a good idea for a
+critical server, but if you just want something that will work
+cheaply, just about anything will work.
+
+PCI cards do need drives, but they are just much easier to work with
+as far as detection.
+
+Joe Gleason
+Tasam
+
+-----Original Message-----
+From: Clay Smith <blitz@pdq.net>
+To: FreeBSD Stable <FreeBSD-Stable@FreeBSD.ORG>
+Date: Friday, April 09, 1999 19:39
+Subject: network card installation
+
+
+I'm about to go purchase an off the wall brand pci 10/100 network
+card.  I don't know what brand the chipset is or anything, and it is
+doubtful that it has unix drivers.  I am under the impression that
+with a pci card, I don't have to worry about network card drivers.  Is
+this true?  Or should I spend an extra 30 bucks and get a 3com?
+
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-stable" in the body of the message
+
+
+
+
+
+
+
+### PK 2596778 ###
+===== 序 22093 | PK 2596778 =====
+DATE: 1999-04-10
+FROM: Sean-Paul Rees <sean@dreamfire.net> <None>
+SUBJ: Re: Intel PRO/100+
+
+On Fri, 9 Apr 1999, David Schwartz wrote:
+
+> 
+> 	Is the Intel PRO/100+ network card supported by FreeBSD 3.1-STABLE? Mine
+> has an Intel 82558B chip on it. If so, is it the 'fxp' driver that I need?
+> 
+> 	DS
+
+I have two FreeBSD systems using those cards. It works like a charm, its
+really fast.
+
+> 
+> 
+> 
+> To Unsubscribe: send mail to majordomo@FreeBSD.org
+> with "unsubscribe freebsd-stable" in the body of the message
+> 
+> 
+
+Cheers,
+Sean
+
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-stable" in the body of the message
+
+
+
+
+
+
+
+### PK 2596779 ###
+===== 序 22094 | PK 2596779 =====
+DATE: 1999-04-10
+FROM: David Greenman <dg@root.com> <None>
+SUBJ: Re: Intel PRO/100+
+
+>	Is the Intel PRO/100+ network card supported by FreeBSD 3.1-STABLE? Mine
+>has an Intel 82558B chip on it. If so, is it the 'fxp' driver that I need?
+
+   Yes and yes.
+
+-DG
+
+David Greenman
+Co-founder/Principal Architect, The FreeBSD Project - http://www.freebsd.org
+Creator of high-performance Internet servers - http://www.terasolutions.com
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-stable" in the body of the message
+
+
+
+
+
+
+
+### PK 2596780 ###
+===== 序 22095 | PK 2596780 =====
+DATE: 1999-04-10
+FROM: Cy Schubert - ITSD Open Systems Group <Cy.Schubert@uumail.gov.bc.ca> <None>
+SUBJ: Re: How stable is soft updates?
+
+Revision 1.24, in -current, of ffs_softdep.c:
+
+  Reorganize locking to avoid holding the lock during calls to bdwrite
+  and brelse (which may sleep in some systems).
+
+Would it be good idea to merge this into -stable?
+
+
+Regards,                       Phone:  (250)387-8437
+Cy Schubert                      Fax:  (250)387-5766
+Open Systems Group          Internet:  Cy.Schubert@uumail.gov.bc.ca
+ITSD                                   Cy.Schubert@gems8.gov.bc.ca
+Province of BC
+                      "e**(i*pi)+1=0"
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-stable" in the body of the message
+
+
+
+
+
+
+
+### PK 2596781 ###
+===== 序 22096 | PK 2596781 =====
+DATE: 1999-04-10
+FROM: Vincent Poy <vince@venus.GAIANET.NET> <None>
+SUBJ: Re: Intel PRO/100+
+
+On Fri, 9 Apr 1999, David Greenman wrote:
+
+> >	Is the Intel PRO/100+ network card supported by FreeBSD 3.1-STABLE? Mine
+> >has an Intel 82558B chip on it. If so, is it the 'fxp' driver that I need?
+> 
+>    Yes and yes.
+
+	I must say that the Pro/100+ is fast.  We recently tried both a
+10/100 card using the DEC chip and RealTek 8139 connected directly to a
+Cisco 2924XL 10/100 Switch and it seems to only work at 10Mbps Half
+Duplex.  Anyway to force it into 100Mbps?
+
+de0: <Digital 21143 Fast Ethernet> rev 0x30 int a irq 10 on pci0.9.0
+de0: 21143 [10-100Mb/s] pass 3.0
+de0: address 00:48:54:00:46:4a
+
+de0: abnormal interrupt: receive process stopped
+de0: enabling 10baseT port
+
+
+Cheers,
+Vince - vince@MCESTATE.COM - vince@GAIANET.NET           ________   __ ____ 
+Unix Networking Operations - FreeBSD-Real Unix for Free / / / / |  / |[__  ]
+GaiaNet Corporation - M & C Estate                     / / / /  | /  | __] ]  
+Beverly Hills, California USA 90210                   / / / / / |/ / | __] ]
+HongKong Stars/Gravis UltraSound Mailing Lists Admin /_/_/_/_/|___/|_|[____]
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-stable" in the body of the message
+
+
+
+
+
+
+
+### PK 2596783 ###
+===== 序 22098 | PK 2596783 =====
+DATE: 1999-04-10
+FROM: "Clay Smith" <blitz@pdq.net> <None>
+SUBJ: Re: network card installation
+
+Here's what ended up happening.  I tried out my Vision 10/100 card in the
+server and it detected it as the vr0 driver.  That's great!  However, I
+ended up buying 2 3com905TXs from my brother for 30 bucks a piece.  They are
+brand new cards, and work wonderfully together on the network, however, I
+can't get the vision to work now with them.  It's a VIA chipset, and as
+stated before uses the vr0 driver under freebsd.  I have one 3com in my
+machine and in a win98 workstation.  The vision card is in a second win98
+workstation.  Any suggestions?  (the workstation with the vision is not able
+to ping either of the other two machines and vice versa)
+----- Original Message -----
+From: Tony Byrne <tony@nua.ie>
+To: Clay Smith <blitz@pdq.net>
+Sent: Saturday, April 10, 1999 9:23 AM
+Subject: Re: network card installation
+
+
+>
+> It is unlikely that the card will work under FreeBSD, unless the chipset
+> is pretty much fully compatible with one of the supported chipsets.
+>
+> As far as PCI is concerned,  it is often easier to get cards
+> running than if they are ISA, which usually imposes either a DOS based
+> configuration utility or a set of jumpers on you.  The correct drivers
+> for a given PCI card can also usually be detected by FreeBSD. Either way
+> you still have p
+...[正文已截断，共 2655 字符]
+
+
+
+### PK 2596784 ###
+===== 序 22099 | PK 2596784 =====
+DATE: 1999-04-10
+FROM: "Stan Brown" <stanb@awod.com> <None>
+SUBJ: 3.0 -> 3.1 upgrade troubles
+
+	Help, please.
+
+	I decided to use this weekend to upgrade my mainn work machine from 3.0
+	to 3.1-STABLE. I am having problems though. heres what I did.
+
+	1. Bot from 3.1 CD and do an upgrade.
+
+	2. Reboot.
+
+	3, Find out I could not log in!
+
+	4. Boot in single user mode to find out that password encryption had
+	   cahnged!. Redid roots password.
+
+	5. Tride to build a new kernel. It failed as follows:
+
+
+root@brown.fas.com:/usr/src/sys/compile/BROWN
+$ make
+loading kernel
+syscons.o: In function `scvidprobe':
+syscons.o(.text+0x231): undefined reference to `vid_configure'
+syscons.o(.text+0x24e): undefined reference to `vid_allocate'
+syscons.o(.text+0x26b): undefined reference to `vid_get_adapter'
+syscons.o: In function `sckbdprobe':
+syscons.o(.text+0x29a): undefined reference to `kbd_configure'
+syscons.o(.text+0x2be): undefined reference to `kbd_allocate'
+syscons.o(.text+0x2db): undefined reference to `kbd_get_keyboard'
+syscons.o: In function `scresume':
+syscons.o(.text+0x301): undefined reference to `kbdsw'
+syscons.o: In function `sc_attach_unit':
+syscons.o(.text+0x3ca): undefined reference to `kbdsw'
+syscons.o: In function `scopen':
+syscons.o(.text+0x622): undefined reference to `kbdsw'
+syscons.o: In function `sckbdevent':
+syscons.o(.text+0x88d): undefined 
+...[正文已截断，共 16504 字符]
+
+
+
+### PK 2596787 ###
+===== 序 22102 | PK 2596787 =====
+DATE: 1999-04-10
+FROM: "Stan Brown" <stanb@awod.com> <None>
+SUBJ: 3.0 -> 3.1-STABLE upgrade, and kernel compile failure
+
+	Just tried to upgrade my main work machine from 3.0 to 3.1-STABLE.
+	Unfortunately all did not go well. I can't compile a kernel any more
+	:-)
+
+	Here is where it's failing:
+
+
+loading kernel
+syscons.o: In function `scvidprobe':
+syscons.o(.text+0x231): undefined reference to `vid_configure'
+syscons.o(.text+0x24e): undefined reference to `vid_allocate'
+syscons.o(.text+0x26b): undefined reference to `vid_get_adapter'
+syscons.o: In function `sckbdprobe':
+syscons.o(.text+0x29a): undefined reference to `kbd_configure'
+syscons.o(.text+0x2be): undefined reference to `kbd_allocate'
+syscons.o(.text+0x2db): undefined reference to `kbd_get_keyboard'
+syscons.o: In function `scresume':
+syscons.o(.text+0x301): undefined reference to `kbdsw'
+syscons.o: In function `sc_attach_unit':
+syscons.o(.text+0x3ca): undefined reference to `kbdsw'
+syscons.o: In function `scopen':
+syscons.o(.text+0x622): undefined reference to `kbdsw'
+syscons.o: In function `sckbdevent':
+syscons.o(.text+0x88d): undefined reference to `kbd_release'
+syscons.o(.text+0x94b): undefined reference to `kbdsw'
+syscons.o: In function `scioctl':
+syscons.o(.text+0x1e35): undefined reference to `kbdsw'
+syscons.o(.text+0x1ea3): undefined reference to `kbdsw'
+syscons.o(.text+0x1ee2): und
+...[正文已截断，共 10529 字符]
+
+
+
+### PK 2596790 ###
+===== 序 22105 | PK 2596790 =====
+DATE: 1999-04-10
+FROM: "Clay Smith" <blitz@pdq.net> <None>
+SUBJ: Alas, Samba troubles
+
+I'm having trouble with samba on my Freebsd machine.  This is the error that shows up in the logs when I try to login and it fails.
+
+Failed to get local UDP socket for address 1000007f.  Error was Can't assign requested address
+
+Any ideas on what could be causing the problem?  
+
+
+
+
+
+### PK 2596791 ###
+===== 序 22106 | PK 2596791 =====
+DATE: 1999-04-10
+FROM: "David Schwartz" <davids@webmaster.com> <None>
+SUBJ: RE: Alas, Samba troubles
+
+
+	Try 'ping 127.0.0.1'. If that doesn't work, fix that. Then worry about
+samba.
+
+	DS
+
+-----Original Message-----
+From: owner-freebsd-stable@FreeBSD.ORG
+[mailto:owner-freebsd-stable@FreeBSD.ORG]On Behalf Of Clay Smith
+Sent: Saturday, April 10, 1999 1:59 PM
+To: FreeBSD Stable
+Subject: Alas, Samba troubles
+
+
+I'm having trouble with samba on my Freebsd machine.  This is the error that
+shows up in the logs when I try to login and it fails.
+
+Failed to get local UDP socket for address 1000007f.  Error was Can't assign
+requested address
+
+Any ideas on what could be causing the problem?
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-stable" in the body of the message
+
+
+
+
+
+
+
+### PK 2596794 ###
+===== 序 22109 | PK 2596794 =====
+DATE: 1999-04-10
+FROM: "Clay Smith" <blitz@pdq.net> <None>
+SUBJ: Re: Alas, Samba troubles
+
+Oh my gosh, thanks a billion, I found the problem.  It was in my rc.conf.  I
+accidentally took out the lo0 (loopback) instead of vr0 in my device list.
+Now everything works great :)
+----- Original Message -----
+From: David Schwartz <davids@webmaster.com>
+To: Clay Smith <blitz@pdq.net>
+Sent: Saturday, April 10, 1999 4:22 PM
+Subject: RE: Alas, Samba troubles
+
+
+>
+> Lots of things will work even if 127.0.0.1 doesn't. But some things won't.
+>
+> Also, your address looked a little funny. Like a '10' instead of a '01'.
+> Perhaps you have a localhost address misconfigured somewhere?
+>
+> DS
+>
+> > -----Original Message-----
+> > From: Clay Smith [mailto:blitz@pdq.net]
+> > Sent: Saturday, April 10, 1999 2:07 PM
+> > To: David Schwartz
+> > Cc: FreeBSD Stable
+> > Subject: Re: Alas, Samba troubles
+> >
+> >
+> > TCP/IP works fine, it's just samba that's not working correctly.  In
+fact,
+> > I'm using my machine as a router to send and receive my email...hehe
+> > ----- Original Message -----
+> > From: David Schwartz <davids@webmaster.com>
+> > To: Clay Smith <blitz@pdq.net>
+> > Cc: <stable@freebsd.org>
+> > Sent: Saturday, April 10, 1999 4:02 PM
+> > Subject: RE: Alas, Samba troubles
+> >
+> >
+> > >
+> > > Try 'ping 127.0.0.1'. If that doesn't work, fix that. Then worry about
+> > > samba.
+> > >
+> > > DS
+> > >
+> > > -----Original Message-----
+> > > From: owner-freebsd-stable@FreeBSD.ORG
+> > > [mailto:owner-freebsd-stable@FreeBSD.ORG]On Behalf Of Clay Smith
+> > > Sent: Saturday, April 10, 1999 1:59 PM
+> > > To: FreeBSD Stable
+> > > Subject: Alas, Samba troubles
+> > >
+> > >
+> > > I'm having trouble with samba on my Freebsd machine.  This is the
+error
+> > that
+> > > shows up in the logs when I try to login and it fails.
+> > >
+> > > Failed to get local UDP socket for address 1000007f.  Error was Can't
+> > assign
+> > > requested address
+> > >
+> > > Any ideas on what could be causing the problem?
+> > >
+> > >
+> >
+> >
+> >
+>
+>
+
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-stable" in the body of the message
+
+
+
+
+
+
+
+### PK 2596795 ###
+===== 序 22110 | PK 2596795 =====
+DATE: 1999-04-11
+FROM: "Morgan Davis" <mdavis@cts.com> <None>
+SUBJ: softupdates suggestion
+
+Just a suggestion: display the device name in these diagnostics:
+
+ffs_mountfs: superblock updated for soft updates
+ffs_mountfs: superblock updated for soft updates
+
+e.g.:
+
+ffs_mountfs: /dev/da0s1e superblock updated for soft updates
+ffs_mountfs: /dev/da0s1f superblock updated for soft updates
+
+--Morgan
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-stable" in the body of the message
+
+
+
+
+
+
+
+### PK 2596796 ###
+===== 序 22111 | PK 2596796 =====
+DATE: 1999-04-11
+FROM: Jonathan Frazier <wolfnet@wolfnet-irc.org> <None>
+SUBJ: ld problems
+
+Tonight I downloaded an updated ports tree on the ftp.freebsd.org site.
+Afterwards I started getting errors.  I do not know what I did nor how
+but it seems I am no missing /usr/libexec/ld-elf.so.1.  I now can cd and
+ls and pico but that's about it.  I can not compile anything and can not
+remake my src or libexec.  I checked and I do not have the file it's
+asking for.  I am running 3.1-stable, however when I tried to make a
+port it stated that I had an old world and needed to rebuild, which is
+why I downloaded the new ports and cvssed a new world.  I am now afraid
+to shut the machine off as I know I won't get back into anything.  I can
+not start any new programs or even send mail (luckily I had netscape
+running before this all happened).  I looked on the ftp site and could
+not find a binary for ld-elf.so.1.  Any help would be greatly
+appreciated!
+
+bash-2.01# ftp ftp.freebsd.org
+ELF interpreter /usr/libexec/ld-elf.so.1 not found
+Abort trap
+bash-2.01# cd /usr/src/libexec
+bash-2.01# make all install
+ELF interpreter /usr/libexec/ld-elf.so.1 not found
+Abort trap
+
+
+
+
+--
+Jonathan C. Frazier
+
+
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-stable" in the body of the message
+
+
+
+
+
+
+
+### PK 2596797 ###
+===== 序 22112 | PK 2596797 =====
+DATE: 1999-04-11
+FROM: Spidey <spidey@libdns.qc.ca> <None>
+SUBJ: SOLVED. Re: ps problems (explained)
+
+I solved my ps problems, and I want to share my happiness with the list :)
+
+- I cvsupped the sources of -stable on Apr 10 14:07. 
+
+- I made a buildworld in multi-user.
+
+- I made an installworld after in single-user mode.
+
+- I compile a GENERIC kernel and update /dev, /etc and /stand.
+
+- ps still gives me the creeps. ("bad namelist").
+
+- uptime is messed up as said below.
+
+- I move /var/run/utmp to /tmp then touch /var/run/utmp.
+
+- uptime is back on the track.
+
+- I compile a custom kernel without nfs, vm86, bpfilter, ether, pca0,
+speaker from my previous kernel version.
+
+- This one works great! ps is working again!!!
+
+I do think that the problems was first due to a installworld in multi-user
+mode, which probably corrupted /var/run/utmp and the /proc filesystem as I
+tried to remove /proc from fstab and put it back again to make ps work.
+I'm not sure though... It could be just rebuilding the kernel that made ps
+work as I did both at the same time.
+
+So the lesson is:
+
+- installworld or simple world in single-user mode. Always.
+
+- that is all :)
+
+- oh yeah, and read the error messages of the programs :))
+
+On Fri, 9 Apr 1999, Spidey wrote:
+
+> I don't know if and how I should make a bug report about this, as I don't
+> know for sure what exactly the problem is... What I know, however, is that
+> my daily script is also bugged:
+> 
+> Local system status:
+> uptime: /dev//umount: /cdrom: not currently mounted
+> umount: No such file or directory
+> uptime: /dev//: /proc: not currently mounted
+> umount: /var:: No such file or directory
+> uptime: /dev// not currently mounted
+> umount: /usr: not cur: No such file or directory
+> uptime: /dev//rently mounted
+> umount: /home: not currently : No such file or directory
+> uptime: /dev//mounted
+> umount: /dos: not currently mounted
+> : No such file or directory
+>  2:00AM  up  6:08, 1 user, load averages: 1.28, 1.80, 1.74
+> 
+> 
+> What is _that_???
+> 
+> I just cvsupped the latest sources. I'm going to do a make world when my
+> HD space will permit it, and I'll rebuild my kernel. We'll see then.
+> 
+> Hoping that all this nightmare will end soon.
+> 
+> On Thu, 8 Apr 1999, Eric Griff wrote:
+> 
+> > Nope, hehe.
+> > 
+> > I've probably built 50 kernels since my 'LINT' derived incident. Always in
+> > multi-user.
+> > 
+> > One of the directives in the LINT configurations will do it. I suspect the
+> > Posix ones maybe.
+> > 
+> > When I got that error (sorry for vaguenesses, but that was back at the end
+> > of February), rebuilding ps, had no effect either. But when I copied
+> > GENERIC, and added the other stuff I needed in, and installed it, after
+> > reboot, ps was fine again.. The problem actually seemed to arrise somehow
+> > out of PROCFS, as there were a few other things that didn't work right
+> > either.
+> > 
+> > I haven't seen this since. I wish I had sent a bug report now.. It would
+> > have better memory than I do, hehe
+> > 
+> > Eric A. Griff,
+> > NETDesign Inc.
+> > 181 Genesee St.
+> > Suite 500
+> > Utica, NY 13501
+> > (315) 734-1668 ext. 205
+> > 
+> > -----Original Message-----
+> > From: Spidey <spidey@libdns.qc.ca>
+> > To: Tom <tom@uniserve.com>
+> > Cc: freebsd-stable@freebsd.org <freebsd-stable@freebsd.org>
+> > Date: Thursday, April 08, 1999 7:59 PM
+> > Subject: Re: ps problems (explained)
+> > 
+> > 
+> > >I want to make clear for future generations that I recompiled my kernel
+> > >(several times!!!) after the 'installworld', so the problem is obviously
+> > >due to the fact that I did it in multi-user mode...
+> > >
+> > >naughty-naughty-naughty... :)
+> > >
+> > >On Thu, 8 Apr 1999, Tom wrote:
+> > >
+> > >> On Thu, 8 Apr 1999, Spidey wrote:
+> > >>
+> > >> > Hi!
+> > >> >
+> > >> > I've got serious problems with ps. I does not work at all:
+> > >> >
+> > >> > spidey@freed [03:01pm] spidey$ ps
+> > >> > ps: bad namelist
+> > >> > spidey@freed [03:01pm] spidey$
+> > >> >
+> > >> > is all I can get.
+> > >>
+> > >> ...
+> > >> > Is it possible that a make world in multi-user mode caused this?
+> > >>
+> > >>   Not as long as the version of "ps" matches the version of your kernel.
+> > >>
+> > >>
+> > >> Tom
+> > >>
+> > >
+> > >Si l'image donne l'illusion de savoir
+> > >C'est que l'adage pretend que pour croire,
+> > >L'important ne serait que de voir
+> > >
+> > >
+> > >
+> > >To Unsubscribe: send mail to majordomo@FreeBSD.org
+> > >with "unsubscribe freebsd-stable" in the body of the message
+> > 
+> > 
+> > 
+> > To Unsubscribe: send mail to majordomo@FreeBSD.org
+> > with "unsubscribe freebsd-stable" in the body of the message
+> > 
+> 
+> Si l'image donne l'illusion de savoir
+> C'est que l'adage pretend que pour croire,
+> L'important ne serait que de voir
+> 
+> Lofofora
+> 
+> 
+> 
+
+Si l'image donne l'illusion de savoir
+C'est que l'adage pretend que pour croire,
+L'important ne serait que de voir
+
+Lofofora
+
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-stable" in the body of the message
+
+
+
+
+
+
+
+### PK 2596798 ###
+===== 序 22113 | PK 2596798 =====
+DATE: 1999-04-11
+FROM: "James A. Mutter" <jmutter@netwalk.com> <None>
+SUBJ: Installation problems with Micronics M4PI system board.
+
+
+Hi people,
+
+I'm having a problem with the installation of 3.1 on a Micronics M4PI
+system board.  I'm providing a short description of the board for
+those who are not familiar with it:
+
+  *  486 support, up to the DX4/100, also Intel "Overdrive" CPU's
+  *  3 PCI Slots, (1 shared)
+  *  5 ISA
+  *  PCI Mode 3 IDE Drive Controller
+  *  Intel Saturn Chipset.
+
+When I try to install 3.X from the installation disks I get to the
+point just before the curses based installation menu (past the
+"Configure kernel in mode XXX or skip to continue with installation).
+The last thing I see is something to the effect of:
+
+  Rootfs is 2880 compiled in MFS
+
+Then it just hangs, no strange debug messages to the console, it just
+quits.  
+
+Additionally, I've tried inserting a HDD which already contains a
+working FreeBSD 3.X install, it too hangs, just before it tries to
+mount the drives.
+
+-------
+
+It should be noted that this has all been tried while I have 3 cards
+in the system, 1 PCI video card, 1 LinkSys 10Mbit PCI NIC, 1 Netgear
+10/100 Mbit NIC.  I've tried removing them one at a time, and
+replacing them with different cards, several different combinations.
+So far nothing has worked.  If however, I attempt to install without
+any NIC's i
+...[正文已截断，共 1957 字符]
+
+
+
+### PK 2596799 ###
+===== 序 22114 | PK 2596799 =====
+DATE: 1999-04-11
+FROM: Oliver Fromme <olli@dorifer.heim3.tu-clausthal.de> <None>
+SUBJ: Fix for broken "make release"
+
+Hi,
+
+"make release" breaks during the installation of manpages
+(section 4).  It tries to make a link plip.4.gz -> lp.4.gz,
+but the latter does not exist.  The following patch fixes
+the problem.  (Should I send-pr this?)
+
+Regards
+   Oliver
+
+--- src/share/man/man4/Makefile.orig       Sun Apr 11 12:06:01 1999
++++ src/share/man/man4/Makefile    Sun Apr 11 12:37:29 1999
+@@ -4,7 +4,7 @@
+        dummynet.4 fd.4 fpa.4 \
+        icmp.4 ifmib.4 iic.4 iicbb.4 iicbus.4 iicsmb.4 \
+        imm.4 inet.4 intro.4 ip.4 ipfirewall.4 \
+-       lkm.4 lo.4 lpbb.4 natm.4 netintro.4 nlpt.4 \
++       lkm.4 lo.4 lp.4 lpbb.4 natm.4 netintro.4 nlpt.4 \
+        null.4 od.4 pass.4 ppbus.4 ppi.4 ppp.4 pt.4 pty.4 \
+        route.4 sa.4 scsi.4 \
+        sd.4 sl.4 smb.4 smbus.4 smp.4 snp.4 sppp.4 ssc.4 st.4 su.4 tcp.4 \
+
+
+
+-- 
+Oliver Fromme, Leibnizstr. 18/61, 38678 Clausthal, Germany
+(Info: finger userinfo:olli@dorifer.heim3.tu-clausthal.de)
+
+"In jedem St�ck Kohle wartet ein Diamant auf seine Geburt"
+                                         (Terry Pratchett)
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-stable" in the body of the message
+
+
+
+
+
+
+
+### PK 2596800 ###
+===== 序 22115 | PK 2596800 =====
+DATE: 1999-04-11
+FROM: Tom <tom@uniserve.com> <None>
+SUBJ: Re: SOLVED. Re: ps problems (explained)
+
+On Sun, 11 Apr 1999, Spidey wrote:
+
+> Well, I think that it does. I think that it was the cause of my problems,
+> until another theory seems more valuable. I see no other thing.
+> 
+> And it does make a difference, technically, because some files are
+> installed as they are used! So files like /var/run/utmp that are often
+> written, if they are written as they are installed, kaput!
+>
+> Am I wrong? 
+
+  Yes you are.  /var/run/utmp is a data file.  It isn't even "installed"
+during a installworld.  It was probably damaged during a switch from 8
+character usernames to 16 character names.  Just copy /dev/null over it,
+and everything is fixed.
+
+  Also, you stating that you started you system without a procfs, because
+it had become "corrupted".  That too is impossible, because procfs is
+created during boot and resides completely in memory.  Also, running
+without procfs is really bad.
+
+Tom
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-stable" in the body of the message
+
+
+
+
+
+
+
+### PK 2596803 ###
+===== 序 22118 | PK 2596803 =====
+DATE: 1999-04-11
+FROM: "Stan Brown" <stanb@awod.com> <None>
+SUBJ: rwho/ruptime broken ?
+
+	rwho appears to be not reporting the correct number of users.
+
+
+Script started on Sun Apr 11 09:18:41 1999
+]0;stan@brown.fas.com;/home/stanstan@brown.fas.com:/home/stan
+$ who
+kroot            ttyv0   Apr 11 00:40
+kroot            ttyv1   Apr 10 23:59
+stan             ttyv2   Apr 11 09:04
+root             ttyp1   Apr 11 00:52	(:0.0)
+root             ttyp2   Apr 11 00:52	(:0.0)
+stan             ttyp3   Apr 11 09:18	(grizzly)
+]0;stan@brown.fas.com;/home/stanstan@brown.fas.com:/home/stan
+$ rwho
+kroot            brown:ttyv0      Apr 11 00:40 :06
+stan             brown:ttyv2      Apr 11 09:04 :07
+stan             grizzly:ttyp6    Apr  9 16:26
+stan             grizzly:ttypc    Apr  9 16:27
+stan             grizzly:ttypd    Apr  9 16:28 :38
+stan             grizzly:ttyq0    Apr  9 16:27 :43
+]0;stan@brown.fas.com;/home/stanstan@brown.fas.com:/home/stan
+$ ruptime
+brown         up      9:46,     2 users,  load 0.47, 0.28, 0.19
+cuddly        up 112+16:00,     0 users,  load 0.13, 0.13, 0.11
+grizzly       up   6+14:46,     4 users,  load 2.02, 1.42, 1.38
+koala         up  27+13:33,     0 users,  load 0.01, 0.01, 0.00
+kodiak        up  13+11:59,     0 users,  load 1.60, 1.51, 1.48
+polar         up     10:39,     0 users,  load 1.94, 2.00, 1.98
+winnie        up  14+
+...[正文已截断，共 2286 字符]
+
+
+
+### PK 2596805 ###
+===== 序 22120 | PK 2596805 =====
+DATE: 1999-04-11
+FROM: Danny <aries@aries.postnet.com> <None>
+SUBJ: 2.2.8 -> 3.1 make buildworld errors...
+
+I'm upgrading from 2.2.8-stable to 3.1-stable.  I used cvsup to get the
+sources, and did a make buildworld and got the following.  I tried it
+again, and got the same messages the second time.  Any ideas are
+appreciated.
+
+Dan
+
+/usr/src/lib/csu/i386-elf/crtbegin.c:30: section attributes are not
+supported fo
+r this target
+/usr/src/lib/csu/i386-elf/crtbegin.c:31: section attributes are not
+supported fo
+r this target
+{standard input}: Assembler messages:
+{standard input}:73: Error: Unknown pseudo-op:  `.section'
+*** Error code 1
+
+Stop.
+*** Error code 1
+
+Stop.
+*** Error code 1
+
+Stop.
+*** Error code 1
+
+Stop.
+*** Error code 1
+
+Stop.
+
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-stable" in the body of the message
+
+
+
+
+
+
+
+### PK 2596806 ###
+===== 序 22121 | PK 2596806 =====
+DATE: 1999-04-11
+FROM: "Stan Brown" <stanb@awod.com> <None>
+SUBJ: A question about pccardd
+
+	I am upgrading a couple of laptops from 2.2.x-PAO to 3.1-STABLE. Both
+	of these laptops invoke a small perl script when a "insert" action is
+	done on thier ethernet cards. This perl script looks around to see what
+	network that are on, and sets them up appropriately.
+
+	On 2.2 the standard output of this script went to the console. In 3.x
+	this ouptut seems to get lost :-) Since this action takes a little
+	while, I prefer informing the users as to whats being done.
+
+	Can anyone sugest a way to recreate this functionality?
+
+-- 
+Stan Brown     stanb@netcom.com                                    843-745-3154
+Westvaco
+Charleston SC.
+-- 
+Windows 98: n.
+	useless extension to a minor patch release for 32-bit extensions and
+	a graphical shell for a 16-bit patch to an 8-bit operating system
+	originally coded for a 4-bit microprocessor, written by a 2-bit 
+	company that can't stand for 1 bit of competition.
+-
+(c) 1999 Stan Brown.  Redistribution via the Microsoft Network is prohibited.
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-stable" in the body of the message
+
+
+
+
+
+
+
+### PK 2596807 ###
+===== 序 22122 | PK 2596807 =====
+DATE: 1999-04-11
+FROM: Jesse <j@lumiere.net> <None>
+SUBJ: ps: badlist and other problems
+
+
+Hi,
+
+I did an install of 3.1-19990408-STABLE on a fresh machine. It went fine
+without any errors. I believe ps was working at this time.
+
+I built a custom kernel and rebooted. Later, I noticed ps was broken.
+
+# ps
+ps: bad namelist
+# w
+w: /dev//umount: /proc: not currently mounted
+umount:: No such file or directory
+w: /dev// /var: not currently mounted
+umount: /usr: n: No such file or directory
+ 6:27AM  up 1 min, 1 user, load averages: 0.00, 0.00, 0.00
+USER		TTY		FROM	LOGIN@	IDLE	WHAT
+root		v0		-	6:27AM	-	w
+#
+
+I've seen that kind of behavior before and it's usually when I rebuild
+world and forget to make a new kernel. However, in this case, I haven't
+touched the source except to compile a kernel.
+
+Anyway, just to make sure something funky didn't happen last time, I
+recompile a new kernel. Reboot. Same ps deal.
+
+So I cvsup to -stable, make buildworld, make installworld and for make
+depend/make/install a new kernel. Reboot. Same problem with ps.
+
+
+
+
+
+
+### PK 2596809 ###
+===== 序 22124 | PK 2596809 =====
+DATE: 1999-04-11
+FROM: Jesse <j@lumiere.net> <None>
+SUBJ: Re: SOLVED. Re: ps problems (explained)
+
+
+On Sun, 11 Apr 1999, Spidey wrote:
+
+> I solved my ps problems, and I want to share my happiness with the list :)
+
+Glad to hear it.
+
+> - ps still gives me the creeps. ("bad namelist").
+
+> - I compile a custom kernel without nfs, vm86, bpfilter, ether, pca0,
+> speaker from my previous kernel version.
+> - This one works great! ps is working again!!!
+
+I tried the same, no luck.
+
+I'm basically having the exact same problem as you, but I haven't solved
+it and it's really bugging me. ps is broken with my normal kernel, with my
+customized kernel but everything you mentioned above removed and even
+with the GENERIC kernel. 
+
+Don't know where to go from here though.
+
+---
+Jesse <j@lumiere.net>
+http://www.lumiere.net/
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-stable" in the body of the message
+
+
+
+
+
+
+
+### PK 2596810 ###
+===== 序 22125 | PK 2596810 =====
+DATE: 1999-04-11
+FROM: Robin Melville <robmel@innotts.co.uk> <None>
+SUBJ: Re: Real time clock problem in 3.1-STABLE
+
+At 3:49 pm +0100 9/4/99, Mark Powell wrote:
+>On Thu, 8 Apr 1999, Mike Smith wrote:
+>
+>> > Installed 3.1-STABLE on an Apricot Shogun server. xntpd wouldn't sync time
+>> > correctly though. I set it up just as I do on any other machine. However,
+
+On a related matter, I have a new problem with ntpdate which started on
+shifting from 2.2.8 to 3.1-RELEASE -> 3.1-Stable. Ntpdate is no longer able
+to find a 'suitable server'
+
+># ntpdate -d time.innotts.co.uk
+>11 Apr 16:58:41 ntpdate: ntpdate version=3.4e (beta multicast); Sun Apr 11
+>13:57:38 BST 1999 (1)
+>transmit(212.56.32.2)
+>receive(212.56.32.2)
+>transmit(212.56.32.2)
+>receive(212.56.32.2)
+>transmit(212.56.32.2)
+>receive(212.56.32.2)
+>transmit(212.56.32.2)
+>receive(212.56.32.2)
+>transmit(212.56.32.2)
+>server 212.56.32.2, port 123
+>stratum 16, precision -17, leap 11, trust 000
+>refid [0.0.0.0], delay 0.13490, dispersion 0.00169
+>transmitted 4, in filter 4
+>reference time:      00000000.00000000  Thu, Feb  7 2036  6:28:16.000
+>originate timestamp: babb4580.419f4000  Sun, Apr 11 1999 17:00:00.256
+>transmit timestamp:  babb4531.fd618000  Sun, Apr 11 1999 16:58:41.989
+>filter delay:  0.14526  0.15463  0.14482  0.13490
+>               0.00000  0.00000  0.00000  0.00000
+>filter offset: 78.21
+...[正文已截断，共 2237 字符]
+
+
+
+### PK 2596811 ###
+===== 序 22126 | PK 2596811 =====
+DATE: 1999-04-11
+FROM: Ludwig Pummer <ludwigp@bigfoot.com> <None>
+SUBJ: Re: 2.2.8 -> 3.1 make buildworld errors...
+
+At 08:12 AM 4/11/99 , Danny wrote:
+>I'm upgrading from 2.2.8-stable to 3.1-stable.  I used cvsup to get the
+>sources, and did a make buildworld and got the following.  I tried it
+>again, and got the same messages the second time.  Any ideas are
+>appreciated.
+
+2.2.X to 3.1-stable upgrades have to use the 'make upgrade', 'make
+aout-to-elf', or 'make aout-to-elf-build' && 'make aout-to-elf-install'
+targets. See /usr/src/Makefile for more info.
+
+--Ludwig Pummer ( ludwigp@bigfoot.com ) ICQ UIN: 692441
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-stable" in the body of the message
+
+
+
+
+
+
+
+### PK 2596815 ###
+===== 序 22130 | PK 2596815 =====
+DATE: 1999-04-12
+FROM: "Louis A. Mamakos" <louie@TransSys.COM> <None>
+SUBJ: Re: Real time clock problem in 3.1-STABLE
+
+
+The server you're trying to synchronize to doesn't have the correct time.  This
+is "obvious" from two pieces of information.  First, the leap bits both being
+set to '11' is an alarm condition.  Also, the fact that the reference time
+is sometime back in February should be a hint, too.  
+
+louie
+
+> On a related matter, I have a new problem with ntpdate which started on
+> shifting from 2.2.8 to 3.1-RELEASE -> 3.1-Stable. Ntpdate is no longer able
+> to find a 'suitable server'
+> 
+> ># ntpdate -d time.innotts.co.uk
+> >11 Apr 16:58:41 ntpdate: ntpdate version=3.4e (beta multicast); Sun Apr 11
+> >13:57:38 BST 1999 (1)
+> >transmit(212.56.32.2)
+> >receive(212.56.32.2)
+> >transmit(212.56.32.2)
+> >receive(212.56.32.2)
+> >transmit(212.56.32.2)
+> >receive(212.56.32.2)
+> >transmit(212.56.32.2)
+> >receive(212.56.32.2)
+> >transmit(212.56.32.2)
+> >server 212.56.32.2, port 123
+> >stratum 16, precision -17, leap 11, trust 000
+> >refid [0.0.0.0], delay 0.13490, dispersion 0.00169
+> >transmitted 4, in filter 4
+> >reference time:      00000000.00000000  Thu, Feb  7 2036  6:28:16.000
+> >originate timestamp: babb4580.419f4000  Sun, Apr 11 1999 17:00:00.256
+> >transmit timestamp:  babb4531.fd618000  Sun, Apr 11 1999 16:58:41.989
+> >filter delay:  0.14526  0.15463  0.14482  0.13490
+> >               0.00000  0.00000  0.00000  0.00000
+> >filter offset: 78.21580 78.21479 78.21221 78.21164
+> >               0.000000 0.000000 0.000000 0.000000
+> >delay 0.13490, dispersion 0.00169
+> >offset 78.211646
+> >
+> >11 Apr 16:58:42 ntpdate: no server suitable for synchronization found
+> 
+> This always worked before upgrading. We need to do this since the service
+> has only a dialup connection to the net.
+> 
+> Any clues?
+> 
+> TIA
+> 
+> 
+> ----------------------------------------------------------------------
+> Robin Melville, Addiction Information Service
+> Nottingham Alcohol & Drug Team
+> Tel:  +44 (0)115 952 9478       Fax:  +44 (0)115 952 9421
+> work: robmel@nadt.org.uk        home: robmel@innotts.co.uk
+> Pages: http://www.innotts.co.uk/nadt
+> ----------------------------------------------------------------------
+> 
+> 
+> 
+> 
+> To Unsubscribe: send mail to majordomo@FreeBSD.org
+> with "unsubscribe freebsd-stable" in the body of the message
+
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-stable" in the body of the message
+
+
+
+
+
+
+
+### PK 2596816 ###
+===== 序 22131 | PK 2596816 =====
+DATE: 1999-04-12
+FROM: "Andrew Reilly" <andrew@lake.com.au> <None>
+SUBJ: CRON in malloc(): warning: pointer to wrong page.
+
+
+Hi,
+
+I'm running a FreeBSD 3.1-STABLE #4: Fri Apr  9 08:39:18 EST 1999
+system with 32M RAM and about 140M of swap split across two SCSI disks
+connected to the on-board ahc7850 controller.  I've been running
+FreeBSD-stable on this system since about '95.  The problem arrived
+with the upgrade to 3.1, and hasn't shifted through the three or four
+rebuilds I've done since then.
+
+The particular problem I've found at the moment is that sometimes when
+I'm doing a lot (netscape 4.5, window movement, xemacs) something
+breaks in cron, and I get messages like the one below whenever cron
+attempts to run a job.
+
+Any thoughts?  
+
+------ Forwarded message ------
+    From: root@areilly.bpc-users.org (Cron Daemon)
+ Subject: Cron <root@gurney> /usr/libexec/atrun
+    Date: 12 Apr 1999 00:45:01 -0000
+      To: root@areilly.bpc-users.org
+
+CRON in malloc(): warning: pointer to wrong page.
+
+
+
+
+Thanks in advance,
+
+--
+Andrew
+
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-stable" in the body of the message
+
+
+
+
+
+
+
+### PK 2596819 ###
+===== 序 22134 | PK 2596819 =====
+DATE: 1999-04-11
+FROM: Spidey <spidey@libdns.qc.ca> <None>
+SUBJ: Re: SOLVED. Re: ps problems (explained)
+
+Did you took the same steps as I did? Which are, again:
+
+1- cvsup the new sources
+
+2- make buildworld
+
+3- shutdown or reboot in single-user mode
+
+4- make installworld
+
+5- update /etc and /dev
+
+6- build and install a new kernel
+
+I also made the following guesses:
+
+A- mv /var/run/utmp /tmp; touch /var/run/utmp
+
+B- umount /proc and remove /proc from /etc/fstab then reboot without
+mounting /proc, then put /proc back in fstab and reboot
+
+I don't know how valid is the "B" step, but that's one thing that made ps
+work.
+
+and for the "A" part, uptime and such things would not work before I do
+this.
+
+Hope this helps. What is the output of 'ps', 'uptime' and maybe 'last'?
+
+On Sun, 11 Apr 1999, Jesse wrote:
+
+> 
+> On Sun, 11 Apr 1999, Spidey wrote:
+> 
+> > I solved my ps problems, and I want to share my happiness with the list :)
+> 
+> Glad to hear it.
+> 
+> > - ps still gives me the creeps. ("bad namelist").
+> 
+> > - I compile a custom kernel without nfs, vm86, bpfilter, ether, pca0,
+> > speaker from my previous kernel version.
+> > - This one works great! ps is working again!!!
+> 
+> I tried the same, no luck.
+> 
+> I'm basically having the exact same problem as you, but I haven't solved
+> it and it's really bugging me. ps is broken with my normal kernel, wit
+...[正文已截断，共 1860 字符]
+
+
+
+### PK 2596821 ###
+===== 序 22136 | PK 2596821 =====
+DATE: 1999-04-12
+FROM: Spidey <spidey@libdns.qc.ca> <None>
+SUBJ: Re: ps: badlist and other problems
+
+There was a thread about me and my broken ps not long ago...
+
+It was a install of a snapshot of about the same time... so my guess is
+that ps, w, and uptime (as they are the only ones that I heard of) were
+broken in the beginning of april..
+
+The difference here, however, is that I got the 19990410 snapshot...
+(april 10) If it can make any difference...
+
+I'm seeking through the web interface to the CVS repository, and I'm
+having fun figuring out what correlation there is between the dates and
+the programs.
+
+I don't think I could do it, but it's fun anyways..
+
+Just happy to say that I builworld / installworld yesterday and rebuilded
+a new kernel (maybe a make clean in /sys/compile/*/ could do it?), and all
+this stuff is fixed...
+
+and if someone wants to flame me 'cause I give bad advice, go on! This is
+how we learn (that was sarcasm... sorry... guess I'm bored..)
+
+ciao!
+
+spidey
+
+On Sun, 11 Apr 1999, Jesse wrote:
+
+> 
+> Hi,
+> 
+> I did an install of 3.1-19990408-STABLE on a fresh machine. It went fine
+> without any errors. I believe ps was working at this time.
+> 
+> I built a custom kernel and rebooted. Later, I noticed ps was broken.
+> 
+> # ps
+> ps: bad namelist
+> # w
+> w: /dev//umount: /proc: not currently mounted
+> umount:: No such file or director
+...[正文已截断，共 2673 字符]
+
+
+
+### PK 2596823 ###
+===== 序 22138 | PK 2596823 =====
+DATE: 1999-04-12
+FROM: "Jordan K. Hubbard" <jkh@zippy.cdrom.com> <None>
+SUBJ: Re: SOLVED. Re: ps problems (explained)
+
+This was a clear syncronization problem and, as such, is probably not
+worth discussing much further in -stable.  I think the thread has
+lasted more than long enough at this point. :)
+
+- Jordan
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-stable" in the body of the message
+
+
+
+
+
+
+
+### PK 2596824 ###
+===== 序 22139 | PK 2596824 =====
+DATE: 1999-04-12
+FROM: Ted Schundler <tschundler@edgemedia.net> <None>
+SUBJ: 2.2.7-RELEASE to 3.1-STABLE: it's late and I'm tired
+
+I was kept away from FreeBSD for awhile due to projects requiring
+Windoze (ugh), and decided I should probably update my system to 3.x
+since it seemed to have some nice perks like rundos. Normally I install
+from CDs, but I decided this time that I'd try via CVSup and upgrading
+that way. Getting the new sources went well, and I immediately tried
+"make buildworld" which didn't work. Then after actually reading the
+stuff, I realized instead I probably want to make upgrade. That didn't
+work. At some point it couldn't find config.h in /usr/src/contrib/gcc
+`so I decided to just try running ./configure there and that created
+config.h, and I haven't gotten that problem since. I'm suspecting doing
+that may have been a bad thing and there is something different I should
+have done. Anyways, I tried make clean an make upgrade, still to no
+avail.
+
+FYI: uname -a
+FreeBSD tex.home 2.2.7-RELEASE FreeBSD 2.2.7-RELEASE #0: Mon Jan 18
+01:16:47 EST 1999     root@tex.home:/usr/src/sys/compile/TEX  i386
+
+and the problem whas while building the bootstrap libraries, when it
+said:
+
+cc -c -O -pipe -DFREEBSD_AOUT
+-I/usr/src/gnu/usr.bin/cc/libgcc/../../../../contrib/gcc
+-I/usr/src/gnu/usr.bin/cc/libgcc/../../../../contrib/gcc/config
+-DFREEBSD_NA
+...[正文已截断，共 3772 字符]
+
+
+
+### PK 2596825 ###
+===== 序 22140 | PK 2596825 =====
+DATE: 1999-04-12
+FROM: Dan <dan@expresscopy.com> <None>
+SUBJ: No Login: for serial console
+
+After getting a serial console to show me the [Boot] prompt on
+a recent installation of FreeBSD 3.1-STABLE, I'm not able to 
+see any messages past the point when the Kernel is loaded, or
+get a login prompt when connecting after the machine is up.
+
+At the moment, I'm using just -P in /boot.config.
+
+Any ideas?
+
+Thanks,
+
+Dan
+
+-- Dan Herrera(dan@expresscopy.com)
+   -------------------------------
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-stable" in the body of the message
+
+
+
+
+
+
+
+### PK 2596826 ###
+===== 序 22141 | PK 2596826 =====
+DATE: 1999-04-12
+FROM: Doug Russell <drussell@saturn-tech.com> <None>
+SUBJ: Strange wd messages
+
+
+What might be causing the following messages under disk (int?) load?
+
+wd2s1f: wdstart: timeout waiting to give command reading fsbn 13853744 of 13853744-13853871 (wd2s1 bn 16669518; cn 16537 tn 3 sn 33)wd2: status 1<err> error 4<abort>
+wd2s1f: wdstart: timeout waiting to give command reading fsbn 13853872 of 13853872-13853999 (wd2s1 bn 16669646; cn 16537 tn 5 sn 35)wd2: status 1<err> error 4<abort>
+wd2s1f: wdstart: timeout waiting to give command writing fsbn 11403328 of 11403328-11403343 (wd2s1 bn 14219102; cn 14106 tn 4 sn 2)wd2: status 1<err> error 4<abort>
+wd2s1f: wdstart: timeout waiting to give command reading fsbn 13854384 of 13854384-13854511 (wd2s1 bn 16670158; cn 16537 tn 13 sn 43)wd2: status 1<err> error 4<abort>
+wd2s1f: wdstart: timeout waiting to give command writing fsbn 16 of 16-19 (wd2s1 bn 2815790; cn 2793 tn 7 sn 5)wd2: status 1<err> error 4<abort>
+wd2s1f: wdstart: timeout waiting to give command writing fsbn 2341744 of 2341744-2341775 (wd2s1 bn 5157518; cn 5116 tn 9 sn 23)wd2: status 1<err> error 4<abort>
+wd2s1f: wdstart: timeout waiting to give command writing fsbn 16 of 16-19 (wd2s1 bn 2815790; cn 2793 tn 7 sn 5)wd2: status 3<index,err> error 4<abort>
+wd2s1f: wdstart: timeout waiting to give command writing fsbn 2338304 of 23383
+...[正文已截断，共 7193 字符]
+
+
+
+### PK 2596827 ###
+===== 序 22142 | PK 2596827 =====
+DATE: 1999-04-12
+FROM: "Daniel C. Sobral" <dcs@newsguy.com> <None>
+SUBJ: Re: ps: badlist and other problems
+
+Jesse wrote:
+> 
+> Anyone have any ideas what might be wrong? Or at least what I can do to
+> get more info?
+
+Could it possibly be a problem with procfs? Is procfs mounted on
+/proc? Is it on the fstab? Is it on the kernel? Loaded as a kld?
+Does /proc exist? And, anyway, does ps works with newly-compiled
+GENERIC kernel?
+
+--
+Daniel C. Sobral			(8-DCS)
+dcs@newsguy.com
+dcs@freebsd.org
+
+	"nothing better than the ability to perform cunning linguistics"
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-stable" in the body of the message
+
+
+
+
+
+
+
+### PK 2596829 ###
+===== 序 22144 | PK 2596829 =====
+DATE: 1999-04-12
+FROM: Jesse <j@lumiere.net> <None>
+SUBJ: Re: ps: badlist and other problems
+
+
+> > Anyone have any ideas what might be wrong? Or at least what I can do to
+> > get more info?
+> 
+> And, anyway, does ps works with newly-compiled
+> GENERIC kernel?
+
+Just checked on that. No, it doesn't. :/
+
+I recompiled my kernel again with 'options	LKM'. modstat no longer
+returns a device not configured error, but the problem still exists.
+
+---
+Jesse <j@lumiere.net>
+http://www.lumiere.net/
+
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-stable" in the body of the message
+
+
+
+
+
+
+
+### PK 2596830 ###
+===== 序 22145 | PK 2596830 =====
+DATE: 1999-04-12
+FROM: butthead@icb.spb.su <None>
+SUBJ: RE: ps: badlist and other problems
+
+
+> Jesse wrote:
+> > 
+> > Anyone have any ideas what might be wrong? Or at least what I can do to
+> > get more info?
+I've seen such problem when did make world with new sources,
+but without kernel rebuilding. When I have fetched kernel sources
+which match all others and build my kernel all happens to be fine.
+
+May be my idea is stupid, but it means that me is newbie here....
+Hope this helps.
+-Dima. 
+
+> Could it possibly be a problem with procfs? Is procfs mounted on
+> /proc? Is it on the fstab? Is it on the kernel? Loaded as a kld?
+> Does /proc exist? And, anyway, does ps works with newly-compiled
+> GENERIC kernel?
+> 
+> --
+> Daniel C. Sobral			(8-DCS)
+> dcs@newsguy.com
+> dcs@freebsd.org
+> 
+> 	"nothing better than the ability to perform cunning linguistics"
+> 
+> 
+> 
+> To Unsubscribe: send mail to majordomo@FreeBSD.org
+> with "unsubscribe freebsd-stable" in the body of the message
+> 
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-stable" in the body of the message
+
+
+
+
+
+
+
+### PK 2596834 ###
+===== 序 22149 | PK 2596834 =====
+DATE: 1999-04-12
+FROM: Brad Karp <karp@eecs.harvard.edu> <None>
+SUBJ: __deregister_frame_info and egcs-1.1.2, revisited
+
+I saw the exchange about the rtld fix to map unresolved weak references to
+zero, so that one can link with the system cc against egcs-built shared
+libs.
+
+I've been having the undefined symbol lossage, too. But here's the twist:
+I experience it when I compile *with* egcs against egcs-built shared libs.
+
+I admit that I could update my rtld from 3.1-RELEASE, and silence rtld about
+these symbols. But the obsessive-compulsive part of me is bothered that
+things don't work even when linking with egcs.
+
+As Fritz wrote, egcs' crt{end,begin,endS,beginS}.o reference the *_frame_info
+functions, and there is text for them in egcs' libgcc.a.
+
+I'm wondering if the elf ld needs a tweak, too--it appears that even when
+egcs is used for the link, the linker fails to bring in the *_frame_info
+code from libgcc.a.
+
+Interested parties might cf. my note to ports, which includes a transcript of
+the verbose egcs output for the failure case:
+
+http://www.freebsd.org/cgi/mid.cgi?db=irt&id=199904110709.DAA12115@dominator.eecs.harvard.edu
+
+-Brad, karp@eecs.harvard.edu
+
+
+To Unsubscribe: send mail to majordomo@FreeBSD.org
+with "unsubscribe freebsd-stable" in the body of the message
+
+
+
+
+
+

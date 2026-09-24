@@ -1,0 +1,98 @@
+### PK 1045802 ###
+现叙述(58字): Eitan Adler 给出 panic 时进 kgdb 的开关 debug.debugger_on_panic=1
+### PK 1045802 ###
+===== 序 22183 | PK 1045802 =====
+DATE: 2011-04-05
+FROM: lists at eitanadler.com (Eitan Adler) <None>
+SUBJ: Setting up a running FreeBSD/PCBSD system to enter kgdb on panic
+
+On Mon, Apr 4, 2011 at 7:35 PM, David Somayajulu
+<david.somayajulu@qlogic.com> wrote:
+> Hi All,
+> Is there some way I can setup a running FreeBSD - (I use PCBSD7.2) - to break into kgdb when the system panics. I am trying to get a stack trace when "Fatal trap 12: page fault while in kernel mode" happens.
+
+debug.debugger_on_panic=1
+
+-- 
+Eitan Adler
+
+
+
+
+
+
+### PK 1045805 ###
+现叙述(48字): Justin Hibbits 凭经验称 gdb 靠检查空栈链指针判断回栈结束，遇 NULL 即停
+### PK 1045805 ###
+===== 序 22186 | PK 1045805 =====
+DATE: 2011-04-05
+FROM: chmeeedalf at gmail.com (Justin Hibbits) <None>
+SUBJ: KGDB stack traces in the kernel.
+
+On Apr 4, 2011, at 6:57 PM, Julian Elischer wrote:
+> is there anyone here with enough gdb/kgdb source experience to know  
+> what
+> we would need to put on the stack at fork_exit() to make it stop  
+> when it
+> gets there?
+>
+> not only is it annoying but it slows down debugging because kgdb and  
+> the ddd
+> front end ask for stacks a LOT. sometimes it actually just hangs as  
+> the stack
+> goes into a loop and never ends.
+>
+> I had a quick look but didn't spot how gdb decides it has reached  
+> the end of a stack.
+>
+> Julian
+
+ From my experience, it checks for a NULL stack chain pointer.  Once  
+that reaches NULL, it's the end of the stack.
+
+- Justin
+
+
+
+
+
+
+### PK 1045813 ###
+现叙述(47字): Julian Elischer 打算在构建初始栈时加入 NULL，好让 kgdb 的回栈能停住
+### PK 1045813 ###
+===== 序 22194 | PK 1045813 =====
+DATE: 2011-04-05
+FROM: julian at freebsd.org (Julian Elischer) <None>
+SUBJ: KGDB stack traces in the kernel.
+
+On 4/4/11 6:04 PM, Justin Hibbits wrote:
+> On Apr 4, 2011, at 6:57 PM, Julian Elischer wrote:
+>> is there anyone here with enough gdb/kgdb source experience to know 
+>> what
+>> we would need to put on the stack at fork_exit() to make it stop 
+>> when it
+>> gets there?
+>>
+>> not only is it annoying but it slows down debugging because kgdb 
+>> and the ddd
+>> front end ask for stacks a LOT. sometimes it actually just hangs as 
+>> the stack
+>> goes into a loop and never ends.
+>>
+>> I had a quick look but didn't spot how gdb decides it has reached 
+>> the end of a stack.
+>>
+>> Julian
+>
+> From my experience, it checks for a NULL stack chain pointer.  Once 
+> that reaches NULL, it's the end of the stack.
+>
+> - Justin
+>
+I'll try adding NULL when we build the intial stack up.
+:-)
+
+
+
+
+

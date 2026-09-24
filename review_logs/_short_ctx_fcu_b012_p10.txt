@@ -1,0 +1,563 @@
+### PK 1047433 ###
+现叙述(48字): 建议重编 cdrtools 端口，因为 CAM ioctl 号已经变更，旧二进制与当前内核不匹配
+### PK 1047433 ###
+===== 序 23802 | PK 1047433 =====
+DATE: 2011-12-08
+FROM: boland37 at xs4all.nl (Michiel Boland) <None>
+SUBJ: Burning CDs and DVDs on SATA drive in FreeBSD 9.0
+
+On 12/08/2011 01:25, Thomas Mueller wrote:
+> I can't get cdrtools (cdrecord or readcd) to work on FreeBSD 9.0-RC2, and now I see RC3 is available.
+>
+> I tried "options ATA_CAM" in kernel config, removing "device atapicam", but still
+> readcd -scanbus  or
+> cdrecord -scanbus
+> refuses to work, running as root.
+>
+> "camcontrol devlist" shows my DVD drive, and I am able to mount and read /dev/cd0.
+>
+> Is cdrtools buggy, or maybe the FreeBSD port is buggy?
+>
+> I see from the Makefile that sysutils/cdrdao is broken on FreeBSD 9.x, does not link.
+>
+> I downloaded cdrkit-1.1.11.tar.gz so as to extract and have a look at it, and possibly build it on my own, outside the ports system.
+>
+> I see the version in ports system is 1.1.9, maybe 1.1.11 could do better?
+>
+> Maybe the FreeBSD developers were too hasty to deprecate burncd?
+
+Recompile the port; the CAM ioctl numbers have changed.
+
+Cheers
+Michiel
+
+
+
+
+
+
+### PK 1047439 ###
+现叙述(49字): 指出 gmirror 镜像 GPT 分区没有问题，只在整盘镜像时才会出现问题，并给出另一篇参考指引
+### PK 1047439 ###
+===== 序 23808 | PK 1047439 =====
+DATE: 2011-12-08
+FROM: joh.hendriks at gmail.com (Johan Hendriks) <None>
+SUBJ: Dog Food <tm>
+
+Sean Bruno schreef:
+> On Thu, 2011-12-08 at 02:08 -0800, Peter Maloney wrote:
+>> And what problems did you run into?
+>>
+> More or less, trying to do gmirror(4) style mirroring on GPT partitions
+> doesn't work.  See http://www.freebsd.org/doc/handbook/geom-mirror.html
+> for the BIG RED WARNING that says why.
+>
+>> This guide worked for me:
+>> http://wiki.freebsd.org/RootOnZFS/GPTZFSBoot/Mirror
+> That, along with a lot of how to's, is out of date in the FreeBSD 9
+> world.  I would suspect that my experience of attempting to setup a
+> mirrored volume won't be unique.
+>
+> BSDInstaller and its predecessor Sysinstall don't have any code to
+> create or destroy zfs(4) or geom(4) volumes.  So, the amount of exposure
+> to real users is approaching 0 in comparison to the number of people who
+> really do use FreeBSD.
+>
+> I have my hands full with other projects at the moment, but I'm more
+> than happy to grant access to a two disk SATA server if someone wants to
+> enhance BSDInstall with zfs(4) or geom(4) volume management features.
+>
+> At a minimum, you *should* be able to take 2 disks and make a mirrored
+> volume with either tool.
+>
+> Sean
+also a good guide is here.
+http://unix-heaven.org/node/24
+And gmirror GPT partitions is no problem, only with whole disks is where 
+problems arise.
+
+regards
+Johan Hendriks
+
+
+
+
+
+
+### PK 1047516 ###
+现叙述(59字): 确认补丁不含用户可见改动，主要为键盘驱动提供更逻辑的接口，目标是输入路径而非输出路径，回答 Alexander 的追问
+### PK 1047516 ###
+===== 序 23885 | PK 1047516 =====
+DATE: 2011-12-12
+FROM: avg at FreeBSD.org (Andriy Gapon) <None>
+SUBJ: grabbing console (syscons) in kernel
+
+on 12/12/2011 00:06 Alexander Yerenkow said the following:
+> 
+> 
+> 2011/12/11 Andriy Gapon <avg@freebsd.org <mailto:avg@freebsd.org>>
+> 
+> 
+>     There are a few cases when the kernel needs to interact with a user via syscons.
+>     This is the cases where the kernel not only spews some output but also expects
+>     some input.  Some examples are:
+>     - asking for a root filesystem specification
+>     - entering ddb
+>     - asking to press a key for reboot
+> 
+>     In this cases the kernel implicitly grabs the console for its own use.
+>     I'd like to make action more explicit.
+> 
+>     What do you think about the approach and implementation in the following
+>     patches?
+>     Thank you!
+> 
+>     https://gitorious.org/~avg/freebsd/avgbsd/commit/5248b49ebf84d98a0597fa5aa4d813a38f581acc
+>     https://gitorious.org/~avg/freebsd/avgbsd/commit/a0849c52242378474bb2eaa41726376fbc4c5bf6
+>     https://gitorious.org/~avg/freebsd/avgbsd/commit/a67515cbd720b16f03ba435ed182966a8a338b15
+>     https://gitorious.org/~avg/freebsd/avgbsd/commit/b8864b68b4c0e26ece065a38301c305833be32eb
+>     https://gitorious.org/~avg/freebsd/avgbsd/commit/1017ae425d8abecd7482bd6c6deaaf9f25f5c6cd
+> 
+>     P.S. one of the benefits is that a keyboard is put into and out of the polling
+>     mode before getting all the required input and after that; not around each
+>     character as it is done now in rather twisted way.
+> 
+> 
+> Does asking for geli password is such case too?
+
+Yes.
+
+> For example, I have mouse, which can disappear/reappear while laying still; and
+> when geli asks password, ums0 connect message can appear, which moves line
+> "Please enter geli password..." to top, and it can be missed;
+> This behavior somehow change?
+
+No.  The patches do not contain user-visible changes.  They make things easier
+for keyboard drivers and hopefully provide a more logical interface to kernel.
+Their primary target is the input path, they do not introduce any changes to the
+output path.
+
+-- 
+Andriy Gapon
+
+
+
+
+
+
+### PK 1047531 ###
+现叙述(57字): 说明自己跑的是 buildkernel 而不是 buildworld，并发度为 6，并因 Lars 顶帖而顶帖回帖
+### PK 1047531 ###
+===== 序 23900 | PK 1047531 =====
+DATE: 2011-12-12
+FROM: gljennjohn at googlemail.com (Gary Jennejohn) <None>
+SUBJ: SCHED_ULE should not be the default
+
+On Mon, 12 Dec 2011 17:10:46 +0100
+Lars Engels <lars.engels@0x20.net> wrote:
+
+> Did you use -jX to build the world?
+> 
+
+I'm top posting since Lars did.
+
+It was buildkernel, not buildworld.
+
+Yes, -j6.
+
+> _____________________________________________
+> Von: Gary Jennejohn <gljennjohn@googlemail.com>
+> Versendet am: Mon Dec 12 16:32:21 MEZ 2011
+> An: Vincent Hoffman <vince@unsane.co.uk>
+> CC: "O. Hartmann" <ohartman@mail.zedat.fu-berlin.de>, Current FreeBSD <freebsd-current@freebsd.org>, freebsd-stable@freebsd.org, freebsd-performance@freebsd.org
+> Betreff: Re: SCHED_ULE should not be the default
+> 
+> 
+> On Mon, 12 Dec 2011 15:13:00 +0000
+> Vincent Hoffman <vince@unsane.co.uk> wrote:
+> 
+> > 
+> > -----BEGIN PGP SIGNED MESSAGE-----
+> > Hash: SHA1
+> > 
+> > On 12/12/2011 13:47, O. Hartmann wrote:
+> > >
+> > >> Not fully right, boinc defaults to run on idprio 31 so this isn't an
+> > >> issue. And yes, there are cases where SCHED_ULE shows much better
+> > >> performance then SCHED_4BSD. [...]
+> > >
+> > > Do we have any proof at hand for such cases where SCHED_ULE performs
+> > > much better than SCHED_4BSD? Whenever the subject comes up, it is
+> > > mentioned, that SCHED_ULE has better performance on boxes with a ncpu >
+> > > 2. But in the end I see here contradictionary statements. People
+> > > complain about poor performance (especially in scientific environments),
+> > > and other give contra not being the case.
+> > It all a little old now but some if the stuff in
+> > http://people.freebsd.org/~kris/scaling/
+> > covers improvements that were seen.
+> > 
+> > http://jeffr-tech.livejournal.com/5705.html
+> > shows a little too, reading though Jeffs blog is worth it as it has some
+> > interesting stuff on SHED_ULE.
+> > 
+> > I thought there were some more benchmarks floating round but cant find
+> > any with a quick google.
+> > 
+> > 
+> > Vince
+> > 
+> > >
+> > > Within our department, we developed a highly scalable code for planetary
+> > > science purposes on imagery. It utilizes present GPUs via OpenCL if
+> > > present. Otherwise it grabs as many cores as it can.
+> > > By the end of this year I'll get a new desktop box based on Intels new
+> > > Sandy Bridge-E architecture with plenty of memory. If the colleague who
+> > > developed the code is willing performing some benchmarks on the same
+> > > hardware platform, we'll benchmark bot FreeBSD 9.0/10.0 and the most
+> > > recent Suse. For FreeBSD I intent also to look for performance with both
+> > > different schedulers available.
+> > >
+> 
+> These observations are not scientific, but I have a CPU from AMD with
+> 6 cores (AMD Phenom(tm) II X6 1090T Processor).
+> 
+> My simple test was ``make buildkernel'' while watching the core usage with
+> gkrellm.
+> 
+> With SCHED_4BSD all 6 cores are loaded to 97% during the build phase.
+> I've never seen any value above 97% with gkrellm.
+> 
+> With SCHED_ULE I never saw all 6 cores loaded this heavily. Usually
+> 2 or more cores were at or below 90%. Not really that significant, but
+> still a noticeable difference in apparent scheduling behavior. Whether
+> the observed difference is due to some change in data from the kernel to
+> gkrellm is beyond me.
+> 
+> -- 
+> Gary Jennejohn
+> _____________________________________________
+> 
+> freebsd-stable@freebsd.org mailing list
+> http://lists.freebsd.org/mailman/listinfo/freebsd-stable
+> To unsubscribe, send any mail to "freebsd-stable-unsubscribe@freebsd.org"
+> 
+
+
+-- 
+Gary Jennejohn
+
+
+
+
+
+
+### PK 1047585 ###
+现叙述(55字): 确认 Kohji Okuno 的 XHCI_PS_PP 修正正确，该改动已提交到 base 的 r228493
+### PK 1047585 ###
+===== 序 23954 | PK 1047585 =====
+DATE: 2011-12-14
+FROM: hselasky at c2i.net (Hans Petter Selasky) <None>
+SUBJ: [okuno.kohji@jp.panasonic.com: about XHCI_PS_PP]
+
+On Wednesday 14 December 2011 08:15:19 Joel Dahl wrote:
+> Just in case you didn't see the message to current@ :
+> 
+> ----- Forwarded message from Kohji Okuno <okuno.kohji@jp.panasonic.com>
+> -----
+> 
+> Date: Wed, 14 Dec 2011 11:35:23 +0900 (JST)
+> From: Kohji Okuno <okuno.kohji@jp.panasonic.com>
+> To: freebsd-current@freebsd.org
+> Subject: about XHCI_PS_PP
+> X-Mailer: Mew version 6.3 on Emacs 23.3 / Mule 6.0 (HANACHIRUSATO)
+> 
+> Hi Selasky,
+> 
+
+Hi,
+
+Your fix is correct!
+
+http://svn.freebsd.org/changeset/base/228493
+
+--HPS
+
+
+
+
+
+
+### PK 1047599 ###
+现叙述(53字): 建议去邮件存档搜索 lemming-syncer，为 Sean 的 clusteradm 资源饥饿问题指路
+### PK 1047599 ###
+===== 序 23968 | PK 1047599 =====
+DATE: 2011-12-14
+FROM: phk at phk.freebsd.dk (Poul-Henning Kamp) <None>
+SUBJ: dogfooding over in clusteradm land
+
+In message <1323868832.5283.9.camel@hitfishpass-lx.corp.yahoo.com>, Sean Bruno 
+writes:
+
+>We're seeing what looks like a syncher/ufs resource starvation on 9.0 on
+>the cvs2svn ports conversion box.  I'm not sure what resource is tapped
+>out.
+
+Search mailarcive for "lemming-syncer"
+
+-- 
+Poul-Henning Kamp       | UNIX since Zilog Zeus 3.20
+phk@FreeBSD.ORG         | TCP/IP since RFC 956
+FreeBSD committer       | BSD since 4.3-tahoe    
+Never attribute to malice what can adequately be explained by incompetence.
+
+
+
+
+
+
+### PK 1047600 ###
+现叙述(44字): 认为让 gcc dumpspecs 被调用本身就是很糟糕的做法，反问树中哪个端口在调用它
+### PK 1047600 ###
+===== 序 23969 | PK 1047600 =====
+DATE: 2011-12-14
+FROM: yanegomi at gmail.com (Garrett Cooper) <None>
+SUBJ: ports: clang: error: unsupported option '-dumpspecs'
+
+On Wed, Dec 14, 2011 at 1:52 PM, Roman Divacky <rdivacky@freebsd.org> wrote:
+> -dumpspecs is a gcc internal thing that clang will never support (it doesnt use
+> specs). It's wrong for ports to mess with the internals of the compiler and
+> this should be fixed in a clean way.
+>
+> Ie. we have to replace the -dumpspec | grep something with a saner check.
+
+    The fact that gcc -dumpspecs is looked at at all is a really bad
+idea. Do you know which port in the tree is calling this?
+Thanks,
+-Garrett
+
+
+
+
+
+
+### PK 1047606 ###
+现叙述(47字): 质疑 Garrett 的补丁为何移除既有的 MESSAGE() 调用，除该点外补丁看起来没问题
+### PK 1047606 ###
+===== 序 23975 | PK 1047606 =====
+DATE: 2011-12-15
+FROM: fjoe at samodelkin.net (Max Khon) <None>
+SUBJ: Remove debug echo
+
+Garrett,
+
+On Thu, Dec 1, 2011 at 2:15 PM, Garrett Cooper <yanegomi@gmail.com> wrote:
+
+
+> I've attached a patch that makes make do what I would like it to do;
+> there are some other items that require cleanup to achieve the `argv0'
+> prefixing that's available in gmake, but this is good enough for a
+> meaningful traceback when things fail. Pastebin available here, just
+> in case the mailing list eats my patch: http://pastebin.com/dFqcDRfv
+>
+> $ cat ~/Makefile
+> all:
+>        cd $$HOME/foo; ${MAKE} $@
+> $ cat ~/foo/Makefile
+> all: foo bar barf yadda
+>
+> foo bar yadda:
+>        @true
+>
+> baz:
+>        @false
+>
+> barf: baz
+> $ $PWD/make -j4 -f ~/Makefile all
+> cd $HOME/foo; /usr/src/usr.bin/make/make all
+> *** [baz] Error code 1
+> 1 error
+> *** [all] Error code 2
+> 1 error
+> $
+>
+> If someone would please, PLEASE commit this.. I will give you beer, or
+> wine, or a copy of Skyrim, or a few months subscription to WoW, or
+> something else of value to you that we could negotiate :)... I'm quite
+> frankly tired of having to playing guessing games fishing through logs
+> trying to determine build errors on FreeBSD if and when they do occur
+> with pmake, and I'm sure that a number of developers and build/release
+> engineers out there are in the same boat as I am.
+>
+
+Can you explain why did you remove MESSAGE() invocations in your patch?
+Other than that the patch looks good to me.
+
+Max
+
+
+
+
+
+
+### PK 1047610 ###
+现叙述(52字): 认为只有有人坐下来复现该结果并记录基准到底在测什么，差距才可能被修复，建议直接与 Phoronix 沟通
+### PK 1047610 ###
+===== 序 23979 | PK 1047610 =====
+DATE: 2011-12-15
+FROM: adrian at freebsd.org (Adrian Chadd) <None>
+SUBJ: Benchmark (Phoronix): FreeBSD 9.0-RC2 vs. Oracle Linux 6.1
+	Server
+
+On 14 December 2011 23:32, O. Hartmann <ohartman@zedat.fu-berlin.de> wrote:
+> Just saw this shot benchmark on Phoronix dot com today:
+>
+> http://www.phoronix.com/scan.php?page=news_item&px=MTAyNzA
+>
+> It may be worth to discuss the sad performance of FBSD in some parts of
+> the benchmark. A difference of a factor 10 or 100 is simply far beyond
+
+Well, the only way it's going to get fixed is if someone sits down,
+replicates it, and starts to document exactly what it is that these
+benchmarks are/aren't doing.
+
+Sometimes it's because the benchmark is very much tickling things
+incorrectly. In a lot of cases though, the benchmark is testing
+something synthetic that Linux just happens to have micro-optimised.
+
+So if you care about this a lot, someone needs to stand up, work with
+Phronix to get some actual feedback about what's going on, and see if
+it can be fixed. Maybe you'll find ULE is broken in some instances; I
+bet you'll find something like "the disk driver is suboptimal." For
+example, I remember seeing someone mess up a test because they split
+their filesystems across raid5 boundaries, and this was hidden by the
+choice of raid controller and stripe size. This made FreeBSD look
+worse; when this was corrected
+...[正文已截断，共 1445 字符]
+
+
+
+
+### PK 1047611 ###
+现叙述(50字): 澄清自己并非要用 MESSAGE() 达到其目的，只是移除既有 MESSAGE() 调用似乎并无必要
+### PK 1047611 ###
+===== 序 23980 | PK 1047611 =====
+DATE: 2011-12-15
+FROM: fjoe at samodelkin.net (Max Khon) <None>
+SUBJ: Remove debug echo
+
+Garrett,
+
+On Thu, Dec 15, 2011 at 10:39 AM, Garrett Cooper <yanegomi@gmail.com> wrote:
+
+>> If someone would please, PLEASE commit this.. I will give you beer, or
+> >> wine, or a copy of Skyrim, or a few months subscription to WoW, or
+> >> something else of value to you that we could negotiate :)... I'm quite
+> >> frankly tired of having to playing guessing games fishing through logs
+> >> trying to determine build errors on FreeBSD if and when they do occur
+> >> with pmake, and I'm sure that a number of developers and build/release
+> >> engineers out there are in the same boat as I am.
+> >
+> >
+> > Can you explain why did you remove MESSAGE() invocations in your patch?
+> > Other than that the patch looks good to me.
+>
+>     I thought that printing out MESSAGE and the more informative
+> *printf was kind of redundant.
+> Thanks!
+> -Garrett
+>
+> PS A sidenote why I bypassed MESSAGE(..): if I used the macro, make
+> would segfault as MESSAGE depends on targFmt and targPrefix being set
+> to something sane (they both default to NULL -- one explicitly, the
+> other implicitly because it's in the .BSS). These vars are only set in
+> one section of code, but I took the easy route out to avoid
+> accidentally breaking other code paths and because what I did in the
+> previously attached patch was simple to implement and test.
+>
+
+I did not mean that you should use MESSAGE() for your purposes, but
+removing existing "invocations" seems to be unnecessary.
+
+Max
+
+
+
+
+
+
+### PK 1047616 ###
+现叙述(33字): 反问能否查看测试数据，认为未经调优的 ZFS 比 UFS2 慢很多
+### PK 1047616 ###
+===== 序 23985 | PK 1047616 =====
+DATE: 2011-12-15
+FROM: sem at FreeBSD.org (Sergey Matveychuk) <None>
+SUBJ: Benchmark (Phoronix): FreeBSD 9.0-RC2 vs. Oracle Linux 6.1
+	Server
+
+15.12.2011 17:36, Michael Larabel ?????:
+> On 12/15/2011 07:25 AM, Stefan Esser wrote:
+>> Am 15.12.2011 11:10, schrieb Michael Larabel:
+>>> No, the same hardware was used for each OS.
+>>>
+>>> In terms of the software, the stock software stack for each OS was used.
+>> Just curious: Why did you choose ZFS on FreeBSD, while UFS2 (with
+>> journaling enabled) should be an obvious choice since it is more similar
+>> in concept to ext4 and since that is what most FreeBSD users will use
+>> with FreeBSD?
+>
+> I was running some ZFS vs. UFS tests as well and this happened to have
+> ZFS on when I was running some other tests.
+>
+
+Can we look at the tests?
+My opinion is ZFS without tuning is much slower than UFS2.
+
+
+
+
+
+
+### PK 1047627 ###
+现叙述(46字): 指出 Linux 可安装独立的内核模块获得 ZFS 的内核级支持，而非只能靠 FUSE 方式
+### PK 1047627 ###
+===== 序 23996 | PK 1047627 =====
+DATE: 2011-12-15
+FROM: fjwcash at gmail.com (Freddie Cash) <None>
+SUBJ: Benchmark (Phoronix): FreeBSD 9.0-RC2 vs. Oracle Linux 6.1
+	Server
+
+On Thu, Dec 15, 2011 at 9:58 AM, O. Hartmann
+<ohartman@zedat.fu-berlin.de> wrote:
+> Am 12/15/11 14:51, schrieb Daniel Kalchev:
+>>
+>> On Dec 15, 2011, at 3:25 PM, Stefan Esser wrote:
+>>
+>>> Am 15.12.2011 11:10, schrieb Michael Larabel:
+>>>> No, the same hardware was used for each OS.
+>>>>
+>>>> In terms of the software, the stock software stack for each OS was used.
+>>>
+>>> Just curious: Why did you choose ZFS on FreeBSD, while UFS2 (with
+>>> journaling enabled) should be an obvious choice since it is more similar
+>>> in concept to ext4 and since that is what most FreeBSD users will use
+>>> with FreeBSD?
+>>
+>>
+>> Or perhaps, since it is "server" Linux distribution, use ZFS on Linux as well. With identical tuning on both Linux and FreeBSD. Having the same FS used by both OS will help make the comparison more sensible for FS I/O.
+>>
+>> Daniel_______________________________________________
+>
+> Since ZFS in Linux can only be achieved via FUSE (ad far as I know), it
+> is legitimate to compare ZFS and ext4. It would be much more competetive
+> to compare Linux BTRFS and FreeBSD ZFS.
+
+There is a separate kernel module for ZFS that can be installed,
+giving you proper kernel-level support for ZFS on Linux.
+
+-- 
+Freddie Cash
+fjwcash@gmail.com
+
+
+
+
