@@ -332,3 +332,8 @@ dslinux_claims.duckdb.bak_fix12109_20260923_093132
 *.bak_restore77
 *.bak_restore10
 *.bak_volmove2_20260925
+# T1 波次应用器 _t1_apply.py 的宿主快照后缀（波3 起）。本仓库惯例是有意保留
+# prebak-*/bak_* 一类备份（已跟踪 231 个含 bak 的文件），此规则只防**新**后缀
+# 被整索引提交卷走；已入库的 *.bak_t1 需显式 git rm 才会脱离跟踪。
+*.bak_t1
+
