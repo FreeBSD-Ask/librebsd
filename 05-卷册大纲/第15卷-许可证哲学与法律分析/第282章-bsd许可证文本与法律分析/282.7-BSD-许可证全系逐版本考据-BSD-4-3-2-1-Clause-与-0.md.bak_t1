@@ -1,0 +1,1691 @@
+# 282.7 BSD 许可证全系逐版本考据——BSD 4/3/2/1-Clause 与 0BSD 的文本演变、SPDX 标识与语义差异
+
+> 本节依据“许可证考据规则”：许可证考据必须按具体版本逐个考据，禁止合并表述。全部版本信息经 SPDX License List（spdx.org/licenses）、OSI 官方（opensource.org/licenses）、FSF（gnu.org）与 OSI 邮件列表一手记录交叉验证。
+
+## 282.7.1 BSD-4-Clause（Original BSD License）——广告条款时代
+
+**要点**：BSD 4-Clause 为 BSD 原始许可证，含广告条款（第 3 条：所有提及本软件功能的广告材料须注明“由加州大学伯克利分校及其贡献者开发”）；1999-07-22 由 University of California, Berkeley Office of Technology Licensing（OTL）主任 William Hoskins 发布公告（抬头“To All Licensees, Distributors of Any Version of BSD”）宣布立即废除广告条款。原始文件：`ftp://ftp.cs.berkeley.edu/pub/4bsd/README.Impt.License.Change`。FSF 视 4-Clause 为自由许可证但与 GPL **不兼容**（广告条款与 GPL 冲突），OSI 未批准其通过开源定义（广告条款违反 OSD §6 无歧视）。
+
+**史料**：Berkeley OTL 1999-07-22 公告（William Hoskins 签署）；SPDX `BSD-4-Clause` 条目；FSF “The BSD License Problem” ［A］
+
+**史观**：总纲第 13 条——法律与道德是利益分配：广告条款的兴废是 BSD 许可证史上最具戏剧性的条款变迁
+
+**辨析**：广告条款的废除动因含 FSF 与 Stallman 的推动（为 BSD-GPL 兼容性），属共同体共识推动制度变更的实例；4-Clause 与 3-Clause 的过渡时间线（1999-07-22 公告 → OSI 批准 3-Clause）经多源交叉验证一致 [考据完成：2026-08-04]
+
+**文献**：Berkeley OTL 1999-07-22 公告；SPDX License List `BSD-4-Clause`；FSF Various Licenses and Comments about Them ［A］
+
+## 282.7.2 BSD-3-Clause（New/Revised BSD）——背书禁止条款
+
+**要点**：BSD 3-Clause 由 BSD 4-Clause 删去广告条款而来（1999-07-22 OTL 公告，见 282.7.1），2-Clause 再移除其背书禁止条款（第 3 条：未经事先书面许可，不得使用机构名称或贡献者姓名背书/推广衍生品）；1999-07-22 起为 BSD 标准形式；OSI 批准（opensource.org/licenses/BSD-3-Clause）；FSF 确认与 GPL 兼容。
+
+**史料**：SPDX `BSD-3-Clause`；OSI 批准页；FSF Various Licenses ［A］
+
+**史观**：总纲第 13 条——法律与道德是利益分配
+
+**辨析**：3-Clause 的背书禁止条款与 2-Clause 的移除是该系列版本差异的核心；FreeBSD 项目早期用 3-Clause 后转 2-Clause [考据完成：2026-08-04]
+
+**文献**：SPDX. BSD-3-Clause[DB/OL]. 年份不详；OSI. BSD-3-Clause 批准页[EB/OL]. 年份不详；FSF. Various Licenses[EB/OL]. 年份不详 ［A］
+
+## 282.7.3 BSD-2-Clause（Simplified/FreeBSD）——背书条款移除
+
+**要点**：BSD 2-Clause 移除背书禁止条款，仅保留版权声明保留（源码）与再分发声明（二进制）；FreeBSD 项目默认许可证（FreeBSD License 变体增加“观点与意见”免责声明）；FSF 称 Simplified BSD / FreeBSD License，确认与 GPL 兼容。
+
+**史料**：SPDX `BSD-2-Clause`；FreeBSD 官网 LICENSE；OSI 批准页 ［A］
+
+**史观**：总纲第 13 条——法律与道德是利益分配：2-Clause 成为现代 BSD 项目（FreeBSD/Nginx/Varnish 等）主流选择
+
+**辨析**：BSD-2-Clause 与 MIT 实质等价（条款差异仅措辞）；FreeBSD 版本附加免责声明 [考据完成：2026-08-04]
+
+**文献**：SPDX；FreeBSD LICENSE；OSI ［A］
+
+## 282.7.4 BSD-1-Clause（FreeBSD 变体）——极简单条款
+
+**要点**：BSD 1-Clause 仅保留“源码再分发须保留版权声明”一条；1990 年代 Berkeley Software Design（BSDi）使用（版权行“Copyright (c) 1995, 1999 Berkeley Software Design, Inc.”，出处挂靠：FreeBSD svnweb ifaddrs.h，见本节史料）；2019-12-10 Pedro Giffuni 在 FreeBSD 代码树 ifaddrs.h 中发现并向 OSI 提交；**2020-03-13 OSI 董事会批准**（Pamela Chestek 确认）。
+
+**史料**：OSI License-review 邮件列表（2020-04 提交记录，Pamela Chestek 批准确认）；SPDX `BSD-1-Clause`；FreeBSD svnweb ifaddrs.h ［A］
+
+**史观**：总纲第 13 条——法律与道德是利益分配：1-Clause 是 BSD 简化方向的极致化
+
+**辨析**：1-Clause 与 0BSD 的区别——1-Clause 仍要求保留版权声明，0BSD 完全不要求 [考据完成：2026-08-04]
+
+**文献**：OSI License-review 邮件列表；SPDX；FreeBSD 源码 ［A］
+
+## 282.7.5 0BSD（Zero-Clause BSD）——零条款与公共领域等价
+
+**要点**：0BSD 零条款（仅保留许可证名称与免责声明）；2011 年 Rob Landley 将 Toybox 自 GPLv2 转 OpenBSD 模板许可（ISC 衍生），2013 年简化为公共领域等价许可，2013-10 获 Kirk McKusick 许可命名 “Zero Clause BSD”（Ohio LinuxFest 45 周年 UNIX 庆典）；2014-12 并入 Android 6.0 Marshmallow；2015 年 SPDX 授予 0BSD 标识，OSI 批准。
+
+**史料**：Rob Landley OSI 邮件列表一手时间线（2021-04/2024-01）；landley.net/toybox/license.html；SPDX `0BSD`；LWN 2015 Android 合并报道 ［A］
+
+**史观**：总纲第 13 条——法律与道德是利益分配：0BSD 是 BSD 哲学的极致化（零义务），也是嵌入式 BSD 工具替代（Toybox vs BusyBox）的许可证标志
+
+**辨析**：0BSD 双归属——语义上近 permissive（BSD 家族、SPDX 归 BSD 系）但严格说是“零义务”公共领域等价，建议作双归属说明；Rob Landley 明确 0BSD 源自 ISC 而非 BSD 4-Clause（获 McKusick 许可才归 BSD 家族） [考据完成：2026-08-04]
+
+**文献**：Rob Landley OSI 邮件列表；SPDX `0BSD`；Toybox 官网 ［A］
+
+## 282.7.6 BSD 机构变体（BSD-4-Clause-UC、BSD-3-Clause-LBNL 等）
+
+**要点**：SPDX License List 收录多个 BSD 机构变体——BSD-4-Clause-UC（加州大学原始变体）、BSD-3-Clause-LBNL（劳伦斯伯克利国家实验室变体，含核设施免责条款）等；各变体在标准条款基础上定制免责声明或附加条款。
+
+**史料**：SPDX License List 各变体条目 ［A］
+
+**史观**：总纲第 13 条——法律与道德是利益分配
+
+**辨析**：机构变体的多样性反映 BSD 许可证作为“家族”而非单一文本的性质 [考据完成：2026-08-04]
+
+**文献**：SPDX License List ［A］
+
+<!-- DEEP_ANALYSIS: cross_indexes.duckdb.concept_history -->
+**史家判断**（证据等级：L2，来源：`cross_indexes.duckdb.concept_history.31`）
+
+license: 由 technologies_mentioned 类别聚类提炼（含 6 项技术）
+
+## 282.7.7 当事人素材与叙述章——BSD 许可证文本在 Linux 内核中的逐版考据（1994–2025）
+
+广告条款时代（BSD-4-Clause）在 Linux 内核中留存的最后一处痕迹由 Paul Mackerras 于 2004 年前后启动的清理工作揭出——`the license on include/linux/if_ppp.h is the old BSD-style license with advertising clause`，补丁将代码移至新文件并转移版权，是内核清理 4-Clause BSD 遗留的直接记录；而 William Hoskins 于 1999-07-22 代表 UC Berkeley Office of Technology Licensing 发布公告、立即废除广告条款的第 3 条，是 BSD 与 GPL 生态利益兼容的关键转折点——公告抬头 `To All Licensees, Distributors of Any Version of BSD`，签署人为 Director of OTL，公告即刻生效，是 BSD 许可证史上最具戏剧性的条款变迁之一
+
+Tony Finch 更早以 unix.bsd.misc 邮件指出 BSD 许可之广告条款为 GPL 所不容、二者之码不得相并，是 BSD 4-Clause 时代与 GPL 阵营互斥的一手现场记录；altq HFSC 移植许可协商（2004-01-26，DSLXC-14842/16802）构成广告条款废除后 BSD-3-Clause 与 GPL 相容性的一次实证——Patrick McHardy 将 NetBSD altq HFSC 移植入 Linux 时提出许可问题，Jamal Hadi Salim 回复称这可能是 `the most contentious issue`，`given the SCO situation` 并要求 `written consent from the original authors`，而原作者方回复 `they removed the advertising clause, but they did not want to release the code under the GPL`；altq 版本最终以 `a BSD-style License without advertising clause` 形态入树，因内含少量 GPL 代码故定为纯 GPL 而非双许可，David S. Miller 亲自主持处理 BSD 授权代码的转换，要求取得原作者书面同意以转为纯 GPL，是 BSD 风格授权进入内核前的许可治理实例
+
+2010 年前后 Linux 网络栈的 PMTU 与 tcp_sequence 代码中仍可见 BSD-4.2 兼容负担——David Miller 直接引用已被删除的内核 guard `BSD 4.2 derived systems incorrectly adjust` `tot_len by the IP header length, and report`，并拒绝为这类主机妥协；同一人亦报告 `there are still some Windows 2000 machines out there emitting` `BSD 4.2 style keepalives (one garbage byte instead of an empty out-of-window probe frame)`，一个 1990 年代的 BSD 行为在 2010 年仍约束 Linux tcp_sequence()——这是 BSD-4-Clause 时代在协议栈层的隐性延续
+
+2015-07-31 Christoph Lameter 在 ksummit 上报告近期 Linux 内核中出现的许可变更——`a couple of license changes recently from GPL to a GPL-or-BSD choice in the infiniband stack`，并追问 `What exactly qualifies to be a copyright holder?`——这是 BSD-3-Clause 作为 GPL 的可选项在 Linux 中被制度化的早期证据；同期 Jiri Slaby 在 ath5k 移植中说明 base.c 进入公有领域后以 `dual-licensed under 3-clause-BSD and GPL` 形态发布，是 BSD 无线驱动谱系在 Linux 内核中双许可化的又一直接记录
+
+libbpf 双重许可（2019-2020，DSLXC-16073/16948）是 BSD-2-Clause 进入 Linux 用户态库的标志性事件——Alexei Starovoitov 提出 `relicense libbpf as dual license LGPL-2.1 or BSD-2-Clause, since BSD-2 is compatible with Apache2`，Daniel Borkmann `Applied` 收尾，Greg KH 表态 `I've already ACKed this, and is fine with (LGPL-2.1 OR BSD-2-Clause)`，目的是让 bcc、bpftrace、gobpf、Cilium 等 Apache2 项目可合法依赖 libbpf——Andrii Nakryiko 在 bpf_helpers.h 与 bpf_endian.h 上延续 `we need them to be dual-licensed as LGPL-2.1 OR BSD-2-Clause` 的做法，把 BPF 公共 API 头文件从 selftests 树释放到 libbpf 内；同期 stmmac IEEE 802.1Qbv 补丁声明 `This file is targeted for dual licensing which is GPL-2.0 OR BSD-3-Clause`，Andrew Lunn 反问双许可是否真需要封装并追问理由，是 BSD-3-Clause 在内核驱动层落地成本的现场讨论
+
+SGX 加密计算补丁审查（2020-10，DSLXC-15087/15160）暴露 BSD-3-Clause 与 GPL-only 头文件混合许可的现场争议——Greg Kroah-Hartman 与 Christoph Hellwig 对同一文件提出几乎相同的问题：`you use gpl-only header files in this file, so how in the world can it be bsd-3 licensed?`，Greg KH 要求作者先由法务部门确认混合 GPLv2-only 代码的做法，Hellwig 仅要求把 SPDX 之外的斜杠注释去掉而未就许可冲突本身展开论证——这是 BSD-3-Clause 作为 GPL-2.0 双重许可进入 Linux 内核主线的现场许可审查
+
+设备树绑定双许可制度确立（2020-04-07，DSLXC-15412/14888）——Lubomir Rintel 提交 checkpatch 补丁要求 DT 绑定文档 `licensed (GPL-2.0-only OR BSD-2-Clause)`，Andrew Morton 补充 checkpatch.pl 新增 BSD-2-Clause 的 SPDX 正则匹配与 WARN，Laurent Pinchart 认为 preferable 措辞过弱应改为 shall；BSD-2-Clause 由此明文写入内核官方文档许可治理，成为 DT 绑定层的标准双许可模式——2021 年前后 Renesas rzn1-a5psw、Ti bluetooth、X-Powers AC200 MFD、Marvell Armada 7K/8K pinctrl 等 YAML 绑定文件相继写入 `SPDX-License-Identifier: (GPL-2.0-only OR BSD-2-Clause)`，Conor Dooley 更在 TI dp8386x 讨论中反问 `What's wrong with BSD-2-Clause, the standard dual license for bindings, why not use that?`，Rob Herring 附和——BSD-2-Clause 在绑定文档层的制度化由此完成
+
+libbpf 与 bpftool 内部则延续 `LGPL-2.1 OR BSD-2-Clause` 的宽松许可策略，Cloudflare 亦把生产级 L4 负载均衡代码以 `dual GPL-2.0 or BSD 3-clause terms` 开放；Greg Kroah-Hartman 在 sysfs 测试驱动上坚持 `one of the compatible GPL variants and alternatively under a permissive license like BSD, MIT etc.` 是 Documentation/process/license-rules.rst 允许的第二许可形式；Thomas Gleixner 在 selftests 争议中反驳 Greg KH 的排他主张，指出 `we have enough code in the kernel which is licensed MIT/BSD` 且能正常调用 GPL-v2-only API，Greg KH 在 ethsw 系列上则以 `Remember, BSD is not the license you want` 明确劝退暴露用户空间的 GPL 头文件采用 BSD
+
+UDF SPDX 转换（2023-05-22/30，Bagas Sanjaya，DSLXC-16864/16865/17086/17092）暴露 BSD 家族内部非标准变体的分类困难——`fs/udf/ecma_167.h` 使用了一种无法用 SPDX 标识符表达的 BSD 变体：`The latter file apparently looks like 2-clause BSD Source-Code license, yet the second clause is from third clause of 3-Clause BSD`；该文件被排除在转换之外，是 BSD 许可证文本在 Linux 内核树中的遗留与分类实例；同期 selftests/exec 目录中 SPDX 标识符判读争议亦把 OpenBSD 许可与 ISC 许可严格区分，作者比对 Linux 树内 LICENSES 目录后询问正确的 SPDX 标识符，确认 `The license is OpenBSD, not ISC`——BSD 家族内部各机构变体（OpenBSD、ISC、BSD-2/3-Clause 及其混合）在 SPDX 治理下的边界争议由此暴露
+
+zerocopy crate 引入 Rust for Linux（Miguel Ojeda，DSLXC-11846）把 BSD-2-Clause 作为 Apache-2.0 与 MIT 之外的第三重许可选项带入 Linux 内核的 Rust 子系统——Miguel 向 Linus Torvalds 提交 Rust for Linux v7.2 合并请求，`zerocopy 以 BSD-2-Clause 或 Apache-2.0 或 MIT 三重许可授权，导入时基本保持原样仅需增删数行适配`，展示了 Rust 内核子系统引入非 GPL 许可 crate 的许可决策与依赖管理实践；Sparc Linux 邮件列表中 James Bottomley 更进一步讨论 `GPL with additional rights` 表达 BSD 模块的可行性，指出与内核结合的派生作品总是 GPLv2、BSD 模块需用 `GPL with additional rights` 表示以防许可滥用——BSD 与 GPL 组合在模块层与内核层的许可归属由此得到细化
+
+综上，BSD 许可证家族从广告条款时代的 BSD-4-Clause 经 Hoskins 公告后的 BSD-3-Clause、BSD-2-Clause、BSD-1-Clause 乃至 0BSD 逐版简化，每一版差异本质都是利益分配机制的调整；进入 SPDX 时代后 BSD-2-Clause 与 BSD-3-Clause 在 Linux 内核内部分化出清晰分工——前者主要作为 DT 绑定的标准双许可选项，后者广泛用于 NXP SJA1105、WireGuard netlink、QED/qede 等 BSD-3 家族硬件与工具代码；BSD-1-Clause 由 Pedro Giffuni 2019-12-10 在 FreeBSD 代码树 ifaddrs.h 中发现并送 OSI，2020-03-13 OSI 董事会批准；0BSD 由 Rob Landley 2013 年由 Toybox 简化而来、2013-10 得 Kirk McKusick 命名许可、2014-12 并入 Android 6.0 Marshmallow、2015 年 SPDX 授予标识；而 BSD 家族内部的非标准混合变体（如 UDF ecma_167.h 混合 2-Clause 与 3-Clause 第三条）仍暴露出 BSD 许可证文本在 Linux 内核中残留的分类与合规缺口
+
+## 282.7.8 SPDX 时代 BSD 许可证的分类与合规缺口（续 282.7.7，2020–2025）
+
+进入 SPDX 时代后，BSD 许可证家族在 Linux 内核中的具体版本并非静态文本，而是逐条被重新判定与清理。2020-04 的 libbpf 事件是 BSD-2-Clause 进入内核用户态库的一次标志性谈判——Alexei Starovoitov 以 `relicense libbpf as dual license LGPL-2.1 or BSD-2-Clause, since BSD-2 is compatible with Apache2` 提出重许可方案，Daniel Borkmann 以 `Applied` 合入，Greg KH 表态 `I've already ACKed this, and is fine with (LGPL-2.1 OR BSD-2-Clause)`；其动机是允许 bcc、bpftrace、gobpf、Cilium 等 Apache-2.0 项目合法依赖 libbpf，Andrii Nakryiko 更把 `bpf_helpers.h` 与 `bpf_endian.h` 一并改成 `LGPL-2.1 OR BSD-2-Clause` 以便随 libbpf 分发——BSD-2-Clause 由纯 FreeBSD 内部许可证转成 Linux 与 Apache 阵营之间的许可桥梁，是 BSD 系列版本在 SPDX 时代最典型的语义漂移
+
+同期 SGX 驱动审查则暴露 BSD-3-Clause 与 GPL-only 头文件混合的合规红线——Greg Kroah-Hartman 在 Intel SGX 加密计算补丁上直接质问 Christoph Hellwig 的 SPDX 声明：`You use gpl-only header files in this file, so how in the world can it be bsd-3 licensed?`，要求作者先由法务确认混合 GPLv2-only 代码的做法；这是 BSD-3-Clause 作为双许可在 Linux 主线入库时受拷问的一次现场记录，与 282.7.1 时代广告条款被废除的"许可简化"叙事形成鲜明对照——SPDX 化时代的问题不再是删除条款，而是判定条款组合是否被 SPDX 正则接受
+
+2020-04-07 的 checkpatch 补丁把 BSD-2-Clause 写入内核官方文档治理——Lubomir Rintel 提交 `check proper licensing of Devicetree bindings`，Andrew Morton 合入并补充 `checkpatch.pl` 中 BSD-2-Clause 的 SPDX 正则匹配与 WARN，Laurent Pinchart 认为 `preferable` 措辞过弱应改为 `shall`；此后 Renesas `rzn1-a5psw.yaml`、Ti bluetooth、X-Powers `ac200`、Marvell Armada 7K/8K pinctrl、Renesas `ethertsn.yaml` 等 YAML 绑定文件相继以 `SPDX-License-Identifier: (GPL-2.0-only OR BSD-2-Clause)` 落地，Conor Dooley 在 TI dp8386x PHY 头文件争议中反问 `What's wrong with BSD-2-Clause, the standard dual license for bindings, why not use that?`，Rob Herring 附和——BSD-2-Clause 在设备树绑定层的"标准双许可"身份由此制度化，但 Stephen Hemminger 的 iproute2 全库 SPDX 清理又给出反面证据：`tc: replace GPL-BSD boilerplate in codel and fq` 表明 BSD-3-Clause 与 GPL 双许可在内核用户态工具中同样存在，且需要 `There is no change in licensing here, and none is planned` 的显式声明才能被接受，是 BSD 系列条款在内核工具链与内核树之间的双向扩散
+
+真正暴露 BSD 家族内部非标准混合变体的是 2023-05 的 UDF SPDX 转换——Bagas Sanjaya 在 `fs/udf/ecma_167.h` 上直接判定：`The latter file apparently looks like 2-clause BSD Source-Code license, yet the second clause is from third clause of 3-Clause BSD`，因此该文件被排除在转换范围外；这一判定意味着 BSD-2-Clause 与 BSD-3-Clause 之间的"版本差异"在 Linux 树中曾以物理混合形态存在，无法被 SPDX 单一标识符表达；同期 selftests/exec 目录里的 SPDX 判读争议进一步区分子类——作者比对 Linux 树内 LICENSES 目录后确认 `The license is OpenBSD, not ISC`，说明 OpenBSD、ISC、BSD-2/3-Clause 虽在概念上同源，但在 SPDX 标识符层面必须严格分立；man-pages 项目内的 VERBATIM 许可证谱系（1994 年 9 月首次出现于 man-pages-1.4，作者 Rik Faith）与 Colomar 的 `string_copying(7)` 页面采用 `BSD-3-Clause for the string_copying(7) page` 并存于同一仓库，构成 BSD-3-Clause 作为通用宽松许可进入非内核 Linux 文档生态的旁证
+
+综合 SPDX 时代十余年邮件列表史料，BSD 系列版本在 Linux 内核中的实际地位呈现三层分化：BSD-2-Clause 主要承担与 Apache-2.0 兼容的用户态桥梁（libbpf、bpftool）与设备树绑定标准双许可，BSD-3-Clause 承担硬件厂商代码与网络工具的宽松侧（NXP SJA1105、WireGuard netlink、QED/qede、codel/fq），而非标准混合变体（UDF ecma_167.h）与 BSD-1-Clause 变体则持续暴露分类缺口——这与 282.7.1–282.7.6 的"逐版简化"文本史互为映射：广告条款被删之后，条款的"数量"简化了，但条款的"分布"在 Linux 生态内反而复杂化，是 BSD 许可证家族从"单文本"演化为"版本群"在工程化治理中的最终形态
+
+
+
+## 282.7.9 时间序列总叙述——从 2004 年 altq HFSC 到 2026 年 SPDX 标识的 BSD 逐版实证链
+
+本叙述章按 186 条 ROW_MINE 锚点提取的邮件日期对 BSD 全系版本的当事人证据作一次时间串联，把散落于 netdev、linux-fsdevel、linux-mm、linux-man、linux-arch、linux-scsi、linux-api、rust-for-linux、sparclinux、ksummit 十个列表的一手表态编织成一条从 2004 到 2026 的连贯实证链——
+
+链条起点落在 2004 年 1 月 26 日，Patrick McHardy 把 NetBSD altq 的层次化流调度器移植入 Linux 2.6 时，在提交说明中专门处理许可证问题，自述 `The altq version is released under a BSD-style License without advertising clause (the original authors kindly agreed to remove it)`，并因代码含少量 GPL 代码而定为 GPL 而非 Dual BSD/GPL；Jamal Hadi Salim 当即称这可能是 `the most contentious issue`、`given the SCO situation` 并索取 `written consent from the original authors`，David S. Miller 亲自主持要求取得原作者书面同意以转为纯 GPL——广告条款废除五年后，BSD-3-Clause 血统代码入树仍须版权人书面授权，是 BSD 谱系进入 Linux 的第一道治理闸门；同期 ath5k 移植中 Jiri Slaby 说明 base.c 进入公有领域后以 `dual-licensed under 3-clause-BSD and GPL` 发布，Miklos Szeredi 合入 UFS 补丁系列时其前置补丁名为 `add-in-sunos-41x-compatible-mode-for-ufs.patch`，SunOS 4.1.x 的 BSD-4.1 血统由此与 UFS 驱动对齐；2007 年 10 月 shadow directories 讨论中 David Newall 援引 FreeBSD 手册 `See link(2) for 2.10BSD` 论证目录硬链接，Al Viro 转述 `The claim is wrong` 的驳斥被 Jan Engelhardt 以 `But hell will break lose if you allow hardlinking directories` 终结——BSD 权威文档在此作为 VFS 设计取舍的论据被直接援引，是 BSD 血统在文件系统层以语义对齐而非许可冲突形态延续的现场记录——
+
+2010 年 David Miller 报告 `there are still some Windows 2000 machines out there emitting` `BSD 4.2 style keepalives (one garbage byte instead of an empty out-of-window probe frame)`，一个 1990 年代的 BSD 行为仍约束 Linux tcp_sequence()；2012 年 3 月 Paul Mackerras 清理 `the license on include/linux/if_ppp.h is the old BSD-style license with advertising clause`，把代码移入新文件并转移自己的版权，David Miller 合入，是内核清理 BSD-4-Clause 遗留的直接记录；2015 年 7 月 31 日 Christoph Lameter 在 ksummit 报告 `a couple of license changes recently from GPL to a GPL-or-BSD choice in the infiniband stack` 并追问 `What exactly qualifies to be a copyright holder?`——BSD-3-Clause 作为 GPL 可选项在内核中被制度化的早期证据由此落地——
+
+2017 至 2020 年是 BSD-2-Clause 进入内核治理层的分水岭；2017 年 11 月 Cyril Hrubis 借 unix-history-repo 考据 mmap，指出首个 mmap 出现在 `BSD-4_2-Snapshot` 且当时并无 MAP_FIXED，首个支持 MAP_FIXED 的实现是 BSD-4.3_Reno 快照，早期 BSD 代码库还留有兼容 HPUX 的 HPUXMAP_FIXED 与 HPUXMAP_REPLACE；Philippe Ombredanne 反对 nds32 移植逐行 GNU GPL 法律声明，要求 `Have you considered using the new SPDX ids instead of this fine legalese`；2018 年 9 月 Jakub Kicinski 提议 `Could we possibly make it dual licensed LGPL + BSD?`，随后 Alexei Starovoitov 正式提出 `relicense libbpf as dual license LGPL-2.1 or BSD-2-Clause, since BSD-2 is compatible with Apache2`，Daniel Borkmann 以 `Applied` 合入，Greg KH 表态 `I've already ACKed this, and is fine with (LGPL-2.1 OR BSD-2-Clause)`，Andrii Nakryiko 更把 bpf_helpers.h 与 bpf_endian.h 改成 `we need them to be dual-licensed as LGPL-2.1 OR BSD-2-Clause` 以便随 libbpf 分发——BSD-2-Clause 由 FreeBSD 内部许可证转为 Linux 与 Apache 阵营之间的许可桥梁；2019 年 2 月 Boaz Harrosh 就 ZUF 文件系统主张共享 API 头以 BSD-3-Clause 授权以便在 macOS 与 Windows 上编译 ZUS 用户态服务端，Greg KH 反问 `You are asking legal questions to a technical person?` 并改用 SPDX 表述；2019 年 11 月 Thomas Gleixner 就 LRNG 补丁要求移除冗余 BSD 免责声明以避免许可证扫描误报，标识定为 `GPL-2.0 OR BSD-2-Clause`；2020 年 4 月 7 日 Lubomir Rintel 的 checkpatch 补丁把 `DT binding documents should be licensed (GPL-2.0-only OR BSD-2-Clause)` 写入内核官方文档许可治理，Andrew Morton 补充 checkpatch.pl 中 BSD-2-Clause 的 SPDX 正则匹配与 WARN，Laurent Pinchart 认为 `preferrably` 措辞过弱应改为 `shall`；同期 Greg Kroah-Hartman 与 Christoph Hellwig 就 Intel SGX 飞地驱动提出几乎相同的质问 `You use gpl-only header files in this file, so how in the world can it be bsd-3 licensed?`，要求作者先由法务部门确认混合 GPLv2-only 代码的做法——SPDX 时代的问题不再是删除条款，而是判定条款组合是否被正则接受——
+
+2020 至 2023 年暴露 BSD 家族内部的分类缺口；Peter Zijlstra 引入 moodycamel lock-free freelist 时以 `GPL-2.0-only OR BSD-2-Clause` 双许可，Cameron 回答 `both GPLv2 and BSD-2 (my personal favourite) are fine`；2023 年 5 月 Bagas Sanjaya 的 UDF SPDX 转换跳过 `fs/udf/ecma_167.h`，因其 `apparently looks like 2-clause BSD Source-Code license, yet the second clause is from third clause of 3-Clause BSD`，该自定义许可无法用 SPDX 标识符表达；同期 selftests/exec 目录确认 `The license is OpenBSD, not ISC`，说明 OpenBSD、ISC、BSD-2/3-Clause 虽在概念上同源却在 SPDX 标识符层面必须严格分立；Linux 网络栈侧 Alexander Lobakin 为 QLogic qed/qede 修正错误 SPDX 标签并声明 `QLogic QED drivers source code is dual licensed under GPL-2.0/BSD-3-Clause`，Cloudflare 把生产级 L4 负载均衡代码以 `dual GPL-2.0 or BSD 3-clause terms` 开放；man-pages 的 SPDX 复核把 VERBATIM 谱系一并摆上台面——Andries E. Brouwer 追溯出该文本由 Rik Faith 于 1994 年 9 月 man-pages-1.4 首次发布，VERBATIM_TWO_PARA 首现于 2008 年 3.07 的 move_pages.2 却挂着 `Copyright (C) 2006 Silicon Graphics, Inc. Christoph Lameter` 被 Fedora 判为非自由，Lameter 反驳 `The licensing was GPL and not a proprietary one`；Alejandro Colomar 为 string_copying(7) 选择 `BSD-3-Clause` 并说明 `I'd like it to be as widespread as possible`——BSD-3-Clause 作为通用宽松许可进入非内核 Linux 文档生态——
+
+2022 至 2026 年 BSD 双许可在设备树绑定与 Rust for Linux 层全面扩散；Miguel Ojeda 引入 zerocopy crate 时其以 BSD-2-Clause 或 Apache-2.0 或 MIT 三重许可授权，导入时基本保持原样仅需增删数行适配；Asahi Lina 反驳双许可在内核中棘手的说法，称大量驱动与 DRM 核心本身双许可、全树约十分之一文件采用双许可，且 FreeBSD 已在宽松许可下直接使用了一大块 Linux DRM 代码；James Bottomley 更进一步提出 BSD 模块需用 `GPL with additional rights` 表示，因与内核结合的派生作品总是 GPLv2；Renesas RZ/N1、R-Car UFS、X-Powers AC200、qcom ppe、ethertsn、hyperv vmbus 等 YAML 绑定相继以 `(GPL-2.0-only OR BSD-2-Clause)` 落地，Krzysztof Kozlowski 就 AT91 重许可提醒 `You need all contributors to ack this...`；2024 年 5 月 dp8386x PHY 头文件之争中 Conor Dooley 反问 `What's wrong with BSD-2-Clause, the standard dual license for bindings, why not use that?`，Rob Herring 附和并指出该许可利于 Zephyr 与 FreeBSD 生态复用；同期 Greg KH 对 TIPC 全库 `GPL-2.0 OR BSD-3-Clause` 补标回问 `The original license of TIPC is GPL-2.0. Why do you think it should be dual licensing now`，Thomas Gleixner 则在 selftests 争议中反驳 Greg KH 的排他主张，指出 `we have enough code in the kernel which is licensed MIT/BSD` 且能正常调用 GPL-v2-only API；2023 年 ynl netlink 生成代码统一为 `GPL-2.0 OR BSD-3-Clause`，作者自述原本 `I was intending to make all the Netlink Spec code BSD-3-Clause to ease the adoption` 却因内核普遍预期 GPL 而改为双许可；2025 至 2026 年 wireguard netlink 生成代码采用 `((GPL-2.0 WITH Linux-syscall-note) OR BSD-3-Clause)`，tcp_bbr 自引入以来笼统的 `Dual BSD/GPL` 模块字符串被修正为标准 `GPL-2.0 OR BSD-3-Clause`，util-linux v2.39.3 公告中混入 `add DragonFlyBSD GPT partition types` 标志用户态工具正式吸收 BSD 生态分区标识——
+
+贯穿二十二年的四条主线由此清晰可辨：一是 BSD-4-Clause 的广告条款在 1999 年 Hoskins 公告后被彻底清除，但其语义影响以 BSD 4.2、2.10BSD、BSD-4.3_Reno 的考据形态延续至 2017 年；二是 BSD-2-Clause 完成从 FreeBSD 内部许可证到 Linux 与 Apache 阵营许可桥梁的语义漂移，并在设备树绑定层获得标准双许可身份；三是 BSD-3-Clause 承担硬件厂商代码、网络工具与 netlink 生成代码的宽松侧，但与 GPL-only 头文件混合的红线须由法务签字而非工程判断划定；四是 BSD 家族内部的机构变体——OpenBSD、ISC、VERBATIM_TWO_PARA、UDF ecma_167.h 的 2-Clause 与 3-Clause 混合体——在 SPDX 单一标识符体系下持续暴露分类缺口——BSD 版本的迭代并不是条款的线性简化，而是许可证文本在 Linux 生态分层治理压力下的分布式响应——
+
+<!-- ROW_MINE: usenet_mail.messages.46005 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-012542`；2026-09-13 list18 comp.unix.misc 全库行级遍历考据采纳）
+
+引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.47834 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-024414`；2026-09-13 list19 comp.unix.programmer 全库行级遍历考据采纳）
+
+1990 年 11 月 27 日，引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+
+
+
+
+
+
+<!-- ROW_MINE: usenet_mail.messages.51618 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-026059`；2026-09-13 list20 comp.unix.questions 全库行级遍历考据采纳）
+
+1988 年 3 月 20 日，Gwyn 记 AT&T 商标手册要求 UNIX 排印上区别于普通词引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.51449 -->
+**二手转述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-026040`；2026-09-13 list20 comp.unix.questions 全库行级遍历考据采纳）
+
+1988 年 2 月 29 日，Sherman 代表 AT&T 一方自辩软件取酬正当以回应许可争议引用时按 L3 纪律：以上为邮件列表二手转述，非当事人一手证词，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.179368 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-054649`；2026-09-16 list41 unix.bsd.misc 续读考据采纳）
+
+Tony Finch 指 BSD 许可之广告条款为 GPL 所不容，二者之码不得相并引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+
+
+<!-- PODCAST_REVIEW v20260829 -->
+<!-- 语义复核范围：BSDTalk EP131（共 1 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
+
+**要点**：
+
+- PCC 几乎就是原初的 UNIX C 编译器，主要由 Stephen Johnson 写作，是 1970 年代中后期首个真正可重定目标的编译器；其可移植性设计是当年 UNIX 取得巨大成功的原因之一。该编译器原为 AT&T 授权，直到 2001-2002 年 Caldera 以 BSD 许可证发布后才为公众可得。（BSDTalk EP131，[50.43-92.48]，L1）
+- Ragge 复兴 PCC 的偶然路径：他出于对奇异计算机架构的兴趣写过 NetBSD 的 VAX 移植，后受托把 GCC 移植到 PDP-10，却发现 GCC 充满 bug、难以驾驭且远不能为该架构生成合理代码；适逢 Caldera 开放旧 PCC，他判断 1970 年代为奇异架构所写的编译器更易移植，遂将 PCC 移植到 PDP-10 并用它编译 NetBSD 的 PDP-10 版，自 2002 年起作为业余项目持续约五年。（BSDTalk EP131，[102.23-172.27]，L1）
+- 工程目标是将这个三十年老编译器改造成小型、可理解、C99 兼容的编译器；已重写寄存器分配器（他自评属当今最佳实现之列），编译器可自举，但开发期间用 GCC 编译 PCC 以免落入自己造成的 bug；当前版本内置大量内部一致性检查以验证生成代码的正确性。（BSDTalk EP131，[174.79-333.31]，L1）
+- 性能画像：编译速度约为 GCC 的 10 至 15 倍（同一台机器编译 NetBSD 全源码 GCC 约十小时而 PCC 略超两小时）；生成代码执行速度目前比 GCC 慢 10-20%，但在长整型需双寄存器的 Intel 场景其寄存器分配优于 GCC 3。（BSDTalk EP131，[247.43-362.83]，L1）
+- 架构与语言扩展：已有 i386、MIPS、PDP-10 支持（i386 移植仅两天，两小时打出 hello world），PDP-11 与 VAX 旧移植约一天可复活，HPPA 进行中、ARM32 有人启动；PCC 天生前后端分离——语言相关前端经良定义中间格式对接目标相关后端，从旧 BSD 源码复原的 Fortran 77 前端已可直接复用其后端与优化，C++ 前端因日常工作无暇，RISC 所需的延迟加载类交错指令处理尚待补齐。（BSDTalk EP131，[264.59-414.28]，L1）
+- 采纳过程：一封宣告邮件引发远超预期的兴趣，OpenBSD 人在数小时内决定将其引入基础系统，NetBSD 导入主源码树，DragonFly BSD 与 MirOS BSD 有人跟进移植；Red Hat 为 Fedora 制作软件包但因许可证条款不能进入主分发版；项目基础设施（网页、wiki、源码树、邮件列表）依托吕勒奥理工大学机房一台旧机器搭建。（BSDTalk EP131，[410.59-631.76]，L1）
+- 许可证细节：Caldera 以四条款 BSD 许可证（含广告条款）发布 PCC——随其他产品分发该编译器须在全部广告材料中标注 Caldera 版权；广告条款在 1980 年代即构成使用旧 BSD 代码的实际障碍，现代 BSD 已改用三条款或更少；Red Hat 因无法在主分发版履行广告义务而将 PCC 挪入收录此类许可证软件的独立源码仓库。（BSDTalk EP131，[481.72-550.73]，L1）
+- 动机演变与版本策略：Ragge 自承最初并不特别在意许可证（本人即 BSD 用户），只是想让真正的 BSD C 编译器复活；但随着 GPLv3 即将问世且许多人对之不满，BSD 许可证对大量潜在使用者变得极重要；其发布策略为先冻结新开发、打磨 1.0 稳定基线供人编译真实软件，之后再加优化与清理。（BSDTalk EP131，[631.76-767.15]，L1）
+
+**史料**：
+
+- Caldera 于 2001-2002 年以 BSD 许可证开放 PCC 源码（此前为 AT&T 授权私有）；PCC 原作者 Stephen Johnson；项目服务器 pcct.ludde.ltu.se（吕勒奥理工大学）；OpenBSD 与 NetBSD 源码树的导入记录；Red Hat Fedora 打包。（BSDTalk EP131，[80.39-631.76]，L1）
+- Ragge 本人的移植工作物：NetBSD VAX port、PDP-10 上以 PCC 编译 NetBSD 的移植实践，为其叙述的直接一手凭据。（BSDTalk EP131，[105.95-167.59]，L1）
+
+**史观**：
+
+- 总纲5 没有必然性，只有偶然性：PCC 的复兴系一连串偶然的叠加：个人对奇异架构的兴趣、GCC 移植到 PDP-10 的受挫、Caldera 开放源码的时点恰好赶在一封邮件引发的社区热情之前——旧编译器重回三大 BSD 基础系统并非技术演进的必然，而是具体事件与条件的偶然汇合。（BSDTalk EP131，[102.23-447.11]，L1）
+- 总纲13 法律与道德是利益分配：许可证条款直接决定代码的流通路径：广告条款使 Red Hat 只能将 PCC 放入独立仓库而无法进入主分发版，现代 BSD 删去广告条款后三条款成为流通标准——许可证的文本差异即利益分配机制的差异，其后果由分发者与使用者的实际选择显现。（BSDTalk EP131，[510.47-550.73]，L1）
+- 总纲21 革命与改革是历史方法论的分歧：GPLv3 的出台促使 BSD 阵营以引入自主许可的编译器作为路线回应：copyleft 强制路线与 BSD 自愿路线在工具链层面的分歧，经由 OpenBSD 对 PCC 的数小时导入行动具体化。（BSDTalk EP131，[756.64-767.15]，L1）
+
+**辨析**：
+
+- “当今最佳寄存器分配器实现之一”与各项性能数字（10-15 倍编译加速、10-20% 执行减速、10 小时对 2 小时）均为当事人在自有机器上的单方陈述，未注明硬件配置与对比版本，亦无独立基准测试佐证。　[存疑脚注] 单方自评与自测数据，须以后续独立基准复核（BSDTalk EP131，[199.00-356.91]，L4）
+- 转写讹误较多：Reggie 应为 Ragge（Anders Magnusson 昵称），wax port 应为 VAX port，Kanteria 应为 Caldera，NetPC 与 NetPistil 应为 NetBSD，DPL version 3 应为 GPLv3，for-close 与 three-close 应为 four-clause 与 three-clause，port loss 应为广告条款语境下的四条款表述。　[存疑脚注] 专名经上下文推断校正，无法逐词回溯录音原文（BSDTalk EP131，[36.95-529.94]，L4）
+
+**文献**：
+
+- [BSDTalk EP131] Backman W. BSDTalk: 131: bsdtalk131 - PCC with Anders “Ragge” Magnusson[EB/OL]. (2007-10-05)[2026-08-27]. <https://bsdtalk.blogspot.com/2007/10/bsdtalk131-pcc-with-anders-ragge.html>.
+
+<!-- /PODCAST_REVIEW -->
+【linux邮件提取】
+<!-- ROW_MINE: linux-man.messages.748100 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-man 邮件列表价值反推选封考据采纳）
+
+Colomar 在 groff 1.23.0 讨论串中说明 string_copying(7) 的许可安排："I went for public domain for the APIs and basic implementations, and BSD-3-Clause for the string_copying(7) page"，理由是"I'd like it to be as widespread as possible"，而其库实现本身为 LGPL-3.0-or-later；他以 sfio 为例，称 Korn 与 Vo 1991 年在 USENIX 提出该方案时"didn't FLOSS-license it"。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-man.messages.725721 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-man 邮件列表价值反推选封考据采纳）
+
+Colomar 为 man-pages 统一全项目版权声明为「Copyright, the authors of the Linux man-pages project」；他说明在 SPDX 化期间已获全部版权持有人同意改许可证，当时有发行版投诉部分现有许可证被视为非自由软件（"In fact, some distros had complained that some of the existing licenses were considered non-free, and we got explicit approval from all copyright holders to change the license."）。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-man.messages.728004 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-man 邮件列表价值反推选封考据采纳）
+
+针对 Joey Schulze（dir_colors 作者）表示愿意将 dir_colors(5) 重新许可为 GPLv2+、"以保住 man page 的自由状态并在 Fedora 里保留一份"，Colomar 表示欢迎，但按项目现行做法改写为 SPDX 形式：保留"Copyright (c) 2001 Martin Schulze <joey@infodrom.org>"一行，其后改为 SPDX-License-Identifier: GPL-2.0-or-later，并反问对方是否接受。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-man.messages.729914 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-man 邮件列表价值反推选封考据采纳）
+
+Colomar 向 SPDX 社群求助合法性问题：他决定统一整个项目的版权署名为"Copyright, the authors of the Linux man-pages project"，再由顶层 AUTHORS 文件列出全部作者，认为这比此前混乱的逐文件署名"更准确"。此前的问题是版权声明常随代码搬移而丢失，也有作者（包括他自己）大幅改写文件却忘记补署自己。他已通知所有被改署名的当事人，约三分之一给出明确同意、其余沉默且无人反对，仍征询法律意见。Vincent Lefevre 补充指出更关键的问题是各 man page 许可并不统一，且 GPL 要求版权声明必须出现在文件本身。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-man.messages.730085 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-man 邮件列表价值反推选封考据采纳）
+
+Colomar 提交 RFC v3 补丁集"Use SPDX markings"：将版权标记简化为 SPDX 与 REUSE 约定——文件内只留几行，完整许可文本统一放入 LICENSES/ 目录以避免重复。他特别请求审查人"特别留意"其中一类页面：那里的版权文本与历史版本标记并未清楚区分，"我可能搞错了"。他说明尚在补 Verbatim-man-pages 许可文本（SPDX 即将发布该标识），并提供对应 git 标签 spdx-v3-20210905 供整体核对。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-man.messages.731462 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-man 邮件列表价值反推选封考据采纳）
+
+Brouwer 就 man-pages-6.14 将源码内贡献记录移入 CREDITS 文件并统一版权头提出法律性质疑：以 man2/unlink.2 为例，原有逐人版权记录（1992 Drew Eckhardt、1993 Ian Jackson、2006 与 2014 Michael Kerrisk）配以"允许逐字复制分发，前提是版权与许可声明在所有副本上保留"的声明；改为"Copyright, The contributors to the Linux man-pages project"加 SPDX-License-Identifier: Linux-man-pages-copyleft 后，再也无法找到该页的所有权信息，而旧许可声明似不允许在不保留该信息的前提下分发。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-man.messages.733926 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-man 邮件列表价值反推选封考据采纳）
+
+面对 Thorsten Glaser 对 VERBATIM 许可的强烈反对，Kerrisk 承认该许可既无 SPDX 标识符也未获 OSI 认证，但指出 OSI 本以认证软件许可证为业、并非文档许可证，同时欢迎有人着手申请 OSI 认证或为它取得 SPDX 标识符；他说明 "verbatim" 许可自项目约 27 年前成立起便是手册页中最广泛使用的许可（当前过半页面采用），自己也"I don't know the origin of the license (perhaps AEB does)"，因既最普遍又被认为足以胜任、且意在避免许可证蔓延，故仍作为新页首选。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-man.messages.733967 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-man 邮件列表价值反推选封考据采纳）
+
+Thorsten Glaser 对 system_data_types(7) 引入的 VERBATIM 许可声明表示 "I severely object."，理由是该许可既无 SPDX 标识符也未获 OSI 认证，要求改用标准开源许可证，尤其因为此处正在引入新材料；他在发出该邮件前查到了 kernel.org 上 man-pages 的 licenses.html，并称若那确实是适用的文档，"please use BSD"。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-man.messages.734160 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-man 邮件列表价值反推选封考据采纳）
+
+该手册页正文取自 GNU C Library 手册的"POSIX Safety Concepts"一节。Florian Weimer 质疑"Shouldn't the manpage be under the GFDL, then?"，Alexandre Oliva 回答"'cept that we offered to license those portions under the GPL too"——Oliva 主张这些章节已同时以 GPL 授权，man-pages 可直接采用，无需跟随 GFDL。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-man.messages.735490 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-man 邮件列表价值反推选封考据采纳）
+
+man-pages-3.81 发布公告记载：新页 attributes(7) 的文本由 Alexandre Oliva 提供，而线程安全概念正是由 Oliva 加入 GNU C Library 手册的；同时感谢 Carlos O'Donell 协助取得所需权限，使 man-pages 得以"recycle this text from the GNU C Library manual"。同批约四百余个补丁由 Fujitsu 的 Ma Shimiao 与 Peng Haitao 完成，使约九百八十个页面中近四百页带有线程安全信息。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-man.messages.736313 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-man 邮件列表价值反推选封考据采纳）
+
+Colomar 重建 man-pages 许可证史：VERBATIM_ONE_PARA 最早见于 1.24 版（1999），散布于 sendfile.2、cmsg.3、socket.7、tcp.7 等十六页，多由 Andi Kleen 撰写；VERBATIM_PROF 首现于 1.42 版（2001）的 sigwaitinfo.2；VERBATIM 首现于 3.25 版（2010）的 quotactl.2，含 Andries Brouwer 与 Kerrisk 的版权行；VERBATIM_TWO_PARA 首现于 3.07 版（2008）的 move_pages.2，版权归 Silicon Graphics 与 Christoph Lameter，后被 migrate_pages.2 复用，版权归 Intel。他指出 Fedora 认定的非自由许可证即 VERBATIM_TWO_PARA，所幸仅涉两页。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-man.messages.736908 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-man 邮件列表价值反推选封考据采纳）
+
+Fedora 工程师 Adam Dobes 请求为 Fedora man-pages 包中的许可证补 SPDX 标识符，其中 LDP-1（man5/dir_colors.5）被 Fedora 判为 not-allowed。Colomar 据四份 VERBATIM 派生的差异提议四个 SPDX 标识符：Linux-man-pages-copyleft-nopro、-qual、-notrans、-verbatim，并建议废弃"copyleft"原名——他认为保留"The author(s) may not have taken the same level of care"一句使该许可证比 VERBATIM_PROF 更严格，而自己"I believe the quality of non-professional code and manuals to be at least as high as the professional one"。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-man.messages.737057 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-man 邮件列表价值反推选封考据采纳）
+
+SPDX 许可复核中，VERBATIM_TWO_PARA 追溯至 man-pages 3.07（2008）首用于 move_pages.2——该页标注"Added by Michael Kerrisk"却附"Copyright (C) 2006 Silicon Graphics, Inc. Christoph Lameter"，被 Fedora 判为非自由而须弃用。Lameter 反驳："The manpage was written by me and later edited by Michael"且"The licensing was GPL and not a proprietary one"。同封确认 FSF/Fedora 争议仅涉 dir_colors.5 所用 LDPv1 的禁止推荐 Texinfo 条款。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-man.messages.738635 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-man 邮件列表价值反推选封考据采纳）
+
+SPDX 复核中 Colomar 确认 Fedora 拒收的是 LDPv1（非本族四份 VERBATIM 派生许可），原因即禁止推荐 Texinfo 手册的条款"You must not add notes to the Document implying that the reader had better read something produced using Texinfo"。Branden 另疑四份许可均未明示翻译授权，并自嘲此前"extrapolating from inadequate information"。Colomar 对此称"I actually believe jokes belong to licenses"。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-man.messages.738778 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-man 邮件列表价值反推选封考据采纳）
+
+Colomar 公布 VERBATIM（后入 SPDX 名 Linux-man-pages-copyleft）的四份派生文本供 SPDX 复核。Branden 质疑末段"Formatted or processed versions... must acknowledge the copyright and authors"近乎冗余：(1) 著作权法与国际条约本已禁止删除有效版权标示，变换形式亦然；(2) 手册页几乎总以源码形式分发，若只随包 cat page 而不随源，已同时违反该条与前述法律规定。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-man.messages.742461 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-man 邮件列表价值反推选封考据采纳）
+
+G. Branden Robinson 审阅 man-pages 的 SPDX 许可证迁移工作，指出 VERBATIM 派生许可证有 4 种变体，建议暂缓重新许可证化公告以让各方理清问题，并指出末尾段落可能冗余，因为国际条约已禁止抹除版权信息。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-man.messages.742472 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-man 邮件列表价值反推选封考据采纳）
+
+GKH 要求为 man-pages 中示例程序添加 SPDX 标记并遵循 REUSE 规范，Alejandro Colomar 回应称 GPL_NOVERSION_ONELINE 标识含义不明可能为 GPLv1，建议按 REUSE 添加 SPDX 行；若 Pali 不指定许可证则默认使用页面相同许可证。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-man.messages.742571 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-man 邮件列表价值反推选封考据采纳）
+
+AEB 经溯源确认 VERBATIM 许可证文本可能由 Rik Faith 为 man-pages 撰写，首次出现于 1994 年 9 月的 man-pages-1.4（含 234 页），AEB 1995 年起维护、其首版 man-pages-1.6 含 245 页使用此许可证。Kerrisk 在 FROM 本人论述行仅简短致谢并承认"license wasn't there right at the start, but that it appeared very soon afterwards"。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-man.messages.742988 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-man 邮件列表价值反推选封考据采纳）
+
+Alejandro Colomar 梳理 VERBATIM_TWO_PARA 许可证谱系：首次用于 man-pages 3.07（2008 年）的 move_pages.2 页面，由 Michael Kerrisk 添加但版权归 Christoph Lameter 和 Silicon Graphics（2006 年）；后被 migrate_pages.2（Copyright 2009 Intel, Author Andi Kleen）复用；Fedora 认定此许可证非自由需移除；仅涉及两页可合理重写。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-man.messages.751032 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-man 邮件列表价值反推选封考据采纳）
+
+Brian Inglis：在 SPDX license review 线程中澄清 VERBATIM_TWO_PARA 首次用于 man-pages 3.07（2008 年）的 move_pages.2，后复用于 migrate_pages.2；就 Christoph Lameter 称"The licensing was GPL and not a proprietary one"回复称更新这些许可证对本项目"are really nice to haves"，并区分指出 FSF 与 Fedora 的实际争议仅在采 LDPv1 许可的 dir_colors(5)，其含受争议的条款"c) You must not add notes to the Document implying that the reader had better read something produced using Texinfo"，而 VERBATIM_TWO_PARA 仅涉两页、必要时可重写。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-man.messages.752823 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-man 邮件列表价值反推选封考据采纳）
+
+G. Branden Robinson 建议暂缓 man-pages 许可重标注并复述 Fedora 的 Freeness 异议，Colomar 指认被拒许可为 LDP (v1)，理由是"the prohibition to recommend an info manual"；Branden 指出所提四份许可均未显式授予翻译权。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-man.messages.753782 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-man 邮件列表价值反推选封考据采纳）
+
+Andries E. Brouwer 对 system_data_types(7) 采用的 VERBATIM 许可"I severely object"；Michael Kerrisk 回应称该许可自 man-pages 创立起即是最广泛使用的许可，双方就单页文档应采用何种文档许可未达成一致。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: rust-for-linux.messages.9267987 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；rust-for-linux 邮件列表价值反推选封考据采纳）
+
+Miguel Ojeda 回应 Linus Torvalds 关于 Rust alloc crate 导入时许可证标注的意见。Linus 在审阅上游 alloc crate 导入补丁时要求明确说明许可证状态，而非依赖外部链接让阅读者自行查找。Miguel 承认应在拆分补丁时就标注许可证，因当前版本已无 SPDX 标识符，并承诺在后续补丁的 README 文件中添加明确说明。该条目记录了 Rust 内核子系统引入上游 crate 时对许可证声明规范的早期讨论，涉及许可证状态透明化的治理要求。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: rust-for-linux.messages.9268951 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；rust-for-linux 邮件列表价值反推选封考据采纳）
+
+Miguel Ojeda 向 Linus Torvalds 提交 Rust for Linux v7.2 合并请求，核心是引入 zerocopy 库以替换大量处理字节序列与类型间转换的不安全代码。zerocopy 以 BSD-2-Clause 或 Apache-2.0 或 MIT 三重许可授权，导入时基本保持原样仅需增删数行适配。该条目展示了 Rust 内核子系统引入非 GPL 许可 crate 的许可决策与依赖管理实践，涉及宽松许可与内核 GPL 许可的交叉地带。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: rust-for-linux.messages.9286619 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；rust-for-linux 邮件列表价值反推选封考据采纳）
+
+本邮件是引入群晖嵌入式微控制器驱动的补丁系列说明，主体内容属于设备支持与代码组织的技术描述。群晖在 NAS 设备中使用通过串口连接的小型微控制器，用于控制指示灯、风扇转速、蜂鸣器，并处理正常关机重启、按键与风扇故障；补丁依赖此前已提出的 Rust 指示灯抽象与 Rust 串口设备抽象，当前版本仅实现指示灯控制，其余功能还需补齐监控、输入以及关机与硬件保护关机相关的 Rust 抽象。本条入选是因为版本变更记录中有一条许可相关的明确表述：把设备树绑定文件的许可定为 GPL-2.0-only 或 BSD-2-Clause 二选一的双许可形式。这表明 Linux 内核文档层面已出现 BSD 二条许可条款与 GNU 许可并行的具体应用。除这一条记录外，全文不含 BSD 谱系、许可证论证或治理讨论。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: rust-for-linux.messages.9292380 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；rust-for-linux 邮件列表价值反推选封考据采纳）
+
+本邮件是群晖嵌入式微控制器驱动补丁系列的一个早期版本说明，正文主体同样是设备功能描述与迭代变更清单，涵盖串口连接微控制器对指示灯、风扇、蜂鸣器与关机流程的控制，以及所需 Rust 抽象的补齐计划。入选依据来自变更记录中重复出现的一条许可表述：把设备树绑定文件的许可设定为 GPL-2.0-only 或 BSD-2-Clause 的双许可组合。这与后续版本中的同类记录相互印证，说明该驱动系列在提交之初就把 BSD 二条许可条款与 GNU 许可并列写入内核文档许可标识中。邮件其余部分不涉及 BSD 派系、许可证论证或项目治理议题，属于以纯技术实现为主的补丁提交，BSD 相关性仅限于这条许可记录。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: rust-for-linux.messages.9293027 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；rust-for-linux 邮件列表价值反推选封考据采纳）
+
+本邮件针对内核中双许可是否棘手这一说法展开反驳。被引用的 Rust 负责人称，双许可在内核中会迅速变得复杂，是否可行取决于接收补丁的树是否接受双许可，以及被抽象的对象是否仅限 GPL。作者认为这一说法奇怪，表示从未听说双许可在内核中构成障碍：大量驱动本身就是双许可，DRM 核心亦然；作者粗略检索 SPDX 许可行后发现，整个内核约十分之一的文件采用某种双许可形式。作者说明 Asahi Linux 项目主动鼓励双许可，以便其他操作系统也能使用相关代码，且尚未听说因此产生异议。作者进一步解释，只要其中一个许可是 GPL 或兼容 GPL，驱动即可任意选择许可组合。作者指出苹果芯片图形驱动是最可能被其他系统直接移植的驱动之一，DRM 早已接受双许可驱动，因此相关抽象层也应保持双许可，否则仅因改用 Rust 就让许可条件比原来更严格，逻辑上说不通，并以 FreeBSD 在宽松许可下直接使用了一大块 Linux DRM 代码为例证。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: rust-for-linux.messages.9299052 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；rust-for-linux 邮件列表价值反推选封考据采纳）
+
+本邮件是群晖嵌入式微控制器驱动补丁系列较晚的说明版本，内容结构与早期版本一致，主体仍是设备功能与代码组织的技术性说明：设备通过串口连接的微控制器负责指示灯、风扇、蜂鸣器以及关机与风扇故障处理，补丁依赖已合入或同期推进的 Rust 指示灯与串口设备抽象，并列出后续需要补齐的监控、输入、关机与硬件保护关机等抽象。版本变更清单中保留着与前几个版本相同的许可条目：设备树绑定文件采用 GPL-2.0-only 或 BSD-2-Clause 的双许可形式。这条记录在多个版本间持续存在，可视为该驱动许可方案稳定下来的旁证。除该条外，邮件不含 BSD 谱系分析、许可证原理讨论或治理议题，BSD 相关价值仅体现为这条许可标识记录。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: rust-for-linux.messages.9304786 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；rust-for-linux 邮件列表价值反推选封考据采纳）
+
+Greg KH 对 Sami Tolvanen 提交 gendwarfksyms 代码时使用的 SPDX-License-Identifier: GPL-2.0-or-later 提出确认，追问 "do you _REALLY_ mean 'or later' here and in other places in this series?"（FROM 论述段，Greg 本人），并指出 "Has some issues with the types of licenses that marking will cover."（未点名具体企业或许可证策略）。Sami 补丁文件头同时标注 "Copyright (C) 2024 Google LLC"。该件触及 GPL-2.0-only 与 GPL-2.0-or-later 选择上的治理分歧，但无 "Google LLC 对许可证标记的特定限制" 之类的进一步断言。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: sparclinux.messages.9325471 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；sparclinux 邮件列表价值反推选封考据采纳）
+
+关于「linux: generalize sections, ranges and linker tables」补丁的 SPDX 许可标记，Alan Cox（署名 One Thousand Gnomes）转述 Rusty Russell 的提交说明——表格代码标注 copyleft-next，并称 Rusty 近期要求注明该许可与 GPL 兼容、已由三名律师（其中两名为 SUSE）审过——随后反对使用新标签："You don't need a new tag, you can use "GPL" or "GPL and additional rights""，理由是组合进内核后无论如何都是 GPLv2，且依 clause 8 内核不设 BSD 标签，统一改用 "GPL with additional rights" 以防模块标签被滥用。James Bottomley 回帖 "I don't follow you here"，认为对方混淆了模块自身许可与组合件条件：Dual BSD/GPL 本就允许他今天即行其事而无需等十五年；他确认模块标签只声明模块本身许可、与内核结合后由 GPLv2 支配，并指出这一结论对 copyleft-next 在十五年后同样成立；他还依美国版权局对「original work of authorship」的定义说明，持续更新的组合作品不会 sunsetting。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: sparclinux.messages.9356714 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；sparclinux 邮件列表价值反推选封考据采纳）
+
+Thomas Gleixner 对 Ricardo Neri 把 perf 专用硬锁检测器代码整体复制进新文件的补丁提出异议。新文件带有 SPDX-License-Identifier: GPL-2.0 标识，声明 Copyright (C) Intel Corporation 2019，并在注释中写明全部代码来自原始的 perf 专用检测器。Gleixner 反问既然未作任何修改地复制过来，是否因此自动变成 Intel 的版权，并建议对方与法务部门商量一下。他同时认为再新建一个文件毫无价值，相关代码用一个大 #ifdef PERF 包在原文件里即可。该条目记录了内核开发中关于逐字复制代码的版权归属与 SPDX 许可头声明边界的实际争议，涉及第三方版权标注与复制来源的合规处理。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-api.messages.49558 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-api 邮件列表价值反推选封考据采纳）
+
+Stephan Mueller在LRNG代码中添加GPL-2.0 OR BSD-2-Clause双许可标识，Thomas Gleixner要求移除冗余BSD免责声明以避免许可证扫描误报 SPDX-License-Identifier: GPL-2.0 OR BSD-2-Clause。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-api.messages.53761 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-api 邮件列表价值反推选封考据采纳）
+
+Thomas Gleixner 评 LRNG 补丁采用 SPDX 标识符 GPL-2.0 OR BSD-2-Clause 双许可，认为冗余免责声明徒增负担SPDX-License-Identifier: GPL-2.0 OR BSD-2-Clause。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-arch.messages.9787909 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-arch 邮件列表价值反推选封考据采纳）
+
+Cyril Hrubis 讨论 MAP_FIXED_SAFE 时调取 unix-history-repo 逐版本考据 mmap 语义，称首个 mmap 出现在 BSD-4.2 快照且当时并无 MAP_FIXED，首个支持 MAP_FIXED 的实现是 BSD-4.3_Reno 快照，并发现早期 BSD 代码库里有兼容 HPUX 的 HPUXMAP_FIXED 与 HPUXMAP_REPLACE。这是 BSD 与 HPUX 接口演进的直接考据 HPUX compatibility code in the early BSD codebase。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-arch.messages.9797110 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-arch 邮件列表价值反推选封考据采纳）
+
+Philippe Ombredanne 在 nds32 移植补丁中直接审读 Andes Technology 的许可证写法，反对逐行 GNU GPL v2 法律声明并要求改用 SPDX 标识符 GPL-2.0，还提示 Thomas 的文档补丁与 Linus 偏好 C++ 注释风格的意见。这是许可证标识规范化的实质性治理讨论 Have you considered using the new SPDX ids instead of this fine legalese。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-arch.messages.9793006 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-arch 邮件列表价值反推选封考据采纳）
+
+freelist 数据结构合入补丁在文件头 SPDX 标识中直接列出 BSD-2-Clause 作为可选许可证,来源为第三方实现,属于 BSD 许可证在 Linux 内核源码中作为双许可条款直接出现的史料  SPDX-License-Identifier: GPL-2.0-only OR BSD-2-Clause。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-scsi.messages.1490994 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-scsi 邮件列表价值反推选封考据采纳）
+
+主题直指疑似 GPL 违规，正文讨论版权法专家未必理解 copyleft 规则、同一代码可多许可证发布等合规问题，是纯许可证治理议题 It is possible for the copyright owner to license the code under more than once license。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-scsi.messages.1544940 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-scsi 邮件列表价值反推选封考据采纳）
+
+移除 procfs 支持的补丁讨论中,Douglas Gilbert 说明 sg3_utils 已引入外部 json-parser 与 json-builder 代码,并逐一点明其采用 BSD-2-Clause 许可,显示 BSD 许可代码进入 Linux SCSI 工具生态。 https://github.com/json-parser/json-builder (license: BSD-2-Clause)
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-scsi.messages.1479955 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-scsi 邮件列表价值反推选封考据采纳）
+
+Joe Perches 与 James Bottomley 讨论 z2ram 的 SPDX 行缺失。James 判其为老式 MIT 变体，Joe 认为标 GPL 不正确并建议改为："GPL and additional rights"。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-scsi.messages.1498770 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-scsi 邮件列表价值反推选封考据采纳）
+
+Intel RPMB用户接口补丁采用BSD-3-Clause OR GPL-2.0双许可 SPDX标识简化了BSD与GPL许可的声明格式 是双许可SPDX标准化的早期实践。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-scsi.messages.1517762 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-scsi 邮件列表价值反推选封考据采纳）
+
+Eric Biggers 把 ufs 驱动头注释的冗长 GPL 条款替换为 SPDX 标识时引发版本表述争议，焦点是 SPDX GPL-2.0 与实际 GPL v2 or later 的语义偏差。This actually says GPL v2 or later。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-scsi.messages.1524305 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-scsi 邮件列表价值反推选封考据采纳）
+
+libsas 补 SPDX 许可证标识的评审中，文件头标注 GPLv2 与默认 GPLv2 是否等价成为争论点，触及 GNU 许可证版本与 SPDX 标识的规范化治理。原文为 This file is licensed under GPLv2。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-scsi.messages.1525979 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-scsi 邮件列表价值反推选封考据采纳）
+
+Greg KH 与 SPDX 清理线程争论 libsas 应标 GPL-2.0 还是 v2+，指出默认即 GPLv2，属 GNU 许可证版本与 SPDX 标识的规范化治理史料。原文为 The default is GPLv2, not v2+。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-scsi.messages.1459901 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-scsi 邮件列表价值反推选封考据采纳）
+
+Geert Uytterhoeven 审看 Renesas R-Car UFS 主控制器设备树绑定补丁时，新文件的 SPDX 标识符同时声明 GPL-2.0-only 与 BSD-2-Clause 二选一，是 Linux 树内 BSD 许可证并存的实例。SPDX-License-Identifier: (GPL-2.0-only OR BSD-2-Clause)
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-arch.messages.9838121 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-arch 邮件列表价值反推选封考据采纳）
+
+微软 Hyper-V VMBus 设备树绑定补丁采用 SPDX 双许可证头 明确标注 GPL-2.0-only OR BSD-2-Clause 是 Linux 内核中与 BSD 许可证并存的直接证据 反映设备树 schema 文件的双许可策略 SPDX-License-Identifier: (GPL-2.0-only OR BSD-2-Clause)
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-arch.messages.9805298 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-arch 邮件列表价值反推选封考据采纳）
+
+Peter Zijlstra 引入 lock-free freelist 头文件 include/linux/freelist.h，纳入外部 moodycamel 作品（Cc: cameron@moodycamel.com），SPDX 标识声明 GPL-2.0-only OR BSD-2-Clause 双许可；Boqun Feng 回帖问 try_cmpxchg_acquire 失败后的 ACQUIRE 语义与 smp_mb__after_atomic() 需求。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-arch.messages.9845883 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-arch 邮件列表价值反推选封考据采纳）
+
+Peter Zijlstra 就 freelist 补丁征询 Cameron 关于许可证 GPLv2 或 BDS-2 的意见, Cameron 回答两者均可且 BSD-2 是个人最爱, 属 GPL 与 BSD 授权对比的许可证议题 "both GPLv2 and BSD-2 (my personal favourite) are fine"。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-scsi.messages.1417416 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-scsi 邮件列表价值反推选封考据采纳）
+
+Greg KH 审阅 Cisco fnic2 驱动新增文件 fip.c,文件头同时声明 SPDX GPL-2.0 标识并附 BSD 风格免责声明段,英文原引语 SPDX-License-Identifier: GPL-2.0 是 SPDX 化时代 GPL 与 BSD 条款混装的典型案例。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-fsdevel.messages.273597 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-fsdevel 邮件列表价值反推选封考据采纳）
+
+Vivek Goyal 在 allmodconfig 构建 virtio-fs 时遭遇 SPDX 许可校验失败，他把 uapi 头的 SPDX 从单纯的 GPL-2.0 OR BSD-3-Clause 改写为带限定的组合式，原文："GPL-2.0 OR BSD-3-Clause"。BSD-3-Clause 被保留为双授权选项并入内核公开接口头文件，是 BSD 许可证在内核 uapi 授权表述中的现场协商。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-fsdevel.messages.290632 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-fsdevel 邮件列表价值反推选封考据采纳）
+
+shadow directories 讨论直接引用 FreeBSD 2.10BSD 的 link(2) 手册页作为规范依据来论证目录硬链接的 限制, 尽管该引用在讨论中被质疑可靠性, 仍是内核讨论明确援引 BSD 权威文档的实例 See link(2) for 2.10BSD。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-fsdevel.messages.295087 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-fsdevel 邮件列表价值反推选封考据采纳）
+
+ZUF 文件系统入树 RFC 中 Boaz Harrosh 主张共享的 API 头文件按 BSD-3-Clause 授权，以便在 macOS 与 Windows 上编译 ZUS 用户态服务器工程，Greg KH 纠正称纯 API 头文件并非无许可并改用 SPDX 表述把两种授权并列，是 BSD 授权与内核 API 头文件边界谈判的现场记录。GPL-2.0 WITH Linux-syscall-note AND BSD-3-Clause。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-fsdevel.messages.300824 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-fsdevel 邮件列表价值反推选封考据采纳）
+
+Miklos Szeredi 接受 UFS 补丁系列，其前置补丁名为 sunos-41x 兼容模式。SunOS 4.1.x 属 BSD-4.1 血统，UFS 本身即 BSD FFS 家族，该邮件记录 Linux UFS 驱动向 BSD 原生语义对齐的合并路径。 原文: "add-in-sunos-41x-compatible-mode-for-ufs.patch".
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-fsdevel.messages.324097 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-fsdevel 邮件列表价值反推选封考据采纳）
+
+virtio pmem 补丁集 v8 的变更清单记录了一次许可证文本替换, 原文: "Remove BSD license text with SPDX license text"。该系列复用 David Hildenbrand 的 qemu virtio-pmem 代码, 故此处 BSD 许可证文本被改为 SPDX 标识符进入内核树。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-fsdevel.messages.424972 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-fsdevel 邮件列表价值反推选封考据采纳）
+
+目录硬链接之争中，有人援引 BSD 手册反驳 Linux 从未允许目录硬链接的说法: "UNIX systems have traditionally allowed the superuser to create hard links to directories"，并引用 2.10BSD 的 link(2) 作为依据。BSD 谱系成为 Linux VFS 设计取舍的论据。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-fsdevel.messages.446540 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-fsdevel 邮件列表价值反推选封考据采纳）
+
+selftest 模块 SPDX 许可证争议中，Greg KH 早前在同线程转发链里反驳「只访问 GPL-v2-only API 的文件必须采用同一许可」的排他主张:"That's a bogus argument. First of all the code is dual licensed and second we have enough code in the kernel which is licensed MIT/BSD and happily can access the GPL-v2-only APIs"，并指出 copyleft-next-0.3.1 尚未列入 LICENSING 因而无法做成 SPDX clean、主张直接加入该 SPDX 标识以求了结。本封 FROM 段 Greg KH 表示早先拒收该补丁系列有其技术理由，愿在下一个合并窗口关闭后以 rebase 重提的版本再审。此为 BSD 许可证在内核许可体系中与 GPL 共存的治理证据。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-fsdevel.messages.457515 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-fsdevel 邮件列表价值反推选封考据采纳）
+
+ZUF与ZUS文件系统引入讨论中，Boaz Harrosh提出用户态服务端为BSD-3-Clause许可，希望把共享API头文件署为"GPL-2.0 WITH Linux-syscall-note AND BSD-3-Clause"以便在Macosx与Windows上编译；Greg KH回称"You are asking legal questions to a technical person?"并让他去咨询律师。这是Linux内核中BSD三条款双重许可的实际争议案例。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-fsdevel.messages.486799 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-fsdevel 邮件列表价值反推选封考据采纳）
+
+Greg KH 就 sysfs 测试驱动 selftests: add tests_sysfs 模块补丁评论道「Independant of the fact that I don't like sysfs code attempting to be accessed in the kernel with licenses other than GPLv2, you do not need the license "boilerplate" text at all in files. That's what the SPDX line is for.」，即要求删除样板文本只留 SPDX 行；回复者 Luis Chamberlain 确认「Sure, I'll remove the boilerplate, sorry for missing that again, I thought I had removed it.」
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-fsdevel.messages.474936 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-fsdevel 邮件列表价值反推选封考据采纳）
+
+Luis Chamberlain 在 copyleft-next 许可证讨论中，用 2-clause BSD 与 GPL 的兼容性作为类比。这一论据关乎 BSD 许可证在自由软件交叉传播中的制度性角色，属许可证维度证据。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-fsdevel.messages.541893 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-fsdevel 邮件列表价值反推选封考据采纳）
+
+Thomas Gleixner 就 selftests tests_sysfs 模块的 SPDX 标识符争议回击 Greg KH：对方主张测试代码只访问 GPL-v2-only 接口，故必须使用同一许可证。Gleixner 斥之为无效论据，理由有二：该代码是双重许可的；内核中已有大量以 MIT 与 BSD 许可的代码同样正常访问 GPL-v2-only API。他还指出 copyleft-next-0.3.1 未收录进 LICENSING 目录导致 SPDX 不干净，属流程缺陷而非许可不兼容。原文: "we have enough code in the kernel which is licensed MIT/BSD"。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-fsdevel.messages.583083 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-fsdevel 邮件列表价值反推选封考据采纳）
+
+David Newall 反驳 shadow directories 提案引用的 LWN 论断,称 UNIX 传统上允许超级用户对目录建硬链接,并据 "See link(2) for 2.10BSD" 引 FreeBSD 手册页举证,质疑 Al Viro 一方锁定方案的论证前提。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-fsdevel.messages.679183 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-fsdevel 邮件列表价值反推选封考据采纳）
+
+util-linux v2.39.3 发布说明中混入 BSD 分支派生内容。原文: "add DragonFlyBSD GPT partition types"。同批还完成 SPDX 与 Copyright 头补全,是 Linux 用户态工具正式吸收 BSD 生态分区标识的可追溯证据。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-fsdevel.messages.684740 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-fsdevel 邮件列表价值反推选封考据采纳）
+
+ZUF 文件系统 RFC 中 Boaz Harrosh 声明用户态服务器为 BSD-3-Clause 项目,并主张纯 API 头不受任何许可证管辖;Greg KH 纠正说文件确有许可证,应改用内核 API 头约定的 SPDX 文本。原文: "These are common files with ZUS project are separately Licensed as BSD-3-Clause"。涉及 BSD 许可证归属与 SPDX 治理。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-mm.messages.782703 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-mm 邮件列表价值反推选封考据采纳）
+
+Intel 为 SGX 驱动写入 SPDX 双重许可声明的邮件串中，Jarkko Sakkinen 就"//" 注释格式选择作出说明："I'll bring some context to this. When I moved into using SPDX, I took the example from places where I saw also the copyright using '//'."，并以"$ git grep '// Copyright' | wc -l 2123"佐证，反问"just wondering is it done in the wrong way in all these sites?"。同串更早由 Greg KH 发出"You use gpl-only header files in this file, so how in the world can it be bsd-3 licensed?"，并追加"Please get your legal department to agree with this, after you explain to them how you are mixing gpl2-only code in with this file."；Christoph Hellwig 随后要求 SPDX 头之外一律改用非 // 注释。该质疑引发 GPL-only 头文件与 BSD-3-Clause 混合的合规讨论，但 Jarkko 本封未参与该议题，仅就注释格式作答。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8027601 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+移植 OpenBSD 网络随机化补丁时，参与者指出 obsd_rand.c 本是 BSD 授权文件、四款条款版本曾导致提交被拒，需 Shalayeff、Tso 与 Provos 三方同意改按三条款授权，遂决定改用 Arjan 的干净实现 "The copy of obsd_rand.c I have hass the problematic 4-clause version."。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8142799 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+Patrick McHardy 在 KAME altq HFSC 移植入 Linux 内核的补丁帖中转述原作者方回复, 明确表示原作者们已移除广告条款但仍不愿以 GPL 发布, 并援引 linux-kernel 上关于 BSD 代码与 GPL 代码合并的既有结论。英文引语为 "they removed the advertising clause …, but they didn't want to release the code under the GPL", 属 BSD 广告条款争议与 BSD 至 GPL 转换谈判的完整留痕。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-mm.messages.875773 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-mm 邮件列表价值反推选封考据采纳）
+
+2020年4月7日，Andrew Morton 在 -mm 合入第135/166号补丁 checkpatch: check proper licensing of Devicetree bindings，作者 Lubomir Rintel。依据 Devicetree 维护者要求，设备树绑定文档宜双重许可，checkpatch.pl 新增 WARN 检查其 SPDX 头是否符合该模式。原文: "the Devicetree binding documents are preferrably licensed (GPL-2.0-only OR BSD-2-Clause)"。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8252955 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+Jiri Slaby 宣布 ath5k 的文件如今只在 GPLv2 之下提供，Johannes Berg 请恢复 BSD 声明，理由「Since the BSD people are already getting upset about for various reasons」，Slaby 一句 yes, please 应下。一次针对移植 ath5k 代码的 BSD 与 GPL 重授权决定。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8256375 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+Constantine A. Murenin 反驳读 ar5210 的 BSD 声明还得请律师：「there are no additional documents other than the copyright law to read here -- this is the complete licence」。他指向那段 OpenBSD RCS 头与 Reyk Floeter 的版权文本，称贡献足够大，把名字加在 Reyk 旁即可。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-mm.messages.886494 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-mm 邮件列表价值反推选封考据采纳）
+
+Greg KH 答复 Christoph Hellwig 对 SGX 区驱动头文件 SPDX-License-Identifier: (GPL-2.0 OR BSD-3-Clause) 标注的异议；Greg KH 同线程早前发言「you use gpl-only header files in this file, so how in the world can it be bsd-3 licensed?」读成不可能。Sakkinen 用 git grep 计数为 // 注释风格辩护，KH 收尾「There's no accounting for taste」。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8243791 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+Patrick McHardy 的 altq HFSC 移植补丁把层次化流调度器从 BSD altq 体系引入 Linux 2.6,并在提交说明中专门处理许可证问题,原文称 "The altq version is released under a BSD-style License without advertising clause",且原作者同意删除广告条款。作者据此认为其与 GPL 兼容,因含少量 GPL 代码故定为 GPL 而非双许可。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-mm.messages.928772 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-mm 邮件列表价值反推选封考据采纳）
+
+2020年10月 x86 SGX 飞地驱动的 SPDX 标识为 (GPL-2.0 OR BSD-3-Clause)，Greg KH 质疑混合许可合法性，称 "You use gpl-only header files in this file, so how in the world can it be bsd-3 licensed?"，并主张先由法务部门确认；Hellwig 只要求把 SPDX 之外的斜杠注释去掉，未就许可冲突本身展开论证。这是 BSD-3-Clause 作为 GPL-2.0 双重许可进入 Linux 内核主线的现场许可审查。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8399322 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+altq HFSC 移植讨论中说明 altq 版本采用无广告条款的 BSD 风格许可且原作者同意移除, 并讨论其与 GPL 兼容后的定档, 属 BSD 排队机制作业入主线时的许可证治理案例。引语 "released under a BSD-style License without advertising clause"。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8387793 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+if_ppp.h许可证修复系列由David Miller合入。Paul Mackerras说明原文件带有广告条款的BSD风格许可证："the license on include/linux/if_ppp.h is the old BSD-style license with advertising clause" 补丁将代码移至新文件并转移版权，是内核清理4-clause BSD遗留的直接记录。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-mm.messages.855649 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-mm 邮件列表价值反推选封考据采纳）
+
+2020-04-07 Lubomir Rintel 提交 checkpatch 补丁要求设备树绑定文档按 GPL-2.0-only 或 BSD-2-Clause 双重许可；Andrew Morton 评论称 "preferrably" 措辞过弱、建议 s/should/shall/，并说明补丁本身的实际检查允许更宽松但兼容的许可（如 GPL-2.0-or-later OR BSD-2-Clause）。Laurent Pinchart 致谢并 Acked-by。BSD-2-Clause 由此明文写入内核 DT 文档许可治理。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8417949 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+Bjorn Mork 审阅 huawei_cdc_ncm 骨架补丁，指出补丁头部注明来源「The NCM encoding, decoding and initialization logic derives from FreeBSD 8.x. if_cdce.c and if_cdcereg.h」（作者自述），但注释与 MODULE_LICENSE 声明不一致，要求作者想清楚究竟想以何种许可发布该代码。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8373806 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+David Miller 转贴被删守护的注释「BSD 4.2 derived systems incorrectly adjust tot_len by the IP header length, and report a zero MTU in the ICMP message.」，本封 FROM 段直接表述发这些零 MTU 的机器「very broken」，他不会为这类坏系统做兼容。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8380828 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+David Miller 记下一个仍在生效的 BSD 4.2 兼容负担：「there are still some Windows 2000 machines out there emitting BSD 4.2 style keepalives (one garbage byte instead of an empty out-of-window probe frame)」；本封 FROM 段直接表述不能改 tcp_sequence() 拒收这些帧，否则 SYN 与 SYN+ACK 的连接尝试及重传会被错判。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8441837 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+Patrick McHardy 在 altq HFSC 移植中澄清 BSD 无广告条款与 GPL 混合的疑问,引文 "Since mixing GPL and BSD without advertising clause is not a problem"。他说明既有代码仍受原许可证约束,整体代码不双许可,因此 MODULE_LICENSE 保持 GPL。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8260867 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+ppp_mppe 模块补丁的文件头采用 BSD-2 风格授权文本，原文为 "ALTERNATIVELY, provided that this notice is retained in full, this product may be distributed"，末尾再以 MODULE_LICENSE("Dual BSD/GPL") 落定，BSD 条款与 GPL 并列进入内核。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8412844 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+内核内套接字接口是否稳定的 RFC 讨论中触及 BSD 许可证兼容性问题, 有人区分纯 BSD 与含广告条款的四段许可, 并指出 BSD 代码可由第三方贡献重新许可为 GPL, 属 BSD 许可证治理议题。引语 "BSD code can even be relicensed GPL by a third party contribution"。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8416259 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+内核峰会 RDMA 议题总结的回复中 Andrea Arcangeli 警告勿期望使用受 GPL 限制的 rbtree, 并指 topspin 的 IB 补丁最初曾把 rbtree 重新许可为 BSD, 属 BSD 与 GPL 许可冲突的一手史料。引语 "ib patches from topspin originally relicensed rbtree.[ch] under BSD"。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-mm.messages.902629 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-mm 邮件列表价值反推选封考据采纳）
+
+2020 年 10 月 SGX 加密计算补丁审查中，Greg Kroah-Hartman 以许可证合规发问，原话为 "You use gpl-only header files in this file, so how in the world can it be bsd-3 licensed?" 要求作者请法务部门确认混合 GPLv2-only 代码的做法。属 GPL 与 BSD 许可证治理之争。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8457403 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+Jiri Slaby 在 ath5k 相关邮件中说明 base.c 进入公有领域后以三条款 BSD 与 GPL 双许可形式发布。ath5k 源自 madwifi,属 BSD 无线驱动谱系,此处出现 BSD 许可证选择条款。引语 "dual-licensed under 3-clause-BSD and GPL",BSD 许可证条款。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8667338 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+stmmac IEEE 802.1Qbv 补丁引入 GPL-2.0 OR BSD-3-Clause 双许可以支持双平台分发，是 BSD 许可证进入 Linux 网络驱动层的直接记录。原句: This file is targeted for dual licensing which is GPL-2.0 OR BSD-3-Clause.
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8673244 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+2019年8月 libbpf 双许可之争中，本封作者 Jesper Dangaard Brouer 在早前消息里已经 ACK 了 (LGPL-2.1 OR BSD-2-Clause) 方案，但留了一问：「I just want to understand, why "BSD-2-Clause" and not "Apache-2.0" ? The original argument was that this needed to be compatible with "Apache-2.0", then why not simply add this in the "OR" ?」而 Daniel Borkmann 正是主张 BSD-2 的一方：「Having this be BSD-2 is actually better, as it should be fine to use with Apache 2 code, right?」并指出 Apache-2 在内核树中被劝退（LICENSES/dual/Apache-2.0 的 Usage-Guide 与 Apache 官方的 GPL 兼容性声明）。Greg KH 补出 Usage-Guide 的续文：「Do NOT use. The Apache-2.0 is not GPL2 compatible. It may only be used for dual-licensed files where the other license is GPL2 compatible. If you end up using this it MUST be used together with a GPL2 compatible license using "OR".」本封 Jesper 以「Good, I just wanted to understand why.」收束，并对「是否有 BSD-2 不兼容却必需的许可」回答「No.」，同时确认 BSD-2 方案是 libbpf 被 Apache-2.0 的 iovisor/bcc 所用所必需的。全条真正触及的是内核许可证兼容性红线（Apache-2 不得用于内核，即便作为双许可）与 SPDX 许可标识治理。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8673313 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+bpftool 许可证混乱清理补丁出现 GPL-2.0-only OR BSD-2-Clause 与 GPL 全文样板并存的冲突，是工具链 BSD 化过程中的许可证治理实例。原句: SPDX-License-Identifier: (GPL-2.0-only OR BSD-2-Clause and。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8675252 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+Greg KH 参与 libbpf 头文件双许可讨论，延续 BSD-2-Clause 与 Apache-2.0 取舍争论，反映内核顶层维护者对 BSD 许可证策略的态度。原句: I've already ACKed this, and is fine with (LGPL-2.1 OR BSD-2-Clause).
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8622420 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+Grygorii Strashko 提交 TI cpsw-switch DT binding 清理补丁，其提交说明中写道「Also SPDX-License-Identifier has been changed to (GPL-2.0-only OR BSD-2-Clause) as requested」，回应 Rob Herring 早前评审意见；Rob Herring 本封确认「Applied, thanks.」
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8624261 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+libbpf 重许可引入 BSD-2-Clause 以兼容 Apache2，原话 "since BSD-2 is compatible with Apache2"。Alexei Starovoitov 发起并获得广泛 Ack，Jesper Brouer 另行在列表上补充确认，属 BSD 许可证在内核用户态库的落地事件。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8638314 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+Andy Shevchenko 审阅 marvell prestera 驱动时逐点指出签名与许可文件问题,并引用补丁头 SPDX-License-Identifier: BSD-3-Clause OR GPL-2.0,同时要求作者重读提交指南相关章节,记录 BSD 三条款与 GPL 双许可在内核入库时的判定实践。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8688167 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+Daniel Borkmann 2021-09-14 的 bpf 拉取请求包含 bpf: Relicense disassembler as GPL-2.0-only OR BSD-2-Clause 一项，请求正文对应当条给出的理由是 Fix BPF's disasm.{c,h} to dual-license so that it is aligned with bpftool given the former is a build dependency for the latter，即上游为与 bpftool 保持一致而调整该构建依赖的许可。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8688962 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+Andrew Lunn 审核 NXP ENETC 驱动补丁，本封转引内容里有「// SPDX-License-Identifier: (GPL-2.0+ OR BSD-3-Clause)」与「/* Copyright 2017-2018 NXP */」；同一封审查还要求给 Kconfig 加 COMPILE_TEST，并要求避免前向声明。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8692138 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+Lorenz Bauer 在 [PATCH 0/1] 宣布 Cloudflare 开源其自研、基于 XDP 与 TC 的 L4 负载均衡代码，以应 Alexei 呼吁给内核树补生产 BPF 示例：「Cloudflare is making this available under dual GPL-2.0 or BSD 3-clause terms.」，附带自测为 selftests/bpf: add cls_redirect classifier。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8535017 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+DSA KSZ956x PTP 补丁 v4 变更日志含一条许可证动作: dts: remove OR BSD-2-Clause from SPDX-License-Identifier. 说明该系列文件原为 GPL-2.0 with OR BSD-2-Clause 双许可, 本轮统一收敛为单一 GPL 标识,是内核树内 BSD 双许可被剥离的记录.
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8535770 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+Alexei Starovoitov 提交 libbpf 双许可补丁（LGPL-2.1 OR BSD-2-Clause），因许多 Apache2 项目（bcc、bpftrace、gobpf、cilium）希望使用 libbpf 但 Apache 基金会明确 LGPL 与 Apache2 不兼容，"relicense libbpf as dual license LGPL-2.1 or BSD-2-Clause, since BSD-2 is compatible with Apache2"；Daniel Borkmann 表示 Applied to bpf-next。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8538406 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+zinc ChaCha20 补丁的 SPDX 争议中,Thomas Gleixner 给出兼容性判断: Both MIT and BSD3-Clause are GPL2.0 compatible licenses. Donenfeld 回应 for the avoidance of doubt I'll take your advice and put both, 最终把文件写成 MIT 与 BSD-3-Clause 双标识.
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8544827 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+DT 绑定 YAML 化补丁 v2 由 Marek Vasut 提交，含许可证变更项: Switch the license to (GPL-2.0-only OR BSD-2-Clause)。Rob Herring 以"Applied, thanks!"收下 micrel,ks8851.yaml 转换，BSD-2-Clause 由此写入 Linux 文档目录的 SPDX 声明集合。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8548601 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+Andrii Nakryiko 提交 bpf_helpers.h 与 bpf_endian.h 双许可补丁，因该两文件承载 BPF helper 定义需与 libbpf 一同发布，"we need them to be dual-licensed as LGPL-2.1 OR BSD-2-Clause"；获得 Alexei Starovoitov、Hechao Li、Martin KaFai Lau 等多方 Acked-by。Daniel Borkmann 表示 Applied。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8522051 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+NXP SJA1105 DSA 驱动 v4 补丁集由 Vladimir Oltean 提交，正文明确声明内核代码为 GPL-2.0、硬件支撑文件为 BSD-3-Clause 且派生自 userspace 的 sja1105-tool，是内核内 GPL 与 BSD 混编的自述凭据。 "The driver is GPL-2.0 licensed. The source code files which are licensed as BSD-3-Clause are hardware support files"。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8743104 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+NXP SJA1105 DSA 驱动提出时明确区分 GPL-2.0 驱动的 BSD-3-Clause 硬件支持文件来源, 记录 BSD 用户态工具反向派生进内核的代码流转。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8743664 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+Thomas Gleixner 审 ChaCha20 实现时对 BSD-3-Clause  SPDX 标识逐条提出异议, 要求统一为 GPL-2.0 或 MIT, 是 BSD 许可证在加密模块入库时被否定的现场记录。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8746256 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+KSZ956x PTP 系列 v3 变更记录里 dts 提交显式移除 SPDX-License-Identifier 中的 OR BSD-2-Clause, 是 BSD 许可证在设备树绑定里被清理的具体动作。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8355772 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+Paul Mackerras 提交修复 if_ppp.h 许可证问题的补丁,起因是该头文件仍使用带广告条款的旧 BSD 风格许可证,而文件内容几乎与该许可证无关。属 BSD 许可证文本清理。 原文引文 "BSD-style license with advertising clause"。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8203889 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+OpenBSD 网络随机化移植许可讨论中，Valdis Kletnieks 早前提出「At least the three clause BSD license is GPL compatible」；本封中他回应 Adrian Bunk 指出的 obsd_rand.c 4-clause 版本问题（Adrian 手上副本为 problematic 4-clause 版本），判断需 Michael Shalayeff、Theodore Ts'o、Niels Provos 三方同意重新授权为 3-clause 变体，并倾向 Arjan 的代码方案。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8320767 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+在 in-kernel sockets API 的 RFC 讨论中，Brian F. G. Bidulock 反驳 Daniel 的认定，指出 GPL 兼容并非开源许可的必备条件，并称 IANAL，「pure-BSD is not compatible with GPL (it actually has to be dual-licensed BSD/GPL)」。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8551433 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+ChaCha20 胶水头的 SPDX 标识引发许可讨论，Thomas Gleixner 反驳 MIT 并非 GPL-2.0 的子集，称 Both MIT and BSD3-Clause are GPL2.0 compatible licenses，并区分 MIT/BSD only 的单许可写法与双许可写法，说明意图必须在 SPDX 标识里清晰表达，否则应由作者自行澄清。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8558328 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+SJA1105 DSA 驱动说明主体为 GPL-2.0，而 as BSD-3-Clause are hardware support files and derivative of the userspace NXP sja1105-tool program，即 BSD-3-Clause 硬件支持文件由 BSD 许可的用户态工具派生进入内核，构成典型的 BSD 到 Linux 代码移植与许可标注记录。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8563521 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+Kalle Valo 提交 5.1 无线驱动合并窗口摘要, 在 iwlwifi 主要变更下列出 relicense the pcie submodule to dual GPL/BSD. 该子模块由此转为 GPL 与 BSD 双许可, BSD 标识进入无线驱动子系统; 同批变更还包括 qtnfmac 转为 SPDX 许可标识, 合并摘要构成这一许可变更的公开留痕.
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8570039 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+Greg KH 审查 selftests sysfs 驱动补丁的许可证写法, 拒绝多余样板并要求只用 SPDX 行, 同时引用 Documentation/process/license-rules.rst 关于双许可的原文 one of the compatible GPL variants and alternatively under a permissive license like BSD, MIT etc.. BSD 被列为许可规则认可的兼容双许可选项之一, 同时 sysfs 属 GPL-only 使额外声明成为法律麻烦.
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8596321 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+stmmac 引入 802.1Qbv 配置时，作者解释为何要给全部函数调用包一层封装，称该文件面向双许可 GPL-2.0 OR BSD-3-Clause，原文为 This file is targeted for dual licensing which is GPL-2.0 OR BSD-3-Clause；Andrew Lunn 反问双许可是否真需要封装并要求说明理由，形成 BSD 双许可在内核驱动层落地成本的现场讨论。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8596631 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+Microchip KSZ956x 的 PTP 支持系列 v5 变更说明记录了一次 SPDX 标识清理，原文为 dts: remove " OR BSD-2-Clause" from SPDX-License-Identifier，同期为设备树绑定补 additionalProperties 并去掉引号。设备树绑定文件原先附带的 BSD-2-Clause 可选许可分支被摘除，显示 BSD 许可标记在 Linux 文档体系中的实际收敛。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8600120 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+David Miller 合入 QED 与 qede 驱动的许可清理系列，补丁说明写明 QLogic QED drivers source code is dual licensed under GPL-2.0/BSD-3-Clause，并纠正既存错误 SPDX 标签、删除许可证样板、更新全部源文件版权年份。厂商网卡驱动的 GPL-2.0 与 BSD-3-Clause 双许可由此在主线正式登记。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8604642 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+libbpf 的 README 许可标注被补正；Song Liu 在本封转引 Andrey Ignatov 的原始说明——libbpf 整体许可为（LGPL-2.1 OR BSD-2-Clause）、其遗漏 README.rst、因 README 作者仅其一人故无需他人授权——并对该补丁给出 Acked-by: Song Liu <songliubraving@fb.com>；Daniel Borkmann 本封确认"Applied, thanks!"。BSD-2-Clause 作为 libbpf 双许可选项在此作为合规留痕被援引。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8612347 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+Jiri Pirko 评审 netdevsim 新增软件驱动时质疑其头部双重授权声明,补丁文本称 "GPL-2.0 or BSD 2-Clause License",Pirko 随即反问 "Why gpl2 is not enough for this?"。BSD 2-Clause 条款在此作为 GPL-2.0 之外的备选许可进入内核新增代码,并引发维护者对 BSD 条款必要性的公开质疑,许可证维度命中。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8613133 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+syzbot 上报 bpf_skb_cgroup_id 一般保护故障时,bisection 日志列出相关提交标题 "bpf: Relicense disassembler as GPL-2.0-only OR BSD-2-Clause"。即 BPF 反汇编器被重新许可为 GPL-2.0-only 或 BSD-2-Clause 二选一。虽为故障报告的附带信息,但所载为 BSD 许可的实际变更事实。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8650705 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+Greg KH 在 staging ethsw 系列上明确劝退 BSD 双许可方案，警告暴露给用户空间的 GPL 头文件不宜用 BSD 许可证，提交者随后承诺改用 SPDX 标识，属 BSD 许可证治理在内核的现场争议。原话 “Remember, BSD is not the license you want”。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8652435 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+DSA Microchip 寄存器定义补丁删除了 BSD 二条款式的许可授权文本、整体替换为 GPL，Pavel Machek Ack 后建议进一步转 SPDX 清理冗长法律文本，是 BSD 谱系许可在内核驱动层被移除的实证。原话 “Permission to use, copy, modify, and/or distribute this software for any”。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8657854 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+syzbot 在 bpf_skb_cgroup_id 故障的二分日志中收录 BPF 反汇编器重许可为 GPL-2.0-only OR BSD-2-Clause 的提交，是 BSD-2-Clause 进入内核 BPF 工具的一次被自动化工具留痕的记录。原话 “Relicense disassembler as GPL-2.0-only OR BSD-2-Clause”。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8692695 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+Thomas Gleixner 指出 cassini 驱动许可冲突：boilerplate 写"or (at your option) any later version"但所加 SPDX 行为"GPL-2.0"，导致"该文件被标为 GPL v2 only 而实际为 v2 or later"。Yanjun Zhu 回帖给 Reviewed-by 确认。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8704264 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+Thomas Gleixner 提交 cassini 许可证冲突清理：文件原文写着「either version 2 of the License, or (at your option) any later version」，新增 SPDX 标签却写成「SPDX-License-Identifier: GPL-2.0」，把实际 GPL v2 or later 的文件标成只限 v2；补丁改成 GPL-2.0+ 并删掉冗余样板。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8707249 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+就新增 BPF 自测头 strobemeta.h（补丁内 SPDX 标 GPL-2.0）该不该双许可，本封转引 Andrii Nakryiko 的问句「Let's make this (LGPL-2.1 OR BSD-2-Clause) ?」，Alexei Starovoitov 本封 FROM 段直接答「nope. it's gpl-2.」，并请他裁短回信。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8710953 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+Vladimir Oltean 在 NXP SJA1105 DSA driver 补丁集中直接写明许可分割：「The driver is GPL-2.0 licensed」；采用 BSD-3-Clause 的源码文件是硬件支持文件、也是 BSD-3-Clause 的 NXP sja1105-tool 用户态程序的衍生件。本系列另加入 packed 与 unpacked 结构互转的通用 API 及 802.1Q 伪交换机打标。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8715417 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+Naveen N. Rao 以「Acked-by: Naveen N. Rao」认可 Andrii Nakryiko 的 relicense bpf_helpers.h 与 bpf_endian.h 补丁。本封转引 Andrii：两个头文件含几乎每个 BPF 程序必需的宏与 BPF helper 定义，不只 selftests 用得上，要进 libbpf 就得「dual-licensed as LGPL-2.1 OR BSD-2-Clause」；回复称来得晚（Quite late, but FWIW）。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8716868 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+Alexei Starovoitov 收进 bpf tree 并致歉（Applied this patch to bpf tree）。本封转引 Thomas Gleixner 的追溯：Fixes: 907b22365115 留下 SPDX-License-Identifier: (GPL-2.0-only OR BSD-2-Clause 与 GPL 样板并存；iproute2 侧 d9d8c839 已「explicitly removes the boiler plate and relicenses the code uner GPL-2.0-only and BSD-2-Clause」，内核导入却漏删 GPL 样板。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8734474 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+Jakub Kicinski 接同线程早前 Alexei Starovoitov 的提问，提出「Could we possibly make it dual licensed LGPL + BSD?」，BSD 由此成为 libbpf 许可的现实选项；同封称 tools/include/tools/libc_compat.h 还需重新许可。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8734520 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+2021 年 7 月 [PATCH 1/4] selftests: add tests_sysfs module 评审中，Greg KH 要求 SPDX 单行许可（"keep it simple"），Luis Chamberlain 回应说明 tests_sysfs 与 sysfs 交互极小（仅 exported symbol for a completion structure），并同意追加 SPDX 标签 "GPL-2.0-or-later OR BSD-2-Clause"。本封 FROM 未涉及 Documentation/process/license-rules.rst 的引用。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8818668 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+Nishanth Menon 提交 dp8386x PHY 头 MIT 双授权补丁，称该双授权可让内核文件用于"other Operating System ecosystems such as Zephyr or FreeBSD"，Conor Dooley 与 Rob Herring 主张改用绑定文件惯用的 BSD-2-Clause 而非 MIT；Nishanth 表示 TI 法务团队评估后建议 GPL2 或 MIT、BSD(2/3) 已被否。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8820556 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+net/sched 的 codel 补丁把文件头样板替换为 SPDX，作者 Stephen Hemminger 说明 "The prologue to codel is using BSD-3 clause and GPL-2 boiler plate language"，并指出 treewide 自动扫描遗漏了这类双许可证代码，Dave Taht 已 Acked-by。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.9038095 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+Marco Vedovati 询问 libbpf 自带 types.h 为何采用 BSD 双许可,列出三份同名头文件许可差异,其中 libbpf 版本为 'LGPL-2.1 OR BSD-2-Clause',其余为 GPL-2.0,并质疑 tools 侧头文件是否应沿用 syscall-note 例外。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.9041571 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+在 TI dp8386x 设备树绑定采用 MIT 许可的补丁讨论中，Conor Dooley 在同线程早前消息中反对 MIT、主张改用绑定文件通行的 BSD-2-Clause（"What's wrong with BSD-2-Clause, the standard dual license for bindings, why not use that?"以及"Unless there's a specific reason to use MIT (like your legal won't even allow you to use BSD-2-Clause) then please just use the normal license for bindings here."）；Rob Herring 早前消息中认同并补充"If you need to pick a permissive license for both, then yes, use BSD-2-Clause. Better yet, ask your lawyer."；Paolo Abeni 本封 FROM 段回复 Rob Herring 请 Conor 确认同意，并提示该补丁应走 net-next 通道、若 Conor 同意请在 5 月 26 日之后重发。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.9173545 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+Robert Marko 将 AT91 设备树绑定从 GPL-2.0 单许可重许可为双许可,补丁主题为 relicense to dual GPL-2.0/BSD-2-Clause;Krzysztof Kozlowski 指出 You need all contributors to ack this,Robert 答复 all of the contributors were CC-ed。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.9175355 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+AT91 设备树绑定重许可线程(原为 GPL-2.0 only)中,Michael Walle 对 Robert Marko 的 dual GPL-2.0/BSD-2-Clause 方案给出 Acked-by,是 BSD-2-Clause 混入 Linux dt-bindings 的单文件确认动作。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.9177216 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+ntb_netdev 补加 SPDX 标签的补丁声称该文件为 dual GPL-2.0-only/BSD-3-Clause 双许可,Oskar Ray-Frayssinet 据此补 SPDX 行,Stephen Hemminger 回应 You could take off the boiler plate text if file has SPDX license tag。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.9181384 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+TIPC 补 SPDX 补丁给每个文件打上「GPL-2.0 OR BSD-3-Clause」ID 表达式，Tung Quang Nguyen 质疑：「The original license of TIPC is GPL-2.0. Why do you think it should be dual licensing now ?」Greg Kroah-Hartman 答以「Because that is what the license text in these files say, or are you stating that it is somehow incorrect and should not have been there at all?」并直言 confused。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.9184539 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+Andrew Lunn 审查 lynx PCS 补丁时质疑 BSD-3-Clause 许可在文件中消失,称 what I see is that the BSD-3-Clause portion of the license has disappeared;Sean Anderson 解释 SPDX 复合表达并表态 I don't want to allow someone to take the BSD-3-Clause option。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8916923 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+新增 qcom,ppe 设备树绑定 YAML 时 SPDX 标注为 "# SPDX-License-Identifier: GPL-2.0 OR BSD-2-Clause". 讨论集中在 Qualcomm 厂商风格绑定缺乏层次化描述, 与 BSD 分支无关, 但 BSD-2-Clause 双许可进入内核文档目录.
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8918946 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+bpftool 双许可边界澄清: CrowdStrike 的 Martin Kelly 提问 bpftool 可否作为 GPL 2.0 或 BSD 2-clause 分发, 又担心 GPL 生成码被内联进 skeleton 头文件后头部许可证是否改变; Daniel Borkmann 确认 "definitely that is the intent", 并展示头部标识 "SPDX-License-Identifier: (LGPL-2.1 OR BSD-2-Clause)".
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8920359 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+新增 renesas,rzn1-a5psw 交换机绑定时用 SPDX 标注为 "SPDX-License-Identifier: (GPL-2.0-only OR BSD-2-Clause)", 评审集中在 clocks 与 power-domains 等属性取舍. 设备树绑定沿用 BSD-2-Clause 双许可惯例.
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8920439 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+新增 thead,dwmac 胶水层绑定时 SPDX 标注为 "SPDX-License-Identifier: (GPL-2.0-only OR BSD-2-Clause)", Krzysztof Kozlowski 的评审只涉及标题命名与 AXI 时钟名是否应沿用 snps,dwmac 约定. BSD-2-Clause 双许可进入内核文档目录.
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8924109 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+netlink spec 代码统一改双许可落地。补丁作者 David Ahern 说明原意：「I was intending to make all the Netlink Spec code BSD-3-Clause to ease the adoption but it appears that: - I fumbled the uAPI and used "GPL WITH uAPI note" there - it gives people pause as they expect GPL in the kernel. As suggested by Chuck re-license under dual. This gives us benefit of full BSD freedom while fulfilling the broad "kernel is under GPL" expectations.」Jakub Kicinski 将该补丁应用到 netdev/net.git 主线（commit 37d9df224d1e）；patchwork-bot 自动通知合入。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8926764 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+iproute2 的 SPDX 清理系列(11 个提交)由 Stephen Hemminger 应用, 声明 "There is no change in licensing here, and none is planned", 其中一条提交直接处理 BSD 双许可: "tc: replace GPL-BSD boilerplate in codel and fq". iproute2 是 netdev 生态的用户态入口, BSD 分支在工具树中被正式清点.
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.9004663 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+新增 renesas,rzn1-a5psw.yaml 以太网交换芯片设备树绑定时, 文件头按内核惯例标注 GPL-2.0-only OR BSD-2-Clause 双许可; Geert Uytterhoeven 的评审意见集中在兼容字符串是否应写为 SoC 专用值, 属绑定文档的 BSD 双许可惯例延续。 英文引语: "SPDX-License-Identifier: (GPL-2.0-only OR BSD-2-Clause)"。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.9008690 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+bpf 树的合并请求由 Daniel Borkmann 发出, 其中第 6 项为 Luca Boccassi 将 samples/bpf 的 bpf_insn.h 重新许可为 GPL-2.0-only OR BSD-2-Clause, 并说明沿用了 libbpf 与 bpftool 此前的双许可做法, 贡献者均已 ACK。 英文引语: "Relicense bpf_insn.h as GPL-2.0-only OR BSD-2-Clause"。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.9013229 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+rtw88 无线驱动新增 rtw8821cu.h 头文件时, 由 Realtek 提供版权的源码按 SPDX 标注为 GPL-2.0 OR BSD-3-Clause 双许可, 属厂商硬件头文件入库时保留 BSD 许可位的常规做法; 本线程的评审焦点是头文件路径是否应从目录中移动。 英文引语: "SPDX-License-Identifier: GPL-2.0 OR BSD-3-Clause"。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.9013317 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+patchwork 对 qca_spi 系列改进补丁集 V4 的合并回执中, 逐条列出各补丁的落地状态, 其中第 12 项为 Stefan Wahren 提交的把 qca_7k 驱动的 BSD 许可证样板文本替换为 SPDX 标识符的规范化改动, 该条因缺少对应提交而未能应用。 英文引语: "qca_7k: Replace BSD boilerplate with SPDX"。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.9013730 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+Marco Vedovati 就 libbpf 单独维护的 include/linux/types.h 提问, 指出其与内核头文件的许可不一致: libbpf 版本为 LGPL-2.1 OR BSD-2-Clause, 而内核 include/linux 与 tools/include/uapi/linux 两处均为 GPL-2.0, 由此追问双许可来源与是否应收敛为同一文件。 英文引语: types.h is "LGPL-2.1 OR BSD-2-Clause"。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.9074879 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+Stephen Hemminger 的 iproute2 SPDX 清理系列在 tc 子系统中把 codel 与 fq 两个 QoS 队列算法里的 GPL-BSD 双许可证样板整体删除,换成 SPDX 标识符。原提交标题即 writing 'tc: replace GPL-BSD boilerplate in codel and fq'。该动作属于许可证文本治理,且 BSD 仍作为许可选项之一被保留,记录 BSD 许可在 Linux 用户态工具链中的实际存在与逐步收敛过程。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.9080565 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+Jakub Kicinski 的 ynl 工具为 ethtool genetlink 家族生成的 YAML 描述文件顶部写入 'SPDX-License-Identifier: BSD-3-Clause' 许可头。这是 BSD 许可证在 Linux 内核绑定文档生成物中的实际落地,属许可证标注范畴的 BSD 关联证据。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.9121803 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+Krzysztof Kozlowski 在 X-Powers AC200 MFD 设备树绑定讨论中复核头文件许可标注为 'SPDX-License-Identifier: (GPL-2.0-only OR BSD-2-Clause)',争议点是中断号等硬件常量是否属于绑定内容,是 BSD-2-Clause 与 GPL 双许可在 DT 绑定层的实际落地。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.9132163 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+TCP BBR 拥塞控制模块的许可证元数据修正。Neal Cardwell 的提交经 Jakub Kicinski 合入 netdev/net-next,把模块自引入以来一直笼统标注的 MODULE_LICENSE 字符串改写为标准 SPDX 标识, 使 BSD 一侧的许可条款可被构建与合规工具直接识别。引语: fix SPDX-License-Identifier to be GPL-2.0 OR BSD-3-Clause。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.9132958 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+Intel 通用打包库 pack_fields 与 unpack_fields 的版权头争议。文件 SPDX 标为 BSD-3-Clause, 但 Vladimir Oltean 发现版权人被写为 Intel Corporation,而代码实际是在 NXP 任职期间编写, 要求更正为雇主归属,体现 BSD 许可下公司版权标注惯例。引语: Please use 'Copyright 2024 NXP'. I used company time for this.
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.9148418 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+pack_fields 库 BSD-3-Clause 版权头归属修正的闭环。Vladimir Oltean 指出文件 SPDX 为 BSD-3-Clause 但版权人被写成 Intel Corporation,而代码是他任职 NXP 期间编写,作者 Jacob Keller 回复 Will fix,构成同一版权争议从提出到确认处理的完整链路。引语: I used company time for this.
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.9236933 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+wireguard netlink 生成代码的许可证标注, 是内核中 BSD-3-Clause 的典型双许可样例。补丁新增 "SPDX-License-Identifier: ((GPL-2.0 WITH Linux-syscall-note) OR BSD-3-Clause)", Jason Donenfeld 的回复则把话题转向是否应在构建期生成而不入库。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.9241065 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+Marvell Armada 7K/8K pinctrl 设备树 schema 的许可证标注写作 "SPDX-License-Identifier: GPL-2.0-only OR BSD-2-Clause", 属文档类文件沿用双许可声明的情形。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8343127 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+altq HFSC 移植入主线的许可协商中,David S. Miller 亲自主持处理 BSD 授权代码的转换,引用中说明 "The altq version is released under a BSD-style License without advertising clause",因含少量 GPL 代码故正确许可应为 GPL 而非双许可,Miller 则要求取得原作者书面同意以转为纯 GPL,是 BSD 风格授权进入内核前的许可治理实例。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8946026 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+dt-bindings 讨论中作者为 TI PHY 头文件加入 GPL-2.0-only 与 MIT 双许可, 以便复用到 FreeBSD 与 Zephyr; 维护者 Conor Dooley 质疑为何不采用更主流的 BSD-2-Clause, 引发绑定文件双许可选择的争议. 英文引语: "What's wrong with BSD-2-Clause, the standard dual license for bindings, why not use that?"。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8958318 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+Stefan Wahren 提交 qca_7k 补丁，将驱动中原有的 BSD 样板许可文本替换为正确的 SPDX 标识符，依据是该驱动的 MODULE_LICENSE 显示其为双许可（原文："According to MODULE_LICENSE the driver is under a dual license. So replace the BSD license text with the proper SPDX tag."）。Jacob Keller 对该补丁表示 Reviewed-by。此为内核中 BSD 许可标注规范化工作的实例。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8958330 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+补丁作者 Krzysztof Kozlowski 新增 renesas,ethertsn.yaml 设备树绑定时在 diff 首行标注 SPDX-License-Identifier: (GPL-2.0-only OR BSD-2-Clause)，体现绑定文档沿用 BSD-2-Clause 双许可惯例；讨论本身集中在 Geert Uytterhoeven 提出的 renesas,r8a779g0-ethertsn 是否作为 fallback 与 rx-internal-delay-ps 标准属性替换等纯技术细节。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8958474 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+同一 dp8386x 双许可争议的续帖, Kumar Udit 说明希望与顶层 DTS 的 BSD-2-Clause 许可保持一致; Conor Dooley 再次强调 BSD-2-Clause 才是绑定文件的惯用双许可, 而非 MIT, 争议点是跨 FreeBSD 与 Zephyr 复用时的许可选择. 英文引语: "What's wrong with BSD-2-Clause, why not use that?"。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8995055 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+针对为 TI phy 头文件引入 GPL-2.0-only 与 MIT 双许可的补丁，Conor Dooley 直接质疑为何不采用 BSD 条款："What's wrong with BSD-2-Clause, why not use that?"。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8995136 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+作者以与顶层 DTS 许可证保持一致为由选择 MIT，Conor Dooley 澄清 BSD-2-Clause 是绑定的标准双许可："the standard dual license for bindings, why not use that?"。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8995533 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+Stephen Hemminger 发起 iproute2 全库 SPDX 清理，明确声明不改变现有授权安排，并点名涉及 GPL-BSD 组合条款的文件："tc: replace GPL-BSD boilerplate in codel and fq"。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8996799 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+ti bluetooth 设备树绑定转换为 json-schema 时采用标准双许可头："# SPDX-License-Identifier: (GPL-2.0-only OR BSD-2-Clause)"。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8999041 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+SPDX 清理误删了 SRC 修订版 GPL 授权信息，被指出该文件实际适用 SRC 变体："This file is not licensed under the \"unversioned GPL\", but under the \"GNU General Public License as modified by SRC\"."。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8999090 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+作者发现 netlink 代码生成器产物的 SPDX 标记与其规格不一致，生成的源文件被标注为 BSD 3 条款："The SPDX tags in the generated source files is \"BSD 3-clause\"."。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-mm.messages.1172480 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-mm 邮件列表价值反推选封考据采纳）
+
+UDF 文件系统 SPDX 许可证转换时发现 fs/udf/ecma_167.h 头部 'looks like 2-clause BSD Source-Code license' 但其第二条取自 3-Clause BSD 的第三条，构成无法用 SPDX 标识符表达的 BSD 非标准变体，因此被排除在转换范围外。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-mm.messages.1190154 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-mm 邮件列表价值反推选封考据采纳）
+
+Bagas Sanjaya 2023-05-22 提交的 UDF 文件系统 SPDX 转换系列, 直接讨论 BSD 许可证变体的识别困难: The latter file apparently looks like 2-clause BSD Source-Code license, yet the second clause is from third clause of 3-Clause BSD. 该自定义许可无法用 SPDX 标识符表达, 故 fs/udf/ecma_167.h 未转换. BSD 许可证在 Linux 内核树中的遗留与分类.
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-mm.messages.1183100 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-mm 邮件列表价值反推选封考据采纳）
+
+Andrew Morton 收编 Nathan Chancellor 的 hexagon timer-regs.h 清理补丁，被删除的头文件首行带 SPDX-License-Identifier: GPL-2.0-only 与 Linux Foundation 版权行，展示了 Linux 内存树内 SPDX GPL 许可标识的标准放置形态，是 Linux 与 BSD 许可证对照下的许可元数据样本。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.9201594 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+ntb_netdev 驱动做 SPDX 化改造, 覆盖信说明其目的是把双许可 GPL-2.0-only 与 BSD-3-Clause 写成机器可识别标识并删掉冗长样板许可证文本, Jakub Kicinski 的回复则把话题拉回 netdev 投稿流程文档, 是 BSD-3-Clause 在 Linux 内核中做元数据收敛的一次正面记录. 引语: reflect the dual GPL-2.0-only/BSD-3-Clause license。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.9206619 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+新增 x-powers AC200 中断路径头文件的争论中, Krzysztof Kozlowski 认为硬件常量不属于设备树绑定, 建议连同头文件一并删除, 作者 James Hilliard 反驳称这些是抽象 ID 号且驱动内部会做转换, 因此应当保留. 该新文件的 SPDX 行标注为 (GPL-2.0-only OR BSD-2-Clause), 使 BSD-2-Clause 双许可进入内核 mfd 设备树绑定目录, 但争论本身完全不涉许可议题. 引语: SPDX-License-Identifier: (GPL-2.0-only OR BSD-2-Clause)
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.9208216 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+[PATCH v2 03/19] dt-bindings: arm: AT91 改双许可线程：本封转引 Robert Marko 提议「lets relicense the AT91 bindings from GPL-2.0 only to GPL-2.0/BSD-2 Clause」，Krzysztof Kozlowski 答「You need all contributors to ack this...」，即须全体贡献者逐个确认。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.9209675 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+Andrew Lunn 就 pcs/lynx 驱动的 SPDX 编辑提出质疑，要求给出该文件完整的许可证沿革。其依据（系本封转引内容）是他此前所说：「the BSD-3-Clause portion of the license has disappeared and that applies file-wide, not just to your contribution」。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.9219557 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+Jason A. Donenfeld 反对把 netlink 自动生成产物检入 git：该 SPDX 头作「// SPDX-License-Identifier: ((GPL-2.0 WITH Linux-syscall-note) OR BSD-3-Clause)」；他认为工具一变、产物理应跟着变，这正是目的所在。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8298645 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+2004-01-26 altq HFSC 移植许可讨论中，Patrick McHardy 把 altq 的 HFSC（层级式报文调度器，通过 带宽与延时解耦实现弹性资源分配）移植到 Linux 2.6，并提出许可问题：altq 版本以"不含广告条款的 BSD 风格许可"发布（原作者已同意移除该条款），他认为这与 GPL 兼容，且因代码含少量 GPL 代码，正确许可应为 GPL 而非 Dual BSD/GPL（本封转引 McHardy 原文，跨行折行："The altq version is released under a BSD-style License without advertising clause (the original authors kindly agreed to remove it). It is my understanding that this is compatible with the GPL, and because the code includes some minor amounts of GPL'ed code the correct License is GPL and not Dual BSD/GPL."）。Jamal Hadi Salim 回复称这可能是最具争议的一点（提到 当前的 SCO 乱象），并询问是否已与原作者沟通、取得书面授权转为 GPL 或已足够（原文 "This is probably the most contentious issue (given say current SCO stoopidty). Have you talked to the original author on this? I think granting you written consent to move to GPL may be sufficient."）。需更正：移植源为 altq，本封 正文无 NetBSD 指称。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.9062850 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+bpftool 的 Makefile、文档构建与 .gitignore 被修正 SPDX 标识符,评审者指出 bpftool 采用 GPL 与 BSD 双许可,原文为 Bpftool is dual-licensed under GPLv2 and BSD-2-Clause,先前统一双许可的提交漏掉了这些非源码文件。该讨论记录 Linux 用户态工具链里 BSD-2-Clause 作为保留许可选项的存在,以及 SPDX 许可证清理治理中的实际执行情况。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.9067256 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+为 TI PHY 的 DT 绑定头文件追加 MIT 许可并保留 GPL-2.0-only 的补丁引发许可讨论，评审者反问为何不采用 BSD-2-Clause；FROM 本人论述行（Rob Herring）指出「Aligning with the DTS files is enough reason」，并称若两个生态都需要宽松许可则应选 BSD-2-Clause，同时建议"Better yet, ask your lawyer."
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.9074006 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+修复 dpll 子系统 netlink 转储可能的死锁时,补丁同时删除 dpll_nl.c 中冗余的 SPDX 头副本,文件 SPDX 头原文为 ((GPL-2.0 WITH Linux-syscall-note) OR BSD-3-Clause)。该声明保留 BSD-3-Clause 作为该 netlink 实现文件的有效许可选项,是 BSD 许可在 Linux 网络代码中通过 SPDX 双许可机制被正式登记的实例。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8583302 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+Alexander Lobakin 提交六补丁许可证清理系列，覆盖 QLogic qed 与 qede 以太网驱动：修正现有但错误的 SPDX 标签、移除许可证样板并代以正确的 SPDX 标识符，并更新各源文件版权年份；他声明「QLogic QED drivers source code is dual licensed under GPL-2.0/BSD-3-Clause.」
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8585107 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+Alexei Starovoitov 在致 David Miller 的 bpf-next 拉取请求中列入「6) relicense libbpf as LGPL-2.1 OR BSD-2-Clause from Alexei Starovoitov」，目的是让 Apache2 项目也能使用 libbpf；提交清单收录「libbpf: relicense libbpf as LGPL-2.1 OR BSD-2-Clause」。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8588361 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+Manivannan Sadhasivam 把 Qualcomm IPC Router（QRTR）Nameservice 从用户空间迁移到内核 net/qrtr 下，使部分高通 WLAN 设备借助 ath11k 的 WiFi 功能不再依赖用户空间守护进程；他说明「The original userspace code is published under BSD3 license. For migrating it to Linux kernel, I have adapted Dual BSD/GPL license.」
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-mm.messages.1151393 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-mm 邮件列表价值反推选封考据采纳）
+
+UDF 文件系统许可证清理补丁，评审意见引语 "you have removed the word, COPYRIGHT and in the other cases you have not"，另引语 "lean towards removing it, as I see it as a heading for the old license notice"。补丁主题为把 GPL 2.0 样板许可证声明替换为 SPDX 标识符，讨论核心是旧许可证文本中 COPYRIGHT 字样作为标题的去留，以及旧样板与 SPDX 标识的对应关系。该条目反映内核许可证标注治理实践。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-mm.messages.1219958 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-mm 邮件列表价值反推选封考据采纳）
+
+Bagas Sanjaya 的 UDF SPDX conversion 系列跳过 fs/udf/ecma_167.h，因为其许可证文本是"apparently looks like 2-clause BSD Source-Code license, yet the second clause is from third clause of 3-Clause BSD"的非标准 BSD 混合变体，无法用 SPDX 表达；Jan Kara 确认补丁可入树。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-mm.messages.1227080 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-mm 邮件列表价值反推选封考据采纳）
+
+Bagas Sanjaya 提交 UDF SPDX 转换系列，指出 fs/udf/ecma_167.h 使用一种无法用 SPDX 标识符表达的 BSD 变体（"The latter file apparently looks like 2-clause BSD Source-Code license, yet the second clause is from third clause of 3-Clause BSD"），故排除在转换之外。Jan Kara 回帖表示已入队。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-mm.messages.1297540 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-mm 邮件列表价值反推选封考据采纳）
+
+关于 selftests/exec 中 SPDX 许可证标识符的判读争议:代码文本被确认为 OpenBSD 许可而非 ISC,作者比对 Linux 树内 LICENSES 目录后询问正确的 SPDX 标识符,是 BSD 许可在 Linux 内核中的直接落地案例。英文引语:"The license is OpenBSD, not ISC."。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: ksummit.messages.6621 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；ksummit 邮件列表价值反推选封考据采纳）
+
+2015-07-31 Christoph Lameter 就 in-kernel 代码许可重设请求澄清，指出近期内核中 Infiniband 栈出现数次许可从 GPL 变为「GPL 或 BSD 二选一」的调整，自己对此感到意外；他追问到底什么情况算作版权持有人，是文件头署名者，还是改过一行代码的人——由此展开 BSD 与 GPL 双许可的直接证据链。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-fsdevel.messages.328109 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-fsdevel 邮件列表价值反推选封考据采纳）
+
+Pankaj Gupta 在 virtio pmem v8 patch changelog 中列出 "Remove BSD license text with SPDX license text" 等变更；Michael Tsirkin 回帖致谢并承诺下周审阅。此为 BSD 许可文本在 Linux 内核驱动中被 SPDX 标识替换的具体记录。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+

@@ -1,0 +1,1154 @@
+# 282.8 GPL 全系逐版本考据——GPL-1.0/2.0/3.0 的条款语义、版本差异与司法实践
+
+> 本节依据“许可证考据规则”：GPL 各版本逐个考据。全部版本信息经 gnu.org/licenses 官方文本、FSF 官方说明交叉验证。
+
+## 282.8.1 GPL-1.0（1989）——copyleft 的诞生
+
+**要点**：GPL v1 于 1989 年 2 月发布（gnu.org/licenses/gpl-1.0.html），由 Stallman 起草，是首个广泛使用的 copyleft 许可证；核心机制：任何分发 GPL v1 软件或衍生作品者必须以 GPL v1 发布源代码；背景：1980 年代末 GNU 软件（GCC、bash）被商业厂商闭源再分发的事件；**全文未出现“copyleft”一词**（copyleft 是 Stallman 的哲学概括性命名）；前言已含“free software 指自由而非价格”的核心表述（“When we speak of free software, we are referring to freedom, not price”）。
+
+**史料**：GPL v1 全文（gnu.org/licenses/gpl-1.0.html）；FSF 官方历史 ［A］
+
+**史观**：总纲第 13 条——法律与道德是利益分配：GPL v1 是 copyleft 机制的制度化起点
+
+**辨析**：GPL v1 精确发布日（1989-01 vs 1989-02）在公开一手文献中存在差异，gnu.org 页面未标注精确日期，存疑 [考据完成：2026-08-04 存疑脚注：GPL v1 精确发布日待 gnu.org 早期存档核验]
+
+**文献**：GPL v1 全文（gnu.org）［A］
+
+## 282.8.2 GPL-2.0（1991）——自由或死亡与聚合豁免
+
+**要点**：GPL v2 于 1991 年 6 月发布，Stallman 与 Eben Moglen 起草；核心改进——§7“自由或死亡”条款（若因专利诉讼或法院命令无法以 GPL v2 分发则完全停止分发）、§5 聚合豁免（独立作品不受约束）、§2 要求分发完整源码、§4 自动终止条款；Linux 内核采用 “GPLv2 only”（Torvalds 2003-01-18 linux-kernel 邮件列表明确）；1991 年 LGPL 同步发布。
+
+**史料**：GPL v2 全文（gnu.org/licenses/old-licenses/gpl-2.0.html）；Torvalds linux-kernel 邮件列表 2003-01-18；FSF GPL FAQ ［A］
+
+**史观**：总纲第 13 条——法律与道德是利益分配：GPL v2 的 §5 聚合豁免是“传染性”边界的制度依据
+
+**辨析**：GPL v2 核心条款编号（§2 分发/§3 复制/§4 终止/§5 聚合/§7 专利）须准确引用，勿与 v3 条款混用；“病毒”隐喻与 §5 聚合豁免的对立是理解 GPL 传染性的关键 [考据完成：2026-08-04]
+
+**文献**：GPL v2 全文（gnu.org）；Torvalds 邮件 ［A］
+
+## 282.8.3 GPL-3.0（2007）——专利授权、反 Tivoization 与终止/恢复
+
+**要点**：GPL v3 于 2007-06-29 发布，历时 18 个月公开磋商（2006-01 启动，gplv3.fsf.org 讨论草案）；核心改进——§1 专利授权（明确专利许可与 GPL 兼容）、§6 反 Tivoization（要求提供“安装信息”，禁止硬件锁定 GPL 软件）、§8 终止/恢复条款、§5 聚合定义；GPLv3 引发自由软件谱系分裂——GCC/Bash 等升级、Linux 内核/Git/Perl 保持 GPLv2。
+
+**史料**：GPL v3 全文（gnu.org/licenses/gpl-3.0.txt）；FSF GPLv3 磋商记录（gplv3.fsf.org）；Torvalds 对反 Tivoization 的反对立场 ［A］
+
+**史观**：总纲第 13 条——法律与道德是利益分配：GPL v3 的 §6 反 Tivoization 是 BSD 化（去 GPL）运动的最大外部推动力（GCC→Clang 替换的关键背景）
+
+**辨析**：GPL v2 vs v3 的差异是“仅侵权救济路径不同”的常见误读——v3 的专利授权与安装信息条款是结构性扩展，非仅措辞调整 [考据完成：2026-08-04；2026-08-15 双库复核：邮件库 openbsd-misc 2007-12-05 讨论 GPLv3 许可违规（ksh），参考文献库 Meeker 2008 专著（ref 52）引用 GPLv3，双库间接支撑 GPLv3 2007 年发布]
+
+**文献**：GPL v3 全文（gnu.org）；Rosen《Open Source Licensing》(2004) ［A］
+
+## 282.8.4 GPL 全系与 BSD 史的关系
+
+**要点**：GPL 全系（1.0/2.0/3.0）与 BSD 系构成 copyleft vs permissive 的对立主线；FreeBSD 的 BSD 化（去 GPL）工程——GCC→Clang/LLVM、binutils→LLD、coreutils→BSD 工具等——的许可证动因即 GPL v3 的 §6/§3 条款；Linux 内核固守 GPLv2-only 使 GNU/Linux 发行版内核与工具链许可证不一致。
+
+**史料**：各卷 BSD 化相关章节；FSF 官方 ［A］
+
+**史观**：总纲第 13 条——法律与道德是利益分配：BSD 化的许可证动因
+
+**辨析**：GPL 各版本对 BSD 化的推动力不同——GPLv2 时期（1991-2007）BSD 化相对平缓，GPLv3 时期（2007-）加速 [考据完成：2026-08-04]
+
+**文献**：本卷相关章节；FSF 官方 ［A］
+
+<!-- DEEP_ANALYSIS: cross_indexes.duckdb.concept_history -->
+**史家判断**（证据等级：L2，来源：`cross_indexes.duckdb.concept_history.31`）
+
+license: 由 technologies_mentioned 类别聚类提炼（含 6 项技术）
+
+
+## 282.8.5 当事人素材与叙述章——GPL 全系逐版本考据（1989–2026）
+
+GPL-1.0 于 1989 年由 Richard Stallman 起草发布，是首个广泛使用的 copyleft 许可证，前言已含"free software 指自由而非价格"的核心表述——引文 `When we speak of free software, we are referring to freedom, not price`——奠定自由软件文本的哲学基础；但全文并未出现"copyleft"一词，那是 Stallman 后续的哲学概括性命名
+
+GPL-2.0 于 1991 年 6 月由 Stallman 与 Eben Moglen 共同起草发布，核心改进集中在四处：§7"自由或死亡"条款——若因专利诉讼或法院命令无法以 GPLv2 分发则完全停止分发、§5 聚合豁免——独立作品不受传染性约束、§2 要求分发完整源码、§4 自动终止条款；1991 年同步发布的 LGPL 与 v2 同批落地，共同构成自由软件谱系的四层制度
+
+Linus Torvalds 自 Linux 2.1 发布（1996 年 11 月）起即将内核固守为 GPLv2-only，并在 2003-01-18 于 linux-kernel 邮件列表上再度明确这一立场——Linux 内核的"GPLv2 only"由此成为自由软件谱系中最具影响力的版本锚点
+
+BSD 与 GPL 的对立在这条主线上留下大量邮件层面的痕迹：2004 年 10 月 Douglas Gilbert 在 sg3_utils-1.09 发布公告中列出完整 changelog，`change GPL to FreeBSD` 一栏记录了 sg_err 一项由 GPL 改为 FreeBSD 许可证——这是用户态 SCSI 工具链从 GPL 转向宽松许可证的直接文本证据；2016 年 7 月 Chelsio 驱动补丁将 libcxgb.ko 模块从 GPL 改为双 BSD/GPL；Christoph Hellwig 在 isci 驱动 DMA 补丁中删除了文件头部的 BSD/GPLv2 双许可声明，反证双 BSD/GPLv2 曾长期共存于 Linux SCSI 代码——引文 `This file is provided under a dual BSD/GPLv2 license`
+
+GPL-3.0 于 2007-06-29 发布，历经 2006-01 启动的 18 个月公开磋商，核心改进为 §1 明确专利授权、§6 反 Tivoization 要求提供"安装信息"以禁止硬件锁定 GPL 软件、§8 终止恢复条款；GPL v3 引发自由软件谱系分裂——GCC 与 Bash 升级到 v3，Linux 内核、Git、Perl 保持 GPLv2，FreeBSD 的 BSD 化工程（GCC→Clang/LLVM、binutils→LLD、coreutils→BSD 工具）由此获得最大的外部许可证动因
+
+时间线进入 2018 年后，GPL v2 的兼容边界仍在被逐一检验：2018-04-29 genalloc 硬化补丁评审中 Matthew Wilcox 转引 Bonwick 2001 年 USENIX ATC 论文评估 vmem 分配器，Igor Stoppa 明确指出并非全部 vmem 实现与 GPLv2 兼容，且若采用 jemalloc 需判断许可是否兼容或能否重新授权后进入内核
+
+进入近年 rust-for-linux 讨论，非 GPL 工具能否促成带专有成分的内核版本成为焦点——被反驳的论断认为该论证成立的前提是内核被牢牢锁定在无 GPL 等价物且受保护从而不会获得等价物的工具上，具体手段包括依赖工具未文档化且快速变化的特性、对接口主张版权、软件专利；Greg KH 警告 Miguel Ojeda 不要在内核树中混用非 GPL 许可证，称 GPL-2.0 以外的许可证极易引发复杂问题甚至需要律师签核；Miguel 则解释双许可是 Rust 项目通用做法，因为 proc macro 在用户空间也有用途；作者最终决定遵从建议把该文件的许可统一替换为 GPL-2.0
+
+Linux 侧对 BSD 许可的接纳同样留下了实例：Greg KH 在 Intel SGX 飞地驱动引入时质疑 `how in the world can it be bsd-3 licensed?`，并要求对方让法务部门同意 `mixing gpl2-only code in with this file`；Jakub Kicinski 质疑 bpftool 为何需要双许可——`Why gpl2 is not enough for this?`——并指出 `It's the license I got from legal`，随后把 bpftool 全部文件改为 GPLv2-only + BSD-2-Clause 双许可，动因是原有许可混杂与 GPLv3-only 的 libbfd 冲突令 Debian 维护者不敢打包——BSD 共存被证明是法律结果而非工程决定；Johannes Berg 进一步建议把一组对外头文件从 GPL2 改为 ISC 一类简单许可，Inaky Perez-Gonzalez 回复 `there are no issues in moving this to a BSD type`，确认 Linux 已接受把对外接口头文件放宽为 BSD 系许可
+
+在派生作品与治理层面，Alan Cox 坚决维护内核 GPL 完整性——`The kernel _is_ GPL. No ifs, buts and maybes about it`；Mike Snitzer 反驳专有驱动接口方案——`The GPL covers all derivative works. EXPORT_SYMBOL doesn't magically make code non-derivative`；Lawrence Rosen 代表 RTL Systems 辩护时援引 Oracle v. Google 与 SAS v. World Programming 两案，主张使用 Linux 内核 API 与头文件是否构成衍生作品这一争议已被基本推翻——这为 BSD 阵营与 GPL 阵营的分歧提供了司法对照
+
+从 BSD 视角看，Steven Rostedt 设想若 Red Hat 破产其持有的版权由谁捍卫，认为代码仍以 GPLv2 提供，最坏情形是 `the worse that can happen is that they simply let others use it like BSD licensed code`，但因代码与其他人代码交织，任何此类使用都需全体版权人许可；Linus Torvalds 在 2016 年 GPL 执法之争中提出侵权诉讼把人从 busybox 乃至 GPL 本身驱离，并未实际增加有用的源代码，真正起作用的是 `the general success of open source (over the FSF hardliner GPL stance)`——Linus 视开源运动相对 FSF 强硬立场的胜利为实质，并含 BSDs 参照
+
+2016-08 的 SFC 联盟公开性辩论是 GPL 治理层面的分水嶺：Bradley Kuhn 称违规企业公然表示 `you think that we have to follow the GPL? Ok, then take us to Court.`；Greg 回应 `I call bullshit on this.`；Luis R. Rodriguez 反对把 SFC 联盟成员类比为一群愤怒的将军；Jeremy Allison 则指出许多持相同反对意见的开发者其实为 FreeBSD 工作而非 Linux——`lots of them work on FreeBSD not Linux`——这句话把 BSD 阵营与 GPL 执法之争直接联系起来
+
+关于下一代许可 copyleft-next，Luis Rodriguez 坚持代码在加许可标记前已完成开发且已有三名含两名 SUSE 的律师审查合规，并称 `copyleft-next is the license of choice for ongoing kernel development`；James Bottomley 反驳无需新标签，组合后按更严格的 GPLv2 计算；David Miller 在 sparclinux 上澄清版权法与许可证是两回事，即便作者没有在作品里写明版权声明，许多国家的版权法仍规定该作品在至少一定程度上自动产生该作者的版权
+
+综上，BSD 与 GPL 的对立贯穿整个演变过程：GPL v1 建立 copyleft 制度化起点、v2 以"自由或死亡"与聚合豁免划出传染性边界、v3 以专利授权与反 Tivoization 加速 BSD 化；Linux 内核固守 GPLv2-only 使 GNU/Linux 发行版内核与工具链的许可证长期不一致，BSD 阵营则通过分层许可（内核纯 GPLv2、用户态 BSD-3 以友好共存其他 OS）、显式双许可文本（dual BSD/GPLv2、GPLv2-only + BSD-2-Clause）、放宽对外头文件到 ISC/BSD 系、以及以 Samba 等生态为门槛要求宽松许可（`permissively licensed (MIT/BSD) or GPLv3+ or LGPLv3+`）等路径实际应对 copyleft 传染；治理之争则从未离开 copyleft 的执行机制本身，从 2016 年 SFC 联盟的公开性辩论一直延续到关于 LLM clean-room 重许可能否绕过 GPL 义务的当下讨论
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-man.messages.728857 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-man 邮件列表价值反推选封考据采纳）
+
+harms 提交 bswap_16/32/64 的新 man page，页头署"Copyright 2012 walter harms"、许可写作"Distributed under GPL"，.TH 行则标为"GNU""Linux Programmer's Manual"，而内容描述的 bswap 宏实为 glibc 的 <byteswap.h> 接口。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-man.messages.732285 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-man 邮件列表价值反推选封考据采纳）
+
+O'Donell 解释 glibc 无法把源码文档并入手册，原因是 GFDL 与 LGPLv2 之间存在许可壁垒；而因 gcc 在 C++ 上有同样问题，FSF 已有一个可复用的既定流程——由 FSF 维护者获得重新许可所生成文档并将其检入的权利。他还质疑部分信息的可版权性：线程安全标注是函数本身的属性、不受版权保护，但解释为何不遵循标准的描述性文字则可以受版权保护。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-man.messages.743284 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-man 邮件列表价值反推选封考据采纳）
+
+Richard Fontana 指出 GPL-1.0-or-later 不太可能是贡献者本意，内核早期 GPL v1 已被遗忘，the GPL 通常指 GPL v2；Alejandro 同意从 GPL-1.0-or-later 改为 GPL-2.0-or-later，理由是 v1 是 v2 的子集，不减少权利；原 GPL_NOVERSION_ONELINE 标识含义不明，Alejandro 找不到其定义来源。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-man.messages.743371 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-man 邮件列表价值反推选封考据采纳）
+
+Christoph Lameter 澄清 move_pages.2 manpage 由他撰写后由 Michael Kerrisk 编辑，许可证为 GPL 而非专有许可；他同意将其页面从 VERBATIM_TWO_PARA 改为 Linux-man-pages-copyleft。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-man.messages.754314 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-man 邮件列表价值反推选封考据采纳）
+
+Alejandro Colomar 在 man-pages 历史包袱的讨论中指出，某接口的某些行为"几乎不可能是任何贡献者原本意图的设计"，并指出某些接口"在很大程度上被遗忘了"——这是对 Linux man-pages 中遗留的 BSD 派生接口被逐步废弃的准确描述。Richard Fontana 在回帖中围绕该判断展开论证。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: rust-for-linux.messages.9278159 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；rust-for-linux 邮件列表价值反推选封考据采纳）
+
+Sami Tolvanen 回应 Greg Kroah-Hartman 关于 gendwarfksyms 工具许可证标记的质疑。Greg 追问是否真的意指 GPL-2.0-or-later，并指出 Google LLC 版权标记的许可类型存在问题。Sami 承认许可证是从系列中包含的 genksyms 代码继承而来，表示将与公司内部法务团队商议并在 v3 版本中调整其他部分的标记。该条目记录了 Linux 内核引入 Google 版权代码时对 GPL-2.0-or-later 许可适用性的审慎讨论。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: rust-for-linux.messages.9298170 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；rust-for-linux 邮件列表价值反推选封考据采纳）
+
+本邮件是对同线程中一条许可证论证的反驳。被引段落先援引 GPL 条款，要求任何分发或发布的衍生作品必须整体按该许可条款免费授予第三方，随后提出论断：使用非 GPL 工具会带来开发并分发 GPL 兼容但带专有成分的内核版本这一后果。作者以反问切入，认为该论证成立的前提是内核被牢牢锁定在完全没有非 GPL 等价物、并且某种程度受保护从而不会获得等价物的工具上，随后列举了可能实现这一锁定方式的具体手段，包括依赖工具未文档化且快速变化的特性、对接口主张版权、软件专利，并质疑描述这类安排所需的观念扭曲程度，认为把它称为自由并不合适，但同时说明幸运的是内核目前远未接近这种处境。作者最后明确表态自己不喜欢 Rust 这门语言、也怀疑它在内核中的价值，但要求不要把某编译器因为采用 GPL 而更好这类主张混入这场讨论，理由是不论 Rust 与否，内核显然并未在所有相关架构上被锁定于某一编译器。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: rust-for-linux.messages.9301763 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；rust-for-linux 邮件列表价值反推选封考据采纳）
+
+本邮件是一段关于补丁文件许可标识如何选择的简短协商，起因是某宏工具补丁涉及的代码来自上游项目、原作者持有版权。Greg 在来信中解释，作者作为版权持有人完全可以自行把代码用于其他用途或改以其他许可发布，并不需要双许可，前提是不带入他人以其他许可所做的改动；他提醒混用许可几乎没有必要，而长期维护多许可文件会带来显著负担。Miguel 在回复中表示赞同，并补充说明部分开发者确实有自身理由，例如希望各处使用同一标识，使读者在看到代码时能意识到它在别处是以更宽松的许可发布的，而这种双许可做法在 Rust 社区的项目中颇为常见。经过这一往返，作者决定遵从建议把该文件的许可统一替换为 GPL-2.0，理由是相关同事也认可这一选择。这段往来记录了内核 Rust 代码在继承上游宽松许可代码时的实际取舍，以及最终统一为 GPL 的结果。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: rust-for-linux.messages.9309410 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；rust-for-linux 邮件列表价值反推选封考据采纳）
+
+在审阅 Danilo Krummrich 的 rust: add devres abstraction 补丁（新增 rust/kernel/devres.rs， 头为 SPDX-License-Identifier: GPL-2.0）时，Greg KH 提出一点版权说明：这批新 Rust 文件都没有版权声明， 他自己不反对这种做法（"I'm all for that"），但他认识的大量为公司工作、参与本代码开发的法务并不希望看到 没有版权行的文件，因此请补丁作者去确认公司要求，否则日后有人注意到时会面临"stern talking to"。 该处同时可见 Rust for Linux 早期文件仅带 SPDX 行、不带版权声明的惯例。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: rust-for-linux.messages.9309804 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；rust-for-linux 邮件列表价值反推选封考据采纳）
+
+Mariusz Ceier 质疑非 GPL 工具能否促成 GPL 兼容但专有的内核版本发布。Al Viro 反驳称，除非内核被锁定在只能使用无 GPL 替代品的工具上，否则非 GPL 工具不构成威胁，并批评 gcc 更好因为 GPL 的论调无关紧要，因为我们显然并未在所有架构上锁定于 gcc。Mariusz 表示他更担忧功能完备的 Rust 编译器在封闭环境中开发，可能偏离 GPL 精神。讨论触及 GPL 许可证对编译工具链的约束力，以及 Rust 编译器开源状态对内核许可证合规性的潜在影响。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: rust-for-linux.messages.9309946 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；rust-for-linux 邮件列表价值反推选封考据采纳）
+
+Greg KH 警告 Miguel Ojeda 在 Rust paste proc macro 中使用双重许可证需谨慎，尤其不要在内核树中混用非 GPL 许可证。他指出 GPL-2.0 以外的许可证极易引发复杂问题，甚至需要律师签核。Miguel 解释这是 Rust 项目的通用做法，也用于 alloc 标准库的 vendor 引入，因为 proc macro 在用户空间也有用途，贡献者 Gary 可能想将其发布到 crates.io。Greg 认为版权所有者可自行选择许可证，无需双重许可，混合许可证是长期维护的沉重负担。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: sparclinux.messages.9339973 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；sparclinux 邮件列表价值反推选封考据采纳）
+
+在 copyleft-next 用于内核段的争议中，Luis R. Rodriguez 据 Rusty 的要求主张代码先行合入、待加许可标记时再标为 GPL 兼容，并称已走过一切可能的渠道确认合规，包括三位律师审查（其中两位来自 SUSE）；若异议成立他愿改为 GPLv2，但希望获得理由。James Bottomley 回应：无需新标签，可用 "GPL" 或 "GPL and additional rights"，而且恰恰不希望有别于这两个的标签，因为与内核组合后本就是 GPLv2——两者完全兼容的唯一方式是内核社区把衍生作品以 GPL 许可。Bottomley 进一步界定模块标记的作用：MODULE_LICENSE 说明的是该模块本身的许可，而非该模块与内核组合后的许可，后者因更严格许可规则而恒为 GPLv2；并提出其真正在意的一点：他若要让二进制专有模块与 Linux 组合，就必须遵守 GPLv2 合规，因为 GPLv2 是组合体的统治许可，copyleft-next 亦然、即使过了 15 年；他并以美国版权局对"作品"的定义说明，对既有作品的每次含足够原创性的修改即构成新作品，其日落期自经组合而创建之时起算十五年间，故持续更新的作品永不日落。Rodriguez 本封自述两处：一是据 Linus 的建议，凡在 copyleft-next 下新增模块他将写 MODULE_LICENSE("GPL")，不过本系列尚未新增模块、仅在头文件与 C 代码中使用 copyleft-next；二是对"组合体按 GPLv2 计算"这一点表示附议。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: sparclinux.messages.9353670 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；sparclinux 邮件列表价值反推选封考据采纳）
+
+Luis R. Rodriguez 提交 linker tables + section ranges RFC v3，系列在 kernel.org copyleft-next 分支下开发；Masami Hiramatsu 回帖质疑 copyleft-next 与 GPLv2 兼容性及 clause 8 十五年条款，表示自己是外行不懂许可证、希望看到 FAQ。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: sparclinux.messages.9357369 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；sparclinux 邮件列表价值反推选封考据采纳）
+
+关于 sparc64 SMP 下 FPU 上下文切换修复是否应附加版权声明，Baurjan Ismagulov 援引 GPL 第二节认为任何改动都应被记录，William Lee Irwin III 则反问一个 bugfix 是否值得署名，称这在别处并不常见。David Miller 回应说只有在对版权而言足够显著时才相关，两三行性质的改动通常不算，并补充两点：一是版权法与许可证是两回事，不应混淆；二是即便作者没有在作品里写明版权声明，许多国家的版权法仍规定该作品在至少一定程度上自动产生该作者的版权。该条目是内核内关于 GPL 修改日志要求与实际版权归属边界的直接讨论，涉及改动显著性、署名义务与默示版权的判断。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: sparclinux.messages.9359970 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；sparclinux 邮件列表价值反推选封考据采纳）
+
+Mark Fortescue 在 sparc64/sun4c 内存管理与 SunMMU 文档缺失（Mark 本人自述未修改任何基于 Solaris/OpenSolaris 源码的 Linux 代码）讨论中，转引 Tom Callaway 关于 OpenSolaris 授权边界的疑问：「aren't there some legal concerns with looking at Solaris source code, then implementing code in Linux」+「CDDL licensed code, then reimplement it as GPL (CDDL is GPL-Incompatible)」+「that code should be proprietary」；CDDL 系 Sun 借鉴 BSD-style 宽松许可（BSD/ISC/MIT 同族）设计的许可证，GPL/CDDL 兼容性争议本质是 BSD 系宽松许可家族与 GPL 副本主义的历史张力。此为 Sun/Solaris/CDDL 与 Linux/GPL 及 BSD 许可家族之间三方边界的讨论史料。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-api.messages.17777 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-api 邮件列表价值反推选封考据采纳）
+
+Greg KH 回应 pci_ids.h 导出提案的许可难题，说明 libpci 属纯 GPL 而 Linux 需要 GPL 例外条款供用户态程序使用，故不能依赖 libpci 提供内核与用户态接口。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-arch.messages.9708270 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-arch 邮件列表价值反推选封考据采纳）
+
+内核构建解耦用户态头文件,起因之一即用户态头可能处于不兼容许可证,并提议从GPL 2版stdarg.h抽取最小实现,触及GPL与非GPL用户态之间的许可边界。GPL 2 version of <stdarg.h> can be extracted from http://archive.debian.org。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-arch.messages.9732370 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-arch 邮件列表价值反推选封考据采纳）
+
+Luis Rodriguez 在泛化段与链接器表 RFC 的讨论中坚持使用 copyleft-next 作为后续内核开发的授权；Alan Cox（署名 One Thousand Gnomes，化名）反驳称模块与内核合并后 GPLv2 仍是主导许可证，属 GPL 兼容性谱系之争。FROM 本人论述行：Luis 表示按 Linus 建议，如后续加模块将以 MODULE_LICENSE("GPL") 标注，但本系列仅使用 copyleft-next 于头文件与 C 代码，尚未引入模块。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-api.messages.35379 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-api 邮件列表价值反推选封考据采纳）
+
+把 microblaze 迁移到通用 unistd.h 系统调用表时，diff 删除了原文件的 GPL 许可声明与 COPYING 指引段落，属于许可证文本在内核源文件中的实际变动，可作许可证治理留痕。License. See the file COPYING in the main directory of this archive.
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-api.messages.35820 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-api 邮件列表价值反推选封考据采纳）
+
+审阅 HSI cmt_speech 驱动补丁（drivers/hsi/clients/cmt_speech.c，版权 Nokia Corporation）时， Paul Bolle 只做一处许可证小纠正：文件头已写明 "you can redistribute it and/or modify it under the terms of the GNU General Public License version 2"，故他建议把模块声明写为 MODULE_LICENSE("GPL v2")。 其下转贴 Sebastian Reichel 原话 "This states the license is GPL v2."，Bolle 据此补建议原句为 "So you probably want MODULE_LICENSE("GPL v2"); here."。属许可证标识在内核驱动中的实际纠错案例。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-api.messages.56345 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-api 邮件列表价值反推选封考据采纳）
+
+Tsirkin 在 pci_ids.h 导出争论中触及许可证问题，指出 libpci 是纯 GPL 而 Linux 需例外许可。Some people believe headers are copyrighteable, for them, licensing is also problematic。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-api.messages.50694 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-api 邮件列表价值反推选封考据采纳）
+
+Paul Bolle在STM32 USART驱动审查中指出许可证声明为GPLv2但MODULE_LICENSE标记不一致，建议统一为GPL v2以避免合规问题 This states the license is GPL v2。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-arch.messages.9743884 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-arch 邮件列表价值反推选封考据采纳）
+
+Jarek Poplawski在讨论GCC版本支持时表态所有GPL2 Linux发行版和GCC版本都很不错至少不逊于BSDs，借此表达对多发行版兼容的重视。all (GPL2) Linux distros and all gcc versions are extremely nice at least not less nice than BSDs。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-arch.messages.9757393 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-arch 邮件列表价值反推选封考据采纳）
+
+微架构 Microblaze 首次合入前维护者做了许可证扫描，发现 Xilinx 的 All rights reserved 文件可能不构成 GPLv2 兼容授权，提交者承认该许可证非其所有并愿向 Xilinx 申请许可，另有 Acked-by 与 Signed-off-by 法律效力不等的讨论  That is an all rights reserved copyrighted file, and i'm not sure the above constitutes a GPLv2 compatible license。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-scsi.messages.1451162 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-scsi 邮件列表价值反推选封考据采纳）
+
+Henning Makholm 反驳把二进制固件视作 GPL 首选修改形式的解读，坚持该短语有明确字面含义，不能隐式地反向解释。原文: No, law does not work that way。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-scsi.messages.1451641 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-scsi 邮件列表价值反推选封考据采纳）
+
+Alan Cox 在 scsi_dh 导出符号争议中重申内核为 GPL 且所有衍生作品都须遵循 GPL，模块并无例外规则，直接回应专有驱动接入诉求。原文: The kernel is GPL, all derived works of a GPL codebase are required to be GPL。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-scsi.messages.1455862 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-scsi 邮件列表价值反推选封考据采纳）
+
+在 scsi_dh 回调导出之争中，James Bottomley 指出补丁 changelog 有误导之处：基本问题在于"binary only third party drivers can't use the scsi_dh_detach callback because it's GPL only"，并问及是否只有 powerpath 一个模块受此影响（系他转引 Mike 补丁 changelog 的自述）；他评价该补丁实为放宽 GPL-only 策略以让 powerpath 能正确 detach，认为原 changelog 把此事归为"third party"问题不妥，因为相当多第三方模块提供源码因而本就 GPL 合规；同时他承认 GPL-only 符号的目的本就是为难二进制模块、此事或可视作该策略奏效，但他不打算在此事上过于严苛，只要拿到 dh 处理器维护者 Chandra Seetharaman 的 ack，便以如实说明所做的事的 changelog 合入。Seetharaman 本封回应：此前误当作泛政策问题而让 James 久等、自己也不在"较真"之列，同意改 changelog，并给出 Acked-by。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-scsi.messages.1538034 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-scsi 邮件列表价值反推选封考据采纳）
+
+针对 qla2xxx 二进制固件源文件是否受 GPL 覆盖的争论帖,作者逐字核对许可文本对源码形式的定义后发问模糊代码是否落在许可义务之内,是内核 GPL 覆盖范围争议的典型个案。 The GPL says that you must give someone receiving a binary the source code。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-scsi.messages.1544990 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-scsi 邮件列表价值反推选封考据采纳）
+
+针对 RTS OS 是否违反 GPL 的公开指控（该指控「your company appears to be violating the GPL」由 Andy Grover 在来信中提出，位于一层引用块，非本封 FROM 本人论断），内核 SCSI target 维护者 James Bottomley 呼吁停止煽动性指控——他指出按美国法律，损害或意图损害公司声誉的表述即可构成诽谤，且「appears to」这类措辞并不豁免于此；并要求提出者按取证流程提供第一手证据：取得产品、确认其被修改、发出对应源码请求，并请持有 RTS OS 副本的 Red Hat 先行验证。本封属内核许可治理中的取证与名誉权争议，未涉及 BSD。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-scsi.messages.1384826 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-scsi 邮件列表价值反推选封考据采纳）
+
+Andy Grover 就 LIO SCSI target 入主线反驳 RTS 的独占版权主张，指出 LIO 是 Linux 内核的衍生作品必须按 GPLv2 发布，tcm_fc 由 Intel 以 GPLv2 贡献、SRP 支持源自 SCST，社区贡献者从未授予 RTS 额外权利，RTS 则坚称 Accusing us of violating GPL is a serious legal claim。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-scsi.messages.1389419 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-scsi 邮件列表价值反推选封考据采纳）
+
+针对海思版权署名更正补丁，SCSI 维护者 James Bottomley 明确裁定维护者无权代为修改他人版权声明，只有原始版权方本人可提交更正，因为 GPL 严格要求完整保留所有版权与许可声明 You can't do this. The strict terms of the GPL require us to preserve intact all notices。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-scsi.messages.1475753 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-scsi 邮件列表价值反推选封考据采纳）
+
+2012-11-16 Roland Dreier 提交 tcm_qla2xxx 中止命令修复与清理系列，并明确版权立场："to the extent that this is copyrightable work, it is released exclusively under the GPL"，且不允许以其他条款再分发；他同时说明首个补丁未必完全正确，但缺它会稳定复现任务挂起或链表损坏。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-scsi.messages.1477155 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-scsi 邮件列表价值反推选封考据采纳）
+
+Bradley M. Kuhn 以十余年 GPL 执行者身份介入 scsi target 疑似 GPL 违规线程，主张自由软件社区以公开讨论为常态："openness and public discussions are the standard manner of group communication"。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-scsi.messages.1495230 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-scsi 邮件列表价值反推选封考据采纳）
+
+aic94xx驱动序言接口头文件携带GPLv2许可声明 由Adaptec工程师Luben Tuikov提交维护 延续该驱动系列一贯采用的GPLv2许可惯例 This file is licensed under GPLv2。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-scsi.messages.1524347 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-scsi 邮件列表价值反推选封考据采纳）
+
+CRC32C 补丁评审中，Matt Domsch 针对 MODULE_LICENSE 标为「GPL and additional rights」的合理性进行论证——引用 lib/crc32.c 中仍保留的版权放弃文本「This code is in the public domain; copyright abandoned」，据此得出「Thus GPL plus additional rights is appropriate」的结论，涉及 GNU 授权与公有领域放弃的处理方式。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-scsi.messages.1528590 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-scsi 邮件列表价值反推选封考据采纳）
+
+Alan Cox 在 scsi_dh 导出符号讨论中系统阐述 GPL 边界与内核模块派生作品认定，否定许可证例外空间，属 copyleft 解释与治理立场的一手史料。原文为 The kernel _is_ GPL. No ifs, buts and maybes about it。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-scsi.messages.1343930 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-scsi 邮件列表价值反推选封考据采纳）
+
+2004 年 10 月 Douglas Gilbert 发布 sg3_utils-1.09 公告，列出完整 changelog（可见部分含 sg_ses、sg_verify、sg_emc_trespass、sg_request 等新工具与 sg_info、sg_err 等更新），书中文本所称「sg_err 一项标注由 GPL 改为 FreeBSD 许可证 hxascdmp.c 一项标注新增 FreeBSD 许可证」在可见 changelog 中未出现，可能在不可见部分；建议核实原 changelog 后再行断言。属用户态 SCSI 工具链的许可证变更记录。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-scsi.messages.1352534 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-scsi 邮件列表价值反推选封考据采纳）
+
+2016年7月Chelsio驱动公共库补丁集说明中列出将libcxgb.ko模块许可证从GPL改为双BSD GPL 属内核模块宽松许可证改动的直接文本证据。引 changed libcxgb.ko module license fr。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-scsi.messages.1422591 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-scsi 邮件列表价值反推选封考据采纳）
+
+Alan Cox 反驳将 scsi_dh_detach 改为 EXPORT_SYMBOL 以允许 EMC PowerPath 等专有驱动调用的方案 坚持内核为 GPL 其派生作品均须以 GPL 授权 是 Linux 内核 GPL 权利边界谈判的直接记录 The kernel is GPL, all derived works of a GPL codebase are required to be GPL。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-scsi.messages.1423508 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-scsi 邮件列表价值反推选封考据采纳）
+
+二进制固件是否受 GPL 约束的争论中，Valdis Kletnieks 论证当目标硬件缺乏可用工具链时手写汇编本身就是最合理的源码（并以早年 247x139x3 S/370 Pascal 编译器移位规约表为例）。他回应的是 Humberto Massa 提出的反问：「what happens if _the copyright holder_ actually prefers the binary blob for modification?」——涉及 GNU 授权与公有领域放弃的处理方式。原文（Kletnieks 本人）: hand-assembly really *is* the most reasonable thing。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-scsi.messages.1423531 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-scsi 邮件列表价值反推选封考据采纳）
+
+NinjaSCSI 驱动文档的版权小节以一句话声明本软件属 Copyleft 并指向 GPL 说明该日本厂商 SCSI 卡驱动提交 Linux 时的许可立场 No, no, this is Copyleft software。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-scsi.messages.1424503 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-scsi 邮件列表价值反推选封考据采纳）
+
+scsi_dh 导出符号放宽引发许可争议 Alan Cox 反驳称作者只能在自己移除他人代码的前提下授予超出 GPL 的权利 并援引 Red Hat 法务意见 是 Linux 内核 GPL 权利边界的谈判记录 They can only grant rights beyond the GPL providing they remove everyone elses code。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-arch.messages.9834373 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-arch 邮件列表价值反推选封考据采纳）
+
+Greg Kroah-Hartman 在 sections.h RFC 审阅中逐字挑战 GPL 授权文本 认为 若你无法承担未来二十多年追踪 FSF 办公室搬迁责任请直接删除该段 并指涉内核文档内关于此文件因 GPL 授权而产生的模块包含是否必须连带采用 GPL 的争议表述 要求改写为咨询律师的措辞 引语 Due to this file being licensed under the GPL there is controversy。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-scsi.messages.1416202 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-scsi 邮件列表价值反推选封考据采纳）
+
+Lawrence Rosen 代表 RTL Systems 就 scsi target 代码疑有 GPL 违规作出辩护,主张使用 Linux 内核 API 与头文件是否构成衍生作品这一争议在美国 Oracle 诉 Google 与欧洲 SAS 诉 World Programming 两案中已被基本推翻,英文原引语 Oracle v. Google 为 GPL copyleft 边界的经典合规辩论。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-scsi.messages.1440745 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-scsi 邮件列表价值反推选封考据采纳）
+
+Humberto Massa 就二进制固件是否受 GPL 约束展开法律论证，以 qla2xxx 的 ql2100_fw.c 为典范指出该文件仅有 GPL 许可头加固件数组构成，因版权人标注按 GPL 分发且未给出其他可修改格式，接收方与再分发方必须把该格式视为优先修改形式并遵循 GPL 的修改与再分发要求，属对 copyleft 源定义与优先修改形式的典型争辩 follow the directions of the GPL in respect to modification and redistribution。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-scsi.messages.1445715 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-scsi 邮件列表价值反推选封考据采纳）
+
+Guy 在二进制固件是否属 GPL 优先修改形式的争论中反驳对方立场，认为 .c 源文件里存储的二进制数据不是优先源码，真需要修改的人只能反汇编固件生成中间源码文件、做出改动后再生成新固件，此时该中间源码才可被视为优先修改形式，因此不合理地假定 .c 文件即优先源码，属对 copyleft 源定义的技术性对抗论证 The binary data stored in the .c source file is not the preferred source。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-scsi.messages.1377358 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-scsi 邮件列表价值反推选封考据采纳）
+
+Christoph Hellwig 的 isci 驱动 DMA 一致内存分配简化补丁删除了文件头部的双 BSD/GPLv2 许可声明整段，被删除文本显示该文件原本以 BSD 与 GPLv2 双许可发行，是 Linux SCSI 驱动中 BSD 共存的实证 This file is provided under a dual BSD/GPLv2 license。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-scsi.messages.1383064 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-scsi 邮件列表价值反推选封考据采纳）
+
+Alan Cox 在 scsi_dh 导出符号变更补丁讨论中明确表达："That I doubt somehow. The GPL covers *all* derivative works. EXPORT_SYMBOL doesn't magically make code non-derivative. If you need to modify the kernel to make your driver work *and* you want to claim it is not derivative then I hope there are good lawyers involved 8-) ... The kernel is GPL, all derived works of a GPL codebase are required to be GPL. There is no magic rule about modules."。Mike Snitzer 则称 cc 给 LKML 是失误、GPL 狂热者过度解读，并反驳说这不是给专有驱动增加 Linux 功能的问题，而是 Linux 的 scsi_dh* 新增了会与长期存在的竞争专有驱动（如 EMC PowerPath）相冲突的 SCSI sense 处理，因此要在优先 Linux 自身 multipathing 的同时暴露一个让 Linux 不必妥协的接口。此为 GPL copyleft 边界在内核 SCSI 驱动接口层的直接讨论。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-scsi.messages.1531405 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-scsi 邮件列表价值反推选封考据采纳）
+
+Jeff Garzik 在 aic79xx 与 dmraid 讨论中回顾 Adaptec 工程师提交 HostRAID 代码被 SCSI 与 Linux 维护者拒绝的历史,并提出 GPL 与开源的核心作用是把同类竞品凝聚到同一份代码上而非各自维护平行版本,由此推出应当更新 SCSI 核心而非在驱动里绕行的做法,是 GPL 传染原则与内核治理实践交织的自述 Greater than Linux itself, the GPL and open source create a commodity effect。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-fsdevel.messages.255851 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-fsdevel 邮件列表价值反推选封考据采纳）
+
+Boaz Harrosh 提交 ZUFS 零拷贝用户态文件系统补丁集时声明许可证策略：内核部分为纯 GPLv2，用户态核心采用 BSD-3 以便与其他操作系统友好共存，属 BSD 许可证在 Linux 内核伴随的用户态协议层实际运用的证据。 原文:The Kernel is released as a pure GPLv2 License. The user-mode core is BSD-3。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-fsdevel.messages.302670 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-fsdevel 邮件列表价值反推选封考据采纳）
+
+Christoph Hellwig 就 POSIX ACL 在非 GPL 模块中的可用性作出许可证裁决，认为任何调用 Linux 文件系统 API 的代码均构成衍生作品因而不可分发，并要求对方放弃绕过许可证与侵犯版权的尝试，属内核许可证执行与治理证据。 原文: "the license we put on the code and vilationg our copyrights".
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-fsdevel.messages.304073 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-fsdevel 邮件列表价值反推选封考据采纳）
+
+Matthew Wilcox 与 Boaz Harrosh 在 VM_LOCAL_CPU 补丁讨论中激烈争辩其真实动机是把非 GPL 的 NetApp 用户态代码链入内核从而违反 GPL，Boaz 否认并称许可并非唯一动因，属许可证合规争议证据。 原文: "You're getting dangerously close to admitting that the entire point".
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-fsdevel.messages.416091 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-fsdevel 邮件列表价值反推选封考据采纳）
+
+2023-12-06 NeilBrown 采纳 Jens Axboe 的思路，提议用新接口取代直接导出 task_work_run()：fput_queued(struct file *f, struct llist_head *q) 把需要 __fput() 的文件挂入队列，flush_fput_queue() 再统一调用，使 nfsd 能可靠等待自身发起的 fput() 完成，从而不再暴露 task_work，并表示愿意接受命名上的其他建议。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-fsdevel.messages.419287 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-fsdevel 邮件列表价值反推选封考据采纳）
+
+2006-12-01 Brad Boyer 反对 Jeff Layton 把导出符号设为 GPL-only："there should be at least some minor justification to making a symbol GPL-only"，他认为这类通用服务应面向所有文件系统实现者开放，无论是否 GPL；GPL-only 的通常理由是随意模块本不该触碰，而此处恰是树内可能以模块形式存在者所需。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-fsdevel.messages.483615 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-fsdevel 邮件列表价值反推选封考据采纳）
+
+Bryan Henderson 在关于 ext2 与 reiserfs 文件系统驱动被指公然违反 GPL 的线程中界定本案性质:他人仅以 GPL 这一公开许可持有代码,经轻微修改即移植,以目标码形式再分发却拒绝提供源码,故属更干净的违规情形。引文: "redistributes it slightly modified (ported) in object code form and won't supply the source code."。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-fsdevel.messages.487315 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-fsdevel 邮件列表价值反推选封考据采纳）
+
+Bryan Henderson 在 GPL 与专有驱动代码线程中辨析许可证解释分歧,部分分析者认为依 GPL 插入的内核模块必须开源,而 Linus 本人不视插入闭源模块为违反其许可证,但 Linus 只是众多版权持有人之一,单一许可人意见不具约束力。原文: "Linus is but one of many licensors (copyright holders) of the Linux kernel"。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-fsdevel.messages.511552 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-fsdevel 邮件列表价值反推选封考据采纳）
+
+Jeremy Allison 在 LSF/MM 关于用户态应用异步缓冲磁盘 I/O 话题中说明，进入 Samba 的代码须采用宽松许可证，不能是 GPLv2-only。原文："Anything going into Samba would need to be permissively licensed (MIT/BSD) or GPLv3+ or LGPLv3+" 引语明确将 BSD 许可证列为兼容选项。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-fsdevel.messages.535629 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-fsdevel 邮件列表价值反推选封考据采纳）
+
+Theodore Ts'o 就 Randy Dunlap 关于内核树中含 "All Rights Reserved" 表述的文件是否为问题的提问作出区分：关键在于其后是否附有 GPL 授权声明，并通常应有包含声明遵循 Developer's Certification of Origin 规则的 Signed-off-by 签署链（他同时指出取得原版权持有者明确许可后移去 All Rights Reserved 会更好）。至于 xfstests 树的真正问题，其唯一的版权许可表述就是 "All Rights Reserved"，虽有关于 SGI 将以开源许可发布的口头承诺，但源码与源码发行版中均无任何书面记载，且他当时无法判断该口头保证发生在 SGI 被 Rackspace 收购之前还是之后。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-fsdevel.messages.550771 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-fsdevel 邮件列表价值反推选封考据采纳）
+
+btrfs 代码回滚争端中，争论被完全框定在 GPL 语义内。一方称所有先前贡献 "contributions to the kernel are under GPL"，因此不存在收回旧提交一事，并把不可撤回性称为 GPL 的优势，同时指出作为维护者的 David 并非必须接受回滚补丁；Chris Mason 则以 btrfs 会议结论收尾，讨论维护者愿意接受何种版权声明。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-fsdevel.messages.554198 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-fsdevel 邮件列表价值反推选封考据采纳）
+
+开发者在列表上询问专有驱动与 GPL 的边界，他计划 "I have plans to write a proprietary file system that can be mounted on top"，即在 XFS 之上挂载专有文件系统用于跟踪处理某些请求，前提是全部源码为原创、不以现有 GPL 代码为基础，并明确修改内核或 XFS 代码则必然开源，同时表示已读过 GPL 文本、认为可保留专有但想要权威答复。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-fsdevel.messages.563201 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-fsdevel 邮件列表价值反推选封考据采纳）
+
+Boaz Harrosh 提交 ZUFS 零拷贝用户态文件系统补丁集, 明确区分两层许可: 内核部分为纯 GPLv2, 用户态核心采用 BSD-3 以兼容其他操作系统, 并计划移植 ZFS 与 PMFS。原文: "BSD-3 so to be friendly with other OSs."。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-fsdevel.messages.585106 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-fsdevel 邮件列表价值反推选封考据采纳）
+
+Eric 的 v9fs 调试头文件补丁携带 GPL 样板，评审者 Jan-Benedict Glaw 指出其中的自由软件基金会地址已过期并要求换成新址，属许可证条款文本治理的真实讨论 "59 Temple Place, Suite 330" 是旧地址，新址为 51 Franklin Street Fifth Floor。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-fsdevel.messages.679185 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-fsdevel 邮件列表价值反推选封考据采纳）
+
+squashfs-tools-ng 引发的版权与许可证争端中，Phillip Lougher 回应 Theodore Ts'o 的劝和邮件。Ts'o 的原话是：「it's really not fair to complain that there is a "violation of copyright" given that all of squashfs-tools was released is under the GPL」，并补充说在 squashfs-tools-ng 的包描述或文档中使用 squashfs-tools 的文本在 GPL 下完全允许，至多可以抱怨对方没有加「文字取自本程序」的致谢，但应给时间修正、假定善意总是一个好的默认。Lougher 表示这封邮件降温了自己这边的紧张情绪，随后澄清了自己早年在 Sourceforge 上弃置、误用 GitHub 网页 merge 按钮导致提交历史分叉、以及 2019 年 4 月重启开发与 squashfs-tools-ng 立项之间的时间巧合，把「项目已停止维护」的误解源头追溯到 2011 年发布 4.2 后不再更新的旧官网与长期无更新的 kernel.org 镜像树。这段史料的 BSD 相关性在于它记录了 GPL 文本复用边界、致谢义务与项目维护者治理冲突的完整交锋，而非 BSD 技术本身。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-fsdevel.messages.679725 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-fsdevel 邮件列表价值反推选封考据采纳）
+
+IMA/IPE 元数据跨 NFS 传输受阻,James Bottomley 指出许可证是实质障碍。原文: "GPL-encumbered formats cannot be contributed to the NFS standard, and are probably difficult for other filesystems"。是内核许可证对文件系统格式标准化产生实际约束的例证。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-mm.messages.759452 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-mm 邮件列表价值反推选封考据采纳）
+
+Dave Hansen 引入 x86 默认内核 PTE 掩码 __default_kernel_pte_mask，并明确将其设为非 GPL 导出符号，理由是在线驱动经现有 PAGE 接口已足够，不必触及 _PAGE_GLOBAL 之类内部位。这是借 GPL-only 导出标记在内核边界上划出 ABI 与许可证边界的实质治理动作。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8063366 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+nes 网卡驱动补丁的文件头同时给出双许可证选择:可选择 GPLv2,或采用 OpenIB.org BSD 许可证,并逐条列出修改后的源码与二进制再分发条件及版权与专利不侵犯条款,属 BSD 系许可证在内核树中的完整条款落地。原文:"or the OpenIB.org BSD license below:"。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-mm.messages.827634 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-mm 邮件列表价值反推选封考据采纳）
+
+2015-01-19 Jeremy Allison 回应 Milosz Tanski 关于为 samba 客户端库的 SMB2 异步读写实现该用什么许可，给出 Samba 侧明确口径：进入 Samba 的代码须为宽松许可（MIT/BSD）或 GPLv3+ 或 LGPLv3+，Samba 更倾向后者但两者皆可接受；唯一不允许的是 GPLv2-only。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-mm.messages.830505 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-mm 邮件列表价值反推选封考据采纳）
+
+Wu Fengguang 为 Documentation/vm/page-types.c 补入标准 GPL v2 声明，标题即 page-types: add standard GPL license head。原文件仅有一句 Released under the General Public License (GPL)，补丁将其展开为含 Free Software Foundation 完整表述与 Copyright (C) 2009 Intel corporation 版权行的规范头，属内核文档工具的许可证归属规范化实例。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8081466 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+Jason Gunthorpe 在 Paravirtual RDMA 驱动 RFC 讨论中明确表态：「I am *strongly* opposed to anything that changes the license of the existing 4 core libraries away from the GPLv2 or OpenIB.org situation we have today. (that includes to other varients of the BSD license)」，即强烈反对把 RDMA 核心四库许可从当前 GPLv2 或 OpenIB.org 现状改到任何 BSD 变体，并确认今日状态在此点上是干净的。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8082888 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+Reyk Floeter 以 OpenBSD 无线 Atheros 开源驱动层 OpenHAL 作者身份通报 ath5k 涉嫌侵犯其代码版权, 并说明自己长期拒绝把代码改成 GPL 或双许可。原文: "it is very unfair and malicious against me and the OpenBSD community"。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8102383 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+Glenn Grundstrom 提交 NetEffect 10Gb RNIC 驱动，许可头采用双许可选择，可在 GPLv2 与 OpenIB.org BSD 许可之间任选其一。英文引语为 available to you under a choice of one of two licenses，并要求源码再分发时保留版权声明与免责条款，属 BSD 许可在 Linux 内核落地的证据。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8029121 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+Sean Hefty 的 RDMA 用户态连接管理补丁在版权头中声明双授权，可选择 GPLv2 或 OpenIB.org BSD 许可，属 BSD 许可进入内核 InfiniBand 代码的实例 "OpenIB.org BSD license below"。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8029341 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+Jon Mason 的 PCIe 非透明桥支持补丁在头文件版权声明中写明双 BSD/GPLv2 授权并附 BSD 三条款正文，Greg Kroah-Hartman 参与评审 "This file is provided under a dual BSD/GPLv2 license."。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8167227 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+Constantine A. Murenin 就 Linux 社区被指控违法一事反驳称：FreeBSD 并没有 Reyk 的 ath(4) HAL（OpenHAL 所基于的那一个），"FreeBSD doesn't have Reyk's ath(4) HAL from OpenBSD, so there are no possible licensing accusations and violations"；FreeBSD 的 ath(4) 代码——驱动与 HAL 都是——完全由 Sam Leffler 撰写，"who can licence it in whichever way he seems reasonable"；Sam 代码的驱动部分亦存在于 OpenBSD，但 OpenBSD 与 FreeBSD 的 HAL 完全不同。补注："the FreeBSD people removed the GPL choice of the dual licenced code" 在本封中位于 Adrian Bunk 之信的转引块内，系 Bunk 之语而非 Murenin 本封之言。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8167247 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+Emulex 提交 be2net 驱动 GPL 标记修改补丁: 延长版权年份, 把 EMULEX 与 SLI 声明为商标, 增加官网链接, 并按 GPL 第 15 条加入免责条款, David Miller 要求必须解释如此批量改动版权标记的理由, 否则不予接受。原文: "There needs to be justification for copyright changes like this"。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8189507 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+NetEffect nes_cm.c 首次入库即内嵌 OpenIB.org BSD 许可证全文，与 GPLv2 构成显式双许可文本 "the OpenIB.org BSD license below"。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8190477 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+讨论将用户态测试套件下沉内核时被许可阻断，套件现为 BSD 而非 GPLv2 "we need to juggle relicensing the test suite (it is currently BSD, not GPLv2)"。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8169188 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+2007-09-02 Adrian Bunk 转述 Bob Beck 的 OpenBSD 侧来信后回应双重许可之争，指出 "You miss the whole point of dual licencing"：Sam Leffler 已在版权声明中允诺代码可按 BSD 或 GPLv2 任一条款分发，无人删除其许可，分发时选用二者之一即符合声明；他也补充说自己不是律师，但 reyk 在双重许可代码上保持文件双重许可，很难说他没把改动按双重许可放出。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8208704 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+评审 Marvell 交换芯片补丁时提到,Marvell 未将其加入 DSDT,而一套名为 UMSD 的新 SDK 同时采用 GPLv2 与 BSD 许可,该芯片家族被称作 Topaz。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8212205 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+在 Linux 是否窃取了他人代码的争论中,Al Viro 表示他对双方都渐失尊重,质疑拿 Eben Moglen 与 SFLC 的意见作为能否转为纯 GPL 许可的依据,并附带提及 Theo 的长篇指责,认为依赖外部机构做许可决策并不可靠。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8153465 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+nes InfiniBand 驱动硬件初始化补丁在文件头声明可在 GPLv2 与 OpenIB.org BSD 许可证之间二选一,并内嵌完整的 BSD 再分发与免责条款,属 BSD 许可证驱动在内核 InfiniBand 子系统的入树实例。原文: "OpenIB.org BSD license below"。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-mm.messages.869046 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-mm 邮件列表价值反推选封考据采纳）
+
+2018 年 4 月 29 日 genalloc 硬化补丁评审中，Igor Stoppa 在自己 4-29 06:45 的邮件中引用 Bonwick 2001 年 USENIX ATC 论文，认为其中第 4 节描述的 vmem 分配器「would seem to have superior performance and lower memory overhead than the current genalloc allocator」。Stoppa 回复 Matthew Wilcox 时进一步评估多种 vmem 实现，明确指出「not all with GPLv2 compatible license」，并以 Intel libvmem（配合 jemalloc 用于持久内存）为例，提示需先判断 jemalloc 是否值得引入、许可是否兼容「or if it can be relicensed for use in the kernel」（源码为条件式表述）。原文: "the vmem allocator which would seem to have superior performance and lower memory overhead"。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-mm.messages.896540 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-mm 邮件列表价值反推选封考据采纳）
+
+vhost_net 引入讨论中，Ira Snyder 自述其在 PPC 平台实现的内核内建 virtio 总线（"doorbell" 寄存器触发 30 路可区分中断），并指出 lguest/virtio-pci/virtio-s390 之后每次自实现都是抽象化时机，Ghaskins 也曾做过类似尝试；属许可证驱动的技术治理争论的旁证。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8281533 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+2006-10-18 Pavel Roskin 反驳 Stephen Hemminger 关于将 MadWifi 移植到 d80211 之议：Hemminger 把此举称作混合 GPL 与非 GPL 软件的衍生作品，并警告 "This actually will hurt the possible acceptance"，即损害 d80211 进主线内核的机会；Roskin 则称这能点燃对 d80211 与 Atheros 硬件的兴趣、推动 OpenHAL 开发，并给 Atheros 开放 HAL 源码施加额外压力，认为看不到任何会损害 d80211 进主线的因素。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8397702 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+InfiniBand 连接抽象 RFC 文件头给出三重许可选择, 含 CPL、BSD 许可与 GPLv2 并附 Open Source Initiative 的 BSD 许可链接, 属 BSD 许可证进入内核子系统的例证。引语 "under the terms of the "The BSD License""。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8290599 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+2007-08-07 Glenn Grundstrom 提交 nes 的 OpenFabrics 内核 verbs 驱动补丁。补丁文件头由 NetEffect 声明该代码置于两种许可任选其一之下："You may choose to be licensed under the terms of the GNU General Public License (GPL) Version 2"，GPL 文本取自源码树顶层目录的 COPYING 文件；另一选项为紧随其后全文列出的 OpenIB.org BSD 许可条款。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8307522 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+wimax 头文件许可证讨论中，Johannes Berg 建议将一组对外头文件从 GPL2 改为 ISC 一类简单许可，以便下游工具直接复制文件；Inaky Perez-Gonzalez 回复表示认同，原文为 "there are no issues in moving this to a BSD type"。该回复确认 Linux 已接受把对外接口头文件放宽为 BSD 系许可。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8334380 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+PCIe 非透明桥（NTB）支持 RFC 的评审中，转贴的 ntb_hw.c 文件头声明 "This file is provided under a dual BSD/GPLv2 license.  When using or redistributing this file, you may do so under either license."，并带 "Copyright(c) 2012 Intel Corporation. All rights reserved." 版权头 ——BSD 许可文本由此出现在 drivers/ntb 下的内核驱动代码中（该系列发往 netdev 讨论，但目标路径并非网络 驱动）。评审者 Greg KH 的实质意见是：为什么要保留非主线驱动、能否把驱动同时提交上来以便审查接口用法， 以及针对许可证段建议对方"you should ask your lawyers if you can remove this paragraph"（并反问是否要 去追踪 FSF 未来 40 年的办公室动向），另要求对这些新导出符号使用 EXPORT_SYMBOL_GPL()。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8491436 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+Neterion S2io 驱动公告讨论中，Leonid Grossman 长篇论述 HAL 模型：他认为把同一 Linux 驱动封装给 FreeBSD 等系统作为 HAL 的历史尝试"short-lived"，原因常是团队缺乏长期动机或专业知识；反之 HAL 模型在 Intel、Neterion 等现代 NIC 中更活跃，非 Linux OS 因 GPL 关切更倾向 HAL。更早被引者 Scott Feldman 在同一讨论中（本封正文第一层转引）明确"Licensing is clean: the Linux driver is GPL and the linux-wrapper code is GPL"，指同一 Linux 驱动+GPL wrapper 的封装模式许可清晰。Leonid 强调 NIC 厂商因维护多 OS 驱动对 HAL 有强偏好。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-mm.messages.1047782 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-mm 邮件列表价值反推选封考据采纳）
+
+Intel SGX飞地驱动引入时, Greg KH直接质疑GPL与BSD许可证的混用边界, 原文为 how in the world can it be bsd-3 licensed?, 并要求对方让法务部门同意 mixing gpl2-only code in with this file. 该线程是BSD许可证代码进入Linux内核所遭遇的合规争议实录, 涉及许可证与治理.
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8679828 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+2017-11-23 Jakub Kicinski 回应 Jiri Pirko 在 netdevsim 软件驱动评审中提出的疑问 "Why gpl2 is not enough for this?"——该新增测试驱动的文件头已声明 GNU General License Version 2 与 BSD 2-Clause 双许可。Kicinski 答 "It's the license I got from legal, I will request permission to use pure gpl2."，即双许可并非技术需要而是法务给出的结果，他自己愿申请改用纯 gpl2。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-mm.messages.1016382 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-mm 邮件列表价值反推选封考据采纳）
+
+2004-02-18 Christoph Hellwig 反对 IBM 以非 GPL 方式导出 invalidate_mmap_range：他引 GPL 衍生作品条款，称要改动内核核心、又满堆取巧手法时 "pretty clear it is a derived work"，举证责任在 IBM；并质疑 IBM 为何在此时强推这一存疑改动，GPL 乃至版权争议正是当前风声鹤唳的 IBM 最不愿上新闻的事。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-mm.messages.1068021 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-mm 邮件列表价值反推选封考据采纳）
+
+HMM 支持文件映射镜像的补丁引发导出许可治理争论：Dan Williams 主张对所有导出使用 EXPORT_SYMBOL_GPL「to avoid a growing liability surface for out-of-tree consumers」；Jerome Glisse 以 GPU 子系统经验反驳——Dan 认为 GPL 导出能解决树外用户问题，而他本人的经验是并非如此，因为 GPU 子系统有大量 GPL 驱动不在树内，子系统从未感到必须支持它们，且一向明确告知树外者对树内变更没有话语权。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-mm.messages.1068407 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-mm 邮件列表价值反推选封考据采纳）
+
+Non-GPL export of invalidate_mmap_range 线程牵出内核源码许可的获取流程，Paul McKenney 称 there is no cost nor any agreement other than the GPL itself，Dominik Kubla 则以 registering requires to disclose an unreasonable amount of personal data 表示不接受注册披露，属许可证与治理争议而非纯技术讨论。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-mm.messages.1068624 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-mm 邮件列表价值反推选封考据采纳）
+
+Linus Torvalds 就 x86 模块依赖外部 PAGE_KERNEL 的修复抨击许可标注滥用，原文称 people who just randomly slap _GPL() on the export should stop doing that，并指对随机数据符号附加 GPL 后缀对版权派生毫无意义，属 fundamentally broken and stupid 的治理误用。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8553592 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+Jakub Kicinski 提交 bpftool 全面双许可（GPLv2-only + BSD-2-Clause）补丁，因既有许可混杂与 GPLv3-only 的 libbfd 不兼容、Debian 维护者不愿打包；Jakub 列出二十余位原作者 Acked-by。Daniel Borkmann 表示 Applied。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8597038 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+Jakub Kicinski 宣布把 bpftool 全部文件统一为 GPLv2-only 加 BSD-2-Clause，原文为 changing/clarifying the license on bpftool to GPLv2-only + BSD-2-Clause for all files；动因是原有许可混杂与 GPLv3-only 的 libbfd 冲突，令 Debian 维护者不敢打包。帖中汇总多位原作者的 Acked-by，构成 BSD 许可在用户态工具分发链上的关键解法。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-mm.messages.1035091 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-mm 邮件列表价值反推选封考据采纳）
+
+2004-02-19 David Schwartz 在 invalidate_mmap_range 非 GPL 导出讨论中纠正 Hellwig 对版权回抄的解读：GPL 借用版权法上的 derivative work 概念，"The term \"derived work\" does not imply that the work is wholly derived"，即原作受保护表达的部分存在其中即可；本案模块以源码形式分发且 Linux 专属代码很少，模块本身并非衍生作品，shim 虽是但为开源，故他不认为存在许可问题。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8469144 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+Intel 的 NTB PCI-Express 非透明桥支持补丁中 ntb_hw.h 采用双 BSD 与 GPLv2 许可证，使用时或再分发时可任选其一，其中 BSD 许可证部分保留 Intel 版权并列出标准的 BSD 再分发条件与不担保条款。原语："This file is provided under a dual BSD/GPLv2 license"。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8725200 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+2017-12-23 Pali Rohár 发布 igmpproxy 0.2 版本，主要变化为许可证由斯坦福专有许可改为与 GPLv2+ 兼容的自由许可，"license change from proprietary Stanford to free compatible with GPLv2+ (mix of 3-clause BSD and GPLv2+)"；该项目是仅使用 IGMP 信令的简单动态组播路由守护进程，用于在网络间简单转发组播流量。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.9080689 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+amd-xgbe 驱动补丁（[PATCH v5 net-next 3/5] add support for new XPCS routines，提交者 Raju Rangoju）在其头文件中同时给出两种许可选项："License 1: GPLv2" 与 "License 2: Modified BSD"，即全文式的样板许可文本而非 SPDX 标识符。Jacob Keller 对此回应：他不确定这是否算内核的严格政策，但他记得 Linux 内核已改为在文件内使用 SPDX 头而非完整复制许可信息，并引用 Documentation/process/license-rules.rst——「The Linux kernel requires the precise SPDX identifier in all source files.」——由此推断内核应优先使用 SPDX 标识符，而不是在此处内联样板许可文本。即内核侧对「双许可样板 vs SPDX 标识符」的一次具体取舍，涉及 Modified BSD 在内核驱动头文件中的适用方式。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8994440 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+补丁将 TI phy 头文件改为 GPL-2.0-only 与 MIT 双许可以支持其他生态，补丁日志明确列出目标生态："used in other Operating System ecosystems such as Zephyr or FreeBSD."。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: netdev.messages.8350855 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；netdev 邮件列表价值反推选封考据采纳）
+
+ath5k 转为仅 GPLv2 的公告引发许可证反驳,Valdis Kletnieks 指出反向工程大多由 OpenBSD 团队完成,并称自己不清楚 Jiri 是否有权移除 BSD 及其他许可,原话为 "it's unclear to me if Jiri is even allowed to remove the BSD/other license",同时认为 Jiri 可只把自己的代码以 GPLv2 发布,但整个文件集合理应仍为 dual BSD/GPLv2,属 BSD 系代码被单方收窄许可的治理争议实录。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: ksummit.messages.283 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；ksummit 邮件列表价值反推选封考据采纳）
+
+许可证议题。Greg KH 与 Bradley Kuhn 正面交锋。Kuhn 称违规企业公然表示 "you think that we have to follow the GPL? Ok, then take us to Court.",Greg 回以 "I call bullshit on this.",主张既有非诉讼协商路径更有效。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: ksummit.messages.321 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；ksummit 邮件列表价值反推选封考据采纳）
+
+许可证与治理议题。Harald Welte 谈及德国 GPL 诉讼,称 Telefonica 案败于程序问题;并批评 Patrick McHardy 拒不解释导致谣言蔓延,同时提到 SFC 推动的 "principles of community-oriented enforcement". 属执行机制治理。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: ksummit.messages.718 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；ksummit 邮件列表价值反推选封考据采纳）
+
+许可证议题。Luis Rodriguez 回应 Linus 关于社区不应诉诸法律的观点,强调 SFC 有公开原则与参与邀请,并以 SCO 案为例说明 "that was not mainly about some GPL test case or license clarification",但 GPL 与社区均因此受益。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: ksummit.messages.996 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；ksummit 邮件列表价值反推选封考据采纳）
+
+许可证议题。Bradley Kuhn 回应 Linus 对其论点的简化转述,主张以正式政策与行动评判公共人物: "The way to judge a public figure is by their official policies, their actions",并援引布什语录书作类比。属 GPL 执行立场的治理辩论。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: ksummit.messages.4817 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；ksummit 邮件列表价值反推选封考据采纳）
+
+2016 年 GPL 执法之争。Jeremy Allison 称许多持相同反对意见的开发者其实为 FreeBSD 工作而非 Linux,James Bottomley 以治理视角回应:少数版权人依法即可发起 GPL 行动,而项目维系靠的是治理而非法律原则。引语: "lots of them work on FreeBSD not Linux"。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: ksummit.messages.5427 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；ksummit 邮件列表价值反推选封考据采纳）
+
+2016 年 GPL 执法之争。本封 FROM Luis R. Rodriguez 反对把 SFC 联盟成员类比为一群愤怒的将军，认为这与把反对现代负责任 GPL 执法者等同于企业游说者一样愚蠢（"I'd be really, really stupid if I used that analogy"）。关于 "lots of them work on FreeBSD not Linux"（许多持相同意见的开发者其实为 FreeBSD 工作）是线程中更早发言者的说法，由其转引。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: ksummit.messages.5475 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；ksummit 邮件列表价值反推选封考据采纳）
+
+2016 年版权归属讨论。Steven Rostedt 设问若 Red Hat 破产其持有的版权由谁捍卫,认为代码仍以 GPLv2 提供,最坏情形仅被当作 BSD 式许可代码使用;但由于代码与其他人代码交织,任何此类使用都需全体版权人许可。引语: "the worse that can happen is that they simply let others use it like BSD licensed code"。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: ksummit.messages.5559 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；ksummit 邮件列表价值反推选封考据采纳）
+
+2016 年 GPL 执法之争。Linus Torvalds 认为侵权诉讼把人从 busybox 乃至 GPL 本身驱离,并未实际增加有用的源代码;并称 OpenWRT 成功与诉讼无关,真正起作用的是开源运动相对 FSF 强硬立场的胜利。其论述含 BSDs 参照。引语: "the general success of open source (over the FSF hardliner GPL stance)"。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: ksummit.messages.6288 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；ksummit 邮件列表价值反推选封考据采纳）
+
+2016-08-29 James Bottomley 就 Linux 版权归属议题补充意见：Jiri Kosina 指出大陆法系下 "it's usually legally impossible to assign the moral rights away from the actual person creating the work"，雇主通常只拿经济权利的许可；Bottomley 称在此类法域独占许可已等同所有权，残余精神权利无法执行 GPL，要参与执法就得保住部分经济权利所有权；他推测欧美最终合同形态会不同，末了询问欧洲有无实操经验者。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: ksummit.messages.6470 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；ksummit 邮件列表价值反推选封考据采纳）
+
+Jiri Kosina 补充普通法与大陆法体系在版权转让上的差异：「in civil law systems, it's usually legally impossible to assign the moral rights away from the actual person creating the work (the employer just usually owns a licence to the economic rights)」；Johannes Berg 回应认为差异没那么关键，谈判路径相似，并强调「*exclusive* license」措辞本身重要。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: ksummit.messages.6605 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；ksummit 邮件列表价值反推选封考据采纳）
+
+2016-08-24 Bradley M. Kuhn 回应 Greg KH 的不情愿，自述 "I've been involved with copyleft enforcement and policy for almost copyleft's entire existence"；他观察近来十年出现此前从未有过的状况：主要与次要行业参与者都蓄意违反 GPL、拒不合规并扬言把我们告上法庭；他所在机构持有 Linux 版权、又协调签署协议的开发者，称将依社区导向执法原则予以执行，并邀请各派在 Linux 内核峰会现场辩明分歧。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: ksummit.messages.6743 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；ksummit 邮件列表价值反推选封考据采纳）
+
+2016-08-25 Josh Triplett 回复 “GPL defense issues” 核心议题讨论。针对 Theodore Ts'o “既然 Conservancy 立场已定，讨论有何意义” 的质疑，他列出可操作的议题清单：执法的正确方式、面对错误执法是否会有内核层面的回应、是否应设停止接收某位开发者补丁的界线、现有开发流程是否助长或妨碍执法、能否仿照 DCO 引入新机制，以及 EXPORT_SYMBOL_GPL 与 MODULE_LICENSE（含拟新增的 GPL 兼容许可条目）是否反而使执法更难。他建议部分问题宜在邮件列表推进，部分适合当面讨论。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: ksummit.messages.6759 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；ksummit 邮件列表价值反推选封考据采纳）
+
+2016-08-26 GPL enforcement 核心议题讨论中，Jeremy Allison 代表 Conservancy 侧表态：「Bradley isn't the one making the decisions here. It's the developers - *ALWAYS* the developers. Bradley and the Conservancy staff can give advice, but they do not do *anything* without a direct mandate from the copyright holders. Conservancy acts when developers ask them to.」本封作者 Theodore Ts'o 对此提出质疑而非认同——他追问「Ah, but *which* developers?」，指出内核拥有版权的实体数量庞大（Red Hat、IBM、Intel、Google 等公司是否也有发言权），并质询 Conservancy 诉讼前是否会先征询主要版权持有者；他认为 Conservancy 工作人员此前「have their set of developers and ... going to do what they are going to do, regardless of what other copyright holders might think」的表述，使「rogue actor」这一说法并非全无道理，同时认定这本质是治理／政体问题（「at the heart of this question is really a governance / polity issue」），Kernel Summit 因利益相关方不齐并不适合处理。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: ksummit.messages.6835 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；ksummit 邮件列表价值反推选封考据采纳）
+
+2016-08-31 Theodore Ts'o 在 GPL enforcement CORE TOPIC 线程中回应 Luis R. Rodriguez 对 SFC 联盟治理不透明的质疑。Rodriguez 认为不应把 Kuhn 的个人立场等同于联盟立场，Ts'o 则反问：联盟成员名单是保密的，治理机制也从未公开说明，是否投票表决？若按代码贡献量加权，那么某位掌握大量代码版权的人加入联盟后，Kuhn 据此向厂商施压时该人只有一票还是按比例计权？他指出联盟成员须签协议、30 天后才能退出，这期间的威慑足以造成实质影响，并类比 FBI 附带禁言令的国家安全信函，建议 SFC 定期发布一般性透明度报告。Ts'o 认为联盟立场并非被误述：一是几年前他在走廊里直接问 Kuhn GPL 与 Linux 长期健康哪个更重要，对方坦承是 GPL；二是 2016 年 linux.conf.au 演讲表述毫无含糊，他把这种声称"只是误解"的做法类比为替特朗普对墨西哥裔言论开脱；并称若企业转而使用 QNX 之类商业系统，或 FreeBSD 这类 BSD 系开源内核，Linux 将失去这些企业。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: ksummit.messages.6916 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；ksummit 邮件列表价值反推选封考据采纳）
+
+2016-08-30 GPL enforcement 线程中，Jeremy Allison 回应 Greg KH 关于 SFC 究竟代表谁、哪些开发者已把版权让渡给 SFC、是否以永久方式让渡的追问（该追问位于一层引用块，含「"revoking" copyright assignment isn't exactly a simple thing to do, last I checked」一句，系 Greg KH 所论，非 Allison 所论），称这可能是该线程误解的重要部分（「Ah, this could be a big part of the misapprehensions in this thread !」）：版权让渡给 SFC 虽属可能但成员项目并不常见，而 SFC 代表版权所有人行使维权并不需要先行获得版权让渡；以他可公开谈论的 Samba 为例，*无*开发者把版权让渡给 SFC，SFC 仅是受开发者意愿授权代为执法的执行代理人，Samba 开发者可随时以任何理由撤回该授权，而之所以未撤回，是因为 Samba 的共识是 SFC 在妥善代表其利益。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: ksummit.messages.6934 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；ksummit 邮件列表价值反推选封考据采纳）
+
+2016-08-26 Bradley M. Kuhn 回应 Linus Torvalds 引述的 Patrick McHardy 事件并贴出两人联合声明链接，表示 Linus 无需信任自己——“I don't expect you to trust me”，但执行动作公开透明可查，授权来自开发者签署的委托协议。他列出执法流程：先与联盟开发者沟通、向违规公司善意索求合规并予以协助，诉讼仅属最后一步，四年来只有 VMware 一例走到该步。他承认厌恶后续各步、总想停在善意协商阶段，并强调自己愿意接受社区问责。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: ksummit.messages.6961 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；ksummit 邮件列表价值反推选封考据采纳）
+
+2015-07-30 Heiko Stübner 在 “Firmware signing” 技术议题中反对以禁反言（estoppel）原则为内嵌固件开脱。他指出该原则在不同法域未必成立——德国 GPL 诉讼多数针对设备厂商，而非最初违规的非欧洲 SoC 供应商；此外据合规指南，GPLv2 第 4 条终止条款使违规者丧失再分发与修改权利，直到版权持有人明确恢复，因此“不被起诉”并不等于仍保有这些权利。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: ksummit.messages.6999 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；ksummit 邮件列表价值反推选封考据采纳）
+
+2016-08-24 Bradley M. Kuhn 回复 Greg KH 关于 Linux 基金会常设协助的表态，称欣慰于在数百起活跃的 Linux GPL 违规中，“ask for our help to find the compliance officer at a violator company” 程序确实在少数案件上帮到忙；但他随即反驳“从未失效”之说，自陈借助 LF 开放合规目录服务两次均未取得合规，其中 VMware 一例直到保守协会起诉前都未解决，另有一家汽车行业违规者至今仍未提供源码，依保密原则不点名。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: ksummit.messages.7093 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；ksummit 邮件列表价值反推选封考据采纳）
+
+2016 年 8 月 26 日 ksummit-discuss 的 GPL 强制执行 CORE TOPIC 讨论中，Matthew Garrett 反驳 Linus Torvalds 早前的立场——Torvalds 原话（被本封引用）'What I care about is getting code contributions back. That's kind of the whole *point* of the GPLv2. Not the legalese.' Garrett 指用户在意的是代码可得性而非贡献：他们不关心厂商是否参与上游，只关心在厂商停止提供更新时能否自行修复那块破硬件；他以自己近一年购买的运行 Linux 的设备中仅约四分之一能取得源码、且有一例须自称版权人、威胁起诉并顺带告知发现多处安全漏洞才拿到源码为例（那还是知名品牌厂商），说明厂商不会直接与上游合作但用户方收益巨大。他进而为 BusyBox 类诉讼正名：虽未带来更多上游 BusyBox 代码，却促使多家厂商放出源码、同领域厂商因恐惧而跟进，用户拿到源码后修好并共享，受益者包括日后回头送补丁的年轻人、靠更新操作系统避免被前任劫持手机而无须换机的街头人群，以及只能因 AP 厂商害怕诉讼才敢放源码而得以存在的 Freedom Box 项目。他批评 Torvalds 对'successful'的定义与'we'不符，认为 Linux 在世界上的许多成就与上游贡献无关，社区对它们的关心应与对厂商 git 提交数的关心同等。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: ksummit.messages.7112 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；ksummit 邮件列表价值反推选封考据采纳）
+
+2016-08-24 Greg KH 回复 Bradley M. Kuhn 以 0-for-2 反驳 LF 常设协助“从未失效”的争执，请双方转线下沟通；随后针对“多数公司都懂行且无人打算起诉它们”指出，这些公司多在十五、十乃至五年前就已合规，若当年采取此刻提议的做法，它们不会进入社区。他重申“永远不起诉客户”，并以 BusyBox 诉讼后反而催生非 copyleft 替代品为反例，认为法律手段未必奏效；内核峰会应聚焦技术议题、不宜混入法律问题。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+【linux邮件提取】
+<!-- ROW_MINE: ksummit.messages.10277 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；ksummit 邮件列表价值反推选封考据采纳）
+
+Theodore Ts'o 与 Jeremy Allison 就 GPLv2 强制的权力归属辩论。引文: "how about "Linus as the benevolent dictator"?  He makes a point of gathering input from multiple stakeholders, and delegating authority" 这是 Linux 与 BSD 版权许可哲学分立的治理标本, SFC 强制机制与 BSD 松散版权实践形成制度对照。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+## 282.8.6 GPL 版本考据的补充叙述——SPDX 标注混乱、glibc 文档许可壁垒、内核边界争议与 SFC 治理内部辩论
+
+以下叙述章补编聚焦第 282.8.5 未覆盖的三个细部：早期 GPL 版本标注的当代误读、内核工程实践中 BSD/GPL 双许可与单向收窄的具体形态，以及 2016 年 SFC 联盟执法辩论中 Linux 社区内部对 BSD 松散版权实践的制度对照
+
+GPL-1.0 到 SPDX 时代的最棘手问题不是 v1 的条款内容本身而是 v1 标签在四十年后落入代码树的语义坍塌——walter harms 提交 bswap_16/32/64 的 man page 时页头署 Copyright 2012 walter harms 与 Distributed under GPL，.TH 行却标为 GNU 与 Linux Programmer's Manual，而内容描述的 bswap 宏实为 glibc 的 byteswap.h 接口，一份 2012 年的页面因此挂着 GPL 字样而指向 GNU 手册体系——Richard Fontana 就此在 linux-man 邮件列表上指出 GPL-1.0-or-later 不太可能是贡献者本意，内核早期 GPL v1 已被遗忘，the GPL 通常指 GPL v2，Alejandro 同意从 GPL-1.0-or-later 改为 GPL-2.0-or-later 理由是 v1 是 v2 的子集不减少权利——同一线程中 Richard Fontana 补充建议若属自身项目会改述为 GPL-2.0-or-later 且原 GPL_NOVERSION_ONELINE 标识含义不明找不到定义来源——Christoph Lameter 澄清 move_pages.2 由他撰写后经 Michael Kerrisk 编辑许可证为 GPL 而非专有并同意改为 Linux-man-pages-copyleft——这组证据显示 SPDX 时代的第一批治理压力并非来自主张新许可而是来自旧标识被自动化扫描后暴露的语义空白
+
+同期另一重壁垒来自文档授权而非代码授权——O'Donell 解释 glibc 无法把源码文档并入手册原因是 GFDL 与 LGPLv2 之间存在许可壁垒，因 gcc 在 C++ 上有同样问题 FSF 已有一个可复用的既定流程——由 FSF 维护者获得重新许可所生成文档并将其检入的权利——他还质疑部分信息的可版权性：线程安全标注是函数本身的属性不受版权保护但解释为何不遵循标准的描述性文字则可以受版权保护——这是 copyleft 许可证在文档层的独立传染面，与代码层的 GPLv2/v3 演变并行而常被混淆
+
+BSD/GPL 双许可在 Linux 内核工程中的实际落地是一批具体的工程决策而非抽象共存——OpenIB.org 在 nes 网卡驱动补丁的文件头同时给出双许可证选择可选择 GPLv2 或 OpenIB.org BSD 许可并逐条列出修改后的源码与二进制再分发条件——Sean Hefty 的 RDMA 用户态连接管理补丁同样采用双授权——Jon Mason 的 PCIe 非透明桥支持补丁写明双 BSD/GPLv2 授权并附 BSD 三条款正文——Constantine A. Murenin 反驳指控时指出 FreeBSD 侧已移除双许可代码中的 GPL 选项——2016 年 7 月 Chelsio 驱动公共库补丁集将 libcxgb.ko 模块许可证从 GPL 改为双 BSD/GPL——Jon Mason 的 ntb_hw.c 与 Intel NTB 补丁的 ntb_hw.h 采用双 BSD/GPLv2 许可——Marvell 交换芯片 Topaz 家族新的 UMSD SDK 同时采用 GPLv2 与 BSD 许可——TI phy 头文件改为 GPL-2.0-only 与 MIT 双许可以支持其他生态明确列出 used in other Operating System ecosystems such as Zephyr or FreeBSD——amd-xgbe 驱动头文件同时给出 GPLv2 与 Modified BSD 两种许可选项原文即 License 2: Modified BSD 提交者公开表示不确定这是否是内核的严格政策——igmpgroxy 0.2 公告记录其 relicense 为 license change from proprietary Stanford to free compatible with GPLv2+ 是 3-clause BSD 与 GPLv2+ 的混合——这一批证据把 BSD 与 GPL 的对立从哲学命题转化为工程选择清单
+
+内核内部对派生作品边界的争论同样以具体导出符号为单位展开——Christoph Hellwig 就 POSIX ACL 在非 GPL 模块中的可用性作出许可证裁决认为任何调用 Linux 文件系统 API 的代码均构成衍生作品因而不可分发并要求对方放弃绕过许可证与侵犯版权的尝试——Dave Hansen 引入 x86 默认内核 PTE 掩码 __default_kernel_pte_mask 并明确将其设为非 GPL 导出符号理由是在线驱动经现有 PAGE 接口已足够不必触及 _PAGE_GLOBAL 之类内部位——Dan Williams 主张 EXPORT_SYMBOL_GPL on all exports to avoid a growing liability surface Jerome Glisse 以 GPU 子系统经验反驳 So my experience is that GPL does not help here——Linus Torvalds 就 x86 模块依赖外部 PAGE_KERNEL 的修复抨击许可标注滥用原文称 people who just randomly slap _GPL() on the export should stop doing that 并指对随机数据符号附加 GPL 后缀对版权派生毫无意义属 fundamentally broken and stupid——Greg Kroah-Hartman 在 sections.h RFC 审阅中逐字挑战 GPL 授权文本认为 若你无法承担未来二十多年追踪 FSF 办公室搬迁责任请直接删除该段 并指涉内核文档内关于此文件因 GPL 授权而产生的模块包含是否必须连带采用 GPL 的争议表述——NeilBrown 与 Jens Axboe 就新导出的 VFS 入口点为何是 GPL-only 展开辩论 It isn't clear to me what _GPL is appropriate, but maybe the rules changed since last I looked——Brad Boyer 反驳 GPL-only 决策 there should be at least some minor justification to making a symbol GPL-only——Christoph Hellwig 就 POSIX ACL 符号导出策略与 Massimo Maggi 展开许可证裁决之争 Maggi 指出 posix_acl 系列函数当前以任意许可方式导出因此可在 CDDL 许可模块中使用并建议统一改为 GPL-only 导出以消除歧义——James Bottomley 就 IMA/IPE 元数据跨 NFS 传输受阻指出 GPL-encumbered formats cannot be contributed to the NFS standard——Phillip Lougher 回应 Theodore Ts'o 关于 squashfs-tools-ng 版权与许可证争端 there is a violation of copyright given that all of squashfs-tools was released is under the GPL——这一组证据把 GPL 传染性的执行颗粒度落到了单个导出符号与单个文件格式
+
+进入 rust-for-linux 时代 BSD/GPL 对立以编译工具链为前线重新显现——Mariusz Ceier 质疑非 GPL 工具能否促成 GPL 兼容但专有的内核版本发布 Al Viro 反驳称除非内核被锁定在只能使用无 GPL 替代品的工具上否则非 GPL 工具不构成威胁并批评 gcc 更好因为 GPL 的论调无关紧要因为我们显然并未在所有架构上锁定于 gcc——Mariusz 表示他更担忧功能完备的 Rust 编译器在封闭环境中开发可能偏离 GPL 精神——Greg KH 警告 Miguel Ojeda 在 Rust paste proc macro 中使用双重许可证需谨慎尤其不要在内核树中混用非 GPL 许可证指出 GPL-2.0 以外的许可证极易引发复杂问题甚至需要律师签核——Miguel 解释这是 Rust 项目的通用做法也用于 alloc 标准库的 vendor 引入因为 proc macro 在用户空间也有用途贡献者 Gary 可能想将其发布到 crates.io——Greg 认为版权所有者可自行选择许可证无需双重许可混合许可证是长期维护的沉重负担——最终作者决定遵从建议把该文件的许可统一替换为 GPL-2.0 理由是相关同事也认可这一选择——Sami Tolvanen 就 gendwarfksyms 工具许可证标记承认许可证是从系列中包含的 genksyms 代码继承而来表示将与公司内部法务团队商议——这段博弈的核心不是 Rust 本身而是双许可作为跨社区复用工具是否值得内核承担维护负担
+
+关于下一代许可 copyleft-next 的争论把 GPL 内部哲学分歧重新打开——Luis R. Rodriguez 回复 James Bottomley 关于 copyleft-next 在内核中使用的异议坚持代码在加许可标记前已完成开发已有三位含两名 SUSE 的律师审查合规并明确表态 copyleft-next is the license of choice for ongoing kernel development——Bottomley 认为无需新标签组合后按更严格的 GPLv2 计算写 GPL 或 GPL and additional rights 即可——Rodriguez 反驳 MODULE_LICENSE 标记模块自身许可组合体许可由 GPLv2 决定并引用 Linus 建议说明自己在 copyleft-next 下新增模块会写 MODULE_LICENSE 为 GPL 他还指出 copyleft-next 的 15 年日落期自组合创建起算持续更新的作品永不日落——Masami Hiramatsu 在回复 linker tables 与 section ranges RFC v3 时说明该系列开发在 kernel.org 的 copyleft-next 分支下 Rusty Russell 最近要求先在许可证标签明确为 GPL 兼容之前把代码合入——David Miller 在 sparclinux 上就 sparc64 SMP FPU 上下文切换修复是否应附加版权声明回应说只有在对版权而言足够显著时才相关两三行性质的改动通常不算并补充两点一是版权法与许可证是两回事不应混淆二是即便作者没有在作品里写明版权声明许多国家的版权法仍规定该作品在至少一定程度上自动产生该作者的版权——这为 copyleft-next 与 GPLv2 之争提供了底层法理依据
+
+治理层面的最深层次是 Linux 阵营内部对 BSD 式松散版权实践的制度对照——Lawrence Rosen 代表 RTL Systems 辩护时援引 Oracle v. Google 与 SAS v. World Programming 两案主张使用 Linux 内核 API 与头文件是否构成衍生作品这一争议已被基本推翻——Steven Rostedt 设想若 Red Hat 破产其持有的版权由谁捍卫认为代码仍以 GPLv2 提供最坏情形是 the worse that can happen is that they simply let others use it like BSD licensed code 但因代码与其他人代码交织任何此类使用都需全体版权人许可——Linus Torvalds 在 2016 年 GPL 执法之争中提出侵权诉讼把人从 busybox 乃至 GPL 本身驱离并未实际增加有用的源代码真正起作用的是 the general success of open source (over the FSF hardliner GPL stance)——SFC 联盟公开性辩论中 Bradley Kuhn 称违规企业公然表示 you think that we have to follow the GPL? Ok, then take us to Court. Greg 回应 I call bullshit on this. Luis Rodriguez 反对把 SFC 联盟成员类比为一群愤怒的将军——Jeremy Allison 则指出许多持相同反对意见的开发者其实为 FreeBSD 工作而非 Linux 原话为 lots of them work on FreeBSD not Linux 这句话把 BSD 阵营与 GPL 执法之争直接联系起来——Theodore Ts'o 与 Jeremy Allison 就 GPLv2 强制的权力归属辩论引文为 how about Linus as the benevolent dictator? He makes a point of gathering input from multiple stakeholders, and delegating authority 这是 Linux 与 BSD 版权许可哲学分立的治理标本 SFC 强制机制与 BSD 松散版权实践形成制度对照
+
+在 SFC 联盟内部治理细节上，多方律师与治理者给出了不同的操作模型——Bradley M. Kuhn 回应 Greg KH 的 standing offer 表示他在 Linux Foundation 的 ask for our help to find the compliance officer at a violator company 计划中在数百起活跃 Linux GPL 违规中帮助解决了几例 Greg 反驳这 sometimes failed 且他使用过两次结果 0-for-2——Kuhn 又补充 he has been involved with copyleft enforcement and policy for almost copyleft's entire existence 并称这十年出现了新的东西——Josh Triplett 说明 Conservancy 协调 a coalition of developers who signed agreements asking us to enforce their copyrights——Theodore Ts'o 反驳 Bradley 的立场 So please stop equating Bradley's own sentiments to that of the alliance's 并追问 Do you guys vote? Is it weighted based on the amount of code 或是一人一票——Jeremy Allison 澄清 Ah, this could be a big part of the misapprehensions in this thread 版权撤销远非简单——Linus Torvalds 回复 So excuse me for not finding Bradley Kuhn very trustworthy on this issue 但同时说明不必信任 Bradley 因为 Conservancy 的行动是透明的——Jiri Kosina 在 2016-08-29 CORE TOPIC 中对比英美法系与大陆法系指出 it's usually legally impossible to assign the moral rights away from the actual person creating the work 雇主通常只对经济权利持有许可——这一法域对照揭示 BSD 与 GPL 的版权实践差异根源并不在许可证文本而在法系本身——Jeremy Allison 反驳 Bradley 的立场时明确 Bradley isn't the one making the decisions here. It's the developers - ALWAYS the developers——Theodore Ts'o 回应称 Conservancy 会提供建议但不会 without a direct mandate from the copyright holders 采取行动
+
+ath5k 从双 BSD/GPLv2 收窄至 GPLv2-only 是 BSD 单向收窄的典型案例——Valdis Kletnieks 指出反向工程大多由 OpenBSD 团队完成并称自己不清楚 Jiri 是否有权移除 BSD 及其他许可原话为 it's unclear to me if Jiri is even allowed to remove the BSD/other license 同时认为 Jiri 可只把自己的代码以 GPLv2 发布但整个文件集合理应仍为 dual BSD/GPLv2——Bob Beck 从 OpenBSD 侧转述 I respect the GPL immensely, really I do 引用 OpenBSD CVS 与 NetBSD revision headers Sam Leffler 的长期署名——Adrian Bunk 对此的总结 You miss the whole point of dual licencing——Stephen Hemminger 警告 porting madwifi derived code to d80211 a derived work from GPL and non-GPL software 而 This actually will hurt the possible acceptance 是许可政治对技术治理的直接影响
+
+综上，GPL 版本考据的补充叙述呈现出三条相互交织的轨迹：一是标签—语义的滞后，SPDX 时代的自动化扫描让早期 GPL v1 标识被误读为当前义务；二是工程—法理的耦合，双许可不再仅是选择而是法律部门输出的分发条件，内核对外接口的许可边界被 EXPORT_SYMBOL_GPL 标记逐点固化；三是治理—法系的错位，SFC 联盟的联盟—董事会—投票—授权链与 BSD 阵营的松散版权持有形成结构性对照，而 Jiri Kosina 关于 moral rights 不可让渡的法系区分则揭示了这一错位的最底层原因——GPL 与 BSD 的对立并不止于许可证文本条款而在于其依赖的版权法体系本身
+
+【linux邮件提取】
+<!-- ROW_MINE: linux-fsdevel.messages.306319 -->
+**当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-fsdevel 邮件列表价值反推选封考据采纳）
+
+Massimo Maggi 与 Christoph Hellwig 就 POSIX ACL 符号导出策略展开许可证裁决之争。Maggi 指出 posix_acl 系列函数当前以任意许可方式导出、因此可在 CDDL 许可模块中使用，并建议统一改为 GPL-only 导出以消除歧义；Hellwig 一方则坚持调用文件系统 API 即构成衍生作品。原文: "the license we put on the code and vilationg our copyrights"。该条记录内核许可证执行机制与 POSIX ACL 导出策略的不一致争议，属许可证维度证据。
+
+以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+
+## 282.8.7 时间序列总叙述——从 2002 年 fsdevel 到 2024 年 Rust for Linux 的二十年 GPL 实证链
+
+本叙述章按 124 条 ROW_MINE 锚点提取的邮件时间顺序对 GPL 全系版本考据的当事人证据作一次总串联，把散落于 linux-fsdevel、linux-mm、linux-scsi、netdev、linux-man、linux-arch、linux-api、sparclinux、ksummit、rust-for-linux 十个列表的一手表态编织成一条从 2002 到 2024 的连贯实证链——
+
+链条的最早起点落在 2002 年 8 月 7 日，James Wilkinson 在 linux-fsdevel 上询问能否在 XFS 之上挂载专有文件系统，自述 I have plans to write a proprietary file system that can be mounted on top，其前提是全部源码原创且不以现有 GPL 代码为基础；同日 Bryan Henderson 在 GPL 与专有驱动代码线程中辨析许可证解释分歧，明确指出 Linus is but one of many licensors (copyright holders) of the Linux kernel，单一许可人意见不具约束力——这一对问答把 GPL 传染性的解释权威从个人让渡到版权人集合，为后续二十年所有 copyleft 执法实践奠定了法理前提——
+
+链条进入 2004 至 2007 的第二阶段，许可证边界的技术颗粒度首次下沉到具体符号与具体固件——2004 年 2 月 Dominik Kubla 提交 invalidate_mmap_range 的非 GPL 导出引发 Hellwig 与 McKenney激烈争论，Schwartz 反驳 copyleft 的机械解读并给出 The term derived work does not imply that the work is wholly derived；2004 年 3 月 Adrian Bunk 提出 qla2xxx 二进制固件源文件是否受 GPL 覆盖的逐字核对问题，Humberto Massa 反向主张必须把二进制数组视为优先修改形式，Makholm 则给出 No, law does not work that way 的直接否定；2004 年 10 月 22 日 Douglas Gilbert 发布 sg3_utils-1.09 时把 sg_err 一项改为 change GPL to FreeBSD，用户态 SCSI 工具链转向宽松许可证的文本证据由此落地；2005 至 2007 年 Sean Hefty 与 Glenn Grundstrom 陆续把 OpenIB.org BSD 许可证引入 InfiniBand 与 netdev 补丁树，形成 openfabrics BSD/GPLv2 双许可的工程传统，同期 Leonid Grossman 在 Neterion S2io 公告中给出 Licensing is clean: the Linux driver is GPL and the linux-wrapper code is GPL 以区分内核与用户态许可；2007 年 9 月 Reyk Floeter 公开指控 ath5k 侵犯其 OpenHAL 版权并声明 it is very unfair and malicious against me and the OpenBSD community，Adrian Bunk 从 OpenBSD 一侧转述 Bob Beck 的原话 I respect the GPL immensely, really I do，Bunk 则反驳 You miss the whole point of dual licencing——OpenBSD 阵营与 Linux 阵营围绕双许可的解释权由此进入长期对峙——
+
+第三阶段从 2009 到 2012 把许可证问题从代码文本推向导出符号与文档规范——2009 年 3 月 Michal Simek 微架构首次合入前维护者扫描发现 Xilinx All rights reserved 文件可能不构成 GPLv2 兼容授权，提交者承认该许可证非其所有；2009 年 5 月 Theodore Ts'o 就内核树三千余 All Rights Reserved 字句区分关键在于其后是否附有 GPL 授权声明与签署链；2009 年 12 月 Wu Fengguang 为 Documentation/vm/page-types.c 补入规范 GPL v2 声明；2011 年 4 月 Christoph Hellwig 在 isci 驱动 DMA 补丁中删除文件头部的双 BSD/GPLv2 声明，反证双 BSD/GPLv2 曾长期共存于 Linux SCSI 代码；2012 年 4 月 20 日 scsi_dh 回调导出之争中 Alan Cox 重申 The kernel _is_ GPL. No ifs, buts and maybes about it，Mike Snitzer 反驳专有驱动接口方案并明确 The GPL covers all derivative works. EXPORT_SYMBOL doesn't magically make code non-derivative，Chandra Seetharaman 承认 binary only third party drivers can't use the scsi_dh_detach callback because it's GPL only，EMC PowerPath 等专有驱动接入内核的边界由此被明确固化；2012 年 11 月 Bradley Kuhn 以十余年 GPL 执行者身份介入 scsi target 违规争论时称 openness and public discussions are the standard manner of group communication，Lawrence Rosen 代表 RTL Systems 援引 Oracle v. Google 与 SAS v. World Programming 主张使用 Linux 内核 API 是否构成衍生作品这一争议已被基本推翻——GPL 传染性的执行主体与法律边界同时被拉入国际司法对照——
+
+2016 年 ksummit-discuss 的 SFC 联盟执法辩论把 GPL 治理分歧推至顶点——Bradley Kuhn 转述违规企业公然表示 you think that we have to follow the GPL? Ok, then take us to Court. Greg 回应 I call bullshit on this. Linus Torvalds 断言侵权诉讼把人从 busybox 乃至 GPL 本身驱离并未增加有用的源代码，真正起作用的是 the general success of open source (over the FSF hardliner GPL stance)；Jeremy Allison 指出 many of them work on FreeBSD not Linux，直接把 BSD 阵营与 GPL 执法之争联系起来；Steven Rostedt 设想若 Red Hat 破产其版权由谁捍卫，认为最坏情形仅被当作 BSD 式许可代码使用 the worse that can happen is that they simply let others use it like BSD licensed code；Jiri Kosina 在 2016-08-29 对比英美法系与大陆法系并指出 it's usually legally impossible to assign the moral rights away from the actual person creating the work，这为 BSD 与 GPL 版权实践差异提供了底层法系对照——治理之争从此不再只是许可证条款之争——
+
+进入 2017 至 2020 的时间轴，许可证问题从符号层迁移到工具链层——2017 年 11 月 Linus Torvalds 就 x86 模块外部依赖抨击 people who just randomly slap _GPL() on the export should stop doing that 并称之为 fundamentally broken and stupid；同期 Jakub Kicinski 就 netdevsim 双许可追问 Why gpl2 is not enough for this? 承认 Its the license I got from legal，暴露双许可是法务结果而非工程决定；2018 年 12 月 Kicinski 把 bpftool 全部文件统一为 GPLv2-only 加 BSD-2-Clause 以化解 libbfd GPLv3-only 冲突令 Debian 维护者敢打包；2018 年 5 月 Matthew Wilcox 与 Boaz Harrosh 在 VM_LOCAL_CPU 补丁讨论中把许可争议直接挂钩 NetApp 用户态代码链入内核的嫌疑；2019 年 8 月 Harrosh 提交 ZUFS 补丁时给出 The Kernel is released as a pure GPLv2 License. The user-mode core is BSD-3 的分层许可方案以兼容其他操作系统；2020 年 10 月 Greg KH 就 Intel SGX 飞地驱动质疑 how in the world can it be bsd-3 licensed? 并要求让法务部门同意 mixing gpl2-only code in with this file——BSD 共存不再仅是哲学选择而是法务签字——
+
+链条终点落在 2021 至 2024 的 Rust for Linux 与 SPDX 时代——2021 年 4 月 Al Viro 反驳 Rust 工具链专有的论断，认为该论证成立前提是内核被牢牢锁定在无 GPL 等价物的工具上，并列举依赖工具未文档化且快速变化的特性、对接口主张版权、软件专利等锁定手段；2021 年 7 月 Alexey Dobriyan 提出解耦构建与用户态头文件，从 GPL 2 版 stdarg.h 抽取最小实现以触碰 GPL 与非 GPL 用户态之间的许可边界；2021 年 9 月 Richard Fontana 对 man-pages 以 SPDX 标注 GPL-1.0-or-later 表示 pretty unlikely what any contributor to these files intended，指出早期内核 GPL v1 was largely forgotten，the GPL 通常指 v2；2023 年 8 月 Greg KH 警告 Miguel Ojeda 在 Rust paste proc macro 中使用双重许可证需谨慎，指出 GPL-2.0 以外的许可证极易引发复杂问题甚至需要律师签核，最终作者决定遵从建议把该文件的许可统一替换为 GPL-2.0；2024 年 6 月 patchwork-bot 提交的 TI phy 头文件改为 GPL-2.0-only 与 MIT 双许可以支持其他生态，明确列出 used in other Operating System ecosystems such as Zephyr or FreeBSD；2024 年 8 月 Sami Tolvanen 就 gendwarfksyms 工具许可证标记承认许可证是从系列中包含的 genksyms 代码继承而来，将与公司法务商议调整——GPL 版本考据的实证链条在 Rust 内核化时代以法务—许可—工具链的三重耦合收束——
+
+贯穿二十年的四条主线由此清晰可辨：一是 GPL 传染性的执行主体从 Linus 一人迁移到版权人集合再到 SFC 联盟，其法律地位不断被司法判例反向校准；二是 BSD 与 GPL 的对立从哲学命题下沉为符号标记、驱动补丁、导出声明与用户态工具的工程清单，其每一次共存都由法务签字而非工程决定；三是 SPDX 时代的自动化扫描让早期 GPL v1 与 GPL_NOVERSION_ONELINE 标识的语义空白暴露于当代维护者面前，成为新的许可证治理压力源；四是 Rust for Linux 把编译工具链本身重新推向 GPL 兼容性的前沿，Non-GPL 工具能否促成专有内核版本的争论回到 2002 年 Wilkinson 的问题原点上——GPL 版本的迭代并不是条款的线性演进，而是治理压力的分层响应——
+
+
+## 282.8.8 补编叙述章（二）——公有领域放弃、固件的优先修改形式、头文件导出与版权行（补前三章未收录的十三组证据）
+
+以下补编继续按时间顺序整理 claim 库中未被第 282.8.5、282.8.6 与 282.8.7 叙述收录的十三组当事人记录，引语逐字取自邮件原文
+
+2004-02-03 的 CRC32C 评审把 GPL 家族内部的一条隐性路径摆上台面——作者为 MODULE_LICENSE("GPL and additional rights") 辩护时引用 lib/crc32.c 的 "This code is in the public domain; copyright abandoned"，把公有领域放弃与"附加权利"并列为可交付的许可语义；同年的 3 月集中爆发了二进制固件的优先修改形式之争——3 月 22 日日本厂商 NinjaSCSI 的驱动文档版权小节以 "No, no, this is Copyleft software. See GPL." 作答，3 月 30 日 Humberto Massa 主张接收方 "follow the directions of the GPL in respect to modification and redistribution"，Guy 反驳 "The binary data stored in the .c source file is not the preferred source!"，Henning Makholm 以 "No, law does not work that way." 收束字面含义之争，Valdis Kletnieks 在 3 月 31 日把问题推向版权人主观意愿——"what happens if _the copyright holder_ actually prefers the binary blob for modification?"——qla2xxx 的 ql2100_fw.c 由此成为优先修改形式最具检验力的样本
+
+2005-06-07 Jan-Benedict Glaw 审读 v9fs 调试头时发现 GPL 样板仍写着 "59 Temple Place, Suite 330"，要求改为 Franklin Street Fifth Floor、Boston, MA 02110-1301，FSF 搬迁造成的文本滞后由此在补丁层面被逐处修补；同年 12 月 Bryan Henderson 在 ext2 与 reiserfs 驱动被指违反 GPL 的线程中把违规形态界定得异常干净——他人 "redistributes it slightly modified (ported) in object code form and won't supply the source code"，无需任何接口抽象或派生争议即构成违反
+
+BSD 与 GPL 的共存条款在 2006 年继续加密——2006-10-26 Glenn Grundstrom 的 NetEffect 10Gb 网卡声明 "available to you under a choice of one of two licenses"，把 GPLv2 与 OpenIB.org BSD 的再分发条件逐条并列；2006-11-17 的 InfiniBand 连接抽象 RFC 更进一步给出 CPL、BSD 与 GPLv2 三重选择，其落地证明 BSD 进入内核树不需要理论前提，只需要一段可复制的条款
+
+2007 年留下三类反向证据——Tom Callaway 在 8 月 12 日的 sun4c 与 sun4d 讨论中划出另一类灰区，"Even on OpenSolaris, there is a grey area as to whether one can legally view CDDL licensed code, then reimplement it as GPL"，Mark Fortescue 回应自己从未基于 Solaris 源码改动 Linux，观察即复制的边界在此被明确承认其模糊性；8 月 22 日 Jarek Poplawski 在 GCC 版本讨论中写下 "all (GPL2) Linux distros and all gcc versions are extremely nice at least not less nice than BSDs"，把许可证阵营与编译器生态直接并置；9 月 2 日 Al Viro 质疑外部机构作为许可权威的可靠性，原话为 "if you have to rely on SFLC for licensing decisions... Ouch."，认为把能否转为纯 GPL 的判断交给 Eben Moglen 或 Theo 均不可靠
+
+2009 年两条记录把许可边界推向构建系统与内核边界——2 月 Arnd Bergmann 的 microblaze 通用 unistd.h 迁移补丁 diff 直接删除了原文件的 GPL 许可声明与 COPYING 指引段落，许可证文本在内核源文件中的实际增删成为可追溯的治理留痕；9 月 Gregory Haskins 在 vhost_net 讨论中以开源成果为论据，称 "I've already sat down and thought about these issues and solved them in a freely available GPL'ed software package"，Avi Kivity 回应 "In the kernel. IMO that's the wrong place for it."，功能放置位置的选择由此带上许可重量
+
+2012 年 SCSI target 入主线之争给出三个相互独立的判词——4 月 22 日 Alan Cox 援引 Red Hat 法务意见指出 "They can only grant rights beyond the GPL providing they remove everyone elses code"，把权利让渡与代码切割绑定；9 月 11 日维护者线程出现 "your company appears to be violating the GPL" 的公开指控；11 月 8 日 Nicholas Bellinger 以 "Accusing us of violating GPL is a serious legal claim" 反将 Andy Grover 一军，11 月 16 日 Roland Dreier 给出贡献者一侧的清晰表述——"to the extent that this is copyrightable work, it is released exclusively under the GPL"
+
+2013 至 2014 年留下版权标记变更与测试套件转换——2013-01-23 Emulex 批量延长版权年份、声明 EMULEX 与 SLI 为商标并新增免责条款，David Miller 以 "There needs to be justification for copyright changes like this" 要求逐条说明否则不予接受；2014-06-20 Daniel Borkmann 在把用户态测试套件下沉内核时发现许可门槛，称 "we need to juggle relicensing the test suite (it is currently BSD, not GPLv2)"，测试代码同样是许可证治理的对象
+
+2015 年密集出现标注纠错与头文件导出难题——3 月 Paul Bolle 两次以 license nit 指出文件头声明 GPL 但 MODULE_LICENSE 标注不完整、应写为 GPL v2；3 月 30 日 Greg KH 与 Michael Tsirkin 在 pci_ids.h 导出争论中触及内核与用户态接口的许可死结，Tsirkin 指出 "libpci is under plain GPL, Linux needs the exception for user programs"，并补注 "Some people believe headers are copyrighteable, for them, licensing is also problematic"；7 月 Heiko Stübner 在固件签名 TECH TOPIC 中转引 David Woodhouse 指出一段许可声明自相矛盾，因为它声称要 "control the distribution of derivative OR COLLECTIVE WORKS" 却又与自身明确意图冲突
+
+2016 年 SFC 联盟公开辩论之外并行着四条治理线索——8 月 29 日 Harald Welte 谈及德国 Telefonica 案败于程序问题、批评 Patrick McHardy 拒不解释导致谣言蔓延，同时把 SFC 的原则称为 "principles of community-oriented enforcement"，Bradley Kuhn 同月把评判标准从言辞移向行动——"The way to judge a public figure is by their official policies, their actions"，8 月 30 日 Luis Rodriguez 以 SCO 案为反例指出 "that was not mainly about some 'GPL test case' or 'license clarification'"；9 月 16 日 Jason Gunthorpe 表态 "I am *strongly* opposed to anything that changes the license of the existing 4 core libraries away from the GPLv2 or OpenIB.org situation we have today"，并点名包括 BSD 的其他变体，四条线索合起来说明 SFC 之辩并非孤立事件而是多重执法传统的交汇
+
+链条尾端由四条近年记录收束——2018-05-15 Matthew Wilcox 与 Boaz Harrosh 在 VM_LOCAL_CPU 补丁上互指对方意图把非 GPL 用户态代码链入内核，Wilcox 的措辞是 "You're getting dangerously close to admitting that the entire point"；2021-05-24 James Bottomley 就 HiSilicon 署名更正裁定 "You can't do this. The strict terms of the GPL require us to preserve intact all notices"；2022-11-02 Chris Mason 在 btrfs 代码回滚争端中指出 "since all of these previous contributions to the kernel are under GPL, there is no 'taking back the older commits'"，并把不可撤回性称为 GPL 的优点；2023-06-29 Christoph Lameter 澄清 move_pages.2 由其撰写、Michael Kerrisk 编辑、"The licensing was GPL and not a proprietary one."，同意把 SPDX 标识改为 Linux-man-pages-copyleft；2024-06-20 Greg KH 审读 Danilo Krummrich 的 Rust devres 抽象时发现新文件全部缺少版权声明，他声明自己支持不加版权行，但与公司法务不同——那些法务 "do NOT want to see files without copyright lines"，并留下 "Otherwise you might get a 'stern talking to' in the future"
+
+综上，本补编把 GPL 版本考据再推进一层：一是优先修改形式从来不是抽象定义而是靠具体文件判例累积的，ql2100_fw.c 与 NinjaSCSI 的一句话立场构成同一问题的正反两端；二是版权与许可文本自身的变更同样受 GPL 约束，从 FSF 地址、版权年份到版权声明完整性形成了一条独立于条款语义的治理链条；三是 BSD 与 GPL 的对立在工程上以二选一到三重许可的条款文本被吸收，其反对声与法务压力同样留下了完整档案；四是治理分歧的重心已从是否强制执行转向由谁以何种书面留痕执行，而 Rust 时代不加版权行的个人偏好与公司法务要求的冲突正是这一转向的最新标本
