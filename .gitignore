@@ -337,3 +337,5 @@ dslinux_claims.duckdb.bak_fix12109_20260923_093132
 # 被整索引提交卷走；已入库的 *.bak_t1 需显式 git rm 才会脱离跟踪。
 *.bak_t1
 
+/_tmp
+/script
