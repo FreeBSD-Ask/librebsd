@@ -1,0 +1,104 @@
+104 | 
+105 | **文献**：各哲学原著；SEP 词条 ［A］
+106 | 
+107 | ## 282.14.9 叙述章节：从 aic7xxx 血统到 LLM 衍生作品风险——BSD 版权体系在跨时跨媒介的展开
+108 | 
+109 | **要点**：本叙述以 31 条 ROW_MINE 邮件史料的时间线为骨架，将 BSD 版权体系在真实工程现场的展开分为四幕——早期 BSD 代码迁入 GPL 内核时的版权归属标记、GPL 传染性与 BSD 兼容边界的工程化辩论、man-pages 项目统一版权头争议所暴露的集体署名与个体归属冲突，以及 2025 年 LLM 训练数据与 BSD 衍生作品的最新交叉风险；辅以 Orange v. Entr'Ouvert 案作为 copyleft 违反代价从合同说翻转为侵权说的当代坐标，从而构成一以贯之的版权体系现场叙事
+110 | 
+111 | **叙事**：BSD 版权体系的现场展开可以从 1994-2000 年的 aic7xxx 驱动说起——Luben Tuikov 将 FreeBSD 侧的代码同步进入 Linux 内核时，保留的版权头为"Copyright (c) 1994-2000 Justin T. Gibbs"，指向一段横跨多个 FreeBSD 版本的代码血统；2006 年前后同步补丁更新年份至"Copyright (c) 1994-2001, 2004 Justin T. Gibbs"，说明 BSD 授权与版本元数据进入 GPL 内核并非异常状态；同期 Christoph Hellwig 更新 Domex DMX3191D 驱动至现代 PCI 探测接口时，文件头保留 GNU GPL 许可声明并添加"Portions Copyright"标注部分代码来源，展示了"GPL 主许可 + BSD 归属标记"的嵌入式共存模式
+112 | 
+113 | ath.c/ar5k 移植争论将此主题推向 2007-2008 年的高峰——Adrian Bunk 引用 OpenBSD CVS 中带有大量 Reyk Floeter 贡献的 ath.c 版本，附 BSD 2-clause 许可证全文与"Copyright Sam Leffler, Errno Consulting"署名，并附版本标记"$OpenBSD: ath.c,v 1.63 2007/05/09 16:41:14 reyk Exp $"；Igor Sobrado 主张多许可文件在所有作者同意前仍是多许可，并逐条引用 BSD 许可第一条"Redistributions of source code must retain the above copyright"，指出删除或改写条款清单本身就违反该条；Valdis Kletnieks 反驳错误补丁"removed the BSD statement from"双许可与非双许可文件，同时 John W. Linville 宣布软件自由保护组织认定自由软件开发者无需担心使用或移植"the OpenBSD reverse-engineered Atheros HAL, ar5k"，构成 BSD 移植法律边界的一次完整辩论
+114 | 
+115 | GPL 传染性与 BSD 兼容边界的工程化辩论在 2006-2007 年间达到高潮——Christoph Hellwig 的 GPFS wrapper 论述指出约 1 MB 的 wrapper 深度窥探内核内部结构因而构成 GPL 衍生作品，并点明该模块的 BSD 许可属性使其无法与 GPL 内核一同分发，触及 BSD 与 GPL 兼容边界，原话"It's BSD licensed - they couldn't distribute it together with GPFS if it was GPL"；Andrew Morton defends the EXPORT_SYMBOL_GPL downgrade of invalidate_mmap_range against Hellwig，citing that IBM's GPFS was developed under AIX and ported to Linux，hence meets"some binary modules are OK" per Linus exemption，同时承认面对"IBM can just ignore copyright law"之反驳时"he does not feel strongly enough to dispute it"，展现版权执法在商用软件面前的现实边界
+116 | 
+117 | man-pages 项目 2024-2025 年的统一版权头争议将集体署名与个体归属的冲突推向前台——Alejandro Colomar 的 commit 9f2986c 将各页版权头统一为"Copyright, The contributors to the Linux man-pages project"并加"SPDX-License-Identifier: Linux-man-pages-copyleft"，原作者改列入 CREDITS；Branden Robinson 与 Andries E. Brouwer 均引用 Linux Foundation 博文"Don't change someone else's copyright notice without their permission"，认为改动既有版权声明违法；Desnoyers 表示"This change is OK as far as I am concerned"，理由是希望"help lessen the maintenance burden"，并称"Eliminating redundant, copyright information appears to be a good way to it"，同时说明"The git history holds detailed information about the line-by-line modifications to each file anyway"；Colomar 以"I've added to BCC everyone whose copyright notices have been removed"逐封询问作者是否批准，Brouwer 以 man2/unlink.2 为例指出"Today I read"已改为一行集体署名后"I no longer find the information about who owns this page"；同期 Landley 关于改 GNU 手册须读源码并提交 copyright assignment"you've tried that since 1983"的说法被 Robinson 反驳为"Wrong since (at least) 2013 and wrong today"，附 gnustandards-commit 2013-10 归档链接，说明版权让渡的必要性已从制度要求退化为可选路径；Colomar 在回应 Red Hat 全面著作权授权时答"We're not GNU in the man-pages, so I guess it doesn't apply"，并列出 VERBATIM、VERBATIM_PROF、VERBATIM_ONE_PARA、VERBATIM_TWO_PARA 四个派生版本，说明 BSD 家族内部已演化出精细的分层变体
+118 | 
+119 | 2025 年 LLM 训练数据与 BSD 衍生作品的交叉风险将 BSD 版权体系带入新战场——Krzysztof Kozlowski 在 coding-assistants 讨论中抛出版权推想"if there is ever a ruling that model trained on BSD data creates BSD-derivative work"，指出届时 LLM 贡献的著作权归属会变得麻烦，并强调署名标签对此毫无作用；2025-08-22 MAINTAINERS SUMMIT 讨论标注 AI-assisted code 的议题时，触及"training data from web pages having a restrictive copyright"与 AI 输出"copy something exactly as is"的情形，Geert Uytterhoeven 论证神经元仅存储"patterns with many repetitions"以回应逐字复制疑虑，标志传统 BSD 版权边界向新媒介延伸
+120 | 
+121 | Orange v. Entr'Ouvert 案则从司法层面为上述工程化辩论提供对照——CA Paris 2024-02-14 判决认定违反 GPLv2 第 2/3/4/10 条构成 contrefaçon 假冒侵权，Lasso 占 IDMP 源码 57% 构成实质融合，经济损害 50 万欧 + 精神 15 万欧 + 利润返还 15 万欧 + 诉讼费 6 万欧合计约 86 万欧，说明 copyleft 违反的代价在欧洲法域显著抬高，为 BSD 宽松许可与 GPL copyleft 的对比提供了当代坐标
+122 | 
+123 | 综上，31 条 ROW_MINE 史料构成一条从 1994-2004 年 aic7xxx 版权年份演进、经 2007 年 ath.c 移植争议与 GPFS wrapper 传染性辩论、到 2024-2025 年 man-pages 统一版权头与 LLM 衍生作品风险，最终由 2024 年 Orange 案司法坐标回应的完整叙事弧——BSD 版权体系不是静态文本而是持续在工程、治理与司法三个层面被重新解释的动态过程
+124 | 
+=====191-279=====
+198 | 
+199 | 
+200 | 【linux邮件提取】
+201 | <!-- ROW_MINE: linux-man.messages.735003 -->
+202 | **当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-man 邮件列表价值反推选封考据采纳）
+203 | 
+204 | Colomar 在 SPDX 许可证审查线程中列出 man-pages 里"VERBATIM"许可证的四个派生版本：Linux-man-pages-copyleft（即 VERBATIM）、VERBATIM_PROF、VERBATIM_ONE_PARA、VERBATIM_TWO_PARA，并逐一贴上文本与首个使用页面。四份文本的差异在于是否允许修改、是否要求附带修改记录，以及是否包含免责段"The author(s) assume no responsibility for errors or omissions"——理由是内核与库持续变动。
+205 | 
+206 | 以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+207 | 
+208 | 【linux邮件提取】
+209 | <!-- ROW_MINE: linux-man.messages.740276 -->
+210 | **当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-man 邮件列表价值反推选封考据采纳）
+211 | 
+212 | Robinson 反驳 Landley 关于改 GNU 手册须读源码并提交 copyright assignment"you've tried that since 1983"的说法，称"Wrong since (at least) 2013 and wrong today"并附 gnustandards-commit 2013-10 归档链接，另以"Or play ill-informed games in a toy box"回应其"Learn to cook at the oven factory"之喻。
+213 | 
+214 | 以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+215 | 
+216 | 【linux邮件提取】
+217 | <!-- ROW_MINE: linux-man.messages.741308 -->
+218 | **当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-man 邮件列表价值反推选封考据采纳）
+219 | 
+220 | 回应 DJ Delorie 关于 Red Hat 全面著作权授权是否已适用于 man-pages，Colomar 答"We're not GNU in the man-pages, so I guess it doesn't apply"，表示不知 Red Hat 具体做法，也未见任何来自 RH 的著作权授权文件，请对方提供文档后再看。
+221 | 
+222 | 以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+223 | 
+224 | 【linux邮件提取】
+225 | <!-- ROW_MINE: linux-man.messages.746894 -->
+226 | **当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-man 邮件列表价值反推选封考据采纳）
+227 | 
+228 | Andries E. Brouwer 就 man-pages-6.14 统一版权头一事引 Linux Foundation 博文"Don’t change someone else’s copyright notice without their permission"，文中指出该文主题实为新贡献的记录方式，"writing "by the contributors of the foo project" is OK for new stuff"；认为"it is illegal to change existing copyright notices"，除非取得全部相关人许可。glibc 的做法是不删除任何既有版权头，而在 DCO 下新增"Copyright The GNU Toolchain Authors."一行，与"Copyright (C) 1995-2025 Free Software Foundation, Inc."并列。
+229 | 
+230 | 以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+231 | 
+232 | 【linux邮件提取】
+233 | <!-- ROW_MINE: linux-man.messages.747091 -->
+234 | **当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-man 邮件列表价值反推选封考据采纳）
+235 | 
+236 | Christoph Lameter 回帖统一其邮件地址为 cl@gentwo.org；同时转发 Alejandro Colomar 通报——Colomar "I've added to BCC everyone whose copyright notices have been removed"，逐封询问作者是否批准 commit 9f2986c 对其页面的改动；BCC 清单由 git show 该提交被删除行中抽取邮箱生成。Colomar 此前拒绝 Branden Robinson 提议的替代行"See the Git revision history at $URL for records of changes and contributors to this file"，理由是"I don't want to add that overhead to each page"，故"go with a removal without replacement"。
+237 | 
+238 | 以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+239 | 
+240 | 【linux邮件提取】
+241 | <!-- ROW_MINE: linux-man.messages.748615 -->
+242 | **当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-man 邮件列表价值反推选封考据采纳）
+243 | 
+244 | Mathieu Desnoyers 就其页面内版权头被删一事回复"This change is OK as far as I am concerned"，理由是希望"help lessen the maintenance burden"，并称"Eliminating redundant, copyright information appears to be a good way to it"；同时说明"The git history holds detailed information about the line-by-line modifications to each file anyway"。
+245 | 
+246 | 以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+247 | 
+248 | 【linux邮件提取】
+249 | <!-- ROW_MINE: linux-man.messages.748645 -->
+250 | **当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-man 邮件列表价值反推选封考据采纳）
+251 | 
+252 | Colomar 说明 commit 9f2986c 将各页版权头统一为"Copyright, The contributors to the Linux man-pages project"并加"SPDX-License-Identifier: Linux-man-pages-copyleft"，原作者改列入 CREDITS。Brouwer 以 man2/unlink.2 为例：原头逐行列有 Drew Eckhardt(1992)、Ian Jackson(1993)、Michael Kerrisk(2006,2014) 版权与 verbatim 授权语，而"Today I read"已改为一行集体署名，故"I no longer find the information about who owns this page"。Colomar 称该讨论历时约三个月，作者名仍在 CREDITS 可查。
+253 | 
+254 | 以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+255 | 
+256 | 【linux邮件提取】
+257 | <!-- ROW_MINE: linux-man.messages.753418 -->
+258 | **当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-man 邮件列表价值反推选封考据采纳）
+259 | 
+260 | Andries E. Brouwer 质疑统一版权声明的合法性，引 Linux Foundation 博文「"Don’t change someone else’s copyright notice without their permission You should not change or remove someone else’s copyright notice unless they have expressly (in writing) permitted you to do so. This includes third parties’ notices in pre-existing code."」，认为改动既有版权声明违法；Alejandro Colomar 说明其与相关方长达约三个月的讨论并留 commit 链接。
+261 | 
+262 | 以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+263 | 
+264 | 【linux邮件提取】
+265 | <!-- ROW_MINE: linux-scsi.messages.1510520 -->
+266 | **当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-scsi 邮件列表价值反推选封考据采纳）
+267 | 
+268 | Luben Tuikov 同步 aic7xxx 的 2285 至 2294 号改动，补丁上下文显示驱动头注释版权归1994 至 2000 年的 Justin T. Gibbs，指向 FreeBSD 版 aic7xxx 的代码血统。Copyright (c) 1994-2000 Justin T. Gibbs。
+269 | 
+270 | 以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+271 | 
+272 | 【linux邮件提取】
+273 | <!-- ROW_MINE: linux-scsi.messages.1497448 -->
+274 | **当事人素材**（来源：dslinux_claims.duckdb claim 库；linux-scsi 邮件列表价值反推选封考据采纳）
+275 | 
+276 | Christoph Hellwig更新Domex DMX3191D驱动至现代PCI探测接口 文件头保留GNU GPL许可声明并添加Portions Copyright。
+277 | 
+278 | 以上为邮件列表当事人一手自述/主张，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。【linux邮件提取】
+279 | 
