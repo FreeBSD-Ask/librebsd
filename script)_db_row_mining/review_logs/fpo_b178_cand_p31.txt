@@ -1,0 +1,13 @@
+1636319|L4|ports团队以MySQL与Postgres为据指出多版本共存常见且后缀并非强制
+1636322|L4|Zeising称smartmontools编译报同类cam_ccb.h错且补丁对clang无效
+1636324|L4|Zeising称深夜测试不确定并承认补全括号后确实有效致歉
+1636326|L4|Kevin Day报告armv6实测880个端口构建成功844失败12因依赖跳过18
+1636327|L4|Leslie实测portaudit命令未找到并追问为何9.1必装portaudit而8.3不用
+1636329|L4|bw称pkgng自1.1.3起在upgrade -f与version上两处行为改变
+1636331|L4|Marko称在make.conf设WITH_NEW_XORG=yes后libva-vdpau-driver构建失败
+1636335|L4|Mike Jakubik报告mplayer2缺libavresample致ffaac等音频解码失败
+1636341|L4|Hurlin质疑astro/celestia只需删kde3界面nvclock应仅去qt3选项
+1636345|L4|Alex Dupre直接答Never并说明lang/php5将移除迁移至lang/php54
+1636346|L4|Loic BLOT建议等5.5.1到5.5.2因5.4.16下PDO子类不关闭PG连接
+1636348|L4|Chadwick在9.1裸机上以p5-Config-Record实测两方案皆无残留无报错
+1636351|L4|Lifanov称portlint禁止dirrmtry但poudriere仍报SITELIBDIR残留
