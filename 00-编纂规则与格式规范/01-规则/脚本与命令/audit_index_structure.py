@@ -122,15 +122,30 @@ def main():
 
     ch_total = 0
     ch_bad, sec_bad, bib_bad, dup_ch, bib_none = [], [], [], [], []
+    # K 三级结构（2026-09-27 第五批补入）：卷必有章、章必有节、卷内不得有章外孤立节行。
+    # 缘由：B/C/D 三组只验「已有编号是否连续」，无章之卷（章数 0）、无节之章（节数 0）与
+    # 章外孤立 `-` 行在三组判据下均「无异常」而静默通过，三级结构可被无声破坏。
+    tri_bad = []
     seen_ch = {}
     sec_total = src_total = 0
     for i, (vid, vt, st) in enumerate(vols[:-1]):
-        seg = h[st : vols[i + 1][2]]
+        # 三级结构判据须先屏蔽 <script>/<style>：页面构建脚本内含 '<li>' 等字符串字面量，
+        # 直接计数会把脚本源码误判为「章外孤立节行」（2026-09-27 首次实现即被该假阳性拦下）。
+        seg = re.sub(
+            r"<(script|style)[^>]*>.*?</\1>",
+            lambda m: " " * len(m.group(0)),
+            h[st : vols[i + 1][2]],
+            flags=re.S | re.I,
+        )
         chs = re.findall(
             r'<h3 class="chapter" id="([^"]+)">(.*?)</h3>\s*<ul class="sections">(.*?)</ul>',
             seg,
             re.S,
         )
+        if not chs:
+            tri_bad.append((vid, "无章之卷"))
+        _seg_li = len(re.findall(r"<li>", seg))
+        _ch_li = 0
         nums = [int(re.search(r"ch-(\d+)$", c[0]).group(1)) for c in chs]
         if nums != list(range(1, len(chs) + 1)):
             ch_bad.append((vid, nums))
@@ -145,6 +160,9 @@ def main():
                 dup_ch.append((t, seen_ch[t], cid))
             seen_ch[t] = cid
             lis = re.findall(r"<li>(.*?)</li>", raw_ul, re.S)
+            _ch_li += len(lis)
+            if not lis:
+                tri_bad.append((cid, "无节之章"))
             snums = []
             for li in lis:
                 sec_total += 1
@@ -166,11 +184,13 @@ def main():
             has_bib = any("本章书目述评" in x for x in txts)
             if has_bib and "本章书目述评" not in last:
                 bib_bad.append((cid, last[:40]))
-            elif not has_bib and "卷末书目述评" not in t:
+            elif lis and not has_bib and "卷末书目述评" not in t:
                 _lt = re.sub(
                     r'<span class="src">.*?</span>', "", lis[-1], flags=re.S
                 )
                 bib_none.append((cid, re.sub(r"<[^>]+>", "", _lt).strip()[:40]))
+        if _seg_li != _ch_li:
+            tri_bad.append((vid, f"章外孤立节行 {_seg_li - _ch_li} 条"))
     print(f"C 章: 共 {ch_total} 章 | 卷内章号异常 {len([x for x in ch_bad if isinstance(x[1], list)])} 卷 |"
           f" 章题/锚点异常 {len([x for x in ch_bad if not isinstance(x[1], list)])} | 重题 {len(dup_ch)}")
     for x in ch_bad[:10]:
@@ -227,6 +247,13 @@ def main():
     n_bibch = sum(1 for t in seen_ch if "卷末书目述评" in t)
     print(f"   卷末书目述评章 {n_bibch} 个；正章 {ch_total - n_bibch} 个；vol-note 分工注 {h.count('class=\"vol-note\"')} 个")
 
+    print(f"K 三级结构（卷→章→节）: 无章之卷 "
+          f"{len([x for x in tri_bad if x[1] == '无章之卷'])} |"
+          f" 无节之章 {len([x for x in tri_bad if x[1] == '无节之章'])} |"
+          f" 章外孤立节行 {len([x for x in tri_bad if '孤立' in x[1]])}")
+    for x in tri_bad[:10]:
+        print("   ❌", x)
+
     # ── J 内容层 class ↔ 格式层选择器（2026-09-18 补入）─────────────────────
     # 缘由：.doc-foot（四层解耦提取器守卫被 .doc-footer 子串误命中而漏写）与 .vol-note
     # （长期无规则、以正文全尺寸渲染）两类缺陷均因「class 无定义」而以默认样式静默渲染，
@@ -260,6 +287,7 @@ def main():
         or dupids
         or miss
         or undef
+        or tri_bad
     )
     print("\n总判定:", "FAIL" if allbad else "PASS")
     return 1 if allbad else 0

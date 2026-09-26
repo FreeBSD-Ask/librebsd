@@ -1,0 +1,24 @@
+PASS | T1 桌面 TOC 激活链接可见性（5 位点） | [{"y":0,"scrollTop":56,"linkTop":1,"linkBottom":26,"visH":929,"target":"vol-1","visible":true},{"y":9000,"scrollTop":535,"linkTop":1,"linkBottom":26,"visH":929,
+PASS | T2 溯源注徽标展开 | note-open=true
+PASS | T3 人名浮层（plink） | 99 links, 费尔南多·科尔巴托原文名Fernando Corbató／Fernando J. Corbató／Corbató角色CT
+PASS | T4 文献浮层（reflink） | 文献 2764著录（GB/T 7714-2015）Brian W. Kernighan. UNIX: A History
+PASS | T5 长节名展开/收起 | dormant(81)
+PASS | T6 卷导航点击跳转 | 1 links, y=5031
+GRAPH_RAW {"labels":41,"vols":41,"hasEllipsis":0,"missing":[],"overlaps":0}
+PASS | T7a 图谱标签完整显示（无省略） | labels=41 vols=41 ellipsis=0 missing=0
+PASS | T7b 图谱零重叠（视觉几何） | overlaps=0
+PASS | T7c 图谱点击放大/还原 | {"before":11.5,"afterClick":20,"cls":true,"afterClick2":11.5}
+PASS | T8 阅读进度条 | 118.062px
+PASS | T9 面包屑可见 | display
+PASS | T10 键盘 j 跳下一章 | y=10543
+PASS | 桌面 JS 错误
+PASS | T11 手机抽屉选中卷可见（视觉几何） | {"drawerRes":"clicked","scrollTop":10472,"linkTop":0,"visible":true}
+PASS | T15 抽屉层叠高于面包屑（无压盖） | {"ok":true,"zbc":40,"zdr":45,"zsc":44,"hitsBc":false,"hitCls":"active"}
+PASS | T16 面包屑避让浮动控件（无重叠） | {"bc":{"x":64,"r":348,"y":0,"b":70,"disp":"flex"},"toc":{"x":16,"r":60,"y":16,"b":60,"disp":"flex"},"ot":{"x":350,"r":394,"y":18,"b":62,"disp":"flex"},"ovToc":f
+PASS | T12 手机图谱完整零重叠 | {"labels":41,"vols":41,"ellipsis":0,"overlaps":0}
+PASS | 手机 JS 错误
+PASS | T13 SUMMARY 导出内容 | {"len":3983,"hasStats":true,"fid":"{\"SUMMARY 卷\":0,\"SUMMARY 章\":0,\"SUMMARY 节\":0,\"JSON 卷\":0,\"JSON 章\":0,\"JSON 节\":0,\"TXT 卷\":0,\"TXT 章\":0,\"TXT 节\":0}"
+PASS | T17 CSV 与 PDF 导出内容 | {"csvRows":3434,"csvSec":true,"csvVolGroups":41,"csvVolOk":true,"csvChOk":true,"bom":true,"pdf":{"h2":41,"h3":413,"li":3434},"pdfSub":true,"errs":0,"csvLen":375
+PASS | T14 打印媒体回落浅色（暗/浅双主题） | {"dark":{"body":"rgb(47, 48, 45)","h2":"rgb(47, 48, 45)","bg":"rgb(255, 255, 255)","lum":0.187},"light":{"lum":0.187},"beforeLight":true,"errs":0}
+RESULT [{"name":"T1 桌面 TOC 激活链接可见性（5 位点）","pass":true,"detail":"[{\"y\":0,\"scrollTop\":56,\"linkTop\":1,\"linkBottom\":26,\"visH\":929,\"target\":\"vol-1\",\"visible\":true},{\"y\":9000,\"scrollTop\":535,\"linkTop\":1,\"linkBottom\":26,\"visH\":929,\"target\":\"vol-3\",\"visible\":true},{\"y\":21000,\"scrollTop\":1802,\"linkTop\":1,\"linkBottom\":47,\"visH\":929,\"target\":\"vol-8\",\"visible\":true},{\"y\":38000,\"scrollTop\":3604,\"linkTop\":1,\"linkBottom\":47,\"visH\":929,\"target\":\"vol-13\",\"visible\":true},{\"y\":59000,\"scrollTop\":5554,\"linkTop\":1,\"linkBottom\":26,\"visH\":929,\"target\":\"vol-17\",\"visible\":true}]"},{"name":"T2 溯源注徽标展开","pass":true,"detail":"note-open=true"},{"name":"T3 人名浮层（plink）","pass":true,"detail":"99 links, 费尔南多·科尔巴托原文名Fernando Corbató／Fernando J. Corbató／Corbató角色CT"},{"name":"T4 文献浮层（reflink）","pass":true,"detail":"文献 2764著录（GB/T 7714-2015）Brian W. Kernighan. UNIX: A History"},{"name":"T5 长节名展开/收起","pass":true,"detail":"dormant(81)"},{"name":"T6 卷导航点击跳转","pass":true,"detail":"1 links, y=5031"},{"name":"T7a 图谱标签完整显示（无省略）","pass":true,"detail":"labels=41 vols=41 ellipsis=0 missing=0"},{"name":"T7b 图谱零重叠（视觉几何）","pass":true,"detail":"overlaps=0"},{"name":"T7c 图谱点击放大/还原","pass":true,"detail":"{\"before\":11.5,\"afterClick\":20,\"cls\":true,\"afterClick2\":11.5}"},{"name":"T8 阅读进度条","pass":true,"detail":"118.062px"},{"name":"T9 面包屑可见","pass":true,"detail":"display"},{"name":"T10 键盘 j 跳下一章","pass":true,"detail":"y=10543"},{"name":"桌面 JS 错误","pass":true,"detail":""},{"name":"T11 手机抽屉选中卷可见（视觉几何）","pass":true,"detail":"{\"drawerRes\":\"clicked\",\"scrollTop\":10472,\"linkTop\":0,\"visible\":true}"},{"name":"T15 抽屉层叠高于面包屑（无压盖）","pass":true,"detail":"{\"ok\":true,\"zbc\":40,\"zdr\":45,\"zsc\":44,\"hitsBc\":false,\"hitCls\":\"active\"}"},{"name":"T16 面包屑避让浮动控件（无重叠）","pass":true,"detail":"{\"bc\":{\"x\":64,\"r\":348,\"y\":0,\"b\":70,\"disp\":\"flex\"},\"toc\":{\"x\":16,\"r\":60,\"y\":16,\"b\":60,\"disp\":\"flex\"},\"ot\":{\"x\":350,\"r\":394,\"y\":18,\"b\":62,\"disp\":\"flex\"},\"ovToc\":false,\"ovOt\":false}"},{"name":"T12 手机图谱完整零重叠","pass":true,"detail":"{\"labels\":41,\"vols\":41,\"ellipsis\":0,\"overlaps\":0}"},{"name":"手机 JS 错误","pass":true,"detail":""},{"name":"T13 SUMMARY 导出内容","pass":true,"detail":"{\"len\":3983,\"hasStats\":true,\"fid\":\"{\\\"SUMMARY 卷\\\":0,\\\"SUMMARY 章\\\":0,\\\"SUMMARY 节\\\":0,\\\"JSON 卷\\\":0,\\\"JSON 章\\\":0,\\\"JSON 节\\\":0,\\\"TXT 卷\\\":0,\\\"TXT 章\\\":0,\\\"TXT 节\\\":0}\"}"},{"name":"T17 CSV 与 PDF 导出内容","pass":true,"detail":"{\"csvRows\":3434,\"csvSec\":true,\"csvVolGroups\":41,\"csvVolOk\":true,\"csvChOk\":true,\"bom\":true,\"pdf\":{\"h2\":41,\"h3\":413,\"li\":3434},\"pdfSub\":true,\"errs\":0,\"csvLen\":375648,\"pdfLen\":248612}"},{"name":"T14 打印媒体回落浅色（暗/浅双主题）","pass":true,"detail":"{\"dark\":{\"body\":\"rgb(47, 48, 45)\",\"h2\":\"rgb(47, 48, 45)\",\"bg\":\"rgb(255, 255, 255)\",\"lum\":0.187},\"light\":{\"lum\":0.187},\"beforeLight\":true,\"errs\":0}"}]
+TOTAL=21 FAILED=0
