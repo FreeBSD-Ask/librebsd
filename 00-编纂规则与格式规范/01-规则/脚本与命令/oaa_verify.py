@@ -35,6 +35,25 @@ def cjk(s):
     return sum(1 for c in s if ord(c) > 0x2E7F)
 
 
+def is_bad_star(s):
+    """`*` 是否属禁用强调符。仅两种算强调：①成对 Markdown（`*word*` / `**bold**`）；
+    ②中文正文里被中文夹住的裸星（`*强调*`）。凡前后为英文/代码/层级通配（`*BSD`、`(*p)`、`comp.unix.*`）均豁免。
+    判定：找 `*` 成对包裹（下一个 `*` 之前无换行/空白断裂）→ 强调；或 `*` 两侧直接是中文 → 强调。"""
+    # 找成对星号包裹（单词强调 *word*；排除 C 注释 /* */ 与含空白的通配）
+    import re as _re
+    if _re.search(r"(?<!/)\*([^*\s/]{1,16})\*(?!\w)", s):
+        return True
+    # 中文夹星（两侧紧邻汉字）
+    for i, c in enumerate(s):
+        if c != "*":
+            continue
+        prev = s[i - 1] if i > 0 else ""
+        nxt = s[i + 1] if i + 1 < len(s) else ""
+        if prev and ord(prev) > 0x2E7F and nxt and ord(nxt) > 0x2E7F:
+            return True
+    return False
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--baseline", type=int, help="快照锚点基线总数")
@@ -51,7 +70,7 @@ def main():
         for l in fh:
             if l.strip():
                 done.add(json.loads(l)["key"])
-    # fetch 档案（等级真值）
+    # fetch 档案（等级真值＋块型）
     fetch = {}
     for f in glob.glob(os.path.join(WORK, "*.fetch.jsonl")):
         for l in open(f, encoding="utf-8"):
@@ -85,16 +104,23 @@ def main():
             key = f"{m.group(1)}|{m.group(3)}|" + rel.replace("\\", "/")
             if key not in done:
                 fails.append(f"G1 未登记判定: {key}")
-            summ = lines[i + 3] if i + 3 < len(lines) else ""
-            body = summ.split("引用时按")[0].rstrip("。")
-            C, L = cjk(body), len(body)
-            if C < 30 or C > 80 or L > 200:
-                fails.append(f"G3 字数 CJK={C} 总={L}: {rel}:{i+4}")
-            if re.search(r"[「」『』＊]", summ) or '"' in summ or "*" in summ:
-                fails.append(f"G3 禁字符: {rel}:{i+4}")
-            if "引用时按" not in summ:
-                fails.append(f"G3 纪律串缺失: {rel}:{i+4}")
             fb = fetch.get(key)
+            inline = (fb.get("block_type") == "inline") if fb else not ln.lstrip().startswith("<!--")
+            if inline:
+                # 紧凑列举体例：只查禁字符（行尾锚点含英文引文属合法，排除锚点后查）
+                narr = ln[:RM.search(ln).start()]
+                if re.search(r"[「」『』＊]", narr) or '"' in narr or is_bad_star(narr):
+                    fails.append(f"G3 inline 禁字符: {rel}:{i+1}")
+            else:
+                summ = lines[i + 3] if i + 3 < len(lines) else ""
+                body = summ.split("引用时按")[0].rstrip("。")
+                C, L = cjk(body), len(body)
+                if C < 30 or C > 80 or L > 200:
+                    fails.append(f"G3 字数 CJK={C} 总={L}: {rel}:{i+4}")
+                if re.search(r"[「」『』＊]", summ) or '"' in summ or is_bad_star(summ):
+                    fails.append(f"G3 禁字符: {rel}:{i+4}")
+                if "引用时按" not in summ:
+                    fails.append(f"G3 纪律串缺失: {rel}:{i+4}")
             if fb and fb.get("level"):
                 hm = re.search(r"证据等级：(L\d)", lines[i + 1] if i + 1 < len(lines) else "")
                 if hm and hm.group(1) != fb["level"]:

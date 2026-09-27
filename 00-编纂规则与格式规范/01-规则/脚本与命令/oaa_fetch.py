@@ -41,6 +41,11 @@ def load_registry():
     with open(REG_CSV, encoding="utf-8") as fh:
         for row in csv.DictReader(fh):
             reg[row["db_name"]] = row["db_path"]
+    # 补扫描邮件列表史料各分支 db/ 目录（folder_db_registry 未含 sparclinux/lkml 等）
+    ml_dir = os.path.join(ROOT, "03-原始史料库", "11-邮件列表史料")
+    for sub in sorted(glob.glob(os.path.join(ml_dir, "*", "db", "*.duckdb"))):
+        name = os.path.basename(sub).replace(".duckdb", "")
+        reg.setdefault(name, os.path.relpath(sub, ROOT).replace("\\", "/"))
     return reg
 
 
@@ -52,9 +57,11 @@ def extract_blocks(path):
     out = []
     for i, ln in enumerate(lines):
         m = ROW_MINE.search(ln)
-        if m:
-            db, tb, pk = m.group(1), m.group(2), m.group(3)
-            # 向下找抬头行与摘要行（跳过空行）
+        if not m:
+            continue
+        db, tb, pk = m.group(1), m.group(2), m.group(3)
+        if ln.lstrip().startswith("<!--"):
+            # 独立行锚型（H 线 5 行块）：向下找抬头行与摘要行
             head_line, summ_line = "", ""
             j = i + 1
             while j < len(lines) and not lines[j].strip():
@@ -67,12 +74,21 @@ def extract_blocks(path):
             if j < len(lines):
                 summ_line = lines[j]
             out.append({"key": f"{db}|{pk}|{rel}", "line": i + 1, "db": db, "pk": pk,
-                        "anchor_line": ln, "head_line": head_line,
-                        "summ_line": summ_line, "insight_body": ""})
-            continue
+                        "block_type": "standalone", "anchor_line": ln,
+                        "head_line": head_line, "summ_line": summ_line,
+                        "insight_body": ""})
+        else:
+            # 内联锚型（T1/L1 紧凑列举体例）：叙述与锚点同行，行尾反引号包裹
+            narr = ln[:m.start()].rstrip().rstrip("`").rstrip()
+            out.append({"key": f"{db}|{pk}|{rel}", "line": i + 1, "db": db, "pk": pk,
+                        "block_type": "inline", "anchor_line": ln,
+                        "head_line": "", "summ_line": narr, "insight_body": ""})
+    # MAIL_INSIGHT 块
+    for i, ln in enumerate(lines):
         m = MAIL_INS.search(ln)
+        if m and ROW_MINE.search(ln):
+            continue
         if m:
-            # MAIL_INSIGHT 块：锚行到收尾注释
             body = [ln]
             k = i + 1
             while k < len(lines) and "/MAIL_INSIGHT" not in lines[k]:
@@ -82,8 +98,8 @@ def extract_blocks(path):
                 body.append(lines[k])
             out.append({"key": f"MAIL_INSIGHT|{m.group(1).strip()}|{rel}",
                         "line": i + 1, "db": "MAIL_INSIGHT", "pk": m.group(1).strip(),
-                        "anchor_line": ln, "head_line": "", "summ_line": "",
-                        "insight_body": "\n".join(body)})
+                        "block_type": "insight", "anchor_line": ln, "head_line": "",
+                        "summ_line": "", "insight_body": "\n".join(body)})
     return out
 
 
@@ -170,10 +186,10 @@ def fetch_src_meta(reg, blocks):
             pk = r[0]
             frm = " ".join(str(r[idx[c]]) for c in ("from_name", "from_email")
                            if c in idx and r[idx[c]])
-            d = {"src_date": r[idx["date"]] if "date" in idx else "",
+            d = {"src_date": str(r[idx["date"]]) if "date" in idx and r[idx["date"]] else "",
                  "src_from": frm,
-                 "src_subject": r[idx["subject"]] if "subject" in idx else "",
-                 "src_body": r[idx["body"]] or ""}
+                 "src_subject": str(r[idx["subject"]]) if "subject" in idx and r[idx["subject"]] else "",
+                 "src_body": str(r[idx["body"]] or "")}
             src[f"{db}|{pk}"] = d
         s.close()
     return src
