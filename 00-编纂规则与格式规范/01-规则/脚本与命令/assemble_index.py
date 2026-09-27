@@ -283,7 +283,15 @@ def main():
         print("assemble：无变更（幂等）")
     else:
         write(INDEX, built)
-        print("assemble：已装配 %d → %d 字节" % (len(old.encode("utf-8")), len(built.encode("utf-8"))))
+        _old_n, _new_n = len(old.encode("utf-8")), len(built.encode("utf-8"))
+        print("assemble：已装配 %d → %d 字节" % (_old_n, _new_n))
+        # O17 单体膨胀守卫（2026-09-27 补入）：产物字节较上一版增幅 >5% 时告警。
+        # 单体性由第九件门禁硬校验（零外链／SRI／内嵌字体），但膨胀失控无护栏；
+        # 本项**只告警不 FAIL**（不改变退出码）——正常增删章节约在千分之几量级，
+        # 越过 5% 通常是内嵌资源被整块替换或装配源被重复注入。
+        if _old_n and _new_n > _old_n * 1.05:
+            print("  ⚠ 单体膨胀告警：增幅 %.1f%%（%d → %d 字节，阈值 5%%）"
+                  % ((_new_n / _old_n - 1) * 100, _old_n, _new_n))
     vols = parse_outline(read(OUTLINE))
     met = derive_metrics(vols)
     print("口径（由内容源派生）：%s" % met["TRIPLE"])

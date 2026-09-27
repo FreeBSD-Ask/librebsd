@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
 """重构2026 目录页结构自检门禁（固定脚本，2026-09-18 立，第七件改后必跑门禁）。
 
-用途：对 `08-核查报告与多轮复核/重构2026/index.html` 做**不依赖浏览器**的十一项结构自检，
+用途：对 `08-核查报告与多轮复核/重构2026/index.html` 做**不依赖浏览器**的十四项结构自检，
 补足既有门禁未覆盖的维度（既有五件：口径同步 --check、节号连续性、DATA 完整性、
 xref 交叉引用、视觉回归套件；第六件为大纲注入块证据等级）。
 
-十一项判据：
+十四项判据：
   A 编码：UTF-8 无 BOM、无 CRLF、无替换字符 U+FFFD、无直角引号「」
   A2 空格形制（流程规则 L1532，2026-09-18 补入）：无全角空格 U+3000；卷题（h2）卷号与题名
      之间为 2 个半角空格；章题（h3.chapter）与节序号（span.sec-num）后有且只有 1 个半角空格
@@ -24,6 +24,26 @@ xref 交叉引用、视觉回归套件；第六件为大纲注入块证据等级
      `assets/doc.css`／`assets/modern.css` 中有对应规则。设立缘由：`.doc-foot`（四层解耦提取器
      守卫被 `.doc-footer` 子串误命中而漏写）与 `.vol-note`（长期无规则、以正文全尺寸渲染）
      两类缺陷均因「class 无定义」而以默认样式静默渲染，门禁与浏览器回归皆未捕获
+  K 三级结构（2026-09-27 第五批补入）：无章之卷／无节之章／章外孤立节行三类破坏恒为 0。
+     设立缘由：B/C/D 三组只验「已有编号是否连续」，上述三类破坏在三组判据下均判「无异常」
+     而静默通过。
+  L 不设附录（O1，2026-09-27 补入）：章题去「第 N 章」前缀后不得以「附录」起首。**按章题判**，
+     不得按裸词「附录」判——全库另有 2 处「杂志附录」等合法用词（正文非章题）。
+  M OS 比较节位次（O1b，2026-09-27 补入）：节题命中 OS 比较形制者须居「本章书目述评」前一位，
+     无述评则须居章末。**只判节题**（src 注之前）——卷 43 ch3 3.1 的溯源注内磁盘路径含
+     「同时期操作系统的比较」，按整行判会复现第四批唯一假阳性。
+  N 结构裁决（2026-09-27 立，依据 MAX 提案 v1.1 M-7；提案原文记 G-a…G-d，此处改记 N，
+     以免与上文 G「标签平衡」冲号，判据内容不变）：
+     N-a 层序（编年主干起点递增／后设层居综合总结层之后／横向卷须有分工注）；
+     N-b 体例覆盖（卷导言恒设／述评章登记表覆盖全卷／编年卷版本章题带年份）；
+     N-c 卷名长度 ≤36 字；N-d 题文复合词连接号用 en dash（禁半角连字符形）。
+     设立缘由：B–F 组只验「形」不验「序与体例」——卷 41/42 层序反转、卷导言 21/43、
+     分工注 7/43、章题年份 81/411、卷名 75 字，在既有十二件门禁下全部静默通过。
+     N-e～N-i 节级判据（2026-09-27 补遗，主理人批准）：N-e 章内年序（章题带年代区间的章，
+     含年份节须非递减，容 1 年回落）；N-f 节题长度（>50 WARN／>60 FAIL，豁免比较节与美学参照节）；
+     N-g 述评位次（节题恰为「本章书目述评」须居末）；N-h 节数离群（<4 或 >14 WARN／>18 FAIL，
+     豁免收口章）；N-i 同题登记（同题节跨章须命中登记构式）。
+     判据非空由 tests/tri_structure_negtest.py 的负向副本自证（2026-09-27 立）。
 
 触发条件：**目录页结构变动后必跑**（增删卷／章／节、改口径、改述评挂靠、结构重编号）。
 0 异常即通过（exit 0），有异常 exit 1。
@@ -40,6 +60,9 @@ import sys
 
 DEFAULT = r"D:/librebsd/08-核查报告与多轮复核/重构2026/index.html"
 CN = "零一二三四五六七八九"
+# M 组 OS 比较节题形制（与核查脚本 script/_vol_adjust_20260927/check_os_compare.py 同源）：
+# 全库命中 29 处、违规 0。写作「与同时期操作系统的比较」者须由 `同时期操作系统` 一支命中。
+OSCMP = re.compile(r"操作系统比较|OS 比较|同时期操作系统|同时代操作系统|同期操作系统")
 
 
 def cn2int(s):
@@ -122,6 +145,8 @@ def main():
 
     ch_total = 0
     ch_bad, sec_bad, bib_bad, dup_ch, bib_none = [], [], [], [], []
+    appx_bad, os_bad = [], []   # L 不设附录；M OS 比较节位次
+    os_n = 0                    # M 组命中数（复核真值：全库 29）
     # K 三级结构（2026-09-27 第五批补入）：卷必有章、章必有节、卷内不得有章外孤立节行。
     # 缘由：B/C/D 三组只验「已有编号是否连续」，无章之卷（章数 0）、无节之章（节数 0）与
     # 章外孤立 `-` 行在三组判据下均「无异常」而静默通过，三级结构可被无声破坏。
@@ -159,19 +184,24 @@ def main():
             if t in seen_ch:
                 dup_ch.append((t, seen_ch[t], cid))
             seen_ch[t] = cid
+            # L 不设附录（O1）：章题去「第 N 章」前缀后以「附录」起首即 FAIL。
+            if re.match(r"^附录", re.sub(r"^第\s*\d+\s*章\s*", "", t)):
+                appx_bad.append((cid, t))
             lis = re.findall(r"<li>(.*?)</li>", raw_ul, re.S)
             _ch_li += len(lis)
             if not lis:
                 tri_bad.append((cid, "无节之章"))
-            snums = []
+            snums, titles = [], []
             for li in lis:
                 sec_total += 1
                 sm = re.search(r'<span class="sec-num">([\d.]+)</span>(.*)$', li, re.S)
                 if not sm:
                     sec_bad.append((cid, li[:60]))
+                    titles.append("")
                     continue
                 snums.append(sm.group(1))
                 rest = re.sub(r'<span class="src">.*?</span>', "", sm.group(2), flags=re.S)
+                titles.append(re.sub(r"<[^>]+>", "", rest).strip())
                 if not re.sub(r"<[^>]+>", "", rest).strip():
                     sec_bad.append((cid, "空节题 " + sm.group(1)))
                 if 'class="src"' in li:
@@ -179,6 +209,15 @@ def main():
             want = [f"{cn_}.{k}" for k in range(1, len(lis) + 1)]
             if snums != want:
                 sec_bad.append((cid, f"{snums} != {want}"))
+            # M OS 比较节位次（O1b）：只判节题（titles 已剥 src 注），须居述评前一位或章末。
+            for k, tt in enumerate(titles):
+                if not OSCMP.search(tt):
+                    continue
+                os_n += 1
+                nk = titles[k + 1] if k + 1 < len(titles) else None
+                if nk is None or "本章书目述评" in nk:
+                    continue
+                os_bad.append((cid, f"{snums[k] if k < len(snums) else '?'} {tt[:36]}", nk[:26]))
             txts = [re.sub(r"<[^>]+>", "", x) for x in lis]
             last = txts[-1].strip() if txts else ""
             has_bib = any("本章书目述评" in x for x in txts)
@@ -254,6 +293,13 @@ def main():
     for x in tri_bad[:10]:
         print("   ❌", x)
 
+    print(f"L 不设附录（章题不得以「附录」起首）: 命中 {len(appx_bad)} 处")
+    for x in appx_bad[:10]:
+        print("   ❌", x)
+    print(f"M OS 比较节位次（须居述评前一位或章末）: 命中 {os_n} 处，违规 {len(os_bad)} 处")
+    for x in os_bad[:10]:
+        print("   ❌", x)
+
     # ── J 内容层 class ↔ 格式层选择器（2026-09-18 补入）─────────────────────
     # 缘由：.doc-foot（四层解耦提取器守卫被 .doc-footer 子串误命中而漏写）与 .vol-note
     # （长期无规则、以正文全尺寸渲染）两类缺陷均因「class 无定义」而以默认样式静默渲染，
@@ -275,6 +321,212 @@ def main():
     print("J 内容层 class ↔ 格式层: %d 个 class，未定义 %d %s"
           % (len(static_cls), len(undef), undef[:8]))
 
+    # ── N 结构判据（2026-09-27 立；依据 MAX 提案 v1.1 M-7，01b R54）──────────
+    # 编号说明：提案原文记为 G-a…G-d；本件既有 G 组为「标签平衡」，为免冲号改记 N 组，判据内容不变。
+    # 缘由：B–F 组验「形」（编号连续／述评恒末／锚点唯一），不验「序与体例」——卷 41/42 层序
+    #   反转、卷导言 21/43、分工注 7/43、章题年份 81/411、卷名 75 字，在既有门禁下全部静默通过。
+    #   判据非空由 tests/tri_structure_negtest.py 的负向副本自证。
+    # 键值口径：卷号 ＋ 卷题关键词 双键——重编号时给出可读错位提示，避免判据静默失效。
+    n_bad, n_info = [], []
+
+    def _seg(vn):
+        return h[vols[vn - 1][2]:vols[vn][2]]
+
+    def _plain(vn):
+        return re.sub("^第[一二三四五六七八九十]+卷\\s\\s*", "", vols[vn - 1][1]).strip()
+
+    def _yr(t):
+        m = re.search("（(1[89][0-9][0-9]|20[0-4][0-9])", t)
+        return int(m.group(1)) if m else None
+
+    # N-a1 编年主干（卷号, 卷题关键词, 期望起始年）：起点须严格递增
+    SPINE = [(5, "BSD 伊始", 1974), (6, "4.3BSD", 1980), (7, "CSRG 后期", 1986),
+             (9, "Net/2", 1992), (10, "大分裂", 1992), (13, "FreeBSD 操作系统的历史", 1993),
+             (16, "NetBSD 操作系统的历史", 1993), (19, "OpenBSD 的历史", 1995),
+             (22, "DragonFly BSD 的历史", 2003)]
+    spine_y = []
+    for vn, key, y0 in SPINE:
+        t = _plain(vn)
+        if key not in t:
+            n_bad.append("N-a1 卷 %d 卷题不含关键词「%s」（判据键错位，须同步维护 SPINE）：%s"
+                         % (vn, key, t[:26]))
+            continue
+        y = _yr(t)
+        if y is None:
+            n_bad.append("N-a1 卷 %d 编年主干卷题缺年代区间：%s" % (vn, t[:26]))
+        else:
+            spine_y.append((vn, y))
+    ys = [x[1] for x in spine_y]
+    if ys != sorted(ys):
+        n_bad.append("N-a1 编年主干起点非递增：%s" % spine_y)
+    n_info.append("N-a1 编年主干 %d 卷，起点递增 ? %s" % (len(spine_y), ys == sorted(ys)))
+
+    # N-a2 后设层（史学史／方法论）不得先于综合总结层（会者定离／分离聚合）
+    post = [i + 1 for i, (_, t, _) in enumerate(vols[:-1]) if ("史学史" in t or "方法论" in t)]
+    summ = [i + 1 for i, (_, t, _) in enumerate(vols[:-1]) if ("会者定离" in t or "分离聚合" in t)]
+    ok_a2 = not (post and summ and min(post) < max(summ))
+    if not ok_a2:
+        n_bad.append("N-a2 后设层（卷 %s）先于综合总结层（卷 %s）" % (post, summ))
+    n_info.append("N-a2 综合总结 %s ／ 后设 %s ｜ 后设居后 ? %s" % (summ, post, ok_a2))
+
+    # N-a3 横向／专题卷须有分工注（显式必设集 × 关键词双键）
+    HORIZ = [(11, "UNIX 标准化与商业化"), (12, "BSD UNIX 技术专题史"), (26, "macOS"),
+             (28, "BSD 软件作品史"), (30, "BSD 许可证与法律"), (31, "BSD 合规"),
+             (33, "BSD–Linux 关系史"), (35, "BSD 治理专题"), (36, "DARPA"),
+             (38, "BSD 的传播载体"), (39, "开源会议"), (41, "会者定离"), (43, "传言")]
+    miss_note = []
+    for vn, key in HORIZ:
+        t = _plain(vn)
+        if key not in t:
+            n_bad.append("N-a3 卷 %d 卷题不含关键词「%s」（判据键错位）：%s" % (vn, key, t[:26]))
+        elif '<p class="vol-note">' not in _seg(vn):
+            miss_note.append(vn)
+    if miss_note:
+        n_bad.append("N-a3 横向／专题卷缺分工注：%s" % miss_note)
+    n_info.append("N-a3 横向卷 %d 卷，缺注 %d" % (len(HORIZ), len(miss_note)))
+
+    # N-b1 卷导言恒设
+    no_ov = [i + 1 for i in range(len(vols) - 1) if '<p class="vol-overview">' not in _seg(i + 1)]
+    if no_ov:
+        n_bad.append("N-b1 缺卷导言 %d 卷：%s" % (len(no_ov), no_ov))
+    n_info.append("N-b1 卷导言缺失 %d 卷" % len(no_ov))
+
+    # N-b2 述评章登记表（R55：按独立史料域判定，设与不设均登记）
+    BIB = {1: "有", 3: "有", 8: "有", 11: "有", 12: "有", 18: "有", 19: "有", 21: "有",
+           24: "有", 26: "有", 40: "有"}
+    for vn in [i + 1 for i in range(len(vols) - 1) if (i + 1) not in BIB]:
+        BIB[vn] = "E1：编年卷或专题卷，述评以章末「本章书目述评」节承载，或由所属专卷承担"
+    has_bib = []
+    for i in range(len(vols) - 1):
+        for c in re.findall(r'<h3 class="chapter"[^>]*>(.*?)</h3>', _seg(i + 1), re.S):
+            if "卷末书目述评" in c:
+                has_bib.append(i + 1)
+                break
+    if set(BIB) != set(range(1, len(vols))):
+        n_bad.append("N-b2 述评登记表未覆盖全部卷：缺 %s"
+                     % sorted(set(range(1, len(vols))) - set(BIB)))
+    if sorted(has_bib) != sorted(k for k, v in BIB.items() if v == "有"):
+        n_bad.append("N-b2 述评章实况与登记表不符：实有 %s ／ 登记 %s"
+                     % (has_bib, sorted(k for k, v in BIB.items() if v == "有")))
+    n_info.append("N-b2 述评登记 %d 卷（实设 %d 卷）" % (len(BIB), len(has_bib)))
+
+    # N-b3 编年卷版本编年章题须带年份区间（依 72 号文「年份由各章承载」设计）
+    VRE = re.compile("[0-9]+(\\.[0-9]+)*x|[0-9]+BSD")
+    no_year = []
+    for vn in [13, 16, 19, 22, 5, 6, 7, 9, 10]:
+        for c in re.findall(r'<h3 class="chapter"[^>]*>(.*?)</h3>', _seg(vn), re.S):
+            ct = re.sub("<[^>]+>", "", c).strip()
+            if "述评" in ct:
+                continue
+            if VRE.search(ct) and _yr(ct) is None:
+                no_year.append((vn, ct[:24]))
+    if no_year:
+        n_bad.append("N-b3 版本编年章题缺年份 %d 处：%s" % (len(no_year), no_year[:4]))
+    n_info.append("N-b3 编年卷版本章题缺年份 %d 处" % len(no_year))
+
+    # N-c 卷名长度 ≤36 字（依 M-5；卷 7 由 77 字精简为 36 字为先例）
+    lt = [(i + 1, len(re.sub("^第[一二三四五六七八九十]+卷\\s\\s*", "", t)))
+          for i, (_, t, _) in enumerate(vols[:-1])]
+    over_t = [x for x in lt if x[1] > 36]
+    if over_t:
+        n_bad.append("N-c 卷名超 36 字 %d 卷：%s" % (len(over_t), over_t[:4]))
+    n_info.append("N-c 卷名最长 %d 字（限 36）" % max(x[1] for x in lt))
+
+    # N-d 题文形制：复合词连接号须用 en dash（禁半角连字符形）
+    _body = re.sub(r"<(script|style)[^>]*>.*?</\1>", " ", h, flags=re.S | re.I)
+    _titles = re.findall("<h2>(.*?)</h2>", _body, re.S)
+    _titles += re.findall(r'<h3 class="chapter"[^>]*>(.*?)</h3>', _body, re.S)
+    _titles += re.findall(r"<li[^>]*>.*?</li>", _body, re.S)
+    bad_dash = []
+    for t in _titles:
+        s = re.sub("<[^>]+>", "", t)
+        # 只判「项目名复合词」形（BSD-UNIX／BSD-Linux／GNU-Linux 等）；
+        # 4.3BSD-Tahoe、4.4BSD-Lite 等为官方发行名，其连字符正确，须放过。
+        for m in re.finditer("(?:BSD|GNU|UNIX|Linux|OpenBSD|NetBSD|FreeBSD)-(?:UNIX|Linux|GNU|BSD)", s):
+            bad_dash.append(s[max(0, m.start() - 8):m.end() + 8])
+    if bad_dash:
+        n_bad.append("N-d 题文复合词用半角连字符 %d 处：%s" % (len(bad_dash), bad_dash[:4]))
+    n_info.append("N-d 题文半角连字符 %d 处" % len(bad_dash))
+
+    # ── N-e～N-i 节级判据（2026-09-27 补遗，主理人批准；依据 MAX 提案第三节）────
+    # N-e 章内年序：章题带年代区间的章，其含年份节的年份须非递减（容 1 年回落）
+    # N-f 节题长度：>50 WARN／>60 FAIL（豁免：比较节构式／美学参照节）
+    # N-g 述评位次：节题恰为「本章书目述评」者须为末节（修正「含述评二字」假阳性）
+    # N-h 节数离群：<4 或 >14 WARN／>18 FAIL（豁免收口章：述评／方法／史料／总评／登记）
+    # N-i 同题登记：同题节跨章须命中登记构式，否则 FAIL
+    from collections import defaultdict as _dd
+    n_e_bad, n_f_bad, n_g_bad, n_h_bad, n_i_bad = [], [], [], [], []
+    YR = re.compile("(1[5-9][0-9][0-9]|20[0-4][0-9])")
+    DUP_OK = ("与同时期操作系统的比较", "同时期操作系统", "参照：美学史与软件美学研究",
+              "证据层级：当事人叙述", "从物质证据到文化解释", "尚未解决的问题：缺失档案",
+              "ASLR 与 KASLR", "BDFL", "本章书目述评")
+    sec_titles = _dd(list)
+    for vi in range(1, len(vols)):
+        seg = _seg(vi)
+        for cm in re.finditer(r'<h3 class="chapter"[^>]*>(.*?)</h3>\s*<ul class="sections">(.*?)</ul>', seg, re.S):
+            ct = re.sub("<[^>]+>", "", cm.group(1)).strip()
+            cmno = re.match(r"^第 (\d+) 章", ct)
+            if not cmno:
+                continue
+            cno = int(cmno.group(1))
+            secs = []
+            for li in re.findall(r"<li[^>]*>(.*?)</li>", cm.group(2), re.S):
+                mm = re.search(r'<span class="sec-num">([^<]+)</span>\s*(.*)', li, re.S)
+                if not mm:
+                    continue
+                title = re.sub(r'<span class="src">.*?</span>', "", mm.group(2), flags=re.S)
+                title = re.sub("<[^>]+>", "", title).strip()
+                title = re.sub("〔[^〕]*〕", "", title).strip()   # 排除〔迁入/溯源〕标记
+                secs.append((mm.group(1).strip(), title))
+                if len(title) >= 12:
+                    sec_titles[title].append("卷%d.第%d章" % (vi, cno))
+            yr = [int(m.group(1)) for _, t in secs for m in [YR.search(t)] if m]
+            if re.search(r"（\d{4}–", ct) and len(yr) >= 4:
+                for k in range(1, len(yr)):
+                    if yr[k] < yr[k - 1] - 1:
+                        n_e_bad.append("N-e 年序回落：卷%d 第%d章 第%d个含年份节年序回落（%d→%d）" % (vi, cno, k + 1, yr[k - 1], yr[k]))
+            is_cmp = "同时期操作系统" in ct
+            is_aes = "参照：美学史" in ct
+            for _num, _t in secs:
+                if "与同时期操作系统的比较" in _t:
+                    is_cmp = True
+            for k, (num, t) in enumerate(secs):
+                W = len(t)
+                if W > 60 and not (is_cmp or is_aes or "参照：美学史" in t):
+                    n_f_bad.append("N-f 节题超长：卷%d 第%d章 %s（%d 字）" % (vi, cno, num, W))
+                elif W > 50 and not (is_cmp or is_aes or "参照：美学史" in t):
+                    n_info.append("N-f WARN 卷%d 第%d章 %s（%d 字）" % (vi, cno, num, W))
+                if t == "本章书目述评" and k != len(secs) - 1:
+                    n_g_bad.append("N-g 述评非末位：卷%d 第%d章 %s 非末位（第 %d/%d 位）" % (vi, cno, num, k + 1, len(secs)))
+            if len(secs) < 4 or len(secs) > 14:
+                if re.search(r"述评|方法|史料|总评|登记|总目", ct):
+                    continue                                  # 收口章豁免
+                lvl = "FAIL" if len(secs) > 18 else "WARN"
+                if len(secs) > 18:
+                    n_h_bad.append("N-h 节数超载：卷%d 第%d章 %d 节（%s）" % (vi, cno, len(secs), lvl))
+                else:
+                    n_info.append("N-h WARN 卷%d 第%d章 %d 节（%s）" % (vi, cno, len(secs), lvl))
+    for title, locs in sorted(sec_titles.items(), key=lambda x: -len(x[1])):
+        if len(locs) < 2:
+            continue
+        chapters_hit = len(set(locs))
+        if any(p in title for p in DUP_OK):
+            continue                                          # 已登记构式
+        if chapters_hit >= 3 or len(set(locs)) >= 2 and len(locs) >= 3:
+            n_i_bad.append("N-i 同题节未登记 %d 处：%s ← %s" % (len(locs), title[:40], "、".join(locs[:6])))
+        elif len(locs) == 2 and len(set(locs)) == 2:
+            n_info.append("N-i 跨章同题（登记建议）：%s ← %s" % (title[:36], "、".join(locs)))
+    for _x in n_e_bad + n_f_bad + n_g_bad + n_h_bad[:6] + n_i_bad[:6]:
+        print("   ❌", _x)
+    n_info.append("N-e 年序回落 %d｜N-f >60 字 %d｜N-g 述评非末位 %d｜N-h 离群 %d｜N-i 未登记同题 %d"
+                  % (len(n_e_bad), len(n_f_bad), len(n_g_bad), len(n_h_bad), len(n_i_bad)))
+
+    for _x in n_info:
+        print(_x)
+    all_sub = n_bad + n_e_bad + n_f_bad + n_g_bad + n_h_bad + n_i_bad
+    for _x in all_sub[:14]:
+        print("   ❌", _x)
+
     allbad = (
         bad
         or sp_bad
@@ -288,6 +540,14 @@ def main():
         or miss
         or undef
         or tri_bad
+        or appx_bad
+        or os_bad
+        or n_bad
+        or n_e_bad
+        or n_f_bad
+        or n_g_bad
+        or n_h_bad
+        or n_i_bad
     )
     print("\n总判定:", "FAIL" if allbad else "PASS")
     return 1 if allbad else 0
