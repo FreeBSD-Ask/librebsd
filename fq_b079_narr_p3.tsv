@@ -1,0 +1,5 @@
+2326863	Ted指出部分Intel主板装最新版BIOS反而会出问题，建议回刷更早BIOS；Intel官网按主板型号都放了各BIOS版本可下载	正文仅Intel主板建议，无错误码；引用块主机名D845GVSR已剔除
+2326866	Aitor装第二块250GB Seagate IDE Ultra ATA硬盘，ad2仅识别127GB，切LBA模式后fdisk、bsdlabel、newfs仍127GB；装Windows 2000同结果，XP能认全容量；询问BIOS升级或升到6.2是否可行	BIOS日期21 Mar 2002是硬件出厂标注非邮件日期，未写
+2326882	Thomas Vogt用bcwipe -bvmd /dev/aacd1在fb 6.2上报Writing Invalid argument，对切片也一样；dd能多次覆写整盘但bcwipe始终无法擦除	签名段Terry Lambert名言已忽略；主体fb裸数字照抄
+2326906	mustakas008在FBSD 6.2最新mono上跑beagle-extract-content file.txt返回Unable to filter、posix_fadvise；追问FreeBSD未实现posix_fadvise下beagle能否索引内容；tracker抽取命令行静默退出	fb裸数字照抄；未自陈beagle版本
+2326908	发件人用ports装Zabbix服务器，功能正常但图形只出刻度与max/min/avg统计，未画出数据线；日志有PHP Undefined offset与timezone setting警告；FreeBSD agent相关类多显示Not supported或返回值错误	日志含[Wed Mar 14]等日期戳但已剔除；无7.0系列
