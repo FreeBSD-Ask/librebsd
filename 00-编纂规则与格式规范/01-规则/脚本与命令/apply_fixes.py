@@ -23,7 +23,11 @@ TAIL = "引用时按"
 
 def load_judgements():
     jud = {}
-    for f in glob.glob(os.path.join(JUD, "*.jsonl")):
+    filenames = sorted(glob.glob(os.path.join(JUD, "*.jsonl")))
+    # b1fix（字数补写）优先级最高，后加载覆盖主判定；其余主判定先加载
+    fix_first = [f for f in filenames if "b1fix_" in os.path.basename(f)]
+    rest = [f for f in filenames if "b1fix_" not in os.path.basename(f)]
+    for f in rest + fix_first:
         for l in open(f, encoding="utf-8"):
             if l.strip():
                 r = json.loads(l)
@@ -72,7 +76,14 @@ def main(hosts):
                 print(f"  ! 锚点行不匹配: {key} line {ln}", file=sys.stderr)
                 n_err += 1
                 continue
-            # 找摘要行：锚点向下 5 行内找含纪律串「引用时按」的行（多轮应用后旧摘要已变，按纪律串定位）
+            inline = fb.get("block_type") == "inline" or not lines[ln - 1].lstrip().startswith("<!--")
+            if inline:
+                # 紧凑列举体例：叙述与锚点同一行，直接整行替换
+                ns = lines[ln - 1] if False else ns  # ns 已是新完整行
+                lines[ln - 1] = ns
+                n_apply += 1
+                continue
+            # 独立行锚型：锚点向下 5 行内找含纪律串「引用时按」的行
             si = -1
             for j in range(ln, min(ln + 5, len(lines))):
                 if TAIL in lines[j]:
