@@ -25,7 +25,7 @@ volume: 第18卷-全球社区地区bsd史
 
 ## 328.1.4 EuroBSDCon 史料与
 
-- 总纲第 12 条——法律结构对技术创新的制约与解放，BSD 许可证的宽松性反而减少了诉讼风险
+- 法律结构对技术创新的制约与解放，BSD 许可证的宽松性反而减少了诉讼风险
 - 辨析：McHardy 案件的具体数量与判决结果须查德国法院档案；BSD 社区受影响的程度需谨慎评估，不能夸大
 - 文献：德国法院 McHardy 系列判决书；社区邮件列表；企业合规声明 ［A］
 
@@ -35,7 +35,7 @@ volume: 第18卷-全球社区地区bsd史
 - 总纲第 25 条——学术研究塑造技术实践
 - 辨析：2010 论文发表场所已核实为 USENIX Security 2010；Capsicum 合并入 FreeBSD 的具体 commit 需查（r219129 已通过 FreeBSD 9.0 Release Notes 确认）
 - 文献：Watson et al. 2010 Capsicum Paper；FreeBSD 9.0 Release N
-- 总纲第 7 条——硬件与软件的辩证关系
+- 硬件与软件的辩证关系
 - 辨析：2015 DARPA/GCHQ 资助金额需考据；2019 集成至 FreeBSD 14.0 的具体内容需核实
 - 文献：CHERI Documentation；DARPA Funding Records；FreeBSD 14.0 Release Notes［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］
 

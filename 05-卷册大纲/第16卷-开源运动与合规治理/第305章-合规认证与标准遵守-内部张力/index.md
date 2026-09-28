@@ -58,7 +58,7 @@ volume: 第16卷-开源运动与合规治理
 
 - 要点：BSD 历史上的“POSIX 兼容 vs BSD 传统”路线之争在 4.4BSD-Lite 后逐渐消解，FreeBSD 全面采用 POSIX 接口但保留 BSD 风格函数（如 strlcpy）
 - 史料：4.4BSD-Lite release notes、CSRG 内部备忘录、freebsd-standards 邮件列表 ［A］
-- 史观：总纲第 25 条——延续与终结，BSD 传统在
+- 史观：延续与终结，BSD 传统在
 - 审计报告； Foundation 声明 ［A］
 - OSNews 2004-2024 报道；Phoronix FreeBSD 相关报道 ［C］
 
