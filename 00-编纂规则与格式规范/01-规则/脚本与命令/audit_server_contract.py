@@ -6,11 +6,11 @@
 ----------------------
 重构2026 目录页的服务器层长期**无任何护栏**：两份实现并存（`serve_refactor2026.py`
 8090 多线程 / `重构2026/server/serve_index.py` 80 单线程），二者**均缺传输压缩、
-均缺安全响应头、均开启目录列表**，且 README 声称「不给目录列表」而实况相反。
+均缺安全响应头、均开启目录列表**，且 README 声称“不给目录列表”而实况相反。
 页面本体的九件门禁全部以**产物**为对象，服务器**不在任何门禁的对象面内**。
 
 本件以**运行中的服务器**为对象，逐项断言七类不变量。全部断言走真实 HTTP，
-不做静态推断——「判据必须测正确性而非存在性」：压缩不仅要看 `Content-Encoding`
+不做静态推断——“判据必须测正确性而非存在性”：压缩不仅要看 `Content-Encoding`
 存在，还要**解压后与磁盘文件逐字节相等**。
 
 断言（A–G）
@@ -252,7 +252,7 @@ class _DefectiveHandler(http.server.SimpleHTTPRequestHandler):
 
 
 def _start_defective(port):
-    """起一台「修复前形态」的服务器：SimpleHTTPRequestHandler + no-store，无压缩无安全头。"""
+    """起一台“修复前形态”的服务器：SimpleHTTPRequestHandler + no-store，无压缩无安全头。"""
     root = tempfile.mkdtemp(prefix="srvbad_")
     (pathlib.Path(root) / "index.html").write_text("<html>bad</html>", encoding="utf-8")
     (pathlib.Path(root) / "data").mkdir()
