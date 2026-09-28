@@ -29,7 +29,7 @@ volume: 第07卷-freebsd的工程体系重构
   - 辨析：“FreeBSD 默认不安全” 是常见误解——FreeBSD 默认配置遵循 “最小化原则”：默认不开启非必要网络服务、默
 - 总纲第 25 条——终结与延续：一手史料的保存状况直接影响历史书写质量——FreeBSD 项目从 1990 年代至今的源码、邮件列表、Release Notes 保存相对完整，但早期会议演讲、开发者口头历史、内部讨论记录保存不足；这是开源项目历史记录的普遍问题：代码和邮件存档较好，但设计决策背后的口头讨论和非正式沟通难以追溯
   - 辨析：一手史料不等于完全可信——源码 commit 可能没有说明
-- 总纲第 6 条——技术路线分化：Linux 以 LSM 可插拔 MAC、FreeBSD 以原生 MAC 框架+Jail，体现两种 UNIX 安全架构的组织方式差异。
+- 技术路线分化：Linux 以 LSM 可插拔 MAC、FreeBSD 以原生 MAC 框架+Jail，体现两种 UNIX 安全架构的组织方式差异。
   - 辨析：FreeBSD MAC 与 SELinux 功能重叠但 FreeBSD 的 Jail 提供比 Linux user namespace 更早成熟的轻量虚拟化隔离；将二者优劣简单对比忽略历史时序。
   - 文献：Small
 - 总纲第 10 条——边缘者贡献：安全子系统是 FreeBSD 中最依赖少数核心开发者的领域之一——少数人贡献了 FreeBSD 安全基础设施的绝大部分；这种 “少数英雄” 模式在开源安全领域很常见（如 OpenBSD 的 Theo de Raadt（西奥·德·若特）、OpenSSL 的 Steve Henson 等），但也带来 “公交车因子（bus factor）” 风险；FreeBSD Foundation 的资助部分缓解了这一风险。
