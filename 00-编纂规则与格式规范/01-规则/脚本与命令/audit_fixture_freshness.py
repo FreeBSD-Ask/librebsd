@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""audit_fixture_freshness.py —— 第十四件门禁：测试夹具新鲜度。
+"""audit_fixture_freshness.py —— 第十三件门禁：测试夹具新鲜度。
 
 设立缘由（2026-09-28）
 ----------------------
@@ -198,7 +198,7 @@ def cmd_selftest():
 
 
 def main():
-    ap = argparse.ArgumentParser(description="测试夹具新鲜度门禁（第十四件）")
+    ap = argparse.ArgumentParser(description="测试夹具新鲜度门禁（第十三件）")
     ap.add_argument("--tests-dir", default=str(TESTS))
     ap.add_argument("--outline", default=str(OUTLINE))
     ap.add_argument("--selftest", action="store_true")
@@ -214,7 +214,7 @@ def main():
             print("依赖缺失：%s 不存在（%s）" % (p, what), file=sys.stderr)
             return 2
     rows, triples_all, notes_all = run(tests, outline)
-    fails = _report(rows, "测试夹具新鲜度门禁（第十四件）：%s" % tests)
+    fails = _report(rows, "测试夹具新鲜度门禁（第十三件）：%s" % tests)
     if EXEMPT_FILES:
         print()
         print("  豁免（有意识的选择，非遗漏；本件已断言其「仍需要豁免」）：")
