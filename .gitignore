@@ -307,6 +307,21 @@ _consistency_check.py
 /08-核查报告与多轮复核/重构2026/.mimosa
 /script
 /04-现代研究文献/historical_claims.duckdb.tmp
+
+# ── 备份与临时件（2026-09-28 立） ─────────────────────────────────────────
+# 缘由：备份后缀长期三套并存——`.bak-` / `.prebak-` / `.bak_`，日期两种
+# （YYYYMMDD / YYYYMMDDHHMM），扩展名三态（无 / `.html` / 双重扩展名
+# `.md.prebak-…`），另有 `outline.txt.bak83`（无日期）→ **无单条 glob 能覆盖**，
+# 致 59 件 23.39 MB 混入索引（`重构2026/` HEAD 树 32.12 MB 中占 72.8%）。
+# 下列模式覆盖全部现存形态；已跟踪件不受本规则影响（gitignore 只作用于未跟踪件），
+# 故对既有文件零副作用，仅阻止**新增**备份再次入库。
+# ⚠️ 新增备份一律走 `script/_bak/<日期>/`（该目录已被 `/script` 规则忽略）。
+*.prebak-*
+*.bak-*
+*.bak_*
+*.bak[0-9]*
+/08-核查报告与多轮复核/重构2026/_tmp_*
+/08-核查报告与多轮复核/重构2026/script/_snapshot_*
 /script
 *.duckdb
 03-原始史料库/11-邮件列表史料/05-linux-kernel/mining/05-数据库/dslinux_claims.duckdb
