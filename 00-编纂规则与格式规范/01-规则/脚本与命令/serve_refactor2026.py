@@ -212,8 +212,8 @@ class Server(http.server.ThreadingHTTPServer):
     """多线程：keep-alive 下单线程会被慢客户端阻塞（旧版单线程为省内存的取舍）。"""
 
     daemon_threads = True
-    # 必须为 False：Windows 上 SO_REUSEADDR 语义是「允许多个进程共享同一地址:端口」
-    # （不是 Linux 的「越过 TIME_WAIT」），开着会让「端口被占用即静默退出」的幂等
+    # 必须为 False：Windows 上 SO_REUSEADDR 语义是“允许多个进程共享同一地址:端口”
+    # （不是 Linux 的“越过 TIME_WAIT”），开着会让“端口被占用即静默退出”的幂等
     # 守卫失效，开出多个实例同时监听。
     allow_reuse_address = False
 

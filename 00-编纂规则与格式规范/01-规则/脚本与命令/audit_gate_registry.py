@@ -4,22 +4,22 @@
 
 设立缘由（2026-09-28）
 ----------------------
-本项目反复出现同一失效模式：**「工具已文档化 ≠ 工具已生效」**。
+本项目反复出现同一失效模式：**“工具已文档化 ≠ 工具已生效”**。
 
 - `markdownlint-cli2` 在 `CLAUDE.md` 里写了运行命令、给了配置，却**长期未接入任何门禁**
   → 缺陷静默累积（2026-09-20 实测审计面 89 文件 5,487 条）。
 - `_scan_blockfn_scope.py` 曾写出并解决了真实缺陷（严格模式致三个功能失效），却**未升格为门禁**，
   随 `script/` 临时目录一并消失。
-- `serve_refactor2026.py` 标称「固定脚本，规则引用资源」，却**未登记进 `脚本与命令/README.md`、
+- `serve_refactor2026.py` 标称“固定脚本，规则引用资源”，却**未登记进 `脚本与命令/README.md`、
   无任何规则文件引用**，且与另一份实现语义分叉、双双缺安全头——2026-09-28 才发现。
 
-本件把「接线」本身变成可机检的不变量：登记表 ↔ 磁盘实况 ↔ 规则文档，三方须一致。
+本件把“接线”本身变成可机检的不变量：登记表 ↔ 磁盘实况 ↔ 规则文档，三方须一致。
 
 判据
 ----
 R1 **存在性**：登记表内每个脚本在磁盘上存在
 R2 **可编译性**：登记的 `.py` 可 `py_compile`；`.mjs` 跳过（需 node，本件不引入依赖）
-R3 **无漏接线**：`脚本与命令/audit_*.py` 全部已登记（防「写了门禁忘了登记」）
+R3 **无漏接线**：`脚本与命令/audit_*.py` 全部已登记（防“写了门禁忘了登记”）
 R4 **有规则引用**：每个登记脚本名至少出现在 `流程规则.md`／`CLAUDE.md`／
    `脚本与命令/README.md`／`重构2026/tests/README.md` 之一（CLAUDE.md 要求固定脚本须由规则文件引用）
 R5 **套件清单一致**：标记 `in_tests_readme` 的登记件，其文件名须出现在 `tests/README.md`
@@ -28,7 +28,7 @@ R5 **套件清单一致**：标记 `in_tests_readme` 的登记件，其文件名
 ----
     python audit_gate_registry.py                 # 0 一致 / 1 不一致 / 2 依赖缺失
     python audit_gate_registry.py --list          # 打印登记表
-    python audit_gate_registry.py --selftest      # 判据非空：造「漏登记 + 缺文件」夹具，须 FAIL
+    python audit_gate_registry.py --selftest      # 判据非空：造“漏登记 + 缺文件”夹具，须 FAIL
 
 依赖：仅标准库。
 """
@@ -196,7 +196,7 @@ def _report(rows, title):
 
 
 def cmd_selftest():
-    """判据非空：造「登记了但文件不存在」＋「磁盘有 audit_*.py 未登记」两类缺陷，须 FAIL。"""
+    """判据非空：造“登记了但文件不存在”＋“磁盘有 audit_*.py 未登记”两类缺陷，须 FAIL。"""
     tmp = pathlib.Path(tempfile.mkdtemp(prefix="gatereg_"))
     try:
         cmd = tmp / "cmd"
