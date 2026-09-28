@@ -65,7 +65,6 @@
 
 **史料**：`347992`、`347995`、`347996`、`347999`、`348000`、`348002`
 
-**史料锚**：`<!-- ROW_MINE: ksummit-discuss.messages.347992 -->` `<!-- ROW_MINE: ksummit-discuss.messages.347995 -->` `<!-- ROW_MINE: ksummit-discuss.messages.347996 -->` `<!-- ROW_MINE: ksummit-discuss.messages.347999 -->` `<!-- ROW_MINE: ksummit-discuss.messages.348000 -->` `<!-- ROW_MINE: ksummit-discuss.messages.348002 -->`
 **史观**：多方平等（总纲 8：Corbet、Rafael、Mauro 三方对 RST 转换的分歧并置）；经验优先（总纲 9：以 media 表格 210+ 列、uAPI 文档九十年代即 LaTeX/PDF 等实况为据）；拒绝进步叙事（总纲 1/3：不将 DocBook→RST 写作文档工程“进步”）
 **辨析**：Corbet 转述的“删光回 80 列 7bit ASCII”系引 Peter 之说，被 Mauro 明确否定；Mauro 指出“知名文档留小 text 指向新址”与“symlink”两种做法当前并存、应予统一，属未决。
 **文献**：DSLXC-4214/4217/4218/4221/4222/4224（`ksummit-discuss.messages.347992`、`.347995`、`.347996`、`.347999`、`.348000`、`.348002`，2017-06-20 至 2017-06-25），全文见 `raw_source.raw_json`
@@ -76,7 +75,6 @@
 
 **史料**：`347997`、`347965`
 
-**史料锚**：`<!-- ROW_MINE: ksummit-discuss.messages.347997 -->` `<!-- ROW_MINE: ksummit-discuss.messages.347965 -->`
 **史观**：动手者叙事（总纲 10：Media Summit 安排与提案截止由 Mauro、Ted 当事人给出）；偶然性优先（总纲 5：议程机制因 6/26 周一截止这一具体时点而成型）
 **辨析**：本块仅 2 封邮件（Mauro、Ted）；Ted 附 Linus 次级名单 preseed 并限定 [MAINTAINERS SUMMIT] 前缀用于开发流程议题，属峰会组织机制的直接记录。
 **文献**：DSLXC-4219/4187（`ksummit-discuss.messages.347997`、`.347965`，2017-06-20 至 2017-06-25），全文见 `raw_source.raw_json`

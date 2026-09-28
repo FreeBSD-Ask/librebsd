@@ -12,7 +12,6 @@
 
 【Linux社区】**史料锚**：
 
-【Linux社区】`<!-- ROW_MINE: ksummit-discuss.messages.348106 -->` `<!-- ROW_MINE: ksummit-discuss.messages.348107 -->` `<!-- ROW_MINE: ksummit-discuss.messages.348108 -->` `<!-- ROW_MINE: ksummit-discuss.messages.348109 -->` `<!-- ROW_MINE: ksummit-discuss.messages.348110 -->` `<!-- ROW_MINE: ksummit-discuss.messages.348111 -->` `<!-- ROW_MINE: ksummit-discuss.messages.348116 -->` `<!-- ROW_MINE: ksummit-discuss.messages.348119 -->` `<!-- ROW_MINE: ksummit-discuss.messages.348128 -->` `<!-- ROW_MINE: ksummit-discuss.messages.348137 -->` `<!-- ROW_MINE: ksummit-discuss.messages.348138 -->` 
 
 **史观**：知识注定过时（总纲第 22 条——知识注定过时：ISDN/ATM/PCCARD 已死不该再问，Kconfig 仍问无人能答的疯问题）；经验优先（总纲第 9 条——经验优先：以 lspci/lsusb 输出、udev 历史事件日志、/proc/cpuinfo 取默认等实测来源为判据）
 **辨析**：Linus 的“我恨我们的 Kconfig”与“设备实为容易案例，真正最恶劣的是不启用驱动而只改行为的配置项”为顶层判词；Carpenter 的“select 藏用户不关心的基础设施、depend 藏用户不能有的特性”为语义定则；Mauro 的“SAT 求解器与 DT 依赖转 Kconfig 脚本”属展望，本页未见落地记录。
@@ -26,7 +25,6 @@
 
 【Linux社区】**史料锚**：
 
-【Linux社区】`<!-- ROW_MINE: ksummit-discuss.messages.348113 -->` `<!-- ROW_MINE: ksummit-discuss.messages.348114 -->` `<!-- ROW_MINE: ksummit-discuss.messages.348115 -->` `<!-- ROW_MINE: ksummit-discuss.messages.348117 -->` `<!-- ROW_MINE: ksummit-discuss.messages.348118 -->` 
 
 **史观**：经验优先（总纲第 9 条——经验优先：以 linux-next 失败率与 drm-tip 整合树、ubuntu PPA 等运行实例为判据）；动手者创造历史（总纲第 10 条——动手者创造历史：以无单一维护者、二十余人共笔的 drm-tip 树为分析单位）
 **辨析**：Brown 的“关键是结果有人坐镇、个体失败寿命不长”为维护者经验判词，非量化结论；Nikula 的“至少用 MAINTAINERS B:标签记录各子系统上报渠道偏好”为提案，Iwai 附议“眼下 B:条目太少”，本页未见定论。
@@ -68,7 +66,6 @@
 
 【Linux社区】**史料锚**：
 
-【Linux社区】`<!-- ROW_MINE: ksummit-discuss.messages.348120 -->` `<!-- ROW_MINE: ksummit-discuss.messages.348121 -->` `<!-- ROW_MINE: ksummit-discuss.messages.348122 -->` `<!-- ROW_MINE: ksummit-discuss.messages.348124 -->` `<!-- ROW_MINE: ksummit-discuss.messages.348125 -->` `<!-- ROW_MINE: ksummit-discuss.messages.348126 -->` `<!-- ROW_MINE: ksummit-discuss.messages.348127 -->` `<!-- ROW_MINE: ksummit-discuss.messages.348129 -->` `<!-- ROW_MINE: ksummit-discuss.messages.348130 -->` `<!-- ROW_MINE: ksummit-discuss.messages.348131 -->` `<!-- ROW_MINE: ksummit-discuss.messages.348133 -->` `<!-- ROW_MINE: ksummit-discuss.messages.348135 -->` 
 
 **史观**：历史地理塑造思想土壤（总纲第 20 条——历史地理塑造思想土壤：中心与边缘之别使常规市场外的嵌入式与垂直领域才在意长寿命主线支持）；经验优先（总纲第 9 条——经验优先：以 N900 续航一天、430 毫欧内阻、droid4 三 GPS 实现等实测与实例为判据）
 **辨析**：Pavel 自陈“认错 2010 年说（实为 2015）”属当事人史实订正；Bergmann 的 GPU 版图判断（Mali 是高通之外唯一要紧的手机 GPU）为行业观察，非厂商声明；Reichel 的 droid4 蓝牙补丁“已在 -next”为状态记录，落书须与当期树核对。
@@ -82,7 +79,6 @@
 
 【Linux社区】**史料锚**：
 
-【Linux社区】`<!-- ROW_MINE: ksummit-discuss.messages.348112 -->` `<!-- ROW_MINE: ksummit-discuss.messages.348123 -->` `<!-- ROW_MINE: ksummit-discuss.messages.348132 -->` `<!-- ROW_MINE: ksummit-discuss.messages.348134 -->` `<!-- ROW_MINE: ksummit-discuss.messages.348145 -->` `<!-- ROW_MINE: ksummit-discuss.messages.348146 -->` 
 
 **史观**：动手者创造历史（总纲第 10 条——动手者创造历史：以追踪唯一贡献者数八年持续上升的数据与公开脚本为分析单位）；苦难不值得被提倡（总纲第 14 条——苦难不值得被提倡：新人当与众人同礼，不将无偿贡献美化为道德勋章）
 **辨析**：Greg KH 的“新人清扫多在 staging”“新人当与众人同礼”为维护者指导；Triplett 的“逐补丁反馈 x% 减速比版本间对照更可行动”为方法论提议；Bueso 的“Fengguang 脚本覆盖不了专有工具与非 x86 架构微变”为覆盖面评估，两者并置。
