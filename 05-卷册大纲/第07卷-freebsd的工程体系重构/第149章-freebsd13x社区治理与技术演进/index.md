@@ -22,11 +22,11 @@ volume: 第07卷-freebsd的工程体系重构
 
 ## 史观
 
-- 总纲第 12 条——法律结构：这一判决对 BSD 社区具有特殊历史意义——BSD 从诞生之日起就在重新实现 UNIX API（从 BSD 4.x 到 386BSD 到 FreeBSD），API 重新实现的法律地位长期处于灰色地带；最高法院的判决为“重新实现 API 构成 fair use”提供了法律确定性，这是 BSD 社区 40 年实践的法律背书
+- 法律结构：这一判决对 BSD 社区具有特殊历史意义——BSD 从诞生之日起就在重新实现 UNIX API（从 BSD 4.x 到 386BSD 到 FreeBSD），API 重新实现的法律地位长期处于灰色地带；最高法院的判决为“重新实现 API 构成 fair use”提供了法律确定性，这是 BSD 社区 40 年实践的法律背书
   - 辨析：判决并未直接裁定“API 不受版权保护”——多数意见回避了这一宪法问题，而是基于 fair use 作出判决，这是司法最小主义（judicial minimalism）的体现；判决对软件行业影响深远，但具体边界仍需后续案件澄清
-- 总纲第 7 条——BSD 与 UNIX 谱系的连续性：MIPS 是 RISC 处理器的先驱，SGI IRIX 是重要的商业 UNIX 平台；FreeBSD 对 MIPS 的支持延续了 BSD 在非 x86 架构上的传统，但市场和技术的变化使其退役成为必然
+- BSD 与 UNIX 谱系的连续性：MIPS 是 RISC 处理器的先驱，SGI IRIX 是重要的商业 UNIX 平台；FreeBSD 对 MIPS 的支持延续了 BSD 在非 x86 架构上的传统，但市场和技术的变化使其退役成为必然
   - 辨析：13.0 是 MIPS 降级而非完全移除——MIPS 代码在 13.x 源码树中仍存在但不再作为正式支持架构；MIPS 完全移除发生在 FreeBSD 14.0；与 sparc64、PC98、armv6 等退役架构类似，MIPS 退役是架构生态演化的自然结果
-- 总纲第 23 条——社区治理：Core Team 两年一次的选举制度是 FreeBSD 治理形式化的体现——定期换届防止权力固化，选举过程向所有 committer 开放，这一制度自 FreeBSD 项目早期延续至今
+- 社区治理：Core Team 两年一次的选举制度是 FreeBSD 治理形式化的体现——定期换届防止权力固化，选举过程向所有 committer 开放，这一制度自 FreeBSD 项目早期延续至今
   - 辨析：Core Team 成员名单随选举变动，具体成员列表需查阅对应年份的官方公告，本书记载的是制度层面的延续性而非特定个人；Core Team 决策通常采用协商一致（consensus）原则，而非投票表决，这是 BSD 社区的传统治理风格
 - 总纲第 4 条——分离与聚合：ZFS 从 illumos/FreeBSD/Linux 三端分叉（分离）到 OpenZFS 统一代码库（聚合），是开源项目“分久必合”的典型案例——分叉让各平台快速适配，统一后共享维护成本
   - 辨析：OpenZFS 2.0 统一发生在 13.0 发布前（2020-11），13.0 是首个包含统一 OpenZFS 的 FreeBSD 大版本；13.0 之前 FreeBSD ZFS 维护独立分支，与 ZoL（ZFS on Linux）、illumos ZFS 存在代码分叉，这一分叉状态持续了约 13 年（2007-2020）

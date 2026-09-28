@@ -36,14 +36,19 @@ xref 交叉引用、视觉回归套件；第六件为大纲注入块证据等级
      以免与上文 G「标签平衡」冲号，判据内容不变）：
      N-a 层序（编年主干起点递增／后设层居综合总结层之后／横向卷须有分工注）；
      N-b 体例覆盖（卷导言恒设／述评章登记表覆盖全卷／编年卷版本章题带年份）；
-     N-c 卷名长度 ≤36 字；N-d 题文复合词连接号用 en dash（禁半角连字符形）。
+     N-c 卷名长度 ≤36 字（硬限）；N-d 题文复合词连接号用 en dash（禁半角连字符形）。
      设立缘由：B–F 组只验「形」不验「序与体例」——卷 41/42 层序反转、卷导言 21/43、
      分工注 7/43、章题年份 81/411、卷名 75 字，在既有十二件门禁下全部静默通过。
      N-e～N-i 节级判据（2026-09-27 补遗，主理人批准）：N-e 章内年序（章题带年代区间的章，
-     含年份节须非递减，容 1 年回落）；N-f 节题长度（>50 WARN／>60 FAIL，豁免比较节与美学参照节）；
+     含年份节须非递减，容 1 年回落）；N-f 节题长度（**软限**：逾 50／逾 60 只示 WARN，不判 FAIL；豁免比较节与美学参照节）；
      N-g 述评位次（节题恰为「本章书目述评」须居末）；N-h 节数离群（<4 或 >14 WARN／>18 FAIL，
      豁免收口章）；N-i 同题登记（同题节跨章须命中登记构式）。
      判据非空由 tests/tri_structure_negtest.py 的负向副本自证（2026-09-27 立）。
+      长度计数口径（2026-09-27 主理人裁定）：**英语单词整体算 1 字**——拉丁字母数字串各计 1，
+      O 组（2026-09-27 立，主理人学术规范裁定）：题文不得以数词概括对象集合，亦不得以集合名词
+      代替点名（「四大 BSD」「四个项目」「各分支」等）。**卷题／章题命中 → FAIL；节题与注文 → WARN**。
+      豁免（专名／惯用语／代际／次数／成文节奏）见模块级 O_EXEMPT，逐条登记理由；新增豁免须主理人批。
+      其余字符逐字计；N-c 与 N-f 同用此口径。
 
 触发条件：**目录页结构变动后必跑**（增删卷／章／节、改口径、改述评挂靠、结构重编号）。
 0 异常即通过（exit 0），有异常 exit 1。
@@ -56,6 +61,42 @@ import argparse
 import io
 import json
 import re
+
+# 长度计数用：拉丁字母数字串（英语单词／项目名／版本号）整体识别为 1 字
+LATIN_RUN = re.compile(r"[A-Za-z0-9][A-Za-z0-9._/+-]*")
+
+# ── O 组判据用（2026-09-27 立；依主理人「计数概括式表述不符合学术规范」与「集合名词不可用」两条裁定）──
+#   ——「一」family（一个／一种／一项／一条／一步／一面…）属普通冠量与惯用语，不入形制（不概括集合）。
+# 形制一：数词＋量词概括集合（如「四大 BSD」「四个项目」「三种位置」「七类载体」）
+O_NUM = re.compile(r"([二三四五六七八九十两])\s*(大|个|项|类|种|条|款|点|层|重|阶|路|线|方|面|维|向|支|分|处|家|名)")
+# 形制二：集合名词（如「各分支」「各项目」「各 BSD」）
+O_COL = re.compile(r"各\s*(分支|项目|BSD|操作系统)")
+# 豁免（专名／惯用语／代际／次数／成文节奏；逐条理由见 tests/README.md 与本判据 docstring）
+O_EXEMPT = (
+    "第三方", "三权分立", "二进制", "四项自由", "条款 BSD", "双源", "非二分性",
+    "进一步", "一方面", "另一方面", "一致性", "一律", "一体", "一定", "一起", "一览", "一并",
+    "唯一", "同一", "一元", "三元", "二元", "一揽子", "一体化", "一书", "一脉",
+    "一代", "两代", "下一代", "一分", "多数", "多方", "多元", "多种", "多项", "多维", "多层",
+    "多个", "多重", "多次", "一处", "两处", "多处", "一线", "一次", "两步", "一步", "一部", "一面",
+    "第一", "第二", "第三", "第四", "第五", "第六", "第七", "第八", "第九", "第十",
+    "多处理", "多向", "多家", "多极", "多阶", "二型", "两轮", "六个月",
+)
+O_NOTE_REF = re.compile(r"^[^。；：]{0,6}注")   # 「两条分工注合并」类：指注文自身，非目录对象集合
+
+def o_flag(s):
+    """题文／卷题／章题命中「计数概括式或集合名词」者返回命中形制，否则 None。"""
+    for m in list(O_NUM.finditer(s)) + list(O_COL.finditer(s)):
+        ctx = s[max(0, m.start() - 10):m.end() + 18]
+        if any(e in ctx for e in O_EXEMPT):
+            continue
+        _tok = re.split(r"[\s（）()，。；：、]", s[:m.start()])[-1] + m.group(0) + re.split(r"[\s（）()，。；：、]", s[m.end():])[0]
+        if "/" in _tok and (".md" in _tok or "05-卷册大纲" in _tok or _tok.startswith("05-")):
+            continue          # 磁盘路径／文件名内的形制：引证保真，不追改
+        if O_NOTE_REF.match(s[m.end():]):
+            continue
+        return m.group(0)
+    return None
+
 import sys
 
 DEFAULT = r"D:/librebsd/08-核查报告与多轮复核/重构2026/index.html"
@@ -316,10 +357,17 @@ def main():
     static_cls = set()
     for _m in re.finditer('class="([^"]+)"', _masked):
         static_cls.update(_m.group(1).split())
-    undef = sorted(c for c in static_cls
-                   if not re.search(re.escape("." + c) + r"(?![\w-])", css_all))
-    print("J 内容层 class ↔ 格式层: %d 个 class，未定义 %d %s"
-          % (len(static_cls), len(undef), undef[:8]))
+    if not css_all.strip():
+        # 副本模式（--path 指向站点目录之外的单文件副本）：同目录无 assets/，CSS 源不可解析。
+        # 此时若照旧把全部 class 判为「未定义」，夹具会因本组而恒 FAIL —— 判据是否有效被掩盖
+        #（2026-09-27 实测：negfix 夹具全组「假拦下」即由此叠加 A 组 CRLF 造成）。故降级为 INFO。
+        undef = []
+        print("J 内容层 class ↔ 格式层: INFO 副本模式——同目录无 assets/，本组跳过（不改判定）")
+    else:
+        undef = sorted(c for c in static_cls
+                       if not re.search(re.escape("." + c) + r"(?![\w-])", css_all))
+        print("J 内容层 class ↔ 格式层: %d 个 class，未定义 %d %s"
+              % (len(static_cls), len(undef), undef[:8]))
 
     # ── N 结构判据（2026-09-27 立；依据 MAX 提案 v1.1 M-7，01b R54）──────────
     # 编号说明：提案原文记为 G-a…G-d；本件既有 G 组为「标签平衡」，为免冲号改记 N 组，判据内容不变。
@@ -424,13 +472,18 @@ def main():
         n_bad.append("N-b3 版本编年章题缺年份 %d 处：%s" % (len(no_year), no_year[:4]))
     n_info.append("N-b3 编年卷版本章题缺年份 %d 处" % len(no_year))
 
-    # N-c 卷名长度 ≤36 字（依 M-5；卷 7 由 77 字精简为 36 字为先例）
-    lt = [(i + 1, len(re.sub("^第[一二三四五六七八九十]+卷\\s\\s*", "", t)))
+    # 长度计数口径（2026-09-27 主理人裁定）：**英语单词整体算 1 字**——拉丁字母数字串
+    # （FreeBSD／NetBSD／4.3BSD／Net/2／1986）各计 1 字，其余字符逐字计。N-c／N-f 同用。
+    def title_len(s):
+        return len(LATIN_RUN.sub(chr(0), s))
+
+    # N-c 卷名长度 ≤36 字（**硬限**，依 M-5；卷 7 由 77 字精简为 36 字为先例）
+    lt = [(i + 1, title_len(re.sub("^第[一二三四五六七八九十]+卷\\s\\s*", "", t)))
           for i, (_, t, _) in enumerate(vols[:-1])]
     over_t = [x for x in lt if x[1] > 36]
     if over_t:
         n_bad.append("N-c 卷名超 36 字 %d 卷：%s" % (len(over_t), over_t[:4]))
-    n_info.append("N-c 卷名最长 %d 字（限 36）" % max(x[1] for x in lt))
+    n_info.append("N-c 卷名最长 %d 字（限 36；英语单词算 1 字）" % max(x[1] for x in lt))
 
     # N-d 题文形制：复合词连接号须用 en dash（禁半角连字符形）
     _body = re.sub(r"<(script|style)[^>]*>.*?</\1>", " ", h, flags=re.S | re.I)
@@ -450,12 +503,14 @@ def main():
 
     # ── N-e～N-i 节级判据（2026-09-27 补遗，主理人批准；依据 MAX 提案第三节）────
     # N-e 章内年序：章题带年代区间的章，其含年份节的年份须非递减（容 1 年回落）
-    # N-f 节题长度：>50 WARN／>60 FAIL（豁免：比较节构式／美学参照节）
+    # N-f 节题长度：**软限**（2026-09-27 主理人裁定）——逾 50／逾 60 只示 WARN，不判 FAIL、不阻断；
+    #   计数口径＝title_len()（英语单词整体算 1 字）；豁免：比较节构式／美学参照节
     # N-g 述评位次：节题恰为「本章书目述评」者须为末节（修正「含述评二字」假阳性）
     # N-h 节数离群：<4 或 >14 WARN／>18 FAIL（豁免收口章：述评／方法／史料／总评／登记）
     # N-i 同题登记：同题节跨章须命中登记构式，否则 FAIL
     from collections import defaultdict as _dd
-    n_e_bad, n_f_bad, n_g_bad, n_h_bad, n_i_bad = [], [], [], [], []
+    o_bad, o_warn = [], []
+    n_e_bad, n_f_warn, n_g_bad, n_h_bad, n_i_bad = [], [], [], [], []
     YR = re.compile("(1[5-9][0-9][0-9]|20[0-4][0-9])")
     DUP_OK = ("与同时期操作系统的比较", "同时期操作系统", "参照：美学史与软件美学研究",
               "证据层级：当事人叙述", "从物质证据到文化解释", "尚未解决的问题：缺失档案",
@@ -480,6 +535,24 @@ def main():
                 secs.append((mm.group(1).strip(), title))
                 if len(title) >= 12:
                     sec_titles[title].append("卷%d.第%d章" % (vi, cno))
+            # ── O 组：标题计数概括式与集合名词（2026-09-27 立）──
+            #   软硬：卷题／章题命中 → FAIL（集合的定义层）；节题、注文 → WARN（不阻断）。
+            _ot = o_flag(t)
+            if _ot:
+                o_bad.append("O 卷题计数概括式／集合名词：卷%d「%s」（命中「%s」）" % (vi, t[:40], _ot))
+            _ct_body = re.sub(r"^第 \\d+ 章\\s*", "", ct)
+            _ot = o_flag(_ct_body)
+            if _ot:
+                o_bad.append("O 章题计数概括式／集合名词：卷%d 第%d章「%s」（命中「%s」）" % (vi, cno, _ct_body[:40], _ot))
+            for _num, _title in secs:
+                _ot = o_flag(_title)
+                if _ot:
+                    o_warn.append("O WARN（软·节题）卷%d 第%d章 %s「%s」（命中「%s」）" % (vi, cno, _num, _title[:36], _ot))
+            for _nm in re.findall(r'<span class="src">(.*?)</span>', cm.group(2), re.S):
+                _nt = re.sub("<[^>]+>", "", _nm).strip()
+                _ot = o_flag(_nt)
+                if _ot:
+                    o_warn.append("O WARN（软·注文）卷%d 第%d章「%s…」（命中「%s」）" % (vi, cno, _nt[:32], _ot))
             yr = [int(m.group(1)) for _, t in secs for m in [YR.search(t)] if m]
             if re.search(r"（\d{4}–", ct) and len(yr) >= 4:
                 for k in range(1, len(yr)):
@@ -491,11 +564,12 @@ def main():
                 if "与同时期操作系统的比较" in _t:
                     is_cmp = True
             for k, (num, t) in enumerate(secs):
-                W = len(t)
-                if W > 60 and not (is_cmp or is_aes or "参照：美学史" in t):
-                    n_f_bad.append("N-f 节题超长：卷%d 第%d章 %s（%d 字）" % (vi, cno, num, W))
-                elif W > 50 and not (is_cmp or is_aes or "参照：美学史" in t):
-                    n_info.append("N-f WARN 卷%d 第%d章 %s（%d 字）" % (vi, cno, num, W))
+                W = title_len(t)
+                if not (is_cmp or is_aes or "参照：美学史" in t):
+                    if W > 60:
+                        n_f_warn.append("N-f WARN（软限·逾 60）卷%d 第%d章 %s（%d 字）" % (vi, cno, num, W))
+                    elif W > 50:
+                        n_f_warn.append("N-f WARN（软限·逾 50）卷%d 第%d章 %s（%d 字）" % (vi, cno, num, W))
                 if t == "本章书目述评" and k != len(secs) - 1:
                     n_g_bad.append("N-g 述评非末位：卷%d 第%d章 %s 非末位（第 %d/%d 位）" % (vi, cno, num, k + 1, len(secs)))
             if len(secs) < 4 or len(secs) > 14:
@@ -516,14 +590,21 @@ def main():
             n_i_bad.append("N-i 同题节未登记 %d 处：%s ← %s" % (len(locs), title[:40], "、".join(locs[:6])))
         elif len(locs) == 2 and len(set(locs)) == 2:
             n_info.append("N-i 跨章同题（登记建议）：%s ← %s" % (title[:36], "、".join(locs)))
-    for _x in n_e_bad + n_f_bad + n_g_bad + n_h_bad[:6] + n_i_bad[:6]:
+    for _x in o_warn:
+        print("   ⚠", _x)
+    for _x in o_bad:
         print("   ❌", _x)
-    n_info.append("N-e 年序回落 %d｜N-f >60 字 %d｜N-g 述评非末位 %d｜N-h 离群 %d｜N-i 未登记同题 %d"
-                  % (len(n_e_bad), len(n_f_bad), len(n_g_bad), len(n_h_bad), len(n_i_bad)))
+    for _x in n_f_warn:
+        print("   ⚠", _x)
+    for _x in n_e_bad + n_g_bad + n_h_bad[:6] + n_i_bad[:6]:
+        print("   ❌", _x)
+    n_info.append("O 标题计数概括式／集合名词：卷／章题命中 %d（FAIL）｜节题与注文软示 %d（WARN）" % (len(o_bad), len(o_warn)))
+    n_info.append("N-e 年序回落 %d｜N-f 软限提示 %d（不判 FAIL）｜N-g 述评非末位 %d｜N-h 离群 %d｜N-i 未登记同题 %d"
+                  % (len(n_e_bad), len(n_f_warn), len(n_g_bad), len(n_h_bad), len(n_i_bad)))
 
     for _x in n_info:
         print(_x)
-    all_sub = n_bad + n_e_bad + n_f_bad + n_g_bad + n_h_bad + n_i_bad
+    all_sub = n_bad + n_e_bad + n_g_bad + n_h_bad + n_i_bad
     for _x in all_sub[:14]:
         print("   ❌", _x)
 
@@ -544,10 +625,10 @@ def main():
         or os_bad
         or n_bad
         or n_e_bad
-        or n_f_bad
         or n_g_bad
         or n_h_bad
         or n_i_bad
+        or o_bad
     )
     print("\n总判定:", "FAIL" if allbad else "PASS")
     return 1 if allbad else 0
