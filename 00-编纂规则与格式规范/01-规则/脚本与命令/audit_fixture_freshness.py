@@ -42,7 +42,14 @@ OUTLINE = BASE / "data" / "outline.txt"
 TESTS = BASE / "tests"
 
 TRIPLE_RE = re.compile(r"(\d+)\s*卷\s*(\d+)\s*章\s*(\d+)\s*节")
-NOTE_RE = re.compile(r"注\s*(\d+)")
+# 溯源注计数：须覆盖**三种**形态——
+#   ① `注 537`（断言正则）② `注计数537`（断言**标签**）③ `notes: 537`（夹具真值常量）
+# ②是 2026-09-28 实测发现：`full_matrix_regression.mjs` 断言写的期望值是 537 而标签写 535
+#   ——标签在输出里显示了一个**错误的期望值**；原判据只匹配 `注\s*\d+`，**漏掉标签形态**。
+# ③是把真值收敛为单一常量（`const FX = { notes: 537, … }`）后新增的形态：
+#   断言与标签均由常量派生，若判据不认 `notes:`，覆盖度反而会下降。
+NOTE_RE = re.compile(r"注(?:计数)?\s*(\d+)")
+NOTES_CONST_RE = re.compile(r"\bnotes\s*[:=]\s*(\d+)")
 
 # ── 豁免（有意识的选择，非遗漏） ──────────────────────────────────────────
 # 这些夹具**刻意**绑定历史快照，其数值不应等于现行口径。
@@ -83,6 +90,8 @@ def scan_fixtures(tests: pathlib.Path):
                 triples.append((f.name, i, m.group(0),
                                 tuple(int(x) for x in m.groups())))
             for m in NOTE_RE.finditer(line):
+                notes.append((f.name, i, m.group(0), int(m.group(1))))
+            for m in NOTES_CONST_RE.finditer(line):
                 notes.append((f.name, i, m.group(0), int(m.group(1))))
     return triples, notes
 
