@@ -26,7 +26,7 @@ volume: 第14卷-商业生态与企业案例
 - 经济周期，疫情对线下社区活动的冲击反映社区对物理流动的依赖
   - 辨析：AsiaBSDCon 2003 是否 “首届” 存在争议，部分档案称首届为 2004 年——**经 2026-07-30 三次复查确认 AsiaBSDCon 首届为 2004 年，2003 年从未举办，原“AsiaBSDCon 2003 取消”叙事为史实错误**
   - 文献：AsiaBSDCon 互联网
-- 总纲第 10 条——边缘者贡献：疫情期间 Core Team 与 Foundation 员工的持续工作
+- 边缘者贡献：疫情期间 Core Team 与 Foundation 员工的持续工作
   - 辨析：Core Team 成员在疫情期间的具体贡献需通过 commit 记录与公告验证
   - 文献：FreeBSD Core Team 公告；Foundation Annual Report；Release Notes ［A］
 

@@ -21,7 +21,7 @@ volume: 第16卷-开源运动与合规治理
   - 辨析：FreeBSD 邮件列表从 majordomo 迁移至 mailman 的具体时间需查 freebsd-hackers archive；hub.freebsd.org 的硬件配置历史需考据
   - 文献：FreeBSD List Archives 1995-2000；majordomo doc
 - 总纲第 23 条——社区治理形式主义化的渐进过程；统计结论印证：统计结论 [C-24] FreeBSD freebsd-src 仓库贡献者 Gini 系数 0.9188（Bootstrap 95% CI [0.9093, 0.9270]）、统计结论 [C-25] DragonFly BSD dragonfly-src Gini 0.8972（[0.8517, 0.9187]）、统计结论 [C-26
-- 总纲第 25 条——延续与终结，关键人物离场
+- 延续与终结，关键人物离场
 - 辨析：【双库核查 2026-08-15】邮件列表库 freebsd-hackers 2000-2002 年查询 ‘Jordan Hubbard’ 命中 5 条（Jordan Hubbard 本人 2000 年活跃参与），参考文献库 ‘Jordan Hubbard’ 命中 5 条（lisa08、bsdcan 2015/2016、coscup 2019
 - 总纲第 23 条——社区治理的共识模式效率局限
   - 辨析：Rice 演讲的具体原文需查 AsiaBSDCon proceedings；2008 年前讨论的具体提案需考据
@@ -52,7 +52,7 @@ volume: 第16卷-开源运动与合规治理
 
 - 要点：Randi Harper（freebsdgirl）作为 FreeBSD committer 与 Gamergate 反骚扰倡导者，因社区反应态度最终离开 FreeBSD 项目
 - 史料：Harper 个人博客与 Twitter、freebsd-hackers 关于 Harper 离开的讨论 ［A］
-- 史观：总纲第 25 条——延续与终结，关键人物离场
+- 史观：延续与终结，关键人物离场
 - 辨析：Ha
 - FreeBSD CI Documentation；BSDCan 2017 CI talks［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］
 

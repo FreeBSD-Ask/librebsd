@@ -16,7 +16,7 @@ volume: 第14卷-商业生态与企业案例
 
 ## 史观
 
-- 总纲第 25 条——终结与延续：CSRG 遗址的史观意义
+- 终结与延续：CSRG 遗址的史观意义
   - 辨析：Evans Hall 是否仍保留 CSRG 时期物理遗迹；**Cory Hall** 与 **Evans Hall** 的地理邻近性对 BSD 时期跨学科协作的影响
   - 文献：UC Berkeley Evans Hall 文档；McKusick 1999 论文 ［B］
 

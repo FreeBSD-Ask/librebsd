@@ -16,17 +16,17 @@ volume: 第16卷-开源运动与合规治理
 
 ## 史观
 
-- 总纲第 14 条——话语权与边缘者
+- 话语权与边缘者
   - 辨析：【双库核查 2026-08-15】邮件列表库 freebsd 1997-1999 年查询 ‘open source initiative’ 命中 5 条（Jordan K. Hubbard 1998 年直接参与 OSI 讨论为强证据），参考文献库 ‘OSI’ 命中 5 条——双库验证；BSD 是否真缺席 OSI，须查邮件
   - 文献：OSI 早期
-- 总纲第 14 条——话语权与边缘者，Linux 话语权压倒 BSD
+- 话语权与边缘者，Linux 话语权压倒 BSD
   - 辨析：Linux 主导是否因技术优势还是商业与话语权，需独立判断
   - 文献：Linux Foundation 年报；Torvalds《Just for Fun》 ［B］
 
 ## 302.11.2 Windows 的闭源与逐步开源路径
 
 - 要点：Microsoft Windows 的开源路径：(1) Windows 长
-- 总纲第 14 条——话语权与边缘者
+- 话语权与边缘者
   - 判断；BSD 社区是否应争夺话语权；freebsd.duckdb 数据显示 FreeBSD 仓库首条 commit 1993-06-12 与 Linux 1991-08-25 之间约 22 个月的时间差，反映 FreeBSD 作为 386BSD 后继项目晚于 Linux 启动，但 BSD 代码谱系（CSRG 1BSD 1977）
 - 总纲第 11 条——商品是形式主义，劣币驱逐良币是普遍规律
   - 辨析：第 11 条审视不否定 Linux 的技术价值，仅揭示“市场选择”非中立——Linux 的话语胜利含形式主义维度。须避免将“劣币驱逐良币”简化为“Linux 劣 BSD 良”的道德判断，第 11 条指出的是形式主义市场的一般规律，非针对具体项目的褒贬。考据过程留痕：Raymond CatB 原文的 Revision 1.29

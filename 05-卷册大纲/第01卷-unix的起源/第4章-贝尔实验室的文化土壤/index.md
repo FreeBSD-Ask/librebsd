@@ -25,7 +25,7 @@ volume: 第01卷-unix的起源
 - 总纲第 9 条——自由探索文化对创新的关键作用
 - 辨析：Bell Labs 的自由是否被浪漫化——管理层实际容忍度需考据
 - 文献：Ritchie 1984 BLTJ 63 No. 6 Part 2:1577-1593, DOI 10.1002/j.1538-7305.1984.tb00054.x；Gertner 2012；Kernighan 2019 回忆录 ［B］
-- 总纲第 1 条——偶然性中的必然
+- 偶然性中的必然
 - 辨析：[考据脚注] 关于 UNIX 诞生的具体时间，现有来源的精确度如下——其一，Ritchie 1984 BLTJ 原文（经 WebFetch 核实）仅称 “Unix was born in 1969 not 1974”，并称 "Thus, during 1969, we began trying to find an alternative to Mult
 
 ## 辨析

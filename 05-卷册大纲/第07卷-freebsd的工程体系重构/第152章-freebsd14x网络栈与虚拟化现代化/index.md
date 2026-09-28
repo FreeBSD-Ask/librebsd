@@ -22,12 +22,12 @@ volume: 第07卷-freebsd的工程体系重构
 ## 史观
 
 - 社区治理：WireGuard 争议是 FreeBSD 社区治理史上的标志性事件——它暴露了 FreeBSD 在大功能合入流程中的审查不足问题，也推动了代码评审流程的改进；争议过后 Core Team 发布了更严格的新驱动合入准则，Foundation 赞助 John Baldwin 全职进行 **wg(4)** 重写，最终结果是更安全的实现与更严格的代码审查文化——这是危机推动
-- 总纲第 7 条——硬件与软件辩证：bhyve TPM 2.0 支持的直接动因是 Windows 11 的硬件要求——Microsoft 强制 Windows 11 必须在 TPM 2.0 环境下运行，这一商业决策直接推动了所有 hypervisor 的 TPM 支持；这是商业 OS 厂商的硬件要求 “倒逼” 开源虚拟化平台改进的典型案例，体现了软件生态中的权力不对等
+- 硬件与软件辩证：bhyve TPM 2.0 支持的直接动因是 Windows 11 的硬件要求——Microsoft 强制 Windows 11 必须在 TPM 2.0 环境下运行，这一商业决策直接推动了所有 hypervisor 的 TPM 支持；这是商业 OS 厂商的硬件要求 “倒逼” 开源虚拟化平台改进的典型案例，体现了软件生态中的权力不对等
   - 辨析：bhyve GP
 - 开源运动：WiFi 驱动差距是 FreeBSD 面临的结构性挑战——WiFi 芯片厂商（Intel、Realtek、Broadcom、MediaTek、Qualcomm）几乎不为 BSD 提供官方驱动或技术文档，所有现代 WiFi 驱动都是从 Linux 内核移植而来；Linux 庞大的用户基础与厂商投入使其成为 WiFi 驱动开发的主战场，FreeBSD 通过 LinuxKP
 - 总纲第 25 条——终结与延续：32 位平台的 “终结” 不是突然死亡，而是渐进降级——从 Tier 1 到 Tier 2 再到 Tier 3 最终从源码树移除，每个阶段都给用户迁移时间；FreeBSD 对老旧架构的支持时间长于大多数 Linux 发行版（Ubuntu 16.04 后停止 32 位桌面、RHEL 9 无 32 位），但也无法对抗半导体行业整体转向 64 位的大趋势
   - 辨析：需
-- 总纲第 7 条——硬件与软件辩证：固件获取是 BSD 系统长期痛点——Linux 内核通常在 linux-firmware 包中包含大量固件，而 FreeBSD 历史上将固件分散在多个独立 pkg（如 intel-firmware、amdgpu-firmware、iwm-firmware 等），新用户常不知道需要安装哪些固件；**fwget(8)** 将这一过程自动化，是 FreeBSD 改善新用
+- 硬件与软件辩证：固件获取是 BSD 系统长期痛点——Linux 内核通常在 linux-firmware 包中包含大量固件，而 FreeBSD 历史上将固件分散在多个独立 pkg（如 intel-firmware、amdgpu-firmware、iwm-firmware 等），新用户常不知道需要安装哪些固件；**fwget(8)** 将这一过程自动化，是 FreeBSD 改善新用
 
 ## 辨析
 

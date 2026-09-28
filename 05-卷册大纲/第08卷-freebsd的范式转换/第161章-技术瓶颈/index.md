@@ -29,7 +29,7 @@ volume: 第08卷-freebsd的范式转换
   - 文献：[DB:references_fulltext] 参考文献全文数据库（4,077 篇全文，27,138 条时间线事件）—— 对应 freebsd.duckdb
 - 总纲第 9 条——企业研究双重性：商业公司对 FreeBSD 瓶颈解决的资助既是开源协作的典范，也带来 “商业优先级塑造技术路线” 的隐忧——NetApp/Juniper 关注的存储与网络瓶颈优先解决，桌面与图形瓶颈长期滞后
   - 辨析：DARPA 资助在 2003 年因 BSDI 财务问题中断过一段时间，具体中断时长与恢复时间需查 FreeBSD Foundation 2003-2004 年度
-- 总纲第 10 条——边缘者贡献：FreeBSD 技术瓶颈的解决不仅是核心 committer 的贡献，也包括学术研究者（Cambridge 的 罗伯特·N. M. 沃森（Robert Watson）在 Capsicum 2012 的安全瓶颈解决）、商业公司工程师（Intel 的 Jim Harris 在 NVMe 2012 的存储瓶颈解决）等边缘者；瓶颈解决的历史书写须避免英雄史观，应呈现多元贡献
+- 边缘者贡献：FreeBSD 技术瓶颈的解决不仅是核心 committer 的贡献，也包括学术研究者（Cambridge 的 罗伯特·N. M. 沃森（Robert Watson）在 Capsicum 2012 的安全瓶颈解决）、商业公司工程师（Intel 的 Jim Harris 在 NVMe 2012 的存储瓶颈解决）等边缘者；瓶颈解决的历史书写须避免英雄史观，应呈现多元贡献
 - 技术路线分化：四个操作系统在同一时期面临相似的 SMP/C10K/存储瓶颈，但选择不同路径——Linux 选择渐进细化、FreeBSD 选择彻底重构、Windows 选择商业资源支撑、Solaris 选择多线程综合突破；这种分化反映了各自社区结构、许可证地位、商业模式的根本差异
   - 辨析：FreeBSD 5.x 危机（2002-2005）的 “双轨制” 延续时间比 Linux
 - 多方平等：在本体论层面平等对待所有立场，不预设优劣
