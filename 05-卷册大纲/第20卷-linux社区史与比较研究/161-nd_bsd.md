@@ -147,13 +147,11 @@
 - 【Linux社区】Lezcano 主张 unshare 的目标不止容器，还包括类似 bsdjail 的隔离场景，因此网络非共享不宜做成一刀切方案，并列出二层方案下四步配置的运维代价。原文：“The unsharing mechanism is not only for containers, its aim other kind of isolation like a "bsdjail" for example”
 - 【Linux社区】Polyakov 提交 CARP 实现与高可用主备切换补丁，CARP 出自 OpenBSD；线程里 jamal 以 VRRP 在电信级环境长期跑用户态的经验反驳把控制协议塞进内核的诉求。原文：“A better comparison what you are saying is to move OSPF to the kernel.”
 - 【Linux社区】David Stevens 反驳 Lameter 称 Linux 多播行为失范：各种 Unix 原本都这么做，Solaris 后来改了，当代 BSD 也改了；Linux 只是忠实实现了 Deering 写 RFC 时的意图。原文：“Linux does exactly what Steve Deering wanted multicasting to do when he wrote the RFC for it”
-- 【Linux社区】Geoffrey Lee 用自写程序在 SunOS 5.6、OSF1 4.0、Linux 2.4.18 上实测 connect() 与零长读写的 errno, 记录 Solaris 返回 ENOTCONN 等差异, 为内核改动提供跨系统依据。原文: “Tested operating systems: SunOS 5.6, OSF1 4.0, Linux 2.4.18” `<!-- ROW_MINE: netdev.messages.8080027 -->`
 - 【Linux社区】Holland 主张 close() 不应具有 revoke 语义，并指出 NetBSD 之所以支持这套行为只是因为有人从 Solaris 抄了，他打算建议把它删掉。原文：“Note that while NetBSD apparently supports this behavior because someone copied it from Solaris”
 - 【Linux社区】Noah Meyerhans 就 iputils 的授权发问：ping6.c 头部声明 BSD 许可，但新加入的代码调用 OpenSSL libcrypto 且未附授权说明，需明确是沿用 BSD 还是改按 GPL 处理并给出例外条款。原文：“the file is licensed under the BSD license. If the intent is for this new code to also be BSD licensed”
 - 【Linux社区】YOSHIFUJI 说明 Linux 的 IPv4 与 IPv6 共享地址与端口空间，:: 与 0.0.0.0 必然冲突，这是刻意设计而非缺陷，即便与 BSD 变体不同也在所不惜。原文：“It is 100% intended, even it is not similar to BSD variants do.”
 - 【Linux社区】Wassmann 为 can 协议驱动补 MODULE_ALIAS 以支持自动加载，补丁上下文保留了该系列模块既有的双许可标记。原文：“MODULE_LICENSE("Dual BSD/GPL");”
 - 【Linux社区】Romieu 认可 McConville 对 dscc4 有符号位移缺陷的分析，该分析发布于 openbsd-tech 邮件列表同一议题的讨论串；Romieu 认为该修复不必再走 stable 流程。原文：“For all practical matters it doesn't necessarily deserves to be fed through stable.”
-- 【Linux社区】Kondratiev 反驳 Leffler: madwifi 在 net80211 层解析 TOS 再塞进 skb 不如直接用 skb->priority, 因为 IP 层已代劳、qdisc 更懂优先级, 且跨层取信息属层次违例。原文: “I think, to use skb->priority is more proper then parse TOS.” `<!-- ROW_MINE: netdev.messages.8081441 -->`
 - 【Linux社区】Gunthorpe 强调强烈反对把 RDMA 核心四库许可从 GPLv2 或 OpenIB.org 现状改掉，明确包括换成 BSD 许可证的其他变体，并确认当前状态没有偏离。原文称 “I am strongly opposed to anything that changes the license of the existing 4 core libraries away from the GPLv2 or OpenIB.org”。
 - 【Linux社区】Bieringer 报告 2.5.70-bk9 下 IPsec 模块不自动加载，racoon 日志显示 pfkey 初始化失败并给出其 KAME 出处，提示缺 af_key、ah、esp 模块。原文称 “@(#)racoon 20001216 20001216 sakane@kame.net”。
 - 【Linux社区】DaveM 解释 pfkey 扩展性差的原因：它不做排队，响应在一个巨大的原子发送里回给应用套接字，与 BSD 路由套接字一样设计不佳。原文称 “It does no queueing, pfkey responses are generated in one huge atomic send back to the application's socket.”
@@ -333,11 +331,8 @@
 - 【Linux社区】YOSHIFUJI 驳回 Ville Nuorvala 在 IPv6 隧道匹配失败时回送 ICMPv6 的补丁，指出 Herbert 把 icmpv6 发送逻辑从 ip6_tunnel.c 移到 tunnel6.c 的改动与 ipip.c 的处理不一致，应当落入 discard 分支。原文：“As far as I remember, BSDs do not send icmpv6 in this case.”
 - 【Linux社区】Timo Teras 指出 af_key 大转储会因接收缓冲区写满而静默丢条目，并丢失 sadb_seq 为 0 的终止消息，使 socket 卡在未完成转储状态，正文沿用 David Miller 的说法说明 af_key 源自 BSD routing sockets，双方就此语义展开争论。原文：“AF_KEY (and what it was derived from, BSD routing sockets)”
 - 【Linux社区】Eric Dumazet 在 bind 调用传入 AF_UNSPEC 的回归讨论中说明 connect 传 AF_UNSPEC 有明确语义，但 bind 传 AF_UNSPEC 在 Linux 只得到混杂结果，而 FreeBSD 在旧版本曾接受这一写法，打算再去现测 FreeBSD 现状，并提示 strace 会打印原始字节。原文：“FreeBSD was accepting it in old versions it seems”
-- 【Linux社区】在 netpoll 驱动载波检测修复线程里, Matt Mackall 论述 SYSTEM_RUNNING 应如何一致定义: 或按启动与运行这两个明确阶段切换, 或按其被 cond_resched 等任意用户调用的实际用途前移, 并认为额外 flag 检查不应进入重要内联函数。原文: “define it with reference to the well-understood notion of booting vs running” `<!-- ROW_MINE: netdev.messages.8166785 -->`
 - 【Linux社区】Jan Beulich 在 Xen 多页环形缓冲补丁讨论中反对把请求数上限写进 XenBus 定义，认为应由各驱动自行约束，并把 NetBSD 实现的请求数与段数扩展列为可能真正产生影响的参照。原文：“the request number/size/segments extension that NetBSD apparently implements”
 - 【Linux社区】Constantine A. Murenin 就 Theo 指控 Linux 社区违法一事逐点反驳：Reyk 的 ath 代码从未双许可，FreeBSD 的 ath 驱动与二进制 HAL 均由 Sam Leffler 自写，不存在许可违规空间；文中并引 Adrian Bunk 所言，FreeBSD 树内双许可代码的 GPL 选项已于三个月前移除。原文（Bunk 语）：“the FreeBSD people removed the GPL choice of the dual licenced code”
-- 【Linux社区】Emulex 提交 be2net 驱动 GPL 标记修改补丁: 延长版权年份, 把 EMULEX 与 SLI 声明为商标, 增加官网链接, 并按 GPL 第 15 条加入免责条款, David Miller 要求必须解释如此批量改动版权标记的理由, 否则不予接受。原文: “There needs to be justification for copyright changes like this” `<!-- ROW_MINE: netdev.messages.8167247 -->`
-- 【Linux社区】邮件提到 netmap，该用户态数据报收发框架由 Luca Canonico 在 FreeBSD 上开发。原话: “netmap was mentioned by Tom”，帖中给出项目地址 info.iet.unipi.it 的 netmap 主页，并由 Hagen Paul Pfeifer 认为其类似 PF_RING。属 BSD 系生态项目在 netdev 上早期传播的记录。 `<!-- ROW_MINE: netdev.messages.8177715 -->`
 - 【Linux社区】Jamal Hadi Salim 在讨论路由缓存压力测试时指出，Linux skbuff 与 BSD 的 mbuf 设计取向不同。原话：“mostly driven by BSD mbuff style packet allocation”，是 BSD mbuf 风格包分配与 Linux skbuff 取向对照的直接史料。
 - 【Linux社区】讨论 IPsec Twofish 与 Serpent 算法的补丁线程中，补丁作者 Kyle McMartin 将算法编号与 KAME 对齐，原话：“KAME which assigns 253 to twofishcbc”。KAME 是源自 FreeBSD 与 NetBSD 的 IPv6 与 IPsec 参考实现，此句证明 BSD 侧 KAME 是 Linux IPsec 算法编号的来源之一。
 - 【Linux社区】讨论 Linux CARP 高可用故障切换实现的线程中，Evgeniy Polyakov 认为 CARP 属控制协议却必须具备控制任意数据流元素的能力，若采用 all_flows_one_arbiter 则须有近端常驻的内核态 CARP 控制器，若采用 one_flow_one_arbiter（如 tc）则可用远端控制机制加近端仲裁器，如 qdisk + tc + ucarp。
@@ -411,7 +406,6 @@
 - 【Linux社区】Robert Woodruff 就 hyperv-pv-rdma 上游化向 Jason Gunthorpe 追问许可证归属，提出 OFA 及其成员要求沿用其仓库既有代码的双许可证安排。原文引语：“the OFA (and its members) want to maintain the dual-license (BSD/GPL) for the code”，是 BSD 与 GPL 双许可在 Linux 内核上游准入中的真实治理冲突。 `<!-- ROW_MINE: netdev.messages.8104585 -->`
 - 【Linux社区】Dexuan Cui 提交 Hyper-V VM Sockets 的 v16 版本，说明该机制在主机与来宾之间提供基于字节流的通道，VMBus 传输层比 IP 简化。原文引语：“applications between the host and the guest can talk to each other directly by the traditional BSD-style socket APIs”，新地址族 AF_HYPERV 建立在 BSD 风格套接字接口之上。 `<!-- ROW_MINE: netdev.messages.8104741 -->`
 - 【Linux社区】Stephen Hemminger 的 netvsc 增强补丁集说明变更含 ethtool 控制项、与主机协商卸载参数以及若干清理，其中协商方案标明沿用 FreeBSD 的做法。原文引语：“negotiation of offload parameters with host (based on FreeBSD)”，是 Linux 网络驱动设计沿用 FreeBSD 实现的可考实例。 `<!-- ROW_MINE: netdev.messages.8105281 -->`
-- 【Linux社区】Geoffrey Lee 用同一程序跨系统比对 connect 的返回值与 errno，记录 OSF1 4.0 的 read 返回 EWOULDBLOCK 而 write 返回 ENOTCONN，并给出 SunOS 5.6 与 Linux 2.4.18 的对照。原文引语：“EWOULDBLOCK is the same as EAGAIN”，指出 OSF1 对读写做健全性检查的顺序存在缺陷，BSD 谱系类 Unix 的套接字语义在此成为比对基准。 `<!-- ROW_MINE: netdev.messages.8105285 -->`
 - 【Linux社区】Stephen Hemminger 讨论 Linux 网络命名空间模型的问题，提出希望以强制访问控制接口授权特定进程访问 eth0 及其路由表等对象，并列举现有模型的缺陷。原文引语：“The current model is more restrictive than chroot jails”，说明 Linux 方案在隔离粒度上弱于 jail 类机制，随后以安全领域第一原则呼吁不要重复造轮子。 `<!-- ROW_MINE: netdev.messages.8105378 -->`
 - 【Linux社区】针对移植 OpenBSD 网络层随机化的补丁，Stephen Hemminger 回应称 Linux 已实现更进一步的端口随机化。原文引语：“There are things in OpenBSD, like randomized port assignment”，被回应者主张该特性值得效仿，Hemminger 说明 2.6 已在 connect 时按地址哈希随机分配端口，而 bind 到零端口时仍为线性递增。 `<!-- ROW_MINE: netdev.messages.8105614 -->`
 - 【Linux社区】博士生 Paul Fiterau Brostean 报告 Linux TCP 接收窗口上界判定与 RFC 不一致，指出窗口上限被计入有效范围。原文引语：“Analyzing FreeBSD, they seem to have adopted the RFC standard, and have not included the upper bound”，并说明他通过推断 FreeBSD 与 Linux 客户端模型并比较两者，发现了这一细微差异。 `<!-- ROW_MINE: netdev.messages.8106153 -->`
@@ -708,7 +702,6 @@
 - 【Linux社区】Chris Wright 提交 Xen 虚拟网络设备驱动的 RFC 补丁，原文称“frontend driver allows the kernel to access network devices exported exported by a virtual machine”，由 Ian Pratt 与 Christian Limpach 签署。Xen 由剑桥大学开发并采用 BSD 风格许可证，该补丁是把 BSD 许可的 Xen 项目代码移入 GPL 内核的早期实践案例。 `<!-- ROW_MINE: netdev.messages.8245840 -->`
 - 【Linux社区】Lv Zheng 提出 Linux socket 层结构疑问，称 BSD 的 socket API 隐含 family、type、protocol 三层注册与 ops 抽象，原文引“socket(family, type, protocol)”，而 Linux 把三者压平到单一 proto_ops 路径因而结构不匹配。BSD socket 体系作为设计参照被直接对照。 `<!-- ROW_MINE: netdev.messages.8246521 -->`
 - 【Linux社区】jamal 转发 Lennert Buytenhek 关于 etherip 的论述，核心论点仍是 OpenBSD 误置版本 nibble，原文重复“OpenBSD apparently mis-implemented etherip by putting the etherip version nibble in the second nibble”，会阻断 Linux 与 OpenBSD 互通，并顺带讨论 ARPHRD 常量方案在以太隧道场景下失效。BSD 实现缺陷被作为协议取舍的负面论据。 `<!-- ROW_MINE: netdev.messages.8246593 -->`
-- 【Linux社区】在 volatile 语义之争中,Linus Torvalds 明确表态,原文称 “It does NO SUCH THING”,即 volatile 不会修复并发 bug,并指唯一可能含义只是单 CPU 语义,单 CPU 场景下使用它毫无意义。Paul McKenney 就 per-CPU 变量补一句例外。这是对 Linux 与 BSD 传统上误用 volatile 观念的权威否定。 `<!-- ROW_MINE: netdev.messages.8246649 -->`
 - 【Linux社区】异步加密层讨论中，James Morris 感谢 Sam Leffler 提供的论文链接，该文说明他如何在 FreeBSD 中修复 OpenBSD 加密代码的诸多问题，原文称“how I fixed many of the problems with the openbsd code in freebsd”。BSD 家族内部由 OpenBSD 到 FreeBSD 的加密实现传承与修正，成为 Linux 加密子系统设计的参考文献。 `<!-- ROW_MINE: netdev.messages.8246923 -->`
 - 【Linux社区】Alexey Kuznetsov 总结 Linux TCP 与 BSD 的偏差，原文称“quadratically suppressed cwnd on TCP_NODELAY connections comparing to BSD”，指出发送端按包计数、接收端按字节计数 ACK，加上激进延迟 ACK 反复制造人为时延。他感叹自己维护的功能并不值得，只带来持续痛苦。 `<!-- ROW_MINE: netdev.messages.8247021 -->`
 - 【Linux社区】TCP 紧急指针处理上，Herbert Xu 直接检查 NetBSD 内核源码，原文明称“I just checked NetBSD and guess what, they do exactly what I've suggested”，即 urg 偏移计算与自己的建议完全一致，并据此认为若这算缺陷则已存在数十年。NetBSD 代码被当作 Linux TCP 行为争议的历史先例证据。 `<!-- ROW_MINE: netdev.messages.8247673 -->`
@@ -827,7 +820,6 @@
 - 【Linux社区】Marvell Libertas USB 驱动补丁中 Michael Wu 询问 radiotap 频道路段是否也发往 netbsd，并强调不希望 fork radiotap，属 BSD 系统与 Linux 共享无线帧格式的治理关注。引语 “Did you send this part to netbsd also?”
 - 【Linux社区】2005年以太网PHY抽象补丁讨论中，Stephen Hemminger以FreeBSD为参照判断设计需求是否成立，原话 “It looks like the FreeBSD tries to abstract this.” Linux内核开发者在评估PHY驱动抽象化时直接对照BSD实现，属BSD代码谱系的比较性引用。
 - 【Linux社区】QFQ快速公平队列调度器由David Miller合入，说明该算法与FreeBSD同源：“The same algorithm is already implemented in ipfw in FreeBSD.” Stephen Hemminger另注明算法源自Fabio Checconi并已在FreeBSD ipfw中落地，是Linux网络调度器与FreeBSD共享算法的直接谱系证据。
-- 【Linux社区】rhashtable补丁的作者署名争议。Patrick McHardy以德国著作权法为由要求为派生代码署名，原话 “german copyright law as an assumption of authorship for authors marked in the work” 讨论派生作品的作者认定与GPL执法边界，属许可证与代码归属的治理议题，对BSD系派生许可亦有参照价值。 `<!-- ROW_MINE: netdev.messages.8384051 -->`
 - 【Linux社区】myri10ge多队列TX补丁的diff上下文暴露该驱动沿用双许可证标记：“MODULE_LICENSE("Dual BSD/GPL")” 该宏行出现在补丁修改区间内，说明BSD/GPL双授权是Linux内核驱动中长期延续的授权形态，属BSD许可证在内核中的共存实例。
 - 【Linux社区】EtherIP隧道驱动被David Miller否决，核心理由是与OpenBSD的互操作性缺陷：“the only other OS that implemented this got it wrong” 并补充 “the OpenBSD interoperability issues are very real” BSD实现的错误被作为Linux拒绝合并该协议的实质依据，同时提及Xerox的8位表头变体。
 - 【Linux社区】InfiniBand地址解析补丁采用三选一许可证声明，其中包含BSD条款：“under the terms of the "The BSD License" a copy of which is available from the Open Source Initiative” Voltaire、Mellanox、Intel等多家厂商代码在Linux内核中以BSD许可证作为可选项授权。
@@ -1089,7 +1081,6 @@
 - 【Linux社区】Linux LibOS 提案的 RFC 讨论中，NetBSD 维护者 Antti Kantee 以多年主线经验介入，原文为 “I've been working on something similar in mainline NetBSD for almost 8 years now”；另一回帖判断移植前景，认为 “Linux source changes magnitudes faster than NetBSD's.”，双方把 NetBSD 作为成熟参照系讨论维护负担。 `<!-- ROW_MINE: netdev.messages.8310590 -->`
 - 【Linux社区】bcm43xx-softmac 的 WPA 认证问题续贴中，Sam Leffler 提示管理帧要素顺序风险，原文为 “Beware of the order of IE's in the management frames; some AP's are touchy about this.”，回帖者承认对该处实现一无所知。BSD 核心人物就此直接发言于 Linux 无线开发场景。 `<!-- ROW_MINE: netdev.messages.8310692 -->`
 - 【Linux社区】synproxy iptables 目标实现说明中，作者明确以 OpenBSD 为原型，原文为 “It is much like the SYNPROXY implementation in pf of OpenBSD, but won't have state”，即仿照 pf 的 SYNPROXY 实现并简化其状态机，改由 syncookies 在首连后建立。 `<!-- ROW_MINE: netdev.messages.8310785 -->`
-- 【Linux社区】disablenetwork 语义补丁的讨论中，Casey Schaufler 以三十年前 SunOS 集群部署经验反驳逐次超时设计，原文为 “I learned back in 1986 or so that if you set up a SunOS 3.2 cluster using Yellow Pages”，指出当时管理员拔线即被发现，并认为这是又一个 we knew better a quarter century ago 的问题。 `<!-- ROW_MINE: netdev.messages.8310966 -->`
 - 【Linux社区】127.x.x.x 回环路由问题的讨论中，作者称唯一可行方案是在路由器上子网化 127 网段，并说明其来源，原文为 “The only solution I've seen on routers running BSD stack is to subnet the 127 net”，随后指出该做法在 Linux 下不可行，把 BSD 路由器行为作为问题域基线。 `<!-- ROW_MINE: netdev.messages.8311044 -->`
 - 【Linux社区】所谓 Linux 抄袭代码之争中，作者指出 FreeBSD 侧立场转变，原文为 “It's no longer dual licenced in the FreeBSD tree because the FreeBSD people removed the GPL choice”；其 ath 代码作者进一步声称，当年从 dual-bsd/gpl 改为纯 BSD 时曾征询共享版权人 onoe-san 意见，即 BSD 阵营主动收紧了许可选项。 `<!-- ROW_MINE: netdev.messages.8311081 -->`
 - 【Linux社区】2.4.21 引入的 IPv6 缺陷讨论中，投诉者以跨系统长期经验主张现有行为才是正确的，原文为 “things I've taken for granted with IPv6, and used in IOS, BSD, Windows and Linux for ages”，把 BSD 列为其行为基准之一，Linux 侧随即反驳。 `<!-- ROW_MINE: netdev.messages.8311474 -->`
@@ -1289,10 +1280,8 @@
 - 【Linux社区】通用哈希表 RFC 的变更日志列出跨子系统评审者，原文
 "Address review comments by Tejun Heo, Josh Triplett, Eric Beiderman, Mathieu Desnoyers, Eric Dumazet and Linus Torvalds"，
 另注明 "Removed hash_get due to being too Gandalf"。一条封面信同时记录了 Torvalds 参与跨子系统评审
-与 Linus 式命名被提交者退回两事。 `<!-- ROW_MINE: netdev.messages.8479062 -->`
 - 【Linux社区】rtl8xxxu 驱动补丁争议中，Jes Sorensen 以维护者身份援引 Linus 的 5e467652ffef 提交为自己背书，称
 "What Linus does in his code, is totally up to him"，并主张 "What I pull into the driver" 由本人裁定即
-“is up to me”；Dave Jones 则以 Absolutes are for zealots 反驳。维护者规范裁量权与 Torvalds 例外的效力之争。 `<!-- ROW_MINE: netdev.messages.8479213 -->`
 - 【Linux社区】IPv4 ICMP pMTU 补丁的讨论中，David Miller 把问题定位为 BSD 行为，说自己并未拒绝补丁，
 而是 "strictly about figuring out what's happening on the OpenBSD systems"；Edward Allcutt 随即回应要去定位 BSD 代码中的相应位置，
 并承认该情形在其他自认为技术上正确的路由器实现中也可能出现。维护者以 OpenBSD 行为作为缺陷诊断基准。 `<!-- ROW_MINE: netdev.messages.8479273 -->`
@@ -1310,11 +1299,9 @@
 - 【Linux社区】H-TCP 拥塞控制补丁的专利与许可路径讨论中，Jamie Lokier 给出 GPL 专利权授予范围的系统性说明，
 要求 "The patents must be licensed for _all_ GPL v2 implementations of that algorithm, not just in this specific code"，
 并指出分发本身并不授予专利许可，GPL 是禁止在缺少专利许可时再分发，否则第 7 节将使无人能再分发。
-许可证与专利交叉治理的权威分析。 `<!-- ROW_MINE: netdev.messages.8479728 -->`
 - 【Linux社区】合并窗口争论中，Linus Torvalds 给出判定式规则 "if it's not on the regression list"，
 并追问若不在回归列表、非安全漏洞、非崩溃列表，为何还送给他，以及 "what is the point of the merge window?"；
 David Miller 称对 Intel 无线团队 "I just won't take their stuff"；Jeff Garzik 又示范用 acked-by 转交补丁。
-合并窗口纪律与子系统拒收权的集中展示。 `<!-- ROW_MINE: netdev.messages.8479828 -->`
 - 【Linux社区】drivers/net 目录重命名 RFC 中，Jan Engelhardt 以 BSD 命名传统作为论据，
 称自己很高兴 Linux 驱动名不像 OpenBSD 那样总是三字缩写，即 "driver names were not (always) TLAs like in OpenBSD"，
 据此反对 pkteng 扩写与 ixp2000 缩写同时发生，并认为按厂商分目录是多余的。
@@ -1356,10 +1343,8 @@ Heffner 随后表示难以相信 FreeBSD 默认坏掉 UDP 的 MTU 发现，作�
 "has suspend/resume with the bcma interface been tested AT ALL?"，并指出
 struct bcma_driver 的挂起恢复字段 "are COMPLETELY UNUSED"、"nothing else uses them. NOTHING."，
 最后问为何在挂起恢复从未做过、
-也实际不工作的情况下把该驱动的 BCMA 转换送上游。核心维护者对驱动准入质量与测试责任的公开问责。 `<!-- ROW_MINE: netdev.messages.8483303 -->`
 - 【Linux社区】网络子系统合并说明的第六条留下关于维护者可用性的治理事实：
 "Patrick McHardy has been offline for a month or so these are the only two netfilter fixes that have gone in in that time"。
-合并说明公开交代关键子系统在维护者缺位期间的积压与吞吐，是 Linux 子系统维护者与 bus factor 的原始档案。 `<!-- ROW_MINE: netdev.messages.8483401 -->`
 - 【Linux社区】路由缓存压力性能讨论中，Jamal Hadi 把 BSD 的 patricia 树作为无状态转发的标尺："
 stateless forwarding like BSD patricie tries is no longer sufficient"，理由是优化目标已不止
 查下一跳、减 ttl 与重算校验和；Ralph Doncaster 则回应对核心路由当然够用。
@@ -1374,11 +1359,9 @@ BSD patricia 树被直接拿来衡量 Linux 路由缓存设计的取舍。 `<!--
 - 【Linux社区】atheros 驱动硬件描述文档之争中，Harald Welte 以 gpl-violations.org 立场系统说明反向工程合法性，
 称在德国版权法允许反向工程只要不解编译；他引 EUCD 兼容例外与低层寄存器序列不构成可版权作品的观点，
 并原文交代 "I'm heavily dealing with exactly those issues during my gpl-violations.org efforts"。
-Linux 与 BSD 之间驱动来源争议的法律侧原始记录。 `<!-- ROW_MINE: netdev.messages.8484305 -->`
 - 【Linux社区】用户命名空间 sysctl 上限补丁说明中，Eric Biederman 把动机落在沙箱治理上：
 "if you are building a sandbox/chroot jail/chromium tab or anything like that"，
 并承认此前有报告称 seccomp 不足以禁用命名空间创建而 "Seccomp doesn't stack"。
-他还指出命名空间使非特权用户可触及更多内核从而扩大可利用面。沙箱化与攻击面收缩的设计动机陈述。 `<!-- ROW_MINE: netdev.messages.8484618 -->`
 - 【Linux社区】SCTP 的 PMTU 支持讨论中，Jon Grimm 为补全方案图引入 BSD 一侧对照实现：
 "this is what OpenSS7s SCTP does, while the KAME SCTP manually controls the DF bit"；
 他同时指出两种做法各有取舍。KAME 作为 BSD 衍生的 IPv6 与 SCTP 参考实现，
@@ -1392,7 +1375,6 @@ BSD 压缩算法作为标准 PPP 压缩方式进入 Linux 并沉淀为模块描�
 - 【Linux社区】网络驱动目录重组 RFC 中，Geert Uytterhoeven 与 Jeff Kirsher 就分类原则正面冲突，
 Geert 直言 "I'm strongly against classifying drivers based on who wrote them"，
 并把以太网驱动分为第三类情形 "vendor A chip, vendor B card, entity C software"；
-Kirsher 提出厂商被收购后该如何归类的问题。一场关于驱动归属判据与目录治理的持续辩论。 `<!-- ROW_MINE: netdev.messages.8485611 -->`
 - 【Linux社区】统一 TCP 标志宏的补丁引发是否应与 BSD 保持一致的争论。提交者提出 "The same macros are definied by BSDs too"，
 David Miller 断然反驳这是毫无意义的论据，理由是 net 目录下的头文件并非用户态可见的 linux 目录头文件，
 内核内部应取命名空间最干净的方案而非 "what other people do"；提交者又补充还需与 netinet/in.h 抗衡。
@@ -1456,7 +1438,6 @@ BSD 与 GPL 可组合性在 Broadcom 文本上被具体检验。 `<!-- ROW_MINE:
 - 【Linux社区】arp_filter 缺少 IPv6 ND 对应项的讨论中，Saku Ytti 称赞 Linux 的 ARP 与 ND 共用 neighbour.c，称 "unlike in BSD where everything seems to be self-contained"，并希望两套协议进一步合并公共行为代码。
 - 【Linux社区】BPF 新增模运算与异或指令的跨平台讨论中，Guy Harris 认为问题源于内核缺少 mod 指令而非平台对立，并宣布 "I'll file bugs against the various BSDs and OS X suggesting that they be added"，随后已在 libpcap 中落地实现。
 - 【Linux社区】CAN 总线补丁 2/7 新增 PF_CAN 核心模块，模块用 MODULE_LICENSE 宏声明许可，取值为 “Dual BSD/GPL”，即 Volkswagen 贡献的 CAN 核心以 BSD 与 GPL 双许可发布，作者 Urs Thuermann 与 Oliver Hartkopp。
-- 【Linux社区】无线配置议题回顾中,发帖人回复 Sam Leffler 关于站点模式省电与后台扫描交互的论述,称 “Station mode power save work involves communicating with the ap and managing the hardware”,并反请对方重读自己写过的内容。 `<!-- ROW_MINE: netdev.messages.8495458 -->`
 - 【Linux社区】并发套接字 shutdown 下不应返回未初始化地址的补丁讨论中，评论者认为 “addr_len is probably smaller than sizeof(address), so only memset whichever is smaller”，并称手边若有 BSD 主机或虚拟机就去核对 BSD 做法，若可接受则照搬其行为。
 - 【Linux社区】Bug 106241 关于 accept 中套接字 close 与 shutdown 语义不合规的讨论中，参与者复述既有结论，称 “the current mechanisms in Linux & some BSD variants can be subject to races”，故需对未连接套接字显式 shutdown。
 - 【Linux社区】TCP_DEFER_ACCEPT 计数器补丁讨论中，Willy Tarreau 说明其动机源于绕过首个无意义 ACK 唤醒任务的做法，并援引 BSD 4.4 的 Apache 性能文档 “perf-bsd44.html” 作为历史依据，称使用者至今仍常踩该坑。
@@ -1472,7 +1453,6 @@ BSD 与 GPL 可组合性在 Broadcom 文本上被具体检验。 `<!-- ROW_MINE:
 - 【Linux社区】rtl8211e PHY rx/tx 延时配置的讨论引用 FreeBSD 评审 D13591 作为寄存器位域语义的权威佐证，体现 BSD 社区知识回流 Linux。原句：There is also a freebsd-folks discussion regarding this register: https://reviews.freebsd.org/D13591
 - 【Linux社区】PHY reset 讨论中，Florian Fainelli 主张兼容字符串解析并非 Linux 专属，FreeBSD 等任意 OS 同样可支持，固件正应准确描述硬件以便各 OS 复用。原句：Linux just so happens to support that, but so could FreeBSD or any OS for that matter.
 - 【Linux社区】TLS 设备侧 zerocopy sendpage 讨论中，Boris Pismenny 以 FreeBSD 已将无拷贝设为默认为由推动方案，David Miller 明确拒绝拿 FreeBSD 作标杆，称绝不容许把损坏的 TLS 签名发上线。原句：If we can't make this the default (as it is in FreeBSD)
-- 【Linux社区】tools/lib/bpf/btf 的许可证从 GPL 改为 LGPL 的讨论，属 Linux 内核周边工具链 BSD 兼容性议题的组成部分，涉及工具链许可证分层设计。原句: Change tools/lib/bpf/btf to LGPL which is inline with libbpf also. `<!-- ROW_MINE: netdev.messages.8673016 -->`
 - 【Linux社区】libbpf 将 bpf_helpers.h 与 bpf_endian.h 重授权为 LGPL-2.1 OR BSD-2-Clause 的讨论中，Jesper Brouer 追问为何选 BSD-2-Clause 而非 Apache-2.0，引出内核树对 Apache-2.0 的 SPDX 使用限制与 GPL 兼容性辨析。原句：I just want to understand, why BSD-2-Clause and not Apache-2.0 ?
 - 【Linux社区】bpftool 许可证混乱清理补丁出现 GPL-2.0-only OR BSD-2-Clause 与 GPL 全文样板并存的冲突，是工具链 BSD 化过程中的许可证治理实例。原句：SPDX-License-Identifier: (GPL-2.0-only OR BSD-2-Clause and
 - 【Linux社区】Thorsten Glaser 在 netdev 询问 qdisc 开发入门时自陈多年底层开发多在用户态而非内核，迄今涉足过的少量内核代码在 BSD 阵营，是 BSD 经验开发者转入 Linux 网络子系统的自述记录。原句：what bit of kernel I touched so far was in BSD land so any pointers welcome.
@@ -1492,7 +1472,6 @@ BSD 与 GPL 可组合性在 Broadcom 文本上被具体检验。 `<!-- ROW_MINE:
 - 【Linux社区】BPF map 符号类型修复以 FreeBSD CTF 格式生成工具为依据，原话 “ctfconvert uses that information to generate FreeBSD's CTF representation from ELF files”。Daniel Borkmann Ack，属 BSD 工具链需求驱动 Linux BPF 工具变更的证据。
 - 【Linux社区】Greg KH 对 Jonathan Lemon 以 bsd 邮箱句柄署名的 netgpu NVIDIA 插件要求法务签署与版权声明，原话 “From: Jonathan Lemon <bsd@fb.com>”。BSD 关联人物遭遇内核治理摩擦，涉及版权与第三方驱动治理。
 - 【Linux社区】0day 的 kernel test robot 报告 TCP 回归失败时，日志显示 Linux 自测流水线直接执行了 packetdrill 仓库内的 BSD 目录用例，原文 Running packetdrill/tests/bsd/fast_retransmit/fr-4pkt-sack-bsd.pkt，说明 BSD 谱系的测试语料直接参与 Linux TCP 变更验证。
-- 【Linux社区】本封审计子系统讨论的主要争论者 Richard Guy Briggs 长期服务于 FreeBSD 社区,原文 On Fri, Nov 1, 2019 at 11:10 AM Richard Guy Briggs <rgb@redhat.com> wrote 标明其来信,他在此就 auid 与 sessionid 从 procfs 迁往系统调用的方案展开评审,构成 BSD 人物在 Linux 内核治理讨论中的在场证据。 `<!-- ROW_MINE: netdev.messages.8635915 -->`
 - 【Linux社区】realtek RTL8211E PHY 的 rx tx delay 修复讨论中，共同评审者包含 FreeBSD 开发者 Kyle Evans，来信者说明自己参考了 FreeBSD 评审系统页面来理解该寄存器语义，原文 I saw the summary from https://reviews.freebsd.org/D13591.，体现同一段 PHY 逻辑在 Linux 与 FreeBSD 两侧并行评审的跨内核协作。
 - 【Linux社区】Andrey Ignatov 在 bpf 补丁说明中把 sys_sendmsg 对未指定 IPv6 目的地址改写成 ::1 的行为明确称为 BSD 惯例遗留，原文 fixes BSD'ism in sys_sendmsg to rewrite unspecified destination IPv6，是 Linux 网络 API 语义承袭 BSD 谱系的直接文字证据。
 - 【Linux社区】Andy Shevchenko 审阅 marvell prestera 驱动时逐点指出签名与许可文件问题，并引用补丁头 SPDX-License-Identifier: BSD-3-Clause OR GPL-2.0，同时要求作者重读提交指南相关章节，记录 BSD 三条款与 GPL 双许可在内核入库时的判定实践。
@@ -1659,7 +1638,6 @@ BSD 与 GPL 可组合性在 Broadcom 文本上被具体检验。 `<!-- ROW_MINE:
 - 【Linux社区】cassini 递归锁检测线程中，David Miller 提到 Sun Schizo 芯片勘误文档已不可访问，Emil Goode 找到 FreeBSD sparc64 列表上的相关旧帖，Bjørn Mork 补上勘误文档存档链接。原文：“FreeBSD currently crashes on older models of V480 when attempting to use an on-board NIC”。属 BSD 邮件列表条目在 Linux 网卡驱动排障中充当诊断依据，关联强度弱于协议语义对照。
 - 【Linux社区】OSDL Bugzilla 远程路由漏洞讨论中，David Stevens 反驳 Hemminger 称 Linux 安全模型不同于 BSD 派生系统的说法，主张 IP 一直采用弱端系统模型，并引 WRS 的经典著作所载 BSD 代码。原文：“This is not different from BSD behavior.”。属 BSD 语义作为安全模型争议判据的史料。
 - 【Linux社区】Tanmay Ganacharya 以 FreeBSD 4.9 Stable 用户在 netdev 询问 TCP 定时器语义，自述从 tcp 结构块读 t_rtttime 与 t_rxtcur 却不知单位，并求证“1 TCP tick = 224 miliseconds”是否成立，是 BSD 用户直接向 Linux 网络列表征询实现口径的记录。
-- 【Linux社区】Glauber Costa 在 cgroup TCP 缓冲补丁中说明为何放弃禁用 kmem 记账的参数，正文自述 “But Kame suggested we'd remove it, and so I did.”，属 KAME 系（BSD 衍生网络栈）意见直接改变 Linux TCP 内存记账初始化的罕见记录。 `<!-- ROW_MINE: netdev.messages.8223673 -->`
 - 【Linux社区】Rick Jones 参与 TCP 多监听线程缩放讨论，线程结论把 BSD 作为语义基准，正文引“SO_REUSEADDR provide most of what SO_REUSEPORT provides on BSD”，并以并发 accept 同一监听者说明 Linux 无需移植该选项，属 BSD 套接字选项语义对照。
 - 【Linux社区】Stephen Hemminger 反对为 iproute2 增加固件标签接口，理由是既有网络工具族大多源自 BSD 世界，正文引“Many of the utilities come from a BSD world”并指这些工具不太可能接受 Linux 专属包袱，涉及 BSD 用户态工具谱系与治理分歧。
 - 【Linux社区】IPv6 隧道链路本地地址生成讨论中 Pekka Savola 转述 FreeBSD 做法，正文含“on FreeBSD platform they take the link-local address of the first physical interface”，David Miller 回应“Interesting approach”且表态不挑剔解法，属 BSD 做法被引为 Linux 方案参照的实例。
@@ -1710,7 +1688,6 @@ BSD 与 GPL 可组合性在 Broadcom 文本上被具体检验。 `<!-- ROW_MINE:
 - 【Linux社区】Brian Bidulock 在内核套接字 API 补丁的许可讨论中指出，GPL 兼容并非开源许可的必要条件，“pure-BSD is not compatible with GPL”，实际须以 BSD/GPL 双许可发布，是一段 BSD 许可兼容性论断。
 - 【Linux社区】网络命名空间虚拟化讨论中，Daniel Lezcano 视二层隔离对“for network migration, jails or containers”这类简单需求为过重，形同大锤砸甲虫；jails 一词承自 FreeBSD，BSD 渊源在此论证中在场。
 - 【Linux社区】Michael Richardson 声援 Donald Becker 对接口随意变更的批评，称内核开发者是“the biggest reason I've ever seen for using BSD”，并断言“Microsoft is not the real enemy. Gratuitous change is.”，是内核邮件列表中直白的 BSD 采用宣言。
-- 【Linux社区】In an RDMA offload discussion the author dismisses TOE and points to a USENIX HotOS 2003 paper arguing “TOE is evil, read this: http://www.usenix.org/events/hotos03/tech/full_papers/mogul/mogul.pdf”. Jim Mogul is a well known BSD figure, so this is BSD-adjacent networking literature. `<!-- ROW_MINE: netdev.messages.8322737 -->`
 - 【Linux社区】围绕 CoDel 与 tcp_time_stamp 粒度的讨论中，Srećko Jurić-Kavelj 查考其他实现：“FreeBSD uses 1ms granularity no matter what HZ says, NetBSD has 500ms ticks”，为 Linux 侧讨论提供 BSD 计时粒度参照。
 - 【Linux社区】一条香港独立服务器租用广告在软件规格栏列出“CentOS / Fedora / Debian / FreeBSD / Ubuntu / Redhat Linux”，FreeBSD 作为可装系统列于其中；虽属垃圾广告，这一 BSD 提及仍然成立。
 - 【Linux社区】Sowmini Varadhan 在 IPv6 扩展头权限讨论中评估 HBH 选项处理，并提议“may also be interesting to find out what BSD does in these cases”，把 BSD 行为当作 Linux 选项处理的设计参照。
@@ -1770,14 +1747,12 @@ BSD 与 GPL 可组合性在 Broadcom 文本上被具体检验。 `<!-- ROW_MINE:
 - 【Linux社区】Alexei Starovoitov 评审 Jakub Kicinski 的 XDP 软件卸载模型 RFC 时表态可接受 GPL 加 BSD 双许可，说明 BSD 许可在 BPF 工具链与自测代码层的实际选型被内核维护者当场裁定。原话 “if you want to do dual gpl+bsd. It's ok”。 `<!-- ROW_MINE: netdev.messages.8654477 -->`
 - 【Linux社区】syzbot 在 bpf_skb_cgroup_id 故障的二分日志中收录 BPF 反汇编器重许可为 GPL-2.0-only OR BSD-2-Clause 的提交，是 BSD-2-Clause 进入内核 BPF 工具的一次被自动化工具留痕的记录。原话 “Relicense disassembler as GPL-2.0-only OR BSD-2-Clause”。 `<!-- ROW_MINE: netdev.messages.8657854 -->`
 - 【Linux社区】Thorsten Glaser (mirabilos) 在 IPV6_TCLASS 控制消息尺寸的跨 Unix 争议中转述对多个系统的核查：FreeBSD/Darwin 与 Windows 同样在 IPV6_TCLASS cmsg 中放入四字节数据，并称其代码 “does work on MidnightBSD (equivalent to FreeBSD 10.4) for IPv6”，以 BSD 谱系实证支撑套接字选项语义之争。
-- 【Linux社区】Yanjun Zhu reviews the cassini driver license conflict that Thomas Gleixner filed: the boilerplate says “or (at your option) any later version” while the added SPDX line says “SPDX-License-Identifier: GPL-2.0”, so “the file got tagged GPL v2 only while in fact it is licensed under GPL v2 or later”. License-identifier accuracy for a third-party contributed driver. `<!-- ROW_MINE: netdev.messages.8692695 -->`
 - 【Linux社区】Jakub Kicinski 评议新的 BPF 许可文档时，反对其允许 “firmware with a proprietary license”，原文 “That seems like a step back, nfp parts are all BSD licensed”，并链接 Netronome nfp 的 ebpf.uc 源码；他又追问专有应用与 GPL BPF 程序共存所说 “executable process” 的定义，BSD 许可的网卡固件直接处在 Linux eBPF 许可边界上。
 - 【Linux社区】在 rtl8211e PHY 收发延迟寄存器讨论中，Serge Semin 说明其位段信息出自 FreeBSD 代码评审，原文 “I've got that info from Kyle post here” 并指向 reviews.freebsd.org/D13591，Realtek 未公开的寄存器布局经由 FreeBSD 评审帖进入 Linux 驱动讨论。
 - 【Linux社区】Aaro Koskinen 排查 EdgeRouter Lite 上 Cavium OCTEON RGMII 延迟属性时指出，厂商 GPL 包为此设置提供更多文档，FreeBSD 源码树亦然，原文 “Vendor GPL bundles provide some more documentation for this setting, as does the FreeBSD source tree”，并链接 FreeBSD 树内 sys/contrib/octeon-sdk/cvmx-asxx-defs.h，Linux 驱动寄存器语义溯源至 FreeBSD 源码。
 - 【Linux社区】Greg KH 回应 netgpu Nvidia 插件提案——作者行写作 “From: Jonathan Lemon <bsd@fb.com>”——要求律师签核并改用企业邮箱署名，原文 “we will need to know who to come after in the future”；Chris Mason 答以 “I think we need to do a better job talking about patches that are just meant to enable possible use”。具 BSD 背景贡献者的身份印记与被内核拒绝的企业代码许可治理之争并存。
 - 【Linux社区】Al Viro 评议已获奥斯汀共同标准修订组核准纳入 POSIX 的 close-on-fork 提案，原文称其权威仅来自既有 Unix 间的共识，即 “the only authority it has ever had derives from consensus between existing Unices”，并澄清 Solaris 之外 Linux 与各 BSD 均未实现，各 BSD 的既有实践成为否定该 POSIX 提案的依据。
 - 【Linux社区】Matthew Cover 修复 tun 多队列收包导向的补丁中，把观测路径描述为 “a simple netmap program which opens and reads from per-queue descriptors”；netmap 是源自 FreeBSD 的网络框架，该 Linux 补丁线程以 BSD 系子系统作为测试观测手段。
-- 【Linux社区】Thomas Gleixner files the cassini SPDX cleanup: the driver boilerplate says “either version 2 of the License, or (at your option) any later version”, but the tag addition wrote “SPDX-License-Identifier: GPL-2.0”, leaving a driver that is actually GPL-2.0-or-later labelled as v2 only. License-identifier correctness for code contributed by Sun Microsystems. `<!-- ROW_MINE: netdev.messages.8704264 -->`
 - 【Linux社区】Thorsten Glaser 向 netdev 求教 qdisc 编写入门，自述迄今涉足的内核代码均在 BSD 领域，原文 “what bit of kernel I touched so far was in BSD land”，并称其成果 “so far everything coming out of it is published under OSS licences” 且链接 github.com/tarent/sch_jens，是具 BSD 经验的贡献者进入 Linux qdisc 子系统的记录。
 - 【Linux社区】Andrii Nakryiko 为新增 BPF 自测头文件提议双许可，原文 “Let us make this (LGPL-2.1 OR BSD-2-Clause) ?”，Alexei Starovoitov 回以 “nope. it's gpl-2.”，一桩 BSD-2-Clause 对 GPL-2.0 的许可取舍在内核自测代码上被当场否决。
 - 【Linux社区】InfiniBand 连接抽象补丁 addr.c 采用三选一多许可证头，明确列出 BSD License 选项供接收方任选，原文：under the terms of the “The BSD License” a copy of which is；同文件还并行给出 CPL 1.0 与 GPL v2 路径，是 Linux 内核树中罕见的 BSD 许可入口。
@@ -1819,7 +1794,6 @@ BSD 与 GPL 可组合性在 Broadcom 文本上被具体检验。 `<!-- ROW_MINE:
 - 【Linux社区】Prism54 WPA 支持讨论中，Sam Leffler 以自身在 BSD 生态的移植经验背书设计有效性，原文：“done a rough port of wpa_supplicant to the bsd world too”，认为设计因此得到验证，总体上认为这是优秀的工作。
 - 【Linux社区】David Miller 在 TCP PSH 补丁讨论中转述 Alexey Kuznetsov 的 anti-MacOS 说法后，明确给出 BSD 衍生系统的行为特征：Darwin 在没有丢包和乱序的正常 TCP 流中会延迟确认，直到 delack 定时器触发或出现 PSH 标志位才发出 ACK。原语：“Darwin delays ACKs until delack timer fires or PSH is seen”。
 - 【Linux社区】Al Viro 在回复 socket 文件描述符与 close 并发竞争的讨论时，把 Linux 与 FreeBSD 明确并列为同一风险面：多线程应用在一个线程从另一个线程脚下抽走描述符时，都会撞上 EBADF 竞态。原语：“On Linux, on FreeBSD, on Solaris, whatever”。
-- 【Linux社区】Andy Furniss 在 Linux 2.6.16-rc6 窗口收缩故障讨论中提出 BSD 衍生 Unix 的对照假设：SunOS 2.5.1 上 TCP 窗口缩放默认关闭而 Linux 默认开启，怀疑 Packeteer 设备无法正确处理，建议直接在 SUSE 机器上关闭后验证。原语：“window scaling defaults to off on SunOS 2.5.1 and it's on on Linux”。 `<!-- ROW_MINE: netdev.messages.8461075 -->`
 - 【Linux社区】Alan Burlison 与 David Holland 就 shutdown(3) 与 close(3) 对 accept(3) 中 socket 的影响展开争论，直接引用 NetBSD 的实现来源作为判据：NetBSD 支持该行为是因为有人从 Solaris 抄过去，Holland 表示要去建议把它移除。原语：“NetBSD apparently supports this behavior because someone copied it from Solaris”。
 - 【Linux社区】Ingo Molnar 反驳 David Miller 关于 Linux 内核 bug 报告存在自由市场经济的论点，直言该假设不成立因为 Linux 绝非封闭生态，并指出 bisect 门槛提高会把用户推向其他 OS。原语：“It pushes them towards Solaris, FreeBSD, MacOS and even Windows”。
 - 【Linux社区】mtk-lists 在 shutdown(SHUT_RD) 语义讨论中给出 FreeBSD 的实测结果：关闭读端后 read() 立刻返回 0 的现象同样出现在 FreeBSD 4.8、Tru64 5.1B、HP-UX 11 与 Solaris 8 上，Alexey 还建议追问 FreeBSD 返回 0 之后窗口是否最终打开。原语：“I see that this also occurs on FreeBSD 4.8”。
@@ -1939,9 +1913,7 @@ BSD 与 GPL 可组合性在 Broadcom 文本上被具体检验。 `<!-- ROW_MINE:
 - 【Linux社区】ppp 接收锁由自旋锁改为读写锁的提案以 BSD 压缩实现作为不保护共享状态的典型反例，文中指出 bsd_decompress()（in bsd_comp.c）更新字段遍布各处，引用的是内核中源自 BSD 的 Compress 算法谱系保留至今的实现代码。
 - 【Linux社区】pidmap_lock 去中断化的讨论中，Mateusz Guzik 明确对比 NetBSD 的做法，指出“I see NetBSD uses local cmpxchg8b”，即 NetBSD 在屏蔽中断级别和掩码上使用局部 cmpxchg8b，而 Linux 走中断路径，并判断 NetBSD 方案仍明显更慢。属跨内核实现比较，NetBSD 被作为设计参照。
 - 【Linux社区】新增 sockaddr_unspec 的讨论中，David Laight 指出“NetBSD certainly forbid declaring variables of type 'sockaddr storage', the kernel could only use pointers to it”，即 NetBSD 明确禁止声明 sockaddr storage 类型的变量，内核只能使用指向它的指针。该陈述以 NetBSD 的严格规则为论据支撑 Linux 侧的类型设计取舍，属 BSD 内核规则引用。
-- 【Linux社区】Michael Shigorin 就 MAINTAINERS 条目以合规要求为由移除一事回应 Linus Torvalds,质疑其单边态度,并援引 Documentation/process/code-of-conduct-interpretation.rst 要求回到单一标准。Linus 原文称 'the various compliance requirements are not just a US thing',该争论是 2024 年制裁合规引发内核维护者清退事件的组成部分。 `<!-- ROW_MINE: netdev.messages.9107797 -->`
 - 【Linux社区】Nikhil Jha 的 RPCSEC_GSS 序列号补丁引用 RFC2203 第 5.3.3.1 节，并指出 FreeBSD 已有实现：'This is what FreeBSD's implementation does (rpc_gss_validate in sys/rpc/rpcsec_gss/rpcsec_gss.c)'，即 Linux 内核 sunrpc 层的客户端修复以 FreeBSD 代码为参照实现。
-- 【Linux社区】针对补丁 MAINTAINERS 移除若干中国条目,NotYourFox 反问 Linus Torvalds 此举意图,并转述 Linus 原文 'Ok, lots of Russian trolls out and about.',即 Linus 将抗议者整体定性为俄语水军,该争论是 2024 年制裁合规清退事件的组成部分。 `<!-- ROW_MINE: netdev.messages.9108125 -->`
 - 【Linux社区】Chuck Lever 回复 Nikhil Jha 的 GSS 序列号补丁集并给出 Acked-by，补丁说明援引 RFC2203 并指出 FreeBSD 已有同样实现：'This is what FreeBSD's implementation does (rpc_gss_validate in sys/rpc/rpcsec_gss/rpcsec_gss.c)'，构成 Linux sunrpc 与 FreeBSD 在同一 RFC 下的实现比对。
 - 【Linux社区】Maciej W. Rozycki 在 declance 驱动中断处理讨论中谈及 DECstation 系列，称 Linux 侧因硬件样本缺失未移植部分 DMA 设备，原文为 'I think NetBSD guys have full support for that system.'，是 BSD 与 Linux 在同一硬件平台上的移植覆盖差异。
 - 【Linux社区】X-Powers AC200 与 AC300 以太网 PHY 补丁的覆盖信提出，也可改为在 U-Boot 中修补设备树，以惠及 BSD 等其他 DT 使用者，原文为 'just patching the DT in U-Boot would simplify things'，Andrew Lunn 回应称这也是他的想法，涉及设备树描述在 U-Boot 与 BSD 生态间的跨系统复用。
@@ -1949,7 +1921,6 @@ BSD 与 GPL 可组合性在 Broadcom 文本上被具体检验。 `<!-- ROW_MINE:
 - 【Linux社区】Sunday Adelodun 提议删除 unix_release_sock() 中关于 Linux 与 BSD 在 ECONNRESET 发送时点上差异的陈旧注释，原文为 'a behavioral difference between Linux and BSD regarding when ECONNRESET is sent'，其补丁称已在 macOS 上实测，Kuniyuki Iwashima 随即在 FreeBSD 14.3-RELEASE 上复测确认行为一致并给出 Reviewed-by。
 - 【Linux社区】Nikhil Jha 在 GSS 序列号补丁讨论中再次援引 FreeBSD 实现作为 RFC2203 建议做法的既有实现：'This is what FreeBSD's implementation does (rpc_gss_validate in sys/rpc/rpcsec_gss/rpcsec_gss.c)'，显示 Linux sunrpc 客户端修复以 FreeBSD 代码为对标对象。
 - 【Linux社区】John Ericson 在 netdev 发起 RFC，提议为 Linux 引入 connectat 与 bindat 系统调用，称传统 unix 套接字 bind 与 connect 的缺陷已久，原文为 'I am interested in seeing something like the BSD's connectat/bindat in Linux.'，是 BSD 新增接口向 Linux 移植的正式提案，且此前两次提出均未获回应。
-- 【Linux社区】Jiaxun Yang 在社区志愿者道别帖讨论中提出四点最低诉求,要求 Linus Torvalds 向所有被指为俄语水军者道歉并撤回人身攻击,原文为 'outright defamation and accusing anyone who dares to disagree of being a Russian troll',属制裁合规事件对社区治理的直接冲击。 `<!-- ROW_MINE: netdev.messages.9118035 -->`
 - 【Linux社区】Kyle Evans 在 wireguard-tools 增量 allowed ips 更新的讨论中说明 FreeBSD 侧已有合并，原文为 'It will be available in FreeBSD 15.0 and probably 14.4'，并列明 FreeBSD 侧提交哈希，显示 WireGuard 用户态工具在 Linux 与 FreeBSD 双栈同步推进。
 - 【Linux社区】Kamran Khan 主张保留 AF_ALG 以提供密钥内存隔离，其论据包括 FreeBSD 与 NetBSD 原生提供该机制(原文 'FreeBSD and NetBSD natively provide /dev/crypto')，并称移除 AF_ALG 将抹去 Linux 侧内核委派加密的唯一等价选项('removing AF_ALG would kill the only equivalent option on the Linux side for kernel-delegated cryptography')。Eric Biggers 反驳其威胁模型：真正的威胁是任意读取而非任何内存安全漏洞，标准方案是使用 ssh-agent 一类隔离的用户态进程，'not exposed in user memory' 并非问题的正确表述；且 AF_ALG 持续的安全漏洞流使其任何假设性收益都必须极高才抵得过。
 - 【Linux社区】Krzysztof Kozlowski 在 X-Powers AC200 MFD 设备树绑定讨论中复核头文件许可标注为 'SPDX-License-Identifier: (GPL-2.0-only OR BSD-2-Clause)'，争议点是中断号等硬件常量是否属于绑定内容，是 BSD-2-Clause 与 GPL 双许可在 DT 绑定层的实际落地。
@@ -1959,8 +1930,6 @@ BSD 与 GPL 可组合性在 Broadcom 文本上被具体检验。 `<!-- ROW_MINE:
 - 【Linux社区】内核通用打包库 pack_fields 与 unpack_fields 新增文件的版权头修正。文件 SPDX 标为 BSD-3-Clause，版权行同时列出 Intel 与 Vladimir Oltean，Oltean 指出代码是他在 NXP 任职期间用公司时间编写，要求把自己的版权行改为 'Copyright 2024 NXP'，体现 BSD 许可下公司版权标注惯例。引语：Please use 'Copyright 2024 NXP'. I used company time for this.
 - 【Linux社区】Linux sunrpc 的 RPCSEC_GSS 序列号缓存补丁直接对标 FreeBSD 实现。作者 Nikhil Jha 援引 RFC2203 关于缓存请求序列号的建议，并指出该建议的做法正是 FreeBSD 既有实现，还给出 FreeBSD 源文件路径，属 Linux 侧直接援引 FreeBSD 实现为先例的少见案例。引语：This is what FreeBSD's implementation does (rpc_gss_validate in sys/rpc/rpcsec_gss/rpcsec_gss.c).
 - 【Linux社区】pidmap_lock 中断禁用开销的讨论中，Mateusz Guzik 与 David Laight 直接引用 NetBSD 的自旋锁实现作为对比基准，涉及 Unix 系 splhigh 与 splx 原语的谱系，并比较 NetBSD 使用本地原子操作的做法与其余实现取中断路径的差异。引语：I see NetBSD uses local cmpxchg8b on the interrupt level and interrupt mask, while the rest takes the irq trip.
-- 【Linux社区】DEPT 运行时依赖追踪器新增文件的版权年份归属之争。Greg KH 建议把 2024 年改成 2025 年, Geert Uytterhoeven 反驳说不应在没有实质改动时递增年份,应取作品首次发表年,是开源许可治理中版权年份惯例的一次正面讨论。引语: You are not supposed to bump the copyright year when republishing without any actual changes. `<!-- ROW_MINE: netdev.messages.9137201 -->`
-- 【Linux社区】USB MCTP 协议头文件新增时的版权年份标注问题。Jeremy Kerr 的 mctp-usb.h 起始开发于 2024 年却在 2025 年提交,Greg KH 明确给出版权规范答复,应写成年份区间而非只写最新年份。引语: As per copyright norms, list the real dates, so that would be Copyright 2024-2025. `<!-- ROW_MINE: netdev.messages.9140669 -->`
 - 【Linux社区】删除 AF_UNIX 释放函数中关于 Linux 与 BSD 行为差异的陈旧注释。作者实测 macOS 确认 ECONNRESET 只出现在 SOCK_DGRAM 而非 SOCK_STREAM，证明该历史注释已不描述真实行为且具误导性，补丁合入 netdev/net-next。引语：behavioral difference between Linux and BSD regarding when ECONNRESET is sent
 - 【Linux社区】pack_fields 库 BSD-3-Clause 版权头归属修正的闭环。Vladimir Oltean 指出文件 SPDX 为 BSD-3-Clause 但版权人被写成 Intel Corporation，而代码是他任职 NXP 期间编写，作者 Jacob Keller 回复 Will fix，构成同一版权争议从提出到确认处理的完整链路。引语：I used company time for this.
 - 【Linux社区】netdev 线程把 Linux sunrpc 的 RPCSEC_GSS 序列号缺陷修复与 FreeBSD 内核实现对齐。Nikhil Jha 在补丁说明中写道 “This is what FreeBSD's implementation does (rpc_gss_validate in sys/rpc/rpcsec_gss/rpcsec_gss.c)”，直接点名 FreeBSD 源码路径作为 RFC2203 5.3.3.1 缓存策略的参照实现。
@@ -1972,10 +1941,8 @@ BSD 与 GPL 可组合性在 Broadcom 文本上被具体检验。 `<!-- ROW_MINE:
 - 【Linux社区】Marvell Armada 7K/8K pinctrl 设备树 schema 的许可证标注写作 “SPDX-License-Identifier: GPL-2.0-only OR BSD-2-Clause”，属文档类文件沿用双许可声明的情形。
 - 【Linux社区】Landlock 新增 UNIX 套接字按路径与范围管控能力，补丁说明把受限接口定位为 “the BSD socket API described in unix(7)”，并说明受限进程经 socket(2) 与 connect(2) 访问命名套接字的既有路径。
 - 【Linux社区】v6.14-rc2 拉取请求透露维护面结构调整，Paolo Abeni 说明 “We are working to increase review coverage over the net code-base tweaking the MAINTAINER entries”，并在变更清单中列出让 Kuniyuki Iwashima 成为维护者一项。
-- 【Linux社区】关于回退 MAINTAINERS 合规清理的争论里, Linus Torvalds 明确拒绝并称不会回退, 说明 “the various compliance requirements are not just a US thing”, 把维护者条目移除与制裁合规直接挂钩。 `<!-- ROW_MINE: netdev.messages.9244227 -->`
 - 【Linux社区】PPP 接收锁改造讨论中，Guillaume Nault 以 BSD 压缩实现作为共享状态无保护更新的例证，提到 “For example, see how bsd_decompress() (in bsd_comp.c)”，并据此判断 ppp_do_recv 难以同构并发。
 - 【Linux社区】tcp_purge_receive_queue sysctl 讨论中，Eric Dumazet 指出两类实现长期保持同一语义，称 “BSD and linux implementations have historically retained acknowledged, buffered receive data upon RST”，Leon Hwang 据此保留默认关闭。
-- 【Linux社区】Jakub Kicinski 对 aic8800 WiFi 驱动做许可证溯源质疑, 指出 “Where did the source code come from? The driver provided by Brostrend doesn't have any license information in it”, 并追问现有声明是否足够以及谁同意这些头文件。 `<!-- ROW_MINE: netdev.messages.9248225 -->`
 - 【Linux社区】allwinner 命名争论里，Andre Przywara 以设备树兼容字符串与 pinctrl 函数名跨系统共享为由反对重命名，说明其使用者 “not only the Linux kernel, but also U-Boot and other OSes like the BSDs”。
 - 【Linux社区】同一 RPCSEC_GSS 序列号修复系列的 v2 封面信，作者仍把 FreeBSD 实现作为设计参照，写明 “This is what FreeBSD's implementation does (rpc_gss_validate in sys/rpc/rpcsec_gss/rpcsec_gss.c)”，并补充客户端侧对称处理。
 - 【Linux社区】John Ericson 第三次提出为 Linux 引入 BSD 风格接口，开篇写道 “I am interested in seeing something like the BSD's connectat/bindat in Linux”，Cong Wang 则要求先说明 openat2 之外的具体用例。
@@ -2013,7 +1980,6 @@ BSD 与 GPL 可组合性在 Broadcom 文本上被具体检验。 `<!-- ROW_MINE:
 - 【Linux社区】RFC4214 ISATAP 专利争议中，Templin 附上 KAME 的 IPR Status 摘要链接说明其将 ISATAP 纳入产品的依据，并列出 FreeBSD 与 KAME 长期出货支持 ISATAP，以证明 SRI 专利申请已驳回、无有效权利要求阻碍公共领域发行。 `<!-- ROW_MINE: netdev.messages.8120872 -->`
 - 【Linux社区】DCCP qpolicy 用户态通知机制讨论中，Gerrit Renker 认为 SCTP 子系统的套接字事件订阅方案可借鉴，并引用 BSDCan 2008 会议论文与 LWN OLS 论文作为设计文献，Tomasz Grobelny 表示将研读这些文档与实现。 `<!-- ROW_MINE: netdev.messages.8120952 -->`
 - 【Linux社区】管理式关闭套接字补丁集中，Lorenzo Colitti 系统对比 FreeBSD 自 5.4 起自 OpenBSD 借来的同名能力，并说明 RST 语义与 ECONNABORTED 选择均与 BSD 保持一致。 `<!-- ROW_MINE: netdev.messages.8120977 -->`
-- 【Linux社区】L3 网络命名空间补丁集说明中，作者把 IP 隔离的用途明确列出为 Linux-Vserver、jailed application 与应用容器，与 FreeBSD jail 同名概念并列。 `<!-- ROW_MINE: netdev.messages.8121132 -->`
 - 【Linux社区】bert hubert 报告 Linux 2.5.65 与 FreeBSD 4.7-STABLE 的 IP6SEC 互通成功，注明对端为 FreeBSD 内核搭配 KAME 20010528 版本。 `<!-- ROW_MINE: netdev.messages.8121585 -->`
 - 【Linux社区】iptables 大规模地址匹配模块的讨论中，BSD 实现被引为功能对照：原帖称 “OpenBSD is better than Linux because OpenBSD has tree-based firewall tables”，Patocka 随后据此指出 Linux 也有等价树状表却无人知晓，并提出在内核内建树会比用 shell 脚本搭树更易实现，显示 BSD 防火墙功能形态被当作 Linux 模块设计的参照基准。
 - 【Linux社区】Open-FCoE 开源送审评审中，Chris Leech 说明 BSD 数据结构遗留正被替换：针对 Christoph Hellwig 建议删除 libsa 的意见，他答称 “along with it the last use of the BSD TAILQ macros”，并表示多数 TAILQ 已在仓库公开前转换为 list_head，仅 sa_event 机制保留，拟改用 notifier call chains 替代，是 BSD 容器宏从外部项目进入主线后被逐步清除的实录。
@@ -2105,7 +2071,6 @@ BSD 与 GPL 可组合性在 Broadcom 文本上被具体检验。 `<!-- ROW_MINE:
 - 【Linux社区】ti bluetooth 设备树绑定转换为 json-schema 时采用标准双许可头：“# SPDX-License-Identifier: (GPL-2.0-only OR BSD-2-Clause)”
 - 【Linux社区】Intel X533 万兆 SFP 网卡在 VyOS 与 Debian 下无法建立链路，同硬件在 FreeBSD 上工作正常：“it does in OPNsense which is based on FreeBSD 13.2.”
 - 【Linux社区】驱动作者说明部分代码源自 Marvell 官方示例代码，其许可证为 BSD 2 条款，并询问是否需改为双许可：“The sample code is licensed under BSD 2 Clause.”
-- 【Linux社区】SPDX 清理误删了 SRC 修订版 GPL 授权信息，被指出该文件实际适用 SRC 变体：“This file is not licensed under the \”unversioned GPL\“, but under the \”GNU General Public License as modified by SRC\“.” `<!-- ROW_MINE: netdev.messages.8999041 -->`
 - 【Linux社区】作者发现 netlink 代码生成器产物的 SPDX 标记与其规格不一致，生成的源文件被标注为 BSD 3 条款：“The SPDX tags in the generated source files is 'BSD 3-clause'.”
 - 【Linux社区】TCP_MAXSEG 在连接前返回默认 MSS 的行为被与 BSD 及 FreeBSD 实现比对：“I don't know whether the TCP_MAXSEG is from BSD or not”
 - 【Linux社区】Meta fbnic 固件刷写补丁第 4 版变更清单里有一条写明移除了某个提交函数中的 BSD 风格函数写法，属驱动代码携带 BSD 系编码惯例进入内核的证据，但正文不展开许可或谱系理由，仅这一处措辞承载 BSD 关联，需人工复核其谱系含义。引语：Removed BSD function notation from fbnic_fw_xmit_fw_start_upgrade()
@@ -2116,8 +2081,6 @@ BSD 与 GPL 可组合性在 Broadcom 文本上被具体检验。 `<!-- ROW_MINE:
 - 【Linux社区】云硅 yunsilicon 以太网驱动引入时沿用了 Mellanox 时代那套二选一许可模板，版权行同时列出上海云硅与 Mellanox，说明文本允许在 GNU GPL 第二版或 OpenIB.org BSD 许可之间择一，是 BSD 许可文本经由 InfiniBand 生态进入内核网络子系统的又一实例。引语：under the GNU General Public License (GPL) Version 2
 - 【Linux社区】Peter Cai 在同一条告别贴线程中把诉求写成可执行清单：要求 Linus Torvalds 向所有被其斥为 Russian troll 的人致歉，无条件撤回对发出 revert 补丁抗议的 Kexy Biscuit 的人身攻击，并承认 AOSC.io 的工作人员不是国家资助的付费代理人，还批评 Greg Kroah-Hartman 试图以私下沟通化解争端。引语：need to unconditionally retract his personal attack
 - 【Linux社区】ntb_netdev 驱动做 SPDX 化改造，覆盖信说明其目的是把双许可 GPL-2.0-only 与 BSD-3-Clause 写成机器可识别标识并删掉冗长样板许可证文本，Jakub Kicinski 的回复则把话题拉回 netdev 投稿流程文档，是 BSD-3-Clause 在 Linux 内核中做元数据收敛的一次正面记录。引语：reflect the dual GPL-2.0-only/BSD-3-Clause license
-- 【Linux社区】Geert Uytterhoeven 跟进 Hector Martin 的四字符码格式化补丁, 后者为 %p4cc 增加主机序、网络序、小端与大端四个变体以打印通用 32 位 FourCC, 评审链含 Rasmus Villemoes、Andy Shevchenko 与 Petr Mladek 的确认与签名. 作者是 macOS 移植核心贡献者, 属 BSD 谱系人物在 Linux 通用库代码上的现身. 引语: %p4cn Network byte order `<!-- ROW_MINE: netdev.messages.9201751 -->`
-- 【Linux社区】Thorsten Leemhuis 就 Linus Torvalds 越过 -net 直接 cherry-pick 蓝牙修复一事求确认: 问题是否就在于绕过 -net, 若维护者当时先拉一次再发第二个 PR 是否就完全无碍. 这是关于补丁树权威与绕过规则的治理边界问答, 由社区治理常客提出, 属内核治理运作的细部样本. 引语: that is the problem here `<!-- ROW_MINE: netdev.messages.9202208 -->`
 - 【Linux社区】新增 x-powers AC200 中断路径头文件的争论中，Krzysztof Kozlowski 认为硬件常量不属于设备树绑定，建议连同头文件一并删除，作者 James Hilliard 反驳称这些是抽象 ID 号且驱动内部会做转换，因此应当保留。该新文件的 SPDX 行标注为 (GPL-2.0-only OR BSD-2-Clause)，使 BSD-2-Clause 双许可进入内核 mfd 设备树绑定目录，但争论本身完全不涉许可议题。引语：SPDX-License-Identifier: (GPL-2.0-only OR BSD-2-Clause)
 - 【Linux社区】John Ousterhout 发起 Homa 传输协议上游化 v17，自称数据中心的 TCP 替代者，尾延迟较 TCP 降一到两个数量级，并明确声明不与 TCP 的 API 兼容，而是无连接且消息导向。作者是斯坦福大学 Platform Lab 创办人、早年执教伯克利的系统学者，属 BSD 谱系学术源头人物在 Linux 网络栈内的现身，是学术起源向生产内核回流的一条样本。引语：it is connectionless and message-oriented
 - 【Linux社区】SUNRPC TLS 控制记录缺陷修补覆盖信留下了一段明确的跨内核互操作事故记录：在 Scott Mayhew 报告 kTLS 把 alert 体写进 RPC 接收缓冲之后，双向 TLS 挂载 FreeBSD 服务端直接挂掉，提交 9559d2fffd4f 只为恢复其他 cmsg 类型，后续重构未跟上长度记账，FreeBSD 是缺陷的触发方。引语：Mounts against a FreeBSD server over mutual TLS broke
@@ -2128,12 +2091,10 @@ BSD 与 GPL 可组合性在 Broadcom 文本上被具体检验。 `<!-- ROW_MINE:
 - 【Linux社区】Günther Noack 的 Landlock 覆盖信点明其所延承的谱系：“当前受 landlock 限制的进程仍能经由 unix(7) 所述的 BSD 套接字 API 连接具名 UNIX 套接字”。引语：landlocked processes can connect to named UNIX sockets through the BSD socket API described in unix(7)
 - 【Linux社区】Daniel Golle 把 MaxLinear 固件返回的错误码追到上游：“基于 Zephyr 的 errno.h，而后者似乎是一份 BSD 头文件的副本”，故驱动或许需要自带并翻译该头文件。引语：based on Zephyr's errno.h which seems to be a copy of a BSD header
 - 【Linux社区】Patchwork 机器人确认 BSD 套接字维护者条目已落地：“[net,2/3] MAINTAINERS: add a general entry for BSD sockets”，由 Jakub Kicinski 应用到 netdev/net.git 主分支。引语：This series was applied to netdev/net.git (main) by Jakub Kicinski
-- 【Linux社区】Peter Cai rebuts the MAINTAINERS removal, arguing “No one is saying the LF or the Linux kernel should be outside of politics” while demanding transparency over the opaque “due to various compliance requirements”. `<!-- ROW_MINE: netdev.messages.9216827 -->`
 - 【Linux社区】Lee Trager 的 fbnic 补丁第 5 版变更日志记录了一个 BSD 惯例被放弃：“从 fbnic_fw_xmit_fw_start_upgrade() 移除 BSD function notation”，也就是“返回 int 配出参”的写法。引语：Removed BSD function notation from fbnic_fw_xmit_fw_start_upgrade()
 - 【Linux社区】Jason Donenfeld 评审自动生成的 WireGuard netlink 代码，该代码带双 SPDX 行“((GPL-2.0 WITH Linux-syscall-note) OR BSD-3-Clause)”，他反对把生成产物检入 git，主张构建期生成。引语：placed into a generated/ folder that doesn't get checked into git?
 - 【Linux社区】Kees Cook 的 vringh 修补让一段内核注释里的 BSD 源流重见天日：“BSD uses caddr_t”，注释挂在 iovec 的 iov_base 字段上，并说明 POSIX（1003.1g）已要求改用 void 指针。引语：BSD uses caddr_t
 - 【Linux社区】一位用户报告 iproute2 对 IPv4 简写地址的展开行为，并认为这像四十年前的 BSD4.2 怪癖延续至今。引语：it feels like a 40-year old BSD4.2 quirk that somehow lives on
-- 【Linux社区】On “linux: Goodbye from a Linux community volunteer”, contributors list demands including “unconditionally retract his personal attack on Kexy Biscuit” and a public apology letter. `<!-- ROW_MINE: netdev.messages.9226457 -->`
 - 【Linux社区】Chuck Lever 的 SUNRPC TLS 修补记录了真实的 BSD 互操作事故：“双向 TLS 挂载 FreeBSD 服务端直接失败，9559d2fffd4f 恢复了其余 cmsg 类型”。引语：Mounts against a FreeBSD server over mutual TLS broke, and 9559d2fffd4f restored the other cmsg types
 - 【Linux社区】Dexuan Cui 2016-07-15 的 Hyper-V VM Sockets（AF_HYPERV）覆盖信把新传输定位在 BSD 套接字语义之上：VMBus 上的字节流通道，传输层比 IP 简单，主机与来宾应用经传统的 BSD 风格套接字 API 直接互通，模块许可也由 Dual MIT/GPL 改为 Dual BSD/GPL。引语：by the traditional BSD-style socket APIs
 - 【Linux社区】2014-04-01 的 isdnloop NUL 结尾争论落在 BSD 兼容性上：Vegard Nossum 主张不要改动 Linux 的 strlcpy 语义，因为那会破坏开发者依赖的 BSD 行为——“BSD 手册页与 BSD 实现都要求源串以 0 结尾”；本邮件则是 Dan Carpenter 对此主张的反驳，认为补丁并无必要。引语：Both BSD man page and BSD implementation _require_ the source string to be 0-terminated

@@ -65,7 +65,6 @@
 
 **史料**：`347912`、`347923`、`347924`、`347935`、`347946`
 
-**史料锚**：`<!-- ROW_MINE: ksummit-discuss.messages.347912 -->` `<!-- ROW_MINE: ksummit-discuss.messages.347923 -->` `<!-- ROW_MINE: ksummit-discuss.messages.347924 -->` `<!-- ROW_MINE: ksummit-discuss.messages.347935 -->` `<!-- ROW_MINE: ksummit-discuss.messages.347946 -->`
 **史观**：自反性声明（总纲 7/23：明示本块为跨年混档，不与 2017 线程混叙）；偶然性优先（总纲 5：档案信因页面切片规则而混入本页）；拒绝进步叙事（总纲 1/3：不将 2014 议题写作其后讨论的“前身”）
 **辨析**：5 封均系 2014-05-02/12 档案信（Luck、Roedel、Sharp、Pinchart、Băluță），与 p74 主体 2017 线程无回复关系；本块只作归卷登记。
 **文献**：DSLXC-4134/4145/4146/4157/4168（`ksummit-discuss.messages.347912`、`.347923`、`.347924`、`.347935`、`.347946`，2014-05-02 至 2014-05-12），全文见 `raw_source.raw_json`
