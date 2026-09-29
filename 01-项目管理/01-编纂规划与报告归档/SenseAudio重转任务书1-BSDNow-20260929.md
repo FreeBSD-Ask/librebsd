@@ -12,7 +12,7 @@
 
 - 模型：`senseaudio-asr-stream-1.5-260910`（主理人指定），走 **WS 流式端点** `wss://api.senseaudio.cn/ws/v1/realtime/transcriptions`（HTTP 转写端点不收此模型，实测 500）。
 - 参数：16k mono s16le PCM（ffmpeg 9.0 解码），server_vad，`x_sense_asr`＝句级＋字级时间戳 on、diarization on（离线模式 degraded，speaker 留空）、**smart_edit off（verbatim 保真）**。
-- **术语提交（主理人令，参见在线文档）**：`session.update` 的 `transcription.keywords` 热词数组提交领域术语（FreeBSD/OpenBSD/ZFS/jails/Poudriere/McKusick 等 ~44 词）＋ `transcription.prompt` 识别提示词，提升专名转写准确度。wave1 之前的已转期不带热词，复核不过才用 `--force` 重转。
+- **术语提交（已撤销，2026-09-29 复核实证）**：曾按主理人令在 `session.update` 提交 `keywords` 热词数组＋`prompt` 识别提示词；复核发现（期 25-31 六期 fail）**流式模型会把提示词/参数块回声泄漏进 full_text（中文"本次听写任务的参数配置…hot_words…"）并诱发臆造通用播客模板段（"Welcome to BSDNow, the podcast about…" 反复插入、截断真实收播语）**，故撤销术语提交、回归纯净配置（pilot 34/505/132/178 无污染）。fail 期已用 `--force` 重转。
 - 实测 7.5–8 倍实时；单会话 30 分钟 PCM 分块，utterance 时间戳加块偏移。
 - fallback：`senseaudio-asr-pro-1.5-260319`（HTTP file_id 直传）。
 
