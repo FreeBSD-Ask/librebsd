@@ -75,6 +75,7 @@ MANIFEST = [
     "08-核查报告与多轮复核/重构2026/93-*.md",
     "08-核查报告与多轮复核/重构2026/94-*.md",
     "08-核查报告与多轮复核/重构2026/95-*.md",
+    "08-核查报告与多轮复核/重构2026/96-*.md",
     "08-核查报告与多轮复核/重构2026/tests/*.md",
     "08-核查报告与多轮复核/12-重构大纲书目述评/index.md",
     "01-项目管理/01-编纂规划与报告归档/长线任务总登记表.md",
@@ -87,7 +88,7 @@ MANIFEST = [
 # 强制把新号文补进 MANIFEST 并同步 CLAUDE.md／流程规则.md 的闸面清单。
 HAOWEN_DIR = "08-核查报告与多轮复核/重构2026"
 HAOWEN_NUM_RE = re.compile(r"^(\d+)-.*\.md$")
-HAOWEN_MAX_COVERED = 95
+HAOWEN_MAX_COVERED = 96
 
 # 全审计面（--all 用，含豁免件）：口径同 2026-09-20 lint 债务审计
 AUDIT_SCOPE = [
@@ -159,6 +160,7 @@ SELFTEST_FIXTURE = [
     "08-核查报告与多轮复核/重构2026/93-x.md",
     "08-核查报告与多轮复核/重构2026/94-x.md",
     "08-核查报告与多轮复核/重构2026/95-x.md",
+    "08-核查报告与多轮复核/重构2026/96-x.md",
     "08-核查报告与多轮复核/重构2026/tests/README.md",
     "08-核查报告与多轮复核/12-重构大纲书目述评/index.md",
     "01-项目管理/01-编纂规划与报告归档/长线任务总登记表.md",
@@ -219,7 +221,7 @@ def selftest():
     cases = [("T0 夹具覆盖闸面全部模式", 0 if t0 else 1, 0)]
     cases.append(("T1 正常（全模式命中、lint 干净）", run([]), 0))
 
-    newdoc = tmp / HAOWEN_DIR / "96-new.md"
+    newdoc = tmp / HAOWEN_DIR / "97-new.md"
     newdoc.write_text("# t\n", encoding="utf-8")
     cases.append(("T2 号文防衰减护栏（编号 > 上限）", run([]), 1))
     newdoc.unlink()
@@ -299,7 +301,7 @@ def main():
     if over:
         print(f"[exit 1] 新号文未入闸面（编号 > {HAOWEN_MAX_COVERED}）：{over}", file=sys.stderr)
         print("         请把上述文件纳入 MANIFEST，并同步 CLAUDE.md／流程规则.md 的闸面清单"
-              f"（当前带：7[0-9]、8[0-9]、90–95，上限 {HAOWEN_MAX_COVERED}）。", file=sys.stderr)
+              f"（当前带：7[0-9]、8[0-9]、90–96，上限 {HAOWEN_MAX_COVERED}）。", file=sys.stderr)
         return 1
     band = [p.name for p in (ROOT / HAOWEN_DIR).glob("*.md")
             if (mm := HAOWEN_NUM_RE.match(p.name)) and int(mm.group(1)) <= HAOWEN_MAX_COVERED]
