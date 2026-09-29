@@ -133,10 +133,11 @@ def write_claims(per_host):
             fh.write("\n".join(rels) + ("\n" if rels else ""))
         h = hashlib.sha1("\n".join(rels).encode("utf-8")).hexdigest()[:12]
         meta[g] = {"hosts": len(rels), "hosts_hash": h, "file": f"beacon/claims_{g}.txt"}
+    # 空集也重写（清空）——否则上一次遗留的告警文件会永久阻塞各组「先归组再执行」前置
+    p = os.path.join(BEACON_DIR, "claims_UNCLAIMED.txt")
+    with open(p, "w", encoding="utf-8", newline="") as fh:
+        fh.write("\n".join(unclaimed) + ("\n" if unclaimed else ""))
     if unclaimed:
-        p = os.path.join(BEACON_DIR, "claims_UNCLAIMED.txt")
-        with open(p, "w", encoding="utf-8", newline="") as fh:
-            fh.write("\n".join(unclaimed) + "\n")
         print(f"! 有 {len(unclaimed)} 个未归组宿主 → beacon/claims_UNCLAIMED.txt（须人工归组）", file=sys.stderr)
     return meta, unclaimed
 
