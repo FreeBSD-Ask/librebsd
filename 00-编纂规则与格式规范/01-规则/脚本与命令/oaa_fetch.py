@@ -56,10 +56,9 @@ def extract_blocks(path):
     rel = os.path.relpath(path, ROOT).replace("\\", "/")
     out = []
     for i, ln in enumerate(lines):
-        m = ROW_MINE.search(ln)
-        if not m:
+        ms = list(ROW_MINE.finditer(ln))
+        if not ms:
             continue
-        db, tb, pk = m.group(1), m.group(2), m.group(3)
         if ln.lstrip().startswith("<!--"):
             # 独立行锚型（H 线 5 行块）：向下找抬头行与摘要行
             head_line, summ_line = "", ""
@@ -73,16 +72,22 @@ def extract_blocks(path):
                 j += 1
             if j < len(lines):
                 summ_line = lines[j]
-            out.append({"key": f"{db}|{pk}|{rel}", "line": i + 1, "db": db, "pk": pk,
-                        "block_type": "standalone", "anchor_line": ln,
-                        "head_line": head_line, "summ_line": summ_line,
-                        "insight_body": ""})
+            for m in ms:
+                db, tb, pk = m.group(1), m.group(2), m.group(3)
+                out.append({"key": f"{db}|{pk}|{rel}", "line": i + 1, "db": db, "pk": pk,
+                            "block_type": "standalone", "anchor_line": ln,
+                            "head_line": head_line, "summ_line": summ_line,
+                            "insight_body": ""})
         else:
-            # 内联锚型（T1/L1 紧凑列举体例）：叙述与锚点同行，行尾反引号包裹
-            narr = ln[:m.start()].rstrip().rstrip("`").rstrip()
-            out.append({"key": f"{db}|{pk}|{rel}", "line": i + 1, "db": db, "pk": pk,
-                        "block_type": "inline", "anchor_line": ln,
-                        "head_line": "", "summ_line": narr, "insight_body": ""})
+            # 内联锚型（T1/L1 紧凑列举体例）：叙述与锚点同行，行尾反引号包裹。
+            # 必须逐锚提取（finditer）：史料锚行一行可挂多锚（实测一行至 18 锚、
+            # 全库 492 行 2,166 锚），search 只取首个会让其余锚对审计不可见。
+            narr = ln[:ms[0].start()].rstrip().rstrip("`").rstrip()
+            for m in ms:
+                db, tb, pk = m.group(1), m.group(2), m.group(3)
+                out.append({"key": f"{db}|{pk}|{rel}", "line": i + 1, "db": db, "pk": pk,
+                            "block_type": "inline", "anchor_line": ln,
+                            "head_line": "", "summ_line": narr, "insight_body": ""})
     # MAIL_INSIGHT 块
     for i, ln in enumerate(lines):
         m = MAIL_INS.search(ln)
