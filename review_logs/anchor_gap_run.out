@@ -1,0 +1,10 @@
+[盘] 扫描 3312 份 md，锚点 315150 个
+[DB] CL-RM claim 308452 条
+[DB] 锚点键 308442 个（local_pk 不可解析 2）
+
+==== 已入库未写回大纲：10275 条 claim（锚点 10271 个）====
+Traceback (most recent call last):
+  File "D:\librebsd\script\_db_row_mining\_audit_anchor_gap.py", line 74, in <module>
+    for tag in sorted(by_tag):
+               ~~~~~~^^^^^^^^
+TypeError: '<' not supported between instances of 'NoneType' and 'str'
