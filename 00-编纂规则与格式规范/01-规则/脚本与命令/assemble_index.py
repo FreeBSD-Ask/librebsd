@@ -231,6 +231,7 @@ def derive_metrics(vols):
         "N_VOL": n_vol, "N_CH": n_ch, "N_SEC": n_sec,
         "N_CH_MAIN": n_ch - n_bib, "N_CH_BIBLIO": n_bib,
         "N_SRC": n_src,
+        "N_PENDING": 2,
         "TRIPLE": "%d 卷 %d 章 %d 节" % (n_vol, n_ch, n_sec),
     }
 
