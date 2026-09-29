@@ -225,7 +225,22 @@ def cmd_check(v, verbose: bool):
     else:
         print(f"JSON-LD 口径：一致（{jsonld[0]} 卷 {jsonld[1]} 章 {jsonld[2]} 节）")
         jsonld_bad = 0
-    bad = len(drift) + len(stale) + len(ref_stale) + len(pending_stale) + jsonld_bad
+    # D9：92 号文 frontmatter「现行口径（唯一权威）」行须与权威基准一致（2026-09-29 加，防施工后累积漂移）
+    try:
+        _f92 = (Path(__file__).resolve().parents[3] / "08-核查报告与多轮复核" / "重构2026" /
+                "92-目录内容调整建议书-综合释疑库与未实施建议.md")
+        _head = "\n".join(_f92.read_text(encoding="utf-8").split("\n")[:10])
+        _m92 = re.search(r"(\d+) 卷 (\d+) 章 (\d+) 节", _head)
+        _d92 = (int(_m92.group(1)), int(_m92.group(2)), int(_m92.group(3))) if _m92 else None
+        d92_bad = 0 if (_d92 == v) else 1
+        if d92_bad:
+            print(f"❌ 92号文口径漂移：frontmatter 现 {_d92} ≠ 权威基准 {fmt(v)}（施工后未回写）")
+        else:
+            print(f"92号文 frontmatter 口径：一致（{fmt(v)}）")
+    except Exception as _e:
+        d92_bad = 0
+        print(f"（92号文口径校验跳过：{_e}）")
+    bad = len(drift) + len(stale) + len(ref_stale) + len(pending_stale) + jsonld_bad + d92_bad
     print("✅ 零未处置漂移" if bad == 0 else f"⚠️ 未处置漂移 {bad} 处")
     return 1 if bad else 0
 
