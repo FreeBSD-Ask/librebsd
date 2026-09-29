@@ -227,11 +227,14 @@ def derive_metrics(vols):
     n_sec = sum(len(c["secs"]) for v in vols for c in v["chapters"])
     n_bib = sum(1 for v in vols for c in v["chapters"] if "卷末书目述评" in c["title"])
     n_src = sum(1 for v in vols for c in v["chapters"] for (num, title, src, pre) in c["secs"] if src)
+    n_pending = sum(1 for v in vols for c in v["chapters"]
+                    for (num, title, src, pre) in c["secs"]
+                    if src and ("待补" in src or "待重建" in src))
     return {
         "N_VOL": n_vol, "N_CH": n_ch, "N_SEC": n_sec,
         "N_CH_MAIN": n_ch - n_bib, "N_CH_BIBLIO": n_bib,
         "N_SRC": n_src,
-        "N_PENDING": 2,
+        "N_PENDING": n_pending,
         "TRIPLE": "%d 卷 %d 章 %d 节" % (n_vol, n_ch, n_sec),
     }
 
