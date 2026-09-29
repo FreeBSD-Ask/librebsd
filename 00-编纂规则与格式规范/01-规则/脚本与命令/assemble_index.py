@@ -210,9 +210,7 @@ def render_toc_static(vols):
         left.append('</ul>')
         left.append('</li>')
     left.append('</ul>')
-    return "
-".join(left), "
-".join(right)
+    return chr(10).join(left), chr(10).join(right)
 
 
 def derive_has_part(vols):
@@ -329,7 +327,7 @@ def main():
         # 本项**只告警不 FAIL**（不改变退出码）——正常增删章节约在千分之几量级，
         # 越过 5% 通常是内嵌资源被整块替换或装配源被重复注入。
         if _old_n and _new_n > _old_n * 1.20:
-            print("  ⚠ 单体膨胀告警：增幅 %.1f%%（%d → %d 字节，阈值 20%（2026-09-29 由 5% 上调：P3-2 无脚本静态目录为有意增体量）%）"
+            print("  ⚠ 单体膨胀告警：增幅 %.1f%%（%d → %d 字节，阈值 20 个百分点；2026-09-29 由 5 上调：P3-2 无脚本静态目录为有意增体量）"
                   % ((_new_n / _old_n - 1) * 100, _old_n, _new_n))
     vols = parse_outline(read(OUTLINE))
     met = derive_metrics(vols)

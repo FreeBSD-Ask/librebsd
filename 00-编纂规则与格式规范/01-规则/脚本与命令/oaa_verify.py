@@ -27,6 +27,24 @@ OUTLINE = os.path.join(ROOT, "05-卷册大纲")
 MAIN_DB = os.path.join(ROOT, "04-现代研究文献", "historical_claims.duckdb")
 WORK = os.path.join(ROOT, "script", "_db_row_mining", "audit_outline", "work")
 PROC = os.path.join(ROOT, "script", "_db_row_mining", "audit_outline", "processed.jsonl")
+AUD = os.path.join(ROOT, "script", "_db_row_mining", "audit_outline")
+
+
+def load_done():
+    """G1 判定集 = 合并集（基线 processed.jsonl ∪ 各组 processed_fN.jsonl）。
+    F1–F4 分片台账协议下各组只写自己的 processed_fN.jsonl，故必须并集。"""
+    done = set()
+    for fn in ["processed.jsonl"] + [f"processed_{g}.jsonl" for g in ("f1", "f2", "f3", "f4")]:
+        p = os.path.join(AUD, fn)
+        if not os.path.exists(p):
+            continue
+        for l in open(p, encoding="utf-8"):
+            if l.strip():
+                try:
+                    done.add(json.loads(l)["key"])
+                except Exception:
+                    pass
+    return done
 
 RM = re.compile(r"<!--\s*ROW_MINE:\s*([\w-]+)\.([\w.]+)\.(\d+)\s*-->")
 
@@ -64,12 +82,8 @@ def main():
     args = ap.parse_args()
 
     fails = []
-    # G1 processed 覆盖
-    done = set()
-    with open(PROC, encoding="utf-8") as fh:
-        for l in fh:
-            if l.strip():
-                done.add(json.loads(l)["key"])
+    # G1 processed 覆盖（合并集：基线 ∪ 四组分片台账）
+    done = load_done()
     # fetch 档案（等级真值＋块型）
     fetch = {}
     for f in glob.glob(os.path.join(WORK, "*.fetch.jsonl")):
@@ -121,6 +135,8 @@ def main():
                     fails.append(f"G3 禁字符: {rel}:{i+4}")
                 if "引用时按" not in summ:
                     fails.append(f"G3 纪律串缺失: {rel}:{i+4}")
+                elif summ.count("引用时按") != 1:
+                    fails.append(f"G3 纪律串重复 {summ.count('引用时按')} 次: {rel}:{i+4}")
             if fb and fb.get("level"):
                 hm = re.search(r"证据等级：(L\d)", lines[i + 1] if i + 1 < len(lines) else "")
                 if hm and hm.group(1) != fb["level"]:

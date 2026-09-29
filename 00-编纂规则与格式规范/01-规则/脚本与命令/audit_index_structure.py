@@ -210,7 +210,7 @@ def main():
         )
         if not chs:
             tri_bad.append((vid, "无章之卷"))
-        _seg_li = len(re.findall(r"<li>", seg))
+        _seg_li = len(re.findall(r"<li[^>]*>", seg))
         _ch_li = 0
         nums = [int(re.search(r"ch-(\d+)$", c[0]).group(1)) for c in chs]
         if nums != list(range(1, len(chs) + 1)):
@@ -228,7 +228,7 @@ def main():
             # L 不设附录（O1）：章题去「第 N 章」前缀后以「附录」起首即 FAIL。
             if re.match(r"^附录", re.sub(r"^第\s*\d+\s*章\s*", "", t)):
                 appx_bad.append((cid, t))
-            lis = re.findall(r"<li>(.*?)</li>", raw_ul, re.S)
+            lis = re.findall(r"<li[^>]*>(.*?)</li>", raw_ul, re.S)
             _ch_li += len(lis)
             if not lis:
                 tri_bad.append((cid, "无节之章"))

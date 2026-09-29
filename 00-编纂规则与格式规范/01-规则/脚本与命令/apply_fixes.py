@@ -4,7 +4,8 @@
 
 原则：
 - 只改 fix-format / fix-text 且给了「新摘要句」的条目；keep/remap/存疑/fix-db 不动文件
-- 纪律串（「引用时按 …」起）从原第 4 行原样保留；等级抬头（第 2 行）本批不动
+- 纪律串（「引用时按 …」起）从原第 4 行原样保留；**若新摘要句本身已含纪律串则整行替换**，
+  不再拼接（否则纪律串重复——2026-09-29 实测已致 22 行落盘缺陷）；写前断言新行纪律串恰 1 次
 - 定位双重校验：行号 + 锚点行内容 + 原摘要行内容三方匹配，任一不符即报错停机
 - 单行换单行，文件总行数守恒；幂等（已含新句则跳过）
 用法：python apply_fixes.py <host1相对路径> <host2相对路径> ...
@@ -100,7 +101,16 @@ def main(hosts):
             pos = lines[si].find(TAIL)
             if pos >= 0:
                 tail = lines[si][pos:]
-            lines[si] = ns + tail
+            if TAIL in ns:
+                # 判读已给完整第 4 行（正文＋纪律串）→ 整行替换；再拼 tail 会使纪律串重复
+                new_line = ns
+            else:
+                new_line = ns + tail
+            if new_line.count(TAIL) != 1:
+                print(f"  ! 纪律串出现 {new_line.count(TAIL)} 次（须恰 1 次）: {key}", file=sys.stderr)
+                n_err += 1
+                continue
+            lines[si] = new_line
             n_apply += 1
         if n_err:
             print(f"{rel}: 有 {n_err} 处错误，放弃写盘", file=sys.stderr)

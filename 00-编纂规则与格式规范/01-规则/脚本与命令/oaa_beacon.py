@@ -197,7 +197,7 @@ def refresh():
             prev = json.load(open(BEACON, encoding="utf-8"))
         except Exception:
             prev = {}
-    prev_pend = {g: (prev.get("progress", {}).get(g, {}) or {}).get("pending", 0) for g in detail}
+    prev_pend = {g: (prev.get("progress", {}).get(g, {}) or {}).get("pend", 0) for g in detail}
     for g in detail:
         detail[g]["delta_vs_last"] = detail[g]["pend"] - prev_pend.get(g, detail[g]["pend"])
 
