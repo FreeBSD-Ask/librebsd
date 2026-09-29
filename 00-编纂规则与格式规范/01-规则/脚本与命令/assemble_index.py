@@ -188,6 +188,14 @@ def render_outline(vols):
     return "\n".join(out)
 
 
+def derive_has_part(vols):
+    """P3-3：JSON-LD Book.hasPart —— 卷级 Chapter 节点（position/name）。"""
+    import json as _json
+    parts = [{"@type": "Chapter", "position": i, "name": v["title"]}
+             for i, v in enumerate(vols, 1)]
+    return _json.dumps(parts, ensure_ascii=False, separators=(",", ":"))
+
+
 def derive_metrics(vols):
     n_vol = len(vols)
     n_ch = sum(len(v["chapters"]) for v in vols)
@@ -212,6 +220,7 @@ def assemble():
     tpl = read(TPL)
     vols = parse_outline(read(OUTLINE))
     met = derive_metrics(vols)
+    met["HAS_PART"] = derive_has_part(vols)
     body = render_outline(vols)
 
     catalog = _embed.load_catalog()
