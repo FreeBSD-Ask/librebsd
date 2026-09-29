@@ -181,11 +181,38 @@ def render_outline(vols):
                     inner = '<span class="src">%s</span> %s' % (esc(src), esc(title))
                 else:
                     inner = '%s<span class="src">%s</span>' % (esc(title), esc(src))
-                out.append('<li><span class="sec-num">%s</span> %s</li>' % (num, inner))
+                sec_id = "vol-%d-ch-%d-sec-%s" % (v, m, num.replace(".", "-"))
+                out.append('<li id="%s"><span class="sec-num">%s</span> %s</li>' % (sec_id, num, inner))
             out.append("</ul>")
         out.append("</section>")
         out.append("")
     return "\n".join(out)
+
+
+def render_toc_static(vols):
+    """P3-2：无脚本静态目录（noscript 回退）——左栏卷+章、右栏全量节。
+    标记与 assets/doc.js 动态版同 class，便于共用样式；不含需 JS 的折叠控件。"""
+    left = ['<ul class="toc-left-list">']
+    right = []
+    for i, v in enumerate(vols, 1):
+        left.append('<li class="toc-vol"><a href="#vol-%d" data-target="vol-%d">%s</a>' % (i, i, v["title"]))
+        left.append('<ul class="toc-ch-list">')
+        for m, ch in enumerate(v["chapters"], 1):
+            left.append('<li><a href="#vol-%d-ch-%d" data-target="vol-%d-ch-%d">%s</a></li>'
+                        % (i, m, i, m, ch["title"]))
+            right.append('<div class="toc-sec-title">%s</div>' % ch["title"])
+            right.append('<ul class="toc-sec-list">')
+            for num, title, src, pre in ch["secs"]:
+                sid = "vol-%d-ch-%d-sec-%s" % (i, m, num.replace(".", "-"))
+                right.append('<li><a href="#%s" data-target="%s"><span class="sec-num">%s</span> %s</a></li>'
+                             % (sid, sid, num, title))
+            right.append('</ul>')
+        left.append('</ul>')
+        left.append('</li>')
+    left.append('</ul>')
+    return "
+".join(left), "
+".join(right)
 
 
 def derive_has_part(vols):
@@ -222,6 +249,7 @@ def assemble():
     met = derive_metrics(vols)
     met["HAS_PART"] = derive_has_part(vols)
     body = render_outline(vols)
+    _toc_l, _toc_r = render_toc_static(vols)
 
     catalog = _embed.load_catalog()
     content = {k: v for k, v in catalog.items() if k not in ("$schema", "version")}
@@ -239,6 +267,8 @@ def assemble():
         "CSS_FORMAT": read(DOC_CSS).strip("\n"),
         "CSS_MODERN": read(MODERN_CSS).strip("\n"),
         "JSONLD": schema.strip("\n"),
+        "TOC_STATIC_LEFT": _toc_l,
+        "TOC_STATIC_RIGHT": _toc_r,
         "OUTLINE": body,
         "BLOB": blob_body,
         "SRI": sri,
@@ -298,8 +328,8 @@ def main():
         # 单体性由第九件门禁硬校验（零外链／SRI／内嵌字体），但膨胀失控无护栏；
         # 本项**只告警不 FAIL**（不改变退出码）——正常增删章节约在千分之几量级，
         # 越过 5% 通常是内嵌资源被整块替换或装配源被重复注入。
-        if _old_n and _new_n > _old_n * 1.05:
-            print("  ⚠ 单体膨胀告警：增幅 %.1f%%（%d → %d 字节，阈值 5%%）"
+        if _old_n and _new_n > _old_n * 1.20:
+            print("  ⚠ 单体膨胀告警：增幅 %.1f%%（%d → %d 字节，阈值 20%（2026-09-29 由 5% 上调：P3-2 无脚本静态目录为有意增体量）%）"
                   % ((_new_n / _old_n - 1) * 100, _old_n, _new_n))
     vols = parse_outline(read(OUTLINE))
     met = derive_metrics(vols)
