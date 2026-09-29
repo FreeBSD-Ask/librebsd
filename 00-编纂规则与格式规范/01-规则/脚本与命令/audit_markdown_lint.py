@@ -72,19 +72,20 @@ MANIFEST = [
     "08-核查报告与多轮复核/重构2026/90-*.md",
     "08-核查报告与多轮复核/重构2026/91-*.md",
     "08-核查报告与多轮复核/重构2026/92-*.md",
+    "08-核查报告与多轮复核/重构2026/93-*.md",
     "08-核查报告与多轮复核/重构2026/tests/*.md",
     "08-核查报告与多轮复核/12-重构大纲书目述评/index.md",
     "01-项目管理/01-编纂规划与报告归档/长线任务总登记表.md",
 ]
 
-# 号文系列「防衰减」护栏（2026-09-20 补；2026-09-28 扩至 92 号）
-# 闸面以 `7[0-9]-*.md`＋`8[0-9]-*.md`＋`90-*.md`＋`91-*.md`＋`92-*.md` 覆盖现行号文带。**判据会随号文增长而静默失效**——
-# 一旦出现 93 号及以后的号文，该文件既不在闸面内、也无任何提示，护栏形同虚设。
+# 号文系列「防衰减」护栏（2026-09-20 补；2026-09-29 扩至 93 号）
+# 闸面以 `7[0-9]-*.md`＋`8[0-9]-*.md`＋`90-*.md`＋`91-*.md`＋`92-*.md`＋`93-*.md` 覆盖现行号文带。**判据会随号文增长而静默失效**——
+# 一旦出现 94 号及以后的号文，该文件既不在闸面内、也无任何提示，护栏形同虚设。
 # 故立此护栏：`重构2026/` 下任何「编号 > 带上限」的 .md 一律判 FAIL，
 # 强制把新号文补进 MANIFEST 并同步 CLAUDE.md／流程规则.md 的闸面清单。
 HAOWEN_DIR = "08-核查报告与多轮复核/重构2026"
 HAOWEN_NUM_RE = re.compile(r"^(\d+)-.*\.md$")
-HAOWEN_MAX_COVERED = 92
+HAOWEN_MAX_COVERED = 93
 
 # 全审计面（--all 用，含豁免件）：口径同 2026-09-20 lint 债务审计
 AUDIT_SCOPE = [
@@ -143,7 +144,7 @@ def run_lint(exe, files):
     return (int(m.group(1)) if m else None), text
 
 
-# 自检夹具：与 MANIFEST 的 10 个模式一一对应（T0 断言覆盖，防夹具与闸面脱钩）
+# 自检夹具：与 MANIFEST 的 11 个模式一一对应（T0 断言覆盖，防夹具与闸面脱钩）
 SELFTEST_FIXTURE = [
     "CLAUDE.md",
     "00-编纂规则与格式规范/01-规则/README.md",
@@ -153,6 +154,7 @@ SELFTEST_FIXTURE = [
     "08-核查报告与多轮复核/重构2026/90-x.md",
     "08-核查报告与多轮复核/重构2026/91-x.md",
     "08-核查报告与多轮复核/重构2026/92-x.md",
+    "08-核查报告与多轮复核/重构2026/93-x.md",
     "08-核查报告与多轮复核/重构2026/tests/README.md",
     "08-核查报告与多轮复核/12-重构大纲书目述评/index.md",
     "01-项目管理/01-编纂规划与报告归档/长线任务总登记表.md",
@@ -213,7 +215,7 @@ def selftest():
     cases = [("T0 夹具覆盖闸面全部模式", 0 if t0 else 1, 0)]
     cases.append(("T1 正常（全模式命中、lint 干净）", run([]), 0))
 
-    newdoc = tmp / HAOWEN_DIR / "93-new.md"
+    newdoc = tmp / HAOWEN_DIR / "94-new.md"
     newdoc.write_text("# t\n", encoding="utf-8")
     cases.append(("T2 号文防衰减护栏（编号 > 上限）", run([]), 1))
     newdoc.unlink()
@@ -293,7 +295,7 @@ def main():
     if over:
         print(f"[exit 1] 新号文未入闸面（编号 > {HAOWEN_MAX_COVERED}）：{over}", file=sys.stderr)
         print("         请把上述文件纳入 MANIFEST，并同步 CLAUDE.md／流程规则.md 的闸面清单"
-              f"（当前带：7[0-9]、8[0-9]、90–92，上限 {HAOWEN_MAX_COVERED}）。", file=sys.stderr)
+              f"（当前带：7[0-9]、8[0-9]、90–93，上限 {HAOWEN_MAX_COVERED}）。", file=sys.stderr)
         return 1
     band = [p.name for p in (ROOT / HAOWEN_DIR).glob("*.md")
             if (mm := HAOWEN_NUM_RE.match(p.name)) and int(mm.group(1)) <= HAOWEN_MAX_COVERED]
