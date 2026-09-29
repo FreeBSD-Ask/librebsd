@@ -202,9 +202,14 @@ def run_host(rel, out_path=None):
         return 1
     blocks = extract_blocks(path)
     print(f"{rel}: 提取 {len(blocks)} 块")
-    con = duckdb.connect(MAIN_DB, read_only=True)
-    meta = fetch_db_meta(con, blocks)
-    con.close()
+    try:
+        con = duckdb.connect(MAIN_DB, read_only=True)
+        meta = fetch_db_meta(con, blocks)
+        con.close()
+    except duckdb.Error as ex:
+        # 主库被并行会话锁定等场景：降级为不含 claim 元数据（src_body 仍独立反查）
+        print(f"  ! 主库不可用（{ex}），降级：claim 元数据留空，仅反查 src_body", file=sys.stderr)
+        meta = {}
     reg = load_registry()
     src = fetch_src_meta(reg, blocks)
     miss_claim = miss_src = 0
