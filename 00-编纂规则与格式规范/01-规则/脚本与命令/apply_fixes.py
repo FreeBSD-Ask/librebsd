@@ -142,9 +142,8 @@ def main(hosts):
                 print(f"  ! 摘要行（纪律串）未找到: {key} line {ln}", file=sys.stderr)
                 n_err += 1
                 continue
-            if ns in lines[si]:
-                n_skip += 1
-                continue
+            # 幂等判据：先按 tail 规则构造 new_line，再与现行整行比对相等才跳过
+            # （勿用「ns 是现行子串」判幂等——重复日期前缀族会让真改动被假跳，2026-09-29 F1/F3-02 实证 13+41 行）
             tail = ""
             pos = lines[si].find(TAIL)
             if pos >= 0:
@@ -158,6 +157,9 @@ def main(hosts):
                 new_line = ns
             else:
                 new_line = ns + tail
+            if new_line == lines[si]:
+                n_skip += 1
+                continue
             # 纪律串守恒：原行有哪种收尾，新行就须恰含该收尾 1 次；原行无收尾（英文结尾等）不设限
             for mk in (TAIL, ALT_TAIL):
                 if mk in tail and new_line.count(mk) != 1:
