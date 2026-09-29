@@ -15,11 +15,12 @@ ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(os.path.a
 PROC = os.path.join(ROOT, "script", "_db_row_mining", "audit_outline", "processed.jsonl")
 
 
-def main(paths):
-    os.makedirs(os.path.dirname(PROC), exist_ok=True)
+def main(paths, ledger=None):
+    proc = os.path.join(ROOT, "script", "_db_row_mining", "audit_outline", ledger or "processed.jsonl")
+    os.makedirs(os.path.dirname(proc), exist_ok=True)
     lines = []
-    if os.path.exists(PROC):
-        with open(PROC, encoding="utf-8") as fh:
+    if os.path.exists(proc):
+        with open(proc, encoding="utf-8") as fh:
             lines = [l for l in fh.read().splitlines() if l.strip()]
     by_key = {}
     for l in lines:
@@ -45,13 +46,19 @@ def main(paths):
                 r.setdefault("批次", os.path.basename(p).rsplit(".", 1)[0])
                 by_key[key] = json.dumps(r, ensure_ascii=False)
                 n_in += 1
-    with open(PROC, "w", encoding="utf-8") as fh:
+    with open(proc, "w", encoding="utf-8") as fh:
         fh.write("\n".join(by_key[k] for k in sorted(by_key)) + "\n")
-    print(f"登记 {n_in} 条 ｜ processed 总量 {len(by_key)} ｜ → {os.path.relpath(PROC, ROOT)}")
+    print(f"登记 {n_in} 条 ｜ processed 总量 {len(by_key)} ｜ → {os.path.relpath(proc, ROOT)}")
 
 
 if __name__ == "__main__":
     if len(sys.argv) < 2:
         print(__doc__)
         sys.exit(2)
-    main(sys.argv[1:])
+    args = sys.argv[1:]
+    ledger = None
+    if "--ledger" in args:
+        i = args.index("--ledger"); ledger = args[i+1]; del args[i:i+2]
+    if not args:
+        print(__doc__); sys.exit(2)
+    main(args, ledger)
