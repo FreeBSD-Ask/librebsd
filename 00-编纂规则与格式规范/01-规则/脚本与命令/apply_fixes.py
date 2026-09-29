@@ -33,7 +33,12 @@ def load_judgements():
     for f in rest + fix_first:
         for l in open(f, encoding="utf-8"):
             if l.strip():
-                r = json.loads(l)
+                try:
+                    r = json.loads(l)
+                except ValueError:
+                    # 并行组（F1-F4）同目录在途半成品判读文件：跳过坏行不崩
+                    print(f"  ! 判读坏行跳过: {os.path.basename(f)}", file=sys.stderr)
+                    continue
                 if "新摘要句" in r or r.get("判定") in ("fix-format", "fix-text"):
                     jud[r["key"]] = r
     return jud
@@ -44,7 +49,10 @@ def load_fetch():
     for f in glob.glob(os.path.join(WORK, "*.fetch.jsonl")):
         for l in open(f, encoding="utf-8"):
             if l.strip():
-                r = json.loads(l)
+                try:
+                    r = json.loads(l)
+                except ValueError:
+                    continue
                 fetch[r["key"]] = r
     return fetch
 
@@ -74,6 +82,10 @@ def main(hosts):
         orig_n = len(lines)
         n_apply = n_skip = n_err = 0
         for key, r in jud.items():
+            if r.get("判定") == "fix-db":
+                # 情形③ 等级挂账交专项 X1（任务书 §五）；head_line 未随改会造成块内
+                # 抬头↔纪律串不一致，故 fix-db 一律不入大纲（与文档串契约一致）
+                continue
             if not (r.get("新摘要句") or r.get("判定") in ("fix-format", "fix-text")):
                 continue
             db_pk = "|".join(key.split("|")[:2])

@@ -58,11 +58,11 @@ volume: 第10卷-openbsd的历史
 - 即使配置了autoinstall，系统仍要求用户选择进行自动安装，以避免误插网线导致空白机器被意外覆盖。（BSD Now EP32，[2545.76-2558.20]，L2）
 - 当期问答指出Cisco的IronPort安全设备实际上以FreeBSD为基础，主持人认为其版本已较旧，显示FreeBSD在商用安全设备中的隐性基底。（BSD Now EP32，[3897.90-3907.06]，L2）
 - 当期问答建议以zfs send与receive在本地管道中迁移FreeNAS的插件jail及其ZFS池，可逐位保留ZFS属性并可在转换中调整压缩等参数。（BSD Now EP32，[3987.06-4053.16]，L2）
-- 主持人转述 Justin Sherrill 的观点：PF 已被 FreeBSD、NetBSD、macOS 等吸收，但各实现基于不同时期的 OpenBSD 版本且无版本号，导致规则语法与功能分化。（BSD Now EP18，[346.52-362.32]，L2）
-- 节目讨论以 OpenSSH portable 或 OpenZFS 共同核心为参照，为 PF 建立可移植层（被称为 PPL 或 OpenPF 构想）；Henning Brauer 表示愿意协助，但该项目当时尚未落地。（BSD Now EP18，[454.58-557.28]，L2）
-- Baptiste Daroussin 自述因厌倦反复源码编译而设计 PackageNG，后在 BSDCan 演讲并取得 ports commit bit，成为 portmgr 成员。（BSD Now EP18，[993.58-1029.66]，L1）
-- PackageNG 方向为将 poudriere 由面向最终用户的安装工具转为基础设施构建工具，并引入 staging、autoplist、子包、flavors/providers 及基于 fingerprint 的仓库签名，以解决冲突、改名与多版本包问题。（BSD Now EP18，[1049.62-1253.12]，L1）
-- OpenBSD 长期缺乏官方跨版本升级工具，第三方 ksh 脚本 OpenBSD Binary Upgrade 可完成 5.3 到 5.4 的二进制升级与旧文件清理，但仅校验 SHA256 而不提供签名。（BSD Now EP18，[2198.60-2266.36]，L2）
+- 主持人转述 Justin Sherrill 的观点：PF 已被 FreeBSD、NetBSD、macOS 等吸收，但各实现基于不同时期的 OpenBSD 版本且无版本号，导致规则语法与功能分化。（BSD Now EP18，[370.8-455.4]，L2）[订正：原 [346.52-362.32]，2026-09-29 SenseAudio 重转核对]
+- 节目讨论以 OpenSSH portable 或 OpenZFS 共同核心为参照，为 PF 建立可移植层（被称为 PPL 或 OpenPF 构想）；Henning Brauer 表示愿意协助，但该项目当时尚未落地。（BSD Now EP18，[456.2-546.1]，L2）[订正：原 [454.58-557.28]，2026-09-29 SenseAudio 重转核对]
+- Baptiste Daroussin 自述因厌倦反复源码编译而设计 PackageNG，后在 BSDCan 演讲并取得 ports commit bit，成为 portmgr 成员。（BSD Now EP18，[1007.0-1029.7]，L1）[订正：原 [993.58-1029.66]，2026-09-29 SenseAudio 重转核对]
+- PackageNG 方向为将 poudriere 由面向最终用户的安装工具转为基础设施构建工具，并引入 staging、autoplist、子包、flavors/providers 及基于 fingerprint 的仓库签名，以解决冲突、改名与多版本包问题。（BSD Now EP18，[1083.9-1667.0]，L1）[订正：原 [1049.62-1253.12]，2026-09-29 SenseAudio 重转核对]
+- OpenBSD 长期缺乏官方跨版本升级工具，第三方 ksh 脚本 OpenBSD Binary Upgrade 可完成 5.3 到 5.4 的二进制升级与大部分旧文件清理，但既不清理全部旧文件、也不提供签名更新。（BSD Now EP18，[2195.5-2283.7]，L2）[订正：原 [2198.60-2266.36] 仅校验 SHA256 而不提供签名，2026-09-29 SenseAudio 重转核对]
 - Michael W. Lucas 自述 1995 年因所在国家主干网公司的 DNS 管理员离职而被指派接管，用 FreeBSD 2.0.x 替换老旧的 SunOS 与 Ultrix 服务器后稳定运行，由此进入 BSD 世界。（BSD Now EP10，[679.1-830.6]，L1）
 - 他介绍 sudo 是分割 root 权限的访问控制工具，写作 Sudo Mastery 源于用户普遍误用 sudo，且大量教程推荐了可被突破权限限制的不安全配置。（BSD Now EP10，[956.9-1167.1]，L1）
 - 他回顾 sudo 具备入侵检测能力，可按 SHA-256 等算法校验待执行文件的校验和，防止用户通过复制 shell 绕过限制，并主张采用白名单式授权而非黑名单式排除。（BSD Now EP10，[1491.9-1654.3]，L1）
@@ -85,7 +85,7 @@ volume: 第10卷-openbsd的历史
 - Sean Webb（Laddera）访谈（ASLR/PIE 实现者当事人自述）。（BSD Now EP52，[933.90-2162.30]，L1）
 - 当期教程演示了OpenBSD 5.5的autoinstall配置过程，包括DHCP、TFTP、pxeboot、bsd.rd、nginx与install.conf的完整步骤。（BSD Now EP32，[1978.08-2602.24]，L2）
 - 当期问答提及Cisco IronPort设备以FreeBSD为基础，以及FreeNAS ZFS池迁移采用zfs send与receive的方法。（BSD Now EP32，[3897.90-4053.16]，L2）
-- 本期史料包括 Justin Sherrill 博客观点、Henning Brauer 对 PF 可移植层的表态、Baptiste Daroussin 访谈（当事人自述）以及 OpenBSD Binary Upgrade 第三方脚本。（BSD Now EP18，[346.52-557.28]，L1）
+- 本期史料包括 Justin Sherrill 博客观点、Henning Brauer 对 PF 可移植层的表态、Baptiste Daroussin 访谈（当事人自述）以及 OpenBSD Binary Upgrade 第三方脚本。（BSD Now EP18，[328.6-2297.2]，L1）[订正：原 [346.52-557.28]，2026-09-29 SenseAudio 重转核对]
 - 当事人列出自著书籍：Absolute OpenBSD、Absolute FreeBSD、SSH、DNSSEC、Network Flow Analysis 与 Sudo Mastery；较大体量的书经 No Starch Press 出版，自出版书经 Tilted Windmill Press 发行。（BSD Now EP10，[1696.3-1835.4]，L1）
 - 当事人自述三本著作的出版链条：Absolute OpenBSD 第二版（No Starch Press）、SSH Mastery 与 DNSSEC Mastery（Tilted Windmill Press 自出版），及 Henning Brauer、Peter Hansteen 承担技术复核的过程。（BSDTalk EP228，[174.59-186.47]，L1）
 - 事件口述：BSDCan 2013 会场社交环节中 freebsd.org 区域被签名并挂接全球 DNSSEC 信任链的即时记录，当事人为在场者。（BSDTalk EP228，[802.13-814.13]，L1）
@@ -109,9 +109,9 @@ volume: 第10卷-openbsd的历史
 - 总纲10 动手者创造历史：总纲10 动手者创造历史：autoinstall把重复的交互安装劳动转化为可复用的答案文件，体现了动手者对运维效率的持续改造。（BSD Now EP32，[2285.80-2347.94]，L3）
 - 总纲3 不存在进步，只有权力再分配：总纲3 不存在进步，只有权力再分配：autoinstall并非单纯的技术先进，而是把安装决策权从现场交互重新分配给预先编写的配置与网络服务。（BSD Now EP32，[1983.08-1998.48]，L3）
 - 总纲8 本体论上各方平等：总纲8 本体论上各方平等：当期对Cisco IronPort FreeBSD基底的提及，把商业设备与开源系统置于同一技术谱系中考察，而非以品牌叙事先行。（BSD Now EP32，[3897.90-3907.06]，L3）
-- 总纲4 分离聚合是永恒规律：总纲4 分离聚合是永恒规律：PF 随各 BSD 分支而分离，又出现以共同核心重新聚合的讨论，呈现分离与聚合的循环。（BSD Now EP18，[359.44-413.44]，L2）
-- 总纲10 动手者创造历史：总纲10 动手者创造历史：Baptiste Daroussin 因个人反复编译的痛点动手重写包系统，改变 FreeBSD 软件分发方式。（BSD Now EP18，[993.58-1029.66]，L1）
-- 总纲18 时间是一种形式主义：总纲18 时间是一种形式主义：PF 缺乏版本号使各实现难以按时间锚定演进，说明版本命名是形式化的时间标记。（BSD Now EP18，[425.34-439.46]，L2）
+- 总纲4 分离聚合是永恒规律：总纲4 分离聚合是永恒规律：PF 随各 BSD 分支而分离，又出现以共同核心重新聚合的讨论，呈现分离与聚合的循环。（BSD Now EP18，[383.7-480.3]，L2）[订正：原 [359.44-413.44]，2026-09-29 SenseAudio 重转核对]
+- 总纲10 动手者创造历史：总纲10 动手者创造历史：Baptiste Daroussin 因个人反复编译的痛点动手重写包系统，改变 FreeBSD 软件分发方式。（BSD Now EP18，[1007.0-1029.7]，L1）[订正：原 [993.58-1029.66]，2026-09-29 SenseAudio 重转核对]
+- 总纲18 时间是一种形式主义：总纲18 时间是一种形式主义：PF 缺乏版本号使各实现难以按时间锚定演进，说明版本命名是形式化的时间标记。（BSD Now EP18，[426.0-437.3]，L2）[订正：原 [425.34-439.46]，2026-09-29 SenseAudio 重转核对]
 - 总纲9 经验优先：Lucas 认为技术图书的价值在于说明知识如何与读者的实际工作相关，而非仅做信息堆砌，体现以经验与实用为重的取向。（BSD Now EP10，[1848.3-1998.2]，L1）
 - 总纲10 动手者创造历史：他以自出版书籍收益赞助 BSDCan 等社区活动，把写作视为服务社区并推动社区建设的动手实践。（BSD Now EP10，[2143.1-2227.3]，L1）
 - 总纲22 知识注定过时：Lucas 自陈书中内容一年内部分注定过时，而 OpenBSD 社区绝不会为迁就一本书而冻结演进；技术写作追索的是一个持续流动的对象，成书即意味着开始失效，知识的历史形态本身就是速朽的。（BSDTalk EP228，[187.57-209.59]，L1）
@@ -126,7 +126,7 @@ volume: 第10卷-openbsd的历史
 - HAMMER 在转录中被转写为多处以 ZFS 类比，其最大容量等参数属主持人转述，未能直接核对 DragonFly 官方文档。　[存疑脚注] HAMMER 技术参数为二手转述，未经官方手册交叉核验（BSD Now EP53，[3556.02-3609.18]，L4）
 - Sean Webb 坦言上游化过程中存在私下邮件列表讨论与政治博弈，其本人一度无法参与辩护，具体争议内容未在本期披露。　[存疑脚注] 上游化受阻的具体技术或治理争议仅凭当事人单方叙述（BSD Now EP52，[1880.06-1929.90]，L4）
 - 关于IronPort设备的FreeBSD版本已较旧的说法，主持人明确表示不十分确定，属于口头估计而非可核验的版本信息。　[存疑脚注] Cisco IronPort设备所采用的FreeBSD版本属主持人口头估计，需以设备文档或官方信息核实。（BSD Now EP32，[3903.66-3907.06]，L4）
-- 主持人将 DragonFly 的 PF 对应 OpenBSD 4.4、FreeBSD 对应 4.5 等版本关系为口头转述，需与各项目代码核对；OpenPF 项目在 2014 年成立属对未来的期许而非既成事实。　[存疑脚注] 各 BSD 的 PF 版本对应与 OpenPF 立项状态需以源码与邮件列表原始记录复核。（BSD Now EP18，[386.32-439.46]，L4）
+- 主持人将 DragonFly 的 PF 对应 OpenBSD 4.4、FreeBSD 对应 4.5 等版本关系为口头转述，需与各项目代码核对；OpenPF 项目在 2014 年成立属对未来的期许而非既成事实。　[存疑脚注] 各 BSD 的 PF 版本对应与 OpenPF 立项状态需以源码与邮件列表原始记录复核。（BSD Now EP18，[383.7-558.9]，L4）[订正：原 [386.32-439.46]，2026-09-29 SenseAudio 重转核对]
 - 约九成八的 SSH 实现为 OpenSSH 且其余多为改名或混淆版本，系当事人无统计来源的口头估计，仅可作为生态集中度的印象性证据。[存疑脚注] 九成八占比为访谈口述估计，未经审计数据交叉验证。　[存疑脚注] OpenSSH 市场占比为当事人口头估计，无第三方统计佐证，引用时须标注为印象性判断（BSDTalk EP228，[432.11-448.88]，L4）
 - GoDaddy 已支持 DS 记录与 IPv6 但 Dxtr 等注册商十年未跟进互联网标准，注册商技术能力与 DNSSEC 普及之间的瓶颈关系为当事人单方观察，缺 注册商市场份额数据支撑。[存疑脚注] 单一来源推断。　[存疑脚注] 注册商支持度的判断仅来自当事人个人转商经历，未与行业统计交叉验证（BSDTalk EP228，[1066.29-1116.19]，L4）
 

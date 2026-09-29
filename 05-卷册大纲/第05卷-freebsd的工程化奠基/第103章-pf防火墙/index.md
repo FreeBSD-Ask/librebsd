@@ -73,11 +73,11 @@ volume: 第05卷-freebsd的工程化奠基
 - HybridCluster 以 jail 或容器为应用单元，基于 ZFS 快照与 send/receive 实现异步复制、故障转移与亚秒级活迁移，作为 SAN 与虚拟机方案的替代。（BSD Now EP24，[1282.16-1548.36]，L1）
 - HybridCluster 部署的操作系统为略经修改的 FreeBSD 9.2 stable，工程师 Andriy Gapon 为 FreeBSD 开发者并将修复回馈社区；产品以每服务器每月 160 美元许可销售。（BSD Now EP24，[1557.08-1612.28]，L1）
 - 新闻讨论 FreeBSD 10 作为防火墙：PF 经 SMP 优化后性能更强但规则语法较旧，简单规则场景下 IPFW 因解析路径更短而更快。（BSD Now EP24，[480.68-577.34]，L2）
-- 主持人转述 Justin Sherrill 的观点：PF 已被 FreeBSD、NetBSD、macOS 等吸收，但各实现基于不同时期的 OpenBSD 版本且无版本号，导致规则语法与功能分化。（BSD Now EP18，[346.52-362.32]，L2）
-- 节目讨论以 OpenSSH portable 或 OpenZFS 共同核心为参照，为 PF 建立可移植层（被称为 PPL 或 OpenPF 构想）；Henning Brauer 表示愿意协助，但该项目当时尚未落地。（BSD Now EP18，[454.58-557.28]，L2）
-- Baptiste Daroussin 自述因厌倦反复源码编译而设计 PackageNG，后在 BSDCan 演讲并取得 ports commit bit，成为 portmgr 成员。（BSD Now EP18，[993.58-1029.66]，L1）
-- PackageNG 方向为将 poudriere 由面向最终用户的安装工具转为基础设施构建工具，并引入 staging、autoplist、子包、flavors/providers 及基于 fingerprint 的仓库签名，以解决冲突、改名与多版本包问题。（BSD Now EP18，[1049.62-1253.12]，L1）
-- OpenBSD 长期缺乏官方跨版本升级工具，第三方 ksh 脚本 OpenBSD Binary Upgrade 可完成 5.3 到 5.4 的二进制升级与旧文件清理，但仅校验 SHA256 而不提供签名。（BSD Now EP18，[2198.60-2266.36]，L2）
+- 主持人转述 Justin Sherrill 的观点：PF 已被 FreeBSD、NetBSD、macOS 等吸收，但各实现基于不同时期的 OpenBSD 版本且无版本号，导致规则语法与功能分化。（BSD Now EP18，[370.8-455.4]，L2）[订正：原 [346.52-362.32]，2026-09-29 SenseAudio 重转核对]
+- 节目讨论以 OpenSSH portable 或 OpenZFS 共同核心为参照，为 PF 建立可移植层（被称为 PPL 或 OpenPF 构想）；Henning Brauer 表示愿意协助，但该项目当时尚未落地。（BSD Now EP18，[456.2-546.1]，L2）[订正：原 [454.58-557.28]，2026-09-29 SenseAudio 重转核对]
+- Baptiste Daroussin 自述因厌倦反复源码编译而设计 PackageNG，后在 BSDCan 演讲并取得 ports commit bit，成为 portmgr 成员。（BSD Now EP18，[1007.0-1029.7]，L1）[订正：原 [993.58-1029.66]，2026-09-29 SenseAudio 重转核对]
+- PackageNG 方向为将 poudriere 由面向最终用户的安装工具转为基础设施构建工具，并引入 staging、autoplist、子包、flavors/providers 及基于 fingerprint 的仓库签名，以解决冲突、改名与多版本包问题。（BSD Now EP18，[1083.9-1667.0]，L1）[订正：原 [1049.62-1253.12]，2026-09-29 SenseAudio 重转核对]
+- OpenBSD 长期缺乏官方跨版本升级工具，第三方 ksh 脚本 OpenBSD Binary Upgrade 可完成 5.3 到 5.4 的二进制升级与大部分旧文件清理，但既不清理全部旧文件、也不提供签名更新。（BSD Now EP18，[2195.5-2283.7]，L2）[订正：原 [2198.60-2266.36] 仅校验 SHA256 而不提供签名，2026-09-29 SenseAudio 重转核对]
 - Justin Sherrill 自述约 2000 年首次接触 BSD，后因 Matt Dillon 从 FreeBSD 分支 DragonFly 而加入，长期负责 DragonFly Digest、发布管理与 Summer of Code 组织工作。（BSD Now EP11，[681.7-851.1]，L1）
 - 他说明 DragonFly 分叉源于 Matt Dillon 与 FreeBSD 在对称多处理路线上的分歧，Dillon 倾向轻量、简单的并发方式，最终使 DragonFly 网络栈几乎去除 BSD 世界常见的大型锁。（BSD Now EP11，[903.6-1005.7]，L1）
 - DragonFly BSD 3.6 将 dports（基于 Poudriere 构建的 DragonFly 版 ports）设为默认，并加入 SMP 扩展性改进与 Intel、AMD 图形支持的移植。（BSD Now EP11，[4692.8-496.0]，L3）
@@ -107,7 +107,7 @@ volume: 第05卷-freebsd的工程化奠基
 - 本期可提炼的一手史料包括：斯洛文尼亚 OpenBSD hackathon（2014 年 7 月 8 日至 14 日）的 CVS 提交树（一周逾千次提交）与参与者分工记录、FreeBSD 邮件列表 PF 讨论串原文、BSD Router Project 公布的转发基准原始数据与运行脚本、LibreSSL tech 邮件列表的补丁流，以及安全官 Dag-Erling Smørgrav 对个人入坑与 commit bit 授予经历的亲述。（BSD Now EP47，[68.2-96.2]，L1）
 - 本期经主持人提及可资查证的一手史料：FreeBSD 9.3-RELEASE 公告与 release notes（iSCSI 可加载、ARC 元数据限额运行时可调、on-if-console 便于 bhyve 直用官方镜像）、pkgng 1.3 RC2 邮件列表通告、LibreSSL 便携版 2.0.x 于 OpenBSD FTP 发布并已入 ports、2014 年 FreeBSD 核心团队九人选举名单（Gavin Atkinson、David Chisnall、Baptiste Daroussin、Ed Maste、George Neville-Neil、Hiroki Sato、Gleb Smirnoff、Peter Wemm、Robert Watson）、EuroBSDCon 2014 索菲亚注册页与开发者峰会邀请制说明。（BSD Now EP46，[1052.16-1090.52]，L2）
 - 本期史料包括 NYCBSDCon 2014 议程与现场反馈、Luke Marsden 访谈（当事人自述）、HybridCluster 产品说明及 FreeBSD 10 PF/IPFW 讨论。（BSD Now EP24，[1059.58-1612.28]，L1）
-- 本期史料包括 Justin Sherrill 博客观点、Henning Brauer 对 PF 可移植层的表态、Baptiste Daroussin 访谈（当事人自述）以及 OpenBSD Binary Upgrade 第三方脚本。（BSD Now EP18，[346.52-557.28]，L1）
+- 本期史料包括 Justin Sherrill 博客观点、Henning Brauer 对 PF 可移植层的表态、Baptiste Daroussin 访谈（当事人自述）以及 OpenBSD Binary Upgrade 第三方脚本。（BSD Now EP18，[328.6-2297.2]，L1）[订正：原 [346.52-557.28]，2026-09-29 SenseAudio 重转核对]
 - 当事人提及 DragonFly 分叉公告约在访谈时点的十年前发布，并称其并发模型以 token 传递为主，进程在获得内存或系统资源时持有 token、阻塞时即释放。（BSD Now EP11，[985.4-1010.8]，L1）
 - 一手史料包括：柏林 hackathon 上的校验和收尾提交；一处仅触及一两行的校验和相关提交，Brauer 与 Alexander Bluhm 曾花一天半才完全理解其含义；OpenBSD 5.5 排队子系统提交；Brauer 在自家公司的稳定树上先行对数百台 Intel 千兆机器启用校验和卸载、以大规模实际部署替代发布前测试的经验。（BSDTalk EP234，[1080.72-1241.82]，L1）
 - relayd 的名称史由当事人追溯：Reyk 的最初原型即名为 RelayD，Pierre-Yves Ritschard 另提交了名为 SLBD（服务器负载均衡守护进程）的不同实现，入树时一度定名 hostated（本意 host state d），因拼写歧义与功能扩张——七层处理、取出内核的流量处理、SSL 卸载——不再相称，最终改回语义足够通用的 relayd。（BSDTalk EP234，[1673.28-1769.94]，L1）
@@ -133,9 +133,9 @@ volume: 第05卷-freebsd的工程化奠基
 - 总纲10 动手者创造历史：总纲10 动手者创造历史：Luke Marsden 自建主机公司并发展为 HybridCluster，是动手者以创业实践推动系统应用的代表。（BSD Now EP24，[1074.80-1171.02]，L1）
 - 总纲11 商品是形式主义：总纲11 商品是形式主义：HybridCluster 以许可模式售卖基于 jail 与 ZFS 的虚拟 SAN 与容器平台，体现软件商品化的形式。（BSD Now EP24，[1587.16-1612.28]，L1）
 - 总纲4 分离聚合是永恒规律：总纲4 分离聚合是永恒规律：通过 ZFS 复制与 jail 迁移，实现计算与存储在集群中的分离与再聚合。（BSD Now EP24，[1282.16-1548.36]，L1）
-- 总纲4 分离聚合是永恒规律：总纲4 分离聚合是永恒规律：PF 随各 BSD 分支而分离，又出现以共同核心重新聚合的讨论，呈现分离与聚合的循环。（BSD Now EP18，[359.44-413.44]，L2）
-- 总纲10 动手者创造历史：总纲10 动手者创造历史：Baptiste Daroussin 因个人反复编译的痛点动手重写包系统，改变 FreeBSD 软件分发方式。（BSD Now EP18，[993.58-1029.66]，L1）
-- 总纲18 时间是一种形式主义：总纲18 时间是一种形式主义：PF 缺乏版本号使各实现难以按时间锚定演进，说明版本命名是形式化的时间标记。（BSD Now EP18，[425.34-439.46]，L2）
+- 总纲4 分离聚合是永恒规律：总纲4 分离聚合是永恒规律：PF 随各 BSD 分支而分离，又出现以共同核心重新聚合的讨论，呈现分离与聚合的循环。（BSD Now EP18，[383.7-480.3]，L2）[订正：原 [359.44-413.44]，2026-09-29 SenseAudio 重转核对]
+- 总纲10 动手者创造历史：总纲10 动手者创造历史：Baptiste Daroussin 因个人反复编译的痛点动手重写包系统，改变 FreeBSD 软件分发方式。（BSD Now EP18，[1007.0-1029.7]，L1）[订正：原 [993.58-1029.66]，2026-09-29 SenseAudio 重转核对]
+- 总纲18 时间是一种形式主义：总纲18 时间是一种形式主义：PF 缺乏版本号使各实现难以按时间锚定演进，说明版本命名是形式化的时间标记。（BSD Now EP18，[426.0-437.3]，L2）[订正：原 [425.34-439.46]，2026-09-29 SenseAudio 重转核对]
 - 总纲4 分离聚合是永恒规律：DragonFly 的分叉呈现为多处理路线分歧推动的一次分离，而非单一技术演进的必然结果。（BSD Now EP11，[903.6-965.6]，L1）
 - 总纲10 动手者创造历史：Justin Sherrill 长期承担文档、发布与组织工作而非核心代码，说明项目维护依赖多元角色的动手者共同支撑。（BSD Now EP11，[774.9-861.7]，L1）
 - 总纲10 动手者创造历史：Brauer 反复强调 FreeBSD 升级 PF 的障碍不在技术：语法变更对九成以上配置不过是两分钟的活，真正的问题是“得有人去做”，而项目内部虽有升级意向却无人执行；他公开表态愿为具体动手者义务答疑。技术变迁的推进被归于具体个体的行动意愿，而非项目层面的抽象决议。（BSDTalk EP234，[1324.98-1350.02]，L1）
@@ -154,7 +154,7 @@ volume: 第05卷-freebsd的工程化奠基
 - 关于 Netflix 存储架构的孤证说法须存疑：主持人称 Netflix 以 discrete wire 将 SATA 磁盘一对一接 LSI HBA 而回避 SAS 扩展器，并自认“我不是百分百确定”（4922.54）；此说既非当事人自述亦无文档佐证，且转写将 HBA 误作 HPA，引用前应以 Netflix 工程实践一手材料核证。　[存疑脚注] 说话人自陈不确定且非当事人，属单一来源推断，Netflix 磁盘直连实践待核（BSD Now EP46，[4918.94-4944.68]，L4）
 - PF 双雄之争在节目中仅为转述层材料：OpenBSD 邮件列表风暴中社区主张与其仅 SMP 化 PF 不如做通用 SMP 改造，DragonFly 已多线程化 PF，FreeBSD 侧则有 PF 前途之问与 IPFW 复兴的杂音；“快四倍”“随核数线性”等数字均出自主持人复述，且网卡多队列等底层论断含糊，映射入史前必须回查 2014 年邮件列表原帖。　[存疑脚注] 争论细节与性能数字仅经主持人转述，须以邮件列表一手原文复核（BSD Now EP46，[668.06-893.54]，L2）
 - HybridCluster 活迁移亚秒级为其商业宣传口径，需独立验证；NYCBSDCon 议题与演讲细节为主持人转述，需与会议议程核对。　[存疑脚注] 活迁移性能与会议细节以官方发布为准，需交叉验证。（BSD Now EP24，[1494.88-1500.64]，L4）
-- 主持人将 DragonFly 的 PF 对应 OpenBSD 4.4、FreeBSD 对应 4.5 等版本关系为口头转述，需与各项目代码核对；OpenPF 项目在 2014 年成立属对未来的期许而非既成事实。　[存疑脚注] 各 BSD 的 PF 版本对应与 OpenPF 立项状态需以源码与邮件列表原始记录复核。（BSD Now EP18，[386.32-439.46]，L4）
+- 主持人将 DragonFly 的 PF 对应 OpenBSD 4.4、FreeBSD 对应 4.5 等版本关系为口头转述，需与各项目代码核对；OpenPF 项目在 2014 年成立属对未来的期许而非既成事实。　[存疑脚注] 各 BSD 的 PF 版本对应与 OpenPF 立项状态需以源码与邮件列表原始记录复核。（BSD Now EP18，[383.7-558.9]，L4）[订正：原 [386.32-439.46]，2026-09-29 SenseAudio 重转核对]
 - Brauer 对其他 BSD 的 PF 状况评价带鲜明立场：称 NetBSD 在“自己的 PF 克隆里重复我们所有的错误”、FreeBSD 停留在 2008/2009 年版本且无人执行升级。此为单一当事人对兄弟项目的负面判断，NetBSD 侧的工程动机与 FreeBSD 邮件列表中的实际计划细节，须以各项目邮件列表与提交记录交叉验证方可采信。　[存疑脚注] 对 NetBSD 与 FreeBSD 的评价为单一当事人立场性陈述，未提供可复核依据（BSDTalk EP234，[1277.48-1324.98]，L4）
 
 **文献**：

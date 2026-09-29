@@ -96,11 +96,11 @@ volume: 第06卷-freebsd的核心技术革新
 - 构建集群方面，Espie 说明自己并非实际运维者，多数构建机安置于成员家中地下室；关键决策是完全不做交叉编译，并举 NetBSD 曾因全交叉编译致 Vax 构建环境损坏一年无人察觉为反例。DPB 构建器刻意设计为启动即建、出错立现，失败包仅留日志，修复 ports 树后删除日志即自动续跑，以适应动辄一周全量构建、构建者白天另有正职的慢速集群节奏。（BSD Now EP43，[1601.88-1843.84]，L1）
 - 关于与 FreeBSD ports 的分岔，Espie 称如今几乎一切皆不同：最初改动源于速度，删除冗余抽象与未测代码；二进制包约 2000 至 2001 年即告可用，而 FreeBSD 迟至 pkgng 出现前两三年才具备同等能力；因原包工具系仓促写成、自评“好用的垃圾”、从安全视角完全不设防（语出原作者，归属见辨析条），遂以 Perl 整体重写，目标为包升级能力，历时两三年，至约 2006 年实现批量升级。（BSD Now EP43，[1855.82-2015.20]，L1）
 - 签名体系方面，Espie 指出包签名早于 Signify：其 X509 签名方案此前已在 OpenBSD 之外的生产环境使用，Theo de Raadt 写出 Signify 后仅需极少量胶水代码接入；真正耗时的是政策决定——由谁签名、证书置于何处；且签名机制不硬编码官方源，第三方 M:Tier 借此为 stable/release 提供安全包更新，用户加入其公钥即获透明识别。　[存疑脚注] 转写将 Signify 误作 Cinefy/Sinify、M:Tier 误作 MTIR/MTA，语义可辨但专名须以原音频或其他来源核对（BSD Now EP43，[2136.04-2333.72]，L1）
-- 主持人转述 Justin Sherrill 的观点：PF 已被 FreeBSD、NetBSD、macOS 等吸收，但各实现基于不同时期的 OpenBSD 版本且无版本号，导致规则语法与功能分化。（BSD Now EP18，[346.52-362.32]，L2）
-- 节目讨论以 OpenSSH portable 或 OpenZFS 共同核心为参照，为 PF 建立可移植层（被称为 PPL 或 OpenPF 构想）；Henning Brauer 表示愿意协助，但该项目当时尚未落地。（BSD Now EP18，[454.58-557.28]，L2）
-- Baptiste Daroussin 自述因厌倦反复源码编译而设计 PackageNG，后在 BSDCan 演讲并取得 ports commit bit，成为 portmgr 成员。（BSD Now EP18，[993.58-1029.66]，L1）
-- PackageNG 方向为将 poudriere 由面向最终用户的安装工具转为基础设施构建工具，并引入 staging、autoplist、子包、flavors/providers 及基于 fingerprint 的仓库签名，以解决冲突、改名与多版本包问题。（BSD Now EP18，[1049.62-1253.12]，L1）
-- OpenBSD 长期缺乏官方跨版本升级工具，第三方 ksh 脚本 OpenBSD Binary Upgrade 可完成 5.3 到 5.4 的二进制升级与旧文件清理，但仅校验 SHA256 而不提供签名。（BSD Now EP18，[2198.60-2266.36]，L2）
+- 主持人转述 Justin Sherrill 的观点：PF 已被 FreeBSD、NetBSD、macOS 等吸收，但各实现基于不同时期的 OpenBSD 版本且无版本号，导致规则语法与功能分化。（BSD Now EP18，[370.8-455.4]，L2）[订正：原 [346.52-362.32]，2026-09-29 SenseAudio 重转核对]
+- 节目讨论以 OpenSSH portable 或 OpenZFS 共同核心为参照，为 PF 建立可移植层（被称为 PPL 或 OpenPF 构想）；Henning Brauer 表示愿意协助，但该项目当时尚未落地。（BSD Now EP18，[456.2-546.1]，L2）[订正：原 [454.58-557.28]，2026-09-29 SenseAudio 重转核对]
+- Baptiste Daroussin 自述因厌倦反复源码编译而设计 PackageNG，后在 BSDCan 演讲并取得 ports commit bit，成为 portmgr 成员。（BSD Now EP18，[1007.0-1029.7]，L1）[订正：原 [993.58-1029.66]，2026-09-29 SenseAudio 重转核对]
+- PackageNG 方向为将 poudriere 由面向最终用户的安装工具转为基础设施构建工具，并引入 staging、autoplist、子包、flavors/providers 及基于 fingerprint 的仓库签名，以解决冲突、改名与多版本包问题。（BSD Now EP18，[1083.9-1667.0]，L1）[订正：原 [1049.62-1253.12]，2026-09-29 SenseAudio 重转核对]
+- OpenBSD 长期缺乏官方跨版本升级工具，第三方 ksh 脚本 OpenBSD Binary Upgrade 可完成 5.3 到 5.4 的二进制升级与大部分旧文件清理，但既不清理全部旧文件、也不提供签名更新。（BSD Now EP18，[2195.5-2283.7]，L2）[订正：原 [2198.60-2266.36] 仅校验 SHA256 而不提供签名，2026-09-29 SenseAudio 重转核对]
 - Langille 说明多数人监禁之旅从网站开始：当 nginx 一类组件曝出已知漏洞时，攻击者只进入 jail 而触及不到宿主；技术上只需以 PF 做简单的端口重定向，转发 80 与 443 即告完成，直到防火墙之后不止一台 web 服务器时才需要新招；他自嘲自己的网站至今仍用 /usr/websites 的老路径而非 /usr/local/www，跨主机迁移四五次，本质上仍只是一个 jail。（YouTube EPrGdylV-Up_E，[267.919-349.4]，L1）
 - 他完整复述了自己的 jail 管理工具迁移史：最初手工 jail，以 make world 配 DESTDIR 一类办法搭建；随后投奔 ezjail，因喜欢一次升级全部 jail 的卖点；再迁 iocage，继而随其 Python 重写版；最终因痛恨一次升级全部 jail——多到三四十个只能每晚升四五台——且宿主升级常因二进制不兼容弄坏 jail，而把一切迁回朴素的 jail.conf，即他所称从厚到瘦再到朴素的大迁移；他受够了藏在配置文件或文件系统里的配置项，要求看得见、可修改的朴素配置，并推荐 Michael Lucas 的 FreeBSD Mastery: Jails 一书，其标准配置项多源于此；另自述是 make jail 项目的贡献者，强调该工具只管 jail 的创建、更新与升级，与 jail 配置无关。（YouTube EPrGdylV-Up_E，[220.64-242.48]，L1）
 - 自建包是他的核心实践：FreeBSD 官方包仓库虽好，但需要非标准配置、赶不上正常构建循环或要多版本 Python 时，就得用 Poudriere 自己构建——包通常过夜即成；Poudriere 本身被放入 jail，再在 jail 里启动 jail，形成常年运行的 jail 中 jail；对 port 维护者而言 poudriere testport 是天赐之物，他自 2014 年、FreeBSD 9.2 时代开始使用，五年后把它塞进 jail——理由是“我干的就是监禁这一行”，花了数月才成。（YouTube EPrGdylV-Up_E，[531.8-579.92]，L1）
@@ -116,7 +116,7 @@ volume: 第06卷-freebsd的核心技术革新
 - 该期可回溯的一手史料包括：AsiaBSDCon 2015 官方议程（Henning Brauer 的 “OpenBSD Sucks” 刻意不附摘要）、Ted Unangst 在 misc@ 发起的浏览器 W^X 强化讨论、Colin Percival 收紧 random(3) 手册页措辞的 SVN 提交、ports@ 与 current@ 上关于 Midori 崩溃及 sudo 嘲讽语的线索、FreeBSD Foundation 更新 PDF 与 Glenn Barber 的 ZFS 事故记，以及 pcbsd-build GitHub 仓库与受访者技术博客。　[存疑脚注] 以上条目均系主持人转述，原始邮件、提交与文档尚未逐条核验，个别讲者名与题名转写失真（BSD Now EP79，[918.56-935.48]，L2）
 - 对 OpenSSL 代码库的一手观察：Cook 称其中大量不安全且无人维护的代码，密码学部分呈数学家与博士生风格（A、B、C、D、E、F 式变量命名），静态分析发现大量“遗传性旧代码”——不执行任何功能亦无害。他自述作为美国公民刻意不修改加密算法本体，以免触碰出口管制敏感区，这构成出口管制持续约束开源加密开发行为的一手证词。（BSD Now EP48，[2292.04-2361.23]，L1）
 - 该期提及并可回溯的一手材料包括：Poul-Henning Kamp 刊于 ACM Queue 的《Quality Software Costs Money — Heartbleed was Free》（由博客扩写而成）；FreeBSD-SA-14:16（file/libmagic 的 CDF 指针解引用与越界读、awk 正则资源耗尽、PE 越界读）及 iconv 相关公告、影响 Java 的 PCID errata；OpenBSD 5.5 errata 003（2014 年 4 月 9 日，ftp 客户端 HTTPS 主机名校验缺失）；tor-bsd 邮件列表关于 Tor 节点单一文化的帖子；boringssl.googlesource.com 源码库；以及 Southeast Linux Fest 上 Ken Moore 关于 PBI 的讲义。（BSD Now EP43，[645.84-995.74]，L2）
-- 本期史料包括 Justin Sherrill 博客观点、Henning Brauer 对 PF 可移植层的表态、Baptiste Daroussin 访谈（当事人自述）以及 OpenBSD Binary Upgrade 第三方脚本。（BSD Now EP18，[346.52-557.28]，L1）
+- 本期史料包括 Justin Sherrill 博客观点、Henning Brauer 对 PF 可移植层的表态、Baptiste Daroussin 访谈（当事人自述）以及 OpenBSD Binary Upgrade 第三方脚本。（BSD Now EP18，[328.6-2297.2]，L1）[订正：原 [346.52-557.28]，2026-09-29 SenseAudio 重转核对]
 - 本期为 EuroBSDcon 2024 的一手口述，讲者 Dan Langille 为 FreshPorts 创始人与 BSDCan、PGCon 创办者：自述 2000 年、FreeBSD 4.1 时代开始使用 jail（jail 机制始于 4.0），并给出其 jail 配置项来自 Michael Lucas 的 FreeBSD Mastery: Jails 一书、证书方案取法 Peter Wemm 的 FreeBSD 集群、周期脚本性能事故曾获 iXsystems 的 Josh Paetzel 协助定位等一手线索；谈中多次给出其博客与脚本的 URL，可用于追索 make jail 配置、Poudriere 迁移脚本与证书工具 anvil 的实现细节。[考据脚注] 本流转写为双声轨交错合并且被标记 repetition_detected，工具与人名多音变（ezjail、iocage、Gitea、Let's Encrypt、Josh Paetzel 等），数字与 URL 须与讲者博客及会议官方录像核对。（YouTube EPrGdylV-Up_E，[2202.8-2243.359]，L3）
 
 **史观**：
@@ -133,9 +133,9 @@ volume: 第06卷-freebsd的核心技术革新
 - 总纲9 经验优先：可移植性策略的反转：面对 musl libc 提议用条件编译绕过 glibc 保护代码，Cook 拒绝基于运行时检测的变通——不存在安全可靠的方式检测特权环境（进程可能运行在错误内核上）——转而与 musl 开发者合作在上游实现 issetugid 系统调用，结果比任何变通更安全。portable 版不再堆叠兼容层，而是把正确修复推进操作系统与 libc 本体，与 OpenSSL“忍受操作系统所给的一切”的哲学形成对照；其论证是开源项目有能力让正确修复进入上游。（BSD Now EP48，[1892.33-1975.85]，L1）
 - 总纲4 分离聚合是永恒规律：主持人由 BoringSSL 与 LibreSSL 的相继分岔引出对 SSL 单一文化的批评：当所有人都用同一份代码，一处未修补漏洞即令全体节点同时陷落；他们同时预期各分岔将“随时间推移逐渐分异”，以摆脱同源缺陷的共振风险。分岔在此并非生态的病征，而是多样性自我保全的形式，恰合分离聚合的节律。（BSD Now EP43，[3299.76-3319.16]，L2）
 - 总纲14 苦难不值得被提倡：Poul-Henning Kamp（转写作 Paul Henningkamp）2004 年众筹时因收款无上限而陷入每周八十小时、自感亏欠出资人的过劳，2010 年改为发票限流的 Varnish Moral License 模式；主持人补充 FreeBSD 基金会资助的正是 UEFI 引导代码等无人愿做却必需的无名工作。两例共同显示：维护者的自我消耗不被浪漫化，可持续的维护史由把劳动制度化的安排而非苦行支撑。（BSD Now EP43，[773.82-824.68]，L2）
-- 总纲4 分离聚合是永恒规律：PF 随各 BSD 分支而分离，又出现以共同核心重新聚合的讨论，呈现分离与聚合的循环。（BSD Now EP18，[359.44-413.44]，L2）
-- 总纲10 动手者创造历史：Baptiste Daroussin 因个人反复编译的痛点动手重写包系统，改变 FreeBSD 软件分发方式。（BSD Now EP18，[993.58-1029.66]，L1）
-- 总纲18 时间是一种形式主义：PF 缺乏版本号使各实现难以按时间锚定演进，说明版本命名是形式化的时间标记。（BSD Now EP18，[425.34-439.46]，L2）
+- 总纲4 分离聚合是永恒规律：PF 随各 BSD 分支而分离，又出现以共同核心重新聚合的讨论，呈现分离与聚合的循环。（BSD Now EP18，[383.7-480.3]，L2）[订正：原 [359.44-413.44]，2026-09-29 SenseAudio 重转核对]
+- 总纲10 动手者创造历史：Baptiste Daroussin 因个人反复编译的痛点动手重写包系统，改变 FreeBSD 软件分发方式。（BSD Now EP18，[1007.0-1029.7]，L1）[订正：原 [993.58-1029.66]，2026-09-29 SenseAudio 重转核对]
+- 总纲18 时间是一种形式主义：PF 缺乏版本号使各实现难以按时间锚定演进，说明版本命名是形式化的时间标记。（BSD Now EP18，[426.0-437.3]，L2）[订正：原 [425.34-439.46]，2026-09-29 SenseAudio 重转核对]
 
 **辨析**：
 
@@ -149,7 +149,7 @@ volume: 第06卷-freebsd的核心技术革新
 - 该转写为双音轨交错且时间戳乱序，出现句级拼接（如 “a MIPS FreeBSD world” 之后被拼入无关语境）与大量专名失真（Poudriere、GELI、PersonaCrypt、BhyveCon 等），TrueOS 答疑段与 PC-BSD 新闻段的说话人归属因此难以确证；各段语义仍完整可辨，专名校正均属语境推断。　[存疑脚注] 说话人归属与专名校正均为推断，引用前须对照节目原始音轨或节目页核对（BSD Now EP79，[1468.96-1473.96]，L4）
 - Linux PRNG 争议事件：ARS Technica 报道 LibreSSL 未检测 PRNG PID 回绕；Cook 证实团队在文章发表前几天已内部讨论该角落案例，文章发表当日清晨补丁即由 Bob Beck 推送。他拒绝阅读网络评论，与 PaX 团队交换加固思路，并指出权衡困境——将 PRNG 页面标记为不可被子进程继承会使直接调用 fork/clone 的进程崩溃，彻底方案可能需要内核协助；在“更安全”与“不破坏既有软件”之间只有细线。这一表述与其安全观互为表里：今天的偏执角落案例就是明天的大规模漏洞。（BSD Now EP48，[2031.90-2160.53]，L1）
 - 三处专名与归属在转写中失真而须核验：其一，Espie 转述原包工具作者自评“周末写成的好用的垃圾”时自称记不清是否为 PHK，作者归属与措辞均待 pkg_install 历史与邮件列表原文印证；其二，构建机所在“Fios basement”疑为人名误听（OpenBSD 包构建长期由 Landry Breuil 维护）；其三，影响 Java 的“PCI DS”应为 PCID（Process Context Identifier），具体 errata 编号待查 FreeBSD 公告档。　[存疑脚注] PHK 归属、Fios basement 人名、PCID errata 编号三处均系转写失真或记忆性转述，须以邮件列表原文与 FreeBSD Errata Notices 核验后方可引用（BSD Now EP43，[1955.80-1988.06]，L4）
-- 主持人将 DragonFly 的 PF 对应 OpenBSD 4.4、FreeBSD 对应 4.5 等版本关系为口头转述，需与各项目代码核对；OpenPF 项目在 2014 年成立属对未来的期许而非既成事实。　[存疑脚注] 各 BSD 的 PF 版本对应与 OpenPF 立项状态需以源码与邮件列表原始记录复核。（BSD Now EP18，[386.32-439.46]，L4）
+- 主持人将 DragonFly 的 PF 对应 OpenBSD 4.4、FreeBSD 对应 4.5 等版本关系为口头转述，需与各项目代码核对；OpenPF 项目在 2014 年成立属对未来的期许而非既成事实。　[存疑脚注] 各 BSD 的 PF 版本对应与 OpenPF 立项状态需以源码与邮件列表原始记录复核。（BSD Now EP18，[383.7-558.9]，L4）[订正：原 [386.32-439.46]，2026-09-29 SenseAudio 重转核对]
 - 两处论断属个人经验而非基准测试：其一，宿主侧以 fail2ban 监听各 jail 日志被他称作巧妙而隐蔽——狱中之人无从察觉自己正被从外部观察，此说依赖攻击者不知情的假设；其二，他断言 jail 开销极低，“没有内核，只是多一个 SSH 会话”，其两台 R730 空转、构建包时才上四成负载，但未给出测量数据；另其关于 Pushover 创办者为 OpenBSD 人士的记忆带有“如果我没记错”的限定，未指名道姓。[存疑脚注] Pushover 创始人身份、jail 开销论断均系单一讲者现场回忆与估算，未经独立核验。　[存疑脚注] fail2ban 隐蔽性、jail 开销与 Pushover 创始人身份三项均为讲者单方陈述，引用时须另行核验。（YouTube EPrGdylV-Up_E，[2346.319-2397.079]，L4）
 
 **文献**：

@@ -58,8 +58,8 @@ volume: 第10卷-openbsd的历史
 - David Gwynne 还实现 ERSpan 接口与 BPF 日志守护进程，以 GRE 封装远程端口镜像并支持 VMware 分布式虚拟交换机的监控会话。（BSD Now EP623，[2316.56-2663.62]，L1）
 - OpenBSD hackathon 的社会维度被视为关键：面对面沟通能消除邮件与聊天中的误解，组织跨城市活动则面临资源协调的不确定性。（BSD Now EP623，[1544.20-1796.32]，L1）
 - whurley 自述其受聘背景：此前在一家集群系统公司主导开源系统管理项目 OpenQRM，自称该项目为当时最成功的开源系统管理项目；又与他人共同创建 Open Management Consortium，推动各开源系统管理项目按用户需求协作而非以小团队对抗大厂商，统一代理模型等议题对 HP、IBM、CA 与 Nagios、Hyperic 等公司同等开放。BMC 管理层以此前工作为据，于 2007 年中聘其为开源战略首席架构师，要求他把开源做进商业模式而非营销点缀。（BSDTalk EP123，[220.66-308.98]，L1）
-- BMC Developer Network 于 2007 年 7 月底上线，首批四个集成项目以压缩包形式发布，站内设 Atrium、Foundation、变更与配置管理、服务影响与事件管理、服务管理五个资源中心，集成博客、播客、白皮书与 API 文档，形成连接用户、合作伙伴与工程团队的沟通层。上线时未设公共源码仓库（无 Subversion 服务），代码完全自由下载，用户可提交修改；whurley 称是否自建仓库将由社区需求决定。（BSDTalk EP123，[471.80-797.04]，L1）
-- 关于 BMC 内部开源文化，whurley 评估称开发者的心态转变并非障碍：开发者如撰写 Adventures in Linux 博客的 Steve Carl 长期参与开源项目，公司历史上亦曾发布 CMSFS、logMV、midwatch 等开源软件而不事声张；真正的挑战在于把这些既有贡献向外部社区公示并积累可信度。他援引 Karl Fogel 所著《Producing Open Source Software》中开放会引来公开批评的论述，并以自己在前雇主开放旧有专有代码时资深开发者被年轻学生公开指摘的经历，说明企业开源须正视此类社会性摩擦。（BSDTalk EP123，[884.04-1122.86]，L1）
+- BMC Developer Network 于本期采访当周（2007 年 7 月底）公布，定位为超越单纯发布压缩包（tarball）的用户沟通层：当周发布的集成产品均由用户参与完成；站内集成面向合作伙伴、用户与工程团队的跨越层（spanning layer），设有投票与直接反馈渠道，收录 Talk BMC 的博客与播客、下载区、集成引擎与权威软件库，并提供白皮书、文档与 API 技术资料。上线时未设公共源码仓库（无 Subversion 服务），代码完全自由下载，用户可提交修改；whurley 称社区尚未强烈要求设立仓库，是否自建仓库将由社区需求决定。（BSDTalk EP123，[453.3-826.3]，L1） [订正：原 首批四个集成项目与五个资源中心（Atrium、Foundation 等）细节及 [471.80-797.04]，2026-09-29 SenseAudio 重转核对]
+- 关于 BMC 内部开源文化，whurley 评估称开发者的心态转变并非障碍：开发者如撰写 Adventures in Linux 博客的 Steve Carl 长期参与开源项目，公司历史上亦曾发布 CMFS、SQ log MD、MidWatch 等开源软件而不事声张；真正的挑战在于把这些既有贡献向外部社区公示并积累可信度。他援引 Karl Fogel 所著《Producing Open Source Software》中开放会引来公开批评的论述，并以自己在前雇主开放旧有专有代码时资深开发者被年轻学生公开指摘的经历，说明企业开源须正视此类社会性摩擦。（BSDTalk EP123，[884.04-1122.86]，L1） [订正：原 CMSFS、logMV，2026-09-29 SenseAudio 重转核对]
 
 **史料**：
 
@@ -108,7 +108,7 @@ volume: 第10卷-openbsd的历史
 - Theo de Raadt 对 Intel 的指控（“被告知忽略风险”）系其个人推断，无直接证据，节目亦未提供 Intel 回应。　[存疑脚注] 系个人推断，无直接证据（BSD Now EP229，[763.4-807.38]，L4）
 - 转录将 David Gwynne 记作 David Gwynn 或 David Gwendt，标题 Two‘s interview 疑为 Gwynne’s interview 的转写偏差，人名以 OpenBSD 官方为准。　[存疑脚注] 人名与标题存在语音转写偏差，须以 OpenBSD 官方资料核验（BSD Now EP623，[1068.26-1075.34]，L4）
 - sec(4) 相关表述中 IPsec 接口在转录混用 sec 与 sec4，具体版本与接口名须以 OpenBSD 手册页核验。　[考据脚注] 接口名称存在转写混用，须以 sec(4) 手册页为准（BSD Now EP623，[1971.80-2235.62]，L4）
-- 转写中的若干专名存疑：whurley 所自述的原雇主转写作 Clusters 与 Symbia，其 Nagios 顾问相关的合伙人名转写作 Ethan Volstead，与通行记载（OpenQRM 源自 Qlusters 公司、Nagios 创始人作 Ethan Galstad）存在疑似转写误差，采用前须以邮件列表档案与企业传记材料交叉核对；另其关于 GPL 与开发者社区相悖的判断系单方立场陈述，历史评价应与 GPL 阵营当事人论述对读。　[存疑脚注] 转写专名 Clusters、Symbia、Ethan Volstead 疑为语音识别误差，未经外部来源确证；whurley 的反 GPL 论断属单一来源立场推断。（BSDTalk EP123，[1429.02-1460.30]，L4）
+- 转写中的若干专名存疑：whurley 所自述的原雇主转写作 Clusters，与通行记载（OpenQRM 源自 Qlusters 公司）存在疑似转写误差，采用前须以邮件列表档案与企业传记材料交叉核对；新转写中 Nagios 创始人作 Ethan Galstad、另提及前雇主转写作 Symantec（并涉 OpenSense 安全基础设施管理系统与 Jim Nasby、Decibel 等合作者），与通行记载一致；另其关于 GPL 与开发者社区相悖的判断系单方立场陈述，历史评价应与 GPL 阵营当事人论述对读。　[存疑脚注] 转写专名 Clusters 疑为语音识别误差，未经外部来源确证；whurley 的反 GPL 论断属单一来源立场推断。（BSDTalk EP123，[1429.02-1460.30]，L4） [订正：原 Symbia 与 Ethan Volstead 名目，2026-09-29 SenseAudio 重转核对]
 
 **文献**：
 
