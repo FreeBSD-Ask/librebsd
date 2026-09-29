@@ -1,0 +1,5 @@
+2549157|L4|J Wunsch：pstat -s 在此环境可用，top 已知异常，swapinfo 已被移除，提议为 pstat 实现 -k 选项
+2549159|L4|Bruce Evans：BLOCKSIZE=1024 生效，但 pstat -s 输出 1024 块而 pstat -k -s 输出 1K 块
+2549162|L4|Satoshi Asami：ed0 已支持 SMC Elite Ultra 8216，hardware.hlp 中 ed0 条目应从 80xx 扩到 8xxx
+2549181|L4|Ollivier Robert：sendmail 8.6.12 需在 __bsdi__ 段下加 __FreeBSD__ 段，定义 PROCTITLEPAD 为空字符
+2549200|L4|Paul Southworth：bind-4.9.3-BETA17 在 FreeBSD 编译须删除 bind/compat/sys/cdefs.h，之后即可通过
