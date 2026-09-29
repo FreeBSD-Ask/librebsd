@@ -1,0 +1,26 @@
+总条数 255；有日期 255
+--- 年 × 等级 ---
+  1995  255  {'L4': 178, 'L3': 77}
+--- 月份（仅多产月） ---
+  1995-01  11
+  1995-02  156
+  1995-03  88
+--- FROM 集中度（top 15） ---
+   25  Bruce Evans <bde@zeta.org.au>
+   20  Poul-Henning Kamp <phk@ref.tfs.com>
+   11  David Greenman <davidg@Root.COM>
+   10  terry@cs.weber.edu (Terry Lambert)
+    9  "Jordan K. Hubbard" <jkh@freefall.cdrom.com>
+    8  Garrett Wollman <wollman@halloran-eldar.lcs.mit.edu>
+    7  "Rodney W. Grimes" <rgrimes@gndrsh.aac.dev.com>
+    6  "Jordan K. Hubbard" <jkh@FreeBSD.org>
+    6  hasty@netcom.com (Amancio Hasty Jr)
+    6  Peter Dufault <dufault@hda.com>
+    6  J Wunsch <j@uriah.heep.sax.de>
+    5  guido@gvr.win.tue.nl (Guido van Rooij)
+    5  julian@tfs.com (Julian Elischer)
+    4  "Justin T. Gibbs" <gibbs@estienne.CS.Berkeley.EDU>
+    4  Wankle Rotary Engine <wpaul@skynet.ctr.columbia.edu>
+--- 宿主分派 ---
+     885  255
+plan -> D:\librebsd\script\_db_row_mining\review_logs\fhk_b043_plan.tsv

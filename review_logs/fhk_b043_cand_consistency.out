@@ -1,0 +1,13 @@
+  合并件条数 == 236                             PASS 实际 236
+  合并件 pk 唯一                                PASS 
+  候选分件数 == 40                              PASS 实际 40
+  分件条数 == 236                              PASS 实际 236
+  分件 pk 集合 == 合并件                          PASS 
+  分件内容 == 合并件（逐字）                          PASS 不符 0: 
+  库内条数 == 236                              PASS 实际 236
+  库 evidence_level == 合并件                  PASS 不符 0: 
+  库 claim_text == 合并件                      PASS 不符 0: 
+  库 fact_text == 合并件                       PASS 不符 0: 
+  [info] quote 基线快照已建立: D:\librebsd\script\_db_row_mining\review_logs\fhk_b043_quote_sha256_before_surg.json (236 条)
+---
+ALL PASS
