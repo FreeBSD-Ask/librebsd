@@ -1,0 +1,13 @@
+  合并件条数 == 255                             PASS 实际 255
+  合并件 pk 唯一                                PASS 
+  候选分件数 == 40                              PASS 实际 40
+  分件条数 == 255                              PASS 实际 255
+  分件 pk 集合 == 合并件                          PASS 
+  分件内容 == 合并件（逐字）                          PASS 不符 0: 
+  库内条数 == 255                              PASS 实际 255
+  库 evidence_level == 合并件                  PASS 不符 0: 
+  库 claim_text == 合并件                      PASS 不符 0: 
+  库 fact_text == 合并件                       PASS 不符 0: 
+  quote 前后 sha256 未变                       PASS 被改动 0: 
+---
+ALL PASS

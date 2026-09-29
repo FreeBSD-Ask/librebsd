@@ -1,0 +1,39 @@
+待改写 11 条
+quote 基线不符（不动）: 无
+内容与等级已相同（不动）: 0
+待落库 11 条
+  CL-RM-313939 pk 2542078
+      L4 Bruce Evans：struct sigcontext 拿不到触发地址 1.1.x 提议加入 fault address 至今未落实 FreeBSD 中无
+      -> L4 Bruce Evans：答 SIGSEGV 无法取得故障地址 1.1.x 曾提议写入 sigcontext 至今未落实
+  CL-RM-313942 pk 2542097
+      L4 Viren：给出 FreeBSD 1.1.5.1 下 exabyte 8205 的 rdump 参数 称调好参数后从未出错
+      -> L4 Viren：给出 FreeBSD 1.1.5.1 下 Exabyte 8205 的 rdump 参数 称配置后从未出问题
+  CL-RM-313963 pk 2542278
+      L3 Jaye Mathisen 提出希望内核加进程数上限、pty tty 访问限制与时间限制等一整套限制项
+      -> L4 Garrett Wollman：驳回除进程上限外的限制诉求，称其余属 pw_class 钩职责
+  CL-RM-313967 pk 2542299
+      L4 Mark Hittinger 报告 FreeBSD 2.0-950202 快照后 EISA aha274x 恢复可用且 DAT 备份大幅稳定
+      -> L3 Mark Hittinger：升级后 EISA aha274x 支持恢复 DAT 备份明显更稳 前次 15M 即重启
+  CL-RM-313978 pk 2542391
+      L3 Bob Willcox 报 950202-SNAP 上 WANG 5525ES 与 Exabyte 8200 磁带多文件仅首文件可 restore 其余报错
+      -> L3 Bob Willcox：报 2.0-950202-SNAP 两台磁带仅首文件可恢复 后续命令触发 panic
+  CL-RM-313985 pk 2542442
+      L4 Amancio Hasty Jr：FreeBSD-2.0 GUS driver 仅能回放 dual DMA 初始化失败 FreeBSD-1.1.5 可用
+      -> L3 Amancio Hasty Jr：FreeBSD 2.0 GUS 驱动可回放但双 DMA 初始化失败 称 1.1.5 可用
+  CL-RM-313996 pk 2542532
+      L4 Poul-Henning Kamp：2.1GB Quantum Empire 2100S用BusLogic VLB卡 顺序读峰值约5Mb每秒
+      -> L3 Poul-Henning Kamp：BusLogic VLB 卡顺序读峰值约 5Mb每秒
+  CL-RM-314045 pk 2542958
+      L3 Jordan K. Hubbard：libpcap 版本策略投票选择维持现状 反对 Garrett 与 Rod 的升版建议
+      -> L3 Jordan K. Hubbard：投票维持 libpcap 现状
+  CL-RM-314060 pk 2543083
+      L4 Garrett Wollman：sticky 目录 symlink unlink 规则 目标不存在或属同一用户时允许
+      -> L3 Garrett Wollman：转述建议的 sticky 目录 symlink unlink 规则 目标不存在或属同一用户时允许
+  CL-RM-314071 pk 2543195
+      L4 Nate Williams：补丁只同步ld.so相关库加载器，FreeBSD与NetBSD库本身仍不同，谈不上二进制兼容
+      -> L4 Nate Williams：补丁仅同步 ld.so 加载器 FreeBSD 与 NetBSD 库本身不同不算二进制兼容
+  CL-RM-314098 pk 2543419
+      L4 Steve Gerakines: 24F 卡 BIOS 附接在 FreeBSD 2.0 及更早版本存在已知 bug 本人曾提交修复
+      -> L4 Steve Gerakines：称 24F attach 在 2.0 及以前有 bug 会忽略 wd 仿真模式卡 重发本人修复 diff
+
+[dry-run] 未写入任何数据。

@@ -1,0 +1,57 @@
+claim_map: 255 条 -> D:\librebsd\script\_db_row_mining\review_logs\fhk_b043_claim_map.json (170472 字节)
+引文同串回源: 255/255
+--- 不变量 ---
+  join4_cnt            255
+  seq_in_range         255
+  claim_seq_min_max    (313937, 314191)
+  seq_dup_all_rm       0
+  seq_gap              0
+  anchor_out_of_range  0
+  dup_pk_other_anchor  0
+  ct_bad               0
+  gate_bad             0
+  status_bad           0
+  level_bad            0
+  level_dist           {'L3': 77, 'L4': 178}
+  srcdb_bad            0
+  null_bad             0
+  sid_form_bad         0
+  conf_bad             0
+  kind_bad             0
+  role_strength_bad    0
+  precision_bad        0
+  date_mismatch        0
+  text_fact_diff       0
+  len_out_of_range     0
+  map_pk_diff          0
+  map_cid_diff         0
+  map_level_diff       0
+  map_text_diff        0
+--- 结论 ---
+  join4_cnt == 255                       PASS
+  seq_in_range == 255                    PASS
+  序列连续（gap 0）                            PASS
+  CL-RM 全库无重复序号                          PASS
+  锚点未越出本批 pk 区间                          PASS
+  本批 pk 区间无跨批重复注册                        PASS
+  claim_type 全 FACT                      PASS
+  措辞门全 attribution_allowed               PASS
+  状态全 supported                          PASS
+  等级仅 L3/L4                              PASS
+  等级分布 == L4 178 / L3 77                 PASS
+  源库/表全 freebsd-hackers.messages         PASS
+  必填列无空值                                 PASS
+  source_id 形态合法                         PASS
+  置信度全 0.85                              PASS
+  证据类型全 quote                            PASS
+  角色/强度/处置全 supporting/strong/accept     PASS
+  精度/语言口径一致                              PASS
+  claim 与证据日期同串                          PASS
+  引文同串回源                                 PASS
+  claim_text == fact_text                PASS
+  摘要长度 20-80（库内复测）                       PASS
+  claim_map pk 集合一致                      PASS
+  claim_map claim_id 逐条一致                PASS
+  claim_map level 逐条一致                   PASS
+  claim_map claim_text 逐条一致              PASS
+FAIL 0 / 26

@@ -1,0 +1,100 @@
+==============================================================================
+一、证据逐字回源核对
+  OK  p2542078 FIX L4
+  OK  p2542097 FIX L4
+  OK  p2542278 FIX L4
+  OK  p2542299 FIX L3
+  OK  p2542391 FIX L3
+  OK  p2542442 FIX L3
+  OK  p2542532 FIX L3
+  OK  p2542539 ACCEPT L4
+  OK  p2542552 ACCEPT L4
+  OK  p2542553 ACCEPT L4
+  OK  p2542647 ACCEPT L4
+  OK  p2542749 ACCEPT L4
+  OK  p2542800 ACCEPT L4
+  OK  p2542883 ACCEPT L4
+  OK  p2542900 ACCEPT L4
+  MISS p2542920 ACCEPT L4
+       证据: The driver only supports the limited subset of ATA that is essential for i/o. The old ATA specs don't mention 
+  OK  p2542922 ACCEPT L4
+  OK  p2542958 FIX L3
+  OK  p2543083 FIX L3
+  OK  p2543156 ACCEPT L4
+  OK  p2543178 ACCEPT L4
+  MISS p2543195 FIX L4
+       证据: This syncs us up so we're using the same ld/ld.so and friends. However, our libraries are different from their
+  OK  p2543209 ACCEPT L4
+  OK  p2543378 ACCEPT L4
+  OK  p2543382 ACCEPT L4
+  OK  p2543384 ACCEPT L4
+  OK  p2543419 FIX L4
+  OK  p2543420 ACCEPT L4
+  OK  p2543945 ACCEPT L4
+  OK  p2543960 ACCEPT L4
+  MISS p2543974 ACCEPT L4
+       证据: It builds fine, and works ok.  Seems to be a problem with -O4, occasionally.
+  OK  p2542155 KEEP
+  OK  p2542534 KEEP
+  OK  p2542626 KEEP
+  OK  p2543160 KEEP
+  OK  p2543275 KEEP
+  OK  p2543290 KEEP
+  OK  p2543455 KEEP
+  OK  p2542586 REJECT
+  OK  p2542767 REJECT
+  OK  p2543139 REJECT
+  OK  p2543245 REJECT
+  OK  p2543474 REJECT
+  OK  p2543499 REJECT
+  OK  p2543978 REJECT
+  OK  p2543980 REJECT
+
+二、FIX/ACCEPT 摘要门禁
+  OK   p2542078 FIX len 65 | Bruce Evans：有人提议 1.1.x 给 struct sigcontext 加入 fault address 至今未落实
+  OK   p2542097 FIX len 47 | Viren：给出 FreeBSD 1.1.5.1 下 8200/8205 的 rdump 参数
+  OK   p2542278 FIX len 47 | Garrett Wollman：驳回除进程上限外的限制诉求，称其余属 pw_class 钩职责
+  OK   p2542299 FIX len 43 | Mark Hittinger报告EISA aha274x支持恢复且DAT备份明显更稳定
+  OK   p2542391 FIX len 43 | Bob Willcox：950202-SNAP 上两台磁带多文件仅首文件可恢复其余失败
+  OK   p2542442 FIX len 59 | Amancio Hasty Jr：FreeBSD 2.0 GUS 驱动可回放但双 DMA 初始化失败 1.1.5 可用
+  OK   p2542532 FIX len 44 | Poul-Henning Kamp：BusLogic VLB 卡顺序读峰值约 5Mb每秒
+  OK   p2542539 ACCEPT len 36 | Bruce Evans：40000x2048 为介质检测失效时的标准魔数
+  OK   p2542552 ACCEPT len 56 | Justin T. Gibbs：无 Rev E aic7770 的 Adaptec 板可靠仅能用四个 SCB 槽
+  OK   p2542553 ACCEPT len 48 | Poul-Henning Kamp：SCSI 适配器开启 >1GB 选项为因，下一快照已修并提速
+  OK   p2542647 ACCEPT len 54 | HOSOKAWA Tatsumi：为 FreeBSD 2.0R 发布补丁修 APM 并新增 3C589 驱动
+  OK   p2542749 ACCEPT len 60 | Jeffrey Hsu：setenv TMPDIR /tmp 可让 gcc 默认用 /tmp 但与 pkg_add 冲突
+  OK   p2542800 ACCEPT len 48 | Bob Mercier：CDU31A 加上 scd 并把 ioaddr 改为 0x340 即可用
+  OK   p2542883 ACCEPT len 57 | Terry Dwyer：已为 FreeBSD 1.1.5.1R 整理并发布 scotty 与 tkined 端口包
+  OK   p2542900 ACCEPT len 39 | David Greenman：确认已将 DDB 手册页恢复至 -current
+  OK   p2542920 ACCEPT len 40 | Bruce Evans指出ATA驱动仅支持I/O必需子集且旧规范未涵盖LBA模式
+  FAIL p2542922 ACCEPT | ['长度 83 越界'] | Terry Lambert：诊断 WD Caviar 31000 硬盘 bad sector 系 BSD 误判翻译几何并建议 DOS 下用 pfdisk.exe 核对
+  OK   p2542958 FIX len 33 | Jordan K. Hubbard：投票维持 libpcap 现状
+  OK   p2543083 FIX len 62 | Garrett Wollman：建议的 sticky 目录 symlink unlink 规则 目标不存在或属同一用户时允许
+  OK   p2543156 ACCEPT len 53 | Mark Tinguely：X_ip_mforward 的 raw_input 请求未传回 mrouted
+  OK   p2543178 ACCEPT len 58 | Poul-Henning Kamp：确认 config 支持同一源文件被两设备共用并指出 isa/pcic.c 可查
+  OK   p2543195 FIX len 54 | Nate Williams指出补丁仅同步ld.so加载器FreeBSD与NetBSD库本身不同不算二进制兼容
+  FAIL p2543209 ACCEPT | ['长度 84 越界'] | Luigi Rizzo：指出 FreeBSD 2.X 中 stdio.h 的 __const 与 sys_errlist 声明不匹配并提议用 -D__const= 编译
+  OK   p2543378 ACCEPT len 40 | Mark Murray：建议用 dump(8) 备份、restore(8) 恢复
+  OK   p2543382 ACCEPT len 52 | Mark Murray：指出 FreeBSD 2.x 中加密 telnet 属非美安全发行且给出镜像位置
+  OK   p2543384 ACCEPT len 56 | Remy CARD：说明 lites 无需弃 FreeBSD 安装，可启动时择内核并运行 FreeBSD 二进制
+  OK   p2543419 FIX len 48 | Steve Gerakines指出24F卡驱动忽略wd仿真模式卡的判断有误并附上本人修复diff
+  OK   p2543420 ACCEPT len 57 | Jörg Wunsch：建议让 kernel 也能在 st0 上 dump 并要求 savecore 能读普通文件
+  OK   p2543945 ACCEPT len 36 | Poul-Henning Kamp：PAX 须先懂两边命令行语法才可替代
+  OK   p2543960 ACCEPT len 60 | Ugen J.S.Antsilevich：指出 XFree 3.0 的 Xlib 头文件 Display 类型定义有缺陷
+  OK   p2543974 ACCEPT len 55 | Russell L. Carter：确认 Pentium 优化 gcc 可正常编译与运行，仅 -O4 偶有问题
+
+三、导出的亲读裁定件
+  p2542097 281 字符  FROM: BSD <bsd@faser.cs.olemiss.edu>
+  p2542391 3649 字符  FROM: obiwan!bob@uudell.us.dell.com (Bob Willcox)
+  p2542442 435 字符  FROM: hasty@netcom.com (Amancio Hasty Jr)
+  p2542539 448 字符  FROM: Bruce Evans <bde@zeta.org.au>
+  p2542647 955 字符  FROM: hosokawa@mt.cs.keio.ac.jp (HOSOKAWA Tatsumi)
+  p2542922 939 字符  FROM: terry@cs.weber.edu (Terry Lambert)
+  p2543178 270 字符  FROM: Poul-Henning Kamp <phk@ref.tfs.com>
+  p2543209 1128 字符  FROM: Luigi Rizzo <luigi@labinfo.iet.unipi.it>
+  p2543382 321 字符  FROM: Mark Murray <mark@grondar.za>
+  p2543419 1745 字符  FROM: steve2@genesis.tiac.net (Steve Gerakines)
+  p2542883 2111 字符  FROM: Terry Dwyer <tdwyer@netbsd08.dn.itg.telecom.co
+
+核账失败 5 项
+亲读件 -> D:\librebsd\script\_db_row_mining\review_logs\fhk_b043_adj_review.txt (16000 字节)
