@@ -20,6 +20,8 @@ JUD = os.path.join(ROOT, "script", "_db_row_mining", "audit_outline", "judgement
 WORK = os.path.join(ROOT, "script", "_db_row_mining", "audit_outline", "work")
 OVER22 = os.path.join(WORK, "_over22_fix.json")
 TAIL = "引用时按"
+# DSLXC 族（13-deepseek 战线收编块）摘要行不用「引用时按」，用「以上为邮件列表当事人…」收尾
+ALT_TAIL = "以上为邮件列表当事人"
 
 
 def load_judgements():
@@ -47,12 +49,24 @@ def load_fetch():
     return fetch
 
 
+def load_over22():
+    """over22 覆盖表按「db|pk」复合键查找——pk 在各源库各自编号，裸 pk 键
+    会把别的库/批次的改写稿安到本批同号块上（跨库污染）。"""
+    over22 = {}
+    if os.path.exists(OVER22):
+        raw = json.load(open(OVER22, encoding="utf-8"))
+        for k, v in raw.items():
+            if "|" in k:
+                over22[k] = v
+            else:
+                print(f"  ! over22 裸 pk 键已忽略（须 db|pk 复合键）: {k}", file=sys.stderr)
+    return over22
+
+
 def main(hosts):
     jud = load_judgements()
     fetch = load_fetch()
-    over22 = {}
-    if os.path.exists(OVER22):
-        over22 = json.load(open(OVER22, encoding="utf-8"))
+    over22 = load_over22()
     for rel in hosts:
         path = os.path.join(ROOT, rel)
         with open(path, encoding="utf-8", newline="") as fh:
@@ -62,7 +76,8 @@ def main(hosts):
         for key, r in jud.items():
             if not (r.get("新摘要句") or r.get("判定") in ("fix-format", "fix-text")):
                 continue
-            ns = over22.get(key.split("|")[1], "") or r.get("新摘要句") or ""
+            db_pk = "|".join(key.split("|")[:2])
+            ns = over22.get(db_pk, "") or r.get("新摘要句") or ""
             if not ns:
                 continue
             if "|" not in key or not key.endswith(rel):
@@ -79,17 +94,38 @@ def main(hosts):
                 continue
             inline = fb.get("block_type") == "inline" or not lines[ln - 1].lstrip().startswith("<!--")
             if inline:
-                # 紧凑列举体例：叙述与锚点同一行，直接整行替换
-                ns = lines[ln - 1] if False else ns  # ns 已是新完整行
-                lines[ln - 1] = ns
+                # 紧凑列举体例：整行替换，但必须保留原行尾锚尾巴（含同行多锚），
+                # 否则丢锚——B001 丢 814 行、B002 在 161-nd/159-fsd/160-mm 丢 2,769 锚的根因
+                orig = lines[ln - 1]
+                idx = orig.find("<!--")
+                if idx > 0 and orig[idx - 1] == "`":
+                    idx -= 1
+                if idx >= 0:
+                    tail = orig[idx:]
+                    if ns.rstrip().endswith("`"):
+                        ns = ns.rstrip()[:-1].rstrip()
+                    lines[ln - 1] = ns.rstrip() + tail
+                else:
+                    lines[ln - 1] = ns
                 n_apply += 1
                 continue
-            # 独立行锚型：锚点向下 5 行内找含纪律串「引用时按」的行
+            # 独立行锚型：锚点向下 5 行内找摘要行——先按纪律串「引用时按」，
+            # 再按 DSLXC 族收尾「以上为邮件列表当事人」，最后按 fetch 摘要行原文精确匹配兜底
             si = -1
             for j in range(ln, min(ln + 5, len(lines))):
                 if TAIL in lines[j]:
                     si = j
                     break
+            if si < 0:
+                for j in range(ln, min(ln + 5, len(lines))):
+                    if ALT_TAIL in lines[j]:
+                        si = j
+                        break
+            if si < 0 and (fb.get("summ_line") or "").strip():
+                for j in range(ln, min(ln + 5, len(lines))):
+                    if lines[j].strip() and lines[j] == fb["summ_line"]:
+                        si = j
+                        break
             if si < 0:
                 print(f"  ! 摘要行（纪律串）未找到: {key} line {ln}", file=sys.stderr)
                 n_err += 1
@@ -101,15 +137,21 @@ def main(hosts):
             pos = lines[si].find(TAIL)
             if pos >= 0:
                 tail = lines[si][pos:]
-            if TAIL in ns:
+            else:
+                pos = lines[si].find(ALT_TAIL)
+                if pos >= 0:
+                    tail = lines[si][pos:]
+            if TAIL in ns or ALT_TAIL in ns:
                 # 判读已给完整第 4 行（正文＋纪律串）→ 整行替换；再拼 tail 会使纪律串重复
                 new_line = ns
             else:
                 new_line = ns + tail
-            if new_line.count(TAIL) != 1:
-                print(f"  ! 纪律串出现 {new_line.count(TAIL)} 次（须恰 1 次）: {key}", file=sys.stderr)
-                n_err += 1
-                continue
+            # 纪律串守恒：原行有哪种收尾，新行就须恰含该收尾 1 次；原行无收尾（英文结尾等）不设限
+            for mk in (TAIL, ALT_TAIL):
+                if mk in tail and new_line.count(mk) != 1:
+                    print(f"  ! 纪律串出现 {new_line.count(mk)} 次（须恰 1 次）: {key}", file=sys.stderr)
+                    n_err += 1
+                    break
             lines[si] = new_line
             n_apply += 1
         if n_err:
