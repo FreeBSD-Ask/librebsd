@@ -14,7 +14,7 @@
 
 - 模型：`senseaudio-asr-stream-1.5-260910`（主理人指定），走 **WS 流式端点**（HTTP 转写端点不收此模型，实测 500）。
 - 参数：16k mono s16le PCM（ffmpeg 9.0 解码，YouTube 期 16k.wav 全部 0 字节假文件、须由 mp3 现解码），server_vad，句级＋字级时间戳 on、diarization on（degraded，speaker 留空）、**smart_edit off（verbatim 保真）**。
-- **术语提交（主理人令，参见在线文档）**：`session.update` 的 `transcription.keywords` 热词数组提交领域术语（~44 词）＋ `transcription.prompt` 识别提示词。wave1 之前的已转期不带热词，复核不过才用 `--force` 重转。
+- **术语提交（已撤销，2026-09-29 复核实证）**：曾按主理人令提交 `keywords`＋`prompt`；复核发现流式模型会回声泄漏提示词块并诱发臆造模板段（tb1 期 25-31 六期 fail 实证），故撤销、回归纯净配置；fail 期 `--force` 重转。
 - 实测 7.5–8 倍实时；单会话 30 分钟 PCM 分块，utterance 时间戳加块偏移。
 - fallback：`senseaudio-asr-pro-1.5-260319`（HTTP file_id 直传）。
 
