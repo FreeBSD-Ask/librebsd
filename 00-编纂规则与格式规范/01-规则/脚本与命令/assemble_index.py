@@ -40,6 +40,7 @@ import base64
 import html
 import importlib.util
 import io
+import json
 import pathlib
 import re
 import sys
@@ -56,6 +57,7 @@ THEME_JS = BASE / "assets" / "theme-preset.js"
 DOC_JS = BASE / "assets" / "doc.js"
 OUTLINE = BASE / "data" / "outline.txt"
 CATALOG = BASE / "data" / "catalog.json"
+UI_STRINGS = BASE / "data" / "ui-strings.json"
 SCHEMA = BASE / "data" / "schema.jsonld"
 # 品牌资源：**页面资产层**承载页面用派生件（2026-09-18 第十六批）
 #   - 源：仓库根 logo.svg（1336px 光栅内嵌）／favicon.ico（单帧 256²）
@@ -191,21 +193,24 @@ def render_outline(vols):
 
 def render_toc_static(vols):
     """P3-2：无脚本静态目录（noscript 回退）——左栏卷+章、右栏全量节。
-    标记与 assets/doc.js 动态版同 class，便于共用样式；不含需 JS 的折叠控件。"""
+    标记与 assets/doc.js 动态版同 class，便于共用样式；不含需 JS 的折叠控件。
+    2026-09-30：题面一律经 esc() 转义——此前直出原文，致 `AT&T` 等以裸 `&`
+    输出（与内容区 `&amp;` 不一致，严格校验不通过），见 98 号文 §八·丙-1。"""
     left = ['<ul class="toc-left-list">']
     right = []
     for i, v in enumerate(vols, 1):
-        left.append('<li class="toc-vol"><a href="#vol-%d" data-target="vol-%d">%s</a>' % (i, i, v["title"]))
+        left.append('<li class="toc-vol"><a href="#vol-%d" data-target="vol-%d">%s</a>'
+                    % (i, i, esc(v["title"])))
         left.append('<ul class="toc-ch-list">')
         for m, ch in enumerate(v["chapters"], 1):
             left.append('<li><a href="#vol-%d-ch-%d" data-target="vol-%d-ch-%d">%s</a></li>'
-                        % (i, m, i, m, ch["title"]))
-            right.append('<div class="toc-sec-title">%s</div>' % ch["title"])
+                        % (i, m, i, m, esc(ch["title"])))
+            right.append('<div class="toc-sec-title">%s</div>' % esc(ch["title"]))
             right.append('<ul class="toc-sec-list">')
             for num, title, src, pre in ch["secs"]:
                 sid = "vol-%d-ch-%d-sec-%s" % (i, m, num.replace(".", "-"))
                 right.append('<li><a href="#%s" data-target="%s"><span class="sec-num">%s</span> %s</a></li>'
-                             % (sid, sid, num, title))
+                             % (sid, sid, esc(num), esc(title)))
             right.append('</ul>')
         left.append('</ul>')
         left.append('</li>')
@@ -247,6 +252,15 @@ def data_uri(path, mime):
 
 def assemble():
     tpl = read(TPL)
+    # 非正文文案层（2026-09-30 立）：先替换 {{UI:<键>}}，再走度量替换，
+    #   使文案内 {{TRIPLE}}／{{N_CH_MAIN}} 等派生值可解析（顺序不可颠倒）。
+    _ui = json.loads(read(UI_STRINGS))
+    _ui_flat = {k: v for k, v in _ui.items() if not k.startswith("_") and isinstance(v, str)}
+    for _k, _v in _ui_flat.items():
+        tpl = tpl.replace("{{UI:%s}}" % _k, _v)
+    _left_ui = re.findall(r"\{\{UI:[^}]+\}\}", tpl)
+    if _left_ui:
+        sys.exit("模板存在未替换 UI 占位符：%s" % sorted(set(_left_ui)))
     vols = parse_outline(read(OUTLINE))
     met = derive_metrics(vols)
     met["HAS_PART"] = derive_has_part(vols)
@@ -264,6 +278,19 @@ def assemble():
     for k, v in met.items():
         tpl = tpl.replace("{{%s}}" % k, str(v))
 
+    # 运行时映射（供行为层 document.getElementById("ui-strings") 读取）：
+    #   先把文案内的派生标记（{{TRIPLE}} 等）解析为实际值——该注入发生在度量替换之后，
+    #   若不预先解析会残留 {{...}} 并触发末尾的「未替换占位符」守卫；仍余标记者剔除并示警。
+    _ui_runtime, _ui_dropped = {}, []
+    for _k, _v in _ui_flat.items():
+        _vv = re.sub(r"\{\{(\w+)\}\}", lambda m: str(met.get(m.group(1), m.group(0))), _v)
+        if "{{" in _vv:
+            _ui_dropped.append(_k)
+            continue
+        _ui_runtime[_k] = _vv
+    if _ui_dropped:
+        print("INFO：运行时映射剔除含未解析标记的键：%s" % sorted(_ui_dropped))
+
     subs = {
         "THEME_JS": read(THEME_JS).strip("\n"),
         "CSS_FORMAT": read(DOC_CSS).strip("\n"),
@@ -277,6 +304,9 @@ def assemble():
         "JS_BEHAVIOR": read(DOC_JS).strip("\n"),
         "LOGO": data_uri(BRAND_LOGO, "image/svg+xml"),
         "FAVICON": data_uri(BRAND_FAVICON, "image/x-icon"),
+        # 非正文文案层 → 行为层运行时映射（同一真相源；"</" 须转义为 "<\/"）
+        "UI_JSON": json.dumps(_ui_runtime, ensure_ascii=False, separators=(",", ":"))
+                   .replace("</", "<\\/"),
     }
     for k, v in subs.items():
         if ("{{%s}}" % k) not in tpl:
