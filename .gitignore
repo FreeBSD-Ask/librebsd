@@ -365,3 +365,7 @@ script/_db_row_mining/supplement_log.jsonl
 !.specify/**/memory/*.json
 !.specify/**/workflows/*.json
 !.specify/**/scripts/**/*.ps1
+
+# Spec Kit 分发件（.specify/exports）需入库：放行该目录下 zip（全局 *.zip 规则原会拦）
+!.specify/exports/
+!.specify/exports/*.zip
