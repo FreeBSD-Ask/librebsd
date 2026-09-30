@@ -6,7 +6,7 @@ Spec Kit 的 `zcode` 集成把上游技能装到 `.zcode/skills/`，但该目录
 
 | 技能 | 用途 |
 | ---- | ---- |
-| `speckit-spec-tasks` | 串接封装：`speckit-specify` → `speckit-tasks` 一次跑完，跳过 plan／implement／converge。用于「一句话需求 → spec.md ＋ tasks.md」 |
+| `speckit-spec-tasks-check` | 一条命令出 Trae Spec 式三件套：`spec.md`（规格）→ `tasks.md`（任务）→ `checklist.md`（验收检查点）。跳过 plan／implement／converge，不建分支 |
 
 ## 同步到运行时（新技能或改完源后执行）
 
