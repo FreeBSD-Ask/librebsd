@@ -92,6 +92,7 @@
 
 - **script/** —— 仅临时产物与中间过程文件（可随时删除、不长期留存；固定脚本/规则引用脚本不放置于此，应置于 `00-编纂规则与格式规范/01-规则/脚本与命令/` 或对应正式目录；详见 [00-编纂规则与格式规范/01-规则/流程规则.md](00-编纂规则与格式规范/01-规则/流程规则.md) 临时文件规则小节）
 - **.trae/specs/** —— Spec 配置（spec.md、tasks.md、checklist.md；含 86 个 spec 子目录，包括 `science-tech-history-structure-2026-07-26/`）
+- **specs/**、**.specify/**、**.zcode/** —— Spec Kit（GitHub SDD 工具链）与 ZCode 工作区路径，**2026-09-30 主理人批准豁免「根目录禁止生成新路径规则」**（详见 [00-编纂规则与格式规范/01-规则/流程规则.md](00-编纂规则与格式规范/01-规则/流程规则.md) 该规则小节「已豁免的 Spec Kit 工具链目录」条）。`specs/NNN-<slug>/` 为 feature 产出（`spec.md`／`tasks.md`／`checklist.md`）；`.specify/` 已入库共享；`.zcode/` 被根 `.gitignore` 忽略不入库
 - **.autocorrectrc**、**.gitattributes**、**.gitignore**、**LICENSE** —— 根目录 Git 与 AutoCorrect 配置（根目录 `README.md` 空壳已删除，不再引用）
 
 ## 规则调用
