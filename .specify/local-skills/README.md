@@ -6,7 +6,7 @@ Spec Kit 的 `zcode` 集成把上游技能装到 `.zcode/skills/`，但该目录
 
 | 技能 | 用途 |
 | ---- | ---- |
-| `speckit-spec-tasks-check` | 一条命令出 Trae Spec 式三件套：`spec.md`（规格）→ `tasks.md`（任务）→ `checklist.md`（验收检查点）。跳过 plan／implement／converge，不建分支 |
+| `speckit-spec-tasks-check` | 一条命令出 Trae Spec 式产物：`spec.md`（规格）→ `plan.md`（计划，超集必需件）→ `tasks.md`（任务）→ `checklist.md`（验收检查点）。跳过 implement／converge，不建分支 |
 
 ## 同步到运行时（新技能或改完源后执行）
 
@@ -15,6 +15,10 @@ cp -r .specify/local-skills/<skill-name> .zcode/skills/<skill-name>
 ```
 
 ZCode 在工作区会话启动时扫描 `.zcode/skills/`，改完需新开会话才生效。
+
+## 为什么必须有 plan.md（超集件）
+
+Spec Kit 的 `setup-tasks.ps1` 与 `check-prerequisites.ps1` 对 `plan.md` 是**硬依赖**（实测：缺失即 `ERROR: plan.md not found` 并 exit 1），故封装把 plan 列为必需前置。
 
 ## 为什么不做成上游技能
 
