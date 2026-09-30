@@ -355,3 +355,13 @@ dslinux_claims.duckdb.bak_fix12109_20260923_093132
 /_tmp
 /script
 script/_db_row_mining/supplement_log.jsonl
+
+# Spec Kit(.specify/) 资产按官方惯例入库共享：放行全局 *.json/*.ps1 通配
+# （本机状态文件由 .specify/.gitignore 自行排除：feature.json、extensions local-config）
+!.specify/
+!.specify/**/init-options.json
+!.specify/**/integration.json
+!.specify/**/integrations/*.json
+!.specify/**/memory/*.json
+!.specify/**/workflows/*.json
+!.specify/**/scripts/**/*.ps1
