@@ -63,10 +63,10 @@ volume: 第13卷-bsd衍生操作系统
 - OpenSSH 10.1 于 2025 年 10 月 6 日发布，修复用户名控制字符注入问题，并新增 SIGINFO 通道日志、PKCS#11 ED25519 支持与 refuse connection 配置项。（BSD Now EP633，[2126.22-2590.12]，L2）
 - Brian Kernighan 在 VCF East 2025 表示只写过一次 Rust 且体验不佳，认为其 crate 与编译链庞大缓慢，同时坦言对 NixOS 与多数发行版并不熟悉。（BSD Now EP633，[2757.82-3220.12]，L1）
 - GhostBSD 25.02 基于 FreeBSD 14.3，新增以 GNUstep 组件与 XFCE 面板组合的 Gershwin 桌面，提供类 macOS 体验。（BSD Now EP633，[3371.86-3563.32]，L2）
-- Johannes Lundberg 向 FreeBSD 邮件列表提交 Wayland 移植进度报告：Wayland 1.12.0 与 Weston 1.12.0 已可在 FreeBSD 上运行，Weston 自带客户端工作正常，xWayland 可承载未移植的 X11 应用（仅手动启动且最大化窗口时正常，疑为 Weston IPC 问题），GTK3 应用如 gedit、Gnumeric 与 XFCE4 终端、XFCE 桌面均可运行，SDL2 的 Wayland 后端经游戏简测通过，i3 兼容合成器 Sway 亦可用；现代 Intel 显卡需 Matt Macy 的新图形驱动工作，并以自维护 ports 树配合 Poudriere 重建图形栈乃至全树；gdm 因依赖 Linux 的 logind 而搁置，社区有意改以 Qt 系的 PCDM 承接。（BSD Now EP173，[279.52-327.5]，L2）
+- Johannes Lundberg 向 FreeBSD 邮件列表提交 Wayland 移植进度报告：Wayland 1.12.0 与 Weston 1.12.0 已可在 FreeBSD 上运行，Weston 自带客户端工作正常，xWayland 可承载未移植的 X11 应用（仅手动启动且最大化窗口时正常，疑为 Weston IPC 问题），GTK3 应用如 gedit、Gnumeric 与 XFCE4 终端均可运行，XFCE 桌面则不支持 GTK3，SDL2 的 Wayland 后端经游戏简测通过，i3 兼容合成器 Sway 亦可用；现代 Intel 显卡需 Matt Macy 的新图形驱动工作，并以自维护 ports 树配合 Poudriere 重建图形栈乃至全树；gdm 因依赖 Linux 的 logind 而搁置，社区有意改以 Qt 系的 PCDM 承接。（BSD Now EP173，[279.52-419.90]，L2）[订正：原 XFCE 桌面均可运行、原 [279.52-327.5]，2026-09-30 SenseAudio 重转核对]
 - Antoine Jacoutot 向 OpenBSD 邮件列表公告 syspatch：面向 -stable 发行版的二进制补丁工具，与 bspatch 式二进制差分不同，它下载经签名的完整文件 tarball 并按安装器方式替换；测试补丁未经 OpenBSD 项目背书且不应信任，反馈须直达其个人邮箱而非污染邮件列表；此前升级 -stable 只能源码重建或重装新快照，syspatch 提供了中间道路，作者期望其随 OpenBSD 6.1 落地，并明确需要使用人数与统计反馈来评估可靠性。（BSD Now EP173，[105.04-203.7]，L2）
 - Dennis Ritchie 撰文追述 Unix 源码中的趣味史：V6 彩蛋“values of B may give rise to DOM”出自 1970 年代初专利打字员打断 ed 打印输出时纸带上的残句，原是物理专利申请中‘贝塔值变化引起畴壁移动’的片段，经 McIlroy 的文语转换实验念出 doom 与 dominance 的谐音而成为实验室的共享珍宝，后被写入 V6 源码——里奇推测大概率出自 Bob Morris，也可能是 Ken；他并澄清“你不会被期望理解这段注释”本意是‘这不会考’式的善意提示而非傲慢挑衅，将其引为贝尔实验室注释质量的 slur 属不公正引申，见过原文者多为 1975 年前后第六版用户或 John Lions 注释书的读者。（BSD Now EP173，[2332.96-2512.8]，L1）
-- Beastie bits 一束：iocell 2.0 发布——一位 FreeBSD 开发者因偏爱 shell 脚本版而分叉原 iocage 并继续演进，Python 重写版则临近发布，两者存储监牢配置的方式相近或可兼容；Ted Unangst 追问 link_ntoa() 究竟谁在调用——该函数缺陷自 1970 年代引入并波及所有 BSD，OpenBSD libc 中已标记弃用，全库检索仅 route 与 netstat 三处引用，或可直接移除；Trent 用其 bhyve 管理框架 iohyve 在 ThinkPad 上的 TrueOS 中启动 Android x86 并公开配置 gist。（BSD Now EP173，[2795.08-2949.74]，L2）
+- Beastie bits 一束：iocell 2.0 发布——一位 FreeBSD 开发者因偏爱 shell 脚本版而分叉原 iocage 并继续演进，Python 重写版则临近发布，两者存储监牢配置的方式相近或可兼容；Ted Unangst 追问 link_ntoa() 究竟谁在调用——该函数缺陷自 1970 年代引入并波及所有 BSD，OpenBSD libc 中已标记弃用，全库检索仅 route 与 netstat 三处引用，或可直接移除；Trent 用其 bhyve 管理框架 iohyve 在 ThinkPad 上的 TrueOS 中启动 Android x86 并公开配置 gist。（BSD Now EP173，[2795.08-3015.90]，L2）[订正：原 [2795.08-2949.74]，2026-09-30 SenseAudio 重转核对]
 - OpenBSD 在 2015 年开发周期推出实验性沙箱机制 tame：以单个系统调用把进程锁定在有限的操作类别（计算、内存管理、网络、文件描述符写操作、打开文件等）之内，限制可层层叠加且一经放弃不可恢复；相比要求围绕能力模型重写程序的 Capsicum，tame 以更小改造成本换取快速普及，内核部分已合入源码树，userland 改动陆续跟进，cat、ping、httpd、ntpd、syslogd、tcpdump、traceroute 等 29 个基础程序已开始接入。（BSD Now EP99，[87.36-139.34]，L2）
 - GLib 维护者 Ryan Lortie 以当事人身份拆解 KDBus 的动因与设计：现行 D-Bus 依赖系统级与会话级两个用户态守护进程中转消息，一次调用需四次上下文切换并伴随大量数据拷贝，且规范强制守护进程逐项校验；KDBus 将内核本身变为消息传递机制，改传不透明数据块并把校验责任移至接收方，其关键依赖 MemFD 配合 sealing，让发送方承诺缓冲区不可变并由内核背书，而这一机制在 BSD 上完全不存在，构成移植的硬缺口；他坦言此前多次把 D-Bus 塞进内核的尝试“皆以失败告终”（2662.99-2677.20），本次团队更强但进展依然艰难。（BSD Now EP99，[2488.84-2649.36]，L1）
 - 访谈从 BSD 侧揭示跨平台移植的结构性障碍：Baptiste 列举 kqueue64 缺失（Apple 已有实现而 FreeBSD 无人认领）、文件系统监控机制（inotify 或 FSEvents 类）空白、systemd 所提供 API 需要等价替代三座大山；Ryan Lortie 则从上游视角呼吁 BSD 开发者尽早介入 API 设计而非发布后移植，指出在 FreeBSD 上实现“类似 KDBus”的东西意味着重复承担序列化、消息传递与凭据检查的全部表面面积，而早期参与讨论甚至可能反过来改进 Linux 侧的设计。（BSD Now EP99，[2718.62-2790.24]，L1）
@@ -74,9 +74,9 @@ volume: 第13卷-bsd衍生操作系统
 - Ed Maste 首次接触 BSD 并非经由三大发行版本体，而是在滑铁卢一家视频流硬件初创公司实习时接触采用 BSD 网络栈的 VxWorks；2000 年代初其新公司需同时维持大量并发 TCP 连接，因 FreeBSD 的 kqueue 已可用而 Linux 的 epoll 尚未成熟而选定 FreeBSD，此后在公司 FreeBSD 衍生系统中负责推动修改回流上游，2012 年前后因其社区工作受基金会董事会注意而入会任项目开发总监。（BSD Now EP75，[973.16-1139.82]，L1）
 - 基金会资助的自我定位是填补社区无人承担的空白：每年董事会会议基于用户、大型企业与个人支持者的反馈确定高优先主题，当年度定为安全、性能与开发者工具三项，典型如人人需要却无人愿独自投入的工具链；资助形式分面向个人的定点项目资助与全职员工承担的长期项目两类，最终取舍由董事会裁量。（BSD Now EP75，[1144.06-1294.33]，L1）
 - 主持人 Kris Moore 以 PC-BSD 开发者身份宣布 10.1.1 季度版：底层仍为 FreeBSD 10.1，新增基于 boot environments 与 chroot 技巧的后台自动更新（使用中系统不被改动，重启即进入新环境）、全套工具迁移至 Qt5、提供 OVA 虚拟机镜像，并以 GELI v7 配合 GRUB 实现单加密 zpool 的全盘加密启动，不再留未加密的引导分区。（BSD Now EP75，[3292.72-3389.12]，L1）
-- Lumina 由 Ken Moore 开发，采用三条款 BSD 许可证，专为 FreeBSD 原生编写而非自 Linux 移植，依赖 Xorg、Qt 与 Fluxbox 窗口管理器。（BSD Now EP54，[3448.90-3497.98]，L1）
+- Lumina 由 Ken Moore 开发，采用三条款 BSD 许可证，专为 FreeBSD 原生编写而非自 Linux 移植，依赖 Xorg、Qt 与 Fluxbox 窗口管理器。（BSD Now EP54，[3448.90-3488.4]，L1）[订正：原 [3448.90-3497.98]，2026-09-30 SenseAudio 重转核对]
 - Lumina 0.6.2 随 PC-BSD 10.0.3 发布，仍处 beta，但在轻量笔记本上 CPU 占用低于半个百分点、整机内存约 120 MB。（BSD Now EP54，[3491.66-3526.78]，L1）
-- Lumina 附带 Insight 文件管理器，可浏览 ZFS 快照实现类似时光机的文件恢复，并集成书签、标签页与多媒体浏览。（BSD Now EP54，[4225.74-4268.26]，L1）
+- Lumina 附带 Insight 文件管理器，可浏览 ZFS 快照实现类似时光机的文件恢复，并集成书签、标签页与多媒体浏览。（BSD Now EP54，[4219.7-4454.0]，L1）[订正：原 [4225.74-4268.26]，2026-09-30 SenseAudio 重转核对]
 - Lumina 已提交进入 FreeBSD ports 树，PC-BSD 亦提供对应包，后续社区将其移植到 OpenBSD 与 DragonFly BSD。（BSD Now EP54，[3542.62-3548.58]，L1）
 - Colin Percival 自述 FreeBSD 发布工程长期处于由发布工程师即兴决定的临时状态，他接任后引入按季度排布、覆盖未来五年的发布日历，使 minor 版本节奏可预期。（BSD Now EP580，[476.24-547.40]，L1）
 - Colin 将 FreeBSD 主版本支持期由五年缩减为四年，以对齐每两年一次的主版本节奏，避免同时维护三个稳定分支带来的上游 OpenSSL、编译器与 ports 兼容负担。（BSD Now EP580，[630.52-756.16]，L1）
@@ -122,7 +122,7 @@ volume: 第13卷-bsd衍生操作系统
 - Jim Salter 在 Ars Technica 发表的 GhostBSD 评测。（BSD Now EP348，[483.98-491.34]，L2）
 - OpenBSD malloc 内部机制博客及所引 otto 的 malloc 论文、PHK malloc 论文与旧提交记录。（BSD Now EP348，[1381.56-1400.8]，L3）
 - 提及 NetBSD 团队论文 KLEAK：以污点追踪标记内核内存并扫描内核与用户态交换缓冲区，在 NetBSD 与 FreeBSD 11.2 上共检出 21 处此前未知的内核内存泄漏。（BSD Now EP276，[2050.46-2252.04]，L2）
-- 提及 FreeBSD 12.0 的 ddb 压缩崩溃转储、bectl 引导环境控制工具导入基础系统，以及 pf 经 RM 锁替换 RW 锁带来的性能提升。（BSD Now EP276，[277.06-292.20]，L2）
+- 提及 FreeBSD 12.0 的 ddb 压缩崩溃转储、bectl 引导环境控制工具导入基础系统，以及 pf 经 RM 锁替换 RW 锁带来的性能提升。（BSD Now EP276，[274.80-899.70]，L2）[订正：原 [277.06-292.20]，2026-09-30 SenseAudio 重转核对]
 - Klara Systems 的 OpenZFS 2.4 路线图文章。（BSD Now EP633，[379.98-706.22]，L2）
 - Ed Brayden 于 worksinprogress 的《Magical Systems Thinking》。（BSD Now EP633，[897.06-1603.88]，L2）
 - fastcode.io 关于 VMware 收购与 Bitnami 收费的报道。（BSD Now EP633，[1612.96-2123.00]，L2）
@@ -187,7 +187,7 @@ volume: 第13卷-bsd衍生操作系统
 - 节目所述 jails“2000 年首现”与章节考据的 1999-04-28 首次提交存在口径差异，须以 FreeBSD commit 记录为准；FreeBSD 12.0 具体特性以官方 Release Notes 为准。　[存疑脚注] jails 首次提交日期以代码仓库 commit 为准，播客口径为发布年份。（BSD Now EP276，[1155.72-1164.06]，L3）
 - 转录将 Klara Systems 记作 Clara、将 Brian Kernighan 记作 Koenigan 或 Kernigan，人名与机构名存在语音转写偏差。　[存疑脚注] 机构与人物名称存在转写偏差，须以原文核验（BSD Now EP633，[2753.12-2784.64]，L4）
 - Bitnami 定价在转录中出现 600 亿、60 万与 7.2 万等不一致数字，具体金额须以 AWS Marketplace 与官方公告核验。　[存疑脚注] 价格数字存在转写歧义，未与官方定价页核验（BSD Now EP633，[1666.68-2041.44]，L4）
-- OpenBSD 与 Arch Linux 双系统互毁 GPT 备份头的辨析：读者在 gdisk 中连报磁盘尺寸与主头不符、备份头无效、主备分区表不一致、CRC 失配四重警告，先按提示以主表重建备份表仍反复复现，最终以 MBR 加 LUKS 与 LVM 的非常规组合绕过；主持人推断两系统对该盘一个按 4K 扇区、一个按 512 字节扇区定位盘尾备份头，导致互相覆盖后无法互认，并可能只是特定硬盘的 quirk；主持人借此事强调详细记录、多次复现并投递邮件列表的边界用例报告文化。　[存疑脚注] 4K 与 512 字节扇区判定差异仅系主持人远程假设，最终根因取决于读者后续向 tech 邮件列表的报告，转写中未见定论。（BSD Now EP173，[811.82-901.68]，L4）
+- OpenBSD 与 Arch Linux 双系统互毁 GPT 备份头的辨析：读者在 gdisk 中连报磁盘尺寸与主头不符、备份头无效、主备分区表不一致、CRC 失配四重警告，先按提示以主表重建备份表仍反复复现，最终以 MBR 加 LUKS 与 LVM 的非常规组合绕过；主持人推断两系统对该盘一个按 4K 扇区、一个按 512 字节扇区定位盘尾备份头，导致互相覆盖后无法互认，并可能只是特定硬盘的 quirk；主持人借此事强调详细记录、多次复现并投递邮件列表的边界用例报告文化。　[存疑脚注] 4K 与 512 字节扇区判定差异仅系主持人远程假设，最终根因取决于读者后续向 tech 邮件列表的报告，转写中未见定论。（BSD Now EP173，[679.70-901.68]，L4）[订正：原 [811.82-901.68]，2026-09-30 SenseAudio 重转核对]
 - 转写专名失真集中且需核证：新闻段称 tame 由 Nicholas Marriott 编写（66.50-77.32），与 tame 主要由 Theo de Raadt 等主导开发的公开记录相悖，应以 OpenBSD 源码树提交记录核证；“Matt Aaron”应为 ZFS 共同设计者 Matthew Ahrens（4104.28-4113.14），“Ted Ewanks”应为 Ted Unangst，“Antoine Jacuto”应为 Antoine Jacoutot，“CopMast”应为 FreeBSD GNOME 团队长期维护者 Koop Mast，“IOKage”应为 iocage，“do-ass”应为 doas；访谈嘉宾 Baptiste 全名未在转写中出现。上述失真均可由上下文辨认，不影响语义判读，故整体仍判可用，但涉及人名的引用须先经邮件列表存档与源码提交记录复核。　[存疑脚注] tame 作者归属与上述专名还原均系依据上下文与公开史料的推断，尚未逐一以 OpenBSD 源码树、邮件列表存档及人物自述复核。（BSD Now EP99，[66.50-77.32]，L4）
 - Ed Maste 对基金会已结项目的内部评估并不齐一：autofs 自动挂载守护进程与内核态 iSCSI 栈被引为部署反馈良好的成功案例，而 vt 控制台更新虽早已是 current 默认、其本人亦使用年余，却自认远未达预期，项目体量超出当初预估而仍在收尾——同为基金会出资，工程完成度因项目而异，资金投入与成果兑现并无必然对应。（BSD Now EP75，[1484.46-1590.74]，L1）
 - Lumina 0.6.2 仍为 beta，转录中对其稳定性与未来形态的判断属开发者预期，最终演进需以 PC-BSD/TrueOS 历史为准。　[存疑脚注] 开发者对未来稳定性的判断为单方预期，未形成多源佐证（BSD Now EP54，[3513.38-3526.78]，L4）

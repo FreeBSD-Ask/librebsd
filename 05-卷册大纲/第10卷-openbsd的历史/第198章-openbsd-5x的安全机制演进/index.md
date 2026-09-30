@@ -66,15 +66,15 @@ volume: 第10卷-openbsd的历史
 - Michael W. Lucas 自述 FreeBSD Mastery: Storage Essentials 的成书动机：自 Absolute FreeBSD 之后，FreeBSD 存储栈经历了 CAM 层接管设备命名、默认分区方案转向 GPT 等重大变化，需要一次自底向上的连贯文档更新；该书从 CAM 与 GEOM 的 provider/consumer 堆叠讲起，对 UFS/FFS 做深度剖析，并论证 UFS 在许多场景仍是恰当工具，而体量庞大的 ZFS 留待单独成书。（BSD Now EP68，[1803.65-1936.66]，L1）
 - 本期新闻聚合呈现 2014 年末 BSD 生态的多线动态：OpenSMTPD 自 OpenBSD 5.6 起成为默认邮件传输代理，sendmail 将于 5.7 完全移除，并发布邮件过滤 API 草案；OpenBSD 自研 httpd 于 5.6 首秀，以特权分离、默认 chroot 与近乎自然语言的配置语法获得早期用户好评；FreeBSD 的 opencrypto 框架在 FreeBSD Foundation 与 Netgate 赞助下加入 AES-ICM/GCM 模式与 AES-NI 支持，修复了一处可伪造消息的时序信息泄露，部分代码借自 OpenBSD 与 NetBSD。（BSD Now EP68，[3695.95-4047.35]，L2）
 - Ted Unangst 自述约 2000 年接触 OpenBSD 并因其稳定性成为用户，此后 11 年担任 OpenBSD 开发者，因提交大规模 VFS 锁修复 diff 而获得 commit 权限。（BSD Now EP23，[728.56-800.12]，L1）
-- signify 是仅用于密码学签名与校验的简单工具，不含加密功能；自 2013 年 12 月 21 日开发，Ted Unangst 为主要作者，Marc Espie 编写包工具集成，Alexander Hall 编写安装器部分。（BSD Now EP23，[898.44-1006.76]，L1）
+- signify 是仅用于密码学签名与校验的简单工具，不含加密功能；自 2013 年 12 月 21 日开发，Ted Unangst 为主要作者，Marc Espie 编写包工具集成，Alexander Hall 编写安装器部分。（BSD Now EP23，[898.44-991.80]，L1） [订正：原 [898.44-1006.76]，2026-09-30 SenseAudio 重转核对]
 - OpenBSD 自 5.5 起以 signify 签名基础发行集与第三方包，采用 SHA256.sig 签名校验和清单；使用单一密钥而非 PKI 信任链，公钥检入源码库并经邮件列表扩散。（BSD Now EP23，[934.36-1387.66]，L1）
 - FreeBSD Foundation 2013 年筹款总额为 768,562 美元，来自约 1,659 名捐赠者，并已启动 2014 年百万美元目标。（BSD Now EP23，[76.32-139.56]，L2）
 - 教程演示自建 NTP 服务器，并报道 OpenBSD 在 BeagleBone Black 上的 ARMv7 移植经验，涉及不同存储选项与已知问题的规避。（BSD Now EP23，[428.10-474.86]，L2）
-- George Neville-Neal 自述早期在加州大学做软件基础设施支持并结识 CSRG，后参与 NetBSD 笔记本移植，最终长期使用 FreeBSD，并担任 FreeBSD Foundation 董事与 committer。（BSD Now EP22，[1375.20-1461.06]，L1）
-- FreeBSD Journal 由 FreeBSD Foundation 资助一年，为双月刊纯电子杂志，经 Kindle、Google Play 与 Apple 应用商店发行；编委会包括 John Baldwin、Kirk McKusick、Robert Watson、Michael Lucas、Hiroki Sato 等。（BSD Now EP22，[1641.94-1716.58]，L1）
-- 创刊号以 FreeBSD 10 为主题，收录 David Chisnall 论 Clang、John Baldwin 论内核 sysctl 节点、Tim Kientzle 论 BeagleBone Black 及 Alan Jude 论 ZFS 等文章，并设 ports 报告与 SVN 更新等固定栏目。（BSD Now EP22，[1801.70-1917.06]，L1）
+- George Neville-Neal 自述早期在加州大学做软件基础设施支持并结识 CSRG，后参与 NetBSD 笔记本移植，最终长期使用 FreeBSD，并担任 FreeBSD Foundation 董事与 committer。（BSD Now EP22，[1374.30-1453.40]，L1） [订正：原 [1375.20-1461.06]，2026-09-30 SenseAudio 重转核对]
+- FreeBSD Journal 由 FreeBSD Foundation 资助一年，为双月刊纯电子杂志，经 Kindle、Google Play 与 Apple 应用商店发行；编委会包括 John Baldwin、Kirk McKusick、Robert Watson、Michael Lucas、Hiroki Sato 等。（BSD Now EP22，[1655.90-1716.58]，L1） [订正：原 [1641.94-1716.58]，2026-09-30 SenseAudio 重转核对]
+- 创刊号以 FreeBSD 10 为主题，收录 David Chisnall 论 Clang、John Baldwin 论内核 sysctl 节点、Tim Kientzle 论 BeagleBone Black 及 Alan Jude 论 ZFS 等文章，并设 ports 报告与 SVN 更新等固定栏目。（BSD Now EP22，[1816.30-1893.50]，L1） [订正：原 [1801.70-1917.06]，2026-09-30 SenseAudio 重转核对]
 - 教程演示 OpenBSD 5.4 的 errata 补丁应用，以及从 CVS 检出 current/stable、先升级内核再升级 userland 的自建流程，强调遵循官方补丁说明以避免系统损坏。（BSD Now EP22，[3009.78-3553.32]，L2）
-- FreeBSD 2013 年第四季度状态报告涵盖 EC2（Colin Percival）、Xen（Justin Gibbs、Roger Pau Monné）、CAM 锁与 iSCSI（Alexander Motin）及 iwn 无线驱动（Adrian Chadd）等进展。（BSD Now EP22，[383.96-451.54]，L2）
+- FreeBSD 2013 年第四季度状态报告涵盖 EC2（Colin Percival）、Xen（Justin Gibbs、Roger Pau Monné）、CAM 锁（Alexander Motin）、原生 iSCSI 栈及 iwn 无线驱动（Adrian Chadd）等进展。（BSD Now EP22，[393.80-463.20]，L2） [订正：原"CAM 锁与 iSCSI（Alexander Motin）"及 [383.96-451.54]，2026-09-30 SenseAudio 重转核对]
 - 本期以 installfest 形式逐项演示 FreeBSD 10.0、OpenBSD 5.4、NetBSD 6.1.2、DragonFly BSD 3.6 与 PC-BSD 10.0 的安装流程，比较文本式、引导式与图形式安装器的交互差异。（BSD Now EP19，[1011.60-1046.72]，L2）
 - FreeBSD 10 安装器新增键位测试、自动 root-on-ZFS、GELI 磁盘加密与 shell 安装模式，改进主要由 Devin Teske 与 Warren Block 等完成。（BSD Now EP19，[1069.32-1330.48]，L2）
 - OpenBSD 在 5.4 前后提交 signify，用于签名基础发行集与第三方包，以解决此前 SHA256 校验在 X 集同步时因多机多时构建而出现的时序错配。（BSD Now EP19，[321.52-347.64]，L2）
@@ -96,12 +96,12 @@ volume: 第10卷-openbsd的历史
 - 总纲10 动手者创造历史：全期叙事由动手者的直接经验驱动：Kris Moore 自述用闲置旧双核机器改造 TrueOS 路由器并撰文记录全过程，听众详述自建 OpenBSD 防火墙的硬件选型与实测考量，节目还预告社区周末聚会集体组装 FreeBSD 路由器以替换不可信的消费级设备——防火墙与路由器的历史由此呈现为普通使用者动手改造的实践史，而非厂商发布史。（BSD Now EP72，[631.52-1096.14]，L1）
 - 总纲5 没有必然性，只有偶然性：Lucas 对磁盘子系统史的叙述揭示技术形态的偶然塑形：x86 移植时 BSD 需要五至二十个分区而 MBR 只支持四个，这一硬件偶然约束迫使开发者把 disklabel 塞入 MBR，造就分区中的分区即 slice 的术语错位与遍布内核的丑陋代码；他调侃“如果不得不写真正丑陋的代码，就让它遍布各处”（2806.19-2808.52），恰说明当下的结构并非必然演进的产物，而是偶然条件下的权宜沉淀。（BSD Now EP68，[2624.89-2819.89]，L1）
 - 总纲4 分离聚合是永恒规律：反馈段转述的 ZFS 设备移除支持流向——先提交至 Delphix 树，随其发布上游至 Illumos，再进入 FreeBSD——呈现了 Oracle 之外 ZFS 代码在多个项目间的分叉与回流；代码在分离与聚合的循环中流转而非单向进步，上游路径本身即成为跨项目治理结构的记录。（BSD Now EP68，[4440.04-4535.39]，L2）
-- 总纲10 动手者创造历史：总纲10 动手者创造历史：Ted Unangst、Marc Espie 与 Alexander Hall 以具体工具开发补齐 OpenBSD 发布签名空白。（BSD Now EP23，[949.00-1006.76]，L1）
+- 总纲10 动手者创造历史：总纲10 动手者创造历史：Ted Unangst、Marc Espie 与 Alexander Hall 以具体工具开发补齐 OpenBSD 发布签名空白。（BSD Now EP23，[949.00-991.80]，L1） [订正：原 [949.00-1006.76]，2026-09-30 SenseAudio 重转核对]
 - 总纲5 没有必然性，只有偶然性：总纲5 没有必然性，只有偶然性：Theo 的一封邮件触发 signify 开发，当事人明确不知动机，说明安全工程由具体事件偶然推动。（BSD Now EP23，[1615.30-1651.60]，L1）
 - 总纲22 知识注定过时：总纲22 知识注定过时：signify 以极简设计替代 GPG 的部分用途，体现工具随需求演进而更替。（BSD Now EP23，[898.44-930.08]，L1）
 - 总纲10 动手者创造历史：总纲10 动手者创造历史：George Neville-Neal 与编委会以出版实践填补 FreeBSD 无专属杂志的空白，将社区知识沉淀为周期性出版事件。（BSD Now EP22，[1492.06-1716.58]，L1）
 - 总纲9 经验优先：总纲9 经验优先：教程强调按官方补丁与更新文档操作，避免因跳过说明导致 SSH 无法启动等实际故障。（BSD Now EP22，[3492.76-3530.20]，L2）
-- 总纲15 文化即形式主义：总纲15 文化即形式主义：杂志作为社区文化的形式化载体，将分散于论坛与邮件列表的知识加以编排和定期发布。（BSD Now EP22，[1500.10-1553.54]，L1）
+- 总纲15 文化即形式主义：总纲15 文化即形式主义：杂志作为社区文化的形式化载体，将分散于论坛与邮件列表的知识加以编排和定期发布。（BSD Now EP22，[1500.10-1527.40]，L1） [订正：原 [1500.10-1553.54]，2026-09-30 SenseAudio 重转核对]
 - 总纲10 动手者创造历史：总纲10 动手者创造历史：Devin Teske、Warren Block、Julio Merino 等以具体工程改进安装器与测试基础设施，推动发行流程演进。（BSD Now EP19，[1069.32-1300.48]，L2）
 - 总纲22 知识注定过时：总纲22 知识注定过时：sysinstall 被 bsdconfig 与脚本化安装器取代，旧安装方式随版本演进而淘汰。（BSD Now EP19，[2238.16-2399.96]，L2）
 - 总纲8 本体论上各方平等：总纲8 本体论上各方平等：installfest 将五大 BSD 并置演示，体现多分支在本体论上平等对待的叙述方式。（BSD Now EP19，[1011.60-1046.72]，L2）

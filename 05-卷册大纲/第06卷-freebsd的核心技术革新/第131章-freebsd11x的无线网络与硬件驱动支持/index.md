@@ -78,10 +78,10 @@ volume: 第06卷-freebsd的核心技术革新
 - FreeBSD 基金会 4 月更新记录授予 Edward Napierala 项目资助，以 CTL 为后端开发 USB 大容量存储目标驱动，使 BeagleBone Black、Raspberry Pi Zero 等嵌入式平台可模拟 U 盘。（BSD Now EP192，[210.02-300.24]，L2）
 - Patrick M. Hausen 回忆 1994 年与 Jordan Hubbard 会面，获 Walnut Creek 全套 CD-ROM 与 50 张 FreeBSD 1.1 光盘回德国推广，其后公司以 FreeBSD 3/4 运行服务器。（BSD Now EP192，[1270.68-1320.66]，L1）
 - Rick Macklem 发布 pNFS 服务器首个测试征集，架构为单个元数据服务器加多个数据服务器，纯 FreeBSD 实现，当前尚不支持冗余。（BSD Now EP192，[5241.34-5535.38]，L2）
-- Adrian Chadd 自述 FreeBSD 无线栈在 AP 与 station 模式下工作良好，但仅有两名左右开发者，边界情况缺乏人手。（BSD Now EP55，[1419.88-1458.76]，L1）
-- Atheros 与 Intel 因开放源码与文档而成为 FreeBSD 无线的主要方向；Broadcom 与 Marvell 在 Sam Leffler 离开后未再更新，成为明显短板。（BSD Now EP55，[1462.00-1544.32]，L1）
+- Adrian Chadd 自述 FreeBSD 无线栈在 AP 与 station 模式下工作良好，但仅有两名左右开发者，边界情况缺乏人手。（BSD Now EP55，[1430.5-1459.1]，L1）[订正：原 [1419.88-1458.76]，2026-09-30 SenseAudio 重转核对]
+- Atheros 与 Intel 因开放源码与文档而成为 FreeBSD 无线的主要方向；Broadcom 与 Marvell 在 Sam Leffler 离开后未再更新，成为明显短板。（BSD Now EP55，[1459.3-1648.2]，L1）[订正：原 [1462.00-1544.32]，2026-09-30 SenseAudio 重转核对]
 - Adrian Chadd 恢复因监管顾虑而停用的 monitor mode 注入，使 Kismet 与 Aircrack-NG 重新可用，同时承受实现监管域强制的压力。（BSD Now EP55，[1777.56-1881.62]，L1）
-- OpenBSD 的 systemd 兼容层仅为 hostnamed、localed、timedated、logind 的 shim，以让 GNOME 运行，并非移植 systemd 本体或替换 init。（BSD Now EP55，[3493.32-3567.32]，L2）
+- OpenBSD 的 systemd 兼容层仅为 hostnamed、localed、timedated、logind 的 shim，以让 GNOME 运行，并非移植 systemd 本体或替换 init。（BSD Now EP55，[3505.2-3567.32]，L2）[订正：原 [3493.32-3567.32]，2026-09-30 SenseAudio 重转核对]
 
 **史料**：
 
@@ -104,7 +104,7 @@ volume: 第06卷-freebsd的核心技术革新
 - 总纲9 经验优先：主持人与其访谈对象依据长期实际部署经验判断 BSD 相对 Linux 的稳定性与文档质量，经验先于抽象理论。（BSD Now EP192，[1425.04-1488.94]，L1）
 - 总纲4 分离聚合是永恒规律：pNFS 把单一 NFS 服务拆分为元数据节点与数据节点，再聚合为统一文件系统，体现分离聚合的循环。（BSD Now EP192，[5241.34-5535.38]，L2）
 - 总纲20 历史地理塑造思想土壤：总纲20 历史地理塑造思想土壤：无线厂商是否开放文档、是否以 Linux 为主场，直接塑造了 FreeBSD 无线栈的可行范围。（BSD Now EP55，[1462.00-1603.66]，L1）
-- 总纲9 经验优先：总纲9 经验优先：Adrian Chadd 以驱动开发与真机测试的一线经验陈述无线栈优劣，而非依赖纸面规格。（BSD Now EP55，[1419.88-1447.00]，L1）
+- 总纲9 经验优先：总纲9 经验优先：Adrian Chadd 以驱动开发与真机测试的一线经验陈述无线栈优劣，而非依赖纸面规格。（BSD Now EP55，[1430.5-1447.00]，L1）[订正：原 [1419.88-1447.00]，2026-09-30 SenseAudio 重转核对]
 - 总纲4 分离聚合是永恒规律：总纲4 分离聚合是永恒规律：各 BSD 共享 net80211 后各自分化，DragonFly BSD 又聚合 FreeBSD 更新栈，构成反复的分合。（BSD Now EP55，[1657.66-1722.12]，L1）
 
 **辨析**：
