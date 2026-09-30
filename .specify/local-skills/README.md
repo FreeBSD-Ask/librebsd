@@ -14,10 +14,11 @@ Spec Kit 的 `zcode` 集成把上游技能装到 `.zcode/skills/`，但该目录
 
 ```text
 speckit-spec-tasks-check/
-├── SKILL.md        技能本体（含环境探测：有 Spec Kit 走上游管道，无则用 assets 模板直出）
-├── INSTALL.md      安装说明（含目标机两种装法与验证步骤）
-└── assets/         规格／计划／任务／检查点四份模板（取自 GitHub Spec Kit，MIT）
+├── SKILL.md        技能本体（含环境探测：项目未装 Spec Kit 时自动安装，再走上游管道）
+└── INSTALL.md      安装说明（前置条件、自动安装行为、手工命令、验证步骤）
 ```
+
+包内**不含模板**——四件的骨架来自 Spec Kit 上游 `.specify/templates/`；技能会自动把 Spec Kit 装到目标项目（`uv tool install specify-cli` ＋ `specify init --here --integration zcode`）。
 
 ## 安装到运行时（一律全局／用户级）
 
@@ -45,8 +46,8 @@ python -c "import zipfile,os;src=r'.specify/local-skills/speckit-spec-tasks-chec
 
 ## 为什么必须有 plan.md（超集件）
 
-Spec Kit 的 `setup-tasks.ps1` 与 `check-prerequisites.ps1` 对 `plan.md` 是**硬依赖**（实测：缺失即 `ERROR: plan.md not found` 并 exit 1），故封装把 plan 列为必需前置。无 Spec Kit 的环境（模式 B）走包内模板，不受此依赖约束。
+Spec Kit 的 `setup-tasks.ps1` 与 `check-prerequisites.ps1` 对 `plan.md` 是**硬依赖**（实测：缺失即 `ERROR: plan.md not found` 并 exit 1），故封装把 plan 列为必需前置。
 
 ## 为什么不做成上游技能
 
-上游 `speckit-specify`／`speckit-plan`／`speckit-tasks` 由 `specify integration upgrade` 管理，直接改会被升级覆盖。故封装在**有 Spec Kit 时只做引用与串接**（指示 agent 读取并执行上游 SKILL.md），不复制其逻辑——上游升级后行为自动跟随；无 Spec Kit 时才启用包内模板直出。
+上游 `speckit-specify`／`speckit-plan`／`speckit-tasks` 由 `specify integration upgrade` 管理，直接改会被升级覆盖。故封装**只做引用与串接**（指示 agent 读取并执行上游 SKILL.md），不复制其逻辑——上游升级后行为自动跟随。项目未装 Spec Kit 时，封装先自动安装它（`uv tool install specify-cli` ＋ `specify init`，2026-09-30 主理人令：不再自带模板兜底），安装失败即停止报告，不用替代方案糊过去。
