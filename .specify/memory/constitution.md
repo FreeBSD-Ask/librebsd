@@ -1,50 +1,75 @@
-# [PROJECT_NAME] Constitution
-<!-- Example: Spec Constitution, TaskFlow Constitution, etc. -->
+# 《给我自由—一部 BSD 史》编纂项目宪法（Spec Constitution）
+
+<!-- 本文件是 Spec Kit（speckit-*）流程在本仓库的执行宪法。
+     与 CLAUDE.md / 00-编纂规则的关系：
+     - CLAUDE.md 是项目级协作指南（布局、入口、修改规范一览）
+     - 00-编纂规则与格式规范/01-规则/ 目录是**所有规则的唯一来源真相**
+     - 本宪法只提炼「spec/task 流程接手时必须遵守的铁律」并指向既有规则文件，
+       不复制条文、不另立新规；冲突时一律以规则目录最新版为准。 -->
 
 ## Core Principles
 
-### [PRINCIPLE_1_NAME]
-<!-- Example: I. Library-First -->
-[PRINCIPLE_1_DESCRIPTION]
-<!-- Example: Every feature starts as a standalone library; Libraries must be self-contained, independently testable, documented; Clear purpose required - no organizational-only libraries -->
+### I. 学术性是最高规则
 
-### [PRINCIPLE_2_NAME]
-<!-- Example: II. CLI Interface -->
-[PRINCIPLE_2_DESCRIPTION]
-<!-- Example: Every library exposes functionality via CLI; Text in/out protocol: stdin/args → stdout, errors → stderr; Support JSON + human-readable formats -->
+- 不计成本、不计代价，务必确保学术性与学术规范（CLAUDE.md「规则」扩展接口之最高规则）。
+- 编纂方法论双核心强制参照：`02-sacred源材料/shigang.md`（哲学分析）＋`02-sacred源材料/lishidagang.md`（操作标准），不可偏废。
+- 正文严禁出现「一刻哲学」「构造哲学」等自指名称；自反性声明、史观映射字段、证据等级标注均按既有规则执行。
 
-### [PRINCIPLE_3_NAME]
-<!-- Example: III. Test-First (NON-NEGOTIABLE) -->
-[PRINCIPLE_3_DESCRIPTION]
-<!-- Example: TDD mandatory: Tests written → User approved → Tests fail → Then implement; Red-Green-Refactor cycle strictly enforced -->
+### II. 规则唯一权威来源
 
-### [PRINCIPLE_4_NAME]
-<!-- Example: IV. Integration Testing -->
-[PRINCIPLE_4_DESCRIPTION]
-<!-- Example: Focus areas requiring integration tests: New library contract tests, Contract changes, Inter-service communication, Shared schemas -->
+- 所有规则的唯一真相源＝`00-编纂规则与格式规范/01-规则/` 目录；CLAUDE.md 仅作布局概览，不复制规则正文。
+- 冲突时以规则目录最新版为准；本宪法不新增规则、不设与此相反的例外。
+- 撰写或修改任何内容前，先查 `00-编纂规则与格式规范/01-规则/README.md` 获取规则索引与调用方式。
 
-### [PRINCIPLE_5_NAME]
-<!-- Example: V. Observability, VI. Versioning & Breaking Changes, VII. Simplicity -->
-[PRINCIPLE_5_DESCRIPTION]
-<!-- Example: Text I/O ensures debuggability; Structured logging required; Or: MAJOR.MINOR.BUILD format; Or: Start simple, YAGNI principles -->
+### III. 考据三铁律
 
-## [SECTION_2_NAME]
-<!-- Example: Additional Constraints, Security Requirements, Performance Standards, etc. -->
+- **0 信任原则**：一切来源先不可信，逐条核实（考据规则.md）。
+- **三次复查流程**：多源交叉验证，穷尽考据仍存疑必须落盘「存疑」，不擅自定论（存疑处理规则）。
+- **不篡改**：史料原文、原件笔误、圈数字一律照录；OCR/转录保真纪律见 OCR 流水线规则（文本层优先、原文照录）。
 
-[SECTION_2_CONTENT]
-<!-- Example: Technology stack requirements, compliance standards, deployment policies, etc. -->
+### IV. 改源文件铁律
 
-## [SECTION_3_NAME]
-<!-- Example: Development Workflow, Review Process, Quality Gates, etc. -->
+- `重构2026/index.html` 是**装配产物**，唯一写者是 `assemble_index.py`；一切修改只改**源文件**（`data/outline.txt` 等），手工改产物必被覆盖（已在实操中踩过两次）。
+- 目录页每次更新必须两项配套、缺一不可：①联动更新周边文件（口径声明、规则文件、tests 夹具、分工注等逐处同步，历史快照豁免）；②全量测试——装配 → 门禁 → 三套浏览器回归（触及文档格式闸面文件加跑第十件 lint），全绿方算完成，禁止以「改动很小」为由只跑子集。
+- 口径数字（卷/章/节、注数等）以 `index.html` doc-metrics 为唯一权威，数字一律由装配器派生，不手工维护。
 
-[SECTION_3_CONTENT]
-<!-- Example: Code review requirements, testing gates, deployment approval process, etc. -->
+### V. 门禁是「改完必跑」，不是可选
+
+- 目录页结构变动、数据段改动、证据等级写回块后**必跑对应门禁**（audit 系脚本：xref_audit、audit_evidence_level_labels、audit_index_structure、audit_page_assets、audit_data_integrity、audit_server_contract、audit_fixture_freshness、audit_gate_registry、audit_markdown_lint 等）。
+- 新增/修改判据时，须同时确认负向自检「拦下原因正是本组判据」，并跑第十二件 `tri_structure_negtest.py` 全绿——**判据本身也会衰减**，判据有效性须被自证。
+- 门禁一律带真实退出码（tee 会吞 `$?`，须取 PIPESTATUS[0]）。
+
+### VI. 数据库与存储纪律
+
+- 全部数据库 DuckDB 为唯一工作副本（SQLite 原库仅存档 `12-数据库备份/`，5 槽轮换压缩存储）；删除 12- 目录任何内容须主理人明示。
+- 根目录**禁止生成新路径**；确有必要先询问确认。临时脚本只放 `script/`（可随时删除），固定脚本须入 `00-…/01-规则/脚本与命令/` 并登记。
+- 所有落盘文件均入库（网页参考提取正文、md/txt/pdf/epub 全量），sha256 去重。
+- 获得新史料一律按镜像站挖掘与 OCR 流水线规则执行（`--filter=tree:0` 克隆、证据等级真值写入）。
+
+### VII. spec/task 批次受既有批次纪律约束
+
+- 本项目已有「任务书」体系（如 08-核查报告任务书、H1–H5 批次、OCR 任务书、OAA 批次）。Spec Kit 的 spec/tasks 若与此类任务书并存，**任务书仍是该批次的验收上位文件**；spec 用于把需求/口径写清，不得与任务书数字冲突。
+- 每批施工须以磁盘 mtime 为唯一验收依据（任务书约定同）；进度数字以台账/盘面为准，子代理自报不作数。
+- **防双写**：重派前先 cp 快照，不依赖「上报已停」；同片段只能一个施工方。
+- 涉及校验载体失败（`newline` 判定「判空基于卡时靠磁盘快照」）时先恢复再继续。
+
+## Execution Constraints（spec 产物的格式与验收）
+
+### constitution（本文件）的维护
+
+- 与《铁律》冲突内容率一律以规则目录为准；本文件行文指向权威目录，不复制条文。
+- 修改须登记 changelog（`01-项目管理/00-变更记录/`）。
+
+### spec.md 验收场景的写法
+
+- 每条需求须附可判定的验收场景（Given/When/Then 或同等可判句式），不能写「功能正常」这类不可判定措辞（此条对所有任务书亦同）。
+- 需求编号与任务编号须可互相追溯（spec 需求 ↔ tasks 条目 ↔ checklist 项），避免「任务完整但需求未覆盖」的验收缺口。
+- spec 若涉及考据：须引用 source_db＋local_pk 或权威库路径作为证据锚点，不允许指向临时目录。
 
 ## Governance
-<!-- Example: Constitution supersedes all other practices; Amendments require documentation, approval, migration plan -->
 
-[GOVERNANCE_RULES]
-<!-- Example: All PRs/reviews must verify compliance; Complexity must be justified; Use [GUIDANCE_FILE] for runtime development guidance -->
+- **修宪**：修改本文件须主理人批准，并同步更新 changelog；规则目录变更以 `sync_*` 链同步。
+- **违规处置**：任何 spec/tasks 与本 Constitution 冲突时，以本 Constitution + 规则目录为准并停止施工，交由主理人裁决，不自行并轨。
+- **运行时指引**：持续开发指引以 [CLAUDE.md](CLAUDE.md) 与 `00-编纂规则与格式规范/01-规则/README.md` 最新版为准。
 
-**Version**: [CONSTITUTION_VERSION] | **Ratified**: [RATIFICATION_DATE] | **Last Amended**: [LAST_AMENDED_DATE]
-<!-- Example: Version: 2.1.1 | Ratified: 2025-06-13 | Last Amended: 2025-07-16 -->
+**Version**: 1.0 | **Ratified**: 2026-09-30 | **Last Amended**: 2026-09-30
