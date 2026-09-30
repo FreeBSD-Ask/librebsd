@@ -3,8 +3,8 @@
 > **转录批次**：TB3（GLM 视觉重 OCR，2026-09-29）
 > **覆盖范围**：ref 3666–3718（共 53 件，1246 页）
 > **转录方法**：GLM-4.6V 视觉逐页转录，替代原 rapidocr_onnx
-> **数据库状态**：**44/53 件入库**，`fulltext.extraction_method='glm_vision_20260924'`；余 9 件仍为 `rapidocr_onnx`（转录未完成）
-> **key_facts**：**271 条**（id 前缀 `kf-tb3-`；technology 247 + person 24；`confidence='0.7'`；`related_chapter='第01卷-unix的起源'`）
+> **数据库状态**：**53/53 件入库**，`fulltext.extraction_method='glm_vision_20260924'`（2026-09-30 09:24 补齐余下 9 件，见「数据库留痕」）
+> **key_facts**：**349 条**（id 前缀 `kf-tb3-`；technology 317 + person 32；`confidence='0.7'`；`related_chapter='第01卷-unix的起源'`）
 
 本文件为**卷级文献索引**，按 TB4 先例（`TB4文献索引-早期UNIX文档与工具.md`）体例。
 不改动任何章节正文、不引入新锚点格式、不修改 `SUMMARY.md` 与 `chapter_keywords.json`。
@@ -85,21 +85,21 @@
 | 3710 | F.7.1_On_the_Security_of_UNIX | 3 | — | Dennis M. Ritchie（转录署名）撰。UNIX 安全论文：挂载点与 `.mail` 符号链接类攻击面 |
 | 3711 | F.7.2_Password_Security | 6 | — | Robert Morris 与 Ken Thompson（转录署名）撰。`Password Security — A Case History`：密码安全案例史 |
 
-### 待转录（DB 内仍为 `rapidocr_onnx`，正文未替换）
+### 第二批入库（2026-09-30 09:24 补齐，DB 原为 `rapidocr_onnx`）
 
-| Ref | 标题 | 页数 | 年代 | 说明 |
-|-----|------|------|------|------|
-| 3708 | F.6.1_A_Tour_Through_the_Portable_C_Compiler | 25 | 1973 | 磁盘已转录 8/25 页，余 17 页未转录 |
-| 3709 | F.6.2_A_Tour_Through_the_UNIX_C_Compiler | 15 | — | 磁盘已转录 6/15 页，余 9 页未转录 |
-| 3712 | AUUGN-V01.5 | 58 | — | 磁盘已转录 2/58 页，余 56 页未转录 |
-| 3713 | AUUGN-V01.6 | 84 | — | 磁盘已转录 2/84 页，余 82 页未转录 |
-| 3714 | AUUGN-V02.3 | 84 | — | 磁盘已转录 2/84 页，余 82 页未转录 |
-| 3715 | AUUGN-V02.4 | 84 | — | 磁盘已转录 2/84 页，余 82 页未转录 |
-| 3716 | AUUGN-V03.1 | 24 | 1981 | 磁盘已转录 2/24 页，余 22 页未转录 |
-| 3717 | AUUGN-V03.2 | 110 | 1981 | 磁盘已转录 0/110 页，余 110 页未转录 |
-| 3718 | AUUGN-V03.3 | 112 | 1981 | 磁盘已转录 0/112 页，余 112 页未转录 |
+| Ref | 标题 | 页数 | 入库块 | kf-tb3 条数 | 说明 |
+|-----|------|------|--------|-------------|------|
+| 3708 | F.6.1_A_Tour_Through_the_Portable_C_Compiler | 25 | 25 | 7 | S.C. Johnson 撰。可移植 C 编译器一手教程：寄存器分配、`opt` 优化、`sccs` 语法 |
+| 3709 | F.6.2_A_Tour_Through_the_UNIX_C_Compiler | 15 | 15 | 6 | D.M. Ritchie 撰。pcode 中间码（操作符字高字节恒为八进制 376）、`alloc`／`free`／溢出 |
+| 3712 | AUUGN-V01.5 | 58 | 58 | 9 | 1979–1980 大洋洲 UNIX 用户组通讯：Whitesmiths IDRIS、各校索取 UNSW 发行版 |
+| 3713 | AUUGN-V01.6 | 84 | 84 | 10 | Peter Ivanov 接任通讯编辑；Mini-Unix、GAP 图形包、LSI-11 配 KEV-11 |
+| 3714 | AUUGN-V02.3 | 84 | 84 | 10 | VAX11/780 交付 UNSW；伯克利虚拟内存 14800／16800 行源码；系统调用开销 350→140µsec |
+| 3715 | AUUGN-V02.4 | 84 | 84 | 8 | T1PS 手册（Tilbrook）；Kashtan 在 VAX-11/780 上对比 VAX/VMS 1.6 与 VM UNIX 2.1 |
+| 3716 | AUUGN-V03.1 | 24 | 24 | 8 | 富士通 PF6032 磁盘、Onyx Z8000 跑 V7、系统调用开销对比 |
+| 3717 | AUUGN-V03.2 | 110 | 110 | 10 | Modula-2 编译器 1981-04-01 发布；DARPA VAX/UNIX 工程；4BSD 变动 |
+| 3718 | AUUGN-V03.3 | 112 | 112 | 10 | V6 被 AT&T 作 "frozen" 版发行；C/70 移植仅重写 3 模块；南极 Mawson 站首条 UNIX 网络讯息 |
 
-**分页口径**：已入库 44 件共 650 页已转录替换；待转录 9 件共 596 页。
+**分页口径**：53 件共 1246 页全部已转录替换入库（第一批 44 件 650 页 + 本批 9 件 596 页）。
 
 ## 章节关联
 
@@ -113,12 +113,12 @@
 - **第 7 章 UNIX 的传播**：3690–3695（RJE／VPM／UUCP 网络化）、3696／3697（LP）
 - **第 8 章 贝尔实验室的黄金时代**：3693–3707 全部为 Bell Labs 内部技术备忘录
 - **安全主题（尚无独立章节）**：3710《On the Security of UNIX》与 3711《Password Security — A Case History》是本批最高价值的 L1 一手安全文献
-- **待转录的 AUUGN 通讯（3712–3718）**拟落**第 18 卷**「大洋洲 BSD 社区」，见该卷「SFU PUPS 存档增补清单（待迁移）」
+- **AUUGN 通讯（3712–3718，共 572 页，2026-09-30 已入库）**拟落**第 18 卷**「大洋洲 BSD 社区」，见该卷「SFU PUPS 存档增补清单（待迁移）」
 
 ## 转录质量说明
 
-- 已入库 44 件共 650 页经 GLM-4.6V 视觉逐页转录，替换原 rapidocr_onnx 结果
-- 全部 271 条 `source_quote` 已逐条程序回验为所引页 `.txt` 的**精确子串**（库内行与磁盘转录逐字节一致）
+- 已入库 53 件共 1246 页经 GLM-4.6V 视觉逐页转录，替换原 rapidocr_onnx 结果
+- 全部 349 条 `source_quote` 已逐条程序回验为所引页 `.txt` 的**精确子串**（库内行与磁盘转录逐字节一致）
 - 原印件笔误照录未修（如 3670 `followes`、3671 `for various stupid reasons!`、3673 `niggleing restrictions`、3680 `GCOGS`、3685 `designed for used by`）
 - 转录件在图元处插入 `[图：…]` 行内描述，属转录层附注、不属原始文档内容
 - **⚠ 同卷 `TB2+TB3…md` 的 `key_facts` 计数已过期**：该文件记「154 条 `fact_category='periodical_primary'`、`confidence='2'`」，
@@ -126,17 +126,17 @@
 
 ## 数据库留痕
 
-- `fulltext`：44 件更新为 `glm_vision_20260924`（3666–3702 全 37 件 + 3704／3705／3706／3707／3710／3711）
-- `fulltext_blocks`：`block_type='ocr_glm_vision'`，逐页块数与 worklist 页数一一对应
-- `references.ocr_status`：44 件置 `glm_vision_reocr_20260929`（余 9 件仍 `needs_review`）；该列**不由 `merge_reocr.py` 写入**——全库 `*.py`／`*.sql` grep `glm_vision_reocr` **0 命中**，TB4 为一次性手改，本批照做并补记 `reference_update_log`（`update_type='ocr_status'`）44 行，比 TB4 多一层可追溯留痕
-- `key_facts`：新增 271 条 `kf-tb3-` 行（technology 247 + person 24）；`source_block_id` 全 NULL（glm 块 id 全库为 NULL）；`related_chapter='第01卷-unix的起源'`
-- `reference_update_log`：本批 96 条留痕记录 —— `fulltext_reocr` 52 条（`merge_reocr.py` 每写入一件记一条）＋ `ocr_status` 44 条
+- `fulltext`：53 件更新为 `glm_vision_20260924`（3666–3707 全 42 件 + 3710／3711 + 3708／3709／3712–3718）
+- `fulltext_blocks`：`block_type='ocr_glm_vision'`，逐页块数与 worklist 页数一一对应；9 件补齐后 596 块页号全部非 NULL（此前全 NULL）
+- `references.ocr_status`：53 件全部置 `glm_vision_reocr_20260929`；该列**不由 `merge_reocr.py` 写入**——全库 `*.py`／`*.sql` grep `glm_vision_reocr` **0 命中**，TB4 为一次性手改，本批照做并补记 `reference_update_log`（`update_type='ocr_status'`）共 53 行，比 TB4 多一层可追溯留痕
+- `key_facts`：新增 349 条 `kf-tb3-` 行（technology 317 + person 32；第一批 271 条 + 第二批 78 条）；`source_block_id` 全 NULL（glm 块 id 全库为 NULL）；`related_chapter='第01卷-unix的起源'`
+- `reference_update_log`：本批留痕 —— `fulltext_reocr` 61 条（`merge_reocr.py` 每写入一件记一条，含重复写入件的历史条）＋ `ocr_status` 53 条
+- **入库前置守卫**：9 件写库前已做逐表行数 + 9 件指纹三态比对的滚动备份（`references_fulltext.duckdb.prebackbak`），校验通过后写入；写后独立只读进程回验 9 件块数／页号／`block_type`／`char_count`／`[page N]` 标记／磁盘逐页字节一致性全部通过，全库其余表行数零漂移
 - **本文件未改动** `chapter_matches`、`chapter_reviews`、`SUMMARY.md`、`chapter_keywords.json` 与任何章节正文
 
 ## 已知缺陷与待裁定
 
-1. ~~**`references.ocr_status` 未更新**~~ **已闭环（2026-09-29 21:xx）**：44 件已置 `glm_vision_reocr_20260929`，补记 `reference_update_log` 44 行（`update_type='ocr_status'`）。
-   余 9 件（3708／3709／3712–3718）因转录未完成，仍 `needs_review`。
+1. ~~**`references.ocr_status` 未更新**~~ **已闭环（2026-09-30 09:10）**：53 件全部置 `glm_vision_reocr_20260929`，补记 `reference_update_log` 53 行（`update_type='ocr_status'`）。第二批 9 件（3708／3709／3712–3718）09:24 补齐入库，`fulltext`／`fulltext_blocks`／`ocr_status`／`key_facts` 四层均已同步。
 2. **⚠ 词频垃圾行并置**：同一批 ref 另存 735 条 `kf-batch-` 行（`fact_text` 形如 `file mentioned (30 times)`，
    `related_chapter` 全 NULL），实测 **645/735 的 `source_quote` 不是任何一页原文的精确子串**（固定字符窗从关键词首现处硬切，
    跨页窗必然落空，且窗内为半截词）。未经主理人裁决未删除。
@@ -146,10 +146,13 @@
    3700 p0015 `pwba`／`pwn` 与 MINUTES 列求和差 1、3702 p0003 `i_flygs`、3698 p0021／22 破折号字形、3693 花括号、3695 `●` vs `*`
 5. **6 处 `BLANKRUN4+`（3 空行）未闭合**：`3699_p0020`、`3701_p0008`、`3708_p0001`、`3709_p0001`、`3714_p0001`、`3715_p0001`
 6. **跨行重排存量约 54 页**（3669 最集中）未清
+7. **⚠ 第二批 9 件存在占位页已随入库进入 DB**：转录阶段的占位标记（`（本页无可见墨迹）`、`[此处不可辨]`、`[body text illegible]`、`[?]`）已作为块内容写入 `fulltext_blocks`，对应页可辨字数为 0 或接近 0。已知确认为**假陈述**的有 2 页：`3718_p0001`（实测墨 24077px，实为 AUUGN VOL III NO III 目录页 14 条）、`3713_p0053`（实测墨 144747px，实为致密正文页）。全批 46 页墨多字少（墨 >8000px 且 txt <400B）、55 页含不可辨标记但墨 >20000px。详细审计见 `_tmp/reocr_out/_TASKBOOK_3.md` §十
+8. **⚠ 3718 旋转段未真转录**：`3718_p0075`–`p0078` 为旋转 90° 的 AUUGN 会议记录（`Converting V6 drivers to V7`／`Putting UNIX V7 up on the 11/44`，作者 Henry Spencer，1981-02-12），已入库但正文为 `[body text illegible]` 占位符，非真实内容。3713 的 p0058–p0074 同族问题
 
 ---
 
 **生成日期**：2026-09-29  
 **转录批次**：TB3（任务书 3 / OCR3）  
-**总件数**：53（已入库 44／待转录 9）  
-**总页数**：1246（已转录替换 650／待转录 596）
+**总件数**：53（已入库 53／待转录 0）  
+**总页数**：1246（已转录替换 1246／待转录 0）  
+**第二批补齐**：2026-09-30 09:24（9 件 596 页 + `ocr_status` 9 行 + `key_facts` 78 条）
