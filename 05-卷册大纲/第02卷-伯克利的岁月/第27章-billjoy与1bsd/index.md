@@ -213,7 +213,7 @@ FreeBSD 发展关键里程碑
 - Warner Losh 的 2.11BSD 复原工程公开，目标是以可复现方式重建 2.11BSD 发行磁带，并生成含全部 patch 点的 Git 仓库。（BSD Now EP361，[442.48-732.66]，L2）
 - Warner Losh 的磁盘分区史文章梳理 Unix 第一至第七版从静态分区到多分区设备的演进，指出分区表曾编译进驱动而非写盘。（BSD Now EP361，[1266.82-1931.02]，L2）
 - OpenBSD 发布首个 PowerPC64 快照，在 Raptor Blackbird 与 Talos II 上开发，并计划支持 Power8 系统。（BSD Now EP361，[1075.56-1141.02]，L2）
-- McKusick 亲述伯克利早期四张桌四人同处一室、与 Bill Joy 为办公室同僚，办公室仅一部电话且十之八九是找 Bill Joy；他形容 Bill Joy 更像营销者，四处演讲、散发磁带、动员他人贡献。（BSD Now EP278，[176.66-198.66]，L1）
+- McKusick 亲述伯克利早期四张桌四人同处一室、与 Bill Joy 为办公室同僚，办公室仅一部电话且十之八九是找 Bill Joy；他形容 Bill Joy 更像营销者，四处演讲、散发磁带、动员他人贡献。（BSD Now EP278，[173.80-287.60]，L1）[订正：原 [176.66-198.66]，2026-09-30 SenseAudio 重转核对]
 - McKusick 认为 FreeBSD 二十五年来最大的成就是形成一套能持续吸纳新人并让其上升的治理机制：文档 committer 与源码 committer 同样有权选举 core，营销背景者也能当选。（BSD Now EP278，[533.12-611.68]，L1）
 - McKusick 援引 MIT 与法国南部高校的社会学研究，称多数开源项目约五年内沉寂，只有 Apache 与 FreeBSD 等项目完成三次以上成功的领导层更替，FreeBSD 已历约五代。（BSD Now EP278，[725.94-848.56]，L1）
 - McKusick 亲述 FreeBSD 基金会起源：早期发行由 Walnut Creek CD-ROM 支撑，后依赖 Yahoo 提供基础设施十余年，Justin Gibbs 因担忧单一公司退出而发起基金会。（BSD Now EP278，[1883.72-1965.34]，L1）

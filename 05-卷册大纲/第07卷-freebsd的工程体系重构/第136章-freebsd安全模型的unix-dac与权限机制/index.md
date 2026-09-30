@@ -80,7 +80,7 @@ volume: 第07卷-freebsd的工程体系重构
 
 - [存疑脚注] Colin Percival 的开源资助方案当时仅为其个人提案，尚未落地实施，能否被社区采纳与商业化可行仍待验证。　[存疑脚注] 该方案属单一来源的个人设想，未形成实施记录。（BSD Now EP194，[1367.52-1440.28]，L4）
 - 听众来信引发的 jail 管理讨论揭示生态碎片化：官方手册仍只记录 10.x 已弃用、计划 11.x 移除的 rc.d 风格，jail.conf 采用难以解析的自创格式，easyjail 与 iocage 等框架各自为政，主持人以乐高积木作比——“我们各自拼出略不相同的飞船”（5291.44-5296.68）。这是理解容器化前夜 FreeBSD 治理困境的典型切口；但 rc.d 方式将于 11.x 移除仅系来信者与主持人的当时预期，属待核断言。　[存疑脚注] jail.conf 格式批评与 easyjail、iocage 评价仅出自本期听众来信与主持人对谈（单一对话来源）；rc.d 方式是否于 11.x 移除为当时预期，后续未如期发生，须以 FreeBSD src 与 release notes 核实。（BSD Now EP88，[5139.64-5306.40]，L2）
-- DragonFly BSD 抢先完成 Intel Broadwell 图形驱动移植（据称基于 Linux 3.14 drm 更新），一度领先 FreeBSD（当时目标 3.8）与 OpenBSD（止步 Haswell）；主持人转述贡献者名为 Francois Toujour，并半开玩笑地呼吁 FreeBSD 接受来自 DragonFly 的补丁。该案例显示各 BSD 图形栈围绕上游 Linux drm 形成的非零和追赶关系：分支排名随时翻转，移植源共享削弱了分支间的技术鸿沟。　[存疑脚注] 转写将贡献者名失真记作 Francois Toujour，据上下文推断为 DragonFly 图形驱动开发者 François Tigeot；所涉 drm 版本数字亦经转写噪声，须以 DragonFly 提交记录核实。（BSD Now EP88，[4099.58-4166.40]，L2）
+- DragonFly BSD 抢先完成 Intel Broadwell 图形驱动移植（据称基于 Linux 3.14 drm 更新），一度领先 FreeBSD（当时目标 3.8）与 OpenBSD（止步 Haswell）；主持人转述贡献者名为 Francois Tegjou，并半开玩笑地呼吁 FreeBSD 接受来自 DragonFly 的补丁。该案例显示各 BSD 图形栈围绕上游 Linux drm 形成的非零和追赶关系：分支排名随时翻转，移植源共享削弱了分支间的技术鸿沟。　[存疑脚注] 转写将贡献者名失真记作 Francois Tegjou，据上下文推断为 DragonFly 图形驱动开发者 François Tigeot；所涉 drm 版本数字亦经转写噪声，须以 DragonFly 提交记录核实。（BSD Now EP88，[4099.58-4166.40]，L2）[订正：原 贡献者名失真记作 Francois Toujour，2026-09-30 SenseAudio 重转核对]
 - 该机制的强制力由系统安全级别保障：多用户模式下唯一能把级别从高调低的只有 init 进程，级别为一时不可变标志真正无法解除，同时禁止写入内核内存与已挂载磁盘的原始设备；但 McKusick 坦承其结构性缺陷在于系统启动时运行于单用户态、启动脚本可预先解除标志，攻击者只需篡改启动脚本并诱发内核恐慌重启即可绕过全部防护，而补救须锁定启动链上的全部脚本、目录、二进制与配置文件，将使系统难以使用——securelevels 因此被后续机制取代，是安全机制因偶然缺口而兴废的典型个案。（YouTube EPE04LxKiu79I，[1142.67-1259.79]，L1）
 
 **文献**：

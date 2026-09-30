@@ -70,7 +70,7 @@ volume: 第13卷-bsd衍生操作系统
 - FreeBSD 2017 发布工程回顾：Glen Barber 全职工负责发布工程，11.1 于 7 月 21 日发布，10.4 由另一名发布工程师领衔并作为 stable 10 分支的最终版本。（BSD Now EP225，[3334.96-3475.08]，L2）
 - 主持人 Alan 报告 BSD Taiwan 之行：会议约 120 余人报名、组织者被迫关闭注册，演讲含 FreeBSD 的 RISC-V 移植、Capsicum 沙箱化、FreeBSD 12 内存管理改进与 bhyve 图形支持史。（BSD Now EP221，[671.56-686.18]，L1）
 - 该期报道 Lumina 1.4.0 发布（Ken Moore 团队），新增主题引擎与对 Qt5 应用换肤的支持。（BSD Now EP221，[1918.4-1955.88]，L2）
-- 该期转述 OpenBSD p2k17 hackathon 报告（Bob Beck），回顾过去需拖运服务器与提前搭建基础设施，如今仅需最新快照与本地 CVS 仓库即可开发。（BSD Now EP221，[4912.02-5057.18]，L2）
+- 该期转述 OpenBSD p2k17 hackathon 报告多篇（会议在柏林，报告见 undeadly.org）：Landry 回顾 P2K17 恰为其首次 hackathon P2K7 十年，赴法 pre-hackathon 备好大量 diff，完成 QGIS 从 Qt4/Python2 到 Qt5/Python3 的迁移与 Firefox 57 更新；Florian Obser 报告网络栈进展与内核重链接；Antoine Jacotot 报告 ports 与包进展；另有 Matthias Kilan、Mark SP、Paul Irofti、Jeremy Evans、Christian Weissgerber、Sebastian Reitenbach、Anthony Bentley 等多篇报告。（BSD Now EP221，[3426.4-3785.3]，L2）[订正：原 该期转述 OpenBSD p2k17 hackathon 报告（Bob Beck），回顾过去需拖运服务器与提前搭建基础设施，如今仅需最新快照与本地 CVS 仓库即可开发。（BSD Now EP221，[4912.02-5057.18]，L2），2026-09-30 SenseAudio 重转核对]
 - 该期转述 Matt Ahrens 对 ZFS 原生加密的回应：加密会先于 RAID-Z 扩容落地，已在 ZFS on Linux 主分支。（BSD Now EP221，[4712.78-4758.9]，L2）
 - Adrian Chadd 在 FreeBSD 802.11 栈中启动 802.11ac 支持，先针对 Atheros QCA 10K 芯片，加入 VHT 通道与 20/40/80/160MHz 模式，并说明现有栈在多虚拟接入点上的局限。（BSD Now EP193，[147.78-631.0]，L2）
 - Delphix 的 Matt Ahrens 等在 OpenZFS 开发者峰会原型基础上实现 zpool checkpoint，允许管理员在执行破坏性操作前为整个池建立可回滚检查点。（BSD Now EP193，[1810.2-2535.42]，L2）
@@ -82,12 +82,12 @@ volume: 第13卷-bsd衍生操作系统
 - Rick Macklem 发布 pNFS 服务器首个测试征集，架构为单个元数据服务器加多个数据服务器，纯 FreeBSD 实现，当前尚不支持冗余。（BSD Now EP192，[5241.34-5535.38]，L2）
 - Chris Moore 在主持 BSD Now 约四年、180 余期后卸任，Benedict Reuschling 接任共同主持。（BSD Now EP185，[61.44-101.44]，L1）
 - Kris Moore 披露 FreeNAS 9.10.3 为首个基于 FreeBSD 11 stable 的 9 分支版本，并引入 MinIO S3 兼容对象存储。（BSD Now EP185，[657.68-869.02]，L1）
-- TrueOS 移除 GRUB 安装选项，改用 EFI rEFInd 链加载 BSD loader；计划改进 GELI 密钥在 bootstrap、loader 与内核间的传递。（BSD Now EP185，[2829.24-2905.56]，L1）
+- TrueOS 移除 GRUB 安装选项，改用 EFI rEFInd 链加载 BSD loader；计划改进 GELI 密钥在 bootstrap、loader 与内核间的传递。（BSD Now EP185，[2829.24-3250.70]，L1）[订正：原 [2829.24-2905.56]，2026-09-30 SenseAudio 重转核对]
 - iocage 由 Brandon Schneider 以 Python 重写并引入 JSON API，插件采用 pkg 而非旧的 PBI 格式。（BSD Now EP185，[961.44-1046.98]，L2）
 - Lumina 由 Ken Moore 开发，采用三条款 BSD 许可证，专为 FreeBSD 原生编写而非自 Linux 移植，依赖 Xorg、Qt 与 Fluxbox 窗口管理器。（BSD Now EP54，[3448.90-3488.4]，L1）[订正：原 [3448.90-3497.98]，2026-09-30 SenseAudio 重转核对]
 - Lumina 0.6.2 随 PC-BSD 10.0.3 发布，仍处 beta，但在轻量笔记本上 CPU 占用低于半个百分点、整机内存约 120 MB。（BSD Now EP54，[3491.66-3526.78]，L1）
 - Lumina 附带 Insight 文件管理器，可浏览 ZFS 快照实现类似时光机的文件恢复，并集成书签、标签页与多媒体浏览。（BSD Now EP54，[4219.7-4454.0]，L1）[订正：原 [4225.74-4268.26]，2026-09-30 SenseAudio 重转核对]
-- Lumina 已提交进入 FreeBSD ports 树，PC-BSD 亦提供对应包，后续社区将其移植到 OpenBSD 与 DragonFly BSD。（BSD Now EP54，[3542.62-3548.58]，L1）
+- Lumina 已提交进入 FreeBSD ports 树（X11/lumina）并随 PC-BSD 10.0.3 提供；作者于访谈末邀请 OpenBSD、NetBSD 与 DragonFly BSD 用户移植 Lumina，称可为其提供版本。（BSD Now EP54，[3539.5-3547.5]、[1810.3-1862.1]，L1）[订正：原 “后续社区将其移植到 OpenBSD 与 DragonFly BSD”、原 [3542.62-3548.58]，2026-09-30 SenseAudio 重转核对]
 - 本期以 installfest 形式逐项演示 FreeBSD 10.0、OpenBSD 5.4、NetBSD 6.1.2、DragonFly BSD 3.6 与 PC-BSD 10.0 的安装流程，比较文本式、引导式与图形式安装器的交互差异。（BSD Now EP19，[1011.60-1046.72]，L2）
 - FreeBSD 10 安装器新增键位测试、自动 root-on-ZFS、GELI 磁盘加密与 shell 安装模式，改进主要由 Devin Teske 与 Warren Block 等完成。（BSD Now EP19，[1069.32-1330.48]，L2）
 - OpenBSD 在 5.4 前后提交 signify，用于签名基础发行集与第三方包，以解决此前 SHA256 校验在 X 集同步时因多机多时构建而出现的时序错配。（BSD Now EP19，[321.52-347.64]，L2）
@@ -103,7 +103,7 @@ volume: 第13卷-bsd衍生操作系统
 - FreeBSD 基金会 2017 发布工程回顾（Glen Barber 的 VBSDCon 演讲与问答）。（BSD Now EP225，[3334.96-3771.04]，L2）
 - BSD Taiwan 会议议程与台湾用户 Scott Tsai 的逐演讲笔记（Google Doc）。（BSD Now EP221，[675.04-703.58]，L2）
 - OpenBSD 6.2 唯一 CD 套装的 eBay 拍卖（Bob Beck，Theo de Raadt 手绘签名）。（BSD Now EP221，[4444.02-4527.38]，L2）
-- Bob Beck 的 OpenBSD p2k17 hackathon 报告（undeadly.org）。（BSD Now EP221，[4912.02-4951.78]，L2）
+- OpenBSD p2k17 hackathon 各开发者报告多篇（undeadly.org）。（BSD Now EP221，[3426.4-3785.3]，L2）[订正：原 Bob Beck 的 OpenBSD p2k17 hackathon 报告（undeadly.org）。（BSD Now EP221，[4912.02-4951.78]，L2），2026-09-30 SenseAudio 重转核对]
 - Matt Ahrens 关于 ZFS 原生加密的推文回复。（BSD Now EP221，[4717.92-4748.12]，L2）
 - Adrian Chadd 关于 802.11ac bring-up 的博客（BSD Now EP193，[81.22-648.52]，L1）
 - Delphix 关于 zpool checkpoint 的设计说明博客（BSD Now EP193，[1810.2-2600.06]，L1）
@@ -115,7 +115,7 @@ volume: 第13卷-bsd衍生操作系统
 - Rick Macklem 的 pNFS call for testing 邮件（BSD Now EP192，[5241.34-5535.38]，L1）
 - Chris Moore 卸任自述（BSD Now EP185，[61.44-141.04]，L1）
 - Kris Moore 访谈自述（BSD Now EP185，[628.1-1119.87]，L1）
-- TrueOS 引导与 GELI 变更记录（BSD Now EP185，[2829.24-2905.56]，L1）
+- TrueOS 引导与 GELI 变更记录（BSD Now EP185，[2829.24-3250.70]，L1）[订正：原 [2829.24-2905.56]，2026-09-30 SenseAudio 重转核对]
 - Ken Moore 访谈兼 Lumina 界面走查（Lumina 作者当事人演示）。（BSD Now EP54，[3404.70-4697.20]，L1）
 - 本期史料包括 Devin Teske 与 Warren Block 的安装器改动、OpenBSD signify 提交与测试密钥、Julio Merino 的 Kyua 测试框架、pc-sysinstall 脚本化安装器及 pkgsrc 2013Q4 分支。（BSD Now EP19，[91.48-1330.48]，L2）
 
@@ -127,7 +127,7 @@ volume: 第13卷-bsd衍生操作系统
 - 总纲4 分离聚合是永恒规律：PDP-11 的开放架构使任何按规范实现者皆可称 PDP-11，DEC 内部形成快慢两条实现路线，体现分离聚合的规律。（BSD Now EP225，[2184.72-2209.84]，L2）
 - 总纲10 动手者创造历史：发布工程回顾强调除 Glen Barber 外还有大量不在聚光灯下的人协作，凸显动手者叙事。（BSD Now EP225，[3746.94-3769.1]，L2）
 - 总纲10 动手者创造历史：BSD Taiwan 会议以少数组织者承担大量工作、注册超预期，呈现社区由动手者维系。（BSD Now EP221，[1782.4-1824.5]，L2）
-- 总纲9 经验优先：OpenBSD hackathon 从“提前数日搭建服务器”演变为“带上最新快照即可”，被叙述为工程工具简化带来的经验积累。（BSD Now EP221，[4962.9-5048.74]，L2）
+- 总纲9 经验优先：Landry 以 P2K17 恰为其首次 hackathon P2K7 十年、并提前在法国 pre-hackathon 备好大量 diff 的经历，被叙述为长期工程经验积累。（BSD Now EP221，[3631.0-3679.3]，L2）[订正：原 总纲9 经验优先：OpenBSD hackathon 从“提前数日搭建服务器”演变为“带上最新快照即可”，被叙述为工程工具简化带来的经验积累。（BSD Now EP221，[4962.9-5048.74]，L2），2026-09-30 SenseAudio 重转核对]
 - 总纲5 没有必然性，只有偶然性：ZFS 加密与 RAID-Z 扩容的时间线表明功能落地受社区贡献节奏约束，而非线性规划。（BSD Now EP221，[4755.94-4772.46]，L2）
 - 总纲10 动手者创造历史：个人开发者因自身需要推进无线与存储特性，特性落地依赖具体动手者的持续投入。（BSD Now EP193，[147.78-648.52]，L2）
 - 总纲5 没有必然性，只有偶然性：OpenBSD 停止发行 CD 与 LibreSSL 分叉均由 Heartbleed、GPLv3 等具体事件触发，而非抽象规划。（BSD Now EP193，[1277.66-1583.66]，L2）
@@ -141,7 +141,7 @@ volume: 第13卷-bsd衍生操作系统
 - 总纲10 动手者创造历史：总纲10 动手者创造历史：Ken Moore 以个人开发并维护 Lumina 的方式为 FreeBSD 桌面生态提供原生工具。（BSD Now EP54，[3448.90-3526.78]，L1）
 - 总纲8 本体论上各方平等：总纲8 本体论上各方平等：Lumina 的轻量取向与 KDE、GNOME 等桌面被置于并置关系，强调按需求选择而非优劣评判。（BSD Now EP54，[3970.94-3977.02]，L1）
 - 总纲24 美是消解性的体验：总纲24 美是消解性的体验：Lumina 以极简界面、壁纸与插件化桌面提供一种消解复杂性的日常使用体验。（BSD Now EP54，[3428.30-3436.06]，L1）
-- 总纲10 动手者创造历史：总纲10 动手者创造历史：Devin Teske、Warren Block、Julio Merino 等以具体工程改进安装器与测试基础设施，推动发行流程演进。（BSD Now EP19，[1069.32-1300.48]，L2）
+- 总纲10 动手者创造历史：总纲10 动手者创造历史：Devin Teske、Warren Block、Julio Merino 等以具体工程改进安装器与测试基础设施，推动发行流程演进。（BSD Now EP19，[1071.50-1290.20]，L2）[订正：原 [1069.32-1300.48]，2026-09-30 SenseAudio 重转核对]
 - 总纲22 知识注定过时：总纲22 知识注定过时：sysinstall 被 bsdconfig 与脚本化安装器取代，旧安装方式随版本演进而淘汰。（BSD Now EP19，[2238.16-2399.96]，L2）
 - 总纲8 本体论上各方平等：总纲8 本体论上各方平等：installfest 将五大 BSD 并置演示，体现多分支在本体论上平等对待的叙述方式。（BSD Now EP19，[1011.60-1046.72]，L2）
 

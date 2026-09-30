@@ -61,15 +61,15 @@ OpenBSD 加密与固件开放政策的章级史观——总纲第 4 条“分离
 - OpenBSD 率先随系统搭载 IPsec 等强密码学，并因此卷入美国出口管制，这是其基地设于加拿大的原因之一。（BSD Now EP428，[145.1-160.3]，L2）
 - OpenBSD 形成发现漏洞后不再单点修补，而是在全树范围内寻找并修复同类模式的代码审计文化。（BSD Now EP428，[164.94-184.78]，L2）
 - OpenBSD 是 OpenSSH、OpenBGPD、PF、OpenSMTPD、IKE、Mandoc 与 LibreSSL 等广泛使用组件的上游来源。（BSD Now EP428，[247.2-262.74]，L2）
-- DragonFly vkernel 类似 jail 但虚拟化整个内核，新支持 copy-on-write 镜像模式，使多个 vkernel 可从同一镜像启动，运行时变更保留在各自层而不写回原镜像文件，近似 UnionFS。（BSD Now EP164，[197.82-249.56]，L2）
-- 若将镜像设为只读，多个 vkernel 共享同一镜像且互不修改；对镜像的改动被保留在分离的变更层中。（BSD Now EP164，[226.9-239.82]，L2）
+- DragonFly vkernel 类似 jail 但虚拟化整个内核，新支持 copy-on-write 镜像模式，使多个 vkernel 可从同一镜像启动，运行时变更保留在各自层而不写回原镜像文件，近似 UnionFS。（BSD Now EP164，[176.8-266.7]，L2）[订正：原 [197.82-249.56]，2026-09-30 SenseAudio 重转核对]
+- 若将镜像设为只读，多个 vkernel 共享同一镜像且互不修改；对镜像的改动被保留在分离的变更层中。（BSD Now EP164，[226.9-266.7]，L2）[订正：原 [226.9-239.82]，2026-09-30 SenseAudio 重转核对]
 - FreeBSD 在 Raspberry Pi 3 上的有限支持已提交 head，多数驱动可用上游，但 RNG 的 call-out 模式失效、SMP 尚未完成、VCHIQ 驱动存在仅对 ARM 成立的假设，且尚无 HDMI 支持。（BSD Now EP164，[328.18-412.58]，L2）
 - OpenBSD 自成立起一直使用 CVS，与 NetBSD 及早期 FreeBSD 相同；本期公布位于 github.com/openbsd 的官方只读镜像，含源码与 ports 等仓库。（BSD Now EP164，[3816.62-3848.04]，L2）
 - OpenBSD GitHub 镜像的 exporter 稳定性尚无保证，若基于该分支做 fork，数据可能以不同哈希重新导出而使 rebase 困难。（BSD Now EP164，[3902.24-3915.58]，L2）
 - Libreboot.org 发布以开源 BIOS 引导 OpenBSD 或 LibertyBSD 的文档，含 USB 镜像制作、Grub 配置与排障，但 Libreboot 加 Grub 尚不支持全盘加密。（BSD Now EP164，[3926.18-4004.28]，L2）
 - 主持人评论认为随着 EFI 增长，开源系统越发依赖闭源固件甚至迷你操作系统来引导，Libreboot 针对的正是最后一块不受控制的区域。（BSD Now EP164，[4007.8-4038.48]，L1）
-- Josh Paetzel 亲述协助 FreeBSD Foundation 调试 Supermicro 服务器的 PXE 引导：串口看似故障，实为系统启动停止，改为静态 DHCP 预留后正常引导，根因仍未完全查明。（BSD Now EP164，[1641.44-1928.76]，L1）
-- Josh Paetzel 认为 ZFS 中延迟敏感负载宜用 RAID10，容量优先与非延迟敏感负载宜用 RAIDZ/RAIDZ2；其团队运行过 200 至 300 盘的 RAIDZ2 与 RAID10 池且未因硬件故障丢失池。（BSD Now EP164，[2049.82-2203.34]，L1）
+- Josh Paetzel 亲述协助 FreeBSD Foundation 调试 Supermicro 服务器的 PXE 引导：串口看似故障，实为系统启动停止，改为静态 DHCP 预留后正常引导，根因仍未完全查明。（BSD Now EP164，[1637.4-1860.0]，L1）[订正：原 [1641.44-1928.76]，2026-09-30 SenseAudio 重转核对]
+- Josh Paetzel 认为 ZFS 中延迟敏感负载宜用 RAID10，容量优先与非延迟敏感负载宜用 RAIDZ/RAIDZ2；其团队运行过 200 至 300 盘的 RAIDZ2 与 RAID10 池且未因硬件故障丢失池。（BSD Now EP164，[2049.82-2168.1]，L1）[订正：原 [2049.82-2203.34]，2026-09-30 SenseAudio 重转核对]
 - Josh Paetzel 以客机比喻 ZFS：非常安全，多数故障被冗余吸收，但一旦突破临界即彻底崩溃，且没有理解 RAID-Z 布局的数据恢复工具。（BSD Now EP164，[2434.64-2497.76]，L1）
 - Josh Paetzel 指出 ZFS 自 2011 年开源后五年间约 45% 的代码为新写，并认为文件系统需要商业实体与专业工程资源支撑。（BSD Now EP164，[2522.4-2603.72]，L1）
 - 教程演示在 FreeBSD 与 OpenBSD 上执行全盘加密安装；FreeBSD 侧以脚本化方式处理 GELI 与 ZFS 根文件系统，OpenBSD 侧则结合加密根分区与引导加载器。（BSD Now EP16，[4289.6-4418.6]，L2）
@@ -89,11 +89,11 @@ OpenBSD 加密与固件开放政策的章级史观——总纲第 4 条“分离
 **史料**：
 
 - Peter Hansteen 的 What every IT person needs to know about OpenBSD 系列文章，作为本期 OpenBSD 历史叙述的主要二手来源。（BSD Now EP428，[70.74-76.44]，L2）
-- DragonFly vkernel copy-on-write 镜像模式的功能说明。（BSD Now EP164，[197.82-249.56]，L2）
+- DragonFly vkernel copy-on-write 镜像模式的功能说明。（BSD Now EP164，[176.8-266.7]，L2）[订正：原 [197.82-249.56]，2026-09-30 SenseAudio 重转核对]
 - FreeBSD 提交者关于 Raspberry Pi 3 支持的博客。　[存疑脚注] 博客作者全名须核验。（BSD Now EP164，[328.18-412.58]，L2）
-- OpenBSD 官方只读 GitHub 镜像（github.com/openbsd）。（BSD Now EP164，[3816.62-3915.58]，L2）
+- OpenBSD 官方只读 GitHub 镜像（github.com/openbsd）。（BSD Now EP164，[3828.2-3915.58]，L2）[订正：原 [3816.62-3915.58]，2026-09-30 SenseAudio 重转核对]
 - Libreboot.org 关于以开源 BIOS 引导 OpenBSD/LibertyBSD 的文档。（BSD Now EP164，[3926.18-4004.28]，L2）
-- Josh Paetzel 访谈自述（iXsystems，FreeNAS/TrueNAS 相关运维经验）。（BSD Now EP164，[1600.0-2610.0]，L1）
+- Josh Paetzel 访谈自述（iXsystems，FreeNAS/TrueNAS 相关运维经验）。（BSD Now EP164，[985.8-2820.6]，L1）[订正：原 [1600.0-2610.0]，2026-09-30 SenseAudio 重转核对]
 - 本期提及 NetBSD 在 Marvell Kirkwood 平台（插头式迷你服务器）上的使用文章，以及 FreeBSD Foundation 年终募款与开发者差旅资助。（BSD Now EP16，[548.6-570.2]，L2）
 - 该期留存的一手史料线索：OpenBSD 2.3 的 Sun 4/300 启动 bug 及其定位补丁；SPARC64 port 对 Ultra 系至 Enterprise 系的覆盖与 E15K 尝试记录；Ultra 3 数据缓存与 Cassini 支持的树内缺口；MG 编辑器的多平台移植（Linux on PowerPC、FreeBSD 4.8、macOS）；Xastir、GMFSK、gPSK31 等业余无线电应用的 OpenBSD 移植；厂商向开发者寄送的 Intel RAID 实卡。（BSDTalk EP82，[811.46-878.34]，L1）
 
@@ -101,7 +101,7 @@ OpenBSD 加密与固件开放政策的章级史观——总纲第 4 条“分离
 
 - 总纲10 动手者创造历史：OpenBSD 以代码审计与全树范围修复确立安全实践，体现动手者在具体工程中塑造项目文化。（BSD Now EP428，[164.94-191.78]，L2）
 - 总纲13 法律与道德是利益分配：美国出口管制把加密技术纳入法律约束，迫使 OpenBSD 调整基地布局，体现法律与道德作为利益分配工具的现实效应。（BSD Now EP428，[145.1-160.3]，L2）
-- 总纲4 分离聚合是永恒规律：vkernel 以只读镜像为基底、以 copy-on-write 层承载差异，多个实例分离运行又共享同一映像，呈现分离与聚合的结构。（BSD Now EP164，[197.82-249.56]，L3）
+- 总纲4 分离聚合是永恒规律：vkernel 以只读镜像为基底、以 copy-on-write 层承载差异，多个实例分离运行又共享同一映像，呈现分离与聚合的结构。（BSD Now EP164，[176.8-266.7]，L3）[订正：原 [197.82-249.56]，2026-09-30 SenseAudio 重转核对]
 - 总纲3 不存在进步，只有权力再分配：Libreboot 试图把引导固件的控制权从闭源厂商转移给用户，是围绕系统控制权的权力再分配。（BSD Now EP164，[4007.8-4038.48]，L3）
 - 总纲9 经验优先：ZFS 的可靠性来自 Sun 时期大量工程投入与后续商业资源，专业经验沉淀为可用的复杂系统。（BSD Now EP164，[2522.4-2603.72]，L3）
 - 总纲25 逻辑是形式主义而非世界本身的结构：ZFS 以冗余与校验把故障可能性压到极低，但剩余风险以极端方式集中爆发，安全是形式化边界内的构造。（BSD Now EP164，[2434.64-2497.76]，L3）
@@ -113,8 +113,8 @@ OpenBSD 加密与固件开放政策的章级史观——总纲第 4 条“分离
 **辨析**：
 
 - “默认安装仅两个远程漏洞”为 OpenBSD 项目长期自述口径，其统计口径与时间范围需与官方安全公告逐条核对。　[存疑脚注] 远程漏洞计数为项目自述，统计边界需对照 OpenBSD 官方安全公告确认。（BSD Now EP428，[138.94-145.1]，L4）
-- [存疑脚注] 转写未给出 DragonFly vkernel copy-on-write 功能的具体提交与作者，须核验 DragonFly 仓库与提交记录。　[存疑脚注] COW 功能提交与作者须核验。（BSD Now EP164，[197.82-249.56]，L4）
-- 教程中的加密安装步骤由主持人演示并录制，涉及 FreeBSD 9.2/10 与 OpenBSD 特定版本的实现细节，属于演示与转述而非当事人一手史料。（BSD Now EP16，[0.0-10.2]，L2）
+- [存疑脚注] 转写未给出 DragonFly vkernel copy-on-write 功能的具体提交与作者，须核验 DragonFly 仓库与提交记录。　[存疑脚注] COW 功能提交与作者须核验。（BSD Now EP164，[176.8-266.7]，L4）[订正：原 [197.82-249.56]，2026-09-30 SenseAudio 重转核对]
+- 教程中的加密安装步骤由主持人演示并录制，涉及 FreeBSD 9.2/10 与 OpenBSD 特定版本的实现细节，属于演示与转述而非当事人一手史料。（BSD Now EP16，[3.7-27.0]，L2）[订正：原 [0.0-10.2]，2026-09-30 SenseAudio 重转核对]
 - E15K 接近启动、受害机五天六十次上电循环、Intel 网络组前后行为等细节均为当事人口述、无独立佐证；Cassini 所在的具体机型他本人亦不能确指，仅以 Solaris 下的 CE 网卡机型圈定范围；转写术语与人名多处失真（UltraSPARC、Schizo、Tomatillo、IOMMU、Xastir、Baudot 等按通行拼写校正）。[存疑脚注] 硬件细节与厂商行为均为单一来源陈述。　[存疑脚注] 机型与厂商行为细节无第三方佐证（BSDTalk EP82，[481.06-514.18]，L4）
 
 **文献**：

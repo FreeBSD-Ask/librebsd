@@ -138,7 +138,7 @@ FreeBSD 社区论文：[FP-1998-002] Malloc(3) revisited（Poul-Henning Kamp，1
 - 波兰 BSD 用户组由 Mariusz Zaborski 等人在访问湾区 FreeBSD 用户组后创立，定位为促进波兰全部 BSD 的社区，会议以网络交流为主、演讲不超过十五分钟。（BSD Now EP269，[2943.52-3137.00]，L2）
 - 节目朗读 FreeBSD 基金会 2018 年 7 月通讯：商业与个人捐赠用于质量保证、持续集成与自动化测试的全职软件工程师，以及安全团队与发布工程团队的关键岗位，并赞助和参加开源会议以推广 FreeBSD。（BSD Now EP258，[321.10-419.90]，L1）[订正：原 [315.56-412.50]，2026-09-30 SenseAudio 重转核对]
 - HardenedBSD 基金会于 7 月 9 日举行董事会 kickoff 会议，计划申请 501c3 免税地位；在马里兰州注册免税非股份公司、取得联邦税号，并增补 Emerald Onion 董事 Christian Severt 为顾问，预计年底前获批。（BSD Now EP258，[3362.40-3523.30]，L2）
-- OpenBSD 的 Philippe Gontier 与 Brian Steele 为 AMD64 增加 Spectre RSB 等推测执行缓解，在进入内核与返回用户空间时填充返回栈缓冲区，并将该缓解扩展到 VMM 虚拟机退出路径。（BSD Now EP258，[3532.28-3667.74]，L2）
+- OpenBSD 的 Philip Guenther 与 Brian Steele 为 AMD64 增加 Spectre RSB 等推测执行缓解，在进入内核与返回用户空间时填充返回栈缓冲区，并将该缓解扩展到 VMM 虚拟机退出路径。（BSD Now EP258，[3532.28-3667.74]，L2）[订正：原 Philippe Gontier，2026-09-30 SenseAudio 重转核对]
 - 该期回顾 BSDCan 2017：开发者峰会、教程与正式会议四轨并行，列举大量演讲（SSH 滥用做 ZFS 复制、packet drill、FreeBSD ARM 启动、OpenBSD VMM、bhyve 安全恢复、Netflix 大 mbuf、Capsicum 沙箱等）。（BSD Now EP198，[4352.30-5412.26]，L2）
 - 渥太华大学法学教授 Michael Geist 发表主旨演讲，讨论技术社群面对电信巨头与政策游说的挑战，主张技术人员通过联系议员、提供专家证词等方式介入政策制定，避免政府只听到游说一方。（BSD Now EP198，[4152.78-4309.98]，L2）
 - FreeBSD 基金会与滑铁卢大学合作启动 co-op 实习生计划，学生在 Ed Maste 指导下参与项目，并在 BSDCan 展示构建状态仪表盘等成果。（BSD Now EP198，[479.90-573.74]，L2）
@@ -165,7 +165,7 @@ FreeBSD 社区论文：[FP-1998-002] Malloc(3) revisited（Poul-Henning Kamp，1
 - NetBSD 7.0.2 为小型安全更新，修复 mail.local 竞态、更新 OpenSSL 与 NTP/BIND，并修复 UFS1 外来文件系统、MIPS pmap 与 SPARC64 问题。（BSD Now EP166，[2064.56-2101.88]，L2）
 - Matthew Dillon 修复 DragonFly 内核 MMC/SD 读写的 AB_RID 未清零导致的短读写，并将首次超时后的等待从 10 秒降为 1 秒，减少死端口引导延迟。（BSD Now EP166，[2108.32-2152.92]，L2）
 - Benedict Reushling 自述其入会路径：EuroBSDCon Sofia（2014）会后被 Erwin Lansing 略带神秘地接洽，受邀加入 FreeBSD Foundation 董事会，动因是董事会欲在德语区（德、奥、瑞士）扩展席位；2015 年 1 月前后经正式电话面试，面试中他自陈“我是文档人，不熟悉内核”，有董事随即打断并表态“源码提交者已经够多，董事会需要多样性”（1664-1688 秒）；同年 BSDCan 前的年度董事会完成履新，受访时（AsiaBSDCon 2016 东京现场）入会约一年，其定位始终是文档与欧洲拓展而非内核开发。　[存疑脚注] 受访人姓氏在转写中作 Russeling/Herschling，按 FreeBSD Foundation 董事名录判定为 Benedict Reushling；电话面试中另一表态董事姓名转写失真（音似 Qsync），仅 Kirk 一名可辨。（BSD Now EP138，[1596.68-1694.12]，L1）
-- 基金会职能被受访者概括为“支持位”而非治理位：不向项目推送任何政策、不指定开发何种驱动，而是以资金资助开发者与发布工程师等职员、以法人实体身份签署 NDA 等法律文书、维护 FreeBSD 注册商标——freebsd.foundation 新顶级域名遭抢注者索价 8000 美元，董事会曾在付款、无视与诉诸律师之间权衡——并走访 iXsystems、Netflix 等大赞助商，维系捐赠并对接其技术需求，同时开拓欧洲赞助方与 Linux 系会议之外的布道场合（1791-1990 秒）。（BSD Now EP138，[1789.80-1989.86]，L1）
+- 基金会职能被受访者概括为“支持位”而非治理位：不向项目推送任何政策、不指定开发何种驱动，而是以资金资助开发者与发布工程师等职员、以法人实体身份签署 NDA 等法律文书、维护 FreeBSD 注册商标——freebsd.foundation 新顶级域名遭抢注者索价 8000 美元，董事会曾在付款、无视与诉诸律师之间权衡——并走访 iXsystems、Netflix 等大赞助商，维系捐赠并对接其技术需求，同时开拓欧洲赞助方与 Linux 系会议之外的布道场合（1791-1990 秒）。（BSD Now EP138，[1782.6-1992.4]，L1）[订正：原 [1789.80-1989.86]，2026-09-30 SenseAudio 重转核对]
 - Mark Phillips 自述 2014 年入职仅约 18 个月的 Ansible，次年公司被 Red Hat 收购；此后在 Red Hat 与多家创业公司间辗转，2025 年初加入 FreeBSD Foundation 任技术营销经理。（BSD Now EP622，[407.42-944.24]，L1）
 - Mark Phillips 主张营销的本质是对好产品讲好故事，把营销替换为讲故事即可理解其工作，并强调技术与营销互为表里、工程师需要被反馈其工作价值。（BSD Now EP622，[944.24-1506.38]，L1）
 - Mark Phillips 认为 ZFS 是 FreeBSD 的杀手特性，Solaris 系统管理员因 ZFS 与 DTrace 的继承而转向 FreeBSD，FreeNAS 等产品也以此为基础。（BSD Now EP622，[1051.38-1238.66]，L1）
@@ -228,7 +228,7 @@ FreeBSD 社区论文：[FP-1998-002] Malloc(3) revisited（Poul-Henning Kamp，1
 - McKusick 提及 TeachBSD 项目，主张以真实操作系统而非玩具系统教授计算机科学，并认为 DTrace/DWatch 等工具是“玻璃制”可观测系统的重要组成部分。（BSD Now EP278，[2723.00-2781.38]，L1）
 - 基金会更新提及 OpenSSL 基础版本由 1.0.2 升级至 1.1.1 长期支持版，以及为 12.0 清理内核 bug 报告、修复 Unix 域套接字与 ZFS 回归的进展。（BSD Now EP269，[131.20-822.54]，L2）[订正：原 [721.88-822.54]，2026-09-30 SenseAudio 重转核对]
 - 提及 Doug Engelbart 1968 年“所有演示之母”五十周年，以及 EuroBSDCon 2018 在布加勒斯特举行的游记与 Kamil Rytarowski 的 NetBSD sanitizers 演讲。（BSD Now EP269，[1889.60-3400.80]，L2）[订正：原 [2603.40-2648.68]，2026-09-30 SenseAudio 重转核对]
-- 一手史料：FreeBSD 基金会 2018 年 7 月通讯（官方文本）；HardenedBSD.org 关于基金会组建的公告；openbsd-tech 邮件中 Philippe Gontier 与 Brian Steele 的推测执行缓解提交说明。（BSD Now EP258，[3532.28-3667.74]，L1）
+- 一手史料：FreeBSD 基金会 2018 年 7 月通讯（官方文本）；HardenedBSD.org 关于基金会组建的公告；openbsd-tech 邮件中 Philip Guenther 与 Brian Steele 的推测执行缓解提交说明。（BSD Now EP258，[3532.28-3667.74]，L1）[订正：原 Philippe Gontier，2026-09-30 SenseAudio 重转核对]
 - 二手史料：NetBSD 博客的 Google Summer of Code libfuzzer 集成报告（第二部分），对 expr、zsh、file、ping 等用户态程序进行模糊测试。（BSD Now EP258，[3732.42-3797.80]，L2）
 - BSDCan 2017 网站与演讲幻灯片；Michael Geist 主旨演讲；FreeBSD 基金会 co-op 计划博客。（BSD Now EP198，[4152.78-573.74]，L2）
 - FreeBSD Quarterly Status Report（2017 年第一季度，官网发布）（BSD Now EP194，[67.52-222.56]，L1）
@@ -255,7 +255,7 @@ FreeBSD 社区论文：[FP-1998-002] Malloc(3) revisited（Poul-Henning Kamp，1
 - Foundation 季度更新的一手清单：资助 Postgres 性能优化、AutoFS 自动挂载器、iSCSI 系列工作与 Ed Maste 的 UEFI/VT 项目——主持人点评这些久拖不决的项目“因无人想做”而由基金会出资促成；Secure Boot 方案已定待执行；购置硬件强化 New York Internet 与 Sentex 共置机房，前者成为加州全部内容的完整镜像；宣布与 Cavium 合作支持 ARMv8 服务器；赞助 Robert Watson 组织剑桥开发者峰会、资助开发者组织阿根廷 BSD Day、以金牌赞助身份出席 EuroBSDCon 2014 并在该会募得逾 2000 美元捐款；Kirk McKusick、Robert Watson 与 George Neville-Neil 合著的《The Design and Implementation of the FreeBSD Operating System》由基金会出版，McKusick 在 EuroBSDCon 的 ZFS 报告之外另授两日 FreeBSD 内核教程。（BSD Now EP59，[1148.02-1274.02]，L2）
 - Peter Wemm 访谈（FreeBSD.org 集群管理员当事人自述）。（BSD Now EP56，[226.16-2846.68]，L1）
 - Eric LeBlanc 访谈（Xinuos 董事长兼 CEO 当事人自述）。（BSD Now EP51，[992.22-1870.22]，L1）
-- 本期史料包括 Ted Unangst 访谈（当事人自述）、OpenBSD signify 工具与测试密钥、FreeBSD Foundation 2013 年筹款报告、NTP 教程及 OpenBSD BeagleBone Black 移植博客。（BSD Now EP23，[713.64-1387.66]，L1）
+- 本期史料包括 Ted Unangst 访谈（当事人自述）、OpenBSD signify 工具与测试密钥、FreeBSD Foundation 2013 年筹款报告、NTP 教程及 OpenBSD BeagleBone Black 移植博客。（BSD Now EP23，[61.30-3246.40]，L1） [订正：原 [713.64-1387.66]，2026-09-30 SenseAudio 重转核对]
 - 当事人 Glen Barber 自述约 2007 年以爱好者身份接触 FreeBSD，2010 年获 commit bit，先后加入文档工程、集群管理与发行工程团队；其参与发行工程的起点是为解决快照缺失问题。（BSD Now EP2，[2101.06-2165.46]，L1）
 - 该期提及 OpenBSD 通过预售与销售 CD 套装筹集开发资金，并随每次发布推出歌曲与包装设计。（BSD Now EP2，[480.02-515.68]，L2）
 - 当事人 Peter Hessler 自述其为 OpenBSD 用户与开发者：2000 年起使用、2008 年起成为开发者，早期从事 ports 移植，后加入 Vantronics 从事 OpenBSD 防火墙与路由器相关工作，并曾运行约 50 个路由域。（BSD Now EP1，[2946.18-3109.14]，L1）
@@ -292,8 +292,8 @@ FreeBSD 社区论文：[FP-1998-002] Malloc(3) revisited（Poul-Henning Kamp，1
 - 总纲1 一切真历史都是古代史：主持人感叹管道今日被当作理所当然，而忽略其曾有“没有管道的时代”，历史书写把建构产物自然化为恒常存在。（BSD Now EP166，[239.06-247.66]，L3）
 - 总纲4 分离聚合是永恒规律：Adhoku 以 jail 做应用级分离、以反向代理做流量聚合，呈现分离与聚合的交替结构，而非单一集中或单一分散。（BSD Now EP166，[1636.04-1775.64]，L3）
 - 总纲10 动手者创造历史：MySQL 与 ZFS 的优化均来自动手部署者的具体记录，性能改进由实际操作者而非抽象方案推动。（BSD Now EP166，[566.72-1010.56]，L3）
-- 总纲10 动手者创造历史：“我是文档人”的自谦与“源码提交者已经够多”的回应，使这次董事补选成为对何种劳动被计入治理的再定义：文档、翻译、法务、布道与组织工作在基金会层面获得与内核开发同等的代表权——书写 BSD 史时，维持项目运转的动手者与提交代码的动手者同为历史的创造者（1664-1688 秒）。（BSD Now EP138，[1664.16-1687.68]，L1）
-- 总纲1 一切真历史都是古代史：calendar(1) 漏洞是“古代制度活在当代”的活标本：主持人的解释是，该工具为全校共用一台主机、每人维护日历文件的时代而设计，以 root 身份遍历所有用户日历并邮寄提醒在当时合理；2016 年它仍以 root 日任务存续，特权未剥离的旧设计在新语境中变成提权漏洞——理解这一漏洞必须回到其诞生的分时主机时代而非仅看当代代码（3666-3696 秒）。（BSD Now EP138，[3666.52-3695.82]，L2）
+- 总纲10 动手者创造历史：“我是文档人”的自谦与“源码提交者已经够多”的回应，使这次董事补选成为对何种劳动被计入治理的再定义：文档、翻译、法务、布道与组织工作在基金会层面获得与内核开发同等的代表权——书写 BSD 史时，维持项目运转的动手者与提交代码的动手者同为历史的创造者（1664-1688 秒）。（BSD Now EP138，[1659.1-1689.1]，L1）[订正：原 [1664.16-1687.68]，2026-09-30 SenseAudio 重转核对]
+- 总纲1 一切真历史都是古代史：calendar(1) 漏洞是“古代制度活在当代”的活标本：主持人的解释是，该工具为全校共用一台主机、每人维护日历文件的时代而设计，以 root 身份遍历所有用户日历并邮寄提醒在当时合理；2016 年它仍以 root 日任务存续，特权未剥离的旧设计在新语境中变成提权漏洞——理解这一漏洞必须回到其诞生的分时主机时代而非仅看当代代码（3666-3696 秒）。（BSD Now EP138，[3660.0-3711.6]，L2）[订正：原 [3666.52-3695.82]，2026-09-30 SenseAudio 重转核对]
 - 总纲15 文化即形式主义：Mark Phillips 把营销还原为讲故事的形式，提示技术传播中的品牌叙事同样是形式化构造。（BSD Now EP622，[2702.70-2727.46]，L1）
 - 总纲10 动手者创造历史：他以工程师背景亲手测试 ZFS 根镜像并反馈给 Colin Percival，体现使用者参与塑造云镜像。（BSD Now EP622，[1215.20-1244.40]，L1）
 - 总纲9 经验优先：其讲故事方法论基于多年创业与营销一线经验，而非抽象理论推演。（BSD Now EP622，[2553.94-2822.94]，L1）
@@ -326,21 +326,21 @@ FreeBSD 社区论文：[FP-1998-002] Malloc(3) revisited（Poul-Henning Kamp，1
 - McKusick 关于“文档 committer 与源码 committer 同等投票”的叙述属当事人视角，须与 FreeBSD 选举规则文件与历届 core 名单交叉核验；其对自己“不再关键”的自评也属谦辞。　[存疑脚注] 选举资格细节须以 FreeBSD Core Team 规则文件核实。（BSD Now EP278，[533.12-611.68]，L3）
 - McKusick 提及的研究（MIT 与法国高校基于 commit log 分析领导层）未给出具体出处，其“只有 Apache 与 FreeBSD 等少数项目完成多次更替”的结论需核对原始研究。　[存疑脚注] 所援引研究未具名，结论无法直接追溯。（BSD Now EP278，[725.94-799.70]，L4）
 - 主持人称微软的 DTrace 移植“未从 illumos 上游起步而是自 FreeBSD 版本开始”，此谱系判断须以微软官方实现与代码署名核实。　[存疑脚注] DTrace Windows 移植的具体代码来源未经一手仓库核对。（BSD Now EP269，[3451.40-3460.96]，L4）
-- [存疑脚注] HardenedBSD 基金会预计年底前获批 501c3 系公告中的预期表述而非既成事实，须以其后续公告核实实际获批时间。　[存疑脚注] 501c3 获批时间为预期而非既成事实。（BSD Now EP258，[3506.99-3515.60]，L4）
+- [存疑脚注] HardenedBSD 基金会预计年底前获批 501c3 系公告中的预期表述而非既成事实，须以其后续公告核实实际获批时间。　[存疑脚注] 501c3 获批时间为预期而非既成事实。（BSD Now EP258，[3506.20-3524.90]，L4）[订正：原 [3506.99-3515.60]，2026-09-30 SenseAudio 重转核对]
 - [考据脚注] 基金会通讯中的支出与人员细目为选择性朗读，完整内容须与 FreeBSD 基金会年度报告及官方通讯原文核对。　[考据脚注] 支出细目须与基金会年度报告核对。（BSD Now EP258，[321.10-419.90]，L4）[订正：原 [315.56-412.50]，2026-09-30 SenseAudio 重转核对]
 - [存疑脚注] Colin Percival 的开源资助方案当时仅为其个人提案，尚未落地实施，能否被社区采纳与商业化可行仍待验证。　[存疑脚注] 该方案属单一来源的个人设想，未形成实施记录。（BSD Now EP194，[1367.52-1440.28]，L4）
 - [存疑脚注] Patrick Hausen 所忆 1994 年与 Jordan Hubbard 会面、Walnut Creek 光盘数量等细节系当事人多年后回忆，需与 Walnut Creek 档案交叉核验。　[存疑脚注] 当事人回忆性细节，缺乏独立一手档案印证。（BSD Now EP192，[1279.84-1320.66]，L4）
 - [存疑脚注] GSoC 项目名单为 2017 年计划，最终是否全部完成须以后续项目报告为准。　[存疑脚注] 计划性名单，验收结果待后续报告。（BSD Now EP189，[585.22-733.18]，L4）
 - [存疑脚注] 转写将管道历史中的参与者记作“Thompson and Kennedy”，疑为 Ritchie、Thompson 与 Rudd Canaday 的误转；管道提议与实现时间线须以 McIlroy 原文及 Unix 一手文献复核。　[存疑脚注] 人名与时间线须核验一手文献。（BSD Now EP166，[279.9-308.86]，L4）
 - [存疑脚注] 转写将 Hauben 文章托管地记作“farther dot edu”，实际域名无法据此确认，引用时须核验文章来源。　[存疑脚注] 文章来源域名存疑。（BSD Now EP166，[417.88-422.96]，L4）
-- 主持人在评述 Percival 博文时即兴将 OpenSSL Heartbleed 归因于“为个别系统的慢 malloc 自建内存管理层却全局启用”，以此反证“补丁只打在需要的系统上”的局部性原则；但此归因系主持人现场发挥而非博文原文，Heartbleed 的直接根因是心跳报文边界检查缺失，与自定义内存管理器的关系须经代码与事后审计多源核对，不可直接采信。　[存疑脚注] Heartbleed 与 OpenSSL 自定义内存管理层的因果链为主持人单源现场推断，节目未给出出处，属待验证命题。（BSD Now EP138，[3534.72-3578.44]，L4）
-- 受访者供职的达姆施塔特应用技术大学把 26 节点 Dell C6220 集群从 Ubuntu 渐进迁往 FreeBSD：以 bhyve 为教学虚拟机宿主、以 ZFS 快照回滚兜底学生 root 误操作、自写 shell 脚本把重装时长从 FI 全自动安装的 25 分钟压缩到约 10 分钟，是 2016 年 bhyve 与 ZFS 进入真实教学负载的自述个案；但其自承性能验证尚未完成，属单一当事人陈述，可作 bhyve 成熟度的孤证线索而非生态级结论。　[存疑脚注] 单源自述；“学生不会察觉运行于虚拟机”的性能判断未附数据，待其承诺的后续文章或演讲验证。（BSD Now EP138，[2437.50-2649.70]，L4）
+- 主持人在评述 Percival 博文时即兴将 OpenSSL Heartbleed 归因于“为个别系统的慢 malloc 自建内存管理层却全局启用”，以此反证“补丁只打在需要的系统上”的局部性原则；但此归因系主持人现场发挥而非博文原文，Heartbleed 的直接根因是心跳报文边界检查缺失，与自定义内存管理器的关系须经代码与事后审计多源核对，不可直接采信。　[存疑脚注] Heartbleed 与 OpenSSL 自定义内存管理层的因果链为主持人单源现场推断，节目未给出出处，属待验证命题。（BSD Now EP138，[3530.1-3596.6]，L4）[订正：原 [3534.72-3578.44]，2026-09-30 SenseAudio 重转核对]
+- 受访者供职的达姆施塔特应用技术大学把 26 节点 Dell C6220 集群从 Ubuntu 渐进迁往 FreeBSD：以 bhyve 为教学虚拟机宿主、以 ZFS 快照回滚兜底学生 root 误操作、自写 shell 脚本把重装时长从 FI 全自动安装的 25 分钟压缩到约 10 分钟，是 2016 年 bhyve 与 ZFS 进入真实教学负载的自述个案；但其自承性能验证尚未完成，属单一当事人陈述，可作 bhyve 成熟度的孤证线索而非生态级结论。　[存疑脚注] 单源自述；“学生不会察觉运行于虚拟机”的性能判断未附数据，待其承诺的后续文章或演讲验证。（BSD Now EP138，[2437.2-2657.4]，L4）[订正：原 [2437.50-2649.70]，2026-09-30 SenseAudio 重转核对]
 - 访谈为 Mark Phillips 单方自述，其职业时间线与 FreeBSD Foundation 任职细节为单一来源，关键节点须以基金会公告交叉验证。　[存疑脚注] 职业履历为当事人单一来源自述，未与其他公开资料交叉验证（BSD Now EP622，[407.42-944.24]，L4）
 - 访谈中的预算（约 270 万至 290 万美元）与募资（约 550 万美元）数字为当事人口述的单一来源，须与基金会年度报告交叉核对。　[存疑脚注] 预算与募资金额为当事人口述，未经年报交叉验证。（BSD Now EP616，[570.70-586.06]，L4）
 - commit 日志作为史料样本与媒体误读现象：本期新设邮件列表集锦段所引三例——Julian Assange 于 1990 年代中期致信 FreeBSD 邮件列表建议放弃 CVS（表明其曾是 FreeBSD 用户）；Ted Unangst 修复 head(1) 的提交日志戏称“修复 head 中严重的分布式拒绝服务”，被技术媒体当真演绎为 OpenBSD 出现严重漏洞；另一提交日志自述“修复 Bill Joy 于 1977 年 8 月 24 日引入、已存在于 1978 年 3 月 9 日 1BSD 发布中的 37 年老 bug，方式是合并 Keith Bostic 来自 4.4BSD 的 22 年前修复”。前者展示技术幽默在跨语境传播中的失真，后者则将 1BSD—4.4BSD—当代的代码谱系凝缩于一条提交日志，可作版本演化叙事的直接引证。（BSD Now EP59，[4501.43-4646.07]，L2）
 - 2012 年事件中患者零号的初始入侵路径仅存候选推断，Peter Wemm 自述只有短名单而无确定结论。　[存疑脚注] 初始入侵路径未获确证，属当事人事后推断（BSD Now EP56，[2224.94-2233.42]，L4）
 - Xinuos 与 SCO 的历史关联及其 UNIX 版权诉讼前史在本期仅被一带而过，其与 FreeBSD 关系的长期后果未在本期展开。　[存疑脚注] SCO 前史仅凭主持人转述与当事人简短开场，未经多源交叉核验（BSD Now EP51，[1015.90-1019.40]，L4）
-- 当事人明确表示不知 Theo 启动签名项目的动机，且 5.5 正式签名密钥当时尚未生成；发行集签名覆盖范围（源集、ports tarball 是否签名）仍属待定。　[存疑脚注] 签名动机与最终覆盖范围以 OpenBSD 官方发布说明为准，需后续考据。（BSD Now EP23，[1615.30-1651.60]，L4）
+- 当事人明确表示不知 Theo 启动签名项目的动机，且 5.5 正式签名密钥当时尚未生成；发行集签名覆盖范围（源集、ports tarball 是否签名）仍属待定。　[存疑脚注] 签名动机与最终覆盖范围以 OpenBSD 官方发布说明为准，需后续考据。（BSD Now EP23，[1312.30-1659.90]，L4） [订正：原 [1615.30-1651.60]，2026-09-30 SenseAudio 重转核对]
 - FreeBSD 10.0 是否彻底移除 BIND、以及 resolv.conf 与 DHCP 切换的具体方案在本期仍属进行中的计划，须以 10.0 最终发布说明为准。　[存疑脚注] BIND 移除与解析配置迁移为当时未定稿规划，播客转述不等同于正式发布决策。（BSD Now EP2，[4181.74-4227.38]，L4）
 - VeriSign 同时使用 BSD、Linux、Solaris 等操作系统作多样性冗余的说法为主持人转述，其根服务器内部各系统的具体比例未获官方资料核验。　[存疑脚注] VeriSign 各操作系统在根服务器中的具体占比属单一播客转述，须以官方资料交叉验证。（BSD Now EP1，[460.01-478.53]，L4）
 - 转写误植须考订：Matt Bill 应为 Matt Dillon、grag-and-fly-vsd.org 应为 dragonflybsd.org、package source 应为 pkgsrc、a cabotette for humanity 应为 Habitat for Humanity、previous D-year 应为 FreeBSD；氧气说归属者转写为 Jordan Hubbard 或 John Louis Gasey，后者拼写无法确证，当事人自承记不清出处，Package Manager 这一 pkgsrc 图形工具的活动状态亦不明。[存疑脚注] 氧气名言的原始出处与精确措辞无从自转写确证，须以邮件列表与早期演讲存档复核。　[存疑脚注] 氧气说归属与措辞为单一来源模糊回忆，引用须先经外部文献核验。（BSDTalk EP169，[685.46-706.46]，L4）

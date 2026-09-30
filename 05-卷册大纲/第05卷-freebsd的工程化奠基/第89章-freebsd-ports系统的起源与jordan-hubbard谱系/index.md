@@ -51,7 +51,7 @@ volume: 第05卷-freebsd的工程化奠基
 - 本期转述 WWIT Pro 上的一场 Unix 哲学报告，将一切皆文件、单功能小工具、管道组合、模块化、分离、简洁、透明、失败、多样性、可扩展与简约性重新表述为 2019 年的十条原则。（BSD Now EP312，[389.36-592.56]，L2）
 - 威斯康星大学密尔沃基 HPC 实验室文章论证包管理器价值：避免手工安装的重复劳动与不可复现，并比较 ports、pkgsrc、MacPorts 等源码与二进制管理路径，强调科研可复现性。（BSD Now EP312，[601.24-1049.34]，L2）
 - Joshua Stein 记述 OpenBSD 触控板两年中断缺失问题，最终定位为 ACPI 节点遍历顺序与 ACPICA 不同，通过改写遍历算法修复并弃用强制轮询。（BSD Now EP312，[1061.82-1661.96]，L2）
-- 受访者自述 FreeBSD 图形栈在其设备上基本可用、可作为日常驱动，但承认体验仍不如 Windows 与 macOS，且特定硬件组合仍会出现挂起与交换分区交互导致的偶发冻结。（BSD Now EP283，[427.99-503.62]，L1）
+- 受访者自述 FreeBSD 图形栈在其设备上基本可用、可作为日常驱动，但承认体验仍不如 Windows 与 macOS，且特定硬件组合仍会出现挂起与交换分区交互导致的偶发冻结。（BSD Now EP283，[427.99-548.20]，L1）[订正：原 [427.99-503.62]，2026-09-30 SenseAudio 重转核对]
 - FreeBSD 图形栈在 2018 年底已大体跟进上游：输入栈与 Mesa 已更新，libinput 补丁位于开发仓库，X server 本体则是最滞后的待移植与待推送部分。（BSD Now EP283，[600.70-674.48]，L1）
 - FreeBSD 图形团队规模极小：Johannes Lundberg 负责从 Linux 移植 DRM 驱动并更新 Linux KPI，另一名 Johannes Dietrich 维护 ports 中的图形驱动，Warner Losh 担任与 core 团队的联络，Matt Macy 尝试让 Linux KPI 在 PowerPC64 上运行。（BSD Now EP283，[676.78-944.60]，L1）
 - 受访者自 2012 年起维护 FreeBSD ports，长期以 Poudriere 教程作为新人参与入口，认为从维护小型 port 开始逐步深入是降低参与门槛的有效方式。（BSD Now EP283，[998.48-1210.88]，L1）
@@ -63,8 +63,8 @@ volume: 第05卷-freebsd的工程化奠基
 - FreeBSD 基金会 11 月更新：Matt Ahrens 推进 RAID-Z 扩容（由 FreeBSD 基金会、Delphix、iXsystems 合办），预计 2018 年合入并赶上 FreeBSD 12。（BSD Now EP223，[5082.36-5176.8]，L2）
 - Jordan Hubbard 自述早期 Unix 因 AT&T 源码许可昂贵且排他，386BSD 由 Bill Jolitz 补齐 Intel 架构缺件后首次让普通 PC 运行 BSD；他与 Nate Williams、Rod Grimes 共同维护 386BSD patch kit，最终另立 FreeBSD。（BSD Now EP13，[800.4-1148.2]，L1）
 - FreeBSD 之名由 David Greenman 提出；1.0 发布后，Hubbard 联系 Walnut Creek CD-ROM 出版发行版，并获得 John Lasseter 与 Kirk McKusick 协助解决 Beastie 封面版权。（BSD Now EP13，[1109.0-1292.6]，L1）
-- 他先后编写包管理工具与 ports 集合，把约 300 个 port 交由 Satoshi Asami 维护后转向 sysinstall 与发布工程；未料 ports 日后增至约 25,000。（BSD Now EP13，[1502.6-1547.3]，L1）
-- 2001 年他离开 FreeBSD 加入 Apple，组建 BSD Technology Group，以 FreeBSD 3.2 为参考平台持续向 OS X 回灌新版 FreeBSD 代码，直至 2013 年出任 iXsystems CTO。（BSD Now EP13，[1609.7-1837.5]，L1）
+- 他先后编写包管理工具与 ports 集合，把约 300 个 port 交由 Satoshi Asami 维护后转向 sysinstall 与发布工程；未料 ports 日后增至约 25,000。（BSD Now EP13，[1500.5-1562.3]，L1）[订正：原 [1502.6-1547.3]，2026-09-30 SenseAudio 重转核对]
+- 2001 年他离开 FreeBSD 加入 Apple，组建 BSD Technology Group，以 FreeBSD 3.2 为参考平台持续向 OS X 回灌新版 FreeBSD 代码，直至 2013 年出任 iXsystems CTO。（BSD Now EP13，[1609.6-1826.9]，L1）[订正：原 [1609.7-1837.5]，2026-09-30 SenseAudio 重转核对]
 - 新闻部分报道 DragonFly BSD 3.6 发布、dports 默认化，以及 FreeBSD CURRENT 中 ZFS 在 SSD 上启用 TRIM 时的数据损坏风险警告。（BSD Now EP13，[566.2-737.9]，L2）
 - Vinum 起源于真实故障而非规划：Lehey 在中国为 Tandem 讲学时接触 Veritas 卷管理器颇为赞赏；其后加州的 Nicole Harrington 因公司磁盘崩溃无法恢复而求助，其系统运行 FreeBSD 的 CCD 串联磁盘驱动，而 CCD 当时本就不善处理磁盘失败；Lehey 判断 FreeBSD 需要类似 Veritas 的卷管理器，以拉丁语双关命名为 vinum（意为酒）；恰逢 CyberNet 公司寻求 RAID5 实现并支付费用，成果于 1998 年底进入 FreeBSD 源码树。（BSDTalk EP55，[397.8-462.52]，L1）
 - 至 2006 年访谈时，Vinum 已被多个 GEOM 类取代，但 Lehey 认为部分 GEOM 类仍未具备 Vinum 五年前已有的特性，希望社区将其吸收进传统 GEOM 类，显示替代并非完整的功能接续。（BSDTalk EP55，[462.52-483.24]，L1）
@@ -81,7 +81,7 @@ volume: 第05卷-freebsd的工程化奠基
 - WWIT Pro 的 Unix 哲学报告，作者在 SPARCBook 上用 PostScript 演示。（BSD Now EP312，[80.64-91.24]，L2）
 - UWM HPC 实验室的为何使用包管理器文章，含 pkgsrc 增长图与自建二进制包的说明。（BSD Now EP312，[603.28-998.46]，L2）
 - Joshua Stein 的 OpenBSD 触控板中断调试长文，含 ACPI AML、ACPICA 与 IOAPIC 细节。（BSD Now EP312，[1061.82-1661.96]，L2）
-- 受访者提及 EuroBSDCon 2015 在斯德哥尔摩举办、开发者峰会曾借其旧办公室进行，以及 FreeBSD 季度状态报告将恢复发布图形栈条目。（BSD Now EP283，[354.72-379.54]，L1）
+- 受访者提及 EuroBSDCon 2015 在斯德哥尔摩举办、开发者峰会曾借其旧办公室进行，以及 FreeBSD 季度状态报告将恢复发布图形栈条目。（BSD Now EP283，[354.72-2111.10]，L1）[订正：原 [354.72-379.54]，2026-09-30 SenseAudio 重转核对]
 - 提及图形栈相关代码与仓库：libinput、Mesa 的上游同步、Linux KPI 移植以及待推送至 FreeBSD ports 的 X server 端口。（BSD Now EP283，[600.70-674.48]，L1）
 - backtrace.io 的编译器可调试性文章，以 DWARF 状态机解释优化后变量的取值恢复。（BSD Now EP223，[72.32-97.84]，L2）
 - Andrew Cherkashin 的 Rust 移植 Medium 文章（以 fd 工具为例说明 port 的 Makefile 结构）。（BSD Now EP223，[923.72-1010.84]，L2）

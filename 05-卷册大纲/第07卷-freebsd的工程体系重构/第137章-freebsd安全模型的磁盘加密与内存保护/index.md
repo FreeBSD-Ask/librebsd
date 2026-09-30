@@ -51,10 +51,10 @@ volume: 第07卷-freebsd的工程体系重构
 
 - 本期核心为对 FreeBSD committer Pawel Jakub Dawidek（转写作 Pavel Davidek）的专访：其公司以 FreeBSD 为基座打造两款安全设备——FUDO 面向特权用户会话的录制与审计，Lynx 面向企业 TLS/SSL 流量的解密卸载；他自述设计哲学“信任开始之处即安全终结之处”（1827.17-1833.98），并指出近年重大安全事件多出自雇员与承包商，内部威胁的监控由此成为产品定位的核心。（BSD Now EP120，[1600.47-1742.97]，L1）
 - FUDO 的技术栈揭示 FreeBSD 内核安全特性进入商业生产的深度：geli 承担全盘加密，Capsicum 承担会话沙箱，嘉宾称其设备“是比 FreeBSD 本体更大的 Capsicum 消费者”（1927.59-1934.81），认证前进程仅获一秒 CPU 配额与三个文件描述符；加密代价因客户端、服务端、落盘三方向而三倍叠加，图形会话另需 OCR 以支持文本检索，多主集群则依赖 ZFS 增量快照复制完成节点间同步。（BSD Now EP120，[1917.11-2234.32]，L1）
-- Sean Webb 与 Oliver Pinter 在 HardenedBSD 项目内推进 ASLR/PIE，并将其作为补丁提交上游 FreeBSD，目标是进入 11 版本。（BSD Now EP52，[1110.02-1421.06]，L1）
-- ASLR 使程序可加载到任意内存地址，PIE 进一步支持应用级随机化，用于提高缓冲区溢出与信息泄露攻击的门槛；该实现默认关闭，需编译内核选项并可通过 sysctl 控制。（BSD Now EP52，[1110.02-1183.22]，L1）
-- 该 ASLR 实现借鉴 PaX 与 NetBSD 的实现谱系，并在除 ARM 外的 FreeBSD 支持架构上工作，包括 32 位 Linux 兼容层。（BSD Now EP52，[1351.34-1501.26]，L1）
-- OpenBSD 以 nginx 在基础系统中难以维护、且其自定义内存分配器遮蔽安全缓解机制为由，将其移出基础系统改由 ports 提供。（BSD Now EP52，[400.96-426.04]，L2）
+- Sean Webb 与 Oliver Pinter 在 HardenedBSD 项目内推进 ASLR/PIE，并将其作为补丁提交上游 FreeBSD，目标是进入 11 版本。（BSD Now EP52，[1109.1-1952.2]，L1）[订正：原 [1110.02-1421.06]，2026-09-30 SenseAudio 重转核对]
+- ASLR 使程序可加载到任意内存地址，PIE 进一步支持应用级随机化，用于提高缓冲区溢出与信息泄露攻击的门槛；该实现默认关闭，需编译内核选项并可通过 sysctl 控制。（BSD Now EP52，[1109.1-1586.3]，L1）[订正：原 [1110.02-1183.22]，2026-09-30 SenseAudio 重转核对]
+- 该 ASLR 实现借鉴 PaX 与 NetBSD 的实现谱系，并在除 ARM 外的 FreeBSD 支持架构上工作，包括 32 位 Linux 兼容层。（BSD Now EP52，[1351.3-1639.9]，L1）[订正：原 [1351.34-1501.26]，2026-09-30 SenseAudio 重转核对]
+- OpenBSD 将 BIND 与 nginx 一并移出基础系统：基础系统转而包含 nsd 与 unbound 供 5.6 与 5.7 用户过渡，BIND 可从 ports 获取最新版本，nginx 则为其新写的自定义 HTTP 守护进程让位。（BSD Now EP52，[397.6-447.6]，L2）[订正：原 OpenBSD 以 nginx 在基础系统中难以维护、且其自定义内存分配器遮蔽安全缓解机制为由，将其移出基础系统改由 ports 提供。（BSD Now EP52，[400.96-426.04]，L2），2026-09-30 SenseAudio 重转核对]
 
 **史料**：
 

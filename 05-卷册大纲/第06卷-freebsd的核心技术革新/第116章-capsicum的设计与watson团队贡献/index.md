@@ -71,7 +71,7 @@ volume: 第06卷-freebsd的核心技术革新
 
 - Robert Watson 访谈（当事人自述，FreeBSD 核心团队成员与剑桥大学讲师）。（BSD Now EP50，[1294.82-2231.72]，L1）
 - OpenSSL 0.9.8zb、1.0.0n、1.0.1i 安全公告与 LibreSSL 2.0.5 发布信息（主持人口头转述）。（BSD Now EP50，[897.62-983.42]，L2）
-- 本期对 Poul-Henning Kamp 的当事人访谈自述，他是 FreeBSD 项目早期成员，也是 jail、GEOM、GBDE 与 MD5 crypt 的亲历者。（BSD Now EP7，[707.32-2296.90]，L1）
+- 本期对 Poul-Henning Kamp 的当事人访谈自述，他是 FreeBSD 项目早期成员，也是 jail、GEOM、GBDE 与 MD5 crypt 的亲历者。（BSD Now EP7，[718.30-2292.60]，L1）[订正：原 [707.32-2296.90]，2026-09-30 SenseAudio 重转核对]
 - Kamp 与 Robert Watson 合著论文《Jails: Confining the Omnipotent Root》（BSDCon 2000），是对 jail 的系统化表述。（BSD Now EP7，[1052.26-1077.26]，L3）
 - jail(2)、gbde(8)、geli(8) 手册页及 FreeBSD 源码仓库中对应提交记录，可作为交叉验证来源。（BSD Now EP7，L3）
 
@@ -88,9 +88,9 @@ volume: 第06卷-freebsd的核心技术革新
 **辨析**：
 
 - Watson 自述尚不清楚 FreeBSD 10 发布以来沙箱化基础工具实际缓解了多少已公开漏洞，量化效果存疑。　[存疑脚注] 沙箱缓解漏洞的量化结论缺乏公开统计数据支撑（BSD Now EP50，[1578.68-1585.78]，L4）
-- [存疑脚注] 转写文本对 Poul-Henning Kamp 的姓名拼写前后不一（Paul Henningkamp、Paul Heinkamp、Paul Henningham），经上下文与 FreeBSD 史实判断指 Poul-Henning Kamp，引用时须以原始音频复核。　[存疑脚注] 人名转写拼写不一致，须以原始音频复核（BSD Now EP7，[732.60-736.24]，L4）
+- [存疑脚注] 转写文本对 Poul-Henning Kamp 的姓名拼写前后不一（Paul Henningcamp、Paul Hankamp、Paul Henningsen），经上下文与 FreeBSD 史实判断指 Poul-Henning Kamp，引用时须以原始音频复核。　[存疑脚注] 人名转写拼写不一致，须以原始音频复核（BSD Now EP7，[732.60-736.24]，L4）[订正：原 转写变体 Paul Henningkamp、Paul Heinkamp、Paul Henningham，2026-09-30 SenseAudio 重转核对]
 - [存疑脚注] Poul-Henning Kamp 口述 jail 论文发表会议时在 1998 与 2000 之间犹豫，最终自定为 2000；本卡片采信其最终自述，并与既有考据相互印证，但精确会议年份仍须以论文原文与会议议程核实。　[存疑脚注] 会议年份口述有反复，须以论文原文核实（BSD Now EP7，[1066.26-1077.26]，L4）
-- [存疑脚注] 转写将 GBDE 识别为 GBD，将 GELI 作者 Pawel 转写为 Pappel；本卡片据 FreeBSD 磁盘加密技术史判定为 GBDE 与 Pawel Jakub Dawidek，须以原始音频复核。　[存疑脚注] 磁盘加密术语与人名转写错误（BSD Now EP7，[1826.94-1836.94]，L4）
+- [存疑脚注] 转写将 GBDE 识别为 GBD，将 GELI 作者 Pawel 转写为 Puffle；本卡片据 FreeBSD 磁盘加密技术史判定为 GBDE 与 Pawel Jakub Dawidek，须以原始音频复核。　[存疑脚注] 磁盘加密术语与人名转写错误（BSD Now EP7，[1826.94-1836.94]，L4）[订正：原 Pawel 误写作 Pappel，2026-09-30 SenseAudio 重转核对]
 
 **文献**：
 

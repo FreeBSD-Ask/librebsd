@@ -77,7 +77,7 @@ volume: 第13卷-bsd衍生操作系统
 - Jim Salter 在 Ars Technica 的 OpenZFS 指南及 syncoid 工具说明。（BSD Now EP354，[474.62-597.86]，L2）
 - 关于 Colin Percival 的播客访谈，介绍其 Tarsnap 创立、AWS 使用经验与 FreeBSD 安全官经历。（BSD Now EP354，[674.30-747.26]，L2）
 - 本期可索引的一手史料：Alan 的 EuroBSDCon 2015 亲历口述，含约 244 名与会者、首次与会者占比很高且首次出现无全勤者举手、大会纪念已故社区成员 Paul Schenkeveld 并设以其命名的年度旅行资助、下届承办地贝尔格莱德；Paul Vixie 开幕主题演讲回顾其 BSD 使用史与职业生涯，中途脱去毛衣露出印有“Bind 8 is dead”字样的 T 恤并获全场掌声（147.68-154.42）；Theo de Raadt 在克罗地亚的 TAME 演讲幻灯片与 Bob Beck 的 LibreSSL 演讲幻灯片；Peter Grehan 于 10 月 4 日提交的 bhyve Windows 客户机支持（要求 FreeBSD head r288524 之后）；EMC Isilon 赞助回馈上游的 FreeBSD commits。（BSD Now EP110，[321.54-609.50]，L1）
-- 本期史料包括 NYCBSDCon 2014 议程与现场反馈、Luke Marsden 访谈（当事人自述）、HybridCluster 产品说明及 FreeBSD 10 PF/IPFW 讨论。（BSD Now EP24，[1059.58-1612.28]，L1）
+- 本期史料包括 NYCBSDCon 2014 议程与现场反馈、Luke Marsden 访谈（当事人自述）、HybridCluster 产品说明及 FreeBSD 10 PF/IPFW 讨论。（BSD Now EP24，[65.60-2456.00]，L1） [订正：原 [1059.58-1612.28]，2026-09-30 SenseAudio 重转核对]
 - 本期限定的一手口述材料包括：ShmooCon 2006（第二届，华盛顿特区）上关于 Sguil 的演讲与 David Bianco 的 WMF 漏洞会话数据分析演示；受访者 2003 年 1 月创办并持续更新、以 FreeBSD 工具实测记录为主体的技术博客 taosecurity.blogspot.com；以及 Freshports（Dan Langille 建立的 ports 树 Web 界面）与 NYCBUG 维护的 dmesgd 硬件兼容性输出上传站。（BSDTalk EP13，[516.19-656.97]，L1）
 - 受访者给出的个人 FreeBSD 接触物证链可作年代锚点：1999 年获赠的 FreeBSD 3.2 安装光盘、2000 年安装的 FreeBSD 4.1、2001 年商用部署所用的 FreeBSD 4.2，与其军旅身份（空军计算机应急响应组）及 2005 年 Black Hat 上 Mike Lynn 与 Cisco、ISS 的争议事件的时间线相互印证。（BSDTalk EP13，[665.93-1132.38]，L1）
 - 一手材料：主持人在现场记录了这批与会者快照，构成 2014 年 2 月 NYCBSDCon 参与者构成的口述抽样；会议现场正式宣布 FreeBSD Journal 公开发售、可在 Apple、Google Play 与 Kindle 应用商店订阅以支持项目；会议以低票价提供早餐、午餐、酒券、T 恤与折扣购书，主持人并将节目存档上传 archive.org。（BSDTalk EP238，[41.26-73.50]，L1）

@@ -85,15 +85,15 @@ volume: 第08卷-freebsd的范式转换
 - FreeBSD 完成 2020 年第十一届 Core 团队选举，Baptiste Daroussin、Ed Maste、George Neville-Neil、Hiroki Sato、Kyle Evans、Mark Johnston、Scott Long、Sean Chittenden、Warner Losh 当选。（BSD Now EP360，[460.69-614.65]，L2）
 - NetBSD 在 Pinebook Pro 上以 NetBSD 9 用户态搭配 Current 内核运行，以兼顾二进制包与更好的硬件支持。（BSD Now EP360，[624.57-842.58]，L2）
 - pf 状态表存在默认大小限制，FreeBSD 另有 `net.pf.request_maxcount` sysctl 控制单次 ioctl 载入表项数；DragonFly 侧限制为静态内核值。（BSD Now EP360，[1199.40-1404.41]，L2）
-- DragonFly vkernel 类似 jail 但虚拟化整个内核，新支持 copy-on-write 镜像模式，使多个 vkernel 可从同一镜像启动，运行时变更保留在各自层而不写回原镜像文件，近似 UnionFS。（BSD Now EP164，[197.82-249.56]，L2）
-- 若将镜像设为只读，多个 vkernel 共享同一镜像且互不修改；对镜像的改动被保留在分离的变更层中。（BSD Now EP164，[226.9-239.82]，L2）
+- DragonFly vkernel 类似 jail 但虚拟化整个内核，新支持 copy-on-write 镜像模式，使多个 vkernel 可从同一镜像启动，运行时变更保留在各自层而不写回原镜像文件，近似 UnionFS。（BSD Now EP164，[176.8-266.7]，L2）[订正：原 [197.82-249.56]，2026-09-30 SenseAudio 重转核对]
+- 若将镜像设为只读，多个 vkernel 共享同一镜像且互不修改；对镜像的改动被保留在分离的变更层中。（BSD Now EP164，[226.9-266.7]，L2）[订正：原 [226.9-239.82]，2026-09-30 SenseAudio 重转核对]
 - FreeBSD 在 Raspberry Pi 3 上的有限支持已提交 head，多数驱动可用上游，但 RNG 的 call-out 模式失效、SMP 尚未完成、VCHIQ 驱动存在仅对 ARM 成立的假设，且尚无 HDMI 支持。（BSD Now EP164，[328.18-412.58]，L2）
 - OpenBSD 自成立起一直使用 CVS，与 NetBSD 及早期 FreeBSD 相同；本期公布位于 github.com/openbsd 的官方只读镜像，含源码与 ports 等仓库。（BSD Now EP164，[3816.62-3848.04]，L2）
 - OpenBSD GitHub 镜像的 exporter 稳定性尚无保证，若基于该分支做 fork，数据可能以不同哈希重新导出而使 rebase 困难。（BSD Now EP164，[3902.24-3915.58]，L2）
 - Libreboot.org 发布以开源 BIOS 引导 OpenBSD 或 LibertyBSD 的文档，含 USB 镜像制作、Grub 配置与排障，但 Libreboot 加 Grub 尚不支持全盘加密。（BSD Now EP164，[3926.18-4004.28]，L2）
 - 主持人评论认为随着 EFI 增长，开源系统越发依赖闭源固件甚至迷你操作系统来引导，Libreboot 针对的正是最后一块不受控制的区域。（BSD Now EP164，[4007.8-4038.48]，L1）
-- Josh Paetzel 亲述协助 FreeBSD Foundation 调试 Supermicro 服务器的 PXE 引导：串口看似故障，实为系统启动停止，改为静态 DHCP 预留后正常引导，根因仍未完全查明。（BSD Now EP164，[1641.44-1928.76]，L1）
-- Josh Paetzel 认为 ZFS 中延迟敏感负载宜用 RAID10，容量优先与非延迟敏感负载宜用 RAIDZ/RAIDZ2；其团队运行过 200 至 300 盘的 RAIDZ2 与 RAID10 池且未因硬件故障丢失池。（BSD Now EP164，[2049.82-2203.34]，L1）
+- Josh Paetzel 亲述协助 FreeBSD Foundation 调试 Supermicro 服务器的 PXE 引导：串口看似故障，实为系统启动停止，改为静态 DHCP 预留后正常引导，根因仍未完全查明。（BSD Now EP164，[1637.4-1860.0]，L1）[订正：原 [1641.44-1928.76]，2026-09-30 SenseAudio 重转核对]
+- Josh Paetzel 认为 ZFS 中延迟敏感负载宜用 RAID10，容量优先与非延迟敏感负载宜用 RAIDZ/RAIDZ2；其团队运行过 200 至 300 盘的 RAIDZ2 与 RAID10 池且未因硬件故障丢失池。（BSD Now EP164，[2049.82-2168.1]，L1）[订正：原 [2049.82-2203.34]，2026-09-30 SenseAudio 重转核对]
 - Josh Paetzel 以客机比喻 ZFS：非常安全，多数故障被冗余吸收，但一旦突破临界即彻底崩溃，且没有理解 RAID-Z 布局的数据恢复工具。（BSD Now EP164，[2434.64-2497.76]，L1）
 - Josh Paetzel 指出 ZFS 自 2011 年开源后五年间约 45% 的代码为新写，并认为文件系统需要商业实体与专业工程资源支撑。（BSD Now EP164，[2522.4-2603.72]，L1）
 
@@ -103,11 +103,11 @@ volume: 第08卷-freebsd的范式转换
 - Dan Langille 关于 NUT 关机测试的博文，以及 `upsdrvctl -t` 测试模式与 `upsmon -c fsd` 命令的手册说明。（BSD Now EP370，[1174.02-1519.15]，L2）
 - 追查坏提交博文与 git bisect 说明。（BSD Now EP360，[65.19-460.69]，L2）
 - FreeBSD 2020 年 Core 团队选举公告，由主持人转述当选名单。（BSD Now EP360，[460.69-614.65]，L2）
-- DragonFly vkernel copy-on-write 镜像模式的功能说明。（BSD Now EP164，[197.82-249.56]，L2）
+- DragonFly vkernel copy-on-write 镜像模式的功能说明。（BSD Now EP164，[176.8-266.7]，L2）[订正：原 [197.82-249.56]，2026-09-30 SenseAudio 重转核对]
 - FreeBSD 提交者关于 Raspberry Pi 3 支持的博客。　[存疑脚注] 博客作者全名须核验。（BSD Now EP164，[328.18-412.58]，L2）
-- OpenBSD 官方只读 GitHub 镜像（github.com/openbsd）。（BSD Now EP164，[3816.62-3915.58]，L2）
+- OpenBSD 官方只读 GitHub 镜像（github.com/openbsd）。（BSD Now EP164，[3828.2-3915.58]，L2）[订正：原 [3816.62-3915.58]，2026-09-30 SenseAudio 重转核对]
 - Libreboot.org 关于以开源 BIOS 引导 OpenBSD/LibertyBSD 的文档。（BSD Now EP164，[3926.18-4004.28]，L2）
-- Josh Paetzel 访谈自述（iXsystems，FreeNAS/TrueNAS 相关运维经验）。（BSD Now EP164，[1600.0-2610.0]，L1）
+- Josh Paetzel 访谈自述（iXsystems，FreeNAS/TrueNAS 相关运维经验）。（BSD Now EP164，[985.8-2820.6]，L1）[订正：原 [1600.0-2610.0]，2026-09-30 SenseAudio 重转核对]
 
 **史观**：
 
@@ -115,7 +115,7 @@ volume: 第08卷-freebsd的范式转换
 - 总纲21 革命与改革是历史方法论的分歧：FreeBSD 迁移 Git 采取渐进改革而非激进重构，迁移团队试图保留旧用户熟悉的工作流。（BSD Now EP370，[984.63-1017.59]，L2）
 - 总纲10 动手者创造历史：FreeBSD 决策由“到场者”作出，主持人与提问者强调社区参与决定项目走向。（BSD Now EP360，[2452.99-2456.55]，L2）
 - 总纲4 分离聚合是永恒规律：Core 团队成员更替体现治理层的分离与再聚合。（BSD Now EP360，[460.69-614.65]，L2）
-- 总纲4 分离聚合是永恒规律：vkernel 以只读镜像为基底、以 copy-on-write 层承载差异，多个实例分离运行又共享同一映像，呈现分离与聚合的结构。（BSD Now EP164，[197.82-249.56]，L3）
+- 总纲4 分离聚合是永恒规律：vkernel 以只读镜像为基底、以 copy-on-write 层承载差异，多个实例分离运行又共享同一映像，呈现分离与聚合的结构。（BSD Now EP164，[176.8-266.7]，L3）[订正：原 [197.82-249.56]，2026-09-30 SenseAudio 重转核对]
 - 总纲3 不存在进步，只有权力再分配：Libreboot 试图把引导固件的控制权从闭源厂商转移给用户，是围绕系统控制权的权力再分配。（BSD Now EP164，[4007.8-4038.48]，L3）
 - 总纲9 经验优先：ZFS 的可靠性来自 Sun 时期大量工程投入与后续商业资源，专业经验沉淀为可用的复杂系统。（BSD Now EP164，[2522.4-2603.72]，L3）
 - 总纲25 逻辑是形式主义而非世界本身的结构：ZFS 以冗余与校验把故障可能性压到极低，但剩余风险以极端方式集中爆发，安全是形式化边界内的构造。（BSD Now EP164，[2434.64-2497.76]，L3）
@@ -125,7 +125,7 @@ volume: 第08卷-freebsd的范式转换
 
 - rcorder 并行化历史上多次尝试均遇到未声明依赖问题，主持人指出并行带来的启动加速与破坏风险并存。　[存疑脚注] 并行化风险范围待核实（BSD Now EP370，[2193.19-2299.69]，L4）
 - DragonFly 的 pf 表限制是静态内核值且未暴露为可调 sysctl，是否需要仿照 FreeBSD 改造仍待确认。　[存疑脚注] DragonFly 侧改造计划待核实（BSD Now EP360，[1360.80-1390.40]，L4）
-- [存疑脚注] 转写未给出 DragonFly vkernel copy-on-write 功能的具体提交与作者，须核验 DragonFly 仓库与提交记录。　[存疑脚注] COW 功能提交与作者须核验。（BSD Now EP164，[197.82-249.56]，L4）
+- [存疑脚注] 转写未给出 DragonFly vkernel copy-on-write 功能的具体提交与作者，须核验 DragonFly 仓库与提交记录。　[存疑脚注] COW 功能提交与作者须核验。（BSD Now EP164，[176.8-266.7]，L4）[订正：原 [197.82-249.56]，2026-09-30 SenseAudio 重转核对]
 
 **文献**：
 

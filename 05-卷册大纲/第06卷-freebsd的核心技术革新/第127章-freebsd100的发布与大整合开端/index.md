@@ -39,7 +39,7 @@ volume: 第06卷-freebsd的核心技术革新
 
 - FreeBSD 10.0 于 2014 年 1 月发布，此前经历 Alpha、Beta 与多个 RC；主持人强调 10.0 经过大量测试，以降低“.0 版本”的历史风险。（BSD Now EP21，[5624.00-5655.20]，L2）
 - 采访 FreeBSD 安全官 Colin Percival：SSH 私钥加密由基于 MD5 的 crypt 改为 bcrypt 作为密钥派生函数，显著提高抵御暴力破解的难度；iSCSI target 在 10.0 中被认为可用于生产。（BSD Now EP21，[531.18-545.14]，L1）
-- m0n0wall 1.81 发布，为面向嵌入式设备的 BSD 防火墙发行版；pfSense 于 2004 年自 m0n0wall 分叉，面向普通 PC 且开发更活跃。（BSD Now EP21，[4458.98-4516.38]，L2）
+- m0n0wall 1.81 发布，为面向嵌入式设备的 BSD 防火墙发行版；pfSense 于 2004 年自 m0n0wall 分叉，面向普通 PC 且开发更活跃。（BSD Now EP21，[4455.30-4530.00]，L2）[订正：原 [4458.98-4516.38]，2026-09-30 SenseAudio 重转核对]
 - NTPD 被发现可利用欺骗 UDP 包返回放大响应而充当 DDoS 放大器，FreeBSD 与 pfSense 均通过安全公告与配置更新进行缓解。（BSD Now EP21，[4540.34-4636.46]，L2）
 - PC-BSD 10.0 随 FreeBSD 10 发布，RC4 支持 Wine 与 9.2 升级保留 PBI；因 FreeBSD 10 的 ABI 变化，升级需重建或重装全部包。（BSD Now EP21，[4751.26-4801.10]，L2）
 - 本期以 installfest 形式逐项演示 FreeBSD 10.0、OpenBSD 5.4、NetBSD 6.1.2、DragonFly BSD 3.6 与 PC-BSD 10.0 的安装流程，比较文本式、引导式与图形式安装器的交互差异。（BSD Now EP19，[1011.60-1046.72]，L2）
@@ -68,9 +68,9 @@ volume: 第06卷-freebsd的核心技术革新
 **史观**：
 
 - 总纲22 知识注定过时：SSH 旧密钥派生函数因安全进展被 bcrypt 取代，既有加密方法随攻防演进而过时。（BSD Now EP21，[531.18-545.14]，L1）
-- 总纲10 动手者创造历史：Colin Percival 等安全工程师以具体维护与发布工作维持 FreeBSD 的安全响应体系。（BSD Now EP21，[5597.60-5655.20]，L1）
+- 总纲10 动手者创造历史：Colin Percival 等安全工程师以具体维护与发布工作维持 FreeBSD 的安全响应体系。（BSD Now EP21，[5585.30-5655.60]，L1）[订正：原 [5597.60-5655.20]，2026-09-30 SenseAudio 重转核对]
 - 总纲3 不存在进步，只有权力再分配：安全机制的替换体现攻防双方能力的再分配，而非简单的线性安全进步。（BSD Now EP21，[4540.34-4636.46]，L2）
-- 总纲10 动手者创造历史：Devin Teske、Warren Block、Julio Merino 等以具体工程改进安装器与测试基础设施，推动发行流程演进。（BSD Now EP19，[1069.32-1300.48]，L2）
+- 总纲10 动手者创造历史：Devin Teske、Warren Block、Julio Merino 等以具体工程改进安装器与测试基础设施，推动发行流程演进。（BSD Now EP19，[1071.50-1290.20]，L2）[订正：原 [1069.32-1300.48]，2026-09-30 SenseAudio 重转核对]
 - 总纲22 知识注定过时：sysinstall 被 bsdconfig 与脚本化安装器取代，旧安装方式随版本演进而淘汰。（BSD Now EP19，[2238.16-2399.96]，L2）
 - 总纲8 本体论上各方平等：installfest 将五大 BSD 并置演示，体现多分支在本体论上平等对待的叙述方式。（BSD Now EP19，[1011.60-1046.72]，L2）
 - 总纲5 没有必然性，只有偶然性：Henning Brauer 的入门路径由一次服务器受攻击后的偶然选择与一张先寄到的光盘共同决定，而非预先规划。（BSD Now EP9，[924.1-1003.4]，L1）
@@ -83,7 +83,7 @@ volume: 第06卷-freebsd的核心技术革新
 
 - bcrypt 较 MD5 安全五亿倍为主持人粗略换算，需以密码学文献为准；m0n0wall 与 pfSense 的分叉年份及 iSCSI target 的生产就绪判断均为访谈与主持人口径。　[存疑脚注] 分叉年份与安全倍数表述需以项目发布记录和密码学原始文献复核。（BSD Now EP21，[536.90-552.02]，L4）
 - OpenBSD 5.4 时期 signify 仍为测试密钥，正式签名需待 5.5；各 BSD 安装器细节为主持人实操演示，与官方手册的一致性需逐项复核。　[存疑脚注] 安装器细节与 signify 状态以官方发布说明为准，需交叉验证。（BSD Now EP19，[321.52-347.64]，L4）
-- 转写对当事人姓名的识别不一致，Henning Brauer 被写作多种变体，Daniel Hartmeier 亦被误写；引用时以英文原名 Henning Brauer、Daniel Hartmeier、Claudio Jeker、Theo de Raadt 为准，不自行音译。（BSD Now EP9，[888.4-1895.7]，L2）
+- 转写对当事人姓名的识别：新转写将 Henning Brauer 一致写作正确原名，Daniel Hartmeier 仍被误写作 Daniel Hakmaier；引用时以英文原名 Henning Brauer、Daniel Hartmeier、Claudio Jeker、Theo de Raadt 为准，不自行音译。（BSD Now EP9，[892.0-1882.7]，L2）[订正：原 Henning Brauer 被写作多种变体且 [888.4-1895.7]，2026-09-30 SenseAudio 重转核对]
 - FreeBSD 10.0 是否彻底移除 BIND、以及 resolv.conf 与 DHCP 切换的具体方案在本期仍属进行中的计划，须以 10.0 最终发布说明为准。　[存疑脚注] BIND 移除与解析配置迁移为当时未定稿规划，播客转述不等同于正式发布决策。（BSD Now EP2，[4181.74-4227.38]，L4）
 
 **文献**：

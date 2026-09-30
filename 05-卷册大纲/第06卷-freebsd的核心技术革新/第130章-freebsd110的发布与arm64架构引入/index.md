@@ -67,11 +67,11 @@ volume: 第06卷-freebsd的核心技术革新
 - PDP-11 回顾引述 C Gordon Bell 等人的论文，梳理 DEC 1957 年创立、以“Programmed Data Processor”避讳“计算机”一词，以及 PDP-11 在地址位、寄存器、栈、中断、字符处理上的设计取舍。（BSD Now EP225，[1844.12-1885.92]，L2）
 - 该回顾点明 UNIX 1974 年由 Ken Thompson 携磁带抵达伯克利，演化出 BSD 与 Sun Microsystems；C 的 16 位 int 亦源自 PDP-11。（BSD Now EP225，[2883.82-2958.5]，L2）
 - FreeBSD 2017 发布工程回顾：Glen Barber 全职工负责发布工程，11.1 于 7 月 21 日发布，10.4 由另一名发布工程师领衔并作为 stable 10 分支的最终版本。（BSD Now EP225，[3334.96-3475.08]，L2）
-- Petra Zeidler 自述经 Markus Wild 的 NetBSD/Amiga 移植在 1993 至 1994 年间接触 NetBSD，其 Amiga 在 NetBSD 1.0 发布约一个月后即运行至今，并长期承担邮件与 Usenet 服务。（BSD Now EP162，[1616.56-1657.0]，L1）
-- NetBSD 的治理与 FreeBSD 不同：core team 由任命而非选举产生、通常不更替，只处理技术事务；凡拥有 commit 权限者皆为 NetBSD Foundation 成员，享有董事会投票权，董事会负责委员会补员、财务与法律事务。（BSD Now EP162，[1916.42-1981.16]，L1）
+- Petra Zeidler 自述经 Markus Wild 的 NetBSD/Amiga 移植在 1993 至 1994 年间接触 NetBSD，其 Amiga 在 NetBSD 1.0 发布约一个月后即运行至今，并长期承担邮件与 Usenet 服务。（BSD Now EP162，[1609.9-1697.9]，L1）[订正：原 [1616.56-1657.0]，2026-09-30 SenseAudio 重转核对]
+- NetBSD 的治理与 FreeBSD 不同：core team 由任命而非选举产生、通常不更替，只处理技术事务；凡拥有 commit 权限者皆为 NetBSD Foundation 成员，享有董事会投票权，董事会负责委员会补员、财务与法律事务。（BSD Now EP162，[1914.7-2021.5]，L1）[订正：原 [1916.42-1981.16]，2026-09-30 SenseAudio 重转核对]
 - Petra Zeidler 身兼 NetBSD 管理团队、pkgsrc 稳定分支、基金会董事会、安全团队与 EuroBSDCon 基金会 NetBSD 代表等多重角色。（BSD Now EP162，[1708.64-2171.24]，L1）
 - NetBSD 借助 pkgsrc 稳定分支提供安全更新，使依赖链底部的包更新先沉淀，避免单个包更新导致半个依赖树失修。（BSD Now EP162，[1803.3-1913.68]，L1）
-- FreeBSD 11.0 发布在即，Amazon EC2 实例从 10.3 经 freebsd-update 升级后挂起，原因被定位为 GELI 引导代码按 4K 对齐读取时越过盘尾；修复已提交并安排勘误。（BSD Now EP162，[596.0-1096.56]，L1）
+- FreeBSD 11.0 发布在即，Amazon EC2 实例从 10.3 经 freebsd-update 升级后挂起，原因被定位为 GELI 引导代码按 4K 对齐读取时越过盘尾；修复已提交并安排勘误。（BSD Now EP162，[574.0-1112.1]，L1）[订正：原 [596.0-1096.56]，2026-09-30 SenseAudio 重转核对]
 - Voxer 联合创始人 Matt Ranney 自述迁移动机：创业早期流量激增时在 Linux 上遇到无法解决的棘手性能问题，Joyent 朋友建议换到有 DTrace 的平台并成功定位解决，由此认识 DTrace 的价值；自建基础设施、自有硬件时必须保留 DTrace 并想要 ZFS 的 L2ARC 以利用新出现的平价 SSD。在 Joyent 维护的 SmartOS 与 FreeBSD 之间抉择：FreeBSD 10 已为 ZFS 提供 SSD trim 支持而 illumos 仍无，且 FreeBSD 文档好得多、社区响应更快、被认为更稳定；ZFS trim 支持成为压倒性因素。（BSD Now EP58，[903.63-1103.11]，L1）
 - 工程师 George Neville-Neil 补充入职时的境况：Voxer 原为全 SmartOS 部署，一次 arc cache bug 导致约 12 台服务器重启 panic；评估替代平台时 Linux 因缺 DTrace 而出局（仅 Oracle Enterprise Linux 有但不够好），最终在 FreeBSD 与 SmartOS 之间选择 FreeBSD。迁移后的部署形态：FreeBSD 10 release 承载全部后端——TLS 终止、全部 Node.js 进程、全部 Redis 缓存与 Riak 持久存储前端；全面 jails 化并从 SmartOS 的整机 zone 模型走向“每进程一 jail”，每个 jail 关联 ZFS 数据集以便进程跨基础设施迁移；用 Chef 自动化并自补 FreeBSD 支持缺口，计划开源相关项目；其 DTrace 内核补丁已被接受进入 10.1 并回移 9.x。（BSD Now EP58，[1015.23-1460.04]，L1）
 
@@ -84,7 +84,7 @@ volume: 第06卷-freebsd的核心技术革新
 - FreeBSD 基金会 2017 发布工程回顾（Glen Barber 的 VBSDCon 演讲与问答）。（BSD Now EP225，[3334.96-3771.04]，L2）
 - Petra Zeidler 访谈自述（BSD Now EP162，[1610.1-3220.96]，L1）
 - FreeBSD News 1997 年夏季创刊号（David Filo 谈 Yahoo 早期运行于 FreeBSD、David Greenman 谈 CD-ROM.com FTP 服务器）（BSD Now EP162，[4100.78-4489.44]，L2）
-- Colin Percival 博客与 FreeBSD 11.0 EC2 改进说明（128 CPU 支持、ENA 驱动、间接段 I/O）（BSD Now EP162，[86.72-320.32]，L2）
+- Colin Percival 博客与 FreeBSD 11.0 EC2 改进说明（128 CPU 支持、ENA 驱动、间接段 I/O）（BSD Now EP162，[84.7-406.4]，L2）[订正：原 [86.72-320.32]，2026-09-30 SenseAudio 重转核对]
 - 本期新闻段涉及的一手发布材料：OpenSSH 6.7 发布公告（大规模内部重构使其可用作库、SFTP 断点续传、默认禁用 arcfour 等不安全密码、移除 TCP wrappers 支持、Unix 域套接字转发、portable 版支持对 LibreSSL portable 构建、ED25519 类型的 SSHFP 记录生成）；NetBSD 6.1.5 与 6.0.6 发布公告（OpenSSL 1.0.1i、modctl 用户控内存分配、setsockopt 内存泄漏、tap 驱动竞态、IPfilter mbuf 泄漏、PTYFS 两处溢出与内存损坏修复）；GhostBSD 4.0 发布（首个基于 FreeBSD 10，clang 取代 GCC、pkgng 默认、make 换为 bmake、桌面 MATE）；Cavium 与 FreeBSD Foundation 合作公告（捐赠 ThunderX 服务器、目标 ARMv8 tier-1、至多 48 核与 100 Gbps、包仓库逾 24000 应用）；OpenBSD 上线 portroach.openbsd.org 供认领无人维护的 ports。（BSD Now EP58，[482.38-2830.89]，L2）
 
 **史观**：
@@ -94,7 +94,7 @@ volume: 第06卷-freebsd的核心技术革新
 - 总纲9 经验优先：贝尔的回顾强调计算机是“总体设计环境”的产物，成功在于为当下造出正确的机器，呼应经验优先的取向。（BSD Now EP225，[2066.0-2101.76]，L2）
 - 总纲4 分离聚合是永恒规律：PDP-11 的开放架构使任何按规范实现者皆可称 PDP-11，DEC 内部形成快慢两条实现路线，体现分离聚合的规律。（BSD Now EP225，[2184.72-2209.84]，L2）
 - 总纲10 动手者创造历史：发布工程回顾强调除 Glen Barber 外还有大量不在聚光灯下的人协作，凸显动手者叙事。（BSD Now EP225，[3746.94-3769.1]，L2）
-- 总纲3 不存在进步，只有权力再分配：NetBSD 以任命制 core team 与基金会集中式权力分配运作，治理形态是具体权力安排而非线性进化。（BSD Now EP162，[1916.42-1981.16]，L1）
+- 总纲3 不存在进步，只有权力再分配：NetBSD 以任命制 core team 与基金会集中式权力分配运作，治理形态是具体权力安排而非线性进化。（BSD Now EP162，[1914.7-2021.5]，L1）[订正：原 [1916.42-1981.16]，2026-09-30 SenseAudio 重转核对]
 - 总纲10 动手者创造历史：当事人以动手维护 Amiga 架构、邮件与 Usenet 服务，边缘平台因持续维护而存续。（BSD Now EP162，[1616.56-1697.7]，L1）
 - 总纲4 分离聚合是永恒规律：pkgsrc 稳定分支与 head 分离，依赖整体以“协同的生态”方式聚合，再随安全更新周期性合流。（BSD Now EP162，[1852.94-1913.68]，L1）
 - 总纲10 动手者创造历史：上游协作的动手者文化成为企业采纳的助推器：Voxer 工程师试用 Node 的 DTrace helper 失败后一周内自行解决并提交，下一周补丁即被接受，Ranney 感叹“无法想象这发生在其他操作系统上”；上游愿意接受补丁意味着企业不必维护自己的私有补丁集，向 10.1 升级因此变容易。生产者直接改写工具而非等待平台方，是动手者创造历史在 2014 年企业语境中的直接呈现。（BSD Now EP58，[1512.31-1576.90]，L1）

@@ -88,7 +88,7 @@ volume: 第09卷-netbsd的历史
 
 - 转写中 OpenBSD 帧缓冲的 RasterOps 引入时间与平台（i386/AMD64）细节存在 ASR 转写噪声，需对照 Cambus 原文。　[存疑脚注] 平台与时间细节待原文核对（BSD Now EP368，[215.94-251.96]，L4）
 - NetBSD 微虚拟机引导需 multiboot 内核选项，目前仅 i386 支持、AMD64 尚缺，作者假设其为近期限制。　[存疑脚注] AMD64 multiboot 支持状态待核实（BSD Now EP361，[863.18-887.58]，L4）
-- [存疑脚注] 转写文本将 Antti Kantee 转写为 Antti Conte、auntie conty，将 rump kernel 转写为 Ramp kernel、ROM kernel；本卡片据 NetBSD 史实判定为 Antti Kantee 与 rump kernel，须以原始音频复核。　[存疑脚注] 人名与技术术语转写错误（BSD Now EP8，[1.00-8.96]，L4）
+- [存疑脚注] 新转写已将人名正确写作 Antti Kantee，但 rump kernel 仍被转写为 Ramp kernel；本卡片据 NetBSD 史实判定为 Antti Kantee 与 rump kernel。　[存疑脚注] 人名与技术术语转写错误（BSD Now EP8，[3.00-31.20]，L4）[订正：原 转写变体 Antti Conte、auntie conty 已不出现且 [1.00-8.96]，2026-09-30 SenseAudio 重转核对]
 - [存疑脚注] 转写将发生在用户态的事留在用户态一语归于 Todd McWilling，说话者姓名可能失真，须以原始音频核实出处。　[存疑脚注] 引用归属转写可能失真（BSD Now EP8，[1717.76-1726.04]，L4）
 - [存疑脚注] 每实例数 MB、启动低于 100 毫秒等开销数字为当事人估计值而非基准测试结果，引用时须标注其估算性质。　[存疑脚注] 开销数字为当事人估计值（BSD Now EP8，[1869.28-1963.48]，L4）
 - 微内核带来约一成到一成五性能损失为受访者的口头估计，无基准测试数据支撑，具体幅度与负载条件须以性能评测文献核实。[存疑脚注] 口头估计。　[存疑脚注] 性能损失比例为访谈口头估计，未经 benchmark 数据佐证（BSDTalk EP232，[381.92-389.29]，L4）

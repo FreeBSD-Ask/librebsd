@@ -77,7 +77,7 @@ volume: 第06卷-freebsd的核心技术革新
 
 **要点**：
 
-- 受访者自述 FreeBSD 图形栈在其设备上基本可用、可作为日常驱动，但承认体验仍不如 Windows 与 macOS，且特定硬件组合仍会出现挂起与交换分区交互导致的偶发冻结。（BSD Now EP283，[427.99-503.62]，L1）
+- 受访者自述 FreeBSD 图形栈在其设备上基本可用、可作为日常驱动，但承认体验仍不如 Windows 与 macOS，且特定硬件组合仍会出现挂起与交换分区交互导致的偶发冻结。（BSD Now EP283，[427.99-548.20]，L1）[订正：原 [427.99-503.62]，2026-09-30 SenseAudio 重转核对]
 - FreeBSD 图形栈在 2018 年底已大体跟进上游：输入栈与 Mesa 已更新，libinput 补丁位于开发仓库，X server 本体则是最滞后的待移植与待推送部分。（BSD Now EP283，[600.70-674.48]，L1）
 - FreeBSD 图形团队规模极小：Johannes Lundberg 负责从 Linux 移植 DRM 驱动并更新 Linux KPI，另一名 Johannes Dietrich 维护 ports 中的图形驱动，Warner Losh 担任与 core 团队的联络，Matt Macy 尝试让 Linux KPI 在 PowerPC64 上运行。（BSD Now EP283，[676.78-944.60]，L1）
 - 受访者自 2012 年起维护 FreeBSD ports，长期以 Poudriere 教程作为新人参与入口，认为从维护小型 port 开始逐步深入是降低参与门槛的有效方式。（BSD Now EP283，[998.48-1210.88]，L1）
@@ -94,7 +94,7 @@ volume: 第06卷-freebsd的核心技术革新
 
 **史料**：
 
-- 受访者提及 EuroBSDCon 2015 在斯德哥尔摩举办、开发者峰会曾借其旧办公室进行，以及 FreeBSD 季度状态报告将恢复发布图形栈条目。（BSD Now EP283，[354.72-379.54]，L1）
+- 受访者提及 EuroBSDCon 2015 在斯德哥尔摩举办、开发者峰会曾借其旧办公室进行，以及 FreeBSD 季度状态报告将恢复发布图形栈条目。（BSD Now EP283，[354.72-2111.10]，L1）[订正：原 [354.72-379.54]，2026-09-30 SenseAudio 重转核对]
 - 提及图形栈相关代码与仓库：libinput、Mesa 的上游同步、Linux KPI 移植以及待推送至 FreeBSD ports 的 X server 端口。（BSD Now EP283，[600.70-674.48]，L1）
 - Raymond Chen 于 devblogs.microsoft.com 的《The fundamental failure mode theorem》。（BSD Now EP631，[138.14-224.48]，L1）
 - Dr. Brian Robert Callahan 博客 QBE ARM64 窥孔优化系列。（BSD Now EP631，[286.40-737.76]，L1）

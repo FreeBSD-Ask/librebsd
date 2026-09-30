@@ -76,7 +76,7 @@ volume: 第06卷-freebsd的核心技术革新
 - 重刊的《Unix Evolution 1975–1984》一文梳理 research Unix v6/v7/v8 的文本格式化、编译器与开发工具流变，并记述 Ritchie 关于 man page BUGS 节以公开羞辱促修复的自述。（BSD Now EP325，[723.74-1018.28]，L2）
 - OpenBSD 在 base unbound 默认启用 DNSSEC 验证，并以 Quad9 的 9.9.9.9 做约束验证绕开 NTP 与 DNSSEC 的时钟引导死锁；2018 年曾因时钟问题回滚后于此次重开。（BSD Now EP325，[2062.14-2169.84]，L2）
 - Rainbow Crack 的 OpenBSD 编译补丁引出彩虹表原理：加盐与多轮散列（bcrypt 可至百万轮、SHA-512 crypt 默认万轮）使针对字典的预计算表失效，凸显密码存储需抗彩虹表算法。（BSD Now EP325，[2632.88-2909.48]，L2）
-- Ryzen 3700X 上 DragonFly 5.6、FreeBSD 12 与两个 Linux 发行版的测试显示：纯 CPU 类负载结果趋同，Postgres 读写差异主要由 ZFS、HAMMER、EXT4 等文件系统与编译器（GCC9/Clang）引入，而非 OS 本身。（BSD Now EP318，[67.78-152.46]，L2）
+- Ryzen 3700X 上 DragonFly 5.6、FreeBSD 12 与两个 Linux 发行版的测试显示：纯 CPU 类负载结果趋同，Postgres 读写差异主要由 ZFS、HAMMER、EXT4 等文件系统与编译器（GCC9/Clang）引入，而非 OS 本身。（BSD Now EP318，[67.78-524.60]，L2）[订正：原 [67.78-152.46]，2026-09-30 SenseAudio 重转核对]
 - 主持人指出基准测试应区分测 OS 与测文件系统/编译器，建议用内存文件系统消除磁盘变量，并提醒几何平均只作概览、需逐一读方法与变量。（BSD Now EP318，[456.34-524.52]，L2）
 - JFK 总统图书馆选用 iXsystems TrueNAS M50 高可用存储保存并服务全部数字档案（2500 万份文档、音频、照片、视频），依赖 ZFS 擦洗、校验和、快照与复制保障百年级只读归档。（BSD Now EP318，[525.16-742.24]，L2）
 - FreeBSD 12.1 beta 纳入 BearSSL 以支撑 Juniper 的验证引导装载器，并在仍用 GCC 4.2 的架构上关闭“警告即错误”，同时合入 12.0 以来的安全公告与勘误。（BSD Now EP318，[753.68-866.40]，L2）
