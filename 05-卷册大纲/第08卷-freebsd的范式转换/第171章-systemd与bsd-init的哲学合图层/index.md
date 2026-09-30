@@ -120,10 +120,10 @@ volume: 第08卷-freebsd的范式转换
 - Ian Sutton 在 GSoC 期间为 OpenBSD 编写 systemd 四个非 init 组件的兼容包装器：GNOME 3 对 hostnamed、localed、timedated、logind 存在硬依赖，包装器经由 D-Bus 提供与 systemd 相同的接口使其透明可用；项目按操作系统无关设计，FreeBSD 提交者 Baptiste Daroussin 已着手移植，logind 因涉及 PAM 与 3D 加速设备权限传递而最为复杂，其余三个组件已基本成形。（BSD Now EP71，[879.16-934.98]，L1）
 - 在 ISC NTPD 连串安全补丁与 NTP 反射攻击的背景下，长期无人维护的 portable OpenNTPD 由曾参与 LibreSSL 相关工作的 Brent Cook 等志愿者接手复活，产出 16 个补丁并重新发布至 GitHub 与 FreeBSD 包仓库，修复过程中还反哺了 OpenBSD 原生版代码。（BSD Now EP71，[602.16-686.20]，L2）
 - pkg（pkgng）新增对 OS X 的支持并连发新版本，MacPorts 因 FreeBSD ports 树日益依赖 pkg 而考虑移植其完整功能，未来或为 Mac 引入二进制包；pkg 由此从 BSD 生态扩展为跨平台包管理方案，同期亦出现 Linux 移植迹象。（BSD Now EP71，[1842.70-1950.34]，L2）
-- Adrian Chadd 自述 FreeBSD 无线栈在 AP 与 station 模式下工作良好，但仅有两名左右开发者，边界情况缺乏人手。（BSD Now EP55，[1419.88-1458.76]，L1）
-- Atheros 与 Intel 因开放源码与文档而成为 FreeBSD 无线的主要方向；Broadcom 与 Marvell 在 Sam Leffler 离开后未再更新，成为明显短板。（BSD Now EP55，[1462.00-1544.32]，L1）
+- Adrian Chadd 自述 FreeBSD 无线栈在 AP 与 station 模式下工作良好，但仅有两名左右开发者，边界情况缺乏人手。（BSD Now EP55，[1430.5-1459.1]，L1）[订正：原 [1419.88-1458.76]，2026-09-30 SenseAudio 重转核对]
+- Atheros 与 Intel 因开放源码与文档而成为 FreeBSD 无线的主要方向；Broadcom 与 Marvell 在 Sam Leffler 离开后未再更新，成为明显短板。（BSD Now EP55，[1459.3-1648.2]，L1）[订正：原 [1462.00-1544.32]，2026-09-30 SenseAudio 重转核对]
 - Adrian Chadd 恢复因监管顾虑而停用的 monitor mode 注入，使 Kismet 与 Aircrack-NG 重新可用，同时承受实现监管域强制的压力。（BSD Now EP55，[1777.56-1881.62]，L1）
-- OpenBSD 的 systemd 兼容层仅为 hostnamed、localed、timedated、logind 的 shim，以让 GNOME 运行，并非移植 systemd 本体或替换 init。（BSD Now EP55，[3493.32-3567.32]，L2）
+- OpenBSD 的 systemd 兼容层仅为 hostnamed、localed、timedated、logind 的 shim，以让 GNOME 运行，并非移植 systemd 本体或替换 init。（BSD Now EP55，[3505.2-3567.32]，L2）[订正：原 [3493.32-3567.32]，2026-09-30 SenseAudio 重转核对]
 
 **史料**：
 
@@ -139,7 +139,7 @@ volume: 第08卷-freebsd的范式转换
 - 总纲9 经验优先：全期叙事以当事人一手经验为骨架——Ian 自述因 Arch Linux 升级 systemd 时的目录冲突而转向 OpenBSD，CodeRot 作者自述删除死代码的体会，主持人强调开发者日常自用能在使用而非审查中发现问题；经验先于抽象论证的认识次序贯穿整期节目。（BSD Now EP71，[371.44-428.30]，L1）
 - 总纲4 分离聚合是永恒规律：本期呈现的工具史并非线性进步，而是分离聚合的流转：pkg 从 FreeBSD 生态分离出去向 OS X 与 Linux 扩散又反向吸纳外部需求，portable OpenNTPD 先脱离 OpenBSD 独立维护、失修后再由志愿者重新聚合；各分支在分合中重构边界，而非简单的优胜劣汰。（BSD Now EP71，[1867.32-1931.22]，L2）
 - 总纲20 历史地理塑造思想土壤：无线厂商是否开放文档、是否以 Linux 为主场，直接塑造了 FreeBSD 无线栈的可行范围。（BSD Now EP55，[1462.00-1603.66]，L1）
-- 总纲9 经验优先：Adrian Chadd 以驱动开发与真机测试的一线经验陈述无线栈优劣，而非依赖纸面规格。（BSD Now EP55，[1419.88-1447.00]，L1）
+- 总纲9 经验优先：Adrian Chadd 以驱动开发与真机测试的一线经验陈述无线栈优劣，而非依赖纸面规格。（BSD Now EP55，[1430.5-1447.00]，L1）[订正：原 [1419.88-1447.00]，2026-09-30 SenseAudio 重转核对]
 - 总纲4 分离聚合是永恒规律：各 BSD 共享 net80211 后各自分化，DragonFly BSD 又聚合 FreeBSD 更新栈，构成反复的分合。（BSD Now EP55，[1657.66-1722.12]，L1）
 
 **辨析**：

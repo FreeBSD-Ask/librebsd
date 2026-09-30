@@ -84,9 +84,9 @@ volume: 第13卷-bsd衍生操作系统
 - Kris Moore 披露 FreeNAS 9.10.3 为首个基于 FreeBSD 11 stable 的 9 分支版本，并引入 MinIO S3 兼容对象存储。（BSD Now EP185，[657.68-869.02]，L1）
 - TrueOS 移除 GRUB 安装选项，改用 EFI rEFInd 链加载 BSD loader；计划改进 GELI 密钥在 bootstrap、loader 与内核间的传递。（BSD Now EP185，[2829.24-2905.56]，L1）
 - iocage 由 Brandon Schneider 以 Python 重写并引入 JSON API，插件采用 pkg 而非旧的 PBI 格式。（BSD Now EP185，[961.44-1046.98]，L2）
-- Lumina 由 Ken Moore 开发，采用三条款 BSD 许可证，专为 FreeBSD 原生编写而非自 Linux 移植，依赖 Xorg、Qt 与 Fluxbox 窗口管理器。（BSD Now EP54，[3448.90-3497.98]，L1）
+- Lumina 由 Ken Moore 开发，采用三条款 BSD 许可证，专为 FreeBSD 原生编写而非自 Linux 移植，依赖 Xorg、Qt 与 Fluxbox 窗口管理器。（BSD Now EP54，[3448.90-3488.4]，L1）[订正：原 [3448.90-3497.98]，2026-09-30 SenseAudio 重转核对]
 - Lumina 0.6.2 随 PC-BSD 10.0.3 发布，仍处 beta，但在轻量笔记本上 CPU 占用低于半个百分点、整机内存约 120 MB。（BSD Now EP54，[3491.66-3526.78]，L1）
-- Lumina 附带 Insight 文件管理器，可浏览 ZFS 快照实现类似时光机的文件恢复，并集成书签、标签页与多媒体浏览。（BSD Now EP54，[4225.74-4268.26]，L1）
+- Lumina 附带 Insight 文件管理器，可浏览 ZFS 快照实现类似时光机的文件恢复，并集成书签、标签页与多媒体浏览。（BSD Now EP54，[4219.7-4454.0]，L1）[订正：原 [4225.74-4268.26]，2026-09-30 SenseAudio 重转核对]
 - Lumina 已提交进入 FreeBSD ports 树，PC-BSD 亦提供对应包，后续社区将其移植到 OpenBSD 与 DragonFly BSD。（BSD Now EP54，[3542.62-3548.58]，L1）
 - 本期以 installfest 形式逐项演示 FreeBSD 10.0、OpenBSD 5.4、NetBSD 6.1.2、DragonFly BSD 3.6 与 PC-BSD 10.0 的安装流程，比较文本式、引导式与图形式安装器的交互差异。（BSD Now EP19，[1011.60-1046.72]，L2）
 - FreeBSD 10 安装器新增键位测试、自动 root-on-ZFS、GELI 磁盘加密与 shell 安装模式，改进主要由 Devin Teske 与 Warren Block 等完成。（BSD Now EP19，[1069.32-1330.48]，L2）

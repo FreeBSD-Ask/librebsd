@@ -181,8 +181,8 @@ volume: 第05卷-freebsd的工程化奠基
 - 受访者将 Jails 追认为容器化的先驱之一，但认为 FreeBSD 社区的“黑客伦理”与“用代码说话”传统使其长期缺乏面向市场的叙事能力。（BSD Now EP616，[1186.70-1252.80]，L2）
 - NYCBSDCon 2014 以“BSD in production”为主题，Dru Lavigne 开场，议题包括 FreeNAS/PC-BSD 的 ZFS 管理、BSD 路由器及以 FreeBSD 与 ZFS 运行 PostgreSQL。（BSD Now EP24，[73.68-95.60]，L2）
 - Luke Marsden 自述 15 岁起经营主机公司，在牛津学习理论计算机科学后创立 HybridCluster，以解决主机业务中反复出现的宕机与扩展问题。（BSD Now EP24，[1074.80-1171.02]，L1）
-- HybridCluster 以 jail 或容器为应用单元，基于 ZFS 快照与 send/receive 实现异步复制、故障转移与亚秒级活迁移，作为 SAN 与虚拟机方案的替代。（BSD Now EP24，[1282.16-1548.36]，L1）
-- HybridCluster 部署的操作系统为略经修改的 FreeBSD 9.2 stable，工程师 Andriy Gapon 为 FreeBSD 开发者并将修复回馈社区；产品以每服务器每月 160 美元许可销售。（BSD Now EP24，[1557.08-1612.28]，L1）
+- HybridCluster 以 jail 或容器为应用单元，基于 ZFS 快照与 send/receive 实现异步复制、故障转移与亚秒级活迁移，作为 SAN 与虚拟机方案的替代。（BSD Now EP24，[1282.16-1500.20]，L1） [订正：原 [1282.16-1548.36]，2026-09-30 SenseAudio 重转核对]
+- HybridCluster 部署的操作系统为略经修改的 FreeBSD 9.2 stable，工程师 Andriy Gapon 为 FreeBSD 开发者并将修复回馈社区；产品以每服务器每月 160 美元许可销售。（BSD Now EP24，[1546.30-1606.30]，L1） [订正：原 [1557.08-1612.28]，2026-09-30 SenseAudio 重转核对]
 - 新闻讨论 FreeBSD 10 作为防火墙：PF 经 SMP 优化后性能更强但规则语法较旧，简单规则场景下 IPFW 因解析路径更短而更快。（BSD Now EP24，[480.68-577.34]，L2）
 - Poul-Henning Kamp 自述其在 1990 年代初于丹麦公司使用 Unix 工作，386BSD 由 Bill Jolitz 将伯克利内核移植到标准 PC 硬件后开始接触；FreeBSD 项目从 386BSD 的生长中形成，他因时区原因未参与发起，但在项目启动约六小时内加入并自始参与。（BSD Now EP7，[765.12-827.62]，L1）
 - Jails 的起源据 Poul-Henning Kamp 口述：chroot 最初是伯克利为构建 release 而作，他将其打磨并添加特性后未用于发布；后因南卡罗来纳州一位托管商希望在同一服务器运行多个 Apache 与 MySQL 版本而提出资助开发，约定一年后提交入 FreeBSD，最终他与 Robert Watson 合写论文《Confining the Omnipotent Root》并在 Maastricht 的 2000 年会议上发表。（BSD Now EP7，[968.64-1077.26]，L1）
@@ -224,7 +224,7 @@ volume: 第05卷-freebsd的工程化奠基
 - Michael W. Lucas 的 FreeBSD Mastery: Jails 及 FreeBSD Mastery: ZFS、Absolute FreeBSD 等系列著作。（BSD Now EP293，[74.98-96.56]，L1）
 - AsiaBSDCon 上 RunC 容器框架移植到 FreeBSD jail 的演讲，可暂停迁移并保留 TCP socket 缓冲。（BSD Now EP293，[2524.38-2578.82]，L1）
 - 提及 NetBSD 团队论文 KLEAK：以污点追踪标记内核内存并扫描内核与用户态交换缓冲区，在 NetBSD 与 FreeBSD 11.2 上共检出 21 处此前未知的内核内存泄漏。（BSD Now EP276，[2050.46-2252.04]，L2）
-- 提及 FreeBSD 12.0 的 ddb 压缩崩溃转储、bectl 引导环境控制工具导入基础系统，以及 pf 经 RM 锁替换 RW 锁带来的性能提升。（BSD Now EP276，[277.06-292.20]，L2）
+- 提及 FreeBSD 12.0 的 ddb 压缩崩溃转储、bectl 引导环境控制工具导入基础系统，以及 pf 经 RM 锁替换 RW 锁带来的性能提升。（BSD Now EP276，[274.80-899.70]，L2）[订正：原 [277.06-292.20]，2026-09-30 SenseAudio 重转核对]
 - backtrace.io 的编译器可调试性文章，以 DWARF 状态机解释优化后变量的取值恢复。（BSD Now EP223，[72.32-97.84]，L2）
 - Andrew Cherkashin 的 Rust 移植 Medium 文章（以 fd 工具为例说明 port 的 Makefile 结构）。（BSD Now EP223，[923.72-1010.84]，L2）
 - FreeBSD 基金会 2017 年 11 月开发项目更新，含 RAID-Z 扩容、Broadcom Wi-Fi、ARM bhyve 与 LLD。（BSD Now EP223，[5033.72-5513.96]，L2）
@@ -296,7 +296,7 @@ volume: 第05卷-freebsd的工程化奠基
 - 总纲3 不存在进步，只有权力再分配：基金会与 core team 在技术方向上的权责随选举制与职业化进程持续再分配，呈现治理权力的流动与重新配置，而非线性进步叙事。（BSD Now EP616，[1876.88-1997.64]，L1）
 - 总纲10 动手者创造历史：总纲10 动手者创造历史：Luke Marsden 自建主机公司并发展为 HybridCluster，是动手者以创业实践推动系统应用的代表。（BSD Now EP24，[1074.80-1171.02]，L1）
 - 总纲11 商品是形式主义：总纲11 商品是形式主义：HybridCluster 以许可模式售卖基于 jail 与 ZFS 的虚拟 SAN 与容器平台，体现软件商品化的形式。（BSD Now EP24，[1587.16-1612.28]，L1）
-- 总纲4 分离聚合是永恒规律：总纲4 分离聚合是永恒规律：通过 ZFS 复制与 jail 迁移，实现计算与存储在集群中的分离与再聚合。（BSD Now EP24，[1282.16-1548.36]，L1）
+- 总纲4 分离聚合是永恒规律：总纲4 分离聚合是永恒规律：通过 ZFS 复制与 jail 迁移，实现计算与存储在集群中的分离与再聚合。（BSD Now EP24，[1282.16-1500.20]，L1） [订正：原 [1282.16-1548.36]，2026-09-30 SenseAudio 重转核对]
 - 总纲5 没有必然性，只有偶然性：没有必然性，只有偶然性：jail 并非源自宏大规划，而是由一个南卡罗来纳州托管商的具体商业需求偶然催生。（BSD Now EP7，[968.64-1052.26]，L1）
 - 总纲10 动手者创造历史：动手者创造历史：Poul-Henning Kamp 为具体托管需求动手实现 jail，而非在抽象层面提出容器概念。（BSD Now EP7，[968.64-1052.26]，L1）
 - 总纲13 法律与道德是利益分配：法律与道德是利益分配：美国加密出口管制直接塑造了 FreeBSD 密码扰码器的技术路径，使 MD5 crypt 与南非 secure 发行版成为法律约束下的工程选择。（BSD Now EP7，[1481.56-1534.78]，L1）

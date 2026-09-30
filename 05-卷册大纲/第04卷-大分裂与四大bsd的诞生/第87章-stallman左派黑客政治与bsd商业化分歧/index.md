@@ -44,13 +44,13 @@ volume: 第04卷-大分裂与四大bsd的诞生
 
 **要点**：
 
-- Lawrence Teo 的开发者入职路径浓缩了 OpenBSD 的贡献者遴选逻辑：遵“shut up and hack”（1800.24-1813.92）准则多年只发附带补丁的邮件（2004 年修改 MD5 工具、为 IBM 鼠标上报 USB ID），后因 libpcap 与主线脱节且无人认领而独自以约五个工作周完成同步，巨型 diff 一度无人跟进，直至数月后重提才获邀进入开发者私有频道并于 2012 年 5 月获得提交权——身份由持续产出与在任开发者接纳共同决定，而非自荐申请。（BSD Now EP81，[1793.16-1861.10]，L1）
+- Lawrence Teo 的开发者入职路径浓缩了 OpenBSD 的贡献者遴选逻辑：遵“shut up and hack”（1800.24-1813.92）准则多年只发附带补丁的邮件（2004 年修改 MD5 工具、为 IBM 鼠标上报 USB ID），后因 libpcap 与主线脱节且无人认领而独自以约五个工作周完成同步，巨型 diff 一度无人跟进，直至数月后重提才获邀进入开发者私有频道并于 2012 年 5 月获得提交权——身份由持续产出与在任开发者接纳共同决定，而非自荐申请。（BSD Now EP81，[1792.90-1929.90]，L1）[订正：原 [1793.16-1861.10]，2026-09-30 SenseAudio 重转核对]
 - Calyptix 的产品形态是 2015 年 OpenBSD 商用可行性的个案证据：面向无 UNIX 经验的微软系管理员提供基于 OpenBSD 的防火墙设备，尽量沿用 base 系统与通用内核（PF、IPsec/iked，LibreSSL 自 2014 年 12 月起生产环境使用，坚持 stock ksh 而不用 bash 使 Shellshock 几无影响），并以全自动更新应对中小机构无力运维的现实；客户覆盖律所、学校、医院、银行乃至 NASCAR 车队与路边广告牌，Teo 以“I'm living proof that it is”（2852.18-2857.62）回应 OpenBSD 是否已可商用。（BSD Now EP81，[2551.84-2857.62]，L1）
 - OpenSSH 6.8 显示上游重构与下游发行版同步的摩擦成本：内部代码库化重构使 FreeBSD portable 版既有补丁全部失效、进入 ports 的时点推迟；同期新增 SHA-256 base64 主机指纹并设为默认、UseDNS 默认值由 yes 改为 no、实验性主机密钥轮换与多公钥认证，以及不依赖 OpenSSL/LibreSSL 的构建选项（仅保留 ED25519 与 ChaCha20 等新算法套件）——安全快速迭代与发行版移植节奏之间的张力在 2015 年已清晰可见。（BSD Now EP81，[1036.18-1192.06]，L2）
 
 **史料**：
 
-- 本期可入档的一手与准一手材料包括：AsiaBSDCon 2015 现场见闻（Dev Summit 与 vendor Summit、NetBSD Developer Summit、运行 NetBSD 的 Dreamcast 展台）；Lawrence Teo 专访（Calyptix 自 2006 年起每周向客户设备自动推送升级，含 LibreSSL 替换与 OpenBSD 本体整版升级）；Miod Vallat 将 OpenBSD versions 文件改回 -current 的提交日志（附仿《回到未来》的提交信息）；OpenSSH 6.8 发布公告；FreeBSD Foundation“FreeBSD from the Trenches”系列 AutoFS 博文；OpenBSD 澳洲 hackathon 报告（Jonathan Gray 的 AMD GPU 与图形工作、Ted Unangst 的虚拟内存层 SMP 工作）；OpenBSD 邮件列表经 SNDIO 与 SSH 端口转发跨网络播放音频 CD 的帖子；openBGPD 分发 PF 表更新的操作文章；Tor Browser Bundle 缺 BSD 版本的移植笔记；以及 Glenn Barber 关于 ZFS 旧池残留致启动挂起的博文。（BSD Now EP81，[4728.66-5006.99]，L2）
+- 本期可入档的一手与准一手材料包括：AsiaBSDCon 2015 现场见闻（Dev Summit 与 vendor Summit、NetBSD Developer Summit、运行 NetBSD 的 Dreamcast 展台）；Lawrence Teo 专访（Calyptix 自 2006 年起每周向客户设备自动推送升级，含 LibreSSL 替换与 OpenBSD 本体整版升级）；Miod Vallat 将 OpenBSD versions 文件改回 -current 的提交日志（附仿《回到未来》的提交信息）；OpenSSH 6.8 发布公告；FreeBSD Foundation“FreeBSD from the Trenches”系列 AutoFS 博文；OpenBSD 澳洲 hackathon 报告（Jonathan Gray 的 AMD GPU 与图形工作、Ted Unangst 的虚拟内存层 SMP 工作）；OpenBSD 邮件列表经 SNDIO 与 SSH 端口转发跨网络播放音频 CD 的帖子；openBGPD 分发 PF 表更新的操作文章；GNU IceCat 31.5.0（Firefox 自由软件版）缺 BSD 移植的邮件列表问询帖；以及 Glenn Barber 关于 ZFS 旧池残留致启动挂起的博文。（BSD Now EP81，[4728.66-5006.99]，L2）　[订正：原 “Tor Browser Bundle 缺 BSD 版本的移植笔记”（新转写为 GNU IceCat 31.5.0 移植问询帖），2026-09-30 SenseAudio 重转核对]
 
 **史观**：
 
@@ -58,8 +58,8 @@ volume: 第04卷-大分裂与四大bsd的诞生
 
 **辨析**：
 
-- 安全叙事存在单源与转写双重风险：Teo 以 Michal Zalewski 对各操作系统随机性的可视化研究作为其选择 OpenBSD 的关键论据，属当事人回忆中的单一二手引用（1693.70-1715.22）；HardenedBSD 的完整性强制机制仅有主持人转述，其与 NetBSD Veriexec 的类比、SHA-1/SHA-256 哈希清单机制及未来 X.509 ELF 签名计划均未经他源核证，细节可信度有限。　[存疑脚注] 机制名与专名转写失真（如“IntegraForce”“VeraExec”疑为 Veriexec，Zalewski 姓名拼写存疑），且均为主持人单一转述，待与 HardenedBSD 官方公告核证（BSD Now EP81，[3070.24-3159.92]，L4）
-- 听众 Robert 的迁移个案为 2015 年 BSD 桌面生态提供正反两面当事人证词：因 PulseAudio 整合混乱与对 systemd 缺乏信心而离开 Linux，PC-BSD 10.1.1 实现硬件即插即用并带来“回到有理智 shell 的类 UNIX 环境”的体验（3793.64-3835.46）；但无线网卡仅 a/b/g 模式、可查文档仅有三年前 wiki 清单，以及大文件拷贝时的内存占用观感问题（后被澄清为 inactive memory 误读），暴露无线驱动支持与内存统计认知层面的生态短板。（BSD Now EP81，[3793.64-3856.78]，L1）
+- 安全叙事存在单源与转写双重风险：Teo 以 Michal Zalewski 对各操作系统随机性的可视化研究作为其选择 OpenBSD 的关键论据，属当事人回忆中的单一二手引用（1693.70-1715.22）；HardenedBSD 的完整性强制机制仅有主持人转述，其与 NetBSD Veriexec 的类比、SHA-1/SHA-256 哈希清单机制及未来 X.509 ELF 签名计划均未经他源核证，细节可信度有限。　[存疑脚注] 本次转写专名拼写正确（IntegriForce、Veriexec、Michal Zalewski），但机制描述均为主持人单一转述，待与 HardenedBSD 官方公告核证（BSD Now EP81，[3070.24-3159.92]，L4）　[订正：原 失真对照“IntegraForce/VeraExec/Zalewski 姓名拼写存疑”，2026-09-30 SenseAudio 重转核对]
+- 听众 Robert 的迁移个案为 2015 年 BSD 桌面生态提供正反两面当事人证词：因 PulseAudio 整合混乱与对 systemd 缺乏信心而离开 Linux，PC-BSD 10.1.1 实现硬件即插即用并带来“回到有理智 shell 的类 UNIX 环境”的体验（3817.50-3847.50）；但无线网卡仅 a/b/g 模式、可查文档仅有三年前 wiki 清单，以及大文件拷贝时的内存占用观感问题（后被澄清为 inactive memory 误读），暴露无线驱动支持与内存统计认知层面的生态短板。（BSD Now EP81，[3772.80-3856.78]，L1）　[订正：原 引文段（3793.64-3835.46）及范围起点 [3793.64]，2026-09-30 SenseAudio 重转核对]
 
 **文献**：
 

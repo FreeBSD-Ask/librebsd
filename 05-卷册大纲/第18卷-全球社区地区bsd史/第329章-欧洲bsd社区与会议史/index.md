@@ -115,7 +115,7 @@ volume: 第18卷-全球社区地区bsd史
 - 受访者自 2012 年起维护 FreeBSD ports，长期以 Poudriere 教程作为新人参与入口，认为从维护小型 port 开始逐步深入是降低参与门槛的有效方式。（BSD Now EP283，[998.48-1210.88]，L1）
 - 受访者创办面向所有 BSD 的斯德哥尔摩用户组，借助雇主 B3Init 提供的场地举办聚会，规模约二十余人，并总结出首次活动容易高估到场人数等组织经验。（BSD Now EP283，[1222.98-1600.00]，L1）
 - 受访者自 2019 年起获得雇主 B3Init 每周两小时带薪 FreeBSD 开发时间，并计划在上半年结束后与雇主共同评估延续方式。（BSD Now EP283，[2014.46-2064.04]，L1）
-- FreeBSD 基金会 2018 年 9 月更新报告全年筹款目标为 125 万美元，Verisign 成为银级赞助商，基金会资助 CI 系统、发布工程与安全团队以支持 12.0 发布。（BSD Now EP269，[435.64-528.72]，L2）
+- FreeBSD 基金会 2018 年 9 月更新报告全年筹款目标为 125 万美元，Verisign 成为银级赞助商，基金会资助 CI 系统、发布工程与安全团队以支持 12.0 发布。（BSD Now EP269，[435.64-611.40]，L2）[订正：原 [435.64-528.72]，2026-09-30 SenseAudio 重转核对]
 - 文章介绍 daemonize 微型 C 库：System V 式守护进程初始化步骤繁多，而 BSD 自 4.4BSD 起提供的 daemon() 函数不完整遵循这些步骤，作者遂编写仅两个文件的小型库。（BSD Now EP269，[1440.68-1771.96]，L2）
 - 微软将 DTrace 从 FreeBSD 移植到 Windows 10，D 脚本基本一致，仅系统调用名改为 NT 前缀的驼峰形式；DTrace 谱系为 illumos 发明、移植 FreeBSD、再传 macOS 与 Windows。（BSD Now EP269，[3414.48-3586.48]，L2）
 - 波兰 BSD 用户组由 Mariusz Zaborski 等人在访问湾区 FreeBSD 用户组后创立，定位为促进波兰全部 BSD 的社区，会议以网络交流为主、演讲不超过十五分钟。（BSD Now EP269，[2943.52-3137.00]，L2）
@@ -194,8 +194,8 @@ volume: 第18卷-全球社区地区bsd史
 
 - 受访者提及 EuroBSDCon 2015 在斯德哥尔摩举办、开发者峰会曾借其旧办公室进行，以及 FreeBSD 季度状态报告将恢复发布图形栈条目。（BSD Now EP283，[354.72-379.54]，L1）
 - 提及图形栈相关代码与仓库：libinput、Mesa 的上游同步、Linux KPI 移植以及待推送至 FreeBSD ports 的 X server 端口。（BSD Now EP283，[600.70-674.48]，L1）
-- 基金会更新提及 OpenSSL 基础版本由 1.0.2 升级至 1.1.1 长期支持版，以及为 12.0 清理内核 bug 报告、修复 Unix 域套接字与 ZFS 回归的进展。（BSD Now EP269，[721.88-822.54]，L2）
-- 提及 Doug Engelbart 1968 年“所有演示之母”五十周年，以及 EuroBSDCon 2018 在布加勒斯特举行的游记与 Kamil Rytarowski 的 NetBSD sanitizers 演讲。（BSD Now EP269，[2603.40-2648.68]，L2）
+- 基金会更新提及 OpenSSL 基础版本由 1.0.2 升级至 1.1.1 长期支持版，以及为 12.0 清理内核 bug 报告、修复 Unix 域套接字与 ZFS 回归的进展。（BSD Now EP269，[131.20-822.54]，L2）[订正：原 [721.88-822.54]，2026-09-30 SenseAudio 重转核对]
+- 提及 Doug Engelbart 1968 年“所有演示之母”五十周年，以及 EuroBSDCon 2018 在布加勒斯特举行的游记与 Kamil Rytarowski 的 NetBSD sanitizers 演讲。（BSD Now EP269，[1889.60-3400.80]，L2）[订正：原 [2603.40-2648.68]，2026-09-30 SenseAudio 重转核对]
 - 一手史料：主持人 Benedikt Reuschling 与 Allan Jude 对黑客松与 BSDCam 的亲历口述；Colin Percival 的个人博客 How to port your operating system to EC2；Kirk McKusick 的 TRIM 合并测试征集邮件。（BSD Now EP260，[2621.18-3164.60]，L1）
 - EuroBSDCon 2017 日程；Sean Chittenden 的 SCaLE 15x 幻灯片；Ted Unangst 的文档博客；NetBSD CAN 支持公告。（BSD Now EP196，[255.72-4791.14]，L2）
 - OpenBSD OpenSSH 删除 SSHv1 代码的提交记录（BSD Now EP192，[65.54-183.18]，L1）

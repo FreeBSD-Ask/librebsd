@@ -55,9 +55,9 @@ volume: 第05卷-freebsd的工程化奠基
 - CHM 2024 年发布的 Ken Thompson 与 Doug McIlroy 口述史含转录与约四个半小时视频，回顾贝尔实验室与早期 Unix。（BSD Now EP640，[1218.68-1264.24]，L2）
 - 1966 年 Joseph Weizenbaum 发表 ELIZA 一文，ELIZA 被视为最早聊天机器人之一，其引发的拟人化反应即 Eliza 效应，并推动作者转向人工智能批评。（BSD Now EP640，[1272.40-1486.48]，L2）
 - David Gwynne 在 OpenBSD 引入 source 与 state limiters，以单一限流器跨多端口限制状态数与创建速率，缓解规则重载带来的状态计数重置问题。（BSD Now EP640，[1581.78-1846.92]，L1）
-- EuroBSDCon 2017 在巴黎举行，主持人参会期间组织开发者以七分钟短讲介绍各自正在推进或寻求反馈的工作，这一 work in progress 形式与 AsiaBSDCon 类似。（BSD Now EP213，[376.86-393.88]，L1）
-- FreeBSD 基金会董事会在巴黎举行，与会成员讨论 FreeBSD 10.4 测试与发布稳定、注册截止等问题；主持人还介绍 EuroBSDCon 次年将移师罗马尼亚布加勒斯特。（BSD Now EP213，[757.00-1311.38]，L1）
-- PF 缺陷故事：Christophe 提交的博客还原了一个 vnet jail 中 PF 与宿主机 PF 实例相互干扰导致 panic 的问题，修复要点是把 purge 状态的索引变量改为 per-vnet 变量，避免多 PF 实例共享状态。（BSD Now EP213，[1335.70-1904.14]，L2）
+- EuroBSDCon 2017 在巴黎举行，主持人参会期间组织开发者以七分钟短讲介绍各自正在推进或寻求反馈的工作，这一 work in progress 形式与 AsiaBSDCon 类似。（BSD Now EP213，[358.7-412.6]，L1）[订正：原 [376.86-393.88]，2026-09-30 SenseAudio 重转核对]
+- 主持人介绍周三下午在巴黎举行的 FreeBSD 基金会董事会会议：多数董事会成员与会，讨论未来会议、资金与新增董事等事项；主持人还介绍 EuroBSDCon 次年将移师罗马尼亚布加勒斯特。（BSD Now EP213，[102.3-1324.7]，L1）[订正：原 FreeBSD 基金会董事会在巴黎举行，与会成员讨论 FreeBSD 10.4 测试与发布稳定、注册截止等问题。（BSD Now EP213，[757.00-1311.38]，L1），2026-09-30 SenseAudio 重转核对]
+- PF 缺陷故事：Christophe 提交的博客还原了一个 vnet jail 中 PF 与宿主机 PF 实例相互干扰导致 panic 的问题，修复要点是把 purge 状态的索引变量改为 per-vnet 变量，避免多 PF 实例共享状态。（BSD Now EP213，[1331.6-1922.1]，L2）[订正：原 [1335.70-1904.14]，2026-09-30 SenseAudio 重转核对]
 - Provost 论证 FreeBSD PF 的 IPv6 分片处理缺陷：PF 重组分片并做出过滤决策后，IPv4 下可交回协议栈重新分片，而 IPv6 为保住路径 MTU 发现必须把分片集合原样送出，netpfil 接口却只支持一包进一包出；PF 目前自行调用 ip6_output 或 ip6_forward，既构成层级违例又存在输出/转发判断错误，特定情形下导致 panic 或丢包；OpenBSD 由协议栈告知 PF 数据包方向的做法可资借鉴，计划中的改造是让 netpfil 支持一包进一堆出，并预期 IPFW 处理 IPv6 分片时同样受益。（BSD Now EP144，[1579.66-1794.88]，L1）
 - Theo de Raadt 提交使 OpenBSD 的 W^X 违例默认不再允许：违例时内核生成日志，mprotect 与 mmap 返回 ENOTSUP，可经 sysctl 改为 SIGABRT 以便调试与取核转储；同时引入 wxallowed 挂载选项按文件系统豁免，commit 原文断言上游开发者终将理解 W^X 违例是极高风险的编程风格并终被彻底禁绝，此前建议在 /usr/local 文件系统使用该选项；主持人评价这使用户得以审计 ports 与自装程序并向上游施压推动修复。（BSD Now EP144，[975.68-1114.66]，L2）
 - Theo de Raadt 的 Pledge 演讲经主持人转述：pledge 在系统调用层约束进程能力，OpenBSD 的 NTP 守护进程已在内部使用；演讲披露迄今约 10% 被 pledge 的程序被发现试图执行安全范围之外的动作；未来方向包括回头检视 2003 年前后引入的 OpenSSH 特权分离，以及向其他操作系统输出 pledge 类机制的意愿。（BSD Now EP144，[130.44-250.50]，L2）
@@ -70,8 +70,8 @@ volume: 第05卷-freebsd的工程化奠基
 - iodine DNS 隧道演示的实操要点构成其技术史价值：服务端以特权分离用户与 chroot 运行但密码将以明文见于进程列表，且 iodined 须独占一个 IP 承担 DNS 应答而无法与既有域名服务共存；客户端探测可用查询类型并按 DNS 包尺寸协商 MTU，建隧道后经压缩 SSH 登录验证，并可与 stunnel、SSH 链式跳板教程组合成受限网络下的成套突围方案。（BSD Now EP46，[5978.10-6327.42]，L1）
 - NYCBSDCon 2014 以“BSD in production”为主题，Dru Lavigne 开场，议题包括 FreeNAS/PC-BSD 的 ZFS 管理、BSD 路由器及以 FreeBSD 与 ZFS 运行 PostgreSQL。（BSD Now EP24，[73.68-95.60]，L2）
 - Luke Marsden 自述 15 岁起经营主机公司，在牛津学习理论计算机科学后创立 HybridCluster，以解决主机业务中反复出现的宕机与扩展问题。（BSD Now EP24，[1074.80-1171.02]，L1）
-- HybridCluster 以 jail 或容器为应用单元，基于 ZFS 快照与 send/receive 实现异步复制、故障转移与亚秒级活迁移，作为 SAN 与虚拟机方案的替代。（BSD Now EP24，[1282.16-1548.36]，L1）
-- HybridCluster 部署的操作系统为略经修改的 FreeBSD 9.2 stable，工程师 Andriy Gapon 为 FreeBSD 开发者并将修复回馈社区；产品以每服务器每月 160 美元许可销售。（BSD Now EP24，[1557.08-1612.28]，L1）
+- HybridCluster 以 jail 或容器为应用单元，基于 ZFS 快照与 send/receive 实现异步复制、故障转移与亚秒级活迁移，作为 SAN 与虚拟机方案的替代。（BSD Now EP24，[1282.16-1500.20]，L1） [订正：原 [1282.16-1548.36]，2026-09-30 SenseAudio 重转核对]
+- HybridCluster 部署的操作系统为略经修改的 FreeBSD 9.2 stable，工程师 Andriy Gapon 为 FreeBSD 开发者并将修复回馈社区；产品以每服务器每月 160 美元许可销售。（BSD Now EP24，[1546.30-1606.30]，L1） [订正：原 [1557.08-1612.28]，2026-09-30 SenseAudio 重转核对]
 - 新闻讨论 FreeBSD 10 作为防火墙：PF 经 SMP 优化后性能更强但规则语法较旧，简单规则场景下 IPFW 因解析路径更短而更快。（BSD Now EP24，[480.68-577.34]，L2）
 - 主持人转述 Justin Sherrill 的观点：PF 已被 FreeBSD、NetBSD、macOS 等吸收，但各实现基于不同时期的 OpenBSD 版本且无版本号，导致规则语法与功能分化。（BSD Now EP18，[370.8-455.4]，L2）[订正：原 [346.52-362.32]，2026-09-29 SenseAudio 重转核对]
 - 节目讨论以 OpenSSH portable 或 OpenZFS 共同核心为参照，为 PF 建立可移植层（被称为 PPL 或 OpenPF 构想）；Henning Brauer 表示愿意协助，但该项目当时尚未落地。（BSD Now EP18，[456.2-546.1]，L2）[订正：原 [454.58-557.28]，2026-09-29 SenseAudio 重转核对]
@@ -80,7 +80,7 @@ volume: 第05卷-freebsd的工程化奠基
 - OpenBSD 长期缺乏官方跨版本升级工具，第三方 ksh 脚本 OpenBSD Binary Upgrade 可完成 5.3 到 5.4 的二进制升级与大部分旧文件清理，但既不清理全部旧文件、也不提供签名更新。（BSD Now EP18，[2195.5-2283.7]，L2）[订正：原 [2198.60-2266.36] 仅校验 SHA256 而不提供签名，2026-09-29 SenseAudio 重转核对]
 - Justin Sherrill 自述约 2000 年首次接触 BSD，后因 Matt Dillon 从 FreeBSD 分支 DragonFly 而加入，长期负责 DragonFly Digest、发布管理与 Summer of Code 组织工作。（BSD Now EP11，[681.7-851.1]，L1）
 - 他说明 DragonFly 分叉源于 Matt Dillon 与 FreeBSD 在对称多处理路线上的分歧，Dillon 倾向轻量、简单的并发方式，最终使 DragonFly 网络栈几乎去除 BSD 世界常见的大型锁。（BSD Now EP11，[903.6-1005.7]，L1）
-- DragonFly BSD 3.6 将 dports（基于 Poudriere 构建的 DragonFly 版 ports）设为默认，并加入 SMP 扩展性改进与 Intel、AMD 图形支持的移植。（BSD Now EP11，[4692.8-496.0]，L3）
+- DragonFly BSD 3.6 将 dports（基于 Poudriere 构建的 DragonFly 版 ports）设为默认，并加入 SMP 扩展性改进与 Intel、AMD 图形支持的移植。（BSD Now EP11，[1486.8-1682.5]，L3）[订正：原 [4692.8-496.0]，2026-09-30 SenseAudio 重转核对]
 - 新闻提及 OpenSSH 6.5 将 Curve25519 设为默认密钥交换算法，FreeBSD 引导菜单加入内核选择功能，Colin Percival 推出内核 panic 报告工具。（BSD Now EP11，[4762.8-4812.0]，L2）
 - Brauer 自述其在柏林 hackathon 收尾的校验和处理重写：新模型假定每条输出路径都具备校验和硬件卸载能力，栈上层不再预计算与就地修补校验和，仅需在数据包上置标记声明需要何种协议校验和，全部计算集中到输出路径末端的单一位置，仅在确知该路径无卸载能力时才回退软件实现。（BSDTalk EP234，[305.23-320.29]，L1）
 - 旧实现的缺陷根源在于部分网卡（以 Intel 与 Broadcom 千兆芯片为代表，约占服务器市场九成）要求保留伪头校验和，而另一些网卡做全量卸载，PF 无法判别数据包携带的是部分校验和还是完整校验和，就地更新便可能出错；重写后栈上层彻底不管校验和，桥接路径也被修正；ICMP 错误报文中被引用原始包的校验和因多数被截断而无法验证，选择忽略，并以手工构造异常报文的专用工具对 PF 行为做验证。（BSDTalk EP234，[822.90-1029.94]，L1）
@@ -102,7 +102,7 @@ volume: 第05卷-freebsd的工程化奠基
 - Chris Siebenmann 关于 OpenZFS written 与 written@ 属性的博客。（BSD Now EP640，[849.96-1060.68]，L1）
 - Justin Sherrill 的 DragonFly BSD Digest。（BSD Now EP640，[1070.44-1192.64]，L1）
 - David Gwynne 的 Undeadly 文章 source and state limiters in PF。（BSD Now EP640，[1581.78-1846.92]，L1）
-- Christophe 关于 PF 缺陷修复的博客；EuroBSDCon 2017 会议议程与 FreeBSD 基金会董事会记录。（BSD Now EP213，[1335.70-1904.14]，L2）
+- Christophe 关于 PF 缺陷修复的博客；EuroBSDCon 2017 会议议程与 FreeBSD 基金会董事会记录。（BSD Now EP213，[1331.6-1922.1]，L2）[订正：原 [1335.70-1904.14]，2026-09-30 SenseAudio 重转核对]
 - 一手材料密集：Kristof Provost 在 AsiaBSDCon 的现场访谈自述（入坑经历、补丁被批评被测试再合并的流程、搞崩共同主持人 Alan 路由器的复盘）；Theo de Raadt 的 Pledge 主题演讲视频与幻灯片；Eric McCorkle 谈 EFI 启动重构与 GELI 支持的博客（附 GitHub 代码链接与成段引文）；Sean Chittenden 的 Postgres 多数据中心高可用演讲；Michael W. Lucas 的 Faces of FreeBSD 入行自述；Netgate UFO 板卡的 dmesg 启动日志与 openssl speed 实测数据。　[存疑脚注] 转写专名多处音转失真（Kristof Provost 转作 Christophe、bhyve 转作 beehive、GELI 转作 Jelly、Consul 转作 console、W^X 转作 WXRX、Netgate UFO 转作 NetGate UFW），语义均可由上下文复原；唯 Theo de Raadt 演讲场合转写作“Dot Security 2016”无法与 2016 年已知公开演讲日程对确。（BSD Now EP144，[1277.04-2311.52]，L1）
 - 本期可提炼的一手史料包括：斯洛文尼亚 OpenBSD hackathon（2014 年 7 月 8 日至 14 日）的 CVS 提交树（一周逾千次提交）与参与者分工记录、FreeBSD 邮件列表 PF 讨论串原文、BSD Router Project 公布的转发基准原始数据与运行脚本、LibreSSL tech 邮件列表的补丁流，以及安全官 Dag-Erling Smørgrav 对个人入坑与 commit bit 授予经历的亲述。（BSD Now EP47，[68.2-96.2]，L1）
 - 本期经主持人提及可资查证的一手史料：FreeBSD 9.3-RELEASE 公告与 release notes（iSCSI 可加载、ARC 元数据限额运行时可调、on-if-console 便于 bhyve 直用官方镜像）、pkgng 1.3 RC2 邮件列表通告、LibreSSL 便携版 2.0.x 于 OpenBSD FTP 发布并已入 ports、2014 年 FreeBSD 核心团队九人选举名单（Gavin Atkinson、David Chisnall、Baptiste Daroussin、Ed Maste、George Neville-Neil、Hiroki Sato、Gleb Smirnoff、Peter Wemm、Robert Watson）、EuroBSDCon 2014 索菲亚注册页与开发者峰会邀请制说明。（BSD Now EP46，[1052.16-1090.52]，L2）
@@ -125,14 +125,14 @@ volume: 第05卷-freebsd的工程化奠基
 - 总纲10 动手者创造历史：总纲10 动手者创造历史：OCI 支持由 Samuel Karp、Doug Rabson 等志愿者的多年内核与工具链工作累积而成。（BSD Now EP640，[227.38-305.54]，L2）
 - 总纲9 经验优先：总纲9 经验优先：Jim Salter 以亲身经历过的断电、火灾、失窃等故障说明为何 RAID 不等于备份。（BSD Now EP640，[630.76-692.68]，L1）
 - 总纲22 知识注定过时：总纲22 知识注定过时：HAMMER 清理依赖 cron 定时触发的假设在笔记本关机场景下失效，反映旧运维假设随硬件使用方式变化而过时。（BSD Now EP640，[1081.24-1215.64]，L1）
-- 总纲10 动手者创造历史：Christophe 通过测试脚本复现 vnet 中的 PF panic 并逐行修复，是动手者以调试实践改进防火墙代码的典型记录。（BSD Now EP213，[1413.72-1904.14]，L2）
+- 总纲10 动手者创造历史：Christophe 通过测试脚本复现 vnet 中的 PF panic 并逐行修复，是动手者以调试实践改进防火墙代码的典型记录。（BSD Now EP213，[1392.6-1907.0]，L2）[订正：原 [1413.72-1904.14]，2026-09-30 SenseAudio 重转核对]
 - 总纲10 动手者创造历史：本期是动手者创造历史的微观样本：Kristof Provost 的入坑起因只是“因为它跑不起来”，为修一块 Marvell 板卡上的问题从此一直在找 bug，补丁经批评、测试、合并的循环把他卷成 committer；Michael W. Lucas 因深夜 DNS 管理员离职被顶上岗位、为睡安稳觉换掉 Unixware 与 Solaris 转向 BSD；系统的演进正由这类具体修补与无名测试者的反馈累积而成。（BSD Now EP144，[1306.72-1354.34]，L1）
 - 总纲22 知识注定过时：工程知识的过时性在本期反复显形：grub-bhyve 被当事人定性为“一直只是权宜之计”，单命令 EFI 启动才是长期目标；McCorkle 判定自建的 boot1 非 EFI 提供者框架与 EFI 框架既有功能重复、接口别扭且无法向内核传递密钥，重构后 boot1 缩为一个很小的源文件并与 loader 共享全部后端驱动，bcache 成为通向 EFI 驱动模型与热插拔支持的唯一阻碍——每一代被视为完成的方案，都会成为下一代重构的对象。（BSD Now EP144，[2619.86-2734.50]，L2）
 - 总纲10 动手者创造历史：PF 讨论与 LibreSSL 的对照揭示同一机制：社区共识不产生代码，唯有动手者启动历史——主持人引 LibreSSL 与 FreeBSD ZFS 安装器皆因一人先动手而带动集体参与，嘉宾更以亲历口吻总结“空白页是最难的起点”（638.58-645.34）；史书应当记录的是接住空白页的人，而非那纸无人执行的共识。（BSD Now EP47，[609.12-645.34]，L2）
 - 总纲10 动手者创造历史：包体系的演进由动手者驱动而非领袖钦定：Google Summer of Code 学生写出新的依赖求解器使 package set -o 大半退役，构建集群从小两台机器被不断塞机器式地扩张并由个人以自写脚本勉力管理，Port Manager lurker 计划以 IRC 频道吸纳 Matt、Steve Wills 等新血——基础设施史的正主是这些具体操持者，正合总纲之动手者创造历史。（BSD Now EP46，[2126.10-2148.62]，L2）
 - 总纲10 动手者创造历史：总纲10 动手者创造历史：Luke Marsden 自建主机公司并发展为 HybridCluster，是动手者以创业实践推动系统应用的代表。（BSD Now EP24，[1074.80-1171.02]，L1）
 - 总纲11 商品是形式主义：总纲11 商品是形式主义：HybridCluster 以许可模式售卖基于 jail 与 ZFS 的虚拟 SAN 与容器平台，体现软件商品化的形式。（BSD Now EP24，[1587.16-1612.28]，L1）
-- 总纲4 分离聚合是永恒规律：总纲4 分离聚合是永恒规律：通过 ZFS 复制与 jail 迁移，实现计算与存储在集群中的分离与再聚合。（BSD Now EP24，[1282.16-1548.36]，L1）
+- 总纲4 分离聚合是永恒规律：总纲4 分离聚合是永恒规律：通过 ZFS 复制与 jail 迁移，实现计算与存储在集群中的分离与再聚合。（BSD Now EP24，[1282.16-1500.20]，L1） [订正：原 [1282.16-1548.36]，2026-09-30 SenseAudio 重转核对]
 - 总纲4 分离聚合是永恒规律：总纲4 分离聚合是永恒规律：PF 随各 BSD 分支而分离，又出现以共同核心重新聚合的讨论，呈现分离与聚合的循环。（BSD Now EP18，[383.7-480.3]，L2）[订正：原 [359.44-413.44]，2026-09-29 SenseAudio 重转核对]
 - 总纲10 动手者创造历史：总纲10 动手者创造历史：Baptiste Daroussin 因个人反复编译的痛点动手重写包系统，改变 FreeBSD 软件分发方式。（BSD Now EP18，[1007.0-1029.7]，L1）[订正：原 [993.58-1029.66]，2026-09-29 SenseAudio 重转核对]
 - 总纲18 时间是一种形式主义：总纲18 时间是一种形式主义：PF 缺乏版本号使各实现难以按时间锚定演进，说明版本命名是形式化的时间标记。（BSD Now EP18，[426.0-437.3]，L2）[订正：原 [425.34-439.46]，2026-09-29 SenseAudio 重转核对]

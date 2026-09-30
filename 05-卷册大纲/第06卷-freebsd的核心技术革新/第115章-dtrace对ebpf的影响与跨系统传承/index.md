@@ -86,7 +86,7 @@ volume: 第06卷-freebsd的核心技术革新
 
 **要点**：
 
-- FreeBSD 基金会 2018 年 9 月更新报告全年筹款目标为 125 万美元，Verisign 成为银级赞助商，基金会资助 CI 系统、发布工程与安全团队以支持 12.0 发布。（BSD Now EP269，[435.64-528.72]，L2）
+- FreeBSD 基金会 2018 年 9 月更新报告全年筹款目标为 125 万美元，Verisign 成为银级赞助商，基金会资助 CI 系统、发布工程与安全团队以支持 12.0 发布。（BSD Now EP269，[435.64-611.40]，L2）[订正：原 [435.64-528.72]，2026-09-30 SenseAudio 重转核对]
 - 文章介绍 daemonize 微型 C 库：System V 式守护进程初始化步骤繁多，而 BSD 自 4.4BSD 起提供的 daemon() 函数不完整遵循这些步骤，作者遂编写仅两个文件的小型库。（BSD Now EP269，[1440.68-1771.96]，L2）
 - 微软将 DTrace 从 FreeBSD 移植到 Windows 10，D 脚本基本一致，仅系统调用名改为 NT 前缀的驼峰形式；DTrace 谱系为 illumos 发明、移植 FreeBSD、再传 macOS 与 Windows。（BSD Now EP269，[3414.48-3586.48]，L2）
 - 波兰 BSD 用户组由 Mariusz Zaborski 等人在访问湾区 FreeBSD 用户组后创立，定位为促进波兰全部 BSD 的社区，会议以网络交流为主、演讲不超过十五分钟。（BSD Now EP269，[2943.52-3137.00]，L2）
@@ -98,8 +98,8 @@ volume: 第06卷-freebsd的核心技术革新
 
 **史料**：
 
-- 基金会更新提及 OpenSSL 基础版本由 1.0.2 升级至 1.1.1 长期支持版，以及为 12.0 清理内核 bug 报告、修复 Unix 域套接字与 ZFS 回归的进展。（BSD Now EP269，[721.88-822.54]，L2）
-- 提及 Doug Engelbart 1968 年“所有演示之母”五十周年，以及 EuroBSDCon 2018 在布加勒斯特举行的游记与 Kamil Rytarowski 的 NetBSD sanitizers 演讲。（BSD Now EP269，[2603.40-2648.68]，L2）
+- 基金会更新提及 OpenSSL 基础版本由 1.0.2 升级至 1.1.1 长期支持版，以及为 12.0 清理内核 bug 报告、修复 Unix 域套接字与 ZFS 回归的进展。（BSD Now EP269，[131.20-822.54]，L2）[订正：原 [721.88-822.54]，2026-09-30 SenseAudio 重转核对]
+- 提及 Doug Engelbart 1968 年“所有演示之母”五十周年，以及 EuroBSDCon 2018 在布加勒斯特举行的游记与 Kamil Rytarowski 的 NetBSD sanitizers 演讲。（BSD Now EP269，[1889.60-3400.80]，L2）[订正：原 [2603.40-2648.68]，2026-09-30 SenseAudio 重转核对]
 - Mark Phillips 访谈（2025 年 7 月柏林 Hackathon 现场）。（BSD Now EP622，[66.14-3216.34]，L1）
 - FreeBSD Foundation 关于页面与 YouTube 频道内容。（BSD Now EP622，[2688.00-2695.60]，L2）
 

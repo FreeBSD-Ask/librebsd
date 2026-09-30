@@ -100,11 +100,11 @@ volume: 第15卷-许可证哲学与法律分析
 - OpenSSH 新增 refuse connection 配置指令与 PKCS#11 ED25519 密钥支持，由 Damien Miller 提交。（BSD Now EP626，[1541.90-1621.92]，L2）
 - NetBSD 11 分支进入发布流程，包括 32 位兼容集拆分、CD 安装镜像、x86 PVH 启动支持、RISC-V 新端口与工具链更新。（BSD Now EP626，[1636.36-1806.82]，L2）
 - Nico Cartron 自述 2000 年在巴黎计算机学校初识 NetBSD 机房，后以 FreeBSD 为主，日常通过 WireGuard 与 SSH 使用家中的 FreeBSD 笔记本。（BSD Now EP626，[1950.18-2571.94]，L1）
-- George Neville-Neal 自述早期在加州大学做软件基础设施支持并结识 CSRG，后参与 NetBSD 笔记本移植，最终长期使用 FreeBSD，并担任 FreeBSD Foundation 董事与 committer。（BSD Now EP22，[1375.20-1461.06]，L1）
-- FreeBSD Journal 由 FreeBSD Foundation 资助一年，为双月刊纯电子杂志，经 Kindle、Google Play 与 Apple 应用商店发行；编委会包括 John Baldwin、Kirk McKusick、Robert Watson、Michael Lucas、Hiroki Sato 等。（BSD Now EP22，[1641.94-1716.58]，L1）
-- 创刊号以 FreeBSD 10 为主题，收录 David Chisnall 论 Clang、John Baldwin 论内核 sysctl 节点、Tim Kientzle 论 BeagleBone Black 及 Alan Jude 论 ZFS 等文章，并设 ports 报告与 SVN 更新等固定栏目。（BSD Now EP22，[1801.70-1917.06]，L1）
+- George Neville-Neal 自述早期在加州大学做软件基础设施支持并结识 CSRG，后参与 NetBSD 笔记本移植，最终长期使用 FreeBSD，并担任 FreeBSD Foundation 董事与 committer。（BSD Now EP22，[1374.30-1453.40]，L1） [订正：原 [1375.20-1461.06]，2026-09-30 SenseAudio 重转核对]
+- FreeBSD Journal 由 FreeBSD Foundation 资助一年，为双月刊纯电子杂志，经 Kindle、Google Play 与 Apple 应用商店发行；编委会包括 John Baldwin、Kirk McKusick、Robert Watson、Michael Lucas、Hiroki Sato 等。（BSD Now EP22，[1655.90-1716.58]，L1） [订正：原 [1641.94-1716.58]，2026-09-30 SenseAudio 重转核对]
+- 创刊号以 FreeBSD 10 为主题，收录 David Chisnall 论 Clang、John Baldwin 论内核 sysctl 节点、Tim Kientzle 论 BeagleBone Black 及 Alan Jude 论 ZFS 等文章，并设 ports 报告与 SVN 更新等固定栏目。（BSD Now EP22，[1816.30-1893.50]，L1） [订正：原 [1801.70-1917.06]，2026-09-30 SenseAudio 重转核对]
 - 教程演示 OpenBSD 5.4 的 errata 补丁应用，以及从 CVS 检出 current/stable、先升级内核再升级 userland 的自建流程，强调遵循官方补丁说明以避免系统损坏。（BSD Now EP22，[3009.78-3553.32]，L2）
-- FreeBSD 2013 年第四季度状态报告涵盖 EC2（Colin Percival）、Xen（Justin Gibbs、Roger Pau Monné）、CAM 锁与 iSCSI（Alexander Motin）及 iwn 无线驱动（Adrian Chadd）等进展。（BSD Now EP22，[383.96-451.54]，L2）
+- FreeBSD 2013 年第四季度状态报告涵盖 EC2（Colin Percival）、Xen（Justin Gibbs、Roger Pau Monné）、CAM 锁（Alexander Motin）、原生 iSCSI 栈及 iwn 无线驱动（Adrian Chadd）等进展。（BSD Now EP22，[393.80-463.20]，L2） [订正：原"CAM 锁与 iSCSI（Alexander Motin）"及 [383.96-451.54]，2026-09-30 SenseAudio 重转核对]
 - Sangoma 公司沿革：约二十年历史的硬件厂商，起家于 V.35、RS-232 等数据协议接口卡；约在访谈前五年随 VoIP 技术兴起转型生产 T1 数字卡与模拟卡，凭多年硬件经验在 Asterisk 社区获得口碑。（BSDTalk EP150，[203.38-249.94]，L1）
 - Feldman 在 Sangoma 任软件项目负责人约十年，FreeBSD 驱动支持是其入职后的第一个项目；随 VoIP 发展 Linux 成为公司商业主线并占据其工作时间，但作为 FreeBSD 长期支持者，他仍以工作时间之外的努力将公司全线硬件持续推向 FreeBSD，自称视这些驱动如自己的孩子。（BSDTalk EP150，[181.18-293.70]，L1）
 - 支持形态超出驱动层：公司对全部卡型支持 FreeBSD，用户致电支持可直达设计并开发该卡驱动的工程师；公司近期宣布全线硬件终身保修；面向爱好者提供廉价入门产品，如单 T1 口基础卡与可直连电话线路、允许外接普通电话的模拟卡，便于以 Asterisk 实验 VoIP。（BSDTalk EP150，[293.70-360.30]，L1）
@@ -182,7 +182,7 @@ volume: 第15卷-许可证哲学与法律分析
 - 总纲20 历史地理塑造思想土壤：Nico Cartron 的法国计算机学校以 NetBSD 教学机房塑造其 BSD 使用路径，体现机构地理对技术选择的塑造。（BSD Now EP626，[1973.62-2103.06]，L1）
 - 总纲10 动手者创造历史：George Neville-Neal 与编委会以出版实践填补 FreeBSD 无专属杂志的空白，将社区知识沉淀为周期性出版事件。（BSD Now EP22，[1492.06-1716.58]，L1）
 - 总纲9 经验优先：教程强调按官方补丁与更新文档操作，避免因跳过说明导致 SSH 无法启动等实际故障。（BSD Now EP22，[3492.76-3530.20]，L2）
-- 总纲15 文化即形式主义：杂志作为社区文化的形式化载体，将分散于论坛与邮件列表的知识加以编排和定期发布。（BSD Now EP22，[1500.10-1553.54]，L1）
+- 总纲15 文化即形式主义：杂志作为社区文化的形式化载体，将分散于论坛与邮件列表的知识加以编排和定期发布。（BSD Now EP22，[1500.10-1527.40]，L1） [订正：原 [1500.10-1553.54]，2026-09-30 SenseAudio 重转核对]
 - 总纲10 动手者创造历史：Feldman 的自述显示，商业公司对 FreeBSD 的支持并非市场决策而是动手者的个人劳动维系：在 Linux 主导商业需求的格局下，工程师以业余时间把全线硬件驱动推向 FreeBSD，默默投入的个体劳动构成企业与 BSD 社区之间的实际纽带。（BSDTalk EP150，[420.12-436.06]，L1）
 - 总纲22 知识注定过时：Lucas 的叙述承认技术写作处于快速流变的特性环境中：交稿即出新特性，成书注定落后于代码；他的应对是与开发者对话预判演化方向、延后易朽章节、并把重心放在不易过时的 why 上——写作是对流变的把握而非对知识的冻结。（BSDTalk EP153，[529.68-582.66]，L1）
 - 总纲22 知识注定过时：当事人自陈技术书出版的常态悖论：成书之时软件往往已行至“显著不同的地方”，最新特性无从收录，故她动笔时已在构思第二版容纳未及内容；一部署于静态纸张的知识体系自付印起即开始落后于其对象，技术写作本质上是对注定过时之物的暂时定格。（BSDTalk EP188，[741.80-906.80]，L1）
