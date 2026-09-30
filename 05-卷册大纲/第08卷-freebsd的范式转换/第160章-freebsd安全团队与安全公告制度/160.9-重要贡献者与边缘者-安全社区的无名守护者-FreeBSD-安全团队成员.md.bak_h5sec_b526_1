@@ -1,0 +1,62 @@
+# 160.9 重要贡献者与边缘者：安全社区的无名守护者——FreeBSD 安全团队成员、安全补丁的回溯移植者、安全漏洞的私下报告者、CVE 编号申请者等被忽视的安全生态贡献者
+
+## 160.9.1 FreeBSD 安全团队成员与贡献
+
+**要点**：记录 FreeBSD 安全团队的核心成员及其历史贡献——早期安全事务由 Core Team 成员兼职处理，Jordan Hubbard 曾负责部分安全协调工作；2002 年正式建立 Security Officer Team 后，历任 Security Officer 包括 Dag-Erling Smørgrav（des@）、Colin Percival（2005 年 8 月–2012 年 5 月，同时担任 Release Engineering Lead、scrypt 算法发明人、Tarsnap 创始人）、Simon L. Nielsen、Remko Lodder、Giorgos Keramidas、Ed Maste（埃德·马斯特） 等；安全团队成员通常同时兼任其他开发工作，安全只是其职责的一部分；团队规模虽小，但维持着 FreeBSD 安全公告、补丁分发、漏洞协调的完整运转
+
+**史料**：FreeBSD 官方团队页面（各历史时期）、Core Team 季度状态报告中的安全团队人事记录、freebsd-security 邮件列表发言存档、Colin Percival 个人网站与 Tarsnap 博客、BSDCan 安全团队相关演讲视频与幻灯片、FreeBSD 基金会关于安全团队的支持记录 ［A］
+
+**史观**：总纲第 10 条——动手者创造历史：FreeBSD 安全团队是典型的 “边缘但关键” 群体——他们的名字不常出现在媒体报道中，他们的工作在系统正常运行时完全不可见，但正是这些兼职志愿者维持着整个 FreeBSD 生态的安全防线
+
+**辨析**：安全团队成员的完整名单和精确任期记录较为零散，需要通过邮件列表存档、commit 记录、Core Team 报告等多源交叉验证才能还原；部分早期成员的贡献缺乏系统记载，属于 “被遗忘的守护者”；安全工作的特性决定了其贡献难以量化——成功的安全意味着 “什么都没发生”，这使得安全团队的价值在社区贡献评价体系中容易被低估
+
+**文献**：FreeBSD Project. *FreeBSD Teams - Security Team*. freebsd.org; Percival, C. *Personal Website*. daemonic.org; FreeBSD Core Team. *Quarterly Status Reports*. lists.freebsd.org ［A］
+
+## 160.9.2 安全补丁回溯移植者的工作
+
+**要点**：考察安全补丁回溯移植（backport）这一被忽视的关键环节——FreeBSD 安全团队不仅需要在 head/current 分支修复漏洞，还需要将补丁同步移植到所有受支持的 stable/releng 分支；回溯移植不是简单的复制粘贴，需要适配旧分支的代码差异、确保不引入新问题、保持 ABI/API 兼容性；这项工作单调、重复、技术挑战相对较低，却是企业级用户最关心的安全功能——稳定分支的安全支持时长直接决定了 FreeBSD 在生产环境中的可用性；从事回溯移植的开发者大多不是安全团队的核心成员，而是各领域的 committer 自愿协助
+
+**史料**：FreeBSD src 仓库中带 Security: 标记的 commit 历史（stable/releng 分支）、Release Engineering 团队文档中关于安全补丁的流程、FreeBSD 安全支持周期（EOL）政策演变、各 stable 分支安全补丁数量统计、freebsd-stable 邮件列表中的补丁测试与反馈记录 ［A］
+
+**史观**：总纲第 10 条——动手者创造历史：安全补丁回溯移植是安全治理中最不 “光鲜” 却最不可或缺的环节——前沿的漏洞发现和攻防研究吸引眼球，但真正保护生产系统的是那些将补丁日复一日移植到旧分支、确保稳定版本用户也能及时获得修复的平凡工作
+
+**辨析**：回溯移植工作的 “技术含量” 常被低估——简单的补丁可以直接移植，但复杂的安全修复往往依赖于 head 分支的其他重构，此时的回溯移植需要重新设计修复方案，技术难度不亚于原始修复；这项工作的质量直接影响系统安全，但因缺乏 “原创性” 而在社区贡献评价中处于边缘位置
+
+**文献**：FreeBSD Release Engineering Team. *Release Engineering Documentation*. freebsd.org; FreeBSD Project. *Security Information - Supported Releases*. freebsd.org/security; FreeBSD Source Repository. *Security commit history (stable branches)*. cgit.freebsd.org/src ［A］
+
+## 160.9.3 漏洞私下报告者与 CVE 申请者
+
+**要点**：记录安全生态中另一类重要但隐形的贡献者——漏洞的私下报告者与 CVE 编号申请者；大量安全漏洞并非由安全团队自己发现，而是由外部研究者、用户、其他 BSD 项目成员、上游项目开发者等通过私有渠道报告；这些报告者有的追求声誉（如在安全公告中被致谢），有的出于责任感（如发现问题后默默通知厂商），有的则属于完全匿名的贡献；CVE 编号申请同样是一项繁琐但必要的工作，需要整理漏洞信息、与 MITRE 或 CNA 沟通、跟踪编号分配状态，FreeBSD 安全团队的 CVE 申请工作通常由少数成员负责
+
+**史料**：FreeBSD Security Advisories 中的 Credits 字段（致谢名单汇总）、freebsd-security 邮件列表中的漏洞报告线程、MITRE CVE 数据库中 FreeBSD 相关条目的 REPORTER 字段、安全会议（如 BSDCan、EuroBSDcon）的致谢环节记录、漏洞赏金计划（FreeBSD 无官方漏洞赏金，但部分第三方项目有）的参与情况 ［A］
+
+**史观**：总纲第 8 条——本体论上各方平等：漏洞报告者和 CVE 申请者构成了 FreeBSD 安全生态的 “外围防护层”——他们不属于安全团队，甚至可能不是 FreeBSD committer，但他们的工作是整个安全响应流程的起点；安全不是少数人的专职，而是整个社区共同维系的状态
+
+**辨析**：漏洞报告者的动机是多元的——有纯出于技术好奇的研究者，有出于商业目的的安全公司，有想建立个人声誉的初学者，也有想证明某个观点的批评者；不能简单用 “善意” 或 “恶意” 来标签化；CVE 申请工作的繁琐程度常被低估，它涉及大量的行政沟通和文档整理，但在整个安全流程中处于 “隐形基础设施” 的位置
+
+**文献**：FreeBSD Security Team. *Security Advisories Archive - Credits Sections*. freebsd.org/security/advisories.html; MITRE Corporation. *CVE Database - FreeBSD Entries*. cve.mitre.org; FreeBSD Foundation. *Security Audit Reports*（2024 Capsicum & bhyve 审计等）［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］
+
+## 160.9.4 边缘贡献者的史料辨析
+
+**要点**：对安全领域边缘贡献者的史料状况进行方法论反思——与核心开发者和重大事件相比，边缘贡献者的史料高度碎片化，散见于邮件列表签名行、commit log 中的作者字段、安全公告的致谢名单、会议演讲的鸣谢页、bug tracker 的 comment 等非正式渠道；口述史和社区记忆中保存了大量未被文档化的贡献，但存在记忆偏差和叙述重构的风险；还原边缘贡献者的历史，需要采用与研究精英人物不同的方法——微观史、社群史、数字人文的方法，从海量的日常数据中打捞被遗忘的名字
+
+**史料**：freebsd-security 邮件列表完整存档（1990 年代至今）、src 仓库所有 commit 的作者与提交者数据、FreeBSD 各版本 release notes 的致谢部分、BSDCan/EuroBSDcon/AsiaBSDCon 历年演讲视频与幻灯片、社区成员个人博客与 Planet FreeBSD 聚合、IRC 日志与 Discord 聊天记录（近年） ［A］
+
+**史观**：总纲第 7 条——理论必须自反：边缘贡献者的史料辨析本身就是一个史学问题——传统的技术史写作往往聚焦于 “伟大的发明者” 和 “关键的转折点”，但真实的技术演进是大量无名者日常劳作的累积；将边缘贡献者纳入叙事，不仅是补充事实，更是对技术史书写范式的反思和修正
+
+**辨析**：将边缘贡献者纳入历史叙事存在几个方法论陷阱：一是 “过度补偿”——为了纠正以往的忽视而过度拔高边缘贡献的重要性；二是 “后见之明”——用今天的价值观去评判历史人物的贡献；三是 “资料不足的填补”——在史料缺失的地方用想象填充，这恰恰违背了考据的原则；正确的做法是既承认边缘贡献的存在和价值，也坦诚史料的局限，不为了叙事完整而臆造细节
+
+**文献**：Searle, J. R. (1995). *The Construction of Social Reality*. Free Press; Latour, B. (1987). *Science in Action: How to Follow Scientists and Engineers Through Society*. Harvard University Press; Spinellis, D. (2017). *A Repository of Unix History and Evolution*. Empirical Software Engineering［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］
+
+<!-- DB_REF:freebsd.duckdb -->
+> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。
+> 2024-2026 年间：168,386 次提交。
+
+
+<!-- DEEP_ANALYSIS: freebsd.duckdb.commits -->
+**数据库分析发现**（证据等级：L1，来源：`freebsd.duckdb.commits.freebsd`）
+
+freebsd 核心贡献者：Po-Chuan Hsieh（sunpoet@FreeBSD.org 同人归并）(119628), Yuri Victorovich(29759), Jan Beich(22360), Martin Wilke(20341)
+
+（关联注记：本块为 freebsd 仓库全量提交的核心贡献者统计，非安全团队成员专项数据，与本章 “安全团队成员” 主题为间接关联，仅作贡献者整体背景参考——依 2026-09-11 核查报告 P3 项注明关联。）
+

@@ -1,0 +1,313 @@
+# 160.6 FreeBSD 安全团队与安全公告——FreeBSD Security Officer 制度的建立与演进，FreeBSD 安全公告的发布流程与格式，安全补丁的工程实践与分支支持政策，历任 Security Officer 与安全团队成员贡献
+
+## 160.6.1 FreeBSD Security Officer 制度的建立与演进
+
+**要点**：梳理 FreeBSD 安全团队的组织架构演变——早期 FreeBSD 安全事务由 Core Team 成员兼职处理，后设立 Security Officer 单一职位，2002 年扩展为 Security Officer Team（安全官团队）；安全团队独立于 Core Team 运作但向 Core Team 汇报；随着项目规模扩大，团队从个人负责制逐步发展为多人协作的专业团队
+
+**史料**：FreeBSD 官方团队页面、George Dafermos 2006 年论文《Authority in peer production》中关于 Security Officer 制度的记载、Core Team 季度状态报告中安全团队部分、freebsd-security 邮件列表早期存档、FreeBSD Handbook 安全章节历史版本 ［A］
+
+**史观**：总纲第 8 条——本体论上各方平等（原“社区治理”系伪名目，按族例改挂）：Security Officer 制度的建立与演进是 FreeBSD 社区治理专业化的缩影——从个人英雄主义的松散协作，到制度化的团队运作，治理模式的演变反映了项目成熟度的提升
+
+**辨析**：首任 Security Officer 的具体人选和上任时间存疑——早期资料中 Jordan Hubbard 曾负责安全相关事务，但正式 Security Officer 职位的设立时间和首任人选需进一步考据；2002 年从单人改为团队是重要转折点，反映了安全工作量的增长
+
+**文献**：Dafermos, G. (2006). *Authority in peer production: The emergence of governance in the FreeBSD project*. Journal of Peer Production; FreeBSD Project. *FreeBSD Teams - Security Team*. freebsd.org; FreeBSD Core Team. *Quarterly Status Reports*. lists.freebsd.org ［A］
+
+## 160.6.2 安全公告的发布流程与格式规范
+
+**要点**：考察 FreeBSD 安全公告的工程化流程——漏洞报告接收（邮件列表、安全团队专用邮箱）、验证与分析（本地复现、影响范围评估）、补丁开发与测试、协调披露（与上游、其他 BSD、CERT/CC 协调）、公告发布（freebsd-security-announce 邮件列表、官方网站同步更新）；公告采用统一格式（FreeBSD-SA-XX: YY 编号体系），包含问题描述、影响范围、解决方案、workaround、补丁链接等结构化字段
+
+**史料**：FreeBSD Security Advisory 模板、freebsd-security-announce 邮件列表存档、安全公告归档页面、FreeBSD 安全团队工作流程文档、CERT/CC 与 FreeBSD 的协调记录 ［A］
+
+**史观**：专题语（不设总纲条号）——形式与内容的张力（原挂总纲第 3 条系伪名目）：安全公告格式的标准化和流程的制度化是形式主义在安全工程中的体现——每一个字段、每一道流程都是对安全响应过程的形式化规范，确保信息传递的准确性和可追溯性
+
+**辨析**：FreeBSD 安全公告分为 经邮件列表库验证通过——FreeBSD 安全公告制度在 freebsd-announce 列表中确认存在（2025-11-26 FreeBSD-SA-25:10.unbound，Message-ID <20251126200921.CA70018D90@freefall.freebsd.org>）。Security Advisory（安全公告，严重漏洞）和 Errata Notice（勘误通知，非安全相关的重要修复）两类，二者的边界有时存在模糊性——某些漏洞的严重程度评估可能因视角不同而有差异；公告的发布时间点选择也涉及安全伦理考量（立即发布 vs 给用户预留补丁时间）
+
+**文献**：FreeBSD Security Team. *FreeBSD Security Advisories*. freebsd.org/security/advisories.html; FreeBSD Security Team. *FreeBSD Errata Notices*. freebsd.org/security/errata.html; FreeBSD Handbook. *Security - Security Advisories*. docs.freebsd.org ［B］
+
+## 160.6.3 安全补丁的工程实践与分支支持政策
+
+**要点**：分析 FreeBSD 安全补丁的工程实践——补丁开发遵循与普通提交相同的代码审查流程但优先级更高；安全补丁需同时应用于 head（current）和所有受支持的 stable/releng 分支；安全支持分支政策（EOL）经过多次调整，目前每个 major 版本提供约 5 年安全支持；安全补丁回溯（backport）是安全团队的重要日常工作，需确保补丁在旧分支上的兼容性和正确性
+
+**史料**：FreeBSD 安全支持周期页面、src 仓库中安全补丁的 commit 记录（带 Security: 标记）、Release Engineering 团队文档、FreeBSD 基金会关于安全支持的声明、stable 分支的安全补丁测试流程 ［A］
+
+**史观**：专题语（不设总纲条号）——开源安全协作（原挂总纲第 22 条系伪名目）：安全补丁的多分支同步维护是开源社区 “负责任的安全实践” 的体现——不仅修复最新版本的问题，还要为生产环境中广泛使用的稳定分支提供安全支持，这是企业级用户选择 FreeBSD 的重要原因之一
+
+**辨析**：EOL 政策的严格执行（到期后不再提供安全补丁）既是对用户的负责（明确预期）也可能带来安全风险（用户升级不及时则暴露于已知漏洞）；安全补丁回溯的质量保证是工程难题——旧分支上的补丁可能因代码差异而引入新问题，如何在 “快速响应” 与 “质量保证” 之间取得平衡是持久的挑战
+
+**文献**：FreeBSD Project. *FreeBSD Security Information - Supported Releases*. freebsd.org/security; FreeBSD Release Engineering Team. *Release Engineering Documentation*. freebsd.org; FreeBSD Source Repository. *Security commit history*. cgit.freebsd.org/src (Security: tag) ［A］
+
+## 160.6.4 历任 Security Officer 与安全团队成员贡献
+
+**要点**：记录 FreeBSD 安全团队的主要人物及其贡献——Colin Percival 2005 年 8 月至 2012 年 5 月担任 Security Officer（同时也是 Release Engineering Lead、scrypt 算法发明人、Tarsnap 创始人）；其他重要团队成员包括 Dag-Erling Smørgrav（des@）、Simon L. Nielsen、Remko Lodder、Giorgos Keramidas、Ed Maste（埃德·马斯特） 等；安全团队成员多为兼职志愿者，凭借专业能力和责任心维护着 FreeBSD 的安全防线
+
+  **FreeBSD 历任 Security Officer 与核心安全团队成员**：
+
+  | 人物 | 用户名 | 主要身份 / 贡献 | Security Officer 任期 |
+  |---|---|---|---|
+  | Dag-Erling Smørgrav | des@ | 早期 Security Officer | 2002 年团队化之前 |
+  | Colin Percival | cperciva@ | Release Engineering Lead、scrypt 算法发明人、Tarsnap 创始人 | 2005 年 8 月–2012 年 5 月 |
+  | Simon L. Nielsen | simon@ | 安全团队核心成员 | — |
+  | Remko Lodder | remko@ | 安全团队成员 | — |
+  | Giorgos Keramidas | keramida@ | 安全团队成员 | — |
+  | Ed Maste | emaste@ | 基金会技术总监，安全团队后期成员 | — |
+
+**史料**：Colin Percival 个人网站、FreeBSD 安全团队成员列表（各历史时期）、Core Team 状态报告中的安全团队人事变动、freebsd-security 邮件列表发言记录、BSDCan 安全团队相关演讲 ［A］
+
+**史观**：总纲第 10 条——边缘者贡献：FreeBSD 安全团队成员大多不是 “网红” 开发者，他们的工作往往不为人所知——当一切正常时没人注意到安全团队的存在，只有在漏洞爆发时人们才意识到防线的价值；这些隐形守护者构成了 FreeBSD 安全生态的真实底色
+
+**辨析**：安全团队成员的贡献难以量化——成功的安全工作意味着 “什么也不发生”，这使得安全团队的工作在社区贡献评价体系中容易被低估；历任 Security Officer 的完整名单和任期记录较为零散，需通过邮件列表和 commit 记录交叉验证补全
+
+**文献**：Percival, C. *Personal Website - Colin Percival*. daemonic.org; FreeBSD Security Team. *Team Members*. freebsd.org/security; FreeBSD Foundation. *Meet the Team - Security*. freebsdfoundation.org［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］
+
+## 160.6.5 freebsd-src 趋势统计与 FreeBSD 安全响应工程的定量印证
+
+**要点**：**统计分析印证**——`freebsd.duckdb` freebsd-src 仓库 1993-2026 年 commit 月度量 Mann-Kendall 趋势检验结果为显著上升趋势（Sen's slope =+1.40/月，p <0.001，95% CI [1.11, 1.69]）（统计结论 C-03）；Pettitt 与 BUISHAND R 双变点检验一致判定 freebsd-src 变点为 1999-08（p<0.001，距 2020-01 SVN-to-Git 迁移 245 个月，判定非迁移伪变点）（统计结论 C-08、C-12）；ARIMA(5,0,5) 模型拟合 AIC=107.39（统计结论 C-29），预测精度 MAPE=24.56% RMSE=456.55 coverage=94.74%（统计结论 C-33）；外部基准对照——NVD FreeBSD 相关 CVE 421 个（1999-2026），FreeBSD 官方安全公告 382 条（2008-04 至 2026-06-30），FreeBSD 平均 CVSS 评分 6.24（外部基准 E-21、E-25、E-26）；4 BSD 项目 CVSS 对照——FreeBSD 6.24 > OpenBSD 6.17 > NetBSD 5.50（外部基准 E-26、E-27、E-28），FreeBSD CVE 平均严重度最高；统计结论支持 FreeBSD 安全响应工程与主线开发活跃度协同发展——freebsd-src 趋势持续上升未因安全响应强度激增（2026 年上半年 49 个 SA）而中断，反映安全投入与开发活跃度可协同演进
+
+**史料**：`freebsd.duckdb` `commits` 表 freebsd-src 仓库 commit 月度量与 CVE commit 查询；SQL 查询 `SELECT strftime('%Y-%m', committer_date) AS month, COUNT(*) AS commit_count FROM commits WHERE repo_name='freebsd-src' GROUP BY month ORDER BY month`；Python 脚本 `script/phase3_inferential_stats.py` Task 5-6（Mann-Kendall 趋势检验 + Pettitt/BUISHAND R 变点检验）；Python 脚本 `script/phase4_time_series.py` Task 14-15（ARIMA 建模与预测）；统计结论编号 C-03、C-08、C-12、C-29、C-33；外部基准编号 E-21、E-25、E-26、E-27、E-28；FreeBSD Security Advisories 官方存档；NVD API 2.0 全量拉取；查询日期 2026-07-27 ［A］
+
+**史观**：专题语（不设总纲条号）——安全响应的工程组织（原挂总纲第 17 条系伪名目）：FreeBSD 安全响应工程采用 “主动审计 + 批量披露” 模式（14.x 周期 80 个 SA 中约 60% 来源于 Security Team 主动审计），freebsd-src 持续上升趋势为这一工程方法的统计印证——安全投入与开发活跃度可协同演进而非相互排斥；总纲第 4 条——分离聚合是永恒规律（原“赓续而非断裂”系伪名目，按论旨改挂）：freebsd-src 趋势检验显示安全响应强度激增（2024 年 19 个 SA→2026 年上半年 49 个 SA）未导致 commit 量显著下降，统计数据印证 FreeBSD 在高强度安全响应下仍赓续 CSRG 未竟事业而非中断主线开发；总纲第 8 条——本体论上各方平等（原“社区治理”系伪名目，按族例改挂）：4 BSD 项目 CVSS 对照中 FreeBSD 平均最高（6.24）反映 FreeBSD 安全响应团队对高严重度漏洞的优先披露偏好——这与 FreeBSD 的 “实用主义边界” 路线一致，OpenBSD（6.17）以代码审计为先、NetBSD（5.50）以可移植性为先
+
+**辨析**：**统计局限性标注**——(1) 统计显著 ≠ 实际显著：Mann-Kendall 趋势检验 p < 0.001 表明 freebsd-src commit 量存在统计学显著上升趋势，但 FreeBSD 安全响应工程的实际意义须结合 SA 数量与 commit 量的相关性综合判断，SA 数量增长可能反映审计强度而非漏洞密度；(2) 变点归因存疑：1999-08 变点距 FreeBSD Security Officer 制度建立（2002 年团队化之前）约 3 年，变点本身与 FreeBSD 安全治理事件无直接因果关系；(3) ARIMA 模型局限：ARIMA(5,0,5) AIC = 107.39 为 freebsd-src 整体 commit 序列拟合结果，未单独建模安全相关 commit 子序列，安全响应 commit 对整体趋势的贡献率未单独量化；(4) CVSS 评分局限：4 BSD 项目 CVSS 对照反映 “披露的 CVE 平均严重度” 而非 “实际漏洞密度”，FreeBSD CVSS 最高（6.24）可能反映披露偏好而非真实漏洞分布；NVD CPE 命名不完整，部分 BSD 相关 CVE 可能未被纳入统计；(5) 多重比较风险：本结论与第五卷其他章节引用相同 freebsd-src 趋势统计存在多重比较风险，Bonferroni 校正后显著性可能降低；(6) 0 信任原则适用：NVD CVE 数量不等于实际漏洞数量，披露偏差（CVE 申请者偏好、安全团队审计强度差异）影响跨项目对照的可靠性；commit 量统计不区分安全相关 commit 与其他子系统 commit
+
+**文献**：FreeBSD Project. freebsd.duckdb freebsd-src 仓库 commit 数据库 [DB/OL]. 2026-07-27. ****02-FreeBSD/db/duckdb/freebsd.duckdb**〔原路径系断链族，已按实存路径更正〕**; FreeBSD Security Team. FreeBSD Security Advisories [EB/OL]. (2008-2026)[2026-07-27]. <https://www.freebsd.org/security/advisories/>; NIST. National Vulnerability Database (NVD) [DB/OL]. [2026-07-27]. <https://nvd.nist.gov/>; LibreBSD 项目〔原作 LibreBSD Project 系乱码，疑为 LibreBSD 之讹，待核〕. 推断性统计.md [R/OL]. 2026-07-27. **03-原始史料库/01-代码仓库史料/01-数据库本体/统计分析/推断性统计.md** Task 5-6; LibreBSD 项目〔原作 LibreBSD Project 系乱码，疑为 LibreBSD 之讹，待核〕. 时间序列分析.md [R/OL]. 2026-07-27. **03-原始史料库/01-代码仓库史料/01-数据库本体/统计分析/时间序列分析.md** Task 14-15; LibreBSD 项目〔原作 LibreBSD Project 系乱码，疑为 LibreBSD 之讹，待核〕. 外部基准-Academic-CVE.md [R/OL]. 2026-07-27. **03-原始史料库/01-代码仓库史料/01-数据库本体/统计分析/外部基准-Academic-CVE.md** 第 2 节; LibreBSD 项目〔原作 LibreBSD Project 系乱码，疑为 LibreBSD 之讹，待核〕. 卷章数据映射.md [R/OL]. 2026-07-27. **03-原始史料库/01-代码仓库史料/01-数据库本体/统计分析/卷章数据映射.md** 第五卷第 68 章映射。［A］
+
+<!-- DB_REF:freebsd.duckdb -->
+> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。
+> 2024-2026 年间：168,386 次提交。
+
+<!-- ROW_MINE: usenet_mail.messages.152720 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-013361`；2026-09-14 orphan_ng39_ng_batch1_4 全库行级遍历考据采纳）
+
+2011 年 9 月 28 日，FreeBSD 项目发布安全公告 FreeBSD-SA-11:03.bind：BIND 代码的逻辑错误使 named(8) 守护进程接受伪造数据而可被远程发信者令其崩溃，形成拒绝服务；漏洞仅存在于 2011 年 5 月 28 日之后的 8.2-STABLE，已于 2011 年 7 月 6 日修复，对应 CVE-2011-2464。引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.152721 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-013362`；2026-09-14 orphan_ng39_ng_batch1_4 全库行级遍历考据采纳）
+
+SA-11:04.compress：compress/gzip 损坏文件处理错误引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.152722 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-013363`；2026-09-14 orphan_ng39_ng_batch1_4 全库行级遍历考据采纳）
+
+SA-11:05.unix：UNIX 套接字地址缓冲区溢出引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.152723 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-013364`；2026-09-14 orphan_ng39_ng_batch1_4 全库行级遍历考据采纳）
+
+SA-11:05.unix 修订版发布引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.152731 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-013369`；2026-09-14 orphan_ng39_ng_batch1_4 全库行级遍历考据采纳）
+
+SA-11:06.bind：named 远程拒绝服务引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.152732 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-013370`；2026-09-14 orphan_ng39_ng_batch1_4 全库行级遍历考据采纳）
+
+SA-11:07.chroot：chroot 环境 ftpd 代码执行引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.152733 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-013371`；2026-09-14 orphan_ng39_ng_batch1_4 全库行级遍历考据采纳）
+
+SA-11:08.telnetd：telnetd 代码执行漏洞引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.152734 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-013372`；2026-09-14 orphan_ng39_ng_batch1_4 全库行级遍历考据采纳）
+
+SA-11:09.pam_ssh：pam_ssh 未加密私钥授权缺陷引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.152735 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-013373`；2026-09-14 orphan_ng39_ng_batch1_4 全库行级遍历考据采纳）
+
+SA-11:10.pam：pam_start() 服务名校验缺失引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.152736 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-013374`；2026-09-14 orphan_ng39_ng_batch1_4 全库行级遍历考据采纳）
+
+2011 年 12 月 23 日，FreeBSD 安全员在圣诞说明中解释 5 份安全公告集中在圣诞周末前发布的缘由：团队惯例周三发布以便系统管理员在岗并刻意避开节日，本次系被迫提前。引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.152738 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-013376`；2026-09-14 orphan_ng39_ng_batch1_4 全库行级遍历考据采纳）
+
+EN-12:01.freebsd-update：9.0-RELEASE 支持勘误引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.152754 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-013389`；2026-09-14 orphan_ng39_ng_batch1_4 全库行级遍历考据采纳）
+
+SA-12:01.openssl：多个漏洞引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.152756 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-013391`；2026-09-14 orphan_ng39_ng_batch1_4 全库行级遍历考据采纳）
+
+SA-12:01.openssl 修订（列各分支修正版本号）引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.152757 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-013392`；2026-09-14 orphan_ng39_ng_batch1_4 全库行级遍历考据采纳）
+
+SA-12:02.crypt：crypt() 哈希错误引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.152759 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-013394`；2026-09-14 orphan_ng39_ng_batch1_4 全库行级遍历考据采纳）
+
+SA-12:03.bind：零长 RDATA 处理错误引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.152760 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-013395`；2026-09-14 orphan_ng39_ng_batch1_4 全库行级遍历考据采纳）
+
+SA-12:04.sysret：内核返回特权提升引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.152761 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-013396`；2026-09-14 orphan_ng39_ng_batch1_4 全库行级遍历考据采纳）
+
+EN-12:02.ipv6refcount：IPv6 引用计数错误勘误引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.152831 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-013435`；2026-09-14 orphan_ng39_ng_batch1_4 全库行级遍历考据采纳）
+
+SA-10:08.bzip2：解压整数溢出引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.152835 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-013438`；2026-09-14 orphan_ng39_ng_batch1_4 全库行级遍历考据采纳）
+
+SA-10:09.pseudofs：伪文件系统互斥锁误解锁引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.152837 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-013440`；2026-09-14 orphan_ng39_ng_batch1_4 全库行级遍历考据采纳）
+
+SA-10:10.openssl：多个漏洞引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.152858 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-013457`；2026-09-14 orphan_ng39_ng_batch1_4 全库行级遍历考据采纳）
+
+SA-11:01.mountd：mountd 网络 ACL 处理错误引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.152861 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-013459`；2026-09-14 orphan_ng39_ng_batch1_4 全库行级遍历考据采纳）
+
+SA-11:02.bind：RRSIG 大集与负缓存远程 DoS引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.152863 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-013461`；2026-09-14 orphan_ng39_ng_batch1_4 全库行级遍历考据采纳）
+
+SA-12:04.sysret 修订版引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.152868 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-013466`；2026-09-14 orphan_ng39_ng_batch1_4 全库行级遍历考据采纳）
+
+SA-12:05.bind：DNSSEC 校验拒绝服务引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.152872 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-013470`；2026-09-14 orphan_ng39_ng_batch1_4 全库行级遍历考据采纳）
+
+2012 年 11 月 17 日， FreeBSD 安全官公告：11 月 11 日在 freebsd.org 集群两台机器上发现入侵并已下线分析，其余大部分基础设施机器也预防性下线，未发现危及最终用户的改动，并将加速淘汰 cvsup 等旧服务。引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.152873 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-013471`；2026-09-14 orphan_ng39_ng_batch1_4 全库行级遍历考据采纳）
+
+2012 年 11 月 23 日， FreeBSD 发布 SA-12:06.bind 公告：named(8) 存在多个拒绝服务漏洞，RDATA 超过 65535 字节的资源记录查询可致守护进程崩溃或锁死，影响 9.1-RC2 之前所有受支持版本，对应 CVE-2012-4244 与 CVE-2012-5166。引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.152874 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-013472`；2026-09-14 orphan_ng39_ng_batch1_4 全库行级遍历考据采纳）
+
+2012 年 11 月 23 日， FreeBSD 发布 SA-12:07.hostapd 公告：hostapd 内部认证服务器对 EAP-TLS 消息长度字段校验不足，远程攻击者可发送特制消息致守护进程中止形成拒绝服务，对应 CVE-2012-4445。引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.152875 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-013473`；2026-09-14 orphan_ng39_ng_batch1_4 全库行级遍历考据采纳）
+
+2012 年 11 月 23 日， FreeBSD 发布 SA-12:08.linux 公告：Linux 兼容层处理部分系统调用时存在输入校验错误，本地攻击者可覆写部分内核内存，可能导致提权或系统崩溃，对应 CVE-2012-4576。引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.152890 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-013484`；2026-09-14 orphan_ng39_ng_batch1_4 全库行级遍历考据采纳）
+
+2013 年 2 月 19 日， FreeBSD 发布 SA-13:01.bind 公告：named(8) 配置启用 DNS64 时，攻击者发送特制查询可致断言失败而崩溃，形成拒绝服务，影响 9.x 及以后版本，对应 CVE-2012-5688。引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.152891 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-013485`；2026-09-14 orphan_ng39_ng_batch1_4 全库行级遍历考据采纳）
+
+2013 年 2 月 19 日， FreeBSD 发布 SA-13:02.libc 公告：glob(3) 用于限制路径数量的 GLOB_LIMIT 实现不足，攻击者可致内存或 CPU 过度消耗形成拒绝服务，远程常见目标为 ftpd(8)，对应 CVE-2010-2632。引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.152901 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-013494`；2026-09-14 orphan_ng39_ng_batch1_4 全库行级遍历考据采纳）
+
+2013 年 4 月 2 日， FreeBSD 发布 SA-13:03.openssl 公告：OpenSSL 多个漏洞，OCSP 响应验证缺陷可被利用发起拒绝服务攻击，CBC 密码套件处理弱点可经定时攻击泄露明文，对应 CVE-2013-0166 与 CVE-2013-0169。引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.152902 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-013495`；2026-09-14 orphan_ng39_ng_batch1_4 全库行级遍历考据采纳）
+
+2013 年 4 月 2 日， FreeBSD 发布 SA-13:04.bind 公告：BIND 所用库中的缺陷允许攻击者故意令 named(8) 进程过度消耗内存并崩溃，递归与权威服务器均受影响，对应 CVE-2013-2266。引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.152908 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-013501`；2026-09-14 orphan_ng39_ng_batch1_4 全库行级遍历考据采纳）
+
+2013 年 4 月 29 日， FreeBSD 发布 SA-13:05.nfsserver 公告：NFS 服务器处理 READDIR 请求时未检查操作对象是否为目录节点，特制客户端可将文件当作目录，在 UFS 小端服务器上可致随机堆损坏，ZFS 上可向栈写入任意数据，对应 CVE-2013-3266。引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.152909 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-013502`；2026-09-14 orphan_ng39_ng_batch1_4 全库行级遍历考据采纳）
+
+2013 年 4 月 29 日， FreeBSD 发布 SA-13:05.nfsserver 修订版：修订历史记载 v1.1 更正补丁下载地址并增补绕过信息，含切换回旧 NFS 实现的配置与内核选项说明。引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.152996 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-013526`；2026-09-14 orphan_ng39_ng_batch1_4 全库行级遍历考据采纳）
+
+1998 年 1 月 1 日， FreeBSD 发布 SA-98:08.fragment 公告：IP 分片重组代码存在缺陷，攻击者发送一对畸形 IP 分片重组为无效 UDP 数据报可致内核恐慌，影响 FreeBSD 3.0 及修正日前的 current，安全论坛已有讨论且利用程序流传。引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.153038 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-013550`；2026-09-14 orphan_ng39_ng_batch1_4 全库行级遍历考据采纳）
+
+1998 年 1 月 1 日， XFree86 项目发布 SA-1998:01 公告：xterm 与 Xaw 库因处理 inputMethod、preeditType 与 Keymap 资源存在缓冲区溢出，以 setuid-root 安装的 xterm 可被本地用户利用获取 root 权限，修正版为 3.3.2 patch 1。引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.153048 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-013556`；2026-09-14 orphan_ng39_ng_batch1_4 全库行级遍历考据采纳）
+
+1998 年 1 月 1 日， XFree86 项目发布 SA-1998:02 公告：Xlib、Xt、Xmu 与 Xaw 库存在缓冲区溢出，可经 X 资源或环境变量利用，setuid-root 程序可被本地用户获取 root 权限，修正版为 3.3.2 patch 2。引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.153333 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-013631`；2026-09-14 orphan_ng39_ng_batch1_4 全库行级遍历考据采纳）
+
+1997 年 1 月 1 日， FreeBSD 发布 SA-97:01 公告：setlocale() 读取 PATH_LOCALE 环境变量时未经边界检查即拷入栈缓冲，2.1.6 及更早版本因 crt0 调用 setlocale() 而使全部二进制受影响，特制变量可致 setuid 程序被提权为 root。引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.153335 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-013633`；2026-09-14 orphan_ng39_ng_batch1_4 全库行级遍历考据采纳）
+
+1997 年 1 月 1 日， Hubbard 公告 freefall.freebsd.org（主源码仓库机）遭入侵：cdrom.com 至少两台机器 root 失守并被植入木马收集口令，1 月 18 日后登录过者应立即改密，执法机构已介入，CVS 仓库有数百份复制与 CTM 增量可比对，并发起逐行安全审计。引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- ROW_MINE: usenet_mail.messages.153346 -->
+**当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-013634`；2026-09-14 orphan_ng39_ng_batch1_4 全库行级遍历考据采纳）
+
+1997 年 1 月 1 日， Jordan K. Hubbard 宣布 FreeBSD 2.1.7 发布：作为 2.1.6 的安全更新修复至少数个安全漏洞并处理问题报告，最著者为 setlocale() 漏洞，Walnut Creek CDROM 客户可免费升级。引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+
+<!-- PODCAST_REVIEW v20260829 -->
+<!-- 语义复核范围：BSD Now EP47、YouTube EP7XbPCjJB1cw（共 2 期）；逐期通读转写全文后重写，非关键词或实体评分提取 -->
+
+**要点**：
+
+- 2014 年 7 月 FreeBSD 社区就 PF 防火墙展开罕见规模的大讨论：邮件列表普遍认同与 OpenBSD PF 重新同步是好事，却无人愿意承担整体维护；曾尝试导入新版的 Baptiste Daroussin 因破坏 PF 而回退，表态只愿移植与自身用法相关的个别特性，共识与动手之间出现明显断层。（BSD Now EP47，[478.06-502.04]，L2）
+- 安全官访谈勾勒出 FreeBSD 安全治理的全貌：章程使安全官名义上对系统中每一个安全漏洞负责，日常是安全公告的撰写与发布，实质更涵盖流程改进、漏洞缓解技术与安全特性优先级决策，2013 年 /dev/random 重构之争即由其主持裁决，其任内还推动以标准 CPE 元数据嵌入包体系以弥补 VuXML 字符串匹配易漏报的结构缺陷。（BSD Now EP47，[1807.74-1938.24]，L1）
+- Warner Losh 在 BSDCan 的闪电演讲演示了用 Claude 调试一个引导加载器向内核移交阶段触发的内核恐慌：模型最初提出完全不成立的假说，经作为领域专家的当事人逐轮纠偏后定位到真实原因。当事人强调引导器与内核之间的交接代码比引导器本身更难调试，人工智能的细节耐性与专家对“应该发生什么”的判断相结合，才把一个一度可能阻塞发布的问题加速解决。（YouTube EP7XbPCjJB1cw，[287.44-380.0]，L1）
+- Kyle Evans 系统反思 setuid 机制：其一，近期多起提权漏洞（多见于 Linux 侧）利用内核把磁盘上合法的 setuid 二进制缓冲缓存后调换内容执行，使内存中的二进制做错误的事；其二，setuid 通过检查后即获得全部 root 权限，而多数场景只需要一组很窄的特定权限。其 BSDCan 演讲与 mac_do 工具即探索不依赖 setuid 的受控授权，并评估移植 OpenBSD 的 verifiedexec 思路——认证后把会话标记为限时可信、凭据缓存绑定同一 shell 会话，比 sudo 基于文件的时间戳缓存更可控。（YouTube EP7XbPCjJB1cw，[382.0-934.88]，L1）
+- 发布工程师 Colin Percival 交代 package base 的现状：它随 FreeBSD 15.0 以技术预览名义落地且不会回退，成熟度好于发布周期中的表现；freebsd-update 在 15 整个生命周期继续存在、16 起移除，届时以约五十行、包装 package 工具的同名脚本承接创建引导环境、先装内核后装其余包等流程，既有系统经 package basify 转制。current 与 stable 的 package base 构建多年来由社区成员在 pkg.FreeBSD.org 运行，不归发布工程团队，且当事人以七年前安全官的经验坚持：夜间构建所用签名密钥不得与发布签名密钥复用，必要时启用新密钥组。　[考据脚注] 转写将长期运行 package base 构建的维护者记作“Matis”，人名拼写以官方构建页面为准（YouTube EP7XbPCjJB1cw，[454.08-546.8]，L1）
+- jails 命名空间分离是本届开发者峰会与演讲中的热点：进程 ID 命名空间目前由宿主与所有 jail 共享，进程增多时进程表锁竞争加剧，若各 jail 拥有独立进程表可获得性能收益；网络栈已有 VNet、共享内存等已有分离机制可循。用户 ID 命名空间的讨论强调从设计之初避免 Linux 同类机制引入的文件系统多层转换复杂性与由此产生的权限错位。另有演讲演示了经 Windows 的 WSL 环境运行 FreeBSD，被当事人评为新颖。（YouTube EP7XbPCjJB1cw，[1036.319-1147.88]，L1）
+- 人工智能批量发现漏洞正在重塑安全响应：截至六月当年的公告已超过以往整年，多数由 AI 发现但都是真实问题；安全团队从内部消化转向按专长把问题与补丁验证分派给各子系统开发者。更深的影响是时间假设的失效——过去公告发布后才需担心攻击者跟进，如今一人用 AI 找到漏洞即意味着他人可能早已找到，系统或许已被利用数周，补丁应用的时间尺度从“尽快”收紧为“立即”。应对之策是更多隔离与纵深防御：以虚拟机与容器作安全边界，Colin 本人十余年不把 OpenSSH 直接暴露于互联网，而是先经 spiped 认证再登录。（YouTube EP7XbPCjJB1cw，[1314.799-1631.6]，L1）
+
+**史料**：
+
+- 本期可提炼的一手史料包括：斯洛文尼亚 OpenBSD hackathon（2014 年 7 月 8 日至 14 日）的 CVS 提交树（一周逾千次提交）与参与者分工记录、FreeBSD 邮件列表 PF 讨论串原文、BSD Router Project 公布的转发基准原始数据与运行脚本、LibreSSL tech 邮件列表的补丁流，以及安全官 Dag-Erling Smørgrav 对个人入坑与 commit bit 授予经历的亲述。（BSD Now EP47，[68.2-96.2]，L1）
+- 该期口述提及的一手材料：Warner Losh 关于 Claude 辅助调试引导器到内核移交的 BSDCan 闪电演讲；Kyle Evans 关于 MAC 框架的 BSDCan 演讲与开发者峰会上的 jails 命名空间讨论；演示 FreeBSD 运行于 Windows WSL 的演讲；写入 /dev/null 全路径跨操作系统对比的演讲；Doug Rabson 与 Dave Cottlehuber 的 Podman 容器生态工作，含向多架构镜像加入 RISC-V 64 位二进制的计划；Alan Jude 关于任意容量磁盘可互为镜像的 ZFS 池设计的演讲。　[存疑脚注] 转写为双列交错文本，Podman 相关人名记作“Dave Codlehuber”，当为 Dave Cottlehuber；Alan Jude 演讲主题的转写（any rate）残缺，主题细节以 BSDCan 官方议程为准（YouTube EP7XbPCjJB1cw，[957.279-1244.48]，L1）
+
+**史观**：
+
+- 总纲10 动手者创造历史：PF 讨论与 LibreSSL 的对照揭示同一机制：社区共识不产生代码，唯有动手者启动历史——主持人引 LibreSSL 与 FreeBSD ZFS 安装器皆因一人先动手而带动集体参与，嘉宾更以亲历口吻总结“空白页是最难的起点”（638.58-645.34）；史书应当记录的是接住空白页的人，而非那纸无人执行的共识。（BSD Now EP47，[609.12-645.34]，L2）
+- 总纲5 没有必然性，只有偶然性：当事人补入一则系统开发轶事：MAC NTPD 模块加入后，系统调用密集负载出现约百分之五十的性能回退，构建世界慢了一倍——因为该模块是基系统里唯一挂进系统调用路径、需要额外取锁的内核模块。一次意在“让无特权用户也能校准时钟”的无害改动，经由实现细节意外拖慢了毫不相干的构建性能，说明操作系统的性能结果往往由实现的偶然耦合决定，而非由设计意图的必然推演给出。（YouTube EP7XbPCjJB1cw，[1920.64-2025.32]，L1）
+- 总纲10 动手者创造历史：AI 漏洞潮下安全响应的组织形态变化指向修复主体的转移：两三人的安全官团队多年独自消化问题的工作方式已达规模极限，公告与补丁验证开始按专长分派给各子系统的普通开发者。安全的持续维系不再依赖少数守门人的英雄叙事，而是落回一线动手者日常的排查与修复，历史由这些分散的实践者而非公告署名者写成。（YouTube EP7XbPCjJB1cw，[1377.12-1517.039]，L1）
+
+**辨析**：
+
+- PF 性能之争呈现典型的声明—质疑—实证结构：OpenBSD 的 Henning Brauer 称算法与锁的改进使其 PF 快约四倍，FreeBSD 开发者 Gleb Smirnoff 反驳该说法未经基准支撑且双方均未公布对比数据；BSD Router Project 随后在四核万兆平台公布附原始数据与脚本的可复现转发基准，显示 FreeBSD 10 明显快于受无 SMP 限制的 OpenBSD 5.4。（BSD Now EP47，[857.82-980.68]，L3）
+- OTP 双因子认证进入 FreeBSD base 的争论焦点不在算法而在政策：由 root 统一管辖的可写密钥库是 HOTP/TOTP 计数与时效失效的技术前提，但放宽用户自管将招致弱化与误操作；Dag-Erling Smørgrav 断言“若在 10.1 放入半吊子方案，将被迫向后兼容五年”（2938.2-2950.76），宁可推至 11 一次做对，体现发布即承诺的工程伦理。（BSD Now EP47，[2931.1-2957.62]，L1）
+- LibreSSL portable 版在 Linux 上暴露的伪随机数复用缺陷（特定 fork 情形可产出相同随机数）显示跨平台移植会击穿原设计假设，而 Linux 内核开发者相应推动与 OpenBSD getentropy 同构的系统调用以规避文件句柄耗尽攻击，构成 OpenSSL 分叉事件反向塑造 Linux 内核接口的互构链条。　[存疑脚注] 该段涉 Linux 侧动议，转写中人名（如 Theodore So、10Uincts）疑为语音转写失真，须回查 2014 年 7 月 OpenBSD tech 邮件列表与内核邮件列表原文方可定名。（BSD Now EP47，[1040.0-1145.72]，L2）
+
+**文献**：
+
+- [BSD Now EP47] Pennington J. BSD Now: 47: DES Challenge IV[EB/OL]. (2014-07-23)[2026-08-15]. <https://www.bsdnow.tv/47>.
+- [YouTube EP7XbPCjJB1cw] YouTube. YouTube: FreeBSD After Hours AMA: Post-BSDCan Recap[EB/OL]. ()[2026-08-15]. <https://www.youtube.com/watch?v=7XbPCjJB1cw>.
+
+<!-- /PODCAST_REVIEW -->
