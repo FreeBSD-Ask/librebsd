@@ -60,7 +60,7 @@ volume: 第13卷-bsd衍生操作系统
 - 在单路 Intel E5-2697 v4 与 Mellanox 100G 网卡上，FreeBSD 可达 100Gbps 网络吞吐且 CPU 仍有约 45% 空闲，而四五年前尚无法填满 10G 端口。（BSD Now EP167，[384.3-423.3]，L1）
 - Netflix 与 Intel 合作以手写汇编的 ISA-L 库替代 OpenSSL 批量加密，在 FreeBSD 上实现约 83Gbps 的加密速率，瓶颈转为内存带宽而非 CPU。（BSD Now EP167，[424.46-527.04]，L1）
 - iflib 是 Netflix 资助的、位于 ifnet 之上的网络驱动编写库，抽象 ioctl 与多队列处理，旨在降低厂商编写高性能驱动的成本并提升驱动质量。（BSD Now EP167，[567.18-692.66]，L1）
-- Netflix 认为厂商常以 FreeBSD 市场小而拒绝投入，iflib 让现有工程师即可编写高质量驱动，Intel 与 Procom 驱动已有变体，Chelsio 与 Mellanox 亦在讨论之列。（BSD Now EP167，[692.66-728.02]，L1）
+- Netflix 认为厂商常以 FreeBSD 市场小而拒绝投入，iflib 让现有工程师即可编写高质量驱动，Intel 与 Qualcomm 驱动已有变体，Chelsio 与 Mellanox 亦在讨论之列。（BSD Now EP167，[692.66-728.02]，L1）[订正：原 Intel 与 Procom 驱动已有变体，2026-09-30 SenseAudio 重转核对]
 - Netflix 资助 FreeBSD 图形栈，以 shim 层把 Linux DRM 代码重编译进 FreeBSD 内核，从陈旧的 DRM 3.x 直接跳到 4.6 与 4.7，从而支持 Skylake 及尚未发布的 Kaby Lake。（BSD Now EP167，[775.92-1133.94]，L1）
 - Scott Long 将图形驱动投资称为“moonshot”，Netflix 的 OCA 服务器并不跑 GUI，此举意在让社区健康并扩大开发者基盘，长期回馈 Netflix 自身。（BSD Now EP167，[781.44-859.18]，L1）
 - Netflix 正开发 TCP RACK 重新实现拥塞控制与重传，并以包节流缓解视频分块突发导致的尾部丢包；软件 pacing 与 TSO 存在冲突，正与 Mellanox、Chelsio 合作推进硬件 pacing。（BSD Now EP167，[1273.84-1539.26]，L1）

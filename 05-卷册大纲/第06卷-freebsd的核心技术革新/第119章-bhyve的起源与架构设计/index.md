@@ -71,7 +71,7 @@ volume: 第06卷-freebsd的核心技术革新
 - Philipp（OpenBSD 前提交者）回顾 2002 年 Karlsruhe hackathon 参与 PF 测试与文档工作，实现接口分组并拆分 pf.c 中的 IOCTL 代码。（BSD Now EP186，[3969.0-4226.0]，L1）
 - Philipp 描述 OpenBSD 路由域（rdomain）为单机上的多个虚拟路由器，可用于多租户防火墙与相同 IP 复用的隔离测试。（BSD Now EP186，[4381.84-4761.18]，L1）
 - 2004 年 PF hackathon 曾发现用户态 32 位与内核 8 位规则编号溢出导致的隐蔽错误，需超过约 256 条规则才触发。（BSD Now EP186，[4227.0-4285.88]，L1）
-- Provost 论证 FreeBSD PF 的 IPv6 分片处理缺陷：PF 重组分片并做出过滤决策后，IPv4 下可交回协议栈重新分片，而 IPv6 为保住路径 MTU 发现必须把分片集合原样送出，netpfil 接口却只支持一包进一包出；PF 目前自行调用 ip6_output 或 ip6_forward，既构成层级违例又存在输出/转发判断错误，特定情形下导致 panic 或丢包；OpenBSD 由协议栈告知 PF 数据包方向的做法可资借鉴，计划中的改造是让 netpfil 支持一包进一堆出，并预期 IPFW 处理 IPv6 分片时同样受益。（BSD Now EP144，[1579.66-1794.88]，L1）
+- Provost 论证 FreeBSD PF 的 IPv6 分片处理缺陷：PF 重组分片并做出过滤决策后，IPv4 下可交回协议栈重新分片，而 IPv6 为保住路径 MTU 发现必须把分片集合原样送出，netpfil 接口却只支持一包进一包出；PF 目前自行调用 ip6_output 或 ip6_forward，既构成层级违例又存在输出/转发判断错误，特定情形下导致 panic 或丢包；OpenBSD 由协议栈告知 PF 数据包方向的做法可资借鉴，计划中的改造是让 netpfil 支持一包进一堆出，并预期 IPFW 处理 IPv6 分片时同样受益。（BSD Now EP144，[1579.66-1853.0]，L1）[订正：原 [1579.66-1794.88]，2026-09-30 SenseAudio 重转核对]
 - Theo de Raadt 提交使 OpenBSD 的 W^X 违例默认不再允许：违例时内核生成日志，mprotect 与 mmap 返回 ENOTSUP，可经 sysctl 改为 SIGABRT 以便调试与取核转储；同时引入 wxallowed 挂载选项按文件系统豁免，commit 原文断言上游开发者终将理解 W^X 违例是极高风险的编程风格并终被彻底禁绝，此前建议在 /usr/local 文件系统使用该选项；主持人评价这使用户得以审计 ports 与自装程序并向上游施压推动修复。（BSD Now EP144，[975.68-1114.66]，L2）
 - Theo de Raadt 的 Pledge 演讲经主持人转述：pledge 在系统调用层约束进程能力，OpenBSD 的 NTP 守护进程已在内部使用；演讲披露迄今约 10% 被 pledge 的程序被发现试图执行安全范围之外的动作；未来方向包括回头检视 2003 年前后引入的 OpenSSH 特权分离，以及向其他操作系统输出 pledge 类机制的意愿。（BSD Now EP144，[130.44-250.50]，L2）
 - FreeBSD 11.0 发布前夜的两项工程经主持人详述：bhyve 在项目分支 projects/bhyve-graphics 获得 UEFI GOP 支持，用户态虚拟显卡把画面送进内建 VNC 服务器，辅以 XHCI（USB 3 仿真）与平板定位实现精准鼠标、PS2 键鼠兜底、可选等待连接后再启动，并已在 Windows 7/8/8.1/10、Server 2012/2016、Ubuntu 15.10、FreeBSD 10.3/11 上验证，grub-bhyve 被定性为权宜之计、单命令 EFI 启动才是长期目标；zfsd 则补齐内核之外的 ZFS 故障管理，监听 devctl 事件自动激活热备，按 zfs 标签与物理路径处置盘位插拔，60 秒内 50 次 IO 或校验和错误即标记故障并换盘，管理员仅经池属性 autoreplace 间接控制，默认未启用。（BSD Now EP144，[243.24-975.32]，L2）
@@ -81,7 +81,7 @@ volume: 第06卷-freebsd的核心技术革新
 - 虚拟化与图形栈进展：Peter Grehan 于 10 月 4 日向 bhyve 提交 Windows 客户机支持并引入含 CSM 的 UEFI 栈，经重打包注入无人值守安装配置的 Windows ISO、以 VNC 或 RDP 弥补缺失的图形能力完成安装；同一 UEFI 栈使 SmartOS、OpenIndiana、OmniOS 可作为 Illumos 客户机运行，为 FreeBSD 侧 ZFS 开发提供上游提交前的编译测试环境。同期 FreeBSD 合入 Xen 4.6 相关头文件（新增 ARM 支持并与 aarch64 虚拟化卸载工作并行）、LLVM/Clang 3.7.0、支持 Radeon 与 Ivy Bridge 起代 Intel GPU 的 OpenCL ports（需 KMS 驱动）；OpenBSD 开发分支落地 Broadwell GPU 初步支持，DRM 对齐 Linux 3.14.52（Mark Kettenis），Dev Summit 图形工作组预期年底前交付 Haswell 图形支持。（BSD Now EP110，[727.76-1099.88]，L2）
 - ZFS 运维实践反馈：听众在 4K 盘上以 512B 伪容量（GNOP 手法时代）建立 RAIDZ2 池且未启用压缩，压缩属性可按数据集增量开启而无需重建，但 512B 块尺寸无法就地修正、必须重建池并临时转移全部数据；主持人建议以 zfs send/receive 取代 rsync 完成迁移，因其保留快照且可在接收端重设压缩属性。Alan 自述 30 余块盘混用 512B 与 4K 的同类教训，并总结“写出一个糟糕的实现，往往是让别人写出更好实现的最好办法”（4799.32-4804.14），其安装器的 ZFS 支持正是由粗陋原型起步引来协作重写。（BSD Now EP110，[5070.18-5478.22]，L1）
 - Neel Natu 与 Peter Grehan 在 NetApp 期间受 KVM 先例启发，思考为何 FreeBSD 没有 hypervisor；2010 年 11 月 MeetBSD 上提出构想，获 NetApp 支持后逐步开源。（BSD Now EP20，[1080.00-1205.18]，L1）
-- bhyve 名称意为 BSD Hypervisor，由 Joe Catterdon 命名；初期目标是资源分区型 hypervisor，vCPU 绑定整核、内存不做虚拟化，后演进为支持虚拟化 CPU、内存与 virtio 设备的通用实现。（BSD Now EP20，[1184.42-1301.34]，L1）
+- bhyve 名称意为 BSD Hypervisor，由 Joe Caradonna 命名；初期目标是资源分区型 hypervisor，vCPU 绑定整核、内存不做虚拟化，后演进为支持虚拟化 CPU、内存与 virtio 设备的通用实现。（BSD Now EP20，[1184.1-1317.4]，L1）[订正：原 Joe Catterdon 且 [1184.42-1301.34]，2026-09-30 SenseAudio 重转核对]
 - 截至访谈，bhyve 可运行 FreeBSD（回溯至 7.0）、Linux 与 OpenBSD，Illumos 因实时钟与时间戳计数器的紧校准问题尚未完成；AMD 支持在项目分支中并计划于 10.1 合并。（BSD Now EP20，[1332.70-1553.78]，L1）
 - 后续目标包括 UEFI 与 VGA 以运行 Windows（拟支持 Server 2008 及以后版本）、快照与活迁移、ARM（Cortex A15）支持及作为 OpenStack 计算节点。（BSD Now EP20，[1834.62-2035.86]，L1）
 - CPU 性能经 OpenSSL 基准测试几乎与宿主一致，网络因 virtio 后端缺少无状态卸载特性而仍耗用较多 CPU；控制台后端曾被改造为可指向任意字符设备。（BSD Now EP20，[1684.86-1825.34]，L1）
@@ -121,7 +121,7 @@ volume: 第06卷-freebsd的核心技术革新
 - 总纲3 不存在进步，只有权力再分配：Bob Beck 演讲给出的删码数据构成对功能堆叠叙事的反题：LibreSSL 自 OpenSSL 1.0.1g 分叉时含约 38.8 万行 C，三十天内删去近 9 万行，至 2015 年 10 月总量约 51.1 万行而 C 代码降至约 29.7 万行；同期 OpenSSL 1.0.2d 达 43.2 万行 C、现行版本总行数突破 100 万，而近期五个 OpenSSL 高危 CVE 均未波及 LibreSSL。Theo 的 TAME 主张与之同构：接口约 1200 行，file 命令从 systrace 的约 300 行规则缩至 4 行；他论证“若防护特性带关闭开关，应用方迟早劝用户关掉它，无人使用的特性随之死亡”（1344.14-1364.18），故 OpenBSD 政策为特性一旦可用即不设退路、应用缺陷必须修复。两条路线的分歧并非进步程度的差异，而是关于安全边界定义权的再分配。（BSD Now EP110，[1388.84-1504.34]，L2）
 - 总纲10 动手者创造历史：总纲10 动手者创造历史：两名开发者以业余项目推动 FreeBSD 获得原生 hypervisor，展现动手者以工程实践塑造系统能力。（BSD Now EP20，[1129.50-1205.18]，L1）
 - 总纲5 没有必然性，只有偶然性：总纲5 没有必然性，只有偶然性：bhyve 由 NetApp 内部对 hypervisor 的讨论与 KVM 先例偶然触发，而非既有路线图的必然结果。（BSD Now EP20，[1080.00-1205.18]，L1）
-- 总纲22 知识注定过时：总纲22 知识注定过时：初期分区型设计被后续完整虚拟化取代，说明技术路线随条件与认知演进而变更。（BSD Now EP20，[1206.02-1301.34]，L1）
+- 总纲22 知识注定过时：总纲22 知识注定过时：初期分区型设计被后续完整虚拟化取代，说明技术路线随条件与认知演进而变更。（BSD Now EP20，[1206.3-1317.4]，L1）[订正：原 [1206.02-1301.34]，2026-09-30 SenseAudio 重转核对]
 
 **辨析**：
 

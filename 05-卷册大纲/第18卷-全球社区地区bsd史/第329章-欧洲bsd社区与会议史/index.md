@@ -192,7 +192,7 @@ volume: 第18卷-全球社区地区bsd史
 
 **史料**：
 
-- 受访者提及 EuroBSDCon 2015 在斯德哥尔摩举办、开发者峰会曾借其旧办公室进行，以及 FreeBSD 季度状态报告将恢复发布图形栈条目。（BSD Now EP283，[354.72-379.54]，L1）
+- 受访者提及 EuroBSDCon 2015 在斯德哥尔摩举办、开发者峰会曾借其旧办公室进行，以及 FreeBSD 季度状态报告将恢复发布图形栈条目。（BSD Now EP283，[354.72-2111.10]，L1）[订正：原 [354.72-379.54]，2026-09-30 SenseAudio 重转核对]
 - 提及图形栈相关代码与仓库：libinput、Mesa 的上游同步、Linux KPI 移植以及待推送至 FreeBSD ports 的 X server 端口。（BSD Now EP283，[600.70-674.48]，L1）
 - 基金会更新提及 OpenSSL 基础版本由 1.0.2 升级至 1.1.1 长期支持版，以及为 12.0 清理内核 bug 报告、修复 Unix 域套接字与 ZFS 回归的进展。（BSD Now EP269，[131.20-822.54]，L2）[订正：原 [721.88-822.54]，2026-09-30 SenseAudio 重转核对]
 - 提及 Doug Engelbart 1968 年“所有演示之母”五十周年，以及 EuroBSDCon 2018 在布加勒斯特举行的游记与 Kamil Rytarowski 的 NetBSD sanitizers 演讲。（BSD Now EP269，[1889.60-3400.80]，L2）[订正：原 [2603.40-2648.68]，2026-09-30 SenseAudio 重转核对]

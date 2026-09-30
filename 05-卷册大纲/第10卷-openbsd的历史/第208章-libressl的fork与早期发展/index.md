@@ -121,14 +121,14 @@ volume: 第10卷-openbsd的历史
 - Delphix 的 Matt Ahrens 等在 OpenZFS 开发者峰会原型基础上实现 zpool checkpoint，允许管理员在执行破坏性操作前为整个池建立可回滚检查点。（BSD Now EP193，[1810.2-2535.42]，L2）
 - TrueOS（原 PC-BSD）改为基于 FreeBSD current 的滚动发布，默认 Lumina 桌面；DistroWatch 评测肯定其 ZFS 集成与安装流程，但指出硬件兼容与稳定更新方面的不足。（BSD Now EP193，[2605.18-3020.76]，L2）
 - LibreSSL 2.5.4 修复证书验证回调一致性与 Linux getrandom 阻塞等问题；Michael Hendricks 因 Heartbleed 后 OpenBSD 分叉 LibreSSL 的经历由 macOS 转投 OpenBSD。（BSD Now EP193，[1277.66-1583.66]，L2）
-- FreeBSD 11.0 正式发布，支持从全盘加密硬盘启动，默认禁用 OpenSSH DSA 密钥生成，彻底移除 SSH 协议版本 1，并默认将无线接口设为 FCC 监管域。（BSD Now EP163，[410.7-492.28]，L2）
+- FreeBSD 11.0 正式发布，支持从全盘加密硬盘启动，默认禁用 OpenSSH DSA 密钥生成，彻底移除 SSH 协议版本 1，并默认将无线接口设为 FCC 监管域。（BSD Now EP163，[418.9-486.9]，L2）[订正：原 [410.7-492.28]，2026-09-30 SenseAudio 重转核对]
 - Amazon EC2 镜像从 FreeBSD 10.3 或更早版本升级到 11 存在引导挂起问题，新建实例不受影响，官方建议等待勘误通知后再升级。（BSD Now EP163，[492.28-514.02]，L2）
 - Bryan Cantrill 批评 OpenSSL 形成单一文化：因多数人不愿解决 TLS 问题而单一来源化，导致漏洞成为系统性风险；开源世界的优势在于单文化被打破后一般不会重建。（BSD Now EP163，[3710.94-3765.9]，L1）
 - Cantrill 认为 LibreSSL 虽只是 OpenSSL 的 fork，但提供更好的 API，真正的出路是对 OpenSSL 做从零开始的重写。（BSD Now EP163，[3681.66-3710.46]，L1）
 - illumos 与 FreeBSD 存在双向代码流动：illumos 曾贡献 ZFS 与 DTrace，FreeBSD 则贡献 bootloader；Toomas Soome 在引入 bootloader 前于 FreeBSD 上做了大量改进，包括缓慢的 FAT32 读取优化。　[存疑脚注] Toomas Soome 姓名转写须核验。（BSD Now EP163，[3770.2-4046.22]，L1）
-- Cantrill 与 Toomas 合作在 FreeBSD loader 菜单实现 ZFS 启动环境选择，illumos 采用略有不同的实现；localization 支持从 illumos 进入 FreeBSD 与 DragonFly，修复又回传 illumos。（BSD Now EP163，[4014.82-4070.12]，L1）
+- Cantrill 与 Toomas 合作在 FreeBSD loader 菜单实现 ZFS 启动环境选择，illumos 采用略有不同的实现；localization 支持从 illumos 进入 FreeBSD 与 DragonFly，修复又回传 illumos。（BSD Now EP163，[4046.9-4076.7]，L1）[订正：原 [4014.82-4070.12]，2026-09-30 SenseAudio 重转核对]
 - Cantrill 认为其 jails 与 zones 对比论文可能促使 FreeBSD 11 将 System V 共享内存改为 jail-aware，此前相关工作曾停滞，演讲重新激发他人完成。（BSD Now EP163，[3866.88-3923.8]，L1）
-- Cantrill 称 UEFI 与 AMI 固件使闭源厂商得以绑架硬件引导，是系统控制中令人沮丧的痛点。（BSD Now EP163，[3779.64-3824.08]，L1）
+- Cantrill 称 UEFI 与 AMI 固件使闭源厂商得以绑架硬件引导，是系统控制中令人沮丧的痛点。（BSD Now EP163，[3773.9-3833.9]，L1）[订正：原 [3779.64-3824.08]，2026-09-30 SenseAudio 重转核对]
 - Cantrill 回顾后 YouTube 时代仅约十年，演讲视频可远程启发素未谋面的人解决问题，技术传播不再依赖亲赴会议。（BSD Now EP163，[3925.16-4006.82]，L1）
 - HAMMER 是 Matthew Dillon 为 DragonFly BSD 设计的 64 位文件系统，以事务组实现逐文件历史、快照、镜像流与删除后恢复。（BSD Now EP53，[3556.02-3609.18]，L2）
 - HAMMER 的镜像流模式类似持续运行的 ZFS send，可不断向备份目标复制数据；其快照被视为可访问的实时数据而非只读副本。（BSD Now EP53，[3978.66-4095.18]，L2）
@@ -145,8 +145,8 @@ volume: 第10卷-openbsd的历史
 - Delphix 关于 zpool checkpoint 的设计说明博客（BSD Now EP193，[1810.2-2600.06]，L1）
 - DistroWatch 对 TrueOS 的评测文章（BSD Now EP193，[2605.18-3031.58]，L1）
 - LibreSSL 2.5.4 发布说明（BSD Now EP193，[5057.4-5151.86]，L1）
-- Bryan Cantrill 访谈自述（illumos 与 Joyent 背景，DTrace 与 ZFS 相关亲历者）。（BSD Now EP163，[3625.3-4230.0]，L1）
-- FreeBSD 11.0 发布公告与 EC2 升级勘误说明。（BSD Now EP163，[410.7-514.02]，L2）
+- Bryan Cantrill 访谈自述（illumos 与 Joyent 背景，DTrace 与 ZFS 相关亲历者）。（BSD Now EP163，[1336.3-6654.0]，L1）[订正：原 [3625.3-4230.0]，2026-09-30 SenseAudio 重转核对]
+- FreeBSD 11.0 发布公告与 EC2 升级勘误说明。（BSD Now EP163，[418.9-529.9]，L2）[订正：原 [410.7-514.02]，2026-09-30 SenseAudio 重转核对]
 - Bryan Cantrill 的 jails 与 zones 对比论文。（BSD Now EP163，[3866.88-3923.8]，L2）
 - Reyk Floeter 访谈（OpenBSD httpd 作者当事人自述）。（BSD Now EP53，[540.14-1854.84]，L1）
 - Robert Watson 访谈（当事人自述，FreeBSD 核心团队成员与剑桥大学讲师）。（BSD Now EP50，[1294.82-2231.72]，L1）
@@ -160,7 +160,7 @@ volume: 第10卷-openbsd的历史
 - 总纲4 分离聚合是永恒规律：OpenSSL 单一文化是问题被集体外包后形成的过度聚合，开源社区打破单一来源后保持异质，呈现分离与聚合的交替。（BSD Now EP163，[3710.94-3765.9]，L3）
 - 总纲4 分离聚合是永恒规律：illumos 与 FreeBSD 各自贡献 ZFS、DTrace 与 bootloader，代码分离后跨项目流动并重新聚合。（BSD Now EP163，[3770.2-4070.12]，L3）
 - 总纲9 经验优先：Cantrill 的对比论文以既有经验揭示 jails 与 zones 的差异，进而推动 FreeBSD 改进，经验借媒介传播并转化为动手实践。（BSD Now EP163，[3866.88-4006.82]，L3）
-- 总纲3 不存在进步，只有权力再分配：闭源固件厂商以 UEFI 控制引导环节，用户与开源系统在硬件入口处受制于少数厂商。（BSD Now EP163，[3779.64-3824.08]，L3）
+- 总纲3 不存在进步，只有权力再分配：闭源固件厂商以 UEFI 控制引导环节，用户与开源系统在硬件入口处受制于少数厂商。（BSD Now EP163，[3773.9-3833.9]，L3）[订正：原 [3779.64-3824.08]，2026-09-30 SenseAudio 重转核对]
 - 总纲10 动手者创造历史：YouTube 等媒介让技术经验与问题意识跨地域传播，动手者的影响不再限于会议现场。（BSD Now EP163，[3925.16-4006.82]，L3）
 - 总纲10 动手者创造历史：总纲10 动手者创造历史：Reyk Floeter 以一天内动手拆出 httpd 并持续迭代的方式直接塑造 OpenBSD 基础系统工具。（BSD Now EP53，[945.18-1035.58]，L1）
 - 总纲22 知识注定过时：总纲22 知识注定过时：OpenBSD 以更简单、更贴合自身安全模型的新工具替换日益膨胀的 nginx，体现既有技术方案的持续失效与重写。（BSD Now EP53，[837.46-945.18]，L1）

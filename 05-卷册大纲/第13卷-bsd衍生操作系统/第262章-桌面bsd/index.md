@@ -77,7 +77,7 @@ volume: 第13卷-bsd衍生操作系统
 - Lumina 由 Ken Moore 开发，采用三条款 BSD 许可证，专为 FreeBSD 原生编写而非自 Linux 移植，依赖 Xorg、Qt 与 Fluxbox 窗口管理器。（BSD Now EP54，[3448.90-3488.4]，L1）[订正：原 [3448.90-3497.98]，2026-09-30 SenseAudio 重转核对]
 - Lumina 0.6.2 随 PC-BSD 10.0.3 发布，仍处 beta，但在轻量笔记本上 CPU 占用低于半个百分点、整机内存约 120 MB。（BSD Now EP54，[3491.66-3526.78]，L1）
 - Lumina 附带 Insight 文件管理器，可浏览 ZFS 快照实现类似时光机的文件恢复，并集成书签、标签页与多媒体浏览。（BSD Now EP54，[4219.7-4454.0]，L1）[订正：原 [4225.74-4268.26]，2026-09-30 SenseAudio 重转核对]
-- Lumina 已提交进入 FreeBSD ports 树，PC-BSD 亦提供对应包，后续社区将其移植到 OpenBSD 与 DragonFly BSD。（BSD Now EP54，[3542.62-3548.58]，L1）
+- Lumina 已提交进入 FreeBSD ports 树（X11/lumina）并随 PC-BSD 10.0.3 提供；作者于访谈末邀请 OpenBSD、NetBSD 与 DragonFly BSD 用户移植 Lumina，称可为其提供版本。（BSD Now EP54，[3539.5-3547.5]、[1810.3-1862.1]，L1）[订正：原 “后续社区将其移植到 OpenBSD 与 DragonFly BSD”、原 [3542.62-3548.58]，2026-09-30 SenseAudio 重转核对]
 - Colin Percival 自述 FreeBSD 发布工程长期处于由发布工程师即兴决定的临时状态，他接任后引入按季度排布、覆盖未来五年的发布日历，使 minor 版本节奏可预期。（BSD Now EP580，[476.24-547.40]，L1）
 - Colin 将 FreeBSD 主版本支持期由五年缩减为四年，以对齐每两年一次的主版本节奏，避免同时维护三个稳定分支带来的上游 OpenSSL、编译器与 ports 兼容负担。（BSD Now EP580，[630.52-756.16]，L1）
 - Colin 回顾 freebsd-update 工具源于 2003 年他为简化系统补丁更新而编写，并为此创造了 bsdiff 二进制差分工具，后者后来被广泛用于各处的增量更新。（BSD Now EP580，[210.06-229.42]，L1）

@@ -60,7 +60,7 @@ volume: 第13卷-bsd衍生操作系统
 - FreeNAS 在 DigitalOcean 的部署教程通过第二块设备安装后再以 dd 重灌引导区完成，主持人补充 ZFS 的校验与校验和使消费级磁盘配合 RAID-Z1 冗余在家庭 NAS 场景可用，并强调以独立备份兜底。（BSD Now EP330，[1084.88-1299.54]，L2）
 - NomadBSD 1.3 是基于 FreeBSD 12.1 的 USB 持久化 Live 系统，通过 SMBIOS 检测自动适配 VirtualBox，新增 ZFS 安装支持，并因 Lenovo 兼容问题从 GPT 改回 MBR。（BSD Now EP330，[1790.46-1892.38]，L2）
 - e2k19 黑客松重写 RPKI 客户端的 X.509 验证，将证书与 CRL 表改为红黑树查找、以 rename 原子替换输出文件，使 VRP 验证从 20 余分钟降至约 1 分钟。（BSD Now EP330，[2281.90-2516.12]，L2）
-- Ryzen 3700X 上 DragonFly 5.6、FreeBSD 12 与两个 Linux 发行版的测试显示：纯 CPU 类负载结果趋同，Postgres 读写差异主要由 ZFS、HAMMER、EXT4 等文件系统与编译器（GCC9/Clang）引入，而非 OS 本身。（BSD Now EP318，[67.78-152.46]，L2）
+- Ryzen 3700X 上 DragonFly 5.6、FreeBSD 12 与两个 Linux 发行版的测试显示：纯 CPU 类负载结果趋同，Postgres 读写差异主要由 ZFS、HAMMER、EXT4 等文件系统与编译器（GCC9/Clang）引入，而非 OS 本身。（BSD Now EP318，[67.78-524.60]，L2）[订正：原 [67.78-152.46]，2026-09-30 SenseAudio 重转核对]
 - 主持人指出基准测试应区分测 OS 与测文件系统/编译器，建议用内存文件系统消除磁盘变量，并提醒几何平均只作概览、需逐一读方法与变量。（BSD Now EP318，[456.34-524.52]，L2）
 - JFK 总统图书馆选用 iXsystems TrueNAS M50 高可用存储保存并服务全部数字档案（2500 万份文档、音频、照片、视频），依赖 ZFS 擦洗、校验和、快照与复制保障百年级只读归档。（BSD Now EP318，[525.16-742.24]，L2）
 - FreeBSD 12.1 beta 纳入 BearSSL 以支撑 Juniper 的验证引导装载器，并在仍用 GCC 4.2 的架构上关闭“警告即错误”，同时合入 12.0 以来的安全公告与勘误。（BSD Now EP318，[753.68-866.40]，L2）
@@ -76,7 +76,7 @@ volume: 第13卷-bsd衍生操作系统
 - Mike Muuss 于 1983 年受 Dave Mills 言论启发，一夜写出 ping 并为 4.2a BSD 补充内核 ICMP 支持；ping 命名来自声呐回响，而非“Packet Internet Groper”缩写。（BSD Now EP190，[4653.46-4908.5]，L2）
 - Chris Moore 在主持 BSD Now 约四年、180 余期后卸任，Benedict Reuschling 接任共同主持。（BSD Now EP185，[61.44-101.44]，L1）
 - Kris Moore 披露 FreeNAS 9.10.3 为首个基于 FreeBSD 11 stable 的 9 分支版本，并引入 MinIO S3 兼容对象存储。（BSD Now EP185，[657.68-869.02]，L1）
-- TrueOS 移除 GRUB 安装选项，改用 EFI rEFInd 链加载 BSD loader；计划改进 GELI 密钥在 bootstrap、loader 与内核间的传递。（BSD Now EP185，[2829.24-2905.56]，L1）
+- TrueOS 移除 GRUB 安装选项，改用 EFI rEFInd 链加载 BSD loader；计划改进 GELI 密钥在 bootstrap、loader 与内核间的传递。（BSD Now EP185，[2829.24-3250.70]，L1）[订正：原 [2829.24-2905.56]，2026-09-30 SenseAudio 重转核对]
 - iocage 由 Brandon Schneider 以 Python 重写并引入 JSON API，插件采用 pkg 而非旧的 PBI 格式。（BSD Now EP185，[961.44-1046.98]，L2）
 
 **史料**：
@@ -97,7 +97,7 @@ volume: 第13卷-bsd衍生操作系统
 - Dennis Ritchie《The Evolution of the Unix Time-sharing System》（BSD Now EP190，[8.0-13.36]，L1）
 - Chris Moore 卸任自述（BSD Now EP185，[61.44-141.04]，L1）
 - Kris Moore 访谈自述（BSD Now EP185，[628.1-1119.87]，L1）
-- TrueOS 引导与 GELI 变更记录（BSD Now EP185，[2829.24-2905.56]，L1）
+- TrueOS 引导与 GELI 变更记录（BSD Now EP185，[2829.24-3250.70]，L1）[订正：原 [2829.24-2905.56]，2026-09-30 SenseAudio 重转核对]
 
 **史观**：
 

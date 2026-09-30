@@ -91,7 +91,7 @@ volume: 第15卷-许可证哲学与法律分析
 - 转述 Colin Percival 的 Spectre/Meltdown 文章：其 2005 年 BSDCan 论文已描述微架构侧信道与超线程下的 RSA 密钥窃取，并批评此次漏洞披露的失序。（BSD Now EP230，[643.76-1356.9]，L2）
 - Chris Moore 在主持 BSD Now 约四年、180 余期后卸任，Benedict Reuschling 接任共同主持。（BSD Now EP185，[61.44-101.44]，L1）
 - Kris Moore 披露 FreeNAS 9.10.3 为首个基于 FreeBSD 11 stable 的 9 分支版本，并引入 MinIO S3 兼容对象存储。（BSD Now EP185，[657.68-869.02]，L1）
-- TrueOS 移除 GRUB 安装选项，改用 EFI rEFInd 链加载 BSD loader；计划改进 GELI 密钥在 bootstrap、loader 与内核间的传递。（BSD Now EP185，[2829.24-2905.56]，L1）
+- TrueOS 移除 GRUB 安装选项，改用 EFI rEFInd 链加载 BSD loader；计划改进 GELI 密钥在 bootstrap、loader 与内核间的传递。（BSD Now EP185，[2829.24-3250.70]，L1）[订正：原 [2829.24-2905.56]，2026-09-30 SenseAudio 重转核对]
 - iocage 由 Brandon Schneider 以 Python 重写并引入 JSON API，插件采用 pkg 而非旧的 PBI 格式。（BSD Now EP185，[961.44-1046.98]，L2）
 - FreeBSD Journal 2025 夏季刊以网络为主题，收录 Tom Jones 的 Wi-Fi 开发入门、Randall Stewart 与 Michael Tüxen 的 TCP 静态 pacing 以及 Christopher R. Bowman 的嵌入式 FreeBSD 等文章。（BSD Now EP626，[141.82-762.54]，L2）
 - FreeBSD Foundation 的《Java hiding in plain sight》指出 OpenJDK 仍是 Elasticsearch、Tomcat、LibreOffice 与 Minecraft 等系统的基础，维护者的工作使 FreeBSD 上的 OpenJDK 保持最新。（BSD Now EP626，[762.54-946.78]，L2）
@@ -147,14 +147,14 @@ volume: 第15卷-许可证哲学与法律分析
 - Colin Percival 关于 Spectre/Meltdown 的博文，含 2005 年 BSDCan 论文与对披露时间线的梳理。（BSD Now EP230，[643.76-771.28]，L2）
 - Chris Moore 卸任自述（BSD Now EP185，[61.44-141.04]，L1）
 - Kris Moore 访谈自述（BSD Now EP185，[628.1-1119.87]，L1）
-- TrueOS 引导与 GELI 变更记录（BSD Now EP185，[2829.24-2905.56]，L1）
+- TrueOS 引导与 GELI 变更记录（BSD Now EP185，[2829.24-3250.70]，L1）[订正：原 [2829.24-2905.56]，2026-09-30 SenseAudio 重转核对]
 - FreeBSD Journal 2025 年夏季刊及其收录文章。（BSD Now EP626，[141.82-762.54]，L2）
 - Mark Phillips 撰写的 FreeBSD Foundation 博客 Java hiding in plain sight。（BSD Now EP626，[762.54-946.78]，L2）
 - Chuck Tuffley 的 BSDCan 2025 Trip Report。（BSD Now EP626，[948.80-1427.06]，L1）
 - Undeadly.org 的 USB webcam 测试征集与 OpenSSH 新特性报道。（BSD Now EP626，[1437.62-1621.92]，L2）
 - Martin Husemann 的 NetBSD 11 release process 博客。（BSD Now EP626，[1636.36-1806.82]，L2）
 - Nico Cartron 访谈。（BSD Now EP626，[1950.18-3345.10]，L1）
-- 本期史料包括 George Neville-Neal 访谈（当事人自述）、FreeBSD Journal 创刊号目录、OpenBSD 官方 errata 补丁与 FAQ、FreeBSD 季度状态报告及 pfSense 2.1.1 快照说明。（BSD Now EP22，[1375.20-1917.06]，L1）
+- 本期史料包括 George Neville-Neal 访谈（当事人自述）、FreeBSD Journal 创刊号目录、OpenBSD 官方 errata 补丁与 FAQ、FreeBSD 季度状态报告及 pfSense 2.1.1 快照说明。（BSD Now EP22，[346.20-3600.00]，L1） [订正：原 [1375.20-1917.06]，2026-09-30 SenseAudio 重转核对]
 - 本期为 BSDCan 2008 现场对 Sangoma 软件项目负责人 Alex Feldman 的一手口述访谈，保留 wanpipe 入树动议、终身保修公告与公司硬件沿革等当事人陈述；开场为 No Starch Press《Building a Server with FreeBSD 7》书评，主持人评价其非顺序教程结构、服务间集成示例（DHCP 与 DNS 联动）与注重安全加固的默认配置，并指出对 Unix 新手可能过于陡峭。（BSDTalk EP150，[0.00-178.82]，L1）
 - 本期为 BSDCan 2008 现场对技术作家 Michael W. Lucas 的一手口述访谈，保留 Absolute 系列创作史、与 Colin Percival 关于 freebsd-update 的求证往来、PF 三至四版快速演化期的出版插曲及其以 NetFlow 与网络监控工具为主题的教程与讲座信息；其职业身份为汽车供应商的西半球网络管理员，工作中以两台 FreeBSD 机器承担监控与日志。（BSDTalk EP153，[0.00-105.72]，L1）
 - 本期一手史料包括：Apress出版合同细节（选该社本因其随书附DVD的惯例、临付印取消附盘、FreeBSD Mall改为随订单附送、镜像可自PC-BSD官网下载）；PC-BSD官网拟设书论坛以收集勘误与第二版建议；BSDP job task分析调查结果的公开发布；BSDCan的BSDP流程演讲与次日全天公开会议（含网络直播）安排。（BSDTalk EP188，[788.36-1438.12]，L1）

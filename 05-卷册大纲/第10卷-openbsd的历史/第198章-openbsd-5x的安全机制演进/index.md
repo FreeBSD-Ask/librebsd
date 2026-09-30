@@ -86,8 +86,8 @@ volume: 第10卷-openbsd的历史
 - 本期提及的一手史料包括：Jos Schellevis 访谈自述（2015-01-14 录制）；Theo de Raadt 关于 CD 完整性的邮件列表回复；OpenBSD W^X 内核化 CVS 提交；FreeBSD hackers 邮件列表 GELI 加密 ChaCha20 支持讨论（含 John-Mark Gurney 发现 AES-XTS 优化仅存于 AES-NI 代码路径）；Adrian Chadd 的 10G 级网络基准测试工具项目（GitHub）与博客；Kris Moore 撰写的 TrueOS 路由器搭建博文（PC-BSD 官方博客）；Martin Matuska 于 EuroBSDCon 2012 解读 zfs-stats 数据的演讲；Peter Hansteen 关于 Hail Mary cloud 慢速攻击的演讲；OPNsense 论坛、邮件与 GitHub 三个参与渠道；Daemon 论坛 divert 套接字结合黑名单降低攻击的帖子。（BSD Now EP72，[0.0-4809.72]，L1）
 - 主持人以在场者身份回忆 OpenSMTPD 默认化的宣布现场：Henning Brauer 在 AsiaBSDCon 旅馆大堂的饮酒聚会上宣布这一消息，sendmail 作者 Eric Allman 亦在场并以“你是说你们还在用它？你们之前不是已经杀掉它了吗？”（3730.06-3733.06）打趣，构成 sendmail 时代落幕的一则第一手轶事，也旁证 BSD 会议非正式社交场合的史料价值。（BSD Now EP68，[3716.02-3733.06]，L1）
 - Lucas 以作者身份详述 GBDE 的设计意图与一手考据：GBDE 借鉴 PGP 在战乱地区救援者场景中的教训——加密保护的不是被攻击者本人而是其联系人名单——故提供可销毁盘上密钥的机制，被胁迫时错误消息显示“密码正确，但盘上的密钥已被销毁”（2382.83-2388.76）；他并自述写作中发现 GBDE 缺陷，由技术评审 Poul-Henning Kamp 在付印前修复，属作者与原作者直接交互的罕见记录。（BSD Now EP68，[2301.87-2597.47]，L1）
-- 本期史料包括 Ted Unangst 访谈（当事人自述）、OpenBSD signify 工具与测试密钥、FreeBSD Foundation 2013 年筹款报告、NTP 教程及 OpenBSD BeagleBone Black 移植博客。（BSD Now EP23，[713.64-1387.66]，L1）
-- 本期史料包括 George Neville-Neal 访谈（当事人自述）、FreeBSD Journal 创刊号目录、OpenBSD 官方 errata 补丁与 FAQ、FreeBSD 季度状态报告及 pfSense 2.1.1 快照说明。（BSD Now EP22，[1375.20-1917.06]，L1）
+- 本期史料包括 Ted Unangst 访谈（当事人自述）、OpenBSD signify 工具与测试密钥、FreeBSD Foundation 2013 年筹款报告、NTP 教程及 OpenBSD BeagleBone Black 移植博客。（BSD Now EP23，[61.30-3246.40]，L1） [订正：原 [713.64-1387.66]，2026-09-30 SenseAudio 重转核对]
+- 本期史料包括 George Neville-Neal 访谈（当事人自述）、FreeBSD Journal 创刊号目录、OpenBSD 官方 errata 补丁与 FAQ、FreeBSD 季度状态报告及 pfSense 2.1.1 快照说明。（BSD Now EP22，[346.20-3600.00]，L1） [订正：原 [1375.20-1917.06]，2026-09-30 SenseAudio 重转核对]
 - 本期史料包括 Devin Teske 与 Warren Block 的安装器改动、OpenBSD signify 提交与测试密钥、Julio Merino 的 Kyua 测试框架、pc-sysinstall 脚本化安装器及 pkgsrc 2013Q4 分支。（BSD Now EP19，[91.48-1330.48]，L2）
 
 **史观**：
@@ -102,7 +102,7 @@ volume: 第10卷-openbsd的历史
 - 总纲10 动手者创造历史：总纲10 动手者创造历史：George Neville-Neal 与编委会以出版实践填补 FreeBSD 无专属杂志的空白，将社区知识沉淀为周期性出版事件。（BSD Now EP22，[1492.06-1716.58]，L1）
 - 总纲9 经验优先：总纲9 经验优先：教程强调按官方补丁与更新文档操作，避免因跳过说明导致 SSH 无法启动等实际故障。（BSD Now EP22，[3492.76-3530.20]，L2）
 - 总纲15 文化即形式主义：总纲15 文化即形式主义：杂志作为社区文化的形式化载体，将分散于论坛与邮件列表的知识加以编排和定期发布。（BSD Now EP22，[1500.10-1527.40]，L1） [订正：原 [1500.10-1553.54]，2026-09-30 SenseAudio 重转核对]
-- 总纲10 动手者创造历史：总纲10 动手者创造历史：Devin Teske、Warren Block、Julio Merino 等以具体工程改进安装器与测试基础设施，推动发行流程演进。（BSD Now EP19，[1069.32-1300.48]，L2）
+- 总纲10 动手者创造历史：总纲10 动手者创造历史：Devin Teske、Warren Block、Julio Merino 等以具体工程改进安装器与测试基础设施，推动发行流程演进。（BSD Now EP19，[1071.50-1290.20]，L2）[订正：原 [1069.32-1300.48]，2026-09-30 SenseAudio 重转核对]
 - 总纲22 知识注定过时：总纲22 知识注定过时：sysinstall 被 bsdconfig 与脚本化安装器取代，旧安装方式随版本演进而淘汰。（BSD Now EP19，[2238.16-2399.96]，L2）
 - 总纲8 本体论上各方平等：总纲8 本体论上各方平等：installfest 将五大 BSD 并置演示，体现多分支在本体论上平等对待的叙述方式。（BSD Now EP19，[1011.60-1046.72]，L2）
 
@@ -110,7 +110,7 @@ volume: 第10卷-openbsd的历史
 
 - 对比文的定位被主持人辨析为方法论示范：作者声称只列事实、不替读者下结论；主持人补充逐项解读的必要性——FreeBSD 默认关闭项看似更多，但其中不少与具体硬件或使用场景无关（如 SPARC64 相关项），LibreSSL 虽不在 base 却可经 ports 安装，ASLR 等缺口由 HardenedBSD 推进，提醒读者警惕把默认差异直接读成安全优劣。（BSD Now EP68，[899.75-972.29]，L2）
 - 多数开发者在 macOS 虚拟机里跑 FreeBSD、不吃自家狗粮的说法被现场辨析为以偏概全：回答者称因人而异，会议上密集出现的 MacBook 多是随身笔记本而非主力开发机，内核开发者用虚拟机是为了崩溃不伤及工作环境，且 pkg 二进制包与 PC-BSD 月度快照正在改变桌面化程度；此说仅有与会者个体见闻支撑，宜存疑对待。　[存疑脚注] 开发者主力系统构成仅有节目参与者个体见闻支撑，无统计来源；转写专名多处失真（如 Henning Brauer 作 Brower、Kirk McKusick 作 McCuse/McKenzie、Poul-Henning Kamp 作 Paul Henning Kamp），语义尚可辨识。（BSD Now EP68，[4993.72-5073.89]，L4）
-- 当事人明确表示不知 Theo 启动签名项目的动机，且 5.5 正式签名密钥当时尚未生成；发行集签名覆盖范围（源集、ports tarball 是否签名）仍属待定。　[存疑脚注] 签名动机与最终覆盖范围以 OpenBSD 官方发布说明为准，需后续考据。（BSD Now EP23，[1615.30-1651.60]，L4）
+- 当事人明确表示不知 Theo 启动签名项目的动机，且 5.5 正式签名密钥当时尚未生成；发行集签名覆盖范围（源集、ports tarball 是否签名）仍属待定。　[存疑脚注] 签名动机与最终覆盖范围以 OpenBSD 官方发布说明为准，需后续考据。（BSD Now EP23，[1312.30-1659.90]，L4） [订正：原 [1615.30-1651.60]，2026-09-30 SenseAudio 重转核对]
 - FreeBSD Journal 创刊号当时尚待 Apple 应用商店审批；编委会名单与创刊内容为当事人及主持人转述，需与创刊号目录核对。　[存疑脚注] 创刊号上线时间与目录以出版方最终发布为准，需交叉验证。（BSD Now EP22，[1790.86-1816.90]，L4）
 - OpenBSD 5.4 时期 signify 仍为测试密钥，正式签名需待 5.5；各 BSD 安装器细节为主持人实操演示，与官方手册的一致性需逐项复核。　[存疑脚注] 安装器细节与 signify 状态以官方发布说明为准，需交叉验证。（BSD Now EP19，[321.52-347.64]，L4）
 
