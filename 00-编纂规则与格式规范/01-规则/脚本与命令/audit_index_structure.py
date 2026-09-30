@@ -608,6 +608,22 @@ def main():
     for _x in all_sub[:14]:
         print("   ❌", _x)
 
+    # ── P 组：注文括注配对（2026-09-30 立，98 号文 §11.4 P0-1）──
+    #   逐行核「〔」与「〕」计数相等。设立缘由：66 条溯源注缺收尾「〕」曾长期静默——
+    #   A 编码只查直角引号、G 组只查标签平衡、D 组只查节题非空，均不覆盖括注；
+    #   且该缺陷在内容源 `重构2026/data/outline.txt` 与产物同数传播（66 行），修复前后无任何护栏。
+    #   判据非空由 `tests/tri_structure_negtest.py` 的「P 括注不配对」缺陷副本自证。
+    p_bad = []
+    for _i, _l in enumerate(h.split("\n"), 1):
+        _o, _c = _l.count("〔"), _l.count("〕")
+        if _o != _c:
+            p_bad.append("P 注文括注不配对 第 %d 行（〔%d／〕%d）—— %s"
+                         % (_i, _o, _c, _l.strip()[:80]))
+    print("P 注文括注配对:",
+          ("PASS（〔＝〕＝%d）" % h.count("〔")) if not p_bad else ("FAIL %d 行" % len(p_bad)))
+    for _x in p_bad[:10]:
+        print("   ❌", _x)
+
     allbad = (
         bad
         or sp_bad
@@ -629,6 +645,7 @@ def main():
         or n_h_bad
         or n_i_bad
         or o_bad
+        or p_bad
     )
     print("\n总判定:", "FAIL" if allbad else "PASS")
     return 1 if allbad else 0

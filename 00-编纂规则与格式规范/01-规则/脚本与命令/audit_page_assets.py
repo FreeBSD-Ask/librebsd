@@ -24,7 +24,7 @@
   ④ 测试套件含随目录变动须同步的夹具值，陈旧夹具会以「判据缺陷」形式误报。
 
 核验项（0 异常 exit 0；有异常 exit 1；环境缺失 exit 2）：
-  A  装配源清单：四层解耦的 8 个源文件存在且非空
+  A  装配源清单：五层解耦的 9 个源文件存在且非空
   B  内嵌字体子集：
      B1 `assets/doc.css` 中 `@font-face` 恰 1 片，`src` 为 data:font/woff2 URI（无外链）
      B2 内嵌 woff2 可解析、cmap 非空
@@ -109,9 +109,10 @@ def set_root(root):
     CATALOG_JSON = DATA + "/catalog.json"
     SRC_CMAP = DATA + "/font-source-cmap.txt"
 
-# 四层解耦装配源（第八件 assemble_index.py 的输入）
+# 五层解耦装配源（第八件 assemble_index.py 的输入；2026-09-30 补文案层）
 SRC_FILES = [
     ("内容层", "data/outline.txt"),
+    ("文案层", "data/ui-strings.json"),
     ("格式层", "assets/doc.css"),
     ("现代化层", "assets/modern.css"),
     ("行为层", "assets/doc.js"),
@@ -253,8 +254,8 @@ def main():
     # ---- A 装配源清单 ----
     miss = [("%s %s" % (l, p)) for l, p in SRC_FILES
             if not (os.path.isfile(ROOT + "/" + p) and os.path.getsize(ROOT + "/" + p) > 0)]
-    rec("A 装配源清单（8 个源文件存在且非空）", not miss,
-        "缺失/空：" + "、".join(miss) if miss else "8/8 齐备")
+    rec("A 装配源清单（9 个源文件存在且非空）", not miss,
+        "缺失/空：" + "、".join(miss) if miss else "9/9 齐备")
 
     # ---- 读取产物 ----
     h = io.open(INDEX, encoding="utf-8").read()
