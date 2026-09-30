@@ -4,7 +4,8 @@
 > **覆盖范围**：共 15 件、120 页。Bell Labs 早期 UNIX 手册 4 件 78 页（3693、3698、3699、3707）；Honeywell DDP-516「516-TSS」技术文档 11 件 42 页（3589–3599）
 > **转录方法**：GLM-4.6V 视觉逐页转录，替代原 rapidocr_onnx
 > **数据库状态**：全部入库，`fulltext.extraction_method='glm_vision_20260924'`
-> **key_facts**：154 条（`fact_category='periodical_primary'`、`confidence='2'`）
+> **key_facts**：154 条（`fact_category='periodical_primary'`、`confidence='2'`） —— **🔴 此计数已过期**：活库实测 `periodical_primary` 全库仅 58 行、涉 TB3 **0 行**，
+> 原行已于 2026-09-29 19:45–19:47 被批量写入的 `kf-batch-` 行替换；TB3 全批事实已于当日另立 271 条`kf-tb3-` 行（technology 247 + person 24，`confidence='0.7'`、`related_chapter='第01卷-unix的起源'`），全量清单见新 TB3 索引。
 
 本文件为**卷级文献索引**，按 TB4 先例（`TB4文献索引-早期UNIX文档与工具.md`）体例。
 不改动任何章节正文、不引入新锚点格式、不修改 `SUMMARY.md` 与 `chapter_keywords.json`。
@@ -13,6 +14,10 @@
 > **同批另有一件已归第18卷**：AUUGN-V22.1（ref 3424，AUUG 澳洲 UNIX 用户组通讯）属第18卷
 > 「大洋洲 BSD 社区」范畴，其索引见 `第18卷-全球社区地区bsd史/AUUGN文献索引-AUUG通讯重OCR转录.md`。
 > 本文件初版曾把该件一并列入，2026-09-29 核对第18卷卷末书目述评「待迁移」清单（该件为其第 213 项）后移出。
+> **🔴 本文件 TB3 部分仅为首批接线，TB3 全批（53 件 / 1246 页）已另建卷级索引**：
+> `TB3文献索引-SFU-PUPS技术手册与工具文档.md`（同卷，2026-09-29 建）。
+> 本文件保留以承载 **TB2 的 516-TSS 文档（3589–3599，11 件 42 页）**；其中 3693、3698、3699、3707 四件
+> 与新 TB3 索引条目重复，说明可互参。本文件的 TB3 覆盖口径不再扩充。
 
 ## 文献清单
 
