@@ -62,7 +62,7 @@ volume: 第07卷-freebsd的工程体系重构
 
 ## 138.12 二手文献与学术研究（原 137.12.2 存目残节）
 
-- 要点：FreeBSD 安全相关的二手文献和学术研究包括：McKusick、Neville-Neil、Watson 合著的《The Design and Implementation
+- 要点：FreeBSD 安全相关的二手文献和学术研究包括：McKusick、Neville-Neil、Watson 合著的《The Design and Implementation of the FreeBSD Operating System》
 - Smalley S et al. SELinux as LSM [EB/OL]；FreeBSD. mac(4) Manual [Z]. ［A］
     FreeBSD 社区论文与演讲 [331]，[331] Olivier Certner. Supporting hibernate on FreeBSD [C]//BSDCan 2026. [S.l.]: [s.n.], 2026. 获取路径：<https://papers.freebsd.org/2026/bsdcan/certner-supporting_hibernate_on_freebsd/> [访问日期 2026-07-26].
 

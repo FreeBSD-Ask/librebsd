@@ -11,7 +11,7 @@ volume: 第06卷-freebsd的核心技术革新
 - DTrace 设计的一手史料包括：Cantrill 在 dtrace.org/blogs/bmc/ 的个人博客（2006-2024 年，dtrace.org 域名仍可访问但部分旧文章存档需经互联网档案馆获取）；USENIX 2004 年论文全文（usenix.org 永久存档）；Solaris Dynamic Tracing Guide（docs.oracle.com 可访问）；Cantrill、
 - D 语言最权威的设计文档是 Cantrill 等人 2004 年 USENIX 论文的第 3 节，该节完整描述了 D 语言的类型系统、变量种类（全局、线程局部、子句局部、聚合）、安全约束、执行模型；Solaris Dynamic Tracing Guide（Sun/illumos 出版）是最完整的参考手册，含 D 语言所有特性的逐章说明；FreeBSD 手册页 **dtrace(1)** 的 D
 - Sun 选择 CDDL 许可 OpenSolaris（含 DTrace 和 ZFS）的历史背景是 Sun 2004-2005 年的开源战略转型：Sun CEO Scott McNealy 推动 OpenSolaris 以对抗 Linux 在服务器市场的崛起；CDDL 由 Simon Phipps（Sun 首席开源官）和 Sun 法务团队基于 MPL 1.1 起草，2004 年 12 月 1 日提交
-- macOS DTrace 集成事件的一手史料包括：Apple 开源代码 opensource.apple.com/source/dtrace/（存档于互联网档案馆）；Leventhal 在 dtrace.org/blogs/ahl/ 的两篇博客（2008-01-18、2008-06-07）；Mac OS X 10.5 Leopard 发布新闻稿和技术文档；MacTech 2007 年 11 月《E
+- macOS DTrace 集成事件的一手史料包括：Apple 开源代码 opensource.apple.com/source/dtrace/（存档于互联网档案馆）；Leventhal 在 dtrace.org/blogs/ahl/ 的两篇博客（2008-01-18、2008-06-07）；Mac OS X 10.5 Leopard 发布新闻稿和技术文档；MacTech 2007 年 11 月《Exploring Leopard with DTrace》
 - FreeBSD DTrace 移植的一手史料包括：John Birrell 在 <freebsd-current@freebsd.org> 和 <freebsd-dtrace@freebsd.org> 邮件列表的移植进度帖子（2006-2008 年）；FreeBSD Perforce 仓库//depot/projects/dtrace/ 分支初始导入记录；FreeBSD Subversion 仓库
 
 ## 史料
