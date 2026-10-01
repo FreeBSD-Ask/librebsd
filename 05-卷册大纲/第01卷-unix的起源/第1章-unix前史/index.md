@@ -69,9 +69,9 @@ volume: 第01卷-unix的起源
 - 词源考据梳理 Unix 工具命名：awk 取自 Alfred Aho、Peter Weinberger、Brian Kernighan 姓氏首字母；grep 源自 ed 的 g/re/p 命令；ping 由 Mike Muuss 取声呐回响之义（他厌恶 Packet Internet Groper 之类的反推词源）；sudo 是 superuser do 的拼接；vi 是 Bill Joy 1976 年为 ex 编写的 visual interface，而 ex 又是 ed 的扩展；tar 即 tape archiver；finger 得名于用手指扫过登录名单；fortune 首现于第 7 版 Unix、仿照中餐馆签语饼。（BSD Now EP388，[2282.24-2624.62]，L2）
 - GhostBSD 21.01.15 发布说明：清理默认包（移除 LibreOffice 与 Telegram）以使 ZFS 只读 live 文件系统可在 4GB 内存机器运行，移除安装器的 UFS full disk 选项（仍可自定义分区），修复自定义分区 next 按钮限制与默认 locale，加入 Linux Steam 默认配置并升级 refined EFI 引导管理器以改善 UEFI 双启动。（BSD Now EP388，[2624.62-2748.94]，L2）
 - 节目介绍 Brian Kernighan 关于 Unix 诞生的 45 分钟以上 CMU 访谈（附全文转写与视频）：访谈回溯 60 年代末至 70 年代初贝尔实验室构建 Unix 的语境，被主持人定位为面向史学读者的优质一手来源。（BSD Now EP388，[2749.7-2796.58]，L2）
-- 计算机历史博物馆发布“最早 Unix 代码”周年源码版，收录 PDP-7 汇编清单（Space Travel、moo、井字棋等），经 Warren Toomey 与 John Mashey 等鉴定可溯至 1970 至 1971 年初。（BSD Now EP323，[167.90-193.82]，L2）
-- Leonard Kleinrock 受访回顾 1969 年 10 月 29 日 UCLA 发出的“LO”消息：他预见网络“始终在线、无处不在、不可见”，但未预见其社交化与国家安全化，并拒绝为创造互联网而后悔。（BSD Now EP323，[486.68-671.22]，L1）
-- OpenBSD 自 1995 年 10 月 18 日起跨过 40 万提交，Theo de Raadt 提醒计数口径不一；主持人补充 FreeBSD 约 92.5 万、NetBSD 加 pkgsrc 约 60 万，强调跨项目比较不可靠。（BSD Now EP323，[1095.24-1167.46]，L2）
+- 计算机历史博物馆发布“最早 Unix 代码”周年源码版，收录 PDP-7 汇编清单（Space Travel、moo、井字棋等），经 Warren Toomey 与 John Mashey 等鉴定可溯至 1970 至 1971 年初。（BSD Now EP323，[167.90-366.7]，L2）[订正：原 [167.90-193.82]，2026-09-30 SenseAudio 重转核对]
+- Leonard Kleinrock 受访回顾 1969 年 10 月 29 日 UCLA 发出的“LO”消息：他预见网络“始终在线、无处不在、不可见”，但未预见其社交化与国家安全化，并拒绝为创造互联网而后悔。（BSD Now EP323，[401.7-671.22]，L1）[订正：原 [486.68-671.22]，2026-09-30 SenseAudio 重转核对]
+- OpenBSD 自 1995 年 10 月 18 日起跨过 40 万提交，Theo de Raadt 提醒计数口径不一；主持人补充 FreeBSD 约 92.5 万、NetBSD 加 pkgsrc 约 60 万，强调跨项目比较不可靠。（BSD Now EP323，[1095.24-1199.2]，L2）[订正：原 [1095.24-1167.46]，2026-09-30 SenseAudio 重转核对]
 - Blacklistd 作为 fail2ban 替代，通过 libexec helper 与 NPF 联动按失败认证次数封锁 IP；教程演示 securelevel=1 下需把模块编入内核或经 modules.conf 预载。（BSD Now EP323，[685.00-1027.92]，L2）
 - “OSI 七层墨西哥卷饼”作者自建 DoH 服务器与私有 CA，把 Firefox 的 TRR 指向本地，以对抗浏览器厂商对 DNS 的集中收编，而非简单禁用。（BSD Now EP323，[1862.22-2002.76]，L2）
 - Warner Losh 通过 Bell Labs 1968 年影片《The Incredible Machine》比对 DEC 目录与现场服务清单，论证片中 PDP-7 即 Ken Thompson 所用序列号 34：具备 340 显示器与 444B 纸带机、无 DECtape。（BSD Now EP322，[407.26-941.24]，L2）
@@ -99,17 +99,17 @@ volume: 第01卷-unix的起源
 - PFBadHost 的 Undeadly 文章及其十步安装指南（专用用户、doas 权限、pf.conf 表与规则、crontab），一手部署说明。（BSD Now EP388，[1551.88-1675.94]，L1）
 - Brian Kernighan 的 CMU 访谈全文转写与视频链接，当事人一手口述。（BSD Now EP388，[2774.42-2789.82]，L1）
 - 计算机历史博物馆“Earliest Unix Code”目录与 PDF，含 PDP-7 汇编、Space Travel 1970 源码页。（BSD Now EP323，[214.28-234.20]，L2）
-- CBC《The Current》对 Leonard Kleinrock 的半小时访谈节选（首条消息“LO”及网络阴暗面）。（BSD Now EP323，[387.08-402.72]，L1）
-- Theo de Raadt 致 tech@ 的“OpenBSD 跨 40 万提交”邮件，说明计数困难与仓库历史歧义。（BSD Now EP323，[1100.92-1113.56]，L2）
+- CBC《The Current》对 Leonard Kleinrock 的半小时访谈节选（首条消息“LO”及网络阴暗面）。（BSD Now EP323，[387.08-657.0]，L1）[订正：原 [387.08-402.72]，2026-09-30 SenseAudio 重转核对]
+- Theo de Raadt 致 tech@ 的“OpenBSD 跨 40 万提交”邮件，说明计数困难与仓库历史歧义。（BSD Now EP323，[1100.92-1161.2]，L2）[订正：原 [1100.92-1113.56]，2026-09-30 SenseAudio 重转核对]
 - unitedbsd.com 的 Blacklistd 与 NPF 教程，及 NetBSD securelevel 与 bpf-jit 配置说明。（BSD Now EP323，[693.04-812.78]，L2）
-- Warner Losh 博客《Hunting Down Ken's PDP-7》及 Bell Labs《The Incredible Machine》1968 年影片。（BSD Now EP322，[400.18-402.92]，L2）
-- DEC PDP-7 销售目录与 Bitsavers 现场服务清单（序列号 34/149 的选件记录）。（BSD Now EP322，[685.26-707.24]，L2）
-- OpenBSD 6.6 发布页与升级说明（unveil、MDS 缓解、预编译包数量等）。（BSD Now EP322，[1063.56-1068.82]，L2）
+- Warner Losh 博客《Hunting Down Ken's PDP-7》及 Bell Labs《The Incredible Machine》1968 年影片。（BSD Now EP322，[400.18-979.3]，L2）[订正：原 [400.18-402.92]，2026-09-30 SenseAudio 重转核对]
+- DEC PDP-7 销售目录与 Bitsavers 现场服务清单（序列号 34/149 的选件记录）。（BSD Now EP322，[545.0-707.24]，L2）[订正：原 [685.26-707.24]，2026-09-30 SenseAudio 重转核对]
+- OpenBSD 6.6 发布页与升级说明（unveil、MDS 缓解、预编译包数量等）。（BSD Now EP322，[1063.56-1528.5]，L2）[订正：原 [1063.56-1068.82]，2026-09-30 SenseAudio 重转核对]
 - OpenSSH 8.1 发布公告，含 Adam Zabrocki 报告的 XMSS 私钥解析漏洞。（BSD Now EP322，[2125.36-2172.60]，L2）
-- DragonFly 5.6 与 FreeBSD 12、Linux 的 Ryzen 3700X 基准测试文章，含 Go、Postgres、Blowfish、H.265 等分项。（BSD Now EP318，[99.58-101.60]，L2）
+- DragonFly 5.6 与 FreeBSD 12、Linux 的 Ryzen 3700X 基准测试文章，含 Go、Postgres、Blowfish、H.265 等分项。（BSD Now EP318，[99.58-524.60]，L2）[订正：原 [99.58-101.60]，2026-09-30 SenseAudio 重转核对]
 - iXsystems 官方博客关于 JFK 图书馆选用 TrueNAS M-Series 的公告。（BSD Now EP318，[528.16-556.42]，L2）
-- FreeBSD 12.1 beta 公告（BearSSL 导入、GCC 4.2 警告处理、安全公告与勘误合入）。（BSD Now EP318，[798.16-833.06]，L2）
-- Warren Toomey 在 TUHS 的“两件文物”预告，及 Brian Coghlan 团队对 Percy Ludgate 分析机的研究演讲。（BSD Now EP318，[1522.90-1523.46]，L2）
+- FreeBSD 12.1 beta 公告（BearSSL 导入、GCC 4.2 警告处理、安全公告与勘误合入）。（BSD Now EP318，[798.16-854.2]，L2）[订正：原 [798.16-833.06]，2026-09-30 SenseAudio 重转核对]
+- Warren Toomey 在 TUHS 的“两件文物”预告，及 Brian Coghlan 团队对 Percy Ludgate 分析机的研究演讲。（BSD Now EP318，[1522.90-2267.4]，L2）[订正：原 [1522.90-1523.46]，2026-09-30 SenseAudio 重转核对]
 - Paul Vixie 在 vBSDCon 2019 的 DNS over HTTPS 主题演讲，演示以 passive DNS 与 IPFW divert socket 识别 DoH 端点。（BSD Now EP315，[621.76-729.64]，L2）
 - Ars Technica 的 Unix 50 年报道，含 Multics 会议、PDP-7 迁移、口述代码转磁带等细节。（BSD Now EP315，[2385.06-3015.04]，L2）
 
@@ -124,7 +124,7 @@ volume: 第01卷-unix的起源
 - 总纲1 一切真历史都是古代史：ping 等词源在流传中被反向炮制出 Packet Internet Groper 一类的“合理”解释，回到 1800 年代拟声词与声呐回响的古代语源才能辨伪：命名的真相藏在历史而非后设逻辑中。（BSD Now EP388，[2483.94-2525.22]，L2）
 - 总纲4 分离聚合是永恒规律：FenestrasX 直接借鉴微软 Windows 10 的随机数设计并融入 FreeBSD，展示设计思想在异质系统间的分离与再聚合，而非某一方的线性“进步”。（BSD Now EP388，[617.34-664.74]，L2）
 - 总纲10 动手者创造历史：季度报告的价值在“联系人与求助事项”清单：贡献路径由具体的人和待办事项组成，社区史由这些无名动手者的可认领工作而非路线图推动。（BSD Now EP388，[1413.62-1430.38]，L2）
-- 总纲1 一切真历史都是古代史：总纲1 一切真历史都是古代史：50 年前的“LO”消息与 PDP-7 汇编被当作当下仍须考据的古代对象。（BSD Now EP323，[120.92-125.14]，L2）
+- 总纲1 一切真历史都是古代史：总纲1 一切真历史都是古代史：50 年前的“LO”消息与 PDP-7 汇编被当作当下仍须考据的古代对象。（BSD Now EP323，[120.92-436.4]，L2）[订正：原 [120.92-125.14]，2026-09-30 SenseAudio 重转核对]
 - 总纲5 没有必然性，只有偶然性：总纲5 没有必然性，只有偶然性：ARPANET 首条消息因机器崩溃停在“LO”而非“LOGIN”，是偶然事件。（BSD Now EP323，[421.34-425.12]，L1）
 - 总纲19 解释学循环是历史认识的根本条件：总纲19 解释学循环是历史认识的根本条件：源码断代依赖 Toomey、Mashey 等当事人回忆与目录残迹的循环解释。（BSD Now EP323，[167.90-193.82]，L2）
 - 总纲8 本体论上各方平等：总纲8 本体论上各方平等：OpenBSD、FreeBSD、NetBSD 提交数被并置比较时，主持人强调口径差异，避免以数量定高下。（BSD Now EP323，[1161.86-1189.66]，L2）
@@ -134,14 +134,14 @@ volume: 第01卷-unix的起源
 - 总纲17 证明世界先于解释和改造世界：总纲17 证明世界先于解释和改造世界：先有 PDP-7 实物与影片证据，再谈 Unix 起源解释。（BSD Now EP322，[461.82-466.08]，L2）
 - 总纲19 解释学循环是历史认识的根本条件：总纲19 解释学循环是历史认识的根本条件：影片截图与目录照片互为印证，逐项比对构成循环解释。（BSD Now EP322，[558.72-631.14]，L2）
 - 总纲22 知识注定过时：总纲22 知识注定过时：SSH 旧客户端与 RSA-SHA1 证书兼容性被新默认淘汰，知识随版本更替失效。（BSD Now EP322，[2236.64-2265.46]，L2）
-- 总纲8 本体论上各方平等：总纲8 本体论上各方平等：OpenBSD 6.6 与 OPNsense、GhostBSD 同屏，各项目如实呈现。（BSD Now EP322，[1608.32-1616.96]，L2）
-- 总纲10 动手者创造历史：总纲10 动手者创造历史：Warner Losh 逐帧考证、OpenBSD 开发者逐锁解锁，动手者推动认识与系统演进。（BSD Now EP322，[982.99-1036.46]，L2）
-- 总纲12 科学是形式主义：总纲12 科学是形式主义：基准测试的结论依赖编译器版本、文件系统与运行次数等形式设定。（BSD Now EP318，[184.68-186.64]，L2）
+- 总纲8 本体论上各方平等：总纲8 本体论上各方平等：OpenBSD 6.6 与 OPNsense、GhostBSD 同屏，各项目如实呈现。（BSD Now EP322，[1608.32-1905.7]，L2）[订正：原 [1608.32-1616.96]，2026-09-30 SenseAudio 重转核对]
+- 总纲10 动手者创造历史：总纲10 动手者创造历史：Warner Losh 逐帧考证、OpenBSD 开发者逐锁解锁，动手者推动认识与系统演进。（BSD Now EP322，[982.99-1165.6]，L2）[订正：原 [982.99-1036.46]，2026-09-30 SenseAudio 重转核对]
+- 总纲12 科学是形式主义：总纲12 科学是形式主义：基准测试的结论依赖编译器版本、文件系统与运行次数等形式设定。（BSD Now EP318，[184.68-524.60]，L2）[订正：原 [184.68-186.64]，2026-09-30 SenseAudio 重转核对]
 - 总纲25 逻辑是形式主义而非世界本身的结构：总纲25 逻辑是形式主义而非世界本身的结构：测试数字受测量装置影响，几何平均不等于真实优劣。（BSD Now EP318，[482.06-491.44]，L2）
-- 总纲17 证明世界先于解释和改造世界：总纲17 证明世界先于解释和改造世界：先有 TUHS 文物与 JFK 档案实体，再谈数字保存的解释。（BSD Now EP318，[698.54-730.72]，L2）
+- 总纲17 证明世界先于解释和改造世界：总纲17 证明世界先于解释和改造世界：先有 TUHS 文物与 JFK 档案实体，再谈数字保存的解释。（BSD Now EP318，[698.54-1615.5]，L2）[订正：原 [698.54-730.72]，2026-09-30 SenseAudio 重转核对]
 - 总纲22 知识注定过时：总纲22 知识注定过时：旧 GCC 4.2 的“警告即错误”规则随工具链老化被废止。（BSD Now EP318，[798.16-824.74]，L2）
-- 总纲1 一切真历史都是古代史：总纲1 一切真历史都是古代史：Ludgate 分析机与 Unix 早期目录残迹被当作需抢救的古代史。（BSD Now EP318，[2205.44-2237.12]，L2）
-- 总纲10 动手者创造历史：总纲10 动手者创造历史：NetBSD 在广岛展出的异质机器与 dSynth 重写都依赖动手者的持续维护。（BSD Now EP318，[1619.80-1744.52]，L2）
+- 总纲1 一切真历史都是古代史：总纲1 一切真历史都是古代史：Ludgate 分析机与 Unix 早期目录残迹被当作需抢救的古代史。（BSD Now EP318，[2205.44-2267.4]，L2）[订正：原 [2205.44-2237.12]，2026-09-30 SenseAudio 重转核对]
+- 总纲10 动手者创造历史：总纲10 动手者创造历史：NetBSD 在广岛展出的异质机器与 dSynth 重写都依赖动手者的持续维护。（BSD Now EP318，[1619.80-2202.3]，L2）[订正：原 [1619.80-1744.52]，2026-09-30 SenseAudio 重转核对]
 - 总纲5 没有必然性，只有偶然性：Unix 诞生源于 Multics 被叫停与一台被遗忘的 PDP-7 被 Thompson 找到，是具体偶然条件而非必然演进。（BSD Now EP315，[2627.36-2670.72]，L2）
 - 总纲10 动手者创造历史：Thompson 用三周分别写汇编器、编辑器与内核，且文件管理器先于内核成形，体现动手者而非宏大规划的创造路径。（BSD Now EP315，[2939.36-2981.86]，L2）
 - 总纲4 分离聚合是永恒规律：PF 从 OpenBSD 移植到 FreeBSD 后因 vimage 与多核改造分叉，双方代码不再对齐，呈现分离聚合的循环。（BSD Now EP315，[4269.98-4411.6]，L1）
@@ -159,7 +159,7 @@ volume: 第01卷-unix的起源
 - PDP-7 源码断代“1970 至 1971 初”依赖两位早期贡献者与馆方编目，属多源交叉但仍非绝对定年。　[存疑脚注] 定年证据链为多源交叉，非单一权威结论（BSD Now EP323，[167.90-193.82]，L3）
 - PDP-7 影片鉴定为“强烈支持而非确证”，Warner 本人承认对序列号 149 的排除仅属弱证据。　[存疑脚注] 三线证据均非决定性，结论保持开放（BSD Now EP322，[770.24-808.78]，L3）
 - GhostBSD 路线为项目方单方声明，TrueOS 后续变动可能使其再调整，不宜作长期定论。　[考据脚注] 上游 TrueOS 路线变动风险未计入（BSD Now EP322，[1802.90-1822.78]，L4）
-- 基准测试中 DragonFly 被重复运行 15 次而其他仅 3 次，且编译选项不一，跨 OS 结论的可靠性存疑。　[存疑脚注] 运行次数与编译选项不一致，比较效度受质疑（BSD Now EP318，[196.26-205.58]，L4）
+- 基准测试中 DragonFly 被重复运行 15 次而其他仅 3 次，且编译选项不一，跨 OS 结论的可靠性存疑。　[存疑脚注] 运行次数与编译选项不一致，比较效度受质疑（BSD Now EP318，[196.26-524.60]，L4）[订正：原 [196.26-205.58]，2026-09-30 SenseAudio 重转核对]
 - TrueNAS 的 JFK 用例为 iXsystems 单方宣传口径，容量与文档数量宜以馆方披露为准。　[考据脚注] 数据来自厂商博客，缺馆方独立确认（BSD Now EP318，[545.22-580.72]，L4）
 - [存疑脚注] 转写片段时间戳前后交错、顺序错乱，部分演讲归属与细节依赖上下文拼合，属节目单源转述，未与会议录像或议程逐条交叉核验。　[存疑脚注] 转写顺序错乱，演讲细节未经会议录像核验（BSD Now EP315，[0.0-57.2]，L4）
 

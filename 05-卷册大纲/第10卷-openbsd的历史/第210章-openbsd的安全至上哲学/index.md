@@ -89,7 +89,7 @@ volume: 第10卷-openbsd的历史
 
 **要点**：
 
-- 核心文章把 Windows 描述为企业导向开发模型，以 ABI 稳定为代价积累遗留代码；OpenBSD 以短周期 ABI 断裂、代码审计与行数上限换取干净内核。（BSD Now EP331，[443.1-537.58]，L2）
+- 核心文章把 Windows 描述为企业导向开发模型，以 ABI 稳定为代价积累遗留代码；OpenBSD 以短周期 ABI 断裂、代码审计与行数上限换取干净内核。（BSD Now EP331，[244.9-537.58]，L2）[订正：原 [443.1-537.58]，2026-09-30 SenseAudio 重转核对]
 - Phoronix 基准显示 FreeBSD 12.1 在 AMD Ryzen Threadripper 3970X 上与 Linux 大体持平，部分测试领先，GCC 9.2 编译在若干场景更强。（BSD Now EP331，[1130.8-1392.64]，L2）
 - Jim Salter 辨析 ZIL 与 SLOG：每个 ZFS 池都有 ZIL，SLOG 只是把 ZIL 放到独立快速设备上的做法。（BSD Now EP331，[2441.46-2491.48]，L2）
 - NetBSD 在其 wiki 列出 GSoC 内核级与用户态项目并标注难度；FreeBSD 的项目含 Lua bootloader、POSIX 合规测试框架、.NET Core CLR 移植等。（BSD Now EP189，[585.22-733.18]，L2）

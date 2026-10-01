@@ -53,26 +53,26 @@ volume: 第16卷-开源运动与合规治理
 
 **要点**：
 
-- 主持人转述 Telnet 协议史：1972 年 John Postel 撰写的 RFC 奠定 Telnet 协议，Postel 在文中自嘲该文档未能兑现及时、清晰与简洁的承诺；1990 年代早期 Telnet 曾用于访问国会图书馆、NASA 新闻与最高法院判决。（BSD Now EP558，[1253.14-1360.36]，L2）
-- 主持人介绍 towel.blinkenlights.nl 的 ASCII 版《星球大战》与 telehack.com 等项目，后者以 Telnet 重现 ARPANET 时代的 BBS、MUD 与文本冒险，构成对早期网络文化的保存。（BSD Now EP558，[956.74-1151.44]，L2）
-- FreeBSD 基金会发布 SSDF 自证报告第一版，面向美国政府软件供应链合规（NIST SP 800-218 与 Executive Order 14028）；NetApp 与 RG Nets 等伙伴引用该报告支持其向政府客户供货。（BSD Now EP558，[483.30-730.50]，L2）
-- BSDCan 组织委员会自述 Dan Langille 在主持二十年后交棒，委员会成立加拿大非营利组织 BSDCan Conferences Incorporated 以承接资金与赞助；当届白金赞助商为 Netflix，金级为 Apple 与 ARM。（BSD Now EP558，[2801.24-3400.76]，L1）
-- 委员会回顾 BSDCan 票价自 2005 年起十五年间维持 199 美元未变，现调整为 256 美元；其拍卖传统所得捐给 Ottawa Mission 慈善机构。（BSD Now EP558，[3545.42-3667.88]，L1）
+- 主持人转述 Telnet 协议史：1972 年 John Postel 撰写的 RFC 奠定 Telnet 协议，Postel 在文中自嘲该文档未能兑现及时、清晰与简洁的承诺；1990 年代早期 Telnet 曾用于访问国会图书馆、NASA 新闻与最高法院判决。（BSD Now EP558，[1248.1-1360.5]，L2）[订正：原 [1253.14-1360.36]，2026-10-01 SenseAudio 重转核对]
+- 主持人介绍 towel.blinkenlights.nl 的 ASCII 版《星球大战》与 telehack.com 等项目，后者以 Telnet 重现 ARPANET 时代的 BBS、MUD 与文本冒险，构成对早期网络文化的保存。（BSD Now EP558，[956.6-1151.6]，L2）[订正：原 [956.74-1151.44]，2026-09-30 SenseAudio 重转核对]
+- FreeBSD 基金会发布 SSDF 自证报告第一版，面向美国政府软件供应链合规（NIST SP 800-218 与 Executive Order 14028）；NetApp 与 RG Nets 等伙伴引用该报告支持其向政府客户供货。（BSD Now EP558，[453.7-741.7]，L2）[订正：原 [483.30-730.50]，2026-10-01 SenseAudio 重转核对]
+- BSDCan 组织委员会自述 Dan Langille 在主持二十年后交棒，委员会成立加拿大非营利组织 BSDCan Conferences Incorporated 以承接资金与赞助；当届白金赞助商为 Netflix，金级为 Apple 与 ARM。（BSD Now EP558，[2789.3-3401.1]，L1）[订正：原 [2801.24-3400.76]，2026-10-01 SenseAudio 重转核对]
+- 委员会回顾 BSDCan 票价自 2005 年起十五年间维持 199 美元未变，现调整为 256 美元；其拍卖传统所得捐给 Ottawa Mission 慈善机构。（BSD Now EP558，[3545.0-3681.0]，L1）[订正：原 [3545.42-3667.88]，2026-10-01 SenseAudio 重转核对]
 
 **史料**：
 
-- 本期史料包括 Telnet 历史的二手文章、FreeBSD 基金会 SSDF 公告，以及 BSDCan 组织委员会 Michael Lucas、Patrick 与 Peter Hansteen 的一手自述。（BSD Now EP558，[483.30-3400.76]，L1）
+- 本期史料包括 Telnet 历史的二手文章、FreeBSD 基金会 SSDF 公告，以及 BSDCan 组织委员会 Michael Lucas、Patrick 与 Peter Hansteen 的一手自述。（BSD Now EP558，[453.7-3401.1]，L1）[订正：原 [483.30-3400.76]，2026-10-01 SenseAudio 重转核对]
 
 **史观**：
 
-- 总纲18 时间是一种形式主义：Telnet 从主流远程访问工具变为小众怀旧文化，呈现技术生命周期随时代需求而更替的形式化进程。（BSD Now EP558，[1253.14-1412.28]，L2）
-- 总纲10 动手者创造历史：Dan Langille 与历届志愿者持续二十年操办 BSDCan，其交棒与新机构设立延续了社区会议，体现动手者对社区基础的长期投入。（BSD Now EP558，[2801.24-3108.48]，L1）
-- 总纲13 法律与道德是利益分配：SSDF 自证是软件供应商满足政府采购合规的制度安排，反映安全标准背后的法律与利益分配。（BSD Now EP558，[483.30-730.50]，L2）
+- 总纲18 时间是一种形式主义：Telnet 从主流远程访问工具变为小众怀旧文化，呈现技术生命周期随时代需求而更替的形式化进程。（BSD Now EP558，[1248.1-1437.0]，L2）[订正：原 [1253.14-1412.28]，2026-10-01 SenseAudio 重转核对]
+- 总纲10 动手者创造历史：Dan Langille 与历届志愿者持续二十年操办 BSDCan，其交棒与新机构设立延续了社区会议，体现动手者对社区基础的长期投入。（BSD Now EP558，[2789.3-3119.9]，L1）[订正：原 [2801.24-3108.48]，2026-10-01 SenseAudio 重转核对]
+- 总纲13 法律与道德是利益分配：SSDF 自证是软件供应商满足政府采购合规的制度安排，反映安全标准背后的法律与利益分配。（BSD Now EP558，[453.7-741.7]，L2）[订正：原 [483.30-730.50]，2026-10-01 SenseAudio 重转核对]
 
 **辨析**：
 
-- Telnet 1972 年 RFC 的作者归属与 John Postel 的自嘲引文来自二手文章，须以 RFC 原文核实。　[存疑脚注] RFC 作者与引文为二手转述，未经 RFC 原文核实。（BSD Now EP558，[1253.14-1319.76]，L4）
-- BSDCan 票价自 2005 年起十五年未变的说法为委员口述，须以历年会议档案核实。　[存疑脚注] 票价历史为委员口述，未经历年会议档案核实。（BSD Now EP558，[3545.42-3563.30]，L4）
+- Telnet 1972 年 RFC 的作者归属与 John Postel 的自嘲引文来自二手文章，须以 RFC 原文核实。　[存疑脚注] RFC 作者与引文为二手转述，未经 RFC 原文核实。（BSD Now EP558，[1248.1-1319.7]，L4）[订正：原 [1253.14-1319.76]，2026-10-01 SenseAudio 重转核对]
+- BSDCan 票价自 2005 年起十五年未变的说法为委员口述，须以历年会议档案核实。　[存疑脚注] 票价历史为委员口述，未经历年会议档案核实。（BSD Now EP558，[3545.0-3564.0]，L4）[订正：原 [3545.42-3563.30]，2026-09-30 SenseAudio 重转核对]
 
 **文献**：
 

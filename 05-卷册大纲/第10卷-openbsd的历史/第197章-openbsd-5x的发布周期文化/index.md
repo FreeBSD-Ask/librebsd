@@ -48,10 +48,10 @@ volume: 第10卷-openbsd的历史
 - HAMMER 的镜像流模式类似持续运行的 ZFS send，可不断向备份目标复制数据；其快照被视为可访问的实时数据而非只读副本。（BSD Now EP53，[3978.66-4095.18]，L2）
 - Reyk Floeter 在卢布尔雅那 OpenBSD hackathon 当天以 relayd 源码为基础拆出基本可用的 httpd，随后在 Bob Beck 与 Theo de Raadt 推动下提交进树，十四天后达到可接受状态。（BSD Now EP53，[945.18-1035.58]，L1）
 - OpenBSD httpd 默认运行于 chroot、采用特权分离与 pre-fork 模型，并吸收 LibreSSL 对私有内存分配器遮蔽安全机制的教训，保持代码基精简。（BSD Now EP53，[866.38-958.10]，L1）
-- Sean Webb 与 Oliver Pinter 在 HardenedBSD 项目内推进 ASLR/PIE，并将其作为补丁提交上游 FreeBSD，目标是进入 11 版本。（BSD Now EP52，[1110.02-1421.06]，L1）
-- ASLR 使程序可加载到任意内存地址，PIE 进一步支持应用级随机化，用于提高缓冲区溢出与信息泄露攻击的门槛；该实现默认关闭，需编译内核选项并可通过 sysctl 控制。（BSD Now EP52，[1110.02-1183.22]，L1）
-- 该 ASLR 实现借鉴 PaX 与 NetBSD 的实现谱系，并在除 ARM 外的 FreeBSD 支持架构上工作，包括 32 位 Linux 兼容层。（BSD Now EP52，[1351.34-1501.26]，L1）
-- OpenBSD 以 nginx 在基础系统中难以维护、且其自定义内存分配器遮蔽安全缓解机制为由，将其移出基础系统改由 ports 提供。（BSD Now EP52，[400.96-426.04]，L2）
+- Sean Webb 与 Oliver Pinter 在 HardenedBSD 项目内推进 ASLR/PIE，并将其作为补丁提交上游 FreeBSD，目标是进入 11 版本。（BSD Now EP52，[1109.1-1952.2]，L1）[订正：原 [1110.02-1421.06]，2026-09-30 SenseAudio 重转核对]
+- ASLR 使程序可加载到任意内存地址，PIE 进一步支持应用级随机化，用于提高缓冲区溢出与信息泄露攻击的门槛；该实现默认关闭，需编译内核选项并可通过 sysctl 控制。（BSD Now EP52，[1109.1-1586.3]，L1）[订正：原 [1110.02-1183.22]，2026-09-30 SenseAudio 重转核对]
+- 该 ASLR 实现借鉴 PaX 与 NetBSD 的实现谱系，并在除 ARM 外的 FreeBSD 支持架构上工作，包括 32 位 Linux 兼容层。（BSD Now EP52，[1351.3-1639.9]，L1）[订正：原 [1351.34-1501.26]，2026-09-30 SenseAudio 重转核对]
+- OpenBSD 将 BIND 与 nginx 一并移出基础系统：基础系统转而包含 nsd 与 unbound 供 5.6 与 5.7 用户过渡，BIND 可从 ports 获取最新版本，nginx 则为其新写的自定义 HTTP 守护进程让位。（BSD Now EP52，[397.6-447.6]，L2）[订正：原 OpenBSD 以 nginx 在基础系统中难以维护、且其自定义内存分配器遮蔽安全缓解机制为由，将其移出基础系统改由 ports 提供。（BSD Now EP52，[400.96-426.04]，L2），2026-09-30 SenseAudio 重转核对]
 - 自OpenBSD 5.5起，安装器支持autoinstall功能，可通过DHCP与PXE下载答案文件，使安装器按预设选项完成完全自动的无人值守安装。（BSD Now EP32，[1978.08-1988.48]，L2）
 - 自动化安装流程需要配置DHCP的filename与next-server选项，经TFTP加载pxeboot与bsd.rd，再由OpenBSD内置的nginx提供安装集与install.conf答案文件。（BSD Now EP32，[2039.88-2285.80]，L2）
 - install.conf中的答案变量对应安装器实际提示的问题，可预填主机名、密码、网络接口、用户、时区及HTTP安装集来源等参数。（BSD Now EP32，[2285.80-2347.94]，L2）
@@ -80,7 +80,7 @@ volume: 第10卷-openbsd的历史
 - NCC Group 开源的 TriforceAFL 与 flashrd 工具链（GitHub 仓库），用于 OpenBSD 系统调用模糊测试。（BSD Now EP166，[122.62-224.46]，L2）
 - Mark Schilder 关于在 FreeBSD 上加速 MySQL 导入的博客文章，列出 InnoDB 与 ZFS 调优清单。（BSD Now EP166，[566.72-1010.56]，L2）
 - Keith Burnett 的 OpenBSD 6.0 笔记本安装教程（ThinkPad X60 上配置 XFCE、doas 与 USB 挂载）。（BSD Now EP166，[1802.96-1947.44]，L2）
-- 本期直接援引的一手材料包括：Netflix OpenConnect 团队在 Asia BSDCon 发表的内核态 sendfile 加密路线论文，说明 40Gb 级全 TLS 加密流量的工程实现（约 245.92-281.70）；OpenBSD 邮件列表帖与 David Gwynne 的提交，为 ping 时间戳载荷加入默认以 ChaCha 流填充的报文认证码，用于侦测链路篡改与故障设备（约 378.32-381.08、4907.02-4939.88）；Matthew Dillon 关于 DragonFly 开发者私有 Git 仓库工作流的书面陈述，由主持人逐字宣读（4993.02-5033.58）；DragonFly wiki 上由 Matt Dillon 维护的 Broadwell 硬件支持状态页（约 499.14-529.04）；哈佛团队基于 Capsicum 的最小特权脚本语言论文与 USENIX 演示视频（约 3415.52-3435.40）；以及 tubsta.com 发布的将 DigitalOcean FreeBSD 实例改写为 OpenBSD 的操作指南，讲述者将其与 Colin Percival 早年的 depenguinator 相类比（约 3020.82-3100.96）。　[存疑脚注] 转写将上述脚本语言记作 chill（通行拼法为 shill）、提交者记作 david gwen（通行拼法为 David Gwynne），专名以通行拼写为准。（BSD Now EP86，[4993.02-5033.58]，L2）
+- 本期直接援引的一手材料包括：Netflix OpenConnect 团队在 Asia BSDCon 发表的内核态 sendfile 加密路线论文，说明 40Gb 级全 TLS 加密流量的工程实现（约 245.92-281.70）；OpenBSD 邮件列表帖与 David Gwynne 的提交，为 ping 时间戳载荷加入默认以 ChaCha 流填充的报文认证码，用于侦测链路篡改与故障设备（约 400.00-451.00）；Matthew Dillon 关于 DragonFly 开发者私有 Git 仓库工作流的书面陈述，由主持人逐字宣读（4993.02-5033.58）；DragonFly wiki 上由 Matt Dillon 维护的 Broadwell 硬件支持状态页（约 499.14-529.04）；哈佛团队基于 Capsicum 的最小特权脚本语言论文与 USENIX 演示视频（约 3415.52-3435.40）；以及 tubsta.com 发布的将 DigitalOcean FreeBSD 实例改写为 OpenBSD 的操作指南，讲述者将其与 Colin Percival 早年的 depenguinator 相类比（约 3020.82-3100.96）。　[存疑脚注] 转写将上述脚本语言记作 chill（通行拼法为 shill）、提交者记作 david gwen（通行拼法为 David Gwynne），专名以通行拼写为准。（BSD Now EP86，[4993.02-5033.58]，L2）　[订正：原 ping/ChaCha 引用段（约 378.32-381.08、4907.02-4939.88），2026-09-30 SenseAudio 重转核对——新转写中该提交位于（400.00-451.00），原 4907.02-4939.88 处为 NetBSD 发布讨论，非 ping 载荷]
 - Reyk Floeter 访谈（OpenBSD httpd 作者当事人自述）。（BSD Now EP53，[540.14-1854.84]，L1）
 - Sean Webb（Laddera）访谈（ASLR/PIE 实现者当事人自述）。（BSD Now EP52，[933.90-2162.30]，L1）
 - 当期教程演示了OpenBSD 5.5的autoinstall配置过程，包括DHCP、TFTP、pxeboot、bsd.rd、nginx与install.conf的完整步骤。（BSD Now EP32，[1978.08-2602.24]，L2）

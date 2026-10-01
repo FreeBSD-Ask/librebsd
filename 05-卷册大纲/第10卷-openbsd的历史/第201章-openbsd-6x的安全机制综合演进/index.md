@@ -100,9 +100,9 @@ volume: 第10卷-openbsd的历史
 - Microsystems Magazine 1984 年 11 月号《Unix Evolution》文章（Daemon News 1999 重刊），为节目重读的历史文本。（BSD Now EP325，[740.14-756.02]，L2）
 - Dennis Ritchie 关于 man page BUGS 节政策的引文，属当事人一手表述。（BSD Now EP325，[1012.82-1027.82]，L1）
 - OpenBSD unbound.conf 默认 DNSSEC 与 aggressive NSEC 的提交说明，及与 Quad9 的约束验证讨论。（BSD Now EP325，[2077.00-2124.28]，L2）
-- Warner Losh 博客《Hunting Down Ken's PDP-7》及 Bell Labs《The Incredible Machine》1968 年影片。（BSD Now EP322，[400.18-402.92]，L2）
-- DEC PDP-7 销售目录与 Bitsavers 现场服务清单（序列号 34/149 的选件记录）。（BSD Now EP322，[685.26-707.24]，L2）
-- OpenBSD 6.6 发布页与升级说明（unveil、MDS 缓解、预编译包数量等）。（BSD Now EP322，[1063.56-1068.82]，L2）
+- Warner Losh 博客《Hunting Down Ken's PDP-7》及 Bell Labs《The Incredible Machine》1968 年影片。（BSD Now EP322，[400.18-979.3]，L2）[订正：原 [400.18-402.92]，2026-09-30 SenseAudio 重转核对]
+- DEC PDP-7 销售目录与 Bitsavers 现场服务清单（序列号 34/149 的选件记录）。（BSD Now EP322，[545.0-707.24]，L2）[订正：原 [685.26-707.24]，2026-09-30 SenseAudio 重转核对]
+- OpenBSD 6.6 发布页与升级说明（unveil、MDS 缓解、预编译包数量等）。（BSD Now EP322，[1063.56-1528.5]，L2）[订正：原 [1063.56-1068.82]，2026-09-30 SenseAudio 重转核对]
 - OpenSSH 8.1 发布公告，含 Adam Zabrocki 报告的 XMSS 私钥解析漏洞。（BSD Now EP322，[2125.36-2172.60]，L2）
 - OpenZFS wiki 公司列表与 Dev Summit 材料；OpenBSD 技术邮件列表 KARL 状态帖；NetBSD announce 仓库转换公告；LibreSSL 发布说明。（BSD Now EP203，[148.62-5480.00]，L2）
 
@@ -122,8 +122,8 @@ volume: 第10卷-openbsd的历史
 - 总纲17 证明世界先于解释和改造世界：总纲17 证明世界先于解释和改造世界：先有 PDP-7 实物与影片证据，再谈 Unix 起源解释。（BSD Now EP322，[461.82-466.08]，L2）
 - 总纲19 解释学循环是历史认识的根本条件：总纲19 解释学循环是历史认识的根本条件：影片截图与目录照片互为印证，逐项比对构成循环解释。（BSD Now EP322，[558.72-631.14]，L2）
 - 总纲22 知识注定过时：总纲22 知识注定过时：SSH 旧客户端与 RSA-SHA1 证书兼容性被新默认淘汰，知识随版本更替失效。（BSD Now EP322，[2236.64-2265.46]，L2）
-- 总纲8 本体论上各方平等：总纲8 本体论上各方平等：OpenBSD 6.6 与 OPNsense、GhostBSD 同屏，各项目如实呈现。（BSD Now EP322，[1608.32-1616.96]，L2）
-- 总纲10 动手者创造历史：总纲10 动手者创造历史：Warner Losh 逐帧考证、OpenBSD 开发者逐锁解锁，动手者推动认识与系统演进。（BSD Now EP322，[982.99-1036.46]，L2）
+- 总纲8 本体论上各方平等：总纲8 本体论上各方平等：OpenBSD 6.6 与 OPNsense、GhostBSD 同屏，各项目如实呈现。（BSD Now EP322，[1608.32-1905.7]，L2）[订正：原 [1608.32-1616.96]，2026-09-30 SenseAudio 重转核对]
+- 总纲10 动手者创造历史：总纲10 动手者创造历史：Warner Losh 逐帧考证、OpenBSD 开发者逐锁解锁，动手者推动认识与系统演进。（BSD Now EP322，[982.99-1165.6]，L2）[订正：原 [982.99-1036.46]，2026-09-30 SenseAudio 重转核对]
 - 总纲5 没有必然性，只有偶然性：ZFS 从 Sun 内部项目到 OpenZFS 社区的转折由诉讼、收购等偶然事件驱动，社区分叉后反而延续了技术生命，体现分离聚合与偶然性在文件系统史中的塑造。（BSD Now EP203，[148.62-241.44]，L2）
 - 总纲10 动手者创造历史：KARL 把安全机制落实为每次开机的具体重构，由 Theo 与协助者在 hackathon 上动手实现，显示安全演进来自动手者的直接推进而非抽象原则。（BSD Now EP203，[4432.62-4690.58]，L2）
 

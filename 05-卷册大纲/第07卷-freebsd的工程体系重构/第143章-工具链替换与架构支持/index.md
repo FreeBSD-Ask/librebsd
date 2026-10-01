@@ -76,15 +76,15 @@ volume: 第07卷-freebsd的工程体系重构
 
 **要点**：
 
-- Dr. Brian Robert Callahan 为 QBE 的 ARM64 后端编写窥孔优化，消除冗余寄存器拷贝与可即时数化的算术指令，说明 ARM64 定长指令下只能通过删除指令获利。（BSD Now EP631，[286.40-737.76]，L1）
+- Dr. Brian Robert Callahan 为 QBE 的 ARM64 后端编写窥孔优化，消除冗余寄存器拷贝与可即时数化的算术指令，说明 ARM64 定长指令下只能通过删除指令获利。（BSD Now EP631，[280.3-735.8]，L1）[订正：原 [286.40-737.76]，2026-10-01 SenseAudio 重转核对]
 
 **史料**：
 
-- Dr. Brian Robert Callahan 博客 QBE ARM64 窥孔优化系列。（BSD Now EP631，[286.40-737.76]，L1）
+- Dr. Brian Robert Callahan 博客 QBE ARM64 窥孔优化系列。（BSD Now EP631，[280.3-735.8]，L1）[订正：原 [286.40-737.76]，2026-10-01 SenseAudio 重转核对]
 
 **史观**：
 
-- 总纲10 动手者创造历史：Callahan 亲手为 QBE ARM64 后端编写窥孔优化，以逐条删除指令获取性能，属编译器一线动手者的直接经验。（BSD Now EP631，[286.40-737.76]，L1）
+- 总纲10 动手者创造历史：Callahan 亲手为 QBE ARM64 后端编写窥孔优化，以逐条删除指令获取性能，属编译器一线动手者的直接经验。（BSD Now EP631，[280.3-735.8]，L1）[订正：原 [286.40-737.76]，2026-10-01 SenseAudio 重转核对]
 
 **辨析**：
 

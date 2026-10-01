@@ -49,12 +49,12 @@ volume: 第09卷-netbsd的历史
 
 - FreeBSD 12.2 引入 special VDEV（metadata classes）：可把元数据（目录内容、时间戳、文件大小等）与可选的小数据块存入专用 SSD VDEV，数据块留在机械盘，从而加速 find、rsync 等元数据密集操作；使用时须镜像元数据 VDEV（丢失元数据则数据近乎无用），且加入既有池后仅新写入文件的元数据迁移过去，需以 send/receive 或等待数据自然修改来迁移。（BSD Now EP376，[569.22-679.88]，L2）
 - 12.2 的已知问题：IPFW forward 规则向同一接口多 IP 转发时存在栈损坏导致的随机端口问题，修复将随 12.2-p1 发布；zfs receive 在期待删除旧快照时也有问题并将修复；BeagleBone 因 SD 卡 IO 异常缓慢而暂未提供 12.2 镜像；DVD 安装器内附带的 GDM 版本损坏，需在安装后从上游镜像升级。（BSD Now EP376，[686.3-800.7]，L2）
-- 用户空间与基础设施改进：rc.conf 新增 linux_mounts_enable（依赖 linux_enable 挂载 Linux 专用文件系统）；cron 新增 -n 与 -q（成功时不发邮件、不记日志）；dd 新增 conv=fsync/fdatasync/sync 与 iflag=fullblock 等选项；fsck 支持 ms-dosfs；showmount 支持长选项；mountd 修正 map root/map all 的根目录列出；sesutil 新增面向人读的 show 子命令；jail 工具支持在 jail 内运行 Linux 程序；read 系统调用默认禁止读目录，可用 security.bsd.allow_readdir 恢复。（BSD Now EP376，[84.16-477.1]，L2）
+- 用户空间与基础设施改进：rc.conf 新增 linux_mounts_enable（依赖 linux_enable 挂载 Linux 专用文件系统）；cron 新增 -n 与 -q（成功时不发邮件、不记日志）；dd 新增 conv=fsync/fdatasync/sync 与 iflag=fullblock 等选项；fsck 支持 ms-dosfs；showmount 支持长选项；mountd 修正 map root/map all 的组列出；sesutil 新增面向人读的 show 子命令；jail 工具支持在 jail 内运行 Linux 程序；read 系统调用默认禁止读目录，可用 security.bsd.allow_read_dir 恢复。（BSD Now EP376，[84.16-477.1]，L2）[订正：原 map root/map all 的根目录列出、security.bsd.allow_readdir，2026-09-30 SenseAudio 重转核对]
 - certctl 项目由 Alan Jude 发起：把 Mozilla CA 根证书包拆分为单个证书随系统分发，并允许管理员额外信任自签证书或显式不信任某些证书，满足企业在 SSL 拦截设备、管理系统中信任自有证书的需求，由 Kyle Evans 完成落地；virtio 块驱动新增 trim 支持，使 FreeBSD 作为 guest 删除数据时能向 hypervisor 释放空间，bhyve 侧 zvol 也能相应释放。（BSD Now EP376，[234.84-295.3]，L1）
 - ZFS per-dataset kstats：kstat.zfs.<pool>.dataset 下按 object ID 为每个数据集提供读写次数与字节数，计数自重启或导入后从零累计，可定位哪个客户或虚拟机在制造磁盘负载；升级时还须更新池与池的 boot 部分。（BSD Now EP376，[485.72-554.12]，L1）
 - Klara Systems 的 ZFS 最佳实践研讨会于 11 月 18 日举行，由 Alan Jude 主持，内容覆盖存储阵列硬件选择、RAID-Z 与镜像取舍、special metadata VDEV、随数据增长的规划与池扩展/收缩（device evacuation），以及 dataset 与属性，强调建池早期的决策决定日后能否扩展或收缩。（BSD Now EP376，[822.68-947.34]，L1）
 - NetBSD 的 GSoC 2020 最终报告：Ayush Sharma 开发 sys2z 工具链，用 extractor、bear.py、c2xml.py、description.py 四个步骤从 C 设备驱动源码自动提取 ioctl 命令及参数并生成 syscaller 描述文件，以减少手工错误、扩大 syscaller 覆盖；未来工作包括宏检测自动化与函数类型描述，导师为 William Caldwell、Siddharth Muralee、Santosh Raju 与 Kamil Rytarowski。（BSD Now EP376，[958.04-1225.66]，L2）
-- OpenBSD stable 包构建基础设施（dataswamp.org）：2019 年夏获 Theo de Raadt 提供硬件后搭建，仅约 110 行 shell；各架构机器每日三次以 cron 更新 CVS ports 树，用 CVS rdiff 求自 release 以来变更的 port 列表，查 SQL ports 数据库展开 flavor/subpackage/multipackage，清理环境后用 dpb 编译，送交签名团队人工签名（自动构建者不接触签名密钥），再以 rsync 输出与邮件通知；新设计由一台机器汇总各架构输出、并在构建前统一下载 distfiles 以避免 NFS 并发抓取失败。（BSD Now EP376，[1233.08-1588.12]，L2）
+- OpenBSD stable 包构建基础设施（dataswamp.org）：2019 年夏获 Theo de Raadt 提供硬件后搭建，仅约 110 行 shell；各架构机器每日三次以 cron 更新 CVS ports 树，用 CVS rdiff 求自 release 以来变更的 port 列表，查 SQL ports 数据库展开 flavor/subpackage/multipackage，清理环境后以 make package 编译（dpb 因对 release-stable delta 包构建效果不佳而不适用），送交签名团队人工签名（自动构建者不接触签名密钥），再以 rsync 输出与邮件通知；新设计由一台机器汇总各架构输出、并在构建前统一下载 distfiles 以避免 NFS 并发抓取失败。（BSD Now EP376，[1233.08-1588.12]，L2）[订正：原 清理环境后用 dpb 编译，2026-09-30 SenseAudio 重转核对]
 - OPNsense 20.7.4 发布：完成近期的 netmap 内核改动与测试、更新 Realtek 厂商驱动及 kernel、libxml、openssl、php、suricata、syslog-ng、unbound 等第三方组件，并感谢 Sunny Valley Networks 持续把 netmap 修复送入 FreeBSD；WebGUI 支持地址选择、网关组件 API 化、接口 MTU 上限升至 65535（依 RFC 791），防火墙部分新增网络排除/别名类型与 pfInfo 页面。（BSD Now EP376，[1591.02-1720.44]，L2）
 - 其他项目动态：DragonFly BSD 把 binutils 回退至 2.34 并暂时改回 ld.bfd，以解决 ld.gold 不尊重 section merge 链接脚本导致 boot1.efi/loader.efi 构建失败的问题（可设 WORLD_LDVER=ld.gold 恢复默认）；NetBSD 的 GitHub 贡献图自 1992 年延续 28 年、1996 年才明显繁忙；OpenBSD 无蓝牙支持，可用 Creative Labs BT-W2 这类把自己呈现为 USB 音频设备的桥接器；社区有基于 FreeBSD/bhyve、CBSD 与 netmap VALE 的 Kubernetes 集群方案，约一分钟 bootstrap，支持 PV/PVC 快照。（BSD Now EP376，[1720.44-2013.24]，L2）
 - 反馈环节：Sean 询问 Poudriere 能否全局给 C/C++ 编译器传 -fsanitize 参数，Alan 说明可在 /usr/local/etc/poudriere.d/ 下按 make.conf 层级（全局、包集、ports 树及组合）设置 CFLAGS/CXXFLAGS，从最不特定到最特定拼接，个别必须用 GCC 的 port 可用条件判断排除；Thierry 询问树莓派 loop 挂载镜像的延迟问题，Alan 解释 ZFS 默认 128K record 在 4K 小改时产生读-改-写放大，建议把存放镜像的数据集 record size 调小（如 8K）。（BSD Now EP376，[2189.46-2722.88]，L1）
@@ -65,11 +65,11 @@ volume: 第09卷-netbsd的历史
 - 本期主话题是 NetBSD 内核对随机数生成机制的重写，目标是把熵池升级到满足 256 位不可预测性等新期望。（BSD Now EP352，[182.96-190.12]，L2）
 - 主持人的核心判断是：随机数在操作系统中多处不可或缺，现代系统通常把 RD-RAND、RD-SEED 等硬件输出与哈希混合，单一熵源失效不应击穿整个系统。（BSD Now EP352，[159.08-178.48]，L2）
 - 新闻部分记载 NetBSD core team 人事变动：Matt Thomas 在服务十余年后卸任，Robert Elz 受邀加入；同期 FreeBSD core team 进行两年一度的民主选举。（BSD Now EP352，[764.8-901.42]，L2）
-- OpenBSD 的 BSD Authentication 认证绕过漏洞源于 login_passwd 对 challenge 协议的处理缺陷，用户名形如 -schallenge 时会被自动判定成功；该漏洞远程可利用于 smtpd、ldapd、radiusd 等应用，但 sshd 因纵深防御机制不受影响。（BSD Now EP330，[185.76-193.66]，L2）
+- OpenBSD 的 BSD Authentication 认证绕过漏洞源于 login_passwd 对 challenge 协议的处理缺陷，用户名形如 -schallenge 时会被自动判定成功；该漏洞远程可利用于 smtpd、ldapd、radiusd 等应用，但 sshd 因纵深防御机制不受影响。（BSD Now EP330，[185.76-440.9]，L2）[订正：原 [185.76-193.66]，2026-09-30 SenseAudio 重转核对]
 - OpenBSD 在初次联系后约 40 小时内修复该漏洞，主持人以此与其它项目耗时数月乃至数年的修复形成对照，凸显其把安全响应置于优先位置的组织惯性。（BSD Now EP330，[562.80-584.46]，L3）
-- NetBSD 9.0 RC1 在四个月发布流程中处理逾 500 次 pull-up，新增 aarch64（含 Arm ServerReady）、NVMM 硬件虚拟化、更新版 ZFS、内核 ASLR、KLEAK/KASAN 等 sanitizer、NPF 改进与 SATA NCQ 支持。（BSD Now EP330，[724.00-802.99]，L2）
+- NetBSD 9.0 RC1 在四个月发布流程中处理逾 500 次 pull-up，新增 aarch64（含 Arm ServerReady）、NVMM 硬件虚拟化、更新版 ZFS、内核 ASLR、KLEAK/KASAN 等 sanitizer、NPF 改进与 SATA NCQ 支持。（BSD Now EP330，[724.00-968.5]，L2）[订正：原 [724.00-802.99]，2026-09-30 SenseAudio 重转核对]
 - FreeNAS 在 DigitalOcean 的部署教程通过第二块设备安装后再以 dd 重灌引导区完成，主持人补充 ZFS 的校验与校验和使消费级磁盘配合 RAID-Z1 冗余在家庭 NAS 场景可用，并强调以独立备份兜底。（BSD Now EP330，[1084.88-1299.54]，L2）
-- NomadBSD 1.3 是基于 FreeBSD 12.1 的 USB 持久化 Live 系统，通过 SMBIOS 检测自动适配 VirtualBox，新增 ZFS 安装支持，并因 Lenovo 兼容问题从 GPT 改回 MBR。（BSD Now EP330，[1790.46-1892.38]，L2）
+- NomadBSD 1.3 是基于 FreeBSD 12.1 的 USB 持久化 Live 系统，通过 SMBIOS 检测自动适配 VirtualBox，新增 ZFS 安装支持，并因 Lenovo 兼容问题从 GPT 改回 MBR。（BSD Now EP330，[1790.46-1962.9]，L2）[订正：原 [1790.46-1892.38]，2026-09-30 SenseAudio 重转核对]
 - e2k19 黑客松重写 RPKI 客户端的 X.509 验证，将证书与 CRL 表改为红黑树查找、以 rename 原子替换输出文件，使 VRP 验证从 20 余分钟降至约 1 分钟。（BSD Now EP330，[2281.90-2516.12]，L2）
 
 **史料**：
@@ -108,7 +108,7 @@ volume: 第09卷-netbsd的历史
 
 **辨析**：
 
-- 转写把人名误记（Theo Durant 应为 Theo de Raadt，Kamil Ritarovsky 应为 Kamil Rytarowski，Ayushu Sharma 应为 Ayush Sharma）；OpenBSD 包构建博文的作者在转写中未署名，dataswamp.org 系 OpenBSD 开发者个人站点，引用时须以原文署名核实。[考据脚注] 人名与博文作者须以原文为准　[考据脚注] Theo de Raadt、Kamil Rytarowski、Ayush Sharma 等人名及博文作者系转写误记或未署名，须以原文核对（BSD Now EP376，[1244.68-1260.16]，L4）
+- 新转写已正确读出 Theo de Raadt、Kamil Rytarowski、Ayush Sharma 等人名（仅一处 Kamil Rytarowski 转写作 Camille Rotarowski）；OpenBSD 包构建博文的作者在转写中仍未署名，dataswamp.org 系 OpenBSD 开发者个人站点，引用时须以原文署名核实。[考据脚注] 博文作者须以原文核对（BSD Now EP376，[1244.68-1260.16]，L4）[订正：原 转写把人名误记（Theo Durant、Kamil Ritarovsky、Ayushu Sharma），2026-09-30 SenseAudio 重转核对]
 - sys2z 的“最小化手工错误”与覆盖扩大属项目目标陈述，实际自动化程度与产出质量须以其代码库与后续维护状态核验。（BSD Now EP376，[1014.64-1024.52]，L2）
 - IPFW 转发“栈损坏导致随机端口”系主持人对 PR 的口头转述，具体根因与修复提交须回到 PR 与 12.2-p1 公告核对。（BSD Now EP376，[699.24-715.08]，L2）
 - 转写中 OpenBSD 6.8 随机种子置信度标记被表述为“RB_GOODRANDOM”，其具体宏名与语义应以 OpenBSD 6.8 发布说明及源码为准。　[存疑脚注] 具体宏名待官方变更日志核对（BSD Now EP374，[397.32-447.44]，L4）

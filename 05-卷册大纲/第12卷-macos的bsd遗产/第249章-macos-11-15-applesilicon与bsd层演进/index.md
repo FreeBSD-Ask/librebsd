@@ -67,8 +67,8 @@ volume: 第12卷-macos的bsd遗产
 
 **辨析**：
 
-- 转录将 Klara Systems 误记为 Clara Systems，将 Rubenerd 误记为 Rubinerd 或 Ruben Nerd，正文按业界通行名处理。　[考据脚注] 机构与博客名存在语音转写偏差，须以原文链接核验（BSD Now EP651，[782.30-782.70]，L4）
-- 转录中 OpenBSD PA-RISC 移植者被记作 Michael Shaliff，实为 Michael Shalayeff；因语音转写歧义，人名须以代码仓库与邮件列表核验。　[存疑脚注] 人名拼写存在转写歧义，未以 OpenBSD 代码仓库核验（BSD Now EP651，[2700.56-2735.66]，L4）
+- 转录将 Klara Systems 误记为 clari systems，将 Rubenerd 误记为 Ruben Nerd，正文按业界通行名处理。　[考据脚注] 机构与博客名存在语音转写偏差，须以原文链接核验（BSD Now EP651，[782.30-782.70]，L4）[订正：原 误记为 Clara Systems、Rubinerd 或 Ruben Nerd，2026-10-01 SenseAudio 重转核对]
+- 转录中 OpenBSD PA-RISC 移植者被记作 Michael Shalif，实为 Michael Shalayeff；因语音转写歧义，人名须以代码仓库与邮件列表核验。　[存疑脚注] 人名拼写存在转写歧义，未以 OpenBSD 代码仓库核验（BSD Now EP651，[2700.56-2735.66]，L4）[订正：原 被记作 Michael Shaliff，2026-10-01 SenseAudio 重转核对]
 
 **文献**：
 

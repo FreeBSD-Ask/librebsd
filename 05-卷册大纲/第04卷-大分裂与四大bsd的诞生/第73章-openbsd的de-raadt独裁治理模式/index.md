@@ -59,24 +59,24 @@ volume: 第04卷-大分裂与四大bsd的诞生
 
 **要点**：
 
-- FreeBSD Foundation 回顾 2019 年：参与 38 场会议、资助 Wi-Fi 支持与安全团队，并强调捐款直接支撑项目。（BSD Now EP333，[69.24-169.04]，L2）
-- OpenBSD 6.6 路由器上的 WireGuard 配置教程，通过 PF 与 MTU/MSS 调整实现 VPN 出口。（BSD Now EP333，[420.78-653.64]，L2）
-- Amazon 推出基于 Graviton2 的 ARM 实例并支持 FreeBSD 12.1，宣称较 x86 有 40% 更优性价比。（BSD Now EP333，[704.98-810.16]，L2）
+- FreeBSD Foundation 回顾 2019 年：参与 38 场会议、资助 Wi-Fi 支持与安全团队，并强调捐款直接支撑项目。（BSD Now EP333，[73.4-189.2]，L2）[订正：原 [69.24-169.04]，2026-09-30 SenseAudio 重转核对]
+- OpenBSD 6.6 路由器上的 WireGuard 配置教程，通过 PF 与 MTU/MSS 调整实现 VPN 出口。（BSD Now EP333，[430.3-658.3]，L2）[订正：原 [420.78-653.64]，2026-09-30 SenseAudio 重转核对]
+- Amazon 推出基于 Graviton2 的 ARM 实例并支持 FreeBSD 12.1，宣称较 x86 有 40% 更优性价比。（BSD Now EP333，[703.6-810.4]，L2）[订正：原 [704.98-810.16]，2026-09-30 SenseAudio 重转核对]
 
 **史料**：
 
-- FreeBSD Foundation 2019 年度影响报告。（BSD Now EP333，[69.24-90.64]，L2）
-- Theo de Raadt 访谈视频（Tom Smythe 录制，2019 年 Ottawa hackathon 与 BSDCan 之间）。（BSD Now EP333，[1554.58-1616.68]，L2）
-- multicians.org 的 Multics 历史站点与《The Design of the UNIX Operating System》读书笔记。（BSD Now EP333，[1801.42-1895.64]，L3）
+- FreeBSD Foundation 2019 年度影响报告。（BSD Now EP333，[73.4-103.4]，L2）[订正：原 [69.24-90.64]，2026-09-30 SenseAudio 重转核对]
+- Theo de Raadt 访谈视频（Tom Smythe 录制，2019 年 Ottawa hackathon 与 BSDCan 之间）。（BSD Now EP333，[1554.2-1626.5]，L2）[订正：原 [1554.58-1616.68]，2026-09-30 SenseAudio 重转核对]
+- multicians.org 的 Multics 历史站点与《The Design of the UNIX Operating System》读书笔记。（BSD Now EP333，[1703.8-1897.8]，L3）[订正：原 [1801.42-1895.64]，2026-09-30 SenseAudio 重转核对]
 
 **史观**：
 
-- 总纲10 动手者创造历史：总纲10 动手者创造历史：FreeBSD Foundation 报告将捐款落到 Wi-Fi 支持、安全响应等具体工程，而非口号。（BSD Now EP333，[136.72-161.1]，L2）
-- 总纲9 经验优先：总纲9 经验优先：multicians.org 以当事人回忆与一手技术文档保存 Multics 经验，体现经验优先。（BSD Now EP333，[1837.68-1883.14]，L2）
+- 总纲10 动手者创造历史：总纲10 动手者创造历史：FreeBSD Foundation 报告将捐款落到 Wi-Fi 支持、安全响应等具体工程，而非口号。（BSD Now EP333，[131.1-155.6]，L2）[订正：原 [136.72-161.1]，2026-09-30 SenseAudio 重转核对]
+- 总纲9 经验优先：总纲9 经验优先：multicians.org 以当事人回忆与一手技术文档保存 Multics 经验，体现经验优先。（BSD Now EP333，[1822.2-1882.2]，L2）[订正：原 [1837.68-1883.14]，2026-09-30 SenseAudio 重转核对]
 
 **辨析**：
 
-- Theo de Raadt 访谈为第三方转述与视频链接，其具体言论需回看原视频核验。　[存疑脚注] 访谈内容未在转写中完整呈现（BSD Now EP333，[1577.94-1616.68]，L4）
+- Theo de Raadt 访谈为第三方转述与视频链接，其具体言论需回看原视频核验。　[存疑脚注] 访谈内容未在转写中完整呈现（BSD Now EP333，[1576.5-1626.5]，L4）[订正：原 [1577.94-1616.68]，2026-09-30 SenseAudio 重转核对]
 
 **文献**：
 

@@ -43,9 +43,9 @@ OpenBSD 的贡献者谱系研究面临若干方法论挑战：其一，OpenBSD �
 - Suleen Rapin 从早期 Linux 与 PC-BSD 起步，工作中以 FreeBSD 替换 Linux 服务器，后转向 OpenBSD，因提交 ports 更新补丁而被邀请加入团队。（BSD Now EP435，[138.4-317.56]，L1）
 - 她发起 OpenBSD Webzine，意图以面向非技术读者的月刊形式传播 OpenBSD 新闻、技巧与开发者访谈。（BSD Now EP435，[1434.94-1549.12]，L1）
 - 其“旧电脑挑战”以 PowerPC 苹果笔记本运行 OpenBSD，并借助 Charlene Wendling 对 PowerPC 软件包的长期维护，展示 OpenBSD 对旧硬件的兼容。（BSD Now EP435，[530.8-929.72]，L1）
-- Brian Callahan 自 2013 年成为 OpenBSD 开发者，在 Rensselaer Polytechnic Institute 任教，并已向 OpenBSD 移植约四五十个编译器与解释器。（BSD Now EP422，[82.26-112.86]，L1）
-- 他在信息安全课程中让学生登录其托管的 OpenBSD 机器，讲授 strlcpy、pledge 与 unveil 等机制，并以现代二进制利用课程反向印证这些安全设计的价值。（BSD Now EP422，[1152.74-1504.02]，L1）
-- NYC*BUG 是纽约 BSD 用户组，约于 2003 至 2004 年成立，自称最古老的 BSD 用户组之一，疫情后成功转为线上活动。（BSD Now EP422，[2083.8-2321.72]，L1）
+- Brian Callahan 自 2013 年成为 OpenBSD 开发者，在 Rensselaer Polytechnic Institute 任教，并已向 OpenBSD 移植约四五十个编译器与解释器。（BSD Now EP422，[72.2-123.8]，L1）[订正：原 [82.26-112.86]，2026-09-30 SenseAudio 重转核对]
+- 他在信息安全课程中让学生登录其托管的 OpenBSD 机器，讲授 strlcpy、pledge 与 unveil 等机制，并以现代二进制利用课程反向印证这些安全设计的价值。（BSD Now EP422，[1140.2-1525.8]，L1）[订正：原 [1152.74-1504.02]，2026-09-30 SenseAudio 重转核对]
+- NYC*BUG 是纽约 BSD 用户组，约于 2003 至 2004 年成立，自称最古老的 BSD 用户组之一，疫情后成功转为线上活动。（BSD Now EP422，[2076.1-2336.1]，L1）[订正：原 [2083.8-2321.72]，2026-09-30 SenseAudio 重转核对]
 - FreeBSD Foundation 于 2025 年 4 月启动 SBOM 项目，目标是为整个源码树与软件包生成软件物料清单，服务于零信任构建与供应链合规需求。（BSD Now EP623，[309.72-553.78]，L2）
 - Klara Systems 的夏季综述以自建 DNS、NTP、ZFS 存储与定制内核为主线，主张以开源标准摆脱厂商锁闭并降低长期成本。（BSD Now EP623，[557.22-1040.66]，L2）
 - David Gwynne 自述通过 OpenBSD 的简短文档解决家庭拨号共享上网问题而入坑，后因 USB 2.0 备份需求开始向 OpenBSD 移植 NetBSD 的 USB 代码。（BSD Now EP623，[1122.34-1528.48]，L1）
@@ -61,7 +61,7 @@ OpenBSD 的贡献者谱系研究面临若干方法论挑战：其一，OpenBSD �
 **史料**：
 
 - Suleen Rapin 本人博客、OpenBSD Webzine（website.puffy.kfh）、dataswamp.org shell 社区及其旧电脑挑战记录。（BSD Now EP435，[112.04-127.56]，L1）
-- Brian Callahan 本人访谈、D 语言社区、Tiny C compiler 与 Modula 2 移植记录、NYC*BUG 用户组活动。（BSD Now EP422，[384.1-735.94]，L1）
+- Brian Callahan 本人访谈、D 语言社区、Tiny C compiler 与 Modula 2 移植记录、NYC*BUG 用户组活动。（BSD Now EP422，[379.4-752.7]，L1）[订正：原 [384.1-735.94]，2026-09-30 SenseAudio 重转核对]
 - FreeBSD Foundation SBOM 项目公告。（BSD Now EP623，[309.72-553.78]，L2）
 - Klara Systems 的 FreeBSD Summer 2025 Roundup。（BSD Now EP623，[557.22-1040.66]，L2）
 - David Gwynne 访谈（University of Queensland，2025 年 5 月 29 日）。（BSD Now EP623，[1064.42-3319.38]，L1）
@@ -70,7 +70,7 @@ OpenBSD 的贡献者谱系研究面临若干方法论挑战：其一，OpenBSD �
 **史观**：
 
 - 总纲10 动手者创造历史：Suleen 通过维护 ports、撰写教程与创办 Webzine 参与 OpenBSD，体现社区边缘动手者对项目生态的持续塑造。（BSD Now EP435，[353.76-384.0]，L1）
-- 总纲10 动手者创造历史：Callahan 以持续移植编译器、教学与组织用户组的具体劳动扩展 OpenBSD 生态，体现动手者的长期积累。（BSD Now EP422，[384.1-735.94]，L1）
+- 总纲10 动手者创造历史：Callahan 以持续移植编译器、教学与组织用户组的具体劳动扩展 OpenBSD 生态，体现动手者的长期积累。（BSD Now EP422，[379.4-752.7]，L1）[订正：原 [384.1-735.94]，2026-09-30 SenseAudio 重转核对]
 - 总纲10 动手者创造历史：David Gwynne 以大学系统管理员身份亲手修复基础设施问题并回馈 OpenBSD，体现一线操作者推动协议与工具演进。（BSD Now EP623，[1806.76-1946.58]，L1）
 - 总纲6 和解优于斗争：OpenBSD hackathon 以面对面沟通消解邮件分歧，强调协作而非对抗的社区机制。（BSD Now EP623，[1580.48-1651.24]，L1）
 - 总纲4 分离聚合是永恒规律：sec(4) 将 IPsec 从网络栈中窃取流量的分离点改造为可聚合进接口体系的组件。（BSD Now EP623，[2049.28-2316.56]，L1）
@@ -80,7 +80,7 @@ OpenBSD 的贡献者谱系研究面临若干方法论挑战：其一，OpenBSD �
 **辨析**：
 
 - OpenBSD Webzine 创办始末及加入团队细节仅来自当事人自述，需与网站存档、邮件列表记录交叉验证。　[存疑脚注] 加入团队与 Webzine 创办细节为单一当事人自述，尚需邮件列表与站点存档旁证。（BSD Now EP435，[1483.2-1522.08]，L4）
-- NYC*BUG 的成立年份与“最古老用户组之一”的说法为当事人估计，需与用户组档案及其他 BSD 用户组成立记录交叉核对。　[存疑脚注] 用户组成立年份为当事人记忆性表述，宜与其他地区 BSD 用户组史料比对。（BSD Now EP422，[2090.58-2102.08]，L4）
+- NYC*BUG 的成立年份与“最古老用户组之一”的说法为当事人估计，需与用户组档案及其他 BSD 用户组成立记录交叉核对。　[存疑脚注] 用户组成立年份为当事人记忆性表述，宜与其他地区 BSD 用户组史料比对。（BSD Now EP422，[2090.4-2120.4]，L4）[订正：原 [2090.58-2102.08]，2026-09-30 SenseAudio 重转核对]
 - 转录将 David Gwynne 记作 David Gwynn 或 David Gwendt，标题 Two‘s interview 疑为 Gwynne’s interview 的转写偏差，人名以 OpenBSD 官方为准。　[存疑脚注] 人名与标题存在语音转写偏差，须以 OpenBSD 官方资料核验（BSD Now EP623，[1068.26-1075.34]，L4）
 - sec(4) 相关表述中 IPsec 接口在转录混用 sec 与 sec4，具体版本与接口名须以 OpenBSD 手册页核验。　[考据脚注] 接口名称存在转写混用，须以 sec(4) 手册页为准（BSD Now EP623，[1971.80-2235.62]，L4）
 - mg 1986 年首发的说法为当事人回忆，其源自 MicroEMACS 谱系的精确传承（含原始作者与年份）须以源码历史与既存考据交叉验证；转写人名存在音误——受访者记作 Shell Wooding 应为 Kjell Wooding，Theo de Raadt 被记作 Theodore Atth——引用前须回查原音频。　[存疑脚注] 起源年份系当事人口述回忆，且转写人名音误，采信前须复核（BSDTalk EP200，[365.84-377.28]，L4）

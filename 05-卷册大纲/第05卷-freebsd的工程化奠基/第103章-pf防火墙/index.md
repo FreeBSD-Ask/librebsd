@@ -59,10 +59,10 @@ volume: 第05卷-freebsd的工程化奠基
 - 主持人介绍周三下午在巴黎举行的 FreeBSD 基金会董事会会议：多数董事会成员与会，讨论未来会议、资金与新增董事等事项；主持人还介绍 EuroBSDCon 次年将移师罗马尼亚布加勒斯特。（BSD Now EP213，[102.3-1324.7]，L1）[订正：原 FreeBSD 基金会董事会在巴黎举行，与会成员讨论 FreeBSD 10.4 测试与发布稳定、注册截止等问题。（BSD Now EP213，[757.00-1311.38]，L1），2026-09-30 SenseAudio 重转核对]
 - PF 缺陷故事：Christophe 提交的博客还原了一个 vnet jail 中 PF 与宿主机 PF 实例相互干扰导致 panic 的问题，修复要点是把 purge 状态的索引变量改为 per-vnet 变量，避免多 PF 实例共享状态。（BSD Now EP213，[1331.6-1922.1]，L2）[订正：原 [1335.70-1904.14]，2026-09-30 SenseAudio 重转核对]
 - Provost 论证 FreeBSD PF 的 IPv6 分片处理缺陷：PF 重组分片并做出过滤决策后，IPv4 下可交回协议栈重新分片，而 IPv6 为保住路径 MTU 发现必须把分片集合原样送出，netpfil 接口却只支持一包进一包出；PF 目前自行调用 ip6_output 或 ip6_forward，既构成层级违例又存在输出/转发判断错误，特定情形下导致 panic 或丢包；OpenBSD 由协议栈告知 PF 数据包方向的做法可资借鉴，计划中的改造是让 netpfil 支持一包进一堆出，并预期 IPFW 处理 IPv6 分片时同样受益。（BSD Now EP144，[1579.66-1853.0]，L1）[订正：原 [1579.66-1794.88]，2026-09-30 SenseAudio 重转核对]
-- Theo de Raadt 提交使 OpenBSD 的 W^X 违例默认不再允许：违例时内核生成日志，mprotect 与 mmap 返回 ENOTSUP，可经 sysctl 改为 SIGABRT 以便调试与取核转储；同时引入 wxallowed 挂载选项按文件系统豁免，commit 原文断言上游开发者终将理解 W^X 违例是极高风险的编程风格并终被彻底禁绝，此前建议在 /usr/local 文件系统使用该选项；主持人评价这使用户得以审计 ports 与自装程序并向上游施压推动修复。（BSD Now EP144，[975.68-1114.66]，L2）
-- Theo de Raadt 的 Pledge 演讲经主持人转述：pledge 在系统调用层约束进程能力，OpenBSD 的 NTP 守护进程已在内部使用；演讲披露迄今约 10% 被 pledge 的程序被发现试图执行安全范围之外的动作；未来方向包括回头检视 2003 年前后引入的 OpenSSH 特权分离，以及向其他操作系统输出 pledge 类机制的意愿。（BSD Now EP144，[130.44-250.50]，L2）
-- FreeBSD 11.0 发布前夜的两项工程经主持人详述：bhyve 在项目分支 projects/bhyve-graphics 获得 UEFI GOP 支持，用户态虚拟显卡把画面送进内建 VNC 服务器，辅以 XHCI（USB 3 仿真）与平板定位实现精准鼠标、PS2 键鼠兜底、可选等待连接后再启动，并已在 Windows 7/8/8.1/10、Server 2012/2016、Ubuntu 15.10、FreeBSD 10.3/11 上验证，grub-bhyve 被定性为权宜之计、单命令 EFI 启动才是长期目标；zfsd 则补齐内核之外的 ZFS 故障管理，监听 devctl 事件自动激活热备，按 zfs 标签与物理路径处置盘位插拔，60 秒内 50 次 IO 或校验和错误即标记故障并换盘，管理员仅经池属性 autoreplace 间接控制，默认未启用。（BSD Now EP144，[243.24-975.32]，L2）
-- FreeBSD 图形栈跟进：Linux 4.6 DRM 更新需要用户测试，bsddesktop.com/images 提供 USB 启动测试镜像，非安装器、不改动既有系统；开发者 Matt Macy 经 IRC 转达 AMD/ATI 支持将至，且此项工作主要目标本是 AMD 而非 Intel，Intel 只是副产品；同期 head 的 C++ 变更致 VLC 等断裂，使 11 中 KDE、GNOME 3、XFCE、MATE 的桌面包暂缺——约 300 个包失败、600 个被阻断，占 26000 个包不足 2%，却几乎覆盖桌面所需，Warren Block 的 notebook-stats 脚本用于收集硬件细节以定位问题配置；主持人计划携镜像赴 BSDCan 分发。（BSD Now EP144，[2932.90-3198.18]，L2）
+- Theo de Raadt 提交使 OpenBSD 的 W^X 违例默认不再允许：违例时内核生成日志，mprotect 与 mmap 返回 ENOTSUP，可经 sysctl 改为 SIGABRT 以便调试与取核转储；同时引入 wxallowed 挂载选项按文件系统豁免，commit 原文断言上游开发者终将理解 W^X 违例是极高风险的编程风格并终被彻底禁绝，此前建议在 /usr/local 文件系统使用该选项；主持人评价这使用户得以审计 ports 与自装程序并向上游施压推动修复。（BSD Now EP144，[972.4-1141.3]，L2）[订正：原 [975.68-1114.66]，2026-09-30 SenseAudio 重转核对]
+- Theo de Raadt 的 Pledge 演讲经主持人转述：pledge 在系统调用层约束进程能力，OpenBSD 的 NTP 守护进程已在内部使用；演讲披露迄今约 10% 被 pledge 的程序被发现试图执行安全范围之外的动作；未来方向包括回头检视 2003 年前后引入的 OpenSSH 特权分离，以及向其他操作系统输出 pledge 类机制的意愿。（BSD Now EP144，[114.6-273.9]，L2）[订正：原 [130.44-250.50]，2026-09-30 SenseAudio 重转核对]
+- FreeBSD 11.0 发布前夜的两项工程经主持人详述：bhyve 在项目分支 projects/bhyve-graphics 获得 UEFI GOP 支持，用户态虚拟显卡把画面送进内建 VNC 服务器，辅以 XHCI（USB 3 仿真）与平板定位实现精准鼠标、PS2 键鼠兜底、可选等待连接后再启动，并已在 Windows 7/8/8.1/10、Server 2012/2016、Ubuntu 15.10、FreeBSD 10.3/11 上验证，grub-bhyve 被定性为权宜之计、单命令 EFI 启动才是长期目标；zfsd 则补齐内核之外的 ZFS 故障管理，监听 devctl 事件自动激活热备，按 zfs 标签与物理路径处置盘位插拔，60 秒内 50 次 IO 或校验和错误即标记故障并换盘，管理员仅经池属性 autoreplace 间接控制，默认未启用。（BSD Now EP144，[240.1-1002.4]，L2）[订正：原 [243.24-975.32]，2026-09-30 SenseAudio 重转核对]
+- FreeBSD 图形栈跟进：Linux 4.6 DRM 更新需要用户测试，bsddesktop.com/images 提供 USB 启动测试镜像，非安装器、不改动既有系统；开发者 Matt Macy 经 IRC 转达 AMD/ATI 支持将至，且此项工作主要目标本是 AMD 而非 Intel，Intel 只是副产品；同期 head 的 C++ 变更致 VLC 等断裂，使 11 中 KDE、GNOME 3、XFCE、MATE 的桌面包暂缺——约 300 个包失败、600 个被阻断，占 26000 个包不足 2%，却几乎覆盖桌面所需，Warren Block 的 notebook-stats 脚本用于收集硬件细节以定位问题配置；主持人计划携镜像赴 BSDCan 分发。（BSD Now EP144，[2928.0-3204.4]，L2）[订正：原 [2932.90-3198.18]，2026-09-30 SenseAudio 重转核对]
 - 2014 年 7 月 FreeBSD 社区就 PF 防火墙展开罕见规模的大讨论：邮件列表普遍认同与 OpenBSD PF 重新同步是好事，却无人愿意承担整体维护；曾尝试导入新版的 Baptiste Daroussin 因破坏 PF 而回退，表态只愿移植与自身用法相关的个别特性，共识与动手之间出现明显断层。（BSD Now EP47，[426.5-544.6]，L2）[订正：原 [478.06-502.04]，2026-09-30 SenseAudio 重转核对]
 - 安全官访谈勾勒出 FreeBSD 安全治理的全貌：章程使安全官名义上对系统中每一个安全漏洞负责，日常是安全公告的撰写与发布，实质更涵盖流程改进、漏洞缓解技术与安全特性优先级决策，2013 年 /dev/random 重构之争即由其主持裁决，其任内还推动以标准 CPE 元数据嵌入包体系以弥补 VuXML 字符串匹配易漏报的结构缺陷。（BSD Now EP47，[1810.0-2175.8]，L1）[订正：原 [1807.74-1938.24]，2026-09-30 SenseAudio 重转核对]
 - Bryan Drewery（转写误作 Brian Drury）自述入圈路径：2003 年前后经 IRC 结识经营 shell 服务的 FreeBSD 4.11 用户而入坑，2012 年因不满包安装状态找到 pkgng 项目并协同 Baptiste Daroussin，从提交补丁到获 ports 提交权，再到以包框架贡献者身份进入 Port Manager 团队并新获 source 提交权——包体系维护者由工具建设者自然生长而成。（BSD Now EP46，[1963.44-2018.28]，L1）
@@ -80,7 +80,7 @@ volume: 第05卷-freebsd的工程化奠基
 - OpenBSD 长期缺乏官方跨版本升级工具，第三方 ksh 脚本 OpenBSD Binary Upgrade 可完成 5.3 到 5.4 的二进制升级与大部分旧文件清理，但既不清理全部旧文件、也不提供签名更新。（BSD Now EP18，[2195.5-2283.7]，L2）[订正：原 [2198.60-2266.36] 仅校验 SHA256 而不提供签名，2026-09-29 SenseAudio 重转核对]
 - Justin Sherrill 自述约 2000 年首次接触 BSD，后因 Matt Dillon 从 FreeBSD 分支 DragonFly 而加入，长期负责 DragonFly Digest、发布管理与 Summer of Code 组织工作。（BSD Now EP11，[681.7-851.1]，L1）
 - 他说明 DragonFly 分叉源于 Matt Dillon 与 FreeBSD 在对称多处理路线上的分歧，Dillon 倾向轻量、简单的并发方式，最终使 DragonFly 网络栈几乎去除 BSD 世界常见的大型锁。（BSD Now EP11，[903.6-1005.7]，L1）
-- DragonFly BSD 3.6 将 dports（基于 Poudriere 构建的 DragonFly 版 ports）设为默认，并加入 SMP 扩展性改进与 Intel、AMD 图形支持的移植。（BSD Now EP11，[1486.8-1682.5]，L3）[订正：原 [4692.8-496.0]，2026-09-30 SenseAudio 重转核对]
+- DragonFly BSD 3.6 将 dports（基于 Poudriere 构建的 DragonFly 版 ports）设为默认，并加入 SMP 扩展性改进与 Intel、AMD 图形支持的移植。（BSD Now EP11，[1486.8-1682.5]，L3）[订正：原 [4692.8-496.0]，2026-10-01 交叉核验订正]
 - 新闻提及 OpenSSH 6.5 将 Curve25519 设为默认密钥交换算法，FreeBSD 引导菜单加入内核选择功能，Colin Percival 推出内核 panic 报告工具。（BSD Now EP11，[4762.8-4812.0]，L2）
 - Brauer 自述其在柏林 hackathon 收尾的校验和处理重写：新模型假定每条输出路径都具备校验和硬件卸载能力，栈上层不再预计算与就地修补校验和，仅需在数据包上置标记声明需要何种协议校验和，全部计算集中到输出路径末端的单一位置，仅在确知该路径无卸载能力时才回退软件实现。（BSDTalk EP234，[305.23-320.29]，L1）
 - 旧实现的缺陷根源在于部分网卡（以 Intel 与 Broadcom 千兆芯片为代表，约占服务器市场九成）要求保留伪头校验和，而另一些网卡做全量卸载，PF 无法判别数据包携带的是部分校验和还是完整校验和，就地更新便可能出错；重写后栈上层彻底不管校验和，桥接路径也被修正；ICMP 错误报文中被引用原始包的校验和因多数被截断而无法验证，选择忽略，并以手工构造异常报文的专用工具对 PF 行为做验证。（BSDTalk EP234，[822.90-1029.94]，L1）
@@ -120,14 +120,14 @@ volume: 第05卷-freebsd的工程化奠基
 - 总纲10 动手者创造历史：总纲10 动手者创造历史：Hansteen 以十八年持续运维累积的灰度陷阱数据，记录的是不被聚光灯照到的反垃圾邮件一线工作。（BSD Now EP648，[257.02-1152.28]，L1）
 - 总纲4 分离聚合是永恒规律：总纲4 分离聚合是永恒规律：BSDCan 领导权在代际之间交接、规划委员会持续吸纳新人，体现社区组织的聚合与再分配。（BSD Now EP648，[1382.64-1467.34]，L1）
 - 总纲9 经验优先：总纲9 经验优先：Siebenmann 从自身运维规则集与工具链出发评估防火墙迁移，而非依赖抽象性能宣传。（BSD Now EP648，[3368.44-3441.68]，L1）
-- 总纲10 动手者创造历史：FreeBSD 决策由“到场者”作出，主持人与提问者强调社区参与决定项目走向。（BSD Now EP360，[2452.99-2456.55]，L2）
+- 总纲10 动手者创造历史：FreeBSD 决策由“到场者”作出，主持人与提问者强调社区参与决定项目走向。（BSD Now EP360，[2452.99-2456.55]，L2）　[存疑脚注] 新转写止于 2443.10，未含片尾 [2452.99-2456.55] 对应段，时戳暂留原值待核（2026-09-30 SenseAudio 重转核对）
 - 总纲4 分离聚合是永恒规律：Core 团队成员更替体现治理层的分离与再聚合。（BSD Now EP360，[460.69-614.65]，L2）
 - 总纲10 动手者创造历史：总纲10 动手者创造历史：OCI 支持由 Samuel Karp、Doug Rabson 等志愿者的多年内核与工具链工作累积而成。（BSD Now EP640，[227.38-305.54]，L2）
 - 总纲9 经验优先：总纲9 经验优先：Jim Salter 以亲身经历过的断电、火灾、失窃等故障说明为何 RAID 不等于备份。（BSD Now EP640，[630.76-692.68]，L1）
 - 总纲22 知识注定过时：总纲22 知识注定过时：HAMMER 清理依赖 cron 定时触发的假设在笔记本关机场景下失效，反映旧运维假设随硬件使用方式变化而过时。（BSD Now EP640，[1081.24-1215.64]，L1）
 - 总纲10 动手者创造历史：Christophe 通过测试脚本复现 vnet 中的 PF panic 并逐行修复，是动手者以调试实践改进防火墙代码的典型记录。（BSD Now EP213，[1392.6-1907.0]，L2）[订正：原 [1413.72-1904.14]，2026-09-30 SenseAudio 重转核对]
-- 总纲10 动手者创造历史：本期是动手者创造历史的微观样本：Kristof Provost 的入坑起因只是“因为它跑不起来”，为修一块 Marvell 板卡上的问题从此一直在找 bug，补丁经批评、测试、合并的循环把他卷成 committer；Michael W. Lucas 因深夜 DNS 管理员离职被顶上岗位、为睡安稳觉换掉 Unixware 与 Solaris 转向 BSD；系统的演进正由这类具体修补与无名测试者的反馈累积而成。（BSD Now EP144，[1306.72-1354.34]，L1）
-- 总纲22 知识注定过时：工程知识的过时性在本期反复显形：grub-bhyve 被当事人定性为“一直只是权宜之计”，单命令 EFI 启动才是长期目标；McCorkle 判定自建的 boot1 非 EFI 提供者框架与 EFI 框架既有功能重复、接口别扭且无法向内核传递密钥，重构后 boot1 缩为一个很小的源文件并与 loader 共享全部后端驱动，bcache 成为通向 EFI 驱动模型与热插拔支持的唯一阻碍——每一代被视为完成的方案，都会成为下一代重构的对象。（BSD Now EP144，[2619.86-2734.50]，L2）
+- 总纲10 动手者创造历史：本期是动手者创造历史的微观样本：Kristof Provost 的入坑起因只是“因为它跑不起来”，为修一块 Marvell 板卡上的问题从此一直在找 bug，补丁经批评、测试、合并的循环把他卷成 committer；Michael W. Lucas 因深夜 DNS 管理员离职被顶上岗位、为睡安稳觉换掉 Unixware 与 Solaris 转向 BSD；系统的演进正由这类具体修补与无名测试者的反馈累积而成。（BSD Now EP144，[1277.0-1366.4]，L1）[订正：原 [1306.72-1354.34]，2026-09-30 SenseAudio 重转核对]
+- 总纲22 知识注定过时：工程知识的过时性在本期反复显形：grub-bhyve 被当事人定性为“一直只是权宜之计”，单命令 EFI 启动才是长期目标；McCorkle 判定自建的 boot1 非 EFI 提供者框架与 EFI 框架既有功能重复、接口别扭且无法向内核传递密钥，重构后 boot1 缩为一个很小的源文件并与 loader 共享全部后端驱动，bcache 成为通向 EFI 驱动模型与热插拔支持的唯一阻碍——每一代被视为完成的方案，都会成为下一代重构的对象。（BSD Now EP144，[2612.8-2747.6]，L2）[订正：原 [2619.86-2734.50]，2026-09-30 SenseAudio 重转核对]
 - 总纲10 动手者创造历史：PF 讨论与 LibreSSL 的对照揭示同一机制：社区共识不产生代码，唯有动手者启动历史——主持人引 LibreSSL 与 FreeBSD ZFS 安装器皆因一人先动手而带动集体参与，嘉宾更以亲历口吻总结“空白页是最难的起点”（638.58-645.34）；史书应当记录的是接住空白页的人，而非那纸无人执行的共识。（BSD Now EP47，[594.1-643.5]，L2）[订正：原 [609.12-645.34]，2026-09-30 SenseAudio 重转核对]
 - 总纲10 动手者创造历史：包体系的演进由动手者驱动而非领袖钦定：Google Summer of Code 学生写出新的依赖求解器使 package set -o 大半退役，构建集群从小两台机器被不断塞机器式地扩张并由个人以自写脚本勉力管理，Port Manager lurker 计划以 IRC 频道吸纳 Matt、Steve Wills 等新血——基础设施史的正主是这些具体操持者，正合总纲之动手者创造历史。（BSD Now EP46，[2126.10-2148.62]，L2）
 - 总纲10 动手者创造历史：总纲10 动手者创造历史：Luke Marsden 自建主机公司并发展为 HybridCluster，是动手者以创业实践推动系统应用的代表。（BSD Now EP24，[1074.80-1171.02]，L1）
@@ -142,8 +142,8 @@ volume: 第05卷-freebsd的工程化奠基
 
 **辨析**：
 
-- 转录将 Klara Systems 误记为 Clara Systems，将 Rubenerd 误记为 Rubinerd 或 Ruben Nerd，正文按业界通行名处理。　[考据脚注] 机构与博客名存在语音转写偏差，须以原文链接核验（BSD Now EP651，[782.30-782.70]，L4）
-- 转录中 OpenBSD PA-RISC 移植者被记作 Michael Shaliff，实为 Michael Shalayeff；因语音转写歧义，人名须以代码仓库与邮件列表核验。　[存疑脚注] 人名拼写存在转写歧义，未以 OpenBSD 代码仓库核验（BSD Now EP651，[2700.56-2735.66]，L4）
+- 转录将 Klara Systems 误记为 clari systems，将 Rubenerd 误记为 Ruben Nerd，正文按业界通行名处理。　[考据脚注] 机构与博客名存在语音转写偏差，须以原文链接核验（BSD Now EP651，[782.30-782.70]，L4）[订正：原 误记为 Clara Systems、Rubinerd 或 Ruben Nerd，2026-10-01 SenseAudio 重转核对]
+- 转录中 OpenBSD PA-RISC 移植者被记作 Michael Shalif，实为 Michael Shalayeff；因语音转写歧义，人名须以代码仓库与邮件列表核验。　[存疑脚注] 人名拼写存在转写歧义，未以 OpenBSD 代码仓库核验（BSD Now EP651，[2700.56-2735.66]，L4）[订正：原 被记作 Michael Shaliff，2026-10-01 SenseAudio 重转核对]
 - 转录将 Peter N. M. Hansteen 误记为 Peter N.M. Hanstein，且陷阱总数 17,8238 的数字断词存疑，须对照原文与数据文件。　[存疑脚注] 人名与统计数字存在语音转写歧义，须以原文与数据文件核验（BSD Now EP648，[997.58-1005.20]，L4）
 - DragonFly 的 pf 表限制是静态内核值且未暴露为可调 sysctl，是否需要仿照 FreeBSD 改造仍待确认。　[存疑脚注] DragonFly 侧改造计划待核实（BSD Now EP360，[1360.80-1390.40]，L4）
 - 转录将 Doug Rabson 记作 Doug Rapson、将 Dave Cottlehuber 记作 Dave Cossel-Huber，人名拼写存在转写歧义。　[存疑脚注] 贡献者姓名存在语音转写偏差，须以 FreeBSD Foundation 公告核验（BSD Now EP640，[227.38-290.18]，L4）

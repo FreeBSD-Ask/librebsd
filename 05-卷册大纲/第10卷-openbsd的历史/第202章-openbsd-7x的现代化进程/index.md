@@ -93,7 +93,7 @@ volume: 第10卷-openbsd的历史
 
 **辨析**：
 
-- 转写中 OpenBSD 帧缓冲的 RasterOps 引入时间与平台（i386/AMD64）细节存在 ASR 转写噪声，需对照 Cambus 原文。　[存疑脚注] 平台与时间细节待原文核对（BSD Now EP368，[215.94-251.96]，L4）
+- 新转写清晰读出：OpenBSD 帧缓冲的 rasops（RasterOps）系 2001 年自 NetBSD 引入，i386/AMD64 帧缓冲控制台于 2013 年随 Intel DRM 与 Radeon DRM 启用，细节仍宜对照 Cambus 原文。　[存疑脚注] 平台与时间细节待原文核对（BSD Now EP368，[203.20-240.50]，L4）[订正：原 引入时间与平台细节存在 ASR 转写噪声且 [215.94-251.96]，2026-09-30 SenseAudio 重转核对]
 - 转录将 Martin Husemann 记作 Martin Hussman，且节目开场将 NetBSD 11 与 FreeBSD 11 混写，须以 NetBSD 官方博客核验。　[存疑脚注] 人名与版本号存在转写歧义，未与 NetBSD 官方公告核验（BSD Now EP626，[1636.36-1806.82]，L4）
 - OpenJDK 维护者姓名在转录中作 Harold 或 Harald，具体拼写须以 FreeBSD Foundation 原文核验。　[存疑脚注] 维护者姓名存在转写歧义（BSD Now EP626，[867.98-873.02]，L4）
 

@@ -92,12 +92,12 @@ volume: 第06卷-freebsd的核心技术革新
 - FreeBSD 基金会 11 月更新：Matt Ahrens 推进 RAID-Z 扩容（由 FreeBSD 基金会、Delphix、iXsystems 合办），预计 2018 年合入并赶上 FreeBSD 12。（BSD Now EP223，[5082.36-5176.8]，L2）
 - Bryan Cantrill 在 Papers We Love 会议演讲中讲解自适应替换缓存（ARC）：ZFS 的实现并非单一最近最少使用缓存，而是划分为最近使用（MRU）、最常使用（MFU）与各自对应的幽灵缓存共四类，幽灵缓存记录刚被逐出的块，用于防止其被临时拉回时扰乱主缓存。（BSD Now EP219，[443.98-513.32]，L2）
 - 该期新闻以法文博客的截图教程介绍 OpenBSD 6.2 全盘加密安装：用 bioctl 加密分区并让系统在启动时要求口令；同一博客亦提供 FreeBSD 的 ZFS 加密向导路径，两系统最终都实现无口令即无法读取磁盘的全盘加密。（BSD Now EP219，[5202.38-5547.70]，L2）
-- Raymond Chen 复述复杂系统的基本失效模式定理：任何复杂系统都处于某种失效模式，局部补偿使问题潜伏，改变只会带来更复杂的反制。（BSD Now EP631，[138.14-224.48]，L1）
-- Dr. Brian Robert Callahan 为 QBE 的 ARM64 后端编写窥孔优化，消除冗余寄存器拷贝与可即时数化的算术指令，说明 ARM64 定长指令下只能通过删除指令获利。（BSD Now EP631，[286.40-737.76]，L1）
-- FreeBSD 笔记本作者发现 Nvidia 驱动会覆盖 Xorg 与 DRM 模块的文件，导致 GL 支持判定错乱，移除 Nvidia 驱动并重装 Intel 与 DRM 驱动后恢复正常。（BSD Now EP631，[765.84-908.32]，L1）
-- 以 devd 规则按 USB 厂商与产品 ID 建立符号链接，并把链接置于 jail 根目录而非 /dev，可将设备以稳定名称传入 FreeBSD jail。（BSD Now EP631，[921.84-1316.76]，L1）
-- Chris Siebenmann 澄清 ZFS 快照并非完全不可变，快照元数据会随独有空间统计、快照删除与重命名而更新，只有文件系统状态被冻结。（BSD Now EP631，[1321.58-1407.46]，L1）
-- 将 PeerTube 从 Debian 迁移到 FreeBSD 的过程以 UFS 而非 ZFS 作为客户机文件系统，以避免在 OmniOS 的 ZFS 上嵌套 ZFS。（BSD Now EP631，[1417.28-1794.48]，L1）
+- Raymond Chen 复述复杂系统的基本失效模式定理：任何复杂系统都处于某种失效模式，局部补偿使问题潜伏，改变只会带来更复杂的反制。（BSD Now EP631，[130.8-228.1]，L1）[订正：原 [138.14-224.48]，2026-10-01 SenseAudio 重转核对]
+- Dr. Brian Robert Callahan 为 QBE 的 ARM64 后端编写窥孔优化，消除冗余寄存器拷贝与可即时数化的算术指令，说明 ARM64 定长指令下只能通过删除指令获利。（BSD Now EP631，[280.3-735.8]，L1）[订正：原 [286.40-737.76]，2026-10-01 SenseAudio 重转核对]
+- FreeBSD 笔记本作者发现 Nvidia 驱动会覆盖 Xorg 与 DRM 模块的文件，导致 GL 支持判定错乱，移除 Nvidia 驱动并重装 Intel 与 DRM 驱动后恢复正常。（BSD Now EP631，[763.9-910.2]，L1）[订正：原 [765.84-908.32]，2026-09-30 SenseAudio 重转核对]
+- 以 devd 规则按 USB 厂商与产品 ID 建立符号链接，并把链接置于 jail 根目录而非 /dev，可将设备以稳定名称传入 FreeBSD jail。（BSD Now EP631，[918.0-1323.8]，L1）[订正：原 [921.84-1316.76]，2026-10-01 SenseAudio 重转核对]
+- Chris Siebenmann 澄清 ZFS 快照并非完全不可变，快照元数据会随独有空间统计、快照删除与重命名而更新，只有文件系统状态被冻结。（BSD Now EP631，[1302.1-1408.2]，L1）[订正：原 [1321.58-1407.46]，2026-10-01 SenseAudio 重转核对]
+- 将 PeerTube 从 Debian 迁移到 FreeBSD 的过程以 UFS 而非 ZFS 作为客户机文件系统，以避免在 OmniOS 的 ZFS 上嵌套 ZFS。（BSD Now EP631，[1414.3-1794.6]，L1）[订正：原 [1417.28-1794.48]，2026-09-30 SenseAudio 重转核对]
 - NetBSD announce 中 Soren Jacobsen 公告 netbsd-8 分支已创建，标志 NetBSD 8.0 发布流程启动；相比 7.0 的重大改进包括 USB 3.0 支持与含内核混音器的音频子系统重构。（BSD Now EP200，[154.14-195.94]，L2）
 - 关于“scrub of death”的讨论指出：ZFS 校验和使其能发现镜像读到的坏数据，而普通 RAID 镜像无校验、无法察觉副本不同步；真正需担心的是“邪恶磁盘控制器”写错位置，ZFS 至少会检测而非返回错误数据。（BSD Now EP200，[3827.28-3924.82]，L2）
 - 主持人援引 ZFS 联合创始人 Matt Ahrens 的说法：ZFS 并不比其他文件系统更需要或鼓励 ECC 内存，ECC 是可靠机器的通用要求；scrub of death 并非真实机制。（BSD Now EP200，[3933.54-4042.18]，L2）
@@ -188,10 +188,10 @@ volume: 第06卷-freebsd的核心技术革新
 - FreeBSD 基金会 2017 年 11 月开发项目更新，含 RAID-Z 扩容、Broadcom Wi-Fi、ARM bhyve 与 LLD。（BSD Now EP223，[5033.72-5513.96]，L2）
 - Bryan Cantrill 的 ARC 相关论文与 Papers We Love 会议演讲录像；OpenBSD 6.2 全盘加密法文教程博客（同一作者另写 FreeBSD 版本）。（BSD Now EP219，[56.18-608.32]，L3）
 - 访谈中 Allan Jude 自述 BSD Now 的创立：TJ（blackheim）提出每周 BSD 播客设想并试写三期节目笔记，后由 Chris Moore 与 Allan Jude 主持，Jupiter Broadcasting 提供制作、网站与赞助基础设施。（BSD Now EP219，[4392.52-4801.32]，L1）
-- Raymond Chen 于 devblogs.microsoft.com 的《The fundamental failure mode theorem》。（BSD Now EP631，[138.14-224.48]，L1）
-- Dr. Brian Robert Callahan 博客 QBE ARM64 窥孔优化系列。（BSD Now EP631，[286.40-737.76]，L1）
-- Chris Siebenmann 博客 ZFS snapshots aren't as immutable as I thought。（BSD Now EP631，[1321.58-1407.46]，L1）
-- 关于 FreeBSD jail 设备稳定名称与 PeerTube 迁移的两篇博客。（BSD Now EP631，[921.84-1794.48]，L1）
+- Raymond Chen 于 devblogs.microsoft.com 的《The fundamental failure mode theorem》。（BSD Now EP631，[130.8-228.1]，L1）[订正：原 [138.14-224.48]，2026-10-01 SenseAudio 重转核对]
+- Dr. Brian Robert Callahan 博客 QBE ARM64 窥孔优化系列。（BSD Now EP631，[280.3-735.8]，L1）[订正：原 [286.40-737.76]，2026-10-01 SenseAudio 重转核对]
+- Chris Siebenmann 博客 ZFS snapshots aren't as immutable as I thought。（BSD Now EP631，[1302.1-1408.2]，L1）[订正：原 [1321.58-1407.46]，2026-10-01 SenseAudio 重转核对]
+- 关于 FreeBSD jail 设备稳定名称与 PeerTube 迁移的两篇博客。（BSD Now EP631，[918.0-1794.6]，L1）[订正：原 [921.84-1794.48]，2026-09-30 SenseAudio 重转核对]
 - NetBSD announce 邮件列表 Soren Jacobsen 公告；Matt Ahrens 在 Ars Technica 评论及《ZFS 书》中的引语；OpenBSD trap sled 提交说明。（BSD Now EP200，[154.14-4042.18]，L3）
 - ino64 合入 FreeBSD 12-CURRENT 的公告；iX Systems 与 Michael Dexter 的反勒索软件文章；OpenBSD 用户自述文章。（BSD Now EP195，[63.72-1164.32]，L2）
 - Adrian Chadd 关于 802.11ac bring-up 的博客（BSD Now EP193，[81.22-648.52]，L1）
@@ -255,9 +255,9 @@ volume: 第06卷-freebsd的核心技术革新
 - 总纲5 没有必然性，只有偶然性：对 Docker 的辨析指出便利性常战胜效率，技术采纳受偶然性与习惯支配而非纯理性。（BSD Now EP223，[3344.12-3346.44]，L2）
 - 总纲10 动手者创造历史：Cantrill 逐层讲解缓存算法与工程取舍，TJ 试写三期节目笔记促成播客落地，均体现动手者以具体实践而非宣言推动 BSD 生态。（BSD Now EP219，[4392.52-4801.32]，L2）
 - 总纲9 经验优先：ARC 的四缓存与幽灵缓存设计来自对实际负载逐出模式的观察，展示工程经验先于理论说明。（BSD Now EP219，[443.98-513.32]，L2）
-- 总纲5 没有必然性，只有偶然性：总纲5 没有必然性，只有偶然性：基本失效模式定理强调复杂系统运行状态由具体故障与补偿关系决定，而非设计意图的必然实现。（BSD Now EP631，[138.14-224.48]，L1）
-- 总纲10 动手者创造历史：总纲10 动手者创造历史：笔记本作者通过动手排查定位 Nvidia 与 DRM 驱动文件覆盖问题，而非依赖文档结论。（BSD Now EP631，[874.40-908.32]，L1）
-- 总纲25 逻辑是形式主义而非世界本身的结构：总纲25 逻辑是形式主义而非世界本身的结构：ZFS 快照的不可变是概念化标签，其元数据实现仍随操作可变，说明概念与实现之间的形式主义距离。（BSD Now EP631，[1324.62-1407.46]，L1）
+- 总纲5 没有必然性，只有偶然性：总纲5 没有必然性，只有偶然性：基本失效模式定理强调复杂系统运行状态由具体故障与补偿关系决定，而非设计意图的必然实现。（BSD Now EP631，[130.8-228.1]，L1）[订正：原 [138.14-224.48]，2026-10-01 SenseAudio 重转核对]
+- 总纲10 动手者创造历史：总纲10 动手者创造历史：笔记本作者通过动手排查定位 Nvidia 与 DRM 驱动文件覆盖问题，而非依赖文档结论。（BSD Now EP631，[871.5-910.2]，L1）[订正：原 [874.40-908.32]，2026-09-30 SenseAudio 重转核对]
+- 总纲25 逻辑是形式主义而非世界本身的结构：总纲25 逻辑是形式主义而非世界本身的结构：ZFS 快照的不可变是概念化标签，其元数据实现仍随操作可变，说明概念与实现之间的形式主义距离。（BSD Now EP631，[1324.2-1408.2]，L1）[订正：原 [1324.62-1407.46]，2026-09-30 SenseAudio 重转核对]
 - 总纲9 经验优先：“scrub of death”被澄清为对 ZFS 数据完整性机制的误解，当事人 Matt Ahrens 的一手说明优先于流传的恐惧叙事，体现经验与考据对传闻的修正。（BSD Now EP200，[3933.54-4042.18]，L2）
 - 总纲10 动手者创造历史：ino64 从个人 PEFS 项目到基金会赞助、多人接力完成，显示大型基础设施改进由动手者接力实现，而非单一英雄或抽象计划。（BSD Now EP195，[63.72-500.34]，L2）
 - 总纲10 动手者创造历史：个人开发者因自身需要推进无线与存储特性，特性落地依赖具体动手者的持续投入。（BSD Now EP193，[147.78-648.52]，L2）
@@ -291,8 +291,8 @@ volume: 第06卷-freebsd的核心技术革新
 
 **辨析**：
 
-- 转录将 Klara Systems 误记为 Clara Systems，将 Rubenerd 误记为 Rubinerd 或 Ruben Nerd，正文按业界通行名处理。　[考据脚注] 机构与博客名存在语音转写偏差，须以原文链接核验（BSD Now EP651，[782.30-782.70]，L4）
-- 转录中 OpenBSD PA-RISC 移植者被记作 Michael Shaliff，实为 Michael Shalayeff；因语音转写歧义，人名须以代码仓库与邮件列表核验。　[存疑脚注] 人名拼写存在转写歧义，未以 OpenBSD 代码仓库核验（BSD Now EP651，[2700.56-2735.66]，L4）
+- 转录将 Klara Systems 误记为 clari systems，将 Rubenerd 误记为 Ruben Nerd，正文按业界通行名处理。　[考据脚注] 机构与博客名存在语音转写偏差，须以原文链接核验（BSD Now EP651，[782.30-782.70]，L4）[订正：原 误记为 Clara Systems、Rubinerd 或 Ruben Nerd，2026-10-01 SenseAudio 重转核对]
+- 转录中 OpenBSD PA-RISC 移植者被记作 Michael Shalif，实为 Michael Shalayeff；因语音转写歧义，人名须以代码仓库与邮件列表核验。　[存疑脚注] 人名拼写存在转写歧义，未以 OpenBSD 代码仓库核验（BSD Now EP651，[2700.56-2735.66]，L4）[订正：原 被记作 Michael Shaliff，2026-10-01 SenseAudio 重转核对]
 - bsdgrep 尚未完整支持 GNU 扩展，替换 base 中 GNU grep 的时机与兼容性范围仍待评估。　[存疑脚注] GNU 扩展兼容范围待核实（BSD Now EP373，[394.32-426.70]，L4）
 - 转写中“8 秒对 2.5 小时、1150 倍”为作者特定场景的实测数据，主持人亦提示学术上此类极端比值需谨慎看待。　[存疑脚注] 极端比值需结合具体场景理解（BSD Now EP354，[615.14-641.14]，L4）
 - Hammer2 紧急模式的“损坏快照”风险与 ZFS 预留空间对比为二手转述，未读 DragonFly 源码验证其具体实现边界。　[存疑脚注] 需对照 DragonFly 提交与手册核实危险程度（BSD Now EP324，[1557.86-1562.90]，L4）
@@ -305,8 +305,8 @@ volume: 第06卷-freebsd的核心技术革新
 - 转录将 Klara Systems 记作 Clara、将 Brian Kernighan 记作 Koenigan 或 Kernigan，人名与机构名存在语音转写偏差。　[存疑脚注] 机构与人物名称存在转写偏差，须以原文核验（BSD Now EP633，[2753.12-2784.64]，L4）
 - Bitnami 定价在转录中出现 600 亿、60 万与 7.2 万等不一致数字，具体金额须以 AWS Marketplace 与官方公告核验。　[存疑脚注] 价格数字存在转写歧义，未与官方定价页核验（BSD Now EP633，[1666.68-2041.44]，L4）
 - 编译器的可调试性结论基于特定版本（GCC 5.2、Clang 3.6 等）的示例，随版本演进可能改变，且文章作者所属公司售卖崩溃报告产品，存在利益关联。　[存疑脚注] 结论依赖具体编译器版本且作者存在商业利益关联（BSD Now EP223，[803.04-822.92]，L4）
-- 转录将 Raymond Chen 所属微软博客名称与若干命令参数出现错词，具体规则与命令须以原文核验。　[存疑脚注] 命令与规则细节存在转写歧义，须以原文核验（BSD Now EP631，[132.46-143.76]，L4）
-- PeerTube 迁移文章作者在转录中记作 Tom Fatigue，疑为主持人 Tom Jones 或他人，署名须以原文核验。　[存疑脚注] 作者署名存在转写歧义（BSD Now EP631，[1417.28-1432.32]，L4）
+- 转录将 Raymond Chen 所属微软博客名称与若干命令参数出现错词，具体规则与命令须以原文核验。　[存疑脚注] 命令与规则细节存在转写歧义，须以原文核验（BSD Now EP631，[130.8-147.6]，L4）[订正：原 [132.46-143.76]，2026-09-30 SenseAudio 重转核对]
+- PeerTube 迁移文章作者在转录中记作 Tom Fatigue，疑为主持人 Tom Jones 或他人，署名须以原文核验。　[存疑脚注] 作者署名存在转写歧义（BSD Now EP631，[1414.3-1450.9]，L4）[订正：原 [1417.28-1432.32]，2026-10-01 SenseAudio 重转核对]
 - [存疑脚注] DistroWatch 评测中遇到的硬件问题可能由评测者特定的 AMD APU 环境所致，未必能推广为 TrueOS 的普遍缺陷。　[存疑脚注] 单一评测者的硬件结论，需多源交叉验证。（BSD Now EP193，[2963.24-3020.76]，L4）
 - [存疑脚注] ino64 的 2007 年起始点与十年开发时长系播客转述，需对照 FreeBSD 提交历史核验。　[存疑脚注] 单一来源转述的时间线，缺提交记录印证。（BSD Now EP191，[2889.64-2908.0]，L4）
 - [存疑脚注] 教程安全缺陷研究数据为 2017 年快照，117 处漏洞发现不能代表当时 PHP 生态全貌。　[存疑脚注] 研究样本受 GitHub API 限制，覆盖范围有限。（BSD Now EP191，[4334.74-4354.04]，L4）

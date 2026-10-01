@@ -86,11 +86,11 @@ volume: 第18卷-全球社区地区bsd史
 
 **要点**：
 
-- 主持人转述 Telnet 协议史：1972 年 John Postel 撰写的 RFC 奠定 Telnet 协议，Postel 在文中自嘲该文档未能兑现及时、清晰与简洁的承诺；1990 年代早期 Telnet 曾用于访问国会图书馆、NASA 新闻与最高法院判决。（BSD Now EP558，[1253.14-1360.36]，L2）
-- 主持人介绍 towel.blinkenlights.nl 的 ASCII 版《星球大战》与 telehack.com 等项目，后者以 Telnet 重现 ARPANET 时代的 BBS、MUD 与文本冒险，构成对早期网络文化的保存。（BSD Now EP558，[956.74-1151.44]，L2）
-- FreeBSD 基金会发布 SSDF 自证报告第一版，面向美国政府软件供应链合规（NIST SP 800-218 与 Executive Order 14028）；NetApp 与 RG Nets 等伙伴引用该报告支持其向政府客户供货。（BSD Now EP558，[483.30-730.50]，L2）
-- BSDCan 组织委员会自述 Dan Langille 在主持二十年后交棒，委员会成立加拿大非营利组织 BSDCan Conferences Incorporated 以承接资金与赞助；当届白金赞助商为 Netflix，金级为 Apple 与 ARM。（BSD Now EP558，[2801.24-3400.76]，L1）
-- 委员会回顾 BSDCan 票价自 2005 年起十五年间维持 199 美元未变，现调整为 256 美元；其拍卖传统所得捐给 Ottawa Mission 慈善机构。（BSD Now EP558，[3545.42-3667.88]，L1）
+- 主持人转述 Telnet 协议史：1972 年 John Postel 撰写的 RFC 奠定 Telnet 协议，Postel 在文中自嘲该文档未能兑现及时、清晰与简洁的承诺；1990 年代早期 Telnet 曾用于访问国会图书馆、NASA 新闻与最高法院判决。（BSD Now EP558，[1248.1-1360.5]，L2）[订正：原 [1253.14-1360.36]，2026-10-01 SenseAudio 重转核对]
+- 主持人介绍 towel.blinkenlights.nl 的 ASCII 版《星球大战》与 telehack.com 等项目，后者以 Telnet 重现 ARPANET 时代的 BBS、MUD 与文本冒险，构成对早期网络文化的保存。（BSD Now EP558，[956.6-1151.6]，L2）[订正：原 [956.74-1151.44]，2026-09-30 SenseAudio 重转核对]
+- FreeBSD 基金会发布 SSDF 自证报告第一版，面向美国政府软件供应链合规（NIST SP 800-218 与 Executive Order 14028）；NetApp 与 RG Nets 等伙伴引用该报告支持其向政府客户供货。（BSD Now EP558，[453.7-741.7]，L2）[订正：原 [483.30-730.50]，2026-10-01 SenseAudio 重转核对]
+- BSDCan 组织委员会自述 Dan Langille 在主持二十年后交棒，委员会成立加拿大非营利组织 BSDCan Conferences Incorporated 以承接资金与赞助；当届白金赞助商为 Netflix，金级为 Apple 与 ARM。（BSD Now EP558，[2789.3-3401.1]，L1）[订正：原 [2801.24-3400.76]，2026-10-01 SenseAudio 重转核对]
+- 委员会回顾 BSDCan 票价自 2005 年起十五年间维持 199 美元未变，现调整为 256 美元；其拍卖传统所得捐给 Ottawa Mission 慈善机构。（BSD Now EP558，[3545.0-3681.0]，L1）[订正：原 [3545.42-3667.88]，2026-10-01 SenseAudio 重转核对]
 - Dan Langille 自述 FreshPorts 迁移史：该服务原运行于 New Jersey 由 IAC Systems 捐赠的主机，主机突然失效后回退 Austin 旧主机，随后借重写机会迁移至 AWS，并将提交处理、Web 请求与数据库拆分为独立 jail；他称 FreshPorts 已运行约 20 年，希望未来由 FreeBSD 项目接手维护。（BSD Now EP499，[2093.20-2320.00]，L1）
 - 其家庭实验室以一台从电子废弃物中回收的 Dell R730 取代两台旧主机，运行约 40 个 FreeBSD jail，主要用于 FreshPorts 的 dev、test、stage 环境及多种服务；迁移通过 Syncoid 的 ZFS 发送接收完成，并带来约 25% 的功耗下降。（BSD Now EP499，[139.80-530.00]，L1）
 - Langille 以 BSDCan 组织者身份回顾会议史：其自 2004 年举办第一届 BC camp，至 2023 年已连续办会 20 年；疫情后会议以严格口罩政策线下重启，并招募志愿者分担会议包、场地与演讲者事务。（BSD Now EP499，[1442.02-2093.20]，L1）
@@ -113,7 +113,7 @@ volume: 第18卷-全球社区地区bsd史
 
 **史料**：
 
-- 本期史料包括 Telnet 历史的二手文章、FreeBSD 基金会 SSDF 公告，以及 BSDCan 组织委员会 Michael Lucas、Patrick 与 Peter Hansteen 的一手自述。（BSD Now EP558，[483.30-3400.76]，L1）
+- 本期史料包括 Telnet 历史的二手文章、FreeBSD 基金会 SSDF 公告，以及 BSDCan 组织委员会 Michael Lucas、Patrick 与 Peter Hansteen 的一手自述。（BSD Now EP558，[453.7-3401.1]，L1）[订正：原 [483.30-3400.76]，2026-10-01 SenseAudio 重转核对]
 - FreshPorts 项目迁移经历为 Dan Langille 本人一手自述，涉及 New Jersey、Austin 与 AWS 三代主机及 jail 拆分。（BSD Now EP499，[2093.20-2320.00]，L1）
 - BSDCan 会议组织史为 Dan Langille 本人一手自述，涉及 2004 年首届 BC camp 与 2023 年第二十届办会。（BSD Now EP499，[1442.02-2093.20]，L1）
 - Syncoid 与 ZFS 快照在 jail 迁移中的应用，为 Dan Langille 本人一手实践叙述。（BSD Now EP499，[911.54-1104.46]，L1）
@@ -130,9 +130,9 @@ volume: 第18卷-全球社区地区bsd史
 
 **史观**：
 
-- 总纲18 时间是一种形式主义：Telnet 从主流远程访问工具变为小众怀旧文化，呈现技术生命周期随时代需求而更替的形式化进程。（BSD Now EP558，[1253.14-1412.28]，L2）
-- 总纲10 动手者创造历史：Dan Langille 与历届志愿者持续二十年操办 BSDCan，其交棒与新机构设立延续了社区会议，体现动手者对社区基础的长期投入。（BSD Now EP558，[2801.24-3108.48]，L1）
-- 总纲13 法律与道德是利益分配：SSDF 自证是软件供应商满足政府采购合规的制度安排，反映安全标准背后的法律与利益分配。（BSD Now EP558，[483.30-730.50]，L2）
+- 总纲18 时间是一种形式主义：Telnet 从主流远程访问工具变为小众怀旧文化，呈现技术生命周期随时代需求而更替的形式化进程。（BSD Now EP558，[1248.1-1437.0]，L2）[订正：原 [1253.14-1412.28]，2026-10-01 SenseAudio 重转核对]
+- 总纲10 动手者创造历史：Dan Langille 与历届志愿者持续二十年操办 BSDCan，其交棒与新机构设立延续了社区会议，体现动手者对社区基础的长期投入。（BSD Now EP558，[2789.3-3119.9]，L1）[订正：原 [2801.24-3108.48]，2026-10-01 SenseAudio 重转核对]
+- 总纲13 法律与道德是利益分配：SSDF 自证是软件供应商满足政府采购合规的制度安排，反映安全标准背后的法律与利益分配。（BSD Now EP558，[453.7-741.7]，L2）[订正：原 [483.30-730.50]，2026-10-01 SenseAudio 重转核对]
 - 总纲10 动手者创造历史：个人长期维护公共服务并组织社区会议，构成 BSD 生态的隐性基础设施。：Dan Langille 长期独自维护 FreshPorts 与组织 BSDCan，是默默做事的动手者。（BSD Now EP499，[2093.20-2320.00]，L1）
 - 总纲9 经验优先：以实际部署需要为准绳选择 jail 管理方式，而非盲从现成管理器。：其 jails 实践由具体场景推动，弃用管理器回归脚本，显示经验优先于既有工具的教条。（BSD Now EP499，[1666.86-1734.30]，L1）
 - 总纲4 分离聚合是永恒规律：服务组件在单主机聚合与多 jail 分离之间重组，架构随需求循环演进。：FreshPorts 由单主机聚合拆分为多 jail 分离，服务架构在分离聚合中演化。（BSD Now EP499，[2093.20-2320.00]，L1）
@@ -146,8 +146,8 @@ volume: 第18卷-全球社区地区bsd史
 
 **辨析**：
 
-- Telnet 1972 年 RFC 的作者归属与 John Postel 的自嘲引文来自二手文章，须以 RFC 原文核实。　[存疑脚注] RFC 作者与引文为二手转述，未经 RFC 原文核实。（BSD Now EP558，[1253.14-1319.76]，L4）
-- BSDCan 票价自 2005 年起十五年未变的说法为委员口述，须以历年会议档案核实。　[存疑脚注] 票价历史为委员口述，未经历年会议档案核实。（BSD Now EP558，[3545.42-3563.30]，L4）
+- Telnet 1972 年 RFC 的作者归属与 John Postel 的自嘲引文来自二手文章，须以 RFC 原文核实。　[存疑脚注] RFC 作者与引文为二手转述，未经 RFC 原文核实。（BSD Now EP558，[1248.1-1319.7]，L4）[订正：原 [1253.14-1319.76]，2026-10-01 SenseAudio 重转核对]
+- BSDCan 票价自 2005 年起十五年未变的说法为委员口述，须以历年会议档案核实。　[存疑脚注] 票价历史为委员口述，未经历年会议档案核实。（BSD Now EP558，[3545.0-3564.0]，L4）[订正：原 [3545.42-3563.30]，2026-09-30 SenseAudio 重转核对]
 - FreshPorts 约二十年历史的起止年份与三代主机迁移时间线为当事人回忆，具体年份需以项目档案与邮件列表核验。　[存疑脚注] 项目起止与迁移年份为口述概数，需以 FreshPorts 档案或公告交叉验证。（BSD Now EP499，[2093.20-2320.00]，L4）
 - BSDCan 自 2004 年起连续办会二十年的说法为口述概数，需以会议档案确认是否存在中断或纯线上年份。　[存疑脚注] 办会连续年数为口述表述，需以会议历年记录核验是否含线上或中断年份。（BSD Now EP499，[1442.02-2093.20]，L4）
 - 转录将 Peter N. M. Hansteen 误记为 Peter N.M. Hanstein，且陷阱总数 17,8238 的数字断词存疑，须对照原文与数据文件。　[存疑脚注] 人名与统计数字存在语音转写歧义，须以原文与数据文件核验（BSD Now EP648，[997.58-1005.20]，L4）

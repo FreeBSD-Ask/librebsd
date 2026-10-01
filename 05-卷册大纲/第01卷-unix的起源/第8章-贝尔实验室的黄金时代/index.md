@@ -49,26 +49,26 @@ volume: 第01卷-unix的起源
 
 **要点**：
 
-- OpenBSD 6.1 于 2017 年发布，是该项目第 42 个版本；该版本引入 Clang 作为基础编译器，动因是既有 GCC 的 GPLv2 版本无法支持 ARM64 平台。（BSD Now EP487，[72.92-129.86]，L2）
-- 主持人逐段解读 Ritchie《The Evolution of the Unix Time-sharing System》，指出该论文回顾 UNIX 自 1969 年诞生、经 PDP-7 至 PDP-11 移植的早期史，依次讲述文件系统、进程控制、I/O 重定向与管道发明。（BSD Now EP487，[1048.88-1308.52]，L2）
-- Ping 程序由 Mike Muuss 于 1983 年在 4.2a BSD 上编写，直接动因是同年 7 月 Dave Mills 在 DARPA 会议上关于以定时 ICMP 回显请求测量路径延迟的评论；Muuss 为此补全了内核的 raw ICMP socket 支持。（BSD Now EP487，[4653.46-4790.7]，L2）
-- FreeBSD 将 ZFS 压缩发送接收功能导入 vendor branch，该功能依赖此前的 compressed ARC，使 ZFS send 可跨网络直接传输压缩数据，避免先解压再压缩的低效路径。（BSD Now EP487，[3892.42-4264.2]，L2）
-- FreeBSD MAC 强制访问控制框架源自 DARPA 资助的 TrustedBSD 项目，允许以细粒度策略替代传统 root 特权；以 portacl 为例，可让非 root 用户绑定 1024 以下的特权端口。（BSD Now EP487，[4264.2-4648.22]，L2）
+- 主持人 Benedict Reuschling 独自主持本期（Tom 与 Alan 休假），回顾上周已发布的 EuroBSDCon 2022 采访并预告本期压轴的对长期 committer John Baldwin 的采访，称 Michael W Lucas 曾誉其为“the big committer”。（BSD Now EP487，[64.9-133.1]，L2）[订正：原 “OpenBSD 6.1 于 2017 年发布，是该项目第 42 个版本；该版本引入 Clang 作为基础编译器，动因是既有 GCC 的 GPLv2 版本无法支持 ARM64 平台。（BSD Now EP487，[72.92-129.86]，L2）”，2026-09-30 SenseAudio 重转核对]
+- 主持人逐段解读 FreeBSD Foundation 网站上 Patrick McEvoy 的 EuroBSDCon 2022 维也纳会议 trip report 前半：7 月起向董事会询问场地详情并租赁设备，抵达当日即与租赁商核对装备清单，以 Blackmagic Windows 客户端与改写 XML 流媒体配置做前期调试，又制作含《蓝色多瑙河》改编的预流音乐视频，并依靠其多年自建的“streaming system in a backpack”装备集支撑各 dev room 流媒体。（BSD Now EP487，[178.0-324.5]，L2）[订正：原 “主持人逐段解读 Ritchie《The Evolution of the Unix Time-sharing System》，指出该论文回顾 UNIX 自 1969 年诞生、经 PDP-7 至 PDP-11 移植的早期史，依次讲述文件系统、进程控制、I/O 重定向与管道发明。（BSD Now EP487，[1048.88-1308.52]，L2）”，2026-09-30 SenseAudio 重转核对]
+- 主持人解读 trip report 后半：FreeBSD 与 NetBSD 峰会日的流媒体被他当作主会前的演练并顺利完成；周五晚接连遭遇双重意外——流媒体团队另一成员临时取消行程、captive portal 同时覆盖 Wi-Fi 与以太网致原定方案作废——在妻子“这是社区，去求助”的点拨下转向 OBS 网络摄像头方案，Christophe（DCH）连夜提供备份 Windows 笔记本配合 Ventoy 盘重装 Windows 10 ISO，社区响应其所有求助，最终在十二小时内搭起三套以本地与 scaleengine.com 双路录制的流媒体系统，并于凌晨三点半就绪。（BSD Now EP487，[326.4-589.5]，L2）[订正：原 “Ping 程序由 Mike Muuss 于 1983 年在 4.2a BSD 上编写，直接动因是同年 7 月 Dave Mills 在 DARPA 会议上关于以定时 ICMP 回显请求测量路径延迟的评论；Muuss 为此补全了内核的 raw ICMP socket 支持。（BSD Now EP487，[4653.46-4790.7]，L2）”，2026-09-30 SenseAudio 重转核对]
+- John Baldwin 自述近年工作：与 Netflix 合作将其为自身场景开发的内核 TLS（KTLS）框架修整后上游化并合入 FreeBSD 主线，同时推动 OpenSSL 补丁向上合并，并把此前仅支持软件加速的框架扩展到部分智能网卡上的 NIC TLS 卸载；此外多年来从事设备驱动与基础设施工作，改进 ACPI 与 PCI 支持及热插拔。（BSD Now EP487，[888.1-948.3]，L2）[订正：原 “FreeBSD 将 ZFS 压缩发送接收功能导入 vendor branch，该功能依赖此前的 compressed ARC，使 ZFS send 可跨网络直接传输压缩数据，避免先解压再压缩的低效路径。（BSD Now EP487，[3892.42-4264.2]，L2）”，2026-09-30 SenseAudio 重转核对]
+- John Baldwin 回顾 Alpha 架构上的 SMP 工程：SMP 工作起步于源自 BSD/OS 的大型代码导入，其中相关代码当时几乎全为 i386 专属，Alpha 是第一个在其上 bring up SMP 的非 i386 架构——Doug Rabson 已完成早期工作，Baldwin 将 SMP 世界带入 ithread 等机制并让 Alpha 跑通 ithread 与 SMP；过程中他整理干净的抽象、为 IA-64 的内存屏障原子操作作规划，使大部分 mutex 代码改为机器无关，Alpha SMP 尤其倒逼 SMP 代码迁出 sys/i386 并清理多处硬编码。（BSD Now EP487，[1003.7-1131.3]，L2）[订正：原 “FreeBSD MAC 强制访问控制框架源自 DARPA 资助的 TrustedBSD 项目，允许以细粒度策略替代传统 root 特权；以 portacl 为例，可让非 root 用户绑定 1024 以下的特权端口。（BSD Now EP487，[4264.2-4648.22]，L2）”，2026-09-30 SenseAudio 重转核对]
 - FreeBSD 12.1 是首个以 open ZFS 端口支撑原生 ZFS 加密所需密码学原语的版本，同时导入 BearSSL 为 Juniper 的验证引导装载器提供轻量 TLS，并纳入 MLX5 固件更新工具与 FUSE 驱动重写。（BSD Now EP325，[63.84-68.92]，L2）
 - 12.1 预告 i386 默认 CPU 类型将由 486 升至 686（自 13 起），因 486 缺 64 位原子操作且用户态无法模拟；CTM 与 timed 等工具被标记废弃。（BSD Now EP325，[543.78-594.94]，L2）
 - 重刊的《Unix Evolution 1975–1984》一文梳理 research Unix v6/v7/v8 的文本格式化、编译器与开发工具流变，并记述 Ritchie 关于 man page BUGS 节以公开羞辱促修复的自述。（BSD Now EP325，[723.74-1018.28]，L2）
 - OpenBSD 在 base unbound 默认启用 DNSSEC 验证，并以 Quad9 的 9.9.9.9 做约束验证绕开 NTP 与 DNSSEC 的时钟引导死锁；2018 年曾因时钟问题回滚后于此次重开。（BSD Now EP325，[2062.14-2169.84]，L2）
 - Rainbow Crack 的 OpenBSD 编译补丁引出彩虹表原理：加盐与多轮散列（bcrypt 可至百万轮、SHA-512 crypt 默认万轮）使针对字典的预计算表失效，凸显密码存储需抗彩虹表算法。（BSD Now EP325，[2632.88-2909.48]，L2）
 - Johannes Lundberg 向 FreeBSD 邮件列表提交 Wayland 移植进度报告：Wayland 1.12.0 与 Weston 1.12.0 已可在 FreeBSD 上运行，Weston 自带客户端工作正常，xWayland 可承载未移植的 X11 应用（仅手动启动且最大化窗口时正常，疑为 Weston IPC 问题），GTK3 应用如 gedit、Gnumeric 与 XFCE4 终端均可运行，XFCE 桌面则不支持 GTK3，SDL2 的 Wayland 后端经游戏简测通过，i3 兼容合成器 Sway 亦可用；现代 Intel 显卡需 Matt Macy 的新图形驱动工作，并以自维护 ports 树配合 Poudriere 重建图形栈乃至全树；gdm 因依赖 Linux 的 logind 而搁置，社区有意改以 Qt 系的 PCDM 承接。（BSD Now EP173，[279.52-419.90]，L2）[订正：原 Wayland 8.12.0 与 Weston 8.12.0、原 XFCE 桌面均可运行、原 [279.52-327.5]，2026-09-30 SenseAudio 重转核对]
-- Antoine Jacoutot 向 OpenBSD 邮件列表公告 syspatch：面向 -stable 发行版的二进制补丁工具，与 bspatch 式二进制差分不同，它下载经签名的完整文件 tarball 并按安装器方式替换；测试补丁未经 OpenBSD 项目背书且不应信任，反馈须直达其个人邮箱而非污染邮件列表；此前升级 -stable 只能源码重建或重装新快照，syspatch 提供了中间道路，作者期望其随 OpenBSD 6.1 落地，并明确需要使用人数与统计反馈来评估可靠性。（BSD Now EP173，[105.04-203.7]，L2）
+- Antoine Jacoutot 向 OpenBSD 邮件列表公告 syspatch：面向 -stable 发行版的二进制补丁工具，与 bspatch 式二进制差分不同，它下载经签名的完整文件 tarball 并按安装器方式替换；测试补丁未经 OpenBSD 项目背书且不应信任，反馈须直达其个人邮箱而非污染邮件列表；此前升级 -stable 只能源码重建或重装新快照，syspatch 提供了中间道路，作者期望其随 OpenBSD 6.1 落地，并明确需要使用人数与统计反馈来评估可靠性。（BSD Now EP173，[105.04-229.3]，L2）[订正：原 [105.04-203.7]，2026-09-30 SenseAudio 重转核对]
 - Dennis Ritchie 撰文追述 Unix 源码中的趣味史：V6 彩蛋“values of B may give rise to DOM”出自 1970 年代初专利打字员打断 ed 打印输出时纸带上的残句，原是物理专利申请中‘贝塔值变化引起畴壁移动’的片段，经 McIlroy 的文语转换实验念出 doom 与 dominance 的谐音而成为实验室的共享珍宝，后被写入 V6 源码——里奇推测大概率出自 Bob Morris，也可能是 Ken；他并澄清“你不会被期望理解这段注释”本意是‘这不会考’式的善意提示而非傲慢挑衅，将其引为贝尔实验室注释质量的 slur 属不公正引申，见过原文者多为 1975 年前后第六版用户或 John Lions 注释书的读者。（BSD Now EP173，[2332.96-2512.8]，L1）
 - Beastie bits 一束：iocell 2.0 发布——一位 FreeBSD 开发者因偏爱 shell 脚本版而分叉原 iocage 并继续演进，Python 重写版则临近发布，两者存储监牢配置的方式相近或可兼容；Ted Unangst 追问 link_ntoa() 究竟谁在调用——该函数缺陷自 1970 年代引入并波及所有 BSD，OpenBSD libc 中已标记弃用，全库检索仅 route 与 netstat 三处引用，或可直接移除；Trent 用其 bhyve 管理框架 iohyve 在 ThinkPad 上的 TrueOS 中启动 Android x86 并公开配置 gist。（BSD Now EP173，[2795.08-3015.90]，L2）[订正：原 [2795.08-2949.74]，2026-09-30 SenseAudio 重转核对]
 
 **史料**：
 
-- Ritchie, D. M.《The Evolution of the Unix Time-sharing System》论文原文，主持人在节目中引述其结构与结论。（BSD Now EP487，[1048.88-1308.52]，L2）
-- Mike Muuss 个人主页自述：Ping 是他在一个晚上写出的约一千行 hack，命名取自声呐回波定位原理；该主页还记载 Dave Mills 1983 年 7 月 DARPA 会议评论的缘起。（BSD Now EP487，[4653.46-4790.7]，L2）
-- OpenBSD 6.1 发布新闻与 Release Notes，涉及第 42 个版本、Clang 基础编译器引入与 ARM64 平台支持。（BSD Now EP487，[72.92-129.86]，L2）
+- Patrick McEvoy 的 EuroBSDCon 2022 维也纳会议 trip report（载于 FreeBSD Foundation 网站），主持人逐段宣读其峰会日与主会前准备部分。（BSD Now EP487，[192.4-605.8]，L2）[订正：原 “Ritchie, D. M.《The Evolution of the Unix Time-sharing System》论文原文，主持人在节目中引述其结构与结论。（BSD Now EP487，[1048.88-1308.52]，L2）”，2026-09-30 SenseAudio 重转核对]
+- John Baldwin 受访自述其 BSD 履历：高中时与朋友打算为 386 写自己的操作系统与编译器，大学因本校以 FreeBSD 作为本科生的 Unix 而转向正经使用 FreeBSD（pf 路由器、用户态 PPP、坚持在 FreeBSD 上完成 Java 作业），毕业前经写文档“后门”进入社区并于 1999 年 8 月获 commit bit，随 Mike Smith 在引导装载器写汇编，其后受雇于 Walnut Creek CDROM。（BSD Now EP487，[647.6-878.7]，L2）[订正：原 “Mike Muuss 个人主页自述：Ping 是他在一个晚上写出的约一千行 hack，命名取自声呐回波定位原理；该主页还记载 Dave Mills 1983 年 7 月 DARPA 会议评论的缘起。（BSD Now EP487，[4653.46-4790.7]，L2）”，2026-09-30 SenseAudio 重转核对]
+- 本期开头宣读的赞助信息：Tarsnap 在线备份（tarsnap.com/bsdnow）与节目 Patreon 页面（patreon.com/bsdnow），为节目官方资助线索。（BSD Now EP487，[36.7-64.6]，L2）[订正：原 “OpenBSD 6.1 发布新闻与 Release Notes，涉及第 42 个版本、Clang 基础编译器引入与 ARM64 平台支持。（BSD Now EP487，[72.92-129.86]，L2）”，2026-09-30 SenseAudio 重转核对]
 - FreeBSD 12.1 发布公告与 releng 说明，列明 open ZFS、BearSSL、MLX5、FUSE 重写及废弃项。（BSD Now EP325，[128.32-148.56]，L2）
 - Microsystems Magazine 1984 年 11 月号《Unix Evolution》文章（Daemon News 1999 重刊），为节目重读的历史文本。（BSD Now EP325，[740.14-756.02]，L2）
 - Dennis Ritchie 关于 man page BUGS 节政策的引文，属当事人一手表述。（BSD Now EP325，[1012.82-1027.82]，L1）
@@ -77,9 +77,9 @@ volume: 第01卷-unix的起源
 
 **史观**：
 
-- 总纲23 一切历史写作都是基于哲学设定的历史小说：主持人引述 Ritchie 论文结论，指出早期 UNIX 编程环境虽以今日标准显得严酷原始，但当事人当时并不觉得如此，记忆只留住美好与持存之物。（BSD Now EP487，[1261.84-1298.56]，L2）
-- 总纲5 没有必然性，只有偶然性：主持人指出论文显示 UNIX 早期已萌生虚拟化、容器与能力等思想，只因当时机器不够强大而无法实现，表明技术形态受物质条件制约而非线性进步。（BSD Now EP487，[1139.58-1162.48]，L2）
-- 总纲10 动手者创造历史：Mike Muuss 自述 Ping 为一晚写成的千行 hack，并感慨若早知它会成为一生最著名的成就便会再多打磨，体现动手者在具体机缘中的创造。（BSD Now EP487，[4780.22-4790.7]，L2）
+- 总纲23 一切历史写作都是基于哲学设定的历史小说：John Baldwin 自述高中时把“内核黑客”设定为软件能力的巅峰、最难之事，甚至立志“爬过碎玻璃”也要做到，如今则认为内核“不过是一个大 C 程序”、其实并不太难——同一段职业史在当事人不同人生阶段的设定下被写成不同的故事。（BSD Now EP487，[1691.0-1764.2]，L2）[订正：原 “总纲23 一切历史写作都是基于哲学设定的历史小说：主持人引述 Ritchie 论文结论，指出早期 UNIX 编程环境虽以今日标准显得严酷原始，但当事人当时并不觉得如此，记忆只留住美好与持存之物。（BSD Now EP487，[1261.84-1298.56]，L2）”，2026-09-30 SenseAudio 重转核对]
+- 总纲5 没有必然性，只有偶然性：John Baldwin 本为编写新安装器与 IA-64 引导装载器而受雇于 Walnut Creek CDROM，到岗后却“阴差阳错”转向 SMP 工作并被继续留任——他自嘲“受雇要做的工作几乎没做”，其从 doc committer 到内核黑客的路径系于机缘而非计划。（BSD Now EP487，[846.0-878.7]，L2）[订正：原 “总纲5 没有必然性，只有偶然性：主持人指出论文显示 UNIX 早期已萌生虚拟化、容器与能力等思想，只因当时机器不够强大而无法实现，表明技术形态受物质条件制约而非线性进步。（BSD Now EP487，[1139.58-1162.48]，L2）”，2026-09-30 SenseAudio 重转核对]
+- 总纲10 动手者创造历史：Patrick McEvoy 在流媒体团队临时取消、captive portal 覆盖全场的困境中，靠 OBS 网络摄像头方案、社区连夜提供的 Windows 笔记本与 Ventoy 盘重装，十二小时内亲手拼出三套流媒体系统，使 EuroBSDCon 2022 的报告得以录制直播——会议基础设施史由动手者在具体困境中造就。（BSD Now EP487，[425.2-589.5]，L2）[订正：原 “总纲10 动手者创造历史：Mike Muuss 自述 Ping 为一晚写成的千行 hack，并感慨若早知它会成为一生最著名的成就便会再多打磨，体现动手者在具体机缘中的创造。（BSD Now EP487，[4780.22-4790.7]，L2）”，2026-09-30 SenseAudio 重转核对]
 - 总纲3 不存在进步，只有权力再分配：总纲3 不存在进步，只有权力再分配：i386 486→686、GCC 4.2 弃用、CTM 与 timed 废弃不是进步，而是支持资源在不同架构间的再分配。（BSD Now EP325，[567.10-625.50]，L2）
 - 总纲8 本体论上各方平等：总纲8 本体论上各方平等：FreeBSD、OpenBSD、HardenedBSD、OPNsense 同屏报道，各分支地位平等，不以体量定优劣。（BSD Now EP325，[1698.58-1805.42]，L2）
 - 总纲10 动手者创造历史：总纲10 动手者创造历史：Tom Jones 以 git worktree、tmux、cscope、bhyve 的动手流程呈现 FreeBSD 开发者的真实工作方式。（BSD Now EP325，[1317.46-1484.78]，L2）
@@ -91,8 +91,8 @@ volume: 第01卷-unix的起源
 
 **辨析**：
 
-- 本册转写时间戳乱序，且存在多处专名识别错误，如 FreeNAS 被识别为 Freenaz、illumos 被识别为 Alumos 或 Olimo，引用时须回查原音频或官方文本。　[存疑脚注] 转写质量存疑，专名与时间戳需人工复核（BSD Now EP487，[3299.74-3425.06]，L4）
-- OpenBSD 6.1 以 Clang 取代 GCC 的动因被表述为 GCC 的 GPLv2 版本无法支持 ARM64，此说来自主持人转述，须以 OpenBSD 官方公告或开发者邮件交叉验证。　[存疑脚注] 单一播客来源，需 OpenBSD 官方公告交叉验证（BSD Now EP487，[104.7-129.86]，L4）
+- 新转写时间戳有序，但仍存在较多专名识别错误，如 BSD Now 被识别为“BST Now”、ddb 被识别为“GDB”、bhyve 被识别为“Beihai”或“beehive”、FreeBSD 被识别为“Freiburg's”或“FreePBX”、Walnut Creek CDROM 被识别为“Walnut Creek City ROM”、SMP 被识别为“S and P”或“SMP E G”（应为 SMP/SMPNG）、FDT 被识别为“FTT”、EuroBSDCon 被识别为“Euro BST Con”“Eurpeasticon”或“EuroVSEC Con”，引用时须回查原音频或官方文本。　[存疑脚注] 转写专名需人工复核（BSD Now EP487，[36.7-2044.0]，L4）[订正：原 “本册转写时间戳乱序，且存在多处专名识别错误，如 FreeNAS 被识别为 Freenaz、illumos 被识别为 Alumos 或 Olimo，引用时须回查原音频或官方文本。　[存疑脚注] 转写质量存疑，专名与时间戳需人工复核（BSD Now EP487，[3299.74-3425.06]，L4）”，2026-09-30 SenseAudio 重转核对]
+- 主持人只宣读 trip report 至 FreeBSD/NetBSD 峰会日与周五晚双重意外为止，对主会三天流媒体最终是否顺利未加转述，仅以“留待读者自读”收束；引用 EuroBSDCon 2022 主会流媒体成败的结论时不能以本期为据。　[存疑脚注] 主会流媒体结果不在本期宣读范围内（BSD Now EP487，[590.7-605.8]，L4）[订正：原 “OpenBSD 6.1 以 Clang 取代 GCC 的动因被表述为 GCC 的 GPLv2 版本无法支持 ARM64，此说来自主持人转述，须以 OpenBSD 官方公告或开发者邮件交叉验证。　[存疑脚注] 单一播客来源，需 OpenBSD 官方公告交叉验证（BSD Now EP487，[104.7-129.86]，L4）”，2026-09-30 SenseAudio 重转核对]
 - Rainbow Crack 网站自 2007 年后基本未更新，教程提及的某域名已被劫持为垃圾页，该工具的可用性与教程安全性存疑。　[考据脚注] 站点域名易主，链接与补丁来源需重新核实（BSD Now EP325，[2683.40-2706.96]，L4）
 - 12.1 的 open ZFS 与原生加密支持为发布说明转述，具体实现路径与加密原语宜以 FreeBSD 源码树核对。　[存疑脚注] 转写对“首个支持 open ZFS 端口的正式版”表述较口语化（BSD Now EP325，[68.92-90.80]，L4）
 - OpenBSD 与 Arch Linux 双系统互毁 GPT 备份头的辨析：读者在 gdisk 中连报磁盘尺寸与主头不符、备份头无效、主备分区表不一致、CRC 失配四重警告，先按提示以主表重建备份表仍反复复现，最终以 MBR 加 LUKS 与 LVM 的非常规组合绕过；主持人推断两系统对该盘一个按 4K 扇区、一个按 512 字节扇区定位盘尾备份头，导致互相覆盖后无法互认，并可能只是特定硬盘的 quirk；主持人借此事强调详细记录、多次复现并投递邮件列表的边界用例报告文化。　[存疑脚注] 4K 与 512 字节扇区判定差异仅系主持人远程假设，最终根因取决于读者后续向 tech 邮件列表的报告，转写中未见定论。（BSD Now EP173，[679.70-901.68]，L4）[订正：原 [811.82-901.68]，2026-09-30 SenseAudio 重转核对]

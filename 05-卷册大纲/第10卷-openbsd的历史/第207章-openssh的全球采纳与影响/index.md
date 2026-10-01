@@ -56,9 +56,9 @@ volume: 第10卷-openbsd的历史
 
 **史料**：
 
-- Warner Losh 博客《Hunting Down Ken's PDP-7》及 Bell Labs《The Incredible Machine》1968 年影片。（BSD Now EP322，[400.18-402.92]，L2）
-- DEC PDP-7 销售目录与 Bitsavers 现场服务清单（序列号 34/149 的选件记录）。（BSD Now EP322，[685.26-707.24]，L2）
-- OpenBSD 6.6 发布页与升级说明（unveil、MDS 缓解、预编译包数量等）。（BSD Now EP322，[1063.56-1068.82]，L2）
+- Warner Losh 博客《Hunting Down Ken's PDP-7》及 Bell Labs《The Incredible Machine》1968 年影片。（BSD Now EP322，[400.18-979.3]，L2）[订正：原 [400.18-402.92]，2026-09-30 SenseAudio 重转核对]
+- DEC PDP-7 销售目录与 Bitsavers 现场服务清单（序列号 34/149 的选件记录）。（BSD Now EP322，[545.0-707.24]，L2）[订正：原 [685.26-707.24]，2026-09-30 SenseAudio 重转核对]
+- OpenBSD 6.6 发布页与升级说明（unveil、MDS 缓解、预编译包数量等）。（BSD Now EP322，[1063.56-1528.5]，L2）[订正：原 [1063.56-1068.82]，2026-09-30 SenseAudio 重转核对]
 - OpenSSH 8.1 发布公告，含 Adam Zabrocki 报告的 XMSS 私钥解析漏洞。（BSD Now EP322，[2125.36-2172.60]，L2）
 - 该期提及的一手史料包括：BSDCan 2015 演讲视频（Stephen Bourne 关于 UNIX 早期岁月与 shell 设计的主旨报告、Nigel Williams 之 FreeBSD 多路径 TCP、John Criswell 之安全虚拟架构、John-Mark Gurney 之 AES-ICM/GCM 加入 open crypto、会议闭幕实录）；EuroBSDCon 2015 瑞典会议初步议程与四场教程（含 Kirk McKusick 的 BSD 快速文件系统简史与 FreeBSD 导论、mandoc 教程、Peter Hansteen 的 PF 教程）；2015 冲绳开源会议之 NetBSD 展示；monoWall 停更邮件与 SmallWall 文件系统 tarball；Oracle 开发者关于 Sun SSH 的系列博文。　[存疑脚注] 人名与专名多依音近转写辨识（如 Steve born、Ted Uninks、Ed Shoutman、Peter Handstein、Poojrear 分别推断为 Stephen Bourne、Ted Unangst、Ed Schouten、Peter Hansteen、poudriere），拼写待与会议议程原件核对（BSD Now EP97，[71.91-122.18]，L2）
 - OpenBSD 开发者 Marco Peereboom 一手访谈：存储与 SCSI 中间层工作、IPMI 传感器框架实现、个人多平台部署（工作站、web 服务器、HPPA 防火墙）、项目亏损与基础设施成本结构（网络费用、全平台本地原生构建的电费）、hackathon 年会与威尼斯定向 ports hackathon、no nonsense 开发哲学与许可证不妥协、对 apt-get 与 OpenBSD 升级流程的对比评价、ports 升级替换功能的时间点（3.8-3.9 之间）、ACPI 重写与 Jordan Hargrave 合作、SAS 驱动计划、bioctl 通用 RAID 工具理念、桌面环境（Ion/Ratpoison、screen、vi）、OpenSSH 使用广度与零收入的悖论陈述。（BSDTalk EP27，[35.96-1001.24]，L1）
@@ -69,8 +69,8 @@ volume: 第10卷-openbsd的历史
 - 总纲17 证明世界先于解释和改造世界：先有 PDP-7 实物与影片证据，再谈 Unix 起源解释。（BSD Now EP322，[461.82-466.08]，L2）
 - 总纲19 解释学循环是历史认识的根本条件：影片截图与目录照片互为印证，逐项比对构成循环解释。（BSD Now EP322，[558.72-631.14]，L2）
 - 总纲22 知识注定过时：SSH 旧客户端与 RSA-SHA1 证书兼容性被新默认淘汰，知识随版本更替失效。（BSD Now EP322，[2236.64-2265.46]，L2）
-- 总纲8 本体论上各方平等：OpenBSD 6.6 与 OPNsense、GhostBSD 同屏，各项目如实呈现。（BSD Now EP322，[1608.32-1616.96]，L2）
-- 总纲10 动手者创造历史：总纲10 动手者创造历史：Warner Losh 逐帧考证、OpenBSD 开发者逐锁解锁，动手者推动认识与系统演进。（BSD Now EP322，[982.99-1036.46]，L2）
+- 总纲8 本体论上各方平等：OpenBSD 6.6 与 OPNsense、GhostBSD 同屏，各项目如实呈现。（BSD Now EP322，[1608.32-1905.7]，L2）[订正：原 [1608.32-1616.96]，2026-09-30 SenseAudio 重转核对]
+- 总纲10 动手者创造历史：总纲10 动手者创造历史：Warner Losh 逐帧考证、OpenBSD 开发者逐锁解锁，动手者推动认识与系统演进。（BSD Now EP322，[982.99-1165.6]，L2）[订正：原 [982.99-1036.46]，2026-09-30 SenseAudio 重转核对]
 - 总纲10 动手者创造历史：SmallWall 的谱系由动手者而非明星人物书写：Lee Sharp 自述当年受教于 monoWall 周边的实践者——Chris 后执掌 pfSense 与 BSD Perimeter，写文档者独立门户，做网络架构者遍及全球——如今他刻意降低开发门槛、把工具与文档摆出来，请有想法的人跳进来，以日常劳动的传递续写项目，而非依赖英雄叙事。　[存疑脚注] 转写将相关人名误作 Michael Adema、Escozia、Jonathan DeGraves 等，准确拼写待核（BSD Now EP97，[1986.33-2023.69]，L1）
 - 总纲5 没有必然性，只有偶然性：项目的存在本身即偶然性的产物：没有那份宣布停更的邮件便没有 SmallWall，Lee Sharp 强调少数人 “had the same idea at the same time”（1078.33-1083.33），复活不是历史必然，而是几个用户在同一周内的应急反应；其早期声势亦系于 Slashdot 曝光这类无法规划的事件。（BSD Now EP97，[1031.14-1090.33]，L1）
 - 总纲13 法律与道德是利益分配：OpenSSH 悖论呈现了价值创造与利益分配的错位：OpenSSH 内置于 Cisco 交换机、AIX、OS X 等无处不在的平台，使用者以百万计，却无一分收入回流项目，连自身运转账单都难以支付；企业把公共品内化为基础设施而不承担其维护成本，公共品的存续被迫仰赖个人捐赠与偶发的企业善举——技术上的巨大成功与经济上的悬空并存。（BSDTalk EP27，[945.60-998.24]，L1）

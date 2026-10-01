@@ -95,7 +95,7 @@ volume: 第15卷-许可证哲学与法律分析
 - Asterisk 的 BSD 支持改善被当事人归因于 Apple 的间接效应：大量开发者以 BSD 系的 Mac 为前端，在终端直接编译，一旦代码在 Mac 上失效便群起抱怨，迫使修复级联惠及其他 BSD 版本。规模方面，他个人在 BSD 上测过数百通道；他引述的最重负载案例——十天处理八百万呼叫、于 SIP、IAX 与 SS7 间桥接且无崩溃——运行于 Linux 衍生系统；他不知晓大型企业级 BSD 部署，但认为 BSD 与 Linux 在稳定性与性能上不存在值得评论的显著差异。（BSDTalk EP166，[841.56-1084.84]，L1）
 - 当事人在Tektronix Walker Road厂区亲历了企业环境向BSD的迁移：约1981年在VAX 11/780上以2.8BSD替换原主力系统RSTS/E，过渡数月间白天运行RSTS/E、夜间运行Unix并由其负责数据搬运；次年增购VAX后依次运行4.0BSD、4.1BSD直至4.3BSD，构成企业自RSTS/E转向BSD的一线口述。（BSDTalk EP183，[279.02-337.02]，L1）
 - 其公司Stonehenge.com的主机曾运行Linux约六年，因管理员疏于跟进安全更新而遭rootkit入侵，商业机密暴露的风险促使其经AltaVista检索转向OpenBSD早期版本（2.7或2.8前后）；此后他自述对OpenBSD服务器建立“可离场一周不必逐日盯防安全公告”的信任，而对任何Linux发行版均无同等信心，显示安全事件是用户平台迁移的直接动因。（BSDTalk EP183，[350.62-436.46]，L1）
-- 其Geek Cruises与InsightCruises网站于访谈前约三个月迁入Amazon EC2并以OpenSolaris运行：EC2发布初期仅支持Linux，当事人拒绝回归Linux，转以具BSD渊源且自认较Linux更安全的OpenSolaris替代；他转述EC2虚拟层为Xen衍生框架且做了本地改动，BSD若要获得支持须自最底层虚拟硬件向上打通——呈现2009年末BSD在公有云平台的缺席状态与技术门槛。（BSDTalk EP183，[447.14-518.98]，L1）
+- 其Geek Cruises与InsightCruises网站于访谈前约三个月迁入Amazon EC2并以OpenSolaris运行：EC2发布初期仅支持Linux，当事人拒绝回归Linux，转以具BSD渊源且自认较Linux更安全的OpenSolaris替代；他转述EC2虚拟层为Xen衍生框架且做了本地改动，BSD若要获得支持须自最底层虚拟硬件向上打通——呈现2009年末BSD在公有云平台的缺席状态与技术门槛。（BSDTalk EP183，[447.14-607.3]，L1）[订正：原 [447.14-518.98]，2026-10-01 交叉核验订正]
 - 当事人口头辨正SunOS与Solaris的谱系混淆：SunOS 4及更早版本为纯BSD系（SunOS 4实即Solaris 1），SunOS 5改宗System V并对应Solaris 2；SunOS始终是内核操作系统之名，Solaris始终是发行版之名，版本号交叠系厂商命名所致，为商业UNIX版本谱系的一手澄清。（BSDTalk EP183，[619.02-667.82]，L1）
 
 **史料**：

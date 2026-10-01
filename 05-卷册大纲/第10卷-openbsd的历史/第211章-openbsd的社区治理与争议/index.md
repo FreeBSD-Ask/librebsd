@@ -37,9 +37,9 @@ volume: 第10卷-openbsd的历史
 
 **要点**：
 
-- 计算机历史博物馆发布“最早 Unix 代码”周年源码版，收录 PDP-7 汇编清单（Space Travel、moo、井字棋等），经 Warren Toomey 与 John Mashey 等鉴定可溯至 1970 至 1971 年初。（BSD Now EP323，[167.90-193.82]，L2）
-- Leonard Kleinrock 受访回顾 1969 年 10 月 29 日 UCLA 发出的“LO”消息：他预见网络“始终在线、无处不在、不可见”，但未预见其社交化与国家安全化，并拒绝为创造互联网而后悔。（BSD Now EP323，[486.68-671.22]，L1）
-- OpenBSD 自 1995 年 10 月 18 日起跨过 40 万提交，Theo de Raadt 提醒计数口径不一；主持人补充 FreeBSD 约 92.5 万、NetBSD 加 pkgsrc 约 60 万，强调跨项目比较不可靠。（BSD Now EP323，[1095.24-1167.46]，L2）
+- 计算机历史博物馆发布“最早 Unix 代码”周年源码版，收录 PDP-7 汇编清单（Space Travel、moo、井字棋等），经 Warren Toomey 与 John Mashey 等鉴定可溯至 1970 至 1971 年初。（BSD Now EP323，[167.90-366.7]，L2）[订正：原 [167.90-193.82]，2026-09-30 SenseAudio 重转核对]
+- Leonard Kleinrock 受访回顾 1969 年 10 月 29 日 UCLA 发出的“LO”消息：他预见网络“始终在线、无处不在、不可见”，但未预见其社交化与国家安全化，并拒绝为创造互联网而后悔。（BSD Now EP323，[401.7-671.22]，L1）[订正：原 [486.68-671.22]，2026-09-30 SenseAudio 重转核对]
+- OpenBSD 自 1995 年 10 月 18 日起跨过 40 万提交，Theo de Raadt 提醒计数口径不一；主持人补充 FreeBSD 约 92.5 万、NetBSD 加 pkgsrc 约 60 万，强调跨项目比较不可靠。（BSD Now EP323，[1095.24-1199.2]，L2）[订正：原 [1095.24-1167.46]，2026-09-30 SenseAudio 重转核对]
 - Blacklistd 作为 fail2ban 替代，通过 libexec helper 与 NPF 联动按失败认证次数封锁 IP；教程演示 securelevel=1 下需把模块编入内核或经 modules.conf 预载。（BSD Now EP323，[685.00-1027.92]，L2）
 - “OSI 七层墨西哥卷饼”作者自建 DoH 服务器与私有 CA，把 Firefox 的 TRR 指向本地，以对抗浏览器厂商对 DNS 的集中收编，而非简单禁用。（BSD Now EP323，[1862.22-2002.76]，L2）
 - 文章追溯 cat 的源码史：Ken Thompson 与 Dennis Ritchie 于 1969 年在 PDP-7 上以汇编实现首版 cat，其中 getc 与 putc 的命名早于 C 标准库。（BSD Now EP273，[1440.78-1605.80]，L2）
@@ -64,8 +64,8 @@ volume: 第10卷-openbsd的历史
 **史料**：
 
 - 计算机历史博物馆“Earliest Unix Code”目录与 PDF，含 PDP-7 汇编、Space Travel 1970 源码页。（BSD Now EP323，[214.28-234.20]，L2）
-- CBC《The Current》对 Leonard Kleinrock 的半小时访谈节选（首条消息“LO”及网络阴暗面）。（BSD Now EP323，[387.08-402.72]，L1）
-- Theo de Raadt 致 tech@ 的“OpenBSD 跨 40 万提交”邮件，说明计数困难与仓库历史歧义。（BSD Now EP323，[1100.92-1113.56]，L2）
+- CBC《The Current》对 Leonard Kleinrock 的半小时访谈节选（首条消息“LO”及网络阴暗面）。（BSD Now EP323，[387.08-657.0]，L1）[订正：原 [387.08-402.72]，2026-09-30 SenseAudio 重转核对]
+- Theo de Raadt 致 tech@ 的“OpenBSD 跨 40 万提交”邮件，说明计数困难与仓库历史歧义。（BSD Now EP323，[1100.92-1161.2]，L2）[订正：原 [1100.92-1113.56]，2026-09-30 SenseAudio 重转核对]
 - unitedbsd.com 的 Blacklistd 与 NPF 教程，及 NetBSD securelevel 与 bpf-jit 配置说明。（BSD Now EP323，[693.04-812.78]，L2）
 - 文章依赖 Unix History 仓库追踪 cat 自 1969 年以来的演进，并提及 macOS 10.0 从 NetBSD 引入 Kevin Fall 版 cat、10.5 起改用 FreeBSD 版 cat。（BSD Now EP273，[1459.66-2016.50]，L2）
 - 提及 DistroWatch 的 NetBSD 8.0 评测：NetBSD 以高可移植性见长，文档分散于 FAQ、指南、手册页与 wiki，软件管理工具 pkg_add、pkgin、pkgsrc 并存易致新手困惑。（BSD Now EP273，[111.12-127.88]，L2）
@@ -80,7 +80,7 @@ volume: 第10卷-openbsd的历史
 
 **史观**：
 
-- 总纲1 一切真历史都是古代史：50 年前的“LO”消息与 PDP-7 汇编被当作当下仍须考据的古代对象。（BSD Now EP323，[120.92-125.14]，L2）
+- 总纲1 一切真历史都是古代史：50 年前的“LO”消息与 PDP-7 汇编被当作当下仍须考据的古代对象。（BSD Now EP323，[120.92-436.4]，L2）[订正：原 [120.92-125.14]，2026-09-30 SenseAudio 重转核对]
 - 总纲5 没有必然性，只有偶然性：ARPANET 首条消息因机器崩溃停在“LO”而非“LOGIN”，是偶然事件。（BSD Now EP323，[421.34-425.12]，L1）
 - 总纲19 解释学循环是历史认识的根本条件：源码断代依赖 Toomey、Mashey 等当事人回忆与目录残迹的循环解释。（BSD Now EP323，[167.90-193.82]，L2）
 - 总纲8 本体论上各方平等：OpenBSD、FreeBSD、NetBSD 提交数被并置比较时，主持人强调口径差异，避免以数量定高下。（BSD Now EP323，[1161.86-1189.66]，L2）

@@ -49,11 +49,11 @@ volume: 第03卷-伯克利学术文化外溢影响
 
 **要点**：
 
-- 主持人转述 Telnet 协议史：1972 年 John Postel 撰写的 RFC 奠定 Telnet 协议，Postel 在文中自嘲该文档未能兑现及时、清晰与简洁的承诺；1990 年代早期 Telnet 曾用于访问国会图书馆、NASA 新闻与最高法院判决。（BSD Now EP558，[1253.14-1360.36]，L2）
-- 主持人介绍 towel.blinkenlights.nl 的 ASCII 版《星球大战》与 telehack.com 等项目，后者以 Telnet 重现 ARPANET 时代的 BBS、MUD 与文本冒险，构成对早期网络文化的保存。（BSD Now EP558，[956.74-1151.44]，L2）
-- FreeBSD 基金会发布 SSDF 自证报告第一版，面向美国政府软件供应链合规（NIST SP 800-218 与 Executive Order 14028）；NetApp 与 RG Nets 等伙伴引用该报告支持其向政府客户供货。（BSD Now EP558，[483.30-730.50]，L2）
-- BSDCan 组织委员会自述 Dan Langille 在主持二十年后交棒，委员会成立加拿大非营利组织 BSDCan Conferences Incorporated 以承接资金与赞助；当届白金赞助商为 Netflix，金级为 Apple 与 ARM。（BSD Now EP558，[2801.24-3400.76]，L1）
-- 委员会回顾 BSDCan 票价自 2005 年起十五年间维持 199 美元未变，现调整为 256 美元；其拍卖传统所得捐给 Ottawa Mission 慈善机构。（BSD Now EP558，[3545.42-3667.88]，L1）
+- 主持人转述 Telnet 协议史：1972 年 John Postel 撰写的 RFC 奠定 Telnet 协议，Postel 在文中自嘲该文档未能兑现及时、清晰与简洁的承诺；1990 年代早期 Telnet 曾用于访问国会图书馆、NASA 新闻与最高法院判决。（BSD Now EP558，[1248.1-1360.5]，L2）[订正：原 [1253.14-1360.36]，2026-10-01 SenseAudio 重转核对]
+- 主持人介绍 towel.blinkenlights.nl 的 ASCII 版《星球大战》与 telehack.com 等项目，后者以 Telnet 重现 ARPANET 时代的 BBS、MUD 与文本冒险，构成对早期网络文化的保存。（BSD Now EP558，[956.6-1151.6]，L2）[订正：原 [956.74-1151.44]，2026-09-30 SenseAudio 重转核对]
+- FreeBSD 基金会发布 SSDF 自证报告第一版，面向美国政府软件供应链合规（NIST SP 800-218 与 Executive Order 14028）；NetApp 与 RG Nets 等伙伴引用该报告支持其向政府客户供货。（BSD Now EP558，[453.7-741.7]，L2）[订正：原 [483.30-730.50]，2026-10-01 SenseAudio 重转核对]
+- BSDCan 组织委员会自述 Dan Langille 在主持二十年后交棒，委员会成立加拿大非营利组织 BSDCan Conferences Incorporated 以承接资金与赞助；当届白金赞助商为 Netflix，金级为 Apple 与 ARM。（BSD Now EP558，[2789.3-3401.1]，L1）[订正：原 [2801.24-3400.76]，2026-10-01 SenseAudio 重转核对]
+- 委员会回顾 BSDCan 票价自 2005 年起十五年间维持 199 美元未变，现调整为 256 美元；其拍卖传统所得捐给 Ottawa Mission 慈善机构。（BSD Now EP558，[3545.0-3681.0]，L1）[订正：原 [3545.42-3667.88]，2026-10-01 SenseAudio 重转核对]
 - 主持人转述 Liam Proven 在 The Register 的报道：iXsystems 将重心转向基于 Debian 的 TrueNAS SCALE，FreeBSD 基底的 TrueNAS CORE 进入维持工程阶段，计划推出基于 FreeBSD 13.3 的版本后不再规划 FreeBSD 14 基底。（BSD Now EP552，[806.14-1046.26]，L2）
 - 文章追述 FreeNAS 与 iXsystems 的商业谱系：FreeNAS 始于 2005 年、基于 m0n0wall 与 PHP Web 界面；iXsystems 源自曾销售 BSD/386 的 Berkeley Software Design Inc.，经与 Walnut Creek CD-ROM 合并、向 Wind River 出售 OS 部门等转手后于 2007 年收购 FreeNAS。（BSD Now EP552，[919.74-1153.86]，L2）
 - 主持人介绍 Jason Eckert 的博客：1997 年 Tadpole Technologies 的 SPARCbook 3000ST 搭载 Fujitsu TurboSPARC 170MHz 处理器、128MB 内存与 Solaris 2.5.1，售价约 21000 美元，是 1990 年代高端 Unix 笔记本电脑的代表。（BSD Now EP552，[1590.02-1751.82]，L2）
@@ -63,9 +63,9 @@ volume: 第03卷-伯克利学术文化外溢影响
 - Lucas 讲述其考证的 1978 年第一封垃圾邮件：DEC 的 Gary Thuerk 为推广新产品向数百名陌生用户群发邮件，五天后美国空军 ARPANET 管理分支负责人致电其上司警告，但该邮件仍促成约 1200 万美元计算机销售，埋下垃圾邮件经济动机的起点。（BSD Now EP507，[1351.12-1453.32]，L2）
 - 关于生成式 AI，Lucas 认为 ChatGPT 只产出看似答案的文本而非答案，越长的内容越易失实；他援引美国国会图书馆已裁定 AI 生成文本不可版权，并主张作者与读者直接连接的重要性上升。（BSD Now EP507，[2281.44-2813.20]，L1）
 - Lucas 介绍其邮件服务器写作计划，强调 SPF、DKIM、DMARC 等外围协议已成自建邮件的前提，DKIM 虽 2011 年即存在，其强制要求却是近年才出现。（BSD Now EP507，[1108.24-1277.00]，L1）
-- 计算机历史博物馆发布“最早 Unix 代码”周年源码版，收录 PDP-7 汇编清单（Space Travel、moo、井字棋等），经 Warren Toomey 与 John Mashey 等鉴定可溯至 1970 至 1971 年初。（BSD Now EP323，[167.90-193.82]，L2）
-- Leonard Kleinrock 受访回顾 1969 年 10 月 29 日 UCLA 发出的“LO”消息：他预见网络“始终在线、无处不在、不可见”，但未预见其社交化与国家安全化，并拒绝为创造互联网而后悔。（BSD Now EP323，[486.68-671.22]，L1）
-- OpenBSD 自 1995 年 10 月 18 日起跨过 40 万提交，Theo de Raadt 提醒计数口径不一；主持人补充 FreeBSD 约 92.5 万、NetBSD 加 pkgsrc 约 60 万，强调跨项目比较不可靠。（BSD Now EP323，[1095.24-1167.46]，L2）
+- 计算机历史博物馆发布“最早 Unix 代码”周年源码版，收录 PDP-7 汇编清单（Space Travel、moo、井字棋等），经 Warren Toomey 与 John Mashey 等鉴定可溯至 1970 至 1971 年初。（BSD Now EP323，[167.90-366.7]，L2）[订正：原 [167.90-193.82]，2026-09-30 SenseAudio 重转核对]
+- Leonard Kleinrock 受访回顾 1969 年 10 月 29 日 UCLA 发出的“LO”消息：他预见网络“始终在线、无处不在、不可见”，但未预见其社交化与国家安全化，并拒绝为创造互联网而后悔。（BSD Now EP323，[401.7-671.22]，L1）[订正：原 [486.68-671.22]，2026-09-30 SenseAudio 重转核对]
+- OpenBSD 自 1995 年 10 月 18 日起跨过 40 万提交，Theo de Raadt 提醒计数口径不一；主持人补充 FreeBSD 约 92.5 万、NetBSD 加 pkgsrc 约 60 万，强调跨项目比较不可靠。（BSD Now EP323，[1095.24-1199.2]，L2）[订正：原 [1095.24-1167.46]，2026-09-30 SenseAudio 重转核对]
 - Blacklistd 作为 fail2ban 替代，通过 libexec helper 与 NPF 联动按失败认证次数封锁 IP；教程演示 securelevel=1 下需把模块编入内核或经 modules.conf 预载。（BSD Now EP323，[685.00-1027.92]，L2）
 - “OSI 七层墨西哥卷饼”作者自建 DoH 服务器与私有 CA，把 Firefox 的 TRR 指向本地，以对抗浏览器厂商对 DNS 的集中收编，而非简单禁用。（BSD Now EP323，[1862.22-2002.76]，L2）
 - 长篇采访 Michael W. Lucas：他谈《Absolute FreeBSD》第三版写作计划（2018 年 BSDCan 前付印）、科幻与犯罪小说的跨体裁写作，以及 BSDCan、EuroBSDCon 等会议文化。（BSD Now EP197，[4089.38-4994.88]，L1）
@@ -76,29 +76,29 @@ volume: 第03卷-伯克利学术文化外溢影响
 
 **史料**：
 
-- 本期史料包括 Telnet 历史的二手文章、FreeBSD 基金会 SSDF 公告，以及 BSDCan 组织委员会 Michael Lucas、Patrick 与 Peter Hansteen 的一手自述。（BSD Now EP558，[483.30-3400.76]，L1）
+- 本期史料包括 Telnet 历史的二手文章、FreeBSD 基金会 SSDF 公告，以及 BSDCan 组织委员会 Michael Lucas、Patrick 与 Peter Hansteen 的一手自述。（BSD Now EP558，[453.7-3401.1]，L1）[订正：原 [483.30-3400.76]，2026-10-01 SenseAudio 重转核对]
 - 本期史料包括 Liam Proven 的记者综述、Jason Eckert 的设备拆解记录，以及 Hacker News 上 Ford Aerospace 亲历者的自述评论；后两者经节目主持人口头转述。（BSD Now EP552，[806.14-2874.60]，L2）
 - Michael W. Lucas《OpenBSD Mastery: Filesystems》一书，为当期采访对象本人撰写的文件系统专著，属于当事人一手出版物。（BSD Now EP507，[126.18-172.34]，L1）
 - 1978 年 Gary Thuerk 垃圾邮件事件为 Lucas 写作邮件书籍时考证的历史线索，经当期采访口头转述。（BSD Now EP507，[1351.12-1453.32]，L2）
 - BSD 各分支在 PF 与 UFS 上的双向代码流动，为 Lucas 作为长期 BSD 作者与使用者的工程观察，属二手叙述。（BSD Now EP507，[583.98-612.94]，L2）
 - 计算机历史博物馆“Earliest Unix Code”目录与 PDF，含 PDP-7 汇编、Space Travel 1970 源码页。（BSD Now EP323，[214.28-234.20]，L2）
-- CBC《The Current》对 Leonard Kleinrock 的半小时访谈节选（首条消息“LO”及网络阴暗面）。（BSD Now EP323，[387.08-402.72]，L1）
-- Theo de Raadt 致 tech@ 的“OpenBSD 跨 40 万提交”邮件，说明计数困难与仓库历史歧义。（BSD Now EP323，[1100.92-1113.56]，L2）
+- CBC《The Current》对 Leonard Kleinrock 的半小时访谈节选（首条消息“LO”及网络阴暗面）。（BSD Now EP323，[387.08-657.0]，L1）[订正：原 [387.08-402.72]，2026-09-30 SenseAudio 重转核对]
+- Theo de Raadt 致 tech@ 的“OpenBSD 跨 40 万提交”邮件，说明计数困难与仓库历史歧义。（BSD Now EP323，[1100.92-1161.2]，L2）[订正：原 [1100.92-1113.56]，2026-09-30 SenseAudio 重转核对]
 - unitedbsd.com 的 Blacklistd 与 NPF 教程，及 NetBSD securelevel 与 bpf-jit 配置说明。（BSD Now EP323，[693.04-812.78]，L2）
 - Peter Hansteen 的 spamd 配置文章；Google Capsicum-on-Linux 状态页；1979 年 TCP/IP 网关文章。（BSD Now EP197，[5136.50-5790.82]，L2）
 
 **史观**：
 
-- 总纲18 时间是一种形式主义：Telnet 从主流远程访问工具变为小众怀旧文化，呈现技术生命周期随时代需求而更替的形式化进程。（BSD Now EP558，[1253.14-1412.28]，L2）
-- 总纲10 动手者创造历史：Dan Langille 与历届志愿者持续二十年操办 BSDCan，其交棒与新机构设立延续了社区会议，体现动手者对社区基础的长期投入。（BSD Now EP558，[2801.24-3108.48]，L1）
-- 总纲13 法律与道德是利益分配：SSDF 自证是软件供应商满足政府采购合规的制度安排，反映安全标准背后的法律与利益分配。（BSD Now EP558，[483.30-730.50]，L2）
+- 总纲18 时间是一种形式主义：Telnet 从主流远程访问工具变为小众怀旧文化，呈现技术生命周期随时代需求而更替的形式化进程。（BSD Now EP558，[1248.1-1437.0]，L2）[订正：原 [1253.14-1412.28]，2026-10-01 SenseAudio 重转核对]
+- 总纲10 动手者创造历史：Dan Langille 与历届志愿者持续二十年操办 BSDCan，其交棒与新机构设立延续了社区会议，体现动手者对社区基础的长期投入。（BSD Now EP558，[2789.3-3119.9]，L1）[订正：原 [2801.24-3108.48]，2026-10-01 SenseAudio 重转核对]
+- 总纲13 法律与道德是利益分配：SSDF 自证是软件供应商满足政府采购合规的制度安排，反映安全标准背后的法律与利益分配。（BSD Now EP558，[453.7-741.7]，L2）[订正：原 [483.30-730.50]，2026-10-01 SenseAudio 重转核对]
 - 总纲10 动手者创造历史：Ford Aerospace 工程师为网络互操作重写 UDP、ICMP 与 TCP，Nagle 算法源于一线工程实践而非纯理论推演，体现动手者创造历史。（BSD Now EP552，[2814.88-2857.92]，L2）
 - 总纲3 不存在进步，只有权力再分配：iXsystems 从 BSDi 谱系转向 Linux 基底，是存储商业生态中资源与权力在平台间的重新分配。（BSD Now EP552，[806.14-1046.26]，L2）
 - 总纲11 商品是形式主义：SPARCbook 以 21000 美元的高价与军事级镁合金机身成为小众商品，与廉价 PC 开放架构的对照呈现技术商品化的不同形态。（BSD Now EP552，[1647.86-1751.82]，L2）
 - 总纲4 分离聚合是永恒规律：各 BSD 分支不断分离又借取聚合，代码流动呈现双向循环而非线性派生。：BSD 各分支在 PF 与 UFS 上相互分离又聚合，代码双向流动而非单向派生。（BSD Now EP507，[583.98-612.94]，L1）
 - 总纲10 动手者创造历史：作者以专著记录长期维护与调试的工程细节，凸显沉默维护者的历史作用。：Lucas 以文件系统著作为动手者记录维护者的工程现实，而非只写台前叙事。（BSD Now EP507，[489.90-760.60]，L1）
 - 总纲13 法律与道德是利益分配：SPF、DKIM、DMARC 等协议是邮件生态围绕送达与信任利益形成的规范分配。：垃圾邮件的持续源于首次群发所揭示的经济收益，反垃圾协议是围绕邮件送达利益而演化的规范分配。（BSD Now EP507，[1351.12-1453.32]，L2）
-- 总纲1 一切真历史都是古代史：50 年前的“LO”消息与 PDP-7 汇编被当作当下仍须考据的古代对象。（BSD Now EP323，[120.92-125.14]，L2）
+- 总纲1 一切真历史都是古代史：50 年前的“LO”消息与 PDP-7 汇编被当作当下仍须考据的古代对象。（BSD Now EP323，[120.92-436.4]，L2）[订正：原 [120.92-125.14]，2026-09-30 SenseAudio 重转核对]
 - 总纲5 没有必然性，只有偶然性：ARPANET 首条消息因机器崩溃停在“LO”而非“LOGIN”，是偶然事件。（BSD Now EP323，[421.34-425.12]，L1）
 - 总纲19 解释学循环是历史认识的根本条件：源码断代依赖 Toomey、Mashey 等当事人回忆与目录残迹的循环解释。（BSD Now EP323，[167.90-193.82]，L2）
 - 总纲8 本体论上各方平等：OpenBSD、FreeBSD、NetBSD 提交数被并置比较时，主持人强调口径差异，避免以数量定高下。（BSD Now EP323，[1161.86-1189.66]，L2）
@@ -108,8 +108,8 @@ volume: 第03卷-伯克利学术文化外溢影响
 
 **辨析**：
 
-- Telnet 1972 年 RFC 的作者归属与 John Postel 的自嘲引文来自二手文章，须以 RFC 原文核实。　[存疑脚注] RFC 作者与引文为二手转述，未经 RFC 原文核实。（BSD Now EP558，[1253.14-1319.76]，L4）
-- BSDCan 票价自 2005 年起十五年未变的说法为委员口述，须以历年会议档案核实。　[存疑脚注] 票价历史为委员口述，未经历年会议档案核实。（BSD Now EP558，[3545.42-3563.30]，L4）
+- Telnet 1972 年 RFC 的作者归属与 John Postel 的自嘲引文来自二手文章，须以 RFC 原文核实。　[存疑脚注] RFC 作者与引文为二手转述，未经 RFC 原文核实。（BSD Now EP558，[1248.1-1319.7]，L4）[订正：原 [1253.14-1319.76]，2026-10-01 SenseAudio 重转核对]
+- BSDCan 票价自 2005 年起十五年未变的说法为委员口述，须以历年会议档案核实。　[存疑脚注] 票价历史为委员口述，未经历年会议档案核实。（BSD Now EP558，[3545.0-3564.0]，L4）[订正：原 [3545.42-3563.30]，2026-09-30 SenseAudio 重转核对]
 - Hacker News 评论为匿名用户自述，Ford Aerospace、3Com UNET 与 Nagle 算法的具体关联须以更多独立来源交叉验证。　[存疑脚注] 早期 TCP/IP 口述为匿名评论经节目转述，未经多源交叉验证。（BSD Now EP552，[2710.40-2874.60]，L4）
 - iXsystems 转向 Linux 的时间线与版本计划来自记者报道与 Reddit 上 Chris Moore 的帖子，须以官方公告核实。　[存疑脚注] TrueNAS 路线信息来自记者报道与社区帖文，未经官方公告核实。（BSD Now EP552，[948.50-1000.66]，L4）
 - 1978 年第一封垃圾邮件的约 1200 万美元销售额及军方联系人姓名为 Lucas 口头转述，需以 ARPANET 原始记录与既有垃圾邮件史研究交叉验证。　[存疑脚注] 金额与军方联系人姓名拼写为单一来源口头叙述，须以原始档案核验。（BSD Now EP507，[1351.12-1453.32]，L4）
