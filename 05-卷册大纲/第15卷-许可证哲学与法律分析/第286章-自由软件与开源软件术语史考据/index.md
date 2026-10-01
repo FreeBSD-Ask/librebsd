@@ -42,7 +42,7 @@ volume: 第15卷-许可证哲学与法律分析
 - 【查证来源】`原材料/研究/自由软件词源考察/03-自由软件运动术语史.md` 第 2.3 节考据结论经 gnu.org/philosophy/free-sw.html WebFetch 一手核验，脚注 1 一手陈述“1990 年左右，列出来的自由是 1、2 和 3”，“我们没有修改其他 3 个自由的序号，而是将运行软件的自由列为 0”；现行四项自由表述经同一页面一手核验
   【交叉验证方法】两层
 - 【查证来源】`原材料/研究/自由软件词源考察/03-自由软件运动术语史.md` 第 1.4 节考据结论经 GPL v1 全文（gnu.org/licenses/gpl-1.0.html）WebFetch 一手核验，前言确含"When we speak of free software, we are referring to freedom, not price"；GPL v2（1991 年 6 月）前言同样保留该表述（经 286.1 子节同源考据核验），原截断部分已据此补全。
-- 【查证来源】`原材料/研究/自由软件词源考察/03-自由软件运动术语史.md` 第 3.1、3.2 节考据结论经 GPL v1 全文（gnu.org/licenses/gpl-1.0.html）与 GPL v2 全文（gnu.org/licenses/old-licenses/gpl-2.0.html）WebFetch 一手核验，两版全文均未出现“copyleft”一词；斯托曼自述《The GNU
+- 【查证来源】`原材料/研究/自由软件词源考察/03-自由软件运动术语史.md` 第 3.1、3.2 节考据结论经 GPL v1 全文（gnu.org/licenses/gpl-1.0.html）与 GPL v2 全文（gnu.org/licenses/old-licenses/gpl-2.0.html）WebFetch 一手核验，两版全文均未出现“copyleft”一词；斯托曼自述《The GNU Project》
 - 【查证来源】`原材料/研究/自由软件词源考察/04-开源软件运动术语史.md` 第 1.1、1.2 节考据结论经 OSI 官方历史页面 WebFetch 一手核验“open source”标签于 1998 年 2 月 3 日在 Palo Alto 创建；Foresight 官方叙述 WebFetch 一手核验 1998 年 2 月 2 日晚 Los Altos 会议与 2 月 5 日 VA Res
 
 ## 文献

@@ -44,7 +44,7 @@ volume: 第18卷-全球社区地区bsd史
 
 ## 331.1.2 早稻田大学等高校 BSD 教育
 
-- 要点：早稻田大学、东京大学、东京工业大学、庆应义塾大学等高校在 1990 年代开设 BSD 相关课程，东京大学 1991 年出版《The Design and Implementation of the 4.3BSD UNIX Operat
+- 要点：早稻田大学、东京大学、东京工业大学、庆应义塾大学等高校在 1990 年代开设 BSD 相关课程，东京大学 1991 年出版《The Design and Implementation of the 4.3BSD UNIX Operating System》
 - 日本 Linux Users Group Archive；日本 Linux 内核贡献者统计［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］
 
 ## 331.10.2 TRON 项目与 BSD 的关系
