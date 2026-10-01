@@ -52,7 +52,7 @@ volume: 第05卷-freebsd的工程化奠基
 - [1] Stevens UNP Vol. I 2nd ed. 1998、[2] Stevens TCP/IP Illustrated Vol. 1 1994、[3] Banga & Mogul USENIX ATC 1998、[4] Banga Druschel Mogul SIGMETRICS 1998、[5] Banga & Druschel USENIX ITS 1997、[6] Provos & Lever “Scalable Network I/O in Linux” CITI techreport 2000、[7] Dan Kegel “The C10K problem” kegel.com/c10k.html、[8] Richard Gooch “IO Event Handling Under Linux”、[9] Chandra & Mosberger “Scalability of Linux Event-Dispatch Mechanisms” HPL-2000-174、[10] Provos & Lever “Analyzing the Overload Behaviour of a Simple Web Server” CITI techreport 2000
 - Linux **epoll(7)** 手册页；Lemon BSDCon 2000 论文 ［A］
 - freebsd.duckdb commits 表；Banga USENIX 1998 ［A］
-- Linux man-pages project. epoll(7). man-pages-6.18. 2026-02-08 ［A］；Libenzi D. Improving (network) I/O performance. xmailserver.org/linux-patches/nio-improve.html. 2001-07-01 初稿，2002-10-30 更新 ［A］；Dan Kegel. The C10K problem. kegel.com/c10k.html ［A］；LKML 2001-2002 邮件存档［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准〕
+- Linux man-pages project. epoll(7). man-pages-6.18. 2026-02-08 ［A］；Libenzi D. Improving (network) I/O performance. xmailserver.org/linux-patches/nio-improve.html. 2001-07-01 初稿，2002-10-30 更新 ［A］；Dan Kegel. The C10K problem. kegel.com/c10k.html ［A］；LKML 2001-2002 邮件存档［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］
 
 ## 自反性声明
 

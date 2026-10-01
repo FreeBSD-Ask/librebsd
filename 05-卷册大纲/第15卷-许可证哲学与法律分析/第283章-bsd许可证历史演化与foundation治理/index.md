@@ -77,7 +77,7 @@ volume: 第15卷-许可证哲学与法律分析
 ## 283.7.4 史料辨析
 
 - 要点：**Foundation By-Laws** 历年版本通过 `archive.org` 与 **Foundation** 官网保留，部分早期版本需联系 **Foundation** 索取。
-- 史料：`archive.org` `freebsdfoundation.org` 快照、**Foundation** 官网［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］〔L3 官方文档与
+- 史料：`archive.org` `freebsdfoundation.org` 快照、**Foundation** 官网［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］〔L3 官方文档与〕
 
 ## 本章节索引
 
