@@ -73,16 +73,16 @@ volume: 第10卷-openbsd的历史
 - OpenBSD 于 1995 年 10 月作为 NetBSD 分叉起步，其默认安装长期仅报告两个远程漏洞，被描述为默认安全的系统。（BSD Now EP428，[135.74-145.1]，L2）
 - OpenBSD 率先随系统搭载 IPsec 等强密码学，并因此卷入美国出口管制，这是其基地设于加拿大的原因之一。（BSD Now EP428，[145.1-160.3]，L2）
 - OpenBSD 形成发现漏洞后不再单点修补，而是在全树范围内寻找并修复同类模式的代码审计文化。（BSD Now EP428，[164.94-184.78]，L2）
-- OpenBSD 是 OpenSSH、OpenBGPD、PF、OpenSMTPD、IKE、Mandoc 与 LibreSSL 等广泛使用组件的上游来源。（BSD Now EP428，[247.2-262.74]，L2）
+- OpenBSD 是 OpenSSH、OpenBGPD、PF、OpenNTPD、IKED、Mandoc 与 LibreSSL 等广泛使用组件的上游来源。（BSD Now EP428，[247.2-262.74]，L2）[订正：原 OpenSMTPD、IKE，2026-09-30 SenseAudio 重转核对]
 - FuryBSD 2020 第二季度镜像（XFCE 与 KDE）发布，团队自述把精力放在开箱即用的 Wi-Fi、摄像头与虚拟机支持上。（BSD Now EP348，[68.68-103.08]，L2）
 - Ars Technica 评测 GhostBSD：安装体验较 FreeBSD 更顺畅、桌面可用，但存在 MATE 面板崩溃、ZFS 4K 块对齐失效等瑕疵。（BSD Now EP348，[494.58-736.64]，L2）
 - OpenBSD malloc 安全分配器内部机制被逐行解读：chunk canary（0xdb 填充）在 free 时校验，越界写会触发 abort。（BSD Now EP348，[1291.52-1359.6]，L2）
 - 技术选型文章主张 FreeBSD 相对 GNU/Linux 具有基础系统与滚动软件包结合、ZFS、启动环境、jail 等优势。（BSD Now EP348，[253.24-297.16]，L2）
-- OpenBSD 的 BSD Authentication 认证绕过漏洞源于 login_passwd 对 challenge 协议的处理缺陷，用户名形如 -schallenge 时会被自动判定成功；该漏洞远程可利用于 smtpd、ldapd、radiusd 等应用，但 sshd 因纵深防御机制不受影响。（BSD Now EP330，[185.76-193.66]，L2）
+- OpenBSD 的 BSD Authentication 认证绕过漏洞源于 login_passwd 对 challenge 协议的处理缺陷，用户名形如 -schallenge 时会被自动判定成功；该漏洞远程可利用于 smtpd、ldapd、radiusd 等应用，但 sshd 因纵深防御机制不受影响。（BSD Now EP330，[185.76-440.9]，L2）[订正：原 [185.76-193.66]，2026-09-30 SenseAudio 重转核对]
 - OpenBSD 在初次联系后约 40 小时内修复该漏洞，主持人以此与其它项目耗时数月乃至数年的修复形成对照，凸显其把安全响应置于优先位置的组织惯性。（BSD Now EP330，[562.80-584.46]，L3）
-- NetBSD 9.0 RC1 在四个月发布流程中处理逾 500 次 pull-up，新增 aarch64（含 Arm ServerReady）、NVMM 硬件虚拟化、更新版 ZFS、内核 ASLR、KLEAK/KASAN 等 sanitizer、NPF 改进与 SATA NCQ 支持。（BSD Now EP330，[724.00-802.99]，L2）
+- NetBSD 9.0 RC1 在四个月发布流程中处理逾 500 次 pull-up，新增 aarch64（含 Arm ServerReady）、NVMM 硬件虚拟化、更新版 ZFS、内核 ASLR、KLEAK/KASAN 等 sanitizer、NPF 改进与 SATA NCQ 支持。（BSD Now EP330，[724.00-968.5]，L2）[订正：原 [724.00-802.99]，2026-09-30 SenseAudio 重转核对]
 - FreeNAS 在 DigitalOcean 的部署教程通过第二块设备安装后再以 dd 重灌引导区完成，主持人补充 ZFS 的校验与校验和使消费级磁盘配合 RAID-Z1 冗余在家庭 NAS 场景可用，并强调以独立备份兜底。（BSD Now EP330，[1084.88-1299.54]，L2）
-- NomadBSD 1.3 是基于 FreeBSD 12.1 的 USB 持久化 Live 系统，通过 SMBIOS 检测自动适配 VirtualBox，新增 ZFS 安装支持，并因 Lenovo 兼容问题从 GPT 改回 MBR。（BSD Now EP330，[1790.46-1892.38]，L2）
+- NomadBSD 1.3 是基于 FreeBSD 12.1 的 USB 持久化 Live 系统，通过 SMBIOS 检测自动适配 VirtualBox，新增 ZFS 安装支持，并因 Lenovo 兼容问题从 GPT 改回 MBR。（BSD Now EP330，[1790.46-1962.9]，L2）[订正：原 [1790.46-1892.38]，2026-09-30 SenseAudio 重转核对]
 - e2k19 黑客松重写 RPKI 客户端的 X.509 验证，将证书与 CRL 表改为红黑树查找、以 rename 原子替换输出文件，使 VRP 验证从 20 余分钟降至约 1 分钟。（BSD Now EP330，[2281.90-2516.12]，L2）
 - 当事人自述 386BSD 的历史定位：他们是诸多 BSD 分支的早期源头，打破了局面，但发起大型项目后人人议程各异、无法兼顾所有方向，由此产生的摩擦只是任何庞大事物成长中的阵痛；夫妇二人选择不对议程争执，允许 FreeBSD 等继续生长；386BSD 至 2006 年的定位是遗产（heritage）与操作系统另类用法的试验场，仍可运行但支持机器有限。（BSDTalk EP29，[532.88-803.64]，L1）
 - 在 386BSD 文章系列发表 15 周年之际，当事人恢复了当年因版面被剪除的内容：杂志页数随广告量浮动，大量图表、侧栏乃至整节模块讨论被删，腾出版面给 Intel 等广告商；同时其数据中心监测显示，近两年对操作系统早期根源文献的引用兴趣显著上升，尤其来自中国、印度等亚洲地区与法国、德国，遂将恢复工程扩展为更接近原始设想的完整版本，建于 **porting-unix-2-the-386.jolix.com**（Jolix 为 386BSD 的通行别称）。（BSDTalk EP29，[222.56-383.16]，L1）

@@ -142,11 +142,11 @@ volume: 第18卷-全球社区地区bsd史
 - Benno 总结构建 FreeBSD 衍生产品的核心教训：长期停留在 stable 分支的企业在每个版本迁移时须重移植全部私有补丁，Isilon 曾因内部 InfiniBand 栈建在 FreeBSD 7 的 L2 路由代码上而被 7 至 8 的代码变更摧毁，逐 stable 升级的路径趋于不可行；其结论是只要自备充足的发布工程与测试，直接跟随 head 反而更优，既能在单一发布周期内回馈上游修复与特性、摊薄维护成本，也便于下游开发保持同步；团队下一步计划将自身 diff 逐项归入四类——因知识产权不能上游、应立即上游、不上游自留、可上游重写后取回。另披露与 Netflix 的 Scott Long、Lawrence Stewart、Warner Losh 在网卡与 HBA 驱动、TCP 栈性能改进及防回归测试上的协作，EMC 与 Netflix 无竞争关系使此类跨公司协作获得管理层支持。（BSD Now EP110，[2124.22-2798.50]，L1）
 - 虚拟化与图形栈进展：Peter Grehan 于 10 月 4 日向 bhyve 提交 Windows 客户机支持并引入含 CSM 的 UEFI 栈，经重打包注入无人值守安装配置的 Windows ISO、以 VNC 或 RDP 弥补缺失的图形能力完成安装；同一 UEFI 栈使 SmartOS、OpenIndiana、OmniOS 可作为 Illumos 客户机运行，为 FreeBSD 侧 ZFS 开发提供上游提交前的编译测试环境。同期 FreeBSD 合入 Xen 4.6 相关头文件（新增 ARM 支持并与 aarch64 虚拟化卸载工作并行）、LLVM/Clang 3.7.0、支持 Radeon 与 Ivy Bridge 起代 Intel GPU 的 OpenCL ports（需 KMS 驱动）；OpenBSD 开发分支落地 Broadwell GPU 初步支持，DRM 对齐 Linux 3.14.52（Mark Kettenis），Dev Summit 图形工作组预期年底前交付 Haswell 图形支持。（BSD Now EP110，[727.76-1099.88]，L2）
 - ZFS 运维实践反馈：听众在 4K 盘上以 512B 伪容量（GNOP 手法时代）建立 RAIDZ2 池且未启用压缩，压缩属性可按数据集增量开启而无需重建，但 512B 块尺寸无法就地修正、必须重建池并临时转移全部数据；主持人建议以 zfs send/receive 取代 rsync 完成迁移，因其保留快照且可在接收端重设压缩属性。Alan 自述 30 余块盘混用 512B 与 4K 的同类教训，并总结“写出一个糟糕的实现，往往是让别人写出更好实现的最好办法”（4799.32-4804.14），其安装器的 ZFS 支持正是由粗陋原型起步引来协作重写。（BSD Now EP110，[5070.18-5478.22]，L1）
-- Stefano Marinelli 自述 2002 年因大学同学提及教授 Özal Babaoğlu 是伯克利原始 BSD 的创建者之一而开始研究 BSD，随后在笔记本电脑上安装 FreeBSD 并长期使用。（BSD Now EP579，[843.16-910.40]，L1）
-- Stefano 创办 BSD Cafe：因 Fediverse 上缺少 BSD 爱好者的开放交流空间，创建实例后 24 小时内即吸引逾百名用户，后扩展出 Matrix 频道与 RSS 等服务，并推动意大利中小企业与医疗行业采用 BSD。（BSD Now EP579，[942.26-1072.78]，L1）
-- Dave Cottlehuber 追述 FreeBSD core 团队史：早期 core 即所有持有源码提交权限者，后经诉讼尾声与治理需要而结构化，约二十年前基金会成立；近年 core 将源码提交权限的决策下放给新设的 source manager team。（BSD Now EP579，[1898.98-2186.62]，L1）
-- Dave 说明 FreeBSD Core 13 的目标包括完成 source manager team 的设立、改善软件包仓库的 CDN 分发、加强与 Dell、Sony、Apple 等下游伙伴的协作，并推进由基金会资助的 CI 工作流。（BSD Now EP579，[2207.24-2461.08]，L1）
-- Christos Margiolis 自述因 Linux 代码库过于庞大而选择 FreeBSD 作为贡献对象，从事声音子系统与音乐制作工具的维护与改进。（BSD Now EP579，[2721.16-2774.92]，L1）
+- Stefano Marinelli 自述 2002 年因大学同学提及教授 Özal Babaoğlu 是伯克利原始 BSD 的创建者之一而开始研究 BSD，随后在笔记本电脑上安装 FreeBSD 并长期使用。（BSD Now EP579，[828.4-910.6]，L1）[订正：原 [843.16-910.40]，2026-10-01 SenseAudio 重转核对]
+- Stefano 创办 BSD Cafe：因 Fediverse 上缺少 BSD 爱好者的开放交流空间，创建实例后 24 小时内即吸引逾百名用户，后扩展出 Matrix 频道与 RSS 等服务，并推动意大利中小企业与医疗行业采用 BSD。（BSD Now EP579，[935.3-1084.5]，L1）[订正：原 [942.26-1072.78]，2026-10-01 SenseAudio 重转核对]
+- Dave Cottlehuber 追述 FreeBSD core 团队史：早期 core 即所有持有源码提交权限者，后经诉讼尾声与治理需要而结构化，约二十年前基金会成立；近年 core 将源码提交权限的决策下放给新设的 source manager team。（BSD Now EP579，[1883.2-2189.1]，L1）[订正：原 [1898.98-2186.62]，2026-10-01 SenseAudio 重转核对]
+- Dave 说明 FreeBSD Core 13 的目标包括完成 source manager team 的设立、改善软件包仓库的 CDN 分发、加强与 Dell、Sony、Apple 等下游伙伴的协作，并推进由基金会资助的 CI 工作流。（BSD Now EP579，[2202.5-2461.1]，L1）[订正：原 [2207.24-2461.08]，2026-09-30 SenseAudio 重转核对]
+- Christos Margiolis 自述因 Linux 代码库过于庞大而选择 FreeBSD 作为贡献对象，从事声音子系统与音乐制作工具的维护与改进。（BSD Now EP579，[2719.3-2775.0]，L1）[订正：原 [2721.16-2774.92]，2026-09-30 SenseAudio 重转核对]
 - pkgsrcCon 2007 为第四届，于 4 月 27 日至 29 日在巴塞罗那的加泰罗尼亚理工大学举行；该会四年前始于维也纳，首届仓促筹办却意外成功，此后固定于四月末五月初在欧洲开发者所在城市巡游，会议本身免费（free as in beer）仅需提前注册，旅费自理。（BSDTalk EP100，[230.64-304.04]，L1）
 - 会议运作全凭志愿者，不提供住宿交通协助，选址刻意选旅行成本低的城市以保持参会门槛最低；组织者预期规模数十人，若增至约五十人连集体晚宴都会难以安排，显示其为小规模熟人式技术聚会的定位。（BSDTalk EP100，[409.24-488.08]，L1）
 - Sedlacik 阐明会议的社交功能：把名字对应到面孔以提升日后邮件与讨论的沟通效率，让开发者偶尔从用户视角审视系统；并明确欢迎 FreeBSD、OpenBSD 乃至 OpenSolaris 与 Linux 开发者分享经验，往届已有 FreeBSD ports 开发者与会，跨阵营互鉴被列为会议目标。（BSDTalk EP100，[126.92-284.2]，L1）
@@ -209,7 +209,7 @@ volume: 第18卷-全球社区地区bsd史
 - Martin Husemann 的 NetBSD 11 release process 博客。（BSD Now EP626，[1636.36-1806.82]，L2）
 - Nico Cartron 访谈。（BSD Now EP626，[1950.18-3345.10]，L1）
 - 本期可索引的一手史料：Alan 的 EuroBSDCon 2015 亲历口述，含约 244 名与会者、首次与会者占比很高且首次出现无全勤者举手、大会纪念已故社区成员 Paul Schenkeveld 并设以其命名的年度旅行资助、下届承办地贝尔格莱德；Paul Vixie 开幕主题演讲回顾其 BSD 使用史与职业生涯，中途脱去毛衣露出印有“Bind 8 is dead”字样的 T 恤并获全场掌声（147.68-154.42）；Theo de Raadt 在克罗地亚的 TAME 演讲幻灯片与 Bob Beck 的 LibreSSL 演讲幻灯片；Peter Grehan 于 10 月 4 日提交的 bhyve Windows 客户机支持（要求 FreeBSD head r288524 之后）；EMC Isilon 赞助回馈上游的 FreeBSD commits。（BSD Now EP110，[321.54-609.50]，L1）
-- 本期为 EuroBSDcon 2024 现场采访，Stefano Marinelli、Dave Cottlehuber 与 Christos Margiolis 均为当事人自述；Özal Babaoğlu 的身份信息为 Stefano 转述的同学说法。（BSD Now EP579，[745.78-2774.92]，L1）
+- 本期为 EuroBSDcon 2024 现场采访，Stefano Marinelli、Dave Cottlehuber 与 Christos Margiolis 均为当事人自述；Özal Babaoğlu 的身份信息为 Stefano 转述的同学说法。（BSD Now EP579，[735.3-2775.0]，L1）[订正：原 [745.78-2774.92]，2026-10-01 SenseAudio 重转核对]
 - 本期指向的一手材料包括 pkgsrccon.org 网站与历届演讲幻灯片存档、pkgsrcCon 2007 的注册与日程记录，以及 SILC 客户端与服务器在 pkgsrc 中的首批打包成果，后者可作 pkgsrc 跨平台打包实践的实物证据。（BSDTalk EP100，[504.36-710.16]，L1）
 - OpenCon 2007 组织材料：官网 www.opencon.org、威尼斯会场、周五教程日安排与演讲名单（含 Claudio Jeker 的 OSPF6d 演讲）；OpenBSD 4.2 的 2007 年 11 月 1 日发布日期与更早的发布切分时点。（BSDTalk EP133，[122.61-196.4]，L1）　[订正：原 122.61-179.11，2026-09-29 SenseAudio 重转核对]
 - OpenSSH 诞生时间线的社区纪念证据：2007 年 10 月前后社区庆祝其八周岁生日，与 1999 年 10 月首次发布相互印证。（BSDTalk EP133，[226.47-238.75]，L1）
@@ -237,9 +237,9 @@ volume: 第18卷-全球社区地区bsd史
 - 总纲10 动手者创造历史：Benno 断言“没有一家制造 FreeBSD 设备的公司不曾用自研方案替换或增强过 init”（3302.84-3311.74），Isilon 亦自建代号 MCP 的服务管理组件并期望以 launchd 式设计取而代之；本集新闻中的 relaunchd 项目同样以移植 launchd 语义为志、以不接管 PID 1 与不替代现有 init 为边界。基础软件的关键机制长期由各设备厂商分散手刻同类轮子，再经 Jordan Hubbard 的 launchd 议题与 Kip Macy 的工作等节点重新汇流——设备与存储演化史的运动主体正是这些分散的动手者，而非任何平台的整体规划。（BSD Now EP110，[3245.30-3339.04]，L1）
 - 总纲22 知识注定过时：Benno 详述 FreeBSD UEFI 引导的诞生语境：预格式化为 GPT 加 EFI 分区的 SSD 使主机 BIOS 自动切换 UEFI 并拒绝 legacy 启动，他遂在 QEMU 与 TianoCore 参考实现上为 FreeBSD 重造 UEFI loader，其间受制于 Clang 当时缺失的 MS ABI 调用约定属性，以及内核静态定址需求与 UEFI 退出引导服务前须保全其内存的约束冲突；同期反馈区里 HP 台式机 BTX loader 无法启动而 Grub 可用，Colin Percival 自述 16 位汇编是其“最后一次写的汇编”（4545.28-4549.26）却仍是调试 geli 全盘加密 UEFI 支持的关键技能。固件层的这组案例显示：基础设施代码携带其时代的知识形态，引导链从 BIOS 向 UEFI 的演进注定使旧知识过时，又不断拖拽新实现与遗产纠缠。（BSD Now EP110，[2824.36-3243.56]，L1）
 - 总纲3 不存在进步，只有权力再分配：Bob Beck 演讲给出的删码数据构成对功能堆叠叙事的反题：LibreSSL 自 OpenSSL 1.0.1g 分叉时含约 38.8 万行 C，三十天内删去近 9 万行，至 2015 年 10 月总量约 51.1 万行而 C 代码降至约 29.7 万行；同期 OpenSSL 1.0.2d 达 43.2 万行 C、现行版本总行数突破 100 万，而近期五个 OpenSSL 高危 CVE 均未波及 LibreSSL。Theo 的 TAME 主张与之同构：接口约 1200 行，file 命令从 systrace 的约 300 行规则缩至 4 行；他论证“若防护特性带关闭开关，应用方迟早劝用户关掉它，无人使用的特性随之死亡”（1344.14-1364.18），故 OpenBSD 政策为特性一旦可用即不设退路、应用缺陷必须修复。两条路线的分歧并非进步程度的差异，而是关于安全边界定义权的再分配。（BSD Now EP110，[1388.84-1504.34]，L2）
-- 总纲10 动手者创造历史：Stefano 以运维者身份推动客户迁移 BSD 并创办社区服务，Dave 以志愿者身份参与治理，均体现动手者在社区运行中的基础作用。（BSD Now EP579，[942.26-1072.78]，L1）
-- 总纲3 不存在进步，只有权力再分配：core 团队将源码提交权限决策下放给 source manager team 的过程，是 FreeBSD 治理权力在团队间的重新配置。（BSD Now EP579，[2081.44-2186.62]，L1）
-- 总纲8 本体论上各方平等：Dave 强调 FreeBSD 与 OpenBSD、NetBSD、DragonFly BSD 乃至 Linux 社区之间存在持续的跨项目交流，各方在面对共同工程问题时彼此平等。（BSD Now EP579，[2560.00-2607.04]，L1）
+- 总纲10 动手者创造历史：Stefano 以运维者身份推动客户迁移 BSD 并创办社区服务，Dave 以志愿者身份参与治理，均体现动手者在社区运行中的基础作用。（BSD Now EP579，[935.3-1084.5]，L1）[订正：原 [942.26-1072.78]，2026-10-01 SenseAudio 重转核对]
+- 总纲3 不存在进步，只有权力再分配：core 团队将源码提交权限决策下放给 source manager team 的过程，是 FreeBSD 治理权力在团队间的重新配置。（BSD Now EP579，[2073.3-2189.1]，L1）[订正：原 [2081.44-2186.62]，2026-10-01 SenseAudio 重转核对]
+- 总纲8 本体论上各方平等：Dave 强调 FreeBSD 与 OpenBSD、NetBSD、DragonFly BSD 乃至 Linux 社区之间存在持续的跨项目交流，各方在面对共同工程问题时彼此平等。（BSD Now EP579，[2545.7-2608.6]，L1）[订正：原 [2560.00-2607.04]，2026-10-01 SenseAudio 重转核对]
 - 总纲10 动手者创造历史：Sedlacik 自述“处理我缺陷报告的人终于受够了我而邀请我成为开发者”，其身份由持续的实际修补工作而非学历或任命换来，是动手者以贡献换取历史位置的一手例证。（BSDTalk EP100，[578.68-591.88]，L1）
 - 总纲8 本体论上各方平等：pkgsrcCon 把 NetBSD、FreeBSD、OpenBSD 乃至 OpenSolaris 与 Linux 阵营的开发者聚于同一屋檐下交流打包与工程经验，各分支在此平等互鉴而非论资排辈，构成分离阵营之间的聚合节点。（BSDTalk EP100，[268.88-284.2]，L1）
 - 总纲20 历史地理塑造思想土壤：OpenCon 的地理组织——威尼斯会场、11 国乃至黎巴嫩的参会者流动——显示欧洲城市节点与会议空间如何承载并塑造 BSD 社区的交流形态，社区思想的生长与其地理聚点不可分。（BSDTalk EP133，[59.18-72.61]，L1）
@@ -264,8 +264,8 @@ volume: 第18卷-全球社区地区bsd史
 - [存疑脚注] Patrick Hausen 所忆 1994 年与 Jordan Hubbard 会面、Walnut Creek 光盘数量等细节系当事人多年后回忆，需与 Walnut Creek 档案交叉核验。　[存疑脚注] 当事人回忆性细节，缺乏独立一手档案印证。（BSD Now EP192，[1279.84-1320.66]，L4）
 - 转录将 Martin Husemann 记作 Martin Hussman，且节目开场将 NetBSD 11 与 FreeBSD 11 混写，须以 NetBSD 官方博客核验。　[存疑脚注] 人名与版本号存在转写歧义，未与 NetBSD 官方公告核验（BSD Now EP626，[1636.36-1806.82]，L4）
 - OpenJDK 维护者姓名在转录中作 Harold 或 Harald，具体拼写须以 FreeBSD Foundation 原文核验。　[存疑脚注] 维护者姓名存在转写歧义（BSD Now EP626，[867.98-873.02]，L4）
-- Stefano 所称 Özal Babaoğlu 为“原始 BSD 的创建者之一”系同学转述，其具体贡献范围须以 CSRG 档案核实。　[存疑脚注] Babaoğlu 在伯克利 BSD 中的具体贡献与角色未经 CSRG 一手档案核实。（BSD Now EP579，[843.16-869.18]，L4）
-- Dave 所述“早期 core 即全体源码 commit 持有者”为其个人追述，具体历史节点须以 FreeBSD 项目档案核实。　[存疑脚注] core 早期构成说法为个人追述，未经项目治理档案核实。（BSD Now EP579，[1898.98-1948.24]，L4）
+- Stefano 所称 Özal Babaoğlu 为“原始 BSD 的创建者之一”系同学转述，其具体贡献范围须以 CSRG 档案核实。　[存疑脚注] Babaoğlu 在伯克利 BSD 中的具体贡献与角色未经 CSRG 一手档案核实。（BSD Now EP579，[828.4-869.3]，L4）[订正：原 [843.16-869.18]，2026-10-01 SenseAudio 重转核对]
+- Dave 所述“早期 core 即全体源码 commit 持有者”为其个人追述，具体历史节点须以 FreeBSD 项目档案核实。　[存疑脚注] core 早期构成说法为个人追述，未经项目治理档案核实。（BSD Now EP579，[1883.2-1961.6]，L4）[订正：原 [1898.98-1948.24]，2026-10-01 SenseAudio 重转核对]
 - 转写将讲者姓名识别为 Lubimir Sidlogic，应为 NetBSD/pkgsrc 开发者 Lubomir Sedlacik；“第四届”与“四年前始于维也纳”系约数表述，历届城市序列与首办年份须以 pkgsrccon.org 存档核对；另有若干设备与软件名因语音识别损坏无法复原。　[存疑脚注] 讲者姓名与历届会议序列均系 ASR 转写产物，存在识别损坏，采用前须以官方存档交叉核验（BSDTalk EP100，[286.8-304.04]，L4）
 - 转写人名讹误集中且部分不可辨识：Mark Balmer 应为 Marc Balmer，Peter Hanschke 应为 Peter Hansteen，Bernd Edler 疑为 Bernd Ahlers，Felix Krullinger 应为 Felix Kronlage，Claudio Jäger 应为 Claudio Jeker，缓冲区缓存讲者讹作 Miki Shalev 无法辨识，soft raid 讲者转写作 Teju（拼写存疑）；上述均须以 OpenCon 2007 官方日程核证。　[存疑脚注] 人名与讲题经上下文推断校正或无法辨识，须回溯会议官方日程（BSDTalk EP133，[38.1-215.9]，L4）　[订正：原 79.69-217.60，2026-09-29 SenseAudio 重转核对]
 - 转写称 OpenCon 已“第四次在威尼斯举办”且本届“与上年同址”，两种表述一致，OpenCon 2006 等历届会址仍无法由本期单独确证，须以历届 OpenCon 会址记录核证。　[存疑脚注] 会址沿革待历届会议记录核证（BSDTalk EP133，[59.2-129.4]，L4）　[订正：原 59.18-118.05，2026-09-29 SenseAudio 重转核对]

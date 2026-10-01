@@ -101,7 +101,7 @@ volume: 第06卷-freebsd的核心技术革新
 - 本期提及的一手史料：ports 树移除 EOL 兼容代码的提交与 FreeBSD 11 新发布节奏说明；Capsicum 化 traceroute 的 Phabricator 评审（含 Casper system.dns 用法）；The Tao of Tmux 一文及其引用的 McKusick《The Design and Implementation of the FreeBSD Operating System》第二版进程管理与终端处理章节、Linus Åkesson 的 TTY Demystified；BSD Router Project 1.70 发布公告（Fib4 转发改进、netmap 包生成器 IPv6 支持、OpenVPN 2.4 AES-GCM）；DragonFly UEFI 安装器提交与 HAMMER 构建脚本；Adrian Chadd 关于 AR9380 驱动 UDP 吞吐自 250 提至 355 Mbps 的推文；Computer Chronicles 1985 年 Unix 专题（archive.org 公有领域收藏）；Reddit 上在 NetBSD 运行 Minecraft 的指南（Linux 仿真加 Oracle JRE）；SDF 三十周年公告与 BBS Documentary 纪录片；听众 Jason 经 Windows Subsystem for Linux 在 Windows 10 原生运行 Tarsnap 的操作说明；Knoxbug 树莓派安装聚会公告。（BSD Now EP178，[3537.92-3623.44]，L2）
 - 本期可作史料线索者包括：BSDCan 2015 主题演讲预告中 Steven Bourne（转写作 Steven born）将亲述原始 sh 的编写与移植（SBRK、无字符串库时代）、其 Algol 68 移植并劝说 Dennis Ritchie 在 C 中引入 void、环境变量的发明缘由、Bill Joy 为何另写 C shell，并点评 Shellshock 类缺陷自 1990 年代初即潜伏而长期无人发现；另有 Brooks Davis 的 CherryBSD 报告（将 Capsicum 思想下沉至处理器硬件强制）、Robert Watson 与 George Neville-Neil 宣布开源其 FreeBSD 高级操作系统课程材料、以及 MeetBSD 上文件系统开发者当众销毁硬盘的录像。　[存疑脚注] 人名与专名转写多处失真（Steven born、Alargh 68、Matthew Dylan 等），引用前须比对 BSDCan 2015 官方日程与会议实录。（BSD Now EP93，[145.94-252.12]，L2）
 - Robert Watson 访谈（当事人自述，FreeBSD 核心团队成员与剑桥大学讲师）。（BSD Now EP50，[1294.82-2231.72]，L1）
-- OpenSSL 0.9.8zb、1.0.0n、1.0.1i 安全公告与 LibreSSL 2.0.5 发布信息（主持人口头转述）。（BSD Now EP50，[897.62-983.42]，L2）
+- OpenSSL 0.9.8zb、1.0.0n、1.0.1i 安全公告与 LibreSSL 新版本发布信息（主持人口头转述；新转写仅提及 LibreSSL 发布新版本，未及版本号）。（BSD Now EP50，[897.62-983.42]，L2）[订正：原 "LibreSSL 2.0.5 发布信息"，2026-09-30 SenseAudio 重转核对]
 
 **史观**：
 

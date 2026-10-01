@@ -80,7 +80,7 @@ volume: 第06卷-freebsd的核心技术革新
 
 - 本期核心史料为 Lawrence Tratt 的 CHERI 内存分配器技术文章与 Scott Fahlman 的原始公告板消息截图，二者均经主持人口头转述。（BSD Now EP529，[652.58-2699.48]，L2）
 - Robert Watson 访谈（当事人自述，FreeBSD 核心团队成员与剑桥大学讲师）。（BSD Now EP50，[1294.82-2231.72]，L1）
-- OpenSSL 0.9.8zb、1.0.0n、1.0.1i 安全公告与 LibreSSL 2.0.5 发布信息（主持人口头转述）。（BSD Now EP50，[897.62-983.42]，L2）
+- OpenSSL 0.9.8zb、1.0.0n、1.0.1i 安全公告与 LibreSSL 新版本发布信息（主持人口头转述；新转写仅提及 LibreSSL 发布新版本，未及版本号）。（BSD Now EP50，[897.62-983.42]，L2）[订正：原 "LibreSSL 2.0.5 发布信息"，2026-09-30 SenseAudio 重转核对]
 
 **史观**：
 

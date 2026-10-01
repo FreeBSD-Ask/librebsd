@@ -37,7 +37,7 @@ volume: 第01卷-unix的起源
 
 **史料**：
 
-- Clara Systems 的 RISC-V 架构介绍文章、JT 对 RISC-V International 首席技术官 Mark Himelstein 的采访、Frederick Cambus 关于 NetBSD 运行于 Vortex86DX 的记录。（BSD Now EP425，[65.54-72.34]，L2）
+- Clara Systems 的 RISC-V 架构介绍文章、JT 对 RISC-V International 首席技术官 Mark Himelstein 的采访、Frederick Cambus 关于 NetBSD 运行于 Vortex86DX 的记录。（BSD Now EP425，[65.5-344.5]，L2）[订正：原 [65.54-72.34]，2026-10-01 SenseAudio 重转核对]
 
 **史观**：
 

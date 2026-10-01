@@ -85,11 +85,11 @@ volume: 第18卷-全球社区地区bsd史
 - OpenSSH 10.1 于 2025 年 10 月 6 日发布，修复用户名控制字符注入问题，并新增 SIGINFO 通道日志、PKCS#11 ED25519 支持与 refuse connection 配置项。（BSD Now EP633，[2126.22-2590.12]，L2）
 - Brian Kernighan 在 VCF East 2025 表示只写过一次 Rust 且体验不佳，认为其 crate 与编译链庞大缓慢，同时坦言对 NixOS 与多数发行版并不熟悉。（BSD Now EP633，[2757.82-3220.12]，L1）
 - GhostBSD 25.02 基于 FreeBSD 14.3，新增以 GNUstep 组件与 XFCE 面板组合的 Gershwin 桌面，提供类 macOS 体验。（BSD Now EP633，[3371.86-3563.32]，L2）
-- Stefano Marinelli 自述 2002 年因大学同学提及教授 Özal Babaoğlu 是伯克利原始 BSD 的创建者之一而开始研究 BSD，随后在笔记本电脑上安装 FreeBSD 并长期使用。（BSD Now EP579，[843.16-910.40]，L1）
-- Stefano 创办 BSD Cafe：因 Fediverse 上缺少 BSD 爱好者的开放交流空间，创建实例后 24 小时内即吸引逾百名用户，后扩展出 Matrix 频道与 RSS 等服务，并推动意大利中小企业与医疗行业采用 BSD。（BSD Now EP579，[942.26-1072.78]，L1）
-- Dave Cottlehuber 追述 FreeBSD core 团队史：早期 core 即所有持有源码提交权限者，后经诉讼尾声与治理需要而结构化，约二十年前基金会成立；近年 core 将源码提交权限的决策下放给新设的 source manager team。（BSD Now EP579，[1898.98-2186.62]，L1）
-- Dave 说明 FreeBSD Core 13 的目标包括完成 source manager team 的设立、改善软件包仓库的 CDN 分发、加强与 Dell、Sony、Apple 等下游伙伴的协作，并推进由基金会资助的 CI 工作流。（BSD Now EP579，[2207.24-2461.08]，L1）
-- Christos Margiolis 自述因 Linux 代码库过于庞大而选择 FreeBSD 作为贡献对象，从事声音子系统与音乐制作工具的维护与改进。（BSD Now EP579，[2721.16-2774.92]，L1）
+- Stefano Marinelli 自述 2002 年因大学同学提及教授 Özal Babaoğlu 是伯克利原始 BSD 的创建者之一而开始研究 BSD，随后在笔记本电脑上安装 FreeBSD 并长期使用。（BSD Now EP579，[828.4-910.6]，L1）[订正：原 [843.16-910.40]，2026-10-01 SenseAudio 重转核对]
+- Stefano 创办 BSD Cafe：因 Fediverse 上缺少 BSD 爱好者的开放交流空间，创建实例后 24 小时内即吸引逾百名用户，后扩展出 Matrix 频道与 RSS 等服务，并推动意大利中小企业与医疗行业采用 BSD。（BSD Now EP579，[935.3-1084.5]，L1）[订正：原 [942.26-1072.78]，2026-10-01 SenseAudio 重转核对]
+- Dave Cottlehuber 追述 FreeBSD core 团队史：早期 core 即所有持有源码提交权限者，后经诉讼尾声与治理需要而结构化，约二十年前基金会成立；近年 core 将源码提交权限的决策下放给新设的 source manager team。（BSD Now EP579，[1883.2-2189.1]，L1）[订正：原 [1898.98-2186.62]，2026-10-01 SenseAudio 重转核对]
+- Dave 说明 FreeBSD Core 13 的目标包括完成 source manager team 的设立、改善软件包仓库的 CDN 分发、加强与 Dell、Sony、Apple 等下游伙伴的协作，并推进由基金会资助的 CI 工作流。（BSD Now EP579，[2202.5-2461.1]，L1）[订正：原 [2207.24-2461.08]，2026-09-30 SenseAudio 重转核对]
+- Christos Margiolis 自述因 Linux 代码库过于庞大而选择 FreeBSD 作为贡献对象，从事声音子系统与音乐制作工具的维护与改进。（BSD Now EP579，[2719.3-2775.0]，L1）[订正：原 [2721.16-2774.92]，2026-09-30 SenseAudio 重转核对]
 
 **史料**：
 
@@ -106,7 +106,7 @@ volume: 第18卷-全球社区地区bsd史
 - fastcode.io 关于 VMware 收购与 Bitnami 收费的报道。（BSD Now EP633，[1612.96-2123.00]，L2）
 - OpenSSH 10.1 官方发布说明。（BSD Now EP633，[2126.22-2590.12]，L2）
 - The New Stack 对 Brian Kernighan 在 VCF East 2025 问答的报道。（BSD Now EP633，[2749.04-3342.34]，L2）
-- 本期为 EuroBSDcon 2024 现场采访，Stefano Marinelli、Dave Cottlehuber 与 Christos Margiolis 均为当事人自述；Özal Babaoğlu 的身份信息为 Stefano 转述的同学说法。（BSD Now EP579，[745.78-2774.92]，L1）
+- 本期为 EuroBSDcon 2024 现场采访，Stefano Marinelli、Dave Cottlehuber 与 Christos Margiolis 均为当事人自述；Özal Babaoğlu 的身份信息为 Stefano 转述的同学说法。（BSD Now EP579，[735.3-2775.0]，L1）[订正：原 [745.78-2774.92]，2026-10-01 SenseAudio 重转核对]
 
 **史观**：
 
@@ -119,9 +119,9 @@ volume: 第18卷-全球社区地区bsd史
 - 总纲5 没有必然性，只有偶然性：总纲5 没有必然性，只有偶然性：Ed Brayden 论证世界模型与预测的失败，强调复杂系统走向并非规划者所能必然掌控。（BSD Now EP633，[1084.22-1603.88]，L2）
 - 总纲11 商品是形式主义：总纲11 商品是形式主义：Broadcom 将 Bitnami 免费镜像改造为定价商品，展示开源资产在资本收购后的形式主义化。（BSD Now EP633，[1645.84-2123.00]，L2）
 - 总纲22 知识注定过时：总纲22 知识注定过时：Brian Kernighan 以 C 语言长期推广者身份面对 Rust 崛起，反映技术知识随生态更替而过时的处境。（BSD Now EP633，[2863.88-2966.64]，L1）
-- 总纲10 动手者创造历史：Stefano 以运维者身份推动客户迁移 BSD 并创办社区服务，Dave 以志愿者身份参与治理，均体现动手者在社区运行中的基础作用。（BSD Now EP579，[942.26-1072.78]，L1）
-- 总纲3 不存在进步，只有权力再分配：core 团队将源码提交权限决策下放给 source manager team 的过程，是 FreeBSD 治理权力在团队间的重新配置。（BSD Now EP579，[2081.44-2186.62]，L1）
-- 总纲8 本体论上各方平等：Dave 强调 FreeBSD 与 OpenBSD、NetBSD、DragonFly BSD 乃至 Linux 社区之间存在持续的跨项目交流，各方在面对共同工程问题时彼此平等。（BSD Now EP579，[2560.00-2607.04]，L1）
+- 总纲10 动手者创造历史：Stefano 以运维者身份推动客户迁移 BSD 并创办社区服务，Dave 以志愿者身份参与治理，均体现动手者在社区运行中的基础作用。（BSD Now EP579，[935.3-1084.5]，L1）[订正：原 [942.26-1072.78]，2026-10-01 SenseAudio 重转核对]
+- 总纲3 不存在进步，只有权力再分配：core 团队将源码提交权限决策下放给 source manager team 的过程，是 FreeBSD 治理权力在团队间的重新配置。（BSD Now EP579，[2073.3-2189.1]，L1）[订正：原 [2081.44-2186.62]，2026-10-01 SenseAudio 重转核对]
+- 总纲8 本体论上各方平等：Dave 强调 FreeBSD 与 OpenBSD、NetBSD、DragonFly BSD 乃至 Linux 社区之间存在持续的跨项目交流，各方在面对共同工程问题时彼此平等。（BSD Now EP579，[2545.7-2608.6]，L1）[订正：原 [2560.00-2607.04]，2026-10-01 SenseAudio 重转核对]
 
 **辨析**：
 
@@ -131,8 +131,8 @@ volume: 第18卷-全球社区地区bsd史
 - 主持人指出部分基准差异可能源于 Clang 版本、ZFS 缓存与编译选项而非操作系统本身，强调不追问“为什么”的基准结果不可信，此类比较不宜直接作为性能结论。（BSD Now EP281，[1144.52-1204.20]，L3）
 - 转录将 Klara Systems 记作 Clara、将 Brian Kernighan 记作 Koenigan 或 Kernigan，人名与机构名存在语音转写偏差。　[存疑脚注] 机构与人物名称存在转写偏差，须以原文核验（BSD Now EP633，[2753.12-2784.64]，L4）
 - Bitnami 定价在转录中出现 600 亿、60 万与 7.2 万等不一致数字，具体金额须以 AWS Marketplace 与官方公告核验。　[存疑脚注] 价格数字存在转写歧义，未与官方定价页核验（BSD Now EP633，[1666.68-2041.44]，L4）
-- Stefano 所称 Özal Babaoğlu 为“原始 BSD 的创建者之一”系同学转述，其具体贡献范围须以 CSRG 档案核实。　[存疑脚注] Babaoğlu 在伯克利 BSD 中的具体贡献与角色未经 CSRG 一手档案核实。（BSD Now EP579，[843.16-869.18]，L4）
-- Dave 所述“早期 core 即全体源码 commit 持有者”为其个人追述，具体历史节点须以 FreeBSD 项目档案核实。　[存疑脚注] core 早期构成说法为个人追述，未经项目治理档案核实。（BSD Now EP579，[1898.98-1948.24]，L4）
+- Stefano 所称 Özal Babaoğlu 为“原始 BSD 的创建者之一”系同学转述，其具体贡献范围须以 CSRG 档案核实。　[存疑脚注] Babaoğlu 在伯克利 BSD 中的具体贡献与角色未经 CSRG 一手档案核实。（BSD Now EP579，[828.4-869.3]，L4）[订正：原 [843.16-869.18]，2026-10-01 SenseAudio 重转核对]
+- Dave 所述“早期 core 即全体源码 commit 持有者”为其个人追述，具体历史节点须以 FreeBSD 项目档案核实。　[存疑脚注] core 早期构成说法为个人追述，未经项目治理档案核实。（BSD Now EP579，[1883.2-1961.6]，L4）[订正：原 [1898.98-1948.24]，2026-10-01 SenseAudio 重转核对]
 
 **文献**：
 

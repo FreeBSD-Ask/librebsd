@@ -70,7 +70,7 @@ volume: 第06卷-freebsd的核心技术革新
 **史料**：
 
 - Robert Watson 访谈（当事人自述，FreeBSD 核心团队成员与剑桥大学讲师）。（BSD Now EP50，[1294.82-2231.72]，L1）
-- OpenSSL 0.9.8zb、1.0.0n、1.0.1i 安全公告与 LibreSSL 2.0.5 发布信息（主持人口头转述）。（BSD Now EP50，[897.62-983.42]，L2）
+- OpenSSL 0.9.8zb、1.0.0n、1.0.1i 安全公告与 LibreSSL 新版本发布信息（主持人口头转述；新转写仅提及 LibreSSL 发布新版本，未及版本号）。（BSD Now EP50，[897.62-983.42]，L2）[订正：原 "LibreSSL 2.0.5 发布信息"，2026-09-30 SenseAudio 重转核对]
 - 本期对 Poul-Henning Kamp 的当事人访谈自述，他是 FreeBSD 项目早期成员，也是 jail、GEOM、GBDE 与 MD5 crypt 的亲历者。（BSD Now EP7，[718.30-2292.60]，L1）[订正：原 [707.32-2296.90]，2026-09-30 SenseAudio 重转核对]
 - Kamp 与 Robert Watson 合著论文《Jails: Confining the Omnipotent Root》（BSDCon 2000），是对 jail 的系统化表述。（BSD Now EP7，[1052.26-1077.26]，L3）
 - jail(2)、gbde(8)、geli(8) 手册页及 FreeBSD 源码仓库中对应提交记录，可作为交叉验证来源。（BSD Now EP7，L3）

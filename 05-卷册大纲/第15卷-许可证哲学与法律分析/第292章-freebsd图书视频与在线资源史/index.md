@@ -79,10 +79,10 @@ volume: 第15卷-许可证哲学与法律分析
 
 **要点**：
 
-- FreeBSD jails 与 ZFS 数据集委托形成组合：可把数据集委托给 jail 内 root，再由 jail 内 root 委托给单个用户，配合强制访问控制模块实现面向公众服务的最小权限隔离。（BSD Now EP329，[709.42-766.12]，L1）
-- Lucas 认为 jails 是系统管理各项知识的集大成，需掌握文件系统、升级与编排；一旦单机运行数百 jail 就必须自动化，否则无法管理。（BSD Now EP329，[604.70-654.10]，L1）
-- BSDCan 拍卖是慈善筹款仪式：Lucas 拍卖标注“mostly complete”却缺最后 27 页的《Terrapin Sky Tango》初稿，Bob Beck 与 Christophe Provost 分别竞得主体与结尾，共筹得约 300 美元捐给 Ottawa Mission，并催生仅印四册的残缺特别版。（BSD Now EP329，[908.72-1153.38]，L1）
-- SNMP 协议本体仅七个部分，复杂来自厂商解释与实现差异；Lucas 的《SNMP Mastery》试图把学习协议与学习厂商配置分离，将其定位为网络与系统管理员工具箱中的必要工具。（BSD Now EP329，[1394.54-1497.48]，L1）
+- FreeBSD jails 与 ZFS 数据集委托形成组合：可把数据集委托给 jail 内 root，再由 jail 内 root 委托给单个用户，配合强制访问控制模块实现面向公众服务的最小权限隔离。（BSD Now EP329，[709.42-868.1]，L1）[订正：原 [709.42-766.12]，2026-09-30 SenseAudio 重转核对]
+- Lucas 认为 jails 是系统管理各项知识的集大成，需掌握文件系统、升级与编排；一旦单机运行数百 jail 就必须自动化，否则无法管理。（BSD Now EP329，[616.6-654.10]，L1）[订正：原 [604.70-654.10]，2026-10-01 SenseAudio 重转核对]
+- BSDCan 拍卖是慈善筹款仪式：Lucas 拍卖标注“mostly complete”却缺最后 27 页的《Terrapin Sky Tango》初稿，Bob Beck 与 Christophe Provost 分别竞得主体与结尾，共筹得约 300 美元捐给 Ottawa Mission，并催生仅印四册的残缺特别版。（BSD Now EP329，[908.72-1287.9]，L1）[订正：原 [908.72-1153.38]，2026-09-30 SenseAudio 重转核对]
+- SNMP 协议本体仅七个部分，复杂来自厂商解释与实现差异；Lucas 的《SNMP Mastery》试图把学习协议与学习厂商配置分离，将其定位为网络与系统管理员工具箱中的必要工具。（BSD Now EP329，[1394.54-1763.9]，L1）[订正：原 [1394.54-1497.48]，2026-09-30 SenseAudio 重转核对]
 - Lucas 主张写作先定目标再选手段：以建立认证与标准为目标的作者宜走传统出版，以持续量产短书为目标的作者宜自出版；小说尤应自出版，因大社合同会取走版权终身加身后 70 年。（BSD Now EP329，[2647.86-2764.40]，L1）
 - 该期综述 FreeBSD current 合入 KPTI（Konstantin Belousov，FreeBSD 基金会赞助），并已提交 ARM64 Spectre 变体 2 修复与 bhyve 部分缓解。（BSD Now EP230，[55.3-58.48]，L2）
 - 听众问答第三部分由主持人 Alan 自述 BSD Now 与 Jupiter Broadcasting 的渊源：从 IRC 服务器管理员、Star Trek Online 内测邀请到 TechSnap，再到与 Chris Moore 共同创办 BSD Now。（BSD Now EP230，[3552.7-3832.9]，L1）
@@ -138,15 +138,15 @@ volume: 第15卷-许可证哲学与法律分析
 
 **史料**：
 
-- Michael W. Lucas 当事人自述其《FreeBSD Mastery: Jails》《SNMP Mastery》《Sudo Mastery》写作、ZFS 与 jail 集成方案及 BSDCan 拍卖经历。（BSD Now EP329，[102.00-105.14]，L1）
+- Michael W. Lucas 当事人自述其《FreeBSD Mastery: Jails》《SNMP Mastery》《Sudo Mastery》写作、ZFS 与 jail 集成方案及 BSDCan 拍卖经历。（BSD Now EP329，[102.00-1763.9]，L1）[订正：原 [102.00-105.14]，2026-09-30 SenseAudio 重转核对]
 - 《Terrapin Sky Tango》初稿拍卖物及“缺最后 27 页”的特别版实物，Bob Beck 与 Christophe Provost 各持一份，Lucas 自留一份，余一份拟在 BSDCan 2020 拍卖。（BSD Now EP329，[1207.20-1296.00]，L1）
 - NetSNMP man page 与 Cisco 文档被 Lucas 指为参考而非教程，构成 SNMP 学习生态的二手史料。（BSD Now EP329，[1612.64-1626.18]，L2）
 - FreeBSD 基金会赞助的 KPTI 合入（Konstantin Belousov 的贡献）。（BSD Now EP230，[66.2-74.04]，L2）
 - 1999 年 CNN 文章（Walnut Creek CD-ROM，ftp.cdrom.com）所记录的 FreeBSD 下载服务。（BSD Now EP230，[5237.3-5269.0]，L2）
 - Brian Kernighan 与 Michael Lesk 1979 年论文“UNIX 上的计算机辅助教学”，以文字冒险游戏教 cat、ls 等命令。（BSD Now EP230，[5885.6-5944.8]，L2）
 - Colin Percival 关于 Spectre/Meltdown 的博文，含 2005 年 BSDCan 论文与对披露时间线的梳理。（BSD Now EP230，[643.76-771.28]，L2）
-- Chris Moore 卸任自述（BSD Now EP185，[61.44-141.04]，L1）
-- Kris Moore 访谈自述（BSD Now EP185，[628.1-1119.87]，L1）
+- Chris Moore 卸任自述（BSD Now EP185，[61.44-276.8]，L1）[订正：原 [61.44-141.04]，2026-09-30 SenseAudio 重转核对]
+- Kris Moore 访谈自述（BSD Now EP185，[628.1-3283.7]，L1）[订正：原 [628.1-1119.87]，2026-09-30 SenseAudio 重转核对]
 - TrueOS 引导与 GELI 变更记录（BSD Now EP185，[2829.24-3250.70]，L1）[订正：原 [2829.24-2905.56]，2026-09-30 SenseAudio 重转核对]
 - FreeBSD Journal 2025 年夏季刊及其收录文章。（BSD Now EP626，[141.82-762.54]，L2）
 - Mark Phillips 撰写的 FreeBSD Foundation 博客 Java hiding in plain sight。（BSD Now EP626，[762.54-946.78]，L2）
@@ -165,17 +165,17 @@ volume: 第15卷-许可证哲学与法律分析
 
 **史观**：
 
-- 总纲10 动手者创造历史：Lucas 为写 jails 书先写六本书、为搭上传服务亲手组合 ZFS 与 jail，呈现动手者的知识积累路径。（BSD Now EP329，[340.12-349.04]，L1）
+- 总纲10 动手者创造历史：Lucas 为写 jails 书先写六本书、为搭上传服务亲手组合 ZFS 与 jail，呈现动手者的知识积累路径。（BSD Now EP329，[340.12-767.6]，L1）[订正：原 [340.12-349.04]，2026-09-30 SenseAudio 重转核对]
 - 总纲9 经验优先：jails 与 ZFS 的组合来自客户需经网站上传文件的实际需求，从经验出发而非抽象设计。（BSD Now EP329，[716.52-726.06]，L1）
-- 总纲11 商品是形式主义：技术书是 Lucas 赖以谋生的商品，赞助与销售决定其生产节奏，非虚构的收入供养小说写作。（BSD Now EP329，[2563.84-2589.74]，L1）
+- 总纲11 商品是形式主义：技术书是 Lucas 赖以谋生的商品，赞助与销售决定其生产节奏，非虚构的收入供养小说写作。（BSD Now EP329，[2563.84-2633.8]，L1）[订正：原 [2563.84-2589.74]，2026-09-30 SenseAudio 重转核对]
 - 总纲13 法律与道德是利益分配：出版商取走版权终身加身后 70 年，作者被视为创作并许可知识产权者，利益分配格局决定出版策略。（BSD Now EP329，[2752.48-2777.46]，L1）
 - 总纲4 分离聚合是永恒规律：ZFS 与 zones 本属 Sun 谱系、jails 属 FreeBSD 谱系，二者在 FreeBSD 重新聚合为可委托数据集的组合。（BSD Now EP329，[812.10-830.46]，L1）
-- 总纲22 知识注定过时：Sudo 再版与 SNMP 教程因配置方式变化而需更新，Lucas 逐年修正既有知识。（BSD Now EP329，[140.74-155.26]，L1）
+- 总纲22 知识注定过时：Sudo 再版与 SNMP 教程因配置方式变化而需更新，Lucas 逐年修正既有知识。（BSD Now EP329，[140.74-1479.3]，L1）[订正：原 [140.74-155.26]，2026-09-30 SenseAudio 重转核对]
 - 总纲10 动手者创造历史：节目以动手者创造历史解释 BSD Now 的诞生：主持人与幕后制作人各司其职，节目每周出现依赖未被看见的幕后劳动。（BSD Now EP230，[3938.7-3969.0]，L1）
 - 总纲19 解释学循环是历史认识的根本条件：OpenBSD 邮件列表的粗暴被归因于文本媒介失去情感，线下面对面的文化截然不同，提示语境对历史认识的影响。（BSD Now EP230，[6843.1-6852.8]，L2）
 - 总纲5 没有必然性，只有偶然性：漏洞披露的混乱被归结为多方偶然失序而非单一阴谋，呼应没有必然性、只有偶然性的判断。（BSD Now EP230，[1201.3-1356.9]，L2）
 - 总纲10 动手者创造历史：主持人长期义务制作播客记录社区动态，节目史由持续动手的人维系。（BSD Now EP185，[61.44-141.04]，L1）
-- 总纲5 没有必然性，只有偶然性：主持人更替源于个人职业压力等具体境遇，而非预先规划。（BSD Now EP185，[96.3-118.44]，L1）
+- 总纲5 没有必然性，只有偶然性：主持人更替源于个人职业压力等具体境遇，而非预先规划。（BSD Now EP185，[96.3-226.7]，L1）[订正：原 [96.3-118.44]，2026-09-30 SenseAudio 重转核对]
 - 总纲12 科学是形式主义：FreeNAS 坚持“尽早发布、频繁发布”，以迭代验证用户真实需求。（BSD Now EP185，[890.86-923.96]，L1）
 - 总纲10 动手者创造历史：Chuck Tuffley 报告中 Google Summer of Code 学生与 Kyle Evans 接力推进 squashfs 驱动，体现未完成工作由后来者接续。（BSD Now EP626，[1232.26-1271.62]，L1）
 - 总纲22 知识注定过时：NetBSD 11 将 32 位兼容、CD 安装集等旧有默认拆分为可选集，反映旧硬件假设随时代过时。（BSD Now EP626，[1647.40-1682.94]，L2）
@@ -193,10 +193,10 @@ volume: 第15卷-许可证哲学与法律分析
 **辨析**：
 
 - “jails 书被低估”是 Lucas 的主观判断，销量与影响力需外部数据佐证，不能仅以作者自评作为传播史结论。　[存疑脚注] 当事人单方判断，缺独立销量或读者调查证据（BSD Now EP329，[438.66-454.30]，L4）
-- BSDCan 拍卖的精确金额与“四册特别版”为当事人单一口述，无独立第二来源时按单一来源推断处理。　[存疑脚注] 金额与册数系当事人记忆，宜以拍卖记录或受赠机构核对（BSD Now EP329，[1150.66-1162.46]，L4）
+- BSDCan 拍卖的精确金额与“四册特别版”为当事人单一口述，无独立第二来源时按单一来源推断处理。　[存疑脚注] 金额与册数系当事人记忆，宜以拍卖记录或受赠机构核对（BSD Now EP329，[1150.66-1281.2]，L4）[订正：原 [1150.66-1162.46]，2026-09-30 SenseAudio 重转核对]
 - 1999 年 CNN 报道的硬件配置与下载数据系二手转述，具体数字（500GB、3600 并发会话）未经原始报道复核。　[存疑脚注] CNN 原文数据须复核（BSD Now EP230，[5269.0-5350.0]，L4）
 - Colin Percival 对 Google、Intel 与 Linux 社区的批评系其个人立场，节目转述时未提供对立方的回应。　[存疑脚注] 系单一来源的个人立场表述（BSD Now EP230，[1201.3-1218.3]，L4）
-- [存疑脚注] FreeNAS 9.10.3 的发布时间与 MinIO、iocage 等功能的落地范围在访谈时尚属计划，须以最终发布说明为准。　[存疑脚注] 计划性披露，需与正式发布记录核验。（BSD Now EP185，[668.32-869.02]，L4）
+- [存疑脚注] FreeNAS 9.10.3 的发布时间与 MinIO、iocage 等功能的落地范围在访谈时尚属计划，须以最终发布说明为准。　[存疑脚注] 计划性披露，需与正式发布记录核验。（BSD Now EP185，[668.32-1046.98]，L4）[订正：原 [668.32-869.02]，2026-09-30 SenseAudio 重转核对]
 - 转录将 Martin Husemann 记作 Martin Hussman，且节目开场将 NetBSD 11 与 FreeBSD 11 混写，须以 NetBSD 官方博客核验。　[存疑脚注] 人名与版本号存在转写歧义，未与 NetBSD 官方公告核验（BSD Now EP626，[1636.36-1806.82]，L4）
 - OpenJDK 维护者姓名在转录中作 Harold 或 Harald，具体拼写须以 FreeBSD Foundation 原文核验。　[存疑脚注] 维护者姓名存在转写歧义（BSD Now EP626，[867.98-873.02]，L4）
 - FreeBSD Journal 创刊号当时尚待 Apple 应用商店审批；编委会名单与创刊内容为当事人及主持人转述，需与创刊号目录核对。　[存疑脚注] 创刊号上线时间与目录以出版方最终发布为准，需交叉验证。（BSD Now EP22，[1790.86-1816.90]，L4）

@@ -46,35 +46,35 @@ volume: 第01卷-unix的起源
 - 节目借 shell 隐式按空白分词导致文件名与参数被错误拆分的问题，回溯约 1979 年 Steve Bourne 引入 $* 后因其实用性不足而增补 $@ 特殊情形的实现史，并称这一未纠正的设计缺陷长期困扰 shell 编程，rc shell 因规避此问题而受到推荐。（BSD Now EP523，[882.48-1382.28]，L2）
 - 节目摘录 Theo de Raadt 在 OpenBSD tech 邮件列表对 Zenbleed 漏洞的评估：OpenBSD 基础系统很少使用 AVX 指令，影响远小于依赖 glibc AVX 优化的 Linux；OpenBSD 已通过 current 快照与后续 errata 修复，并提醒用户必须手工安装引导块以加载 CPU 固件更新。（BSD Now EP523，[1393.64-1582.44]，L1）
 - 其余新闻包括 OPNsense 23.7 以 FreeBSD 13.2 为基础内核发布、Brian Robert Callahan 将 PCC 可移植 C 编译器移植到 illumos，以及用户因 ThinkPad BIOS 白名单和 Linux 无线驱动 GPL 兼容性限制而通过更换网卡修复 FreeBSD 无线支持。（BSD Now EP523，[1586.96-2244.58]，L2）
-- 一篇教程记述在 FreeBSD jail 中以 easyjail 部署 Gemini 服务器 Molly Brown 的过程，包括克隆接口、SSL 证书、rc.d 服务脚本与 jail 内 SSH 访问，展示 jail 作为轻量隔离环境承载新协议的实践路径。（BSD Now EP406，[273.92-470.8]，L2）
-- FreeBSD 2021 年第一季度状态报告显示，doc、src、ports 三仓库已切换至 Git，CI 作业与文档工具链随之迁移至 Git 与 AsciiDoc/Hugo，并记录 13.0 发布与 Linux 兼容层支持 Firefox Widevine 的进展。（BSD Now EP406，[476.4-1461.2]，L2）
-- Michael W Lucas 在采访中自述，1995 年美国国家科学基金会全面商业化互联网后，其管理的客户端域名服务器频繁崩溃，直至安装 FreeBSD 名称服务器才获得整夜睡眠，由此转向 OpenBSD 与 FreeBSD 世界并最终成为全职技术作者。（BSD Now EP406，[1721.98-1828.6]，L1）
-- 主持人说明 BSD grep 的重写源于编程之夏（Google Summer of Code），采用现代搜索算法后仍存在边缘情况慢于 GNU grep，最终修复并成为 FreeBSD 默认，GNU grep 保留为编译期选项。（BSD Now EP406，[2820.16-2956.14]，L2）
-- Trenton Schultz 在明尼苏达读本科时因实验室游戏夜初识 FreeBSD 2.2.5，后以 Qt 小程序与纯文本简历入职 Trolltech，参与 Qt Embedded 与 Cocoa 移植，其第一个 Qt 提交是把 Qt 虚拟帧缓冲从 Linux 专用信号量改为 FreeBSD 兼容实现。（BSD Now EP321，[120.62-445.88]，L1）
-- ROS 是发布/订阅式机器人中间件，节点以话题通信、可跨机分布，默认跟随 Ubuntu LTS；Schultz 2017 年移植因 OpenCV 版本与 Python Qt 绑定混乱受阻，2019 年借 jails 的干净环境重试成功基础通信与可视化。（BSD Now EP321，[882.08-1217.88]，L1）
+- 一篇教程记述在 FreeBSD jail 中以 easyjail 部署 Gemini 服务器 Molly Brown 的过程，包括克隆接口、SSL 证书、rc.d 服务脚本与 jail 内 SSH 访问，展示 jail 作为轻量隔离环境承载新协议的实践路径。（BSD Now EP406，[264.8-476.6]，L2）[订正：原 [273.92-470.8]，2026-09-30 SenseAudio 重转核对]
+- FreeBSD 2021 年第一季度状态报告显示，doc、src、ports 三仓库已切换至 Git，CI 作业与文档工具链随之迁移至 Git 与 AsciiDoc/Hugo，并记录 13.0 发布与 Linux 兼容层支持 Firefox Widevine 的进展。（BSD Now EP406，[465.9-1486.1]，L2）[订正：原 [476.4-1461.2]，2026-09-30 SenseAudio 重转核对]
+- Michael W Lucas 在采访中自述，1995 年美国国家科学基金会全面商业化互联网后，其管理的客户端域名服务器频繁崩溃，直至安装 FreeBSD 名称服务器才获得整夜睡眠，由此转向 OpenBSD 与 FreeBSD 世界并最终成为全职技术作者。（BSD Now EP406，[1710.4-1840.3]，L1）[订正：原 [1721.98-1828.6]，2026-09-30 SenseAudio 重转核对]
+- 主持人说明 BSD grep 的重写源于编程之夏（Google Summer of Code），采用现代搜索算法后仍存在边缘情况慢于 GNU grep，最终修复并成为 FreeBSD 默认，GNU grep 保留为编译期选项。（BSD Now EP406，[2810.8-2958.5]，L2）[订正：原 [2820.16-2956.14]，2026-09-30 SenseAudio 重转核对]
+- Trenton Schultz 在明尼苏达读本科时因实验室游戏夜初识 FreeBSD 2.2.5，后以 Qt 小程序与纯文本简历入职 Trolltech，参与 Qt Embedded 与 Cocoa 移植，其第一个 Qt 提交是把 Qt 虚拟帧缓冲从 Linux 专用信号量改为 FreeBSD 兼容实现。（BSD Now EP321，[120.62-604.0]，L1）[订正：原 [120.62-445.88]，2026-09-30 SenseAudio 重转核对]
+- ROS 是发布/订阅式机器人中间件，节点以话题通信、可跨机分布，默认跟随 Ubuntu LTS；Schultz 2017 年移植因 OpenCV 版本与 Python Qt 绑定混乱受阻，2019 年借 jails 的干净环境重试成功基础通信与可视化。（BSD Now EP321，[882.08-1423.4]，L1）[订正：原 [882.08-1217.88]，2026-09-30 SenseAudio 重转核对]
 - FreeBSD jails 让 ROS 构建与桌面 Qt 版本隔离，避免依赖冲突；Schultz 强调读 Michael W. Lucas 的 jails 书后才理解 nullfs、devfs 等前置知识，并首次成功搭出 CUPS jail。（BSD Now EP321，[1193.60-1367.12]，L1）
-- Schultz 的博士研究关注家庭机器人隐私框架与人机交互动画，指出 ROS1 无安全设计（动态 UDP 端口、需 VPN 或封闭网络），摄像头数据是否外传决定隐私风险等级。（BSD Now EP321，[632.94-690.32]，L1）
-- 对 BSD 新手的建议：与朋友结伴、用虚拟机试错、尽早配置 ZFS 自动快照与引导环境以获得回滚能力，从而敢于动手。（BSD Now EP321，[2071.72-2250.44]，L1）
+- Schultz 的博士研究关注家庭机器人隐私框架与人机交互动画，指出 ROS1 无安全设计（动态 UDP 端口、需 VPN 或封闭网络），摄像头数据是否外传决定隐私风险等级。（BSD Now EP321，[632.94-2753.6]，L1）[订正：原 [632.94-690.32]，2026-09-30 SenseAudio 重转核对]
+- 对 BSD 新手的建议：与朋友结伴、用虚拟机试错、尽早配置 ZFS 自动快照与引导环境以获得回滚能力，从而敢于动手。（BSD Now EP321，[2071.72-2320.7]，L1）[订正：原 [2071.72-2250.44]，2026-09-30 SenseAudio 重转核对]
 
 **史料**：
 
 - Thomas Scoville《The Elements of Style: Unix as Literature》（1998 年网络文章，作者自述 1983 年起使用 Unix，时任 Expert Support Inc 工程师），为当期主持人转述的二手文本。（BSD Now EP523，[568.60-868.00]，L2）
 - OpenBSD tech 邮件列表存档中 Theo de Raadt 关于 Zenbleed 的帖子，当期节目摘录了其原文段落，属于当事人一手陈述。（BSD Now EP523，[1393.64-1582.44]，L1）
 - Steve Bourne 约 1979 年对 shell 参数展开加入 $@ 补丁的实现史线索，经节目口头转述，需以原始 shell 源码与历史手册进一步核验。　[存疑脚注] 该时间与补丁细节为单一博客转述，未见节目提供原始提交或文档编号，须交叉验证。（BSD Now EP523，[1110.76-1299.52]，L4）
-- Michael W Lucas 关于 1995 年以 33.6k 拨号管理名称服务器、试用 Linux 与 Windows NT 未果、最终依赖 FreeBSD 获得稳定运行的叙述，属当事人一手口述史料。（BSD Now EP406，[1772.42-1822.78]，L1）
-- FreeBSD 2021 年第一季度状态报告记载 doc 迁移于 2021 年 1 月 23 日完成，由 Sergio Carlavilla 等维护文档基础设施，属可核对的一手工程记录。（BSD Now EP406，[1070.12-1096.9]，L2）
-- Trenton Schultz 本人访谈自述（Trolltech 七年与 Nokia 一年经历、ROS 移植、博士研究）。（BSD Now EP321，[105.18-119.16]，L1）
-- Michael W. Lucas《FreeBSD Mastery: Jails》及配套六书（Schultz 转述其阅读体验与前置知识结构）。（BSD Now EP321，[1259.36-1339.12]，L2）
-- EuroBSDCon 2019 Lillehammer 的 ROS on FreeBSD 演讲，为 Schultz 本人报告。（BSD Now EP321，[1459.40-1468.78]，L1）
+- Michael W Lucas 关于 1995 年以 33.6k 拨号管理名称服务器、试用 Linux 与 Windows NT 未果、最终依赖 FreeBSD 获得稳定运行的叙述，属当事人一手口述史料。（BSD Now EP406，[1770.4-1840.3]，L1）[订正：原 [1772.42-1822.78]，2026-09-30 SenseAudio 重转核对]
+- FreeBSD 2021 年第一季度状态报告记载 doc 迁移于 2021 年 1 月 23 日完成，由 Sergio Carlavilla 等维护文档基础设施，属可核对的一手工程记录。（BSD Now EP406，[1052.4-1110.9]，L2）[订正：原 [1070.12-1096.9]，2026-09-30 SenseAudio 重转核对]
+- Trenton Schultz 本人访谈自述（Trolltech 七年与 Nokia 一年经历、ROS 移植、博士研究）。（BSD Now EP321，[105.18-1423.4]，L1）[订正：原 [105.18-119.16]，2026-09-30 SenseAudio 重转核对]
+- Michael W. Lucas《FreeBSD Mastery: Jails》及配套六书（Schultz 转述其阅读体验与前置知识结构）。（BSD Now EP321，[1259.36-1376.7]，L2）[订正：原 [1259.36-1339.12]，2026-09-30 SenseAudio 重转核对]
+- EuroBSDCon 2019 Lillehammer 的 ROS on FreeBSD 演讲，为 Schultz 本人报告。（BSD Now EP321，[1459.40-1539.4]，L1）[订正：原 [1459.40-1468.78]，2026-09-30 SenseAudio 重转核对]
 
 **史观**：
 
 - 总纲第 15 条——文化即形式主义：Unix 文字文化与 NT 图像文化均为形式化构造，界面传统是习惯与权力的形式主义表达。：Unix 与 NT 的文字/图像文化对立，显示界面传统本身即形式主义构造，两种文化形态是各自权力与习惯的形式化表达。（BSD Now EP523，[568.60-865.28]，L2）
 - 总纲第 9 条——经验优先：以当事人长期使用经验作为判断系统的依据，而非先行的抽象标准——Scoville 以十多年使用经验而非抽象标准评判系统，Unix 社区的知识权威来自长期动手经验。（BSD Now EP523，[568.60-865.28]，L2）
 - 总纲第 10 条——动手者创造历史：shell 惯例由具体实现者的补丁与妥协形塑，而非出自抽象设计蓝图——shell 空白分词与 $@ 补丁由 Bourne 等具体实现者的工程决策沉淀为长期惯例，动手者的选择塑造了后续数十年的编程实践。（BSD Now EP523，[1110.76-1299.52]，L2）
-- 总纲第 9 条——经验优先：Michael W Lucas 以一线系统管理员身份在崩溃与抢修中验证 FreeBSD 的稳定性，其写作生涯源于实际运维经验，属经验优先与动手者创造历史的例证。（BSD Now EP406，[1772.42-1825.98]，L1）
-- 总纲第 4 条——分离聚合是永恒规律：FreeBSD 从 Subversion 到 Git 的迁移及文档从 SGML/XML 到 AsciiDoc 的切换，是工具链层面的分离聚合重组，旧基础设施被分阶段替代而非一次性革命。（BSD Now EP406，[776.52-1096.9]，L2）
-- 总纲第 10 条——动手者创造历史：Schultz 以一天搭通通信层、亲手改信号量调用等动手移植推动 ROS 进入 FreeBSD。（BSD Now EP321，[1052.42-1067.84]，L1）
+- 总纲第 9 条——经验优先：Michael W Lucas 以一线系统管理员身份在崩溃与抢修中验证 FreeBSD 的稳定性，其写作生涯源于实际运维经验，属经验优先与动手者创造历史的例证。（BSD Now EP406，[1770.4-1840.3]，L1）[订正：原 [1772.42-1825.98]，2026-09-30 SenseAudio 重转核对]
+- 总纲第 4 条——分离聚合是永恒规律：FreeBSD 从 Subversion 到 Git 的迁移及文档从 SGML/XML 到 AsciiDoc 的切换，是工具链层面的分离聚合重组，旧基础设施被分阶段替代而非一次性革命。（BSD Now EP406，[748.4-1110.9]，L2）[订正：原 [776.52-1096.9]，2026-09-30 SenseAudio 重转核对]
+- 总纲第 10 条——动手者创造历史：Schultz 以一天搭通通信层、亲手改信号量调用等动手移植推动 ROS 进入 FreeBSD。（BSD Now EP321，[419.4-1067.84]，L1）[订正：原 [1052.42-1067.84]，2026-09-30 SenseAudio 重转核对]
 - 总纲第 9 条——经验优先：因不想网络跳转的实际需求驱动移植，经验场景优先于宏大目标。（BSD Now EP321，[1002.64-1021.60]，L1）
 - 总纲第 7 条——理论必须自反：机器人隐私研究要求自问“谁还能看到这段影像”，对技术后果保持反思。（BSD Now EP321，[2751.92-2778.28]，L1）
 - 总纲第 5 条——没有必然性，只有偶然性：能否移植取决于 OpenCV 恰好入 ports、Qt 恰好现代化等偶然条件。（BSD Now EP321，[1178.12-1193.60]，L1）
@@ -85,7 +85,7 @@ volume: 第01卷-unix的起源
 
 - Scoville 一文的文化判断以个人见闻为主，作者自述其证据粗略且轶事化，因此其文字文化与图像文化的概括应视为个人观察而非统计结论。　[存疑脚注] 该判断来自单一作者的事后文化观察，未见系统抽样或多源数据支撑。（BSD Now EP523，[568.60-865.28]，L4）
 - Zenbleed 影响评估来自 OpenBSD 一方，称基础系统少用 AVX，但浏览器等第三方程序仍可能触发泄漏，需结合 AMD 官方披露与独立复现实验交叉验证。　[存疑脚注] OpenBSD 视角的评估需与 AMD 官方技术通报及独立测试结果交叉验证后方可采信。（BSD Now EP523，[1393.64-1582.44]，L4）
-- 转写对 BSD grep 重写的编程之夏（GSoC）年份与算法细节语焉不详，其引入时间与性能争议需与 FreeBSD 提交记录对照。　[考据脚注] BSD grep 重写的编程之夏（GSoC）项目年份与合入版本需查 FreeBSD 提交历史。（BSD Now EP406，[2820.16-2879.38]，L4）
+- 转写对 BSD grep 重写的编程之夏（GSoC）年份与算法细节语焉不详，其引入时间与性能争议需与 FreeBSD 提交记录对照。　[考据脚注] BSD grep 重写的编程之夏（GSoC）项目年份与合入版本需查 FreeBSD 提交历史。（BSD Now EP406，[2810.8-2886.5]，L4）[订正：原 [2820.16-2879.38]，2026-09-30 SenseAudio 重转核对]
 - ROS1 安全缺陷为 Schultz 的口头概括，具体攻击面与 ROS2 改进需以官方文档核对。　[存疑脚注] 当事人经验性总结，未给出版本与漏洞编号（BSD Now EP321，[2607.66-2634.28]，L4）
 - 访谈转写存在大量口语断句，人名与版本号（如 FreeBSD 2.2.5）为当事人记忆，可能与档案有出入。　[考据脚注] 早期版本号系回忆，宜以发布记录核对（BSD Now EP321，[218.92-221.50]，L4）
 

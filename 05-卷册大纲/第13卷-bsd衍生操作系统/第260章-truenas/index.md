@@ -54,11 +54,11 @@ volume: 第13卷-bsd衍生操作系统
 - 文章追述 FreeNAS 与 iXsystems 的商业谱系：FreeNAS 始于 2005 年、基于 m0n0wall 与 PHP Web 界面；iXsystems 源自曾销售 BSD/386 的 Berkeley Software Design Inc.，经与 Walnut Creek CD-ROM 合并、向 Wind River 出售 OS 部门等转手后于 2007 年收购 FreeNAS。（BSD Now EP552，[919.74-1153.86]，L2）
 - 主持人介绍 Jason Eckert 的博客：1997 年 Tadpole Technologies 的 SPARCbook 3000ST 搭载 Fujitsu TurboSPARC 170MHz 处理器、128MB 内存与 Solaris 2.5.1，售价约 21000 美元，是 1990 年代高端 Unix 笔记本电脑的代表。（BSD Now EP552，[1590.02-1751.82]，L2）
 - 主持人转述 Hacker News 用户评论：Ford Aerospace 是早期商业 BSD Unix 站点之一，须先向 AT&T 购买 Unix 32V 许可，再从伯克利的 Bill Joy 处取得 BSD 磁带；BSD 当时无网络，站点购买 3Com 的 UNET（Greg Shaw 所写 TCP/IP）并处理 4.3BSD 与其他实现的互操作问题，最终与 Nagle 算法的出现相关。（BSD Now EP552，[2710.40-2874.60]，L2）
-- OpenBSD 的 BSD Authentication 认证绕过漏洞源于 login_passwd 对 challenge 协议的处理缺陷，用户名形如 -schallenge 时会被自动判定成功；该漏洞远程可利用于 smtpd、ldapd、radiusd 等应用，但 sshd 因纵深防御机制不受影响。（BSD Now EP330，[185.76-193.66]，L2）
+- OpenBSD 的 BSD Authentication 认证绕过漏洞源于 login_passwd 对 challenge 协议的处理缺陷，用户名形如 -schallenge 时会被自动判定成功；该漏洞远程可利用于 smtpd、ldapd、radiusd 等应用，但 sshd 因纵深防御机制不受影响。（BSD Now EP330，[185.76-440.9]，L2）[订正：原 [185.76-193.66]，2026-09-30 SenseAudio 重转核对]
 - OpenBSD 在初次联系后约 40 小时内修复该漏洞，主持人以此与其它项目耗时数月乃至数年的修复形成对照，凸显其把安全响应置于优先位置的组织惯性。（BSD Now EP330，[562.80-584.46]，L3）
-- NetBSD 9.0 RC1 在四个月发布流程中处理逾 500 次 pull-up，新增 aarch64（含 Arm ServerReady）、NVMM 硬件虚拟化、更新版 ZFS、内核 ASLR、KLEAK/KASAN 等 sanitizer、NPF 改进与 SATA NCQ 支持。（BSD Now EP330，[724.00-802.99]，L2）
+- NetBSD 9.0 RC1 在四个月发布流程中处理逾 500 次 pull-up，新增 aarch64（含 Arm ServerReady）、NVMM 硬件虚拟化、更新版 ZFS、内核 ASLR、KLEAK/KASAN 等 sanitizer、NPF 改进与 SATA NCQ 支持。（BSD Now EP330，[724.00-968.5]，L2）[订正：原 [724.00-802.99]，2026-09-30 SenseAudio 重转核对]
 - FreeNAS 在 DigitalOcean 的部署教程通过第二块设备安装后再以 dd 重灌引导区完成，主持人补充 ZFS 的校验与校验和使消费级磁盘配合 RAID-Z1 冗余在家庭 NAS 场景可用，并强调以独立备份兜底。（BSD Now EP330，[1084.88-1299.54]，L2）
-- NomadBSD 1.3 是基于 FreeBSD 12.1 的 USB 持久化 Live 系统，通过 SMBIOS 检测自动适配 VirtualBox，新增 ZFS 安装支持，并因 Lenovo 兼容问题从 GPT 改回 MBR。（BSD Now EP330，[1790.46-1892.38]，L2）
+- NomadBSD 1.3 是基于 FreeBSD 12.1 的 USB 持久化 Live 系统，通过 SMBIOS 检测自动适配 VirtualBox，新增 ZFS 安装支持，并因 Lenovo 兼容问题从 GPT 改回 MBR。（BSD Now EP330，[1790.46-1962.9]，L2）[订正：原 [1790.46-1892.38]，2026-09-30 SenseAudio 重转核对]
 - e2k19 黑客松重写 RPKI 客户端的 X.509 验证，将证书与 CRL 表改为红黑树查找、以 rename 原子替换输出文件，使 VRP 验证从 20 余分钟降至约 1 分钟。（BSD Now EP330，[2281.90-2516.12]，L2）
 - Ryzen 3700X 上 DragonFly 5.6、FreeBSD 12 与两个 Linux 发行版的测试显示：纯 CPU 类负载结果趋同，Postgres 读写差异主要由 ZFS、HAMMER、EXT4 等文件系统与编译器（GCC9/Clang）引入，而非 OS 本身。（BSD Now EP318，[67.78-524.60]，L2）[订正：原 [67.78-152.46]，2026-09-30 SenseAudio 重转核对]
 - 主持人指出基准测试应区分测 OS 与测文件系统/编译器，建议用内存文件系统消除磁盘变量，并提醒几何平均只作概览、需逐一读方法与变量。（BSD Now EP318，[456.34-524.52]，L2）
@@ -85,18 +85,18 @@ volume: 第13卷-bsd衍生操作系统
 - OpenBSD 官方安全公告与 CVE 记录（认证绕过，涉及 smtpd/ldapd/radiusd，sshd 因纵深防御免责），经主持人转述并引其代码分析。（BSD Now EP330，[256.84-267.32]，L2）
 - NetBSD releng 团队发布的 9.0 RC1 公告，列明 pull-up 数量、硬件支持与安全特性清单。（BSD Now EP330，[734.06-745.10]，L2）
 - Claudio Jeker 的 e2k19 黑客松报告《Nobody Can Hear You Scream》，当事人自述 RPKI 客户端 X.509 重写过程。（BSD Now EP330，[2288.98-2299.82]，L1）
-- DragonFly 5.6 与 FreeBSD 12、Linux 的 Ryzen 3700X 基准测试文章，含 Go、Postgres、Blowfish、H.265 等分项。（BSD Now EP318，[99.58-101.60]，L2）
+- DragonFly 5.6 与 FreeBSD 12、Linux 的 Ryzen 3700X 基准测试文章，含 Go、Postgres、Blowfish、H.265 等分项。（BSD Now EP318，[99.58-524.60]，L2）[订正：原 [99.58-101.60]，2026-09-30 SenseAudio 重转核对]
 - iXsystems 官方博客关于 JFK 图书馆选用 TrueNAS M-Series 的公告。（BSD Now EP318，[528.16-556.42]，L2）
-- FreeBSD 12.1 beta 公告（BearSSL 导入、GCC 4.2 警告处理、安全公告与勘误合入）。（BSD Now EP318，[798.16-833.06]，L2）
-- Warren Toomey 在 TUHS 的“两件文物”预告，及 Brian Coghlan 团队对 Percy Ludgate 分析机的研究演讲。（BSD Now EP318，[1522.90-1523.46]，L2）
+- FreeBSD 12.1 beta 公告（BearSSL 导入、GCC 4.2 警告处理、安全公告与勘误合入）。（BSD Now EP318，[798.16-854.2]，L2）[订正：原 [798.16-833.06]，2026-09-30 SenseAudio 重转核对]
+- Warren Toomey 在 TUHS 的“两件文物”预告，及 Brian Coghlan 团队对 Percy Ludgate 分析机的研究演讲。（BSD Now EP318，[1522.90-2267.4]，L2）[订正：原 [1522.90-1523.46]，2026-09-30 SenseAudio 重转核对]
 - Colin Percival 的安全补丁哲学博客；FreeNAS 11.0 发布公告；iX Systems 关于 TrueNAS X10 的介绍。（BSD Now EP201，[84.06-6061.34]，L2）
 - OpenBSD 6.1 发布公告（BSD Now EP190，[72.92-87.54]，L1）
 - FreeBSD ZFS vendor 分支导入提交（BSD Now EP190，[3892.42-4264.2]，L1）
 - Kris Moore 访谈自述（BSD Now EP190，[3280.58-3714.9]，L1）
 - Mike Muuss 的 ping 主页自述（BSD Now EP190，[4653.46-4908.5]，L1）
 - Dennis Ritchie《The Evolution of the Unix Time-sharing System》（BSD Now EP190，[8.0-13.36]，L1）
-- Chris Moore 卸任自述（BSD Now EP185，[61.44-141.04]，L1）
-- Kris Moore 访谈自述（BSD Now EP185，[628.1-1119.87]，L1）
+- Chris Moore 卸任自述（BSD Now EP185，[61.44-276.8]，L1）[订正：原 [61.44-141.04]，2026-09-30 SenseAudio 重转核对]
+- Kris Moore 访谈自述（BSD Now EP185，[628.1-3283.7]，L1）[订正：原 [628.1-1119.87]，2026-09-30 SenseAudio 重转核对]
 - TrueOS 引导与 GELI 变更记录（BSD Now EP185，[2829.24-3250.70]，L1）[订正：原 [2829.24-2905.56]，2026-09-30 SenseAudio 重转核对]
 
 **史观**：
@@ -110,18 +110,18 @@ volume: 第13卷-bsd衍生操作系统
 - 总纲5 没有必然性，只有偶然性：总纲5 没有必然性，只有偶然性：OpenBSD 罕见的远程认证漏洞出现与 40 小时修复并非必然，而是具体代码缺陷与具体响应条件的偶然叠加。　[存疑脚注] 漏洞为偶发事件这一判断系史学概括，非节目明言（BSD Now EP330，[245.98-255.10]，L4）
 - 总纲3 不存在进步，只有权力再分配：总纲3 不存在进步，只有权力再分配：NomadBSD 从 GPT 改回 MBR、UnionFS 换为 FUSE 等变化并非线性进步，而是兼容性与约束在不同硬件间的重新分配。（BSD Now EP330，[1872.70-1888.38]，L2）
 - 总纲22 知识注定过时：总纲22 知识注定过时：本期多则教程与工具（如云主机装 FreeNAS 的旧法）提醒知识会随平台与版本过期，需持续核验。（BSD Now EP330，[1482.36-1494.88]，L2）
-- 总纲12 科学是形式主义：总纲12 科学是形式主义：基准测试的结论依赖编译器版本、文件系统与运行次数等形式设定。（BSD Now EP318，[184.68-186.64]，L2）
+- 总纲12 科学是形式主义：总纲12 科学是形式主义：基准测试的结论依赖编译器版本、文件系统与运行次数等形式设定。（BSD Now EP318，[184.68-524.60]，L2）[订正：原 [184.68-186.64]，2026-09-30 SenseAudio 重转核对]
 - 总纲25 逻辑是形式主义而非世界本身的结构：总纲25 逻辑是形式主义而非世界本身的结构：测试数字受测量装置影响，几何平均不等于真实优劣。（BSD Now EP318，[482.06-491.44]，L2）
-- 总纲17 证明世界先于解释和改造世界：总纲17 证明世界先于解释和改造世界：先有 TUHS 文物与 JFK 档案实体，再谈数字保存的解释。（BSD Now EP318，[698.54-730.72]，L2）
+- 总纲17 证明世界先于解释和改造世界：总纲17 证明世界先于解释和改造世界：先有 TUHS 文物与 JFK 档案实体，再谈数字保存的解释。（BSD Now EP318，[698.54-1615.5]，L2）[订正：原 [698.54-730.72]，2026-09-30 SenseAudio 重转核对]
 - 总纲22 知识注定过时：总纲22 知识注定过时：旧 GCC 4.2 的“警告即错误”规则随工具链老化被废止。（BSD Now EP318，[798.16-824.74]，L2）
-- 总纲1 一切真历史都是古代史：总纲1 一切真历史都是古代史：Ludgate 分析机与 Unix 早期目录残迹被当作需抢救的古代史。（BSD Now EP318，[2205.44-2237.12]，L2）
-- 总纲10 动手者创造历史：总纲10 动手者创造历史：NetBSD 在广岛展出的异质机器与 dSynth 重写都依赖动手者的持续维护。（BSD Now EP318，[1619.80-1744.52]，L2）
+- 总纲1 一切真历史都是古代史：总纲1 一切真历史都是古代史：Ludgate 分析机与 Unix 早期目录残迹被当作需抢救的古代史。（BSD Now EP318，[2205.44-2267.4]，L2）[订正：原 [2205.44-2237.12]，2026-09-30 SenseAudio 重转核对]
+- 总纲10 动手者创造历史：总纲10 动手者创造历史：NetBSD 在广岛展出的异质机器与 dSynth 重写都依赖动手者的持续维护。（BSD Now EP318，[1619.80-2202.3]，L2）[订正：原 [1619.80-1744.52]，2026-09-30 SenseAudio 重转核对]
 - 总纲9 经验优先：嘉宾把开源理解为“众人动手、众人受益”的协作循环，并以音频延迟的亲身体验说明经验优先的实用主义选择。（BSD Now EP201，[4482.58-4697.82]，L1）
 - 总纲10 动手者创造历史：Mike Muuss 一夜写就 ping 并补齐内核支持，说明关键工具常由具体动手者直接造就。（BSD Now EP190，[4653.46-4908.5]，L2）
 - 总纲9 经验优先：OpenZFS 以特性在生产环境运行六个月作为接纳前提，经验验证先于理论采纳。（BSD Now EP190，[3415.94-3437.3]，L2）
 - 总纲4 分离聚合是永恒规律：OpenZFS 特性先在 FreeBSD、illumos 等系统落地测试，再聚合回上游，体现分离聚合循环。（BSD Now EP190，[3396.02-3430.0]，L2）
 - 总纲10 动手者创造历史：主持人长期义务制作播客记录社区动态，节目史由持续动手的人维系。（BSD Now EP185，[61.44-141.04]，L1）
-- 总纲5 没有必然性，只有偶然性：主持人更替源于个人职业压力等具体境遇，而非预先规划。（BSD Now EP185，[96.3-118.44]，L1）
+- 总纲5 没有必然性，只有偶然性：主持人更替源于个人职业压力等具体境遇，而非预先规划。（BSD Now EP185，[96.3-226.7]，L1）[订正：原 [96.3-118.44]，2026-09-30 SenseAudio 重转核对]
 - 总纲12 科学是形式主义：FreeNAS 坚持“尽早发布、频繁发布”，以迭代验证用户真实需求。（BSD Now EP185，[890.86-923.96]，L1）
 
 **辨析**：
@@ -130,10 +130,10 @@ volume: 第13卷-bsd衍生操作系统
 - iXsystems 转向 Linux 的时间线与版本计划来自记者报道与 Reddit 上 Chris Moore 的帖子，须以官方公告核实。　[存疑脚注] TrueNAS 路线信息来自记者报道与社区帖文，未经官方公告核实。（BSD Now EP552，[948.50-1000.66]，L4）
 - OpenBSD 认证绕过漏洞的“远程可利用”与 sshd 免责边界需逐应用分析，实际影响应按个案评估，不能笼统宣称整个系统不安全。　[存疑脚注] 转写对漏洞细节的表述为口语转述，建议以官方 errata 与 CVE 原文核对（BSD Now EP330，[193.66-204.80]，L4）
 - NetBSD 9.0 当时尚未正式发布，RC1 特性清单可能随正式版调整，所引安全与虚拟化特性宜以正式公告为准。　[考据脚注] RC1 为发布前状态，存在后续变更可能（BSD Now EP330，[971.00-979.36]，L4）
-- 基准测试中 DragonFly 被重复运行 15 次而其他仅 3 次，且编译选项不一，跨 OS 结论的可靠性存疑。　[存疑脚注] 运行次数与编译选项不一致，比较效度受质疑（BSD Now EP318，[196.26-205.58]，L4）
+- 基准测试中 DragonFly 被重复运行 15 次而其他仅 3 次，且编译选项不一，跨 OS 结论的可靠性存疑。　[存疑脚注] 运行次数与编译选项不一致，比较效度受质疑（BSD Now EP318，[196.26-524.60]，L4）[订正：原 [196.26-205.58]，2026-09-30 SenseAudio 重转核对]
 - TrueNAS 的 JFK 用例为 iXsystems 单方宣传口径，容量与文档数量宜以馆方披露为准。　[考据脚注] 数据来自厂商博客，缺馆方独立确认（BSD Now EP318，[545.22-580.72]，L4）
 - [存疑脚注] ping“一晚写成”与 4.2a BSD 内核 ICMP 支持的时间线系作者自述，需与 4.2BSD 源码与 DARPA 会议记录交叉核验。　[存疑脚注] 单一来源自述，缺少独立档案印证。（BSD Now EP190，[4708.38-4780.22]，L4）
-- [存疑脚注] FreeNAS 9.10.3 的发布时间与 MinIO、iocage 等功能的落地范围在访谈时尚属计划，须以最终发布说明为准。　[存疑脚注] 计划性披露，需与正式发布记录核验。（BSD Now EP185，[668.32-869.02]，L4）
+- [存疑脚注] FreeNAS 9.10.3 的发布时间与 MinIO、iocage 等功能的落地范围在访谈时尚属计划，须以最终发布说明为准。　[存疑脚注] 计划性披露，需与正式发布记录核验。（BSD Now EP185，[668.32-1046.98]，L4）[订正：原 [668.32-869.02]，2026-09-30 SenseAudio 重转核对]
 
 **文献**：
 

@@ -64,7 +64,7 @@ volume: 第13卷-bsd衍生操作系统
 - Brian Kernighan 在 VCF East 2025 表示只写过一次 Rust 且体验不佳，认为其 crate 与编译链庞大缓慢，同时坦言对 NixOS 与多数发行版并不熟悉。（BSD Now EP633，[2757.82-3220.12]，L1）
 - GhostBSD 25.02 基于 FreeBSD 14.3，新增以 GNUstep 组件与 XFCE 面板组合的 Gershwin 桌面，提供类 macOS 体验。（BSD Now EP633，[3371.86-3563.32]，L2）
 - Johannes Lundberg 向 FreeBSD 邮件列表提交 Wayland 移植进度报告：Wayland 1.12.0 与 Weston 1.12.0 已可在 FreeBSD 上运行，Weston 自带客户端工作正常，xWayland 可承载未移植的 X11 应用（仅手动启动且最大化窗口时正常，疑为 Weston IPC 问题），GTK3 应用如 gedit、Gnumeric 与 XFCE4 终端均可运行，XFCE 桌面则不支持 GTK3，SDL2 的 Wayland 后端经游戏简测通过，i3 兼容合成器 Sway 亦可用；现代 Intel 显卡需 Matt Macy 的新图形驱动工作，并以自维护 ports 树配合 Poudriere 重建图形栈乃至全树；gdm 因依赖 Linux 的 logind 而搁置，社区有意改以 Qt 系的 PCDM 承接。（BSD Now EP173，[279.52-419.90]，L2）[订正：原 XFCE 桌面均可运行、原 [279.52-327.5]，2026-09-30 SenseAudio 重转核对]
-- Antoine Jacoutot 向 OpenBSD 邮件列表公告 syspatch：面向 -stable 发行版的二进制补丁工具，与 bspatch 式二进制差分不同，它下载经签名的完整文件 tarball 并按安装器方式替换；测试补丁未经 OpenBSD 项目背书且不应信任，反馈须直达其个人邮箱而非污染邮件列表；此前升级 -stable 只能源码重建或重装新快照，syspatch 提供了中间道路，作者期望其随 OpenBSD 6.1 落地，并明确需要使用人数与统计反馈来评估可靠性。（BSD Now EP173，[105.04-203.7]，L2）
+- Antoine Jacoutot 向 OpenBSD 邮件列表公告 syspatch：面向 -stable 发行版的二进制补丁工具，与 bspatch 式二进制差分不同，它下载经签名的完整文件 tarball 并按安装器方式替换；测试补丁未经 OpenBSD 项目背书且不应信任，反馈须直达其个人邮箱而非污染邮件列表；此前升级 -stable 只能源码重建或重装新快照，syspatch 提供了中间道路，作者期望其随 OpenBSD 6.1 落地，并明确需要使用人数与统计反馈来评估可靠性。（BSD Now EP173，[105.04-229.3]，L2）[订正：原 [105.04-203.7]，2026-09-30 SenseAudio 重转核对]
 - Dennis Ritchie 撰文追述 Unix 源码中的趣味史：V6 彩蛋“values of B may give rise to DOM”出自 1970 年代初专利打字员打断 ed 打印输出时纸带上的残句，原是物理专利申请中‘贝塔值变化引起畴壁移动’的片段，经 McIlroy 的文语转换实验念出 doom 与 dominance 的谐音而成为实验室的共享珍宝，后被写入 V6 源码——里奇推测大概率出自 Bob Morris，也可能是 Ken；他并澄清“你不会被期望理解这段注释”本意是‘这不会考’式的善意提示而非傲慢挑衅，将其引为贝尔实验室注释质量的 slur 属不公正引申，见过原文者多为 1975 年前后第六版用户或 John Lions 注释书的读者。（BSD Now EP173，[2332.96-2512.8]，L1）
 - Beastie bits 一束：iocell 2.0 发布——一位 FreeBSD 开发者因偏爱 shell 脚本版而分叉原 iocage 并继续演进，Python 重写版则临近发布，两者存储监牢配置的方式相近或可兼容；Ted Unangst 追问 link_ntoa() 究竟谁在调用——该函数缺陷自 1970 年代引入并波及所有 BSD，OpenBSD libc 中已标记弃用，全库检索仅 route 与 netstat 三处引用，或可直接移除；Trent 用其 bhyve 管理框架 iohyve 在 ThinkPad 上的 TrueOS 中启动 Android x86 并公开配置 gist。（BSD Now EP173，[2795.08-3015.90]，L2）[订正：原 [2795.08-2949.74]，2026-09-30 SenseAudio 重转核对]
 - OpenBSD 在 2015 年开发周期推出实验性沙箱机制 tame：以单个系统调用把进程锁定在有限的操作类别（计算、内存管理、网络、文件描述符写操作、打开文件等）之内，限制可层层叠加且一经放弃不可恢复；相比要求围绕能力模型重写程序的 Capsicum，tame 以更小改造成本换取快速普及，内核部分已合入源码树，userland 改动陆续跟进，cat、ping、httpd、ntpd、syslogd、tcpdump、traceroute 等 29 个基础程序已开始接入。（BSD Now EP99，[87.36-139.34]，L2）
@@ -78,12 +78,12 @@ volume: 第13卷-bsd衍生操作系统
 - Lumina 0.6.2 随 PC-BSD 10.0.3 发布，仍处 beta，但在轻量笔记本上 CPU 占用低于半个百分点、整机内存约 120 MB。（BSD Now EP54，[3491.66-3526.78]，L1）
 - Lumina 附带 Insight 文件管理器，可浏览 ZFS 快照实现类似时光机的文件恢复，并集成书签、标签页与多媒体浏览。（BSD Now EP54，[4219.7-4454.0]，L1）[订正：原 [4225.74-4268.26]，2026-09-30 SenseAudio 重转核对]
 - Lumina 已提交进入 FreeBSD ports 树（X11/lumina）并随 PC-BSD 10.0.3 提供；作者于访谈末邀请 OpenBSD、NetBSD 与 DragonFly BSD 用户移植 Lumina，称可为其提供版本。（BSD Now EP54，[3539.5-3547.5]、[1810.3-1862.1]，L1）[订正：原 “后续社区将其移植到 OpenBSD 与 DragonFly BSD”、原 [3542.62-3548.58]，2026-09-30 SenseAudio 重转核对]
-- Colin Percival 自述 FreeBSD 发布工程长期处于由发布工程师即兴决定的临时状态，他接任后引入按季度排布、覆盖未来五年的发布日历，使 minor 版本节奏可预期。（BSD Now EP580，[476.24-547.40]，L1）
-- Colin 将 FreeBSD 主版本支持期由五年缩减为四年，以对齐每两年一次的主版本节奏，避免同时维护三个稳定分支带来的上游 OpenSSL、编译器与 ports 兼容负担。（BSD Now EP580，[630.52-756.16]，L1）
-- Colin 回顾 freebsd-update 工具源于 2003 年他为简化系统补丁更新而编写，并为此创造了 bsdiff 二进制差分工具，后者后来被广泛用于各处的增量更新。（BSD Now EP580，[210.06-229.42]，L1）
-- Andrew Hewus 自述约 2003 年在亚利桑那州一家小型 ISP 从 OpenBSD 3.5 或 3.6 开始，将 DNS、邮件与路由逐步替换为 OpenBSD，后经邮件列表接手 OpenBSD 基础系统中的 Perl 维护。（BSD Now EP580，[1455.12-1565.32]，L1）
-- Liam Proven 梳理商业 Unix 的当代存续：Xinuos 继承 SCO 的 Xenix 与 UnixWare 业务并提供基于 FreeBSD 的清理版本；AIX 开发团队迁往印度；Solaris 不再出新版本但仍获安全修复；illumos 与 Oxide Computer 延续 OpenSolaris 谱系。（BSD Now EP580，[2915.18-3022.62]，L2）
-- Liam Proven 以其亲历的 FreeBSD 13 升级 14 后桌面环境损坏为例，指出 BSD 桌面在升级平滑度与新手进入门槛上的短板，并批评 systemd 及其安全启动方向正在收窄用户对系统的控制。（BSD Now EP580，[3043.30-3344.86]，L1）
+- Colin Percival 自述 FreeBSD 发布工程长期处于由发布工程师即兴决定的临时状态，他接任后引入按季度排布、覆盖未来五年的发布日历，使 minor 版本节奏可预期。（BSD Now EP580，[466.0-571.0]，L1）[订正：原 [476.24-547.40]，2026-10-01 SenseAudio 重转核对]
+- Colin 将 FreeBSD 主版本支持期由五年缩减为四年，以对齐每两年一次的主版本节奏，避免同时维护三个稳定分支带来的上游 OpenSSL、编译器与 ports 兼容负担。（BSD Now EP580，[617.0-769.1]，L1）[订正：原 [630.52-756.16]，2026-10-01 SenseAudio 重转核对]
+- Colin 回顾 freebsd-update 工具源于 2003 年他为简化系统补丁更新而编写，并为此创造了 bsdiff 二进制差分工具，后者后来被广泛用于各处的增量更新。（BSD Now EP580，[192.7-235.5]，L1）[订正：原 [210.06-229.42]，2026-10-01 SenseAudio 重转核对]
+- Andrew Hewus 自述约 2003 年在亚利桑那州一家小型 ISP 从 OpenBSD 3.5 或 3.6 开始，将 DNS、邮件与路由逐步替换为 OpenBSD，后经邮件列表接手 OpenBSD 基础系统中的 Perl 维护。（BSD Now EP580，[1455.1-1578.3]，L1）[订正：原 [1455.12-1565.32]，2026-10-01 SenseAudio 重转核对]
+- Liam Proven 梳理商业 Unix 的当代存续：Xinuos 继承 SCO 的 Xenix 与 UnixWare 业务并提供基于 FreeBSD 的清理版本；AIX 开发团队迁往印度；Solaris 不再出新版本但仍获安全修复；illumos 与 Oxide Computer 延续 OpenSolaris 谱系。（BSD Now EP580，[2905.8-3025.7]，L2）[订正：原 [2915.18-3022.62]，2026-10-01 SenseAudio 重转核对]
+- Liam Proven 以其亲历的 FreeBSD 13 升级 14 后桌面环境损坏为例，指出 BSD 桌面在升级平滑度与新手进入门槛上的短板，并批评 systemd 及其安全启动方向正在收窄用户对系统的控制。（BSD Now EP580，[3037.3-3352.6]，L1）[订正：原 [3043.30-3344.86]，2026-10-01 SenseAudio 重转核对]
 - BSDCan 由 Dan Langille 于 2004 年在渥太华创办，直接动因是他结识 Ottawa Linux Symposium 的组织者后认为对方能办成的事自己同样能办成；首届约一百七十余人与会，2005 年约两百人，2006 年预期再增约一成，论文约二十四场分布在两天；正式会议前两天附设 FreeBSD 开发者峰会，第二届延续举办，被视为 FreeBSD 社区支持该会议的标志。（BSDTalk EP14，[481.79-596.82]，L1）
 - 渥太华会址具有结构性优势：部分欧洲与会者因赴美参会门槛而选择加拿大，汇率又使北美与会者获益，纽约受访者称往返加四晚住宿的全部开销低于在纽约参加一场会议；面对 BSD 已死的流言，Langille 以持续增长的参会人数与各项目论文供给作为否证。（BSDTalk EP14，[598.64-641.44]，L1）
 - 会议论文呈项目间不均衡分布：FreeBSD 篇目最多，NetBSD、DragonFly BSD 与 OpenBSD 依次递补；OpenBSD 多于 NetBSD 的现象被归因于 NetBSD 开发者多困于项目事务、无暇赴会，而 OpenBSD 核心成员多居加拿大且其大型开发者聚会在 BSDCan 前数周举行，形成人员顺势转场的路径。（BSDTalk EP14，[739.21-795.58]，L1）
@@ -133,7 +133,7 @@ volume: 第13卷-bsd衍生操作系统
 - 访谈提及的基金会一手文件包括新近上线的项目资助提案指南（约十至十一页并附样例提案），其要点为提案须绑定明确范围、具名开发者与预算金额，并须清晰论证对 FreeBSD 社区的收益；年度直接项目资助预算数字由基金会工作人员提供并经 Ed Maste 在访谈中复述。（BSD Now EP75，[1600.02-1703.84]，L1）
 - 本期新闻段援引的一手材料包括 Damien Miller 介绍 OpenSSH 6.8 密钥轮换机制的博客文章、Adam Wolk 记述 OpenBSD 二进制快照滚动跟进体验的博文、详述新旧支持模型利弊的 FreeBSD 邮件列表帖子，以及 Josh Paetzel 执笔的 FreeNAS 硬件选型指南；各件均以链接形式收入节目注释。（BSD Now EP75，[2776.48-3071.16]，L2）
 - Ken Moore 访谈兼 Lumina 界面走查（Lumina 作者当事人演示）。（BSD Now EP54，[3404.70-4697.20]，L1）
-- 本期为 EuroBSDcon 2024 现场采访；Colin Percival 与 Andrew Hewus 为一手自述，Liam Proven 为 The Register 记者的一手见闻与二手综述。（BSD Now EP580，[59.28-1293.58]，L1）
+- 本期为 EuroBSDcon 2024 现场采访；Colin Percival 与 Andrew Hewus 为一手自述，Liam Proven 为 The Register 记者的一手见闻与二手综述。（BSD Now EP580，[40.2-1294.1]，L1）[订正：原 [59.28-1293.58]，2026-10-01 SenseAudio 重转核对]
 - 本期留存 BSDCan 早期运营的一手事实：官方网站 bsdcan.org；两天注册费低于两百加元；渥太华大学宿舍套房合住每晚约五十加元；会前周四晚在本地酒馆办理注册并形成社交传统；志愿者经网站邮箱征集，承担会前会后各一天及会期两天的会务。（BSDTalk EP14，[703.17-845.25]，L1）
 - Langille 的个人入坑物证可作年代锚点：1998 年末其家用 ADSL 使 Windows 机器全天候在线，为求防火墙而由同事直接提供一台装有 FreeBSD 2.2.7 的整机，安装投入使用后由此进入 BSD 世界。（BSDTalk EP14，[641.44-669.64]，L1）
 - 本期访谈口述涉及的一手材料包括 PC-BSD GitHub 主仓库中的 Lumina 子目录（内含项目路线图、许可信息与自行构建的依赖清单）、访谈当日刚打出的 0.6.1 版本标签、PC-BSD Edge 仓库每日约两次的持续构建，以及项目与 iXsystems、PC-BSD 的赞助关系陈述。（BSDTalk EP244，[907.28-1051.12]，L1）
@@ -166,9 +166,9 @@ volume: 第13卷-bsd衍生操作系统
 - 总纲10 动手者创造历史:Ken Moore 以个人开发并维护 Lumina 的方式为 FreeBSD 桌面生态提供原生工具。（BSD Now EP54，[3448.90-3526.78]，L1）
 - 总纲8 本体论上各方平等:Lumina 的轻量取向与 KDE、GNOME 等桌面被置于并置关系，强调按需求选择而非优劣评判。（BSD Now EP54，[3970.94-3977.02]，L1）
 - 总纲24 美是消解性的体验:Lumina 以极简界面、壁纸与插件化桌面提供一种消解复杂性的日常使用体验。（BSD Now EP54，[3428.30-3436.06]，L1）
-- 总纲10 动手者创造历史：Colin 因自身补丁更新需求编写 freebsd-update 与 bsdiff，其工具后来成为 FreeBSD 更新基础设施的一部分，体现动手者为解决具体问题而塑造系统历史。（BSD Now EP580，[210.06-229.42]，L1）
-- 总纲3 不存在进步，只有权力再分配：FreeBSD 发布工程从即兴决策到日历化、支持期从五年缩为四年的过程，是工程与治理权力在项目内部的重新配置。（BSD Now EP580，[630.52-756.16]，L1）
-- 总纲21 革命与改革是历史方法论的分歧：Liam 对 systemd 与安全启动方向的批评，呈现开源生态中激进变革与保守续存两种方法论之间的持续张力。（BSD Now EP580，[3043.30-3164.96]，L2）
+- 总纲10 动手者创造历史：Colin 因自身补丁更新需求编写 freebsd-update 与 bsdiff，其工具后来成为 FreeBSD 更新基础设施的一部分，体现动手者为解决具体问题而塑造系统历史。（BSD Now EP580，[192.7-235.5]，L1）[订正：原 [210.06-229.42]，2026-10-01 SenseAudio 重转核对]
+- 总纲3 不存在进步，只有权力再分配：FreeBSD 发布工程从即兴决策到日历化、支持期从五年缩为四年的过程，是工程与治理权力在项目内部的重新配置。（BSD Now EP580，[617.0-769.1]，L1）[订正：原 [630.52-756.16]，2026-10-01 SenseAudio 重转核对]
+- 总纲21 革命与改革是历史方法论的分歧：Liam 对 systemd 与安全启动方向的批评，呈现开源生态中激进变革与保守续存两种方法论之间的持续张力。（BSD Now EP580，[3037.3-3166.5]，L2）[订正：原 [3043.30-3164.96]，2026-10-01 SenseAudio 重转核对]
 - 总纲10 动手者创造历史：主持人以乐高积木作比提出工具本位宣言：自由操作系统效仿的是 Unix 哲学而非 Windows 哲学，其力量不在某个功能齐备的成品应用，而在一切皆文本文件、众多小工具经管道自由组合的构造过程；把 BSD 仅当作免费 Windows 克隆，会错失这套系统真正的力量，使用者必须亲手在命令行中学会拼装。（BSDTalk EP14，[265.45-439.50]，L2）
 - 总纲5 没有必然性，只有偶然性：BSDCan 的创建没有任何机构授权或长期规划作为前提，它源于一次个人化的类比行动：Langille 看到相识的 Linux 会议组织者能够办成，便认定自己在渥太华同样可以；社区性制度设施由此从具体个人的偶然模仿中生长出来。（BSDTalk EP14，[490.23-504.44]，L1）
 - 总纲10 动手者创造历史：Lumina 的诞生呈现了动手者创造历史的另一形态：没有基金会立项或社区决议，而是一名非科班出身、被课程与导师安排逐步引入编程的工程师，在失眠的深夜里逐个编写类来试探桌面环境的体量，用数年碎片时间将个人挫败感锻造成完整系统，再由其供职的公司顺势收编为正式产品线；桌面 BSD 版图上的一支，源自个人书桌而非会议室。（BSDTalk EP244，[1127.58-1297.16]，L1）
@@ -180,8 +180,8 @@ volume: 第13卷-bsd衍生操作系统
 **辨析**：
 
 - 该 FreeBSD 历史概述为第三方博客的泛泛总结，其版本演进叙述粗糙（如版本 1 之后跳至 8），仅可作二手线索，不能作为编年依据。　[存疑脚注] 该版本史概述缺乏出处与精确年代，须以 FreeBSD 官方发布记录核验后方可用于编年。（BSD Now EP505，[952.4-1001.9]，L4）[订正：原 [964.62-1006.78]，2026-09-29 SenseAudio 重转核对]
-- 转录将 Klara Systems 误记为 Clara Systems，将 Rubenerd 误记为 Rubinerd 或 Ruben Nerd，正文按业界通行名处理。　[考据脚注] 机构与博客名存在语音转写偏差，须以原文链接核验（BSD Now EP651，[782.30-782.70]，L4）
-- 转录中 OpenBSD PA-RISC 移植者被记作 Michael Shaliff，实为 Michael Shalayeff；因语音转写歧义，人名须以代码仓库与邮件列表核验。　[存疑脚注] 人名拼写存在转写歧义，未以 OpenBSD 代码仓库核验（BSD Now EP651，[2700.56-2735.66]，L4）
+- 转录将 Klara Systems 误记为 clari systems，将 Rubenerd 误记为 Ruben Nerd，正文按业界通行名处理。　[考据脚注] 机构与博客名存在语音转写偏差，须以原文链接核验（BSD Now EP651，[782.30-782.70]，L4）[订正：原 误记为 Clara Systems、Rubinerd 或 Ruben Nerd，2026-10-01 SenseAudio 重转核对]
+- 转录中 OpenBSD PA-RISC 移植者被记作 Michael Shalif，实为 Michael Shalayeff；因语音转写歧义，人名须以代码仓库与邮件列表核验。　[存疑脚注] 人名拼写存在转写歧义，未以 OpenBSD 代码仓库核验（BSD Now EP651，[2700.56-2735.66]，L4）[订正：原 被记作 Michael Shaliff，2026-10-01 SenseAudio 重转核对]
 - rcorder 并行化历史上多次尝试均遇到未声明依赖问题，主持人指出并行带来的启动加速与破坏风险并存。　[存疑脚注] 并行化风险范围待核实（BSD Now EP370，[2193.19-2299.69]，L4）
 - 转写中 FuryBSD 与 FurryBSD 混淆，GhostBSD 的 Chrome 兼容问题被节目归因于临时打包故障，未经核实。　[存疑脚注] GhostBSD Chrome 故障原因未核实（BSD Now EP348，[687.6-695.68]，L4）
 - 节目所述 jails“2000 年首现”与章节考据的 1999-04-28 首次提交存在口径差异，须以 FreeBSD commit 记录为准；FreeBSD 12.0 具体特性以官方 Release Notes 为准。　[存疑脚注] jails 首次提交日期以代码仓库 commit 为准，播客口径为发布年份。（BSD Now EP276，[1155.72-1164.06]，L3）
@@ -191,8 +191,8 @@ volume: 第13卷-bsd衍生操作系统
 - 转写专名失真集中且需核证：新闻段称 tame 由 Nicholas Marriott 编写（66.50-77.32），与 tame 主要由 Theo de Raadt 等主导开发的公开记录相悖，应以 OpenBSD 源码树提交记录核证；“Matt Aaron”应为 ZFS 共同设计者 Matthew Ahrens（4104.28-4113.14），“Ted Ewanks”应为 Ted Unangst，“Antoine Jacuto”应为 Antoine Jacoutot，“CopMast”应为 FreeBSD GNOME 团队长期维护者 Koop Mast，“IOKage”应为 iocage，“do-ass”应为 doas；访谈嘉宾 Baptiste 全名未在转写中出现。上述失真均可由上下文辨认，不影响语义判读，故整体仍判可用，但涉及人名的引用须先经邮件列表存档与源码提交记录复核。　[存疑脚注] tame 作者归属与上述专名还原均系依据上下文与公开史料的推断，尚未逐一以 OpenBSD 源码树、邮件列表存档及人物自述复核。（BSD Now EP99，[66.50-77.32]，L4）
 - Ed Maste 对基金会已结项目的内部评估并不齐一：autofs 自动挂载守护进程与内核态 iSCSI 栈被引为部署反馈良好的成功案例，而 vt 控制台更新虽早已是 current 默认、其本人亦使用年余，却自认远未达预期，项目体量超出当初预估而仍在收尾——同为基金会出资，工程完成度因项目而异，资金投入与成果兑现并无必然对应。（BSD Now EP75，[1484.46-1590.74]，L1）
 - Lumina 0.6.2 仍为 beta，转录中对其稳定性与未来形态的判断属开发者预期，最终演进需以 PC-BSD/TrueOS 历史为准。　[存疑脚注] 开发者对未来稳定性的判断为单方预期，未形成多源佐证（BSD Now EP54，[3513.38-3526.78]，L4）
-- Liam Proven 关于 Xinuos 产品形态、AIX 团队迁移地等描述属记者二手综述，具体时点与细节须以厂商公告核实。　[存疑脚注] 商业 Unix 厂商现状为记者综述，未逐一核对厂商一手公告。（BSD Now EP580，[2915.18-3022.62]，L4）
-- FreeBSD 桌面升级损坏为 Liam Proven 的个案经验，不能据以推断该升级路径具有普遍失败率。　[存疑脚注] 桌面升级问题为单一用户个案经验，未经系统复现或统计验证。（BSD Now EP580，[3252.54-3318.12]，L4）
+- Liam Proven 关于 Xinuos 产品形态、AIX 团队迁移地等描述属记者二手综述，具体时点与细节须以厂商公告核实。　[存疑脚注] 商业 Unix 厂商现状为记者综述，未逐一核对厂商一手公告。（BSD Now EP580，[2905.8-3025.7]，L4）[订正：原 [2915.18-3022.62]，2026-10-01 SenseAudio 重转核对]
+- FreeBSD 桌面升级损坏为 Liam Proven 的个案经验，不能据以推断该升级路径具有普遍失败率。　[存疑脚注] 桌面升级问题为单一用户个案经验，未经系统复现或统计验证。（BSD Now EP580，[3252.5-3322.9]，L4）[订正：原 [3252.54-3318.12]，2026-09-30 SenseAudio 重转核对]
 - 转写将 Dan Langille 误记作 Langell 与 Langeo，引用须以正字为准；其口述首届参会人数先称 153 又更正为 173，精确数字应复核 BSDCan 官方存档；主持人关于 MP3 专利费率与分发禁令的断言系 2006 年时点常识，专利状态与费率随时间变动，引用时不得当作恒定事实。　[存疑脚注] 首届人数 153/173 两说并存；MP3 授权费率与分发限制为时点性口述，需以专利档案与授权条款原始文本复核。（BSDTalk EP14，[172.23-216.47]，L1）
 - Moore 将桌面环境在 BSD 上的损坏几乎全部归因于 Linux-ism 渗透，此为当事人单方归因，未排除 Qt 上游缺陷、配置差异或维护投入不足等替代解释，须以各桌面环境的移植补丁记录与缺陷追踪互证；其关于文件管理器缺乏 ZFS 集成先例的论断也基于 Linux ZFS 支持薄弱的时点判断，随着 ZFS on Linux 项目的成熟该论断的时效性有限。　[存疑脚注] Linux-ism 归因与 ZFS 先例论断均为单方陈述，缺乏系统性缺陷统计佐证（BSDTalk EP244，[391.68-464.76]，L1）
 - 性能与传播数字均为供应商自报：接近原生的性能结论由 Win4Win Pro 的既有评测类推而来，主持人亦指出 Win4BSD 当时尚缺第三方评测；网络提及量从 30 到近 30 万的口径与统计方法未说明。[存疑脚注] 两项数字均为单一来源陈述，未经独立复核。　[存疑脚注] 性能与传播数字为受访企业单方陈述，未见独立验证（BSDTalk EP75，[637.74-679.06]，L4）

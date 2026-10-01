@@ -150,7 +150,7 @@ volume: 第10卷-openbsd的历史
 - Bryan Cantrill 的 jails 与 zones 对比论文。（BSD Now EP163，[3866.88-3923.8]，L2）
 - Reyk Floeter 访谈（OpenBSD httpd 作者当事人自述）。（BSD Now EP53，[540.14-1854.84]，L1）
 - Robert Watson 访谈（当事人自述，FreeBSD 核心团队成员与剑桥大学讲师）。（BSD Now EP50，[1294.82-2231.72]，L1）
-- OpenSSL 0.9.8zb、1.0.0n、1.0.1i 安全公告与 LibreSSL 2.0.5 发布信息（主持人口头转述）。（BSD Now EP50，[897.62-983.42]，L2）
+- OpenSSL 0.9.8zb、1.0.0n、1.0.1i 安全公告与 LibreSSL 新版本发布信息（主持人口头转述；新转写仅提及 LibreSSL 发布新版本，未及版本号）。（BSD Now EP50，[897.62-983.42]，L2）[订正：原 "LibreSSL 2.0.5 发布信息"，2026-09-30 SenseAudio 重转核对]
 
 **史观**：
 

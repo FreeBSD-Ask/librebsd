@@ -140,7 +140,7 @@ volume: 第08卷-freebsd的范式转换
 
 **辨析**：
 
-- 转写中 OpenBSD 帧缓冲的 RasterOps 引入时间与平台（i386/AMD64）细节存在 ASR 转写噪声，需对照 Cambus 原文。　[存疑脚注] 平台与时间细节待原文核对（BSD Now EP368，[215.94-251.96]，L4）
+- 新转写清晰读出：OpenBSD 帧缓冲的 rasops（RasterOps）系 2001 年自 NetBSD 引入，i386/AMD64 帧缓冲控制台于 2013 年随 Intel DRM 与 Radeon DRM 启用，细节仍宜对照 Cambus 原文。　[存疑脚注] 平台与时间细节待原文核对（BSD Now EP368，[203.20-240.50]，L4）[订正：原 引入时间与平台细节存在 ASR 转写噪声且 [215.94-251.96]，2026-09-30 SenseAudio 重转核对]
 - 1999 年 CNN 报道的硬件配置与下载数据系二手转述，具体数字（500GB、3600 并发会话）未经原始报道复核。　[存疑脚注] CNN 原文数据须复核（BSD Now EP230，[5269.0-5350.0]，L4）
 - Colin Percival 对 Google、Intel 与 Linux 社区的批评系其个人立场，节目转述时未提供对立方的回应。　[存疑脚注] 系单一来源的个人立场表述（BSD Now EP230，[1201.3-1218.3]，L4）
 - [存疑脚注] 主持人称 Android libc 来自 OpenBSD，此为主持人转述；Android Bionic 的 BSD 派生来源与比例须核验官方源码与历史记录。　[存疑脚注] Bionic 的 BSD 来源须核验。（BSD Now EP171，[1237.6-1243.48]，L4）

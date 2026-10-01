@@ -114,32 +114,32 @@ volume: 第05卷-freebsd的工程化奠基
 
 **要点**：
 
-- 新主持人 Jason Tubner 自述从业经历：约 2000 年经同事 Steve Nunez 赠予的 OpenBSD 2.8 光盘接触 BSD，此前学习 Solaris 并从事系统管理与存储咨询，此后成为 BSD 长期使用者与布道者。（BSD Now EP513，[325.74-418.48]，L1）
-- 其所在的澳大利亚非营利社区健康服务机构以 FreeBSD 与 OpenBSD 混合部署，用 bhyve 在通用硬件上承载 VPN 网关与 Windows 补丁分发设备，并通过生产使用向 BSD 项目反馈缺陷，形成使用、报错、修复、再使用的循环。（BSD Now EP513，[480.56-712.56]，L1）
-- 节目转述 su 降权文章，指出 su 的功能是提升而非降低权限，其被用于降权的误用源自 1986 年 Fielder 与 Hunter 著作及流传教程；自 1997 年 daemontools 的 setuidgid 起已有专用降权工具，PAM 的引入进一步改变其行为。（BSD Now EP513，[1576.30-1933.64]，L2）
-- 新闻部分报道 OpenBSD dt 动态追踪设备于 6.7 首次出现并逐步获得工具支持，以及 LibreSSL 3.6.3、3.7.3 与 3.8.0 开发版的发布，并介绍 FreeBSD 12 起的手工 jail 部署流程。（BSD Now EP513，[1953.10-2632.10]，L2）
+- 新主持人 Jason Tubner 自述从业经历：约 2000 年经同事 Steve Nunez 赠予的 OpenBSD 2.8 光盘接触 BSD，此前学习 Solaris 并从事系统管理与存储咨询，此后成为 BSD 长期使用者与布道者。（BSD Now EP513，[315.3-418.6]，L1）[订正：原 [325.74-418.48]，2026-10-01 SenseAudio 重转核对]
+- 其所在的澳大利亚非营利社区健康服务机构以 FreeBSD 与 OpenBSD 混合部署，用 bhyve 在通用硬件上承载 VPN 网关与 Windows 补丁分发设备，并通过生产使用向 BSD 项目反馈缺陷，形成使用、报错、修复、再使用的循环。（BSD Now EP513，[480.5-714.3]，L1）[订正：原 [480.56-712.56]，2026-09-30 SenseAudio 重转核对]
+- 节目转述 su 降权文章，指出 su 的功能是提升而非降低权限，其被用于降权的误用源自 1986 年 Fielder 与 Hunter 著作及流传教程；自 1997 年 daemontools 的 setuidgid 起已有专用降权工具，PAM 的引入进一步改变其行为。（BSD Now EP513，[1574.8-1934.6]，L2）[订正：原 [1576.30-1933.64]，2026-09-30 SenseAudio 重转核对]
+- 新闻部分报道 OpenBSD dt 动态追踪设备于 6.7 首次出现并逐步获得工具支持，以及 LibreSSL 3.6.3、3.7.3 与 3.8.0 开发版的发布，并介绍 FreeBSD 12 起的手工 jail 部署流程。（BSD Now EP513，[1947.4-2641.0]，L2）[订正：原 [1953.10-2632.10]，2026-10-01 SenseAudio 重转核对]
 - Dan Langille 自述 FreshPorts 迁移史：该服务原运行于 New Jersey 由 IAC Systems 捐赠的主机，主机突然失效后回退 Austin 旧主机，随后借重写机会迁移至 AWS，并将提交处理、Web 请求与数据库拆分为独立 jail；他称 FreshPorts 已运行约 20 年，希望未来由 FreeBSD 项目接手维护。（BSD Now EP499，[2093.20-2320.00]，L1）
 - 其家庭实验室以一台从电子废弃物中回收的 Dell R730 取代两台旧主机，运行约 40 个 FreeBSD jail，主要用于 FreshPorts 的 dev、test、stage 环境及多种服务；迁移通过 Syncoid 的 ZFS 发送接收完成，并带来约 25% 的功耗下降。（BSD Now EP499，[139.80-530.00]，L1）
 - Langille 以 BSDCan 组织者身份回顾会议史：其自 2004 年举办第一届 BC camp，至 2023 年已连续办会 20 年；疫情后会议以严格口罩政策线下重启，并招募志愿者分担会议包、场地与演讲者事务。（BSD Now EP499，[1442.02-2093.20]，L1）
 - 节目还讨论 jail 管理器因难以适配特定场景被弃用，转而使用自维护的 MakeJail 脚本，显示 jails 生态中用户为适应具体需求而回归手工脚本。（BSD Now EP499，[1666.86-1734.30]，L1）
-- 一篇教程记述在 FreeBSD jail 中以 easyjail 部署 Gemini 服务器 Molly Brown 的过程，包括克隆接口、SSL 证书、rc.d 服务脚本与 jail 内 SSH 访问，展示 jail 作为轻量隔离环境承载新协议的实践路径。（BSD Now EP406，[273.92-470.8]，L2）
-- FreeBSD 2021 年第一季度状态报告显示，doc、src、ports 三仓库已切换至 Git，CI 作业与文档工具链随之迁移至 Git 与 AsciiDoc/Hugo，并记录 13.0 发布与 Linux 兼容层支持 Firefox Widevine 的进展。（BSD Now EP406，[476.4-1461.2]，L2）
-- Michael W Lucas 在采访中自述，1995 年美国国家科学基金会全面商业化互联网后，其管理的客户端域名服务器频繁崩溃，直至安装 FreeBSD 名称服务器才获得整夜睡眠，由此转向 OpenBSD 与 FreeBSD 世界并最终成为全职技术作者。（BSD Now EP406，[1721.98-1828.6]，L1）
-- 主持人说明 BSD grep 的重写源于 Google Summer of Code，采用现代搜索算法后仍存在边缘情况慢于 GNU grep，最终修复并成为 FreeBSD 默认，GNU grep 保留为编译期选项。（BSD Now EP406，[2820.16-2956.14]，L2）
+- 一篇教程记述在 FreeBSD jail 中以 easyjail 部署 Gemini 服务器 Molly Brown 的过程，包括克隆接口、SSL 证书、rc.d 服务脚本与 jail 内 SSH 访问，展示 jail 作为轻量隔离环境承载新协议的实践路径。（BSD Now EP406，[264.8-476.6]，L2）[订正：原 [273.92-470.8]，2026-09-30 SenseAudio 重转核对]
+- FreeBSD 2021 年第一季度状态报告显示，doc、src、ports 三仓库已切换至 Git，CI 作业与文档工具链随之迁移至 Git 与 AsciiDoc/Hugo，并记录 13.0 发布与 Linux 兼容层支持 Firefox Widevine 的进展。（BSD Now EP406，[465.9-1486.1]，L2）[订正：原 [476.4-1461.2]，2026-09-30 SenseAudio 重转核对]
+- Michael W Lucas 在采访中自述，1995 年美国国家科学基金会全面商业化互联网后，其管理的客户端域名服务器频繁崩溃，直至安装 FreeBSD 名称服务器才获得整夜睡眠，由此转向 OpenBSD 与 FreeBSD 世界并最终成为全职技术作者。（BSD Now EP406，[1710.4-1840.3]，L1）[订正：原 [1721.98-1828.6]，2026-09-30 SenseAudio 重转核对]
+- 主持人说明 BSD grep 的重写源于 Google Summer of Code，采用现代搜索算法后仍存在边缘情况慢于 GNU grep，最终修复并成为 FreeBSD 默认，GNU grep 保留为编译期选项。（BSD Now EP406，[2810.8-2958.5]，L2）[订正：原 [2820.16-2956.14]，2026-09-30 SenseAudio 重转核对]
 - OpenBSD 于 2020 年 10 月 18 日发布 6.8 版，正值项目创立二十五周年；该版引入由引导装载器向内核传递的随机种子置信度标记、在支持的 arm64 处理器上启用 PAN，并改进 FFS、安装镜像与多架构安装引导。（BSD Now EP374，[0.0-10.72]，L2）
 - NetBSD 于 2020 年 10 月 18 日发布 9.1，新增并行磁盘加密、C.UTF-8 区域设置、ZFS 支持增强、NVMM 虚拟机监控器更新以及 PowerPC64 PowerNV 支持。（BSD Now EP374，[590.42-796.96]，L2）
 - OpenZFS 开发者峰会 2020 因疫情改以 Zoom 举办，采用 webinar 演讲与虚拟走廊并行的组织方式；峰会自 2013 年起规模持续扩大，本年取消人数上限后允许更多人参加。（BSD Now EP374，[847.32-970.56]，L1）
 - BastilleBSD 相关文章将容器技术谱系上溯至 1979 年 Unix 第七版 chroot，指出 jail 术语最早见于 1991 年 4.3BSD，FreeBSD 4.0 于 2000 年提供 jail 命令，Linux 迟至 2008 年才有 LXC、2013 年才有 Docker。（BSD Now EP374，[1848.72-2116.32]，L2）
-- FreeBSD jails 与 ZFS 数据集委托形成组合：可把数据集委托给 jail 内 root，再由 jail 内 root 委托给单个用户，配合强制访问控制模块实现面向公众服务的最小权限隔离。（BSD Now EP329，[709.42-766.12]，L1）
-- Lucas 认为 jails 是系统管理各项知识的集大成，需掌握文件系统、升级与编排；一旦单机运行数百 jail 就必须自动化，否则无法管理。（BSD Now EP329，[604.70-654.10]，L1）
-- BSDCan 拍卖是慈善筹款仪式：Lucas 拍卖标注“mostly complete”却缺最后 27 页的《Terrapin Sky Tango》初稿，Bob Beck 与 Christophe Provost 分别竞得主体与结尾，共筹得约 300 美元捐给 Ottawa Mission，并催生仅印四册的残缺特别版。（BSD Now EP329，[908.72-1153.38]，L1）
-- SNMP 协议本体仅七个部分，复杂来自厂商解释与实现差异；Lucas 的《SNMP Mastery》试图把学习协议与学习厂商配置分离，将其定位为网络与系统管理员工具箱中的必要工具。（BSD Now EP329，[1394.54-1497.48]，L1）
+- FreeBSD jails 与 ZFS 数据集委托形成组合：可把数据集委托给 jail 内 root，再由 jail 内 root 委托给单个用户，配合强制访问控制模块实现面向公众服务的最小权限隔离。（BSD Now EP329，[709.42-868.1]，L1）[订正：原 [709.42-766.12]，2026-09-30 SenseAudio 重转核对]
+- Lucas 认为 jails 是系统管理各项知识的集大成，需掌握文件系统、升级与编排；一旦单机运行数百 jail 就必须自动化，否则无法管理。（BSD Now EP329，[616.6-654.10]，L1）[订正：原 [604.70-654.10]，2026-10-01 SenseAudio 重转核对]
+- BSDCan 拍卖是慈善筹款仪式：Lucas 拍卖标注“mostly complete”却缺最后 27 页的《Terrapin Sky Tango》初稿，Bob Beck 与 Christophe Provost 分别竞得主体与结尾，共筹得约 300 美元捐给 Ottawa Mission，并催生仅印四册的残缺特别版。（BSD Now EP329，[908.72-1287.9]，L1）[订正：原 [908.72-1153.38]，2026-09-30 SenseAudio 重转核对]
+- SNMP 协议本体仅七个部分，复杂来自厂商解释与实现差异；Lucas 的《SNMP Mastery》试图把学习协议与学习厂商配置分离，将其定位为网络与系统管理员工具箱中的必要工具。（BSD Now EP329，[1394.54-1763.9]，L1）[订正：原 [1394.54-1497.48]，2026-09-30 SenseAudio 重转核对]
 - Lucas 主张写作先定目标再选手段：以建立认证与标准为目标的作者宜走传统出版，以持续量产短书为目标的作者宜自出版；小说尤应自出版，因大社合同会取走版权终身加身后 70 年。（BSD Now EP329，[2647.86-2764.40]，L1）
-- Trenton Schultz 在明尼苏达读本科时因实验室游戏夜初识 FreeBSD 2.2.5，后以 Qt 小程序与纯文本简历入职 Trolltech，参与 Qt Embedded 与 Cocoa 移植，其第一个 Qt 提交是把 Qt 虚拟帧缓冲从 Linux 专用信号量改为 FreeBSD 兼容实现。（BSD Now EP321，[120.62-445.88]，L1）
-- ROS 是发布/订阅式机器人中间件，节点以话题通信、可跨机分布，默认跟随 Ubuntu LTS；Schultz 2017 年移植因 OpenCV 版本与 Python Qt 绑定混乱受阻，2019 年借 jails 的干净环境重试成功基础通信与可视化。（BSD Now EP321，[882.08-1217.88]，L1）
+- Trenton Schultz 在明尼苏达读本科时因实验室游戏夜初识 FreeBSD 2.2.5，后以 Qt 小程序与纯文本简历入职 Trolltech，参与 Qt Embedded 与 Cocoa 移植，其第一个 Qt 提交是把 Qt 虚拟帧缓冲从 Linux 专用信号量改为 FreeBSD 兼容实现。（BSD Now EP321，[120.62-604.0]，L1）[订正：原 [120.62-445.88]，2026-09-30 SenseAudio 重转核对]
+- ROS 是发布/订阅式机器人中间件，节点以话题通信、可跨机分布，默认跟随 Ubuntu LTS；Schultz 2017 年移植因 OpenCV 版本与 Python Qt 绑定混乱受阻，2019 年借 jails 的干净环境重试成功基础通信与可视化。（BSD Now EP321，[882.08-1423.4]，L1）[订正：原 [882.08-1217.88]，2026-09-30 SenseAudio 重转核对]
 - FreeBSD jails 让 ROS 构建与桌面 Qt 版本隔离，避免依赖冲突；Schultz 强调读 Michael W. Lucas 的 jails 书后才理解 nullfs、devfs 等前置知识，并首次成功搭出 CUPS jail。（BSD Now EP321，[1193.60-1367.12]，L1）
-- Schultz 的博士研究关注家庭机器人隐私框架与人机交互动画，指出 ROS1 无安全设计（动态 UDP 端口、需 VPN 或封闭网络），摄像头数据是否外传决定隐私风险等级。（BSD Now EP321，[632.94-690.32]，L1）
-- 对 BSD 新手的建议：与朋友结伴、用虚拟机试错、尽早配置 ZFS 自动快照与引导环境以获得回滚能力，从而敢于动手。（BSD Now EP321，[2071.72-2250.44]，L1）
+- Schultz 的博士研究关注家庭机器人隐私框架与人机交互动画，指出 ROS1 无安全设计（动态 UDP 端口、需 VPN 或封闭网络），摄像头数据是否外传决定隐私风险等级。（BSD Now EP321，[632.94-2753.6]，L1）[订正：原 [632.94-690.32]，2026-09-30 SenseAudio 重转核对]
+- 对 BSD 新手的建议：与朋友结伴、用虚拟机试错、尽早配置 ZFS 自动快照与引导环境以获得回滚能力，从而敢于动手。（BSD Now EP321，[2071.72-2320.7]，L1）[订正：原 [2071.72-2250.44]，2026-09-30 SenseAudio 重转核对]
 - FreeBSD 在 OCI Runtime Specification 1.3 中被列为官方支持平台，路径包括 Samuel Karp 的 RunJ、Doug Rabson 的 Buildah 与 Podman 移植以及官方镜像。（BSD Now EP640，[106.30-305.54]，L2）
 - Jim Salter 的 ZFS 灾难恢复文章以 Sanoid 与 Syncoid 实现快照、销毁与复制的自动化，并强调 RAID 不是备份、备份机应主动拉取而非被动接收。（BSD Now EP640，[339.80-818.48]，L1）
 - Chris Siebenmann 通过阅读 DSL 源码说明 ZFS 的 written 与 written@ 属性即时计算，written 需回加已释放空间以避免负值。（BSD Now EP640，[849.96-1060.68]，L1）
@@ -158,12 +158,12 @@ volume: 第05卷-freebsd的工程化奠基
 - 该期讲解 Rust 应用移植到 FreeBSD ports 的流程：ports 以 Makefile 描述构建安装，portlint 检查顺序，make makepatch 生成补丁，约 30,000 个 ports 依赖 POSIX 可移植性。（BSD Now EP223，[916.48-1100.46]，L2）
 - 该期辨析 Docker 在 FreeBSD/Solaris 的意义：Docker 是 Linux 与 Windows 隔离问题的解决方案，FreeBSD 以 jails 实现隔离，Docker 的移植依赖 Linux 模拟与 ZFS。（BSD Now EP223，[3109.0-3269.08]，L2）
 - FreeBSD 基金会 11 月更新：Matt Ahrens 推进 RAID-Z 扩容（由 FreeBSD 基金会、Delphix、iXsystems 合办），预计 2018 年合入并赶上 FreeBSD 12。（BSD Now EP223，[5082.36-5176.8]，L2）
-- Raymond Chen 复述复杂系统的基本失效模式定理：任何复杂系统都处于某种失效模式，局部补偿使问题潜伏，改变只会带来更复杂的反制。（BSD Now EP631，[138.14-224.48]，L1）
-- Dr. Brian Robert Callahan 为 QBE 的 ARM64 后端编写窥孔优化，消除冗余寄存器拷贝与可即时数化的算术指令，说明 ARM64 定长指令下只能通过删除指令获利。（BSD Now EP631，[286.40-737.76]，L1）
-- FreeBSD 笔记本作者发现 Nvidia 驱动会覆盖 Xorg 与 DRM 模块的文件，导致 GL 支持判定错乱，移除 Nvidia 驱动并重装 Intel 与 DRM 驱动后恢复正常。（BSD Now EP631，[765.84-908.32]，L1）
-- 以 devd 规则按 USB 厂商与产品 ID 建立符号链接，并把链接置于 jail 根目录而非 /dev，可将设备以稳定名称传入 FreeBSD jail。（BSD Now EP631，[921.84-1316.76]，L1）
-- Chris Siebenmann 澄清 ZFS 快照并非完全不可变，快照元数据会随独有空间统计、快照删除与重命名而更新，只有文件系统状态被冻结。（BSD Now EP631，[1321.58-1407.46]，L1）
-- 将 PeerTube 从 Debian 迁移到 FreeBSD 的过程以 UFS 而非 ZFS 作为客户机文件系统，以避免在 OmniOS 的 ZFS 上嵌套 ZFS。（BSD Now EP631，[1417.28-1794.48]，L1）
+- Raymond Chen 复述复杂系统的基本失效模式定理：任何复杂系统都处于某种失效模式，局部补偿使问题潜伏，改变只会带来更复杂的反制。（BSD Now EP631，[130.8-228.1]，L1）[订正：原 [138.14-224.48]，2026-10-01 SenseAudio 重转核对]
+- Dr. Brian Robert Callahan 为 QBE 的 ARM64 后端编写窥孔优化，消除冗余寄存器拷贝与可即时数化的算术指令，说明 ARM64 定长指令下只能通过删除指令获利。（BSD Now EP631，[280.3-735.8]，L1）[订正：原 [286.40-737.76]，2026-10-01 SenseAudio 重转核对]
+- FreeBSD 笔记本作者发现 Nvidia 驱动会覆盖 Xorg 与 DRM 模块的文件，导致 GL 支持判定错乱，移除 Nvidia 驱动并重装 Intel 与 DRM 驱动后恢复正常。（BSD Now EP631，[763.9-910.2]，L1）[订正：原 [765.84-908.32]，2026-09-30 SenseAudio 重转核对]
+- 以 devd 规则按 USB 厂商与产品 ID 建立符号链接，并把链接置于 jail 根目录而非 /dev，可将设备以稳定名称传入 FreeBSD jail。（BSD Now EP631，[918.0-1323.8]，L1）[订正：原 [921.84-1316.76]，2026-10-01 SenseAudio 重转核对]
+- Chris Siebenmann 澄清 ZFS 快照并非完全不可变，快照元数据会随独有空间统计、快照删除与重命名而更新，只有文件系统状态被冻结。（BSD Now EP631，[1302.1-1408.2]，L1）[订正：原 [1321.58-1407.46]，2026-10-01 SenseAudio 重转核对]
+- 将 PeerTube 从 Debian 迁移到 FreeBSD 的过程以 UFS 而非 ZFS 作为客户机文件系统，以避免在 OmniOS 的 ZFS 上嵌套 ZFS。（BSD Now EP631，[1414.3-1794.6]，L1）[订正：原 [1417.28-1794.48]，2026-09-30 SenseAudio 重转核对]
 - 本期核心为长期推动 bhyve 的 Michael Dexter 之当事人口述：MeetBSD 2010 圆桌认定 Xen 许可证与内核级复杂度不适于 FreeBSD，与会者得出“我们需要一个 hypervisor”（2641.42）的结论；2011 年 BSDCan 开发者峰会上 Neel Natu 与 Peter Grehan 展示尚属厂商内部项目的 bhyve，Dexter 随即以“零号用户”身份编写自动化脚本、暴露串口与 virtio 缺陷，促成其按期进入 FreeBSD 10 而非推迟到 11 或 12。（BSD Now EP149，[2585.26-2751.50]，L1）
 - 新闻与动态部分构成 2016 年年中的 BSD 生态横截面：bhyve 的 UEFI/GOP 图形支持于录制前两日合入 FreeBSD CURRENT 并将随 11.0-BETA1 发布（7505.39-7554.56）；FreeBSD 基金会六月月报披露 Peter Holm 压力测试套件十年发现约 1400 个内核问题、Konstantin Belousov 复核其中 910 个；Solaris /proc 之父 Roger Faulkner 逝世，Bryan Cantrill 在 Hacker News 追忆其 pgrep 与师承轶事；RetroBSD 等项目将 BSD 2.11 与 4.4 移植至 PIC32 微控制器。（BSD Now EP149，[7505.39-7554.56]，L2）
 - Brooks Davis 在亚洲 BSDCon 受访时自述，CHERI 项目为支持自研研究处理器而维护 FreeBSD 的分支（转写误作 CherryBSD），在 MIPS64 指令集基础上增加 ISA 扩展以实现空间内存安全，并辅以时间内存安全框架；在改动最深的纯能力模式下缓冲区溢出被消解，越界将触发硬件异常而非任意行为，编译后的 SSH 理论上不应再有缓冲区溢出；项目由 DARPA 资助、至受访时已进行约五年，因既有 MIPS32 FPGA 设计而选择 MIPS64，并向 RISC-V 与标记内存方向延展。（BSD Now EP139，[1436.4-1546.5]，L1）[订正：原 [1444.10-1541.46]，2026-09-30 SenseAudio 重转核对]
@@ -199,23 +199,23 @@ volume: 第05卷-freebsd的工程化奠基
 
 **史料**：
 
-- OpenBSD 2.8 光盘为当事人 Jason Tubner 的个人入门一手经历，经当期采访自述。（BSD Now EP513，[389.32-404.68]，L1）
-- Fielder 与 Hunter 1986 年著作被节目指为 su 降权误用的历史文本来源之一，属于经主持人转述的二手史料线索。（BSD Now EP513，[1583.36-1600.52]，L2）
-- setuidgid（daemontools，1997 年发布，最初称 setuser）及其克隆工具的谱系，作为 su 专用降权替代工具的历史证据，经节目转述。（BSD Now EP513，[1858.80-1896.40]，L2）
+- OpenBSD 2.8 光盘为当事人 Jason Tubner 的个人入门一手经历，经当期采访自述。（BSD Now EP513，[375.2-418.6]，L1）[订正：原 [389.32-404.68]，2026-10-01 SenseAudio 重转核对]
+- Fielder 与 Hunter 1986 年著作被节目指为 su 降权误用的历史文本来源之一，属于经主持人转述的二手史料线索。（BSD Now EP513，[1574.8-1604.8]，L2）[订正：原 [1583.36-1600.52]，2026-10-01 SenseAudio 重转核对]
+- setuidgid（daemontools，1997 年发布，最初称 setuser）及其克隆工具的谱系，作为 su 专用降权替代工具的历史证据，经节目转述。（BSD Now EP513，[1833.0-1898.1]，L2）[订正：原 [1858.80-1896.40]，2026-10-01 SenseAudio 重转核对]
 - FreshPorts 项目迁移经历为 Dan Langille 本人一手自述，涉及 New Jersey、Austin 与 AWS 三代主机及 jail 拆分。（BSD Now EP499，[2093.20-2320.00]，L1）
 - BSDCan 会议组织史为 Dan Langille 本人一手自述，涉及 2004 年首届 BC camp 与 2023 年第二十届办会。（BSD Now EP499，[1442.02-2093.20]，L1）
 - Syncoid 与 ZFS 快照在 jail 迁移中的应用，为 Dan Langille 本人一手实践叙述。（BSD Now EP499，[911.54-1104.46]，L1）
-- Michael W Lucas 关于 1995 年以 33.6k 拨号管理名称服务器、试用 Linux 与 Windows NT 未果、最终依赖 FreeBSD 获得稳定运行的叙述，属当事人一手口述史料。（BSD Now EP406，[1772.42-1822.78]，L1）
-- FreeBSD 2021 年第一季度状态报告记载 doc 迁移于 2021 年 1 月 23 日完成，由 Sergio Carlavilla 等维护文档基础设施，属可核对的一手工程记录。（BSD Now EP406，[1070.12-1096.9]，L2）
+- Michael W Lucas 关于 1995 年以 33.6k 拨号管理名称服务器、试用 Linux 与 Windows NT 未果、最终依赖 FreeBSD 获得稳定运行的叙述，属当事人一手口述史料。（BSD Now EP406，[1770.4-1840.3]，L1）[订正：原 [1772.42-1822.78]，2026-09-30 SenseAudio 重转核对]
+- FreeBSD 2021 年第一季度状态报告记载 doc 迁移于 2021 年 1 月 23 日完成，由 Sergio Carlavilla 等维护文档基础设施，属可核对的一手工程记录。（BSD Now EP406，[1052.4-1110.9]，L2）[订正：原 [1070.12-1096.9]，2026-09-30 SenseAudio 重转核对]
 - OpenBSD 6.8 官方变更日志与发行公告，涵盖 OpenSSH 8.4、LibreSSL 3.2.2、OpenSMTPD 与 VMM/VMD 更新，由主持人转述。（BSD Now EP374，[357.24-391.04]，L2）
 - NetBSD 9.1 官方发布公告，涵盖 cgd 并行磁盘加密、ZFS、NVMM、NPF、X11 默认窗口管理器切换等内容，由主持人转述。（BSD Now EP374，[590.42-823.44]，L2）
 - OpenZFS 开发者峰会 2020 议题，包括 Matt Ahrens 论 OpenZFS 状态与版本化、George Wilson 论 ARC 与操作系统内存协作、持久 L2ARC、ZIL 并行化、顺序重建与 send/recv 性能提升，由 Alan Jude 亲历转述。（BSD Now EP374，[974.72-1777.74]，L1）
-- Michael W. Lucas 当事人自述其《FreeBSD Mastery: Jails》《SNMP Mastery》《Sudo Mastery》写作、ZFS 与 jail 集成方案及 BSDCan 拍卖经历。（BSD Now EP329，[102.00-105.14]，L1）
+- Michael W. Lucas 当事人自述其《FreeBSD Mastery: Jails》《SNMP Mastery》《Sudo Mastery》写作、ZFS 与 jail 集成方案及 BSDCan 拍卖经历。（BSD Now EP329，[102.00-1763.9]，L1）[订正：原 [102.00-105.14]，2026-09-30 SenseAudio 重转核对]
 - 《Terrapin Sky Tango》初稿拍卖物及“缺最后 27 页”的特别版实物，Bob Beck 与 Christophe Provost 各持一份，Lucas 自留一份，余一份拟在 BSDCan 2020 拍卖。（BSD Now EP329，[1207.20-1296.00]，L1）
 - NetSNMP man page 与 Cisco 文档被 Lucas 指为参考而非教程，构成 SNMP 学习生态的二手史料。（BSD Now EP329，[1612.64-1626.18]，L2）
-- Trenton Schultz 本人访谈自述（Trolltech 七年与 Nokia 一年经历、ROS 移植、博士研究）。（BSD Now EP321，[105.18-119.16]，L1）
-- Michael W. Lucas《FreeBSD Mastery: Jails》及配套六书（Schultz 转述其阅读体验与前置知识结构）。（BSD Now EP321，[1259.36-1339.12]，L2）
-- EuroBSDCon 2019 Lillehammer 的 ROS on FreeBSD 演讲，为 Schultz 本人报告。（BSD Now EP321，[1459.40-1468.78]，L1）
+- Trenton Schultz 本人访谈自述（Trolltech 七年与 Nokia 一年经历、ROS 移植、博士研究）。（BSD Now EP321，[105.18-1423.4]，L1）[订正：原 [105.18-119.16]，2026-09-30 SenseAudio 重转核对]
+- Michael W. Lucas《FreeBSD Mastery: Jails》及配套六书（Schultz 转述其阅读体验与前置知识结构）。（BSD Now EP321，[1259.36-1376.7]，L2）[订正：原 [1259.36-1339.12]，2026-09-30 SenseAudio 重转核对]
+- EuroBSDCon 2019 Lillehammer 的 ROS on FreeBSD 演讲，为 Schultz 本人报告。（BSD Now EP321，[1459.40-1539.4]，L1）[订正：原 [1459.40-1468.78]，2026-09-30 SenseAudio 重转核对]
 - FreeBSD Foundation 博客 FreeBSD Officially Supported in the OCI Runtime Specification 1.3。（BSD Now EP640，[106.30-305.54]，L2）
 - Jim Salter 于 Klara Systems 的 ZFS 灾难恢复文章。（BSD Now EP640，[339.80-818.48]，L1）
 - Chris Siebenmann 关于 OpenZFS written 与 written@ 属性的博客。（BSD Now EP640，[849.96-1060.68]，L1）
@@ -228,10 +228,10 @@ volume: 第05卷-freebsd的工程化奠基
 - backtrace.io 的编译器可调试性文章，以 DWARF 状态机解释优化后变量的取值恢复。（BSD Now EP223，[72.32-97.84]，L2）
 - Andrew Cherkashin 的 Rust 移植 Medium 文章（以 fd 工具为例说明 port 的 Makefile 结构）。（BSD Now EP223，[923.72-1010.84]，L2）
 - FreeBSD 基金会 2017 年 11 月开发项目更新，含 RAID-Z 扩容、Broadcom Wi-Fi、ARM bhyve 与 LLD。（BSD Now EP223，[5033.72-5513.96]，L2）
-- Raymond Chen 于 devblogs.microsoft.com 的《The fundamental failure mode theorem》。（BSD Now EP631，[138.14-224.48]，L1）
-- Dr. Brian Robert Callahan 博客 QBE ARM64 窥孔优化系列。（BSD Now EP631，[286.40-737.76]，L1）
-- Chris Siebenmann 博客 ZFS snapshots aren't as immutable as I thought。（BSD Now EP631，[1321.58-1407.46]，L1）
-- 关于 FreeBSD jail 设备稳定名称与 PeerTube 迁移的两篇博客。（BSD Now EP631，[921.84-1794.48]，L1）
+- Raymond Chen 于 devblogs.microsoft.com 的《The fundamental failure mode theorem》。（BSD Now EP631，[130.8-228.1]，L1）[订正：原 [138.14-224.48]，2026-10-01 SenseAudio 重转核对]
+- Dr. Brian Robert Callahan 博客 QBE ARM64 窥孔优化系列。（BSD Now EP631，[280.3-735.8]，L1）[订正：原 [286.40-737.76]，2026-10-01 SenseAudio 重转核对]
+- Chris Siebenmann 博客 ZFS snapshots aren't as immutable as I thought。（BSD Now EP631，[1302.1-1408.2]，L1）[订正：原 [1321.58-1407.46]，2026-10-01 SenseAudio 重转核对]
+- 关于 FreeBSD jail 设备稳定名称与 PeerTube 迁移的两篇博客。（BSD Now EP631，[918.0-1794.6]，L1）[订正：原 [921.84-1794.48]，2026-09-30 SenseAudio 重转核对]
 - 访谈内嵌多条可回溯的一手史料：Dexter 保存的旧式 Unix 光盘与 CSRG 档案实物（1795.82-1806.61）、其维护于 multiplicity.bsd.lv 的 Xen/NetBSD 文档与 multiplicity 脚本、投向 AsiaBSDCon 与 BSDCan 的 SMART 工具设计论文，以及他转述的 Robert Watson 关于系统调用包装器并发缺陷的 WOOT 论文（2220.21-2227.67），可供 bhyve 与 jails 相关章节的口述史与文献双轨考据。（BSD Now EP149，[1795.82-1806.61]，L1）
 - 本期宣介的《FreeBSD Journal》2016 年 3-4 月号以操作系统教学为专题，含 George Neville-Neal 与 Robert Watson 论以追踪、分析与实验讲授 FreeBSD，Brooks Davis 论 CHERI 构建安全可信计算基座，Kirk McKusick 的快速文件系统简史，以及对核心团队成员、发布工程与副安全官、Netflix 高级开发者 Gleb Smirnoff 的访谈，另载 FOSDEM BSD 开发者房间与台北 PortsCamp 会议报告，是同期一手文献的集中索引。（BSD Now EP139，[906.9-1055.3]，L2）[订正：原 [918.10-1053.86]，2026-09-30 SenseAudio 重转核对]
 - 本期援引的代码仓库与社区一手材料包括：FreeBSD head 分支合入的磁盘 I/O 限额实验性提交，新增按读写字节与 IOPS 计的四种 RCTL 资源，主持人当场宣读提交说明并呼吁测试 VFS 与 VM 部分；NetBSD 在 amd64 默认启用 ASLR 的提交与 DragonFly BSD 对 Bay Trail 挂起的修复；Bryan Cantrill 关于 jails 与 zones 历史的演讲及其配套学术论文；Chris Siebenmann 关于 Unix 文件持久性的博客文章；以及 John、Thomas、Ben、Bryson、Adrien 等多位读者来信。（BSD Now EP139，[2750.0-2803.1]，L2）[订正：原 [2756.71-2801.36]，2026-09-30 SenseAudio 重转核对]
@@ -249,23 +249,23 @@ volume: 第05卷-freebsd的工程化奠基
 
 **史观**：
 
-- 总纲10 动手者创造历史：生产使用者通过报错与反馈参与 BSD 演进，默默做事的使用者同样是历史主体。：Jason 及其机构以生产使用向 BSD 项目反馈缺陷，BSD 的完善来自使用者的动手反馈而非单向的官方规划。（BSD Now EP513，[629.78-712.56]，L1）
-- 总纲9 经验优先：以实机安装与生产使用的经验作为选择操作系统的依据。：Jason 的个人路径由 Solaris、Linux 到 OpenBSD 光盘的实机经验驱动，其判断以实际使用而非抽象宣传为依据。（BSD Now EP513，[325.74-418.48]，L1）
-- 总纲8 本体论上各方平等：各 BSD 分支按工具适配性平等参与生产部署，不预设等级次序。：机构同时使用 FreeBSD 与 OpenBSD 并按具体任务选型，而非只认同单一 BSD 分支。（BSD Now EP513，[193.80-222.84]，L1）
+- 总纲10 动手者创造历史：生产使用者通过报错与反馈参与 BSD 演进，默默做事的使用者同样是历史主体。：Jason 及其机构以生产使用向 BSD 项目反馈缺陷，BSD 的完善来自使用者的动手反馈而非单向的官方规划。（BSD Now EP513，[602.8-714.3]，L1）[订正：原 [629.78-712.56]，2026-10-01 SenseAudio 重转核对]
+- 总纲9 经验优先：以实机安装与生产使用的经验作为选择操作系统的依据。：Jason 的个人路径由 Solaris、Linux 到 OpenBSD 光盘的实机经验驱动，其判断以实际使用而非抽象宣传为依据。（BSD Now EP513，[315.3-418.6]，L1）[订正：原 [325.74-418.48]，2026-10-01 SenseAudio 重转核对]
+- 总纲8 本体论上各方平等：各 BSD 分支按工具适配性平等参与生产部署，不预设等级次序。：机构同时使用 FreeBSD 与 OpenBSD 并按具体任务选型，而非只认同单一 BSD 分支。（BSD Now EP513，[180.2-225.0]，L1）[订正：原 [193.80-222.84]，2026-10-01 SenseAudio 重转核对]
 - 总纲10 动手者创造历史：个人长期维护公共服务并组织社区会议，构成 BSD 生态的隐性基础设施。：Dan Langille 长期独自维护 FreshPorts 与组织 BSDCan，是默默做事的动手者。（BSD Now EP499，[2093.20-2320.00]，L1）
 - 总纲9 经验优先：以实际部署需要为准绳选择 jail 管理方式，而非盲从现成管理器。：其 jails 实践由具体场景推动，弃用管理器回归脚本，显示经验优先于既有工具的教条。（BSD Now EP499，[1666.86-1734.30]，L1）
 - 总纲4 分离聚合是永恒规律：服务组件在单主机聚合与多 jail 分离之间重组，架构随需求循环演进。：FreshPorts 由单主机聚合拆分为多 jail 分离，服务架构在分离聚合中演化。（BSD Now EP499，[2093.20-2320.00]，L1）
-- 总纲9 经验优先：Michael W Lucas 以一线系统管理员身份在崩溃与抢修中验证 FreeBSD 的稳定性，其写作生涯源于实际运维经验，属经验优先与动手者创造历史的例证。（BSD Now EP406，[1772.42-1825.98]，L1）
-- 总纲4 分离聚合是永恒规律：FreeBSD 从 Subversion 到 Git 的迁移及文档从 SGML/XML 到 AsciiDoc 的切换，是工具链层面的分离聚合重组，旧基础设施被分阶段替代而非一次性革命。（BSD Now EP406，[776.52-1096.9]，L2）
+- 总纲9 经验优先：Michael W Lucas 以一线系统管理员身份在崩溃与抢修中验证 FreeBSD 的稳定性，其写作生涯源于实际运维经验，属经验优先与动手者创造历史的例证。（BSD Now EP406，[1770.4-1840.3]，L1）[订正：原 [1772.42-1825.98]，2026-09-30 SenseAudio 重转核对]
+- 总纲4 分离聚合是永恒规律：FreeBSD 从 Subversion 到 Git 的迁移及文档从 SGML/XML 到 AsciiDoc 的切换，是工具链层面的分离聚合重组，旧基础设施被分阶段替代而非一次性革命。（BSD Now EP406，[748.4-1110.9]，L2）[订正：原 [776.52-1096.9]，2026-09-30 SenseAudio 重转核对]
 - 总纲10 动手者创造历史：OpenZFS 峰会的进展来自各平台维护者在 ARC 内存协作、持久 L2ARC、顺序重建等具体工程上的改进，而非单一权威的主导。（BSD Now EP374，[1024.98-1169.92]，L2）
 - 总纲4 分离聚合是永恒规律：OpenZFS 代码在 FreeBSD、Linux、illumos、macOS、Windows 之间聚合，jail 则在 chroot 基础上分离出独立的隔离模型，两者皆呈现分离聚合的循环。（BSD Now EP374，[1848.72-2116.32]，L2）
-- 总纲10 动手者创造历史：总纲10 动手者创造历史：Lucas 为写 jails 书先写六本书、为搭上传服务亲手组合 ZFS 与 jail，呈现动手者的知识积累路径。（BSD Now EP329，[340.12-349.04]，L1）
+- 总纲10 动手者创造历史：总纲10 动手者创造历史：Lucas 为写 jails 书先写六本书、为搭上传服务亲手组合 ZFS 与 jail，呈现动手者的知识积累路径。（BSD Now EP329，[340.12-767.6]，L1）[订正：原 [340.12-349.04]，2026-09-30 SenseAudio 重转核对]
 - 总纲9 经验优先：总纲9 经验优先：jails 与 ZFS 的组合来自客户需经网站上传文件的实际需求，从经验出发而非抽象设计。（BSD Now EP329，[716.52-726.06]，L1）
-- 总纲11 商品是形式主义：总纲11 商品是形式主义：技术书是 Lucas 赖以谋生的商品，赞助与销售决定其生产节奏，非虚构的收入供养小说写作。（BSD Now EP329，[2563.84-2589.74]，L1）
+- 总纲11 商品是形式主义：总纲11 商品是形式主义：技术书是 Lucas 赖以谋生的商品，赞助与销售决定其生产节奏，非虚构的收入供养小说写作。（BSD Now EP329，[2563.84-2633.8]，L1）[订正：原 [2563.84-2589.74]，2026-09-30 SenseAudio 重转核对]
 - 总纲13 法律与道德是利益分配：总纲13 法律与道德是利益分配：出版商取走版权终身加身后 70 年，作者被视为创作并许可知识产权者，利益分配格局决定出版策略。（BSD Now EP329，[2752.48-2777.46]，L1）
 - 总纲4 分离聚合是永恒规律：总纲4 分离聚合是永恒规律：ZFS 与 zones 本属 Sun 谱系、jails 属 FreeBSD 谱系，二者在 FreeBSD 重新聚合为可委托数据集的组合。（BSD Now EP329，[812.10-830.46]，L1）
-- 总纲22 知识注定过时：总纲22 知识注定过时：Sudo 再版与 SNMP 教程因配置方式变化而需更新，Lucas 逐年修正既有知识。（BSD Now EP329，[140.74-155.26]，L1）
-- 总纲10 动手者创造历史：总纲10 动手者创造历史：Schultz 以一天搭通通信层、亲手改信号量调用等动手移植推动 ROS 进入 FreeBSD。（BSD Now EP321，[1052.42-1067.84]，L1）
+- 总纲22 知识注定过时：总纲22 知识注定过时：Sudo 再版与 SNMP 教程因配置方式变化而需更新，Lucas 逐年修正既有知识。（BSD Now EP329，[140.74-1479.3]，L1）[订正：原 [140.74-155.26]，2026-09-30 SenseAudio 重转核对]
+- 总纲10 动手者创造历史：总纲10 动手者创造历史：Schultz 以一天搭通通信层、亲手改信号量调用等动手移植推动 ROS 进入 FreeBSD。（BSD Now EP321，[419.4-1067.84]，L1）[订正：原 [1052.42-1067.84]，2026-09-30 SenseAudio 重转核对]
 - 总纲9 经验优先：总纲9 经验优先：因不想网络跳转的实际需求驱动移植，经验场景优先于宏大目标。（BSD Now EP321，[1002.64-1021.60]，L1）
 - 总纲7 理论必须自反：总纲7 理论必须自反：机器人隐私研究要求自问“谁还能看到这段影像”，对技术后果保持反思。（BSD Now EP321，[2751.92-2778.28]，L1）
 - 总纲5 没有必然性，只有偶然性：总纲5 没有必然性，只有偶然性：能否移植取决于 OpenCV 恰好入 ports、Qt 恰好现代化等偶然条件。（BSD Now EP321，[1178.12-1193.60]，L1）
@@ -281,9 +281,9 @@ volume: 第05卷-freebsd的工程化奠基
 - 总纲10 动手者创造历史：Eric Turgeon 以自建发行版作为自学计算机科学的手段，从 Linux 新手成长为 iXsystems 自动化工程师，体现动手搭建系统本身即学习与创造历史的过程。（BSD Now EP276，[2748.48-2755.34]，L1）
 - 总纲10 动手者创造历史：ports 生态以“志愿者为主、任何人均可提交 port”的机制让无数贡献者入门，节目强调 25 人以上因写 port 进入 FreeBSD。（BSD Now EP223，[1699.6-1719.64]，L2）
 - 总纲5 没有必然性，只有偶然性：对 Docker 的辨析指出便利性常战胜效率，技术采纳受偶然性与习惯支配而非纯理性。（BSD Now EP223，[3344.12-3346.44]，L2）
-- 总纲5 没有必然性，只有偶然性：总纲5 没有必然性，只有偶然性：基本失效模式定理强调复杂系统运行状态由具体故障与补偿关系决定，而非设计意图的必然实现。（BSD Now EP631，[138.14-224.48]，L1）
-- 总纲10 动手者创造历史：总纲10 动手者创造历史：笔记本作者通过动手排查定位 Nvidia 与 DRM 驱动文件覆盖问题，而非依赖文档结论。（BSD Now EP631，[874.40-908.32]，L1）
-- 总纲25 逻辑是形式主义而非世界本身的结构：总纲25 逻辑是形式主义而非世界本身的结构：ZFS 快照的不可变是概念化标签，其元数据实现仍随操作可变，说明概念与实现之间的形式主义距离。（BSD Now EP631，[1324.62-1407.46]，L1）
+- 总纲5 没有必然性，只有偶然性：总纲5 没有必然性，只有偶然性：基本失效模式定理强调复杂系统运行状态由具体故障与补偿关系决定，而非设计意图的必然实现。（BSD Now EP631，[130.8-228.1]，L1）[订正：原 [138.14-224.48]，2026-10-01 SenseAudio 重转核对]
+- 总纲10 动手者创造历史：总纲10 动手者创造历史：笔记本作者通过动手排查定位 Nvidia 与 DRM 驱动文件覆盖问题，而非依赖文档结论。（BSD Now EP631，[871.5-910.2]，L1）[订正：原 [874.40-908.32]，2026-09-30 SenseAudio 重转核对]
+- 总纲25 逻辑是形式主义而非世界本身的结构：总纲25 逻辑是形式主义而非世界本身的结构：ZFS 快照的不可变是概念化标签，其元数据实现仍随操作可变，说明概念与实现之间的形式主义距离。（BSD Now EP631，[1324.2-1408.2]，L1）[订正：原 [1324.62-1407.46]，2026-09-30 SenseAudio 重转核对]
 - 总纲10 动手者创造历史：Dexter 反复把项目史还原为具体的动手者时间：bhyve 得以按期进入 FreeBSD 10 靠的是“有人够笨、肯反复弄坏它并连日执行 build world”（2897.41-2906.52），其本人的贡献是孩子入睡后深夜 11 点至凌晨 2 点的志愿者工时；ZFS 重建工具、SMART 工具与用户组运营同样寄身于无名个人的业余时间，而非机构化的台前叙事。（BSD Now EP149，[3102.92-3113.45]，L1）
 - 总纲5 没有必然性，只有偶然性：当事人把个人史与项目史的关键节点全部系于偶发事件：入坑源于 CS101 机房恰好是一台 BSD 4.3 系统的“绝对的偶然”（1704.83-1735.29），Rod Grimes 重返 Release Engineering 则起于大雪改期使其恰好顶替 Dexter 登上 BSDCan 讲台；此处没有必然规律，只有具体人物在具体条件下的相遇与后续的持续经营。（BSD Now EP149，[1704.83-1735.29]，L1）
 - 总纲6 和解优于斗争：CHERI 的混合过渡模型体现了新旧范式之间的和解路径：历史上的能力系统虽能杜绝缓冲区溢出与对象误用，却缺乏向后兼容故事，而 CHERI 的处理器可不加修改地运行常规混合二进制，内核改动保持很小，再以注解方式逐指针升级为受边界检查的能力，形成从未修改 MIPS 代码到纯能力代码的谱系，使新硬件范式不以致断裂的方式替代旧生态。（BSD Now EP139，[1554.3-1645.5]，L1）[订正：原 [1568.26-1629.54]，2026-09-30 SenseAudio 重转核对]
@@ -307,14 +307,14 @@ volume: 第05卷-freebsd的工程化奠基
 
 **辨析**：
 
-- 关于 su 降权误用的历史叙述将 Fielder 与 Hunter 1986 年著作视为源头之一，但该书是否确实传播该误用、以及 su 语义演化的精确时间线，需结合 4.4BSD 手册与 PAM 引入记录核验。　[存疑脚注] su 语义演化时间线为单一文章转述，未给出原始手册或提交编号，须交叉验证。（BSD Now EP513，[1583.36-1788.98]，L4）
-- OpenBSD dt 设备在 6.7 中悄然进入源码树的说法为节目转述，其首次引入版本与功能范围需以 OpenBSD 发布说明与提交记录确认。　[存疑脚注] dt 的引入版本与早期功能缺乏当期节目的一手出处，须以官方发布说明核验。（BSD Now EP513，[1963.84-1978.36]，L4）
+- 关于 su 降权误用的历史叙述将 Fielder 与 Hunter 1986 年著作视为源头之一，但该书是否确实传播该误用、以及 su 语义演化的精确时间线，需结合 4.4BSD 手册与 PAM 引入记录核验。　[存疑脚注] su 语义演化时间线为单一文章转述，未给出原始手册或提交编号，须交叉验证。（BSD Now EP513，[1574.8-1800.0]，L4）[订正：原 [1583.36-1788.98]，2026-10-01 SenseAudio 重转核对]
+- OpenBSD dt 设备在 6.7 中悄然进入源码树的说法为节目转述，其首次引入版本与功能范围需以 OpenBSD 发布说明与提交记录确认。　[存疑脚注] dt 的引入版本与早期功能缺乏当期节目的一手出处，须以官方发布说明核验。（BSD Now EP513，[1947.4-2003.8]，L4）[订正：原 [1963.84-1978.36]，2026-10-01 SenseAudio 重转核对]
 - FreshPorts 约二十年历史的起止年份与三代主机迁移时间线为当事人回忆，具体年份需以项目档案与邮件列表核验。　[存疑脚注] 项目起止与迁移年份为口述概数，需以 FreshPorts 档案或公告交叉验证。（BSD Now EP499，[2093.20-2320.00]，L4）
 - BSDCan 自 2004 年起连续办会二十年的说法为口述概数，需以会议档案确认是否存在中断或纯线上年份。　[存疑脚注] 办会连续年数为口述表述，需以会议历年记录核验是否含线上或中断年份。（BSD Now EP499，[1442.02-2093.20]，L4）
-- 转写对 BSD grep 重写的 GSoC 年份与算法细节语焉不详，其引入时间与性能争议需与 FreeBSD 提交记录对照。　[考据脚注] BSD grep 重写的 GSoC 项目年份与合入版本需查 FreeBSD 提交历史。（BSD Now EP406，[2820.16-2879.38]，L4）
+- 转写对 BSD grep 重写的 GSoC 年份与算法细节语焉不详，其引入时间与性能争议需与 FreeBSD 提交记录对照。　[考据脚注] BSD grep 重写的 GSoC 项目年份与合入版本需查 FreeBSD 提交历史。（BSD Now EP406，[2810.8-2886.5]，L4）[订正：原 [2820.16-2879.38]，2026-09-30 SenseAudio 重转核对]
 - 转写中 OpenBSD 6.8 随机种子置信度标记被表述为“RB_GOODRANDOM”，其具体宏名与语义应以 OpenBSD 6.8 发布说明及源码为准。　[存疑脚注] 具体宏名待官方变更日志核对（BSD Now EP374，[397.32-447.44]，L4）
 - “jails 书被低估”是 Lucas 的主观判断，销量与影响力需外部数据佐证，不能仅以作者自评作为传播史结论。　[存疑脚注] 当事人单方判断，缺独立销量或读者调查证据（BSD Now EP329，[438.66-454.30]，L4）
-- BSDCan 拍卖的精确金额与“四册特别版”为当事人单一口述，无独立第二来源时按单一来源推断处理。　[存疑脚注] 金额与册数系当事人记忆，宜以拍卖记录或受赠机构核对（BSD Now EP329，[1150.66-1162.46]，L4）
+- BSDCan 拍卖的精确金额与“四册特别版”为当事人单一口述，无独立第二来源时按单一来源推断处理。　[存疑脚注] 金额与册数系当事人记忆，宜以拍卖记录或受赠机构核对（BSD Now EP329，[1150.66-1281.2]，L4）[订正：原 [1150.66-1162.46]，2026-09-30 SenseAudio 重转核对]
 - ROS1 安全缺陷为 Schultz 的口头概括，具体攻击面与 ROS2 改进需以官方文档核对。　[存疑脚注] 当事人经验性总结，未给出版本与漏洞编号（BSD Now EP321，[2607.66-2634.28]，L4）
 - 访谈转写存在大量口语断句，人名与版本号（如 FreeBSD 2.2.5）为当事人记忆，可能与档案有出入。　[考据脚注] 早期版本号系回忆，宜以发布记录核对（BSD Now EP321，[218.92-221.50]，L4）
 - 转录将 Doug Rabson 记作 Doug Rapson、将 Dave Cottlehuber 记作 Dave Cossel-Huber，人名拼写存在转写歧义。　[存疑脚注] 贡献者姓名存在语音转写偏差，须以 FreeBSD Foundation 公告核验（BSD Now EP640，[227.38-290.18]，L4）
@@ -322,8 +322,8 @@ volume: 第05卷-freebsd的工程化奠基
 - [存疑脚注] 转写中 iocage 拼写波动（IO cage、iokage、ILCage 等）与部分书名细节存在 ASR 噪音，未与出版物核对。　[存疑脚注] iocage 等专名拼写未经出版物核对（BSD Now EP293，[1408.58-1571.16]，L4）
 - 节目所述 jails“2000 年首现”与章节考据的 1999-04-28 首次提交存在口径差异，须以 FreeBSD commit 记录为准；FreeBSD 12.0 具体特性以官方 Release Notes 为准。　[存疑脚注] jails 首次提交日期以代码仓库 commit 为准，播客口径为发布年份。（BSD Now EP276，[1155.72-1164.06]，L3）
 - 编译器的可调试性结论基于特定版本（GCC 5.2、Clang 3.6 等）的示例，随版本演进可能改变，且文章作者所属公司售卖崩溃报告产品，存在利益关联。　[存疑脚注] 结论依赖具体编译器版本且作者存在商业利益关联（BSD Now EP223，[803.04-822.92]，L4）
-- 转录将 Raymond Chen 所属微软博客名称与若干命令参数出现错词，具体规则与命令须以原文核验。　[存疑脚注] 命令与规则细节存在转写歧义，须以原文核验（BSD Now EP631，[132.46-143.76]，L4）
-- PeerTube 迁移文章作者在转录中记作 Tom Fatigue，疑为主持人 Tom Jones 或他人，署名须以原文核验。　[存疑脚注] 作者署名存在转写歧义（BSD Now EP631，[1417.28-1432.32]，L4）
+- 转录将 Raymond Chen 所属微软博客名称与若干命令参数出现错词，具体规则与命令须以原文核验。　[存疑脚注] 命令与规则细节存在转写歧义，须以原文核验（BSD Now EP631，[130.8-147.6]，L4）[订正：原 [132.46-143.76]，2026-09-30 SenseAudio 重转核对]
+- PeerTube 迁移文章作者在转录中记作 Tom Fatigue，疑为主持人 Tom Jones 或他人，署名须以原文核验。　[存疑脚注] 作者署名存在转写歧义（BSD Now EP631，[1414.3-1450.9]，L4）[订正：原 [1417.28-1432.32]，2026-10-01 SenseAudio 重转核对]
 - fork 的利益结构辨析：八十至九十年代 NetApp、Juniper、Nokia、Isilon 等商业 fork 曾坐享 BSD 红利，十年后却陷入缺 SMP、缺 64 位与新驱动的维护赤字；社区侧则呈现单点悖论——做得差无人可用，做得好反使用户系于可能消失的维护者，Dexter 以 Brexit 喻 fork 的隐性代价，并主张以分支或 branch 而非整体分叉承载实验性工作。　[存疑脚注] 商业 fork 现状、Miros 与 HardenedBSD 定性等均系 Dexter 单一口述，无独立文件佐证；专名在转写中多处失真，引用前须核校。（BSD Now EP149，[5844.31-5948.60]，L4）
 - 转写质量辨析：全篇为双音轨交错、时间戳乱序，专名系统性失真——bhyve 一律转作 “Beehive”（2703.93-2712.87），Xen 作 “Zen”，Kristaps Dzonsons 作 “Kristaps Jonesons”，Matt Ahrens 间作 “Matt Aronson”；各段语义仍完整可辨，但任何人名、项目名与命令名在引用前必须回校原音频与当期节目笔记。　[存疑脚注] 全部专名系转写音译误差，需对照原节目音频与节目 shownotes 逐项核校后方可进入考据链。　[订正：原 NetBSD 作 NetVSD／Kristaps Dzonsons 作 Christoph Johnson／Matt Ahrens 作 Matt Aaron（新转写 NetBSD 拼写正确，人名失真见正文），2026-09-30 SenseAudio 重转核对]（BSD Now EP149，[2703.93-2712.87]，L5）
 - 围绕 FreeBSD 缺少 ASLR 的争议，Allan Jude 以亲历者身份提出保留意见：ASLR 十年前价值显著，如今其真实防护效用有限，开发者峰会上甚至有“你需要它更多是出于营销目的”（3645.72-3649.88）的判断，并称其使用 FreeBSD 十五年未觉其缺；此辨析提示安全特性的工程价值、社区预期与生态形象之间存在张力，NetBSD 已在 amd64 默认启用而 FreeBSD 相关实现仍在 current 落地。（BSD Now EP139，[3629.1-3686.7]，L1）[订正：原 [3641.28-3668.64]，2026-09-30 SenseAudio 重转核对]

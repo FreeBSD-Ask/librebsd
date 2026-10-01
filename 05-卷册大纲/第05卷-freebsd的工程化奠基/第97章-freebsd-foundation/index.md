@@ -123,9 +123,9 @@ FreeBSD 社区论文：[FP-1998-002] Malloc(3) revisited（Poul-Henning Kamp，1
 - BSDCan 组织委员会回顾会议由 Dan Langille 在渥太华大学创办并连续举办 22 年，领导权经 Dan Langille、Michael W. Lucas 逐代交接，规划委员会维持约 12 人。（BSD Now EP648，[1246.88-1475.48]，L1）
 - BSDCan 2026 延续教程加两天会议的形式，AV 团队与 ScaleEngine 合作向 YouTube 与 PeerTube 同步直播，并计划提高分辨率与音频质量。（BSD Now EP648，[2144.22-2315.56]，L1）
 - Chris Siebenmann 以 400 余行既有 PF 规则、本地运维工具与团队知识三个理由说明从 OpenBSD PF 迁往 Linux nftables 的代价高于收益。（BSD Now EP648，[3328.02-3441.68]，L1）
-- FreeBSD Foundation 回顾 2019 年：参与 38 场会议、资助 Wi-Fi 支持与安全团队，并强调捐款直接支撑项目。（BSD Now EP333，[69.24-169.04]，L2）
-- OpenBSD 6.6 路由器上的 WireGuard 配置教程，通过 PF 与 MTU/MSS 调整实现 VPN 出口。（BSD Now EP333，[420.78-653.64]，L2）
-- Amazon 推出基于 Graviton2 的 ARM 实例并支持 FreeBSD 12.1，宣称较 x86 有 40% 更优性价比。（BSD Now EP333，[704.98-810.16]，L2）
+- FreeBSD Foundation 回顾 2019 年：参与 38 场会议、资助 Wi-Fi 支持与安全团队，并强调捐款直接支撑项目。（BSD Now EP333，[73.4-189.2]，L2）[订正：原 [69.24-169.04]，2026-09-30 SenseAudio 重转核对]
+- OpenBSD 6.6 路由器上的 WireGuard 配置教程，通过 PF 与 MTU/MSS 调整实现 VPN 出口。（BSD Now EP333，[430.3-658.3]，L2）[订正：原 [420.78-653.64]，2026-09-30 SenseAudio 重转核对]
+- Amazon 推出基于 Graviton2 的 ARM 实例并支持 FreeBSD 12.1，宣称较 x86 有 40% 更优性价比。（BSD Now EP333，[703.6-810.4]，L2）[订正：原 [704.98-810.16]，2026-09-30 SenseAudio 重转核对]
 - McKusick 亲述伯克利早期四张桌四人同处一室、与 Bill Joy 为办公室同僚，办公室仅一部电话且十之八九是找 Bill Joy；他形容 Bill Joy 更像营销者，四处演讲、散发磁带、动员他人贡献。（BSD Now EP278，[173.80-287.60]，L1）[订正：原 [176.66-198.66]，2026-09-30 SenseAudio 重转核对]
 - McKusick 认为 FreeBSD 二十五年来最大的成就是形成一套能持续吸纳新人并让其上升的治理机制：文档 committer 与源码 committer 同样有权选举 core，营销背景者也能当选。（BSD Now EP278，[533.12-611.68]，L1）
 - McKusick 援引 MIT 与法国南部高校的社会学研究，称多数开源项目约五年内沉寂，只有 Apache 与 FreeBSD 等项目完成三次以上成功的领导层更替，FreeBSD 已历约五代。（BSD Now EP278，[725.94-848.56]，L1）
@@ -221,9 +221,9 @@ FreeBSD 社区论文：[FP-1998-002] Malloc(3) revisited（Poul-Henning Kamp，1
 - Peter N. M. Hansteen 博客《18 years of grey trapping》及历年陷阱数据文件。（BSD Now EP648，[257.02-1152.28]，L1）
 - FreeBSD Foundation 由 Deb Goodkin 署名的年度募款文章 Powering the Future of BSD。（BSD Now EP648，[103.42-208.70]，L2）
 - BSDCan 2026 组织委员会 Pat、Peter、Michael 访谈。（BSD Now EP648，[1226.50-2782.18]，L1）
-- FreeBSD Foundation 2019 年度影响报告。（BSD Now EP333，[69.24-90.64]，L2）
-- Theo de Raadt 访谈视频（Tom Smythe 录制，2019 年 Ottawa hackathon 与 BSDCan 之间）。（BSD Now EP333，[1554.58-1616.68]，L2）
-- multicians.org 的 Multics 历史站点与《The Design of the UNIX Operating System》读书笔记。（BSD Now EP333，[1801.42-1895.64]，L3）
+- FreeBSD Foundation 2019 年度影响报告。（BSD Now EP333，[73.4-103.4]，L2）[订正：原 [69.24-90.64]，2026-09-30 SenseAudio 重转核对]
+- Theo de Raadt 访谈视频（Tom Smythe 录制，2019 年 Ottawa hackathon 与 BSDCan 之间）。（BSD Now EP333，[1554.2-1626.5]，L2）[订正：原 [1554.58-1616.68]，2026-09-30 SenseAudio 重转核对]
+- multicians.org 的 Multics 历史站点与《The Design of the UNIX Operating System》读书笔记。（BSD Now EP333，[1703.8-1897.8]，L3）[订正：原 [1801.42-1895.64]，2026-09-30 SenseAudio 重转核对]
 - McKusick 提及 FAST 大会关于文件系统三十年演进的 keynote、BSDCan 2018 的采访背景，以及 CSRG 重写 AT&T 程序时 Keith Bostic 主张将署名归于他人以自保的细节。（BSD Now EP278，[339.18-390.46]，L1）
 - McKusick 提及 TeachBSD 项目，主张以真实操作系统而非玩具系统教授计算机科学，并认为 DTrace/DWatch 等工具是“玻璃制”可观测系统的重要组成部分。（BSD Now EP278，[2723.00-2781.38]，L1）
 - 基金会更新提及 OpenSSL 基础版本由 1.0.2 升级至 1.1.1 长期支持版，以及为 12.0 清理内核 bug 报告、修复 Unix 域套接字与 ZFS 回归的进展。（BSD Now EP269，[131.20-822.54]，L2）[订正：原 [721.88-822.54]，2026-09-30 SenseAudio 重转核对]
@@ -268,8 +268,8 @@ FreeBSD 社区论文：[FP-1998-002] Malloc(3) revisited（Poul-Henning Kamp，1
 - 总纲10 动手者创造历史：Hansteen 以十八年持续运维累积的灰度陷阱数据，记录的是不被聚光灯照到的反垃圾邮件一线工作。（BSD Now EP648，[257.02-1152.28]，L1）
 - 总纲4 分离聚合是永恒规律：BSDCan 领导权在代际之间交接、规划委员会持续吸纳新人，体现社区组织的聚合与再分配。（BSD Now EP648，[1382.64-1467.34]，L1）
 - 总纲9 经验优先：Siebenmann 从自身运维规则集与工具链出发评估防火墙迁移，而非依赖抽象性能宣传。（BSD Now EP648，[3368.44-3441.68]，L1）
-- 总纲10 动手者创造历史：FreeBSD Foundation 报告将捐款落到 Wi-Fi 支持、安全响应等具体工程，而非口号。（BSD Now EP333，[136.72-161.1]，L2）
-- 总纲9 经验优先：multicians.org 以当事人回忆与一手技术文档保存 Multics 经验，体现经验优先。（BSD Now EP333，[1837.68-1883.14]，L2）
+- 总纲10 动手者创造历史：FreeBSD Foundation 报告将捐款落到 Wi-Fi 支持、安全响应等具体工程，而非口号。（BSD Now EP333，[131.1-155.6]，L2）[订正：原 [136.72-161.1]，2026-09-30 SenseAudio 重转核对]
+- 总纲9 经验优先：multicians.org 以当事人回忆与一手技术文档保存 Multics 经验，体现经验优先。（BSD Now EP333，[1822.2-1882.2]，L2）[订正：原 [1837.68-1883.14]，2026-09-30 SenseAudio 重转核对]
 - 总纲10 动手者创造历史：McKusick 强调软件与项目的持续“养护”远非社区驱动项目所长，人们倾向做新奇有趣之事；文档与基础设施的默默维护恰是系统得以存活的关键。（BSD Now EP278，[451.46-489.68]，L1）
 - 总纲3 不存在进步，只有权力再分配：McKusick 指出历史上 IBM、微软各自占据过绝对支配地位又相继让位，Linux 今日的支配地位同样不会永远持续，FreeBSD 甘居雷达之下反而得以延续。（BSD Now EP278，[2247.34-2342.26]，L1）
 - 总纲5 没有必然性，只有偶然性：McKusick 以“容器发明于 FreeBSD 却成功于他处”为例，指出技术领先与市场成功之间并无必然因果，成功更多依赖偶然的产品化时机。（BSD Now EP278，[2596.78-2625.54]，L1）
@@ -322,7 +322,7 @@ FreeBSD 社区论文：[FP-1998-002] Malloc(3) revisited（Poul-Henning Kamp，1
 
 - 综述文章对 FreeBSD 各版本与特性年份的归属存在简化乃至偏差，例如将 APT 误作 FreeBSD 包工具，具体里程碑须以官方发布说明核实。　[存疑脚注] 综述文章的版本与特性对应关系存在简化或偏差，未经官方发布说明逐项核实。（BSD Now EP566，[468.76-493.60]，L4）
 - 转录将 Peter N. M. Hansteen 误记为 Peter N.M. Hanstein，且陷阱总数 17,8238 的数字断词存疑，须对照原文与数据文件。　[存疑脚注] 人名与统计数字存在语音转写歧义，须以原文与数据文件核验（BSD Now EP648，[997.58-1005.20]，L4）
-- Theo de Raadt 访谈为第三方转述与视频链接，其具体言论需回看原视频核验。　[存疑脚注] 访谈内容未在转写中完整呈现（BSD Now EP333，[1577.94-1616.68]，L4）
+- Theo de Raadt 访谈为第三方转述与视频链接，其具体言论需回看原视频核验。　[存疑脚注] 访谈内容未在转写中完整呈现（BSD Now EP333，[1576.5-1626.5]，L4）[订正：原 [1577.94-1616.68]，2026-09-30 SenseAudio 重转核对]
 - McKusick 关于“文档 committer 与源码 committer 同等投票”的叙述属当事人视角，须与 FreeBSD 选举规则文件与历届 core 名单交叉核验；其对自己“不再关键”的自评也属谦辞。　[存疑脚注] 选举资格细节须以 FreeBSD Core Team 规则文件核实。（BSD Now EP278，[533.12-611.68]，L3）
 - McKusick 提及的研究（MIT 与法国高校基于 commit log 分析领导层）未给出具体出处，其“只有 Apache 与 FreeBSD 等少数项目完成多次更替”的结论需核对原始研究。　[存疑脚注] 所援引研究未具名，结论无法直接追溯。（BSD Now EP278，[725.94-799.70]，L4）
 - 主持人称微软的 DTrace 移植“未从 illumos 上游起步而是自 FreeBSD 版本开始”，此谱系判断须以微软官方实现与代码署名核实。　[存疑脚注] DTrace Windows 移植的具体代码来源未经一手仓库核对。（BSD Now EP269，[3451.40-3460.96]，L4）
