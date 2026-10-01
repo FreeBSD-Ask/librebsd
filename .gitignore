@@ -370,3 +370,7 @@ script/_db_row_mining/supplement_log.jsonl
 !.specify/exports/
 !.specify/exports/*.zip
 05-卷册大纲/**/*.b050pre.*
+
+# >50MB 大文件防再犯（10-01 取消跟踪；磁盘文件保留）
+04-现代研究文献/historical_claims.duckdb.*
+03-原始史料库/11-邮件列表史料/05-linux-kernel/mining/05b-lkml专题/03-候选/lkml_candidates_refined_tierA.jsonl
