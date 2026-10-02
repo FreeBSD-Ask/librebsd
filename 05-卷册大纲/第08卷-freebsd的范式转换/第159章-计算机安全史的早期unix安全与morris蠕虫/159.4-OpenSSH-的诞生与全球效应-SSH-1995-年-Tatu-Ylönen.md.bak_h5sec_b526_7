@@ -423,7 +423,7 @@
 <!-- ROW_MINE: freebsd-security.messages.2493119 -->
 **当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-326821`；2026-09-30 freebsd-security 战线 全库行级遍历考据采纳）
 
-2004 年 9 月 25 日，Matthew Seaman 查看 sshd 的 Makefile 发现链接了 -lwrap 得出 TCP Wrappers 在基础系统构建的 sshd 中默认启用的结论。引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+2004 年 9 月 25 日，Matthew Seaman 查看 sshd 的 Makefile 发现链接了 -lwrap 得出 TCP Wrappers 在基本系统构建的 sshd 中默认启用的结论。引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 
 <!-- ROW_MINE: freebsd-security.messages.2493122 -->
 **当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-326824`；2026-09-30 freebsd-security 战线 全库行级遍历考据采纳）
@@ -2203,7 +2203,7 @@
 <!-- ROW_MINE: freebsd-security.messages.2514080 -->
 **当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-340406`；2026-10-01 freebsd-security 战线 全库行级遍历考据采纳）
 
-2000 年 5 月 12 日，发帖人建议把 .ssh 目录与内部文件的所有者强制改为 root，若已有人能修改 authorized_keys 则说明其已具备 root 权限，问题更大；他并指出基础系统中的 openssh 必须用 511 与 444 的权限，RSA 认证才能工作，这与 sshd 手册建议相反。引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+2000 年 5 月 12 日，发帖人建议把 .ssh 目录与内部文件的所有者强制改为 root，若已有人能修改 authorized_keys 则说明其已具备 root 权限，问题更大；他并指出基本系统中的 openssh 必须用 511 与 444 的权限，RSA 认证才能工作，这与 sshd 手册建议相反。引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 
 <!-- ROW_MINE: freebsd-security.messages.2514083 -->
 **当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-340407`；2026-10-01 freebsd-security 战线 全库行级遍历考据采纳）
@@ -2613,12 +2613,12 @@
 <!-- ROW_MINE: freebsd-security.messages.2516995 -->
 **当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-343607`；2026-10-01 freebsd-security 战线 全库行级遍历考据采纳）
 
-2000 年 11 月 14 日，发帖人做了一次干净安装后想装移植版安全外壳，系统提示需要加密库，于是转去装加密库，系统又提示它已经在基础系统里，他很困惑，因为自己只额外装过几款软件。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+2000 年 11 月 14 日，发帖人做了一次干净安装后想装移植版安全外壳，系统提示需要加密库，于是转去装加密库，系统又提示它已经在基本系统里，他很困惑，因为自己只额外装过几款软件。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
 
 <!-- ROW_MINE: freebsd-security.messages.2516996 -->
 **当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-343608`；2026-10-01 freebsd-security 战线 全库行级遍历考据采纳）
 
-2000 年 11 月 14 日，发帖人说明该版本系统里加密库与移植版安全外壳已装入基础系统，正如报错信息所说，不必再装任何端口，两个程序的可执行文件都位于系统用户程序目录之下。引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+2000 年 11 月 14 日，发帖人说明该版本系统里加密库与移植版安全外壳已装入基本系统，正如报错信息所说，不必再装任何端口，两个程序的可执行文件都位于系统用户程序目录之下。引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 
 <!-- ROW_MINE: freebsd-security.messages.2517050 -->
 **当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-343643`；2026-10-01 freebsd-security 战线 全库行级遍历考据采纳）
@@ -3788,7 +3788,7 @@
 <!-- ROW_MINE: freebsd-security.messages.2524679 -->
 **当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-350160`；2026-10-02 freebsd-security 战线 全库行级遍历考据采纳）
 
-2002 年 3 月 11 日，Lawrence Sica 回复想装 OpenSSH 3.1 而非只打补丁的提问，说装 openssh-portable 端口后指定 OPENSSH_OVERWRITE_BASE 即可覆盖基础系统的 OpenSSH，他确认该变量存在，只是平时不用端口装，读过 Makefile。引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+2002 年 3 月 11 日，Lawrence Sica 回复想装 OpenSSH 3.1 而非只打补丁的提问，说装 openssh-portable 端口后指定 OPENSSH_OVERWRITE_BASE 即可覆盖基本系统的 OpenSSH，他确认该变量存在，只是平时不用端口装，读过 Makefile。引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 
 <!-- ROW_MINE: freebsd-security.messages.2524686 -->
 **当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-350162`；2026-10-02 freebsd-security 战线 全库行级遍历考据采纳）
@@ -4023,7 +4023,7 @@
 <!-- ROW_MINE: freebsd-security.messages.2525344 -->
 **当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-350479`；2026-10-02 freebsd-security 战线 全库行级遍历考据采纳）
 
-2002 年 4 月 20 日，发帖人指出该漏洞代码仅在支持AFS的环境编译，FreeBSD基础系统或ports中的OpenSSH默认不具备AFS编译选项故不受影响。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+2002 年 4 月 20 日，发帖人指出该漏洞代码仅在支持AFS的环境编译，FreeBSD基本系统或ports中的OpenSSH默认不具备AFS编译选项故不受影响。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
 
 <!-- ROW_MINE: freebsd-security.messages.2525515 -->
 **当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-350530`；2026-10-02 freebsd-security 战线 全库行级遍历考据采纳）

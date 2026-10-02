@@ -100,7 +100,7 @@ volume: 第06卷-freebsd的核心技术革新
 - FreeBSD 12.1 beta 公告（BearSSL 导入、GCC 4.2 警告处理、安全公告与勘误合入）。（BSD Now EP318，[798.16-854.2]，L2）[订正：原 [798.16-833.06]，2026-09-30 SenseAudio 重转核对]
 - Warren Toomey 在 TUHS 的“两件文物”预告，及 Brian Coghlan 团队对 Percy Ludgate 分析机的研究演讲。（BSD Now EP318，[1522.90-2267.4]，L2）[订正：原 [1522.90-1523.46]，2026-09-30 SenseAudio 重转核对]
 - 提及 NetBSD 团队论文 KLEAK：以污点追踪标记内核内存并扫描内核与用户态交换缓冲区，在 NetBSD 与 FreeBSD 11.2 上共检出 21 处此前未知的内核内存泄漏。（BSD Now EP276，[2050.46-2252.04]，L2）
-- 提及 FreeBSD 12.0 的 ddb 压缩崩溃转储、bectl 引导环境控制工具导入基础系统，以及 pf 经 RM 锁替换 RW 锁带来的性能提升。（BSD Now EP276，[274.80-899.70]，L2）[订正：原 [277.06-292.20]，2026-09-30 SenseAudio 重转核对]
+- 提及 FreeBSD 12.0 的 ddb 压缩崩溃转储、bectl 引导环境控制工具导入基本系统，以及 pf 经 RM 锁替换 RW 锁带来的性能提升。（BSD Now EP276，[274.80-899.70]，L2）[订正：原 [277.06-292.20]，2026-09-30 SenseAudio 重转核对]
 
 **史观**：
 

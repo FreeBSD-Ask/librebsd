@@ -52,7 +52,7 @@ volume: 第10卷-openbsd的历史
 | 系统 | 默认加密库 | LibreSSL 状态 | 备注 |
 | --- | --- | --- | --- |
 | OpenBSD | LibreSSL（自 5.6 起） | 默认 | 唯一默认使用 LibreSSL 的主流 OS |
-| FreeBSD | OpenSSL 3.0.12（14.0 起） | ports 可选 | 基础系统从未引入 lib/libressl/ |
+| FreeBSD | OpenSSL 3.0.12（14.0 起） | ports 可选 | 基本系统从未引入 lib/libressl/ |
 | macOS | LibreSSL（自 10.11 起）+ OpenSSL 并存 | 附带但非唯一 | 10.11 El Capitan（2015-09）起 |
 | Alpine Linux | OpenSSL（3.9 起） | 曾切换后切回 | 3.5.0（2016-12）切换至 LibreSSL，3.9（2019-01）切回 |
 | Debian/Ubuntu/RHEL | OpenSSL | 未采用 | 全程默认 OpenSSL |
@@ -162,7 +162,7 @@ volume: 第10卷-openbsd的历史
 - 总纲9 经验优先：Cantrill 的对比论文以既有经验揭示 jails 与 zones 的差异，进而推动 FreeBSD 改进，经验借媒介传播并转化为动手实践。（BSD Now EP163，[3866.88-4006.82]，L3）
 - 总纲3 不存在进步，只有权力再分配：闭源固件厂商以 UEFI 控制引导环节，用户与开源系统在硬件入口处受制于少数厂商。（BSD Now EP163，[3773.9-3833.9]，L3）[订正：原 [3779.64-3824.08]，2026-09-30 SenseAudio 重转核对]
 - 总纲10 动手者创造历史：YouTube 等媒介让技术经验与问题意识跨地域传播，动手者的影响不再限于会议现场。（BSD Now EP163，[3925.16-4006.82]，L3）
-- 总纲10 动手者创造历史：总纲10 动手者创造历史：Reyk Floeter 以一天内动手拆出 httpd 并持续迭代的方式直接塑造 OpenBSD 基础系统工具。（BSD Now EP53，[945.18-1035.58]，L1）
+- 总纲10 动手者创造历史：总纲10 动手者创造历史：Reyk Floeter 以一天内动手拆出 httpd 并持续迭代的方式直接塑造 OpenBSD 基本系统工具。（BSD Now EP53，[945.18-1035.58]，L1）
 - 总纲22 知识注定过时：总纲22 知识注定过时：OpenBSD 以更简单、更贴合自身安全模型的新工具替换日益膨胀的 nginx，体现既有技术方案的持续失效与重写。（BSD Now EP53，[837.46-945.18]，L1）
 - 总纲4 分离聚合是永恒规律：总纲4 分离聚合是永恒规律：httpd 自 relayd 分离、其协议改进又回流 relayd，展示 BSD 工程中持续的分离与聚合循环。（BSD Now EP53，[1169.46-1196.62]，L1）
 - 总纲10 动手者创造历史：总纲10 动手者创造历史：Robert Watson 团队以编写并落地 Capsicum、BERI/CHERI 的方式实际推动操作系统安全演进。（BSD Now EP50，[1380.46-1462.14]，L1）

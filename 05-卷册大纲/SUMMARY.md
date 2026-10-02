@@ -174,7 +174,7 @@
     - [本章索引](./第01卷-unix的起源/第16章-cpp-shell家族与脚本语言生态/index.md)
 
   - [第 17 章 Rust 与系统编程语言的未来](./第01卷-unix的起源/第17章-rust与系统编程语言的未来/概述.md)
-    - [17.9 Rust 与系统编程的未来：FreeBSD 的 Rust 接纳——Rust 2010 年 Mozilla 项目启动，2015 年 1.0 发布，FreeBSD 社区对 Rust 的接纳与讨论，Rust 在 FreeBSD 基础系统中的潜在应用前景](./第01卷-unix的起源/第17章-rust与系统编程语言的未来/17.9-rust与系统编程的未来freebsd的rust接纳rust2010年.md)
+    - [17.9 Rust 与系统编程的未来：FreeBSD 的 Rust 接纳——Rust 2010 年 Mozilla 项目启动，2015 年 1.0 发布，FreeBSD 社区对 Rust 的接纳与讨论，Rust 在 FreeBSD 基本系统中的潜在应用前景](./第01卷-unix的起源/第17章-rust与系统编程语言的未来/17.9-rust与系统编程的未来freebsd的rust接纳rust2010年.md)
     - [17.10 伯克利 pre-CSRG：从 EECS 合并到 1BSD 前夜（1973-1977）——伯克利计算机科学在 CSRG 正式成立前的制度化积累与技术奠基，覆盖 1973 年 EECS 系合并、1975-1977 年 Ken Thompson 访问与 UNIX 引入、1977 年 1BSD 发布前夕的伯克利计算机科学状态三个层次](./第01卷-unix的起源/第17章-rust与系统编程语言的未来/17.10-伯克利precsrg从eecs合并到1bsd前夜19731977.md)
     - [17.11 对编程语言与 BSD 关系的批评：保守主义与创新不足——对 BSD 社区语言选择保守主义的批评，对 FreeBSD 内核长期拒绝现代语言的工程论证争议，与 Linux 内核 Rust 接纳的对比批评](./第01卷-unix的起源/第17章-rust与系统编程语言的未来/17.11-对编程语言与bsd关系的批评保守主义与创新不足对bsd.md)
     - [17.12 重要贡献者与动手者：BSD 语言移植的无名工程师——Java 移植团队、Perl/Python/Ruby Port 维护者、Rust 移植先锋等被忽视的语言生态贡献者](./第01卷-unix的起源/第17章-rust与系统编程语言的未来/17.12-重要贡献者与动手者bsd语言移植的无名工程师java移植团队.md)
@@ -596,7 +596,7 @@
     - [60.1 Ingres 项目：Stonebraker 的伯克利关系数据库实验——Michael Stonebraker 1973 年在伯克利 CS 系启动 Ingres 项目，Ingres 作为与 IBM System R 竞争的关系数据库系统，Ingres 的 QUEL 查询语言与 BSD UNIX 的技术共生，Ingres 的商业化分支（Ingres Corp、Sybase、Microsoft SQL Server）](./第03卷-伯克利学术文化外溢影响/第60章-ingres项目与伯克利关系数据库/60.1-ingres项目.md)
     - [60.2 Postgres 的诞生：从 Ingres 到 Postgres 的演化——Stonebraker 1986 年启动 POSTGRES 项目，Postgres 的对象关系模型创新，Postgres95 的 SQL 转型，PostgreSQL 开源社区的接管与 BSD 许可证的延续](./第03卷-伯克利学术文化外溢影响/第60章-ingres项目与伯克利关系数据库/60.2-postgres的诞生.md)
     - [60.3 MySQL 与 BSD：开源数据库的 FreeBSD 生态——MySQL 1995 年 Monty Widenius 发布，MySQL 在 FreeBSD 上的部署与优化，MySQL AB 的商业化与 Sun/Oracle 收购，MySQL 与 FreeBSD Ports 的共生关系](./第03卷-伯克利学术文化外溢影响/第60章-ingres项目与伯克利关系数据库/60.3-mysql与bsd.md)
-    - [60.4 SQLite 与嵌入式数据库的 BSD 部署——SQLite 2000 年 D. Richard Hipp 开发，SQLite 作为嵌入式数据库的 BSD 系统部署，SQLite 在 FreeBSD 基础系统中的使用，SQLite 与 BSD 的“做一件事并做好”哲学共鸣](./第03卷-伯克利学术文化外溢影响/第60章-ingres项目与伯克利关系数据库/60.4-sqlite与嵌入式数据库的bsd部署.md)
+    - [60.4 SQLite 与嵌入式数据库的 BSD 部署——SQLite 2000 年 D. Richard Hipp 开发，SQLite 作为嵌入式数据库的 BSD 系统部署，SQLite 在 FreeBSD 基本系统中的使用，SQLite 与 BSD 的“做一件事并做好”哲学共鸣](./第03卷-伯克利学术文化外溢影响/第60章-ingres项目与伯克利关系数据库/60.4-sqlite与嵌入式数据库的bsd部署.md)
     - [媒体反响与社区舆论](./第03卷-伯克利学术文化外溢影响/第60章-ingres项目与伯克利关系数据库/媒体反响与社区舆论.md)
     - [采访录：Michael Stonebraker](./第03卷-伯克利学术文化外溢影响/第60章-ingres项目与伯克利关系数据库/采访录：Michael Stonebraker.md)
     - [本章索引](./第03卷-伯克利学术文化外溢影响/第60章-ingres项目与伯克利关系数据库/index.md)
@@ -1188,7 +1188,7 @@
   - [第 116 章 Capsicum 的设计与 Watson 团队贡献](./第06卷-freebsd的核心技术革新/第116章-capsicum的设计与watson团队贡献/概述.md)
     - [116.1 罗伯特·N. M. 沃森（Robert Watson）团队设计 Capsicum——论文"Capsicum: Practical Capabilities for UNIX"（USENIX Security 2010，Watson、Anderson、Laurie、Kennaway）的核心贡献](./第06卷-freebsd的核心技术革新/第116章-capsicum的设计与watson团队贡献/116.1-罗伯特-N-M-沃森-Robert-Watson-团队设计-Capsicum.md)
     - [116.2 能力（capability）与沙箱（sandbox）的设计哲学——以进程级 capability 替代全局 UID/GID 权限模型，每个进程只能访问其被授予的能力句柄](./第06卷-freebsd的核心技术革新/第116章-capsicum的设计与watson团队贡献/116.2-能力-capability-与沙箱-sandbox-的设计哲学-以进程级.md)
-    - [116.3 Capsicum 的 BSD 许可证——剑桥大学以 BSD 2-Clause 许可证发布，与 FreeBSD 基础系统完全兼容](./第06卷-freebsd的核心技术革新/第116章-capsicum的设计与watson团队贡献/116.3-Capsicum-的-BSD-许可证-剑桥大学以-BSD-2-Clause.md)
+    - [116.3 Capsicum 的 BSD 许可证——剑桥大学以 BSD 2-Clause 许可证发布，与 FreeBSD 基本系统完全兼容](./第06卷-freebsd的核心技术革新/第116章-capsicum的设计与watson团队贡献/116.3-Capsicum-的-BSD-许可证-剑桥大学以-BSD-2-Clause.md)
     - [媒体反响与社区舆论](./第06卷-freebsd的核心技术革新/第116章-capsicum的设计与watson团队贡献/媒体反响与社区舆论.md)
     - [本章索引](./第06卷-freebsd的核心技术革新/第116章-capsicum的设计与watson团队贡献/index.md)
 
@@ -1297,7 +1297,7 @@
 
   - [第 128 章 FreeBSD 10.x 的 pkg 软件包管理器](./第06卷-freebsd的核心技术革新/第128章-freebsd10x的pkg软件包管理器/概述.md)
     - [128.6 **pkg(8)** 软件包管理器——从 pkgng 到默认系统](./第06卷-freebsd的核心技术革新/第128章-freebsd10x的pkg软件包管理器/128.6-pkg-8-软件包管理器-从-pkgng-到默认系统.md)
-    - [128.7 基础系统组件移除——BIND、sysinstall 与 GNU 工具](./第06卷-freebsd的核心技术革新/第128章-freebsd10x的pkg软件包管理器/128.7-基础系统组件移除-BIND-sysinstall-与-GNU-工具.md)
+    - [128.7 基本系统组件移除——BIND、sysinstall 与 GNU 工具](./第06卷-freebsd的核心技术革新/第128章-freebsd10x的pkg软件包管理器/128.7-基本系统组件移除-BIND-sysinstall-与-GNU-工具.md)
     - [128.8 **autofs(5)**、RCTL、FUSE 与基础设施改进](./第06卷-freebsd的核心技术革新/第128章-freebsd10x的pkg软件包管理器/128.8-autofs-5-RCTL-FUSE-与基础设施改进.md)
     - [128.9 ARM 平台进展与架构支持变化](./第06卷-freebsd的核心技术革新/第128章-freebsd10x的pkg软件包管理器/128.9-ARM-平台进展与架构支持变化.md)
     - [128.10 2012.11.17 基础设施入侵事件](./第06卷-freebsd的核心技术革新/第128章-freebsd10x的pkg软件包管理器/128.10-2012-11-17-基础设施入侵事件.md)

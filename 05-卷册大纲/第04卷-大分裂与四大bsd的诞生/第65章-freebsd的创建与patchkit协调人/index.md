@@ -46,7 +46,7 @@ volume: 第04卷-大分裂与四大bsd的诞生
 
 - 主持人介绍 FreeBSD Day 的 31 周年庆祝，并转述一篇综述文章对 FreeBSD 历史的阶段划分：1993 年 1.0 首发，2.0 与 2.1 引入 ports 集合，3.0 引入 GEOM 框架与对称多处理改进，4.x 以稳定著称，6.x 引入 jails，8.x 与 9.x 引入 ZFS 与 DTrace，后续版本扩展 ARM 架构支持。（BSD Now EP566，[367.60-589.20]，L2）
 - Tom Jones 自述受 FreeBSD 基金会与 RG Nets 共同资助，将基于 DPDK 的高性能用户态转发框架 VPP 移植到 FreeBSD 并回馈上游，产生逾百项变更，约 20% 已合并，移植工作还促使 VPP 核心基础设施变得更灵活。（BSD Now EP566，[1513.74-1930.24]，L1）
-- 主持人评述 Rust 的 crates.io 依赖注册表存在供应链安全隐患，并对比 OpenBSD 与 FreeBSD 基础系统自带经审查工具、无需海量外部依赖的路径。（BSD Now EP566，[2342.36-2831.24]，L2）
+- 主持人评述 Rust 的 crates.io 依赖注册表存在供应链安全隐患，并对比 OpenBSD 与 FreeBSD 基本系统自带经审查工具、无需海量外部依赖的路径。（BSD Now EP566，[2342.36-2831.24]，L2）
 - Rod Grimes 自述 1970 年代初在 Oregon Museum of Science and Industry 的 PDP-11/45 上，利用夜间时段重新引导系统运行早期 AT&T Research Unix，白天机器则运行博物馆业务用的分时系统，并使用 Tektronix 4000 系列图形终端。（BSD Now EP172，[1331.76-1442.94]，L1）
 - FreeBSD 创建时期，Rod Grimes 主要用 386BSD 做 SLIP 路由器以避开拨号 BBS 的 shell 上网方式，并借此获取 SPICE 等电子工程软件，时间约为 1992 年。（BSD Now EP172，[1487.16-1557.9]，L1）
 - Rod Grimes 用 dd 反复读取坏块做磁盘数据恢复，指出 FreeBSD 在 ATA 或 SCSI 设备被卡住时不像其他系统那样锁死，因此长期用于路由器、LAMP 服务器与批量邮件系统。（BSD Now EP172，[1600.96-1667.48]，L1）
@@ -77,7 +77,7 @@ volume: 第04卷-大分裂与四大bsd的诞生
 - Damien Miller 发布的 OpenSSH 7.4 公开测试说明与变更清单。（BSD Now EP172，[94.39-393.72]，L2）
 - Ingo Schwarze 的 LibreSSL 手册转换 hackathon 报告（含 pod2mdoc 转换时间线）。（BSD Now EP172，[3495.94-3681.4]，L2）
 - Matthew Garrett 对 Canonical IP 政策的博客批评与 Mark Shuttleworth 的官方立场博客。（BSD Now EP172，[3872.04-4203.14]，L2）
-- 本期为 McKusick 内核课程宣传片与第一讲选段的一手口述：当事人自述其浓缩伯克利全史的三小时半录像与十二讲、约三十小时课程均发布于个人网站 www.mckusick.com，教科书为其与 George Neville-Neil 合著的 The Design and Implementation of the FreeBSD Operating System；讲义附录另载一篇约五年至八年前发表的 journalling 与 soft updates 比较论文，其结论为两种一致性方案性能相当，可作文件系统技术史线索。[考据脚注] 本流转写被系统标记 severe_repetition：宣传片引言、第一讲开讲与第一讲正文三条音轨的段落交错混排，各流时间戳独立自洽，引用前须按时间戳所在音轨还原语境，人名与机器型号存在转写音变。（YouTube EPnwbqBdghh6E，[103.62-191.139]，L3）
+- 本期为 McKusick 内核课程宣传片与第一讲选段的一手口述：当事人自述其浓缩伯克利全史的三小时半录像与十二讲、约三十小时课程均发布于个人网站 www.mckusick.com，教科书为其与 George Neville-Neil 合著的 The Design and Implementation of the FreeBSD Operating System；讲义附录另载一篇约五年至八年前发表的 journalling 与 soft updates 比较论文，其结论为两种一致性方案性能相当，可作文件系统技术史线索。[订正：原考据脚注“本流转写被系统标记 severe_repetition，宣传片引言、第一讲开讲与第一讲正文三条音轨交错混排”之缺陷经滚动重叠重建后已不存在，新转写为单轨顺排]　[已核备注] 新转写已为单轨顺排，多音轨交错缺陷不再存在；人名与机器型号转写音变（如 PDP-8）仍见于自动转写，引用前仍须按通行记载核对。（YouTube EPnwbqBdghh6E，[103.62-191.139]，L3）
 
 **史观**：
 
@@ -100,7 +100,7 @@ volume: 第04卷-大分裂与四大bsd的诞生
 - [存疑脚注] OpenBSD Foundation 首笔铱金捐赠方转写为“smartizan/smartian”，疑指 Smartisan（锤子科技），280,000 加元金额与币种须核验官方公告。　[存疑脚注] 捐赠方名称与金额须核验。（BSD Now EP172，[4417.12-4457.48]，L4）
 - [考据脚注] DEMOS 全称在转写中变形严重，应为俄语“Диалоговая Единая Мобильная Операционная Система”的英译，引用时须以俄文一手资料核验。　[考据脚注] 俄文全称须核验一手资料。（BSD Now EP172，[4557.02-4586.12]，L4）
 - 本卡片所据转写文本实际存放于 663.txt（其内部标为第 13 期），而 664.txt 为第 12 期内容之重复，转写文件与期号存在错位。　[存疑脚注] 转写文件错位：664.txt 实为第 12 期，第 13 期内容见于 663.txt。（BSD Now EP13，[57.6-66.7]，L4）
-- 转写中 Thompson 与 Ritchie 起家所用机器记作 PDP-8，与通行记载的 PDP-7 不符，疑为口误或转写之误；同段称伯克利“最终发行版”年份为 1992 年，而通行纪年为 4.4BSD 于 1993 年发布、4.4BSD-Lite 于 1994 年发布，McKusick 所述或指代码清理完成之时点；两处纪年均属单一来源口述，引用前须另行核验。　[存疑脚注] PDP-8 机型与 1992 年末版年份两处纪年与通行记载存在出入，且本流转写为多音轨交错合并，未经与 McKusick 出版著作及 CSRG 发行记录交叉核对前不宜直接引用。（YouTube EPnwbqBdghh6E，[1933.44-1946.549]，L4）
+- 转写中 Thompson 与 Ritchie 起家所用机器记作 PDP-8（新转写逐字证实演讲原话即为 PDP-8），与通行记载的 PDP-7 不符，疑为口误或转写之误；同段称伯克利“最终发行版”年份为 1992 年，而通行纪年为 4.4BSD 于 1993 年发布、4.4BSD-Lite 于 1994 年发布，McKusick 所述或指代码清理完成之时点；两处纪年均属单一来源口述，引用前须另行核验。[订正：原存疑脚注“本流转写为多音轨交错合并”之转写缺陷经滚动重叠重建后已不存在，新转写为单轨顺排]　[已核备注] 新转写已为单轨顺排；PDP-8 机型与 1992 年末版年份两处纪年仍系单一来源口述且与通行记载存在出入，未经与 McKusick 出版著作及 CSRG 发行记录交叉核对前不宜直接引用。（YouTube EPnwbqBdghh6E，[1933.44-1946.549]，L4）
 
 **文献**：
 

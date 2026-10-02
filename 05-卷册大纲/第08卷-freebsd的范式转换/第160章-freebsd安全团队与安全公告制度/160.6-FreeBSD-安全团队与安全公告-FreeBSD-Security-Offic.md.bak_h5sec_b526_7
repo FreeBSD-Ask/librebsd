@@ -1590,7 +1590,7 @@ SA-12:05.bind：DNSSEC 校验拒绝服务引用时按 L4 纪律：以上为邮�
 <!-- ROW_MINE: freebsd-security.messages.2494708 -->
 **当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-327488`；2026-09-30 freebsd-security 战线 全库行级遍历考据采纳）
 
-2006 年 9 月 6 日，Colin Percival 承认不了解 ports REPLACE_BASE 情形 列出 FreeBSD 6.x 基础系统受影响文件如 libcrypto.so.4 与 named。引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+2006 年 9 月 6 日，Colin Percival 承认不了解 ports REPLACE_BASE 情形 列出 FreeBSD 6.x 基本系统受影响文件如 libcrypto.so.4 与 named。引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 
 <!-- ROW_MINE: freebsd-security.messages.2494726 -->
 **当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-327499`；2026-09-30 freebsd-security 战线 全库行级遍历考据采纳）
@@ -2060,7 +2060,7 @@ SA-12:05.bind：DNSSEC 校验拒绝服务引用时按 L4 纪律：以上为邮�
 <!-- ROW_MINE: freebsd-security.messages.2495812 -->
 **当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-327962`；2026-09-30 freebsd-security 战线 全库行级遍历考据采纳）
 
-2009 年 1 月 8 日，Matt Donovan 认为基础系统中的 BIND 与 NTP 代码同样未正确检查 EVP_VerifyFinal 返回值 与被告知不一致。引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+2009 年 1 月 8 日，Matt Donovan 认为基本系统中的 BIND 与 NTP 代码同样未正确检查 EVP_VerifyFinal 返回值 与被告知不一致。引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 
 <!-- ROW_MINE: freebsd-security.messages.2495815 -->
 **当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-327963`；2026-09-30 freebsd-security 战线 全库行级遍历考据采纳）
@@ -2475,7 +2475,7 @@ SA-12:05.bind：DNSSEC 校验拒绝服务引用时按 L4 纪律：以上为邮�
 <!-- ROW_MINE: freebsd-security.messages.2497116 -->
 **当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-330680`；2026-09-30 freebsd-security 战线 全库行级遍历考据采纳）
 
-2012 年 5 月 21 日，发帖人称自己从 Jacques Vidrine 手中接任 FreeBSD Security Officer 时立下三项目标：把更新工具作为官方支持工具并入基础系统、让更新与端口快照的构建镜像平稳运转、保持安全通告与补丁的高水准；前两项已达成，第三项虽难企及，但他自评也做得不差。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+2012 年 5 月 21 日，发帖人称自己从 Jacques Vidrine 手中接任 FreeBSD Security Officer 时立下三项目标：把更新工具作为官方支持工具并入基本系统、让更新与端口快照的构建镜像平稳运转、保持安全通告与补丁的高水准；前两项已达成，第三项虽难企及，但他自评也做得不差。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
 
 <!-- ROW_MINE: freebsd-security.messages.2497119 -->
 **当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-330682`；2026-09-30 freebsd-security 战线 全库行级遍历考据采纳）
@@ -2535,7 +2535,7 @@ SA-12:05.bind：DNSSEC 校验拒绝服务引用时按 L4 纪律：以上为邮�
 <!-- ROW_MINE: freebsd-security.messages.2497148 -->
 **当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-330698`；2026-09-30 freebsd-security 战线 全库行级遍历考据采纳）
 
-2012 年 11 月 18 日，发帖人指出基础系统与项目可使用两台西南和东北服务器提供的加密访问入口，但据他所知端口树当时还没通；并承认快照工具适合直接使用官方端口树的人，需要给端口打本地补丁者帮助有限。引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+2012 年 11 月 18 日，发帖人指出基本系统与项目可使用两台西南和东北服务器提供的加密访问入口，但据他所知端口树当时还没通；并承认快照工具适合直接使用官方端口树的人，需要给端口打本地补丁者帮助有限。引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 
 <!-- ROW_MINE: freebsd-security.messages.2497151 -->
 **当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-330701`；2026-09-30 freebsd-security 战线 全库行级遍历考据采纳）
@@ -2545,7 +2545,7 @@ SA-12:05.bind：DNSSEC 校验拒绝服务引用时按 L4 纪律：以上为邮�
 <!-- ROW_MINE: freebsd-security.messages.2497156 -->
 **当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-330702`；2026-09-30 freebsd-security 战线 全库行级遍历考据采纳）
 
-2012 年 11 月 19 日，发帖人纠正说 git 几乎全部是用 C 语言写的，只是部分依赖它的周边工具用 Perl 实现；另反问对方基础系统里本来也没有版本控制工具，所以他的论点何在。引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+2012 年 11 月 19 日，发帖人纠正说 git 几乎全部是用 C 语言写的，只是部分依赖它的周边工具用 Perl 实现；另反问对方基本系统里本来也没有版本控制工具，所以他的论点何在。引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 
 <!-- ROW_MINE: freebsd-security.messages.2497160 -->
 **当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-330703`；2026-09-30 freebsd-security 战线 全库行级遍历考据采纳）
@@ -2865,7 +2865,7 @@ SA-12:05.bind：DNSSEC 校验拒绝服务引用时按 L4 纪律：以上为邮�
 <!-- ROW_MINE: freebsd-security.messages.2497913 -->
 **当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-331024`；2026-09-30 freebsd-security 战线 全库行级遍历考据采纳）
 
-2014 年 4 月 9 日，发帖人就逐一禁用所有不会破坏基础系统的 OpenSSL 编译开关提议作出回应，认为其原理类似 svnlite 的做法，值得斟酌，但未主张立即执行。引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+2014 年 4 月 9 日，发帖人就逐一禁用所有不会破坏基本系统的 OpenSSL 编译开关提议作出回应，认为其原理类似 svnlite 的做法，值得斟酌，但未主张立即执行。引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 
 <!-- ROW_MINE: freebsd-security.messages.2497916 -->
 **当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-331025`；2026-09-30 freebsd-security 战线 全库行级遍历考据采纳）
@@ -2900,7 +2900,7 @@ SA-12:05.bind：DNSSEC 校验拒绝服务引用时按 L4 纪律：以上为邮�
 <!-- ROW_MINE: freebsd-security.messages.2497969 -->
 **当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-331037`；2026-09-30 freebsd-security 战线 全库行级遍历考据采纳）
 
-2014 年 4 月 11 日，发帖人反映其每日端口审计邮件未提示基础系统漏洞，并询问基础系统的近期漏洞通常通过什么途径通知用户，附言称报纸与电视显然并非合适渠道。引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+2014 年 4 月 11 日，发帖人反映其每日端口审计邮件未提示基本系统漏洞，并询问基本系统的近期漏洞通常通过什么途径通知用户，附言称报纸与电视显然并非合适渠道。引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 
 <!-- ROW_MINE: freebsd-security.messages.2497977 -->
 **当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-331041`；2026-09-30 freebsd-security 战线 全库行级遍历考据采纳）
@@ -3565,12 +3565,12 @@ SA-12:05.bind：DNSSEC 校验拒绝服务引用时按 L4 纪律：以上为邮�
 <!-- ROW_MINE: freebsd-security.messages.2498983 -->
 **当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-331502`；2026-09-30 freebsd-security 战线 全库行级遍历考据采纳）
 
-2015 年 6 月 18 日，Piotr Kubaj 询问是否计划把 LibreSSL 作为实验性功能引入基础系统，例如通过 src.conf 的 WITH_LIBRESSL 选项，若没有该计划则 11.0-RELEASE 是否会包含 OpenSSL 1.0.2。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+2015 年 6 月 18 日，Piotr Kubaj 询问是否计划把 LibreSSL 作为实验性功能引入基本系统，例如通过 src.conf 的 WITH_LIBRESSL 选项，若没有该计划则 11.0-RELEASE 是否会包含 OpenSSL 1.0.2。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
 
 <!-- ROW_MINE: freebsd-security.messages.2498984 -->
 **当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-331503`；2026-09-30 freebsd-security 战线 全库行级遍历考据采纳）
 
-2015 年 6 月 20 日，Julian Elischer 答复没有把 LibreSSL 引入基础系统的计划，11.0-RELEASE 仍将沿用 OpenSSL 1.0.2，并以斑马花纹的类比表达对换用另一实现的看法。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+2015 年 6 月 20 日，Julian Elischer 答复没有把 LibreSSL 引入基本系统的计划，11.0-RELEASE 仍将沿用 OpenSSL 1.0.2，并以斑马花纹的类比表达对换用另一实现的看法。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
 
 <!-- ROW_MINE: freebsd-security.messages.2498985 -->
 **当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-331504`；2026-09-30 freebsd-security 战线 全库行级遍历考据采纳）
@@ -3595,7 +3595,7 @@ SA-12:05.bind：DNSSEC 校验拒绝服务引用时按 L4 纪律：以上为邮�
 <!-- ROW_MINE: freebsd-security.messages.2499045 -->
 **当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-331536`；2026-09-30 freebsd-security 战线 全库行级遍历考据采纳）
 
-2015 年 3 月 19 日，发帖人Xin Li指出使用ports提供的OpenSSL并不算回避方案，因为它无法解决基础系统自带应用仍受影响的实际问题。引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+2015 年 3 月 19 日，发帖人Xin Li指出使用ports提供的OpenSSL并不算回避方案，因为它无法解决基本系统自带应用仍受影响的实际问题。引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 
 <!-- ROW_MINE: freebsd-security.messages.2499047 -->
 **当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-331538`；2026-09-30 freebsd-security 战线 全库行级遍历考据采纳）
@@ -3755,7 +3755,7 @@ SA-12:05.bind：DNSSEC 校验拒绝服务引用时按 L4 纪律：以上为邮�
 <!-- ROW_MINE: freebsd-security.messages.2499325 -->
 **当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-331675`；2026-09-30 freebsd-security 战线 全库行级遍历考据采纳）
 
-2015 年 9 月 20 日，Des说明第11版计划采用完全打包的基础系统，相关代码在projects/release-pkg项目目录中，更多信息见开发会议报告与wiki。引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+2015 年 9 月 20 日，Des说明第11版计划采用完全打包的基本系统，相关代码在projects/release-pkg项目目录中，更多信息见开发会议报告与wiki。引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 
 <!-- ROW_MINE: freebsd-security.messages.2499327 -->
 **当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-331676`；2026-09-30 freebsd-security 战线 全库行级遍历考据采纳）
@@ -3955,17 +3955,17 @@ SA-12:05.bind：DNSSEC 校验拒绝服务引用时按 L4 纪律：以上为邮�
 <!-- ROW_MINE: freebsd-security.messages.2499505 -->
 **当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-331771`；2026-09-30 freebsd-security 战线 全库行级遍历考据采纳）
 
-2016 年 7 月 11 日，发帖人认为此处问错了问题，主张应集中做把 OpenSSL 与基础系统解耦这件事，从而让 GOST 这类需求改由 ports 自行处理。引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+2016 年 7 月 11 日，发帖人认为此处问错了问题，主张应集中做把 OpenSSL 与基本系统解耦这件事，从而让 GOST 这类需求改由 ports 自行处理。引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 
 <!-- ROW_MINE: freebsd-security.messages.2499506 -->
 **当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-331772`；2026-09-30 freebsd-security 战线 全库行级遍历考据采纳）
 
-2016 年 7 月 11 日，发帖人指出 GOST 是俄罗斯国内标准化的加密算法并被当地政府建议乃至要求使用，认为 FreeBSD 若不想流失俄罗斯用户群就应把 GOST 放入基础系统，同时坦言不确定实现难度有多大。引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+2016 年 7 月 11 日，发帖人指出 GOST 是俄罗斯国内标准化的加密算法并被当地政府建议乃至要求使用，认为 FreeBSD 若不想流失俄罗斯用户群就应把 GOST 放入基本系统，同时坦言不确定实现难度有多大。引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 
 <!-- ROW_MINE: freebsd-security.messages.2499513 -->
 **当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-331775`；2026-09-30 freebsd-security 战线 全库行级遍历考据采纳）
 
-2016 年 7 月 11 日，发帖人以基础系统 OpenSSL 维护者身份说明 GOST 在 FreeBSD 10.x 与 11.x 上受支持且不会移除，除非安全团队明确要求；但若导入 OpenSSL 1.1.0 分支则 12.0 中可能移除。引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+2016 年 7 月 11 日，发帖人以基本系统 OpenSSL 维护者身份说明 GOST 在 FreeBSD 10.x 与 11.x 上受支持且不会移除，除非安全团队明确要求；但若导入 OpenSSL 1.1.0 分支则 12.0 中可能移除。引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 
 <!-- ROW_MINE: freebsd-security.messages.2499533 -->
 **当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-331783`；2026-09-30 freebsd-security 战线 全库行级遍历考据采纳）
@@ -4670,12 +4670,12 @@ SA-12:05.bind：DNSSEC 校验拒绝服务引用时按 L4 纪律：以上为邮�
 <!-- ROW_MINE: freebsd-security.messages.2500560 -->
 **当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-332187`；2026-09-30 freebsd-security 战线 全库行级遍历考据采纳）
 
-2019 年 7 月 9 日，发帖人询问安全公告与 VUXML 条目的官方状态，质疑基础系统漏洞为何没有与新公告同日入库，并指出这使得 base-audit 周期检查失去作用。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+2019 年 7 月 9 日，发帖人询问安全公告与 VUXML 条目的官方状态，质疑基本系统漏洞为何没有与新公告同日入库，并指出这使得 base-audit 周期检查失去作用。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
 
 <!-- ROW_MINE: freebsd-security.messages.2500562 -->
 **当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-332188`；2026-09-30 freebsd-security 战线 全库行级遍历考据采纳）
 
-2019 年 7 月 9 日，发帖人反驳 VUXML 只管 ports 与包的说法，指出基础系统漏洞支持早在 2016 年由他人建立、过去公告也发布在 VUXML，如今却没有替代的自动汇总手段。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+2019 年 7 月 9 日，发帖人反驳 VUXML 只管 ports 与包的说法，指出基本系统漏洞支持早在 2016 年由他人建立、过去公告也发布在 VUXML，如今却没有替代的自动汇总手段。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
 
 <!-- ROW_MINE: freebsd-security.messages.2500566 -->
 **当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-332191`；2026-09-30 freebsd-security 战线 全库行级遍历考据采纳）
@@ -4880,7 +4880,7 @@ SA-12:05.bind：DNSSEC 校验拒绝服务引用时按 L4 纪律：以上为邮�
 <!-- ROW_MINE: freebsd-security.messages.2500801 -->
 **当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-332288`；2026-09-30 freebsd-security 战线 全库行级遍历考据采纳）
 
-2020 年 2 月 14 日，发帖人预告计划移除本地libwrap补丁，因上游OpenSSH-portable自6.7版起已不支持，他们维护的补丁在每次OpenSSH更新时制造摩擦并可能引入上游不存在的安全漏洞，将停用基础系统sshd的libwrap支持。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+2020 年 2 月 14 日，发帖人预告计划移除本地libwrap补丁，因上游OpenSSH-portable自6.7版起已不支持，他们维护的补丁在每次OpenSSH更新时制造摩擦并可能引入上游不存在的安全漏洞，将停用基本系统sshd的libwrap支持。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
 
 <!-- ROW_MINE: freebsd-security.messages.2500822 -->
 **当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-332299`；2026-09-30 freebsd-security 战线 全库行级遍历考据采纳）
@@ -5155,12 +5155,12 @@ SA-12:05.bind：DNSSEC 校验拒绝服务引用时按 L4 纪律：以上为邮�
 <!-- ROW_MINE: freebsd-security.messages.2501045 -->
 **当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-332414`；2026-09-30 freebsd-security 战线 全库行级遍历考据采纳）
 
-2021 年 9 月 9 日，发帖人宣布基础系统已纳入 OpenSSH 8.7p1 并将尽快合并到稳定分支，FIDO 与 U2F 支持尚未在基础系统中启用，随后援引上游发布说明指出新版将默认停用 ssh-rsa 签名方案，并附上判断服务器是否受影响的命令，请各方用自己的服务器试跑后回报。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+2021 年 9 月 9 日，发帖人宣布基本系统已纳入 OpenSSH 8.7p1 并将尽快合并到稳定分支，FIDO 与 U2F 支持尚未在基本系统中启用，随后援引上游发布说明指出新版将默认停用 ssh-rsa 签名方案，并附上判断服务器是否受影响的命令，请各方用自己的服务器试跑后回报。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
 
 <!-- ROW_MINE: freebsd-security.messages.2501226 -->
 **当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-332494`；2026-09-30 freebsd-security 战线 全库行级遍历考据采纳）
 
-1995 年 6 月 2 日，发帖人称自己此前已阅读过 xinetd 的源代码因此从不会被认可纳入基础系统，但作为 ports 包进行分发则完全没问题，并未进一步说明阅读结论或建议的具体纳入方案。引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+1995 年 6 月 2 日，发帖人称自己此前已阅读过 xinetd 的源代码因此从不会被认可纳入基本系统，但作为 ports 包进行分发则完全没问题，并未进一步说明阅读结论或建议的具体纳入方案。引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 
 <!-- ROW_MINE: freebsd-security.messages.2501260 -->
 **当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-332509`；2026-09-30 freebsd-security 战线 全库行级遍历考据采纳）
@@ -6185,7 +6185,7 @@ SA-12:05.bind：DNSSEC 校验拒绝服务引用时按 L4 纪律：以上为邮�
 <!-- ROW_MINE: freebsd-security.messages.2508260 -->
 **当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-338277`；2026-10-01 freebsd-security 战线 全库行级遍历考据采纳）
 
-1999 年 3 月 12 日，发帖人认为 POSIX.1e 本为匹配各色手册的要求而制定，审计与 ACL 落地后 FreeBSD 应已接近 C2 能力，但他自陈没读过这些规范，想问它们是否还能找到以及 ISBN，并推测 C2 认证代价高昂，若有人赞助，稍微限制基础系统并搭配合适选项几乎必定能达到合规。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+1999 年 3 月 12 日，发帖人认为 POSIX.1e 本为匹配各色手册的要求而制定，审计与 ACL 落地后 FreeBSD 应已接近 C2 能力，但他自陈没读过这些规范，想问它们是否还能找到以及 ISBN，并推测 C2 认证代价高昂，若有人赞助，稍微限制基本系统并搭配合适选项几乎必定能达到合规。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
 
 <!-- ROW_MINE: freebsd-security.messages.2508261 -->
 **当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-338278`；2026-10-01 freebsd-security 战线 全库行级遍历考据采纳）
@@ -6205,7 +6205,7 @@ SA-12:05.bind：DNSSEC 校验拒绝服务引用时按 L4 纪律：以上为邮�
 <!-- ROW_MINE: freebsd-security.messages.2508533 -->
 **当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-338972`；2026-10-01 freebsd-security 战线 全库行级遍历考据采纳）
 
-1999 年 3 月 25 日，发帖人以 FreeBSD 开发者身份说明社区进展，tcp_wrappers 正在被纳入基础系统，现有 inetd 正在学习如何链接并使用 libwrap 如 NetBSD 的 inetd 那样，建议关注 freebsd-current 获取更新。引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+1999 年 3 月 25 日，发帖人以 FreeBSD 开发者身份说明社区进展，tcp_wrappers 正在被纳入基本系统，现有 inetd 正在学习如何链接并使用 libwrap 如 NetBSD 的 inetd 那样，建议关注 freebsd-current 获取更新。引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 
 <!-- ROW_MINE: freebsd-security.messages.2509016 -->
 **当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-339079`；2026-10-01 freebsd-security 战线 全库行级遍历考据采纳）
@@ -7175,7 +7175,7 @@ SA-12:05.bind：DNSSEC 校验拒绝服务引用时按 L4 纪律：以上为邮�
 <!-- ROW_MINE: freebsd-security.messages.2516054 -->
 **当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-343272`；2026-10-01 freebsd-security 战线 全库行级遍历考据采纳）
 
-2000 年 9 月 27 日，发帖人认为升级简便且重建安装后基础系统即受保障是该系统相较其他类系统的可贵之处，一旦超过三个月的版本失去这一点会严重打击用户信心，他理解开发者自己也都在用新版本，却难以相信一家仍在销售该旧版本的公司连一台旧分支测试机都拿不出来。引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+2000 年 9 月 27 日，发帖人认为升级简便且重建安装后基本系统即受保障是该系统相较其他类系统的可贵之处，一旦超过三个月的版本失去这一点会严重打击用户信心，他理解开发者自己也都在用新版本，却难以相信一家仍在销售该旧版本的公司连一台旧分支测试机都拿不出来。引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 
 <!-- ROW_MINE: freebsd-security.messages.2516059 -->
 **当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-343273`；2026-10-01 freebsd-security 战线 全库行级遍历考据采纳）
@@ -7485,12 +7485,12 @@ SA-12:05.bind：DNSSEC 校验拒绝服务引用时按 L4 纪律：以上为邮�
 <!-- ROW_MINE: freebsd-security.messages.2516811 -->
 **当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-343538`；2026-10-01 freebsd-security 战线 全库行级遍历考据采纳）
 
-2000 年 11 月 1 日，发帖人指出FreeBSD相比多数Linux发行版相当精简，浏览器与服务器都在ports而非基础系统中，sendmail与inetd自4.1.1起默认关闭，并建议可试用picobsd。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+2000 年 11 月 1 日，发帖人指出FreeBSD相比多数Linux发行版相当精简，浏览器与服务器都在ports而非基本系统中，sendmail与inetd自4.1.1起默认关闭，并建议可试用picobsd。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
 
 <!-- ROW_MINE: freebsd-security.messages.2516812 -->
 **当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-343539`；2026-10-01 freebsd-security 战线 全库行级遍历考据采纳）
 
-2000 年 11 月 1 日，发帖人纠正称OpenBSD至少2.7版本默认安装Apache与Lynx，Apache固然不会被启动，但确实存在于基础系统中。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+2000 年 11 月 1 日，发帖人纠正称OpenBSD至少2.7版本默认安装Apache与Lynx，Apache固然不会被启动，但确实存在于基本系统中。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
 
 <!-- ROW_MINE: freebsd-security.messages.2516815 -->
 **当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-343541`；2026-10-01 freebsd-security 战线 全库行级遍历考据采纳）
@@ -7500,7 +7500,7 @@ SA-12:05.bind：DNSSEC 校验拒绝服务引用时按 L4 纪律：以上为邮�
 <!-- ROW_MINE: freebsd-security.messages.2516823 -->
 **当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-343543`；2026-10-01 freebsd-security 战线 全库行级遍历考据采纳）
 
-2000 年 11 月 1 日，发帖人纠正称OpenBSD 2.6基础系统已含apache与mod_ssl，并提醒发帖前先核实信息以免误导读者，并指出PiboBSD已无人维护其补丁未被提交。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+2000 年 11 月 1 日，发帖人纠正称OpenBSD 2.6基本系统已含apache与mod_ssl，并提醒发帖前先核实信息以免误导读者，并指出PiboBSD已无人维护其补丁未被提交。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
 
 <!-- ROW_MINE: freebsd-security.messages.2516824 -->
 **当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-343544`；2026-10-01 freebsd-security 战线 全库行级遍历考据采纳）
@@ -7545,7 +7545,7 @@ SA-12:05.bind：DNSSEC 校验拒绝服务引用时按 L4 纪律：以上为邮�
 <!-- ROW_MINE: freebsd-security.messages.2516929 -->
 **当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-343580`；2026-10-01 freebsd-security 战线 全库行级遍历考据采纳）
 
-2000 年 11 月 7 日，发帖人贴出一则通告草稿，称终端显示库存在缓冲区溢出，该库既在基础系统中也在端口集合里，稳定与开发两条分支都已修正，是否波及更早分支尚未确认。引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+2000 年 11 月 7 日，发帖人贴出一则通告草稿，称终端显示库存在缓冲区溢出，该库既在基本系统中也在端口集合里，稳定与开发两条分支都已修正，是否波及更早分支尚未确认。引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 
 <!-- ROW_MINE: freebsd-security.messages.2516954 -->
 **当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-343591`；2026-10-01 freebsd-security 战线 全库行级遍历考据采纳）
@@ -7560,7 +7560,7 @@ SA-12:05.bind：DNSSEC 校验拒绝服务引用时按 L4 纪律：以上为邮�
 <!-- ROW_MINE: freebsd-security.messages.2516994 -->
 **当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-343606`；2026-10-01 freebsd-security 战线 全库行级遍历考据采纳）
 
-2000 年 11 月 13 日，安全通告指出终端显示库存在缓冲区溢出，攻击者可诱导具特权的程序读取特制的终端描述条目从而以该程序权限执行任意代码，基础系统中的一项监控工具已知受影响并可读取内核内存，旧分支是否受影响尚未确认。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+2000 年 11 月 13 日，安全通告指出终端显示库存在缓冲区溢出，攻击者可诱导具特权的程序读取特制的终端描述条目从而以该程序权限执行任意代码，基本系统中的一项监控工具已知受影响并可读取内核内存，旧分支是否受影响尚未确认。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
 
 <!-- ROW_MINE: freebsd-security.messages.2517001 -->
 **当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-343610`；2026-10-01 freebsd-security 战线 全库行级遍历考据采纳）
@@ -8340,7 +8340,7 @@ SA-12:05.bind：DNSSEC 校验拒绝服务引用时按 L4 纪律：以上为邮�
 <!-- ROW_MINE: freebsd-security.messages.2519610 -->
 **当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-344777`；2026-10-01 freebsd-security 战线 全库行级遍历考据采纳）
 
-2001 年 4 月 11 日，发帖人指出跟随稳定分支并不必全量构建，可通过修改默认配置文件避免构建基础系统的各个部分，按自身需要自行编辑即可全部完成，而不必下载其他任何额外的构建产物。引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+2001 年 4 月 11 日，发帖人指出跟随稳定分支并不必全量构建，可通过修改默认配置文件避免构建基本系统的各个部分，按自身需要自行编辑即可全部完成，而不必下载其他任何额外的构建产物。引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 
 <!-- ROW_MINE: freebsd-security.messages.2519619 -->
 **当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-344785`；2026-10-01 freebsd-security 战线 全库行级遍历考据采纳）
@@ -8465,7 +8465,7 @@ SA-12:05.bind：DNSSEC 校验拒绝服务引用时按 L4 纪律：以上为邮�
 <!-- ROW_MINE: freebsd-security.messages.2520818 -->
 **当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-348893`；2026-10-02 freebsd-security 战线 全库行级遍历考据采纳）
 
-2001 年 6 月 29 日，发帖人建议从 www.freebsd.org/security 的通告入手，指出 4.3-RELEASE 以来基础系统仅一份通告，并引 4.3 发行说明第 2.2 节。引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+2001 年 6 月 29 日，发帖人建议从 www.freebsd.org/security 的通告入手，指出 4.3-RELEASE 以来基本系统仅一份通告，并引 4.3 发行说明第 2.2 节。引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 
 <!-- ROW_MINE: freebsd-security.messages.2520819 -->
 **当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-348894`；2026-10-02 freebsd-security 战线 全库行级遍历考据采纳）
@@ -9330,7 +9330,7 @@ SA-12:05.bind：DNSSEC 校验拒绝服务引用时按 L4 纪律：以上为邮�
 <!-- ROW_MINE: freebsd-security.messages.2526269 -->
 **当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-350840`；2026-10-02 freebsd-security 战线 全库行级遍历考据采纳）
 
-2002 年 6 月 25 日，发帖人追问 OpenSSH 3.3 是否已纳入基础系统、旧版 ssh 是否受此漏洞影响，认为公告对多数人不具实际帮助，并称 FreeBSD security-officer 应面向全体用户。引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+2002 年 6 月 25 日，发帖人追问 OpenSSH 3.3 是否已纳入基本系统、旧版 ssh 是否受此漏洞影响，认为公告对多数人不具实际帮助，并称 FreeBSD security-officer 应面向全体用户。引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 
 <!-- ROW_MINE: freebsd-security.messages.2526270 -->
 **当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-350841`；2026-10-02 freebsd-security 战线 全库行级遍历考据采纳）
@@ -9385,7 +9385,7 @@ SA-12:05.bind：DNSSEC 校验拒绝服务引用时按 L4 纪律：以上为邮�
 <!-- ROW_MINE: freebsd-security.messages.2526347 -->
 **当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-350862`；2026-10-02 freebsd-security 战线 全库行级遍历考据采纳）
 
-2002 年 6 月 25 日，发帖人赞同把 ssh 移出基础系统改为端口安装，主张基础系统只保留必要组件与包管理工具，并称虽然维护成本高于 make world 但升级软件将更容易。引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+2002 年 6 月 25 日，发帖人赞同把 ssh 移出基本系统改为端口安装，主张基本系统只保留必要组件与包管理工具，并称虽然维护成本高于 make world 但升级软件将更容易。引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 
 <!-- ROW_MINE: freebsd-security.messages.2526350 -->
 **当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-350863`；2026-10-02 freebsd-security 战线 全库行级遍历考据采纳）

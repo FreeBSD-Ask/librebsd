@@ -67,7 +67,7 @@ volume: 第10卷-openbsd的历史
 
 - Florian Obser 阐述 OpenBSD 三类利用缓解：降权、权限分离与受限服务操作模式，作为攻击者达成任意代码执行后的最后防线；降权是最弱但最古老的缓解，权限分离将不可信数据解析移入低权限进程，受限模式则以 pledge 限制进程能力。（BSD Now EP498，[514.74-603.96]，L2）
 - Obser 回溯 ping 降权的历史：Theo de Raadt 逾 26 年前重构 ping，使其先打开原始套接字再丢弃 root 权限，以防本地用户借 ping 缺陷提权；二十年后又发现以 root 调用 ping 时只是从 root 降到 root，遂改为降级到专用用户。（BSD Now EP498，[598.70-632.26]，L2）
-- Obser 叙述 pledge 的由来：systrace 由 Niels Provos 开发但因基于系统调用参数而难用，OpenBSD 基础系统中长期仅 sshd 使用；2015 年 Theo 诱使 Nicholas Marriott 用 systrace 沙箱 file 却只坚持半年，成为压垮性体验，Theo 遂开发 tame（后改名 pledge）。（BSD Now EP498，[784.74-861.42]，L2）
+- Obser 叙述 pledge 的由来：systrace 由 Niels Provos 开发但因基于系统调用参数而难用，OpenBSD 基本系统中长期仅 sshd 使用；2015 年 Theo 诱使 Nicholas Marriott 用 systrace 沙箱 file 却只坚持半年，成为压垮性体验，Theo 遂开发 tame（后改名 pledge）。（BSD Now EP498，[784.74-861.42]，L2）
 - pledge 通过对 OpenBSD 基础程序的需求归类而成，程序违规即被内核以不可捕获的 SIGABRT 终止；当约 50 个程序加入 pledge 后被认为成熟并合入主线，半年内几乎所有基础程序均使用 pledge。（BSD Now EP498，[861.42-931.54]，L2）
 - 其余新闻包括 OPNsense 23.1.1 发布、Ansible Clone 工具、NetBSD 在 FOSDEM 2023 的 BSD dev room 报告、FreeBSD Foundation 的 BSDCan 旅行资助，以及 Game of Trees 0.81 与 x-only PKU、pinsyscall 等 OpenBSD 新进展。（BSD Now EP498，[1156.64-2330.00]，L2）
 - OpenBSD 于 1995 年 10 月作为 NetBSD 分叉起步，其默认安装长期仅报告两个远程漏洞，被描述为默认安全的系统。（BSD Now EP428，[135.74-145.1]，L2）
@@ -77,7 +77,7 @@ volume: 第10卷-openbsd的历史
 - FuryBSD 2020 第二季度镜像（XFCE 与 KDE）发布，团队自述把精力放在开箱即用的 Wi-Fi、摄像头与虚拟机支持上。（BSD Now EP348，[68.68-103.08]，L2）
 - Ars Technica 评测 GhostBSD：安装体验较 FreeBSD 更顺畅、桌面可用，但存在 MATE 面板崩溃、ZFS 4K 块对齐失效等瑕疵。（BSD Now EP348，[494.58-736.64]，L2）
 - OpenBSD malloc 安全分配器内部机制被逐行解读：chunk canary（0xdb 填充）在 free 时校验，越界写会触发 abort。（BSD Now EP348，[1291.52-1359.6]，L2）
-- 技术选型文章主张 FreeBSD 相对 GNU/Linux 具有基础系统与滚动软件包结合、ZFS、启动环境、jail 等优势。（BSD Now EP348，[253.24-297.16]，L2）
+- 技术选型文章主张 FreeBSD 相对 GNU/Linux 具有基本系统与滚动软件包结合、ZFS、启动环境、jail 等优势。（BSD Now EP348，[253.24-297.16]，L2）
 - OpenBSD 的 BSD Authentication 认证绕过漏洞源于 login_passwd 对 challenge 协议的处理缺陷，用户名形如 -schallenge 时会被自动判定成功；该漏洞远程可利用于 smtpd、ldapd、radiusd 等应用，但 sshd 因纵深防御机制不受影响。（BSD Now EP330，[185.76-440.9]，L2）[订正：原 [185.76-193.66]，2026-09-30 SenseAudio 重转核对]
 - OpenBSD 在初次联系后约 40 小时内修复该漏洞，主持人以此与其它项目耗时数月乃至数年的修复形成对照，凸显其把安全响应置于优先位置的组织惯性。（BSD Now EP330，[562.80-584.46]，L3）
 - NetBSD 9.0 RC1 在四个月发布流程中处理逾 500 次 pull-up，新增 aarch64（含 Arm ServerReady）、NVMM 硬件虚拟化、更新版 ZFS、内核 ASLR、KLEAK/KASAN 等 sanitizer、NPF 改进与 SATA NCQ 支持。（BSD Now EP330，[724.00-968.5]，L2）[订正：原 [724.00-802.99]，2026-09-30 SenseAudio 重转核对]
@@ -106,7 +106,7 @@ volume: 第10卷-openbsd的历史
 **史观**：
 
 - 总纲10 动手者创造历史：安全机制由开发者逐个程序地审计与归类累积而成，而非一次性顶层设计。：Theo 与 Obser 等通过逐个程序的重构与需求归类塑造 OpenBSD 安全机制。（BSD Now EP498，[861.42-931.54]，L2）
-- 总纲9 经验优先：以基础系统中真实程序的可用性经验为标准，淘汰难以使用的 systrace。：systrace 因难用而被 pledge 取代，设计取舍来自真实程序的实践经验。（BSD Now EP498，[784.74-861.42]，L2）
+- 总纲9 经验优先：以基本系统中真实程序的可用性经验为标准，淘汰难以使用的 systrace。：systrace 因难用而被 pledge 取代，设计取舍来自真实程序的实践经验。（BSD Now EP498，[784.74-861.42]，L2）
 - 总纲5 没有必然性，只有偶然性：pledge 的诞生由 systrace 实践中的偶然挫败触发，而非预先规划。：file 沙箱半年即弃的偶然失败促成 tame 与 pledge 的诞生。（BSD Now EP498，[784.74-861.42]，L2）
 - 总纲10 动手者创造历史：OpenBSD 以代码审计与全树范围修复确立安全实践，体现动手者在具体工程中塑造项目文化。（BSD Now EP428，[164.94-191.78]，L2）
 - 总纲13 法律与道德是利益分配：美国出口管制把加密技术纳入法律约束，迫使 OpenBSD 调整基地布局，体现法律与道德作为利益分配工具的现实效应。（BSD Now EP428，[145.1-160.3]，L2）

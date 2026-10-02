@@ -72,7 +72,7 @@ volume: 第04卷-大分裂与四大bsd的诞生
 - 其写作理念是在纯信息（如源代码打印稿）与纯装饰之间取细线平衡：技术正确且有用之外还须可读；不只讲 how 更讲 why——为什么网络配置必须正确、为什么文件系统分区布局重要；他以 Red Hat 默认单一分区覆盖全盘为例，指出这种默认灵活但带风险，使用者应当理解风险所在。（BSDTalk EP153，[443.88-513.48]，L1）
 - 出版生态的竞争压力：Absolute BSD 热卖后，其他出版社紧盯其出版商并抢先推出同题材书籍，Absolute OpenBSD 亦遭此遇；他批评赶工出版的书是废纸，坚持一年一书的节奏，且并非全职作者，搬家等变故即打乱写作日程。（BSDTalk EP153，[335.66-369.12]，L1）
 - 应对时效与协作方法：Absolute OpenBSD 交稿数小时后 PF 宣布大批新特性，他恳求出版商宽限两三周补写章节；写作前先读邮件列表存档与 man 帕吉做足功课，开发者乐于受访，会直言某节应暂缓撰写并纠正错误；他举例就 Absolute FreeBSD 中 freebsd-update 一节向作者 Colin Percival 求证其在邮件列表中自贬早期源码为羞于示人之作的说法，获复已重写。（BSDTalk EP153，[529.68-703.54]，L1）
-- FreeBSD 的直接前驱是 386BSD patchkit：发言人与 Bill Jolitz 协作测试、以邮件列表协调 0.0 与 0.1 版分发；Walnut Creek CDROM 介入后购置 486 DX2 硬件并提供 T1 互联网连接，该机因 cache 芯片故障反复 panic 被寄往波特兰修复，重装 386BSD 加 patchkit 后成为 freefall——主机名取自发言人的跳伞经历，他本人则在 Walnut Creek 机房地板上睡了近两年。（YouTube EP4OvLlKazFV4，[225.72-266.63]，L1）
+- FreeBSD 的直接前驱是 386BSD patchkit：Bill Jolitz 的 386BSD 发行版 0.0 已出约一年、0.1 已出三四个月，社区开始汇集大量代码变更、新驱动与构建工具；patch kit 由 Terry Lambert 创建、Nate Williams 为早期协调人之一、Jordan Hubbard spin 过一两个，发言人自 Terry 工作期间接手并为其大量测试、亦 spin 出数个 patch kit；Walnut Creek CDROM 介入后购置 486 DX2 硬件并提供 T1 互联网连接，该机因 cache 芯片故障反复 panic 被寄往波特兰修复，重装 386BSD 加 patchkit 后成为 freefall——主机名取自发言人的跳伞经历，他本人则在 Walnut Creek 机房地板上睡了近两年。[订正：原“发言人与 Bill Jolitz 协作测试、以邮件列表协调 0.0 与 0.1 版分发”→新转写证实发言人是为 Terry Lambert 测试并接手 spin patch kit，邮件列表与 Usenet 为当时主要沟通渠道]（YouTube EP4OvLlKazFV4，[225.72-266.63]，L1）
 - 项目命名经邮件列表与 Usenet 公开讨论，David Greenman 第一个发帖提议，候选名经集体投票定为 FreeBSD；几天内发言人在此前只用过 RCS 与 SCCS 的情况下被指定搭起 CVS 仓库并接入邮件列表，成为唯一从未获得 commit bit 的创始人；USL 诉讼后现行仓库被放弃重建，导致 1.x 与 2.5 release 在仓库中共享 1.1/1.1.1 版本号，早期提交历史的可追溯性由此受损。（YouTube EP4OvLlKazFV4，[289.07-396.54]，L1）
 - 创建 core team 是对“仁慈独裁者”模式的制度性拒绝：发言人基于业界观察认为独裁者项目多不长寿，且自认知识面广而不深、无法覆盖全部组件，遂征集约七人组成核心团队，同时为自己保留退出通道；二十五年后回看认为该决策正确，并明言不喜欢 Linux 的治理模型但承认其成就。（YouTube EP4OvLlKazFV4，[2294.63-2366.66]，L1）
 - 1.0 版在约九个月开发后于 1993 年 11 月发布，传播速度远超预期；项目早期曾与 NetBSD 方代表在 Walnut Creek 会谈三四次讨论两项目合并，结论是人员差异下合并将不利于双方而作罢；发言人回看认为分叉反而是好事，BSD 阵营的分叉数量远少于 Linux 阵营的庞大谱系。（YouTube EP4OvLlKazFV4，[597.0-696.62]，L1）
@@ -96,7 +96,7 @@ volume: 第04卷-大分裂与四大bsd的诞生
 **辨析**：
 
 - 转写存在分支归属错置疑点：称某分支转向 SMP 与内核锁高性能处写作 3BSD，按内容应为 FreeBSD；将负载均衡、PF 与传感器框架归于 NetBSD 名下，与 PF 及传感器框架系 OpenBSD 特色、NetBSD 后移植的通行理解相反，疑为口述或转写错乱，引用前须以原始音频与其著作核对。　[存疑脚注] 三分支专长归属在转写中存在错置，须以音频与 Absolute 系列原著核对。（BSDTalk EP153，[173.48-208.54]，L4）
-- 口述存在多处自认的记忆空白：记不全 core team 七人名单、不确定 hub 机器的置入者、自陈不清楚 NetBSD 与 CSRG 的确切关系；转写文本为双轨时间戳交错且人名听写错误明显（如 bill Joel'its 应为 Bill Jolitz、Paul Henning camp 应为 Poul-Henning Kamp），引用本演讲任何细节前须回原视频与邮件列表档案交叉核验。　[存疑脚注] 转写双轨交错、人名多误，口述者亦自承记忆不确定，所有时间点与人名须以原始档案核验。（YouTube EP4OvLlKazFV4，[2213.98-2273.69]，L2）
+- 口述存在多处自认的记忆空白：记不全 core team 七人名单、不确定 hub 机器的置入者、自陈不清楚 NetBSD 与 CSRG 的确切关系但称两者关系显然相当紧密；转写文本人名听写错误明显（如 bill Joel'its 应为 Bill Jolitz、Paul Henning camp 应为 Poul-Henning Kamp），引用本演讲任何细节前须回原视频与邮件列表档案交叉核验。[订正：原“转写文本为双轨时间戳交错”之转写缺陷经滚动重叠重建后已不存在，新转写为单轨顺排；“不清楚 NetBSD 与 CSRG 的确切关系”后新转写补“但显然相当紧密”]　[已核备注] 转写已为单轨顺排、双轨交错缺陷不再存在；人名听写错误仍见于自动转写，口述者亦自承记忆不确定，所有时间点与人名须以原始档案核验。（YouTube EP4OvLlKazFV4，[2213.98-2273.69]，L2）
 - 解说称早期 Windows 网络栈“借鉴了 BSD 的思想与代码”，又称 Linux 是受 Unix 启发的净室重实现，两者均为流传甚广的流行说法；前者与 Windows TCP/IP 栈实际授权移植来源的考据结论需核对，后者的“净室”定性亦系标签化表述，均不可直接采信。　[存疑脚注] Windows TCP/IP 栈来源与 Linux 净室定性均须回到一手文献核验；另该期转写为双轨时间戳交错的解说词，无出镜当事人，全部陈述仅可作研究线索。（YouTube EP3u8zKO8VTD0，[222.64-233.12]，L4）
 
 **文献**：

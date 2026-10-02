@@ -49,7 +49,7 @@ volume: 第06卷-freebsd的核心技术革新
 - DragonFly BSD 发布 6.4（2022 年 12 月 30 日），延续 6.x 系列：内核修复涉及 exec CVPE 环境传递、名称缓存膨胀与 vnode 回收、HAMMER2 的批量释放与内存分配，并引入来自 FreeBSD 的 GTaskQ API；默认编译器仍为 GCC 8，新增对 Type 2 hypervisor（NVMM）、AMD GPU 驱动与 HAMMER2 卷远程挂载的实验性支持。（BSD Now EP491，[188.06-530.00]，L2）
 - 节目转述 Clara 关于 OpenZFS 在 FreeBSD 与 Linux 间取舍的文章，指出 2020 年 12 月 OpenZFS 统一了 FreeBSD 与 Linux 平台的代码库；FreeBSD 安装器原生默认支持 OpenZFS root，而 Ubuntu 依赖未完成的 ZSys 项目并遗留过多 dataset 与快照管理问题。（BSD Now EP491，[525.06-993.02]，L2）
 - Peter 的博客回顾其约 15 年的 greytrapping 与灰名单实践：其 bsdly.net 兼作个人邮件服务与蜜罐，用于生成 IP 信誉数据；他讨论 71% 垃圾邮件捕获率的衡量问题，并指出在内容过滤前尽早丢弃垃圾流量可降低资源与能耗。（BSD Now EP491，[1134.30-1417.44]，L2）
-- 节目报道第六届可复现构建峰会 2022 于威尼斯举行，NetBSD 基础系统自 8.0 起可复现构建，pkgsrc 也已迈出第一步，但包级可复现仍有待完善。（BSD Now EP491，[1922.36-2086.72]，L2）
+- 节目报道第六届可复现构建峰会 2022 于威尼斯举行，NetBSD 基本系统自 8.0 起可复现构建，pkgsrc 也已迈出第一步，但包级可复现仍有待完善。（BSD Now EP491，[1922.36-2086.72]，L2）
 - 其余内容涉及 Ubuntu 在 FreeBSD 的 Linux 二进制兼容搭建、疯狂 shell 提示符的 misc 邮件，以及用 Ansible 管理 FreeBSD jail 的问答。（BSD Now EP491，[1705.60-1922.36]，L2）
 - OpenBSD 于 2020 年 10 月 18 日发布 6.8 版，正值项目创立二十五周年；该版引入由引导装载器向内核传递的随机种子置信度标记、在支持的 arm64 处理器上启用 PAN，并改进 FFS、安装镜像与多架构安装引导。（BSD Now EP374，[0.0-10.72]，L2）
 - NetBSD 于 2020 年 10 月 18 日发布 9.1，新增并行磁盘加密、C.UTF-8 区域设置、ZFS 支持增强、NVMM 虚拟机监控器更新以及 PowerPC64 PowerNV 支持。（BSD Now EP374，[590.42-796.96]，L2）

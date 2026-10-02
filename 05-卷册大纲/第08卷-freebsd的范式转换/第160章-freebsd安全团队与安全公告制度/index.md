@@ -8,7 +8,7 @@ volume: 第08卷-freebsd的范式转换
 
 ## 要点
 
-- 定位 FreeBSD 的安全路线在整个操作系统安全谱系中的位置——FreeBSD 走的是一条介于 OpenBSD 的激进安全与 Linux 的功能丰富之间的实用主义道路：以 TrustedBSD 项目为基础构建 MAC 框架（罗伯特·N. M. 沃森（Robert Watson）主导，2000 年代初启动，2003 年左右随 FreeBSD 5.x 进入基础系统）、移植 OpenBSD 的 OCF
+- 定位 FreeBSD 的安全路线在整个操作系统安全谱系中的位置——FreeBSD 走的是一条介于 OpenBSD 的激进安全与 Linux 的功能丰富之间的实用主义道路：以 TrustedBSD 项目为基础构建 MAC 框架（罗伯特·N. M. 沃森（Robert Watson）主导，2000 年代初启动，2003 年左右随 FreeBSD 5.x 进入基本系统）、移植 OpenBSD 的 OCF
 - **统计分析印证**——`freebsd.duckdb` freebsd-src 仓库 1993-2026 年 commit 月度量 Mann-Kendall 趋势检验结果为显著上升趋势（Sen's slope =+1.40/月，p <0.001，95% CI [1.11, 1.69]）（统计结论 C-03）；Pettitt 与 BUISHAND R 双变点检验一致判定 freebsd-src 变点为 1
 - 2020 年从 MITRE 获得 CNA 资质——成为少数拥有独立 CVE 分配权的开源项目，显著缩短安全公告发布周期。
 - 分析 BSD 安全社区与 Linux 安全社区在规模和影响力上的差距——Linux 安全生态拥有 SELinux、AppArmor、KSPP、LKML 安全讨论、Linux 安全模块（LSM）框架、众多安全发行版（Qubes OS、Tails、Kali 等），以及 Red Hat、Google、Intel、Microsoft 等大公司投入的大量安全工程资源；相比之下，BSD 安全社区规模小得多，核
@@ -94,7 +94,7 @@ volume: 第08卷-freebsd的范式转换
 - NTPD 被发现可利用欺骗 UDP 包返回放大响应而充当 DDoS 放大器，FreeBSD 与 pfSense 均通过安全公告与配置更新进行缓解。（BSD Now EP21，[4540.34-4636.46]，L2）
 - PC-BSD 10.0 随 FreeBSD 10 发布，RC4 支持 Wine 与 9.2 升级保留 PBI；因 FreeBSD 10 的 ABI 变化，升级需重建或重装全部包。（BSD Now EP21，[4751.26-4801.10]，L2）
 - Percival 的密码学使用哲学：密码学领域浩大且极易做错，但存在一个“安全的小角落”——只要不越出惯例、使用久经研究且被充分理解的算法，无需数学天赋也能安全使用；他不为“加密一切”的立场背书，其多数邮件保持明文，理由是每次解密输口令徒增烦扰，而在会议场合使用密码学本身就会暴露密钥、招致肩窥风险。（BSDTalk EP193，[71.44-259.02]，L1）
-- FreeBSD Update 与 Portsnap 的机制：基础系统二进制由安全团队构建并经密码学签名后推送镜像，安全公告发布即可获取安装，从而保证用户拿到的是安全团队的真实产物而非镜像站上被调包的二进制；Portsnap 约每小时从 ports 仓库取增量、打包并生成索引再签名分发，fetch 与 update 两步分离，以免自动更新在构建进行中删除目录。（BSDTalk EP193，[381.34-513.02]，L1）
+- FreeBSD Update 与 Portsnap 的机制：基本系统二进制由安全团队构建并经密码学签名后推送镜像，安全公告发布即可获取安装，从而保证用户拿到的是安全团队的真实产物而非镜像站上被调包的二进制；Portsnap 约每小时从 ports 仓库取增量、打包并生成索引再签名分发，fetch 与 update 两步分离，以免自动更新在构建进行中删除目录。（BSDTalk EP193，[381.34-513.02]，L1）
 - 配置文件处理与升级边界：freebsd-update 自 6.3 起支持版本间升级，对配置文件采取三方合并——取旧版发布原件、新版发布原件与用户现存文件运行 merge3，成功则展示合并差异，失败则打开编辑器交还用户裁决；只要不刻意构造混淆（如移动 /etc），工具很难出错。（BSDTalk EP193，[571.18-689.18]，L1）
 - Tarsnap 的缘起与形态：2006 年底身为安全官的他需要绝不泄露敏感信息的在线备份却遍寻不得，遂凭借 FreeBSD Update 二进制差分经验自建，博客征询后应者云集而成商业服务；它以 BSD tar 与 libarchive 为前端提供完整命令行语义，运转三年半已成其全职工作，数据增长缓慢但已到须认真处理扩展性的阶段——服务端早年“安全易行优先、性能留待日后”的选择如今到了偿还之时。（BSDTalk EP193，[791.94-930.42]，L1）
 

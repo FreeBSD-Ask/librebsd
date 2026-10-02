@@ -33,7 +33,7 @@ volume: 第07卷-freebsd的工程体系重构
 - 项目统摄史观：ipfw 从 FreeBSD 1.0 起就存在，是极少数从项目成立延续至今仍在活跃维护的子系统——它见证了 FreeBSD 从 386BSD 后裔到现代操作系统的完整历史；dummynet 被全球网络研究者使用了 25 年，体现了好的工程设计的长久生命力
   - 辨析：ipfw 作者——Ugen Antsilevich 是 ipfw 最初作者（1993），Luigi
 - 总纲第 6 条——技术路线分化：三个防火墙在 FreeBSD 中并存体现了 BSD 世界的“选择哲学”——不强制用户使用某个“官方答案”，而是提供多个经过验证的选项，让用户根据场景选择；这与 Linux 世界从 iptables 到 nftables 的强制迁移形成对比
-- 辨析：“pf 是 FreeBSD 默认防火墙”——严格来说 FreeBSD 基础系统没有默认启用任何防火墙，用户需要自行配置
+- 辨析：“pf 是 FreeBSD 默认防火墙”——严格来说 FreeBSD 基本系统没有默认启用任何防火墙，用户需要自行配置
 - 信息技术：SACK Panic 漏洞揭示了一个深刻的信息技术悖论——TCP/IP 协议在 1981 年（RFC 793）设计时几乎不考虑安全问题，SACK 作为 1996 年的扩展（RFC 2018）也主要关注性能，40 年后这些核心协议实现中的安全漏洞可以让整个互联网基础设施面临风险；这说明 “性能优化” 与 “安全保证” 之间存在永恒张力
   - 辨析：漏洞影响的 Free
 
@@ -43,7 +43,7 @@ volume: 第07卷-freebsd的工程体系重构
 - “DragonFly 路线更先进”是价值判断不是事实判断——两种路线在不同场景下各有优劣；FreeBSD 网络栈是否最终也会完全无锁——FreeBSD 12/13/14 持续减少锁竞争，但没有转向消息传递模型的计划；iflib 框架通过多队列和 per-CPU 数据结构实现了高并发，但仍使用互斥锁保护必要的共享状态
 - 文献：Dillon, M., & Watson, R. N. M. (2013〔待核：原文截断〕
 - ipfw 作者——Ugen Antsilevich 是 ipfw 最初作者（1993），Luigi Rizzo 设计了 dummynet（1997-1998），后来 Gleb Smirnoff 等人做了大量现代化改进（支持 SMP、IPv6、VNET）；ipfw 是“第一代防火墙”吗？从技术上 ipfw 是 stateless 防火墙起家，后来添加了 keep-state 状态跟踪，现在是有状态防
-- “pf 是 FreeBSD 默认防火墙”——严格来说 FreeBSD 基础系统没有默认启用任何防火墙，用户需要自行配置和启用；但 pfSense/OPNsense 等防火墙发行版默认使用 pf，pf 也是目前最活跃开发的防火墙；ipfw 是否被弃用——没有，ipfw 和 dummynet 仍在活跃维护和使用，dummynet 在学术研究中地位不可替代；三大防火墙可以同时使用吗？技术上可以通过 pf
+- “pf 是 FreeBSD 默认防火墙”——严格来说 FreeBSD 基本系统没有默认启用任何防火墙，用户需要自行配置和启用；但 pfSense/OPNsense 等防火墙发行版默认使用 pf，pf 也是目前最活跃开发的防火墙；ipfw 是否被弃用——没有，ipfw 和 dummynet 仍在活跃维护和使用，dummynet 在学术研究中地位不可替代；三大防火墙可以同时使用吗？技术上可以通过 pf
 - 漏洞影响的 FreeBSD 版本——SA-19:08 显示受影响版本为 FreeBSD 11.2、11.3、12.0、12.1，使用 RACK TCP 栈的 FreeBSD 13-CURRENT 不受 CVE-2019-5599 影响；SACK Panic 不是 OpenBSD 2026 年发现的——SACK Panic 是 2019 年的漏洞，章节标题提到的 “OpenBSD TCP SACK
 
 ## 文献
