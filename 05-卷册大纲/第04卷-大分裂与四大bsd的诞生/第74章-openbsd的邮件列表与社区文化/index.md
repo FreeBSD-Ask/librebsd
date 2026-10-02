@@ -85,7 +85,7 @@ volume: 第04卷-大分裂与四大bsd的诞生
 - Calyptix 的产品形态是 2015 年 OpenBSD 商用可行性的个案证据：面向无 UNIX 经验的微软系管理员提供基于 OpenBSD 的防火墙设备，尽量沿用 base 系统与通用内核（PF、IPsec/iked，LibreSSL 自 2014 年 12 月起生产环境使用，坚持 stock ksh 而不用 bash 使 Shellshock 几无影响），并以全自动更新应对中小机构无力运维的现实；客户覆盖律所、学校、医院、银行乃至 NASCAR 车队与路边广告牌，Teo 以“I'm living proof that it is”（2852.18-2857.62）回应 OpenBSD 是否已可商用。（BSD Now EP81，[2551.84-2857.62]，L1）
 - OpenSSH 6.8 显示上游重构与下游发行版同步的摩擦成本：内部代码库化重构使 FreeBSD portable 版既有补丁全部失效、进入 ports 的时点推迟；同期新增 SHA-256 base64 主机指纹并设为默认、UseDNS 默认值由 yes 改为 no、实验性主机密钥轮换与多公钥认证，以及不依赖 OpenSSL/LibreSSL 的构建选项（仅保留 ED25519 与 ChaCha20 等新算法套件）——安全快速迭代与发行版移植节奏之间的张力在 2015 年已清晰可见。（BSD Now EP81，[1036.18-1192.06]，L2）
 - 本期教程演示 SSH 链式连接：先以 ProxyCommand 指定经堡垒主机（bastion host）逐跳登录内网机器，再把主机别名、登录用户、密钥文件与跳板参数沉淀进 .ssh/config，使一条短命令即可完成多跳；HostKeyAlias 可将同一服务器的多个 known_hosts 条目合并为一以消除指纹误报；配置支持 host1/host2/host3 形式的递归串联与 Host * 通配默认跳板，且对 rsync、scp 等一切基于 SSH 的工具透明生效。（BSD Now EP42，[4676.64-5026.70]，L2）
-- Sean Webb（彼时尚非 FreeBSD committer）推进 FreeBSD 的 PIE 支持以实现 ASLR：常规 ELF 可执行文件向内核声明固定加载地址，而以 PIE 编译者可被加载至任意地址，随机化由此可行；基础系统应用尚未默认以 PIE 编译，需在 make.conf 或 src.conf 置 WITH_PIE=yes 重编，i386、amd64、sparc64 与 arm 等架构均在支持计划内；该工作现处 11-CURRENT、尚未回移 10，项目即将发布测试征召，需要开发者清理代码风格、审查并给出 sign-off 以确认不破坏既有负载。（BSD Now EP42，[76.36-230.0]，L2）[订正：原 [76.36-215.26]，2026-09-30 SenseAudio 重转核对]
+- Sean Webb（彼时尚非 FreeBSD committer）推进 FreeBSD 的 PIE 支持以实现 ASLR：常规 ELF 可执行文件向内核声明固定加载地址，而以 PIE 编译者可被加载至任意地址，随机化由此可行；基本系统应用尚未默认以 PIE 编译，需在 make.conf 或 src.conf 置 WITH_PIE=yes 重编，i386、amd64、sparc64 与 arm 等架构均在支持计划内；该工作现处 11-CURRENT、尚未回移 10，项目即将发布测试征召，需要开发者清理代码风格、审查并给出 sign-off 以确认不破坏既有负载。（BSD Now EP42，[76.36-230.0]，L2）[订正：原 [76.36-215.26]，2026-09-30 SenseAudio 重转核对]
 
 **史料**：
 

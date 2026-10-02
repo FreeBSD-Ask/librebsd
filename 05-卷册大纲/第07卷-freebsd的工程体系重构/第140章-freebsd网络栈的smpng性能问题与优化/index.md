@@ -75,7 +75,7 @@ volume: 第07卷-freebsd的工程体系重构
 
 **辨析**：
 
-- stunnel 与 LibreSSL 之争的症结在于许可文本对命名的依赖：作者以具名例外把可链接的 SSL 库限定为“基础操作系统内的 OpenSSL”，并明确表示其许可“does not consider LibreSSL as OpenSSL”（音频 764.68-766.18），由此形成三重僵局——LibreSSL 仍持 OpenSSL 许可而无法重新授权，stunnel 的例外条款同样难以修改，OpenBSD 阵营则坚持视 LibreSSL 为削减后的 OpenSSL；再叠加 OpenSSL 许可禁止修改版沿用原名，OpenBSD 因随基础系统附带 LibreSSL 而合规、FreeBSD 等以 ports 安装则受限，争议表明具名例外条款在生态分叉情境下的脆弱性与解释空间之争。（BSD Now EP106，[758.90-833.28]，L2）
+- stunnel 与 LibreSSL 之争的症结在于许可文本对命名的依赖：作者以具名例外把可链接的 SSL 库限定为“基础操作系统内的 OpenSSL”，并明确表示其许可“does not consider LibreSSL as OpenSSL”（音频 764.68-766.18），由此形成三重僵局——LibreSSL 仍持 OpenSSL 许可而无法重新授权，stunnel 的例外条款同样难以修改，OpenBSD 阵营则坚持视 LibreSSL 为削减后的 OpenSSL；再叠加 OpenSSL 许可禁止修改版沿用原名，OpenBSD 因随基本系统附带 LibreSSL 而合规、FreeBSD 等以 ports 安装则受限，争议表明具名例外条款在生态分叉情境下的脆弱性与解释空间之争。（BSD Now EP106，[758.90-833.28]，L2）
 - 副轨转述的构建集群排障案例包含对回退式调试的方法论批评：当事人强调回退只是“diagnostic tool, not a solution”，且“backing out could not have exposed this particular bug”（音频 391.46-396.76）——近期一次提交只是让“this one's been lurking there since 97”（音频 357.44-361.78）的内核缺陷在特定负载下显形，回滚只会使问题重新隐匿而非消失；同段以 Netflix 曾发现的长期潜伏 IPv6 缺陷为对照，指出偶发低频触发的缺陷须靠 bisect 定位后的根因修复，这一区分对考据“提交引入缺陷”与“提交暴露缺陷”两类因果表述具有直接的方法论意义。（BSD Now EP106，[352.62-400.68]，L2）
 - 转录将 Ralink/Realtek 与 Atheros 的表述交错，主持人与嘉宾均存在口误修正，具体芯片归属需对照 FreeBSD 源码。　[存疑脚注] 无线芯片厂商归属存在口语转写歧义，未以代码仓库核验（BSD Now EP55，[1486.52-1493.84]，L4）
 - 标题所称“5 亿毫不知情的 FreeBSD 用户”点出沉默使用现象：终端用户无从感知底层操作系统，自由软件的扩散依赖企业生产采用而非用户选择，当事人开场亦以现场举手调查印证知情者寥寥；此为“沉默 BSD 企业”现象的当事人自证，但亦须辨析——企业愿意公开自述者（如本场演讲）恰是沉默群体中的例外，样本代表性有限。（BSDTalk EP250，[178.32-191.12]，L1）

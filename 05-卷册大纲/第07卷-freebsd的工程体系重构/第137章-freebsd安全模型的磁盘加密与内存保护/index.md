@@ -27,7 +27,7 @@ volume: 第07卷-freebsd的工程体系重构
 ## 辨析
 
 - 原大纲本节无专门子节，磁盘加密和随机数生成内容缺失，已补全；“FreeBSD 使用 NSA 后门加密算法” 是阴谋论——AES 是 NIST 标准化算法，经过公开密码分析，FreeBSD 实现为公开源码可审计；GELI 支持多种算法，用户可自行选择
-- “VuXML 由 FreeBSD Security Team 维护”——不准确，VuXML 主要由 ports 社区和安全团队共同维护，ports committer 可以直接提交 VuXML 条目；“VuXML 包含 FreeBSD 基础系统漏洞”——不包含，基础系统漏洞通过 SA/EN 公告处理；“pkg audit 自动更新 VuXML 数据库”——需要定期运行 `pkg audit -F`
+- “VuXML 由 FreeBSD Security Team 维护”——不准确，VuXML 主要由 ports 社区和安全团队共同维护，ports committer 可以直接提交 VuXML 条目；“VuXML 包含 FreeBSD 基本系统漏洞”——不包含，基本系统漏洞通过 SA/EN 公告处理；“pkg audit 自动更新 VuXML 数据库”——需要定期运行 `pkg audit -F`
 - 原大纲本节列入的 “Anthropic Claude Mythos 2026.4 AI 发现 OpenBSD TCP SACK 27 年漏洞” 事件——经多轮 WebSearch 核查，截至 2026 年 7 月 19 日无任何公开可验证的一手来源（Anthropic 官网、OpenBSD 官网、MITRE CVE、oss-security 邮件列表）证实该事件，按 0 信任原则标注为〔无一手来源，不采信〕。
 - “macOS 是 FreeBSD 所以 macOS 的安全就是 FreeBSD 的安全”——这是极其常见的误解；macOS/Darwin 仅在用户层和部分 API 层面源自 FreeBSD，XNU 内核是 Mach + FreeBSD 紧密混合，安全机制（SIP、Seatbelt、Code Signing、Notarization、Secure Enclave）均为 Apple 私有技术；“FreeBSD 没有 Common Criteria 认证所以不安全”——CC 认证是过程/文档认证，不是安全性的直接度量；OpenBSD 也没有 CC 认证，但被普遍认为是最安全的通用 OS 之一（完整辨析见 137.8 节）。
 
@@ -54,7 +54,7 @@ volume: 第07卷-freebsd的工程体系重构
 - Sean Webb 与 Oliver Pinter 在 HardenedBSD 项目内推进 ASLR/PIE，并将其作为补丁提交上游 FreeBSD，目标是进入 11 版本。（BSD Now EP52，[1109.1-1952.2]，L1）[订正：原 [1110.02-1421.06]，2026-09-30 SenseAudio 重转核对]
 - ASLR 使程序可加载到任意内存地址，PIE 进一步支持应用级随机化，用于提高缓冲区溢出与信息泄露攻击的门槛；该实现默认关闭，需编译内核选项并可通过 sysctl 控制。（BSD Now EP52，[1109.1-1586.3]，L1）[订正：原 [1110.02-1183.22]，2026-09-30 SenseAudio 重转核对]
 - 该 ASLR 实现借鉴 PaX 与 NetBSD 的实现谱系，并在除 ARM 外的 FreeBSD 支持架构上工作，包括 32 位 Linux 兼容层。（BSD Now EP52，[1351.3-1639.9]，L1）[订正：原 [1351.34-1501.26]，2026-09-30 SenseAudio 重转核对]
-- OpenBSD 将 BIND 与 nginx 一并移出基础系统：基础系统转而包含 nsd 与 unbound 供 5.6 与 5.7 用户过渡，BIND 可从 ports 获取最新版本，nginx 则为其新写的自定义 HTTP 守护进程让位。（BSD Now EP52，[397.6-447.6]，L2）[订正：原 OpenBSD 以 nginx 在基础系统中难以维护、且其自定义内存分配器遮蔽安全缓解机制为由，将其移出基础系统改由 ports 提供。（BSD Now EP52，[400.96-426.04]，L2），2026-09-30 SenseAudio 重转核对]
+- OpenBSD 将 BIND 与 nginx 一并移出基本系统：基本系统转而包含 nsd 与 unbound 供 5.6 与 5.7 用户过渡，BIND 可从 ports 获取最新版本，nginx 则为其新写的自定义 HTTP 守护进程让位。（BSD Now EP52，[397.6-447.6]，L2）[订正：原 OpenBSD 以 nginx 在基本系统中难以维护、且其自定义内存分配器遮蔽安全缓解机制为由，将其移出基本系统改由 ports 提供。（BSD Now EP52，[400.96-426.04]，L2），2026-09-30 SenseAudio 重转核对]
 
 **史料**：
 

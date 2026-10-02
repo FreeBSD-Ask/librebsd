@@ -10,7 +10,7 @@ volume: 第07卷-freebsd的工程体系重构
 
 ## 要点
 
-- Clang/LLVM 迁移仅是 FreeBSD 许可证纯洁化工程（License Purification）中最大的单一项目，整个替换工程历时十余年（约 2007-2024），覆盖基础系统中几乎所有 GNU 工具：① 编译器：GCC→Clang/LLVM（2009-2014 完成 i386/amd64）；②C++ 标准库：libstdc++→libc+++libcxxrt（David Chisnall（戴维·奇斯纳尔） 主导，9.1 可选，10.0 默认）；③ 链接器：GNU **ld(1)** → **lld(1)**（FreeBSD 12 成为 amd64/i386/armv7 bootstrap linker，后续版本全架构默认）；④ 调试器：GDB→LLDB（FreeBSD 12 将旧 **gdb(1)** 移至 `/usr/libexec/gdb` 仅供 **crashinfo(8)** 使用，交互式调试推荐 **lldb(1)** 或 ports/devel/gdb）；⑤ 二进制工具：GNU binutils（**ar(1)**/**as(1)**/**ld(1)**/**objdump(1)**/**ranlib(1)**/**nm(1)**/**readelf(1)**/**size(1)**/**strings(1)**/**strip(1)**）→ELF Tool Chain 项目（BSD 许可的 **ar(1)**/**ranlib(1)**/**readelf(1)**/**objdump(1)**/**nm(1)**/**size(1)**/**strings(1)**/**strip(1)**）+ LLVM 工具链；⑥ 构建工具：GNU make→bmake（从 NetBSD 移植，10.0 默认替换 **make(1)**）；⑦ 文本处理：GNU sort→BSD sort（2012 Q1 status report 报告 BSD-licensed sort 开发中，后导入 base）、GNU grep→BSD grep（约 FreeBSD 12/13 完成替换）、GNU diff→BSD diff、GNU patch→BSD patch（r246074 2013.1.29 导入，r253689 成为默认）；⑧ 手册页排版：**groff(1)**（GPL）→ **mandoc(1)**（mdocml）——由 OpenBSD Ingo Schwarze（英戈·施瓦茨） 开发的 BSD 许可手册页编译器；⑨DNS 服务器：BIND→Unbound（10.0 移除 BIND，导入 Unbound 作为本地缓存 DNS 解析器）；⑩ 软件包管理：pkg_install（BSD 许可但架构过时）→ **pkg(7)**（10.0 默认切换，非许可证驱动但同期完成）；⑪ 其他：GNU rcs 移除、GNU texinfo 替换、GNU dialog→BSD dialog（2024 年 FreeBSD 16-CURRENT 完成替换，最后一个 GPL 组件移除）。GPL 软件替换工程组件汇总见下表。
+- Clang/LLVM 迁移仅是 FreeBSD 许可证纯洁化工程（License Purification）中最大的单一项目，整个替换工程历时十余年（约 2007-2024），覆盖基本系统中几乎所有 GNU 工具：① 编译器：GCC→Clang/LLVM（2009-2014 完成 i386/amd64）；②C++ 标准库：libstdc++→libc+++libcxxrt（David Chisnall（戴维·奇斯纳尔） 主导，9.1 可选，10.0 默认）；③ 链接器：GNU **ld(1)** → **lld(1)**（FreeBSD 12 成为 amd64/i386/armv7 bootstrap linker，后续版本全架构默认）；④ 调试器：GDB→LLDB（FreeBSD 12 将旧 **gdb(1)** 移至 `/usr/libexec/gdb` 仅供 **crashinfo(8)** 使用，交互式调试推荐 **lldb(1)** 或 ports/devel/gdb）；⑤ 二进制工具：GNU binutils（**ar(1)**/**as(1)**/**ld(1)**/**objdump(1)**/**ranlib(1)**/**nm(1)**/**readelf(1)**/**size(1)**/**strings(1)**/**strip(1)**）→ELF Tool Chain 项目（BSD 许可的 **ar(1)**/**ranlib(1)**/**readelf(1)**/**objdump(1)**/**nm(1)**/**size(1)**/**strings(1)**/**strip(1)**）+ LLVM 工具链；⑥ 构建工具：GNU make→bmake（从 NetBSD 移植，10.0 默认替换 **make(1)**）；⑦ 文本处理：GNU sort→BSD sort（2012 Q1 status report 报告 BSD-licensed sort 开发中，后导入 base）、GNU grep→BSD grep（约 FreeBSD 12/13 完成替换）、GNU diff→BSD diff、GNU patch→BSD patch（r246074 2013.1.29 导入，r253689 成为默认）；⑧ 手册页排版：**groff(1)**（GPL）→ **mandoc(1)**（mdocml）——由 OpenBSD Ingo Schwarze（英戈·施瓦茨） 开发的 BSD 许可手册页编译器；⑨DNS 服务器：BIND→Unbound（10.0 移除 BIND，导入 Unbound 作为本地缓存 DNS 解析器）；⑩ 软件包管理：pkg_install（BSD 许可但架构过时）→ **pkg(7)**（10.0 默认切换，非许可证驱动但同期完成）；⑪ 其他：GNU rcs 移除、GNU texinfo 替换、GNU dialog→BSD dialog（2024 年 FreeBSD 16-CURRENT 完成替换，最后一个 GPL 组件移除）。GPL 软件替换工程组件汇总见下表。
 - 许可证纯洁化工程对 FreeBSD 生态产生了双重影响。正面影响：①base 系统彻底摆脱 GPL 许可证不确定性，商业用户可无顾虑地基于 FreeBSD 构建产品；② 工具链现代化（Clang 错误诊断、lld 高速链接、libc++ 完整 C++ 标准支持）显著改善开发体验；③ 部分 GNU 工具替换后性能提升（bmake 并行构建、lld 链接速度数倍于 GNU ld）；④ 推动了 ELF Tool Chain、mandoc 等 BSD 许可基础设施项目的发展；⑤ 为 arm64/AArch64 等新架构支持扫清编译器障碍（Clang 原生支持 AArch64，GCC 4.2.1 完全不支持）。负面影响：① 部分专业用户和 ports 软件仍需 GCC（通过 ports/devel/gcc 安装现代版本 GCC），导致系统存在双编译器现实；②GNU 工具替换初期存在功能缺失和兼容性问题（如 BSD sort/grep/diff 早期版本缺少部分 GNU 扩展）；③ 替换工程消耗了本可用于新功能开发的大量开发者资源；④ 部分架构（sparc64）因 Clang 支持不完善且 GCC 被移除而最终被废弃（sparc64 在 FreeBSD 13 降级为 Tier 2，14 后基本停止支持）；⑤GDB→LLDB 过渡中调试体验落差（LLDB 对 C++ 模板和多线程调试的支持初期不如 GDB）。
 - FreeBSD 许可证纯洁化运动自启动以来即面临“意识形态驱动而非工程需要”的批评。批评者（主要来自 GPL/Linux 阵营）认为：①GPLv3 的实际法律风险被夸大，FSF 明确表示 GPLv3§11 不会对非 GPL 代码产生“传染性”影响；② 为许可证纯洁性牺牲功能兼容性和用户便利性是教条主义；③ 十余年工具替换消耗巨大资源但并未带来相应技术收益；④Jordan Hubbard 等早期核心成员对 GPL 的批评带有强烈个人立场而非客观工程评估。FreeBSD 社区的回应包括：①GCC 4.2.1 无法编译 C++11 代码，继续冻结意味着 C++ 生态永久停留在 2003 标准，迁移在工程上是必要的；②Clang 在编译速度、错误诊断、静态分析、IDE 集成、模块化等方面确实技术上优于旧 GCC；③Apple、Google、Microsoft、Sony 等大公司对 LLVM 的持续投入保证了项目的长期生命力；④base 系统许可证纯洁化降低了商业用户的法律风险，扩大了 FreeBSD 的企业采用。
 - 许可证纯洁化工程的史料主要散落在各版本 Release Notes、Quarterly Status Reports、svn commit log 和邮件列表中，缺乏单一的官方文档完整叙述整个工程。这导致外部叙述常将整个工程简化为“GCC→Clang”单一事件，忽略了 bmake、mandoc、ELF Tool Chain、BSD sort/grep/patch、lld、lldb、libc++、Unbound、dialog 替换等十余个平行项目。部分工具替换的时间线和具体贡献者记录不完整，需通过 svn commit 历史逐步追溯。
@@ -18,7 +18,7 @@ volume: 第07卷-freebsd的工程体系重构
 
 ## 史观
 
-- 总纲第 13 条——法律与道德是利益分配：FreeBSD 的许可证纯洁化工程是开源历史上规模最大的系统性 GPL 代码替换运动。这不是单一决策的结果，而是持续十余年的“逐点清除”工程，每个 GNU 工具的替换都是独立的工程项目，有各自的时间表和贡献者。整个工程的核心理念是：基础系统（base system）应完全由 BSD 或 BSD 兼容许可证（如 MIT、ISC、Apache 2.0）的代码构成，将 GPL 代码逐出基础系统。
+- 总纲第 13 条——法律与道德是利益分配：FreeBSD 的许可证纯洁化工程是开源历史上规模最大的系统性 GPL 代码替换运动。这不是单一决策的结果，而是持续十余年的“逐点清除”工程，每个 GNU 工具的替换都是独立的工程项目，有各自的时间表和贡献者。整个工程的核心理念是：基本系统（base system）应完全由 BSD 或 BSD 兼容许可证（如 MIT、ISC、Apache 2.0）的代码构成，将 GPL 代码逐出基本系统。
 - 总纲第 22 条——知识注定过时：Hubbard 的 GPL 批评是 1990 年代 “BSD vs GPL” 圣战的典型话语，这种话语在当时的 Usenet 和邮件列表中普遍存在，反映了自由软件运动内部 copyleft 阵营与宽容许可阵营的深刻分歧。
   - 辨析：Hubbard 的 GPL 批评必须置于其历史语境中理解——1990 年代是 BSDi vs USL 诉讼刚结束、Linux 刚兴起、开源一词刚被创造（1998）的时代，许可证圣战是当时社区文化的常态。
 - 总纲第 6 条——和解优于斗争：1990 年代 Usenet 圣战言论在 2020 年代被抽离语境反复引用，成为制造 “BSD vs Linux” 对立的素材。历史书写应还原话语语境而非强化刻板印象。
@@ -91,13 +91,13 @@ volume: 第07卷-freebsd的工程体系重构
 
 - 总纲10 动手者创造历史：Kyle 以“找让自己不舒服的问题”为切入点，从具体缺陷入手参与系统开发，体现动手者以具体工程推动项目。（BSD Now EP373，[1604.00-1770.17]，L1）
 - 总纲9 经验优先：访谈强调通过实际项目学习并建立人际网络以获取经验，而非单纯阅读文档。（BSD Now EP373，[1639.55-1710.47]，L1）
-- 总纲13 法律与道德是利益分配：以 BSD ISC 许可证对 GPL 工具做净室重实现，是许可证边界对工程行动的直接塑造：一个工具的许可证选择决定了它能否进入基础系统。（BSD Now EP282，[1554.64-1579.10]，L2）
+- 总纲13 法律与道德是利益分配：以 BSD ISC 许可证对 GPL 工具做净室重实现，是许可证边界对工程行动的直接塑造：一个工具的许可证选择决定了它能否进入基本系统。（BSD Now EP282，[1554.64-1579.10]，L2）
 - 总纲10 动手者创造历史：Spotifyd 以 Rust 重写后更容易跨平台，配合 NetBSD 的可移植性传统，把应用生态延伸到从大型机到嵌入式设备等非主流平台。（BSD Now EP282，[851.88-894.04]，L2）
 
 **辨析**：
 
 - bsdgrep 尚未完整支持 GNU 扩展，替换 base 中 GNU grep 的时机与兼容性范围仍待评估。　[存疑脚注] GNU 扩展兼容范围待核实（BSD Now EP373，[394.32-426.70]，L4）
-- openrsync 的“净室重实现”表述来自作者与主持人转述，其兼容性目标（3.1.3 基准）与安全机制（pledge/unveil）在 2019 年初仍属进行时状态，须以项目仓库与后续发布记录核验完成度。　[存疑脚注] 项目完成度与最终进入基础系统的时点未经一手仓库核对。（BSD Now EP282，[1554.64-1695.70]，L4）
+- openrsync 的“净室重实现”表述来自作者与主持人转述，其兼容性目标（3.1.3 基准）与安全机制（pledge/unveil）在 2019 年初仍属进行时状态，须以项目仓库与后续发布记录核验完成度。　[存疑脚注] 项目完成度与最终进入基本系统的时点未经一手仓库核对。（BSD Now EP282，[1554.64-1695.70]，L4）
 - Chisnall 对 GPL 与 BSD 许可影响厂商参与方式的结构性对比（开发者立场陈述，可与书内其他核心开发者立场互证）：GPL 如同围绕代码的“防火墙”，企业以巨型抽象层隔离专有部分与 GPL 部分确保互不接触，日后即便想上游化，其厚重的抽象层代码也非项目所欲；BSD 许可下企业先直接取用代码构建专有产品，一两年后因维护合并成本上升而主动请求将其代码收入上游树——“我们喜欢功能，我们收下了”。Netflix 为典型案例：愿意上游化几乎全部更改，但其中仅针对其特定负载的几百行优化项目方暂不接收，留待未来出现同类需求再行整合。此亦为 Chisnall 推动无 GPL 可用基本系统以争取各类企业参与的哲学依据。（BSD Now EP36，[1643.78-1758.94]，L1）
 
 **文献**：

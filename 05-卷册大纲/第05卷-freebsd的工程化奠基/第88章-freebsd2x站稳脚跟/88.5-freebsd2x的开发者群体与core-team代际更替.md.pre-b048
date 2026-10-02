@@ -17148,7 +17148,7 @@ FreeBSD 核心 Jordan Hubbard 述核心成员多无 IDE 盘，靠捐款购置 ID
 <!-- ROW_MINE: freebsd-stable.messages.2592375 -->
 **当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-208531`；2026-09-23 freebsd-stable 战线全库行级遍历考据采纳）
 
-1998 年 8 月 2 日，Olaf Erb 确认 addgroup 与 rmgroup 早在 Tcl 被移出基础系统时就已一并移除，并非最近才消失。引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+1998 年 8 月 2 日，Olaf Erb 确认 addgroup 与 rmgroup 早在 Tcl 被移出基本系统时就已一并移除，并非最近才消失。引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 
 <!-- ROW_MINE: freebsd-stable.messages.2592377 -->
 **当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-208532`；2026-09-23 freebsd-stable 战线全库行级遍历考据采纳）
@@ -26918,7 +26918,7 @@ FreeBSD 核心 Jordan Hubbard 述核心成员多无 IDE 盘，靠捐款购置 ID
 <!-- ROW_MINE: freebsd-hackers.messages.2522374 -->
 **当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-241095`；2026-09-25 freebsd-hackers 战线全库行级遍历考据采纳）
 
-1997 年 2 月 25 日，Michael Smith 追问 mkisofs 是否来自 2.1 遗留或 sysutils port，说它已从基础系统移除，认为它是糟糕的作品日期戳很可能完全弄错，看过 tree.c 让人不安，建议加几行调试 printf。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+1997 年 2 月 25 日，Michael Smith 追问 mkisofs 是否来自 2.1 遗留或 sysutils port，说它已从基本系统移除，认为它是糟糕的作品日期戳很可能完全弄错，看过 tree.c 让人不安，建议加几行调试 printf。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
 
 <!-- ROW_MINE: freebsd-hackers.messages.2522375 -->
 **当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-241096`；2026-09-25 freebsd-hackers 战线全库行级遍历考据采纳）
@@ -30218,7 +30218,7 @@ FreeBSD 核心 Jordan Hubbard 述核心成员多无 IDE 盘，靠捐款购置 ID
 <!-- ROW_MINE: freebsd-stable.messages.2598402 -->
 **当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-243742`；2026-09-25 freebsd-stable 战线全库行级遍历考据采纳）
 
-1999 年 7 月 14 日，Gregory Bond指出包格式只能依赖其他端口或包，无法依赖基础系统的可选项，故compat22这类依赖根本无处表达。引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+1999 年 7 月 14 日，Gregory Bond指出包格式只能依赖其他端口或包，无法依赖基本系统的可选项，故compat22这类依赖根本无处表达。引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 
 <!-- ROW_MINE: freebsd-stable.messages.2598431 -->
 **当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-243765`；2026-09-25 freebsd-stable 战线全库行级遍历考据采纳）
@@ -30328,7 +30328,7 @@ FreeBSD 核心 Jordan Hubbard 述核心成员多无 IDE 盘，靠捐款购置 ID
 <!-- ROW_MINE: freebsd-hackers.messages.2524078 -->
 **当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-248208`；2026-09-25 freebsd-hackers 战线全库行级遍历考据采纳）
 
-1997 年 7 月 11 日，Michael Smith 就 David E Cross 询问 2.2-RELENG 与 2.2.2-RELEASE 稳定性答一般 RELENG 更稳定，并称 libXt 安全洞早已修复，libXt 属 XFree86 独立发行而非 FreeBSD，升级 X 不必改基础系统。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+1997 年 7 月 11 日，Michael Smith 就 David E Cross 询问 2.2-RELENG 与 2.2.2-RELEASE 稳定性答一般 RELENG 更稳定，并称 libXt 安全洞早已修复，libXt 属 XFree86 独立发行而非 FreeBSD，升级 X 不必改基本系统。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
 
 <!-- ROW_MINE: freebsd-hackers.messages.2524079 -->
 **当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-248209`；2026-09-25 freebsd-hackers 战线全库行级遍历考据采纳）

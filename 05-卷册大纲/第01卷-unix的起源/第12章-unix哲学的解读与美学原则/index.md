@@ -47,7 +47,7 @@ volume: 第01卷-unix的起源
 
 - 该期转述 Thomas Scoville 1998 年《The Elements of Style: Unix as Literature》一文，将 Unix 内核视为少数思维同步者的共同创作，主张 Unix 传统根植于以文本、命令行为核心的文字文化，并与 Windows NT 的点选式图像文化形成对照；作者以文学修养解释 Unix 从业者中人文背景者比例偏高的现象。（BSD Now EP523，[568.60-865.28]，L2）
 - 节目借 shell 隐式按空白分词导致文件名与参数被错误拆分的问题，回溯约 1979 年 Steve Bourne 引入 `$*` 后因其实用性不足而增补 `$@` 特殊情形的实现史，并称这一未纠正的设计缺陷长期困扰 shell 编程，rc shell 因规避此问题而受到推荐。（BSD Now EP523，[882.48-1382.28]，L2）
-- 节目摘录 Theo de Raadt 在 OpenBSD tech 邮件列表对 Zenbleed 漏洞的评估：OpenBSD 基础系统很少使用 AVX 指令，影响远小于依赖 glibc AVX 优化的 Linux；OpenBSD 已通过 current 快照与后续 errata 修复，并提醒用户必须手工安装引导块以加载 CPU 固件更新。（BSD Now EP523，[1393.64-1582.44]，L1）
+- 节目摘录 Theo de Raadt 在 OpenBSD tech 邮件列表对 Zenbleed 漏洞的评估：OpenBSD 基本系统很少使用 AVX 指令，影响远小于依赖 glibc AVX 优化的 Linux；OpenBSD 已通过 current 快照与后续 errata 修复，并提醒用户必须手工安装引导块以加载 CPU 固件更新。（BSD Now EP523，[1393.64-1582.44]，L1）
 - 其余新闻包括 OPNsense 23.7 以 FreeBSD 13.2 为基础内核发布、Brian Robert Callahan 将 PCC 可移植 C 编译器移植到 illumos，以及用户因 ThinkPad BIOS 白名单和 Linux 无线驱动 GPL 兼容性限制而通过更换网卡修复 FreeBSD 无线支持。（BSD Now EP523，[1586.96-2244.58]，L2）
 
 **史料**：
@@ -65,7 +65,7 @@ volume: 第01卷-unix的起源
 **辨析**：
 
 - Scoville 一文的文化判断以个人见闻为主，作者自述其证据粗略且轶事化，因此其文字文化与图像文化的概括应视为个人观察而非统计结论。　[存疑脚注] 该判断来自单一作者的事后文化观察，未见系统抽样或多源数据支撑。（BSD Now EP523，[568.60-865.28]，L4）
-- Zenbleed 影响评估来自 OpenBSD 一方，称基础系统少用 AVX，但浏览器等第三方程序仍可能触发泄漏，需结合 AMD 官方披露与独立复现实验交叉验证。　[存疑脚注] OpenBSD 视角的评估需与 AMD 官方技术通报及独立测试结果交叉验证后方可采信。（BSD Now EP523，[1393.64-1582.44]，L4）
+- Zenbleed 影响评估来自 OpenBSD 一方，称基本系统少用 AVX，但浏览器等第三方程序仍可能触发泄漏，需结合 AMD 官方披露与独立复现实验交叉验证。　[存疑脚注] OpenBSD 视角的评估需与 AMD 官方技术通报及独立测试结果交叉验证后方可采信。（BSD Now EP523，[1393.64-1582.44]，L4）
 
 **文献**：
 

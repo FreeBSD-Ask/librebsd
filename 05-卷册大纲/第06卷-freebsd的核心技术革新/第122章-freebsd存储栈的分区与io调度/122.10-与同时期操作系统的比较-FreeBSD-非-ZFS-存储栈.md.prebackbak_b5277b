@@ -664,7 +664,7 @@
 <!-- ROW_MINE: freebsd-fs.messages.1203141 -->
 **当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-306386`；2026-09-28 freebsd-fs 战线 全库行级遍历考据采纳）
 
-2019 年 4 月 19 日，Kris 发布 FreeBSD 搭配 ZFS on Linux 的测试镜像，基于 FreeBSD 12-stable 与 13-HEAD 构建，禁用基础系统 ZFS 并预装 ports 中的 zol 与 zol-kmod，根文件系统可用 UFS 或 ZFS。引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+2019 年 4 月 19 日，Kris 发布 FreeBSD 搭配 ZFS on Linux 的测试镜像，基于 FreeBSD 12-stable 与 13-HEAD 构建，禁用基本系统 ZFS 并预装 ports 中的 zol 与 zol-kmod，根文件系统可用 UFS 或 ZFS。引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 
 <!-- ROW_MINE: freebsd-fs.messages.1203645 -->
 **当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-306594`；2026-09-28 freebsd-fs 战线 全库行级遍历考据采纳）
@@ -709,7 +709,7 @@
 <!-- ROW_MINE: freebsd-fs.messages.1208454 -->
 **当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-315366`；2026-09-29 freebsd-fs 战线 全库行级遍历考据采纳）
 
-2024 年 2 月 24 日，Hannes Hauswedell 表示虽会去列表询问但仍认为当前行为是缺陷，因基础系统关键网络组件默认只达理论性能不足两成约为 Linux 同组件三分之一。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
+2024 年 2 月 24 日，Hannes Hauswedell 表示虽会去列表询问但仍认为当前行为是缺陷，因基本系统关键网络组件默认只达理论性能不足两成约为 Linux 同组件三分之一。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。
 
 <!-- ROW_MINE: freebsd-fs.messages.1208802 -->
 **当事人自述**（证据等级：L3，来源：`historical_claims.duckdb.claim.CL-RM-315532`；2026-09-29 freebsd-fs 战线 全库行级遍历考据采纳）

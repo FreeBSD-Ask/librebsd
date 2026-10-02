@@ -4828,7 +4828,7 @@
 <!-- ROW_MINE: freebsd-ipfw.messages.1367101 -->
 **当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-124742`；2026-09-19 freebsd-ipfw 战线全库行级遍历考据采纳）
 
-2020 年 6 月 5 日，Peter 指出 dummynet 设 io_fast=1 时立即交付的包根本不经过 pipe，关闭后即可复现丢包，实际是包被插回基础系统的规则集而非 jail 的规则集，认为 dummynet 需感知监狱。引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+2020 年 6 月 5 日，Peter 指出 dummynet 设 io_fast=1 时立即交付的包根本不经过 pipe，关闭后即可复现丢包，实际是包被插回基本系统的规则集而非 jail 的规则集，认为 dummynet 需感知监狱。引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 
 <!-- ROW_MINE: freebsd-ipfw.messages.1367110 -->
 **当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-124743`；2026-09-19 freebsd-ipfw 战线全库行级遍历考据采纳）

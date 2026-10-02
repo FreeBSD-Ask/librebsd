@@ -61,7 +61,7 @@ volume: 第10卷-openbsd的历史
 
 - Florian Obser 阐述 OpenBSD 三类利用缓解：降权、权限分离与受限服务操作模式，作为攻击者达成任意代码执行后的最后防线；降权是最弱但最古老的缓解，权限分离将不可信数据解析移入低权限进程，受限模式则以 pledge 限制进程能力。（BSD Now EP498，[514.74-603.96]，L2）
 - Obser 回溯 ping 降权的历史：Theo de Raadt 逾 26 年前重构 ping，使其先打开原始套接字再丢弃 root 权限，以防本地用户借 ping 缺陷提权；二十年后又发现以 root 调用 ping 时只是从 root 降到 root，遂改为降级到专用用户。（BSD Now EP498，[598.70-632.26]，L2）
-- Obser 叙述 pledge 的由来：systrace 由 Niels Provos 开发但因基于系统调用参数而难用，OpenBSD 基础系统中长期仅 sshd 使用；2015 年 Theo 诱使 Nicholas Marriott 用 systrace 沙箱 file 却只坚持半年，成为压垮性体验，Theo 遂开发 tame（后改名 pledge）。（BSD Now EP498，[784.74-861.42]，L2）
+- Obser 叙述 pledge 的由来：systrace 由 Niels Provos 开发但因基于系统调用参数而难用，OpenBSD 基本系统中长期仅 sshd 使用；2015 年 Theo 诱使 Nicholas Marriott 用 systrace 沙箱 file 却只坚持半年，成为压垮性体验，Theo 遂开发 tame（后改名 pledge）。（BSD Now EP498，[784.74-861.42]，L2）
 - pledge 通过对 OpenBSD 基础程序的需求归类而成，程序违规即被内核以不可捕获的 SIGABRT 终止；当约 50 个程序加入 pledge 后被认为成熟并合入主线，半年内几乎所有基础程序均使用 pledge。（BSD Now EP498，[861.42-931.54]，L2）
 - 其余新闻包括 OPNsense 23.1.1 发布、Ansible Clone 工具、NetBSD 在 FOSDEM 2023 的 BSD dev room 报告、FreeBSD Foundation 的 BSDCan 旅行资助，以及 Game of Trees 0.81 与 x-only PKU、pinsyscall 等 OpenBSD 新进展。（BSD Now EP498，[1156.64-2330.00]，L2）
 - Provost 论证 FreeBSD PF 的 IPv6 分片处理缺陷：PF 重组分片并做出过滤决策后，IPv4 下可交回协议栈重新分片，而 IPv6 为保住路径 MTU 发现必须把分片集合原样送出，netpfil 接口却只支持一包进一包出；PF 目前自行调用 ip6_output 或 ip6_forward，既构成层级违例又存在输出/转发判断错误，特定情形下导致 panic 或丢包；OpenBSD 由协议栈告知 PF 数据包方向的做法可资借鉴，计划中的改造是让 netpfil 支持一包进一堆出，并预期 IPFW 处理 IPv6 分片时同样受益。（BSD Now EP144，[1579.66-1853.0]，L1）[订正：原 [1579.66-1794.88]，2026-09-30 SenseAudio 重转核对]
@@ -84,7 +84,7 @@ volume: 第10卷-openbsd的历史
 **史观**：
 
 - 总纲10 动手者创造历史：安全机制由开发者逐个程序地审计与归类累积而成，而非一次性顶层设计。：Theo 与 Obser 等通过逐个程序的重构与需求归类塑造 OpenBSD 安全机制。（BSD Now EP498，[861.42-931.54]，L2）
-- 总纲9 经验优先：以基础系统中真实程序的可用性经验为标准，淘汰难以使用的 systrace。：systrace 因难用而被 pledge 取代，设计取舍来自真实程序的实践经验。（BSD Now EP498，[784.74-861.42]，L2）
+- 总纲9 经验优先：以基本系统中真实程序的可用性经验为标准，淘汰难以使用的 systrace。：systrace 因难用而被 pledge 取代，设计取舍来自真实程序的实践经验。（BSD Now EP498，[784.74-861.42]，L2）
 - 总纲5 没有必然性，只有偶然性：pledge 的诞生由 systrace 实践中的偶然挫败触发，而非预先规划。：file 沙箱半年即弃的偶然失败促成 tame 与 pledge 的诞生。（BSD Now EP498，[784.74-861.42]，L2）
 - 总纲10 动手者创造历史：本期是动手者创造历史的微观样本：Kristof Provost 的入坑起因只是“因为它跑不起来”，为修一块 Marvell 板卡上的问题从此一直在找 bug，补丁经批评、测试、合并的循环把他卷成 committer；Michael W. Lucas 因深夜 DNS 管理员离职被顶上岗位、为睡安稳觉换掉 Unixware 与 Solaris 转向 BSD；系统的演进正由这类具体修补与无名测试者的反馈累积而成。（BSD Now EP144，[1277.0-1366.4]，L1）[订正：原 [1306.72-1354.34]，2026-09-30 SenseAudio 重转核对]
 - 总纲22 知识注定过时：工程知识的过时性在本期反复显形：grub-bhyve 被当事人定性为“一直只是权宜之计”，单命令 EFI 启动才是长期目标；McCorkle 判定自建的 boot1 非 EFI 提供者框架与 EFI 框架既有功能重复、接口别扭且无法向内核传递密钥，重构后 boot1 缩为一个很小的源文件并与 loader 共享全部后端驱动，bcache 成为通向 EFI 驱动模型与热插拔支持的唯一阻碍——每一代被视为完成的方案，都会成为下一代重构的对象。（BSD Now EP144，[2612.8-2747.6]，L2）[订正：原 [2619.86-2734.50]，2026-09-30 SenseAudio 重转核对]

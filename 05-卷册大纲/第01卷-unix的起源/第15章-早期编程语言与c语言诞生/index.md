@@ -19,14 +19,14 @@ volume: 第01卷-unix的起源
 
 ## 史观
 
-总纲第 4 条——分离聚合是永恒规律：BCPL→B→C 的语言谱系与 ALGOL 经中介的影响路径是语言设计的分离—聚合循环（据要点 1 与辨析 1）；总纲第 8 条——本体论上各方平等：Wirth 学派与 UNIX 哲学的张力是两种语言文化形态的并行呈现，无高下裁断（据要点 3 与辨析 3）；总纲第 9 条——经验优先：C 的“怪癖却有巨大成功”以工程实效经验回应纯粹性批评（据辨析 3）；总纲第 5 条——没有必然性，只有偶然性：Lisp 生态在 FreeBSD 的存续规模系社区偶然分布，Fortran 工具链的基础系统收录与移除系版本策略的偶然节点（据要点 2/4 与辨析 2/4）；总纲第 22 条——知识注定过时：f77/g77/flang 的工具链迭代使 Fortran 支持史的结论随时点变化（据辨析 4）。（2026-09-12 整改：史观字段按批次 B013 回填，映射依 25 条权威表）
+总纲第 4 条——分离聚合是永恒规律：BCPL→B→C 的语言谱系与 ALGOL 经中介的影响路径是语言设计的分离—聚合循环（据要点 1 与辨析 1）；总纲第 8 条——本体论上各方平等：Wirth 学派与 UNIX 哲学的张力是两种语言文化形态的并行呈现，无高下裁断（据要点 3 与辨析 3）；总纲第 9 条——经验优先：C 的“怪癖却有巨大成功”以工程实效经验回应纯粹性批评（据辨析 3）；总纲第 5 条——没有必然性，只有偶然性：Lisp 生态在 FreeBSD 的存续规模系社区偶然分布，Fortran 工具链的基本系统收录与移除系版本策略的偶然节点（据要点 2/4 与辨析 2/4）；总纲第 22 条——知识注定过时：f77/g77/flang 的工具链迭代使 Fortran 支持史的结论随时点变化（据辨析 4）。（2026-09-12 整改：史观字段按批次 B013 回填，映射依 25 条权威表）
 
 ## 辨析
 
 - ALGOL 对 C 的影响常被夸大——C 语言的直接前身是 BCPL（Richards 1969）与 B（Thompson 1970），ALGOL 60 的块结构与 `for`/`while` 语法经 BCPL 中介传入 C，Ritchie 1993 论文明确将 C 的谱系定位为 "BCPL→B→C" 而非 "ALGOL→C"
 - FreeBSD Lisp 生态的实际使用规模无精确统计——Ports 下载量数据由 FreeBSD Foundation 内部持有未公开发布，邮件列表 freebsd-lisp 与 freebsd-common-lisp 讨论频率长期低位稳定，未形成规模性用户群——本条按现有可观察数据收束，Ports 下载量统计缺口登记待补（2026-09-12 整改：截断标记删除——批次 B013 问题 2）
 - Wirth 学派与 UNIX 哲学的张力为路线分歧的必然产物——Wirth 1984 Turing Award 演讲 "From Programming Language Design to Computer Construction" 明确批评 UNIX 的松散类型与 “实用主义妥协”，Ritchie 1993 "The Development of the C Language" 则以 “C is quirky, flawed, and an enormous success”（C 怪癖、有缺陷却取得巨大成功）的自评回应纯粹性批评——以实用成果而非类型严谨作为辩护基础（2026-09-12 整改：截断按 Ritchie HOPL-II 论文自评名句补全，出处见文献——批次 B013 问题 3）
-- FreeBSD 基础系统中 Fortran 支持的终止时间——FreeBSD 10.0 移除 GCC 后基础系统不再包含 Fortran 编译器，用户需通过 Ports 安装 lang/gcc（含 gfortran）；f2c 曾长期在 Ports 中提供（lang/f2c）；[考据脚注] FreeBSD 1.1（1994-05-01）起基础系统已含 f77/f2c/libF77 完整工具链一事经 freebsd.duckdb 交叉印证（仓库 commit `a16f65c7d117` 载 f77/f2c/libF77 收录记录）（2026-09-12 整改：截断按核查指引补全——批次 B013 问题 4）
+- FreeBSD 基本系统中 Fortran 支持的终止时间——FreeBSD 10.0 移除 GCC 后基本系统不再包含 Fortran 编译器，用户需通过 Ports 安装 lang/gcc（含 gfortran）；f2c 曾长期在 Ports 中提供（lang/f2c）；[考据脚注] FreeBSD 1.1（1994-05-01）起基本系统已含 f77/f2c/libF77 完整工具链一事经 freebsd.duckdb 交叉印证（仓库 commit `a16f65c7d117` 载 f77/f2c/libF77 收录记录）（2026-09-12 整改：截断按核查指引补全——批次 B013 问题 4）
 
 ## 文献
 

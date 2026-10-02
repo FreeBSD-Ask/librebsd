@@ -689,7 +689,7 @@
 - 【Linux社区】James Morris：键用途限制普遍合理论——即便信任厂商键也会被偷，限制键用途=限制损害 `<!-- ROW_MINE: ksummit-discuss.messages.345360 -->`
 - 【Linux社区】Laurent Pinchart：个人主线化难点——树外厂商代码质量堪忧、需内核 guru 技能（稀缺）而有技能者缺时间、需预算 `<!-- ROW_MINE: ksummit-discuss.messages.345361 -->`
 - 【Linux社区】Daniel Vetter：Tim Bird 表格勘误——Video=drivers/video 即 legacy fbdev horror-show，应改名 GPU (legacy)、上游该成 drm gpu driver（atomic modesetting 已合入） `<!-- ROW_MINE: ksummit-discuss.messages.345362 -->`
-- 【Linux社区】Bintian Wang：华为 HiKey 主线化第一手——月前提交 HiKey（荣耀 4X 原型）基础系统+clock 驱动；教训：原显示驱动基于 Framebuffer 须按 DRM 重构——按当前子系统要求开发驱动 `<!-- ROW_MINE: ksummit-discuss.messages.345363 -->`
+- 【Linux社区】Bintian Wang：华为 HiKey 主线化第一手——月前提交 HiKey（荣耀 4X 原型）基本系统+clock 驱动；教训：原显示驱动基于 Framebuffer 须按 DRM 重构——按当前子系统要求开发驱动 `<!-- ROW_MINE: ksummit-discuss.messages.345363 -->`
 - 【Linux社区】Pavel Machek：N900 个人主线化实例——耗时但几乎可用（PM 工作+ofono 控制代码合理化后即可用） `<!-- ROW_MINE: ksummit-discuss.messages.345364 -->`
 - 【Linux社区】Heiko Stübner：Rockchip 个人主线化自述——从 vendor kernel 逆向 GPL 源码建寄存器映射文档；vendor clock tree 150K 行 C/SoC 难读；最大障碍 clock tree+pinctrl（dt-bindings 返工）；外部 IP（dw-uart/dw-mmc/dw-hdmi）多故后续驱动较易；主线化=学习成长之径 `<!-- ROW_MINE: ksummit-discuss.messages.345365 -->`
 - 【Linux社区】David Woodhouse：固件文件名=soname 论——ABI 兼容修复/性能改进不需改驱动；仅驱动须改与固件对话方式才改文件名（Josh 熟悉驱动 Doing It Wrong） `<!-- ROW_MINE: ksummit-discuss.messages.345366 -->`

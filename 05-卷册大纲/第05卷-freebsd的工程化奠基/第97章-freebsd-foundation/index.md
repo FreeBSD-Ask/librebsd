@@ -94,7 +94,7 @@ FreeBSD 社区论文：[FP-1998-002] Malloc(3) revisited（Poul-Henning Kamp，1
 
 <!-- DB_REF:freebsd.duckdb -->
 > **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 1996-2010 年间：482,545 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
-- FreeBSD 相关记录（详情见存疑库；本条为自动抽取块，未经人工核验，引用前须逐条验证）。文献 (Code, 2024) 提及 Tetlow, Gordon〔存疑：原文记作“FreeBSD Foundation 执行董事”，与 97.11 报告（Goodkin 任执行总监）及 EP616 口述冲突，Gordon Tetlow 系开发者，职务归属待核〕，在基金会治理和项目战略规划中发挥关键作用。文献 (FreeBSD-Foundation-April-2016-Update, 2016) 提及 Neville-Neil, George，作为 FreeBSD Core Team 成员，在存储系统方面做出了重要贡献。文献 (FreeBSD-Foundation-August-2016-Update, 2016) 提及 Baldwin, John，作为 FreeBSD 核心开发者，在内核修复和架构支持方面做出了重要贡献。文献 (FreeBSD-Foundation-December-2016-Update, 2016) 提及 Watson, Robert N. M.，以基金会董事会成员身份在上海 BSD 聚会中发表了演讲。文献 (FreeBSD-Foundation-January-2018-Update, 2018) 提及 Percival, Colin，作为 Tarsnap 总裁，对 FreeBSD 安全更新基础设施做出了重要贡献。**新增技术**文献 (Code, 2024) 讨论 bhyve，该安全审计报告对 Capsicum 和 bhyve 子系统进行了全面的安全审查。文献 (Code, 2024) 讨论 FreeBSD，该报告由 FreeBSD Foundation 于 2024 年 11 月发布。文献 (FreeBSD-Foundation-April-2016-Update, 2016) 讨论 Ports Collection，FreeBSD 社区贡献者持续将改进和错误修复贡献回上游项目。文献 (FreeBSD-Foundation-December-2016-Update, 2016) 讨论 DTrace，社区成员对 Jails、DTrace 和 ZFS 等主题表现出浓厚兴趣。文献 (FreeBSD-Foundation-February-2018-Update, 2018) 讨论 lld，FreeBSD 工具链现代化项目将 LLVM 的 LLD 链接器引入基础系统。文献 (FreeBSD-Foundation-January-2018-Update, 2018) 讨论 clang，FreeBSD 在基础系统中采用 Clang 编译器作为默认编译器。**新增时间线事件**文献 (Code, 2024) 记录 2019：FreeBSD 安全公告涉及 CVE-2019-5607 漏洞。文献 (Code, 2024) 记录 2019：该安全公告涉及的漏洞模式分析。文献 (FreeBSD-Foundation-April-2016-Update, 2016) 记录 2012：FreeBSD 项目在 NYI 数据中心部署了东海岸镜像站点。文献 (FreeBSD-Foundation-April-2016-Update, 2016) 记录 2015：FreeBSD 测试集群在 2015 年底进行了重大升级。文献 (FreeBSD-Foundation-April-2018-Update, 2018) 记录 2018：FreeBSD 基金会参加了 Rootconf 2018 和 BSDCan 2018 等社区活动。文献 (FreeBSD-Foundation-April-2018-Update, 2018) 记录 2018：FreeBSD 基金会 2018 年 4 月更新，涵盖 Rootconf 2018 和 BSDCan 2018 
+- FreeBSD 相关记录（详情见存疑库；本条为自动抽取块，未经人工核验，引用前须逐条验证）。文献 (Code, 2024) 提及 Tetlow, Gordon〔存疑：原文记作“FreeBSD Foundation 执行董事”，与 97.11 报告（Goodkin 任执行总监）及 EP616 口述冲突，Gordon Tetlow 系开发者，职务归属待核〕，在基金会治理和项目战略规划中发挥关键作用。文献 (FreeBSD-Foundation-April-2016-Update, 2016) 提及 Neville-Neil, George，作为 FreeBSD Core Team 成员，在存储系统方面做出了重要贡献。文献 (FreeBSD-Foundation-August-2016-Update, 2016) 提及 Baldwin, John，作为 FreeBSD 核心开发者，在内核修复和架构支持方面做出了重要贡献。文献 (FreeBSD-Foundation-December-2016-Update, 2016) 提及 Watson, Robert N. M.，以基金会董事会成员身份在上海 BSD 聚会中发表了演讲。文献 (FreeBSD-Foundation-January-2018-Update, 2018) 提及 Percival, Colin，作为 Tarsnap 总裁，对 FreeBSD 安全更新基础设施做出了重要贡献。**新增技术**文献 (Code, 2024) 讨论 bhyve，该安全审计报告对 Capsicum 和 bhyve 子系统进行了全面的安全审查。文献 (Code, 2024) 讨论 FreeBSD，该报告由 FreeBSD Foundation 于 2024 年 11 月发布。文献 (FreeBSD-Foundation-April-2016-Update, 2016) 讨论 Ports Collection，FreeBSD 社区贡献者持续将改进和错误修复贡献回上游项目。文献 (FreeBSD-Foundation-December-2016-Update, 2016) 讨论 DTrace，社区成员对 Jails、DTrace 和 ZFS 等主题表现出浓厚兴趣。文献 (FreeBSD-Foundation-February-2018-Update, 2018) 讨论 lld，FreeBSD 工具链现代化项目将 LLVM 的 LLD 链接器引入基本系统。文献 (FreeBSD-Foundation-January-2018-Update, 2018) 讨论 clang，FreeBSD 在基本系统中采用 Clang 编译器作为默认编译器。**新增时间线事件**文献 (Code, 2024) 记录 2019：FreeBSD 安全公告涉及 CVE-2019-5607 漏洞。文献 (Code, 2024) 记录 2019：该安全公告涉及的漏洞模式分析。文献 (FreeBSD-Foundation-April-2016-Update, 2016) 记录 2012：FreeBSD 项目在 NYI 数据中心部署了东海岸镜像站点。文献 (FreeBSD-Foundation-April-2016-Update, 2016) 记录 2015：FreeBSD 测试集群在 2015 年底进行了重大升级。文献 (FreeBSD-Foundation-April-2018-Update, 2018) 记录 2018：FreeBSD 基金会参加了 Rootconf 2018 和 BSDCan 2018 等社区活动。文献 (FreeBSD-Foundation-April-2018-Update, 2018) 记录 2018：FreeBSD 基金会 2018 年 4 月更新，涵盖 Rootconf 2018 和 BSDCan 2018 
 <!-- DB_REF:freebsd.duckdb -->> **数据库引用（freebsd.duckdb）**：本子节对应 freebsd 代码仓库。> 2000-2000 年间：29,754 次提交。> 仓库总览：1,294,851 次提交，5,671 位贡献者（contributors 表行数，1993-06-12 至 2026-08-25）。
 
 - IRS EO Select Check；Foundation 历年 990 表［考据注：2026-07-28 联网考据留痕，模板句式已按考据审慎原则精简（WO-004）；语义以正文与所引来源为准］
@@ -117,7 +117,7 @@ FreeBSD 社区论文：[FP-1998-002] Malloc(3) revisited（Poul-Henning Kamp，1
 
 - 主持人介绍 FreeBSD Day 的 31 周年庆祝，并转述一篇综述文章对 FreeBSD 历史的阶段划分：1993 年 1.0 首发，2.0 与 2.1 引入 ports 集合，3.0 引入 GEOM 框架与对称多处理改进，4.x 以稳定著称，6.x 引入 jails，8.x 与 9.x 引入 ZFS 与 DTrace，后续版本扩展 ARM 架构支持。（BSD Now EP566，[367.60-589.20]，L2）
 - Tom Jones 自述受 FreeBSD 基金会与 RG Nets 共同资助，将基于 DPDK 的高性能用户态转发框架 VPP 移植到 FreeBSD 并回馈上游，产生逾百项变更，约 20% 已合并，移植工作还促使 VPP 核心基础设施变得更灵活。（BSD Now EP566，[1513.74-1930.24]，L1）
-- 主持人评述 Rust 的 crates.io 依赖注册表存在供应链安全隐患，并对比 OpenBSD 与 FreeBSD 基础系统自带经审查工具、无需海量外部依赖的路径。（BSD Now EP566，[2342.36-2831.24]，L2）
+- 主持人评述 Rust 的 crates.io 依赖注册表存在供应链安全隐患，并对比 OpenBSD 与 FreeBSD 基本系统自带经审查工具、无需海量外部依赖的路径。（BSD Now EP566，[2342.36-2831.24]，L2）
 - FreeBSD Foundation 2026 募款文显示资金约三分之二用于软件开发，其余用于宣传教育、基础设施与筹款管理，强调捐赠直接支撑笔记本电脑、构建测试与持续集成。（BSD Now EP648，[103.42-208.70]，L2）
 - Peter N. M. Hansteen 自述 2007 年起运行 spamd 灰度陷阱，截至 2025 年 8 月陷阱条目超过 562 万、超过挪威人口，数据显示垃圾邮件活动呈下降趋势但伴随突发峰值。（BSD Now EP648，[257.02-1152.28]，L1）
 - BSDCan 组织委员会回顾会议由 Dan Langille 在渥太华大学创办并连续举办 22 年，领导权经 Dan Langille、Michael W. Lucas 逐代交接，规划委员会维持约 12 人。（BSD Now EP648，[1246.88-1475.48]，L1）
@@ -194,8 +194,8 @@ FreeBSD 社区论文：[FP-1998-002] Malloc(3) revisited（Poul-Henning Kamp，1
 - 教程演示自建 NTP 服务器，并报道 OpenBSD 在 BeagleBone Black 上的 ARMv7 移植经验，涉及不同存储选项与已知问题的规避。（BSD Now EP23，[428.10-474.86]，L2）
 - FreeBSD 发行工程团队在代码冻结后审批所有针对该分支的变更，目标是在已知良好状态上修复既有问题而非引入新特性，以降低升级回归风险。（BSD Now EP2，[2347.62-2437.94]，L1）
 - Glen Barber 加入 FreeBSD 基金会后获得专职时间协调发布流程，并兼管集群管理团队与项目资源维护，使发布节奏不再完全依赖志愿者的时间。（BSD Now EP2，[4398.47-4558.76]，L1）
-- FreeBSD 10-CURRENT 自 2013 年 9 月起不再默认构建 GCC，基础系统改以 Clang 为默认编译器；需要 GCC 的场景改由 ports 提供现代版本。（BSD Now EP2，[543.86-622.62]，L2）
-- LDNS 与 Unbound 正被移植入 FreeBSD 基础系统，计划在 10.0 前移除 BIND；主持人预期此举可减少约三分之一的安全公告负担。（BSD Now EP2，[4075.30-4225.94]，L1）
+- FreeBSD 10-CURRENT 自 2013 年 9 月起不再默认构建 GCC，基本系统改以 Clang 为默认编译器；需要 GCC 的场景改由 ports 提供现代版本。（BSD Now EP2，[543.86-622.62]，L2）
+- LDNS 与 Unbound 正被移植入 FreeBSD 基本系统，计划在 10.0 前移除 BIND；主持人预期此举可减少约三分之一的安全公告负担。（BSD Now EP2，[4075.30-4225.94]，L1）
 - Poudriere 以 jail 隔离并发构建二进制包，可在一台机器上按 FreeBSD 版本与架构分 jail 编译，并以增量重建与摘要签名支撑自有 pkg 仓库分发。（BSD Now EP2，[865.40-904.68]，L2）
 - 该期头条报道 OpenBSD 已实现 64 位 time_t，以避免 2038 年 32 位时间戳溢出；该改动使 32 位平台也能跨越 Y2038 时间曲线。（BSD Now EP2，[71.70-150.60]，L2）
 - 该期头条报道 FreeBSD 10-CURRENT 合入 Radeon KMS 内核图形驱动，标志 FreeBSD 桌面图形栈由传统驱动模式向内核模式设置过渡，并为 10.0 发布前的驱动测试提供基础。（BSD Now EP1，[70.30-125.02]，L2）
@@ -310,7 +310,7 @@ FreeBSD 社区论文：[FP-1998-002] Malloc(3) revisited（Poul-Henning Kamp，1
 - 总纲5 没有必然性，只有偶然性：Theo 的一封邮件触发 signify 开发，当事人明确不知动机，说明安全工程由具体事件偶然推动。（BSD Now EP23，[1615.30-1651.60]，L1）
 - 总纲22 知识注定过时：signify 以极简设计替代 GPG 的部分用途，体现工具随需求演进而更替。（BSD Now EP23，[898.44-930.08]，L1）
 - 总纲9 经验优先：发行工程对稳定分支宁可关闭新特性也不愿引入回归，体现以既有用户升级经验为优先的保守取向，而非功能扩张优先的进步叙事。（BSD Now EP2，[3189.04-3237.52]，L1）
-- 总纲13 法律与道德是利益分配：GCC 退出基础系统与 BIND 替换是许可证与维护成本共同驱动的工具替换，属利益与负担在工具链层面的重新分配。（BSD Now EP2，[543.86-645.78]，L2）
+- 总纲13 法律与道德是利益分配：GCC 退出基本系统与 BIND 替换是许可证与维护成本共同驱动的工具替换，属利益与负担在工具链层面的重新分配。（BSD Now EP2，[543.86-645.78]，L2）
 - 总纲4 分离聚合是永恒规律：Poudriere 以 jail 将单一构建任务分离为按版本、架构与选项隔离的并发构建，并以增量重建聚合为统一二进制仓库，是分离与聚合的工程实践。（BSD Now EP2，[865.40-1801.56]，L2）
 - 总纲4 分离聚合是永恒规律：BGP SpamD 将阿尔伯塔大学与 Peter Hanstein 各自维护的黑名单聚合为统一的 BGP 分发列表，以本地复制取代中心网站下载与实时 DNS 查询，是分散源向聚合结构流转的具体实践。（BSD Now EP1，[4411.69-4474.51]，L1）
 - 总纲8 本体论上各方平等：该期将 FreeBSD 图形驱动、OpenBSD BGP SpamD、NetBSD 6.1.1 等并列报道，未以单一分支为中心，呈现多方平等的叙事格局。（BSD Now EP1，[0.00-125.02]，L2）

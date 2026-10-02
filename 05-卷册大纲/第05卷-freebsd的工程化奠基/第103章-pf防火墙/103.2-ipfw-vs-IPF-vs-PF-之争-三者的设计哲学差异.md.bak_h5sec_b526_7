@@ -4828,7 +4828,7 @@
 <!-- ROW_MINE: freebsd-ipfw.messages.1367101 -->
 **当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-124742`；2026-09-19 freebsd-ipfw 战线全库行级遍历考据采纳）
 
-2020 年 6 月 5 日，Peter 指出 dummynet 设 io_fast=1 时立即交付的包根本不经过 pipe，关闭后即可复现丢包，实际是包被插回基础系统的规则集而非 jail 的规则集，认为 dummynet 需感知监狱。引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+2020 年 6 月 5 日，Peter 指出 dummynet 设 io_fast=1 时立即交付的包根本不经过 pipe，关闭后即可复现丢包，实际是包被插回基本系统的规则集而非 jail 的规则集，认为 dummynet 需感知监狱。引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 
 <!-- ROW_MINE: freebsd-ipfw.messages.1367110 -->
 **当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-124743`；2026-09-19 freebsd-ipfw 战线全库行级遍历考据采纳）
@@ -7338,7 +7338,7 @@
 <!-- ROW_MINE: freebsd-security.messages.2501213 -->
 **当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-332486`；2026-09-30 freebsd-security 战线 全库行级遍历考据采纳）
 
-1995 年 5 月 11 日，发帖人说明 FreeBSD 通常不把共享软件纳入基础系统，称 FreeBSD 2.0 中 ipfirewall 代码由 Ugen J.S. Antsilevich 编写为对照原作者作品的形似克隆而未使用其实际代码，并建议对方借助 CDROM 审阅所分发代码以核实表述。引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+1995 年 5 月 11 日，发帖人说明 FreeBSD 通常不把共享软件纳入基本系统，称 FreeBSD 2.0 中 ipfirewall 代码由 Ugen J.S. Antsilevich 编写为对照原作者作品的形似克隆而未使用其实际代码，并建议对方借助 CDROM 审阅所分发代码以核实表述。引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 
 <!-- ROW_MINE: freebsd-security.messages.2501215 -->
 **当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-332487`；2026-09-30 freebsd-security 战线 全库行级遍历考据采纳）
@@ -7428,7 +7428,7 @@
 <!-- ROW_MINE: freebsd-security.messages.2501603 -->
 **当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-332693`；2026-09-30 freebsd-security 战线 全库行级遍历考据采纳）
 
-1996 年 1 月 23 日，发帖人反对把这类软件放进基础系统，认为并非人人需要，多数人根本不在意 xinetd 与 tcp-wrappers 所做的那些日志与包装，这两个程序作为端口受欢迎，但不适合作为核心系统组件，因为端口本来就有它存在的意义，而且安装起来很方便。引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+1996 年 1 月 23 日，发帖人反对把这类软件放进基本系统，认为并非人人需要，多数人根本不在意 xinetd 与 tcp-wrappers 所做的那些日志与包装，这两个程序作为端口受欢迎，但不适合作为核心系统组件，因为端口本来就有它存在的意义，而且安装起来很方便。引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 
 <!-- ROW_MINE: freebsd-security.messages.2501609 -->
 **当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-332696`；2026-09-30 freebsd-security 战线 全库行级遍历考据采纳）
@@ -11393,7 +11393,7 @@
 <!-- ROW_MINE: freebsd-security.messages.2522355 -->
 **当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-349477`；2026-10-02 freebsd-security 战线 全库行级遍历考据采纳）
 
-2001 年 10 月 3 日，发帖人认为 ipfw 目前有大量未提交或未修复的问题，可能源于代码杂乱无章的性质，干净的实现会有帮助因此支持，但不确定能否进入基础系统。引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+2001 年 10 月 3 日，发帖人认为 ipfw 目前有大量未提交或未修复的问题，可能源于代码杂乱无章的性质，干净的实现会有帮助因此支持，但不确定能否进入基本系统。引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 
 <!-- ROW_MINE: freebsd-security.messages.2522383 -->
 **当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-349498`；2026-10-02 freebsd-security 战线 全库行级遍历考据采纳）
@@ -11588,7 +11588,7 @@
 <!-- ROW_MINE: freebsd-security.messages.2523177 -->
 **当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-349783`；2026-10-02 freebsd-security 战线 全库行级遍历考据采纳）
 
-2001 年 11 月 24 日，发帖人指出 FreeBSD 并不具备按应用控制端口与套接字的能力，而这正是 ZoneAlarm 试图提供的，他建议把这个功能做成内置特性，加在基础系统或 ipfw 里。引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
+2001 年 11 月 24 日，发帖人指出 FreeBSD 并不具备按应用控制端口与套接字的能力，而这正是 ZoneAlarm 试图提供的，他建议把这个功能做成内置特性，加在基本系统或 ipfw 里。引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为定论。
 
 <!-- ROW_MINE: freebsd-security.messages.2523258 -->
 **当事人自述**（证据等级：L4，来源：`historical_claims.duckdb.claim.CL-RM-349791`；2026-10-02 freebsd-security 战线 全库行级遍历考据采纳）

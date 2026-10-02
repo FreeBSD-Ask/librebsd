@@ -13,7 +13,7 @@ volume: 第08卷-freebsd的范式转换
 
 ## 要点
 
-- 2024 年 1 月 20 日，开发者 Alan Somers（asomers@，Google 工程师、FreeBSD 文件系统与存储子系统长期贡献者）在 freebsd-hackers@ 邮件列表发布 “The Case for Rust (in the base system)” 一文，正式提出将 Rust 编程语言引入 FreeBSD 基础系统的方案；Somers 指出：Rust 的内存安全特性可以消除 C/C++ 代码中大量的内存安全漏洞（据 Google/MSRC 统计约 70% 的安全漏洞源于内存安全问题）；FreeBSD 已在 Ports 中支持 Rust，但 base system 中引入 Rust 工具链允许用 Rust 重写/新写安全关键组件（如用户态工具、新驱动、文件系统工具等）；Somers 承认主要缺点是构建时间将加倍（Rust 编译器编译较慢），但认为安全收益超过成本
+- 2024 年 1 月 20 日，开发者 Alan Somers（asomers@，Google 工程师、FreeBSD 文件系统与存储子系统长期贡献者）在 freebsd-hackers@ 邮件列表发布 “The Case for Rust (in the base system)” 一文，正式提出将 Rust 编程语言引入 FreeBSD 基本系统的方案；Somers 指出：Rust 的内存安全特性可以消除 C/C++ 代码中大量的内存安全漏洞（据 Google/MSRC 统计约 70% 的安全漏洞源于内存安全问题）；FreeBSD 已在 Ports 中支持 Rust，但 base system 中引入 Rust 工具链允许用 Rust 重写/新写安全关键组件（如用户态工具、新驱动、文件系统工具等）；Somers 承认主要缺点是构建时间将加倍（Rust 编译器编译较慢），但认为安全收益超过成本
 - Somers 提案引发的社区争论持续超过两年（2024.1-2026.7），核心争议点包括：① 构建时间与资源——反对者（如 Warner Losh（沃纳·洛什） imp@、Baptiste Daroussin（巴蒂斯特·达鲁桑） bapt@ 等）指出 Rust 工具链本身体积庞大（数百 MB）、编译速度慢，将显著增加 base 系统构建时间与 CI 资源消耗，对资源有限的 Tier 2 平台（如 riscv64、armv7）尤其不利；② 编译器复杂性——Rust 编译器（rustc）使用 LLVM 后端（与 FreeBSD 默认 Clang 一致）但本身是用 Rust 编写的，这意味着构建 Rust 工具链需要先有一个可用的 Rust 二进制（“自举问题”），这与 C 编译器可通过系统 C 编译器从源码构建的传统不同；③ 许可证——Rust 本身采用 MIT/Apache 2.0 双许可，与 FreeBSD 许可证兼容，这一点争议不大；④ 维护负担——引入新语言意味着需要一批懂 Rust 的开发者维护相关代码，而 FreeBSD 核心开发者群体中 Rust 专业知识分布不均；⑤ 安全收益是否值得——支持者（如 Colin Percival cperciva@ 等）认为内存安全漏洞占比数据（70%）说明问题严重，Rust 是可行解决方案；反对者认为改进 C 代码（静态分析、形式化验证、Capsicum 沙箱）也能提高安全性
 - 截至 2026.7，Rust 在 FreeBSD 生态中的实际状态是：Ports 中已有成熟的 Rust 工具链与大量 Rust 编写的第三方软件（如 ripgrep、exa、fd-find、rustc 本身、Firefox 部分组件等）；FreeBSD 内核中 **没有** Rust 代码；base system 中 **没有** Rust 组件；但社区讨论中逐渐形成一种可能的渐进路径：① 先在 ports 中持续维护 Rust 工具链的高质量支持；② 允许用 Rust 编写一些可选的用户态工具（如新的管理工具、测试工具）作为 ports 存在；③ 考虑引入 Rust 标准库到 base 以支持 Rust 编写的 base 组件（如果/当共识形成）；④ 内核 Rust 支持是非常远期的可能性（即使在 Linux 中也仍处于实验阶段）；16.0（预计 2027-2028）周期内是否会有 Rust 组件进入 base 仍是未知数
 - Rust 入 base 争论时间线：2024.1.20 Alan Somers 发起初始提案；2024.1-3 第一轮邮件列表大讨论；2024.8 LWN 报道引发第二轮关注；2025 年 BSDCan/vDevCon 举办相关 BOF；2025-2026 年讨论持续但未形成决议；Core Team 截至 2026.7 未就 Rust 入 base 进行正式投票；关键参与者包括：支持者 Alan Somers、Colin Percival 等；反对者/质疑者 Warner Losh、Baptiste Daroussin、Poul-Henning Kamp 等；中间立场 Ed Maste（埃德·马斯特） 等——多数开发者不反对 Rust 本身，但对何时引入、如何引入、引入范围持审慎态度
@@ -33,7 +33,7 @@ volume: 第08卷-freebsd的范式转换
 
 ## 辨析
 
-- Somers 提案并非要求 “用 Rust 重写整个 FreeBSD” 或 “内核立即接受 Rust 代码”——提案范围非常渐进：首先引入 Rust 工具链到 base（作为 ports 之外的基础系统组件），然后允许用 Rust 编写新的用户态工具（如 nfsd、bhyve userspace 组件等），内核 Rust 支持是更遥远的可能性；截至 2026.7，**Rust 尚未进入 FreeBSD base**（内核与基础系统均无 Rust 代码），Ports 生态成熟但 base 集成仍在讨论〔截断据上下文补全〕
+- Somers 提案并非要求 “用 Rust 重写整个 FreeBSD” 或 “内核立即接受 Rust 代码”——提案范围非常渐进：首先引入 Rust 工具链到 base（作为 ports 之外的基本系统组件），然后允许用 Rust 编写新的用户态工具（如 nfsd、bhyve userspace 组件等），内核 Rust 支持是更遥远的可能性；截至 2026.7，**Rust 尚未进入 FreeBSD base**（内核与基本系统均无 Rust 代码），Ports 生态成熟但 base 集成仍在讨论〔截断据上下文补全〕
 - “Rust 进入 FreeBSD base” 与 “Linux 内核 Rust for Linux” 需区别看待——Linux Rust 支持主要限于内核驱动（特别是新驱动可选使用 Rust），FreeBSD 提案起步是用户态工具而非内核；截至 2026.7，OpenBSD 明确拒绝 Rust（Ted Unangst 等公开反对），NetBSD 未正式讨论 Rust 入 base，DragonFly BSD 亦未见正式动议〔截断据上下文补全〕
 - 需警惕两种极端叙事——一种是 “Rust 会立刻取代 C 成为 FreeBSD 主要语言”（不现实，30 多年 C 代码不可能重写），另一种是 “Rust 永远不会进入 FreeBSD base”（过于绝对，技术演进往往超出预期）；合理预期是：未来数年内 Rust 可能以有限方式进入 FreeBSD 生态（如某些可选工具、测试基础设施），但 C 语言仍将是 FreeBSD 内核与 base 系统的
 - 需要区分 “邮件列表讨论热度” 与 “实际工程进展”——Rust 争论在邮件列表中持续了两年多，但这期间没有任何 Rust 代码被提交到 base，也没有 Core Team 决议要求或禁止 Rust；这种 “多讨论、少行动” 的模式在 FreeBSD 历史上并不罕见（如 ZFS 从讨论到正式进入 base 也经历了多年）

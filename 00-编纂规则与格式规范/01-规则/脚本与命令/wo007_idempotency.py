@@ -4,6 +4,7 @@
 COL_SCAN / DEEP_ANALYSIS / PODCAST_REVIEW / ROW_MINE 等）的脚本，写入前必须调用
 本模块的 ensure_absent() / has_block() 检查，已存在同名块则跳过或更新，禁止重复追加。
 另提供 normalize_dbnames()：写盘前把旧库名（*.db）统一为现行 .duckdb（防再生）。
+另提供 normalize_terms()：写盘前全书体例用词规范化（如「基础系统」→「基本系统」，防旧词再生）。
 
 用法（生成器脚本内）：
     import sys; sys.path.insert(0, r'd:\\librebsd\\script\\_outline_audit_20260906')
@@ -104,12 +105,16 @@ def normalize_dbnames(text: str, repo: str = None) -> str:
 
 
 def write_guard(path: str, new_text: str, repo: str = None):
-    """写盘统一入口：normalize 库名 + 强制 UTF-8 无 BOM + LF。
+    """写盘统一入口：normalize 库名 + 术语 + 强制 UTF-8 无 BOM + LF。
     返回 (written_bool, guards_applied_desc)。"""
     applied = []
     if normalize_needed(new_text):
         new_text = normalize_dbnames(new_text, repo=repo)
         applied.append("dbnames")
+    nt = normalize_terms(new_text)
+    if nt != new_text:
+        new_text = nt
+        applied.append("terms")
     raw = new_text.encode("utf-8")
     if b"\r\n" in raw:
         new_text = new_text.replace("\r\n", "\n")
@@ -122,3 +127,19 @@ def write_guard(path: str, new_text: str, repo: str = None):
 def normalize_needed(text: str) -> bool:
     return bool(re.search(r"\b\w+\.db\b", text) and ".duckdb" not in text.replace(".duckdb", "")) or \
            bool(re.search(r"\b(illumos-gate|linux-kernel|bsd-derivatives|dragonfly|openbsd|netbsd|freebsd|darwin|bsd_commits)\.db\b", text))
+
+
+# 术语规范化：全书体例（磁盘层与目录层一致）。
+# 2026-10-02 P2-11 磁盘层专项（主理人批准甲案）：机器块内一并存量订正＋写入器同步，
+# 自本源起今后所有经 write_guard 的写入不得再生产旧词。
+TERM_MAP = [
+    ("基础系统", "基本系统"),
+]
+
+
+def normalize_terms(text: str) -> str:
+    """写盘前术语规范化：全书体例统一用词。禁旧词再生。"""
+    for old, new in TERM_MAP:
+        if old in text:
+            text = text.replace(old, new)
+    return text

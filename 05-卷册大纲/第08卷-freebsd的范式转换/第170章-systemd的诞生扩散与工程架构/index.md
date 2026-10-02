@@ -47,7 +47,7 @@ volume: 第08卷-freebsd的范式转换
 - Colin Percival 自述 FreeBSD 发布工程长期处于由发布工程师即兴决定的临时状态，他接任后引入按季度排布、覆盖未来五年的发布日历，使 minor 版本节奏可预期。（BSD Now EP580，[466.0-571.0]，L1）[订正：原 [476.24-547.40]，2026-10-01 SenseAudio 重转核对]
 - Colin 将 FreeBSD 主版本支持期由五年缩减为四年，以对齐每两年一次的主版本节奏，避免同时维护三个稳定分支带来的上游 OpenSSL、编译器与 ports 兼容负担。（BSD Now EP580，[617.0-769.1]，L1）[订正：原 [630.52-756.16]，2026-10-01 SenseAudio 重转核对]
 - Colin 回顾 freebsd-update 工具源于 2003 年他为简化系统补丁更新而编写，并为此创造了 bsdiff 二进制差分工具，后者后来被广泛用于各处的增量更新。（BSD Now EP580，[192.7-235.5]，L1）[订正：原 [210.06-229.42]，2026-10-01 SenseAudio 重转核对]
-- Andrew Hewus 自述约 2003 年在亚利桑那州一家小型 ISP 从 OpenBSD 3.5 或 3.6 开始，将 DNS、邮件与路由逐步替换为 OpenBSD，后经邮件列表接手 OpenBSD 基础系统中的 Perl 维护。（BSD Now EP580，[1455.1-1578.3]，L1）[订正：原 [1455.12-1565.32]，2026-10-01 SenseAudio 重转核对]
+- Andrew Hewus 自述约 2003 年在亚利桑那州一家小型 ISP 从 OpenBSD 3.5 或 3.6 开始，将 DNS、邮件与路由逐步替换为 OpenBSD，后经邮件列表接手 OpenBSD 基本系统中的 Perl 维护。（BSD Now EP580，[1455.1-1578.3]，L1）[订正：原 [1455.12-1565.32]，2026-10-01 SenseAudio 重转核对]
 - Liam Proven 梳理商业 Unix 的当代存续：Xinuos 继承 SCO 的 Xenix 与 UnixWare 业务并提供基于 FreeBSD 的清理版本；AIX 开发团队迁往印度；Solaris 不再出新版本但仍获安全修复；illumos 与 Oxide Computer 延续 OpenSolaris 谱系。（BSD Now EP580，[2905.8-3025.7]，L2）[订正：原 [2915.18-3022.62]，2026-10-01 SenseAudio 重转核对]
 - Liam Proven 以其亲历的 FreeBSD 13 升级 14 后桌面环境损坏为例，指出 BSD 桌面在升级平滑度与新手进入门槛上的短板，并批评 systemd 及其安全启动方向正在收窄用户对系统的控制。（BSD Now EP580，[3037.3-3352.6]，L1）[订正：原 [3043.30-3344.86]，2026-10-01 SenseAudio 重转核对]
 
