@@ -117,6 +117,39 @@ def cn2int(s):
     return CN.index(s)
 
 
+# ═══════════════════════════════════════════════════════════════════════════
+# 卷序索引表（**唯一源**）——2026-10-02 集中化，依 101 号文 §九 P0-3
+# ═══════════════════════════════════════════════════════════════════════════
+# 🔴 **凡重排卷序，必须同步维护以下三表**——本门禁自身即「卷序的隐性消费者」：
+#    2026-10-02 卷序重排至 44 卷时，三表因按卷号硬编码而**全部键错位**
+#    （N-a1／N-a3／N-b2 同时报「判据键错位」）。三表已抽出集中于此，
+#    并由 `_check_vol_tables()` 在 main() 内做「卷号越界自检」，防止静默失效。
+#   · SPINE：编年主干（卷号, 卷题关键词, 期望起始年）——N-a1
+#   · HORIZ：横向／专题卷（卷号, 卷题关键词）——N-a3
+#   · BIB  ：卷末述评章登记（卷号: 有）——N-b2
+SPINE = [(5, "BSD 伊始", 1974), (6, "4.3BSD", 1980), (7, "CSRG 后期", 1986),
+         (8, "Net/2", 1992), (10, "大分裂", 1992), (13, "FreeBSD 操作系统的历史", 1993),
+         (16, "NetBSD 操作系统的历史", 1993), (19, "OpenBSD 的历史", 1995),
+         (22, "DragonFly BSD 的历史", 2003)]
+HORIZ = [(9, "UNIX 标准化与商业化"), (12, "BSD UNIX 技术专题史"),
+         (25, "技术发展史的横向比较"), (28, "macOS"),
+         (29, "BSD 软件作品史"), (31, "BSD 许可证与法律"), (32, "BSD 合规"),
+         (34, "BSD–Linux 关系史"), (36, "BSD 治理专题"), (37, "DARPA"),
+         (39, "开源会议"), (41, "传言"), (42, "BSD 的传播载体"), (43, "会者定离")]
+BIB_HAS = [1, 3, 9, 11, 12, 18, 19, 21, 24, 25, 28, 40]   # 25＝2026-10-02 新建技术横向比较卷补述评章
+
+
+def _check_vol_tables(nvol):
+    """卷号越界自检：三表卷号须落在 1..nvol-1 内（nvol 含尾部「合计」行）。"""
+    bad = []
+    for nm, vns in (("SPINE", [x[0] for x in SPINE]), ("HORIZ", [x[0] for x in HORIZ]),
+                    ("BIB", list(BIB_HAS))):
+        out = [v for v in vns if v < 1 or v > nvol - 1]
+        if out:
+            bad.append((nm, out))
+    return bad
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--path", default=DEFAULT, help="index.html 路径")
@@ -387,11 +420,16 @@ def main():
         m = re.search("（(1[89][0-9][0-9]|20[0-4][0-9])", t)
         return int(m.group(1)) if m else None
 
+    # 卷序索引表越界自检（2026-10-02 补，101 号文 §九 P0-3）——
+    # 三表按卷号硬编码，卷序重排后须同步；越界即 FAIL，防静默失效。
+    _vt = _check_vol_tables(len(vols))
+    if _vt:
+        n_bad.append("卷序索引表越界（卷序变更后须同步 SPINE／HORIZ／BIB_HAS）：%s" % _vt)
+    n_info.append("卷序索引表越界 0 处（SPINE %d／HORIZ %d／BIB %d）"
+                  % (len(SPINE), len(HORIZ), len(BIB_HAS)))
+
     # N-a1 编年主干（卷号, 卷题关键词, 期望起始年）：起点须严格递增
-    SPINE = [(5, "BSD 伊始", 1974), (6, "4.3BSD", 1980), (7, "CSRG 后期", 1986),
-             (8, "Net/2", 1992), (10, "大分裂", 1992), (13, "FreeBSD 操作系统的历史", 1993),
-             (16, "NetBSD 操作系统的历史", 1993), (19, "OpenBSD 的历史", 1995),
-             (22, "DragonFly BSD 的历史", 2003)]
+    # 见文件头「卷序索引表」（唯一源）
     spine_y = []
     for vn, key, y0 in SPINE:
         t = _plain(vn)
@@ -418,11 +456,7 @@ def main():
     n_info.append("N-a2 综合总结 %s ／ 后设 %s ｜ 后设居后 ? %s" % (summ, post, ok_a2))
 
     # N-a3 横向／专题卷须有分工注（显式必设集 × 关键词双键）
-    HORIZ = [(9, "UNIX 标准化与商业化"), (12, "BSD UNIX 技术专题史"),
-             (25, "技术发展史的横向比较"), (28, "macOS"),
-             (29, "BSD 软件作品史"), (31, "BSD 许可证与法律"), (32, "BSD 合规"),
-             (34, "BSD–Linux 关系史"), (36, "BSD 治理专题"), (37, "DARPA"),
-             (39, "开源会议"), (41, "传言"), (42, "BSD 的传播载体"), (43, "会者定离")]
+    # 见文件头「卷序索引表」（唯一源）
     miss_note = []
     for vn, key in HORIZ:
         t = _plain(vn)
@@ -441,8 +475,7 @@ def main():
     n_info.append("N-b1 卷导言缺失 %d 卷" % len(no_ov))
 
     # N-b2 述评章登记表（R55：按独立史料域判定，设与不设均登记）
-    BIB = {1: "有", 3: "有", 9: "有", 11: "有", 12: "有", 18: "有", 19: "有", 21: "有",
-           24: "有", 28: "有", 40: "有"}
+    BIB = {v: "有" for v in BIB_HAS}
     for vn in [i + 1 for i in range(len(vols) - 1) if (i + 1) not in BIB]:
         BIB[vn] = "E1：编年卷或专题卷，述评以章末「本章书目述评」节承载，或由所属专卷承担"
     has_bib = []
@@ -472,6 +505,51 @@ def main():
     if no_year:
         n_bad.append("N-b3 版本编年章题缺年份 %d 处：%s" % (len(no_year), no_year[:4]))
     n_info.append("N-b3 编年卷版本章题缺年份 %d 处" % len(no_year))
+
+    # ── N-b4 卷题时段 ↔ 章内年份一致性（2026-10-02 补，主理人批准；101 号文 §九 P0-1）──
+    # 依据：卷 9「UNIX 战争（1982–2021）」章内 ch9 实为（1995–2021）——**卷题区间与章内年份不自洽**
+    # 而 N-b3 只验「编年卷版本章题须带年份」，不验自洽，故长期漏检。本判据补此环。
+    # 判法：卷题括注的 (起–止) 区间须覆盖该卷**全部章题与节题**中出现的 4 位年份；越界即报。
+    # 豁免：卷题无年代区间者不判；述评章不计。
+    YR4 = re.compile(r'(1[89][0-9][0-9]|20[0-4][0-9])')
+    b4_bad = []
+    for vi in range(1, len(vols)):
+        vt = re.sub("<[^>]+>", "", _plain(vi))
+        rm = re.search(r'（(1[89][0-9][0-9])[–\-—](20[0-4][0-9])', vt)
+        if not rm:
+            continue
+        lo, hi = int(rm.group(1)), int(rm.group(2))
+        # 只判**章题自带年代区间**者（节题中的历史引用不构成矛盾；卷题时段为「主线期口径」）
+        for t in re.findall(r'<h3 class="chapter"[^>]*>(.*?)</h3>', _seg(vi), re.S):
+            ct = re.sub("<[^>]+>", "", t)
+            cm = re.search(r'（(1[89][0-9][0-9])[–\-—](20[0-4][0-9])', ct)
+            if cm:
+                clo, chi = int(cm.group(1)), int(cm.group(2))
+                if clo < lo or chi > hi:
+                    b4_bad.append((vi, "%d–%d" % (lo, hi), ct[:30]))
+    if b4_bad:
+        n_bad.append("N-b4 章题年代区间越出卷题时段 %d 处：%s" % (len(b4_bad), b4_bad[:4]))
+    n_info.append("N-b4 章题越出卷题时段 %d 处" % len(b4_bad))
+
+    # ── N-b5 目录正文迁移留痕零残留（2026-10-02 补，主理人批准；101 号文 §九 P0-2）──
+    # 依据：R8「注释内容应分离，类似的括号应全部移除出目录正文」；期四(b) 首轮漏清 127 处，
+    # 因当时只验「移除数＝台账数」而未验「残留数＝0」。本判据把「反向枚举」固化为门禁。
+    # 白名单：3 处经逐条核验为应保留（1 处误报＋2 处分工记录）。
+    MIG_RE = re.compile(r'迁入|并入本章|自卷\s*[0-9一二三四五六七八九十百]+\s*旧')
+    MIG_OK = ("城市形成与大学迁入",
+              "原“与第三十六卷第 5 章 14.11 分工”分句失据",
+              "注因两章同迁入本卷而消解")
+    b5 = []
+    for vi in range(1, len(vols)):
+        _clean = re.sub(r"<(script|style)[^>]*>.*?</>", " ", _seg(vi), flags=re.S | re.I)
+        _clean = re.split(r"<script|<style", _clean)[0]   # 兜底：截断未闭合的 script/style 残段
+        for t in re.findall(r"<li[^>]*>(.*?)</li>", _clean, re.S):
+            txt = re.sub("<[^>]+>", "", t)
+            if MIG_RE.search(txt) and not any(k in txt for k in MIG_OK):
+                b5.append((vi, txt[:40]))
+    if b5:
+        n_bad.append("N-b5 目录正文残留迁移留痕 %d 处：%s" % (len(b5), b5[:4]))
+    n_info.append("N-b5 迁移留痕残留 %d 处" % len(b5))
 
     # 长度计数口径（2026-09-27 主理人裁定）：**英语单词整体算 1 字**——拉丁字母数字串
     # （FreeBSD／NetBSD／4.3BSD／Net/2／1986）各计 1 字，其余字符逐字计。N-c／N-f 同用。
