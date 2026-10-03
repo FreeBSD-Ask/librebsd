@@ -62,10 +62,10 @@ volume: 第09卷-netbsd的历史
 **要点**：
 
 - Allan Jude 在 BSDCan 2026 报告 OpenZFS 的 anyRAID 方案：vdev 空间被划分为 16 GiB 的 tile，经一块置于 vdev 前端固定偏移、保留四份冗余的 tile map 完成逻辑到物理的间接寻址，无需导入存储池即可读取，从而把 RAID Z 固定条带宽度改造为可随盘数动态伸缩的条带，支持镜像与 RAID Z1/2/3 混合、vdev 扩容与收缩、以及以重平衡替代整盘搬迁，并兼容快照、DDT、块克隆与收发等既有 ZFS 特性，定位于以最低每 TB 成本换取最大容量与灵活性；其约束亦被明确：tile map 容量决定单 vdev 上限 256 盘与 65000 tile，未来新盘不得超过初始最小盘的 1024 倍，收缩下限为 RAID Z 条带宽度。（YouTube EPmZ-dhntnkCQ，[1044.959-1120.639]，L1）
-- 一位 NetBSD 发布工程团队成员自述三十年产品史：1994 年 RiscBSD 宣布把基于 NetBSD 的 ARM Unix 带上 32 位的 Risc PC，与主张直接采用 4.4BSD 代码、面向旧机型的 ArcBSD 项目以及南安普顿一名学生的单人 Linux 移植形成三路线竞争；同年 FreeBSD 提交者 Gary Palmer 澄清 ArcBSD 实际改用 FreeBSD，RiscBSD 则演化为 NetBSD 的 acorn32 移植并延续至今。演讲人 1996 年为 Acorn 面向 Oracle 网络计算机参考设计的 NetStation 构建经 NFS 网络引导的 NetBSD 方案并公开演示，1999 年在 Exemplar 被 Apple 全资收购、技术支持团队整体被裁后创办 Precedence Technologies 承接存量支持合同，其 NetManager 产品以单一 shell 风格配置文件加逐服务构建脚本实现跨 NetBSD 版本的配置迁移，并随 Citrix XenServer 8.4 弃用半虚拟化内核而被迫从惯用的奇数版本策略迁入 NetBSD 10 的 HVM 时代。（YouTube EPmZ-dhntnkCQ，[5260.96-5994.64]，L1）
+- 一位 NetBSD 发布工程团队成员自述三十年产品史：1994 年 RiscBSD 宣布把基于 NetBSD 的 ARM Unix 带上 32 位的 Risc PC，与主张直接采用 4.4BSD 代码、面向旧机型的 ArcBSD 项目以及南安普顿一名学生的单人 Linux 移植形成三路线竞争；同年 FreeBSD 提交者 Gary Palmer 澄清 ArcBSD 实际改用 FreeBSD，RiscBSD 则演化为 NetBSD 的 acorn32 移植并延续至今。演讲人 1996 年为 Acorn 面向 Oracle 网络计算机参考设计的 NetStation 构建经 NFS 网络引导的 NetBSD 方案并于 1997 年公开演示，1999 年在 Exemplar 被 Apple 全资收购、技术支持团队整体被裁后创办 Precedence Technologies 承接存量支持合同，其 NetManager 产品以单一 shell 风格配置文件加逐服务构建脚本实现跨 NetBSD 版本的配置迁移，并随 Citrix XenServer 8.4 弃用半虚拟化内核而被迫从惯用的奇数版本策略迁入 NetBSD 10 的 HVM 时代。（YouTube EPmZ-dhntnkCQ，[5260.96-5994.64]，L1） [订正：原“……NetBSD 方案并公开演示”承前系于 1996 年→演示实为 1997 年（转写 [5518.0-5527.4]：we demonstrated this to the public in 1997），内容复核]
 - Kirk McKusick 报告 FreeBSD 内核的扩展错误消息框架，并以设计史还原开篇：Unix 的纯整数错误码根源于 PDP-11 的 16 位地址空间——64K 文本段约合一万行 C，字符串是稀缺资源，内核以数字返回、用户态再展开为可读串曾是工程必然；在 64 位地址空间下该约束失效，新框架允许系统调用返回带至多两个参数的格式化错误串，逐文件注册错误类别、可经编译选项剥离以兼顾嵌入式场景，由 C 运行时与线程库按线程预置缓冲、成功调用零开销，错误沿 BIO 与内核线程上下文逐层回传至发起进程，并可用 ktrace/kdump 检视。（YouTube EPmZ-dhntnkCQ，[13264.96-14136.88]，L1）
-- Brooks Davis 阐述 CHERI 能力架构的 FreeBSD 集成路线：团队目标在 FreeBSD 16 至少交付空间安全支持、时间安全视进度而定；上游选择覆盖 RISC-V Y 标准（目标 tier 2）与 Morello 两类硬件，后者被视为终将被蒸馏的超集架构；策略上内核支持先行、纯能力模式起步并明确拒绝混合模式，再依次推进用户态库、运行时链接器与基于链接器的隔离仓， heap 时间安全列为更高风险的后续阶段；机内相关改动量级与一次 RISC-V 移植相当，而 CheriBSD 的先行积累被其视为 FreeBSD 及其他 BSD 相对 Linux 的先发优势。（YouTube EPmZ-dhntnkCQ，[18933.2-19045.52]，L1）
-- 一位自称系统管理员的讲者报告在无互联网内网环境下两年余的 pkg base 生产实践：15.0 技术预览把基本系统拆为 495 个包并提供 minimal（约 60 包）与 minimal-jail（42 包）等包集，其工作流为在联网侧构建服务器执行 buildworld、buildkernel 与 build packages，再经 nginx 向内网发布、以 ansible 配置客户端；主机侧以 boot environment 为回滚单元完成补丁级、次版本以及经 ABI 覆盖迁往 16-CURRENT 的升级；讲者表示该机制可能在未来版本取代 freebsd-update——其去年曾称 15.0 即将取代而未兑现，本轮经主持人当场确认指向 16.0——并演示了 jail 的包化创建与官方尚不支持的 14 到 15 迁移路径。（YouTube EPmZ-dhntnkCQ，[22286.958-22458.48]，L1）
+- Brooks Davis 阐述 CHERI 能力架构的 FreeBSD 集成路线：团队目标在 FreeBSD 16 至少交付空间安全支持、时间安全视进度而定；上游选择覆盖 RISC-V Y 标准（目标 tier 2）与 Morello 两类硬件，后者被视为终将被蒸馏的超集架构；策略上内核支持先行、纯能力模式起步并明确拒绝混合模式，再依次推进用户态库、运行时链接器与基于链接器的隔离仓， heap 时间安全列为更高风险的后续阶段；机器无关部分改动量级与一次 RISC-V 移植相当，而 CheriBSD 的先行积累被其视为 FreeBSD 及其他 BSD 相对 Linux 的先发优势。（YouTube EPmZ-dhntnkCQ，[18933.2-19045.52]，L1） [订正：原“机内相关改动量级”→“机器无关部分改动量级”（转写 [19590.1-19611.0]：the machine independent parts of Cherry support…on the order of the RISC-V support），内容复核]
+- 一位自称系统管理员的讲者报告在无互联网内网环境下近两年的 pkg base 生产实践：15.0 技术预览把基本系统拆为 495 个包并提供 minimal（约 60 包）与 minimal-jail（42 包）等包集，其工作流为在联网侧构建服务器执行 buildworld、buildkernel 与 build packages，再经 nginx 向内网发布、以 ansible 配置客户端；主机侧以 boot environment 为回滚单元完成补丁级、次版本以及经 ABI 覆盖迁往 16-CURRENT 的升级；讲者表示该机制可能在未来版本取代 freebsd-update——其去年曾称 15.0 即将取代而未兑现，本轮经主持人当场确认指向 16.0——并演示了 jail 的包化创建与官方尚不支持的 14 到 15 迁移路径。（YouTube EPmZ-dhntnkCQ，[22286.958-22458.48]，L1） [订正：原“两年余”→“近两年”（转写 [22182.3-22188.7]／[22559.8-22567.4]：almost two years），内容复核]
 
 **史料**：
 
@@ -81,6 +81,6 @@ volume: 第09卷-netbsd的历史
 
 **文献**：
 
-- [YouTube EPmZ-dhntnkCQ] YouTube. YouTube: BSDCan Saturday 2026-06-20: 1160[EB/OL]. ()[2026-08-15]. <https://www.youtube.com/watch?v=mZ-dhntnkCQ>.
+- [YouTube EPmZ-dhntnkCQ] BSDCan 2026. BSDCan Saturday 2026-06-20 周六场流（Allan Jude、Kirk McKusick、Brooks Davis 等多场演讲合流）[EB/OL]. (2026-06-20)[2026-08-15]. <https://www.youtube.com/watch?v=mZ-dhntnkCQ>.［著录注：原条目作者与题名误著录为"YouTube"且残留流水号"1160"、日期空括号，依核查报告按行内演讲者与流标题重著；正式逐讲题名待核会议官方议程］ [订正：原"YouTube. YouTube: BSDCan Saturday 2026-06-20: 1160[EB/OL]. ()[2026-08-15]."→重著作者、题名并补发布日期，内容复核]
 
 <!-- /PODCAST_REVIEW -->
