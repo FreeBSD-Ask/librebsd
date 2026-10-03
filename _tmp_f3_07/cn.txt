@@ -1,0 +1,46 @@
+@@1
+正文：Justin Gibbs 在 aic7xxx 越过 4G 边界补丁讨论中反驳要求特定格式变更日志的做法，指出个人开发者可直接向 FreeBSD 中央仓库提交而 Linux 不允许，并透露 Scott 的变更日志取自公司 Perforce 仓库，FreeBSD 仓库近期由 Scott 代管。
+@@2
+正文：Andrew Morton 转引的 aic7xxx 布尔值转换补丁保留了 __FreeBSD__ 条件编译块，块内注释说明总线设备复位发出后不把该复位标记到用户请求上，并保留 CAM 打印调用的 CAM_BDR_SENT 参数；同一补丁把各文件 TRUE 与 FALSE 改为 true 与 false。
+@@3
+正文：Christoph Hellwig 在 qla2xxx 许可证更新讨论中反对硬编码 QLogic 公司名，称版权持有人不止一家；他声明唯一愿意用于双许可的是 OpenBSD 项目使用的极简 MIT 风格许可证，并给出源树模板链接与贡献文件清单。
+@@4
+正文：Christoph Hellwig 转发 Kai Makisara 关于 sym53c896 芯片 16MB 边界问题的调查：Makisara 自取 FreeBSD 驱动，发现其为 896 rev 1 芯片设有 workaround 而 Linux 版本没有，该 workaround 会为跨越 16MB 边界的原始 scatter-gather 段构建两个设备段，Linux 侧可借 dma_boundary 字段实现，Hellwig 补充也可只设在 scsi_host 上以免所有适配器受罚。
+@@5
+正文：Xose Vazquez Perez 的 SCSI 驱动状态综述按驱动列出内核与版号、架构、维护者与仓库地址，其中 aic7xxx/aic79xx 维护者署名 gibbs，仓库地址指向 FreeBSD 个人空间下的 Linux 驱动源码目录，并列出多架构驱动移植状态，树外 SCSI 驱动上游部署于 BSD 站点。
+@@6
+正文：Age Strand 在 amd64 机器运行十八小时后崩溃的讨论中补充排障记录，涉及 aic79xx/aic7xxx 与 Adaptec 39320A-R、39160 及 PKT busfree 现象，并转述他人建议检查线缆与端接、称 29160 与 39160 硬件对此极为挑剔，另附一条 OpenBSD 技术档案旧帖作参照。
+@@7
+正文：Mark Salyzyn 在 Adaptec 2120S 与 aacraid 管理工具授权讨论中解释，因多数功能违反所引许可库难以发布，故只发布引擎与 raidutil，不给 logger、通信引擎、GUI 与浏览器引擎；以 BSD 许可证发布后开源社区未提交任何一处改动，仅使工具得以打包归档。
+@@8
+正文：Erik Andersen 在 aic7xxx 越过 4G 边界的讨论中回复 Justin Gibbs，表示想试用最新版驱动，随即用 file 命令检查从 FreeBSD 站点下载的 aic79xx-linux-2.4-20021220.bksend.gz，发现只是 ASCII 英文文本因而无法使用，于是询问是否有 unified diff 或 tarball 等可用格式供 Linux 侧使用。
+@@9
+正文：Finn Thain 把 sun3_NCR5380 代码并入 atari_NCR5380 的补丁在 DMA 传输路径留下一条注释，说明 NetBSD 在此处关闭中断因此自己为稳妥起见也照做，随后调用 local_irq_save 并启动 sun3 的 DMA 发送链，是经典 BSD NCR5380 实现经验被直接写入 Linux PowerPC 与 Atari 驱动源码的留痕。
+@@10
+正文：Chris Leech 在 Open-FCoE 项目讨论中回应关于 hash、even、state 等辅助函数是否下沉到 lib 目录的建议，指出可一并处理 BSD TAILQ 宏的最后一次使用；他在 Rob 建立开放仓库前已完成多数 TAILQ 宏到 list_head 的转换，唯一遗留处是 sa_event 机制，希望改用通知链取代。
+@@11
+正文：Jeff Garzik 在 SATA 状态报告中说明过多中断问题已由 Jon Burgess 定位到 ICH5 硬件缺陷，依据来自一条 FreeBSD 稳定邮件列表存档帖，Burgess 据此提交了附带补丁，Garzik 表示原本打算改写该补丁使其更局限于 ata_piix 驱动。
+@@12
+正文：Mark Salyzyn 在 RedHat 8.0 与 Fedora Core 2 环境下讨论 Adaptec 2120S 驱动时援引一段历史背景，指出这些管理工具在被开放源代码并采用 BSD 许可证后，开源社区几乎没有贡献修改，并称这只是让这些工具得以被打包归档继续存活。
+@@13
+正文：Soeren Sonnenburg 在 SCSI 芯片数据损坏讨论中称自己在 VIA 主板上遇到 m15w 回避办法只降低速度而未消除问题，并以在可用硬盘上写入 200G 全零文件排除硬盘故障；同线程 Tejun Heo 转述另一用户反馈 FreeBSD 未在同一硬件出现数据损坏。
+@@14
+正文：Andrea Carpani 在 aic79xx 引导挂起求助帖中说明自己使用的是 Justin Gibbs 从 FreeBSD 站点发布的驱动版本 2.0.12，因为主线内核自带的版本太不稳定，随后内核在引导阶段初始化 SCSI 子系统时常常挂起。
+@@15
+正文：Matthias Andree 在回复 aic79xx 补丁时讨论 Intel ICHx-R SoftRAID 格式，说明自己曾要求对方参考 FreeBSD 的“ataraid(4)”驱动来弄清该格式，当时 FreeBSD 能识别该格式而 dmraid 还不行。
+@@16
+正文：Duncan Gibb 报告 AIC7902 在 Intel SMP 上锁死：他构建 2.4.21-bk17 内核期望修复，aic79xx 为 1.3.10，并说明未采用 Justin Gibbs 源文件，因其只宣称适配 2.4.20；在 2.6.0-test1-ac3 的 aic79xx 1.3.9 上以更轻形式复现锁死。另 Thomas Beutin 发问 2.4.21 是否有新驱动并称在 FreeBSD 站点 SRC 目录未找到适配版本，该句非 Gibb 本人所发。
+@@17
+正文：Patrick Mansfield 追问 aic7xxx 与 aic79xx 驱动的 2.5 移植补丁时，转述了同线程中 Justin Gibbs 早前给出的下载链接，即托管在 FreeBSD 个人空间上的 Linux 2.5 版 aic7xxx 与 aic79xx 驱动压缩包，该补丁同时支持有序标签机制。
+@@18
+正文：James Bottomley 在 SCSI 5.6 之后的最终一轮 git pull 说明中列出 Alex Dewar 的提交标题 scsi: aic7xxx: Remove more FreeBSD-specific code，是 Linux 主线 aic7xxx 驱动逐步剥离 FreeBSD 移植代码的直接证据。
+@@19
+正文：Alan Cox 的 a100u2w 驱动 Linux 风格转换补丁说明明确列出删除新工作上的 BSD 双许可条目，并说明其余改动包括清理、Linux 化与去宏化。
+@@20
+正文：Douglas Gilbert 就超过 2TB 卷回应 Bernd Schubert 转来的 FreeBSD aic7xxx 邮件列表链接，称 Linux SCSI 子系统自 2.4 系列中段起并无已知问题；他读过该线程，认为原发帖人过早下结论，而 Justin Gibbs 告知并无此问题；最终回帖的 READ(10) 命令失败追踪他归因于端接问题。
+@@21
+正文：Hedrick 转发 Linus Torvalds 关于维护者否决权的回复：Linus 表示没人拥有该权利，连他也不否决合适的人推入的改动，并称高层维护者通常总占优先；Justin T. Gibbs 的提问是讨论起点。Hedrick 另称若在 MAINTAINERS 文件顶部列出规则会好些。
+@@22
+正文：Martin K. Petersen 回复 Alex Dewar 关于 aic7xxx_core.c 中 FreeBSD 专属代码移除的邮件，确认已合入 5.7 分支的 SCSI 队列，并转述 Dewar 说明自提交 cca6cb8ad7a8 起这些代码已无必要。
+@@23
+正文：Wayne Berthiaume 反驳 Bottomley 无显著收益的结论：他在 Linux 2.4.19 与 reiserfs 上以启停写缓存的 IDE 硬盘、4kB 到 100MB 文件与全部 fsync 为条件，发现启用写缓存大幅改善性能，叠加写屏障补丁仅轻微下降；无法就 SCSI 发言但 IDE 确有改进，FreeBSD CAM 层实现之问由 Jordan Breeding 提出、Bottomley 否认。
