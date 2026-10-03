@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# 交叉引用悬空审计 v5（2026-09-27 第五批后扩判据）
+# 交叉引用悬空审计 v6（2026-10-03 第六批：增设「冻结基准语境豁免」判据＋负向夹具）
 #
 # v4 只覆盖单一形制「第X卷第M章」，第五批复核实证其余三类形制共 229 处错位／越界
 # 无法被任何门禁发现（如「卷十二第 11 章」卷十二仅 10 章、「卷三 1.5」自指错位）。
@@ -12,13 +12,36 @@
 # 历史层引用（自第X卷第Y章迁入 / 并入 / 归卷 / 自卷 …）→ 指向旧体系，豁免
 # 分工注（〔…归第X卷第Y章…〕 / 与第X卷第Y章分工）→ 指向现行体系，必须有效
 #
+# v6（2026-10-03）：HIST_PAT 增列「冻结基准」。缘由（归口单第五件第 1–2 项）：
+#   卷 11 11.4 注文明言「章号沿用冻结基准（12 卷 181 章）旧第 09 卷…第 71 章；
+#   现行体系对应本卷第 2 章 2.2」——旧号是**叙述性历史陈述**且已给出现行对应，
+#   却被 v5 当作现行引用而判「卷不存在／章越界」。「冻结基准」一词只出现在
+#   陈述旧体系编号的语境，凡引用紧邻该词（±25 字符）一律豁免；
+#   `--selftest` 以正负夹具双向验证：紧邻者必豁免、远离者必仍报悬空。
+#
 # 注意：`!` 行（卷级分工注）渲染为 .vol-note，不在 <span class="src"> 内，
 # 本脚本不覆盖（由 S6 独立脚本核验）。
 import re
 import sys
 
+SELFTEST = '--selftest' in sys.argv
+
 TARGET = sys.argv[1] if len(sys.argv) > 1 else r'D:/librebsd/08-核查报告与多轮复核/重构2026/index.html'
-d = open(TARGET, encoding='utf-8').read()
+if SELFTEST:
+    # 负向夹具（2026-10-03 第六批）：「冻结基准语境豁免」判据的双向验证。
+    #  夹具1（须豁免）：引用紧邻「冻结基准」，且为叙述性历史旧号；
+    #  夹具2/3/4（须报悬空）：不涉冻结基准、指向不存在的卷／越界的章。
+    d = (
+        '<section class="doc-block" id="vol-1">'
+        '<h3 class="chapter" id="vol-1-ch-1">t</h3><ul class="sections">'
+        '<span class="sec-num">1.1</span></ul></section>'
+        '<span class="src">章号沿用冻结基准（12 卷 181 章）旧第 09 卷第 71 章；现行体系对应本卷第 2 章。</span>'
+        '<span class="src">〔分工·迁移：卷 999 分工〕</span>'
+        '<span class="src">与第 1 卷第 9 章分工</span>'
+        '<span class="src">〔分工·迁移：卷 888 分工〕</span>'
+    )
+else:
+    d = open(TARGET, encoding='utf-8').read()
 
 
 def strip_tags(s):
@@ -76,7 +99,7 @@ PAT = re.compile(
 )
 CONT = re.compile(r'\s*[/、–—-]\s*(\d{1,3})\.(\d{1,3})')
 
-HIST_PAT = re.compile(r'迁入|并入|归卷|自原|自第|自卷|移入|待考|历史层')
+HIST_PAT = re.compile(r'迁入|并入|归卷|自原|自第|自卷|移入|待考|历史层|冻结基准')
 # 成组溯源括号的序列形制（2026-09-27 收窄）：v4 原以「引用前后 8 字符内出现『；』」
 # 即判历史层，过宽——实测遮蔽真实悬空 6 处（如「〔卷三十 10.11 分工；ref 10005…〕」
 # 中 `；` 之后是文献号而非引用，却被整条豁免）。现仅当 `；` 与引用共同构成
@@ -184,4 +207,14 @@ for form, v, c, sec, why, ctx in bad_div:
     print('    ...%s...' % ctx)
 
 print('门禁结论：分工注悬空 %d 处%s' % (len(bad_div), '，FAIL' if bad_div else '，PASS'))
+
+if SELFTEST:
+    ctx_all = ' '.join(c for *_, c in bad_div)
+    ok_exempt = '冻结基准' not in ctx_all
+    ok_pos = len(bad_div) == 3
+    print('自检·夹具1（冻结基准语境须豁免）:', 'PASS' if ok_exempt else 'FAIL')
+    print('自检·夹具2–4（真悬空须 3 处全数报出）:', 'PASS' if ok_pos else 'FAIL（实报 %d 处）' % len(bad_div))
+    print('自检结论：', 'PASS' if (ok_exempt and ok_pos) else 'FAIL')
+    sys.exit(0 if (ok_exempt and ok_pos) else 1)
+
 sys.exit(1 if bad_div else 0)

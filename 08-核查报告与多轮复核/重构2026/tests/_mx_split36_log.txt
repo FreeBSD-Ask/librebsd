@@ -1,0 +1,632 @@
+PASS | [1920x1080/light/85%] 零JS错误
+PASS | [1920x1080/light/85%] 主题生效 | {"attr":"light","bg":"rgb(249, 245, 240)"}
+PASS | [1920x1080/light/85%] 字号生效 | {"zoom":"0.85","comp":"0.85"}
+PASS | [1920x1080/light/85%] 零横向溢出 | {"sw":1905,"iw":1920}
+PASS | [1920x1080/light/85%] 自校验6/6
+PASS | [1920x1080/light/85%] 注计数741
+PASS | [1920x1080/light/85%] 口径3531
+PASS | [1920x1080/light/85%] 目录开关 | {"has":true,"opened":true}
+PASS | [1920x1080/light/85%] 搜索面板 | {"has":true,"vis":true}
+PASS | [1920x1080/light/85%] 溯源注展开 | {"has":true,"open":true}
+PASS | [1920x1080/light/85%] 人名浮层挂载 | {"plink":192,"reflink":128}
+PASS | [1920x1080/light/85%] 文献浮层挂载 | {"plink":192,"reflink":128}
+PASS | [1920x1080/light/85%] 长节名展开 | {"has":false,"dormant":true,"max":93}
+PASS | [1920x1080/light/85%] 进度条/面包屑/回顶 | {"bar":true,"bc":true,"topBtn":true}
+PASS | [1920x1080/light/85%] 章跳转 | {"moved":true}
+PASS | [1920x1080/light/85%] 导出口径3531 | {"hasExport":true,"stat":true}
+PASS | [1920x1080/light/85%] 导出内容无装饰残留 | ["第一卷  自由与必然：从图灵机到 UNIX","第 1 章 计算的前史：从机械计算到可计算性","机械计算与自动计算思想"]
+PASS | [1920x1080/light/100%] 零JS错误
+PASS | [1920x1080/light/100%] 主题生效 | {"attr":"light","bg":"rgb(249, 245, 240)"}
+PASS | [1920x1080/light/100%] 字号生效 | {"zoom":"","comp":"1"}
+PASS | [1920x1080/light/100%] 零横向溢出 | {"sw":1905,"iw":1920}
+PASS | [1920x1080/light/100%] 自校验6/6
+PASS | [1920x1080/light/100%] 注计数741
+PASS | [1920x1080/light/100%] 口径3531
+PASS | [1920x1080/light/100%] 目录开关 | {"has":true,"opened":true}
+PASS | [1920x1080/light/100%] 搜索面板 | {"has":true,"vis":true}
+PASS | [1920x1080/light/100%] 溯源注展开 | {"has":true,"open":true}
+PASS | [1920x1080/light/100%] 人名浮层挂载 | {"plink":192,"reflink":128}
+PASS | [1920x1080/light/100%] 文献浮层挂载 | {"plink":192,"reflink":128}
+PASS | [1920x1080/light/100%] 长节名展开 | {"has":false,"dormant":true,"max":93}
+PASS | [1920x1080/light/100%] 进度条/面包屑/回顶 | {"bar":true,"bc":true,"topBtn":true}
+PASS | [1920x1080/light/100%] 章跳转 | {"moved":true}
+PASS | [1920x1080/light/100%] 导出口径3531 | {"hasExport":true,"stat":true}
+PASS | [1920x1080/light/100%] 导出内容无装饰残留 | ["第一卷  自由与必然：从图灵机到 UNIX","第 1 章 计算的前史：从机械计算到可计算性","机械计算与自动计算思想"]
+PASS | [1920x1080/light/140%] 零JS错误
+PASS | [1920x1080/light/140%] 主题生效 | {"attr":"light","bg":"rgb(249, 245, 240)"}
+PASS | [1920x1080/light/140%] 字号生效 | {"zoom":"1.4","comp":"1.4"}
+PASS | [1920x1080/light/140%] 零横向溢出 | {"sw":1905,"iw":1920}
+PASS | [1920x1080/light/140%] 自校验6/6
+PASS | [1920x1080/light/140%] 注计数741
+PASS | [1920x1080/light/140%] 口径3531
+PASS | [1920x1080/light/140%] 目录开关 | {"has":true,"opened":true}
+PASS | [1920x1080/light/140%] 搜索面板 | {"has":true,"vis":true}
+PASS | [1920x1080/light/140%] 溯源注展开 | {"has":true,"open":true}
+PASS | [1920x1080/light/140%] 人名浮层挂载 | {"plink":192,"reflink":128}
+PASS | [1920x1080/light/140%] 文献浮层挂载 | {"plink":192,"reflink":128}
+PASS | [1920x1080/light/140%] 长节名展开 | {"has":false,"dormant":true,"max":93}
+PASS | [1920x1080/light/140%] 进度条/面包屑/回顶 | {"bar":true,"bc":true,"topBtn":true}
+PASS | [1920x1080/light/140%] 章跳转 | {"moved":true}
+PASS | [1920x1080/light/140%] 导出口径3531 | {"hasExport":true,"stat":true}
+PASS | [1920x1080/light/140%] 导出内容无装饰残留 | ["第一卷  自由与必然：从图灵机到 UNIX","第 1 章 计算的前史：从机械计算到可计算性","机械计算与自动计算思想"]
+PASS | [1920x1080/dark/85%] 零JS错误
+PASS | [1920x1080/dark/85%] 主题生效 | {"attr":"dark","bg":"rgb(23, 20, 18)"}
+PASS | [1920x1080/dark/85%] 字号生效 | {"zoom":"0.85","comp":"0.85"}
+PASS | [1920x1080/dark/85%] 零横向溢出 | {"sw":1905,"iw":1920}
+PASS | [1920x1080/dark/85%] 自校验6/6
+PASS | [1920x1080/dark/85%] 注计数741
+PASS | [1920x1080/dark/85%] 口径3531
+PASS | [1920x1080/dark/85%] 目录开关 | {"has":true,"opened":true}
+PASS | [1920x1080/dark/85%] 搜索面板 | {"has":true,"vis":true}
+PASS | [1920x1080/dark/85%] 溯源注展开 | {"has":true,"open":true}
+PASS | [1920x1080/dark/85%] 人名浮层挂载 | {"plink":192,"reflink":128}
+PASS | [1920x1080/dark/85%] 文献浮层挂载 | {"plink":192,"reflink":128}
+PASS | [1920x1080/dark/85%] 长节名展开 | {"has":false,"dormant":true,"max":93}
+PASS | [1920x1080/dark/85%] 进度条/面包屑/回顶 | {"bar":true,"bc":true,"topBtn":true}
+PASS | [1920x1080/dark/85%] 章跳转 | {"moved":true}
+PASS | [1920x1080/dark/85%] 导出口径3531 | {"hasExport":true,"stat":true}
+PASS | [1920x1080/dark/85%] 导出内容无装饰残留 | ["第一卷  自由与必然：从图灵机到 UNIX","第 1 章 计算的前史：从机械计算到可计算性","机械计算与自动计算思想"]
+PASS | [1920x1080/dark/100%] 零JS错误
+PASS | [1920x1080/dark/100%] 主题生效 | {"attr":"dark","bg":"rgb(23, 20, 18)"}
+PASS | [1920x1080/dark/100%] 字号生效 | {"zoom":"","comp":"1"}
+PASS | [1920x1080/dark/100%] 零横向溢出 | {"sw":1905,"iw":1920}
+PASS | [1920x1080/dark/100%] 自校验6/6
+PASS | [1920x1080/dark/100%] 注计数741
+PASS | [1920x1080/dark/100%] 口径3531
+PASS | [1920x1080/dark/100%] 目录开关 | {"has":true,"opened":true}
+PASS | [1920x1080/dark/100%] 搜索面板 | {"has":true,"vis":true}
+PASS | [1920x1080/dark/100%] 溯源注展开 | {"has":true,"open":true}
+PASS | [1920x1080/dark/100%] 人名浮层挂载 | {"plink":192,"reflink":128}
+PASS | [1920x1080/dark/100%] 文献浮层挂载 | {"plink":192,"reflink":128}
+PASS | [1920x1080/dark/100%] 长节名展开 | {"has":false,"dormant":true,"max":93}
+PASS | [1920x1080/dark/100%] 进度条/面包屑/回顶 | {"bar":true,"bc":true,"topBtn":true}
+PASS | [1920x1080/dark/100%] 章跳转 | {"moved":true}
+PASS | [1920x1080/dark/100%] 导出口径3531 | {"hasExport":true,"stat":true}
+PASS | [1920x1080/dark/100%] 导出内容无装饰残留 | ["第一卷  自由与必然：从图灵机到 UNIX","第 1 章 计算的前史：从机械计算到可计算性","机械计算与自动计算思想"]
+PASS | [1920x1080/dark/140%] 零JS错误
+PASS | [1920x1080/dark/140%] 主题生效 | {"attr":"dark","bg":"rgb(23, 20, 18)"}
+PASS | [1920x1080/dark/140%] 字号生效 | {"zoom":"1.4","comp":"1.4"}
+PASS | [1920x1080/dark/140%] 零横向溢出 | {"sw":1905,"iw":1920}
+PASS | [1920x1080/dark/140%] 自校验6/6
+PASS | [1920x1080/dark/140%] 注计数741
+PASS | [1920x1080/dark/140%] 口径3531
+PASS | [1920x1080/dark/140%] 目录开关 | {"has":true,"opened":true}
+PASS | [1920x1080/dark/140%] 搜索面板 | {"has":true,"vis":true}
+PASS | [1920x1080/dark/140%] 溯源注展开 | {"has":true,"open":true}
+PASS | [1920x1080/dark/140%] 人名浮层挂载 | {"plink":192,"reflink":128}
+PASS | [1920x1080/dark/140%] 文献浮层挂载 | {"plink":192,"reflink":128}
+PASS | [1920x1080/dark/140%] 长节名展开 | {"has":false,"dormant":true,"max":93}
+FAIL | [1920x1080/dark/140%] 进度条/面包屑/回顶 | {"bar":false,"bc":true,"topBtn":true}
+PASS | [1920x1080/dark/140%] 章跳转 | {"moved":true}
+PASS | [1920x1080/dark/140%] 导出口径3531 | {"hasExport":true,"stat":true}
+PASS | [1920x1080/dark/140%] 导出内容无装饰残留 | ["第一卷  自由与必然：从图灵机到 UNIX","第 1 章 计算的前史：从机械计算到可计算性","机械计算与自动计算思想"]
+PASS | [1920x1080/dark/140%] 图谱打开零省略 | {"open":true,"labels":47,"ells":0}
+PASS | [1920x1080/dark/140%] 修订史面板 | {"open":true}
+PASS | [1920x1080/dark/140%] 研阅切换 | {"changed":true}
+PASS | [1920x1080/dark/140%] 字号滑杆交互 | {"open":true,"zoom":"1.4","label":"140%"}
+PASS | [1920x1080/sys/85%] 零JS错误
+PASS | [1920x1080/sys/85%] 主题生效 | {"attr":"light","bg":"rgb(249, 245, 240)"}
+PASS | [1920x1080/sys/85%] 字号生效 | {"zoom":"0.85","comp":"0.85"}
+PASS | [1920x1080/sys/85%] 零横向溢出 | {"sw":1905,"iw":1920}
+PASS | [1920x1080/sys/85%] 自校验6/6
+PASS | [1920x1080/sys/85%] 注计数741
+PASS | [1920x1080/sys/85%] 口径3531
+PASS | [1920x1080/sys/85%] 目录开关 | {"has":true,"opened":true}
+PASS | [1920x1080/sys/85%] 搜索面板 | {"has":true,"vis":true}
+PASS | [1920x1080/sys/85%] 溯源注展开 | {"has":true,"open":true}
+PASS | [1920x1080/sys/85%] 人名浮层挂载 | {"plink":192,"reflink":128}
+PASS | [1920x1080/sys/85%] 文献浮层挂载 | {"plink":192,"reflink":128}
+PASS | [1920x1080/sys/85%] 长节名展开 | {"has":false,"dormant":true,"max":93}
+PASS | [1920x1080/sys/85%] 进度条/面包屑/回顶 | {"bar":true,"bc":true,"topBtn":true}
+PASS | [1920x1080/sys/85%] 章跳转 | {"moved":true}
+PASS | [1920x1080/sys/85%] 导出口径3531 | {"hasExport":true,"stat":true}
+PASS | [1920x1080/sys/85%] 导出内容无装饰残留 | ["第一卷  自由与必然：从图灵机到 UNIX","第 1 章 计算的前史：从机械计算到可计算性","机械计算与自动计算思想"]
+PASS | [1920x1080/sys/100%] 零JS错误
+PASS | [1920x1080/sys/100%] 主题生效 | {"attr":"light","bg":"rgb(249, 245, 240)"}
+PASS | [1920x1080/sys/100%] 字号生效 | {"zoom":"","comp":"1"}
+PASS | [1920x1080/sys/100%] 零横向溢出 | {"sw":1905,"iw":1920}
+PASS | [1920x1080/sys/100%] 自校验6/6
+PASS | [1920x1080/sys/100%] 注计数741
+PASS | [1920x1080/sys/100%] 口径3531
+PASS | [1920x1080/sys/100%] 目录开关 | {"has":true,"opened":true}
+PASS | [1920x1080/sys/100%] 搜索面板 | {"has":true,"vis":true}
+PASS | [1920x1080/sys/100%] 溯源注展开 | {"has":true,"open":true}
+PASS | [1920x1080/sys/100%] 人名浮层挂载 | {"plink":192,"reflink":128}
+PASS | [1920x1080/sys/100%] 文献浮层挂载 | {"plink":192,"reflink":128}
+PASS | [1920x1080/sys/100%] 长节名展开 | {"has":false,"dormant":true,"max":93}
+PASS | [1920x1080/sys/100%] 进度条/面包屑/回顶 | {"bar":true,"bc":true,"topBtn":true}
+PASS | [1920x1080/sys/100%] 章跳转 | {"moved":true}
+PASS | [1920x1080/sys/100%] 导出口径3531 | {"hasExport":true,"stat":true}
+PASS | [1920x1080/sys/100%] 导出内容无装饰残留 | ["第一卷  自由与必然：从图灵机到 UNIX","第 1 章 计算的前史：从机械计算到可计算性","机械计算与自动计算思想"]
+PASS | [1920x1080/sys/140%] 零JS错误
+PASS | [1920x1080/sys/140%] 主题生效 | {"attr":"light","bg":"rgb(249, 245, 240)"}
+PASS | [1920x1080/sys/140%] 字号生效 | {"zoom":"1.4","comp":"1.4"}
+PASS | [1920x1080/sys/140%] 零横向溢出 | {"sw":1905,"iw":1920}
+PASS | [1920x1080/sys/140%] 自校验6/6
+PASS | [1920x1080/sys/140%] 注计数741
+PASS | [1920x1080/sys/140%] 口径3531
+PASS | [1920x1080/sys/140%] 目录开关 | {"has":true,"opened":true}
+PASS | [1920x1080/sys/140%] 搜索面板 | {"has":true,"vis":true}
+PASS | [1920x1080/sys/140%] 溯源注展开 | {"has":true,"open":true}
+PASS | [1920x1080/sys/140%] 人名浮层挂载 | {"plink":192,"reflink":128}
+PASS | [1920x1080/sys/140%] 文献浮层挂载 | {"plink":192,"reflink":128}
+PASS | [1920x1080/sys/140%] 长节名展开 | {"has":false,"dormant":true,"max":93}
+PASS | [1920x1080/sys/140%] 进度条/面包屑/回顶 | {"bar":true,"bc":true,"topBtn":true}
+PASS | [1920x1080/sys/140%] 章跳转 | {"moved":true}
+PASS | [1920x1080/sys/140%] 导出口径3531 | {"hasExport":true,"stat":true}
+PASS | [1920x1080/sys/140%] 导出内容无装饰残留 | ["第一卷  自由与必然：从图灵机到 UNIX","第 1 章 计算的前史：从机械计算到可计算性","机械计算与自动计算思想"]
+PASS | [1366x768/light/85%] 零JS错误
+PASS | [1366x768/light/85%] 主题生效 | {"attr":"light","bg":"rgb(249, 245, 240)"}
+PASS | [1366x768/light/85%] 字号生效 | {"zoom":"0.85","comp":"0.85"}
+PASS | [1366x768/light/85%] 零横向溢出 | {"sw":1351,"iw":1366}
+PASS | [1366x768/light/85%] 自校验6/6
+PASS | [1366x768/light/85%] 注计数741
+PASS | [1366x768/light/85%] 口径3531
+PASS | [1366x768/light/85%] 目录开关 | {"has":true,"opened":true}
+PASS | [1366x768/light/85%] 搜索面板 | {"has":true,"vis":true}
+PASS | [1366x768/light/85%] 溯源注展开 | {"has":true,"open":true}
+PASS | [1366x768/light/85%] 人名浮层挂载 | {"plink":192,"reflink":128}
+PASS | [1366x768/light/85%] 文献浮层挂载 | {"plink":192,"reflink":128}
+PASS | [1366x768/light/85%] 长节名展开 | {"has":false,"dormant":true,"max":93}
+PASS | [1366x768/light/85%] 进度条/面包屑/回顶 | {"bar":true,"bc":true,"topBtn":true}
+PASS | [1366x768/light/85%] 章跳转 | {"moved":true}
+PASS | [1366x768/light/85%] 导出口径3531 | {"hasExport":true,"stat":true}
+PASS | [1366x768/light/85%] 导出内容无装饰残留 | ["第一卷  自由与必然：从图灵机到 UNIX","第 1 章 计算的前史：从机械计算到可计算性","机械计算与自动计算思想"]
+PASS | [1366x768/light/85%] 图谱打开零省略 | {"open":true,"labels":47,"ells":0}
+PASS | [1366x768/light/85%] 修订史面板 | {"open":true}
+PASS | [1366x768/light/85%] 研阅切换 | {"changed":true}
+PASS | [1366x768/light/85%] 字号滑杆交互 | {"open":true,"zoom":"1.4","label":"140%"}
+PASS | [1366x768/light/100%] 零JS错误
+PASS | [1366x768/light/100%] 主题生效 | {"attr":"light","bg":"rgb(249, 245, 240)"}
+PASS | [1366x768/light/100%] 字号生效 | {"zoom":"","comp":"1"}
+PASS | [1366x768/light/100%] 零横向溢出 | {"sw":1351,"iw":1366}
+PASS | [1366x768/light/100%] 自校验6/6
+PASS | [1366x768/light/100%] 注计数741
+PASS | [1366x768/light/100%] 口径3531
+PASS | [1366x768/light/100%] 目录开关 | {"has":true,"opened":true}
+PASS | [1366x768/light/100%] 搜索面板 | {"has":true,"vis":true}
+PASS | [1366x768/light/100%] 溯源注展开 | {"has":true,"open":true}
+PASS | [1366x768/light/100%] 人名浮层挂载 | {"plink":192,"reflink":128}
+PASS | [1366x768/light/100%] 文献浮层挂载 | {"plink":192,"reflink":128}
+PASS | [1366x768/light/100%] 长节名展开 | {"has":false,"dormant":true,"max":93}
+PASS | [1366x768/light/100%] 进度条/面包屑/回顶 | {"bar":true,"bc":true,"topBtn":true}
+PASS | [1366x768/light/100%] 章跳转 | {"moved":true}
+PASS | [1366x768/light/100%] 导出口径3531 | {"hasExport":true,"stat":true}
+PASS | [1366x768/light/100%] 导出内容无装饰残留 | ["第一卷  自由与必然：从图灵机到 UNIX","第 1 章 计算的前史：从机械计算到可计算性","机械计算与自动计算思想"]
+PASS | [1366x768/light/140%] 零JS错误
+PASS | [1366x768/light/140%] 主题生效 | {"attr":"light","bg":"rgb(249, 245, 240)"}
+PASS | [1366x768/light/140%] 字号生效 | {"zoom":"1.4","comp":"1.4"}
+PASS | [1366x768/light/140%] 零横向溢出 | {"sw":1351,"iw":1366}
+PASS | [1366x768/light/140%] 自校验6/6
+PASS | [1366x768/light/140%] 注计数741
+PASS | [1366x768/light/140%] 口径3531
+PASS | [1366x768/light/140%] 目录开关 | {"has":true,"opened":true}
+PASS | [1366x768/light/140%] 搜索面板 | {"has":true,"vis":true}
+PASS | [1366x768/light/140%] 溯源注展开 | {"has":true,"open":true}
+PASS | [1366x768/light/140%] 人名浮层挂载 | {"plink":192,"reflink":128}
+PASS | [1366x768/light/140%] 文献浮层挂载 | {"plink":192,"reflink":128}
+PASS | [1366x768/light/140%] 长节名展开 | {"has":false,"dormant":true,"max":93}
+PASS | [1366x768/light/140%] 进度条/面包屑/回顶 | {"bar":true,"bc":true,"topBtn":true}
+PASS | [1366x768/light/140%] 章跳转 | {"moved":true}
+PASS | [1366x768/light/140%] 导出口径3531 | {"hasExport":true,"stat":true}
+PASS | [1366x768/light/140%] 导出内容无装饰残留 | ["第一卷  自由与必然：从图灵机到 UNIX","第 1 章 计算的前史：从机械计算到可计算性","机械计算与自动计算思想"]
+PASS | [1366x768/dark/85%] 零JS错误
+PASS | [1366x768/dark/85%] 主题生效 | {"attr":"dark","bg":"rgb(23, 20, 18)"}
+PASS | [1366x768/dark/85%] 字号生效 | {"zoom":"0.85","comp":"0.85"}
+PASS | [1366x768/dark/85%] 零横向溢出 | {"sw":1351,"iw":1366}
+PASS | [1366x768/dark/85%] 自校验6/6
+PASS | [1366x768/dark/85%] 注计数741
+PASS | [1366x768/dark/85%] 口径3531
+PASS | [1366x768/dark/85%] 目录开关 | {"has":true,"opened":true}
+PASS | [1366x768/dark/85%] 搜索面板 | {"has":true,"vis":true}
+PASS | [1366x768/dark/85%] 溯源注展开 | {"has":true,"open":true}
+PASS | [1366x768/dark/85%] 人名浮层挂载 | {"plink":192,"reflink":128}
+PASS | [1366x768/dark/85%] 文献浮层挂载 | {"plink":192,"reflink":128}
+PASS | [1366x768/dark/85%] 长节名展开 | {"has":false,"dormant":true,"max":93}
+PASS | [1366x768/dark/85%] 进度条/面包屑/回顶 | {"bar":true,"bc":true,"topBtn":true}
+PASS | [1366x768/dark/85%] 章跳转 | {"moved":true}
+PASS | [1366x768/dark/85%] 导出口径3531 | {"hasExport":true,"stat":true}
+PASS | [1366x768/dark/85%] 导出内容无装饰残留 | ["第一卷  自由与必然：从图灵机到 UNIX","第 1 章 计算的前史：从机械计算到可计算性","机械计算与自动计算思想"]
+PASS | [1366x768/dark/100%] 零JS错误
+PASS | [1366x768/dark/100%] 主题生效 | {"attr":"dark","bg":"rgb(23, 20, 18)"}
+PASS | [1366x768/dark/100%] 字号生效 | {"zoom":"","comp":"1"}
+PASS | [1366x768/dark/100%] 零横向溢出 | {"sw":1351,"iw":1366}
+PASS | [1366x768/dark/100%] 自校验6/6
+PASS | [1366x768/dark/100%] 注计数741
+PASS | [1366x768/dark/100%] 口径3531
+PASS | [1366x768/dark/100%] 目录开关 | {"has":true,"opened":true}
+PASS | [1366x768/dark/100%] 搜索面板 | {"has":true,"vis":true}
+PASS | [1366x768/dark/100%] 溯源注展开 | {"has":true,"open":true}
+PASS | [1366x768/dark/100%] 人名浮层挂载 | {"plink":192,"reflink":128}
+PASS | [1366x768/dark/100%] 文献浮层挂载 | {"plink":192,"reflink":128}
+PASS | [1366x768/dark/100%] 长节名展开 | {"has":false,"dormant":true,"max":93}
+PASS | [1366x768/dark/100%] 进度条/面包屑/回顶 | {"bar":true,"bc":true,"topBtn":true}
+PASS | [1366x768/dark/100%] 章跳转 | {"moved":true}
+PASS | [1366x768/dark/100%] 导出口径3531 | {"hasExport":true,"stat":true}
+PASS | [1366x768/dark/100%] 导出内容无装饰残留 | ["第一卷  自由与必然：从图灵机到 UNIX","第 1 章 计算的前史：从机械计算到可计算性","机械计算与自动计算思想"]
+PASS | [1366x768/dark/140%] 零JS错误
+PASS | [1366x768/dark/140%] 主题生效 | {"attr":"dark","bg":"rgb(23, 20, 18)"}
+PASS | [1366x768/dark/140%] 字号生效 | {"zoom":"1.4","comp":"1.4"}
+PASS | [1366x768/dark/140%] 零横向溢出 | {"sw":1351,"iw":1366}
+PASS | [1366x768/dark/140%] 自校验6/6
+PASS | [1366x768/dark/140%] 注计数741
+PASS | [1366x768/dark/140%] 口径3531
+PASS | [1366x768/dark/140%] 目录开关 | {"has":true,"opened":true}
+PASS | [1366x768/dark/140%] 搜索面板 | {"has":true,"vis":true}
+PASS | [1366x768/dark/140%] 溯源注展开 | {"has":true,"open":true}
+PASS | [1366x768/dark/140%] 人名浮层挂载 | {"plink":192,"reflink":128}
+PASS | [1366x768/dark/140%] 文献浮层挂载 | {"plink":192,"reflink":128}
+PASS | [1366x768/dark/140%] 长节名展开 | {"has":false,"dormant":true,"max":93}
+PASS | [1366x768/dark/140%] 进度条/面包屑/回顶 | {"bar":true,"bc":true,"topBtn":true}
+PASS | [1366x768/dark/140%] 章跳转 | {"moved":true}
+PASS | [1366x768/dark/140%] 导出口径3531 | {"hasExport":true,"stat":true}
+PASS | [1366x768/dark/140%] 导出内容无装饰残留 | ["第一卷  自由与必然：从图灵机到 UNIX","第 1 章 计算的前史：从机械计算到可计算性","机械计算与自动计算思想"]
+PASS | [1366x768/sys/85%] 零JS错误
+PASS | [1366x768/sys/85%] 主题生效 | {"attr":"light","bg":"rgb(249, 245, 240)"}
+PASS | [1366x768/sys/85%] 字号生效 | {"zoom":"0.85","comp":"0.85"}
+PASS | [1366x768/sys/85%] 零横向溢出 | {"sw":1351,"iw":1366}
+PASS | [1366x768/sys/85%] 自校验6/6
+PASS | [1366x768/sys/85%] 注计数741
+PASS | [1366x768/sys/85%] 口径3531
+PASS | [1366x768/sys/85%] 目录开关 | {"has":true,"opened":true}
+PASS | [1366x768/sys/85%] 搜索面板 | {"has":true,"vis":true}
+PASS | [1366x768/sys/85%] 溯源注展开 | {"has":true,"open":true}
+PASS | [1366x768/sys/85%] 人名浮层挂载 | {"plink":192,"reflink":128}
+PASS | [1366x768/sys/85%] 文献浮层挂载 | {"plink":192,"reflink":128}
+PASS | [1366x768/sys/85%] 长节名展开 | {"has":false,"dormant":true,"max":93}
+PASS | [1366x768/sys/85%] 进度条/面包屑/回顶 | {"bar":true,"bc":true,"topBtn":true}
+PASS | [1366x768/sys/85%] 章跳转 | {"moved":true}
+PASS | [1366x768/sys/85%] 导出口径3531 | {"hasExport":true,"stat":true}
+PASS | [1366x768/sys/85%] 导出内容无装饰残留 | ["第一卷  自由与必然：从图灵机到 UNIX","第 1 章 计算的前史：从机械计算到可计算性","机械计算与自动计算思想"]
+PASS | [1366x768/sys/100%] 零JS错误
+PASS | [1366x768/sys/100%] 主题生效 | {"attr":"light","bg":"rgb(249, 245, 240)"}
+PASS | [1366x768/sys/100%] 字号生效 | {"zoom":"","comp":"1"}
+PASS | [1366x768/sys/100%] 零横向溢出 | {"sw":1351,"iw":1366}
+PASS | [1366x768/sys/100%] 自校验6/6
+PASS | [1366x768/sys/100%] 注计数741
+PASS | [1366x768/sys/100%] 口径3531
+PASS | [1366x768/sys/100%] 目录开关 | {"has":true,"opened":true}
+PASS | [1366x768/sys/100%] 搜索面板 | {"has":true,"vis":true}
+PASS | [1366x768/sys/100%] 溯源注展开 | {"has":true,"open":true}
+PASS | [1366x768/sys/100%] 人名浮层挂载 | {"plink":192,"reflink":128}
+PASS | [1366x768/sys/100%] 文献浮层挂载 | {"plink":192,"reflink":128}
+PASS | [1366x768/sys/100%] 长节名展开 | {"has":false,"dormant":true,"max":93}
+PASS | [1366x768/sys/100%] 进度条/面包屑/回顶 | {"bar":true,"bc":true,"topBtn":true}
+PASS | [1366x768/sys/100%] 章跳转 | {"moved":true}
+PASS | [1366x768/sys/100%] 导出口径3531 | {"hasExport":true,"stat":true}
+PASS | [1366x768/sys/100%] 导出内容无装饰残留 | ["第一卷  自由与必然：从图灵机到 UNIX","第 1 章 计算的前史：从机械计算到可计算性","机械计算与自动计算思想"]
+PASS | [1366x768/sys/140%] 零JS错误
+PASS | [1366x768/sys/140%] 主题生效 | {"attr":"light","bg":"rgb(249, 245, 240)"}
+PASS | [1366x768/sys/140%] 字号生效 | {"zoom":"1.4","comp":"1.4"}
+PASS | [1366x768/sys/140%] 零横向溢出 | {"sw":1351,"iw":1366}
+PASS | [1366x768/sys/140%] 自校验6/6
+PASS | [1366x768/sys/140%] 注计数741
+PASS | [1366x768/sys/140%] 口径3531
+PASS | [1366x768/sys/140%] 目录开关 | {"has":true,"opened":true}
+PASS | [1366x768/sys/140%] 搜索面板 | {"has":true,"vis":true}
+PASS | [1366x768/sys/140%] 溯源注展开 | {"has":true,"open":true}
+PASS | [1366x768/sys/140%] 人名浮层挂载 | {"plink":192,"reflink":128}
+PASS | [1366x768/sys/140%] 文献浮层挂载 | {"plink":192,"reflink":128}
+PASS | [1366x768/sys/140%] 长节名展开 | {"has":false,"dormant":true,"max":93}
+PASS | [1366x768/sys/140%] 进度条/面包屑/回顶 | {"bar":true,"bc":true,"topBtn":true}
+PASS | [1366x768/sys/140%] 章跳转 | {"moved":true}
+PASS | [1366x768/sys/140%] 导出口径3531 | {"hasExport":true,"stat":true}
+PASS | [1366x768/sys/140%] 导出内容无装饰残留 | ["第一卷  自由与必然：从图灵机到 UNIX","第 1 章 计算的前史：从机械计算到可计算性","机械计算与自动计算思想"]
+PASS | [768x1024/light/85%] 零JS错误
+PASS | [768x1024/light/85%] 主题生效 | {"attr":"light","bg":"rgb(249, 245, 240)"}
+PASS | [768x1024/light/85%] 字号生效 | {"zoom":"0.85","comp":"0.85"}
+PASS | [768x1024/light/85%] 零横向溢出 | {"sw":753,"iw":768}
+PASS | [768x1024/light/85%] 自校验6/6
+PASS | [768x1024/light/85%] 注计数741
+PASS | [768x1024/light/85%] 口径3531
+PASS | [768x1024/light/85%] 目录开关 | {"has":true,"opened":true}
+PASS | [768x1024/light/85%] 搜索面板 | {"has":true,"vis":true}
+PASS | [768x1024/light/85%] 溯源注展开 | {"has":true,"open":true}
+PASS | [768x1024/light/85%] 人名浮层挂载 | {"plink":192,"reflink":128}
+PASS | [768x1024/light/85%] 文献浮层挂载 | {"plink":192,"reflink":128}
+PASS | [768x1024/light/85%] 长节名展开 | {"has":false,"dormant":true,"max":93}
+PASS | [768x1024/light/85%] 进度条/面包屑/回顶 | {"bar":true,"bc":true,"topBtn":true}
+PASS | [768x1024/light/85%] 章跳转 | {"moved":true}
+PASS | [768x1024/light/85%] 导出口径3531 | {"hasExport":true,"stat":true}
+PASS | [768x1024/light/85%] 导出内容无装饰残留 | ["第一卷  自由与必然：从图灵机到 UNIX","第 1 章 计算的前史：从机械计算到可计算性","机械计算与自动计算思想"]
+PASS | [768x1024/light/100%] 零JS错误
+PASS | [768x1024/light/100%] 主题生效 | {"attr":"light","bg":"rgb(249, 245, 240)"}
+PASS | [768x1024/light/100%] 字号生效 | {"zoom":"","comp":"1"}
+PASS | [768x1024/light/100%] 零横向溢出 | {"sw":753,"iw":768}
+PASS | [768x1024/light/100%] 自校验6/6
+PASS | [768x1024/light/100%] 注计数741
+PASS | [768x1024/light/100%] 口径3531
+PASS | [768x1024/light/100%] 目录开关 | {"has":true,"opened":true}
+PASS | [768x1024/light/100%] 搜索面板 | {"has":true,"vis":true}
+PASS | [768x1024/light/100%] 溯源注展开 | {"has":true,"open":true}
+PASS | [768x1024/light/100%] 人名浮层挂载 | {"plink":192,"reflink":128}
+PASS | [768x1024/light/100%] 文献浮层挂载 | {"plink":192,"reflink":128}
+PASS | [768x1024/light/100%] 长节名展开 | {"has":false,"dormant":true,"max":93}
+PASS | [768x1024/light/100%] 进度条/面包屑/回顶 | {"bar":true,"bc":true,"topBtn":true}
+PASS | [768x1024/light/100%] 章跳转 | {"moved":true}
+PASS | [768x1024/light/100%] 导出口径3531 | {"hasExport":true,"stat":true}
+PASS | [768x1024/light/100%] 导出内容无装饰残留 | ["第一卷  自由与必然：从图灵机到 UNIX","第 1 章 计算的前史：从机械计算到可计算性","机械计算与自动计算思想"]
+PASS | [768x1024/light/140%] 零JS错误
+PASS | [768x1024/light/140%] 主题生效 | {"attr":"light","bg":"rgb(249, 245, 240)"}
+PASS | [768x1024/light/140%] 字号生效 | {"zoom":"1.4","comp":"1.4"}
+PASS | [768x1024/light/140%] 零横向溢出 | {"sw":753,"iw":768}
+PASS | [768x1024/light/140%] 自校验6/6
+PASS | [768x1024/light/140%] 注计数741
+PASS | [768x1024/light/140%] 口径3531
+PASS | [768x1024/light/140%] 目录开关 | {"has":true,"opened":true}
+PASS | [768x1024/light/140%] 搜索面板 | {"has":true,"vis":true}
+PASS | [768x1024/light/140%] 溯源注展开 | {"has":true,"open":true}
+PASS | [768x1024/light/140%] 人名浮层挂载 | {"plink":192,"reflink":128}
+PASS | [768x1024/light/140%] 文献浮层挂载 | {"plink":192,"reflink":128}
+PASS | [768x1024/light/140%] 长节名展开 | {"has":false,"dormant":true,"max":93}
+PASS | [768x1024/light/140%] 进度条/面包屑/回顶 | {"bar":true,"bc":true,"topBtn":true}
+PASS | [768x1024/light/140%] 章跳转 | {"moved":true}
+PASS | [768x1024/light/140%] 导出口径3531 | {"hasExport":true,"stat":true}
+PASS | [768x1024/light/140%] 导出内容无装饰残留 | ["第一卷  自由与必然：从图灵机到 UNIX","第 1 章 计算的前史：从机械计算到可计算性","机械计算与自动计算思想"]
+PASS | [768x1024/dark/85%] 零JS错误
+PASS | [768x1024/dark/85%] 主题生效 | {"attr":"dark","bg":"rgb(23, 20, 18)"}
+PASS | [768x1024/dark/85%] 字号生效 | {"zoom":"0.85","comp":"0.85"}
+PASS | [768x1024/dark/85%] 零横向溢出 | {"sw":753,"iw":768}
+PASS | [768x1024/dark/85%] 自校验6/6
+PASS | [768x1024/dark/85%] 注计数741
+PASS | [768x1024/dark/85%] 口径3531
+PASS | [768x1024/dark/85%] 目录开关 | {"has":true,"opened":true}
+PASS | [768x1024/dark/85%] 搜索面板 | {"has":true,"vis":true}
+PASS | [768x1024/dark/85%] 溯源注展开 | {"has":true,"open":true}
+PASS | [768x1024/dark/85%] 人名浮层挂载 | {"plink":192,"reflink":128}
+PASS | [768x1024/dark/85%] 文献浮层挂载 | {"plink":192,"reflink":128}
+PASS | [768x1024/dark/85%] 长节名展开 | {"has":false,"dormant":true,"max":93}
+PASS | [768x1024/dark/85%] 进度条/面包屑/回顶 | {"bar":true,"bc":true,"topBtn":true}
+PASS | [768x1024/dark/85%] 章跳转 | {"moved":true}
+PASS | [768x1024/dark/85%] 导出口径3531 | {"hasExport":true,"stat":true}
+PASS | [768x1024/dark/85%] 导出内容无装饰残留 | ["第一卷  自由与必然：从图灵机到 UNIX","第 1 章 计算的前史：从机械计算到可计算性","机械计算与自动计算思想"]
+PASS | [768x1024/dark/100%] 零JS错误
+PASS | [768x1024/dark/100%] 主题生效 | {"attr":"dark","bg":"rgb(23, 20, 18)"}
+PASS | [768x1024/dark/100%] 字号生效 | {"zoom":"","comp":"1"}
+PASS | [768x1024/dark/100%] 零横向溢出 | {"sw":753,"iw":768}
+PASS | [768x1024/dark/100%] 自校验6/6
+PASS | [768x1024/dark/100%] 注计数741
+PASS | [768x1024/dark/100%] 口径3531
+PASS | [768x1024/dark/100%] 目录开关 | {"has":true,"opened":true}
+PASS | [768x1024/dark/100%] 搜索面板 | {"has":true,"vis":true}
+PASS | [768x1024/dark/100%] 溯源注展开 | {"has":true,"open":true}
+PASS | [768x1024/dark/100%] 人名浮层挂载 | {"plink":192,"reflink":128}
+PASS | [768x1024/dark/100%] 文献浮层挂载 | {"plink":192,"reflink":128}
+PASS | [768x1024/dark/100%] 长节名展开 | {"has":false,"dormant":true,"max":93}
+PASS | [768x1024/dark/100%] 进度条/面包屑/回顶 | {"bar":true,"bc":true,"topBtn":true}
+PASS | [768x1024/dark/100%] 章跳转 | {"moved":true}
+PASS | [768x1024/dark/100%] 导出口径3531 | {"hasExport":true,"stat":true}
+PASS | [768x1024/dark/100%] 导出内容无装饰残留 | ["第一卷  自由与必然：从图灵机到 UNIX","第 1 章 计算的前史：从机械计算到可计算性","机械计算与自动计算思想"]
+PASS | [768x1024/dark/140%] 零JS错误
+PASS | [768x1024/dark/140%] 主题生效 | {"attr":"dark","bg":"rgb(23, 20, 18)"}
+PASS | [768x1024/dark/140%] 字号生效 | {"zoom":"1.4","comp":"1.4"}
+PASS | [768x1024/dark/140%] 零横向溢出 | {"sw":753,"iw":768}
+PASS | [768x1024/dark/140%] 自校验6/6
+PASS | [768x1024/dark/140%] 注计数741
+PASS | [768x1024/dark/140%] 口径3531
+PASS | [768x1024/dark/140%] 目录开关 | {"has":true,"opened":true}
+PASS | [768x1024/dark/140%] 搜索面板 | {"has":true,"vis":true}
+PASS | [768x1024/dark/140%] 溯源注展开 | {"has":true,"open":true}
+PASS | [768x1024/dark/140%] 人名浮层挂载 | {"plink":192,"reflink":128}
+PASS | [768x1024/dark/140%] 文献浮层挂载 | {"plink":192,"reflink":128}
+PASS | [768x1024/dark/140%] 长节名展开 | {"has":false,"dormant":true,"max":93}
+PASS | [768x1024/dark/140%] 进度条/面包屑/回顶 | {"bar":true,"bc":true,"topBtn":true}
+PASS | [768x1024/dark/140%] 章跳转 | {"moved":true}
+PASS | [768x1024/dark/140%] 导出口径3531 | {"hasExport":true,"stat":true}
+PASS | [768x1024/dark/140%] 导出内容无装饰残留 | ["第一卷  自由与必然：从图灵机到 UNIX","第 1 章 计算的前史：从机械计算到可计算性","机械计算与自动计算思想"]
+PASS | [768x1024/sys/85%] 零JS错误
+PASS | [768x1024/sys/85%] 主题生效 | {"attr":"light","bg":"rgb(249, 245, 240)"}
+PASS | [768x1024/sys/85%] 字号生效 | {"zoom":"0.85","comp":"0.85"}
+PASS | [768x1024/sys/85%] 零横向溢出 | {"sw":753,"iw":768}
+PASS | [768x1024/sys/85%] 自校验6/6
+PASS | [768x1024/sys/85%] 注计数741
+PASS | [768x1024/sys/85%] 口径3531
+PASS | [768x1024/sys/85%] 目录开关 | {"has":true,"opened":true}
+PASS | [768x1024/sys/85%] 搜索面板 | {"has":true,"vis":true}
+PASS | [768x1024/sys/85%] 溯源注展开 | {"has":true,"open":true}
+PASS | [768x1024/sys/85%] 人名浮层挂载 | {"plink":192,"reflink":128}
+PASS | [768x1024/sys/85%] 文献浮层挂载 | {"plink":192,"reflink":128}
+PASS | [768x1024/sys/85%] 长节名展开 | {"has":false,"dormant":true,"max":93}
+PASS | [768x1024/sys/85%] 进度条/面包屑/回顶 | {"bar":true,"bc":true,"topBtn":true}
+PASS | [768x1024/sys/85%] 章跳转 | {"moved":true}
+PASS | [768x1024/sys/85%] 导出口径3531 | {"hasExport":true,"stat":true}
+PASS | [768x1024/sys/85%] 导出内容无装饰残留 | ["第一卷  自由与必然：从图灵机到 UNIX","第 1 章 计算的前史：从机械计算到可计算性","机械计算与自动计算思想"]
+PASS | [768x1024/sys/100%] 零JS错误
+PASS | [768x1024/sys/100%] 主题生效 | {"attr":"light","bg":"rgb(249, 245, 240)"}
+PASS | [768x1024/sys/100%] 字号生效 | {"zoom":"","comp":"1"}
+PASS | [768x1024/sys/100%] 零横向溢出 | {"sw":753,"iw":768}
+PASS | [768x1024/sys/100%] 自校验6/6
+PASS | [768x1024/sys/100%] 注计数741
+PASS | [768x1024/sys/100%] 口径3531
+PASS | [768x1024/sys/100%] 目录开关 | {"has":true,"opened":true}
+PASS | [768x1024/sys/100%] 搜索面板 | {"has":true,"vis":true}
+PASS | [768x1024/sys/100%] 溯源注展开 | {"has":true,"open":true}
+PASS | [768x1024/sys/100%] 人名浮层挂载 | {"plink":192,"reflink":128}
+PASS | [768x1024/sys/100%] 文献浮层挂载 | {"plink":192,"reflink":128}
+PASS | [768x1024/sys/100%] 长节名展开 | {"has":false,"dormant":true,"max":93}
+PASS | [768x1024/sys/100%] 进度条/面包屑/回顶 | {"bar":true,"bc":true,"topBtn":true}
+PASS | [768x1024/sys/100%] 章跳转 | {"moved":true}
+PASS | [768x1024/sys/100%] 导出口径3531 | {"hasExport":true,"stat":true}
+PASS | [768x1024/sys/100%] 导出内容无装饰残留 | ["第一卷  自由与必然：从图灵机到 UNIX","第 1 章 计算的前史：从机械计算到可计算性","机械计算与自动计算思想"]
+PASS | [768x1024/sys/140%] 零JS错误
+PASS | [768x1024/sys/140%] 主题生效 | {"attr":"light","bg":"rgb(249, 245, 240)"}
+PASS | [768x1024/sys/140%] 字号生效 | {"zoom":"1.4","comp":"1.4"}
+PASS | [768x1024/sys/140%] 零横向溢出 | {"sw":753,"iw":768}
+PASS | [768x1024/sys/140%] 自校验6/6
+PASS | [768x1024/sys/140%] 注计数741
+PASS | [768x1024/sys/140%] 口径3531
+PASS | [768x1024/sys/140%] 目录开关 | {"has":true,"opened":true}
+PASS | [768x1024/sys/140%] 搜索面板 | {"has":true,"vis":true}
+PASS | [768x1024/sys/140%] 溯源注展开 | {"has":true,"open":true}
+PASS | [768x1024/sys/140%] 人名浮层挂载 | {"plink":192,"reflink":128}
+PASS | [768x1024/sys/140%] 文献浮层挂载 | {"plink":192,"reflink":128}
+PASS | [768x1024/sys/140%] 长节名展开 | {"has":false,"dormant":true,"max":93}
+PASS | [768x1024/sys/140%] 进度条/面包屑/回顶 | {"bar":true,"bc":true,"topBtn":true}
+PASS | [768x1024/sys/140%] 章跳转 | {"moved":true}
+PASS | [768x1024/sys/140%] 导出口径3531 | {"hasExport":true,"stat":true}
+PASS | [768x1024/sys/140%] 导出内容无装饰残留 | ["第一卷  自由与必然：从图灵机到 UNIX","第 1 章 计算的前史：从机械计算到可计算性","机械计算与自动计算思想"]
+PASS | [768x1024/sys/140%] 图谱打开零省略 | {"open":true,"labels":47,"ells":0}
+PASS | [768x1024/sys/140%] 修订史面板 | {"open":true}
+PASS | [768x1024/sys/140%] 研阅切换 | {"changed":true}
+PASS | [768x1024/sys/140%] 字号滑杆交互 | {"open":true,"zoom":"1.4","label":"140%"}
+PASS | [412x915/light/85%] 零JS错误
+PASS | [412x915/light/85%] 主题生效 | {"attr":"light","bg":"rgb(249, 245, 240)"}
+PASS | [412x915/light/85%] 字号生效 | {"zoom":"0.85","comp":"0.85"}
+PASS | [412x915/light/85%] 零横向溢出 | {"sw":397,"iw":412}
+PASS | [412x915/light/85%] 自校验6/6
+PASS | [412x915/light/85%] 注计数741
+PASS | [412x915/light/85%] 口径3531
+PASS | [412x915/light/85%] 目录开关 | {"has":true,"opened":true}
+PASS | [412x915/light/85%] 搜索面板 | {"has":true,"vis":true}
+PASS | [412x915/light/85%] 溯源注展开 | {"has":true,"open":true}
+PASS | [412x915/light/85%] 人名浮层挂载 | {"plink":192,"reflink":128}
+PASS | [412x915/light/85%] 文献浮层挂载 | {"plink":192,"reflink":128}
+PASS | [412x915/light/85%] 长节名展开 | {"has":false,"dormant":true,"max":93}
+PASS | [412x915/light/85%] 进度条/面包屑/回顶 | {"bar":true,"bc":true,"topBtn":true}
+PASS | [412x915/light/85%] 章跳转 | {"moved":true}
+PASS | [412x915/light/85%] 导出口径3531 | {"hasExport":true,"stat":true}
+PASS | [412x915/light/85%] 导出内容无装饰残留 | ["第一卷  自由与必然：从图灵机到 UNIX","第 1 章 计算的前史：从机械计算到可计算性","机械计算与自动计算思想"]
+PASS | [412x915/light/100%] 零JS错误
+PASS | [412x915/light/100%] 主题生效 | {"attr":"light","bg":"rgb(249, 245, 240)"}
+PASS | [412x915/light/100%] 字号生效 | {"zoom":"","comp":"1"}
+PASS | [412x915/light/100%] 零横向溢出 | {"sw":397,"iw":412}
+PASS | [412x915/light/100%] 自校验6/6
+PASS | [412x915/light/100%] 注计数741
+PASS | [412x915/light/100%] 口径3531
+PASS | [412x915/light/100%] 目录开关 | {"has":true,"opened":true}
+PASS | [412x915/light/100%] 搜索面板 | {"has":true,"vis":true}
+PASS | [412x915/light/100%] 溯源注展开 | {"has":true,"open":true}
+PASS | [412x915/light/100%] 人名浮层挂载 | {"plink":192,"reflink":128}
+PASS | [412x915/light/100%] 文献浮层挂载 | {"plink":192,"reflink":128}
+PASS | [412x915/light/100%] 长节名展开 | {"has":false,"dormant":true,"max":93}
+PASS | [412x915/light/100%] 进度条/面包屑/回顶 | {"bar":true,"bc":true,"topBtn":true}
+PASS | [412x915/light/100%] 章跳转 | {"moved":true}
+PASS | [412x915/light/100%] 导出口径3531 | {"hasExport":true,"stat":true}
+PASS | [412x915/light/100%] 导出内容无装饰残留 | ["第一卷  自由与必然：从图灵机到 UNIX","第 1 章 计算的前史：从机械计算到可计算性","机械计算与自动计算思想"]
+PASS | [412x915/light/140%] 零JS错误
+PASS | [412x915/light/140%] 主题生效 | {"attr":"light","bg":"rgb(249, 245, 240)"}
+PASS | [412x915/light/140%] 字号生效 | {"zoom":"1.4","comp":"1.4"}
+PASS | [412x915/light/140%] 零横向溢出 | {"sw":397,"iw":412}
+PASS | [412x915/light/140%] 自校验6/6
+PASS | [412x915/light/140%] 注计数741
+PASS | [412x915/light/140%] 口径3531
+PASS | [412x915/light/140%] 目录开关 | {"has":true,"opened":true}
+PASS | [412x915/light/140%] 搜索面板 | {"has":true,"vis":true}
+PASS | [412x915/light/140%] 溯源注展开 | {"has":true,"open":true}
+PASS | [412x915/light/140%] 人名浮层挂载 | {"plink":192,"reflink":128}
+PASS | [412x915/light/140%] 文献浮层挂载 | {"plink":192,"reflink":128}
+PASS | [412x915/light/140%] 长节名展开 | {"has":false,"dormant":true,"max":93}
+PASS | [412x915/light/140%] 进度条/面包屑/回顶 | {"bar":true,"bc":true,"topBtn":true}
+PASS | [412x915/light/140%] 章跳转 | {"moved":true}
+PASS | [412x915/light/140%] 导出口径3531 | {"hasExport":true,"stat":true}
+PASS | [412x915/light/140%] 导出内容无装饰残留 | ["第一卷  自由与必然：从图灵机到 UNIX","第 1 章 计算的前史：从机械计算到可计算性","机械计算与自动计算思想"]
+PASS | [412x915/dark/85%] 零JS错误
+PASS | [412x915/dark/85%] 主题生效 | {"attr":"dark","bg":"rgb(23, 20, 18)"}
+PASS | [412x915/dark/85%] 字号生效 | {"zoom":"0.85","comp":"0.85"}
+PASS | [412x915/dark/85%] 零横向溢出 | {"sw":397,"iw":412}
+PASS | [412x915/dark/85%] 自校验6/6
+PASS | [412x915/dark/85%] 注计数741
+PASS | [412x915/dark/85%] 口径3531
+PASS | [412x915/dark/85%] 目录开关 | {"has":true,"opened":true}
+PASS | [412x915/dark/85%] 搜索面板 | {"has":true,"vis":true}
+PASS | [412x915/dark/85%] 溯源注展开 | {"has":true,"open":true}
+PASS | [412x915/dark/85%] 人名浮层挂载 | {"plink":192,"reflink":128}
+PASS | [412x915/dark/85%] 文献浮层挂载 | {"plink":192,"reflink":128}
+PASS | [412x915/dark/85%] 长节名展开 | {"has":false,"dormant":true,"max":93}
+PASS | [412x915/dark/85%] 进度条/面包屑/回顶 | {"bar":true,"bc":true,"topBtn":true}
+PASS | [412x915/dark/85%] 章跳转 | {"moved":true}
+PASS | [412x915/dark/85%] 导出口径3531 | {"hasExport":true,"stat":true}
+PASS | [412x915/dark/85%] 导出内容无装饰残留 | ["第一卷  自由与必然：从图灵机到 UNIX","第 1 章 计算的前史：从机械计算到可计算性","机械计算与自动计算思想"]
+PASS | [412x915/dark/100%] 零JS错误
+PASS | [412x915/dark/100%] 主题生效 | {"attr":"dark","bg":"rgb(23, 20, 18)"}
+PASS | [412x915/dark/100%] 字号生效 | {"zoom":"","comp":"1"}
+PASS | [412x915/dark/100%] 零横向溢出 | {"sw":397,"iw":412}
+PASS | [412x915/dark/100%] 自校验6/6
+PASS | [412x915/dark/100%] 注计数741
+PASS | [412x915/dark/100%] 口径3531
+PASS | [412x915/dark/100%] 目录开关 | {"has":true,"opened":true}
+PASS | [412x915/dark/100%] 搜索面板 | {"has":true,"vis":true}
+PASS | [412x915/dark/100%] 溯源注展开 | {"has":true,"open":true}
+PASS | [412x915/dark/100%] 人名浮层挂载 | {"plink":192,"reflink":128}
+PASS | [412x915/dark/100%] 文献浮层挂载 | {"plink":192,"reflink":128}
+PASS | [412x915/dark/100%] 长节名展开 | {"has":false,"dormant":true,"max":93}
+PASS | [412x915/dark/100%] 进度条/面包屑/回顶 | {"bar":true,"bc":true,"topBtn":true}
+PASS | [412x915/dark/100%] 章跳转 | {"moved":true}
+PASS | [412x915/dark/100%] 导出口径3531 | {"hasExport":true,"stat":true}
+PASS | [412x915/dark/100%] 导出内容无装饰残留 | ["第一卷  自由与必然：从图灵机到 UNIX","第 1 章 计算的前史：从机械计算到可计算性","机械计算与自动计算思想"]
+PASS | [412x915/dark/100%] 图谱打开零省略 | {"open":true,"labels":47,"ells":0}
+PASS | [412x915/dark/100%] 修订史面板 | {"open":true}
+PASS | [412x915/dark/100%] 研阅切换 | {"changed":true}
+PASS | [412x915/dark/100%] 字号滑杆交互 | {"open":true,"zoom":"1.4","label":"140%"}
+PASS | [412x915/dark/140%] 零JS错误
+PASS | [412x915/dark/140%] 主题生效 | {"attr":"dark","bg":"rgb(23, 20, 18)"}
+PASS | [412x915/dark/140%] 字号生效 | {"zoom":"1.4","comp":"1.4"}
+PASS | [412x915/dark/140%] 零横向溢出 | {"sw":397,"iw":412}
+PASS | [412x915/dark/140%] 自校验6/6
+PASS | [412x915/dark/140%] 注计数741
+PASS | [412x915/dark/140%] 口径3531
+PASS | [412x915/dark/140%] 目录开关 | {"has":true,"opened":true}
+PASS | [412x915/dark/140%] 搜索面板 | {"has":true,"vis":true}
+PASS | [412x915/dark/140%] 溯源注展开 | {"has":true,"open":true}
+PASS | [412x915/dark/140%] 人名浮层挂载 | {"plink":192,"reflink":128}
+PASS | [412x915/dark/140%] 文献浮层挂载 | {"plink":192,"reflink":128}
+PASS | [412x915/dark/140%] 长节名展开 | {"has":false,"dormant":true,"max":93}
+PASS | [412x915/dark/140%] 进度条/面包屑/回顶 | {"bar":true,"bc":true,"topBtn":true}
+PASS | [412x915/dark/140%] 章跳转 | {"moved":true}
+PASS | [412x915/dark/140%] 导出口径3531 | {"hasExport":true,"stat":true}
+PASS | [412x915/dark/140%] 导出内容无装饰残留 | ["第一卷  自由与必然：从图灵机到 UNIX","第 1 章 计算的前史：从机械计算到可计算性","机械计算与自动计算思想"]
+PASS | [412x915/sys/85%] 零JS错误
+PASS | [412x915/sys/85%] 主题生效 | {"attr":"light","bg":"rgb(249, 245, 240)"}
+PASS | [412x915/sys/85%] 字号生效 | {"zoom":"0.85","comp":"0.85"}
+PASS | [412x915/sys/85%] 零横向溢出 | {"sw":397,"iw":412}
+PASS | [412x915/sys/85%] 自校验6/6
+PASS | [412x915/sys/85%] 注计数741
+PASS | [412x915/sys/85%] 口径3531
+PASS | [412x915/sys/85%] 目录开关 | {"has":true,"opened":true}
+PASS | [412x915/sys/85%] 搜索面板 | {"has":true,"vis":true}
+PASS | [412x915/sys/85%] 溯源注展开 | {"has":true,"open":true}
+PASS | [412x915/sys/85%] 人名浮层挂载 | {"plink":192,"reflink":128}
+PASS | [412x915/sys/85%] 文献浮层挂载 | {"plink":192,"reflink":128}
+PASS | [412x915/sys/85%] 长节名展开 | {"has":false,"dormant":true,"max":93}
+PASS | [412x915/sys/85%] 进度条/面包屑/回顶 | {"bar":true,"bc":true,"topBtn":true}
+PASS | [412x915/sys/85%] 章跳转 | {"moved":true}
+PASS | [412x915/sys/85%] 导出口径3531 | {"hasExport":true,"stat":true}
+PASS | [412x915/sys/85%] 导出内容无装饰残留 | ["第一卷  自由与必然：从图灵机到 UNIX","第 1 章 计算的前史：从机械计算到可计算性","机械计算与自动计算思想"]
+PASS | [412x915/sys/100%] 零JS错误
+PASS | [412x915/sys/100%] 主题生效 | {"attr":"light","bg":"rgb(249, 245, 240)"}
+PASS | [412x915/sys/100%] 字号生效 | {"zoom":"","comp":"1"}
+PASS | [412x915/sys/100%] 零横向溢出 | {"sw":397,"iw":412}
+PASS | [412x915/sys/100%] 自校验6/6
+PASS | [412x915/sys/100%] 注计数741
+PASS | [412x915/sys/100%] 口径3531
+PASS | [412x915/sys/100%] 目录开关 | {"has":true,"opened":true}
+PASS | [412x915/sys/100%] 搜索面板 | {"has":true,"vis":true}
+PASS | [412x915/sys/100%] 溯源注展开 | {"has":true,"open":true}
+PASS | [412x915/sys/100%] 人名浮层挂载 | {"plink":192,"reflink":128}
+PASS | [412x915/sys/100%] 文献浮层挂载 | {"plink":192,"reflink":128}
+PASS | [412x915/sys/100%] 长节名展开 | {"has":false,"dormant":true,"max":93}
+PASS | [412x915/sys/100%] 进度条/面包屑/回顶 | {"bar":true,"bc":true,"topBtn":true}
+PASS | [412x915/sys/100%] 章跳转 | {"moved":true}
+PASS | [412x915/sys/100%] 导出口径3531 | {"hasExport":true,"stat":true}
+PASS | [412x915/sys/100%] 导出内容无装饰残留 | ["第一卷  自由与必然：从图灵机到 UNIX","第 1 章 计算的前史：从机械计算到可计算性","机械计算与自动计算思想"]
+PASS | [412x915/sys/140%] 零JS错误
+PASS | [412x915/sys/140%] 主题生效 | {"attr":"light","bg":"rgb(249, 245, 240)"}
+PASS | [412x915/sys/140%] 字号生效 | {"zoom":"1.4","comp":"1.4"}
+PASS | [412x915/sys/140%] 零横向溢出 | {"sw":397,"iw":412}
+PASS | [412x915/sys/140%] 自校验6/6
+PASS | [412x915/sys/140%] 注计数741
+PASS | [412x915/sys/140%] 口径3531
+PASS | [412x915/sys/140%] 目录开关 | {"has":true,"opened":true}
+PASS | [412x915/sys/140%] 搜索面板 | {"has":true,"vis":true}
+PASS | [412x915/sys/140%] 溯源注展开 | {"has":true,"open":true}
+PASS | [412x915/sys/140%] 人名浮层挂载 | {"plink":192,"reflink":128}
+PASS | [412x915/sys/140%] 文献浮层挂载 | {"plink":192,"reflink":128}
+PASS | [412x915/sys/140%] 长节名展开 | {"has":false,"dormant":true,"max":93}
+PASS | [412x915/sys/140%] 进度条/面包屑/回顶 | {"bar":true,"bc":true,"topBtn":true}
+PASS | [412x915/sys/140%] 章跳转 | {"moved":true}
+PASS | [412x915/sys/140%] 导出口径3531 | {"hasExport":true,"stat":true}
+PASS | [412x915/sys/140%] 导出内容无装饰残留 | ["第一卷  自由与必然：从图灵机到 UNIX","第 1 章 计算的前史：从机械计算到可计算性","机械计算与自动计算思想"]
+
+COMBOS=36 TOTAL=628 FAILED=1
+FAILED LIST:
+ - [1920x1080/dark/140%] 进度条/面包屑/回顶 | {"bar":false,"bc":true,"topBtn":true}

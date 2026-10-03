@@ -29,8 +29,14 @@ server/serve_index.py` 0.0.0.0:80 单线程），二者**语义分叉**且**均�
     python serve_refactor2026.py --port 18080
     python serve_refactor2026.py --bind 127.0.0.1      # 仅本机（门禁用）
     python serve_refactor2026.py --root D:\\某目录 --port 8080
+    python serve_refactor2026.py --port 80 --pidfile D:\\librebsd\\_tmp\\senseindex_80.pid
 
-停止：Ctrl+C；或用 `--pidfile` 写出的 PID 精确结束。
+停止：Ctrl+C；或用 PID 文件（默认 `%LOCALAPPDATA%\\senseindex\\serve_refactor2026_<port>.pid`，
+`--pidfile` 可改路径）精确结束。
+
+修订（2026-10-03）：文档自始宣称支持 `--pidfile`，argparse 却未定义该参数（实测传参即
+usage error，文档与实现不符）。本次补齐 `--pidfile PATH`：仅覆盖 PID 文件**路径**，
+默认路径与既有行为不变；`--no-pidfile` 语义不变。
 """
 import argparse
 import email.utils
@@ -229,14 +235,20 @@ def lan_ip() -> str:
         s.close()
 
 
-def write_pid(port: int) -> str:
+def write_pid(port: int, path: str = "") -> str:
+    """写 PID 文件；`path` 为空时用默认位置（%LOCALAPPDATA%\\senseindex）。"""
     try:
-        d = os.path.join(os.environ.get("LOCALAPPDATA", ""), "senseindex")
-        os.makedirs(d, exist_ok=True)
-        p = os.path.join(d, "serve_refactor2026_%d.pid" % port)
-        with open(p, "w", encoding="ascii") as f:
+        if not path:
+            d = os.path.join(os.environ.get("LOCALAPPDATA", ""), "senseindex")
+            os.makedirs(d, exist_ok=True)
+            path = os.path.join(d, "serve_refactor2026_%d.pid" % port)
+        else:
+            parent = os.path.dirname(os.path.abspath(path))
+            if parent and not os.path.isdir(parent):
+                os.makedirs(parent, exist_ok=True)
+        with open(path, "w", encoding="ascii") as f:
             f.write("%d\n" % os.getpid())
-        return p
+        return path
     except OSError:
         return ""
 
@@ -263,6 +275,9 @@ def main(argv=None) -> int:
     ap.add_argument("--bind", default=DEFAULT_BIND,
                     help="监听地址；局域网用 0.0.0.0，门禁/本机用 127.0.0.1")
     ap.add_argument("--no-pidfile", action="store_true")
+    ap.add_argument("--pidfile", default="",
+                    help="PID 文件路径（默认 %%LOCALAPPDATA%%\\senseindex\\"
+                         "serve_refactor2026_<port>.pid）")
     args = ap.parse_args(argv)
 
     Handler.root = os.path.abspath(args.root)
@@ -289,7 +304,7 @@ def main(argv=None) -> int:
             return 0
         raise
 
-    pid = "" if args.no_pidfile else write_pid(args.port)
+    pid = "" if args.no_pidfile else write_pid(args.port, args.pidfile)
     print("senseindex/2.0 listening on %s:%d" % (args.bind, args.port))
     print("  docroot : %s" % Handler.root)
     print("  本机    : http://127.0.0.1:%d/" % args.port)

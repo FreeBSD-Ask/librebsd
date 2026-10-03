@@ -86,6 +86,12 @@ def main(hosts):
                 # 情形③ 等级挂账交专项 X1（任务书 §五）；head_line 未随改会造成块内
                 # 抬头↔纪律串不一致，故 fix-db 一律不入大纲（与文档串契约一致）
                 continue
+            if r.get("判定") in ("keep", "remap", "存疑"):
+                # 按文档契约这几类一律不动文件。须显式拦：本工具按「新摘要句非空」判定
+                # 是否可写，而 keep/存疑 判读的 新摘要句 可能被归一器回填为原 summ_line、
+                # 或被写手顺手填了一句改写稿——2026-10-03 F1-05 88.1 实证补丁前一轮
+                # 写入 9 条非 fix 行（keep 8＋存疑 1），补丁后重跑得 4269 行 100% 命中 fix 判定。
+                continue
             if not (r.get("新摘要句") or r.get("判定") in ("fix-format", "fix-text")):
                 continue
             db_pk = "|".join(key.split("|")[:2])
@@ -162,6 +168,12 @@ def main(hosts):
                 continue
             # 纪律串守恒：原行有哪种收尾，新行就须恰含该收尾 1 次；原行无收尾（英文结尾等）不设限
             for mk in (TAIL, ALT_TAIL):
+                # ALT_TAIL 只是缺「引用时按」的 DSLXC 族收尾兜底：原行已带主纪律串时，
+                # 「以上为邮件列表当事人」会作为「以上为邮件列表当事人陈述」的前缀被误命中，
+                # 令 L3 二手转述改写稿假报 0 次——2026-10-03 F1-05 88.1 实证 22 行假拦。
+                # 主纪律串已在 loop 首项按 count==1 校验，故此跳过只收窄不改严。
+                if mk == ALT_TAIL and TAIL in tail:
+                    continue
                 if mk in tail and new_line.count(mk) != 1:
                     print(f"  ! 纪律串出现 {new_line.count(mk)} 次（须恰 1 次）: {key}", file=sys.stderr)
                     n_err += 1
