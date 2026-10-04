@@ -18,7 +18,7 @@
 | transcripts 分布 | youtube_subs_20261001=1,123 / youtube_auto_subs=52 / senseaudio-asr-stream-1.5-260910=~45（总 1,220） |
 | audio 库 | **curated 4,197/4,197 音频 100% 到手**（16:20 终态；全库 5,4xx mp3，约 175G），路径 `03-原始史料库/14-播客史料/audio/` |
 | 磁盘 | D: 531G，可用约 180G（66%） |
-| key 池 | `C:/Users/ykla/.sensenova/senseaudio_keys.json`：pool **32 把**（含 GL* 18＋主理人新给 10，探针 10/10 OPEN）；轮替总数 **33**（＝具名 tb2_bsdtalk_external＋pool）；备份 `bak-20261004-preGL` / `bak-20261004-preNew10` |
+| key 池 | `C:/Users/ykla/.sensenova/senseaudio_keys.json`：pool **48 把**（GL* 18＋晚间两批 10+16，探针 **26/26 OPEN**）；轮替总数 **49**（＝具名 tb2_bsdtalk_external＋pool）；备份 `bak-20261004-preGL` / `-preNew10` / `-preNew16` |
 | 大纲 git | `db2743a5b`（46 期内容复核波）；其后大纲无新提交 |
 | 下载线 | 🟢 D1 curated 4,197/4,197＋D2 重下 14/14 全部到手；cookies 管线定型（见 §十）；全库解码审计**已收口：4,197 件全验毕（4,196 ok＋1 瞬时误报复验有效）**；310 个冗余 mp4 已清（释放 23.08 GB）；D3 字幕见 §三.3 |
 | 复核线 | 🟢 **54/54 全部复核完毕：53 pass / 1 fail**（fail＝BOPeeLhZOsY 空正文，待回炉）；裁决件在 `tb2/reviews/`，pass 中 QC 无 suspect |
