@@ -325,7 +325,12 @@ json 107／ledger 108，重启后 +53；偶发 1011/退避自愈，弃期自动�
 ＝JSON utterances 合计 5,130 逐件一致**（§九.1）；reviewed 置位 53 行→`'reviewed'`（既有 senseaudio 行同约定；
 误置 quality_passed 已即改）。**入大纲**：`04_outline_rewrite.py` 对 53 期 pass 件派发＝**全部「有既有条目 0 期」
 → 派发单 0 张**（本批均为未被大纲引用的新增期）；被引用的 46 期 YouTube **46/46 已有转录在库**且改写已闭环
-（`db2743a5b`）——新增期入纲＝独立增补 campaign（§四）。**删该批音频未执行**（链上挂账步，待裁后批删）。
+（`db2743a5b`）——新增期入纲＝独立增补 campaign（§四）。
+**删该批音频（主理人令「允许批量删」，20:1x 执行）**：本批 53 期音频 **53/53 删除、释放 1,289.1 MB、残留 0**；
+清单留痕 `_tmp/senseaudio_out/tb2/audio_deleted_20261004.jsonl`（vid/bytes/deleted_at）；curated 覆盖
+4,197/4,197 → **4,145/4,197（缺 52＝本批按策略删除，链接留 DB）**；BOPee fail 件与 114 未复核件音频保留。
+`_pcm_gc.py --apply` 首跑撞 worker 刚完成期的句柄窗口（WinError 32）→ 已加「占用跳过」韧性，重跑清
+115 个已完成期 PCM 释放 4.17 GB（1 个 in-use 跳过，下轮回收）。
 **下一手**：① 转录滚动批 ~20 期 → 逐字复核＋§十一 QC → `03_ingest.py` 入库（候选/curated 行 `episode_id=vid`
 的补注册纪律见 §六）；② `_pcm_gc.py --apply` 周期回收；③ BOPee 裁处；④ 并发上探（20–24 路，非高峰）与
 150 路前置（流式 PCM／加内存＋服务方并发上限确认）待裁；
