@@ -1,373 +1,0 @@
-FreeBSD	  and	  GDB	  
-John	  Baldwin	  
-June	  11,	  2016	  
-
-Overview	  
-• Structure	  of	  GDB	  
-• Recent	  Userland	  Debugging	  Changes	  
-• Kernel	  Debugging	  
-
-GDB	  Concepts	  
-• Inferior	  
-– Something	  you	  can	  debug	  (e.g.	  a	  running	  process,	  
-or	  a	  former	  process	  described	  by	  a	  core	  dump)	  
-• GDB	  Architecture	  
-– Describes	  a	  process	  ABI	  (e.g.	  FreeBSD/amd64	  ELF)	  
-• Targets	  
-– Interface	  for	  interacQng	  with	  an	  inferior	  
-
-GDB	  Architectures	  (ABIs)	  
-• struct	  gdbarch	  describes	  an	  ABI	  “class”	  
-• Includes	  ABI-­‐speciﬁc	  methods	  for	  certain	  
-targets	  
-– Core	  ﬁle	  target	  uses	  ABI	  methods	  to	  parse	  core	  
-ﬁle	  register	  notes	  
-• Pointer	  to	  a	  shared	  library	  operaQons	  
-structure	  
-• Signal	  frame	  handling	  
-
-GDB	  Architectures	  (ABIs)	  
-• ABIs	  are	  deﬁned	  in	  ‘*tdep.c’	  ﬁles	  
-– Zsd-­‐tdep.c	  holds	  FreeBSD	  rouQnes	  common	  to	  all	  
-FreeBSD	  ABIs	  
-– amd64Zsd-­‐tdep.c	  deﬁnes	  the	  FreeBSD/amd64	  
-ABI	  
-• ABI	  “sniﬀers”	  match	  against	  binaries	  
-– For	  example,	  ELF	  header	  ﬁelds	  
-• Associated	  iniQalizaQon	  rouQne	  sets	  gdbarch	  
-members	  when	  sniﬀer	  “matches”	  
-
-GDB	  Targets	  
-• Targets	  provide	  an	  interface	  to	  interact	  with	  an	  
-inferior	  
-– Read	  and	  write	  memory	  
-– Get	  and	  set	  register	  values	  
-– Enumerate	  threads	  
-– Wait	  for	  an	  event	  
-• MulQple	  targets	  can	  be	  a‘ached	  to	  a	  single	  
-inferior	  in	  a	  stack	  
-– Upper	  targets	  may	  pass	  operaQons	  down	  to	  lower	  
-targets	  
-
-GDB	  Targets	  –	  Core	  Dump	  
-Core	  Target	  
-Exec	  File	  Target	  
- exec_bfd	  
-core_bfd	  
-
-
-GDB	  Targets	  –	  Running	  
-NaQve	  Target	  
-Exec	  File	  Target	  
- exec_bfd	  
-ptrace()	  /	  procfs	  
-
-
-NaQve	  Targets	  
-• NaQve	  targets	  are	  used	  with	  execuQng	  
-processes	  
-– “run”	  
-– A‘ach	  to	  an	  exisQng	  process	  
-• NaQve	  targets	  are	  deﬁned	  in	  ‘inf-­‐*.c’	  and	  
-‘*nat.c’	  ﬁles	  
-
-NaQve	  Targets	  
-• inf-­‐child.c	  
-– Base	  class	  of	  all	  naQve	  targets	  
-• inf-­‐ptrace.c	  
-– OS-­‐independent	  base	  ptrace()	  target	  
-• PT_IO,	  PT_CONTINUE,	  PT_STEP,	  wait()	  
-• Zsd-­‐nat.c	  
-– Plaeorm-­‐independent	  FreeBSD-­‐speciﬁc	  ptrace()	  
-methods	  
-
-NaQve	  Targets	  (BSD)	  
-• *BSD	  targets	  ofen	  share	  pan-­‐BSD	  code	  
-• amd64bsd-­‐nat.c	  
-– ptrace()	  operaQons	  to	  get	  and	  set	  registers	  
-• amd64Zsd-­‐nat.c	  
-– FreeBSD/amd64	  speciﬁc	  target	  
-– Glues	  together	  bits	  from	  amd64bsd-­‐nat.c	  and	  
-Zsd-­‐nat.c	  
-
-Recent	  Userland	  Changes	  
-• Fork	  following	  (gdb	  7.10)	  
-• LWP-­‐based	  thread	  support	  (gdb	  7.11)	  
-
-Fork	  Following	  
-• NaQve	  target	  requirements	  
-– AutomaQcally	  stop	  new	  child	  processes	  
-– Report	  fork()	  event	  (including	  pid	  of	  new	  child	  
-process)	  to	  debugger	  
-• Could	  handle	  second	  by	  tracing	  all	  system	  call	  
-exits	  and	  pulling	  return	  value	  out	  of	  registers	  
-for	  SYS_fork	  and	  SYS_vfork	  
-– That’s	  ugly	  and	  requires	  an	  MD	  callback	  
-– SQll	  doesn’t	  solve	  ﬁrst	  requirement	  
-
-PT_LWPINFO	  
-• FreeBSD’s	  ptrace()	  includes	  a	  PT_LWPINFO	  
-operaQon	  to	  request	  extended	  state	  on	  a	  
-process	  or	  thread	  
-• RequesQng	  state	  for	  a	  process	  reports	  the	  
-thread	  that	  triggered	  the	  current	  stop	  
-• PT_LWPINFO	  populates	  a	  ‘struct	  
-ptrace_lwpinfo’	  structure	  
-
-struct	  ptrace_lwpinfo	  
-• More	  details	  in	  ptrace(2)	  
-• pl_lwpid	  
-• pl_ﬂags	  
-– PL_FLAG_SCE:	  stopped	  at	  system	  call	  entry	  
-– PL_FLAG_SCX:	  stopped	  at	  system	  call	  exit	  
-• pl_tdname	  
-
-Fork	  Following	  in	  FreeBSD	  
-• Fully	  funcQonal	  ptrace()	  interface	  shipped	  in	  
-9.1	  
-• PT_FOLLOW_FORK	  
-– Requests	  auto-­‐a‘ach	  to	  new	  child	  process	  
-– Set	  ‘data’	  to	  zero	  to	  disable	  or	  non-­‐zero	  to	  enable	  
-
-Fork	  Following	  in	  FreeBSD	  
-• New	  ﬁelds	  and	  ﬂags	  in	  struct	  ptrace_lwpinfo	  
-• PL_FLAG_FORKED	  
-– Set	  in	  pl_ﬂags	  of	  parent	  process	  
-• PL_FLAG_CHILD	  
-– Set	  in	  pl_ﬂags	  of	  new	  child	  process	  on	  ﬁrst	  stop	  
-• pl_child_pid	  
-– Set	  to	  pid	  of	  new	  child	  process	  when	  
-PL_FLAG_FORKED	  is	  set	  
-
-Fork	  Following	  in	  GDB	  
-• Zsd-­‐nat.c	  deﬁnes	  a	  new	  target	  “wait”	  method	  
-• Uses	  PT_LWPINFO	  to	  recognize	  fork	  events	  
-and	  report	  them	  as	  fork	  events	  rather	  than	  
-plain	  “stops”	  
-– TARGET_WAITKIND_FORKED	  or	  
-TARGET_WAITKIND_VFORKED	  
-– Have	  to	  wait	  for	  both	  processes	  to	  stop	  before	  
-reporQng	  event	  to	  GDB	  
-• Enable	  PT_FOLLOW_FORK	  uncondiQonally	  
-
-FreeBSD	  Thread	  Support	  in	  GDB	  
-• Originally	  wri‘en	  by	  mulQple	  developers	  
-under	  a	  BSD	  license	  
-– Not	  feasible	  to	  upstream	  
-• Used	  libthread_db	  
-– Pros:	  supported	  libc_r,	  libkse,	  libthr	  
-– Cons:	  did	  not	  support	  other	  ABIs	  like	  compat32,	  
-Linux;	  would	  need	  API	  changes	  for	  XSAVE/AVX;	  
-each	  plaeorm	  had	  to	  export	  custom	  register	  
-conversion	  rouQnes	  
-
-FreeBSD	  Thread	  Support	  in	  GDB	  
-• Wanted	  an	  upstreamed	  thread	  target	  
-• No	  one	  uses	  libc_r	  or	  libkse	  anymore	  
-• Using	  libthread_db	  requires	  a	  lot	  of	  code	  
-• Assuming	  LWPs	  (libthr)	  and	  using	  ptrace()	  
-directly	  is	  less	  code	  
-• Plaeorm	  naQve	  targets	  merely	  need	  to	  handle	  
-LWP	  IDs	  with	  ptrace()	  register	  requests	  
-– Some	  already	  did	  since	  other	  OS’s	  do	  the	  same	  
-
-ptrace()	  and	  LWPs	  in	  FreeBSD	  
-• PT_GETNUMLWPS	  
-– Returns	  number	  of	  valid	  LWPs	  for	  a	  process	  
-• PT_GETLWPLIST	  
-– Populates	  an	  array	  of	  LWP	  IDs	  
-• PT_GETLWPINFO	  
-– Current	  state	  of	  each	  LWP	  
-• PT_SUSPEND	  /	  PT_RESUME	  
-– Suspend/resume	  individual	  LWPs	  
-
-Handling	  LWP	  Events	  
-• Need	  to	  know	  when	  threads	  start	  and	  exit	  
-• Older	  target	  using	  libthread_db	  sets	  
-breakpoints	  in	  pthread_create()	  and	  
-pthread_exit()	  
-• Newer	  target	  can	  rescan	  the	  LWP	  list	  on	  each	  
-stop	  
-– Means	  mulQple	  ptrace()	  calls	  on	  every	  stop	  
-
-LWP	  Events	  via	  ptrace()	  
-• FreeBSD	  11	  adds	  LWP	  event	  reporQng	  via	  
-ptrace()	  
-• PT_LWP_EVENTS	  
-– Enables	  /	  disables	  LWP	  event	  reporQng	  
-• PL_FLAG_BORN	  
-– Set	  in	  pl_ﬂags	  on	  new	  LWP	  on	  ﬁrst	  stop	  
-• PL_FLAG_EXITED	  
-– Set	  in	  pl_ﬂags	  on	  exiQng	  LWP	  on	  last	  stop	  
-
-LWP	  Events	  via	  ptrace()	  
-• IniQal	  return	  from	  thread	  create	  system	  call	  by	  
-new	  threads	  now	  reports	  a	  system	  call	  exit	  stop	  
-event	  
-– No	  event	  was	  reported	  previously	  
-– System	  call	  exit	  event	  is	  always	  reported	  if	  system	  call	  
-exits	  are	  traced	  regardless	  of	  PT_LWP_EVENTS	  
-– No	  event	  reported	  for	  iniQal	  thread	  
-• ExiQng	  threads	  report	  a	  new	  stop	  event	  for	  
-PL_FLAG_EXITED	  
-– Final	  thread	  exit	  is	  reported	  via	  exit()	  instead	  
-
-LWP	  Thread	  Target	  
-• Enumerates	  LWPs	  and	  adds	  them	  as	  threads	  
-• Only	  change	  to	  plaeorm-­‐speciﬁc	  targets	  is	  
-supporQng	  LWP	  IDs	  in	  register	  operaQons	  
-– get_ptrace_pid()	  helper	  funcQon	  handles	  this	  
-• Uses	  PT_RESUME	  	  /	  PT_SUSPEND	  if	  a	  resume	  
-operaQon	  targets	  a	  speciﬁc	  thread	  
-
-Tangent:	  truss	  
-• truss	  –f	  now	  uses	  PT_FOLLOW_FORK	  
-– Used	  to	  fork	  a	  new	  truss	  process	  to	  follow	  each	  
-new	  child	  process	  
-• truss	  now	  uses	  PT_LWP_EVENTS	  to	  report	  
-thread	  events	  
-– Since	  it	  can	  now	  tell	  which	  thread	  called	  exit()	  it	  
-also	  logs	  an	  event	  for	  exit()	  
-
-Kernel	  Debugging	  
-• Cross-­‐debugging	  support	  in	  libkvm	  
-• Components	  of	  kgdb	  
-• Cross-­‐debugging	  support	  in	  kgdb	  
-
-Cross-­‐Debugging	  in	  libkvm	  
-• libkvm	  is	  a	  library	  that	  includes	  support	  for	  
-examining	  kernel	  crash	  dumps	  
-• Speciﬁcally,	  it	  is	  able	  to	  translate	  kernel	  virtual	  
-addresses	  into	  ﬁle	  oﬀsets	  and	  return	  the	  data	  
-referenced	  by	  a	  given	  kernel	  virtual	  address	  
-• FreeBSD	  11	  adds	  support	  for	  examining	  crash	  
-dumps	  from	  non-­‐naQve	  kernels	  
-– Earlier	  versions	  could	  only	  read	  a	  crash	  dump	  
-from	  the	  same	  architecture	  as	  the	  host	  
-
-libkvm	  API	  Changes	  
-• kvaddr_t	  
-– Type	  (currently	  uint64_t)	  used	  for	  kernel	  virtual	  
-addresses	  
-– Previously	  was	  unsigned	  long	  
-– Allows	  32-­‐bit	  binaries	  to	  specify	  a	  64-­‐bit	  KVA	  
-• struct	  kvm_nlist	  
-– Like	  struct	  nlist,	  but	  uses	  kvaddr_t	  for	  n_value	  
-
-libkvm	  API	  Changes	  
-• kvm_open2()	  
-– Like	  kvm_open()	  but	  accepts	  an	  addiQonal	  
-parameter	  
-– Parameter	  is	  a	  funcQon	  pointer	  to	  a	  symbol	  
-resolver	  funcQon	  
-– Resolver	  is	  required	  for	  non-­‐naQve	  vmcores	  
-• kvm_read2()	  
-– Like	  kvm_read(),	  just	  uses	  kvaddr_t	  for	  KVA	  
-
-KVM_ARCH	  
-• libkvm	  now	  supports	  mulQple	  backends	  
-– Each	  backend	  supports	  a	  diﬀerent	  vmcore	  format	  
-– Separate	  backends	  for	  “full”	  vs	  “mini”	  dumps	  
-• Backends	  added	  to	  linker	  set	  via	  KVM_ARCH()	  
-• Backends	  cannot	  use	  naQve	  constants	  /	  types	  
-directly	  (e.g.	  PAGE_SIZE,	  PTE	  constants)	  
-• kvm_<plaeorm>.h	  deﬁne	  MI	  VM	  constants	  
-– StaQcally	  asserts	  constants	  match	  
-
-KVM_ARCH	  
-• Backends	  include	  a	  probe	  funcQon	  that	  
-examines	  a	  vmcore	  to	  see	  if	  it	  matches	  
-– Uses	  libelf	  to	  parse	  ELF	  headers	  
-• Backends	  also	  include	  a	  callback	  to	  translate	  a	  
-KVA	  to	  a	  ﬁle	  oﬀset	  
-– Used	  by	  kvm_read()	  and	  kvm_read2()	  
-
-kgdb	  Components	  
-• What	  is	  added	  to	  gdb	  to	  create	  kgdb?	  
-• vmcore	  target	  
-– Zsd-­‐kvm.c	  
-– Uses	  libkvm	  to	  read	  kernel	  memory	  from	  /dev/mem	  
-or	  a	  crash	  dump	  
-– “proc”	  and	  “Qd”	  commands	  
-• Kernel	  thread	  enumeraQon	  
-– Zsd-­‐kthr.c	  
-– Used	  by	  vmcore	  target	  
-– Remote	  debugging	  relies	  on	  in-­‐kernel	  GDB	  stub	  to	  
-enumerate	  threads	  
-
-kgdb	  Components	  
-• Shared	  library	  target	  for	  kernel	  modules	  
-– Zsd-­‐kld.c	  
-– Uses	  kernel	  linker	  data	  structures	  to	  enumerate	  KLDs	  
-– Presents	  KLDs	  to	  users	  as	  shared	  libraries	  
-– “add-­‐kld”	  command	  
-• New	  ABI	  –	  FreeBSD	  ELF	  Kernel	  
-– Allows	  gdb	  to	  treat	  kernels	  diﬀerently	  than	  regular	  
-userland	  binaries	  
-– Detects	  FreeBSD	  kernel	  by	  checking	  for	  “/red/herring”	  
-dynamic	  interpreter	  
-
-kgdb	  Components	  –	  MD	  
-• Plaeorm-­‐speciﬁc	  code	  
-• Special	  frame	  handlers	  (“unwinders”)	  
-– Interrupt,	  fault,	  and	  excepQon	  frames	  
-– Most	  just	  use	  a	  trapframe	  
-– i386	  double	  fault	  frames	  require	  dealing	  with	  TSS	  
-
-kgdb	  Components	  –	  MD	  
-• Process	  (really	  Thread)	  Control	  Block	  hooks	  
-– Extract	  register	  state	  from	  PCB	  
-– Locate	  PCB	  of	  currently	  execuQng	  thread	  
-• stoppcbs[cpuid]	  	  on	  most	  plaeorms	  
-• Kernel	  ABIs	  deﬁned	  in	  ‘*Zsd-­‐kern.c’	  
-– ABIs	  use	  KLD	  solibs	  hook	  rather	  than	  svr4	  
-– ABIs	  add	  custom	  unwinders	  
-– ABIs	  register	  PCB	  hooks	  for	  vmcore	  target	  
-
-Cross-­‐Debugging	  in	  kgdb	  
-• Old	  kgdb	  used	  naQve	  structures	  directly	  
-– E.g.	  read	  ‘struct	  proc’	  and	  use	  ‘p_list.le_next’	  to	  
-locate	  next	  process	  
-• As	  with	  libkvm,	  cannot	  do	  that	  in	  a	  cross-­‐
-debugger	  
-• Have	  to	  query	  ABI	  for	  pointer	  size	  and	  
-endianness	  
-• GDB	  provides	  methods	  to	  decode	  an	  integer	  
-
-Cross-­‐Debugging	  in	  kgdb	  
-• Have	  to	  explicitly	  handle	  structure	  layouts	  
-• Can	  use	  debug	  symbols	  and	  manual	  oﬀsetof()	  
-	  
-proc_off_p_pid	  =	  parse_and_eval_address(	  
-	  	  	  	  "&((struct	  proc	  *)0)-­‐>p_pid");	  
-proc_off_p_comm	  =	  parse_and_eval_address(	  
-	  	  	  	  "&((struct	  proc	  *)0)-­‐>p_comm");	  
-proc_off_p_list	  =	  parse_and_eval_address(	  
-	  	  	  	  "&((struct	  proc	  *)0)-­‐>p_list");	  
-	  
-
-Cross-­‐Debugging	  in	  kgdb	  
-• Recent	  kernels	  include	  helper	  variables	  
-• Permits	  enumeraQng	  threads	  without	  debug	  
-symbols	  
-	  
-const	  int	  proc_off_p_pid	  =	  offsetof(struct	  proc,	  p_pid);	  
-const	  int	  proc_off_p_comm	  =	  offsetof(struct	  proc,	  p_comm);	  
-const	  int	  proc_off_p_list	  =	  offsetof(struct	  proc,	  p_list);	  
-	  
-• kgdb	  uses	  these	  symbols	  if	  they	  exist	  instead	  
-of	  manual	  oﬀsetof()	  
-
-Reading	  struct	  proc	  Fields	  
-struct	  type	  *ptr_type	  =	  
-	  	  	  	  builtin_type	  (gdbarch)-­‐>builtin_data_ptr;	  
-enum	  bfd_endian	  byte_order	  =	  
-	  	  	  	  gdbarch_byte_order	  (gdbarch);	  
-	  
-...	  
-tdaddr	  =	  read_memory_typed_address	  (paddr	  +	  
-	  	  	  	  proc_off_p_threads,	  ptr_type);	  
-pid	  =	  read_memory_integer	  (paddr	  +	  proc_off_p_pid,	  4,	  
-	  	  	  	  byte_order);	  
-pnext	  =	  read_memory_typed_address	  (paddr	  +	  
-	  	  	  	  proc_off_p_list,	  ptr_type);
