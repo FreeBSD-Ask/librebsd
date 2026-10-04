@@ -31,6 +31,10 @@
 紧邻无空行；节 `<li>` 之间无空行；`</ul>` 紧邻下一 `<h3>` 或 `</section>`；卷块之间空一行。
 口径数字（卷/章/节）**由内容源派生**，不手工维护。
 
+**模板条件区块**（2026-10-04 立）：`{{IF:<度量键>}}…{{ENDIF}}` **同一行**包裹页壳片段；
+键值为 0 或缺省时整行剔除，为正时保留内层内容（行结构不变）。当前用于 `page.template.html`
+的 `N_PENDING` 瓦片——未决项为 0 时隐藏该指标。新增条件须在 `derive_metrics()` 有对应键。
+
 用法：
   python assemble_index.py            # 装配（写 index.html）
   python assemble_index.py --check    # 漂移检测：重装到内存与磁盘逐字节比对，不一致即退出码 1
@@ -264,6 +268,15 @@ def assemble():
     vols = parse_outline(read(OUTLINE))
     met = derive_metrics(vols)
     met["HAS_PART"] = derive_has_part(vols)
+    # 模板条件区块（2026-10-04 立）：`{{IF:<度量键>}}…{{ENDIF}}` 同行包裹；
+    #   键值为 0 或缺省时整行剔除、为正时保留内层内容（行结构不变）。
+    #   当前用途：未决项 N_PENDING＝0 时隐藏该指标瓦片（主理人 2026-10-04 令）。
+    def _if_drop(m: re.Match) -> str:
+        return (m.group(2) + "\n") if met.get(m.group(1)) else ""
+    tpl, _n_if = re.subn(r"[ \t]*\{\{IF:(\w+)\}\}(.*?)\{\{ENDIF\}\}[ \t]*\n?", _if_drop, tpl, flags=re.S)
+    _left_if = re.findall(r"\{\{(?:IF:|ENDIF)\}\}", tpl)
+    if _left_if:
+        sys.exit("模板存在未闭合或未替换的条件区块标记：%s" % sorted(set(_left_if)))
     body = render_outline(vols)
     _toc_l, _toc_r = render_toc_static(vols)
 
