@@ -1,520 +1,0 @@
-Dumm ynet/: a simple approac h to the ev aluation of
-net w ork proto cols
-Luigi Rizzo
-/1
-Dipartimen to di Ingegneria dell/'Informazione/, Univ ersit/ a di Pisa
-via Diotisalvi /2 /{ /5/6/1/2/6 Pisa /(Italy/)
-email/: l/.rizzo/@i et/. uni pi /.it
-Abstract
-Net w ork proto cols are usually tested in op erational net w orks or in sim ulated en vironmen ts/.
-With the former approac h it is not easy to set and con trol the v arious op erational parameters suc h
-as bandwidth/, dela ys/, queue sizes/. Sim ulators are easier to con trol/, but they are often only an
-appro ximate mo del of the desired setting/, esp ecially for what regards the v arious tra/c generators
-/(b oth pro ducers and consumers/) and their in teraction with the proto col itself/.
-In this pap er w e sho w ho w a simple/, y et /exible and accurate net w ork sim ulator /{ dummynet /{
-can b e built with minim al mo di/cations to an existing proto col stac k/, allo wing exp erimen ts to b e
-run on a standalone system/. dummynet w orks b y in tercepting comm unications of the proto col la y er
-under test and sim ulating the e/ects of /nite queues/, bandwidth limitati ons and comm unicatio n
-dela ys/. It runs in a fully op erational system/, hence allo wing the use of real tra/c generators and
-proto col implemen tations/, while solving the problem of sim ulating un usual en vironmen ts/. With our
-to ol/, doing exp erimen ts with net w ork proto cols is as simple as running the desired set of applications
-on a w orkstation/.
-A F reeBSD implemen tation of dummynet /, targeted to TCP /, is a v ailable from the author/. This
-implem en tation is highly p ortable and compatible with other BSD/-deriv ed systems/, and tak es less
-than /3/0/0 lines of k ernel co de/.
-Keyw ords/: Proto col ev aluation/, TCP//IP /, sim ulation
-/1 In tro duction
-Studies on the e/ectiv eness and p erformance of net w ork proto cols are usually done in op erational net/-
-w orks/, and//or through sim ulations/. The former approac h is limited b y the a v ailabilit y of an op erational
-net w ork with the desired features/. Also/, the actual op erating conditions /(queue sizes/, dela ys/, external
-tra/c sources/) are often unkno wn and//or not easily con trollable/. On the other hand/, testing in a real
-net w ork reliev es the researc her from the need of mo deling and building the v arious tra/c sources to
-b e used in the exp erimen ts/, as real w orld applications can b e used for this purp ose/.
-Sim ulations ha v e the adv an tage of b eing m uc h more con trollable and repro ducible/. Ho w ev er/, a
-sim ulated en vironmen t is alw a ys just an appro ximation of the realit y/; this is esp ecially true for the
-v arious tra/c generators /[/4 /] whic h usually in teract with the proto col itself/. As an example/, consider a
-simple FTP transfer o v er TCP /. The /o w of data is regulated b y a n um b er of factors/, suc h as the size
-/1
-The w ork describ ed in this pap er has b een supp orted in part b y the Commission of Europ ean Comm unities/, Es/-
-prit Pro ject L TR /2/0/4/2/2 /{ /\Mob y Dic k/, The Mobile Digital Companion /(MOBYDICK/)/"/, and in part b y the Ministero
-dell/'Univ ersit/ a e della Ricerca Scien ti/ca e T econologica of Italy /.
-This pap er app ears on A CM Computer Comm unication Review/, V ol/./2/7/, n/./1/, Jan/./9/7/, pp/./3/1/-/4/1/.
-
-of windo ws/, the sp eed of disks at the sender and the receiv er side/, the CPU load and sc heduling of
-pro cesses at the t w o no des/, the ac kno wledgemen t generation p olicy /, etc/. Suc h factors are often hard to
-mo del accurately in sim ulators/, p ossibly resulting in inaccurate or unreliable results/. Nev ertheless/, the
-di/culties of setting up a real net w ork with the desired features has stim ulated the dev elopmen t of a
-n um b er of net w ork sim ulators/, suc h as REAL /[/1/1 /]/, Netsim /[/7 /, /8 /] and ns /[/1/2 /]/. The x/- k ernel framew ork /[/9 /]
-has also b een used for the implemen tation and testing of net w ork proto cols/.
-In most cases/, the aim of exp erimen ts on net w ork proto cols is to determine their b eha viour in a
-complex net w ork made of man y no des/, routers and links/, with di/eren t queueing p olicies/, queue sizes/,
-bandwidths/, propagation dela ys/. The di/cult y of mo deling complex en vironmen ts often suggests the
-use of simpli/ed net w orks /(Figure /1/) where the connection under observ ation go es through a pair of
-routers /(whic h mo del the presence of queues of /nite size/) and a b ottlenec k link with giv en bandwidth
-and dela y /, mo deling the o v erall bandwidth and dela y /. Quite often/, in exp erimen ts on real net w orks/, one
-of the routers is mo di/ed to act as a /\/ak ew a y/"/, in tro ducing arti/cial dela ys/, random pac k et losses and
-reordering/. In some cases/, the e/ects of bandwidth limitations can b e sim ulated /[/1/5 /]/. Still/, a couple of
-w orkstations and a b ottlenec k link or a lo cal net w ork are generally necessary to set up an exp erimen tal
-testb ed/.
-S
-S
-S
-S
-S
-S
-S
-R2R1
-R1
-S1
-R2
-S2
-S1 S2R1
-Figure /1/: T ypical settings used in the study of net w ork proto cols/. The thin line represen ts the b ottle/-
-nec k link/.
-In this pap er w e extend the concept of a /ak ew a y and prop ose a simple y et v ery e/ectiv e approac h
-to insert a mo del of this simpli/ed net w ork in an op erational proto col stac k/, and run exp erimen ts on a
-standalone system/. Our approac h/, called dummynet /, is applicable to an y proto col/. It w orks b y simply
-in tercepting comm unication b et w een the proto col la y er under analysis and the underlying one /(Fig/-
-ure /2/)/, and sim ulating the presence of a real net w ork with /nite/-size queues/, bandwidth limitations/,
-comm unication dela ys/, and p ossibly lossy links/. The dummynet approac h giv es most of the adv an tages
-of b oth sim ulation and real/-w orld testing/: great con trol o v er op erating parameters/, simplicit y /, abil/-
-it y to use real tra/c generators/. With our to ol one can run exp erimen ts suc h as the one men tioned
-in /[/2 /, /3/, /5/, /9/, /1/0/, /1/4/] on a single w orkstation/, b y using unmo di/ed real/-w orld applications /(e/.g/. FTP /,
-T elnet/, W eb bro wsers/) as tra/c generators/. As a consequence/, running an exp erimen t is as easy /(and
-quic k/) as running the desired set of applications on a w orkstation/. Since dummynet in tro duces almost
-no o v erhead in the comm unication/, exp erimen ts can b e done up to the maxim um op erating sp eed
-supp orted b y the system in use/.
-In the next Section w e discuss the principle of op eration of dummynet and its limitations/. A brief
-description of an actual implemen tation is then pro vided/, follo w ed b y an example of use and a discussion
-of p ossible extensions/.
-The w ork presen ted in this pap er has some similarit y with the one presen ted in /[/1/5 /]/. The main
-
-di/erence lies in the fact that our approac h allo ws exp erimen ts to b e run on a standalone system/,
-without the need of a net w ork/, and can b e used to sim ulate net w orks with arbitrary top ologies/, as will
-b e sho wn in Section /2/./5/.
-pq_out
-Network
-Application
-dummynet
-rq_in
-pq_inrq_out
-Figure /2/: The principle of op eration of dummynet
-/2 Principle of op eration
-In a t ypical proto col stac k/, eac h la y er comm unicates with the adjacen t ones /(Figure /2/)/, where the upp er
-la y er is generally connected to one of the comm unicating p eers/, and the lo w er la y er connects to /\the
-net w ork/"/. In order to sim ulate the presence of a net w ork b et w een t w o comm unicating p eers/, w e need
-to insert the follo wing elemen ts in the /o w of data/:
-/ r outers with b ounded queue size and a giv en queueing p olicy/;
-/ comm unication links /( pip es /) with giv en bandwidth and dela y /.
-Additionally /, random pac k et reordering and losses can b e in tro duced to sim ulate the unreliabilit y of
-real net w orks/. Suc h features are imp ortan t when the real net w ork has redundan t paths/, and//or wireless
-or other noisy links /(losses due to congestion are b etter sim ulated b y b ounded size queues/)/.
-As discussed b efore/, the simplest setting usually includes one or t w o routers and one pip e/. Both
-elemen ts can b e easily mo deled b y a couple of queues/, rq and pq /, inserted b et w een the proto col la y er
-under observ ation and the lo w er la y er /(Figure /2/)/; a pair rq//pq is needed in eac h direction of the
-comm unication/. In the follo wing/, w e call k the maxim um size of rq /, B and t
-p
-the bandwidth and
-propagation dela y of the pip e/, resp ectiv ely /. The follo wing pro cessing is necessary on tra/c exc hanged
-b et w een the t w o la y ers/:
-/1/. when a la y er comm unicates with the next one /(ab o v e or b elo w/)/, pac k ets are inserted in rq /.
-Insertions are b ounded b y the maxim um queue size/, k /, and are p erformed according to the
-queueing p olicy of c hoice /(usually FIF O with tail/-drop/, but other p olicies are p ossible suc h as
-RED /[/6 /]/)/. Random reordering of pac k ets can b e in tro duced at this stage/.
-
-/2/. pac k ets are mo v ed from rq to pq at a maxim um rate of B b ytes p er second/. pq uses a FIF O
-p olicy/;
-/3/. pac k ets remain in pq for t
-p
-seconds/, after whic h they are dequeued and sen t to the next proto col
-la y er/. Random losses can b e in tro duced at this stage/.
-Steps /2 and /3 can b e p erformed b y running a p erio dic task with p erio d T /, where T is a suitable
-subm ultiple of t
-p
-/. In this case/, at eac h run at most B T b ytes are mo v ed from rq to pq /, while pac k ets
-remain in pq for t
-p
-/=T cycles/.
-R
-B
-B
-tp
-k
-k
-Figure /3/: Structure of a no de using dummynet
-The resulting system lo oks lik e the one in Figure /3/: lo cal comm unication is also sub ject to the
-queueing and dela y in tro duced b y the sim ulated net w ork/. Suc h a simple setting is able to sim ulate
-almost all settings used in the literature where a b ottlenec k link can b e iden ti/ed/, e/.g/. those used
-in /[/2 /, /3/, /5 /, /9/, /1/0 /, /1/4 /] to cite only some/.
-/2/./1 Applications
-dummynet is particularly useful when studying the in teractions b et w een proto cols and application pro/-
-grams in un usual or hard/-to/-repro duce settings/. W e can iden tify the follo wing broad classes of appli/-
-cations/:
-/ debugging /. The use of real implemen tations of all the elemen ts whic h tak e part in a comm u/-
-nication can in fact evidence bugs or ev en unexp ected features of the implemen tations whic h
-w ould almost una v oidably escap e in a sim ulation /(unless explicitly mo deled/, of course/)/. As an
-example/, consider a TCP implemen tation whic h cac hes route metrics from previous connections/.
-Suc h a system has memory of the previous status of the net w ork/, but a sim ulation migh t not
-mo del prop erly this b eha viour/, hence failing in repro ducing the resp onse to sudden c hanges in
-the features of the net w ork/.
-
-/ study of new proto cols /. The abilit y to sim ulate un usual or hard to repro duce settings eases
-the study of new proto cols/. As an example/, suc h a to ol can b e used to study the b eha viour
-of existing or new congestion con trol mec hanisms in presence of b ottlenec k links /(e/.g/. the slo w
-mo dem connections whic h ha v e b ecome so widespread no w ada ys/, or asymmetric links/)/.
-/ p erformance ev aluation /. As a third broad class of applications/, this to ol can b e used to answ er
-questions suc h as /\Ho w w ould m y application run o v er a net w ork with bandwidth B and dela y /
-/?/"/. This is extremely useful for users or dev elop ers of/, sa y /, conferencing applications or some other
-kind of collab orativ e soft w are/, whic h w an t to ev aluate the p erformance of a their pro duct b efore
-/(or when/) setting up a p ossibly exp ensiv e comm unication link/. Di/eren tly from the previous
-applications/, in this case sim ulation is not an option b ecause the p erformance metrics are often
-extremely sub jectiv e and the test en vironmen t m ust b e as close as p ossible to the real setting/.
-Although not its primary purp ose/, a trivial extension to our dummynet /(in order to select tra/c basing
-on addresses and p orts/) allo ws its use as a simple selectiv e bandwidth limiter for serv ers whic h do not
-explicitly pro vide suc h a feature either in the application or in the op erating system itself/.
-/2/./2 Limitations
-As all sim ulations of realit y /, dummynet can only appro ximate the b eha viour of a real system with
-giv en features/. Most of the appro ximations in tro duced b y our to ol deriv e from the gran ularit y and
-the precision of the op erating system/'s timer/, and in man y cases they ha v e little in/uence on the
-exp erimen ts/.
-The gran ularit y of the timer/, T /, limits the resolution in all timing/-related measuremen ts/. In practice/,
-this only constitutes a problem when sim ulating fast net w orks and short pip es/, resulting in an o v erall
-pac k et dela y comparable with T /.
-A second problem is that the p erio dic task migh t b e run late/, or ev en miss one or more timer tic ks/,
-dep ending on the o v erall system load/. In our exp erimen ts/, ho w ev er/, these ev en ts ha v e b een extremely
-rare ev en on a relativ ely slo w system running F reeBSD/, whic h is not a real/-time OS/. Besides/, the same
-errors a/ect all proto col timers/, whic h are driv en b y the same clo c k in terrupt/.
-Finally /, it should b e noted that ev en ts in dummynet /(in particular/, extractions from queues and
-pip es/) o ccur sync hronously with the system/'s timer/. In principle/, this migh t hide or amplify some
-real/-w orld phenomenona whic h o ccur b ecause of race conditions/. Ho w ev er/, it m ust b e k ept in mind
-that in a real system there are so man y async hronous ev en ts /(corresp onding to in terrupts generated b y
-external ev en ts/, e/.g/. disk or net w ork I//O/, console activities/, etc/./) that the presence of dummynet do es
-not c hange the essen tially non/-deterministic b eha viour of a system when analysed with a /ne/-grain
-/(e/.g/. microseconds/) resolution/.
-When determining pac k et sizes /(needed in the computation of the sim ulated bandwidth/)/, dummynet
-normally uses the size of the pa yload at the lo w er la y er /(IP in our case of dummynet /-TCP/)/. It is
-straigh tforw ard to include link/-la y er o v erheads in the computations/, if these are kno wn/. In particular/,
-it is p ossible to sim ulate the e/ects of link/-la y er compression/, whic h mak es the link app ear as a v ariable/-
-bandwidth c hannel/.
-/2/./3 Implem en tation details
-W e ha v e dev elop ed a basic v ersion of dummynet w orking at the in terface b et w een TCP and IP /. Our im/-
-plemen tation /[/1/3 /] tak es less than /3/0/0 lines of k ernel co de in F reeBSD/; it in tercepts calls to ip output/(/)
-made b y TCP mo dules/, and those to tcp input/(/) made b y the proto col dem ultiplexer in IP /.
-
-Under normal conditions/, there is no system o v erhead for using dummynet /. When a TCP comm u/-
-nication o ccurs/, pac k ets are queued according to the description giv en in Section /2/, and a p erio dic
-task is run ev ery T seconds to p erform the required queue managemen t/. Note that the p erio dic task
-only needs to run when there is data in an y of the queues of the system/. The only system require/-
-men t for dummynet is the a v ailabilit y of a timer with a gran ularit y /{ T /{ su/cien tly small for the
-purp oses of the sim ulation/. Man y BSD/-deriv ed systems ha v e a gran ularit y of /1/0 ms/. Some/, as in the
-case of F reeBSD/, allo w the use of a di/eren t gran ularit y b y simply using a k ernel compile option/, e/.g/.
-option /"HZ/=/1/0/0/0/" sets T to /1 ms/, whic h can b e useful for exp erimen ts where a higher resolution /(or
-bandwidth/) is required/. With curren t w orkstations/, the o v erhead deriving from a faster clo c k rate is
-reasonably lo w/.
-Since no copies of data are done/, and all op erations require constan t time/, the o v erhead in tro duced
-b y dummynet is almost negligible /(a few function calls p er pac k et/) ev en when comm unications are in
-progress/. It should b e k ept in mind that the system using dummynet should ha v e su/cien t bu/er space
-to store b oth pac k ets in rq /(at most k / M S S b ytes/) and those in transit in the pip e /( B t
-p
-b ytes/) in
-eac h direction/.
-dummynet only in tercepts calls b et w een adjacen t proto col la y ers/, lea ving other tra/c unmo di/ed/.
-As an example/, our implemen tation of dummynet only acts b et w een TCP and IP /, meaning that a system
-moun ting disks using NFS
-/1
-o v er UDP can con tin ue to w ork without p erformance problems/, lea ving a
-clean sim ulation en vironmen t with only TCP tra/c/. Some /ltering rules could also b e used/, to mak e
-dummynet a/ect only selected tra/c /(e/.g/. TCP tra/c to//from a giv en p ort/, or all tra/c through a
-giv en in terface/, etc/./)
-c)a) b)
-Figure /4/: V arious con/gurations for exp erimen ts with dummynet
-/1
-dummynet dev elopmen t w as done on a completely diskless system/, where crashes due to unstable k ernels w ould not
-cause anno ying disk corruptions
-
-prova/# ifconfig lo/0 /1/2/7/./0/./0/./1 mtu /5/7/6 /# this is to have many pkts per window
-prova/# ncftp /-u localhost
-/././.
-ncftp/> /!sysctl /-w net/.inet/. tcp /.du mm yne t/=/9 /9/9/9 /0/0/0 /0/0
-/-/-/- /0 ms/, /9/9/9/9 KB//s/, /0 buffers
-ncftp/> get /1M a
-a/: /1/0/4/8/5/7/6 bytes received in /0/./6/6 seconds/, /1/5/5/2/./1/7 K//s/.
-ncftp/> /!sysctl /-w net/.inet/. tcp /.du mm yne t/=/2 /0/0/0 /0/0/0 /0
-/-/-/- /0 ms/, /2/0/0 KB//s/, /0 buffers
-ncftp/> get /1M a
-a/: /1/0/4/8/5/7/6 bytes received in /6/./1/7 seconds/, /1/6/6/./1/0 K//s/.
-ncftp/> /!sysctl /-w net/.inet/. tcp /.du mm yne t/=/2 /0/0/0 /0/0/0 /1
-/-/-/- /1 ms/, /2/0/0 KB//s/, /0 buffers
-ncftp/> get /1M a
-a/: /1/0/4/8/5/7/6 bytes received in /6/./2/1 seconds/, /1/6/5/./0/1 K//s/.
-ncftp/> /!sysctl /-w net/.inet/. tcp /.du mm yne t/=/2 /0/0/0 /0/0/5 /0
-/-/-/- /5/0 ms/, /2/0/0 KB//s/, /0 buffers
-ncftp/> get /1M a
-a/: /1/0/4/8/5/7/6 bytes received in /1/5/./5/3 seconds/, /6/5/./9/6 K//s/.
-ncftp/> /!sysctl /-w net/.inet/. tcp /.du mm yne t/=/2 /0/0/0 /7/0/5 /0
-/-/-/- /5/0 ms/, /2/0/0 KB//s/, /7 buffers
-ncftp/> get /1M a
-/-/-/- tcp/_ip/_ou t drop/, have /7 packets /(/3 times/)
-a/: /1/0/4/8/5/7/6 bytes received in /2/8/./0/1 seconds/, /3/6/./5/6 K//s/.
-ncftp/> /!sysctl /-w net/.inet/. tcp /.du mm yne t/=/2 /0/0/0 /7/0/0 /1
-/-/-/- /1 ms/, /2/0/0 KB//s/, /7 buffers
-ncftp/> get /1M a
-/-/-/- tcp/_ip/_ou t drop/, have /7 packets /(/4/0 times/)
-a/: /1/0/4/8/5/7/6 bytes received in /1/0/./8/8 seconds/, /9/4/./0/9 K//s/.
-ncftp/> /!sysctl /-w net/.inet/. tcp /.sa ck /=/0x /1/0 /# enable SACK
-ncftp/> get /1M a
-/-/-/- tcp/_ip/_ou t drop/, have /7 packets /(/4/0 times/)
-a/: /1/0/4/8/5/7/6 bytes received in /1/0/./1/4 seconds/, /1/0/1/./0/1 K//s/.
-Figure /5/: A sample session sho wing the use of dummynet
-/2/./4 Examples of use
-Most features of the sim ulated net w ork /( k /, B /, t
-p
-/) are con trolled b y a k ernel v ariable whic h can b e
-mo di/ed with the sysctl command
-/2
-/. Ideally /, the op erating parameters of the proto col under test /(e/.g/.
-MSS/, max windo w size/, TCP options in use/, etc/./)/, should also b e con/gurable at run time without the
-need of reb o oting the system/; in the case of BSD/-deriv ed system they often are via k ernel v ariables/.
-The simplest w a y of doing an exp erimen t consists in running a comm unication b et w een t w o pro cesses
-on the same system/. Since the lo opbac k o ccurs at the end of the pip e /(Figure /4a/)/, bu/ering and dela ys
-o ccur t wice/, and bu/ers are shared b y tra/c in the t w o directions/.
-An example of use of this setting is sho wn in Figure /5/, where some FTP transfers are done using
-ncftp /(w e ha v e used this applications b ecause its timings are sligh tly more accurate than those of ftp /)/.
-The system used for the exp erimen ts is a P en tium/1/0/0 with /3/2MB RAM/, running F reeBSD /2/./1/. Both
-clien t and serv er run on the same system/, together with an X Serv er and a n um b er of X applications/.
-/2
-This is just the lo w lev el in terface/. A trivial C program or shell script can b e written to parse a more user/-friendly
-format suc h as /"dummynet bw /2/./6 Mbps queue /3/0 delay /4/5 ms/"
-
-TCP comm unications use a /1/6KB windo w in this example/, so in some cases the throughput is
-limited b y the windo w size rather than the a v ailable bandwidth/. The MSS for the in terface is set to a
-lo w v alue/, whic h limits p erformance further but allo ws a larger n um b er of pac k ets to /t in the windo w
-in use/. The v alue of net/.inet/.tcp/.dummynet is giv en as the decimal n um b er BBBBkkddd /, where BBBB
-is the bandwidth in KB//s/, kk is the queue size/, ddd is the v alue of t
-p
-in units of T seconds /(/1 ms in
-the exp erimen t/)/. Lines b eginning with /-/-/- are normally part of the system/'s log/le/.
-F or eac h con/guration /(except the last three/)/, w e sho w the a v erage throughput v alue of /1/0 tests/,
-to comp ensate for the v ariations deriving from concurren t net w ork and CPU activities/.
-In the /rst test/, bandwidth and queue limits are set to a large v alue in order to determine the
-maxim um throughput/. The second exp erimen t limits the bandwidth to /2/0/0KB//s/, but the actual
-throughput is lo w er b ecause the c hannel is shared b y data and A CKs/, and the TCP header /(including
-RF C/1/3/2/3 and RF C/1/6/4/4 extensions/) consumes a p ortion of the bandwidth/. In the third exp erimen t
-a short propagation dela y is in tro duced/, whic h has negligible e/ect on the throughput/. Increasing
-the dela y to /5/0 ms /(making the R TT /2/0/0 ms/) causes the connection to b e limited b y the windo w
-size /(roughly one windo w p er R TT or /8/0 KB//s/, with v arious o v erheads and the cost of slo w start
-reducing the throughput ev en further/)/. The next t w o exp erimen ts are run with v ery limited queue
-sizes/: here/, frequen t o v er/o ws o ccur whic h reduce the throughput signi/can tly /. In the last run/, Selectiv e
-Ac kno wledgmen ts are enabled/.
-In single/-system exp erimen ts/, b oth comm unication p eers usually run the same implemen tation of
-a proto col /(unless the system allo ws the proto col parameters to b e set individuall y for eac h pro cess/)/.
-In terop erabilit y tests can b e done b y using t w o no des on the same LAN/, with dummynet running on
-one of them /(Figure /4b/)/. This resem bles the t ypical setting for proto col ev aluation in real net w orks/,
-consisting in t w o no des on di/eren t LANs connected b y one or t w o routers and a b ottlenec k link/.
-Finally /, more complex sim ulation settings can b e built b y using sev eral systems/, some of whic h use
-dummynet con/gured with di/eren t parameters /(Figure /4c/)/.
-One w ould exp ect that exp erimen ts with dummynet /{ esp ecially those p erformed with a single
-w orkstation /{ are completely deterministic and repro ducible/, since the b eha viour of the net w ork is
-sim ulated/. These exp ectations are wrong/, but not b ecause of the presence of our to ol/: ev en without
-it/, a real system is in trinsically not deterministic b ecause of the presence and in teraction of man y
-async hronous comp onen ts /(e/.g/. net w ork tra/c/, disks and other p eripherals/)/. This non/-determinism is
-less and less eviden t when the analysis b ecomes more coarse/, but there migh t still exist some micro/-
-scopic race conditions whic h cause a di/eren t ordering of ev en ts in di/eren t exp erimen ts with p ossibly
-macroscopic e/ects /(e/.g/. o ccasional queue o v er/o ws/)/. This is an in trinsic limitation of async hronous
-systems whic h cannot b e o v ercome b y our to ol/.
-/2/./5 Extensions
-Ev en a v ery basic v ersion of dummynet /, comprising one queue and one pip e/, su/ces to run on a single
-w orkstation man y of the sim ulations found in the literature/. The addition of a mo dule pro viding
-programmable /(random or deterministic/) pac k et losses and reordering is straigh tforw ard/. The use of
-suc h a mo dule is standard practice in sim ulations of noisy en vironmen ts /(e/.g/. wireless net w orks /[/1 /]/)/.
-Our to ol is not limited to the sim ulation of net w orks with a single comm unication link/. More
-complex top ologies can b e mo deled b y de/ning m ultiple data structures/, eac h comprising one router/,
-one pip e and a routing table /(a bidirectional link is made of t w o of these ob jects/)/.
-Figure /6 sho ws a sample net w ork and the routing table asso ciated to eac h link/. When a pac k et is
-extracted from a pip e/, its next destination is computed according to the corresp onding routing table/.
-The abilit y to assign m ultiple addresses to one in terface /(e/.g/. the lo opbac k in terface/)/, presen t in man y
-mo dern systems/, p ermits the sim ulation of complex top ologies in v olving m ultiple hosts still using a
-
-standalone system/. This extension is relativ ely straigh tforw ard/: in the curren t implemen tation/, adding
-a router//pip e pair requires just a few lines of co de in addition to the tests required to route tra/c in to
-the appropriate path/. Ob viously /, con/guring suc h a setting requires a more p o w erful mec hanism /(suc h
-as a dedicated so c k et t yp e with a sp ecial setsockopt/(/) call/) than a simple k ernel v ariable/.
-N1
-N2
-N3
-N4
-DST
-other
-next
-N1
-N2
-N3
-N4
-DST
-other
-next
-N1
-N2
-N3
-N4
-DST
-other
-next
-N1
-N2
-N3
-N4
-DST
-other
-next
-N1
-N2
-N3
-N4
-DST
-other
-next
-N1
-N2
-N3
-N4
-DST
-other
-next
-N1
-L7 L8
-L2L1
-N3
-N2 N4
-other
-L6
-L5
-L4L3
-L6
-N1
-N2
-N3
-N4
-DST
-other
-next
-N1
-N2
-N3
-N4
-DST
-other
-next
-L1 L2 L3 L4
-L5 L6 L7 L8
-L2
-TCP
-L7
-L6
-L6
-TCP
-L1
-L1
-L1
-L1 L4
-L5
-L5
-L5
-TCP
-L3
-L3
-L3
-L3
-IP
-TCP
-L2
-L7
-L6
-L6
-TCP
-L4
-L5
-L5
-L5
-TCP
-L8
-L8
-L8
-L8
-TCP
-L7
-L2
-L6
-Figure /6/: A metho d for building a complex net w ork with dummynet /. Eac h unidirectional link is
-asso ciated with a suitable routing table used to determine the next hop for eac h pac k et/. /\TCP/" and
-/\IP/" mean that the pac k et is forw arded to that la y er in the proto col stac k/.
-The curren t implemen tation of dummynet lac ks an y automated to ol to setup an arbitrary net w ork
-top ology /(basically /, pro ducing the routing tables sho wn in Figure /6/) starting from a graphical or textual
-description/. W e are dubious ab out the real usefulness of suc h a to ol for the follo wing reasons/:
-/ most w orks in the literature/, esp ecially regarding proto col implemen tation/, use the simpli/ed
-setting that w e ha v e implemen ted/. Thanks to the dynamic con/gurabilit y of k /, B and t
-p
-/, most
-sim ulations can b e run with just a few command lines/; complex runs in v olving di/eren t settings
-ma y b e run b y using existing scripting languages/;
-/ really complex net w orks migh t mak e the exp erimen tal results v ery hard to in terpret/, unless the
-structure of the net w ork is carefully selected and understo o d b y the researc her/. Pro ducing a
-lo w/-lev el description of the net w ork suc h as the one sho wn in Figure /6 helps in gaining suc h a
-kno wledge/.
-T races of the tra/c in the net w ork can b e pro duced b y using standard to ols suc h as tcpdump /, or b y
-instrumen ting dummynet to log all signi/can t ev en ts on queues and pip es/. The t yp e of information
-whic h can b e collected /(and the o v erhead for collecting it/) is v ery similar to that a v ailable from a
-sim ulator/.
-
-dummynet ough t to b e implemen ted as a Loadable Kernel Mo dule /(LKM/)/, so as to ease mo di/cations
-of the sim ulated net w ork and di/eren t tracing options/. Since facilities for LKMs are pro vided b y sev eral
-op erating systems /(e/.g/. SunOS/, F reeBSD/, Lin ux/) and dummynet has v ery little in teraction with the
-rest of the system/, suc h an implemen tation p oses no practical di/cult y /.
-/3 Conclusions
-W e ha v e sho wn ho w exp erimen ts on net w ork proto cols can b e done easily on a standalone system using
-real w orld applications as tra/c generators/. Our approac h giv es the adv an tages of b oth real/-w orld
-testing and sim ulation/: simplicit y of use/, high con trol o v er op erating parameters/, high accuracy /, no
-need for complex hardw are settings/, no o v erhead for running sim ulations/. Esp ecially /, exp erimen ts can
-b e run using a single w orkstation and do not require the presence of a real net w ork/.
-The con v enience of use of a system suc h as dummynet really encourages to mak e exp erimen t with
-di/eren t system con/gurations/, and to try v ariations to existing proto cols/. dummynet is esp ecially useful
-when dev eloping completely new proto cols/, as a suitable testb ed migh t simply not exist/. The use of
-dummynet can sp eed up dramatically the analysis and dev elopmen t of proto cols/, making the sim ulation
-en vironmen t readily a v ailable in a pro duction en vironmen t and easily in terfaced with other w orking
-systems/.
-Ac kno wledgemen ts
-The author thanks Lorenzo Vicisano/, Je/ Mogul and an anon ymous review er for their commen ts on
-an earlier v ersion of this pap er/.
-References
-/[/1/] H/.Balakrishnan/, S/.Seshan/, E/.Amir/, R/.Katz/, /\Impro ving TCP//IP P erformance o v er Wireless Net/-
-w orks/"/, Pr o c/. of the /1st A CM Int/'l Conf/. on Mobile Computing and Networking /(MOBICOM/) /,
-No v/./9/5
-/[/2/] L/.S/.Brakmo/, L/.P eterson/, /\P erformance Problems in BSD/4/./4/. TCP/"/, /1/9/9/4
-/( ftp/:////cs/.arizona/.edu//xkerne l//Paper s//tcp/_pr oblems/. ps /)
-/[/3/] L/.S/.Brakmo/, S/.W/.O/'Malley /, L/.P eterson/, /\TCP V egas/: New T ec hniques for Congestion
-Detection and Av oidance/"/, Pr o c e e dings of SIGCOMM/'/9/4 Confer enc e /, pp/./2/4/-/3/5/, Aug/./9/4
-/( ftp/:////ftp/.cs/.arizona/.edu//xk ernel//P apers//ve gas/.ps /)
-/[/4/] P /.Danzig/, S/.Jamin/, /\A library of TCP In ternet w ork T ra/c Characteristics/"/, T ec hnical Rep ort
-CS/-SYS/-/9/1/-/4/9/5/, Computer Science Dept/./, USC/, /1/9/9/1
-/[/5/] K/. F all/, S/.Flo yd/, /\Comparison of T aho e/, Reno and SA CK TCP/"/, T ec h/. Rep ort/, /1/9/9/5/, a v ailable
-from http/:////www/-nrg/.ee/.lbl/.gov //nrg/-pap ers/.htm l
-/[/6/] S/.Flo yd/, V/.Jacobson/, /\Random Early Detection Gatew a ys for Congestion Av oidance/"/,
-IEEE//A CM T rans/. on Net w orking/, /1/(/4/)/:/3/9/7/-/4/1/3/, Aug/./1/9/9/3/, a v ailable from
-http/:////www/-nrg/.ee/.lbl/.gov//nrg /-papers/. html
-/[/7/] A/.Heyb ey /, /\The net w ork sim ulator/"/, T ec hnical Rep ort/, MIT/, Sept/./1/9/9/0
-
-/[/8/] J/.Ho e/, /\Startup dynamics of TCP/'s Congestion Con trol and Av oidance Sc hemes/"/, Master/'s Thesis/,
-MIT/, June /1/9/9/5
-/[/9/] N/.C/.Hutc hinson/, L/.L/.P eterson/, /\The x/- k ernel/: An arc hitecture for implemen ting net w ork proto/-
-cols/"/, IEEE T rans/. on Soft w are Engineering/, /1/7/(/1/)/:/6/4/-/7/6/, Jan/./1/9/9/1
-/[/1/0/] V/.Jacobson/, /\Congestion Av oidance and Con trol/"/, Pr o c e e dings of SIGCOMM/'/8/8 /(Stanford/, CA/,
-Aug/./8/8/)/, A CM
-/[/1/1/] S/.Kesha v/, /\REAL/: A Net w ork Sim ulator/"/, T ec hnical Rep ort /8/8///4/7/2/, Dept/. of Computer Science/,
-UC Berk eley /, /1/9/8/8/. /( http/:////netlib/.att/.com///~ke shav//pa pers//re al/.ps/.Z /)
-Sim ulator sources a v ailable as ftp/:////ftp/.research/.att/.c om//dist// qos//REA L/.tar
-/[/1/2/] S/.McCanne/, S/.Flo yd/, ns/-LBNL Net w ork Sim ulator /( http/:////www/-nrg/.ee/.lbl/.g ov//ns// /)
-/[/1/3/] L/.Rizzo/, Sources for dummynet /( http/:////www/.iet/.unipi/. it///~lui gi//dummy net/.dif fs /)
-/[/1/4/] Z/. W ang/, J/. Cro w croft/, /\Eliminating P erio dic P ac k et Losses in the /4/./3/-T aho e BSD TCP Congestion
-Con trol Algorithm/"/, A CM Computer Comm unications Review/, Apr /'/9/2/.
-/[/1/5/] E/.Limin Y an/, /\The Design and Implemen tation of an Em ulated W AN/"/, T ec h/. rep ort/, CS Dept/./,
-USC/, /1/9/9/5 /( http/:////catarina/.usc/.edy//lya n//delay emulator /.tar/.gz /)

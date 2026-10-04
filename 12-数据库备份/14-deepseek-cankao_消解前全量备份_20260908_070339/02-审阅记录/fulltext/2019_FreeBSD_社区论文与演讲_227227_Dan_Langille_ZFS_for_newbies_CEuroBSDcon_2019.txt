@@ -1,293 +1,0 @@
-ZFS For Newbies
-Dan Langille 
-EuroBSDCon 2019 
-Lillehammer
-@dlangille 
-https://dan.langille.org/
-
-Disclaimer
-•This is ZFS for newbies
-•grossly simpliﬁed
-•stuﬀ omitted
-•options skipped
-•because newbies….
-
-What?
-•a short history of the origins
-•an overview of how ZFS works
-•replacing a failed drive
-•why you don’t want a RAID card
-•scalability
-•data integrity (detection of ﬁle 
-corruption)
-•why you’ll love snapshots
-•sending of ﬁlesystems to remote 
-servers
-•creating a mirror
-•how to create a ZFS array with 
-multiple drives which can lose up to 3 
-drives without loss of data.
-•mounting datasets anywhere in other 
-datasets
-•using zfs to save your current install 
-before upgrading it
-•simple recommendations for ZFS 
-arrays
-•why single drive ZFS is better than no 
-ZFS
-•no, you don’t need ECC
-•quotas
-•monitoring ZFS
-
-Origins
-•2001 - Started at Sun Microsystems
-•2005 - released as part of OpenSolaris
-•2008 - released as part of FreeBSD
-•2010 - OpenSolaris stopped, Illumos forked
-•2013 - First stable release of ZFS On Linux
-•2013 - OpenZFS umbrella project
-•2016 - Ubuntu includes ZFS by default
-
-Stuff you can look up
-•ZFS is a 128-bit ﬁle system
-•2^48: number of entries in any individual directory
-•16 exbibytes (2^64 bytes): maximum size of a single ﬁle
-•256 quadrillion zebibytes (2^128 bytes): maximum size of 
-any zpool
-•2^64: number of zpools in a system
-•2^64: number of ﬁle systems in a zpool
-
-How ZFS works
-•Group your drives together: pool -> zpool
-•create a mirror from 2..N drives
-•create a raidz[1..3]
-•above commands use: zpool create
-•a ﬁlesystem is part of zpool
-•hierarchy of ﬁlesystems with inherited properties
-
-pooling your drives
-•No more ‘out of space on /var/db but free on /usr’
-
-the zpool
-$ zpool list 
-NAME    SIZE  ALLOC   FREE    FRAG    CAP  DEDUP  HEALTH  ALTROOT 
-zroot  17.9G  8.54G  9.34G     47%    47%  1.00x  ONLINE  -
-
-zfs ﬁlesystems$ zfs list
-NAME                      USED  AVAIL  REFER  MOUNTPOINT
-zroot                    8.54G  8.78G    19K  none
-zroot/ROOT               8.45G  8.78G    19K  none
-zroot/ROOT/11.1-RELEASE     1K  8.78G  4.14G  legacy
-zroot/ROOT/default       8.45G  8.78G  6.18G  legacy
-zroot/tmp                 120K  8.78G   120K  /tmp
-zroot/usr                4.33M  8.78G    19K  /usr
-zroot/usr/home           4.28M  8.78G  4.26M  /usr/home
-zroot/usr/ports            19K  8.78G    19K  /usr/ports
-zroot/usr/src              19K  8.78G    19K  /usr/src
-zroot/var                76.0M  8.78G    19K  /var
-zroot/var/audit            19K  8.78G    19K  /var/audit
-zroot/var/crash            19K  8.78G    19K  /var/crash
-zroot/var/log            75.9M  8.78G  75.9M  /var/log
-zroot/var/mail             34K  8.78G    34K  /var/mail
-zroot/var/tmp              82K  8.78G    82K  /var/tmp
-$ 
-
-vdev?
-•What’s a vdev?
-•a single disk
-•a mirror: two or more disks
-•a raidz: group of drives in a raidz
-
-Terms used here
-•ﬁlesystem ~== dataset
-
-interesting properties
-•compression=lz4 
-•atime=off 
-•exec=no 
-•reservation=10G 
-•quota=5G
-
-Replacing a failed drive
-1.identify the drive
-2.add the new drive to the system
-3.zpool replace zroot gpt/disk6 gpt/disk_Z2T4KSTZ6 
-4.remove failing drive
-
-
-
-
-
-Just say NO! to RAID cards
-•RAID hides stuﬀ
-•The RAID card will try try try to ﬁx it then say, it’s dead
-•ZFS loves your drives
-•ZFS will try to ﬁx it, and if it fails, will look elsewhere
-•Use HBA, not RAID cards
-
-Scalability
-•Need more space
-•UPGRADE ALL THE DRIVES!
-•add a new vdev
-•add more disk banks
-
-Data Integrity
-•ZFS loves metadata
-•hierarchical checksumming of all data and metadata
-•ZFS loves checksums & hates errors
-•ZFS will tell you about errors
-•ZFS will look for errors and correct them if it can
-
-enable scrubs
-•there is no fsck on zfs
-$ grep zfs /etc/periodic.conf 
-daily_scrub_zfs_enable="YES" 
-daily_scrub_zfs_default_threshold="7"
-
-Snapshots
-•read-only
-•immutable : cannot be modiﬁed
-•therefore: FANTASTIC for backups
-•snapshots on the same host are not backups
-
-Sending snapshots
-•share your snapshots
-•send them to another host
-•send them to another data center
-•snapshots on another host ARE backups
-
-Mirrors
-•two or more drives with duplicate content
-•you can also stripe over mirrors
-
-raidz[1-3]
-•four or more drives
-•parity data
-•can loose N drives and still be operational
-
-mounting in mounts
-•Bunch of slow disks for the main system
-•Fast SSD for special use
-•create zpool on SSD
-•mount them in /var/db/postgres
-•or /tmp
-
-e.g. poudriere
-$ zpool list tank_fast zroot 
-NAME        SIZE  ALLOC   FREE  FRAG   CAP  DEDUP  HEALTH  ALTROOT 
-tank_fast   928G   385G   543G   41%   41%  1.00x  ONLINE  - 
-zroot      27.8G  10.4G  17.3G   70%   37%  1.00x  ONLINE  - 
- 
- 
-$ zfs list tank_fast/poudriere     zroot/usr 
-NAME                  USED  AVAIL  REFER  MOUNTPOINT 
-tank_fast/poudriere  33.7G   520G    88K  /usr/local/poudriere 
-zroot/usr            4.28G  16.4G    96K  /usr 
-
-beadm / bectl
-•manage BE - boot environments
-•save your current BE
-•upgrade it
-•reboot
-•All OK? Great!
-•Not OK, reboot & choose BE via bootloader
-
-
-
-
-
-
-
-see also nextboot
-•specify an alternate kernel for the next reboot
-•Great for trying things out
-•automatically reverts to its previous conﬁguration
-
-simple conﬁgurations
-•to get you started
-
-disk preparation
-gpart create -s gpt da0 
-gpart add -t freebsd-zfs -a 4K -l S3PTNF0JA705A da0 
- 
- 
- 
-$ gpart show da0 
-=>       40  468862048  da0  GPT  (224G) 
-         40  468862048    1  freebsd-zfs  (224G)
-
-mirror
-zpool create mydata mirror da0p1 da1p1
-
-zpool status
-$ zpool status mydata 
-  pool: data 
- state: ONLINE 
-  scan: scrub repaired 0 in 0 days 00:07:03 
-with 0 errors on Tue Aug 13 03:54:42 2019 
-config: 
- 
- N A M E         S T A T E      R E A D  W R I T E  C K S U M 
- n v d          O N L I N E        0      0      0 
-   m i r r o r - 0   O N L I N E        0      0      0 
-      d a 0 p 1   O N L I N E        0      0      0 
-      d a 1 p 1   O N L I N E        0      0      0 
- 
-errors: No known data errors
-
-raidz1
-zpool create mydata raidz1 \ 
-da0p1 da1p1 \ 
-da2p1 da3p1
-
-raidz2
-zpool create mydata raidz2 \ 
-da0p1 da1p1 \ 
-da2p1 da3p1 \ 
-da4p1
-
-zpool status
-$ zpool status system 
-  pool: system 
- state: ONLINE 
-  scan: scrub repaired 0 in 0 days 03:01:47 with 0 
-errors on Tue Aug 13 06:50:10 2019 
-config: 
- N A M E                   S T A T E      R E A D  W R I T E  C K S U M  
- s y s t e m                 O N L I N E        0      0      0  
-   r a i d z 2 - 0             O N L I N E        0      0      0  
-     d a 3 p 3              O N L I N E        0      0      0  
-     d a 1 p 3              O N L I N E        0      0      0  
-     d a 6 p 3              O N L I N E        0      0      0  
-     g p t / 5 7 N G K 1 Z 9 F 5 7 D   O N L I N E        0      0      0  
-     d a 2 p 3              O N L I N E        0      0      0  
-     d a 5 p 3              O N L I N E        0      0      0  
-errors: No known data errors
-
-raidz3
-zpool create mydata raidz3 \ 
-da0p1 da1p1 \ 
-da2p1 da3p1 \ 
-da4p1 da5p1
-
-raid10
-zpool create tank_fast \ 
-mirror da0p1 da1p1 \ 
-mirror da2p1 da3p1
-
-zpool status
-$ zpool status tank_fast 
-  pool: tank_fast 
- state: ONLINE 
-  scan: scrub repaired 0 in 0 days 00:09:10 with 0 
-errors on Mon Aug 12 03:14:48 2019 
-config: 
- N A M E         S T A T E      R E A D  W R I T E  C K S U M  
- t a n k _ f a s t    O N L I N E        0      0      0  
-   m i r r o r - 0   O N L I N E        0      0      0  
-     d a 0 p 1    O N L I N E        0      0      0  
-     d a 1 p 1    O N L I N E        0      0      0  
-   m i r r o r - 1   O N L I N E        0      0      0  
-     d a 2 p 1    O N L I N E        0      0      0  
-     d a 3 p 1    O N L I N E        0      0      0  
-errors: No known data errors

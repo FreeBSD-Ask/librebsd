@@ -376,3 +376,10 @@ script/_db_row_mining/supplement_log.jsonl
 03-原始史料库/11-邮件列表史料/05-linux-kernel/mining/05b-lkml专题/03-候选/lkml_candidates_refined_tierA.jsonl
 /script
 _backup/disk_layer_pre_p211_20261002.tar
+
+# 数据库备份与写前快照退出 git 跟踪（10-04 全库清理；磁盘文件保留）
+/12-数据库备份/
+*.prebak-*
+*.bak-2026*
+04-现代研究文献/06-存疑数据库/doubts_standalone.duckdb
+03-原始史料库/11-邮件列表史料/05-linux-kernel/mining/02-遍历留痕/claim_fp_baseline_*.json
