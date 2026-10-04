@@ -9,10 +9,10 @@ volume: 第09卷-netbsd的历史
 ## 要点
 
 - “Of course it runs NetBSD”口号自 1990 年代末在社区流传，成为 NetBSD 文化认同的核心；该口号反映可移植性不仅是技术目标，更是社区身份建构
-- NetBSD Core Team 采用邀请制，与 FreeBSD 2000 年直选制不同；NetBSD Foundation 在特拉华州注册为非营利组织（**精确成立日期存疑**——NetBSD Foundation 主页与 Bylaws 均未直接给出成立日期，仅说明“incorporated in the State of Delaware”），于 **2004 年 1 月 22 日** 获得美
-- NetBSD 的主要通讯渠道包括 tech-kern、tech-userlevel、current-users、source-changes 等邮件列表，以及 #netBSD IRC 频道；邮件列表文化以技术深度著称，但也存在排外现象
+- NetBSD Core Team 采用邀请制，与 FreeBSD 2000 年直选制不同；NetBSD Foundation 在特拉华州注册为非营利组织（**精确成立日期存疑**——NetBSD Foundation 主页与 Bylaws 均未直接给出成立日期，仅说明“incorporated in the State of Delaware”），于 **2004 年 1 月 22 日** 获得美国联邦税务局 501(c)(3) 免税认定
+- NetBSD 的主要通讯渠道包括 tech-kern、tech-userlevel、current-users、source-changes 等邮件列表，以及 #netbsd IRC 频道；邮件列表文化以技术深度著称，但也存在排外现象
 - NetBSD 社区自 CSRG 时期即有国际贡献者（如日本 Jun-ichiro itojun Hagino、德国 Klaus Klein、英国 Alistair G. Crooks）；多元群体的贡献常被“英美中心主义”叙事遮蔽
-- 综合项目史观总纲审视，NetBSD 习俗特殊文化呈现 “可移植哲学” 与 “社区治理张力” 的双重结构——可移植哲学维度：“Of course it runs NetBSD” 口号传统（14.5.1）、NetBSD port naming 约定（14.5.5）、pkgsrc 季度分支传统（14.5.2）皆是 NetBSD 以可移植性为首要目标的具体显现，evbarm 通用 port 与 pkgsr
+- 综合项目史观总纲审视，NetBSD 习俗特殊文化呈现 “可移植哲学” 与 “社区治理张力” 的双重结构——可移植哲学维度：“Of course it runs NetBSD” 口号传统（14.5.1）、NetBSD port naming 约定（14.5.5）、pkgsrc 季度分支传统（14.5.2）皆是 NetBSD 以可移植性为首要目标的具体显现，evbarm 通用 port 与 pkgsrc 亦是这一哲学的延续
 
 ## 史料
 
@@ -23,10 +23,14 @@ volume: 第09卷-netbsd的历史
 ## 史观
 
 - 自反性：NetBSD 的代码美学是对‘代码可读性’这一普遍假设的自反性检验
+- 经验优先（总纲第 9 条）：可移植性并非抽象纲领，而由逐 port 的实际引导与运行经验累积而成——anykernel／rump kernel 的形态正是从调试 FFS 驱动的一手工程需求中生长出来（详见 PODCAST 区 EP8）
+- 动手者创造历史（总纲第 10 条）：itojun、Klaus Klein、Alistair G. Crooks 等国际贡献者与 Kantee、Cort 的逐行代码实践表明，代码美学由动手者具体塑造，而非仅由设计文献书写
+- 分离聚合是永恒规律（总纲第 4 条）：rump kernel 把驱动与具体内核环境分离再聚合到任意环境，微内核与宏内核教条之争亦被化为具体负载下的情境权衡（PODCAST 区 EP232／EP8），体现本章“哲学”层的辩证处理
+- 没有必然性，只有偶然性（总纲第 5 条）：架构选择的正当性由偶然的使用场景决定，不存在普遍更优的内核形态
 
 ## 辨析
 
-- NetBSD 提交量虽最大但贡献者仅 490 人（远少于 FreeBSD 的 3720 人），高人均提交量反映核心团队高度集中
+- NetBSD 提交量虽最大但贡献者数量相对有限：netbsd-src 切片 contributors 表为 900 人，远少于 freebsd-src 切片的 2,647 人（全库口径为 1,545 人对 5,671 人；系 netbsd.duckdb／freebsd.duckdb 只读实查），高人均提交量反映核心团队高度集中
 
 ## 文献
 
@@ -77,10 +81,10 @@ volume: 第09卷-netbsd的历史
 - 总纲3 不存在进步，只有权力再分配：操作系统角色变化的叙事揭示各系统在不同场景中的功能再分配，而非单向的线性进步。（BSD Now EP368，[373.44-634.26]，L2）
 - 总纲10 动手者创造历史：Firecracker 微虚拟机与 2.11BSD 复原均由个体以工程实践填补生态空白。（BSD Now EP361，[749.58-1016.66]，L2）
 - 总纲22 知识注定过时：早期 Unix 的分区表硬编码与设备号约定随存储工业演进而被淘汰。（BSD Now EP361，[1885.08-1931.02]，L2）
-- 总纲9 经验优先：经验优先：Kantee 从调试 FFS 驱动的实际工程需求出发，逐步把单一驱动扩展为通用 rump kernel 框架。（BSD Now EP8，[1334.38-1506.32]，L1）
-- 总纲4 分离聚合是永恒规律：分离聚合是永恒规律：rump kernel 把驱动与具体内核环境分离，使其得以重新聚合到用户态、浏览器与虚拟机监控程序等任意环境。（BSD Now EP8，[966.50-1292.04]，L1）
+- 总纲9 经验优先：Kantee 从调试 FFS 驱动的实际工程需求出发，逐步把单一驱动扩展为通用 rump kernel 框架。（BSD Now EP8，[1334.38-1506.32]，L1）
+- 总纲4 分离聚合是永恒规律：rump kernel 把驱动与具体内核环境分离，使其得以重新聚合到用户态、浏览器与虚拟机监控程序等任意环境。（BSD Now EP8，[966.50-1292.04]，L1）
 - 总纲8 本体论上各方平等：本体论上各方平等：单内核、微内核与多服务器微内核、外核等组织方式皆有优劣且全部正确，否定唯一正确的内核架构。（BSD Now EP8，[1042.64-1061.36]，L1）
-- 总纲10 动手者创造历史：动手者创造历史：Kantee 以一两周的小规模 hack 起步，在持续动手实践中累积出可运行于多种环境的完整框架。（BSD Now EP8，[1380.40-1506.32]，L1）
+- 总纲10 动手者创造历史：Kantee 以一两周的小规模 hack 起步，在持续动手实践中累积出可运行于多种环境的完整框架。（BSD Now EP8，[1380.40-1506.32]，L1）
 - 总纲10 动手者创造历史：Cort 的全部历史叙述由具体动手构成——写驱动、修内核、上游化补丁、更新 man 页——从 Summer of Code 学生到 NetBSD 开发者的身份亦由代码贡献换取；微内核的优劣判断同样出自写驱动者亲手停掉崩溃驱动、修复重编译再启动的一手体验，而非 Tanenbaum 与 Torvalds 式的理论论战。（BSDTalk EP232，[282.47-307.48]，L1）
 - 总纲5 没有必然性，只有偶然性：当事人将微内核与宏内核的经典教条之争化为具体负载下的情境权衡：性能损失约一成到一成五，是否可接受取决于系统能否宕机、跑的是什么负载；不存在普遍更优的内核形态，架构选择的正当性由偶然的使用场景决定。（BSDTalk EP232，[376.42-398.94]，L1）
 
