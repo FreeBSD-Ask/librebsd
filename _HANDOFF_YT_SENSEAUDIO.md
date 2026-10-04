@@ -308,6 +308,22 @@
 
 > ⏩ 本包为 17:10 快照；**17:20–18:00 接手复核与重启实录见 §十三**（此后状态以 §十三 为准）。
 
+## 十四、长期计划（严格任务书2 流程；2026-10-04 主理人批准，禁止定期任务）
+
+> 自行继续机制：worker 跑到会话结束为止；新会话按「继续」定则（§九.8）触发后按本节循环**机械执行、无需再问**。数字以磁盘/DB 实况为准。
+
+**每轮循环（任务书2 §五.6 批节奏）：**
+1. **转录**：30 路 worker（=0 → 重启 `15_parallel_transcribe.py 30` run_in_background 直启；RAM<1GB → 降格阶梯 30→16；不因风暴 kill 产出 worker）。
+2. **复核流程**（§五.5）：`06_review.py --dispatch` → `_review_transcripts.py` 机械预筛（语速/覆盖率/8-gram/旧转写对照）→ **8 路子代理×≤6 期**逐篇通读（裁决 `reviews/<epnum>.json`）→ `--collect` 收集报 FAIL → **磁盘逐份验证**（子代理回报仅作参考）→ fail 件删 JSON→`--force` 重转→再审；重转一轮仍 fail→回挂账（§九.9）。
+3. **入库一批**（§六）：`03_ingest.py` 干跑→正式→对账（segments==utterances）→置位 `'reviewed'`。
+4. **入大纲一批**（§七）：`04_outline_rewrite.py --num <pass keys·须 youtube:<vid> 格式>` 派发→**主代理串行原地改写**；0 既有条目时记录（新增期入纲=独立增补 campaign，勿抢）。
+5. **清理**（§九.3＋已批）：删该批已入库期音频（manifest 留痕）＋`_pcm_gc.py --apply`（done＋无JSON>2h）。
+6. **对账门禁**（§八）：`05_audit.py`——已知 artifacts（复核门设计致 DB⊂JSON、redo 重复台账、BOPee/挂账件空正文）单独标注勿误判。
+7. **交接**：任务书2 §五 进度随批更新＋§十三＋git 提交。
+
+**完成判定**：剩余=0 → 05_audit 全绿 → 终态统计 → 回报「战役完成」。时间基线：30 路 1.0–1.35 期/分、剩余 ~3,9xx 期 ≈ 2.1–2.8 天、费用 ~4,400 元。
+**坑集增补**：① `04_outline --num` 须 `youtube:<vid>` 格式（裸 vid 静默 0 匹配，实测踩中）；② `06_review --collect` 的 done_eps 前缀 bug 已修；③ 裁决件任务书命名 `<epnum>.json`（已从 `youtube__<vid>.json` 改名 74 份；03_ingest 按 key 匹配不受影响）。
+
 ## 十三、接手复核与重启实录（2026-10-04 17:20–18:00）
 
 **复核对账（全绿）**：复核件 **54/54**（53 pass／1 fail，最新 17:12；磁盘实况与 §十二 一致——「48/54、余 6 在途」
@@ -355,6 +371,12 @@ in-flight（<2h）655 保留。30 路持续运行（json 233 递增；剩余 ~4,
 "Please provide the audio file or audio content for transcription."）→ 按 §九.9 删该期 JSON 挂回待转
 （一次性重转被 30 路占满的服务端 1011 拒绝；**下一批 15_parallel 启动时自动重转＋重审**；其 fail 裁决
 继续挡住入库门禁直到新审通过）。**19 pass 件待入库**（下一轮 `03_ingest.py`）。
+**严格任务书2 流程（22:0x–22:2x，主理人批准 §十四 手册）**：裁决件改名对齐任务书命名 74 份；`06_review
+--dispatch/--collect`（done_eps 前缀 bug 已修）＋`_review_transcripts.py` 机械预筛（269 期 13 标记：12 临界
+wpm＋BOPee）；**复核波1＝8 路×6 期 48 期：47 pass／1 fail**（`luPViknmoXc` 泄漏，--force 重转一轮仍复现→
+挂账）；**入库批3＝+66 transcripts/+6,742 segments**（对账逐件一致；累计 senseaudio 行 164 全 reviewed）；
+入大纲 66 期全 0 既有条目；删音频 66 件 1.47GB（manifest b3）；`05_audit.py` 首跑 5 FAIL 全为已知 artifacts
+（复核门设计＋redo 重复台账 3＋BOPee）；清理删音频＋PCM 再回收 ~16GB（磁盘 195G）。提交见 git。
 **下一手**：① 转录滚动批 ~20 期 → 逐字复核＋§十一 QC → `03_ingest.py` 入库（候选/curated 行 `episode_id=vid`
 的补注册纪律见 §六）；② `_pcm_gc.py --apply` 周期回收；③ BOPee 裁处；④ 并发上探（20–24 路，非高峰）与
 150 路前置（流式 PCM／加内存＋服务方并发上限确认）待裁；
