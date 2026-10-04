@@ -48,18 +48,45 @@ CN = {"〇": 0, "一": 1, "二": 2, "三": 3, "四": 4, "五": 5,
 
 
 def cn2int(s):
+    """汉字数字 → 整数（〇..九／十／百 的组合写法，位值解析）。
+
+    2026-10-04 修：原实现为「逐字累加」（注释称「项目卷数 ≤43，逐字累加足够」），
+    对 ≥20 的卷**系统性错解**——「第三十九卷」得 3+10+9＝22、「第二十卷」得 2+10＝12。
+    汉字引用因「索引侧与引用侧同错」而侥幸不报；**阿拉伯卷号引用（如「卷 39」）即暴露为
+    假 FAIL**（110 号文施工实测）。改为位值解析；`--selftest` 以 T3 断言四类写法。
+    """
     s = s.strip()
     if not s:
         return None
     if s.isdigit():
         return int(s)
-    total = 0
-    for ch in s:
-        v = CN.get(ch)
-        if v is None:
+    if "百" in s:
+        a, _, b = s.partition("百")
+        if a and a not in CN:
             return None
-        total += v
-    return total  # 项目卷数 ≤43，逐字累加足够
+        av = (CN[a] if a else 1) * 100
+        if not b:
+            return av
+        rest = cn2int(b)
+        return None if rest is None else av + rest
+    if "十" in s:
+        a, _, b = s.partition("十")
+        if (a and a not in CN) or (b and b not in CN):
+            return None
+        return (CN[a] if a else 1) * 10 + (CN[b] if b else 0)
+    if len(s) == 1 and s in CN:
+        return CN[s]
+    return None
+
+
+def selftest_cn2int():
+    """T3（2026-10-04 补）：位值解析对组合写法的四类断言。"""
+    cases = {"九": 9, "十": 10, "十二": 12, "十四": 14, "十九": 19,
+             "二十": 20, "二十一": 21, "三十": 30, "三十九": 39,
+             "四十九": 49, "一百": 100, "〇": 0}
+    bad = [(k, v, cn2int(k)) for k, v in cases.items() if cn2int(k) != v]
+    print("T3 cn2int 位值解析:", "PASS" if not bad else "FAIL %s" % bad)
+    return 0 if not bad else 1
 
 
 CN_VOL = re.compile(r"第([〇一二三四五六七八九十百]+)卷")
@@ -172,7 +199,8 @@ def main():
         hit4 = ("99999" in p4) and ("12" not in p4)
         print("selftest:", "PASS" if (hit and hit4) else "FAIL",
               f"(P1 {len(p1)}, P2 {len(p2)}, P4 {sorted(p4)})")
-        return 0 if (hit and hit4) else 1
+        rc_cn = selftest_cn2int()
+        return 0 if (hit and hit4 and rc_cn == 0) else 1
 
     lines = OUTLINE.read_text(encoding="utf-8").split("\n")
     o = Outline(lines)
