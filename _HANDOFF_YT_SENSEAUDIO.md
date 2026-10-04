@@ -18,7 +18,7 @@
 | transcripts 分布 | youtube_subs_20261001=1,123 / youtube_auto_subs=52 / senseaudio-asr-stream-1.5-260910=~45（总 1,220） |
 | audio 库 | **curated 4,197/4,197 音频 100% 到手**（16:20 终态；全库 5,4xx mp3，约 175G），路径 `03-原始史料库/14-播客史料/audio/` |
 | 磁盘 | D: 531G，可用约 180G（66%） |
-| key 池 | `C:/Users/ykla/.sensenova/senseaudio_keys.json`：pool 22 把（含 GL* 导入 18 把），备份 `senseaudio_keys.json.bak-20261004-preGL` |
+| key 池 | `C:/Users/ykla/.sensenova/senseaudio_keys.json`：pool **32 把**（含 GL* 18＋主理人新给 10，探针 10/10 OPEN）；轮替总数 **33**（＝具名 tb2_bsdtalk_external＋pool）；备份 `bak-20261004-preGL` / `bak-20261004-preNew10` |
 | 大纲 git | `db2743a5b`（46 期内容复核波）；其后大纲无新提交 |
 | 下载线 | 🟢 D1 curated 4,197/4,197＋D2 重下 14/14 全部到手；cookies 管线定型（见 §十）；全库解码审计**已收口：4,197 件全验毕（4,196 ok＋1 瞬时误报复验有效）**；310 个冗余 mp4 已清（释放 23.08 GB）；D3 字幕见 §三.3 |
 | 复核线 | 🟢 **54/54 全部复核完毕：53 pass / 1 fail**（fail＝BOPeeLhZOsY 空正文，待回炉）；裁决件在 `tb2/reviews/`，pass 中 QC 无 suspect |
@@ -69,8 +69,11 @@
      （§九 修订：不低于 150 路；key 池 22 把现状，须实测 block0 no-close-frame／1011 退避频率，
      服务端并发限制过密则回退 24–64 路并加钥，实测数字记回本节）
 - **量级**：每进程完成分片即出 JSON（`tb2/json/youtube__<vid>.json`）＋`tb2/ledger.jsonl` 追加顺序台账。
-- **后链**（每批判 ~20 期滚动）：逐字复核（SenseAudio 口径，禁抽查）→ 03_ingest.py 入库 →
-  reviewed 置位 → 删该批音频（链接留 DB，纪律见 §六）。
+- **后链**（每批判 ~20 期滚动）：逐字复核（SenseAudio 口径，禁抽查；裁决落 `tb2/reviews/`）→
+  **入库＝`tb2/03_ingest.py`（复核 pass 门禁内建：无 pass 裁决的期不入库）** → reviewed 置位 →
+  删该批音频（链接留 DB，纪律见 §六）。**入大纲＝`tb2/04_outline_rewrite.py`（SenseAudio 版）/
+  `yt_subs/06_outline_dispatch_yts.py`（字幕版）生成逐期派发单 → 子代理对 `05-卷册大纲` 既有条目
+  原地改写（只改内容与 `[起-止]` 区间、不增删、`[订正]` 留痕）**；未被大纲引用的新增期另有增补 campaign（§四）。
 - **🔴 2026-10-04 17:50 接手重启实录（实测数字）**：survey 三步链重建
   （`01_survey.py`→`13_survey_candidates_audio.py`→`15_survey_curated.py`；youtube 行 5,432＝
   DB 1,191＋curated 4,197＋候选 44，BOPee 手工补行）→ **pending 实测 4,201**（「3,631」系 11:41 时点旧口径：
@@ -87,6 +90,15 @@
   ⚠️ **150 路「双约束」**：① 内存——02_transcribe 每期全量载入 PCM（实测 p50≈36MB／p90≈78MB／max≈163MB），
   150 路理论峰值 >16GB（本机 16GB）；② 服务端——32 路即触 1011。放宽前置＝流式读 PCM（或加内存）＋与服务方
   确认并发上限——待裁。快照（18:40 前后）：json 107／ledger 108（重启后 +53；BOPee 回炉另计）。
+- **🔴 并发阶梯实录（17:50–19:50，最终以此为准）**：① 16 路（18:22–18:58）≈1.2–1.35 期/分、风暴轻；
+  ② 主理人令「先 32 后 **120 路**」——为 120 先做 **02_transcribe 流式读 PCM 改造**（原版整载；改 seek/read
+  流式；备份 `02_transcribe.py.bak-20261004-preStream`）：**单进程 RSS 实测 44–55MB**（旧估算 75–110MB），
+  **120 路内存完全成立**（free 最低 2.0GB、无 OOM、无 KEY_EXHAUSTED）；③ 但**服务端在 120 路吞吐坍塌**
+  （1011 风暴＋弃期积累，≈0.4 期/分 ≪ 16 路 1.2–1.35/分）→ 按 §九.2「过密则回落」19:35 全量 taskkill
+  改起 **30 路**（33 把 key≈0.9 流/key）：实测 ≈1.0–1.2 期/分、退避仍多但有产出（**暂持 30 路**；
+  若 fail 继续压过 done 则降回 16）。
+  **结论**：**150 路「双约束」① 内存已解除（流式改造）**；**② 服务端并发＝唯一硬约束**（今夜：16 稳／
+  30 略风暴／32–120 风暴）——150 路前须与服务方确认并发配额。新 key 10 把已导（探针 10/10 OPEN）。
 
 ### 3.2 残 19 期精选音频 —— 🟢 已闭环（10-04 16:20）
 
@@ -192,9 +204,10 @@
 
 ## 八、相关文件索引
 
-- 脚本：`script/senseaudio_20260929/tb2/`（02_transcribe/03_ingest/04_download_fail_audio/
-  15_parallel_transcribe）；`script/senseaudio_20260929/yt_subs/`（01-14 各波＋**16_redownload_list /
-  17_diag_fail / 18_audit_mp3**＋`_DOWNLOAD_TASKS.md`）。
+- 脚本：`script/senseaudio_20260929/tb2/`（02_transcribe/**03_ingest（入库）**/04_download_fail_audio/
+  **04_outline_rewrite（入大纲派发·SenseAudio 版）**/15_parallel_transcribe）；`script/senseaudio_20260929/yt_subs/`
+  （01-14 各波＋**03_ingest_subs（字幕入库）**/ **06_outline_dispatch_yts（入大纲派发·字幕版）**＋
+  16_redownload_list / 17_diag_fail / 18_audit_mp3＋`_DOWNLOAD_TASKS.md`）。
 - 数据：`_tmp/senseaudio_out/tb2/`（survey.json＋json/＋reviews/＋pt_N.log＋
   **mp3_audit.jsonl／mp3_audit_bad.txt**）；`_tmp/yt_channels/curated_final.txt`（4,197 纳入清单）；
   `_tmp/yt_new_list.txt`（161 探索候选）；下载线清单已清零（`download_pending_audio.txt` 0 行）；
@@ -304,6 +317,8 @@ DB 三数（episodes 1,191／segments 1,502,748／quality_fail 54）逐项复合
 **转录重启（在跑，含一次回退）**：survey 三步链重建（pending 4,201）→ 17:50 起 32 路 → **服务侧 1011 风暴
 （前 17 分钟仅成 2 期）→ 18:20 全量 taskkill → 18:22 起 16 路（加 2.5s 错峰）**；重启后稳定产出（18:40 前后
 json 107／ledger 108，重启后 +53；偶发 1011/退避自愈，弃期自动重排）。全量实测数字与「150 路双约束」见 §三.1。
+**并发阶梯（19:0x–19:50）**：导入新 key 10 把（池 33）＋ `02_transcribe` 流式读改造（RSS 实测 44–55MB，
+**内存约束解除**）→ 120 路实测服务端坍塌（≈0.4/分）→ §九.2 回落 **30 路** 运行中（≈1.0–1.2/分）。
 **下一手**：① 转录滚动批 ~20 期 → 逐字复核＋§十一 QC → `03_ingest.py` 入库（候选/curated 行 `episode_id=vid`
 的补注册纪律见 §六）；② `_pcm_gc.py --apply` 周期回收；③ BOPee 裁处；④ 并发上探（20–24 路，非高峰）与
 150 路前置（流式 PCM／加内存＋服务方并发上限确认）待裁；
