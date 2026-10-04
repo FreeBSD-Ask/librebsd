@@ -389,6 +389,13 @@ reviewed**）；入大纲逐批全 0 既有条目；删已入库音频累计 356
 pynpY7Isbxs／luPViknmoXc／yzv9lcjxhAg／e5g9blIkp0g／nyNCSM4vGF4（6 项——fail 裁决挡门禁，下批 15_parallel
 启动时自动重转重审）。复核管道已追平转录（00:24 时未复核≈0），循环进入「等转录积压→小批复核」节奏；
 30 路 worker 持续（json 36x 递增）。每轮 commit 见 git（d390c1bb4…b11）。
+**第十～十八轮循环（00:4x–04:18，主理人令「不需我发继续，你自己持续运行」）**：复核波10–18（6+9+13+30+17+34+4+9 期，
+1/2/3/5(2路降级重派)/3/6分段/1/2 路子代理）＝**166 期复核：164 pass／2 fail**（e5g9blIkp0g、nyNCSM4vGF4 泄漏类挂回
+待转；新坑两度实证：并行子代理 5 路即可能撞「user concurrency limit exceeded」→降路数重派成功；git index.lock
+陈旧锁/被占锁→重试或延后提交）；入库批 12–21＝**+121 transcripts**（6+9+13+30+17+34+4+9＋XT7soOM_YuM 1，
+每批对账逐件一致；**累计 senseaudio 行 540 全 reviewed**）；入大纲逐批全 0 既有条目；删已入库音频累计 495 件
+~9.1GB（manifest×21）；PCM 每轮回收；30 路 worker 持续（04:18 json 502 递增）。每轮 commit 见 git
+（83f9b5201…861c6f3b6）。
 **下一手**：① 转录滚动批 ~20 期 → 逐字复核＋§十一 QC → `03_ingest.py` 入库（候选/curated 行 `episode_id=vid`
 的补注册纪律见 §六）；② `_pcm_gc.py --apply` 周期回收；③ BOPee 裁处；④ 并发上探（20–24 路，非高峰）与
 150 路前置（流式 PCM／加内存＋服务方并发上限确认）待裁；
