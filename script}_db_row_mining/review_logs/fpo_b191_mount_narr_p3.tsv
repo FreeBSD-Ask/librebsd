@@ -1,0 +1,64 @@
+1673264	892	Xavier Humbert 重装 port-maintenance-tools 后 pkg DB 的 arch 列恢复 FreeBSD:13 正确值 称不确定为何该行注释掉后 ABI 自动探测得出错误值
+1673266	892	Rozhuk Ivan 因 xfce4-mixer 弃用将其重写为新应用 GTK-Mixer 称 GUI 大体不变并新增枚举所有声卡 处理连接与断开 切换默认设备与托盘图标等功能 仅依赖 gtk3 附 github 与 bugzilla 链接
+1673267	892	Guido Falsi 回复 xfce4-mixer 说明上游项目已废弃且从未移植 GTK3 因而当前无法编译 同时上游正着手恢复该项目 若 Rozhuk Ivan 有时间也可参与上游贡献 附 gitlab.xfce.org 链接并表示将测试该应用
+1673268	892	Rozhuk Ivan 回复 Guido Falsi 称在其发现 xfce4-mixer 上游重新构建前已做完大部分工作 且 gtk-mixer 设计不同无法回流上游 并称还有若干想在此实现的功能
+1673269	892	Guido Falsi 回复 Rozhuk Ivan 表示理解并确认对方已知晓 XFCE 团队正在处理 xfce4-mixer 相关事务 并称 gtk-mixer 已在此前更早时间点提交进树
+1673271	892	Robert Huff 报告 vuln.xml 疑似于周日在其某台系统上损坏 询问重新下载或重新生成该文件的正确方式 自称 Respectfully
+1673272	892	Bob Eager 回复 Robert Huff 指出 portaudit 正被 pkg audit 取代 并称此变更可能已经完成但因不确定而未断言
+1673273	892	Baptiste Daroussin 称 portaudit 早在 7 年前就被 pkg audit 取代并于 2014 移出 ports 树 且构建 portaudit 数据库的机器已退役 附 freebsd-ports-announce 邮件存档链接
+1673275	892	Robert Huff 引述 Baptiste Daroussin 关于 portaudit 已被取代并于 2014 移出树的说明后 描述其端口重建均失败 并贴出 pkg-static 报 Invalid end of XML 无法处理 vulnxml 的日志
+1673276	892	Baptiste Daroussin 回复 Robert Huff 关于 pkg-static 报 Invalid end of XML 无法处理 vulnxml 的报错 询问 pkg audit -F 是否能修复该问题
+1673277	892	Michael Gmelin 指出 Robert Huff 存在误解 复述 bapt 关于 portaudit 早已被移除的观点并说明该移除发生在旧 pkg_tools 退役并引入 pkg 时见 MOVED 且 pkg audit -F 也许可行
+1673279	892	Piotr Byliński 以 mysql80-server 端口使用者身份告知上游已发布 8.0.23 且当前端口正列在 VuXML 列表 附 VuXML 链接并请求维护者升级版本
+1673281	892	Tatsuki Makino 说明 LOCALBASE=/opt 打包仅导出变量不够 gettext-runtime 先失败 已写 hook 脚本供 poudriere 挂载参考 jail 时使用 建议在 poudriere.conf 按 jail 与 portstree 名导出
+1673282	892	Alex V. Petrov 报 www/qt5-webengine-5.15.2_1 构建失败 libQt5WebEngineCore.so 对 re2::RE2::FullMatchN 与 re2::RE2::Arg::parse_ulong 未定义引用
+1673284	892	Christoph Moench-Tegeder 指出 Alex V. Petrov 在使用已安装 qt5-webengine 版本 因 re2 升级后必须重建 建议改用 poudriere 构建或先卸载旧版
+1673285	892	Henrik Rosenke 为 poudriere-devel 3.3.99.20200326_2 提交补丁支持 overlay 的 NOT_MOVED 使 sysutils/sge62 不被当 EXPIRED 删除并免报错 附 common.sh 补丁与前后日志
+1673286	892	Mark Millard 判 print/indexinfo 未先于 gettext-tools 安装致 rhash 报 indexinfo: not found 后 pkg-static: POST-INSTALL script failed 建议加 BUILD_DEPENDS
+1673287	892	Milan Obuch 报告更新 ports 树后 portmaster 在旧 gstreamer 端口迁移至 gstreamer1 时于 MOVED 文件报错 附 MOVED 修正补丁把若干条目由 net 目标改回 graphics 目标并称留给更熟悉者复核
+1673288	892	Tatsuki Makino 判断 Mark Millard 所报的 pkg-static: POST-INSTALL script failed 发生于环境变量 PATH 不含 ${LOCALBASE}/bin 的情形
+1673289	892	Mark Millard 反驳 Tatsuki Makino 关于 PATH 缺 ${LOCALBASE}/bin 的判断 贴 rhash 与 glib-2.66.3,1 与 libXpm 日志证明各失败上下文 PATH 均含 /usr/local/bin
+1673290	892	Tatsuki Makino 建议先用 tar -t -f 检查 indexinfo-0.3.1.txz 内容是否缺失 若有问题可用 poudriere bulk -j jail -p portstree -C print/indexinfo 强制重建该包
+1673291	892	Mark Millard 反驳 Tatsuki Makino 的 print/indexinfo 重建方案 称该构建本就以 -c 全清启动 并贴出 print/indexinfo 先完成再构建 devel/gettext-runtime 的日志 表示重建本身不会改变问题
+1673292	892	Mark Millard 用 tar -tf 从 indexinfo-0.3.1.txz 提取 /usr/local/bin/indexinfo 证包未缺失 并指 bsd.port.mk 仅在 RUN_DEPENDS 列 indexinfo 而 BUILD_DEPENDS 缺该
+1673293	892	Tatsuki Makino 用 make -V _STAGE_SEQ 证 run-depends 150 早于 post-install-script 750 故 RUN_DEPENDS 足 建议核 gettext-tools-0.21.txz 的 +MANIFEST deps
+1673294	892	Mark Millard 认可 Tatsuki Makino 关于 RUN_DEPENDS 已充分的结论并致谢 随后贴出从 indexinfo-0.3.1.txz 解出的 +MANIFEST 头部 JSON 内容
+1673295	892	Tatsuki Makino 承认自己复制粘贴失误把包路径错写成 indexinfo-0.3.1.txz 应为 gettext-tools-0.21.txz 并给出正常情形下 deps 中会出现 indexinfo 条目的示例
+1673296	892	Mark Millard 回复 Tatsuki Makino 更正 用 tar -xpf 从 gettext-tools-0.21.txz 内 grep deps 得空 判自己一直在错的地方找并转向查看 gettext-tools-0.21.log
+1673297	892	@lbutlr 在 FreeBSD 12.2-RELEASE-p1 上 portmaster -rR databases/mydumper 重装 86 仍失败 报 connection.c 中 SSL_MODE_REQUIRED 与 MYSQL_OPT_SSL_MODE 未声明
+1673298	892	Fernando Apesteguía 回复 Milan Obuch 确认已把 gstreamer 相关 MOVED 补丁提交进树 并附 changeset ports/564092 链接致谢
+1673299	892	Jack L. 回复 Alex V. Petrov 关于 www/qt5-webengine-5.15.2_1 每次都需要先卸载该端口才能编译通过 称自己也须如此操作
+1673300	892	Milan Obuch 在 changeset ports/564092 后复查发现其他 gstreamer 迁至 gstreamer1 的条目同类错误 附更大范围 MOVED 修正补丁请求审核 说明此前仅先做本地快速修复
+1673301	892	Fernando Apesteguía 称已复核全部 gstreamer 条目并修入树 附 changeset ports/564108 链接致谢
+1673303	892	David Wolfskill 在 Dell Precision M4800 与 7520 stable/12 r564088 后 nvidia.ko 加载失败 附 vgapci0 PCI 与 dmesg 报 symbol nvidia_driver_name undefined
+1673304	892	John Kennedy 针对 David Wolfskill 报告的 link_elf_obj 报错说明已开 PR#253269 复现相同症状 并推测是自己 /etc/src.conf 中 WITH_BIND_NOW=YES 引起符号未定义 询问 David 是否也如此配置
+1673305	892	David Wolfskill 回复称自己未设 WITH_BIND_NOW 并列出 KERNCONF=CANARY 与 PORTS_MODULES+=x11/nvidia-driver 等实际配置 并愿把自己 Cc 到 PR#253269
+1673306	892	Christian Weisgerber 询问构建集群错误日志的位置 指出 Porter's Handbook 指向的 portsmon 已失效
+1673307	892	Christoph Moench-Tegeder 针对 David Wolfskill 关于 nvidia 驱动加载失败的报告指向 svn-ports-all 讨论 282373 的答复
+1673308	892	Jan Beich 建议 Christian Weisgerber 查询 portsfallout 或 pkg-fallout 邮件列表归档 并提到 pkg-status.freebsd.org 是以宏方式跨机器查询与定位构建日志的入口
+1673309	892	Michael Schuster 在 FreeBSD 14 上报 svn up 于 /usr/ports 报 E170013 与 E120108 且 truss 见反复打开 cert.pem 并询问排查方向
+1673310	892	Guido Falsi 判断 Michael Schuster 遇到的是 bug 253135 建议升级 head 至提交 cb7cc72c546e 之后并确认 www/serf 版本至少为 serf-1.3.9_6
+1673312	892	bob prohaska 自述中 CVE-2020-8617 拒绝服务并询问当前合适的 bind 端口 称 bind9.16.11 正在编译但无法判断是否已修补该 CVE
+1673313	892	John Kennedy 就 PR#252928 请求关注并总结编译 net/ipxe 的困难 mtools 经 texinfo 拉入 libiconv 而 Makefile 未把 libiconv 列为先决 且 mtools.conf 需在干净 poudriere 中取消注释
+1673314	892	Greg Rivers 回复 bob prohaska 关于 bind 版本与安全升级的提问 指出 CVE 所述 9.16.3 意为至少该版本且该版已较旧 建议追随当前稳定发布 9.16.11
+1673315	892	bob prohaska 报 bind9.16.11 构建停在 exec: /usr/local/bin/autoreconf-2.69: not found 并称 devel/autoconf 又报 Perl 5.006 or better is required
+1673316	892	Greg Rivers 回复 bob prohaska 关于 autoreconf-2.69 缺失的报错 指出该版本在 poudriere 中从干净环境构建成功 建议改用 poudriere 或直接从最新 FreeBSD pkg 仓库安装
+1673317	892	Dan Mahoney 判断 Greg Rivers 与 bob prohaska 的 autoreconf-2.69 与 Perl 报错暗示其未干净更新整个 ports 树 并询问原安装 bind916 的方式
+1673318	892	Kurt Jaeger 指出 /usr/local/bin/autoreconf-2.69 出自 autoconf-wrapper-20131203 并追问 bob prohaska 若仍处于非常旧的 bind 版本则运行的是哪个 FreeBSD 版本 同时询问其 perl 版本
+1673320	892	Michael Schuster 回报采纳 Guido Falsi 建议升级 head 与 www/serf 至 serf-1.3.9_6 后 svn up 恢复正常并致谢
+1673321	892	bob prohaska 于周六回复 Dan Mahoney 关于 bind9.16.11 稳定版与 autoreconf-2.69 缺失的讨论
+1673322	892	bob prohaska 回复 Kurt Jaeger 称自己用 bind916 且为去年春配置于 armv7 的测试机并非生产 nameserver 附 FreeBSD 13.0-ALPHA3 uname 与 svnlite info 输出并称该机器从未使用过包
+1673323	892	DutchDaemon 判断 autoconf-wrapper-20131203 是 autoconf-2.69_3 的要求因此安装 autoconf 端口会带上 autoreconf
+1673324	892	bob prohaska 报 autoconf 构建失败 configure 报 /usr/local/bin/perl: not found 并追问 perl 未装却不被识别为需编译的依赖 附 whereis perl 结果
+1673325	892	Mark Millard 指出 bob prohaska 直接输入 $PATH 使路径串被当作命令执行故报 Command not found 建议改用 echo $PATH 查看 PATH 展开
+1673327	892	Mark Millard 查 freshports 与 Makefile 指出 perl5>=5.28.r1<5.29 是 devel/autoconf 的构建依赖且 USES 含 perl5 并建议查看 pkg info perl5 与 UPDATING 20200803 条目
+1673328	892	DutchDaemon 回复 bob prohaska 关于 autoconf 构建缺 perl 的报错 指出 perl 应被拉入依赖 并说系统看似已装 Perl 追问 pkg info -ix perl 的结果
+1673329	892	bob prohaska 用 pkg info -ix perl 显示 perl5-5.32.0_1 与 perl5.30-5.30.3_1 并追问点号与连字符写法之别是否显著
+1673330	892	DutchDaemon 判定 perl5-5.32.0_1 正确对 perl5.30-5.30.3_1 来源不明 建议 pkg delete -a -f -y 卸载已装端口并清理 /usr/local 除 /usr/local/etc 外后确保 ports 树最新再重来
+1673331	892	bob prohaska 回复 Mark Millard 关于 autoconf 构建依赖 perl5 与 UPDATING 20200803 默认 Perl 切换的讨论
+1673333	892	Tatsuki Makino 提示用 pkg info -l perl5 查看 perl 安装位置以排查 Bob Prohaska 升级 Bind9 过程中的 perl 混乱
+1673334	892	Chris Rees 在复活 audio/ampache-resurrect 时见 WWWDIR 子目录仍属 root:wheel 显式加 @dir 又报找不到文件 询问能否改在底部用 @exec chown -R www:www %D/%%WWWDIR%%
+1673335	892	bob prohaska 回复 DutchDaemon 称手动卸载两个损坏端口后重装 lang/perl5.32 使 dns/bind916 得以继续编译 感谢帮助
+1673337	892	George Mitchell 询问能否假定 chromium 上游开发对 FreeBSD 上 chromium 编译期产生的成千上万条 clang 警告并不知情并认为他们恐怕也不在意
+1673338	892	Alex V. Petrov 报告 bison 3.7.5 在构建 doxygen 1.9.0 时于 constexp.y 报警告后进程 signal 11 core dumped 附构建 libreoffice 时类似日志
+1673339	892	Adam Jimerson 拟为 python-adblock 建端口供 www/qutebrowser 依赖并询问正确分类 认为既属 net 与 net-mgmt 亦可能属 www 倾向于按浏览器相关归入 www

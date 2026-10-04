@@ -1,0 +1,11 @@
+file:///D:/librebsd/08-%E6%A0%B8%E6%9F%A5%E6%8A%A5%E5%91%8A%E4%B8%8E%E5%A4%9A%E8%BD%AE%E5%A4%8D%E6%A0%B8/%E9%87%8D%E6%9E%842026/tests/full_matrix_regression.mjs:38
+  executablePath: __CHROME_EXE__,
+                  ^
+
+ReferenceError: __CHROME_EXE__ is not defined
+    at file:///D:/librebsd/08-%E6%A0%B8%E6%9F%A5%E6%8A%A5%E5%91%8A%E4%B8%8E%E5%A4%9A%E8%BD%AE%E5%A4%8D%E6%A0%B8/%E9%87%8D%E6%9E%842026/tests/full_matrix_regression.mjs:38:19
+    at ModuleJob.run (node:internal/modules/esm/module_job:413:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:660:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5)
+
+Node.js v24.12.0

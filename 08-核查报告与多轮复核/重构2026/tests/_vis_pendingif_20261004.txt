@@ -1,0 +1,10 @@
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+browserType.launch: Failed to launch chromium because executable doesn't exist at C:/Users/ykla/AppData/Local/ms-playwright/chromium-1200/chrome-win64/chrome.exe
+    at D:\librebsd\08-核查报告与多轮复核\重构2026\tests\visual_regression.mjs:15:32 {
+  name: 'Error'
+}
+
+Node.js v24.12.0
